@@ -32,7 +32,7 @@ weight: 40
 
 > 내가 원하는 거는. 아까 얘기했듯이 diff 스타일로. 두 개의 버전을 양쪽 옆에다가 두고 볼 수 있게. 그러나 이제 마크다운 파일같이 저런 형식이 아니라. 이미 페이지로 구워진 상태를 보고 싶은 거고.
 
-자리는 사용자가 대시보드로 정했다. [블로그 운영 대시보드](/ko/llm_workshop/dashboard)의 `server.py`가 이미 `127.0.0.1:8089`에서 정적 파일과 API를 함께 내고 있으므로, 비교기는 그 서버가 서빙하는 독립 문서 하나(`/dash/compare.html`)로 붙었다.
+자리는 사용자가 대시보드로 정했다. [블로그 운영 대시보드](/ko/llm_workshop/dashboard){: data-relation="weak" }의 `server.py`가 이미 `127.0.0.1:8089`에서 정적 파일과 API를 함께 내고 있으므로, 비교기는 그 서버가 서빙하는 독립 문서 하나(`/dash/compare.html`)로 붙었다.
 
 ## 이전 판본을 굽는 스냅샷
 
@@ -131,7 +131,7 @@ _URLREF = re.compile(r'(url\(#)([^)]+)(\))')
 ```
 {: data-filename="scripts/dashboard/pagediff.py"}
 
-`<use href="#g0-1">`은 문서에서 처음 만난 id로 해석되므로, 오른쪽 도식이 왼쪽 판본의 글리프로 그려져도 에러 하나 없이 그럴듯하게 나온다. pane마다 `L-`, `R-` 접두사를 붙여 갈랐다. [xref 미리보기](/ko/llm_workshop/xref_preview)에서 같은 계열의 사고를 한 번 겪은 자리다.
+`<use href="#g0-1">`은 문서에서 처음 만난 id로 해석되므로, 오른쪽 도식이 왼쪽 판본의 글리프로 그려져도 에러 하나 없이 그럴듯하게 나온다. pane마다 `L-`, `R-` 접두사를 붙여 갈랐다. [xref 미리보기](/ko/llm_workshop/xref_preview){: data-relation="weak" }에서 같은 계열의 사고를 한 번 겪은 자리다.
 
 마크의 범위는 사용자가 화면을 쓰면서 두 번 좁혔다. 처음에는 호버 카드가 `data-h`가 붙은 블록 전체에서 떴다.
 
