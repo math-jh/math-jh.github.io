@@ -14,9 +14,9 @@ weight: 15
 published: false
 ---
 
-복소수체 위의 semisimple Lie algebra $\mathfrak{g}$는 Cartan subalgebra와 root system을 통해 그 구조가 완전히 결정되지만 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12)), 이 복소 대수가 실수 위에서 몇 가지 본질적으로 다른 모습으로 실현된다는 사실은 표현론과 미분기하 양쪽에서 중요하다. 가령 $\sl(2;\mathbb{C})$는 $\sl(2;\mathbb{R})$로도, $\su(2)$로도 실현되는데, 두 실대수는 같은 복소화를 가지면서도 전혀 다른 group을 만든다. 전자에 대응하는 group $\SL(2;\mathbb{R})$은 noncompact이고 후자에 대응하는 group $\SU(2)$는 compact이다. 이 글에서 우리는 복소 Lie algebra의 *real form*을 그 복소화가 원래 대수가 되는 실대수로 정의하고, 그중에서도 Killing form이 음의 정부호인 *compact real form*에 주목한다. 핵심 결과는 임의의 복소 semisimple Lie algebra가 항상 compact real form을 가지며 그것이 본질적으로 유일하다는 것, 그리고 이 compact form을 매개로 한 Weyl의 unitarian trick이 semisimple Lie algebra의 완전가약성에 군론적 증명을 제공한다는 것이다.
+복소수체 위의 semisimple Lie algebra $\mathfrak{g}$는 Cartan subalgebra와 root system을 통해 그 구조가 완전히 결정되지만 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12){: data-relation="weak" }), 이 복소 대수가 실수 위에서 몇 가지 본질적으로 다른 모습으로 실현된다는 사실은 표현론과 미분기하 양쪽에서 중요하다. 가령 $\sl(2;\mathbb{C})$는 $\sl(2;\mathbb{R})$로도, $\su(2)$로도 실현되는데, 두 실대수는 같은 복소화를 가지면서도 전혀 다른 group을 만든다. 전자에 대응하는 group $\SL(2;\mathbb{R})$은 noncompact이고 후자에 대응하는 group $\SU(2)$는 compact이다. 이 글에서 우리는 복소 Lie algebra의 *real form*을 그 복소화가 원래 대수가 되는 실대수로 정의하고, 그중에서도 Killing form이 음의 정부호인 *compact real form*에 주목한다. 핵심 결과는 임의의 복소 semisimple Lie algebra가 항상 compact real form을 가지며 그것이 본질적으로 유일하다는 것, 그리고 이 compact form을 매개로 한 Weyl의 unitarian trick이 semisimple Lie algebra의 완전가약성에 군론적 증명을 제공한다는 것이다.
 
-이 글에서 별다른 언급이 없는 한 $\mathfrak{g}$는 $\mathbb{C}$ 위의 유한차원 Lie algebra이고, real form을 다룰 때 $\mathfrak{g}_0,\mathfrak{u}$ 등은 $\mathbb{R}$ 위의 유한차원 Lie algebra이다. Killing form은 [§Killing 형식과 Cartan 판정법, ⁋정의 1](/ko/math/lie_theory/killing_form_and_cartan_criterion#def1)에서 정의한 $\kappa(x,y)=\tr(\ad x\,\ad y)$를 가리킨다.
+이 글에서 별다른 언급이 없는 한 $\mathfrak{g}$는 $\mathbb{C}$ 위의 유한차원 Lie algebra이고, real form을 다룰 때 $\mathfrak{g}_0,\mathfrak{u}$ 등은 $\mathbb{R}$ 위의 유한차원 Lie algebra이다. Killing form은 [§Killing 형식과 Cartan 판정법, ⁋정의 1](/ko/math/lie_theory/killing_form_and_cartan_criterion#def1){: data-relation="weak" }에서 정의한 $\kappa(x,y)=\tr(\ad x\,\ad y)$를 가리킨다.
 
 ## Real form
 
@@ -53,7 +53,7 @@ $\mathfrak{g}_0$가 복소 Lie algebra $\mathfrak{g}$의 real form이고 $\kappa
 $\mathfrak{g}_0$의 $\mathbb{R}$-basis $(x_1,\ldots,x_n)$을 택하면, 이는 곧 $\mathfrak{g}=\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}$의 $\mathbb{C}$-basis이기도 하다. 임의의 $x\in\mathfrak{g}_0$에 대하여 $\ad x$가 $\mathfrak{g}_0$를 보존하므로, 이 basis에서 $\mathfrak{g}_0$ 위의 $\ad_{\mathfrak{g}_0}x$를 나타내는 실행렬과 $\mathfrak{g}$ 위의 $\ad_{\mathfrak{g}}x$를 나타내는 복소행렬은 같은 (실)행렬이다. 따라서 임의의 $x,y\in\mathfrak{g}_0$에 대하여 $\ad_{\mathfrak{g}}x\,\ad_{\mathfrak{g}}y$를 나타내는 행렬은 $\ad_{\mathfrak{g}_0}x\,\ad_{\mathfrak{g}_0}y$의 행렬과 같고, 그 trace도 같으므로 $\kappa(x,y)=\kappa_0(x,y)$이다. $\kappa$가 $\mathbb{C}$-bilinear이므로 이 등식이 $\mathfrak{g}_0$ 위에서의 일치로부터 $\mathfrak{g}$ 전체로 유일하게 확장됨이 따른다.
 :::
 
-이 명제는 real form의 Killing form을 복소 대수의 Killing form으로부터 직접 읽을 수 있게 해 준다. 특히 $\mathfrak{g}$가 semisimple, 곧 $\kappa$가 nondegenerate이면 ([§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9)), restriction $\kappa_0$ 역시 nondegenerate이므로 모든 real form $\mathfrak{g}_0$도 semisimple이다. 그러나 nondegenerate인 실대칭 bilinear form은 signature를 가지므로, $\kappa_0$의 signature는 real form의 불변량이 되어 signature가 다른 real form들을 서로 구별해 준다. 다음 절에서 다루는 compact real form은 이 signature가 가장 한쪽으로 치우친 경우, 곧 $\kappa_0$가 음의 정부호인 경우이다.
+이 명제는 real form의 Killing form을 복소 대수의 Killing form으로부터 직접 읽을 수 있게 해 준다. 특히 $\mathfrak{g}$가 semisimple, 곧 $\kappa$가 nondegenerate이면 ([§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9){: data-relation="required" }), restriction $\kappa_0$ 역시 nondegenerate이므로 모든 real form $\mathfrak{g}_0$도 semisimple이다. 그러나 nondegenerate인 실대칭 bilinear form은 signature를 가지므로, $\kappa_0$의 signature는 real form의 불변량이 되어 signature가 다른 real form들을 서로 구별해 준다. 다음 절에서 다루는 compact real form은 이 signature가 가장 한쪽으로 치우친 경우, 곧 $\kappa_0$가 음의 정부호인 경우이다.
 
 ## Compact real form
 
@@ -63,7 +63,7 @@ Real form의 이름에 붙은 "compact"는 그 real form에 대응하는 connect
 복소 semisimple Lie algebra $\mathfrak{g}$의 real form $\mathfrak{u}$가 *compact real form<sub>콤팩트 실형식</sub>*이라는 것은 $\mathfrak{u}$의 Killing form $\kappa_{\mathfrak{u}}$가 음의 정부호, 곧 모든 $0\neq x\in\mathfrak{u}$에 대하여 $\kappa_{\mathfrak{u}}(x,x)<0$인 것이다.
 :::
 
-음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $\mathfrak{u}$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9)에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)), $-\kappa_{\mathfrak{u}}$는 $\mathfrak{u}$ 위의 양의 정부호 inner product이고 Killing form이 $\Aut(\mathfrak{u})$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3)) $\Ad(U)$-불변이다. 따라서 $\Ad:U\rightarrow\GL(\mathfrak{u})$의 image는 직교군 $\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$ 안에 들어가는 closed subgroup이고, 이는 compact이다. Semisimple의 경우 $\ker\Ad=Z(U)$가 이산이고 유한하므로 $U$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
+음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $\mathfrak{u}$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9){: data-relation="required" }에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-relation="required" }), $-\kappa_{\mathfrak{u}}$는 $\mathfrak{u}$ 위의 양의 정부호 inner product이고 Killing form이 $\Aut(\mathfrak{u})$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3){: data-relation="required" }) $\Ad(U)$-불변이다. 따라서 $\Ad:U\rightarrow\GL(\mathfrak{u})$의 image는 직교군 $\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$ 안에 들어가는 closed subgroup이고, 이는 compact이다. Semisimple의 경우 $\ker\Ad=Z(U)$가 이산이고 유한하므로 $U$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
 
 ::: 예시 5
 $\su(n)$은 trace가 $0$인 skew-Hermitian 복소행렬들의 실 Lie algebra, 곧
@@ -84,13 +84,13 @@ $$\su(n)\oplus i\,\su(n)=\{X\in\Mat_n(\mathbb{C})\mid\tr X=0\}=\sl(n;\mathbb{C})
 이제 임의의 복소 semisimple Lie algebra가 compact real form을 가짐을 증명한다. 핵심은 root decomposition의 root vector들을 적절히 normalize하여 structure constant를 실수, 나아가 부호까지 통제된 형태로 만든 다음, 그로부터 명시적으로 음의 정부호 real form을 적는 것이다. 먼저 root decomposition을 이용해 좋은 basis를 마련한다.
 
 ::: 명제 6
-$\mathfrak{g}$가 복소 semisimple Lie algebra, $\mathfrak{h}$가 Cartan subalgebra, $\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$가 그 root decomposition이라 하자 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)). 그럼 각 root $\alpha\in\Phi$마다 root vector $e_\alpha\in\mathfrak{g}_\alpha$와 원소 $h_\alpha\in\mathfrak{h}$를 다음을 만족하도록 택할 수 있다.
+$\mathfrak{g}$가 복소 semisimple Lie algebra, $\mathfrak{h}$가 Cartan subalgebra, $\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$가 그 root decomposition이라 하자 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" }). 그럼 각 root $\alpha\in\Phi$마다 root vector $e_\alpha\in\mathfrak{g}_\alpha$와 원소 $h_\alpha\in\mathfrak{h}$를 다음을 만족하도록 택할 수 있다.
 
 1. $[h_\alpha,e_\beta]=\langle\beta,\alpha^\vee\rangle e_\beta$이고 $[e_\alpha,e_{-\alpha}]=h_\alpha$이며 $[h_\alpha,e_{\pm\alpha}]=\pm2 e_{\pm\alpha}$이다.
 2. $\alpha+\beta\in\Phi$일 때 $[e_\alpha,e_\beta]=N_{\alpha,\beta}e_{\alpha+\beta}$로 두면 structure constant $N_{\alpha,\beta}$는 모두 실수이고 $N_{\alpha,\beta}=-N_{-\alpha,-\beta}$를 만족한다.
 :::
 ::: 증명
-각 $\alpha\in\Phi$에 대하여 $\mathfrak{g}_\alpha$는 $1$차원이고 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6) 이후의 $\sl_2$ 분석), Killing form은 $\mathfrak{g}_\alpha\times\mathfrak{g}_{-\alpha}$ 위에서 nondegenerate pairing을 준다 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)의 3). 표준적인 $\sl_2$-삼중항 normalization에 따라, 각 $\alpha$에 대하여 $\mathbb{C}e_\alpha\oplus\mathbb{C}h_\alpha\oplus\mathbb{C}e_{-\alpha}\cong\sl(2;\mathbb{C})$가 $[h_\alpha,e_{\pm\alpha}]=\pm2 e_{\pm\alpha}$, $[e_\alpha,e_{-\alpha}]=h_\alpha$를 만족하도록 $e_{\pm\alpha}$를 normalize할 수 있으며, 이때 $h_\alpha$는 coroot $\alpha^\vee$에 대응하여 $[h_\alpha,e_\beta]=\langle\beta,\alpha^\vee\rangle e_\beta$가 성립한다.
+각 $\alpha\in\Phi$에 대하여 $\mathfrak{g}_\alpha$는 $1$차원이고 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" } 이후의 $\sl_2$ 분석), Killing form은 $\mathfrak{g}_\alpha\times\mathfrak{g}_{-\alpha}$ 위에서 nondegenerate pairing을 준다 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" }의 3). 표준적인 $\sl_2$-삼중항 normalization에 따라, 각 $\alpha$에 대하여 $\mathbb{C}e_\alpha\oplus\mathbb{C}h_\alpha\oplus\mathbb{C}e_{-\alpha}\cong\sl(2;\mathbb{C})$가 $[h_\alpha,e_{\pm\alpha}]=\pm2 e_{\pm\alpha}$, $[e_\alpha,e_{-\alpha}]=h_\alpha$를 만족하도록 $e_{\pm\alpha}$를 normalize할 수 있으며, 이때 $h_\alpha$는 coroot $\alpha^\vee$에 대응하여 $[h_\alpha,e_\beta]=\langle\beta,\alpha^\vee\rangle e_\beta$가 성립한다.
 
 이러한 normalization은 각 root pair $\{\alpha,-\alpha\}$에서 $e_\alpha$를 $0$이 아닌 스칼라배로 바꿀 자유를 남기며, 그에 따라 $e_{-\alpha}$는 $[e_\alpha,e_{-\alpha}]=h_\alpha$를 유지하도록 역수배로 조정된다. Chevalley는 이 자유를 이용해 모든 $N_{\alpha,\beta}$가 정수가 되도록 basis를 택할 수 있음을 보였고 (Chevalley basis), 특히 $N_{\alpha,\beta}$는 실수이다. 같은 구성에서 $N_{\alpha,\beta}=-N_{-\alpha,-\beta}$가 성립함은 $\mathfrak{h}$ 위에서 $h\mapsto -h$로 작용하고 $e_\alpha\mapsto -e_{-\alpha}$로 주어지는 involution이 $\mathfrak{g}$의 automorphism이 되도록 부호를 맞출 수 있다는 데에서 따른다. 우리에게 필요한 것은 모든 $N_{\alpha,\beta}$가 실수이고 이 부호 관계를 만족한다는 사실뿐이다.
 :::
@@ -98,14 +98,14 @@ $\mathfrak{g}$가 복소 semisimple Lie algebra, $\mathfrak{h}$가 Cartan subalg
 위 명제의 basis를 *Chevalley basis<sub>슈발레 기저</sub>*라 부른다. 이제 이 basis로부터 compact real form을 직접 적는다.
 
 ::: 정리 7
-$\mathfrak{g}$가 복소 semisimple Lie algebra이고 [명제 6](#prop6)의 Chevalley basis $\{h_\alpha\}\cup\{e_\alpha\}_{\alpha\in\Phi}$가 주어졌다 하자. 그럼 실 부분공간
+$\mathfrak{g}$가 복소 semisimple Lie algebra이고 [명제 6](#prop6){: data-relation="required" }의 Chevalley basis $\{h_\alpha\}\cup\{e_\alpha\}_{\alpha\in\Phi}$가 주어졌다 하자. 그럼 실 부분공간
 
 $$\mathfrak{u}=\span_{\mathbb{R}}\bigl(\{i h_\alpha\mid\alpha\in\Phi^+\}\cup\{e_\alpha-e_{-\alpha}\mid\alpha\in\Phi^+\}\cup\{i(e_\alpha+e_{-\alpha})\mid\alpha\in\Phi^+\}\bigr)$$
 
 은 $\mathfrak{g}$의 compact real form이다.
 :::
 ::: 증명
-먼저 $\mathfrak{u}$가 $\mathfrak{g}$의 real form임을 보인다. $\Phi^+$를 positive root들의 모임이라 하면 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)) $\{h_\alpha\mid\alpha\in\Phi^+\}$는 $\mathfrak{h}$를 $\mathbb{C}$-생성하고 (simple root들에 대응하는 것만 남기면 basis가 된다), $\{e_\alpha\}_{\alpha\in\Phi}$가 root space들의 basis이므로, 위 세 묶음의 원소들은 $\mathfrak{g}$를 $\mathbb{C}$-생성한다. 실제로 $ih_\alpha$, $e_\alpha-e_{-\alpha}$, $i(e_\alpha+e_{-\alpha})$ 및 그 $i$배인 $h_\alpha$, $i(e_\alpha-e_{-\alpha})$, $-(e_\alpha+e_{-\alpha})$를 합치면 $\{h_\alpha,e_\alpha,e_{-\alpha}\}$ 전체를 $\mathbb{C}$-생성하므로, $\mathfrak{u}+i\mathfrak{u}=\mathfrak{g}$이다.
+먼저 $\mathfrak{u}$가 $\mathfrak{g}$의 real form임을 보인다. $\Phi^+$를 positive root들의 모임이라 하면 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15){: data-relation="required" }) $\{h_\alpha\mid\alpha\in\Phi^+\}$는 $\mathfrak{h}$를 $\mathbb{C}$-생성하고 (simple root들에 대응하는 것만 남기면 basis가 된다), $\{e_\alpha\}_{\alpha\in\Phi}$가 root space들의 basis이므로, 위 세 묶음의 원소들은 $\mathfrak{g}$를 $\mathbb{C}$-생성한다. 실제로 $ih_\alpha$, $e_\alpha-e_{-\alpha}$, $i(e_\alpha+e_{-\alpha})$ 및 그 $i$배인 $h_\alpha$, $i(e_\alpha-e_{-\alpha})$, $-(e_\alpha+e_{-\alpha})$를 합치면 $\{h_\alpha,e_\alpha,e_{-\alpha}\}$ 전체를 $\mathbb{C}$-생성하므로, $\mathfrak{u}+i\mathfrak{u}=\mathfrak{g}$이다.
 
 $\mathfrak{u}$가 bracket에 대해 닫혀 있음을 확인한다. 이는 conjugation $\tau$를 통해 깔끔하게 처리된다. $\mathfrak{g}$ 위의 conjugate-linear morphism $\tau$를 basis 위에서
 
@@ -119,11 +119,11 @@ $$\tau[h_\alpha,e_\beta]=\langle\beta,\alpha^\vee\rangle\,\tau(e_\beta)=-\langle
 
 $$[\tau h_\alpha,\tau e_\beta]=[-h_\alpha,-e_{-\beta}]=[h_\alpha,e_{-\beta}]=\langle-\beta,\alpha^\vee\rangle e_{-\beta}=-\langle\beta,\alpha^\vee\rangle e_{-\beta}$$
 
-이어서 둘이 같다. $[e_\alpha,e_{-\alpha}]=h_\alpha$에 대해서는 $\tau[e_\alpha,e_{-\alpha}]=\tau(h_\alpha)=-h_\alpha$이고 $[\tau e_\alpha,\tau e_{-\alpha}]=[-e_{-\alpha},-e_\alpha]=[e_{-\alpha},e_\alpha]=-h_\alpha$이다. 마지막으로 $\alpha+\beta\in\Phi$인 경우 $\tau[e_\alpha,e_\beta]=N_{\alpha,\beta}\,\tau(e_{\alpha+\beta})=-N_{\alpha,\beta}e_{-\alpha-\beta}$ ($N_{\alpha,\beta}$가 실수이므로 conjugate-linear 사상이 그대로 통과한다)이고, $[\tau e_\alpha,\tau e_\beta]=[-e_{-\alpha},-e_{-\beta}]=[e_{-\alpha},e_{-\beta}]=N_{-\alpha,-\beta}e_{-\alpha-\beta}=-N_{\alpha,\beta}e_{-\alpha-\beta}$이다 ([명제 6](#prop6)의 $N_{\alpha,\beta}=-N_{-\alpha,-\beta}$). 따라서 $\tau$는 conjugation이며, 그 fixed point set $\mathfrak{g}^{\tau}$는 real form이다.
+이어서 둘이 같다. $[e_\alpha,e_{-\alpha}]=h_\alpha$에 대해서는 $\tau[e_\alpha,e_{-\alpha}]=\tau(h_\alpha)=-h_\alpha$이고 $[\tau e_\alpha,\tau e_{-\alpha}]=[-e_{-\alpha},-e_\alpha]=[e_{-\alpha},e_\alpha]=-h_\alpha$이다. 마지막으로 $\alpha+\beta\in\Phi$인 경우 $\tau[e_\alpha,e_\beta]=N_{\alpha,\beta}\,\tau(e_{\alpha+\beta})=-N_{\alpha,\beta}e_{-\alpha-\beta}$ ($N_{\alpha,\beta}$가 실수이므로 conjugate-linear 사상이 그대로 통과한다)이고, $[\tau e_\alpha,\tau e_\beta]=[-e_{-\alpha},-e_{-\beta}]=[e_{-\alpha},e_{-\beta}]=N_{-\alpha,-\beta}e_{-\alpha-\beta}=-N_{\alpha,\beta}e_{-\alpha-\beta}$이다 ([명제 6](#prop6){: data-relation="required" }의 $N_{\alpha,\beta}=-N_{-\alpha,-\beta}$). 따라서 $\tau$는 conjugation이며, 그 fixed point set $\mathfrak{g}^{\tau}$는 real form이다.
 
 이제 $\mathfrak{u}=\mathfrak{g}^{\tau}$임을 확인한다. $\tau(ih_\alpha)=-i\,\tau(h_\alpha)=ih_\alpha$, $\tau(e_\alpha-e_{-\alpha})=-e_{-\alpha}+e_\alpha=e_\alpha-e_{-\alpha}$, $\tau(i(e_\alpha+e_{-\alpha}))=-i(-e_{-\alpha}-e_\alpha)=i(e_\alpha+e_{-\alpha})$이므로 $\mathfrak{u}$의 generator가 모두 $\tau$-고정이어서 $\mathfrak{u}\subseteq\mathfrak{g}^{\tau}$이다. 한편 $\mathfrak{u}$가 $\mathfrak{g}$를 $\mathbb{C}$-생성하므로 $\dim_{\mathbb{R}}\mathfrak{u}\geq\dim_{\mathbb{C}}\mathfrak{g}=\dim_{\mathbb{R}}\mathfrak{g}^{\tau}$이고, 따라서 $\mathfrak{u}=\mathfrak{g}^{\tau}$이다.
 
-마지막으로 $\mathfrak{u}$ 위에서 Killing form이 음의 정부호임을 보인다. $\mathfrak{g}$의 Killing form $\kappa$를 root decomposition에 대해 분석하면, $\kappa$는 $\mathfrak{h}$와 $\bigoplus_\alpha\mathfrak{g}_\alpha$를 직교시키고 $\alpha+\beta\neq0$인 $\mathfrak{g}_\alpha,\mathfrak{g}_\beta$를 직교시킨다 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)의 2). 위 normalization에서 $\kappa(e_\alpha,e_{-\alpha})>0$이고 $\kappa(h_\alpha,h_\alpha)>0$임이 $\sl_2$-삼중항의 표준 계산으로 따른다 (Killing form은 $h_\alpha$들의 실 span 위에서 root들이 주는 양의 정부호 inner product로 제한된다). 이제 $\mathfrak{u}$의 generator에서 $\kappa$를 계산하면
+마지막으로 $\mathfrak{u}$ 위에서 Killing form이 음의 정부호임을 보인다. $\mathfrak{g}$의 Killing form $\kappa$를 root decomposition에 대해 분석하면, $\kappa$는 $\mathfrak{h}$와 $\bigoplus_\alpha\mathfrak{g}_\alpha$를 직교시키고 $\alpha+\beta\neq0$인 $\mathfrak{g}_\alpha,\mathfrak{g}_\beta$를 직교시킨다 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" }의 2). 위 normalization에서 $\kappa(e_\alpha,e_{-\alpha})>0$이고 $\kappa(h_\alpha,h_\alpha)>0$임이 $\sl_2$-삼중항의 표준 계산으로 따른다 (Killing form은 $h_\alpha$들의 실 span 위에서 root들이 주는 양의 정부호 inner product로 제한된다). 이제 $\mathfrak{u}$의 generator에서 $\kappa$를 계산하면
 
 $$\kappa(ih_\alpha,ih_\alpha)=-\kappa(h_\alpha,h_\alpha)<0$$
 
@@ -134,10 +134,10 @@ $$\begin{aligned}
 \kappa(i(e_\alpha+e_{-\alpha}),\,i(e_\alpha+e_{-\alpha}))&=-2\kappa(e_\alpha,e_{-\alpha})<0
 \end{aligned}$$
 
-을 얻는다. 또 $\mathfrak{h}_{\mathbb{R}}=\span_{\mathbb{R}}\{h_\alpha\mid\alpha\in\Phi\}$라 하면, 위 직교성에 의해 $i\mathfrak{h}_{\mathbb{R}}$과 각 root pair에서 온 $2$차원 부분공간들은 서로 $\kappa$-직교하고, 같은 $\alpha$에서 온 $e_\alpha-e_{-\alpha}$와 $i(e_\alpha+e_{-\alpha})$도 $\kappa$가 symmetric이라는 데에서 직교한다. $\kappa(h_\alpha,h_\beta)$는 $\alpha\neq\beta$일 때 일반적으로 $0$이 아니지만, $\kappa$가 $\mathfrak{h}_{\mathbb{R}}$ 위에서 양의 정부호이므로 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이전의 논의) $i\mathfrak{h}_{\mathbb{R}}$ 위에서는 음의 정부호이다. 따라서 $\kappa_{\mathfrak{u}}$는 음의 정부호이고 ([명제 3](#prop3)에 의해 $\kappa_{\mathfrak{u}}$는 $\kappa$의 restriction이다), $\mathfrak{u}$는 compact real form이다.
+을 얻는다. 또 $\mathfrak{h}_{\mathbb{R}}=\span_{\mathbb{R}}\{h_\alpha\mid\alpha\in\Phi\}$라 하면, 위 직교성에 의해 $i\mathfrak{h}_{\mathbb{R}}$과 각 root pair에서 온 $2$차원 부분공간들은 서로 $\kappa$-직교하고, 같은 $\alpha$에서 온 $e_\alpha-e_{-\alpha}$와 $i(e_\alpha+e_{-\alpha})$도 $\kappa$가 symmetric이라는 데에서 직교한다. $\kappa(h_\alpha,h_\beta)$는 $\alpha\neq\beta$일 때 일반적으로 $0$이 아니지만, $\kappa$가 $\mathfrak{h}_{\mathbb{R}}$ 위에서 양의 정부호이므로 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12){: data-relation="weak" } 이전의 논의) $i\mathfrak{h}_{\mathbb{R}}$ 위에서는 음의 정부호이다. 따라서 $\kappa_{\mathfrak{u}}$는 음의 정부호이고 ([명제 3](#prop3){: data-relation="required" }에 의해 $\kappa_{\mathfrak{u}}$는 $\kappa$의 restriction이다), $\mathfrak{u}$는 compact real form이다.
 :::
 
-이로써 모든 복소 semisimple Lie algebra가 적어도 하나의 compact real form을 가짐을 보였다. 구성에서 핵심은 두 가지였다. 첫째, $\mathfrak{h}$의 실 방향 $h_\alpha$에 $i$를 곱해 Killing form이 양의 정부호이던 방향을 음의 정부호로 뒤집은 것이고, 둘째, 각 root space 쌍 $\mathfrak{g}_\alpha\oplus\mathfrak{g}_{-\alpha}$에서 hyperbolic하게 분포하던 Killing form을 $e_\alpha-e_{-\alpha}$와 $i(e_\alpha+e_{-\alpha})$라는 두 실 방향으로 옮겨 둘 다 음으로 만든 것이다. [예시 5](#ex5)의 $\su(n)$이 정확히 이 구성의 $\sl(n;\mathbb{C})$에 대한 특수한 경우이다.
+이로써 모든 복소 semisimple Lie algebra가 적어도 하나의 compact real form을 가짐을 보였다. 구성에서 핵심은 두 가지였다. 첫째, $\mathfrak{h}$의 실 방향 $h_\alpha$에 $i$를 곱해 Killing form이 양의 정부호이던 방향을 음의 정부호로 뒤집은 것이고, 둘째, 각 root space 쌍 $\mathfrak{g}_\alpha\oplus\mathfrak{g}_{-\alpha}$에서 hyperbolic하게 분포하던 Killing form을 $e_\alpha-e_{-\alpha}$와 $i(e_\alpha+e_{-\alpha})$라는 두 실 방향으로 옮겨 둘 다 음으로 만든 것이다. [예시 5](#ex5){: data-relation="weak" }의 $\su(n)$이 정확히 이 구성의 $\sl(n;\mathbb{C})$에 대한 특수한 경우이다.
 
 ## 유일성
 
@@ -157,7 +157,7 @@ $$H_\tau(x,x)=-\kappa(u+iv,\,u-iv)=-\kappa(u,u)-\kappa(v,v)+i\bigl(\kappa(u,v)-\
 
 인데 $\kappa$가 symmetric이라 허수부가 사라지고, $\kappa_{\mathfrak{u}}$가 음의 정부호이므로 $-\kappa(u,u)-\kappa(v,v)\geq0$이며 $x\neq0$이면 $u,v$ 중 하나가 $0$이 아니어서 양수이다.
 
-Skew-Hermitian성은 $\kappa$의 invariance에서 ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2)) 따른다. $x\in\mathfrak{u}$이면 $\tau x=x$이고 $\tau$가 bracket을 보존하므로 $\tau([x,y])=[x,\tau y]$이다. 따라서
+Skew-Hermitian성은 $\kappa$의 invariance에서 ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2){: data-relation="required" }) 따른다. $x\in\mathfrak{u}$이면 $\tau x=x$이고 $\tau$가 bracket을 보존하므로 $\tau([x,y])=[x,\tau y]$이다. 따라서
 
 $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\tau z])=\kappa(y,\tau[x,z])=-H_\tau(y,[x,z])$$
 
@@ -170,7 +170,7 @@ $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\t
 복소 semisimple Lie algebra $\mathfrak{g}$의 두 compact real form $\mathfrak{u}_1,\mathfrak{u}_2$에 대하여, $\varphi(\mathfrak{u}_1)=\mathfrak{u}_2$를 만족하는 automorphism $\varphi\in\Aut(\mathfrak{g})$가 존재한다. 특히 $\mathfrak{u}_1$과 $\mathfrak{u}_2$는 $\mathbb{R}$ 위의 Lie algebra로서 isomorphic하다. 곧 $\mathfrak{g}$의 compact real form은 동형을 제외하고 유일하다.
 :::
 ::: 증명
-$\tau_1,\tau_2$를 각각 $\mathfrak{u}_1,\mathfrak{u}_2$에 대응하는 conjugation이라 하고, $H=H_{\tau_1}$을 [명제 8](#prop8)의 양의 정부호 Hermitian form이라 하자. $\theta=\tau_1\tau_2$는 두 conjugate-linear involution의 합성이므로 $\mathfrak{g}$의 ($\mathbb{C}$-선형) automorphism이다. $\theta$가 $H$에 대해 양의 정부호 self-adjoint임을 보인다. 임의의 conjugation $\tau$에 대해 $\kappa(\tau x,\tau y)=\overline{\kappa(x,y)}$이므로, $\tau_1^2=\tau_2^2=\id$과 함께 쓰면 임의의 $x,y\in\mathfrak{g}$에 대하여
+$\tau_1,\tau_2$를 각각 $\mathfrak{u}_1,\mathfrak{u}_2$에 대응하는 conjugation이라 하고, $H=H_{\tau_1}$을 [명제 8](#prop8){: data-relation="required" }의 양의 정부호 Hermitian form이라 하자. $\theta=\tau_1\tau_2$는 두 conjugate-linear involution의 합성이므로 $\mathfrak{g}$의 ($\mathbb{C}$-선형) automorphism이다. $\theta$가 $H$에 대해 양의 정부호 self-adjoint임을 보인다. 임의의 conjugation $\tau$에 대해 $\kappa(\tau x,\tau y)=\overline{\kappa(x,y)}$이므로, $\tau_1^2=\tau_2^2=\id$과 함께 쓰면 임의의 $x,y\in\mathfrak{g}$에 대하여
 
 $$H(\theta x,y)=-\kappa(\tau_1\tau_2x,\tau_1y)=-\overline{\kappa(\tau_2x,y)}=-\kappa(x,\tau_2y)=-\kappa(x,\tau_1\theta y)=H(x,\theta y)$$
 
@@ -178,7 +178,7 @@ $$H(\theta x,y)=-\kappa(\tau_1\tau_2x,\tau_1y)=-\overline{\kappa(\tau_2x,y)}=-\k
 
 $$H(\theta x,x)=-\kappa(x,\tau_2x)=H_{\tau_2}(x,x)>0$$
 
-인데, 마지막 부등식은 $\mathfrak{u}_2$ 역시 compact real form이므로 [명제 8](#prop8)을 $\tau_2$에 적용한 것이다.
+인데, 마지막 부등식은 $\mathfrak{u}_2$ 역시 compact real form이므로 [명제 8](#prop8){: data-relation="required" }을 $\tau_2$에 적용한 것이다.
 
 $\theta$가 양의 정부호 self-adjoint automorphism이므로, spectrum 분해를 통해 실수 $t$에 대한 거듭제곱 $\theta^t$가 잘 정의되고 각 $\theta^t$ 역시 $\mathfrak{g}$의 automorphism이다 ($\theta$가 automorphism이고 그 고유공간 분해가 bracket과 호환되기 때문이다). $\varphi=\theta^{-1/2}$로 두면, $\theta\tau_1=\tau_1\theta^{-1}$ (따라서 실수 거듭제곱에 대해 $\theta^t\tau_1=\tau_1\theta^{-t}$) 이라는 관계로부터 $\varphi\tau_1\varphi^{-1}=\theta^{-1/2}\tau_1\theta^{1/2}=\tau_1\theta=\tau_2$임이 따른다 ($\theta=\tau_1\tau_2$에서 $\tau_1\theta=\tau_2$이므로). Conjugation을 옮기는 automorphism은 그 fixed point set인 real form을 옮기므로
 
@@ -187,7 +187,7 @@ $$\varphi(\mathfrak{u}_1)=\varphi(\mathfrak{g}^{\tau_1})=\mathfrak{g}^{\varphi\t
 이다. $\varphi$가 automorphism이므로 그 restriction $\varphi\vert_{\mathfrak{u}_1}:\mathfrak{u}_1\rightarrow\mathfrak{u}_2$는 실 Lie algebra isomorphism이고, 따라서 두 compact real form은 isomorphic하다.
 :::
 
-유일성은 compact real form을 복소 semisimple Lie algebra의 불변량으로 취급할 수 있게 한다. 곧 simple 복소 Lie algebra의 분류 ([§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)의 Cartan matrix에 의한)는 simple compact Lie algebra, 나아가 단순연결 simple compact Lie group의 분류와 일대일로 대응한다. $A_n,B_n,C_n,D_n$ 계열에 대응하는 compact form이 각각 $\su(n+1),\so(2n+1),\sp(n),\so(2n)$이라는 사실이 그 가장 직접적인 형태이다.
+유일성은 compact real form을 복소 semisimple Lie algebra의 불변량으로 취급할 수 있게 한다. 곧 simple 복소 Lie algebra의 분류 ([§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16){: data-relation="weak" }의 Cartan matrix에 의한)는 simple compact Lie algebra, 나아가 단순연결 simple compact Lie group의 분류와 일대일로 대응한다. $A_n,B_n,C_n,D_n$ 계열에 대응하는 compact form이 각각 $\su(n+1),\so(2n+1),\sp(n),\so(2n)$이라는 사실이 그 가장 직접적인 형태이다.
 
 ## Weyl의 unitarian trick
 
@@ -208,22 +208,22 @@ $$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\dd{u
 이므로 $\langle-,-\rangle$은 $U$-불변이다. 이제 $W\subseteq V$가 subrepresentation이면 그 orthogonal complement $W^\perp$ 역시 subrepresentation이다. 임의의 $w\in W$, $x\in W^\perp$, $g\in U$에 대하여 $\langle w,\rho(g)x\rangle=\langle\rho(g^{-1})w,x\rangle=0$이고 ($\rho(g^{-1})w\in W$), 따라서 $\rho(g)x\in W^\perp$이기 때문이다. 그럼 $V=W\oplus W^\perp$가 representation의 direct sum 분해이고, $\dim V$에 대한 귀납법으로 $V$가 irreducible subrepresentation들의 direct sum임이 따른다.
 :::
 
-이 논법은 적분 가능한 group, 곧 compact group에서만 직접 통한다. $\SL(n;\mathbb{C})$ 같은 noncompact group이나 추상 semisimple Lie algebra에는 평균낼 측도가 없으므로 그대로 적용되지 않는다 ([§근계](/ko/math/lie_theory/root_systems)의 $\sl_2$ 논의에서 지적한 바와 같다). Weyl의 착상은 representation을 일단 compact real form $\mathfrak{u}$에 대응하는 compact group $U$의 representation으로 끌어내려 거기에서 완전가약성을 얻은 뒤, 그 분해가 원래의 복소 Lie algebra representation의 분해이기도 함을 복소화로 되돌려 받는 것이다.
+이 논법은 적분 가능한 group, 곧 compact group에서만 직접 통한다. $\SL(n;\mathbb{C})$ 같은 noncompact group이나 추상 semisimple Lie algebra에는 평균낼 측도가 없으므로 그대로 적용되지 않는다 ([§근계](/ko/math/lie_theory/root_systems){: data-relation="weak" }의 $\sl_2$ 논의에서 지적한 바와 같다). Weyl의 착상은 representation을 일단 compact real form $\mathfrak{u}$에 대응하는 compact group $U$의 representation으로 끌어내려 거기에서 완전가약성을 얻은 뒤, 그 분해가 원래의 복소 Lie algebra representation의 분해이기도 함을 복소화로 되돌려 받는 것이다.
 
 ::: 정리 11 (Weyl의 unitarian trick)
 $\mathfrak{g}$가 복소 semisimple Lie algebra이면 $\mathfrak{g}$의 모든 유한차원 representation은 완전가약이다.
 :::
 ::: 증명
-$\rho:\mathfrak{g}\rightarrow\gl(V)$를 유한차원 복소 representation이라 하자. [정리 7](#thm7)에 의해 $\mathfrak{g}$는 compact real form $\mathfrak{u}$를 가지며, $\mathfrak{g}=\mathfrak{u}\oplus i\mathfrak{u}$이다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)), $\mathfrak{u}$가 compact real form이라는 데에서 $U$는 compact이다 ([정의 4](#def4) 이후의 논의).
+$\rho:\mathfrak{g}\rightarrow\gl(V)$를 유한차원 복소 representation이라 하자. [정리 7](#thm7){: data-relation="required" }에 의해 $\mathfrak{g}$는 compact real form $\mathfrak{u}$를 가지며, $\mathfrak{g}=\mathfrak{u}\oplus i\mathfrak{u}$이다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-relation="required" }), $\mathfrak{u}$가 compact real form이라는 데에서 $U$는 compact이다 ([정의 4](#def4){: data-relation="required" } 이후의 논의).
 
-$\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra representation $\rho\vert_{\mathfrak{u}}:\mathfrak{u}\rightarrow\gl(V)$를 얻고, $U$가 단순연결이므로 이는 group representation $\widetilde\rho:U\rightarrow\GL(V)$로 적분된다 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)의 1). $U$가 compact이므로 [명제 10](#prop10)에 의해 $\widetilde\rho$는 완전가약이고, $V=\bigoplus_j W_j$로 $U$-irreducible subrepresentation들의 direct sum으로 분해된다.
+$\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra representation $\rho\vert_{\mathfrak{u}}:\mathfrak{u}\rightarrow\gl(V)$를 얻고, $U$가 단순연결이므로 이는 group representation $\widetilde\rho:U\rightarrow\GL(V)$로 적분된다 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-relation="required" }의 1). $U$가 compact이므로 [명제 10](#prop10){: data-relation="required" }에 의해 $\widetilde\rho$는 완전가약이고, $V=\bigoplus_j W_j$로 $U$-irreducible subrepresentation들의 direct sum으로 분해된다.
 
 이제 각 $W_j$가 $\mathfrak{g}$-subrepresentation임을 본다. $W_j$가 $U$-불변이므로 $\widetilde\rho$를 미분한 $\rho\vert_{\mathfrak{u}}$ 아래 $\mathfrak{u}$-불변, 곧 모든 $x\in\mathfrak{u}$에 대하여 $\rho(x)W_j\subseteq W_j$이다. 임의의 $z\in\mathfrak{g}$는 $z=x+iy$ ($x,y\in\mathfrak{u}$) 꼴이고 $\rho$가 $\mathbb{C}$-선형이므로 $\rho(z)=\rho(x)+i\rho(y)$가 $W_j$를 보존한다. 따라서 각 $W_j$는 $\mathfrak{g}$-subrepresentation이다.
 
 마지막으로 각 $W_j$가 $\mathfrak{g}$-irreducible임을 본다. $W_j$가 $0$이 아닌 $\mathfrak{g}$-subrepresentation $W'\subsetneq W_j$를 가진다면, 위와 같은 이유로 $W'$는 $\mathfrak{u}$-불변이고 따라서 ($U$가 connected이므로) $U$-불변인 proper subrepresentation이 되어 $W_j$의 $U$-irreducibility에 모순이다. 그러므로 $V=\bigoplus_j W_j$는 $\mathfrak{g}$-irreducible subrepresentation들의 direct sum이고, $\rho$는 완전가약이다.
 :::
 
-이로써 [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)를 Casimir element를 통한 순수 대수적 증명과는 독립적으로, compact group의 평균화 논법으로 다시 얻었다. 두 증명은 같은 결론에 이르지만 강조점이 다르다. Casimir element를 쓰는 증명은 characteristic $0$의 임의의 algebraically closed field 위에서 작동하는 반면, unitarian trick은 $\mathbb{C}$ 위에서 compact group의 위상적·해석적 성질에 의존한다. Weyl의 원래 동기는 후자였으며, compact real form은 복소 semisimple Lie algebra의 표현론과 compact Lie group의 표현론을 잇는 핵심 고리로 남는다.
+이로써 [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7){: data-relation="forward" }를 Casimir element를 통한 순수 대수적 증명과는 독립적으로, compact group의 평균화 논법으로 다시 얻었다. 두 증명은 같은 결론에 이르지만 강조점이 다르다. Casimir element를 쓰는 증명은 characteristic $0$의 임의의 algebraically closed field 위에서 작동하는 반면, unitarian trick은 $\mathbb{C}$ 위에서 compact group의 위상적·해석적 성질에 의존한다. Weyl의 원래 동기는 후자였으며, compact real form은 복소 semisimple Lie algebra의 표현론과 compact Lie group의 표현론을 잇는 핵심 고리로 남는다.
 
 ---
 
