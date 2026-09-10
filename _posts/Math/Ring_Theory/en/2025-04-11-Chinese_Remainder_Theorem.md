@@ -122,7 +122,7 @@ $$x=x\cdot 1=x(u+v)=xu+xv\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathf
 
 holds. Therefore $\mathfrak{b}_1\cap\mathfrak{b}_2=\mathfrak{b}_1\mathfrak{b}_2$.
 
-Now let $n>2$. It is obvious that the ideal $\mathfrak{a}=\mathfrak{b}_n$ and $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$ are pairwise comaximal, so applying [Proposition 4](#prop4) gives
+Now let $n>2$. It is obvious that the ideal $\mathfrak{a}=\mathfrak{b}_n$ and $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$ are pairwise comaximal, so applying [Proposition 4](#prop4){: data-relation="required" } gives
 
 $$A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_{n-1})$$
 
@@ -169,7 +169,7 @@ Thus, by the first isomorphism theorem, the following canonical isomorphism
 
 $$A\Big/\left(\bigcap_{i=1}^n \mathfrak{a}_i\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
 
-exists. If $A$ is commutative, then by [Proposition 5](#prop5) we can replace the intersection by a product, so
+exists. If $A$ is commutative, then by [Proposition 5](#prop5){: data-relation="required" } we can replace the intersection by a product, so
 
 $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
@@ -177,22 +177,22 @@ and in particular, if $\bigcap \mathfrak{a}_i=0$, then we obtain the isomorphism
 
 The integer version mentioned in the introduction is the special case $A=\mathbb{Z}$. That is, for pairwise coprime $n_1,\ldots, n_r$, setting $\mathfrak{a}_i=n_i \mathbb{Z}$ and $n=n_1\cdots n_r$, the coprime condition becomes exactly the comaximal condition $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$, so the above proposition yields the isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$.
 
-The isomorphism $A\cong\prod A/\mathfrak{a}_i$ obtained when $\bigcap\mathfrak{a}_i=0$ is the strong statement that the ring $A$ decomposes as a product of smaller rings. When $A$ is commutative, this condition is equivalent by [Proposition 5](#prop5) to $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$.
+The isomorphism $A\cong\prod A/\mathfrak{a}_i$ obtained when $\bigcap\mathfrak{a}_i=0$ is the strong statement that the ring $A$ decomposes as a product of smaller rings. When $A$ is commutative, this condition is equivalent by [Proposition 5](#prop5){: data-relation="required" } to $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$.
 
 ## The Noncommutative Case
 
-In [Proposition 5](#prop5), the commutativity assumption was used to guarantee that the intersection $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ collapses to a single product $\mathfrak{b}_1\cdots\mathfrak{b}_n$. Without this assumption, products in different orders can yield different ideals, and the intersection is expressed as the symmetric sum of all such ordered products. The following proposition gives the generalized version.
+In [Proposition 5](#prop5){: data-relation="weak" }, the commutativity assumption was used to guarantee that the intersection $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ collapses to a single product $\mathfrak{b}_1\cdots\mathfrak{b}_n$. Without this assumption, products in different orders can yield different ideals, and the intersection is expressed as the symmetric sum of all such ordered products. The following proposition gives the generalized version.
 
 ::: Proposition 7
 Let two-sided ideals $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$ of a ring $A$ be pairwise comaximal. Then
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
 
-holds. In particular, if $A$ is a commutative ring then all products in different orders coincide, so we recover [Proposition 5](#prop5).
+holds. In particular, if $A$ is a commutative ring then all products in different orders coincide, so we recover [Proposition 5](#prop5){: data-relation="weak" }.
 :::
 
 ::: Proof
-We prove this by induction, just as in [Proposition 5](#prop5). Since $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ always holds, we only need to show the reverse inclusion.
+We prove this by induction, just as in [Proposition 5](#prop5){: data-relation="weak" }. Since $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ always holds, we only need to show the reverse inclusion.
 
 First let $n=2$. From the pairwise comaximal condition, choose elements with $1=b_1+b_2$ ($b_i\in\mathfrak{b}_i$); then for any $x\in\mathfrak{b}_1\cap\mathfrak{b}_2$,
 
@@ -200,7 +200,7 @@ $$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_1\mathfrak{b}_2+\mathfrak{b}_2
 
 holds.
 
-Now let $n>2$. Applying [Proposition 4](#prop4) to $\mathfrak{a}=\mathfrak{b}_n$ and $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$, we have $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$, so the two ideals $\mathfrak{b}_n$ and $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$ are comaximal. Applying the $n=2$ result,
+Now let $n>2$. Applying [Proposition 4](#prop4){: data-relation="required" } to $\mathfrak{a}=\mathfrak{b}_n$ and $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$, we have $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$, so the two ideals $\mathfrak{b}_n$ and $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$ are comaximal. Applying the $n=2$ result,
 
 $$\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})\mathfrak{b}_n+\mathfrak{b}_n(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$$
 
@@ -211,11 +211,11 @@ $$\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sig
 and since each term on the right-hand side is contained in $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$, we obtain the desired reverse inclusion.
 :::
 
-Applying [Proposition 7](#prop7) to the kernel $\bigcap_i\mathfrak{a}_i$ in [Proposition 6](#prop6), the Chinese remainder theorem in the noncommutative case also takes the form
+Applying [Proposition 7](#prop7){: data-relation="required" } to the kernel $\bigcap_i\mathfrak{a}_i$ in [Proposition 6](#prop6){: data-relation="required" }, the Chinese remainder theorem in the noncommutative case also takes the form
 
 $$A\Big/\left(\sum_{\sigma\in S_n}\mathfrak{a}_{\sigma(1)}\cdots\mathfrak{a}_{\sigma(n)}\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i.$$
 
-This contains essentially the same information as [Proposition 6](#prop6); the only difference is that in the commutative case this kernel collapses to the single product $\mathfrak{a}_1\cdots\mathfrak{a}_n$, simplifying the statement.
+This contains essentially the same information as [Proposition 6](#prop6){: data-relation="weak" }; the only difference is that in the commutative case this kernel collapses to the single product $\mathfrak{a}_1\cdots\mathfrak{a}_n$, simplifying the statement.
 
 ---
 

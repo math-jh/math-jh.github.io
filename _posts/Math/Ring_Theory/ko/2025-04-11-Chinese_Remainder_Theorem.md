@@ -18,7 +18,7 @@ weight: 3
 
 $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z},\qquad \text{$m,n$ coprime}$$
 
-이다. ([\[정수론\] §중국인의 나머지 정리, ⁋정리 1](/ko/math/number_theory/chinese_remainder_theorem#thm1)) 즉, 어떤 정수를 $mn$으로 나눈 나머지는 $m$으로 나눈 나머지와 $n$으로 나눈 나머지 각각을 알면 완벽하게 구할 수 있다는 뜻이며, 이를 임의의 ring $A$로 확장하는 것이 이 글의 목표이다. 
+이다. ([\[정수론\] §중국인의 나머지 정리, ⁋정리 1](/ko/math/number_theory/chinese_remainder_theorem#thm1){: data-relation="weak" }) 즉, 어떤 정수를 $mn$으로 나눈 나머지는 $m$으로 나눈 나머지와 $n$으로 나눈 나머지 각각을 알면 완벽하게 구할 수 있다는 뜻이며, 이를 임의의 ring $A$로 확장하는 것이 이 글의 목표이다. 
 
 간략하게 이야기해서, 이 일반화는 우선 $m\mathbb{Z}$와 $n\mathbb{Z}$를 ring $A$의 ideal로 일반화하고, $mn\mathbb{Z}$를 이 두 ideal의 교집합으로 이해하여 얻어진다. 다만 이 일반화가 임의의 ideal에 대해 되는 것은 아니며, 위 $m,n$이 서로소라는 조건에 해당하는 조건 또한 필요하다. 이에 해당하는 ideal의 조건은 *comaximal*로, 그럼 ring theory에서 일반화된 정리는 pairwise comaximal ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
 
@@ -43,7 +43,7 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots +xx_ny_n$$
 이고 $xx_i\in \mathfrak{a}$이므로 $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$이다. $x$를 오른쪽에 곱해도 비슷한 논증이 성립하므로, $\mathfrak{a}\mathfrak{b}$는 $A$의 two-sided ideal인 것을 확인할 수 있다.
 
 ::: 명제 2
-위와 같이 정의된 곱셈에 대하여, $A$의 two-sided ideal들의 모임은 항등원을 $A$로 하는 monoid 구조를 가진다 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)). 뿐만 아니라, 분배법칙
+위와 같이 정의된 곱셈에 대하여, $A$의 two-sided ideal들의 모임은 항등원을 $A$로 하는 monoid 구조를 가진다 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3){: data-relation="required" }). 뿐만 아니라, 분배법칙
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
@@ -81,7 +81,7 @@ Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\ma
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
+꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-relation="weak" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
 
 한편, 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
 
@@ -120,7 +120,7 @@ $$x=x\cdot 1=x(u+v)=xu+xv\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathf
 
 이다. 따라서 $\mathfrak{b}_1\cap\mathfrak{b}_2=\mathfrak{b}_1\mathfrak{b}_2$이다.
 
-이제 $n>2$라 하자. 두 ideal $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$이 pairwise comaximal임은 자명하므로, 여기에 [명제 4](#prop4)를 적용하면
+이제 $n>2$라 하자. 두 ideal $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$이 pairwise comaximal임은 자명하므로, 여기에 [명제 4](#prop4){: data-relation="required" }를 적용하면
 
 $$A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_{n-1})$$
 
@@ -166,7 +166,7 @@ $$v_{ij}=1-u_{ij}\equiv 1\pmod{\mathfrak{a}_i}$$
 
 $$A\Big/\left(\bigcap_{i=1}^n \mathfrak{a}_i\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
 
-이 존재한다. 만일 $A$가 commutative라면 [명제 5](#prop5)에 의하여 교집합을 곱으로 바꾸어 쓸 수 있으므로
+이 존재한다. 만일 $A$가 commutative라면 [명제 5](#prop5){: data-relation="required" }에 의하여 교집합을 곱으로 바꾸어 쓸 수 있으므로
 
 $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
@@ -174,21 +174,21 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 도입부에서 언급한 정수 버전은 $A=\mathbb{Z}$인 특수한 경우이다. 즉, pairwise coprime인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하고 $n=n_1\cdots n_r$이라 두면, 서로소 조건이 곧 comaximal 조건 $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$이 되므로 위 명제는 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 준다. 
 
-$\bigcap\mathfrak{a}_i=0$일 때 얻어지는 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실이다. 이 조건은 $A$가 commutative인 경우 [명제 5](#prop5)에 의하여 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
+$\bigcap\mathfrak{a}_i=0$일 때 얻어지는 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실이다. 이 조건은 $A$가 commutative인 경우 [명제 5](#prop5){: data-relation="required" }에 의하여 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
 
 ## 비가환의 경우
 
-[명제 5](#prop5)에서 commutative라는 가정은 교집합 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이 단일한 곱 $\mathfrak{b}_1\cdots\mathfrak{b}_n$으로 떨어지는 것을 보장하기 위해 쓰였다. 이를 가정하지 않으면 여러 순서의 곱이 서로 다른 ideal이 될 수 있어, 교집합은 그 모든 순서의 곱을 더한 symmetric sum으로 나타나며, 다음 명제가 그 일반화된 버전을 준다.
+[명제 5](#prop5){: data-relation="required" }에서 commutative라는 가정은 교집합 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이 단일한 곱 $\mathfrak{b}_1\cdots\mathfrak{b}_n$으로 떨어지는 것을 보장하기 위해 쓰였다. 이를 가정하지 않으면 여러 순서의 곱이 서로 다른 ideal이 될 수 있어, 교집합은 그 모든 순서의 곱을 더한 symmetric sum으로 나타나며, 다음 명제가 그 일반화된 버전을 준다.
 
 ::: 명제 7
 Ring $A$의 two-sided ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 pairwise comaximal이라 하자. 그럼
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
 
-이 성립한다. 특히 $A$가 commutative ring이면 모든 순서의 곱이 같아지므로 [명제 5](#prop5)를 회복한다.
+이 성립한다. 특히 $A$가 commutative ring이면 모든 순서의 곱이 같아지므로 [명제 5](#prop5){: data-relation="weak" }를 회복한다.
 :::
 ::: 증명
-[명제 5](#prop5)와 마찬가지로 귀납법으로 증명한다. 항상 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이므로 역포함만 보이면 된다.
+[명제 5](#prop5){: data-relation="weak" }와 마찬가지로 귀납법으로 증명한다. 항상 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이므로 역포함만 보이면 된다.
 
 우선 $n=2$라 하자. Pairwise comaximal 조건에서 $1=b_1+b_2$ ($b_i\in\mathfrak{b}_i$)인 원소를 택하면, 임의의 $x\in\mathfrak{b}_1\cap\mathfrak{b}_2$에 대하여
 
@@ -196,7 +196,7 @@ $$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_1\mathfrak{b}_2+\mathfrak{b}_2
 
 이다.
 
-이제 $n>2$라 하자. [명제 4](#prop4)를 $\mathfrak{a}=\mathfrak{b}_n$, $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$에 적용하면 $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$이므로, 두 ideal $\mathfrak{b}_n$과 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$은 comaximal이다. 여기에 $n=2$의 결과를 적용하면
+이제 $n>2$라 하자. [명제 4](#prop4){: data-relation="required" }를 $\mathfrak{a}=\mathfrak{b}_n$, $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$에 적용하면 $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$이므로, 두 ideal $\mathfrak{b}_n$과 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$은 comaximal이다. 여기에 $n=2$의 결과를 적용하면
 
 $$\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})\mathfrak{b}_n+\mathfrak{b}_n(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$$
 
@@ -207,11 +207,11 @@ $$\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sig
 이며, 우변의 각 항이 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$에 포함되므로 원하는 역포함을 얻는다.
 :::
 
-[명제 6](#prop6)의 kernel $\bigcap_i\mathfrak{a}_i$에 [명제 7](#prop7)을 적용하면, non-commutative case에서의 중국인의 나머지정리 역시
+[명제 6](#prop6){: data-relation="required" }의 kernel $\bigcap_i\mathfrak{a}_i$에 [명제 7](#prop7){: data-relation="required" }을 적용하면, non-commutative case에서의 중국인의 나머지정리 역시
 
 $$A\Big/\left(\sum_{\sigma\in S_n}\mathfrak{a}_{\sigma(1)}\cdots\mathfrak{a}_{\sigma(n)}\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
 
-의 형태로 성립한다. 이는 본질적으로 [명제 6](#prop6)과 동일한 정보를 담고 있는 것으로, 차이는 commutative인 경우 이 kernel이 단일한 곱 $\mathfrak{a}_1\cdots\mathfrak{a}_n$으로 떨어져 그 형태가 단순해진다는 것뿐이다.
+의 형태로 성립한다. 이는 본질적으로 [명제 6](#prop6){: data-relation="weak" }과 동일한 정보를 담고 있는 것으로, 차이는 commutative인 경우 이 kernel이 단일한 곱 $\mathfrak{a}_1\cdots\mathfrak{a}_n$으로 떨어져 그 형태가 단순해진다는 것뿐이다.
 
 ---
 
