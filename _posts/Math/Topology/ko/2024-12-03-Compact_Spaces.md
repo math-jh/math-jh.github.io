@@ -34,7 +34,7 @@ weight: 14
 거꾸로 주어진 조건이 성립한다 하고, $Y$의 임의의 open covering $(V_i)_{i\in I}$이 주어졌다 하자. 그럼 $Y$의 위상구조의 정의에 의하여 $V_i=U_i\cap Y$이도록 하는 $X$의 열린집합들 $(U_i)$가 존재하며, $\bigcup U_i$는 $Y$를 포함한다. 따라서 유한한 부분집합 $J$가 존재하여 $(U_j)_{j\in J}$들의 합집합이 $Y$를 포함한다. 그럼 $(V_j)_{j\in J}$가 원하는 $(V_i)_{i\in I}$의 finite subcover이다.
 :::
 
-위의 명제에 의하여, $Y$의 compactness를 증명하기 위해서는 $Y$를 포함하는 공간인 $X$에서의 열린집합들로 $Y$를 덮은 후, 이들이 [정의 1](#def1)의 조건을 만족함을 보이면 충분하다. 따라서, 약간의 남용을 통해 $Y\subseteq \bigcup U_i$를 만족하는 $X$의 열린집합들 $U_i$를 $Y$의 open cover라고 말하고, 혼동의 여지가 있는 경우만 이를 명확히 구별하기로 한다. 
+위의 명제에 의하여, $Y$의 compactness를 증명하기 위해서는 $Y$를 포함하는 공간인 $X$에서의 열린집합들로 $Y$를 덮은 후, 이들이 [정의 1](#def1){: data-relation="required" }의 조건을 만족함을 보이면 충분하다. 따라서, 약간의 남용을 통해 $Y\subseteq \bigcup U_i$를 만족하는 $X$의 열린집합들 $U_i$를 $Y$의 open cover라고 말하고, 혼동의 여지가 있는 경우만 이를 명확히 구별하기로 한다. 
 
 ::: 보조정리 3
 Compact space의 닫힌집합은 compact이다.
@@ -51,7 +51,7 @@ Compact space $X$, $X$의 닫힌집합 $Y$가 주어졌다 하고 $Y$의 open co
 Hausdorff space $X$가 주어졌다 하고, $X$의 한 점 $x$, 그리고 $x$를 포함하지 않는 $X$의 compact subspace $Y$가 주어졌다 하자. 그럼 두 집합 $\{x\}$와 $Y$는 근방으로 분리가능하다.
 :::
 ::: 증명
-$X$가 Hausdorff space이므로, 각각의 $y\in Y$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [명제 2](#prop2)에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
+$X$가 Hausdorff space이므로, 각각의 $y\in Y$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [명제 2](#prop2){: data-relation="required" }에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
 
 $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 
@@ -68,20 +68,20 @@ $$U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 Hausdorff space $X$의 compact subset $Y$는 닫힌집합이다.
 :::
 ::: 증명
-[보조정리 4](#lem4)의 증명에서 
+[보조정리 4](#lem4){: data-relation="required" }의 증명에서 
 
 $$U_x=U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 
 이라 하면 $X\setminus Y=\bigcup_{x\not\in Y} U_x$이다.
 :::
 
-앞서 언급한 것과 같이, compact Hausdorff space는 다음의 추가적인 separation axiom을 만족한다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3))
+앞서 언급한 것과 같이, compact Hausdorff space는 다음의 추가적인 separation axiom을 만족한다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3){: data-relation="required" })
 
 ::: 보조정리 6
 Compact Hausdorff space는 regular space이다.
 :::
 ::: 증명
-Compact Hausdorff space $X$를 고정하고, 한 점 $x\in X$와 $x$를 포함하지 않는 $X$의 닫힌집합 $Y$가 주어졌다 하자. 그럼 $Y$는 [보조정리 3](#lem3)에 의해 compact이고 따라서 원하는 결과는 [보조정리 4](#lem4)로부터 자명하다. 
+Compact Hausdorff space $X$를 고정하고, 한 점 $x\in X$와 $x$를 포함하지 않는 $X$의 닫힌집합 $Y$가 주어졌다 하자. 그럼 $Y$는 [보조정리 3](#lem3){: data-relation="required" }에 의해 compact이고 따라서 원하는 결과는 [보조정리 4](#lem4){: data-relation="required" }로부터 자명하다. 
 :::
 
 뿐만 아니라, 이를 한 번 더 적용하여 다음 명제를 얻는다.
@@ -90,7 +90,7 @@ Compact Hausdorff space $X$를 고정하고, 한 점 $x\in X$와 $x$를 포함�
 Compact Hausdorff space는 normal space이다.
 :::
 ::: 증명
-Compact Hausdorff space의 서로소인 임의의 두 닫힌집합 $A,B$가 주어졌다 하자. 그럼 각각의 $a\in A$에 대하여, [보조정리 6](#lem6)에 의해 $a$의 열린근방 $U_a$, $B$의 열린근방 $V_{a}$가 존재하여 $U_a\cap V_a=\emptyset$이다. 이제 [보조정리 4](#lem4)와 마찬가지 방식으로, $(U_a)_{a\in A}$는 $A$의 open covering이 되므로 다시 [보조정리 3](#lem3)에 의해 $(U_a)$의 finite subcover $U_{a_1},\ldots, U_{a_n}$을 잡을 수 있고, 이제 두 열린집합
+Compact Hausdorff space의 서로소인 임의의 두 닫힌집합 $A,B$가 주어졌다 하자. 그럼 각각의 $a\in A$에 대하여, [보조정리 6](#lem6){: data-relation="required" }에 의해 $a$의 열린근방 $U_a$, $B$의 열린근방 $V_{a}$가 존재하여 $U_a\cap V_a=\emptyset$이다. 이제 [보조정리 4](#lem4){: data-relation="required" }와 마찬가지 방식으로, $(U_a)_{a\in A}$는 $A$의 open covering이 되므로 다시 [보조정리 3](#lem3){: data-relation="required" }에 의해 $(U_a)$의 finite subcover $U_{a_1},\ldots, U_{a_n}$을 잡을 수 있고, 이제 두 열린집합
 
 $$U_{a_1}\cup\cdots \cup U_{a_n},\qquad V_{a_1}\cap\cdots\cap V_{a_n}$$
 
@@ -114,7 +114,7 @@ $f(A)$의 임의의 open covering $(U_i)$에 대하여, $(f^{-1}(U_i))$는 $A$�
 $X$가 compact이고 $Y$가 Hausdorff라면 임의의 전단사인 연속함수 $f:X \rightarrow Y$는 homeomorphism이다.
 :::
 ::: 증명
-이를 위해서는 $f^{-1}$이 연속임을 보여야 한다. [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 셋째 조건을 사용하자. 즉 $f$가 closed map인 것을 보여야 한다. 그런데 이는 $X$의 닫힌집합 $A$가 주어졌다 하고, [보조정리 3](#lem3), [명제 8](#prop8), 그리고 [따름정리 5](#cor5)를 순서대로 사용하면 된다.
+이를 위해서는 $f^{-1}$이 연속임을 보여야 한다. [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4){: data-relation="required" }의 셋째 조건을 사용하자. 즉 $f$가 closed map인 것을 보여야 한다. 그런데 이는 $X$의 닫힌집합 $A$가 주어졌다 하고, [보조정리 3](#lem3){: data-relation="required" }, [명제 8](#prop8){: data-relation="required" }, 그리고 [따름정리 5](#cor5){: data-relation="required" }를 순서대로 사용하면 된다.
 :::
 
 ## 유한 교집합 성질
@@ -127,7 +127,7 @@ $$A_1\cap\cdots\cap A_n$$
 이 공집합이 아닌 것이다.
 :::
 
-그럼 특히 $\emptyset\not\in \mathcal{A}$가 성립한다. 또, 이 조건을 만족하는 family $\mathcal{A}$가 주어진다면, $\mathcal{A}$의 유한한 교집합들을 모두 추가하여 $X$의 filter base $\mathcal{B}$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 5](/ko/math/topology/equivalent_formulations_of_topology#def5)) 이러한 이유로 $\mathcal{A}$를 $\uparrow \mathcal{B}$의 *subbase*라 부르기도 한다.
+그럼 특히 $\emptyset\not\in \mathcal{A}$가 성립한다. 또, 이 조건을 만족하는 family $\mathcal{A}$가 주어진다면, $\mathcal{A}$의 유한한 교집합들을 모두 추가하여 $X$의 filter base $\mathcal{B}$를 만들 수 있다. ([§위상공간의 다른 정의들, ⁋정의 5](/ko/math/topology/equivalent_formulations_of_topology#def5){: data-relation="weak" }) 이러한 이유로 $\mathcal{A}$를 $\uparrow \mathcal{B}$의 *subbase*라 부르기도 한다.
 
 그럼 다음 명제는 compactness를 다른 방식으로 서술한 것이다.
 

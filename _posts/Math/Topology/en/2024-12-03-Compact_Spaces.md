@@ -35,7 +35,7 @@ First, assume that $Y$ is compact, and let $(U_i)_{i\in I}$ be a family of open 
 Conversely, assume that the stated condition holds, and let $(V_i)_{i\in I}$ be an arbitrary open covering of $Y$. By the definition of the topology on $Y$, there exist open sets $(U_i)$ in $X$ such that $V_i=U_i\cap Y$, and $\bigcup U_i$ contains $Y$. Thus there exists a finite subset $J$ such that the union of $(U_j)_{j\in J}$ contains $Y$. Then $(V_j)_{j\in J}$ is the desired finite subcover of $(V_i)_{i\in I}$.
 :::
 
-By the proposition above, to prove that $Y$ is compact it suffices to cover $Y$ by open sets in the ambient space $X$ and then show that these satisfy the condition of [Definition 1](#def1). Therefore, by a slight abuse of terminology, we call open sets $U_i$ in $X$ satisfying $Y\subseteq \bigcup U_i$ an open cover of $Y$, and we shall make this distinction explicit only when there is a risk of confusion.
+By the proposition above, to prove that $Y$ is compact it suffices to cover $Y$ by open sets in the ambient space $X$ and then show that these satisfy the condition of [Definition 1](#def1){: data-relation="required" }. Therefore, by a slight abuse of terminology, we call open sets $U_i$ in $X$ satisfying $Y\subseteq \bigcup U_i$ an open cover of $Y$, and we shall make this distinction explicit only when there is a risk of confusion.
 
 ::: Lemma 3
 A closed subset of a compact space is compact.
@@ -52,7 +52,7 @@ For a Hausdorff space, defined in the previous post, imposing the compact condit
 Let $X$ be a Hausdorff space, let $x$ be a point of $X$, and let $Y$ be a compact subspace of $X$ not containing $x$. Then the two sets $\{x\}$ and $Y$ can be separated by neighborhoods.
 :::
 ::: Proof
-Since $X$ is a Hausdorff space, for each $y\in Y$ there exist an open neighborhood $U_{xy}$ of $x$ and an open neighborhood $V_y$ of $y$ such that $U_{xy}\cap V_y=\emptyset$. Now by [Lemma 3](#lem3) there exists a finite subcover $V_{y_1},\ldots,V_{y_n}$ of $(V_y)_{y\in Y}$ such that
+Since $X$ is a Hausdorff space, for each $y\in Y$ there exist an open neighborhood $U_{xy}$ of $x$ and an open neighborhood $V_y$ of $y$ such that $U_{xy}\cap V_y=\emptyset$. Now by [Lemma 3](#lem3){: data-relation="required" } there exists a finite subcover $V_{y_1},\ldots,V_{y_n}$ of $(V_y)_{y\in Y}$ such that
 
 $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 
@@ -69,20 +69,20 @@ In particular, the following holds.
 A compact subset of a Hausdorff space is closed.
 :::
 ::: Proof
-From the proof of [Lemma 4](#lem4), setting
+From the proof of [Lemma 4](#lem4){: data-relation="required" }, setting
 
 $$U_x=U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 
 we have $X\setminus Y=\bigcup_{x\not\in Y} U_x$.
 :::
 
-As mentioned above, a compact Hausdorff space satisfies the following additional separation axiom. ([§Hausdorff Spaces, ⁋Definition 3](/en/math/topology/Hausdorff_spaces#def3))
+As mentioned above, a compact Hausdorff space satisfies the following additional separation axiom. ([§Hausdorff Spaces, ⁋Definition 3](/en/math/topology/Hausdorff_spaces#def3){: data-relation="required" })
 
 ::: Lemma 6
 A compact Hausdorff space is regular.
 :::
 ::: Proof
-Fix a compact Hausdorff space $X$, and let $x\in X$ be a point and $Y$ a closed subset of $X$ not containing $x$. Then $Y$ is compact by [Lemma 3](#lem3), and the desired result follows immediately from [Lemma 4](#lem4).
+Fix a compact Hausdorff space $X$, and let $x\in X$ be a point and $Y$ a closed subset of $X$ not containing $x$. Then $Y$ is compact by [Lemma 3](#lem3){: data-relation="required" }, and the desired result follows immediately from [Lemma 4](#lem4){: data-relation="required" }.
 :::
 
 Moreover, applying this once more yields the following proposition.
@@ -91,7 +91,7 @@ Moreover, applying this once more yields the following proposition.
 A compact Hausdorff space is normal.
 :::
 ::: Proof
-Let $A$ and $B$ be any two disjoint closed subsets of a compact Hausdorff space. Then for each $a\in A$, by [Lemma 6](#lem6) there exist an open neighborhood $U_a$ of $a$ and an open neighborhood $V_a$ of $B$ such that $U_a\cap V_a=\emptyset$. Now, in the same way as in [Lemma 4](#lem4), $(U_a)_{a\in A}$ is an open covering of $A$, so again by [Lemma 3](#lem3) we can take a finite subcover $U_{a_1},\ldots, U_{a_n}$ of $(U_a)$. Then the two open sets
+Let $A$ and $B$ be any two disjoint closed subsets of a compact Hausdorff space. Then for each $a\in A$, by [Lemma 6](#lem6){: data-relation="required" } there exist an open neighborhood $U_a$ of $a$ and an open neighborhood $V_a$ of $B$ such that $U_a\cap V_a=\emptyset$. Now, in the same way as in [Lemma 4](#lem4){: data-relation="required" }, $(U_a)_{a\in A}$ is an open covering of $A$, so again by [Lemma 3](#lem3){: data-relation="required" } we can take a finite subcover $U_{a_1},\ldots, U_{a_n}$ of $(U_a)$. Then the two open sets
 
 $$U_{a_1}\cup\cdots \cup U_{a_n},\qquad V_{a_1}\cap\cdots\cap V_{a_n}$$
 
@@ -115,7 +115,7 @@ Meanwhile, we have seen that a bijective continuous function $f:X \rightarrow Y$
 If $X$ is compact and $Y$ is Hausdorff, then any bijective continuous function $f:X \rightarrow Y$ is a homeomorphism.
 :::
 ::: Proof
-To show this, we must prove that $f^{-1}$ is continuous. We use the third condition of [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4): namely, we show that $f$ is a closed map. Given a closed subset $A$ of $X$, this follows by applying [Lemma 3](#lem3), [Proposition 8](#prop8), and [Corollary 5](#cor5) in order.
+To show this, we must prove that $f^{-1}$ is continuous. We use the third condition of [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-relation="required" }: namely, we show that $f$ is a closed map. Given a closed subset $A$ of $X$, this follows by applying [Lemma 3](#lem3){: data-relation="required" }, [Proposition 8](#prop8){: data-relation="required" }, and [Corollary 5](#cor5){: data-relation="required" } in order.
 :::
 
 ## Finite Intersection Property
@@ -128,7 +128,7 @@ $$A_1\cap\cdots\cap A_n$$
 is nonempty.
 :::
 
-Then in particular $\emptyset\not\in \mathcal{A}$. Moreover, given a family $\mathcal{A}$ satisfying this condition, we may add all finite intersections of elements of $\mathcal{A}$ to obtain a filter base $\mathcal{B}$ on $X$. ([§Other Definitions of Topological Spaces, ⁋Definition 5](/en/math/topology/equivalent_formulations_of_topology#def5)) For this reason $\mathcal{A}$ is sometimes called a *subbase* of $\uparrow \mathcal{B}$.
+Then in particular $\emptyset\not\in \mathcal{A}$. Moreover, given a family $\mathcal{A}$ satisfying this condition, we may add all finite intersections of elements of $\mathcal{A}$ to obtain a filter base $\mathcal{B}$ on $X$. ([§Other Definitions of Topological Spaces, ⁋Definition 5](/en/math/topology/equivalent_formulations_of_topology#def5){: data-relation="weak" }) For this reason $\mathcal{A}$ is sometimes called a *subbase* of $\uparrow \mathcal{B}$.
 
 The following proposition gives an alternative characterization of compactness.
 
