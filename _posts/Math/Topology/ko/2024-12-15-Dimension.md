@@ -44,13 +44,13 @@ $X$가 유한차원 위상공간이고 $Y$가 $X$의 closed subspace라면, $Y$�
 $X$가 $d$차원 위상공간이라 하고, $Y$의 임의의 open covering $\{V_j\}$이 주어졌다 하자. 그럼 각각의 $V_j$마다 $V_j=U_j\cap Y$이도록 하는 $X$의 open subset $U_j$가 존재한다. 이제 $X$는 $U_j$들과, $X\setminus Y$로 덮을 수 있다. 그럼 이 covering의 order$\leq d+1$짜리 refinement가 존재하며, 이를 다시 $Y$와 교집합하면 $\{V_j\}$의 order$\leq d+1$짜리 refinement를 얻는다. 
 :::
 
-다음 명제는 [정의 2](#def2) 이후에 언급한 주의점을 더 수학적으로 다듬은 것이다.
+다음 명제는 [정의 2](#def2){: data-relation="required" } 이후에 언급한 주의점을 더 수학적으로 다듬은 것이다.
 
 ::: 명제 4
 만일 compact space $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, $\dim X=\max(\dim Y,\dim Z)$이다. 
 :::
 ::: 증명
-$Y,Z$가 closed subspace이므로 [명제 3](#prop3)에 의해 $\max(\dim Y,\dim Z)\leq \dim X$이다. 따라서 $m=\max(\dim Y,\dim Z)$라 할 때 $\dim X\leq m$임을 보이면 충분하다.
+$Y,Z$가 closed subspace이므로 [명제 3](#prop3){: data-relation="required" }에 의해 $\max(\dim Y,\dim Z)\leq \dim X$이다. 따라서 $m=\max(\dim Y,\dim Z)$라 할 때 $\dim X\leq m$임을 보이면 충분하다.
 
 우선 다음을 관찰하자. 위상공간 $T$가 $\dim T\leq m$을 만족하고 $T$의 유한한 open covering $(V_1,\ldots,V_k)$이 주어졌다면, 각각의 $i$마다 $W_i\subseteq V_i$이고 order가 $m+1$ 이하인 open covering $(W_1,\ldots,W_k)$이 존재한다. 여기서 일부 $W_i$는 공집합일 수 있다. 실제로 차원의 정의에 의해 $(V_i)$의 order $\leq m+1$짜리 open refinement $(O_j)_{j\in J}$가 존재하고, 각각의 $j$마다 $O_j\subseteq V_{i(j)}$이도록 하는 index $i(j)$를 하나씩 택한 후
 
@@ -126,7 +126,7 @@ $$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lv
 첫째 조건과 둘째 조건은 여집합을 생각하면 동치인 것이 자명하며, 둘째 조건과 셋째 조건이 동치인 것은 $X\setminus \cl U$와 $U$를 생각하면 자명하다. 마지막으로 둘째 조건과 넷째 조건이 정의에 의해 동치이다. 
 :::
 
-특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다. 비슷한 맥락에서 다음이 성립한다. (참고: [§연결공간, ⁋명제 3](/ko/math/topology/connected_spaces#prop3))
+특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다. 비슷한 맥락에서 다음이 성립한다. (참고: [§연결공간, ⁋명제 3](/ko/math/topology/connected_spaces#prop3){: data-relation="weak" })
 
 ::: 명제 8
 만일 공집합이 아닌 $X$가 irreducible open subset들의 합집합
@@ -153,7 +153,7 @@ Connected component와 비슷하게 다음을 정의할 수 있다.
 위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component<sub>기약성분</sub>*는 $A$를 포함하는 irreducible subset들 가운데 포함관계에 대하여 maximal인 것을 의미한다. 
 :::
 
-$A$를 포함하는 irreducible subset들의 공집합이 아닌 totally ordered subset이 주어졌다면 그 합집합 $Y$도 irreducible인데, $Y$의 공집합이 아닌 두 열린집합이 각각 그 모임의 원소 $Y_1, Y_2$와 만난다 하고 $Y_1\subseteq Y_2$라 하면, 두 열린집합과 $Y_2$의 교집합이 $Y_2$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7)의 둘째 조건에 의하여 서로 만나기 때문이다. 따라서 $A$가 irreducible이라면 공집합인 totally ordered subset은 $A$ 자신을 upper bound로 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의하여 $A$를 포함하는 irreducible component가 존재한다. 다만 connected component와 달리 maximal인 것이 유일할 이유가 없으므로, $A$를 포함하는 irreducible component는 여럿일 수 있다. 한편 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
+$A$를 포함하는 irreducible subset들의 공집합이 아닌 totally ordered subset이 주어졌다면 그 합집합 $Y$도 irreducible인데, $Y$의 공집합이 아닌 두 열린집합이 각각 그 모임의 원소 $Y_1, Y_2$와 만난다 하고 $Y_1\subseteq Y_2$라 하면, 두 열린집합과 $Y_2$의 교집합이 $Y_2$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7){: data-relation="required" }의 둘째 조건에 의하여 서로 만나기 때문이다. 따라서 $A$가 irreducible이라면 공집합인 totally ordered subset은 $A$ 자신을 upper bound로 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의하여 $A$를 포함하는 irreducible component가 존재한다. 다만 connected component와 달리 maximal인 것이 유일할 이유가 없으므로, $A$를 포함하는 irreducible component는 여럿일 수 있다. 한편 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2){: data-relation="required" }과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 
 
 ::: 정의 10
 위상공간 $X$에 대하여, $X$의 irreducible closed subset들의 strictly descending chain
@@ -191,7 +191,7 @@ Noetherian space $X$와 $X$의 open covering $\{U_i\}_{i\in I}$가 주어졌다 
 
 $$\mathcal{C}=\left\{\bigcup_{j\in J} U_j\mid\text{$J$ finite subset of $I$}\right\}$$
 
-라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset $\mathcal{D}$가 주어졌다 하자. $\mathcal{D}$가 공집합이라면 $J=\emptyset$에 대응하는 $\emptyset\in\mathcal{C}$가 $\mathcal{D}$의 upper bound이고, 그렇지 않다면 $\mathcal{D}$의 원소들의 여집합들이 $X$의 닫힌집합들로 이루어진 공집합이 아닌 모임이므로 위에서 본 것과 같이 minimal element를 가지며, $\mathcal{D}$가 totally ordered이므로 그 여집합은 $\mathcal{D}$에서 가장 큰 원소, 특히 $\mathcal{D}$의 upper bound이다. 즉 $\mathcal{C}$의 임의의 totally ordered subset이 upper bound를 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의하여 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cup U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
+라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset $\mathcal{D}$가 주어졌다 하자. $\mathcal{D}$가 공집합이라면 $J=\emptyset$에 대응하는 $\emptyset\in\mathcal{C}$가 $\mathcal{D}$의 upper bound이고, 그렇지 않다면 $\mathcal{D}$의 원소들의 여집합들이 $X$의 닫힌집합들로 이루어진 공집합이 아닌 모임이므로 위에서 본 것과 같이 minimal element를 가지며, $\mathcal{D}$가 totally ordered이므로 그 여집합은 $\mathcal{D}$에서 가장 큰 원소, 특히 $\mathcal{D}$의 upper bound이다. 즉 $\mathcal{C}$의 임의의 totally ordered subset이 upper bound를 가지므로, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의하여 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cup U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
 :::
 
 추가적으로 Noetherian space에 대해 다음이 성립한다.
@@ -209,7 +209,7 @@ Noetherian topological space $X$에 대하여, 다음이 성립한다.
     $$A_1\supseteq A_2\supseteq \cdots$$
 
     가 주어졌다 하자. 그럼 $A_i=A_i' \cap Y$를 만족하는 $X$의 닫힌집합 $A_i'$들이 존재한다. 이제 $B_i=A_1'\cap\cdots\cap A_i'$라 하면, $B_i\cap Y=A_i$이고 $B_i$는 $X$의 닫힌집합들의 descending chain이다. 
-2. $\mathcal{C}$를 $X$의 닫힌집합 중, 유한히 많은 irreducible closed subset들의 합집합으로 나타낼 수 없는 집합들의 모임이라 하자. 그럼 $\mathcal{C}=\emptyset$임을 보이면 된다. 결론에 반하여 $\mathcal{C}$가 공집합이 아니라 하면, 위에서 본 minimal element의 존재로부터 $\mathcal{C}$는 minimal element $A$를 갖는다. 공집합은 공집합인 모임의 합집합이므로 $A\neq\emptyset$이고, $A$가 irreducible이라면 $A$ 자기 자신이 하나짜리 합집합이 되므로 $A$는 irreducible이 아니다. 따라서 [정의 6](#def6)에 의하여 $A=B_1\cup B_2$이도록 하는 $A$의 진부분 닫힌집합 $B_1,B_2$가 존재하고, $A$의 minimality로부터 $B_1,B_2\not\in\mathcal{C}$이므로 이들 각각은 유한히 많은 irreducible closed subset의 합집합이며, 이 둘을 합치면 $A$ 또한 그러한 합집합이 되어 모순이다. 즉 $\mathcal{C}=\emptyset$이고, 특히 $X=A_1\cup\cdots\cup A_n$이도록 하는 $X$의 irreducible closed subset들 $A_1,\ldots,A_n$이 존재한다. 어떤 $A_i$가 다른 $A_j$에 포함된다면 그것을 지워도 되므로 처음부터 $A_i$들 사이에 포함관계가 없다고 가정하면, $X$의 임의의 irreducible closed subset $B$에 대하여 $B=\bigcup_i (B\cap A_i)$는 $B$의 닫힌집합들의 유한한 합집합이므로 [정의 6](#def6)을 반복 적용하여 $B\subseteq A_i$인 $i$가 존재한다. 그럼 $X$의 irreducible component는 [정의 9](#def9)에 의하여 maximal인 irreducible subset이고 앞서 보았듯 닫힌집합이므로 어떤 $A_i$에 포함되며, $A_i$ 자신이 irreducible이므로 maximality로부터 $A_i$와 같다. 따라서 $X$의 irreducible component는 많아야 $n$개이다.
+2. $\mathcal{C}$를 $X$의 닫힌집합 중, 유한히 많은 irreducible closed subset들의 합집합으로 나타낼 수 없는 집합들의 모임이라 하자. 그럼 $\mathcal{C}=\emptyset$임을 보이면 된다. 결론에 반하여 $\mathcal{C}$가 공집합이 아니라 하면, 위에서 본 minimal element의 존재로부터 $\mathcal{C}$는 minimal element $A$를 갖는다. 공집합은 공집합인 모임의 합집합이므로 $A\neq\emptyset$이고, $A$가 irreducible이라면 $A$ 자기 자신이 하나짜리 합집합이 되므로 $A$는 irreducible이 아니다. 따라서 [정의 6](#def6){: data-relation="required" }에 의하여 $A=B_1\cup B_2$이도록 하는 $A$의 진부분 닫힌집합 $B_1,B_2$가 존재하고, $A$의 minimality로부터 $B_1,B_2\not\in\mathcal{C}$이므로 이들 각각은 유한히 많은 irreducible closed subset의 합집합이며, 이 둘을 합치면 $A$ 또한 그러한 합집합이 되어 모순이다. 즉 $\mathcal{C}=\emptyset$이고, 특히 $X=A_1\cup\cdots\cup A_n$이도록 하는 $X$의 irreducible closed subset들 $A_1,\ldots,A_n$이 존재한다. 어떤 $A_i$가 다른 $A_j$에 포함된다면 그것을 지워도 되므로 처음부터 $A_i$들 사이에 포함관계가 없다고 가정하면, $X$의 임의의 irreducible closed subset $B$에 대하여 $B=\bigcup_i (B\cap A_i)$는 $B$의 닫힌집합들의 유한한 합집합이므로 [정의 6](#def6){: data-relation="required" }을 반복 적용하여 $B\subseteq A_i$인 $i$가 존재한다. 그럼 $X$의 irreducible component는 [정의 9](#def9){: data-relation="required" }에 의하여 maximal인 irreducible subset이고 앞서 보았듯 닫힌집합이므로 어떤 $A_i$에 포함되며, $A_i$ 자신이 irreducible이므로 maximality로부터 $A_i$와 같다. 따라서 $X$의 irreducible component는 많아야 $n$개이다.
 3. (2)에서 얻은 $X=A_1\cup\cdots\cup A_n$을 $A_i$들 사이에 포함관계가 없도록 택하자. 만일 $A_1\subseteq A_2\cup\cdots\cup A_n$이라면 $A_1=\bigcup_{j\geq 2}(A_1\cap A_j)$이므로 위와 같이 $A_1\subseteq A_j$인 $j\geq 2$가 존재하여 포함관계가 없다는 것에 모순이고, 따라서 $X\setminus (A_2\cup\cdots\cup A_n)$은 $A_1$에 포함되는 공집합이 아닌 $X$의 열린집합이다. 각각의 irreducible component가 어떤 $A_i$와 같으므로, 같은 논증을 모든 $i$에 적용하면 된다. 
 :::
 
@@ -217,7 +217,7 @@ Noetherian topological space $X$에 대하여, 다음이 성립한다.
 
 $$X=\bigcup_{i=1}^r X_i$$
 
-이 존재하며, $X_i$들은 모두 닫힌집합이다. 그러나 서로 다른 irreducible component들은 서로 만날 수 있어 $X\setminus X_i$가 $\bigcup_{j\neq i}X_j$보다 작을 수 있으므로, $X_i$가 열린집합일 이유는 없다. 실제로 $X_i$가 열린집합이면서 다른 component $X_j$와 만난다면 $X_i\cap X_j$는 $X_j$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7)의 셋째 조건에 의하여 $X_j$에서 dense이고, $X_i$가 닫힌집합이므로 $X_j\subseteq X_i$가 되어 $X_j$의 maximality로부터 $X_i=X_j$이다. 즉 $X_i$가 열린집합인 것은 $X_i$가 다른 component와 만나지 않는 경우뿐이다. 
+이 존재하며, $X_i$들은 모두 닫힌집합이다. 그러나 서로 다른 irreducible component들은 서로 만날 수 있어 $X\setminus X_i$가 $\bigcup_{j\neq i}X_j$보다 작을 수 있으므로, $X_i$가 열린집합일 이유는 없다. 실제로 $X_i$가 열린집합이면서 다른 component $X_j$와 만난다면 $X_i\cap X_j$는 $X_j$의 공집합이 아닌 열린집합이므로 [명제 7](#prop7){: data-relation="required" }의 셋째 조건에 의하여 $X_j$에서 dense이고, $X_i$가 닫힌집합이므로 $X_j\subseteq X_i$가 되어 $X_j$의 maximality로부터 $X_i=X_j$이다. 즉 $X_i$가 열린집합인 것은 $X_i$가 다른 component와 만나지 않는 경우뿐이다. 
 
 닫힌집합들의 공집합이 아닌 모임이 언제나 minimal element를 가진다는 위의 사실을 하나의 귀납 원리로 정리하면, Noetherian space 위에서 닫힌집합에 대한 성질을 증명하는 표준적인 도구를 얻는다.
 
