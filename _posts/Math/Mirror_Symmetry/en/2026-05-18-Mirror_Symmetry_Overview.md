@@ -82,7 +82,7 @@ The purpose of this post is to examine this phenomenon through light computation
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}.$$
 
-Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$ and $\partial_i$ are the partial derivatives with respect to these. Geometrically $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model.
+Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$ and $\partial_i$ are the partial derivatives with respect to these. Geometrically $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4){: data-relation="required" } recovers the data of the original A-side model.
 
 ::: Definition 4
 For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_1,\ldots, q_r)\in (\mathbb{C}^\ast)^r$, the *Hori-Vafa mirror* defined by this data is the following Landau-Ginzburg model.
@@ -128,7 +128,7 @@ This statement matches the picture we already knew in several respects; for exam
 In general, examining $QH^\ast(X_\Sigma)$ on the right-hand side of the above isomorphism amounts to counting curves passing through given classes simultaneously, which is regarded as a relatively complex and difficult task, but mirror symmetry reduces this to a simple ring computation. Let us verify that this actually holds in the two simple cases $\mathbb{P}^1$ and $\mathbb{P}^2$.
 
 ::: Example 5 ($\mathbb{P}^1$ case)
-In [Example 2](#ex2) we checked that the charge matrix of $\mathbb{P}^1$ is $Q = (1, 1)$. Hence the domain $\check{X}$ of the Hori-Vafa mirror is the submanifold of $(\mathbb{C}^\ast)^2$ satisfying
+In [Example 2](#ex2){: data-relation="required" } we checked that the charge matrix of $\mathbb{P}^1$ is $Q = (1, 1)$. Hence the domain $\check{X}$ of the Hori-Vafa mirror is the submanifold of $(\mathbb{C}^\ast)^2$ satisfying
 
 $$\x_0 \x_1 = q.$$
 

@@ -16,7 +16,7 @@ weight: 1
 
 ## 역사적 배경
 
-Mirror symmetry는 수학 체계 안에서 자연스럽게 생겨난 분야가 아니라, 초끈이론을 그 기반으로 한다. 초끈이론에 따르면 우리가 살고 있는 세상은 그 기본 자유도가 *점 입자*가 아닌 *1차원 string*이라는 한 줄의 가정에서 출발한다. 그럼 입자가 시간축을 따라 움직일 때의 시공간 상에서의 궤적은 더 이상 $1$차원 worldline이 아니라 $2$차원 worldsheet가 되며, 그 운동방정식은 [\[사교기하학\] §고전역학, §§최소작용의 원리](/ko/math/symplectic_geometry/classical_mechanics#최소작용의-원리)에서와 마찬가지로 특정 한 action-minimizing solution으로 결정된다. 이 해석을 기존의 양자역학의 프레임에 일치시키기 위해서는 시공간이 $10$차원으로 강제되므로, 물리학자들은 이 10차원 시공간을 $4$차원 Minkowski 시공간과, 나머지 $6$차원을 해결해주는 compact manifold $X$의 곱으로 생각한다. 물리적으로 이 공간 $X$가 만족해야 하는 조건들을 써 보면, $X$는 *Calabi-Yau threefold*가 되어야 하는 것을 알 수 있다.
+Mirror symmetry는 수학 체계 안에서 자연스럽게 생겨난 분야가 아니라, 초끈이론을 그 기반으로 한다. 초끈이론에 따르면 우리가 살고 있는 세상은 그 기본 자유도가 *점 입자*가 아닌 *1차원 string*이라는 한 줄의 가정에서 출발한다. 그럼 입자가 시간축을 따라 움직일 때의 시공간 상에서의 궤적은 더 이상 $1$차원 worldline이 아니라 $2$차원 worldsheet가 되며, 그 운동방정식은 [\[사교기하학\] §고전역학, §§최소작용의 원리](/ko/math/symplectic_geometry/classical_mechanics#최소작용의-원리){: data-relation="weak" }에서와 마찬가지로 특정 한 action-minimizing solution으로 결정된다. 이 해석을 기존의 양자역학의 프레임에 일치시키기 위해서는 시공간이 $10$차원으로 강제되므로, 물리학자들은 이 10차원 시공간을 $4$차원 Minkowski 시공간과, 나머지 $6$차원을 해결해주는 compact manifold $X$의 곱으로 생각한다. 물리적으로 이 공간 $X$가 만족해야 하는 조건들을 써 보면, $X$는 *Calabi-Yau threefold*가 되어야 하는 것을 알 수 있다.
 
 한편, 10차원 superstring에는 worldsheet가 만족해야 할 boundary 조건과 양자역학적 조건의 선택에 따라 다섯 종류의 타입으로 나뉜다. 이들 중 mirror symmetry의 직접적인 무대가 되는 것은 Type IIA와 Type IIB superstring theory로, 이들은 그 이름에서 알 수 있듯 서로 밀접한 관련이 있다. Type IIA 초끈이론은 Calabi-Yau threefold $X$ 위에서 Kähler structure와 complex structure를 주며, Type IIB 초끈이론은 이들 두 구조가 바뀌어 들어가며 새로운 Calabi-Yau threefold $\check{X}$를 정의하게 된다. 
 
@@ -30,7 +30,7 @@ Mirror symmetry는 수학 체계 안에서 자연스럽게 생겨난 분야가 �
 
 ## Hori-Vafa Mirror Construction
 
-Toric variety의 경우 ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3)) mirror symmetry는 매우 구체적인 형태를 띄므로, 본격적인 이야기를 시작하기 전에 mirror symmetry가 어떻게 작동하는지를 이 위에서 살펴보기로 한다. 
+Toric variety의 경우 ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3){: data-relation="required" }) mirror symmetry는 매우 구체적인 형태를 띄므로, 본격적인 이야기를 시작하기 전에 mirror symmetry가 어떻게 작동하는지를 이 위에서 살펴보기로 한다. 
 
 Smooth projective toric variety $X=X_\Sigma$의 fan을 $\Sigma$, 그 1차원 cone의 primitive generator들을 $v_1, \ldots, v_m \in \mathbb{Z}^n$이라 하자. $\Sigma$가 complete fan이라면 $v_i$들은 $\mathbb{R}^n$을 span한다. 그러나 $m>n$이므로, 이들은 $\mathbb{Z}$-linearly dependent하며 따라서 이들 사이의 $r=m-n$개의 integral equation이 존재한다. 
 
@@ -84,7 +84,7 @@ Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담�
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$$
 
-으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
+으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4){: data-relation="required" }의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
 
 ::: 정의 4
 Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in (\mathbb{C}^\ast)^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror<sub>호리-바파 거울</sub>*는 다음의 Landau-Ginzburg model을 의미한다.
@@ -132,7 +132,7 @@ $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 일반적으로 위 isomorphism 우변의 $QH^\ast(X_\Sigma)$를 살펴보는 것은 주어진 class들을 동시에 지나는 curve를 세는 것으로, 상대적으로 복잡하고 어려운 일로 여겨지지만 mirror symmetry는 이를 단순한 ring의 계산으로 환원시킨다. 단순한 두 경우 $\mathbb{P}^1$, $\mathbb{P}^2$에서 이것이 실제로 성립함을 확인하자. 
 
 ::: 예시 5 ($\mathbb{P}^1$ case)
-[예시 2](#ex2)에서 본 $\mathbb{P}^1$의 charge matrix는 $Q = (1, 1)$임을 확인하였다. 따라서 Hori-Vafa mirror의 domain $\check{X}$은 다음의 식
+[예시 2](#ex2){: data-relation="required" }에서 본 $\mathbb{P}^1$의 charge matrix는 $Q = (1, 1)$임을 확인하였다. 따라서 Hori-Vafa mirror의 domain $\check{X}$은 다음의 식
 
 $$\x_0 \x_1 = q$$
 
