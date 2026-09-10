@@ -41,7 +41,7 @@ Manifold $M$ 위의 vector bundle $E\rightarrow M$과 그 위의 connection $\na
 에만 의존한다.
 :::
 ::: 증명
-우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 section에만 의존한다는 것을 보이자. 두 section $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 section $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\supp(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 section $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#def1)의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
+우선 $(\nabla_XY)_p$가 점 $p$의 열린근방 $U$에서의 section에만 의존한다는 것을 보이자. 두 section $Y_1,Y_2$가 $p$의 열린근방 $U$에서 같다면 $(\nabla_XY_1)_p=(\nabla_XY_2)_p$임을 보여야 하므로, 이를 위해서는 section $Y$가 열린근방 $U$의 모든 점에서 항등적으로 $0$이라면 $(\nabla_XY)_p$가 $0$임을 보이면 충분하다. $\varphi$를 $\supp(\varphi)\subseteq U$, $\varphi(p)=1$을 만족하는 bump function이라 하면 section $\varphi Y$는 $M$ 전체에서 항등적으로 $0$이다. 따라서 [정의 1](#def1){: data-relation="required" }의 둘째 조건으로부터 $\nabla_X(\varphi Y)=0$이다. 한편 라이프니츠 법칙에 의해,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
 
@@ -74,7 +74,7 @@ $$\nabla_{fX}Y=f\nabla_XY$$
 
 이므로 $Y$와 $f$를 잘 택하여 $\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$이도록 하는 것이 항상 가능하다.
 
-어쨌든 $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#prop2)에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
+어쨌든 $TM$ 위에서 정의된 connection을 생각하면, [명제 2](#prop2){: data-relation="required" }에 의하여 점 $p$에서의 $\nabla_XY$의 값은 $p$ 근방에서의 local frame $(E_i)$들에 의해 완전히 결정된다. 이는
 
 $$(\nabla_XY)_p=\left(\nabla_{\sum X^iE_i}\left(\sum Y^jE_j\right)\right)_p$$
 
@@ -104,7 +104,7 @@ $$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^1}+\cdots+v(Y^n)\frac{\partial}{\p
 
 ## Cotangent bundle 위에서의 공변미분
 
-우리는 tangent bundle $TM$ 위에 정의된 connection $\nabla$가 임의의 $(r,s)$-tensor field $\mathcal{T}^{r,s}(M)$로 잘 확장된다는 것을 보인다. ([명제 5](#prop5)) 이를 위해서는 우선 $\nabla$가 cotangent bundle $T^\ast M$ 위에서는 어떻게 확장되는지를 정해줘야 한다.
+우리는 tangent bundle $TM$ 위에 정의된 connection $\nabla$가 임의의 $(r,s)$-tensor field $\mathcal{T}^{r,s}(M)$로 잘 확장된다는 것을 보인다. ([명제 5](#prop5){: data-relation="forward" }) 이를 위해서는 우선 $\nabla$가 cotangent bundle $T^\ast M$ 위에서는 어떻게 확장되는지를 정해줘야 한다.
 
 ::: 명제 4
 Manifold $M$과, tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. 함수 $\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$을 다음의 식
@@ -134,7 +134,7 @@ Tangent bundle $TM\rightarrow M$ 위에 정의된 connection $\nabla$가 주어�
 
 $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
 
-을 만족하도록 확장할 수 있으며, 추가로 $\mathcal{T}^{0,0}M$에서 $\nabla_Xf=Xf$이고 $T^\ast M$ 위에서 [명제 4](#prop4)의 $\nabla^\ast$와 일치하도록 하는 확장이 유일하게 결정된다.
+을 만족하도록 확장할 수 있으며, 추가로 $\mathcal{T}^{0,0}M$에서 $\nabla_Xf=Xf$이고 $T^\ast M$ 위에서 [명제 4](#prop4){: data-relation="required" }의 $\nabla^\ast$와 일치하도록 하는 확장이 유일하게 결정된다.
 :::
 
 임의의 $(r,s)$-tensor $F$는 다음의 $C^\infty(M)$-multilinear map
@@ -178,7 +178,7 @@ $$(\nabla_XF)(\omega^1,\ldots,\omega^r,Y_1,\ldots, Y_s)$$
 
 $$X\mapsto \nabla_Xf=Xf$$
 
-으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/riemannian_geometry/Riemannian_metric#musical-isomorphism)에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
+으로 정의된다. 한편, $M=\mathbb{R}^m$으로 두고 [§리만 계량, §§Musical isomorphism](/ko/math/riemannian_geometry/Riemannian_metric#musical-isomorphism){: data-relation="forward" }에서와 같이 함수 $f$의 그라디언트 벡터 $\operatorname{grad} f$를 다음의 식
 
 $$X\mapsto \langle X, \operatorname{grad} f\rangle$$
 

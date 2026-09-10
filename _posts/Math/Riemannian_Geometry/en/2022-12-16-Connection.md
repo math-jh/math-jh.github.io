@@ -37,7 +37,7 @@ Let $M$ be a manifold, and let $X\in\mathfrak{X}(M)$ and $Y\in\Gamma(E)$. For an
 2. the restriction $Y\vert_U$ of the vector field $Y$ to an open neighborhood $U$ of $p$.
 :::
 ::: Proof
-First, we show that $(\nabla_XY)_p$ depends only on the vector field in an open neighborhood $U$ of $p$. To show that $(\nabla_XY_1)_p=(\nabla_XY_2)_p$ whenever two vector fields $Y_1,Y_2$ agree on an open neighborhood $U$ of $p$, it suffices to show that if a vector field $Y$ is identically zero on an open neighborhood $U$, then $(\nabla_XY)_p=0$. Let $\varphi$ be a bump function satisfying $\supp(\varphi)\subseteq U$ and $\varphi(p)=1$; then the vector field $\varphi Y$ is identically zero on all of $M$. Therefore, by the second condition of [Definition 1](#def1), $\nabla_X(\varphi Y)=0$. On the other hand, by the Leibniz rule,
+First, we show that $(\nabla_XY)_p$ depends only on the vector field in an open neighborhood $U$ of $p$. To show that $(\nabla_XY_1)_p=(\nabla_XY_2)_p$ whenever two vector fields $Y_1,Y_2$ agree on an open neighborhood $U$ of $p$, it suffices to show that if a vector field $Y$ is identically zero on an open neighborhood $U$, then $(\nabla_XY)_p=0$. Let $\varphi$ be a bump function satisfying $\supp(\varphi)\subseteq U$ and $\varphi(p)=1$; then the vector field $\varphi Y$ is identically zero on all of $M$. Therefore, by the second condition of [Definition 1](#def1){: data-relation="required" }, $\nabla_X(\varphi Y)=0$. On the other hand, by the Leibniz rule,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
 
@@ -70,7 +70,7 @@ $$\nabla_{fX}Y=f\nabla_XY$$
 
 so one can always choose $Y$ and $f$ appropriately such that $\nabla_{fX}Y\neq\mathcal{L}_{fX}Y$.
 
-Now, considering a connection defined on $TM$, [Proposition 2](#prop2) implies that the value of $\nabla_XY$ at a point $p$ is completely determined by local frames $(E_i)$ in a neighborhood of $p$. This is because
+Now, considering a connection defined on $TM$, [Proposition 2](#prop2){: data-relation="required" } implies that the value of $\nabla_XY$ at a point $p$ is completely determined by local frames $(E_i)$ in a neighborhood of $p$. This is because
 
 $$(\nabla_XY)_p=\nabla_{\sum X^i(p)E_i(p)}\left(\sum Y^i(p)E_i(p)\right)$$
 
@@ -98,7 +98,7 @@ and patch it together via a partition of unity.
 
 ## Covariant Differentiation on the Cotangent Bundle
 
-We show that a connection $\nabla$ defined on the tangent bundle $TM$ extends nicely to any $(r,s)$-tensor field $\mathcal{T}^{r,s}(M)$. ([Proposition 5](#prop5)) To do this, we must first specify how $\nabla$ extends to the cotangent bundle $T^\ast M$.
+We show that a connection $\nabla$ defined on the tangent bundle $TM$ extends nicely to any $(r,s)$-tensor field $\mathcal{T}^{r,s}(M)$. ([Proposition 5](#prop5){: data-relation="forward" }) To do this, we must first specify how $\nabla$ extends to the cotangent bundle $T^\ast M$.
 
 ::: Proposition 4
 Let $M$ be a manifold and let $\nabla$ be a connection on the tangent bundle $TM$. Define a map $\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$ by the formula
@@ -168,7 +168,7 @@ In particular, applying $\nabla$ to a $(0,0)$-tensor, i.e., a $C^\infty$ functio
 
 $$X\mapsto \nabla_Xf=Xf$$
 
-On the other hand, setting $M=\mathbb{R}^m$ and, as in [§Riemannian Metric, §§Musical Isomorphism](/en/math/riemannian_geometry/Riemannian_metric#musical-isomorphism), regarding the gradient vector $\operatorname{grad} f$ of a function $f$ as the covector defined by the formula
+On the other hand, setting $M=\mathbb{R}^m$ and, as in [§Riemannian Metric, §§Musical Isomorphism](/en/math/riemannian_geometry/Riemannian_metric#musical-isomorphism){: data-relation="forward" }, regarding the gradient vector $\operatorname{grad} f$ of a function $f$ as the covector defined by the formula
 
 $$X\mapsto \langle X, \operatorname{grad} f\rangle$$
 
