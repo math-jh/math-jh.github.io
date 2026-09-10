@@ -16,13 +16,13 @@ weight: 11
 
 ---
 
-지난 글에서 각각 $n$차원, $m$차원인 두 $\mathbb{K}$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $\mathbb{K}$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(\mathbb{K})$ 또한 $mn$차원의 $\mathbb{K}$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4)로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
+지난 글에서 각각 $n$차원, $m$차원인 두 $\mathbb{K}$-벡터공간 $V,W$에 대하여 $\Hom(V,W)$는 $mn$차원 $\mathbb{K}$-벡터공간이 된다는 것을 살펴보았다. 또 $m\times n$ 행렬들의 공간 $\Mat_{m\times n}(\mathbb{K})$ 또한 $mn$차원의 $\mathbb{K}$-벡터공간이다. 그럼 [§동형사상, ⁋따름정리 4](/ko/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-relation="required" }로부터 이 두 벡터공간이 isomorphic하다는 것을 안다.
 
 이번 글에서 증명할 선형대수학의 기본정리[^1]는 이들이 단순히 같은 차원을 갖는 벡터공간이기 때문에 isomorphic할 뿐만 아니라, 이들 사이의 <em-ko>자연스러운</em-ko> isomorphism이 존재하여 이 둘이 실제로 같은 공간이라는 것을 증명한다. 
 
 ## 기본정리: 유클리드 공간
 
-[§선형사상들의 공간](/ko/math/linear_algebra/space_of_linear_maps)에서 우리는 다음의 식
+[§선형사상들의 공간](/ko/math/linear_algebra/space_of_linear_maps){: data-relation="required" }에서 우리는 다음의 식
 
 $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
@@ -54,9 +54,9 @@ $\mathbb{K}^n$에서 $\mathbb{K}^m$으로의 임의의 linear map $L$이 주어�
 
 $$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
   
-더 정확하게 말하자면 $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$, 그리고 $A\mapsto L_A$ ([예시 1](#ex1)의 정의)이 서로의 역함수가 되는 전단사함수가 된다. 
+더 정확하게 말하자면 $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$, 그리고 $A\mapsto L_A$ ([예시 1](#ex1){: data-relation="required" }의 정의)이 서로의 역함수가 되는 전단사함수가 된다. 
 
-그런데 왼쪽의 집합은 $\Hom(\mathbb{K}^n, \mathbb{K}^m)$와 같으므로, 이 대응이 전단사인 linear map, 곧 isomorphism이 되는지를 확인해볼 수 있다. 이에 대한 답은 그렇다는 것이며, 이 다음의 [정리 3](#thm3)과 함께 이 결과를 선형대수학의 기본정리라 부른다.
+그런데 왼쪽의 집합은 $\Hom(\mathbb{K}^n, \mathbb{K}^m)$와 같으므로, 이 대응이 전단사인 linear map, 곧 isomorphism이 되는지를 확인해볼 수 있다. 이에 대한 답은 그렇다는 것이며, 이 다음의 [정리 3](#thm3){: data-relation="forward" }과 함께 이 결과를 선형대수학의 기본정리라 부른다.
 
 ::: 정리 2
 $$\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$$
@@ -101,7 +101,7 @@ $$\begin{aligned}(L_2\circ L_1)(e_i)&=L_2(\alpha_{1,i}e_1+\cdots+\alpha_{m,i}e_m
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 2](/ko/math/linear_algebra/matrices#def2) 직후의 계산으로부터 이것이 두 행렬 $[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$, $[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$의 곱의 $(j,i)$ 성분이라는 것을 안다.
+$[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$의 $i$번째 열은 $e_i$가 $L_2\circ L_1$에 의해 옮겨지는 벡터이므로, 행렬 $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 이제 [§행렬, ⁋정의 2](/ko/math/linear_algebra/matrices#def2){: data-relation="required" } 직후의 계산으로부터 이것이 두 행렬 $[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$, $[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$의 곱의 $(j,i)$ 성분이라는 것을 안다.
 :::
 
 ## 기본정리: 일반적인 경우
@@ -128,7 +128,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
 으로 주어진다는 것을 확인할 수 있다.
 
-그럼 [정리 2](#thm2)에 대한 일반적인 버전은 다음의 정리로 주어진다.
+그럼 [정리 2](#thm2){: data-relation="forward" }에 대한 일반적인 버전은 다음의 정리로 주어진다.
 
 ::: 정리 4
 $n$차원 $\mathbb{K}$-벡터공간 $V$와 $m$차원 $\mathbb{K}$-벡터공간 $W$에 대하여, $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
@@ -151,7 +151,7 @@ $$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\be
 일 것이고, 따라서 $L_1+L_2$의 행렬표현 $[L_1+L_2]^\mathcal{B}_\mathcal{C}$은 정확히 $[L_1]^\mathcal{B}_\mathcal{C}+[L_2]^\mathcal{B}_\mathcal{C}$이 된다. 이와 유사하게 스칼라곱에 대한 것도 성립한다.
 :::
 
-[정리 3](#thm3) 또한 비슷한 일반화를 갖는다.
+[정리 3](#thm3){: data-relation="forward" } 또한 비슷한 일반화를 갖는다.
 
 ::: 정리 5
 세 개의 $\mathbb{K}$-벡터공간 $V_1,V_2,V_3$와 이들 각각의 basis $\mathcal{B}_1=\{x_1,\ldots,x_n\}$, $\mathcal{B}_2=\{y_1,\ldots, y_m\}$, $\mathcal{B}_3=\{z_1,\ldots, z_k\}$가 주어졌다 하자. 그럼 임의의 $L_1:V_1\rightarrow V_2$, $L_2:V_2\rightarrow V_3$에 대하여 항상
@@ -173,23 +173,23 @@ $$\begin{aligned}(L_2\circ L_1)(x_i)&=L_2(\alpha_{1,i}y_1+\cdots+\alpha_{m,i}y_m
 
 $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)z_k$$
 
-앞서 우리는 $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$의 $i$번째 열은 정확히 $x_i$가 $L_2\circ L_1$이 옮겨지는 벡터의 $\mathcal{B}_3$에서의 좌표표현이라는 것을 확인했으므로, 행렬 $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 앞서 [정리 3](#thm3)에서와 마찬가지로 이 성분은 행렬곱 $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$의 $(j,i)$번째 성분이므로 증명이 완료된다.
+앞서 우리는 $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$의 $i$번째 열은 정확히 $x_i$가 $L_2\circ L_1$이 옮겨지는 벡터의 $\mathcal{B}_3$에서의 좌표표현이라는 것을 확인했으므로, 행렬 $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$의 $i$열, $j$행은 이 벡터의 $j$번째 성분 $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$이 된다. 앞서 [정리 3](#thm3){: data-relation="required" }에서와 마찬가지로 이 성분은 행렬곱 $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$의 $(j,i)$번째 성분이므로 증명이 완료된다.
 :::
 
-위의 [정리 4](#thm4)는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 가령 $\Mat_{m\times n}(\mathbb{K})$의 $mn$개의 basis 원소는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis 원소에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
+위의 [정리 4](#thm4){: data-relation="required" }는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 가령 $\Mat_{m\times n}(\mathbb{K})$의 $mn$개의 basis 원소는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5){: data-relation="weak" }에서 살펴본 $mn$개의 basis 원소에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
 
 ::: 따름정리 6
 두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 basis $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 isomorphism $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 basis $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}_\mathcal{C}$의 역행렬과 같다.
 :::
 ::: 증명
-[정리 5](#thm5)를 $L^{-1}\circ L=\id_V$와 $L\circ L^{-1}=\id_W$에 적용하면 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}[L]^{\mathcal{B}}_{\mathcal{C}}=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=I$와 $[L]^{\mathcal{B}}_{\mathcal{C}}[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}=[\id_W]^{\mathcal{C}}_{\mathcal{C}}=I$를 얻는다.
+[정리 5](#thm5){: data-relation="required" }를 $L^{-1}\circ L=\id_V$와 $L\circ L^{-1}=\id_W$에 적용하면 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}[L]^{\mathcal{B}}_{\mathcal{C}}=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=I$와 $[L]^{\mathcal{B}}_{\mathcal{C}}[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}=[\id_W]^{\mathcal{C}}_{\mathcal{C}}=I$를 얻는다.
 :::
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrices)에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 dual space를 살펴보면 그 의미를 알 수 있다. 
+이와 같이 [§행렬](/ko/math/linear_algebra/matrices){: data-relation="weak" }에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 dual space를 살펴보면 그 의미를 알 수 있다. 
 
 ## 기저변환 행렬
 
-[정리 4](#thm4)를 한 마디로 요약하자면, $n$차원 벡터공간 $V$에서 $m$차원 벡터공간 $W$로의 linear map은, 이들 각각의 basis $\mathcal{B}, \mathcal{C}$를 고정하면, 이를 $m\times n$ 행렬로 나타낼 수 있고 거꾸로 임의의 $m\times n$ 행렬 또한 linear map으로 이해할 수 있다는 것이다. 그렇다면 자연스러운 질문 중 하나는 우리가 basis를 바꾸었을 때 어떠한 일이 생기는지이며, 이는 사실 [정리 5](#thm5)에 이미 그 답이 나와있다. 
+[정리 4](#thm4){: data-relation="required" }를 한 마디로 요약하자면, $n$차원 벡터공간 $V$에서 $m$차원 벡터공간 $W$로의 linear map은, 이들 각각의 basis $\mathcal{B}, \mathcal{C}$를 고정하면, 이를 $m\times n$ 행렬로 나타낼 수 있고 거꾸로 임의의 $m\times n$ 행렬 또한 linear map으로 이해할 수 있다는 것이다. 그렇다면 자연스러운 질문 중 하나는 우리가 basis를 바꾸었을 때 어떠한 일이 생기는지이며, 이는 사실 [정리 5](#thm5){: data-relation="required" }에 이미 그 답이 나와있다. 
 
 ::: 정의 7
 임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *change-of-basis matrix<sub>기저변환행렬</sub>*은 
@@ -221,7 +221,7 @@ $$B=PAQ$$
 
 를 만족한다면 $A$와 $B$를 같은 것으로 취급하고 싶은 유혹이 있다. 이는 고정된 linear map $L$이 주어졌을 때, $L$의 정의역과 공역의 basis를 잘 택하여 얻어지는 행렬표현들을 모두 같은 것으로 생각한다는 것이다. 
 
-그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 basis $\{x_1,\ldots, x_n\}$을 뒤쪽의 원소들이 $\ker L$의 basis가 되도록 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5)를 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
+그러나 이렇게 그럴듯한 동기에 비해 그 결과는 별로 좋지 않다. $L$의 정의역과 공역의 basis를 모두 변화시킬 수 있다면, 정의역의 basis $\{x_1,\ldots, x_n\}$을 뒤쪽의 원소들이 $\ker L$의 basis가 되도록 택하고, 이후 공역에서는 $L(x_1),\ldots, L(x_n)$들 중 일차독립인 $L(x_1),\ldots, L(x_k)$를 택한 후 [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5){: data-relation="required" }를 이용하여 공역의 basis를 만들면 이 linear map은 항상 블록행렬
 
 $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 
