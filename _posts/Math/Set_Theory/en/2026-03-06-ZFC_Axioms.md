@@ -62,7 +62,7 @@ are true. Therefore, by the axiom of extensionality, $A=B$.
 
 Since the axiom of existence tells us that at least one such set exists, both the existence and uniqueness of a *set with no elements* are guaranteed. We now call this set the *empty set* and denote it by $\emptyset$.
 
-The following axiom is worth remembering in particular because it prevents [Example 1](#ex1).
+The following axiom is worth remembering in particular because it prevents [Example 1](#ex1){: data-relation="required" }.
 
 ::: misc The Axiom Schema of Comprehension. {#axiom-comprehension}
 Given any set $A$ and any proposition $P$, there exists a set $B$ such that <phrase>$x\in B$</phrase> and <phrase>$x\in A$ and $P(x)$</phrase> are equivalent.
@@ -81,7 +81,7 @@ What created the contradiction in naive set theory was the following assumption:
 
 > Let $P$ be a proposition about $x$. Then there exists a set $B$ such that <phrase>$x\in B$</phrase> and <phrase>$P(x)$</phrase> are equivalent.
 
-Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1), we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; we can only define
+Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1){: data-relation="weak" }, we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; we can only define
 
 $$B=\{x\in A\mid x\not\in x\}$$
 

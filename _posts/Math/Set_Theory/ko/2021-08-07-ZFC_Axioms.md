@@ -62,7 +62,7 @@ $$((x\in A)\implies (x\in B)),\qquad ((x\in B)\implies (x\in A))$$
 
 Axiom of existence로부터 위와 같은 집합이 적어도 하나 존재한다는 것을 알고 있으므로, <em-ko>어떠한 원소도 갖지 않는 집합</em-ko>의 존재성과 유일성이 모두 보장된다. 이제 이 집합을 *공집합*이라 부르고 $\emptyset$이라는 기호를 줄 수 있다.
 
-다음 공리는 특히 [예시 1](#ex1)을 방지해준다는 점에서 기억할 만하다.
+다음 공리는 특히 [예시 1](#ex1){: data-relation="required" }을 방지해준다는 점에서 기억할 만하다.
 
 ::: misc The Axiom schema of Comprehension.<sub>분류 공리꼴</sub> {#axiom-comprehension}
 임의의 집합 $A$와 명제 $P$가 주어졌다 하자. 그럼 <phrase>$x\in B$인 것</phrase>과 <phrase>$x\in A$이고 $P(x)$인 것</phrase>이 동치이도록 하는 집합 $B$가 존재한다.
@@ -81,7 +81,7 @@ $$x\in B'\iff ((x\in A)\wedge P(x))\iff x\in B$$
 
 > $P$가 $x$에 대한 명제라 하자. 그럼 <phrase>$x\in B$인 것</phrase>과 <phrase>$P(x)$인 것</phrase>이 동치이도록 하는 집합 $B$가 존재한다.
 
-이제 새로 도입한 comprehension schema에 따르면, [예시 1](#ex1)과는 달리 $\mathcal{S}=\{x\mid x\not\in x\}$를 바로 정의할 수는 없고, 이미 존재하는 집합 $A$에 대해 
+이제 새로 도입한 comprehension schema에 따르면, [예시 1](#ex1){: data-relation="weak" }과는 달리 $\mathcal{S}=\{x\mid x\not\in x\}$를 바로 정의할 수는 없고, 이미 존재하는 집합 $A$에 대해 
 
 $$B=\{x\in A\mid x\not\in x\}$$
 
