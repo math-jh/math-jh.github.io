@@ -39,7 +39,7 @@ $$\begin{aligned}(G-G')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\math
 
 $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
-로 *정의*하는 것이 자연스럽다. $v$를 $\mathcal{B}$의 원소들의 일차결합으로 쓰는 방법은 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6)에 의하여 유일하므로, $G$는 잘 정의되었다. 또 $v=\sum_{x\in\mathcal{B}}v_xx$, $w=\sum_{x\in\mathcal{B}}w_xx$와 $\alpha\in\mathbb{K}$에 대하여 $v+\alpha w=\sum_{x\in\mathcal{B}}(v_x+\alpha w_x)x$이므로 $G(v+\alpha w)=\sum_{x\in\mathcal{B}}(v_x+\alpha w_x)g(x)=G(v)+\alpha G(w)$이고, 따라서 $G$는 linear map이다.
+로 *정의*하는 것이 자연스럽다. $v$를 $\mathcal{B}$의 원소들의 일차결합으로 쓰는 방법은 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6){: data-relation="required" }에 의하여 유일하므로, $G$는 잘 정의되었다. 또 $v=\sum_{x\in\mathcal{B}}v_xx$, $w=\sum_{x\in\mathcal{B}}w_xx$와 $\alpha\in\mathbb{K}$에 대하여 $v+\alpha w=\sum_{x\in\mathcal{B}}(v_x+\alpha w_x)x$이므로 $G(v+\alpha w)=\sum_{x\in\mathcal{B}}(v_x+\alpha w_x)g(x)=G(v)+\alpha G(w)$이고, 따라서 $G$는 linear map이다.
 :::
 
 즉, 다음의 diagram이 항상 commute하도록 하는 $G:V\rightarrow W$를 찾을 수 있다.
@@ -78,7 +78,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 으로 이해할 수 있다.
 
-위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#prop1)에 대응되는 다음 명제를 증명할 수 있다.
+위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#prop1){: data-relation="weak" }에 대응되는 다음 명제를 증명할 수 있다.
 
 ::: 따름정리 2
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
@@ -87,17 +87,17 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\id_W$이다.
 :::
 ::: 증명
-1. 우선 $L$이 단사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 일차독립이고, 따라서 [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5)에 의하여 이들을 포함하는 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 이제 함수 $r:\mathcal{B}\rightarrow V$를 다음의 식
+1. 우선 $L$이 단사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 일차독립이고, 따라서 [§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5){: data-relation="required" }에 의하여 이들을 포함하는 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 이제 함수 $r:\mathcal{B}\rightarrow V$를 다음의 식
     
     $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
 
-    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\{x_1,\ldots,x_n\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\id_V$가 성립한다.
+    으로 정의하고, 여기에 [정리 1](#thm1){: data-relation="required" }을 적용하여 얻어진 linear map을 $R$이라 하자. 그럼 $V$의 basis $\{x_1,\ldots,x_n\}$의 임의의 원소 $x_i$에 대하여 $(R\circ L)(x_i)=x_i$이고, 따라서 정리 1의 유일성 부분에 의하여 $R\circ L=\id_V$가 성립한다.
 
-2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6)에 의하여 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$)이라 하자. 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
+2. $L$이 전사함수라 하고, $V$의 basis $x_1,\ldots,x_n$을 택하자. 그럼 $L(x_1),\ldots, L(x_n)$은 $W$를 span하므로 [§벡터공간의 차원, ⁋명제 6](/ko/math/linear_algebra/dimension#prop6){: data-relation="required" }에 의하여 이 벡터들 중 일부를 택하여 $W$의 basis $\mathcal{B}$를 찾을 수 있다. 일반성을 잃지 않고 $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$)이라 하자. 함수 $s:\mathcal{B}\rightarrow V$를 다음의 식
     
     $$s(v)=x_k\qquad v=L(x_k)$$
 
-    으로 정의하고, 여기에 [정리 1](#thm1)을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\id_W$가 성립한다.
+    으로 정의하고, 여기에 [정리 1](#thm1){: data-relation="required" }을 적용하여 얻어진 linear map을 $S$라 하자. 이제 $W$의 basis $\mathcal{B}$의 임의의 원소 $L(x_k)$에 대하여 $(L\circ S)(L(x_k))=L(x_k)$이므로 다시 정리 1의 유일성 부분에 의하여 $L\circ S=\id_W$가 성립한다.
 :::
 
 ## 선형사상들의 공간
@@ -133,18 +133,18 @@ $$\begin{aligned}
 따라서, 다음을 정의할 수 있다.
 
 ::: 정의 4
-두 $\mathbb{K}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3)의 연산을 준 $\mathbb{K}$-벡터공간을 $\Hom_\mathbb{K}(V,W)$, 혹은 문맥에 따라 field $\mathbb{K}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
+두 $\mathbb{K}$-벡터공간 $V,W$에 대하여, $V$에서 $W$로의 linear map들의 집합에 [보조정리 3](#lem3){: data-relation="required" }의 연산을 준 $\mathbb{K}$-벡터공간을 $\Hom_\mathbb{K}(V,W)$, 혹은 문맥에 따라 field $\mathbb{K}$가 명확할 때는 $\Hom(V,W)$로 적는다. 
 
 특별히 $W=\mathbb{K}$일 경우, $\Hom(V,\mathbb{K})$를 $V$의 *dual space<sub>쌍대공간</sub>*이라 부르고 $V^\ast$으로 적는다. $V^\ast$의 원소들을 *linear functional*들이라 부른다. 
 :::
 
-벡터공간 $\Hom(V,W)$에서 영벡터에 해당하는 원소는 모든 원소를 0으로 보내는 함수 $0$이다. ([§선형사상, ⁋예시 10](/ko/math/linear_algebra/linear_map#ex10)) 이 함수를 지칭할 때는 편의상 영함수라 지칭하자.
+벡터공간 $\Hom(V,W)$에서 영벡터에 해당하는 원소는 모든 원소를 0으로 보내는 함수 $0$이다. ([§선형사상, ⁋예시 10](/ko/math/linear_algebra/linear_map#ex10){: data-relation="weak" }) 이 함수를 지칭할 때는 편의상 영함수라 지칭하자.
 
 두 공간 $V,W$가 모두 유한차원이고, $\mathcal{B}=\{x_1,\ldots, x_n\}$, $\mathcal{C}=\{y_1,\ldots, y_m\}$이 $V,W$ 각각의 basis라 하자. $\mathcal{B}$에서 $W$로의 $mn$개의 함수들
 
 $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
-을 생각하자. 즉 $f_i^j$는 <em-ko>오직</em-ko> $x_i$ 하나만을 $y_j$로 보내고, 나머지는 모두 0으로 보내는 함수이다. 그럼 [정리 1](#thm1)에 의하여 $f_i^j=B_i^j\circ\iota$이도록 하는 linear map $B_i^j$가 유일하게 존재한다. 
+을 생각하자. 즉 $f_i^j$는 <em-ko>오직</em-ko> $x_i$ 하나만을 $y_j$로 보내고, 나머지는 모두 0으로 보내는 함수이다. 그럼 [정리 1](#thm1){: data-relation="required" }에 의하여 $f_i^j=B_i^j\circ\iota$이도록 하는 linear map $B_i^j$가 유일하게 존재한다. 
 
 ::: 명제 5
 두 유한차원 $\mathbb{K}$-벡터공간 $V,W$가 각각 basis $\{x_1,\ldots,x_n\}$, $\{y_1,\ldots,y_m\}$을 갖는다 하자. 그럼 $\Hom(V,W)$는 $mn$차원 벡터공간이며, 이 때 위의 $mn$개의 linear map들 $B_i^j$가 $\Hom(V,W)$의 basis가 된다.
@@ -178,7 +178,7 @@ $$L'(v)=\sum_{i,j}\alpha_{ji}B_i^j(v)$$
 
 $$L'(x_k)=\sum_{i,j}\alpha_{ji}B_i^j(x_k)=\sum_{j=1}^m\alpha_{jk}B_k^j(x_k)=\sum_{j=1}^m\alpha_{jk}y_j=L(x_k)$$
 
-가 된다. 이제 [정리 1](#thm1)의 유일성 파트에 의하여 $L'=L$이 성립한다.
+가 된다. 이제 [정리 1](#thm1){: data-relation="required" }의 유일성 파트에 의하여 $L'=L$이 성립한다.
 :::
 
 ---

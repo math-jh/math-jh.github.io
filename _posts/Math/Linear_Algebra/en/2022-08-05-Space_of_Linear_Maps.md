@@ -76,7 +76,7 @@ Therefore $L$ can be understood as the correspondence
 
 $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{ji}v_i\right)y_j=L(v)$$
 
-Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1).
+Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1){: data-relation="weak" }.
 
 ::: Corollary 2
 Let $V,W$ be two $\mathbb{K}$-vector spaces and let $L:V\rightarrow W$ be a linear map.
@@ -89,13 +89,13 @@ Let $V,W$ be two $\mathbb{K}$-vector spaces and let $L:V\rightarrow W$ be a line
     
     $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
 
-    and apply [Theorem 1](#thm1) to obtain a linear map, which we call $R$. Then for any element $x_i$ of the basis $\{x_1,\ldots,x_n\}$ of $V$, we have $(R\circ L)(x_i)=x_i$, and hence by the uniqueness part of Theorem 1, $R\circ L=\id_V$.
+    and apply [Theorem 1](#thm1){: data-relation="required" } to obtain a linear map, which we call $R$. Then for any element $x_i$ of the basis $\{x_1,\ldots,x_n\}$ of $V$, we have $(R\circ L)(x_i)=x_i$, and hence by the uniqueness part of Theorem 1, $R\circ L=\id_V$.
 
 2. Suppose $L$ is surjective, and choose a basis $x_1,\ldots,x_n$ of $V$. Then $L(x_1),\ldots, L(x_n)$ span $W$, so we can select some of these vectors to form a basis $\mathcal{B}$ of $W$. Without loss of generality, let $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$). Define a function $s:\mathcal{B}\rightarrow V$ by
     
     $$s(v)=x_k\qquad v=L(x_k)$$
 
-    and apply [Theorem 1](#thm1) to obtain a linear map, which we call $S$. Now for any element $L(x_k)$ of the basis $\mathcal{B}$ of $W$, we have $(L\circ S)(L(x_k))=L(x_k)$, so again by the uniqueness part of Theorem 1, $L\circ S=\id_W$.
+    and apply [Theorem 1](#thm1){: data-relation="required" } to obtain a linear map, which we call $S$. Now for any element $L(x_k)$ of the basis $\mathcal{B}$ of $W$, we have $(L\circ S)(L(x_k))=L(x_k)$, so again by the uniqueness part of Theorem 1, $L\circ S=\id_W$.
 :::
 
 ## Space of Linear Maps
@@ -131,18 +131,18 @@ Therefore $L_1+L_2$ is a linear map. The second claim can be shown similarly.
 Thus we may make the following definition.
 
 ::: Definition 4
-For two $\mathbb{K}$-vector spaces $V,W$, the $\mathbb{K}$-vector space obtained by equipping the set of linear maps from $V$ to $W$ with the operations from [Lemma 3](#lem3) is denoted $\Hom_\mathbb{K}(V,W)$, or simply $\Hom(V,W)$ when the field $\mathbb{K}$ is clear from context.
+For two $\mathbb{K}$-vector spaces $V,W$, the $\mathbb{K}$-vector space obtained by equipping the set of linear maps from $V$ to $W$ with the operations from [Lemma 3](#lem3){: data-relation="required" } is denoted $\Hom_\mathbb{K}(V,W)$, or simply $\Hom(V,W)$ when the field $\mathbb{K}$ is clear from context.
 
 In particular, when $W=\mathbb{K}$, we call $\Hom(V,\mathbb{K})$ the *dual space* of $V$ and denote it by $V^\ast$. The elements of $V^\ast$ are called *linear functionals*.
 :::
 
-The zero vector in the vector space $\Hom(V,W)$ is the function $0$ sending every element to 0. ([§Linear Maps, ⁋Example 10](/en/math/linear_algebra/linear_map#ex10)) When referring to this function, we shall call it the zero function for convenience.
+The zero vector in the vector space $\Hom(V,W)$ is the function $0$ sending every element to 0. ([§Linear Maps, ⁋Example 10](/en/math/linear_algebra/linear_map#ex10){: data-relation="weak" }) When referring to this function, we shall call it the zero function for convenience.
 
 Suppose both spaces $V,W$ are finite-dimensional, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ and $\mathcal{C}=\{y_1,\ldots, y_m\}$ be bases of $V$ and $W$, respectively. Consider the $mn$ functions from $\mathcal{B}$ to $W$
 
 $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
-That is, $f_i^j$ is the function sending only $x_i$ to $y_j$ and everything else to 0. Then by [Theorem 1](#thm1), there exists a unique linear map $B_i^j$ such that $f_i^j=B_i^j\circ\iota$.
+That is, $f_i^j$ is the function sending only $x_i$ to $y_j$ and everything else to 0. Then by [Theorem 1](#thm1){: data-relation="required" }, there exists a unique linear map $B_i^j$ such that $f_i^j=B_i^j\circ\iota$.
 
 ::: Proposition 5
 Let $V,W$ be two finite-dimensional $\mathbb{K}$-vector spaces with bases $\{x_1,\ldots,x_n\}$ and $\{y_1,\ldots,y_m\}$, respectively. Then $\Hom(V,W)$ is an $mn$-dimensional vector space, and the $mn$ linear maps $B_i^j$ defined above form a basis of $\Hom(V,W)$.
@@ -176,7 +176,7 @@ is a linear map. Moreover, substituting $v=x_k$ gives
 
 $$L'(x_k)=\sum_{i,j}\alpha_{ji}B_i^j(x_k)=\sum_{j=1}^m\alpha_{jk}B_k^j(x_k)=\sum_{j=1}^m\alpha_{jk}y_j=L(x_k)$$
 
-Hence by the uniqueness part of [Theorem 1](#thm1), we have $L'=L$.
+Hence by the uniqueness part of [Theorem 1](#thm1){: data-relation="required" }, we have $L'=L$.
 :::
 
 ---
