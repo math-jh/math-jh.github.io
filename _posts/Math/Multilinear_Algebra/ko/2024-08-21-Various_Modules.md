@@ -18,25 +18,25 @@ weight: 2
 
 ## 핵과 여핵
 
-임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $u$가 injective인 것은 $\ker u=0$인 것과 동치이고, $u$가 surjective인 것은 $\coker u=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)에 의하여 다음 식
+임의의 $A$-linear map $u:M \rightarrow N$에 대하여, $u$가 injective인 것은 $\ker u=0$인 것과 동치이고, $u$가 surjective인 것은 $\coker u=0$인 것과 동치이다. 한편, category $\lMod{A}$는 bicomplete category이며, 이 때 $A$-module들의 family의 product는 direct product로, coproduct는 direct sum으로 주어졌다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1){: data-relation="required" }) 따라서 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-relation="required" }에 의하여 다음 식
 
 $$\ker \prod u_i=\prod \ker u_i,\qquad \coker \bigoplus u_i=\bigoplus \coker u_i $$
 
-이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2)를 다시 써보면 다음의 두 식
+이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2){: data-relation="weak" }를 다시 써보면 다음의 두 식
 
 $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i$$
 
 또한 얻게 된다. 
 
-비슷한 맥락에서 $\Hom$ functor와 $\otimes$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $\Hom$과 $\otimes$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)과 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9))
+비슷한 맥락에서 $\Hom$ functor와 $\otimes$ functor에 대한 성질을 다시 살펴볼 수 있으며, 여기에서 $\Hom$과 $\otimes$의 adjoint를 사용하게 된다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6){: data-relation="required" }과 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9){: data-relation="required" })
 
 ## 직접곱과 직합
 
-위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $\Hom$과 $\bigoplus$, $\prod$의 관계를 살펴보자. 이를 위해 left $A$-module $M,N$과 left $A$-module들의 family $(M_i)_{i\in I}$, $(N_j)_{j\in J}$를 고정한다. 그럼 $\Hom$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) 따라서 [\[범주론\] §극한, ⁋정리 9](/ko/math/category_theory/limits#thm9)에 의하여 abelian group들 사이의 isomorphism
+위의 adjunction을 사용하는 법을 살펴보기 위해 가장 기초적인 예시를 생각한다. 우선 $\Hom$과 $\bigoplus$, $\prod$의 관계를 살펴보자. 이를 위해 left $A$-module $M,N$과 left $A$-module들의 family $(M_i)_{i\in I}$, $(N_j)_{j\in J}$를 고정한다. 그럼 $\Hom$은 right adjoint이므로 limit을 보존한다. ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9){: data-relation="required" }) 따라서 [\[범주론\] §극한, ⁋정리 9](/ko/math/category_theory/limits#thm9){: data-relation="required" }에 의하여 abelian group들 사이의 isomorphism
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 
-를 얻는다. 다시 여기에 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)을 적용하면 다음 식
+를 얻는다. 다시 여기에 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-relation="required" }을 적용하면 다음 식
 
 $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\prod_{(i,j)\in I\times J}\Hom_{\lMod{A}}(M_i, N_j)\tag{1}$$
 
@@ -50,7 +50,7 @@ $$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes
 
 $$\left(\bigoplus_{i\in I} M_i\right)\otimes_A\left(\bigoplus_{j\in J} N_j\right)\cong\bigoplus_{(i,j)\in I\times J}M_i\otimes_AN_j$$
 
-을 얻는다. 만일 $A$가 commutative ring이었다면, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6) 대신 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9)을 사용하여 위의 isomorphism들이 $A$-module들 사이의 isomorphism이 되도록 할 수 있다.
+을 얻는다. 만일 $A$가 commutative ring이었다면, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6){: data-relation="required" } 대신 [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 9](/ko/math/algebraic_structures/operations_of_modules#thm9){: data-relation="required" }을 사용하여 위의 isomorphism들이 $A$-module들 사이의 isomorphism이 되도록 할 수 있다.
 
 ## 사영가군과 단사가군
 
@@ -122,7 +122,7 @@ $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 Left $A$-module $P$가 projective인 것과 $P$가 free $A$-module의 direct summand인 것이 동치이다.
 :::
 ::: 증명
-임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
+임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $P$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-relation="required" }에 의하여 적당한 free $A$-module $F$와 surjection $p:F \rightarrow P$를 택할 수 있다. 한편 $P$가 projective라는 것은 다음의 함수
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 
@@ -178,14 +178,14 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 임의의 $M\in\rMod{A}$, $N\in \lMod{A}$에 대하여, $-\otimes_AN$과 $M\otimes_A-$는 각각 right exact functor이다.
 :::
 
-그럼 [정의 3](#def3)과 비슷한 맥락에서 다음을 정의할 수 있다.
+그럼 [정의 3](#def3){: data-relation="weak" }과 비슷한 맥락에서 다음을 정의할 수 있다.
 
 
 ::: 정의 7
 Left $A$-module $N$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $A$-module들 사이의 injective $A$-linear map $u:M \rightarrow M'$에 대하여, $u\otimes_A N$이 injective인 것이다. 비슷하게 flat right $A$-module을 정의할 수 있다. 
 :::
 
-임의의 free module은 flat이다. 또, module들의 direct sum이 flat인 것과 각각의 summand가 flat인 것이 동치임이 자명하다. 따라서 [명제 4](#prop4)에 의하여 projective module은 항상 flat이다. 그러나 그 역이 항상 성립하는 것은 아니다.
+임의의 free module은 flat이다. 또, module들의 direct sum이 flat인 것과 각각의 summand가 flat인 것이 동치임이 자명하다. 따라서 [명제 4](#prop4){: data-relation="required" }에 의하여 projective module은 항상 flat이다. 그러나 그 역이 항상 성립하는 것은 아니다.
 
 ---
 
