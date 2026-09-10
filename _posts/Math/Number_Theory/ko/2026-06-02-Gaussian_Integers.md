@@ -43,7 +43,7 @@ $\mathbb{Z}[i]$는 Euclidean domain이다. 즉 임의의 $\alpha, \beta \in \mat
 
 $$N(\rho) = N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\frac14 + \frac14\right) = \frac12 N(\beta) < N(\beta)$$
 
-이다. 유클리드 나눗셈이 성립하면 $\mathbb{Z}$에서와 똑같은 논증으로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm), [§소수와 산술의 기본정리](/ko/math/number_theory/primes)) 최대공약수·Bézout·unique factorization이 모두 따라온다.
+이다. 유클리드 나눗셈이 성립하면 $\mathbb{Z}$에서와 똑같은 논증으로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-relation="required" }, [§소수와 산술의 기본정리](/ko/math/number_theory/primes){: data-relation="required" }) 최대공약수·Bézout·unique factorization이 모두 따라온다.
 :::
 
 ## 두 제곱수의 합
@@ -55,7 +55,7 @@ $$N(\rho) = N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl(
 :::
 
 ::: 증명
-$p \equiv 3 \pmod 4$이면, $x^2 + y^2 \equiv 0 \pmod p$에서 $p \nmid x$라면 $(xy^{-1})^2 \equiv -1 \pmod p$가 되어 $-1$이 이차 잉여여야 하는데, $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)) 따라서 $p \mid x, p\mid y$이고 $x^2 + y^2$은 $p^2$의 배수가 되어 $p$와 같을 수 없다.
+$p \equiv 3 \pmod 4$이면, $x^2 + y^2 \equiv 0 \pmod p$에서 $p \nmid x$라면 $(xy^{-1})^2 \equiv -1 \pmod p$가 되어 $-1$이 이차 잉여여야 하는데, $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-relation="required" }) 따라서 $p \mid x, p\mid y$이고 $x^2 + y^2$은 $p^2$의 배수가 되어 $p$와 같을 수 없다.
 
 $p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod p$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $(m\pm i)/p = m/p \pm i/p \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 두 비단원의 곱 $p = \alpha\beta$로 분해되고, norm을 취하면 $p^2 = N(\alpha)N(\beta)$인데 $N(\alpha), N(\beta) > 1$이므로 $N(\alpha) = N(\beta) = p$, 곧 $\alpha = x + yi$에 대해 $p = x^2 + y^2$이다. 이때 $p = N(\alpha) = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이기도 하다.
 :::
@@ -112,7 +112,7 @@ $$\rho = \alpha - \beta\kappa = (11 + 7i) - 4(3 + 2i) = -1 - i$$
 이다. $N(\rho) = 2 < 13 = N(\beta)$로 나머지의 norm이 줄어들어 나눗셈 정리가 확인된다.
 :::
 
-이러한 나눗셈을 반복하면 두 가우스 정수의 최대공약수를 호제법으로 구할 수 있다 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm)의 논증이 그대로 옮겨진다). Norm이 매 단계 진감소하는 양의 정수이므로 알고리즘은 유한 번에 끝난다.
+이러한 나눗셈을 반복하면 두 가우스 정수의 최대공약수를 호제법으로 구할 수 있다 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-relation="required" }의 논증이 그대로 옮겨진다). Norm이 매 단계 진감소하는 양의 정수이므로 알고리즘은 유한 번에 끝난다.
 
 ## 일반 정수의 두 제곱수 표현
 
