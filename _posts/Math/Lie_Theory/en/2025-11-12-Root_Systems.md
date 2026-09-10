@@ -16,11 +16,11 @@ last_polished_at: 2026-05-31T16:30:04+00:00
 ---
 ## Adjoint representation
 
-Every Lie group carries a natural (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$. ([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19)) This is the differential at $h=e$ of the conjugation $h\mapsto ghg^{-1}$ defined by each $g\in G$, and if we regard both $G$ and $\Aut(\mathfrak{g})$ as Lie groups and differentiate this map, we obtain a representation of $\mathfrak{g}$
+Every Lie group carries a natural (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$. ([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19){: data-relation="weak" }) This is the differential at $h=e$ of the conjugation $h\mapsto ghg^{-1}$ defined by each $g\in G$, and if we regard both $G$ and $\Aut(\mathfrak{g})$ as Lie groups and differentiate this map, we obtain a representation of $\mathfrak{g}$
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-and by [§Lie Groups, ⁋Theorem 15](/en/math/lie_theory/Lie_groups#thm15) we may essentially regard all the information encoded in $\Ad$ as already captured here. Since taking the Lie algebra of a vector space is the same as considering the space itself, we may view $\mathfrak{g}$ as a representation space for itself, and in this case $\ad$ is given explicitly by
+and by [§Lie Groups, ⁋Theorem 15](/en/math/lie_theory/Lie_groups#thm15){: data-relation="required" } we may essentially regard all the information encoded in $\Ad$ as already captured here. Since taking the Lie algebra of a vector space is the same as considering the space itself, we may view $\mathfrak{g}$ as a representation space for itself, and in this case $\ad$ is given explicitly by
 
 $$\ad(X)Y=[X,Y].$$
 
@@ -64,7 +64,7 @@ We will skip the proof, as it is not immediately needed.
 
 ## Cartan subalgebra
 
-One of the most powerful tools in linear algebra was diagonalization, and in the theory of Lie groups we captured this through weight decomposition. ([§Torus Actions, ⁋Definition 4](/en/math/lie_theory/torus_action#def4)) The corresponding notion for Lie algebras is as follows.
+One of the most powerful tools in linear algebra was diagonalization, and in the theory of Lie groups we captured this through weight decomposition. ([§Torus Actions, ⁋Definition 4](/en/math/lie_theory/torus_action#def4){: data-relation="weak" }) The corresponding notion for Lie algebras is as follows.
 
 ::: Definition 4
 For a semisimple Lie algebra $\mathfrak{g}$, a *Cartan subalgebra* of $\mathfrak{g}$ is a maximal abelian subalgebra $\mathfrak{h}$ such that $\ad(H)$ is diagonalizable for every $H\in \mathfrak{h}$.
@@ -85,7 +85,7 @@ are called the *roots* of $\mathfrak{g}$. Here
 
 $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}.$$
 
-([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19))
+([§Lie Groups, ⁋Definition 19](/en/math/lie_theory/Lie_groups#def19){: data-relation="weak" })
 :::
 
 By definition, $\mathfrak{h}$ acts on itself by $0$. That is, $\mathfrak{h}$ is the eigenspace with eigenvalue $0$ when $\mathfrak{g}$ is decomposed into simultaneous eigenspaces, and from this we obtain the decomposition
@@ -121,7 +121,7 @@ and let $K(-,-)$ be the Killing form on $\mathfrak{g}$. The following hold.
 
 ## Example: $\sl(2;\mathbb{C})$
 
-We know from [§Lie Groups, ⁋Proposition 12](/en/math/lie_theory/Lie_groups#prop12) that $\sl(n;\mathbb{C})$ is the set of $n\times n$ *traceless* matrices. Thus $\sl(2;\mathbb{C})$ has the following three elements as a basis:
+We know from [§Lie Groups, ⁋Proposition 12](/en/math/lie_theory/Lie_groups#prop12){: data-relation="required" } that $\sl(n;\mathbb{C})$ is the set of $n\times n$ *traceless* matrices. Thus $\sl(2;\mathbb{C})$ has the following three elements as a basis:
 
 $$H=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad E=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad F=\begin{pmatrix}0&0\\1&0\end{pmatrix}.$$
 
@@ -175,14 +175,14 @@ $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 and by the minimality of $m$ we see that $\mu=m$ must hold. That is, the highest weight must be a non-negative integer.
 
 ::: Definition 8
-For a fixed integer $m\geq 0$, we define the $\sl_2$-representation $V(m)$ by the $m+1$ vectors $v_0,\ldots, v_m$ and the action from [Proposition 7](#prop7):
+For a fixed integer $m\geq 0$, we define the $\sl_2$-representation $V(m)$ by the $m+1$ vectors $v_0,\ldots, v_m$ and the action from [Proposition 7](#prop7){: data-relation="required" }:
 
 $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}.$$
 
 Here $v_{-1}=v_{m+1}=0$.
 :::
 
-It is not difficult to show that $V(m)$ is irreducible. Now for an arbitrary $\sl_2$-representation $V$, we can find the highest weight of $V$ and apply [Proposition 7](#prop7) to the highest weight vector; if any highest weight vectors remain, we repeat this process, thereby decomposing $V$ into irreducible $\sl_2$-representations.
+It is not difficult to show that $V(m)$ is irreducible. Now for an arbitrary $\sl_2$-representation $V$, we can find the highest weight of $V$ and apply [Proposition 7](#prop7){: data-relation="required" } to the highest weight vector; if any highest weight vectors remain, we repeat this process, thereby decomposing $V$ into irreducible $\sl_2$-representations.
 
 ## Root systems
 
@@ -238,7 +238,7 @@ Then $\Phi\subseteq \mathfrak{h}^\ast$ is a spanning set of $\mathfrak{h}^\ast$.
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
-and since $\mathfrak{h}$ is abelian it acts by $0$ on itself. That is, considering the root decomposition of $\mathfrak{g}$, $H$ acts by $0$ on every element of $\mathfrak{g}$, and from this we know that $H$ commutes with every element of $\mathfrak{g}$ under the Lie bracket. But by [Proposition 3](#prop3), $\mathfrak{g}$ cannot have a nonzero abelian ideal, and in particular $Z(\mathfrak{g})=0$ must hold, so $H=0$.
+and since $\mathfrak{h}$ is abelian it acts by $0$ on itself. That is, considering the root decomposition of $\mathfrak{g}$, $H$ acts by $0$ on every element of $\mathfrak{g}$, and from this we know that $H$ commutes with every element of $\mathfrak{g}$ under the Lie bracket. But by [Proposition 3](#prop3){: data-relation="required" }, $\mathfrak{g}$ cannot have a nonzero abelian ideal, and in particular $Z(\mathfrak{g})=0$ must hold, so $H=0$.
 
 From this we know that $\Phi$ spans $\mathfrak{h}^\ast$. However, $\mathfrak{h}^\ast$ is a complex vector space, and the Killing form defined on it is not guaranteed to be positive definite, so it is not an inner product. To remedy this, we consider the real span of the dual elements of $\Phi$ and show that the restriction of the Killing form to it becomes positive-definite. This requires a somewhat more detailed analysis of the root decomposition.
 
@@ -267,7 +267,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 which holds for all $H$, yielding the desired result.
 :::
 
-On the other hand, from [Lemma 10](#lem10) we can choose $E\in \mathfrak{g}_\alpha$ and $F\in \mathfrak{g}_{-\alpha}$ such that $K(E,F)\neq 0$. Then by the above result they satisfy the relations
+On the other hand, from [Lemma 10](#lem10){: data-relation="required" } we can choose $E\in \mathfrak{g}_\alpha$ and $F\in \mathfrak{g}_{-\alpha}$ such that $K(E,F)\neq 0$. Then by the above result they satisfy the relations
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F.$$
 
@@ -303,7 +303,7 @@ holds. We proved earlier that these $\gamma(h_\alpha),\gamma(h_\beta)$ are integ
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
-so we know that $K$ is positive definite on $\mathfrak{h}_\mathbb{R}$. In particular, transferring this back to $\mathfrak{h}^\ast$, we can verify that the real span of $\Phi$ in $\mathfrak{h}^\ast$ forms a Euclidean space, and in the process of showing this we also showed that these roots satisfy the fourth condition of [Definition 9](#def9). Now what we need to show are the remaining conditions.
+so we know that $K$ is positive definite on $\mathfrak{h}_\mathbb{R}$. In particular, transferring this back to $\mathfrak{h}^\ast$, we can verify that the real span of $\Phi$ in $\mathfrak{h}^\ast$ forms a Euclidean space, and in the process of showing this we also showed that these roots satisfy the fourth condition of [Definition 9](#def9){: data-relation="required" }. Now what we need to show are the remaining conditions.
 
 First we need to show that applying the reflection operator
 
@@ -318,7 +318,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 must both be integers, so $c$ must be one of $\pm 1$, $\pm 2$, $\pm 1/2$, and applying $\sl_2$-representation theory and integrality again yields the desired result. That is, we have proved the following.
 
 ::: Proposition 12
-The set $\Phi$ of roots defined in [Definition 5](#def5) is a root system in $\mathfrak{h}^\ast$.
+The set $\Phi$ of roots defined in [Definition 5](#def5){: data-relation="required" } is a root system in $\mathfrak{h}^\ast$.
 :::
 
 ## Examples
@@ -334,11 +334,11 @@ We consider the subset of this vector space
 
 $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}.$$
 
-Then we know that this set satisfies all the conditions of [Definition 9](#def9). That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
+Then we know that this set satisfies all the conditions of [Definition 9](#def9){: data-relation="required" }. That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 9](#def9) holds, and the fourth condition is obvious.
+and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 9](#def9){: data-relation="required" } holds, and the fourth condition is obvious.
 :::
 
 Similarly we can consider the following example.
@@ -391,7 +391,7 @@ and the fact that the left-hand side is an integer, we know that for any two roo
 
 $$0, \pm \frac{1}{2}, \pm \frac{\sqrt{2}}{2}, \pm \frac{\sqrt{3}}{2}, \pm 1.$$
 
-The cases $\pm 1$ are excluded by the second condition of [Definition 9](#def9), so roots can only form angles of $30$ degrees (or $150$ degrees), $45$ degrees (or $135$ degrees), or $60$ degrees (or $120$ degrees).
+The cases $\pm 1$ are excluded by the second condition of [Definition 9](#def9){: data-relation="required" }, so roots can only form angles of $30$ degrees (or $150$ degrees), $45$ degrees (or $135$ degrees), or $60$ degrees (or $120$ degrees).
 
 For example, suppose two roots $\alpha,\beta$ form an angle of $30$ or $150$ degrees. Then from
 
@@ -413,15 +413,15 @@ The *Weyl group* of a root system $\Phi$ is the subgroup of $\Aut(\Phi)$ generat
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
-The Weyl group is a finite group. Indeed, $W$ is a subgroup of the orthogonal group of the Euclidean space containing $\Phi$, and since $\Phi$ is a finite set, $W$ is also finite. Also, as checked in [Proposition 12](#prop12), since the reflection $s_\alpha$ is the reflection in the hyperplane perpendicular to $\alpha$, $W$ has the structure of a Coxeter group.
+The Weyl group is a finite group. Indeed, $W$ is a subgroup of the orthogonal group of the Euclidean space containing $\Phi$, and since $\Phi$ is a finite set, $W$ is also finite. Also, as checked in [Proposition 12](#prop12){: data-relation="required" }, since the reflection $s_\alpha$ is the reflection in the hyperplane perpendicular to $\alpha$, $W$ has the structure of a Coxeter group.
 
 ::: Example 18
-For $\Phi(A_n)$ examined in [Example 13](#ex13), the reflection $s_{ij}$ corresponds to the transposition swapping the $i$th and $j$th coordinates. Hence $W(\Phi(A_n))\cong S_{n+1}$. For $\Phi(D_n)$ of [Example 14](#ex14), the reflections include both coordinate swaps and sign changes, so $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$.
+For $\Phi(A_n)$ examined in [Example 13](#ex13){: data-relation="weak" }, the reflection $s_{ij}$ corresponds to the transposition swapping the $i$th and $j$th coordinates. Hence $W(\Phi(A_n))\cong S_{n+1}$. For $\Phi(D_n)$ of [Example 14](#ex14){: data-relation="weak" }, the reflections include both coordinate swaps and sign changes, so $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$.
 :::
 
 ## Connection to Lie groups
 
-So far we have defined the root system $\Phi$ of a semisimple Lie algebra $\mathfrak{g}$ and defined the Weyl group capturing its symmetry as the finite group generated by the reflections $s_\alpha$. On the other hand, in [§Torus Actions, §§Maximal tori](/en/math/lie_theory/torus_action#maximal-tori) we defined the Weyl group of a compact Lie group $G$ as $W=N(T)/T$. In this section we show that the two definitions naturally coincide.
+So far we have defined the root system $\Phi$ of a semisimple Lie algebra $\mathfrak{g}$ and defined the Weyl group capturing its symmetry as the finite group generated by the reflections $s_\alpha$. On the other hand, in [§Torus Actions, §§Maximal tori](/en/math/lie_theory/torus_action#maximal-tori){: data-relation="weak" } we defined the Weyl group of a compact Lie group $G$ as $W=N(T)/T$. In this section we show that the two definitions naturally coincide.
 
 First, let $\mathfrak{g}$ be the Lie algebra of a compact connected Lie group $G$. That $\mathfrak{g}$ is semisimple is equivalent to the universal cover of $G$ not having $\mathbb{R}^n$ as a factor. In this case, the Lie algebra $\mathfrak{t}$ of a maximal torus $T$ of $G$ becomes a Cartan subalgebra of $\mathfrak{g}$.
 
@@ -469,7 +469,7 @@ Finally, let us verify that $n_\alpha\in N(T)$. Since $\Ad(n_\alpha)$ preserves 
 
 From this we know that the Weyl groups from the two perspectives are essentially the same object. From the Lie group perspective, $W=N(T)/T$ captures the conjugation action on the maximal torus, while from the Lie algebra perspective, $W$ captures the symmetry of the root system. The agreement of the two definitions is a concrete expression of the fact that the structure of a compact Lie group is completely determined by the root system of its Lie algebra.
 
-Integrating these two perspectives, the geometric objects that naturally emerge from a root system, namely Borel subgroups and flag varieties, are treated in [§Borel Subgroups](/en/math/lie_theory/borel_subgroup).
+Integrating these two perspectives, the geometric objects that naturally emerge from a root system, namely Borel subgroups and flag varieties, are treated in [§Borel Subgroups](/en/math/lie_theory/borel_subgroup){: data-relation="forward" }.
 
 ---
 

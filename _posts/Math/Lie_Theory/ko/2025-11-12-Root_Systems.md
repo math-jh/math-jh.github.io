@@ -16,11 +16,11 @@ weight: 3
 
 ## Adjoint representation
 
-Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
+Lie group에는 자연스러운 (finite-dimensional) representation $\Ad: G \rightarrow \Aut(\mathfrak{g})$이 존재한다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19){: data-relation="weak" }) 이는 각각의 $g\in G$가 정의하는 conjugation $h\mapsto ghg^{-1}$의 $h=e$에서의 미분이며, 만일 $G$와 $\Aut(\mathfrak{g})$를 모두 Lie group으로 보아 이를 미분한다면 우리는 $\mathfrak{g}$의 representation
 
 $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 
-을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 representation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
+을 얻을 수 있으며 [§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-relation="weak" }을 생각하면 본질적으로 $\Ad$가 알고있는 정보는 여기에 다 담겨있다고 생각해도 된다. 어차피 벡터공간의 Lie algebra를 생각하는 것은 자기자신을 생각하는 것과 같으므로 우리는 $\mathfrak{g}$를 representation space $\mathfrak{g}$를 이용하여 표현한다 생각할 수 있고, 이 때 $\ad$는 명시적으로 
 
 $$\ad(X)Y=[X,Y]$$
 
@@ -66,7 +66,7 @@ Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfr
 
 ## 카르탕 부분대수
 
-선형대수학에서 아주 강력한 도구 중 하나는 대각화였으며, 우리는 Lie group에서는 이를 weight decomposition을 통해 담아냈다. ([§원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 이에 대응되는 Lie algebra의 개념은 다음과 같다.
+선형대수학에서 아주 강력한 도구 중 하나는 대각화였으며, 우리는 Lie group에서는 이를 weight decomposition을 통해 담아냈다. ([§원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4){: data-relation="weak" }) 이에 대응되는 Lie algebra의 개념은 다음과 같다.
 
 ::: 정의 4
 Semisimple Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $\ad(H)$가 모든 $H\in \mathfrak{h}$에 대하여 diagonalizable이도록 하는 abelian subalgebra $\mathfrak{h}$ 중 maximal인 것이다. 
@@ -87,7 +87,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 
 $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
 
-이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
+이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19){: data-relation="weak" })
 :::
 
 정의에 의하여 $\mathfrak{h}$는 자기 자신 위에는 $0$으로 작용한다. 즉 $\mathfrak{h}$는 $\mathfrak{g}$를 simultaneous eigenspace로 분해했을 때 eigenvalue $0$에 해당하는 부분이며 이로부터 우리는 다음의 decomposition
@@ -123,7 +123,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
 ## 예시: $\sl(2;\mathbb{C})$
 
-우리는 [§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12)를 통해 $\sl(n;\mathbb{C})$는 $n\times n$ *traceless* 행렬들의 모임임을 안다. 따라서 $\sl(2;\mathbb{C})$는 다음의 세 원소를 basis로 갖는다. 
+우리는 [§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12){: data-relation="required" }를 통해 $\sl(n;\mathbb{C})$는 $n\times n$ *traceless* 행렬들의 모임임을 안다. 따라서 $\sl(2;\mathbb{C})$는 다음의 세 원소를 basis로 갖는다. 
 
 $$H=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad E=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad F=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 
@@ -181,14 +181,14 @@ $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 과 $m$의 최소성으로부터 $\mu=m$이어야 한다는 것을 안다. 즉 highest weight는 반드시 음이 아닌 정수이다. 
 
 ::: 정의 8
-고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 7](#prop7)의 action 
+고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 7](#prop7){: data-relation="required" }의 action 
 
 $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}$$
 
 을 주어 정의한다. $v_{-1}=v_{m+1}=0$이다. 
 :::
 
-어렵지 않게 $V(m)$은 irreducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
+어렵지 않게 $V(m)$은 irreducible인 것을 보일 수 있다. 이제 임의의 $\sl_2$-representation $V$에 대하여, 우리는 $V$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7){: data-relation="required" }을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $V$를 irreducible $\sl_2$-representation으로 분해할 수 있다. 
 
 ## 근계
 
@@ -245,7 +245,7 @@ $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
-으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 3](#prop3)에 의하여 $\mathfrak{g}$는 nonzero abelian ideal을 가질 수 없고, 특히 $Z(\mathfrak{g})=0$이 성립해야 하므로 $H=0$이어야 한다. 
+으로 작용하고, $\mathfrak{h}$는 abelian이므로 이 위에는 $0$으로 작용한다. 즉 $\mathfrak{g}$의 root decomposition을 생각하면 $H$는 $\mathfrak{g}$ 위의 모든 원소에 대하여 $0$으로 작용하고, 이로부터 $H$는 $\mathfrak{g}$의 모든 원소와 Lie bracket에 대해 commute함을 안다. 그런데 [명제 3](#prop3){: data-relation="required" }에 의하여 $\mathfrak{g}$는 nonzero abelian ideal을 가질 수 없고, 특히 $Z(\mathfrak{g})=0$이 성립해야 하므로 $H=0$이어야 한다. 
 
 이로부터 $\Phi$는 $\mathfrak{h}^\ast$을 span하는 것을 안다. 그러나 $\mathfrak{h}^\ast$는 complex vector space이고, 이 위에 정의된 Killing form 또한 positive definite라는 보장이 없으므로 inner product가 아니다. 이를 해소하기 위해 우리는 $\Phi$의 dual element들의 real span을 생각하고 여기로 Killing form을 제한했을 때 positive-definite가 된다는 것을 보인다. 이를 위해서는 root decomposition에 대한 조금 더 자세한 분석이 필요하다. 
 
@@ -274,7 +274,7 @@ $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alph
 이 모든 $H$에 대해 성립하므로 원하는 결과를 얻는다. 
 :::
 
-한편 우리는 [보조정리 10](#lem10)으로부터 $E\in \mathfrak{g}_\alpha$, $F\in \mathfrak{g}_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
+한편 우리는 [보조정리 10](#lem10){: data-relation="required" }으로부터 $E\in \mathfrak{g}_\alpha$, $F\in \mathfrak{g}_{-\alpha}$를 택하여 $K(E,F)\neq 0$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
 $$[E,F]=K(E,F)H_\alpha,\quad [H_\alpha,E]=\alpha(H_\alpha)E=K(\alpha,\alpha)E,\quad [H_\alpha,F]=-\alpha(H_\alpha)F=-K(\alpha,\alpha)F$$
 
@@ -310,7 +310,7 @@ $$K(h_\alpha,h_\beta)=\tr_\mathfrak{g}(\ad h_\alpha\ad h_\beta)=\sum_{\gamma\in\
 
 $$K(h,h)=\tr(\ad_h\ad_h)=\sum_{\gamma\in\Phi}\gamma(h)^2\geq 0$$
 
-을 준다. 만일 $K(h,h)=0$이라면 모든 $\gamma\in\Phi$에 대하여 $\gamma(h)=0$이고, $\Phi$가 $\mathfrak{h}^\ast$을 span하므로 $h=0$이다. 따라서 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 9](#def9)의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
+을 준다. 만일 $K(h,h)=0$이라면 모든 $\gamma\in\Phi$에 대하여 $\gamma(h)=0$이고, $\Phi$가 $\mathfrak{h}^\ast$을 span하므로 $h=0$이다. 따라서 우리는 $K$가 $\mathfrak{h}_\mathbb{R}$ 위에서 positive definite인 것을 안다. 특히 이를 다시 $\mathfrak{h}^\ast$로 옮겨주면 $\mathfrak{h}^\ast$에서 $\Phi$의 real span이 Euclidean space를 이룬다는 것을 확인할 수 있고, 이를 보이는 과정에서 우리는 이들 root들이 [정의 9](#def9){: data-relation="required" }의 네 번째 조건을 만족하는 것도 보였다. 이제 우리가 보여야 할 것은 나머지 조건들이다. 
 
 우선 reflection operator를 적용한
 
@@ -325,7 +325,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 가 모두 정수이기 위해서는 $c$는 $\pm 1$, $\pm 2$, $\pm 1/2$ 중 하나여야 하고, 다시 이를 $\sl_2$-representation theory로 옮긴 후 integrality를 적용하면 원하는 결과를 얻는다. 즉 우리는 다음을 증명하였다. 
 
 ::: 명제 12
-[정의 5](#def5)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$에서 자신의 real span이 이루는 Euclidean space의 root system이다. 
+[정의 5](#def5){: data-relation="required" }에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$에서 자신의 real span이 이루는 Euclidean space의 root system이다. 
 :::
 
 ## 예시들
@@ -341,11 +341,11 @@ $$V_n=\left\{(x_1,\ldots, x_{n+1})\mid x_1+\cdots+x_{n+1}=0\right\}$$
 
 $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}$$
 
-을 생각한다. 그럼 이 집합이 [정의 9](#def9)의 조건을 모두 만족하는 것을 안다. 첫째 조건인 $\Phi(A_n)$이 $V_n$을 span하는 것과, 둘째 조건이 성립하는 것은 자명하다. 셋째 조건의 경우, 임의의 벡터 $\mathbf{x}=(x_1,\ldots, x_{n+1})$와 임의의 $\mathbf{e}_{ij}=e_i-e_j$에 대하여 다음 식
+을 생각한다. 그럼 이 집합이 [정의 9](#def9){: data-relation="required" }의 조건을 모두 만족하는 것을 안다. 첫째 조건인 $\Phi(A_n)$이 $V_n$을 span하는 것과, 둘째 조건이 성립하는 것은 자명하다. 셋째 조건의 경우, 임의의 벡터 $\mathbf{x}=(x_1,\ldots, x_{n+1})$와 임의의 $\mathbf{e}_{ij}=e_i-e_j$에 대하여 다음 식
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 9](#def9)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
+이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 9](#def9){: data-relation="required" }의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
 :::
 
 비슷하게 다음의 예시를 생각할 수 있다. 
@@ -398,7 +398,7 @@ $$\langle\alpha,\beta\rangle \langle\beta,\alpha\rangle=4\frac{(\alpha,\beta)^2}
 
 $$0, \pm \frac{1}{2}, \pm \frac{\sqrt{2}}{2}, \pm \frac{\sqrt{3}}{2}, \pm 1$$
 
-이 된다. 여기서 $\pm 1$의 경우는 [정의 9](#def9)의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도), $90$도의 각도만 이룰 수 있다. 
+이 된다. 여기서 $\pm 1$의 경우는 [정의 9](#def9){: data-relation="required" }의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도), $90$도의 각도만 이룰 수 있다. 
 
 예시를 위해 만일 두 root $\alpha,\beta$가 이루는 각이 $30$도이거나 $150$도라 하자. 그럼
 
@@ -420,15 +420,15 @@ Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
-Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 subgroup이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [정의 9](#def9)의 셋째 조건에 의하여 reflection $s_\alpha$가 $\alpha$에 수직인 hyperplane에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
+Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 subgroup이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [정의 9](#def9){: data-relation="required" }의 셋째 조건에 의하여 reflection $s_\alpha$가 $\alpha$에 수직인 hyperplane에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
 
 ::: 예시 18
-[예시 13](#ex13)에서 살펴본 $\Phi(A_n)$의 경우, reflection $s_{ij}$는 $i$번째와 $j$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $W(\Phi(A_n))\cong S_{n+1}$이다. [예시 14](#ex14)의 $\Phi(D_n)$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$이다.
+[예시 13](#ex13){: data-relation="required" }에서 살펴본 $\Phi(A_n)$의 경우, reflection $s_{ij}$는 $i$번째와 $j$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $W(\Phi(A_n))\cong S_{n+1}$이다. [예시 14](#ex14){: data-relation="required" }의 $\Phi(D_n)$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$이다.
 :::
 
 ## Lie group과의 연결
 
-지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면)에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
+지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면){: data-relation="required" }에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
 
 우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$가 $\mathfrak{g}$의 Cartan subalgebra가 된다.
 
@@ -476,7 +476,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 
 이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $W=N(T)/T$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $W$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
 
-이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup](/ko/math/lie_theory/borel_subgroup)에서 다룬다.
+이 두 관점을 통합하여 root system으로부터 자연스럽게 등장하는 기하적 대상인 Borel subgroup과 flag variety는 [§Borel subgroup](/ko/math/lie_theory/borel_subgroup){: data-relation="forward" }에서 다룬다.
 
 ---
 
