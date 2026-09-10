@@ -14,11 +14,11 @@ published: false
 
 ---
 
-[§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2)에서 우리는 Riemannian manifold $(M, g)$ 위의 곡선 $\gamma$에 길이를 부여했다. 유클리드 공간에서 두 점을 잇는 최단 곡선은 직선이며, 직선은 가속도가 $0$인 곡선이기도 하다. 일반적인 Riemannian manifold에서 "가속도가 $0$"이라는 조건을 정식화하려면 곡선을 따른 미분, 즉 [§접속, ⁋정의 1](/ko/math/riemannian_geometry/connection#def1)의 connection이 필요하다. 이 글에서는 길이와 더불어 다루기 쉬운 *에너지* functional을 도입하고, 그 제1변분을 통해 가속도가 소멸하는 곡선, 즉 *측지선*을 에너지의 임계 곡선으로 특징짓는다.
+[§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2){: data-relation="weak" }에서 우리는 Riemannian manifold $(M, g)$ 위의 곡선 $\gamma$에 길이를 부여했다. 유클리드 공간에서 두 점을 잇는 최단 곡선은 직선이며, 직선은 가속도가 $0$인 곡선이기도 하다. 일반적인 Riemannian manifold에서 "가속도가 $0$"이라는 조건을 정식화하려면 곡선을 따른 미분, 즉 [§접속, ⁋정의 1](/ko/math/riemannian_geometry/connection#def1){: data-relation="required" }의 connection이 필요하다. 이 글에서는 길이와 더불어 다루기 쉬운 *에너지* functional을 도입하고, 그 제1변분을 통해 가속도가 소멸하는 곡선, 즉 *측지선*을 에너지의 임계 곡선으로 특징짓는다.
 
 ## 길이 범함수와 에너지 범함수
 
-곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2) 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
+곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2){: data-relation="weak" } 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
 
 ::: 정의 1
 Riemannian manifold $(M, g)$ 위의 곡선 $\gamma : [a, b] \rightarrow M$의 *에너지<sub>energy</sub>* $E(\gamma)$는 다음의 식
@@ -60,7 +60,7 @@ $$V(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) \in T_{
 
 $$D_s \partial_t \Gamma = D_t \partial_s \Gamma$$
 
-가 성립한다. 이는 Levi-Civita connection이 torsion-free, 즉 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에서 $\Gamma_{ij}^k = \Gamma_{ji}^k$가 성립하는 데서 비롯한다. 이 사실을 이용해 에너지의 제1변분을 계산한다.
+가 성립한다. 이는 Levi-Civita connection이 torsion-free, 즉 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3){: data-relation="required" }에서 $\Gamma_{ij}^k = \Gamma_{ji}^k$가 성립하는 데서 비롯한다. 이 사실을 이용해 에너지의 제1변분을 계산한다.
 
 ::: 정리 3 (에너지의 제1변분)
 곡선 $\gamma : [a, b] \rightarrow M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
@@ -75,7 +75,7 @@ $$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = -\int_a^b \langle V(t)
 :::
 
 ::: 증명
-$E(\gamma_s) = \frac{1}{2}\int_a^b \langle \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t}$이므로 적분기호 안에서 $s$에 대해 미분하면, $\nabla$가 metric과 compatible, 즉 [§레비-치비타 접속, ⁋정의 1](/ko/math/riemannian_geometry/Levi-Civita_connection#def1)의 식이 곡선을 따른 미분 $D_s$에 대해서도 성립하므로
+$E(\gamma_s) = \frac{1}{2}\int_a^b \langle \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t}$이므로 적분기호 안에서 $s$에 대해 미분하면, $\nabla$가 metric과 compatible, 즉 [§레비-치비타 접속, ⁋정의 1](/ko/math/riemannian_geometry/Levi-Civita_connection#def1){: data-relation="required" }의 식이 곡선을 따른 미분 $D_s$에 대해서도 성립하므로
 
 $$\frac{d}{\dd{s}} E(\gamma_s) = \frac{1}{2}\int_a^b \partial_s \langle \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t} = \int_a^b \langle D_s \partial_t \Gamma, \partial_t \Gamma\rangle \dd{t}$$
 
@@ -112,29 +112,29 @@ $$\nabla_{\dot\gamma} \dot\gamma = D_t \dot\gamma = 0$$
 을 모든 $t \in I$에서 만족할 때 $\gamma$를 *geodesic<sub>측지선</sub>*이라 부르고, 위의 식을 *측지선 방정식<sub>geodesic equation</sub>*이라 부른다.
 :::
 
-측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)의 언어로 다시 읽으면, 속도장 $\dot\gamma$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot\gamma}\dot\gamma$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9)의 증명에서와 같이 Christoffel 기호로 풀어 측지선 방정식은 다음의 식
+측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-relation="weak" }의 언어로 다시 읽으면, 속도장 $\dot\gamma$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot\gamma}\dot\gamma$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9){: data-relation="required" }의 증명에서와 같이 Christoffel 기호로 풀어 측지선 방정식은 다음의 식
 
 $$\ddot\gamma^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t)) \dot\gamma^i(t) \dot\gamma^j(t) = 0, \qquad k = 1, \ldots, n$$
 
 으로 표현된다. 이는 $\gamma^k$들에 대한 $n$개의 이계 비선형 상미분방정식 시스템이다.
 
-먼저 측지선이 [정리 3](#thm3)이 예고한 대로 정확히 에너지의 임계 곡선임을 확인한다.
+먼저 측지선이 [정리 3](#thm3){: data-relation="required" }이 예고한 대로 정확히 에너지의 임계 곡선임을 확인한다.
 
 ::: 따름정리 5
 곡선 $\gamma : [a, b] \rightarrow M$이 측지선인 것과, 끝점을 고정하는 모든 고정변분 $\Gamma$에 대해 $\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = 0$이 성립하는 것은 동치이다.
 :::
 
 ::: 증명
-$\gamma$가 측지선이면 $D_t \dot\gamma = 0$이므로 [정리 3](#thm3)의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
+$\gamma$가 측지선이면 $D_t \dot\gamma = 0$이므로 [정리 3](#thm3){: data-relation="required" }의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
 
-역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3)에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t) D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
+역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3){: data-relation="required" }에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t) D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
 
 $$\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = \int_a^b \varphi(t) \lVert D_t \dot\gamma(t)\rVert_g^2 \dd{t} > 0$$
 
 이 되어 가정에 모순이다. 따라서 $D_t \dot\gamma \equiv 0$, 즉 $\gamma$는 측지선이다.
 :::
 
-[따름정리 5](#cor5)는 측지선이 정확히 에너지 functional의 Euler-Lagrange 방정식을 푸는 곡선임을 말해 준다. [명제 2](#prop2)와 결합하면, 측지선은 일정한 속력을 가지므로 (다음 명제) 동시에 길이의 임계 곡선이기도 하다. 다만 측지선이 항상 길이의 *최소화* 곡선인 것은 아니며, 충분히 짧은 구간에서만 그러함을 보일 수 있다.
+[따름정리 5](#cor5)는 측지선이 정확히 에너지 functional의 Euler-Lagrange 방정식을 푸는 곡선임을 말해 준다. [명제 2](#prop2){: data-relation="required" }와 결합하면, 측지선은 일정한 속력을 가지므로 (다음 명제) 동시에 길이의 임계 곡선이기도 하다. 다만 측지선이 항상 길이의 *최소화* 곡선인 것은 아니며, 충분히 짧은 구간에서만 그러함을 보일 수 있다.
 
 측지선이 일정한 속력을 갖는다는 사실은 위에서 언급했듯 metric-compatibility의 직접적 귀결이다.
 
@@ -171,17 +171,17 @@ $$\ddot\gamma^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) \dot\gamma^i \dot\gam
 
 $$\dot\gamma^k = w^k, \qquad \dot w^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) w^i w^j, \qquad k = 1, \ldots, n$$
 
-으로 환원할 수 있다. 우변은 $(\gamma^k, w^k)$에 대해 매끄러우며, [§레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6)에 의해 $\Gamma_{ij}^k$가 smooth 함수이므로 특히 국소적으로 Lipschitz이다. 따라서 상미분방정식의 Picard-Lindelöf 정리에 의해 초기조건 $\gamma^k(t_0) = p^k$, $w^k(t_0) = v^k$를 만족하는 해가 $t_0$의 어떤 열린구간 위에서 유일하게 존재한다. 이 해의 첫 성분 $\gamma = (\gamma^k)$가 원하는 측지선이며, Picard-Lindelöf 정리의 유일성으로부터 두 측지선은 정의역의 공통부분에서 일치한다.
+으로 환원할 수 있다. 우변은 $(\gamma^k, w^k)$에 대해 매끄러우며, [§레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6){: data-relation="required" }에 의해 $\Gamma_{ij}^k$가 smooth 함수이므로 특히 국소적으로 Lipschitz이다. 따라서 상미분방정식의 Picard-Lindelöf 정리에 의해 초기조건 $\gamma^k(t_0) = p^k$, $w^k(t_0) = v^k$를 만족하는 해가 $t_0$의 어떤 열린구간 위에서 유일하게 존재한다. 이 해의 첫 성분 $\gamma = (\gamma^k)$가 원하는 측지선이며, Picard-Lindelöf 정리의 유일성으로부터 두 측지선은 정의역의 공통부분에서 일치한다.
 :::
 
-위 정리의 해가 정의되는 구간 $I$는 일반적으로 $\mathbb{R}$ 전체가 아닐 수 있다. 임의의 시간에 대해 측지선이 항상 정의되는 manifold를 *geodesically complete<sub>측지적으로 완비된</sub>*라 부르며, 이는 Hopf-Rinow 정리를 통해 거리공간으로서의 완비성과 동치임이 알려져 있다. 측지선의 정의역을 최대한 늘려 얻는 자료가 exponential map의 출발점이 된다 ([참고 10](#rmk10)).
+위 정리의 해가 정의되는 구간 $I$는 일반적으로 $\mathbb{R}$ 전체가 아닐 수 있다. 임의의 시간에 대해 측지선이 항상 정의되는 manifold를 *geodesically complete<sub>측지적으로 완비된</sub>*라 부르며, 이는 Hopf-Rinow 정리를 통해 거리공간으로서의 완비성과 동치임이 알려져 있다. 측지선의 정의역을 최대한 늘려 얻는 자료가 exponential map의 출발점이 된다 ([참고 10](#rmk10){: data-relation="forward" }).
 
 ## 예시
 
 가장 기본적인 두 예시를 살펴본다.
 
 ::: 예시 8
-유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주자. [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7)에서 보았듯 모든 Christoffel 기호가 $0$이므로, 측지선 방정식은
+유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주자. [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7){: data-relation="weak" }에서 보았듯 모든 Christoffel 기호가 $0$이므로, 측지선 방정식은
 
 $$\ddot\gamma^k(t) = 0, \qquad k = 1, \ldots, n$$
 
@@ -197,13 +197,13 @@ $$\gamma(t) = (\cos t) p + (\sin t) v$$
 
 $$\ddot\gamma(t) = -(\cos t) p - (\sin t) v = -\gamma(t)$$
 
-이다. 한편 $S^2$의 점 $\gamma(t)$에서 unit normal vector는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot\gamma(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita connection에 대한 가속도 $D_t \dot\gamma$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot\gamma$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot\gamma = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7)의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
+이다. 한편 $S^2$의 점 $\gamma(t)$에서 unit normal vector는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot\gamma(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita connection에 대한 가속도 $D_t \dot\gamma$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot\gamma$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot\gamma = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7){: data-relation="required" }의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
 :::
 
-[예시 9](#ex9)에서 사용한 "주변 공간의 가속도를 tangent space로 정사영한 것이 곡선 위의 covariant derivative"라는 사실은 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle)에서 도입한 tangential-normal 분해를 곡선의 가속도에 적용한 것이다. 이 관찰은 일반적인 매장된 submanifold의 측지선을 다룰 때 핵심적인 도구가 된다.
+[예시 9](#ex9){: data-relation="weak" }에서 사용한 "주변 공간의 가속도를 tangent space로 정사영한 것이 곡선 위의 covariant derivative"라는 사실은 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle){: data-relation="required" }에서 도입한 tangential-normal 분해를 곡선의 가속도에 적용한 것이다. 이 관찰은 일반적인 매장된 submanifold의 측지선을 다룰 때 핵심적인 도구가 된다.
 
 ::: 참고 10
-[정리 7](#thm7)은 각 $(p, v) \in TM$마다 그 점에서 출발하는 유일한 측지선 $\gamma_v$를 대응시킨다. $v$를 적절히 줄여 측지선이 $t = 1$까지 정의되도록 하면, 대응 $v \mapsto \gamma_v(1)$은 $T_p M$에서 $0$의 한 근방에서 $M$으로의 smooth 함수를 정의하는데, 이를 점 $p$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 tangent space 위로 모아 manifold의 국소 구조를 linearize하는 도구이다.
+[정리 7](#thm7){: data-relation="required" }은 각 $(p, v) \in TM$마다 그 점에서 출발하는 유일한 측지선 $\gamma_v$를 대응시킨다. $v$를 적절히 줄여 측지선이 $t = 1$까지 정의되도록 하면, 대응 $v \mapsto \gamma_v(1)$은 $T_p M$에서 $0$의 한 근방에서 $M$으로의 smooth 함수를 정의하는데, 이를 점 $p$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 tangent space 위로 모아 manifold의 국소 구조를 linearize하는 도구이다.
 :::
 
 ---
