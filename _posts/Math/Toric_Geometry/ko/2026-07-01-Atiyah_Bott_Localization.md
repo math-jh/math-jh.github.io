@@ -16,13 +16,13 @@ published: false
 
 ---
 
-앞 글에서 torus $T=(S^1)^n$이 작용하는 공간의 equivariant cohomology $H_T^\bullet(X)$이 항상 $H_T^\bullet(\mathrm{pt})=\mathbb{Q}[t_1,\ldots,t_n]$ 위의 algebra이며, fixed point로의 restriction이 그 구조를 거의 결정한다는 현상을 보았다. ([§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)) 이 글의 목표는 그 "거의"를 정확한 정리로 바꾸는 것이다. 곧 $H_T^\bullet(\mathrm{pt})$의 $0$이 아닌 원소들을 모두 가역으로 만들면 (polynomial ring의 field of fractions로 넘어가면) $H_T^\bullet(X)$이 fixed locus $X^T$의 equivariant cohomology와 동형이 됨을 보인다. 이것이 Atiyah–Bott와 Berline–Vergne의 *localization theorem*이며, 그 즉각적 귀결로 콤팩트 variety 위의 equivariant 적분이 fixed point 각각에서의 국소적 기여의 유한합으로 계산된다는 Atiyah–Bott–Berline–Vergne 공식을 얻는다.
+앞 글에서 torus $T=(S^1)^n$이 작용하는 공간의 equivariant cohomology $H_T^\bullet(X)$이 항상 $H_T^\bullet(\mathrm{pt})=\mathbb{Q}[t_1,\ldots,t_n]$ 위의 algebra이며, fixed point로의 restriction이 그 구조를 거의 결정한다는 현상을 보았다. ([§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6){: data-relation="weak" }) 이 글의 목표는 그 "거의"를 정확한 정리로 바꾸는 것이다. 곧 $H_T^\bullet(\mathrm{pt})$의 $0$이 아닌 원소들을 모두 가역으로 만들면 (polynomial ring의 field of fractions로 넘어가면) $H_T^\bullet(X)$이 fixed locus $X^T$의 equivariant cohomology와 동형이 됨을 보인다. 이것이 Atiyah–Bott와 Berline–Vergne의 *localization theorem*이며, 그 즉각적 귀결로 콤팩트 variety 위의 equivariant 적분이 fixed point 각각에서의 국소적 기여의 유한합으로 계산된다는 Atiyah–Bott–Berline–Vergne 공식을 얻는다.
 
 이 글 전체에서 $T=(S^1)^n$은 $n$차원 torus, $M$은 $T$가 매끄럽게 작용하는 콤팩트 oriented smooth variety이며, 계수는 $\mathbb{Q}$로 둔다. 그럼 $T$가 connected이므로 작용은 방향을 보존하고, base ring을
 
 $$R:=H_T^\bullet(\mathrm{pt};\mathbb{Q})=\mathbb{Q}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=2$$
 
-로 적는다. 이는 character lattice $M_T=\mathrm{Hom}(T,S^1)$의 symmetric algebra $\mathrm{Sym}_{\mathbb{Q}}(M_T\otimes\mathbb{Q})$이고, 각 character $\chi\in M_T$은 degree $2$ 원소로서 $R$ 안에 놓인다. ([§동변 코호몰로지, ⁋명제 4](/ko/math/toric_geometry/equivariant_cohomology#prop4)) $R$은 정역이므로 그 field of fractions $\mathrm{Frac}(R)=\mathbb{Q}(t_1,\ldots,t_n)$가 존재한다. 임의의 $R$-module $N$에 대하여 그 *localization*을
+로 적는다. 이는 character lattice $M_T=\mathrm{Hom}(T,S^1)$의 symmetric algebra $\mathrm{Sym}_{\mathbb{Q}}(M_T\otimes\mathbb{Q})$이고, 각 character $\chi\in M_T$은 degree $2$ 원소로서 $R$ 안에 놓인다. ([§동변 코호몰로지, ⁋명제 4](/ko/math/toric_geometry/equivariant_cohomology#prop4){: data-relation="required" }) $R$은 정역이므로 그 field of fractions $\mathrm{Frac}(R)=\mathbb{Q}(t_1,\ldots,t_n)$가 존재한다. 임의의 $R$-module $N$에 대하여 그 *localization*을
 
 $$N_{\mathrm{loc}}:=N\otimes_R\mathrm{Frac}(R)$$
 
@@ -41,21 +41,21 @@ $T$는 콤팩트이므로 $M$ 위에 $T$-불변 Riemann metric을 평균화로 �
 성분 $F$에서 $T_xM=T_xF\oplus(N_F)_x$로 분해할 때, $T_xF=(T_xM)^T$는 정확히 weight $0$ 부분이므로 그 보충 $(N_F)_x$ 위의 isotropy representation에는 weight $0$이 나타나지 않는다. 만일 normal 방향에 weight $0$ 성분이 있었다면 그 방향이 fixed locus를 키워 $F$의 차원과 모순이다. 동변 tubular neighborhood 정리에 의해 $F$의 근방은 $N_F$의 disk bundle과 $T$-동변 diffeomorphism이고, 그 위에서 $T$가 fiber에 선형으로 작용한다. 자세한 slice 정리와 동변 tubular neighborhood의 구성은 [BGV]의 §7을 따른다.
 :::
 
-곧 fixed locus는 차원이 제각각일 수 있는 부분다양체들의 모임이며, 각 성분 $F$ 위에서는 $T$가 아무 일도 하지 않는 대신 그 normal 방향에 모든 비자명한 작용이 응축되어 있다. Isolated fixed point, 곧 $F=\{p\}$가 한 점인 경우에는 $N_F=T_pM$이 곧 tangent space 전체이고, 그 위의 isotropy representation의 weight $w_1(p),\ldots,w_m(p)\in M_T$ (여기서 $m=\dim_{\mathbb{C}}M$, 단 $M$이 almost complex manifold일 때) 들이 작용의 모든 국소 정보를 담는다. ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 앞으로 이 weight들이 $R$의 일차식으로 분모에 등장한다.
+곧 fixed locus는 차원이 제각각일 수 있는 부분다양체들의 모임이며, 각 성분 $F$ 위에서는 $T$가 아무 일도 하지 않는 대신 그 normal 방향에 모든 비자명한 작용이 응축되어 있다. Isolated fixed point, 곧 $F=\{p\}$가 한 점인 경우에는 $N_F=T_pM$이 곧 tangent space 전체이고, 그 위의 isotropy representation의 weight $w_1(p),\ldots,w_m(p)\in M_T$ (여기서 $m=\dim_{\mathbb{C}}M$, 단 $M$이 almost complex manifold일 때) 들이 작용의 모든 국소 정보를 담는다. ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4){: data-relation="required" }) 앞으로 이 weight들이 $R$의 일차식으로 분모에 등장한다.
 
 ## 동변 Euler class
 
 명제 1의 normal bundle $N_F$은 $T$-동변 vector bundle이다. 우리는 그 *동변 Euler class*를 만들어, localization 정리에서 $F$로의 기여를 이 class로 나누는 형태로 기술할 것이다. 정의는 Borel 구성을 통해 보통의 Euler class를 동변 판본으로 들어올리는 것이다. 앞으로 다룰 normal bundle은 모두 복소 bundle이므로 (예시의 $\mathbb{P}^n$, Grassmannian, smooth toric variety는 모두 complex manifold이다), 우리는 복소 $T$-동변 bundle에 한정해 정의한다.
 
 ::: 정의 2
-$T$-공간 $Y$ 위의 복소 $T$-동변 vector bundle $E\rightarrow Y$에 대하여, Borel 구성 $E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$은 $Y_T$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1)) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $E$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
+$T$-공간 $Y$ 위의 복소 $T$-동변 vector bundle $E\rightarrow Y$에 대하여, Borel 구성 $E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$은 $Y_T$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1){: data-relation="required" }) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $E$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
 
 $$c_i^T(E):=c_i(E_T)\in H_T^{2i}(Y),\qquad e_T(E):=c_{\mathrm{rank}}^T(E)=e\big((E_T)_{\mathbb{R}}\big)\in H_T^{2\mathrm{rank}(E)}(Y)$$
 
-로 정의한다. 여기서 우변의 보통 Chern class와 Euler class는 각각 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)과 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 3](/ko/math/algebraic_topology/characteristic_classes#def3)의 것이다.
+로 정의한다. 여기서 우변의 보통 Chern class와 Euler class는 각각 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6){: data-relation="required" }과 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 3](/ko/math/algebraic_topology/characteristic_classes#def3){: data-relation="required" }의 것이다.
 :::
 
-보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9)) 특히 $T$-동변 bundle의 직합에 대해 $e_T(E\oplus E')=e_T(E)e_T(E')$이다.
+보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9){: data-relation="required" }) 특히 $T$-동변 bundle의 직합에 대해 $e_T(E\oplus E')=e_T(E)e_T(E')$이다.
 
 이 정의가 명제 1의 fixed component $F$ 위에서 어떻게 구체화되는지를 살피자. $F$ 위에서 $T$가 자명하게 작용하므로 $F_T=ET\times_T F=BT\times F$이고, 따라서
 
@@ -84,17 +84,17 @@ Isolated fixed point에서는 $e_T(N_p)=\prod_j w_j$이 $R$의 $0$이 아닌 원
 
 ## 동변 적분
 
-콤팩트 oriented variety 위에서는 cohomology class를 fundamental class 위에서 평가하는 적분이 있다. ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10)) 동변 판본에서는 이것이 $R$에 값을 갖는 $R$-선형 사상이 되며, fiber를 따라 적분하는 Gysin morphism으로 실현된다.
+콤팩트 oriented variety 위에서는 cohomology class를 fundamental class 위에서 평가하는 적분이 있다. ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10){: data-relation="weak" }) 동변 판본에서는 이것이 $R$에 값을 갖는 $R$-선형 사상이 되며, fiber를 따라 적분하는 Gysin morphism으로 실현된다.
 
 ::: 정의 4
-$M$이 $\dim_{\mathbb{R}}M=d$인 콤팩트 oriented $T$-variety라 하자. Borel 구성 $M_T\rightarrow BT$은 fiber $M$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2)), fiber를 따른 적분 (Gysin morphism)
+$M$이 $\dim_{\mathbb{R}}M=d$인 콤팩트 oriented $T$-variety라 하자. Borel 구성 $M_T\rightarrow BT$은 fiber $M$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2){: data-relation="required" }), fiber를 따른 적분 (Gysin morphism)
 
 $$\int_M:H_T^k(M)=H^k(M_T)\longrightarrow H^{k-d}(BT)=R^{k-d}$$
 
 이 정의된다. 이를 $M$ 위의 *equivariant integration<sub>동변 적분</sub>* 또는 $M\rightarrow\mathrm{pt}$의 pushforward $\pi_\ast$라 부른다. 같은 방식으로 closed $T$-부분다양체의 포함 $j:F\hookrightarrow M$ (normal bundle이 oriented) 에 대해 degree를 $\mathrm{codim}F$만큼 올리는 동변 Gysin pushforward $j_\ast:H_T^\bullet(F)\rightarrow H_T^{\bullet+\mathrm{codim}F}(M)$이 정의된다.
 :::
 
-$\int_M$은 $R$-선형이며 degree를 $d=\dim_{\mathbb{R}}M$만큼 낮춘다. Borel 구성을 잊고 $t_i=0$으로 보내면 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)의 augmentation) 보통의 적분 $H^\bullet(M)\rightarrow\mathbb{Q}$, 곧 fundamental class 위에서의 평가로 환원된다. Fiber 적분과 동변 Gysin morphism의 구성은 [BT]의 §6과 [AF]의 §2를 따른다. 이 적분이 fixed component로 어떻게 분해되는지를 지배하는 것이 다음의 세 항등식이다.
+$\int_M$은 $R$-선형이며 degree를 $d=\dim_{\mathbb{R}}M$만큼 낮춘다. Borel 구성을 잊고 $t_i=0$으로 보내면 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8){: data-relation="required" }의 augmentation) 보통의 적분 $H^\bullet(M)\rightarrow\mathbb{Q}$, 곧 fundamental class 위에서의 평가로 환원된다. Fiber 적분과 동변 Gysin morphism의 구성은 [BT]의 §6과 [AF]의 §2를 따른다. 이 적분이 fixed component로 어떻게 분해되는지를 지배하는 것이 다음의 세 항등식이다.
 
 ::: 명제 5
 $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathrm{pt}$, $\pi_F:F\rightarrow\mathrm{pt}$을 상수사상이라 하자. 그럼 다음이 성립한다.
@@ -104,7 +104,7 @@ $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathr
 3. (함자성) $\pi_{M\ast}\circ j_{F\ast}=\pi_{F\ast}$, 곧 $\int_M j_{F\ast}\beta=\int_F\beta$이다.
 :::
 ::: 증명
-(1) 동변 Thom class를 통한 자기교차 공식이다. Closed submanifold $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
+(1) 동변 Thom class를 통한 자기교차 공식이다. Closed submanifold $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2){: data-relation="required" }의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
 
 (2) $F$와 $G$가 서로소이므로 $j_{G\ast}\beta$는 $G$의 한 근방에 support를 갖는 class로 표현되고, 그것을 $F$로 제한하면 $0$이다.
 
@@ -148,13 +148,13 @@ Pair $(M,M^T)$의 동변 cohomology long exact sequence
 
 $$\cdots\rightarrow H_T^k(M,M^T)\rightarrow H_T^k(M)\xrightarrow{\ i^\ast\ }H_T^k(M^T)\rightarrow H_T^{k+1}(M,M^T)\rightarrow\cdots$$
 
-에 완전함수인 localization $-\otimes_R\mathrm{Frac}(R)$을 적용한다. [보조정리 6](#lem6)에 의해 $H_T^\bullet(M,M^T)$이 torsion이므로 $H_T^\bullet(M,M^T)_{\mathrm{loc}}=0$이고, 따라서 exact sequence에서 양옆 항이 사라져
+에 완전함수인 localization $-\otimes_R\mathrm{Frac}(R)$을 적용한다. [보조정리 6](#lem6){: data-relation="required" }에 의해 $H_T^\bullet(M,M^T)$이 torsion이므로 $H_T^\bullet(M,M^T)_{\mathrm{loc}}=0$이고, 따라서 exact sequence에서 양옆 항이 사라져
 
 $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\mathrm{loc}}$$
 
 이 동형이다.
 
-역사상의 명시적 형태를 확인하기 위해 morphism $J(\beta)=\sum_F j_{F\ast}\big(\beta_F/e_T(N_F)\big)$을 생각한다 ([명제 3](#prop3)에 의해 $e_T(N_F)$이 localization 후 가역이라 잘 정의된다). 임의의 성분 $G$에 대하여 $J(\beta)$를 $G$로 제한하면, [명제 5](#prop5)의 직교성으로 $F\neq G$ 항이 모두 사라지고 자기교차 공식으로
+역사상의 명시적 형태를 확인하기 위해 morphism $J(\beta)=\sum_F j_{F\ast}\big(\beta_F/e_T(N_F)\big)$을 생각한다 ([명제 3](#prop3){: data-relation="required" }에 의해 $e_T(N_F)$이 localization 후 가역이라 잘 정의된다). 임의의 성분 $G$에 대하여 $J(\beta)$를 $G$로 제한하면, [명제 5](#prop5){: data-relation="required" }의 직교성으로 $F\neq G$ 항이 모두 사라지고 자기교차 공식으로
 
 $$j_G^\ast J(\beta)=j_G^\ast j_{G\ast}\left(\frac{\beta_G}{e_T(N_G)}\right)=e_T(N_G)\smile\frac{\beta_G}{e_T(N_G)}=\beta_G$$
 
@@ -165,7 +165,7 @@ $$j_G^\ast J(\beta)=j_G^\ast j_{G\ast}\left(\frac{\beta_G}{e_T(N_G)}\right)=e_T(
 
 $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{in }H_T^\bullet(M)_{\mathrm{loc}}$$
 
-이 항상 성립한다. 이는 [§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)에서 관찰한 "fixed point로의 restriction이 거의 단사"라는 현상의 정확한 형태이다. Equivariantly formal한 경우 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)) 에는 restriction map이 localization 이전에도 단사이므로, localization은 단사성을 전사성까지 끌어올리는 역할만 한다.
+이 항상 성립한다. 이는 [§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6){: data-relation="weak" }에서 관찰한 "fixed point로의 restriction이 거의 단사"라는 현상의 정확한 형태이다. Equivariantly formal한 경우 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8){: data-relation="weak" }) 에는 restriction map이 localization 이전에도 단사이므로, localization은 단사성을 전사성까지 끌어올리는 역할만 한다.
 
 ## Atiyah–Bott–Berline–Vergne integration formula
 
@@ -179,7 +179,7 @@ $$\int_M\alpha=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 이 $\mathrm{Frac}(R)$ 안에서 성립한다. 여기서 합은 fixed locus $M^T$의 connected 성분 $F$ 전체에 대한 것이다. 특히 좌변은 $R$의 원소이고 우변은 fixed point에서의 데이터만으로 계산된다.
 :::
 ::: 증명
-[정리 7](#thm7)의 등식 $\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$을 $H_T^\bullet(M)_{\mathrm{loc}}$ 안에서 잡고, $\mathrm{Frac}(R)$-선형으로 확장한 equivariant integration $\int_M$을 양변에 적용한다. [명제 5](#prop5)의 함자성 $\int_M\circ j_{F\ast}=\int_F$로부터
+[정리 7](#thm7){: data-relation="required" }의 등식 $\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$을 $H_T^\bullet(M)_{\mathrm{loc}}$ 안에서 잡고, $\mathrm{Frac}(R)$-선형으로 확장한 equivariant integration $\int_M$을 양변에 적용한다. [명제 5](#prop5){: data-relation="required" }의 함자성 $\int_M\circ j_{F\ast}=\int_F$로부터
 
 $$\int_M\alpha=\sum_F\int_M j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 
@@ -200,20 +200,20 @@ $$\chi(M)=\#M^T$$
 곧 Euler characteristic이 fixed point의 개수와 같다. 일반적으로 fixed locus가 양의 차원 성분을 가질 때는 $\chi(M)=\sum_F\chi(F)$이다.
 :::
 ::: 증명
-첫 식은 [정리 8](#thm8)에서 $F=\{p\}$, $i_p^\ast\alpha\in R$, $e_T(N_p)=\prod_j w_j(p)$을 대입한 것이다.
+첫 식은 [정리 8](#thm8){: data-relation="required" }에서 $F=\{p\}$, $i_p^\ast\alpha\in R$, $e_T(N_p)=\prod_j w_j(p)$을 대입한 것이다.
 
 둘째 식을 보자. Isolated fixed point에서는 $N_p=T_pM$이므로 $i_p^\ast e_T(TM)=e_T(T_pM)=e_T(N_p)$이고, 따라서
 
 $$\int_M e_T(TM)=\sum_{p}\frac{e_T(N_p)}{e_T(N_p)}=\sum_p 1=\#M^T$$
 
-이다. 한편 $\int_M e_T(TM)$은 degree $2m-2m=0$의 $R$-원소, 곧 상수이며, $t_i=0$으로 보내면 보통의 적분 $\int_M e(TM)$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $\chi(M)$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, §§오일러 특성류](/ko/math/algebraic_topology/characteristic_classes#오일러-특성류)) $\int_M e_T(TM)=\chi(M)$이고, 따라서 $\chi(M)=\#M^T$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$이므로 ($TM\vert_F=TF\oplus N_F$에 대한 Whitney 합 공식) ABBV의 피적분은 $e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$이고, $T$가 $F$ 위에서 자명하게 작용하므로 $\int_F e_T(TF)=\int_F e(TF)=\chi(F)$가 되어 $\chi(M)=\sum_F\chi(F)$를 얻는다.
+이다. 한편 $\int_M e_T(TM)$은 degree $2m-2m=0$의 $R$-원소, 곧 상수이며, $t_i=0$으로 보내면 보통의 적분 $\int_M e(TM)$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $\chi(M)$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, §§오일러 특성류](/ko/math/algebraic_topology/characteristic_classes#오일러-특성류){: data-relation="required" }) $\int_M e_T(TM)=\chi(M)$이고, 따라서 $\chi(M)=\#M^T$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$이므로 ($TM\vert_F=TF\oplus N_F$에 대한 Whitney 합 공식) ABBV의 피적분은 $e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$이고, $T$가 $F$ 위에서 자명하게 작용하므로 $\int_F e_T(TF)=\int_F e(TF)=\chi(F)$가 되어 $\chi(M)=\sum_F\chi(F)$를 얻는다.
 :::
 
 곧 Atiyah–Bott–Berline–Vergne 공식은 위상적 불변량인 Euler characteristic을 "fixed point를 세는" 조합적 양으로 바꾸어 주며, 이는 콤팩트 Lie group 작용에 대한 고전적인 결과를 equivariant integration의 특수한 경우로 회수한다.
 
 ## 예시: 사영공간
 
-[§동변 코호몰로지, ⁋정리 7](/ko/math/toric_geometry/equivariant_cohomology#thm7)에서 계산한 $\mathbb{P}^n$ 위의 표준 작용으로 돌아가, ABBV 공식이 무엇을 주는지를 본다. $T=(S^1)^{n+1}$이 좌표별로 작용하고, fixed point는 $n+1$개의 좌표점 $p_i=[0:\cdots:1:\cdots:0]$ ($i$번째 자리에 $1$) 이다.
+[§동변 코호몰로지, ⁋정리 7](/ko/math/toric_geometry/equivariant_cohomology#thm7){: data-relation="required" }에서 계산한 $\mathbb{P}^n$ 위의 표준 작용으로 돌아가, ABBV 공식이 무엇을 주는지를 본다. $T=(S^1)^{n+1}$이 좌표별로 작용하고, fixed point는 $n+1$개의 좌표점 $p_i=[0:\cdots:1:\cdots:0]$ ($i$번째 자리에 $1$) 이다.
 
 ::: 예시 10
 $\mathbb{P}^n$의 fixed point $p_i$에서 tangent space는
@@ -224,7 +224,7 @@ $$T_{p_i}\mathbb{P}^n=\mathrm{Hom}\Big(\mathbb{C}_{t_i},\bigoplus_{j\neq i}\math
 
 $$e_T(N_{p_i})=\prod_{j\neq i}(t_j-t_i)$$
 
-이다. [§동변 코호몰로지, ⁋정리 7](/ko/math/toric_geometry/equivariant_cohomology#thm7)에서 $h=c_1(\mathcal{O}(-1))$의 fixed point restriction은 $i_{p_i}^\ast h=t_i$였다. [따름정리 9](#cor9)를 $\alpha=h^k$에 적용하면
+이다. [§동변 코호몰로지, ⁋정리 7](/ko/math/toric_geometry/equivariant_cohomology#thm7){: data-relation="required" }에서 $h=c_1(\mathcal{O}(-1))$의 fixed point restriction은 $i_{p_i}^\ast h=t_i$였다. [따름정리 9](#cor9){: data-relation="required" }를 $\alpha=h^k$에 적용하면
 
 $$\int_{\mathbb{P}^n}h^k=\sum_{i=0}^n\frac{t_i^k}{\prod_{j\neq i}(t_j-t_i)}$$
 
@@ -251,7 +251,7 @@ $$\int_{\mathbb{P}^n}\zeta^n=\sum_{i=0}^n\frac{(-t_i)^n}{\prod_{j\neq i}(t_j-t_i
 이 되어, $\mathbb{P}^n$의 degree $\int_{\mathbb{P}^n}\zeta^n=1$을 fixed point의 합으로 회복한다.
 :::
 
-이 예시에서 주목할 점은, 우변의 각 항이 $t_i$의 유리함수로 분모를 가짐에도 그 합이 $t$에 무관한 정수가 된다는 것이다. ABBV 공식은 이 "기적적인 약분"이 사실은 $M$ 위의 적분이라는 위상적 양의 그림자임을 설명한다. 또한 [따름정리 9](#cor9)의 Euler characteristic 계산은 여기서 $\chi(\mathbb{P}^n)=\#\{p_0,\ldots,p_n\}=n+1$로 즉시 확인된다.
+이 예시에서 주목할 점은, 우변의 각 항이 $t_i$의 유리함수로 분모를 가짐에도 그 합이 $t$에 무관한 정수가 된다는 것이다. ABBV 공식은 이 "기적적인 약분"이 사실은 $M$ 위의 적분이라는 위상적 양의 그림자임을 설명한다. 또한 [따름정리 9](#cor9){: data-relation="required" }의 Euler characteristic 계산은 여기서 $\chi(\mathbb{P}^n)=\#\{p_0,\ldots,p_n\}=n+1$로 즉시 확인된다.
 
 ## 예시: Grassmannian
 
@@ -266,13 +266,13 @@ $$T_{E_I}\mathrm{Gr}(k,n)=\mathrm{Hom}\big(E_I,\mathbb{C}^n/E_I\big)=\bigoplus_{
 
 $$e_T(N_{E_I})=\prod_{i\in I,\ j\notin I}(t_j-t_i)$$
 
-이다. [따름정리 9](#cor9)로부터 우선 $\chi\big(\mathrm{Gr}(k,n)\big)=\binom{n}{k}$를 얻는다. 일반적인 class $\alpha$에 대해서는
+이다. [따름정리 9](#cor9){: data-relation="required" }로부터 우선 $\chi\big(\mathrm{Gr}(k,n)\big)=\binom{n}{k}$를 얻는다. 일반적인 class $\alpha$에 대해서는
 
 $$\int_{\mathrm{Gr}(k,n)}\alpha=\sum_{\lvert I\rvert=k}\frac{i_{E_I}^\ast\alpha}{\prod_{i\in I,\ j\notin I}(t_j-t_i)}$$
 
 이다.
 
-구체적인 Schubert calculus 계산으로 $\mathrm{Gr}(2,4)$의 Plücker degree를 회복하자. Plücker embedding $\mathrm{Gr}(k,n)\hookrightarrow\mathbb{P}\big(\bigwedge^k\mathbb{C}^n\big)$에서 hyperplane class $\zeta=c_1(\mathcal{O}(1))$의 fixed point restriction은 [예시 10](#ex10)의 $\mathbb{P}^n$ 컨벤션과 마찬가지로 tautological line $\mathcal{O}(-1)$의 fiber인 Plücker 좌표선 $\bigwedge^k E_I=e_{i_1}\wedge\cdots\wedge e_{i_k}$ ($I=\{i_1<\cdots<i_k\}$) 의 weight $\sum_{i\in I}t_i$에 부호를 뒤집은 것, 곧
+구체적인 Schubert calculus 계산으로 $\mathrm{Gr}(2,4)$의 Plücker degree를 회복하자. Plücker embedding $\mathrm{Gr}(k,n)\hookrightarrow\mathbb{P}\big(\bigwedge^k\mathbb{C}^n\big)$에서 hyperplane class $\zeta=c_1(\mathcal{O}(1))$의 fixed point restriction은 [예시 10](#ex10){: data-relation="required" }의 $\mathbb{P}^n$ 컨벤션과 마찬가지로 tautological line $\mathcal{O}(-1)$의 fiber인 Plücker 좌표선 $\bigwedge^k E_I=e_{i_1}\wedge\cdots\wedge e_{i_k}$ ($I=\{i_1<\cdots<i_k\}$) 의 weight $\sum_{i\in I}t_i$에 부호를 뒤집은 것, 곧
 
 $$i_{E_I}^\ast\zeta=-\sum_{i\in I}t_i$$
 
@@ -287,21 +287,21 @@ $$\int_{\mathrm{Gr}(2,4)}\zeta^4=\sum_{\lvert I\rvert=2}\frac{\big(-\sum_{i\in I
 
 ## 매끄러운 toric variety로의 적용
 
-마지막으로 이 글의 무대인 toric variety와의 연결을 본다. $N$을 rank $n$ lattice, $\Sigma\subseteq N_{\mathbb{R}}$를 fan, $X_\Sigma$를 그에 대응하는 toric variety라 하자. ([§토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3)) $X_\Sigma$ 위에는 algebraic torus $T_N=N\otimes\mathbb{C}^\ast$의 작용이 있고 ([§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)), 그 콤팩트 subgroup $T=(S^1)^n$이 $X_\Sigma$ 위에 작용한다. $X_\Sigma$가 smooth complete이면 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)) 콤팩트 oriented variety로서 ABBV 공식의 가정을 만족한다.
+마지막으로 이 글의 무대인 toric variety와의 연결을 본다. $N$을 rank $n$ lattice, $\Sigma\subseteq N_{\mathbb{R}}$를 fan, $X_\Sigma$를 그에 대응하는 toric variety라 하자. ([§토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3){: data-relation="weak" }) $X_\Sigma$ 위에는 algebraic torus $T_N=N\otimes\mathbb{C}^\ast$의 작용이 있고 ([§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5){: data-relation="required" }), 그 콤팩트 subgroup $T=(S^1)^n$이 $X_\Sigma$ 위에 작용한다. $X_\Sigma$가 smooth complete이면 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11){: data-relation="required" }) 콤팩트 oriented variety로서 ABBV 공식의 가정을 만족한다.
 
-이때 $T$-fixed point는 fan의 maximal cone, 곧 $n$차원 cone $\sigma\in\Sigma(n)$과 일대일 대응한다. 실제로 cone $\sigma$에 대응하는 orbit closure $V(\sigma)$는 ([§토릭 다양체의 교차 이론, ⁋정의 1](/ko/math/toric_geometry/toric_intersection_theory#def1)) $\sigma$가 maximal일 때 한 점으로 줄어들며, 이것이 affine chart $U_\sigma\cong\mathbb{C}^n$의 원점인 fixed point $x_\sigma$이다. $X_\Sigma$가 사영적이면 maximal cone들은 그 fan을 normal fan으로 갖는 polytope $P$의 꼭짓점들과 대응하므로 ([§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)), fixed point는 곧 $P$의 꼭짓점이다.
+이때 $T$-fixed point는 fan의 maximal cone, 곧 $n$차원 cone $\sigma\in\Sigma(n)$과 일대일 대응한다. 실제로 cone $\sigma$에 대응하는 orbit closure $V(\sigma)$는 ([§토릭 다양체의 교차 이론, ⁋정의 1](/ko/math/toric_geometry/toric_intersection_theory#def1){: data-relation="required" }) $\sigma$가 maximal일 때 한 점으로 줄어들며, 이것이 affine chart $U_\sigma\cong\mathbb{C}^n$의 원점인 fixed point $x_\sigma$이다. $X_\Sigma$가 사영적이면 maximal cone들은 그 fan을 normal fan으로 갖는 polytope $P$의 꼭짓점들과 대응하므로 ([§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-relation="required" }), fixed point는 곧 $P$의 꼭짓점이다.
 
 각 fixed point $x_\sigma$에서 isotropy weight를 읽는 것도 조합적이다. Smooth maximal cone $\sigma$는 $N$의 basis를 이루는 primitive ray generator $v_1,\ldots,v_n$으로 생성되며, tangent space $T_{x_\sigma}X_\Sigma$의 weight는 정확히 이 basis의 dual basis $u_1,\ldots,u_n\in M$ (곧 $\langle u_i,v_j\rangle=\delta_{ij}$) 이다. 따라서
 
 $$e_T(N_{x_\sigma})=\prod_{i=1}^n u_i\in R$$
 
-이고, [따름정리 9](#cor9)는 임의의 $\alpha\in H_T^\bullet(X_\Sigma)$에 대하여
+이고, [따름정리 9](#cor9){: data-relation="required" }는 임의의 $\alpha\in H_T^\bullet(X_\Sigma)$에 대하여
 
 $$\int_{X_\Sigma}\alpha=\sum_{\sigma\in\Sigma(n)}\frac{i_{x_\sigma}^\ast\alpha}{\prod_{i=1}^n u_i^\sigma}$$
 
 을 준다. 곧 ABBV 공식은 $X_\Sigma$ 위의 동변 intersection number를 fan의 꼭짓점 (maximal cone) 들에 대한 유한합으로 바꾸며, 각 꼭짓점의 기여는 그 cone의 dual basis로 명시된다.
 
-이 합의 항들은 [§토릭 다양체의 교차 이론, ⁋정리 5](/ko/math/toric_geometry/toric_intersection_theory#thm5)에서 본, smooth complete toric variety의 cohomology ring을 fan으로부터 조합적으로 기술하는 표현과 정확히 호응한다. 거기서 cohomology class는 ray에 대응하는 divisor class들의 다항식으로 주어졌고, fixed point로의 restriction은 그 다항식을 각 maximal cone의 좌표로 평가하는 것에 해당한다. 따라서 toric variety의 교차 이론 전체가 두 가지 조합적 데이터, 곧 cohomology ring의 fan 표현과 ABBV의 꼭짓점별 localization 사이의 변환으로 정리된다. Fixed point가 모두 isolated이고 꼭짓점으로 명시되는 toric 세팅은 localization 정리가 가장 투명하게 작동하는 본보기이다.
+이 합의 항들은 [§토릭 다양체의 교차 이론, ⁋정리 5](/ko/math/toric_geometry/toric_intersection_theory#thm5){: data-relation="weak" }에서 본, smooth complete toric variety의 cohomology ring을 fan으로부터 조합적으로 기술하는 표현과 정확히 호응한다. 거기서 cohomology class는 ray에 대응하는 divisor class들의 다항식으로 주어졌고, fixed point로의 restriction은 그 다항식을 각 maximal cone의 좌표로 평가하는 것에 해당한다. 따라서 toric variety의 교차 이론 전체가 두 가지 조합적 데이터, 곧 cohomology ring의 fan 표현과 ABBV의 꼭짓점별 localization 사이의 변환으로 정리된다. Fixed point가 모두 isolated이고 꼭짓점으로 명시되는 toric 세팅은 localization 정리가 가장 투명하게 작동하는 본보기이다.
 
 ---
 
