@@ -14,7 +14,7 @@ weight: 4
 
 ---
 
-[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $P \subseteq M_{\mathbb{R}}$의 normal fan $\Sigma_P$을 통해 projective toric variety $X_P$를 구성하는 방법을 살펴 보았다. 이 구성에서 $P$의 기하학적 성질이 $X_P$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
+[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties){: data-relation="required" }에서 우리는 lattice polytope $P \subseteq M_{\mathbb{R}}$의 normal fan $\Sigma_P$을 통해 projective toric variety $X_P$를 구성하는 방법을 살펴 보았다. 이 구성에서 $P$의 기하학적 성질이 $X_P$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
 
 ## 반사 다면체
 
@@ -49,9 +49,9 @@ $\Delta$가 reflexive이므로 $\Delta^\circ$는 정의에 의해 lattice polyto
 
 ## 파노 다양체
 
-Algebraic geometry에서 *Fano variety*는 anticanonical divisor $-K_X$가 ample인 normal projective variety $X$를 의미한다. 여기서 canonical divisor $K_X$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $-K_X$는 그 역원이다. 만약 $-K_X$가 추가로 Cartier divisor라면 $X$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
+Algebraic geometry에서 *Fano variety*는 anticanonical divisor $-K_X$가 ample인 normal projective variety $X$를 의미한다. 여기서 canonical divisor $K_X$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6){: data-relation="required" }), $-K_X$는 그 역원이다. 만약 $-K_X$가 추가로 Cartier divisor라면 $X$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
 
-[§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯, lattice polytope $P \subseteq M_{\mathbb{R}}$이 주어지면 이것이 정의하는 normal fan $\Sigma_P$을 통해 projective toric variety $X_P = X_{\Sigma_P}$를 구성할 수 있다. 이제 $P = \Delta$가 reflexive polytope라고 가정하자.
+[§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-relation="required" }에서 보았듯, lattice polytope $P \subseteq M_{\mathbb{R}}$이 주어지면 이것이 정의하는 normal fan $\Sigma_P$을 통해 projective toric variety $X_P = X_{\Sigma_P}$를 구성할 수 있다. 이제 $P = \Delta$가 reflexive polytope라고 가정하자.
 
 ::: 명제 3
 Toric variety $X_\Sigma$의 anticanonical divisor $-K_{X_\Sigma}$, 즉 canonical divisor의 역원은 모든 boundary divisor의 합으로 주어진다.
@@ -62,7 +62,7 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho.$$
 :::
 
 ::: 증명
-[\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)에서 canonical divisor $K_X$는 canonical bundle $\omega_X = \det \Omega^1_X$에 대응하는 divisor class로 정의되었다. 우리는 $K_{X_\Sigma} = -\sum_\rho D_\rho$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
+[\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6){: data-relation="required" }에서 canonical divisor $K_X$는 canonical bundle $\omega_X = \det \Omega^1_X$에 대응하는 divisor class로 정의되었다. 우리는 $K_{X_\Sigma} = -\sum_\rho D_\rho$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
 
 Open dense torus $T_N = \Spec \mathbb{C}[M] \subseteq X_\Sigma$ 위에서, $M$의 기저 $m_1, \ldots, m_n$을 잡으면 character $\rchi^{m_i}$들이 torus의 좌표가 되고, top form
 
@@ -79,20 +79,20 @@ $$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
 이 등식 자체는 임의의 fan에 대해 잘 정의되지만, 우리가 관심을 갖는 *ample* 조건은 (그리고 Fano 조건은) $X_\Sigma$가 complete일 때 의미를 가지므로 이하에서는 $\Sigma$가 complete fan임을 가정한다.
 
-Anticanonical divisor $-K_{X_\Sigma}$가 Cartier divisor일 때 그에 대응하는 piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$은 정확히 $\psi_{-K}(v_\rho) = -1$가 모든 $\rho \in \Sigma(1)$에 대해 성립하는 함수이다. 또, 우리는 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)에서 maximal cone에서만 이 조건을 체크해도 될 뿐만 아니라, 해당 조건이 정확하게 주어진 divisor가 Cartier divisor일 조건과 일치하는 것을 살펴보았다. 이제 이 조건이 reflexive polytope의 dual $\Delta^\circ$의 꼭짓점 조건과 정확히 일치한다는 것이 다음 명제의 핵심이다.
+Anticanonical divisor $-K_{X_\Sigma}$가 Cartier divisor일 때 그에 대응하는 piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$은 정확히 $\psi_{-K}(v_\rho) = -1$가 모든 $\rho \in \Sigma(1)$에 대해 성립하는 함수이다. 또, 우리는 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="required" }에서 maximal cone에서만 이 조건을 체크해도 될 뿐만 아니라, 해당 조건이 정확하게 주어진 divisor가 Cartier divisor일 조건과 일치하는 것을 살펴보았다. 이제 이 조건이 reflexive polytope의 dual $\Delta^\circ$의 꼭짓점 조건과 정확히 일치한다는 것이 다음 명제의 핵심이다.
 
 ::: 명제 4
 Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$에 대해, $\Delta$의 normal fan을 $\Sigma_\Delta$라 하고 대응하는 toric variety를 $X_\Delta = X_{\Sigma_\Delta}$라 적으면, $X_\Delta$는 Gorenstein Fano variety이다. 역으로, 어떤 complete toric variety $X_\Sigma$가 Gorenstein Fano이면 $\Sigma$는 어떤 reflexive polytope의 normal fan이다.
 :::
 
 ::: 증명
-$\Delta$가 reflexive polytope라고 하자. $\Sigma_\Delta$의 각 maximal cone $\sigma$는 [§토릭 다양체의 정의, ⁋정의 6](/ko/math/toric_geometry/toric_varieties#def6)에 의해 $\Delta$의 어떤 꼭짓점 $u_\sigma$에 대응하며, $\sigma$의 ray generator $v_\rho$들은 정확히 $u_\sigma$를 포함하는 facet들의 inner primitive normal이다. $\Delta$의 facet 방정식이 $\langle u, v_\Theta \rangle = -1$이므로, $u_\sigma$는 $\Delta$ 위 $\langle -, v_\rho\rangle$의 최솟값을 정확히 $-1$로 달성한다. 즉
+$\Delta$가 reflexive polytope라고 하자. $\Sigma_\Delta$의 각 maximal cone $\sigma$는 [§토릭 다양체의 정의, ⁋정의 6](/ko/math/toric_geometry/toric_varieties#def6){: data-relation="required" }에 의해 $\Delta$의 어떤 꼭짓점 $u_\sigma$에 대응하며, $\sigma$의 ray generator $v_\rho$들은 정확히 $u_\sigma$를 포함하는 facet들의 inner primitive normal이다. $\Delta$의 facet 방정식이 $\langle u, v_\Theta \rangle = -1$이므로, $u_\sigma$는 $\Delta$ 위 $\langle -, v_\rho\rangle$의 최솟값을 정확히 $-1$로 달성한다. 즉
 
 $$\langle u_\sigma, v_\rho\rangle = -1 \le \langle u, v_\rho\rangle \quad \text{for all } u \in \Delta, \rho \in \sigma(1)$$
 
-이며 등호는 $u \in F_\rho$ (facet)일 때만 성립한다. 따라서 $m_\sigma = u_\sigma \in M$이 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)의 Cartier compatibility를 만족하며 $-K_{X_\Delta}$는 Cartier이다.
+이며 등호는 $u \in F_\rho$ (facet)일 때만 성립한다. 따라서 $m_\sigma = u_\sigma \in M$이 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="required" }의 Cartier compatibility를 만족하며 $-K_{X_\Delta}$는 Cartier이다.
 
-한편 $-K_{X_\Delta}$의 ample성을 보이려면 piecewise linear function $\psi_{-K}$가 strictly convex임을 확인하면 충분하다 ([§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)). 즉 서로 다른 두 maximal cone $\sigma, \sigma'$와 그에 대응하는 $u_\sigma, u_{\sigma'}$에 대해 $\langle u_{\sigma'}, v\rangle$이 $v \in \sigma$ 위에서 $\psi_{-K}(v) = \langle u_\sigma, v\rangle$의 upper bound가 되며, 등호가 정확히 $v \in \sigma \cap \sigma'$에서만 성립하는 것을 보이면 된다.
+한편 $-K_{X_\Delta}$의 ample성을 보이려면 piecewise linear function $\psi_{-K}$가 strictly convex임을 확인하면 충분하다 ([§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9){: data-relation="required" }). 즉 서로 다른 두 maximal cone $\sigma, \sigma'$와 그에 대응하는 $u_\sigma, u_{\sigma'}$에 대해 $\langle u_{\sigma'}, v\rangle$이 $v \in \sigma$ 위에서 $\psi_{-K}(v) = \langle u_\sigma, v\rangle$의 upper bound가 되며, 등호가 정확히 $v \in \sigma \cap \sigma'$에서만 성립하는 것을 보이면 된다.
 
 $v \in \sigma$를 $v = \sum_{\rho \in \sigma(1)} c_\rho v_\rho$ ($c_\rho \ge 0$)로 분해하자. 각 $\rho \in \sigma(1)$에 대해 $u_{\sigma'} \in \Delta$이므로 $\langle u_{\sigma'}, v_\rho \rangle \ge -1$이고, 또 $u_\sigma \in F_\rho$이므로 $\langle u_\sigma, v_\rho\rangle = -1$이다. 따라서
 
@@ -120,7 +120,7 @@ Toric variety에서 $T_N$-invariant Cartier divisor $D$에 대응하는 polytope
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의되며, [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 보인 바와 같이 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 basis는 $P_D \cap M$의 원소들에 대응하는 characters $\rchi^u$들로 주어진다. Anticanonical divisor $-K_{X_\Delta}$의 경우 $a_\rho = 1$ for all $\rho$이므로,
+으로 정의되며, [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }에서 보인 바와 같이 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 basis는 $P_D \cap M$의 원소들에 대응하는 characters $\rchi^u$들로 주어진다. Anticanonical divisor $-K_{X_\Delta}$의 경우 $a_\rho = 1$ for all $\rho$이므로,
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
@@ -129,7 +129,7 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 이 결과는 reflexive polytope의 lattice point 개수가 Gorenstein Fano variety의 anticanonical line bundle의 해들의 차원을 결정함을 의미한다. 특히 $\Delta \cap M$의 원소 개수는 $h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$와 같다.
 
-역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \interior(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope이 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 interior로 옮긴 (닮음인) polytope을 생각할 수 있다.
+역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" }에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \interior(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope이 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 interior로 옮긴 (닮음인) polytope을 생각할 수 있다.
 
 ::: 예시 6
 Lattice $M = \mathbb{Z}^n$에서 다음의 polytope
@@ -140,7 +140,7 @@ $$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \;\text{for al
 
 $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}$$
 
-가 되어 다시 lattice polytope이 된다. 즉 $\Delta$는 reflexive polytope이다. 한편 $\Delta$의 normal fan은 [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 확인한 $\mathbb{P}^n$의 표준 fan과 일치하므로 $X_\Delta \cong \mathbb{P}^n$이 성립한다.
+가 되어 다시 lattice polytope이 된다. 즉 $\Delta$는 reflexive polytope이다. 한편 $\Delta$의 normal fan은 [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="required" }에서 확인한 $\mathbb{P}^n$의 표준 fan과 일치하므로 $X_\Delta \cong \mathbb{P}^n$이 성립한다.
 
 이 예시에서 우리는 $\Delta$의 크기를 키웠으므로 이제 $\Delta$는 꼭짓점 외에도 boundary와 interior 위에 여러 lattice point들을 가질 수 있다. 예를 들어 $n=2$일 때 $\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$의 lattice points는
 
@@ -151,7 +151,7 @@ $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 
 ## 거울 대칭
 
-위의 [예시 6](#ex6)을 다시 들여다보면 흥미로운 현상이 보이는데, $\Delta$와 $\Delta^\circ$는 동일한 reflexive 데이터의 두 측면이지만, 그로부터 만들어지는 toric variety $X_\Delta$와 $X_{\Delta^\circ}$는 일반적으로 서로 매우 다르다는 것이다. 가령 $n=2$의 standard simplex 변형의 경우, $X_\Delta \cong \mathbb{P}^2$인 반면 $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$의 normal fan의 인접한 ray들의 determinant를 계산해보면 그 값은 $\pm3$으로 smooth variety조차 되지 않는다. ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)) 실제로 $X_{\Delta^\circ}$은 세 maximal cone마다 $\mathbb{Z}/3$ quotient singularity를 갖는 singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$이다. 
+위의 [예시 6](#ex6){: data-relation="required" }을 다시 들여다보면 흥미로운 현상이 보이는데, $\Delta$와 $\Delta^\circ$는 동일한 reflexive 데이터의 두 측면이지만, 그로부터 만들어지는 toric variety $X_\Delta$와 $X_{\Delta^\circ}$는 일반적으로 서로 매우 다르다는 것이다. 가령 $n=2$의 standard simplex 변형의 경우, $X_\Delta \cong \mathbb{P}^2$인 반면 $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$의 normal fan의 인접한 ray들의 determinant를 계산해보면 그 값은 $\pm3$으로 smooth variety조차 되지 않는다. ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11){: data-relation="required" }) 실제로 $X_{\Delta^\circ}$은 세 maximal cone마다 $\mathbb{Z}/3$ quotient singularity를 갖는 singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$이다. 
 
 자연스러운 질문은 이들 두 variety들 $X_\Delta$와 $X_{\Delta^\circ}$ 사이에 기하학적 관계가 있느냐는 것이다. 위의 간단한 예시에서 보았듯, 일반적으로 $X_\Delta$와 $X_{\Delta^\circ}$ 사이에는 직접적인 morphism이나 birational 동형이 존재하지 않는다. 대신 둘 사이의 진정한 연결은 anticanonical hypersurface를 매개로 드러난다. 그 출발점은 다음의 고전적인 adjunction 결과이다.
 
@@ -160,7 +160,7 @@ Smooth Fano variety $X$의 anticanonical linear system $\lvert -K_X \rvert$ 안�
 :::
 
 ::: 증명
-[\[대수다양체\] §표준선다발](/ko/math/algebraic_varieties/canonical_bundle)에서의 adjunction formula $K_V = (K_X + V)\vert_V$를 사용한다. $V \in \lvert -K_X \rvert$이므로 $V \sim -K_X$이고 따라서
+[\[대수다양체\] §표준선다발](/ko/math/algebraic_varieties/canonical_bundle){: data-relation="required" }에서의 adjunction formula $K_V = (K_X + V)\vert_V$를 사용한다. $V \in \lvert -K_X \rvert$이므로 $V \sim -K_X$이고 따라서
 
 $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
@@ -169,11 +169,11 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 위에서 언급했듯 $X_\Delta$와 $X_{\Delta^\circ}$ 사이의 관계는 쉽게 드러나는 종류의 것이 아니며, 이 글의 남은 부분에서 이를 엄밀하게 설명하는 것 또한 불가능하다. 이 둘은 mirror symmetry를 통해 서로 관련되어 있는데, 이는 한 마디로, 두 개의 (보통 isomorphic하지 않은) Calabi-Yau variety가 Hodge 데이터의 특정 대칭을 통해 *짝지어진다*는 가설이다.
 
-[명제 7](#prop7)의 결론 $K_V = 0$은 (거의) 정확히 *Calabi-Yau variety*를 특징짓는 대수적인 조건이라는 점에서, $V$가 이 mirror symmetry의 무대 위로 올라올 여지를 준다. 마찬가지로 동일한 construction을 $X_{\Delta^\circ}$에서도 반복하면 우리는 이 $V$의 "mirror pair" $V^\circ$ 또한 정의할 수 있을 것이다. 
+[명제 7](#prop7){: data-relation="required" }의 결론 $K_V = 0$은 (거의) 정확히 *Calabi-Yau variety*를 특징짓는 대수적인 조건이라는 점에서, $V$가 이 mirror symmetry의 무대 위로 올라올 여지를 준다. 마찬가지로 동일한 construction을 $X_{\Delta^\circ}$에서도 반복하면 우리는 이 $V$의 "mirror pair" $V^\circ$ 또한 정의할 수 있을 것이다. 
 
 그러나 일반적으로 reflexive polytope $\Delta$로부터 만들어진 $X_\Delta$는 singular하며, 이로 인해 두 가지 미묘한 문제가 생긴다.
 
-1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7)의 결론을 *singular* $V$에 그대로 적용할 수 없다.
+1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7){: data-relation="required" }의 결론을 *singular* $V$에 그대로 적용할 수 없다.
 2. 따라서, singular한 $V$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $\pi: \widetilde{V} \rightarrow V$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $V$의 임의의 resolution은 다음의 *discrepancy formula*
     
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$
@@ -196,9 +196,9 @@ $$K_{\tilde{X}} = \pi^\ast K_X$$
 를 만족할 때, 이를 *crepant resolution<sub>크레펀트 분해</sub>*이라 부른다.
 :::
 
-즉 crepant resolution은 dis-crepancy가 없는 resolution이다. 그럼 이 조건이 정확히 [명제 7](#prop7)의 결론을 singular setting까지 끌고 가는 데 필요한 조건이라는 것을 즉시 확인할 수 있고, 이로부터 $\widetilde{V}$가 진정한 (smooth) Calabi-Yau가 된다.
+즉 crepant resolution은 dis-crepancy가 없는 resolution이다. 그럼 이 조건이 정확히 [명제 7](#prop7){: data-relation="required" }의 결론을 singular setting까지 끌고 가는 데 필요한 조건이라는 것을 즉시 확인할 수 있고, 이로부터 $\widetilde{V}$가 진정한 (smooth) Calabi-Yau가 된다.
 
-Toric setting에서 crepant resolution은 매우 명시적인 lattice 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$가 crepant일 필요충분조건은 새로 추가된 ray $v$들이 모두 $\Delta^\circ$의 *boundary* 위에 놓인 lattice point라는 것이다. 
+Toric setting에서 crepant resolution은 매우 명시적인 lattice 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11){: data-relation="weak" } 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$가 crepant일 필요충분조건은 새로 추가된 ray $v$들이 모두 $\Delta^\circ$의 *boundary* 위에 놓인 lattice point라는 것이다. 
 
 직관적으로 이는 앞서 도입한 anticanonical piecewise linear function $\psi_{-K}$가 새 ray $v$에 대해서도 여전히 $\psi_{-K}(v) = -1$를 만족해야 한다는 것으로 생각할 수 있다. 이는 $v$가 cone $\sigma$ (vertex $u_\sigma$)의 interior에 들어오면 $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$은 정확히 $v$가 $\Delta^\circ$의 facet $F_{u_\sigma}$ 위에 있다는 것과 동치이기 때문이다. 가령, $\mathbb{P}^2/(\mathbb{Z}/3)$의 fan에서 $\Delta$의 꼭짓점이 아닌 boundary lattice point $(0,-1), (1,-1), (1,0), (0,1), (-1,0), (-1,1)$을 새 ray로 추가하면 세 $\mathbb{Z}/3$ singular point가 동시에 해소되며, 결과는 ray가 아홉 개인 smooth fan이 된다.
 

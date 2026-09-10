@@ -15,7 +15,7 @@ translated_at: 2026-06-03T11:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-03T11:30:02+00:00
 ---
-In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties) we saw how to construct a projective toric variety $X_P$ from a lattice polytope $P \subseteq M_{\mathbb{R}}$ via its normal fan $\Sigma_P$. In this construction there are many pathways by which the geometric properties of $P$ translate into algebro-geometric properties of $X_P$, and among them *reflexive polytopes* occupy a special position.
+In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties){: data-relation="required" } we saw how to construct a projective toric variety $X_P$ from a lattice polytope $P \subseteq M_{\mathbb{R}}$ via its normal fan $\Sigma_P$. In this construction there are many pathways by which the geometric properties of $P$ translate into algebro-geometric properties of $X_P$, and among them *reflexive polytopes* occupy a special position.
 
 ## Reflexive Polytopes
 
@@ -50,9 +50,9 @@ This proposition exhibits the symmetry of reflexive polytopes. Although $\Delta$
 
 ## Fano Varieties
 
-In algebraic geometry, a *Fano variety* is a normal projective variety $X$ whose anticanonical divisor $-K_X$ is ample. Here the canonical divisor $K_X$ is the divisor class corresponding to the canonical bundle ([\[Algebraic Varieties\] §Canonical Line Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6)), and $-K_X$ is its inverse. If $-K_X$ is additionally a Cartier divisor, then $X$ is called a *Gorenstein Fano variety*. In the context of toric varieties, this condition translates into a very explicit combinatorial one.
+In algebraic geometry, a *Fano variety* is a normal projective variety $X$ whose anticanonical divisor $-K_X$ is ample. Here the canonical divisor $K_X$ is the divisor class corresponding to the canonical bundle ([\[Algebraic Varieties\] §Canonical Line Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6){: data-relation="weak" }), and $-K_X$ is its inverse. If $-K_X$ is additionally a Cartier divisor, then $X$ is called a *Gorenstein Fano variety*. In the context of toric varieties, this condition translates into a very explicit combinatorial one.
 
-As we saw in [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8), given a lattice polytope $P \subseteq M_{\mathbb{R}}$, we can construct the projective toric variety $X_P = X_{\Sigma_P}$ via the normal fan $\Sigma_P$ it defines. Now assume that $P = \Delta$ is a reflexive polytope.
+As we saw in [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8){: data-relation="required" }, given a lattice polytope $P \subseteq M_{\mathbb{R}}$, we can construct the projective toric variety $X_P = X_{\Sigma_P}$ via the normal fan $\Sigma_P$ it defines. Now assume that $P = \Delta$ is a reflexive polytope.
 
 ::: Proposition 3
 The anticanonical divisor $-K_{X_\Sigma}$ of a toric variety $X_\Sigma$, i.e. the inverse of the canonical divisor, is given by the sum of all boundary divisors:
@@ -63,7 +63,7 @@ Here $\Sigma(1)$ is the set of 1-dimensional cones of $\Sigma$, and each $D_\rho
 :::
 
 ::: Proof
-In [\[Algebraic Varieties\] §Canonical Line Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6), the canonical divisor $K_X$ was defined as the divisor class corresponding to the canonical bundle $\omega_X = \det \Omega^1_X$. We show that $K_{X_\Sigma} = -\sum_\rho D_\rho$, so that its inverse takes the form above.
+In [\[Algebraic Varieties\] §Canonical Line Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6){: data-relation="required" }, the canonical divisor $K_X$ was defined as the divisor class corresponding to the canonical bundle $\omega_X = \det \Omega^1_X$. We show that $K_{X_\Sigma} = -\sum_\rho D_\rho$, so that its inverse takes the form above.
 
 On the open dense torus $T_N = \Spec \mathbb{C}[M] \subseteq X_\Sigma$, choose a basis $m_1, \ldots, m_n$ of $M$; then the characters $\rchi^{m_i}$ become coordinates on the torus, and the top form
 
@@ -80,20 +80,20 @@ and since $K_{X_\Sigma}$ is the class of this divisor, we have $-K_{X_\Sigma} = 
 
 Although this equality is well-defined for any fan, the *ample* condition that we are interested in (and the Fano condition) only makes sense when $X_\Sigma$ is complete, so hereafter we assume that $\Sigma$ is a complete fan.
 
-When the anticanonical divisor $-K_{X_\Sigma}$ is Cartier, the corresponding piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$ is precisely the function satisfying $\psi_{-K}(v_\rho) = -1$ for all $\rho \in \Sigma(1)$. Moreover, in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6) we saw that it suffices to check this condition only on maximal cones, and that this condition exactly coincides with the condition for the given divisor to be Cartier. The following proposition is the key observation: this condition matches the vertex condition of the dual $\Delta^\circ$ of a reflexive polytope.
+When the anticanonical divisor $-K_{X_\Sigma}$ is Cartier, the corresponding piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$ is precisely the function satisfying $\psi_{-K}(v_\rho) = -1$ for all $\rho \in \Sigma(1)$. Moreover, in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6){: data-relation="required" } we saw that it suffices to check this condition only on maximal cones, and that this condition exactly coincides with the condition for the given divisor to be Cartier. The following proposition is the key observation: this condition matches the vertex condition of the dual $\Delta^\circ$ of a reflexive polytope.
 
 ::: Proposition 4
 For a reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$, let $\Sigma_\Delta$ be the normal fan of $\Delta$ and write the corresponding toric variety as $X_\Delta = X_{\Sigma_\Delta}$. Then $X_\Delta$ is a Gorenstein Fano variety. Conversely, if a complete toric variety $X_\Sigma$ is Gorenstein Fano, then $\Sigma$ is the normal fan of some reflexive polytope.
 :::
 
 ::: Proof
-Suppose $\Delta$ is a reflexive polytope. Each maximal cone $\sigma$ of $\Sigma_\Delta$ corresponds to some vertex $u_\sigma$ of $\Delta$ by [§Definition of Toric Varieties, ⁋Definition 6](/en/math/toric_geometry/toric_varieties#def6), and the ray generators $v_\rho$ of $\sigma$ are exactly the inner primitive normals of the facets containing $u_\sigma$. Since the facet equation of $\Delta$ is $\langle u, v_\Theta \rangle = -1$, the vertex $u_\sigma$ achieves the minimum of $\langle -, v_\rho\rangle$ on $\Delta$ exactly at $-1$. That is,
+Suppose $\Delta$ is a reflexive polytope. Each maximal cone $\sigma$ of $\Sigma_\Delta$ corresponds to some vertex $u_\sigma$ of $\Delta$ by [§Definition of Toric Varieties, ⁋Definition 6](/en/math/toric_geometry/toric_varieties#def6){: data-relation="required" }, and the ray generators $v_\rho$ of $\sigma$ are exactly the inner primitive normals of the facets containing $u_\sigma$. Since the facet equation of $\Delta$ is $\langle u, v_\Theta \rangle = -1$, the vertex $u_\sigma$ achieves the minimum of $\langle -, v_\rho\rangle$ on $\Delta$ exactly at $-1$. That is,
 
 $$\langle u_\sigma, v_\rho\rangle = -1 \le \langle u, v_\rho\rangle \quad \text{for all } u \in \Delta, \rho \in \sigma(1)$$
 
-and equality holds only when $u \in F_\rho$ (the facet). Therefore $m_\sigma = u_\sigma \in M$ satisfies the Cartier compatibility condition of [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6), and $-K_{X_\Delta}$ is Cartier.
+and equality holds only when $u \in F_\rho$ (the facet). Therefore $m_\sigma = u_\sigma \in M$ satisfies the Cartier compatibility condition of [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6){: data-relation="required" }, and $-K_{X_\Delta}$ is Cartier.
 
-To show that $-K_{X_\Delta}$ is ample, it suffices to verify that the piecewise linear function $\psi_{-K}$ is strictly convex ([§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 9](/en/math/toric_geometry/toric_divisors#prop9)). That is, for two distinct maximal cones $\sigma, \sigma'$ and their corresponding vertices $u_\sigma, u_{\sigma'}$, we must show that $\langle u_{\sigma'}, v\rangle$ is an upper bound for $\psi_{-K}(v) = \langle u_\sigma, v\rangle$ on $v \in \sigma$, with equality exactly when $v \in \sigma \cap \sigma'$.
+To show that $-K_{X_\Delta}$ is ample, it suffices to verify that the piecewise linear function $\psi_{-K}$ is strictly convex ([§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 9](/en/math/toric_geometry/toric_divisors#prop9){: data-relation="required" }). That is, for two distinct maximal cones $\sigma, \sigma'$ and their corresponding vertices $u_\sigma, u_{\sigma'}$, we must show that $\langle u_{\sigma'}, v\rangle$ is an upper bound for $\psi_{-K}(v) = \langle u_\sigma, v\rangle$ on $v \in \sigma$, with equality exactly when $v \in \sigma \cap \sigma'$.
 
 Decompose $v \in \sigma$ as $v = \sum_{\rho \in \sigma(1)} c_\rho v_\rho$ ($c_\rho \ge 0$). For each $\rho \in \sigma(1)$, since $u_{\sigma'} \in \Delta$ we have $\langle u_{\sigma'}, v_\rho \rangle \ge -1$, and since $u_\sigma \in F_\rho$ we have $\langle u_\sigma, v_\rho\rangle = -1$. Therefore
 
@@ -121,7 +121,7 @@ For a toric variety, the polytope $P_D$ corresponding to a $T_N$-invariant Carti
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \},$$
 
-and as shown in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 7](/en/math/toric_geometry/toric_divisors#prop7), a basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ is given by the characters $\rchi^u$ corresponding to the elements of $P_D \cap M$. For the anticanonical divisor $-K_{X_\Delta}$, we have $a_\rho = 1$ for all $\rho$, so
+and as shown in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 7](/en/math/toric_geometry/toric_divisors#prop7){: data-relation="required" }, a basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ is given by the characters $\rchi^u$ corresponding to the elements of $P_D \cap M$. For the anticanonical divisor $-K_{X_\Delta}$, we have $a_\rho = 1$ for all $\rho$, so
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}.$$
 
@@ -130,7 +130,7 @@ Since $\Sigma_\Delta$ is the normal fan of $\Delta$, the polytope defined by the
 
 This result means that the number of lattice points of a reflexive polytope determines the dimension of the space of sections of the anticanonical line bundle of the Gorenstein Fano variety, i.e. the *anticanonical degree*. In particular, the cardinality of $\Delta \cap M$ equals $h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$.
 
-The most basic example of a reflexive polytope is the simplex corresponding to projective space $\mathbb{P}^n$. In [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10) we saw that the normal fan of the standard simplex $\Delta_n$ is the standard fan of $\mathbb{P}^n$. However, since one vertex of $\Delta_n$ is the origin, we have $0 \notin \interior(\Delta_n)$. Thus $\Delta_n$ itself is not a reflexive polytope. Instead, we can consider a (homothetic) polytope obtained by appropriately extending each edge to move the origin into the interior.
+The most basic example of a reflexive polytope is the simplex corresponding to projective space $\mathbb{P}^n$. In [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" } we saw that the normal fan of the standard simplex $\Delta_n$ is the standard fan of $\mathbb{P}^n$. However, since one vertex of $\Delta_n$ is the origin, we have $0 \notin \interior(\Delta_n)$. Thus $\Delta_n$ itself is not a reflexive polytope. Instead, we can consider a (homothetic) polytope obtained by appropriately extending each edge to move the origin into the interior.
 
 ::: Example 6
 In the lattice $M = \mathbb{Z}^n$, define the polytope
@@ -141,7 +141,7 @@ This polytope is obtained by expanding the standard simplex toward the origin; i
 
 $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \},$$
 
-which is again a lattice polytope. Hence $\Delta$ is reflexive. Moreover, since the normal fan of $\Delta$ coincides with the standard fan of $\mathbb{P}^n$ from [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10), we have $X_\Delta \cong \mathbb{P}^n$.
+which is again a lattice polytope. Hence $\Delta$ is reflexive. Moreover, since the normal fan of $\Delta$ coincides with the standard fan of $\mathbb{P}^n$ from [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10){: data-relation="required" }, we have $X_\Delta \cong \mathbb{P}^n$.
 
 In this example, because we enlarged $\Delta$, it now has several lattice points on its boundary and in its interior in addition to its vertices. For instance, when $n=2$, the lattice points of $\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$ are
 
@@ -152,7 +152,7 @@ for a total of $10$ points, and this coincides with $h^0(\mathbb{P}^2, \mathcal{
 
 ## Mirror Symmetry
 
-If we look again at [Example 6](#ex6) above, an interesting phenomenon appears: although $\Delta$ and $\Delta^\circ$ are two aspects of the same reflexive data, the toric varieties $X_\Delta$ and $X_{\Delta^\circ}$ constructed from them are generally very different. For example, in the case of the modified standard simplex with $n=2$, we have $X_\Delta \cong \mathbb{P}^2$, whereas for $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$, computing the determinants of adjacent rays in its normal fan gives values of $\pm3$, so it is not even a smooth variety. ([§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11)) In fact, $X_{\Delta^\circ}$ is the singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$, with a $\mathbb{Z}/3$ quotient singularity in each of its three maximal cones.
+If we look again at [Example 6](#ex6){: data-relation="weak" } above, an interesting phenomenon appears: although $\Delta$ and $\Delta^\circ$ are two aspects of the same reflexive data, the toric varieties $X_\Delta$ and $X_{\Delta^\circ}$ constructed from them are generally very different. For example, in the case of the modified standard simplex with $n=2$, we have $X_\Delta \cong \mathbb{P}^2$, whereas for $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$, computing the determinants of adjacent rays in its normal fan gives values of $\pm3$, so it is not even a smooth variety. ([§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11){: data-relation="weak" }) In fact, $X_{\Delta^\circ}$ is the singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$, with a $\mathbb{Z}/3$ quotient singularity in each of its three maximal cones.
 
 A natural question is whether there is a geometric relationship between these two varieties $X_\Delta$ and $X_{\Delta^\circ}$. As we saw in the simple example above, in general there is no direct morphism or birational isomorphism between them. Instead, the true connection is revealed through anticanonical hypersurfaces. The starting point is the following classical adjunction result.
 
@@ -161,18 +161,18 @@ A smooth divisor $V \subseteq X$ in the anticanonical linear system $\lvert -K_X
 :::
 
 ::: Proof
-We use the adjunction formula $K_V = (K_X + V)\vert_V$ from [\[Algebraic Varieties\] §Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle). Since $V \in \lvert -K_X \rvert$, we have $V \sim -K_X$, and therefore
+We use the adjunction formula $K_V = (K_X + V)\vert_V$ from [\[Algebraic Varieties\] §Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle){: data-relation="required" }. Since $V \in \lvert -K_X \rvert$, we have $V \sim -K_X$, and therefore
 
 $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0.$$
 :::
 
 As mentioned above, the relationship between $X_\Delta$ and $X_{\Delta^\circ}$ is not of an easily visible kind, and it is impossible to explain it rigorously in the remainder of this post. The two are related through mirror symmetry, which is, in a word, the conjecture that two (usually non-isomorphic) Calabi-Yau varieties are *paired* through a certain symmetry of Hodge data.
 
-The conclusion $K_V = 0$ of [Proposition 7](#prop7) gives $V$ a chance to enter the stage of this mirror symmetry, since it is (almost) exactly the algebraic condition characterizing a *Calabi-Yau variety*. Likewise, if we repeat the same construction for $X_{\Delta^\circ}$, we should be able to define the "mirror pair" $V^\circ$ of this $V$.
+The conclusion $K_V = 0$ of [Proposition 7](#prop7){: data-relation="required" } gives $V$ a chance to enter the stage of this mirror symmetry, since it is (almost) exactly the algebraic condition characterizing a *Calabi-Yau variety*. Likewise, if we repeat the same construction for $X_{\Delta^\circ}$, we should be able to define the "mirror pair" $V^\circ$ of this $V$.
 
 However, in general the variety $X_\Delta$ constructed from a reflexive polytope $\Delta$ is singular, and this creates two subtle problems.
 
-1. If the codimension-$1$ subvariety $V$ meets the singular locus of $X_\Delta$, then $V$ itself becomes singular at those points. In our example $\mathbb{P}^2/(\mathbb{Z}/3)$, the singular locus consists of three isolated points, so a generic cubic curve $V$ can avoid them and remain smooth; but as the dimension grows, the singular locus can have positive dimension, forcing $V$ to intersect it. Therefore we cannot directly apply the conclusion of [Proposition 7](#prop7) to a *singular* $V$.
+1. If the codimension-$1$ subvariety $V$ meets the singular locus of $X_\Delta$, then $V$ itself becomes singular at those points. In our example $\mathbb{P}^2/(\mathbb{Z}/3)$, the singular locus consists of three isolated points, so a generic cubic curve $V$ can avoid them and remain smooth; but as the dimension grows, the singular locus can have positive dimension, forcing $V$ to intersect it. Therefore we cannot directly apply the conclusion of [Proposition 7](#prop7){: data-relation="required" } to a *singular* $V$.
 2. Thus, to obtain a genuine smooth Calabi-Yau from a singular $V$, an appropriate resolution $\pi: \widetilde{V} \rightarrow V$ is needed, but a general resolution does not preserve the canonical class. Specifically, it is known that an arbitrary resolution of a normal Gorenstein variety $V$ satisfies the following *discrepancy formula*:
 
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i.$$
@@ -195,11 +195,11 @@ $$K_{\tilde{X}} = \pi^\ast K_X$$
 is called a *crepant resolution*.
 :::
 
-That is, a crepant resolution is a resolution with no discrepancy. Then we can immediately verify that this condition is exactly what is needed to carry the conclusion of [Proposition 7](#prop7) into the singular setting, and from this $\widetilde{V}$ becomes a genuine (smooth) Calabi-Yau.
+That is, a crepant resolution is a resolution with no discrepancy. Then we can immediately verify that this condition is exactly what is needed to carry the conclusion of [Proposition 7](#prop7){: data-relation="required" } into the singular setting, and from this $\widetilde{V}$ becomes a genuine (smooth) Calabi-Yau.
 
-In the toric setting, crepant resolutions translate into very explicit lattice data. We already saw in the discussion after [§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11) that a general toric resolution is given by a refinement of a fan (i.e. a finer fan on the same support). Then the real question is when this resolution is crepant, and this too can be expressed in terms of combinatorial properties of the fan. Specifically, a birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$ is crepant if and only if all newly added rays $v$ lie on lattice points on the *boundary* of $\Delta^\circ$.
+In the toric setting, crepant resolutions translate into very explicit lattice data. We already saw in the discussion after [§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11){: data-relation="weak" } that a general toric resolution is given by a refinement of a fan (i.e. a finer fan on the same support). Then the real question is when this resolution is crepant, and this too can be expressed in terms of combinatorial properties of the fan. Specifically, a birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$ is crepant if and only if all newly added rays $v$ lie on lattice points on the *boundary* of $\Delta^\circ$.
 
-Intuitively, this can be understood as the requirement that the anticanonical piecewise linear function $\psi_{-K}$ from the proof of [Proposition 3](#prop3) still satisfies $\psi_{-K}(v) = -1$ for each new ray $v$. This is because if $v$ falls inside a cone $\sigma$ (with vertex $u_\sigma$), then $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$ is exactly equivalent to $v$ lying on the facet $F_{u_\sigma}$ of $\Delta^\circ$. For example, if we add the lattice points $(1,0), (0,1), (-1,-1)$ between adjacent rays in the fan of $\mathbb{P}^2/(\mathbb{Z}/3)$ as new rays, all three $\mathbb{Z}/3$ singularities are resolved simultaneously, and the result becomes the fan of smooth $\mathbb{P}^2$.
+Intuitively, this can be understood as the requirement that the anticanonical piecewise linear function $\psi_{-K}$ from the proof of [Proposition 3](#prop3){: data-relation="required" } still satisfies $\psi_{-K}(v) = -1$ for each new ray $v$. This is because if $v$ falls inside a cone $\sigma$ (with vertex $u_\sigma$), then $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$ is exactly equivalent to $v$ lying on the facet $F_{u_\sigma}$ of $\Delta^\circ$. For example, if we add the lattice points $(1,0), (0,1), (-1,-1)$ between adjacent rays in the fan of $\mathbb{P}^2/(\mathbb{Z}/3)$ as new rays, all three $\mathbb{Z}/3$ singularities are resolved simultaneously, and the result becomes the fan of smooth $\mathbb{P}^2$.
 
 However, crepant resolutions do not always exist. For toric Gorenstein varieties, it is known that crepant resolutions always exist for $n \le 3$, but for $n \ge 4$ it is generally impossible to resolve all singularities simultaneously. To absorb the remaining cohomological contributions of quotient singularities, *stringy* Hodge numbers were introduced, which appear in the mirror statement below; thanks to this correction, mirror symmetry is cleanly expressed as a function of reflexive data regardless of singular remnants.
 
