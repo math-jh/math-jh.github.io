@@ -18,21 +18,21 @@ published: false
 
 $$\int_a^bf'(t)\dd{t}=f(b)-f(a)$$
 
-를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 boundary에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration)과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 exterior derivative $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
+를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 boundary에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration){: data-relation="required" }과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary){: data-relation="forward" }의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 exterior derivative $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
 
 ## 경계가 있는 다양체 위에서의 적분
 
-우선 [§적분](/ko/math/manifolds/integration)의 정의가 boundary가 있는 경우로 그대로 확장된다는 것을 확인하자. $\mathbb{H}^m$의 열린집합 $V$ 위의 compactly supported $m$-form $\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$에 대하여, 그 적분을 미적분학에서의 반복적분
+우선 [§적분](/ko/math/manifolds/integration){: data-relation="required" }의 정의가 boundary가 있는 경우로 그대로 확장된다는 것을 확인하자. $\mathbb{H}^m$의 열린집합 $V$ 위의 compactly supported $m$-form $\omega=f\dd{r}^1\wedge\cdots\wedge \dd{r}^m$에 대하여, 그 적분을 미적분학에서의 반복적분
 
 $$\int_V\omega=\int_{\mathbb{R}^{m-1}}\int_0^\infty f\dd{r}^m\dd{r}^1\cdots \dd{r}^{m-1}$$
 
-으로 정의한다. 여기서 $f$는 $V$ 바깥에서 $0$으로 확장한 것이다. 한편 $\partial\mathbb{H}^m$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $V\cap\interior\mathbb{H}^m$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3)에서 살펴본 것과 같이 chart들의 transition은 interior를 interior로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration)에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $M$ 위의 compactly supported $m$-form $\omega$에 대하여 $\int_M\omega$가 잘 정의된다.
+으로 정의한다. 여기서 $f$는 $V$ 바깥에서 $0$으로 확장한 것이다. 한편 $\partial\mathbb{H}^m$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $V\cap\interior\mathbb{H}^m$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3){: data-relation="required" }에서 살펴본 것과 같이 chart들의 transition은 interior를 interior로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration){: data-relation="required" }에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $M$ 위의 compactly supported $m$-form $\omega$에 대하여 $\int_M\omega$가 잘 정의된다.
 
-$m=1$인 경우에는 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)에서 살펴본 것과 같이 positively oriented chart만으로 $M$을 덮지 못할 수 있으므로, negatively oriented chart $(U,x)$에 대해서는
+$m=1$인 경우에는 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary){: data-relation="required" }에서 살펴본 것과 같이 positively oriented chart만으로 $M$을 덮지 못할 수 있으므로, negatively oriented chart $(U,x)$에 대해서는
 
 $$\int_M\omega=-\int_{x(U)}(x^{-1})^\ast\omega\qquad(\supp\omega\subseteq U)$$
 
-으로 부호를 붙여 정의한다. 이것이 잘 정의되는 것은 orientation을 뒤집는 transition에 [§적분, ⁋정리 3](/ko/math/manifolds/integration#thm3)을 적용하면 절댓값 때문에 부호가 한 번 더 바뀐다는 것으로부터 확인된다.
+으로 부호를 붙여 정의한다. 이것이 잘 정의되는 것은 orientation을 뒤집는 transition에 [§적분, ⁋정리 3](/ko/math/manifolds/integration#thm3){: data-relation="required" }을 적용하면 절댓값 때문에 부호가 한 번 더 바뀐다는 것으로부터 확인된다.
 
 마지막으로 $0$차원의 경우를 약속하자. Oriented $0$차원 manifold는 부호 $\epsilon(p)=\pm1$가 주어진 (discrete한) 점들의 모임이고, compactly supported $0$-form은 유한 개의 점에서만 $0$이 아닌 함수 $f$이므로, 그 적분을
 
@@ -50,11 +50,11 @@ $$\int_M\dd{\omega}=\int_{\partial M}\iota^\ast\omega$$
 이 성립한다. 특히 $\partial M=\emptyset$이라면 $\int_M\dd{\omega}=0$이다.
 :::
 ::: 증명
-우선 partition of unity를 통해 주장을 국소적인 명제로 줄이자. $M$을 덮는 chart들 $(U_\alpha,x_\alpha)$와 이에 subordinate한 smooth partition of unity $(\phi_i)$를 택하면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity)), $\supp\omega$가 compact이므로 $\omega=\sum_i\phi_i\omega$는 유한 합이다. 한편 $\sum_i\phi_i=1$로부터 $\sum_i\dd{\phi_i}=0$이므로
+우선 partition of unity를 통해 주장을 국소적인 명제로 줄이자. $M$을 덮는 chart들 $(U_\alpha,x_\alpha)$와 이에 subordinate한 smooth partition of unity $(\phi_i)$를 택하면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds#smooth-partition-of-unity){: data-relation="required" }), $\supp\omega$가 compact이므로 $\omega=\sum_i\phi_i\omega$는 유한 합이다. 한편 $\sum_i\phi_i=1$로부터 $\sum_i\dd{\phi_i}=0$이므로
 
 $$\sum_i\dd{(\phi_i\omega)}=\sum_i\bigl(\dd{\phi_i}\wedge\omega+\phi_i\dd{\omega}\bigr)=\dd{\omega}$$
 
-이고, 양변이 모두 $\omega$에 대해 선형이므로 $\supp\omega$가 하나의 chart $(U,x)$에 들어가는 경우만 증명하면 충분하다. $m\geq2$라면 chart를 positively oriented로 택할 수 있다. ([§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary))
+이고, 양변이 모두 $\omega$에 대해 선형이므로 $\supp\omega$가 하나의 chart $(U,x)$에 들어가는 경우만 증명하면 충분하다. $m\geq2$라면 chart를 positively oriented로 택할 수 있다. ([§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary){: data-relation="required" })
 
 이제 $m\geq 2$라 하고, $V=x(U)\subseteq\mathbb{H}^m$ 위에서 $\eta=(x^{-1})^\ast\omega$를 좌표로 적자.
 
@@ -86,7 +86,7 @@ $$\int_M\dd{\omega}=(-1)^{m-1}\int_{\mathbb{R}^{m-1}}\bigl(-f_m(r',0)\bigr)\dd{r
 
 $$\iota^\ast\eta=f_m(r',0)\dd{r}^1\wedge\cdots\wedge \dd{r}^{m-1}$$
 
-이다. 그런데 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)의 induced orientation은 제한된 chart $(r^1,\ldots,r^{m-1})$이 주는 orientation의 $(-1)^m$배이므로
+이다. 그런데 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9){: data-relation="required" }의 induced orientation은 제한된 chart $(r^1,\ldots,r^{m-1})$이 주는 orientation의 $(-1)^m$배이므로
 
 $$\int_{\partial M}\iota^\ast\omega=(-1)^m\int_{\mathbb{R}^{m-1}}f_m(r',0)\dd{r}'$$
 
@@ -100,7 +100,7 @@ $$\int_M\dd{f}=\epsilon\int_{x(U)}\dd{\bigl((x^{-1})^\ast f\bigr)}$$
 
 $$\int_0^\infty g'(t)\dd{t}=-g(0)=-f(p)$$
 
-이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_M\dd{f}=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward 벡터는 $\partial/\partial x$이므로 outward vector $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
+이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_M\dd{f}=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward 벡터는 $\partial/\partial x$이므로 outward vector $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9){: data-relation="required" }에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
 
 $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_M\dd{f}$$
 
@@ -113,11 +113,11 @@ $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_M\dd{f}$
 Boundary가 없는 oriented manifold $M$ 위의 compactly supported $(m-1)$-form $\omega$에 대하여 $\int_M\dd{\omega}=0$이다. 특히 $M$이 compact라면, $M$ 위의 임의의 exact $m$-form의 적분은 $0$이다.
 :::
 ::: 증명
-[정리 1](#thm1)에서 $\partial M=\emptyset$인 경우이다. $M$이 compact라면 임의의 differential form이 compactly supported이므로 둘째 주장이 따라나온다.
+[정리 1](#thm1){: data-relation="required" }에서 $\partial M=\emptyset$인 경우이다. $M$이 compact라면 임의의 differential form이 compactly supported이므로 둘째 주장이 따라나온다.
 :::
 
 ::: 예시 3
-$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward vector $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward 벡터가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1)은
+$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5){: data-relation="weak" }에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward vector $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward 벡터가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1){: data-relation="required" }은
 
 $$\int_{[0,1]}\dd{f}=f(1)-f(0)$$
 
@@ -125,7 +125,7 @@ $$\int_{[0,1]}\dd{f}=f(1)-f(0)$$
 :::
 
 ::: 참고 4
-미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) bounded 영역 $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1){: data-relation="weak" }의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) bounded 영역 $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1){: data-relation="weak" }은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
 :::
 
 ---
