@@ -13,11 +13,11 @@ weight: 6
 
 ---
 
-[§근계](/ko/math/lie_theory/root_systems)에서 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 Weyl group이 포착한다는 것을 확인하였다. 또한 [§원환면의 작용](/ko/math/lie_theory/torus_action)에서 compact Lie group $G$의 maximal torus $T$와 Weyl group $W=N(T)/T$의 관계를 살펴보았다. 이 글에서는 root system의 구조를 통해 Lie algebra를 분류하고, 이로부터 자연스럽게 등장하는 기하적 대상인 flag variety를 소개한다.
+[§근계](/ko/math/lie_theory/root_systems){: data-relation="required" }에서 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 Weyl group이 포착한다는 것을 확인하였다. 또한 [§원환면의 작용](/ko/math/lie_theory/torus_action){: data-relation="weak" }에서 compact Lie group $G$의 maximal torus $T$와 Weyl group $W=N(T)/T$의 관계를 살펴보았다. 이 글에서는 root system의 구조를 통해 Lie algebra를 분류하고, 이로부터 자연스럽게 등장하는 기하적 대상인 flag variety를 소개한다.
 
 ## Dynkin diagram
 
-Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결정된다. [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)에서 정의한 Cartan matrix는 이 관계를 행렬로 표현한 것이지만, 시각화를 통해 root system의 구조를 더 직관적으로 파악할 수 있다.
+Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결정된다. [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16){: data-relation="required" }에서 정의한 Cartan matrix는 이 관계를 행렬로 표현한 것이지만, 시각화를 통해 root system의 구조를 더 직관적으로 파악할 수 있다.
 
 ::: 정의 1
 Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram<sub>딘킨 도표</sub>*은 다음과 같이 정의되는 그래프이다.
@@ -27,10 +27,10 @@ Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_
 3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 짧은 root를 향하는 arrow를 edge에 추가한다.
 :::
 
-Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
+Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems){: data-relation="required" }에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
 
 ::: 예시 2
-[§근계, ⁋예시 13](/ko/math/lie_theory/root_systems#ex13)의 $\Phi(A_n)$을 생각하자. Simple root는 $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$)로 선택할 수 있다. 이들 사이의 내적을 계산하면
+[§근계, ⁋예시 13](/ko/math/lie_theory/root_systems#ex13){: data-relation="weak" }의 $\Phi(A_n)$을 생각하자. Simple root는 $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$)로 선택할 수 있다. 이들 사이의 내적을 계산하면
 
 $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text{otherwise}\end{cases}$$
 
@@ -43,7 +43,7 @@ Dynkin diagram의 핵심 성질은 다음과 같다.
 Dynkin diagram은 연결되어 있거나, connected component들의 disjoint union으로 나타난다. 각 connected component는 irreducible root system에 대응한다.
 :::
 ::: 증명
-Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [정의 1](#def1)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
+Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [정의 1](#def1){: data-relation="required" }에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
 
 역으로 irreducible root system의 Dynkin diagram이 연결되어 있지 않다면 위의 논증에 의해 reducible이 되어 모순이다.
 :::
@@ -134,7 +134,7 @@ Simply-laced root system은 정확히 $A_n$, $D_n$, $E_6$, $E_7$, $E_8$ type이�
 
 ## Borel subalgebra
 
-이제 root system으로부터 자연스럽게 정의되는 Lie algebra의 subalgebra를 살펴보자. [§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)에서 positive root들의 모임 $\Phi^+$를 정의하였다. 이는 Weyl chamber를 하나 선택하는 것과 같으며, 이로부터 Lie algebra의 특별한 subalgebra를 정의할 수 있다.
+이제 root system으로부터 자연스럽게 정의되는 Lie algebra의 subalgebra를 살펴보자. [§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15){: data-relation="required" }에서 positive root들의 모임 $\Phi^+$를 정의하였다. 이는 Weyl chamber를 하나 선택하는 것과 같으며, 이로부터 Lie algebra의 특별한 subalgebra를 정의할 수 있다.
 
 ::: 정의 9
 Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 positive root들의 모임 $\Phi^+$에 대하여, *Borel subalgebra*는 다음의 subalgebra이다.
@@ -242,7 +242,7 @@ Complex semisimple Lie group $G_\mathbb{C}$, Borel subgroup $B$, 그리고 Weyl 
 
 $$G_\mathbb{C}=\bigsqcup_{w\in W}BwB$$
 
-이를 *Bruhat decomposition*이라 한다. 이에 대한 더 자세한 논의와 parabolic subgroup으로의 일반화는 [§Bruhat decomposition, ⁋정리 5](/ko/math/lie_theory/bruhat_decomposition#thm5)에서 다룬다. 각 double coset $BwB$는 $G_\mathbb{C}$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
+이를 *Bruhat decomposition*이라 한다. 이에 대한 더 자세한 논의와 parabolic subgroup으로의 일반화는 [§Bruhat decomposition, ⁋정리 5](/ko/math/lie_theory/bruhat_decomposition#thm5){: data-relation="forward" }에서 다룬다. 각 double coset $BwB$는 $G_\mathbb{C}$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
 
 $$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 
@@ -259,7 +259,7 @@ Closure에 대한 진술은 Bruhat order의 정의로부터 따라나온다.
 Bruhat decomposition은 flag variety $G_\mathbb{C}/B$의 cell decomposition을 제공한다. 각 $w\in W$에 대하여 $X_w^\circ=BwB/B$는 dimension $\ell(w)$의 affine space와 동형이고, 이들을 모으면 $G_\mathbb{C}/B$의 전체를 덮는다. 여기서 $\ell(w)$는 $w$의 *length*, 즉 $w$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
 
 ::: 예시 17
-$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.
+$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7){: data-relation="forward" }에서 다룬다.
 
 구체적으로 $\sigma$의 inversion은 $i<j$이면서 $\sigma(i)>\sigma(j)$인 쌍 $(i,j)$의 개수이다. Bruhat decomposition에 의해 $\GL(n;\mathbb{C})/B$는 $0$차원 cell (identity permutation, inversion $0$개)부터 $n(n-1)/2$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition을 갖는다.
 
