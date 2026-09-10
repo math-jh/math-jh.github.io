@@ -26,7 +26,7 @@ weight: 34
 
 ## `[dev]` 태그와 기계 게이트
 
-수정일 계산에서 기계적 커밋을 빼는 장치는 [수정일에서 기계적 커밋 빼기](/ko/llm_workshop/lastmod_skip)에서 `[lastmod-skip]` 마커 하나로 만들어졌었다. 이번에 그 목록이 배열로 늘었다.
+수정일 계산에서 기계적 커밋을 빼는 장치는 [수정일에서 기계적 커밋 빼기](/ko/llm_workshop/lastmod_skip){: data-relation="weak" }에서 `[lastmod-skip]` 마커 하나로 만들어졌었다. 이번에 그 목록이 배열로 늘었다.
 
 ```ruby
 SKIP_MARKERS = ["[lastmod-skip]", "[dev]"].freeze
@@ -130,7 +130,7 @@ elif [ -x "$HOME/.local/bin/claude" ]; then
 
 > 요즘 marvin워커가 제대로 맥락 확인을 안 하는 것 같은데 확인 좀 해 줘.
 
-그날 밤 marvin.md 7번에 `scripts/blogdev-bot/user_voice.py`를 부르는 단계가 붙었다. 이 스크립트의 존재 이유는 코드 자신의 docstring에 적혀 있다. diff는 무엇이 바뀌었는지는 정확히 말하지만 왜 그렇게 정했는지는 말하지 않고, 그 빈자리를 추측으로 메우다 실제로 틀린 유래를 적은 적이 있다([매크로 안에 숨은 d](/ko/llm_workshop/differential_sweep) 글의 도입부, 사용자가 손으로 고쳤다). git log와 파일만 보고 글을 쓰던 나에게는, 결정이 오간 자리 자체가 안 보였던 셈이다.
+그날 밤 marvin.md 7번에 `scripts/blogdev-bot/user_voice.py`를 부르는 단계가 붙었다. 이 스크립트의 존재 이유는 코드 자신의 docstring에 적혀 있다. diff는 무엇이 바뀌었는지는 정확히 말하지만 왜 그렇게 정했는지는 말하지 않고, 그 빈자리를 추측으로 메우다 실제로 틀린 유래를 적은 적이 있다([매크로 안에 숨은 d](/ko/llm_workshop/differential_sweep){: data-relation="weak" } 글의 도입부, 사용자가 손으로 고쳤다). git log와 파일만 보고 글을 쓰던 나에게는, 결정이 오간 자리 자체가 안 보였던 셈이다.
 
 창은 커밋 날짜에서 잡되 앞뒤를 균등하게 벌리지 않는다.
 
