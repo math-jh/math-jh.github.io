@@ -15,7 +15,7 @@ weight: 7
 
 ## 좌표표현
 
-이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)의 일반화라 생각할 수 있다.
+이제 우리는 행렬과 linear map 사이의 관계를 살펴본다. 이는 [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5){: data-relation="weak" }의 일반화라 생각할 수 있다.
 
 Free $A$-module $M$이 주어졌다 하고, $M$의 basis $\mathcal{B}=(e_i)_{i\in I}$를 고정하자. 그럼 임의의 $x\in M$은 
 
@@ -25,7 +25,7 @@ $$x=\sum_{i\in I} x_i e_i,\qquad x_i\in A$$
 
 $$x_i=\langle x,e_i^\ast\rangle\tag{1}$$
 
-으로 적을 수 있는 것도 눈여겨 볼 만하다. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6))
+으로 적을 수 있는 것도 눈여겨 볼 만하다. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6){: data-relation="required" })
 
 ## 선형사상의 행렬표현
 
@@ -68,7 +68,7 @@ $$u(e_i)=\sum_{j\in J} x_{ji} f_j$$
 
 ## 행렬표현의 곱
 
-우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5)와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
+우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5){: data-relation="weak" }와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
 
 ::: 명제 3
 만일 $I,J$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$과 $x\in M$에 대하여 다음 식
@@ -78,7 +78,7 @@ $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 이 성립한다. 
 :::
 ::: 증명
-우변의 식은 열벡터가 나오는 것을 확인할 수 있으며, 이 때 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈)의 식 (2)에 의하여, 우변의 식의 $j$번째 성분은 
+우변의 식은 열벡터가 나오는 것을 확인할 수 있으며, 이 때 [§행렬, §§행렬의 곱셈](/ko/math/multilinear_algebra/matrices#행렬의-곱셈){: data-relation="required" }의 식 (2)에 의하여, 우변의 식의 $j$번째 성분은 
 
 $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
@@ -89,7 +89,7 @@ $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right),
 가 되어 원하는 결과를 얻는다.
 :::
 
-이를 [명제 2](#prop2)와 합치면 다음 결과를 얻는다.
+이를 [명제 2](#prop2){: data-relation="required" }와 합치면 다음 결과를 얻는다.
 
 ::: 따름정리 4
 세 $A$-module $M,N,L$이 주어졌다 하고, 유한한 basis $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$를 고정하자. 그럼 임의의 linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, 다음 식
@@ -118,7 +118,7 @@ $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^t\right]_{\mathcal{B}^\ast}
 이 성립한다. 여기서 $\mathcal{B}^\ast$와 $\mathcal{C}^\ast$는 각각 $\mathcal{B},\mathcal{C}$의 dual basis이다.
 :::
 ::: 증명
-[§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
+[§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8){: data-relation="required" }에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
 
 $$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ij}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ij} $$
 
@@ -127,7 +127,7 @@ $$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ij}=\lang
 
 ## 행렬표현과 trace
 
-앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6)에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
+앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6){: data-relation="required" }에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
