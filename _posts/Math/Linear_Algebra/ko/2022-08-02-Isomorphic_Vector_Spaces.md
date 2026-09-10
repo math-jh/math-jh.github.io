@@ -16,7 +16,7 @@ weight: 7
 
 수학에서 특정한 대상들을 정의한 후에는 보통 이들을 <em-ko>같은</em-ko> 것들끼리 묶어 분류하는 작업을 하게 된다. 예컨대 집합을 다룰 때는 크기가 같은 두 집합 $A,B$를 같은 것으로 취급하며, 이는 정의에 의하여 $A$와 $B$ 사이에 전단사함수가 존재한다는 것이다. 
 
-물론 이를 그대로 벡터공간으로 가져올 수는 없다. 만일 집합으로서 같은 크기를 갖는 두 벡터공간을 같은 것으로 생각한다면, [\[집합론\] §자연수와 무한집합, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16)에 의하여 무한한 field $\mathbb{K}$ 위에서 정의된 유한차원 벡터공간들은 모두 같은 것으로 생각해야 한다. 또 일반적으로 함수는 벡터공간의 덧셈과 스칼라곱을 유지하지 않으므로 어쨌든 벡터공간을 다루기엔 부적절한 것은 분명하다.
+물론 이를 그대로 벡터공간으로 가져올 수는 없다. 만일 집합으로서 같은 크기를 갖는 두 벡터공간을 같은 것으로 생각한다면, [\[집합론\] §자연수와 무한집합, ⁋따름정리 16](/ko/math/set_theory/natural_numbers#cor16){: data-relation="required" }에 의하여 무한한 field $\mathbb{K}$ 위에서 정의된 유한차원 벡터공간들은 모두 같은 것으로 생각해야 한다. 또 일반적으로 함수는 벡터공간의 덧셈과 스칼라곱을 유지하지 않으므로 어쨌든 벡터공간을 다루기엔 부적절한 것은 분명하다.
 
 ## 동형인 벡터공간
 
@@ -41,16 +41,16 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 이와 비슷하게 $L^{-1}(w_1+w_2)=L^{-1}(w_1)+L^{-1}(w_2)$ 또한 보일 수 있다. 
 :::
 
-다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#def1) 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $\mathbb{K}$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
+다음 명제는 [\[집합론\] §기수, ⁋정의 1](/ko/math/set_theory/cardinals#def1){: data-relation="weak" } 이후에 간략하게 언급한 것과 동일한 집합론적 문제가 있다. 즉, <phrase>모든 $\mathbb{K}$-벡터공간들의 모임</phrase>이 실제로 집합이 되는지가 불확실하지만 이는 더 이상 부연설명 없이 넘어가기로 한다.
 
 ::: 명제 3
-[정의 1](#def1)의 관계 $\cong$는 동치관계이다.
+[정의 1](#def1){: data-relation="required" }의 관계 $\cong$는 동치관계이다.
 :::
 ::: 증명
 관계 $\cong$이 reflexive, symmetric, transitive함을 보여야 한다.
 
 1. 우선 임의의 $\mathbb{K}$-벡터공간 $V$에 대하여 $V\cong V$임은 자명하다. $\id_V:V\rightarrow V$가 $V$에서 $V$로의 isomorphism이 되기 때문이다.
-2. 앞선 [보조정리 2](#lem2)에 의해 $\cong$가 symmetric이라는 것이 자명하다.    
+2. 앞선 [보조정리 2](#lem2){: data-relation="required" }에 의해 $\cong$가 symmetric이라는 것이 자명하다.    
 3. 마지막으로 $U\cong V$, $V\cong W$라 하자. 그럼 두 isomorphism $L_1:U\rightarrow V$, $L_2: V\rightarrow W$가 존재하여, 이들의 역을 각각 $L_1'$, $L_2'$라 하면 $L_2\circ L_1:U\rightarrow W$는 두 linear map의 합성이므로 linear이고 $(L_1'\circ L_2')\circ(L_2\circ L_1)=\id_U$, $(L_2\circ L_1)\circ(L_1'\circ L_2')=\id_W$이므로 $L_2\circ L_1$은 isomorphism이다. 따라서 $U\cong W$이다. 
 :::
 
@@ -60,7 +60,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 두 $n$차원 $\mathbb{K}$-벡터공간은 항상 isomorphic하다.
 :::
 ::: 증명
-[§선형사상, ⁋예시 14](/ko/math/linear_algebra/linear_map#ex14)는 임의의 $n$차원 $\mathbb{K}$-벡터공간 $V$가 $V\cong \mathbb{K}^n$을 만족한다는 뜻이다. 또 다른 $n$차원 $\mathbb{K}$-벡터공간 $W$에 대하여도 $W\cong \mathbb{K}^n$이므로, $\cong$가 동치관계라는 것으로부터 $V\cong W$임을 안다.
+[§선형사상, ⁋예시 14](/ko/math/linear_algebra/linear_map#ex14){: data-relation="required" }는 임의의 $n$차원 $\mathbb{K}$-벡터공간 $V$가 $V\cong \mathbb{K}^n$을 만족한다는 뜻이다. 또 다른 $n$차원 $\mathbb{K}$-벡터공간 $W$에 대하여도 $W\cong \mathbb{K}^n$이므로, $\cong$가 동치관계라는 것으로부터 $V\cong W$임을 안다.
 :::
 
 물론 이 역 또한 성립하며, 따라서 유한차원 벡터공간의 구조를 결정하는 유일한 불변량은 벡터공간의 차원임을 알 수 있다.
@@ -69,7 +69,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 두 isomorphic한 $\mathbb{K}$-벡터공간 $V,W$와 isomorphism $L:V\rightarrow W$가 주어졌다 하자. 만약 $\mathcal{B}$가 $V$의 basis라면, $L(\mathcal{B})$도 $W$의 basis가 된다.
 :::
 ::: 증명
-[§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#cor9).
+[§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#cor9){: data-relation="required" }.
 :::
 
 ## Rank-nullity theorem

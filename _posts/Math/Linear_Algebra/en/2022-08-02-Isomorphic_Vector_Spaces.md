@@ -18,7 +18,7 @@ last_polished_at: 2026-05-31T22:30:05+00:00
 ---
 In mathematics, after defining certain objects we usually proceed to group and classify them according to whether they are <em>the same</em>. For example, when dealing with sets, two sets $A,B$ of the same size are regarded as the same, which by definition means there exists a bijection between $A$ and $B$.
 
-Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 16](/en/math/set_theory/natural_numbers#cor16), all finite-dimensional vector spaces over an infinite field $\mathbb{K}$ would have to be regarded as identical. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly unsuitable for studying vector spaces.
+Of course, we cannot simply carry this over to vector spaces. If we were to regard two vector spaces of the same set-theoretic size as the same, then by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 16](/en/math/set_theory/natural_numbers#cor16){: data-relation="required" }, all finite-dimensional vector spaces over an infinite field $\mathbb{K}$ would have to be regarded as identical. Moreover, since functions in general do not preserve the addition and scalar multiplication of a vector space, this is clearly unsuitable for studying vector spaces.
 
 ## Isomorphic Vector Spaces
 
@@ -43,16 +43,16 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 Similarly, $L^{-1}(w_1+w_2)=L^{-1}(w_1)+L^{-1}(w_2)$ can also be shown.
 :::
 
-The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1). Namely, it is uncertain whether <phrase>the collection of all $\mathbb{K}$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
+The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1){: data-relation="weak" }. Namely, it is uncertain whether <phrase>the collection of all $\mathbb{K}$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
 
 ::: Proposition 3
-The relation $\cong$ of [Definition 1](#def1) is an equivalence relation.
+The relation $\cong$ of [Definition 1](#def1){: data-relation="required" } is an equivalence relation.
 :::
 ::: Proof
 We must show that the relation $\cong$ is reflexive, symmetric, and transitive.
 
 1. First, it is obvious that $V\cong V$ for any $\mathbb{K}$-vector space $V$, because $\id_V:V\rightarrow V$ is an isomorphism from $V$ to $V$.
-2. By the preceding [Lemma 2](#lem2), it is obvious that $\cong$ is symmetric.    
+2. By the preceding [Lemma 2](#lem2){: data-relation="required" }, it is obvious that $\cong$ is symmetric.    
 3. Finally, suppose $U\cong V$ and $V\cong W$. Then there exist two isomorphisms $L_1:U\rightarrow V$, $L_2: V\rightarrow W$ such that
 :::
 
@@ -62,7 +62,7 @@ Although this proposition may seem obvious, it establishes the less obvious part
 Any two $n$-dimensional $\mathbb{K}$-vector spaces are always isomorphic.
 :::
 ::: Proof
-[§Linear Maps, ⁋Example 14](/en/math/linear_algebra/linear_map#ex14) means that any $n$-dimensional $\mathbb{K}$-vector space $V$ satisfies $V\cong \mathbb{K}^n$. For another $n$-dimensional $\mathbb{K}$-vector space $W$ we also have $W\cong \mathbb{K}^n$, so from the fact that $\cong$ is an equivalence relation we know that $V\cong W$.
+[§Linear Maps, ⁋Example 14](/en/math/linear_algebra/linear_map#ex14){: data-relation="required" } means that any $n$-dimensional $\mathbb{K}$-vector space $V$ satisfies $V\cong \mathbb{K}^n$. For another $n$-dimensional $\mathbb{K}$-vector space $W$ we also have $W\cong \mathbb{K}^n$, so from the fact that $\cong$ is an equivalence relation we know that $V\cong W$.
 :::
 
 Of course the converse also holds, and therefore we see that the only invariant determining the structure of a finite-dimensional vector space is its dimension.
@@ -71,7 +71,7 @@ Of course the converse also holds, and therefore we see that the only invariant 
 Let two isomorphic $\mathbb{K}$-vector spaces $V,W$ and an isomorphism $L:V\rightarrow W$ be given. If $\mathcal{B}$ is a basis of $V$, then $L(\mathcal{B})$ is also a basis of $W$.
 :::
 ::: Proof
-[§Linear Maps, ⁋Corollary 9](/en/math/linear_algebra/linear_map#cor9).
+[§Linear Maps, ⁋Corollary 9](/en/math/linear_algebra/linear_map#cor9){: data-relation="required" }.
 :::
 
 ## Rank-Nullity Theorem
