@@ -13,11 +13,11 @@ weight: 6
 
 ---
 
-[§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 우리는 quantum cohomology 측의 quantum differential equation (QDE)이 해 공간으로 $\dim_\mathbb{C} H^\ast(X)$ 차원의 flat section을 가짐을 보였고, 그 fundamental solution을 명시적으로 적은 것이 *Givental의 $J$-function*이라 예고했었다. 한편 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서는 B-side에서 period matrix $\mathcal{I}^a_p$가 B-model connection $\nabla^z_B$의 fundamental solution matrix를 이루는 것을 살펴보았다. 우리가 예고했던 mirror theorem은 결국 A-side의 $J$-function과 B-side의 period matrix가 동일한 $D$-module의 fundamental solution이라는 statement로 구체화될 것이며, 이번 글이 그 주장에서 비어있는 A-side 자리를 채울 것이다.
+[§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module){: data-relation="required" }에서 우리는 quantum cohomology 측의 quantum differential equation (QDE)이 해 공간으로 $\dim_\mathbb{C} H^\ast(X)$ 차원의 flat section을 가짐을 보였고, 그 fundamental solution을 명시적으로 적은 것이 *Givental의 $J$-function*이라 예고했었다. 한편 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="required" }에서는 B-side에서 period matrix $\mathcal{I}^a_p$가 B-model connection $\nabla^z_B$의 fundamental solution matrix를 이루는 것을 살펴보았다. 우리가 예고했던 mirror theorem은 결국 A-side의 $J$-function과 B-side의 period matrix가 동일한 $D$-module의 fundamental solution이라는 statement로 구체화될 것이며, 이번 글이 그 주장에서 비어있는 A-side 자리를 채울 것이다.
 
 ## Descendant Gromov-Witten invariant
 
-$J$-function의 정의를 시작하기 전에, 본 글 전반에서 사용할 *descendant* invariant를 ([\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 2](/ko/math/symplectic_geometry/gromov_witten#def2)) 본 글의 표기에 맞춰 짧게 정리해 두자. Genus $0$, $(n+1)$-marked, class $\beta$의 stable map의 moduli space 
+$J$-function의 정의를 시작하기 전에, 본 글 전반에서 사용할 *descendant* invariant를 ([\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 2](/ko/math/symplectic_geometry/gromov_witten#def2){: data-relation="required" }) 본 글의 표기에 맞춰 짧게 정리해 두자. Genus $0$, $(n+1)$-marked, class $\beta$의 stable map의 moduli space 
 
 $$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$
 
@@ -43,7 +43,7 @@ $$\int_\Sigma \psi_i\in \mathbb{Z}$$
 
 잘 알려진 사실은 이들 $n$개의 점이 사실은 moduli space의 boundary divisor, 즉 source curve의 degeneration이 일어나는 곳들과 $\Sigma$의 intersection이 일어나는 곳으로 생각할 수 있다는 것이며, 이로써 $\psi_i$는 source curve의 degeneration에 대한 정보를 담고 있는 것으로 생각할 수 있다.
 
-그럼 [정의 1](#def1)의 $\psi_i^{k_i}$ 성분들이 source curve의 degeneration을, $\ev_i^\ast\gamma_i$가 target의 incidence condition을 각각 결정한다는 것은 자명하다. 특히 나중 조건은 $i$번째 marked point $p_i$의 image가 $\gamma_i$를 지난다는 조건이다. 그러나 첫째 조건은 다소 덜 직관적이므로 이 의미를 풀어 살펴보자. 
+그럼 [정의 1](#def1){: data-relation="required" }의 $\psi_i^{k_i}$ 성분들이 source curve의 degeneration을, $\ev_i^\ast\gamma_i$가 target의 incidence condition을 각각 결정한다는 것은 자명하다. 특히 나중 조건은 $i$번째 marked point $p_i$의 image가 $\gamma_i$를 지난다는 조건이다. 그러나 첫째 조건은 다소 덜 직관적이므로 이 의미를 풀어 살펴보자. 
 
 우리는 앞서 $\psi_i$가 본질적으로는 source curve의 degeneration들의 합으로 나타날 수 있음을 보았다. 더 구체적으로, source curve가 marked point $1,\ldots, n$을 두 개의 component $S$, $S^c$로 쪼개며 degenerate한다 하고, 이에 대응되는 boundary divisor를 $D_S$라 하자. 여기서 우리는 $i\in S$인 것으로 두며, $i$가 속한 component를 *tail*이라 부른다. 이 때, $\mathbb{P}^1$을 stable하게 만들기 위해서는 세 점이 필요하므로 $S$와 $S^c$ 모두 두 점 이상이어야 한다. 
 
@@ -77,7 +77,7 @@ $$\begin{aligned}\left\langle \gamma_1, \ldots, \gamma_n, \frac{\gamma_{n+1}}{z 
 
 ## $J$-function의 도입
 
-이제 앞서 살펴본 gravitational invariant들을 사용하여 $J$-function을 도입한다. Smooth projective variety $X$, $H^\ast(X, \mathbb{C})$의 homogeneous basis $\{ T_a \}_{a=0,\ldots,s}$ ($T_0 = 1$), 그리고 이들이 주는 Poincaré dual basis $\{ T^a \}$를 생각하자. 이 중 $H^2$ 성분을 차지하는 부분을 (notation 단순화를 위해) $\{ T_a \}_{a=1,\ldots,r}$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 도입한 flat coordinate $t^a$와 Novikov variable $q_a := e^{t^a}$ ($a = 1, \ldots, r$)가 정의된다. 편의상 
+이제 앞서 살펴본 gravitational invariant들을 사용하여 $J$-function을 도입한다. Smooth projective variety $X$, $H^\ast(X, \mathbb{C})$의 homogeneous basis $\{ T_a \}_{a=0,\ldots,s}$ ($T_0 = 1$), 그리고 이들이 주는 Poincaré dual basis $\{ T^a \}$를 생각하자. 이 중 $H^2$ 성분을 차지하는 부분을 (notation 단순화를 위해) $\{ T_a \}_{a=1,\ldots,r}$로 잡으면, [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module){: data-relation="required" }에서 도입한 flat coordinate $t^a$와 Novikov variable $q_a := e^{t^a}$ ($a = 1, \ldots, r$)가 정의된다. 편의상 
 
 $$t_{(2)} := \sum_{b=1}^r t^b T_b$$
 
@@ -125,7 +125,7 @@ $$q_a\partial_{q_a} s_2 = T_a \qtimes t_{(2)}=T_a\qtimes \left(\sum_{b=1}^r t^b 
 
 $$\sum_{\beta \neq 0} q^\beta \sum_c \left(\sum_{b=1}^r t^b \langle T_a, T_b, T^c\rangle_{0, 3, \beta}\right) T_c$$
 
-부분을 갖는다. 한편 $T_b \in H^2$이므로 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)의 결과
+부분을 갖는다. 한편 $T_b \in H^2$이므로 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-relation="required" }의 결과
 
 $$\langle T_a, T_b, T^c\rangle_{0, 3, \beta} = (T_b \cdot \beta)\langle T_a, T^c\rangle_{0, 2, \beta}$$
 
@@ -145,7 +145,7 @@ $X$의 (small) *Givental $J$-function<sub>기벤탈 J-함수</sub>* $J_X: (\math
 $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 :::
 
-여기서 $H_2(X, \mathbb{Z})_{\mathrm{eff}}$는 effective curve class들의 집합 ([\[사교기하학\] §양자 코호몰로지, §§Novikov ring](/ko/math/symplectic_geometry/quantum_cohomology#novikov-ring)에서 정의)으로, $\beta$가 이 위를 달리며 각 $\beta \neq 0$이 degree $q^\beta$의 instanton 보정에 기여한다.
+여기서 $H_2(X, \mathbb{Z})_{\mathrm{eff}}$는 effective curve class들의 집합 ([\[사교기하학\] §양자 코호몰로지, §§Novikov ring](/ko/math/symplectic_geometry/quantum_cohomology#novikov-ring){: data-relation="required" }에서 정의)으로, $\beta$가 이 위를 달리며 각 $\beta \neq 0$이 degree $q^\beta$의 instanton 보정에 기여한다.
 
 앞서 우리는 다음의 식
 
@@ -167,9 +167,9 @@ $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\
 
 의 형태이지만, 위에서 우리는 single marked point들만 식에 넣었음을 유의하자. 이것이 가능한 이유는 $\beta\neq 0$이므로 source의 stability와 관계없이 target이 충분히 크므로 stability가 보장되기 때문이며, 이들만 보는 것으로 충분한 이유는 본질적으로 우리가 $H^2$ 방향 deformation, 즉 small quantum cohomology를 우선적으로 생각하기 때문이다. 
 
-더 구체적으로, 우리는 이미 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)로부터 Gromov-Witten invariant에 divisor $D\in H^2(X)$를 insert하는 것이 $D\cdot \beta$를 곱하는 효과로 나타남을 보았고, 이를 power series로 전개하면 결국 $H^2$ 방향을 보는 것은 $e^{t_{(2)}\cdot \beta}$를 앞에 곱하는 것, 즉 Novikov variable을 $q^\beta \mapsto e^{t_{(2)}\cdot \beta}q^\beta$로 재매개화하는 것에 지나지 않는다는 것을 살펴보았다. [정의 3](#def3)에서 우리는 여기에 더해 $T_a/(z-\psi)$ 항에 $z^{-1}$을 한 번 더 곱해주었으므로,[^1] 이 $z$-shift까지 반영하면 $J$-function 앞에 전체적으로 붙는 factor는 $e^{t_{(2)}/z}$가 된다. 이렇게 $H^2$ 방향의 의존성을 전부 $e^{t_{(2)}/z}$와 Novikov variable에 넣고 나면 Gromov-Witten 정보는 남은 하나의 marked point에 응축되므로, single marked point invariant만 보아도 충분하다. 
+더 구체적으로, 우리는 이미 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-relation="required" }로부터 Gromov-Witten invariant에 divisor $D\in H^2(X)$를 insert하는 것이 $D\cdot \beta$를 곱하는 효과로 나타남을 보았고, 이를 power series로 전개하면 결국 $H^2$ 방향을 보는 것은 $e^{t_{(2)}\cdot \beta}$를 앞에 곱하는 것, 즉 Novikov variable을 $q^\beta \mapsto e^{t_{(2)}\cdot \beta}q^\beta$로 재매개화하는 것에 지나지 않는다는 것을 살펴보았다. [정의 3](#def3){: data-relation="required" }에서 우리는 여기에 더해 $T_a/(z-\psi)$ 항에 $z^{-1}$을 한 번 더 곱해주었으므로,[^1] 이 $z$-shift까지 반영하면 $J$-function 앞에 전체적으로 붙는 factor는 $e^{t_{(2)}/z}$가 된다. 이렇게 $H^2$ 방향의 의존성을 전부 $e^{t_{(2)}/z}$와 Novikov variable에 넣고 나면 Gromov-Witten 정보는 남은 하나의 marked point에 응축되므로, single marked point invariant만 보아도 충분하다. 
 
-한편 $J$-function을 도입한 우리의 동기는 QDE ($\ast$)의 fundamental solution을 구하기 위함이었다는 것을 기억하자. [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 우리는 A-model $D$-module이 base $M_A = (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z$의 각 점 $(q, z)$마다 fiber로 $H^\ast(X)$를 얹은 bundle이고, 그 위의 connection 1-form $\mathcal{C}_a = T_a \qtimes -$ 또한 이 fiber 위의 endomorphism이었음을 보았으며, 이것의 해가 곧 ($\ast$)의 horizontal section이었다. 이들 해들은 $\dim_\mathbb{C}H^\ast(X)$차원이며, 만일 우리가 $T_a$들을 초기값으로 주고 이 방정식을 풀면 정확히 해들 전부가 나온다. 이 과정을 통해 우리는 다음의 fundamental solution matrix를 얻는다.
+한편 $J$-function을 도입한 우리의 동기는 QDE ($\ast$)의 fundamental solution을 구하기 위함이었다는 것을 기억하자. [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module){: data-relation="required" }에서 우리는 A-model $D$-module이 base $M_A = (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z$의 각 점 $(q, z)$마다 fiber로 $H^\ast(X)$를 얹은 bundle이고, 그 위의 connection 1-form $\mathcal{C}_a = T_a \qtimes -$ 또한 이 fiber 위의 endomorphism이었음을 보았으며, 이것의 해가 곧 ($\ast$)의 horizontal section이었다. 이들 해들은 $\dim_\mathbb{C}H^\ast(X)$차원이며, 만일 우리가 $T_a$들을 초기값으로 주고 이 방정식을 풀면 정확히 해들 전부가 나온다. 이 과정을 통해 우리는 다음의 fundamental solution matrix를 얻는다.
 
 ::: 명제 4 (A-side fundamental solution matrix)
 Endomorphism $S(q, z) \in \End(H^\ast(X))$를 다음의 matrix element
@@ -195,7 +195,7 @@ $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta
 
 $$\left\langle \frac{T_a}{z - \psi}, 1\right\rangle_{0, 2, \beta} = \sum_{k \geq 0} z^{-k-1}\langle \tau_k(T_a), 1\rangle_{0, 2, \beta}$$
 
-이다. 이 때, 각 항에 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3)을 적용하면 
+이다. 이 때, 각 항에 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3){: data-relation="required" }을 적용하면 
 
 $$\langle \tau_k(T_a), 1\rangle_{0, 2, \beta} = \langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta}$$
 
@@ -203,36 +203,36 @@ $$\langle \tau_k(T_a), 1\rangle_{0, 2, \beta} = \langle \tau_{k-1}(T_a)\rangle_{
 
 $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m \geq 0} z^{-m-2}\langle \tau_m(T_a)\rangle_{0, 1, \beta} = \left\langle \frac{T_a}{z(z - \psi)}\right\rangle_{0, 1, \beta}$$
 
-이 된다. 이것이 정확히 [정의 3](#def3)의 small $J$ 식 안에 들어 있는 항이며, 여기에 prefactor $e^{t_{(2)}/z}$를 곱한 것이 $J_X = e^{t_{(2)}/z} S(q, z) T_0$이다. 이것이 [정의 3](#def3)에서 다소 어색하게 보일 수 있었던 추가적인 $z^{-1}$의 기원이다. 
+이 된다. 이것이 정확히 [정의 3](#def3){: data-relation="required" }의 small $J$ 식 안에 들어 있는 항이며, 여기에 prefactor $e^{t_{(2)}/z}$를 곱한 것이 $J_X = e^{t_{(2)}/z} S(q, z) T_0$이다. 이것이 [정의 3](#def3){: data-relation="required" }에서 다소 어색하게 보일 수 있었던 추가적인 $z^{-1}$의 기원이다. 
 
-이제 $S$의 각 열 $S(q,z)T_b$가 horizontal section임을 보이자. 이를 위해서는  $z q_a\partial_{q_a}$를 $S(q, z) T_b$에 직접 작용시켜보면 된다. 우선 $S(q, z) T_b$는 $\beta$마다 $q^\beta$를 인자로 갖는 항들의 합으로 나타나는데, $J$-function을 도입하기 전 살펴본 recursion relation과 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)을 사용하면 $z q_a\partial_{q_a}$는 결국 $T_a$를 한 점으로 삽입하면서, 곱해진 $z$로 distinguished marked point의 $1/(z - \psi)$에서 $\psi$를 한 degree 내리는 효과를 준다.
+이제 $S$의 각 열 $S(q,z)T_b$가 horizontal section임을 보이자. 이를 위해서는  $z q_a\partial_{q_a}$를 $S(q, z) T_b$에 직접 작용시켜보면 된다. 우선 $S(q, z) T_b$는 $\beta$마다 $q^\beta$를 인자로 갖는 항들의 합으로 나타나는데, $J$-function을 도입하기 전 살펴본 recursion relation과 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-relation="required" }을 사용하면 $z q_a\partial_{q_a}$는 결국 $T_a$를 한 점으로 삽입하면서, 곱해진 $z$로 distinguished marked point의 $1/(z - \psi)$에서 $\psi$를 한 degree 내리는 효과를 준다.
 
-이제 이렇게 degree를 내린 $\psi$를 [명제 2](#prop2)로 (정확히는 [명제 2](#prop2)에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T^d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 degree인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
+이제 이렇게 degree를 내린 $\psi$를 [명제 2](#prop2){: data-relation="required" }로 (정확히는 [명제 2](#prop2){: data-relation="required" }에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T^d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 degree인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
 :::
 
 따라서 $q\rightarrow 0$일 때 모든 $q^\beta$항이 사라지므로, $S$의 classical limit은 $\id$이다. 이는 A-side에서는 quantum cup product의 classical limit이 ordinary cup product라는 것의 결과로 생각할 수 있다. 
 
-[명제 4](#prop4)는 $J$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $S$의 한 열 (구체적으로 normalization element $T_0 = 1$에 해당하는 열)을 이룸을 보여준다. 이는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $\mathcal{I}$가 frame $\{e_a\}$로 trivialize한 $\nabla^z_B$의 fundamental solution matrix를 이루었던 것과 정확히 대응되는 것이다. 
+[명제 4](#prop4){: data-relation="required" }는 $J$-function이 단순한 enumerative 데이터의 묶음을 넘어, A-model 측 fundamental solution matrix $S$의 한 열 (구체적으로 normalization element $T_0 = 1$에 해당하는 열)을 이룸을 보여준다. 이는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="weak" }의 period matrix $\mathcal{I}$가 frame $\{e_a\}$로 trivialize한 $\nabla^z_B$의 fundamental solution matrix를 이루었던 것과 정확히 대응되는 것이다. 
 
-특히 $H^\ast(X)$가 $H^2(X)$로 생성되는 경우, 가령 $X = \mathbb{P}^n$이나 대부분의 toric Fano variety인 경우 이 한 열 $J$가 사실상 $S$ 전체를 결정한다. 실제로 [명제 4](#prop4)의 flat section equation $z q_a\partial_{q_a} J = T_a \qtimes J$를 반복 적용하면 $H^2$ class들의 quantum product $T_{a_1} \qtimes \cdots \qtimes T_{a_k} \qtimes J$가 차례로 생성되는데, $H^\ast(X)$가 $H^2$로 생성되면 이 quantum product들이 모든 $T_b$를 cohomology의 basis로 훑으므로 나머지 열 $S(q, z) T_b$도 전부 $J$의 미분으로 복원되기 때문이다. 이는 [주장 5](#conj5)에서 우리의 "Mirror theorem"이 오직 첫 열에 대한 주장만 하는 것에 대한 정당성을 부여한다.
+특히 $H^\ast(X)$가 $H^2(X)$로 생성되는 경우, 가령 $X = \mathbb{P}^n$이나 대부분의 toric Fano variety인 경우 이 한 열 $J$가 사실상 $S$ 전체를 결정한다. 실제로 [명제 4](#prop4){: data-relation="required" }의 flat section equation $z q_a\partial_{q_a} J = T_a \qtimes J$를 반복 적용하면 $H^2$ class들의 quantum product $T_{a_1} \qtimes \cdots \qtimes T_{a_k} \qtimes J$가 차례로 생성되는데, $H^\ast(X)$가 $H^2$로 생성되면 이 quantum product들이 모든 $T_b$를 cohomology의 basis로 훑으므로 나머지 열 $S(q, z) T_b$도 전부 $J$의 미분으로 복원되기 때문이다. 이는 [주장 5](#conj5){: data-relation="forward" }에서 우리의 "Mirror theorem"이 오직 첫 열에 대한 주장만 하는 것에 대한 정당성을 부여한다.
 
-한편 이 계산은 앞서 ($\ast$)에서부터 계산하여 적분을 반복하며 얻어진 적분상수의 처리와도 관련되어 있는데, 바로 [명제 4](#prop4)의 $S$는 이 적분상수를 모든 degree에서 $0$으로 버린 해라는 것이다. 즉, $t_{(2)}$에서 나오는 성분들을 prefactor $e^{t_{(2)}/z}$로 따로 떼어내고 나면 남는 모든 보정이 $\beta \neq 0$의 instanton degree $q^\beta$만을 갖도록, 따라서 위와 같이 $q \rightarrow 0$일 때 classical limit이 나오도록 한 fundamental solution이다. 
+한편 이 계산은 앞서 ($\ast$)에서부터 계산하여 적분을 반복하며 얻어진 적분상수의 처리와도 관련되어 있는데, 바로 [명제 4](#prop4){: data-relation="required" }의 $S$는 이 적분상수를 모든 degree에서 $0$으로 버린 해라는 것이다. 즉, $t_{(2)}$에서 나오는 성분들을 prefactor $e^{t_{(2)}/z}$로 따로 떼어내고 나면 남는 모든 보정이 $\beta \neq 0$의 instanton degree $q^\beta$만을 갖도록, 따라서 위와 같이 $q \rightarrow 0$일 때 classical limit이 나오도록 한 fundamental solution이다. 
 
 ## Mirror theorem
 
-우리는 앞서 A-side의 fundamental solution matrix $S$와 ([명제 4](#prop4)) B-side의 period matrix $\mathcal{I}$를 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)) 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다.
+우리는 앞서 A-side의 fundamental solution matrix $S$와 ([명제 4](#prop4){: data-relation="required" }) B-side의 period matrix $\mathcal{I}$를 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="required" }) 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다.
 
 ::: misc 주장 5 (Mirror theorem, $J$-function form) {#conj5}
 Mirror pair $(X, \check{X})$에 대하여, $X$의 $J$-function은 $T_0 = 1$ normalization에 대응하는 특정 Lefschetz thimble $\Gamma_0$ (large radius limit 근방에서 결정되는 *distinguished* thimble)에 대한 oscillating integral의 cohomology basis $\{T^a\}$ 성분들로 적힌다. 즉
 
 $$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) \;\propto\; \mathcal{I}^a_{\Gamma_0}(q, z) = \int_{\Gamma_0} T_a\, e^{W_q/z}\,\omega$$
 
-가 up to normalization으로 성립한다. 여기서 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 도입한 period matrix $\mathcal{I}^a_p$의 $p = \Gamma_0$ 열이다. 
+가 up to normalization으로 성립한다. 여기서 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="required" }에서 도입한 period matrix $\mathcal{I}^a_p$의 $p = \Gamma_0$ 열이다. 
 :::
 
-위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $QH^\ast(X) \cong \Jac(W_q)$은 $z\rightarrow 0$일 때의 leading order로 복원된다. 구체적으로 $z \rightarrow 0$ stationary phase asymptotic은 ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)) $W_q$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $\{W_q(p)\}$가 quantum cohomology의 canonical coordinate들을 복원한다.
+위의 [주장 5](#conj5){: data-relation="required" }는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $QH^\ast(X) \cong \Jac(W_q)$은 $z\rightarrow 0$일 때의 leading order로 복원된다. 구체적으로 $z \rightarrow 0$ stationary phase asymptotic은 ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3){: data-relation="required" }) $W_q$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $\{W_q(p)\}$가 quantum cohomology의 canonical coordinate들을 복원한다.
 
-이 주장은 단순히 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)를 반복한 것이 아니다. 이를 보이기 위해 우리는 우선 $J$-function이 만족하는 QDE와 ([명제 4](#prop4)) period matrix가 만족하는 Gauss-Manin system이 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)) 동일한 $D$-module을 정의함을 보여야 하며, 이것이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 내용이다. 그 후에 우리는 $J$-function, 즉 행렬 $S$의 첫 열이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 isomorphism 아래 thimble period들의 임의의 선형결합이 아니라 하필 distinguished thimble $\Gamma_0$ 위의 oscillating integral 하나로 옮겨짐을 확인해야 한다. 이를 위해서는 추가적인 양 변의 *integral structure*가 일치한다는 주장이 필요하며, A-side에서는 $K$-theory와 $\hat{\Gamma}$-class가 정의하는 lattice, 그리고 B-side에서는 Lefschetz thimble들이 생성하는 lattice들이 이 역할을 한다. 
+이 주장은 단순히 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-relation="required" }를 반복한 것이 아니다. 이를 보이기 위해 우리는 우선 $J$-function이 만족하는 QDE와 ([명제 4](#prop4){: data-relation="required" }) period matrix가 만족하는 Gauss-Manin system이 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="required" }) 동일한 $D$-module을 정의함을 보여야 하며, 이것이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-relation="required" }의 내용이다. 그 후에 우리는 $J$-function, 즉 행렬 $S$의 첫 열이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-relation="required" }의 isomorphism 아래 thimble period들의 임의의 선형결합이 아니라 하필 distinguished thimble $\Gamma_0$ 위의 oscillating integral 하나로 옮겨짐을 확인해야 한다. 이를 위해서는 추가적인 양 변의 *integral structure*가 일치한다는 주장이 필요하며, A-side에서는 $K$-theory와 $\hat{\Gamma}$-class가 정의하는 lattice, 그리고 B-side에서는 Lefschetz thimble들이 생성하는 lattice들이 이 역할을 한다. 
 
 Calabi-Yau hypersurface in toric variety의 경우 Givental과 Lian-Liu-Yau가 이를 증명하였으며, 우리의 주된 관심 대상인 toric Fano variety의 경우 다음 절의 *$I = J$* 정리가 이 주장의 explicit하고 계산 가능한 형태를 제공한다.
 
@@ -246,7 +246,7 @@ $X$를 smooth projective toric Fano variety, $D_1, \ldots, D_m$을 toric divisor
 $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 :::
 
-여기서 형식상 등장하는 $-\infty$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $D_i \cdot \beta$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $D_i$와 그 intersection number $D_i \cdot \beta$뿐이며, 이 둘이 담고 있는 정보는 $X$의 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1)에서 도입한 *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$가 담은 정보와 같다. 
+여기서 형식상 등장하는 $-\infty$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $D_i \cdot \beta$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $D_i$와 그 intersection number $D_i \cdot \beta$뿐이며, 이 둘이 담고 있는 정보는 $X$의 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1){: data-relation="weak" }에서 도입한 *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$가 담은 정보와 같다. 
 
 $X$가 smooth projective toric variety라 하자. 그럼 다음 short exact sequence
 
@@ -258,7 +258,7 @@ $$\{(a_i)_i \in \mathbb{Z}^m \mid \sum_i a_i v_i = 0\}$$
 
 과 동일하다. 이 때 charge matrix는 정의상 이 $r$개의 관계식을 행으로 모은 것이며, 따라서 $H_2(X, \mathbb{Z})$의 basis에 대한 정보를 정확하게 가지고 있다. 즉, $\mathbb{Z}^m$의 각 행 $(Q_{j\bullet})$의 preimage $\beta_j=\iota^{-1}(Q_{j\bullet})$이 $H_2(X, \mathbb{Z})$의 basis를 이루며, 이 세팅에서 toric divisor $D_i$와의 intersection은 $\beta=(a_i)_i$의 $i$번째 좌표를 읽는 것에 불과하므로 $D_i\cdot\beta_j=Q_{ji}$이다. 
 
-이 식의 기원은 $X$의 Hori-Vafa mirror $\check{X}$ 위의 oscillating integral로, 좀 더 정확히는 그 적분을 [주장 5](#conj5)의 distinguished thimble $\Gamma_0$에 대해 charge 데이터로 전개한 것이 정확히 $I_X$이다. 즉 $I_X$는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)의 period matrix $\mathcal{I}$의 distinguished 열을 명시적으로 적은 것에 불과하다. 이에 대한 자세한 전개는 [예시 8](#ex8)로 미루고, 우선 이를 $J$-function에 대한 주장으로 번역하자.
+이 식의 기원은 $X$의 Hori-Vafa mirror $\check{X}$ 위의 oscillating integral로, 좀 더 정확히는 그 적분을 [주장 5](#conj5){: data-relation="required" }의 distinguished thimble $\Gamma_0$에 대해 charge 데이터로 전개한 것이 정확히 $I_X$이다. 즉 $I_X$는 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7){: data-relation="required" }의 period matrix $\mathcal{I}$의 distinguished 열을 명시적으로 적은 것에 불과하다. 이에 대한 자세한 전개는 [예시 8](#ex8){: data-relation="forward" }로 미루고, 우선 이를 $J$-function에 대한 주장으로 번역하자.
 
 ::: 명제 7 (Givental's mirror theorem)
 $X$가 smooth projective toric Fano variety일 때, $X$의 $I$-function과 $J$-function은
@@ -272,7 +272,7 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 으로부터 정의되는 mirror map이다.
 :::
 
-증명을 위해 양 변을 각각 살펴보면, $J_X$는 [명제 4](#prop4)에서 본 대로 small QDE ($\ast$)의 fundamental solution이고, $I_X$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $I_X$ 또한 $J_X$와 같은 $D$-module의 해, 즉 같은 QDE ($\ast$)의 해임을 직접 확인하는 데 있다. 만일 $X$가 toric Fano이면 $H^\ast(X)$가 $H^2(X)$로 생성되므로, ($\ast$)는 $I_X$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $I_X$의 hypergeometric 곱에 $z q_a\partial_{q_a}$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $I_X$와 $J_X$는 모두 $z \rightarrow \infty$에서 $1 + O(z^{-1})$의 normalization을 가지는데, QDE의 해는 $s_0$이 결정되면 나머지는 이 leading asymptotic으로부터 점화식 형태로 유일하게 결정되므로 $J_X(\tau(q), z) = I_X(q, z)$를 얻는다. 이에 대한 구체적인 계산은 $X = \mathbb{P}^n$에서 확인해보기로 한다. ([예시 8](#ex8))
+증명을 위해 양 변을 각각 살펴보면, $J_X$는 [명제 4](#prop4){: data-relation="required" }에서 본 대로 small QDE ($\ast$)의 fundamental solution이고, $I_X$는 [정의 6](#def6){: data-relation="required" }에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $I_X$ 또한 $J_X$와 같은 $D$-module의 해, 즉 같은 QDE ($\ast$)의 해임을 직접 확인하는 데 있다. 만일 $X$가 toric Fano이면 $H^\ast(X)$가 $H^2(X)$로 생성되므로, ($\ast$)는 $I_X$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $I_X$의 hypergeometric 곱에 $z q_a\partial_{q_a}$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $I_X$와 $J_X$는 모두 $z \rightarrow \infty$에서 $1 + O(z^{-1})$의 normalization을 가지는데, QDE의 해는 $s_0$이 결정되면 나머지는 이 leading asymptotic으로부터 점화식 형태로 유일하게 결정되므로 $J_X(\tau(q), z) = I_X(q, z)$를 얻는다. 이에 대한 구체적인 계산은 $X = \mathbb{P}^n$에서 확인해보기로 한다. ([예시 8](#ex8){: data-relation="forward" })
 
 여기서 mirror map이 잘 정의되는 것은 $X$의 Fano 성질 덕분임에 유의하자. $X$가 Fano이면 영이 아닌 모든 effective curve class $\beta$에 대해 $-K_X \cdot \beta > 0$이므로 $q^\beta$ 보정이 전부 $z^{-1}$ 이하 degree에만 나타나고, 따라서 $I_X$의 $z^0$ 항이 정확히 $1$이 되어 ($I_X = 1 + O(z^{-1})$) $z^{-1}$ 계수로 $\tau(q)$를 읽어낼 수 있다. 더 일반적으로 $-K_X$가 nef이기만 한 *semi-positive* 경우에는 $-K_X \cdot \beta = 0$인 방향이 $z^0$ degree에 보정 $I_0(q) \neq 1$을 만들어 관계식이 $J_X(\tau(q), z) = I_X(q, z)/I_0(q)$로 수정된다. 
 
@@ -280,18 +280,18 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 
 $$-K_X \cdot \beta = r_X (H \cdot \beta) \geq 2$$
 
-가 되어 $q$에 의존하는 보정이 전부 $z^{-2}$ 이하 degree로 밀려난다. 그 결과 mirror map $\tau(q)$에 $q$-보정이 남지 않으며, 이 경우 $J_X(q, z) = I_X(q, z)$가 좌표변환 없이 그대로 성립한다. 다음 [예시 8](#ex8)의 $\mathbb{P}^n$ ($-K = (n+1)H$, Fano index $n+1 \geq 2$)이 이 경우이다.
+가 되어 $q$에 의존하는 보정이 전부 $z^{-2}$ 이하 degree로 밀려난다. 그 결과 mirror map $\tau(q)$에 $q$-보정이 남지 않으며, 이 경우 $J_X(q, z) = I_X(q, z)$가 좌표변환 없이 그대로 성립한다. 다음 [예시 8](#ex8){: data-relation="forward" }의 $\mathbb{P}^n$ ($-K = (n+1)H$, Fano index $n+1 \geq 2$)이 이 경우이다.
 
 ::: 예시 8 ($X = \mathbb{P}^n$)
 $\mathbb{P}^n$의 fan은 standard simplex의 normal fan으로, $n+1$개의 ray 
 
 $$v_0 = -e_1 - \cdots - e_n,\qquad v_i = e_i\quad (i = 1, \ldots, n)$$
 
-을 갖는다. ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)) 이 때 toric divisor들은 각각의 coordinate hyperplane에 해당하는 $D_0, \ldots, D_n$이며, 이들은 모두 linearly equivalent하므로 단일한 hyperplane class $H\in H^2(\mathbb{P}^n)$을 정의했다. 뿐만 아니라 $\mathbb{P}^n$의 cohomology 계산은 이 hyperplane class가 $\mathbb{P}^n$ 전체의 cohomology를 생성하는 것을 알려주었다. 
+을 갖는다. ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-relation="weak" }) 이 때 toric divisor들은 각각의 coordinate hyperplane에 해당하는 $D_0, \ldots, D_n$이며, 이들은 모두 linearly equivalent하므로 단일한 hyperplane class $H\in H^2(\mathbb{P}^n)$을 정의했다. 뿐만 아니라 $\mathbb{P}^n$의 cohomology 계산은 이 hyperplane class가 $\mathbb{P}^n$ 전체의 cohomology를 생성하는 것을 알려주었다. 
 
-이제 [정의 6](#def6)의 $I$-function 공식에 들어가는 데이터를 $\mathbb{P}^n$에 맞춰 풀어 보자. 우선 $H^2(\mathbb{P}^n)$이 $H$ 하나로 생성되므로 $t_{(2)} = tH$이며, Novikov variable이 $q = e^t$로 주어진다. 즉, $t = \ln q$이므로 $e^{t_{(2)}/z} = e^{H \ln q / z}$로 쓸 수 있다. 
+이제 [정의 6](#def6){: data-relation="required" }의 $I$-function 공식에 들어가는 데이터를 $\mathbb{P}^n$에 맞춰 풀어 보자. 우선 $H^2(\mathbb{P}^n)$이 $H$ 하나로 생성되므로 $t_{(2)} = tH$이며, Novikov variable이 $q = e^t$로 주어진다. 즉, $t = \ln q$이므로 $e^{t_{(2)}/z} = e^{H \ln q / z}$로 쓸 수 있다. 
 
-다음으로 effective curve class는 line class $H^\vee$의 음이 아닌 배수 $\beta = d H^\vee$ ($d \geq 0$)로 매개되므로 $q^\beta = q^d$이고, $\mathbb{P}^n$의 $n+1$개 toric divisor $D_0, \ldots, D_n$은 ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11)) 모두 $D_i \cdot \beta = H \cdot d H^\vee = d$을 만족하므로, 이를 대입하면 각 인자는 $-\infty$로의 무한곱이 상쇄되어
+다음으로 effective curve class는 line class $H^\vee$의 음이 아닌 배수 $\beta = d H^\vee$ ($d \geq 0$)로 매개되므로 $q^\beta = q^d$이고, $\mathbb{P}^n$의 $n+1$개 toric divisor $D_0, \ldots, D_n$은 ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11){: data-relation="weak" }) 모두 $D_i \cdot \beta = H \cdot d H^\vee = d$을 만족하므로, 이를 대입하면 각 인자는 $-\infty$로의 무한곱이 상쇄되어
 
 $$\frac{\prod_{k=-\infty}^{0}(D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)} = \frac{\prod_{k=-\infty}^{0}(H + kz)}{\prod_{k=-\infty}^{d}(H + kz)} = \frac{1}{\prod_{j=1}^{d}(H + jz)}$$
 
@@ -303,19 +303,19 @@ $$I_{\mathbb{P}^n}(q, z) = e^{H \ln q /z} \sum_{d \geq 0} \frac{q^d}{\prod_{j=1}
 
 $$I_{\mathbb{P}^n}(q, z) = 1 + \frac{H \ln q}{z} + \frac{(H \ln q)^2}{2 z^2} + \cdots + q \frac{1}{(H+z)^{n+1}} + \cdots$$
 
-이제 $\mathbb{P}^n$의 Fano index는 $-K_{\mathbb{P}^n} = (n+1) H$로부터 $n+1 \geq 2$이다. 위 전개에서 $q$에 의존하는 보정 ($d \geq 1$의 $q^d$ 항)은 $z^{-(n+1)}$ 이하 degree에만 나타나므로 $I_{\mathbb{P}^n}$의 $z^{-1}$ 계수는 prefactor에서 오는 $H \ln q$ (곧 $t_{(2)}$)뿐이다. 따라서 [명제 7](#prop7) 직후 논의대로 mirror map은 identity이고
+이제 $\mathbb{P}^n$의 Fano index는 $-K_{\mathbb{P}^n} = (n+1) H$로부터 $n+1 \geq 2$이다. 위 전개에서 $q$에 의존하는 보정 ($d \geq 1$의 $q^d$ 항)은 $z^{-(n+1)}$ 이하 degree에만 나타나므로 $I_{\mathbb{P}^n}$의 $z^{-1}$ 계수는 prefactor에서 오는 $H \ln q$ (곧 $t_{(2)}$)뿐이다. 따라서 [명제 7](#prop7){: data-relation="required" } 직후 논의대로 mirror map은 identity이고
 
 $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
 이어야 한다. 이를 직접 확인해보자. 
 
-B-side의 계산은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 어느정도 끝나있다. 그에 따르면, $\mathbb{P}^n$의 fundamental solution matrix $\mathcal{I}_p^a(q,z)$에 대하여, Lefschetz thimble base $\Gamma_p$에 해당하는 vector의 첫째 성분 $\mathcal{I}_p^0(q,z)$가 다음의 식
+B-side의 계산은 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8){: data-relation="required" }에서 어느정도 끝나있다. 그에 따르면, $\mathbb{P}^n$의 fundamental solution matrix $\mathcal{I}_p^a(q,z)$에 대하여, Lefschetz thimble base $\Gamma_p$에 해당하는 vector의 첫째 성분 $\mathcal{I}_p^0(q,z)$가 다음의 식
 
 $$(z\partial_q)(qz\partial_q)^n\mathcal{I}_p^0=\mathcal{I}_p^0 \tag{$\ast\ast$}$$
 
-을 만족해야 한다. 이제 우리는 위의 $I$-function에서 $H=0$으로 둔 것이 이 식을 만족함을 보인다. ($\ast$)에 따르면 $qz\partial_q$를 취하는 것은 $H$와의 quantum product를 취하는 것과 같고, 이는 B-side에서 $\mathcal{I}_p^0$으로부터 귀납적으로 $\mathcal{I}_p^a$들을 계산하는 것과 정확히 같으며, 따라서 $H=0$일 때의 이들이 같은 ODE의 해라는 것을 보이는 것으로 [명제 7](#prop7)의 검증이 완료된다. 
+을 만족해야 한다. 이제 우리는 위의 $I$-function에서 $H=0$으로 둔 것이 이 식을 만족함을 보인다. ($\ast$)에 따르면 $qz\partial_q$를 취하는 것은 $H$와의 quantum product를 취하는 것과 같고, 이는 B-side에서 $\mathcal{I}_p^0$으로부터 귀납적으로 $\mathcal{I}_p^a$들을 계산하는 것과 정확히 같으며, 따라서 $H=0$일 때의 이들이 같은 ODE의 해라는 것을 보이는 것으로 [명제 7](#prop7){: data-relation="required" }의 검증이 완료된다. 
 
-그럼 [정의 6](#def6)의 곱 식에서 prefactor는 $e^0 = 1$, 각 인자는 $(H + jz) \mapsto jz$가 되므로 우리는 다음의 식
+그럼 [정의 6](#def6){: data-relation="required" }의 곱 식에서 prefactor는 $e^0 = 1$, 각 인자는 $(H + jz) \mapsto jz$가 되므로 우리는 다음의 식
 
 $$\Phi_0(q, z) := I_{\mathbb{P}^n}(q, z)\big\vert_{H=0} = \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
@@ -329,16 +329,16 @@ $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}q^{d-1}}{(d!
 
 가 정확히 성립하는 것을 확인할 수 있다. 
 
-[주장 5](#conj5)의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8)에서 이미 계산해 두었으나, 이는 이번 글에서 우리의 핵심적인 관심사에서는 약간 벗어나있으므로 생략하기로 한다. 
+[주장 5](#conj5){: data-relation="weak" }의 stationary phase 측면 또한 [§가우스-마닌 접속, ⁋예시 8](/ko/math/mirror_symmetry/gauss-manin_connection#ex8){: data-relation="weak" }에서 이미 계산해 두었으나, 이는 이번 글에서 우리의 핵심적인 관심사에서는 약간 벗어나있으므로 생략하기로 한다. 
 :::
 
-이 예시는 mirror symmetry가 추상적인 동형이 아니라 구체적인 두 hypergeometric series의 일치로 실현됨을 보여준다. 일반적인 toric Fano variety의 경우 비슷한 명시적 계산이 charge matrix로부터 진행되며, 그 모든 사례에서 [명제 7](#prop7)의 $I = J$ 정리가 mirror symmetry의 실용적인 검증을 제공한다.
+이 예시는 mirror symmetry가 추상적인 동형이 아니라 구체적인 두 hypergeometric series의 일치로 실현됨을 보여준다. 일반적인 toric Fano variety의 경우 비슷한 명시적 계산이 charge matrix로부터 진행되며, 그 모든 사례에서 [명제 7](#prop7){: data-relation="weak" }의 $I = J$ 정리가 mirror symmetry의 실용적인 검증을 제공한다.
 
 ## Big quantum cohomology로의 확장
 
-지금까지 다룬 small $J$-function은 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)의 $H^2$ 방향만의 deformation을 base로 한 small quantum $D$-module에 대한 fundamental solution이었다. 같은 글의 앞부분에서 본 것처럼 Dubrovin connection 자체는 사실 $H^\ast(X)$ 전체 deformation을 base로 한 big quantum cohomology 위에서 정의되었으며, $H^2$ 방향만 본 small 버전은 이를 specialize한 것이었다. 같은 격상이 $J$-function에 대해서도 가능하며, 그것이 *big $J$-function*이다. 
+지금까지 다룬 small $J$-function은 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module){: data-relation="required" }의 $H^2$ 방향만의 deformation을 base로 한 small quantum $D$-module에 대한 fundamental solution이었다. 같은 글의 앞부분에서 본 것처럼 Dubrovin connection 자체는 사실 $H^\ast(X)$ 전체 deformation을 base로 한 big quantum cohomology 위에서 정의되었으며, $H^2$ 방향만 본 small 버전은 이를 specialize한 것이었다. 같은 격상이 $J$-function에 대해서도 가능하며, 그것이 *big $J$-function*이다. 
 
-Big 버전의 setup으로 가려면 $H^\ast(X)$의 일반적인 deformation parameter $t = \sum_{a=0}^s t^a T_a$를 도입해야 한다. 임의의 $t \in H^\ast(X)$에 대한 big quantum product $\star_t$는 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module)에서 본 대로 $\mathcal{C}_\alpha = T_\alpha \star_t -$로 Dubrovin connection의 connection $1$-form을 결정한다. 그 dual horizontal section equation은
+Big 버전의 setup으로 가려면 $H^\ast(X)$의 일반적인 deformation parameter $t = \sum_{a=0}^s t^a T_a$를 도입해야 한다. 임의의 $t \in H^\ast(X)$에 대한 big quantum product $\star_t$는 [§두브로빈 접속, §§D-module](/ko/math/mirror_symmetry/dubrovin_connection#d-module){: data-relation="required" }에서 본 대로 $\mathcal{C}_\alpha = T_\alpha \star_t -$로 Dubrovin connection의 connection $1$-form을 결정한다. 그 dual horizontal section equation은
 
 $$z\partial_{t^a} s = T_a \star_t s\qquad (a = 0, 1, \ldots, \dim_\mathbb{C} H^\ast(X) - 1)$$
 
@@ -352,9 +352,9 @@ $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in 
 여기서 첫 marked point에 $T_a/(z-\psi)$가 (즉 $T_a$의 pullback에 모든 degree의 $\psi^k$가 generating function 형태로) 끼이고, 나머지 $n$개 marked point에 모두 $t \in H^\ast(X)$가 삽입되어 총 $n+1$개 marked point를 이룬다.
 :::
 
-Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4)의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원되는데, $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오고, 이들이 $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$로 합산되며 $\psi$-shift 보정이 추가 $z^{-1}$ 인자를 만들어내어, 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3)의 small $J$-function 형태가 그대로 복원된다. 
+Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4){: data-relation="required" }의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원되는데, $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오고, 이들이 $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$로 합산되며 $\psi$-shift 보정이 추가 $z^{-1}$ 인자를 만들어내어, 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3){: data-relation="required" }의 small $J$-function 형태가 그대로 복원된다. 
 
-Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5)도 big 버전으로 격상되어 *전체* $S$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $I = J$도 ([명제 7](#prop7)) mirror map $\tau(q)$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
+Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5){: data-relation="forward" }도 big 버전으로 격상되어 *전체* $S$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $I = J$도 ([명제 7](#prop7){: data-relation="forward" }) mirror map $\tau(q)$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
 
 ---
 
@@ -365,4 +365,4 @@ Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들
 
 ---
 
-[^1]: 그 기원은 [명제 4](#prop4)의 증명에서 살펴본다. 
+[^1]: 그 기원은 [명제 4](#prop4){: data-relation="forward" }의 증명에서 살펴본다. 
