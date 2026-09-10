@@ -41,9 +41,9 @@ $A$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$의 *codimension<s
 마지막으로, 임의의 $A$-module $M$에 대하여 $M$의 dimension과 codimension을 $\ann(M)$의 dimension과 codimension으로 각각 정의한다.
 :::
 
-다소 주의할 사항으로, 위의 정의를 따르면 $\mathfrak{a}$는 먼저 정의한 ideal로서의 dimension과, 이를 $A$-module로 봤을 때의 dimension의 두 가지 정의를 갖게 되는데, 이 두 정의가 주는 값이 다를 수 있다. 따라서 $\dim \mathfrak{a}$라는 표기법을 사용할 때에는 [정의 2](#def2)에서 먼저 정의한 것과 같이 $A$의 ideal로서의 dimension만 의미하기로 한다.
+다소 주의할 사항으로, 위의 정의를 따르면 $\mathfrak{a}$는 먼저 정의한 ideal로서의 dimension과, 이를 $A$-module로 봤을 때의 dimension의 두 가지 정의를 갖게 되는데, 이 두 정의가 주는 값이 다를 수 있다. 따라서 $\dim \mathfrak{a}$라는 표기법을 사용할 때에는 [정의 2](#def2){: data-relation="required" }에서 먼저 정의한 것과 같이 $A$의 ideal로서의 dimension만 의미하기로 한다.
 
-그럼 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $\codim \mathfrak{p}$는 prime ideal $\mathfrak{p}$로부터 시작하는 decreasing chain
+그럼 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-relation="required" }에 의하여 $\codim \mathfrak{p}$는 prime ideal $\mathfrak{p}$로부터 시작하는 decreasing chain
 
 $$\mathfrak{p}=\mathfrak{p}_r\supsetneq \mathfrak{p}_{r-1}\supsetneq\cdots\supsetneq \mathfrak{p}_1\supsetneq \mathfrak{p}_0$$
 
@@ -57,9 +57,9 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 ## 차원의 계산
 
-일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7)이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
+일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7){: data-relation="forward" }이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
 
-우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
+우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-relation="required" }의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
 
 ::: 따름정리 3
 Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것이 동치이다. 
@@ -71,7 +71,7 @@ Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것�
 $\phi: A \rightarrow B$가 integral이라 하자. 그럼 $\ker\phi$를 포함하는 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}=\phi^{-1} \mathfrak{q}$이도록 하는 $B$의 prime ideal $\mathfrak{q}$이 존재한다. 뿐만 아니라, $B$의 임의의 ideal $\mathfrak{b}$에 대하여 $\dim \mathfrak{b}=\dim \phi^{-1} \mathfrak{b}$이다.
 :::
 ::: 증명
-첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)이다. 두 번째 결과의 경우, $\phi^{-1}\mathfrak{b}$가 합성 $A \rightarrow B \rightarrow B/\mathfrak{b}$의 kernel이므로 $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ 역시 integral extension이며, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의해 성립한다. 
+첫 번째 결과는 단순히 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1){: data-relation="required" }이다. 두 번째 결과의 경우, $\phi^{-1}\mathfrak{b}$가 합성 $A \rightarrow B \rightarrow B/\mathfrak{b}$의 kernel이므로 $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ 역시 integral extension이며, $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$는 [§정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1){: data-relation="required" }의 두 번째 결과에 의해 성립하고, 반대방향 부등식은 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4){: data-relation="required" }에 의해 성립한다. 
 :::
 
 이제 우리는 관심을 돌려 1차원에서 일어나는 일들을 살펴본다. 그 전에 다소 기술적인 다음의 정의를 내린다.
@@ -97,13 +97,13 @@ Noetherian ring $A$와 임의의 $a\in A$에 대하여, $\mathfrak{p}$가 princi
 :::
 
 ::: 증명
-임의의 prime ideal $\mathfrak{q}\subsetneq \mathfrak{p}$에 대하여 $\codim \mathfrak{q}=0$임을 보이면 충분하며, 이는 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $\dim A_\mathfrak{q}=0$임을 보이면 된다. 
+임의의 prime ideal $\mathfrak{q}\subsetneq \mathfrak{p}$에 대하여 $\codim \mathfrak{q}=0$임을 보이면 충분하며, 이는 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-relation="required" }에 의하여 $\dim A_\mathfrak{q}=0$임을 보이면 된다. 
 
 이제 $A_\mathfrak{p}$에서 $\mathfrak{p}A_\mathfrak{p}$는 유일한 maximal ideal이므로, ideal들 $\mathfrak{q}A_\mathfrak{p}$, $(\mathfrak{q}A_\mathfrak{p})^{(n)}$, $\mathfrak{a}A_\mathfrak{p}$가 이 maximal ideal에 포함된다. 특히 우리는 다음의 두 chain
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
-을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
+을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-relation="required" }에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -123,11 +123,11 @@ $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(n)}\pmod{(\mathfrak{q}A_\mathfrak{p})^{(n+1)}}$$
 
-이고, $a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $(\mathfrak{q}A_\mathfrak{p})^{(n)}=0\pmod{(\mathfrak{q}A_\mathfrak{p})^{(n+1)}}$이다. 즉, $(\mathfrak{q}A_\mathfrak{p})^{(n)}=(\mathfrak{q}A_\mathfrak{p})^{(n+1)}$이다. 이제 이 식을 $\mathfrak{q}$에서 localize하면
+이고, $a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }에 의하여 $(\mathfrak{q}A_\mathfrak{p})^{(n)}=0\pmod{(\mathfrak{q}A_\mathfrak{p})^{(n+1)}}$이다. 즉, $(\mathfrak{q}A_\mathfrak{p})^{(n)}=(\mathfrak{q}A_\mathfrak{p})^{(n+1)}$이다. 이제 이 식을 $\mathfrak{q}$에서 localize하면
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 Artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
+이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-relation="required" }의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 Artinian이고, 따라서 [따름정리 3](#cor3){: data-relation="required" }으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
 :::
 
 이제 이를 이용해서 귀납적으로 다음을 보일 수 있다.
@@ -138,7 +138,7 @@ Noetherian ring $A$와 임의의 $a_1,\ldots, a_c\in A$에 대하여, $\mathfrak
 
 즉, Noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 Noetherian ring이 존재한다. (**[Nag, Appendix, Example 1]**)
 
-한편 [정리 7](#thm7)은 다음과 같은 역 또한 존재한다.
+한편 [정리 7](#thm7){: data-relation="required" }은 다음과 같은 역 또한 존재한다.
 
 ::: 따름정리 8
 Noetherian ring $A$에서, codimension $c$의 prime ideal $\mathfrak{p}$는 $c$개의 원소로 생성되는 어떠한 ideal을 포함하는 prime ideal들 중 minimal한 것이다. 
@@ -146,12 +146,12 @@ Noetherian ring $A$에서, codimension $c$의 prime ideal $\mathfrak{p}$는 $c$�
 ::: 증명
 주장과 같이 $\mathfrak{p}$가 codimension $c$라 하자. 우리는 ($0$개의 원소로 생성되는) zero ideal $(0)$으로부터 시작하여, 원소들 $x_1,\ldots, x_r$을 귀납적으로 택하여 원하는 ideal을 만들 것이다. 이제 $0\leq r< c$를 만족하는 $r$에 대하여, $x_1,\ldots, x_r$로 생성되는 ideal을 만들었다 하자. 그럼 우리는 ideal $(x_1,\ldots, x_r)$을 포함하는 minimal prime ideal들 중 어느 것에도 속하지 않는 적당한 $x_{r+1}\in \mathfrak{p}$를 택해야 한다.
 
-이제 $(x_1,\ldots, x_r)$을 포함하는 minimal prime ideal들이 $\mathfrak{q}_1,\ldots, \mathfrak{q}_s$라 하자. [정리 7](#thm7)에 의하여 각 $\mathfrak{q}_i$의 codimension은 $\leq r$이고, $r< c$이므로 이들의 codimension은 모두 $< c$이다. 따라서 $\mathfrak{p}$는 이들 중 어느 것과도 같을 수 없고, 특히 $\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$이다. 그러므로 우리는 $x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$를 택할 수 있다.
+이제 $(x_1,\ldots, x_r)$을 포함하는 minimal prime ideal들이 $\mathfrak{q}_1,\ldots, \mathfrak{q}_s$라 하자. [정리 7](#thm7){: data-relation="required" }에 의하여 각 $\mathfrak{q}_i$의 codimension은 $\leq r$이고, $r< c$이므로 이들의 codimension은 모두 $< c$이다. 따라서 $\mathfrak{p}$는 이들 중 어느 것과도 같을 수 없고, 특히 $\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$이다. 그러므로 우리는 $x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$를 택할 수 있다.
 
-이제 귀납적으로 $\mathfrak{p}$에 속하는 $c$개의 원소 $x_1,\ldots, x_c$를 얻는다. 그럼 ideal $(x_1,\ldots, x_c)$를 포함하는 minimal prime ideal $\mathfrak{q}$를 택하면, [정리 7](#thm7)에 의하여 $\codim \mathfrak{q}\leq c$이다. 한편 $\mathfrak{q}\subseteq \mathfrak{p}$이고 $\codim \mathfrak{p}=c$이므로, 반드시 $\mathfrak{q}=\mathfrak{p}$이어야 한다.
+이제 귀납적으로 $\mathfrak{p}$에 속하는 $c$개의 원소 $x_1,\ldots, x_c$를 얻는다. 그럼 ideal $(x_1,\ldots, x_c)$를 포함하는 minimal prime ideal $\mathfrak{q}$를 택하면, [정리 7](#thm7){: data-relation="required" }에 의하여 $\codim \mathfrak{q}\leq c$이다. 한편 $\mathfrak{q}\subseteq \mathfrak{p}$이고 $\codim \mathfrak{p}=c$이므로, 반드시 $\mathfrak{q}=\mathfrak{p}$이어야 한다.
 :::
 
-만일 위의 따름정리에서 $\codim \mathfrak{p}=0$이라면, $\mathfrak{p}$는 $0$개의 원소로 생성되는 ideal, 즉 zero ideal을 포함하는 minimal prime이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 이러한 prime ideal은 zerodivisor로만 이루어져 있다. 이를 [정리 6](#thm6)과 종합하면, 만일 $\mathfrak{p}$가 *non-zerodivisor* $a$를 포함하는 minimal prime ideal이라면 $\codim \mathfrak{p}=1$이어야 함을 안다. 
+만일 위의 따름정리에서 $\codim \mathfrak{p}=0$이라면, $\mathfrak{p}$는 $0$개의 원소로 생성되는 ideal, 즉 zero ideal을 포함하는 minimal prime이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-relation="required" }에 의하여 이러한 prime ideal은 zerodivisor로만 이루어져 있다. 이를 [정리 6](#thm6){: data-relation="required" }과 종합하면, 만일 $\mathfrak{p}$가 *non-zerodivisor* $a$를 포함하는 minimal prime ideal이라면 $\codim \mathfrak{p}=1$이어야 함을 안다. 
 
 특별히, non-zerodivisor $a$를 포함하는 minimal prime $\mathfrak{p}$에 대하여
 
@@ -163,11 +163,11 @@ $$\dim A/\mathfrak{p}\leq\dim A-1$$
 
 이 성립한다. 
 
-특별히 Noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $d=\dim A=\codim \mathfrak{m}$이라 하면, [정리 7](#thm7)에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
+특별히 Noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $d=\dim A=\codim \mathfrak{m}$이라 하면, [정리 7](#thm7){: data-relation="required" }에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
 
 ## 등급환에서의 차원
 
-Graded ring $R = \bigoplus_{d \ge 0} R_d$에서 차원을 계산할 때 유용한 성질들을 살펴보자. Homogeneous ideal은 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 동치조건과 함께 이미 정의하였으며, 특히 homogeneous ideal의 원소는 자신의 homogeneous component들을 모두 그 ideal 안에 갖는다. 우리는 여기에 이름을 하나 더 붙인다.
+Graded ring $R = \bigoplus_{d \ge 0} R_d$에서 차원을 계산할 때 유용한 성질들을 살펴보자. Homogeneous ideal은 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6){: data-relation="required" }의 동치조건과 함께 이미 정의하였으며, 특히 homogeneous ideal의 원소는 자신의 homogeneous component들을 모두 그 ideal 안에 갖는다. 우리는 여기에 이름을 하나 더 붙인다.
 
 ::: 정의 9
 Graded ring $R$의 prime ideal $\mathfrak{p}$가 *homogeneous prime ideal<sub>동차 소아이디얼</sub>*이라는 것은 $\mathfrak{p}$가 homogeneous ideal인 것이다.
@@ -188,18 +188,18 @@ $$\mathfrak{p}^\ast = \langle x \in \mathfrak{p} \mid x \text{ homogeneous}\rang
 $x$를 homogeneous decomposition $x = \sum_{d} x_d$로 쓰자. $x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$이므로, $x_0 = x - x_+ \in \mathfrak{p}$이다. 이제 $x' = x - x_0 = x_+ \in \mathfrak{p}$이고, 같은 방식으로 $x_1 \in \mathfrak{p}$임을 보일 수 있다. 귀납적으로 각 $x_d \in \mathfrak{p}$이고, 따라서 $x \in \mathfrak{p}^\ast$이다.
 :::
 
-[명제 10](#prop10)으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal에 homogeneous prime ideal을 대응시키는 조작을 살펴본다.
+[명제 10](#prop10){: data-relation="weak" }으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal에 homogeneous prime ideal을 대응시키는 조작을 살펴본다.
 
 ::: 명제 11
 Graded ring $R$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$에 속하는 homogeneous element들로 생성되는 ideal $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이며, 또한 prime ideal이다.
 :::
 ::: 증명
-정의에 의하여 $\mathfrak{p}^\ast$는 homogeneous element들로 생성되므로 homogeneous ideal이고, 그 generator가 모두 $\mathfrak{p}$에 속하므로 $\mathfrak{p}^\ast \subseteq \mathfrak{p}$이다. 이제 $\mathfrak{a}\subseteq \mathfrak{p}$가 homogeneous ideal이라 하면 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)의 셋째 조건에 의하여 $\mathfrak{a}$는 homogeneous element들로 생성되고, 이 generator들은 모두 $\mathfrak{p}$에 속하는 homogeneous element이므로 $\mathfrak{a}\subseteq \mathfrak{p}^\ast$이다. 즉 $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이다.
+정의에 의하여 $\mathfrak{p}^\ast$는 homogeneous element들로 생성되므로 homogeneous ideal이고, 그 generator가 모두 $\mathfrak{p}$에 속하므로 $\mathfrak{p}^\ast \subseteq \mathfrak{p}$이다. 이제 $\mathfrak{a}\subseteq \mathfrak{p}$가 homogeneous ideal이라 하면 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6){: data-relation="required" }의 셋째 조건에 의하여 $\mathfrak{a}$는 homogeneous element들로 생성되고, 이 generator들은 모두 $\mathfrak{p}$에 속하는 homogeneous element이므로 $\mathfrak{a}\subseteq \mathfrak{p}^\ast$이다. 즉 $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이다.
 
-이제 $\mathfrak{p}^\ast$가 prime인 것을 보이자. 우선 $\mathfrak{p}^\ast \subseteq \mathfrak{p}\subsetneq R$이므로 $\mathfrak{p}^\ast\neq R$이다. 그럼 [§등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)의 셋째 조건에 의하여, $ab\in \mathfrak{p}^\ast$를 만족하는 임의의 homogeneous element $a,b\in R$에 대하여 $a\in \mathfrak{p}^\ast$ 혹은 $b\in \mathfrak{p}^\ast$임을 보이면 충분하다. 그런데 $ab\in \mathfrak{p}^\ast\subseteq \mathfrak{p}$이고 $\mathfrak{p}$가 prime이므로 $a\in \mathfrak{p}$ 혹은 $b\in \mathfrak{p}$이며, $a$와 $b$가 homogeneous이므로 $\mathfrak{p}$에 속하는 쪽은 $\mathfrak{p}^\ast$의 generator, 특히 $\mathfrak{p}^\ast$의 원소이다.
+이제 $\mathfrak{p}^\ast$가 prime인 것을 보이자. 우선 $\mathfrak{p}^\ast \subseteq \mathfrak{p}\subsetneq R$이므로 $\mathfrak{p}^\ast\neq R$이다. 그럼 [§등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2){: data-relation="required" }의 셋째 조건에 의하여, $ab\in \mathfrak{p}^\ast$를 만족하는 임의의 homogeneous element $a,b\in R$에 대하여 $a\in \mathfrak{p}^\ast$ 혹은 $b\in \mathfrak{p}^\ast$임을 보이면 충분하다. 그런데 $ab\in \mathfrak{p}^\ast\subseteq \mathfrak{p}$이고 $\mathfrak{p}$가 prime이므로 $a\in \mathfrak{p}$ 혹은 $b\in \mathfrak{p}$이며, $a$와 $b$가 homogeneous이므로 $\mathfrak{p}$에 속하는 쪽은 $\mathfrak{p}^\ast$의 generator, 특히 $\mathfrak{p}^\ast$의 원소이다.
 :::
 
-임의의 prime ideal chain $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$에 대하여 $\mathfrak{p}_0^\ast \supseteq \cdots \supseteq \mathfrak{p}_s^\ast$가 성립하지만, 이 포함관계는 strict가 아닐 수 있다. $R=\mathbb{K}[\x]$를 표준 grading으로 둘 때 $(\x-1)$의 원소는 $\x=1$에서 모두 $0$이 되는 반면 homogeneous element $c\x^n$의 $\x=1$에서의 값은 $c$이므로, $(\x-1)$에 속하는 homogeneous element는 $0$뿐이다. 따라서 chain $(\x-1)\supsetneq (0)$의 두 항이 모두 $(0)$으로 보내진다. 다만 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal들로 이루어진 chain이라면 [명제 10](#prop10)에 의하여 각 항이 이미 homogeneous이므로 그 자체가 homogeneous prime ideal들의 chain이다.
+임의의 prime ideal chain $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$에 대하여 $\mathfrak{p}_0^\ast \supseteq \cdots \supseteq \mathfrak{p}_s^\ast$가 성립하지만, 이 포함관계는 strict가 아닐 수 있다. $R=\mathbb{K}[\x]$를 표준 grading으로 둘 때 $(\x-1)$의 원소는 $\x=1$에서 모두 $0$이 되는 반면 homogeneous element $c\x^n$의 $\x=1$에서의 값은 $c$이므로, $(\x-1)$에 속하는 homogeneous element는 $0$뿐이다. 따라서 chain $(\x-1)\supsetneq (0)$의 두 항이 모두 $(0)$으로 보내진다. 다만 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal들로 이루어진 chain이라면 [명제 10](#prop10){: data-relation="required" }에 의하여 각 항이 이미 homogeneous이므로 그 자체가 homogeneous prime ideal들의 chain이다.
 
 ## 정칙국소환
 
@@ -207,7 +207,7 @@ Graded ring $R$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$에 �
 Noetherian local ring $(A, \mathfrak{m})$이 *regular local ring<sub>정칙국소환</sub>*이라는 것은 $d=\dim A$에 대하여 $\mathfrak{m}$이 정확히 $d$개의 원소로 생성될 수 있는 것이다.
 :::
 
-그럼 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여, $a_1,\ldots, a_d\in \mathfrak{m}$의 $\mathfrak{m}/\mathfrak{m}^2$에서의 image가 $\mathfrak{m}/\mathfrak{m}^2$을 $A/\mathfrak{m}$-벡터공간으로서 생성하는 것과 $a_1,\ldots, a_d$가 $\mathfrak{m}$을 $A$-module로서 생성하는 것이 동치이다. 우리는 다음 글의 마지막에서 이들에 대한 성질을 더 살펴본다. 
+그럼 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }에 의하여, $a_1,\ldots, a_d\in \mathfrak{m}$의 $\mathfrak{m}/\mathfrak{m}^2$에서의 image가 $\mathfrak{m}/\mathfrak{m}^2$을 $A/\mathfrak{m}$-벡터공간으로서 생성하는 것과 $a_1,\ldots, a_d$가 $\mathfrak{m}$을 $A$-module로서 생성하는 것이 동치이다. 우리는 다음 글의 마지막에서 이들에 대한 성질을 더 살펴본다. 
 
 ---
 
