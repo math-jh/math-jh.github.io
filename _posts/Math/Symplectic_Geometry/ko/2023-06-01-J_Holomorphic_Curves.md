@@ -14,7 +14,7 @@ weight: 8
 published: false
 ---
 
-[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold)에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학(complex 측면과 symplectic 측면)을 한 manifold 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
+[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold){: data-relation="required" }에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학(complex 측면과 symplectic 측면)을 한 manifold 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
 
 본 글에서는 compatible almost complex structure의 정의로부터 출발하여, J-holomorphic curve의 정의와 그 기본 성질 (energy identity, removable singularity), 그리고 Gromov compactness theorem의 statement까지 개괄한다.
 
@@ -55,7 +55,7 @@ $$\omega(v, Jv) = g(JPv, Jv) = g(Pv, v) > 0, \qquad \omega(Jv, Jw) = g(AJv, Jw) 
 이 구성은 $g$에 매끄럽게 의존하며, $g$가 이미 어떤 compatible $J$의 metric $g_J$였다면 위의 $A$는 $J$ 자신이고 $P = \id$이므로 $J$가 그대로 돌아온다. 즉 $g \mapsto J$는 Riemannian metric들의 공간에서 $\mathcal{J}(M, \omega)$로의 retraction이고, metric들의 공간은 convex하여 contractible이므로 $\mathcal{J}(M, \omega)$ 또한 contractible이다.
 :::
 
-[명제 3](#prop3)은 J-holomorphic curve 이론에서 핵심적인 출발점이다. $J$를 자유롭게 *섭동*할 수 있다는 사실 덕분에, J-holomorphic curve의 moduli space를 generic $J$에 대해 잘 통제된 manifold (또는 orbifold) 로 만들 수 있다.
+[명제 3](#prop3){: data-relation="required" }은 J-holomorphic curve 이론에서 핵심적인 출발점이다. $J$를 자유롭게 *섭동*할 수 있다는 사실 덕분에, J-holomorphic curve의 moduli space를 generic $J$에 대해 잘 통제된 manifold (또는 orbifold) 로 만들 수 있다.
 
 ## J-holomorphic curve의 정의
 
@@ -113,7 +113,7 @@ $$E(u) = \int_\Sigma u^\ast \omega$$
 이다. 우변은 cohomology class만에 의존하므로 $= \omega \cdot u_\ast [\Sigma]$이다.
 :::
 
-[명제 6](#prop6)의 직접적 결과는, 고정된 homology class $\beta$를 represent하는 J-holomorphic curve들은 모두 *uniformly bounded energy*를 가진다는 것이다. 이 사실이 moduli space의 compactness 분석의 출발점이 된다.
+[명제 6](#prop6){: data-relation="required" }의 직접적 결과는, 고정된 homology class $\beta$를 represent하는 J-holomorphic curve들은 모두 *uniformly bounded energy*를 가진다는 것이다. 이 사실이 moduli space의 compactness 분석의 출발점이 된다.
 
 ## Removable singularity
 
@@ -128,7 +128,7 @@ $(M, \omega)$가 compact symplectic manifold이고 $J$가 $\omega$-compatible이
 매끄러움은 elliptic regularity로부터 따른다. $M$ 위 $x_0$ 근방의 Darboux 좌표에서 J-holomorphic equation $\bar\partial_J u = 0$은 변형 Cauchy-Riemann equation이며, 그 leading symbol이 elliptic이므로 $u$의 $L^\infty$ boundedness와 weak J-holomorphic 조건으로부터 $C^\infty$ regularity가 점 $0$까지 확장된다. 자세한 estimate는 **[MS]** §4.5를 참조한다.
 :::
 
-[명제 7](#prop7)은 J-holomorphic curve의 *bubble* 형성 시 중요한 역할을 한다. Sequence of J-holomorphic curves가 한 점으로 energy를 집중시키면, *rescaling*을 통해 $\mathbb{C} \rightarrow M$의 J-holomorphic map을 얻고, [명제 7](#prop7)에 의해 이는 $\mathbb{P}^1 = \mathbb{C} \cup \{\infty\} \rightarrow M$의 J-holomorphic *sphere*로 확장된다. 이 sphere를 *bubble*이라 부른다.
+[명제 7](#prop7){: data-relation="required" }은 J-holomorphic curve의 *bubble* 형성 시 중요한 역할을 한다. Sequence of J-holomorphic curves가 한 점으로 energy를 집중시키면, *rescaling*을 통해 $\mathbb{C} \rightarrow M$의 J-holomorphic map을 얻고, [명제 7](#prop7){: data-relation="required" }에 의해 이는 $\mathbb{P}^1 = \mathbb{C} \cup \{\infty\} \rightarrow M$의 J-holomorphic *sphere*로 확장된다. 이 sphere를 *bubble*이라 부른다.
 
 ## Gromov compactness
 
@@ -138,13 +138,13 @@ J-holomorphic curve 이론의 중심 정리는 다음 *Gromov compactness theore
 $(M, \omega)$를 compact symplectic manifold, $J$를 $\omega$-compatible almost complex structure, $\beta \in H_2(M, \mathbb{Z})$를 고정하자. Sequence of J-holomorphic curves $u_\nu: \Sigma \rightarrow M$이 모두 homology class $\beta$를 represent하고, $\Sigma$가 fixed Riemann surface (genus $g$, $n$개의 marked points 부착)일 때, $\{ u_\nu \}$는 부분수열 추출 후 *stable map*으로 수렴한다.
 :::
 
-Stable map이란 nodal Riemann surface $\widehat\Sigma \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (automorphism group이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps)에서 다룬다.
+Stable map이란 nodal Riemann surface $\widehat\Sigma \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (automorphism group이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps){: data-relation="forward" }에서 다룬다.
 
 Gromov compactness의 의미: J-holomorphic curve들의 sequence가 limit을 가질 때, 그 limit은 *smooth* J-holomorphic curve가 아닐 수 있으며 *bubble*들이 떨어져 나가는 nodal 구조가 형성될 수 있다. 그러나 이 nodal 구조가 *유한히 많은* bubble만 가지며 *총 homology class는 보존*된다 ($\sum_i \beta_i = \beta$). 이 사실이 moduli space의 compactification(즉 *moduli space of stable maps* $\overline{\mathcal{M}}_{g, n}(M, \beta)$)을 가능하게 만든다.
 
 ## 응용: Gromov-Witten 이론과 Floer 이론
 
-J-holomorphic curve의 가장 영향력 있는 응용은 [§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten)이다. 거기서 우리는 stable map의 moduli space 위에 정의된 *virtual fundamental class*에 cohomology class를 evaluate하여 enumerative invariant를 얻는다. 이로부터 *quantum cohomology* 구조가 유도된다.
+J-holomorphic curve의 가장 영향력 있는 응용은 [§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten){: data-relation="forward" }이다. 거기서 우리는 stable map의 moduli space 위에 정의된 *virtual fundamental class*에 cohomology class를 evaluate하여 enumerative invariant를 얻는다. 이로부터 *quantum cohomology* 구조가 유도된다.
 
 또 다른 응용은 *Floer homology*이다. 특정 Lagrangian submanifold 사이의 J-holomorphic strip을 세어 만든 chain complex의 homology가 Lagrangian Floer homology이며, symplectic topology의 주요 도구로 사용된다.
 
