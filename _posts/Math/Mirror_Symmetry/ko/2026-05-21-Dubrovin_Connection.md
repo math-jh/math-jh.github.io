@@ -18,13 +18,13 @@ weight: 4
 - Frobenius algebra의 product $\circ$ ($QH^\ast(X)$에서는 quantum cup product),
 - Euler vector field $E$ (degree 정보)
 
-이 담겨있었으며, 이 때 $\circ$의 associativity가 WDVV equation으로 표현된다는 사실을 확인하였다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7)) 이번 글에서 다룰 Dubrovin connection은 여기서 더 나아가, $\eta$와 $\circ$, 더 정확하게는 $\nabla$와 $\circ$이 서로 깊은 관계가 있음을 보여준다. 
+이 담겨있었으며, 이 때 $\circ$의 associativity가 WDVV equation으로 표현된다는 사실을 확인하였다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7){: data-relation="weak" }) 이번 글에서 다룰 Dubrovin connection은 여기서 더 나아가, $\eta$와 $\circ$, 더 정확하게는 $\nabla$와 $\circ$이 서로 깊은 관계가 있음을 보여준다. 
 
 ## 두브로빈 접속
 
 Dubrovin에 따르면 $\nabla$와 $\circ$은 *Dubrovin connection*이라 부르는, $M\times \mathbb{C}^\ast$ 위의 flat connection $\nabla^z$로 연결되며, 이 connection은 $z\rightarrow 0$일 때 $\circ$을, $z\rightarrow\infty$일 때 $\nabla$를 복원한다. 이것이 말이 되기 위해서는 $\circ$을 connection처럼 취급하는 것이 어떤 것인지를 다소 정당화해야 한다.
 
-일반적으로 connection은 local frame에서 $\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$ 꼴로 적히며, 여기서 $A_\alpha$는 fiber 위의 endomorphism인 connection $1$-form으로, 그 성분이 [\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3)의 connection coefficient이다. 핵심적인 관찰은 product $\circ$가 각 방향 $\partial_\alpha$에 대해 "$\partial_\alpha$를 곱하는" endomorphism $\mathcal{C}_\alpha = \partial_\alpha \circ -$을 생각하면 그 행렬 성분이 바로 product의 structure constant $c_{\alpha\beta}^\gamma$라는 점이다. 즉, 엄밀히는 $\circ$ 그 자체가 connection인 것이 아니라, 그 structure constant들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6))
+일반적으로 connection은 local frame에서 $\nabla_{\partial_\alpha} = \partial_\alpha + A_\alpha$ 꼴로 적히며, 여기서 $A_\alpha$는 fiber 위의 endomorphism인 connection $1$-form으로, 그 성분이 [\[리만기하학\] §접속, ⁋정의 3](/ko/math/riemannian_geometry/connection#def3){: data-relation="weak" }의 connection coefficient이다. 핵심적인 관찰은 product $\circ$가 각 방향 $\partial_\alpha$에 대해 "$\partial_\alpha$를 곱하는" endomorphism $\mathcal{C}_\alpha = \partial_\alpha \circ -$을 생각하면 그 행렬 성분이 바로 product의 structure constant $c_{\alpha\beta}^\gamma$라는 점이다. 즉, 엄밀히는 $\circ$ 그 자체가 connection인 것이 아니라, 그 structure constant들이 Christoffel symbol의 역할을 맡는 것이다. ([\[리만기하학\] §레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6){: data-relation="weak" })
 
 실제로, (flat) coordinate $\{ t^\alpha \}$를 택하면
 
@@ -49,14 +49,14 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 degree $d_\alpha = (\deg\sigma^\alpha)/2$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
+으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="required" }의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 degree $d_\alpha = (\deg\sigma^\alpha)/2$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
 :::
 
-앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 
+앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="weak" }에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 
 
 $$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
-는 quantum product가 degree를 respect한다는 사실과 Poincaré pairing이 top degree에 concentrate된다는 사실을 각각 반영하는 것이었다. 특히 우리의 관심의 대상인 [§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)의 경우, 위의 식에서 Euler vector field $E$가 base $M$ 위에서 좌표의 rescaling을 생성하는 grading이라면 $\mu$는 같은 grading을 fiber $T_tM \cong H^\ast(X)$ 위의 endomorphism으로 본 것으로, 둘은
+는 quantum product가 degree를 respect한다는 사실과 Poincaré pairing이 top degree에 concentrate된다는 사실을 각각 반영하는 것이었다. 특히 우리의 관심의 대상인 [§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9){: data-relation="forward" }의 경우, 위의 식에서 Euler vector field $E$가 base $M$ 위에서 좌표의 rescaling을 생성하는 grading이라면 $\mu$는 같은 grading을 fiber $T_tM \cong H^\ast(X)$ 위의 endomorphism으로 본 것으로, 둘은
 
 $$\mu = \frac{2-d}{2}I - \nabla E$$
 
@@ -76,10 +76,10 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = [\partial_\alpha + z
 
 로 전개된다. 이 곡률이 모든 $z$에서 vanish하려면 $z^{-1}$과 $z^{-2}$의 계수가 각각 사라져야 하는데, $z^{-1}$ 항은 $\mathcal{C}$의 *potentiality* $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$에서, $z^{-2}$ 항은 product의 *associativity* $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$에서 사라진다. 
 
-뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold의 공리들이었으며 ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)), 따라서 $\nabla^z$의 $M$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
+뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold의 공리들이었으며 ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="weak" }), 따라서 $\nabla^z$의 $M$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
 
 ::: 명제 2
-Frobenius manifold $M$ 위의 connection $\nabla^z$를 ([정의 1](#def1)) 생각하자. Product $\circ$가 commutative라는 가정 아래, $\nabla^z$가 모든 $z$에 대해 $M$-방향 (즉 $\partial_\alpha$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
+Frobenius manifold $M$ 위의 connection $\nabla^z$를 ([정의 1](#def1){: data-relation="required" }) 생각하자. Product $\circ$가 commutative라는 가정 아래, $\nabla^z$가 모든 $z$에 대해 $M$-방향 (즉 $\partial_\alpha$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
 
 1. *Potentiality*: $\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$. 즉 $c_{\alpha\beta}^\delta$가 어떤 potential $F$의 세 번째 도함수이다.
 2. *Associativity (WDVV)*: $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$, 성분으로는 $\sum_\delta c_{\alpha\beta}^\delta\, c_{\delta\gamma}^\epsilon = \sum_\delta c_{\beta\gamma}^\delta\, c_{\alpha\delta}^\epsilon$. 즉 $\circ$가 associative이다.
@@ -90,17 +90,17 @@ Frobenius manifold $M$ 위의 connection $\nabla^z$를 ([정의 1](#def1)) 생�
 
 $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\partial_\alpha\mathcal{C}_\beta - \partial_\beta\mathcal{C}_\alpha) + \frac{1}{z^2}\,[\mathcal{C}_\alpha, \mathcal{C}_\beta]$$
 
-은 $z^{-1}$과 $z^{-2}$에 대한 Laurent polynomial이므로, 이것이 모든 $z$에서 vanish하는 것은 두 계수가 따로 vanish하는 것과 동치이다. $z^{-1}$ 계수의 vanishing은 곧 첫째 조건 $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$이며, $z^{-2}$ 계수의 vanishing $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$을 성분으로 적으면 $\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$인데, $\circ$가 commutative라는 가정 아래 이것은 정확히 associativity, 즉 WDVV equation과 동치이다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7))
+은 $z^{-1}$과 $z^{-2}$에 대한 Laurent polynomial이므로, 이것이 모든 $z$에서 vanish하는 것은 두 계수가 따로 vanish하는 것과 동치이다. $z^{-1}$ 계수의 vanishing은 곧 첫째 조건 $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$이며, $z^{-2}$ 계수의 vanishing $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$을 성분으로 적으면 $\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$인데, $\circ$가 commutative라는 가정 아래 이것은 정확히 associativity, 즉 WDVV equation과 동치이다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7){: data-relation="required" })
 :::
 
-한편 $z$-방향의 flatness $[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$은 Euler vector field $E$와 grading operator $\mu$가 product와 호환된다는 조건, 즉 Frobenius manifold의 homogeneity (또는 conformal) condition을 요구한다. 이 조건은 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 네 번째 조건으로 이미 우리의 정의 안에 들어 있으므로, 우리의 정의에서는  $z$-방향까지 포함한 $\nabla^z$의 온전한 flatness가 얻어진다.
+한편 $z$-방향의 flatness $[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$은 Euler vector field $E$와 grading operator $\mu$가 product와 호환된다는 조건, 즉 Frobenius manifold의 homogeneity (또는 conformal) condition을 요구한다. 이 조건은 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="required" }의 네 번째 조건으로 이미 우리의 정의 안에 들어 있으므로, 우리의 정의에서는  $z$-방향까지 포함한 $\nabla^z$의 온전한 flatness가 얻어진다.
 
 ## D-module
 
 Connection $\nabla$는 본질적으로 section을 *미분*하는 도구이다. Vector bundle을 $\mathcal{O}_X$-module로 볼 때 우리가 가진 연산은 함수와의 곱셈뿐이지만, 미분까지 할 수 있게 되면 그 bundle은 함수에 더해 미분연산자들의 작용까지 받는 대상, 곧 *$\mathcal{D}_X$-module*이 되며, 이것이 flat이어야 그 정의가 말이 될 것이다. 
 
 ::: 정의 3
-Complex manifold $B$ 위에서, $B$ 위 미분 연산자들의 sheaf of rings $\mathcal{D}_B$는 structure sheaf $\mathcal{O}_B$와 vector field들, 즉 $\mathcal{O}_B$ 위의 derivation이 ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1)) 생성하는 operator들의 sheaf이다. 이 때, vector field $\partial$과 함수 $f$는 다음의 관계식
+Complex manifold $B$ 위에서, $B$ 위 미분 연산자들의 sheaf of rings $\mathcal{D}_B$는 structure sheaf $\mathcal{O}_B$와 vector field들, 즉 $\mathcal{O}_B$ 위의 derivation이 ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1){: data-relation="required" }) 생성하는 operator들의 sheaf이다. 이 때, vector field $\partial$과 함수 $f$는 다음의 관계식
 
 $$[\partial, f] = \partial(f)$$
 
@@ -113,13 +113,13 @@ $$\partial(f s) = (\partial f)\, s + f\, \partial s \qquad (f \in \mathcal{O}_B,
 
 을 만족하는 것을 확인할 수 있다. 구체적인 예시로, flat connection $\nabla$가 주어진 vector bundle $V\rightarrow B$가 주어지면, vector field $\partial$의 action을 $\nabla_\partial$로 정의하면 $V$는 $\mathcal{D}_B$-module이 되며, 이 예시에서 $\nabla$의 flatness $[\nabla_\partial, \nabla_{\partial'}] = \nabla_{[\partial, \partial']}$가 정확히 $\mathcal{D}_B$-module의 정의가 요구하는 commutator relation이 된다. 
 
-특별히 우리는 Dubrovin connection $\nabla^z$가 flat인 것을 보았으므로 ([명제 2](#prop2)) 이로부터 $\pr_1^\ast TM$이 $\mathcal{D}_{M\times \mathbb{C}^\ast}$-module이 됨을 확인할 수 있다. 이를 *quantum $D$-module*이라 부른다. 이 때, $\mathcal{D}$-module의 horizontal section, 즉 $\nabla^z s=0$을 만족하는 section들을 flat coordinate을 이용해 $s=\sum_\alpha s^\alpha\partial_\alpha$로 적으면 다음의 미분방정식
+특별히 우리는 Dubrovin connection $\nabla^z$가 flat인 것을 보았으므로 ([명제 2](#prop2){: data-relation="required" }) 이로부터 $\pr_1^\ast TM$이 $\mathcal{D}_{M\times \mathbb{C}^\ast}$-module이 됨을 확인할 수 있다. 이를 *quantum $D$-module*이라 부른다. 이 때, $\mathcal{D}$-module의 horizontal section, 즉 $\nabla^z s=0$을 만족하는 section들을 flat coordinate을 이용해 $s=\sum_\alpha s^\alpha\partial_\alpha$로 적으면 다음의 미분방정식
 
 $$\partial_\alpha s^\beta + \frac{1}{z} \sum_\gamma c_{\alpha\gamma}^\beta\, s^\gamma = 0$$
 
 을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $b_0$와 초기조건 $s(b_0)$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $\nabla^z$가 flat이므로 이 parallel transport가 경로에 무관하여 $b_0$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $\dim_\mathbb{C} M$차원이 되며, base $M \times \mathbb{C}^\ast$의 $\pi_1$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $z$-방향 $\mathbb{C}^\ast$의 loop ($\pi_1 \cong \mathbb{Z}$)은 $z = 0$의 irregular singularity와 $z = \infty$의 regular singularity 둘레 monodromy를, $H^2$ 방향을 Novikov parameter $q = e^t$로 지수화한 뒤 생기는 $q$-방향 loop은 quantum monodromy를 준다. 
 
-Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $M = H^\ast(X, \mathbb{C})$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $M \times \mathbb{C}^\ast$이고, 이 manifold의 점을 $(t,z)\in M\times \mathbb{C}^\ast$으로 쓸 수 있다. 정의에 의하여, 한 점 $(t,z)$ 위의 fiber는 $(\pr_1^\ast TM)_{(t,z)}\cong T_tM$이고, $M$은 원래부터 벡터공간이었으므로 이 fiber는 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하며 이들 각각에 $t$가 정의하는 big quantum product $\circ_t$를 주는 것이 Frobenius manifold의 구조이다. 이 bundle 위에서 Dubrovin connection은 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$으로 주어지며, $\mathcal{C}_\alpha = \partial_\alpha \circ_t -$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $M = H^\ast(X)$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $D$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $H^2$ 방향 deformation이므로, 특별히 $H^2(X)$의 basis를 $\{T_a\}$라 하면, 이 방향의 connection constant는 $\mathcal{C}_a=T_a\qtimes -$이다. 따라서 이 방향의 QDE는
+Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $M = H^\ast(X, \mathbb{C})$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9){: data-relation="required" }) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $M \times \mathbb{C}^\ast$이고, 이 manifold의 점을 $(t,z)\in M\times \mathbb{C}^\ast$으로 쓸 수 있다. 정의에 의하여, 한 점 $(t,z)$ 위의 fiber는 $(\pr_1^\ast TM)_{(t,z)}\cong T_tM$이고, $M$은 원래부터 벡터공간이었으므로 이 fiber는 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하며 이들 각각에 $t$가 정의하는 big quantum product $\circ_t$를 주는 것이 Frobenius manifold의 구조이다. 이 bundle 위에서 Dubrovin connection은 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$으로 주어지며, $\mathcal{C}_\alpha = \partial_\alpha \circ_t -$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $M = H^\ast(X)$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $D$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $H^2$ 방향 deformation이므로, 특별히 $H^2(X)$의 basis를 $\{T_a\}$라 하면, 이 방향의 connection constant는 $\mathcal{C}_a=T_a\qtimes -$이다. 따라서 이 방향의 QDE는
 
 $$z\, q_a \partial_{q_a} s = -\,(T_a \qtimes s), \qquad a = 1, \ldots, r$$
 
