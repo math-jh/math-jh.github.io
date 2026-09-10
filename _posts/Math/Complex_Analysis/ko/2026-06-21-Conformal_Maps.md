@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, complex analysis를 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
+Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-relation="required" }) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, complex analysis를 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-relation="weak" }) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
 
 ## 등각성
 
@@ -31,7 +31,7 @@ $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C
 :::
 
 ::: 증명
-먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 smooth curve $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 tangent vector는 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)의 연쇄법칙에 의해
+먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 smooth curve $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 tangent vector는 [§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-relation="required" }의 연쇄법칙에 의해
 
 $$(f \circ \gamma)'(t_0) = f'(z_0)\,\gamma'(t_0)$$
 
@@ -39,7 +39,7 @@ $$(f \circ \gamma)'(t_0) = f'(z_0)\,\gamma'(t_0)$$
 
 $$\arg (f \circ \gamma)'(t_0) = \arg f'(z_0) + \arg \gamma'(t_0) \pmod{2\pi}$$
 
-이다 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)). 곧 상곡선의 tangent vector의 편각은 원곡선의 tangent vector의 편각에 일정한 양 $\arg f'(z_0)$을 더한 것이다. 두 곡선 $\gamma_1, \gamma_2$에 대해 이 덧셈이 똑같이 일어나므로, 편각의 차
+이다 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6){: data-relation="required" }). 곧 상곡선의 tangent vector의 편각은 원곡선의 tangent vector의 편각에 일정한 양 $\arg f'(z_0)$을 더한 것이다. 두 곡선 $\gamma_1, \gamma_2$에 대해 이 덧셈이 똑같이 일어나므로, 편각의 차
 
 $$\arg (f \circ \gamma_2)'(t_0) - \arg (f \circ \gamma_1)'(t_0) = \arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$$
 
@@ -55,14 +55,14 @@ $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C
 :::
 
 ::: 증명
-어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 order $m$은 $m \geq 2$이다 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function은 order $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동하므로 ([§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7)), $w_0$에 충분히 가깝고 $w_0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, 명제 2에 의해 $f$는 등각사상이다.
+어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 order $m$은 $m \geq 2$이다 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-relation="required" }의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function은 order $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동하므로 ([§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7){: data-relation="required" }), $w_0$에 충분히 가깝고 $w_0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, 명제 2에 의해 $f$는 등각사상이다.
 :::
 
 명제 3은 order $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 국소적 사상정리를 이용한다. 이 사실 자체는 영점의 order와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 명제와 같은 뿌리를 가진다. 명제 3이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 complex analysis의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
 
 ## Möbius 변환
 
-가장 단순한 등각사상은 일차식의 비로 적히는 사상이다. 이들은 평면 전체가 아니라 확장복소평면 $\widehat{\mathbb{C}}$ ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 의 automorphism으로 보아야 그 구조가 온전히 드러난다.
+가장 단순한 등각사상은 일차식의 비로 적히는 사상이다. 이들은 평면 전체가 아니라 확장복소평면 $\widehat{\mathbb{C}}$ ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-relation="required" }) 의 automorphism으로 보아야 그 구조가 온전히 드러난다.
 
 ::: 정의 4
 복소수 $a, b, c, d$가 $ad - bc \neq 0$을 만족할 때, 사상
@@ -213,7 +213,7 @@ $$\lvert 1 - \bar a z\rvert = \lvert \bar z\rvert\,\lvert 1 - \bar a z\rvert = \
 
 이다 (첫째 등호에서 $\lvert \bar z\rvert = \lvert z\rvert = 1$을 썼다). 따라서 $\lvert z\rvert = 1$이면 $\lvert \varphi_a(z)\rvert = \lvert z - a\rvert / \lvert 1 - \bar a z\rvert = 1$이므로, $\varphi_a$은 단위원을 단위원으로 보낸다.
 
-이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. Boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, [§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6)에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
+이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. Boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, [§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6){: data-relation="required" }에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
 
 끝으로 역사상을 계산한다. $\varphi_{-a}(z) = (z + a)/(1 + \bar a z)$인데, 직접 합성하면
 
@@ -222,7 +222,7 @@ $$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar a z} + a}{1 + \bar a 
 이다. 따라서 $\varphi_{-a} = \varphi_a^{-1}$이고, 특히 $\varphi_a$은 $\mathbb{D}$ 위의 전단사이다 (그 역도 같은 논법으로 $\mathbb{D}$를 $\mathbb{D}$로 보낸다). $\varphi_a(0) = (0 - a)/(1 - 0) = -a$임은 대입으로 즉시 나온다.
 :::
 
-사상 $\varphi_a$은 단위원판의 automorphism을 다룰 때 가장 기본이 되는 벽돌이다. 그것은 임의로 주어진 interior의 한 점 $a$를 중심 $0$으로 끌어오면서 단위원판 구조를 보존하므로, 원점을 특별한 위치로 옮겨 문제를 단순화하는 데 쓰인다. 여기에 회전을 합성하면 단위원판의 모든 holomorphic automorphism이 나온다는 것이 다음 정리이며, 그 증명은 원점을 고정하는 automorphism이 회전뿐이라는 사실 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)) 을 핵심으로 쓴다.
+사상 $\varphi_a$은 단위원판의 automorphism을 다룰 때 가장 기본이 되는 벽돌이다. 그것은 임의로 주어진 interior의 한 점 $a$를 중심 $0$으로 끌어오면서 단위원판 구조를 보존하므로, 원점을 특별한 위치로 옮겨 문제를 단순화하는 데 쓰인다. 여기에 회전을 합성하면 단위원판의 모든 holomorphic automorphism이 나온다는 것이 다음 정리이며, 그 증명은 원점을 고정하는 automorphism이 회전뿐이라는 사실 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8){: data-relation="required" }) 을 핵심으로 쓴다.
 
 ::: 정리 12 (단위원판의 automorphism)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic 전단사이고 그 역사상도 holomorphic이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
@@ -237,13 +237,13 @@ $f$가 $\mathbb{D}$의 holomorphic automorphism이라 하자. $a = f^{-1}(0) \in
 
 $$g(0) = f(\varphi_{-a}(0)) = f(a) = 0$$
 
-이다. 곧 $g$는 원점을 고정하는 $\mathbb{D}$의 holomorphic automorphism이다. 원점을 고정하는 단위원판의 automorphism이 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $g(z) = e^{i\theta} z$이다. 따라서
+이다. 곧 $g$는 원점을 고정하는 $\mathbb{D}$의 holomorphic automorphism이다. 원점을 고정하는 단위원판의 automorphism이 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8){: data-relation="required" }), 어떤 실수 $\theta$에 대해 $g(z) = e^{i\theta} z$이다. 따라서
 
 $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z}$$
 
 이다.
 
-역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 automorphism이고 ([명제 11](#prop11)) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 holomorphic automorphism이다.
+역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 automorphism이고 ([명제 11](#prop11){: data-relation="required" }) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
 
 정리 12는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic morphism이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
@@ -269,7 +269,7 @@ $$F = \varphi_{f(w)} \circ f \circ \varphi_{-w} = \varphi_{f(w)} \circ f \circ \
 
 $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
-이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic morphism이라, [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
+이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic morphism이라, [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7){: data-relation="required" }에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
 
 이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar w z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
 
@@ -285,7 +285,7 @@ $$\frac{\lvert f'(w)\rvert}{1 - \lvert f(w)\rvert^2} \leq \frac{1}{1 - \lvert w\
 
 이다. $w \in \mathbb{D}$이 임의였으므로 둘째 부등식이 모든 점에서 성립한다.
 
-등호의 경우를 본다. 첫 부등식이 어떤 $z_0 \neq w$에서 등호이면 $\lvert F(\zeta_0)\rvert = \lvert \zeta_0\rvert$ ($\zeta_0 = \varphi_w(z_0) \neq 0$) 이고, 둘째 부등식이 어떤 점에서 등호이면 그 점에 대응하는 $w$에서 $\lvert F'(0)\rvert = 1$이다. 어느 경우든 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)의 등호조건에 의해 어떤 $\lambda$ ($\lvert \lambda\rvert = 1$) 가 있어 $F(\zeta) = \lambda \zeta$이다. 그러면 $F$가 $\mathbb{D}$의 automorphism이고, $f = \varphi_{f(w)}^{-1} \circ F \circ \varphi_w$도 automorphism들의 합성이라 automorphism이다. 이때 위의 두 부등식은 $\lvert F(\zeta)\rvert = \lvert \zeta\rvert$, $\lvert F'(0)\rvert = 1$로부터 모든 점에서 등호가 된다.
+등호의 경우를 본다. 첫 부등식이 어떤 $z_0 \neq w$에서 등호이면 $\lvert F(\zeta_0)\rvert = \lvert \zeta_0\rvert$ ($\zeta_0 = \varphi_w(z_0) \neq 0$) 이고, 둘째 부등식이 어떤 점에서 등호이면 그 점에 대응하는 $w$에서 $\lvert F'(0)\rvert = 1$이다. 어느 경우든 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7){: data-relation="required" }의 등호조건에 의해 어떤 $\lambda$ ($\lvert \lambda\rvert = 1$) 가 있어 $F(\zeta) = \lambda \zeta$이다. 그러면 $F$가 $\mathbb{D}$의 automorphism이고, $f = \varphi_{f(w)}^{-1} \circ F \circ \varphi_w$도 automorphism들의 합성이라 automorphism이다. 이때 위의 두 부등식은 $\lvert F(\zeta)\rvert = \lvert \zeta\rvert$, $\lvert F'(0)\rvert = 1$로부터 모든 점에서 등호가 된다.
 :::
 
 Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 매이지 않게 풀어낸 형태이다. 좌변의 양
@@ -321,7 +321,7 @@ $$\lvert z + i\rvert^2 - \lvert z - i\rvert^2 = (x^2 + (y+1)^2) - (x^2 + (y-1)^2
 
 $$z = \frac{-i(1 + w)}{w - 1} = \frac{i(1 + w)}{1 - w} = i\,\frac{1 + w}{1 - w}$$
 
-이다. 이것이 $C^{-1}$이며 다시 Möbius 변환이다. $C$가 $\mathbb{H}$를 $\mathbb{D}$ 안으로 보내고 $C^{-1}$이 그 역을 주므로 ($C^{-1}(C(z)) = z$), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 전단사이고, $C^{-1}(\mathbb{D}) \subseteq \mathbb{H}$임도 같은 거리 논법으로 ($\lvert w\rvert < 1$이 $\Img C^{-1}(w) > 0$과 동치임을 확인하여) 따라 나온다. Möbius 변환은 그 holomorphic한 영역에서 등각이므로 ([명제 2](#prop2)), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 conformal isomorphism이다.
+이다. 이것이 $C^{-1}$이며 다시 Möbius 변환이다. $C$가 $\mathbb{H}$를 $\mathbb{D}$ 안으로 보내고 $C^{-1}$이 그 역을 주므로 ($C^{-1}(C(z)) = z$), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 전단사이고, $C^{-1}(\mathbb{D}) \subseteq \mathbb{H}$임도 같은 거리 논법으로 ($\lvert w\rvert < 1$이 $\Img C^{-1}(w) > 0$과 동치임을 확인하여) 따라 나온다. Möbius 변환은 그 holomorphic한 영역에서 등각이므로 ([명제 2](#prop2){: data-relation="required" }), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 conformal isomorphism이다.
 :::
 
 Cayley 변환은 상반평면 위의 문제를 단위원판 위의 문제로, 또는 그 역으로 옮기는 사전 역할을 한다. 가령 정리 12의 단위원판 automorphism 분류를 $C$로 옮기면, 상반평면의 holomorphic automorphism이 정확히 실계수 Möbius 변환
