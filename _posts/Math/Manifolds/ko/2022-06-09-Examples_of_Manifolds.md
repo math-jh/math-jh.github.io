@@ -118,14 +118,14 @@ $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
 의 그래프이도록 하는 함수 $f$가 존재한다. 
 
-이제 [예시 6](#ex6)과 마찬가지로, $M$에 subspace topology를 주고, 방금 만든 $(V, f)$들을 이용해 chart를 만들면 $M$이 $(n-1)$차원 manifold가 된다는 것을 확인할 수 있다.
+이제 [예시 6](#ex6){: data-relation="required" }과 마찬가지로, $M$에 subspace topology를 주고, 방금 만든 $(V, f)$들을 이용해 chart를 만들면 $M$이 $(n-1)$차원 manifold가 된다는 것을 확인할 수 있다.
 :::
 
-[예시 7](#ex7)을 이용하여 $S^n$을 $\mathbb{R}^{n+1}$ 위에서 정의된 함수
+[예시 7](#ex7){: data-relation="forward" }을 이용하여 $S^n$을 $\mathbb{R}^{n+1}$ 위에서 정의된 함수
 
 $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
-의 zero set으로 볼 수 있으므로 [예시 6](#ex6)은 위 예시의 특별한 경우로 볼 수 있다.
+의 zero set으로 볼 수 있으므로 [예시 6](#ex6){: data-relation="weak" }은 위 예시의 특별한 경우로 볼 수 있다.
 
 ::: 예시 8
 집합 $\mathbb{R}^{n+1}\setminus\{0\}$에 $x\sim y\iff \exists\lambda\in\mathbb{R}\setminus\{0\}(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $x\in\mathbb{R}^{n+1}\setminus\{0\}$의 equivalence class를 $[x]$로 적자. 
@@ -134,11 +134,11 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 7](/ko/math/topology/quotient_spaces#prop7)에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서 $U_i=\pi(\tilde{U}_i)$로 두고, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
+을 생각하자. 그럼 $\tilde{U}_i$는 saturated인 열린집합이므로, [\[위상수학\] §몫공간, ⁋명제 7](/ko/math/topology/quotient_spaces#prop7){: data-relation="required" }에 의하여 quotient map $\pi$가 $\tilde{U}_i$로 잘 제한된다. 따라서 $U_i=\pi(\tilde{U}_i)$로 두고, 함수 $\varphi_i:U_i\rightarrow\mathbb{R}^n$을
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-으로 정의하면[^1] 함수 $\varphi_i\circ\pi\vert_{\tilde{U}_i}$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 4](/ko/math/topology/quotient_spaces#prop4)에 의해 $\varphi_i$ 또한 연속이다. 
+으로 정의하면[^1] 함수 $\varphi_i\circ\pi\vert_{\tilde{U}_i}$가 연속이고 따라서 [\[위상수학\] §몫공간, ⁋명제 4](/ko/math/topology/quotient_spaces#prop4){: data-relation="required" }에 의해 $\varphi_i$ 또한 연속이다. 
 
 {% diagram Math/Manifolds/Examples_of_Manifolds-2.svg width="7.46em" alt="quotient_map" %}
 

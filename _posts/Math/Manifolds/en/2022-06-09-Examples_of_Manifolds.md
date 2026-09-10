@@ -115,14 +115,14 @@ is never zero; that is, for each point $a\in M$ there exists some $i$ such that 
 
 $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
-Now, just as in [Example 6](#ex6), if we give $M$ the subspace topology and construct charts using the $(U, f)$ just obtained, we can verify that $M$ becomes an $(n-1)$-dimensional manifold.
+Now, just as in [Example 6](#ex6){: data-relation="required" }, if we give $M$ the subspace topology and construct charts using the $(U, f)$ just obtained, we can verify that $M$ becomes an $(n-1)$-dimensional manifold.
 :::
 
-Using [Example 7](#ex7), we can regard $S^n$ as the zero set of the function
+Using [Example 7](#ex7){: data-relation="forward" }, we can regard $S^n$ as the zero set of the function
 
 $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 
-defined on $\mathbb{R}^{n+1}$; hence [Example 6](#ex6) can be seen as a special case of the above example.
+defined on $\mathbb{R}^{n+1}$; hence [Example 6](#ex6){: data-relation="weak" } can be seen as a special case of the above example.
 
 ::: Example 8
 Suppose a relation on the set $\mathbb{R}^{n+1}\setminus\{0\}$ is defined by $x\sim y\iff \exists\lambda(x=\lambda y)$. It is not hard to check that $\sim$ is an equivalence relation. Now consider the quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$ with the quotient topology defined via the canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$, and let $[x]$ be the representative of $x\in\mathbb{R}^{n+1}\setminus\{0\}$. 
@@ -131,11 +131,11 @@ For each $i=1,\ldots, n+1$, consider the open subset
 
 $$\tilde{U}_i=\{(x^1,\ldots, x^{n+1})\mid x^i\neq 0\}$$
 
-of $\mathbb{R}^{n+1}\setminus\{0\}$. Then $\tilde{U}_i$ is a saturated open set, so by [\[Topology\] §Quotient Spaces, ⁋Proposition 7](/en/math/topology/quotient_spaces#prop7) the quotient map $\pi$ restricts well to $\tilde{U}_i$. Therefore, if we define the function $\varphi_i:U_i\rightarrow\mathbb{R}^n$ by
+of $\mathbb{R}^{n+1}\setminus\{0\}$. Then $\tilde{U}_i$ is a saturated open set, so by [\[Topology\] §Quotient Spaces, ⁋Proposition 7](/en/math/topology/quotient_spaces#prop7){: data-relation="required" } the quotient map $\pi$ restricts well to $\tilde{U}_i$. Therefore, if we define the function $\varphi_i:U_i\rightarrow\mathbb{R}^n$ by
 
 $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i},\frac{x^{i+1}}{x^i},\ldots, \frac{x^{n+1}}{x^i}\right)$$
 
-[^1] the function $\varphi_i\circ\pi\vert_{\tilde{U}_i}$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 4](/en/math/topology/quotient_spaces#prop4) $\varphi_i$ is also continuous. 
+[^1] the function $\varphi_i\circ\pi\vert_{\tilde{U}_i}$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 4](/en/math/topology/quotient_spaces#prop4){: data-relation="required" } $\varphi_i$ is also continuous. 
 
 {% diagram Math/Manifolds/Examples_of_Manifolds-2.svg width="7.46em" alt="quotient_map" %}
 
