@@ -51,7 +51,7 @@ If $A$ has a least element $a$, then $a$ is the unique minimal element of $A$.
 ::: Proof
 For any element $x$ of $A$, we have $a\leq x$. Thus, if there exists $x\in A$ such that $x\leq a$, then antisymmetry of $\leq$ implies $x=a$. Hence $a$ is a minimal element of $A$.
 
-If $a'$ is another minimal element of $A$ and $a'\neq a$, then the contrapositive of [Definition 1](#def1) implies $a'\not\leq a$, which contradicts the fact that $a$ is a least element. Therefore $a'=a$.
+If $a'$ is another minimal element of $A$ and $a'\neq a$, then the contrapositive of [Definition 1](#def1){: data-relation="required" } implies $a'\not\leq a$, which contradicts the fact that $a$ is a least element. Therefore $a'=a$.
 :::
 
 Occasionally we must consider a new element larger than every element of an ordered set, or smaller than every element. It is common to denote such hypothetical elements by $\pm\infty$.

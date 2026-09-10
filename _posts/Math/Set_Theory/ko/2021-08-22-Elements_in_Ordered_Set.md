@@ -50,7 +50,7 @@ Ordered set $A$의 원소 $a$가 $A$의 *least element<sub>최소원소</sub>* (
 ::: 증명
 $A$의 임의의 원소 $x$에 대하여 $a\leq x$가 성립한다. 따라서 만일 $x\leq a$가 성립하는 $x\in A$가 존재한다면, $\leq$의 antisymmetry로부터 $x=a$여야 한다. 이로부터 $a$가 $A$의 minimal element가 된다는 것을 안다. 
 
-만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#def1)의 대우명제로부터 $a\not\leq a'$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
+만일 $a'$가 $A$의 다른 minimal element이고, $a'\neq a$라면 [정의 1](#def1){: data-relation="required" }의 대우명제로부터 $a\not\leq a'$여야 하는데, 이는 $a$가 least element라는 사실에 모순이므로 $a'=a$여야 한다.
 :::
 
 때때로 ordered set의 모든 원소보다 큰 새로운 원소, 혹은 모든 원소보다 작은 새로운 원소를 생각해야 할 필요가 있다. 이러한 가상의 원소는 $\pm\infty$으로 쓰는 것이 보편적이다.
