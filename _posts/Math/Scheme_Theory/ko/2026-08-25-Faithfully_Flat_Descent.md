@@ -63,7 +63,7 @@ $$(A/{\ann(x)})\otimes_A B\hookrightarrow M\otimes_A B$$
 을 얻는다. 따라서 $M\otimes_A B\neq 0$이고, $B$는 faithful $A$-module이다.
 :::
 
-이 명제에서 특히 주목할 만한 것은 둘째 조건으로, exactness를 base change를 한 후 확인해도 된다는 것을 보여준다. 셋째 조건은 이렇게 대수적으로 정의된 성질이 정확히 morphism $\Spec B \rightarrow \Spec A$의 surjectivity에 대응함을 보여주며, 따라서 faithfully flat ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 affine faithfully flat morphism으로 생각할 수 있다.
+이 명제에서 특히 주목할 만한 것은 둘째 조건으로, exactness를 base change를 한 후 확인해도 된다는 것을 보여준다. 셋째 조건은 이렇게 대수적으로 정의된 성질이 정확히 morphism $\Spec B \rightarrow \Spec A$의 surjectivity에 대응함을 보여주며, 따라서 faithfully flat ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1){: data-relation="weak" }의 affine faithfully flat morphism으로 생각할 수 있다.
 
 특수한 예시는 $A$의 원소들 $f_1,\ldots, f_n$이 $A$ 전체를 생성할 때 얻어지는 $A \rightarrow \prod_i A_{f_i}$으로, 각각의 $A_{f_i}$가 flat이므로 그 곱도 flat이고, $\Spec \prod A_{f_i}=\coprod D(f_i)$가 $\Spec A$를 덮으므로 surjective이다. 이는 정확히 affine scheme의 Zariski cover이며, 위의 개념이 일상적인 sheaf의 gluing을 커버할 수 있음을 보여준다. 뿐만 아니라, 위에서 open embedding으로 설명할 수 없었던 field extension $\mathbb{L}/\mathbb{K}$의 경우, $\mathbb{L}$이 $\mathbb{K}$-vector space로서 (당연히) free이고, 이들 사이의 기하적인 morphism은 한 점을 한 점으로 보내는 surjective morphism이므로 이는 faithfully flat이다. 
 
@@ -129,7 +129,7 @@ $$0=(d\otimes B)(b\otimes b')=1\otimes b\otimes b'-b\otimes 1\otimes b'$$
 
 $$b\otimes b'=t(b\otimes 1\otimes b')=t(1\otimes b\otimes b')=1\otimes bb'=(\phi\otimes B)(s(b\otimes b'))$$
 
-이므로 $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$이다. 반대쪽 포함관계는 $d\circ \phi=0$으로부터 자명하므로 base change된 sequence는 exact하다. 특히 $\phi$가 faithfully flat이면 [명제 2](#prop2)에 의하여 원래 sequence도 exact하다.
+이므로 $\ker(d\otimes B)\subseteq \im(\phi\otimes B)$이다. 반대쪽 포함관계는 $d\circ \phi=0$으로부터 자명하므로 base change된 sequence는 exact하다. 특히 $\phi$가 faithfully flat이면 [명제 2](#prop2){: data-relation="required" }에 의하여 원래 sequence도 exact하다.
 
 Split exactness의 주장을 완결하기 위해 $t$쪽을 다시 살펴보면, 임의의 $b\otimes b'$에 대하여 $t((d\otimes B)(b\otimes b'))=1\otimes bb'-b\otimes b'$이므로
 
@@ -146,17 +146,17 @@ $$B\otimes_AB=\left(\prod_i A_{f_i}\right)\otimes_A \left(\prod_j A_{f_j}\right)
 
 $$B\otimes_AB \cong\prod_{i,j} A_{f_i}\otimes A_{f_j}\cong\prod_{i,j} A_{f_if_j}$$
 
-으로 생각할 수 있다. ([\[가환대수학\] §국소화의 성질들, ⁋보조정리 1](/ko/math/commutative_algebra/properties_of_localization#lem1)) 그럼 이 identification 하에서, $d^0$은 $B$의 원소를 앞쪽 $i$ 성분으로 넣는 것이고, $d^1$은 $B$의 원소를 뒤쪽 $j$ 성분으로 넣는 것이다. 
+으로 생각할 수 있다. ([\[가환대수학\] §국소화의 성질들, ⁋보조정리 1](/ko/math/commutative_algebra/properties_of_localization#lem1){: data-relation="required" }) 그럼 이 identification 하에서, $d^0$은 $B$의 원소를 앞쪽 $i$ 성분으로 넣는 것이고, $d^1$은 $B$의 원소를 뒤쪽 $j$ 성분으로 넣는 것이다. 
 
 기하적으로는 $D(f_i)\cap D(f_j)=D(f_if_j)$이므로, $B\otimes_AB$는 $D(f_i)\cap D(f_j)$ 위에 정의된 함수들이 이루는 ring으로 생각할 수 있고, 이 때 $d^0$과 $d^1$은 각각 restriction
 
 $$d^0\bigl((s_i)_i\bigr)=\bigl(s_i\vert_{D(f_if_j)}\bigr)_{i,j},\qquad d^1\bigl((s_i)_i\bigr)=\bigl(s_j\vert_{D(f_if_j)}\bigr)_{i,j}$$
 
-가 된다. 즉, 두 morphism의 차이는 overlap $D(f_if_j)$ 위에서 $s_i$와 $s_j$ 중 어느것을 보는지에 따라 달라지는 것으로, $B$의 원소 $(s_i)_i$가 $d$의 kernel에 속한다는 것은 모든 $i,j$에 대하여 $s_i$와 $s_j$가 그 overlap 위에서 일치한다는 것이다. 즉, $D(f_i)$마다 정의된 $s_i$들의 gluing condition을 주는 것이다. 뿐만 아니라, $\phi$의 injectivity는 정확하게 모든 $D(f_i)$ 위에서 $0$이 되는 $A$의 원소가 $0$이라는 주장이므로 sheaf의 identity condition을 주며, 따라서 [보조정리 3](#lem3)은 open cover $\{D(f_i)\}_i$에 대한 $\mathcal{O}_{\Spec A}$의 sheaf condition에 불과하다. 더 일반적으로 Amitsur complex의 나머지 항들은 이 cover의 Čech complex가 된다.
+가 된다. 즉, 두 morphism의 차이는 overlap $D(f_if_j)$ 위에서 $s_i$와 $s_j$ 중 어느것을 보는지에 따라 달라지는 것으로, $B$의 원소 $(s_i)_i$가 $d$의 kernel에 속한다는 것은 모든 $i,j$에 대하여 $s_i$와 $s_j$가 그 overlap 위에서 일치한다는 것이다. 즉, $D(f_i)$마다 정의된 $s_i$들의 gluing condition을 주는 것이다. 뿐만 아니라, $\phi$의 injectivity는 정확하게 모든 $D(f_i)$ 위에서 $0$이 되는 $A$의 원소가 $0$이라는 주장이므로 sheaf의 identity condition을 주며, 따라서 [보조정리 3](#lem3){: data-relation="required" }은 open cover $\{D(f_i)\}_i$에 대한 $\mathcal{O}_{\Spec A}$의 sheaf condition에 불과하다. 더 일반적으로 Amitsur complex의 나머지 항들은 이 cover의 Čech complex가 된다.
 
 ## 하강의 재료
 
-[보조정리 3](#lem3)은 $A$가 $B$의 데이터로부터 어떻게 복원되는지를 정확하게 말해주며, 슬로건은 $B$ 안에서 두 방식의 base change가 일치하는 원소들을 모아두면 그것이 정확히 $A$가 된다는 것이다.
+[보조정리 3](#lem3){: data-relation="required" }은 $A$가 $B$의 데이터로부터 어떻게 복원되는지를 정확하게 말해주며, 슬로건은 $B$ 안에서 두 방식의 base change가 일치하는 원소들을 모아두면 그것이 정확히 $A$가 된다는 것이다.
 
 이 원리를 module로 올린 것이 descent이다. $B$-module $N$이 주어졌다 하고, 여기에 $-\otimes_AB$ 혹은 $B\otimes_A-$를 취해 $B\otimes_AB$-module 구조를 얻는 과정을 생각하자. Ring에서와 마찬가지로, 이 두 $B\otimes_AB$-module $N\otimes_AB$와 $B\otimes_AN$은 $N$이 첫째 factor로 들어가는지, 둘째 factor로 들어가는지에 따라 달라지는 두 구조이며 이 둘을 비교하여 그 equalizer를 생각하는 것이 우리의 목표이다. 문제는 ring에서의 상황과 다르게, $N\otimes_AB$와 $B\otimes_AN$은 <em-ko>정말로</em-ko> 다른[^1] 두 대상이라는 것이다. 따라서 이들을 비교하여 equalizer를 계산하기 위해서는 추가적인 입력, 즉 $N\otimes_AB$와 $B\otimes_AN$ 사이의 identification이 필요하며 이것이 정확히 descent datum이다. 
 
@@ -214,9 +214,9 @@ $$\rMod{A} \rightarrow \Desc(B/A)$$
 
 ## 충실평탄하강
 
-이제 우리는 이 글의 핵심적인 주장을 세울 준비가 됐다. 이는 기본적으로 [보조정리 3](#lem3)에서 확인한 원리를 다시 쓴 것에 지나지 않는다. 
+이제 우리는 이 글의 핵심적인 주장을 세울 준비가 됐다. 이는 기본적으로 [보조정리 3](#lem3){: data-relation="required" }에서 확인한 원리를 다시 쓴 것에 지나지 않는다. 
 ::: 정리 6 (Grothendieck)
-Ring homomorphism $\phi: A \rightarrow B$가 faithfully flat이면, [예시 5](#ex5)의 functor
+Ring homomorphism $\phi: A \rightarrow B$가 faithfully flat이면, [예시 5](#ex5){: data-relation="required" }의 functor
 
 $$\rMod{A} \rightarrow \Desc(B/A);\qquad M\mapsto (M\otimes_A B, \sigma_M)$$
 
@@ -235,7 +235,7 @@ $$(M\otimes_AB)^\sigma=\{x\in M\otimes_A B\mid \sigma_M(x\otimes 1)=1\otimes x\}
 
 $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 
-의 exactness이며, 이는 [보조정리 3](#lem3)의 증명에 coefficient $M$을 붙여 그대로 반복하면 얻어진다. 
+의 exactness이며, 이는 [보조정리 3](#lem3){: data-relation="required" }의 증명에 coefficient $M$을 붙여 그대로 반복하면 얻어진다. 
 
 본질적으로 내용이 있는 부분은 반대방향이다. 즉, descent datum $(N, \Phi_N)$에 대하여 $M=N^\Phi$라 두었을 때, $B$-module morphism
 
@@ -267,16 +267,16 @@ $$v(u(m\otimes b))=\Psi(1\otimes bm)=(1\otimes b)\Psi(1\otimes m)=(1\otimes b)(m
 
 $$1\otimes n=\sum_k (1\otimes b_k)\Phi_N(m_k\otimes 1)=\sum_k (1\otimes b_k)(1\otimes m_k)=1\otimes \sum_k b_km_k$$
 
-이다. 그런데 $n\mapsto n\otimes 1$의 injectivity는 [보조정리 3](#lem3)(의 $M$-coefficient 버전)이 주고, 여기에서 순서만 바꾼 $n\mapsto 1\otimes n: N \rightarrow B\otimes_A N$ 또한 그러하므로 $u(v(n))=\sum_k b_km_k=n$이다. 
+이다. 그런데 $n\mapsto n\otimes 1$의 injectivity는 [보조정리 3](#lem3){: data-relation="required" }(의 $M$-coefficient 버전)이 주고, 여기에서 순서만 바꾼 $n\mapsto 1\otimes n: N \rightarrow B\otimes_A N$ 또한 그러하므로 $u(v(n))=\sum_k b_km_k=n$이다. 
 
 이제 마지막으로 $u$가 실제로 descent datum의 isomorphism이라는 것은 $m\otimes b\otimes b'$에 두 합성을 적용하여 확인하면 되고, naturality 또한 약간의 계산을 통해 보일 수 있다.
 :::
 
-[정리 6](#thm6)의 categorical equivalence에는 논리적으로 서로 다른 두 주장이 들어 있다. Full faithfulness는 두 $A$-module $M,M'$이 이미 주어졌을 때, canonical descent datum 사이의 compatible한 $B$-module morphism $M\otimes_A B\rightarrow M'\otimes_A B$이 유일한 $A$-module morphism $M\rightarrow M'$으로부터 온다는 뜻이다. 여기서는 source와 target이 global하게 주어져 있고 그 사이의 morphism만 붙인다. 이것이 morphism에 대한 descent이다.
+[정리 6](#thm6){: data-relation="required" }의 categorical equivalence에는 논리적으로 서로 다른 두 주장이 들어 있다. Full faithfulness는 두 $A$-module $M,M'$이 이미 주어졌을 때, canonical descent datum 사이의 compatible한 $B$-module morphism $M\otimes_A B\rightarrow M'\otimes_A B$이 유일한 $A$-module morphism $M\rightarrow M'$으로부터 온다는 뜻이다. 여기서는 source와 target이 global하게 주어져 있고 그 사이의 morphism만 붙인다. 이것이 morphism에 대한 descent이다.
 
 Essential surjectivity에서는 global $A$-module이 미리 주어져 있지 않다. 임의의 descent datum $(N,\Phi_N)$으로부터 $A$-module $M$을 찾아 $(N,\Phi_N)\cong(M\otimes_A B,\sigma_M)$으로 나타내야 하며, 위 증명에서는 이 $M$을 $N^\Phi$로 구성했다. 이것이 대상에 대한 effective descent이다. Full faithfulness만으로 essential surjectivity가 따라오지는 않으므로, morphism을 붙일 수 있다는 사실만으로 대상을 붙일 수 있는 것은 아니다.
 
-이 정리의 직접적인 결과로, $A$-module $M$의 여러 성질을 $M$ 자신이 아니라 $B$ 위로 올린 $M\otimes_A B$에서 확인해도 된다. 가령 $M\otimes_A B$가 finitely generated $B$-module이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 exact sequence로 표현되고 [명제 2](#prop2)가 그 exactness를 $A$ 위로 반영하기 때문이다.
+이 정리의 직접적인 결과로, $A$-module $M$의 여러 성질을 $M$ 자신이 아니라 $B$ 위로 올린 $M\otimes_A B$에서 확인해도 된다. 가령 $M\otimes_A B$가 finitely generated $B$-module이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 exact sequence로 표현되고 [명제 2](#prop2){: data-relation="required" }가 그 exactness를 $A$ 위로 반영하기 때문이다.
 
 ::: 명제 7
 Ring homomorphism $\phi: A \rightarrow B$가 faithfully flat이고 $M$이 $A$-module이라 하자. 그럼 $M$이 finitely generated (resp. finitely presented, flat, locally free of finite rank)인 것은 $M\otimes_A B$가 $B$-module로서 finitely generated (resp. finitely presented, flat, locally free of finite rank)인 것과 동치이다.
@@ -294,11 +294,11 @@ $$0 \rightarrow K \rightarrow A^n \rightarrow M \rightarrow 0$$
 
 $$0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0$$
 
-이 exact하고, $M\otimes_A B$가 finitely presented이므로 $K\otimes_A B$는 finitely generated이다. ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6) 이후의 논의) 따라서 위 finitely generated의 결과를 $K$에 적용하면 $K$도 finitely generated이고 $M$은 finitely presented이다.
+이 exact하고, $M\otimes_A B$가 finitely presented이므로 $K\otimes_A B$는 finitely generated이다. ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6){: data-relation="required" } 이후의 논의) 따라서 위 finitely generated의 결과를 $K$에 적용하면 $K$도 finitely generated이고 $M$은 finitely presented이다.
 
 Flatness의 경우, $M$이 flat임을 보이려면 임의의 injective $A$-module morphism $M' \hookrightarrow M''$에 대해 $M'\otimes_A M \rightarrow M''\otimes_A M$이 injective임을 보이면 된다. 역시 여기에 $-\otimes_AB$를 취하면 morphism $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$을 얻는데, 이는 injective homomorphism $M'\otimes_A B \rightarrow M''\otimes_A B$에 flat $B$-module $M\otimes_A B$를 다시 텐서하여 얻어진 것으로 생각할 수 있으므로 다시 injective이다. 
 
-마지막으로 locally free of finite rank는 finitely presented이면서 flat인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6)) 더는 증명할 것이 없다.
+마지막으로 locally free of finite rank는 finitely presented이면서 flat인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6){: data-relation="required" }) 더는 증명할 것이 없다.
 :::
 
 ## 준연접층의 하강
@@ -313,7 +313,7 @@ Fiber product를 가지는 category $\mathcal{C}$ 위의 *Grothendieck pretopolo
 3. $\{f_i: U_i \rightarrow U\}$가 covering이고 각 $i$마다 $\{g_{ij}: U_{ij} \rightarrow U_i\}_{j\in J_i}$가 covering이면, 합성이 주는 $\{f_i\circ g_{ij}: U_{ij} \rightarrow U\}_{i, j}$ 또한 covering이다.
 :::
 
-특히 $\Sch$는 fiber product를 가지므로 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)) 이 정의를 적용할 수 있다. 위상공간의 open cover $\{U_i\}$를 inclusion들의 족 $\{U_i\hookrightarrow U\}$으로 읽으면 위의 세 조건이 성립하며, 이 때 $U_i\times_U V$는 교집합 $U_i\cap V$이다. 즉 세 조건은 자기 자신이 자기 자신을 덮는다는 것, covering을 제한한 것이 다시 covering이라는 것, covering의 covering이 covering이라는 것을 요구할 뿐이다. 우리가 쓸 topology는 faithfully flat인 morphism들이 quasi-compact 조건을 만족하는 covering을 사용하는 것으로, 그 이름 *fidèlement plat quasi-compact*를 줄여 fpqc topology라 부른다.
+특히 $\Sch$는 fiber product를 가지므로 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8){: data-relation="required" }) 이 정의를 적용할 수 있다. 위상공간의 open cover $\{U_i\}$를 inclusion들의 족 $\{U_i\hookrightarrow U\}$으로 읽으면 위의 세 조건이 성립하며, 이 때 $U_i\times_U V$는 교집합 $U_i\cap V$이다. 즉 세 조건은 자기 자신이 자기 자신을 덮는다는 것, covering을 제한한 것이 다시 covering이라는 것, covering의 covering이 covering이라는 것을 요구할 뿐이다. 우리가 쓸 topology는 faithfully flat인 morphism들이 quasi-compact 조건을 만족하는 covering을 사용하는 것으로, 그 이름 *fidèlement plat quasi-compact*를 줄여 fpqc topology라 부른다.
 
 ::: 정의 9
 Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $\psi_i$가 flat이고, $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 image로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck topology를 *fpqc topology*이라 부른다.
@@ -321,7 +321,7 @@ Scheme $X$ 위의 morphism들의 모임 $\{\psi_i: U_i \rightarrow X\}_{i\in I}$
 
 Fpqc topology에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 covering은 faithfully flat ring homomorphism $A \rightarrow B$ 하나로 이루어진 $\{\Spec B \rightarrow \Spec A\}$이다. 
 
-우리가 [보조정리 3](#lem3)을 굳이 module로 올린 것은, 당연히, quasi-coherent sheaf를 다루기 위한 것이다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8))
+우리가 [보조정리 3](#lem3){: data-relation="required" }을 굳이 module로 올린 것은, 당연히, quasi-coherent sheaf를 다루기 위한 것이다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8){: data-relation="required" })
 
 ::: 정리 10
 임의의 scheme $X$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, presheaf
@@ -335,29 +335,29 @@ $$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\ma
 는 exact하다.
 :::
 ::: 증명
-문제가 local하고 quasi-compact 조건 덕분에 finite covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-module $M$을 택하면 pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 위 sequence는
+문제가 local하고 quasi-compact 조건 덕분에 finite covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-module $M$을 택하면 pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15){: data-relation="required" }) 위 sequence는
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
-이다. 그럼 주장은 [보조정리 3](#lem3)을 $M$을 coefficient로 두어 일반화한 sequence
+이다. 그럼 주장은 [보조정리 3](#lem3){: data-relation="required" }을 $M$을 coefficient로 두어 일반화한 sequence
 
 $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 
-의 exactness로, 이미 [정리 6](#thm6)의 증명에서 보인 것이다. 이제 두 morphism $d^0, d^1$의 equalizer가 $M$임이 곧 위의 sheaf 조건이므로 결론을 얻는다.
+의 exactness로, 이미 [정리 6](#thm6){: data-relation="required" }의 증명에서 보인 것이다. 이제 두 morphism $d^0, d^1$의 equalizer가 $M$임이 곧 위의 sheaf 조건이므로 결론을 얻는다.
 :::
 
-[정리 10](#thm10)은 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. 이로부터 quasi-coherent sheaf 자체의 descent를 얻는다.
+[정리 10](#thm10){: data-relation="required" }은 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. 이로부터 quasi-coherent sheaf 자체의 descent를 얻는다.
 
 ::: 정리 11
 Family $\{\psi_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\Phi_{ij}: \pr_2^\ast \mathcal{F}_j\cong \pr_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다.
 :::
 ::: 증명
-문제가 local하므로 $X=\Spec A$이고 covering이 단일한 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우만 보면 충분하다. 그럼 이 상황에서 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-module isomorphism $\Phi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. 이 데이터는 $\Desc(B/A)$의 대상에 정확히 대응하므로 [정리 6](#thm6)에 의해 이는 유일한 $A$-module $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 이 correspondence는 morphism까지 보존한다.
+문제가 local하므로 $X=\Spec A$이고 covering이 단일한 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우만 보면 충분하다. 그럼 이 상황에서 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-module isomorphism $\Phi_N$의 cocycle 쌍, 즉 [정의 4](#def4){: data-relation="required" }의 descent datum이다. 이 데이터는 $\Desc(B/A)$의 대상에 정확히 대응하므로 [정리 6](#thm6){: data-relation="required" }에 의해 이는 유일한 $A$-module $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 이 correspondence는 morphism까지 보존한다.
 
-일반적인 fpqc cover의 경우, quasi-compact 조건으로 finite subcover를 잡고 그 disjoint union을 단일한 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 gluing하면 된다. Gluing의 consistency는 [정리 10](#thm10)의 sheaf 성질이 보장한다.
+일반적인 fpqc cover의 경우, quasi-compact 조건으로 finite subcover를 잡고 그 disjoint union을 단일한 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 gluing하면 된다. Gluing의 consistency는 [정리 10](#thm10){: data-relation="required" }의 sheaf 성질이 보장한다.
 :::
 
-역시 [정리 11](#thm11)에서 핵심적인 사실은 위의 형태의 descent datum $(\mathcal{F}_i, \Phi)$가 주어졌을 때 이들을 실제로 붙여서 단일한 sheaf $\mathcal{F}$를 붙일 수 있다는 것이다.
+역시 [정리 11](#thm11){: data-relation="weak" }에서 핵심적인 사실은 위의 형태의 descent datum $(\mathcal{F}_i, \Phi)$가 주어졌을 때 이들을 실제로 붙여서 단일한 sheaf $\mathcal{F}$를 붙일 수 있다는 것이다.
 
 ## 사상의 하강
 
@@ -375,17 +375,17 @@ $$V\times_SU_i\cong V_i$$
 
 $$\mathcal{A}_i=(\varphi_i)_\ast\mathcal{O}_{V_i}$$
 
-로 생각한다. ([§준연접층, ⁋정리 20](/ko/math/scheme_theory/quasicoherent_sheaves#thm20)) 즉 $V_i$를 relative spec $\rSpec_{U_i}(\mathcal{A}_i)$으로 생각하는 것으로, 우리는 이 quasi-coherent algebra들을 붙여서 단일한 quasi-coherent algebra를 얻은 후 이를 다시 affine morphism으로 돌려놓으면 된다. 
+로 생각한다. ([§준연접층, ⁋정리 20](/ko/math/scheme_theory/quasicoherent_sheaves#thm20){: data-relation="required" }) 즉 $V_i$를 relative spec $\rSpec_{U_i}(\mathcal{A}_i)$으로 생각하는 것으로, 우리는 이 quasi-coherent algebra들을 붙여서 단일한 quasi-coherent algebra를 얻은 후 이를 다시 affine morphism으로 돌려놓으면 된다. 
 
-이제 $V_i$들 사이의 cocycle isomorphism들은 이 언어에서 $\mathcal{A}_i$들의 pullback 사이의 cocycle isomorphism으로 번역되므로, [정리 11](#thm11)을 적용하면 $S$ 위의 quasi-coherent sheaf $\mathcal{A}$와 isomorphism
+이제 $V_i$들 사이의 cocycle isomorphism들은 이 언어에서 $\mathcal{A}_i$들의 pullback 사이의 cocycle isomorphism으로 번역되므로, [정리 11](#thm11){: data-relation="required" }을 적용하면 $S$ 위의 quasi-coherent sheaf $\mathcal{A}$와 isomorphism
 
 $$\psi_i^\ast\mathcal{A}\cong\mathcal{A}_i$$
 
-를 얻는다. 이제 이 위에 algebra 구조를 줘야 한다. [§준연접층, ⁋명제 22](/ko/math/scheme_theory/quasicoherent_sheaves#prop22)의 증명에서 확인했듯 pullback은 tensor product와 호환되고 $\psi_i^\ast\mathcal{O}_S\cong\mathcal{O}_{U_i}$이므로, 각 $\mathcal{A}_i$의 multiplication과 unit
+를 얻는다. 이제 이 위에 algebra 구조를 줘야 한다. [§준연접층, ⁋명제 22](/ko/math/scheme_theory/quasicoherent_sheaves#prop22){: data-relation="required" }의 증명에서 확인했듯 pullback은 tensor product와 호환되고 $\psi_i^\ast\mathcal{O}_S\cong\mathcal{O}_{U_i}$이므로, 각 $\mathcal{A}_i$의 multiplication과 unit
 
 $$\mu_i:\mathcal{A}_i\otimes\mathcal{A}_i\rightarrow\mathcal{A}_i,\qquad \eta_i:\mathcal{O}_{U_i}\rightarrow\mathcal{A}_i$$
 
-은 각각 $\mathcal{A}\otimes\mathcal{A}$와 $\mathcal{A}$의 pullback 사이, 그리고 $\mathcal{O}_S$와 $\mathcal{A}$의 pullback 사이의 morphism으로 볼 수 있다. 이들은 주어진 algebra isomorphism들과 compatible하므로, [정리 11](#thm11)의 morphism에 대한 correspondence를 통해 유일한 morphism
+은 각각 $\mathcal{A}\otimes\mathcal{A}$와 $\mathcal{A}$의 pullback 사이, 그리고 $\mathcal{O}_S$와 $\mathcal{A}$의 pullback 사이의 morphism으로 볼 수 있다. 이들은 주어진 algebra isomorphism들과 compatible하므로, [정리 11](#thm11){: data-relation="required" }의 morphism에 대한 correspondence를 통해 유일한 morphism
 
 $$\mu:\mathcal{A}\otimes\mathcal{A}\rightarrow\mathcal{A},\qquad \eta:\mathcal{O}_S\rightarrow\mathcal{A}$$
 
@@ -393,20 +393,20 @@ $$\mu:\mathcal{A}\otimes\mathcal{A}\rightarrow\mathcal{A},\qquad \eta:\mathcal{O
 
 $$V=\rSpec_S(\mathcal{A})$$
 
-로 두면 이는 $S$ 위의 affine scheme이다. [§준연접층, ⁋명제 22](/ko/math/scheme_theory/quasicoherent_sheaves#prop22)에 의하여 relative spectrum은 base change와 호환되므로
+로 두면 이는 $S$ 위의 affine scheme이다. [§준연접층, ⁋명제 22](/ko/math/scheme_theory/quasicoherent_sheaves#prop22){: data-relation="required" }에 의하여 relative spectrum은 base change와 호환되므로
 
 $$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathcal{A}_i)\cong V_i$$
 
-이고, 이 isomorphism들은 처음에 주어진 cocycle 데이터를 회복한다. 또한 $\mathcal{A}$와 그 algebra structure가 [정리 11](#thm11)에 의해 unique isomorphism을 제외하고 유일하고 affine morphism이 그 quasi-coherent algebra로부터 복원되므로 $V$도 동일한 의미에서 유일하다.
+이고, 이 isomorphism들은 처음에 주어진 cocycle 데이터를 회복한다. 또한 $\mathcal{A}$와 그 algebra structure가 [정리 11](#thm11){: data-relation="required" }에 의해 unique isomorphism을 제외하고 유일하고 affine morphism이 그 quasi-coherent algebra로부터 복원되므로 $V$도 동일한 의미에서 유일하다.
 :::
 
-더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open embedding인 것이다. 이 경우에도 [정리 12](#thm12)의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
+더 일반적으로, quasi-compact, quasi-separated scheme morphism $\varphi:V\rightarrow U$이 *quasi-affine*인 것은 canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$가 quasi-compact open embedding인 것이다. 이 경우에도 [정리 12](#thm12){: data-relation="required" }의 결론이 성립한다. 다른 방향의 일반화는 quasi-projective morphism의 경우로, morphism이 quasi-projective인 것만으로는 부족하고 ample line bundle과 그 위의 compatible한 descent datum이 함께 주어져야 한다. 대략적인 증명은 ample line bundle의 section algebra를 내려보내 relative Proj를 만들면 원래 scheme은 그 안의 open subscheme으로 나타나므로 이들을 이어붙이는 것이다. 
 
-한편, faithfully flat base change는 exact functor일 뿐 아니라, 여기서 확인한 exactness를 원래대로 돌릴 수도 있다는 것이 핵심적인 성질이며, [명제 7](#prop7)은 이를 이용해 module의 flatness와 finiteness 조건들을 내려보냈다. 같은 논의를 affine-local하게 적용하면 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질도 cover 위에서 확인할 수 있다. 이를 위해 $Y$의 fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
+한편, faithfully flat base change는 exact functor일 뿐 아니라, 여기서 확인한 exactness를 원래대로 돌릴 수도 있다는 것이 핵심적인 성질이며, [명제 7](#prop7){: data-relation="required" }은 이를 이용해 module의 flatness와 finiteness 조건들을 내려보냈다. 같은 논의를 affine-local하게 적용하면 이미 주어진 scheme morphism $\psi:X\rightarrow Y$의 성질도 cover 위에서 확인할 수 있다. 이를 위해 $Y$의 fpqc cover $\{Y_i\rightarrow Y\}$를 잡으면 $\psi$는 morphism
 
 $$\psi_i:X\times_YY_i\rightarrow Y_i$$
 
-들을 정의한다. 그럼 [명제 7](#prop7)을 scheme-theoretic하게 올리면 다음 명제의 flatness와 finiteness를 얻을 수 있으며, surjectivity와 affineness는 [정리 12](#thm12)와 같은 방식으로 처리할 수 있다. 
+들을 정의한다. 그럼 [명제 7](#prop7){: data-relation="required" }을 scheme-theoretic하게 올리면 다음 명제의 flatness와 finiteness를 얻을 수 있으며, surjectivity와 affineness는 [정리 12](#thm12){: data-relation="required" }와 같은 방식으로 처리할 수 있다. 
 
 ::: 명제 13
 Scheme morphism $\psi: X\rightarrow Y$와 $Y$의 fpqc cover $\{Y_i \rightarrow Y\}$가 주어졌다 하자. 그럼 $\psi$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $\psi_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다.
