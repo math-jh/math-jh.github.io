@@ -103,7 +103,7 @@ $$(L_iF)(A)=H_i(F(P_\bullet)),\qquad\text{$P_\bullet$ a projective resolution of
 $L_iF(A)$가 위에서 선택한 $P_\bullet$의 선택에 의존하지 않는다.
 :::
 ::: 증명
-두 개의 projective resolution들을 두고, [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 identity map에 대해 적용하면 된다.
+두 개의 projective resolution들을 두고, [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" }을 identity map에 대해 적용하면 된다.
 :::
 
 이제 left derived functor를 조금 더 자세히 살펴보자. 우선 $F$가 right exact인 것으로부터 다음 sequence
@@ -122,7 +122,7 @@ $L_\bullet F$들이 homological $\delta$-functor임을 보이기 위해서는 �
 $L_iF$들은 additive functor이다.
 :::
 ::: 증명
-우선 임의의 $f: A' \rightarrow A$와 $A'$, $A$의 projective resolution들이 각각 주어졌을 때 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 적용하여 $L_nF(f)$를 얻을 수 있다. $f$의 두 lift가 chain homotopic이고 additive functor $F$가 chain homotopy를 보존하므로 $L_nF(f)$는 lift의 선택에 의존하지 않으면서 functoriality를 만족하고, 두 morphism $f,g:A'\rightarrow A$의 lift $f_\bullet,g_\bullet$에 대해 $f_\bullet+g_\bullet$이 $f+g$의 lift가 된다는 것으로부터 additivity를 얻는다. 
+우선 임의의 $f: A' \rightarrow A$와 $A'$, $A$의 projective resolution들이 각각 주어졌을 때 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" }을 적용하여 $L_nF(f)$를 얻을 수 있다. $f$의 두 lift가 chain homotopic이고 additive functor $F$가 chain homotopy를 보존하므로 $L_nF(f)$는 lift의 선택에 의존하지 않으면서 functoriality를 만족하고, 두 morphism $f,g:A'\rightarrow A$의 lift $f_\bullet,g_\bullet$에 대해 $f_\bullet+g_\bullet$이 $f+g$의 lift가 된다는 것으로부터 additivity를 얻는다. 
 :::
 
 ::: 보조정리 7
@@ -133,7 +133,7 @@ $L_iF$들은 homological $\delta$-functor이다.
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
-이 주어졌다 하자. $A$와 $C$의 projective resolution들 $P_\bullet$, $R_\bullet$이 주어졌다 하면 [§분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)을 이용하여 projective resolution $Q_\bullet \rightarrow B$를 얻는다. 한편, 각각의 $n$에 대해 $R_n$이 projective이므로 
+이 주어졌다 하자. $A$와 $C$의 projective resolution들 $P_\bullet$, $R_\bullet$이 주어졌다 하면 [§분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7){: data-relation="required" }을 이용하여 projective resolution $Q_\bullet \rightarrow B$를 얻는다. 한편, 각각의 $n$에 대해 $R_n$이 projective이므로 
 
 $$0 \rightarrow P_n \rightarrow Q_n \rightarrow R_n \rightarrow 0$$
 
@@ -141,20 +141,20 @@ $$0 \rightarrow P_n \rightarrow Q_n \rightarrow R_n \rightarrow 0$$
 
 $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \rightarrow 0$$
 
-또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
+또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1){: data-relation="required" }), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
 $$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
 
-를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1)의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 사용하면 된다.
+를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1){: data-relation="required" }의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" }을 사용하면 된다.
 :::
 
-뿐만 아니라, 이들은 [정의 3](#def3)의 센스에서 *universal* homological $\delta$-functor를 정의한다. 이에 대한 증명은 생략하였다. 
+뿐만 아니라, 이들은 [정의 3](#def3){: data-relation="required" }의 센스에서 *universal* homological $\delta$-functor를 정의한다. 이에 대한 증명은 생략하였다. 
 
 ::: 명제 8
 Enough projective를 갖는 abelian category $\mathcal{A}$와, 임의의 right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$를 생각하자. 그럼 derived functor들 $L_nF$는 universal $\delta$-functor들이다. 
 :::
 
-위에서의 논의와 마찬가지로, 우리는 left exact functor에 대해서도 right derived functor를 정의할 수 있다. 그 정의는 [정의 4](#def4)의 "dual"이다.
+위에서의 논의와 마찬가지로, 우리는 left exact functor에 대해서도 right derived functor를 정의할 수 있다. 그 정의는 [정의 4](#def4){: data-relation="required" }의 "dual"이다.
 
 ::: 정의 9
 Left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하고, $\mathcal{A}$가 enough injective를 갖는다 하자. 그럼 $F$의 *right derived functor<sub>오른쪽 유도함자</sub>*들 $R^i F$를 다음의 식
@@ -164,7 +164,7 @@ $$(R^iF)(A)=H^i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of
 으로 정의한다.
 :::
 
-그럼 이들이 universal cohomological $\delta$-functor들이라는 것도 알 수 있다. [정의 4](#def4)와 다르게 위첨자를 쓰는 이유는 이들이 말 그대로 *cohomological* $\delta$-functor들로서, 주로 cohomology에 관련된 것들을 다룰 때 나오기 때문이다.
+그럼 이들이 universal cohomological $\delta$-functor들이라는 것도 알 수 있다. [정의 4](#def4){: data-relation="weak" }와 다르게 위첨자를 쓰는 이유는 이들이 말 그대로 *cohomological* $\delta$-functor들로서, 주로 cohomology에 관련된 것들을 다룰 때 나오기 때문이다.
 
 ---
 
