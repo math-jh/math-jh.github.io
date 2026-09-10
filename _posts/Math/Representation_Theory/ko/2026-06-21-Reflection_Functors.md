@@ -14,9 +14,9 @@ weight: 103
 published: false
 ---
 
-유한차원 representation을 분류하는 문제는 indecomposable들을 찾는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 같은 quiver라도 arrow의 방향을 바꾸면 그 indecomposable들의 모임이 어떻게 달라지는지를 묻는 것은 자연스럽다. *Reflection functor*는 이 물음에 답하는 도구이다. Quiver $Q$의 한 vertex $k$가 모든 arrow를 받기만 하는 *sink*이거나 내보내기만 하는 *source*일 때, 그 vertex에 인접한 arrow를 모두 뒤집어 새 quiver $\sigma_k Q$를 얻고, 동시에 representation을 $\Rep(Q)$에서 $\Rep(\sigma_k Q)$로 옮기는 functor $S_k^+$ 또는 $S_k^-$를 구성한다. 핵심은 이 조작이 dimension vector 위에서 정확히 root lattice의 simple reflection $s_k$로 작용한다는 것이며, 이로써 quiver의 representation 이론과 root system의 조합론이 직접 연결된다. 이 연결은 Gabriel 정리, 곧 representation-finite quiver가 정확히 type $A$, $D$, $E$의 Dynkin quiver임을 밝히는 정리의 핵심 도구가 된다.
+유한차원 representation을 분류하는 문제는 indecomposable들을 찾는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6){: data-relation="required" }), 같은 quiver라도 arrow의 방향을 바꾸면 그 indecomposable들의 모임이 어떻게 달라지는지를 묻는 것은 자연스럽다. *Reflection functor*는 이 물음에 답하는 도구이다. Quiver $Q$의 한 vertex $k$가 모든 arrow를 받기만 하는 *sink*이거나 내보내기만 하는 *source*일 때, 그 vertex에 인접한 arrow를 모두 뒤집어 새 quiver $\sigma_k Q$를 얻고, 동시에 representation을 $\Rep(Q)$에서 $\Rep(\sigma_k Q)$로 옮기는 functor $S_k^+$ 또는 $S_k^-$를 구성한다. 핵심은 이 조작이 dimension vector 위에서 정확히 root lattice의 simple reflection $s_k$로 작용한다는 것이며, 이로써 quiver의 representation 이론과 root system의 조합론이 직접 연결된다. 이 연결은 Gabriel 정리, 곧 representation-finite quiver가 정확히 type $A$, $D$, $E$의 Dynkin quiver임을 밝히는 정리의 핵심 도구가 된다.
 
-이 글에서 $k$는 field를 가리키고 (vertex를 가리킬 때는 문맥에서 구별된다), $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않는 finite quiver이며 ([§Quiver와 경로대수, ⁋정의 1](/ko/math/representation_theory/path_algebras#def1)), representation이라 하면 유한차원 representation을 뜻한다 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)). Root system과 그 위의 reflection, root lattice의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
+이 글에서 $k$는 field를 가리키고 (vertex를 가리킬 때는 문맥에서 구별된다), $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않는 finite quiver이며 ([§Quiver와 경로대수, ⁋정의 1](/ko/math/representation_theory/path_algebras#def1){: data-relation="required" }), representation이라 하면 유한차원 representation을 뜻한다 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9){: data-relation="required" }). Root system과 그 위의 reflection, root lattice의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-relation="required" }를 따른다.
 
 ## Sink과 source, 그리고 quiver의 반사
 
@@ -106,7 +106,7 @@ $$\langle d,e\rangle=\sum_{i\in Q_0}d_i e_i-\sum_{\alpha\in Q_1}d_{s(\alpha)}e_{
 
 $$s_k(d)=d-(d,e_k)e_k$$
 
-을 정의할 수 있다. 이는 [\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 reflection과 같은 꼴이며, vertex $k$ 좌표만 바꾸는 변환이다. 구체적으로 $k$가 sink일 때 $(d,e_k)$의 계산에서 $s_k(d)$의 $k$-좌표는 $\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 functor의 효과임을 말한다.
+을 정의할 수 있다. 이는 [\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9){: data-relation="required" }의 reflection과 같은 꼴이며, vertex $k$ 좌표만 바꾸는 변환이다. 구체적으로 $k$가 sink일 때 $(d,e_k)$의 계산에서 $s_k(d)$의 $k$-좌표는 $\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 functor의 효과임을 말한다.
 
 ::: 명제 7
 $k$가 $Q$의 sink이고 $V$가 $Q$의 indecomposable representation으로서 vertex $k$에 얹힌 simple representation $S_k$ (곧 dimension vector $e_k$인 것) 와 isomorphic하지 않다고 하자. 그럼 morphism $V_{\mathrm{in}}$이 전사이고,
@@ -116,7 +116,7 @@ $$\underline\dim(S_k^+ V)=s_k(\underline\dim V)$$
 가 성립한다. Symmetric으로 $k$가 source이고 $V$가 simple representation $S_k$와 isomorphic하지 않은 indecomposable이면 $V_{\mathrm{out}}$이 단사이고 $\underline\dim(S_k^- V)=s_k(\underline\dim V)$이다.
 :::
 ::: 증명
-Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k$가 sink이므로 $V$에서 vertex $k$ 위의 공간 $V_k$로 들어오는 정보는 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$로 전부 모인다. 먼저 $V_{\mathrm{in}}$이 전사임을 보인다. $U=\im V_{\mathrm{in}}\subseteq V_k$라 하고, $V_k$의 부분공간 $U$의 한 보충공간 $C$를 택해 $V_k=U\oplus C$로 적자. 그럼 vertex $k$에만 $C$를 얹고 나머지 vertex에는 $0$을 얹은 representation $V'=(C\text{ at }k)$는 $V$의 subrepresentation이다. 실제로 $k$가 sink이므로 $k$에서 나가는 arrow가 없어 $C$가 arrow를 따라 옮겨질 곳이 없고, 따라서 부분공간 조건이 자명하게 성립한다 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11)). 더 나아가 $C$ 위의 공간은 다른 vertex로부터 들어오는 morphism의 image $U$와 direct sum을 이루므로, $V'$는 $V$의 direct summand이다. 곧 $V\cong V''\oplus V'$이고 $V'$는 vertex $k$ 위의 simple representation들의 direct sum, 곧 $S_k^{\oplus\dim C}$이다. $V$가 indecomposable이고 $S_k$와 isomorphic하지 않다고 가정하였으므로 $V'=0$, 곧 $C=0$이어야 한다. 따라서 $U=V_k$이고 $V_{\mathrm{in}}$은 전사이다.
+Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k$가 sink이므로 $V$에서 vertex $k$ 위의 공간 $V_k$로 들어오는 정보는 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$로 전부 모인다. 먼저 $V_{\mathrm{in}}$이 전사임을 보인다. $U=\im V_{\mathrm{in}}\subseteq V_k$라 하고, $V_k$의 부분공간 $U$의 한 보충공간 $C$를 택해 $V_k=U\oplus C$로 적자. 그럼 vertex $k$에만 $C$를 얹고 나머지 vertex에는 $0$을 얹은 representation $V'=(C\text{ at }k)$는 $V$의 subrepresentation이다. 실제로 $k$가 sink이므로 $k$에서 나가는 arrow가 없어 $C$가 arrow를 따라 옮겨질 곳이 없고, 따라서 부분공간 조건이 자명하게 성립한다 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11){: data-relation="required" }). 더 나아가 $C$ 위의 공간은 다른 vertex로부터 들어오는 morphism의 image $U$와 direct sum을 이루므로, $V'$는 $V$의 direct summand이다. 곧 $V\cong V''\oplus V'$이고 $V'$는 vertex $k$ 위의 simple representation들의 direct sum, 곧 $S_k^{\oplus\dim C}$이다. $V$가 indecomposable이고 $S_k$와 isomorphic하지 않다고 가정하였으므로 $V'=0$, 곧 $C=0$이어야 한다. 따라서 $U=V_k$이고 $V_{\mathrm{in}}$은 전사이다.
 
 이제 차원을 센다. $V_{\mathrm{in}}$이 전사이므로 short exact sequence
 
@@ -174,7 +174,7 @@ $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 로 정의한다. Symmetric으로 admissible source sequence를 따라 $S^-$들을 합성하여 $C^-:\Rep(Q)\rightarrow\Rep(Q)$를 정의한다.
 :::
 
-각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 arrow를 뒤집으므로, 모든 vertex를 거치고 나면 $\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$가 되어 $C^+$는 $\Rep(Q)$를 자기 자신으로 보낸다. Admissible sink sequence는 $Q$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 functor를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) *Coxeter element* $c=s_{k_n}\cdots s_{k_1}$로 작용한다.
+각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 arrow를 뒤집으므로, 모든 vertex를 거치고 나면 $\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$가 되어 $C^+$는 $\Rep(Q)$를 자기 자신으로 보낸다. Admissible sink sequence는 $Q$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 functor를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17){: data-relation="required" }) *Coxeter element* $c=s_{k_n}\cdots s_{k_1}$로 작용한다.
 
 ::: 명제 10
 $(k_1,\ldots,k_n)$이 admissible sink sequence이고 $V$가 $Q$의 indecomposable representation이라 하자. $C^+ V\neq 0$이면
@@ -207,7 +207,7 @@ Preprojective indecomposable은 $C^+$를 거듭하면 결국 $0$이 되므로, $
 
 ## Euler form과 Gabriel 정리
 
-명제 7과 명제 10은 indecomposable의 dimension vector가 Weyl group의 action 아래에서 어떻게 움직이는지를 말해 준다. 이를 Euler form 및 Tits form과 결합하면, indecomposable의 dimension vector가 정확히 root임을 알 수 있다. 핵심 관찰은 반사 functor가 dimension vector 위에서 reflection으로 작용하고 ([정의 6](#def6)의 symmetric form에 대한 simple reflection), reflection이 Tits form을 보존한다는 것이다.
+명제 7과 명제 10은 indecomposable의 dimension vector가 Weyl group의 action 아래에서 어떻게 움직이는지를 말해 준다. 이를 Euler form 및 Tits form과 결합하면, indecomposable의 dimension vector가 정확히 root임을 알 수 있다. 핵심 관찰은 반사 functor가 dimension vector 위에서 reflection으로 작용하고 ([정의 6](#def6){: data-relation="required" }의 symmetric form에 대한 simple reflection), reflection이 Tits form을 보존한다는 것이다.
 
 ::: 명제 12
 Reflection $s_k$는 Tits form을 보존한다. 곧 임의의 $d\in\mathbb{Z}^n$에 대하여 $q(s_k(d))=q(d)$이다. 특히 admissible sink sequence가 주는 Coxeter element $c$도 $q$를 보존한다.
@@ -232,7 +232,7 @@ $$V\longmapsto\underline\dim V$$
 ::: 증명
 완전한 증명은 길어 여기서 재구성하지 않으며, 그 골격만 적고 [ASS, Chapter VII]과 [Br, §5]의 논증을 따른다. 반사 functor가 증명의 두 방향 모두에서 중심 역할을 한다.
 
-$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6)) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 positive root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11)). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12)) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline\dim V$가 indecomposable에서 positive root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 positive root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems)), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
+$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6){: data-relation="required" }) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 positive root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11){: data-relation="required" }). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12){: data-relation="required" }) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline\dim V$가 indecomposable에서 positive root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 positive root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-relation="required" }), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
 
 역으로 $Q$가 Dynkin이 아니면 그 underlying graph는 extended Dynkin diagram을 포함하고, 그 위에서 Tits form은 positive definite가 아니어서 $q(d)\leq 1$을 만족하는 dimension vector가 무한히 많은 indecomposable을 허용한다. 따라서 $Q$는 representation-finite가 아니다.
 :::
