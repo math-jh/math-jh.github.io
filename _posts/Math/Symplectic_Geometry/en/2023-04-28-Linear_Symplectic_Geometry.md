@@ -105,9 +105,9 @@ For a symplectic vector space $(V,\omega)$ and its subspace $W$, the following h
 4. $W$ is Lagrangian if and only if $W$ is isotropic and $\dim W=\frac{1}{2}\dim V$.
 :::
 ::: Proof
-1. Since $\omega$ is a non-degenerate pairing, the map $v\mapsto \omega(v,-)$ defines an isomorphism from $V$ to $V^\ast$. ([\[Linear Algebra\] §Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4))
+1. Since $\omega$ is a non-degenerate pairing, the map $v\mapsto \omega(v,-)$ defines an isomorphism from $V$ to $V^\ast$. ([\[Linear Algebra\] §Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4){: data-relation="required" })
     
-    Let $W^\perp\subseteq V^\ast$ be the annihilator of $W$. ([\[Linear Algebra\] §Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7)) For any $u\in W^\omega$,
+    Let $W^\perp\subseteq V^\ast$ be the annihilator of $W$. ([\[Linear Algebra\] §Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7){: data-relation="required" }) For any $u\in W^\omega$,
     
     $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     
@@ -157,7 +157,7 @@ $$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 so by definition $w\in W^\omega$ and therefore $[w]=0$. That is, $\overline{\omega}$ is non-degenerate.
 :::
 
-Since every 1-dimensional subspace of a symplectic vector space is an isotropic subspace, by [Lemma 4](#lem4) every codimension-1 subspace $W$ is a coisotropic subspace. Applying [Lemma 5](#lem5) to this space, we obtain a new symplectic vector space with dimension reduced by 2 from the original vector space.
+Since every 1-dimensional subspace of a symplectic vector space is an isotropic subspace, by [Lemma 4](#lem4){: data-relation="required" } every codimension-1 subspace $W$ is a coisotropic subspace. Applying [Lemma 5](#lem5){: data-relation="required" } to this space, we obtain a new symplectic vector space with dimension reduced by 2 from the original vector space.
 
 ---
 

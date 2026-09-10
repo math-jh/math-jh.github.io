@@ -83,7 +83,7 @@ $$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$
 
 $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
-을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 [§고전역학](/ko/math/symplectic_geometry/classical_mechanics)에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
+을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 [§고전역학](/ko/math/symplectic_geometry/classical_mechanics){: data-relation="weak" }에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
 
 ::: 정의 3
 $(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement<sub>사교 여공간</sub>*는
@@ -107,9 +107,9 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
 4. $W$가 Lagrangian인 것은 $W$가 isotropic이고 $\dim W=\frac{1}{2}\dim V$인 것과 동치이다.
 :::
 ::: 증명
-1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 단사인 linear map을 정의하고 ([\[선형대수학\] §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)), $\dim V=\dim V^\ast$이므로 이는 isomorphism이다. 
+1. $\omega$는 non-degenerate pairing이므로, $v\mapsto \omega(v,-)$는 $V$에서 $V^\ast$로의 단사인 linear map을 정의하고 ([\[선형대수학\] §쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4){: data-relation="required" }), $\dim V=\dim V^\ast$이므로 이는 isomorphism이다. 
     
-    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\] §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)) 임의의 $u\in W^\omega$에 대하여
+    $W$의 annihilator를 $W^\perp\subseteq V^\ast$라 하자. ([\[선형대수학\] §쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7){: data-relation="required" }) 임의의 $u\in W^\omega$에 대하여
     
     $$\omega(u,w)=0\qquad\text{for all $w\in W$}$$
     
@@ -159,7 +159,7 @@ $$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 이므로 정의에 의해 $w\in W^\omega$이고 따라서 $[w]=0$이다. 즉 $\overline{\omega}$는 non-degenerate이다.
 :::
 
-Symplectic vector space의 모든 1차원 부분공간은 isotropic subspace이므로, [보조정리 4](#lem4)에 의하여 모든 codimension 1의 부분공간 $W$는 coisotropic subspace이다. 이 공간에 [보조정리 5](#lem5)를 적용하면 우리는 원래의 벡터공간에서 2차원이 줄어든 새로운 symplectic vector space를 얻게 된다.
+Symplectic vector space의 모든 1차원 부분공간은 isotropic subspace이므로, [보조정리 4](#lem4){: data-relation="required" }에 의하여 모든 codimension 1의 부분공간 $W$는 coisotropic subspace이다. 이 공간에 [보조정리 5](#lem5){: data-relation="required" }를 적용하면 우리는 원래의 벡터공간에서 2차원이 줄어든 새로운 symplectic vector space를 얻게 된다.
 
 ---
 
