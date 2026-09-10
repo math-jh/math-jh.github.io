@@ -16,7 +16,7 @@ weight: 15
 우선 다음을 정의한다.
 
 ::: 정의 1
-위상공간 $X$가 *limit point compact<sub>극한점 옹골</sub>*라는 것은 $X$의 모든 무한집합이 limit point를 갖는 것을 의미한다. ([§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8))
+위상공간 $X$가 *limit point compact<sub>극한점 옹골</sub>*라는 것은 $X$의 모든 무한집합이 limit point를 갖는 것을 의미한다. ([§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8){: data-relation="required" })
 :::
 
 일반적으로 다음이 성립한다.
@@ -25,7 +25,7 @@ weight: 15
 Compact space는 limit point compact이다.
 :::
 ::: 증명
-결론에 반하여 limit point compact가 아닌 compact space $X$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $A$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8) 이후의 논증에 의하여 $\cl(A)\setminus A=\emptyset$이어야 한다. 즉 $A$는 닫힌집합이어야 하고, 따라서 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3)) 한편 각각의 $a\in A$ 또한 $A$의 limit point가 아니므로, $a$의 적당한 열린근방 $U_a$가 존재하여 $A\cap U_a=\{a\}$이도록 할 수 있다. 그럼 $(U_a)_{a\in A}$는 finite subcover를 갖지 않는 $A$의 open covering이므로 모순이다.
+결론에 반하여 limit point compact가 아닌 compact space $X$를 가정하자. 그럼 limit point를 갖지 않는 무한집합 $A$가 존재하며, 따라서 [§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8){: data-relation="required" } 이후의 논증에 의하여 $\cl(A)\setminus A=\emptyset$이어야 한다. 즉 $A$는 닫힌집합이어야 하고, 따라서 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-relation="required" }) 한편 각각의 $a\in A$ 또한 $A$의 limit point가 아니므로, $a$의 적당한 열린근방 $U_a$가 존재하여 $A\cap U_a=\{a\}$이도록 할 수 있다. 그럼 $(U_a)_{a\in A}$는 finite subcover를 갖지 않는 $A$의 open covering이므로 모순이다.
 :::
 
 그러나 일반적으로 그 역은 성립하지 않는다.
@@ -49,14 +49,14 @@ $X$가 sequentially compact space라 하고, limit point를 갖지 않는 무한
 
 ## 점열의 수렴
 
-한편, [명제 5](#prop5)의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $(x_n)$이 주어졌을 때, 집합 $A=\{x_n\mid n\geq 1\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $A$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
+한편, [명제 5](#prop5){: data-relation="required" }의 역 또한 성립하지 않는다. 이는 다소 의외라고 느껴질 수 있는데, limit point compact인 공간의 임의의 점열 $(x_n)$이 주어졌을 때, 집합 $A=\{x_n\mid n\geq 1\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point를 갖기 때문이다. 문제는 집합 $A$의 limit point로 수렴하는 부분점열이 존재하지 않을수도 있다는 것에 있다. 
 
 ::: 예시 6
 $\mathbb{R}$의 부분집합들의 모임
 
 $$\mathcal{B}=\{(a,\infty)\mid a\in \mathbb{R}\}$$
 
-을 생각하면 이 모임은 [§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6)의 조건을 만족하고 따라서 $\mathbb{R}$ 위에 위상구조를 준다.
+을 생각하면 이 모임은 [§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6){: data-relation="required" }의 조건을 만족하고 따라서 $\mathbb{R}$ 위에 위상구조를 준다.
 
 이렇게 정의된 위상공간 $\mathbb{R}$의 점열 $(x_n)_{n\geq 1}$을 다음의 식
 
@@ -65,7 +65,7 @@ $$x_n=-n$$
 으로 정의하자. 그럼 $(x_n)$은 수렴하는 부분점열을 갖지 않는다. 반면 $A=\{x_n\mid n\geq 1\}$는 limit point를 갖는데, 가령 $-2$는 $A$의 limit point이다. 이는 $-2$를 포함하는 임의의 열린집합은 반드시 $-1\in A$ 또한 포함해야 하기 때문이다.
 :::
 
-위의 예시는 limit point를 확인할 때 점열의 수렴이 그리 좋은 개념이 아니라는 것을 보여준다. 한편 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)에 의하여, 집합 $A$의 임의의 limit point는 $A$의 closure에 속한다. 
+위의 예시는 limit point를 확인할 때 점열의 수렴이 그리 좋은 개념이 아니라는 것을 보여준다. 한편 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6){: data-relation="required" }에 의하여, 집합 $A$의 임의의 limit point는 $A$의 closure에 속한다. 
 
 ::: 보조정리 7
 위상공간 $X$와 임의의 부분집합 $A\subseteq X$에 대하여, 만일 $x\in X$로 수렴하는 $A$의 점열이 존재한다면 $x\in \cl(A)$이다.
@@ -88,7 +88,7 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 으로 정의하자. 그럼 $\mathbb{R}^J$의 원점은 $A$의 closure에 속한다. 이는 원점을 포함하는 $\mathbb{R}^J$의 base는 유한한 index를 제외하고는 모두 $\mathbb{R}$이며, 이 유한한 index들의 성분은 $0$으로 정의하고, 나머지 index의 성분은 $1$인 점이 이 base와 $A$의 교집합에 들어있기 때문이다. 그러나 $A$의 임의의 점열은 원점으로 수렴하지 않는다. 이는 $A$의 임의의 점열이 주어졌을 때, $J$가 uncountable임을 이용하면 이 점열의 모든 항의 $j$번째 성분이 $1$이도록 하는 $j\in J$가 존재한다는 것을 보일 수 있고, 그럼 $j$번째 성분이 $(-1,1)$이고 나머지 성분은 $\mathbb{R}$인 원점의 열린근방이 이 점열의 원소를 하나도 포함하지 않기 때문이다.
 :::
 
-즉, [보조정리 7](#lem7)의 역 또한 일반적으로는 성립하지 않는다. 혹은, 위의 언어를 사용하여 위상공간 $X$와 부분집합 $A$에 대해 일반적으로 $\scl(A)\neq \cl(A)$일 수 있다고 말할 수 있다. 만일 $\scl(A)=\cl(A)$가 모든 부분집합 $A$에 대해 성립한다면, $X$를 *Fréchet–Urysohn space*라 부른다.
+즉, [보조정리 7](#lem7){: data-relation="required" }의 역 또한 일반적으로는 성립하지 않는다. 혹은, 위의 언어를 사용하여 위상공간 $X$와 부분집합 $A$에 대해 일반적으로 $\scl(A)\neq \cl(A)$일 수 있다고 말할 수 있다. 만일 $\scl(A)=\cl(A)$가 모든 부분집합 $A$에 대해 성립한다면, $X$를 *Fréchet–Urysohn space*라 부른다.
 
 한편, 다음 명제는 약간의 일반화를 거치긴 했지만, 그래도 여전히 익숙한 것이다.
 
@@ -99,19 +99,19 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 $f(x)$의 임의의 열린근방 $V$를 택하자. 그럼 $f$는 연속함수이므로 $f^{-1}(V)$는 $x$의 열린근방이다. 따라서 적당한 $N\in \mathbb{N}$가 존재하여 $n\geq N$이면 $x_n\in f^{-1}(V)$이다. 그럼 $f(x_n)\in V$이므로 $(f(x_n))$은 $f(x)$로 수렴한다.
 :::
 
-한편, 만일 공간 $X$에서 [보조정리 7](#lem7)의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 두 번째 조건을 사용해 [명제 9](#prop9)의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in X$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 점 $x$에서 연속이다.
+한편, 만일 공간 $X$에서 [보조정리 7](#lem7){: data-relation="required" }의 역이 성립한다면, 해당 결과와 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4){: data-relation="required" }의 두 번째 조건을 사용해 [명제 9](#prop9){: data-relation="weak" }의 역 또한 보일 수 있다. 즉, 만일 임의의 $x\in X$로 수렴하는 임의의 점열 $(x_n)$에 대하여 $f(x_n)$이 $f(x)$로 수렴한다면, $f$는 점 $x$에서 연속이다.
 
-$X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 그럼 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $A$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7)에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)로부터 원하는 결과를 얻는다.
+$X$가 [보조정리 7](#lem7){: data-relation="required" }의 역이 성립한다는 공간이라 하자. 그럼 임의의 $x\in \cl(A)$에 대하여 $x$로 수렴하는 $A$의 점열 $(x_n)$를 잡을 수 있다. 그럼 $Y$의 점열 $f(x_n)$가 $f(x)$로 수렴하므로 [보조정리 7](#lem7){: data-relation="required" }에 의하여 $f(x)\in \cl(f(A))$이고 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4){: data-relation="required" }로부터 원하는 결과를 얻는다.
 
 ## 가산공리
 
-위의 내용들은 지금까지 다룬 개념들을 나타내는 데에 점열의 수렴은 적절한 개념이 아니라는 것을 보여준다. [명제 11](#prop11)의 증명을 살펴보면 이를 어떠한 방식으로 일반화하는 것이 좋은지를 알 수 있다.
+위의 내용들은 지금까지 다룬 개념들을 나타내는 데에 점열의 수렴은 적절한 개념이 아니라는 것을 보여준다. [명제 11](#prop11){: data-relation="forward" }의 증명을 살펴보면 이를 어떠한 방식으로 일반화하는 것이 좋은지를 알 수 있다.
 
 ::: 정의 10
 위상공간 $X$에 대하여 다음을 정의한다.
 
-1. $X$가 *first countable<sub>제1 가산</sub>*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4))
-2. $X$가 *second countable<sub>제2 가산</sub>*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1))
+1. $X$가 *first countable<sub>제1 가산</sub>*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 4](/ko/math/topology/topological_bases#def4){: data-relation="required" })
+2. $X$가 *second countable<sub>제2 가산</sub>*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다. ([§위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1){: data-relation="required" })
 :::
 
 ::: 명제 11
@@ -136,26 +136,26 @@ $X$의 countable base $\mathcal{B}=\{B_1, B_2, \ldots\}$를 고정하고, $X$의
 
 ## 필터의 수렴
 
-[명제 11](#prop11)의 증명에서 핵심적인 역할을 한 것은 $x$가 열린집합들의 decreasing sequence
+[명제 11](#prop11){: data-relation="required" }의 증명에서 핵심적인 역할을 한 것은 $x$가 열린집합들의 decreasing sequence
 
 $$B_1\supseteq B_2\supseteq\cdots$$
 
 를 가지며, first countability에 의하여 $x$의 어떠한 열린근방 $U$가 주어지더라도 충분히 큰 $n$에 대해서는 $B_n\subseteq U$이도록 할 수 있다는 것이다. 즉, 어떤 의미에서는 위의 열린집합들 그 자체가 $x$로 수렴한다고 볼 수도 있다. 이와 같은 관찰을 바탕으로 다음을 정의한다.
 
 ::: 정의 13
-위상공간 $X$와 그 위에 정의된 filter $\mathcal{F}$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3)) 그럼 $\mathcal{F}$가 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $\mathcal{N}(x)\subseteq \mathcal{F}$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter)) 이 때, $x$를 $\mathcal{F}$의 *limit point<sub>극한점</sub>*라 부른다. 
+위상공간 $X$와 그 위에 정의된 filter $\mathcal{F}$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3){: data-relation="required" }) 그럼 $\mathcal{F}$가 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $\mathcal{N}(x)\subseteq \mathcal{F}$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter){: data-relation="required" }) 이 때, $x$를 $\mathcal{F}$의 *limit point<sub>극한점</sub>*라 부른다. 
 :::
 
-[정의 13](#def13)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
+[정의 13](#def13){: data-relation="required" }는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
 
 ::: 정의 14
-집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $Y$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))
+집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $Y$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7){: data-relation="required" })
 :::
 
 그럼 정의에 의하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 limit point인 것은 $y$의 임의의 근방 $V$가 주어질 때마다, 적당한 $F\in \mathcal{F}$가 존재하여 $f(F)\subseteq V$인 것이다. 특히 다음이 성립한다.
 
 ::: 명제 15
-위상공간 $X$의 점열 $(x_n)_{n\geq 1}$에 대하여, $(x_n)_{n\geq 1}$이 $x\in X$로 수렴하는 것과 $\mathbb{N}$ 위에 정의된 Fréchet filter $\mathcal{F}$의 $n\mapsto x_n$에 의한 image로 생성되는 filter가 $x$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
+위상공간 $X$의 점열 $(x_n)_{n\geq 1}$에 대하여, $(x_n)_{n\geq 1}$이 $x\in X$로 수렴하는 것과 $\mathbb{N}$ 위에 정의된 Fréchet filter $\mathcal{F}$의 $n\mapsto x_n$에 의한 image로 생성되는 filter가 $x$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4){: data-relation="required" })
 :::
 
 따라서 filter의 수렴은 점열의 수렴을 일반화한 것임을 안다. 뿐만 아니라 이 개념을 통해 다음과 같은 명제를 증명할 수 있다. 
@@ -173,7 +173,7 @@ $$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 은 filter base를 정의한다. 이제 $\mathcal{F}$를 $\mathcal{N}(x)\vert_A$에 의해 정의되는 filter라 하면 원하는 결과를 얻는다.
 :::
 
-따라서, [보조정리 7](#lem7) 이후의 논증에 의해 다음 명제도 자명하다.
+따라서, [보조정리 7](#lem7){: data-relation="required" } 이후의 논증에 의해 다음 명제도 자명하다.
 
 ::: 명제 17
 위상공간 사이의 함수 $f:X \rightarrow Y$에 대하여, 함수 $f$가 $x\in X$에서 연속인 것은 $x$로 수렴하는 임의의 filter $\mathcal{F}$에 대하여, filter base $f(\mathcal{F})$가 정의하는 filter가 $f(x)$로 수렴하는 것과 동치이다. 
@@ -181,7 +181,7 @@ $$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 
 ## Tychonoff theorem
 
-Compact space의 임의의 product는 다시 compact space가 된다. 만일 이 product가 유한이라면 이 결과는 보다 직관적인 방식으로 보일 수 있지만, 이 product가 무한하다면 이를 위해서는 다음 보조정리가 필요하다. 이는 [명제 5](#prop5)를 filter의 언어로 일반화한 것이다. 
+Compact space의 임의의 product는 다시 compact space가 된다. 만일 이 product가 유한이라면 이 결과는 보다 직관적인 방식으로 보일 수 있지만, 이 product가 무한하다면 이를 위해서는 다음 보조정리가 필요하다. 이는 [명제 5](#prop5){: data-relation="weak" }를 filter의 언어로 일반화한 것이다. 
 
 ::: 보조정리 18
 위상공간 $X$가 compact인 것은 임의의 ultrafilter가 수렴하는 것과 동치이다.
@@ -189,7 +189,7 @@ Compact space의 임의의 product는 다시 compact space가 된다. 만일 이
 ::: 증명
 우선 $X$가 compact라 가정하고, 임의의 ultrafilter $\mathcal{F}$가 주어졌다 하자. 결론에 반하여 $\mathcal{F}$의 limit point가 존재하지 않는다 하자. 즉, 어떠한 $x\in X$에 대해서도 열린근방 $U_x$가 존재하여 $U_x\not\in \mathcal{F}$이도록 할 수 있다. 그럼 $X$의 compactness에 의하여 $X$의 유한한 subcover $U_{x_1},\ldots, U_{x_n}$이 존재한다. 
 
-한편 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 5](/ko/math/set_theory/filter_and_ideal#prop5)에 의하여 $\mathcal{F}$는 prime이다. 즉, 임의의 부분집합 $A\subseteq X$에 대하여, $A\in \mathcal{F}$ 혹은 $X\setminus A\in \mathcal{F}$ 중 정확히 하나가 성립한다. 그럼 이제 임의의 $A\in \mathcal{F}$에 대하여,
+한편 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 5](/ko/math/set_theory/filter_and_ideal#prop5){: data-relation="required" }에 의하여 $\mathcal{F}$는 prime이다. 즉, 임의의 부분집합 $A\subseteq X$에 대하여, $A\in \mathcal{F}$ 혹은 $X\setminus A\in \mathcal{F}$ 중 정확히 하나가 성립한다. 그럼 이제 임의의 $A\in \mathcal{F}$에 대하여,
 
 $$A=A\cap X=(A\cap U_{x_1})\cup \cdots\cup (A\cap U_{x_n})\in \mathcal{F}$$
 
@@ -199,7 +199,7 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 
 도 $\mathcal{F}$에 속해야 하므로, 이는 $A$와 $X\setminus A$ 가운데 정확히 하나만 $\mathcal{F}$에 속한다는 사실에 모순이다. 
 
-거꾸로 임의의 ultrafilter $\mathcal{F}$가 주어질 때마다 limit point $x$를 찾을 수 있다 하고, finite intersection property를 만족하는 $X$의 닫힌집합들의 family $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$에 의해 생성되는 filter를 포함하는 ultrafilter $\mathcal{F}$를 생각할 수 있으며, 가정에 의해 $\mathcal{F}$는 limit point $x$를 가진다. 즉 $\mathcal{N}(x)\subseteq \mathcal{F}$이며, 따라서 임의의 $F\in \mathcal{F}$와 $x$의 임의의 근방 $U$에 대하여 $U\cap F\neq\emptyset$이다. 특히 임의의 $A\in \mathcal{A}$와 $x$의 임의의 근방 $U$에 대하여 $A\cap U\neq\emptyset$이므로, $x\in \cl(A)=A$가 항상 성립한다. 이로부터 $x\in\bigcap_{A\in \mathcal{A}}A$임을 알고, 따라서 [§옹골공간, ⁋명제 11](/ko/math/topology/compact_spaces#prop11)에 의해 원하는 결과를 얻는다.
+거꾸로 임의의 ultrafilter $\mathcal{F}$가 주어질 때마다 limit point $x$를 찾을 수 있다 하고, finite intersection property를 만족하는 $X$의 닫힌집합들의 family $\mathcal{A}$가 주어졌다 하자. 그럼 $\mathcal{A}$에 의해 생성되는 filter를 포함하는 ultrafilter $\mathcal{F}$를 생각할 수 있으며, 가정에 의해 $\mathcal{F}$는 limit point $x$를 가진다. 즉 $\mathcal{N}(x)\subseteq \mathcal{F}$이며, 따라서 임의의 $F\in \mathcal{F}$와 $x$의 임의의 근방 $U$에 대하여 $U\cap F\neq\emptyset$이다. 특히 임의의 $A\in \mathcal{A}$와 $x$의 임의의 근방 $U$에 대하여 $A\cap U\neq\emptyset$이므로, $x\in \cl(A)=A$가 항상 성립한다. 이로부터 $x\in\bigcap_{A\in \mathcal{A}}A$임을 알고, 따라서 [§옹골공간, ⁋명제 11](/ko/math/topology/compact_spaces#prop11){: data-relation="required" }에 의해 원하는 결과를 얻는다.
 :::
 
 그럼 다음이 성립한다.
@@ -208,9 +208,9 @@ $$X\setminus A=(X\setminus (A\cap U_{x_1}))\cap\cdots\cap (X\setminus (A\cap U_{
 Compact space들 $(X_i)_{i\in I}$의 product $X=\prod_{i\in I} X_i$는 compact이다. 거꾸로, 만일 $X\neq\emptyset$이며 product space $X$가 compact라면, 각각의 $X_i$들이 모두 compact이다.
 :::
 ::: 증명
-만일 $X$가 compact라면, 각각의 $X_i$들이 모두 compact라는 것은 $\pr_i$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8)에 의해 자명하다.
+만일 $X$가 compact라면, 각각의 $X_i$들이 모두 compact라는 것은 $\pr_i$의 연속성과 [§옹골공간, ⁋명제 8](/ko/math/topology/compact_spaces#prop8){: data-relation="required" }에 의해 자명하다.
 
-반대 방향은 $X$ 위에 정의된 임의의 ultrafilter $\mathcal{F}$에 대하여, $\pr_i(\mathcal{F})$가 $X_i$의 ultrafilter base를 정의한다는 것을 확인한 후, $X_i$가 compact라는 가정과 [보조정리 18](#lem18)로부터 이 ultrafilter의 limit point $x_i$를 얻고, $x=(x_i)_{i\in I}$가 $\mathcal{F}$의 limit point임을 보일 수 있으므로 다시 [보조정리 18](#lem18)에 의해 증명이 완료된다. 
+반대 방향은 $X$ 위에 정의된 임의의 ultrafilter $\mathcal{F}$에 대하여, $\pr_i(\mathcal{F})$가 $X_i$의 ultrafilter base를 정의한다는 것을 확인한 후, $X_i$가 compact라는 가정과 [보조정리 18](#lem18){: data-relation="required" }로부터 이 ultrafilter의 limit point $x_i$를 얻고, $x=(x_i)_{i\in I}$가 $\mathcal{F}$의 limit point임을 보일 수 있으므로 다시 [보조정리 18](#lem18){: data-relation="required" }에 의해 증명이 완료된다. 
 :::
 
 ---
