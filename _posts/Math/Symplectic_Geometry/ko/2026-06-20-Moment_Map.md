@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6)에서 우리는 함수 $H\in C^\infty(M)$마다 nondegeneracy를 이용해 Hamiltonian 벡터장 $X_H$를 정의하였다. 이제 우리는 함수 하나가 아니라 Lie group $G$가 symplectic manifold $(M,\omega)$에 symplectomorphism으로 작용하는 상황을 생각한다. 이때 $G$의 Lie algebra $\mathfrak{g}$의 각 원소 $X$는 $M$ 위의 벡터장 $X_M$을 낳으며, 좋은 경우에는 이 $X_M$이 어떤 함수의 Hamiltonian 벡터장이 된다. 이 함수들을 $\mathfrak{g}$에 대해 한꺼번에 모은 것이 *운동량 사상<sub>moment map</sub>* $\mu:M\rightarrow\mathfrak{g}^\ast$이다.
+[§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6){: data-relation="required" }에서 우리는 함수 $H\in C^\infty(M)$마다 nondegeneracy를 이용해 Hamiltonian 벡터장 $X_H$를 정의하였다. 이제 우리는 함수 하나가 아니라 Lie group $G$가 symplectic manifold $(M,\omega)$에 symplectomorphism으로 작용하는 상황을 생각한다. 이때 $G$의 Lie algebra $\mathfrak{g}$의 각 원소 $X$는 $M$ 위의 벡터장 $X_M$을 낳으며, 좋은 경우에는 이 $X_M$이 어떤 함수의 Hamiltonian 벡터장이 된다. 이 함수들을 $\mathfrak{g}$에 대해 한꺼번에 모은 것이 *운동량 사상<sub>moment map</sub>* $\mu:M\rightarrow\mathfrak{g}^\ast$이다.
 
 운동량 사상은 고전역학에서 대칭성으로부터 보존량을 얻는 Noether 정리의 기하학적 형태이다. 회전 대칭이 각운동량을, 평행이동 대칭이 선운동량을 보존시키듯, group action의 각 일매개변수 subgroup은 보존되는 함수 하나를 준다. 더 나아가 운동량 사상은 Marsden-Weinstein reduction의 출발점이며, torus action의 경우 그 image가 convex 다면체가 되어 toric 기하와 Delzant 대응으로 이어진다. 우리는 먼저 fundamental 벡터장과 Hamiltonian action을 정의하고, 운동량 사상의 기본 성질과 표준적인 예시들을 살펴본 뒤, 끝으로 Atiyah-Guillemin-Sternberg 볼록성 정리를 서술한다.
 
@@ -23,7 +23,7 @@ published: false
 
 Lie group $G$가 manifold $M$ 위에 왼쪽에서 매끄럽게 작용한다는 것은, smooth morphism $\psi:G\times M\rightarrow M$이 주어져 $\psi(e,p)=p$이고 $\psi(g,\psi(h,p))=\psi(gh,p)$가 성립하는 것이다. 우리는 $\psi(g,p)$를 간단히 $g\cdot p$로 적고, 고정된 $g$에 대한 morphism $p\mapsto g\cdot p$를 $\psi_g:M\rightarrow M$으로 적는다. 각 $\psi_g$는 diffeomorphism이다.
 
-이 action으로부터 $\mathfrak{g}$의 각 원소는 $M$ 위의 벡터장을 얻는다. $X\in\mathfrak{g}$에 대하여 [\[리 이론\] §리 군, ⁋정의 16](/ko/math/lie_theory/Lie_groups#def16)의 exponential map이 일매개변수 subgroup $t\mapsto\exp(tX)$을 주므로, 이를 작용시켜 각 점 $p$를 지나는 곡선 $t\mapsto\exp(tX)\cdot p$를 얻는다.
+이 action으로부터 $\mathfrak{g}$의 각 원소는 $M$ 위의 벡터장을 얻는다. $X\in\mathfrak{g}$에 대하여 [\[리 이론\] §리 군, ⁋정의 16](/ko/math/lie_theory/Lie_groups#def16){: data-relation="required" }의 exponential map이 일매개변수 subgroup $t\mapsto\exp(tX)$을 주므로, 이를 작용시켜 각 점 $p$를 지나는 곡선 $t\mapsto\exp(tX)\cdot p$를 얻는다.
 
 ::: 정의 1
 Lie group $G$가 manifold $M$에 작용할 때, $X\in\mathfrak{g}$의 *fundamental vector field<sub>기본 벡터장</sub>* $X_M$을
@@ -33,9 +33,9 @@ $$X_M(p)=\left.\frac{d}{\dd{t}}\right\vert_{t=0}\bigl(\exp(tX)\cdot p\bigr)$$
 으로 정의한다.
 :::
 
-즉 $X_M$은 일매개변수 subgroup $\exp(tX)$의 흐름이 $M$ 위에 만드는 속도장이며, $X_M$의 흐름은 정확히 $\psi_{\exp(tX)}$이다. 대응 $X\mapsto X_M$은 선형이며, Lie bracket을 보존하는지의 여부는 부호의 관례에 따라 달라진다. 우리의 정의에서는 $[X,Y]_M=-[X_M,Y_M]$이 성립하여 부호 하나를 동반하는 Lie algebra 반준동형이 되는데, 이는 본문에서 직접 쓰이지 않으므로 [참고 5](#rmk5)로 미룬다.
+즉 $X_M$은 일매개변수 subgroup $\exp(tX)$의 흐름이 $M$ 위에 만드는 속도장이며, $X_M$의 흐름은 정확히 $\psi_{\exp(tX)}$이다. 대응 $X\mapsto X_M$은 선형이며, Lie bracket을 보존하는지의 여부는 부호의 관례에 따라 달라진다. 우리의 정의에서는 $[X,Y]_M=-[X_M,Y_M]$이 성립하여 부호 하나를 동반하는 Lie algebra 반준동형이 되는데, 이는 본문에서 직접 쓰이지 않으므로 [참고 5](#rmk5){: data-relation="weak" }로 미룬다.
 
-이제 $M$이 symplectic manifold이고 $G$가 symplectomorphism으로 작용하는 경우, 즉 모든 $g\in G$에 대해 $\psi_g^\ast\omega=\omega$인 경우를 생각하자. 이를 $X$ 방향으로 미분하면 $\mathcal{L}_{X_M}\omega=0$을 얻는다. [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식과 $\dd{\omega}=0$에 의하여
+이제 $M$이 symplectic manifold이고 $G$가 symplectomorphism으로 작용하는 경우, 즉 모든 $g\in G$에 대해 $\psi_g^\ast\omega=\omega$인 경우를 생각하자. 이를 $X$ 방향으로 미분하면 $\mathcal{L}_{X_M}\omega=0$을 얻는다. [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4){: data-relation="required" }의 Cartan 공식과 $\dd{\omega}=0$에 의하여
 
 $$0=\mathcal{L}_{X_M}\omega=\dd{(\iota_{X_M}\omega)}+\iota_{X_M}(\dd{\omega})=\dd{(\iota_{X_M}\omega)}$$
 
@@ -56,7 +56,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 이때 $\mu$를 action의 *운동량 사상<sub>moment map</sub>*이라 부르고, $(M,\omega,G,\mu)$를 *Hamiltonian $G$-공간*이라 부른다.
 :::
 
-여기서 $\mathfrak{g}^\ast$ 위의 *coadjoint action* $\Ad^\ast$는 [\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)의 adjoint action의 dual로 정의된다. 즉 $\xi\in\mathfrak{g}^\ast$, $X\in\mathfrak{g}$에 대하여 $\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$이다. 역원 $g^{-1}$이 들어가는 것은 $g\mapsto\Ad_g^\ast$가 left action이 되도록 하기 위함이다.
+여기서 $\mathfrak{g}^\ast$ 위의 *coadjoint action* $\Ad^\ast$는 [\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19){: data-relation="required" }의 adjoint action의 dual로 정의된다. 즉 $\xi\in\mathfrak{g}^\ast$, $X\in\mathfrak{g}$에 대하여 $\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$이다. 역원 $g^{-1}$이 들어가는 것은 $g\mapsto\Ad_g^\ast$가 left action이 되도록 하기 위함이다.
 
 조건 1은 정의 2 직전의 관찰을 정합적으로 만든 것이다. 각 $X$마다 $X_M$의 Hamiltonian function $\mu^X$를 주되, 그 함수가 $X$에 선형으로 의존하도록 $\mathfrak{g}^\ast$-값 morphism 하나로 묶은 것이다. $\mu^X$가 $X$에 선형임은 $\mu(p)$가 $\mathfrak{g}^\ast$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 group의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1을 만족하는 $\mu$에 대하여 $X\mapsto\mu^X$이 Lie algebra 준동형이라는 조건과 동치이다.
 
@@ -66,14 +66,14 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 $(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $H\in C^\infty(M)$이 $G$-불변이라 하자. 그럼 $H$의 Hamiltonian 벡터장 $X_H$의 흐름을 따라 $\mu$는 일정하다. 즉 각 $X\in\mathfrak{g}$에 대해 $\mu^X$는 $X_H$를 따라 보존되는 양이다.
 :::
 ::: 증명
-$\mu^X$가 $X_H$를 따라 변화하는 율은 Poisson 괄호 ([§사교다양체, ⁋정의 7](/ko/math/symplectic_geometry/symplectic_manifold#def7)) $X_H\mu^X=\{\mu^X,H\}$이다. $H$가 $G$-불변이므로 $X$ 방향으로 미분하면 $X_M H=0$, 즉 $\dd{H}(X_M)=0$이다. 한편 조건 1에 의하여 $\iota_{X_M}\omega=\dd{\mu}^X$이므로
+$\mu^X$가 $X_H$를 따라 변화하는 율은 Poisson 괄호 ([§사교다양체, ⁋정의 7](/ko/math/symplectic_geometry/symplectic_manifold#def7){: data-relation="required" }) $X_H\mu^X=\{\mu^X,H\}$이다. $H$가 $G$-불변이므로 $X$ 방향으로 미분하면 $X_M H=0$, 즉 $\dd{H}(X_M)=0$이다. 한편 조건 1에 의하여 $\iota_{X_M}\omega=\dd{\mu}^X$이므로
 
 $$\{\mu^X,H\}=-X_{\mu^X}H=-\dd{H}(X_{\mu^X})=-\dd{H}(X_M)=0$$
 
 이다. 여기서 $X_{\mu^X}=X_M$은 조건 1과 Hamiltonian 벡터장의 유일성에서 온다. 따라서 $\mu^X$는 $X_H$의 흐름을 따라 일정하다.
 :::
 
-이것이 운동량 사상이라는 이름의 유래이다. 고전역학에서 공간의 회전 대칭은 각운동량을, 평행이동 대칭은 선운동량을 보존량으로 주는데, 운동량 사상은 이 보존량들을 group action 하나에 대해 한꺼번에 기술한다. 아래 [예시 9](#ex9)에서 보듯 cotangent bundle 위의 회전 action의 운동량 사상은 실제로 고전적인 각운동량과 일치한다.
+이것이 운동량 사상이라는 이름의 유래이다. 고전역학에서 공간의 회전 대칭은 각운동량을, 평행이동 대칭은 선운동량을 보존량으로 주는데, 운동량 사상은 이 보존량들을 group action 하나에 대해 한꺼번에 기술한다. 아래 [예시 9](#ex9){: data-relation="forward" }에서 보듯 cotangent bundle 위의 회전 action의 운동량 사상은 실제로 고전적인 각운동량과 일치한다.
 
 다음 명제는 운동량 사상의 존재와 유일성을 정리한다. 운동량 사상의 존재는 일반적으로 위상적 장애를 가지나, 일단 존재하면 그 자유도는 작다.
 
@@ -152,12 +152,12 @@ $$\mu(\mathbb{C}^n)=\mathbb{R}_{\leq0}^n=\{(a_1,\ldots,a_n)\mid a_j\leq0\}$$
 이며, 이것이 affine toric manifold $\mathbb{C}^n$에 대응하는 운동량 다면체이다.
 :::
 
-위 action을 $\mathbb{CP}^n$으로 내리면 운동량 사상의 image가 유계인 단체가 된다. $S^{2n+1}\subseteq\mathbb{C}^{n+1}$ 위에서 $\sum_j\lvert z_j\rvert^2=1$이라는 제약을 가하고 대각 $S^1$로 나누면 $\mathbb{CP}^n$을 얻는데, 남은 $T^n=T^{n+1}/S^1$ action의 운동량 사상은 상수배 후 $\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\bigr)$이 되어 그 image는 단체 $\{a_j\geq0,\ \sum_j a_j\leq1\}$이다. 이 절차가 reduction의 한 사례이며, 그 결과 얻어지는 단체가 $\mathbb{CP}^n$의 Fubini-Study 운동량 다면체이다. 일반적으로 compact toric manifold는 그 운동량 다면체에 의해 완전히 결정되는데, 이것이 [정리 10](#thm10) 뒤에서 언급할 Delzant 대응이다.
+위 action을 $\mathbb{CP}^n$으로 내리면 운동량 사상의 image가 유계인 단체가 된다. $S^{2n+1}\subseteq\mathbb{C}^{n+1}$ 위에서 $\sum_j\lvert z_j\rvert^2=1$이라는 제약을 가하고 대각 $S^1$로 나누면 $\mathbb{CP}^n$을 얻는데, 남은 $T^n=T^{n+1}/S^1$ action의 운동량 사상은 상수배 후 $\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\bigr)$이 되어 그 image는 단체 $\{a_j\geq0,\ \sum_j a_j\leq1\}$이다. 이 절차가 reduction의 한 사례이며, 그 결과 얻어지는 단체가 $\mathbb{CP}^n$의 Fubini-Study 운동량 다면체이다. 일반적으로 compact toric manifold는 그 운동량 다면체에 의해 완전히 결정되는데, 이것이 [정리 10](#thm10){: data-relation="forward" } 뒤에서 언급할 Delzant 대응이다.
 
 마지막으로 cotangent bundle 위의 action은 운동량 사상이 고전적 운동량과 일치하는 가장 직접적인 예시이다.
 
 ::: 예시 9
-Manifold $Q$ 위에 Lie group $G$가 작용하면, 이를 cotangent bundle $T^\ast Q$로 들어 올린 *cotangent lift* action을 얻는다. $g\in G$의 $Q$ 위의 action을 $\phi_g:Q\rightarrow Q$라 하면, $T^\ast Q$ 위의 action은 $(\phi_{g^{-1}})^\ast$로 정의된다. 즉 $g\cdot(q,p)=(\phi_g(q),(\dd{\phi_{g^{-1}}})^\ast_{\phi_g(q)}p)$이다. 역원이 들어가는 것은 이것이 left action이 되게 하기 위함이며, 이 action은 [§사교다양체, ⁋예시 2](/ko/math/symplectic_geometry/symplectic_manifold#ex2)의 tautological $1$-form $\lambda$를 보존하므로 $\omega=-\dd{\lambda}$ 또한 보존한다.
+Manifold $Q$ 위에 Lie group $G$가 작용하면, 이를 cotangent bundle $T^\ast Q$로 들어 올린 *cotangent lift* action을 얻는다. $g\in G$의 $Q$ 위의 action을 $\phi_g:Q\rightarrow Q$라 하면, $T^\ast Q$ 위의 action은 $(\phi_{g^{-1}})^\ast$로 정의된다. 즉 $g\cdot(q,p)=(\phi_g(q),(\dd{\phi_{g^{-1}}})^\ast_{\phi_g(q)}p)$이다. 역원이 들어가는 것은 이것이 left action이 되게 하기 위함이며, 이 action은 [§사교다양체, ⁋예시 2](/ko/math/symplectic_geometry/symplectic_manifold#ex2){: data-relation="required" }의 tautological $1$-form $\lambda$를 보존하므로 $\omega=-\dd{\lambda}$ 또한 보존한다.
 
 이 action은 항상 Hamiltonian이며, 운동량 사상은
 
