@@ -14,7 +14,7 @@ weight: 10
 published: false
 ---
 
-Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 성질을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
+Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-relation="weak" }), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6){: data-relation="weak" }). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 성질을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
 
 ## 유리형함수와 편각원리
 
@@ -24,7 +24,7 @@ Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f$가 $\Omega$에서 *meromorphic<sub>유리형</sub>*이라는 것은, $\Omega$ 안에 집적점을 갖지 않는 어떤 부분집합 $P \subseteq \Omega$이 있어 $f$가 $\Omega \setminus P$에서 holomorphic이고 $P$의 각 점에서 극을 가지는 것을 뜻한다.
 :::
 
-극집합 $P$이 $\Omega$ 안에 집적점을 갖지 않는다는 조건은 극이 서로 떨어져 흩어져 있음을 보장하며, 따라서 $\Omega$의 임의의 콤팩트 부분집합 안에는 유한개의 극만 들어 있다. 유리형함수의 영점 역시 항등적으로 $0$이 아닌 한 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 영점과 극은 모두 콤팩트 영역 안에서 유한하다. 영점 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^m g(z)$ ($g(z_0) \neq 0$, $g$ holomorphic) 이고 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), 극 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^{-m} h(z)$ ($h(z_0) \neq 0$, $h$ holomorphic) 이다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 두 경우를 통일하여, 영점에서는 양의 정수, 극에서는 음의 정수, 그 밖에서는 $0$인 부호 있는 order를 도입하면 다음 보조정리가 $f'/f$의 국소적 형태를 결정한다.
+극집합 $P$이 $\Omega$ 안에 집적점을 갖지 않는다는 조건은 극이 서로 떨어져 흩어져 있음을 보장하며, 따라서 $\Omega$의 임의의 콤팩트 부분집합 안에는 유한개의 극만 들어 있다. 유리형함수의 영점 역시 항등적으로 $0$이 아닌 한 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-relation="required" }), 영점과 극은 모두 콤팩트 영역 안에서 유한하다. 영점 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^m g(z)$ ($g(z_0) \neq 0$, $g$ holomorphic) 이고 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }), 극 $z_0$ 근방에서는 order $m \geq 1$에 대해 $f(z) = (z - z_0)^{-m} h(z)$ ($h(z_0) \neq 0$, $h$ holomorphic) 이다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6){: data-relation="required" }). 두 경우를 통일하여, 영점에서는 양의 정수, 극에서는 음의 정수, 그 밖에서는 $0$인 부호 있는 order를 도입하면 다음 보조정리가 $f'/f$의 국소적 형태를 결정한다.
 
 ::: 보조정리 2 (대수적 미분의 유수)
 $f$가 $z_0$의 한 근방에서 유리형이고 $z_0$에서 항등적으로 $0$이 아니라 하자. $z_0$이 $f$의 order $m$인 영점이면 $f'/f$은 $z_0$에서 유수 $m$인 단순극을 가지고, $z_0$이 order $m$인 극이면 $f'/f$은 $z_0$에서 유수 $-m$인 단순극을 가진다. 곧 어느 경우든
@@ -39,7 +39,7 @@ $z_0$이 order $m$인 영점인 경우와 order $m$인 극인 경우를 한꺼�
 
 $$f(z) = (z - z_0)^k\varphi(z)$$
 
-이다. 영점의 경우는 [§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)의 인수분해에서 $\varphi = g$이고, 극의 경우는 [§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)의 극의 특징에서 $\varphi = h$이다. 양변에 로그미분을 적용한다. 곱의 미분으로
+이다. 영점의 경우는 [§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }의 인수분해에서 $\varphi = g$이고, 극의 경우는 [§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6){: data-relation="required" }의 극의 특징에서 $\varphi = h$이다. 양변에 로그미분을 적용한다. 곱의 미분으로
 
 $$f'(z) = k(z - z_0)^{k-1}\varphi(z) + (z - z_0)^k\varphi'(z)$$
 
@@ -47,7 +47,7 @@ $$f'(z) = k(z - z_0)^{k-1}\varphi(z) + (z - z_0)^k\varphi'(z)$$
 
 $$\frac{f'(z)}{f(z)} = \frac{k}{z - z_0} + \frac{\varphi'(z)}{\varphi(z)}$$
 
-이다. $\varphi$이 $z_0$에서 holomorphic이고 $\varphi(z_0) \neq 0$이므로 $\varphi'/\varphi$은 $z_0$에서 holomorphic이고, 따라서 위 식의 둘째 항은 $z_0$에서 holomorphic이다. 그러므로 $f'/f$의 $z_0$에서의 주부는 $k/(z - z_0)$뿐이며, 이는 $f'/f$이 $z_0$에서 유수 $k$인 단순극을 가짐을 뜻한다 ([§유수정리, ⁋정의 1](/ko/math/complex_analysis/residue_theorem#def1)). 곧 $\operatorname{Res}_{z = z_0}(f'/f) = k = \operatorname{ord}_{z_0} f$이다.
+이다. $\varphi$이 $z_0$에서 holomorphic이고 $\varphi(z_0) \neq 0$이므로 $\varphi'/\varphi$은 $z_0$에서 holomorphic이고, 따라서 위 식의 둘째 항은 $z_0$에서 holomorphic이다. 그러므로 $f'/f$의 $z_0$에서의 주부는 $k/(z - z_0)$뿐이며, 이는 $f'/f$이 $z_0$에서 유수 $k$인 단순극을 가짐을 뜻한다 ([§유수정리, ⁋정의 1](/ko/math/complex_analysis/residue_theorem#def1){: data-relation="required" }). 곧 $\operatorname{Res}_{z = z_0}(f'/f) = k = \operatorname{ord}_{z_0} f$이다.
 :::
 
 보조정리 2의 핵심은 로그미분 $f'/f = (\log f)'$이 multiplicative 구조를 덧셈적 구조로 바꾼다는 데 있다. 인수 $(z - z_0)^k$은 $f'/f$에 $k/(z - z_0)$이라는 항을 내놓고, $0$이 아닌 인수 $\varphi$은 holomorphic한 기여만 하므로 흔적을 남기지 않는다. 그 결과 $f'/f$의 유수가 정확히 부호 있는 order를 읽어 낸다. 영점은 양의 유수로, 극은 음의 유수로 나타나므로, 이를 한 경로 안에서 합하면 영점 수와 극 수의 차가 나온다. 이것이 편각원리이다.
@@ -65,7 +65,7 @@ $$Z - P = n(f \circ \gamma, 0)$$
 :::
 
 ::: 증명
-$\gamma$의 자취와 그 안쪽이 이루는 콤팩트 집합 안에는 $f$의 영점과 극이 유한개만 들어 있다. 이들을 $z_1, \dots, z_r$이라 하고 각각의 부호 있는 order를 $k_j = \operatorname{ord}_{z_j} f$이라 하자. 함수 $f'/f$은 $\Omega$에서 이 점들을 제외하면 holomorphic이고, 보조정리 2에 의해 각 $z_j$에서 유수 $k_j$인 단순극을 가진다. $\gamma$의 자취 위에는 영점도 극도 없으므로 $f'/f$이 자취 위에서 holomorphic이다. $\gamma$이 양의 방향 simple closed 곡선이므로 안쪽 점에 대한 회전수는 $1$, 바깥 점에 대한 회전수는 $0$이고, [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)에 의해
+$\gamma$의 자취와 그 안쪽이 이루는 콤팩트 집합 안에는 $f$의 영점과 극이 유한개만 들어 있다. 이들을 $z_1, \dots, z_r$이라 하고 각각의 부호 있는 order를 $k_j = \operatorname{ord}_{z_j} f$이라 하자. 함수 $f'/f$은 $\Omega$에서 이 점들을 제외하면 holomorphic이고, 보조정리 2에 의해 각 $z_j$에서 유수 $k_j$인 단순극을 가진다. $\gamma$의 자취 위에는 영점도 극도 없으므로 $f'/f$이 자취 위에서 holomorphic이다. $\gamma$이 양의 방향 simple closed 곡선이므로 안쪽 점에 대한 회전수는 $1$, 바깥 점에 대한 회전수는 $0$이고, [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-relation="required" }에 의해
 
 $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z = z_j}\frac{f'}{f} = \sum_{z_j \text{ 안쪽}} k_j$$
 
@@ -75,7 +75,7 @@ $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \sum_{z_j \text{ 안쪽
 
 $$\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = \int_a^b\frac{f'(\gamma(t))\gamma'(t)}{f(\gamma(t))}\dd{t} = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\dd{t} = \oint_\sigma\frac{\dd{w}}{w}$$
 
-이고, 회전수의 정의에 의해 마지막 적분이 $2\pi i n(\sigma, 0)$이다. ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9)) 따라서
+이고, 회전수의 정의에 의해 마지막 적분이 $2\pi i n(\sigma, 0)$이다. ([§Cauchy 정리, ⁋정의 9](/ko/math/complex_analysis/cauchy_theorem#def9){: data-relation="required" }) 따라서
 
 $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\dd{z} = n(f \circ \gamma, 0)$$
 
@@ -155,7 +155,7 @@ $f$이 $z_0$의 한 근방에서 holomorphic이고 $w_0 = f(z_0)$이라 하자. 
 :::
 
 ::: 증명
-$F(z) = f(z) - w_0$으로 두면 $F$은 $z_0$에서 order $m$인 영점을 가진다. 영점이 고립되어 있고 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)) $F'$ 역시 항등적으로 $0$이 아니라 그 영점도 고립되어 있으므로, 충분히 작은 $\delta > 0$을 골라 closed 원판 $\overline{D(z_0, \delta)}$ 안에서 $F$의 영점이 $z_0$ 하나뿐이고 $F'$의 영점도 $z_0$ 외에는 없도록 할 수 있다. 그러면 경계원 $\lvert z - z_0\rvert = \delta$ 위에서 $F(z) \neq 0$이므로
+$F(z) = f(z) - w_0$으로 두면 $F$은 $z_0$에서 order $m$인 영점을 가진다. 영점이 고립되어 있고 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-relation="required" }) $F'$ 역시 항등적으로 $0$이 아니라 그 영점도 고립되어 있으므로, 충분히 작은 $\delta > 0$을 골라 closed 원판 $\overline{D(z_0, \delta)}$ 안에서 $F$의 영점이 $z_0$ 하나뿐이고 $F'$의 영점도 $z_0$ 외에는 없도록 할 수 있다. 그러면 경계원 $\lvert z - z_0\rvert = \delta$ 위에서 $F(z) \neq 0$이므로
 
 $$\varepsilon = \min_{\lvert z - z_0\rvert = \delta}\lvert F(z)\rvert = \min_{\lvert z - z_0\rvert = \delta}\lvert f(z) - w_0\rvert > 0$$
 
@@ -173,7 +173,7 @@ $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에
 :::
 
 ::: 증명
-$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 finite order $m \geq 1$인 영점을 가진다.
+$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3){: data-relation="required" }에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 finite order $m \geq 1$인 영점을 가진다.
 
 정리 7을 $f$과 $z_0$에 적용한다. 정리 7이 주는 $\delta > 0$과 $\varepsilon > 0$을, $\overline{D(z_0, \delta)} \subseteq U$이 되도록 $\delta$을 더 줄여 잡을 수 있다 ($U$이 열려 있으므로). 그러면 $0 < \lvert w - w_0\rvert < \varepsilon$인 모든 $w$에 대해 $f(z) = w$인 해가 $D(z_0, \delta) \subseteq U$ 안에 (적어도 하나) 존재하므로 $w \in f(U)$이다. 또 $w = w_0$ 자신도 $f(z_0)$으로서 $f(U)$에 든다. 따라서
 
@@ -210,7 +210,7 @@ $$(f^{-1})'(w_0) = \frac{1}{f'(z_0)} = \frac{1}{f'(f^{-1}(w_0))}$$
 
 따름정리 9는 holomorphicity라는 강한 조건 아래에서는 역함수의 미분가능성을 따로 가정할 필요가 없음을 말한다. 실변수에서 smooth 단사함수의 역이 매끄럽다는 보장에는 도함수가 $0$이 아니라는 조건이 필요하지만, holomorphic 단사함수에서는 그 조건이 단사성에서 저절로 따라 나오고, 역의 holomorphicity까지 자동으로 보장된다. 이로써 holomorphic 단사사상은 그 image로의 holomorphic isomorphism이 되며, 이것이 conformal isomorphism 이론의 기초가 된다.
 
-끝으로 open mapping 정리는 최대절댓값 원리에 새로운 시야를 준다. 이미 평균값 성질로 증명한 이 원리를 ([§영점과 일치정리, ⁋정리 5](/ko/math/complex_analysis/zeros_and_identity_theorem#thm5)), 여기서는 image가 열려 있다는 사실만으로 다시 얻는다.
+끝으로 open mapping 정리는 최대절댓값 원리에 새로운 시야를 준다. 이미 평균값 성질로 증명한 이 원리를 ([§영점과 일치정리, ⁋정리 5](/ko/math/complex_analysis/zeros_and_identity_theorem#thm5){: data-relation="weak" }), 여기서는 image가 열려 있다는 사실만으로 다시 얻는다.
 
 ::: 따름정리 10 (open mapping 정리에 의한 최대절댓값 원리)
 $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$이 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면 $f$은 $\Omega$에서 상수이다.
