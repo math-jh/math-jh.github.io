@@ -17,7 +17,7 @@ $\mathbb{K}$-algebra $A$와 field extension $\mathbb{L}/\mathbb{K}$가 주어졌
 
 $$\Hom_\mathbb{K}(A,\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K}\otimes_\mathbb{K}\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K})\otimes_\mathbb{K}\mathbb{L}=A^\ast\otimes_\mathbb{K}\mathbb{L}$$
 
-을 통해 $\mathbb{L}$-벡터공간으로 생각할 수도 있다. ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 3](/ko/math/multilinear_algebra/hom_and_tensor#prop3)) 
+을 통해 $\mathbb{L}$-벡터공간으로 생각할 수도 있다. ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 3](/ko/math/multilinear_algebra/hom_and_tensor#prop3){: data-relation="required" }) 
 
 위의 과정의 순서를 살짝 바꾸어 $A_{(\mathbb{L})}=\mathbb{L}\otimes_\mathbb{K}A$의 ($\mathbb{L}$-벡터공간으로서의) dual $(A_{(\mathbb{L})})^\ast$를 생각하자. 그럼 Hom-tensor adjoint
 
@@ -77,14 +77,14 @@ $$\lvert\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert\leq \dim_\mathbb{L}\Hom_\ma
 ::: 증명
 Monoid algebra $A=\mathbb{L}\Gamma$를 생각하고, canonical basis $(e_\gamma)_{\gamma\in\Gamma}$를 생각하자. 
 
-그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 일반화를 통해 $X$와 $\Hom_\mathbb{L}(A,\mathbb{L})$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1)로부터 바로 따라나온다. 
+그럼 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6){: data-relation="required" }의 일반화를 통해 $X$와 $\Hom_\mathbb{L}(A,\mathbb{L})$ 사이의 bijection이 존재하므로 주장은 [정리 1](#thm1){: data-relation="required" }로부터 바로 따라나온다. 
 :::
 
 ::: 따름정리 3 (Dedekind)
 두 extension $\mathbb{L}/\mathbb{K}$, $\mathbb{M}/\mathbb{K}$에 대하여, $\mathbb{M}$에서 $\mathbb{L}$로의 morphism들의 집합은 $\mathbb{L}$-벡터공간으로서 free이다. 특히 만일 $\mathbb{M}/\mathbb{K}$가 finite degree extension이라면 이 집합의 원소의 개수는 많아야 $[\mathbb{M}:\mathbb{K}]$개다.
 :::
 ::: 증명
-$A=\mathbb{M}$으로 두고 [정리 1](#thm1)을 사용하면 된다. 둘째 주장은 $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$이 $\mathbb{L}$-벡터공간으로서 $[\mathbb{M}:\mathbb{K}]$차원이기 때문에 당연하다. 
+$A=\mathbb{M}$으로 두고 [정리 1](#thm1){: data-relation="required" }을 사용하면 된다. 둘째 주장은 $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$이 $\mathbb{L}$-벡터공간으로서 $[\mathbb{M}:\mathbb{K}]$차원이기 때문에 당연하다. 
 :::
 
 더 나아가, 만일 $\mathbb{K}$가 무한집합이라면 이들은 *algebraically independent*이기도 하다. 
@@ -93,7 +93,7 @@ $A=\mathbb{M}$으로 두고 [정리 1](#thm1)을 사용하면 된다. 둘째 주
 무한한 field $\mathbb{K}$와 extension $\mathbb{L}/\mathbb{K}$가 주어졌다 하고, $\mathbb{K}$-algebra $A$를 고정하자. 만일 서로 다른 $\mathbb{K}$-algebra homomorphism들 $u_1,\ldots, u_n:A \rightarrow \mathbb{L}$에 대하여, 다항식 $f\in \mathbb{L}[\x_1,\ldots, \x_n]$이 항등적으로 $f(u_1,\ldots, u_n)=0$을 만족한다면 $f=0$이어야 한다.
 :::
 ::: 증명
-$(u_1(x), \dots, u_n(x))$의 꼴을 가지는 $\mathbb{L}^n$의 부분집합을 $B$라 하자. 그럼 [정리 1](#thm1)로부터 우리는 
+$(u_1(x), \dots, u_n(x))$의 꼴을 가지는 $\mathbb{L}^n$의 부분집합을 $B$라 하자. 그럼 [정리 1](#thm1){: data-relation="required" }로부터 우리는 
 
 $$\sum_{i=1}^n\alpha_i u_i(x)=0$$
 
@@ -144,7 +144,7 @@ Finite degree $n$을 갖는 $\mathbb{K}$-algebra $A$에 대하여, 다음이 모
 이제 넷째 조건의 동치를 보여야 한다. 이를 위해 둘째 조건이 성립한다 가정하고, 임의의 $A$-module $M$을 하나 택하자. 그럼 $x\mapsto e_ix$로 정의된 $M$의 $A$-endomorphism을 생각하면, $M$은 $e_iM$들의 direct sum이고 이로부터 넷째 조건이 나온다. 거꾸로 넷째 조건이 성립한다 가정하면 특별히 $A$ 자기자신을 1차원 $\mathbb{K}$-벡터공간들의 internal direct sum으로 쓸 수 있고, 이 때의 basis가 둘째 동치의 조건을 만족하는 것을 확인할 수 있다. 
 :::
 
-특히 넷째 조건은 $A$를 *diagonalizable*이라 부르는 것에 대해 어느정도의 정당성을 부여한다. 다음 따름정리는 [정리 1](#thm1)의 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 언제 *basis*가 되는지를 알려준다. 
+특히 넷째 조건은 $A$를 *diagonalizable*이라 부르는 것에 대해 어느정도의 정당성을 부여한다. 다음 따름정리는 [정리 1](#thm1){: data-relation="weak" }의 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 언제 *basis*가 되는지를 알려준다. 
 
 ::: 따름정리 7
 Field extension $\mathbb{L}/\mathbb{K}$와 finite degree $\mathbb{K}$-algebra $A$에 대하여, $\mathbb{K}$-algebra homomorphism들 $A \rightarrow \mathbb{L}$들의 모임 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$를 생각하자. 그럼 부등식 
@@ -155,9 +155,9 @@ $$\lvert \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})\rvert \leq [A:\mathbb{K}]$$
 :::
 
 ::: 증명
-우리는 이미 $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$임을 알고 있으며, [정리 1](#thm1)에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$는 $\Hom_\mathbb{K}(A,\mathbb{L})$의 free subset임을 안다. 따라서, 주장의 부등식이 성립하는 것이 자명하며, 등호는 오직 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 $\Hom_\mathbb{K}(A,\mathbb{L})$의 basis일 때 성립한다. 
+우리는 이미 $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$임을 알고 있으며, [정리 1](#thm1){: data-relation="required" }에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$는 $\Hom_\mathbb{K}(A,\mathbb{L})$의 free subset임을 안다. 따라서, 주장의 부등식이 성립하는 것이 자명하며, 등호는 오직 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 $\Hom_\mathbb{K}(A,\mathbb{L})$의 basis일 때 성립한다. 
 
-한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 부분집합 $\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$을 algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\Hom_\Alg{\mathbb{L}}(A_{(\mathbb{L})}, \mathbb{L})$으로 보낸다. 이제 [명제 6](#prop6)의 셋째 동치조건에 의하여 이 집합 $\Hom_\Alg{\mathbb{L}}(A_{(\mathbb{L})}, \mathbb{L})$이 $(A_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
+한편 $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$는 부분집합 $\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$을 algebra homomorphism $A_{(\mathbb{L})} \rightarrow \mathbb{L}$들의 집합 $\Hom_\Alg{\mathbb{L}}(A_{(\mathbb{L})}, \mathbb{L})$으로 보낸다. 이제 [명제 6](#prop6){: data-relation="required" }의 셋째 동치조건에 의하여 이 집합 $\Hom_\Alg{\mathbb{L}}(A_{(\mathbb{L})}, \mathbb{L})$이 $(A_{(\mathbb{L})})^\ast$를 생성하는 것이 $A$가 $\mathbb{L}$에 의해 diagonalize되는 것과 동치이므로 원하는 결과를 얻는다.
 :::
 
 즉, 만일 $A$가 étale algebra라면 $A$의 $\mathbb{K}$에 대한 extension degree는 $\Hom_{\Alg{\mathbb{K}}} (A, \mathbb{L})$의 갯수와 같으며, 이 증명을 찬찬히 뜯어보면 이를 통해 우리가 계산하는 것은 사실상 $A$를 diagonalize하는 $\mathbb{L}/\mathbb{K}$에 대하여 $[A_{(\mathbb{L})}:\mathbb{L}]$를 계산하는 것임을 알 수 있다. 이러한 관점에서 다음이 성립한다. 
@@ -171,7 +171,7 @@ $\mathbb{K}$-algebra $A$에 대하여, 다음이 모두 동치이다.
 :::
 
 ::: 증명
-우선 첫째 조건을 가정하고, $n=[A:\mathbb{K}]$라 하고 $\mathbb{L}/\mathbb{K}$가 $A$를 diagonalize한다 가정하자. 그럼 [따름정리 7](#cor7)에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$의 크기가 $n$이다. 한편 임의의 $u\in \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$에 대하여 $[u(A):\mathbb{K}]\leq n$임이 자명하고, 따라서 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$의 원소들의 image들로 생성된 $\mathbb{L}$의 subextension $\mathbb{L}'$이 $\mathbb{K}$에 대해 finite degree이다. 이제 $A$에서 $\mathbb{L}'$로의 서로 다른 homomorphism들은 $n$개 존재하므로, 다시 [따름정리 7](#cor7)에 의해 $\mathbb{L}'$이 $A$를 diagonalize한다. 
+우선 첫째 조건을 가정하고, $n=[A:\mathbb{K}]$라 하고 $\mathbb{L}/\mathbb{K}$가 $A$를 diagonalize한다 가정하자. 그럼 [따름정리 7](#cor7){: data-relation="required" }에 의해 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$의 크기가 $n$이다. 한편 임의의 $u\in \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$에 대하여 $[u(A):\mathbb{K}]\leq n$임이 자명하고, 따라서 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$의 원소들의 image들로 생성된 $\mathbb{L}$의 subextension $\mathbb{L}'$이 $\mathbb{K}$에 대해 finite degree이다. 이제 $A$에서 $\mathbb{L}'$로의 서로 다른 homomorphism들은 $n$개 존재하므로, 다시 [따름정리 7](#cor7){: data-relation="required" }에 의해 $\mathbb{L}'$이 $A$를 diagonalize한다. 
 
 이제 둘째 조건이 셋째 조건을 함의하는 것은 임의의 finite degree extension $\mathbb{L}/\mathbb{K}$는 $\overline{\mathbb{K}}$의 subextension으로 볼 수 있다는 것으로부터 바로 나오고, 셋째 조건이 첫째 조건을 함의하는 것은 그냥 정의이다. 
 :::
@@ -187,18 +187,18 @@ $\mathbb{K}^n$이 오직 유한개의 subalgebra와 ideal만을 가지며, 이�
 
 $\mathbb{K}^n$의 canonical basis를 $(e_1, \dots, e_n)$이라 하고, $\mathbb{K}^n$의 subalgebra $A$에 대하여 projection map들 $\mathbb{K}^n \rightarrow \mathbb{K}$를 $A$로 restrict한 것들을 $v_1,\ldots, v_n$이라 하자. 그럼 이들의 kernel의 교집합은 $0$이므로, $v_i$들은 ($\mathbb{K}$-벡터공간으로서) $A^\ast$를 생성하며 따라서 $A$는 diagonalizable이다. 
 
-따라서 $A$의 임의의 subalgebra 또한 diagonalizable이므로, 우리는 $A$의 임의의 subalgebra가 주어질 때마다 [명제 6](#prop6)의 둘째 조건을 만족하는 basis를 찾을 수 있어야만 한다. 그런데 $\mathbb{K}^n$의 idempotent들은 정확히 $\{1,\ldots, n\}$의 부분집합 $I$에 대하여 $e_I=\sum_{i\in I} e_i$의 꼴로 나타나는 것들 뿐이고, 이들은 $e_Ie_J=e_{I\cap J}$를 만족한다. 즉, 둘째 조건을 만족하는 idempotent들의 족은 많아봐야 $\{1,\ldots, n\}$의 partition의 개수만큼이고 따라서 $\mathbb{K}^n$의 subalgebra는 유한히 많다. 
+따라서 $A$의 임의의 subalgebra 또한 diagonalizable이므로, 우리는 $A$의 임의의 subalgebra가 주어질 때마다 [명제 6](#prop6){: data-relation="required" }의 둘째 조건을 만족하는 basis를 찾을 수 있어야만 한다. 그런데 $\mathbb{K}^n$의 idempotent들은 정확히 $\{1,\ldots, n\}$의 부분집합 $I$에 대하여 $e_I=\sum_{i\in I} e_i$의 꼴로 나타나는 것들 뿐이고, 이들은 $e_Ie_J=e_{I\cap J}$를 만족한다. 즉, 둘째 조건을 만족하는 idempotent들의 족은 많아봐야 $\{1,\ldots, n\}$의 partition의 개수만큼이고 따라서 $\mathbb{K}^n$의 subalgebra는 유한히 많다. 
 
-비슷하게, $\mathfrak{a}_I$를 $(e_i)_{i\in I}$들을 basis로 갖는 $\mathbb{K}^n$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $\mathbb{K}^n/\mathfrak{a}_I$의 diagonalizability 또한 [명제 6](#prop6)으로 보일 수 있다.
+비슷하게, $\mathfrak{a}_I$를 $(e_i)_{i\in I}$들을 basis로 갖는 $\mathbb{K}^n$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $\mathbb{K}^n/\mathfrak{a}_I$의 diagonalizability 또한 [명제 6](#prop6){: data-relation="required" }으로 보일 수 있다.
 :::
 
 ## 분리가능차수
 
-이제 étale algebra에 대한 성질을 더 살펴보기 전에 유용한 개념을 하나 만들자. 지금까지의 논의들에서 [정리 1](#thm1)에서 처음 등장한 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 중요한 역할을 해 왔다. 이제 finite degree의 commutative $\mathbb{K}$-algebra $A$를 고정하고, 임의의 extension $\mathbb{L}/\mathbb{K}$이 주어질 때마다 자연수 $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$으로 정의하자. 그럼 우리는 부등식
+이제 étale algebra에 대한 성질을 더 살펴보기 전에 유용한 개념을 하나 만들자. 지금까지의 논의들에서 [정리 1](#thm1){: data-relation="required" }에서 처음 등장한 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 중요한 역할을 해 왔다. 이제 finite degree의 commutative $\mathbb{K}$-algebra $A$를 고정하고, 임의의 extension $\mathbb{L}/\mathbb{K}$이 주어질 때마다 자연수 $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$으로 정의하자. 그럼 우리는 부등식
 
 $$h(\mathbb{L})\leq [A:\mathbb{K}]=n$$
 
-이 항상 성립하는 것을 안다. 뿐만 아니라, [명제 8](#prop8)의 셋째 조건을 생각하면, 만일 위의 부등식을 등식으로 만드는 $\mathbb{L}$이 존재한다면 $h(\overline{\mathbb{K}})$ 또한 이를 등식으로 만들어야 함을 안다. 이에 힘입어 우리는 다음을 정의한다. 
+이 항상 성립하는 것을 안다. 뿐만 아니라, [명제 8](#prop8){: data-relation="required" }의 셋째 조건을 생각하면, 만일 위의 부등식을 등식으로 만드는 $\mathbb{L}$이 존재한다면 $h(\overline{\mathbb{K}})$ 또한 이를 등식으로 만들어야 함을 안다. 이에 힘입어 우리는 다음을 정의한다. 
 
 ::: 정의 10
 자연수 $h(\overline{\mathbb{K}})$를 $A$의 *separable degree<sub>분리가능차수</sub>*로 정의하고 $[A:\mathbb{K}]_s$로 적는다. 
@@ -216,14 +216,14 @@ $$[u(A):\mathbb{K}]\leq n$$
 
 이 성립한다. 즉, $u(A)$는 algebraic extension이며 따라서 $\mathbb{L}'$에 포함된다. 이로부터 $h(\mathbb{L}')=h(\mathbb{L})$이 성립해야 함을 안다. 
 
-한편 [§대수적 폐포, ⁋명제 11](/ko/math/field_theory/algebraically_closed_extensions#prop11)에 의하여 $\mathbb{L}'$는 $\Omega$의 적당한 subextension과 isomorphic하므로
+한편 [§대수적 폐포, ⁋명제 11](/ko/math/field_theory/algebraically_closed_extensions#prop11){: data-relation="required" }에 의하여 $\mathbb{L}'$는 $\Omega$의 적당한 subextension과 isomorphic하므로
 
 $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 
 가 성립한다. 
 :::
 
-이로부터 만일 $\mathbb{L}$이 algebraically closed라면 $\mathbb{L}$과 $\Omega$의 위치를 바꿀 수 있으므로 등식이 성립해야 한다는 것을 알고, 따라서 [정의 10](#def10)이 잘 정의된다. 그럼 다음은 이에 대한 기초적인 성질들이다. 
+이로부터 만일 $\mathbb{L}$이 algebraically closed라면 $\mathbb{L}$과 $\Omega$의 위치를 바꿀 수 있으므로 등식이 성립해야 한다는 것을 알고, 따라서 [정의 10](#def10){: data-relation="required" }이 잘 정의된다. 그럼 다음은 이에 대한 기초적인 성질들이다. 
 
 ::: 명제 12
 다음이 성립한다. 
@@ -258,13 +258,13 @@ $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
     을 유도한다. 한편 각각의 고정된 $u$에 대하여, 위의 집합 $\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u$는, $\mathbb{L}$이 $\mathbb{K}'$의 algebraic closure이므로, 그 정의에 의하여 $[A':\mathbb{K}']_s$와 같은 크기를 갖는다. 이로부터 원하는 등식을 얻는다. 
 :::
 
-이 언어를 사용하면 [따름정리 7](#cor7)은 다음과 같이 번역된다. 
+이 언어를 사용하면 [따름정리 7](#cor7){: data-relation="required" }은 다음과 같이 번역된다. 
 
 ::: 명제 13
 Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $[A:\mathbb{K}]_s\leq [A:\mathbb{K}]$가 성립하며, 등식은 $A$가 étale algebra일 경우 성립한다. 
 :::
 
-특히 이를 [명제 12](#prop12)와 조합하면 다음의 따름정리를 얻는다. 
+특히 이를 [명제 12](#prop12){: data-relation="required" }와 조합하면 다음의 따름정리를 얻는다. 
 
 ::: 따름정리 14
 다음이 성립한다. 
