@@ -24,7 +24,7 @@ $(\mathfrak{a}_i)_{i\in I}$가 cardinal들의 family라 하자. 집합 $\mathfra
 
 우리가 처음 집합의 합을 정의할 때, 굳이 분리합집합이라는 직관적인 이름을 놔두고 합이라는 용어를 쓴 이유가 여기에 있다.
 
-우선, 위 정의들은 잘 정의되어있다. 만일 $A_i$와 $\mathfrak{a}_i$가 equipotent하다면, $\prod_{i\in I} A_i$와 $\prod_{i\in I}\mathfrak{a}_i$ 사이에도 bijection이 존재하기 때문이다. 합의 경우에는 합 자체가 유일하게 정해지지 않지만, [§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#cor9)에 의하여 그러한 합들 사이에는 언제나 bijection이 존재하므로 cardinal은 하나로 정해진다. 이 연산들을 가지고 있다면 합과 곱의 성질들이 다음과 같이 cardinal간의 연산의 성질로 바뀌게 된다.
+우선, 위 정의들은 잘 정의되어있다. 만일 $A_i$와 $\mathfrak{a}_i$가 equipotent하다면, $\prod_{i\in I} A_i$와 $\prod_{i\in I}\mathfrak{a}_i$ 사이에도 bijection이 존재하기 때문이다. 합의 경우에는 합 자체가 유일하게 정해지지 않지만, [§집합의 합, ⁋따름정리 9](/ko/math/set_theory/sum_of_sets#cor9){: data-relation="required" }에 의하여 그러한 합들 사이에는 언제나 bijection이 존재하므로 cardinal은 하나로 정해진다. 이 연산들을 가지고 있다면 합과 곱의 성질들이 다음과 같이 cardinal간의 연산의 성질로 바뀌게 된다.
 
 ::: 명제 2
 $(\mathfrak{a}_i)_{i\in I}$가 cardinal들의 family이고, $f$가 $K$에서 $I$로의 bijection이라 하자. 그럼 
@@ -38,7 +38,7 @@ $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad
 이다.
 :::
 ::: 증명
-[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7)에 의하여 우리는 cardinal들의 합을 pairwise disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)의 결과들이다.
+[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7){: data-relation="required" }에 의하여 우리는 cardinal들의 합을 pairwise disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4){: data-relation="required" }, [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5){: data-relation="required" }의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5){: data-relation="required" }와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3){: data-relation="required" }의 결과들이다.
 :::
 
 ::: 명제 3
@@ -52,7 +52,7 @@ $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\m
 공집합과 합집합을 하는 것과, 원소 하나짜리 집합과 곱을 하는 것은 cardinal에 영향을 미치지 않는다. ($x\mapsto (x,i)$가 $A$에서 $A\times\{i\}$로의 bijection을 정의한다)
 :::
 
-그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙을 이용하면 다음의 명제를 얻는다 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7)). 
+그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙을 이용하면 다음의 명제를 얻는다 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7){: data-relation="required" }). 
 
 ::: 명제 4
 Cardinal들의 double-index가 주어진 family $((\mathfrak{a}_{k,j})_{j\in J_k})_{k\in K}$에 대하여, $I=\prod_{k\in K}J_k$라 하면 
@@ -72,7 +72,7 @@ $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{k,j}\right)=\sum_{f\in I}\lef
 
 $$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=\mathbf{1}\text{ for all $i\in I$}$$
 
-을 얻고, 양 변에 $\mathfrak{a}$를 곱하여 앞선 [명제 4](#prop4)를 적용하면
+을 얻고, 양 변에 $\mathfrak{a}$를 곱하여 앞선 [명제 4](#prop4){: data-relation="required" }를 적용하면
 
 $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=\sum_{i\in I}\mathfrak{a}\mathfrak{c}_i=\sum_{i\in I}\mathfrak{a}$$
 
@@ -82,7 +82,7 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 $(\mathfrak{a}_i)_{i\in I}$가 cardinal들의 family라 하자. 그럼 $\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$인 것은 모든 $i\in I$에 대하여 $\mathfrak{a}_i\neq \mathbf{0}$인 것과 동치이다.
 :::
 ::: 증명
-[§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#prop10)의 임의의 product로의 확장. 증명도 동일하게 하면 되는데, 다만 임의의 family에서 각 $\mathfrak{a}_i$의 원소를 한꺼번에 뽑아오는 것은 [§선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice)가 주는 choice function $f$로 하며, 이때 $f(i)\in\mathfrak{a}_i$가 곱의 원소를 지정한다.
+[§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#prop10){: data-relation="required" }의 임의의 product로의 확장. 증명도 동일하게 하면 되는데, 다만 임의의 family에서 각 $\mathfrak{a}_i$의 원소를 한꺼번에 뽑아오는 것은 [§선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice){: data-relation="required" }가 주는 choice function $f$로 하며, 이때 $f(i)\in\mathfrak{a}_i$가 곱의 원소를 지정한다.
 :::
 
 ::: 명제 6
@@ -108,7 +108,7 @@ $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이라 하자. $\mathfrak{a}$에서 
 $\mathfrak{a}$와 $\mathfrak{b}$가 cardinal이고 $I$가 $\card I=\mathfrak{b}$를 만족하는 집합이라 하자. 만일 모든 $i\in I$에 대하여 $\mathfrak{a}_i=\mathfrak{a}$라면 $\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$이다.
 :::
 ::: 증명
-곱 $\prod_{i\in I}\mathfrak{a}_i$의 원소는 각 $i\in I$마다 $\mathfrak{a}_i=\mathfrak{a}$의 원소를 지정하는 것, 곧 $I$에서 $\mathfrak{a}$로의 함수이므로, 이 곱은 함수들의 집합 $\mathfrak{a}^I$와 같다. $\card I=\mathfrak{b}$이므로 [정의 7](#def7)에 의하여 이 집합의 cardinal은 $\mathfrak{a}^\mathfrak{b}$이다.
+곱 $\prod_{i\in I}\mathfrak{a}_i$의 원소는 각 $i\in I$마다 $\mathfrak{a}_i=\mathfrak{a}$의 원소를 지정하는 것, 곧 $I$에서 $\mathfrak{a}$로의 함수이므로, 이 곱은 함수들의 집합 $\mathfrak{a}^I$와 같다. $\card I=\mathfrak{b}$이므로 [정의 7](#def7){: data-relation="required" }에 의하여 이 집합의 cardinal은 $\mathfrak{a}^\mathfrak{b}$이다.
 :::
 
 Cardinal $\mathbf{0}$과 $\mathbf{1}$에 대한 성질들, 예컨대 $\mathfrak{a}^\mathbf{0}=\mathbf{1}$, $\mathfrak{a}^\mathbf{1}=\mathfrak{a}$, $\mathbf{1}^\mathfrak{a}=\mathbf{1}$, 그리고 $\mathfrak{a}\neq\mathbf{0}$일 때 $\mathbf{0}^\mathfrak{a}=\mathbf{0}$ 등등은 쉽게 증명할 수 있다. 여기에서 가장 중요한 정리들 중 하나는 다음의 정리이다.

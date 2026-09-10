@@ -36,7 +36,7 @@ Also, if $(J_l)_{l\in L}$ is a partition of $I$, then
 $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_{i}=\prod_{l\in L}\prod_{i\in J_l}\mathfrak{a}_i$$
 :::
 ::: Proof
-By [§Sum of Sets, ⁋Proposition 7](/en/math/set_theory/sum_of_sets#prop7), we may regard the sum of cardinals as the union of a pairwise disjoint family. The first equations are consequences of [§Union and Intersection, ⁋Proposition 4](/en/math/set_theory/union_and_intersection#prop4) and [§Product of Sets, ⁋Proposition 5](/en/math/set_theory/product_of_sets#prop5), respectively, and the second equations follow from [§Union and Intersection, ⁋Proposition 5](/en/math/set_theory/union_and_intersection#prop5) and [§Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3).
+By [§Sum of Sets, ⁋Proposition 7](/en/math/set_theory/sum_of_sets#prop7){: data-relation="required" }, we may regard the sum of cardinals as the union of a pairwise disjoint family. The first equations are consequences of [§Union and Intersection, ⁋Proposition 4](/en/math/set_theory/union_and_intersection#prop4){: data-relation="required" } and [§Product of Sets, ⁋Proposition 5](/en/math/set_theory/product_of_sets#prop5){: data-relation="required" }, respectively, and the second equations follow from [§Union and Intersection, ⁋Proposition 5](/en/math/set_theory/union_and_intersection#prop5){: data-relation="required" } and [§Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3){: data-relation="required" }.
 :::
 
 ::: Proposition 3
@@ -50,7 +50,7 @@ hold.
 Taking the union with the empty set and taking the product with a singleton do not affect the cardinal. (The map $x\mapsto (x,i)$ defines a bijection from $A$ to $A\times\{i\}$.)
 :::
 
-Beyond these obvious facts, applying the distributive law between product and union ([§Properties of Products, ⁋Proposition 7](/en/math/set_theory/property_of_products#prop7)) yields the following proposition.
+Beyond these obvious facts, applying the distributive law between product and union ([§Properties of Products, ⁋Proposition 7](/en/math/set_theory/property_of_products#prop7){: data-relation="required" }) yields the following proposition.
 
 ::: Proposition 4
 For a doubly-indexed family $((\mathfrak{a}_{j,k})_{j\in J_k})_{k\in K}$ of cardinals, letting $I=\prod_{k\in K}J_k$,
@@ -70,7 +70,7 @@ On the other hand, since any set can be written as a sum of singletons (that is,
 
 $$\mathfrak{b}=\sum_{i\in I} \mathfrak{c}_i,\qquad \mathfrak{c}_i=1\text{ for all $i\in I$}$$
 
-Multiplying both sides by $\mathfrak{a}$ and applying [Proposition 4](#prop4) above, we obtain
+Multiplying both sides by $\mathfrak{a}$ and applying [Proposition 4](#prop4){: data-relation="required" } above, we obtain
 
 $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=\sum_{i\in I}\mathfrak{a}\mathfrak{c}_i=\sum_{i\in I}\mathfrak{a}$$
 
@@ -78,7 +78,7 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 Let $(\mathfrak{a}_i)_{i\in I}$ be a family of cardinals. Then $\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$ if and only if $\mathfrak{a}_i\neq \mathbf{0}$ for all $i\in I$.
 :::
 ::: Proof
-This is the extension of [§Ordered Pairs, ⁋Proposition 10](/en/math/set_theory/ordered_pair#prop10) to arbitrary products. The proof is identical.
+This is the extension of [§Ordered Pairs, ⁋Proposition 10](/en/math/set_theory/ordered_pair#prop10){: data-relation="weak" } to arbitrary products. The proof is identical.
 :::
 
 ::: Proposition 6
