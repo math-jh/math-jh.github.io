@@ -16,7 +16,7 @@ weight: 4
 
 ## 사영분해와 단사분해
 
-우리는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3)에서 projective module과 injective module을 정의하였다. 이를 diagram의 언어로 바꾸어 쓰면 일반적인 abelian category에서 projective object와 injective object의 개념을 얻는다.
+우리는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3){: data-relation="required" }에서 projective module과 injective module을 정의하였다. 이를 diagram의 언어로 바꾸어 쓰면 일반적인 abelian category에서 projective object와 injective object의 개념을 얻는다.
 
 ::: 정의 1
 Abelian category $\mathcal{A}$를 고정하자.
@@ -85,13 +85,13 @@ $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})
 을 얻는다. 여기서 식 $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$는 $\epsilon_n$이 surjective라는 것을, 식 $\ker(\epsilon_{n-1})=\ker(d_{n-1})$은 $\iota_{n-2}$이 injective라는 것을 각각 이용하였다. 따라서 $P_\bullet$은 $M$의 projective resolution이다.
 :::
 
-이번 글에서 우리의 목표 중 하나는 임의의 $A$-module은 항상 projective resolution과 injective resolution을 갖는다는 것을 증명하는 것이다. [명제 3](#prop3)을 사용하면 이는 $\lMod{A}$가 enough projective와 enough injective를 갖는다는 것을 증명하면 충분하다. $\lMod{A}$가 enough projective를 갖는다는 것은 자명하다.
+이번 글에서 우리의 목표 중 하나는 임의의 $A$-module은 항상 projective resolution과 injective resolution을 갖는다는 것을 증명하는 것이다. [명제 3](#prop3){: data-relation="required" }을 사용하면 이는 $\lMod{A}$가 enough projective와 enough injective를 갖는다는 것을 증명하면 충분하다. $\lMod{A}$가 enough projective를 갖는다는 것은 자명하다.
 
 ::: 명제 4
 Category $\lMod{A}$는 enough projective를 갖는다.
 :::
 ::: 증명
-임의의 $M\in\lMod{A}$에 대하여 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)로부터 free module $F$와 surjection $F \rightarrow M$을 얻고, [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)로부터 $F$는 projective이다.
+임의의 $M\in\lMod{A}$에 대하여 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-relation="required" }로부터 free module $F$와 surjection $F \rightarrow M$을 얻고, [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-relation="required" }로부터 $F$는 projective이다.
 :::
 
 그러나 $\lMod{A}^\op$에 대해서는 아는 것이 아무것도 없으므로, $\lMod{A}$가 enough injective를 갖는다는 것은 위의 결과로부터 따라나오지 않는다. 따라서 다음의 명제는 별도의 증명이 필요하다.
@@ -100,7 +100,7 @@ Category $\lMod{A}$는 enough projective를 갖는다.
 Category $\lMod{A}$는 enough injective를 갖는다.
 :::
 ::: 증명
-어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
+어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7){: data-relation="required" }) 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
 
 $$I(G)=\prod_{f\in\Hom_\Ab(G, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
@@ -161,7 +161,7 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 {% diagram Math/Homological_Algebra/Resolutions-9.svg width="20.34em" alt="horseshoe-initial" %}
 
-이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋정리 6](/ko/math/homological_algebra/diagram_chasing#thm6)으로부터 다음의 diagram
+이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋정리 6](/ko/math/homological_algebra/diagram_chasing#thm6){: data-relation="required" }으로부터 다음의 diagram
 
 {% diagram Math/Homological_Algebra/Resolutions-10.svg width="20.84em" alt="horseshoe-induction" %}
 

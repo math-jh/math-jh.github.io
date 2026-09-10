@@ -85,7 +85,7 @@ $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})
 Here, the identity $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$ uses the fact that $\epsilon_n$ is surjective, and the identity $\ker(\epsilon_{n-1})=\ker(d_{n-1})$ uses the fact that $\iota_{n-2}$ is injective. Therefore $P_\bullet$ is a projective resolution of $M$.
 :::
 
-One of our goals in this post is to prove that every $A$-module always has both a projective resolution and an injective resolution. Using [Proposition 3](#prop3), it suffices to prove that $\lMod{A}$ has enough projectives and enough injectives. That $\lMod{A}$ has enough projectives is trivial.
+One of our goals in this post is to prove that every $A$-module always has both a projective resolution and an injective resolution. Using [Proposition 3](#prop3){: data-relation="required" }, it suffices to prove that $\lMod{A}$ has enough projectives and enough injectives. That $\lMod{A}$ has enough projectives is trivial.
 
 ::: Proposition 4
 The category $\lMod{A}$ has enough projectives.
@@ -159,7 +159,7 @@ First, drawing the given situation in a diagram, we obtain the following.
 
 {% diagram Math/Homological_Algebra/Resolutions-9.svg width="20.34em" alt="horseshoe-initial" %}
 
-Now from the condition that $P_0''$ is projective, we can define $P_0'' \rightarrow A$. On the other hand, $P_0' \rightarrow A$ is already given as the composition of $i_A$ and $\epsilon'$, so taking their direct sum we obtain $\epsilon:P_0 \rightarrow A$. Then from [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
+Now from the condition that $P_0''$ is projective, we can define $P_0'' \rightarrow A$. On the other hand, $P_0' \rightarrow A$ is already given as the composition of $i_A$ and $\epsilon'$, so taking their direct sum we obtain $\epsilon:P_0 \rightarrow A$. Then from [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5){: data-relation="required" } we obtain the following diagram
 
 {% diagram Math/Homological_Algebra/Resolutions-10.svg width="20.84em" alt="horseshoe-induction" %}
 
