@@ -92,7 +92,7 @@ EN 쪽은 훨씬 짧다. 문서가 이미 `lang="en"`이라 `hyphens: auto` 한 
 
 ## 사후: 다섯 글자가 남긴 자리
 
-이 글을 올린 날 사용자가 [Repo Guardrails](/ko/llm_workshop/repo_guardrails) 글의 인용문 한 줄을 짚었다. `trivial bundle의 total space를`에서 `total space` 구간만 글자 사이가 벌어져 있고 나머지 영단어는 멀쩡하다는 것이었다.
+이 글을 올린 날 사용자가 [Repo Guardrails](/ko/llm_workshop/repo_guardrails){: data-relation="weak" } 글의 인용문 한 줄을 짚었다. `trivial bundle의 total space를`에서 `total space` 구간만 글자 사이가 벌어져 있고 나머지 영단어는 멀쩡하다는 것이었다.
 
 낱말 길이를 세어 보면 답이 나온다. `trivial`은 일곱 자, `bundle`과 `product`는 여섯 자, 그리고 `total`과 `space`는 다섯 자다. 스팬을 씌우는 조건이 여섯 자 이상이었으므로 저 둘만 스팬 밖에 남았고, 스팬 밖은 부모의 `inter-character`를 그대로 받는다. 게다가 둘이 나란히 붙어 있어 열한 글자짜리 라틴 구간이 통째로 늘어났다.
 
