@@ -17,7 +17,7 @@ weight: 3
 
 ## 부분공간
 
-[§벡터공간, ⁋예시 6](/ko/math/linear_algebra/vector_spaces#ex6)을 보면, 어떤 벡터공간의 부분집합이 그 자체로 벡터공간을 이루는 경우가 종종 있다는 것을 알 수 있다. 이를 다음과 같이 정의하자.
+[§벡터공간, ⁋예시 6](/ko/math/linear_algebra/vector_spaces#ex6){: data-relation="weak" }을 보면, 어떤 벡터공간의 부분집합이 그 자체로 벡터공간을 이루는 경우가 종종 있다는 것을 알 수 있다. 이를 다음과 같이 정의하자.
 
 ::: 정의 1
 어떤 $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 부분집합 $W$가 $V$의 *부분공간<sub>subspace</sub>*이라는 것은, $V$ 위에 정의된 덧셈과 스칼라곱을 $W$ 위로 제한하였을 때 얻어지는 연산들이 $W$ 위에 다시 $\mathbb{K}$-벡터공간을 정의하는 것이다. 이를 $W\leq V$와 같이 표현한다.
@@ -25,7 +25,7 @@ weight: 3
 
 정의에 의해, $C^k(I)$는 $C(I)$의 부분공간이고, $C(I)$는 $\Fun(I,\mathbb{R})$의 부분공간이 된다.
 
-정의를 그대로 사용하여 $V$의 임의의 부분집합 $W$가 부분공간인지를 체크하기 위해서는 이들의 덧셈이 abelian group을 이루는지, 그리고 스칼라곱이 [§벡터공간, ⁋정의 1](/ko/math/linear_algebra/vector_spaces#def1)의 조건을 모두 만족하는지 등을 모두 따져봐야 한다. 하지만, $W$ 위에 정의될 덧셈과 스칼라곱은 $V$로부터 받아오는 것이므로, 몇 가지 성질들은 굳이 체크할 필요가 없다. 
+정의를 그대로 사용하여 $V$의 임의의 부분집합 $W$가 부분공간인지를 체크하기 위해서는 이들의 덧셈이 abelian group을 이루는지, 그리고 스칼라곱이 [§벡터공간, ⁋정의 1](/ko/math/linear_algebra/vector_spaces#def1){: data-relation="required" }의 조건을 모두 만족하는지 등을 모두 따져봐야 한다. 하지만, $W$ 위에 정의될 덧셈과 스칼라곱은 $V$로부터 받아오는 것이므로, 몇 가지 성질들은 굳이 체크할 필요가 없다. 
 
 예를 들어, 임의의 $w_1,w_2\in W$에 대해
 
@@ -37,7 +37,7 @@ $$w_1+w_2=w_2+w_1$$
 2. 이와 비슷하게, $W$가 덧셈에 대한 항등원과 역원을 갖는지도 체크해봐야 한다. 물론 $V$는 $0$과 $-w$를 포함하지만, 이들이 $W$에 포함되리라는 보장은 없기 때문이다.
 3. 또, 임의의 스칼라 $\alpha\in\mathbb{K}$와 $w\in W$에 대하여, $\alpha w\in W$인지의 여부도 체크해봐야 한다.
 
-하지만 여기에서 조금 더 조건을 간추릴 수도 있다. 만일 $W$가 스칼라곱에 대해 닫혀있기만 하다면, [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2)와 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)에 의해 두 번째 조건은 통째로 생략할 수 있다. $W$가 스칼라곱에 대해 닫혀있으므로, $0w\in W$이고 $(-1)w\in W$여야 하는데, 이들이 각각 $0$과 $-w$이기 때문이다. 따라서 방금 우리는 다음 명제를 증명했다.
+하지만 여기에서 조금 더 조건을 간추릴 수도 있다. 만일 $W$가 스칼라곱에 대해 닫혀있기만 하다면, [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2){: data-relation="required" }와 [§벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3){: data-relation="required" }에 의해 두 번째 조건은 통째로 생략할 수 있다. $W$가 스칼라곱에 대해 닫혀있으므로, $0w\in W$이고 $(-1)w\in W$여야 하는데, 이들이 각각 $0$과 $-w$이기 때문이다. 따라서 방금 우리는 다음 명제를 증명했다.
 
 ::: 명제 2
 $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 공집합이 아닌 부분집합 $W$가 $V$의 부분공간인 것은, $W$가 덧셈과 스칼라곱에 대해 닫혀있는 것과 동치이다.
@@ -57,7 +57,7 @@ $$\sum_{i=1}^n\alpha_i w_i=\alpha_1w_1+\alpha_2w_2+\cdots+\alpha_nw_n\tag{1}$$
 은 $W$의 원소이다.
 :::
 ::: 증명
-귀납법을 이용하여 진행한다. $n=1$인 경우는 [명제 2](#prop2)에 의하여 $\alpha_1w_1\in W$이다. 이제 $n=2$인 경우를 생각하자. 이 경우 [명제 2](#prop2)에 의하여 $\alpha_1w_1,\alpha_2w_2$ 각각은 $W$의 원소이고 따라서 이들의 합 $\alpha_1w_1+\alpha_2w_2$ 또한 $W$의 원소이다.
+귀납법을 이용하여 진행한다. $n=1$인 경우는 [명제 2](#prop2){: data-relation="required" }에 의하여 $\alpha_1w_1\in W$이다. 이제 $n=2$인 경우를 생각하자. 이 경우 [명제 2](#prop2){: data-relation="required" }에 의하여 $\alpha_1w_1,\alpha_2w_2$ 각각은 $W$의 원소이고 따라서 이들의 합 $\alpha_1w_1+\alpha_2w_2$ 또한 $W$의 원소이다.
 
 일반적인 $n$에 대하여, $W$에서의 덧셈은 결합법칙을 만족하므로
 
@@ -80,7 +80,7 @@ $$\alpha_1v_1+\cdots+\alpha_nv_n$$
 
 $$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $i$}$$
 
-으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4)와 같이 $\mathbb{R}$을 $\mathbb{Q}$-벡터공간으로 본다면, $\sqrt2-1=0.4142\ldots$는 다음 벡터들
+으로 정의된다. 예를 들어, [§벡터공간, ⁋예시 4](/ko/math/linear_algebra/vector_spaces#ex4){: data-relation="weak" }와 같이 $\mathbb{R}$을 $\mathbb{Q}$-벡터공간으로 본다면, $\sqrt2-1=0.4142\ldots$는 다음 벡터들
 
 $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
@@ -121,7 +121,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 >$\mathbb{K}$의 원소를 계수로 갖는 $\x$에 대한 *formal power series*들의 집합
 
-이라 하자. 앞선 [예시 5](#ex5)와 동일한 방식으로 벡터 사이의 덧셈과 스칼라곱을 정의하면, $\mathbb{K}[[\x]]$는 마찬가지로 $\mathbb{K}$-벡터공간이 된다.  
+이라 하자. 앞선 [예시 5](#ex5){: data-relation="required" }와 동일한 방식으로 벡터 사이의 덧셈과 스칼라곱을 정의하면, $\mathbb{K}[[\x]]$는 마찬가지로 $\mathbb{K}$-벡터공간이 된다.  
 :::
 
 정의에 의하여 $\mathbb{K}[\x]$는 $\mathbb{K}[[\x]]$의 부분공간이다. 또, $\mathbb{K}[\x]$의 모든 원소들은 집합 $\{1,\x,\x^2,\ldots\}$의 벡터들의 일차결합으로 표현할 수 있지만, $\mathbb{K}[[\x]]$에는 그렇게 표현되지 않는 원소가 있다.

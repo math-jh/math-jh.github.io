@@ -18,7 +18,7 @@ last_polished_at: 2026-08-27T23:45:05+00:00
 ---
 ## Subspaces
 
-As seen in [§Vector Spaces, ⁋Example 6](/en/math/linear_algebra/vector_spaces#ex6), a subset of a vector space often forms a vector space in its own right. Let us define this notion as follows.
+As seen in [§Vector Spaces, ⁋Example 6](/en/math/linear_algebra/vector_spaces#ex6){: data-relation="weak" }, a subset of a vector space often forms a vector space in its own right. Let us define this notion as follows.
 
 ::: Definition 1
 For a $\mathbb{K}$-vector space $V$, a subset $W$ of $V$ is called a *subspace* of $V$ if the operations obtained by restricting the addition and scalar multiplication defined on $V$ to $W$ again define a $\mathbb{K}$-vector space on $W$. We denote this by $W\leq V$.
@@ -26,7 +26,7 @@ For a $\mathbb{K}$-vector space $V$, a subset $W$ of $V$ is called a *subspace* 
 
 By definition, $C^k(I)$ is a subspace of $C(I)$, and $C(I)$ is a subspace of $\Fun(I,\mathbb{R})$.
 
-To check directly from the definition whether an arbitrary subset $W$ of $V$ is a subspace, we would have to verify that its addition forms an abelian group, that scalar multiplication satisfies all the conditions of [§Vector Spaces, ⁋Definition 1](/en/math/linear_algebra/vector_spaces#def1), and so on. However, since the addition and scalar multiplication on $W$ are inherited from $V$, some properties need not be checked.
+To check directly from the definition whether an arbitrary subset $W$ of $V$ is a subspace, we would have to verify that its addition forms an abelian group, that scalar multiplication satisfies all the conditions of [§Vector Spaces, ⁋Definition 1](/en/math/linear_algebra/vector_spaces#def1){: data-relation="required" }, and so on. However, since the addition and scalar multiplication on $W$ are inherited from $V$, some properties need not be checked.
 
 For example, for arbitrary $w_1,w_2\in W$, there is no need to check whether
 
@@ -38,7 +38,7 @@ holds. This is because the two elements $w_1,w_2$ are elements of $V$ before the
 2. Similarly, we must check whether $W$ contains the additive identity and additive inverses. Of course $V$ contains $0$ and $-w$, but there is no guarantee that these belong to $W$.
 3. Also, for an arbitrary scalar $\alpha\in\mathbb{K}$ and $w\in W$, we must check whether $\alpha w\in W$.
 
-But the conditions can be trimmed down a bit further here. If $W$ is closed under scalar multiplication alone, then by [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2) and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3), the second condition can be omitted entirely. Indeed, since $W$ is closed under scalar multiplication, we must have $0w\in W$ and $(-1)w\in W$, and these are precisely $0$ and $-w$, respectively. Thus we have just proved the following proposition.
+But the conditions can be trimmed down a bit further here. If $W$ is closed under scalar multiplication alone, then by [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-relation="required" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-relation="required" }, the second condition can be omitted entirely. Indeed, since $W$ is closed under scalar multiplication, we must have $0w\in W$ and $(-1)w\in W$, and these are precisely $0$ and $-w$, respectively. Thus we have just proved the following proposition.
 
 ::: Proposition 2
 For a $\mathbb{K}$-vector space $V$, a nonempty subset $W$ of $V$ is a subspace of $V$ if and only if $W$ is closed under addition and scalar multiplication.
@@ -58,7 +58,7 @@ $$\sum_{i=1}^n\alpha_i w_i=\alpha_1w_1+\alpha_2w_2+\cdots+\alpha_nw_n\tag{1}$$
 is an element of $W$.
 :::
 ::: Proof
-We proceed by induction. The case $n=1$ gives $\alpha_1w_1\in W$ by [Proposition 2](#prop2). Now consider the case $n=2$. In this case, by [Proposition 2](#prop2), each of $\alpha_1w_1,\alpha_2w_2$ is an element of $W$, and hence their sum $\alpha_1w_1+\alpha_2w_2$ is also an element of $W$.
+We proceed by induction. The case $n=1$ gives $\alpha_1w_1\in W$ by [Proposition 2](#prop2){: data-relation="required" }. Now consider the case $n=2$. In this case, by [Proposition 2](#prop2){: data-relation="required" }, each of $\alpha_1w_1,\alpha_2w_2$ is an element of $W$, and hence their sum $\alpha_1w_1+\alpha_2w_2$ is also an element of $W$.
 
 For a general $n$, since addition on $W$ satisfies the associative law,
 
@@ -81,7 +81,7 @@ More generally, when infinitely many elements $(v_i)_{i\in I}$ of $V$ are given,
 
 $$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $i$}$$
 
-. For example, if we regard $\mathbb{R}$ as a $\mathbb{Q}$-vector space as in [§Vector Spaces, ⁋Example 4](/en/math/linear_algebra/vector_spaces#ex4), then $\sqrt2-1=0.4142\ldots$ is *not* a linear combination of the vectors
+. For example, if we regard $\mathbb{R}$ as a $\mathbb{Q}$-vector space as in [§Vector Spaces, ⁋Example 4](/en/math/linear_algebra/vector_spaces#ex4){: data-relation="weak" }, then $\sqrt2-1=0.4142\ldots$ is *not* a linear combination of the vectors
 
 $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
@@ -122,7 +122,7 @@ This time, let the set $\mathbb{K}[[\x]]$ be
 
 > the set of *formal power series* in $\x$ with coefficients in $\mathbb{K}$
 
-. If we define addition and scalar multiplication in exactly the same way as in the preceding [Example 5](#ex5), then $\mathbb{K}[[\x]]$ likewise becomes a $\mathbb{K}$-vector space.
+. If we define addition and scalar multiplication in exactly the same way as in the preceding [Example 5](#ex5){: data-relation="required" }, then $\mathbb{K}[[\x]]$ likewise becomes a $\mathbb{K}$-vector space.
 :::
 
 By definition, $\mathbb{K}[\x]$ is a subspace of $\mathbb{K}[[\x]]$. Also, every element of $\mathbb{K}[\x]$ can be expressed as a linear combination of vectors from the set $\{1,\x,\x^2,\ldots\}$, but $\mathbb{K}[[\x]]$ has elements that cannot be expressed in that way.
