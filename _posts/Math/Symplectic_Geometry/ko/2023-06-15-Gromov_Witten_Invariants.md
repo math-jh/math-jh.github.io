@@ -14,7 +14,7 @@ weight: 10
 published: false
 ---
 
-[§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps)에서 우리는 stable map들의 moduli space $\overline{\mathcal{M}}_{g, n}(X, \beta)$와 그 위의 virtual fundamental class $[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$를 구성하였다. 이제 evaluation map과 cotangent line bundle의 first Chern class를 결합하여 *Gromov-Witten invariant*를 정의한다.
+[§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps){: data-relation="required" }에서 우리는 stable map들의 moduli space $\overline{\mathcal{M}}_{g, n}(X, \beta)$와 그 위의 virtual fundamental class $[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$를 구성하였다. 이제 evaluation map과 cotangent line bundle의 first Chern class를 결합하여 *Gromov-Witten invariant*를 정의한다.
 
 본 글에서는 GW invariant와 descendant 버전의 정의, genus-0의 핵심 axiom들 (string, divisor, dilaton, splitting/WDVV), 그리고 quantum cohomology의 구성을 다룬다.
 
@@ -28,7 +28,7 @@ $$\langle \alpha_1, \ldots, \alpha_n \rangle_{g, n, \beta}^X := \int_{[\overline
 으로 정의된다. 여기서 $\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow X$는 $i$번째 marked point에서의 evaluation map이다.
 :::
 
-적분이 $0$이 아니려면 $\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)), 그 외에는 GW invariant가 정의상 $0$이다.
+적분이 $0$이 아니려면 $\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5){: data-relation="required" }), 그 외에는 GW invariant가 정의상 $0$이다.
 
 ## Descendant Gromov-Witten invariant
 
@@ -42,7 +42,7 @@ $$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, n, \bet
 으로 정의된다. 여기서 $\psi_i$는 $i$번째 marked point에서의 cotangent line bundle의 first Chern class이다.
 :::
 
-$a_i = 0$이면 [정의 1](#def1)의 primary GW invariant로 환원된다. 이하에서 $\tau_0(\alpha) = \alpha$로 적고 $\tau_{-1}(\alpha) := 0$으로 약속하여, 아래 등식들의 우변에서 $a_i = 0$인 index에 $\tau_{a_i - 1}$이 나타나면 그 항은 없는 것으로 읽는다. $\psi$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
+$a_i = 0$이면 [정의 1](#def1){: data-relation="required" }의 primary GW invariant로 환원된다. 이하에서 $\tau_0(\alpha) = \alpha$로 적고 $\tau_{-1}(\alpha) := 0$으로 약속하여, 아래 등식들의 우변에서 $a_i = 0$인 index에 $\tau_{a_i - 1}$이 나타나면 그 항은 없는 것으로 읽는다. $\psi$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
 
 ## Genus-0 axiom: string, divisor, dilaton
 
@@ -65,7 +65,7 @@ $$\langle D, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1,
 :::
 
 ::: 증명
-[명제 3](#prop3)과 같은 forgetful map 분석에 더해, $H^2$ class $D$의 경우 evaluation map과의 합성 $\mathrm{ev}_\ast(D \cap [\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}})$이 intersection number $D \cdot \beta$의 배수로 계산된다. 이로써 $H^2$ 방향의 deformation이 Novikov variable $q$로 흡수되는 메커니즘이 설명된다.
+[명제 3](#prop3){: data-relation="required" }과 같은 forgetful map 분석에 더해, $H^2$ class $D$의 경우 evaluation map과의 합성 $\mathrm{ev}_\ast(D \cap [\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}})$이 intersection number $D \cdot \beta$의 배수로 계산된다. 이로써 $H^2$ 방향의 deformation이 Novikov variable $q$로 흡수되는 메커니즘이 설명된다.
 :::
 
 Divisor equation은 $H^2$의 marked point가 본질적으로 intersection number $D \cdot \beta$만큼 invariant를 곱한다는 statement이다. 이로 인해 $H^2$ 방향의 deformation은 *Novikov variable* $q$로 흡수된다.
@@ -129,10 +129,10 @@ $\mathbb{P}^2$에서 5개의 generic point를 지나는 conic ($d = 2$)의 개�
 
 $$\langle H^2, H^2, H^2, H^2, H^2 \rangle_{0, 5, 2}^{\mathbb{P}^2} = 1$$
 
-이다. 일반적인 $d$에 대한 *Kontsevich's recursion formula*는 [명제 6](#prop6)의 WDVV equation으로부터 도출되며, $\mathbb{P}^2$의 rational curve counting을 모두 결정한다.
+이다. 일반적인 $d$에 대한 *Kontsevich's recursion formula*는 [명제 6](#prop6){: data-relation="required" }의 WDVV equation으로부터 도출되며, $\mathbb{P}^2$의 rational curve counting을 모두 결정한다.
 :::
 
-[명제 6](#prop6)의 WDVV equation에 의해 $\mathbb{P}^2$의 *모든* genus-0 rational curve count가 $d = 1$ case ($= 1$)과 4-point invariant들의 splitting으로부터 재귀적으로 결정된다는 것이 Kontsevich (1994)의 유명한 결과이다.
+[명제 6](#prop6){: data-relation="required" }의 WDVV equation에 의해 $\mathbb{P}^2$의 *모든* genus-0 rational curve count가 $d = 1$ case ($= 1$)과 4-point invariant들의 splitting으로부터 재귀적으로 결정된다는 것이 Kontsevich (1994)의 유명한 결과이다.
 
 ## 더 멀리: virtual class와 비-symplectic extension
 
