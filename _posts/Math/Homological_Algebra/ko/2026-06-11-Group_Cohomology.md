@@ -14,11 +14,11 @@ published: false
 
 ---
 
-지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors)), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. Group cohomology는 정확히 이 functor의 derived functor이다.
+지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="required" }), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor){: data-relation="weak" }). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. Group cohomology는 정확히 이 functor의 derived functor이다.
 
 ## G-가군
 
-Group $G$를 고정하자. [\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)에서 살펴본 group ring $\mathbb{Z}G$를 생각하면, $\mathbb{Z}G$는 $G$의 원소들을 basis로 갖는 free abelian group에 $G$의 곱셈을 선형으로 확장한 곱을 준 ring이다.
+Group $G$를 고정하자. [\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5){: data-relation="required" }에서 살펴본 group ring $\mathbb{Z}G$를 생각하면, $\mathbb{Z}G$는 $G$의 원소들을 basis로 갖는 free abelian group에 $G$의 곱셈을 선형으로 확장한 곱을 준 ring이다.
 
 ::: 정의 1
 *$G$-module<sub>$G$-가군</sub>*은 left $\mathbb{Z}G$-module을 뜻한다. $G$-module $M$의 *invariant submodule<sub>불변 부분가군</sub>*은 다음의 집합
@@ -60,14 +60,14 @@ Group $G$와 $G$-module $M$에 대하여, $G$의 $M$에서의 계수를 갖는 *
 
 $$H^n(G;M)=\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$$
 
-으로 정의된다. ([§Ext와 Tor, ⁋정의 1](/ko/math/homological_algebra/ext_and_tor#def1))
+으로 정의된다. ([§Ext와 Tor, ⁋정의 1](/ko/math/homological_algebra/ext_and_tor#def1){: data-relation="required" })
 :::
 
-정의와 [명제 2](#prop2)에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 group cohomology의 long exact sequence를 유도한다.
+정의와 [명제 2](#prop2){: data-relation="required" }에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 group cohomology의 long exact sequence를 유도한다.
 
 ## 표준 분해
 
-[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. Group cohomology가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
+[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="required" }에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. Group cohomology가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
 
 각각의 $n\geq0$에 대하여, $B_n$을 기호들 $[g_1\mid g_2\mid\cdots\mid g_n]$ ($g_i\in G$)을 basis로 갖는 free $\mathbb{Z}G$-module이라 하자. $n=0$일 때는 빈 기호 $[\ ]$ 하나가 basis이므로 $B_0=\mathbb{Z}G$이다. 이제 $\mathbb{Z}G$-linear map $d_n:B_n \rightarrow B_{n-1}$을 basis 위에서 다음의 식
 
@@ -83,7 +83,7 @@ $$\cdots\longrightarrow B_2\overset{d_2}{\longrightarrow}B_1\overset{d_1}{\longr
 을 이룬다. 이를 $G$의 *bar resolution*이라 부른다.
 :::
 ::: 증명
-각각의 $B_n$은 free $\mathbb{Z}G$-module이므로 projective이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4))
+각각의 $B_n$은 free $\mathbb{Z}G$-module이므로 projective이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-relation="required" })
 
 위의 sequence가 chain complex를 이루고 exact라는 것을 한 번에 보이기 위해 contracting homotopy를 만든다. $B_n$은 abelian group으로서는 원소들 $g_0[g_1\mid\cdots\mid g_n]$ ($g_0,\ldots,g_n\in G$)을 basis로 가지므로, $\mathbb{Z}$-linear map $h_n:B_n \rightarrow B_{n+1}$을
 
@@ -126,7 +126,7 @@ $$C^n(G;M)=\Hom_{\lMod{\mathbb{Z}G}}(B_n,M)\cong\left\{\text{함수 $\varphi:G^n
 
 $$(\dd{\varphi})(g_1,\ldots,g_{n+1})=g_1\cdot\varphi(g_2,\ldots,g_{n+1})+\sum_{i=1}^n(-1)^i\varphi(g_1,\ldots,g_ig_{i+1},\ldots,g_{n+1})+(-1)^{n+1}\varphi(g_1,\ldots,g_n)$$
 
-으로 주어진다. [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $H^n(G;M)$은 이 cochain complex의 cohomology이다. 이 함수들을 *$n$-cochain*이라 부르고, $\ker d$와 $\im d$의 원소들을 각각 *$n$-cocycle*, *$n$-coboundary*라 부른다.
+으로 주어진다. [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="required" }에 의하여 $H^n(G;M)$은 이 cochain complex의 cohomology이다. 이 함수들을 *$n$-cochain*이라 부르고, $\ker d$와 $\im d$의 원소들을 각각 *$n$-cocycle*, *$n$-coboundary*라 부른다.
 
 ## 낮은 차수에서의 해석
 
@@ -182,17 +182,17 @@ Order $n$의 cyclic group $G=\langle\sigma\rangle$과 $G$-module $M$에 대하�
 $$H^0(G;M)=M^G,\qquad H^{2k-1}(G;M)\cong\frac{\ker N_M}{(\sigma-1)M},\qquad H^{2k}(G;M)\cong\frac{M^G}{N_M(M)}\qquad(k\geq1)$$
 :::
 ::: 증명
-[명제 7](#prop7)의 resolution에 $\Hom_{\lMod{\mathbb{Z}G}}(-,M)$을 적용하자. $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z}G,M)\cong M$ ($\varphi\mapsto\varphi(1)$)이고, 이 identification 하에서 $\sigma-1$과 $N$을 곱하는 map들은 각각 $m\mapsto(\sigma-1)\cdot m$과 $N_M$이 된다. 즉 cochain complex는
+[명제 7](#prop7){: data-relation="required" }의 resolution에 $\Hom_{\lMod{\mathbb{Z}G}}(-,M)$을 적용하자. $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z}G,M)\cong M$ ($\varphi\mapsto\varphi(1)$)이고, 이 identification 하에서 $\sigma-1$과 $N$을 곱하는 map들은 각각 $m\mapsto(\sigma-1)\cdot m$과 $N_M$이 된다. 즉 cochain complex는
 
 $$0\longrightarrow M\overset{\sigma-1}{\longrightarrow}M\overset{N_M}{\longrightarrow}M\overset{\sigma-1}{\longrightarrow}M\longrightarrow\cdots$$
 
-이고, [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의해 이것의 cohomology가 $H^n(G;M)$이다. $\ker(\sigma-1)=M^G$이므로 주장의 식들을 얻는다.
+이고, [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-relation="required" }에 의해 이것의 cohomology가 $H^n(G;M)$이다. $\ker(\sigma-1)=M^G$이므로 주장의 식들을 얻는다.
 :::
 
 즉 유한 cyclic group의 cohomology는 주기 $2$를 갖는다. 특히 $H^1$은 "norm이 $0$인 원소들"을 "자명한 이유로 norm이 $0$인 원소들"로 나눈 것으로, 이 quotient가 사라지는지를 묻는 것이 고전적인 Hilbert의 정리 90의 내용이다.
 
 ::: 참고 9
-Group cohomology의 낮은 degree들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6)에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions)) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 cohomology를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
+Group cohomology의 낮은 degree들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6){: data-relation="weak" }에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions){: data-relation="weak" }) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 cohomology를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
 :::
 
 ---
