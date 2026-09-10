@@ -119,7 +119,7 @@ holds. Now consider the tower of subgroups of $S_{p_1+\cdots+p_n}$
 
 $$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}.$$
 
-Then by [Proposition 2](#prop2),
+Then by [Proposition 2](#prop2){: data-relation="required" },
 
 $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
 
@@ -143,7 +143,7 @@ and in particular for $n=3$ this shows the associativity of $\Sym(M)$. For commu
 
 $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
-and apply the first result of [Proposition 2](#prop2). The unit is of course $1\in \Sym^0(M)$.
+and apply the first result of [Proposition 2](#prop2){: data-relation="required" }. The unit is of course $1\in \Sym^0(M)$.
 :::
 
 For any $x\in M$ and $k\in \mathbb{N}$, define
@@ -155,7 +155,7 @@ Then using the above proposition, we obtain the following corollary.
 ::: Corollary 5
 The following hold.
 
-1. The product $x^k$ of $x$ defined in [Proposition 4](#prop4) equals $k!\gamma_k(x)$.
+1. The product $x^k$ of $x$ defined in [Proposition 4](#prop4){: data-relation="required" } equals $k!\gamma_k(x)$.
 2. For any $x_1,\ldots, x_n\in M$,
     
     $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
@@ -209,8 +209,8 @@ Suppose $M$ is a free $A$-module and $(e_i)_{i \in I}$ is a basis of $M$.
 2. For any $k$, $\Sym^k(M)$ is an $A$-direct factor of $\T^kM$.
 :::
 ::: Proof
-1. Use the second formula of [Corollary 5](#cor5).
-2. For each $k$, set $H=S_k$, $N=\T^kM$ and apply [Lemma 6](#lem6).
+1. Use the second formula of [Corollary 5](#cor5){: data-relation="required" }.
+2. For each $k$, set $H=S_k$, $N=\T^kM$ and apply [Lemma 6](#lem6){: data-relation="required" }.
 :::
 
 ## Functoriality
@@ -219,7 +219,7 @@ For an $A$-module homomorphism $u: M \rightarrow N$,
 
 $$\T(u)\vert_{\Sym(M)}:\Sym(M) \rightarrow \Sym(N)$$
 
-is well-defined. We write $\T(u)\vert_{\Sym(M)}$ simply as $\Sym(u)$. Then we know that $\Sym$ becomes a functor, and moreover from the corresponding properties in [§Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras) we know that the natural isomorphism
+is well-defined. We write $\T(u)\vert_{\Sym(M)}$ simply as $\Sym(u)$. Then we know that $\Sym$ becomes a functor, and moreover from the corresponding properties in [§Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="required" } we know that the natural isomorphism
 
 $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right)$$
 
@@ -231,7 +231,7 @@ sends $x\otimes y$ to $xy$.
 
 ## Symmetric Algebra and Symmetric Tensors
 
-Consider the canonical injections $i: M \rightarrow \T(M)$ and $j: M \rightarrow \Sym(M)$. Then by [§Tensor Algebra, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2), there exists a unique $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$ such that $j=s\circ i$. This is the identity on $\T^0(M)=\Sym^0(M)$, and considering how multiplication is defined in $\T(M)$ and $\Sym(M)$ respectively, we know that $s:\T(M) \rightarrow \Sym(M)$ is exactly the *symmetrization*
+Consider the canonical injections $i: M \rightarrow \T(M)$ and $j: M \rightarrow \Sym(M)$. Then by [§Tensor Algebra, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2){: data-relation="required" }, there exists a unique $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$ such that $j=s\circ i$. This is the identity on $\T^0(M)=\Sym^0(M)$, and considering how multiplication is defined in $\T(M)$ and $\Sym(M)$ respectively, we know that $s:\T(M) \rightarrow \Sym(M)$ is exactly the *symmetrization*
 
 $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x.$$
 
@@ -247,7 +247,7 @@ The advantage of doing so is that one no longer needs to worry about such coeffi
 In general, any $A$-module has a $\mathbb{Z}$-module structure (so expressions like $k!.x$ are well-defined regardless of $A$), but a natural $\mathbb{Q}$-action does not exist, so we will stick to the original definition.
 :::
 
-For the symmetrization map $s:\T(M) \rightarrow \Sym(M)$ obtained in this way, by [§Tensor Algebra, ⁋Proposition 6](/en/math/multilinear_algebra/tensor_algebras#prop6) we obtain $\bar{s}: \S(M) \rightarrow \Sym(M)$ satisfying
+For the symmetrization map $s:\T(M) \rightarrow \Sym(M)$ obtained in this way, by [§Tensor Algebra, ⁋Proposition 6](/en/math/multilinear_algebra/tensor_algebras#prop6){: data-relation="required" } we obtain $\bar{s}: \S(M) \rightarrow \Sym(M)$ satisfying
 
 $$s=\bar{s}\circ p,$$
 
@@ -268,11 +268,11 @@ The following hold.
 
 The proof of this is a simple computation.
 
-For a reason similar to what we observed in [Remark 8](#rmk8) above, if $A$ is a $\mathbb{Q}$-algebra (as well as a $\mathbb{Z}$-algebra), then $x\mapsto n!.x$ is a bijection, and thus the $\bar{s}: \S(M) \rightarrow \Sym(M)$ defined above becomes an isomorphism.
+For a reason similar to what we observed in [Remark 8](#rmk8){: data-relation="required" } above, if $A$ is a $\mathbb{Q}$-algebra (as well as a $\mathbb{Z}$-algebra), then $x\mapsto n!.x$ is a bijection, and thus the $\bar{s}: \S(M) \rightarrow \Sym(M)$ defined above becomes an isomorphism.
 
 ## Polynomial Mappings
 
-On the other hand, the symmetric algebra $\S(M)$ could be thought of as a representation of symmetric $n$-linear maps, and thinking of $\Sym(M)$ together via [Proposition 9](#prop9) above, we obtain the following proposition.
+On the other hand, the symmetric algebra $\S(M)$ could be thought of as a representation of symmetric $n$-linear maps, and thinking of $\Sym(M)$ together via [Proposition 9](#prop9){: data-relation="required" } above, we obtain the following proposition.
 
 ::: Proposition 10
 Let two $A$-modules $M,N$, a natural number $n$, and $u: M \rightarrow N$ be given. If $M$ is a free $A$-module, then the following are all equivalent.
@@ -300,7 +300,7 @@ is a homogeneous polynomial mapping between $A$-modules, and its degree is $n$.
 It is not difficult to show that the composition of two polynomial mappings is again a homogeneous mapping.
 
 ::: Proposition 12
-Assume all the conditions of [Proposition 10](#prop10), and additionally assume that $y\mapsto n!.y$ is an automorphism of $N$. Then for any $u\in\Poly^n(M,N)$, there exists a *unique* symmetric $n$-linear map $v:M^n \rightarrow N$ satisfying the identity
+Assume all the conditions of [Proposition 10](#prop10){: data-relation="required" }, and additionally assume that $y\mapsto n!.y$ is an automorphism of $N$. Then for any $u\in\Poly^n(M,N)$, there exists a *unique* symmetric $n$-linear map $v:M^n \rightarrow N$ satisfying the identity
 
 $$u(x)=v(x,\ldots, x).$$
 
@@ -311,10 +311,10 @@ $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H
 holds.
 :::
 
-This is a consequence that follows from [Corollary 5](#cor5). Now combining this with the observation in [Remark 8](#rmk8), we obtain the following result.
+This is a consequence that follows from [Corollary 5](#cor5){: data-relation="required" }. Now combining this with the observation in [Remark 8](#rmk8){: data-relation="required" }, we obtain the following result.
 
 ::: Proposition 13
-Assume the situation of [Proposition 10](#prop10), and consider the canonical homomorphism $\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$. Then the following hold.
+Assume the situation of [Proposition 10](#prop10){: data-relation="required" }, and consider the canonical homomorphism $\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$. Then the following hold.
 
 1. If $A$ is an infinite integral domain and $N$ is torsion-free, then this homomorphism is an isomorphism.
 2. If $y\mapsto n!.y$ is an injective endomorphism from $N$ to $N$, then $u$ is an isomorphism.
@@ -401,7 +401,7 @@ The denominator is the Vandermonde determinant $\prod_{i < j} (\x_i - \x_j)$, an
 For example, if $\lambda = (0, \ldots, 0)$ then $s_\lambda = 1$, and if there are $n = 2$ variables and $\lambda = (2,1)$, then dividing the numerator $\det\begin{pmatrix} \x_1^3 & \x_1 \\ \x_2^3 & \x_2 \end{pmatrix} = \x_1 \x_2 (\x_1^2 - \x_2^2)$ by the Vandermonde $\x_1 - \x_2$ gives $s_{(2,1)} = \x_1 \x_2 (\x_1 + \x_2)$.
 
 ::: Remark 17
-Schur polynomials are described in several equivalent ways. First, by the *Jacobi–Trudi identity* using the $h_k$ from [Definition 15](#def15),
+Schur polynomials are described in several equivalent ways. First, by the *Jacobi–Trudi identity* using the $h_k$ from [Definition 15](#def15){: data-relation="required" },
 
 $$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
 

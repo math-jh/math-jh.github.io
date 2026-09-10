@@ -14,7 +14,7 @@ weight: 13
 ---
 
 
-임의의 group $H$와 ring $A$가 주어졌을 때, 우리는 group ring $AH$를 정의하였다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이제 $AH$-module $M$을 고정하고, $M^H$를 다음의 집합
+임의의 group $H$와 ring $A$가 주어졌을 때, 우리는 group ring $AH$를 정의하였다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5){: data-relation="required" }) 이제 $AH$-module $M$을 고정하고, $M^H$를 다음의 집합
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}$$
 
@@ -127,7 +127,7 @@ $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 
 
 $$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
 
-을 생각하면, [명제 2](#prop2)의 결과에 의하여
+을 생각하면, [명제 2](#prop2){: data-relation="required" }의 결과에 의하여
 
 $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
 
@@ -151,7 +151,7 @@ $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_
 
 $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
-로 배열하는 $\sigma\in S_{p_1+p_2}$를 사용하여 [명제 2](#prop2)의 첫째 결과를 사용하면 된다. Unit은 당연하게 $1\in \Sym^0(M)$이다.
+로 배열하는 $\sigma\in S_{p_1+p_2}$를 사용하여 [명제 2](#prop2){: data-relation="required" }의 첫째 결과를 사용하면 된다. Unit은 당연하게 $1\in \Sym^0(M)$이다.
 :::
 
 임의의 $x\in M$과 $k\in \mathbb{N}$에 대하여, 
@@ -163,7 +163,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 ::: 따름정리 5
 다음이 성립한다. 
 
-1. [명제 4](#prop4)에서 정의한 $x$의 곱 $x^k$는 $k!\gamma_k(x)$와 같다. 
+1. [명제 4](#prop4){: data-relation="required" }에서 정의한 $x$의 곱 $x^k$는 $k!\gamma_k(x)$와 같다. 
 2. 임의의 $x_1,\ldots, x_n\in M$에 대하여,
     
     $$\gamma_p(x_1+\cdots+x_n)=\sum_{p_1+\cdots+p_n=p}\gamma_{p_1}(x_1)\cdots\gamma_{p_n}(x_n)$$
@@ -217,8 +217,8 @@ $M$이 free $A$-module이고, $(e_i)_{i \in I}$가 $M$의 basis라고 하자.
 2. 임의의 $k$에 대하여, $\Sym^k(M)$은 $\T^kM$의 $A$-direct factor이다. 
 :::
 ::: 증명
-1. [따름정리 5](#cor5)의 둘째 식을 사용하면 된다.
-2. 각각의 $k$에 대하여, $H=S_k$, $N=\T^kM$으로 두고 [보조정리 6](#lem6)을 적용하면 된다. 
+1. [따름정리 5](#cor5){: data-relation="required" }의 둘째 식을 사용하면 된다.
+2. 각각의 $k$에 대하여, $H=S_k$, $N=\T^kM$으로 두고 [보조정리 6](#lem6){: data-relation="required" }을 적용하면 된다. 
 :::
 
 ## Functoriality
@@ -227,7 +227,7 @@ $A$-module homomorphism $u: M \rightarrow N$에 대하여,
 
 $$\T(u)\vert_{\Sym(M)}:\Sym(M) \rightarrow \Sym(N)$$
 
-이 잘 정의된다. 우리는 $\T(u)\vert_{\Sym(M)}$을 간단히 $\Sym(u)$로 적는다. 그러면 $\Sym$이 functor가 되는 것을 알고, 뿐만 아니라 [§텐서대수](/ko/math/multilinear_algebra/tensor_algebras)의 해당하는 성질들로부터, 각 $M_i$가 free $A$-module일 때 다음의 natural isomorphism 
+이 잘 정의된다. 우리는 $\T(u)\vert_{\Sym(M)}$을 간단히 $\Sym(u)$로 적는다. 그러면 $\Sym$이 functor가 되는 것을 알고, 뿐만 아니라 [§텐서대수](/ko/math/multilinear_algebra/tensor_algebras){: data-relation="required" }의 해당하는 성질들로부터, 각 $M_i$가 free $A$-module일 때 다음의 natural isomorphism 
 
 $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right)$$
 
@@ -239,7 +239,7 @@ $$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\longrighta
 
 ## 대칭대수와 대칭텐서
 
-Canonical injection $i: M \rightarrow \T(M)$과 $j: M \rightarrow \Sym(M)$을 생각하자. 그럼 [§텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)에 의하여, 유일한 $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$이 존재하여 $j=s\circ i$이도록 할 수 있다. 그럼 이는 $\T^0(M)=\Sym^0(M)$에서는 identity이며, $\T(M)$과 $\Sym(M)$ 각각에서 곱셈이 어떻게 정의되었는지를 생각하면 $s:\T(M) \rightarrow \Sym(M)$은 정확히 *symmetrization* 
+Canonical injection $i: M \rightarrow \T(M)$과 $j: M \rightarrow \Sym(M)$을 생각하자. 그럼 [§텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2){: data-relation="required" }에 의하여, 유일한 $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$이 존재하여 $j=s\circ i$이도록 할 수 있다. 그럼 이는 $\T^0(M)=\Sym^0(M)$에서는 identity이며, $\T(M)$과 $\Sym(M)$ 각각에서 곱셈이 어떻게 정의되었는지를 생각하면 $s:\T(M) \rightarrow \Sym(M)$은 정확히 *symmetrization* 
 
 $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
@@ -255,7 +255,7 @@ $$xy=\frac{p!q!}{(p+q)!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 일반적으로 임의의 $A$-module 위에는 $\mathbb{Z}$-module 구조가 있지만 (따라서 $k!.x$ 등의 표현이 $A$에 관계없이 잘 정의되지만) 자연스러운 $\mathbb{Q}$-action은 존재하지 않으므로 우리는 원래의 정의를 그대로 사용하기로 한다. 
 :::
 
-이와 같이 얻어낸 symmetrization map $s:\T(M) \rightarrow \Sym(M)$에 대하여, 우리는 [§텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6)에 의하여 다음의 식
+이와 같이 얻어낸 symmetrization map $s:\T(M) \rightarrow \Sym(M)$에 대하여, 우리는 [§텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6){: data-relation="required" }에 의하여 다음의 식
 
 $$s=\bar{s}\circ p$$
 
@@ -276,11 +276,11 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 이에 대한 증명은 단순한 계산이다. 
 
-위에서의 [참고 8](#rmk8)에서 살펴본 바와 비슷한 이유로, 만일 $A$가 ($\mathbb{Z}$-algebra일 뿐만 아니라) $\mathbb{Q}$-algebra라면 $x\mapsto n!.x$가 bijection이고 따라서 위에서 정의한 $\bar{s}: \S(M) \rightarrow \Sym(M)$이 isomorphism이 되는 것을 확인할 수 있다. 
+위에서의 [참고 8](#rmk8){: data-relation="weak" }에서 살펴본 바와 비슷한 이유로, 만일 $A$가 ($\mathbb{Z}$-algebra일 뿐만 아니라) $\mathbb{Q}$-algebra라면 $x\mapsto n!.x$가 bijection이고 따라서 위에서 정의한 $\bar{s}: \S(M) \rightarrow \Sym(M)$이 isomorphism이 되는 것을 확인할 수 있다. 
 
 ## 다항식 사상
 
-한편 symmetric algebra $\S(M)$은 symmetric $n$-linear map들의 representation으로 생각할 수 있었는데, 위의 [명제 9](#prop9)을 통해 $\Sym(M)$을 함께 생각하면 다음의 명제를 얻는다. 
+한편 symmetric algebra $\S(M)$은 symmetric $n$-linear map들의 representation으로 생각할 수 있었는데, 위의 [명제 9](#prop9){: data-relation="required" }을 통해 $\Sym(M)$을 함께 생각하면 다음의 명제를 얻는다. 
 
 ::: 명제 10
 두 $A$-module $M,N$, 자연수 $n$과 $u: M \rightarrow N$이 주어졌다 하자. 만일 $M$이 free $A$-module이라면 다음이 모두 동치이다. 
@@ -308,7 +308,7 @@ $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 어렵지 않게 두 polynomial mapping의 합성은 다시 homogeneous mapping이라는 것을 보일 수 있다. 
 
 ::: 명제 12
-[명제 10](#prop10)의 조건을 모두 가정하고, 추가로 $y\mapsto n!.y$가 $N$의 automorphism이라 가정하자. 그럼 임의의 $u\in\Poly^n(M,N)$에 대하여, 식
+[명제 10](#prop10){: data-relation="required" }의 조건을 모두 가정하고, 추가로 $y\mapsto n!.y$가 $N$의 automorphism이라 가정하자. 그럼 임의의 $u\in\Poly^n(M,N)$에 대하여, 식
 
 $$u(x)=v(x,\ldots, x)$$
 
@@ -319,10 +319,10 @@ $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{n-\lvert
 이 성립한다. 
 :::
 
-이는 [따름정리 5](#cor5)로부터 따라나오는 결과이다. 이제 이것과 [참고 8](#rmk8)의 관찰을 종합하면 다음의 결과를 얻는다. 
+이는 [따름정리 5](#cor5){: data-relation="required" }로부터 따라나오는 결과이다. 이제 이것과 [참고 8](#rmk8){: data-relation="required" }의 관찰을 종합하면 다음의 결과를 얻는다. 
 
 ::: 명제 13
-[명제 10](#prop10)의 상황을 가정하고, canonical homomorphism $\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$을 생각하자. 그럼 다음이 성립한다.
+[명제 10](#prop10){: data-relation="required" }의 상황을 가정하고, canonical homomorphism $\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$을 생각하자. 그럼 다음이 성립한다.
 
 1. 만일 $A$가 무한집합인 integral domain이고 $N$이 torsion-free라면 이 homomorphism은 isomorphism이다. 
 2. 만일 $y\mapsto n!.y$가 $N$에서 $N$으로의 injective endomorphism이라면 이 homomorphism은 isomorphism이다. 
@@ -410,7 +410,7 @@ $$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)
 예를 들어 $\lambda = (0, \ldots, 0)$이면 $s_\lambda = 1$이고, 변수가 $n = 2$개일 때 $\lambda = (2,1)$이면 분자 $\det\begin{pmatrix} \x_1^3 & \x_1 \\ \x_2^3 & \x_2 \end{pmatrix} = \x_1 \x_2 (\x_1^2 - \x_2^2)$를 Vandermonde $\x_1 - \x_2$로 나누어 $s_{(2,1)} = \x_1 \x_2 (\x_1 + \x_2)$를 얻는다.
 
 ::: 참고 17
-Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 15](#def15)의 $h_k$를 이용한 *Jacobi–Trudi 항등식*
+Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 15](#def15){: data-relation="required" }의 $h_k$를 이용한 *Jacobi–Trudi 항등식*
 
 $$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
 
