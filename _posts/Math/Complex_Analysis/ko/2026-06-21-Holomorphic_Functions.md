@@ -14,7 +14,7 @@ weight: 2
 published: false
 ---
 
-복소평면을 거리공간으로 정비하고 ([§복소수와 복소평면](/ko/math/complex_analysis/complex_numbers)) 나면, 그 위에서 정의된 함수의 미분을 물을 수 있다. 형식상 복소미분의 정의는 실함수의 미분과 똑같이 차분비 $(f(z_0+h)-f(z_0))/h$의 극한이지만, 이번에는 증분 $h$가 복소수여서 평면의 모든 방향에서 같은 극한을 강요한다. 이 한 줄의 조건이 실함수에는 없는 엄청난 경직성을 낳아, 한 번 복소미분가능한 함수가 무한히 미분가능하고 멱급수로 전개되며 그 실수부와 허수부가 조화방정식을 만족하는 등 풍부한 구조가 따라 나온다. 이 글에서는 복소미분가능성과 *holomorphicity*를 정의하고, 그것이 실미분가능성과 어떻게 다른지를 Cauchy–Riemann 방정식으로 정확히 잡아낸다.
+복소평면을 거리공간으로 정비하고 ([§복소수와 복소평면](/ko/math/complex_analysis/complex_numbers){: data-relation="required" }) 나면, 그 위에서 정의된 함수의 미분을 물을 수 있다. 형식상 복소미분의 정의는 실함수의 미분과 똑같이 차분비 $(f(z_0+h)-f(z_0))/h$의 극한이지만, 이번에는 증분 $h$가 복소수여서 평면의 모든 방향에서 같은 극한을 강요한다. 이 한 줄의 조건이 실함수에는 없는 엄청난 경직성을 낳아, 한 번 복소미분가능한 함수가 무한히 미분가능하고 멱급수로 전개되며 그 실수부와 허수부가 조화방정식을 만족하는 등 풍부한 구조가 따라 나온다. 이 글에서는 복소미분가능성과 *holomorphicity*를 정의하고, 그것이 실미분가능성과 어떻게 다른지를 Cauchy–Riemann 방정식으로 정확히 잡아낸다.
 
 함수의 정의역으로는 항상 $\mathbb{C}$의 *영역<sub>domain</sub>*, 곧 공집합이 아닌 열린 연결집합 $\Omega \subseteq \mathbb{C}$를 택한다. 영역에서 함수를 다루는 까닭은, 미분이 본질적으로 한 점 근방의 정보를 요구하므로 정의역이 열려 있어야 하고, 연결성은 뒤에서 보듯 "도함수가 $0$이면 상수" 같은 전역적 결론을 가능하게 하기 때문이다.
 
@@ -84,7 +84,7 @@ $$\frac{\overline{z_0 + h} - \overline{z_0}}{h} = \frac{\bar{h}}{h}$$
 
 ## Cauchy–Riemann 방정식
 
-예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + iv(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
+예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + iv(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-relation="required" }) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
 
 ::: 정리 5 (Cauchy–Riemann 방정식)
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$이며 $z_0 = x_0 + iy_0 \in \Omega$이라 하자. 그러면 $f$가 $z_0$에서 복소미분가능한 것은 $u, v$가 $(x_0, y_0)$에서 ($\mathbb{R}^2$의 함수로서) 실미분가능하고 그곳에서
@@ -131,16 +131,16 @@ $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 인데 $\lvert \rho(h)/h\rvert = \lvert\rho(h)\rvert/\lvert h\rvert \rightarrow 0$이므로 차분비가 $a + ib$로 수렴한다. 그러므로 $f$는 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib = u_x + i v_x$이다.
 :::
 
-정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 $a + ib \neq 0$일 때 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)) 이므로, $f'(z_0) \neq 0$인 점에서 복소미분가능한 함수의 미분은 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
+정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 $a + ib \neq 0$일 때 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6){: data-relation="required" }) 이므로, $f'(z_0) \neq 0$인 점에서 복소미분가능한 함수의 미분은 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
 
-한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4)) 의 직접적 귀결이다.
+한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4){: data-relation="required" }) 의 직접적 귀결이다.
 
 ::: 따름정리 6
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$의 네 편미분 $u_x, u_y, v_x, v_y$이 $\Omega$에서 모두 존재하고 연속이라 하자. 그러면 $f$가 $\Omega$에서 holomorphic인 것은 $\Omega$의 모든 점에서 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$가 성립하는 것과 동치이다.
 :::
 
 ::: 증명
-편미분이 연속이면 $u, v$가 각 점에서 실미분가능하다 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4)). 따라서 실미분가능성은 가정에서 자동으로 충족되고, 정리 5의 동치성에서 복소미분가능성은 각 점에서 Cauchy–Riemann 방정식과 동치로 환원된다. 이것이 $\Omega$의 모든 점에서 성립하는 것이 곧 $f$가 $\Omega$에서 holomorphic이라는 것이다.
+편미분이 연속이면 $u, v$가 각 점에서 실미분가능하다 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4){: data-relation="required" }). 따라서 실미분가능성은 가정에서 자동으로 충족되고, 정리 5의 동치성에서 복소미분가능성은 각 점에서 Cauchy–Riemann 방정식과 동치로 환원된다. 이것이 $\Omega$의 모든 점에서 성립하는 것이 곧 $f$가 $\Omega$에서 holomorphic이라는 것이다.
 :::
 
 따름정리 6은 실제 계산에서 holomorphicity를 확인하는 가장 흔한 도구이다. 가령 다항식이나 $e^x(\cos y + i\sin y)$처럼 성분이 smooth한 함수에 대해서는 편미분의 연속성이 자동이므로, Cauchy–Riemann 두 등식만 점검하면 된다. 이 판정을 더 간결하게 적는 표기가 다음 절의 Wirtinger 미분이다.
@@ -198,7 +198,7 @@ $$f'(z) = \sum_{n=1}^{\infty} n a_n (z - z_0)^{n-1}$$
 :::
 
 ::: 증명
-평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $g(z) = \sum_{n\geq 1} n a_n z^{n-1}$의 수렴반지름을 본다. $\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$인데 이는 $\sqrt[n]{n} \rightarrow 1$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9)에서 본 $\sqrt[n]{n} \rightarrow 1$), [\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)에 의해 $g$의 수렴반지름도 $R$이다. 따라서 $g$는 $B(0, R)$에서 잘 정의된다.
+평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $g(z) = \sum_{n\geq 1} n a_n z^{n-1}$의 수렴반지름을 본다. $\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$인데 이는 $\sqrt[n]{n} \rightarrow 1$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9){: data-relation="required" }에서 본 $\sqrt[n]{n} \rightarrow 1$), [\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1){: data-relation="required" }에 의해 $g$의 수렴반지름도 $R$이다. 따라서 $g$는 $B(0, R)$에서 잘 정의된다.
 
 이제 $\lvert w\rvert < R$을 고정하고 $\lvert w\rvert < \rho < R$인 $\rho$를 잡는다. $\lvert z - w\rvert$가 작아 $\lvert z\rvert < \rho$인 $z \neq w$에 대하여, 차분비에서 $g(w)$를 빼면
 
@@ -233,7 +233,7 @@ $$\frac{d}{\dd{z}}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\
 
 $$e^{iz} = \cos z + i\sin z$$
 
-가 성립하며, 이로써 [§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)에서 표기상의 약속으로 받아들였던 $e^{i\theta} = \cos\theta + i\sin\theta$가 이제 정의된 함수들 사이의 진짜 등식으로 정당화된다. 특히 $z = x + iy$에 대해 덧셈정리 $e^{z+w} = e^z e^w$ (이는 두 멱급수의 Cauchy 곱으로 증명된다) 와 결합하면 $e^z = e^x(\cos y + i\sin y)$이고, 이 형태에 따름정리 6을 적용해도 holomorphicity와 도함수 $e^z$를 다시 확인할 수 있다.
+가 성립하며, 이로써 [§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5){: data-relation="weak" }에서 표기상의 약속으로 받아들였던 $e^{i\theta} = \cos\theta + i\sin\theta$가 이제 정의된 함수들 사이의 진짜 등식으로 정당화된다. 특히 $z = x + iy$에 대해 덧셈정리 $e^{z+w} = e^z e^w$ (이는 두 멱급수의 Cauchy 곱으로 증명된다) 와 결합하면 $e^z = e^x(\cos y + i\sin y)$이고, 이 형태에 따름정리 6을 적용해도 holomorphicity와 도함수 $e^z$를 다시 확인할 수 있다.
 
 ## 조화함수
 
@@ -252,11 +252,11 @@ $f = u + iv$가 영역 $\Omega$에서 holomorphic이면, $u = \Real f$와 $v = \
 :::
 
 ::: 증명
-$f$가 holomorphic이면 [정리 5](#thm5)에 의해 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하며, 절 서두에서 받아들인 대로 $C^2$급이다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
+$f$가 holomorphic이면 [정리 5](#thm5){: data-relation="required" }에 의해 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하며, 절 서두에서 받아들인 대로 $C^2$급이다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
 
 $$u_{xx} = v_{yx}, \qquad u_{yy} = -v_{xy}$$
 
-이다. $v$가 $C^2$급이므로 혼합편미분이 순서에 무관하여 $v_{yx} = v_{xy}$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)), 따라서
+이다. $v$가 $C^2$급이므로 혼합편미분이 순서에 무관하여 $v_{yx} = v_{xy}$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7){: data-relation="required" }), 따라서
 
 $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 
