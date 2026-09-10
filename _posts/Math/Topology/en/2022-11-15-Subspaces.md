@@ -30,7 +30,7 @@ and for any finite family of open sets $(U_i)_{i\in I}$,
 
 $$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U_i)$$
 
-hold, so by [§Initial and Final Topology, ⁋Proposition 2](/en/math/topology/initial_and_final_topology#prop2) we see that the subspace topology $\mathcal{T}_A$ is given by the formula
+hold, so by [§Initial and Final Topology, ⁋Proposition 2](/en/math/topology/initial_and_final_topology#prop2){: data-relation="required" } we see that the subspace topology $\mathcal{T}_A$ is given by the formula
 
 $$\mathcal{T}_A=\{U\cap A\mid U\in\mathcal{T}\}$$
 
@@ -81,7 +81,7 @@ Let $X$ be a topological space and let $A\subseteq B\subseteq X$ be subsets. The
 $$\cl_BA=B\cap\cl_XA$$
 :::
 ::: Proof
-For any $x\in B$, a neighborhood of $x$ in $B$ is always of the form $V\cap B$ for some suitable neighborhood $V$ of $x$ in $X$. Now using $V\cap A=(V\cap B)\cap A$ and [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6), we obtain the desired result.
+For any $x\in B$, a neighborhood of $x$ in $B$ is always of the form $V\cap B$ for some suitable neighborhood $V$ of $x$ in $X$. Now using $V\cap A=(V\cap B)\cap A$ and [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" }, we obtain the desired result.
 :::
 
 Therefore, for $A\subseteq B\subseteq X$, the condition that $A$ be a dense subset of $B$ is equivalent to
@@ -105,17 +105,17 @@ $$X\setminus B\cap A_i=A_i\setminus (B\cap A_i)$$
 
 it suffices to prove the proposition for either open sets or closed sets. Also, if $B$ is open in $X$ then $B\cap A_i$ is open in $A_i$ by definition, so the heart of the proposition is the converse.
 
-1. Assume that $(A_i)$ satisfies the first condition, and suppose that $B\cap A_i$ is open in $A_i$. Regarding $A_i$ as the whole set and $\interior A_i$ as a subspace, we know from this that $B\cap\interior A_i$ is open in $\interior A_i$. Since $\interior A_i$ is an open set, applying [Lemma 2](#lem2) we see that $B\cap\interior A_i$ is open in $X$. Therefore, from
+1. Assume that $(A_i)$ satisfies the first condition, and suppose that $B\cap A_i$ is open in $A_i$. Regarding $A_i$ as the whole set and $\interior A_i$ as a subspace, we know from this that $B\cap\interior A_i$ is open in $\interior A_i$. Since $\interior A_i$ is an open set, applying [Lemma 2](#lem2){: data-relation="required" } we see that $B\cap\interior A_i$ is open in $X$. Therefore, from
 
     $$B=B\cap X=B\cap\left(\bigcup_{i\in I} \interior A_i\right)=\bigcup_{i\in I}(B\cap\interior A_i)$$
 
     we see that $B$ is open.
-2. Now suppose that $(A_i)$ satisfies the second condition. This time we assume that all the $B\cap A_i$ are closed in $A_i$. Then by [Lemma 3](#lem3), each $B\cap A_i$ is a closed set in $X$. Now $(B\cap A_i)$ is a collection of locally finite closed sets, and since $B=\bigcup (B\cap A_i)$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4) we conclude that $B$ is closed.
+2. Now suppose that $(A_i)$ satisfies the second condition. This time we assume that all the $B\cap A_i$ are closed in $A_i$. Then by [Lemma 3](#lem3){: data-relation="required" }, each $B\cap A_i$ is a closed set in $X$. Now $(B\cap A_i)$ is a collection of locally finite closed sets, and since $B=\bigcup (B\cap A_i)$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-relation="required" } we conclude that $B$ is closed.
 :::
 
 ## Subspaces and Continuous Functions
 
-Let topological spaces $X,Y$ and a function $f:X\rightarrow Y$ be given. Then for any set $B$ with $f(X)\subseteq B\subseteq Y$, the function obtained by restricting the codomain of $f$ to $B$ is continuous. This is trivial by [Definition 1](#def1) and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3).
+Let topological spaces $X,Y$ and a function $f:X\rightarrow Y$ be given. Then for any set $B$ with $f(X)\subseteq B\subseteq Y$, the function obtained by restricting the codomain of $f$ to $B$ is continuous. This is trivial by [Definition 1](#def1){: data-relation="required" } and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3){: data-relation="required" }.
 
 Now suppose, in the same setting, that a subset $A$ of $X$ is given. Then the restriction of $f:X\rightarrow Y$ to $A$, denoted $f\vert_A$, equals $f\circ\iota$ for the inclusion $\iota:A\hookrightarrow X$. Since this is a composition of two continuous functions, we immediately see that $f\vert_A$ is also continuous. However, the converse does not hold in general.
 
@@ -123,13 +123,13 @@ Now suppose, in the same setting, that a subset $A$ of $X$ is given. Then the re
 Let $f:X\rightarrow Y$ be a function between two topological spaces that is not continuous. For any $x\in X$, if we set $A=\{x\}$, then $f\vert_A$ is continuous. This is because for any open set $U$ of $Y$, the preimage $f^{-1}(U)$ is always either empty or $\{x\}$.
 :::
 
-Instead, if the set $A$ is a neighborhood of $x$, then the continuity of $f\vert_A$ at the point $x\in X$ implies that $f$ is continuous at $x$. This is because by [Lemma 4](#lem4), a neighborhood of $x$ in $A$ can always be viewed as a neighborhood in $X$. To use this argument to show that $f$ is continuous at every point, one would have to prove that for each $x\in X$ there is a neighborhood $N(x)$ such that $f\vert_{N(x)}$ is continuous; however, by the following proposition we can prove that $f$ is continuous using even weaker information.
+Instead, if the set $A$ is a neighborhood of $x$, then the continuity of $f\vert_A$ at the point $x\in X$ implies that $f$ is continuous at $x$. This is because by [Lemma 4](#lem4){: data-relation="required" }, a neighborhood of $x$ in $A$ can always be viewed as a neighborhood in $X$. To use this argument to show that $f$ is continuous at every point, one would have to prove that for each $x\in X$ there is a neighborhood $N(x)$ such that $f\vert_{N(x)}$ is continuous; however, by the following proposition we can prove that $f$ is continuous using even weaker information.
 
 ::: Proposition 8
-Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subsets satisfying one of the conditions of [Proposition 6](#prop6). Then an arbitrary function $f:X\rightarrow Y$ into a topological space $Y$ is continuous if and only if all the restrictions $f\vert_{A_i}$ are continuous.
+Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subsets satisfying one of the conditions of [Proposition 6](#prop6){: data-relation="required" }. Then an arbitrary function $f:X\rightarrow Y$ into a topological space $Y$ is continuous if and only if all the restrictions $f\vert_{A_i}$ are continuous.
 :::
 ::: Proof
-It suffices to assume that all the $f\vert_{A_i}$ are continuous and show that $f$ is continuous. Let $B$ be an arbitrary closed set of $Y$ and set $A=f^{-1}(B)$. Since all the $f\vert_{A_i}$ are continuous, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$ are all closed sets. Applying [Proposition 6](#prop6), we see that $A$ is closed, and therefore $f$ is continuous.
+It suffices to assume that all the $f\vert_{A_i}$ are continuous and show that $f$ is continuous. Let $B$ be an arbitrary closed set of $Y$ and set $A=f^{-1}(B)$. Since all the $f\vert_{A_i}$ are continuous, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$ are all closed sets. Applying [Proposition 6](#prop6){: data-relation="required" }, we see that $A$ is closed, and therefore $f$ is continuous.
 :::
 
 ---
