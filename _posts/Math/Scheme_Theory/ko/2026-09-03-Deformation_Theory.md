@@ -509,13 +509,17 @@ $$\varphi_{ij}:U_i'\vert_{U_{ij}}\xrightarrow{\sim}U_j'\vert_{U_{ij}}$$
 
 인 $S'$-isomorphism을 골라야 하고, triple overlap $U_{ijk}$에서 $\varphi_{jk}\circ\varphi_{ij}=\varphi_{ik}$가 성립해야 한다. 그럼 이 조건 하에서 $U_i'$들은 하나의 scheme $X$로 붙고, 각 structure morphism도 $X\rightarrow S'$으로 붙으며, flatness는 source와 base에 대하여 local한 조건이므로 이렇게 얻은 morphism은 flat하다. 즉 이 과정을 통해 deformation을 얻을 수 있다. 반대로 모든 deformation은 이와 같은 데이터를 주는 것이 자명하다.
 
-이 과정에서 필요한 세 가지 자료, 곧 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건은 cotangent complex에 동시에 담긴다. 이를 위해 먼저 affine에서 정의한 complex를 scheme 위로 옮겨야 한다. $U=\Spec B\subseteq X_0$와 $V=\Spec A\subseteq S$가 affine open이고 $f(U)\subseteq V$이면, $\LL_{B/A}$의 각 항과 differential을 sheafify하여 quasi-coherent $\mathcal{O}_U$-module들과 그 사이의 morphism으로 이루어진 complex를 얻는다. Affine 조각마다 택한 presentation과 resolution은 다를 수 있으므로 이 complex들이 overlap에서 항별로 같을 필요는 없으며, 대신 canonical quasi-isomorphism
+이 세 가지 자료, 즉 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건은 cotangent complex에 동시에 담을 수 있다. 이를 위해 먼저 affine에서 정의한 complex를 scheme 위로 옮겨야 한다. 우선 affine case에서, $U=\Spec B\subseteq X_0$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$을 만족한다면, $\LL_{B/A}$의 각 항과 differential을 sheafify하여 quasi-coherent $\mathcal{O}_U$-module들과 그 사이의 morphism으로 이루어진 complex를 얻을 수 있다는 것을 안다.
+
+문제는 이들 각각의 affine 조각마다 정의되는 naive cotangent complex의 모델은 $C$의 presentation에 의존하며, 이를 일반적인 cotangent complex로 확장하는 과정에서는 resolution의 선택까지 끼어든다는 데에 있다. 이러한 이유로 이들 complex는 각 overlap 위에서 항별로 같지는 않으며, 오직 canonical quasi-isomorphism
 
 $$\widetilde{\LL_{B/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
-이 존재한다. 이 quasi-isomorphism은 $U$와 $V$를 더 작은 affine open으로 줄이는 것과 compatible하므로, local complex들은 quasi-isomorphic complex를 같은 대상으로 보는 의미에서 하나의 cotangent complex $\LL_{X_0/S}$를 정한다.
+을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며, 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다.
 
-따라서 affine에서 계산한 $T^0,T^1,T^2$는 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf로 붙는다. 앞의 affine correspondence에 의하여 각 $U_i$ 위의 local deformation과 그 obstruction은 각각 degree $1$과 $2$에서 읽힌다. 두 local deformation을 $U_{ij}$ 위에서 식별할 수 있는지는 그 restriction들의 차이가 degree $1$에서 $0$인지로 결정되고, 가능한 isomorphism들의 차이는 degree $0$이 잰다. 고른 isomorphism들에 대하여 $\varphi_{ik}^{-1}\circ\varphi_{jk}\circ\varphi_{ij}$는 $U_{ijk}$ 위의 infinitesimal automorphism이므로 degree $0$의 Čech $2$-cocycle를 이루며, 이것이 $0$일 때 정확히 cocycle 조건이 성립한다. Covering의 Čech degree와 local deformation complex의 degree를 함께 모으면
+이제 앞선 [정의 1](#def1)의 $T^0, T^1$, 그리고 더 일반적으로 $T^i$를 정의하기 위해서는 해당 정의에서와 마찬가지로 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf를 보면 된다. 먼저 affine 조각 $U_i$ 위에서 local deformation을 만드는 첫째 단계에서, degree $2$는 그러한 deformation의 existence obstruction을 기록하고 이 obstruction이 사라졌을 때 남는 deformation들의 차이는 degree $1$이 잰다.
+
+다음으로 overlap $U_{ij}$ 위에서 local deformation들을 identify하는 둘째 단계에서, 두 restriction이 isomorphic하지 못하는 실패는 두 deformation의 차이이므로 degree $1$에서 읽힌다. 이 차이가 $0$이면 isomorphism을 고를 수 있고, 이렇게 고른 isomorphism들의 차이는 degree $0$의 infinitesimal automorphism이 잰다. 마지막으로 triple overlap $U_{ijk}$ 위의 cocycle 조건은 이 degree $0$의 자료에 담긴다. 실제로 고른 isomorphism들의 composite $\varphi_{ik}^{-1}\circ\varphi_{jk}\circ\varphi_{ij}$는 $U_{ijk}$ 위의 infinitesimal automorphism이며, 이것이 항등일 때 정확히 cocycle 조건이 성립한다. 이처럼 local deformation의 existence와 선택, overlap에서의 identification, triple overlap에서의 cocycle 조건은 서로 다른 degree의 local deformation data를 서로 다른 개수의 overlap 위에서 조립하는 문제다. Covering의 Čech degree와 local deformation complex의 degree를 함께 모으면
 
 $$R\Gamma\bigl(X_0,R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)\simeq R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
 
