@@ -18,7 +18,7 @@ weight: 5
 
 ## 벡터공간의 차원
 
-[§벡터공간의 기저, ⁋예시 9](/ko/math/linear_algebra/basis#ex9)와 [§벡터공간의 기저, ⁋예시 11](/ko/math/linear_algebra/basis#ex11)로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
+[§벡터공간의 기저, ⁋예시 9](/ko/math/linear_algebra/basis#ex9){: data-relation="weak" }와 [§벡터공간의 기저, ⁋예시 11](/ko/math/linear_algebra/basis#ex11){: data-relation="weak" }로부터 벡터공간 $V$의 basis는 유일할 필요가 없다는 것을 알 수 있다. 그런데, 이 예시들을 보면 공통적으로 basis의 원소의 갯수들은 동일하게 유지된다는 것도 확인할 수 있다. 이는 우연이 아니다.
 
 ::: 정리 1
 $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\mathcal{B}_2$가 주어졌다면 $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$이 성립한다.
@@ -30,7 +30,7 @@ $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 두 basis $\mathcal{B}_1$, $\
 2. 그러므로 $V$의 어떤 basis가 유한하다면, 다른 basis들도 모두 유한해야 한다.
 3. 마지막으로, 만일 $V$의 두 유한한 basis가 주어진다면, 이들 두 basis의 원소의 갯수는 동일하다.
 
-물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/linear_algebra/basis#thm10)과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
+물론 이 정리도 지금 증명하자면 못할 것은 없지만, [§벡터공간의 기저, ⁋정리 10](/ko/math/linear_algebra/basis#thm10){: data-relation="weak" }과 마찬가지로 이를 증명하기 위해는 약간의 집합론적인 지식이 필요하므로 별도의 글로 분리한다. 다만 마지막 단계는 별다른 배경지식 없이도 증명할 수 있다.
 
 ::: 보조정리 2
 $\mathbb{K}$-벡터공간 $V$에 대하여, 만일 $\mathcal{B}_1$과 $\mathcal{B}_2$이 모두 $V$의 basis이고 유한하다면, $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$가 성립한다.
@@ -38,7 +38,7 @@ $\mathbb{K}$-벡터공간 $V$에 대하여, 만일 $\mathcal{B}_1$과 $\mathcal{
 ::: 증명
 $\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$, 그리고 $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$이라 하고, $m=n$임을 보여야 한다. 결론에 반하여 $m>n$이라 하자.
 
-우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6)에 의하여, 집합 $\{x_1,y_1,y_2,\ldots, y_n\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
+우선 $x_1\in V$이므로, $x_1$은 $y_1$, $y_2$, $\ldots$, $y_n$들의 일차결합으로 나타낼 수 있다. 따라서 [§벡터공간의 기저, ⁋명제 6](/ko/math/linear_algebra/basis#prop6){: data-relation="required" }에 의하여, 집합 $\{x_1,y_1,y_2,\ldots, y_n\}$은 일차종속이다. 즉, 모두 0은 아닌 스칼라들 $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$이 존재하여
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -92,7 +92,7 @@ $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
 > 어떤 $\mathbb{K}$-벡터공간 $V$가 유한한 basis $\mathcal{B}$를 갖는다 하자. 그럼 $\mathcal{B}$보다 원소의 개수가 많은 $V$의 부분집합은 반드시 일차종속이다.
 
-를 증명한 것이다. 어쨌든 [정리 1](#thm1)에 의해 $V$의 basis는 모두 같은 크기를 가지므로 다음 정의가 말이 된다.
+를 증명한 것이다. 어쨌든 [정리 1](#thm1){: data-relation="required" }에 의해 $V$의 basis는 모두 같은 크기를 가지므로 다음 정의가 말이 된다.
 
 ::: 정의 3
 $\mathbb{K}$-벡터공간 $V$에 대하여, $V$의 basis의 cardinality를 $V$의 *차원*이라 하고, $\dim V$, 혹은 $\mathbb{K}$를 강조할 필요가 있을 때는 $\dim_\mathbb{K}V$로 적는다. 만일 $\dim V$가 유한이라면, $V$는 *유한차원* 벡터공간이고, 그렇지 않다면 $V$는 *무한차원* 벡터공간이다.
@@ -124,10 +124,10 @@ $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$
 
 이제 만일 $\langle S_1\rangle=V$라면 다시 증명 끝이고, 그렇지 않다면 똑같은 방식으로 $S_2=S_1\cup\{v'\}$을 정의하여 반복할 수 있다. 물론 $S_2$가 일차독립이라는 것을 보여야 하지만, $v'$를 $V\setminus\langle S_1\rangle$에서 뽑아왔기 때문에 이는 위에서 보인 것과 정확하게 같은 논리로 가능하다. 
 
-이 과정은 앞선 [보조정리 2](#lem2)에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
+이 과정은 앞선 [보조정리 2](#lem2){: data-relation="required" }에 의해 많아야 $\dim V$번째 과정 안에 끝나며, 이 과정이 끝날 때 우리는 원하는 basis $S_n$을 얻게 된다.
 :::
 
-$V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의 명제는 일차독립인 집합에 적절하게 벡터를 추가하여 $V$를 span하도록 할 수 있다는 것을 말한다. 반대로 $V$를 span하는 집합이 있다면, 이들 중 겹치는 일부를 적절하게 빼서 일차독립 조건도 만족하도록 할 수 있다. 이 명제의 증명의 기본 아이디어는 [명제 5](#prop5)과 동일하지만, $S$는 무한집합일 수 있으므로 $S$에서 원소를 하나하나 빼가는 것으로는 증명이 성립하지 않는다.
+$V$의 basis는 일차독립인 동시에 $V$를 span하는 집합이다. 위의 명제는 일차독립인 집합에 적절하게 벡터를 추가하여 $V$를 span하도록 할 수 있다는 것을 말한다. 반대로 $V$를 span하는 집합이 있다면, 이들 중 겹치는 일부를 적절하게 빼서 일차독립 조건도 만족하도록 할 수 있다. 이 명제의 증명의 기본 아이디어는 [명제 5](#prop5){: data-relation="weak" }과 동일하지만, $S$는 무한집합일 수 있으므로 $S$에서 원소를 하나하나 빼가는 것으로는 증명이 성립하지 않는다.
 
 ::: 명제 6
 $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하여, $S$의 어떤 부분집합은 $V$의 basis가 된다.
@@ -137,11 +137,11 @@ $S_0=\emptyset$이라 하자. 그럼 $\langle S_0\rangle=\{0\}$이다. 이제 $S
 
 이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S_i\rangle$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S_i\rangle$가 공집합이 아니라는 것을 보이면 충분하다. 
 
-자연수 $m$을 $S\setminus\langle S_m\rangle=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4)로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
+자연수 $m$을 $S\setminus\langle S_m\rangle=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4){: data-relation="required" }로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 
 $$\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)$$
 
-이고, 우변의 $\langle S_m\rangle$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋정의 2](/ko/math/linear_algebra/basis#def2)으로부터 $\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$임을 안다. 따라서
+이고, 우변의 $\langle S_m\rangle$은 이미 $V$의 부분공간이므로 [§벡터공간의 기저, ⁋정의 2](/ko/math/linear_algebra/basis#def2){: data-relation="required" }으로부터 $\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$임을 안다. 따라서
 
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$$
 

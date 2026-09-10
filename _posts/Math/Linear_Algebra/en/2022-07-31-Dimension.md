@@ -18,7 +18,7 @@ last_polished_at: 2026-06-26T19:30:02+00:00
 ---
 ## Dimension of a Vector Space
 
-From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9) and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11), we see that a basis of a vector space $V$ need not be unique. However, in these examples the number of elements in each basis remains the same. This is not a coincidence.
+From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9){: data-relation="weak" } and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11){: data-relation="weak" }, we see that a basis of a vector space $V$ need not be unique. However, in these examples the number of elements in each basis remains the same. This is not a coincidence.
 
 ::: Theorem 1
 For a $\mathbb{K}$-vector space $V$, if two bases $\mathcal{B}_1$ and $\mathcal{B}_2$ of $V$ are given, then $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$ holds.
@@ -30,7 +30,7 @@ This theorem includes the case where $\mathcal{B}_1$ and $\mathcal{B}_2$ are inf
 2. Therefore, if any basis of $V$ is finite, then all other bases must also be finite.
 3. Finally, if two finite bases of $V$ are given, the number of elements in these two bases is the same.
 
-Of course, there is no reason we could not prove this theorem now, but just as with [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10), doing so requires a bit of set-theoretic background, so we defer it to a separate post. The last step, however, can be proved without any additional prerequisites.
+Of course, there is no reason we could not prove this theorem now, but just as with [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10){: data-relation="weak" }, doing so requires a bit of set-theoretic background, so we defer it to a separate post. The last step, however, can be proved without any additional prerequisites.
 
 ::: Lemma 2
 For a $\mathbb{K}$-vector space $V$, if $\mathcal{B}_1$ and $\mathcal{B}_2$ are both finite bases of $V$, then $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$ holds.
@@ -38,7 +38,7 @@ For a $\mathbb{K}$-vector space $V$, if $\mathcal{B}_1$ and $\mathcal{B}_2$ are 
 ::: Proof
 Let $\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$ and $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$; we must show that $m=n$. Suppose, for contradiction, that $m>n$.
 
-Since $x_1\in V$, we can express $x_1$ as a linear combination of $y_1$, $y_2$, $\ldots$, $y_n$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6), the set $\{x_1,y_1,y_2,\ldots, y_n\}$ is linearly dependent. That is, there exist scalars $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$, not all zero, such that
+Since $x_1\in V$, we can express $x_1$ as a linear combination of $y_1$, $y_2$, $\ldots$, $y_n$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6){: data-relation="required" }, the set $\{x_1,y_1,y_2,\ldots, y_n\}$ is linearly dependent. That is, there exist scalars $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$, not all zero, such that
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
@@ -94,7 +94,7 @@ In fact, the proof above actually established a slightly stronger statement than
 
 > Let a $\mathbb{K}$-vector space $V$ have a finite basis $\mathcal{B}$. Then any subset of $V$ with more elements than $\mathcal{B}$ is necessarily linearly dependent.
 
-Since by [Theorem 1](#thm1) all bases of $V$ have the same cardinality, the following definition is well-posed.
+Since by [Theorem 1](#thm1){: data-relation="required" } all bases of $V$ have the same cardinality, the following definition is well-posed.
 
 ::: Definition 3
 For a $\mathbb{K}$-vector space $V$, the cardinality of a basis of $V$ is called the *dimension* of $V$, denoted by $\dim V$, or by $\dim_\mathbb{K}V$ when we need to emphasize $\mathbb{K}$. If $\dim V$ is finite, $V$ is a *finite-dimensional* vector space; otherwise, $V$ is an *infinite-dimensional* vector space.
@@ -126,10 +126,10 @@ if $\alpha_v\neq 0$, we can move $\alpha_vv$ to the other side and multiply by $
 
 Now if $\langle S\rangle_1=V$, the proof is complete; otherwise we can repeat the same process by defining $S_2=S_1\cup\{v'\}$. Of course, we must show that $S_2$ is linearly independent, but since we picked $v'$ from $V\setminus\langle S\rangle_1$, this follows by exactly the same logic as above.
 
-By the preceding [Lemma 2](#lem2), this process terminates in at most $\dim V$ steps, and when it ends we obtain the desired basis $S_n$.
+By the preceding [Lemma 2](#lem2){: data-relation="required" }, this process terminates in at most $\dim V$ steps, and when it ends we obtain the desired basis $S_n$.
 :::
 
-A basis of $V$ is a set that is both linearly independent and spans $V$. The above proposition says that we can add vectors to a linearly independent set appropriately to make it span $V$. Conversely, if there is a set spanning $V$, we can remove some redundant elements from it to also satisfy the linear independence condition. The basic idea of the proof of this proposition is the same as that of [Proposition 5](#prop5), but since $S$ may be infinite, the proof does not work by removing elements from $S$ one by one.
+A basis of $V$ is a set that is both linearly independent and spans $V$. The above proposition says that we can add vectors to a linearly independent set appropriately to make it span $V$. Conversely, if there is a set spanning $V$, we can remove some redundant elements from it to also satisfy the linear independence condition. The basic idea of the proof of this proposition is the same as that of [Proposition 5](#prop5){: data-relation="weak" }, but since $S$ may be infinite, the proof does not work by removing elements from $S$ one by one.
 
 ::: Proposition 6
 For a $\mathbb{K}$-vector space $V$ and a subset $S$ spanning $V$, some subset of $S$ is a basis of $V$.
@@ -139,11 +139,11 @@ Let $S_0=\emptyset$. Then $\langle S\rangle_0=\{0\}$. Pick an element $x_1$ from
 
 The sets $S_i$ obtained in this way are linearly independent subsets by definition, and as long as $\langle S\rangle_i$ is not equal to $S$, the number of elements in $S_{i+1}$ is always one greater than that in $S_i$. Therefore, it suffices to show that $S\setminus\langle S\rangle_i$ is nonempty for all $i < n = \dim V$.
 
-Choose a natural number $m$ such that $S\setminus\langle S\rangle_m=\emptyset$. That is, $S\subseteq\langle S\rangle_m$. From [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4), we know that taking $\span$ preserves inclusion relations between sets, so
+Choose a natural number $m$ such that $S\setminus\langle S\rangle_m=\emptyset$. That is, $S\subseteq\langle S\rangle_m$. From [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4){: data-relation="required" }, we know that taking $\span$ preserves inclusion relations between sets, so
 
 $$\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)$$
 
-and since $\langle S\rangle_m$ on the right-hand side is already a subspace of $V$, by [§Basis of a Vector Space, ⁋Definition 2](/en/math/linear_algebra/basis#def2) we have $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$. Therefore, from
+and since $\langle S\rangle_m$ on the right-hand side is already a subspace of $V$, by [§Basis of a Vector Space, ⁋Definition 2](/en/math/linear_algebra/basis#def2){: data-relation="required" } we have $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$. Therefore, from
 
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
 
