@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-[§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten)에서 우리는 compact symplectic manifold $X$와 effective class $\beta \in H_2(X, \mathbb{Z})$에 대해 genus-$0$, $n$-point GW invariant $\langle \alpha_1, \ldots, \alpha_n \rangle_{0, n, \beta}^X$를 정의하였다. 그 결과로 얻어진 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)의 WDVV equation은 본질적으로 *어떤 곱셈의 결합법칙*을 진술하는 것이라 하였다. 본 글에서는 그 곱셈을 명시적으로 구성한다. 
+[§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten){: data-relation="required" }에서 우리는 compact symplectic manifold $X$와 effective class $\beta \in H_2(X, \mathbb{Z})$에 대해 genus-$0$, $n$-point GW invariant $\langle \alpha_1, \ldots, \alpha_n \rangle_{0, n, \beta}^X$를 정의하였다. 그 결과로 얻어진 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6){: data-relation="required" }의 WDVV equation은 본질적으로 *어떤 곱셈의 결합법칙*을 진술하는 것이라 하였다. 본 글에서는 그 곱셈을 명시적으로 구성한다. 
 
 3-point GW invariant $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$를 structure constant로 삼아 $H^\ast(X)$ 위에 새 곱셈을 정의하면, $\beta = 0$ 항은 고전적 cup product와 일치하고 $\beta \neq 0$ 항은 $X$ 위의 rational curve의 기여를 더한다. 이렇게 얻어진 곱셈을 *quantum product*라 부르며, 그에 의한 $H^\ast(X)$의 새로운 ring 구조가 *quantum cohomology*이다. 본 글의 목표는 quantum product의 명시적 정의, 그것이 잘 정의된 graded commutative associative ring을 이룬다는 사실의 정리, 그리고 $\mathbb{P}^n$에서의 구체적 ring 구조 계산이다.
 
@@ -48,7 +48,7 @@ $$\deg q^\beta := 2 \int_\beta c_1(TX) = 2 c_1(TX) \cdot \beta$$
 로 정의되며, 이로써 $\Lambda$는 graded $\mathbb{C}$-algebra가 된다.
 :::
 
-이 grading은 임의로 도입한 것이 아니라 [§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)의 virtual dimension 공식
+이 grading은 임의로 도입한 것이 아니라 [§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5){: data-relation="required" }의 virtual dimension 공식
 
 $$\mathrm{vdim}_\mathbb{C} \overline{\mathcal{M}}_{0, n}(X, \beta) = \int_\beta c_1(TX) + (\dim_\mathbb{C} X - 3) + n$$
 
@@ -85,10 +85,10 @@ Small quantum product $\ast_q$는 grading을 보존한다. 즉
 
 $$\deg(T_a \ast_q T_b) = \deg T_a + \deg T_b$$
 
-가 $H^\ast(X) \otimes \Lambda$의 grading ([정의 2](#def2)의 $\Lambda$ grading과 cohomology grading의 합) 아래에서 성립한다.
+가 $H^\ast(X) \otimes \Lambda$의 grading ([정의 2](#def2){: data-relation="required" }의 $\Lambda$ grading과 cohomology grading의 합) 아래에서 성립한다.
 :::
 ::: 증명
-[정의 4](#def4)에서 $T_d q^\beta$ 항의 계수가 nonzero이려면 GW invariant $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$가 nonzero여야 한다. [§Gromov-Witten 불변량, ⁋정의 1](/ko/math/symplectic_geometry/gromov_witten#def1)의 dimension 조건은
+[정의 4](#def4){: data-relation="required" }에서 $T_d q^\beta$ 항의 계수가 nonzero이려면 GW invariant $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$가 nonzero여야 한다. [§Gromov-Witten 불변량, ⁋정의 1](/ko/math/symplectic_geometry/gromov_witten#def1){: data-relation="required" }의 dimension 조건은
 
 $$\deg T_a + \deg T_b + \deg T_c = 2 \mathrm{vdim}_\mathbb{C} \overline{\mathcal{M}}_{0, 3}(X, \beta) = 2 \int_\beta c_1(TX) + 2(\dim_\mathbb{C} X - 3) + 6$$
 
@@ -121,7 +121,7 @@ $X$를 closed symplectic manifold라 하자. Small quantum product $\ast_q$는 �
 따라서 $(H^\ast(X, \mathbb{C}) \otimes \Lambda, \ast_q)$는 graded commutative associative unital $\Lambda$-algebra이다.
 :::
 ::: 증명
-(1) $1 \in H^0(X)$를 evaluate하는 marked point는 기하학적 제약을 주지 않으며, $\psi$ class가 없는 primary invariant에서는 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3)의 string equation의 우변이 사라진다. 구체적으로 $\beta = 0$인 case는
+(1) $1 \in H^0(X)$를 evaluate하는 marked point는 기하학적 제약을 주지 않으며, $\psi$ class가 없는 primary invariant에서는 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3){: data-relation="required" }의 string equation의 우변이 사라진다. 구체적으로 $\beta = 0$인 case는
 
 $$\langle 1, T_a, T_b \rangle_{0, 3, 0}^X = \int_X 1 \cup T_a \cup T_b = \eta_{ab}$$
 
@@ -135,17 +135,17 @@ $$\langle T_a, T_b, T_c \rangle = (-1)^{\deg T_a \deg T_b} \langle T_b, T_a, T_c
 
 이로부터 super-commutativity가 즉시 따른다.
 
-(3) Associativity는 정확히 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)의 WDVV equation의 직접적 귀결이다. WDVV equation을 $T_a, T_b, T_c, T_d$의 4-point invariant들의 두 splitting 표현이 같다는 진술로 쓰면
+(3) Associativity는 정확히 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6){: data-relation="required" }의 WDVV equation의 직접적 귀결이다. WDVV equation을 $T_a, T_b, T_c, T_d$의 4-point invariant들의 두 splitting 표현이 같다는 진술로 쓰면
 
 $$\sum_{e, f, \beta_1, \beta_2} \langle T_a, T_b, T_e \rangle_{0, 3, \beta_1} \eta^{ef} \langle T_f, T_c, T_d \rangle_{0, 3, \beta_2} q^{\beta_1 + \beta_2}$$
 
 가 $(a, b) \vert (c, d)$ splitting과 $(a, d) \vert (b, c)$ splitting에 대해 일치한다. 좌변을 다시 쓰면 정확히 $\int_X ((T_a \ast_q T_b) \ast_q T_c) \cup T_d$와 $\int_X (T_a \ast_q (T_b \ast_q T_c)) \cup T_d$의 비교가 되며, 따라서 모든 $T_d$에 대해 두 값이 같음으로부터 $(T_a \ast_q T_b) \ast_q T_c = T_a \ast_q (T_b \ast_q T_c)$이 따른다. 자세한 부호 계산은 [MS Chapter 11]을 보라.
 :::
 
-(1)은 $1 \in H^0(X)$이 ring identity로 작동함을 보장하고, (3)은 GW invariant의 깊은 정합성인 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)의 가장 비자명한 결과이다. (3)의 증명에서 사용되는 splitting axiom은 $\overline{\mathcal{M}}_{0, 4}(X, \beta)$의 nodal degeneration boundary 위에서의 virtual class의 분해에 의존한다.
+(1)은 $1 \in H^0(X)$이 ring identity로 작동함을 보장하고, (3)은 GW invariant의 깊은 정합성인 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6){: data-relation="required" }의 가장 비자명한 결과이다. (3)의 증명에서 사용되는 splitting axiom은 $\overline{\mathcal{M}}_{0, 4}(X, \beta)$의 nodal degeneration boundary 위에서의 virtual class의 분해에 의존한다.
 
 ::: 정의 7
-[정리 6](#thm6)의 graded commutative associative unital $\Lambda$-algebra
+[정리 6](#thm6){: data-relation="required" }의 graded commutative associative unital $\Lambda$-algebra
 
 $$QH^\ast(X) := \left( H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda,\ \ast_q \right)$$
 
@@ -165,7 +165,7 @@ $$\deg q = 2 \int_{[\mathbb{P}^1]} 2 H = 4.$$
 
 Cohomology basis $\{ T_0 = 1, T_1 = H \}$, Poincaré pairing $\eta_{ab} = \int_{\mathbb{P}^1} T_a T_b$는 $\eta_{01} = \eta_{10} = 1$, 나머지는 $0$. 따라서 $\eta^{01} = \eta^{10} = 1$.
 
-$H \ast_q H$를 계산한다. [정의 4](#def4)에 따라
+$H \ast_q H$를 계산한다. [정의 4](#def4){: data-relation="required" }에 따라
 
 $$H \ast_q H = \sum_{d \geq 0} \langle H, H, T_c \rangle_{0, 3, d}^{\mathbb{P}^1} \eta^{cd} T_d q^d.$$
 
@@ -220,7 +220,7 @@ $n \geq 1$에 대해
 $$QH^\ast(\mathbb{P}^n) \cong \mathbb{C}[H, q] / (H^{n+1} - q),\qquad \deg H = 2,\ \deg q = 2(n+1).$$
 :::
 ::: 증명
-$c_1(T \mathbb{P}^n) = (n+1) H$이므로 $\deg q = 2(n+1)$이고, [정의 4](#def4)의 합
+$c_1(T \mathbb{P}^n) = (n+1) H$이므로 $\deg q = 2(n+1)$이고, [정의 4](#def4){: data-relation="required" }의 합
 
 $$H \ast_q H^k = \sum_{d \geq 0} \sum_c \langle H, H^k, T_c \rangle_{0, 3, d}^{\mathbb{P}^n} \eta^{cd} T_d q^d$$
 
@@ -246,12 +246,12 @@ $$H \ast_q H^n = q \cdot 1.$$
 위 ring 구조에서 $q$를 $H^{n+1}$로 *해석*하면 quantum cohomology가 단일 generator $H$에 의해 생성된 자유 $\mathbb{C}$-algebra $\mathbb{C}[H]$의 모습으로 나타난다. 이러한 *cyclic* 구조는 $\mathbb{P}^n$의 매우 특수한 성질이며, 일반적인 Fano variety에서는 더 복잡한 관계식이 등장한다.
 
 ::: 참고 11
-$\mathbb{P}^n$의 경우 $X$가 Fano이므로 ($c_1(TX)$가 ample) 각 cohomology degree에서 비자명한 GW invariant를 주는 $\beta$가 유한 개이고, 따라서 $\Lambda$의 completion 없이 group ring $\mathbb{C}[q]$만 사용해도 [정의 4](#def4)의 합이 형식적으로 well-defined이다. 일반적 non-Fano case에서는 무한합을 다루기 위해 [정의 1](#def1)의 completion이 본질적이다.
+$\mathbb{P}^n$의 경우 $X$가 Fano이므로 ($c_1(TX)$가 ample) 각 cohomology degree에서 비자명한 GW invariant를 주는 $\beta$가 유한 개이고, 따라서 $\Lambda$의 completion 없이 group ring $\mathbb{C}[q]$만 사용해도 [정의 4](#def4){: data-relation="required" }의 합이 형식적으로 well-defined이다. 일반적 non-Fano case에서는 무한합을 다루기 위해 [정의 1](#def1){: data-relation="required" }의 completion이 본질적이다.
 :::
 
 ## 큰 양자 코호몰로지와 고전 극한
 
-위에서 정의한 small quantum product는 cohomology의 *고정된* basis 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a: \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 intersection number $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
+위에서 정의한 small quantum product는 cohomology의 *고정된* basis 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a: \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-relation="required" }에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 intersection number $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
 
 $$\sum_{k \ge 0} \frac{1}{k!} \langle T_a, T_b, T_c, \underbrace{t_2, \ldots, t_2}_{k} \rangle_{0, k+3, \beta}^X q^\beta = e^{\langle t_2, \beta\rangle} q^\beta \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$$
 
@@ -266,12 +266,12 @@ $$F(t) := \sum_{n \geq 3, \beta} \frac{1}{n!} \langle \underbrace{t, \ldots, t}_
 
 $$T_a \circ_t T_b := \sum_{c, d} \partial_a \partial_b \partial_c F(t) \eta^{cd} T_d$$
 
-로 정의되며, [정리 6](#thm6)과 동일한 논증으로 graded commutative associative ring을 이룬다.
+로 정의되며, [정리 6](#thm6){: data-relation="required" }과 동일한 논증으로 graded commutative associative ring을 이룬다.
 :::
 
 Big quantum product에서 $t \rightarrow 0$의 극한은 small quantum product의 specialization과 일치한다. 즉 $T_a \circ_0 T_b = T_a \ast_q T_b$. 더욱이 small quantum product와 마찬가지로 $q \rightarrow 0$의 극한은 classical cup product $T_a \cup T_b$을 회복한다. 이로써 quantum cohomology는 cohomology class 방향 ($t$)과 Novikov variable 방향 ($q$)의 두 deformation을 동시에 갖는 구조임이 드러난다.
 
-[정리 6](#thm6)의 ring 공리는 small과 big 양쪽에 모두 적용되며, 두 deformation 방향 모두에서 결합법칙과 super-commutativity가 보존된다. 이러한 다중 deformation 구조의 정합성은 GW invariant의 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3), [⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4), [⁋명제 5](/ko/math/symplectic_geometry/gromov_witten#prop5)의 통합적 귀결이라 할 수 있다.
+[정리 6](#thm6){: data-relation="weak" }의 ring 공리는 small과 big 양쪽에 모두 적용되며, 두 deformation 방향 모두에서 결합법칙과 super-commutativity가 보존된다. 이러한 다중 deformation 구조의 정합성은 GW invariant의 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3){: data-relation="required" }, [⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-relation="weak" }, [⁋명제 5](/ko/math/symplectic_geometry/gromov_witten#prop5){: data-relation="weak" }의 통합적 귀결이라 할 수 있다.
 
 ---
 
