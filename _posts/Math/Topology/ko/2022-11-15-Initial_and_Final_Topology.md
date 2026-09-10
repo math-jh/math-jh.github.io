@@ -13,7 +13,7 @@ weight: 6
 
 ---
 
-[§연속함수](/ko/math/topology/continuous_functions)에서 우리는 연속함수 $f:X \rightarrow Y$에 대하여 다음의 식 
+[§연속함수](/ko/math/topology/continuous_functions){: data-relation="required" }에서 우리는 연속함수 $f:X \rightarrow Y$에 대하여 다음의 식 
 
 $$f^\mathcal{T}(V)=f^{-1}(V)$$
 
@@ -38,7 +38,7 @@ $X$ 위에 정의된 위상 $(\mathcal{U}_j)_{j\in J}$들에 대하여, 위상�
 함수 $f_i$가 연속이기 위해서는 $Y_i$의 임의의 열린집합 $U_i$에 대하여 $f_i^{-1}(U_i)$가 $X$에서 열린집합이어야 하므로, 우리가 정의할 initial topology는 $f_i^{-1}(U_i)$꼴의 원소들을 모두 가지고 있어야 한다. 한편, 이들 원소들을 포함하는 위상은 이들의 유한한 교집합과 임의의 합집합도 포함해야 한다. 따라서 다음의 명제를 증명할 수 있다.
 
 ::: 명제 2
-[정의 1](#def1)의 initial topology는 정확하게 다음의 집합
+[정의 1](#def1){: data-relation="required" }의 initial topology는 정확하게 다음의 집합
 
 $$\mathcal{S}=\{f_i^{-1}(U_i)\mid i\in I, \text{$U_i$ open in $Y_i$}\}$$
 
@@ -51,12 +51,12 @@ Initial topology를 $\mathcal{T}_\ini$으로 적고, $\mathcal{S}$를 subbase로
 그럼 initial topology는 다음과 같은 종류의 universal property를 갖는다.
 
 ::: 명제 3
-[정의 1](#def1)의 상황에서, 추가로 위상공간 $Z$와 $g:Z\rightarrow X$가 주어졌다 하자. 그럼 $g$가 연속인 것은 각각의 $f_i\circ g$가 연속인 것과 동치이다. 
+[정의 1](#def1){: data-relation="required" }의 상황에서, 추가로 위상공간 $Z$와 $g:Z\rightarrow X$가 주어졌다 하자. 그럼 $g$가 연속인 것은 각각의 $f_i\circ g$가 연속인 것과 동치이다. 
 :::
 ::: 증명
 만일 $g$가 연속이라면 $f_i\circ g$는 연속함수들의 합성이므로 자명하게 연속이다. 따라서 반대방향만 보이자.
 
-각각의 함수 $f_i\circ g$가 연속이라 하자. $X$의 임의의 열린 진부분집합 $U$에 대하여, [명제 2](#prop2)에 의해 
+각각의 함수 $f_i\circ g$가 연속이라 하자. $X$의 임의의 열린 진부분집합 $U$에 대하여, [명제 2](#prop2){: data-relation="required" }에 의해 
 
 $$U=\bigcap_{j=1}^n f_j^{-1}(U_j)$$
 
@@ -77,14 +77,14 @@ $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)
 $X$에 trivial topology가 주어졌다 하면, $X$로의 임의의 함수는 항상 연속이다. 하지만 일반적으로 위상의 합집합이 위상이 되지는 않기 때문에, initial topology와는 다르게 존재성 증명이 다음 명제에 강하게 의존하게 된다.
 
 ::: 명제 5
-[정의 4](#def4)의 위상은 다음의 집합
+[정의 4](#def4){: data-relation="required" }의 위상은 다음의 집합
 
 $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 
 으로 정의된다.
 :::
 ::: 증명
-주어진 위상 $\mathcal{T}_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}_\fin$가 [정의 4](#def4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
+주어진 위상 $\mathcal{T}_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}_\fin$가 [정의 4](#def4){: data-relation="required" }의 조건을 모두 만족한다는 것만 보이면 충분하다. 
 
 우선, 임의의 $U\in\mathcal{T}_\fin$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}_\fin$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 open이어야 한다. 따라서, $\mathcal{T}_\fin$의 정의에 의해 $U\in\mathcal{T}_\fin$이고 따라서 $\mathcal{T}_\fin$가 $\mathcal{T}$보다 강하다.
 :::
@@ -92,7 +92,7 @@ $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all
 역시 마찬가지로 final topology 또한 initial topology와 비슷한 다음의 universal property를 만족한다. 
 
 ::: 명제 6
-[정의 4](#def4)의 상황에서, 추가로 위상공간 $Z$와 $g:X\rightarrow Z$가 주어졌다 하자. 그럼 $g$가 연속인 것은 각각의 $g\circ f_i$가 연속인 것과 동치이다. 
+[정의 4](#def4){: data-relation="required" }의 상황에서, 추가로 위상공간 $Z$와 $g:X\rightarrow Z$가 주어졌다 하자. 그럼 $g$가 연속인 것은 각각의 $g\circ f_i$가 연속인 것과 동치이다. 
 :::
 ::: 증명
 만일 $g$가 연속이라면 $g\circ f_i$는 연속함수들의 합성이므로 자명하게 연속이다. 따라서 반대방향만 보이자.
@@ -101,7 +101,7 @@ $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all
 
 $$(g\circ f_i)^{-1}(U)=f_i^{-1}(g^{-1}(U))$$
 
-이 $Y_i$에서 각각 열린집합이다. 그런데 [명제 5](#prop5)에 의하여, 이는 곧 $g^{-1}(U)$가 $X$에서 열린집합이라는 것과 같은 말이고 따라서 $g$는 연속이다.
+이 $Y_i$에서 각각 열린집합이다. 그런데 [명제 5](#prop5){: data-relation="required" }에 의하여, 이는 곧 $g^{-1}(U)$가 $X$에서 열린집합이라는 것과 같은 말이고 따라서 $g$는 연속이다.
 :::
 
 ---
