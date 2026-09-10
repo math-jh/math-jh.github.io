@@ -28,7 +28,7 @@ Since $(A^tA)^t=A^t(A^t)^t=A^tA$, the matrix $A^tA$ is symmetric, i.e., a self-a
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
-so $A^tA$ is positive semidefinite. ([§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8)) Therefore, by [§Spectral Theorem, ⁋Proposition 9](/en/math/linear_algebra/spectral_theorem#prop9), all eigenvalues of $A^tA$ are non-negative.
+so $A^tA$ is positive semidefinite. ([§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8){: data-relation="weak" }) Therefore, by [§Spectral Theorem, ⁋Proposition 9](/en/math/linear_algebra/spectral_theorem#prop9){: data-relation="required" }, all eigenvalues of $A^tA$ are non-negative.
 :::
 
 Since all eigenvalues of the matrix $A^tA$ are non-negative, we can take their square roots.
@@ -47,7 +47,7 @@ $$A=U\Sigma V^t$$
 holds.
 :::
 ::: Proof
-By [Proposition 1](#prop1), $A^tA$ is self-adjoint, so by [§Spectral Theorem, ⁋Theorem 5](/en/math/linear_algebra/spectral_theorem#thm5) there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ of $\mathbb{R}^n$ consisting of eigenvectors of $A^tA$. Order the eigenvalues as $\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$, and suppose $\sigma_1,\ldots,\sigma_r$ are positive and $\sigma_{r+1}=\cdots=\sigma_n=0$. That is, $A^tAv_i=\sigma_i^2v_i$.
+By [Proposition 1](#prop1){: data-relation="required" }, $A^tA$ is self-adjoint, so by [§Spectral Theorem, ⁋Theorem 5](/en/math/linear_algebra/spectral_theorem#thm5){: data-relation="required" } there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ of $\mathbb{R}^n$ consisting of eigenvectors of $A^tA$. Order the eigenvalues as $\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$, and suppose $\sigma_1,\ldots,\sigma_r$ are positive and $\sigma_{r+1}=\cdots=\sigma_n=0$. That is, $A^tAv_i=\sigma_i^2v_i$.
 
 For each $1\leq i\leq r$, define
 
@@ -57,7 +57,7 @@ Then for $1\leq i,j\leq r$,
 
 $$\langle u_i,u_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle Av_i,Av_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle A^tAv_i,v_j\rangle=\frac{\sigma_i^2}{\sigma_i\sigma_j}\langle v_i,v_j\rangle=\frac{\sigma_i}{\sigma_j}\delta_{ij}=\delta_{ij}$$
 
-so $\{u_1,\ldots, u_r\}$ is an orthonormal set in $\mathbb{R}^m$. We can extend this to obtain an orthonormal basis $\{u_1,\ldots, u_m\}$ of $\mathbb{R}^m$. ([§Inner Product Spaces, §§Orthonormal Bases](/en/math/linear_algebra/inner_product_spaces#orthonormal-bases))
+so $\{u_1,\ldots, u_r\}$ is an orthonormal set in $\mathbb{R}^m$. We can extend this to obtain an orthonormal basis $\{u_1,\ldots, u_m\}$ of $\mathbb{R}^m$. ([§Inner Product Spaces, §§Orthonormal Bases](/en/math/linear_algebra/inner_product_spaces#orthonormal-bases){: data-relation="required" })
 
 On the other hand, for $r<i\leq n$,
 
@@ -81,7 +81,7 @@ In $A=U\Sigma V^t$, the matrices $U$ and $V$ are invertible, so $\rank A=\rank\S
 
 ## General Pseudoinverse
 
-In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7), we defined the pseudoinverse when $A$ has full column rank or full row rank, and we announced that the definition in the general case would use the singular value decomposition. We now present that definition.
+In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-relation="required" }, we defined the pseudoinverse when $A$ has full column rank or full row rank, and we announced that the definition in the general case would use the singular value decomposition. We now present that definition.
 
 ::: Definition 5
 Let a singular value decomposition $A=U\Sigma V^t$ of a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ be given. For the positive singular values $\sigma_i$ of $\Sigma$, let $\Sigma^+$ be the $n\times m$ diagonal matrix whose $(i,i)$-entry is $1/\sigma_i$ and whose remaining entries are $0$. Then we define the *Moore–Penrose pseudoinverse* of $A$ as
@@ -92,7 +92,7 @@ $$A^+=V\Sigma^+U^t$$
 For this to make sense, we must verify that the definition does not depend on the choice of singular value decomposition. This follows from the next proposition.
 
 ::: Proposition 6
-The matrix $A^+$ of [Definition 5](#def5) satisfies all four conditions
+The matrix $A^+$ of [Definition 5](#def5){: data-relation="required" } satisfies all four conditions
 
 $$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
 :::
@@ -112,7 +112,7 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 so the first and second conditions also hold.
 :::
 
-Now, in [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7) we saw that the above four conditions uniquely determine $A^+$, so the $A^+$ of [Definition 5](#def5) is well defined independently of the choice of singular value decomposition, and we also know that the two definitions agree in the full-rank case. For example, if $A$ has full column rank, then $A^tA$ is invertible, and one can verify directly from
+Now, in [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-relation="required" } we saw that the above four conditions uniquely determine $A^+$, so the $A^+$ of [Definition 5](#def5){: data-relation="required" } is well defined independently of the choice of singular value decomposition, and we also know that the two definitions agree in the full-rank case. For example, if $A$ has full column rank, then $A^tA$ is invertible, and one can verify directly from
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 

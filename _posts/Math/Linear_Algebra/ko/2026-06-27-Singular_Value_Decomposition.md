@@ -28,7 +28,7 @@ $(A^tA)^t=A^t(A^t)^t=A^tA$이므로 $A^tA$은 symmetric matrix, 즉 $\mathbb{R}^
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
-이므로 $A^tA$은 positive semidefinite이다. ([§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)) 따라서 [§스펙트럼 정리, ⁋명제 9](/ko/math/linear_algebra/spectral_theorem#prop9)에 의하여 $A^tA$의 모든 고윳값은 $0$ 이상이다.
+이므로 $A^tA$은 positive semidefinite이다. ([§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8){: data-relation="required" }) 따라서 [§스펙트럼 정리, ⁋명제 9](/ko/math/linear_algebra/spectral_theorem#prop9){: data-relation="required" }에 의하여 $A^tA$의 모든 고윳값은 $0$ 이상이다.
 :::
 
 그럼 행렬 $A^tA$의 모든 고윳값이 음이 아니므로 그 제곱근들을 취할 수 있다. 
@@ -47,7 +47,7 @@ $$A=U\Sigma V^t$$
 이 성립한다.
 :::
 ::: 증명
-[명제 1](#prop1)에 의하여 $A^tA$은 self-adjoint이므로, [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)에 의하여 $A^tA$의 고유벡터들로 이루어진 $\mathbb{R}^n$의 orthonormal basis $\{v_1,\ldots, v_n\}$이 존재한다. 고윳값을 $\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$의 순서로 두고, $\sigma_1,\ldots,\sigma_r$이 양수이고 $\sigma_{r+1}=\cdots=\sigma_n=0$이라 하자. 즉 $A^tAv_i=\sigma_i^2v_i$이다.
+[명제 1](#prop1){: data-relation="required" }에 의하여 $A^tA$은 self-adjoint이므로, [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-relation="required" }에 의하여 $A^tA$의 고유벡터들로 이루어진 $\mathbb{R}^n$의 orthonormal basis $\{v_1,\ldots, v_n\}$이 존재한다. 고윳값을 $\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$의 순서로 두고, $\sigma_1,\ldots,\sigma_r$이 양수이고 $\sigma_{r+1}=\cdots=\sigma_n=0$이라 하자. 즉 $A^tAv_i=\sigma_i^2v_i$이다.
 
 각 $1\leq i\leq r$에 대하여 
 
@@ -57,7 +57,7 @@ $$u_i=\frac{1}{\sigma_i}Av_i\in\mathbb{R}^m$$
 
 $$\langle u_i,u_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle Av_i,Av_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle A^tAv_i,v_j\rangle=\frac{\sigma_i^2}{\sigma_i\sigma_j}\langle v_i,v_j\rangle=\frac{\sigma_i}{\sigma_j}\delta_{ij}=\delta_{ij}$$
 
-이므로 $\{u_1,\ldots, u_r\}$은 $\mathbb{R}^m$의 orthonormal set이다. 이를 확장하여 $\mathbb{R}^m$의 orthonormal basis $\{u_1,\ldots, u_m\}$을 얻을 수 있다. ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5), [§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저)) 
+이므로 $\{u_1,\ldots, u_r\}$은 $\mathbb{R}^m$의 orthonormal set이다. 이를 확장하여 $\mathbb{R}^m$의 orthonormal basis $\{u_1,\ldots, u_m\}$을 얻을 수 있다. ([§벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5){: data-relation="required" }, [§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저){: data-relation="required" }) 
 
 한편 $r<i\leq n$에 대하여는 
 
@@ -81,7 +81,7 @@ $A=U\Sigma V^t$에서 $U,V$은 가역이므로 $\rank A=\rank\Sigma$이다. $\Si
 
 ## 일반적인 유사역행렬
 
-[§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)에서 우리는 $A$가 full column rank이거나 full row rank일 때 pseudoinverse를 정의하였고, 일반적인 경우의 정의는 특이값 분해를 이용한다고 예고하였다. 이제 그 정의를 제시한다. 
+[§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7){: data-relation="weak" }에서 우리는 $A$가 full column rank이거나 full row rank일 때 pseudoinverse를 정의하였고, 일반적인 경우의 정의는 특이값 분해를 이용한다고 예고하였다. 이제 그 정의를 제시한다. 
 
 ::: 정의 5
 행렬 $A\in\Mat_{m\times n}(\mathbb{R})$의 특이값 분해 $A=U\Sigma V^t$가 주어졌다 하자. $\Sigma$의 양의 특이값 $\sigma_i$들에 대하여, $(i,i)$ 성분이 $1/\sigma_i$이고 나머지가 $0$인 $n\times m$ diagonal matrix를 $\Sigma^+$이라 하자. 그럼 $A$의 *Moore-Penrose pseudoinverse<sub>유사역행렬</sub>*를 
@@ -94,7 +94,7 @@ $$A^+=V\Sigma^+U^t$$
 이것이 말이 되기 위해서는 이 정의가 특이값 분해의 선택에 의존하지 않음을 확인해야 한다. 이는 다음 명제로부터 따라온다. 
 
 ::: 명제 6
-[정의 5](#def5)의 행렬 $A^+$은 다음의 네 조건
+[정의 5](#def5){: data-relation="required" }의 행렬 $A^+$은 다음의 네 조건
 
 $$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
 
@@ -116,7 +116,7 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 이므로 첫째와 둘째 조건도 성립한다.
 :::
 
-그럼 [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)에서 위의 네 조건이 $A^+$를 유일하게 특정지어준다는 것을 살펴보았으므로, [정의 5](#def5)의 $A^+$은 특이값 분해의 선택과 무관하게 잘 정의될 뿐 아니라 full rank의 경우 두 정의가 일치하는 것 또한 안다. 예를 들어 $A$가 full column rank라면 $A^tA$이 가역이고, 행렬 $(A^tA)^{-1}A^t$이 
+그럼 [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7){: data-relation="required" }에서 위의 네 조건이 $A^+$를 유일하게 특정지어준다는 것을 살펴보았으므로, [정의 5](#def5){: data-relation="required" }의 $A^+$은 특이값 분해의 선택과 무관하게 잘 정의될 뿐 아니라 full rank의 경우 두 정의가 일치하는 것 또한 안다. 예를 들어 $A$가 full column rank라면 $A^tA$이 가역이고, 행렬 $(A^tA)^{-1}A^t$이 
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 
