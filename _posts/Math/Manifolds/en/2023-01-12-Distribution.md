@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T10:00:04+00:00
 ---
 ## Distribution and Integral Flow
 
-Previously, in [§Vector Fields](/en/math/manifolds/vector_fields), we saw that for any smooth vector field $X$ defined on a given manifold $M$, there exists a sufficiently small $\epsilon>0$ such that there is a curve $\sigma:(-\epsilon,\epsilon)\rightarrow M$ satisfying
+Previously, in [§Vector Fields](/en/math/manifolds/vector_fields){: data-relation="required" }, we saw that for any smooth vector field $X$ defined on a given manifold $M$, there exists a sufficiently small $\epsilon>0$ such that there is a curve $\sigma:(-\epsilon,\epsilon)\rightarrow M$ satisfying
 
 $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
@@ -86,14 +86,14 @@ is an isomorphism, so we can find two vector fields $\tilde{X},\tilde{Y}$ satisf
 
 $$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p.$$
 
-Then these vector fields are $\Phi$-related to $X$ and $Y$ respectively, so by [§Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9), $[\tilde{X},\tilde{Y}]$ is $\Phi$-related to $[X,Y]$. Therefore
+Then these vector fields are $\Phi$-related to $X$ and $Y$ respectively, so by [§Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9){: data-relation="required" }, $[\tilde{X},\tilde{Y}]$ is $\Phi$-related to $[X,Y]$. Therefore
 
 $$[X,Y]_p=\dd{\Phi_s}([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 holds.
 :::
 
-Thus, the difficult part of the proof of [Theorem 3](#thm3) is the converse direction. This proceeds by induction on the dimension $k$ of the distribution.
+Thus, the difficult part of the proof of [Theorem 3](#thm3){: data-relation="required" } is the converse direction. This proceeds by induction on the dimension $k$ of the distribution.
 
 ::: Lemma 5
 Let $M$ be an $m$-dimensional manifold, $p\in M$ a point, and $X$ a vector field satisfying $X_p\neq 0$. Then there exists a suitable coordinate system $(U,\varphi)$ containing $p$, with $\varphi=(x^1,\ldots, x^m)$, such that
@@ -111,7 +111,7 @@ holds. Without loss of generality, we may assume that $V$ is sufficiently small 
 
 $$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto X_t(q)$$
 
-is a well-defined $C^\infty$ map. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6)) Moreover, if we choose $\epsilon>0$ small enough that the inclusion
+is a well-defined $C^\infty$ map. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-relation="required" }) Moreover, if we choose $\epsilon>0$ small enough that the inclusion
 
 $$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{m-1}$}$$
 
@@ -127,7 +127,7 @@ so $\sigma$ is nonsingular at the origin, and hence $\sigma^{-1}$ defines a coor
 :::
 
 ::: Proof (Theorem 3)
-Assume the theorem holds for all $(k-1)$-dimensional distributions, and let $\mathcal{D}$ be a $k$-dimensional distribution. For a point $p\in M$, we may assume that $\mathcal{D}$ is spanned by $k$ vector fields $X_1,\ldots, X_k$ in a neighborhood of $p$. Now apply [Lemma 5](#lem5) to find a coordinate system $(V,\tau)$ centered at $p$, with $\tau=(y^1,\ldots, y^k)$, such that
+Assume the theorem holds for all $(k-1)$-dimensional distributions, and let $\mathcal{D}$ be a $k$-dimensional distribution. For a point $p\in M$, we may assume that $\mathcal{D}$ is spanned by $k$ vector fields $X_1,\ldots, X_k$ in a neighborhood of $p$. Now apply [Lemma 5](#lem5){: data-relation="required" } to find a coordinate system $(V,\tau)$ centered at $p$, with $\tau=(y^1,\ldots, y^k)$, such that
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 

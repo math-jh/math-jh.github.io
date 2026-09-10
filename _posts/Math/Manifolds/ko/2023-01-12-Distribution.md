@@ -15,7 +15,7 @@ weight: 14
 
 ## Distribution과 integral flow
 
-앞서 [§벡터장](/ko/math/manifolds/vector_fields)에서 우리는 주어진 manifold $M$ 위에 정의된 임의의 $C^\infty$ 벡터장 $X$에 대하여, 충분히 작은 $\epsilon>0$이 존재하여 다음의 식
+앞서 [§벡터장](/ko/math/manifolds/vector_fields){: data-relation="required" }에서 우리는 주어진 manifold $M$ 위에 정의된 임의의 $C^\infty$ 벡터장 $X$에 대하여, 충분히 작은 $\epsilon>0$이 존재하여 다음의 식
 
 $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
@@ -85,14 +85,14 @@ $$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
 $$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p$$
 
-을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9)에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
+을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9){: data-relation="required" }에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
 
 $$[X,Y]_p=\dd{\Phi_s}([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 이 성립한다. 
 :::
 
-따라서 [정리 3](#thm3)의 증명에서 어려운 부분은 반대방향이라 할 수 있다. 이는 distribution의 차원 $k$에 대한 귀납법으로 진행한다. 
+따라서 [정리 3](#thm3){: data-relation="required" }의 증명에서 어려운 부분은 반대방향이라 할 수 있다. 이는 distribution의 차원 $k$에 대한 귀납법으로 진행한다. 
 
 ::: 보조정리 5
 $m$차원 manifold $M$과 한 점 $p\in M$, 그리고 $X_p\neq 0$을 만족하는 벡터장 $X$가 주어졌다 하자. 그럼 $p$를 포함하는 적당한 coordinate system $(U,\varphi), \varphi=(x^1,\ldots, x^m)$가 존재하여
@@ -110,7 +110,7 @@ $$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
 
 $$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto \phi^t(q)$$
 
-가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)) 뿐만 아니라, $\epsilon>0$과 $W$를 다음 포함관계
+가 잘 정의된 $C^\infty$라고 가정할 수 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-relation="required" }) 뿐만 아니라, $\epsilon>0$과 $W$를 다음 포함관계
 
 $$\phi^t(\tau^{-1}(\{0\}\times W))\subseteq V\quad(\lvert t\rvert<\epsilon),\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{m-1}$}$$
 
@@ -126,7 +126,7 @@ $$\dd{\sigma}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\parti
 :::
 
 ::: 증명 (정리 3)
-정리가 모든 $k-1$차원 distribution에 대해 성립한다고 가정하고, $\mathcal{D}$가 $k$차원 distribution이라 하자. 한 점 $p\in M$에 대하여, $\mathcal{D}$가 $p$ 근방에서는 $k$개의 벡터장 $X_1,\ldots, X_k$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5)를 적용하여
+정리가 모든 $k-1$차원 distribution에 대해 성립한다고 가정하고, $\mathcal{D}$가 $k$차원 distribution이라 하자. 한 점 $p\in M$에 대하여, $\mathcal{D}$가 $p$ 근방에서는 $k$개의 벡터장 $X_1,\ldots, X_k$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5){: data-relation="required" }를 적용하여
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
 
