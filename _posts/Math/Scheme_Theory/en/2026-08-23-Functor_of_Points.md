@@ -14,7 +14,7 @@ translated_at: 2026-09-02T05:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-09-02T05:15:05+00:00
 ---
-We now begin preparations to extend the language of schemes further. For this we need the functor of points perspective, which we saw in [§Morphisms of Schemes, ⁋Definition 6](/en/math/scheme_theory/morphism_of_schemes#def6). This was already defined in [§Morphisms of Schemes, ⁋Definition 9](/en/math/scheme_theory/morphism_of_schemes#def9): to study a scheme $X$, one looks at the collection of $T$-points of $X$ for every possible test scheme $T$. In other words, one considers the functor
+We now begin preparations to extend the language of schemes further. For this we need the functor of points perspective, which we saw in [§Morphisms of Schemes, ⁋Definition 6](/en/math/scheme_theory/morphism_of_schemes#def6){: data-relation="weak" }. This was already defined in [§Morphisms of Schemes, ⁋Definition 9](/en/math/scheme_theory/morphism_of_schemes#def9){: data-relation="required" }: to study a scheme $X$, one looks at the collection of $T$-points of $X$ for every possible test scheme $T$. In other words, one considers the functor
 
 $$h_X=\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$$
 
@@ -36,11 +36,11 @@ This perspective remains valid if we change our object of interest to $\Sch_{/S}
 
 We now show that the functor of points $h_X$ defined by $X$ actually carries sufficient scheme-theoretic information about $X$. This is essentially something we have already covered in category theory, so here we give only a brief review.
 
-The categorical foundation of the functor of points perspective is, of course, the Yoneda lemma and representability. Applying [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4) with $\mathcal{A}=\Sch$, we know that the functor $h_{(-)}:\Sch \rightarrow \Fun(\Sch^\op, \Set)$ is fully faithful. This shows that a scheme $X$ is uniquely determined up to isomorphism by $h_X$, and that a scheme morphism is exactly the same data as a natural transformation between functors of points.
+The categorical foundation of the functor of points perspective is, of course, the Yoneda lemma and representability. Applying [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4){: data-relation="required" } with $\mathcal{A}=\Sch$, we know that the functor $h_{(-)}:\Sch \rightarrow \Fun(\Sch^\op, \Set)$ is fully faithful. This shows that a scheme $X$ is uniquely determined up to isomorphism by $h_X$, and that a scheme morphism is exactly the same data as a natural transformation between functors of points.
 
 As we saw above, given a scheme morphism $\varphi:X\rightarrow Y$, one can send a $T$-point $\psi:T\rightarrow X$ to the composition $\varphi\circ\psi:T\rightarrow Y$. In this way, $\varphi$ gives maps $X(T)\rightarrow Y(T)$ that are compatible across all test schemes. The key observation is that this also works in reverse. Suppose we are given a collection of such compatible maps $\alpha_T:X(T)\rightarrow Y(T)$. The element $\alpha_X(\id_X)$ to which $\alpha_X$ sends the identity morphism $\id_X:X\rightarrow X$ is an $X$-point of $Y$, that is, a scheme morphism $f:X\rightarrow Y$. By naturality, for any $\psi:T\rightarrow X$ we have $\alpha_T(\psi)=f\circ\psi$, so the maps at all other $T$-points are forced to be composition with $f$. In other words, a natural transformation between functors of points is exactly the same data as a single scheme morphism.
 
-Thus, the condition for a presheaf $F:\Sch^\op\rightarrow\Set$ to actually arise as the functor of points of some scheme is that $F$ be a representable functor ([\[Category Theory\] §Representable Functors, ⁋Definition 1](/en/math/category_theory/representable_functors#def1)). Given an isomorphism $F\cong h_X$, there is a universal element over $X$ corresponding to $\id_X$ in $h_X(X)$, and any scheme morphism $f:T\rightarrow X$ pulls this back to $T$ to give an element of $F(T)$. This is the same mechanism by which, in [\[Algebraic Topology\] §Classifying Spaces, ⁋Theorem 8](/en/math/algebraic_topology/classifying_spaces#thm8), a classifying map $f:B\rightarrow \B G$ pulls back the universal bundle to give a principal $G$-bundle over $B$; the difference is that here, instead of a homotopy class, the actual scheme morphism $f:T\rightarrow X$ itself appears.
+Thus, the condition for a presheaf $F:\Sch^\op\rightarrow\Set$ to actually arise as the functor of points of some scheme is that $F$ be a representable functor ([\[Category Theory\] §Representable Functors, ⁋Definition 1](/en/math/category_theory/representable_functors#def1){: data-relation="required" }). Given an isomorphism $F\cong h_X$, there is a universal element over $X$ corresponding to $\id_X$ in $h_X(X)$, and any scheme morphism $f:T\rightarrow X$ pulls this back to $T$ to give an element of $F(T)$. This is the same mechanism by which, in [\[Algebraic Topology\] §Classifying Spaces, ⁋Theorem 8](/en/math/algebraic_topology/classifying_spaces#thm8){: data-relation="weak" }, a classifying map $f:B\rightarrow \B G$ pulls back the universal bundle to give a principal $G$-bundle over $B$; the difference is that here, instead of a homotopy class, the actual scheme morphism $f:T\rightarrow X$ itself appears.
 
 ## Affine Space and Projective Space as Functors
 
@@ -58,14 +58,14 @@ In the adjunction
 
 $$\Hom_\Sch(T, \Spec A)\cong \Hom_\cRing(A, \Gamma(T, \mathcal{O}_T))$$
 
-which we saw in [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), set $A=\mathbb{Z}[\x]$. Since the ring $\mathbb{Z}[\x]$ is a free object in $\cRing$, giving a ring homomorphism $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$ amounts to freely choosing the image $\x\mapsto a$ of the generator $\x$, which is exactly the choice of one element $a\in \Gamma(T, \mathcal{O}_T)$. Therefore
+which we saw in [§Affine Scheme, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }, set $A=\mathbb{Z}[\x]$. Since the ring $\mathbb{Z}[\x]$ is a free object in $\cRing$, giving a ring homomorphism $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$ amounts to freely choosing the image $\x\mapsto a$ of the generator $\x$, which is exactly the choice of one element $a\in \Gamma(T, \mathcal{O}_T)$. Therefore
 
 $$\mathbb{A}^1(T)=\Hom_\Sch(T, \Spec \mathbb{Z}[\x])\cong \Hom_\cRing(\mathbb{Z}[\x], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)$$
 
 The naturality of this correspondence, that is, the fact that for any $\tau: T' \rightarrow T$ the restriction map $\Gamma(T, \mathcal{O}_T) \rightarrow \Gamma(T', \mathcal{O}_{T'})$ commutes with the correspondence above, follows from the naturality of the adjunction.
 :::
 
-In the language introduced in the previous section, $\mathbb{A}^1$ represents the global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$. The universal element is the one corresponding to the identity morphism $\id_{\mathbb{A}^1}$ inside $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$, and chasing through the correspondence of [Proposition 1](#prop1) above, we see that it corresponds to $\x$ inside $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$.
+In the language introduced in the previous section, $\mathbb{A}^1$ represents the global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$. The universal element is the one corresponding to the identity morphism $\id_{\mathbb{A}^1}$ inside $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$, and chasing through the correspondence of [Proposition 1](#prop1){: data-relation="required" } above, we see that it corresponds to $\x$ inside $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$.
 
 Now any scheme morphism $f:T\rightarrow\mathbb{A}^1$ defines, via the pullback map $f^\ast:\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})\rightarrow\Gamma(T,\mathcal{O}_T)$, a (global) regular function $f^\ast \x$ on $T$. Conversely, given any global regular function $a\in\Gamma(T,\mathcal{O}_T)$, there is a ring homomorphism $\mathbb{Z}[\x]\rightarrow\Gamma(T,\mathcal{O}_T)$ determined by $\x\mapsto a$, and this very choice gives a unique scheme morphism $f:T\rightarrow\mathbb{A}^1$, which satisfies $f^\ast\x=a$. Generalizing this to $n$ generators, we obtain the following.
 
@@ -77,7 +77,7 @@ $$\mathbb{A}^n(T)\cong \Gamma(T, \mathcal{O}_T)^n$$
 That is, a $T$-point of $\mathbb{A}^n$ is an $n$-tuple of regular functions on $T$.
 :::
 ::: Proof
-Exactly as in the proof of [Proposition 1](#prop1), a ring homomorphism out of the free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$ freely chooses the images $a_i\in \Gamma(T, \mathcal{O}_T)$ of the generators $\x_i$, so we obtain
+Exactly as in the proof of [Proposition 1](#prop1){: data-relation="required" }, a ring homomorphism out of the free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$ freely chooses the images $a_i\in \Gamma(T, \mathcal{O}_T)$ of the generators $\x_i$, so we obtain
 
 $$\mathbb{A}^n(T)\cong \Hom_\cRing(\mathbb{Z}[\x_1,\ldots, \x_n], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)^n$$
 
@@ -93,7 +93,7 @@ $$\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$$
 Here $\Gamma(T, \mathcal{O}_T)^\times$ is the group of units of the ring $\Gamma(T, \mathcal{O}_T)$.
 :::
 ::: Proof
-Since $\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$, ring homomorphisms $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$ are in bijection with those for which the image $a$ of $\t$ is invertible. Indeed, by the universal property of localization, ring homomorphisms out of $\mathbb{Z}[\t]_\t$ correspond exactly to those $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$ sending $\t$ to a unit, and as we saw in [Proposition 1](#prop1), this amounts to choosing one unit $a\in \Gamma(T, \mathcal{O}_T)^\times$.
+Since $\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$, ring homomorphisms $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$ are in bijection with those for which the image $a$ of $\t$ is invertible. Indeed, by the universal property of localization, ring homomorphisms out of $\mathbb{Z}[\t]_\t$ correspond exactly to those $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$ sending $\t$ to a unit, and as we saw in [Proposition 1](#prop1){: data-relation="required" }, this amounts to choosing one unit $a\in \Gamma(T, \mathcal{O}_T)^\times$.
 :::
 
 Using this, one can obtain projective space from affine space. To this end, consider the open subscheme $U$ obtained by removing the origin from $\mathbb{A}^{n+1}$. First, define the scheme morphism
@@ -106,7 +106,7 @@ $$\mathbb{Z}[\x_0,\ldots,\x_n]\rightarrow\mathbb{Z}[\t,\t^{-1},\x_0,\ldots,\x_n]
 
 This is the scalar multiplication action of $\mathbb{G}_m$, and it also restricts to $U$. Classically, projective space was thought of as the quotient $U/\mathbb{G}_m$ by this action.
 
-Examining this on $T$-points, since $\mathbb{G}_m(T)=\Gamma(T,\mathcal{O}_T)^\times$ by [Proposition 3](#prop3), the above action can be thought of, on $T$-points, as a unit function $u$ acting on a tuple $(a_0,\ldots,a_n)\in U(T)$ by
+Examining this on $T$-points, since $\mathbb{G}_m(T)=\Gamma(T,\mathcal{O}_T)^\times$ by [Proposition 3](#prop3){: data-relation="required" }, the above action can be thought of, on $T$-points, as a unit function $u$ acting on a tuple $(a_0,\ldots,a_n)\in U(T)$ by
 
 $$u\cdot(a_0,\ldots,a_n)=(ua_0,\ldots,ua_n)$$
 
@@ -148,14 +148,14 @@ For the projective space $\mathbb{P}^n=\Proj \mathbb{Z}[\x_0,\ldots, \x_n]$ over
 ::: Proof
 Suppose a morphism $\psi: T \rightarrow \mathbb{P}^n$ is given. The twisting sheaf $\mathcal{O}_{\mathbb{P}^n}(1)$ on $\mathbb{P}^n$ is a line bundle and its global sections $\x_0,\ldots, \x_n$ are globally generating sections, so taking the pullback we obtain the line bundle $\mathcal{L}=\psi^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ on $T$ and the sections $s_i=\psi^\ast \x_i$. Since pullback preserves the property of being globally generating sections, $(\mathcal{L}, s_0,\ldots, s_n)$ forms the above data.
 
-Conversely, suppose we are given a line bundle $\mathcal{L}$ on $T$ and its globally generating sections $s_0,\ldots, s_n$. For each $i$, the locus $T_{s_i}=\{t\in T\mid (s_i)_t \text{ generates } \mathcal{L}_t\}$ where the section $s_i$ generates is an open set, and since the sections globally generate $\mathcal{L}$, the collection $\{T_{s_i}\}_{i=0}^n$ forms an open cover of $T$. On $T_{s_i}$, the section $s_i$ gives a trivialization of $\mathcal{L}\vert_{T_{s_i}}$, so for each $j$ the ratio $s_j/s_i\in \Gamma(T_{s_i}, \mathcal{O}_T)$ is well-defined. From this we define $T_{s_i} \rightarrow D_+(\x_i)$ in the same way as in [§Morphisms of Schemes, ⁋Example 5](/en/math/scheme_theory/morphism_of_schemes#ex5), and checking the gluing condition on overlaps, we obtain a morphism $\psi: T \rightarrow \mathbb{P}^n$.
+Conversely, suppose we are given a line bundle $\mathcal{L}$ on $T$ and its globally generating sections $s_0,\ldots, s_n$. For each $i$, the locus $T_{s_i}=\{t\in T\mid (s_i)_t \text{ generates } \mathcal{L}_t\}$ where the section $s_i$ generates is an open set, and since the sections globally generate $\mathcal{L}$, the collection $\{T_{s_i}\}_{i=0}^n$ forms an open cover of $T$. On $T_{s_i}$, the section $s_i$ gives a trivialization of $\mathcal{L}\vert_{T_{s_i}}$, so for each $j$ the ratio $s_j/s_i\in \Gamma(T_{s_i}, \mathcal{O}_T)$ is well-defined. From this we define $T_{s_i} \rightarrow D_+(\x_i)$ in the same way as in [§Morphisms of Schemes, ⁋Example 5](/en/math/scheme_theory/morphism_of_schemes#ex5){: data-relation="required" }, and checking the gluing condition on overlaps, we obtain a morphism $\psi: T \rightarrow \mathbb{P}^n$.
 
 The fact that these two constructions are inverse to each other and that isomorphic data give the same morphism is verified by the fact that transporting the whole of $(\mathcal{L}, s_0,\ldots, s_n)$ by an $\mathcal{O}_T$-module isomorphism does not change the $s_j/s_i$, and therefore gives the same gluing data. Naturality is the statement that for $\tau: T' \rightarrow T$, pulling back the above data agrees with composing the morphism.
 :::
 
-Concretely, let us re-examine in this language the $\mathbb{K}[\epsilon]/(\epsilon^2)$-point of $\mathbb{P}^n_\mathbb{K}$ that we saw in [§From Varieties to Schemes, ⁋Example 5](/en/math/scheme_theory/from_varieties_to_schemes#ex5). Since this is a one-point space, the only line bundle over it is the trivial line bundle, so fixing one trivialization we have $\Gamma(T,\mathcal{L})\cong\Gamma(T,\mathcal{O}_T)=A$, and choosing a section of a line bundle over it amounts to choosing an element of $A$. Meanwhile, since the stalk at the unique point of $\Spec A$ is $A$ itself, the condition that these be globally generating becomes the condition that some $a_i$ is invertible, which is exactly the condition $(a_0,\ldots, a_n)\in U(A)$.
+Concretely, let us re-examine in this language the $\mathbb{K}[\epsilon]/(\epsilon^2)$-point of $\mathbb{P}^n_\mathbb{K}$ that we saw in [§From Varieties to Schemes, ⁋Example 5](/en/math/scheme_theory/from_varieties_to_schemes#ex5){: data-relation="weak" }. Since this is a one-point space, the only line bundle over it is the trivial line bundle, so fixing one trivialization we have $\Gamma(T,\mathcal{L})\cong\Gamma(T,\mathcal{O}_T)=A$, and choosing a section of a line bundle over it amounts to choosing an element of $A$. Meanwhile, since the stalk at the unique point of $\Spec A$ is $A$ itself, the condition that these be globally generating becomes the condition that some $a_i$ is invertible, which is exactly the condition $(a_0,\ldots, a_n)\in U(A)$.
 
-Now, to see how [Theorem 5](#thm5) works, let us examine the isomorphism classes. Since the automorphisms of $\mathcal{O}_T$ are now just multiplication by an element of $A^\times$, two tuples give the same $A$-point if and only if they are scalar multiples by $A^\times$. Therefore
+Now, to see how [Theorem 5](#thm5){: data-relation="required" } works, let us examine the isomorphism classes. Since the automorphisms of $\mathcal{O}_T$ are now just multiplication by an element of $A^\times$, two tuples give the same $A$-point if and only if they are scalar multiples by $A^\times$. Therefore
 
 $$\mathbb{P}^n(A)=U(A)/A^\times$$
 
@@ -216,11 +216,11 @@ That is, this correspondence defines a contravariant functor
 
 $$F_{n+1}:\Sch^\op\rightarrow\Set$$
 
-From this perspective, [Theorem 5](#thm5) says that there exists a bijection
+From this perspective, [Theorem 5](#thm5){: data-relation="required" } says that there exists a bijection
 
 $$\mathbb{P}^n(T)\cong F_{n+1}(T)$$
 
-natural in every scheme $T$, and that the projective space $\mathbb{P}^n$ represents this functor. By [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4), the universal element corresponding to $\id_{\mathbb{P}^n}$ is the quotient bundle
+natural in every scheme $T$, and that the projective space $\mathbb{P}^n$ represents this functor. By [\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4){: data-relation="required" }, the universal element corresponding to $\id_{\mathbb{P}^n}$ is the quotient bundle
 
 $$\mathcal{O}_{\mathbb{P}^n}^{\oplus n+1}\twoheadrightarrow\mathcal{O}_{\mathbb{P}^n}(1)$$
 
@@ -236,7 +236,7 @@ $$\Gr(k,n)(T)\cong F_{k,n}(T)$$
 
 natural in every scheme $T$.
 
-When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar S\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1), which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5).
+When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar S\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-relation="weak" }, which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5){: data-relation="required" }.
 
 :::
 
@@ -244,7 +244,7 @@ Showing that such a functorial definition is representable is the starting point
 
 ## Fiber Products as Functors
 
-The functor of points perspective fits well with the fiber product defined in [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1). The universal property of the fiber product $X\times_S Y$ tells us directly, at the functor level, how its $T$-points are determined for any test scheme $T$.
+The functor of points perspective fits well with the fiber product defined in [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-relation="required" }. The universal property of the fiber product $X\times_S Y$ tells us directly, at the functor level, how its $T$-points are determined for any test scheme $T$.
 
 ::: Proposition 7
 Suppose scheme morphisms $X \rightarrow S$ and $Y \rightarrow S$ are given. Then for any scheme $T$, there exists a natural bijection
@@ -254,14 +254,14 @@ $$(X\times_S Y)(T)\cong X(T)\times_{S(T)} Y(T)$$
 Here the right-hand side is the fiber product in $\Set$, that is, the set of pairs in $X(T)\times Y(T)$ for which $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$ give the same value.
 :::
 ::: Proof
-The universal property of [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1) means that a morphism from $T$ to $X\times_S Y$ corresponds uniquely to a pair consisting of $\psi_X: T \rightarrow X$ and $\psi_Y: T \rightarrow Y$ whose compositions to $S$ agree, that is, a pair such that $\psi_X$ and $\psi_Y$ go to the same $S$-point via $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$. Writing this in the language of sets,
+The universal property of [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-relation="required" } means that a morphism from $T$ to $X\times_S Y$ corresponds uniquely to a pair consisting of $\psi_X: T \rightarrow X$ and $\psi_Y: T \rightarrow Y$ whose compositions to $S$ agree, that is, a pair such that $\psi_X$ and $\psi_Y$ go to the same $S$-point via $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$. Writing this in the language of sets,
 
 $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y \text{ map to the same element of } S(T)\}=X(T)\times_{S(T)} Y(T)$$
 
 Naturality, that is, the fact that for $\tau: T' \rightarrow T$ the pullbacks of both sides agree, follows from the naturality of the universal property.
 :::
 
-[Proposition 7](#prop7) allows us to interpret the fiber product as the operation of taking the fiber product *pointwise* at the functor level. From this perspective, the existence proof of [§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8) is reinterpreted as showing that the functor $T\mapsto X(T)\times_{S(T)} Y(T)$, which is trivially defined pointwise, is representable. In particular, for the product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$, one simply has $(X\times Y)(T)\cong X(T)\times Y(T)$.
+[Proposition 7](#prop7){: data-relation="required" } allows us to interpret the fiber product as the operation of taking the fiber product *pointwise* at the functor level. From this perspective, the existence proof of [§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8){: data-relation="weak" } is reinterpreted as showing that the functor $T\mapsto X(T)\times_{S(T)} Y(T)$, which is trivially defined pointwise, is representable. In particular, for the product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$, one simply has $(X\times Y)(T)\cong X(T)\times Y(T)$.
 
 ---
 

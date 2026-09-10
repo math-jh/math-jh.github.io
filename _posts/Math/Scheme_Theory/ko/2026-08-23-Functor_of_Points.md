@@ -12,7 +12,7 @@ date: 2026-08-23
 weight: 26
 ---
 
-이제 우리는 스킴의 언어를 더 확장하기 위한 준비를 시작한다. 이를 위해서는 [§스킴 사이의 사상, ⁋정의 6](/ko/math/scheme_theory/morphism_of_schemes#def6)에서 살펴보았던 functor of points 관점이 필요하다. 이는 [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)에서 이미 정의했던 것으로, scheme $X$를 살펴보기 위해 모든 가능한 test scheme $T$에 대하여 $X$의 $T$-point들의 모임을 보는 것이다. 즉, 다음의 functor
+이제 우리는 스킴의 언어를 더 확장하기 위한 준비를 시작한다. 이를 위해서는 [§스킴 사이의 사상, ⁋정의 6](/ko/math/scheme_theory/morphism_of_schemes#def6){: data-relation="weak" }에서 살펴보았던 functor of points 관점이 필요하다. 이는 [§스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9){: data-relation="required" }에서 이미 정의했던 것으로, scheme $X$를 살펴보기 위해 모든 가능한 test scheme $T$에 대하여 $X$의 $T$-point들의 모임을 보는 것이다. 즉, 다음의 functor
 
 $$h_X=\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$$
 
@@ -34,11 +34,11 @@ $$h_{(-)}:\Sch \rightarrow \Fun(\Sch^\op, \Set)$$
 
 이제 우리는 $X$가 정의하는 functor of points $h_X$가 실제로 $X$에 대한 충분한 scheme-theoretic 정보를 가지고 있다는 것을 보인다. 이는 기본적으로 범주론에서 이미 다룬 것으로, 여기서는 간단한 리뷰만 진행하기로 한다. 
 
-Functor of points 관점의 범주론적 기초는 당연히 Yoneda 보조정리와 representability로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)를 $\mathcal{A}=\Sch$에 적용하면 functor $h_{(-)}:\Sch \rightarrow \Fun(\Sch^\op, \Set)$이 fully faithful functor임을 안다. 이는 scheme $X$가 $h_X$에 의해 up to isomorphism으로 유일하게 결정되고, scheme morphism은 functor of points 사이의 natural transformation과 정확히 같은 데이터임을 보여준다.
+Functor of points 관점의 범주론적 기초는 당연히 Yoneda 보조정리와 representability로, [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }를 $\mathcal{A}=\Sch$에 적용하면 functor $h_{(-)}:\Sch \rightarrow \Fun(\Sch^\op, \Set)$이 fully faithful functor임을 안다. 이는 scheme $X$가 $h_X$에 의해 up to isomorphism으로 유일하게 결정되고, scheme morphism은 functor of points 사이의 natural transformation과 정확히 같은 데이터임을 보여준다.
 
 위에서 살펴봤듯, scheme morphism $\varphi:X\rightarrow Y$가 주어지면, $T$-point $\psi:T\rightarrow X$를 합성 $\varphi\circ\psi:T\rightarrow Y$로 보낼 수 있다. 이러한 방식으로 $\varphi$는 모든 test scheme에 걸쳐 호환되는 map $X(T)\rightarrow Y(T)$들을 준다. 핵심적인 관찰은 이것이 거꾸로도 작동한다는 것이다. 이러한 호환되는 map들의 모임 $\alpha_T:X(T)\rightarrow Y(T)$가 주어졌다고 하자. $\alpha_X$가 identity morphism $\id_X:X\rightarrow X$에 보내는 원소 $\alpha_X(\id_X)$는 $Y$의 $X$-point, 곧 scheme morphism $f:X\rightarrow Y$이다. Naturality에 의하여 임의의 $\psi:T\rightarrow X$에 대하여 $\alpha_T(\psi)=f\circ\psi$가 성립하므로, 나머지 모든 $T$-point에서의 map은 $f$와의 합성으로 강제된다. 즉 functor of points 사이의 natural transformation은 하나의 scheme morphism과 정확히 같은 데이터이다.
 
-그렇다면 presheaf $F:\Sch^\op\rightarrow\Set$이 실제로 어떤 scheme의 functor of points로 나타나기 위한 조건은 $F$가 representable functor인 것이다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1)) Isomorphism $F\cong h_X$가 주어지면 $X$ 위에는 $h_X(X)$의 $\id_X$에 대응하는 universal element가 주어지며, 임의의 scheme morphism $f:T\rightarrow X$는 이를 $T$ 위로 pullback하여 $F(T)$의 원소를 준다. 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8)에서 classifying map $f:B\rightarrow \B G$가 universal bundle을 pullback하여 $B$ 위의 principal $G$-bundle을 주는 것과 같은 방식이지만, 차이는 여기서는 homotopy class 대신 실제 scheme morphism $f:T\rightarrow X$ 자체가 나타난다는 것이다.
+그렇다면 presheaf $F:\Sch^\op\rightarrow\Set$이 실제로 어떤 scheme의 functor of points로 나타나기 위한 조건은 $F$가 representable functor인 것이다. ([\[범주론\] §표현가능한 함자, ⁋정의 1](/ko/math/category_theory/representable_functors#def1){: data-relation="required" }) Isomorphism $F\cong h_X$가 주어지면 $X$ 위에는 $h_X(X)$의 $\id_X$에 대응하는 universal element가 주어지며, 임의의 scheme morphism $f:T\rightarrow X$는 이를 $T$ 위로 pullback하여 $F(T)$의 원소를 준다. 이는 [\[대수적 위상수학\] §분류공간, ⁋정리 8](/ko/math/algebraic_topology/classifying_spaces#thm8){: data-relation="weak" }에서 classifying map $f:B\rightarrow \B G$가 universal bundle을 pullback하여 $B$ 위의 principal $G$-bundle을 주는 것과 같은 방식이지만, 차이는 여기서는 homotopy class 대신 실제 scheme morphism $f:T\rightarrow X$ 자체가 나타난다는 것이다.
 
 ## Functor로 본 affine space와 projective space
 
@@ -52,7 +52,7 @@ $$\mathbb{A}^1(T)\cong \Gamma(T, \mathcal{O}_T)=\mathcal{O}_T(T)$$
 로 주어지며, 이 대응은 $T$에 대해 natural하다. 
 :::
 ::: 증명
-[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에서 살펴본 adjunction
+[§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }에서 살펴본 adjunction
 
 $$\Hom_\Sch(T, \Spec A)\cong \Hom_\cRing(A, \Gamma(T, \mathcal{O}_T))$$
 
@@ -63,7 +63,7 @@ $$\mathbb{A}^1(T)=\Hom_\Sch(T, \Spec \mathbb{Z}[\x])\cong \Hom_\cRing(\mathbb{Z}
 이다. 이 대응의 naturality는 임의의 $\tau: T' \rightarrow T$에 대하여 restriction map $\Gamma(T, \mathcal{O}_T) \rightarrow \Gamma(T', \mathcal{O}_{T'})$이 위의 대응과 commute한다는 것으로, adjunction의 naturality로부터 따라온다. 
 :::
 
-이전 절에서 도입한 언어를 도입하자면, $\mathbb{A}^1$은 global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$를 represent하는 것이다. 이 때 universal element는 $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$ 안에서 identity morphism $\id_{\mathbb{A}^1}$에 대응되는 것으로, 위의 [명제 1](#prop1)의 대응을 쫓아가보면 이는 $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$ 안의 $\x$에 대응한다는 것을 안다. 
+이전 절에서 도입한 언어를 도입하자면, $\mathbb{A}^1$은 global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$를 represent하는 것이다. 이 때 universal element는 $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$ 안에서 identity morphism $\id_{\mathbb{A}^1}$에 대응되는 것으로, 위의 [명제 1](#prop1){: data-relation="required" }의 대응을 쫓아가보면 이는 $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$ 안의 $\x$에 대응한다는 것을 안다. 
 
 이제 임의의 scheme morphism $f:T\rightarrow\mathbb{A}^1$는 pullback map $f^\ast:\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})\rightarrow\Gamma(T,\mathcal{O}_T)$을 통해 $T$ 위에 정의된 (global) regular function $f^\ast \x$를 정의한다. 거꾸로, 임의의 global regular function $a\in\Gamma(T,\mathcal{O}_T)$가 주어지면 $\x\mapsto a$로 정해지는 ring homomorphism $\mathbb{Z}[\x]\rightarrow\Gamma(T,\mathcal{O}_T)$가 있고, 바로 이 선택이 유일한 scheme morphism $f:T\rightarrow\mathbb{A}^1$를 주며 이러한 $f$는 $f^\ast\x=a$를 만족한다. 이를 $n$개의 generator로 일반화하면 다음을 얻는다. 
 
@@ -75,7 +75,7 @@ $$\mathbb{A}^n(T)\cong \Gamma(T, \mathcal{O}_T)^n$$
 이 존재한다. 즉 $\mathbb{A}^n$의 $T$-point는 $T$ 위의 regular function $n$개의 순서쌍이다. 
 :::
 ::: 증명
-[명제 1](#prop1)의 증명과 동일하게, free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$에서 나가는 ring homomorphism은 각 generator $\x_i$의 image $a_i\in \Gamma(T, \mathcal{O}_T)$를 자유롭게 정하는 것이므로
+[명제 1](#prop1){: data-relation="required" }의 증명과 동일하게, free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$에서 나가는 ring homomorphism은 각 generator $\x_i$의 image $a_i\in \Gamma(T, \mathcal{O}_T)$를 자유롭게 정하는 것이므로
 
 $$\mathbb{A}^n(T)\cong \Hom_\cRing(\mathbb{Z}[\x_1,\ldots, \x_n], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)^n$$
 
@@ -92,7 +92,7 @@ $$\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$$
 이 존재한다. 여기에서 $\Gamma(T, \mathcal{O}_T)^\times$은 ring $\Gamma(T, \mathcal{O}_T)$의 가역원들의 group이다. 
 :::
 ::: 증명
-$\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$이므로, ring homomorphism $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$은 $\t$의 image $a$가 가역인 것들과 일대일대응한다. 실제로 localization의 universal property에 의하여 $\mathbb{Z}[\t]_\t$에서 나가는 ring homomorphism은 $\t$의 image를 가역원으로 보내는 $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$들과 정확히 대응하고, [명제 1](#prop1)에서 본 것처럼 이는 가역원 $a\in \Gamma(T, \mathcal{O}_T)^\times$를 하나 고르는 것이다. 
+$\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$이므로, ring homomorphism $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$은 $\t$의 image $a$가 가역인 것들과 일대일대응한다. 실제로 localization의 universal property에 의하여 $\mathbb{Z}[\t]_\t$에서 나가는 ring homomorphism은 $\t$의 image를 가역원으로 보내는 $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$들과 정확히 대응하고, [명제 1](#prop1){: data-relation="required" }에서 본 것처럼 이는 가역원 $a\in \Gamma(T, \mathcal{O}_T)^\times$를 하나 고르는 것이다. 
 :::
 
 이를 사용하면 affine space로부터 projective space를 얻어낼 수 있다. 이를 위해 $\mathbb{A}^{n+1}$에서 원점을 제거한 open subscheme $U$를 생각하자. 먼저 scheme morphism
@@ -105,7 +105,7 @@ $$\mathbb{Z}[\x_0,\ldots,\x_n]\rightarrow\mathbb{Z}[\t,\t^{-1},\x_0,\ldots,\x_n]
 
 으로 정의한다. 그럼 이는 $\mathbb{G}_m$의 scalar multiplication action이며 $U$ 위에도 제한된다. 고전적으로 projective space는 이 action에 대한 몫 $U/\mathbb{G}_m$으로 생각되었다.
 
-이를 $T$-point들에서 살펴보면, [명제 3](#prop3)에 의하여 $\mathbb{G}_m(T)=\Gamma(T,\mathcal{O}_T)^\times$이므로, 위 action은 $T$-point에서 가역함수 $u$가 tuple $(a_0,\ldots,a_n)\in U(T)$에
+이를 $T$-point들에서 살펴보면, [명제 3](#prop3){: data-relation="required" }에 의하여 $\mathbb{G}_m(T)=\Gamma(T,\mathcal{O}_T)^\times$이므로, 위 action은 $T$-point에서 가역함수 $u$가 tuple $(a_0,\ldots,a_n)\in U(T)$에
 
 $$u\cdot(a_0,\ldots,a_n)=(ua_0,\ldots,ua_n)$$
 
@@ -147,14 +147,14 @@ $\mathbb{Z}$ 위의 projective space $\mathbb{P}^n=\Proj \mathbb{Z}[\x_0,\ldots,
 ::: 증명
 Morphism $\psi: T \rightarrow \mathbb{P}^n$이 주어졌다 하자. $\mathbb{P}^n$ 위의 twisting sheaf $\mathcal{O}_{\mathbb{P}^n}(1)$은 line bundle이고 그 global sections $\x_0,\ldots, \x_n$은 globally generating sections이므로, pullback을 취하여 $T$ 위의 line bundle $\mathcal{L}=\psi^\ast \mathcal{O}_{\mathbb{P}^n}(1)$과 sections $s_i=\psi^\ast \x_i$를 얻는다. Pullback이 globally generating sections인 성질을 보존하므로 $(\mathcal{L}, s_0,\ldots, s_n)$은 위의 데이터를 이룬다. 
 
-거꾸로 $T$ 위의 line bundle $\mathcal{L}$과 그 globally generating sections $s_0,\ldots, s_n$이 주어졌다 하자. 각각의 $i$에 대하여 section $s_i$가 생성하는 곳 $T_{s_i}=\{t\in T\mid (s_i)_t \text{ generates } \mathcal{L}_t\}$는 열린집합이고, sections가 $\mathcal{L}$을 globally generate하므로 $\{T_{s_i}\}_{i=0}^n$은 $T$의 open cover를 이룬다. $T_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}\vert_{T_{s_i}}$의 trivialization을 주므로, 각 $j$에 대하여 $s_j/s_i\in \Gamma(T_{s_i}, \mathcal{O}_T)$가 잘 정의된다. 이로써 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)와 같은 방식으로 $T_{s_i} \rightarrow D_+(\x_i)$를 정의하고, 교집합 위에서의 gluing condition을 확인하여 morphism $\psi: T \rightarrow \mathbb{P}^n$을 얻는다. 
+거꾸로 $T$ 위의 line bundle $\mathcal{L}$과 그 globally generating sections $s_0,\ldots, s_n$이 주어졌다 하자. 각각의 $i$에 대하여 section $s_i$가 생성하는 곳 $T_{s_i}=\{t\in T\mid (s_i)_t \text{ generates } \mathcal{L}_t\}$는 열린집합이고, sections가 $\mathcal{L}$을 globally generate하므로 $\{T_{s_i}\}_{i=0}^n$은 $T$의 open cover를 이룬다. $T_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}\vert_{T_{s_i}}$의 trivialization을 주므로, 각 $j$에 대하여 $s_j/s_i\in \Gamma(T_{s_i}, \mathcal{O}_T)$가 잘 정의된다. 이로써 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5){: data-relation="required" }와 같은 방식으로 $T_{s_i} \rightarrow D_+(\x_i)$를 정의하고, 교집합 위에서의 gluing condition을 확인하여 morphism $\psi: T \rightarrow \mathbb{P}^n$을 얻는다. 
 
 이 두 구성이 서로 역이라는 것과 isomorphic한 데이터가 같은 morphism을 준다는 것은, $(\mathcal{L}, s_0,\ldots, s_n)$ 전체를 $\mathcal{O}_T$-module isomorphism으로 옮겨도 $s_j/s_i$들이 변하지 않으므로 같은 gluing 데이터를 준다는 사실로부터 확인된다. 자연스러움은 $\tau: T' \rightarrow T$에 대하여 위의 데이터를 pullback하는 것과 morphism을 합성하는 것이 일치한다는 것이다. 
 :::
 
-구체적으로 [§다양체에서 스킴으로, ⁋예시 5](/ko/math/scheme_theory/from_varieties_to_schemes#ex5)에서 살펴본 $\mathbb{P}^n_\mathbb{K}$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-point를 이 언어로 다시 살펴보자. 이는 one-point space이므로 그 위의 line bundle은 trivial line bundle 뿐이며, 따라서 trivialization을 하나 고정하면 $\Gamma(T,\mathcal{L})\cong\Gamma(T,\mathcal{O}_T)=A$이므로 이 위의 line bundle의 section을 고르는 것은 $A$의 원소를 고르는 것과 같다. 한편 이들이 globally generating이라는 조건은, $\Spec A$의 유일한 점에서 stalk이 $A$ 자신이므로, 어떤 $a_i$가 가역이라는 조건이 되어 정확히 $(a_0,\ldots, a_n)\in U(A)$라는 조건이 된다. 
+구체적으로 [§다양체에서 스킴으로, ⁋예시 5](/ko/math/scheme_theory/from_varieties_to_schemes#ex5){: data-relation="weak" }에서 살펴본 $\mathbb{P}^n_\mathbb{K}$의 $\mathbb{K}[\epsilon]/(\epsilon^2)$-point를 이 언어로 다시 살펴보자. 이는 one-point space이므로 그 위의 line bundle은 trivial line bundle 뿐이며, 따라서 trivialization을 하나 고정하면 $\Gamma(T,\mathcal{L})\cong\Gamma(T,\mathcal{O}_T)=A$이므로 이 위의 line bundle의 section을 고르는 것은 $A$의 원소를 고르는 것과 같다. 한편 이들이 globally generating이라는 조건은, $\Spec A$의 유일한 점에서 stalk이 $A$ 자신이므로, 어떤 $a_i$가 가역이라는 조건이 되어 정확히 $(a_0,\ldots, a_n)\in U(A)$라는 조건이 된다. 
 
-이제 [정리 5](#thm5)가 어떻게 작동하는지 보기 위해 그 isomorphism class를 살펴보면, $\mathcal{O}_T$의 automorphism은 이제 $A^\times$의 원소를 곱하는 것뿐이므로 두 tuple이 같은 $A$-point를 주는 것은 서로 $A^\times$배인 것과 동치이다. 따라서
+이제 [정리 5](#thm5){: data-relation="required" }가 어떻게 작동하는지 보기 위해 그 isomorphism class를 살펴보면, $\mathcal{O}_T$의 automorphism은 이제 $A^\times$의 원소를 곱하는 것뿐이므로 두 tuple이 같은 $A$-point를 주는 것은 서로 $A^\times$배인 것과 동치이다. 따라서
 
 $$\mathbb{P}^n(A)=U(A)/A^\times$$
 
@@ -215,11 +215,11 @@ $$\mathcal{O}_{T'}^{\oplus n+1}\twoheadrightarrow\tau^\ast\mathcal{L}$$
 
 $$F_{n+1}:\Sch^\op\rightarrow\Set$$
 
-를 정의한다. 이 관점에서 [정리 5](#thm5)는 모든 scheme $T$에 대하여 natural한 일대일대응
+를 정의한다. 이 관점에서 [정리 5](#thm5){: data-relation="required" }는 모든 scheme $T$에 대하여 natural한 일대일대응
 
 $$\mathbb{P}^n(T)\cong F_{n+1}(T)$$
 
-이 존재한다는 것이며, projective space $\mathbb{P}^n$이 이 functor를 represent한다. [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)에 의하여 $\id_{\mathbb{P}^n}$에 대응하는 universal element는 $\mathbb{P}^n$ 위의 quotient bundle
+이 존재한다는 것이며, projective space $\mathbb{P}^n$이 이 functor를 represent한다. [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4){: data-relation="required" }에 의하여 $\id_{\mathbb{P}^n}$에 대응하는 universal element는 $\mathbb{P}^n$ 위의 quotient bundle
 
 $$\mathcal{O}_{\mathbb{P}^n}^{\oplus n+1}\twoheadrightarrow\mathcal{O}_{\mathbb{P}^n}(1)$$
 
@@ -235,7 +235,7 @@ $$\Gr(k,n)(T)\cong F_{k,n}(T)$$
 
 이 존재한다.
 
-$T=\Spec\mathbb{K}$인 경우 $F_{k,n}(T)$의 원소는 rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$이다. 이는 kernel인 $(n-k)$차원 부분공간 $\bar S\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되므로, $\Gr(k,n)(\mathbb{K})$는 이러한 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)의 관례에서는 이 집합을 $\Gr(n-k,n)$으로 표기한다. 특히 $k=1$이면 rank $1$ quotient를 분류하므로 [정리 5](#thm5)의 $\mathbb{P}^{n-1}$을 회복한다.
+$T=\Spec\mathbb{K}$인 경우 $F_{k,n}(T)$의 원소는 rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$이다. 이는 kernel인 $(n-k)$차원 부분공간 $\bar S\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되므로, $\Gr(k,n)(\mathbb{K})$는 이러한 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-relation="weak" }의 관례에서는 이 집합을 $\Gr(n-k,n)$으로 표기한다. 특히 $k=1$이면 rank $1$ quotient를 분류하므로 [정리 5](#thm5){: data-relation="required" }의 $\mathbb{P}^{n-1}$을 회복한다.
 
 :::
 
@@ -243,7 +243,7 @@ $T=\Spec\mathbb{K}$인 경우 $F_{k,n}(T)$의 원소는 rank $k$ quotient space 
 
 ## Functor로 본 올곱
 
-Functor of points 관점은 [§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)에서 정의한 fiber product와 잘 맞아떨어진다. Fiber product $X\times_S Y$의 universal property는, 임의의 test scheme $T$에 대하여 그 $T$-point들이 어떻게 결정되는지를 functor 수준에서 곧바로 말해준다. 
+Functor of points 관점은 [§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1){: data-relation="required" }에서 정의한 fiber product와 잘 맞아떨어진다. Fiber product $X\times_S Y$의 universal property는, 임의의 test scheme $T$에 대하여 그 $T$-point들이 어떻게 결정되는지를 functor 수준에서 곧바로 말해준다. 
 
 ::: 명제 7
 Scheme morphism $X \rightarrow S$와 $Y \rightarrow S$가 주어졌다 하자. 그럼 임의의 scheme $T$에 대하여, 자연스러운 일대일대응
@@ -253,7 +253,7 @@ $$(X\times_S Y)(T)\cong X(T)\times_{S(T)} Y(T)$$
 이 존재한다. 여기서 우변은 $\Set$에서의 fiber product, 즉 $X(T)\times Y(T)$에서 $X(T) \rightarrow S(T)$와 $Y(T) \rightarrow S(T)$가 같은 값을 주는 순서쌍들의 집합이다. 
 :::
 ::: 증명
-[§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)의 universal property는, $T$로부터 $X\times_S Y$로의 morphism이 $\psi_X: T \rightarrow X$와 $\psi_Y: T \rightarrow Y$로서 $S$로의 합성이 일치하는, 즉 $X(T) \rightarrow S(T)$와 $Y(T) \rightarrow S(T)$를 통해 $\psi_X$와 $\psi_Y$가 같은 $S$-point로 가는 순서쌍과 유일하게 대응한다는 것을 의미한다
+[§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1){: data-relation="required" }의 universal property는, $T$로부터 $X\times_S Y$로의 morphism이 $\psi_X: T \rightarrow X$와 $\psi_Y: T \rightarrow Y$로서 $S$로의 합성이 일치하는, 즉 $X(T) \rightarrow S(T)$와 $Y(T) \rightarrow S(T)$를 통해 $\psi_X$와 $\psi_Y$가 같은 $S$-point로 가는 순서쌍과 유일하게 대응한다는 것을 의미한다
 . 이를 집합의 언어로 적으면 
 
 $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y \text{ map to the same element of } S(T)\}=X(T)\times_{S(T)} Y(T)$$
@@ -261,7 +261,7 @@ $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y
 이다. Naturality는 $\tau: T' \rightarrow T$에 대하여 양변의 pullback이 일치한다는 것으로, universal property의 naturality으로부터 따라온다. 
 :::
 
-[명제 7](#prop7)은 fiber product를 functor 수준에서 <em-ko>점별로</em-ko> fiber product를 취하는 연산으로 해석하게 해준다. 이 관점에서 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)의 존재성 증명은, 점별로 자명하게 정의되는 functor $T\mapsto X(T)\times_{S(T)} Y(T)$가 representable임을 보이는 일로 재해석된다. 특히 product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$의 경우에는 단순히 $(X\times Y)(T)\cong X(T)\times Y(T)$이 된다. 
+[명제 7](#prop7){: data-relation="required" }은 fiber product를 functor 수준에서 <em-ko>점별로</em-ko> fiber product를 취하는 연산으로 해석하게 해준다. 이 관점에서 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8){: data-relation="required" }의 존재성 증명은, 점별로 자명하게 정의되는 functor $T\mapsto X(T)\times_{S(T)} Y(T)$가 representable임을 보이는 일로 재해석된다. 특히 product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$의 경우에는 단순히 $(X\times Y)(T)\cong X(T)\times Y(T)$이 된다. 
 
 ---
 
