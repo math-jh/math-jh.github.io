@@ -14,7 +14,7 @@ published: false
 
 ---
 
-[§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *리만 곡률 텐서*이다.
+[§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-relation="required" }에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *리만 곡률 텐서*이다.
 
 ## 평행 운반의 path-dependence
 
@@ -55,7 +55,7 @@ $$R(X, Y) Z := \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X, Y]} Z$$
 정의에서 $\nabla_{[X, Y]} Z$항이 왜 등장하는지는 다음 명제가 보여준다.
 
 ::: 명제 3
-[정의 2](#def2)의 $R$은 세 인수 모두에 대해 $C^\infty(M)$-linear이다. 따라서 $R$은 실제로 $M$ 위의 $(1, 3)$-tensor field이며, 그 값 $R(X, Y)Z$의 점 $p$에서의 값은 $X_p, Y_p, Z_p$에만 의존한다.
+[정의 2](#def2){: data-relation="required" }의 $R$은 세 인수 모두에 대해 $C^\infty(M)$-linear이다. 따라서 $R$은 실제로 $M$ 위의 $(1, 3)$-tensor field이며, 그 값 $R(X, Y)Z$의 점 $p$에서의 값은 $X_p, Y_p, Z_p$에만 의존한다.
 :::
 
 ::: 증명
@@ -77,11 +77,11 @@ $$R(X, Y)(fZ) = f \cdot R(X, Y) Z$$
 가 되어 $Z$에 대한 $C^\infty$-linearity를 얻는다. $X, Y$에 대한 $C^\infty$-linearity는 비슷한 방식으로 (혹은 $R(X, Y)Z = -R(Y, X)Z$ 대칭과 결합해) 확인된다.
 :::
 
-[정의 2](#def2)의 $\nabla_{[X, Y]} Z$항이 정확히 위 증명에서 $[X, Y]f$를 통해 등장하는 $Z$에 대한 비-$C^\infty$-linearity를 *상쇄*시키는 역할을 한다. 만약 이 항이 없다면 $\nabla_X \nabla_Y - \nabla_Y \nabla_X$는 점별 정보만으로 결정되지 않는 자료가 되고, "$X, Y$가 펼치는 작은 평행사변형 loop 위의 holonomy"라는 점별 정보로서의 의미가 사라진다.
+[정의 2](#def2){: data-relation="required" }의 $\nabla_{[X, Y]} Z$항이 정확히 위 증명에서 $[X, Y]f$를 통해 등장하는 $Z$에 대한 비-$C^\infty$-linearity를 *상쇄*시키는 역할을 한다. 만약 이 항이 없다면 $\nabla_X \nabla_Y - \nabla_Y \nabla_X$는 점별 정보만으로 결정되지 않는 자료가 되고, "$X, Y$가 펼치는 작은 평행사변형 loop 위의 holonomy"라는 점별 정보로서의 의미가 사라진다.
 
 ## Path-dependence와의 관계
 
-[예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 parallel transport holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
+[예시 1](#ex1){: data-relation="weak" }의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 parallel transport holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
 
 ::: 명제 4
 점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \rightarrow 0$의 극한에서 다음이 성립한다. 적절한 coordinate system에서 $\epsilon X_p, \epsilon Y_p$가 펼치는 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \rightarrow T_p M$는 임의의 $Z_p \in T_p M$에 대해
@@ -114,13 +114,13 @@ $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들�
 
 ## 평탄 접속과 path-independence
 
-[정의 2](#def2)의 $R$이 항등적으로 $0$이 되는 가장 중요한 경우를 따로 정의해 두자.
+[정의 2](#def2){: data-relation="required" }의 $R$이 항등적으로 $0$이 되는 가장 중요한 경우를 따로 정의해 두자.
 
 ::: 정의 6
 Connection $\nabla$의 곡률 텐서가 $R \equiv 0$일 때 $\nabla$를 *flat<sub>평탄</sub>* connection이라 부른다.
 :::
 
-[명제 4](#prop4)의 직접적 결과로, flat connection 하에서는 모든 simply connected 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 한다. 여기에 $\nabla$의 torsion-freeness를 더하면 그렇게 얻은 parallel frame $(E_1, \ldots, E_n)$이 $[E_i, E_j] = \nabla_{E_i} E_j - \nabla_{E_j} E_i = 0$을 만족해 coordinate frame이 되므로, $\nabla$가 단순 partial derivative로 환원되는 coordinate system $(t^1, \ldots, t^n)$, 곧 *flat coordinate*가 국소적으로 존재한다는 결과로 이어진다.
+[명제 4](#prop4){: data-relation="required" }의 직접적 결과로, flat connection 하에서는 모든 simply connected 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 한다. 여기에 $\nabla$의 torsion-freeness를 더하면 그렇게 얻은 parallel frame $(E_1, \ldots, E_n)$이 $[E_i, E_j] = \nabla_{E_i} E_j - \nabla_{E_j} E_i = 0$을 만족해 coordinate frame이 되므로, $\nabla$가 단순 partial derivative로 환원되는 coordinate system $(t^1, \ldots, t^n)$, 곧 *flat coordinate*가 국소적으로 존재한다는 결과로 이어진다.
 
 ---
 
