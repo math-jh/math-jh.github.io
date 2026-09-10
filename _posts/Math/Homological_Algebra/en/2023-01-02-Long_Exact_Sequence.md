@@ -28,7 +28,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 is a short exact sequence for every $n$.
 
-The main theorem of this post is the following [Theorem 1](#thm1). The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly constructed connecting map. Thus, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing), we make free use of the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
+The main theorem of this post is the following [Theorem 1](#thm1){: data-relation="weak" }. The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly constructed connecting map. Thus, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing){: data-relation="required" }, we make free use of the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
 
 ::: Theorem 1 (The long exact sequence)
 Suppose we are given the short exact sequence
@@ -52,7 +52,7 @@ Therefore, once we show that both the top and bottom rows are exact, the snake l
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-2.svg width="22.98em" alt="long_exact_sequence_exactness" %}
 
-Applying [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) to this diagram, we obtain the two exact sequences
+Applying [§Diagram chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5){: data-relation="required" } to this diagram, we obtain the two exact sequences
 
 $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 
@@ -91,7 +91,7 @@ and likewise for the square involving $v$. Therefore it suffices to show that th
 
 $$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
 
-commutes. Following the construction in the proof of [Theorem 1](#thm1), $\partial$ is computed as follows. For any $[c]\in H_n(C)$, since $v_n$ is surjective there exists $b\in B_n$ with $v_n(b)=c$, and since $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$, exactness gives a unique $a\in A_{n-1}$ with $u_{n-1}(a)=d_n^Bb$, and $\partial[c]=[a]$. One can also check that this value is independent of the choice of lift $b$: if $v_n(b)=v_n(\tilde{b})=c$, then there exists $\alpha\in A_n$ with $b-\tilde{b}=u_n(\alpha)$, and the two corresponding elements $a,\tilde{a}$ then satisfy $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$, so by the injectivity of $u_{n-1}$ we have $a-\tilde{a}=d_n^A\alpha$, whence $[a]=[\tilde{a}]$.
+commutes. Following the construction in the proof of [Theorem 1](#thm1){: data-relation="required" }, $\partial$ is computed as follows. For any $[c]\in H_n(C)$, since $v_n$ is surjective there exists $b\in B_n$ with $v_n(b)=c$, and since $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$, exactness gives a unique $a\in A_{n-1}$ with $u_{n-1}(a)=d_n^Bb$, and $\partial[c]=[a]$. One can also check that this value is independent of the choice of lift $b$: if $v_n(b)=v_n(\tilde{b})=c$, then there exists $\alpha\in A_n$ with $b-\tilde{b}=u_n(\alpha)$, and the two corresponding elements $a,\tilde{a}$ then satisfy $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$, so by the injectivity of $u_{n-1}$ we have $a-\tilde{a}=d_n^A\alpha$, whence $[a]=[\tilde{a}]$.
 
 Now fix $[c]\in H_n(C)$ and the elements $b,a$ appearing in the construction above. Then we may take $g_n(b)$ as a lift of $h_n(c)\in C_n'$. Indeed,
 
@@ -167,7 +167,7 @@ If for some chain map $f:C\rightarrow D$ there exists a chain map $g:D\rightarro
 
 ## Homotopy category
 
-Thanks to [Proposition 6](#prop6), we can define the *homotopy category* $\mathbf{K}(\mathcal{A})$ through the following procedure. First, the following lemma is immediate.
+Thanks to [Proposition 6](#prop6){: data-relation="required" }, we can define the *homotopy category* $\mathbf{K}(\mathcal{A})$ through the following procedure. First, the following lemma is immediate.
 
 ::: Lemma 7
 The homotopy relation between two chain maps is an equivalence relation.
@@ -197,7 +197,7 @@ However, in general $\mathbf{K}(\mathcal{A})$ is not an abelian category.
 
 ## Mapping cone
 
-In [Definition 4](#def4), we agreed to call chain complexes connected by a chain map inducing an isomorphism on homology quasi-isomorphic, and to treat them as the same. The mapping cone serves as a tool for determining whether a given chain map $f:C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism.
+In [Definition 4](#def4){: data-relation="required" }, we agreed to call chain complexes connected by a chain map inducing an isomorphism on homology quasi-isomorphic, and to treat them as the same. The mapping cone serves as a tool for determining whether a given chain map $f:C_\bullet \rightarrow D_\bullet$ is a quasi-isomorphism.
 
 ::: Definition 8
 For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* $\Cone(f)$ of $f$ is the chain complex
@@ -214,7 +214,7 @@ Suppose a chain map $f: C_\bullet \rightarrow D_\bullet$ is given, and for its m
 
 $$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
 
-Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Since it is immediate from the definitions of these maps that the sequence above is a short exact sequence, [Theorem 1](#thm1) gives the long exact sequence
+Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Since it is immediate from the definitions of these maps that the sequence above is a short exact sequence, [Theorem 1](#thm1){: data-relation="required" } gives the long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(\Cone(f)) \rightarrow H_n(C) \rightarrow H_n(D) \rightarrow H_n(\Cone(f)) \rightarrow H_{n-1}(C) \rightarrow \cdots$$
 

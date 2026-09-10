@@ -27,7 +27,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 이 short exact sequence라는 것과 동치라는 것을 확인할 수 있다. 
 
-이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1)이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 category가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing)에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
+이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1){: data-relation="weak" }이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 category가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing){: data-relation="required" }에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
 
 ::: 정리 1 (The long exact sequence)
 다음의 short exact sequence
@@ -51,7 +51,7 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-2.svg width="22.98em" alt="long_exact_sequence_exactness" %}
 
-을 생각하자. 이 diagram에 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)를 적용하면, 두 exact sequence
+을 생각하자. 이 diagram에 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5){: data-relation="required" }를 적용하면, 두 exact sequence
 
 $$0\rightarrow \ker(d_n^A)\rightarrow \ker(d_n^B)\rightarrow \ker(d_n^C)$$
 
@@ -90,7 +90,7 @@ $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
 $$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
 
-이 commute하는 것만 보이면 충분하다. [정리 1](#thm1)의 증명에서의 construction을 따라가면 $\partial$는 다음과 같이 계산된다. 임의의 $[c]\in H_n(C)$에 대하여, $v_n$이 surjective이므로 $v_n(b)=c$이도록 하는 $b\in B_n$이 존재하고, $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$이므로 exactness에 의해 $u_{n-1}(a)=d_n^Bb$이도록 하는 유일한 $a\in A_{n-1}$이 존재하며, $\partial[c]=[a]$이다. 이 값이 lift $b$의 선택에 무관하다는 것도 확인할 수 있는데, $v_n(b)=v_n(\tilde{b})=c$라면 $b-\tilde{b}=u_n(\alpha)$이도록 하는 $\alpha\in A_n$이 존재하고, 그럼 대응되는 두 원소 $a,\tilde{a}$가 $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$과 $u_{n-1}$의 injectivity로부터 $a-\tilde{a}=d_n^A\alpha$를 만족하여 $[a]=[\tilde{a}]$이기 때문이다.
+이 commute하는 것만 보이면 충분하다. [정리 1](#thm1){: data-relation="required" }의 증명에서의 construction을 따라가면 $\partial$는 다음과 같이 계산된다. 임의의 $[c]\in H_n(C)$에 대하여, $v_n$이 surjective이므로 $v_n(b)=c$이도록 하는 $b\in B_n$이 존재하고, $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$이므로 exactness에 의해 $u_{n-1}(a)=d_n^Bb$이도록 하는 유일한 $a\in A_{n-1}$이 존재하며, $\partial[c]=[a]$이다. 이 값이 lift $b$의 선택에 무관하다는 것도 확인할 수 있는데, $v_n(b)=v_n(\tilde{b})=c$라면 $b-\tilde{b}=u_n(\alpha)$이도록 하는 $\alpha\in A_n$이 존재하고, 그럼 대응되는 두 원소 $a,\tilde{a}$가 $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$과 $u_{n-1}$의 injectivity로부터 $a-\tilde{a}=d_n^A\alpha$를 만족하여 $[a]=[\tilde{a}]$이기 때문이다.
 
 이제 $[c]\in H_n(C)$와 위의 construction에서 등장하는 $b,a$를 고정하자. 그럼 $h_n(c)\in C_n'$의 lift로는 $g_n(b)$를 택할 수 있다. 실제로
 
@@ -166,7 +166,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 ## Homotopy category
 
-[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는 자명하다.
+[명제 6](#prop6){: data-relation="required" }에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는 자명하다.
 
 ::: 보조정리 7
 두 chain map 사이의 homotopy relation은 동치관계다.
@@ -196,7 +196,7 @@ $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 
 ## Mapping cone
 
-[정의 4](#def4)에서, 우리는 homology 위에서 isomorphism을 유도하는 chain map으로 연결된 chain complex들을 quasi-isomorphic하다 부르고, 이들을 같은 것으로 취급하기로 하였다. Mapping cone은 chain map $f:C_\bullet \rightarrow D_\bullet$이 주어졌을 때 이것이 quasi-isomorphism인지를 판별하는 도구가 된다.
+[정의 4](#def4){: data-relation="required" }에서, 우리는 homology 위에서 isomorphism을 유도하는 chain map으로 연결된 chain complex들을 quasi-isomorphic하다 부르고, 이들을 같은 것으로 취급하기로 하였다. Mapping cone은 chain map $f:C_\bullet \rightarrow D_\bullet$이 주어졌을 때 이것이 quasi-isomorphism인지를 판별하는 도구가 된다.
 
 ::: 정의 8
 임의의 chain map $f:C_\bullet\rightarrow D_\bullet$에 대하여, $f$의 *mapping cone<sub>사상뿔</sub>* $\Cone(f)$는 다음의 chain complex
@@ -214,7 +214,7 @@ Chain map $f: C_\bullet \rightarrow D_\bullet$이 주어졌다 하고, $f$의 ma
 
 $$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
 
-을 생각하자. 여기서 $D \rightarrow\Cone(f)$는 $y$를 $(0,y)$로 보내고, $\delta$는 $(x,y)$를 $-x$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1)에 의하여 다음의 long exact sequence
+을 생각하자. 여기서 $D \rightarrow\Cone(f)$는 $y$를 $(0,y)$로 보내고, $\delta$는 $(x,y)$를 $-x$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1){: data-relation="required" }에 의하여 다음의 long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(\Cone(f)) \rightarrow H_n(C) \rightarrow H_n(D) \rightarrow H_n(\Cone(f)) \rightarrow H_{n-1}(C) \rightarrow \cdots$$
 
