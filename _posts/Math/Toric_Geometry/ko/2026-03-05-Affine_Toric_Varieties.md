@@ -70,7 +70,7 @@ $$S_\sigma = \sigma^\vee \cap M = \{ u \in M \mid \langle u, v \rangle \ge 0 \te
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[{\rchi}^u \mid u \in S_\sigma]$$
 
-을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 monomial이다.
+을 정의한다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5){: data-relation="weak" }) 여기서 $\rchi^u$는 $M$의 원소 $u$에 대응되는 monomial이다.
 :::
 
 이를 풀어쓰면 다음과 같다. 그 정의에 의하여 $S_\sigma$는 덧셈에 대한 semigroup이며, semigroup algebra $\mathbb{C}[S_\sigma]$는 가장 깔끔하게는 집합 $S_\sigma$ 위의 자유 $\mathbb{C}$-벡터공간에 곱셈
@@ -109,7 +109,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 
 ## 매끄러움
 
-위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $(\mathbb{C}^\ast)^n$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
+위의 [예시 6](#ex6){: data-relation="weak" }의 $\sigma = \{0\}$과 [예시 7](#ex7){: data-relation="weak" }의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $(\mathbb{C}^\ast)^n$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
 
 ::: 정의 8
 Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 primitive ray generator들 $v_1, \ldots, v_k$ ($k = \dim \sigma$)이 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
@@ -120,7 +120,7 @@ Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *s
 1. $\sigma$가 *simplicial*이다. 즉 ray 수와 차원이 일치한다.
 2. ($\sigma$가 full-dimensional인 경우) primitive ray generator $v_1, \ldots, v_n$들을 열로 모은 행렬 $[v_1 \mid \cdots \mid v_n] \in \mathrm{Mat}_n(\mathbb{Z})$의 determinant가 $\pm 1$이다.
 
-특히 $N = \mathbb{Z}^2$에서 2차원 cone에 대해서는 두 ray generator로 만든 $2 \times 2$ 행렬의 determinant가 $\pm 1$인지만 확인하면 되고, 실제로 [예시 7](#ex7)은 이를 만족한다. 
+특히 $N = \mathbb{Z}^2$에서 2차원 cone에 대해서는 두 ray generator로 만든 $2 \times 2$ 행렬의 determinant가 $\pm 1$인지만 확인하면 되고, 실제로 [예시 7](#ex7){: data-relation="weak" }은 이를 만족한다. 
 
 ::: 명제 9
 Affine toric variety $U_\sigma$가 smooth algebraic variety인 것은 $\sigma$가 smooth cone인 것과 필요충분조건이다. 더 구체적으로, $\sigma$가 smooth이고 $k = \dim \sigma$이면
@@ -208,7 +208,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 가 된다. 즉, *character group* $\Hom(T_N, \mathbb{C}^\ast)$는 dual lattice $M$과 isomorphic하다.
 
-이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \rightarrow U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14)에서 직접 확인한다.
+이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \rightarrow U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14){: data-relation="required" }에서 직접 확인한다.
 
 구체적으로, 다음의 $\mathbb{C}$-algebra homomorphism
 
@@ -287,7 +287,7 @@ $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$$
 이 보조정리의 증명은 이 글의 범위를 벗어나므로 생략하고 [CLS]에 위임한다. 이로부터 다음 명제가 따른다.
 
 ::: 명제 13
-Cone $\sigma$의 face $\tau$에 대하여, $U_\tau$는 $U_\sigma$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5)) 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면
+Cone $\sigma$의 face $\tau$에 대하여, $U_\tau$는 $U_\sigma$의 principal open subset이다. ([\[대수다양체\] §아핀다양체, ⁋정의 5](/ko/math/algebraic_varieties/affine_varieties#def5){: data-relation="required" }) 구체적으로, $u \in S_\sigma$를 $\tau = \sigma \cap u^{\perp}$를 만족하는 것으로 선택하면
 
 $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}$$
 
@@ -295,7 +295,7 @@ $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}$$
 :::
 
 ::: 증명
-$u \in S_\sigma$이고 $\tau = \sigma \cap u^\perp$라고 하자. [보조정리 12](#lem12)에 의해 $\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$이 성립하므로,
+$u \in S_\sigma$이고 $\tau = \sigma \cap u^\perp$라고 하자. [보조정리 12](#lem12){: data-relation="required" }에 의해 $\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$이 성립하므로,
 
 $$S_\tau = \tau^\vee \cap M = (\sigma^\vee + \mathbb{R}_{\ge 0}(-u)) \cap M = S_\sigma + \mathbb{Z}_{\ge 0}(-u)$$
 
@@ -310,14 +310,14 @@ $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (
 가 성립한다.
 :::
 
-가령 [예시 7](#ex7)의 2차원 cone $\sigma$의 경우, $\sigma$의 face $\tau_1=\mathbb{R}_{\geq 0}e_1$과 $\tau_2=\mathbb{R}_{\geq 0}e_2$는 그 각각 또한 1차원 cone이 되며, 이들의 face는 원점이다. 이 구조 하에서 전체 $U_\sigma$ 안에서 $U_{\tau_1}$과 $U_{\tau_2}$ 각각은 principal open set이며, 이러한 face 구조에 따라 $U_\sigma$가 CW complex와 유사한 stratification을 가지게 된다. 
+가령 [예시 7](#ex7){: data-relation="weak" }의 2차원 cone $\sigma$의 경우, $\sigma$의 face $\tau_1=\mathbb{R}_{\geq 0}e_1$과 $\tau_2=\mathbb{R}_{\geq 0}e_2$는 그 각각 또한 1차원 cone이 되며, 이들의 face는 원점이다. 이 구조 하에서 전체 $U_\sigma$ 안에서 $U_{\tau_1}$과 $U_{\tau_2}$ 각각은 principal open set이며, 이러한 face 구조에 따라 $U_\sigma$가 CW complex와 유사한 stratification을 가지게 된다. 
 
 우리 주장은 위의 open embedding $U_\tau \hookrightarrow U_\sigma$는 $T_N$-equivariant라는 것이다. 즉, $T_N$이 $U_\tau$와 $U_\sigma$ 위에 각각 작용할 때, 이 작용들은 inclusion과 compatible하다. 이는 단순한 계산으로 보일 수 있으며, 따라서 위의 inclusion은 toric variety로서의 inclusion이기도 하다.
 
 ::: 예시 14
-[예시 7](#ex7)에서 $N = \mathbb{Z}^2$이고 $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$일 때 $U_\sigma = \mathbb{C}^2$임을 보았다. 이제 torus $T_N = (\mathbb{C}^\ast)^2$가 $U_\sigma = \mathbb{C}^2$ 위에 어떻게 작용하는지 구체적으로 살펴보자.
+[예시 7](#ex7){: data-relation="required" }에서 $N = \mathbb{Z}^2$이고 $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$일 때 $U_\sigma = \mathbb{C}^2$임을 보았다. 이제 torus $T_N = (\mathbb{C}^\ast)^2$가 $U_\sigma = \mathbb{C}^2$ 위에 어떻게 작용하는지 구체적으로 살펴보자.
 
-우선 [예시 7](#ex7)에서 본 대로 $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$이며 ($\z_i = \rchi^{e_i^\ast}$), $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$이다. 이제 [명제 10](#prop10)에 따르면, $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$는 coordinate ring 위에 다음의 식
+우선 [예시 7](#ex7){: data-relation="required" }에서 본 대로 $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$이며 ($\z_i = \rchi^{e_i^\ast}$), $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$이다. 이제 [명제 10](#prop10){: data-relation="required" }에 따르면, $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$는 coordinate ring 위에 다음의 식
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2$$
 
@@ -331,7 +331,7 @@ $$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2)$$
 
 로 주어진다. 이는 $(\mathbb{C}^\ast)^2$의 각 성분이 $\mathbb{C}^2$의 대응하는 coordinate를 scaling하는 가장 자연스러운 작용이다.
 
-이제 이 action의 orbit 구조를 살펴보자. [명제 11](#prop11)이 주는 open dense orbit은 
+이제 이 action의 orbit 구조를 살펴보자. [명제 11](#prop11){: data-relation="required" }이 주는 open dense orbit은 
 
 $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
