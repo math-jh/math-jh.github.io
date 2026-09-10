@@ -14,11 +14,11 @@ weight: 7
 published: false
 ---
 
-Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3)) 그 국소적 성질에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점이 놓이는 방식이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
+Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3){: data-relation="required" }) 그 국소적 성질에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점이 놓이는 방식이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
 
 ## 영점의 고립성
 
-영점의 order와 그에 따른 인수분해는 이미 멱급수 전개의 직접적 귀결로 확립되었다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5), [⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)). 여기서는 그 인수분해가 함의하는 위상적 사실, 곧 영점이 서로 떨어져 고립되어 있다는 명제를 정식으로 적고 증명한다. 핵심은 인수분해 $f(z) = (z - z_0)^m g(z)$에서 남는 인수 $g$가 영점에서 $0$이 아니므로, 연속성에 의해 그 근방 전체에서 $0$에서 떨어져 있다는 데 있다.
+영점의 order와 그에 따른 인수분해는 이미 멱급수 전개의 직접적 귀결로 확립되었다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-relation="weak" }, [⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }). 여기서는 그 인수분해가 함의하는 위상적 사실, 곧 영점이 서로 떨어져 고립되어 있다는 명제를 정식으로 적고 증명한다. 핵심은 인수분해 $f(z) = (z - z_0)^m g(z)$에서 남는 인수 $g$가 영점에서 $0$이 아니므로, 연속성에 의해 그 근방 전체에서 $0$에서 떨어져 있다는 데 있다.
 
 ::: 정의 1 (isolated point)
 집합 $S \subseteq \mathbb{C}$의 점 $z_0 \in S$가 $S$의 *isolated point<sub>고립점</sub>*라는 것은, $z_0$의 어떤 근방 $D(z_0, \varepsilon)$ 안에서 $S$의 점이 $z_0$ 하나뿐인 것, 곧
@@ -38,11 +38,11 @@ $f$가 점 $z_0$의 한 근방에서 holomorphic이고 $f(z_0) = 0$이라 하자
 :::
 
 ::: 증명
-$z_0$의 한 원판 $D(z_0, R)$에서 $f$가 holomorphic이므로 정리에 의해 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)) 그 원판에서 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$, $a_n = f^{(n)}(z_0)/n!$이다.
+$z_0$의 한 원판 $D(z_0, R)$에서 $f$가 holomorphic이므로 정리에 의해 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-relation="required" }) 그 원판에서 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$, $a_n = f^{(n)}(z_0)/n!$이다.
 
 만일 모든 $n$에 대해 $a_n = 0$이면 Taylor 급수가 항등적으로 $0$이므로 $f$가 $D(z_0, R)$에서 항등적으로 $0$이 되어 경우 (1)이 성립한다.
 
-그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5)), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
+그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-relation="weak" }), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
 
 $$f(z) = (z - z_0)^m\,g(z)$$
 
@@ -66,7 +66,7 @@ $$S = \{z \in \Omega \mid f(z) = g(z)\}$$
 :::
 
 ::: 증명
-$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) $S = Z(h) = \{z \mid h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \rightarrow z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
+$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-relation="required" }) $S = Z(h) = \{z \mid h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \rightarrow z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
 
 이제 이 국소적 소멸을 $\Omega$ 전체로 확장한다.
 
@@ -93,14 +93,14 @@ $$F(z) = e^{z+w}, \qquad G(z) = e^z e^w$$
 
 ## 최대절댓값 원리
 
-Holomorphic function의 강직성은 그 절댓값에도 나타난다. 비상수 holomorphic function의 절댓값은 영역 interior의 어느 점에서도 국소적 최댓값에 이를 수 없으며, 따라서 bounded domain에서 절댓값의 최댓값은 항상 boundary에서 달성된다. 이 최대절댓값 원리는 평균값 성질에서 곧장 따라 나온다. Holomorphic function의 한 점에서의 값은 그 점을 center로 하는 임의의 원 위에서의 평균이므로 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7)), center에서의 절댓값이 원 위 모든 값보다 작지 않다면 원 위에서 절댓값이 줄곧 같은 값을 유지할 수밖에 없기 때문이다.
+Holomorphic function의 강직성은 그 절댓값에도 나타난다. 비상수 holomorphic function의 절댓값은 영역 interior의 어느 점에서도 국소적 최댓값에 이를 수 없으며, 따라서 bounded domain에서 절댓값의 최댓값은 항상 boundary에서 달성된다. 이 최대절댓값 원리는 평균값 성질에서 곧장 따라 나온다. Holomorphic function의 한 점에서의 값은 그 점을 center로 하는 임의의 원 위에서의 평균이므로 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7){: data-relation="required" }), center에서의 절댓값이 원 위 모든 값보다 작지 않다면 원 위에서 절댓값이 줄곧 같은 값을 유지할 수밖에 없기 때문이다.
 
 ::: 정리 5 (최대절댓값 원리)
 $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$가 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면, 곧 $z_0$의 어떤 근방 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이면, $f$는 $\Omega$에서 상수이다.
 :::
 
 ::: 증명
-$z_0$의 근방 $D(z_0, \delta) \subseteq \Omega$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이 성립한다고 하자. $0 < r < \delta$인 각 $r$에 대해 평균값 성질 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7)) 에서
+$z_0$의 근방 $D(z_0, \delta) \subseteq \Omega$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이 성립한다고 하자. $0 < r < \delta$인 각 $r$에 대해 평균값 성질 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7){: data-relation="required" }) 에서
 
 $$f(z_0) = \frac{1}{2\pi}\int_0^{2\pi} f(z_0 + re^{i\theta})\dd{\theta}$$
 
@@ -114,13 +114,13 @@ $$\frac{1}{2\pi}\int_0^{2\pi}\bigl(\lvert f(z_0)\rvert - \lvert f(z_0 + re^{i\th
 
 이다. 피적분함수는 연속이고 음이 아니므로, 그 적분이 $0$이려면 항등적으로 $0$이어야 한다. 곧 모든 $\theta$에서 $\lvert f(z_0 + re^{i\theta})\rvert = \lvert f(z_0)\rvert$이다. $r \in (0, \delta)$이 임의였으므로 $\lvert f\rvert$는 $D(z_0, \delta)$ 전체에서 상수 $\lvert f(z_0)\rvert$이다.
 
-이제 holomorphic function의 절댓값이 한 열린집합에서 상수이면 그 함수 자체가 상수임을 본다. $c = \lvert f(z_0)\rvert$이라 하자. $c = 0$이면 $D(z_0, \delta)$에서 $f \equiv 0$이다. $c > 0$이면 $D(z_0, \delta)$에서 $\lvert f\rvert^2 = f\bar f = c^2$이 상수이다. $f = u + iv$로 적으면 $u^2 + v^2 = c^2$을 $x, y$로 편미분하여 $u u_x + v v_x = 0$, $u u_y + v v_y = 0$을 얻고, Cauchy–Riemann 방정식 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) $u_x = v_y$, $u_y = -v_x$을 대입하면 이 둘은
+이제 holomorphic function의 절댓값이 한 열린집합에서 상수이면 그 함수 자체가 상수임을 본다. $c = \lvert f(z_0)\rvert$이라 하자. $c = 0$이면 $D(z_0, \delta)$에서 $f \equiv 0$이다. $c > 0$이면 $D(z_0, \delta)$에서 $\lvert f\rvert^2 = f\bar f = c^2$이 상수이다. $f = u + iv$로 적으면 $u^2 + v^2 = c^2$을 $x, y$로 편미분하여 $u u_x + v v_x = 0$, $u u_y + v v_y = 0$을 얻고, Cauchy–Riemann 방정식 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-relation="required" }) $u_x = v_y$, $u_y = -v_x$을 대입하면 이 둘은
 
 $$u\,u_x - v\,u_y = 0, \qquad u\,u_y + v\,u_x = 0$$
 
 이 된다. 이를 $(u_x, u_y)$에 대한 선형방정식으로 보면 계수행렬식이 $u^2 + v^2 = c^2 > 0$이므로 유일해는 $u_x = u_y = 0$이고, 다시 Cauchy–Riemann에서 $v_x = v_y = 0$이다. 따라서 $f' = u_x + i v_x = 0$이 $D(z_0, \delta)$에서 성립하여 $f$가 그 원판에서 상수이다.
 
-어느 경우든 $f$는 $z_0$의 한 근방에서 상수이다. 그렇다면 $f$와 상수함수 $f(z_0)$이 집적점을 갖는 집합(그 근방 전체)에서 일치하므로, connected 영역 $\Omega$에서 일치정리 ([정리 3](#thm3)) 에 의해 $f$는 $\Omega$ 전체에서 상수 $f(z_0)$이다.
+어느 경우든 $f$는 $z_0$의 한 근방에서 상수이다. 그렇다면 $f$와 상수함수 $f(z_0)$이 집적점을 갖는 집합(그 근방 전체)에서 일치하므로, connected 영역 $\Omega$에서 일치정리 ([정리 3](#thm3){: data-relation="required" }) 에 의해 $f$는 $\Omega$ 전체에서 상수 $f(z_0)$이다.
 :::
 
 최대절댓값 원리는 holomorphic function의 절댓값이 평탄한 봉우리를 가질 수 없음을 말한다. 절댓값이 interior의 한 점에서 주변보다 크거나 같아지는 순간 함수는 상수로 무너지므로, 비상수 holomorphic function의 절댓값에는 interior의 국소적 최댓값이 아예 존재하지 않는다. 이 원리를 bounded domain에 적용하면 최댓값의 위치가 boundary로 밀려난다는 다음 형태가 나온다.
@@ -136,7 +136,7 @@ $$\max_{z \in \overline{\Omega}}\lvert f(z)\rvert = \max_{z \in \partial\Omega}\
 ::: 증명
 $\overline{\Omega}$이 bounded이고 닫혀 있으므로 콤팩트이고, $\lvert f\rvert$가 그 위에서 연속이므로 어떤 점 $z_\ast \in \overline{\Omega}$에서 최댓값 $M = \lvert f(z_\ast)\rvert$에 이른다. 만일 $z_\ast \in \partial\Omega$이면 최댓값이 boundary에서 달성되어 증명이 끝난다.
 
-그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 interior point $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $f$는 connected 집합 $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
+그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 interior point $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, 최대절댓값 원리 ([정리 5](#thm5){: data-relation="required" }) 에 의해 $f$는 connected 집합 $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
 :::
 
 따름정리 6은 holomorphic function의 절댓값을 추정하는 데 자주 쓰인다. 영역 안에서 $\lvert f\rvert$의 크기를 가늠하려면 boundary에서의 크기만 통제하면 충분하다. 가령 한 영역에서 holomorphic이고 boundary에서 절댓값이 $1$을 넘지 않는 함수는 영역 interior에서도 절댓값이 $1$을 넘지 않는다. 이 관찰이 다음 절의 Schwarz 보조정리에서 결정적으로 쓰인다.
@@ -153,19 +153,19 @@ $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이고 $f(0) = 0$이라 �
 :::
 
 ::: 증명
-$f(0) = 0$이므로 $f$는 원점에서 order $\geq 1$인 영점을 가지고, 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $\mathbb{D}$에서 holomorphic인 $g$가 있어 $f(z) = z\,g(z)$이다. 구체적으로 $f(z) = \sum_{n=1}^{\infty} a_n z^n$이면 $g(z) = \sum_{n=1}^{\infty} a_n z^{n-1} = \sum_{k=0}^{\infty} a_{k+1} z^k$이고, 특히 $g(0) = a_1 = f'(0)$이다.
+$f(0) = 0$이므로 $f$는 원점에서 order $\geq 1$인 영점을 가지고, 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-relation="required" }) 에 의해 $\mathbb{D}$에서 holomorphic인 $g$가 있어 $f(z) = z\,g(z)$이다. 구체적으로 $f(z) = \sum_{n=1}^{\infty} a_n z^n$이면 $g(z) = \sum_{n=1}^{\infty} a_n z^{n-1} = \sum_{k=0}^{\infty} a_{k+1} z^k$이고, 특히 $g(0) = a_1 = f'(0)$이다.
 
 이제 $0 < r < 1$을 고정하고 closed 원판 $\overline{D(0, r)}$에 따름정리 6을 적용한다. 경계원 $\lvert z\rvert = r$ 위에서는 $\lvert f(z)\rvert < 1$이므로 (치역이 $\mathbb{D}$에 들어 있다)
 
 $$\lvert g(z)\rvert = \frac{\lvert f(z)\rvert}{\lvert z\rvert} < \frac{1}{r}$$
 
-이고, $g$가 $\overline{D(0,r)}$에서 holomorphic이므로 최댓값이 boundary에서 달성되어 ([따름정리 6](#cor6)) $\overline{D(0, r)}$ 안의 모든 $z$에서 $\lvert g(z)\rvert \leq 1/r$이다. 여기서 $r \rightarrow 1^-$로 보내면, $\mathbb{D}$의 각 고정된 $z$에 대해 $\lvert g(z)\rvert \leq 1/r$이 $r < 1$이 $\lvert z\rvert$보다 큰 한 성립하므로
+이고, $g$가 $\overline{D(0,r)}$에서 holomorphic이므로 최댓값이 boundary에서 달성되어 ([따름정리 6](#cor6){: data-relation="required" }) $\overline{D(0, r)}$ 안의 모든 $z$에서 $\lvert g(z)\rvert \leq 1/r$이다. 여기서 $r \rightarrow 1^-$로 보내면, $\mathbb{D}$의 각 고정된 $z$에 대해 $\lvert g(z)\rvert \leq 1/r$이 $r < 1$이 $\lvert z\rvert$보다 큰 한 성립하므로
 
 $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 
 이다. 곧 모든 $z \in \mathbb{D}$에서 $\lvert f(z)\rvert = \lvert z\rvert\,\lvert g(z)\rvert \leq \lvert z\rvert$이고, $z = 0$에서 $\lvert f'(0)\rvert = \lvert g(0)\rvert \leq 1$이다. 이로써 (1)이 증명된다.
 
-(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5)) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
+(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. 최대절댓값 원리 ([정리 5](#thm5){: data-relation="required" }) 에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
 :::
 
 Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에서 더 멀어지지 않음을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 회전이 아닌 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic morphism에 의해 늘어나지 않는다는 사실로 이어진다.
