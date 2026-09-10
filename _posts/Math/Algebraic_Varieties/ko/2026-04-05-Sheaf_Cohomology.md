@@ -13,19 +13,19 @@ weight: 13
 
 ---
 
-우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)에서 우리는 line bundle $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
+우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles){: data-relation="required" }에서 우리는 line bundle $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" }에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
 
-우리는 지금까지 기하적 직관을 위해 주로 line bundle의 언어를 사용하였으나, [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1) 직후에 살펴보았듯 line bundle의 section sheaf를 생각하면 이는 근본적으로는 sheaf의 언어로 바꾸어 쓸 수 있다. 이번 글에서 우리는 sheaf cohomology의 개념을 정의한다.
+우리는 지금까지 기하적 직관을 위해 주로 line bundle의 언어를 사용하였으나, [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" } 직후에 살펴보았듯 line bundle의 section sheaf를 생각하면 이는 근본적으로는 sheaf의 언어로 바꾸어 쓸 수 있다. 이번 글에서 우리는 sheaf cohomology의 개념을 정의한다.
 
 ## Derived Functor로서의 정의
 
-Sheaf가 위상공간의 모든 정보들을 체계적으로 기술할 수 있는 도구임에 반해, 지금까지의 이야기에서 sheaf가 전면으로 등장한 것은 [§선형계](/ko/math/algebraic_varieties/linear_systems)에서 global section space $\Gamma(X, \mathcal{L})$이 complete linear system의 projective embedding을 결정한다는 것을 살펴볼 때 뿐이었다.
+Sheaf가 위상공간의 모든 정보들을 체계적으로 기술할 수 있는 도구임에 반해, 지금까지의 이야기에서 sheaf가 전면으로 등장한 것은 [§선형계](/ko/math/algebraic_varieties/linear_systems){: data-relation="weak" }에서 global section space $\Gamma(X, \mathcal{L})$이 complete linear system의 projective embedding을 결정한다는 것을 살펴볼 때 뿐이었다.
 
 그러나 global section만이 우리의 관심사라면, 굳이 sheaf를 생각할 필요 없이 global section functor만 생각했어도 될 것이다. 실제로 global section functor는 sheaf가 갖고 있는 정보를 모두 담고 있는 것이 아니다. 예를 들어 global section functor
 
 $$\Gamma(X, -): \QCoh(X) \rightarrow \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-를 생각하자. 우리가 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1)에서 quasi-coherent sheaf를 정의할 때의 motivation은 vector bundle들의 category $\Bun(X)$가 abelian category가 아니므로, kernel과 cokernel을 추가하는 더 넓은 category를 생각하는 것이었고, 그러한 관점에서 $\QCoh(X)$가 abelian category가 된다는 것은 놀라운 일은 아니다. [^1]
+를 생각하자. 우리가 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" }에서 quasi-coherent sheaf를 정의할 때의 motivation은 vector bundle들의 category $\Bun(X)$가 abelian category가 아니므로, kernel과 cokernel을 추가하는 더 넓은 category를 생각하는 것이었고, 그러한 관점에서 $\QCoh(X)$가 abelian category가 된다는 것은 놀라운 일은 아니다. [^1]
 
 만일 $\Gamma(X,-)$가 어떠한 정보도 잃어버리지 않는다면, 이 functor는 exact functor여야 할 것이다. 즉, (quasi-coherent) sheaf들의 short exact sequence
 
@@ -43,17 +43,17 @@ $$\Gamma(X, \mathcal{F}) \rightarrow \Gamma(X, \mathcal{F}'') \rightarrow 0$$
 
 $$0 \rightarrow \Omega^1_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 
-를 생각하자. ([§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)) 이 short exact sequence에 $\Gamma(\mathbb{P}^n, -)$를 적용하면
+를 생각하자. ([§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" }) 이 short exact sequence에 $\Gamma(\mathbb{P}^n, -)$를 적용하면
 
 $$0 \rightarrow \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})$$
 
-를 얻는다. 그런데 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 살펴본 것처럼 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 global section은 0뿐이므로
+를 얻는다. 그런데 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" }에서 살펴본 것처럼 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 global section은 0뿐이므로
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
 이지만, $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$이므로 오른쪽 부분의 surjectivity가 성립할 수 없다.
 
-이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)). 구체적으로, $X$ 위의 abelian group들의 sheaf들이 이루는 category $\Sh(X)$는 stalk별로 injective abelian group을 잡아 skyscraper sheaf들의 곱을 취해주면 enough injective를 갖는다는 것을 보일 수 있으므로 임의의 sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
+이를 해결하기 위한 표준적인 방법은 right derived functor를 생각하는 것이다. ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9){: data-relation="required" }). 구체적으로, $X$ 위의 abelian group들의 sheaf들이 이루는 category $\Sh(X)$는 stalk별로 injective abelian group을 잡아 skyscraper sheaf들의 곱을 취해주면 enough injective를 갖는다는 것을 보일 수 있으므로 임의의 sheaf $\mathcal{F}$는 항상 injective resolution $\mathcal{I}^\bullet$을 가지고, 이로부터 다음의
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots$$
 
@@ -71,7 +71,7 @@ $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X
 
 우리는 앞서 global section space $\Gamma(X, \mathcal{L})$을 소개하며 이 공간의 또 다른 대중적인 표기 중 하나가 $H^0(X, \mathcal{L})$이라고 하였는데, 이 표기법이 바로 위의 정의로부터 정당화됨을 안다.
 
-다음 명제 또한 homological algebra로부터 바로 따라나오는 표준적인 명제이다. ([\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors))
+다음 명제 또한 homological algebra로부터 바로 따라나오는 표준적인 명제이다. ([\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="required" })
 
 ::: 명제 2
 Sheaf의 short exact sequence
@@ -87,7 +87,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 
 ## Čech Cohomology
 
-[정의 1](#def1)는 sheaf cohomology의 정의로서는 엄밀하지만, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 따라서 실제 계산에서는 다른 관점에서 cohomology를 정의하는 Čech approach를 사용한다.
+[정의 1](#def1){: data-relation="required" }는 sheaf cohomology의 정의로서는 엄밀하지만, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 따라서 실제 계산에서는 다른 관점에서 cohomology를 정의하는 Čech approach를 사용한다.
 
 직관적으로 Čech cohomology $\check{H}^i(X, \mathcal{F})$는 국소적인 정보의 gluing의 실패를 측정하는 도구이다. 즉, $\check{H}^0(X, \mathcal{F})$는 정확하게 global section space이며, $\check{H}^1(X, \mathcal{F})$는 local section들을 붙여서 global section을 얻어내는 과정이 얼마나 실패하는지를 알려준다. 이를 엄밀하게 정의하기 위해 다음부터 시작한다.
 
@@ -124,7 +124,7 @@ $$(\dd{s})_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}$$
 
 $$\check{H}^0(\mathcal{U}, \mathcal{F}) = \ker(d: \check{C}^0 \rightarrow \check{C}^1) = \left\{(s_i) \in \prod_i \mathcal{F}(U_i) \mid s_i\vert_{U_i \cap U_j} = s_j\vert_{U_i \cap U_j} \text{ for all } i, j\right\}$$
 
-이다. [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 gluing condition에 의해 이러한 section들의 family는 정확히 $X$ 전체 위에서의 section, 즉 $\Gamma(X, \mathcal{F})$와 일치한다. 즉, $\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$이며 이는 open cover의 선택과 무관하다.
+이다. [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-relation="required" }의 gluing condition에 의해 이러한 section들의 family는 정확히 $X$ 전체 위에서의 section, 즉 $\Gamma(X, \mathcal{F})$와 일치한다. 즉, $\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$이며 이는 open cover의 선택과 무관하다.
 :::
 
 우리는 곧 좋은 상황에서는 위와 같이 Čech cohomology와 sheaf cohomology가 항상 같다는 것을 보일 것이다. 지금은 우선 $p=1$인 경우 이것이 어떻게 gluing의 failure를 측정하는지를 보자.
@@ -159,7 +159,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 위의 논증을 더 간단히 설명하자면, open cover를 점점 더 세밀하게 잡으며 추가되는 cohomology data를 모두 합쳐 이를 $\check{H}(X, \mathcal{F})$로 정의하겠다는 의미이다.
 
-일반적으로 [정의 7](#def7)의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1)의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 algebraic geometry에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
+일반적으로 [정의 7](#def7){: data-relation="weak" }의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1){: data-relation="required" }의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 algebraic geometry에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
 
 ::: 정의 8
 Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, 다음을 정의한다.
@@ -176,7 +176,7 @@ Injective sheaf $\mathcal{F}$는 flasque이다.
 :::
 
 ::: 증명
-정의에 의해 $\mathcal{F}$가 injective라는 것은 임의의 monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$에 대해 $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $V \subseteq U \subseteq X$에 대해 restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$가 surjective임을 보이자.
+정의에 의해 $\mathcal{F}$가 injective라는 것은 임의의 monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$에 대해 $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1){: data-relation="required" }) 이제 임의의 열린집합 $V \subseteq U \subseteq X$에 대해 restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$가 surjective임을 보이자.
 
 이 map은 sheaf morphism이 아니라 abelian group들 사이의 morphism이고, 우리가 갖고 있는 도구는 sheaf morphism이므로 이 조건을 sheaf morphism으로 돌려놔야 한다. 이를 위해 open embedding
 
@@ -184,7 +184,7 @@ $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
 그리고 이들의 extension by zero로 얻어지는 sheaf들 $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$를 도입하자. 여기서 $\mathbb{Z}_U, \mathbb{Z}_V$는 각각 constant sheaf들이며, 가정에 의해 $V \subseteq U$이므로 natural한 monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$가 존재한다.
 
-우선 $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$가 성립함을 확인하자. Extension by zero $i^U_!$는 restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$의 left adjoint이므로 ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14)),
+우선 $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$가 성립함을 확인하자. Extension by zero $i^U_!$는 restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$의 left adjoint이므로 ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14){: data-relation="required" }),
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
@@ -220,11 +220,11 @@ $$s^p(t)_{j_0 < \cdots < j_{p-1}} = t_{i_0 j_0 \cdots j_{p-1}}\tag{$\ast$}$$
 
 으로 정의되는 함수 $s^p : \mathcal{C}^p(V) \rightarrow \mathcal{C}^{p-1}(V)$를 얻는다. 우변은 $V \cap U_{i_0} \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$ 위에서의 section이지만 $V \subseteq U_{i_0}$이므로 이 집합은 좌변이 놓여야 할 $V \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$과 같고, 따라서 식 ($\ast$)에는 어떠한 extension도 개입하지 않는다. 그럼 이렇게 정의한 $s^p$가 chain homotopy가 된다는 것은 직접 계산을 해 보면 $d^{p-1}s^p$에서 $i_0$을 생략해주는 항과, $s^{p+1}d^p$에서 $i_0$을 넣어주는 항이 부호가 상쇄되어 사라지는 것을 통해 확인할 수 있다. 즉 위 complex의 $V$에서의 section들이 이루는 complex는 exact이며, $\mathcal{U}$가 $X$를 덮으므로 임의의 점은 이러한 $V$를 근방으로 가져 모든 stalk에서의 exactness를 얻는다. 약간의 기술적인 문제는 우리가 고정한 index $i_0$이 $j_0<\cdots< j_{p-1}$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $I$의 $p+1$개의 원소 $i_0,\ldots, i_p\in I$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
 
-이제 $\mathcal{F}$가 flasque라는 가정을 쓰자. 각각의 $\mathcal{C}^p$의 restriction map은 $\mathcal{F}$의 restriction map들의 product이므로 surjective이고, 따라서 $\mathcal{C}^p$ 또한 flasque이다. 즉 $\mathcal{C}^\bullet$은 $\mathcal{F}$의 flasque resolution이므로, [명제 16](#prop16)에 의해 각 항이 $\Gamma(X,-)$-acyclic이고 [명제 17](#prop17)에 의해
+이제 $\mathcal{F}$가 flasque라는 가정을 쓰자. 각각의 $\mathcal{C}^p$의 restriction map은 $\mathcal{F}$의 restriction map들의 product이므로 surjective이고, 따라서 $\mathcal{C}^p$ 또한 flasque이다. 즉 $\mathcal{C}^\bullet$은 $\mathcal{F}$의 flasque resolution이므로, [명제 16](#prop16){: data-relation="required" }에 의해 각 항이 $\Gamma(X,-)$-acyclic이고 [명제 17](#prop17){: data-relation="required" }에 의해
 
 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\Gamma(X, \mathcal{C}^\bullet)) \cong H^p(X, \mathcal{F})$$
 
-이다. 다시 $\mathcal{F}$가 flasque이므로 [명제 16](#prop16)에 의해 우변이 $p>0$에서 소멸한다. 여기서 사용한 두 명제의 증명은 이 보조정리에 의존하지 않는다.
+이다. 다시 $\mathcal{F}$가 flasque이므로 [명제 16](#prop16){: data-relation="required" }에 의해 우변이 $p>0$에서 소멸한다. 여기서 사용한 두 명제의 증명은 이 보조정리에 의존하지 않는다.
 :::
 
 ::: 정리 11 (Leray)
@@ -244,7 +244,7 @@ Sheaf $\mathcal{F}$의 injective resolution $0 \rightarrow \mathcal{F} \rightarr
 
 $$K^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$
 
-을 구성하자. 그럼 이 double complex에서 horizontal differential $d_h$는 Čech differential이고, vertical differential $d_v$는 injective resolution으로부터 오는 differential이다. 이제 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)에서 살펴본 것과 같이, 이 double complex의 total complex $\Tot(K)^\bullet$에 정의된 두 filtration
+을 구성하자. 그럼 이 double complex에서 horizontal differential $d_h$는 Čech differential이고, vertical differential $d_v$는 injective resolution으로부터 오는 differential이다. 이제 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11){: data-relation="required" }에서 살펴본 것과 같이, 이 double complex의 total complex $\Tot(K)^\bullet$에 정의된 두 filtration
 
 $$F_v^p\Tot(K)^\bullet,\qquad F_h^p\Tot(K)^\bullet$$
 
@@ -256,7 +256,7 @@ $$E_2^{p,q}=\begin{cases}\check{H}^p(\mathcal{U}, \mathcal{F})&\text{$q=0$}\\0&\
 
 이고 $E_2^{p,q}=E_\infty^{p,q}$이다.
 
-이제 horizontal filtration 방향을 보면, $E_1$ page에서 $E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$이다. 그런데 앞서 [보조정리 9](#lem9)와 [보조정리 10](#lem10)에서 injective sheaf들은 Čech-acyclic임을 보였으므로, $p > 0$에서 $E_1^{p,q} = 0$이며 남아있는 $p=0$에서의 vertical differential에 대한 cohomology는 sheaf cohomology이므로
+이제 horizontal filtration 방향을 보면, $E_1$ page에서 $E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$이다. 그런데 앞서 [보조정리 9](#lem9){: data-relation="required" }와 [보조정리 10](#lem10){: data-relation="required" }에서 injective sheaf들은 Čech-acyclic임을 보였으므로, $p > 0$에서 $E_1^{p,q} = 0$이며 남아있는 $p=0$에서의 vertical differential에 대한 cohomology는 sheaf cohomology이므로
 
 $$E_2^{p,q}=\begin{cases}H^q(X, \mathcal{F})&\text{$p=0$}\\0&\text{otherwise}\end{cases}$$
 
@@ -273,19 +273,19 @@ $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 Affine variety $X$ 위의 quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$에 대하여, $H^i(X, \mathcal{F}) = 0$이 모든 $i > 0$에 대해 성립한다.
 :::
 
-이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 $X$ 위의 sheaf들의 resolution $\widetilde{I^\bullet}$을 주며, 이 때 $A$가 finitely generated $\mathbb{K}$-algebra이므로 Noetherian이고 Noetherian ring 위의 injective module이 주는 sheaf는 항상 flasque이므로, 아래의 [명제 16](#prop16)과 [명제 17](#prop17)에 의하여 이 flasque resolution이 $H^i(X, \mathcal{F})$를 계산해주기 때문이다. 여기서 인용한 두 명제의 증명은 이 명제를 사용하지 않는다.
+이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 $X$ 위의 sheaf들의 resolution $\widetilde{I^\bullet}$을 주며, 이 때 $A$가 finitely generated $\mathbb{K}$-algebra이므로 Noetherian이고 Noetherian ring 위의 injective module이 주는 sheaf는 항상 flasque이므로, 아래의 [명제 16](#prop16){: data-relation="required" }과 [명제 17](#prop17){: data-relation="required" }에 의하여 이 flasque resolution이 $H^i(X, \mathcal{F})$를 계산해주기 때문이다. 여기서 인용한 두 명제의 증명은 이 명제를 사용하지 않는다.
 
-이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $X$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11)의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
+이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $X$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11){: data-relation="required" }의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
 
 $$\Delta_X\hookrightarrow X\times X$$
 
-이 $X\times X$의 *closed* embedding이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $X$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 11](#thm11)의 전제조건을 만족하는 open cover $\mathcal{U}$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다.
+이 $X\times X$의 *closed* embedding이라면, 이 조건이 성립하는 것을 보일 수 있으며 이런 경우 $X$가 *separated* variety라 부른다. 이는 (그 정의에서 알 수 있듯) Hausdorff 조건의 Zariski topology 버전이라 할 수 있으며 그만큼 합당한 조건이며, 현재 우리의 정의와 같이 quasi-projective variety를 variety라 부른다면 이 조건은 자동으로 충족된다. 즉, 현재 우리의 언어에서 이 논증은 임의의 variety 위에 정의된 quasi-coherent sheaf에 대해서는 Čech cohomology와 sheaf cohomology가 일치한다는 말이 되고, 뿐만 아니라 [정리 11](#thm11){: data-relation="required" }의 전제조건을 만족하는 open cover $\mathcal{U}$를 잡는다면 direct limit을 계산할 필요없이 해당 open cover에 대한 Čech cohomology를 계산하면 충분하다는 것을 보여준다.
 
 ## Godement Resolution
 
-우리는 [정의 1](#def1)에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#thm11)을 사용하는 방법을 살펴보았다.
+우리는 [정의 1](#def1){: data-relation="weak" }에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#thm11){: data-relation="weak" }을 사용하는 방법을 살펴보았다.
 
-이번 섹션에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다.
+이번 섹션에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1){: data-relation="weak" }이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다.
 
 ::: 정의 13
 위상공간 $X$ 위의 sheaf $\mathcal{F}$에 대하여, *Godement sheaf<sub>고드망 층</sub>* $C^0(\mathcal{F})$를 각 열린집합 $U \subseteq X$에 대하여
@@ -325,13 +325,13 @@ $$0 \rightarrow C^0(\mathcal{F}) \rightarrow C^0(\mathcal{Q}^1) \rightarrow C^0 
 
 $$0 \rightarrow \mathcal{F} \rightarrow \mathcal{G}^0(\mathcal{F}) \rightarrow \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
-로 표기한다. 그럼 [명제 14](#prop14)에 의하여 다음이 성립한다.
+로 표기한다. 그럼 [명제 14](#prop14){: data-relation="required" }에 의하여 다음이 성립한다.
 
 ::: 명제 15
 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$는 $\mathcal{F}$의 flasque resolution이다.
 :::
 
-이 construction의 가장 핵심적인 장점은 이 과정에서 어떠한 choice도 없으므로, 어떤 측면에서 canonical하다는 것이다. 이는 Godement resolution의 functoriality로부터도 다시 확인할 수 있는데, 일반적으로 sheaf cohomology에서 functoriality를 보이기 위해서는 augmented complex의 $0$번째 단계에서의 sheaf morphism이 $i>0$ 단계의 sheaf morphism들을 유도하여 chain map이 생기고, 이러한 chain map은 up to chain homotopy equivalence로 동일하므로 cohomology에서 같은 값을 유도한다는 논증을 사용해야 한다. ([\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)) 그러나 Godement resolution의 경우, 어떠한 종류의 equivalence도 없이 순수하게 chain level에서 함수들이 유도된다. 그럼에도 불구하고, Godement resolution은 정확히 sheaf cohomology의 정보를 담고 있다.
+이 construction의 가장 핵심적인 장점은 이 과정에서 어떠한 choice도 없으므로, 어떤 측면에서 canonical하다는 것이다. 이는 Godement resolution의 functoriality로부터도 다시 확인할 수 있는데, 일반적으로 sheaf cohomology에서 functoriality를 보이기 위해서는 augmented complex의 $0$번째 단계에서의 sheaf morphism이 $i>0$ 단계의 sheaf morphism들을 유도하여 chain map이 생기고, 이러한 chain map은 up to chain homotopy equivalence로 동일하므로 cohomology에서 같은 값을 유도한다는 논증을 사용해야 한다. ([\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="weak" }) 그러나 Godement resolution의 경우, 어떠한 종류의 equivalence도 없이 순수하게 chain level에서 함수들이 유도된다. 그럼에도 불구하고, Godement resolution은 정확히 sheaf cohomology의 정보를 담고 있다.
 
 이를 보이기 위해 우리는 더 일반적으로 flasque resolution이 injective resolution으로 계산한 sheaf cohomology와 같다는 것을 보인다. 이를 위해 우선 다음을 보인다.
 
@@ -369,7 +369,7 @@ $$H^i(X, \mathcal{F})\cong H^{i-1}(X, \mathcal{Q})$$
 이고, $\mathcal{Q}$가 flasque이므로 귀납법에 의하여 원하는 결과를 얻는다.
 :::
 
-특히, [명제 16](#prop16)에 의하여 Godement resolution의 각 항 $\mathcal{G}^p(\mathcal{F})$는 flasque이므로 $\Gamma(X, -)$-acyclic이다. 즉, 모든 $i > 0$에 대해 $H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$이다. 이제 결론을 내기 위해 우리가 필요한 것은 다음 결과이다.
+특히, [명제 16](#prop16){: data-relation="required" }에 의하여 Godement resolution의 각 항 $\mathcal{G}^p(\mathcal{F})$는 flasque이므로 $\Gamma(X, -)$-acyclic이다. 즉, 모든 $i > 0$에 대해 $H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$이다. 이제 결론을 내기 위해 우리가 필요한 것은 다음 결과이다.
 
 ::: 명제 17 (Acyclic Resolution)
 $\Gamma(X, -)$-acyclic resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$이 주어지면
@@ -380,17 +380,17 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(X, \mathcal{F})$$
 :::
 
 ::: 증명
-$\mathcal{F}$의 injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$을 고정하자. [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)에 의해 acyclic resolution과 injective resolution 사이에 chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$이 존재한다. $f$의 *mapping cone* $C(f)^\bullet$을 생각하자. 각 degree에서
+$\mathcal{F}$의 injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$을 고정하자. [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" }에 의해 acyclic resolution과 injective resolution 사이에 chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$이 존재한다. $f$의 *mapping cone* $C(f)^\bullet$을 생각하자. 각 degree에서
 
 $$C(f)^n = \mathcal{A}^{n+1} \oplus \mathcal{I}^n$$
 
-이며, $\mathcal{I}^n$는 injective이므로 [보조정리 9](#lem9)에 의해 flasque, 특히 $\Gamma(X, -)$-acyclic이다. 따라서 canonical short exact sequence
+이며, $\mathcal{I}^n$는 injective이므로 [보조정리 9](#lem9){: data-relation="required" }에 의해 flasque, 특히 $\Gamma(X, -)$-acyclic이다. 따라서 canonical short exact sequence
 
 $$0 \rightarrow \mathcal{I}^n \rightarrow C(f)^n \rightarrow \mathcal{A}^{n+1} \rightarrow 0$$
 
 를 생각하면 양 끝 항이 $\Gamma(X, -)$-acyclic이므로 long exact sequence로부터 $C(f)^n$ 역시 $\Gamma(X, -)$-acyclic임을 알 수 있다.
 
-한편 $f$는 quasi-isomorphism이므로 $C(f)^\bullet$은 exact complex이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9)) 뿐만 아니라 $C(f)^\bullet$은 위에서 살펴봤듯 $\Gamma(X,-)$-acyclic이므로, 여기에 $\Gamma(X,-)$를 취해 exact complex $\Gamma(X, C(f)^\bullet)$을 얻을 수 있으며 다시 [\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9)을 적용하여 이것을 chain map
+한편 $f$는 quasi-isomorphism이므로 $C(f)^\bullet$은 exact complex이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9){: data-relation="required" }) 뿐만 아니라 $C(f)^\bullet$은 위에서 살펴봤듯 $\Gamma(X,-)$-acyclic이므로, 여기에 $\Gamma(X,-)$를 취해 exact complex $\Gamma(X, C(f)^\bullet)$을 얻을 수 있으며 다시 [\[호몰로지 대수학\] §긴 완전열, ⁋따름정리 9](/ko/math/homological_algebra/long_exact_sequence#cor9){: data-relation="required" }을 적용하여 이것을 chain map
 
 $$\Gamma(X, f)\colon \Gamma(X, \mathcal{A}^\bullet) \rightarrow \Gamma(X, \mathcal{I}^\bullet)$$
 
@@ -401,19 +401,19 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) 
 을 얻는다.
 :::
 
-[명제 17](#prop17)는 [명제 16](#prop16)과 함께 Godement resolution이 실제로 sheaf cohomology를 계산하기에 충분하다는 것을 보장한다. 즉, flasque resolution $\mathcal{G}^\bullet(\mathcal{F})$의 global section을 취하여 얻은 complex $\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$의 cohomology가 $H^\bullet(X, \mathcal{F})$와 일치한다.
+[명제 17](#prop17){: data-relation="required" }는 [명제 16](#prop16){: data-relation="required" }과 함께 Godement resolution이 실제로 sheaf cohomology를 계산하기에 충분하다는 것을 보장한다. 즉, flasque resolution $\mathcal{G}^\bullet(\mathcal{F})$의 global section을 취하여 얻은 complex $\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$의 cohomology가 $H^\bullet(X, \mathcal{F})$와 일치한다.
 
 ## Spectral Sequence
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다.
 
-연속함수 $f : X \rightarrow Y$와 sheaf $\mathcal{F}$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)로부터 direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors)에서와 마찬가지로 $f_\ast$의 right derived functor를
+연속함수 $f : X \rightarrow Y$와 sheaf $\mathcal{F}$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-relation="required" }와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9){: data-relation="required" }로부터 direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="required" }에서와 마찬가지로 $f_\ast$의 right derived functor를
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
 로 정의할 수 있다. 여기서 $\mathcal{I}^\bullet$은 $\mathcal{F}$의 injective resolution이다. 정의에 의해 $q=0$일 때 $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$이며 $\mathcal{F}$가 injective이면 $\mathcal{F}$ 자체로 injective resolution을 이루므로 모든 $q>0$에 대해 $R^qf_\ast \mathcal{F}=0$이 성립한다.
 
-이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 통해 horizontal differential을 정의해주는 것이다.
+이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" }을 통해 horizontal differential을 정의해주는 것이다.
 
 ::: 정의 18 (Cartan-Eilenberg Resolution)
 Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resolution<sub>카르탕-아일렌베르크 분해</sub>*은 double complex $I^{p,q}$와 augmentation $K^\bullet \rightarrow I^{\bullet,0}$으로 이루어진 데이터로, 다음 조건들을 만족하는 것이다.
@@ -427,7 +427,7 @@ Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resoluti
 3. 마찬가지로 각 $p$에 대하여 $q$를 따라 늘어놓은 $B^p(I^{\bullet,q})$와 $Z^p(I^{\bullet,q})$가 각각 $B^p(K^\bullet)$와 $Z^p(K^\bullet)$의 injective resolution을 이룬다.
 :::
 
-이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7)를 반복적으로 적용하여 얻을 수 있다.
+이 정의의 핵심은 위에서 언급한 직관만으로는 Cartan-Eilenberg resolution이 얻어지지 않는다는 것으로, 특히 각 행의 cohomology가 $H^p(K^\bullet)$의 horizontal resolution을 이룬다는 것이 존재성의 증명에 핵심적인 요소이다. 우리는 Cartan-Eilenberg resolution의 존재성은 별도로 증명하지 않지만, 기본적으로는 [\[호몰로지 대수학\] §분해, ⁋보조정리 7](/ko/math/homological_algebra/resolutions#lem7){: data-relation="weak" }를 반복적으로 적용하여 얻을 수 있다.
 
 한편 세 번째 조건은 각 행의 두 short exact sequence
 
@@ -475,13 +475,13 @@ $$\mathcal{J}^{p,q}=\Gamma(Y, \mathcal{I}^{p,q})$$
 
 $$E_1^{p,q}=H^p(\mathcal{J}^{\bullet, q})=\Gamma(Y, \mathcal{H}^{p,q})$$
 
-이다. 여기서 두 번째 등호는 [정의 18](#def18)의 세 번째 조건에 의해 각 행이 injective object들로 분할되어 $\Gamma(Y,-)$가 행 방향 cohomology와 교환하기 때문에 성립한다. 또, $\mathcal{H}^{p,q}$는 $R^pf_\ast \mathcal{F}$의 injective resolution이므로 그 cohomology가 $H^q(Y, R^p f_\ast \mathcal{F})$으로 나오는 것을 안다.
+이다. 여기서 두 번째 등호는 [정의 18](#def18){: data-relation="required" }의 세 번째 조건에 의해 각 행이 injective object들로 분할되어 $\Gamma(Y,-)$가 행 방향 cohomology와 교환하기 때문에 성립한다. 또, $\mathcal{H}^{p,q}$는 $R^pf_\ast \mathcal{F}$의 injective resolution이므로 그 cohomology가 $H^q(Y, R^p f_\ast \mathcal{F})$으로 나오는 것을 안다.
 
 한편, $q$ 방향 filtration의 경우 $E_1$ page는
 
 $$E_1^{p,q}=H^q(\Gamma(Y, \mathcal{I}^{p,\bullet}))$$
 
-이며, 이 때 각각의 $\mathcal{I}^{p,\bullet}$은 Cartan-Eilenberg resolution의 정의에 의하여 $f_\ast \mathcal{G}^p(\mathcal{F})$의 injective resolution이므로 $E_1^{p,q}=H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$이다. 그런데 $\mathcal{G}^p(\mathcal{F})$가 flasque이고 $f_\ast$는 flasqueness를 보존하므로 $f_\ast \mathcal{G}^p(\mathcal{F})$ 또한 flasque이며, 따라서 [명제 16](#prop16)에 의하여 $q>0$에서의 항들이 소멸하고 남는 것은
+이며, 이 때 각각의 $\mathcal{I}^{p,\bullet}$은 Cartan-Eilenberg resolution의 정의에 의하여 $f_\ast \mathcal{G}^p(\mathcal{F})$의 injective resolution이므로 $E_1^{p,q}=H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$이다. 그런데 $\mathcal{G}^p(\mathcal{F})$가 flasque이고 $f_\ast$는 flasqueness를 보존하므로 $f_\ast \mathcal{G}^p(\mathcal{F})$ 또한 flasque이며, 따라서 [명제 16](#prop16){: data-relation="required" }에 의하여 $q>0$에서의 항들이 소멸하고 남는 것은
 
 $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^p(\mathcal{F}))$$
 
@@ -510,11 +510,11 @@ $$0 \rightarrow H^1(Y, f_\ast \mathcal{F}) \rightarrow H^1(X, \mathcal{F}) \righ
 :::
 
 ::: 증명
-Leray spectral sequence $E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$의 $E_2$ page에서 $p+q \leq 2$인 항목들을 고려하자. [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에 의해 우리는
+Leray spectral sequence $E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$의 $E_2$ page에서 $p+q \leq 2$인 항목들을 고려하자. [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5){: data-relation="required" }에 의해 우리는
 
 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$
 
-임을 안다. 특히, 이는 first quadrant spectral sequence이므로 충분히 큰 $r$에서 $E_r^{p,q} = E_\infty^{p,q}$이다. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6))
+임을 안다. 특히, 이는 first quadrant spectral sequence이므로 충분히 큰 $r$에서 $E_r^{p,q} = E_\infty^{p,q}$이다. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6){: data-relation="required" })
 
 우선 $p+q = 1$인 성분들을 보면, 오직 두 개의 항 $E_2^{1,0}$와 $E_2^{0,1}$만이 존재한다. 그런데 degree를 고려하면 $E_2^{1,0}$로 들어오거나 나가는 differential은 모두 0이므로 $E_2^{1,0} = E_\infty^{1,0}$이다. 반면, $E_2^{0,1}$에서 $E_2^{2,0}$으로 가는 $d_2$가 비자명할 수 있으므로 $E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$이다. 그럼 filtration에 의하여
 
@@ -562,14 +562,14 @@ $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H
 :::
 
 ::: 증명
-$\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡고, double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $H^{p+q}(X, \mathcal{F})$에 수렴한다는 것은 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11)에 의한 것이며, 이 때 Godement sheaf $\mathcal{G}^q(\mathcal{F})$가 flasque이므로 [보조정리 10](#lem10)에 의해 Čech-acyclic이 되어 위에서의 계산과 같은 vanishing을 사용하면 된다.
+$\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡고, double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $H^{p+q}(X, \mathcal{F})$에 수렴한다는 것은 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11){: data-relation="required" }에 의한 것이며, 이 때 Godement sheaf $\mathcal{G}^q(\mathcal{F})$가 flasque이므로 [보조정리 10](#lem10){: data-relation="required" }에 의해 Čech-acyclic이 되어 위에서의 계산과 같은 vanishing을 사용하면 된다.
 :::
 
-이 spectral sequence는 [정리 11](#thm11)를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11)를 포함하는 더 일반적인 결과라 할 수 있다.
+이 spectral sequence는 [정리 11](#thm11){: data-relation="required" }를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11){: data-relation="required" }를 포함하는 더 일반적인 결과라 할 수 있다.
 
 ## Line Bundle의 Classification
 
-앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
+앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2){: data-relation="required" }). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
 
 이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 multiplicative 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 multiplicative로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
 
@@ -586,10 +586,10 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 에서 확인할 수 있으며, 따라서 map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$가 well-defined이다.
 
-역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$를 얻는다.
+역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1){: data-relation="required" }에 의해 적당한 open cover 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$를 얻는다.
 :::
 
-이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\times$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.
+이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\times$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces){: data-relation="forward" }에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.
 
 ---
 
@@ -602,4 +602,4 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 ---
 
-[^1]: 더 일반적으로, [\[위상수학\] §층, §§층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $X$ 위에 정의된 sheaf들의 category $\Sh(X)$는 abelian category를 이룬다.
+[^1]: 더 일반적으로, [\[위상수학\] §층, §§층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주){: data-relation="weak" }에서 살펴보았듯 임의의 위상공간 $X$ 위에 정의된 sheaf들의 category $\Sh(X)$는 abelian category를 이룬다.

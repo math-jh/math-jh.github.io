@@ -14,19 +14,19 @@ translated_at: 2026-08-18T23:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T23:45:04+00:00
 ---
-We have verified that line bundles can be used to construct various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles), we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system and, further, the projective embedding of the variety.
+We have verified that line bundles can be used to construct various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles){: data-relation="weak" }, we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" }, we saw that the dimension of this space plays a key role in determining the dimension of the complete linear system and, further, the projective embedding of the variety.
 
-Although we have primarily used the language of line bundles for geometric intuition, as noted right after [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be rephrased in the language of sheaves. In this post, we define the notion of sheaf cohomology.
+Although we have primarily used the language of line bundles for geometric intuition, as noted right after [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" }, thinking in terms of the section sheaf of a line bundle means that this can fundamentally be rephrased in the language of sheaves. In this post, we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
-While sheaves are a powerful tool for systematically describing all the information on a topological space, they have appeared front and center in our discussion only once before: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems), when we observed that the global section space $\Gamma(X, \mathcal{L})$ determines the projective embedding of the complete linear system.
+While sheaves are a powerful tool for systematically describing all the information on a topological space, they have appeared front and center in our discussion only once before: in [§Linear Systems](/en/math/algebraic_varieties/linear_systems){: data-relation="weak" }, when we observed that the global section space $\Gamma(X, \mathcal{L})$ determines the projective embedding of the complete linear system.
 
 However, if global sections were our only concern, there would be no need to think about sheaves at all; we could have simply considered the global section functor. In fact, the global section functor does not capture all the information contained in a sheaf. For example, consider the global section functor
 
 $$\Gamma(X, -): \QCoh(X) \rightarrow \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X).$$
 
-When we defined quasi-coherent sheaves in [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we considered a larger category that adds kernels and cokernels; from this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
+When we defined quasi-coherent sheaves in [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" }, our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we considered a larger category that adds kernels and cokernels; from this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
 
 If $\Gamma(X,-)$ did not lose any information, this functor would have to be exact. That is, given a short exact sequence of (quasi-coherent) sheaves
 
@@ -44,17 +44,17 @@ is not guaranteed in general. For a concrete example, consider the Euler sequenc
 
 $$0 \rightarrow \Omega^1_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 
-([§Canonical Line Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7)). Applying $\Gamma(\mathbb{P}^n, -)$ to this short exact sequence gives
+([§Canonical Line Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" }). Applying $\Gamma(\mathbb{P}^n, -)$ to this short exact sequence gives
 
 $$0 \rightarrow \Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) \rightarrow \Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}).$$
 
-But as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), the global sections of $\mathcal{O}_{\mathbb{P}^n}(-1)$ are zero, so
+But as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" }, the global sections of $\mathcal{O}_{\mathbb{P}^n}(-1)$ are zero, so
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0,$$
 
 whereas $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$, so surjectivity on the right cannot hold.
 
-The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
+The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9){: data-relation="required" }). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots.$$
 
@@ -70,7 +70,7 @@ That this is independent of the choice of $\mathcal{I}^\bullet$, and so on, all 
 
 Earlier, when we introduced the global section space $\Gamma(X, \mathcal{L})$, we mentioned that one of its other popular notations is $H^0(X, \mathcal{L})$; we now see that this notation is justified by the definition above.
 
-The following proposition is also a standard consequence of homological algebra. ([§Derived Functors](/en/math/homological_algebra/derived_functors))
+The following proposition is also a standard consequence of homological algebra. ([§Derived Functors](/en/math/homological_algebra/derived_functors){: data-relation="required" })
 
 ::: Proposition 2
 For a short exact sequence of sheaves
@@ -86,7 +86,7 @@ Here $\delta$ is the *connecting homomorphism*.
 
 ## Čech Cohomology
 
-[Definition 1](#def1) is a rigorous definition of sheaf cohomology, but explicitly constructing an injective resolution is generally very difficult. Therefore, in actual computations, we use the Čech approach, which defines cohomology from a different perspective.
+[Definition 1](#def1){: data-relation="required" } is a rigorous definition of sheaf cohomology, but explicitly constructing an injective resolution is generally very difficult. Therefore, in actual computations, we use the Čech approach, which defines cohomology from a different perspective.
 
 Intuitively, Čech cohomology $\check{H}^i(X, \mathcal{F})$ is a tool that measures the failure of gluing local information. That is, $\check{H}^0(X, \mathcal{F})$ is exactly the global section space, and $\check{H}^1(X, \mathcal{F})$ tells us how much the process of patching local sections together to obtain a global section fails. To make this precise, we begin with the following.
 
@@ -121,7 +121,7 @@ Therefore,
 
 $$\check{H}^0(\mathcal{U}, \mathcal{F}) = \ker(d: \check{C}^0 \rightarrow \check{C}^1) = \left\{(s_i) \in \prod_i \mathcal{F}(U_i) \mid s_i\vert_{U_i \cap U_j} = s_j\vert_{U_i \cap U_j} \text{ for all } i, j\right\}.$$
 
-By the gluing condition of [§Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1), such a family of sections coincides exactly with a section over all of $X$, that is, with $\Gamma(X, \mathcal{F})$. Hence $\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$, and this is independent of the choice of open cover.
+By the gluing condition of [§Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-relation="required" }, such a family of sections coincides exactly with a section over all of $X$, that is, with $\Gamma(X, \mathcal{F})$. Hence $\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$, and this is independent of the choice of open cover.
 :::
 
 We will soon show that, in favorable situations, Čech cohomology and sheaf cohomology always agree as above. For now, let us see how the $p=1$ case measures the failure of gluing.
@@ -154,7 +154,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 To explain the above argument more simply, the meaning is that we take increasingly finer open covers and amalgamate all the additional cohomology data that appears, defining this to be $\check{H}(X, \mathcal{F})$.
 
-In general, it is not guaranteed that the $\check{H}^p(X, \mathcal{F})$ of [Definition 7](#def7) is isomorphic to the $H^p(X, \mathcal{F})$ of [Definition 1](#def1), but fortunately, for most sheaves that arise in algebraic geometry, the two coincide. Showing this requires some technical machinery.
+In general, it is not guaranteed that the $\check{H}^p(X, \mathcal{F})$ of [Definition 7](#def7){: data-relation="weak" } is isomorphic to the $H^p(X, \mathcal{F})$ of [Definition 1](#def1){: data-relation="required" }, but fortunately, for most sheaves that arise in algebraic geometry, the two coincide. Showing this requires some technical machinery.
 
 ::: Definition 8
 For a sheaf $\mathcal{F}$ on a variety $X$, we define the following.
@@ -215,11 +215,11 @@ $$s^p(t)_{j_0 < \cdots < j_{p-1}} = t_{i_0 j_0 \cdots j_{p-1}}\tag{$\ast$}$$
 
 The right-hand side is a section over $V \cap U_{i_0} \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$, but since $V \subseteq U_{i_0}$, this set equals $V \cap U_{j_0} \cap \cdots \cap U_{j_{p-1}}$, which is where the left-hand side should live; thus no extension is involved in formula ($\ast$). That this $s^p$ gives a chain homotopy can be checked by direct computation: in $d^{p-1}s^p$ the term omitting $i_0$ and in $s^{p+1}d^p$ the term inserting $i_0$ cancel with opposite signs. Hence the complex of sections over such $V$ is exact, and since $\mathcal{U}$ covers $X$, every point has such a neighborhood $V$, giving exactness at every stalk. A slight technical issue is that the fixed index $i_0$ might appear among $j_0<\cdots< j_{p-1}$. To handle this, we use the *non-alternating* Čech complex with coordinates given by $p+1$ elements $i_0,\ldots, i_p\in I$ of $I$, instead of the usual Čech complex. This is quasi-isomorphic to the original Čech complex, so this detour is justified.
 
-Now we use the assumption that $\mathcal{F}$ is flasque. The restriction map of each $\mathcal{C}^p$ is a product of restriction maps of $\mathcal{F}$, hence surjective, so $\mathcal{C}^p$ is also flasque. Thus $\mathcal{C}^\bullet$ is a flasque resolution of $\mathcal{F}$, and by [Proposition 16](#prop16) each term is $\Gamma(X,-)$-acyclic, while by [Proposition 17](#prop17)
+Now we use the assumption that $\mathcal{F}$ is flasque. The restriction map of each $\mathcal{C}^p$ is a product of restriction maps of $\mathcal{F}$, hence surjective, so $\mathcal{C}^p$ is also flasque. Thus $\mathcal{C}^\bullet$ is a flasque resolution of $\mathcal{F}$, and by [Proposition 16](#prop16){: data-relation="required" } each term is $\Gamma(X,-)$-acyclic, while by [Proposition 17](#prop17){: data-relation="required" }
 
 $$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\Gamma(X, \mathcal{C}^\bullet)) \cong H^p(X, \mathcal{F})$$
 
-Since $\mathcal{F}$ is flasque, the right-hand side vanishes for $p>0$ by [Proposition 16](#prop16). The proofs of the two propositions used here do not depend on this lemma.
+Since $\mathcal{F}$ is flasque, the right-hand side vanishes for $p>0$ by [Proposition 16](#prop16){: data-relation="required" }. The proofs of the two propositions used here do not depend on this lemma.
 :::
 
 ::: Theorem 11 (Leray)
@@ -249,7 +249,7 @@ $$E_2^{p,q}=\begin{cases}\check{H}^p(\mathcal{U}, \mathcal{F})&\text{$q=0$}\\0&\
 
 and $E_2^{p,q}=E_\infty^{p,q}$.
 
-Now consider the horizontal filtration direction. On the $E_1$ page, $E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$. But by [Lemma 9](#lem9) and [Lemma 10](#lem10) above, injective sheaves are Čech-acyclic, so $E_1^{p,q} = 0$ for $p > 0$, and the remaining cohomology with respect to the vertical differential at $p=0$ is sheaf cohomology, so
+Now consider the horizontal filtration direction. On the $E_1$ page, $E_1^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{I}^q)$. But by [Lemma 9](#lem9){: data-relation="required" } and [Lemma 10](#lem10){: data-relation="required" } above, injective sheaves are Čech-acyclic, so $E_1^{p,q} = 0$ for $p > 0$, and the remaining cohomology with respect to the vertical differential at $p=0$ is sheaf cohomology, so
 
 $$E_2^{p,q}=\begin{cases}H^q(X, \mathcal{F})&\text{$p=0$}\\0&\text{otherwise}\end{cases}$$
 
@@ -264,19 +264,19 @@ Then the only obstacle to our intuition is how demanding this acyclicity conditi
 For a quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$ on an affine variety $X$, we have $H^i(X, \mathcal{F}) = 0$ for all $i > 0$.
 :::
 
-The proof of this is as follows: letting $A$ be the coordinate ring of $X$, if we find an injective resolution $I^\bullet$ of $M$ in the category $\lMod{A}$, this gives a resolution $\widetilde{I^\bullet}$ of sheaves on $X$, and since $A$ is a finitely generated $\mathbb{K}$-algebra it is Noetherian, and the sheaf given by an injective module over a Noetherian ring is always flasque, so by [Proposition 16](#prop16) and [Proposition 17](#prop17) below this flasque resolution computes $H^i(X, \mathcal{F})$. The proofs of the two propositions cited here do not use this proposition.
+The proof of this is as follows: letting $A$ be the coordinate ring of $X$, if we find an injective resolution $I^\bullet$ of $M$ in the category $\lMod{A}$, this gives a resolution $\widetilde{I^\bullet}$ of sheaves on $X$, and since $A$ is a finitely generated $\mathbb{K}$-algebra it is Noetherian, and the sheaf given by an injective module over a Noetherian ring is always flasque, so by [Proposition 16](#prop16){: data-relation="required" } and [Proposition 17](#prop17){: data-relation="required" } below this flasque resolution computes $H^i(X, \mathcal{F})$. The proofs of the two propositions cited here do not use this proposition.
 
-Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ defined on it, and suppose an affine open cover $\mathcal{U}$ of $X$ is given. For these data to satisfy the hypotheses of [Theorem 11](#thm11), every finite intersection of members of $\mathcal{U}$ must again be affine. If the diagonal
+Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ defined on it, and suppose an affine open cover $\mathcal{U}$ of $X$ is given. For these data to satisfy the hypotheses of [Theorem 11](#thm11){: data-relation="required" }, every finite intersection of members of $\mathcal{U}$ must again be affine. If the diagonal
 
 $$\Delta_X\hookrightarrow X\times X$$
 
-is a *closed* embedding in $X\times X$, then we can show that this condition holds, and in this case we call $X$ a *separated* variety. As can be seen from its definition, this is the Zariski topology analogue of the Hausdorff condition, and is a reasonable condition; moreover, if we define a variety to be quasi-projective as we do now, this condition is automatically satisfied. Thus, in our present language, this argument shows that for any quasi-coherent sheaf on any variety, Čech cohomology and sheaf cohomology agree, and moreover, if we choose an open cover $\mathcal{U}$ satisfying the hypotheses of [Theorem 11](#thm11), it suffices to compute the Čech cohomology for that open cover without taking a direct limit.
+is a *closed* embedding in $X\times X$, then we can show that this condition holds, and in this case we call $X$ a *separated* variety. As can be seen from its definition, this is the Zariski topology analogue of the Hausdorff condition, and is a reasonable condition; moreover, if we define a variety to be quasi-projective as we do now, this condition is automatically satisfied. Thus, in our present language, this argument shows that for any quasi-coherent sheaf on any variety, Čech cohomology and sheaf cohomology agree, and moreover, if we choose an open cover $\mathcal{U}$ satisfying the hypotheses of [Theorem 11](#thm11){: data-relation="required" }, it suffices to compute the Čech cohomology for that open cover without taking a direct limit.
 
 ## Godement Resolution
 
-In [Definition 1](#def1) we defined sheaf cohomology via injective resolution, but since injective resolutions are generally difficult to compute directly, we examined one solution: using the result of [Theorem 11](#thm11) that Čech cohomology and sheaf cohomology are isomorphic.
+In [Definition 1](#def1){: data-relation="weak" } we defined sheaf cohomology via injective resolution, but since injective resolutions are generally difficult to compute directly, we examined one solution: using the result of [Theorem 11](#thm11){: data-relation="required" } that Čech cohomology and sheaf cohomology are isomorphic.
 
-The Godement resolution, which we examine in this section, also starts from the same problem. That is, computing sheaf cohomology in general is a very complicated task, so [Definition 1](#def1) is conceptually clean but somewhat lacking in practicality. We now define a concrete resolution. It is not an injective resolution, but it is a flasque resolution, and for our purposes this is sufficient.
+The Godement resolution, which we examine in this section, also starts from the same problem. That is, computing sheaf cohomology in general is a very complicated task, so [Definition 1](#def1){: data-relation="weak" } is conceptually clean but somewhat lacking in practicality. We now define a concrete resolution. It is not an injective resolution, but it is a flasque resolution, and for our purposes this is sufficient.
 
 ::: Definition 13
 For a sheaf $\mathcal{F}$ on a topological space $X$, the *Godement sheaf* $C^0(\mathcal{F})$ is defined for each open set $U \subseteq X$ by
@@ -316,7 +316,7 @@ We call this complex the *Godement resolution* of $\mathcal{F}$, and denote its 
 
 $$0 \rightarrow \mathcal{F} \rightarrow \mathcal{G}^0(\mathcal{F}) \rightarrow \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
-Then by [Proposition 14](#prop14) the following holds.
+Then by [Proposition 14](#prop14){: data-relation="required" } the following holds.
 
 ::: Proposition 15
 The Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ is a flasque resolution of $\mathcal{F}$.
@@ -360,7 +360,7 @@ $$H^i(X, \mathcal{F})\cong H^{i-1}(X, \mathcal{Q})$$
 and since $\mathcal{Q}$ is flasque, the desired result follows by induction.
 :::
 
-In particular, by [Proposition 16](#prop16), each term $\mathcal{G}^p(\mathcal{F})$ of the Godement resolution is flasque, hence $\Gamma(X, -)$-acyclic. That is, $H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$ for all $i > 0$. To reach our conclusion, the result we need is the following.
+In particular, by [Proposition 16](#prop16){: data-relation="required" }, each term $\mathcal{G}^p(\mathcal{F})$ of the Godement resolution is flasque, hence $\Gamma(X, -)$-acyclic. That is, $H^i(X, \mathcal{G}^p(\mathcal{F})) = 0$ for all $i > 0$. To reach our conclusion, the result we need is the following.
 
 ::: Proposition 17 (Acyclic Resolution)
 Given a $\Gamma(X, -)$-acyclic resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$, we have
@@ -371,17 +371,17 @@ for all $q \geq 0$.
 :::
 
 ::: Proof
-Fix an injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$ of $\mathcal{F}$. By [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6), there exists a chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$ between the acyclic resolution and the injective resolution. Consider the *mapping cone* $C(f)^\bullet$ of $f$. In each degree,
+Fix an injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$ of $\mathcal{F}$. By [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" }, there exists a chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$ between the acyclic resolution and the injective resolution. Consider the *mapping cone* $C(f)^\bullet$ of $f$. In each degree,
 
 $$C(f)^n = \mathcal{A}^{n+1} \oplus \mathcal{I}^n$$
 
-and since $\mathcal{I}^n$ is injective, it is flasque by [Lemma 9](#lem9), hence in particular $\Gamma(X, -)$-acyclic. Therefore, looking at the canonical short exact sequence
+and since $\mathcal{I}^n$ is injective, it is flasque by [Lemma 9](#lem9){: data-relation="required" }, hence in particular $\Gamma(X, -)$-acyclic. Therefore, looking at the canonical short exact sequence
 
 $$0 \rightarrow \mathcal{I}^n \rightarrow C(f)^n \rightarrow \mathcal{A}^{n+1} \rightarrow 0$$
 
 the two outer terms are $\Gamma(X, -)$-acyclic, so from the long exact sequence we see that $C(f)^n$ is also $\Gamma(X, -)$-acyclic.
 
-On the other hand, $f$ is a quasi-isomorphism, so $C(f)^\bullet$ is an exact complex. ([\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9)) Moreover, as observed above, $C(f)^\bullet$ is $\Gamma(X,-)$-acyclic, so applying $\Gamma(X,-)$ yields an exact complex $\Gamma(X, C(f)^\bullet)$; applying [\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9) again, this translates into the condition that the chain map
+On the other hand, $f$ is a quasi-isomorphism, so $C(f)^\bullet$ is an exact complex. ([\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9){: data-relation="required" }) Moreover, as observed above, $C(f)^\bullet$ is $\Gamma(X,-)$-acyclic, so applying $\Gamma(X,-)$ yields an exact complex $\Gamma(X, C(f)^\bullet)$; applying [\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9){: data-relation="required" } again, this translates into the condition that the chain map
 
 $$\Gamma(X, f)\colon \Gamma(X, \mathcal{A}^\bullet) \rightarrow \Gamma(X, \mathcal{I}^\bullet)$$
 
@@ -392,19 +392,19 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) 
 as desired.
 :::
 
-Together with [Proposition 16](#prop16), [Proposition 17](#prop17) guarantees that the Godement resolution is indeed sufficient for computing sheaf cohomology. That is, the cohomology of the complex $\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$ obtained by taking global sections of the flasque resolution $\mathcal{G}^\bullet(\mathcal{F})$ agrees with $H^\bullet(X, \mathcal{F})$.
+Together with [Proposition 16](#prop16){: data-relation="required" }, [Proposition 17](#prop17){: data-relation="required" } guarantees that the Godement resolution is indeed sufficient for computing sheaf cohomology. That is, the cohomology of the complex $\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$ obtained by taking global sections of the flasque resolution $\mathcal{G}^\bullet(\mathcal{F})$ agrees with $H^\bullet(X, \mathcal{F})$.
 
 ## Spectral Sequence
 
 One of the most powerful applications of sheaf cohomology is the computation of cohomology via spectral sequences. In this section we conclude the post with concrete calculations. The propositions introduced now hold in a general topological setting, but since we mainly have in mind applications to varieties and quasi-coherent sheaves, we place them in this category.
 
-Fix a continuous map $f : X \rightarrow Y$ and a sheaf $\mathcal{F}$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) and [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9) we know that the direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$ is left exact. Hence, just as in [\[Homological Algebra\] §Derived Functors](/en/math/homological_algebra/derived_functors), we can define the right derived functors of $f_\ast$ by
+Fix a continuous map $f : X \rightarrow Y$ and a sheaf $\mathcal{F}$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11){: data-relation="required" } and [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-relation="required" } we know that the direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$ is left exact. Hence, just as in [\[Homological Algebra\] §Derived Functors](/en/math/homological_algebra/derived_functors){: data-relation="weak" }, we can define the right derived functors of $f_\ast$ by
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
 where $\mathcal{I}^\bullet$ is an injective resolution of $\mathcal{F}$. By definition, $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$ when $q=0$, and if $\mathcal{F}$ is injective then $\mathcal{F}$ itself forms an injective resolution, so $R^qf_\ast \mathcal{F}=0$ for all $q>0$.
 
-Now consider the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$. Intuitively, what we would like to do is to choose an injective resolution for each $\mathcal{G}^p(\mathcal{F})$, and then use [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6) to define the horizontal differentials from the differentials $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$ of the Godement resolution.
+Now consider the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$. Intuitively, what we would like to do is to choose an injective resolution for each $\mathcal{G}^p(\mathcal{F})$, and then use [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" } to define the horizontal differentials from the differentials $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$ of the Godement resolution.
 
 ::: Definition 18 (Cartan-Eilenberg Resolution)
 In an abelian category, a *Cartan-Eilenberg resolution* of a cochain complex $K^\bullet$ is the data consisting of a double complex $I^{p,q}$ and an augmentation $K^\bullet \rightarrow I^{\bullet,0}$ satisfying the following conditions.
@@ -418,7 +418,7 @@ In an abelian category, a *Cartan-Eilenberg resolution* of a cochain complex $K^
 3. Likewise, for each $p$, the complexes $B^p(I^{\bullet,q})$ and $Z^p(I^{\bullet,q})$ arranged along $q$ form injective resolutions of $B^p(K^\bullet)$ and $Z^p(K^\bullet)$, respectively.
 :::
 
-The heart of this definition is that the intuition described above is not enough to produce a Cartan-Eilenberg resolution; in particular, the requirement that the cohomology of each row form a horizontal resolution of $H^p(K^\bullet)$ is a key ingredient in the existence proof. We do not prove the existence of Cartan-Eilenberg resolutions separately here, but it can be obtained essentially by repeatedly applying [\[Homological Algebra\] §Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7).
+The heart of this definition is that the intuition described above is not enough to produce a Cartan-Eilenberg resolution; in particular, the requirement that the cohomology of each row form a horizontal resolution of $H^p(K^\bullet)$ is a key ingredient in the existence proof. We do not prove the existence of Cartan-Eilenberg resolutions separately here, but it can be obtained essentially by repeatedly applying [\[Homological Algebra\] §Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7){: data-relation="required" }.
 
 Meanwhile, the third condition ensures that the two short exact sequences of each row,
 
@@ -466,13 +466,13 @@ and its total complex $\Tot(\mathcal{J})^\bullet$. Then by the same computation 
 
 $$E_1^{p,q}=H^p(\mathcal{J}^{\bullet, q})=\Gamma(Y, \mathcal{H}^{p,q})$$
 
-Here the second equality holds because, by the third condition of [Definition 18](#def18), each row splits into injective objects so that $\Gamma(Y,-)$ commutes with row-wise cohomology. Moreover, since $\mathcal{H}^{p,q}$ is an injective resolution of $R^pf_\ast \mathcal{F}$, its cohomology comes out as $H^q(Y, R^p f_\ast \mathcal{F})$.
+Here the second equality holds because, by the third condition of [Definition 18](#def18){: data-relation="required" }, each row splits into injective objects so that $\Gamma(Y,-)$ commutes with row-wise cohomology. Moreover, since $\mathcal{H}^{p,q}$ is an injective resolution of $R^pf_\ast \mathcal{F}$, its cohomology comes out as $H^q(Y, R^p f_\ast \mathcal{F})$.
 
 On the other hand, for the filtration in the $q$ direction, the $E_1$ page is
 
 $$E_1^{p,q}=H^q(\Gamma(Y, \mathcal{I}^{p,\bullet}))$$
 
-and since each $\mathcal{I}^{p,\bullet}$ is, by definition of a Cartan-Eilenberg resolution, an injective resolution of $f_\ast \mathcal{G}^p(\mathcal{F})$, we have $E_1^{p,q}=H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$. Now $\mathcal{G}^p(\mathcal{F})$ is flasque and $f_\ast$ preserves flasqueness, so $f_\ast \mathcal{G}^p(\mathcal{F})$ is also flasque; hence by [Proposition 16](#prop16) the terms with $q>0$ vanish, leaving only
+and since each $\mathcal{I}^{p,\bullet}$ is, by definition of a Cartan-Eilenberg resolution, an injective resolution of $f_\ast \mathcal{G}^p(\mathcal{F})$, we have $E_1^{p,q}=H^q(Y, f_\ast \mathcal{G}^p(\mathcal{F}))$. Now $\mathcal{G}^p(\mathcal{F})$ is flasque and $f_\ast$ preserves flasqueness, so $f_\ast \mathcal{G}^p(\mathcal{F})$ is also flasque; hence by [Proposition 16](#prop16){: data-relation="required" } the terms with $q>0$ vanish, leaving only
 
 $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^p(\mathcal{F}))$$
 
@@ -499,11 +499,11 @@ $$0 \rightarrow H^1(Y, f_\ast \mathcal{F}) \rightarrow H^1(X, \mathcal{F}) \righ
 :::
 
 ::: Proof
-Consider the terms with $p+q \leq 2$ on the $E_2$ page of the Leray spectral sequence $E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$. By [\[Homological Algebra\] §Spectral Sequences, ⁋Definition 5](/en/math/homological_algebra/spectral_sequences#def5), we know that
+Consider the terms with $p+q \leq 2$ on the $E_2$ page of the Leray spectral sequence $E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$. By [\[Homological Algebra\] §Spectral Sequences, ⁋Definition 5](/en/math/homological_algebra/spectral_sequences#def5){: data-relation="required" }, we know that
 
 $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}.$$
 
-In particular, since this is a first quadrant spectral sequence, we have $E_r^{p,q} = E_\infty^{p,q}$ for sufficiently large $r$. ([\[Homological Algebra\] §Spectral Sequences, ⁋Proposition 6](/en/math/homological_algebra/spectral_sequences#prop6))
+In particular, since this is a first quadrant spectral sequence, we have $E_r^{p,q} = E_\infty^{p,q}$ for sufficiently large $r$. ([\[Homological Algebra\] §Spectral Sequences, ⁋Proposition 6](/en/math/homological_algebra/spectral_sequences#prop6){: data-relation="required" })
 
 First, looking at the components with $p+q = 1$, there are only two terms $E_2^{1,0}$ and $E_2^{0,1}$. Considering degrees, all differentials into or out of $E_2^{1,0}$ are zero, so $E_2^{1,0} = E_\infty^{1,0}$. On the other hand, the $d_2$ from $E_2^{0,1}$ to $E_2^{2,0}$ may be nontrivial, so $E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$. Then by the filtration,
 
@@ -549,14 +549,14 @@ Here $\mathcal{H}^q(\mathcal{F})$ is the presheaf $U \mapsto H^q(U, \mathcal{F})
 :::
 
 ::: Proof
-Take the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$ and form the double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$. That the two spectral sequences obtained from the two filtrations converge to the same total cohomology $H^{p+q}(X, \mathcal{F})$ follows from [\[Homological Algebra\] §Spectral Sequences, ⁋Example 11](/en/math/homological_algebra/spectral_sequences#ex11), and since the Godement sheaf $\mathcal{G}^q(\mathcal{F})$ is flasque, it is Čech-acyclic by [Lemma 10](#lem10), so the same vanishing as in the computation above applies.
+Take the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$ and form the double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$. That the two spectral sequences obtained from the two filtrations converge to the same total cohomology $H^{p+q}(X, \mathcal{F})$ follows from [\[Homological Algebra\] §Spectral Sequences, ⁋Example 11](/en/math/homological_algebra/spectral_sequences#ex11){: data-relation="required" }, and since the Godement sheaf $\mathcal{G}^q(\mathcal{F})$ is flasque, it is Čech-acyclic by [Lemma 10](#lem10){: data-relation="required" }, so the same vanishing as in the computation above applies.
 :::
 
-This spectral sequence allows us to understand [Theorem 11](#thm11) in a broader context. If $\mathcal{F}$ is acyclic on all finite intersections of $\mathcal{U}$, then $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$ for all $q > 0$, so all terms with $q > 0$ vanish on the $E_2$ page and we obtain $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$. That is, the Čech-to-derived functor spectral sequence is a more general result that includes [Theorem 11](#thm11).
+This spectral sequence allows us to understand [Theorem 11](#thm11){: data-relation="weak" } in a broader context. If $\mathcal{F}$ is acyclic on all finite intersections of $\mathcal{U}$, then $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$ for all $q > 0$, so all terms with $q > 0$ vanish on the $E_2$ page and we obtain $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$. That is, the Čech-to-derived functor spectral sequence is a more general result that includes [Theorem 11](#thm11){: data-relation="weak" }.
 
 ## Classification of Line Bundles
 
-Earlier we saw that a line bundle is determined by transition functions $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$ ([\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Proposition 2](/en/math/algebraic_varieties/line_bundles#prop2)). The transition functions satisfy the cocycle condition $g_{ij}g_{jk} = g_{ik}$, which precisely corresponds to the Čech 1-cocycle condition written in multiplicative notation. Moreover, an isomorphism of line bundles changes the transition function by $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$ via functions $h_i \in \mathcal{O}_X^\times(U_i)$ on each $U_i$, which also matches the equivalence relation given by Čech 1-coboundaries. That is, the isomorphism class of a line bundle corresponds naturally to an element of $\check{H}^1(X, \mathcal{O}_X^\times)$.
+Earlier we saw that a line bundle is determined by transition functions $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$ ([\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Proposition 2](/en/math/algebraic_varieties/line_bundles#prop2){: data-relation="required" }). The transition functions satisfy the cocycle condition $g_{ij}g_{jk} = g_{ik}$, which precisely corresponds to the Čech 1-cocycle condition written in multiplicative notation. Moreover, an isomorphism of line bundles changes the transition function by $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$ via functions $h_i \in \mathcal{O}_X^\times(U_i)$ on each $U_i$, which also matches the equivalence relation given by Čech 1-coboundaries. That is, the isomorphism class of a line bundle corresponds naturally to an element of $\check{H}^1(X, \mathcal{O}_X^\times)$.
 
 Making this observation precise yields the following. The point to note is that since $\mathcal{O}_X^\times$ is a sheaf of (abelian) groups with multiplicative structure, the coboundary relation in Čech cohomology is expressed multiplicatively rather than additively. Specifically, a 1-coboundary is of the form $(g_{ij}) = (h_i \cdot h_j^{-1})$.
 
@@ -573,10 +573,10 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 and thus the map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is well-defined.
 
-Conversely, any line bundle $\mathcal{L}$ is represented by transition functions $g_{ij}$ on a suitable open cover by [\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Definition 1](/en/math/algebraic_varieties/line_bundles#def1), and these form a Čech 1-cocycle. Since a line bundle isomorphism corresponds exactly to the equivalence relation by coboundaries, the kernel of this map consists of coboundaries. Therefore $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is injective. Taking the direct limit now yields $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$.
+Conversely, any line bundle $\mathcal{L}$ is represented by transition functions $g_{ij}$ on a suitable open cover by [\[Algebraic Varieties\] §Line Bundles and Vector Bundles, ⁋Definition 1](/en/math/algebraic_varieties/line_bundles#def1){: data-relation="required" }, and these form a Čech 1-cocycle. Since a line bundle isomorphism corresponds exactly to the equivalence relation by coboundaries, the kernel of this map consists of coboundaries. Therefore $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is injective. Taking the direct limit now yields $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$.
 :::
 
-This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ now becomes the problem of classifying $\mathcal{O}_X^\times$-valued Čech 1-cocycles, which is encouraging in that explicit computation is possible after all. In the next post [§Cohomology of Projective Space](/en/math/algebraic_varieties/cohomology_of_projective_spaces), we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
+This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ now becomes the problem of classifying $\mathcal{O}_X^\times$-valued Čech 1-cocycles, which is encouraging in that explicit computation is possible after all. In the next post [§Cohomology of Projective Space](/en/math/algebraic_varieties/cohomology_of_projective_spaces){: data-relation="forward" }, we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
 
 ---
 
@@ -589,4 +589,4 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 ---
 
-[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves), the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.
+[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves){: data-relation="weak" }, the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.
