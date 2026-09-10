@@ -14,7 +14,7 @@ weight: 10
 published: false
 ---
 
-[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)에서 $\varphi$가 서로소인 인수에 대해 곱으로 분해됨을 보았다. 이런 성질을 가진 함수들은 정수론에서 거듭 나타나며, 그들 사이의 관계는 합성곱이라는 연산으로 깔끔하게 기술된다.
+[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem){: data-relation="weak" }에서 $\varphi$가 서로소인 인수에 대해 곱으로 분해됨을 보았다. 이런 성질을 가진 함수들은 정수론에서 거듭 나타나며, 그들 사이의 관계는 합성곱이라는 연산으로 깔끔하게 기술된다.
 
 ## Multiplicative function
 
@@ -75,14 +75,14 @@ $$g(n) = \sum_{d \mid n} f(d) \quad\Longleftrightarrow\quad f(n) = \sum_{d \mid 
 :::
 
 ::: 증명
-왼쪽 조건은 $g = \mathbf{1}\ast f$를 뜻한다. 양변에 $\mu$를 합성곱하면 아래 [명제 8](#prop8)의 결합법칙과 명제 5에 의해 $\mu \ast g = \mu\ast\mathbf{1}\ast f = \varepsilon \ast f = f$이고, 이것이 오른쪽 식이다. 역방향도 같은 계산을 거꾸로 하면 된다.
+왼쪽 조건은 $g = \mathbf{1}\ast f$를 뜻한다. 양변에 $\mu$를 합성곱하면 아래 [명제 8](#prop8){: data-relation="required" }의 결합법칙과 명제 5에 의해 $\mu \ast g = \mu\ast\mathbf{1}\ast f = \varepsilon \ast f = f$이고, 이것이 오른쪽 식이다. 역방향도 같은 계산을 거꾸로 하면 된다.
 :::
 
 ::: 예시 7
-약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. ([§오일러 정리와 phi function, ⁋명제 9](/ko/math/number_theory/euler_theorem#prop9)) 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)(n/d)$이라는 $\varphi$의 또 다른 공식을 얻는다.
+약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. ([§오일러 정리와 phi function, ⁋명제 9](/ko/math/number_theory/euler_theorem#prop9){: data-relation="weak" }) 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)(n/d)$이라는 $\varphi$의 또 다른 공식을 얻는다.
 :::
 
-마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 multiplicative function 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) multiplicative이고, 소수 거듭제곱에서
+마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 multiplicative function 두 개의 합성곱이므로 (아래 [명제 9](#prop9){: data-relation="required" }) multiplicative이고, 소수 거듭제곱에서
 
 $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1} = p^e - p^{e-1} = p^{e-1}(p-1)$$
 
@@ -90,7 +90,7 @@ $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1}
 
 $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac1p\Bigr)$$
 
-이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)에서 직접 센 결과가 재생산되는 것이다.
+이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem){: data-relation="weak" }에서 직접 센 결과가 재생산되는 것이다.
 
 ## 합성곱의 대수적 구조
 
@@ -153,7 +153,7 @@ $$\begin{aligned}
 \varphi(360) &= 360\Bigl(1 - \frac12\Bigr)\Bigl(1 - \frac13\Bigr)\Bigl(1 - \frac15\Bigr) = 360\cdot\frac12\cdot\frac23\cdot\frac45 = 96
 \end{aligned}$$
 
-이다. $360$이 어떤 소수의 제곱으로 나누어떨어지므로 $\mu(360) = 0$이고, 약수에 걸친 합 $\sum_{d \mid 360}\varphi(d) = 360$ ([예시 7](#ex7)) 역시 곱셈성으로 인수마다 $\sum_{j}\varphi(p^j) = p^e$임을 확인하면 즉시 따라온다.
+이다. $360$이 어떤 소수의 제곱으로 나누어떨어지므로 $\mu(360) = 0$이고, 약수에 걸친 합 $\sum_{d \mid 360}\varphi(d) = 360$ ([예시 7](#ex7){: data-relation="weak" }) 역시 곱셈성으로 인수마다 $\sum_{j}\varphi(p^j) = p^e$임을 확인하면 즉시 따라온다.
 :::
 
 다음으로 뫼비우스 반전을 적용해 약수합으로 정의된 함수를 풀어내는 전형적인 계산을 본다.
@@ -186,7 +186,7 @@ $$M(1),\dots,M(10) = 1,\,0,\,-1,\,-1,\,-2,\,-1,\,-2,\,-2,\,-2,\,-1$$
 
 이 예시들은 곱셈성·합성곱·반전이라는 세 도구가 어떻게 맞물려 한 함수의 값을 다른 함수의 값으로 번역하는지를 보여 준다.
 
-Multiplicative 함수와 디리클레 합성곱은 소수의 분포를 함수의 언어로 다루는 해석적 정수론의 대수적 골격을 이룬다. 이들을 생성함수 $\sum_n f(n) n^{-s}$로 부호화한 디리클레 급수는 Riemann zeta function과 만나며, 그 해석적 성질은 [§소수의 무한성과 분포, ⁋참고 3](/ko/math/number_theory/distribution_of_primes#rmk3)에서 언급한 소수 정리로 이어진다.
+Multiplicative 함수와 디리클레 합성곱은 소수의 분포를 함수의 언어로 다루는 해석적 정수론의 대수적 골격을 이룬다. 이들을 생성함수 $\sum_n f(n) n^{-s}$로 부호화한 디리클레 급수는 Riemann zeta function과 만나며, 그 해석적 성질은 [§소수의 무한성과 분포, ⁋참고 3](/ko/math/number_theory/distribution_of_primes#rmk3){: data-relation="forward" }에서 언급한 소수 정리로 이어진다.
 
 ---
 
