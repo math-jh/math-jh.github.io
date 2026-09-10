@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem)는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 자연스러운 물음은 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수가 무엇인지, 그리고 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는지의 여부이다. 이 물음이 coset의 곱셈 구조를 드러낸다.
+[§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem){: data-relation="required" }는 $\gcd(a, n) = 1$일 때 $a^{\varphi(n)} \equiv 1$임을 말했다. 그렇다면 자연스러운 물음은 $a$의 거듭제곱이 $1$로 돌아오는 가장 작은 지수가 무엇인지, 그리고 그 거듭제곱이 기약잉여계 전체를 훑을 수 있는지의 여부이다. 이 물음이 coset의 곱셈 구조를 드러낸다.
 
 ## 위수
 
@@ -45,7 +45,7 @@ $p$가 소수이면 법 $p$의 원시근이 존재한다. 즉 $\mathbb{Z}/p\math
 :::
 
 ::: 증명
-Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 [명제 6](#prop6)에 의해 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7)), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
+Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 [명제 6](#prop6){: data-relation="required" }에 의해 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7){: data-relation="required" }), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
 :::
 
 ::: 참고 5
@@ -137,7 +137,7 @@ $$x \equiv 3^1 \equiv 3, \qquad x \equiv 3^4 \equiv 4 \pmod 7$$
 이 두 해이다. 실제로 $3^4 \equiv 4$, $4^4 = 256 = 7\cdot 36 + 4 \equiv 4$로 확인된다.
 :::
 
-이 방법은 일반적으로 $x^k \equiv a \pmod p$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $k t \equiv \ind_g a \pmod{p-1}$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences)). 따라서 해의 개수는 $\gcd(k, p-1)$이 $\ind_g a$를 나누면 $\gcd(k, p-1)$개, 그렇지 않으면 $0$개이다.
+이 방법은 일반적으로 $x^k \equiv a \pmod p$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $k t \equiv \ind_g a \pmod{p-1}$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences){: data-relation="required" }). 따라서 해의 개수는 $\gcd(k, p-1)$이 $\ind_g a$를 나누면 $\gcd(k, p-1)$개, 그렇지 않으면 $0$개이다.
 
 마지막으로 합성수 법에서 multiplicative group이 순환하지 않는 경우를 참고 5의 법 $8$에서 구체적으로 본다.
 
