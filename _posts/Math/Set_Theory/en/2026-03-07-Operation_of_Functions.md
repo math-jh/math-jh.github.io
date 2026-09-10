@@ -76,7 +76,7 @@ For a function $f:A\rightarrow B$, $f^{-1}$ is a function if and only if $f$ is 
 ::: Proof
 If $f^{-1}$ is bijective, then it is also surjective, so its domain is $B$. Moreover, since $f$ is injective, $f^{-1}$ is a function.
 
-Conversely, suppose $f^{-1}$ is a function. Then by definition, $\pr_1 f^{-1}=B$. Substituting $R_2=\id_A$ and $R_1=f^{-1}$ into the first equation of [§Operations on Binary Relations, ⁋Proposition 8](/en/math/set_theory/operation_of_binary_relations#prop8) yields $\pr_1f^{-1}=f(A)$, so $B=f(A)$, and therefore $f$ is surjective.
+Conversely, suppose $f^{-1}$ is a function. Then by definition, $\pr_1 f^{-1}=B$. Substituting $R_2=\id_A$ and $R_1=f^{-1}$ into the first equation of [§Operations on Binary Relations, ⁋Proposition 8](/en/math/set_theory/operation_of_binary_relations#prop8){: data-relation="required" } yields $\pr_1f^{-1}=f(A)$, so $B=f(A)$, and therefore $f$ is surjective.
 
 Also, suppose $(x,f(x))\in F$ and $(y, f(y))\in F$ are well-defined. Then $(f(x), x)\in F^{-1}$ and $(f(y),y)\in F^{-1}$. If in addition $f(x)=f(y)$, then since $f^{-1}$ is a function, we have $x=y$. Therefore, $f$ is injective.
 :::
