@@ -34,7 +34,7 @@ Let $C^\infty(U)$ be the collection of $C^\infty$ functions defined on an open s
 
 $$\rho_{UV}:f\mapsto f\vert_V$$
 
-Then this structure becomes a sheaf of rings $\mathcal{C}^\infty_M$ on $M$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)) The stalk of $\mathcal{C}^\infty$ at any $p\in M$ is written $\mathcal{C}^\infty_{M,p}$, or simply $\mathcal{C}^\infty_p$ when there is no danger of confusion. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9))
+Then this structure becomes a sheaf of rings $\mathcal{C}^\infty_M$ on $M$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-relation="required" }) The stalk of $\mathcal{C}^\infty$ at any $p\in M$ is written $\mathcal{C}^\infty_{M,p}$, or simply $\mathcal{C}^\infty_p$ when there is no danger of confusion. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-relation="required" })
 
 ::: Proposition 1
 For any manifold $M$, $\mathcal{C}^\infty_p$ has the structure of an $\mathbb{R}$-algebra.
@@ -76,7 +76,7 @@ Moreover, if two functions $f,g$ agree on some open neighborhood $U$ of $p$, the
 
 $$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
 
-Let us write the equivalence class of $f$ as $\mathbf{f}$. Then the content of [Proposition 1](#prop1) is that scalar multiplication and addition, and even multiplication, are well defined on $\mathcal{C}^\infty_p$, as in $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$.
+Let us write the equivalence class of $f$ as $\mathbf{f}$. Then the content of [Proposition 1](#prop1){: data-relation="required" } is that scalar multiplication and addition, and even multiplication, are well defined on $\mathcal{C}^\infty_p$, as in $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$.
 
 Now a tangent vector is a directional derivative that assigns a real number to each element of $\mathcal{C}^\infty_p$. Here the derivative is defined as a linear map satisfying the Leibniz rule.
 
@@ -91,7 +91,7 @@ is called a *tangent vector* of $M$ at $p$. The collection of tangent vectors of
 The next proposition states a fact that is already easy to guess.
 
 ::: Proposition 4
-The $T_pM$ defined in [Definition 3](#def3) is an $\mathbb{R}$-vector space.
+The $T_pM$ defined in [Definition 3](#def3){: data-relation="required" } is an $\mathbb{R}$-vector space.
 :::
 ::: Proof
 Since both $\mathcal{C}^\infty_p$ and $\mathbb{R}$ are $\mathbb{R}$-vector spaces, $\Hom_\mathbb{R}(\mathcal{C}^\infty_p,\mathbb{R})$ is also an $\mathbb{R}$-vector space. Therefore, to show that the tangent space $T_pM$ is indeed an $\mathbb{R}$-vector space as its name suggests, it suffices to show that $T_pM$ is closed under addition and scalar multiplication. For example, since $v+w$ is the linear map defined by

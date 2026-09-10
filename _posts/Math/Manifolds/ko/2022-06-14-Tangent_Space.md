@@ -33,7 +33,7 @@ $C^\infty(U)$를 열린집합 $U$ 위에서 정의된 $C^\infty$ 함수들의 �
 
 $$\rho_{UV}:f\mapsto f\vert_V$$
 
-으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9))
+으로 정의하자. 그럼 이 구조는 $M$ 위에 정의된 ring들의 sheaf $\mathcal{C}^\infty_M$가 된다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-relation="required" }) 임의의 $p\in M$에서의 $\mathcal{C}^\infty$의 stalk은 $\mathcal{C}^\infty_{M,p}$, 혹은 혼동이 없을 때에는 $\mathcal{C}^\infty_p$로 적는다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9){: data-relation="required" })
 
 ::: 명제 1
 임의의 manifold $M$과 한 점 $p\in M$에 대하여 $\mathcal{C}^\infty_p$은 $\mathbb{R}$-algebra 구조를 갖는다.
@@ -77,7 +77,7 @@ $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\e
 
 $$\mathcal{C}^\infty_p=\{(f,U)\mid p\in U\text{ open}, f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some open $W\subseteq U\cap V$ with $p\in W$}$$
 
-$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty_p$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1)의 내용이다.
+$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty_p$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1){: data-relation="required" }의 내용이다.
 
 이제 tangent vector라는 것은 $\mathcal{C}^\infty_p$의 각 원소마다 실수값을 대응시키는 방향미분이다. 여기에서 미분은 라이프니츠 법칙을 만족하는 linear map으로 정의된다.
 
@@ -92,7 +92,7 @@ $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$
 다음 명제는 이미 이름으로부터 충분히 짐작할 수 있는 사실이다.
 
 ::: 명제 4
-[정의 3](#def3)에서 정의한 $T_pM$은 $\mathbb{R}$-벡터공간이다.
+[정의 3](#def3){: data-relation="required" }에서 정의한 $T_pM$은 $\mathbb{R}$-벡터공간이다.
 :::
 ::: 증명
 $\mathcal{C}^\infty_p$와 $\mathbb{R}$ 모두 $\mathbb{R}$-벡터공간이므로, $\Hom_\mathbb{R}(\mathcal{C}^\infty_p,\mathbb{R})$ 또한 $\mathbb{R}$-벡터공간이다. 따라서 tangent space $T_pM$이 그 이름답게 $\mathbb{R}$-벡터공간이 된다는 것을 보이기 위해서는 $T_pM$이 덧셈과 상수곱에 대해 닫혀있음만 보이면 충분하다.  예를 들어, $v+w$가 다음의 식
