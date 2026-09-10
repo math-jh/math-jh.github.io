@@ -51,36 +51,36 @@ Field $\mathbb{K}$의 원소 $a$가 $a\not\in \mathbb{K}^p$를 만족한다 가�
 ::: 증명
 만일 $p=1$이라면 $\mathbb{K}^p=\mathbb{K}$이므로 가정을 만족하는 $a$가 존재하지 않는다. 따라서 $p$가 prime인 경우만 보면 충분하다. 또 $e=0$이라면 $f$는 일차식이 되어 자명하게 irreducible이므로, $e\geq 1$인 경우만 보면 충분하다.
 
-$\overline{\mathbb{K}}$에서 $f$의 해 $\alpha$를 하나 택하자. 즉 $\alpha^{p^e}=a$이다. 그럼 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)의 Frobenius endomorphism을 characteristic $p$의 ring $\overline{\mathbb{K}}[\x]$에 반복하여 적용하면
+$\overline{\mathbb{K}}$에서 $f$의 해 $\alpha$를 하나 택하자. 즉 $\alpha^{p^e}=a$이다. 그럼 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-relation="required" }의 Frobenius endomorphism을 characteristic $p$의 ring $\overline{\mathbb{K}}[\x]$에 반복하여 적용하면
 
 $$f(\x)=\x^{p^e}-\alpha^{p^e}=(\x-\alpha)^{p^e}$$
 
 이 성립한다. 한편, 만일 어떠한 $m<e$에 대하여 $\alpha^{p^m}\in \mathbb{K}$라면 $a=(\alpha^{p^m})^{p^{e-m}}\in \mathbb{K}^p$가 되어 가정에 모순이므로, $\alpha^{p^m}\in\mathbb{K}$이도록 하는 $m$은 반드시 $m\geq e$를 만족해야 한다.
 
-이제 $g\in \mathbb{K}[\x]$가 $f$의 일차 이상의 monic factor라 하자. 그럼 $\overline{\mathbb{K}}[\x]$에서 $g$는 $(\x-\alpha)^{p^e}$의 monic factor이므로, 적당한 $0< d\leq p^e$에 대하여 $g=(\x-\alpha)^d$의 꼴이어야 한다. $d=p^cu$로 적자. 여기서 $u$는 $p$와 서로소인 양의 정수이다. 그럼 다시 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)에 의하여
+이제 $g\in \mathbb{K}[\x]$가 $f$의 일차 이상의 monic factor라 하자. 그럼 $\overline{\mathbb{K}}[\x]$에서 $g$는 $(\x-\alpha)^{p^e}$의 monic factor이므로, 적당한 $0< d\leq p^e$에 대하여 $g=(\x-\alpha)^d$의 꼴이어야 한다. $d=p^cu$로 적자. 여기서 $u$는 $p$와 서로소인 양의 정수이다. 그럼 다시 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-relation="required" }에 의하여
 
 $$g=\bigl((\x-\alpha)^{p^c}\bigr)^u=(\x^{p^c}-\alpha^{p^c})^u$$
 
 이고, 이를 전개하면 $\x^{p^c(u-1)}$의 계수는 $-u\alpha^{p^c}$이다. $g\in\mathbb{K}[\x]$이므로 $-u\alpha^{p^c}\in \mathbb{K}$인데, $p$가 $u$를 나누지 않으므로 $u\cdot 1$은 $\mathbb{K}$에서 invertible이고 따라서 $\alpha^{p^c}\in \mathbb{K}$이다. 그럼 앞 문단에서 살펴본 것에 의하여 $c\geq e$여야 하고, 따라서 $d\geq p^c\geq p^e$이므로 $d=p^e$, 즉 $g=f$이다. 그러므로 $f$는 일차 이상의 monic factor로 자기 자신만을 가지며, 이는 $f$가 irreducible이라는 뜻이다.
 :::
 
-이를 가정하면 [명제 2](#prop2)의 증명 또한 쉽게 얻어진다. 
+이를 가정하면 [명제 2](#prop2){: data-relation="required" }의 증명 또한 쉽게 얻어진다. 
 
 ::: 증명 (명제 2)
 만일 $e=0$이라면 $x=a\in \mathbb{K}$이므로 $x$의 minimal polynomial은 $\x-a$, 즉 $\x^{p^0}-a$이고 $[\mathbb{K}(x):\mathbb{K}]=1=p^0$이다.
 
-이제 $e\geq 1$이라 하고, 어떠한 $b\in\mathbb{K}$에 대하여 $a=b^p$라 가정하자. 그럼 $(x^{p^{e-1}})^p=x^{p^e}=a=b^p$인데 field에서 Frobenius endomorphism은 항상 injective이므로 $x^{p^{e-1}}=b\in \mathbb{K}$가 되어 $e$의 최소성에 모순이다. 따라서 $a\not\in \mathbb{K}^p$이고, [보조정리 3](#lem3)에 의하여 $\x^{p^e}-a$는 irreducible이다. 이는 $x$를 해로 갖는 monic polynomial이므로 $x$의 minimal polynomial이며, 그 degree가 $p^e$이므로 $[\mathbb{K}(x):\mathbb{K}]=p^e$이다.
+이제 $e\geq 1$이라 하고, 어떠한 $b\in\mathbb{K}$에 대하여 $a=b^p$라 가정하자. 그럼 $(x^{p^{e-1}})^p=x^{p^e}=a=b^p$인데 field에서 Frobenius endomorphism은 항상 injective이므로 $x^{p^{e-1}}=b\in \mathbb{K}$가 되어 $e$의 최소성에 모순이다. 따라서 $a\not\in \mathbb{K}^p$이고, [보조정리 3](#lem3){: data-relation="required" }에 의하여 $\x^{p^e}-a$는 irreducible이다. 이는 $x$를 해로 갖는 monic polynomial이므로 $x$의 minimal polynomial이며, 그 degree가 $p^e$이므로 $[\mathbb{K}(x):\mathbb{K}]=p^e$이다.
 :::
 
-다음 정의는 [정의 1](#def1) 직후에 왔어도 자연스러웠을 것이다. 
+다음 정의는 [정의 1](#def1){: data-relation="weak" } 직후에 왔어도 자연스러웠을 것이다. 
 
 ::: 정의 4
 Field extension $\mathbb{L}/\mathbb{K}$가 *$p$-radical*이라는 것은 $\mathbb{L}$의 임의의 원소가 $p$-radical인 것이다. 만일 $\mathbb{L}$의 <em-ko>모든</em-ko> 원소 $x$에 대하여 $x^{p^e}\in \mathbb{K}$가 성립하도록 하는 정수 $e$가 존재한다면, 이러한 성질을 만족하는 $e$들 중 가장 작은 것을 $\mathbb{L}$의 *height<sub>높이</sub>*라 부른다. 
 :::
 
-즉 $\mathbb{L}/\mathbb{K}$의 height는 (만일 정의된다면) $\mathbb{L}$의 원소들의 height들의 maximum이라 생각할 수 있다. 또, [명제 2](#prop2)에 의하여 임의의 $p$-radical extension은 자연스럽게 algebraic extension이다. 
+즉 $\mathbb{L}/\mathbb{K}$의 height는 (만일 정의된다면) $\mathbb{L}$의 원소들의 height들의 maximum이라 생각할 수 있다. 또, [명제 2](#prop2){: data-relation="required" }에 의하여 임의의 $p$-radical extension은 자연스럽게 algebraic extension이다. 
 
-만일 Frobenius endomorphism $\Frob_p:A\rightarrow A$가 bijection이라면 우리는 $A$를 *perfect ring*이라 불렀다. ([§체, ⁋정의 13](/ko/math/field_theory/fields#def13)) 따라서  만일 $\mathbb{K}$가 perfect field였다면, $\mathbb{K}^p=\mathbb{K}$일 것이므로, perfect field의 임의의 $p$-radical extension은 자기 자신이어야 한다. 뿐만 아니라, 정의로부터 $p$-radical extension들의 합성이 $p$-radical임이 자명하다. 다음 명제는 (relative) $p$-radical closure의 존재성에 대한 것이다. 
+만일 Frobenius endomorphism $\Frob_p:A\rightarrow A$가 bijection이라면 우리는 $A$를 *perfect ring*이라 불렀다. ([§체, ⁋정의 13](/ko/math/field_theory/fields#def13){: data-relation="weak" }) 따라서  만일 $\mathbb{K}$가 perfect field였다면, $\mathbb{K}^p=\mathbb{K}$일 것이므로, perfect field의 임의의 $p$-radical extension은 자기 자신이어야 한다. 뿐만 아니라, 정의로부터 $p$-radical extension들의 합성이 $p$-radical임이 자명하다. 다음 명제는 (relative) $p$-radical closure의 존재성에 대한 것이다. 
 
 ::: 명제 5
 Field extension $\mathbb{L}/\mathbb{K}$를 고정하고, 각각의 $n\geq 0$마다 
@@ -91,14 +91,14 @@ $$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}
 :::
 
 ::: 증명
-$\mathbb{L}_n\subseteq \mathbb{L}_{n+1}$인 것은 정의로부터 자명하다. $\mathbb{L}_\infty$가 subfield인 것을 보이자. $x,y\in \mathbb{L}_\infty$라 하면 적당한 $N$에 대하여 $x^{p^N},y^{p^N}\in \mathbb{K}$이도록 할 수 있고, [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)의 Frobenius endomorphism으로부터
+$\mathbb{L}_n\subseteq \mathbb{L}_{n+1}$인 것은 정의로부터 자명하다. $\mathbb{L}_\infty$가 subfield인 것을 보이자. $x,y\in \mathbb{L}_\infty$라 하면 적당한 $N$에 대하여 $x^{p^N},y^{p^N}\in \mathbb{K}$이도록 할 수 있고, [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-relation="required" }의 Frobenius endomorphism으로부터
 
 $$(x\pm y)^{p^N}=x^{p^N}\pm y^{p^N}\in \mathbb{K},\qquad (xy)^{p^N}=x^{p^N}y^{p^N}\in\mathbb{K}$$
 
 이며, $x\neq 0$이라면 $(x^{-1})^{p^N}=(x^{p^N})^{-1}\in \mathbb{K}$이다. 즉 $\mathbb{L}_\infty$는 $\mathbb{K}=\mathbb{L}_0$를 포함하는 $\mathbb{L}$의 subfield이고, 그 임의의 원소가 $p$-radical이므로 $\mathbb{L}_\infty/\mathbb{K}$는 $p$-radical extension이다. 마지막으로 $\mathbb{M}/\mathbb{K}$이 $\mathbb{L}$의 임의의 $p$-radical subextension이라면, $\mathbb{M}$의 임의의 원소 $x$는 유한한 height $n$을 가지므로 $x\in \mathbb{L}_n\subseteq\mathbb{L}_\infty$이다. 즉 $\mathbb{L}_\infty$가 가장 크다.
 :::
 
-[§대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions)에서 우리는 임의의 field $\mathbb{K}$는 algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5)에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}_n$은 정확히 $\mathbb{K}^{1/p^n}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{1/p^\infty}$라 적자. 이는 [§체, ⁋정의 14](/ko/math/field_theory/fields#def14)에서 정의하고 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15)에서 그 존재성을 보인 $\mathbb{K}$의 perfect closure와 같은 것이다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 infinite degree의 extension이 된다. 
+[§대수적 폐포](/ko/math/field_theory/algebraically_closed_extensions){: data-relation="required" }에서 우리는 임의의 field $\mathbb{K}$는 algebraic closure $\overline{\mathbb{K}}$를 갖는다는 것을 보았다. 따라서 [명제 5](#prop5){: data-relation="required" }에서 $\mathbb{L}=\overline{\mathbb{K}}$로 둘 수 있다. 그럼 $\overline{\mathbb{K}}$는 perfect field이며, 뿐만 아니라 각각의 $n$에 대하여 $\overline{\mathbb{K}}_n$은 정확히 $\mathbb{K}^{1/p^n}$과 같음을 안다. 이 상황에서의 (relative) $p$-radical closure를 $\mathbb{K}^{1/p^\infty}$라 적자. 이는 [§체, ⁋정의 14](/ko/math/field_theory/fields#def14){: data-relation="weak" }에서 정의하고 [§체, ⁋정리 15](/ko/math/field_theory/fields#thm15){: data-relation="weak" }에서 그 존재성을 보인 $\mathbb{K}$의 perfect closure와 같은 것이다. 만일 $\mathbb{K}$가 imperfect라면, 즉 $\mathbb{K}\neq \mathbb{K}^p$라면 위의 ascending sequence는 strictly increasing이며, 따라서 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 infinite degree의 extension이 된다. 
 
 한편 다음이 성립한다. 
 
@@ -135,7 +135,7 @@ Field extension $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 perfect closure일 �
 ::: 증명
 Perfect closure는 universal property로 정의되어 $\mathbb{K}$-isomorphism에 대해 유일하게 결정되므로, 필요조건은 $\mathbb{K}^{1/p^\infty}$에 대하여 확인하면 충분하다. 구성에 의하여 $\mathbb{K}^{1/p^\infty}$의 임의의 원소는 유한한 height를 가지므로 $\mathbb{K}^{1/p^\infty}/\mathbb{K}$는 $p$-radical extension이다. 또 $x\in \mathbb{K}^{1/p^\infty}$라 하면 $\overline{\mathbb{K}}$가 algebraically closed이므로 $y^p=x$이도록 하는 $y\in \overline{\mathbb{K}}$가 존재하는데, $x^{p^n}\in \mathbb{K}$라 하면 $y^{p^{n+1}}=x^{p^n}\in \mathbb{K}$이므로 $y\in \mathbb{K}^{1/p^\infty}$이다. 즉 $\mathbb{K}^{1/p^\infty}$에서 Frobenius는 surjective이고, field에서 Frobenius는 항상 injective이므로 $\mathbb{K}^{1/p^\infty}$는 perfect이다.
 
-거꾸로 $\mathbb{L}/\mathbb{K}$가 $p$-radical이고 $\mathbb{L}$이 perfect라 하자. Inclusion $u:\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$에 [명제 6](#prop6)을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{L} \rightarrow \mathbb{K}^{1/p^\infty}$를 얻는다. 우선 $v(\mathbb{L})$은 perfect field인데, $v(x)\in v(\mathbb{L})$가 주어질 때마다 $\mathbb{L}$이 perfect라는 것으로부터 $x=z^p$이도록 하는 $z\in \mathbb{L}$가 존재하고 $v(x)=v(z)^p$이기 때문이다. 한편 $\mathbb{K}^{1/p^\infty}$의 임의의 원소 $t$는 적당한 $n$에 대하여 $t^{p^n}\in \mathbb{K}\subseteq v(\mathbb{L})$를 만족하고, $v(\mathbb{L})$이 perfect이므로 $\xi^{p^n}=t^{p^n}$이도록 하는 $\xi\in v(\mathbb{L})$가 존재한다. 그런데 field에서 Frobenius가 injective이므로 $t=\xi\in v(\mathbb{L})$이다. 즉 $v$는 surjective이고, field들 사이의 nonzero homomorphism은 injective이므로 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2)) $v$는 $\mathbb{K}$-isomorphism이다. 따라서 $\mathbb{L}$은 $\mathbb{K}$의 perfect closure이다.
+거꾸로 $\mathbb{L}/\mathbb{K}$가 $p$-radical이고 $\mathbb{L}$이 perfect라 하자. Inclusion $u:\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$에 [명제 6](#prop6){: data-relation="required" }을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{L} \rightarrow \mathbb{K}^{1/p^\infty}$를 얻는다. 우선 $v(\mathbb{L})$은 perfect field인데, $v(x)\in v(\mathbb{L})$가 주어질 때마다 $\mathbb{L}$이 perfect라는 것으로부터 $x=z^p$이도록 하는 $z\in \mathbb{L}$가 존재하고 $v(x)=v(z)^p$이기 때문이다. 한편 $\mathbb{K}^{1/p^\infty}$의 임의의 원소 $t$는 적당한 $n$에 대하여 $t^{p^n}\in \mathbb{K}\subseteq v(\mathbb{L})$를 만족하고, $v(\mathbb{L})$이 perfect이므로 $\xi^{p^n}=t^{p^n}$이도록 하는 $\xi\in v(\mathbb{L})$가 존재한다. 그런데 field에서 Frobenius가 injective이므로 $t=\xi\in v(\mathbb{L})$이다. 즉 $v$는 surjective이고, field들 사이의 nonzero homomorphism은 injective이므로 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="required" }) $v$는 $\mathbb{K}$-isomorphism이다. 따라서 $\mathbb{L}$은 $\mathbb{K}$의 perfect closure이다.
 :::
 
 이로부터 perfect closure의 유일성도 얻어진다.
@@ -144,13 +144,13 @@ Perfect closure는 universal property로 정의되어 $\mathbb{K}$-isomorphism�
 Field $\mathbb{K}$의 두 perfect closure $\mathbb{M}_1$, $\mathbb{M}_2$, 즉 perfect field이면서 $\mathbb{K}$의 $p$-radical extension인 두 field가 주어졌다 하자. 그럼 유일한 $\mathbb{K}$-isomorphism $\mathbb{M}_1 \rightarrow \mathbb{M}_2$가 존재한다.
 :::
 ::: 증명
-Inclusion $\mathbb{K}\hookrightarrow \mathbb{M}_2$에 [명제 6](#prop6)을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{M}_1 \rightarrow \mathbb{M}_2$가 유일하게 존재하고, $\mathbb{M}_1$과 $\mathbb{M}_2$의 역할을 바꾸면 $\mathbb{K}$-homomorphism $w:\mathbb{M}_2 \rightarrow \mathbb{M}_1$도 유일하게 존재한다. 그럼 합성 $w\circ v:\mathbb{M}_1 \rightarrow \mathbb{M}_1$은 inclusion $\mathbb{K}\hookrightarrow\mathbb{M}_1$을 확장하는 homomorphism인데, $\id_{\mathbb{M}_1}$ 또한 그러하므로 다시 [명제 6](#prop6)의 유일성에 의하여 $w\circ v=\id_{\mathbb{M}_1}$이다. 같은 이유로 $v\circ w=\id_{\mathbb{M}_2}$이므로 $v$는 isomorphism이고, 그 유일성은 이미 살펴보았다.
+Inclusion $\mathbb{K}\hookrightarrow \mathbb{M}_2$에 [명제 6](#prop6){: data-relation="required" }을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{M}_1 \rightarrow \mathbb{M}_2$가 유일하게 존재하고, $\mathbb{M}_1$과 $\mathbb{M}_2$의 역할을 바꾸면 $\mathbb{K}$-homomorphism $w:\mathbb{M}_2 \rightarrow \mathbb{M}_1$도 유일하게 존재한다. 그럼 합성 $w\circ v:\mathbb{M}_1 \rightarrow \mathbb{M}_1$은 inclusion $\mathbb{K}\hookrightarrow\mathbb{M}_1$을 확장하는 homomorphism인데, $\id_{\mathbb{M}_1}$ 또한 그러하므로 다시 [명제 6](#prop6){: data-relation="required" }의 유일성에 의하여 $w\circ v=\id_{\mathbb{M}_1}$이다. 같은 이유로 $v\circ w=\id_{\mathbb{M}_2}$이므로 $v$는 isomorphism이고, 그 유일성은 이미 살펴보았다.
 :::
 
 이 글을 서두에서 언급한 반례를 소개하며 마치기로 한다. 
 
 ::: 예시 9
-Field $\mathbb{K}=\mathbb{F}_p(t)$를 생각하자. $\mathbb{F}_p$의 원소는 Frobenius endomorphism으로 고정되므로 $\mathbb{K}^p=\mathbb{F}_p(t^p)$이고, 따라서 $t\not\in \mathbb{K}^p$이다. 그럼 다항식 $f(\x)=\x^p-t\in \mathbb{K}[\x]$는 [보조정리 3](#lem3)에 의하여 irreducible이므로 $\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$는 $\mathbb{K}$의 extension이다. $\x$의 residue class를 $\alpha$라 하면 $\alpha^p=t\in\mathbb{K}$이고 $\alpha\not\in \mathbb{K}$이므로 $\alpha$는 height $1$의 $p$-radical element이며, 따라서 $\mathbb{L}/\mathbb{K}$는 $p$-radical extension이고 $\alpha$의 minimal polynomial은 $f(\x)$이다. ([명제 2](#prop2)) 이를 미분하면 $Df=p\x^{p-1}=0$이므로 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의하여 $\alpha$는 $f$의 중근임을 안다. 실은 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)에 의해 $(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$이므로 $\alpha$는 multiplicity $p$를 갖는다. 
+Field $\mathbb{K}=\mathbb{F}_p(t)$를 생각하자. $\mathbb{F}_p$의 원소는 Frobenius endomorphism으로 고정되므로 $\mathbb{K}^p=\mathbb{F}_p(t^p)$이고, 따라서 $t\not\in \mathbb{K}^p$이다. 그럼 다항식 $f(\x)=\x^p-t\in \mathbb{K}[\x]$는 [보조정리 3](#lem3){: data-relation="required" }에 의하여 irreducible이므로 $\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$는 $\mathbb{K}$의 extension이다. $\x$의 residue class를 $\alpha$라 하면 $\alpha^p=t\in\mathbb{K}$이고 $\alpha\not\in \mathbb{K}$이므로 $\alpha$는 height $1$의 $p$-radical element이며, 따라서 $\mathbb{L}/\mathbb{K}$는 $p$-radical extension이고 $\alpha$의 minimal polynomial은 $f(\x)$이다. ([명제 2](#prop2){: data-relation="required" }) 이를 미분하면 $Df=p\x^{p-1}=0$이므로 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-relation="required" }에 의하여 $\alpha$는 $f$의 중근임을 안다. 실은 [§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-relation="required" }에 의해 $(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$이므로 $\alpha$는 multiplicity $p$를 갖는다. 
 :::
 
 이제 다음 글과 그 다음 글에서는 이러한 경우를 어떻게 논의의 대상에서 제외시키는지 살펴본다. 
