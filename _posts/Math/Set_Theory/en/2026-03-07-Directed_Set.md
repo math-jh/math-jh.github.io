@@ -65,7 +65,7 @@ If $A$ is a totally ordered set, then trichotomy holds: for any $x, y\in A$, exa
 
 $$x=y,\qquad x < y,\qquad x > y$$
 
-holds. In this case the negation of $x\leq y$ is $x > y$; without the totally ordered hypothesis this is generally false. ([§Definition of Order Relations, ⁋Remark 11](/en/math/set_theory/order_relations#rmk11))
+holds. In this case the negation of $x\leq y$ is $x > y$; without the totally ordered hypothesis this is generally false. ([§Definition of Order Relations, ⁋Remark 11](/en/math/set_theory/order_relations#rmk11){: data-relation="weak" })
 
 ::: Proposition 6
 Every strictly monotone function $f$ from a totally ordered set $A$ to an ordered set $B$ is injective. If $f$ is strictly increasing, then $f$ is an isomorphism from $A$ onto $f(A)$.
@@ -74,7 +74,7 @@ Every strictly monotone function $f$ from a totally ordered set $A$ to an ordere
 Let $f$ be strictly monotone. For any $x\neq y$, either $x > y$ or $x < y$, so $f(x) > f(y)$ or $f(x) < f(y)$; hence $f(x)\neq f(y)$, and $f$ is injective. In particular, if $f$ is strictly increasing, we must show $f(x)\leq f(y)\implies x\leq y$, whose contrapositive is obvious.
 :::
 
-The preceding proposition also fails for general ordered sets. ([§Monotone Functions, ⁋Remark 6](/en/math/set_theory/monotone_functions#rmk6))
+The preceding proposition also fails for general ordered sets. ([§Monotone Functions, ⁋Remark 6](/en/math/set_theory/monotone_functions#rmk6){: data-relation="weak" })
 
 ::: Proposition 7
 Let $A$ be a totally ordered set and let $X\subseteq A$. Then $b\in A$ is the supremum of $X$ if and only if $b$ is an upper bound of $X$ and, for every $c\in A$ with $c < b$, there exists $x\in X$ such that $c < x\leq b$.
