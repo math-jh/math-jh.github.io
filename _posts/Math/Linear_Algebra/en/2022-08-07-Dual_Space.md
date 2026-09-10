@@ -18,13 +18,13 @@ last_polished_at: 2026-05-31T23:30:04+00:00
 ---
 ## Dual Basis
 
-Let $V$ be a finite-dimensional $\mathbb{K}$-vector space. From [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), taking $W=\mathbb{K}$, we know that $V^\ast=\Hom(V,\mathbb{K})$ has the same dimension as $V$. In particular, if $\mathcal{B}=\{x_1,\ldots, x_n\}$ is a basis of $V$, then the collection of linear maps $\xi^i$ sending $x_i$ to 1 and every other $x_j$ to 0
+Let $V$ be a finite-dimensional $\mathbb{K}$-vector space. From [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-relation="required" }, taking $W=\mathbb{K}$, we know that $V^\ast=\Hom(V,\mathbb{K})$ has the same dimension as $V$. In particular, if $\mathcal{B}=\{x_1,\ldots, x_n\}$ is a basis of $V$, then the collection of linear maps $\xi^i$ sending $x_i$ to 1 and every other $x_j$ to 0
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 forms a basis of $V^\ast$. We call this the *dual basis* of $\mathcal{B}$.
 
-Even when $V$ is infinite-dimensional, the linear independence of the set $\mathcal{B}^\ast$ defined as above for any basis $\mathcal{B}$ follows from exactly the same proof as in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5), without any modification. Hence $\dim V\leq\dim V^\ast$ always holds, and in fact, if $V$ is infinite-dimensional then necessarily $\dim V<\dim V^\ast$. To see this, it suffices to verify that the function obtained by extending the map sending every element of an arbitrary $\mathcal{B}$ to $1$ cannot be expressed as a linear combination of elements of $\mathcal{B}^\ast$.
+Even when $V$ is infinite-dimensional, the linear independence of the set $\mathcal{B}^\ast$ defined as above for any basis $\mathcal{B}$ follows from exactly the same proof as in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-relation="required" }, without any modification. Hence $\dim V\leq\dim V^\ast$ always holds, and in fact, if $V$ is infinite-dimensional then necessarily $\dim V<\dim V^\ast$. To see this, it suffices to verify that the function obtained by extending the map sending every element of an arbitrary $\mathcal{B}$ to $1$ cannot be expressed as a linear combination of elements of $\mathcal{B}^\ast$.
 
 ## Double Dual Space
 
@@ -110,7 +110,7 @@ This is immediate from the two inequalities
 $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V.$$
 :::
 
-In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3) with $W=V^\ast$, we obtain an isomorphism from $V$ to $V^{\ast\ast}$. Explicitly, this function is the *evaluation map*
+In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3){: data-relation="required" } with $W=V^\ast$, we obtain an isomorphism from $V$ to $V^{\ast\ast}$. Explicitly, this function is the *evaluation map*
 
 $$\ev_v:f\mapsto f(v)$$
 
@@ -136,7 +136,7 @@ Now suppose in particular that $V$ and $W$ are both finite-dimensional $\mathbb{
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots,\xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
-respectively. By [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla), every linear map can be represented by a matrix once bases are chosen; hence we can represent $L^\ast$ as a matrix with respect to the bases $\mathcal{C}^\ast$ and $\mathcal{B}^\ast$.
+respectively. By [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-relation="required" }, every linear map can be represented by a matrix once bases are chosen; hence we can represent $L^\ast$ as a matrix with respect to the bases $\mathcal{C}^\ast$ and $\mathcal{B}^\ast$.
 
 First, suppose $L$ is represented by the following matrix with respect to $\mathcal{B}$ and $\mathcal{C}$:
 
@@ -175,7 +175,7 @@ Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a lin
 2. If $L$ is surjective, then $L^\ast$ is injective.
 :::
 ::: Proof
-Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2).
+Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2){: data-relation="required" }.
 
 1. If $L$ is injective, there exists $R:W\rightarrow V$ satisfying $R\circ L=\id_V$. Then for any $f\in V^\ast$, the composition $f\circ R$ is a function from $W$ to $\mathbb{K}$, i.e., an element of $W^\ast$, and
 
@@ -203,7 +203,7 @@ That $v^\perp$ is a subspace of $V^\ast$ for any $v\in V$ is obvious from the bi
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
-and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3), we see that $S^\perp$ is a subspace of $V^\ast$. Similarly, for any $T\subseteq V^\ast$, the set $T^\perp$ is a subspace of $V$.
+and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3){: data-relation="required" }, we see that $S^\perp$ is a subspace of $V^\ast$. Similarly, for any $T\subseteq V^\ast$, the set $T^\perp$ is a subspace of $V$.
 
 ::: Proposition 8
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. For any subspace $U\subseteq V$ and its orthogonal complement $U^\perp$,
@@ -224,10 +224,10 @@ as desired.
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. Then $(\im L)^\perp=\ker(L^\ast)$.
 :::
 ::: Proof
-It suffices to take $U=V$ in [Proposition 8](#prop8). From the non-degeneracy of the canonical pairing $(-,-)$, we have $U^\perp=\{0\}$, yielding the desired result.
+It suffices to take $U=V$ in [Proposition 8](#prop8){: data-relation="required" }. From the non-degeneracy of the canonical pairing $(-,-)$, we have $U^\perp=\{0\}$, yielding the desired result.
 :::
 
-In [Proposition 8](#prop8), we could instead start with $U\subseteq W^\ast$ rather than $U\subseteq V$. In that case we obtain the following proposition.
+In [Proposition 8](#prop8){: data-relation="required" }, we could instead start with $U\subseteq W^\ast$ rather than $U\subseteq V$. In that case we obtain the following proposition.
 
 ::: Proposition 10
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. For any subspace $U\subseteq W^\ast$ and its orthogonal complement $U^\perp$,
@@ -248,7 +248,7 @@ which gives the claim.
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. Then $\bigl(\im L^\ast\bigr)^\perp=\ker L$.
 :::
 ::: Proof
-It suffices to take $U=W^\ast$ in [Proposition 10](#prop10).
+It suffices to take $U=W^\ast$ in [Proposition 10](#prop10){: data-relation="required" }.
 :::
 
 ---
