@@ -61,7 +61,7 @@ The second claim is immediate from the definition, so it suffices to prove the f
 
 Assume $F_0$ is continuous; we show that $F_0$ is $C^\infty$. That is, for arbitrary $x\in N$ we must exhibit a coordinate system $(U,\varphi)$ centered at $x$ such that the restriction of $F_0$ to $U$ is $C^\infty$. Since we have assumed that $F_0$ is a continuous bijection, to show this it suffices to exhibit, for arbitrary $y\in P$, a coordinate system $(V,\psi)$ containing $y$ such that the restriction of $\psi\circ F_0$ to the *open set* $F_0^{-1}(V)$ is $C^\infty$.
 
-Let $y\in P$ be given, and choose a coordinate system $(W,z^1,\ldots, z^m)$ of $M$ containing $\Phi(y)$. Then by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 10](/en/math/manifolds/submanifolds#cor10), restricting a suitable subset of $\{z^k\circ\Phi\mid 1\leq k\leq m\}$ to a suitable open neighborhood $V$ yields a coordinate system at the point $y\in P$.
+Let $y\in P$ be given, and choose a coordinate system $(W,z^1,\ldots, z^m)$ of $M$ containing $\Phi(y)$. Then by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 10](/en/math/manifolds/submanifolds#cor10){: data-relation="required" }, restricting a suitable subset of $\{z^k\circ\Phi\mid 1\leq k\leq m\}$ to a suitable open neighborhood $V$ yields a coordinate system at the point $y\in P$.
 
 Denote these by $\{z^1\circ\Phi,\ldots,z^p\circ\Phi\}$. Without loss of generality, assume $\gamma=(z^1,\ldots, z^m)$ is a surjection onto $\mathbb{R}^m$; then the above claim is equivalent to saying that $(V,\pi\circ\gamma\circ\Phi)$ is a coordinate system at $y$ via the projection $\pi:\mathbb{R}^m\rightarrow\mathbb{R}^p$. Now
 
@@ -90,13 +90,13 @@ Conversely, for a subset $A\subseteq M$ equipped with a manifold structure, if t
 
 ## Uniqueness of Submanifolds
 
-The pair $(A,\iota)$ defined in the preceding section is determined *uniquely* for each equivalence class $[(N,\Phi)]$. First, since $\theta$ in [Definition 3](#def3) is a diffeomorphism, it is in particular bijective, and therefore
+The pair $(A,\iota)$ defined in the preceding section is determined *uniquely* for each equivalence class $[(N,\Phi)]$. First, since $\theta$ in [Definition 3](#def3){: data-relation="required" } is a diffeomorphism, it is in particular bijective, and therefore
 
 $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 holds, so $A$ is uniquely determined. On the other hand, for the subset $A$ of $M$ thus determined and the inclusion $\iota:A\hookrightarrow M$ to belong to $[(N,\Phi)]$, there must exist a diffeomorphism $\theta$ satisfying $\iota=\Phi\circ\theta$; taking $\bar{\Phi}^{-1}$ on the left of both sides yields $\theta=\bar{\Phi}^{-1}$, so the manifold structure on $A$ is *necessarily* the one defined above.
 
-By contrast, given an arbitrary subset $A\subseteq M$ with inclusion $\iota:A\hookrightarrow M$, a manifold structure on $A$ making $(A,\iota)$ a submanifold need not be unique. For instance, as in [Example 1](#ex1), if two submanifolds $(N_1,\Phi_1),(N_2,\Phi_2)$ of $M$ are not diffeomorphic to each other yet satisfy $\Phi_1(N_1)=\Phi_2(N_2)$, then the two manifold structures on $(A,\iota)$ obtained from $[(N_1,\Phi_1)]$ and $[(N_2,\Phi_2)]$ via the above process must be distinct.
+By contrast, given an arbitrary subset $A\subseteq M$ with inclusion $\iota:A\hookrightarrow M$, a manifold structure on $A$ making $(A,\iota)$ a submanifold need not be unique. For instance, as in [Example 1](#ex1){: data-relation="required" }, if two submanifolds $(N_1,\Phi_1),(N_2,\Phi_2)$ of $M$ are not diffeomorphic to each other yet satisfy $\Phi_1(N_1)=\Phi_2(N_2)$, then the two manifold structures on $(A,\iota)$ obtained from $[(N_1,\Phi_1)]$ and $[(N_2,\Phi_2)]$ via the above process must be distinct.
 
 Nevertheless, if additional conditions are imposed on $(A,\iota)$, the submanifold structure on it may be determined uniquely. The theorems to be introduced in the next post satisfy even this stronger uniqueness, and for that purpose the following two propositions are useful.
 
@@ -104,18 +104,18 @@ Nevertheless, if additional conditions are imposed on $(A,\iota)$, the submanifo
 Fix a subset $A$ of a manifold $M$ and a topology $\mathcal{T}$ on $A$. Then there exists at most one differentiable structure making $(A,\iota)$ a submanifold of $M$.
 :::
 ::: Proof
-This is immediate from the first claim of [Proposition 2](#prop2).
+This is immediate from the first claim of [Proposition 2](#prop2){: data-relation="required" }.
 :::
 
 ::: Proposition 5
 Let a subset $A$ of a manifold $M$ be given. If, when $A$ is viewed as a subspace of $M$, there exists a differentiable structure making $(A,\iota)$ a submanifold of $M$, then this differentiable structure together with the subspace topology constitutes the unique manifold structure that can be given to $(A,\iota)$.
 :::
 ::: Proof
-First, applying [Proposition 4](#prop4) to the subspace topology $\mathcal{T}$, the differentiable structure making $(A,\mathcal{T},\iota)$ a submanifold of $M$ is unique. Denote it by $\mathcal{A}$. Now suppose a topology $\mathcal{T}'$ and a differentiable structure $\mathcal{A}'$ making $(A,\iota)$ a submanifold of $M$ are given, and consider the following diagram.
+First, applying [Proposition 4](#prop4){: data-relation="required" } to the subspace topology $\mathcal{T}$, the differentiable structure making $(A,\mathcal{T},\iota)$ a submanifold of $M$ is unique. Denote it by $\mathcal{A}$. Now suppose a topology $\mathcal{T}'$ and a differentiable structure $\mathcal{A}'$ making $(A,\iota)$ a submanifold of $M$ are given, and consider the following diagram.
 
 {% diagram Math/Manifolds/Uniqueness_of_Submanifold-4.svg width="12.99em" alt="uniqueness" %}
 
-Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2). Moreover, by the chain rule
+Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2){: data-relation="required" }. Moreover, by the chain rule
 
 $$\dd{\iota}'=\dd{\iota}\circ \dd{(\id)}$$
 
