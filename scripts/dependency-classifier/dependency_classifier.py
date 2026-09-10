@@ -2,10 +2,12 @@
 """Classify internal Markdown links as required, weak, or forward.
 
 One cron tick handles one logical KO/EN article pair.  Each language is judged
-independently, but both files are written and committed together.  Antigravity
-accepts only self-declared HIGH decisions; MEDIUM decisions are reviewed by a
-separate Claude Opus pass with wider context.  A single ambiguous decision
-blocks the whole pair so an article is not repeatedly rewritten.
+independently and the pair is persisted together.  Tracked posts are committed;
+untracked posts under the explicitly local-only Gromov-Witten stream are updated
+in place.  Antigravity accepts only self-declared HIGH decisions; MEDIUM decisions
+receive a wider-context review from the next available provider in the
+Claude Opus > Codex chain.  A single ambiguous decision blocks the whole pair so
+an article is not repeatedly rewritten.
 
 The inline representation is Kramdown IAL syntax::
 
@@ -28,12 +30,13 @@ import time
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "postnav"))
 sys.path.insert(0, str(ROOT / ".agents" / "hooks"))
 sys.path.insert(0, str(ROOT / "scripts" / "lib"))
+LOCAL_ONLY_POST_ROOTS = (ROOT / "_posts" / "Math" / "Gromov_Witten_Theory",)
 
 from common import by_permalink, en_counterpart, find_box, iter_posts, parse_labels, protected_spans  # noqa: E402
 import md_lint  # noqa: E402
@@ -42,9 +45,25 @@ from cron_commit import commit_outputs, dirty_paths  # noqa: E402
 
 STATE_DIR = Path.home() / ".local" / "state"
 STATE_PATH = STATE_DIR / "dependency-classifier.json"
+COMPLETE_PATH = STATE_DIR / "dependency-classifier.complete"
 STATE_LOCK_PATH = Path("/tmp/dependency-classifier-state.lock")
 LEGACY_LOCK_PATH = Path("/tmp/dependency-classifier.lock")
-SLOT_PATHS = tuple(Path(f"/tmp/dependency-classifier-slot-{i}.lock") for i in range(4))
+WORKER_SLOT_PATHS = tuple(Path(f"/tmp/dependency-classifier-slot-{i}.lock") for i in range(6))
+
+QUOTA_STATE_DIR = Path(os.environ.get(
+    "DEPENDENCY_QUOTA_STATE_DIR", str(Path.home() / "Projects" / "hud-display" / "state")))
+QUOTA_MAX_STALE_SEC = int(os.environ.get("DEPENDENCY_QUOTA_MAX_STALE_SEC", str(45 * 60)))
+QUOTA_LIMIT_5H = float(os.environ.get("DEPENDENCY_QUOTA_LIMIT_5H", "0.70"))
+QUOTA_LIMIT_WEEKLY = float(os.environ.get("DEPENDENCY_QUOTA_LIMIT_WEEKLY", "0.90"))
+# Codex passed 8/8 simultaneous probes on 2026-09-10; six leaves room for IDE use.
+# Claude was already quota-closed at one probe, so its former four-worker cap stays.
+PROVIDER_SLOT_COUNTS = {"Antigravity": 4, "Claude Opus": 4, "Codex": 6}
+PROVIDER_SLOT_PATHS = {
+    name: tuple(Path(
+        f"/tmp/dependency-classifier-{name.lower().replace(' ', '-')}-slot-{i}.lock"
+    ) for i in range(count))
+    for name, count in PROVIDER_SLOT_COUNTS.items()
+}
 
 AGY_BIN = os.environ.get("DEPENDENCY_AGY_BIN", str(Path.home() / ".gemini/bin/agy"))
 AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL", "gemini-3.8-flash-high")
@@ -52,8 +71,16 @@ CLAUDE_BIN = os.environ.get("DEPENDENCY_CLAUDE_BIN", str(Path.home() / ".local/b
 CLAUDE_MODEL = os.environ.get("DEPENDENCY_CLAUDE_MODEL", "opus")
 CODEX_BIN = os.environ.get(
     "DEPENDENCY_CODEX_BIN", str(Path.home() / ".npm-global/bin/codex-multi-auth-codex"))
-CODEX_MODEL = os.environ.get("DEPENDENCY_CODEX_MODEL", "gpt-5.6-sol")
-CODEX_EFFORT = os.environ.get("DEPENDENCY_CODEX_EFFORT", "high")
+CODEX_MODEL_OVERRIDE = os.environ.get("DEPENDENCY_CODEX_MODEL")
+CODEX_EFFORT_OVERRIDE = os.environ.get("DEPENDENCY_CODEX_EFFORT")
+CODEX_FIRST_MODEL = os.environ.get(
+    "DEPENDENCY_CODEX_FIRST_MODEL", CODEX_MODEL_OVERRIDE or "gpt-5.6-luna")
+CODEX_FIRST_EFFORT = os.environ.get(
+    "DEPENDENCY_CODEX_FIRST_EFFORT", CODEX_EFFORT_OVERRIDE or "medium")
+CODEX_REVIEW_MODEL = os.environ.get(
+    "DEPENDENCY_CODEX_REVIEW_MODEL", CODEX_MODEL_OVERRIDE or "gpt-5.6-terra")
+CODEX_REVIEW_EFFORT = os.environ.get(
+    "DEPENDENCY_CODEX_REVIEW_EFFORT", CODEX_EFFORT_OVERRIDE or "medium")
 MODEL_TIMEOUT = int(os.environ.get("DEPENDENCY_MODEL_TIMEOUT", "900"))
 BLOCK_SEC = 24 * 3600
 CHUNK_SIZE = 10
@@ -135,8 +162,8 @@ def legacy_classifier_running() -> bool:
 
 
 def acquire_slot():
-    """Cap expensive classifier model calls at four concurrent processes."""
-    for path in SLOT_PATHS:
+    """Cap the one-off backlog at six concurrent article workers."""
+    for path in WORKER_SLOT_PATHS:
         lock_fh = open(path, "w")
         try:
             fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -144,6 +171,79 @@ def acquire_slot():
         except OSError:
             lock_fh.close()
     return None
+
+
+def acquire_provider_slot(provider: str):
+    """Wait for a measured provider-specific model slot."""
+    paths = PROVIDER_SLOT_PATHS[provider]
+    while True:
+        for path in paths:
+            lock_fh = open(path, "w")
+            try:
+                fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                return lock_fh
+            except OSError:
+                lock_fh.close()
+        time.sleep(1)
+
+
+def _fresh_quota_state(name: str) -> dict | None:
+    try:
+        value = json.loads((QUOTA_STATE_DIR / f"{name}_quota.json").read_text(encoding="utf-8"))
+        stamp = float(value["ts"])
+        current = time.time()
+        if (value.get("ok") is not True or stamp > current + 300
+                or current - stamp > QUOTA_MAX_STALE_SEC):
+            return None
+        return value
+    except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
+        return None
+
+
+def _future_reset(window: object) -> bool:
+    if not isinstance(window, dict):
+        return False
+    raw = window.get("resetTime")
+    try:
+        return datetime.fromisoformat(str(raw).replace("Z", "+00:00")).timestamp() > time.time()
+    except (TypeError, ValueError):
+        return False
+
+
+def _quota_window_blocked(window: object, limit: float) -> bool:
+    if not isinstance(window, dict) or not _future_reset(window):
+        return False
+    try:
+        return float(window.get("utilization")) >= limit
+    except (TypeError, ValueError):
+        return False
+
+
+def _quota_member_available(state: dict) -> bool:
+    if state.get("enabled") is False:
+        return False
+    return not (
+        _quota_window_blocked(state.get("limit5h"), QUOTA_LIMIT_5H)
+        or _quota_window_blocked(state.get("weekly"), QUOTA_LIMIT_WEEKLY)
+    )
+
+
+def provider_available(provider: str) -> bool:
+    """Use quota snapshots only to route calls; unknown/stale state is fail-open."""
+    if provider == "Antigravity":
+        state = _fresh_quota_state("antigravity")
+        return True if state is None else _quota_member_available(state)
+    if provider == "Claude Opus":
+        state = _fresh_quota_state("claude")
+        return True if state is None else _quota_member_available(state)
+    if provider == "Codex":
+        states = [_fresh_quota_state("codex1"), _fresh_quota_state("codex2")]
+        known = [state for state in states if state is not None]
+        # A missing/stale member might still be runnable, so only close the pool
+        # when every configured account has fresh, decisive evidence.
+        return any(state is None for state in states) or any(
+            _quota_member_available(state) for state in known)
+    raise ValueError(f"unknown provider: {provider}")
 
 
 def overlaps(pos: int, spans: Iterable[tuple[int, int]]) -> bool:
@@ -364,6 +464,8 @@ def codex_output_schema(items: list[dict], *, review: bool) -> dict:
 def call_codex(items: list[dict], *, review: bool) -> dict:
     """Use the multi-auth Codex CLI as the final structured-output fallback."""
     prompt = (REVIEW_PROMPT if review else FIRST_PROMPT) + json.dumps(items, ensure_ascii=False)
+    model = CODEX_REVIEW_MODEL if review else CODEX_FIRST_MODEL
+    effort = CODEX_REVIEW_EFFORT if review else CODEX_FIRST_EFFORT
     with tempfile.TemporaryDirectory(prefix="dependency-codex-") as tmp:
         tmp_path = Path(tmp)
         schema_path = tmp_path / "schema.json"
@@ -373,8 +475,8 @@ def call_codex(items: list[dict], *, review: bool) -> dict:
             encoding="utf-8",
         )
         proc = subprocess.run(
-            [CODEX_BIN, "exec", "--model", CODEX_MODEL,
-             "-c", f'model_reasoning_effort="{CODEX_EFFORT}"',
+            [CODEX_BIN, "exec", "--model", model,
+             "-c", f'model_reasoning_effort="{effort}"',
              "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
              "--color", "never", "--output-schema", str(schema_path),
              "--output-last-message", str(output_path), "-"],
@@ -386,6 +488,34 @@ def call_codex(items: list[dict], *, review: bool) -> dict:
         if not output_path.exists():
             raise RuntimeError("Codex produced no last-message file")
         return parse_json_value(output_path.read_text(encoding="utf-8"))
+
+
+def call_provider(provider: str, items: list[dict], *, review: bool) -> dict:
+    slot_fh = acquire_provider_slot(provider)
+    try:
+        if not provider_available(provider):
+            raise RuntimeError(f"{provider} quota gate closed while waiting for a slot")
+        if provider == "Antigravity":
+            return call_antigravity(items, review=review)
+        if provider == "Claude Opus":
+            return call_opus(items, review=review)
+        if provider == "Codex":
+            return call_codex(items, review=review)
+        raise ValueError(f"unknown provider: {provider}")
+    finally:
+        slot_fh.close()
+
+
+ProviderCaller = Callable[[list[dict]], dict]
+
+
+def provider_attempts(*, review: bool) -> list[tuple[str, ProviderCaller]]:
+    order = ["Claude Opus", "Codex"] if review else ["Antigravity", "Claude Opus", "Codex"]
+    available = [provider for provider in order if provider_available(provider)]
+    return [
+        (provider, lambda items, provider=provider: call_provider(provider, items, review=review))
+        for provider in available
+    ]
 
 
 def valid_results(payload: dict, expected: set[str], *, review: bool) -> dict[str, dict]:
@@ -408,20 +538,14 @@ def valid_results(payload: dict, expected: set[str], *, review: bool) -> dict[st
 
 def request_complete_results(
     items: list[dict], *, review: bool, stage: str,
-    primary_name: str, primary, fallback_name: str, fallback,
-    final_fallback_name: str | None = None, final_fallback=None,
+    attempts: list[tuple[str, ProviderCaller]],
 ) -> dict[str, dict]:
     """Keep valid rows and recover only incomplete IDs within this cron tick."""
     accepted: dict[str, dict] = {}
     pending = items
     last_issue = "incomplete model response"
-    attempts = [
-        (primary_name, primary),
-        (primary_name, primary),
-        (fallback_name, fallback),
-    ]
-    if final_fallback_name is not None and final_fallback is not None:
-        attempts.append((final_fallback_name, final_fallback))
+    if not attempts:
+        raise RuntimeError(f"{stage}: every provider is closed by the quota gate")
     for attempt_index, (model_name, caller) in enumerate(attempts):
         expected = {str(item["id"]) for item in pending}
         try:
@@ -436,30 +560,29 @@ def request_complete_results(
         pending = [item for item in pending if str(item["id"]) not in accepted]
         if not pending:
             return accepted
-        if attempt_index == 0:
-            log(f"{stage}: retrying {len(pending)} incomplete item(s) with {model_name}")
-        elif attempt_index + 1 < len(attempts):
+        if attempt_index + 1 < len(attempts):
             next_name = attempts[attempt_index + 1][0]
             log(f"{stage}: falling back for {len(pending)} incomplete item(s) to {next_name}")
     missing = sorted(str(item["id"]) for item in pending)
     raise RuntimeError(
-        f"{stage} omitted/invalidated {len(missing)} item(s) after retry and fallback: "
+        f"{stage} omitted/invalidated {len(missing)} item(s) after provider chain: "
         f"{missing[:4]} ({last_issue})"
     )
 
 
 def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
+    first_attempts = provider_attempts(review=False)
+    review_attempts = provider_attempts(review=True)
+    log(
+        "quota route: first=" + " > ".join(name for name, _ in first_attempts)
+        + "; review=" + " > ".join(name for name, _ in review_attempts)
+    )
     first: dict[str, dict] = {}
     for i in range(0, len(links), CHUNK_SIZE):
         chunk = links[i:i + CHUNK_SIZE]
         values = request_complete_results(
             prompt_items(chunk, False), review=False, stage="first pass",
-            primary_name="Antigravity",
-            primary=lambda items: call_antigravity(items, review=False),
-            fallback_name="Claude Opus",
-            fallback=lambda items: call_opus(items, review=False),
-            final_fallback_name="Codex",
-            final_fallback=lambda items: call_codex(items, review=False),
+            attempts=first_attempts,
         )
         first.update(values)
     decisions = {ident: str(row["relation"]).lower() for ident, row in first.items()
@@ -470,11 +593,8 @@ def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
     for i in range(0, len(medium), CHUNK_SIZE):
         chunk = medium[i:i + CHUNK_SIZE]
         values = request_complete_results(
-            prompt_items(chunk, True), review=True, stage="Opus review",
-            primary_name="Claude Opus",
-            primary=lambda items: call_opus(items, review=True),
-            fallback_name="Codex",
-            fallback=lambda items: call_codex(items, review=True),
+            prompt_items(chunk, True), review=True, stage="review",
+            attempts=review_attempts,
         )
         for ident, row in values.items():
             relation = str(row["relation"]).lower()
@@ -483,7 +603,7 @@ def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
             else:
                 decisions[ident] = relation
     if medium:
-        log(f"Opus review: decided={len(medium) - len(ambiguous)}, ambiguous={len(ambiguous)}")
+        log(f"review: decided={len(medium) - len(ambiguous)}, ambiguous={len(ambiguous)}")
     if set(decisions) | {x["id"] for x in ambiguous} != {x.ident for x in links}:
         raise RuntimeError("internal decision accounting mismatch")
     return decisions, ambiguous
@@ -511,6 +631,23 @@ def hard_lint(path: Path, text: str) -> set[str]:
 
 def unit_key(paths: list[Path]) -> str:
     return "+".join(str(p.relative_to(ROOT)) for p in paths)
+
+
+def is_local_only_untracked_unit(paths: list[Path]) -> bool:
+    """True for untracked posts in an explicitly approved local-only stream."""
+    if not paths or not all(
+        any(path.is_relative_to(root) for root in LOCAL_ONLY_POST_ROOTS)
+        for path in paths
+    ):
+        return False
+    rels = [str(path.relative_to(ROOT)) for path in paths]
+    proc = subprocess.run(
+        ["git", "ls-files", "-z", "--", *rels], cwd=str(ROOT),
+        capture_output=True, text=True,
+    )
+    if proc.returncode:
+        raise RuntimeError(f"could not inspect tracked paths: {proc.stderr.strip()[:200]}")
+    return not any(proc.stdout.split("\0"))
 
 
 def select_unit(
@@ -565,13 +702,38 @@ def select_unit(
     return None
 
 
+def backlog_complete() -> bool:
+    """True only when no current post contains an eligible unclassified link."""
+    for post in _POSTS:
+        try:
+            if extract_links(post.path, post.path.read_text(encoding="utf-8")):
+                return False
+        except OSError:
+            return False
+    return True
+
+
+def mark_backlog_complete() -> None:
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    COMPLETE_PATH.write_text(
+        json.dumps({"completed_at": datetime.now().astimezone().isoformat(timespec="seconds")})
+        + "\n",
+        encoding="utf-8",
+    )
+
+
 def process_once(dry_run: bool = False) -> int:
     state = load_state()
     scan_updates: dict[str, dict] = {}
     selected = select_unit(state, scan_updates)
     merge_unit_states(scan_updates)
     if not selected:
-        log("queue empty (or every pending target is locked/dirty/backed off)")
+        if backlog_complete():
+            if not dry_run:
+                mark_backlog_complete()
+            log(f"backlog complete; marker={COMPLETE_PATH}")
+        else:
+            log("queue temporarily unavailable (pending target is locked/dirty/backed off)")
         return 0
     paths, originals, links, lease = selected
     key = unit_key(paths)
@@ -608,17 +770,20 @@ def process_once(dry_run: bool = False) -> int:
                     )
             for path in paths:
                 path.write_text(rendered[path], encoding="utf-8")
-            committed = commit_outputs(
-                "Link Dependencies Classifier", rels,
-                f"{paths[0].stem} 링크 {len(links)}건 분류", log=log, repo=ROOT,
-            )
-            if not committed:
-                # The targets were clean before this tick, so restoring them cannot
-                # overwrite user work.  Never leave unowned generated edits behind.
-                for path in paths:
-                    if path.exists() and path.read_text(encoding="utf-8") == rendered[path]:
-                        path.write_text(originals[path], encoding="utf-8")
-                raise RuntimeError("could not commit worker outputs; restored originals")
+            if is_local_only_untracked_unit(paths):
+                log(f"saved local-only: {key} (Git commit skipped)")
+            else:
+                committed = commit_outputs(
+                    "Link Dependencies Classifier", rels,
+                    f"{paths[0].stem} 링크 {len(links)}건 분류", log=log, repo=ROOT,
+                )
+                if not committed:
+                    # The targets were clean before this tick, so restoring them cannot
+                    # overwrite user work.  Never leave unowned generated edits behind.
+                    for path in paths:
+                        if path.exists() and path.read_text(encoding="utf-8") == rendered[path]:
+                            path.write_text(originals[path], encoding="utf-8")
+                    raise RuntimeError("could not commit worker outputs; restored originals")
             merge_unit_states({key: {
                 "status": "done", "hash": sha("\0".join(rendered[p] for p in paths)),
                 "checked_at": int(time.time()), "links": len(links),
@@ -642,7 +807,17 @@ def status() -> int:
     counts: dict[str, int] = {}
     for value in state.get("units", {}).values():
         counts[value.get("status", "unknown")] = counts.get(value.get("status", "unknown"), 0) + 1
-    print(json.dumps({"state": str(STATE_PATH), "counts": counts}, ensure_ascii=False, indent=2))
+    print(json.dumps({
+        "state": str(STATE_PATH), "counts": counts,
+        "complete": COMPLETE_PATH.exists(), "complete_marker": str(COMPLETE_PATH),
+        "providers": {
+            provider: {
+                "available": provider_available(provider),
+                "slots": PROVIDER_SLOT_COUNTS[provider],
+            }
+            for provider in PROVIDER_SLOT_COUNTS
+        },
+    }, ensure_ascii=False, indent=2))
     return 0
 
 
@@ -661,7 +836,7 @@ def main() -> int:
         return 0
     slot_fh = acquire_slot()
     if slot_fh is None:
-        log("four dependency classifiers are already running; skip this tick")
+        log("six dependency classifiers are already running; skip this tick")
         return 0
     try:
         return process_once(args.dry_run)

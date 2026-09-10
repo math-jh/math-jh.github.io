@@ -118,11 +118,11 @@ tr.typo-pending td:last-child{opacity:1}
 .copy-url:hover{color:var(--brass)}
 .copy-url.copied{background:color-mix(in srgb,var(--brass) 28%,transparent);transition:background .2s}
 .ghost-btn--force-resume{color:var(--ok);border-color:var(--ok)}
-.cron-table{table-layout:fixed;min-width:62rem}
+.cron-table{table-layout:fixed;min-width:52rem}
 .cron-table th:nth-child(1){width:15rem}
 .cron-table th:nth-child(2){width:19rem}
-.cron-table th:nth-child(4){width:12rem}
-.cron-actions{display:inline-flex;width:12rem;gap:.4rem;justify-content:flex-end}
+.cron-table th:nth-child(4){width:8rem}
+.cron-actions{display:inline-flex;width:8rem;gap:.4rem;justify-content:flex-end}
 tr.is-paused td{color:var(--muted)}
 select{font-family:var(--sans);font-size:.78rem;color:var(--ink);background:var(--paper);border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:.15rem .2rem}
 .toolbar{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;font-family:var(--sans);font-size:.76rem;color:var(--muted);margin:0 0 1.2rem}
