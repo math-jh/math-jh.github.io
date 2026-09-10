@@ -19,7 +19,7 @@ weight: 3
 
 ## 이항관계
 
-우선 정의부터 시작한다. 다음 정의는 별다른 것은 아니고, [§순서쌍](/ko/math/set_theory/ordered_pair#순서쌍)에서 순서쌍을 도입해야 하는 당위성을 설명하며 나왔던 <em-ko>순서쌍들의 집합</em-ko>에 이름을 준 것에 불과하다. 
+우선 정의부터 시작한다. 다음 정의는 별다른 것은 아니고, [§순서쌍](/ko/math/set_theory/ordered_pair#순서쌍){: data-relation="required" }에서 순서쌍을 도입해야 하는 당위성을 설명하며 나왔던 <em-ko>순서쌍들의 집합</em-ko>에 이름을 준 것에 불과하다. 
 
 ::: 정의 1
 집합 $R$이 *이항관계<sub>binary relation</sub>*라는 것은 $R$의 모든 원소가 순서쌍이라는 것이다.[^1]
@@ -35,7 +35,7 @@ $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 이 존재한다. 즉, $E$는 전체집합 두 개의 곱이어야 한다.
 :::
 
-전체집합 두 개의 곱이 존재한다면, 다음 명제에 의해 전체집합 또한 존재해야 하고 이는 [§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4)에 모순이므로 모든 집합들 사이에 정의된 $=$는 이항관계가 될 수 없다. 
+전체집합 두 개의 곱이 존재한다면, 다음 명제에 의해 전체집합 또한 존재해야 하고 이는 [§ZFC 공리계, ⁋예시 4](/ko/math/set_theory/zfc_axioms#ex4){: data-relation="required" }에 모순이므로 모든 집합들 사이에 정의된 $=$는 이항관계가 될 수 없다. 
 
 ::: 명제 3
 $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 존재하여,  
@@ -61,12 +61,12 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 로 정의하면 집합 $B$를 얻는다. 또, 위의 각 조건을 만족하는 두 집합은 원소가 서로 같으므로, extensionality에 의하여 이러한 $A$와 $B$는 유일하다.
 :::
 
-[§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#def7)과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $\pr_1R$과 $\pr_2R$로 쓴다.
+[§순서쌍, ⁋정의 7](/ko/math/set_theory/ordered_pair#def7){: data-relation="weak" }과 마찬가지로 이들을 각각 첫 번째와 두 번째 *projection*이라 부르고, $\pr_1R$과 $\pr_2R$로 쓴다.
 
 간혹 이항관계의 첫 번째 성분과 두 번째 성분이 어느 집합에 속하는지를 명확하게 해야 할 때가 있다. 이를 위해 주어진 두 집합 $A,B$와 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$을 triple $(R,A,B)$와 같이 생각하기도 한다. 이 경우, $A$를 $R$의 *source*, $B$를 $R$의 *target*이라 부르며, 이런 상황에서는 같은 집합 $R$에 대해서도 $(R,A,B)$와 $(R,A',B')$를 다른 것으로 생각한다. 
 
 ::: remark 참고 {#rmk}
-위의 조건 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9)에 의하여,
+위의 조건 $\pr_1R\subseteq A$, $\pr_2R\subseteq B$를 만족하는 이항관계 $R$이 주어졌다 하자. [§순서쌍, ⁋명제 9](/ko/math/set_theory/ordered_pair#prop9){: data-relation="weak" }에 의하여,
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 

@@ -19,7 +19,7 @@ last_polished_at: 2026-06-02T10:30:02+00:00
 ---
 ## Binary Relations
 
-We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered-pairs) when we explained the motivation for introducing ordered pairs.
+We begin with the definition. The following definition is nothing special; it merely gives a name to the *set of ordered pairs* that appeared in [§Ordered Pairs](/en/math/set_theory/ordered_pair#ordered-pairs){: data-relation="required" } when we explained the motivation for introducing ordered pairs.
 
 ::: Definition 1
 A set $R$ is called a *binary relation* if every element of $R$ is an ordered pair.[^1]
@@ -35,7 +35,7 @@ $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 would exist. That is, $E$ would have to be the product of two universal sets.
 :::
 
-If the product of two universal sets existed, then by the following proposition a universal set would also have to exist, which contradicts [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4). Therefore, the $=$ defined between all sets cannot be a binary relation.
+If the product of two universal sets existed, then by the following proposition a universal set would also have to exist, which contradicts [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-relation="required" }. Therefore, the $=$ defined between all sets cannot be a binary relation.
 
 ::: Proposition 3
 Let $R$ be a binary relation. Then there exist unique sets $A$ and $B$ such that
@@ -61,12 +61,12 @@ Thus the first claim holds, and similarly defining the property $Q$ by
 we obtain the set $B$.
 :::
 
-As in [§Ordered Pairs, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7), we call these the first and second *projections* of $R$, and write them as $\pr_1R$ and $\pr_2R$.
+As in [§Ordered Pairs, ⁋Definition 7](/en/math/set_theory/ordered_pair#def7){: data-relation="weak" }, we call these the first and second *projections* of $R$, and write them as $\pr_1R$ and $\pr_2R$.
 
 Occasionally, we need to specify which sets the first and second components of a binary relation belong to. For this purpose, given two sets $A,B$ and a binary relation $R$ with $\pr_1R\subseteq A$ and $\pr_2R\subseteq B$, we sometimes regard $R$ as the triple $(R,A,B)$. In this case, we call $A$ the *source* of $R$ and $B$ the *target* of $R$, and under this convention we regard $(R,A,B)$ and $(R,A',B')$ as distinct even for the same set $R$.
 
 ::: remark Remark {#rmk}
-Suppose a binary relation $R$ satisfying the above conditions $\pr_1R\subseteq A$, $\pr_2R\subseteq B$ is given. By [§Ordered Pairs, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9),
+Suppose a binary relation $R$ satisfying the above conditions $\pr_1R\subseteq A$, $\pr_2R\subseteq B$ is given. By [§Ordered Pairs, ⁋Proposition 9](/en/math/set_theory/ordered_pair#prop9){: data-relation="weak" },
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
