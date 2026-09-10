@@ -16,20 +16,20 @@ last_polished_at: 2026-06-02T17:30:02+00:00
 ---
 ## An Alternative Definition of Natural Numbers
 
-We now construct natural numbers using the cardinals we have already defined, rather than following the approach of [§Ordinals and Well-Ordered Sets](/en/math/set_theory/ordinals). We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
+We now construct natural numbers using the cardinals we have already defined, rather than following the approach of [§Ordinals and Well-Ordered Sets](/en/math/set_theory/ordinals){: data-relation="weak" }. We then explore the structure of natural numbers using the operations and order relations previously defined on cardinal numbers.
 
 ::: Definition 1
 A cardinal $\mathfrak{a}$ is said to be *finite* if $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$. A finite cardinal is called a *natural number*. For a set $E$, if the cardinal $\card E$ is finite, then the set is said to be finite, and in this case $\card E$ is called the *number of elements* of the set $E$.
 :::
 
-Since natural numbers form a subset of the set of cardinals, they are well-ordered. ([§Cardinals, ⁋Theorem 5](/en/math/set_theory/cardinals#thm5)) Thus, we can use induction on natural numbers. ([§Properties of Well-Ordered Sets, ⁋Lemma 7 (Transfinite Induction)](/en/math/set_theory/well_ordering#lem7))
+Since natural numbers form a subset of the set of cardinals, they are well-ordered. ([§Cardinals, ⁋Theorem 5](/en/math/set_theory/cardinals#thm5){: data-relation="required" }) Thus, we can use induction on natural numbers. ([§Properties of Well-Ordered Sets, ⁋Lemma 7 (Transfinite Induction)](/en/math/set_theory/well_ordering#lem7){: data-relation="required" })
 
 ::: Proposition 2
 A cardinal $\mathfrak{a}$ is finite if and only if $\mathfrak{a}+\mathbf{1}$ is finite.
 :::
 
 ::: Proof
-By [§Operations on Cardinals, ⁋Proposition 6](/en/math/set_theory/operation_of_cardinals#prop6), $\mathfrak{a}=\mathfrak{b}$ is equivalent to $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$. Now let $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$. By assumption, $\mathfrak{a}\neq\mathfrak{b}$, and therefore
+By [§Operations on Cardinals, ⁋Proposition 6](/en/math/set_theory/operation_of_cardinals#prop6){: data-relation="required" }, $\mathfrak{a}=\mathfrak{b}$ is equivalent to $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$. Now let $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$. By assumption, $\mathfrak{a}\neq\mathfrak{b}$, and therefore
 
 $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
@@ -74,7 +74,7 @@ and $a=n=m+1>m$ is a contradiction, so $a\neq n$. Thus $a<n$.
 Let $a$ and $b$ be natural numbers. Then $a<b$ is equivalent to the existence of a natural number $c>0$ such that $b=a+c$.
 :::
 ::: Proof
-This is a direct consequence of [Lemma 3](#lem3). Since $a\leq b$, such a $c\geq 0$ exists, and if $c=0$ then $a=b$, so we must have $c\neq 0$.
+This is a direct consequence of [Lemma 3](#lem3){: data-relation="required" }. Since $a\leq b$, such a $c\geq 0$ exists, and if $c=0$ then $a=b$, so we must have $c\neq 0$.
 :::
 
 Summarizing what we have done so far, we obtain the following:
@@ -151,7 +151,7 @@ To prove this, we first need to establish the following lemmas.
 Every infinite set $A$ contains a subset that is equipotent to $\mathbb{N}$.
 :::
 ::: Proof
-There exists a well-ordering of $A$. Since every proper segment of $\mathbb{N}$ is finite, $A$ cannot be isomorphic to a segment of $\mathbb{N}$. Therefore, $\mathbb{N}$ is isomorphic to a segment of $A$. ([§Order Relations Between Ordinals, ⁋Proposition 1](/en/math/set_theory/order_relations_between_ordinals#prop1))
+There exists a well-ordering of $A$. Since every proper segment of $\mathbb{N}$ is finite, $A$ cannot be isomorphic to a segment of $\mathbb{N}$. Therefore, $\mathbb{N}$ is isomorphic to a segment of $A$. ([§Order Relations Between Ordinals, ⁋Proposition 1](/en/math/set_theory/order_relations_between_ordinals#prop1){: data-relation="required" })
 :::
 ::: Lemma 15
 The set $\mathbb{N}\times\mathbb{N}$ is equipotent to $\mathbb{N}$.

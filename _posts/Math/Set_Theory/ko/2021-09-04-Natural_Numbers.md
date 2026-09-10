@@ -16,20 +16,20 @@ weight: 25
 
 ## 자연수의 다른 정의
 
-이제 우리는 [§서수와 정렬집합](/ko/math/set_theory/ordinals)의 방법 대신, 우리가 이미 정의한 cardinal을 사용해서 자연수를 만들고 cardinal number들 위에서 정의했던 연산과 대소관계를 이용해 자연수의 구조를 탐구한다.
+이제 우리는 [§서수와 정렬집합](/ko/math/set_theory/ordinals){: data-relation="weak" }의 방법 대신, 우리가 이미 정의한 cardinal을 사용해서 자연수를 만들고 cardinal number들 위에서 정의했던 연산과 대소관계를 이용해 자연수의 구조를 탐구한다.
 
 ::: 정의 1
 Cardinal $\mathfrak{a}$가 *유한하다<sub>finite</sub>*는 것은 $\mathfrak{a}\neq\mathfrak{a}+\mathbf{1}$인 것이다. 유한한 cardinal을 *자연수<sub>natural number</sub>*라고 부른다. 집합 $E$에 대하여, cardinal $\card E$가 유한하다면 이 집합을 유한하다고 부르며, 이 때 $\card E$를 집합 $E$의 *원소의 갯수*라고 부른다.
 :::
 
-자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, ⁋정리 5](/ko/math/set_theory/cardinals#thm5)) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, ⁋보조정리 7](/ko/math/set_theory/well_ordering#lem7))
+자연수는 cardinal들의 집합의 부분집합이므로 well-ordered이다. ([§기수, ⁋정리 5](/ko/math/set_theory/cardinals#thm5){: data-relation="required" }) 따라서 자연수에서 귀납법을 사용할 수 있다. ([§정렬집합의 성질들, ⁋보조정리 7](/ko/math/set_theory/well_ordering#lem7){: data-relation="required" })
 
 ::: 명제 2
 Cardinal $\mathfrak{a}$가 유한한 것과 $\mathfrak{a}+\mathbf{1}$이 유한한 것이 동치이다.
 :::
 
 ::: 증명
-[§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#prop6)에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
+[§기수들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_cardinals#prop6){: data-relation="required" }에 의하여, $\mathfrak{a}=\mathfrak{b}$인 것은 $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$인 것과 동치이다. 이제 $\mathfrak{b}=\mathfrak{a}+\mathbf{1}$로 잡으면, 가정에 의해 $\mathfrak{a}\neq\mathfrak{b}$이고, 따라서
 
 $$\mathfrak{b}=\mathfrak{a}+\mathbf{1}\neq\mathfrak{b}+\mathbf{1}$$
 
@@ -74,7 +74,7 @@ $$a\leq m+1=n$$
 $a$와 $b$가 자연수라 하자. $a<b$는 어떤 자연수 $c>0$가 존재하여 $b=a+c$인 것과 동치이다.
 :::
 ::: 증명
-[보조정리 3](#lem3)의 직접적인 결과다. $a\leq b$이므로 그러한 $c\geq 0$가 존재하는데, $c=0$이라면 $a=b$이기에 $c\neq 0$이기 때문이다.
+[보조정리 3](#lem3){: data-relation="required" }의 직접적인 결과다. $a\leq b$이므로 그러한 $c\geq 0$가 존재하는데, $c=0$이라면 $a=b$이기에 $c\neq 0$이기 때문이다.
 :::
 
 지금까지 한 것들을 정리하면 다음을 얻는다. 
@@ -155,7 +155,7 @@ $$r=a-bq<0\quad\text{or}\quad r=a-bq\geq b$$
 임의의 무한집합 $A$는 $\mathbb{N}$과 equipotent한 부분집합을 포함한다.
 :::
 ::: 증명
-$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#prop1))
+$A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의의 segment는 항상 유한하므로, $A$는 $\mathbb{N}$의 segment와 isomorphic할 수 없다. 따라서 $\mathbb{N}$이 $A$의 segment와 isomorphic하다. ([§서수들 사이의 순서관계, ⁋명제 1](/ko/math/set_theory/order_relations_between_ordinals#prop1){: data-relation="required" })
 :::
 ::: 보조정리 15
 집합 $\mathbb{N}\times\mathbb{N}$은 $\mathbb{N}$과 equipotent하다.
