@@ -31,14 +31,14 @@ $$U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$$
 두 위상공간 $X,Y$ 사이의 함수 $f:X\rightarrow Y$가 점 $x$에서 연속이라 하자. 만일 어떠한 $A\subseteq X$에 대하여 $x\in\cl(A)$라면, $f(x)\in\cl(f(A))$이다.
 :::
 ::: 증명
-$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6)를 적용하면 $f(x)\in\cl(f(A))$임을 안다.
+$f(x)\in Y$의 임의의 근방 $V$를 택하자. 그럼 $f^{-1}(V)$는 $x$의 근방이므로 $f^{-1}(V)\cap A\neq\emptyset$이고 ([§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6){: data-relation="required" }), $x'\in f^{-1}(V)\cap A$라 하면 $f(x')\in V\cap f(A)$이다. 특히 $V\cap f(A)\neq\emptyset$이므로, 다시 [§집합의 내부, 폐포, 경계, ⁋명제 6](/ko/math/topology/other_concepts#prop6){: data-relation="required" }를 적용하면 $f(x)\in\cl(f(A))$임을 안다.
 :::
 
 ::: 명제 3
 위상공간들 $X,Y,Z$가 주어졌다고 하자. 만일 $f:X\rightarrow Y$가 점 $x\in X$에서 연속이고, $g:Y\rightarrow Z$가 $f(x)$에서 연속이라면 그 합성 $g\circ f$ 또한 점 $x$에서 연속이다.
 :::
 ::: 증명
-$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6))
+$(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서 연속이므로, $g^{-1}(W)$은 $f(x)$의 근방이다. 다시 $f$는 $x$에서 연속이므로, $f^{-1}(g^{-1}(W))$는 $x$의 근방이다. ([\[집합론\] §이항관계들 사이의 연산, ⁋명제 6](/ko/math/set_theory/operation_of_binary_relations#prop6){: data-relation="required" })
 :::
 
 만일 $f$가 $X$의 모든 점에서 연속이라면, $f$를 *연속함수<sub>continuous function</sub>*라 부른다. 다음 정리는 연속함수를 정의하는 여러 방법을 보여준다.
@@ -52,7 +52,7 @@ $(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서
 4. $Y$의 임의의 열린집합 $V$에 대하여, $f^{-1}(V)$가 $X$에서 열린집합이다.
 :::
 ::: 증명
-첫 번째 조건이 성립하면 두 번째 조건 또한 성립한다는 것은 [명제 2](#prop2)의 결과이다.
+첫 번째 조건이 성립하면 두 번째 조건 또한 성립한다는 것은 [명제 2](#prop2){: data-relation="required" }의 결과이다.
 
 이제 둘째 조건을 가정하고 세 번째 조건을 보이자. $Y$의 임의의 닫힌집합 $C$에 대하여, 다음 포함관계
 
@@ -67,7 +67,7 @@ $$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C))))\subseteq f^{-1}(C)$$
 따라서 넷째 조건을 가정하고 첫 번째 조건을 보이면 충분하다. $x\in X$를 임의로 택하고, $f(x)\in Y$의 임의의 근방 $V$가 주어졌다 하자. 그럼 $f(x)\in V'\subseteq V$를 만족하는 $f(x)$의 <em-ko>열린근방</em-ko> $V'$이 존재한다. 이제 넷째 조건으로부터, $f^{-1}(V')$는 $x\in X$의 열린근방이고, $f^{-1}(V')\subseteq f^{-1}(V)$로부터 $f^{-1}(V)$가 $x$의 근방이 됨을 안다.
 :::
 
-[명제 3](#prop3)에 의하여, 두 연속함수 $f:X\rightarrow Y$, $g:Y\rightarrow Z$가 주어진다면 $g\circ f$ 또한 연속이라는 것을 안다. 
+[명제 3](#prop3){: data-relation="required" }에 의하여, 두 연속함수 $f:X\rightarrow Y$, $g:Y\rightarrow Z$가 주어진다면 $g\circ f$ 또한 연속이라는 것을 안다. 
 
 두 위상공간 $(X,\mathcal{T}_X), (Y,\mathcal{T}_Y)$ 사이의 연속함수 $f:X\rightarrow Y$가 주어졌다 하자. 그럼 임의의 $V\in\mathcal{T}_Y$에 대하여 $f^{-1}(V)\in\mathcal{T}_X$가 성립하므로, 다음의 식
 
@@ -86,7 +86,7 @@ $$f^{-1}(y)\in f^\mathcal{T}(V_1)\setminus f^\mathcal{T}(V_2)$$
 
 $$\id^\mathcal{T}:\mathcal{T}_2\rightarrow\mathcal{T}_1$$
 
-는 전사함수가 될 수 없다. ([\[집합론\] §기수들 사이의 연산, ⁋명제 10](/ko/math/set_theory/operation_of_cardinals#prop10))
+는 전사함수가 될 수 없다. ([\[집합론\] §기수들 사이의 연산, ⁋명제 10](/ko/math/set_theory/operation_of_cardinals#prop10){: data-relation="required" })
 :::
 
 그러나 만일 전단사함수 $f$의 역함수 $f^{-1}$ 또한 연속함수라면 $(f^{-1})^\mathcal{T}:\mathcal{T}_X\rightarrow\mathcal{T}_Y$가 잘 정의되며 정의로부터
@@ -99,7 +99,7 @@ $$f^\mathcal{T}\circ (f^{-1})^\mathcal{T}=\id_{\mathcal{T}_X},\qquad (f^{-1})^\m
 연속함수 $f:X\rightarrow Y$가 *homeomorphism<sub>위상동형사상</sub>*이라는 것은, 또 다른 연속함수 $g:Y\rightarrow X$가 존재하여 $f\circ g=\id_Y$이고 $g\circ f=\id_X$인 것이다.
 :::
 
-즉 두 위상공간 $X,Y$가 homeomorphic하다는 것은 이들이 집합으로서 bijection이 존재하는 것 뿐만 아니라, 이 bijection이 두 집합의 위상구조, 즉 열린집합들까지 정확히 같은 방식으로 행동하도록 하는 것이다. 전단사인 연속함수이지만 homeomorphism은 아닌 예시는 바로 위 [예시 5](#ex5)가 된다. 
+즉 두 위상공간 $X,Y$가 homeomorphic하다는 것은 이들이 집합으로서 bijection이 존재하는 것 뿐만 아니라, 이 bijection이 두 집합의 위상구조, 즉 열린집합들까지 정확히 같은 방식으로 행동하도록 하는 것이다. 전단사인 연속함수이지만 homeomorphism은 아닌 예시는 바로 위 [예시 5](#ex5){: data-relation="weak" }가 된다. 
 
 ---
 

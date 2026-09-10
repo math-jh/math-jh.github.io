@@ -32,14 +32,14 @@ holds. Therefore, to prove that a function $f:X\rightarrow Y$ between two topolo
 Let $f:X\rightarrow Y$ be a function between two topological spaces that is continuous at a point $x$. If $x\in\cl(A)$ for some $A\subseteq X$, then $f(x)\in\cl(f(A))$.
 :::
 ::: Proof
-Choose any neighborhood $V$ of $f(x)\in Y$. Then $f^{-1}(V)$ is a neighborhood of $x$, so $f^{-1}(V)\cap A\neq\emptyset$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6)). Taking $x'\in f^{-1}(V)\cap A$, we have $f(x')\in V\cap f(A)$. In particular, $V\cap f(A)\neq\emptyset$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6) again yields $f(x)\in\cl(f(A))$.
+Choose any neighborhood $V$ of $f(x)\in Y$. Then $f^{-1}(V)$ is a neighborhood of $x$, so $f^{-1}(V)\cap A\neq\emptyset$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" }). Taking $x'\in f^{-1}(V)\cap A$, we have $f(x')\in V\cap f(A)$. In particular, $V\cap f(A)\neq\emptyset$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" } again yields $f(x)\in\cl(f(A))$.
 :::
 
 ::: Proposition 3
 Let topological spaces $X,Y,Z$ be given. If $f:X\rightarrow Y$ is continuous at a point $x\in X$ and $g:Y\rightarrow Z$ is continuous at $f(x)$, then the composition $g\circ f$ is also continuous.
 :::
 ::: Proof
-Choose any neighborhood $W$ of $(g\circ f)(x)$. Since $g$ is continuous at $f(x)$, the set $g^{-1}(W)$ is a neighborhood of $f(x)$. Since $f$ is continuous at $x$, the set $f^{-1}(g^{-1}(W))$ is a neighborhood of $x$. ([\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6))
+Choose any neighborhood $W$ of $(g\circ f)(x)$. Since $g$ is continuous at $f(x)$, the set $g^{-1}(W)$ is a neighborhood of $f(x)$. Since $f$ is continuous at $x$, the set $f^{-1}(g^{-1}(W))$ is a neighborhood of $x$. ([\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6){: data-relation="required" })
 :::
 
 If $f$ is continuous at every point of $X$, we call $f$ a *continuous function*. The following theorem presents several equivalent characterizations of continuity.
@@ -53,7 +53,7 @@ For two topological spaces $X,Y$ and a function $f:X\rightarrow Y$, the followin
 4. For any open set $V$ in $Y$, the set $f^{-1}(V)$ is open in $X$.
 :::
 ::: Proof
-That the first condition implies the second is a consequence of [Proposition 2](#prop2).
+That the first condition implies the second is a consequence of [Proposition 2](#prop2){: data-relation="required" }.
 
 Now assume the second condition and prove the third. For any closed set $C$ in $Y$, the inclusion
 
@@ -68,7 +68,7 @@ we see that $f^{-1}(C)$ is closed. Since the identity $(f^{-1}(A))^c=f^{-1}(A^c)
 Thus it suffices to assume the fourth condition and prove the first. Choose any $x\in X$, and let $V$ be any neighborhood of $f(x)\in Y$. Then there exists an open neighborhood $V'$ of $f(x)$ with $f(x)\in V'\subseteq V$. By the fourth condition, $f^{-1}(V')$ is an open neighborhood of $x\in X$, and from $f^{-1}(V')\subseteq f(V)$ we see that $f(V)$ is a neighborhood of $x$.
 :::
 
-By [Proposition 3](#prop3), if two continuous functions $f:X\rightarrow Y$ and $g:Y\rightarrow Z$ are given, then $g\circ f$ is also continuous.
+By [Proposition 3](#prop3){: data-relation="required" }, if two continuous functions $f:X\rightarrow Y$ and $g:Y\rightarrow Z$ are given, then $g\circ f$ is also continuous.
 
 Let a continuous function $f:X\rightarrow Y$ between two topological spaces $(X,\mathcal{T}_X)$ and $(Y,\mathcal{T}_Y)$ be given. Then for any $V\in\mathcal{T}_Y$, we have $f^{-1}(V)\in\mathcal{T}_X$, so the formula
 
@@ -87,7 +87,7 @@ In general, $f^{\mathcal{T}}$ need not be surjective. For instance, let $X_1$ be
 
 $$\id^\mathcal{T}:\mathcal{T}_2\rightarrow\mathcal{T}_1$$
 
-cannot be surjective. ([\[Set Theory\] §Operations on Cardinals, ⁋Proposition 10](/en/math/set_theory/operation_of_cardinals#prop10))
+cannot be surjective. ([\[Set Theory\] §Operations on Cardinals, ⁋Proposition 10](/en/math/set_theory/operation_of_cardinals#prop10){: data-relation="required" })
 :::
 
 However, if the inverse function $f^{-1}$ of a bijection $f$ is also continuous, then $(f^{-1})^\mathcal{T}:\mathcal{T}_X\rightarrow\mathcal{T}_Y$ is well-defined, and from the definition it is obvious that
@@ -100,7 +100,7 @@ so $f^\mathcal{T}$ is also bijective. We define such a situation as follows.
 A continuous function $f:X\rightarrow Y$ is called a *homeomorphism* if there exists another continuous function $g:Y\rightarrow X$ such that $f\circ g=\id_Y$ and $g\circ f=\id_X$.
 :::
 
-That is, two topological spaces $X,Y$ are homeomorphic means not only that there exists a bijection between them as sets, but also that this bijection acts on the open sets of the two sets in exactly the same way. An example of a continuous bijection that is not a homeomorphism is precisely [Example 5](#ex5) above.
+That is, two topological spaces $X,Y$ are homeomorphic means not only that there exists a bijection between them as sets, but also that this bijection acts on the open sets of the two sets in exactly the same way. An example of a continuous bijection that is not a homeomorphism is precisely [Example 5](#ex5){: data-relation="weak" } above.
 
 ---
 
