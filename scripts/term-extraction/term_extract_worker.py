@@ -864,31 +864,61 @@ def _near_norm(v: str) -> str:
     return re.sub(r"[^a-z0-9가-힣]+", "", re.sub(r"\$[^$]*\$", "", v or "").lower())
 
 
+def _flow_items(value: str) -> list[str]:
+    """`[a, 'b c']` 또는 블록 목록의 항목들을 성기게 뜯는다 (비교용이라 충분하다)."""
+    if not value:
+        return []
+    v = value.strip()
+    if v.startswith("["):
+        v = v[1:-1] if v.endswith("]") else v[1:]
+    out = []
+    for piece in re.split(r",(?=(?:[^']*'[^']*')*[^']*$)", v):
+        piece = piece.strip().strip("-").strip()
+        if piece.startswith("'") and piece.endswith("'"):
+            piece = piece[1:-1].replace("''", "'")
+        if piece:
+            out.append(piece)
+    return out
+
+
+def _entry_forms(chunk: str) -> tuple[list[str], list[str]]:
+    """비교에 쓸 영어형·한국어형 전부. **alias 를 반드시 포함한다.**
+
+    합쳐진 표제어의 옛 이름은 alias 로 내려가 있다. 거기를 안 보면 추출기가 그
+    이름을 새 항목으로 다시 만들고, 방금 합친 것이 다음 틱에 되살아난다
+    (실측: `coordinate representation in basis $\\mathcal{B}$`).
+    """
+    en = [chunk_field(chunk, "en") or ""] + _flow_items(chunk_field(chunk, "alias_en"))
+    ko = ko_forms(chunk_field(chunk, "ko")) + _flow_items(chunk_field(chunk, "alias"))
+    return [x for x in en if x], [x for x in ko if x]
+
+
 def near_duplicates(entry: str, groups: dict, permalink: str) -> list[str]:
     """새 표제어와 헷갈릴 만한 기존 항목들.
 
-    두 곳만 본다. **같은 글이 정의하는 항목** — 한 글에서 같은 용어를 두 표기로
+    두 곳을 본다. **같은 글이 정의하는 항목** — 한 글에서 같은 용어를 두 표기로
     뽑는 것이 중복의 주된 경로다. 그리고 **한국어 라벨이 같은 항목** — 라벨이
-    겹치면 색인에서 두 줄이 같은 이름으로 보이므로, 다른 글에 있어도 봐야 한다.
+    겹치면 색인에서 두 줄이 같은 이름으로 보이므로 다른 글에 있어도 봐야 한다.
 
     영어끼리·한국어끼리 따로 재는 것이 중요하다. `GCD` 와
     `greatest common divisor` 는 영어 유사도가 0.27 이고 한국어가 1.00 이다.
+    비교 대상에는 표제어뿐 아니라 alias 도 들어간다 — 합쳐서 내려 둔 옛 이름이
+    바로 추출기가 다시 집어 올 이름이다.
     """
-    en, ko = chunk_field(entry, "en") or "", chunk_field(entry, "ko") or ""
-    nen, nko = _near_norm(en), _near_norm(ko)
+    my_en, my_ko = _entry_forms(entry)
     hits = []
     for chunks in groups.values():
         for c in chunks:
-            cen, cko = chunk_field(c, "en") or "", chunk_field(c, "ko") or ""
+            cen, cko = _entry_forms(c)
             same_post = permalink and permalink in c
-            same_label = bool(nko) and _near_norm(cko) == nko
+            same_label = any(_near_norm(a) == _near_norm(b)
+                             for a in my_ko for b in cko if _near_norm(a))
             if not (same_post or same_label):
                 continue
-            scores = []
-            if nen and _near_norm(cen):
-                scores.append(SequenceMatcher(None, nen, _near_norm(cen)).ratio())
-            if nko and _near_norm(cko):
-                scores.append(SequenceMatcher(None, nko, _near_norm(cko)).ratio())
+            scores = [SequenceMatcher(None, _near_norm(a), _near_norm(b)).ratio()
+                      for mine, theirs in ((my_en, cen), (my_ko, cko))
+                      for a in mine for b in theirs
+                      if _near_norm(a) and _near_norm(b)]
             if scores and max(scores) >= NEAR_DUP_THRESHOLD:
                 hits.append(c)
     return hits
