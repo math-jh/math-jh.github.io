@@ -24,6 +24,8 @@ A:
 - id: mathfrak_a_-adic_topology
   en: $\mathfrak{a}$-adic topology
   ko: $\mathfrak{a}$진 위상
+  alias: [진 위상]
+  alias_en: [adic topology]
   primary: en
   defs:
   - label: '[가환대수학] §완비화'
@@ -40,23 +42,11 @@ A:
     url: /ko/math/algebraic_structures/algebras
   see:
   - label: $A$-algebra homomorphism
-    id: a_-algebra_homomorphism
+    id: algebra_homomorphism
   - label: Associative $A$-algebra
     id: associative_a_-algebra
   - label: Commutative $A$-algebra
     id: commutative_a_-algebra
-- id: a_-algebra_homomorphism
-  en: $A$-algebra homomorphism
-  ko: $A$-대수 준동형사상
-  primary: en
-  defs:
-  - label: '[대수적 구조] §대수'
-    url: /ko/math/algebraic_structures/algebras
-  see:
-  - label: $A$-algebra
-    id: a_-algebra
-  - label: Algebra homomorphism
-    id: algebra_homomorphism
 - id: a_divides_b
   en: $a$ divides $b$
   ko: $a$가 $b$를 나눈다
@@ -105,13 +95,15 @@ A:
 - id: a_varepsilon_-derivation
   en: $(A, \varepsilon)$-derivation
   ko: $(A,\varepsilon)$-미분
+  alias: [미분]
+  alias_en: [derivation]
   primary: en
   defs:
   - label: '[다중선형대수학] §미분'
     url: /ko/math/multilinear_algebra/derivations
   see:
   - label: Derivation
-    id: derivation
+    id: a_varepsilon_-derivation
 - id: abelian
   en: abelian
   ko: 가환
@@ -206,10 +198,13 @@ A:
 - id: absolute_convergence
   en: absolute convergence
   ko: 절대수렴
+  alias_en: [absolutely convergent]
   primary: ko
   defs:
   - label: '[미적분학] §무한급수'
-    url: /ko/math/calculus/series
+    url: '/ko/math/calculus/series'
+  - label: '[해석학] §무한급수'
+    url: '/ko/math/analysis/series'
 - id: absolute_value
   en: absolute value
   ko: 절댓값
@@ -217,13 +212,6 @@ A:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
-- id: absolutely_convergent
-  en: absolutely convergent
-  ko: 절대수렴
-  primary: ko
-  defs:
-  - label: '[해석학] §무한급수'
-    url: /ko/math/analysis/series
 - id: acceleration
   en: acceleration
   ko: 가속도
@@ -297,13 +285,6 @@ A:
   defs:
   - label: '[스킴] §군 스킴'
     url: /ko/math/scheme_theory/group_schemes
-- id: adic_topology
-  en: adic topology
-  ko: 진 위상
-  primary: ko
-  defs:
-  - label: '[가환대수학] §완비화'
-    url: /ko/math/commutative_algebra/completion
 - id: adjoint
   en: adjoint
   ko: 수반
@@ -403,15 +384,6 @@ A:
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
-- id: affine_n_-space
-  en: affine $n$-space
-  ko: $n$차원 아핀공간
-  primary: en
-  defs:
-  - label: '[대수다양체] §아핀다양체'
-    url: /ko/math/algebraic_varieties/affine_varieties
-  - label: '[스킴] §스펙트럼'
-    url: /ko/math/scheme_theory/spectrums
 - id: affine_open_cover
   en: affine open cover
   ko: 아핀 열린덮개
@@ -429,10 +401,14 @@ A:
 - id: affine_space
   en: affine space
   ko: 아핀공간
+  alias: [$n$차원 아핀공간]
+  alias_en: [affine $n$-space]
   primary: en
   defs:
   - label: '[대수다양체] §아핀다양체'
-    url: /ko/math/algebraic_varieties/affine_varieties
+    url: '/ko/math/algebraic_varieties/affine_varieties'
+  - label: '[스킴] §스펙트럼'
+    url: '/ko/math/scheme_theory/spectrums'
 - id: affine_toric_variety
   en: affine toric variety
   ko: 아핀 토릭 다양체
@@ -471,10 +447,17 @@ A:
 - id: algebra_homomorphism
   en: algebra homomorphism
   ko: 대수 준동형
+  alias: [$A$-대수 준동형사상]
+  alias_en: [$A$-algebra homomorphism]
   primary: en
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+  see:
+  - label: $A$-algebra
+    id: a_-algebra
+  - label: Algebra homomorphism
+    id: algebra_homomorphism
 - id: algebraic
   en: algebraic
   ko: 대수적
@@ -573,10 +556,19 @@ A:
 - id: algebraic_variety
   en: algebraic variety
   ko: 대수다양체
+  alias_en: [variety]
   primary: en
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+  see:
+  - label: Algebraic variety
+    id: algebraic_variety
+  - label: Scheme
+    id: scheme
+  - label: 미분다양체
+    lang: ko
+    id: differentiable_manifold
 - id: algebraically_closed_field
   en: algebraically closed field
   ko: 대수적으로 닫힌 체
@@ -750,6 +742,7 @@ A:
 - id: antiderivative
   en: antiderivative
   ko: 원시함수
+  alias_en: [primitive, primitive function]
   primary: ko
   defs:
   - label: '[미적분학] §적분'
@@ -766,13 +759,7 @@ A:
 - id: antipodal_map
   en: antipodal map
   ko: 대척사상
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
-    url: /ko/math/algebraic_topology/borsuk_ulam_theorem
-- id: antipodal_morphism
-  en: antipodal morphism
-  ko: 대척사상
+  alias_en: [antipodal morphism]
   primary: en
   defs:
   - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
@@ -805,7 +792,7 @@ A:
     url: /ko/math/set_theory/filter_and_ideal
   see:
   - label: Monotone Galois connection
-    id: monotone_galois_connection
+    id: Galois_connection
 - id: apex
   en: apex
   ko: 꼭짓점
@@ -950,13 +937,8 @@ A:
 - id: associated_prime
   en: associated prime
   ko: 동반소 아이디얼
-  primary: en
-  defs:
-  - label: '[가환대수학] §동반소아이디얼'
-    url: /ko/math/commutative_algebra/associated_primes
-- id: associated_prime_ideal
-  en: associated prime ideal
-  ko: 동반소아이디얼
+  alias: [동반소아이디얼]
+  alias_en: [associated prime ideal]
   primary: en
   defs:
   - label: '[가환대수학] §동반소아이디얼'
@@ -1304,18 +1286,6 @@ B:
   see:
   - label: Base
     id: base
-- id: base-point_freeness
-  en: base-point freeness
-  ko: 기저점 없음
-  primary: ko
-  defs:
-  - label: '[복소기하학] §Kodaira 매장정리'
-    url: /ko/math/complex_geometry/kodaira_embedding_theorem
-  see:
-  - label: Basepoint-free
-    id: basepoint-free
-  - label: Ample
-    id: ample
 - id: base_space
   en: base space
   ko: 기저공간
@@ -1331,16 +1301,21 @@ B:
 - id: basepoint-free
   en: basepoint-free
   ko: 기저점 없음
+  alias_en: [base-point freeness]
   primary: en
   defs:
   - label: '[대수다양체] §선형계'
-    url: /ko/math/algebraic_varieties/linear_systems
+    url: '/ko/math/algebraic_varieties/linear_systems'
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: '/ko/math/complex_geometry/kodaira_embedding_theorem'
   see:
   - label: 기저점 없음
     lang: ko
-    id: base-point_freeness
+    id: basepoint-free
   - label: Ample
     id: ample
+  - label: Basepoint-free
+    id: basepoint-free
 - id: basic
   en: basic
   ko: 기본
@@ -1380,13 +1355,7 @@ B:
 - id: bertrand_postulate
   en: Bertrand postulate
   ko: 베르트랑 가설
-  primary: ko
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
-- id: bertrand_s_postulate
-  en: 'Bertrand''s postulate'
-  ko: 베르트랑 가설
+  alias_en: ['Bertrand''s postulate']
   primary: ko
   defs:
   - label: '[정수론] §소수의 무한성과 분포'
@@ -1418,7 +1387,7 @@ B:
   see:
   - label: 최대공약수
     lang: ko
-    id: gcd
+    id: greatest_common_divisor
 - id: bézout_theorem
   en: Bézout theorem
   ko: 베주 정리
@@ -1489,17 +1458,13 @@ B:
 - id: bijection
   en: bijection
   ko: 전단사
+  alias_en: [bijective]
   primary: ko
   defs:
   - label: '[대수적 구조] §대수적 구조'
-    url: /ko/math/algebraic_structures/algebraic_structures
-- id: bijective
-  en: bijective
-  ko: 전단사
-  primary: ko
-  defs:
+    url: '/ko/math/algebraic_structures/algebraic_structures'
   - label: '[집합론] §함수들 사이의 연산'
-    url: /ko/math/set_theory/operation_of_functions
+    url: '/ko/math/set_theory/operation_of_functions'
   see:
   - label: Function
     id: function
@@ -1605,16 +1570,6 @@ B:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
-- id: birational_equivalence
-  en: birational equivalence
-  ko: 쌍유리 동치
-  primary: en
-  defs:
-  - label: '[대수다양체] §유리사상'
-    url: /ko/math/algebraic_varieties/rational_maps
-  see:
-  - label: Birational map
-    id: birational_map
 - id: birational_map
   en: birational map
   ko: 쌍유리 사상
@@ -1627,12 +1582,16 @@ B:
 - id: birationally_equivalent
   en: birationally equivalent
   ko: 쌍유리 동치
+  alias_en: [birational equivalence]
   primary: en
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+  see:
+  - label: Birational map
+    id: birational_map
 - id: bisection
   en: bisection
   ko: 구간 이분법
@@ -1863,7 +1822,7 @@ C:
     lang: ko
     id: c_1_-regular_curve
   - label: $C^k$-differentiable manifold
-    id: c_k_-differentiable_manifold
+    id: differentiable_manifold
 - id: c_1_-regular_curve
   en: $C^1$-regular curve
   ko: 일급정칙곡선
@@ -1875,26 +1834,6 @@ C:
   - label: 일급
     lang: ko
     id: c_1
-- id: c_k_-differentiable_manifold
-  en: $C^k$-differentiable manifold
-  ko: k급 미분다양체
-  primary: en
-  defs:
-  - label: '[미분다양체] §미분다양체'
-    url: /ko/math/manifolds/smooth_manifolds
-  see:
-  - label: $C^k$-differentiable structure
-    id: c_k_-differentiable_structure
-- id: c_k_-differentiable_structure
-  en: $C^k$-differentiable structure
-  ko: k급 미분구조
-  primary: en
-  defs:
-  - label: '[미분다양체] §미분다양체'
-    url: /ko/math/manifolds/smooth_manifolds
-  see:
-  - label: $C^k$-differentiable manifold
-    id: c_k_-differentiable_manifold
 - id: calabi-yau
   en: Calabi-Yau
   ko: 카라비-야우
@@ -2070,9 +2009,10 @@ C:
   see:
   - label: Cup product
     id: cup_product
-- id: cardinal
-  en: cardinal
+- id: cardinal_number
+  en: cardinal number
   ko: 기수
+  alias_en: [cardinal]
   primary: en
   defs:
   - label: '[집합론] §기수'
@@ -2080,13 +2020,6 @@ C:
   see:
   - label: Ordinal
     id: ordinal
-- id: cardinal_number
-  en: cardinal number
-  ko: 기수
-  primary: en
-  defs:
-  - label: '[집합론] §기수'
-    url: /ko/math/set_theory/cardinals
 - id: cardinal_product
   en: cardinal product
   ko: 기수 곱
@@ -2377,6 +2310,7 @@ C:
 - id: change-of-basis_matrix
   en: change-of-basis matrix
   ko: 기저변환행렬
+  alias_en: [transition matrix]
   primary: en
   defs:
   - label: '[선형대수학] §선형대수학의 기본정리'
@@ -2668,13 +2602,7 @@ C:
 - id: closed_map
   en: closed map
   ko: 닫힌사상
-  primary: en
-  defs:
-  - label: '[위상수학] §열린사상과 닫힌사상'
-    url: /ko/math/topology/open_mappings_and_closed_mappings
-- id: closed_mapping
-  en: closed mapping
-  ko: 닫힌사상
+  alias_en: [closed mapping]
   primary: en
   defs:
   - label: '[위상수학] §열린사상과 닫힌사상'
@@ -2870,7 +2798,7 @@ C:
     id: domain
 - id: coequalizer
   en: coequalizer
-  ko: 여핵
+  ko: 여동등화자
   primary: en
   defs:
   - label: '[범주론] §극한'
@@ -3103,7 +3031,7 @@ C:
     url: /ko/math/lie_theory/universal_enveloping_algebra
 - id: commute
   en: commute
-  ko: 가환
+  ko: 교환
   primary: en
   defs:
   - label: '[집합론] §함수'
@@ -3251,7 +3179,7 @@ C:
     url: /ko/math/set_theory/zfc_axioms
 - id: complete
   en: complete
-  ko: 완전
+  ko: 완비
   primary: en
   defs:
   - label: '[집합론] §유향집합'
@@ -3519,13 +3447,6 @@ C:
     url: /ko/math/complex_geometry/complex_manifolds
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
-- id: composite
-  en: composite
-  ko: 합성수
-  primary: ko
-  defs:
-  - label: '[정수론] §소수와 산술의 기본정리'
-    url: /ko/math/number_theory/primes
 - id: composite_field
   en: composite field
   ko: 합성체
@@ -3543,6 +3464,7 @@ C:
 - id: composite_number
   en: composite number
   ko: 합성수
+  alias_en: [composite]
   primary: ko
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
@@ -3581,13 +3503,7 @@ C:
 - id: conditional_convergence
   en: conditional convergence
   ko: 조건수렴
-  primary: ko
-  defs:
-  - label: '[해석학] §무한급수'
-    url: /ko/math/analysis/series
-- id: conditionally_convergent
-  en: conditionally convergent
-  ko: 조건수렴
+  alias_en: [conditionally convergent]
   primary: ko
   defs:
   - label: '[해석학] §무한급수'
@@ -3694,7 +3610,7 @@ C:
     url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: conjugation
   en: conjugation
-  ko: 켤레
+  ko: 켤레작용
   primary: ko
   defs:
   - label: '[리 이론] §콤팩트 실형식'
@@ -3750,16 +3666,10 @@ C:
   defs:
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
-- id: constant
-  en: constant
-  ko: 상수함수
-  primary: en
-  defs:
-  - label: '[집합론] §함수'
-    url: /ko/math/set_theory/functions
 - id: constant_function
   en: constant function
   ko: 상수함수
+  alias_en: [constant]
   primary: ko
   defs:
   - label: '[집합론] §함수'
@@ -3897,7 +3807,7 @@ C:
     url: /ko/math/complex_geometry/hodge_theory
 - id: contractive
   en: contractive
-  ko: 수축
+  ko: 축소적
   primary: ko
   defs:
   - label: '[해석학] §Cauchy 수열과 완비성'
@@ -3916,24 +3826,20 @@ C:
   defs:
   - label: '[범주론] §함자'
     url: /ko/math/category_theory/functors
-- id: converge
-  en: converge
-  ko: 수렴
-  primary: ko
-  defs:
-  - label: '[미적분학] §무한급수'
-    url: /ko/math/calculus/series
-  - label: '[위상수학] §하우스도르프 공간'
-    url: /ko/math/topology/Hausdorff_spaces
-  - label: '[위상수학] §옹골성과 필터의 수렴'
-    url: /ko/math/topology/filter_convergence
 - id: convergence
   en: convergence
   ko: 수렴
+  alias_en: [converges, converge]
   primary: ko
   defs:
   - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
+    url: '/ko/math/analysis/convergence_of_sequences'
+  - label: '[미적분학] §무한급수'
+    url: '/ko/math/calculus/series'
+  - label: '[위상수학] §하우스도르프 공간'
+    url: '/ko/math/topology/Hausdorff_spaces'
+  - label: '[위상수학] §옹골성과 필터의 수렴'
+    url: '/ko/math/topology/filter_convergence'
 - id: convergent
   en: convergent
   ko: 점근분수
@@ -3941,13 +3847,6 @@ C:
   defs:
   - label: '[정수론] §연분수'
     url: /ko/math/number_theory/continued_fractions
-- id: converges
-  en: converges
-  ko: 수렴
-  primary: ko
-  defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
 - id: convex
   en: convex
   ko: 볼록
@@ -4038,7 +3937,7 @@ C:
     url: /ko/math/calculus/partial_derivatives
 - id: coprimary_module
   en: coprimary module
-  ko: 쌍대으뜸부분가군
+  ko: 쌍대으뜸가군
   primary: en
   defs:
   - label: '[가환대수학] §으뜸분해'
@@ -4053,10 +3952,13 @@ C:
 - id: coprime
   en: coprime
   ko: 서로소
+  alias_en: [relatively prime]
   primary: ko
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+    url: '/ko/math/number_theory/divisibility'
+  - label: '[군론] §대칭군'
+    url: '/ko/math/group_theory/symmetric_groups'
 - id: coproduct
   en: coproduct
   ko: 쌍대곱
@@ -4563,16 +4465,7 @@ D:
 - id: deformation_retract
   en: deformation retract
   ko: 변형 수축
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §호모토피'
-    url: /ko/math/algebraic_topology/homotopy
-  see:
-  - label: Homotopy equivalence
-    id: homotopy_equivalence
-- id: deformation_retraction
-  en: deformation retraction
-  ko: 변형 수축
+  alias_en: [deformation retraction]
   primary: en
   defs:
   - label: '[대수적 위상수학] §호모토피'
@@ -4686,13 +4579,6 @@ D:
   defs:
   - label: '[가환대수학] §Depth'
     url: /ko/math/commutative_algebra/depth#def3
-- id: derivation
-  en: derivation
-  ko: 미분
-  primary: en
-  defs:
-  - label: '[다중선형대수학] §미분'
-    url: /ko/math/multilinear_algebra/derivations
 - id: derivative
   en: derivative
   ko: 미분계수
@@ -4921,17 +4807,13 @@ D:
 - id: diagonalization
   en: diagonalization
   ko: 대각화
+  alias_en: [diagonalize]
   primary: ko
   defs:
   - label: '[선형대수학] §고유공간분해'
-    url: /ko/math/linear_algebra/eigenspace_decomposition
-- id: diagonalize
-  en: diagonalize
-  ko: 대각화
-  primary: en
-  defs:
+    url: '/ko/math/linear_algebra/eigenspace_decomposition'
   - label: '[체론] §에탈대수'
-    url: /ko/math/field_theory/etale_algebras
+    url: '/ko/math/field_theory/etale_algebras'
 - id: diagram
   en: diagram
   ko: 그림
@@ -4988,17 +4870,27 @@ D:
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
+  alias: [k급 미분다양체]
+  alias_en: [$C^k$-differentiable manifold]
   primary: ko
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+  see:
+  - label: $C^k$-differentiable structure
+    id: differentiable_structure
 - id: differentiable_structure
   en: differentiable structure
   ko: 미분구조
+  alias: [k급 미분구조]
+  alias_en: [$C^k$-differentiable structure]
   primary: ko
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+  see:
+  - label: $C^k$-differentiable manifold
+    id: differentiable_manifold
 - id: differential
   en: differential
   ko: 미분사상
@@ -5016,6 +4908,8 @@ D:
 - id: differential_form
   en: differential form
   ko: 미분형식
+  alias: [$k$차 미분형식]
+  alias_en: [differential $k$-form]
   primary: en
   defs:
   - label: '[미분다양체] §미분형식'
@@ -5027,13 +4921,6 @@ D:
   defs:
   - label: '[미분다양체] §미분 아이디얼'
     url: /ko/math/manifolds/differential_ideal
-- id: differential_k_-form
-  en: differential $k$-form
-  ko: $k$차 미분형식
-  primary: en
-  defs:
-  - label: '[미분다양체] §미분형식'
-    url: /ko/math/manifolds/differential_forms
 - id: differential_module
   en: differential module
   ko: 미분가군
@@ -5142,6 +5029,7 @@ D:
 - id: direct_system
   en: direct system
   ko: 유향체계
+  alias_en: [directed system]
   primary: en
   defs:
   - label: '[집합론] §극한'
@@ -5163,13 +5051,6 @@ D:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
-- id: directed_system
-  en: directed system
-  ko: 유향체계
-  primary: en
-  defs:
-  - label: '[집합론] §극한'
-    url: /ko/math/set_theory/limits
 - id: directional_derivative
   en: directional derivative
   ko: 방향도함수
@@ -5302,26 +5183,25 @@ D:
 - id: distributive_law
   en: distributive law
   ko: 분배법칙
+  alias_en: [distributive property]
   primary: ko
   defs:
   - label: '[집합론] §곱집합의 성질'
-    url: /ko/math/set_theory/property_of_products
+    url: '/ko/math/set_theory/property_of_products'
   - label: '[대수적 구조] §환의 정의'
-    url: /ko/math/algebraic_structures/rings
-- id: distributive_property
-  en: distributive property
-  ko: 분배법칙
-  primary: ko
-  defs:
+    url: '/ko/math/algebraic_structures/rings'
   - label: '[선형대수학] §가환군과 체'
-    url: /ko/math/linear_algebra/fields
+    url: '/ko/math/linear_algebra/fields'
 - id: diverge
   en: diverge
   ko: 발산
+  alias_en: [diverges]
   primary: ko
   defs:
   - label: '[미적분학] §무한급수'
-    url: /ko/math/calculus/series
+    url: '/ko/math/calculus/series'
+  - label: '[해석학] §수열의 수렴'
+    url: '/ko/math/analysis/convergence_of_sequences'
 - id: divergence
   en: divergence
   ko: 발산
@@ -5336,13 +5216,6 @@ D:
   defs:
   - label: '[미적분학] §발산정리와 스토크스 정리'
     url: /ko/math/calculus/divergence_and_stokes
-- id: diverges
-  en: diverges
-  ko: 발산
-  primary: ko
-  defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
 - id: diverges_to_infinity
   en: diverges to infinity
   ko: 양의 무한대로 발산
@@ -5659,18 +5532,7 @@ E:
 - id: eilenberg-steenrod_axiom
   en: Eilenberg-Steenrod axiom
   ko: 에일렌베르크-스틴로드 공리
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §호몰로지의 계산'
-    url: /ko/math/algebraic_topology/computation_of_homology
-  see:
-  - label: Cohomology
-    id: cohomology
-  - label: Homology
-    id: homology
-- id: eilenberg-steenrod_axioms
-  en: Eilenberg-Steenrod axioms
-  ko: 에일렌베르크-스틴로드 공리
+  alias_en: [Eilenberg-Steenrod axioms]
   primary: en
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
@@ -5683,19 +5545,7 @@ E:
 - id: elementary_row_operation
   en: elementary row operation
   ko: 기본행연산
-  primary: ko
-  defs:
-  - label: '[선형대수학] §가우스 소거법'
-    url: /ko/math/linear_algebra/Gaussian_elimination
-  see:
-  - label: Rank
-    id: rank
-  - label: 행사다리꼴
-    lang: ko
-    id: row_echelon_form
-- id: elementary_row_operation_ero
-  en: elementary row operation, ero
-  ko: 기본행연산
+  alias_en: [elementary row operation, ero]
   primary: ko
   defs:
   - label: '[선형대수학] §가우스 소거법'
@@ -5868,7 +5718,7 @@ E:
     url: /ko/math/set_theory/cardinals
   see:
   - label: Cardinal
-    id: cardinal
+    id: cardinal_number
 - id: equivalence_class
   en: equivalence class
   ko: 동치류
@@ -5881,15 +5731,10 @@ E:
     id: partition
 - id: equivalence_of_categories
   en: equivalence of categories
-  ko: 동등
+  ko: 범주의 동등
+  alias: [동등함자]
+  alias_en: [equivalence of category]
   primary: ko
-  defs:
-  - label: '[범주론] §자연변환'
-    url: /ko/math/category_theory/natural_transformations
-- id: equivalence_of_category
-  en: equivalence of category
-  ko: 동등함자
-  primary: en
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
@@ -5972,16 +5817,10 @@ E:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
-- id: essential
-  en: essential
-  ko: 본질적 불연속
-  primary: en
-  defs:
-  - label: '[미적분학] §연속함수'
-    url: /ko/math/calculus/continuity
 - id: essential_discontinuity
   en: essential discontinuity
   ko: 본질적 불연속
+  alias_en: [essential]
   primary: en
   defs:
   - label: '[미적분학] §연속함수'
@@ -6344,7 +6183,7 @@ E:
     url: /ko/math/manifolds/differential_forms
 - id: extremum
   en: extremum
-  ko: 극값
+  ko: 전역 극값
   primary: ko
   defs:
   - label: '[미적분학] §평균값 정리'
@@ -6482,7 +6321,7 @@ F:
   see:
   - label: 소수
     lang: ko
-    id: prime_number
+    id: prime
 - id: fermat_s_theorem
   en: 'Fermat''s theorem'
   ko: 페르마 정리
@@ -6550,7 +6389,7 @@ F:
     url: /ko/math/number_theory/euclidean_algorithm
 - id: fibration
   en: fibration
-  ko: 올림
+  ko: 올뭉치
   primary: en
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
@@ -6759,16 +6598,11 @@ F:
   see:
   - label: Finitely presented
     id: finitely_presented
-- id: finitely_generated_a_-module
-  en: finitely generated $A$-module
-  ko: 유한생성 $A$-가군
-  primary: en
-  defs:
-  - label: '[대수적 구조] §가군'
-    url: /ko/math/algebraic_structures/modules
 - id: finitely_generated_module
   en: finitely generated module
   ko: 유한생성 가군
+  alias: [유한생성 $A$-가군]
+  alias_en: [finitely generated $A$-module]
   primary: en
   defs:
   - label: '[대수적 구조] §가군'
@@ -6991,13 +6825,6 @@ F:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
-- id: free_a_-module
-  en: free $A$-module
-  ko: 자유 $A$-가군
-  primary: en
-  defs:
-  - label: '[대수적 구조] §가군의 직접곱과 직합, 텐서곱'
-    url: /ko/math/algebraic_structures/operations_of_modules
 - id: free_abelian_group
   en: free abelian group
   ko: 자유아벨군
@@ -7055,6 +6882,8 @@ F:
 - id: free_module
   en: free module
   ko: 자유 가군
+  alias: [자유 $A$-가군]
+  alias_en: [free $A$-module]
   primary: en
   defs:
   - label: '[대수적 구조] §가군의 직접곱과 직합, 텐서곱'
@@ -7342,6 +7171,7 @@ G:
 - id: Galois_connection
   en: Galois connection
   ko: 갈루아 연결
+  alias_en: [monotone Galois connection]
   primary: en
   defs:
   - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
@@ -7352,7 +7182,7 @@ G:
   - label: Galois correspondence
     id: Galois_correspondence
   - label: Monotone Galois connection
-    id: monotone_galois_connection
+    id: Galois_connection
   - label: Antitone Galois connection
     id: antitone_galois_connection
 - id: Galois_correspondence
@@ -7475,13 +7305,6 @@ G:
   defs:
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
-- id: gcd
-  en: GCD
-  ko: 최대공약수
-  primary: ko
-  defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
 - id: general_linear_group
   en: general linear group
   ko: 일반선형군
@@ -7696,20 +7519,16 @@ G:
   defs:
   - label: '[스킴] §아핀스킴'
     url: /ko/math/scheme_theory/affine_schemes
-- id: globally_generate
-  en: globally generate
-  ko: 전역생성
-  primary: en
-  defs:
-  - label: '[스킴] §점함자'
-    url: /ko/math/scheme_theory/functor_of_points
 - id: globally_generated
   en: globally generated
   ko: 전역생성
+  alias_en: [globally generate]
   primary: en
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
-    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+    url: '/ko/math/algebraic_varieties/cohomology_of_projective_spaces'
+  - label: '[스킴] §점함자'
+    url: '/ko/math/scheme_theory/functor_of_points'
 - id: globally_generating_sections
   en: globally generating sections
   ko: 전역생성단면
@@ -7747,7 +7566,7 @@ G:
     url: /ko/math/complex_analysis/cauchy_theorem
 - id: grade
   en: grade
-  ko: 차수
+  ko: 등급
   primary: ko
   defs:
   - label: '[대수적 구조] §등급가군'
@@ -7881,6 +7700,7 @@ G:
 - id: greatest_common_divisor
   en: greatest common divisor
   ko: 최대공약수
+  alias_en: [GCD]
   primary: ko
   defs:
   - label: '[환론] §정역'
@@ -8431,16 +8251,10 @@ H:
     url: /ko/math/complex_geometry/dolbeault_cohomology
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
-- id: hodge_star
-  en: Hodge star
-  ko: 호지 별작용소
-  primary: en
-  defs:
-  - label: '[복소기하학] §Hodge 이론'
-    url: /ko/math/complex_geometry/hodge_theory
 - id: hodge_star_operator
   en: Hodge star operator
   ko: 호지 별작용소
+  alias_en: [Hodge star]
   primary: en
   defs:
   - label: '[복소기하학] §Hodge 이론'
@@ -8556,6 +8370,7 @@ H:
 - id: homogeneous_coordinate
   en: homogeneous coordinate
   ko: 동차좌표
+  alias_en: [homogeneous coordinates]
   primary: en
   defs:
   - label: '[대수다양체] §사영다양체'
@@ -8567,13 +8382,6 @@ H:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
-- id: homogeneous_coordinates
-  en: homogeneous coordinates
-  ko: 동차좌표
-  primary: en
-  defs:
-  - label: '[대수다양체] §사영다양체'
-    url: /ko/math/algebraic_varieties/projective_varieties
 - id: homogeneous_element
   en: homogeneous element
   ko: 동차원소
@@ -8685,10 +8493,21 @@ H:
 - id: homotopy_group
   en: homotopy group
   ko: 호모토피 군
+  alias: [$n$번째 호모토피 군]
+  alias_en: [$n$-th homotopy group]
   primary: en
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+  see:
+  - label: Homotopy
+    id: homotopy
+  - label: Fundamental groupoid
+    id: fundamental_groupoid
+  - label: Homotopy group
+    id: homotopy_group
+  - label: Fundamental group
+    id: fundamental_group
 - id: homotopy_lifting_property
   en: homotopy lifting property
   ko: 호모토피 올림 성질
@@ -9067,7 +8886,7 @@ I:
     id: family_of_sets
 - id: induce
   en: induce
-  ko: 유도
+  ko: 유발
   primary: ko
   defs:
   - label: '[위상수학] §위상공간의 다른 정의들'
@@ -9135,7 +8954,7 @@ I:
     id: convergent
   - label: 절대수렴
     lang: ko
-    id: absolutely_convergent
+    id: absolute_convergence
 - id: infinitesimal_deformation
   en: infinitesimal deformation
   ko: 무한소 변형
@@ -9159,7 +8978,7 @@ I:
     url: /ko/math/complex_geometry/kahler_manifolds
   see:
   - label: Homogeneous coordinates
-    id: homogeneous_coordinates
+    id: homogeneous_coordinate
 - id: initial_form
   en: initial form
   ko: 초기형
@@ -9439,7 +9258,7 @@ I:
     url: /ko/math/commutative_algebra/integral_extension
 - id: integral_flow
   en: integral flow
-  ko: 적분곡선
+  ko: 적분흐름
   primary: en
   defs:
   - label: '[미분다양체] §벡터장'
@@ -9999,10 +9818,18 @@ I:
 - id: isotypic_component
   en: isotypic component
   ko: 등형 성분
+  alias_en: [$S$-isotypic component]
   primary: en
   defs:
   - label: '[표현론] §유한군의 표현론'
-    url: /ko/math/representation_theory/representations_of_finite_groups
+    url: '/ko/math/representation_theory/representations_of_finite_groups'
+  - label: '[환론] §Semisimple module'
+    url: '/ko/math/ring_theory/semisimple_modules'
+  see:
+  - label: Weight decomposition
+    id: weight_decomposition
+  - label: Simple module
+    id: simple_module
 - id: iterated_integral
   en: iterated integral
   ko: 반복적분
@@ -10084,13 +9911,6 @@ J:
   defs:
   - label: '[리 이론] §리 군'
     url: /ko/math/lie_theory/Lie_groups
-- id: jacobi_matrix
-  en: Jacobi matrix
-  ko: 야코비 행렬
-  primary: ko
-  defs:
-  - label: '[미적분학] §다중적분'
-    url: /ko/math/calculus/multiple_integrals
 - id: jacobi_ring
   en: Jacobi ring
   ko: 야코비 환
@@ -10129,10 +9949,13 @@ J:
 - id: jacobian_matrix
   en: Jacobian matrix
   ko: 야코비 행렬
+  alias_en: [Jacobi matrix]
   primary: ko
   defs:
   - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
+    url: '/ko/math/analysis/multivariable_differentiation'
+  - label: '[미적분학] §다중적분'
+    url: '/ko/math/calculus/multiple_integrals'
 - id: jacobson_radical
   en: Jacobson radical
   ko: 제이콥슨 근기
@@ -10253,6 +10076,8 @@ K:
 - id: k_-simplex
   en: $k$-simplex
   ko: $k$-심플렉스, $k$-단체
+  alias: [심플렉스]
+  alias_en: [simplex]
   primary: en
   defs:
   - label: '[대수적 위상수학] §호몰로지'
@@ -10264,20 +10089,6 @@ K:
     id: singular_homology
   - label: Simplicial homology
     id: simplicial_homology
-- id: mathbb_k_-vector_space
-  en: $\mathbb{K}$-vector space
-  ko: $\mathbb{K}$-벡터공간
-  primary: ko
-  defs:
-  - label: '[선형대수학] §벡터공간'
-    url: /ko/math/linear_algebra/vector_spaces
-  see:
-  - label: 벡터공간
-    lang: ko
-    id: vector_space
-  - label: 선형사상
-    lang: ko
-    id: linear_map
 - id: kähler_class
   en: Kähler class
   ko: 켈러 류
@@ -10420,16 +10231,10 @@ K:
   defs:
   - label: '[대수다양체] §고다이라 소멸정리'
     url: /ko/math/algebraic_varieties/kodaira_vanishing
-- id: kodaira_vanishing
-  en: Kodaira vanishing
-  ko: 고다이라 소멸정리
-  primary: en
-  defs:
-  - label: '[대수다양체] §고다이라 소멸정리'
-    url: /ko/math/algebraic_varieties/kodaira_vanishing
 - id: kodaira_vanishing_theorem
   en: Kodaira vanishing theorem
   ko: 고다이라 소멸정리
+  alias_en: [Kodaira vanishing]
   primary: en
   defs:
   - label: '[대수다양체] §고다이라 소멸정리'
@@ -10697,13 +10502,6 @@ L:
   - label: 멱급수
     lang: ko
     id: power_series
-- id: lcm
-  en: LCM
-  ko: 최소공배수
-  primary: ko
-  defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
 - id: leading_coefficient
   en: leading coefficient
   ko: 선행계수
@@ -10739,6 +10537,7 @@ L:
 - id: least_common_multiple
   en: least common multiple
   ko: 최소공배수
+  alias_en: [LCM]
   primary: ko
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
@@ -11080,7 +10879,7 @@ L:
     url: /ko/math/lie_theory/Lie_groups
 - id: lie_subalgebra
   en: Lie subalgebra
-  ko: 부분대수
+  ko: Lie 부분대수
   primary: en
   defs:
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
@@ -11195,13 +10994,20 @@ L:
 - id: linear_dependence
   en: linear dependence
   ko: 일차종속
+  alias_en: [linearly dependent]
   primary: ko
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
-    url: /ko/math/linear_algebra/basis
+    url: '/ko/math/linear_algebra/basis'
+  - label: '[다중선형대수학] §기저'
+    url: '/ko/math/multilinear_algebra/basis_of_free_modules'
+  see:
+  - label: Linearly independent
+    id: linearly_independent
 - id: linear_equivalence
   en: linear equivalence
   ko: 선형동치
+  alias_en: [linearly equivalent]
   primary: en
   defs:
   - label: '[대수다양체] §인자'
@@ -11227,27 +11033,16 @@ L:
   defs:
   - label: '[토릭 기하학] §토릭 다양체의 교차 이론'
     url: /ko/math/toric_geometry/toric_intersection_theory
-- id: linear_independence
-  en: linear independence
-  ko: 일차독립
-  primary: ko
-  defs:
-  - label: '[선형대수학] §벡터공간의 기저'
-    url: /ko/math/linear_algebra/basis
 - id: linear_map
   en: linear map
   ko: 선형사상
+  alias_en: [linear transformation]
   primary: ko
   defs:
   - label: '[선형대수학] §선형사상'
-    url: /ko/math/linear_algebra/linear_map
-- id: linear_mapping
-  en: linear mapping
-  ko: 선형사상
-  primary: ko
-  defs:
+    url: '/ko/math/linear_algebra/linear_map'
   - label: '[미적분학] §다변수함수와 편미분'
-    url: /ko/math/calculus/partial_derivatives
+    url: '/ko/math/calculus/partial_derivatives'
 - id: linear_operator
   en: linear operator
   ko: 선형연산자
@@ -11271,13 +11066,6 @@ L:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
-- id: linear_transformation
-  en: linear transformation
-  ko: 선형사상
-  primary: ko
-  defs:
-  - label: '[미적분학] §다변수함수와 편미분'
-    url: /ko/math/calculus/partial_derivatives
 - id: linearization
   en: linearization
   ko: 선형화
@@ -11285,18 +11073,6 @@ L:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
-- id: linearly_dependent
-  en: linearly dependent
-  ko: 일차종속
-  primary: ko
-  defs:
-  - label: '[선형대수학] §벡터공간의 기저'
-    url: /ko/math/linear_algebra/basis
-  - label: '[다중선형대수학] §기저'
-    url: /ko/math/multilinear_algebra/basis_of_free_modules
-  see:
-  - label: Linearly independent
-    id: linearly_independent
 - id: linearly_disjoint
   en: linearly disjoint
   ko: ''
@@ -11304,17 +11080,10 @@ L:
   defs:
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
-- id: linearly_equivalent
-  en: linearly equivalent
-  ko: 선형동치
-  primary: en
-  note: '관형 용법: 뒤 명사까지 표준 영어 용어면 구 전체 영어(algebraic extension 등), 아니면 한글 유지. 서술형은 ''<en>한/하다'' 꼴'
-  defs:
-  - label: '[대수다양체] §인자'
-    url: /ko/math/algebraic_varieties/divisors
 - id: linearly_independent
   en: linearly independent
   ko: 일차독립
+  alias_en: [linear independence]
   primary: ko
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
@@ -11347,13 +11116,7 @@ L:
 - id: lipschitz_continuity
   en: Lipschitz continuity
   ko: 립시츠 연속
-  primary: ko
-  defs:
-  - label: '[해석학] §연속함수의 성질'
-    url: /ko/math/analysis/continuous_functions
-- id: lipschitz_continuous
-  en: Lipschitz continuous
-  ko: 립시츠 연속
+  alias_en: [Lipschitz continuous]
   primary: ko
   defs:
   - label: '[해석학] §연속함수의 성질'
@@ -11366,16 +11129,10 @@ L:
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
-- id: local_base
-  en: local base
-  ko: 국소기저
-  primary: en
-  defs:
-  - label: '[위상수학] §위상공간의 기저'
-    url: /ko/math/topology/topological_bases
 - id: local_basis
   en: local basis
   ko: 국소기저
+  alias_en: [local base]
   primary: en
   defs:
   - label: '[위상수학] §위상공간의 기저'
@@ -11397,6 +11154,7 @@ L:
 - id: local_complete_intersection
   en: local complete intersection
   ko: 국소 완전교차
+  alias_en: [LCI]
   primary: en
   defs:
   - label: '[스킴] §완전교차'
@@ -12103,7 +11861,7 @@ M:
     url: /ko/math/calculus/integration
 - id: metric
   en: metric
-  ko: 거리
+  ko: 거리함수
   primary: ko
   defs:
   - label: '[해석학] §거리공간'
@@ -12255,7 +12013,7 @@ M:
     url: /ko/math/algebraic_topology/acyclic_models_theorem
 - id: modular_inverse
   en: modular inverse
-  ko: 곱셈 역원
+  ko: 모듈러 역원
   primary: ko
   defs:
   - label: '[정수론] §일차 합동식'
@@ -12410,10 +12168,13 @@ M:
 - id: monotone
   en: monotone
   ko: 단조
+  alias_en: [monotonic]
   primary: ko
   defs:
   - label: '[집합론] §단조함수'
-    url: /ko/math/set_theory/monotone_functions
+    url: '/ko/math/set_theory/monotone_functions'
+  - label: '[해석학] §수열의 수렴'
+    url: '/ko/math/analysis/convergence_of_sequences'
 - id: monotone_convergence
   en: monotone convergence
   ko: 단조수렴
@@ -12431,17 +12192,11 @@ M:
 - id: monotone_function
   en: monotone function
   ko: 단조함수
+  alias_en: [monotonic function]
   primary: ko
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
-- id: monotone_galois_connection
-  en: monotone Galois connection
-  ko: 갈루아 연결
-  primary: en
-  defs:
-  - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
-    url: /ko/math/set_theory/filter_and_ideal
 - id: monotone_sequence
   en: monotone sequence
   ko: 단조수열
@@ -12449,20 +12204,6 @@ M:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
-- id: monotonic
-  en: monotonic
-  ko: 단조
-  primary: ko
-  defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
-- id: monotonic_function
-  en: monotonic function
-  ko: 단조함수
-  primary: ko
-  defs:
-  - label: '[집합론] §단조함수'
-    url: /ko/math/set_theory/monotone_functions
 - id: monotonicity
   en: monotonicity
   ko: 단조성
@@ -12473,6 +12214,7 @@ M:
 - id: moore-penrose_pseudoinverse
   en: Moore-Penrose pseudoinverse
   ko: 유사역행렬
+  alias_en: [pseudoinverse]
   primary: en
   defs:
   - label: '[선형대수학] §최소제곱법'
@@ -12481,7 +12223,7 @@ M:
     url: /ko/math/linear_algebra/singular_value_decomposition
   see:
   - label: Pseudoinverse
-    id: pseudoinverse
+    id: moore-penrose_pseudoinverse
 - id: morera_s_theorem
   en: 'Morera''s theorem'
   ko: Morera 정리
@@ -12595,7 +12337,7 @@ M:
     url: /ko/math/number_theory/arithmetic_functions
 - id: multiplicative_function
   en: multiplicative function
-  ko: 곱셈성
+  ko: 곱셈적 함수
   primary: ko
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
@@ -12707,22 +12449,6 @@ N:
     id: simplicial_homology
   - label: Reduced homology
     id: reduced_homology
-- id: n_-th_homotopy_group
-  en: $n$-th homotopy group
-  ko: $n$번째 호모토피 군
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §호모토피의 계산'
-    url: /ko/math/algebraic_topology/fibrations
-  see:
-  - label: Homotopy
-    id: homotopy
-  - label: Fundamental groupoid
-    id: fundamental_groupoid
-  - label: Homotopy group
-    id: homotopy_group
-  - label: Fundamental group
-    id: fundamental_group
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
   ko: 1의 $n$제곱근
@@ -13114,13 +12840,6 @@ N:
     url: /ko/math/ring_theory/division_rings
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
-- id: normal
-  en: normal
-  ko: 정규스킴
-  primary: en
-  defs:
-  - label: '[스킴] §스킴의 대수구조'
-    url: /ko/math/scheme_theory/algebra_of_schemes
 - id: normal_bundle
   en: normal bundle
   ko: 법다발
@@ -13215,6 +12934,7 @@ N:
 - id: normal_scheme
   en: normal scheme
   ko: 정규스킴
+  alias_en: [normal]
   primary: en
   defs:
   - label: '[스킴] §스킴의 대수구조'
@@ -13425,26 +13145,21 @@ O:
 - id: open_cover
   en: open cover
   ko: 열린덮개
+  alias_en: [open covering]
   primary: en
   defs:
   - label: '[해석학] §컴팩트성'
-    url: /ko/math/analysis/compactness
+    url: '/ko/math/analysis/compactness'
   - label: '[대수다양체] §층 코호몰로지'
-    url: /ko/math/algebraic_varieties/sheaf_cohomology
+    url: '/ko/math/algebraic_varieties/sheaf_cohomology'
+  - label: '[위상수학] §위상공간의 기저'
+    url: '/ko/math/topology/topological_bases'
   see:
   - label: Compact
     id: compact
   - label: 열린집합
     lang: ko
     id: open_set
-- id: open_covering
-  en: open covering
-  ko: 열린덮개
-  primary: en
-  defs:
-  - label: '[위상수학] §위상공간의 기저'
-    url: /ko/math/topology/topological_bases
-  see:
   - label: Open cover
     id: open_cover
 - id: open_embedding
@@ -13471,21 +13186,16 @@ O:
 - id: open_map
   en: open map
   ko: 열린사상
+  alias_en: [open mapping]
   primary: en
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
-    url: /ko/math/complex_analysis/argument_principle
+    url: '/ko/math/complex_analysis/argument_principle'
+  - label: '[위상수학] §열린사상과 닫힌사상'
+    url: '/ko/math/topology/open_mappings_and_closed_mappings'
   see:
   - label: Closed mapping
-    id: closed_mapping
-- id: open_mapping
-  en: open mapping
-  ko: 열린사상
-  primary: en
-  defs:
-  - label: '[위상수학] §열린사상과 닫힌사상'
-    url: /ko/math/topology/open_mappings_and_closed_mappings
-  see:
+    id: closed_map
   - label: Open map
     id: open_map
 - id: open_neighborhood
@@ -14078,16 +13788,11 @@ P:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
-- id: Peano_axiom
-  en: Peano axiom
-  ko: 페아노 공리
-  primary: ko
-  defs:
-  - label: '[집합론] §서수와 정렬집합'
-    url: /ko/math/set_theory/ordinals
 - id: peano_axioms
   en: Peano Axioms
   ko: 페아노 공리계
+  alias: [페아노 공리]
+  alias_en: [Peano axiom]
   primary: en
   defs:
   - label: '[집합론] §서수와 정렬집합'
@@ -14188,7 +13893,7 @@ P:
     url: /ko/math/lie_theory/richardson_peterson_variety
 - id: phase_space
   en: phase space
-  ko: 위상공간
+  ko: 상공간
   primary: en
   defs:
   - label: '[사교기하학] §고전역학'
@@ -14333,7 +14038,7 @@ P:
     url: /ko/math/complex_analysis/isolated_singularities
 - id: polynomial
   en: polynomial
-  ko: 다항함수
+  ko: 다항식
   primary: en
   defs:
   - label: '[대수적 구조] §등급환'
@@ -14565,10 +14270,13 @@ P:
 - id: prime
   en: prime
   ko: 소수
+  alias_en: [prime number]
   primary: en
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
-    url: /ko/math/number_theory/primes
+    url: '/ko/math/number_theory/primes'
+  - label: '[해석학] §실수의 완비성'
+    url: '/ko/math/analysis/completeness_of_reals'
 - id: prime_element
   en: prime element
   ko: 소원
@@ -14606,13 +14314,6 @@ P:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
-- id: prime_number
-  en: prime number
-  ko: 소수
-  primary: ko
-  defs:
-  - label: '[해석학] §실수의 완비성'
-    url: /ko/math/analysis/completeness_of_reals
 - id: prime_number_theorem
   en: prime number theorem
   ko: 소수 정리
@@ -14620,13 +14321,6 @@ P:
   defs:
   - label: '[정수론] §소수의 무한성과 분포'
     url: /ko/math/number_theory/distribution_of_primes
-- id: primitive
-  en: primitive
-  ko: 원시함수
-  primary: en
-  defs:
-  - label: '[복소해석학] §복소적분'
-    url: /ko/math/complex_analysis/complex_integration
 - id: primitive_cohomology
   en: primitive cohomology
   ko: ''
@@ -14641,13 +14335,6 @@ P:
   defs:
   - label: '[체론] §분리가능확대체'
     url: /ko/math/field_theory/separable_extensions
-- id: primitive_function
-  en: primitive function
-  ko: 원시함수
-  primary: ko
-  defs:
-  - label: '[미적분학] §적분'
-    url: /ko/math/calculus/integration
 - id: primitive_n_-th_root_of_unity
   en: primitive $n$-th root of unity
   ko: 1의 원시 $n$제곱근
@@ -14665,6 +14352,7 @@ P:
 - id: principal_bundle
   en: principal bundle
   ko: 주다발
+  alias_en: [principal $G$-bundle]
   primary: en
   defs:
   - label: '[대수적 위상수학] §분류공간'
@@ -14706,13 +14394,6 @@ P:
     url: /ko/math/commutative_algebra/divisors
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
-- id: principal_g_-bundle
-  en: principal $G$-bundle
-  ko: 주다발
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §분류공간'
-    url: /ko/math/algebraic_topology/classifying_spaces
 - id: principal_ideal
   en: principal ideal
   ko: 주아이디얼
@@ -14785,7 +14466,7 @@ P:
     url: /ko/math/category_theory/categories
 - id: product_magma
   en: product magma
-  ko: 곱
+  ko: 곱 마그마
   primary: ko
   defs:
   - label: '[대수적 구조] §대수적 구조'
@@ -14851,13 +14532,6 @@ P:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
-- id: projective
-  en: projective
-  ko: 사영사상
-  primary: en
-  defs:
-  - label: '[스킴] §값매김환'
-    url: /ko/math/scheme_theory/valuative_criteria
 - id: projective_algebraic_set
   en: projective algebraic set
   ko: 사영 대수적 집합
@@ -14909,17 +14583,11 @@ P:
 - id: projective_morphism
   en: projective morphism
   ko: 사영사상
+  alias_en: [projective]
   primary: en
   defs:
   - label: '[스킴] §값매김환'
     url: /ko/math/scheme_theory/valuative_criteria
-- id: projective_n_-space
-  en: projective $n$-space
-  ko: $n$차원 사영공간
-  primary: en
-  defs:
-  - label: '[대수다양체] §사영다양체'
-    url: /ko/math/algebraic_varieties/projective_varieties
 - id: projective_object
   en: projective object
   ko: 사영 대상
@@ -14947,8 +14615,8 @@ P:
 - id: projective_space
   en: projective space
   ko: 사영공간
-  alias:
-  - 사영 공간
+  alias: [사영 공간, $n$차원 사영공간]
+  alias_en: [projective $n$-space]
   primary: en
   defs:
   - label: '[대수다양체] §사영다양체'
@@ -15042,13 +14710,6 @@ P:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
-- id: pseudoinverse
-  en: pseudoinverse
-  ko: 유사역행렬
-  primary: en
-  defs:
-  - label: '[선형대수학] §최소제곱법'
-    url: /ko/math/linear_algebra/least_squares_method
 - id: pullback
   en: pullback
   ko: 당김
@@ -15275,27 +14936,18 @@ Q:
 - id: quasi-isomorphic
   en: quasi-isomorphic
   ko: 유사동형
+  alias_en: [quasi-isomorphism]
   primary: en
   defs:
   - label: '[호몰로지 대수학] §긴 완전열'
     url: /ko/math/homological_algebra/long_exact_sequence
   see:
   - label: Quasi-isomorphism
-    id: quasi-isomorphism
-  - label: Chain complex
-    id: chain_complex
-- id: quasi-isomorphism
-  en: quasi-isomorphism
-  ko: ''
-  primary: en
-  defs:
-  - label: '[호몰로지 대수학] §긴 완전열'
-    url: /ko/math/homological_algebra/long_exact_sequence
-  see:
-  - label: Quasi-isomorphic
     id: quasi-isomorphic
   - label: Chain complex
     id: chain_complex
+  - label: Quasi-isomorphic
+    id: quasi-isomorphic
 - id: quasi-projective
   en: quasi-projective
   ko: 준사영사상
@@ -15616,6 +15268,7 @@ R:
 - id: rational_equivalence
   en: rational equivalence
   ko: 유리 동치
+  alias_en: [rationally equivalent]
   primary: en
   defs:
   - label: '[대수다양체] §저우 군'
@@ -15652,13 +15305,6 @@ R:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
-- id: rationally_equivalent
-  en: rationally equivalent
-  ko: 유리 동치
-  primary: en
-  defs:
-  - label: '[대수다양체] §저우 군'
-    url: /ko/math/algebraic_varieties/chow_groups
 - id: ray
   en: ray
   ko: 반직선
@@ -15696,7 +15342,7 @@ R:
     url: /ko/math/set_theory/ordinals
 - id: reduced
   en: reduced
-  ko: 기약
+  ko: 축소
   primary: en
   note: '기약분수(reduced fraction) 문맥은 한글 유지'
   defs:
@@ -15764,6 +15410,7 @@ R:
 - id: reduced_row_echelon_matrix
   en: reduced row échelon matrix
   ko: 기약행사다리꼴행렬
+  alias_en: [reduced row échelon matrix, rref]
   primary: ko
   defs:
   - label: '[선형대수학] §가우스 소거법'
@@ -15774,13 +15421,6 @@ R:
   - label: 행사다리꼴
     lang: ko
     id: row_echelon_form
-- id: reduced_row_échelon_matrix_rref
-  en: reduced row échelon matrix, rref
-  ko: 기약행사다리꼴행렬
-  primary: ko
-  defs:
-  - label: '[선형대수학] §가우스 소거법'
-    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: reduced_scheme
   en: reduced scheme
   ko: 축소스킴
@@ -16050,13 +15690,6 @@ R:
   defs:
   - label: '[체론] §대수적 폐포'
     url: /ko/math/field_theory/algebraically_closed_extensions
-- id: relatively_prime
-  en: relatively prime
-  ko: 서로소
-  primary: ko
-  defs:
-  - label: '[군론] §대칭군'
-    url: /ko/math/group_theory/symmetric_groups
 - id: remainder
   en: remainder
   ko: 나머지
@@ -16066,16 +15699,10 @@ R:
     url: /ko/math/ring_theory/integral_domains
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
-- id: removable
-  en: removable
-  ko: 제거가능 불연속
-  primary: en
-  defs:
-  - label: '[미적분학] §연속함수'
-    url: /ko/math/calculus/continuity
 - id: removable_discontinuity
   en: removable discontinuity
   ko: 제거가능 불연속
+  alias_en: [removable]
   primary: en
   defs:
   - label: '[미적분학] §연속함수'
@@ -16232,7 +15859,7 @@ R:
     url: /ko/math/algebraic_topology/homotopy
 - id: retraction
   en: retraction
-  ko: 수축
+  ko: 수축사상
   primary: en
   defs:
   - label: '[집합론] §Retraction과 section'
@@ -16570,13 +16197,7 @@ R:
 - id: row_echelon_matrix
   en: row échelon matrix
   ko: 행사다리꼴행렬
-  primary: ko
-  defs:
-  - label: '[선형대수학] §가우스 소거법'
-    url: /ko/math/linear_algebra/Gaussian_elimination
-- id: row_échelon_matrix_ref
-  en: row échelon matrix, ref
-  ko: 행사다리꼴행렬
+  alias_en: [row échelon matrix, ref]
   primary: ko
   defs:
   - label: '[선형대수학] §가우스 소거법'
@@ -16596,18 +16217,6 @@ R:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
 S:
-- id: s_-isotypic_component
-  en: $S$-isotypic component
-  ko: 등형 성분
-  primary: en
-  defs:
-  - label: '[환론] §Semisimple module'
-    url: /ko/math/ring_theory/semisimple_modules
-  see:
-  - label: Weight decomposition
-    id: weight_decomposition
-  - label: Simple module
-    id: simple_module
 - id: saddle_point
   en: saddle point
   ko: 안장점
@@ -17002,7 +16611,7 @@ S:
     url: /ko/math/field_theory/separable_degree
 - id: separated
   en: separated
-  ko: 분리가능
+  ko: 분리
   primary: ko
   defs:
   - label: '[위상수학] §하우스도르프 공간'
@@ -17079,13 +16688,8 @@ S:
 - id: sequential_compactness
   en: sequential compactness
   ko: 점렬컴팩트성
-  primary: ko
-  defs:
-  - label: '[해석학] §컴팩트성'
-    url: /ko/math/analysis/compactness
-- id: sequentially_compact
-  en: sequentially compact
-  ko: 점렬컴팩트
+  alias: [점렬컴팩트]
+  alias_en: [sequentially compact]
   primary: ko
   defs:
   - label: '[해석학] §컴팩트성'
@@ -17114,14 +16718,9 @@ S:
 - id: serre_relation
   en: Serre relation
   ko: 세르 관계식
+  alias: [Serre 관계식]
+  alias_en: [Serre relations]
   primary: en
-  defs:
-  - label: '[리 이론] §Serre 관계식'
-    url: /ko/math/lie_theory/serre_relations
-- id: serre_relations
-  en: Serre relations
-  ko: Serre 관계식
-  primary: ko
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
@@ -17230,7 +16829,7 @@ S:
     id: long_exact_sequence
 - id: sieve
   en: sieve
-  ko: 체
+  ko: 시브
   primary: ko
   defs:
   - label: '[스택] §그로텐디크 위상'
@@ -17258,16 +16857,10 @@ S:
     url: /ko/math/linear_algebra/quadratic_forms
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
     url: /ko/math/symplectic_geometry/morse_stationary_phase#def4
-- id: similar
-  en: similar
-  ko: 닮은 행렬
-  primary: en
-  defs:
-  - label: '[다중선형대수학] §기저변환'
-    url: /ko/math/multilinear_algebra/change_of_basis
 - id: similar_matrix
   en: similar matrix
   ko: 닮은 행렬
+  alias_en: [similar]
   primary: en
   defs:
   - label: '[선형대수학] §선형대수학의 기본정리'
@@ -17332,13 +16925,6 @@ S:
   defs:
   - label: '[복소해석학] §멱급수와 해석성'
     url: /ko/math/complex_analysis/power_series_and_analyticity
-- id: simplex
-  en: simplex
-  ko: 심플렉스
-  primary: en
-  defs:
-  - label: '[대수적 위상수학] §호몰로지'
-    url: /ko/math/algebraic_topology/homology
 - id: simplicial_homology
   en: simplicial homology
   ko: ''
@@ -17491,7 +17077,7 @@ S:
     url: /ko/math/linear_algebra/singular_value_decomposition
 - id: singularity
   en: singularity
-  ko: 특이점
+  ko: 특이성
   primary: en
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
@@ -17698,7 +17284,7 @@ S:
     id: target
 - id: span
   en: span
-  ko: 생성
+  ko: 선형생성
   primary: en
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
@@ -17710,7 +17296,7 @@ S:
     id: basis
 - id: spanning_set
   en: spanning set
-  ko: 생성집합
+  ko: 선형생성집합
   primary: en
   defs:
   - label: '[선형대수학] §벡터공간의 기저'
@@ -17768,7 +17354,7 @@ S:
     url: /ko/math/calculus/multiple_integrals
 - id: split
   en: split
-  ko: 분해
+  ko: 분할된
   primary: en
   defs:
   - label: '[다중선형대수학] §완전열'
@@ -17969,7 +17555,7 @@ S:
     url: /ko/math/calculus/divergence_and_stokes
 - id: stratification
   en: stratification
-  ko: 층화
+  ko: 성층화
   primary: en
   defs:
   - label: '[층론] §Verdier duality'
@@ -18273,7 +17859,7 @@ S:
     url: /ko/math/topology/subspaces
 - id: substitution
   en: substitution
-  ko: 치환
+  ko: 치환적분
   primary: ko
   defs:
   - label: '[미적분학] §적분'
@@ -18811,13 +18397,7 @@ T:
 - id: tautological_bundle
   en: Tautological bundle
   ko: 보편 선다발
-  primary: en
-  defs:
-  - label: '[대수다양체] §선다발과 벡터다발'
-    url: /ko/math/algebraic_varieties/line_bundles
-- id: tautological_line_bundle
-  en: tautological line bundle
-  ko: 보편 선다발
+  alias_en: [tautological line bundle]
   primary: en
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
@@ -18836,13 +18416,6 @@ T:
   defs:
   - label: '[미적분학] §테일러 정리'
     url: /ko/math/calculus/taylor_theorem
-- id: taylor_s_theorem
-  en: 'Taylor''s theorem'
-  ko: 테일러 정리
-  primary: ko
-  defs:
-  - label: '[미적분학] §테일러 정리'
-    url: /ko/math/calculus/taylor_theorem
 - id: taylor_series
   en: Taylor series
   ko: 테일러 급수
@@ -18853,6 +18426,7 @@ T:
 - id: taylor_theorem
   en: Taylor theorem
   ko: 테일러 정리
+  alias_en: ['Taylor''s theorem']
   primary: ko
   defs:
   - label: '[미적분학] §테일러 정리'
@@ -19207,13 +18781,6 @@ T:
     url: /ko/math/manifolds/smooth_manifolds
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
-- id: transition_matrix
-  en: transition matrix
-  ko: 기저변환행렬
-  primary: en
-  defs:
-  - label: '[다중선형대수학] §기저변환'
-    url: /ko/math/multilinear_algebra/change_of_basis
 - id: transitive
   en: transitive
   ko: 추이적
@@ -19229,7 +18796,7 @@ T:
     id: binary_relation
 - id: transpose
   en: transpose
-  ko: 전치행렬
+  ko: 전치
   primary: ko
   defs:
   - label: '[선형대수학] §행렬'
@@ -19240,6 +18807,9 @@ T:
     url: /ko/math/multilinear_algebra/matrices
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
+  see:
+  - label: Transpose matrix
+    id: transpose_matrix
 - id: transpose_matrix
   en: transpose matrix
   ko: 전치행렬
@@ -19247,6 +18817,9 @@ T:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+  see:
+  - label: Transpose
+    id: transpose
 - id: transposition
   en: transposition
   ko: 호환
@@ -19479,6 +19052,7 @@ U:
 - id: uniformizer
   en: uniformizer
   ko: 균등화원
+  alias_en: [uniformizing parameter]
   primary: en
   defs:
   - label: '[가환대수학] §인자'
@@ -19487,19 +19061,9 @@ U:
   - label: Discrete valuation ring
     id: discrete_valuation_ring
   - label: Uniformizing parameter
-    id: uniformizing_parameter
-- id: uniformizing_parameter
-  en: uniformizing parameter
-  ko: 균등화원
-  primary: en
-  defs:
-  - label: '[가환대수학] §인자'
-    url: /ko/math/commutative_algebra/divisors
-  see:
+    id: uniformizer
   - label: Uniformizer
     id: uniformizer
-  - label: Discrete valuation ring
-    id: discrete_valuation_ring
 - id: uniformly_bounded
   en: uniformly bounded
   ko: 균등유계
@@ -19907,21 +19471,6 @@ V:
   defs:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
-- id: variety
-  en: variety
-  ko: 다양체
-  primary: en
-  defs:
-  - label: '[대수다양체] §아핀다양체'
-    url: /ko/math/algebraic_varieties/affine_varieties
-  see:
-  - label: Algebraic variety
-    id: algebraic_variety
-  - label: Scheme
-    id: scheme
-  - label: 미분다양체
-    lang: ko
-    id: differentiable_manifold
 - id: vector
   en: vector
   ko: 벡터
@@ -19977,6 +19526,8 @@ V:
 - id: vector_space
   en: vector space
   ko: 벡터공간
+  alias: ['$\mathbb{K}$-벡터공간']
+  alias_en: ['$\mathbb{K}$-vector space']
   primary: ko
   defs:
   - label: '[선형대수학] §벡터공간'
@@ -19988,7 +19539,13 @@ V:
     id: basis
   - label: 일차독립
     lang: ko
-    id: linear_independence
+    id: linearly_independent
+  - label: 벡터공간
+    lang: ko
+    id: vector_space
+  - label: 선형사상
+    lang: ko
+    id: linear_map
 - id: vector_space_over_mathbb_k
   en: vector space over $\mathbb{K}$
   ko: $\mathbb{K}$에 대한 벡터공간
@@ -20076,7 +19633,7 @@ V:
     url: /ko/math/lie_theory/highest_weight_modules
 - id: vertex
   en: vertex
-  ko: 꼭짓점
+  ko: 정점
   primary: en
   defs:
   - label: '[표현론] §Quiver와 경로대수'
@@ -20182,7 +19739,7 @@ W:
   - label: Homotopy equivalence
     id: homotopy_equivalence
   - label: Quasi-isomorphism
-    id: quasi-isomorphism
+    id: quasi-isomorphic
 - id: weaker_topology
   en: weaker topology
   ko: 약한 위상
@@ -20426,7 +19983,7 @@ Z:
   - label: Smooth point
     id: smooth_point
   - label: Derivation
-    id: derivation
+    id: a_varepsilon_-derivation
 - id: zariski_topology
   en: Zariski topology
   ko: 자리스키 위상
