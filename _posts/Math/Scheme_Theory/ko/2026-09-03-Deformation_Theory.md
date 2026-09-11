@@ -495,7 +495,7 @@ $$\eta:\Rel/\TrivRel\rightarrow M_C$$
 
 를 얻을 수 있으며, 이 때 presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$가 잘 정의되었다. 이 class가 바로 obstruction class로, 우리는 $[\eta]=0$인 것이 이러한 square-zero extension $C'$의 존재성과 동치임을 안다. 이 관점에서 앞선 [정리 8](#thm8){: data-relation="weak" }은 first-order deformation $\xi$를 second order로 lifting하는 특수한 경우의 결과였다. 그럼 obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
 
-이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 이를 위해서는 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 자료와 obstruction이 나타나는지 밝히고 이들이 하나의 대역적 $\Ext$로 조립되는 과정을 정리한다.
+이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 이를 위해서는 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 data와 obstruction이 나타나는지 밝히고 이들이 하나의 global $\Ext$로 조립되는 과정을 정리한다.
 
 우선 처음에 주어지는 base space $S$를 affine scheme이 아닌 일반적인 scheme으로 확장하는 방향이 가장 단순하다.  $S$ 위의 quasi-coherent module $\mathcal{I}$에 대하여 $\mathcal{O}_S\oplus\mathcal{I}$에 곱셈
 
@@ -555,42 +555,38 @@ $$\ob(X_0/S')\in T^2(X_0/S,\mathcal{G})$$
 
 특히 $S'=S[\epsilon]$인 경우, first-order deformation들의 isomorphism class는 $T^1(X_0/S)$와 자연스럽게 일대일 대응하며 trivial deformation은 $0$에 대응한다.
 
-[정리 11](#thm11){: data-relation="required" }은 앞서 언급한 세 가지 자료, 곧 각 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건을 하나의 대역적 $\Ext$로 묶어낸 것이다. 그러나 이 대역적 불변량 하나만으로는 이 세 가지 기하학적 자료가 cotangent complex 안에 각각 어떻게 담겨 작용하는지가 가려져 있다.
+위의 [정리 11](#thm11){: data-relation="required" }에서 얻은 불변량 $T^i(X_0/S)$는 cotangent complex의 global $\Ext$로 정의되므로, 각 affine 조각 위에서의 정보를 직접 읽어내기 위해서는 *sheaf Ext*
 
-이 세 가지 층위를 명시적으로 분리하여 확인하려면, 대역적 $\Ext$를 각 열린집합에서의 순수한 국소적 기여와 이들을 붙이는 Čech 접합 기여로 나누어야 한다. 이를 위해 대역적 $\Ext$와 대비되는 국소적 불변량인 *sheaf $\operatorname{Ext}$<sub>층 $\operatorname{Ext}$</sub>*
+$$\sExt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})$$
 
-$$\mathcal{E}xt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})$$
+를 보아야 한다. 이는 각 열린집합 $U$에 $\Ext^q_{\mathcal{O}_U}(\mathcal{F}\vert_U,\mathcal{G}\vert_U)$를 대응시키는 presheaf의 sheafification으로, 특히 $\mathcal{K}=\LL_{X_0/S}$에 대하여 정의되는 sheaf
 
-를 생각하자. 이는 각 열린집합 $U$에 $\Ext^q_{\mathcal{O}_U}(\mathcal{F}\vert_U,\mathcal{G}\vert_U)$를 대응시키는 presheaf의 sheafification이다. 특히 $U=\Spec B$가 affine이면 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(B/A,B)$가 되어, 앞선 절들에서 대수적으로 계산했던 국소 불변량들($T^0$은 infinitesimal automorphism, $T^1$은 first-order deformation, $T^2$는 local relation obstruction)을 그대로 복원한다.
+$$\mathcal{T}_{X_0/S}^q=\sExt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0})$$
 
-이제 이렇게 얻은 국소 변형 층 $\mathcal{T}^q$와 이들을 접합하는 Čech cohomology $H^p$를 하나의 대역적 $T^{p+q}$로 엮어내는 장치가 바로 Grothendieck spectral sequence이다. 일반적으로 left exact functor $\Phi,\Psi$의 합성에 대하여, $\Psi$의 higher derived functor를 먼저 계산하고 여기에 $\Phi$의 higher derived functor를 적용한 값들을 $\Phi\Psi$의 higher derived functor로 모으는 spectral sequence를 Grothendieck spectral sequence라 부른다. Sheaf $\mathcal{F}$를 고정하면 지금의 두 functor는 $\Psi=\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},-)$와 $\Phi=\Gamma(X_0,-)$이고,
+는 affine open $U=\Spec B$ 위에서 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(B/A,B)$가 되어, 앞선 절들에서 다루었던 $T^i$들을 그대로 복원한다.
 
-$$\Gamma\bigl(X_0,\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},-)\bigr)=\Hom_{\mathcal{O}_{X_0}}(\mathcal{F},-)$$
+이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-relation="required" }을 cotangent complex $\mathcal{K}=\LL_{X_0/S}$와 $\mathcal{G}=\mathcal{O}_{X_0}$에 적용하자. $\LL_{X_0/S}$는 non-positive degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
 
-이다. Complex $\mathcal{K}$에 대해서는 이를 derived functor의 형태 $R\Gamma\circ R\sHom(\mathcal{K},-)\simeq R\Hom(\mathcal{K},-)$으로 적용한다. $R\sHom$의 cohomology sheaf를 먼저 취한 뒤 $R\Gamma$를 적용하는 filtration이 local-to-global $\Ext$ spectral sequence를 준다. 이는 double complex의 한 방향 cohomology를 먼저 계산하는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11){: data-relation="weak" }의 구성과 같은 원리이다.
+$$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Longrightarrow T^{p+q}(X_0/S)$$
 
-::: 정리 12 (국소-대역 exact sequence)
-$X_0$ 위의 quasi-coherent cohomology sheaf를 갖는 bounded above complex $\mathcal{K}$가 $q<0$에서 $\mathcal{E}xt^q_{\mathcal{O}_{X_0}}(\mathcal{K},\mathcal{O}_{X_0})=0$을 만족한다고 하자. 이때 local-to-global spectral sequence ([\[호몰로지 대수학\] §스펙트럼 열](/ko/math/homological_algebra/spectral_sequences){: data-relation="required" })
+가 된다. 이 spectral sequence의 낮은 차수 항들을 읽으면 다음을 얻는다.
 
-$$E_2^{p,q}=H^p\bigl(X_0,\mathcal{E}xt^q_{\mathcal{O}_{X_0}}(\mathcal{K},\mathcal{O}_{X_0})\bigr)\Longrightarrow\Ext^{p+q}_{\mathcal{O}_{X_0}}(\mathcal{K},\mathcal{O}_{X_0})$$
-
-가 존재한다. 특히 $\mathcal{K}=\LL_{X_0/S}$로 놓고 $\mathcal{T}_{X_0/S}^q=\mathcal{E}xt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0})$라 적으면 그 낮은 차수 부분은 exact sequence
+::: 정리 12 (Local-to-global exact sequence)
+$X_0$가 $S$ 위에서 flat하고 separated이며 locally of finite presentation인 scheme이라 하자. 이때 exact sequence
 
 $$0\longrightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^1(X_0/S)\longrightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)\overset{d_2}{\longrightarrow}H^2(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^2(X_0/S)$$
 
-를 이룬다.
+가 성립한다.
 :::
 ::: 증명
-$R\sHom_{\mathcal{O}_{X_0}}(\mathcal{K},\mathcal{O}_{X_0})$의 대역적 cohomology를 injective resolution으로 계산하면, 한 방향에서는 cohomology sheaf $\mathcal{E}xt^q$를 계산하고 다른 방향에서는 그 sheaf cohomology $H^p$를 계산하는 double complex를 얻는다. 이를 $p$ 방향으로 filter하여 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }을 적용하면 $E_2$ page는 표시한 $H^p(X_0,\mathcal{E}xt^q)$이고 abutment는 total complex의 cohomology인 $\Ext^{p+q}$이다. 가정에 의해 이는 first quadrant spectral sequence를 이룬다. 전체 차수 $1$에 놓인 두 항 $(1,0)$과 $(0,1)$을 filtration으로 읽고, $(0,1)$에서 나가는 첫 비자명한 differential $d_2:E_2^{0,1}\rightarrow E_2^{2,0}$을 붙이면 표시한 five-term exact sequence를 얻는다.
+First quadrant spectral sequence $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Rightarrow T^{p+q}(X_0/S)$에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }을 적용하면 된다.
 :::
 
-이 five-term exact sequence의 각 항은 앞서 살펴본 세 가지 자료와 정확하게 일대일 대응한다.
+위의 five-term exact sequence의 각 항은 앞서 살펴본 세 가지 data와 정확하게 일대일 대응한다. 우선 가운데의 canonical morphism $T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 global deformation에서 gluing data를 잊고 각 affine 조각 위의 local deformation class들만 남기는 것이다. 따라서 그 codomain인 $H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 각 조각 위의 local deformation class들 가운데 overlap 위에서 restriction이 서로 compatible한 모임이 된다.
 
-1. **첫째 자료 (국소 변형)**: $H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 각 affine 조각 위의 local deformation class들 가운데 overlap 위에서 서로 restriction이 호환되는 모임이다. 가운데의 canonical morphism $T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 대역적 deformation에서 접합 자료를 잊고 이 local deformation class들만 남긴다.
-2. **둘째 자료 (접합 isomorphism)**: 그 kernel인 왼쪽의 $H^1(X_0,\mathcal{T}_{X_0/S}^0)$은 각 affine 조각에서는 자명하지만($\mathcal{T}_{X_0/S}^1$ 성분이 $0$), overlap 위에서 접합 isomorphism을 infinitesimal automorphism $\mathcal{T}_{X_0/S}^0$만큼 비틀어 얻는 *locally trivial deformation*이다.
-3. **셋째 자료 (cocycle 조건과 장애)**: Differential $d_2:H^0(X_0,\mathcal{T}_{X_0/S}^1)\rightarrow H^2(X_0,\mathcal{T}_{X_0/S}^0)$는 서로 호환되는 국소 변형들의 representative와 overlap isomorphism을 골랐을 때, triple overlap에서 cocycle 조건이 만족되는지 판정하는 obstruction이다. 즉 $d_2=0$인 local class들만이 비로소 하나의 온전한 scheme deformation $T^1(X_0/S)$으로 붙을 수 있다.
+이 morphism의 kernel인 왼쪽의 $H^1(X_0,\mathcal{T}_{X_0/S}^0)$은 각 affine 조각 위에서는 자명하지만, overlap 위에서 gluing isomorphism을 infinitesimal automorphism $\mathcal{T}_{X_0/S}^0$만큼 비틀어 얻는 *locally trivial deformation*을 분류한다. 반대로 differential $d_2:H^0(X_0,\mathcal{T}_{X_0/S}^1)\rightarrow H^2(X_0,\mathcal{T}_{X_0/S}^0)$는 compatible한 local deformation들의 representative와 overlap isomorphism을 골랐을 때, triple overlap에서 cocycle 조건이 만족되는지 판정하는 obstruction이다. 즉 $d_2=0$인 local class들만이 비로소 하나의 온전한 scheme deformation $T^1(X_0/S)$으로 붙을 수 있다.
 
-또한 차수 $0$에서는 $E_2^{0,0}=E_\infty^{0,0}$이므로 자연스러운 isomorphism $T^0(X_0/S)\cong H^0(X_0,\mathcal{T}_{X_0/S}^0)$이 성립하며, 이는 대역적 infinitesimal automorphism이 곧 각 조각의 국소 automorphism들의 global section으로 이루어짐을 보여준다.
+또한 degree $0$에서는 $E_2^{0,0}=E_\infty^{0,0}$이므로 자연스러운 isomorphism $T^0(X_0/S)\cong H^0(X_0,\mathcal{T}_{X_0/S}^0)$이 성립하며, 이는 global infinitesimal automorphism이 곧 각 조각의 local automorphism들의 global section으로 이루어짐을 보여준다.
 
 ::: 따름정리 13
 $X_0$가 $S$ 위에서 smooth하면 모든 $i$에 대하여
