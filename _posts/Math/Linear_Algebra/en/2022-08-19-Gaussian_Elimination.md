@@ -309,7 +309,7 @@ $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 and we can verify that $A=LU$.
 :::
 
-However, (mainly for small matrices) applying Gaussian elimination every time to determine whether a matrix is invertible can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $n\times n$ matrix is invertible or not. However, (especially for complex matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="required" })
+However, (mainly for small matrices) applying Gaussian elimination every time to determine whether a matrix is invertible can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $n\times n$ matrix is invertible or not. However, (especially for complex matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="forward" })
 
 ---
 

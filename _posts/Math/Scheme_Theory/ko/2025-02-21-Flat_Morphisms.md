@@ -221,7 +221,7 @@ $$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
 이 morphism은 실제로 $\x\neq 0$이면서 $t\x=0$이므로 [명제 5](#prop5){: data-relation="required" }에 의하여 flat이 아니다. 다소 주의할 것은 이로부터 따라나오는 판정법인 [따름정리 6](#cor6){: data-relation="weak" }은 이 상황에서 적용할 수 없다는 것으로, 이는 $X$가 reduced가 아니기 때문이다. 실제로 $X$의 reduced structure인 $t$-축은 base와 isomorphic하여 flat이므로, 이 실패는 scheme 구조를 보아야만 드러난다.
 :::
 
-이 세 경우를 보면 흥미로운 것이 두 가지 있다. 우선, 우리는 서로 다른 세 가지 예시를 살펴보았으나 본질적으로는 [예시 10](#ex10){: data-relation="required" }의 length가 [예시 9](#ex9){: data-relation="required" }의 실패까지 포함한다. 뿐만 아니라, 이를 Hilbert polynomial로 한 층 올리면 도입에서 본 예시까지 함께 포괄된다. ([\[대수다양체\] §베주 정리, ⁋명제 3](/ko/math/algebraic_varieties/bezout_theorem#prop3){: data-relation="required" }) 즉, 세 실패는 모두 하나의 다항식이 뛴 것이며, 실제로 Noetherian integral scheme 위의 projective family에 대하여 flat인 것과 fiber의 Hilbert polynomial이 일정한 것은 서로 동치이다. 이 예시들이 알려주는 흥미로운 점 중 다른 하나는 뛰는 방향으로, 세 경우 모두에서 값은 일반적인 열린집합에서는 작다가, flatness가 깨지는 곳으로 가면서 커졌을 뿐, 그 반대로 움직인 적이 없다. 이 글의 말미에서 우리는 이것이 우연이 아니라는 것을 살펴보게 될 것이다. 
+이 세 경우를 보면 흥미로운 것이 두 가지 있다. 우선, 우리는 서로 다른 세 가지 예시를 살펴보았으나 본질적으로는 [예시 10](#ex10){: data-relation="required" }의 length가 [예시 9](#ex9){: data-relation="required" }의 실패까지 포함한다. 뿐만 아니라, 이를 Hilbert polynomial로 한 층 올리면 도입에서 본 예시까지 함께 포괄된다. ([\[대수다양체\] §베주 정리, ⁋명제 3](/ko/math/algebraic_varieties/bezout_theorem#prop3){: data-relation="weak" }) 즉, 세 실패는 모두 하나의 다항식이 뛴 것이며, 실제로 Noetherian integral scheme 위의 projective family에 대하여 flat인 것과 fiber의 Hilbert polynomial이 일정한 것은 서로 동치이다. 이 예시들이 알려주는 흥미로운 점 중 다른 하나는 뛰는 방향으로, 세 경우 모두에서 값은 일반적인 열린집합에서는 작다가, flatness가 깨지는 곳으로 가면서 커졌을 뿐, 그 반대로 움직인 적이 없다. 이 글의 말미에서 우리는 이것이 우연이 아니라는 것을 살펴보게 될 것이다. 
 
 ## Generic flatness와 Chevalley의 정리
 

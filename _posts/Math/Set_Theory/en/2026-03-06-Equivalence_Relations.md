@@ -84,7 +84,7 @@ For an equivalence relation $(R,A,A)$, define $p:A\rightarrow A/R$ by $x\mapsto 
 ::: Proof
 First, it is not difficult to show that the map $p$ defined by the above formula is indeed a function. Here we only prove the equivalence of the two statements.
 
-First, assume that $x\sim_{\tiny R} y$. Then from $y\in [x]_R=R(x)$ we have $\{y\}\subseteq R(x)$, and therefore by [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6){: data-relation="required" } and [Proposition 3](#prop3){: data-relation="required" }
+First, assume that $x\sim_{\tiny R} y$. Then from $y\in [x]_R=R(x)$ we have $\{y\}\subseteq R(x)$, and therefore by [§Binary Relations, ⁋Proposition 5](/en/math/set_theory/binary_relation#prop5){: data-relation="required" }, [§Operations on Binary Relations, ⁋Proposition 6](/en/math/set_theory/operation_of_binary_relations#prop6){: data-relation="required" }, and [Proposition 3](#prop3){: data-relation="required" }
 
 $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 

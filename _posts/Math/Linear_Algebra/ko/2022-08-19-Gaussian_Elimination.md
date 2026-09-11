@@ -317,7 +317,7 @@ $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 이 되어 $A=LU$임을 확인할 수 있다.
 :::
 
-그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $n\times n$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 8](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="required" })
+그러나, (주로 작은 행렬의 경우) 어떠한 행렬이 가역인지 판단하기 위해 가우스 소거법을 매번 적용하는 것은 때때로 비효율적인 일이 될 수도 있다. 다음 글에서 살펴볼 행렬식은 주어진 $n\times n$ 행렬이 가역인지 아닌지를 결정하는 방법을 알려준다. 그러나, (특히 복잡한 행렬의 경우) 행렬식을 가장 쉽게 계산하는 방법 중 하나는 여전히 가우스 소거법이다. ([§행렬식의 존재성과 유일성, ⁋명제 8](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8){: data-relation="forward" })
 
 ---
 

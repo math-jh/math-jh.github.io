@@ -105,7 +105,7 @@ $\Sigma_P$의 임의의 원소 $\tau_F$는 primitive inner normal vector들의 $
 
 이미 [명제 5](#prop5){: data-relation="weak" } 직후에 살펴본 것처럼, $X_\Sigma$의 stratum 구조는 fan $\Sigma$의 cone들과 대응된다. 특히 0차원 cone $\{0\}$은 open dense torus $T_N \subseteq X_\Sigma$에, 1차원 cone $\rho \in \Sigma(1)$들 (여기서 $\Sigma(1)$은 $\Sigma$의 1차원 cone들의 집합)은 각각 codimension 1의 $T_N$-invariant prime divisor $D_\rho \subseteq X_\Sigma$에 대응된다. 따라서 free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$가 $X_\Sigma$ 위의 $T_N$-invariant Weil divisor 전체를 기술한다.
 
-우리가 관심있는 것은 toric variety의 line bundle이므로, 우리는 *Cartier* divisor들에 집중해야 한다. Cartier divisor를 piecewise linear function의 언어로 기술하고 line bundle과 잇는 자세한 논의는 다음 글인 [§토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors){: data-relation="forward" }에서 다룰 것이지만, 이번 글에서의 논의를 위해 우리는 우선 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="required" }의 결과를 먼저 번역해오기로 한다. 
+우리가 관심있는 것은 toric variety의 line bundle이므로, 우리는 *Cartier* divisor들에 집중해야 한다. Cartier divisor를 piecewise linear function의 언어로 기술하고 line bundle과 잇는 자세한 논의는 다음 글인 [§토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors){: data-relation="forward" }에서 다룰 것이지만, 이번 글에서의 논의를 위해 우리는 우선 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6){: data-relation="forward" }의 결과를 먼저 번역해오기로 한다. 
 
 이에 따르면 $T_N$-invariant Weil divisor $D = \sum_\rho a_\rho D_\rho$가 Cartier일 필요충분조건은, 각 maximal cone $\sigma \in \Sigma$에 대해 어떤 $m_\sigma \in M$이 존재하여 $\sigma$의 모든 ray $\rho$에 대해 $a_\rho = -\langle m_\sigma, v_\rho \rangle$이 성립하는 것이다. 여기서 $v_\rho$는 $\rho$의 primitive generator이다. 이러한 Cartier divisor $D$에 대해 polytope $P_D \subseteq M_\mathbb{R}$을
 
@@ -118,7 +118,7 @@ Toric variety $X_\Sigma$가 projective variety인 것은 $\Sigma$가 어떤 full
 :::
 
 ::: 증명
-($\Rightarrow$) $X_\Sigma$가 projective라면 그 위에 very ample line bundle $\mathcal{L}$이 존재하며, 위의 대응에 의해 이는 $T_N$-invariant Cartier divisor $D$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $P_D$는 lattice polytope이며, $\mathcal{L}$이 ample (특히 very ample)이므로 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9){: data-relation="required" }에 의해 대응되는 piecewise linear function $\psi_D$는 strictly convex이다. 이로부터 $P_D$의 normal fan이 $\Sigma$와 일치함을 얻는다.
+($\Rightarrow$) $X_\Sigma$가 projective라면 그 위에 very ample line bundle $\mathcal{L}$이 존재하며, 위의 대응에 의해 이는 $T_N$-invariant Cartier divisor $D$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $P_D$는 lattice polytope이며, $\mathcal{L}$이 ample (특히 very ample)이므로 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9){: data-relation="forward" }에 의해 대응되는 piecewise linear function $\psi_D$는 strictly convex이다. 이로부터 $P_D$의 normal fan이 $\Sigma$와 일치함을 얻는다.
 
 ($\Leftarrow$) $\Sigma = \Sigma_P$라 하자. Polytope $P$의 데이터 — 즉 각 ray $\rho$에 대해 $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$ — 로부터 $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$를 얻는다. 여기서 $P$의 각 vertex가 lattice point라는 사실이 정확히 앞의 compatibility 조건을 충족시켜 $D_P$가 Cartier가 되며, 충분히 큰 $k > 0$에 대해 $kD_P$가 very ample이 된다. 이때 $kP$의 lattice point들로 정의되는 monomial map $\phi_{kP}: T_N \rightarrow \mathbb{P}^s$의 image의 Zariski closure가 $X_\Sigma$와 동형이므로 ([명제 9](#prop9){: data-relation="required" } 참고), $X_\Sigma$는 projective이다.
 :::

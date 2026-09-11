@@ -39,7 +39,7 @@ If $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.
 First, the hypothesis means that for any $x$, the two propositions $x\in A\implies x\in B$ and $x\in B\implies x\in C$ are true. Hence, by syllogism, $x\in A\implies x\in C$ is also true, and since $x$ was arbitrary, $A\subseteq C$ holds.
 :::
 
-From the two propositions above, we see that $\subseteq$ is an order relation among sets. ([§Definition of Order Relations, ⁋Definition 1](/en/math/set_theory/order_relations#def1){: data-relation="required" })
+From the two propositions above, we see that $\subseteq$ is an order relation among sets. ([§Definition of Order Relations, ⁋Definition 1](/en/math/set_theory/order_relations#def1){: data-relation="forward" })
 
 ## Ordered Pairs
 
