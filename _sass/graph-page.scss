@@ -261,6 +261,43 @@ body.dependencies-linear {
     list-style: none;
   }
 
+  /* 경로는 읽는 순서라 한 줄로 내려 읽는다. 나머지 목록은 순서가 없어 여러 열로
+     깔리지만, 여기서는 열이 갈리면 1→2→3 이 가로로 흩어져 순서가 안 읽힌다.
+     번호는 여백에 두고 단계 사이를 헤어라인으로 이어 사슬로 보이게 한다. */
+  .gs-path {
+    display: block;
+    counter-reset: gs-step;
+
+    .gs-prereq {
+      position: relative;
+      padding-left: 26px;
+      counter-increment: gs-step;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        color: $muted-text-color;
+        font-size: 11px;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.6;
+        content: counter(gs-step);
+      }
+
+      // 단계와 단계를 잇는 세로 괘선. 마지막 단계 아래로는 내려가지 않는다.
+      &:not(:last-child)::after {
+        position: absolute;
+        top: 15px;
+        bottom: -3px;
+        left: 5px;
+        width: 1px;
+        background: $border-color;
+        content: "";
+      }
+
+      a::before { display: none; }
+    }
+  }
+
   .gs-prereq a {
     display: flex;
     align-items: center;

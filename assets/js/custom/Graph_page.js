@@ -12,7 +12,10 @@
     return [typeof l.source === 'object' ? l.source.id : l.source,
             typeof l.target === 'object' ? l.target.id : l.target];
   }
-  function lid(l) { var e = endpoints(l); return e[0] + '>' + e[1]; }
+  function lid(l) {
+    if (l.__lid) return l.__lid;
+    var e = endpoints(l); return e[0] + '>' + e[1];
+  }
   // SVG는 나중에 붙은 요소가 위에 그려진다. 의미가 약한 링크부터 칠하고,
   // 포커스된 링크는 relation과 무관하게 마지막 층으로 올린다.
   function linearLinkPaintOrder(link, highlighted) {
@@ -126,6 +129,32 @@
       });
     }
 
+    /* 어느 글이 '큰길' 위에 있는가 = 그 글을 지나는 required 경로가 몇 개인가.
+       진입점에서 그 글까지의 경로 수 × 그 글에서 종점까지의 경로 수다. 경로 수는
+       깊이에 따라 지수로 커져 배정도 실수를 넘기므로 로그로 센다. 이 값이 큰 글을
+       열의 한가운데에 두면 본류가 화면 중앙을 가로지르는 한 줄로 드러난다. */
+    function logAdd(a, b) {
+      if (a === -Infinity) return b;
+      if (b === -Infinity) return a;
+      var hi = Math.max(a, b);
+      return hi + Math.log1p(Math.exp(Math.min(a, b) - hi));
+    }
+    var topo = comps.map(function (_, i) { return i; })
+      .sort(function (a, b) { return rank[a] - rank[b] || a - b; });
+    var hasPred = comps.map(function () { return false; });
+    adj.forEach(function (nexts) { nexts.forEach(function (v) { hasPred[v] = true; }); });
+    var toHere = comps.map(function () { return -Infinity; });
+    var fromHere = comps.map(function () { return -Infinity; });
+    topo.forEach(function (i) { if (!hasPred[i]) toHere[i] = 0; });
+    topo.forEach(function (i) {
+      adj[i].forEach(function (v) { toHere[v] = logAdd(toHere[v], toHere[i]); });
+    });
+    topo.slice().reverse().forEach(function (i) {
+      if (!adj[i].length) fromHere[i] = 0;
+      adj[i].forEach(function (v) { fromHere[i] = logAdd(fromHere[i], fromHere[v]); });
+    });
+    var traffic = comps.map(function (_, i) { return toHere[i] + fromHere[i]; });
+
     var used = Array.from(new Set(rank)).sort(function (a, b) { return a - b; });
     var compressed = {}; used.forEach(function (value, i) { compressed[value] = i; });
     var layers = {};
@@ -141,18 +170,21 @@
     var visualColumn = 0;
     Object.keys(layers).sort(function (a, b) { return Number(a) - Number(b); }).forEach(function (rawRank) {
       var layer = layers[rawRank];
+      // 본류가 가운데다. 경로가 많이 지나는 글부터 놓고, 같으면 카테고리·weight
+      // 순으로 갈라 배치가 새로고침마다 흔들리지 않게 한다.
       layer.sort(function (a, b) {
-        return (a.category || '').localeCompare(b.category || '') ||
+        return (traffic[compOf[b.id]] - traffic[compOf[a.id]]) ||
+          (a.category || '').localeCompare(b.category || '') ||
           (Number(a.weight) || 0) - (Number(b.weight) || 0) || a.title.localeCompare(b.title);
       });
       for (var start = 0; start < layer.length; start += capacity) {
         var chunk = layer.slice(start, start + capacity);
-        // 열마다 제 개수로 중심을 잡으면 홀짝에 따라 행이 rowGap/2 만큼 어긋나
-        // 두 벌의 격자가 생긴다. 그러면 행 사이 골이 남의 행 위로 떨어져 레인이
-        // 노드를 관통한다 — 중심 오프셋을 정수 칸으로 반올림해 격자를 하나로 둔다.
-        var center = Math.round((chunk.length - 1) / 2);
+        // 0번을 중앙 행에 두고 위·아래로 번갈아 채운다. 오프셋이 정수 칸이라
+        // 모든 열이 같은 격자를 쓴다 — 격자가 둘로 갈리면 행 사이 골이 남의 행
+        // 위로 떨어져 가로 레인이 노드를 관통한다.
         chunk.forEach(function (n, i) {
-          positions[n.id] = { column: visualColumn, y: (i - center) * rowGap };
+          var offset = Math.ceil(i / 2) * (i % 2 ? -1 : 1);
+          positions[n.id] = { column: visualColumn, y: offset * rowGap };
         });
         visualColumn += 1;
       }
@@ -192,6 +224,9 @@
     var famKeys = new Set(families.map(function (f) { return f.key; }));
     var deg = {}, outAdj = {}, inAdj = {}, byId = {};
     var requiredIn = {}, weakIn = {}, forwardOut = {};
+    // required 링크만의 전방 인접. 경로 탐색은 이 방향으로만 간다 — required 는
+    // 선수 글 → 그 글을 읽는 글이고, weak·forward 는 읽는 순서를 강제하지 않는다.
+    var requiredNext = {};
     data.nodes.forEach(function (n) {
       byId[n.id] = n;
       n.__c = n.family === 'misc'
@@ -204,14 +239,40 @@
       deg[e[1]] = (deg[e[1]] || 0) + 1;
       (outAdj[e[0]] = outAdj[e[0]] || new Set()).add(e[1]);
       (inAdj[e[1]] = inAdj[e[1]] || new Set()).add(e[0]);
-      if (l.relation === 'required') (requiredIn[e[1]] = requiredIn[e[1]] || []).push(l);
+      if (l.relation === 'required') {
+        (requiredIn[e[1]] = requiredIn[e[1]] || []).push(l);
+        (requiredNext[e[0]] = requiredNext[e[0]] || []).push(l);
+      }
       else if (l.relation === 'weak') (weakIn[e[1]] = weakIn[e[1]] || []).push(l);
       else if (l.relation === 'forward') (forwardOut[e[0]] = forwardOut[e[0]] || []).push(l);
     });
 
-    var hovered = null, selected = null, query = '', layoutMode = 'force';
+    /* 프레임마다 링크 전부를 훑는 접근자는 여기서 미리 값을 박아 둔다.
+       force-graph 는 곡률·색·폭 접근자를 렌더 프레임마다 링크 하나하나에 호출하고,
+       포인터 판정용 shadow canvas 가 같은 순회를 한 번 더 돈다. 접근자 안에서
+       링크 목록을 다시 훑으면 그 한 번이 링크 수의 제곱이 된다. */
+    (function precomputeLinkFields() {
+      var seen = new Set();
+      data.links.forEach(function (l) {
+        var e = endpoints(l);
+        l.__lid = e[0] + '>' + e[1];
+        seen.add(l.__lid);
+      });
+      data.links.forEach(function (l) {
+        var e = endpoints(l);
+        // 마주 보는 링크가 있으면 둘이 겹쳐 한 줄로 보이므로 휘어 놓는다.
+        l.__curve = seen.has(e[1] + '>' + e[0]) ? 0.25 : 0;
+      });
+    }());
+
+    var hovered = null, selected = null, pairWith = null, query = '', layoutMode = 'force';
     var activeFams = new Set(families.map(function (f) { return f.key; }));
     var hlNodes = new Set(), hlLinks = new Set();
+    /* 두 글을 고른 화면에만 쓰는 둘째 층. 경로 위의 선은 hlLinks(평소 강조색),
+       경로 밖에서 경로로 들어오는 선은 여기(연한 악센트)에 담는다. 둘을 한
+       집합에 넣으면 '이 길'과 '이 길로 들어오는 것'이 같은 굵기·같은 색이 되어
+       경로가 묻힌다. */
+    var hlSoftNodes = new Set(), hlSoftLinks = new Set();
     var hoverCb = null, clickCb = null, linearGeometry = null, linearLanes = {};
     var linearNodeEls = [], linearLinkEls = [];
 
@@ -237,7 +298,9 @@
     }
     function nodeState(n) {
       if (!passesFilter(n)) return 'off';
-      if (hlNodes.size && !hlNodes.has(n.id)) return 'off';
+      if (hlNodes.size && !hlNodes.has(n.id)) {
+        return hlSoftNodes.has(n.id) ? 'idle' : 'off';
+      }
       if (layoutMode === 'linear' && !hlNodes.size) return 'idle';
       return 'on';
     }
@@ -247,6 +310,7 @@
     }
     function focusForce(node) {
       hlNodes = new Set(); hlLinks = new Set();
+      hlSoftNodes = new Set(); hlSoftLinks = new Set();
       if (!node) return;
       hlNodes.add(node.id);
       (outAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
@@ -282,15 +346,81 @@
     }
     function focusLinear(node) {
       hlNodes = new Set(); hlLinks = new Set();
+      hlSoftNodes = new Set(); hlSoftLinks = new Set();
       if (!node) return;
       hlNodes.add(node.id);
       linearFocusLinks(node.id).forEach(addHighlightedLink);
     }
+    /* force-graph 는 자기가 아는 prop 이 바뀌었을 때와 시뮬레이션이 도는 동안만
+       다시 그린다. 강조·필터·검색은 그 바깥의 상태라 알려 줄 방법이 필요한데, 이
+       빌드에는 refresh() 가 없다. 같은 배율로 zoom 을 다시 설정하면 화면상 무동작인
+       채로 needsRedraw 가 선다. 이게 없으면 골라도 그림이 안 바뀐다. */
+    var repaintQueued = false;
+    function repaint() {
+      if (!graph || repaintQueued) return;
+      // 시뮬레이션이 도는 동안은 어차피 매 프레임 다시 그린다.
+      if (graph.isEngineRunning && graph.isEngineRunning()) return;
+      repaintQueued = true;
+      window.requestAnimationFrame(function () {
+        repaintQueued = false;
+        try { graph.zoom(graph.zoom()); } catch (e) { /* 아직 붙기 전 */ }
+      });
+    }
+    /* A 에서 B 로 가는 required 최단 경로. 모든 경로를 세지 않는다 — 깊은 글은
+       경로가 수천 개라 목록이 되지 않고, 읽는 사람에게 필요한 건 한 줄이다. */
+    function requiredPath(fromId, toId) {
+      if (fromId === toId) return null;
+      var prev = {}, seen = new Set([fromId]), queue = [fromId];
+      while (queue.length) {
+        var here = queue.shift();
+        if (here === toId) break;
+        (requiredNext[here] || []).forEach(function (link) {
+          var next = endpoints(link)[1];
+          if (seen.has(next)) return;
+          seen.add(next); prev[next] = { from: here, link: link }; queue.push(next);
+        });
+      }
+      if (!seen.has(toId)) return null;
+      var ids = [toId], links = [], cursor = toId;
+      while (prev[cursor]) {
+        links.unshift(prev[cursor].link);
+        cursor = prev[cursor].from;
+        ids.unshift(cursor);
+      }
+      return { nodes: ids, links: links };
+    }
+    // 어느 쪽이 선수 글인지는 고른 순서가 아니라 그래프가 정한다.
+    function pairPath() {
+      if (!selected || !pairWith) return null;
+      return requiredPath(selected.id, pairWith.id) ||
+        requiredPath(pairWith.id, selected.id);
+    }
+    function focusPair() {
+      hlNodes = new Set(); hlLinks = new Set();
+      hlSoftNodes = new Set(); hlSoftLinks = new Set();
+      var path = pairPath();
+      if (!path) { hlNodes.add(selected.id); hlNodes.add(pairWith.id); return; }
+      path.nodes.forEach(function (id) { hlNodes.add(id); });
+      path.links.forEach(function (l) { hlLinks.add(lid(l)); });
+      /* 경로 위의 글을 읽으려면 경로 밖에서도 와야 하는 선. 바깥 폐포를 통째로
+         켜면 백 편이 넘어 경로가 묻히므로, 경로에 **직접 닿는** 선만 그린다.
+         그 뒤로 얼마나 더 있는지는 옆 패널의 뿌리 목록이 맡는다. */
+      path.nodes.forEach(function (id) {
+        (requiredIn[id] || []).forEach(function (link) {
+          var source = endpoints(link)[0];
+          if (hlNodes.has(source)) return;
+          hlSoftNodes.add(source);
+          hlSoftLinks.add(lid(link));
+        });
+      });
+    }
     function refocus() {
       var node = activeFocus();
+      if (selected && pairWith) { focusPair(); updateLinearStyles(); repaint(); return; }
       if (layoutMode === 'linear') focusLinear(node);
       else focusForce(node);
       updateLinearStyles();
+      repaint();
     }
 
     // DOM: native horizontal viewport + canvas surface + fixed toolbar/card.
@@ -338,17 +468,30 @@
       pop.classList.add('show');
     }
     function hidePop() { pop.classList.remove('show'); }
-    function notifySelection() { if (clickCb) clickCb(selected ? selected.id : null); }
-    function clearSelection() {
-      selected = null; hidePop(); refocus(); notifySelection();
+    function notifySelection() {
+      if (clickCb) clickCb(selected ? selected.id : null, pairWith ? pairWith.id : null);
     }
+    function clearSelection() {
+      selected = null; pairWith = null; hidePop(); refocus(); notifySelection();
+    }
+    /* 한 번 누르면 고르고, 같은 것을 다시 누르면 뺀다. 다른 것을 누르면 둘이 짝이
+       되어 그 사이 경로를 본다. 짝이 있는데 제3의 노드를 누르면 그것 하나만 남는다 —
+       셋을 잇는 화면이 없으니 그게 예측 가능한 쪽이다. */
     function selectNode(node) {
-      if (node && selected && selected.id === node.id) clearSelection();
-      else {
-        selected = node; refocus();
-        if (node) { showPop(node); centerActive(); } else hidePop();
-        notifySelection();
+      if (!node) return clearSelection();
+      if (selected && selected.id === node.id) {
+        if (!pairWith) return clearSelection();
+        selected = pairWith; pairWith = null;
+      } else if (pairWith && pairWith.id === node.id) {
+        pairWith = null;
+      } else if (selected && !pairWith) {
+        pairWith = node;
+      } else {
+        selected = node; pairWith = null;
       }
+      refocus();
+      if (selected) { showPop(selected); centerActive(); } else hidePop();
+      notifySelection();
     }
     popClose.addEventListener('click', function (e) { e.stopPropagation(); clearSelection(); });
     linearSvg.addEventListener('click', clearSelection);
@@ -543,12 +686,14 @@
         var color = linkColor(link);
         entry.path.setAttribute('stroke', color);
         entry.arrow.setAttribute('fill', arrowColor(link));
-        entry.path.setAttribute('stroke-width', hlLinks.has(lid(link)) ? '2.4' :
+        entry.path.setAttribute('stroke-width', hlSoftLinks.has(lid(link)) ? '1.1' :
+          hlLinks.has(lid(link)) ? '2.4' :
           (link.relation === 'required' ? '1.2' : link.relation === 'weak' ? '0.85' : '1'));
       });
       // 링크마다 선과 화살촉을 한 묶음으로 두고, 약한 관계부터 DOM 앞쪽에
       // 재배치한다. 하이라이트가 바뀔 때도 선택된 링크 전체가 맨 위로 올라간다.
       linearLinkEls.slice().sort(function (a, b) {
+        // 경로가 맨 위 층이다 — 밖에서 들어오는 선이 그 위를 덮으면 안 된다.
         return linearLinkPaintOrder(a.link, hlLinks.has(lid(a.link))) -
             linearLinkPaintOrder(b.link, hlLinks.has(lid(b.link))) || a.order - b.order;
       }).forEach(function (entry) { entry.group.parentNode.appendChild(entry.group); });
@@ -655,7 +800,10 @@
         ctx.fillStyle = hslaFade(node.hue, st === 'idle' ? 0.3 : 0.09);
         ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
       } else {
-        if (cfg.glow) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
+        // shadowBlur 는 canvas 에서 제일 비싼 연산 축에 든다. 강조된 점에만 준다 —
+        // 전부 빛나면 어차피 아무것도 두드러지지 않는다.
+        var lit = sel || (hlNodes.size > 0 && hlNodes.has(node.id));
+        if (cfg.glow && lit) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
         ctx.fillStyle = sel ? 'rgb(' + cfg.accent + ')' : node.__c;
         ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
         ctx.shadowBlur = 0;
@@ -700,6 +848,7 @@
         }
         return 'rgba(' + cfg.accent + ',0.85)';
       }
+      if (hlSoftLinks.has(lid(l))) return 'rgba(' + cfg.accent + ',0.3)';
       var e = endpoints(l);
       var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !activeFocus();
       if (!on) return 'rgba(' + cfg.link + ',0.035)';
@@ -716,30 +865,42 @@
     // 화살촉은 링크와 같은 색·같은 투명도로 칠한다. 불투명하게 칠하면 면적이
     // 있는 만큼 뒤를 지나는 밝은 링크를 잘라 먹는다. weak 만 면적 때문에 점선보다
     // 도드라지므로 알파를 더 눌러 두고, 포커스된 링크는 brass 강조색을 그대로 쓴다.
+    // 링크 색은 몇 가지 안 되는 문자열을 돌려쓰므로, 흐린 짝을 색마다 한 번만
+    // 만들어 둔다. 정규식을 프레임마다 링크 수만큼 돌릴 이유가 없다.
+    var fadedArrow = {};
     function arrowColor(l) {
       var color = linkColor(l);
       if (!data.classified || l.relation !== 'weak' || hlLinks.has(lid(l))) return color;
+      if (fadedArrow[color] !== undefined) return fadedArrow[color];
       var rgba = color.match(/^rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)(?:\s*,\s*([\d.]+))?\s*\)$/);
-      if (!rgba) return color;
-      var alpha = (rgba[4] === undefined ? 1 : Number(rgba[4])) * 0.55;
-      return 'rgba(' + rgba[1] + ',' + rgba[2] + ',' + rgba[3] + ',' + alpha + ')';
+      var faded = color;
+      if (rgba) {
+        var alpha = (rgba[4] === undefined ? 1 : Number(rgba[4])) * 0.55;
+        faded = 'rgba(' + rgba[1] + ',' + rgba[2] + ',' + rgba[3] + ',' + alpha + ')';
+      }
+      fadedArrow[color] = faded;
+      return faded;
     }
     function linkDash(l) {
       if (l.relation === 'weak') return [2, 5];
       if (l.relation === 'forward') return [9, 5];
       return [];
     }
-    function linkCurve(l) {
-      var e = endpoints(l);
-      return data.links.some(function (r) {
-        var re = endpoints(r);
-        return re[0] === e[1] && re[1] === e[0];
-      }) ? 0.25 : 0;
+    function linkCurve(l) { return l.__curve || 0; }
+    /* 화살촉은 링크마다 path 연산이라 제일 먼저 비싸진다. 멀리서 본 그림에서는
+       수백 개가 겹쳐 방향이 읽히지도 않으므로, 방향을 실제로 읽을 수 있는 배율
+       위에서만 그린다. 강조된 링크는 배율과 무관하게 그린다 — 그건 지금 따라가는
+       선이다. */
+    var ARROW_ZOOM = 1.1;
+    var zoomLevel = 1;
+    function arrowLength(l) {
+      if (hlLinks.has(lid(l))) return 15;
+      return zoomLevel >= ARROW_ZOOM ? 15 : 0;
     }
 
     var graph = ForceGraph()(canvasWrap)
       .backgroundColor('rgba(0,0,0,0)')
-      .autoPauseRedraw(false)
+      .autoPauseRedraw(true)
       .nodeId('id')
       .nodeRelSize(5)
       .nodeVal(function (n) { return Math.pow(radius(n) / 5, 2); })
@@ -750,11 +911,12 @@
       .linkColor(linkColor)
       .linkWidth(function (l) {
         if (hlLinks.has(lid(l))) return 2.4;
+        if (hlSoftLinks.has(lid(l))) return 1.1;
         if (l.relation === 'required') return 1.2;
         if (l.relation === 'weak') return 0.85;
         return 1;
       })
-      .linkDirectionalArrowLength(15)
+      .linkDirectionalArrowLength(arrowLength)
       .linkDirectionalArrowRelPos(0.45)
       .linkDirectionalArrowColor(arrowColor)
       .linkCurvature(linkCurve)
@@ -764,6 +926,7 @@
       })
       .onNodeClick(selectNode)
       .onBackgroundClick(clearSelection)
+      .onZoom(function (t) { zoomLevel = t.k; })
       .graphData(data);
 
     // 기존 graph 페이지는 force-graph의 기본 실선을 그대로 사용한다.
@@ -923,6 +1086,7 @@
         activeFams = new Set(families.map(function (f) { return f.key; }));
         hidePop(); refocus(); canvasViewport.scrollLeft = 0; notifySelection();
       },
+      path: function (a, b) { return requiredPath(a, b) || requiredPath(b, a); },
       onHover: function (cb) { hoverCb = cb; },
       onClick: function (cb) { clickCb = cb; }
     };
@@ -937,7 +1101,14 @@
           selectHint: '그래프의 노드를 클릭하면 그 글의 선수 글과 이어지는 글을 여기에 고정해 볼 수 있습니다.',
           noPrereqs: 'required로 연결된 선수 글이 없습니다.',
           noOpens: '이 글을 선수로 삼는 글이 아직 없습니다.',
-          countPre: '선수 ', countPost: '편'
+          countPre: '선수 ', countPost: '편',
+          pathTitle: '두 글 사이의 경로', pathSteps: '단계',
+          noPath: '두 글은 required 로 이어져 있지 않습니다.',
+          outside: '경로 밖에서 오는 선수 글',
+          outsideMeta: function (roots, total) {
+            return '바깥 선수 ' + total + '편 · 따로 시작해야 하는 글 ' + roots + '편';
+          },
+          noOutside: '경로 위의 글만으로 닫혀 있습니다.'
         }
       : {
           index: 'INDEX', posts: 'posts', search: 'Search posts…', connected: 'MOST CONNECTED',
@@ -945,7 +1116,14 @@
           selectHint: 'Click a graph node to pin its prerequisites and what it leads to here.',
           noPrereqs: 'This post has no required prerequisites.',
           noOpens: 'No post lists this one as a prerequisite yet.',
-          countPre: '', countPost: ' prerequisites'
+          countPre: '', countPost: ' prerequisites',
+          pathTitle: 'PATH BETWEEN THE TWO', pathSteps: ' steps',
+          noPath: 'The two posts are not linked by required edges.',
+          outside: 'PREREQUISITES OFF THE PATH',
+          outsideMeta: function (roots, total) {
+            return total + ' off-path prerequisites · ' + roots + ' to start separately';
+          },
+          noOutside: 'The path is closed under its own prerequisites.'
         };
     var famByKey = {}; families.forEach(function (f) { famByKey[f.key] = f; });
     var rowIndex = {}; // id -> [row els]
@@ -1016,6 +1194,79 @@
       return [t.countPre + reachable.size + t.countPost].concat(parts).join(' · ');
     }
 
+    /* 경로 위 글들을 읽는 데 필요하지만 경로 밖에 있는 글. 전부 늘어놓으면 깊은
+       구간에서 백 편이 넘으므로 그 바깥 가지들의 **뿌리만** 보인다 — 밖에서 따로
+       시작해야 하는 자리다. 뿌리 = 바깥 집합 안에 선수 글이 없는 글. */
+    function outsideRoots(pathIds) {
+      var onPath = new Set(pathIds), outside = new Set();
+      pathIds.forEach(function (id) {
+        closure(id, requiredParents).forEach(function (x) {
+          if (!onPath.has(x)) outside.add(x);
+        });
+      });
+      var roots = Array.from(outside).filter(function (x) {
+        return !(requiredParents[x] || []).some(function (parent) {
+          return outside.has(parent);
+        });
+      });
+      return {
+        total: outside.size,
+        roots: roots.map(function (x) { return byId[x]; })
+          .filter(Boolean).sort(byWeightThenTitle)
+      };
+    }
+
+    // 요약과 경로 두 렌더러가 같은 조각을 쓴다.
+    function kicker(text) {
+      var el = document.createElement('div');
+      el.className = 'gs-kicker'; el.textContent = text;
+      summary.appendChild(el);
+    }
+    function note(text, cls) {
+      var el = document.createElement('p');
+      el.className = cls; el.textContent = text;
+      summary.appendChild(el);
+    }
+    function list(items, ordered) {
+      var ul = document.createElement(ordered ? 'ol' : 'ul');
+      ul.className = ordered ? 'gs-prereqs gs-path' : 'gs-prereqs';
+      items.forEach(function (n) {
+        var li = document.createElement('li'); li.className = 'gs-prereq';
+        var link = document.createElement('a');
+        link.href = n.url; link.textContent = n.title;
+        li.appendChild(link); ul.appendChild(li);
+      });
+      summary.appendChild(ul);
+    }
+
+    /* 노드 두 개가 고른 상태일 때의 패널. 단일 선택 패널과는 별개다 — 묻는 게
+       다르다. 여기서 묻는 건 "A 에서 B 까지 어떻게 가나"이고, 경로 계산은 카드가
+       쥐고 있다(두 벌로 두면 강조된 선과 목록이 갈라진다). */
+    function renderPath(aId, bId) {
+      if (!summary) return;
+      summary.innerHTML = '';
+      var path = card.path ? card.path(aId, bId) : null;
+      kicker(t.pathTitle);
+      if (!path) {
+        var ends = [byId[aId], byId[bId]].filter(Boolean);
+        list(ends);
+        note(t.noPath, 'gs-empty');
+        return;
+      }
+      var steps = path.nodes.map(function (x) { return byId[x]; }).filter(Boolean);
+      note(steps.length + (lang === 'ko' ? ' ' : '') + t.pathSteps, 'gs-meta');
+      list(steps, true);
+
+      kicker(t.outside);
+      var off = outsideRoots(path.nodes);
+      if (off.roots.length) {
+        note(t.outsideMeta(off.roots.length, off.total), 'gs-meta');
+        list(off.roots);
+      } else {
+        note(t.noOutside, 'gs-empty');
+      }
+    }
+
     function renderSummary(id) {
       if (!summary) return;
       summary.innerHTML = '';
@@ -1024,27 +1275,6 @@
         var hint = document.createElement('p'); hint.className = 'gs-empty';
         hint.textContent = t.selectHint; summary.appendChild(hint); return;
       }
-      function kicker(text) {
-        var el = document.createElement('div');
-        el.className = 'gs-kicker'; el.textContent = text;
-        summary.appendChild(el);
-      }
-      function note(text, cls) {
-        var el = document.createElement('p');
-        el.className = cls; el.textContent = text;
-        summary.appendChild(el);
-      }
-      function list(items) {
-        var ul = document.createElement('ul'); ul.className = 'gs-prereqs';
-        items.forEach(function (n) {
-          var li = document.createElement('li'); li.className = 'gs-prereq';
-          var link = document.createElement('a');
-          link.href = n.url; link.textContent = n.title;
-          li.appendChild(link); ul.appendChild(li);
-        });
-        summary.appendChild(ul);
-      }
-
       kicker(t.selected);
       var title = document.createElement('a'); title.className = 'gs-title';
       title.href = node.url; title.textContent = node.title; summary.appendChild(title);
@@ -1195,10 +1425,15 @@
       if (id && rowIndex[id]) { rowIndex[id].forEach(function (el) { el.classList.add('hot'); hot.push(el); }); }
     });
     var selEls = [];
-    card.onClick(function (id) {
+    card.onClick(function (id, pairId) {
       selEls.forEach(function (el) { el.classList.remove('sel'); }); selEls = [];
-      if (id && rowIndex[id]) { rowIndex[id].forEach(function (el) { el.classList.add('sel'); selEls.push(el); }); }
-      renderSummary(id);
+      [id, pairId].forEach(function (key) {
+        if (key && rowIndex[key]) {
+          rowIndex[key].forEach(function (el) { el.classList.add('sel'); selEls.push(el); });
+        }
+      });
+      if (id && pairId) renderPath(id, pairId);
+      else renderSummary(id);
     });
     renderSummary(null);
 
