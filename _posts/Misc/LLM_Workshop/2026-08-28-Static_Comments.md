@@ -22,7 +22,7 @@ weight: 44
 관련 파일: [`workers/comments/src/`](https://github.com/math-jh/math-jh.github.io/tree/main/workers/comments/src), [`_includes/comments-providers/custom.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/comments-providers/custom.html), [`assets/js/custom/Comments.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Comments.js), [`_plugins/comment_markdown.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/comment_markdown.rb), [`.github/workflows/comments-notify.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/.github/workflows/comments-notify.yml), [`_sass/_comments.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_comments.scss), [`scripts/comments/add_comment.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/comments/add_comment.rb), [커밋 d5c5489a](https://github.com/math-jh/math-jh.github.io/commit/d5c5489a)
 {: .notice--info}
 
-[Giscus로 댓글 이전](/ko/llm_workshop/giscus_migration){: data-relation="weak" }에서 댓글은 GitHub Discussions로 갔다. 광고도 동의 배너도 없어졌고 사이드바 최근 댓글도 `gh auth token` 하나로 읽히게 됐지만, 그 대가로 댓글을 쓰려면 GitHub 계정으로 로그인해야 한다. 이 블로그가 개발 블로그라면 큰 문제가 아니겠지만, 수학 블로그를 방문하는 사람이 GitHub 계정을 모두 가지고 있을 것이라 생각하는 것은 비현실적이다.
+[Giscus로 댓글 이전](/ko/llm_workshop/giscus_migration)에서 댓글은 GitHub Discussions로 갔다. 광고도 동의 배너도 없어졌고 사이드바 최근 댓글도 `gh auth token` 하나로 읽히게 됐지만, 그 대가로 댓글을 쓰려면 GitHub 계정으로 로그인해야 한다. 이 블로그가 개발 블로그라면 큰 문제가 아니겠지만, 수학 블로그를 방문하는 사람이 GitHub 계정을 모두 가지고 있을 것이라 생각하는 것은 비현실적이다.
 
 사용자가 정한 방향은 익명 방문자도 댓글을 쓸 수 있게 하되 저장은 저장소 안의 YAML로 한다는 것이다. 댓글 한 건이 파일 하나가 되고 승인이 PR 머지가 된다. 접수 백엔드로 흔히 쓰는 staticman은 업스트림 마지막 커밋이 2020-07-06, `engines`가 node >= 8.11.3이라 쓰지 않기로 했고, 대신 데이터 계약(`_data/comments/<key>/comment-*.yml`)만 staticman 호환으로 유지했다. 접수는 Cloudflare Worker를 직접 구현한다.
 
@@ -415,7 +415,7 @@ end
 
 키를 만드는 식이 폼과 Worker와 이 플러그인 세 곳에 같은 모양으로 있다. 첫 줄의 provider 검사는 전환 도중을 위한 것이다. giscus가 아직 활성인 상태에서 이 플러그인이 돌면 기존 사이드바 데이터를 빈 배열로 덮어쓴다.
 
-크론이 없어지는 자리에는 계약이 몇 개 걸려 있어 한 번에 처리해야 했다. crontab에서 두 줄을 지우고(백업 먼저, 106줄에서 104줄), cron-gate의 job id는 crontab에서 동적으로 읽히므로 따로 지울 것이 없었고, [블로그 운영 대시보드](/ko/llm_workshop/dashboard){: data-relation="weak" }의 "댓글 수집" 타일은 승인 대기 중인 PR 개수를 세는 타일로 바꿨다.
+크론이 없어지는 자리에는 계약이 몇 개 걸려 있어 한 번에 처리해야 했다. crontab에서 두 줄을 지우고(백업 먼저, 106줄에서 104줄), cron-gate의 job id는 crontab에서 동적으로 읽히므로 따로 지울 것이 없었고, [블로그 운영 대시보드](/ko/llm_workshop/dashboard)의 "댓글 수집" 타일은 승인 대기 중인 PR 개수를 세는 타일로 바꿨다.
 
 ```python
 def sec_comment_prs():

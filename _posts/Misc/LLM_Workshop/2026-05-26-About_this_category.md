@@ -17,7 +17,7 @@ weight: 2
 
 ## 잡담
 
-[Raspberry Pi 5에 OpenClaw 돌리기](/ko/llm_workshop/raspberry_pi){: data-relation="weak" } 글을 쓴 지 네 달이 되어가는데, 그 사이에 이런저런 재미있는 일들 (AI 사용 측면에서)이 많이 있었다. 
+[Raspberry Pi 5에 OpenClaw 돌리기](/ko/llm_workshop/raspberry_pi) 글을 쓴 지 네 달이 되어가는데, 그 사이에 이런저런 재미있는 일들 (AI 사용 측면에서)이 많이 있었다. 
 
 우선 가장 큰 것은 OpenClaw를 더 이상 쓰지 않게 되었다. 약간은 복합적인 이유로,
 

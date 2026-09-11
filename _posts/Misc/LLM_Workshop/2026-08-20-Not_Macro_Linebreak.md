@@ -25,7 +25,7 @@ weight: 42
 
 > 지금 감사 페이지에 보면 "우선 $j\geq 2$인 각각에 대하여 $x_j\not\in \mathfrak{a}_1$이고 $\mathfrak{a}_1$이 prime i" 여기에서, \not과 \in 사이에 줄바꿈이 들어갔거든? 문단 폭이 달라서 정확히 이게 프로덕션 사이트 혹은 데브 사이트에서 반영되는 것은 아닌데 혹시 비슷한 문제가 프로덕션 혹은 데브 사이트에서 생길 수 있는지만 확인해줘. 꼭 여기가 아니더라도.
 
-출처는 [Associated Primes](/ko/math/commutative_algebra/associated_primes){: data-relation="weak" } 글의 prime avoidance 증명, `$x_j\not\in \mathfrak{a}_1$` 자리였다. 좁은 폭에서 사선(`/`)만 윗줄에 남고 `\in`은 다음 줄로 넘어간다. 사용자는 이 글 하나를 지목했지만 질문은 "다른 데도 이럴 수 있냐"였다. 답은 그렇다였다. `\not`이 코퍼스 전역에서 같은 방식으로 쓰이고 있었으므로 어디서든 재현될 수 있는 문제였다.
+출처는 [Associated Primes](/ko/math/commutative_algebra/associated_primes) 글의 prime avoidance 증명, `$x_j\not\in \mathfrak{a}_1$` 자리였다. 좁은 폭에서 사선(`/`)만 윗줄에 남고 `\in`은 다음 줄로 넘어간다. 사용자는 이 글 하나를 지목했지만 질문은 "다른 데도 이럴 수 있냐"였다. 답은 그렇다였다. `\not`이 코퍼스 전역에서 같은 방식으로 쓰이고 있었으므로 어디서든 재현될 수 있는 문제였다.
 
 ## mrel마다 끊기는 base
 

@@ -21,7 +21,7 @@ weight: 50
 관련 파일: [`scripts/dependency-classifier/dependency_classifier.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/dependency_classifier.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`assets/js/custom/Graph_page.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Graph_page.js), [`_includes/dependencies_page.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/dependencies_page.html), [7f86ca42](https://github.com/math-jh/math-jh.github.io/commit/7f86ca42)
 {: .notice--info}
 
-[글 의존성 그래프](/ko/llm_workshop/dependency_graph){: data-relation="required" }는 본문의 내부 링크를 세어 선수 글에서 후행 글로 화살표를 그렸다. 같은 카테고리에서는 `weight`를 비교해 포워드 레퍼런스를 걷어냈지만, 링크가 정의의 재사용인지, 비유인지, 나중 글의 예고인지는 알지 못했다. 사용자는 이 구분을 기계적인 문장 규칙에 맡기지 않고 LLM이 링크 문맥을 읽어 판단하게 했고, 충분한 백로그가 쌓일 때까지 기존 그래프와 별개로 자라게 했다. 링크마다 뜻을 묻고 답을 본문에 적는 일이 추가되었다. 수학 글 수백 편이 이미 있는 다음에 말이다.
+[글 의존성 그래프](/ko/llm_workshop/dependency_graph)는 본문의 내부 링크를 세어 선수 글에서 후행 글로 화살표를 그렸다. 같은 카테고리에서는 `weight`를 비교해 포워드 레퍼런스를 걷어냈지만, 링크가 정의의 재사용인지, 비유인지, 나중 글의 예고인지는 알지 못했다. 사용자는 이 구분을 기계적인 문장 규칙에 맡기지 않고 LLM이 링크 문맥을 읽어 판단하게 했고, 충분한 백로그가 쌓일 때까지 기존 그래프와 별개로 자라게 했다. 링크마다 뜻을 묻고 답을 본문에 적는 일이 추가되었다. 수학 글 수백 편이 이미 있는 다음에 말이다.
 
 ## 세 종류의 관계
 

@@ -142,9 +142,9 @@ CSS 비율을 정하는 데 든 시간은 결과에 비해 길었지만, CSS와 
 ```
 {: data-filename="_sass/_recents-sidebar.scss"}
 
-뷰포트 높이 칼럼은 수학 글에만 남긴다. `single.html`이 `page.url`에 `/math/`가 들어갈 때만 `.sidebar__right--with-graph` 수식자를 붙이고, 그쪽에서만 `min-height: calc(100vh - 7em)`과 `flex-direction: column`을 걸어 [의존성 그래프](/ko/llm_workshop/dependency_graph){: data-relation="weak" }의 작은 판을 `margin-top: auto`로 화면 아래쪽에 붙인다. 목차는 위에, 그래프는 아래에. 그래프가 없는 글은 그럴 이유가 없으니 그냥 내용 높이로 둔다.
+뷰포트 높이 칼럼은 수학 글에만 남긴다. `single.html`이 `page.url`에 `/math/`가 들어갈 때만 `.sidebar__right--with-graph` 수식자를 붙이고, 그쪽에서만 `min-height: calc(100vh - 7em)`과 `flex-direction: column`을 걸어 [의존성 그래프](/ko/llm_workshop/dependency_graph)의 작은 판을 `margin-top: auto`로 화면 아래쪽에 붙인다. 목차는 위에, 그래프는 아래에. 그래프가 없는 글은 그럴 이유가 없으니 그냥 내용 높이로 둔다.
 
-목차 안 스크롤 영역이 사라지면서, `_layouts/default.html`의 인라인 `<style>`과 두 스킨(`_custom.scss`, `_custom-dark.scss`)이 `.toc__menu`와 `.sidebar__right.sticky > .toc`에 걸어 두던 hover-reveal 커스텀 스크롤바도 대상을 잃었다. 해당 선택자를 전부 지우고, [스크롤바 CSS 리팩토링](/ko/llm_workshop/scrollbar_refactor){: data-relation="weak" }에서 만든 hover-reveal 스크롤바는 왼쪽 네비게이션(`.sidebar.sticky`) 하나에만 남겼다. `default.html`은 `body::-webkit-scrollbar { width: 10px }`도 지워서 페이지 스크롤바 폭이 브라우저 기본값으로 돌아왔다. `_recents-sidebar.scss` 아래쪽의 `.recents-block` 계열 규칙은 이번에도 손대지 않아, 왼쪽으로 옮긴 뒤로 계속 그렇듯 참조되지 않은 채 파일에 남아 있다.
+목차 안 스크롤 영역이 사라지면서, `_layouts/default.html`의 인라인 `<style>`과 두 스킨(`_custom.scss`, `_custom-dark.scss`)이 `.toc__menu`와 `.sidebar__right.sticky > .toc`에 걸어 두던 hover-reveal 커스텀 스크롤바도 대상을 잃었다. 해당 선택자를 전부 지우고, [스크롤바 CSS 리팩토링](/ko/llm_workshop/scrollbar_refactor)에서 만든 hover-reveal 스크롤바는 왼쪽 네비게이션(`.sidebar.sticky`) 하나에만 남겼다. `default.html`은 `body::-webkit-scrollbar { width: 10px }`도 지워서 페이지 스크롤바 폭이 브라우저 기본값으로 돌아왔다. `_recents-sidebar.scss` 아래쪽의 `.recents-block` 계열 규칙은 이번에도 손대지 않아, 왼쪽으로 옮긴 뒤로 계속 그렇듯 참조되지 않은 채 파일에 남아 있다.
 
 ## 사후: 위로가기 버튼과 스크롤 진행률
 

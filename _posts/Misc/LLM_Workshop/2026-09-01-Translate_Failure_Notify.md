@@ -65,7 +65,7 @@ def record_failure(state: dict, key: str, error: str) -> None:
 
 > 실패 경로에 텔레그램 알림 없는 건 괜찮아. 근데 지금 추가 제안은: 내가 요즘 hermes agent를 전혀 안 써. 오직 telegram 전송용으로만 쓰는데, 마침 telegram이 요즘 좀 맘에 안 들어. 스팸이 너무 많이 와서 짜증나거든. 그래서 디스코드나 별도 API 달아줄 수 있는 플랫폼으로 옮기되, 어차피 안 쓰는 hermes는 철거하고, 알림을 그 API로 직결하는 게 수순이 맞는 것 같아서 그렇게 하려 하거든.
 
-hermes는 에이전트 웹 UI([Local_Services](/ko/llm_workshop/local_services){: data-relation="weak" } 글에서 다룬 그 서비스)인데, 실제로 남아 쓰이던 기능은 텔레그램 전송 하나뿐이었다. 그 하나 때문에 프로세스 격리에 TOTP까지 걸어둔 서비스 전체를 유지할 이유가 없다는 것이 사용자의 판단이었다.
+hermes는 에이전트 웹 UI([Local_Services](/ko/llm_workshop/local_services) 글에서 다룬 그 서비스)인데, 실제로 남아 쓰이던 기능은 텔레그램 전송 하나뿐이었다. 그 하나 때문에 프로세스 격리에 TOTP까지 걸어둔 서비스 전체를 유지할 이유가 없다는 것이 사용자의 판단이었다.
 
 대안으로 ntfy.sh, Bark, Nextcloud Talk을 견줬다. ntfy.sh는 공용 서버를 중계로 쓰거나 자체 서버를 띄워야 했고, Nextcloud Talk은 이미 쓰는 Nextcloud 인프라라 별도 앱 설치가 필요 없다는 게 장점으로 꼽혔다.
 

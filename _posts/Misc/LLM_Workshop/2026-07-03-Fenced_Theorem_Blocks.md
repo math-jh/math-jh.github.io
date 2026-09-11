@@ -109,7 +109,7 @@ id          = "#{prefix}#{number}"    # thm2
 
 ## 번역 워커에 가르치기
 
-이 블로그는 한국어 글을 [자동 번역 워커](/ko/llm_workshop/translation_worker){: data-relation="weak" }가 영어로 옮긴다. 워커는 그동안 정리 박스를 HTML 구조로 알고 있었으니, 새 문법을 가르쳐야 했다. 규칙은 단순하다 — `:::` 줄은 개수도 순서도 그대로 두고, 여는 줄의 라벨만 번역한다.
+이 블로그는 한국어 글을 [자동 번역 워커](/ko/llm_workshop/translation_worker)가 영어로 옮긴다. 워커는 그동안 정리 박스를 HTML 구조로 알고 있었으니, 새 문법을 가르쳐야 했다. 규칙은 단순하다 — `:::` 줄은 개수도 순서도 그대로 두고, 여는 줄의 라벨만 번역한다.
 
 ```text
 ::: 정리 2 (Thom isomorphism)   →   ::: Theorem 2 (Thom isomorphism)
@@ -123,7 +123,7 @@ id          = "#{prefix}#{number}"    # thm2
 
 ## 증명 상자를 dev에서는 펼쳐서
 
-[스킴 매끄러움 글](/ko/math/scheme_theory/smooth_and_etale_morphisms){: data-relation="weak" }처럼 증명이 여러 단계로 중첩된 글을 고칠 때는 `<details>`를 매번 손으로 펼쳐야 했다. 렌더가 옛 HTML과 바이트 단위로 같다는 건 화면 쪽 이야기고, 그 글을 편집하는 동안에는 접힌 증명을 여는 클릭이 그냥 반복 작업이었다.
+[스킴 매끄러움 글](/ko/math/scheme_theory/smooth_and_etale_morphisms)처럼 증명이 여러 단계로 중첩된 글을 고칠 때는 `<details>`를 매번 손으로 펼쳐야 했다. 렌더가 옛 HTML과 바이트 단위로 같다는 건 화면 쪽 이야기고, 그 글을 편집하는 동안에는 접힌 증명을 여는 클릭이 그냥 반복 작업이었다.
 
 > 좋아, 그리고 dev 서버에서는 증명 블럭이 항상 펼쳐진 상태이도록 해 줄 수 있어?
 
@@ -136,7 +136,7 @@ lines << %(<details class="#{block[:cls]}"#{PROOF_OPEN_ATTR} markdown="1">)
 ```
 {: data-filename="_plugins/fenced_theorem_blocks.rb"}
 
-`Jekyll.env`가 `production`이 아니면 `open` 속성이 붙어 처음부터 펼쳐진 채로 뜬다. dev 서버(포트 4001)와 [판본 스냅샷](/ko/llm_workshop/version_comparator){: data-relation="weak" } 빌드가 둘 다 `JEKYLL_ENV=development`로 도는 걸 그대로 이용했다. 새 플래그를 두지 않고 이미 있는 환경변수 하나로 갈랐다. 접기/펼치기 토글은 그대로 살아 있어서 다시 접고 싶으면 클릭 한 번이면 된다. CI가 만드는 production 빌드만 예전처럼 접힌 채로 나간다.
+`Jekyll.env`가 `production`이 아니면 `open` 속성이 붙어 처음부터 펼쳐진 채로 뜬다. dev 서버(포트 4001)와 [판본 스냅샷](/ko/llm_workshop/version_comparator) 빌드가 둘 다 `JEKYLL_ENV=development`로 도는 걸 그대로 이용했다. 새 플래그를 두지 않고 이미 있는 환경변수 하나로 갈랐다. 접기/펼치기 토글은 그대로 살아 있어서 다시 접고 싶으면 클릭 한 번이면 된다. CI가 만드는 production 빌드만 예전처럼 접힌 채로 나간다.
 
 ## 정리
 

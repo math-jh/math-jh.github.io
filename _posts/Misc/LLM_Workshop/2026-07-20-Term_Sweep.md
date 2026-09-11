@@ -22,7 +22,7 @@ weight: 30
 관련 파일: [`_data/terms.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/terms.yml), [`scripts/term-extraction/mech_sweep.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/mech_sweep.py), [`scripts/term-extraction/deprecated_terms_lint.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/deprecated_terms_lint.py), [`scripts/term-extraction/term_extract_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/term_extract_worker.py)
 {: .notice--info}
 
-이 글은 [찾아보기 자동 갱신](/ko/llm_workshop/term_extraction){: data-relation="weak" }의 후속이다. 그때는 용어를 *모으는* 이야기였고, 이번에는 모아 놓은 용어가 글 본문과 서로 어긋난다는 사실이 드러나서, 글 414편을 전부 손보는 이야기가 되었다. 시작은 그저 페이지 하나를 다듬는 것이었는데.
+이 글은 [찾아보기 자동 갱신](/ko/llm_workshop/term_extraction)의 후속이다. 그때는 용어를 *모으는* 이야기였고, 이번에는 모아 놓은 용어가 글 본문과 서로 어긋난다는 사실이 드러나서, 글 414편을 전부 손보는 이야기가 되었다. 시작은 그저 페이지 하나를 다듬는 것이었는데.
 
 ## 시발점: 찾아보기 페이지의 데이터화
 
@@ -63,7 +63,7 @@ weight: 30
 
 > 그 매핑이 거기가 아니라 _data/terms.yml로 병합하고 그걸 source of truth로 써야지.
 
-[흩어진 목록을 한 곳으로](/ko/llm_workshop/single_source){: data-relation="weak" }을 정리한 지 열흘 만에 같은 실수를 반복한 셈이다. terms.yml의 `primary` 필드(en/ko)가 유일한 정본이 되었고, 문맥 조건부 판정("작용"은 명사로만, "극한"은 categorical limit일 때만 영어)은 `note` 필드로 들어갔다. 이후의 모든 도구는 이 파일 하나만 읽는다.
+[흩어진 목록을 한 곳으로](/ko/llm_workshop/single_source)을 정리한 지 열흘 만에 같은 실수를 반복한 셈이다. terms.yml의 `primary` 필드(en/ko)가 유일한 정본이 되었고, 문맥 조건부 판정("작용"은 명사로만, "극한"은 categorical limit일 때만 영어)은 `note` 필드로 들어갔다. 이후의 모든 도구는 이 파일 하나만 읽는다.
 
 ## 첫 번째 실행기: 서브에이전트 함대, 그리고 24시간
 
@@ -95,14 +95,14 @@ weight: 30
 
 ## 가드레일: 되돌아오지 못하게
 
-스윕이 끝난 상태는 방치하면 썩는다. 특히 사용자가 기계적 수정은 LLM에게 맡기는 것이 일상이라 ([나를 검사하는 훅, 대신 커밋하는 로봇](/ko/llm_workshop/repo_guardrails){: data-relation="weak" }), 다음 번역 워커나 다음 교정 에이전트가 "자연스러운 한국어"라며 limit을 극한으로 되살려 놓는 미래가 눈에 보였다. 방어는 두 겹이다.
+스윕이 끝난 상태는 방치하면 썩는다. 특히 사용자가 기계적 수정은 LLM에게 맡기는 것이 일상이라 ([나를 검사하는 훅, 대신 커밋하는 로봇](/ko/llm_workshop/repo_guardrails)), 다음 번역 워커나 다음 교정 에이전트가 "자연스러운 한국어"라며 limit을 극한으로 되살려 놓는 미래가 눈에 보였다. 방어는 두 겹이다.
 
 - **실시간**: 편집 훅(`md_lint.py`)이 한국어 글 수정마다 terms.yml을 직독해서, `primary: en` 용어의 한국어형이 *새로 늘어나면* 그 자리에서 경고한다. 헤딩·링크 라벨·`<sub>` 병기·수식은 정당한 한국어이므로 제외.
 - **배치**: `deprecated_terms_lint.py`가 매일 새벽 초안 전체를 검사한다. 보류 26건은 베이스라인 파일에 적어 두고, 베이스라인에 없는 *신규* 오염만 텔레그램으로 알린다. 매일 아침 "잔존 26건"을 보고하는 알림은 사흘이면 아무도 안 읽게 되기 때문이다.
 
 ## 용어 추출 크론의 부활
 
-마지막 조각은 [찾아보기 자동 갱신](/ko/llm_workshop/term_extraction){: data-relation="weak" }의 수확기를 되살리는 것이었다. 구 수확기는 terms.yml 개편 전 설계라서 고치는 대신 새로 썼고(`term_extract_worker.py`), 사용자가 요구한 설계 원칙은 한 문장이다: terms.yml은 오염되면 복구가 어려우니, 안전을 우선할 것.
+마지막 조각은 [찾아보기 자동 갱신](/ko/llm_workshop/term_extraction)의 수확기를 되살리는 것이었다. 구 수확기는 terms.yml 개편 전 설계라서 고치는 대신 새로 썼고(`term_extract_worker.py`), 사용자가 요구한 설계 원칙은 한 문장이다: terms.yml은 오염되면 복구가 어려우니, 안전을 우선할 것.
 
 그래서 LLM은 terms.yml을 만지지 못한다. 워커는 30분마다 글 하나를 고른다 (안 돌린 글 먼저, 그다음 재번역된 글, 그다음 검사한 지 14일 넘은 글 순서다. 재번역되었다는 것은 내용이 바뀌었다는 뜻이므로 새 용어 가능성이 높다). 고른 글의 정의 병기는 결정론 파서로 뽑고, LLM은 "이 재정의가 동음이의인가", "이 용어의 논리적 최초 정의처는 어느 글인가" 같은 판단만 JSON으로 낸다. 결정론 applier가 id 재생성·중복 판정·url 실재 확인을 거쳐 적용하고, 쓰기 전에 게이트(YAML 파싱·항목 수·의미 검사 비악화)를 통과해야 하며, 실패가 쌓이는 글은 격리하고 텔레그램으로 보고한다. `primary` 판정도 LLM의 의견이 아니라 코퍼스 실측(영어형 대 한국어형 출현 수)이 우선한다. limit의 교훈이다. 할 일이 없는 틱은 조용히 죽고, 짝수 시각이면 대신 색인 자체를 글자 하나씩 감사한다.
 

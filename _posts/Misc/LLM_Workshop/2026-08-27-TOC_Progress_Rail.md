@@ -21,7 +21,7 @@ weight: 43
 관련 파일: [`assets/js/_main.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/_main.js), [`_sass/minimal-mistakes/_navigation.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_navigation.scss), [`_sass/minimal-mistakes/_page.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_page.scss), [커밋 432aa9a5](https://github.com/math-jh/math-jh.github.io/commit/432aa9a5)
 {: .notice--info}
 
-[블로그 테마 개편](/ko/llm_workshop/theme_overhaul){: data-relation="weak" }에서 우측 목차에 scroll-spy가 붙었다. Gumshoe가 화면에 들어온 절을 찾아 그 `<li>`에 `.active`를 달면, CSS가 그 링크의 왼쪽 테두리(`border-left`)를 금색으로 바꾼다. 목차 전체를 세로로 훑는 2px 선이 있고 그중 지금 절에 해당하는 한 토막만 색이 다른 구조였다.
+[블로그 테마 개편](/ko/llm_workshop/theme_overhaul)에서 우측 목차에 scroll-spy가 붙었다. Gumshoe가 화면에 들어온 절을 찾아 그 `<li>`에 `.active`를 달면, CSS가 그 링크의 왼쪽 테두리(`border-left`)를 금색으로 바꾼다. 목차 전체를 세로로 훑는 2px 선이 있고 그중 지금 절에 해당하는 한 토막만 색이 다른 구조였다.
 
 문제는 그 토막이 절 경계에서 통째로 튄다는 것이다. 절이 길면 스크롤을 한참 내려도 금색 토막은 같은 자리에 멈춰 있다가, 다음 절 제목을 지나는 순간 아래 칸으로 건너뛴다. 회색 선 안에 금색 조각 하나가 끊겨 떠 있는 모양이고, 읽는 속도와 무관하게 계단처럼 움직인다. 사용자가 낸 방향은 이 칸 단위 강조를 스크롤 진행에 연동시키는 것이었다 (커밋 제목이 "스크롤 진행형 강조 표시"다). 절 안에서 얼마나 내려왔는지가 목차에서도 같은 비율로 보이게. 손댄 파일은 셋이고, `_navigation.scss`가 강조의 생김새를, `_main.js`가 위치 계산을, `_page.scss`가 곁딸린 양끝맞춤 하나를 맡는다.
 
@@ -118,7 +118,7 @@ tocMenu.style.setProperty("--toc-progress-y", markerY.toFixed(2) + "px");
 
 마커 중심 좌표는 링크의 `getBoundingClientRect()`를 목차 컨테이너 기준으로 환산해 둔다(`linkRect.top - menuRect.top + linkRect.height / 2`). 여기서도 두 줄로 접힌 제목이 자기 높이의 중앙을 내놓는다. 제목 요소 쪽 좌표(`tocHeadingTops`)는 문서 절대 위치라 스크롤 값과 바로 비교된다.
 
-같은 루프에서 마커 색도 갱신하는데, 각 마커가 띠 중심에서 얼마나 떨어졌는지를 띠 반높이로 나눈 값으로 `--toc-marker-intensity`를 준다. 문제는 이 낙차가 CSS 그라디언트에도 한 번 적혀 있다는 것이다. 그라디언트는 중심에서 알파 1, 양쪽으로 가며 0.65를 거쳐 0으로 꺼진다. JS는 그 곡선을 구간별 일차식으로 다시 적어, 중심에서 1, 반높이의 30% 지점에서 0.65, 가장자리에서 0으로 맞춘다. 띠 높이는 `getComputedStyle`으로 읽어 와 `1.5rem`이라는 숫자를 양쪽에 적지 않게 했지만, 곡선의 모양 자체는 두 벌이라 한쪽만 고치면 마커 밝기와 띠가 어긋난다. [이중 장부 전수 감사](/ko/llm_workshop/sot_audit){: data-relation="weak" }에서 세던 종류의 사본이 하나 더 생긴 셈인데, 자동 파생이 안 되는 CSS 대 JS 경계라 주석으로 묶어 두는 선에서 접었다.
+같은 루프에서 마커 색도 갱신하는데, 각 마커가 띠 중심에서 얼마나 떨어졌는지를 띠 반높이로 나눈 값으로 `--toc-marker-intensity`를 준다. 문제는 이 낙차가 CSS 그라디언트에도 한 번 적혀 있다는 것이다. 그라디언트는 중심에서 알파 1, 양쪽으로 가며 0.65를 거쳐 0으로 꺼진다. JS는 그 곡선을 구간별 일차식으로 다시 적어, 중심에서 1, 반높이의 30% 지점에서 0.65, 가장자리에서 0으로 맞춘다. 띠 높이는 `getComputedStyle`으로 읽어 와 `1.5rem`이라는 숫자를 양쪽에 적지 않게 했지만, 곡선의 모양 자체는 두 벌이라 한쪽만 고치면 마커 밝기와 띠가 어긋난다. [이중 장부 전수 감사](/ko/llm_workshop/sot_audit)에서 세던 종류의 사본이 하나 더 생긴 셈인데, 자동 파생이 안 되는 CSS 대 JS 경계라 주석으로 묶어 두는 선에서 접었다.
 
 ```js
 var glowStyle = window.getComputedStyle(tocMenu, "::after");
@@ -155,7 +155,7 @@ if ("ResizeObserver" in window) {
 
 ## 좁은 칸에 새어든 양끝맞춤
 
-곁딸린 수정 하나. [본문 양끝맞춤을 kotex처럼](/ko/llm_workshop/kotex_justification){: data-relation="weak" }에서 건 규칙이 `.page__content`의 `p`, `li`에 `text-align: justify`와 `text-justify: inter-character`를 먹인다. 우측 목차도 `.page__content` 안의 `li`라 이 규칙에 같이 걸렸고, 폭이 좁은 칸에서 한글 자간이 과하게 벌어졌다. 한국어 규칙 쪽에 예외를 더해 목차 항목만 되돌렸다.
+곁딸린 수정 하나. [본문 양끝맞춤을 kotex처럼](/ko/llm_workshop/kotex_justification)에서 건 규칙이 `.page__content`의 `p`, `li`에 `text-align: justify`와 `text-justify: inter-character`를 먹인다. 우측 목차도 `.page__content` 안의 `li`라 이 규칙에 같이 걸렸고, 폭이 좁은 칸에서 한글 자간이 과하게 벌어졌다. 한국어 규칙 쪽에 예외를 더해 목차 항목만 되돌렸다.
 
 ```scss
 @supports (text-justify: inter-character) {

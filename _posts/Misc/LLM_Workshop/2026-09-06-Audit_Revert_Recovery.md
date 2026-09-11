@@ -23,7 +23,7 @@ weight: 48
 관련 파일: [965acc26](https://github.com/math-jh/math-jh.github.io/commit/965acc26), [f29cfd09](https://github.com/math-jh/math-jh.github.io/commit/f29cfd09), [a17b4650](https://github.com/math-jh/math-jh.github.io/commit/a17b4650)
 {: .notice--info}
 
-8월 전수 감사는 지적 200여 건을 한꺼번에 남겼고, 그 지적을 반영하는 동안 해당 글들은 `revising: true`를 달고 [직전 판본으로 얼어붙은 채](/ko/llm_workshop/revising_freeze){: data-relation="weak" } 서빙된다. 사용자가 실제로 소화할 수 있는 속도로는 그게 언제 끝날지 기약이 없었고, 그동안 200편이 계속 수정 중으로 떠 있게 된다. 9월 4일에 `965acc26`으로 180편을 마지막 정상 판본으로 되돌린 것이 그 결론이다. 되돌린 결정 자체를 다시 뒤집을 생각은 없다는 것이 이번 작업의 전제였다.
+8월 전수 감사는 지적 200여 건을 한꺼번에 남겼고, 그 지적을 반영하는 동안 해당 글들은 `revising: true`를 달고 [직전 판본으로 얼어붙은 채](/ko/llm_workshop/revising_freeze) 서빙된다. 사용자가 실제로 소화할 수 있는 속도로는 그게 언제 끝날지 기약이 없었고, 그동안 200편이 계속 수정 중으로 떠 있게 된다. 9월 4일에 `965acc26`으로 180편을 마지막 정상 판본으로 되돌린 것이 그 결론이다. 되돌린 결정 자체를 다시 뒤집을 생각은 없다는 것이 이번 작업의 전제였다.
 
 > 근데 이제 감사 결과와 무관하게 내가 해놨던 수정들이 있을 텐데, 결과를 보고 고쳐서 괜찮아진 거. 그거는 커밋 안 했어. 근데 이제 감사 결과 revising true가 되어 있는 것들 중에서 이제 얼마나 예전 것들이 바뀌었는지 그런 거를 좀 보고 싶거든.
 
@@ -75,7 +75,7 @@ removed = [l[1:] for l in d.split("\n") if l.startswith("-::: ")]
 added   = [l[1:] for l in d.split("\n") if l.startswith("+::: ")]
 ```
 
-13편이 걸렸고, 그중 8편은 `:::` 블록이 0이 되고 `<div class="definition">`이 생겼다. [정리 박스를 fenced-div로 옮긴 것](/ko/llm_workshop/fenced_theorem_blocks){: data-relation="weak" }이 7월 3일이니, 이 글들은 7월 초 이전 판본으로 돌아간 셈이다. 줄 수로 보면 `가환대수학/미분`이 399줄에서 157줄로, `갈루아 기본정리`가 217줄에서 50줄로, `사교다양체`가 174줄에서 24줄로 줄었다. 마지막 것은 정의 1 하나만 남은 상태다. 갈루아 기본정리는 증명 블록이 열려 있고 안이 비어 있다.
+13편이 걸렸고, 그중 8편은 `:::` 블록이 0이 되고 `<div class="definition">`이 생겼다. [정리 박스를 fenced-div로 옮긴 것](/ko/llm_workshop/fenced_theorem_blocks)이 7월 3일이니, 이 글들은 7월 초 이전 판본으로 돌아간 셈이다. 줄 수로 보면 `가환대수학/미분`이 399줄에서 157줄로, `갈루아 기본정리`가 217줄에서 50줄로, `사교다양체`가 174줄에서 24줄로 줄었다. 마지막 것은 정의 1 하나만 남은 상태다. 갈루아 기본정리는 증명 블록이 열려 있고 안이 비어 있다.
 
 이 글들은 hunk 패치가 안 붙는다. 형식 자체가 다른 문서에 문단 단위 diff를 대는 일이라, `965acc26^` 판본을 통째로 가져오고 frontmatter의 플래그만 손대는 쪽으로 갔다.
 

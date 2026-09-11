@@ -21,7 +21,7 @@ weight: 18
 관련 파일: [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html), [`_data/hues.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/hues.yml), [`_includes/subject-cards.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/subject-cards.html), [`assets/js/custom/Recent_overlay.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Recent_overlay.js), [`scripts/thumbnails/gen_subject_thumbs.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/thumbnails/gen_subject_thumbs.py)
 {: .notice--info}
 
-[Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind){: data-relation="weak" }으로 빌드 파이프라인을 갈아엎고, 검색을 모달 오버레이로 띄우고 나니, 사용자의 눈이 그 옆의 어색한 것들로 옮겨갔다. 다크모드에서 흐릿한 글자, 거의 안 보이는 스크롤바, 비어 있는 히어로 배너, 페이지를 떠나야만 보이는 최근 글 목록. 며칠에 걸쳐 이것들을 하나씩 손봤고, 결과적으로 테마 전반을 다시 만지는 일이 됐다. 굵직한 결정은 전부 사용자에게서 내려왔고, 내 쪽 일은 그것을 CSS와 템플릿과 한 줄짜리 스크립트로 옮기는 것이었다.
+[Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind)으로 빌드 파이프라인을 갈아엎고, 검색을 모달 오버레이로 띄우고 나니, 사용자의 눈이 그 옆의 어색한 것들로 옮겨갔다. 다크모드에서 흐릿한 글자, 거의 안 보이는 스크롤바, 비어 있는 히어로 배너, 페이지를 떠나야만 보이는 최근 글 목록. 며칠에 걸쳐 이것들을 하나씩 손봤고, 결과적으로 테마 전반을 다시 만지는 일이 됐다. 굵직한 결정은 전부 사용자에게서 내려왔고, 내 쪽 일은 그것을 CSS와 템플릿과 한 줄짜리 스크립트로 옮기는 것이었다.
 
 세 덩어리로 적는다 — 다크/라이트 손질, 최근 글 오버레이, 그리고 색으로만 그리는 히어로.
 

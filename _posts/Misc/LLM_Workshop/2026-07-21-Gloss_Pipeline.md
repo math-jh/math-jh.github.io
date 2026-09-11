@@ -22,7 +22,7 @@ weight: 33
 관련 파일: [`scripts/term-extraction/gloss_backfill.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/gloss_backfill.py), [`scripts/term-extraction/gloss_stage.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/gloss_stage.py), [`scripts/term-extraction/gloss_skip.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/gloss_skip.yml), [`scripts/term-extraction/term_extract_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/term_extract_worker.py)
 {: .notice--info}
 
-이 블로그의 정의 박스에는 규칙이 하나 있다. 이탤릭으로 정의되는 용어는 `*english<sub>한국어</sub>*` 꼴의 한영 병기로 적는다. 문제는 이 규칙보다 오래된 글이 많다는 것이다. 옛 글의 정의 박스에는 병기 없는 영어 이탤릭이 수백 개 흩어져 있었고, 이것은 표기의 문제로 끝나지 않는다. [용어 영어화 스윕](/ko/llm_workshop/term_sweep){: data-relation="weak" } 때 새로 세운 추출 워커의 1단계는 `<sub>` 쌍 마커만 정의로 인식하므로, 무병기 정의어는 찾아보기 색인에서 통째로 빠진다. 사용자가 이 격차를 메우라는 방향을 정했고, 일은 둘로 나뉘었다. 일회성 소급 백필(`gloss_backfill.py`)과, 추출 워커에 상주하는 상시 단계(`gloss_stage.py`)다.
+이 블로그의 정의 박스에는 규칙이 하나 있다. 이탤릭으로 정의되는 용어는 `*english<sub>한국어</sub>*` 꼴의 한영 병기로 적는다. 문제는 이 규칙보다 오래된 글이 많다는 것이다. 옛 글의 정의 박스에는 병기 없는 영어 이탤릭이 수백 개 흩어져 있었고, 이것은 표기의 문제로 끝나지 않는다. [용어 영어화 스윕](/ko/llm_workshop/term_sweep) 때 새로 세운 추출 워커의 1단계는 `<sub>` 쌍 마커만 정의로 인식하므로, 무병기 정의어는 찾아보기 색인에서 통째로 빠진다. 사용자가 이 격차를 메우라는 방향을 정했고, 일은 둘로 나뉘었다. 일회성 소급 백필(`gloss_backfill.py`)과, 추출 워커에 상주하는 상시 단계(`gloss_stage.py`)다.
 
 ## 재사용 판정
 

@@ -38,7 +38,7 @@ EXPLICIT_RE = re.compile(rf"^({_alt(EXPLICIT_CLASSES)})[ \t]+(.+?)[ \t]*\{{#([^}
 {: data-filename="scripts/postnav/common.py"}
 {% endraw %}
 
-종류 단어(`정의`, `명제`, `정리`, …)와 앵커 접두사의 대응은 `_data/theorem_vocab.yml` 하나에서 가져온다. 이 파일은 [이중 장부 전수 감사](/ko/llm_workshop/sot_audit){: data-relation="weak" }에서 다섯 곳에 흩어져 있던 같은 어휘를 하나로 합친 결과물이고, postnav는 그 여섯 번째 소비자로 붙었다. 새 종류를 하나 더할 때 이 YAML만 고치면 렌더링·번역 워커·postnav가 전부 따라온다는 뜻이다.
+종류 단어(`정의`, `명제`, `정리`, …)와 앵커 접두사의 대응은 `_data/theorem_vocab.yml` 하나에서 가져온다. 이 파일은 [이중 장부 전수 감사](/ko/llm_workshop/sot_audit)에서 다섯 곳에 흩어져 있던 같은 어휘를 하나로 합친 결과물이고, postnav는 그 여섯 번째 소비자로 붙었다. 새 종류를 하나 더할 때 이 YAML만 고치면 렌더링·번역 워커·postnav가 전부 따라온다는 뜻이다.
 
 ## 붙여넣은 인용 링크를 결정론으로 되짚는다
 
@@ -67,7 +67,7 @@ $ python3 scripts/postnav/find_post.py cite quotient_space "명제 6" --from _po
 [\[선형대수학\] §몫공간, ⁋명제 6](/ko/math/linear_algebra/quotient_space#prop6)
 ```
 
-카테고리 표시명은 `_data/categories.yml`에서 가져오므로 손으로 옮겨 적을 일이 없다. weight 역전(대상 글이 현재 글보다 뒤에 나오는 forward reference)이면 WARN을 내지만 막지는 않는다. 그게 필요한지는 [글 예시 컬링](/ko/llm_workshop/theorem_box_restyle){: data-relation="weak" } 같은 판단과 마찬가지로 에이전트 몫으로 남겨뒀다.
+카테고리 표시명은 `_data/categories.yml`에서 가져오므로 손으로 옮겨 적을 일이 없다. weight 역전(대상 글이 현재 글보다 뒤에 나오는 forward reference)이면 WARN을 내지만 막지는 않는다. 그게 필요한지는 [글 예시 컬링](/ko/llm_workshop/theorem_box_restyle) 같은 판단과 마찬가지로 에이전트 몫으로 남겨뒀다.
 
 ## 번호 하나가 밀면 다섯 자리가 따라 움직인다
 
