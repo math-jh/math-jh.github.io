@@ -58,7 +58,7 @@ For a family of rings $(A_i)_{i\in I}$, the collection of finitely supported ele
 
 This is in exactly the same spirit as the direct sum defined for abelian groups in [\[Algebraic Structures\] §Abelian Groups, ⁋Definition 2](/en/math/algebraic_structures/abelian_groups#def2){: data-relation="weak" }. However, if all $A_i$ are nonzero and the index set $I$ is infinite, then the direct sum $\bigoplus A_i$ does not contain the identity element $(1)_{i\in I}$, so it is not a (unital) ring; because of this, this notion is mainly used in $\Rng$. Conversely, when $I$ is a finite set, the direct sum coincides exactly with the direct product by definition.
 
-In the case of abelian groups the direct sum is the coproduct ([\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 1](/en/math/algebraic_structures/abelian_groups#thm1){: data-relation="weak" }), but in (non-commutative) rings the direct sum is not the coproduct. This is analogous to the situation in non-abelian groups, where the direct sum is not the coproduct either, and therefore the coproduct of rings must be defined separately.
+In the case of abelian groups the direct sum is the coproduct ([\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 1](/en/math/algebraic_structures/abelian_groups#thm1){: data-relation="weak" }), but this is not the case for rings. Therefore, the coproduct of rings must be defined separately.
 
 ## Coproducts of Rings
 
