@@ -437,7 +437,7 @@ $$\sum_jc_jg_j\equiv\sum_ja_jh_j\pmod{\mathfrak{a}}$$
 를 만족시키는 $h_j\in B$가 존재하는 것이었다. 그런데 우변은 $h=(\bar{h}_1,\ldots,\bar{h}_m)\in\Hom_C(B^m\otimes_BC,C)$가 미분 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이다. 따라서 이러한 $h_j$가 존재하는 것은 $\eta$가 coboundary인 것, 곧 $[\eta]=0\in T^2(C/A,C)$인 것과 정확히 동치이며 바로 이때 second-order deformation이 존재한다. 즉 다음이 성립한다. 
 
 ::: 정리 8
-First-order deformation $\xi\in T^1(C/A,C)$가 $A[\t]/(\t^3)$ 위의 flat deformation으로 extend 가능한 것은 $\ob(\xi)=0$인 것과 동치이다.
+First-order deformation $\xi\in T^1(C/A,C)$가 $A[\t]/(\t^3)$ 위의 flat deformation으로의 extension이 존재하는 것은 $\ob(\xi)=0$인 것과 동치이다.
 :::
 
 일반적인 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$에 대해서도 $\t$의 거듭제곱 대신 $\mathfrak{b}$를 흔드는 방향으로 같은 계산을 반복하여 obstruction class를 얻으며, extension이 존재할 때 두 extension의 차이에 [정리 5](#thm5){: data-relation="required" }의 논증을 적용하면 그 isomorphism class들이 $T^1$ 위의 torsor를 이룬다.
@@ -479,11 +479,19 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 ## 일반적인 변형이론
 
-지금까지 우리는 affine scheme의 deformation을 다뤘다. [정리 8](#thm8){: data-relation="weak" }과 그 직후의 논의에 따르면, 임의의 square-zero extension 
+지금까지 우리는 affine scheme의 deformation을 다뤘다. [정의 3](#def3){: data-relation="required" } 직후의 계산에서 우리는 임의의 square-zero extension
 
 $$0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$$
 
-을 따라 $C$를 deformation하는 문제에서, 그 deformation의 존재성을 방해하는 obstruction class는 $T^2(C/A,M)$에 놓인다. 만일 이 obstruction class가 $0\in T^2(C/A,M)$이라면, deformation들의 isomorphism class는 $T^1(C/A,M)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M)$이 분류한다. 이 글의 first-order deformation은 $A'=A[\epsilon]$인 특수한 경우이다. 이 extension은 split이므로 trivial deformation $C[\epsilon]=C\otimes_AA[\epsilon]$이 항상 존재하여 existence obstruction이 자동으로 사라지고, $M\cong C$이다. 따라서 이 trivial deformation을 기준점으로 삼으면 [정리 5](#thm5){: data-relation="weak" }에 따라 first-order deformation들의 isomorphism class는 $T^1(C/A,C)$과 자연스럽게 대응하며 trivial deformation은 $0$에 대응하고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,C)$이 분류한다.
+을 따라 $C$를 deformation하면, deformation $C'$의 central fiber로의 reduction이 square-zero extension
+
+$$0\rightarrow M_C\rightarrow C'\rightarrow C\rightarrow0$$
+
+을 주며 그 kernel은 $C$-module $M_C=M\otimes_AC$로 identify된다는 것을 보았다. 따라서 $C$의 $A'$ 위 deformation을 찾는 문제는 base의 extension과 compatible한, $M_C$에 의한 $C$의 square-zero extension $C'$을 찾는 문제로 바뀐다.
+
+이 extension의 존재성을 방해하는 obstruction은 앞에서와 같은 relation 계산으로 얻는다. 구체적으로 presentation $C=B/(f_1,\ldots,f_m)$과 방정식들의 $A'$ 위 lift 후보 $F_j$들을 택하면, 각 relation $\sum_ja_jf_j=0$의 lift가 남기는 kernel 방향의 오차들을 모아 $C$-linear map $\eta:\Rel/\TrivRel\rightarrow M_C$를 얻는다. Presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$는 주어진 deformation problem에만 의존한다. 이 class가 $0$이면 $F_j$들을 보정하여 모든 relation을 함께 lift할 수 있으므로 compatible한 square-zero extension $C'$이 존재하고, 거꾸로 이러한 $C'$이 존재하면 그 relation들이 모두 lift되므로 $[\eta]=0$이다. 따라서 $[\eta]$가 바로 deformation의 existence obstruction이다. 앞의 [정리 8](#thm8){: data-relation="weak" }은 first-order deformation $\xi$를 second order로 lifting하는 경우에 이 equivalence를 서술한 것이며, 그 직후의 논의가 이를 일반적인 square-zero extension으로 확장한다. Obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
+
+이 글의 first-order deformation은 $A'=A[\epsilon]$인 특수한 경우이다. 이때 $M_C\cong C$이고 extension이 split이므로 trivial deformation $C[\epsilon]=C\otimes_AA[\epsilon]$이 항상 존재하여 해당 obstruction class는 자동으로 $0$이다. 따라서 이 trivial deformation을 기준점으로 삼으면 [정리 5](#thm5){: data-relation="weak" }에 따라 first-order deformation들의 isomorphism class는 $T^1(C/A,C)$과 자연스럽게 대응하며 trivial deformation은 $0$에 대응하고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,C)$이 분류한다.
 
 이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 자료와 obstruction이 나타나는지 밝히고 이들이 하나의 대역적 $\Ext$로 조립되는 과정을 정리한다.
 
