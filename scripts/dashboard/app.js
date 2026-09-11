@@ -284,6 +284,12 @@ function alertsOf(d) {
   if (sys.jekyll !== 'active') out.push({ level: 'bad', text: 'Jekyll dev 서버가 ' + sys.jekyll, to: 'activity' });
   if (sys.mem && /hit_cap=[1-9]/.test(sys.mem)) out.push({ level: 'warn', text: 'Jekyll 메모리 cap 도달 이력', sub: sys.mem.trim(), to: 'activity' });
   if (sys.quota && sys.quota.weekly >= .9) out.push({ level: 'warn', text: '주간 쿼터 ' + Math.round(sys.quota.weekly * 100) + '% — 워커가 스킵될 수 있다', to: 'activity' });
+  var la = d.link_audit;
+  if (la && la.held.length) out.push({
+    level: 'warn', text: '의존성 링크 판정 불일치 ' + la.held.length + '건',
+    sub: la.ready ? '그중 ' + la.ready + '건은 태그를 달았으니 체크만 하면 된다'
+      : '1차와 2차가 갈려 태그가 빠진 링크 — 글에서 직접 정한다', to: 'audit'
+  });
   if (s.missing_en) out.push({ level: 'warn', text: '발행글 중 EN 없음 ' + s.missing_en + '건', to: 'audit' });
   if (s.orphan_en) out.push({ level: 'warn', text: '고아 EN(ko 없음) ' + s.orphan_en + '건', to: 'audit' });
   if (g && g.actionable) {
@@ -755,6 +761,71 @@ function secTranslation(d) {
   return s;
 }
 
+/* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 태그를 떼어
+   둔 상태라 그 링크는 의존성 그래프에서 빠져 있다. 판정은 사용자가 글에 직접 쓰고,
+   체크는 그 태그가 파일에 있는지 서버가 확인한 뒤 목록에서 빼는 일만 한다. */
+function linkAuditBlock(d) {
+  var a = d.link_audit || { held: [], ready: 0, settled: 0 };
+  var wrap = el('div');
+  wrap.appendChild(el('h3', null, '의존성 링크 보류 — ' + a.held.length + '건'));
+  if (!a.held.length) {
+    wrap.appendChild(el('p', 'hint', '1차와 2차 판정이 갈린 링크가 없다.'));
+    return wrap;
+  }
+  var err = el('p', 'hint', '');
+  err.style.color = 'var(--bad)';
+  wrap.appendChild(table(['위치', '판정', { label: '해소', num: true }],
+    a.held.map(function (k) {
+      var tr = row([
+        { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) +
+                '</span><span class="muted">:' + k.line + '</span>' },
+        { html: esc(k.old || '—') + ' <span class="muted">→</span> ' + esc(k.new) +
+                ' <span class="muted">(' + esc(k.verifier) + ')</span>' },
+        { html: '<input type="checkbox" class="hold-chk"' +
+                (k.verdict ? '' : ' title="글에 태그를 단 뒤 체크한다"') + '>', cls: 'num' }
+      ], 'clickable' + (k.verdict ? '' : ' typo-pending'));
+      tr.onclick = function () {
+        openModal('의존성 링크 — ' + k.path + ':' + k.line,
+          k.brief + '\n→ ' + k.target +
+          '\n\n1차 ' + (k.old || '—') + ' (' + (k.decided_by || '기록 없음') + ')' +
+          '\n2차 ' + k.new + ' (' + k.verifier + ')' +
+          '\n\n2차 근거: ' + (k.reason || '—') +
+          '\n\n글에서 이 링크에 {: data-relation="…" } 를 직접 달고 저장한 뒤 체크하면 ' +
+          '목록에서 빠진다. 체크는 판정이 아니라 확인이다.');
+      };
+      var chk = tr.querySelector('.hold-chk');
+      chk.onclick = function (e) { e.stopPropagation(); };
+      chk.onchange = function () {
+        if (!chk.checked) return;
+        chk.disabled = true;
+        err.textContent = '';
+        fetch(API + 'linkaudit/resolve', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+          body: JSON.stringify({ ident: k.ident })
+        })
+          .then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (v) {
+              if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
+              return v;
+            });
+          })
+          .then(function () { load(true); })
+          .catch(function (e) {
+            chk.disabled = false;
+            chk.checked = false;
+            err.textContent = k.path + ':' + k.line + ' — ' + (e.message || e);
+          });
+      };
+      return tr;
+    })));
+  wrap.appendChild(err);
+  wrap.appendChild(el('p', 'hint',
+    '태그를 단 것 ' + num(a.ready) + '건 · 지금까지 확정 ' + num(a.settled) + '건 · ' +
+    ago(a.mtime) + ' 갱신. 확정한 링크는 검증기가 다시 걸지 않는다.'));
+  return wrap;
+}
+
 /* ── 감사 ─────────────────────────────────────────────────────────────── */
 function secAudit(d) {
   var a = d.audit;
@@ -781,6 +852,7 @@ function secAudit(d) {
     left.appendChild(el('p', 'hint', a.scanned + '편 검사 · 이슈 있는 글 ' + a.posts_with_issues +
       '편 · ' + ago(a.mtime) + ' 갱신 (주간 cron, 일 05:00) · 행을 누르면 글·줄 단위 상세'));
   } else left.appendChild(el('p', 'hint', 'audit-report.md 없음'));
+  left.appendChild(linkAuditBlock(d));
   right.appendChild(el('h3', null, '번역 짝 맞춤'));
   right.appendChild(table(['항목', { label: '건수', num: true }], [
     row([{ text: '발행글 중 EN 없음' }, { text: num(d.stats.missing_en), cls: 'num' }]),

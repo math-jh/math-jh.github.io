@@ -8,6 +8,7 @@ import sys
 import tempfile
 import time
 import unittest
+from contextlib import ExitStack
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -47,7 +48,7 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             return {"items": [row("b")]}
 
         result = dc.request_complete_results(
-            self.items, review=False, stage="test",
+            self.items, mode="first", stage="test",
             attempts=[("primary", primary), ("fallback", fallback)],
         )
 
@@ -70,7 +71,7 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             return {"items": [row("b"), row("c")]}
 
         result = dc.request_complete_results(
-            self.items, review=False, stage="test",
+            self.items, mode="first", stage="test",
             attempts=[("primary", primary), ("fallback", fallback), ("final", final)],
         )
 
@@ -94,7 +95,7 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
 
         with self.assertRaisesRegex(RuntimeError, "after provider chain"):
             dc.request_complete_results(
-                self.items, review=False, stage="test",
+                self.items, mode="first", stage="test",
                 attempts=[("primary", primary), ("fallback", fallback)],
             )
 
@@ -112,13 +113,13 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             patch.object(dc, "call_codex", return_value={"items": [row("a")]}) as codex,
             patch.object(dc, "provider_available", return_value=True),
         ):
-            decisions, ambiguous = dc.classify([link])
+            decisions, _by, ambiguous = dc.classify([link])
 
         self.assertEqual(decisions, {"a": "required"})
         self.assertEqual(ambiguous, [])
         self.assertEqual(agy.call_count, 1)
-        opus.assert_called_once_with([{"id": "a"}], review=False)
-        codex.assert_called_once_with([{"id": "a"}], review=False)
+        opus.assert_called_once_with([{"id": "a"}], mode="first")
+        codex.assert_called_once_with([{"id": "a"}], mode="first")
 
     def test_first_pass_stops_at_opus_when_escalation_succeeds(self) -> None:
         link = dc.Link("a", Path("unused"), 0, 0, "", "", "", None, None)
@@ -129,12 +130,12 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             patch.object(dc, "call_codex") as codex,
             patch.object(dc, "provider_available", return_value=True),
         ):
-            decisions, ambiguous = dc.classify([link])
+            decisions, _by, ambiguous = dc.classify([link])
 
         self.assertEqual(decisions, {"a": "required"})
         self.assertEqual(ambiguous, [])
         self.assertEqual(agy.call_count, 1)
-        opus.assert_called_once_with([{"id": "a"}], review=False)
+        opus.assert_called_once_with([{"id": "a"}], mode="first")
         codex.assert_not_called()
 
     def test_opus_review_falls_back_to_codex_not_antigravity(self) -> None:
@@ -148,19 +149,19 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             patch.object(dc, "call_codex", return_value=reviewed) as codex,
             patch.object(dc, "provider_available", return_value=True),
         ):
-            decisions, ambiguous = dc.classify([link])
+            decisions, _by, ambiguous = dc.classify([link])
 
         self.assertEqual(decisions, {"a": "required"})
         self.assertEqual(ambiguous, [])
-        agy.assert_called_once_with([{"id": "a"}], review=False)
+        agy.assert_called_once_with([{"id": "a"}], mode="first")
         self.assertEqual(opus.call_count, 1)
-        codex.assert_called_once_with([{"id": "a"}], review=True)
+        codex.assert_called_once_with([{"id": "a"}], mode="review")
 
     def test_codex_fallback_uses_multi_auth_read_only_structured_exec(self) -> None:
         def fake_run(argv: list[str], **kwargs):
             self.assertEqual(argv[0], dc.CODEX_BIN)
             self.assertEqual(dc.CODEX_BIN, str(Path.home() / ".npm-global/bin/codex-multi-auth-codex"))
-            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-luna")
+            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-sol")
             self.assertIn('model_reasoning_effort="medium"', argv)
             self.assertIn("--sandbox", argv)
             self.assertEqual(argv[argv.index("--sandbox") + 1], "read-only")
@@ -175,22 +176,22 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
             return SimpleNamespace(returncode=0, stderr="")
 
         with patch.object(dc.subprocess, "run", side_effect=fake_run):
-            result = dc.call_codex([{"id": "a"}], review=False)
+            result = dc.call_codex([{"id": "a"}], mode="first")
 
         self.assertEqual(result, {"items": [row("a")]})
 
-    def test_codex_review_uses_terra_medium(self) -> None:
+    def test_codex_review_uses_sol_medium(self) -> None:
         reviewed = {"id": "a", "relation": "required", "reason": "test"}
 
         def fake_run(argv: list[str], **kwargs):
-            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-terra")
+            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-sol")
             self.assertIn('model_reasoning_effort="medium"', argv)
             output_path = Path(argv[argv.index("--output-last-message") + 1])
             output_path.write_text(json.dumps({"items": [reviewed]}), encoding="utf-8")
             return SimpleNamespace(returncode=0, stderr="")
 
         with patch.object(dc.subprocess, "run", side_effect=fake_run):
-            result = dc.call_codex([{"id": "a"}], review=True)
+            result = dc.call_codex([{"id": "a"}], mode="review")
 
         self.assertEqual(result, {"items": [reviewed]})
 
@@ -262,6 +263,7 @@ class ParallelStateTest(unittest.TestCase):
                 patch.object(dc, "STATE_DIR", root),
                 patch.object(dc, "STATE_PATH", state_path),
                 patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
+            patch.object(dc, "HOLDS_PATH", root / "holds.json"),
             ):
                 dc.merge_unit_states({"ko-a+en-a": {"status": "done"}})
                 dc.merge_unit_states({"ko-b+en-b": {"status": "error"}})
@@ -287,15 +289,17 @@ class SelectionTest(unittest.TestCase):
             updates: dict[str, dict] = {}
             with (
                 patch.object(dc, "ROOT", root),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [ko, en]),
                 patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _text: [link] if p == ko_path else []),
+                patch.object(dc, "extract_links", side_effect=lambda p, _text, tagged=False: [] if tagged else ([link] if p == ko_path else [])),
             ):
                 selected = dc.select_unit({}, updates)
 
             self.assertIsNotNone(selected)
-            paths, _texts, links, lease = selected
+            stage, paths, _texts, links, lease = selected
+            self.assertEqual(stage, "first")
             try:
                 self.assertEqual(paths, [ko_path, en_path])
                 self.assertEqual(links, [link])
@@ -321,12 +325,13 @@ class RetryRoundTest(unittest.TestCase):
             patch.object(dc, "STATE_DIR", root),
             patch.object(dc, "STATE_PATH", state_path),
             patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
+            patch.object(dc, "HOLDS_PATH", root / "holds.json"),
             patch.object(dc, "_POSTS", [post]),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
-            patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+            patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
             patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
-                seen.append(rnd), ({}, [{"id": link.ident, "reason": "unclear"}]))[1]),
+                seen.append(rnd), ({}, {}, [{"id": link.ident, "reason": "unclear"}]))[1]),
         ):
             dc.process_once()
 
@@ -355,10 +360,11 @@ class RetryRoundTest(unittest.TestCase):
             # Exhausted units stay out of the queue while their content is unchanged.
             with (
                 patch.object(dc, "ROOT", root),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
             ):
                 self.assertIsNone(dc.select_unit(saved, {}))
 
@@ -366,14 +372,15 @@ class RetryRoundTest(unittest.TestCase):
             path.write_text("ko body + new link", encoding="utf-8")
             with (
                 patch.object(dc, "ROOT", root),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
             ):
                 selected = dc.select_unit(saved, {})
             self.assertIsNotNone(selected)
-            selected[3].release()
+            selected[4].release()
 
     def test_legacy_ambiguous_entry_resumes_at_full_article_round(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -432,9 +439,10 @@ class BacklogCompletionTest(unittest.TestCase):
             with (
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "STATE_PATH", state_path),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
             ):
                 self.assertTrue(dc.backlog_complete())
                 path.write_text("ko body + new link", encoding="utf-8")
@@ -443,3 +451,245 @@ class BacklogCompletionTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+BODY = (
+    "---\ntitle: t\n---\n\n"
+    "첫 문단.\n\n"
+    "본문에서 [가](/ko/math/a){: data-relation=\"required\" } 를 쓰고\n"
+    "[나](/ko/math/b){: .x data-relation=\"weak\" } 도 쓰고 [다](/ko/math/c) 는 아직이다.\n"
+)
+
+
+class RelationTagTest(unittest.TestCase):
+    """Both sides of the relation tag, and the ident that spans them."""
+
+    def links(self, path: Path, text: str, *, tagged: bool) -> list:
+        post = SimpleNamespace(lang="ko", published=True, path=path)
+        with (
+            patch.object(dc, "ROOT", path.parents[4]),
+            patch.object(dc, "by_permalink", return_value=post),
+        ):
+            return dc.extract_links(path, text, tagged=tagged)
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.path = self.root / "_posts/Math/Test/ko/draft.md"
+        self.path.parent.mkdir(parents=True)
+        self.path.write_text(BODY, encoding="utf-8")
+        self.addCleanup(self.tmp.cleanup)
+
+    def test_tagged_and_untagged_sides_are_complementary(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        untagged = self.links(self.path, BODY, tagged=False)
+
+        self.assertEqual([x.relation for x in tagged], ["required", "weak"])
+        self.assertEqual([x.target for x in untagged], ["/ko/math/c"])
+
+    def test_line_numbers_count_markdown_lines(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        lines = BODY.splitlines()
+
+        self.assertIn("[가]", lines[tagged[0].line - 1])
+        self.assertIn("[나]", lines[tagged[1].line - 1])
+
+    def test_ident_survives_stripping_the_tag(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        stripped = dc.strip_relations(BODY, tagged)
+        reread = self.links(self.path, stripped, tagged=False)
+
+        self.assertNotIn("data-relation", stripped)
+        self.assertEqual([x.ident for x in tagged], [x.ident for x in reread[:2]])
+
+    def test_stripping_keeps_other_attributes_and_drops_empty_ial(self) -> None:
+        stripped = dc.strip_relations(BODY, self.links(self.path, BODY, tagged=True))
+
+        self.assertIn("[가](/ko/math/a) 를 쓰고", stripped)
+        self.assertIn("[나](/ko/math/b){: .x }", stripped)
+
+    def test_verify_excerpts_carry_no_relation_to_anchor_on(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        post = SimpleNamespace(lang="ko", published=True, path=self.path)
+        dc._TEXT_OVERRIDE[self.path] = dc.strip_relations(BODY, tagged)
+        try:
+            with (
+                patch.object(dc, "ROOT", self.root),
+                patch.object(dc, "by_permalink", return_value=post),
+            ):
+                items = dc.prompt_items(tagged, True)
+        finally:
+            dc._TEXT_OVERRIDE.clear()
+
+        for item in items:
+            self.assertNotIn("data-relation", item["source_context"])
+            self.assertNotIn("data-relation", item["target_context"])
+
+
+class VerifierRoutingTest(unittest.TestCase):
+    def test_each_model_is_checked_by_a_different_one(self) -> None:
+        self.assertEqual(dc.verifier_chain("Codex"), ("Claude Opus",))
+        self.assertEqual(dc.verifier_chain("Claude Opus"), ("Codex",))
+
+    def test_antigravity_and_unrecorded_deciders_use_the_review_order(self) -> None:
+        self.assertEqual(dc.verifier_chain("Antigravity"), ("Claude Opus", "Codex"))
+        self.assertEqual(dc.verifier_chain(None), ("Claude Opus", "Codex"))
+
+    def test_links_are_grouped_by_the_chain_that_owes_them_a_check(self) -> None:
+        a = dc.Link("a", Path("x"), 0, 0, "", "", "", None, None)
+        b = dc.Link("b", Path("x"), 0, 0, "", "", "", None, None)
+        c = dc.Link("c", Path("x"), 0, 0, "", "", "", None, None)
+        groups = dc.verify_groups([a, b, c], {"a": "Codex", "b": "Claude Opus"})
+
+        self.assertEqual(groups[("Claude Opus",)], [a])
+        self.assertEqual(groups[("Codex",)], [b])
+        self.assertEqual(groups[("Claude Opus", "Codex")], [c])
+
+
+TAGGED_BODY = (
+    "---\ntitle: t\n---\n\n"
+    "첫 문단.\n\n"
+    "본문에서 [가](/ko/math/a){: data-relation=\"required\" } 를 쓰고\n"
+    "[나](/ko/math/b){: data-relation=\"weak\" } 도 쓴다.\n"
+)
+
+
+class VerificationPassTest(unittest.TestCase):
+    """The second opinion either confirms the tag or takes it off."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.path = self.root / "_posts/Math/Test/ko/draft.md"
+        self.path.parent.mkdir(parents=True)
+        self.path.write_text(TAGGED_BODY, encoding="utf-8")
+        self.state_path = self.root / "state.json"
+        self.holds_path = self.root / "holds.json"
+        self.post = SimpleNamespace(lang="ko", published=True, path=self.path)
+        with patch.object(dc, "ROOT", self.root):
+            self.key = dc.unit_key([self.path])
+            self.idents = [x.ident for x in self.tagged()]
+
+    def tagged(self) -> list:
+        with (
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "by_permalink", return_value=self.post),
+        ):
+            return dc.extract_links(
+                self.path, self.path.read_text(encoding="utf-8"), tagged=True)
+
+    def write_state(self, entry: dict) -> None:
+        self.state_path.write_text(
+            json.dumps({"units": {self.key: entry}}), encoding="utf-8")
+
+    def tick(self, verdicts: dict[str, str], also: tuple = ()):
+        def answer(items, *, mode):
+            return {"items": [{"id": item["id"], "relation": verdicts[item["id"]],
+                               "reason": "test"} for item in items]}
+
+        patches = [
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "STATE_DIR", self.root),
+            patch.object(dc, "STATE_PATH", self.state_path),
+            patch.object(dc, "STATE_LOCK_PATH", self.root / "state.lock"),
+            patch.object(dc, "HOLDS_PATH", self.holds_path),
+            patch.object(dc, "HOLDS_LOCK_PATH", self.root / "holds.lock"),
+            patch.object(dc, "COMPLETE_PATH", self.root / "complete.json"),
+            patch.object(dc, "_POSTS", [self.post]),
+            patch.object(dc, "by_permalink", return_value=self.post),
+            patch.object(dc, "en_counterpart", return_value=None),
+            patch.object(dc, "dirty_paths", return_value=[]),
+            patch.object(dc, "hard_lint", return_value=set()),
+            patch.object(dc, "is_local_only_untracked_unit", return_value=False),
+            patch.object(dc, "commit_outputs", return_value=True),
+            patch.object(dc, "provider_available", return_value=True),
+        ]
+        named = {
+            "opus": patch.object(dc, "call_opus", side_effect=answer),
+            "codex": patch.object(dc, "call_codex", side_effect=answer),
+            "agy": patch.object(dc, "call_antigravity", side_effect=answer),
+            "notify": patch.object(dc, "notify"),
+        }
+        with ExitStack() as stack:
+            for item in patches:
+                stack.enter_context(item)
+            mocks = {name: stack.enter_context(item) for name, item in named.items()}
+            # `also` goes in last so a test can narrow something the base set opened.
+            for item in also:
+                stack.enter_context(item)
+            rc = dc.process_once()
+        return SimpleNamespace(rc=rc, **mocks)
+
+    def entry(self) -> dict:
+        return json.loads(self.state_path.read_text(encoding="utf-8"))["units"][self.key]
+
+    def holds(self) -> dict:
+        return json.loads(self.holds_path.read_text(encoding="utf-8"))
+
+    def test_agreement_leaves_the_file_alone_and_closes_the_unit(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+                          "decided_by": {self.idents[0]: "Codex",
+                                         self.idents[1]: "Claude Opus"}})
+        run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
+
+        self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
+        self.assertEqual(self.entry()["verify"], "agreed")
+        self.assertEqual(self.entry()["verified_hash"], dc.sha(TAGGED_BODY))
+        self.assertFalse(self.holds_path.exists())
+        run.notify.assert_not_called()
+
+    def test_each_link_goes_to_the_model_that_did_not_decide_it(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+                          "decided_by": {self.idents[0]: "Codex",
+                                         self.idents[1]: "Claude Opus"}})
+        run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
+
+        run.agy.assert_not_called()
+        self.assertEqual([item["id"] for item in run.opus.call_args[0][0]], [self.idents[0]])
+        self.assertEqual([item["id"] for item in run.codex.call_args[0][0]], [self.idents[1]])
+
+    def test_disagreement_strips_the_tag_holds_the_link_and_notifies(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+                          "decided_by": {self.idents[0]: "Codex",
+                                         self.idents[1]: "Claude Opus"}})
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+        body = self.path.read_text(encoding="utf-8")
+
+        self.assertIn("[가](/ko/math/a) 를 쓰고", body)
+        self.assertIn('[나](/ko/math/b){: data-relation="weak" }', body)
+        held = self.holds()["held"][self.idents[0]]
+        self.assertEqual(held["old"], "required")
+        self.assertEqual(held["new"], "weak")
+        self.assertEqual(held["path"], "_posts/Math/Test/ko/draft.md")
+        self.assertEqual(body.splitlines()[held["line"] - 1].count("[가]"), 1)
+        run.notify.assert_called_once()
+        self.assertEqual(self.entry()["verify"], "disputed")
+
+    def test_ambiguous_is_held_the_same_way(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "ambiguous", self.idents[1]: "weak"})
+
+        self.assertEqual(self.holds()["held"][self.idents[0]]["new"], "ambiguous")
+        self.assertNotIn(self.idents[1], self.holds()["held"])
+
+    def test_a_held_link_is_invisible_to_both_stages(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+
+        self.assertEqual(run.opus.call_count, 0)
+        self.assertEqual(run.agy.call_count, 0)
+        self.assertEqual(len(self.holds()["held"]), 1)
+
+    def test_a_closed_verifier_leaves_the_unit_for_a_later_tick(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+                          "decided_by": {self.idents[0]: "Claude Opus",
+                                         self.idents[1]: "Claude Opus"}})
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"},
+                        also=(patch.object(dc, "provider_available",
+                                           side_effect=lambda p: p != "Codex"),))
+
+        self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
+        self.assertNotIn("verified_hash", self.entry())
+        run.notify.assert_not_called()

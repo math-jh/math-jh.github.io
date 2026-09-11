@@ -1,8 +1,8 @@
 # scripts/dashboard — 블로그 운영 대시보드
 
 `https://preview.math-jh.com/dash/`. 미발행 글 현황·워커 상태·파이프라인·번역 큐·감사·색인·활동을
-한자리에서 본다. 레포에는 아무것도 쓰지 않는다 (쓰기는 `~/.local/state` 의 상태 파일 셋뿐:
-kotypo 체크·검토 판정과 메모·비교기 판본 선택).
+한자리에서 본다. 레포에는 아무것도 쓰지 않는다 (쓰기는 `~/.local/state` 의 상태 파일 넷뿐:
+kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링크 보류 원장).
 
 ## 구성
 
@@ -127,11 +127,29 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택).
 | `/api/compare/instructions[?path=]` | 메모·판정을 붙여 쓸 수 있는 작업 지시서 (평문) |
 | `/api/compare/macros?v=<sha\|worktree>` | 그 판본의 `katex-macros.js` |
 | `/api/review` (POST) | 검토 판정·메모 — **항목 단위 병합** 저장 (kotypo 처럼 통째 교체하지 않는다). `kind`: `item`·`post`·`note`·`note-del`·`note-done` |
+| `/api/linkaudit/resolve` (POST) | 의존성 링크 보류 한 건(`ident`) 해소 — 아래 참고 |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
 `scripts/index-monitor/state-com.json`, GitHub의 열린 `comment/*` PR, `git log`,
 `systemctl --user is-active jekyll-blog`, `~/Projects/hud-display/state/claude_quota.json`.
+
+## 의존성 링크 보류 (`#audit` 의 '의존성 링크 보류')
+
+의존성 링크 분류기는 한 링크를 두 번 판정한다 — 1차 분류 뒤, 태그를 가리고 **다른 모델**이
+다시 분류한다. 둘이 갈리거나 2차가 ambiguous 를 내면 분류기가 **그 링크의
+`data-relation` 을 떼고** `~/.local/state/dependency-classifier-holds.json` 에 올린 뒤
+notify 한 통을 보낸다. 태그가 없으니 그 링크는 의존성 그래프에서 빠져 있고, 분류기는
+보류 중인 링크를 1차·2차 어느 쪽에서도 다시 고르지 않는다.
+
+판정은 사람이 글에 직접 쓴다. 글의 그 링크 뒤에 `{: data-relation="…" }` 를 달고 저장한
+다음 목록에서 체크하면, 서버가 **그 태그가 실제로 파일에 있는지 확인한 뒤** 항목을
+`settled` 로 옮긴다 (없으면 거절하고 이유를 띄운다). `settled` 에 오른 링크는 검증기가
+다시 걸지 않는다 — 사람 판정을 모델이 뒤집지 못하게 하는 자리다. 커밋·push 는 autopush
+소관이고 번역 라인은 타지 않는다.
+
+원장은 분류기와 공유하므로 쓰기는 `/tmp/dependency-classifier-holds.lock` flock 아래에서만
+한다. 통째로 덮으면 그 사이 워커가 붙인 보류가 에러 없이 사라진다.
 
 ## 손볼 때 알아야 할 것
 

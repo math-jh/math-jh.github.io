@@ -12,10 +12,13 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
     GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
+    POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (사람이 단 태그를 확인)
 
-레포에는 아무것도 쓰지 않는다 — 쓰기는 두 상태 파일뿐이다:
-~/.local/state/blog_dashboard_kotypo.json 과 …_review.json.
+레포에는 아무것도 쓰지 않는다 — 쓰기는 세 상태 파일뿐이다:
+~/.local/state/blog_dashboard_kotypo.json · …_review.json ·
+dependency-classifier-holds.json.
 """
+import fcntl
 import json
 import os
 import re
@@ -37,6 +40,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 STATE = os.path.expanduser("~/.local/state")
 KOTYPO_STATE = f"{STATE}/blog_dashboard_kotypo.json"
+# 의존성 링크 분류기와 공유하는 보류 원장. 쓰기는 같은 flock 으로 직렬화한다 —
+# 워커가 새 보류를 붙이는 중에 통째로 덮으면 그 건은 에러 없이 사라진다.
+HOLDS_STATE = f"{STATE}/dependency-classifier-holds.json"
+HOLDS_LOCK = "/tmp/dependency-classifier-holds.lock"
 QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
 CACHE_TTL = 45
@@ -478,6 +485,77 @@ def sec_translation():
                 ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
 
 
+# 사람이 손으로 단 관계 태그. 링크 바로 뒤에 붙은 IAL 안에만 인정한다.
+_REL_IAL = re.compile(r'\{:[^}\n]*data-relation\s*=\s*["\'](required|weak|forward)["\']')
+
+
+def load_holds():
+    try:
+        with open(HOLDS_STATE, encoding="utf-8") as f:
+            value = json.load(f)
+    except (OSError, ValueError):
+        value = {}
+    if not isinstance(value, dict):
+        value = {}
+    for section in ("held", "settled"):
+        if not isinstance(value.get(section), dict):
+            value[section] = {}
+    return value
+
+
+def hold_verdict(item):
+    """보류된 링크에 사람이 내린 판정. 아직 안 달았으면 None.
+
+    분류기가 태그를 떼어 둔 상태이므로, 같은 링크 문구가 전부 data-relation 을
+    달고 있을 때만 해소로 본다. 링크 자체가 사라졌으면 'gone'.
+    """
+    rel = item.get("path") or ""
+    full = os.path.normpath(os.path.join(ROOT, rel))
+    if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+        return None
+    try:
+        with open(full, encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return None
+    markup = item.get("markup") or ""
+    if not markup or markup not in text:
+        return "gone"
+    seen, pos = [], 0
+    while True:
+        at = text.find(markup, pos)
+        if at < 0:
+            break
+        m = _REL_IAL.match(text, at + len(markup))
+        if not m:
+            return None
+        seen.append(m.group(1))
+        pos = at + len(markup)
+    return seen[0]
+
+
+def sec_link_audit():
+    """의존성 링크 분류의 1차 ↔ 2차 불일치로 태그가 빠진 링크."""
+    holds = load_holds()
+    items = []
+    for ident, item in holds["held"].items():
+        # 라벨은 한 줄이 아닐 수 있다 — 링크 정규식이 escape 된 `\[` 를 여는 괄호로
+        # 읽어 다음 링크까지의 본문을 통째로 삼킨 경우다. 표시는 잘라서 한다.
+        flat = " ".join((item.get("markup") or "").split())
+        items.append(dict(
+            ident=ident, path=item.get("path", ""), line=item.get("line", 0),
+            brief=flat if len(flat) <= 90 else flat[:87] + "…",
+            target=item.get("target", ""),
+            old=item.get("old"), new=item.get("new"),
+            reason=item.get("reason", ""), verifier=item.get("verifier", ""),
+            decided_by=item.get("decided_by", ""), at=item.get("at", 0),
+            verdict=hold_verdict(item),
+        ))
+    items.sort(key=lambda x: (x["verdict"] is None, x["path"], x["line"]))
+    return dict(held=items, settled=len(holds["settled"]),
+                ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE))
+
+
 def sec_comment_prs():
     """승인 대기 중인 `comment/*` PR을 GitHub에서 직접 센다."""
     rc, out, err = run([
@@ -698,6 +776,7 @@ def build_summary():
         translation=sec_translation(),
         comment_prs=sec_comment_prs(),
         audit=sec_audit(),
+        link_audit=sec_link_audit(),
         gsc=sec_gsc(),
         git=sec_git(),
         system=sec_system(),
@@ -937,7 +1016,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
         if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume",
-                        "/api/cron/force-resume",
+                        "/api/cron/force-resume", "/api/linkaudit/resolve",
                         "/api/review", "/api/compare/snapshot",
                         "/api/compare/snapshot-delete", "/api/compare/prefs"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
@@ -958,6 +1037,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._snapshot_action(path)
         if path == "/api/review":
             return self._review()
+        if path == "/api/linkaudit/resolve":
+            return self._linkaudit_resolve()
         if path != "/api/kotypo":
             return self._cron_action(path)
         # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
@@ -1048,6 +1129,48 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
         return self._send(200, json.dumps({"ok": True, "state": state},
+                                          ensure_ascii=False))
+
+    def _linkaudit_resolve(self):
+        """보류 한 건을 해소 — 사람이 단 태그를 파일에서 확인한 뒤에만 지운다.
+
+        체크가 곧 판정이 아니다. 판정은 사용자가 글에 직접 써 넣은 data-relation
+        이고, 여기서는 그게 실제로 디스크에 있는지 보고 원장에서 그 항목을 뺀다.
+        빠진 항목은 settled 로 옮긴다 — 검증기는 그 링크를 다시 걸지 않는다.
+        """
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 4096:
+                raise ValueError
+            ident = json.loads(self.rfile.read(n).decode("utf-8") or "{}").get("ident")
+            if not isinstance(ident, str) or not ident:
+                raise ValueError("bad ident")
+        except Exception as e:  # noqa: BLE001
+            return self._send(400, json.dumps({"ok": False, "error": str(e)},
+                                              ensure_ascii=False))
+        with open(HOLDS_LOCK, "w") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            holds = load_holds()
+            item = holds["held"].get(ident)
+            if item is None:
+                return self._send(200, json.dumps(
+                    {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
+            verdict = hold_verdict(item)
+            if verdict is None:
+                return self._send(200, json.dumps(
+                    {"ok": False, "error": "그 링크에 아직 data-relation 태그가 없다"},
+                    ensure_ascii=False))
+            holds["held"].pop(ident)
+            holds["settled"][ident] = {
+                "path": item.get("path", ""), "target": item.get("target", ""),
+                "relation": verdict, "at": int(time.time()),
+            }
+            tmp = f"{HOLDS_STATE}.tmp"
+            with open(tmp, "w", encoding="utf-8") as f:
+                json.dump(holds, f, ensure_ascii=False, indent=2)
+            os.replace(tmp, HOLDS_STATE)
+        _cache["ts"] = 0
+        return self._send(200, json.dumps({"ok": True, "relation": verdict},
                                           ensure_ascii=False))
 
     def _cron_action(self, path):
