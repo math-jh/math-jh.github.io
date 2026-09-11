@@ -98,7 +98,7 @@ Homomorphism $f:G\rightarrow G'$의 *kernel<sub>핵</sub>*을 집합 $f^{-1}(e')
 정의에 의해 $\ker f=\Eq(f,e)$이다.
 :::
 
-한편, 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 image $\im f$이 $A'$의 부분마그마가 되는 것을 확인했다. ([§대수적 구조, ⁋정의 8](/ko/math/algebraic_structures/algebraic_structures#def8){: data-relation="required" } 이전의 계산) 그러나 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
+한편, 우리는 임의의 magma homomorphism $f:A\rightarrow A'$이 주어졌을 때, 그 image $\im f$이 $A'$의 부분마그마가 되는 것을 확인했다. ([§대수적 구조, ⁋정의 8](/ko/math/algebraic_structures/algebraic_structures#def8) 이전의 계산) 그러나 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
 
 ::: 명제 6
 임의의 homomorphism $f:G\rightarrow G'$에 대하여, $\im f$는 $G'$의 subgroup이다.
