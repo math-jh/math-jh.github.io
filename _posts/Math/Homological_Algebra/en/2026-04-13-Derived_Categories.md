@@ -149,7 +149,7 @@ Let a quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$ be given, and let 
 
 As a concrete example, the Hom functor $\Hom(-, B)$ on $\mathcal{A}$ is a contravariant left exact functor; deriving it yields the derived Hom $R\Hom$ at the complex level, and the cohomology of $R\Hom(A, B)$ coincides with $\Ext^i(A, B)$.
 
-::: Proposition 10
+::: Proposition 11
 Let $\mathcal{A}$ be an abelian category with enough injectives. Then for all $A, B \in \mathcal{A}$,
 
 $$H^{i}(R\Hom(A, B)) \cong \Ext^i(A, B)$$
@@ -170,7 +170,7 @@ Similarly, one can define the left derived functor of the tensor product as $L(A
 
 The derived category $D(\mathcal{A})$ is not merely a category; it carries the structure of a *triangulated category*. This structure plays the role in the derived category that short exact sequences play in an abelian category.
 
-::: Definition 11
+::: Definition 12
 A *triangulated category* is an additive category $(\mathcal{T}, [1], \mathcal{S})$ equipped with the following structure.
 
 1. A *shift functor* $[1] : \mathcal{T} \rightarrow \mathcal{T}$, where $[0] = \id$ and $[n+1] = [1] \circ [n]$.
@@ -197,7 +197,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C(f) \overset{h}{\righta
 
 . Here $g : B^i \rightarrow C(f)^i = B^i \oplus A^{i+1}$ is given by $b \mapsto (b, 0)$, and $h : C(f)^i \rightarrow A[1]^i = A^{i+1}$ is given by $(b, a) \mapsto a$.
 
-::: Proposition 12
+::: Proposition 13
 $R F : D^+(\mathcal{A}) \rightarrow D^+(\mathcal{B})$ is a triangulated functor; that is, given a distinguished triangle
 
 $$A \rightarrow B \rightarrow C \rightarrow A[1]$$
@@ -216,7 +216,7 @@ View $A \rightarrow B$ as a map and let $I_A^\bullet$ and $I_B^\bullet$ be their
 
 In category theory, adjunction is one of the most important relationships between two functors. Adjunction also holds in the derived category, and is called *derived adjunction*. Derived adjunction $L F \dashv R G$ lifts an ordinary adjoint relationship to the derived category; even when $F$ and $G$ are not exact, the correctly computed results via resolutions still form an adjoint pair. Naively applying $F$ or $G$ may break exactness and produce incorrect homology, but using the derived version resolves this problem while preserving the original adjoint structure.
 
-::: Proposition 13
+::: Proposition 14
 Let additive functors $F : \mathcal{A} \rightarrow \mathcal{B}$ (right exact) and $G : \mathcal{B} \rightarrow \mathcal{A}$ (left exact) between abelian categories $\mathcal{A}, \mathcal{B}$ form an adjoint pair $F \dashv G$. Then in the derived category
 
 $$L F : D^-(\mathcal{A}) \rightarrow D^-(\mathcal{B}), \qquad R G : D^+(\mathcal{B}) \rightarrow D^+(\mathcal{A})$$
@@ -243,13 +243,13 @@ is one where we might wish to obtain an isomorphism of the same form for complex
 
 To see this concretely, consider $R = \mathbb{Z}$ and $M = \mathbb{Z}/n\mathbb{Z}$. Since $M$ is not flat, tensoring is not exact. Applying $-\otimes M$ to $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$ breaks exactness; specifically, since $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$ exists, the naive adjunction does not work as expected. ([§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-relation="required" })
 
-To resolve this exactness failure we construct $\otimes^L$ and $R\Hom$ using projective resolutions, and by [Proposition 13](#prop13){: data-relation="required" } the adjunction is restored. Specifically, $A \otimes^L B$ is obtained by applying $-\otimes B$ to a projective resolution of $A$, and $R\Hom(B, C)$ is obtained by applying $\Hom(-, C)$ to a projective resolution of $B$. This yields
+To resolve this exactness failure we construct $\otimes^L$ and $R\Hom$ using projective resolutions, and by [Proposition 14](#prop14){: data-relation="required" } the adjunction is restored. Specifically, $A \otimes^L B$ is obtained by applying $-\otimes B$ to a projective resolution of $A$, and $R\Hom(B, C)$ is obtained by applying $\Hom(-, C)$ to a projective resolution of $B$. This yields
 
 $$\Hom_{D(\mathcal{A})}(A \otimes^L B, C) \cong \Hom_{D(\mathcal{A})}(A, R\Hom(B, C))$$
 
 . In the process of taking a projective resolution, the $\Tor$ information lost by $-\otimes B$ and the $\Ext$ information lost by $\Hom(B,-)$ are preserved in the higher degrees of the complex, and one can verify that the two sides agree by computing chain maps.
 
-In summary, the classical adjunction in an abelian category exists at the underived level, but it does not automatically survive localization with respect to quasi-isomorphisms. Because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact, quasi-isomorphisms are not preserved, and consequently the naive adjunction breaks. This failure of exactness is resolved by constructing $\otimes^L$ and $R\Hom$ via resolutions, and the derived adjunction guaranteed by [Proposition 13](#prop13){: data-relation="required" } precisely replaces the classical adjunction.
+In summary, the classical adjunction in an abelian category exists at the underived level, but it does not automatically survive localization with respect to quasi-isomorphisms. Because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact, quasi-isomorphisms are not preserved, and consequently the naive adjunction breaks. This failure of exactness is resolved by constructing $\otimes^L$ and $R\Hom$ via resolutions, and the derived adjunction guaranteed by [Proposition 14](#prop14){: data-relation="required" } precisely replaces the classical adjunction.
 
 ---
 

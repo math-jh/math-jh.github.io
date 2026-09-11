@@ -148,7 +148,7 @@ For a proper morphism $f \colon X \rightarrow Y$ and a coherent sheaf $\mathcal{
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-Here $R\mathcal{H}om$ is derived Hom ([[Homological Algebra] §Derived Categories, ⁋Proposition 10](/en/math/homological_algebra/derived_categories#prop10)), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
+Here $R\mathcal{H}om$ is derived Hom ([[Homological Algebra] §Derived Categories, ⁋Proposition 11](/en/math/homological_algebra/derived_categories#prop11)), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
 :::
 
 Intuitively, this theorem says that 'Hom after pushforward' and 'pushforward after Hom' agree. That is, computing the Hom between $\mathcal{F}$ and $f^! \mathcal{G}$ on $X$ and then pushing down to $Y$ is the same as first pushing $\mathcal{F}$ down to $Y$ and then computing the Hom with $\mathcal{G}$.

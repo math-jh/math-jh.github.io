@@ -126,7 +126,7 @@ Ringed space $(X, \mathcal{O}_X)$ 위에서 다음을 정의한다.
 2. 고정된 complex $\mathcal{F}^\bullet$에 대해 left exact functor $\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, -)$의 right derived functor를 *derived sheaf-Hom<sub>유도 층 $\Hom$</sub>* $R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)$로 적는다. 이는 $\mathcal{G}^\bullet$의 injective resolution 위에서 계산한다.
 :::
 
-이 두 functor는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-relation="required" }에서 추상적으로 정의한 $R\Hom$과 $\otimes^L$의 sheaf 차원 버전이며, 같은 명제와 그 직후 서술에 의해 그 cohomology가 고전적 derived functor를 복원한다. 구체적으로 sheaf 차원에서
+이 두 functor는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-relation="required" }에서 추상적으로 정의한 $R\Hom$과 $\otimes^L$의 sheaf 차원 버전이며, 같은 명제와 그 직후 서술에 의해 그 cohomology가 고전적 derived functor를 복원한다. 구체적으로 sheaf 차원에서
 $$\mathcal{E}xt^i_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G}) = H^i(R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})), \qquad \mathcal{T}or^{\mathcal{O}_X}_i(\mathcal{F}, \mathcal{G}) = H^{-i}(\mathcal{F} \otimes^L_{\mathcal{O}_X} \mathcal{G})$$
 가 성립하며, 우변의 $\mathcal{E}xt$와 $\mathcal{T}or$는 sheaf-valued local derived functor이다. 한편 hom-tensor adjunction은 derived 차원으로 올라가서도 유지된다.
 
@@ -136,14 +136,14 @@ $$R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet \otimes^L_{\mathcal{O}_X} \
 이 성립한다.
 :::
 ::: 증명
-이는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13){: data-relation="required" }의 derived adjunction을 $F = (-) \otimes_{\mathcal{O}_X} \mathcal{G}^\bullet$ (right exact)와 $G = \mathcal{H}om_{\mathcal{O}_X}(\mathcal{G}^\bullet, -)$ (left exact)에 적용한 것이다. 미유도 차원에서 tensor-hom adjunction $\mathcal{H}om(\mathcal{A} \otimes \mathcal{G}, \mathcal{H}) \cong \mathcal{H}om(\mathcal{A}, \mathcal{H}om(\mathcal{G}, \mathcal{H}))$이 성립하고, $\mathcal{F}^\bullet$를 $K$-flat resolution으로, $\mathcal{H}^\bullet$를 $K$-injective resolution으로 대체하면 좌변과 우변이 각각 derived functor를 계산하면서 동형이 유지된다. 핵심은 $K$-flat complex와 $\mathcal{G}^\bullet$의 tensor가 다시 derived tensor를 올바르게 계산하고, $K$-injective complex로의 $\mathcal{H}om$이 derived sheaf-Hom을 올바르게 계산한다는 데 있다.
+이는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-relation="required" }의 derived adjunction을 $F = (-) \otimes_{\mathcal{O}_X} \mathcal{G}^\bullet$ (right exact)와 $G = \mathcal{H}om_{\mathcal{O}_X}(\mathcal{G}^\bullet, -)$ (left exact)에 적용한 것이다. 미유도 차원에서 tensor-hom adjunction $\mathcal{H}om(\mathcal{A} \otimes \mathcal{G}, \mathcal{H}) \cong \mathcal{H}om(\mathcal{A}, \mathcal{H}om(\mathcal{G}, \mathcal{H}))$이 성립하고, $\mathcal{F}^\bullet$를 $K$-flat resolution으로, $\mathcal{H}^\bullet$를 $K$-injective resolution으로 대체하면 좌변과 우변이 각각 derived functor를 계산하면서 동형이 유지된다. 핵심은 $K$-flat complex와 $\mathcal{G}^\bullet$의 tensor가 다시 derived tensor를 올바르게 계산하고, $K$-injective complex로의 $\mathcal{H}om$이 derived sheaf-Hom을 올바르게 계산한다는 데 있다.
 :::
 
 명제는 sheaf-Hom의 global section을 취하면 $R\Hom_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet) = R\Gamma(X, R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet))$의 형태로 global derived Hom과 연결되며, 그 cohomology가 sheaf의 $\Ext$-group $\Ext^i_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$를 준다. Local $\mathcal{E}xt$ sheaf와 global $\Ext$ group 사이의 관계는 $R\Gamma$를 사이에 끼운 composite functor의 spectral sequence, 즉 local-to-global $\Ext$ spectral sequence로 나타나는데, 이는 다음 절의 합성 정리의 한 사례이다.
 
 ## 유도 수반과 합성
 
-이제 derived category 차원에서 sheaf functor들이 이루는 adjunction을 정리한다. 미유도 차원의 adjoint pair $(f^{-1}, f_\ast)$와 $(f^\ast, f_\ast)$를 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13){: data-relation="required" }에 통과시키면 다음을 얻는다.
+이제 derived category 차원에서 sheaf functor들이 이루는 adjunction을 정리한다. 미유도 차원의 adjoint pair $(f^{-1}, f_\ast)$와 $(f^\ast, f_\ast)$를 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-relation="required" }에 통과시키면 다음을 얻는다.
 
 ::: 정리 9
 Continuous map $f: X \rightarrow Y$에 대해 다음의 derived adjunction이 성립한다.
@@ -156,7 +156,7 @@ $$\Hom_{D(\operatorname{Mod}(\mathcal{O}_X))}(Lf^\ast \mathcal{G}^\bullet, \math
 이 성립한다.
 :::
 ::: 증명
-두 경우 모두 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 13](/ko/math/homological_algebra/derived_categories#prop13){: data-relation="required" }의 직접 적용이다. 첫 번째 경우, $f^{-1}$은 exact (right exact)이고 $f_\ast$는 left exact이며 $(f^{-1}, f_\ast)$는 adjoint pair이다 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-relation="required" }). $f^{-1}$이 exact하므로 [명제 5](#prop5){: data-relation="required" }에 의해 $Lf^{-1} = f^{-1}$이고, 인용한 derived adjunction이 $Lf^{-1} = f^{-1}$과 $Rf_\ast$ 사이의 adjunction으로 환원된다. 두 번째 경우, $f^\ast$는 right exact이고 $f_\ast$는 left exact이며 $(f^\ast, f_\ast)$가 adjoint pair이므로 ([정의 6](#def6){: data-relation="required" } 직후), 같은 명제에 의해 $(Lf^\ast, Rf_\ast)$가 adjoint pair이다.
+두 경우 모두 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-relation="required" }의 직접 적용이다. 첫 번째 경우, $f^{-1}$은 exact (right exact)이고 $f_\ast$는 left exact이며 $(f^{-1}, f_\ast)$는 adjoint pair이다 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-relation="required" }). $f^{-1}$이 exact하므로 [명제 5](#prop5){: data-relation="required" }에 의해 $Lf^{-1} = f^{-1}$이고, 인용한 derived adjunction이 $Lf^{-1} = f^{-1}$과 $Rf_\ast$ 사이의 adjunction으로 환원된다. 두 번째 경우, $f^\ast$는 right exact이고 $f_\ast$는 left exact이며 $(f^\ast, f_\ast)$가 adjoint pair이므로 ([정의 6](#def6){: data-relation="required" } 직후), 같은 명제에 의해 $(Lf^\ast, Rf_\ast)$가 adjoint pair이다.
 :::
 
 이 adjunction은 sheaf 이론의 기본적인 functoriality를 derived 차원에서 한 줄로 정리한다. 특히 $f: X \rightarrow \{\ast\}$의 경우 [따름정리 3](#cor3){: data-relation="weak" }에 의해 $Rf_\ast = R\Gamma(X, -)$이고, $f^{-1}$은 abelian group $A$를 constant sheaf $A_X$로 보내므로, adjunction의 첫 부분은 $\Hom_{D(\Ab)}(A, R\Gamma(X, \mathcal{F}^\bullet)) \cong \Hom_{D(\Sh(X))}(A_X, \mathcal{F}^\bullet)$의 형태가 되어, constant sheaf로부터의 morphism이 cohomology를 계산하는 통로임을 derived 차원에서 보여 준다.

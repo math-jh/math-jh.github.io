@@ -24,7 +24,7 @@ published: false
 
 ## t-structure의 정의
 
-Triangulated 범주는 그 자체로 abelian 범주가 아니다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11){: data-relation="required" }) 유도 범주 $D(\mathcal{A})$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $D(\mathcal{A})$에는 원래의 abelian 범주 $\mathcal{A}$가 degree $0$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $H^i \in \mathcal{A}$를 뽑아내는 functor가 있다. T-structure는 이 "어느 degree에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian 범주로 떨어뜨리는" 조작을 임의의 triangulated 범주 위에서 공리화한 것이다.
+Triangulated 범주는 그 자체로 abelian 범주가 아니다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-relation="required" }) 유도 범주 $D(\mathcal{A})$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $D(\mathcal{A})$에는 원래의 abelian 범주 $\mathcal{A}$가 degree $0$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $H^i \in \mathcal{A}$를 뽑아내는 functor가 있다. T-structure는 이 "어느 degree에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian 범주로 떨어뜨리는" 조작을 임의의 triangulated 범주 위에서 공리화한 것이다.
 
 ::: 정의 1
 Triangulated 범주 $\mathcal{T}$ 위의 *t-structure<sub>t-구조</sub>*는 충만한 부분범주들의 쌍 $(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$로서, $\mathcal{T}^{\leq n} := \mathcal{T}^{\leq 0}[-n]$, $\mathcal{T}^{\geq n} := \mathcal{T}^{\geq 0}[-n]$으로 적을 때 다음 세 조건을 만족하는 것이다.
@@ -48,7 +48,7 @@ $X \in \mathcal{T}$에 [정의 1](#def1){: data-relation="required" }의 셋째 
 $$\Hom(A', B[-1]) \rightarrow \Hom(A', A) \rightarrow \Hom(A', X) \rightarrow \Hom(A', B)$$
 를 얻는다. $B \in \mathcal{T}^{\geq 1}$이고 $B[-1] \in \mathcal{T}^{\geq 2} \subseteq \mathcal{T}^{\geq 1}$이므로 직교성에 의해 양 끝 항이 $0$이고, 따라서
 $$\Hom_{\mathcal{T}}(A', A) \xrightarrow{\ \sim\ } \Hom_{\mathcal{T}}(A', X)$$
-이 모든 $A' \in \mathcal{T}^{\leq 0}$에 대해 성립한다. 이것이 바로 $A$가 포함 functor에 대한 $X$의 오른쪽 수반의 값임을 뜻하므로 $\tau_{\leq 0} X := A$로 둔다. 수반의 보편성에 의해 $A$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 morphism $X \rightarrow X'$에 대한 $\tau_{\leq 0} X \rightarrow \tau_{\leq 0} X'$을 유일하게 주므로 functoriality가 따른다. 삼각형의 셋째 꼭짓점 $B$는 처음 두 morphism의 cone으로 결정되므로 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11){: data-relation="required" }의 (TR1)에 의해 $\tau_{\geq 1} X := B$ 역시 유일하게 결정되고, symmetric인 논증으로 $\tau_{\geq 1}$이 포함 functor의 왼쪽 수반이 된다. 일반 degree $n$에 대한 결과는 shift $[-n]$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
+이 모든 $A' \in \mathcal{T}^{\leq 0}$에 대해 성립한다. 이것이 바로 $A$가 포함 functor에 대한 $X$의 오른쪽 수반의 값임을 뜻하므로 $\tau_{\leq 0} X := A$로 둔다. 수반의 보편성에 의해 $A$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 morphism $X \rightarrow X'$에 대한 $\tau_{\leq 0} X \rightarrow \tau_{\leq 0} X'$을 유일하게 주므로 functoriality가 따른다. 삼각형의 셋째 꼭짓점 $B$는 처음 두 morphism의 cone으로 결정되므로 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-relation="required" }의 (TR1)에 의해 $\tau_{\geq 1} X := B$ 역시 유일하게 결정되고, symmetric인 논증으로 $\tau_{\geq 1}$이 포함 functor의 왼쪽 수반이 된다. 일반 degree $n$에 대한 결과는 shift $[-n]$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
 :::
 
 절단 functor $\tau_{\leq n}$, $\tau_{\geq n}$이 갖추어졌으니, 이제 abelian 범주에서 cohomology를 뽑던 조작을 일반화할 수 있다. 두 절단을 합성하여 한 degree에 집중된 부분만을 추려내는 것이다.
@@ -69,7 +69,7 @@ $$\cdots \rightarrow H^n(X) \rightarrow H^n(Y) \rightarrow H^n(Z) \rightarrow H^
 이 $\mathcal{C}$ 안에서 성립한다.
 :::
 ::: 증명
-핵심은 $\mathcal{C}$ 안의 morphism $f: X \rightarrow Y$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $\mathcal{T}$ 안에서 $f$를 distinguished triangle $X \xrightarrow{f} Y \rightarrow C \xrightarrow{+1}$로 채우면 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11){: data-relation="required" }의 (TR1)에 의해 $X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$이므로 $C \in \mathcal{T}^{\geq -1}$이고 마찬가지로 $C \in \mathcal{T}^{\leq 0}$이다. 그러면 $\mathcal{C}$ 안에서
+핵심은 $\mathcal{C}$ 안의 morphism $f: X \rightarrow Y$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $\mathcal{T}$ 안에서 $f$를 distinguished triangle $X \xrightarrow{f} Y \rightarrow C \xrightarrow{+1}$로 채우면 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-relation="required" }의 (TR1)에 의해 $X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$이므로 $C \in \mathcal{T}^{\geq -1}$이고 마찬가지로 $C \in \mathcal{T}^{\leq 0}$이다. 그러면 $\mathcal{C}$ 안에서
 $$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \coker f := H^0(C) = \tau_{\geq 0}(C)$$
 으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. Abelian 범주의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. Cohomology functor가 cohomological임은, $H^0$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
 :::
@@ -84,7 +84,7 @@ $$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet \mid H^i(C^\bullet) = 0 \text{ for } i
 
 세 공리를 점검한다. 포함 조건은 cohomology의 소멸 범위가 넓어지는 단조성이므로 자명하게 성립한다. 직교성은 $C^\bullet \in D^{\leq 0}$, $D^\bullet \in D^{\geq 1}$일 때 $\Hom_{D(\mathcal{A})}(C^\bullet, D^\bullet) = 0$임을 말하는데, $D^\bullet$을 degree $\geq 1$에 놓인 $K$-injective resolution으로 바꾸고 $C^\bullet$의 cohomology가 degree $\leq 0$에 갇혀 있음을 쓰면, chain map과 homotopy가 모두 degree 어긋남으로 소멸하여 derived 범주에서의 morphism이 $0$이 된다. 절단 삼각형은 good truncation
 $$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rightarrow 0), \qquad \tau_{\geq 1} C^\bullet = (0 \rightarrow \im d^0 \rightarrow C^1 \rightarrow \cdots)$$
-이 주는 short exact sequence에서 나온다. Heart는 $H^i = 0$ ($i \neq 0$)인 complex들, 곧 한 degree에 집중된 complex들이고 이는 $\mathcal{A}$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4){: data-relation="weak" }는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11){: data-relation="required" }의 삼각범주 공리가 주는 사실, 곧 $\mathcal{A}$가 abelian 범주이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse sheaf의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian 범주를 얻는 데에 있다.
+이 주는 short exact sequence에서 나온다. Heart는 $H^i = 0$ ($i \neq 0$)인 complex들, 곧 한 degree에 집중된 complex들이고 이는 $\mathcal{A}$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4){: data-relation="weak" }는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-relation="required" }의 삼각범주 공리가 주는 사실, 곧 $\mathcal{A}$가 abelian 범주이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse sheaf의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian 범주를 얻는 데에 있다.
 
 ## Perverse (middle) t-structure
 

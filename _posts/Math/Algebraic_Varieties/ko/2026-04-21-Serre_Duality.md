@@ -154,7 +154,7 @@ Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-relation="weak" }), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
+이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-relation="weak" }), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
 :::
 
 직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $\mathcal{F}$와 $f^! \mathcal{G}$ 사이의 Hom을 $X$에서 계산한 후 $Y$로 내려보내는 것과, $\mathcal{F}$를 먼저 $Y$로 내려보낸 후 $\mathcal{G}$와의 Hom을 계산하는 것이 같다는 뜻이다. 
