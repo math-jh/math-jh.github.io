@@ -180,13 +180,24 @@ $$R(gf)_\ast \mathcal{F}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet = Rg_\ast(f
 $$E_2^{p,q} = R^p g_\ast (R^q f_\ast \mathcal{F}) \Rightarrow R^{p+q}(gf)_\ast \mathcal{F}$$
 이다. 특히 $Z = \{\ast\}$로 두면 $R^p g_\ast = H^p(Y, -)$, $R^{p+q}(gf)_\ast = H^{p+q}(X, -)$가 되어
 $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
-를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19){: data-relation="weak" }에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. Derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$의 cohomology를 계산하는 한 가지 방법일 뿐이다. 같은 논법을 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}, \mathcal{G}))$에 적용하면 local-to-global $\Ext$ spectral sequence $E_2^{p,q} = H^p(X, \mathcal{E}xt^q(\mathcal{F}, \mathcal{G})) \Rightarrow \Ext^{p+q}(\mathcal{F}, \mathcal{G})$를 같은 방식으로 얻는다.
+를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19){: data-relation="weak" }에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. Derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$의 cohomology를 계산하는 한 가지 방법일 뿐이다.
+
+::: 따름정리 11 (Local-to-global spectral sequence)
+위상공간 $X$ (또는 ringed space $(X, \mathcal{O}_X)$) 위의 $\mathcal{F}^\bullet, \mathcal{G}^\bullet \in D^+(\operatorname{Mod}(\mathcal{O}_X))$에 대하여, 합성 $R\Hom_X(\mathcal{F}^\bullet, -) \cong R\Gamma(X, -) \circ R\sHom_X(\mathcal{F}^\bullet, -)$에 대한 Grothendieck spectral sequence로부터 다음의 local-to-global spectral sequence
+
+$$E_2^{p,q} = H^p\bigl(X, \sExt^q_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)\bigr) \Longrightarrow \Ext^{p+q}_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
+
+가 존재한다.
+:::
+::: 증명
+[명제 8](#prop8){: data-relation="required" } 직후의 서술에 의해 $R\Hom_X(\mathcal{F}^\bullet, \mathcal{G}^\bullet) \cong R\Gamma(X, R\sHom_X(\mathcal{F}^\bullet, \mathcal{G}^\bullet))$가 성립하므로, 두 derived functor의 합성에 [정리 10](#thm10){: data-relation="required" }의 Grothendieck spectral sequence를 적용하면 양변의 cohomology를 연결하는 spectral sequence를 얻는다.
+:::
 
 ## Torus 위의 유도 당김과 Leray decomposition
 
 지금까지의 기계를 구체적인 계산으로 점검한다. 가장 단순하면서도 비자명한 $R^1$을 드러내는 예로 원과 torus 위의 constant sheaf를 다룬다. $\mathbb{Z}_X$로 stalk $\mathbb{Z}$를 갖는 constant sheaf를 적는다.
 
-::: 예시 11
+::: 예시 12
 원 $S^1$ 위의 constant sheaf $\mathbb{Z}_{S^1}$의 cohomology를 구하고, 이로부터 torus $T^2 = S^1 \times S^1$의 cohomology를 Leray spectral sequence로 복원한다.
 :::
 
@@ -210,7 +221,7 @@ $$E_2^{0,0} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,0} = H^1(S^1
 $$H^0(T^2, \mathbb{Z}) = E_\infty^{0,0} = \mathbb{Z}, \qquad H^1(T^2, \mathbb{Z}) = E_\infty^{1,0} \oplus E_\infty^{0,1} = \mathbb{Z}^2, \qquad H^2(T^2, \mathbb{Z}) = E_\infty^{1,1} = \mathbb{Z}$$
 를 얻는다. Graded group의 extension이 자유 $\mathbb{Z}$-module 사이의 것이라 분열되므로 $H^1$이 두 항의 direct sum이 된다. 이는 torus의 well-known한 cohomology $H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$와 일치하며, derived pushforward $Rp_\ast \mathbb{Z}_{T^2}$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
 
-이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $R^1 p_\ast$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $S^1$-bundle에서는 $R^1 p_\ast$가 비자명한 monodromy를 갖는 rank $1$ local system이 되어 $H^1$의 계산이 달라진다. Derived pushforward $Rp_\ast$는 이러한 fiber 위의 비틀림 정보를 base 위의 sheaf로 충실히 기록한다.
+이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $R^1 p_\ast$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $S^1$-bundle에서는 $R^1 p_\ast$가 비자명한 monodromy를 갖는 rank $1$ local system이 되어 $H^1$의 계산이 달라진다. Derived pushforward $Rp_\ast$는 이러한 fiber 위의 twist 정보를 base 위의 sheaf로 충실히 기록한다.
 
 ---
 
