@@ -41,7 +41,7 @@ Bracket의 anticommutativity에 의해 $[x,a]=-[a,x]$이므로, Lie algebra에�
 1. $\mathfrak{g}$ 자신과 $0$은 항상 ideal이다.
 2. *center<sub>중심</sub>* $Z(\mathfrak{g})=\left\{x\in\mathfrak{g}\mid [x,y]=0\text{ for all }y\in\mathfrak{g}\right\}$은 ideal이다. 실제로 $x\in Z(\mathfrak{g})$이면 임의의 $y\in\mathfrak{g}$에 대하여 $[y,x]=-[x,y]=0\in Z(\mathfrak{g})$이다.
 3. *derived algebra<sub>유도대수</sub>* $[\mathfrak{g},\mathfrak{g}]$은 ideal이다. $[\mathfrak{g},[\mathfrak{g},\mathfrak{g}]]\subseteq[\mathfrak{g},\mathfrak{g}]$가 정의에서 곧바로 따른다.
-4. $Z(\mathfrak{g})=\mathfrak{g}$인 경우, 곧 모든 bracket이 $0$인 Lie algebra를 *abelian<sub>가환</sub>* Lie algebra라 부른다. 이는 $[\mathfrak{g},\mathfrak{g}]=0$인 것과 같다.
+4. $Z(\mathfrak{g})=\mathfrak{g}$인 경우, 곧 모든 bracket이 $0$인 Lie algebra를 *abelian Lie algebra<sub>가환 리 대수</sub>*라 부른다. 이는 $[\mathfrak{g},\mathfrak{g}]=0$인 것과 같다.
 :::
 
 이제 두 Lie algebra 사이의 morphism과 quotient를 정의한다. Lie algebra의 morphism은 단순히 bracket을 보존하는 선형사상이다.
