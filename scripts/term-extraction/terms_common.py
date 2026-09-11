@@ -402,7 +402,12 @@ def ko_primary(v) -> str:
     return f[0] if f else ""
 
 
-ENTRY_KEYS = {"id", "en", "ko", "alias", "primary", "note", "defs", "refs", "see"}
+# alias_en: 같은 자리의 영어 이형. 약어(GCD, LCI)와 철자 변형이 여기 온다.
+# alias 와 나누는 이유는 md_lint 가 alias 를 한국어형 목록으로 읽기 때문이다 —
+# 영어 문자열을 그쪽에 넣으면 본문의 한국어 용어 검사에 엉뚱한 형을 먹인다.
+# 조판에는 안 뜨고 색인 검색(data-search)에만 실린다.
+ENTRY_KEYS = {"id", "en", "ko", "alias", "alias_en", "primary", "note",
+              "defs", "refs", "see"}
 REF_KEYS = {"label", "url"}
 SEE_KEYS = {"label", "id", "lang"}
 

@@ -55,6 +55,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 BLOG_ROOT = SCRIPT_DIR.parents[1]
 sys.path.insert(0, str(SCRIPT_DIR))
 
+from difflib import SequenceMatcher  # noqa: E402
+
 from terms_common import (  # noqa: E402
     GEN_ED_CATS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id,
     ko_forms, ko_primary,
@@ -83,13 +85,18 @@ BACKUP_PATH = SCRIPT_DIR / "terms.yml.bak-extract"
 REL_TERMS = str(TERMS_PATH.relative_to(BLOG_ROOT))
 REL_REVIEW = str(REVIEW_PATH.relative_to(BLOG_ROOT))
 
+# 이 워커의 LLM 호출은 Antigravity 로 간다 — 추출도, 근접중복 게이트도.
+# provider 를 바꾸려면 TERM_EXTRACT_PROVIDER 와 짝이 되는 BIN·MODEL 을 함께 준다.
+# Claude 롤백: TERM_EXTRACT_PROVIDER=claude TERM_EXTRACT_LLM=~/.local/bin/claude
+#              TERM_EXTRACT_MODEL=haiku
+LLM_PROVIDER = os.environ.get("TERM_EXTRACT_PROVIDER", "antigravity")
+_DEFAULT_BIN = {"antigravity": str(Path.home() / ".gemini/bin/agy"),
+                "claude": str(Path.home() / ".local/bin/claude")}
+_DEFAULT_MODEL = {"antigravity": "gemini-3.8-flash-high", "claude": "haiku"}
 LLM_BIN = os.environ.get("TERM_EXTRACT_LLM",
-                         str(Path.home() / ".local/bin/claude"))
-# term_extract 는 결정적 JSON 추출이라 haiku 로 충분하고 20x 헤드룸에서 사실상
-# 공짜다 (GLM 구독 은퇴 대비). 단 `claude -p` 는 세션 기본 모델(현재 opus)을
-# 쓰므로 --model 을 명시하지 않으면 opus 로 과금된다 — TERM_EXTRACT_MODEL 로
-# 강제한다. GLM 롤백: TERM_EXTRACT_LLM=claudeglm TERM_EXTRACT_MODEL= (빈 값).
-LLM_MODEL = os.environ.get("TERM_EXTRACT_MODEL", "haiku")
+                         _DEFAULT_BIN.get(LLM_PROVIDER, _DEFAULT_BIN["claude"]))
+LLM_MODEL = os.environ.get("TERM_EXTRACT_MODEL",
+                           _DEFAULT_MODEL.get(LLM_PROVIDER, ""))
 LLM_TIMEOUT = 600
 STALE_SEC = 14 * 24 * 3600
 QUARANTINE_FAILS = 3
@@ -242,7 +249,32 @@ def select_post(
 # LLM 호출 (JSON 제안만 — terms.yml 접근 없음)
 # ---------------------------------------------------------------------------
 
+def _call_antigravity(prompt: str) -> str:
+    """agy 는 프롬프트를 인자로 받고 JSON 봉투로 답한다 (`claude -p` 와 다르다).
+
+    봉투의 status 를 보지 않으면 실패한 호출의 빈 response 가 "모델이 아무것도
+    못 찾았다" 와 구별되지 않는다.
+    """
+    args = [LLM_BIN, "--print", "[cron]\n\n" + prompt,
+            "--output-format", "json", "--disable-slash-commands",
+            "--print-timeout", "15m"]
+    if LLM_MODEL:
+        args += ["--model", LLM_MODEL]
+    proc = subprocess.run(args, stdin=subprocess.DEVNULL, capture_output=True,
+                          text=True, timeout=LLM_TIMEOUT, cwd="/tmp")
+    if proc.returncode != 0:
+        raise RuntimeError(f"agy exited {proc.returncode}: "
+                           f"{proc.stderr.strip()[:300]!r}")
+    envelope = json.loads(proc.stdout)
+    if envelope.get("status") != "SUCCESS":
+        raise RuntimeError(f"agy status {envelope.get('status')}: "
+                           f"{str(envelope.get('error', ''))[:300]}")
+    return str(envelope.get("response", ""))
+
+
 def call_llm(prompt: str) -> str:
+    if LLM_PROVIDER == "antigravity":
+        return _call_antigravity(prompt)
     args = [LLM_BIN, "-p", "--output-format", "text"]
     if LLM_MODEL:
         args += ["--model", LLM_MODEL]
@@ -455,6 +487,10 @@ NUANCE_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도
 출력: [{"i": <번호>, "verdict": "add_def"|"skip"}] 만.
 
 """
+
+# 근접 중복 판정에 모델을 부르는 임계. 낮추면 호출이 늘고, 높이면 표기 변형이
+# 그대로 새 항목이 된다. 0.9 는 기존 색인에서 재 본 값이다.
+NEAR_DUP_THRESHOLD = 0.9
 
 MAJOR_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도구를 쓰지 말고 JSON 만 출력하라.
 
@@ -762,6 +798,16 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
         eid = chunk_id(entry)
         if eid in seen_new or any(chunk_id(c) == eid for c in groups.get(lt, [])):
             continue
+        near = near_duplicates(entry, groups, permalink)
+        if near and not llm_allows_new_term(entry, near):
+            review.append(f"{rel}: 근접중복 게이트에서 폐기 "
+                          f"{chunk_field(entry, 'en')!r} ↔ "
+                          + ", ".join(repr(chunk_field(c, "en")) for c in near[:3]))
+            # 로그의 "통과한 변경" 에서도 뺀다 — 안 넣은 것이 넣은 것처럼 남으면
+            # 다음 사람이 색인에 있다고 믿는다.
+            gone = repr(chunk_field(entry, "en") or "")
+            changes = [c for c in changes if gone not in c]
+            continue
         seen_new.add(eid)
         insert_sorted(groups.setdefault(lt, []), entry)
         n_added += 1
@@ -812,6 +858,88 @@ def write_gate(old_text: str, new_text: str, expect_added: int) -> bool:
 # ---------------------------------------------------------------------------
 # terms.yml 감사 (짝수 시각, 글자 하나씩 — sees 보강)
 # ---------------------------------------------------------------------------
+
+def _near_norm(v: str) -> str:
+    """유사도용 정규화. 수식 장식을 떼고 글자만 남긴다."""
+    return re.sub(r"[^a-z0-9가-힣]+", "", re.sub(r"\$[^$]*\$", "", v or "").lower())
+
+
+def near_duplicates(entry: str, groups: dict, permalink: str) -> list[str]:
+    """새 표제어와 헷갈릴 만한 기존 항목들.
+
+    두 곳만 본다. **같은 글이 정의하는 항목** — 한 글에서 같은 용어를 두 표기로
+    뽑는 것이 중복의 주된 경로다. 그리고 **한국어 라벨이 같은 항목** — 라벨이
+    겹치면 색인에서 두 줄이 같은 이름으로 보이므로, 다른 글에 있어도 봐야 한다.
+
+    영어끼리·한국어끼리 따로 재는 것이 중요하다. `GCD` 와
+    `greatest common divisor` 는 영어 유사도가 0.27 이고 한국어가 1.00 이다.
+    """
+    en, ko = chunk_field(entry, "en") or "", chunk_field(entry, "ko") or ""
+    nen, nko = _near_norm(en), _near_norm(ko)
+    hits = []
+    for chunks in groups.values():
+        for c in chunks:
+            cen, cko = chunk_field(c, "en") or "", chunk_field(c, "ko") or ""
+            same_post = permalink and permalink in c
+            same_label = bool(nko) and _near_norm(cko) == nko
+            if not (same_post or same_label):
+                continue
+            scores = []
+            if nen and _near_norm(cen):
+                scores.append(SequenceMatcher(None, nen, _near_norm(cen)).ratio())
+            if nko and _near_norm(cko):
+                scores.append(SequenceMatcher(None, nko, _near_norm(cko)).ratio())
+            if scores and max(scores) >= NEAR_DUP_THRESHOLD:
+                hits.append(c)
+    return hits
+
+
+def llm_allows_new_term(entry: str, near: list[str]) -> bool:
+    """비슷한 게 이미 있을 때 새 항목을 만들어도 되는지 모델에게 묻는다.
+
+    판정을 못 받으면 **넣지 않는다.** 잘못 들어간 항목은 색인에 남아 나중에 사람이
+    훑어 병합해야 하지만, 안 들어간 항목은 그 글이 다시 stale 로 돌아올 때 같은
+    자리에서 다시 후보가 된다. 어느 쪽이든 폐기한 사실은 review 노트와 로그에
+    남으므로 조용히 사라지지는 않는다.
+    """
+    lines = [f"  en: {chunk_field(entry, 'en')} / ko: {chunk_field(entry, 'ko')}",
+             "", "이미 있는 비슷한 표제어:"]
+    for c in near[:6]:
+        lines.append(f"  en: {chunk_field(c, 'en')} / ko: {chunk_field(c, 'ko')}")
+    try:
+        out = llm_json(NEAR_DUP_PROMPT + "\n".join(lines))
+    except Exception as exc:  # noqa: BLE001
+        log(f"근접중복 판정 실패 — 폐기: {exc}")
+        return False
+    if isinstance(out, list):
+        out = out[0] if out and isinstance(out[0], dict) else {}
+    if not isinstance(out, dict) or "add" not in out:
+        log(f"근접중복 판정 형식 불명 — 폐기: {out!r:.200}")
+        return False
+    allow = bool(out.get("add"))
+    log(f"근접중복 판정: {chunk_field(entry, 'en')!r} → "
+        + ("추가" if allow else "폐기") + f" ({out.get('why', '')})")
+    return allow
+
+
+NEAR_DUP_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도구를 쓰지 말고 JSON 만 출력하라.
+
+색인에 새 표제어를 넣으려는데, 이미 비슷한 표제어가 있다. 새로 넣는 것이 맞는지 판정하라.
+
+같은 용어의 다른 표기(복수형·소유격·굴절·약어·수식 장식 유무)이면 새로 넣지 않는다.
+**다른 개념이면 문자열이 아무리 비슷해도 새로 넣는다.** 실제로 갈렸던 예:
+
+- `disjoint`(집합이 서로소)와 `relatively prime`(정수가 서로소) — 한국어 라벨이 둘 다
+  '서로소'지만 다른 관계다. 둘 다 있어야 한다.
+- `coequalizer`와 `cokernel` — 라벨이 겹쳐 보여도 다른 보편 대상이다.
+- `Grothendieck topology`와 `Grothendieck pretopology`, `perfect field`와
+  `imperfect field`, `cap product`와 `cup product` — 접두사 하나로 뜻이 갈린다.
+
+출력: {"add": true|false, "why": "한 문장"}
+add=false 는 "이미 있는 항목의 다른 표기라 새 항목이 필요 없다"는 뜻이다.
+
+새로 넣으려는 표제어:
+"""
 
 AUDIT_PROMPT = """수학 블로그 찾아보기 색인의 sees(관련 항목) 보강 작업이다. 도구를 쓰지
 말고 JSON 만 출력하라.
