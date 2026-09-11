@@ -118,7 +118,7 @@ tr.typo-pending td:last-child{opacity:1}
 .copy-url:hover{color:var(--brass)}
 .copy-url.copied{background:color-mix(in srgb,var(--brass) 28%,transparent);transition:background .2s}
 .ghost-btn--force-resume{color:var(--ok);border-color:var(--ok)}
-.cron-table{table-layout:fixed;min-width:52rem}
+.cron-table{table-layout:fixed;width:100%;min-width:0}
 .cron-table th:nth-child(1){width:15rem}
 .cron-table th:nth-child(2){width:19rem}
 .cron-table th:nth-child(4){width:8rem}

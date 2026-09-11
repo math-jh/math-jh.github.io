@@ -75,7 +75,7 @@ WORKERS = [
          log=f"{ROOT}/scripts/translation/translation.log"),
     dict(key="terms", name="용어 추출", schedule="홀수 시각 :15", interval=7200,
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
-    dict(key="dependency", name="의존성 링크 분류", schedule="2분 간격 · 동시 최대 4개", interval=120,
+    dict(key="dependency", name="의존성 링크 분류", schedule=":30 / :45", interval=1800,
          log=os.path.expanduser("~/.local/state/dependency-classifier.log")),
     dict(key="terms_lint", name="용어 lint", schedule="매일 04:20", interval=86400,
          log=f"{ROOT}/scripts/term-extraction/term_extraction_lint.log"),

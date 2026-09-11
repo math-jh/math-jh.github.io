@@ -33,6 +33,7 @@ from pathlib import Path
 from typing import Callable, Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
+MATH_POST_ROOT = ROOT / "_posts" / "Math"
 sys.path.insert(0, str(ROOT / "scripts" / "postnav"))
 sys.path.insert(0, str(ROOT / ".agents" / "hooks"))
 sys.path.insert(0, str(ROOT / "scripts" / "lib"))
@@ -722,7 +723,7 @@ def mark_backlog_complete() -> None:
     )
 
 
-def process_once(dry_run: bool = False) -> int:
+def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
     state = load_state()
     scan_updates: dict[str, dict] = {}
     selected = select_unit(state, scan_updates)
@@ -770,7 +771,9 @@ def process_once(dry_run: bool = False) -> int:
                     )
             for path in paths:
                 path.write_text(rendered[path], encoding="utf-8")
-            if is_local_only_untracked_unit(paths):
+            if not commit:
+                log(f"saved without commit: {key}")
+            elif is_local_only_untracked_unit(paths):
                 log(f"saved local-only: {key} (Git commit skipped)")
             else:
                 committed = commit_outputs(
@@ -821,12 +824,13 @@ def status() -> int:
     return 0
 
 
-_POSTS = iter_posts()
+_POSTS = [post for post in iter_posts() if post.path.is_relative_to(MATH_POST_ROOT)]
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--no-commit", action="store_true")
     parser.add_argument("--status", action="store_true")
     args = parser.parse_args()
     if args.status:
@@ -839,7 +843,7 @@ def main() -> int:
         log("six dependency classifiers are already running; skip this tick")
         return 0
     try:
-        return process_once(args.dry_run)
+        return process_once(args.dry_run, commit=not args.no_commit)
     finally:
         slot_fh.close()
 

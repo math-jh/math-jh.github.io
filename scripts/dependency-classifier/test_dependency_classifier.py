@@ -21,6 +21,12 @@ sys.modules[SPEC.name] = dc
 SPEC.loader.exec_module(dc)
 
 
+class PostScopeTest(unittest.TestCase):
+    def test_classifier_scans_math_posts_only(self) -> None:
+        self.assertTrue(dc._POSTS)
+        self.assertTrue(all(post.path.is_relative_to(dc.MATH_POST_ROOT) for post in dc._POSTS))
+
+
 def row(ident: str, *, confidence: str = "high") -> dict:
     return {"id": ident, "relation": "required", "confidence": confidence, "reason": "test"}
 
