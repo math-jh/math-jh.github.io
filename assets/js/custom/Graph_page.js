@@ -713,21 +713,16 @@
       if (l.relation === 'required') return 'rgba(' + cfg.link + ',0.44)';
       return 'rgba(' + cfg.link + ',0.36)';
     }
-    // Dependencies의 화살촉은 반투명 면으로 그리면 뒤의 링크가 비쳐 보인다.
-    // 카드의 주 배경색 위에서 보이던 색을 미리 합성해 불투명 RGB로 만들고,
-    // weak는 면적 때문에 점선보다 도드라지지 않도록 배경 쪽으로 더 누른다.
+    // 화살촉은 링크와 같은 색·같은 투명도로 칠한다. 불투명하게 칠하면 면적이
+    // 있는 만큼 뒤를 지나는 밝은 링크를 잘라 먹는다. weak 만 면적 때문에 점선보다
+    // 도드라지므로 알파를 더 눌러 두고, 포커스된 링크는 brass 강조색을 그대로 쓴다.
     function arrowColor(l) {
       var color = linkColor(l);
-      if (!data.classified) return color;
+      if (!data.classified || l.relation !== 'weak' || hlLinks.has(lid(l))) return color;
       var rgba = color.match(/^rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)(?:\s*,\s*([\d.]+))?\s*\)$/);
       if (!rgba) return color;
-      var background = [20, 21, 25];
-      var alpha = rgba[4] === undefined ? 1 : Number(rgba[4]);
-      if (l.relation === 'weak') alpha *= 0.55;
-      alpha = Math.max(0, Math.min(1, alpha));
-      return 'rgb(' + [1, 2, 3].map(function (index) {
-        return Math.round(background[index - 1] * (1 - alpha) + Number(rgba[index]) * alpha);
-      }).join(',') + ')';
+      var alpha = (rgba[4] === undefined ? 1 : Number(rgba[4])) * 0.55;
+      return 'rgba(' + rgba[1] + ',' + rgba[2] + ',' + rgba[3] + ',' + alpha + ')';
     }
     function linkDash(l) {
       if (l.relation === 'weak') return [2, 5];
