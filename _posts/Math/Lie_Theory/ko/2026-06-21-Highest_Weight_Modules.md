@@ -14,7 +14,7 @@ weight: 12
 published: false
 ---
 
-Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 정리에 의해 irreducible representation의 분류 문제로 환원된다 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)). $\sl_2$의 경우 이 분류는 highest weight vector에서 출발해 lowering operator를 반복 적용하는 사슬을 분석하여 완성되었으며, 각 음이 아닌 정수마다 유일한 irreducible representation이 대응되었다 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6)). 일반적인 semisimple Lie algebra에서도 같은 골격이 유지된다. Cartan subalgebra $\mathfrak{h}$에 대한 weight 분해가 $h$의 고윳값 분해를 대신하고, positive root들이 정하는 subalgebra $\mathfrak{n}^+$가 raising operator의 역할을 모아 담으며, $\mathfrak{n}^+$가 죽이는 highest weight vector 하나가 representation 전체를 생성한다.
+Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 정리에 의해 irreducible representation의 분류 문제로 환원된다 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7){: data-relation="weak" }). $\sl_2$의 경우 이 분류는 highest weight vector에서 출발해 lowering operator를 반복 적용하는 사슬을 분석하여 완성되었으며, 각 음이 아닌 정수마다 유일한 irreducible representation이 대응되었다 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6){: data-relation="weak" }). 일반적인 semisimple Lie algebra에서도 같은 골격이 유지된다. Cartan subalgebra $\mathfrak{h}$에 대한 weight 분해가 $h$의 고윳값 분해를 대신하고, positive root들이 정하는 subalgebra $\mathfrak{n}^+$가 raising operator의 역할을 모아 담으며, $\mathfrak{n}^+$가 죽이는 highest weight vector 하나가 representation 전체를 생성한다.
 
 이 글에서 우리는 그러한 highest weight vector로 생성되는 가장 보편적인 module인 Verma module $M(\lambda)$를 보편 포락 대수의 induced module로 구성하고, 그 유일한 maximal submodule을 quotient로 잘라 irreducible module $L(\lambda)$를 얻는다. 그런 뒤 $L(\lambda)$가 유한차원이 되는 것이 정확히 $\lambda$가 dominant integral weight일 때임을 보여, 유한차원 irreducible representation이 dominant integral weight들과 일대일로 대응한다는 *최고 무게 정리<sub>theorem of the highest weight</sub>*를 확립한다. 이 글 전체에서 $\mathfrak{g}$는 대수적으로 닫힌 표수 $0$의 체 (편의상 $\mathbb{C}$) 위의 유한차원 semisimple Lie algebra이고, $\mathfrak{h}$는 그 Cartan subalgebra, $\Phi\subseteq\mathfrak{h}^\ast$는 그에 대한 root system이며, representation 또는 module이라 하면 $\mathfrak{g}$-module, 곧 Lie algebra 준동형 $\mathfrak{g}\rightarrow\gl(V)$가 정하는 $U(\mathfrak{g})$-module을 뜻한다.
 
@@ -24,7 +24,7 @@ Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 �
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
-는 이미 확립되어 있고, 각 $\mathfrak{g}_\alpha$가 $1$차원이라는 사실도 알고 있다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 및 [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6) 이후의 논의). Positive root들의 모임 $\Phi^+\subseteq\Phi$를 하나 고정한다 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)).
+는 이미 확립되어 있고, 각 $\mathfrak{g}_\alpha$가 $1$차원이라는 사실도 알고 있다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5){: data-relation="required" } 및 [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" } 이후의 논의). Positive root들의 모임 $\Phi^+\subseteq\Phi$를 하나 고정한다 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15){: data-relation="required" }).
 
 ::: 정의 1
 Positive root들에 대응하는 root space들의 합
@@ -38,13 +38,13 @@ $$\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$$
 을 $\mathfrak{g}$의 *Borel subalgebra<sub>보렐 부분대수</sub>*라 부른다.
 :::
 
-$[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq\mathfrak{g}_{\alpha+\beta}$이고 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)) 두 positive root의 합은 다시 positive root이거나 root가 아니므로, $\mathfrak{n}^+$는 $\mathfrak{g}$의 부분 Lie algebra이며 같은 이유로 $\mathfrak{n}^-$도 그러하다. 또한 $[\mathfrak{h},\mathfrak{g}_\alpha]\subseteq\mathfrak{g}_\alpha$이므로 $\mathfrak{h}$가 $\mathfrak{n}^+$를 normalize하여 $\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$ 역시 부분 Lie algebra이고, $\mathfrak{n}^+$는 $\mathfrak{b}$의 ideal이다. 벡터공간으로서
+$[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq\mathfrak{g}_{\alpha+\beta}$이고 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6){: data-relation="required" }) 두 positive root의 합은 다시 positive root이거나 root가 아니므로, $\mathfrak{n}^+$는 $\mathfrak{g}$의 부분 Lie algebra이며 같은 이유로 $\mathfrak{n}^-$도 그러하다. 또한 $[\mathfrak{h},\mathfrak{g}_\alpha]\subseteq\mathfrak{g}_\alpha$이므로 $\mathfrak{h}$가 $\mathfrak{n}^+$를 normalize하여 $\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$ 역시 부분 Lie algebra이고, $\mathfrak{n}^+$는 $\mathfrak{b}$의 ideal이다. 벡터공간으로서
 
 $$\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+=\mathfrak{n}^-\oplus\mathfrak{b}$$
 
 라는 삼각 분해를 얻으며, 이 분해가 아래 Verma module의 구성과 그 PBW 기저의 토대가 된다. 이름의 nilpotent는 $\mathfrak{n}^\pm$가 실제로 nilpotent Lie algebra라는 사실에서 온 것으로, root height에 대한 grading이 bracket을 한 단계씩 올려 유한 번 안에 $0$이 되기 때문이다.
 
-이제 임의의 $\mathfrak{g}$-module 위에서 $\mathfrak{h}$의 action에 대한 동시 고유공간 분해를 정의한다. 이는 $\sl_2$에서 $h$ 하나의 고유공간 분해를 ([§sl₂의 표현론, ⁋정의 1](/ko/math/lie_theory/representations_of_sl2#def1)) Cartan subalgebra 전체로 일반화한 것이다.
+이제 임의의 $\mathfrak{g}$-module 위에서 $\mathfrak{h}$의 action에 대한 동시 고유공간 분해를 정의한다. 이는 $\sl_2$에서 $h$ 하나의 고유공간 분해를 ([§sl₂의 표현론, ⁋정의 1](/ko/math/lie_theory/representations_of_sl2#def1){: data-relation="weak" }) Cartan subalgebra 전체로 일반화한 것이다.
 
 ::: 정의 2
 $\mathfrak{g}$-module $V$와 $\lambda\in\mathfrak{h}^\ast$에 대하여, 부분공간
@@ -54,7 +54,7 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda(H)\,v\ \text{ for all }H\in\mathfrak{h
 을 *weight $\lambda$의 weight space*라 부른다. $V_\lambda\neq 0$인 $\lambda$를 $V$의 *weight<sub>무게</sub>*라 하고, $\dim V_\lambda$를 그 weight의 *multiplicity<sub>중복도</sub>*라 부른다. $V=\bigoplus_{\lambda\in\mathfrak{h}^\ast}V_\lambda$로 분해되는 module을 *weight module<sub>무게 가군</sub>*이라 부른다.
 :::
 
-Root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root decomposition 자신이 adjoint representation의 weight 분해이다. 일반적인 module의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2)에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
+Root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root decomposition 자신이 adjoint representation의 weight 분해이다. 일반적인 module의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2){: data-relation="weak" }에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
 
 ::: 명제 3
 $\mathfrak{g}$-module $V$, weight $\lambda\in\mathfrak{h}^\ast$, 그리고 root $\alpha\in\Phi$에 대하여
@@ -81,7 +81,7 @@ $$H\cdot v=\lambda(H)\,v\ \text{ for all }H\in\mathfrak{h},\qquad \mathfrak{n}^+
 이 성립하는 것이다. 곧 $v\in V_\lambda$이고 모든 positive root vector가 $v$를 소멸시키는 것이다. 이 때 $\lambda$를 $v$의 *highest weight<sub>최고무게</sub>*라 부른다.
 :::
 
-$\mathfrak{n}^+$가 $\Phi^+$의 root vector들로 생성되므로, $\mathfrak{n}^+\cdot v=0$이라는 조건은 각 simple root $\alpha_i$에 대응하는 raising operator $e_i\in\mathfrak{g}_{\alpha_i}$가 $v$를 소멸시키는 것과 동치이다. 실제로 임의의 positive root는 simple root들의 음이 아닌 정수 결합이고 $[\mathfrak{g}_{\alpha},\mathfrak{g}_{\beta}]\subseteq\mathfrak{g}_{\alpha+\beta}$이므로, $\mathfrak{n}^+$는 simple root vector들로 생성되는 subalgebra이다. $\sl_2$에서 $e\cdot v=0$이라는 조건이 highest weight vector를 규정하였던 것과 정확히 대응한다. ([§sl₂의 표현론, ⁋정의 3](/ko/math/lie_theory/representations_of_sl2#def3))
+$\mathfrak{n}^+$가 $\Phi^+$의 root vector들로 생성되므로, $\mathfrak{n}^+\cdot v=0$이라는 조건은 각 simple root $\alpha_i$에 대응하는 raising operator $e_i\in\mathfrak{g}_{\alpha_i}$가 $v$를 소멸시키는 것과 동치이다. 실제로 임의의 positive root는 simple root들의 음이 아닌 정수 결합이고 $[\mathfrak{g}_{\alpha},\mathfrak{g}_{\beta}]\subseteq\mathfrak{g}_{\alpha+\beta}$이므로, $\mathfrak{n}^+$는 simple root vector들로 생성되는 subalgebra이다. $\sl_2$에서 $e\cdot v=0$이라는 조건이 highest weight vector를 규정하였던 것과 정확히 대응한다. ([§sl₂의 표현론, ⁋정의 3](/ko/math/lie_theory/representations_of_sl2#def3){: data-relation="weak" })
 
 ## Verma module
 
@@ -126,7 +126,7 @@ $$f_1^{\,m_1}f_2^{\,m_2}\cdots f_N^{\,m_N}\cdot v_\lambda^+,\qquad m_1,\ldots,m_
 들은 $M(\lambda)$의 $\mathbb{C}$-기저를 이룬다. 따라서 $M(\lambda)$는 $U(\mathfrak{n}^-)$ 위의 rank $1$의 free module $U(\mathfrak{n}^-)\cdot v_\lambda^+$이며, 그 weight들은 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$)의 꼴이고 각 weight space는 유한차원이다.
 :::
 ::: 증명
-$\mathfrak{g}$의 기저를 $\mathfrak{n}^-$의 기저 $(f_1,\ldots,f_N)$, $\mathfrak{h}$의 기저 $(H_1,\ldots,H_l)$, $\mathfrak{n}^+$의 기저 $(e_1,\ldots,e_N)$를 이어 붙여 만들고, 이 순서로 첨자에 전순서를 준다. 그럼 [§보편 포락 대수, ⁋정리 9](/ko/math/lie_theory/universal_enveloping_algebra#thm9)에 의하여 $U(\mathfrak{g})$는 정렬된 단항식
+$\mathfrak{g}$의 기저를 $\mathfrak{n}^-$의 기저 $(f_1,\ldots,f_N)$, $\mathfrak{h}$의 기저 $(H_1,\ldots,H_l)$, $\mathfrak{n}^+$의 기저 $(e_1,\ldots,e_N)$를 이어 붙여 만들고, 이 순서로 첨자에 전순서를 준다. 그럼 [§보편 포락 대수, ⁋정리 9](/ko/math/lie_theory/universal_enveloping_algebra#thm9){: data-relation="required" }에 의하여 $U(\mathfrak{g})$는 정렬된 단항식
 
 $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdots e_N^{\,q_N}$$
 
@@ -136,10 +136,10 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 
 일차독립성은 PBW 기저로부터 곧장 따라온다. $M(\lambda)$는 $\mathbb{C}$-벡터공간으로서 $U(\mathfrak{g})\otimes_{U(\mathfrak{b})}\mathbb{C}_\lambda\cong U(\mathfrak{n}^-)\otimes_{\mathbb{C}}\mathbb{C}_\lambda$이고, 이 동형은 곱사상 $U(\mathfrak{n}^-)\otimes U(\mathfrak{b})\rightarrow U(\mathfrak{g})$가 isomorphism이라는 위 사실의 직접적 귀결이다. $U(\mathfrak{n}^-)$의 PBW 기저 $f_1^{\,m_1}\cdots f_N^{\,m_N}$이 일차독립이므로, 이들을 $v_\lambda^+$에 작용시킨 원소들도 일차독립이다. 이로써 $M(\lambda)$는 $U(\mathfrak{n}^-)$ 위의 free module이고 $v_\lambda^+$가 그 자유 generator이다.
 
-끝으로 weight 구조를 본다. $f_k\in\mathfrak{g}_{-\beta_k}$이므로 [명제 3](#prop3)에 의하여 $f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$는 weight $\lambda-\sum_k m_k\beta_k$를 갖는다. 고정된 weight $\mu=\lambda-\sum_k m_k\beta_k$를 주는 지수 $(m_1,\ldots,m_N)$의 개수는 유한하므로 각 weight space는 유한차원이며, $M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$는 weight module이다.
+끝으로 weight 구조를 본다. $f_k\in\mathfrak{g}_{-\beta_k}$이므로 [명제 3](#prop3){: data-relation="required" }에 의하여 $f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$는 weight $\lambda-\sum_k m_k\beta_k$를 갖는다. 고정된 weight $\mu=\lambda-\sum_k m_k\beta_k$를 주는 지수 $(m_1,\ldots,m_N)$의 개수는 유한하므로 각 weight space는 유한차원이며, $M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$는 weight module이다.
 :::
 
-명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4)) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 infinite-dimensional weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
+명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-relation="weak" }) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 infinite-dimensional weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
 
 ## Irreducible quotient
 
@@ -149,13 +149,13 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 $M(\lambda)$의 임의의 proper submodule $W\subsetneq M(\lambda)$은 highest weight space $M(\lambda)_\lambda=\mathbb{C}v_\lambda^+$와 자명하게 만난다. 곧 $W\cap M(\lambda)_\lambda=0$이다. 따라서 모든 proper submodule의 합 $M^{\mathrm{rad}}(\lambda)$도 proper submodule이며, $M(\lambda)$는 이 $M^{\mathrm{rad}}(\lambda)$를 유일한 maximal submodule로 갖는다.
 :::
 ::: 증명
-$W$가 submodule이므로 $\mathfrak{h}$-action에 대해 닫혀 있고, [명제 7](#prop7)에 의해 $M(\lambda)$가 weight module이므로 $W$도 weight module이다. 곧 $W=\bigoplus_\mu(W\cap M(\lambda)_\mu)$이다. 만일 $W\cap M(\lambda)_\lambda\neq 0$이면 $M(\lambda)_\lambda=\mathbb{C}v_\lambda^+$가 $1$차원이므로 $v_\lambda^+\in W$이고, $v_\lambda^+$가 $M(\lambda)$를 $U(\mathfrak{g})$-module로서 생성하므로 $W=M(\lambda)$가 되어 $W$가 proper submodule이라는 가정에 모순이다. 따라서 $W\cap M(\lambda)_\lambda=0$이다.
+$W$가 submodule이므로 $\mathfrak{h}$-action에 대해 닫혀 있고, [명제 7](#prop7){: data-relation="required" }에 의해 $M(\lambda)$가 weight module이므로 $W$도 weight module이다. 곧 $W=\bigoplus_\mu(W\cap M(\lambda)_\mu)$이다. 만일 $W\cap M(\lambda)_\lambda\neq 0$이면 $M(\lambda)_\lambda=\mathbb{C}v_\lambda^+$가 $1$차원이므로 $v_\lambda^+\in W$이고, $v_\lambda^+$가 $M(\lambda)$를 $U(\mathfrak{g})$-module로서 생성하므로 $W=M(\lambda)$가 되어 $W$가 proper submodule이라는 가정에 모순이다. 따라서 $W\cap M(\lambda)_\lambda=0$이다.
 
 이제 모든 proper submodule의 합을 $M^{\mathrm{rad}}(\lambda)=\sum_{W\subsetneq M(\lambda)}W$라 하자. 각 proper submodule이 weight $\lambda$ 성분을 갖지 않으므로 그 합도 그러하여 $M^{\mathrm{rad}}(\lambda)\cap M(\lambda)_\lambda=0$이고, 특히 $v_\lambda^+\notin M^{\mathrm{rad}}(\lambda)$이므로 $M^{\mathrm{rad}}(\lambda)\neq M(\lambda)$, 곧 $M^{\mathrm{rad}}(\lambda)$는 proper submodule이다. 정의상 $M^{\mathrm{rad}}(\lambda)$는 모든 proper submodule을 포함하는 proper submodule이므로 유일한 maximal submodule이다.
 :::
 
 ::: 정의 9
-[명제 8](#prop8)의 유일한 maximal submodule $M^{\mathrm{rad}}(\lambda)$에 대한 quotient
+[명제 8](#prop8){: data-relation="required" }의 유일한 maximal submodule $M^{\mathrm{rad}}(\lambda)$에 대한 quotient
 
 $$L(\lambda)=M(\lambda)/M^{\mathrm{rad}}(\lambda)$$
 
@@ -168,16 +168,16 @@ $L(\lambda)$는 유일한 maximal submodule에 대한 quotient이므로 $0$이 �
 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 highest weight $\lambda$를 갖는 irreducible module이다. 역으로 $V$가 highest weight vector로 생성되는 irreducible module이면, 그 highest weight $\lambda$는 유일하게 결정되고 $V\cong L(\lambda)$이다. 특히 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$이다.
 :::
 ::: 증명
-$L(\lambda)$가 irreducible이고 highest weight $\lambda$를 가짐은 [정의 9](#def9) 직후에 확인하였다. 역방향을 보인다. $V$가 highest weight $\lambda$의 highest weight vector $w$로 생성되는 irreducible module이라 하자. [명제 6](#prop6)에 의하여 $\varphi(v_\lambda^+)=w$인 $\mathfrak{g}$-morphism $\varphi:M(\lambda)\rightarrow V$가 존재하고, $V$가 $w$로 생성되므로 $\varphi$는 전사이다. 따라서 $V\cong M(\lambda)/\ker\varphi$이다. $V$가 irreducible이므로 $\ker\varphi$는 $M(\lambda)$의 maximal submodule이고, [명제 8](#prop8)에 의해 maximal submodule은 $M^{\mathrm{rad}}(\lambda)$ 하나뿐이므로 $\ker\varphi=M^{\mathrm{rad}}(\lambda)$, 곧 $V\cong L(\lambda)$이다.
+$L(\lambda)$가 irreducible이고 highest weight $\lambda$를 가짐은 [정의 9](#def9){: data-relation="required" } 직후에 확인하였다. 역방향을 보인다. $V$가 highest weight $\lambda$의 highest weight vector $w$로 생성되는 irreducible module이라 하자. [명제 6](#prop6){: data-relation="required" }에 의하여 $\varphi(v_\lambda^+)=w$인 $\mathfrak{g}$-morphism $\varphi:M(\lambda)\rightarrow V$가 존재하고, $V$가 $w$로 생성되므로 $\varphi$는 전사이다. 따라서 $V\cong M(\lambda)/\ker\varphi$이다. $V$가 irreducible이므로 $\ker\varphi$는 $M(\lambda)$의 maximal submodule이고, [명제 8](#prop8){: data-relation="required" }에 의해 maximal submodule은 $M^{\mathrm{rad}}(\lambda)$ 하나뿐이므로 $\ker\varphi=M^{\mathrm{rad}}(\lambda)$, 곧 $V\cong L(\lambda)$이다.
 
-Highest weight의 유일성을 본다. $V$가 highest weight vector로 생성되는 irreducible module이면 위에서 본 대로 $V\cong L(\lambda)$이고, [명제 7](#prop7)에 의하여 $L(\lambda)$의 모든 weight는 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$, $\beta_k\in\Phi^+$)의 꼴이다. 이 weight들 가운데 어떤 다른 weight $\mu$에도 positive root를 더해서는 도달할 수 없는 maximal인 것은 $\lambda$뿐이다. $\lambda$에 positive root를 더하면 $\lambda$보다 위의 weight가 되는데 그러한 weight space는 $0$이기 때문이다. 따라서 $\lambda$는 $V$에 의해 내재적으로 결정되며, $L(\mu)\cong L(\lambda)$이면 양쪽의 이 maximal weight가 같아 $\mu=\lambda$이다.
+Highest weight의 유일성을 본다. $V$가 highest weight vector로 생성되는 irreducible module이면 위에서 본 대로 $V\cong L(\lambda)$이고, [명제 7](#prop7){: data-relation="required" }에 의하여 $L(\lambda)$의 모든 weight는 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$, $\beta_k\in\Phi^+$)의 꼴이다. 이 weight들 가운데 어떤 다른 weight $\mu$에도 positive root를 더해서는 도달할 수 없는 maximal인 것은 $\lambda$뿐이다. $\lambda$에 positive root를 더하면 $\lambda$보다 위의 weight가 되는데 그러한 weight space는 $0$이기 때문이다. 따라서 $\lambda$는 $V$에 의해 내재적으로 결정되며, $L(\mu)\cong L(\lambda)$이면 양쪽의 이 maximal weight가 같아 $\mu=\lambda$이다.
 :::
 
-명제 10은 모든 irreducible highest weight module이 정확히 $\mathfrak{h}^\ast$의 원소로 색인됨을 말한다. 그러나 임의의 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 일반적으로 무한차원이다. $\sl_2$의 highest weight 사슬이 $\mu$가 음이 아닌 정수일 때에만 유한 단계에서 닫혔던 것처럼 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4) 이후의 논의), $L(\lambda)$가 유한차원이 되려면 $\lambda$가 각 simple root 방향으로 정수성 조건을 만족해야 한다. 다음 절에서 그 조건을 정확히 규정한다.
+명제 10은 모든 irreducible highest weight module이 정확히 $\mathfrak{h}^\ast$의 원소로 색인됨을 말한다. 그러나 임의의 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 일반적으로 무한차원이다. $\sl_2$의 highest weight 사슬이 $\mu$가 음이 아닌 정수일 때에만 유한 단계에서 닫혔던 것처럼 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-relation="weak" } 이후의 논의), $L(\lambda)$가 유한차원이 되려면 $\lambda$가 각 simple root 방향으로 정수성 조건을 만족해야 한다. 다음 절에서 그 조건을 정확히 규정한다.
 
 ## 최고 무게 정리
 
-유한차원성의 조건을 simple root별 $\sl_2$-triple로 환원하여 읽어낸다. 각 root $\alpha\in\Phi$는 $\mathfrak{g}$ 안에 $\sl_2$와 isomorphic인 subalgebra $\sl_{2,\alpha}=\langle e_\alpha,f_\alpha,h_\alpha\rangle$를 낳으며, $h_\alpha\in\mathfrak{h}$는 표준 관계 $[h_\alpha,e_\alpha]=2e_\alpha$, $[h_\alpha,f_\alpha]=-2f_\alpha$, $[e_\alpha,f_\alpha]=h_\alpha$를 만족하는 *coroot*이다 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이전의 논의). Simple root들을 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$이라 하고 그 coroot을 $h_i=h_{\alpha_i}$, 대응하는 $\sl_2$-triple을 $(e_i,f_i,h_i)$로 적는다.
+유한차원성의 조건을 simple root별 $\sl_2$-triple로 환원하여 읽어낸다. 각 root $\alpha\in\Phi$는 $\mathfrak{g}$ 안에 $\sl_2$와 isomorphic인 subalgebra $\sl_{2,\alpha}=\langle e_\alpha,f_\alpha,h_\alpha\rangle$를 낳으며, $h_\alpha\in\mathfrak{h}$는 표준 관계 $[h_\alpha,e_\alpha]=2e_\alpha$, $[h_\alpha,f_\alpha]=-2f_\alpha$, $[e_\alpha,f_\alpha]=h_\alpha$를 만족하는 *coroot*이다 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12){: data-relation="required" } 이전의 논의). Simple root들을 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$이라 하고 그 coroot을 $h_i=h_{\alpha_i}$, 대응하는 $\sl_2$-triple을 $(e_i,f_i,h_i)$로 적는다.
 
 ::: 정의 11
 Weight $\lambda\in\mathfrak{h}^\ast$이 *dominant integral<sub>지배적 정수</sub>* weight이라는 것은 모든 simple root $\alpha_i$에 대하여
@@ -187,7 +187,7 @@ $$\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$
 이 성립하는 것이다. 곧 각 simple coroot 위에서 $\lambda$가 음이 아닌 정숫값을 갖는 것이다.
 :::
 
-$\lambda(h_i)$는 $\sl_2$ 표현론의 언어로 highest weight vector가 simple root $\alpha_i$ 방향의 $\sl_{2,\alpha_i}$ 위에서 갖는 highest weight이다. $\sl_2$의 유한차원 irreducible representation의 highest weight가 항상 음이 아닌 정수였으므로 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6)), 유한차원 representation에서 각 $\lambda(h_i)$가 음이 아닌 정수여야 함은 필연적이다. 다음 정리는 이 필요조건이 충분조건이기도 함을 보인다.
+$\lambda(h_i)$는 $\sl_2$ 표현론의 언어로 highest weight vector가 simple root $\alpha_i$ 방향의 $\sl_{2,\alpha_i}$ 위에서 갖는 highest weight이다. $\sl_2$의 유한차원 irreducible representation의 highest weight가 항상 음이 아닌 정수였으므로 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6){: data-relation="required" }), 유한차원 representation에서 각 $\lambda(h_i)$가 음이 아닌 정수여야 함은 필연적이다. 다음 정리는 이 필요조건이 충분조건이기도 함을 보인다.
 
 ::: 정리 12 (최고 무게 정리)
 $\mathfrak{g}$가 유한차원 semisimple Lie algebra이면, 대응 $\lambda\mapsto L(\lambda)$는 dominant integral weight들의 집합에서 $\mathfrak{g}$의 유한차원 irreducible representation들의 isomorphism class 집합으로 가는 전단사이다. 곧 모든 유한차원 irreducible representation은 어떤 dominant integral weight $\lambda$에 대한 $L(\lambda)$와 isomorphic이며, 서로 다른 dominant integral weight는 서로 isomorphic이 아닌 irreducible representation을 준다.
@@ -195,26 +195,26 @@ $\mathfrak{g}$가 유한차원 semisimple Lie algebra이면, 대응 $\lambda\map
 ::: 증명
 증명은 세 부분으로 이루어진다. 첫째, 유한차원 irreducible representation이 dominant integral highest weight를 가짐을 보인다. 둘째, dominant integral $\lambda$에 대하여 $L(\lambda)$가 유한차원임을 보인다. 셋째, 단사성과 전사성을 정리한다.
 
-(1) $V$를 $0$이 아닌 유한차원 irreducible representation이라 하자. $V$는 weight module이다. 실제로 $\mathfrak{g}$가 semisimple이므로 Cartan subalgebra의 각 원소는 $V$ 위에서 semisimple하게 작용하고 $\mathfrak{h}$가 abelian이므로 동시 대각화되어, $V=\bigoplus_\mu V_\mu$이다. $V$가 유한차원이므로 weight들 가운데 어떤 positive root를 더해도 다시 weight가 되지 않는 maximal weight $\lambda$가 존재한다. 이러한 $\lambda$의 $0$이 아닌 벡터 $v\in V_\lambda$는 [명제 3](#prop3)에 의해 $\mathfrak{n}^+\cdot v\subseteq\bigoplus_{\alpha\in\Phi^+}V_{\lambda+\alpha}=0$을 만족하므로 highest weight vector이다. $V$가 irreducible이므로 $v$가 $V$를 생성하고, [명제 10](#prop10)에 의해 $V\cong L(\lambda)$이다. 이제 각 simple root $\alpha_i$에 대하여 $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action으로 $V$를 $\sl_2$-module로 보면, $e_i\cdot v=0$이고 $h_i\cdot v=\lambda(h_i)v$이므로 $v$는 이 $\sl_2$-module의 highest weight vector이다. $V$가 유한차원이므로 [§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4) 이후의 논의에 의해 그 highest weight $\lambda(h_i)$는 음이 아닌 정수이다. 따라서 $\lambda$는 dominant integral이다.
+(1) $V$를 $0$이 아닌 유한차원 irreducible representation이라 하자. $V$는 weight module이다. 실제로 $\mathfrak{g}$가 semisimple이므로 Cartan subalgebra의 각 원소는 $V$ 위에서 semisimple하게 작용하고 $\mathfrak{h}$가 abelian이므로 동시 대각화되어, $V=\bigoplus_\mu V_\mu$이다. $V$가 유한차원이므로 weight들 가운데 어떤 positive root를 더해도 다시 weight가 되지 않는 maximal weight $\lambda$가 존재한다. 이러한 $\lambda$의 $0$이 아닌 벡터 $v\in V_\lambda$는 [명제 3](#prop3){: data-relation="required" }에 의해 $\mathfrak{n}^+\cdot v\subseteq\bigoplus_{\alpha\in\Phi^+}V_{\lambda+\alpha}=0$을 만족하므로 highest weight vector이다. $V$가 irreducible이므로 $v$가 $V$를 생성하고, [명제 10](#prop10){: data-relation="required" }에 의해 $V\cong L(\lambda)$이다. 이제 각 simple root $\alpha_i$에 대하여 $\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$의 action으로 $V$를 $\sl_2$-module로 보면, $e_i\cdot v=0$이고 $h_i\cdot v=\lambda(h_i)v$이므로 $v$는 이 $\sl_2$-module의 highest weight vector이다. $V$가 유한차원이므로 [§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-relation="required" } 이후의 논의에 의해 그 highest weight $\lambda(h_i)$는 음이 아닌 정수이다. 따라서 $\lambda$는 dominant integral이다.
 
 (2) 역으로 $\lambda$가 dominant integral이라 하고 $L(\lambda)$가 유한차원임을 보인다. $L(\lambda)$의 생성 highest weight vector를 $v$라 하고 각 $i$에 대하여 $n_i=\lambda(h_i)\in\mathbb{Z}_{\geq 0}$이라 두자. 핵심은 벡터 $f_i^{\,n_i+1}\cdot v$가 $0$이라는 것이다. 이를 보이기 위해 $\sl_{2,\alpha_i}$-부분작용만을 본다. $v$는 $e_i\cdot v=0$, $h_i\cdot v=n_i v$를 만족하는 $\sl_{2,\alpha_i}$-highest weight vector이고, $j\neq i$인 다른 simple root vector $e_j$에 대해서는 $e_j$가 $f_i^{\,m}\cdot v$를 어떻게 옮기는지를 따져야 한다. $\alpha_i$가 simple root이므로 $j\neq i$이면 $\alpha_i-\alpha_j$는 root가 아니어서 $[e_j,f_i]\in\mathfrak{g}_{\alpha_j-\alpha_i}=0$, 곧 $e_j$와 $f_i$가 교환한다. 따라서
 
 $$e_j\cdot\bigl(f_i^{\,m}\cdot v\bigr)=f_i^{\,m}\cdot(e_j\cdot v)=0\qquad(j\neq i)$$
 
-이고, $w=f_i^{\,n_i+1}\cdot v$는 모든 $e_j$ ($j\neq i$)에 의해 소멸된다. 한편 $\sl_{2,\alpha_i}$ 안에서 [§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4)를 highest weight $n_i$의 사슬에 적용하면
+이고, $w=f_i^{\,n_i+1}\cdot v$는 모든 $e_j$ ($j\neq i$)에 의해 소멸된다. 한편 $\sl_{2,\alpha_i}$ 안에서 [§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-relation="required" }를 highest weight $n_i$의 사슬에 적용하면
 
 $$e_i\cdot\bigl(f_i^{\,n_i+1}\cdot v\bigr)=(n_i+1)\,(n_i-n_i)\,f_i^{\,n_i}\cdot v=0$$
 
-이므로 $w$는 $e_i$에 의해서도 소멸된다. 곧 $w$는 모든 simple root vector에 의해 죽으므로 $\mathfrak{n}^+\cdot w=0$이고, $w$가 $0$이 아니라면 weight $\lambda-(n_i+1)\alpha_i$의 highest weight vector가 된다. 그러나 $w\neq 0$이면 $L(\lambda)$가 irreducible이므로 $w$가 $L(\lambda)$ 전체를 생성하고, 그럼 $L(\lambda)$는 highest weight $\lambda-(n_i+1)\alpha_i$의 highest weight vector로 생성되는 irreducible module이 되어 [명제 10](#prop10)의 유일성에 의해 $\lambda-(n_i+1)\alpha_i=\lambda$여야 하므로 모순이고, $w=0$이어야 한다. 따라서 각 $i$에 대하여 $f_i^{\,n_i+1}\cdot v=0$이다.
+이므로 $w$는 $e_i$에 의해서도 소멸된다. 곧 $w$는 모든 simple root vector에 의해 죽으므로 $\mathfrak{n}^+\cdot w=0$이고, $w$가 $0$이 아니라면 weight $\lambda-(n_i+1)\alpha_i$의 highest weight vector가 된다. 그러나 $w\neq 0$이면 $L(\lambda)$가 irreducible이므로 $w$가 $L(\lambda)$ 전체를 생성하고, 그럼 $L(\lambda)$는 highest weight $\lambda-(n_i+1)\alpha_i$의 highest weight vector로 생성되는 irreducible module이 되어 [명제 10](#prop10){: data-relation="required" }의 유일성에 의해 $\lambda-(n_i+1)\alpha_i=\lambda$여야 하므로 모순이고, $w=0$이어야 한다. 따라서 각 $i$에 대하여 $f_i^{\,n_i+1}\cdot v=0$이다.
 
-이제 유한차원성을 본다. $L(\lambda)$의 weight들의 집합 $P(\lambda)$는 [명제 7](#prop7)에 의해 $\lambda-\sum_k m_k\beta_k$ 꼴로 bounded below이고, 방금 본 $f_i^{\,n_i+1}\cdot v=0$은 각 $\sl_{2,\alpha_i}$-방향 사슬이 유한 길이에서 닫힘을 뜻한다. $P(\lambda)$가 Weyl group action에 대해 불변임을 보이면 유한성이 따라온다. 각 simple reflection $s_i$에 대하여 $L(\lambda)$를 $\sl_{2,\alpha_i}$-module로 본다. $L(\lambda)$의 유한차원성은 아직 모르는 상태이므로, 먼저 $L(\lambda)$의 모든 벡터가 유한차원 $\sl_{2,\alpha_i}$-submodule에 들어감을 본다. 그러한 벡터들의 모임을 $L'$이라 하자. 유한차원 $\sl_{2,\alpha_i}$-submodule 둘의 합이 다시 유한차원 $\sl_{2,\alpha_i}$-submodule이므로 $L'$은 부분공간이다. 또 $u\in L'$이 유한차원 $\sl_{2,\alpha_i}$-submodule $F$에 속하고 $x\in\mathfrak{g}$일 때, adjoint action에 대하여 $x$가 생성하는 부분공간 $\mathfrak{g}'=U(\sl_{2,\alpha_i})\cdot x\subseteq\mathfrak{g}$는 $\mathfrak{g}$가 유한차원이므로 유한차원인 $\sl_{2,\alpha_i}$-submodule이고, $y\in\mathfrak{g}'$과 $u'\in F$에 대한 $y\cdot u'$들이 span하는 공간 $\mathfrak{g}'\cdot F$는 임의의 $z\in\sl_{2,\alpha_i}$에 대하여 $z\cdot(y\cdot u')=[z,y]\cdot u'+y\cdot(z\cdot u')$이고 $[z,y]\in\mathfrak{g}'$, $z\cdot u'\in F$이므로 $x\cdot u$를 포함하는 유한차원 $\sl_{2,\alpha_i}$-submodule이다. 곧 $L'$은 $\mathfrak{g}$-submodule이며, $e_i\cdot v=0$과 $f_i^{n_i+1}\cdot v=0$에 의해 $v,f_i\cdot v,\ldots,f_i^{n_i}\cdot v$가 span하는 유한차원 공간이 $\sl_{2,\alpha_i}$-submodule이므로 $v\in L'$, 따라서 $L(\lambda)$가 irreducible이라는 데에서 $L'=L(\lambda)$이다. 이제 각 유한차원 $\sl_{2,\alpha_i}$-submodule이 [§sl₂의 표현론, ⁋정리 9](/ko/math/lie_theory/representations_of_sl2#thm9)에 의해 irreducible module들의 direct sum으로 분해되므로 $L(\lambda)$는 유한차원 irreducible $\sl_{2,\alpha_i}$-module들의 합이고, irreducible submodule들의 합인 module은 그 가운데 적당한 것들의 direct sum이므로 $L(\lambda)$는 그러한 direct sum이다. $\sl_2$의 각 irreducible 성분의 weight 집합이 $h_i$의 고윳값 $\mapsto$ 그 음수로 보내는 대칭에 대해 닫혀 있으므로, $\mu\in P(\lambda)$이면 $s_i(\mu)=\mu-\mu(h_i)\alpha_i\in P(\lambda)$이고 그 multiplicity도 보존된다. Simple reflection들이 Weyl group $W$를 생성하므로 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) $P(\lambda)$는 $W$-불변이다. 임의의 weight는 $W$-action으로 dominant chamber 안의 weight로 옮길 수 있고, $\lambda$ 아래의 dominant weight는 유한 개뿐이므로 $P(\lambda)$는 유한집합이다. 각 weight space가 유한차원이므로 ([명제 7](#prop7)) $L(\lambda)=\bigoplus_{\mu\in P(\lambda)}L(\lambda)_\mu$는 유한차원이다.
+이제 유한차원성을 본다. $L(\lambda)$의 weight들의 집합 $P(\lambda)$는 [명제 7](#prop7){: data-relation="required" }에 의해 $\lambda-\sum_k m_k\beta_k$ 꼴로 bounded below이고, 방금 본 $f_i^{\,n_i+1}\cdot v=0$은 각 $\sl_{2,\alpha_i}$-방향 사슬이 유한 길이에서 닫힘을 뜻한다. $P(\lambda)$가 Weyl group action에 대해 불변임을 보이면 유한성이 따라온다. 각 simple reflection $s_i$에 대하여 $L(\lambda)$를 $\sl_{2,\alpha_i}$-module로 본다. $L(\lambda)$의 유한차원성은 아직 모르는 상태이므로, 먼저 $L(\lambda)$의 모든 벡터가 유한차원 $\sl_{2,\alpha_i}$-submodule에 들어감을 본다. 그러한 벡터들의 모임을 $L'$이라 하자. 유한차원 $\sl_{2,\alpha_i}$-submodule 둘의 합이 다시 유한차원 $\sl_{2,\alpha_i}$-submodule이므로 $L'$은 부분공간이다. 또 $u\in L'$이 유한차원 $\sl_{2,\alpha_i}$-submodule $F$에 속하고 $x\in\mathfrak{g}$일 때, adjoint action에 대하여 $x$가 생성하는 부분공간 $\mathfrak{g}'=U(\sl_{2,\alpha_i})\cdot x\subseteq\mathfrak{g}$는 $\mathfrak{g}$가 유한차원이므로 유한차원인 $\sl_{2,\alpha_i}$-submodule이고, $y\in\mathfrak{g}'$과 $u'\in F$에 대한 $y\cdot u'$들이 span하는 공간 $\mathfrak{g}'\cdot F$는 임의의 $z\in\sl_{2,\alpha_i}$에 대하여 $z\cdot(y\cdot u')=[z,y]\cdot u'+y\cdot(z\cdot u')$이고 $[z,y]\in\mathfrak{g}'$, $z\cdot u'\in F$이므로 $x\cdot u$를 포함하는 유한차원 $\sl_{2,\alpha_i}$-submodule이다. 곧 $L'$은 $\mathfrak{g}$-submodule이며, $e_i\cdot v=0$과 $f_i^{n_i+1}\cdot v=0$에 의해 $v,f_i\cdot v,\ldots,f_i^{n_i}\cdot v$가 span하는 유한차원 공간이 $\sl_{2,\alpha_i}$-submodule이므로 $v\in L'$, 따라서 $L(\lambda)$가 irreducible이라는 데에서 $L'=L(\lambda)$이다. 이제 각 유한차원 $\sl_{2,\alpha_i}$-submodule이 [§sl₂의 표현론, ⁋정리 9](/ko/math/lie_theory/representations_of_sl2#thm9){: data-relation="required" }에 의해 irreducible module들의 direct sum으로 분해되므로 $L(\lambda)$는 유한차원 irreducible $\sl_{2,\alpha_i}$-module들의 합이고, irreducible submodule들의 합인 module은 그 가운데 적당한 것들의 direct sum이므로 $L(\lambda)$는 그러한 direct sum이다. $\sl_2$의 각 irreducible 성분의 weight 집합이 $h_i$의 고윳값 $\mapsto$ 그 음수로 보내는 대칭에 대해 닫혀 있으므로, $\mu\in P(\lambda)$이면 $s_i(\mu)=\mu-\mu(h_i)\alpha_i\in P(\lambda)$이고 그 multiplicity도 보존된다. Simple reflection들이 Weyl group $W$를 생성하므로 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17){: data-relation="required" }) $P(\lambda)$는 $W$-불변이다. 임의의 weight는 $W$-action으로 dominant chamber 안의 weight로 옮길 수 있고, $\lambda$ 아래의 dominant weight는 유한 개뿐이므로 $P(\lambda)$는 유한집합이다. 각 weight space가 유한차원이므로 ([명제 7](#prop7){: data-relation="required" }) $L(\lambda)=\bigoplus_{\mu\in P(\lambda)}L(\lambda)_\mu$는 유한차원이다.
 
-(3) 단사성과 전사성을 정리한다. (1)에서 모든 $0$이 아닌 유한차원 irreducible representation이 어떤 dominant integral $\lambda$에 대한 $L(\lambda)$와 isomorphic임을 보였으므로 대응 $\lambda\mapsto L(\lambda)$는 전사이다. (2)에서 dominant integral $\lambda$마다 $L(\lambda)$가 실제로 유한차원 irreducible representation임을 보였으므로 이 대응은 잘 정의된다. 단사성은 [명제 10](#prop10)에서 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$임을 이미 보였으므로 성립한다. 따라서 대응은 전단사이다.
+(3) 단사성과 전사성을 정리한다. (1)에서 모든 $0$이 아닌 유한차원 irreducible representation이 어떤 dominant integral $\lambda$에 대한 $L(\lambda)$와 isomorphic임을 보였으므로 대응 $\lambda\mapsto L(\lambda)$는 전사이다. (2)에서 dominant integral $\lambda$마다 $L(\lambda)$가 실제로 유한차원 irreducible representation임을 보였으므로 이 대응은 잘 정의된다. 단사성은 [명제 10](#prop10){: data-relation="required" }에서 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$임을 이미 보였으므로 성립한다. 따라서 대응은 전단사이다.
 :::
 
 증명의 핵심은 각 simple root 방향에서 representation을 $\sl_{2,\alpha_i}$-module로 잘라 $\sl_2$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $\lambda(h_i)\in\mathbb{Z}_{\geq 0}$은 각 방향의 highest weight 사슬이 $\sl_2$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $M(\lambda)$의 irreducible quotient $L(\lambda)$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 finite weight 집합을 하나로 묶어 representation 전체의 유한차원성을 보장한다. 
 
-이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)에 의해 임의의 유한차원 representation은 irreducible representation들의 direct sum이고, 그 irreducible 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 representation은 각 dominant integral weight $\lambda$에 대한 $L(\lambda)$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $\sl_2$에서 모든 irreducible representation이 음이 아닌 정수 $n$으로 색인되고 $L(n)=V(n)$이었던 것이 이 일반적 그림의 가장 단순한 경우이다. ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5))
+이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7){: data-relation="weak" }에 의해 임의의 유한차원 representation은 irreducible representation들의 direct sum이고, 그 irreducible 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 representation은 각 dominant integral weight $\lambda$에 대한 $L(\lambda)$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $\sl_2$에서 모든 irreducible representation이 음이 아닌 정수 $n$으로 색인되고 $L(n)=V(n)$이었던 것이 이 일반적 그림의 가장 단순한 경우이다. ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5){: data-relation="weak" })
 
 ---
 
