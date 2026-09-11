@@ -9,6 +9,12 @@ receive a wider-context review from the next available provider in the
 Claude Opus > Codex chain.  A single ambiguous decision blocks the whole pair so
 an article is not repeatedly rewritten.
 
+A blocked pair is retried a day later, and the round counter kept in the state
+file escalates the evidence: round 1 reviews excerpts, rounds 2 and 3 hand the
+reviewer the complete source and target articles.  After MAX_ROUNDS the unit is
+marked exhausted and skipped until its files change, which resets the counter —
+so an edit that adds a new link always reopens the unit.
+
 The inline representation is Kramdown IAL syntax::
 
     [label](/ko/math/example){: data-relation="required" }
@@ -85,6 +91,14 @@ CODEX_REVIEW_EFFORT = os.environ.get(
 MODEL_TIMEOUT = int(os.environ.get("DEPENDENCY_MODEL_TIMEOUT", "900"))
 BLOCK_SEC = 24 * 3600
 CHUNK_SIZE = 10
+# Review rounds from the second one on hand the reviewer the complete articles
+# instead of excerpts: the recorded ambiguous reasons are almost always "the link
+# does not appear in the given source excerpt".  Whole articles are large, so the
+# full round sends fewer items per request.
+MAX_ROUNDS = 3
+FULL_CHUNK_SIZE = 4
+FULL_SOURCE_CAP = 30000
+FULL_TARGET_CAP = 30000
 RELATIONS = {"required", "weak", "forward"}
 
 IAL_RE = re.compile(r'^\{:\s*([^}]*)\}')
@@ -310,7 +324,7 @@ def paragraph_context(text: str, offset: int, radius: int) -> str:
     return "\n\n".join(c[2] for c in chunks[lo:hi])[:7000]
 
 
-def target_context(link: Link, wide: bool) -> tuple[str, str]:
+def target_context(link: Link, wide: bool, full: bool = False) -> tuple[str, str]:
     source_text = link.source.read_text(encoding="utf-8")
     target = link.target
     anchor = target.split("#", 1)[1] if "#" in target else ""
@@ -321,6 +335,8 @@ def target_context(link: Link, wide: bool) -> tuple[str, str]:
         post = by_permalink(base, _POSTS)
         post_path = post.path if post else link.source
     text = post_path.read_text(encoding="utf-8")
+    if full:
+        return source_text[:FULL_SOURCE_CAP], text[:FULL_TARGET_CAP]
     context = ""
     if anchor:
         box = find_box(parse_labels(text), anchor=anchor)
@@ -341,15 +357,16 @@ def target_context(link: Link, wide: bool) -> tuple[str, str]:
     return src, context[:12000 if wide else 6500]
 
 
-def prompt_items(links: list[Link], wide: bool) -> list[dict]:
+def prompt_items(links: list[Link], wide: bool, full: bool = False) -> list[dict]:
     items = []
     for link in links:
-        src, dst = target_context(link, wide)
+        src, dst = target_context(link, wide, full)
         items.append({
             "id": link.ident,
             "language": "en" if "/en/" in str(link.source) else "ko",
             "link": link.markup,
             "target": link.target,
+            "context_scope": "full-article" if full else "excerpt",
             "source_context": src,
             "target_context": dst,
         })
@@ -377,6 +394,8 @@ REVIEW_PROMPT = """You are the independent final reviewer for ambiguous dependen
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
 
 Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
+
+Each item states its context_scope. "excerpt" means you see passages around the link. "full-article" means source_context and target_context are the complete articles, truncated only if extremely long: there is no wider context to wait for, so decide on the evidence given and reserve ambiguous for links whose role is genuinely undecidable rather than merely unstated.
 
 ITEMS:
 """
@@ -571,11 +590,14 @@ def request_complete_results(
     )
 
 
-def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
+def classify(links: list[Link], round_no: int = 1) -> tuple[dict[str, str], list[dict]]:
     first_attempts = provider_attempts(review=False)
     review_attempts = provider_attempts(review=True)
+    full = round_no >= 2
     log(
-        "quota route: first=" + " > ".join(name for name, _ in first_attempts)
+        f"round {round_no}/{MAX_ROUNDS}"
+        + (" (review reads the complete articles)" if full else "")
+        + "; quota route: first=" + " > ".join(name for name, _ in first_attempts)
         + "; review=" + " > ".join(name for name, _ in review_attempts)
     )
     first: dict[str, dict] = {}
@@ -591,10 +613,11 @@ def classify(links: list[Link]) -> tuple[dict[str, str], list[dict]]:
     medium = [link for link in links if str(first[link.ident]["confidence"]).lower() == "medium"]
     log(f"first pass: high={len(decisions)}, medium={len(medium)}")
     ambiguous = []
-    for i in range(0, len(medium), CHUNK_SIZE):
-        chunk = medium[i:i + CHUNK_SIZE]
+    review_chunk = FULL_CHUNK_SIZE if full else CHUNK_SIZE
+    for i in range(0, len(medium), review_chunk):
+        chunk = medium[i:i + review_chunk]
         values = request_complete_results(
-            prompt_items(chunk, True), review=True, stage="review",
+            prompt_items(chunk, True, full), review=True, stage="review",
             attempts=review_attempts,
         )
         for ident, row in values.items():
@@ -651,10 +674,8 @@ def is_local_only_untracked_unit(paths: list[Path]) -> bool:
     return not any(proc.stdout.split("\0"))
 
 
-def select_unit(
-    state: dict, updates: dict[str, dict],
-) -> tuple[list[Path], dict[Path, str], list[Link], FileLockSet] | None:
-    now = time.time()
+def iter_units() -> list[list[Path]]:
+    """A KO post and its EN counterpart form one unit; unpaired posts stand alone."""
     units: list[list[Path]] = []
     paired_en: set[Path] = set()
     for post in _POSTS:
@@ -669,7 +690,14 @@ def select_unit(
     for post in _POSTS:
         if post.lang == "en" and post.path not in paired_en:
             units.append([post.path])
-    for paths in units:
+    return units
+
+
+def select_unit(
+    state: dict, updates: dict[str, dict],
+) -> tuple[list[Path], dict[Path, str], list[Link], FileLockSet] | None:
+    now = time.time()
+    for paths in iter_units():
         lease = try_acquire_file_locks(paths)
         if lease is None:
             continue
@@ -682,7 +710,10 @@ def select_unit(
             key = unit_key(paths)
             fingerprint = sha("\0".join(texts[p] for p in paths))
             entry = state.get("units", {}).get(key, {})
-            if entry.get("hash") == fingerprint and entry.get("status") == "done":
+            if entry.get("hash") == fingerprint and entry.get("status") in {"done", "exhausted"}:
+                # An exhausted unit spent all MAX_ROUNDS rounds without a verdict.
+                # It comes back only when the files change, which also resets the
+                # round counter, so a newly added link reopens it.
                 lease.release()
                 continue
             if entry.get("hash") == fingerprint and entry.get("retry_after", 0) > now:
@@ -703,14 +734,35 @@ def select_unit(
     return None
 
 
-def backlog_complete() -> bool:
-    """True only when no current post contains an eligible unclassified link."""
-    for post in _POSTS:
+def exhausted_units() -> dict[str, dict]:
+    """Units that spent every round without a verdict, still at the judged content."""
+    state = load_state()
+    out = {}
+    for paths in iter_units():
+        entry = state.get("units", {}).get(unit_key(paths), {})
+        if entry.get("status") != "exhausted":
+            continue
         try:
-            if extract_links(post.path, post.path.read_text(encoding="utf-8")):
-                return False
+            texts = [p.read_text(encoding="utf-8") for p in paths]
         except OSError:
-            return False
+            continue
+        if entry.get("hash") == sha("\0".join(texts)):
+            out[unit_key(paths)] = entry
+    return out
+
+
+def backlog_complete() -> bool:
+    """True when every unclassified link left belongs to an exhausted unit."""
+    spent = exhausted_units()
+    for paths in iter_units():
+        if unit_key(paths) in spent:
+            continue
+        for path in paths:
+            try:
+                if extract_links(path, path.read_text(encoding="utf-8")):
+                    return False
+            except OSError:
+                return False
     return True
 
 
@@ -732,7 +784,12 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
         if backlog_complete():
             if not dry_run:
                 mark_backlog_complete()
-            log(f"backlog complete; marker={COMPLETE_PATH}")
+            spent = exhausted_units()
+            log(
+                f"backlog complete; marker={COMPLETE_PATH}"
+                + (f"; {len(spent)} unit(s) left undecided after {MAX_ROUNDS} rounds: "
+                   + ", ".join(sorted(spent)[:3]) if spent else "")
+            )
         else:
             log("queue temporarily unavailable (pending target is locked/dirty/backed off)")
         return 0
@@ -746,14 +803,28 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
             return 0
         fingerprint = sha("\0".join(originals[p] for p in paths))
         try:
-            decisions, ambiguous = classify(links)
+            entry = state.get("units", {}).get(key, {})
+            # Entries written before the round counter existed already spent one
+            # excerpt round, so they resume at the full-article round.
+            legacy = 1 if entry.get("status") == "ambiguous" else 0
+            previous = entry.get("rounds", legacy) if entry.get("hash") == fingerprint else 0
+            round_no = previous + 1
+            decisions, ambiguous = classify(links, round_no)
             if ambiguous:
-                merge_unit_states({key: {
-                    "status": "ambiguous", "hash": fingerprint,
-                    "checked_at": int(time.time()),
-                    "retry_after": int(time.time() + BLOCK_SEC), "items": ambiguous,
-                }})
-                log(f"blocked {key}: {len(ambiguous)} ambiguous decision(s); no files changed")
+                exhausted = round_no >= MAX_ROUNDS
+                record = {
+                    "status": "exhausted" if exhausted else "ambiguous",
+                    "hash": fingerprint, "checked_at": int(time.time()),
+                    "rounds": round_no, "items": ambiguous,
+                }
+                if not exhausted:
+                    record["retry_after"] = int(time.time() + BLOCK_SEC)
+                merge_unit_states({key: record})
+                log(
+                    f"blocked {key}: {len(ambiguous)} ambiguous decision(s) "
+                    f"in round {round_no}/{MAX_ROUNDS}; no files changed"
+                    + ("; giving up until the files change" if exhausted else "")
+                )
                 return 0
             rels = [str(p.relative_to(ROOT)) for p in paths]
             if dirty_paths(rels, ROOT) or any(

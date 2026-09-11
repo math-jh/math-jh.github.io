@@ -303,5 +303,143 @@ class SelectionTest(unittest.TestCase):
                 lease.release()
 
 
+class RetryRoundTest(unittest.TestCase):
+    """Ambiguous units escalate to whole-article review, then give up."""
+
+    def make_unit(self, root: Path) -> tuple[Path, object, dc.Link]:
+        path = root / "_posts/Math/Test/ko/draft.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("ko body", encoding="utf-8")
+        post = SimpleNamespace(lang="ko", published=True, path=path)
+        link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None)
+        return path, post, link
+
+    def run_round(self, root: Path, state_path: Path, path: Path, post: object, link: dc.Link,
+                  seen: list[int]) -> None:
+        with (
+            patch.object(dc, "ROOT", root),
+            patch.object(dc, "STATE_DIR", root),
+            patch.object(dc, "STATE_PATH", state_path),
+            patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
+            patch.object(dc, "_POSTS", [post]),
+            patch.object(dc, "en_counterpart", return_value=None),
+            patch.object(dc, "dirty_paths", return_value=[]),
+            patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+            patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
+                seen.append(rnd), ({}, [{"id": link.ident, "reason": "unclear"}]))[1]),
+        ):
+            dc.process_once()
+
+    def test_rounds_escalate_then_exhaust(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state_path = root / "state.json"
+            path, post, link = self.make_unit(root)
+            seen: list[int] = []
+            for _ in range(dc.MAX_ROUNDS):
+                # Each round starts after the previous backoff has elapsed.
+                if state_path.exists():
+                    saved = json.loads(state_path.read_text(encoding="utf-8"))
+                    for entry in saved["units"].values():
+                        entry.pop("retry_after", None)
+                    state_path.write_text(json.dumps(saved), encoding="utf-8")
+                self.run_round(root, state_path, path, post, link, seen)
+            saved = json.loads(state_path.read_text(encoding="utf-8"))
+            entry = next(iter(saved["units"].values()))
+
+            self.assertEqual(seen, list(range(1, dc.MAX_ROUNDS + 1)))
+            self.assertEqual(entry["status"], "exhausted")
+            self.assertEqual(entry["rounds"], dc.MAX_ROUNDS)
+            self.assertNotIn("retry_after", entry)
+
+            # Exhausted units stay out of the queue while their content is unchanged.
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "en_counterpart", return_value=None),
+                patch.object(dc, "dirty_paths", return_value=[]),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+            ):
+                self.assertIsNone(dc.select_unit(saved, {}))
+
+            # A new link changes the file, so the unit is picked up again.
+            path.write_text("ko body + new link", encoding="utf-8")
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "en_counterpart", return_value=None),
+                patch.object(dc, "dirty_paths", return_value=[]),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+            ):
+                selected = dc.select_unit(saved, {})
+            self.assertIsNotNone(selected)
+            selected[3].release()
+
+    def test_legacy_ambiguous_entry_resumes_at_full_article_round(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            state_path = root / "state.json"
+            path, post, link = self.make_unit(root)
+            with patch.object(dc, "ROOT", root):
+                key = dc.unit_key([path])
+            state_path.write_text(json.dumps({"units": {key: {
+                "status": "ambiguous", "hash": dc.sha("ko body"), "items": [],
+            }}}), encoding="utf-8")
+            seen: list[int] = []
+            self.run_round(root, state_path, path, post, link, seen)
+
+            self.assertEqual(seen, [2])
+
+    def test_full_context_sends_whole_articles(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "source.md"
+            target = root / "target.md"
+            body = "\n\n".join(f"paragraph {i}" for i in range(40))
+            source.write_text(body, encoding="utf-8")
+            target.write_text("target head\n\ntarget tail", encoding="utf-8")
+            link = dc.Link("x", source, 0, 1, "", "", "/ko/math/t", None, None)
+            post = SimpleNamespace(lang="ko", published=True, path=target)
+            with (
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "by_permalink", return_value=post),
+            ):
+                narrow = dc.target_context(link, True)
+                wide = dc.target_context(link, True, True)
+
+            self.assertEqual(wide[0], source.read_text(encoding="utf-8"))
+            self.assertEqual(wide[1], target.read_text(encoding="utf-8"))
+            self.assertNotEqual(narrow[0], wide[0])
+            self.assertEqual(
+                dc.prompt_items([link], True, True)[0]["context_scope"], "full-article")
+
+
+class BacklogCompletionTest(unittest.TestCase):
+    def test_exhausted_unit_does_not_hold_the_backlog_open(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "_posts/Math/Test/ko/draft.md"
+            path.parent.mkdir(parents=True)
+            path.write_text("ko body", encoding="utf-8")
+            post = SimpleNamespace(lang="ko", published=True, path=path)
+            link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None)
+            state_path = root / "state.json"
+            with patch.object(dc, "ROOT", root):
+                key = dc.unit_key([path])
+            state_path.write_text(json.dumps({"units": {key: {
+                "status": "exhausted", "hash": dc.sha("ko body"), "rounds": dc.MAX_ROUNDS,
+            }}}), encoding="utf-8")
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "STATE_PATH", state_path),
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "en_counterpart", return_value=None),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t: [link] if p == path else []),
+            ):
+                self.assertTrue(dc.backlog_complete())
+                path.write_text("ko body + new link", encoding="utf-8")
+                self.assertFalse(dc.backlog_complete())
+
+
 if __name__ == "__main__":
     unittest.main()
