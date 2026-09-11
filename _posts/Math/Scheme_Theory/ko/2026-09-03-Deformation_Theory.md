@@ -479,9 +479,13 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 ## 일반적인 변형이론
 
-지금까지 우리는 affine scheme의 deformation을 다뤘으며, 이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. Scheme morphism을 affine 조각에서 구성하는 일 자체는 익숙한 gluing이지만, deformation에서는 붙여야 할 자료가 늘어나므로 이 과정에서 필요한 것을 우선 상상해보자. 
+지금까지 우리는 affine scheme의 deformation을 다뤘다. [정리 8](#thm8){: data-relation="weak" }과 그 직후의 논의에 따르면, 임의의 square-zero extension 
 
-먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 자료와 obstruction이 나타나는지 밝히고 이들이 하나의 대역적 $\Ext$로 조립되는 과정을 정리한다.
+$$0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$$
+
+을 따라 $C$를 deformation하는 문제에서, 그 deformation의 존재성을 방해하는 obstruction class는 $T^2(C/A,M)$에 놓인다. 만일 이 obstruction class가 $0\in T^2(C/A,M)$이라면, deformation들의 isomorphism class는 $T^1(C/A,M)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M)$이 분류한다. 이 글의 first-order deformation은 $A'=A[\epsilon]$인 특수한 경우이다. 이 extension은 split이므로 trivial deformation $C[\epsilon]=C\otimes_AA[\epsilon]$이 항상 존재하여 existence obstruction이 자동으로 사라지고, $M\cong C$이다. 따라서 이 trivial deformation을 기준점으로 삼으면 [정리 5](#thm5){: data-relation="weak" }에 따라 first-order deformation들의 isomorphism class는 $T^1(C/A,C)$과 자연스럽게 대응하며 trivial deformation은 $0$에 대응하고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,C)$이 분류한다.
+
+이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 자료와 obstruction이 나타나는지 밝히고 이들이 하나의 대역적 $\Ext$로 조립되는 과정을 정리한다.
 
 우선 처음에 주어지는 base space $S$를 affine scheme이 아닌 일반적인 scheme으로 확장하는 방향이 가장 단순하다.  $S$ 위의 quasi-coherent module $\mathcal{I}$에 대하여 $\mathcal{O}_S\oplus\mathcal{I}$에 곱셈
 
@@ -517,7 +521,7 @@ $$\widetilde{\LL_{B/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
 을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며, 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다.
 
-이제 앞선 [정의 1](#def1){: data-relation="required" }의 $T^0, T^1$, 그리고 더 일반적으로 $T^i$를 정의하기 위해서는 해당 정의에서와 마찬가지로 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf를 보면 된다. 먼저 affine 조각 $U_i$ 위에서 local deformation을 만드는 첫째 단계에서, degree $2$는 그러한 deformation의 existence obstruction을 기록하고 이 obstruction이 사라졌을 때 남는 deformation들의 차이는 degree $1$이 잰다.
+이제 앞선 [정의 1](#def1){: data-relation="required" }의 $T^i$들을 정의하기 위해서는, 해당 정의에서와 마찬가지로 $R\sHom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$의 cohomology sheaf를 보면 된다. 먼저 affine 조각 $U_i$ 위에서 local deformation을 만드는 첫째 단계에서, [정리 8](#thm8){: data-relation="required" }에서 보았듯 degree $2$는 그러한 deformation의 existence obstruction을 기록하고, [정리 5](#thm5){: data-relation="required" }의 논증에 따라 이 obstruction이 사라졌을 때 남는 deformation들의 차이는 degree $1$이 잰다.
 
 다음으로 overlap $U_{ij}$ 위에서 local deformation들을 identify하는 둘째 단계에서, 두 restriction이 isomorphic하지 못하는 실패는 두 deformation의 차이이므로 degree $1$에서 읽힌다. 이 차이가 $0$이면 isomorphism을 고를 수 있고, 이렇게 고른 isomorphism들의 차이는 degree $0$의 infinitesimal automorphism이 잰다. 마지막으로 triple overlap $U_{ijk}$ 위의 cocycle 조건은 이 degree $0$의 자료에 담긴다. 실제로 고른 isomorphism들의 composite $\varphi_{ik}^{-1}\circ\varphi_{jk}\circ\varphi_{ij}$는 $U_{ijk}$ 위의 infinitesimal automorphism이며, 이것이 항등일 때 정확히 cocycle 조건이 성립한다. 이처럼 local deformation의 existence와 선택, overlap에서의 identification, triple overlap에서의 cocycle 조건은 서로 다른 degree의 local deformation data를 서로 다른 개수의 overlap 위에서 조립하는 문제다. Covering의 Čech degree와 local deformation complex의 degree를 함께 모으면
 

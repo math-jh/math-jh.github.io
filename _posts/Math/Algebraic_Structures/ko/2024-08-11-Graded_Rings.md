@@ -31,11 +31,11 @@ $$A_i A_j\subseteq A_{i+j}\qquad\text{for all $i,j\in I$}$$
 만일 $I$의 임의의 원소가 cancellable이고 $A=\bigoplus_{i\in I} A_i$가 graded ring이라 하자. 그럼 $A_0$은 $A$의 subring이다. 
 :::
 ::: 증명
-$A_0A_0\subseteq A_0$으로부터 $A_0$은 곱셈에 대해 닫혀있다. 따라서 $A=\bigoplus A_i$의 곱셈에 대한 항등원 $1$이 $A_0$에 속함을 보이면 충분하다. $1=\sum_{i\in I} \epsilon_i$라 하자. 그럼 임의의 $\alpha\in A_j$에 대하여, 
+$A_0A_0\subseteq A_0$으로부터 $A_0$은 곱셈에 대해 닫혀있다. 따라서 $A=\bigoplus A_i$의 곱셈에 대한 항등원 $1$이 $A_0$에 속함을 보이면 충분하다. $1=\sum_{i\in I} \epsilon_i$라 하자. 그럼 임의의 $j\in J$와 임의의 $\alpha\in A_j$에 대하여, 
 
 $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 
-이고, 따라서 모든 $i\neq 0$에 대해서는 $\epsilon_i\alpha=0$이고, $i=0$에 대해서만 $\epsilon_0\alpha=\alpha$가 성립한다. 이제 $A$의 임의의 원소는 homogeneous element들의 합으로 나타낼 수 있으므로 모든 $x\in A$에 대하여 $\epsilon_0x=x$가 성립하고, 여기에 $x=1$을 대입하면 $1=\epsilon_0\in A_0$을 얻는다. 
+이다. 이제 각각의 $i$에 대하여, $e_i\alpha\in A_{i+j}$이고, $I$의 임의의 원소가 cancellable인 것으로부터 이러한 원소가 $A_j$에 속하는 것은 $i=0$일 때 뿐이다. 즉, 이로부터 모든 $i\neq 0$에 대해서는 $\epsilon_i\alpha=0$이고, $i=0$에 대해서만 $\epsilon_0\alpha=\alpha$가 성립해야 하는 것을 안다. 이제 $A$의 임의의 원소는 homogeneous element들의 합으로 나타낼 수 있으므로 모든 $x\in A$에 대하여 $\epsilon_0x=x$가 성립하고, 여기에 $x=1$을 대입하면 $1=\epsilon_0\in A_0$을 얻는다. 
 :::
 
 대부분의 경우 우리가 관심있는 것은 $I=\mathbb{Z}$이거나 $I= \mathbb{N}$인 경우이다. 따라서 [명제 2](#prop2){: data-relation="required" }의 전제조건이 만족된다. 
