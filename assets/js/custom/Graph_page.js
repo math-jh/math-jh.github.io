@@ -1,10 +1,9 @@
-/* Graph_page.js — 전역 의존성 그래프 페이지(/ko/graph, /en/graph)와
- * 분류 기반 학습 그래프(/ko/dependencies, /en/dependencies).
+/* Graph_page.js — 분류 기반 전역 학습 그래프 페이지(/ko/dependencies, /en/dependencies).
  *
  * 핸드오프 graphcard.js 포팅: 항상-다크 Brass 카드(force-graph 래퍼 + 툴바 + 팝업) +
  * 왼쪽 인덱스 패널(검색 · family 필터 · MOST CONNECTED · 카테고리 아코디언). 인덱스와
  * 그래프는 외부 API(focus/select/setQuery/setFamilies/onHover/onClick)로 양방향 연동.
- * 데이터는 기존대로 graph-<lang>.json. 카드 내 검색/범례는 인덱스가 가지므로 제외.
+ * 데이터는 dependencies-<lang>.json. 카드 내 검색/범례는 인덱스가 가지므로 제외.
  */
 (function () {
   'use strict';
@@ -1224,7 +1223,7 @@
     var summary = document.getElementById('graph-selection');
     if (!stage || !panel || typeof ForceGraph === 'undefined') return;
     var lang = stage.dataset.lang || 'ko';
-    var source = stage.dataset.graphSource || 'graph';
+    var source = stage.dataset.graphSource || 'dependencies';
     var layoutToggle = stage.dataset.layoutToggle === 'true';
     if (layoutToggle) {
       document.body.classList.add('dependencies-page');

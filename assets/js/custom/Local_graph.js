@@ -2,7 +2,10 @@
  *
  * 현재 글의 2-hop 부분그래프(현재 글=가운데 금색, 직속 이웃=부각, 2-hop 바깥=흐림)를
  * 작은 캔버스에 그린다. 빈 곳 클릭 또는 ⤢ 버튼 → 화면 중앙 오버레이로 크게 보기.
- * 오버레이 헤더에 전체 그래프(/<lang>/graph/) 링크. 노드 클릭 = 그 글로 이동.
+ * 오버레이 헤더에 전체 그래프(/<lang>/dependencies/) 링크. 노드 클릭 = 그 글로 이동.
+ *
+ * 데이터는 분류 기반 dependencies-<lang>.json — 화살표는 선수 글에서 후속 글 방향이고,
+ * relation 에 따라 required=실선, weak=점선, forward=긴 파선으로 그린다(전역 그래프와 동일).
  *
  * force-graph 는 single 레이아웃이 수학 글에서만 로드한다.
  */
@@ -58,7 +61,7 @@
     overlay.innerHTML =
       '<div class="lg-overlay__card"><div class="lg-overlay__head">' +
       '<span class="lg-overlay__title">' + t.title + '</span>' +
-      '<a class="lg-overlay__full" href="/' + lang + '/graph/" title="' + t.full + '" aria-label="' + t.full + '">' + t.full + '<span class="material-icons md-14">graph_3</span></a>' +
+      '<a class="lg-overlay__full" href="/' + lang + '/dependencies/" title="' + t.full + '" aria-label="' + t.full + '">' + t.full + '<span class="material-icons md-14">graph_3</span></a>' +
       '<button class="lg-overlay__close" type="button" aria-label="close">✕</button>' +
       '</div><div class="lg-overlay__canvas"></div></div>';
     document.body.appendChild(overlay);
@@ -91,7 +94,7 @@
     })();
 
     function load() {
-      fetch('/assets/data/graph-' + lang + '.json')
+      fetch('/assets/data/dependencies-' + lang + '.json')
         .then(function (r) { return r.json(); })
         .then(compute)
         .catch(function () {});
@@ -141,7 +144,9 @@
     function renderInto(el, big) {
       var data = {
         nodes: sub.subNodes.map(function (n) { return Object.assign({}, n); }),
-        links: sub.subLinks.map(function (l) { return { source: lend(l.source), target: lend(l.target) }; })
+        links: sub.subLinks.map(function (l) {
+          return { source: lend(l.source), target: lend(l.target), relation: l.relation || 'required' };
+        })
       };
       var deg = sub.deg, direct = sub.direct;
       var g = ForceGraph()(el)
@@ -157,12 +162,19 @@
         .nodeLabel(function (n) { return n.title; })
         .linkColor(function (l) {
           var s = lend(l.source), t = lend(l.target);
-          if (s === self) return 'rgba(107,58,0,0.9)';   // self cites someone (outward)
-          if (t === self) return 'rgba(165,111,20,0.9)'; // someone cites self (inward)
+          if (s === self) return 'rgba(107,58,0,0.9)';   // 현재 글이 선수 글인 방향(후속 글로)
+          if (t === self) return 'rgba(165,111,20,0.9)'; // 현재 글의 선수 글에서 들어오는 방향
           return 'rgba(130,132,142,0.3)';
         })
         .linkWidth(function (l) {
-          return (lend(l.source) === self || lend(l.target) === self) ? 2 : 1;
+          var base = (lend(l.source) === self || lend(l.target) === self) ? 2 : 1;
+          return base * (l.relation === 'weak' ? 0.7 : l.relation === 'forward' ? 0.85 : 1);
+        })
+        // 전역 그래프와 같은 선 모양: required 실선, weak 점선, forward 긴 파선.
+        .linkLineDash(function (l) {
+          if (l.relation === 'weak') return [2, 5];
+          if (l.relation === 'forward') return [9, 5];
+          return null;
         })
         .linkDirectionalArrowLength(7)
         .linkDirectionalArrowRelPos(0.45)

@@ -5,13 +5,15 @@
 # 빌드 끝(:site, :post_write)에 각 글의 "다른 글로의 교차참조"를 모아 force-graph 가
 # 읽을 JSON 을 언어별로 떨군다:
 #
-#   assets/data/graph-ko.json , assets/data/graph-en.json
-#   { "nodes": [{id,title,url,category}], "links": [{source,target,weight}] }
+#   assets/data/dependencies-ko.json , assets/data/dependencies-en.json
+#   { "nodes": [{id,title,url,category,weight}],
+#     "links": [{source,target,weight,relation,relations}] }
 #
-#   node = 글,  edge = "글 A 가 글 B 의 정의/정리/절을 인용"(방향 A→B, weight=링크 수).
+#   node = 글,  edge = 분류(data-relation)된 인용. required·weak 은 선수 글 → 후속 글로
+#   방향을 뒤집고, forward 는 현재 글 → 나중 글이라는 원래 방향을 유지한다.
 #
 # 렌더된 본문(doc.content, 레이아웃·사이드바 제외)만 스캔하므로 nav/사이드바의 글
-# 링크는 엣지로 잡히지 않는다. 전역 그래프(/graph)와 로컬 그래프(글별 2-hop)가 공유.
+# 링크는 엣지로 잡히지 않는다. 전역 그래프(/dependencies)와 로컬 그래프(글별 2-hop)가 공유.
 require "json"
 require "fileutils"
 
@@ -19,17 +21,9 @@ module GraphData
   LANGS = %w[ko en].freeze
   RELATION_PRIORITY = { "weak" => 0, "forward" => 1, "required" => 2 }.freeze
   RECOMMENDATION_LIMIT = 3
-  # 본문 내부의 다른 글 링크. content 가 렌더된 HTML 일 수도(href=), incremental
-  # 빌드라 raw 마크다운(](/...))일 수도 있어 둘 다 잡는다. 한 글은 둘 중 한 형태뿐이라
-  # 중복 카운트 없음.
-  LINK_RES = [
-    %r{href="(/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^"]*)?"},
-    %r{\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)}
-  ].freeze
 
-  # 분류가 끝난 링크만 dependencies 그래프에 넣는다. 보통 post_write 시점의
-  # d.content 는 raw Markdown이지만 빌드 경로에 따라 렌더된 HTML일 수도 있으므로
-  # 두 표현을 모두 지원한다. 기존 graph-*.json의 추출 규칙과 산출물은 건드리지 않는다.
+  # 분류가 끝난 링크만 그래프에 넣는다. 보통 post_write 시점의 d.content 는 raw
+  # Markdown이지만 빌드 경로에 따라 렌더된 HTML일 수도 있으므로 두 표현을 모두 지원한다.
   RAW_CLASSIFIED_LINK_RE = %r!\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)\{:[^}]*\bdata-relation=["'](required|weak|forward)["'][^}]*\}!.freeze
   HTML_ANCHOR_RE = %r{<a\b[^>]*>}.freeze
   HTML_HREF_RE = %r{\bhref=["'](/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^"']*)?["']}.freeze
@@ -97,71 +91,6 @@ module GraphData
   def color_for(cat, hmap)
     h = hmap[cat]
     h ? "hsl(#{h}, 55%, 60%)" : "#8a8f98" # hues 없는 카테고리(llm_workshop 등)는 회색
-  end
-
-  def build(site, lang)
-    hmap = hue_map(site)
-    fmap = family_map(site)
-    # 수학 글만(/<lang>/math/…). llm_workshop·blog_development·독서노트 등 메타 글 제외.
-    docs = site.posts.docs.select { |d| d.url.start_with?("/#{lang}/math/") }
-    by_url = {}
-    docs.each { |d| by_url[norm(d.url)] = true }
-
-    # category/weight lookup for filtering real prerequisites
-    meta = {}
-    docs.each do |d|
-      cat = category_of(d)
-      meta[norm(d.url)] = { category: cat, weight: d.data["weight"]&.to_i }
-    end
-
-    nodes = docs.map do |d|
-      cat = category_of(d)
-      {
-        id: norm(d.url),
-        title: (d.data["title"] || d.basename).to_s,
-        url: d.url,
-        category: cat,
-        hue: (hmap[cat] || 0),
-        family: (fmap[cat] || "misc"),
-        color: color_for(cat, hmap)
-      }
-    end
-
-    # edge direction: prerequisite -> dependent.
-    # A link A -> B in post content means "A cites/uses B", i.e. A depends on B.
-    # The dependency graph stores the reverse direction B -> A so arrows point from
-    # prerequisite to dependent.
-    #
-    # Same-category forward citations (lighter post cites heavier post) are ignored,
-    # because within a category weights define the reading order; such links are
-    # previews/forward references, not real dependencies. Cross-category citations
-    # are always reversed since weights are not comparable across categories.
-    edges = Hash.new(0)
-    docs.each do |d|
-      src = norm(d.url)
-      txt = d.content.to_s
-      LINK_RES.each do |re|
-        txt.scan(re) do |m|
-          tgt = norm(m[0])
-          next if tgt == src || !by_url.key?(tgt)
-
-          s_meta = meta[src]
-          t_meta = meta[tgt]
-          same_cat = s_meta && t_meta && s_meta[:category] == t_meta[:category]
-
-          if same_cat
-            # Only keep edges where the citing post is heavier than the cited post.
-            next unless s_meta[:weight] && t_meta[:weight]
-            next unless s_meta[:weight] > t_meta[:weight]
-          end
-
-          edges[[tgt, src]] += 1
-        end
-      end
-    end
-
-    links = edges.map { |(s, t), w| { source: s, target: t, weight: w } }
-    { nodes: nodes, links: links, families: families(site) }
   end
 
   def classified_links(text)
@@ -438,11 +367,9 @@ end
 Jekyll::Hooks.register :site, :post_write do |site|
   dir = File.join(site.dest, "assets", "data")
   GraphData::LANGS.each do |lang|
-    data = GraphData.build(site, lang)
+    data = GraphData.build_dependencies(site, lang)
     next if data[:nodes].empty?
     FileUtils.mkdir_p(dir)
-    File.write(File.join(dir, "graph-#{lang}.json"), JSON.generate(data))
-    dependency_data = GraphData.build_dependencies(site, lang)
-    File.write(File.join(dir, "dependencies-#{lang}.json"), JSON.generate(dependency_data))
+    File.write(File.join(dir, "dependencies-#{lang}.json"), JSON.generate(data))
   end
 end
