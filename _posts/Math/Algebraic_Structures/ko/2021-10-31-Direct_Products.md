@@ -105,7 +105,7 @@ $$G_i'=\begin{cases} G_i&i\in J\\ \{e\}&i\not\in J\end{cases}$$
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}$$
 
-을 생각하자. 그럼 어렵지 않게 $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$임을 보일 수 있으며, 따라서 [따름정리 4](#cor4)에 의하여 다음의 식
+을 생각하자. 그럼 어렵지 않게 $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$임을 보일 수 있으며, 따라서 [따름정리 4](#cor4){: data-relation="required" }에 의하여 다음의 식
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 
