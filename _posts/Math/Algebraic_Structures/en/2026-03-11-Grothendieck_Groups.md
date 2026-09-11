@@ -75,7 +75,7 @@ The two propositions above show that $K(S)$ satisfying the universal mapping pro
 
 The reason why $S$ cannot be an abelian group is that an identity element and inverses for arbitrary elements might not exist. Intuitively, this can be resolved by adding $0$ and *negative numbers*.
 
-For a given commutative semigroup $(S,+)$, consider the product semigroup $S\times S$. ([§Algebraic Structures, ⁋Example 5](/en/math/algebraic_structures/algebraic_structures#ex5){: data-relation="required" }) If we think of the second component of $S\times S$ as negative numbers, the equation
+For a given commutative semigroup $(S,+)$, consider the product semigroup $S\times S$. ([§Algebraic Structures, ⁋Example 5](/en/math/algebraic_structures/algebraic_structures#ex5)) If we think of the second component of $S\times S$ as negative numbers, the equation
 
 $$(a_1, b_1)+(a_2, b_2)=(a_1+a_2, b_1+b_2)$$
 

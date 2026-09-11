@@ -73,7 +73,7 @@ $S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [�
 
 $S$가 abelian group이 될 수 없는 이유는 항등원과 임의의 원소에 대한 역원이 존재하지 않을 수도 있기 때문이다. 직관적으로 이는 $0$과 <em-ko>음수</em-ko>를 추가하여 해결할 수 있다.
 
-주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5){: data-relation="required" }) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
+주어진 commutative semigroup $(S,+)$에 대하여, product semigroup $S\times S$를 생각하자. ([§대수적 구조, ⁋예시 5](/ko/math/algebraic_structures/algebraic_structures#ex5)) $S\times S$의 둘째 부분을 음수처럼 생각하면, 다음 식
 
 $$(a_1, b_1)+(a_2, b_2)=(a_1+a_2, b_1+b_2)$$
 
