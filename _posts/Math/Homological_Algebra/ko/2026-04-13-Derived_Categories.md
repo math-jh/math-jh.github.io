@@ -11,6 +11,8 @@ sidebar:
 date: 2026-04-13
 weight: 8
 
+revising: true
+drift_needed: true
 ---
 
 우리는 [§유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="required" }에서 exact하지 않은 functor가 주어졌을 때 이를 해결하는 방법을 살펴보았다. 구체적으로, 우리는 어떠한 left (resp. right) exact functor $F$가 주어졌을 때, 대상 $A$의 injective (resp. projective) resolution을 택하고 그 resolution의 cohomology (resp. homology)를 취하여 right (resp. left) derived functor를 정의했다. 
@@ -145,9 +147,38 @@ $R F$와 $L F$는 derived category에서의 functor이다. 즉 quasi-isomorphism
 Quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$이 주어졌다고 하고, $A^\bullet \rightarrow I^\bullet$, $B^\bullet \rightarrow J^\bullet$을 각각 $K$-injective resolution이라 하자. $K$-injective resolution의 lifting property에 의해 ([정의 6](#def6){: data-relation="required" }), quasi-isomorphism $s$는 $I^\bullet$과 $J^\bullet$ 사이의 map $\tilde{s} : I^\bullet \rightarrow J^\bullet$으로 유일하게 (homotopy까지) 확장된다. 따라서 $F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$을 얻는다. $K$-injective resolution 위에서 $F$를 적용한 것이므로 $F(\tilde{s})$는 quasi-isomorphism이며, 따라서 $D(\mathcal{B})$에서 $R F(A^\bullet) \cong R F(B^\bullet)$이다. Left derived functor에 대해서도 비슷하다.
 :::
 
-구체적인 예로서, $\mathcal{A}$ 위에서의 Hom functor $\Hom(-, B)$는 contravariant left exact functor이므로 이를 derived하여 complex 수준의 derived Hom $R\Hom$을 정의하면, $R\Hom(A, B)$의 cohomology는 $\Ext^i(A, B)$와 일치한다.
+한편 derived functor를 계산하기 전에, $D(\mathcal{A})$의 morphism 자체를 complex의 언어로 적어 둘 필요가 있다. 두 complex $A^\bullet, B^\bullet$에 대하여 *Hom complex* $\Hom^\bullet(A^\bullet, B^\bullet)$를
+
+$$\Hom^n(A^\bullet, B^\bullet)=\prod_p\Hom_\mathcal{A}(A^p, B^{p+n}),\qquad d(f)=d_B\circ f-(-1)^nf\circ d_A$$
+
+로 정의하자. 그럼 $d(f)=0$인 것은 [정의 4](#def4){: data-relation="required" }의 부호 규약에 의해 $f$가 chain map $A^\bullet\rightarrow B^\bullet[n]$인 것과 같고, $f$가 coboundary $d(h)$인 것은 $h$가 그 chain map과 $0$ 사이의 chain homotopy를 주는 것, 곧 $f$가 null homotopic한 것과 같다. 따라서 다음이 성립한다.
 
 ::: 명제 10
+Complex $A^\bullet, B^\bullet\in\Ch(\mathcal{A})$와 정수 $n$에 대하여
+
+$$H^n\bigl(\Hom^\bullet(A^\bullet, B^\bullet)\bigr)\cong\Hom_{\mathbf{K}(\mathcal{A})}(A^\bullet, B^\bullet[n])$$
+
+이 성립한다. 특히 $B^\bullet$이 $K$-injective이거나 $A^\bullet$이 $K$-projective이면
+
+$$H^n\bigl(\Hom^\bullet(A^\bullet, B^\bullet)\bigr)\cong\Hom_{D(\mathcal{A})}(A^\bullet, B^\bullet[n])$$
+
+이다.
+:::
+::: 증명
+$n$-cocycle은 위의 계산에 의해 chain map $A^\bullet\rightarrow B^\bullet[n]$이고 $n$-coboundary는 그 중 null homotopic한 것들이므로, $n$번째 cohomology는 chain map들을 chain homotopy로 나눈 것, 곧 [정의 1](#def1){: data-relation="required" }의 $\Hom_{\mathbf{K}(\mathcal{A})}(A^\bullet, B^\bullet[n])$이다.
+
+둘째 주장을 위해 $B^\bullet$이 $K$-injective라 하자. $D(\mathcal{A})$의 morphism은 roof $A^\bullet\overset{s}{\leftarrow}C^\bullet\rightarrow B^\bullet[n]$으로 주어지는데, $K$-injective의 정의는 quasi-isomorphism $s$가 유도하는
+
+$$\Hom_{\mathbf{K}(\mathcal{A})}(A^\bullet, B^\bullet[n])\rightarrow\Hom_{\mathbf{K}(\mathcal{A})}(C^\bullet, B^\bullet[n])$$
+
+이 isomorphism이라는 것이므로 ([정의 6](#def6){: data-relation="required" }, $B^\bullet[n]$ 역시 $K$-injective이다), 각 roof는 $A^\bullet$에서 출발하는 $\mathbf{K}(\mathcal{A})$의 morphism 하나로 유일하게 대표된다. $A^\bullet$이 $K$-projective인 경우에는 [정의 5](#def5){: data-relation="required" }를 같은 방식으로 사용한다.
+:::
+
+이제 $R\Hom(A^\bullet, B^\bullet)$을 $B^\bullet$의 $K$-injective resolution $I^\bullet$에 대한 $\Hom^\bullet(A^\bullet, I^\bullet)$으로 정의하면, [명제 10](#prop10){: data-relation="required" }에 의하여 그 $n$번째 cohomology는 $\Hom_{D(\mathcal{A})}(A^\bullet, B^\bullet[n])$이다.
+
+구체적인 예로서, $\mathcal{A}$ 위에서의 Hom functor $\Hom(-, B)$는 contravariant left exact functor이므로 이를 derived하여 complex 수준의 derived Hom $R\Hom$을 정의하면, $R\Hom(A, B)$의 cohomology는 $\Ext^i(A, B)$와 일치한다.
+
+::: 명제 11
 $\mathcal{A}$가 enough projective를 갖는 abelian category라고 하자. 그럼 모든 $A, B \in \mathcal{A}$에 대해
 
 $$H^{i}(R\Hom(A, B)) \cong \Ext^i(A, B)$$
@@ -168,7 +199,7 @@ $$R\Hom(A, B) = \Hom(P_\bullet, B)$$
 
 Derived category $D(\mathcal{A})$는 단순한 category가 아니라 *triangulated category*의 구조를 갖는다. 이 구조는 abelian category에서 short exact sequence가 하던 역할을 derived category에서 대신한다.
 
-::: 정의 11
+::: 정의 12
 *Triangulated category<sub>삼각 분할 범주</sub>*는 다음 구조를 갖춘 additive category $(\mathcal{T}, [1], \mathcal{S})$이다.
 
 1. *Shift functor* $[1] : \mathcal{T} \rightarrow \mathcal{T}$. 여기서 $[0] = \id$이고 $[n+1] = [1] \circ [n]$이다.
@@ -195,7 +226,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C(f) \overset{h}{\righta
 
 들로 구성된다. 여기서 $g : B^i \rightarrow C(f)^i = B^i \oplus A^{i+1}$는 $b \mapsto (b, 0)$이고, $h : C(f)^i \rightarrow A[1]^i = A^{i+1}$는 $(b, a) \mapsto a$이다.
 
-::: 명제 12
+::: 명제 13
 $R F : D^+(\mathcal{A}) \rightarrow D^+(\mathcal{B})$는 triangulated functor이다. 즉 distinguished triangle
 
 $$A \rightarrow B \rightarrow C \rightarrow A[1]$$
@@ -214,7 +245,7 @@ $A \rightarrow B$를 map으로 보고, 이들의 $K$-injective resolution들을 
 
 Category theory에서 adjunction은 두 functor 사이의 가장 중요한 관계 중 하나이다. Derived category에서도 adjunction이 성립하며, 이를 *derived adjunction*이라 부른다. Derived adjunction $L F \dashv R G$는 일반적인 adjoint 관계를 derived category로 끌어올린 것으로, $F$, $G$가 exact하지 않아도 resolution을 통해 "올바르게" 계산한 결과끼리 여전히 adjoint 관계를 이룬다. Naive하게 $F$나 $G$를 적용하면 exactness가 깨져서 잘못된 homology가 나올 수 있지만, derived version을 사용하면 이 문제를 해결하면서 원래의 adjoint 구조도 유지된다.
 
-::: 명제 13
+::: 명제 14
 $\mathcal{A}$가 enough projective를, $\mathcal{B}$가 enough injective를 갖는 abelian category라고 하고, 이들 사이의 additive functor들 $F : \mathcal{A} \rightarrow \mathcal{B}$ (right exact), $G : \mathcal{B} \rightarrow \mathcal{A}$ (left exact)가 adjoint pair $F \dashv G$를 이룬다고 하자. 그럼 derived category에서
 
 $$L F : D^-(\mathcal{A}) \rightarrow D^-(\mathcal{B}), \qquad R G : D^+(\mathcal{B}) \rightarrow D^+(\mathcal{A})$$
@@ -241,13 +272,13 @@ $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
 이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 $-\otimes M$은 quasi-isomorphism을 보존하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor){: data-relation="weak" })
 
-이 exactness failure를 해결하기 위해 projective resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 13](#prop13){: data-relation="required" }에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 projective resolution에 $-\otimes B$를 적용한 것이며, $R\Hom(B, C)$는 $B$의 projective resolution에 $\Hom(-, C)$를 적용한 것이다. 이를 통해
+이 exactness failure를 해결하기 위해 projective resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 14](#prop14){: data-relation="required" }에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 projective resolution에 $-\otimes B$를 적용한 것이며, $R\Hom(B, C)$는 $B$의 projective resolution에 $\Hom(-, C)$를 적용한 것이다. 이를 통해
 
 $$\Hom_{D(\mathcal{A})}(A \otimes^L B, C) \cong \Hom_{D(\mathcal{A})}(A, R\Hom(B, C))$$
 
 를 얻는다. Projective resolution을 취하는 과정에서 $-\otimes B$가 잃어버렸던 $\Tor$ 정보와 $\Hom(B,-)$가 잃어버렸던 $\Ext$ 정보가 complex의 상위 차원으로 보존되며, chain map의 계산을 통해 양변이 일치함을 확인할 수 있다.
 
-요약하면, abelian category에서의 classical adjunction은 underived level에서 존재하지만 quasi-isomorphism에 대한 localization을 거치면 자동으로 살아남지 않는다. $-\otimes B$의 right exactness와 $\Hom(B,-)$의 left exactness로 인해 quasi-isomorphism이 보존되지 않으며, 이로 인해 naive adjunction이 깨진다. 이 exactness의 failure는 $\otimes^L$와 $R\Hom$을 resolution을 통해 구성함으로써 해결되며, [명제 13](#prop13){: data-relation="required" }이 보장하는 derived adjunction이 classical adjunction을 정확하게 대체한다.
+요약하면, abelian category에서의 classical adjunction은 underived level에서 존재하지만 quasi-isomorphism에 대한 localization을 거치면 자동으로 살아남지 않는다. $-\otimes B$의 right exactness와 $\Hom(B,-)$의 left exactness로 인해 quasi-isomorphism이 보존되지 않으며, 이로 인해 naive adjunction이 깨진다. 이 exactness의 failure는 $\otimes^L$와 $R\Hom$을 resolution을 통해 구성함으로써 해결되며, [명제 14](#prop14){: data-relation="required" }이 보장하는 derived adjunction이 classical adjunction을 정확하게 대체한다.
 
 ---
 
