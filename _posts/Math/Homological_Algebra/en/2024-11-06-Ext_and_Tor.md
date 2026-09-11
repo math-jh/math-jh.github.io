@@ -236,7 +236,7 @@ Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear
 
 Defining the augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.
 
-If $\x_1, \ldots, \x_n$ is a regular sequence in $A$, then the Koszul complex becomes a *free resolution* of $A/(\x_1, \ldots, \x_n)$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 2](/en/math/commutative_algebra/regular_local_rings#def2){: data-relation="required" }) That is,
+Here, saying that $\x_1, \ldots, \x_n$ is a *regular sequence* in $A$ means that the ideal $(\x_1, \ldots, \x_n)$ is proper and that for each $i$ the image of $\x_{i+1}$ is a non-zerodivisor in $A/(\x_1, \ldots, \x_i)$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 2](/en/math/commutative_algebra/regular_local_rings#def2){: data-relation="weak" }) Under this condition the Koszul complex becomes a *free resolution* of $A/(\x_1, \ldots, \x_n)$. That is,
 
 $$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 

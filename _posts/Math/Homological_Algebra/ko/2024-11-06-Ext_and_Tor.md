@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-11-06
 weight: 6
+revising: true
+drift_needed: true
 
 
 ---
@@ -238,7 +240,7 @@ Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $
 
 Augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$를 canonical projection으로 정의하면, $K(\varphi)_\bullet$을 $A/\im\varphi$의 resolution으로 생각할 수 있다. 편의상 $F$의 basis $e_1, \ldots, e_n$을 고정하고 $\x_i = \varphi(e_i)$라 하면 $\im\varphi = (\x_1, \ldots, \x_n)$이므로, 이를 $K_\bullet(\x_1, \ldots, \x_n)$이라고도 쓴다.
 
-만일 $\x_1, \ldots, \x_n$이 $A$에서 regular sequence라면, Koszul complex는 $A/(\x_1, \ldots, \x_n)$의 *free resolution*이 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2){: data-relation="required" }) 즉
+여기서 $\x_1, \ldots, \x_n$이 $A$에서 *regular sequence*라는 것은 ideal $(\x_1, \ldots, \x_n)$이 proper이고 각각의 $i$에 대하여 $\x_{i+1}$의 image가 $A/(\x_1, \ldots, \x_i)$에서 non-zerodivisor인 것이다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2){: data-relation="weak" }) 이 조건이 성립하면 Koszul complex는 $A/(\x_1, \ldots, \x_n)$의 *free resolution*이 된다. 즉
 
 $$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 
