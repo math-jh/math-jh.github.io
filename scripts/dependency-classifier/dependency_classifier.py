@@ -136,6 +136,9 @@ VERIFIER_CHAINS = {
 DEFAULT_VERIFIER_CHAIN = VERIFIER_CHAINS["Antigravity"]
 NOTIFY_BIN = os.environ.get(
     "DEPENDENCY_NOTIFY_BIN", str(Path.home() / ".local" / "bin" / "notify"))
+# 알림을 누르면 바로 판정할 수 있는 자리로 보낸다.
+DASHBOARD_URL = os.environ.get(
+    "DEPENDENCY_DASHBOARD_URL", "https://preview.math-jh.com/dash/#audit")
 
 IAL_RE = re.compile(r'^\{:\s*([^}]*)\}')
 RELATION_RE = re.compile(r'\bdata-relation\s*=\s*["\'](required|weak|forward)["\']')
@@ -175,11 +178,13 @@ def log(message: str) -> None:
     print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] {message}", flush=True)
 
 
-def notify(subject: str, body: str, level: str = "active") -> None:
+def notify(subject: str, body: str, level: str = "active",
+           url: str = DASHBOARD_URL) -> None:
     """Best-effort alert.  A failed notification must not fail the tick."""
     try:
         proc = subprocess.run(
-            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level],
+            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level,
+             *(("-u", url) if url else ())],
             check=False, timeout=20, capture_output=True, text=True,
         )
         if proc.returncode:
@@ -1158,7 +1163,7 @@ def run_verify_pass(
         f"[dependency] 링크 {len(disputed)}건 재검토 불일치",
         f"{paths[0].stem}\n" + "\n".join(lines[:8])
         + (f"\n… 외 {len(lines) - 8}건" if len(lines) > 8 else "")
-        + "\n\n대시보드 #audit 의 링크 감사에서 판정할 것.",
+        + "\n\n눌러서 대시보드 감사 → 의존성 링크 보류에서 판정.",
     )
     return 0
 
