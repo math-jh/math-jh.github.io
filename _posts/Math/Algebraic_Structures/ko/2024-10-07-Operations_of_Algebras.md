@@ -155,7 +155,11 @@ Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebr
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8){: data-relation="required" }에 의하여 이는 정확히 tensor product이기 때문이다. 물론 두 isomorphism $\x\otimes 1\mapsto \x$, $1\otimes \y\mapsto \y$를 직접 확인할 수도 있다.
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8){: data-relation="required" }에 의하여 이는 정확히 tensor product이기 때문이다. 물론 위 isomorphism이 두 식
+
+$$\x\otimes 1\mapsto \x,\qquad 1\otimes \y\mapsto \y$$
+
+으로 정의되는 것을 직접 확인할 수도 있다.
 :::
 
 ---

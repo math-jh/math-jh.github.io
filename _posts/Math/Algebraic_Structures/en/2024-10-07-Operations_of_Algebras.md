@@ -155,7 +155,11 @@ The tensor product of polynomial algebras is the polynomial algebra with the var
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-holds. This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" } is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in sets) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8){: data-relation="required" }, this is precisely the tensor product. Of course, one can also verify the two isomorphisms $\x\otimes 1\mapsto \x$ and $1\otimes \y\mapsto \y$ directly.
+holds. This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" } is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in sets) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8){: data-relation="required" }, this is precisely the tensor product. Of course, that the above isomorphism is defined by the two formulas
+
+$$\x\otimes 1\mapsto \x,\qquad 1\otimes \y\mapsto \y$$
+
+can also be verified directly.
 :::
 
 ---
