@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-09-06
+last_modified_at: 2026-09-12
 
 weight: 49
 
@@ -176,3 +176,34 @@ follow-up은 별도 크론이고, 번역 워커와 2시간씩 엇갈리게 걸�
 앞의 것이 0·4·8·12·16·20시에 한 편을 폴리싱하고, 뒤의 것이 2·6·10·14·18·22시에 체크된 요청 하나를 처리한다. 폴리싱이 올린 한글 지적을 사용자가 대시보드에서 체크하면 다음 짝수 시각에 EN이 따라온다. 같은 시각에 두 워커가 같은 글을 두고 부딪히는 일도 없다.
 
 결국 2시간마다 뭔가가 한 편씩 도는데, 그 사이에 사람이 읽어주지 않으면 다음 틱은 의미가 없다. 주기를 정한 것도 그쪽이었다.
+
+## 폴리싱도 출력 한도에 걸리다
+
+번역 쪽 조각내기는 진작에 있었다. KO 본문이 길면 `:::` 정리 박스 경계로 잘라 따로 호출하는 `_split_regions`/`translate_body_chunked`가 통짜 번역이 출력 한도에서 끊기는 문제를 이미 막아 왔다. 폴리싱은 그 경로를 안 탔다. `build_polish_prompt`로 KO/EN을 통째로 한 번에 넘겼는데, CA/Differentials 글에서 KO 22,793자를 그대로 보냈다가 안티그래비티가 출력 토큰 한도에서 잘렸다. 폴리싱 출력은 EN 전문이라 번역과 같은 크기 문제를 그대로 물려받은 것인데, 조각내기 코드는 없었다.
+
+기존 `_group_regions`를 그대로 쓸 수는 없었다. 그 함수는 KO 리전 하나의 길이만 보고 묶는데, 폴리싱은 KO와 EN을 짝지어 같이 보내야 하고 조각 경계도 두 쪽에서 동일해야 한다. `_group_region_pairs`는 box id로 KO/EN 리전을 짝짓고, 각 짝의 길이는 둘 중 긴 쪽으로 잰다.
+
+```python
+span = max(len(ko_text), len(en_text))
+if cur_ko and cur_len + span > max_chars:
+    batches.append(("".join(cur_ko), "".join(cur_en)))
+    cur_ko, cur_en, cur_len = [], [], 0
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+KO만 보면 안 되는 이유는 폴리싱 출력이 EN 길이에 가깝기 때문이다. 번역이 짧게 요약된 문단이 있으면 KO는 짧은데 EN이 길어, KO 기준으로만 자르면 그 조각에서 다시 출력 한도에 걸릴 수 있다.
+
+id 열이 KO와 EN에서 어긋나면(`_split_regions`가 뽑은 순서가 다르면) `_group_region_pairs`는 `None`을 돌려주고, 호출부는 조각내지 않은 통짜 폴리싱으로 되돌아간다. 정상 경로에서는 `lint_structure`를 통과한 글만 폴리싱까지 오므로 박스 수가 같고 어긋나지 않지만, 어긋난 경우를 조용히 조각내면 짝 없는 텍스트를 모델이 지어내거나 지운다.
+
+조각마다 붙는 프롬프트도 번역 쪽과 같은 모양이다. 전체 중 몇 번째 조각인지 적고, 도입부·요약·전환 문장을 만들지 말고 분할 사실도 언급하지 말라고 명시한다. 다만 폴리싱은 라벨 번호를 새로 매기는 게 아니라 기존 번호를 그대로 지키는 일이라, 주의사항도 "라벨 번호는 조각을 넘어 이어지니 보이는 대로 유지하라"로 바뀐다.
+
+경계값 자체도 두 번 내려갔다. 처음에는 번역 쪽 24,000자/12,000자 기준을 그대로 물려받아 10,000자/6,000자로 낮췄는데, 그 사흘 뒤 4,000자/4,000자로 한 번 더 낮아졌다. 판정 기준도 바뀌었다. 처음엔 KO 길이만 봤지만, 폴리싱 출력이 EN 쪽에 가깝다는 점을 감안해 KO와 EN 중 긴 쪽으로 조각 여부를 판정하게 됐다.
+
+```python
+chunked = (polish_body_chunked(ko_body, en_current_body)
+           if max(len(ko_body), len(en_current_body)) > FULL_CHUNK_THRESHOLD
+           else None)
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+번역과 폴리싱이 같은 상수(`FULL_CHUNK_THRESHOLD`, `MAX_CHUNK_CHARS`)를 공유하므로, 이 값을 내리면 번역 쪽 조각도 더 잘게 쪼개진다. 번역은 출력이 EN 하나뿐이라 원래도 여유가 있었지만, 두 경로를 하나의 상수로 묶어 둔 대가로 폴리싱이 요구하는 보수적인 값을 함께 물려받았다.
