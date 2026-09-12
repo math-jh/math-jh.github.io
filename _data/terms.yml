@@ -10939,6 +10939,13 @@ L:
     url: /ko/math/linear_algebra/linear_map
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+- id: linear_representation
+  en: linear representation
+  ko: 선형표현
+  primary: en
+  defs:
+  - label: '[스킴] §군 스킴'
+    url: /ko/math/scheme_theory/group_schemes
 - id: linear_subspace
   en: linear subspace
   ko: 선형 부분공간
