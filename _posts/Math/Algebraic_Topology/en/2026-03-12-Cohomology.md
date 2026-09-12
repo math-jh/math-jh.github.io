@@ -105,7 +105,7 @@ Fixing an abelian group $A$ as the coefficient group, we may form the dual cocha
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
+If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -241,7 +241,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## The Mayer-Vietoris Sequence
 
-Among the axioms of [Definition 2](#def2){: data-relation="required" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-relation="required" } to [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }, starting from [Definition 2](#def2){: data-relation="required" }.
+Among the axioms of [Definition 2](#def2){: data-relation="required" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6) to [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" }, starting from [Definition 2](#def2){: data-relation="required" }.
 
 ::: Proposition 6 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union $X=U\cup V$ of two open sets, and let $H$ be a cohomology theory defined on $X$. Then there exists a long exact sequence
@@ -352,7 +352,7 @@ The Eilenberg-Zilber map $\EZ:(C(X)\otimes C(Y))_\bullet\rightarrow C_\bullet(X\
 
 $$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p,\quad \beta_1<\cdots <\beta_q\\ \{\alpha_1,\ldots,\alpha_p\}\sqcup\{\beta_1,\ldots,\beta_q\}=\{0,1,\ldots,p+q-1\}}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\beta_q}\cdots s_{\beta_1})\times(\tau\circ s_{\alpha_p}\cdots s_{\alpha_1})$$
 
-Although this looks complicated, it is merely the formula describing the decomposition of the prism $\Delta^p\times\Delta^q$ into simplices, i.e., the functions $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6){: data-relation="weak" }. The conclusion of [Theorem 9](#thm9){: data-relation="required" } then follows from the two identities
+Although this looks complicated, it is merely the formula describing the decomposition of the prism $\Delta^p\times\Delta^q$ into simplices, i.e., the functions $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6). The conclusion of [Theorem 9](#thm9){: data-relation="required" } then follows from the two identities
 
 $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_\bullet(X\times Y)}$$
 
@@ -368,7 +368,7 @@ Moreover, this short exact sequence splits (non-canonically), and therefore ther
 $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 :::
 
-Of course, using this result together with [Theorem 5](#thm5){: data-relation="weak" }, one may obtain the cohomology version of the Künneth formula.
+Of course, using this result together with [Theorem 5](#thm5), one may obtain the cohomology version of the Künneth formula.
 
 --- 
 
