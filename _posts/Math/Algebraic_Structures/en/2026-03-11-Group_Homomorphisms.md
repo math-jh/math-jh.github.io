@@ -100,7 +100,7 @@ For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a subgroup of $G$.
 By definition, $\ker f=\Eq(f,e)$.
 :::
 
-On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we have verified that its image $\im f$ is a submagma of $A'$. (the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8){: data-relation="required" }) However, since a submagma of a group need not be a subgroup in general, the following proposition must be proved separately. 
+On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we have verified that its image $\im f$ is a submagma of $A'$. (the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8)) However, since a submagma of a group need not be a subgroup in general, the following proposition must be proved separately. 
 
 ::: Proposition 6
 For any homomorphism $f:G\rightarrow G'$, $\im f$ is a subgroup of $G'$.
