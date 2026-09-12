@@ -38,7 +38,7 @@ $$\overline{\rho}_0:B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
 
 $$q(\widetilde{\rho}(f))=\overline{\rho}_0(f)=\rho_0(\pi(f))=\rho_0(0)=0$$
 
-이므로, 포함관계 $\widetilde{\rho}(\mathfrak{a})\subset \ker q=\mathfrak{b}$는 자명하다. 뿐만 아니라, 임의의 $f,g\in \mathfrak{a}$에 대하여
+이므로, 포함관계 $\widetilde{\rho}(\mathfrak{a})\subseteq \ker q=\mathfrak{b}$는 자명하다. 뿐만 아니라, 임의의 $f,g\in \mathfrak{a}$에 대하여
 
 $$\widetilde{\rho}(fg)=\widetilde{\rho}(f)\widetilde{\rho}(g)\in\mathfrak{b}^2=0$$
 
@@ -201,9 +201,9 @@ $$0\rightarrow \mathfrak{b}\rightarrow A'\rightarrow A\rightarrow0$$
 
 과 $A$-algebra $C$의 deformation $(C',\iota)$가 주어졌다면, 여기에 $-\otimes_{A'}C'$를 취한 것이 exact sequence
 
-$$0\longrightarrow \mathfrak{b}\otimes_A C\longrightarrow C'\overset{\iota}{\longrightarrow} C\longrightarrow0$$
+$$0\longrightarrow \mathfrak{b}\otimes_A C\longrightarrow C'\overset{\bar{\iota}}{\longrightarrow} C\longrightarrow0$$
 
-을 준다. 여기서 $\mathfrak{b}\otimes_{A'} C'\cong \mathfrak{b}\otimes_A(A\otimes_{A'} C')\cong \mathfrak{b}\otimes_A C$이고, $\mathfrak{b}^2=0$이므로 $\mathfrak{b}\otimes_A C$는 $C'$의 square-zero ideal이고, 따라서 이 exact sequence는 $C$의 square-zero extension이다. 
+을 준다. 여기서 $\bar{\iota}$는 quotient $C'\rightarrow C'\otimes_{A'}A$와 $\iota$의 합성이고, $\mathfrak{b}\otimes_{A'} C'\cong \mathfrak{b}\otimes_A(A\otimes_{A'} C')\cong \mathfrak{b}\otimes_A C$이고, $\mathfrak{b}^2=0$이므로 $\mathfrak{b}\otimes_A C$는 $C'$의 square-zero ideal이고, 따라서 이 exact sequence는 $C$의 square-zero extension이다. 
 
 더 일반적으로, 우리는 이 분류 문제를 임의의 $A$-algebra $C$와 $C$-module $M$에 대하여 다룰 수 있다. 다음 (square-zero) extension들
 
@@ -213,7 +213,7 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-3.svg width="18.74em" alt="morphism of extensions" %}
 
-을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3){: data-relation="required" }에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
+을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3){: data-relation="required" }에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
 
 $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
 
@@ -223,7 +223,7 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 $$\mathfrak{a}_\delta=\{(f,-\delta(\bar{f}))\in B\oplus M\mid f\in\mathfrak{a}\}$$
 
-를 정의하면, quotient algebra $E_\delta=(B\oplus M)/\mathfrak{a}_\delta$는 자연스러운 morphism $m\mapsto\overline{(0,m)}$과 $\overline{(b,m)}\mapsto b+\mathfrak{a}$를 통해 $C$의 $M$에 의한 square-zero extension을 정의한다. 이 구성은 representative $\delta$의 선택에 무관하게 isomorphism class를 결정하며, 앞선 대응의 역을 준다는 것을 확인할 수 있다. 즉, 위의 대응은 $C$의 $M$에 의한 square-zero extension들의 isomorphism class들의 모임 $\pi_0(\Ext_{\Alg{A}}(C,M))$과 $T^1(C/A,M)$ 사이의 일대일 대응이며, 이 대응 하에서 split extension은 $0$에 대응한다. 즉, $T^1(C/A,M)$은 $C$의 $M$에 의한 square-zero extension들을 분류하는 공간이다.
+를 정의하면, quotient algebra $E_\delta=(B\oplus M)/\mathfrak{a}_\delta$는 자연스러운 morphism $m\mapsto\overline{(0,m)}$과 $\overline{(b,m)}\mapsto b+\mathfrak{a}$를 통해 $C$의 $M$에 의한 square-zero extension을 정의한다. 이 구성은 representative $\delta$의 선택에 무관하게 isomorphism class를 결정하며, 앞선 대응의 역을 준다는 것을 확인할 수 있다. 즉, 위의 대응은 $C$의 $M$에 의한 square-zero extension들의 isomorphism class들의 모임 $\pi_0(\operatorname{Exal}_A(C,M))$과 $T^1(C/A,M)$ 사이의 일대일 대응이며, 이 대응 하에서 split extension은 $0$에 대응한다. 즉, $T^1(C/A,M)$은 $C$의 $M$에 의한 square-zero extension들을 분류하는 공간이다.
 
 이 관점에서 도입부의 lifting problem을 다시 바라보면, 우리는 우선 주어진 자료 $q:R\rightarrow R_0$와 $\rho_0:C\rightarrow R_0$의 pullback을 통해 다음의 extension
 
@@ -240,14 +240,26 @@ $$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\lon
 이를 구체적인 방정식의 언어로 살펴보자. 우리 상황에서 $X$는 locally of finite presentation $S$-scheme이므로, 이 affine case에서 $C$는 finite polynomial ring $B=A[\x_1,\ldots,\x_n]$과 finitely generated ideal $\mathfrak{a}=(f_1,\ldots,f_m)$에 의한 quotient $C=B/\mathfrak{a}$로 나타낼 수 있다. 그럼 $B[\epsilon]=A[\epsilon][\x_1,\ldots,\x_n]$에서는 fiber 방향의 coordinate $\x_i$와 $\epsilon$ 방향이 자연스레 분리되며, 이 때 fiber를 정의하던 각 방정식 $f_j\in B$을 central fiber 주변에서 확장할 수 있는 후보들은 $F_j=f_j+\epsilon g_j$의 꼴이고, 이들 후보에 의해 deform된 family는 $C'=B[\epsilon]/(F_1,\ldots,F_m)$으로 나타나게 될 것이다. 이 때, 유일한 조건은 이렇게 얻어지는 family가 실제로 flat family가 되어야 한다는 것이다. 
 
 ::: 명제 4
-위와 같은 상황에서, $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $(f_1,\ldots,f_m)$의 임의의 관계식 $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in B^m$에 대하여
+위와 같은 상황에서 $C$가 $A$ 위에서 flat하다 하자. 그럼 $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $(f_1,\ldots,f_m)$의 임의의 관계식 $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in B^m$에 대하여
 
 $$\sum_{j}a_jg_j\in \mathfrak{a}$$
 
 이 성립하는 것과 동치이다. 이 조건이 성립할 때, 원래의 관계식 $(a_j)$는 $(F_1,\ldots,F_m)$의 관계식으로 들어올려진다.
 :::
 ::: 증명
-앞서 살펴본 것과 같이 $C'$이 flat한 것은 $C'$이 $C$의 $C$에 의한 square-zero extension인 것과 동치이다. $B[\epsilon]\cong B\oplus\epsilon B$에서 $F_j=f_j+\epsilon g_j$는 $(f_j,\bar{g}_j)\in B\oplus C$에 대응하므로, $B[\epsilon]/(F_j)$가 $C$의 square-zero extension을 정의하는 것은 대응 $\bar{f}_j\mapsto\bar{g}_j$가 $\mathfrak{a}/\mathfrak{a}^2$ 위의 $C$-linear map $\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C$를 잘 정의하는 것과 같다. 이는 임의의 관계식 $\sum_ja_jf_j=0$에 대하여 그 image $\sum_ja_j\bar{g}_j$가 $C$에서 $0$인 것, 곧 $\sum_ja_jg_j\in\mathfrak{a}$인 것과 동치이다. 이때 $\sum_ja_jg_j=\sum_jc_jf_j$ ($c_j\in B$)라 하면 $A_j=a_j-\epsilon c_j$에 대하여
+$C$가 $A$ 위에서 flat하므로, $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $\epsilon$의 곱셈과 reduction이 주는 sequence
+
+$$0\longrightarrow C\overset{\epsilon}{\longrightarrow}C'\longrightarrow C\longrightarrow0$$
+
+이 exact인 것, 곧 $C'$이 $C$의 $C$에 의한 square-zero extension인 것과 동치이다. 여기서 $\ker(C'\rightarrow C)$는 $\bigl(\epsilon B[\epsilon]+(F_1,\ldots,F_m)\bigr)/(F_1,\ldots,F_m)$이므로, $\epsilon B[\epsilon]\cong B$ 아래에서 이 kernel은
+
+$$\ker(C'\rightarrow C)\cong\epsilon B[\epsilon]\big/\bigl(\epsilon B[\epsilon]\cap(F_1,\ldots,F_m)\bigr)$$
+
+이 되어, 위의 sequence가 exact인 것은 $\epsilon B[\epsilon]\cap(F_1,\ldots,F_m)=\epsilon\mathfrak{a}$인 것과 동치이다. 이제 이 교집합을 계산하기 위해 $(F_1,\ldots,F_m)$의 원소를 $a_j,b_j\in B$에 대하여
+
+$$\sum_j(a_j+\epsilon b_j)F_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j+\sum_jb_jf_j\Bigr)$$
+
+로 적으면, 이것이 $\epsilon B[\epsilon]$에 속하는 것은 $\sum_ja_jf_j=0$, 곧 $(a_j)$가 $(f_1,\ldots,f_m)$의 관계식인 것과 같다. 이때 $\sum_jb_jf_j$는 $\mathfrak{a}$ 전체를 훑으므로 $\epsilon B[\epsilon]\cap(F_1,\ldots,F_m)$은 $\mathfrak{a}$와 관계식들의 값 $\sum_ja_jg_j$들이 함께 생성하는 ideal에 $\epsilon$을 곱한 것이고, 따라서 이것이 $\epsilon\mathfrak{a}$와 같은 것은 임의의 관계식 $(a_j)$에 대하여 $\sum_ja_jg_j\in\mathfrak{a}$인 것과 동치이다. 마지막으로 이 조건 아래에서 $\sum_ja_jg_j=\sum_jc_jf_j$ ($c_j\in B$)라 하면 $A_j=a_j-\epsilon c_j$에 대하여
 
 $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 
@@ -302,11 +314,11 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 :::
 
 ::: 예시 6 (Nodal curve)
-앞에서 살펴본 node $\x\y=0$을 엄밀하게 계산해보자. $B=A[\x,\y]$, $f(\x,\y)=\x\y$, $\mathfrak{a}=(f)$라 하고, $C=B/\mathfrak{a}$, $X_0=\Spec C$라 하자. First-order deformation $g\in B$를 택하자. 즉, 적당한 $g\in B$에 대하여
+앞에서 살펴본 node $\x\y=0$을 엄밀하게 계산해보자. $B=A[\x,\y]$, $f(\x,\y)=\x\y$, $\mathfrak{a}=(f)$라 하고, $C=B/\mathfrak{a}$, $X_0=\Spec C$라 하자. 이 경우 first-order deformation은 적당한 $g\in B$에 대하여
 
 $$F=f+\epsilon g\in B[\epsilon],\qquad C'=B[\epsilon]/(F)$$
 
-로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5){: data-relation="required" }에서 이 선택이 주는 다음의 $C$-linear map
+로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X_0$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5){: data-relation="required" }에서 이 선택이 주는 다음의 $C$-linear map
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\longrightarrow C,\qquad \bar{f}\longmapsto\bar{g}$$
 
@@ -330,7 +342,7 @@ $$\theta(f)=\theta(\x\y)=\theta(\x)\y+\x\theta(\y)=a\y+b\x\tag{$\ast\ast$}$$
 
 으로 주어진다. 그럼 $\bar{d}^\ast(\theta)$는 $\mathfrak{a}/\mathfrak{a}^2$의 (유일한) basis $\bar{f}$를 이 값 $\theta(f)\in C$로 보내는 것으로 정의되며, 따라서 $\varphi$가 $\im \bar{d}^\ast$에 속하는 것과, $\bar{g}$가 ($\ast\ast$)의 꼴로 나타나는 것이 동치임을 안다. 특히 앞에서 살펴본 $g=\x$의 경우는 $a=0$이고 $b=1$인 경우이다. 
 
-이제 이로부터 nontrivial deformation의 예시를 쉽게 얻어낼 수 있다. 한편 이 image에 속하지 않는 $\bar{g}$를 택하면 nontrivial deformation을 얻으며, 위의 계산으로부터 우리는 nonzero constant term을 갖는 $g$가 이러한 것임을 안다. 예를 들어 $g=-1$로 택하면
+거꾸로 이 image에 속하지 않는 $\bar{g}$를 택하면 nontrivial deformation을 얻으며, 위의 계산으로부터 우리는 nonzero constant term을 갖는 $g$가 이러한 것임을 안다. 예를 들어 $g=-1$로 택하면
 
 $$F=\x\y-\epsilon,\qquad C'=A[\epsilon][\x,\y]/(\x\y-\epsilon),\qquad X'=\Spec C'$$
 
@@ -381,7 +393,7 @@ $$\sum_j a_j(f_j+\epsilon g_j)=\epsilon\sum_j a_j g_j$$
 
 에서, $\sum_j a_jg_j$를 $f_j$들에 대한 식 $\sum_j a_jg_j=\sum_j c_jf_j$로 바꾸어줄 수 있으면 이 오차를 $a_j$들로 옮겨 $A_j=a_j-\epsilon c_j$로 정의하면 $\sum_j A_j F_j=0$이 성립하도록 할 수 있었다. 
 
-비슷한 논증을 통해 이를 이차까지 연장하려면 적당한 $d_j\in B$를 택하여 relation의 계수들
+[명제 4](#prop4){: data-relation="required" }의 증명에서 $\epsilon$을 $\t$로 바꾸어 $B[\t]/(\t^{n+1})$에서 같은 ideal 계산을 반복하면, 각 단계의 flatness도 마찬가지로 relation들이 함께 들어올려지는 조건으로 나타난다. 따라서 이를 이차까지 연장하려면 적당한 $d_j\in B$를 택하여 relation의 계수들
 
 $$A_j^{(2)}=a_j-\t c_j+\t^2d_j\in B[\t]/(\t^3)$$
 
@@ -428,7 +440,7 @@ $$T^i(C/A,M)=H^i\bigl(\Hom_C(\operatorname{LS}_{C/A},M)\bigr)$$
 
 $$\eta(a_1,\ldots, a_m)=\overline{\sum_jc_jg_j}\in C$$
 
-를 얻는다. 여기서 $c_j$의 다른 선택과의 차이는 다시 $\Rel$의 원소가 되고, $g_j$의 flatness 조건에 의해 그 차이는 $C$에서 $0$이 되며 $\TrivRel$ 위에서는 소멸하므로 이는 잘 정의된 $C$-linear map $\eta: \Rel/\TrivRel\rightarrow C$을 주며 따라서 그 class를 $\ob(\xi)=[\eta]\in T^2(C/A,C)$라 정의할 수 있다. 이는 representative와 presentation의 선택에 무관하게 $\ob(\xi)$는 $\xi$에만 의존하므로 well-defined이다.  
+를 얻는다. 여기서 $c_j$의 다른 선택과의 차이는 다시 $\Rel$의 원소가 되고, $g_j$의 flatness 조건에 의해 그 차이는 $C$에서 $0$이 되며 $\TrivRel$ 위에서는 소멸하므로 이는 잘 정의된 $C$-linear map $\eta: \Rel/\TrivRel\rightarrow C$을 주며 따라서 그 class를 $\ob(\xi)=[\eta]\in T^2(C/A,C)$라 정의할 수 있다. 또 $\ob(\xi)$는 $g_j$의 선택과 presentation $C=B/\mathfrak{a}$의 선택에도 의존하지 않으며, 따라서 $\xi$만의 불변량이다. 
 
 앞선 계산에서 살펴보았듯, $A[\t]/(\t^3)$ 위로의 second-order deformation이 존재할 조건은 모든 relation $a$에 대하여 합동식
 
@@ -501,7 +513,7 @@ $$\eta:\Rel/\TrivRel\rightarrow M_C$$
 
 $$(a,u)(b,v)=(ab,av+bu)$$
 
-을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우 우리는 이를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같으며, 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed immersion $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
+을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우 우리는 이를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같으며, 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed embedding $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
 
 ::: 정의 10
 Flat morphism $f:X_0\rightarrow S$, square-zero ideal sheaf $\mathcal{I}$가 정의하는 closed embedding $i:S\hookrightarrow S'$에 대하여, $X_0$의 $S'$ 위로의 *deformation<sub>변형</sub>*이란 flat $S'$-scheme $X$와 $S$-isomorphism
@@ -511,11 +523,11 @@ $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 의 쌍 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3){: data-relation="required" }을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3){: data-relation="required" }의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec B'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $B'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $B'$과 tensor하여 얻는 sequence
+이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3){: data-relation="required" }을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3){: data-relation="required" }의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec C'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $C'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $C'$과 tensor하여 얻는 sequence
 
-$$0\longrightarrow I\otimes_{A'}B'\longrightarrow B'\longrightarrow B'/IB'\longrightarrow0$$
+$$0\longrightarrow I\otimes_{A'}C'\longrightarrow C'\longrightarrow C'/IC'\longrightarrow0$$
 
-는 exact이고, 또한 $I^2=0$이므로 $I\otimes_{A'}B'\cong I\otimes_A(B'/IB')$가 되어 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 identify된다. 전체가 affine인 경우 $S=\Spec A$, $X_0=\Spec C$, $\mathcal{I}=\widetilde{M}$이라 하면
+는 exact이고, 또한 $I^2=0$이므로 $I\otimes_{A'}C'\cong I\otimes_A(C'/IC')$가 되어 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 identify된다. 전체가 affine인 경우 $S=\Spec A$, $X_0=\Spec C$, $\mathcal{I}=\widetilde{M}$이라 하면
 
 $$\mathcal{G}=f^\ast\mathcal{I}\cong\widetilde{M\otimes_A C}=\widetilde{M_C}$$
 
@@ -527,11 +539,11 @@ $$\varphi_{ij}:U_i'\vert_{U_{ij}}\xrightarrow{\sim}U_j'\vert_{U_{ij}}$$
 
 인 $S'$-isomorphism을 골라야 하고, triple overlap $U_{ijk}$에서 $\varphi_{jk}\circ\varphi_{ij}=\varphi_{ik}$가 성립해야 한다. 그럼 이 조건 하에서 $U_i'$들은 하나의 scheme $X$로 붙고, 각 structure morphism도 $X\rightarrow S'$으로 붙으며, flatness는 source와 base에 대하여 local한 조건이므로 이렇게 얻은 morphism은 flat하다. 즉 이 과정을 통해 deformation을 얻을 수 있다. 반대로 모든 deformation은 이와 같은 데이터를 주는 것이 자명하다.
 
-이 세 가지 자료, 즉 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건을 한꺼번에 통제하는 것이 cotangent complex이다. 이를 위해 먼저 affine에서 정의한 complex를 scheme 위로 옮겨야 한다. 우선 affine case에서, $U=\Spec B\subseteq X_0$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$을 만족한다면, $\LL_{B/A}$의 각 항과 differential을 sheafify하여 quasi-coherent $\mathcal{O}_U$-module들과 그 사이의 morphism으로 이루어진 complex를 얻을 수 있다는 것을 안다.
+이 세 가지 자료, 즉 affine 조각 위의 local deformation, 두 조각의 overlap 위의 isomorphism, triple overlap 위의 cocycle 조건을 한꺼번에 통제하는 것이 cotangent complex이다. 이를 위해 먼저 affine에서 정의한 complex를 scheme 위로 옮겨야 한다. 우선 affine case에서, $U=\Spec C\subseteq X_0$와 $V=\Spec A\subseteq S$가 $f(U)\subseteq V$을 만족한다면, $\LL_{C/A}$의 각 항과 differential을 sheafify하여 quasi-coherent $\mathcal{O}_U$-module들과 그 사이의 morphism으로 이루어진 complex를 얻을 수 있다는 것을 안다.
 
 문제는 이들 각각의 affine 조각마다 정의되는 naive cotangent complex의 모델은 $C$의 presentation에 의존하며, 이를 일반적인 cotangent complex로 확장하는 과정에서는 resolution의 선택까지 끼어든다는 데에 있다. 이러한 이유로 이들 complex는 각 overlap 위에서 항별로 같지는 않으며, 오직 canonical quasi-isomorphism
 
-$$\widetilde{\LL_{B/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
+$$\widetilde{\LL_{C/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
 을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-relation="required" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
 
@@ -563,9 +575,9 @@ $$\sExt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_
 
 $$\mathcal{T}_{X_0/S}^q=\sExt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0})$$
 
-는 affine open $U=\Spec B$ 위에서 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(B/A,B)$가 되어, 앞선 절들에서 다루었던 $T^i$들을 그대로 복원한다.
+는 affine open $U=\Spec C$ 위에서 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(C/A,C)$가 되어, 앞선 절들에서 다루었던 $T^i$들을 그대로 복원한다.
 
-이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-relation="required" }을 cotangent complex $\mathcal{K}=\LL_{X_0/S}$와 $\mathcal{G}=\mathcal{O}_{X_0}$에 적용하자. $\LL_{X_0/S}$는 non-positive degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
+이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-relation="required" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 degree $0,1,2$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
 
 $$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Longrightarrow T^{p+q}(X_0/S)$$
 
