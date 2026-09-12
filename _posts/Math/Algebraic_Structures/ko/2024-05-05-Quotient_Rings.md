@@ -57,7 +57,7 @@ Ring $A$와 two-sided ideal $\mathfrak{a}$에 대하여 다음이 성립한다.
     에 의해 $\bar{\phi}$는 곱셈을 보존한다. 비슷하게 $\bar{\phi}(1+\mathfrak{a})=\bar{\phi}(\pi(1))=\phi(1)=1$로부터 $\bar{\phi}$는 $1$을 $1$로 보낸다. 
 :::
 
-다음 정리는 [§군 동형사상](/ko/math/algebraic_structures/isomorphism_theorems){: data-relation="required" }의 ring homomorphism 버전이라 할 수 있다.
+다음 정리는 [§군 동형사상](/ko/math/algebraic_structures/isomorphism_theorems)의 ring homomorphism 버전이라 할 수 있다.
 
 ::: 정리 3
 Ring homomorphism $\phi:A \rightarrow B$와 kernel $\ker \phi$, 그리고 image $\im\phi$에 대하여, 다음이 성립한다.

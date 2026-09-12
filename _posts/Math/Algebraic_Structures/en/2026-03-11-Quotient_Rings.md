@@ -70,7 +70,7 @@ For a ring homomorphism $\phi:A \rightarrow B$, its kernel $\ker \phi$, and its 
 4. For a two-sided ideal of $A$, $\mathfrak{a}$, there exists an inclusion-preserving bijection between the set of two-sided ideals of $A/\mathfrak{a}$ and the set of two-sided ideals containing $\mathfrak{a}$ in $A$.
 :::
 ::: Proof
-Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-relation="required" }; one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2){: data-relation="required" }.
+Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems); one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2){: data-relation="required" }.
 
 In the case of 2, that $S+\ker \phi$ is a subgroup under addition is the same as in the case of groups. For any $\alpha,\alpha'\in S$ and $x,x'\in\ker \phi$, in
 
