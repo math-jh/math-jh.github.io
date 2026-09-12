@@ -14,7 +14,7 @@ weight: 10
 
 ---
 
-[§코호몰로지](/ko/math/algebraic_topology/cohomology){: data-relation="weak" }에서 언급한 것과 같이, acyclic models theorem은 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }의 원래 증명을 일반적인 방식으로 확장한 것으로, 비단 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }를 증명할 때뿐만 아니라 다양한 경우에 사용할 수 있다. 이번 글에서는 acyclic models theorem을 증명하고, [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9){: data-relation="required" }의 증명을 포함한 몇몇 따름정리들을 소개한다. 
+[§코호몰로지](/ko/math/algebraic_topology/cohomology){: data-relation="weak" }에서 언급한 것과 같이, acyclic models theorem은 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)의 원래 증명을 일반적인 방식으로 확장한 것으로, 비단 [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)를 증명할 때뿐만 아니라 다양한 경우에 사용할 수 있다. 이번 글에서는 acyclic models theorem을 증명하고, [§코호몰로지, ⁋정리 9](/ko/math/algebraic_topology/cohomology#thm9)의 증명을 포함한 몇몇 따름정리들을 소개한다. 
 
 ## Category with models
 
@@ -100,7 +100,7 @@ $n=1$의 경우, 임의의 $x_1\in F_1(M)$에 대하여 $d_1^{F(M)}(x_1)$은 $F(
 
 ## Acyclic models theorem의 활용
 
-Acyclic models theorem은 우선, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10){: data-relation="required" }을 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
+Acyclic models theorem은 우선, [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)을 증명할 때 사용된다. 두 위상공간의 pair로 이루어진 category $\Top^2$를 생각하고, 여기에서 $\Ch_{\geq 0}(\lMod{A})$로의 두 functor
 
 $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 
