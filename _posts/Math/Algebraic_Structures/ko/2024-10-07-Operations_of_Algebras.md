@@ -84,7 +84,7 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 에 의해 $f$는 곱셈을 보존하지 못한다. 
 
-한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4){: data-relation="required" }의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
+한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4)의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
 
 ## 대수의 텐서곱
 
@@ -155,7 +155,7 @@ Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebr
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8){: data-relation="required" }에 의하여 이는 정확히 tensor product이기 때문이다. 물론 위 isomorphism이 두 식
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 tensor product이기 때문이다. 물론 위 isomorphism이 두 식
 
 $$\x\otimes 1\mapsto \x,\qquad 1\otimes \y\mapsto \y$$
 

@@ -66,7 +66,7 @@ That $\bigoplus E_i$ is a submodule of $\prod E_i$ holds by definition, so we on
 The (possibly non-unital) $A$-algebra $\bigoplus_{i\in I}E_i$ obtained by restricting the multiplication of the direct product is called the *direct sum* of the $E_i$.
 :::
 
-It should be noted that this is *not* the coproduct in the category of $A$-algebras. First, even in the general sense of [§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-relation="required" }, the canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$ preserves addition, scalar multiplication, and multiplication, yet these data do not satisfy the universal property. For example, consider the situation where $E_1=E_2=A$ and
+It should be noted that this is *not* the coproduct in the category of $A$-algebras. First, even in the general sense of [§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1), the canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$ preserves addition, scalar multiplication, and multiplication, yet these data do not satisfy the universal property. For example, consider the situation where $E_1=E_2=A$ and
 
 $$f_i: E_i\rightarrow A$$
 
@@ -155,7 +155,7 @@ The tensor product of polynomial algebras is the polynomial algebra with the var
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-holds. This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" } is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in sets) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8){: data-relation="required" }, this is precisely the tensor product. Of course, that the above isomorphism is defined by the two formulas
+holds. This follows from the fact that the functor $A[-]:\Set \rightarrow \cAlg{A}$ examined in [§Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" } is a left adjoint. Since left adjoints preserve colimits, it sends the coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$ of one-point sets (in sets) to the coproduct in $\cAlg{A}$, and by [Theorem 8](#thm8), this is precisely the tensor product. Of course, that the above isomorphism is defined by the two formulas
 
 $$\x\otimes 1\mapsto \x,\qquad 1\otimes \y\mapsto \y$$
 
