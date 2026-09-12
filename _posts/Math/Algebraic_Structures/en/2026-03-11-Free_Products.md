@@ -96,7 +96,7 @@ satisfies the following three conditions:
 
 Given any word, the method to make it into a reduced word is simple. After checking whether adjacent elements belong to the same group, combine elements belonging to the same group into a single element via the operation in that group. If the identity element of some group appears in this process (or was there from the beginning), that element can simply be deleted.
 
-Then the operation on $\prod^\ast G_i$ is, identically to when defining the free group, the *concatenation* operation, and it is not difficult to verify that this collection carries a group structure. Moreover, a situation like [Example 1](#ex1){: data-relation="weak" } no longer occurs, because even if two nontrivial groups $G_1,G_2$ are abelian, their free product $G_1\ast G_2$ is no longer an abelian group.
+Then the operation on $\prod^\ast G_i$ is, identically to when defining the free group, the *concatenation* operation, and it is not difficult to verify that this collection carries a group structure. Moreover, a situation like [Example 1](#ex1) no longer occurs, because even if two nontrivial groups $G_1,G_2$ are abelian, their free product $G_1\ast G_2$ is no longer an abelian group.
 
 ::: Example 4
 Consider the same situation as in [Example 1](#ex1){: data-relation="required" }. Instead, for notational convenience, let $G_1=\langle a\rangle\cong\mathbb{Z}$ and $G_2=\langle b\rangle\cong\mathbb{Z}$. Then the elements of $G_1\ast G_2$ are the collection of elements such as
@@ -109,7 +109,7 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
 Here, $\langle a\rangle$ and $\langle b\rangle$ are cyclic subgroups of $G_1\ast G_2$, and therefore defining homomorphisms from $G_1$ and $G_2$ to $G_1\ast G_2$ by $a\mapsto a$ and $b\mapsto b$ yields the natural inclusion maps $\iota_1$ and $\iota_2$.
 
-Of course, a problem like [Example 1](#ex1){: data-relation="weak" } does not occur either. This is because $\iota_1(a)\iota_2(b)=ab$ and $\iota_2(b)\iota_1(a)=ba$, and these two elements are distinct elements of $\prod^\ast G_i$.
+Of course, a problem like [Example 1](#ex1) does not occur either. This is because $\iota_1(a)\iota_2(b)=ab$ and $\iota_2(b)\iota_1(a)=ba$, and these two elements are distinct elements of $\prod^\ast G_i$.
 :::
 
 ::: Proposition 5
