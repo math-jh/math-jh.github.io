@@ -95,7 +95,7 @@ $$x_1x_2\cdots x_n$$
 
 임의의 word가 주어졌을 때, 이를 reduced word로 만드는 법은 간단하다. 인접한 원소들이 서로 같은 group에 속하는 원소인지를 모두 체크해본 후, 같은 group에 속하는 원소들은 이 group에서의 연산을 통해 하나의 원소로 합쳐준다. 이 과정에서 (혹은 원래부터) 어떤 group에서의 항등원이 나왔다면, 그 원소는 지워버리면 된다. 
 
-그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1)과 같은 상황은 더 이상 일어나지 않는데, 이는 자명하지 않은 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
+그럼 $\prod^\ast G_i$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1){: data-relation="required" }과 같은 상황은 더 이상 일어나지 않는데, 이는 자명하지 않은 두 group $G_1,G_2$가 abelian이라 하더라도 그 free product $G_1\ast G_2$는 더 이상 abelian group이 아니기 때문이다.
 
 ::: 예시 4
 [예시 1](#ex1){: data-relation="required" }과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $G_1=\langle a\rangle\cong\mathbb{Z}$, $G_2=\langle b\rangle\cong\mathbb{Z}$이라 하자. 그럼 $G_1\ast G_2$의 원소는 다음과 같은 원소들
@@ -110,7 +110,7 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 
 이 때 $\langle a\rangle$과 $\langle b\rangle$은 $G_1\ast G_2$의 cyclic subgroup이고, 따라서 $G_1$과 $G_2$에서 $G_1\ast G_2$으로의 homomorphism을 $a\mapsto a$, $b\mapsto b$로 정의하면 자연스러운 inclusion map $\iota_1$과 $\iota_2$를 얻는다. 
 
-물론 [예시 1](#ex1)과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
+물론 [예시 1](#ex1){: data-relation="required" }과 같은 문제 또한 일어나지 않는다. $\iota_1(a)\iota_2(b)=ab$이고 $\iota_2(b)\iota_1(a)=ba$인데, 이 두 원소는 $\prod^\ast G_i$의 서로 다른 원소이기 때문이다.
 :::
 
 ::: 명제 5

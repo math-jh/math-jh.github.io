@@ -17,7 +17,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 For now, we investigate the properties of groups. Therefore, a group homomorphism between groups will simply be called a homomorphism.
 
-From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-relation="required" }, a (group) isomorphism can also be defined, and from this definition and [[Set Theory] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5), it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
+From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-relation="required" }, a (group) isomorphism can also be defined, and from this definition and [\[Set Theory\] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5){: data-relation="required" }, it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
 
 ::: Proposition 1
 A magma homomorphism $f:A\rightarrow A'$ is an isomorphism if and only if $f$ is bijective. 
@@ -100,7 +100,7 @@ For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a subgroup of $G$.
 By definition, $\ker f=\Eq(f,e)$.
 :::
 
-On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we have verified that its image $\im f$ is a submagma of $A'$. (the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8)) However, since a submagma of a group need not be a subgroup in general, the following proposition must be proved separately. 
+On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we have verified that its image $\im f$ is a submagma of $A'$. (the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8){: data-relation="weak" }) However, since a submagma of a group need not be a subgroup in general, the following proposition must be proved separately. 
 
 ::: Proposition 6
 For any homomorphism $f:G\rightarrow G'$, $\im f$ is a subgroup of $G'$.
