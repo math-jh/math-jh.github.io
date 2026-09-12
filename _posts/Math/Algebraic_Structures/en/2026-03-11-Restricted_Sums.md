@@ -19,7 +19,7 @@ Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_struc
 
 On the other hand, every pair of parallel morphisms in $\Grp$ also has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="weak" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
 
-However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1){: data-relation="weak" }, finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-relation="weak" }) 
+However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-relation="weak" }) 
 
 Instead, we look for the answer inside the product $\prod G_i$, whose existence is already known. By viewing each $G_i$ as a subgroup of $\prod G_i$ and considering the subgroup they generate together, in this post we call the group obtained in this way the weak direct product and verify its universal property.
 
