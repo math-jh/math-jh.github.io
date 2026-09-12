@@ -682,6 +682,52 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.agy.call_count, 0)
         self.assertEqual(len(self.holds()["held"]), 1)
 
+    def test_settling_a_hold_does_not_reverify_the_remaining_links(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+
+        body = self.path.read_text(encoding="utf-8")
+        body = body.replace(
+            "[가](/ko/math/a) 를 쓰고",
+            '[가](/ko/math/a){: data-relation="weak" } 를 쓰고',
+        )
+        self.path.write_text(body, encoding="utf-8")
+        holds = self.holds()
+        holds["settled"][self.idents[0]] = holds["held"].pop(self.idents[0])
+        self.holds_path.write_text(json.dumps(holds), encoding="utf-8")
+
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+
+        self.assertEqual(run.opus.call_count, 0)
+        self.assertEqual(run.codex.call_count, 0)
+        self.assertEqual(run.agy.call_count, 0)
+
+    def test_prose_edit_still_reverifies_a_unit_with_a_parked_link(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+        self.path.write_text(
+            self.path.read_text(encoding="utf-8").replace("첫 문단.", "바뀐 첫 문단."),
+            encoding="utf-8",
+        )
+
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+
+        self.assertGreater(run.opus.call_count + run.codex.call_count, 0)
+
+    def test_non_parked_relation_edit_still_reverifies_the_unit(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
+        self.path.write_text(
+            self.path.read_text(encoding="utf-8").replace(
+                'data-relation="weak"', 'data-relation="required"',
+            ),
+            encoding="utf-8",
+        )
+
+        run = self.tick({self.idents[0]: "required", self.idents[1]: "required"})
+
+        self.assertGreater(run.opus.call_count + run.codex.call_count, 0)
+
     def test_a_closed_verifier_leaves_the_unit_for_a_later_tick(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
                           "decided_by": {self.idents[0]: "Claude Opus",

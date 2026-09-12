@@ -201,7 +201,7 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction<sub>분수 모노이드</sub>*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$를 representative로 갖는 원소를 $a/p$로 표기한다. 
 :::
 
-이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\eta_S$에 대응하는 canonical morphism은 명시적으로 
+이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5){: data-relation="weak" }에서의 homomorphism $\eta_S$에 대응하는 canonical morphism은 명시적으로
 
 $$\epsilon:E\rightarrow E_S;\quad a\mapsto a/1$$
 

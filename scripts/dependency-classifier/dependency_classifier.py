@@ -872,6 +872,33 @@ def unit_key(paths: list[Path]) -> str:
     return "+".join(str(p.relative_to(ROOT)) for p in paths)
 
 
+def verification_fingerprint(
+    paths: list[Path], texts: dict[Path, str], parked: set[str],
+) -> str:
+    """Hash content while ignoring relation tags on human-parked links.
+
+    Resolving a hold restores exactly such a tag.  That known bookkeeping edit
+    must not invalidate the verification of every other link in the unit, while
+    prose edits and relation changes on non-parked links must still do so.
+    """
+    normalized = []
+    for path in paths:
+        parked_links = [
+            link for link in extract_links(path, texts[path], tagged=True)
+            if link.ident in parked
+        ]
+        normalized.append(strip_relations(texts[path], parked_links))
+    return sha("\0".join(normalized))
+
+
+def verified_at_content(entry: dict, raw_hash: str, content_hash: str) -> bool:
+    """Accept the canonical hash, with an exact-raw fallback for old state."""
+    canonical = entry.get("verified_content_hash")
+    if canonical is not None:
+        return canonical == content_hash
+    return entry.get("verified_hash") == raw_hash
+
+
 def is_local_only_untracked_unit(paths: list[Path]) -> bool:
     """True for untracked posts in an explicitly approved local-only stream."""
     if not paths or not all(
@@ -931,6 +958,7 @@ def select_unit(
             texts = {p: p.read_text(encoding="utf-8") for p in paths}
             key = unit_key(paths)
             fingerprint = sha("\0".join(texts[p] for p in paths))
+            verify_fingerprint = verification_fingerprint(paths, texts, parked)
             entry = state.get("units", {}).get(key, {})
             at_judged_content = entry.get("hash") == fingerprint
             if at_judged_content and entry.get("retry_after", 0) > now:
@@ -947,7 +975,9 @@ def select_unit(
                     lease.release()
                     continue
                 return "first", paths, texts, links, lease
-            if entry.get("verified_hash") == fingerprint:
+            if verified_at_content(entry, fingerprint, verify_fingerprint):
+                if "verified_content_hash" not in entry:
+                    updates[key] = {**entry, "verified_content_hash": verify_fingerprint}
                 lease.release()
                 continue
             tagged = [p_link for p in paths
@@ -957,6 +987,7 @@ def select_unit(
                 updates[key] = {
                     "status": "done", "hash": fingerprint,
                     "verified_hash": fingerprint,
+                    "verified_content_hash": verify_fingerprint,
                     "checked_at": int(now), "links": 0,
                 }
                 lease.release()
@@ -1009,7 +1040,9 @@ def backlog_complete() -> bool:
                for p in paths for link in extract_links(p, texts[p])):
             return False
         entry = state.get("units", {}).get(key, {})
-        if entry.get("verified_hash") != sha("\0".join(texts[p] for p in paths)):
+        raw_hash = sha("\0".join(texts[p] for p in paths))
+        content_hash = verification_fingerprint(paths, texts, parked)
+        if not verified_at_content(entry, raw_hash, content_hash):
             return False
     return True
 
@@ -1126,8 +1159,12 @@ def run_verify_pass(
     disputed = [(link, str(verdicts[link.ident]["relation"]).lower()) for link in links
                 if str(verdicts[link.ident]["relation"]).lower() != link.relation]
     if not disputed:
-        merge_unit_states({key: {**cleared(entry), "verified_hash": fingerprint,
-                                 "verified_at": int(time.time()), "verify": "agreed"}})
+        content_hash = verification_fingerprint(paths, originals, parked_idents())
+        merge_unit_states({key: {
+            **cleared(entry), "verified_hash": fingerprint,
+            "verified_content_hash": content_hash,
+            "verified_at": int(time.time()), "verify": "agreed",
+        }})
         log(f"verified {key}: {len(links)} relation(s) confirmed")
         return 0
     guard_unchanged(paths, originals)
@@ -1152,8 +1189,12 @@ def run_verify_pass(
         lines.append(f"{link.where()} {link.relation}→{relation} [{verifier}] {link.brief()}")
     merge_holds(holds)
     settled_hash = sha("\0".join(rendered[p] for p in paths))
+    content_hash = verification_fingerprint(
+        paths, rendered, parked_idents() | set(holds),
+    )
     merge_unit_states({key: {
         **cleared(entry), "hash": settled_hash, "verified_hash": settled_hash,
+        "verified_content_hash": content_hash,
         "verified_at": now, "verify": "disputed", "checked_at": now,
     }})
     for line in lines:

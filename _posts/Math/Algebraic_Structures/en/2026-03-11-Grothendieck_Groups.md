@@ -203,7 +203,7 @@ this relation is an equivalence relation compatible with the operation on $E\tim
 The monoid $(E\times S')/R$ obtained as above is called the *monoid of fractions* of $E$ with denominator $S$ and is denoted by $E_S$. The element of this monoid having $(a,p)$ as a representative is denoted by $a/p$. 
 :::
 
-In this case, since $E$ is a monoid, unlike the discussion above, it has an identity element $1$. Then the canonical morphism corresponding to the homomorphism $\eta_S$ in [Proposition 5](#prop5) can be explicitly thought of as 
+In this case, since $E$ is a monoid, unlike the discussion above, it has an identity element $1$. Then the canonical morphism corresponding to the homomorphism $\eta_S$ in [Proposition 5](#prop5){: data-relation="weak" } can be explicitly thought of as
 
 $$\epsilon:E\rightarrow E_S;\quad a\mapsto a/1$$
 
