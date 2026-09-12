@@ -240,7 +240,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 이 성립한다. 
 :::
 ::: 증명
-만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다른데, $x/x=0/1$은 어떤 $k\geq 0$에 대해 $x^{k+1}=0$인 것과 같고 이는 $x\not\in\mathfrak{N}$이라는 가정에 어긋나기 때문이다. 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $\mathfrak{m}$은 $A_x$의 prime ideal이다. 이제 [명제 10](#prop10){: data-relation="required" }을 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{m})$은 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{m})$이라면 $x/1\in \mathfrak{m}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{m}=A_x$가 되어 모순이다. 
+만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다른데, $x/x=0/1$은 어떤 $k\geq 0$에 대해 $x^{k+1}=0$인 것과 같고 이는 $x\not\in\mathfrak{N}$이라는 가정에 어긋나기 때문이다. 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10){: data-relation="required" }로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $\mathfrak{m}$은 $A_x$의 prime ideal이다. 이제 [명제 10](#prop10)을 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{m})$은 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{m})$이라면 $x/1\in \mathfrak{m}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{m}=A_x$가 되어 모순이다. 
 :::
 
 
