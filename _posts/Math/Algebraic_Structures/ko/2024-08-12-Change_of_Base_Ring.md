@@ -95,7 +95,7 @@ $\phi^\ast N_1\times\phi^\ast N_2$에서 $N_1\otimes_B N_2$로의 함수를 $(y_
 
 $$(y_1\cdot_A\alpha,y_2)=(y_1\cdot_B\phi(\alpha), y_2)\mapsto (y_1\cdot_B\phi(\alpha))\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
 
-가 성립하며, 따라서 $(\alpha\cdot_A y_1,y_2)$와 $(y_1,\alpha\cdot_Ay_2)$가 같은 원소로 보내지므로 tensor product의 universal property에 의해 증명이 완료된다.
+가 성립하며, 따라서 $(y_1\cdot_A\alpha,y_2)$와 $(y_1,\alpha\cdot_Ay_2)$가 같은 원소로 보내지므로 tensor product의 universal property에 의해 증명이 완료된다.
 :::
 
 다음 명제들은 일반적인 경우에서도 증명할 수 있지만, 편의를 위해 $A, B$가 모두 commutative ring이라 가정한다. 
@@ -165,4 +165,3 @@ $$u(\alpha\cdot_Ay)=w(\phi(\alpha)\cdot_By)(1)=w(y)(\phi(\alpha))=w(y)(\alpha\cd
 ---
 
 [^1]: 엄밀히 말하자면 이 식에서 첫 번째 isomorphism을 말이 되게 하기 위해서는 $$B$$가 $$(\mathbb{Z},A)$$-bimodule이라는 사실을 이용해야 한다.
-

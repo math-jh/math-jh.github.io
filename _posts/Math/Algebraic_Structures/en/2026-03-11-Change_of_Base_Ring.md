@@ -95,9 +95,9 @@ If both $A$ and $B$ are commutative rings, then $\Phi$ is an $A$-linear map $\ph
 ::: Proof
 It suffices to define the map from $\phi^\ast N_1\times\phi^\ast N_2$ to $N_1\otimes_B N_2$ by $(y_1,y_2)\mapsto y_1\otimes_B y_2$, and then show that this behaves well with respect to scalar multiplication by $A$. However, on $\phi^\ast N_1,\phi^\ast N_2$, the scalar multiplication by $A$ is defined through $\phi(\alpha)$ via the $B$-action, so for any $\alpha\in A$
 
-$$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
+$$(y_1\cdot_A\alpha,y_2)=(y_1\cdot_B\phi(\alpha), y_2)\mapsto (y_1\cdot_B\phi(\alpha))\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
 
-holds, and since $(\alpha\cdot_A y_1,y_2)$ and $(y_1,\alpha\cdot_Ay_2)$ are sent to the same element, the proof is completed by the universal property of the tensor product.
+holds, and since $(y_1\cdot_A\alpha,y_2)$ and $(y_1,\alpha\cdot_Ay_2)$ are sent to the same element, the proof is completed by the universal property of the tensor product.
 :::
 
 The following propositions can be proved in the general case as well, but for convenience we assume that $A, B$ are both commutative rings.
