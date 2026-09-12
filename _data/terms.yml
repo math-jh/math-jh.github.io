@@ -12585,14 +12585,14 @@ N:
     url: /ko/math/commutative_algebra/integral_extension
 - id: nodal_curve
   en: nodal curve
-  ko: 노드 곡선
+  ko: 마디 곡선
   primary: en
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
 - id: node
   en: node
-  ko: 노드
+  ko: 마디
   primary: en
   defs:
   - label: '[사교기하학] §Stable maps의 moduli space'
@@ -17307,10 +17307,10 @@ S:
   ko: 안정사상
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
-    url: /ko/math/gromov-witten_theory/intro_reading_note
   - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
+    url: /ko/math/gromov-witten_theory/intro_reading_note
 - id: stack
   en: stack
   ko: 스택
