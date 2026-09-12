@@ -66,7 +66,7 @@ $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ
 
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
-이므로 $\im f\subseteq\prod\im f_i$가 성립한다. 역으로 $y\in\prod\im f_i$가 주어졌다면 각 $i\in I$마다 $f_i(x_i)=\pr_i^H(y)$인 $x_i\in G_i$를 고를 수 있고 ([\[집합론\] §선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice){: data-relation="required" }), $x=(x_i)_{i\in I}$로 두면 $f(x)=y$가 되므로 $\im f=\prod\im f_i$ 또한 성립한다.
+이므로 $\im f\subseteq\prod\im f_i$가 성립한다. 역으로 $y\in\prod\im f_i$가 주어졌다면 각 $i\in I$마다 $f_i(x_i)=\pr_i^H(y)$인 $x_i\in G_i$를 고를 수 있고 ([\[집합론\] §선택공리, ⁋The Axiom of Choice.](/ko/math/set_theory/axiom_of_choice#axiom-choice)), $x=(x_i)_{i\in I}$로 두면 $f(x)=y$가 되므로 $\im f=\prod\im f_i$ 또한 성립한다.
 :::
 
 ::: 따름정리 4
