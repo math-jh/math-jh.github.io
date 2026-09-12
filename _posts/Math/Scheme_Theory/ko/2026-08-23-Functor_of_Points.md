@@ -134,7 +134,7 @@ $$a^{(i)}=\psi^\ast(\x_j/\x_i)\cdot a^{(j)}$$
 한편 우리는 마침 이러한 경우마다 국소적으로 scaling factor를 담을 수 있는 방법을 잘 알고 있다. 즉 $T$ 위에 정의된 line bundle을 생각하면 된다. 이렇게 얻어지는 line bundle $\mathcal{L}$ 위에서 국소적인 tuple들의 coordinate는 global section $n+1$개 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$으로 합쳐지고, $a^{(i)}$의 $i$번째 coordinate가 $1$이었다는 것은 $V_i$ 위에서 $s_i$가 $\mathcal{L}$을 생성한다는 뜻이 된다. 이 때 우리는 이 비율을 잘 정의하기 위해 다음의 조건을 요구하여야 한다. 
 
 ::: 정의 4
-Scheme $T$ 위의 line bundle $\mathcal{L}$의 *globally generating sections<sub>전역생성단면</sub>* $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$이라는 것은, 각각의 점 $t\in T$에서 stalk $\mathcal{L}_t$이 germ $(s_0)_t,\ldots, (s_n)_t$로 $\mathcal{O}_{T,t}$-module로서 생성되는 것이다. 두 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$과 $(\mathcal{L}', s_0',\ldots, s_n')$이 *isomorphic*하다는 것은, $\mathcal{O}_T$-module isomorphism $\theta:\mathcal{L} \rightarrow \mathcal{L}'$이 존재하여 각각의 $i$에 대하여 $\theta(s_i)=s_i'$인 것이다. 
+Scheme $T$ 위의 line bundle $\mathcal{L}$의 *globally generating sections<sub>전역생성단면</sub>* $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$이라는 것은, 각각의 점 $t\in T$에서 stalk $\mathcal{L}_t$이 germ $(s_0)_t,\ldots, (s_n)_t$로 $\mathcal{O}_{T,t}$-module로서 생성되는 것이다. 두 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$과 $(\mathcal{L}', s_0',\ldots, s_n')$이 *isomorphic<sub>동형(인)</sub>*하다는 것은, $\mathcal{O}_T$-module isomorphism $\theta:\mathcal{L} \rightarrow \mathcal{L}'$이 존재하여 각각의 $i$에 대하여 $\theta(s_i)=s_i'$인 것이다. 
 :::
 
 이 isomorphism 조건이 homogeneous coordinate의 scaling을 기록한다. 특히 $\mathcal{L}=\mathcal{O}_T$인 경우, $\mathcal{O}_T$의 automorphism은 가역함수 $u\in\Gamma(T,\mathcal{O}_T)^\times$를 곱하는 것뿐이다. 따라서 $(\mathcal{O}_T,s_0,\ldots,s_n)$와 $(\mathcal{O}_T,us_0,\ldots,us_n)$은 isomorphic한 data이다.

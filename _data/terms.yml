@@ -9657,6 +9657,13 @@ I:
   defs:
   - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
+- id: isomorphic
+  en: isomorphic
+  ko: 동형(인)
+  primary: en
+  defs:
+  - label: '[스킴] §점함자'
+    url: /ko/math/scheme_theory/functor_of_points#def4
 - id: isomorphism
   en: isomorphism
   ko: 동형사상
