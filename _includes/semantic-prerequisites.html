@@ -6,7 +6,28 @@
 {% assign _semantic = page.semantic_navigation %}
 {% if _semantic and (_semantic.required.size > 0 or _semantic.weak.size > 0) %}
 <aside class="semantic-reading semantic-reading--before" aria-labelledby="semantic-prerequisites-title">
-  <div id="semantic-prerequisites-title" class="semantic-reading__title">{{ site.data.ui-text[lang].semantic_prerequisites_title }}</div>
+  <div class="semantic-reading__head">
+    <div id="semantic-prerequisites-title" class="semantic-reading__title">{{ site.data.ui-text[lang].semantic_prerequisites_title }}</div>
+    <div class="comment-info js-comment-info">
+      <button type="button" class="comment-info__toggle js-comment-info-toggle"
+              aria-expanded="false" aria-controls="semantic-prerequisites-info-panel"
+              aria-label="{{ site.data.ui-text[lang].semantic_prerequisites_info_label | default: site.data.ui-text[lang].comment_info_label | default: '안내' | escape }}">i</button>
+      <div class="comment-info__panel" id="semantic-prerequisites-info-panel" role="note">
+        <ul>
+          {%- if site.data.ui-text[lang].semantic_prerequisites_notices -%}
+            {%- for _notice in site.data.ui-text[lang].semantic_prerequisites_notices -%}
+              <li>{{ _notice }}</li>
+            {%- endfor -%}
+          {%- elsif site.data.ui-text[lang].semantic_prerequisites_notice_1 -%}
+            <li>{{ site.data.ui-text[lang].semantic_prerequisites_notice_1 }}</li>
+            {%- if site.data.ui-text[lang].semantic_prerequisites_notice_2 -%}
+              <li>{{ site.data.ui-text[lang].semantic_prerequisites_notice_2 }}</li>
+            {%- endif -%}
+          {%- endif -%}
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="semantic-reading__columns">
   {% if _semantic.required.size > 0 %}
   <section class="semantic-reading__group">

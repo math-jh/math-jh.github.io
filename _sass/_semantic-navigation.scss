@@ -39,6 +39,18 @@
   }
 }
 
+.semantic-reading__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7em;
+}
+
+.layout--single .semantic-reading__head .semantic-reading__title {
+  margin-bottom: 0;
+}
+
 .layout--single .semantic-reading__title {
   margin: 0 0 0.7em;
   padding: 0;
@@ -47,6 +59,38 @@
   font-size: $type-size-5;
   font-weight: 650;
 
+}
+
+/* 안내(comment-info) 패널이 semantic-reading 내부에서 ul/li 여백 간섭을 받지 않도록 보호 */
+.semantic-reading .comment-info__panel {
+  .semantic-prerequisites__graph-link {
+    color: $link-color;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0 0 0.5em;
+    padding-left: 0.85em;
+
+    &::before {
+      content: "\2013";
+      position: absolute;
+      left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .layout--single .semantic-reading li {

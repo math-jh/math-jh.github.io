@@ -8,7 +8,36 @@ window.commentsTurnstileLoaded = function () {
 (function () {
   "use strict";
 
+  // --- 안내(ⓘ): 호버·포커스는 CSS 가 연다. 여기서는 터치 기기용 클릭 토글만.
+  function initInfoToggles() {
+    document.querySelectorAll(".js-comment-info").forEach(function (info) {
+      var infoToggle = info.querySelector(".js-comment-info-toggle");
+      if (!infoToggle || infoToggle.dataset.bound) return;
+      infoToggle.dataset.bound = "true";
+      infoToggle.addEventListener("click", function () {
+        var open = info.hasAttribute("data-open");
+        if (open) info.removeAttribute("data-open");
+        else info.setAttribute("data-open", "");
+        infoToggle.setAttribute("aria-expanded", open ? "false" : "true");
+      });
+      document.addEventListener("click", function (event) {
+        if (!info.contains(event.target)) {
+          info.removeAttribute("data-open");
+          infoToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          info.removeAttribute("data-open");
+          infoToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    initInfoToggles();
+
     var root = document.querySelector(".js-comment-system");
     if (!root) return;
 
@@ -108,29 +137,7 @@ window.commentsTurnstileLoaded = function () {
     }
     localizeDates();
 
-    // --- 안내(ⓘ): 호버·포커스는 CSS 가 연다. 여기서는 터치 기기용 클릭 토글만.
-    var info = root.querySelector(".js-comment-info");
-    var infoToggle = root.querySelector(".js-comment-info-toggle");
-    if (info && infoToggle) {
-      infoToggle.addEventListener("click", function () {
-        var open = info.hasAttribute("data-open");
-        if (open) info.removeAttribute("data-open");
-        else info.setAttribute("data-open", "");
-        infoToggle.setAttribute("aria-expanded", open ? "false" : "true");
-      });
-      document.addEventListener("click", function (event) {
-        if (!info.contains(event.target)) {
-          info.removeAttribute("data-open");
-          infoToggle.setAttribute("aria-expanded", "false");
-        }
-      });
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          info.removeAttribute("data-open");
-          infoToggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
+
 
     // --- Turnstile: interaction-only 라 사람으로 판정된 방문자에겐 위젯이 뜨지 않고,
     // 확인이 필요할 때만 이 자리에 나타난다.

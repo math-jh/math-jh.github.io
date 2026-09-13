@@ -35,6 +35,10 @@ en: &DEFAULT_EN
   more_label                 : "Learn more"
   related_label              : "You may also enjoy"
   semantic_prerequisites_title: "Reading prerequisites"
+  semantic_prerequisites_info_label: "About reading prerequisites"
+  semantic_prerequisites_notices:
+    - "This list is generated automatically from links marked as prerequisites in the post, so basic concepts or background knowledge without an explicit link may be omitted."
+    - 'For a broader view, see the <a class="semantic-prerequisites__graph-link" href="/en/dependencies">full dependency graph</a>.'
   semantic_required_label    : "Required knowledge"
   semantic_weak_label        : "Background knowledge"
   semantic_next_title        : "Worth reading"
@@ -688,6 +692,10 @@ ko: &DEFAULT_KO
   more_label                 : "더 보기"
   related_label              : "참고"
   semantic_prerequisites_title: "읽어야 할 글"
+  semantic_prerequisites_info_label: "선수지식 안내"
+  semantic_prerequisites_notices:
+    - "이 목록은 본문에서 선수지식으로 표시한 링크를 바탕으로 기계적으로 구성되므로, 명시적인 링크가 없는 기본개념이나 배경지식은 빠져 있을 수 있습니다."
+    - '더 넓은 흐름은 <a class="semantic-prerequisites__graph-link" href="/ko/dependencies">전체 의존성 그래프</a>에서 확인할 수 있습니다.'
   semantic_required_label    : "필수지식"
   semantic_weak_label        : "배경지식"
   semantic_next_title        : "읽을만한 글"
