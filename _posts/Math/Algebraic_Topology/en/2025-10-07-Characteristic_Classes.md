@@ -93,7 +93,7 @@ For the fourth claim, over $\mathbb{Z}$ we count the zeros of a generic section 
 
 For the fifth claim, reversing the orientation flips the sign of every zero together, giving $e\mapsto -e$; in particular, when $n$ is odd the reflection $v\mapsto -v$ on each fiber is a bundle automorphism with determinant $(-1)^n=-1$ that reverses orientation, forcing $e=-e$ and hence $2e(E)=0$. Thus we immediately obtain that the Euler class of an odd-rank oriented bundle is always $2$-torsion.
 
-The name Euler class comes from what it measures. If $M$ is a closed oriented $n$-manifold and $E=TM$ is its tangent bundle, then evaluating $e(TM)$ on the fundamental class $[M]$ of [§Poincaré Duality, ⁋Definition 10](/en/math/algebraic_topology/Poincare_duality#def10){: data-relation="weak" } yields exactly the Euler characteristic
+The name Euler class comes from what it measures. If $M$ is a closed oriented $n$-manifold and $E=TM$ is its tangent bundle, then evaluating $e(TM)$ on the fundamental class $[M]$ of [§Poincaré Duality, ⁋Definition 10](/en/math/algebraic_topology/Poincare_duality#def10) yields exactly the Euler characteristic
 
 $$\rchi(M)=\int_{[M]} e(TM).$$
 
@@ -133,7 +133,7 @@ with determinant $a^2+b^2>0$, and for general $A$ the determinant always becomes
 
 In particular, the Euler class is canonically and well defined for any complex vector bundle. Moreover, there are additional invariants beyond the Euler class. For example, a complex vector bundle $E$ and its conjugate $\bar{E}$ are the same as underlying real vector bundles, but they are generally different as complex vector bundles, and the *Chern classes* we will define can distinguish them.
 
-The Chern classes satisfy $c_n=e(E_\mathbb{R})$ for the top Chern class, so they can be thought of as characteristic classes extending the Euler class. There are several ways to define them. In differential geometry one derives them from the curvature of a connection via Chern–Weil theory, or one can take an axiomatic approach as was done for Stiefel-Whitney classes. (Of course in this case existence must be proved separately.) Following [MS], we define Chern classes by descending step by step from the Euler class, i.e. the top Chern class. What is needed in this process is the *Gysin exact sequence* of [Theorem 5](#thm5){: data-relation="required" }.
+The Chern classes satisfy $c_n=e(E_\mathbb{R})$ for the top Chern class, so they can be thought of as characteristic classes extending the Euler class. There are several ways to define them. In differential geometry one derives them from the curvature of a connection via Chern–Weil theory, or one can take an axiomatic approach as was done for Stiefel-Whitney classes. (Of course in this case existence must be proved separately.) Following [MS], we define Chern classes by descending step by step from the Euler class, i.e. the top Chern class. What is needed in this process is the *Gysin exact sequence* of [Theorem 5](#thm5).
 
 To describe this, we first make the following definition. If the base $B$ is paracompact, then by a partition of unity we can put a fiber metric on $E$ giving an inner product on each fiber, and then the set of vectors of length $1$
 
@@ -187,7 +187,7 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 
 The third morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$ has a somewhat special property. The natural morphism that a continuous map $\pi:S(E)\rightarrow B$ induces on cohomology is usually the pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$, which goes in the reverse direction of $\pi$ and preserves degree. By contrast, $\pi_!$ goes in the same direction as $\pi$ while lowering degree by $(n-1)$; a morphism that goes against the direction naturally induced by a continuous function is conventionally called a *wrong-way map* and denoted with the subscript $!$.
 
-The intuition for this morphism lies in reversing [Theorem 2](#thm2){: data-relation="required" }. If the Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$ was a lift in the fiber direction, copying the base class $\alpha$ to each point of the fiber via $p^\ast\alpha$ and then multiplying by the fiber-direction class $u$ to raise degree, then $\pi_!$ should be thought of as its inverse. That is, viewing a class on $S(E)$ as having a base-direction component and a fiber-direction component, the fiber-direction component is integrated out along each fiber $S^{n-1}$, and the remaining base-direction class is returned as-is; in this process the fiber dimension $n-1$ is lost. The precise mathematical formulation of this property is the *projection formula*
+The intuition for this morphism lies in reversing [Theorem 2](#thm2). If the Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$ was a lift in the fiber direction, copying the base class $\alpha$ to each point of the fiber via $p^\ast\alpha$ and then multiplying by the fiber-direction class $u$ to raise degree, then $\pi_!$ should be thought of as its inverse. That is, viewing a class on $S(E)$ as having a base-direction component and a fiber-direction component, the fiber-direction component is integrated out along each fiber $S^{n-1}$, and the remaining base-direction class is returned as-is; in this process the fiber dimension $n-1$ is lost. The precise mathematical formulation of this property is the *projection formula*
 
 $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\ast(B), \quad\beta\in H^\ast(S(E))$$
 
@@ -304,7 +304,7 @@ holds. If $E'=E\oplus\varepsilon^1$, then the section $s(x)=(0,1)$ taking the co
 
 $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i(E).$$
 
-The top class $c_{n+1}(E')=e(E'_{\mathbb{R}})$ is zero by (3) of [Proposition 4](#prop4){: data-relation="required" } since there exists a nowhere vanishing section, which agrees with $c_{n+1}(E)=0$.
+The top class $c_{n+1}(E')=e(E'_{\mathbb{R}})$ is zero by (3) of [Proposition 4](#prop4) since there exists a nowhere vanishing section, which agrees with $c_{n+1}(E)=0$.
 
 On the other hand, as we saw in [Example 8](#ex8){: data-relation="required" }, $\gamma$ is the universal family of complex line bundles, so any two line bundles $L,L'$ over a base $B$ are pullbacks $f_1^\ast\gamma$, $f_2^\ast\gamma$ along morphisms $f_1,f_2:B\rightarrow\CP^\infty$ of the base. Now setting
 
@@ -364,7 +364,7 @@ Let us first consider the case of a line bundle $L$. By [Definition 6](#def6){: 
 The general case also follows by the splitting principle, just as in the proof above.
 :::
 
-For instance, for the tautological bundle $\gamma$ of [Example 8](#ex8){: data-relation="weak" }, $c_1(\gamma)$ is a generator of $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$, so $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$, and therefore $\gamma\not\cong\bar{\gamma}$. Of course this distinction has its limitations: the conjugate of a bundle whose odd Chern classes are all $2$-torsion or $0$ cannot be distinguished by Chern classes alone, but we can still confirm that Chern classes carry richer information than real bundles.
+For instance, for the tautological bundle $\gamma$ of [Example 8](#ex8), $c_1(\gamma)$ is a generator of $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$, so $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$, and therefore $\gamma\not\cong\bar{\gamma}$. Of course this distinction has its limitations: the conjugate of a bundle whose odd Chern classes are all $2$-torsion or $0$ cannot be distinguished by Chern classes alone, but we can still confirm that Chern classes carry richer information than real bundles.
 
 Since all examples so far have been line bundles, let us look at one example showing how [Theorem 9](#thm9){: data-relation="required" } is actually used in calculations for bundles of higher rank.
 
@@ -418,9 +418,9 @@ For real vector bundles $E,F\rightarrow B$, the following hold.
 3. For a complex vector bundle $E$, $E_{\mathbb{R}}\otimes_{\mathbb{R}}\mathbb{C}\cong E\oplus\bar{E}$, and therefore $p_i(E_{\mathbb{R}})$ is a polynomial in the Chern classes of $E$. For instance, $p_1(E_{\mathbb{R}})=c_1(E)^2-2c_2(E)$.
 :::
 ::: Proof
-(1) follows immediately from the fact that complexification commutes with pullback and naturality from [Proposition 7](#prop7){: data-relation="required" }. (2) also follows by applying [Theorem 9](#thm9){: data-relation="required" } to $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$: as observed below [Definition 12](#def12){: data-relation="required" }, the odd Chern classes are all $2$-torsion, so the terms involving them vanish upon multiplication by $2$, and the remaining even terms give $p(E)\smile p(F)$.
+(1) follows immediately from the fact that complexification commutes with pullback and naturality from [Proposition 7](#prop7). (2) also follows by applying [Theorem 9](#thm9) to $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$: as observed below [Definition 12](#def12), the odd Chern classes are all $2$-torsion, so the terms involving them vanish upon multiplication by $2$, and the remaining even terms give $p(E)\smile p(F)$.
 
-Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes\mathbb{C}$, the complex structure emerges as $J\in \End(E_{\mathbb{R}})$. Extending this $\mathbb{C}$-linearly, its $\pm i$ eigenspace decomposition gives $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$. Then by [Theorem 9](#thm9){: data-relation="required" } and [Proposition 10](#prop10){: data-relation="required" }, $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$, and bringing this down to the Pontryagin class gives the desired result.
+Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes\mathbb{C}$, the complex structure emerges as $J\in \End(E_{\mathbb{R}})$. Extending this $\mathbb{C}$-linearly, its $\pm i$ eigenspace decomposition gives $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$. Then by [Theorem 9](#thm9) and [Proposition 10](#prop10), $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$, and bringing this down to the Pontryagin class gives the desired result.
 :::
 
 ---

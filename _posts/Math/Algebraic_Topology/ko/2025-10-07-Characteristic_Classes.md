@@ -30,7 +30,7 @@ $$H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong \widetilde{H}^{n-1}(S^{n-
 
 이 존재하는 것을 안다. 미분기하학에서 다양체의 top dimensional cohomology는 volume form을 담고 있고, 이것이 곧 방향을 결정하는 것으로 생각하므로 이는 $S^{n-1}$이라는, 우리가 잘 알고 있는 공간의 방향을 사용해서 vector bundle의 방향을 주는 것으로 생각할 수 있다. 
 
-그러나 역시 벡터공간에 방향을 주는 가장 친숙한 방법은 기준이 되는 ordered basis를 하나 잡고, 다른 ordered basis는 기준 basis로의 change of basis 행렬식이 음수이면 음의 방향으로 정렬되어있다 선언하는 것이다. 문제는 이와 같은 정의는 과하게 많은 정보를 담고 있다는 것으로, 실제로 우리가 보는 것은 change of basis의 $\det$의 부호뿐이다. 이러한 관점은 앞서 [§슈티펠-휘트니 특성류, §§체흐 코호몰로지](/ko/math/algebraic_topology/stiefel_whitney_classes#체흐-코호몰로지){: data-relation="required" }에서 설명한 Čech cohomology와 긴밀하게 연결된다. 즉, 우리는 임의의 vector bundle을 trivializing open cover $\{U_i\}$와 $U_{ij}$ 위의 transition function들 $g_{ij}: U_{ij}\rightarrow \GL(n;\mathbb{R})$로 정의했었는데, 이렇게 $\det$의 부호 중 하나를 택하는 것은 structure group을 $\GL(n;\mathbb{R})$에서 $\GL^+(n;\mathbb{R})$로 줄이는 것과 같다. 즉, transition function을 통해 한 chart에서 다른 chart로 넘어갈 때 determinant가 음수인 것, 즉 방향이 뒤바뀌는 것이 허용되지 않게 되며, 이 제한이 non-orientable vector bundle들을 걸러주는 것이다. 
+그러나 역시 벡터공간에 방향을 주는 가장 친숙한 방법은 기준이 되는 ordered basis를 하나 잡고, 다른 ordered basis는 기준 basis로의 change of basis 행렬식이 음수이면 음의 방향으로 정렬되어있다 선언하는 것이다. 문제는 이와 같은 정의는 과하게 많은 정보를 담고 있다는 것으로, 실제로 우리가 보는 것은 change of basis의 $\det$의 부호뿐이다. 이러한 관점은 앞서 [§슈티펠-휘트니 특성류, §§체흐 코호몰로지](/ko/math/algebraic_topology/stiefel_whitney_classes#체흐-코호몰로지)에서 설명한 Čech cohomology와 긴밀하게 연결된다. 즉, 우리는 임의의 vector bundle을 trivializing open cover $\{U_i\}$와 $U_{ij}$ 위의 transition function들 $g_{ij}: U_{ij}\rightarrow \GL(n;\mathbb{R})$로 정의했었는데, 이렇게 $\det$의 부호 중 하나를 택하는 것은 structure group을 $\GL(n;\mathbb{R})$에서 $\GL^+(n;\mathbb{R})$로 줄이는 것과 같다. 즉, transition function을 통해 한 chart에서 다른 chart로 넘어갈 때 determinant가 음수인 것, 즉 방향이 뒤바뀌는 것이 허용되지 않게 되며, 이 제한이 non-orientable vector bundle들을 걸러주는 것이다. 
 
 이것이 언제 가능한지는 앞서 본 $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$가 알려준다. 즉, 각 transition function에서 방향에 관련된 정보로 남는 것은 $\det g_{ij}$의 부호 $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$뿐이며, 이 때 이들을 이어붙인 class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$가 $\GL^+$로의 축소에 대한 obstruction이 된다. 이 class가 정확히 $w_1(E)$이며 ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5){: data-relation="weak" }), 이는 앞서 $H^1(M;\mathbb{Z}/2)$가 covering space의 방향 정보를 담았던 것의 rank $n$ 버전으로 생각하면 된다. 즉, $E$가 orientable인 것은 정확히 $w_1(E)=0$인 것과 동치이다. 
 
@@ -133,7 +133,7 @@ $$\begin{pmatrix}a&-b\\ b&a\end{pmatrix}$$
 
 특히 임의의 complex vector bundle에는 Euler class가 표준적으로 잘 정의된다. 뿐만 아니라, 여기서는 Euler class 외에 추가적인 불변량 또한 존재한다. 예를 들어 complex vector bundle $E$와 그 켤레 $\bar{E}$는 underlying real vector bundle로는 같지만, 이는 complex vector bundle로서는 일반적으로 다른 bundle이며, 우리가 정의할 *Chern class*들이 이 둘을 구별할 수 있다. 
 
-Chern class는 top Chern class에서는 $c_n=e(E_\mathbb{R})$를 만족하므로, Euler class를 확장하는 characteristic class로 생각할 수 있다. 이를 정의하는 방법은 여러 갈래가 있다. 미분기하에서는 connection의 곡률에서 Chern–Weil 이론으로 끌어내고, 혹은 Stiefel-Whitney에서 그러했듯 공리적인 접근을 할 수도 있다. (물론 이 경우 존재성이 별도의 명제로서 증명되어야 한다.) 우리는 [MS]를 따라 Chern class를 Euler class, 즉 top Chern class로부터 한 단계씩 내려오며 정의하기로 한다. 이 과정에서 필요한 것이 [정리 5](#thm5){: data-relation="required" }의 *Gysin exact sequence*이다. 
+Chern class는 top Chern class에서는 $c_n=e(E_\mathbb{R})$를 만족하므로, Euler class를 확장하는 characteristic class로 생각할 수 있다. 이를 정의하는 방법은 여러 갈래가 있다. 미분기하에서는 connection의 곡률에서 Chern–Weil 이론으로 끌어내고, 혹은 Stiefel-Whitney에서 그러했듯 공리적인 접근을 할 수도 있다. (물론 이 경우 존재성이 별도의 명제로서 증명되어야 한다.) 우리는 [MS]를 따라 Chern class를 Euler class, 즉 top Chern class로부터 한 단계씩 내려오며 정의하기로 한다. 이 과정에서 필요한 것이 [정리 5](#thm5)의 *Gysin exact sequence*이다. 
 
 이를 서술하기 위해 우선 다음을 정의하자. Base $B$가 paracompact이면 partition of unity로 $E$의 각 fiber에 내적을 주는 fiber metric을 잡을 수 있고, 그럼 길이 $1$인 vector들의 모임
 
@@ -187,7 +187,7 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 
 세 번째 morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$는 조금 특별한 성질을 갖는다. 보통 연속사상 $\pi:S(E)\rightarrow B$가 cohomology에 주는 자연스러운 morphism은 pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$로, $\pi$의 역방향이며 degree를 보존한다. 반면 $\pi_!$는 $\pi$와 같은 방향으로 가면서 degree를 $(n-1)$만큼 낮추는데, 이와 같이 연속함수에 의해 마땅히 유도되어야 할 방향의 반대방향으로 거스르는 morphism을 *wrong way map*이라 하고 첨자 $!$를 붙여 표기하는 것이 관례이다.
 
-이 morphism의 직관은 [정리 2](#thm2){: data-relation="required" }를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 $p^\ast\alpha$를 통해 복사한 뒤 fiber 방향 class $u$를 곱해 degree를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고, 남은 base 방향 class는 그대로 돌려놓는 것이며 그 과정에서 fiber dimension $n-1$이 빠지게 된다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
+이 morphism의 직관은 [정리 2](#thm2)를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 $p^\ast\alpha$를 통해 복사한 뒤 fiber 방향 class $u$를 곱해 degree를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고, 남은 base 방향 class는 그대로 돌려놓는 것이며 그 과정에서 fiber dimension $n-1$이 빠지게 된다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
 
 $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\ast(B), \quad\beta\in H^\ast(S(E))$$
 
@@ -269,7 +269,7 @@ $$H^\bullet(\Gr(k,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_k]$$
 
 으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 되며, 우리는 이러한 종류의 계산을 조만간 다시 살펴보게 될 것이다. 
 
-한편, Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 여기서도 Chern class가 같은 공식을 만족하는 것을 기대하는 것이 자연스러울 것이다. 이를 실제로 증명하는 핵심 스텝은  [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5){: data-relation="forward" }인데, 이 정리의 증명은 지금까지의 논의로도 충분히 가능하지만 오직 스토리의 흐름을 위해 이를 다음 글로 따로 묶어둔다. 
+한편, Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 여기서도 Chern class가 같은 공식을 만족하는 것을 기대하는 것이 자연스러울 것이다. 이를 실제로 증명하는 핵심 스텝은  [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)인데, 이 정리의 증명은 지금까지의 논의로도 충분히 가능하지만 오직 스토리의 흐름을 위해 이를 다음 글로 따로 묶어둔다. 
 
 ::: 정리 9 (Whitney sum formula)
 Paracompact base space $B$ 위의 두 complex vector bundle $E,E'\rightarrow B$에 대하여
@@ -368,7 +368,7 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 일반적인 경우 또한 위의 증명과 마찬가지로 splitting principle을 사용하면 된다. 
 :::
 
-가령 [예시 8](#ex8){: data-relation="weak" }의 tautological bundle $\gamma$는 $c_1(\gamma)$가 $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$의 generator라 $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$이고, 따라서 $\gamma\not\cong\bar{\gamma}$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $2$-torsion이거나 $0$인 bundle의 켤레는 Chern class만으로는 구별되지 않지만 여전히 Chern class가 real bundle보다는 풍부한 정보를 갖고 있음을 확인할 수 있다.
+가령 [예시 8](#ex8)의 tautological bundle $\gamma$는 $c_1(\gamma)$가 $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$의 generator라 $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$이고, 따라서 $\gamma\not\cong\bar{\gamma}$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $2$-torsion이거나 $0$인 bundle의 켤레는 Chern class만으로는 구별되지 않지만 여전히 Chern class가 real bundle보다는 풍부한 정보를 갖고 있음을 확인할 수 있다.
 
 한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 9](#thm9){: data-relation="required" }이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
 
@@ -424,9 +424,9 @@ Real vector bundle $E,F\rightarrow B$에 대하여 다음이 성립한다.
 3. Complex vector bundle $E$에 대하여 $E_{\mathbb{R}}\otimes_{\mathbb{R}}\mathbb{C}\cong E\oplus\bar{E}$이며, 따라서 $p_i(E_{\mathbb{R}})$는 $E$의 Chern class들의 다항식이다. 가령 $p_1(E_{\mathbb{R}})=c_1(E)^2-2c_2(E)$이다.
 :::
 ::: 증명
-(1)은 complexification이 pullback과 교환하고 [명제 7](#prop7){: data-relation="required" }의 naturality에서 즉시 나온다. (2)도 $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$에 [정리 9](#thm9){: data-relation="required" }를 적용하면 되는데, [정의 12](#def12){: data-relation="required" } 아래 관찰대로 홀수 Chern class가 모두 $2$-torsion이므로 이들이 낀 항은 $2$를 곱하면 소멸하고, 남는 짝수항이 $p(E)\smile p(F)$를 준다.
+(1)은 complexification이 pullback과 교환하고 [명제 7](#prop7)의 naturality에서 즉시 나온다. (2)도 $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$에 [정리 9](#thm9)를 적용하면 되는데, [정의 12](#def12) 아래 관찰대로 홀수 Chern class가 모두 $2$-torsion이므로 이들이 낀 항은 $2$를 곱하면 소멸하고, 남는 짝수항이 $p(E)\smile p(F)$를 준다.
 
-(3)만 약간의 계산이 필요하다. $E_{\mathbb{R}}\otimes\mathbb{C}$으로 complexify하면, 이 과정에서 complex structure는 $J\in \End(E_{\mathbb{R}})$로 나온다. 이제 이를 $\mathbb{C}$-linear로 확장하면 그 $\pm i$ 고유공간 분해가 $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$를 준다. 그럼 이제 [정리 9](#thm9){: data-relation="required" }와 [명제 10](#prop10){: data-relation="required" }으로 $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$이므로 이를 Pontryagin class로 가지고 오면 원하는 결과를 얻는다.
+(3)만 약간의 계산이 필요하다. $E_{\mathbb{R}}\otimes\mathbb{C}$으로 complexify하면, 이 과정에서 complex structure는 $J\in \End(E_{\mathbb{R}})$로 나온다. 이제 이를 $\mathbb{C}$-linear로 확장하면 그 $\pm i$ 고유공간 분해가 $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$를 준다. 그럼 이제 [정리 9](#thm9)와 [명제 10](#prop10)으로 $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$이므로 이를 Pontryagin class로 가지고 오면 원하는 결과를 얻는다.
 :::
 
 ---
