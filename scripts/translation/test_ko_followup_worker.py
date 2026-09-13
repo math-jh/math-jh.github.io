@@ -6,6 +6,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 import ko_followup_worker as worker
@@ -64,6 +65,83 @@ class FollowupBatchTest(unittest.TestCase):
         self.assertEqual(rc, 1)
         self.assertEqual(seen, ["a.md", "b.md"])
         self.assertEqual(len(calls), 2)
+
+    def test_rejection_unchecks_request_and_records_reason(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="ko-followup-test-") as tmp:
+            request_state = Path(tmp) / "requests.json"
+            request_state.write_text(
+                json.dumps({"a.md@t1": 1, "b.md@t2": 1}), encoding="utf-8",
+            )
+            entry = {"ko_reviewed_at": "t1"}
+            state = {"files": {"a.md": entry}}
+            with (
+                patch.object(worker, "REQUEST_STATE", request_state),
+                patch.object(worker.tw, "save_state") as save_state,
+                patch.object(worker, "log"),
+            ):
+                worker._record_rejection(
+                    "a.md@t1", "a.md", entry, state, "KO correction incomplete",
+                )
+
+            remaining = json.loads(request_state.read_text(encoding="utf-8"))
+            self.assertNotIn("a.md@t1", remaining)
+            self.assertEqual(remaining["b.md@t2"], 1)
+            self.assertEqual(
+                entry["ko_followup_rejection_reason"], "KO correction incomplete",
+            )
+            self.assertEqual(entry["ko_followup_rejected_request"], "a.md@t1")
+            save_state.assert_called_once_with(state)
+
+    def test_codex_can_inspect_existing_english_when_diff_is_empty(self) -> None:
+        captured = {}
+
+        def run(cmd, **kwargs):
+            captured["prompt"] = kwargs["input"]
+            out_path = Path(cmd[cmd.index("--output-last-message") + 1])
+            out_path.write_text(
+                '{"pass":true,"why":"already synchronized"}', encoding="utf-8",
+            )
+            return SimpleNamespace(returncode=0, stderr="")
+
+        with patch.object(worker.subprocess, "run", side_effect=run):
+            passed, why = worker.codex_pass(
+                [{"issue": "missing justification"}],
+                "KO correction",
+                "(no changes)",
+                "The final English already includes the justification.",
+            )
+
+        self.assertTrue(passed)
+        self.assertEqual(why, "already synchronized")
+        self.assertIn(
+            "The final English already includes the justification.",
+            captured["prompt"],
+        )
+
+    def test_rejected_proposal_is_regenerated_from_codex_feedback(self) -> None:
+        proposals = ["unchanged EN", "corrected EN"]
+        verdicts = [(False, "state the component comparison"), (True, "fixed")]
+        with (
+            patch.object(worker, "antigravity_candidate", side_effect=proposals) as propose,
+            patch.object(worker, "codex_pass", side_effect=verdicts) as review,
+            patch.object(worker.tw, "validate_translation", return_value=None),
+            patch.object(worker.tw, "lint_latex", return_value=[]),
+            patch.object(worker.tw, "lint_structure", return_value=[]),
+            patch.object(worker, "log"),
+        ):
+            candidate, passed, why = worker.reviewed_candidate(
+                "unchanged EN", "corrected KO", "old KO", [{"issue": "gap"}],
+                "KO diff", "ko.md", "en.md",
+            )
+
+        self.assertTrue(passed)
+        self.assertEqual(candidate, "corrected EN")
+        self.assertEqual(why, "fixed")
+        self.assertEqual(review.call_count, 2)
+        self.assertEqual(
+            propose.call_args_list[1].kwargs["review_feedback"],
+            "state the component comparison",
+        )
 
 
 if __name__ == "__main__":

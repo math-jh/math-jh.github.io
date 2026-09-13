@@ -4,7 +4,8 @@
 The dashboard checkbox is a request, not an acknowledgement.  Every request
 present when a run starts is handled sequentially: Antigravity proposes the
 narrowly scoped EN replacement, then Codex sees only the original finding plus
-KO/EN unified diffs and decides whether both changes implement that finding.
+KO/EN unified diffs plus the final English text and decides whether both sides
+implement that finding.
 Each queue item is removed only after its own passing check and successful
 content commit; a waiting item does not block later requests in the same run.
 """
@@ -29,6 +30,7 @@ import translate_worker as tw
 REQUEST_STATE = Path.home() / ".local/state/blog_dashboard_kotypo.json"
 LOG_PREFIX = "KO-FOLLOWUP"
 MAX_REPLACEMENTS = 12
+MAX_PROPOSAL_ATTEMPTS = 2
 
 
 def log(message: str) -> None:
@@ -114,6 +116,10 @@ only English changes required by the accepted KO changes. Preserve every unrelat
 byte, all LaTeX, Jekyll syntax, anchors, references, and translation provenance.
 Do not correct or enrich anything outside the original findings.
 
+If REVIEW FEEDBACK is present, the previous proposal failed final review. Make a
+new replacement plan from CURRENT EN that directly resolves that feedback while
+remaining within the original findings.
+
 Return JSON only:
 {"replacements":[{"old":"exact unique substring from current EN","new":"replacement"}]}
 
@@ -127,6 +133,9 @@ ORIGINAL FINDINGS:
 KO DIFF (audit baseline -> current):
 @@KO_DIFF@@
 
+REVIEW FEEDBACK:
+@@REVIEW_FEEDBACK@@
+
 CURRENT EN:
 --- BEGIN EN ---
 @@CURRENT_EN@@
@@ -134,10 +143,14 @@ CURRENT EN:
 """
 
 
-def antigravity_candidate(current_en: str, findings: list[dict], ko_diff: str) -> str:
+def antigravity_candidate(
+    current_en: str, findings: list[dict], ko_diff: str,
+    review_feedback: str = "",
+) -> str:
     prompt = (ANTIGRAVITY_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
+              .replace("@@REVIEW_FEEDBACK@@", review_feedback or "(none; first proposal)")
               .replace("@@CURRENT_EN@@", current_en))
     payload = tw._parse_json_object(tw.call_translator(prompt, thinking=False))
     replacements = payload.get("replacements") if isinstance(payload, dict) else None
@@ -157,14 +170,16 @@ def antigravity_candidate(current_en: str, findings: list[dict], ko_diff: str) -
 
 CODEX_PROMPT = """Review one completed Korean-source correction and its English follow-up.
 
-You receive ONLY the original reviewed findings and the two unified diffs. Judge
-whether the KO diff resolves exactly the original issue, and whether the EN diff
-faithfully reflects that resolved Korean meaning without invention, omission, or
-unrelated rewriting. An empty EN diff is acceptable only when the old English
-already expressed the corrected meaning. Do not use outside mathematical knowledge
-to broaden the requested correction. Do not fail harmless spelling, punctuation,
-or synonymous terminology cleanup within the same edited sentence; fail only an
-unrelated semantic change or an English change unsupported by the corrected KO.
+You receive the original reviewed findings, the two unified diffs, and the final
+English text after the proposed follow-up. Judge whether the KO diff resolves
+exactly the original issue, and whether the final English faithfully reflects that
+resolved Korean meaning without invention, omission, or unrelated rewriting. When
+the EN diff is empty, inspect FINAL EN rather than assuming the correction is
+missing: it is acceptable only when FINAL EN already expresses the corrected
+meaning. Do not use outside mathematical knowledge to broaden the requested
+correction. Do not fail harmless spelling, punctuation, or synonymous terminology
+cleanup within the same edited sentence; fail only an unrelated semantic change or
+an English change unsupported by the corrected KO.
 
 Return JSON only:
 {"pass":true,"why":"short concrete reason"}
@@ -177,14 +192,22 @@ KO DIFF:
 
 EN DIFF:
 @@EN_DIFF@@
+
+FINAL EN:
+--- BEGIN FINAL EN ---
+@@FINAL_EN@@
+--- END FINAL EN ---
 """
 
 
-def codex_pass(findings: list[dict], ko_diff: str, en_diff: str) -> tuple[bool, str]:
+def codex_pass(
+    findings: list[dict], ko_diff: str, en_diff: str, final_en: str,
+) -> tuple[bool, str]:
     prompt = (CODEX_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
-              .replace("@@EN_DIFF@@", en_diff))
+              .replace("@@EN_DIFF@@", en_diff)
+              .replace("@@FINAL_EN@@", final_en))
     with tempfile.TemporaryDirectory(prefix="codex-ko-followup-") as tmp:
         out_path = Path(tmp) / "last-message.json"
         proc = subprocess.run(
@@ -204,6 +227,40 @@ def codex_pass(findings: list[dict], ko_diff: str, en_diff: str) -> tuple[bool, 
     if not isinstance(payload, dict) or not isinstance(payload.get("pass"), bool):
         raise RuntimeError("Codex returned an invalid follow-up JSON shape")
     return payload["pass"], str(payload.get("why") or "").strip()[:500]
+
+
+def reviewed_candidate(
+    current_en: str, current_ko: str, baseline: str, findings: list[dict],
+    ko_diff: str, path: str, en_rel: str,
+) -> tuple[str, bool, str]:
+    """Propose EN from the original text, feeding one rejection back for repair."""
+    old_lints = set(tw.lint_latex(current_en))
+    old_struct = set(tw.lint_structure(baseline, current_en))
+    feedback = ""
+    candidate = current_en
+    why = ""
+    for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
+        candidate = antigravity_candidate(
+            current_en, findings, ko_diff, review_feedback=feedback,
+        )
+        warnings: list[str] = []
+        hard_error = tw.validate_translation(
+            candidate, ko_content=current_ko, reason="polish",
+            en_current=current_en, warnings=warnings,
+        )
+        new_lints = set(tw.lint_latex(candidate)) - old_lints
+        new_struct = set(tw.lint_structure(current_ko, candidate)) - old_struct
+        if hard_error or new_lints or new_struct:
+            detail = hard_error or next(iter(new_lints or new_struct))
+            raise RuntimeError(f"deterministic gate: {detail}")
+        en_diff = _diff(current_en, candidate, f"a/{en_rel}", f"b/{en_rel}")
+        passed, why = codex_pass(findings, ko_diff, en_diff, candidate)
+        if passed:
+            return candidate, True, why
+        feedback = why
+        if attempt < MAX_PROPOSAL_ATTEMPTS:
+            log(f"RETRY {path}: Codex 피드백으로 EN 수정안 재생성 — {tw._flat(why)}")
+    return candidate, False, why
 
 
 def _acquire_autopush_lock() -> int | None:
@@ -258,11 +315,30 @@ def _clear_completed(entry: dict) -> None:
     for key in (
         "verify_ko_typos", "verify_ko_typos_review", "ko_reviewed_at",
         "ko_review_base_content", "ko_review_base_sha256",
+        "ko_followup_rejected_at", "ko_followup_rejection_reason",
+        "ko_followup_rejected_request",
     ):
         entry.pop(key, None)
     entry["ko_followup_completed_at"] = datetime.now(timezone.utc).isoformat(
         timespec="seconds"
     )
+
+
+def _record_rejection(
+    request_key: str, path: str, entry: dict, state: dict, why: str,
+) -> None:
+    """Keep the finding visible, uncheck its request, and expose the verdict."""
+    reason = tw._flat(why)[:500]
+    entry["ko_followup_rejected_at"] = datetime.now(timezone.utc).isoformat(
+        timespec="seconds"
+    )
+    entry["ko_followup_rejection_reason"] = reason
+    entry["ko_followup_rejected_request"] = request_key
+    tw.save_state(state)
+    latest = _read_json(REQUEST_STATE)
+    latest.pop(request_key, None)
+    _write_json(REQUEST_STATE, latest)
+    log(f"REJECT {path}: 체크 해제·수정 후 재요청 — {reason}")
 
 
 def _process_target(target: tuple, state: dict) -> int:
@@ -306,26 +382,14 @@ def _process_target_locked(target: tuple, state: dict) -> int:
 
     log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영")
     try:
-        candidate = antigravity_candidate(current_en, findings, ko_diff)
-        warnings: list[str] = []
-        hard_error = tw.validate_translation(
-            candidate, ko_content=current_ko, reason="polish",
-            en_current=current_en, warnings=warnings,
+        candidate, passed, why = reviewed_candidate(
+            current_en, current_ko, baseline, findings, ko_diff, path, en_rel,
         )
-        old_lints = set(tw.lint_latex(current_en))
-        new_lints = set(tw.lint_latex(candidate)) - old_lints
-        old_struct = set(tw.lint_structure(baseline, current_en))
-        new_struct = set(tw.lint_structure(current_ko, candidate)) - old_struct
-        if hard_error or new_lints or new_struct:
-            detail = hard_error or next(iter(new_lints or new_struct))
-            raise RuntimeError(f"deterministic gate: {detail}")
-        en_diff = _diff(current_en, candidate, f"a/{en_rel}", f"b/{en_rel}")
-        passed, why = codex_pass(findings, ko_diff, en_diff)
     except Exception as exc:
         log(f"WAIT {path}: {tw._flat(exc)[:240]}")
         return 1
     if not passed:
-        log(f"WAIT {path}: Codex 미통과 — {tw._flat(why)}")
+        _record_rejection(request_key, path, entry, state, why)
         return 0
 
     fd = _acquire_autopush_lock()
@@ -396,8 +460,13 @@ def run_all() -> int:
             rc = 1
             log(f"WAIT {target[1]}: unexpected {tw._flat(exc)[:220]}")
     remaining = _read_json(REQUEST_STATE)
-    completed = sum(key not in remaining for key, *_ in targets)
-    log(f"batch done: 완료 {completed}건, 대기 {len(targets) - completed}건")
+    removed = [(key, entry) for key, _path, _reviewed, entry in targets
+               if key not in remaining]
+    rejected = sum(entry.get("ko_followup_rejected_request") == key
+                   for key, entry in removed)
+    approved = len(removed) - rejected
+    waiting = len(targets) - len(removed)
+    log(f"batch done: 승인 {approved}건, 거절 {rejected}건, 대기 {waiting}건")
     return rc
 
 
