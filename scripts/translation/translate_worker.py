@@ -955,7 +955,7 @@ Conversion rules for the body:
    - Category bracket: `[\\[대수다양체\\] §..., ⁋정의 7]` → `[\\[Algebraic Varieties\\] §..., ⁋Definition 7]`.
    - Labels: 정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark.
    - Within-doc refs: `[정의 3](#def3)` → `[Definition 3](#def3)` (id unchanged).
-   - A Kramdown IAL immediately after an internal link is part of that link. Its `data-relation` value is `required`, `weak`, or `forward`, as in `[label](path){: data-relation="required" }`. Copy the value exactly, keep the IAL attached to the translated link, and keep it before any following punctuation or outer parenthesis. Never infer, remove, or reclassify it.
+   - A Kramdown IAL immediately after an internal link is part of that link. Its `data-relation` value is `required`, `weak`, `forward`, or the review marker `requires-review`, as in `[label](path){: data-relation="required" }`. Copy the value exactly, keep the IAL attached to the translated link, and keep it before any following punctuation or outer parenthesis. Never infer, remove, or reclassify it.
    - **Verification rule**: only emit a link `[display](url)` or an in-doc anchor `#labelN` if you are confident the target exists in the source body or in the linked post's English form. If uncertain about the precise English wording of a cross-reference label, keep the KO source form verbatim — a post-processing pass will normalise it. Do NOT invent English titles, definition numbers, or anchor ids that you have not seen.
 
 3. Bilingual italic terms:
@@ -2117,7 +2117,7 @@ Rules:
 - Do NOT rewrite, restructure, retitle, or renumber anything else.
 - Do NOT touch the References/참고문헌 section under any circumstance.
 - Do NOT alter math spans (`$...$`, `$$...$$`), display blocks, or `\\tag{}`.
-- Do NOT remove or change an internal link's `data-relation` IAL (whose value is `required`, `weak`, or `forward`). If a listed link-label fix is required, keep that IAL attached to the link and before following punctuation or an outer parenthesis.
+- Do NOT remove or change an internal link's `data-relation` IAL (whose value is `required`, `weak`, `forward`, or `requires-review`). If a listed link-label fix is required, keep that IAL attached to the link and before following punctuation or an outer parenthesis.
 - A `§Section Name` citation must match the target post's `title:` exactly —
   read the target file to get it rather than guessing.
 - Residual Korean: translate leftover Korean prose, and replace a Korean anchor

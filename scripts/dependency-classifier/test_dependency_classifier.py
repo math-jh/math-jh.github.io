@@ -293,7 +293,7 @@ class SelectionTest(unittest.TestCase):
                 patch.object(dc, "_POSTS", [ko, en]),
                 patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _text, tagged=False: [] if tagged else ([link] if p == ko_path else [])),
+                patch.object(dc, "extract_links", side_effect=lambda p, _text, tagged=False, review=False: [] if tagged or review else ([link] if p == ko_path else [])),
             ):
                 selected = dc.select_unit({}, updates)
 
@@ -305,6 +305,72 @@ class SelectionTest(unittest.TestCase):
                 self.assertEqual(links, [link])
             finally:
                 lease.release()
+
+    def test_normalized_hidden_link_reopens_first_then_verifies_the_unit(self) -> None:
+        """A completed unit must classify a newly visible link before re-verifying."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "_posts/Math/Test/en/draft.md"
+            path.parent.mkdir(parents=True)
+            hidden = (
+                "[[Set Theory] §Functions](#new)\n"
+                '[Old](#old){: data-relation="weak" }\n'
+            )
+            normalized = (
+                "[\\[Set Theory\\] §Functions](#new)\n"
+                '[Old](#old){: data-relation="weak" }\n'
+            )
+            path.write_text(hidden, encoding="utf-8")
+            post = SimpleNamespace(lang="en", published=True, path=path)
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "by_permalink", return_value=post),
+                patch.object(dc, "dirty_paths", return_value=[]),
+                patch.object(dc, "provider_available", return_value=True),
+            ):
+                key = dc.unit_key([path])
+                old_tagged = dc.extract_links(path, hidden, tagged=True)
+                old_state = {"units": {key: {
+                    "status": "done",
+                    "hash": dc.sha(hidden),
+                    "verified_hash": dc.sha(hidden),
+                    "verified_content_hash": dc.verification_fingerprint(
+                        [path], {path: hidden}, set()),
+                    "decided_by": {old_tagged[0].ident: "Claude Opus"},
+                }}}
+
+                self.assertIsNone(dc.select_unit(old_state, {}))
+                path.write_text(normalized, encoding="utf-8")
+                first = dc.select_unit(old_state, {})
+                self.assertIsNotNone(first)
+                try:
+                    self.assertEqual(first[0], "first")
+                    self.assertEqual([link.target for link in first[3]], ["#new"])
+                    new_link = first[3][0]
+                finally:
+                    first[4].release()
+
+                rendered = dc.annotate(normalized, [new_link], {new_link.ident: "required"})
+                path.write_text(rendered, encoding="utf-8")
+                after_first = {"units": {key: {
+                    "status": "done",
+                    "hash": dc.sha(rendered),
+                    "decided_by": {
+                        **old_state["units"][key]["decided_by"],
+                        new_link.ident: "Antigravity",
+                    },
+                }}}
+                verify = dc.select_unit(after_first, {})
+                self.assertIsNotNone(verify)
+                try:
+                    self.assertEqual(verify[0], "verify")
+                    self.assertEqual(
+                        [link.target for link in verify[3]], ["#new", "#old"],
+                    )
+                finally:
+                    verify[4].release()
 
 
 class RetryRoundTest(unittest.TestCase):
@@ -329,7 +395,7 @@ class RetryRoundTest(unittest.TestCase):
             patch.object(dc, "_POSTS", [post]),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
-            patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
+            patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
             patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
                 seen.append(rnd), ({}, {}, [{"id": link.ident, "reason": "unclear"}]))[1]),
         ):
@@ -364,7 +430,7 @@ class RetryRoundTest(unittest.TestCase):
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
             ):
                 self.assertIsNone(dc.select_unit(saved, {}))
 
@@ -376,7 +442,7 @@ class RetryRoundTest(unittest.TestCase):
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
             ):
                 selected = dc.select_unit(saved, {})
             self.assertIsNotNone(selected)
@@ -442,7 +508,7 @@ class BacklogCompletionTest(unittest.TestCase):
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
                 patch.object(dc, "en_counterpart", return_value=None),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False: [] if tagged else ([link] if p == path else [])),
+                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
             ):
                 self.assertTrue(dc.backlog_complete())
                 path.write_text("ko body + new link", encoding="utf-8")
@@ -464,13 +530,35 @@ BODY = (
 class RelationTagTest(unittest.TestCase):
     """Both sides of the relation tag, and the ident that spans them."""
 
-    def links(self, path: Path, text: str, *, tagged: bool) -> list:
+    def links(self, path: Path, text: str, *, tagged: bool, review: bool = False) -> list:
         post = SimpleNamespace(lang="ko", published=True, path=path)
         with (
             patch.object(dc, "ROOT", path.parents[4]),
             patch.object(dc, "by_permalink", return_value=post),
         ):
-            return dc.extract_links(path, text, tagged=tagged)
+            return dc.extract_links(path, text, tagged=tagged, review=review)
+
+    def test_review_marker_is_a_side_of_its_own(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        marked = dc.mark_for_review(BODY, tagged[:1])
+
+        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', marked)
+        self.assertIn('[나](/ko/math/b){: .x data-relation="weak" }', marked)
+        review = self.links(self.path, marked, tagged=False, review=True)
+        self.assertEqual([x.ident for x in review], [tagged[0].ident])
+        self.assertEqual([x.ident for x in self.links(self.path, marked, tagged=True)],
+                         [tagged[1].ident])
+        self.assertEqual([x.target for x in self.links(self.path, marked, tagged=False)],
+                         ["/ko/math/c"])
+
+    def test_annotate_replaces_an_existing_relation_value(self) -> None:
+        tagged = self.links(self.path, BODY, tagged=True)
+        marked = dc.mark_for_review(BODY, tagged[:1])
+        review = self.links(self.path, marked, tagged=False, review=True)
+        ruled = dc.annotate(marked, review, {review[0].ident: "weak"})
+
+        self.assertIn('[가](/ko/math/a){: data-relation="weak" } 를 쓰고', ruled)
+        self.assertNotIn("requires-review", ruled)
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -555,7 +643,7 @@ TAGGED_BODY = (
 
 
 class VerificationPassTest(unittest.TestCase):
-    """The second opinion either confirms the tag or takes it off."""
+    """The second opinion either confirms the tag or marks it requires-review."""
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -649,14 +737,14 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual([item["id"] for item in run.opus.call_args[0][0]], [self.idents[0]])
         self.assertEqual([item["id"] for item in run.codex.call_args[0][0]], [self.idents[1]])
 
-    def test_disagreement_strips_the_tag_holds_the_link_and_notifies(self) -> None:
+    def test_disagreement_marks_the_link_holds_it_and_notifies(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
                           "decided_by": {self.idents[0]: "Codex",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
         body = self.path.read_text(encoding="utf-8")
 
-        self.assertIn("[가](/ko/math/a) 를 쓰고", body)
+        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', body)
         self.assertIn('[나](/ko/math/b){: data-relation="weak" }', body)
         held = self.holds()["held"][self.idents[0]]
         self.assertEqual(held["old"], "required")
@@ -682,13 +770,25 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.agy.call_count, 0)
         self.assertEqual(len(self.holds()["held"]), 1)
 
+    def test_a_marked_link_is_not_reclassified_without_its_hold(self) -> None:
+        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+        self.holds_path.write_text(json.dumps({"held": {}, "settled": {}}), encoding="utf-8")
+
+        run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
+
+        self.assertEqual(run.agy.call_count, 0)
+        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고',
+                      self.path.read_text(encoding="utf-8"))
+
     def test_settling_a_hold_does_not_reverify_the_remaining_links(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
 
         body = self.path.read_text(encoding="utf-8")
+        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', body)
         body = body.replace(
-            "[가](/ko/math/a) 를 쓰고",
+            '[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고',
             '[가](/ko/math/a){: data-relation="weak" } 를 쓰고',
         )
         self.path.write_text(body, encoding="utf-8")

@@ -30,16 +30,20 @@ whose verifier is closed by the quota gate is left for a later tick instead of
 waiting on a provider slot.
 
 Disagreement is not resolved automatically.  When the verifier returns a
-different relation, or ambiguous, the relation tag is **removed** from the file
-and the link is held in ``dependency-classifier-holds.json``: the first pass
-skips held links, so nothing reclassifies it, and the dashboard's link-audit
-panel lists it with its file and line for a human ruling.  Checking the item off
-there confirms the user's own tag and settles the link permanently.  Every hold
-is announced through the notify shim as it is recorded.
+different relation, or ambiguous, the relation value is **replaced** with the
+marker ``requires-review`` and the link is held in
+``dependency-classifier-holds.json``.  Graph consumers accept only
+required·weak·forward, so the marked link drops out of the graph as an untagged
+one would, while the literal marker stays searchable in the editor.  Neither
+stage picks up a marked link, so nothing reclassifies it, and the dashboard's
+link-audit panel lists it with its file and line for a human ruling.  Checking
+the item off there confirms the user's own tag and settles the link permanently.
+Every hold is announced through the notify shim as it is recorded.
 
 The inline representation is Kramdown IAL syntax::
 
     [label](/ko/math/example){: data-relation="required" }
+    [label](/ko/math/example){: data-relation="requires-review" }
 
 State and logs live outside the repository under ~/.local/state.
 """
@@ -142,6 +146,9 @@ DASHBOARD_URL = os.environ.get(
 
 IAL_RE = re.compile(r'^\{:\s*([^}]*)\}')
 RELATION_RE = re.compile(r'\bdata-relation\s*=\s*["\'](required|weak|forward)["\']')
+REVIEW_RELATION = "requires-review"
+REVIEW_RE = re.compile(r'\bdata-relation\s*=\s*["\']requires-review["\']')
+RELATION_ATTR_RE = re.compile(r'\bdata-relation\s*=\s*["\'][^"\']*["\']')
 
 
 @dataclass
@@ -389,14 +396,18 @@ def internal_target(target: str) -> bool:
     return clean.startswith("#") or clean.startswith("/ko/") or clean.startswith("/en/")
 
 
-def extract_links(path: Path, text: str, *, tagged: bool = False) -> list[Link]:
+def extract_links(
+    path: Path, text: str, *, tagged: bool = False, review: bool = False,
+) -> list[Link]:
     """Find post links outside code/raw/math/inline-code spans.
 
     ``tagged`` selects which side of the relation tag is returned: the default
     yields the links still waiting for a relation, and ``True`` yields the ones
-    that already carry one, with ``relation`` filled in.  The ordinal behind a
-    link's ident counts every candidate in the file either way, so an ident names
-    the same link whether or not its tag is currently present.
+    that already carry one, with ``relation`` filled in.  ``review`` yields the
+    links marked ``requires-review`` instead; neither other side includes them,
+    so a marked link waits for a human however the holds ledger reads.  The
+    ordinal behind a link's ident counts every candidate in the file either way,
+    so an ident names the same link whatever its tag currently is.
     """
     protected = protected_spans(text)
     result: list[Link] = []
@@ -425,8 +436,10 @@ def extract_links(path: Path, text: str, *, tagged: bool = False) -> list[Link]:
         ial_start = match.end() if ial else None
         ial_end = match.end() + ial.end() if ial else None
         found = RELATION_RE.search(ial.group(1)) if ial else None
+        marked = bool(ial and REVIEW_RE.search(ial.group(1)))
         ordinal += 1
-        if bool(found) != tagged:
+        side = "review" if marked else "tagged" if found else "open"
+        if side != ("review" if review else "tagged" if tagged else "open"):
             continue
         stable = f"{path.relative_to(ROOT)}:{ordinal}:{target}:{label}"
         result.append(Link(
@@ -459,8 +472,23 @@ def strip_relations(text: str, links: list[Link]) -> str:
         if link.ial_start is None or link.ial_end is None:
             continue
         ial = text[link.ial_start:link.ial_end]
-        inner = RELATION_RE.sub("", ial[2:-1]).strip()
+        inner = RELATION_ATTR_RE.sub("", ial[2:-1]).strip()
         edits.append((link.ial_start, link.ial_end, f"{{: {inner} }}" if inner else ""))
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    return text
+
+
+def mark_for_review(text: str, links: list[Link]) -> str:
+    """Replace the relation of each given tagged link with ``requires-review``."""
+    marker = f'data-relation="{REVIEW_RELATION}"'
+    edits = []
+    for link in links:
+        if link.ial_start is None or link.ial_end is None:
+            continue
+        ial = text[link.ial_start:link.ial_end]
+        edits.append((link.ial_start, link.ial_end,
+                      RELATION_ATTR_RE.sub(marker, ial, count=1)))
     for start, end, replacement in sorted(edits, reverse=True):
         text = text[:start] + replacement + text[end:]
     return text
@@ -854,7 +882,10 @@ def annotate(text: str, links: list[Link], decisions: dict[str, str]) -> str:
         relation = decisions[link.ident]
         if link.ial_start is not None and link.ial_end is not None:
             old = text[link.ial_start:link.ial_end]
-            replacement = old[:-1].rstrip() + f' data-relation="{relation}" }}'
+            attr = f'data-relation="{relation}"'
+            replacement = (RELATION_ATTR_RE.sub(attr, old, count=1)
+                           if RELATION_ATTR_RE.search(old)
+                           else old[:-1].rstrip() + f" {attr} }}")
             edits.append((link.ial_start, link.ial_end, replacement))
         else:
             edits.append((link.end, link.end, f'{{: data-relation="{relation}" }}'))
@@ -877,14 +908,16 @@ def verification_fingerprint(
 ) -> str:
     """Hash content while ignoring relation tags on human-parked links.
 
-    Resolving a hold restores exactly such a tag.  That known bookkeeping edit
-    must not invalidate the verification of every other link in the unit, while
-    prose edits and relation changes on non-parked links must still do so.
+    Resolving a hold swaps a parked link's ``requires-review`` marker for a
+    relation.  That known bookkeeping edit must not invalidate the verification
+    of every other link in the unit, while prose edits and relation changes on
+    non-parked links must still do so.
     """
     normalized = []
     for path in paths:
         parked_links = [
-            link for link in extract_links(path, texts[path], tagged=True)
+            link for link in (extract_links(path, texts[path], tagged=True)
+                              + extract_links(path, texts[path], review=True))
             if link.ident in parked
         ]
         normalized.append(strip_relations(texts[path], parked_links))
@@ -1168,7 +1201,7 @@ def run_verify_pass(
         log(f"verified {key}: {len(links)} relation(s) confirmed")
         return 0
     guard_unchanged(paths, originals)
-    rendered = {p: strip_relations(originals[p], [x for x, _ in disputed if x.source == p])
+    rendered = {p: mark_for_review(originals[p], [x for x, _ in disputed if x.source == p])
                 for p in paths}
     publish(paths, originals, rendered, commit=commit,
             detail=f"{paths[0].stem} 링크 {len(disputed)}건 재검토 보류")
@@ -1199,7 +1232,7 @@ def run_verify_pass(
     }})
     for line in lines:
         log("disputed " + line)
-    log(f"held {key}: {len(disputed)} link(s) lost their tag pending a ruling")
+    log(f"held {key}: {len(disputed)} link(s) marked {REVIEW_RELATION} pending a ruling")
     notify(
         f"[dependency] 링크 {len(disputed)}건 재검토 불일치",
         f"{paths[0].stem}\n" + "\n".join(lines[:8])

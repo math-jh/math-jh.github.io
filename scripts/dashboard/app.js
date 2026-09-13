@@ -711,10 +711,12 @@ function secTranslation(d) {
       typos.map(function (k) {
         var key = k.path + '@' + (k.verified_at || '');
         liveKeys[key] = true;
+        var rejected = k.followup_rejection || '';
         var det = k.detail || k.items.map(function (x) { return { text: x }; });
         var nFalse = det.filter(function (x) { return x.verdict === 'FALSE'; }).length;
         var tr = row([
-          { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' },
+          { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' +
+              (rejected ? '<span class="typo-reject">승인 거절: ' + esc(rejected) + '</span>' : '') },
           { html: (k.live == null ? k.items.length : k.live)
               + (nFalse ? ' <span class="muted">(+오탐 ' + nFalse + ')</span>' : ''), cls: 'num' },
           { text: agoIso(k.verified_at), cls: 'num muted' },
@@ -727,6 +729,8 @@ function secTranslation(d) {
                 + (x.why ? '\n    → ' + x.why : '')
                 + (x.fix ? '\n    수정안: ' + x.fix : '');
             }).join('\n') +
+            (rejected ? '\n\n[지난 후속 승인 거절' +
+              (k.followup_rejected_at ? ' · ' + k.followup_rejected_at : '') + ']\n' + rejected : '') +
             '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 Codex 검토 결과다. ' +
             '수정 완료를 체크하면 후속 워커가 KO/EN diff를 검증한다)');
         };
@@ -745,7 +749,7 @@ function secTranslation(d) {
       stale.forEach(function (k) { delete doneMap[k]; });
       saveDone();
     }
-    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. 한글을 고친 뒤 수정 완료를 체크하면 02:15부터 4시간마다 후속 검증한다. Antigravity가 EN을 반영하고 Codex가 두 diff를 통과시킨 경우에만 목록에서 사라진다.'));
+    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. 한글을 고친 뒤 수정 완료를 체크하면 02:15부터 4시간마다 후속 검증한다. Codex가 거절하면 체크가 자동 해제되고 사유가 행과 상세창에 남는다. KO·EN diff가 승인된 경우에만 목록에서 사라진다.'));
   } else {
     left.appendChild(el('p', 'hint', '검증된 한글 오류·설명 누락 없음.'));
   }
@@ -761,8 +765,8 @@ function secTranslation(d) {
   return s;
 }
 
-/* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 태그를 떼어
-   둔 상태라 그 링크는 의존성 그래프에서 빠져 있다. 판정은 사용자가 글에 직접 쓰고,
+/* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 값을
+   requires-review 로 바꿔 둔 상태라 그 링크는 의존성 그래프에서 빠져 있다. 판정은 사용자가 글에 직접 쓰고,
    체크는 그 태그가 파일에 있는지 서버가 확인한 뒤 목록에서 빼는 일만 한다. */
 function linkAuditBlock(d) {
   var a = d.link_audit || { held: [], ready: 0, settled: 0 };
@@ -775,7 +779,7 @@ function linkAuditBlock(d) {
   var err = el('p', 'hint', '');
   err.style.color = 'var(--bad)';
   wrap.appendChild(table(['위치', '판정', { label: '해소', num: true }],
-    a.held.map(function (k) {
+    a.held.map(function (k, i) {
       var tr = row([
         { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) +
                 '</span><span class="muted">:' + k.line + '</span>' },
@@ -783,14 +787,16 @@ function linkAuditBlock(d) {
                 ' <span class="muted">(' + esc(k.verifier) + ')</span>' },
         { html: '<input type="checkbox" class="hold-chk"' +
                 (k.verdict ? '' : ' title="글에 태그를 단 뒤 체크한다"') + '>', cls: 'num' }
-      ], 'clickable' + (k.verdict ? '' : ' typo-pending'));
+      ], 'clickable' + (k.verdict ? '' : ' typo-pending') +
+         (i && a.held[i - 1].pair !== k.pair ? ' pair-start' : ''));
       tr.onclick = function () {
         openModal('의존성 링크 — ' + k.path + ':' + k.line,
           k.brief + '\n→ ' + k.target +
           '\n\n1차 ' + (k.old || '—') + ' (' + (k.decided_by || '기록 없음') + ')' +
           '\n2차 ' + k.new + ' (' + k.verifier + ')' +
           '\n\n2차 근거: ' + (k.reason || '—') +
-          '\n\n글에서 이 링크에 {: data-relation="…" } 를 직접 달고 저장한 뒤 체크하면 ' +
+          '\n\n글에서 이 링크의 data-relation 을 required·weak·forward 중 하나로 직접 달고 ' +
+          '(requires-review 표시가 있으면 그 값을 바꾸고) 저장한 뒤 체크하면 ' +
           '목록에서 빠진다. 체크는 판정이 아니라 확인이다.');
       };
       var chk = tr.querySelector('.hold-chk');

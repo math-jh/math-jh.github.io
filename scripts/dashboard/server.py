@@ -473,10 +473,16 @@ def sec_translation():
         live = [i for i in items if i["verdict"] != "FALSE"]
         if not live:
             continue
-        ko_typos.append(dict(path=path, items=[i["text"] for i in items],
-                             detail=items, live=len(live),
-                             verified_at=v.get("ko_reviewed_at")
-                                         or v.get("verified_at") or ""))
+        verified_at = v.get("ko_reviewed_at") or v.get("verified_at") or ""
+        request_key = f"{path}@{verified_at}"
+        rejected = v.get("ko_followup_rejected_request") == request_key
+        ko_typos.append(dict(
+            path=path, items=[i["text"] for i in items], detail=items,
+            live=len(live), verified_at=verified_at,
+            followup_rejected_at=v.get("ko_followup_rejected_at") if rejected else "",
+            followup_rejection=(v.get("ko_followup_rejection_reason") or "")
+                               if rejected else "",
+        ))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
     return dict(stats=d.get("stats", {}), by_status=by_status,
@@ -506,8 +512,9 @@ def load_holds():
 def hold_verdict(item):
     """보류된 링크에 사람이 내린 판정. 아직 안 달았으면 None.
 
-    분류기가 태그를 떼어 둔 상태이므로, 같은 링크 문구가 전부 data-relation 을
-    달고 있을 때만 해소로 본다. 링크 자체가 사라졌으면 'gone'.
+    분류기가 값을 requires-review 로 바꿔 두었으므로(그 이전 보류는 태그가 없다),
+    같은 링크 문구가 전부 required·weak·forward 중 하나를 달고 있을 때만 해소로 본다.
+    링크 자체가 사라졌으면 'gone'.
     """
     rel = item.get("path") or ""
     full = os.path.normpath(os.path.join(ROOT, rel))
@@ -535,7 +542,7 @@ def hold_verdict(item):
 
 
 def sec_link_audit():
-    """의존성 링크 분류의 1차 ↔ 2차 불일치로 태그가 빠진 링크."""
+    """의존성 링크 분류의 1차 ↔ 2차 불일치로 판정 태그가 없는(requires-review) 링크."""
     holds = load_holds()
     items = []
     for ident, item in holds["held"].items():
@@ -551,7 +558,16 @@ def sec_link_audit():
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
             verdict=hold_verdict(item),
         ))
-    items.sort(key=lambda x: (x["verdict"] is None, x["path"], x["line"]))
+    # 같은 글의 KO/EN 판본은 붙여서 보인다 — 짝 키는 언어 디렉토리와 날짜를 뗀 경로.
+    # 태그를 단 건이 하나라도 있는 글이 위로 오고, 글 안에서는 KO → EN, 줄 순서.
+    for x in items:
+        m = re.match(r"(.*)/(ko|en)/\d{4}-\d{2}-\d{2}-(.+)\.md$", x["path"])
+        x["pair"] = f"{m.group(1)}/{m.group(3)}" if m else x["path"]
+        x["_lang"] = 0 if (m and m.group(2) == "ko") else 1
+    ready_pairs = {x["pair"] for x in items if x["verdict"]}
+    items.sort(key=lambda x: (x["pair"] not in ready_pairs, x["pair"], x["_lang"], x["line"]))
+    for x in items:
+        del x["_lang"]
     return dict(held=items, settled=len(holds["settled"]),
                 ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE))
 
@@ -1158,7 +1174,7 @@ class Handler(BaseHTTPRequestHandler):
             verdict = hold_verdict(item)
             if verdict is None:
                 return self._send(200, json.dumps(
-                    {"ok": False, "error": "그 링크에 아직 data-relation 태그가 없다"},
+                    {"ok": False, "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
                     ensure_ascii=False))
             holds["held"].pop(ident)
             holds["settled"][ident] = {
