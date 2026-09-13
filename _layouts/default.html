@@ -79,9 +79,8 @@
   {%- else -%}
     {%- comment -%}
       subject home: page.category 는 _plugins/hide_empty_subject_pages.rb 가 permalink
-      슬러그에서 풀어 심어 준다. 예전엔 여기서 "/{slug}/" 를 page.url 에 대고 찾았는데,
-      끝 슬래시 없는 permalink(/ko/peripherals)는 걸리지 않아 그 페이지만 frontmatter
-      hero_hue 에 몰래 의존하고 있었다.
+      슬러그에서 풀어 심어 준다. 이 값을 직접 써서 커스텀 permalink의 표기 차이에
+      의존하지 않는다.
     {%- endcomment -%}
     {%- assign hue_data = site.data.categories.subjects[page.category] -%}
     {%- if hue_data -%}

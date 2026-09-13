@@ -25,8 +25,8 @@
 #   → 카테고리 → 그 언어 과목홈의 **실제 URL**. _includes/subject-grid.html 의 홈 카드와
 #     _includes/nav_list 의 카테고리 사이드바가 이걸로 링크를 만든다. 과목홈이 안
 #     만들어졌으면(빈 카테고리이거나 애초에 페이지 파일이 없거나) 항목도 안 나온다.
-#     슬러그로 URL 을 조립하면 끝 슬래시 없는 permalink(/ko/peripherals)를 틀리게
-#     만든다 — 실제로 홈의 "주변기기" 카드가 404 였다. 그래서 page.url 을 그대로 쓴다.
+#     슬러그로 URL 을 조립하면 커스텀 permalink와 어긋날 수 있다. 그래서 page.url 을
+#     그대로 쓴다.
 #
 # 살아남은 과목홈에는 두 값을 되돌려 심는다 (frontmatter 에 적어 둘 필요가 없다):
 #   page.category — permalink 슬러그에서 푼 카테고리명. _layouts/archive_custom.html

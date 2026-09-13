@@ -2,7 +2,7 @@
  *
  * 현재 글의 2-hop 부분그래프(현재 글=가운데 금색, 직속 이웃=부각, 2-hop 바깥=흐림)를
  * 작은 캔버스에 그린다. 빈 곳 클릭 또는 ⤢ 버튼 → 화면 중앙 오버레이로 크게 보기.
- * 오버레이 헤더에 전체 그래프(/<lang>/dependencies/) 링크. 노드 클릭 = 그 글로 이동.
+ * 오버레이 헤더에 전체 그래프(/<lang>/dependencies) 링크. 노드 클릭 = 그 글로 이동.
  *
  * 데이터는 분류 기반 dependencies-<lang>.json — 화살표는 선수 글에서 후속 글 방향이고,
  * relation 에 따라 required=실선, weak=점선, forward=긴 파선으로 그린다(전역 그래프와 동일).
@@ -61,7 +61,7 @@
     overlay.innerHTML =
       '<div class="lg-overlay__card"><div class="lg-overlay__head">' +
       '<span class="lg-overlay__title">' + t.title + '</span>' +
-      '<a class="lg-overlay__full" href="/' + lang + '/dependencies/" title="' + t.full + '" aria-label="' + t.full + '">' + t.full + '<span class="material-icons md-14">graph_3</span></a>' +
+      '<a class="lg-overlay__full" href="/' + lang + '/dependencies" title="' + t.full + '" aria-label="' + t.full + '">' + t.full + '<span class="material-icons md-14">graph_3</span></a>' +
       '<button class="lg-overlay__close" type="button" aria-label="close">✕</button>' +
       '</div><div class="lg-overlay__canvas"></div></div>';
     document.body.appendChild(overlay);

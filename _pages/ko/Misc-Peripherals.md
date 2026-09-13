@@ -2,7 +2,7 @@
 title: "주변기기"
 layout: archive_custom
 regenerate: true
-permalink: /ko/peripherals
+permalink: /ko/peripherals/
 header:
   overlay_color: "transparent"
 cards: false
