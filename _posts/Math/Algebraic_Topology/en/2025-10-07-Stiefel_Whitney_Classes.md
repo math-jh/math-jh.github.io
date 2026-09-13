@@ -152,7 +152,7 @@ On the other hand, since $A$ is a commutative ring, this group homomorphism fact
 
 $$H_1(M)\rightarrow A^\times$$
 
-and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-relation="required" } this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. On the other hand, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology encodes information about covering spaces.
+and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3) this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. On the other hand, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology encodes information about covering spaces.
 
 In this manner, information about a vector bundle $E\rightarrow B$ of rank $k$ can be regarded as being contained in $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$. However, since the coefficients in the cohomology of $B$ that we use are $\mathbb{Z}$, we do not have all the data contained there. Instead, our goal is to find weaker substitutes for this, namely invariants in the cohomology ring $H^\bullet(B)$.
 
@@ -207,7 +207,7 @@ Therefore, we must examine the (infinite) Grassmannian and the universal bundle 
 
 First, we examine the basic properties and cohomology ring of $\Gr(k,\mathbb{R}^n)$. By definition, $\Gr(k,\mathbb{R}^{n})$ is the space of all $k$-dimensional linear subspaces of $\mathbb{R}^{n}$. For example, $\Gr(1,\mathbb{R}^{n+1})$ is by definition the projective space $\RP^n$. Since each point of $\Gr(k,\mathbb{R}^{n})$ is a subspace of $\mathbb{R}^{n}$, we intuitively know how close two points (that is, two $k$-dimensional subspaces of $\mathbb{R}^{n}$) are to each other. This is the same phenomenon as, for example, points in $\RP^n$ corresponding to lines in $\mathbb{R}^{n+1}$ with similar "slopes" being close to each other; this can be defined rigorously using $n\times k$ matrices, and with this topology $\Gr(k,\mathbb{R}^{n})$ becomes a $k(n-k)$-dimensional compact topological manifold.
 
-Now let us examine the cohomology rings of these spaces. Since we are in any case using $\mathbb{Z}/2$-coefficients, by [§Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-relation="required" }, we may instead think in terms of homology cycles of $\Gr(k,\mathbb{R}^n)$.
+Now let us examine the cohomology rings of these spaces. Since we are in any case using $\mathbb{Z}/2$-coefficients, by [§Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11), we may instead think in terms of homology cycles of $\Gr(k,\mathbb{R}^n)$.
 
 For this, fix a full flag of $\mathbb{R}^n$
 
@@ -258,7 +258,7 @@ For example, let us look at $H^\bullet(\Gr(2,\mathbb{R}^4);\mathbb{Z}/2)$. We sh
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}.$$
 
-To utilize our geometric intuition, let us think of this as an intersection of Schubert cycles, just as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16){: data-relation="required" }. For this, we need to consider two subspaces in general position corresponding to the homology class of $\sigma_{(1,0)}$, which is possible by changing the choice of flag.
+To utilize our geometric intuition, let us think of this as an intersection of Schubert cycles, just as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16). For this, we need to consider two subspaces in general position corresponding to the homology class of $\sigma_{(1,0)}$, which is possible by changing the choice of flag.
 
 For a fixed flag $F_\bullet$, let us explicitly write out what condition the partition $\lambda=(1,0)$ represents:
 
@@ -285,7 +285,7 @@ Indeed, the condition for $\Omega_{(1,1)}(G)$ is $V\subseteq G_3=\left\{x\mid x_
 
 More generally, we represent these partitions by *Young diagrams*, and using this we can compute, when calculating the cup product $\sigma_\lambda\smile\sigma_\mu$ of two Schubert classes, the coefficient appearing in front of $\sigma_\nu$ for $\nu$ satisfying $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$. The rule for reading off this coefficient from the Young diagram is called the *Littlewood-Richardson rule*.
 
-Now we must define $\Gr(k,\mathbb{R}^\infty)$ and the universal bundle over it. For this, we first define the tautological bundle over $\Gr(k,\mathbb{R}^n)$. In the same manner as [Example 3](#ex3){: data-relation="weak" }, the following bundle attaching to each point of $\Gr(k,\mathbb{R}^{n+k})$ the vector space corresponding to that point
+Now we must define $\Gr(k,\mathbb{R}^\infty)$ and the universal bundle over it. For this, we first define the tautological bundle over $\Gr(k,\mathbb{R}^n)$. In the same manner as [Example 3](#ex3), the following bundle attaching to each point of $\Gr(k,\mathbb{R}^{n+k})$ the vector space corresponding to that point
 
 $$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\times \mathbb{R}^{n+k}\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
 
