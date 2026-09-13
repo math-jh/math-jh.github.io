@@ -8,7 +8,7 @@ permalink: /ko/math/ring_theory/semisimple_modules
 sidebar: 
     nav: "ring_theory-ko"
 
-date: 2026-07-05
+date: 2026-09-13
 
 weight: 7
 
@@ -20,11 +20,13 @@ published: false
 
 ## Semisimple module의 정의
 
-우리는 [§나눗셈환, §§단순 가군의 자기사상환](/ko/math/ring_theory/division_rings#단순-가군의-자기사상환){: data-relation="weak" }에서 simple module을 정의하였는데, 이번 글에서는 이들의 direct sum으로 나타나는 *semisimple* module들에 대해 다룰 것이다. 따라서 우선 simple module을 정식으로 정의하자.
+우리는 [§나눗셈환, §§단순 가군의 자기사상환](/ko/math/ring_theory/division_rings#단순-가군의-자기사상환){: data-relation="weak" }에서 간단하게 simple module을 정의하였으며, 이 글의 주제는 이와 연관된 주제들을 자세히 살펴보는 것이다. 따라서 우선 다음의 정의를 (정식으로) 내리자.
 
 ::: 정의 1
 $0$이 아닌 $A$-module $M$이 $0$과 $M$ 이외의 submodule을 갖지 않을 때, $M$을 *simple module<sub>단순가군</sub>*이라 부른다.
 :::
+
+그러나 일반적으로 simple module에 대해서는 할 이야기가 별로 없으므로, 우리는 더 일반적으로 다음을 정의한다.
 
 ::: 정의 2
 $A$-module $M$이 적당한 simple submodule들의 family $(S_i)_{i\in I}$에 대하여
@@ -34,12 +36,10 @@ $$M=\bigoplus_{i\in I}S_i$$
 로 표현될 수 있을 때, $M$을 *semisimple module<sub>반단순 가군</sub>*이라 부른다.
 :::
 
-Index 집합 $I$가 공집합인 경우도 허용하므로 $0$은 semisimple module이다. 또 정의에서 직합은 internal direct sum, 즉 $M$의 submodule들의 합이 직합을 이루는 것을 말한다.
+Index set $I$가 공집합인 경우, 관례적으로 이는 $0$으로 정의되며, 따라서 정의상 $0$은 semisimple module이다. 
 
 ::: 예시 3
-1. Division ring $D$를 자기 자신 위의 left module로 보면, $D$의 submodule은 left ideal이고, nonzero left ideal $I$는 $0\neq x\in I$에 대해 $1=x^{-1}x\in I$이므로 $I=D$이다. 즉 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터 space $V$는 기저 $B$를 갖고 (field의 경우와 동일한 Zorn 논증), $V=\bigoplus_{b\in B}Db$는 simple submodule들의 direct sum이므로 $V$는 semisimple이다.
-2. $\mathbb{Z}$-module $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/3\mathbb{Z}$은 semisimple이다. 각 인자는 소수 개의 원소를 갖는 abelian group이므로 proper nonzero subgroup을 가질 수 없어 simple이다.
-3. 반면 $\mathbb{Z}$ 자신은 semisimple이 아니다. $\mathbb{Z}$의 nonzero submodule은 $m\neq 0$에 대한 $m\mathbb{Z}$ 꼴인데 이는 proper nonzero submodule $2m\mathbb{Z}$을 포함하므로, $\mathbb{Z}$는 simple submodule을 하나도 갖지 않는다. $\mathbb{Z}/4\mathbb{Z}$ 또한 semisimple이 아닌데, 유일한 proper nonzero submodule $2\mathbb{Z}/4\mathbb{Z}$가 직합의 인자가 될 수 없기 때문이다.
+Division ring $D$를 자기 자신 위의 left module로 보면 [\[대수적 구조\] §분수체, ⁋명제 4](/ko/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }에 의해 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터공간 $V$는 기저 $B$를 가지므로, 이를 사용하여 $V=\bigoplus_{b\in B}Db$로 나타내면 division ring 위의 vector space는 semisimple $D$-module이라는 것을 안다.
 :::
 
 Semisimple module의 유용성은 대부분 다음 보조정리에서 나온다. 이는 simple submodule들의 합이 주어지면, 임의의 submodule을 그 합의 일부로 언제나 보완할 수 있다는 것이다.

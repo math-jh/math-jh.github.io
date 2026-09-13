@@ -169,7 +169,7 @@ Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고
 
 $$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
 
-를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이루며, [§평탄사상, ⁋명제 5](/ko/math/scheme_theory/flat_morphisms#prop5){: data-relation="required" }을 통해 $\pi$의 flatness 또한 확인할 수 있다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
+를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이룬다. 또한 relation $\x\y=\t$에 의하여 모든 monomial은 $\t^n$, $\t^n\x^i$, $\t^n\y^j$ 가운데 하나로 유일하게 정리되므로, 이 coordinate ring은 $\{1\}\cup\{\x^i\mid i\geq1\}\cup\{\y^j\mid j\geq1\}$을 basis로 갖는 free $A[\t]$-module이다. 따라서 $\pi$는 flat하다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
 
 일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $\t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,\t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $\t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion){: data-relation="required" }). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
 
@@ -462,7 +462,7 @@ $$P_\bullet\overset{\sim}{\rightarrow}C$$
 
 $$\LL_{C/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}C$$
 
-을 chain complex로 본 것이 $C$의 $A$ 위 *cotangent complex<sub>여접 복합체</sub>*이다. 이렇게 정의한 $\LL_{C/A}$의 핵심적인 성질은 이것이 앞서 정의한 두 complex들을 일반화한다는 것으로, 이들은 $\LL_{C/A}$의 truncation
+을 chain complex로 본 것이 $C$의 $A$ 위 *cotangent complex<sub>여접 복합체</sub>*이다. 여기서는 앞의 두 complex와 마찬가지로 $\LL_{C/A}$를 homological degree로 적으며, 이를 cohomological convention의 derived category에서 볼 때에는 $(\LL_{C/A})^{-i}=(\LL_{C/A})_i$로 읽는다. 따라서 아래의 homological truncation $\tau_{\leq r}$는 cohomological notation의 $\tau_{\geq-r}$에 해당한다. 이 글에서는 free simplicial resolution의 구체적인 construction을 사용하지 않고, 이 정의에서 따라오는 truncation과 deformation에 관한 성질만을 사용한다. 이렇게 정의한 $\LL_{C/A}$의 핵심적인 성질은 이것이 앞서 정의한 두 complex들을 일반화한다는 것으로, 이들은 $\LL_{C/A}$의 truncation
 
 $$\tau_{\leq1}\LL_{C/A}\simeq\NL_{C/A},\qquad \tau_{\leq2}\LL_{C/A}\simeq\operatorname{LS}_{C/A}$$
 
@@ -477,7 +477,7 @@ $C$가 $A$ 위에서 smooth하면 모든 $C$-module $M$에 대하여
 
 $$T^i(C/A,M)=0\qquad(i>0)$$
 
-이다. 특히 $C$의 모든 first-order deformation은 trivial하고, 모든 square-zero lifting problem은 obstruction 없이 유일한 isomorphism class의 해를 가지며, 그 infinitesimal automorphism은 $T^0(C/A,C)=\Der_A(C,C)$가 분류한다.
+이다. 특히 square-zero extension을 따라 $C$를 deformation하는 문제는 obstruction 없이 해를 가지며 그 isomorphism class는 유일하다. First-order deformation인 경우 이 class는 trivial deformation의 class이고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,C)=\Der_A(C,C)$가 분류한다.
 :::
 ::: 증명
 Smooth한 $C$의 cotangent complex $\LL_{C/A}$는 degree $0$의 $\Omega_{C/A}$에 quasi-isomorphic하고, 이 module이 projective이므로 모든 $i>0$에 대하여
@@ -547,11 +547,11 @@ $$\widetilde{\LL_{C/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
 을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-relation="required" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
 
-그럼 이제 $\LL_{X_0/S}$는 derived category의 object이므로, $X_0$ 위의 quasi-coherent module $\mathcal{G}$를 계수로 하는 degree $i$ data를 계산하기 위해서는 $\mathcal{G}$를 degree $i$만큼 shift하여 우리가 보고자 하는 degree와 맞춰주어야 하며, 이는 명시적으로 다음의 식
+그럼 이제 $\LL_{X_0/S}$는 derived category의 object이므로, $X_0$ 위의 quasi-coherent module $\mathcal{G}$를 계수로 하는 degree $i$ data는 다음의 식
 
 $$\Hom_{D(\mathcal{O}_{X_0})}(\LL_{X_0/S},\mathcal{G}[i])\cong H^i\bigl(R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
 
-으로 계산되므로 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-relation="required" }), 우리는 이를
+으로 계산된다. 여기서 $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$라는 하나의 complex가 모든 degree의 coefficient data를 함께 담고 있고, shift $\mathcal{G}[i]$는 그중 $i$째 cohomology를 derived category의 morphism set로 읽는 표기이다. ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-relation="required" }) 우리는 이를
 
 $$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qquad T^i(X_0/S)=T^i(X_0/S,\mathcal{O}_{X_0})$$
 
@@ -577,7 +577,7 @@ $$\mathcal{T}_{X_0/S}^q=\sExt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0
 
 는 affine open $U=\Spec C$ 위에서 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(C/A,C)$가 되어, 앞선 절들에서 다루었던 $T^i$들을 그대로 복원한다.
 
-이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-relation="required" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 degree $0,1,2$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
+이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-relation="required" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 homological degree $0,1,2$, 즉 cohomological degree $-2,-1,0$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative homological degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
 
 $$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Longrightarrow T^{p+q}(X_0/S)$$
 
@@ -591,7 +591,7 @@ $$0\longrightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^1(X_0/S)\long
 가 성립한다.
 :::
 ::: 증명
-First quadrant spectral sequence $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Rightarrow T^{p+q}(X_0/S)$에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }을 적용하면 된다.
+[\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }에 의하여 수렴이 주는 $T^1(X_0/S)$의 filtration은 short exact sequence $0\rightarrow E_\infty^{1,0}\rightarrow T^1(X_0/S)\rightarrow E_\infty^{0,1}\rightarrow0$을 준다. First quadrant 조건에 의하여 $E_\infty^{1,0}=E_2^{1,0}$이고 $E_\infty^{0,1}=\ker(d_2:E_2^{0,1}\rightarrow E_2^{2,0})$이다. 한편 total degree $2$에서는 $E_\infty^{2,0}=E_2^{2,0}/\im d_2$이고, 이는 수렴 filtration의 첫 항 $F^2T^2(X_0/S)\subseteq T^2(X_0/S)$와 isomorphic하다. 이들을 이어 붙이고 $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)$를 대입하면 주어진 exact sequence를 얻는다.
 :::
 
 위의 five-term exact sequence의 각 항은 앞서 살펴본 세 가지 data와 정확하게 일대일 대응한다. 우선 가운데의 canonical morphism $T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 global deformation에서 gluing data를 잊고 각 affine 조각 위의 local deformation class들만 남기는 것이다. 따라서 그 codomain인 $H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 각 조각 위의 local deformation class들 가운데 overlap 위에서 restriction이 서로 compatible한 모임이 된다.
