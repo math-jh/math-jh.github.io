@@ -59,7 +59,7 @@ Trivializing open들의 교집합은 다시 trivializing open이므로, $B$가 �
 
 계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 free module이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등)에도 쓰이므로 일반 판본이 실제로 필요하다.
 
-개념적으로 [정리 1](#thm1){: data-relation="required" }은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15){: data-relation="weak" }이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 torsion 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
+개념적으로 [정리 1](#thm1)은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15){: data-relation="weak" }이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 torsion 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
 ## 사영다발의 코호몰로지
 
@@ -94,7 +94,7 @@ $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 free module의 basis를 이루므로 결과는 같다. [정리 3](#thm3){: data-relation="weak" }은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
 
 ::: 참고 4
-[정리 3](#thm3){: data-relation="weak" }은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
+[정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
 
 $$\xi^n+\pi^\ast c_1(E)\smile \xi^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
 
