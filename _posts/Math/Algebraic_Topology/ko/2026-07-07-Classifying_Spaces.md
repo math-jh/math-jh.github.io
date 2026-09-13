@@ -141,7 +141,7 @@ $X$가 paracompact Hausdorff이고 $f_0,f_1:X\rightarrow Y$가 homotopic이라 �
 [정리 5](#thm5){: data-relation="required" }는 함수 $f$를 $f^\ast P$로 대응시키는 것이 $f$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $G$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $G$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $\Gr(k,\mathbb{R}^\infty)$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
 
 ::: 정의 6
-Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle<sub>보편다발</sub>*이라는 것은 total space $\E G$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
+Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle<sub>보편다발</sub>*이라는 것은 total space $\E G$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4){: data-relation="required" }) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
 :::
 
 즉, universal $G$-bundle은 contractible space 위의 free $G$-action이며, 그 orbit space $\B G=\E G/G$가 base space이며, 여기로의 projection map이 bundle map이다. $\E G$가 contractible이라는 조건은 [정리 8](#thm8){: data-relation="forward" }에서 중요하게 사용될 것이다. 그 전에, 우선 다음이 성립한다. 
@@ -182,7 +182,7 @@ $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 이제 injectivity를 보이기 위해 $f_0,f_1:X\rightarrow \B G$에 대하여 $f_0^\ast \E G\cong f_1^\ast \E G=:P$라 하자. 우리는 $f_0$과 $f_1$이 homotopic한 것을 보여야 한다. 각 $f_i$는 bundle map $P\cong f_i^\ast \E G\rightarrow \E G$, 곧 $P$에서 universal bundle로 가는 $G$-equivariant bundle map $\Phi_i:P\rightarrow \E G$을 가진다. 그런데 $\E G$가 contractible이므로, paracompact 공간 위의 principal bundle $P$에서 $\E G$로 가는 임의의 두 $G$-equivariant map은 서로 $G$-equivariant homotopic하며, 따라서 $\Phi_0$과 $\Phi_1$을 잇는 $G$-equivariant homotopy $P\times[0,1]\rightarrow \E G$가 존재하고, 이것이 base로 내려가 $f_0$과 $f_1$ 사이의 homotopy를 주므로 $[f_0]=[f_1]$이다. 
 :::
 
-이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
+이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4){: data-relation="weak" }와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
 
 ::: 보조정리 9
 Classifying space의 구성은 $G$에 대해 functorial이다. Continuous group homomorphism $\phi:G\rightarrow H$가 주어지면, $\E G$ 위의 $G$-작용을 $\phi$를 통해 $H$-action으로 바꾸어 얻는 associated bundle $\E G\times_G H$를 분류하는 morphism이 $\B\phi:\B G\rightarrow \B H$를 유도한다. 이는 $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$를 만족하여, $G\mapsto \B G$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$이 유도하는 $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$이 아래에서 쓰인다.
@@ -277,7 +277,7 @@ $$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$
 
 ## 분류공간의 코호몰로지
 
-[정리 8](#thm8)에 따르면 구조군 $G$를 갖는 bundle의 특성류란 $\B G$의 cohomology class를 분류사상으로 pullback한 것이다. 따라서 특성류 이론은 $\B G$의 cohomology ring을 계산하는 일과 같으며, 우리는 가장 기본적인 group들에 대해 이를 정리한다.
+[정리 8](#thm8){: data-relation="required" }에 따르면 구조군 $G$를 갖는 bundle의 특성류란 $\B G$의 cohomology class를 분류사상으로 pullback한 것이다. 따라서 특성류 이론은 $\B G$의 cohomology ring을 계산하는 일과 같으며, 우리는 가장 기본적인 group들에 대해 이를 정리한다.
 
 출발점은 complex projective space의 cohomology ring이다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" }에서 우리는
 
@@ -328,7 +328,7 @@ $\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$이고, 그 cohomology ring이 universal bu
 
 $$H^\bullet(\Gr(n,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
 
-임은 이미 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8) 이후에 살펴보았다. 따라서 generator가 Chern class이고 $\lvert c_i\rvert=2i$라는 것만 보이면 충분하다. 
+임은 이미 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" } 이후에 살펴보았다. 따라서 generator가 Chern class이고 $\lvert c_i\rvert=2i$라는 것만 보이면 충분하다. 
 
 이 계산은 [따름정리 12](#cor12){: data-relation="required" }와 사실상 같은 것으로, 핵심은 앞에서와 똑같이 maximal torus $T=(S^1)^n\subseteq\Umat(n)$을 대각으로 넣어 얻는 $\B T\rightarrow\B\Umat(n)$이다. $\Umat(n)$의 canonical representation $\mathbb{C}^n$을 $T$로 제한하면 좌표축을 따라
 

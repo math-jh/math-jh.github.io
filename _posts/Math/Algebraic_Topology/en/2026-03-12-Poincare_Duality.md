@@ -60,7 +60,7 @@ The relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$ is called the 
 
 ## Constant Sheaves, Covering Spaces, and Orientation-Generator Sheaves
 
-To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection $X\times A \rightarrow X$ is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves)) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
+To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection $X\times A \rightarrow X$ is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves){: data-relation="weak" }) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
 
 Intuitively, $H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$ records how many times an $m$-simplex $\sigma:\Delta^m\rightarrow M$ having $x$ in its interior covers $x$. On the other hand, $\Delta^m$ can be given a sign depending on how an ordering is assigned to its vertices; then via this isomorphism, when we assign an element of $\mathbb{Z}$ to such $m$-simplices, the sign difference between two $m$-simplices can be interpreted as either their sources $\Delta^m$ being assigned opposite orientations, or, fixing the orientation of $\Delta^m$, the two simplex maps specifying different directions. In other words, $H_m(M,M\setminus\{x\};\mathbb{Z})$ encodes information about the orientation at the point $x$.
 
@@ -78,7 +78,7 @@ What matters here is not picking local orientations arbitrarily at each point, b
 
 $$\omega_M(U)=\{s\in \or_M(U)\mid s_x \text{ generates } \or_{M,x} \text{ for all } x\in U\},$$
 
-with the restriction map inherited from $\or_M$. At each $x\in M$, the stalk $\or_{M,x}$ is $H_m(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$, so choosing its generator is the same as choosing a local orientation in the sense of [Definition 3](#def3), i.e., an isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow \underline{\mathbb{Z}}_x$. Since whether a germ is a generator is a condition checked pointwise, the gluing procedure for sections of $\or_M$ works just as well, and hence $\omega_M$ is a subsheaf of $\or_M$. Moreover, on an open neighborhood $U$ where $\or_M\vert_U$ is a constant sheaf, sections of $\or_M$ are given by locally constant functions, so a germ that is a generator at $x$ remains a generator on a sufficiently small neighborhood of $x$; consequently, the stalk $\omega_{M,x}$ of $\omega_M$ at $x$ is the set of generators of $\or_{M,x}$, namely $\{\pm 1\}$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-relation="required" })
+with the restriction map inherited from $\or_M$. At each $x\in M$, the stalk $\or_{M,x}$ is $H_m(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$, so choosing its generator is the same as choosing a local orientation in the sense of [Definition 3](#def3){: data-relation="required" }, i.e., an isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow \underline{\mathbb{Z}}_x$. Since whether a germ is a generator is a condition checked pointwise, the gluing procedure for sections of $\or_M$ works just as well, and hence $\omega_M$ is a subsheaf of $\or_M$. Moreover, on an open neighborhood $U$ where $\or_M\vert_U$ is a constant sheaf, sections of $\or_M$ are given by locally constant functions, so a germ that is a generator at $x$ remains a generator on a sufficiently small neighborhood of $x$; consequently, the stalk $\omega_{M,x}$ of $\omega_M$ at $x$ is the set of generators of $\or_{M,x}$, namely $\{\pm 1\}$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-relation="required" })
 
 This $\omega_M$ is called the *orientation-generator sheaf* of $M$. When the orientation of the constant sheaf $\underline{\mathbb{Z}}$ is fixed and its generator $1$ is chosen, this sheaf records, at each $x$, whether the isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow\underline{\mathbb{Z}}_x$ sends $1$ to $1$ or to $-1$, by examining which choice arises from a local section of $\or_M$. Then, on a neighborhood $U$ as above, $\omega_M\vert_U$ is the constant sheaf on $\{\pm 1\}$, so $\omega_M$ is also locally constant; therefore its étale space $\Spe(\omega_M)$ is a covering space of $M$ with two-element fibers.
 
@@ -134,7 +134,7 @@ To derive a result analogous to [Proposition 6](#prop6){: data-relation="weak" }
 
 $$\Iso_\mathbb{Z}(\mathbb{Z},\mathbb{Z})\cong \mathbb{Z}^\times\cong \{\pm 1\},$$
 
-and thus the $\pi_1(M,x)$-action can be identified precisely with a group homomorphism $\pi_1(M,x)\rightarrow \mathbb{Z}^\times$. Now, $A$-module isomorphisms from $A$ to $A$ correspond exactly to elements of the unit group $A^\times$, so this ultimately amounts to examining a group homomorphism $\pi_1(M,x)\rightarrow A^\times$. That is, [Proposition 6](#prop6) generalizes as follows.
+and thus the $\pi_1(M,x)$-action can be identified precisely with a group homomorphism $\pi_1(M,x)\rightarrow \mathbb{Z}^\times$. Now, $A$-module isomorphisms from $A$ to $A$ correspond exactly to elements of the unit group $A^\times$, so this ultimately amounts to examining a group homomorphism $\pi_1(M,x)\rightarrow A^\times$. That is, [Proposition 6](#prop6){: data-relation="weak" } generalizes as follows.
 
 ::: Proposition 7
 For a (connected) topological manifold $M$, the following are equivalent.
@@ -239,7 +239,7 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 is an isomorphism.
 :::
 
-The proof again proceeds by induction using the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8). The difference, however, is that in [Lemma 8](#lem8) the claim concerned a compact subset $C$, so compactness could be used actively, whereas now the claim is about $M$ itself. Thus, for instance, if a chart $U$ of $M$ is given, it is not compact, so a simple inductive approach does not work. For this we make the following definition.
+The proof again proceeds by induction using the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8){: data-relation="required" }. The difference, however, is that in [Lemma 8](#lem8){: data-relation="required" } the claim concerned a compact subset $C$, so compactness could be used actively, whereas now the claim is about $M$ itself. Thus, for instance, if a chart $U$ of $M$ is given, it is not compact, so a simple inductive approach does not work. For this we make the following definition.
 
 ::: Definition 12
 A cochain $\varphi\in C^p(M;A)$ is said to be *compactly supported* if there exists a compact set $K\subseteq M$ such that $\varphi(\sigma)=0$ for every simplex lying in $M\setminus K$. The $p$-th cohomology of the cochain complex of compactly supported cochains is called the $p$-th *compactly supported cohomology*, denoted $H_c^p(M;A)$.
@@ -283,9 +283,9 @@ constructed from these $s_K$ satisfy the compatibility condition for the direct 
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-holds by [§Cup Product, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6){: data-relation="required" }, and by the uniqueness in [Lemma 8](#lem8) we have $i_\ast s_{K'}=s_K$, so we see that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ well.
+holds by [§Cup Product, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6){: data-relation="required" }, and by the uniqueness in [Lemma 8](#lem8){: data-relation="required" } we have $i_\ast s_{K'}=s_K$, so we see that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ well.
 
-Our claim is that this homomorphism $D_M:H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ is an isomorphism, and to show this we use induction via the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8).
+Our claim is that this homomorphism $D_M:H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ is an isomorphism, and to show this we use induction via the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8){: data-relation="required" }.
 
 The base step of the induction is the case $M=\mathbb{R}^m$. In this case, we know that for any ball $B\subseteq \mathbb{R}^m$, the orientation $s_B$ of $B$ gives
 
@@ -342,7 +342,7 @@ In particular, from the proof, if $M$ itself were compact, then the duality map 
 
 ## Twisted Poincaré Duality
 
-When $M$ is not $A$-orientable, the main reason [Theorem 11](#thm11) fails is that, fundamentally, $\omega_M^A$ fails to be a constant sheaf and is only locally constant. In the language of covering spaces, this can be thought of as the monodromy action acting nontrivially on the stalk $A$, so that after going "once around" the stalk $A$ becomes twisted upon returning. Since this twist is an automorphism of $A$, it was enough for us to consider elements of the unit group $A^\times$ of $A$.
+When $M$ is not $A$-orientable, the main reason [Theorem 11](#thm11){: data-relation="required" } fails is that, fundamentally, $\omega_M^A$ fails to be a constant sheaf and is only locally constant. In the language of covering spaces, this can be thought of as the monodromy action acting nontrivially on the stalk $A$, so that after going "once around" the stalk $A$ becomes twisted upon returning. Since this twist is an automorphism of $A$, it was enough for us to consider elements of the unit group $A^\times$ of $A$.
 
 To account for this twist in duality, we now define *homology with local coefficients*.
 

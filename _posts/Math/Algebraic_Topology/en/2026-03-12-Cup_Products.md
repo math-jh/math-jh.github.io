@@ -181,7 +181,7 @@ On the other hand, since the Alexander–Whitney map sends chains of a subspace 
 
 $${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
 
-will also be denoted by the same symbol; the case $X_0=\emptyset$ is [Definition 5](#def5). Then the following holds.
+will also be denoted by the same symbol; the case $X_0=\emptyset$ is [Definition 5](#def5){: data-relation="required" }. Then the following holds.
 
 ::: Proposition 6 (Projection formula)
 For a continuous map of pairs $f:(X,X_0) \rightarrow (Y,Y_0)$, and for $\beta\in H^q(Y,Y_0;A)$ and $\sigma\in H_{p+q}(X,X_0;A)$, the identity

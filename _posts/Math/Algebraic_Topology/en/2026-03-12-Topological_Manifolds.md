@@ -29,7 +29,7 @@ A topological space $M$ is *locally Euclidean of dimension $m$* if for every $x\
 A space that is second countable, Hausdorff, and locally Euclidean of dimension $m$ is called a *topological manifold of dimension $m$*.
 :::
 
-For convenience, let us call a topological manifold of dimension $m$ an *$m$-manifold*. Although not treated in [Definition 1](#def1), we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
+For convenience, let us call a topological manifold of dimension $m$ an *$m$-manifold*. Although not treated in [Definition 1](#def1){: data-relation="required" }, we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 
@@ -61,7 +61,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 are inverses of each other, so $\graph(f)$ and $U$ are homeomorphic.
 :::
 
-By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-relation="weak" }.
+By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-relation="required" }, $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-relation="weak" }.
 
 Meanwhile, the following also holds for the product topology.
 
@@ -70,7 +70,7 @@ Suppose two topological manifolds $M_1$, $M_2$ are given, of dimensions $m_1,m_2
 
 $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 
-gives $\mathcal{B}$ as a basis for $M_1\times M_2$, so $M_1\times M_2$ is second countable; the product of Hausdorff spaces is Hausdorff ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 8](/en/math/topology/Hausdorff_spaces#prop8)); and for any $(x_1,x_2)\in M_1\times M_2$, if $U_i$ is a Euclidean neighborhood in $M_i$ of $x_i$, then $U_1\times U_2$ is a Euclidean neighborhood of $(x_1,x_2)$ in $M_1\times M_2$.
+gives $\mathcal{B}$ as a basis for $M_1\times M_2$, so $M_1\times M_2$ is second countable; the product of Hausdorff spaces is Hausdorff ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 8](/en/math/topology/Hausdorff_spaces#prop8){: data-relation="weak" }); and for any $(x_1,x_2)\in M_1\times M_2$, if $U_i$ is a Euclidean neighborhood in $M_i$ of $x_i$, then $U_1\times U_2$ is a Euclidean neighborhood of $(x_1,x_2)$ in $M_1\times M_2$.
 :::
 
 The last general construction we will examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#quotient-spaces-of-hausdorff-spaces){: data-relation="weak" }, an arbitrary quotient space of a Hausdorff space is not necessarily Hausdorff. Moreover, there is no guarantee that a quotient space of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify at least the Hausdorff condition and the locally Euclidean condition separately. Instead, second countability follows from the locally Euclidean condition.

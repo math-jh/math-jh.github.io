@@ -28,7 +28,7 @@ Topological manifold는 다음과 같이 정의된다.
 Second countable, Hausdorff, locally Euclidean of dimension $m$인 공간을 *topological manifold of dimension $m$*이라 부른다. 
 :::
 
-편의상 topological manifold of dimension $m$을 *$m$-manifold*라 부르자. [정의 1](#def1)에서는 다루지 않았지만, 종종 우리는 위의 정의에서 $\mathbb{R}^m$을 *half-space*
+편의상 topological manifold of dimension $m$을 *$m$-manifold*라 부르자. [정의 1](#def1){: data-relation="required" }에서는 다루지 않았지만, 종종 우리는 위의 정의에서 $\mathbb{R}^m$을 *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 
@@ -60,7 +60,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 가 서로의 inverse이므로 $\graph(f)$와 $U$가 homeomorphic하기 때문이다. 
 :::
 
-[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)에 의해 $\graph(f)$는 $U\times \mathbb{R}^k$의 닫힌집합이며, 특히 $U=\mathbb{R}^n$인 경우 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로 이는 [예시 3](#ex3){: data-relation="weak" }과는 다소 다른 결의 예시를 준다. 
+[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7){: data-relation="required" }에 의해 $\graph(f)$는 $U\times \mathbb{R}^k$의 닫힌집합이며, 특히 $U=\mathbb{R}^n$인 경우 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로 이는 [예시 3](#ex3){: data-relation="weak" }과는 다소 다른 결의 예시를 준다. 
 
 한편 product topology에 대해서도 다음이 성립한다. 
 

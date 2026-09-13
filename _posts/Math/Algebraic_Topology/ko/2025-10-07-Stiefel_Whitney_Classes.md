@@ -51,7 +51,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
 을 의미한다. 단, 여기에서 $g$를 각각의 $x\in B_1$에 대하여 $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$로 제한하였을 때 이 함수가 벡터공간들 사이의 linear map이 되어야 한다.  Vector bundle들 사이의 isomorphism을 어떻게 정의해야 하는지는 자명하다. 
 
-한편 위의 [정의 2](#def2)에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
+한편 위의 [정의 2](#def2){: data-relation="weak" }에서, 우리는 $F$가 $\mathbb{R}$-벡터공간인 경우만 생각하여, $\mathbb{R}^n$ 위에 정의된 inner product 구조와 $\mathbb{R}$의 위상구조를 사용하여 이 위에 위상구조를 정의했다. 하지만 엄밀히 말하자면 여기서 필요한 정보는 오직 vector space $F$의 위상구조 뿐으로, $F$를 inner product space로 보았을 때 이는 *Euclidean bundle*이라 부른다. 어쨌든 우리는 대체로 $\mathbb{R}$-벡터공간만 생각할 것이므로 이러한 차이는 넘어가기로 한다. 
 
 ::: 예시 3
 Trivial bundle이 아닌 예시로는 $S^1$ 위의 line bundle로 생각한 뫼비우스 띠가 있다. 한편 [§푸앵카레 쌍대성, ⁋예시 5](/ko/math/algebraic_topology/Poincare_duality#ex5){: data-relation="weak" }에서 우리는 $S^1$의 non-trivial cover또한 생각했었는데, 이는 다음과 같이 기하학적으로 일반화할 수 있다. 
@@ -160,7 +160,7 @@ $$H_1(M)\rightarrow A^\times$$
 
 ## 슈티펠-휘트니 특성류
 
-첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $p:E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(p)$이며, 위와 마찬가지로 만일 $E$가 trivial bundle이라면 $w(p)=1$이 된다. 실제로 trivial bundle은 [명제 4](#prop4)에 의하여 $n=\rank(E)$개의 everywhere linearly independent continuous section을 가지며, $w(p)$가 $1$에서 벗어나는 정도가 곧 그러한 section을 고르는 데 대한 장애를 잰다. 이를 보기 위해 $w(p)$를 cohomology ring의 degree에 맞춰 
+첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $p:E\rightarrow B$가 주어질 때마다 정의되는 cohomology ring $H^\bullet(B;\mathbb{Z}/2)$의 원소 $w(p)$이며, 위와 마찬가지로 만일 $E$가 trivial bundle이라면 $w(p)=1$이 된다. 실제로 trivial bundle은 [명제 4](#prop4){: data-relation="required" }에 의하여 $n=\rank(E)$개의 everywhere linearly independent continuous section을 가지며, $w(p)$가 $1$에서 벗어나는 정도가 곧 그러한 section을 고르는 데 대한 장애를 잰다. 이를 보기 위해 $w(p)$를 cohomology ring의 degree에 맞춰 
 
 $$w(p)=w_0(p)+w_1(p)+\cdots$$
 
@@ -189,7 +189,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 으로 주어지는 것을 확인하면 된다.
 
-흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3)의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6){: data-relation="weak" }을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
+흥미로운 관찰은 $S^1$의 line bundle의 isomorphism class는 오직 두 가지, 즉 trivial line bundle과 [예시 3](#ex3){: data-relation="required" }의 line bundle 뿐이라는 것이며, 실제로 $S^1$ 위에 정의된 line bundle 중, "두 번 꼬아" 얻어지는 line bundle은 trivial line bundle과 isomorphic하다는 것을 확인할 수 있다. 이는 [명제 6](#prop6){: data-relation="weak" }을 보면 어느정도 예측가능한 것으로, $S^1$ 위의 line bundle의 Stiefel-Whitney class는 $H^1(S^1;\mathbb{Z}/2)$에 존재해야 하며 이는 $\mathbb{Z}/2$와 isomorphic하기 때문이다. 
 
 또 다른 관찰은 이들이 $\RP^1$의 tautological line bundle의 pullback이라는 것이다. $S^1$의 trivial line bundle의 경우, $S^1$의 모든 점을 $\RP^1$의 고정된 점으로 보내는 연속함수로의 pullback이며 nontrivial한 line bundle은 homeomorphism $S^1 \rightarrow \RP^1$을 통한 line bundle의 pullback이다. 
 
@@ -211,7 +211,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 우선 우리는 $\Gr(k,\mathbb{R}^n)$의 기본적인 성질들과 cohomology ring을 살펴본다. 정의에 의해 $\Gr(k,\mathbb{R}^{n})$은 $\mathbb{R}^{n}$의 모든 $k$차원 linear subspace들의 공간이다. 예를 들어 $\Gr(1,\mathbb{R}^{n+1})$은 그 정의에 의하여 projective space $\RP^n$이다. $\Gr(k,\mathbb{R}^{n})$의 각각의 점들은 $\mathbb{R}^{n}$의 부분공간이므로, 우리는 두 점 (즉 $\mathbb{R}^{n}$의 두 $k$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $\mathbb{R}^{n+1}$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $\RP^n$에서 가까운 점들인 것과 동일한 일이며, 이는 $n\times k$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $\Gr(k,\mathbb{R}^{n})$은 $k(n-k)$차원 compact topological manifold가 된다. 
 
-이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $\mathbb{Z}/2$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에 의하여, $\Gr(k,\mathbb{R}^n)$의 homology cycle을 생각해도 된다.
+이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $\mathbb{Z}/2$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11){: data-relation="required" }에 의하여, $\Gr(k,\mathbb{R}^n)$의 homology cycle을 생각해도 된다.
 
 이를 위해 $\mathbb{R}^n$의 full flag
 
@@ -262,7 +262,7 @@ $$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
-에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $\sigma_{(1,0)}$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
+에 대해 살펴볼 것이다. 우리의 기하학적 직관을 활용하기 위해 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16){: data-relation="required" }에서와 같이 이를 Schubert cycle들의 intersection으로 생각하자. 우리는 이를 위해 $\sigma_{(1,0)}$에 해당하는 homology class 중, general position에 있는 두 부분공간을 생각해야 하며 이는 flag의 선택을 바꾸어줌으로서 가능하다. 
 
 고정된 flag $F_\bullet$에 대해, partition $\lambda=(1,0)$이 나타내는 조건이 무엇인지를 명시적으로 나타내면 이는 다음의 조건
 
