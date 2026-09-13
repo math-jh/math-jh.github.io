@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""section_anchor_gate — EN 번역의 섹션(§§) 링크 앵커 게이트 + 결정론 수리.
+r"""section_anchor_gate — EN 번역 링크의 결정론 정규화·앵커 수리 게이트.
 
 번역 프롬프트는 교차참조가 불확실하면 KO 형태를 그대로 두라고 지시하고
 "a post-processing pass will normalise it"을 약속한다 — 이 모듈이 그 pass다.
+
+번역기가 하우스 인용의 escaped 범주 접두 `\[Category\]`에서 백슬래시를
+떨어뜨려 `[[Category] §Title, …](...)`를 만들기도 한다. Kramdown은 이를
+렌더하지만 md_lint와 dependency classifier의 공용 링크 파서는 보지 못한다.
+따라서 앵커 검사보다 먼저 내부 링크의 범주 접두를 `\[...\]`로 되돌린다.
+수식·code fence·raw·inline code·fenced-div 여는 라인은 먼저 마스킹한다.
 
 검사 대상: EN 파일의 `](/en/…#anchor)` 중 라벨 앵커(def3·prop-def3·conj4류,
 대상 글의 명시형 id 포함)가 아닌 것 = H2 섹션 앵커. 라벨 앵커는 md_lint가
@@ -70,6 +76,31 @@ LABEL_ANCHOR_RE = re.compile(r"^(?:prop-def|def|ex|prop|thm|lem|cor|rmk|conj)\d+
 LINK_RE = re.compile(
     r"\[(?P<text>(?:\[[^\]\n]*\])?(?:\\.|[^\\\]\n])*)\]"
     r"\((?P<path>/(?:ko|en)/[^)\s#]*)#(?P<anchor>[^)\s]+)\)"
+)
+# 번역기가 `\[`·`\]`의 백슬래시를 버린 형태. 내부 대괄호는 하우스 인용의
+# 범주 접두 한 겹으로만 쓰인다는 코퍼스 계약에 맞춰 일반 중첩은 허용하지 않는다.
+UNESCAPED_CATEGORY_LINK_RE = re.compile(
+    r"\[\[(?P<category>[^\[\]\\\n]+)\]"
+    r"(?P<rest>(?:\\.|[^\\\]\n])*)\]"
+    r"\((?P<target>/(?:ko|en)/[^)\s]+)\)"
+)
+# 같은 비이스케이프 접두를 링크 텍스트 대괄호로 한 번 더 감싼 형태.
+WRAPPED_UNESCAPED_CATEGORY_LINK_RE = re.compile(
+    r"\[\[(?P<category>[^\[\]\\\n]+)\]"
+    r"(?P<rest>(?:\\.|[^\\\]\n])*)\]\]"
+    r"\((?P<target>/(?:ko|en)/[^)\s]+)\)"
+)
+# 이미 escaped 된 정상 링크 앞에 여는 `[`가 하나 더 붙은 드문 번역 오타.
+EXTRA_OPEN_CATEGORY_LINK_RE = re.compile(
+    r"\[(?P<link>\[\\\[(?P<category>[^\[\]\n]+)\\\]"
+    r"(?P<rest>(?:\\.|[^\\\]\n])*)\]"
+    r"\((?P<target>/(?:ko|en)/[^)\s]+)\))"
+)
+# 정상 escaped 인용 전체를 대괄호 한 겹으로 다시 감싼 형태.
+WRAPPED_CATEGORY_LINK_RE = re.compile(
+    r"\[\[\\\[(?P<category>[^\[\]\n]+)\\\]"
+    r"(?P<rest>(?:\\.|[^\\\]\n])*)\]\]"
+    r"\((?P<target>/(?:ko|en)/[^)\s]+)\)"
 )
 HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)(?:[ \t]*\{#([^}]+)\})?[ \t]*$")
 
@@ -179,15 +210,94 @@ def _ko_link_anchors(F_ko_text: str, ko_permalink: str) -> list[str]:
     return out
 
 
+def _normalization_protected_spans(text: str) -> list[tuple[int, int]]:
+    """기계 치환 금지 구간: 공용 보호구간 + fenced-div 라벨 정의 줄."""
+    spans = list(_pn.protected_spans(text))
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        if _pn.OPEN_RE.match(line.rstrip("\r\n")):
+            spans.append((offset, offset + len(line)))
+        offset += len(line)
+    return spans
+
+
+def normalize_citation_brackets(
+    text: str, only_target: str | None = None,
+) -> tuple[str, list[tuple[int, str]]]:
+    """범주 접두의 번역 오타를 고치고 ``(line, target)`` 목록을 돌려준다.
+
+    ``only_target``은 sweep에서 다른 링크까지 곁다리로 바꾸지 않도록 permalink
+    기준으로 제한한다. 변경 위치는 보호구간을 산출한 뒤에만 선택한다.
+    """
+    spans = _normalization_protected_spans(text)
+    edits: list[tuple[int, int, str, int, str]] = []
+
+    def wanted(match: re.Match) -> bool:
+        if _pn.in_spans(match.start(), spans):
+            return False
+        target_path = match.group("target").split("#", 1)[0].rstrip("/")
+        return only_target is None or target_path == only_target.rstrip("/")
+
+    for match in UNESCAPED_CATEGORY_LINK_RE.finditer(text):
+        if not wanted(match):
+            continue
+        replacement = (
+            r"[\[" + match.group("category") + r"\]" + match.group("rest")
+            + "](" + match.group("target") + ")"
+        )
+        edits.append((match.start(), match.end(), replacement,
+                      text.count("\n", 0, match.start()) + 1,
+                      match.group("target")))
+
+    for match in WRAPPED_UNESCAPED_CATEGORY_LINK_RE.finditer(text):
+        if not wanted(match):
+            continue
+        replacement = (
+            r"[\[" + match.group("category") + r"\]" + match.group("rest")
+            + "](" + match.group("target") + ")"
+        )
+        edits.append((match.start(), match.end(), replacement,
+                      text.count("\n", 0, match.start()) + 1,
+                      match.group("target")))
+
+    # 첫 패턴과 겹치지 않는다(category에 backslash를 금지). 여분 `[`만 버려
+    # 이미 붙은 IAL과 주변 괄호는 그대로 둔다.
+    for match in EXTRA_OPEN_CATEGORY_LINK_RE.finditer(text):
+        if wanted(match):
+            edits.append((match.start(), match.end(), match.group("link"),
+                          text.count("\n", 0, match.start()) + 1,
+                          match.group("target")))
+
+    for match in WRAPPED_CATEGORY_LINK_RE.finditer(text):
+        if not wanted(match):
+            continue
+        replacement = (
+            r"[\[" + match.group("category") + r"\]" + match.group("rest")
+            + "](" + match.group("target") + ")"
+        )
+        edits.append((match.start(), match.end(), replacement,
+                      text.count("\n", 0, match.start()) + 1,
+                      match.group("target")))
+
+    out = text
+    for start, end, replacement, _line, _target in sorted(edits, reverse=True):
+        out = out[:start] + replacement + out[end:]
+    return out, [(line, target) for _start, _end, _rep, line, target in edits]
+
+
 def gate_text(text: str, en_path: Path, only_target: str | None = None):
     """본문 하나를 게이트에 통과시켜 (새 본문, GateResult)를 반환.
 
     only_target: 이 permalink 를 가리키는 링크만 검사 (sweep 용).
     """
     res = GateResult()
+    text, normalized = normalize_citation_brackets(text, only_target=only_target)
+    res.changed = bool(normalized)
     spans = _pn.protected_spans(text)
     me = _post_of(en_path)
     rel = str(en_path.relative_to(ROOT)) if en_path.is_relative_to(ROOT) else str(en_path)
+    for line, target in normalized:
+        res.repairs.append(f"{rel}:{line}: 범주 인용 대괄호 정규화 — {target}")
 
     # /ko/ 링크가 EN 본문에 남은 것은 별개의 번역 버그 — 보고만.
     for m in re.finditer(r"\]\(/ko/[^)\s]*\)", text):
