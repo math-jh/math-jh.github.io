@@ -64,3 +64,6 @@ CLAUDE.md
 .codex/
 .agents/
 AGENTS.md
+
+# local-only Codex skill
+codex-skills/publish-check/
