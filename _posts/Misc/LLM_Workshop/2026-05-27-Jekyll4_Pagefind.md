@@ -14,6 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-27
+last_modified_at: 2026-09-13
 weight: 9
 
 ---
@@ -47,9 +48,11 @@ CI 빌드에서는 Jekyll build 직후 노드 셋업 → `npm ci` → `npx pagef
 #!/usr/bin/env bash
 set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-"$HOME/.cargo/bin/pagefind" --site "$REPO/_site" --quiet
+"${CARGO_HOME:-$HOME/.local/share/cargo}/bin/pagefind" --site "$REPO/_site" --quiet
 ```
 {: data-filename="scripts/reindex-pagefind.sh"}
+
+경로가 `$HOME/.cargo/bin`에서 바뀐 사연은 아래에 따로 적는다.
 
 ## 검색 오버레이
 
@@ -70,3 +73,11 @@ Pagefind는 검색 UI도 자체 제공한다(`PagefindUI`). 처음엔 검색 페
 ## 결과
 
 빌드는 깨끗하고, 검색은 작동하고, 한국어로 검색할 때 영어 결과가 끼어 나오지 않는다. 빌드 절차를 직접 통제하게 된 부수효과는 다음 작업(예: 빌드 시점에 마크다운에 개입하는 플러그인을 끼울 수 있게 된 것)으로 이어지는데, 그건 별도의 글에서 다룬다.
+
+## 사후: 홈 디렉토리 정리와 CARGO_HOME
+
+한참 뒤, 이 Pi의 홈 디렉토리 얘기가 나왔다.
+
+> 이 Pi의 홈 디렉터리에 .으로 시작하는 폴더가 너무 많은데 꾹 참고 써야하나?
+
+죽은 폴더는 지우고, 남는 것들도 환경변수로 줄일 수 있는 만큼 줄이라는 지시가 이어졌다. cargo 바이너리는 원래 `~/.cargo`에 있었는데, 이 정리의 일환으로 `~/.local/share/cargo`로 옮겨졌다. `scripts/reindex-pagefind.sh`가 하드코딩해 두었던 `$HOME/.cargo/bin/pagefind` 경로가 그 자리에서 깨졌다. 고친 자리는 `${CARGO_HOME:-$HOME/.local/share/cargo}`다. `CARGO_HOME`이 설정돼 있으면 그걸 우선하고, 없으면 새 기본 경로로 떨어진다. 다른 환경에서 이 스크립트를 그대로 가져다 쓰더라도 `CARGO_HOME`만 맞으면 동작하니, 이참에 하드코딩보다 나은 자리로 옮긴 셈이다.
