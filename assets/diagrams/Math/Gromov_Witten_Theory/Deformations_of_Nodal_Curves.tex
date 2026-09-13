@@ -1,0 +1,26 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG normalization separates the two branches of a node (Deformations_of_Nodal_Curves-1.svg)
+\begin{tikzpicture}[line cap=round]
+  %% normalization: the two branches miss each other (vertical passes over)
+  \draw[line width=.8pt] (-.9,1.8)--(.9,1.8);
+  \draw[line width=2.6pt, white] (0,1)--(0,2.6);
+  \draw[line width=.8pt] (0,1)--(0,2.6);
+  \node[right] at (1.05,1.8) {$\widetilde{C}$};
+
+  \draw[-{stealth}, accent1] (0,.9)--(0,-.2) node[midway, right] {$\nu$};
+
+  \draw[line width=.8pt] (0,-1.9)--(0,-.35);
+  \draw[line width=.8pt] (-.9,-1.1)--(.9,-1.1);
+  \fill (0,-1.1) circle[radius=1.2pt];
+  \node[right] at (1.05,-1.1) {$C$};
+\end{tikzpicture}
+
+\end{document}
