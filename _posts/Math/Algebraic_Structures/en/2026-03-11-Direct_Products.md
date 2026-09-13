@@ -17,13 +17,13 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Products of Groups
 
-We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6)) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
+We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-relation="required" }) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
 
 ::: Lemma 1
-$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories))
+$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories){: data-relation="weak" })
 :::
 ::: Proof
-First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1). For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
+First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-relation="required" }. For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
 
 Now, for any two elements of the set $\prod_{i\in I}G_i$, $x=(x_i)_{i\in I},y=(y_i)_{i\in I}$, define
 
@@ -59,7 +59,7 @@ Let $(G_i)$ and $(H_i)$ be families of groups having the same set $I$ as their i
 commute. In this case, $\ker f=\prod\ker f_i$ and $\im f=\prod\im f_i$.
 :::
 ::: Proof
-$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([\[Category Theory\] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits)) From the commutative diagram defined in this way,
+$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([\[Category Theory\] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits){: data-relation="weak" }) From the commutative diagram defined in this way,
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
 
