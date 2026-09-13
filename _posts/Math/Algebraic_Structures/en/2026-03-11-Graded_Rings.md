@@ -33,11 +33,11 @@ By definition, any element of $A$ can be uniquely expressed as a finite sum of h
 If every element of $I$ is cancellable and $A=\bigoplus_{i\in I} A_i$ is a graded ring, then $A_0$ is a subring of $A$. 
 :::
 ::: Proof
-From $A_0A_0\subseteq A_0$, $A_0$ is closed under multiplication. Thus it suffices to show that in $A=\bigoplus A_i$, the multiplicative identity $1$ belongs to $A_0$. Let $1=\sum_{i\in I} \epsilon_i$. Then for any $\alpha\in A_j$, 
+From $A_0A_0\subseteq A_0$, $A_0$ is closed under multiplication. Thus it suffices to show that in $A=\bigoplus A_i$, the multiplicative identity $1$ belongs to $A_0$. Let $1=\sum_{i\in I} \epsilon_i$. Then for any $j\in I$ and any $\alpha\in A_j$,
 
 $$\alpha=1\alpha=\sum_{i\in I} \epsilon_i\alpha\in A_j$$
 
-and therefore for all $i\neq 0$, $\epsilon_i\alpha=0$, while only for $i=0$, $\epsilon_0\alpha=\alpha$ holds. Now since any element of $A$ can be expressed as a sum of homogeneous elements, for all $x\in A$ we have $\epsilon_0x=x$, and substituting $x=1$ yields $1=\epsilon_0\in A_0$. 
+Now, for each $i$, we have $\epsilon_i\alpha\in A_{i+j}$, and since every element of $I$ is cancellable, $i+j=j$ holds only when $i=0$. Therefore, comparing both sides of the above equality in each component of $A=\bigoplus_{i\in I}A_i$, we see that $\epsilon_i\alpha=0$ for all $i\neq 0$, and $\epsilon_0\alpha=\alpha$. Since every element of $A$ can be expressed as a sum of homogeneous elements, $\epsilon_0x=x$ for all $x\in A$. Substituting $x=1$ yields $1=\epsilon_0\in A_0$.
 :::
 
 In most cases, what we are interested in is the case where $I=\mathbb{Z}$ or $I= \mathbb{N}$. Therefore, the hypothesis of [Proposition 2](#prop2){: data-relation="required" } is satisfied. 
