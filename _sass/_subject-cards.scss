@@ -407,8 +407,7 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
   }
 }
 
-/* Icon + text notices (mockup look): AI author, post under revision */
-.ai-author-notice,
+/* Icon + text notices (mockup look): post under revision */
 .revising-notice {
   display: -webkit-box;
   display: flex;
@@ -426,5 +425,127 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
   &__text { min-width: 0; }
   &__text > :first-child { margin-top: 0; }
   &__text > :last-child { margin-bottom: 0; }
+}
+
+/* Machine translation & AI author notices:
+   reading prerequisites(semantic-reading)의 인쇄물 괘선 문법을 따르되,
+   사면 1px 괘선, 쨍한 레드 계열($translation-notice-red), 기계 아이콘(smart_toy) 사용. */
+$translation-notice-red: #d32f2f;
+
+.translation-notice,
+.ai-author-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.65em;
+  margin: 1.2em 0 1.6em;
+  padding: 0.75em 0.9em;
+  border: 1px solid mix($translation-notice-red, $background-color, 32%);
+  background-color: mix($translation-notice-red, $background-color, 3%);
+  color: mix($text-color, $background-color, 82%);
+  text-align: left;
+
+  &__icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    line-height: 1;
+    color: mix($translation-notice-red, $text-color, 85%);
+  }
+
+  &__content {
+    min-width: 0;
+    font-family: $sans-serif;
+    font-size: 0.88em;
+    line-height: 1.5;
+
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.16em;
+
+      &:hover {
+        color: mix($link-color, $text-color, 75%);
+      }
+    }
+  }
+}
+
+/* LLM Workshop / related files & commits notice:
+   translation-notice / ai-author-notice와 동일한 사면 괘선 문법,
+   차분한 블루 계열($related-notice-blue)과 파일 아이콘(description) 적용. */
+$related-notice-blue: #216ba5;
+
+.notice--info {
+  position: relative;
+  margin: 1.2em 0 1.6em !important;
+  padding: 0.75em 0.9em 0.75em 2.5em !important;
+  border: 1px solid mix($related-notice-blue, $background-color, 32%) !important;
+  background-color: mix($related-notice-blue, $background-color, 3%) !important;
+  color: mix($text-color, $background-color, 82%) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: $sans-serif !important;
+  font-size: 0.88em !important;
+  line-height: 1.55 !important;
+  text-align: left;
+
+  &::before {
+    content: "\e873";
+    font-family: "Material Symbols Sharp";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3em;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    position: absolute;
+    left: 0.75em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: mix($related-notice-blue, $text-color, 85%);
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+  }
+
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $link-color !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: mix($link-color, $text-color, 75%) !important;
+      text-decoration: none !important;
+    }
+  }
+
+  code {
+    font-size: 0.95em;
+    background-color: mix($related-notice-blue, $background-color, 6%);
+    border-radius: 2px;
+  }
+
+  a:hover code {
+    background-color: mix($related-notice-blue, $background-color, 12%);
+  }
 }
 

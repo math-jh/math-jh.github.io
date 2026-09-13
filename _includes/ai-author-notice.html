@@ -13,9 +13,9 @@
   {% endif %}
   {% assign _notice = site.data.ui-text[_lang].ai_post_notice %}
   {% if _notice and _notice != "" %}
-  <div class="notice--warning ai-author-notice" role="note">
+  <aside class="ai-author-notice" role="note">
     <i class="material-icons ai-author-notice__icon" aria-hidden="true">smart_toy</i>
-    <div class="ai-author-notice__text">{{ _notice | replace: "__AUTHOR__", _ai_author.name | markdownify }}</div>
-  </div>
+    <div class="ai-author-notice__content">{{ _notice | replace: "__AUTHOR__", _ai_author.name | markdownify }}</div>
+  </aside>
   {% endif %}
 {% endif %}

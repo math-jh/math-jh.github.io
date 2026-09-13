@@ -18,8 +18,11 @@
   {% endif %}
   {% assign _notice = site.data.ui-text[_lang].translationNotice %}
   {% if _notice and _notice != "" %}
-  <div class="notice--warning translation-notice" role="note">
-    {{ _notice | markdownify }}
-  </div>
+  <aside class="translation-notice" role="note">
+    <i class="material-icons translation-notice__icon" aria-hidden="true">smart_toy</i>
+    <div class="translation-notice__content">
+      {{ _notice | markdownify }}
+    </div>
+  </aside>
   {% endif %}
 {% endif %}
