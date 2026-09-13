@@ -14,7 +14,7 @@ translated_at: 2026-08-18T15:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T15:45:04+00:00
 ---
-As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology){: data-relation="weak" }, the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9) in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9) but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9).
+As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology){: data-relation="weak" }, the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" } in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" } but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" }.
 
 ## Category with models
 
@@ -100,7 +100,7 @@ In the case $n=1$, for any $x_1\in F_1(M)$, the element $d_1^{F(M)}(x_1)$ is a b
 
 ## Applications of the acyclic models theorem
 
-The acyclic models theorem is used first of all in proving [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10). Consider the category $\Top^2$ of pairs of topological spaces, and the two functors to $\Ch_{\geq 0}(\lMod{A})$
+The acyclic models theorem is used first of all in proving [§Cohomology, ⁋Corollary 10](/en/math/algebraic_topology/cohomology#cor10){: data-relation="weak" }. Consider the category $\Top^2$ of pairs of topological spaces, and the two functors to $\Ch_{\geq 0}(\lMod{A})$
 
 $$C_\bullet(-\times -;A),\qquad  C_\bullet(-;A)\otimes_A C_\bullet(-;A)$$
 

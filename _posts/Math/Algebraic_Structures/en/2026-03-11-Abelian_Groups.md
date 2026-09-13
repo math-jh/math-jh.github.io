@@ -109,7 +109,7 @@ Now, applying [Theorem 1](#thm1){: data-relation="required" } and the fact that 
 
 $$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
 
-Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1))
+Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1){: data-relation="weak" })
 
 ::: Proposition 8
 There exists a left adjoint $F_\Ab:\Set \rightarrow\Ab$ of the forgetful functor $U:\Ab \rightarrow \Set$.

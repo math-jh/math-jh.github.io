@@ -146,7 +146,7 @@ and since the products here are finite, we can combine them and write
 
 $$B\otimes_AB \cong\prod_{i,j} A_{f_i}\otimes A_{f_j}\cong\prod_{i,j} A_{f_if_j}.$$
 
-([[\[Commutative Algebra\] §Properties of Localization, ⁋Lemma 1]](/en/math/commutative_algebra/properties_of_localization#lem1)) Under this identification, $d^0$ places an element of $B$ into the first factor, indexed by $i$, and $d^1$ places it into the second factor, indexed by $j$.
+([\[Commutative Algebra\] §Properties of Localization, ⁋Lemma 1](/en/math/commutative_algebra/properties_of_localization#lem1)) Under this identification, $d^0$ places an element of $B$ into the first factor, indexed by $i$, and $d^1$ places it into the second factor, indexed by $j$.
 
 Geometrically, since $D(f_i)\cap D(f_j)=D(f_if_j)$, we can think of $B\otimes_AB$ as the ring of functions defined on the overlaps $D(f_i)\cap D(f_j)$, and then $d^0$ and $d^1$ become the respective restrictions
 

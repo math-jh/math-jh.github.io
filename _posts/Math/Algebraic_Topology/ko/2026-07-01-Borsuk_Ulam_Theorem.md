@@ -107,9 +107,9 @@ $n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조�
 
 첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
 
-둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 lifting을 사용한다.)
+둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-relation="required" }의 lifting을 사용한다.)
 
-셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기에서 사용하는 것은 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) exact sequence
+셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기에서 사용하는 것은 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin exact sequence
 
 $$\cdots\rightarrow H_i(S^n;\mathbb{Z}/2)\xrightarrow{p_\ast}H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\cap w}H_{i-1}(\RP^n;\mathbb{Z}/2)\rightarrow H_{i-1}(S^n;\mathbb{Z}/2)\rightarrow\cdots$$
 
@@ -126,7 +126,7 @@ Antipodal map $g:S^n\rightarrow S^{n-1}$이 존재한다고 가정하자. $S^{n-
 
 전사가 아닌 자기사상은 어떤 점 $q$를 image에서 빠뜨리므로 그 image가 $S^n\setminus\{q\}$에 담긴다. $S^n\setminus\{q\}$은 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic한 contractible 공간이므로, $\iota\circ g$는 이 contractible 공간을 거쳐 인수분해되어 상수사상과 homotopic하다. 따라서 그 degree는 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋명제 3](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#prop3){: data-relation="required" }의 homotopy invariance와 상수사상의 degree가 $0$이라는 사실에 의하여 $\deg(\iota\circ g)=0$이다. 그러나 $\iota\circ g$는 antipodal이므로 [정리 5](#thm5){: data-relation="required" }에 의하여 그 degree가 홀수여야 하고, 이는 $0$과 모순이다. 그러므로 그러한 $g$는 존재하지 않는다.
 
-이로써 [정리 2](#thm2){: data-relation="required" }의 (2)가 성립하고, [명제 3](#prop3){: data-relation="required" }에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5) 그 자체이다.
+이로써 [정리 2](#thm2){: data-relation="required" }의 (2)가 성립하고, [명제 3](#prop3){: data-relation="required" }에 의하여 (1)도 성립하며, (3)은 [정리 5](#thm5){: data-relation="required" } 그 자체이다.
 :::
 
 ::: 참고 7
@@ -202,7 +202,7 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 
 은 homeomorphism이다. 각 $C_j=\pi(F_j)$은 닫힌집합이고 $S^n$을 덮는다.
 
-이제 각 $C_j$이 대척쌍을 포함하지 않음을 보인다. 원점이 $\Delta$의 interior에 있으므로 각 facet $F_j$은 원점을 지나지 않는 affine hyperplane $\{y\mid\langle a_j,y\rangle=1\}$에 놓이며, $\Delta$의 interior는 $\langle a_j,\cdot\rangle<1$ 쪽에 있다. 만일 $v$와 $-v$이 둘 다 $C_j$에 속한다면, 어떤 양수 $s,t>0$에 대하여 $sv,-tv\in F_j$이므로 $\langle a_j,sv\rangle=1$과 $\langle a_j,-tv\rangle=1$이 성립한다. 앞의 식은 $\langle a_j,v\rangle=1/s>0$을, 뒤의 식은 $\langle a_j,v\rangle=-1/t<0$을 주어 서로 모순이다. 그러므로 어떤 $C_j$도 대척쌍을 담지 않으며, $n+2$개의 조각으로는 antipode를 완전히 피할 수 있다. 이로써 [정리 9](#thm9)의 $n+1$이 최적임이 확인된다.
+이제 각 $C_j$이 대척쌍을 포함하지 않음을 보인다. 원점이 $\Delta$의 interior에 있으므로 각 facet $F_j$은 원점을 지나지 않는 affine hyperplane $\{y\mid\langle a_j,y\rangle=1\}$에 놓이며, $\Delta$의 interior는 $\langle a_j,\cdot\rangle<1$ 쪽에 있다. 만일 $v$와 $-v$이 둘 다 $C_j$에 속한다면, 어떤 양수 $s,t>0$에 대하여 $sv,-tv\in F_j$이므로 $\langle a_j,sv\rangle=1$과 $\langle a_j,-tv\rangle=1$이 성립한다. 앞의 식은 $\langle a_j,v\rangle=1/s>0$을, 뒤의 식은 $\langle a_j,v\rangle=-1/t<0$을 주어 서로 모순이다. 그러므로 어떤 $C_j$도 대척쌍을 담지 않으며, $n+2$개의 조각으로는 antipode를 완전히 피할 수 있다. 이로써 [정리 9](#thm9){: data-relation="weak" }의 $n+1$이 최적임이 확인된다.
 :::
 
 ## 구의 embedding 불가능성
@@ -213,7 +213,7 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 $n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되지 않는다. 곧 image 위로의 homeomorphism이 되는 연속 단사함수 $e:S^n\rightarrow\mathbb{R}^n$은 존재하지 않는다.
 :::
 ::: 증명
-그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2)의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
+그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2){: data-relation="required" }의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
 :::
 
 같은 논증은 embedding뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff 공간으로 가는 단사 연속함수는 자동으로 image 위로의 homeomorphism이 되므로 embedding과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.

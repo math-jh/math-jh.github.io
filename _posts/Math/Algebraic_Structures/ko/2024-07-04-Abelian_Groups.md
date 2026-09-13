@@ -107,7 +107,7 @@ $$F_\Ab(X)=\bigoplus_{x\in X} \mathbb{Z}$$
 
 $$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
 
-을 얻는다. 여기에서 각 대응은 homomorphism의 합성과 함수의 합성으로만 주어지므로 $X$와 $H$ 양쪽에서 natural하고, 따라서 다음을 얻는다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1))
+을 얻는다. 여기에서 각 대응은 homomorphism의 합성과 함수의 합성으로만 주어지므로 $X$와 $H$ 양쪽에서 natural하고, 따라서 다음을 얻는다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1){: data-relation="weak" })
 
 ::: 명제 8
 Forgetful functor $U:\Ab \rightarrow \Set$의 left adjoint $F_\Ab:\Set \rightarrow\Ab$가 존재한다. 

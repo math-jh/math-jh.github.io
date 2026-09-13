@@ -66,7 +66,7 @@ $\bigoplus E_i$가 $\prod E_i$의 submodule인 것은 정의에 의한 것이므
 Direct product의 곱셈을 제한하여 얻어지는 (possibly non-unital) $A$-algebra $\bigoplus_{i\in I}E_i$를 $E_i$들의 *direct sum<sub>직합</sub>*이라 부른다.
 :::
 
-주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 우선 [§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" }의 일반적인 의미에서 보더라도 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 덧셈과 스칼라곱, 그리고 곱셈을 모두 보존하지만, 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
+주의할 것은 이것이 $A$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 우선 [§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="weak" }의 일반적인 의미에서 보더라도 canonical injection $\iota_j:E_j\hookrightarrow\bigoplus E_i$는 덧셈과 스칼라곱, 그리고 곱셈을 모두 보존하지만, 이들 데이터가 universal property를 만족하지는 않는다. 가령 $E_1=E_2=A$이고, 
 
 $$f_i: E_i\rightarrow A$$
 
@@ -84,7 +84,7 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 에 의해 $f$는 곱셈을 보존하지 못한다. 
 
-한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4)의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
+한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4){: data-relation="required" }의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
 
 ## 대수의 텐서곱
 
@@ -155,7 +155,7 @@ Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebr
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 tensor product이기 때문이다. 물론 위 isomorphism이 두 식
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-relation="required" }에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8){: data-relation="required" }에 의하여 이는 정확히 tensor product이기 때문이다. 물론 위 isomorphism이 두 식
 
 $$\x\otimes 1\mapsto \x,\qquad 1\otimes \y\mapsto \y$$
 
