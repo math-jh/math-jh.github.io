@@ -123,7 +123,7 @@ $$f^\ast P=\{(x',y)\in X'\times P\mid f(x')=p(y)\}$$
 is defined. Giving the action by $(x',y)\cdot g=(x',y\cdot g)$ makes $f^\ast P\rightarrow X'$ again a principal $G$-bundle, and from the perspective of transition functions this corresponds to pulling back $g_{ij}$ to $g_{ij}\circ f$. The crucial fact is that this pullback depends only on the homotopy class of $f$.
 
 ::: Theorem 5 (Homotopy Invariance of Pullback)
-Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2){: data-relation="weak" }). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
+Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2)). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
 :::
 ::: Proof
 The key is the following fact.
@@ -142,7 +142,7 @@ In particular, if $X$ is contractible then the identity map is homotopic to a co
 [Theorem 5](#thm5){: data-relation="required" } tells us that assigning a function $f$ to $f^\ast P$ depends only on the homotopy class of $f$. Therefore, if we can take some fixed principal $G$-bundle as a source from which all other bundles can be obtained by pullback, the classification of principal $G$-bundles will reduce to counting homotopy classes into that source space, generalizing the situation in vector bundles where the universal bundle over $\Gr(k,\mathbb{R}^\infty)$ was such a source.
 
 ::: Definition 6
-For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4){: data-relation="weak" }). In this case we call the base space $\B G$ the *classifying space* of $G$.
+For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4)). In this case we call the base space $\B G$ the *classifying space* of $G$.
 :::
 
 Thus, a universal $G$-bundle is a free $G$-action on a contractible space, whose orbit space $\B G=\E G/G$ is the base space and whose projection map is the bundle map. The condition that $\E G$ is contractible will be used crucially in [Theorem 8](#thm8){: data-relation="forward" }. Before that, the following holds.
@@ -189,11 +189,11 @@ This theorem translates the geometric classification of principal $G$-bundles in
 The construction of classifying spaces is functorial in $G$. Given a continuous group homomorphism $\phi:G\rightarrow H$, changing the $G$-action on $\E G$ to an $H$-action via $\phi$ yields the associated bundle $\E G\times_G H$, and the morphism classifying it induces $\B\phi:\B G\rightarrow \B H$. This satisfies $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$, making $G\mapsto \B G$ a functor on the homotopy category. For instance, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ induces $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$, which will be used below.
 :::
 ::: Proof
-The $\B G$ from [Theorem 7](#thm7){: data-relation="required" } is a CW complex, hence paracompact Hausdorff, so we may apply [Theorem 8](#thm8){: data-relation="required" } to principal bundles over $\B G$. Now $\B\phi$ is determined by $\B\phi^\ast\E H\cong\E G\times_G H$, and since forming associated bundles commutes with pullback, for a continuous group homomorphism $\psi:H\rightarrow K$ we obtain
+The $\B G$ from [Theorem 7](#thm7) is a CW complex, hence paracompact Hausdorff, so we may apply [Theorem 8](#thm8){: data-relation="required" } to principal bundles over $\B G$. Now $\B\phi$ is determined by $\B\phi^\ast\E H\cong\E G\times_G H$, and since forming associated bundles commutes with pullback, for a continuous group homomorphism $\psi:H\rightarrow K$ we obtain
 
 $$(\B\psi\circ\B\phi)^\ast\E K\cong\B\phi^\ast\left(\E H\times_H K\right)\cong\left(\B\phi^\ast\E H\right)\times_H K\cong\left(\E G\times_G H\right)\times_H K\cong \E G\times_G K.$$
 
-In the last term, the action of $G$ on $K$ is via $\psi\circ\phi$, so this is exactly the bundle classified by $\B(\psi\circ\phi)$; hence $\B\psi\circ\B\phi$ and $\B(\psi\circ\phi)$ classify the same principal $K$-bundle over $\B G$. Then by the injectivity in [Theorem 8](#thm8){: data-relation="required" }, they are homotopic.
+In the last term, the action of $G$ on $K$ is via $\psi\circ\phi$, so this is exactly the bundle classified by $\B(\psi\circ\phi)$; hence $\B\psi\circ\B\phi$ and $\B(\psi\circ\phi)$ classify the same principal $K$-bundle over $\B G$. Then by the injectivity in [Theorem 8](#thm8), they are homotopic.
 :::
 
 ## Examples of Classifying Spaces
@@ -272,7 +272,7 @@ $$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty).$$
 
 ## Cohomology of Classifying Spaces
 
-By [Theorem 8](#thm8){: data-relation="required" }, characteristic classes of bundles with structure group $G$ are precisely cohomology classes of $\B G$ pulled back via the classifying map. Thus characteristic class theory is the same as computing the cohomology ring of $\B G$, and we summarize this for the most basic groups.
+By [Theorem 8](#thm8), characteristic classes of bundles with structure group $G$ are precisely cohomology classes of $\B G$ pulled back via the classifying map. Thus characteristic class theory is the same as computing the cohomology ring of $\B G$, and we summarize this for the most basic groups.
 
 The starting point is the cohomology ring of complex projective space. In [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" } we saw that
 
@@ -323,7 +323,7 @@ We have $\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$, and the fact that its cohomology 
 
 $$H^\bullet(\Gr(n,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],$$
 
-was already discussed after [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" }. Thus it suffices to show that the generators are Chern classes and that $\lvert c_i\rvert=2i$.
+was already discussed after [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8). Thus it suffices to show that the generators are Chern classes and that $\lvert c_i\rvert=2i$.
 
 This computation is essentially the same as [Corollary 12](#cor12){: data-relation="required" }, and the key point is, just as before, the map $\B T\rightarrow\B\Umat(n)$ obtained by including the maximal torus $T=(S^1)^n\subseteq\Umat(n)$ as diagonal matrices. Restricting the canonical representation $\mathbb{C}^n$ of $\Umat(n)$ to $T$ splits along the coordinate axes as
 
