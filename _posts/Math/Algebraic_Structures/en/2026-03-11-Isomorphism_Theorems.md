@@ -36,7 +36,7 @@ we see from the following equation
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-that $x\sim y\iff f(x)=f(y)$. That is, $\sim$ is nothing other than the equivalence relation defined by the function $f$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2)), and from the definition of a quotient group, the canonical map $p:G\rightarrow G/\ker f$ is a homomorphism. Now, considering the canonical decomposition of $f$, we obtain a bijection $h:G/\ker f\rightarrow\im f$. Then for any $[x], [x']\in G/\ker f$, since
+that $x\sim y\iff f(x)=f(y)$. That is, $\sim$ is nothing other than the equivalence relation defined by the function $f$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-relation="weak" }), and from the definition of a quotient group, the canonical map $p:G\rightarrow G/\ker f$ is a homomorphism. Now, considering the canonical decomposition of $f$, we obtain a bijection $h:G/\ker f\rightarrow\im f$. Then for any $[x], [x']\in G/\ker f$, since
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
@@ -46,7 +46,7 @@ $h$ is a homomorphism, and therefore an isomorphism.
 For any homomorphism $f:G\rightarrow G'$, $G/\ker f\cong \im f$ always holds.
 :::
 
-On the other hand, using [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7), we obtain the following proposition.
+On the other hand, using [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7){: data-relation="required" }, we obtain the following proposition.
 
 ::: Proposition 3
 For any homomorphism $f:G\rightarrow G'$ and any normal subgroup of $G$, $N$, there exists, satisfying $f=\bar{f}\circ p$, a map $\bar{f}:G/N\rightarrow G'$ if and only if $N\leq \ker f$. In this case, since $p$ is surjective, $\bar{f}$ is uniquely determined. 
@@ -101,7 +101,7 @@ which yields the desired result.
 Let $H$ and $K$ be normal subgroups of a group $G$, and let $K\leq H$. Then $H/K$ is a normal subgroup of $G/K$ and $(G/K)/(H/K)\cong G/H$ holds.  
 :::
 ::: Proof
-The decomposition following [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8).
+The decomposition following [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8){: data-relation="required" }.
 :::
 
 ## The fourth isomorphism theorem
