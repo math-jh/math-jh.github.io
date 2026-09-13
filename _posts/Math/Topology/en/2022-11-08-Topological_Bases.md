@@ -22,7 +22,7 @@ The most straightforward way to specify a topological space is to list all open 
 Let $(X,\mathcal{T})$ be a topological space. A subset $\mathcal{B}$ of $\mathcal{T}$ is called a *base* for $\mathcal{T}$ if for every $U\in\mathcal{T}$, there exists a family $(B_i)_{i\in I}$ of elements of $\mathcal{B}$ such that $U=\bigcup_{i\in I} B_i$.
 :::
 
-In particular, since $X\in\mathcal{T}$, the collection $\mathcal{B}$ is also a covering of $X$. ([[Set Theory] §Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1)) Since the elements of $\mathcal{B}$ are all open sets by definition, it is appropriate to say that $\mathcal{B}$ is an *open covering* of $X$.
+In particular, since $X\in\mathcal{T}$, the collection $\mathcal{B}$ is also a covering of $X$. ([\[Set Theory\] §Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1)) Since the elements of $\mathcal{B}$ are all open sets by definition, it is appropriate to say that $\mathcal{B}$ is an *open covering* of $X$.
 
 ::: Proposition 2
 Let $(X,\mathcal{T})$ be a topological space. Then $\mathcal{B}$ is a base for $\mathcal{T}$ if and only if the following three conditions are satisfied:
@@ -58,7 +58,7 @@ Collecting all finite intersections of elements of $\mathcal{S}$, we obtain a ne
 [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" } shows that if we can describe the neighborhood filter $\mathcal{N}(x)$ centered at a point $x$ in a topological space $X$, then we can completely recover the topology of $X$. On the other hand, since $\mathcal{N}(x)$ satisfies the conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }, in particular the first condition, we do not need all of $\mathcal{N}(x)$ to describe it.
 
 ::: Definition 4
-Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at $A$ is a coinitial subset of $(\mathcal{N}(A),\subseteq)$ consisting of open sets. ([[Set Theory] §Elements of Ordered Sets](/en/math/set_theory/elements_in_ordered_set))
+Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at $A$ is a coinitial subset of $(\mathcal{N}(A),\subseteq)$ consisting of open sets. ([\[Set Theory\] §Elements of Ordered Sets](/en/math/set_theory/elements_in_ordered_set))
 :::
 
 As in [§Open Sets, ⁋Definition 4](/en/math/topology/open_sets#def4){: data-relation="required" }, when $A$ is a singleton $\{x\}$, we call a local base at $A$ a local base at the point $x$. Then the following holds.

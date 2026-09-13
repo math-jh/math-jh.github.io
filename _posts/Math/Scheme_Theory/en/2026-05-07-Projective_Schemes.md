@@ -98,7 +98,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 holds.
 
-That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci of *homogeneous* elements rather than arbitrary elements. Then, thinking of [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), our interest should also be in *homogeneous* ideals.
+That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci of *homogeneous* elements rather than arbitrary elements. Then, thinking of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), our interest should also be in *homogeneous* ideals.
 
 In the remainder of this post we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately with a finitely generated condition in [§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7){: data-relation="weak" }. For this we fix some notation.
 
@@ -116,7 +116,7 @@ $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 is trivially a homogeneous ideal of $A_\bullet$. However, thinking of the case $A_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$, the point where the function values vanish for all elements of $A_+$, that is, the point that is identically zero for all polynomials, is only the origin. Since the origin is the point removed when making $\mathbb{P}^n$, it is appropriate to exclude from our discussion any ideal containing the ideal $A_+$. From this viewpoint we call $A_+$ the *irrelevant ideal*.
 
-This can also be read somewhat more geometrically. By the above formula $f(\lambda x_0,\ldots,\lambda x_n)=\lambda^{\deg f}f(x_0,\ldots,x_n)$, the closed sets cut out by homogeneous polynomials in $\mathbb{A}^{n+1}$ are always closed under scalar multiplication, so they are affine cones, being collections of lines through the origin. ([[Algebraic Varieties] §Projective Varieties, ⁋Definition 12](/en/math/algebraic_varieties/projective_varieties#def12)) Now among affine cones there is also the cone consisting only of the origin, that is, the cone cut out by $A_+$, and for this cone removing the origin leaves only the empty set, so this cone must be excluded from our interest. For a homogeneous prime ideal $\mathfrak{p}$, the condition $A_+\subseteq \mathfrak{p}$ is equivalent to the cone cut out by $\mathfrak{p}$ being the origin, so we define $\Proj A_\bullet$ by excluding such $\mathfrak{p}$.
+This can also be read somewhat more geometrically. By the above formula $f(\lambda x_0,\ldots,\lambda x_n)=\lambda^{\deg f}f(x_0,\ldots,x_n)$, the closed sets cut out by homogeneous polynomials in $\mathbb{A}^{n+1}$ are always closed under scalar multiplication, so they are affine cones, being collections of lines through the origin. ([\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 12](/en/math/algebraic_varieties/projective_varieties#def12)) Now among affine cones there is also the cone consisting only of the origin, that is, the cone cut out by $A_+$, and for this cone removing the origin leaves only the empty set, so this cone must be excluded from our interest. For a homogeneous prime ideal $\mathfrak{p}$, the condition $A_+\subseteq \mathfrak{p}$ is equivalent to the cone cut out by $\mathfrak{p}$ being the origin, so we define $\Proj A_\bullet$ by excluding such $\mathfrak{p}$.
 
 ::: Definition 1
 For a graded ring $A_\bullet$, $\Proj A_\bullet$ is defined as the set
@@ -134,7 +134,7 @@ Let a graded ring $A_\bullet$ be given. For a homogeneous ideal $\mathfrak{a}$ o
 $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \mathfrak{p}\}$$
 :::
 
-Then using the third result of [[Commutative Algebra] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2), we can show the following lemma, similar to [§The Spectrum, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6){: data-relation="weak" } and [§The Spectrum, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5){: data-relation="weak" }.
+Then using the third result of [\[Commutative Algebra\] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2), we can show the following lemma, similar to [§The Spectrum, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6){: data-relation="weak" } and [§The Spectrum, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5){: data-relation="weak" }.
 
 ::: Lemma 3
 For a graded ring $A_\bullet$, the following hold.
@@ -156,9 +156,9 @@ Of course, it is trivial that $\mathfrak{a}\mathfrak{b}$, $\sqrt{\mathfrak{a}}$,
 
     $$ab=ab_1+\cdots+ab_n$$
 
-    of $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$, since $\mathfrak{p}$ is homogeneous, all $ab_i$ are elements of $\mathfrak{p}$. On the other hand, by the preceding assumption $b\not\in \mathfrak{p}$, so there exists $i$ with $b_i\not\in \mathfrak{p}$, and then $ab_i$ is a homogeneous element belonging to $\mathfrak{p}$ with $b_i\not\in \mathfrak{p}$, so by [[Commutative Algebra] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2) we have $a\in \mathfrak{p}$. Therefore $\mathfrak{a}\subseteq \mathfrak{p}$ holds.
+    of $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$, since $\mathfrak{p}$ is homogeneous, all $ab_i$ are elements of $\mathfrak{p}$. On the other hand, by the preceding assumption $b\not\in \mathfrak{p}$, so there exists $i$ with $b_i\not\in \mathfrak{p}$, and then $ab_i$ is a homogeneous element belonging to $\mathfrak{p}$ with $b_i\not\in \mathfrak{p}$, so by [\[Commutative Algebra\] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2) we have $a\in \mathfrak{p}$. Therefore $\mathfrak{a}\subseteq \mathfrak{p}$ holds.
 2. This is trivial since $\sum \mathfrak{a}_i$ is defined as the smallest ideal containing all the ideals $\mathfrak{a}_i$.
-3. [[Commutative Algebra] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8).
+3. [\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8).
 4. By definition $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$ is trivial, so it suffices to show the reverse inclusion. That is, let $\mathfrak{p}$ be a prime ideal containing all homogeneous elements of $\mathfrak{a}$ of positive degree but not containing $A_+$ entirely, and let us show $\mathfrak{a}\subseteq \mathfrak{p}$. For this it suffices to show that for any $a\in \mathfrak{a}\cap A_0$, the above assumption implies $a$ also belongs to $\mathfrak{p}$.
 
     Now since $A_+\not\subseteq\mathfrak{p}$, there exists a homogeneous element $f$ not belonging to $\mathfrak{p}$. Then $af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$, and since $f\not\in \mathfrak{p}$ we have $a\in \mathfrak{p}$.
@@ -206,10 +206,10 @@ For a graded ring $A_\bullet$ and any nonzero homogeneous element $f$ of $A_+$, 
 
 $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$
 
-is a homeomorphism. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Definition 5](/en/math/commutative_algebra/localization_of_graded_rings#def5))
+is a homeomorphism. ([\[Commutative Algebra\] §Localization of Graded Rings, ⁋Definition 5](/en/math/commutative_algebra/localization_of_graded_rings#def5))
 :::
 ::: Proof
-First, since $f\not\in \mathfrak{p}$, via the localization $A \rightarrow A_f$ the ideal $\mathfrak{p}$ is sent to the prime ideal $\mathfrak{p}A_f$ of $A_f$. ([[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)) Now the right-hand side of the claim is the preimage of $\mathfrak{p}A_f$ under the inclusion $i: A_{(f)} \rightarrow A_f$, so this becomes a prime ideal of $A_{(f)}$.
+First, since $f\not\in \mathfrak{p}$, via the localization $A \rightarrow A_f$ the ideal $\mathfrak{p}$ is sent to the prime ideal $\mathfrak{p}A_f$ of $A_f$. ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)) Now the right-hand side of the claim is the preimage of $\mathfrak{p}A_f$ under the inclusion $i: A_{(f)} \rightarrow A_f$, so this becomes a prime ideal of $A_{(f)}$.
 
 Now let us define the inverse map $\Spec A_{(f)} \rightarrow D_+(f)$ of this correspondence as a function. Given an arbitrary prime ideal $\mathfrak{q}\in\Spec A_{(f)}$, consider the homogeneous ideal $\mathfrak{p}$ of $A$ generated by those homogeneous elements $x$ of $A$ satisfying the condition
 
@@ -236,7 +236,7 @@ Since $\mathfrak{p}\in \Proj A_\bullet$ satisfies $A_+\not\subseteq \mathfrak{p}
 
 $$\theta=\frac{g^{\deg f}}{f^{\deg g}}=\frac{g^d}{f^e}$$
 
-is an element of degree $0$ of $A_f$, that is, $\theta\in A_{(f)}$. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Proposition 3](/en/math/commutative_algebra/localization_of_graded_rings#prop3)) On the other hand, $D(\theta)$ is an open subscheme of $\Spec A_{(f)}$ isomorphic to $\Spec (A_{(f)})_\theta$ ([§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2){: data-relation="required" }), so it suffices for us to construct a ring isomorphism $(A_{(f)})_\theta\cong A_{(fg)}$.
+is an element of degree $0$ of $A_f$, that is, $\theta\in A_{(f)}$. ([\[Commutative Algebra\] §Localization of Graded Rings, ⁋Proposition 3](/en/math/commutative_algebra/localization_of_graded_rings#prop3)) On the other hand, $D(\theta)$ is an open subscheme of $\Spec A_{(f)}$ isomorphic to $\Spec (A_{(f)})_\theta$ ([§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2){: data-relation="required" }), so it suffices for us to construct a ring isomorphism $(A_{(f)})_\theta\cong A_{(fg)}$.
 
 First, since the localization $A_f \rightarrow A_{fg}$ preserves the grading, restricting to the degree $0$ part we obtain the canonical ring homomorphism
 
@@ -246,7 +246,7 @@ At this point $f^e/g^d$ is an element of degree $0$ of $A_{fg}$ and
 
 $$\frac{g^d}{f^e}\cdot\frac{f^e}{g^d}=1$$
 
-so $\rho(\theta)$ is a unit of $A_{(fg)}$. Therefore by [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) there exists a unique ring homomorphism
+so $\rho(\theta)$ is a unit of $A_{(fg)}$. Therefore by [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) there exists a unique ring homomorphism
 
 $$\Phi:(A_{(f)})_\theta \rightarrow A_{(fg)};\qquad \frac{x}{\theta^n}\mapsto \rho(x)\left(\frac{f^e}{g^d}\right)^n$$
 
@@ -339,11 +339,11 @@ Here $\alpha$ is obtained by localizing $\Phi_{f,g}^{-1}\circ\Phi_{g,f}$. Then c
 
 $$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
 
-since $\Phi_{f,g}$ and $\Psi_f$ respectively extend $\rho_{f,fg}$ and $\rho_{f,fgh}$, we have $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$. However, since $A_{(fg)}$ is the localization of $A_{(f)}$ at $\theta_{f,g}$ via $\Phi_{f,g}$ and $\rho_{fg,fgh}$ also satisfies the same formula, by the uniqueness in [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we have $\tau=\rho_{fg,fgh}$. From this
+since $\Phi_{f,g}$ and $\Psi_f$ respectively extend $\rho_{f,fg}$ and $\rho_{f,fgh}$, we have $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$. However, since $A_{(fg)}$ is the localization of $A_{(f)}$ at $\theta_{f,g}$ via $\Phi_{f,g}$ and $\rho_{fg,fgh}$ also satisfies the same formula, by the uniqueness in [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we have $\tau=\rho_{fg,fgh}$. From this
 
 $$\Psi_f\circ\alpha\vert_{A_{(g)}}=\tau\circ \rho_{g,fg}=\rho_{fg,fgh}\circ\rho_{g,fg}=\rho_{g,fgh}=\Psi_g\vert_{A_{(g)}}$$
 
-and applying the uniqueness of [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) again to the localization $(A_{(g)})_{\theta_{g,fh}}$ of $A_{(g)}$, we get $\Psi_f\circ\alpha=\Psi_g$, that is, $\alpha=\Psi_f^{-1}\circ\Psi_g$. Therefore
+and applying the uniqueness of [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) again to the localization $(A_{(g)})_{\theta_{g,fh}}$ of $A_{(g)}$, we get $\Psi_f\circ\alpha=\Psi_g$, that is, $\alpha=\Psi_f^{-1}\circ\Psi_g$. Therefore
 
 $$\varphi_{fg}\vert_{X_{fg}\cap X_{fh}}=\Spec(\Psi_f^{-1}\circ \Psi_g)$$
 
@@ -357,7 +357,7 @@ $$\varphi_{gh}\circ\varphi_{fg}=\Spec\left((\Psi_f^{-1}\circ\Psi_g)\circ(\Psi_g^
 
 so the cocycle condition holds. Therefore by [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9){: data-relation="required" } there exists a unique scheme $X$ having the $X_f$ as open subschemes with $X_f\cap X_g=X_{fg}$.
 
-Finally, let us verify that the underlying topological space of $X$ is $\Proj A_\bullet$. [Lemma 8](#lem8){: data-relation="required" } gives homeomorphisms $\psi_f: D_+(f) \rightarrow \Spec A_{(f)}=X_f$, and as checked in the proof of [Lemma 9](#lem9){: data-relation="required" }, $\psi_f$ sends $D_+(fg)$ onto $X_{fg}=D(\theta_{f,g})$. Moreover, for any $\mathfrak{p}\in D_+(fg)$ the preimage of $\mathfrak{p}A_{fg}\cap A_{(fg)}$ under $\rho_{f,fg}$ is $\mathfrak{p}A_f\cap A_{(f)}$ ([[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)), so $\psi_f$ and $\psi_g$ are compatible with $\varphi_{fg}$. That is, $\psi_g=\varphi_{fg}\circ\psi_f$ holds on $D_+(fg)$. On the other hand, as observed above the $D_+(f)$ cover $\Proj A_\bullet$, so gluing the $\psi_f$ we obtain a homeomorphism between the underlying topological space of $X$ and $\Proj A_\bullet$. Through this $\Proj A_\bullet$ acquires a scheme structure, and by the uniqueness in [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9){: data-relation="required" } this scheme structure is unique.
+Finally, let us verify that the underlying topological space of $X$ is $\Proj A_\bullet$. [Lemma 8](#lem8){: data-relation="required" } gives homeomorphisms $\psi_f: D_+(f) \rightarrow \Spec A_{(f)}=X_f$, and as checked in the proof of [Lemma 9](#lem9){: data-relation="required" }, $\psi_f$ sends $D_+(fg)$ onto $X_{fg}=D(\theta_{f,g})$. Moreover, for any $\mathfrak{p}\in D_+(fg)$ the preimage of $\mathfrak{p}A_{fg}\cap A_{(fg)}$ under $\rho_{f,fg}$ is $\mathfrak{p}A_f\cap A_{(f)}$ ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)), so $\psi_f$ and $\psi_g$ are compatible with $\varphi_{fg}$. That is, $\psi_g=\varphi_{fg}\circ\psi_f$ holds on $D_+(fg)$. On the other hand, as observed above the $D_+(f)$ cover $\Proj A_\bullet$, so gluing the $\psi_f$ we obtain a homeomorphism between the underlying topological space of $X$ and $\Proj A_\bullet$. Through this $\Proj A_\bullet$ acquires a scheme structure, and by the uniqueness in [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9){: data-relation="required" } this scheme structure is unique.
 :::
 
 In particular, since $\Proj A_\bullet$ is a locally ringed space, for any $\mathfrak{p}\in \Proj A_\bullet$ the stalk $\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$ is a local ring. But since $\mathfrak{p}$ can be put into a suitable affine open neighborhood anyway, we can show the following by essentially the same procedure as [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8){: data-relation="weak" }.
@@ -374,15 +374,15 @@ $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong \mathcal{O}_{\Spec A_{(f)},\ma
 
 Therefore it suffices to construct an isomorphism $(A_{(f)})_\mathfrak{q}\cong A_{(\mathfrak{p})}$.
 
-Let $S$ be the multiplicative set consisting of homogeneous elements not belonging to $\mathfrak{p}$; then $A_{(\mathfrak{p})}=(S^{-1}A)_0$. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Definition 5](/en/math/commutative_algebra/localization_of_graded_rings#def5)) Now since $f\in S$, the localization $A_f \rightarrow S^{-1}A$ exists, and since this preserves the grading, restricting to the degree $0$ part we obtain the canonical ring homomorphism
+Let $S$ be the multiplicative set consisting of homogeneous elements not belonging to $\mathfrak{p}$; then $A_{(\mathfrak{p})}=(S^{-1}A)_0$. ([\[Commutative Algebra\] §Localization of Graded Rings, ⁋Definition 5](/en/math/commutative_algebra/localization_of_graded_rings#def5)) Now since $f\in S$, the localization $A_f \rightarrow S^{-1}A$ exists, and since this preserves the grading, restricting to the degree $0$ part we obtain the canonical ring homomorphism
 
 $$\sigma: A_{(f)} \rightarrow A_{(\mathfrak{p})};\qquad \frac{a}{f^n}\mapsto \frac{a}{f^n}$$
 
-At this point $\sigma$ sends elements of $A_{(f)}\setminus \mathfrak{q}$ to units. Indeed, writing $x=a/f^n\in A_{(f)}$, here $a$ is a homogeneous element with $\deg a=nd$, and since $f\not\in \mathfrak{p}$, by [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)
+At this point $\sigma$ sends elements of $A_{(f)}\setminus \mathfrak{q}$ to units. Indeed, writing $x=a/f^n\in A_{(f)}$, here $a$ is a homogeneous element with $\deg a=nd$, and since $f\not\in \mathfrak{p}$, by [\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)
 
 $$x\in \mathfrak{q}\iff a\in \mathfrak{p}$$
 
-Therefore if $x\not\in \mathfrak{q}$ then $a\in S$, and $f^n/a$ is an element of degree $0$ of $S^{-1}A$ that becomes the inverse of $\sigma(x)$. Now by [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) there exists a unique ring homomorphism
+Therefore if $x\not\in \mathfrak{q}$ then $a\in S$, and $f^n/a$ is an element of degree $0$ of $S^{-1}A$ that becomes the inverse of $\sigma(x)$. Now by [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) there exists a unique ring homomorphism
 
 $$\Theta:(A_{(f)})_\mathfrak{q} \rightarrow A_{(\mathfrak{p})}$$
 
@@ -424,7 +424,7 @@ Then the $n+1$ open covers of projective space in this language can be thought o
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}$$
 
-and by [[Commutative Algebra] §Localization of Graded Rings, ⁋Proposition 6](/en/math/commutative_algebra/localization_of_graded_rings#prop6)
+and by [\[Commutative Algebra\] §Localization of Graded Rings, ⁋Proposition 6](/en/math/commutative_algebra/localization_of_graded_rings#prop6)
 
 $$\mathbb{K}[\x_{0},\ldots, \x_{n}]_{(\x_{i})}\cong \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
 
@@ -436,7 +436,7 @@ Now any $\mathfrak{p}\in \mathbb{P}^n_\mathbb{K}$ is contained in some $D_+(\x_i
 
 $$\mathcal{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathcal{O}_{U_i, \mathfrak{q}}$$
 
-And of course this holds. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Proposition 8](/en/math/commutative_algebra/localization_of_graded_rings#prop8))
+And of course this holds. ([\[Commutative Algebra\] §Localization of Graded Rings, ⁋Proposition 8](/en/math/commutative_algebra/localization_of_graded_rings#prop8))
 :::
 
 ---

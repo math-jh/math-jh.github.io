@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T17:00:07+00:00
 ---
 ## Coordinate Representation
 
-We now examine the relationship between matrices and linear maps. This can be regarded as a generalization of [[Linear Algebra] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5). For convenience,
+We now examine the relationship between matrices and linear maps. This can be regarded as a generalization of [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5). For convenience,
 
 let a free $A$-module $M$ be given, and fix a basis $\mathcal{B}=(e_i)_{i\in I}$ of $M$. Then any $x\in M$ can be written as
 
@@ -68,7 +68,7 @@ to construct the inverse of the above $Z(A)$-linear map; hence it is a $Z(A)$-is
 
 ## Product of Matrix Representations
 
-We previously examined how the product of two matrices is defined. As in [[Linear Algebra] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5), this product corresponds to the composition of linear maps. Let us first prove the following proposition.
+We previously examined how the product of two matrices is defined. As in [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5), this product corresponds to the composition of linear maps. Let us first prove the following proposition.
 
 ::: Proposition 3
 If $I,J$ are finite sets, then for any linear map $u:M \rightarrow N$ and any $x\in M$, the formula

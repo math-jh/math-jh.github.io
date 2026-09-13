@@ -36,7 +36,7 @@ We can verify that $\mathbf{K}(\mathcal{A})$ is an additive category. On the oth
 The *derived category* $D(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the Verdier quotient $\mathbf{K}(\mathcal{A})/S$ of the homotopy category $\mathbf{K}(\mathcal{A})$ by the class $S$ of quasi-isomorphisms.
 :::
 
-We will not treat this definition with full rigor, but it is essentially the same construction as in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $\mathbf{K}(\mathcal{A})$.
+We will not treat this definition with full rigor, but it is essentially the same construction as in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $\mathbf{K}(\mathcal{A})$.
 
 More concretely, when describing morphisms in $D(\mathcal{A})$ we often use roof diagrams. A morphism in $D(\mathcal{A})$ from $X$ to $Y$ is represented by a diagram
 
@@ -235,7 +235,7 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 . This isomorphism is obtained by assembling the degree-wise adjunctions $\Hom_\mathcal{B}(F(P^n), I^m) \cong \Hom_\mathcal{A}(P^n, G(I^m))$ to the complex level. Since $P_\bullet$ is $K$-projective and $I^\bullet$ is $K$-injective, the left-hand side reduces to $\Hom_{K(\mathcal{B})}(F(P_\bullet), I^\bullet) = \Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet)$, and the right-hand side reduces to $\Hom_{K(\mathcal{A})}(P_\bullet, G(I^\bullet)) = \Hom_{D(\mathcal{A})}(A^\bullet, R G(B^\bullet))$.
 :::
 
-The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [[Multilinear Algebra] §Hom and the Tensor Product](/en/math/multilinear_algebra/hom_and_tensor)
+The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [\[Multilinear Algebra\] §Hom and the Tensor Product](/en/math/multilinear_algebra/hom_and_tensor)
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 

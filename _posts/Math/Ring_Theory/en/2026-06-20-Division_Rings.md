@@ -21,7 +21,7 @@ Unless otherwise stated, a ring is always assumed to have an identity $1\neq 0$,
 
 ## Division Rings and Zero Divisors
 
-The definition of a division ring has already been given, but we restate it to begin this post. ([[Algebraic Structures] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3))
+The definition of a division ring has already been given, but we restate it to begin this post. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3))
 
 ::: Definition 1
 A ring $D\neq 0$ is called a *division ring* or *skew field* if every nonzero element of $D$ has a two-sided multiplicative inverse. A commutative division ring is called a *field*.
@@ -39,7 +39,7 @@ Let $a,b\in D$ with $ab=0$ and $a\neq 0$. Since $D$ is a division ring, $a$ has 
 
 $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
-Thus if $a\neq 0$ then $b=0$, which means that $a=0$ or $b=0$ whenever $ab=0$. Hence $D$ has no nonzero zero divisors. If $D$ is a field, then it is additionally commutative and $0\neq 1$, so it is an integral domain ([[Algebraic Structures] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)).
+Thus if $a\neq 0$ then $b=0$, which means that $a=0$ or $b=0$ whenever $ab=0$. Hence $D$ has no nonzero zero divisors. If $D$ is a field, then it is additionally commutative and $0\neq 1$, so it is an integral domain ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)).
 :::
 
 ## Wedderburn's Little Theorem
@@ -48,7 +48,7 @@ The above [Proposition 2](#prop2){: data-relation="required" } can in fact be ob
 
 Moreover, in that post we already examined a partial converse of the above [Proposition 2](#prop2){: data-relation="required" }, namely that for *finite* rings, an integral domain is always a field. ([§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-relation="weak" }) The proof of this corollary does not essentially use the commutativity of the ring, yet commutativity was assumed in that corollary because there simply do not exist any finite non-commutative zero-divisor-free rings when commutativity is dropped.
 
-To examine this phenomenon, we first organize properties of the center $Z(D)$ of a division ring $D$. This is a commutative subring of $D$ ([[Algebraic Structures] §Definition of a Ring, ⁋Definition 8](/en/math/algebraic_structures/rings#def8)), and moreover it is a field. This is because any nonzero $z\in Z(D)$ has an inverse $z^{-1}$ in $D$, and for any $x\in D$ we have
+To examine this phenomenon, we first organize properties of the center $Z(D)$ of a division ring $D$. This is a commutative subring of $D$ ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 8](/en/math/algebraic_structures/rings#def8)), and moreover it is a field. This is because any nonzero $z\in Z(D)$ has an inverse $z^{-1}$ in $D$, and for any $x\in D$ we have
 
 $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
@@ -107,11 +107,11 @@ Every finite division ring is a field. That is, every finite division ring is co
 ::: Proof
 Let $D$ be a finite division ring and $Z=Z(D)$ its center. As we saw above, $Z$ is a finite field; letting $q\geq 2$ be its number of elements, $D$ is a finite-dimensional vector space over $Z$ with $|D|=q^n$ elements. Our claim is that $n=1$, so that $D=Z$ is commutative.
 
-To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([[Algebraic Structures] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14)) The class equation of $D^\times$ for the conjugation action from [[Algebraic Structures] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9) is
+To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14)) The class equation of $D^\times$ for the conjugation action from [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9) is
 
 $$|D^\times|=|Z(D^\times)|+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
-where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [[Algebraic Structures] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12), and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $|Z(D^\times)|=q-1$.
+where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12), and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $|Z(D^\times)|=q-1$.
 
 Now for each $x\in D^\times$, the set $C_D(x)=\{y\in D\mid xy=yx\}$ is a sub-division ring of $D$ containing $Z$. In this case we have seen that $C_D(x)$ is a $Z$-vector space, and since $|Z|=q$, we have $|C_D(x)|=q^{d(x)}$ for some $d(x)$. Also, since $D$ is a vector space over $C_D(x)$, we have $d(x)\mid n$. Since $C_{D^\times}(x)=C_D(x)\setminus\{0\}$, we have
 

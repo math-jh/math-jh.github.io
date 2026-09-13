@@ -42,11 +42,11 @@ $$\mathcal{O}_Y(W) \rightarrow \varphi_\ast \mathcal{O}_X(W)=\mathcal{O}_X(\varp
 
 obtained by composing $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$ with the restriction to $U$ define the sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$ that we must examine. The map this induces on the stalk at any $x\in U$ is determined by germs alone, so it coincides with $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by the original $\varphi$, and hence is a local homomorphism. Thus $(\varphi\vert_U)\vert^V$ is a morphism of $\LRS$, and since $U$ and $V$ are affine schemes, by [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-relation="required" } it is induced from a unique ring homomorphism $B \rightarrow A$.
 
-For the second claim, by the gluing condition the continuous maps $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$ agree on overlaps, so by [[Topology] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) they glue to a continuous map $\varphi: X \rightarrow Y$. We now define the sheaf morphism $\varphi^\sharp$. Given an open subset $W\subseteq Y$ and $s\in \mathcal{O}_Y(W)$, consider the sections
+For the second claim, by the gluing condition the continuous maps $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$ agree on overlaps, so by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) they glue to a continuous map $\varphi: X \rightarrow Y$. We now define the sheaf morphism $\varphi^\sharp$. Given an open subset $W\subseteq Y$ and $s\in \mathcal{O}_Y(W)$, consider the sections
 
 $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i).$$
 
-These also agree on overlaps for the same reason, and since $\{\varphi^{-1}(W)\cap U_i\}$ is an open covering of $\varphi^{-1}(W)$, the two conditions of [[Topology] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1) yield a unique glued section $s'\in \mathcal{O}_X(\varphi^{-1}(W))$. Defining $\varphi^\sharp(W): s\mapsto s'$, compatibility with restriction maps can be checked on each $U_i$, and the map induced by $\varphi^\sharp$ on the stalk at $x\in U_i$ coincides with that induced by $\varphi_i^\sharp$, so it is a local homomorphism. Hence $\varphi$ is a scheme morphism, and since the condition $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$ completely determines $\varphi$, such a morphism is unique.
+These also agree on overlaps for the same reason, and since $\{\varphi^{-1}(W)\cap U_i\}$ is an open covering of $\varphi^{-1}(W)$, the two conditions of [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1) yield a unique glued section $s'\in \mathcal{O}_X(\varphi^{-1}(W))$. Defining $\varphi^\sharp(W): s\mapsto s'$, compatibility with restriction maps can be checked on each $U_i$, and the map induced by $\varphi^\sharp$ on the stalk at $x\in U_i$ coincides with that induced by $\varphi_i^\sharp$, so it is a local homomorphism. Hence $\varphi$ is a scheme morphism, and since the condition $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$ completely determines $\varphi$, such a morphism is unique.
 :::
 
 The first claim is nothing more than applying the fact from [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-relation="required" } that $\AffSch$ is a full subcategory of $\LRS$ to the local picture of a scheme morphism. However, one must be careful: the gluing condition in the second claim is not expressed as a condition between ring homomorphisms. When $V_i\neq V_k$, we cannot compare $\varphi_i$ and $\varphi_k$ within a single affine scheme, so we must compare them inside $Y$; moreover $U_i\cap U_k$ is generally not an affine scheme. Thus the data given for gluing scheme morphisms are ring homomorphisms, but the condition determining whether they glue is not.
@@ -94,7 +94,7 @@ We shall essentially take this perspective as the definition; the three perspect
 First we define the following.
 
 ::: Definition 3
-For an arbitrary scheme $S$, we call the slice category $\Sch_{/S}$ over $S$ the category of *$S$-schemes*. ([[Category Theory] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13))
+For an arbitrary scheme $S$, we call the slice category $\Sch_{/S}$ over $S$ the category of *$S$-schemes*. ([\[Category Theory\] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13))
 :::
 
 That is, an $S$-scheme is simply another name for a scheme morphism $X \rightarrow S$, also called the *structure morphism*. This becomes slightly more intuitive upon examining the following example.
@@ -104,7 +104,7 @@ Consider the affine $n$-space $\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ld
 
 $$\mathbb{K}\hookrightarrow \mathbb{K}[\x_1,\ldots, \x_n].$$
 
-([[Algebraic Structures] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) and the argument following it)
+([\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1) and the argument following it)
 
 Then via this structure morphism we may regard $\mathbb{A}^n_\mathbb{K}$ as a $\Spec\mathbb{K}$-scheme
 
@@ -160,7 +160,7 @@ and hence corresponds to a $\mathbb{K}$-algebra homomorphism
 
 $$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}.$$
 
-Now $\mathbb{K}[\x_1,\ldots, \x_n]$ is a polynomial algebra over $\mathbb{K}$, so by the universal property of [[Algebraic Structures] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) such a $\phi$ is uniquely determined by the images $x_i=\phi(\x_i)\in \mathbb{K}$ of each variable, and conversely any $x=(x_1,\ldots, x_n)\in \mathbb{K}^n$ yields the evaluation homomorphism $\ev_x$. That is, $\phi=\ev_x$, and in particular
+Now $\mathbb{K}[\x_1,\ldots, \x_n]$ is a polynomial algebra over $\mathbb{K}$, so by the universal property of [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) such a $\phi$ is uniquely determined by the images $x_i=\phi(\x_i)\in \mathbb{K}$ of each variable, and conversely any $x=(x_1,\ldots, x_n)\in \mathbb{K}^n$ yields the evaluation homomorphism $\ev_x$. That is, $\phi=\ev_x$, and in particular
 
 $$\ker\phi=(\x_1-x_1,\ldots, \x_n-x_n)$$
 

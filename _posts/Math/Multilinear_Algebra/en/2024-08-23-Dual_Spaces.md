@@ -74,7 +74,7 @@ Let an arbitrary $A$-linear map $u:M \rightarrow N$ be given. Then the abelian g
 
 $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 
-from [[Algebraic Structures] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8) is compatible with the right action of $A$. That is, $\Hom(u,A)$ is a right $A$-module homomorphism.
+from [\[Algebraic Structures\] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8) is compatible with the right action of $A$. That is, $\Hom(u,A)$ is a right $A$-module homomorphism.
 
 ::: Definition 4
 For an $A$-linear map $u:M \rightarrow N$ between left $A$-modules, the right $A$-module homomorphism defined above is called the *transpose* of $u$, and is denoted $u^t$.
@@ -90,7 +90,7 @@ $$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle,$$
 
 and conversely, if this equation holds for all $x\in M$ and all $\xi\in N^\ast$, then $u^t$ is uniquely determined.
 
-Moreover, for two $A$-linear maps $u,v:M \rightarrow N$ and arbitrary $\xi\in N^\ast$, $x\in M$, the equality $\xi((u+v)(x))=\xi(u(x))+\xi(v(x))$, together with the functoriality of $\Hom(-,A)$ and [[Algebraic Structures] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8), yields the following proposition.
+Moreover, for two $A$-linear maps $u,v:M \rightarrow N$ and arbitrary $\xi\in N^\ast$, $x\in M$, the equality $\xi((u+v)(x))=\xi(u(x))+\xi(v(x))$, together with the functoriality of $\Hom(-,A)$ and [\[Algebraic Structures\] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8), yields the following proposition.
 
 ::: Proposition 5
 The following hold.

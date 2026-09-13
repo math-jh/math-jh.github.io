@@ -171,7 +171,7 @@ An injective sheaf $\mathcal{F}$ is flasque.
 :::
 
 ::: Proof
-By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([[Homological Algebra] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1)) We now show that for any open sets $V \subseteq U \subseteq X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
+By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([\[Homological Algebra\] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1)) We now show that for any open sets $V \subseteq U \subseteq X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
 
 This map is not a sheaf morphism but a morphism of abelian groups, and since our tools are sheaf morphisms, we must recast this condition in terms of sheaf morphisms. To do this, we introduce the open embeddings
 
@@ -179,7 +179,7 @@ $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
 and the sheaves $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$ obtained by extension by zero. Here $\mathbb{Z}_U, \mathbb{Z}_V$ are constant sheaves, and since $V \subseteq U$ by assumption, there is a natural monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$.
 
-First, let us verify that $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$. Since extension by zero $i^U_!$ is left adjoint to restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$ ([[Topology] §Sheaves, ⁋Example 14](/en/math/topology/sheaves#ex14)),
+First, let us verify that $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$. Since extension by zero $i^U_!$ is left adjoint to restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$ ([\[Topology\] §Sheaves, ⁋Example 14](/en/math/topology/sheaves#ex14)),
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
@@ -237,7 +237,7 @@ Fix an injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^0
 
 $$K^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{I}^q)$$
 
-In this double complex, the horizontal differential $d_h$ is the Čech differential, and the vertical differential $d_v$ comes from the injective resolution. As we saw in [[Homological Algebra] §Spectral Sequences, ⁋Example 11](/en/math/homological_algebra/spectral_sequences#ex11), the two filtrations on the total complex $\Tot(K)^\bullet$
+In this double complex, the horizontal differential $d_h$ is the Čech differential, and the vertical differential $d_v$ comes from the injective resolution. As we saw in [\[Homological Algebra\] §Spectral Sequences, ⁋Example 11](/en/math/homological_algebra/spectral_sequences#ex11), the two filtrations on the total complex $\Tot(K)^\bullet$
 
 $$F_v^p\Tot(K)^\bullet,\qquad F_h^p\Tot(K)^\bullet$$
 
@@ -322,7 +322,7 @@ Then by [Proposition 14](#prop14){: data-relation="required" } the following hol
 The Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ is a flasque resolution of $\mathcal{F}$.
 :::
 
-The most essential advantage of this construction is that no choices are made in the process, so in some sense it is canonical. This can also be seen again from the functoriality of the Godement resolution: in general, to show functoriality in sheaf cohomology one must use the argument that a sheaf morphism at the $0$-th stage of an augmented complex induces sheaf morphisms at stages $i>0$ giving a chain map, and such chain maps are the same up to chain homotopy equivalence, hence induce the same map on cohomology. ([[Homological Algebra] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6)) However, for the Godement resolution, the maps are induced purely at the chain level without any equivalence of any kind. Nevertheless, the Godement resolution exactly captures the information of sheaf cohomology.
+The most essential advantage of this construction is that no choices are made in the process, so in some sense it is canonical. This can also be seen again from the functoriality of the Godement resolution: in general, to show functoriality in sheaf cohomology one must use the argument that a sheaf morphism at the $0$-th stage of an augmented complex induces sheaf morphisms at stages $i>0$ giving a chain map, and such chain maps are the same up to chain homotopy equivalence, hence induce the same map on cohomology. ([\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6)) However, for the Godement resolution, the maps are induced purely at the chain level without any equivalence of any kind. Nevertheless, the Godement resolution exactly captures the information of sheaf cohomology.
 
 To show this, we first prove more generally that a flasque resolution gives the same sheaf cohomology as an injective resolution. For this we first show the following.
 

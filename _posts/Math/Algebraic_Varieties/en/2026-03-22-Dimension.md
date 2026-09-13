@@ -19,7 +19,7 @@ Dimension is one of the most fundamental invariants in geometry. In algebraic ge
 
 ## Dimension as a Topological Space
 
-Since an algebraic variety is already a topological space, we may use [[Topology] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10) to define the dimension of $X$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
+Since an algebraic variety is already a topological space, we may use [\[Topology\] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10) to define the dimension of $X$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
 
 ::: Example 1
 For an infinite field $\mathbb{K}$, the closed subsets of $\mathbb{A}^1$ are $\mathbb{A}^1$ itself and the finite sets. Hence the longest chain is $\mathbb{A}^1 \supsetneq \{p\}$, which has length $1$, so $\mathbb{A}^1$ has dimension $1$ under this definition.
@@ -32,7 +32,7 @@ This definition has the virtue of being purely topological. However, it is not v
 On the other hand, we already know that an algebraic variety and the functions defined on it are intimately related. Thus it should come as no surprise that the algebraic structure of these functions carries information about the dimension. To pursue this viewpoint, it is best to begin with the case of *affine* varieties, where the coordinate ring $\mathbb{K}[X]$ is given explicitly.
 
 ::: Proposition 2
-For an affine variety $X$ over an algebraically closed field $\mathbb{K}$, the dimension of $X$ equals the Krull dimension of its coordinate ring $\mathbb{K}[X]$. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1))
+For an affine variety $X$ over an algebraically closed field $\mathbb{K}$, the dimension of $X$ equals the Krull dimension of its coordinate ring $\mathbb{K}[X]$. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1))
 :::
 
 ::: Proof
@@ -43,14 +43,14 @@ For an infinite field $\mathbb{K}$, we have $\dim \mathbb{A}^n = n$.
 :::
 
 ::: Proof
-[[Commutative Algebra] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)
+[\[Commutative Algebra\] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)
 :::
 
 On the other hand, for any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$, we know that the identity
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-holds. ([[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4)) Here the codimension of $\mathfrak{p}$ is defined in [[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) as the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$; geometrically, it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, this allows us to interpret ($\ast$) geometrically.
+holds. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4)) Here the codimension of $\mathfrak{p}$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) as the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$; geometrically, it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, this allows us to interpret ($\ast$) geometrically.
 
 ## Dimension of a Projective Variety
 
@@ -89,12 +89,12 @@ Since $f$ is irreducible, $(f)$ is a prime ideal, and hence the coordinate ring 
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-where the first equality follows from [[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4).
+where the first equality follows from [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4).
 :::
 
 ## Dimension via Function Fields
 
-Another way to define dimension is through the function field. The function field $\mathbb{K}(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([[Commutative Algebra] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3))
+Another way to define dimension is through the function field. The function field $\mathbb{K}(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3))
 
 ::: Proposition 7
 The dimension of a variety $X$ equals the transcendence degree of its function field $\mathbb{K}(X)$ over $\mathbb{K}$.

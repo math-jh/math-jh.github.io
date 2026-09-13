@@ -20,15 +20,15 @@ Despite the considerable geometric influence that line bundles exert, we have no
 
 ## Vector Bundles and Quasi-Coherent Sheaves
 
-As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([[Commutative Algebra] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3)) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
+As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3)) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
 
-Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [[Multilinear Algebra] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5), we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
+Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5), we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
 
 However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" }, if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" } to this gives a morphism from some variety $V(M)$ to $X$.
 
 Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to a maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and thus the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ over $x$ in $V(M) \rightarrow X$ consists of the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$.
 
-Algebraically, to obtain the coordinate ring defining this fiber, we must first ask what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to regard functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$; in general, $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([[Commutative Algebra] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4)) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply regard $\kappa(x)$ as $\mathbb{K}$.
+Algebraically, to obtain the coordinate ring defining this fiber, we must first ask what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to regard functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$; in general, $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([\[Commutative Algebra\] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4)) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply regard $\kappa(x)$ as $\mathbb{K}$.
 
 Now, from the above discussion, we know that we should consider the collection of $\kappa(x)$-valued functions on $\S_A(M^\vee)$, namely $\S_A(M^\vee)\otimes_A\kappa(x)$. Then, from the fact that the symmetric algebra commutes with tensor products, we obtain the identity
 
@@ -54,7 +54,7 @@ so that $M$ becomes the space of global sections of $\widetilde{M}$.
 
 These two definitions merely express the same object in different geometric languages. That is, for an affine variety $X$ with coordinate ring $A$ and a finitely generated projective $A$-module $M$, the total space corresponding to $\widetilde{M}$ is precisely $V(M)$, and the sheaf of sections of $V(M)$ is $\widetilde{M}$.
 
-In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general situations. For example, we define the following. ([[Commutative Algebra] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8))
+In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general situations. For example, we define the following. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8))
 
 ::: Definition 1
 An $\mathcal{O}_X$-module $\mathcal{F}$ on a general variety $X$ is called a *quasi-coherent sheaf* if there exists an affine open cover $\{U_i\}$ of $X$ and $A_i=\mathcal{O}_X(U_i)$-modules $M_i$ for each such that $\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$. If each $M_i$ is a finitely generated $A_i$-module, then $\mathcal{F}$ is called a *coherent sheaf*.
@@ -64,7 +64,7 @@ When dealing with quasi-coherent sheaves in general, one must be careful because
 
 From this perspective, a vector bundle can be thought of as a very special case of a (quasi-)coherent sheaf. Or conversely, when thinking of these (quasi-)coherent sheaves, one may regard them as very general forms of vector bundles. Specifically, a coherent sheaf can be thought of as an extension of the category of (finite rank) vector bundles so that it is closed under the operations of an abelian category, namely kernels, images, cokernels, etc., and intuitively it can be thought of as a vector bundle whose fiber dimension may vary from point to point. A quasi-coherent sheaf is what remains after removing the finite rank condition.
 
-Since the coordinate ring of a variety is Noetherian, by [[Commutative Algebra] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9) the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
+Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9) the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
 
 ## Canonical Bundle
 
@@ -77,13 +77,13 @@ The *cotangent bundle* $\Omega_X^1$ of a smooth variety $X$ is the dual vector b
 Then the construction we examined in the previous section is for the following.
 
 ::: Proposition 3
-For a smooth affine variety $X$ with coordinate ring $A$, $\Omega_X^1$ is the vector bundle corresponding to $\widetilde{\Omega_{A/\mathbb{K}}}$. ([[Commutative Algebra] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3))
+For a smooth affine variety $X$ with coordinate ring $A$, $\Omega_X^1$ is the vector bundle corresponding to $\widetilde{\Omega_{A/\mathbb{K}}}$. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3))
 :::
 
 ::: Proof
 For this, it will be convenient to rewrite the previously defined tangent bundle and cotangent bundle in the language of sheaves. First, let us define the tangent sheaf $\mathcal{T}_X$. For an open subset $U$ of $X$, we define the sheaf given by the collection of $\mathbb{K}$-derivations $\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$ on $\mathcal{O}_X(U)$ as the tangent sheaf.
 
-Our main tool is the universal property of Kähler differentials. ([[Commutative Algebra] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2)) That is, for any $A$-module $N$, we use the natural isomorphism
+Our main tool is the universal property of Kähler differentials. ([\[Commutative Algebra\] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2)) That is, for any $A$-module $N$, we use the natural isomorphism
 
 $$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 

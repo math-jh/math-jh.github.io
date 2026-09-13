@@ -19,7 +19,7 @@ We previously proved in [§Algebraic Structures, §§Quotient Structures](/en/ma
 
 ## Normal Subgroups
 
-Meanwhile, through [[Set Theory] §Equivalence Relations](/en/math/set_theory/equivalence_relations), we know that the following two are equivalent:
+Meanwhile, through [\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations), we know that the following two are equivalent:
 
 Giving a set $G$ an equivalence relation $R \iff$ Choosing for the set $G$ a partition $(G_i)_{i\in I}$
 {: .text-center}

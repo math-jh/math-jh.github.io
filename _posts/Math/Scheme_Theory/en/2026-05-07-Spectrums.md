@@ -26,7 +26,7 @@ In this post we define the spectrum, the most fundamental object in algebraic ge
 For a ring $A$, $\Spec A$ is the collection of all prime ideals of $A$, and we call it the *spectrum* of $A$.
 :::
 
-Now suppose a ring homomorphism $\phi: A \rightarrow B$ is given. Then by [[Algebraic Structures] §Field of Fractions, ⁋Proposition 10](/en/math/algebraic_structures/field_of_fractions#prop10), the function
+Now suppose a ring homomorphism $\phi: A \rightarrow B$ is given. Then by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 10](/en/math/algebraic_structures/field_of_fractions#prop10), the function
 
 $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\mathfrak{q})$$
 
@@ -67,7 +67,7 @@ Moreover, for two *ideals* $\mathfrak{a}_1\subseteq \mathfrak{a}_2$ of $A$, the 
 Fix a ring $A$ and its spectrum $\Spec A$. For any ideal $\mathfrak{a}$ of $A$ and its radical $\sqrt{\mathfrak{a}}$, we have $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$.
 :::
 ::: Proof
-Again, the inclusion $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$ is obvious from $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$. Conversely, for any $\mathfrak{p}\in Z(\mathfrak{a})$, using [[Commutative Algebra] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8) we have
+Again, the inclusion $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$ is obvious from $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$. Conversely, for any $\mathfrak{p}\in Z(\mathfrak{a})$, using [\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8) we have
 
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{q}$ a prime containing $\mathfrak{a}$}\mathfrak{q}\subseteq \mathfrak{p}$$
 
@@ -86,10 +86,10 @@ The following hold.
 ::: Proof
 1. It is obvious that a prime ideal $\mathfrak{p}$ containing $\mathfrak{a}$ or $\mathfrak{b}$ also contains the smaller ideal $\mathfrak{ab}$, so it suffices to show the reverse inclusion. Assume $\mathfrak{p}\supset \mathfrak{ab}$. If $\mathfrak{p}\not\supseteq \mathfrak{b}$, then we can find an element $b$ of $\mathfrak{b}$ with $b\not\in \mathfrak{p}$. On the other hand, for any $a\in \mathfrak{a}$, we have $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$, and by the preceding assumption $b\not\in \mathfrak{p}$, so necessarily $a\in \mathfrak{p}$ and therefore $\mathfrak{a}\subseteq \mathfrak{p}$ holds.
 2. This is obvious because $\sum \mathfrak{a}_i$ is defined as the smallest ideal containing all the ideals $\mathfrak{a}_i$.
-3. [[Commutative Algebra] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8).
+3. [\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8).
 :::
 
-Then by [[Topology] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), there exists a unique topology $\mathcal{T}$ having the $Z(\mathfrak{a})$ as closed sets, which makes $\Spec A$ a topological space.
+Then by [\[Topology\] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), there exists a unique topology $\mathcal{T}$ having the $Z(\mathfrak{a})$ as closed sets, which makes $\Spec A$ a topological space.
 
 ::: Definition 7
 The topology on $\Spec A$ defined above is called the *Zariski topology*.
@@ -103,7 +103,7 @@ Earlier, in [Proposition 2](#prop2){: data-relation="required" }, we saw that $\
 If we equip the spectrum $\Spec A$ of a ring $A$ with the topological structure of [Definition 7](#def7){: data-relation="required" }, then the functor $\Spec: \cRing^\op \rightarrow \Top$ of [Proposition 2](#prop2){: data-relation="required" } is a functor.
 :::
 ::: Proof
-What remains to be shown in addition to [Proposition 2](#prop2){: data-relation="required" } is that for any ring homomorphism $\phi: A \rightarrow B$, the map $\Spec \phi: \Spec B \rightarrow \Spec A$ is a *continuous* function. Hence it suffices to show that for any closed set of $\Spec A$, its preimage under $\Spec\phi$ is also a closed set in $\Spec B$. ([[Topology] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2))
+What remains to be shown in addition to [Proposition 2](#prop2){: data-relation="required" } is that for any ring homomorphism $\phi: A \rightarrow B$, the map $\Spec \phi: \Spec B \rightarrow \Spec A$ is a *continuous* function. Hence it suffices to show that for any closed set of $\Spec A$, its preimage under $\Spec\phi$ is also a closed set in $\Spec B$. ([\[Topology\] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2))
 
 On the other hand, since every closed set of $\Spec A$ is of the form $Z(\mathfrak{a})$ and every closed set of $\Spec B$ is of the form $Z(\mathfrak{b})$, to show this it suffices to show that for any ideal $\mathfrak{a}$ of $A$, there exists an ideal $\mathfrak{b}$ of $B$ satisfying the formula
 
@@ -124,7 +124,7 @@ $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfra
 and this proves that $(\Spec\phi)(\mathfrak{q})\in Z(\mathfrak{a})$, i.e. $\mathfrak{q}\in (\Spec\phi)^{-1}(Z(\mathfrak{a}))$.
 :::
 
-The two important ring homomorphisms we will use from now on are the quotient $\pi:A \rightarrow A/\mathfrak{a}$ and the localization $\epsilon: A \rightarrow S^{-1}A$. ([[Commutative Algebra] §Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11) and [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8))
+The two important ring homomorphisms we will use from now on are the quotient $\pi:A \rightarrow A/\mathfrak{a}$ and the localization $\epsilon: A \rightarrow S^{-1}A$. ([\[Commutative Algebra\] §Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11) and [\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8))
 
 ::: Proposition 9
 For the $\pi:A \rightarrow A/\mathfrak{a}$ and $\epsilon: A \rightarrow S^{-1}A$ defined above, the following hold.
@@ -134,7 +134,7 @@ For the $\pi:A \rightarrow A/\mathfrak{a}$ and $\epsilon: A \rightarrow S^{-1}A$
 3. If $S=\{1,f,f^2,\ldots\}$ for some $f\in A$, then the image of $\Spec \epsilon$ in $\Spec A$ is an open set.
 :::
 ::: Proof
-That $\Spec\pi$ and $\Spec\epsilon$ are injective in the first result follows from the two propositions [[Commutative Algebra] §Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11) and [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) mentioned above. Since the two maps are continuous by [Proposition 8](#prop8){: data-relation="required" }, what remains is that their inverses are continuous, i.e. that the two maps carry closed sets to closed sets onto their images. This is obtained from the following two formulas for any ideal $\mathfrak{b}\supseteq \mathfrak{a}$ and any ideal $J$ of $S^{-1}A$:
+That $\Spec\pi$ and $\Spec\epsilon$ are injective in the first result follows from the two propositions [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11) and [\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) mentioned above. Since the two maps are continuous by [Proposition 8](#prop8){: data-relation="required" }, what remains is that their inverses are continuous, i.e. that the two maps carry closed sets to closed sets onto their images. This is obtained from the following two formulas for any ideal $\mathfrak{b}\supseteq \mathfrak{a}$ and any ideal $J$ of $S^{-1}A$:
 
 $$(\Spec\pi)\left(Z_{A/\mathfrak{a}}(\mathfrak{b}/\mathfrak{a})\right)=Z_A(\mathfrak{b}),\qquad (\Spec\epsilon)\left(Z_{S^{-1}A}(J)\right)=Z_A(\epsilon^{-1}J)\cap \im(\Spec\epsilon)$$
 
@@ -151,10 +151,10 @@ Now for any $f\in A$, let $S_f=\{1,f,f^2,\ldots\}$ and define $A_f=S_f^{-1}A$. T
 
 $$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $k\geq 0$}\iff S_f\cap \mathfrak{p}=\emptyset$$
 
-and [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8). Moreover, that $D(f)$ has the same topological structure as $\Spec A_f$ also follows from the first result of [Proposition 9](#prop9){: data-relation="required" }.
+and [\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8). Moreover, that $D(f)$ has the same topological structure as $\Spec A_f$ also follows from the first result of [Proposition 9](#prop9){: data-relation="required" }.
 
 ::: Lemma 11
-The collection of principal open sets forms a base for $\Spec A$. ([[Topology] §Base of a Topological Space, ⁋Definition 1](/en/math/topology/topological_bases#def1))
+The collection of principal open sets forms a base for $\Spec A$. ([\[Topology\] §Base of a Topological Space, ⁋Definition 1](/en/math/topology/topological_bases#def1))
 :::
 ::: Proof
 For any open set $\Spec A \setminus Z(S)$, using the second result of [Lemma 6](#lem6){: data-relation="required" } we have the following computation:
@@ -164,7 +164,7 @@ $$\Spec A\setminus Z(S)=\Spec A\setminus Z\left(\sum_{f\in S} (f)\right)=\Spec A
 
 Then by a computation similar to this lemma we can verify that $D(fg)=D(f)\cap D(g)$. However, since this computation uses the first result of [Lemma 6](#lem6){: data-relation="required" }, it cannot in general be extended to infinite indices.
 
-Separately, we can show that $\Spec A$ always satisfies the condition of [[Topology] §Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1). However, many properties we usually expect from a compact space often also require the Hausdorff condition ([[Topology] §Compact Spaces, §§Compact Hausdorff Spaces](/en/math/topology/compact_spaces#compact-hausdorff-spaces)), and since the Zariski topology is generally not a Hausdorff space, we call this *quasi-compact*.
+Separately, we can show that $\Spec A$ always satisfies the condition of [\[Topology\] §Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1). However, many properties we usually expect from a compact space often also require the Hausdorff condition ([\[Topology\] §Compact Spaces, §§Compact Hausdorff Spaces](/en/math/topology/compact_spaces#compact-hausdorff-spaces)), and since the Zariski topology is generally not a Hausdorff space, we call this *quasi-compact*.
 
 ::: Lemma 12
 $\Spec A$ is a quasi-compact space as a topological space.
@@ -208,7 +208,7 @@ Then for any $S\in \mathcal{P}(A)$ and any $T\in \mathcal{P}(\Spec A)$,
 
 $$T\subseteq Z(S)\iff\text{$\mathfrak{p}\in Z(S)$ for all $\mathfrak{p}\in T$}\iff\text{$f\in \mathfrak{p}$ for all $f\in S$ and all $\mathfrak{p}\in T$}\iff S\subseteq I(T)$$
 
-so $(Z, I)$ defines an antitone Galois connection between $\mathcal{P}(A)$ and $\mathcal{P}(\Spec A)$. ([[Set Theory] §Filters and Ideals, Galois Correspondence, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6)) Therefore, the two formulas
+so $(Z, I)$ defines an antitone Galois connection between $\mathcal{P}(A)$ and $\mathcal{P}(\Spec A)$. ([\[Set Theory\] §Filters and Ideals, Galois Correspondence, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6)) Therefore, the two formulas
 
 $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 
@@ -255,13 +255,13 @@ $$Z(\mathfrak{p})=Z(I(\{\mathfrak{p}\}))=\cl(\{\mathfrak{p}\}).$$
 
 But a singleton is always irreducible and the closure of an irreducible subset is again irreducible, so $Z(\mathfrak{p})$ is irreducible. That is, $\mathfrak{p}$ is the generic point of $Z(\mathfrak{p})$.
 
-Conversely, we must show that for any irreducible closed subset $Y$, $I(Y)$ is a prime ideal. First, since $Y$ is a closed set, by [Theorem 15](#thm15){: data-relation="required" } and [Proposition 5](#prop5){: data-relation="required" } there exists a radical ideal $\mathfrak{a}$ such that $Y=Z(\mathfrak{a})$. Then it suffices to show that $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$ is prime. Here $Y$ is irreducible so it is non-empty, and therefore $\mathfrak{a}=I(Y)$ is contained in a prime ideal that is an element of $Y$, hence a proper ideal. ([[Topology] §Dimension, ⁋Definition 6](/en/math/topology/dimension#def6))
+Conversely, we must show that for any irreducible closed subset $Y$, $I(Y)$ is a prime ideal. First, since $Y$ is a closed set, by [Theorem 15](#thm15){: data-relation="required" } and [Proposition 5](#prop5){: data-relation="required" } there exists a radical ideal $\mathfrak{a}$ such that $Y=Z(\mathfrak{a})$. Then it suffices to show that $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$ is prime. Here $Y$ is irreducible so it is non-empty, and therefore $\mathfrak{a}=I(Y)$ is contained in a prime ideal that is an element of $Y$, hence a proper ideal. ([\[Topology\] §Dimension, ⁋Definition 6](/en/math/topology/dimension#def6))
 
 For this, suppose $fg\in \mathfrak{a}$, and consider the two open sets $D(f), D(g)$ of $\Spec A$; then
 
 $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 
-must be empty. But $D(f)\cap Y$ and $D(g)\cap Y$ are two open sets of the irreducible closed set $Y$, so for this to hold one of them must be empty. ([[Topology] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7)) On the other hand, for any $h\in A$, that $D(h)\cap Y=\emptyset$ is equivalent to every element of $Y$ containing $h$, i.e. $h\in I(Y)=\mathfrak{a}$. From this we know that $f\in \mathfrak{a}$ or $g\in \mathfrak{a}$ must hold, and therefore $\mathfrak{a}$ is a prime ideal.
+must be empty. But $D(f)\cap Y$ and $D(g)\cap Y$ are two open sets of the irreducible closed set $Y$, so for this to hold one of them must be empty. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7)) On the other hand, for any $h\in A$, that $D(h)\cap Y=\emptyset$ is equivalent to every element of $Y$ containing $h$, i.e. $h\in I(Y)=\mathfrak{a}$. From this we know that $f\in \mathfrak{a}$ or $g\in \mathfrak{a}$ must hold, and therefore $\mathfrak{a}$ is a prime ideal.
 :::
 
 In particular, for a prime ideal $\mathfrak{p}$, if there is no prime ideal $\mathfrak{q}\subsetneq \mathfrak{p}$, i.e. if $\mathfrak{p}$ is a *minimal* prime ideal, then $Z(\mathfrak{p})$ becomes maximal among irreducible closed subsets with respect to inclusion, that is, an irreducible component. From this we obtain the following.
@@ -276,7 +276,7 @@ $$Z(\mathfrak{q})\subseteq Z(\mathfrak{p})\iff \sqrt{\mathfrak{q}}\supseteq \sqr
 
 so this bijection reverses inclusion.
 
-On the other hand, by [[Topology] §Dimension, ⁋Definition 9](/en/math/topology/dimension#def9), an irreducible component of $\Spec A$ is a maximal irreducible subset, and since the closure of an irreducible set is again irreducible, these are always closed sets. Conversely, suppose a maximal $Y$ among irreducible closed subsets is given, and consider any irreducible subset $S$ containing $Y$. Then $\cl(S)$ is an irreducible closed subset containing $Y$, so by the maximality of $Y$ we have $\cl(S)=Y$, and therefore $S\subseteq Y$, i.e. $S=Y$. From the above, the irreducible components of $\Spec A$ are exactly the maximal ones among irreducible closed subsets with respect to inclusion.
+On the other hand, by [\[Topology\] §Dimension, ⁋Definition 9](/en/math/topology/dimension#def9), an irreducible component of $\Spec A$ is a maximal irreducible subset, and since the closure of an irreducible set is again irreducible, these are always closed sets. Conversely, suppose a maximal $Y$ among irreducible closed subsets is given, and consider any irreducible subset $S$ containing $Y$. Then $\cl(S)$ is an irreducible closed subset containing $Y$, so by the maximality of $Y$ we have $\cl(S)=Y$, and therefore $S\subseteq Y$, i.e. $S=Y$. From the above, the irreducible components of $\Spec A$ are exactly the maximal ones among irreducible closed subsets with respect to inclusion.
 
 Now since the above bijection reverses inclusion, it pairs the minimal ones among prime ideals, i.e. the minimal prime ideals, with the maximal ones among irreducible closed subsets, i.e. the irreducible components of $\Spec A$.
 :::

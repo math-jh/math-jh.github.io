@@ -14,7 +14,7 @@ translated_at: 2026-06-03T04:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-03T04:30:02+00:00
 ---
-Now we examine how to define a topology on a quotient set. ([[Set Theory] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4))
+Now we examine how to define a topology on a quotient set. ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4))
 
 ## Locally closed subspace
 
@@ -49,7 +49,7 @@ In particular, from condition 2, if a continuous function $f:X\rightarrow Y$ and
 Let a topological space $X$ be given, and let $R$ be an equivalence relation on the set $X$. Then the *quotient space* of $X$ by $R$ means the space $X/R$ equipped with the final topology defined by the canonical projection $p:X\rightarrow X/R$.
 :::
 
-By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5){: data-relation="required" }, the open sets in $X/R$ are exactly those sets $U$ such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5), we can verify that the open sets on $X/R$ correspond bijectively to the open sets of $X$ that are *saturated* with respect to $R$.
+By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5){: data-relation="required" }, the open sets in $X/R$ are exactly those sets $U$ such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5), we can verify that the open sets on $X/R$ correspond bijectively to the open sets of $X$ that are *saturated* with respect to $R$.
 
 Meanwhile, by [§Initial and Final Topology, ⁋Proposition 6](/en/math/topology/initial_and_final_topology#prop6){: data-relation="required" }, the following holds.
 
@@ -61,7 +61,7 @@ Let a topological space $X$, a quotient space $X/R$, and the canonical projectio
 Consider a topological space $X$ and two equivalence relations $R,S$ defined on $X$. If $S$ is a finer equivalence relation than $R$, then the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism for the equivalence relation $R/S$ defined on $X/S$.
 :::
 ::: Proof
-That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [[Set Theory] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4){: data-relation="required" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
+That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4){: data-relation="required" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
 
 Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and this function is the composition of two continuous functions
 
@@ -70,7 +70,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 so it is continuous.
 :::
 
-Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([[Set Theory] §Equivalence Relations](/en/math/set_theory/equivalence_relations)) Then we may consider the canonical decomposition of $f$
+Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations)) Then we may consider the canonical decomposition of $f$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 

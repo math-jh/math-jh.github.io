@@ -14,7 +14,7 @@ translated_at: 2026-07-14T01:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-14T01:00:03+00:00
 ---
-Given a group $H$ and a ring $A$, we have defined the group ring $AH$. ([[Algebraic Structures] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) Now fix an $AH$-module $M$, and define $M^H$ as the set
+Given a group $H$ and a ring $A$, we have defined the group ring $AH$. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) Now fix an $AH$-module $M$, and define $M^H$ as the set
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}.$$
 

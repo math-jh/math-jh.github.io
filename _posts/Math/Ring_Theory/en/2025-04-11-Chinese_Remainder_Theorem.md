@@ -18,7 +18,7 @@ The Chinese remainder theorem is a classical result in number theory. Its essenc
 
 $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z},\qquad \text{$m,n$ coprime}$$
 
-([[Number Theory] §Chinese Remainder Theorem, ⁋Theorem 1](/en/math/number_theory/chinese_remainder_theorem#thm1)). In other words, the remainder of an integer upon division by $mn$ is completely determined by its remainders upon division by $m$ and by $n$, and the goal of this post is to extend this to an arbitrary ring $A$.
+([\[Number Theory\] §Chinese Remainder Theorem, ⁋Theorem 1](/en/math/number_theory/chinese_remainder_theorem#thm1)). In other words, the remainder of an integer upon division by $mn$ is completely determined by its remainders upon division by $m$ and by $n$, and the goal of this post is to extend this to an arbitrary ring $A$.
 
 Briefly, this generalization first replaces $m\mathbb{Z}$ and $n\mathbb{Z}$ by ideals of $A$, and interprets $mn\mathbb{Z}$ as the intersection of these two ideals. However, this generalization does not work for arbitrary ideals; a condition corresponding to $m,n$ being coprime is also necessary. The appropriate condition on ideals is called *comaximal*, and the generalized theorem in ring theory states that for pairwise comaximal ideals $\mathfrak{a}_i$, the ring isomorphism
 
@@ -42,7 +42,7 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots +xx_ny_n$$
 and since $xx_i\in \mathfrak{a}$, we have $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$. A similar argument holds when multiplying by $x$ on the right, so $\mathfrak{a}\mathfrak{b}$ is a two-sided ideal of $A$.
 
 ::: Proposition 2
-With multiplication defined as above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([[Algebraic Structures] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)). Moreover, the distributive laws
+With multiplication defined as above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)). Moreover, the distributive laws
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
@@ -81,7 +81,7 @@ Here the condition $\mathfrak{a}+\mathfrak{b}=A$ is equivalent to the identity e
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-which corresponds exactly to the existence of a Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([[Number Theory] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of coprime integers $m,n$ are comaximal.
+which corresponds exactly to the existence of a Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of coprime integers $m,n$ are comaximal.
 
 On the other hand, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$, which fails in general, does hold when the two ideals are comaximal. The following result is what we need.
 
