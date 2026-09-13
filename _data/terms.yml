@@ -832,7 +832,7 @@ A:
   primary: en
   defs:
   - label: '[스킴] §스킴의 층 코호몰로지'
-    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17
+    url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes#def18
 - id: arrow
   en: arrow
   ko: 화살표
@@ -9662,10 +9662,10 @@ I:
   ko: 동형(인)
   primary: en
   defs:
-  - label: '[스킴] §점함자'
-    url: /ko/math/scheme_theory/functor_of_points#def4
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  - label: '[스킴] §점함자'
+    url: /ko/math/scheme_theory/functor_of_points#def4
 - id: isomorphism
   en: isomorphism
   ko: 동형사상
@@ -14549,7 +14549,7 @@ P:
   ko: 진부분가군
   primary: en
   defs:
-  - label: '[환론] §Semisimple module'
+  - label: '[환론] §반단순가군'
     url: /ko/math/ring_theory/semisimple_modules
 - id: proper_subrepresentation
   en: proper subrepresentation
@@ -16395,7 +16395,7 @@ S:
   ko: 반단순 가군
   primary: en
   defs:
-  - label: '[환론] §Semisimple module'
+  - label: '[환론] §반단순가군'
     url: /ko/math/ring_theory/semisimple_modules
   see:
   - label: Simple module
