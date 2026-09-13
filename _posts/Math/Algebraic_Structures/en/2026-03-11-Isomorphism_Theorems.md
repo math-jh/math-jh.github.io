@@ -36,7 +36,7 @@ we see from the following equation
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-that $x\sim y\iff f(x)=f(y)$. That is, $\sim$ is nothing other than the equivalence relation defined by the function $f$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-relation="weak" }), and from the definition of a quotient group, the canonical map $p:G\rightarrow G/\ker f$ is a homomorphism. Now, considering the canonical decomposition of $f$, we obtain a bijection $h:G/\ker f\rightarrow\im f$. Then for any $[x], [x']\in G/\ker f$, since
+that $x\sim y\iff f(x)=f(y)$. That is, $\sim$ is nothing other than the equivalence relation defined by the function $f$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-relation="requires-review" }), and from the definition of a quotient group, the canonical map $p:G\rightarrow G/\ker f$ is a homomorphism. Now, considering the canonical decomposition of $f$, we obtain a bijection $h:G/\ker f\rightarrow\im f$. Then for any $[x], [x']\in G/\ker f$, since
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
