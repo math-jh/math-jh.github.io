@@ -613,6 +613,35 @@ class RelationTagTest(unittest.TestCase):
             self.assertNotIn("data-relation", item["source_context"])
             self.assertNotIn("data-relation", item["target_context"])
 
+    def test_verify_excerpts_contain_their_link_after_many_stripped_tags(self) -> None:
+        body = "---\ntitle: t\n---\n\n" + "".join(
+            f'문단 {i}: [링크 {i}](/ko/math/a){{: data-relation="required" }} 를 쓴다.\n\n'
+            for i in range(40)
+        )
+        self.path.write_text(body, encoding="utf-8")
+        post = SimpleNamespace(lang="ko", published=True, path=self.path)
+        with (
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "by_permalink", return_value=post),
+        ):
+            tagged = dc.extract_links(self.path, body, tagged=True)
+            stripped, view = dc.stripped_view([self.path], {self.path: body}, tagged)
+            dc._TEXT_OVERRIDE.update(stripped)
+            try:
+                items = dc.prompt_items(view, True)
+            finally:
+                dc._TEXT_OVERRIDE.clear()
+
+        self.assertEqual([x["id"] for x in items], [x.ident for x in tagged])
+        for item in items:
+            self.assertIn(item["link"], item["source_context"])
+
+    def test_offset_between_paragraphs_takes_the_preceding_one(self) -> None:
+        text = "---\ntitle: t\n---\n\n첫째.\n\n\n\n둘째.\n"
+        gap = text.index("첫째.") + len("첫째.") + 2
+
+        self.assertEqual(dc.paragraph_context(text, gap, 0), "첫째.")
+
 
 class VerifierRoutingTest(unittest.TestCase):
     def test_each_model_is_checked_by_a_different_one(self) -> None:

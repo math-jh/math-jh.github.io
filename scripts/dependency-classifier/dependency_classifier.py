@@ -494,6 +494,21 @@ def mark_for_review(text: str, links: list[Link]) -> str:
     return text
 
 
+def stripped_view(
+    paths: list[Path], originals: dict[Path, str], links: list[Link],
+) -> tuple[dict[Path, str], list[Link]]:
+    """The unit as the verifier sees it: tags of ``links`` stripped, links re-read.
+
+    Offsets of ``links`` point into the tagged originals, and every stripped tag
+    before a link shifts it, so excerpts are cut from the links re-extracted from
+    the stripped text.  Idents are stable across the strip.
+    """
+    texts = {p: strip_relations(originals[p], [x for x in links if x.source == p])
+             for p in paths}
+    by_ident = {x.ident: x for p in paths for x in extract_links(p, texts[p])}
+    return texts, [by_ident[x.ident] for x in links]
+
+
 def paragraph_context(text: str, offset: int, radius: int) -> str:
     body_start = 0
     if text.startswith("---\n"):
@@ -503,7 +518,10 @@ def paragraph_context(text: str, offset: int, radius: int) -> str:
     chunks = []
     for m in re.finditer(r"\S(?:.*?\S)?(?=\n\s*\n|\Z)", text[body_start:], re.DOTALL):
         chunks.append((body_start + m.start(), body_start + m.end(), m.group(0)))
-    idx = next((i for i, (a, b, _) in enumerate(chunks) if a <= offset <= b), 0)
+    idx = next((i for i, (a, b, _) in enumerate(chunks) if a <= offset <= b), None)
+    if idx is None:
+        # An offset in the blank lines between paragraphs belongs to the one before.
+        idx = max((i for i, (a, _b, _t) in enumerate(chunks) if a <= offset), default=0)
     lo, hi = max(0, idx - radius), min(len(chunks), idx + radius + 1)
     return "\n\n".join(c[2] for c in chunks[lo:hi])[:7000]
 
@@ -559,6 +577,7 @@ def prompt_items(links: list[Link], wide: bool, full: bool = False) -> list[dict
 
 FIRST_PROMPT = """You classify semantic relations of internal links in a mathematics blog.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward","confidence":"high|medium","reason":"short"}]}.
+Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
 
 Definitions are about the source article as a learning unit:
 - required: understanding the linked target is genuinely needed before the source passage/article. This includes a cited proof or construction whose substance the source actually reuses.
@@ -576,6 +595,7 @@ ITEMS:
 
 REVIEW_PROMPT = """You are the independent final reviewer for ambiguous dependency-link classifications in a mathematics blog. You have wider excerpts than the first model.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
+Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
 
 Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
 
@@ -586,6 +606,7 @@ ITEMS:
 
 VERIFY_PROMPT = """You classify semantic relations of internal links in a mathematics blog. Your classification is an independent second opinion: another model has already judged these links, you are deliberately not shown its verdict, and your answer is compared against it. Judge the links on the excerpts alone.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
+Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
 
 Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous only when the excerpts leave the link's role genuinely undecidable. Do not use tools and do not alter files.
 
@@ -1183,10 +1204,10 @@ def run_verify_pass(
 ) -> int:
     key = unit_key(paths)
     decided_by = entry.get("decided_by", {}) if entry.get("hash") == fingerprint else {}
-    _TEXT_OVERRIDE.update(
-        {p: strip_relations(originals[p], [x for x in links if x.source == p]) for p in paths})
+    stripped, view = stripped_view(paths, originals, links)
+    _TEXT_OVERRIDE.update(stripped)
     try:
-        verdicts = verify(links, decided_by)
+        verdicts = verify(view, decided_by)
     finally:
         _TEXT_OVERRIDE.clear()
     disputed = [(link, str(verdicts[link.ident]["relation"]).lower()) for link in links
