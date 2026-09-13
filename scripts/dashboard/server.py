@@ -14,7 +14,8 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
     POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (사람이 단 태그를 확인)
 
-레포에는 아무것도 쓰지 않는다 — 쓰기는 세 상태 파일뿐이다:
+보류 해소 시 확정된 링크 IAL에 `reviewed=""`를 추가한다. 그 외의 쓰기는
+세 상태 파일뿐이다:
 ~/.local/state/blog_dashboard_kotypo.json · …_review.json ·
 dependency-classifier-holds.json.
 """
@@ -24,6 +25,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -55,6 +57,9 @@ try:
     import index_ranking
 except Exception:
     index_ranking = None
+
+sys.path.insert(0, f"{ROOT}/scripts/lib")
+from blog_file_lock import try_acquire_file_locks
 
 # KO-TYPOS 파싱도 워커와 **같은 모듈**을 쓴다. 복제해 두면 한쪽만 늙는다 —
 # 2026-08-15 실측: 대시보드 사본에 legacy fallback 이 없어 워커가 보는 8건 중
@@ -493,6 +498,8 @@ def sec_translation():
 
 # 사람이 손으로 단 관계 태그. 링크 바로 뒤에 붙은 IAL 안에만 인정한다.
 _REL_IAL = re.compile(r'\{:[^}\n]*data-relation\s*=\s*["\'](required|weak|forward)["\']')
+_ANY_IAL = re.compile(r'^\{:[^}\n]*\}')
+_REVIEWED_ATTR = re.compile(r'\breviewed\s*=\s*["\']["\']')
 
 
 def load_holds():
@@ -539,6 +546,56 @@ def hold_verdict(item):
         seen.append(m.group(1))
         pos = at + len(markup)
     return seen[0]
+
+
+def mark_hold_reviewed(item, *, content_lock_held=False):
+    """Add ``reviewed=""`` to every matching resolved-link IAL atomically."""
+    rel = item.get("path") or ""
+    full = os.path.normpath(os.path.join(ROOT, rel))
+    if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+        raise ValueError("bad path")
+    markup = item.get("markup") or ""
+    if not markup:
+        raise ValueError("missing link markup")
+    lease = None if content_lock_held else try_acquire_file_locks([full])
+    if not content_lock_held and lease is None:
+        raise RuntimeError("다른 워커가 이 글을 수정 중이다")
+    try:
+        with open(full, encoding="utf-8") as f:
+            text = f.read()
+        source_mode = os.stat(full).st_mode & 0o7777
+        edits, pos = [], 0
+        while True:
+            at = text.find(markup, pos)
+            if at < 0:
+                break
+            start = at + len(markup)
+            ial = _ANY_IAL.match(text[start:])
+            if ial is None:
+                raise ValueError("확정한 링크의 IAL을 찾지 못했다")
+            raw = ial.group(0)
+            if not _REVIEWED_ATTR.search(raw):
+                edits.append((start, start + len(raw), raw[:-1].rstrip() + ' reviewed="" }'))
+            pos = start + len(raw)
+        if not edits:
+            return
+        for start, end, replacement in reversed(edits):
+            text = text[:start] + replacement + text[end:]
+        fd, tmp = tempfile.mkstemp(prefix=".link-reviewed.", suffix=".tmp",
+                                   dir=os.path.dirname(full))
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(text)
+            os.chmod(tmp, source_mode)
+            os.replace(tmp, full)
+        finally:
+            try:
+                os.unlink(tmp)
+            except FileNotFoundError:
+                pass
+    finally:
+        if lease is not None:
+            lease.release()
 
 
 def sec_link_audit():
@@ -1164,27 +1221,48 @@ class Handler(BaseHTTPRequestHandler):
         except Exception as e:  # noqa: BLE001
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
-        with open(HOLDS_LOCK, "w") as lock:
-            fcntl.flock(lock, fcntl.LOCK_EX)
-            holds = load_holds()
-            item = holds["held"].get(ident)
-            if item is None:
-                return self._send(200, json.dumps(
-                    {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
-            verdict = hold_verdict(item)
-            if verdict is None:
-                return self._send(200, json.dumps(
-                    {"ok": False, "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
-                    ensure_ascii=False))
-            holds["held"].pop(ident)
-            holds["settled"][ident] = {
-                "path": item.get("path", ""), "target": item.get("target", ""),
-                "relation": verdict, "at": int(time.time()),
-            }
-            tmp = f"{HOLDS_STATE}.tmp"
-            with open(tmp, "w", encoding="utf-8") as f:
-                json.dump(holds, f, ensure_ascii=False, indent=2)
-            os.replace(tmp, HOLDS_STATE)
+        initial = load_holds()["held"].get(ident)
+        if initial is None:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
+        rel = initial.get("path") or ""
+        full = os.path.normpath(os.path.join(ROOT, rel))
+        if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "bad path"}, ensure_ascii=False))
+        content_lease = try_acquire_file_locks([full])
+        if content_lease is None:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "다른 워커가 이 글을 수정 중이다"}, ensure_ascii=False))
+        try:
+            with open(HOLDS_LOCK, "w") as lock:
+                fcntl.flock(lock, fcntl.LOCK_EX)
+                holds = load_holds()
+                item = holds["held"].get(ident)
+                if item is None:
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
+                verdict = hold_verdict(item)
+                if verdict is None:
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
+                        ensure_ascii=False))
+                try:
+                    mark_hold_reviewed(item, content_lock_held=True)
+                except Exception as e:  # noqa: BLE001
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                holds["held"].pop(ident)
+                holds["settled"][ident] = {
+                    "path": item.get("path", ""), "target": item.get("target", ""),
+                    "relation": verdict, "at": int(time.time()),
+                }
+                tmp = f"{HOLDS_STATE}.tmp"
+                with open(tmp, "w", encoding="utf-8") as f:
+                    json.dump(holds, f, ensure_ascii=False, indent=2)
+                os.replace(tmp, HOLDS_STATE)
+        finally:
+            content_lease.release()
         _cache["ts"] = 0
         return self._send(200, json.dumps({"ok": True, "relation": verdict},
                                           ensure_ascii=False))

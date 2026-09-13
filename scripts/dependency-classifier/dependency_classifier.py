@@ -29,6 +29,12 @@ Codex review chain.  A single-provider assignment has no fallback, so a unit
 whose verifier is closed by the quota gate is left for a later tick instead of
 waiting on a provider slot.
 
+An empty ``reviewed=""`` IAL attribute is the durable completion marker.  Its
+presence means the semantic relation has already been reviewed, whether by the
+worker or by the author while writing the post.  It stays attached through link
+renames, moves, and proposition-number changes; removing it is the explicit way
+to request another verification pass.
+
 Disagreement is not resolved automatically.  When the verifier returns a
 different relation, or ambiguous, the relation value is **replaced** with the
 marker ``requires-review`` and the link is held in
@@ -149,6 +155,8 @@ RELATION_RE = re.compile(r'\bdata-relation\s*=\s*["\'](required|weak|forward)["\
 REVIEW_RELATION = "requires-review"
 REVIEW_RE = re.compile(r'\bdata-relation\s*=\s*["\']requires-review["\']')
 RELATION_ATTR_RE = re.compile(r'\bdata-relation\s*=\s*["\'][^"\']*["\']')
+REVIEWED_RE = re.compile(r'\breviewed\s*=\s*["\']["\']')
+REVIEWED_ATTR_RE = re.compile(r'\s*\breviewed\s*=\s*["\'][^"\']*["\']')
 
 
 @dataclass
@@ -164,6 +172,7 @@ class Link:
     ial_end: int | None
     line: int = 0
     relation: str | None = None
+    reviewed: bool = False
 
     def where(self) -> str:
         """`path:line` as the editor and the dashboard count Markdown lines."""
@@ -437,6 +446,7 @@ def extract_links(
         ial_end = match.end() + ial.end() if ial else None
         found = RELATION_RE.search(ial.group(1)) if ial else None
         marked = bool(ial and REVIEW_RE.search(ial.group(1)))
+        reviewed = bool(ial and REVIEWED_RE.search(ial.group(1)))
         ordinal += 1
         side = "review" if marked else "tagged" if found else "open"
         if side != ("review" if review else "tagged" if tagged else "open"):
@@ -448,6 +458,7 @@ def extract_links(
             target=target, ial_start=ial_start, ial_end=ial_end,
             line=text.count("\n", 0, match.start()) + 1,
             relation=found.group(1) if found else None,
+            reviewed=reviewed,
         ))
     return result
 
@@ -487,8 +498,46 @@ def mark_for_review(text: str, links: list[Link]) -> str:
         if link.ial_start is None or link.ial_end is None:
             continue
         ial = text[link.ial_start:link.ial_end]
+        ial = REVIEWED_ATTR_RE.sub("", ial)
         edits.append((link.ial_start, link.ial_end,
                       RELATION_ATTR_RE.sub(marker, ial, count=1)))
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    return text
+
+
+def mark_reviewed(text: str, links: list[Link]) -> str:
+    """Add the durable empty review marker to relation-tagged links."""
+    edits = []
+    for link in links:
+        if link.reviewed or link.ial_start is None or link.ial_end is None:
+            continue
+        ial = text[link.ial_start:link.ial_end]
+        replacement = ial[:-1].rstrip() + ' reviewed="" }'
+        edits.append((link.ial_start, link.ial_end, replacement))
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    return text
+
+
+def apply_review_outcome(
+    text: str, links: list[Link], disputed: set[str],
+) -> str:
+    """Stamp agreements and turn disagreements into unreviewed holds in one edit."""
+    marker = f'data-relation="{REVIEW_RELATION}"'
+    edits = []
+    for link in links:
+        if link.ial_start is None or link.ial_end is None:
+            continue
+        ial = text[link.ial_start:link.ial_end]
+        if link.ident in disputed:
+            replacement = REVIEWED_ATTR_RE.sub("", ial)
+            replacement = RELATION_ATTR_RE.sub(marker, replacement, count=1)
+        elif link.reviewed:
+            continue
+        else:
+            replacement = ial[:-1].rstrip() + ' reviewed="" }'
+        edits.append((link.ial_start, link.ial_end, replacement))
     for start, end, replacement in sorted(edits, reverse=True):
         text = text[:start] + replacement + text[end:]
     return text
@@ -992,11 +1041,13 @@ def iter_units() -> list[list[Path]]:
 def select_unit(
     state: dict, updates: dict[str, dict],
 ) -> tuple[str, list[Path], dict[Path, str], list[Link], FileLockSet] | None:
-    """Take the first unit with work, and say which of the two stages it is in.
+    """Take the first unit with work and return first, stamp, or verify.
 
     Classifying comes first: a unit is verified only once no link in it is
     waiting for a relation.  Links parked for a human ruling are invisible to
-    both stages, so a disputed link neither reclassifies nor re-disputes.
+    every stage.  Links carrying ``reviewed=""`` are permanently complete.
+    ``stamp`` migrates a legacy state-only verification to the inline marker
+    without spending another model call.
     """
     now = time.time()
     parked = parked_idents()
@@ -1029,11 +1080,6 @@ def select_unit(
                     lease.release()
                     continue
                 return "first", paths, texts, links, lease
-            if verified_at_content(entry, fingerprint, verify_fingerprint):
-                if "verified_content_hash" not in entry:
-                    updates[key] = {**entry, "verified_content_hash": verify_fingerprint}
-                lease.release()
-                continue
             tagged = [p_link for p in paths
                       for p_link in extract_links(p, texts[p], tagged=True)
                       if p_link.ident not in parked]
@@ -1046,14 +1092,29 @@ def select_unit(
                 }
                 lease.release()
                 continue
+            pending_review = [link for link in tagged if not link.reviewed]
+            if not pending_review:
+                updates[key] = {
+                    **cleared(entry), "status": "done", "hash": fingerprint,
+                    "verified_hash": fingerprint,
+                    "verified_content_hash": verify_fingerprint,
+                    "verified_at": entry.get("verified_at", int(now)),
+                    "verify": entry.get("verify", "author-reviewed"),
+                    "reviewed_marker_version": 1,
+                }
+                lease.release()
+                continue
+            if (not entry.get("reviewed_marker_version")
+                    and verified_at_content(entry, fingerprint, verify_fingerprint)):
+                return "stamp", paths, texts, pending_review, lease
             decided_by = entry.get("decided_by", {}) if at_judged_content else {}
-            chains = {verifier_chain(decided_by.get(link.ident)) for link in tagged}
+            chains = {verifier_chain(decided_by.get(link.ident)) for link in pending_review}
             if not all(any(provider_available(p) for p in chain) for chain in chains):
                 # A cross-model verifier has no stand-in.  Leave the unit for a
                 # tick where its quota is open instead of waiting on a slot.
                 lease.release()
                 continue
-            return "verify", paths, texts, tagged, lease
+            return "verify", paths, texts, pending_review, lease
         except Exception:
             lease.release()
             raise
@@ -1096,7 +1157,13 @@ def backlog_complete() -> bool:
         entry = state.get("units", {}).get(key, {})
         raw_hash = sha("\0".join(texts[p] for p in paths))
         content_hash = verification_fingerprint(paths, texts, parked)
-        if not verified_at_content(entry, raw_hash, content_hash):
+        pending_review = [
+            link for p in paths for link in extract_links(p, texts[p], tagged=True)
+            if link.ident not in parked and not link.reviewed
+        ]
+        legacy_complete = (not entry.get("reviewed_marker_version")
+                           and verified_at_content(entry, raw_hash, content_hash))
+        if pending_review and not legacy_complete:
             return False
     return True
 
@@ -1213,17 +1280,26 @@ def run_verify_pass(
     disputed = [(link, str(verdicts[link.ident]["relation"]).lower()) for link in links
                 if str(verdicts[link.ident]["relation"]).lower() != link.relation]
     if not disputed:
-        content_hash = verification_fingerprint(paths, originals, parked_idents())
+        guard_unchanged(paths, originals)
+        rendered = {p: apply_review_outcome(
+            originals[p], [x for x in links if x.source == p], set()) for p in paths}
+        publish(paths, originals, rendered, commit=commit,
+                detail=f"{paths[0].stem} 링크 {len(links)}건 검토 완료")
+        fingerprint = sha("\0".join(rendered[p] for p in paths))
+        content_hash = verification_fingerprint(paths, rendered, parked_idents())
         merge_unit_states({key: {
-            **cleared(entry), "verified_hash": fingerprint,
+            **cleared(entry), "status": "done", "hash": fingerprint,
+            "verified_hash": fingerprint,
             "verified_content_hash": content_hash,
             "verified_at": int(time.time()), "verify": "agreed",
+            "reviewed_marker_version": 1,
         }})
         log(f"verified {key}: {len(links)} relation(s) confirmed")
         return 0
     guard_unchanged(paths, originals)
-    rendered = {p: mark_for_review(originals[p], [x for x, _ in disputed if x.source == p])
-                for p in paths}
+    disputed_ids = {link.ident for link, _ in disputed}
+    rendered = {p: apply_review_outcome(
+        originals[p], [x for x in links if x.source == p], disputed_ids) for p in paths}
     publish(paths, originals, rendered, commit=commit,
             detail=f"{paths[0].stem} 링크 {len(disputed)}건 재검토 보류")
     now = int(time.time())
@@ -1250,6 +1326,7 @@ def run_verify_pass(
         **cleared(entry), "hash": settled_hash, "verified_hash": settled_hash,
         "verified_content_hash": content_hash,
         "verified_at": now, "verify": "disputed", "checked_at": now,
+        "reviewed_marker_version": 1,
     }})
     for line in lines:
         log("disputed " + line)
@@ -1260,6 +1337,29 @@ def run_verify_pass(
         + (f"\n… 외 {len(lines) - 8}건" if len(lines) > 8 else "")
         + "\n\n눌러서 대시보드 감사 → 의존성 링크 보류에서 판정.",
     )
+    return 0
+
+
+def run_stamp_pass(
+    paths: list[Path], originals: dict[Path, str], links: list[Link],
+    entry: dict, *, commit: bool,
+) -> int:
+    """Migrate a completed legacy verification from state into each link's IAL."""
+    key = unit_key(paths)
+    guard_unchanged(paths, originals)
+    rendered = {p: mark_reviewed(
+        originals[p], [x for x in links if x.source == p]) for p in paths}
+    publish(paths, originals, rendered, commit=commit,
+            detail=f"{paths[0].stem} 기존 검토 링크 {len(links)}건 마커 이관")
+    fingerprint = sha("\0".join(rendered[p] for p in paths))
+    merge_unit_states({key: {
+        **cleared(entry), "status": "done", "hash": fingerprint,
+        "verified_hash": fingerprint,
+        "verified_content_hash": verification_fingerprint(
+            paths, rendered, parked_idents()),
+        "reviewed_marker_version": 1,
+    }})
+    log(f"stamped {key}: {len(links)} legacy reviewed link(s)")
     return 0
 
 
@@ -1292,8 +1392,14 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
             return 0
         fingerprint = sha("\0".join(originals[p] for p in paths))
         entry = state.get("units", {}).get(key, {})
-        runner = run_first_pass if stage == "first" else run_verify_pass
+        runner = {
+            "first": run_first_pass,
+            "verify": run_verify_pass,
+        }.get(stage)
         try:
+            if stage == "stamp":
+                return run_stamp_pass(paths, originals, links, entry, commit=commit)
+            assert runner is not None
             return runner(paths, originals, links, entry, fingerprint, commit=commit)
         except Exception as exc:
             merge_unit_states({key: {

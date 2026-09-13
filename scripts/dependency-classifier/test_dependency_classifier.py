@@ -274,6 +274,48 @@ class ParallelStateTest(unittest.TestCase):
 
 
 class SelectionTest(unittest.TestCase):
+    def test_reviewed_attribute_is_the_durable_completion_marker(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "_posts/Math/Test/ko/post.md"
+            path.parent.mkdir(parents=True)
+            text = '[Done](#p){: data-relation="required" reviewed="" }\n'
+            path.write_text(text, encoding="utf-8")
+            post = SimpleNamespace(lang="ko", published=True, path=path)
+            updates: dict[str, dict] = {}
+            with (
+                patch.object(dc, "ROOT", root),
+                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+                patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "en_counterpart", return_value=None),
+                patch.object(dc, "dirty_paths", return_value=[]),
+            ):
+                links = dc.extract_links(path, text, tagged=True)
+                selected = dc.select_unit({}, updates)
+
+            self.assertEqual(len(links), 1)
+            self.assertTrue(links[0].reviewed)
+            self.assertIsNone(selected)
+            self.assertEqual(next(iter(updates.values()))["reviewed_marker_version"], 1)
+
+    def test_review_outcome_stamps_agreement_and_clears_disagreement(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "_posts/Math/Test/ko/post.md"
+            path.parent.mkdir(parents=True)
+            text = (
+                '[A](#a){: data-relation="required" }\n'
+                '[B](#b){: data-relation="weak" reviewed="" }\n'
+            )
+            path.write_text(text, encoding="utf-8")
+            with patch.object(dc, "ROOT", root):
+                links = dc.extract_links(path, text, tagged=True)
+                rendered = dc.apply_review_outcome(text, links, {links[1].ident})
+
+            self.assertIn('data-relation="required" reviewed=""', rendered)
+            self.assertIn('data-relation="requires-review"', rendered)
+            self.assertEqual(rendered.count('reviewed=""'), 1)
+
     def test_unpublished_ko_and_en_pair_is_included(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -314,11 +356,11 @@ class SelectionTest(unittest.TestCase):
             path.parent.mkdir(parents=True)
             hidden = (
                 "[[Set Theory] §Functions](#new)\n"
-                '[Old](#old){: data-relation="weak" }\n'
+                '[Old](#old){: data-relation="weak" reviewed="" }\n'
             )
             normalized = (
                 "[\\[Set Theory\\] §Functions](#new)\n"
-                '[Old](#old){: data-relation="weak" }\n'
+                '[Old](#old){: data-relation="weak" reviewed="" }\n'
             )
             path.write_text(hidden, encoding="utf-8")
             post = SimpleNamespace(lang="en", published=True, path=path)
@@ -339,6 +381,7 @@ class SelectionTest(unittest.TestCase):
                     "verified_content_hash": dc.verification_fingerprint(
                         [path], {path: hidden}, set()),
                     "decided_by": {old_tagged[0].ident: "Claude Opus"},
+                    "reviewed_marker_version": 1,
                 }}}
 
                 self.assertIsNone(dc.select_unit(old_state, {}))
@@ -366,9 +409,7 @@ class SelectionTest(unittest.TestCase):
                 self.assertIsNotNone(verify)
                 try:
                     self.assertEqual(verify[0], "verify")
-                    self.assertEqual(
-                        [link.target for link in verify[3]], ["#new", "#old"],
-                    )
+                    self.assertEqual([link.target for link in verify[3]], ["#new"])
                 finally:
                     verify[4].release()
 
@@ -744,15 +785,16 @@ class VerificationPassTest(unittest.TestCase):
     def holds(self) -> dict:
         return json.loads(self.holds_path.read_text(encoding="utf-8"))
 
-    def test_agreement_leaves_the_file_alone_and_closes_the_unit(self) -> None:
+    def test_agreement_stamps_the_links_and_closes_the_unit(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
                           "decided_by": {self.idents[0]: "Codex",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
 
-        self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
+        body = self.path.read_text(encoding="utf-8")
+        self.assertEqual(body.count('reviewed=""'), 2)
         self.assertEqual(self.entry()["verify"], "agreed")
-        self.assertEqual(self.entry()["verified_hash"], dc.sha(TAGGED_BODY))
+        self.assertEqual(self.entry()["verified_hash"], dc.sha(body))
         self.assertFalse(self.holds_path.exists())
         run.notify.assert_not_called()
 
@@ -774,7 +816,7 @@ class VerificationPassTest(unittest.TestCase):
         body = self.path.read_text(encoding="utf-8")
 
         self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', body)
-        self.assertIn('[나](/ko/math/b){: data-relation="weak" }', body)
+        self.assertIn('[나](/ko/math/b){: data-relation="weak" reviewed="" }', body)
         held = self.holds()["held"][self.idents[0]]
         self.assertEqual(held["old"], "required")
         self.assertEqual(held["new"], "weak")
@@ -831,7 +873,7 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.codex.call_count, 0)
         self.assertEqual(run.agy.call_count, 0)
 
-    def test_prose_edit_still_reverifies_a_unit_with_a_parked_link(self) -> None:
+    def test_prose_edit_preserves_completed_link_reviews(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
         self.path.write_text(
@@ -841,9 +883,9 @@ class VerificationPassTest(unittest.TestCase):
 
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
 
-        self.assertGreater(run.opus.call_count + run.codex.call_count, 0)
+        self.assertEqual(run.opus.call_count + run.codex.call_count, 0)
 
-    def test_non_parked_relation_edit_still_reverifies_the_unit(self) -> None:
+    def test_relation_edit_preserves_explicit_review_marker(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
         self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
         self.path.write_text(
@@ -855,7 +897,7 @@ class VerificationPassTest(unittest.TestCase):
 
         run = self.tick({self.idents[0]: "required", self.idents[1]: "required"})
 
-        self.assertGreater(run.opus.call_count + run.codex.call_count, 0)
+        self.assertEqual(run.opus.call_count + run.codex.call_count, 0)
 
     def test_a_closed_verifier_leaves_the_unit_for_a_later_tick(self) -> None:
         self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),

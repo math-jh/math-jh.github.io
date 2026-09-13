@@ -12,12 +12,12 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
 틱마다 (cron 홀수 시각 :15) 글 하나:
   선정 (스크립트만, LLM 무관 — 매칭 없어도 로그 한 줄은 남긴다):
     0. 한 번도 안 돌린 글 (path 순)          — published:false 포함
-    1. 마지막 검사 후 translation worker 가 재번역한 글 (재번역 = 한때
-       drift_needed = 내용 변경 = 새 용어 가능성↑), 오래된 번역부터
-    2. 마지막 검사가 14일 지났고 **그 뒤에 실제로 바뀐** 글, 오래된 검사부터
-       (안 바뀐 글은 다시 넣어도 같은 답이 나온다)
-    3. 전부 비면: 하루 1회만 terms.yml 자체 감사 (글자 하나씩 순환,
-       각 항목의 sees 보강)
+    1. 같은 본문 세대의 1차 재시도 (path 순)
+    2. 마지막 검사 후 그 글을 건드린 무태그 내용 커밋
+       (`[lastmod-skip]`·`[dev]` 모두 없음)이 생기면 새 세대로 보고
+       추출 → 1차 재시도를 다시 한다.
+    3. 한 세대에서 2회를 마치면 멈춘다. 기간 기반 재실행과 자동
+       terms.yml 감사는 없다 (`--audit-letter` 수동 경로만 유지).
   처리:
     - 정의 마커(*en<sub>ko</sub>* 등)는 결정론 파싱 (extract_terms 재사용).
       · 색인에 없는 마커 → 신규 항목 (defs = 이 글[#앵커])
@@ -98,7 +98,6 @@ LLM_BIN = os.environ.get("TERM_EXTRACT_LLM",
 LLM_MODEL = os.environ.get("TERM_EXTRACT_MODEL",
                            _DEFAULT_MODEL.get(LLM_PROVIDER, ""))
 LLM_TIMEOUT = 600
-STALE_SEC = 14 * 24 * 3600
 QUARANTINE_FAILS = 3
 QUARANTINE_SEC = 7 * 24 * 3600
 MIN_BODY_CHARS = 300
@@ -153,54 +152,45 @@ def all_ko_posts() -> list[str]:
     return out
 
 
-def ko_commit_ts() -> dict[str, float]:
-    """rel → 그 글이 마지막으로 커밋된 시각. stale 재검사 게이트용.
+def ko_content_commits() -> dict[str, tuple[str, float]]:
+    """rel → 최신 무태그 내용 커밋의 (hash, timestamp).
 
-    전체 히스토리를 한 번에 훑는다 (실측 0.35s, 경로 1000여 개). 글마다
-    `git log` 를 부르면 600 회 프로세스 기동이라 틱 예산을 먹는다.
+    `[lastmod-skip]`는 기계적 정비, `[dev]`는 개발 변경이므로 본문 수정
+    신호에서 뺀다. 전체 히스토리를 한 번에 훑어 글마다 `git log`를
+    부르는 비용을 피한다.
     """
     p = subprocess.run(
-        ["git", "log", "--name-only", "--pretty=format:%ct", "--", "_posts"],
+        ["git", "log", "-z", "--name-only",
+         "--pretty=format:%x1e%H%x1f%ct%x1f%B%x00", "--", "_posts/Math"],
         cwd=str(BLOG_ROOT), capture_output=True, text=True)
-    out: dict[str, float] = {}
+    out: dict[str, tuple[str, float]] = {}
     if p.returncode != 0:
-        log("경고: git log 실패 — stale 게이트 없이 진행")
+        log("경고: git log 실패 — 본문 수정 재큐 비활성")
         return out
-    ts = 0.0
-    for ln in p.stdout.splitlines():
-        if not ln:
+    for record in p.stdout.split("\x1e"):
+        if not record:
             continue
-        if ln.isdigit():
-            ts = float(ln)
-        elif ts and ln not in out:   # 최신 커밋이 먼저 나온다
-            out[ln] = ts
+        header, sep, path_blob = record.partition("\x00\n")
+        if not sep:
+            continue
+        try:
+            commit, stamp, message = header.split("\x1f", 2)
+            ts = float(stamp)
+        except ValueError:
+            continue
+        lowered = message.lower()
+        if "[lastmod-skip]" in lowered or "[dev]" in lowered:
+            continue
+        for rel in path_blob.strip("\x00\n").split("\x00"):
+            if "/ko/" in rel and rel.endswith(".md"):
+                out.setdefault(rel, (commit, ts))
     return out
-
-
-def load_translation_ts() -> dict[str, float]:
-    """rel path → 마지막 번역 완료 시각 (status done 만).
-
-    스키마(files/status/last_attempt_ts)의 정본은 생산자
-    scripts/translation/translate_worker.py 다 (이중 SoT 감사 [U1], 2026-07-22).
-    키가 개명되면 이 함수는 빈 결과로 조용히 강등되므로, 파일은 있는데 아는
-    키가 하나도 없으면 스키마 변경으로 보고 경고를 남긴다 (우선순위 기능만
-    무뎌질 뿐 치명적이지 않아 하드 실패는 하지 않는다)."""
-    p = BLOG_ROOT / "scripts/translation/translation_state.json"
-    try:
-        files = json.loads(p.read_text(encoding="utf-8")).get("files", {})
-    except (OSError, json.JSONDecodeError):
-        return {}
-    if files and not any(isinstance(v, dict) and "status" in v for v in files.values()):
-        log("경고: translation_state.json 에 status 키가 없음 — 생산자"
-            "(translate_worker) 스키마가 바뀐 듯. 번역 연동 우선순위 비활성.")
-    return {rel: v.get("last_attempt_ts", 0.0)
-            for rel, v in files.items() if v.get("status") == "done"}
 
 
 def select_post(
     state: dict, excluded: set[str] | None = None,
 ) -> tuple[str | None, str]:
-    """(rel, kind) — kind ∈ first|drift|stale. 없으면 (None, '')."""
+    """(rel, kind) — kind ∈ first|modified|retry. 없으면 (None, '')."""
     now = time.time()
     posts = all_ko_posts()
     st = state["posts"]
@@ -214,34 +204,24 @@ def select_post(
     if never:
         return never[0], "first"
 
-    trans = load_translation_ts()
-    drift = [(trans[r], r) for r in posts
-             if r in trans and ok(r)
-             and trans[r] > st.get(r, {}).get("last_checked", 0)]
-    if drift:
-        return sorted(drift)[0][1], "drift"
+    commits = ko_content_commits()
+    modified = []
+    for rel in posts:
+        ps = st.get(rel, {})
+        current = commits.get(rel)
+        if not current or not ok(rel):
+            continue
+        baseline = ps.get("content_commit")
+        changed = current[0] != baseline if baseline else current[1] > ps.get("last_checked", now)
+        if changed:
+            modified.append((current[1], rel))
+    if modified:
+        return sorted(modified)[0][1], "modified"
 
-    # stale 재검사는 **글이 마지막 검사 뒤에 실제로 바뀐 경우만** 한다. 안 바뀐 글을
-    # 14 일마다 다시 LLM 에 넣어 봐야 같은 답이 나온다 — 2026-08-10 에 1 차 수확이
-    # 끝나면서 그 재검사가 하루 43 회 헛돌 예정이었다. 커밋 시각이 없는 글(gitignore
-    # 된 Mirror_Symmetry 등)은 파일 mtime 으로 판단한다.
-    git_ts = ko_commit_ts()
-
-    def changed_since(rel: str, since: float) -> bool:
-        ts = git_ts.get(rel)
-        if ts is None:
-            try:
-                ts = (BLOG_ROOT / rel).stat().st_mtime
-            except OSError:
-                return False
-        return ts > since
-
-    stale = [(st[r]["last_checked"], r) for r in posts
-             if r in st and ok(r)
-             and now - st[r].get("last_checked", now) > STALE_SEC
-             and changed_since(r, st[r].get("last_checked", now))]
-    if stale:
-        return sorted(stale)[0][1], "stale"
+    retry = [r for r in posts if ok(r) and r in st
+             and st[r].get("revision_attempts", 1) < 2]
+    if retry:
+        return retry[0], "retry"
     return None, ""
 
 
@@ -720,8 +700,8 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
                 def_adds.append((lt, pos, url))
                 changes.append(f"defs 추가 {d['english']!r} ← {url}")
 
-    # --- 3. (stale 만) 주요 사용 용어 → 색인 부재분 추가 ---
-    if kind == "stale":
+    # --- 3. (재시도·수정 세대) 주요 사용 용어 → 색인 부재분 추가 ---
+    if kind in {"retry", "modified"}:
         majors = llm_json(MAJOR_PROMPT + body[:60000])
         missing = []
         for t in majors:
@@ -1093,28 +1073,9 @@ def main() -> int:
         if excluded:
             log("대기 대상이 모두 content-locked — 이번 틱 건너뜀")
             return 0
-        today = f"{datetime.now():%Y-%m-%d}"
-        # 감사(see 링크 보강)는 하루 한 번으로 묶는다. 2026-08-10 에 1 차 수확이
-        # 끝나 유휴 틱이 대부분이 되면서, 짝수 시각마다 도는 감사가 하루 23 회
-        # LLM 호출로 see 링크를 228 건 밀어 넣었다 — 그게 상시 비용의 거의 전부다.
-        if state["audit"].get("last_date") != today:
-            letter = state["audit"].get("letter", "A")
-            try:
-                ch = audit_letter(state, args.dry_run)
-            except Exception as e:
-                log(f"감사 실패: {e}")
-                return 1
-            if not args.dry_run:
-                state["audit"]["last_date"] = today
-                save_state(state)
-                if ch:
-                    commit_outputs("Terms (audit)", [REL_TERMS],
-                                   f"see 링크 {len(ch)}건 (감사 {letter})", log=log)
-        else:
-            # 할 일이 없어도 한 줄은 남긴다 — 대시보드가 이 로그의 mtime 으로
-            # 워커 생존을 판정하므로(2.5×30분), 조용히 끝내면 정상 동작 중에
-            # '안 돎'으로 표시된다.
-            log("대상 없음 (감사는 하루 1회, 오늘치 완료)")
+        # 할 일이 없어도 한 줄은 남긴다 — 대시보드가 이 로그의 mtime으로
+        # 워커 생존을 판정한다. 자동 감사는 상한 2회 규칙에 맞춰 없앤다.
+        log("대상 없음 (본문 세대별 2회 완료)")
         return 0
 
     try:
@@ -1140,6 +1101,13 @@ def main() -> int:
             return 1
 
         ps["last_checked"] = time.time()
+        current_commit = ko_content_commits().get(rel)
+        if current_commit:
+            ps["content_commit"] = current_commit[0]
+        ps["revision_attempts"] = (
+            min(2, int(ps.get("revision_attempts", 1)) + 1)
+            if kind == "retry" else 1
+        )
         ps["fails"] = 0
         if not args.dry_run:
             save_state(state)
