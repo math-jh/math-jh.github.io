@@ -273,40 +273,69 @@ body.dependencies-linear {
       padding-left: 26px;
       counter-increment: gs-step;
 
+      // 번호 칸과 괘선이 같은 세로축(칸의 가운데, 8px)을 쓴다. 번호가 두 자리가
+      // 되어도 칸 폭 안에서 가운데 정렬되므로 축이 움직이지 않는다.
       &::before {
         position: absolute;
+        top: 0;
         left: 0;
+        width: 16px;
         color: $muted-text-color;
         font-size: 11px;
         font-variant-numeric: tabular-nums;
-        line-height: 1.6;
+        line-height: 20px;
+        text-align: center;
         content: counter(gs-step);
       }
 
       // 단계와 단계를 잇는 세로 괘선. 마지막 단계 아래로는 내려가지 않는다.
       &:not(:last-child)::after {
         position: absolute;
-        top: 15px;
-        bottom: -3px;
-        left: 5px;
+        top: 17px;
+        bottom: -2px;
+        left: 8px;
         width: 1px;
+        transform: translateX(-50%);
         background: $border-color;
         content: "";
       }
 
-      a::before { display: none; }
+      .gs-name::before { display: none; }
+    }
+
+    .gs-more { padding-left: 26px; }
+
+    // 한 단계에 글이 여럿이면 줄바꿈해 이어 쓰고, 번호는 첫 줄에 맞춘다.
+    .gs-step {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2px 14px;
+      padding-bottom: 6px;
     }
   }
 
-  .gs-prereq a {
+  .gs-prereq {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .gs-name {
     display: flex;
     align-items: center;
     gap: 8px;
+    min-width: 0;
     padding: 1px 2px;
+    border: 0;
+    background: none;
     color: $text-color;
+    font: inherit;
     font-size: 13px;
     line-height: 1.35;
+    text-align: left;
     text-decoration: none;
+    cursor: pointer;
 
     &::before {
       width: 5px;
@@ -320,6 +349,39 @@ body.dependencies-linear {
 
     &:hover { color: $highlight-color; }
   }
+
+  .gs-go {
+    display: inline-flex;
+    flex: none;
+    padding: 2px;
+    color: $muted-text-color;
+    line-height: 0;
+    text-decoration: none;
+
+    &:hover { color: $highlight-color; }
+  }
+
+  .gs-more {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .gs-more button,
+  .gs-back {
+    padding: 1px 2px;
+    border: 0;
+    background: none;
+    color: $muted-text-color;
+    font: inherit;
+    font-size: 12.5px;
+    line-height: 1.35;
+    cursor: pointer;
+
+    &:hover { color: $highlight-color; }
+  }
+
+  .gs-back { margin-bottom: 14px; }
+  .gs-back + .gs-kicker { margin-top: 0; }
 }
 
 /* ---- Graph card (항상 다크 · Brass) — graphcard.css 에서 ---- */

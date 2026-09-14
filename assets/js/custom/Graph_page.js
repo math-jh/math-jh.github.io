@@ -216,7 +216,8 @@
     tree: '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3 3v10M3 5h4c2.2 0 2.2-2 4.5-2H13M3 11h4c2.2 0 2.2 2 4.5 2H13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="3" cy="3" r="1.4" fill="currentColor"/><circle cx="13" cy="3" r="1.4" fill="currentColor"/><circle cx="13" cy="13" r="1.4" fill="currentColor"/></svg>',
     force: '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.2 4.1l4.4 3.3 5.1-3M7.6 7.4l-2 5M7.6 7.4l5.2 4.3" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="3" cy="4" r="1.7" fill="currentColor"/><circle cx="12.8" cy="3.9" r="1.7" fill="currentColor"/><circle cx="7.6" cy="7.5" r="1.7" fill="currentColor"/><circle cx="5.5" cy="12.7" r="1.7" fill="currentColor"/><circle cx="12.9" cy="11.8" r="1.7" fill="currentColor"/></svg>',
     fit: '<svg viewBox="0 0 16 16" width="15" height="15"><path d="M2 5.5V2.5h3M14 5.5V2.5h-3M2 10.5v3h3M14 10.5v3h-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    reset: '<svg viewBox="0 0 16 16" width="15" height="15"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.2V5h-2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    reset: '<svg viewBox="0 0 16 16" width="15" height="15"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.2V5h-2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    link: '<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M6.8 9.2a3 3 0 0 0 4.2 0l2.1-2.1a3 3 0 0 0-4.2-4.2l-.9.9M9.2 6.8a3 3 0 0 0-4.2 0L2.9 8.9a3 3 0 0 0 4.2 4.2l.9-.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
   /* ---------- card engine (graphcard.js 포팅) ---------- */
@@ -366,34 +367,87 @@
         try { graph.zoom(graph.zoom()); } catch (e) { /* 아직 붙기 전 */ }
       });
     }
-    /* A 에서 B 로 가는 required 최단 경로. 모든 경로를 세지 않는다 — 깊은 글은
-       경로가 수천 개라 목록이 되지 않고, 읽는 사람에게 필요한 건 한 줄이다. */
-    function requiredPath(fromId, toId) {
-      if (fromId === toId) return null;
-      var prev = {}, seen = new Set([fromId]), queue = [fromId];
-      while (queue.length) {
-        var here = queue.shift();
-        if (here === toId) break;
-        (requiredNext[here] || []).forEach(function (link) {
-          var next = endpoints(link)[1];
-          if (seen.has(next)) return;
-          seen.add(next); prev[next] = { from: here, link: link }; queue.push(next);
+    // required 를 앞(forward)이나 뒤로 따라간 도달 집합 (시작 글 포함).
+    function requiredReach(startId, forward) {
+      var seen = new Set([startId]), todo = [startId];
+      while (todo.length) {
+        var here = todo.pop();
+        ((forward ? requiredNext : requiredIn)[here] || []).forEach(function (link) {
+          var next = endpoints(link)[forward ? 1 : 0];
+          if (!seen.has(next)) { seen.add(next); todo.push(next); }
         });
       }
-      if (!seen.has(toId)) return null;
-      var ids = [toId], links = [], cursor = toId;
-      while (prev[cursor]) {
-        links.unshift(prev[cursor].link);
-        cursor = prev[cursor].from;
-        ids.unshift(cursor);
+      return seen;
+    }
+    /* A 에서 B 로 가는 required 경로 전부를 글 단위로 합친 것. 경로 수는 쌍에 따라
+       수천만 개라 경로를 나열하지 않고, 어느 경로에든 오르는 글을 단계로 묶는다.
+       단계는 A 로부터의 최장 거리다. x 가 y 의 선수 글이면 y 의 단계가 더 크므로
+       단계 순서대로 읽으면 선수 관계가 지켜진다. 서로를 선수로 삼는 글(순환)은
+       순서를 정할 수 없으니 한 덩어리로 묶어 같은 단계에 둔다. */
+    function requiredBetween(fromId, toId) {
+      if (fromId === toId) return null;
+      var after = requiredReach(fromId, true);
+      if (!after.has(toId)) return null;
+      var before = requiredReach(toId, false);
+      var ids = Array.from(after).filter(function (id) { return before.has(id); });
+      var inside = new Set(ids);
+      var links = [], next = {};
+      ids.forEach(function (id) {
+        next[id] = [];
+        (requiredNext[id] || []).forEach(function (link) {
+          var target = endpoints(link)[1];
+          if (!inside.has(target)) return;
+          links.push(link); next[id].push(target);
+        });
+      });
+
+      // 순환 묶기 (Tarjan). 구간 안의 글만 돈다.
+      var comp = {}, index = {}, low = {}, stack = [], onStack = new Set();
+      var counter = 0, comps = 0;
+      function strong(v) {
+        index[v] = low[v] = counter++; stack.push(v); onStack.add(v);
+        next[v].forEach(function (w) {
+          if (index[w] === undefined) { strong(w); low[v] = Math.min(low[v], low[w]); }
+          else if (onStack.has(w)) low[v] = Math.min(low[v], index[w]);
+        });
+        if (low[v] !== index[v]) return;
+        var w;
+        do { w = stack.pop(); onStack.delete(w); comp[w] = comps; } while (w !== v);
+        comps += 1;
       }
-      return { nodes: ids, links: links };
+      ids.forEach(function (id) { if (index[id] === undefined) strong(id); });
+
+      // 묶은 그래프에서 A 의 덩어리로부터의 최장 거리.
+      var compNext = [], indegree = [], level = [], k;
+      for (k = 0; k < comps; k++) { compNext.push(new Set()); indegree.push(0); level.push(0); }
+      ids.forEach(function (id) {
+        next[id].forEach(function (target) {
+          var a = comp[id], b = comp[target];
+          if (a === b || compNext[a].has(b)) return;
+          compNext[a].add(b); indegree[b] += 1;
+        });
+      });
+      var ready = [];
+      for (k = 0; k < comps; k++) if (!indegree[k]) ready.push(k);
+      while (ready.length) {
+        var c = ready.pop();
+        compNext[c].forEach(function (d) {
+          level[d] = Math.max(level[d], level[c] + 1);
+          if (--indegree[d] === 0) ready.push(d);
+        });
+      }
+      var steps = [];
+      ids.forEach(function (id) {
+        var s = level[comp[id]];
+        (steps[s] = steps[s] || []).push(id);
+      });
+      return { nodes: ids, links: links, steps: steps };
     }
     // 어느 쪽이 선수 글인지는 고른 순서가 아니라 그래프가 정한다.
     function pairPath() {
       if (!selected || !pairWith) return null;
-      return requiredPath(selected.id, pairWith.id) ||
-        requiredPath(pairWith.id, selected.id);
+      return requiredBetween(selected.id, pairWith.id) ||
+        requiredBetween(pairWith.id, selected.id);
     }
     function focusPair() {
       hlNodes = new Set(); hlLinks = new Set();
@@ -708,6 +762,13 @@
         entry.dot.setAttribute('fill-opacity', state === 'off' ? '0.09' : state === 'idle' ? '0.3' : '1');
         entry.dot.setAttribute('stroke', isSelected ? 'rgba(' + cfg.accent + ',0.62)' : 'none');
         entry.dot.setAttribute('stroke-width', isSelected ? '2' : '0');
+        // 선형 보기는 점이 수백 개 깔린 SVG 라 강조된 점에만 빛을 준다.
+        var lit = isSelected || focused;
+        var glowColor = isSelected ? 'rgb(' + cfg.accent + ')' : node.__c;
+        // 좁은 층이 점 가장자리를 밝히고 넓은 층이 번짐을 만든다.
+        entry.dot.style.filter = cfg.glow && lit
+          ? 'drop-shadow(0 0 ' + cfg.glow / 5 + 'px ' + glowColor + ') drop-shadow(0 0 ' + cfg.glow * 0.7 + 'px ' + glowColor + ')'
+          : '';
         entry.label.style.display = state !== 'off' && (focused || matched || hubSet.has(node.id)) ? '' : 'none';
         entry.label.setAttribute('fill', focused || matched
           ? 'rgba(' + cfg.labelHi + ',0.98)'
@@ -800,10 +861,7 @@
         ctx.fillStyle = hslaFade(node.hue, st === 'idle' ? 0.3 : 0.09);
         ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
       } else {
-        // shadowBlur 는 canvas 에서 제일 비싼 연산 축에 든다. 강조된 점에만 준다 —
-        // 전부 빛나면 어차피 아무것도 두드러지지 않는다.
-        var lit = sel || (hlNodes.size > 0 && hlNodes.has(node.id));
-        if (cfg.glow && lit) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
+        if (cfg.glow) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
         ctx.fillStyle = sel ? 'rgb(' + cfg.accent + ')' : node.__c;
         ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
         ctx.shadowBlur = 0;
@@ -1086,7 +1144,15 @@
         activeFams = new Set(families.map(function (f) { return f.key; }));
         hidePop(); refocus(); canvasViewport.scrollLeft = 0; notifySelection();
       },
-      path: function (a, b) { return requiredPath(a, b) || requiredPath(b, a); },
+      // 패널에서 짝을 지정한다. bId 가 없으면 짝만 풀고 aId 선택은 남긴다.
+      pair: function (aId, bId) {
+        var a = aId ? byId[aId] : null;
+        if (!a) return clearSelection();
+        selected = a;
+        pairWith = bId && bId !== aId ? byId[bId] || null : null;
+        refocus(); showPop(selected); centerActive(); notifySelection();
+      },
+      path: function (a, b) { return requiredBetween(a, b) || requiredBetween(b, a); },
       onHover: function (cb) { hoverCb = cb; },
       onClick: function (cb) { clickCb = cb; }
     };
@@ -1102,13 +1168,16 @@
           noPrereqs: 'required로 연결된 선수 글이 없습니다.',
           noOpens: '이 글을 선수로 삼는 글이 아직 없습니다.',
           countPre: '선수 ', countPost: '편',
-          pathTitle: '두 글 사이의 경로', pathSteps: '단계',
+          pathTitle: '두 글 사이의 경로',
+          pathMeta: function (steps, posts) { return steps + '단계 · 글 ' + posts + '편'; },
           noPath: '두 글은 required 로 이어져 있지 않습니다.',
           outside: '경로 밖에서 오는 선수 글',
           outsideMeta: function (roots, total) {
             return '바깥 선수 ' + total + '편 · 따로 시작해야 하는 글 ' + roots + '편';
           },
-          noOutside: '경로 위의 글만으로 닫혀 있습니다.'
+          noOutside: '경로 위의 글만으로 닫혀 있습니다.',
+          showPath: '경로 보기', openPost: '글로 이동', back: '← 선택한 글로',
+          more: function (n) { return '더보기 +' + n; }
         }
       : {
           index: 'INDEX', posts: 'posts', search: 'Search posts…', connected: 'MOST CONNECTED',
@@ -1117,13 +1186,16 @@
           noPrereqs: 'This post has no required prerequisites.',
           noOpens: 'No post lists this one as a prerequisite yet.',
           countPre: '', countPost: ' prerequisites',
-          pathTitle: 'PATH BETWEEN THE TWO', pathSteps: ' steps',
+          pathTitle: 'PATH BETWEEN THE TWO',
+          pathMeta: function (steps, posts) { return steps + ' steps · ' + posts + ' posts'; },
           noPath: 'The two posts are not linked by required edges.',
           outside: 'PREREQUISITES OFF THE PATH',
           outsideMeta: function (roots, total) {
             return total + ' off-path prerequisites · ' + roots + ' to start separately';
           },
-          noOutside: 'The path is closed under its own prerequisites.'
+          noOutside: 'The path is closed under its own prerequisites.',
+          showPath: 'Show path', openPost: 'Open post', back: '← Back to selected post',
+          more: function (n) { return 'Show ' + n + ' more'; }
         };
     var famByKey = {}; families.forEach(function (f) { famByKey[f.key] = f; });
     var rowIndex = {}; // id -> [row els]
@@ -1227,16 +1299,61 @@
       el.className = cls; el.textContent = text;
       summary.appendChild(el);
     }
-    function list(items, ordered) {
+    /* pairFrom 이 있으면 항목 이름은 그 글과의 경로를 여는 버튼이 되고, 글로 가는
+       링크는 옆의 링크 아이콘이 맡는다. */
+    var LIST_MAX = 8;
+    function postList(items, ordered, pairFrom) {
       var ul = document.createElement(ordered ? 'ol' : 'ul');
       ul.className = ordered ? 'gs-prereqs gs-path' : 'gs-prereqs';
-      items.forEach(function (n) {
+      function item(n) {
         var li = document.createElement('li'); li.className = 'gs-prereq';
-        var link = document.createElement('a');
-        link.href = n.url; link.textContent = n.title;
-        li.appendChild(link); ul.appendChild(li);
-      });
+        if (pairFrom) {
+          var pick = document.createElement('button');
+          pick.type = 'button'; pick.className = 'gs-name';
+          pick.textContent = n.title; pick.title = t.showPath;
+          pick.addEventListener('click', function () { card.pair(pairFrom, n.id); });
+          var go = document.createElement('a');
+          go.className = 'gs-go'; go.href = n.url; go.innerHTML = ICON.link;
+          go.title = t.openPost; go.setAttribute('aria-label', t.openPost + ': ' + n.title);
+          li.appendChild(pick); li.appendChild(go);
+        } else {
+          var link = document.createElement('a');
+          link.className = 'gs-name'; link.href = n.url; link.textContent = n.title;
+          li.appendChild(link);
+        }
+        return li;
+      }
+      appendCapped(ul, items, item);
       summary.appendChild(ul);
+    }
+    // 항목이 여덟 개를 넘으면 일곱 개만 두고 여덟째 자리를 더보기가 차지한다.
+    function appendCapped(container, items, render) {
+      var shown = items.length > LIST_MAX ? items.slice(0, LIST_MAX - 1) : items;
+      shown.forEach(function (x) { container.appendChild(render(x)); });
+      if (shown.length === items.length) return;
+      var moreItem = document.createElement('li'); moreItem.className = 'gs-more';
+      var more = document.createElement('button');
+      more.type = 'button'; more.textContent = t.more(items.length - shown.length);
+      more.addEventListener('click', function () {
+        container.removeChild(moreItem);
+        items.slice(shown.length).forEach(function (x) { container.appendChild(render(x)); });
+      });
+      moreItem.appendChild(more); container.appendChild(moreItem);
+    }
+    // 단계 한 줄에 그 단계의 글을 모두 나란히 둔다. 같은 단계의 글끼리는 순서가 없다.
+    function stepList(steps) {
+      var ol = document.createElement('ol'); ol.className = 'gs-prereqs gs-path';
+      appendCapped(ol, steps, function (ids) {
+        var li = document.createElement('li'); li.className = 'gs-prereq gs-step';
+        ids.map(function (x) { return byId[x]; }).filter(Boolean).sort(byWeightThenTitle)
+          .forEach(function (n) {
+            var link = document.createElement('a');
+            link.className = 'gs-name'; link.href = n.url; link.textContent = n.title;
+            li.appendChild(link);
+          });
+        return li;
+      });
+      summary.appendChild(ol);
     }
 
     /* 노드 두 개가 고른 상태일 때의 패널. 단일 선택 패널과는 별개다 — 묻는 게
@@ -1245,23 +1362,26 @@
     function renderPath(aId, bId) {
       if (!summary) return;
       summary.innerHTML = '';
+      var back = document.createElement('button');
+      back.type = 'button'; back.className = 'gs-back'; back.textContent = t.back;
+      back.addEventListener('click', function () { card.pair(aId, null); });
+      summary.appendChild(back);
       var path = card.path ? card.path(aId, bId) : null;
       kicker(t.pathTitle);
       if (!path) {
         var ends = [byId[aId], byId[bId]].filter(Boolean);
-        list(ends);
+        postList(ends);
         note(t.noPath, 'gs-empty');
         return;
       }
-      var steps = path.nodes.map(function (x) { return byId[x]; }).filter(Boolean);
-      note(steps.length + (lang === 'ko' ? ' ' : '') + t.pathSteps, 'gs-meta');
-      list(steps, true);
+      note(t.pathMeta(path.steps.length, path.nodes.length), 'gs-meta');
+      stepList(path.steps);
 
       kicker(t.outside);
       var off = outsideRoots(path.nodes);
       if (off.roots.length) {
         note(t.outsideMeta(off.roots.length, off.total), 'gs-meta');
-        list(off.roots);
+        postList(off.roots);
       } else {
         note(t.noOutside, 'gs-empty');
       }
@@ -1285,7 +1405,7 @@
       if (roots.length) {
         var meta = prerequisiteMeta(ancestors);
         if (meta) note(meta, 'gs-meta');
-        list(roots);
+        postList(roots, false, id);
       } else {
         note(t.noPrereqs, 'gs-empty');
       }
@@ -1293,7 +1413,7 @@
       kicker(t.opens);
       var opens = Array.from(closure(id, requiredChildren))
         .map(function (x) { return byId[x]; }).filter(Boolean).sort(byWeightThenTitle);
-      if (opens.length) list(opens);
+      if (opens.length) postList(opens, false, id);
       else note(t.noOpens, 'gs-empty');
     }
 
