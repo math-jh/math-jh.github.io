@@ -1,5 +1,5 @@
 ---
-title: "Semisimple module"
+title: "반단순가군"
 description: "Simple module들의 직합으로 분해되는 semisimple module을 정의하고, 세 가지 동치 특징(합·직합·모든 submodule이 direct summand)을 Zorn 보조정리로 증명한다. Isotypic 성분에 의한 canonical 분해와, 유한 직합 분해의 유일성을 Schur 보조정리로부터 유도한다."
 excerpt: "Semisimple module의 동치 특징, isotypic decomposition, 그리고 분해의 유일성"
 
@@ -42,22 +42,26 @@ Index set $I$가 공집합인 경우, 관례적으로 이는 $0$으로 정의되
 Division ring $D$를 자기 자신 위의 left module로 보면 [\[대수적 구조\] §분수체, ⁋명제 4](/ko/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }에 의해 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터공간 $V$는 기저 $B$를 가지므로, 이를 사용하여 $V=\bigoplus_{b\in B}Db$로 나타내면 division ring 위의 vector space는 semisimple $D$-module이라는 것을 안다.
 :::
 
-Semisimple module의 유용성은 대부분 다음 보조정리에서 나온다. 이는 simple submodule들의 합이 주어지면, 임의의 submodule을 그 합의 일부로 언제나 보완할 수 있다는 것이다.
+직관적으로 simple module은 module을 분해할 수 있는 가장 작은 단위이며, 이 직관은 다음 보조정리에 녹아있다. 
 
 ::: 보조정리 4
-$M=\sum_{i\in I}S_i$가 simple submodule들의 (직합일 필요는 없는) 합이라 하고, $N$을 $M$의 submodule이라 하자. 그럼 적당한 $J\subseteq I$가 존재하여
+$M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하고, $N$을 $M$의 submodule이라 하자. 그럼 적당한 $J\subseteq I$가 존재하여
 
 $$M=N\oplus\bigoplus_{j\in J}S_j$$
 
 이다.
 :::
 ::: 증명
-합 $N+\sum_{j\in J}S_j$가 direct sum이 되도록 하는 부분집합 $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 공집합이 속하므로 $\mathcal{J}$는 비어 있지 않다. $\mathcal{J}$의 chain이 주어지면 그 합집합에서의 직합 조건은 언제나 유한개의 원소만 관여하므로, 합집합 또한 $\mathcal{J}$에 속한다. 따라서 Zorn 보조정리에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
+우선 $N+\sum_{j\in J}S_j$가 direct sum이 되도록 하는 부분집합 $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 그럼 자명하게 $\emptyset\in \mathcal{J}$이며, direct sum 조건에 관여하는 것은 유한개의 원소들 뿐이므로, $\mathcal{J}$의 임의의 chain이 주어졌을 때 그 합집합 또한 $\mathcal{J}$에 속한다. 따라서 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
 
-이제 임의의 $i\in I$에 대하여 $S_i\subseteq M'$임을 주장한다. 만일 $S_i\not\subseteq M'$이라면 $S_i\cap M'$은 $S_i$의 proper submodule이고, $S_i$가 simple이므로 $S_i\cap M'=0$이다. 그럼 합 $N+\sum_{j\in J}S_j+S_i$가 다시 direct sum이 되어 $J\cup\{i\}\in\mathcal{J}$이고, 이는 $J$의 최대성에 모순이다. 따라서 모든 $S_i$가 $M'$에 포함되고, $M=N+\sum_{i\in I}S_i\subseteq M'$이므로 $M=M'$이다.
+우리 주장은 임의의 $i\in I$에 대하여 $S_i\subseteq M'$이고, 따라서
+
+$$M=N+\sum_{i\in I}S_i\subseteq M'$$
+
+이 되어 $M=M'$이라는 것이다. 결론에 반하여 $S_i\not\subseteq M'$인 $S_i$가 존재한다 하자. 그럼 $S_i$의 simplicity에 의하여 $S_i\cap M'=0$이므로, 합 $N+\sum_{j\in J}S_j+S_i$가 다시 direct sum이 된다. ([\[다중선형대수학\] §완전열, ⁋명제 6](/ko/math/multilinear_algebra/exact_sequences#prop6){: data-relation="required" }) 따라서 $J\cup\{i\}\in\mathcal{J}$이고, 이는 $J$의 maximality에 모순이므로 이러한 $i$는 존재할 수 없다. 
 :::
 
-이 보조정리로부터 semisimple module의 세 가지 동치 특징이 한꺼번에 얻어진다.
+이 보조정리로부터 semisimple module을 다음과 같이 특정지을 수 있게 된다.
 
 ::: 정리 5
 $A$-module $M$에 대하여 다음이 모두 동치이다.
@@ -67,7 +71,9 @@ $A$-module $M$에 대하여 다음이 모두 동치이다.
 3. $M$의 모든 submodule은 direct summand이다.
 :::
 ::: 증명
-$1\implies 2$는 [보조정리 4](#lem4){: data-relation="required" }을 $N=0$에 적용하면 되고, $2\implies 1$은 자명하며, $1\implies 3$은 다시 [보조정리 4](#lem4){: data-relation="required" } 그 자체이다. 남은 것은 $3\implies 1$이고, 이를 세 단계로 보인다.
+첫째 주장이 둘째 주장과 셋째 주장을 함의하는 것은 [보조정리 4](#lem4){: data-relation="required" }의 결과이며, 둘째 주장이 첫째 주장을 함의하는 것은 자명하다. 따라서 셋째 주장이 첫째 주장을 함의하는 것만 보이면 충분하다. 
+
+우선 우리는 셋째 성질이 $M$의 임의의 submodule으로 내려간다는 것을 확인한다. 
 
 우선 성질 3이 submodule에 유전됨을 확인한다. $N$이 $M$의 submodule이고 $L$이 $N$의 submodule이라 하자. 가정에 의해 $M=L\oplus C$인 submodule $C$가 존재한다. 임의의 $n\in N$을 $n=l+c$로 쓰면 $l\in L\subseteq N$이므로 $c=n-l\in N\cap C$이고, 따라서 $N=L+(N\cap C)$이다. 한편 $L\cap(N\cap C)\subseteq L\cap C=0$이므로 이 합은 직합이고, $L$은 $N$의 direct summand이다.
 

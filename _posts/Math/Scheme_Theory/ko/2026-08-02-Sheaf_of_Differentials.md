@@ -299,7 +299,7 @@ $$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{
 를 써서 $\dd{(\x_l/\x_i)}$를 $U_k$ 쪽 기저로 전개한 뒤 위의 대응을 적용하면 $e_k$ 항이 상쇄되어 $\x_i^{-2}(\x_ie_l-\x_le_i)$를 얻으므로, $U_i$ 쪽 값과 같다. 그러므로 이들은 global한 morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$로 붙어서 exact sequence를 만들고, exactness는 local property이므로 이들이 sheaf의 short exact sequence를 이룬다.
 :::
 
-[명제 9](#prop9){: data-relation="weak" }에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨간다. 특히 이는 base가 affine일 때에는 [§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5){: data-relation="required" }의 twisting sheaf와 일치하며, 또 [명제 5](#prop5){: data-relation="required" }에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10){: data-relation="required" }을 $A=\mathbb{Z}$에 적용하여 얻는 sequence
+[명제 9](#prop9){: data-relation="weak" }에서와 같이 base를 임의의 scheme으로 올릴 수도 있다. $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$와 그 projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$에 대하여 $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$로 정의하면, 각 chart 위의 generator $\x_i^d$와 transition function $(\x_i/\x_j)^d$가 그대로 옮겨간다. 특히 이는 base가 affine일 때에는 [§스킴의 층 코호몰로지, ⁋정의 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def6){: data-relation="required" }의 twisting sheaf와 일치하며, 또 [명제 5](#prop5){: data-relation="required" }에 의하여 $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$이다. 한편 [정리 10](#thm10){: data-relation="required" }을 $A=\mathbb{Z}$에 적용하여 얻는 sequence
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}} \rightarrow 0$$
 
@@ -359,7 +359,7 @@ Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n$을 생각하자. [정�
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}$$
 
-이 성립한다. 같은 명제를 direct sum에 반복 적용하면 좌변은 $\mathcal{O}(-1)^{\otimes(n+1)}$이고, $\mathcal{O}(d)$의 transition function이 $(\x_i/\x_j)^d$이므로 ([§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5){: data-relation="required" } 뒤의 기술) 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$이다. 그러므로
+이 성립한다. 같은 명제를 direct sum에 반복 적용하면 좌변은 $\mathcal{O}(-1)^{\otimes(n+1)}$이고, $\mathcal{O}(d)$의 transition function이 $(\x_i/\x_j)^d$이므로 ([§스킴의 층 코호몰로지, ⁋정의 6](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def6){: data-relation="required" } 뒤의 기술) 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$이다. 그러므로
 
 $$\omega_{\mathbb{P}^n}\cong\mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
@@ -373,7 +373,7 @@ Algebraically closed field $\mathbb{K}$ 위의 $n$차원 integral projective sch
 
 $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathcal{E}^\vee\bigr)^\ast$$
 
-이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $\mathbb{K}$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8){: data-relation="required" })
+이 존재한다. 여기에서 $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$이고, $(-)^\ast$는 유한차원 $\mathbb{K}$-벡터공간의 쌍대이다. ([§스킴의 층 코호몰로지, ⁋정리 9](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm9){: data-relation="required" })
 :::
 
 이 정리의 증명은 $\mathbb{P}^n$ 위에서 trace map과 cup product로 만든 pairing이 perfect pairing임을 보인 뒤 이를 finite surjective morphism을 따라 일반의 $X$로 옮기는 논증을 사용하는데, 구체적인 증명은 이 글의 범위를 넘어서므로 [\[대수다양체\] §세르 쌍대성, §§사영공간에서의 세르 쌍대성](/ko/math/algebraic_varieties/serre_duality#사영공간에서의-세르-쌍대성){: data-relation="weak" }에 위임하기로 한다. 

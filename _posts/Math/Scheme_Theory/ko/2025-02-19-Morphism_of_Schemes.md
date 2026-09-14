@@ -182,7 +182,11 @@ $$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}&\rightarr
 위에서와 마찬가지로, $X$가 $\Spec A$ 꼴이라면 이를 간단히 $A$-point라 부른다. 이 개념의 유용성은 다음 예시에서도 확인할 수 있다.
 
 ::: 예시 8
-정수 계수 다항식 $f_1,\ldots, f_r\in\mathbb{Z}[\x_1,\ldots, \x_n]$이 정의하는 $\mathbb{Z}$-scheme $X=\Spec\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$를 생각하자. 그럼 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }에 의하여 $X$의 $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$는 ring homomorphism $\phi:\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)\rightarrow\mathbb{Q}$에 대응되고, $\phi$는 $\mathbb{Z}$ 위에서 표준적으로 주어지므로 이는 다시
+정수 계수 다항식 $f_1,\ldots, f_r\in\mathbb{Z}[\x_1,\ldots, \x_n]$이 정의하는 $\mathbb{Z}$-scheme $X=\Spec\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$를 생각하자. 그럼 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13){: data-relation="required" }에 의하여 $X$의 $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$는 ring homomorphism 
+
+$$\phi:\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)\rightarrow\mathbb{Q}$$
+
+에 대응되고, $\phi$는 $\mathbb{Z}$ 위에서 표준적으로 주어지므로 이는 다시
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 

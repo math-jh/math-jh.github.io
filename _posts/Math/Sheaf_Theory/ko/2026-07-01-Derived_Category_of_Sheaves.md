@@ -182,6 +182,12 @@ $$E_2^{p,q} = R^p g_\ast (R^q f_\ast \mathcal{F}) \Rightarrow R^{p+q}(gf)_\ast \
 $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
 를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19){: data-relation="weak" }에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. Derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$의 cohomology를 계산하는 한 가지 방법일 뿐이다.
 
+Affine morphism에서는 이 합성 동형이 더 단순해진다. Scheme morphism $f:X\rightarrow Y$가 affine이고 $\mathcal{F}$가 $X$ 위의 quasi-coherent sheaf이면 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-relation="required" }에 의하여 $R^qf_\ast\mathcal{F}=0$ ($q>0$)이고, 따라서 $Rf_\ast\mathcal{F}\cong f_\ast\mathcal{F}$이다. 구조사상을 $a_X:X\rightarrow\{\ast\}$와 $a_Y:Y\rightarrow\{\ast\}$로 적으면 $a_X=a_Yf$이므로 [정리 10](#thm10){: data-relation="required" }이
+
+$$R\Gamma(X,\mathcal{F})\cong R\Gamma(Y,f_\ast\mathcal{F})$$
+
+를 준다. 각 cohomology를 취하면 $H^i(X,\mathcal{F})\cong H^i(Y,f_\ast\mathcal{F})$를 회복한다.
+
 ::: 따름정리 11 (Local-to-global spectral sequence)
 위상공간 $X$ (또는 ringed space $(X, \mathcal{O}_X)$) 위의 $\mathcal{F}^\bullet, \mathcal{G}^\bullet \in D^+(\operatorname{Mod}(\mathcal{O}_X))$에 대하여, 합성 $R\Hom_X(\mathcal{F}^\bullet, -) \cong R\Gamma(X, -) \circ R\sHom_X(\mathcal{F}^\bullet, -)$에 대한 Grothendieck spectral sequence로부터 다음의 local-to-global spectral sequence
 

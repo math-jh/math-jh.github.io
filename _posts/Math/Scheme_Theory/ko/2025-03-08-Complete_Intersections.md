@@ -181,7 +181,7 @@ $$S_{\x_m}/(g_1,\ldots, g_i)=\bigoplus_j\x_m^j\bigl(S_{(\x_m)}/(g_1,\ldots, g_i)
 둘째 결과의 경우, $\lvert J\rvert=j$인 $J$에 대응하는 summand $\mathcal{O}(-d_J)$를 chart $D_+(\x_m)$ 위에서 generating section $\x_m^{-d_J}$로 trivialize하면, $f_i$를 곱하는 것으로 주어지는 $\mathcal{O}(-d_J) \rightarrow \mathcal{O}(-d_{J\setminus\{i\}})$은 $\x_m^{-d_J}a\mapsto \x_m^{-d_{J\setminus\{i\}}}g_ia$가 되어 이 위에서는 $g_i$를 곱하는 것과 같다. 즉, 위의 sequence를 $D_+(\x_m)$으로 제한한 것은 $K(g_1,\ldots, g_k)$의 associated sheaf에 $\widetilde{S_{(\x_m)}/(g_1,\ldots, g_k)}$를 이어붙인 것이며, $X$와 만나는 chart 위에서 이것이 exact이라는 것은, 방금 얻은 regular sequence 성질과 함께 ambient를 $D_+(\x_m)$으로 하고 그 closed subscheme을 $X\cap D_+(\x_m)$으로 하여 [명제 4](#prop4){: data-relation="required" }를 적용하면 된다. $X$와 만나지 않는 chart 위에서는 $(g_1,\ldots, g_k)=S_{(\x_m)}$이 unit ideal이므로 모든 Koszul homology가 소멸하고, 특히 $H_0=S_{(\x_m)}/(g_1,\ldots, g_k)=0$이라 마지막 항도 $0$이 되어 역시 exact이다. Exactness는 stalk에서 확인되고 이러한 chart들이 $\mathbb{P}^n$을 덮으므로 위의 sequence는 exact이다.
 :::
 
-그럼 이러한 경우, Koszul complex의 각 항이 projective space 위의 line bundle들의 finite direct sum이다. Finite exact sequence 위에서 Euler characteristic의 alternating sum은 소멸하며, projective space 위의 twisting sheaf의 Euler characteristic은 이미 명시적으로 계산되어 있으므로, 이 분해 하나로부터 $X$의 Hilbert polynomial이 자르는 방정식들의 degree만으로 결정되고 그로부터 dimension과 degree가 따라 나온다. ([§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16){: data-relation="required" })
+그럼 이러한 경우, Koszul complex의 각 항이 projective space 위의 line bundle들의 finite direct sum이다. Finite exact sequence 위에서 Euler characteristic의 alternating sum은 소멸하며, projective space 위의 twisting sheaf의 Euler characteristic은 이미 명시적으로 계산되어 있으므로, 이 분해 하나로부터 $X$의 Hilbert polynomial이 자르는 방정식들의 degree만으로 결정되고 그로부터 dimension과 degree가 따라 나온다. ([§스킴의 층 코호몰로지, ⁋정리 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm17){: data-relation="required" })
 
 ::: 따름정리 7
 [명제 6](#prop6){: data-relation="required" }의 상황에서 $X\neq \emptyset$이라 하자. 그럼 $k\leq n$이고, $X$의 Hilbert polynomial은
@@ -191,11 +191,11 @@ $$P_{\mathcal{O}_X}(t)=\sum_{J\subseteq\{1,\ldots, k\}}(-1)^{\lvert J\rvert}\bin
 이다. 더욱이 $\dim X=n-k$이며 $\deg X=d_1\cdots d_k$이다.
 :::
 ::: 증명
-[명제 6](#prop6){: data-relation="required" }의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지되고, closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$이며 cohomology가 $\iota_\ast$ 아래에서 보존된다. ([§스킴의 층 코호몰로지, ⁋정리 8](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm8){: data-relation="required" } 직전의 관찰) 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 14](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop14){: data-relation="required" }의 2번을 이 finite exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor15){: data-relation="required" }로 각 항을 계산하면
+[명제 6](#prop6){: data-relation="required" }의 exact sequence에 invertible sheaf $\mathcal{O}(t)$를 tensor하여도 exactness가 유지되고, closed embedding에 대하여 $(\iota_\ast\mathcal{O}_X)\otimes\mathcal{O}(t)\cong \iota_\ast(\mathcal{O}_X(t))$이며 cohomology가 $\iota_\ast$ 아래에서 보존된다. ([§스킴의 층 코호몰로지, ⁋정리 9](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm9){: data-relation="required" } 직전의 관찰) 따라서 $\rchi(X,\mathcal{O}_X(t))=\rchi(\mathbb{P}^n,\iota_\ast\mathcal{O}_X(t))$이고, [§스킴의 층 코호몰로지, ⁋명제 15](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#prop15){: data-relation="required" }의 2번을 이 finite exact sequence에 적용한 뒤 [§스킴의 층 코호몰로지, ⁋따름정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor16){: data-relation="required" }로 각 항을 계산하면
 
 $$\rchi(X,\mathcal{O}_X(t))=\sum_{j=0}^k(-1)^j\sum_{\lvert J\rvert=j}\rchi\bigl(\mathbb{P}^n,\mathcal{O}(t-d_J)\bigr)=\sum_J(-1)^{\lvert J\rvert}\binom{n+t-d_J}{n}$$
 
-을 얻는다. [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16){: data-relation="required" }에 의하여 좌변은 $P_{\mathcal{O}_X}(t)$이다.
+을 얻는다. [§스킴의 층 코호몰로지, ⁋정리 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm17){: data-relation="required" }에 의하여 좌변은 $P_{\mathcal{O}_X}(t)$이다.
 
 남은 것은 이 다항식의 degree와 최고차항 계수를 읽는 것 뿐이다. 우선 degree $m\geq 1$이고 최고차항 계수가 $c\neq 0$인 다항식 $p$와 $d>0$에 대하여, $p(t)-p(t-d)$는 degree $m-1$이고 그 최고차항 계수는 $cmd$임을 계산할 수 있다. 또 $p$가 상수이면 $p(t)-p(t-d)=0$이다.
 
@@ -203,23 +203,23 @@ $$\rchi(X,\mathcal{O}_X(t))=\sum_{j=0}^k(-1)^j\sum_{\lvert J\rvert=j}\rchi\bigl(
 
 $$p_i(t)=\sum_{J\subseteq\{1,\ldots, i\}}(-1)^{\lvert J\rvert}\binom{n+t-d_J}{n}$$
 
-임을 보일 수 있고, 이로부터 $p_k$가 위에서 얻은 다항식임을 알 수 있다. 여기에서 $p_0$은 degree $n$이고 최고차항 계수가 $1/n!$이다. 만일 $k>n$이라면 위의 관찰에 의하여 $p_n$은 상수이고 $p_{n+1}=0$이므로 $p_k=0$가 되어 이 다항식의 degree는 $-\infty$인데, $X\neq\emptyset$이라 $\mathcal{O}_X\neq 0$이므로 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16){: data-relation="required" }에 의하여 $P_{\mathcal{O}_X}$의 degree는 $\dim X\geq 0$이 되어 모순이다. 따라서 $k\leq n$이어야 한다.
+임을 보일 수 있고, 이로부터 $p_k$가 위에서 얻은 다항식임을 알 수 있다. 여기에서 $p_0$은 degree $n$이고 최고차항 계수가 $1/n!$이다. 만일 $k>n$이라면 위의 관찰에 의하여 $p_n$은 상수이고 $p_{n+1}=0$이므로 $p_k=0$가 되어 이 다항식의 degree는 $-\infty$인데, $X\neq\emptyset$이라 $\mathcal{O}_X\neq 0$이므로 [§스킴의 층 코호몰로지, ⁋정리 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm17){: data-relation="required" }에 의하여 $P_{\mathcal{O}_X}$의 degree는 $\dim X\geq 0$이 되어 모순이다. 따라서 $k\leq n$이어야 한다.
 
 그럼 $i=1,\ldots, k$의 각 단계에서 $p_{i-1}$의 degree $n-i+1$이 $1$ 이상이므로 위의 관찰을 그대로 적용할 수 있고, $p_i$는 degree $n-i$이며 그 최고차항 계수는
 
 $$\frac{1}{n!}\cdot nd_1\cdot (n-1)d_2\cdots (n-i+1)d_i=\frac{d_1\cdots d_i}{(n-i)!}$$
 
-이다. $r=n-k$로 두면 $P_{\mathcal{O}_X}$는 degree $r$이고 최고차항 계수는 $d_1\cdots d_k/r!$이므로, 다시 [§스킴의 층 코호몰로지, ⁋정리 16](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm16){: data-relation="required" }에 의하여 $\dim X=r=n-k$이고 [§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17){: data-relation="required" }에 의하여 $\deg X=r!\cdot d_1\cdots d_k/r!=d_1\cdots d_k$이다.
+이다. $r=n-k$로 두면 $P_{\mathcal{O}_X}$는 degree $r$이고 최고차항 계수는 $d_1\cdots d_k/r!$이므로, 다시 [§스킴의 층 코호몰로지, ⁋정리 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#thm17){: data-relation="required" }에 의하여 $\dim X=r=n-k$이고 [§스킴의 층 코호몰로지, ⁋정의 18](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def18){: data-relation="required" }에 의하여 $\deg X=r!\cdot d_1\cdots d_k/r!=d_1\cdots d_k$이다.
 :::
 
-$k=1$인 경우 [따름정리 7](#cor7){: data-relation="required" }은 degree $e$의 hypersurface가 $\deg X=e$를 갖는다는 것으로, 이는 [§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17){: data-relation="required" } 이후에 직접 계산한 것과 같다. 일반적인 $k$에 대해서는 이것이 Bézout 정리의 가장 단순한 형태로, 서로 regular sequence를 이루는 방정식들이 잘라내는 대상의 degree가 방정식들의 degree의 곱이라는 것이다. 
+$k=1$인 경우 [따름정리 7](#cor7){: data-relation="required" }은 degree $e$의 hypersurface가 $\deg X=e$를 갖는다는 것으로, 이는 [§스킴의 층 코호몰로지, ⁋정의 18](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def18){: data-relation="required" } 이후에 직접 계산한 것과 같다. 일반적인 $k$에 대해서는 이것이 Bézout 정리의 가장 단순한 형태로, 서로 regular sequence를 이루는 방정식들이 잘라내는 대상의 degree가 방정식들의 degree의 곱이라는 것이다.
 
 ::: 예시 8
 1. $\mathbb{P}^3_\mathbb{K}=\Proj S_\bullet$ 안에서 $S_\bullet$-regular sequence를 이루는 두 quadric $f_1,f_2$가 잘라내는 $X=V_+(f_1,f_2)$를 생각하자. 이제 $n=3$, $k=2$, $d_1=d_2=2$이므로 [따름정리 7](#cor7){: data-relation="required" }에 의하여
 
 	$$P_{\mathcal{O}_X}(t)=\binom{3+t}{3}-2\binom{1+t}{3}+\binom{t-1}{3}=\frac{(t+3)(t+2)(t+1)-2(t+1)t(t-1)+(t-1)(t-2)(t-3)}{6}=4t$$
 
-	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 17](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def17){: data-relation="required" }) 
+	이다. 곧 $\dim X=1$이고 $\deg X=1!\cdot 4=4$이며, arithmetic genus는 $p_a(X)=(-1)^1\bigl(P_{\mathcal{O}_X}(0)-1\bigr)=1$이다. ([§스킴의 층 코호몰로지, ⁋정의 18](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def18){: data-relation="required" })
 
 2. $\mathbb{P}^3_\mathbb{K}=\Proj \mathbb{K}[\x_0,\x_1,\x_2,\x_3]$의 twisted cubic $C$를 보자. 이는 $\mathbb{P}^1=\Proj \mathbb{K}[\y_0,\y_1]$ 위의 invertible sheaf $\mathcal{O}_{\mathbb{P}^1}(3)$과 그 globally generating section $\y_0^3, \y_0^2\y_1, \y_0\y_1^2, \y_1^3$이 정의하는 morphism $\varphi:\mathbb{P}^1 \rightarrow \mathbb{P}^3_\mathbb{K}$으로 주어진 것이다. Standard affine chart $D_+(\x_j)$ 위에서 $\varphi$에 대응하는 ring homomorphism은 $\x_i/\x_j\mapsto \y_0^{3-i}\y_1^i/\y_0^{3-j}\y_1^j$이며, 우리는 $\varphi$가 closed embedding이라는 것을 보이기 위해 우선 이 ring homomorphism이 surjective임을 보인다. 표기의 편의를 위해 $\t=\y_1/\y_0$으로 적자.
   

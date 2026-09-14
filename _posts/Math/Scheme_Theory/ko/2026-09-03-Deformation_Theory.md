@@ -11,7 +11,6 @@ sidebar:
 date: 2026-09-03
 
 weight: 22
-published: false
 ---
 
 ## 소박한 여접 복합체

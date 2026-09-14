@@ -19,7 +19,7 @@ weight: 19
 ::: 정의 1
 평면 영역 $D$에서 정의된 $C^1$ 사상 
 
-$\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$
+$$\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$$
 
 를 *매개곡면<sub>parametrized surface</sub>*이라 한다. 
 :::

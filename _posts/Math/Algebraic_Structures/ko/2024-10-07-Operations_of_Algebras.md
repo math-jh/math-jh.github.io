@@ -11,6 +11,8 @@ sidebar:
 date: 2024-10-07
 weight: 302
 
+drift_needed: true
+
 ---
 
 우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules){: data-relation="required" }에서 module들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings){: data-relation="weak" }에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1){: data-relation="required" }), module의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras){: data-relation="weak" }에서와 마찬가지로 $A$는 항상 commutative ring이다.
@@ -78,17 +80,17 @@ $$f_i: E_i\rightarrow A$$
 
 $$f\bigl((a,b)\bigr)=f\bigl((a,0)+(0,b)\bigr)=f\bigl((a,0)\bigr)+f\bigl((0,b)\bigr)=(f\circ\iota_1)(a)+(f\circ\iota_2)(b)=a+b$$
 
-여야 하는데, 다음의 두 계산
+여야 하는데, $ad+bc$가 $0$인 경우를 제외하면 일반적으로는 다음의 두 계산
 
-$$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
+$$f\bigl((a,b)(c,d)\bigr)=ac+bd,\qquad f(a,b)f(c,d)=(a+b)(c+d)$$
 
-에 의해 $f$는 곱셈을 보존하지 못한다. 
+이 일치하지 않는다. 따라서 일반적으로 $f$는 곱셈을 보존하지 못한다. 
 
-한편 $A$-algebra와 그 homomorphism이 항상 unital이라는 우리의 관례 아래에서는 상황이 더 나쁘다. $\iota_j$는 $1_{E_j}$를 $\bigoplus E_i$의 항등원으로 보내지 않으므로 애초에 $A$-algebra homomorphism이 아니며, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 [명제 4](#prop4){: data-relation="required" }의 $\bigoplus E_i$는 $\prod E_i$의 진부분 ideal이라 항등원을 갖지 않는다. 
+한편 associative unital $A$-algebra와 unital homomorphism의 category $\Alg{A}$에서는 canonical injection에도 문제가 있다. $I$가 유한집합이고 각 $E_i$가 unital이면 $\bigoplus E_i=\prod E_i$의 항등원은 $(1_{E_i})_{i\in I}$이므로, 일반적으로 $\iota_j$는 단위원을 보존하지 않는다. 또, $I$가 무한집합이고 모든 $E_i$가 nonzero라면 $\bigoplus E_i$의 어떤 원소도 모든 성분에서 항등원으로 작용할 수 없으므로 $\bigoplus E_i$는 항등원을 갖지 않는다.
 
 ## 대수의 텐서곱
 
-Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
+Commutative associative unital $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" }) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -123,23 +125,23 @@ Direct product에서와 마찬가지로, tensor product는 두 대수의 성질�
 
 $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz)\otimes x'(y'z')=(x\otimes x')\bigl((y\otimes y')(z\otimes z')\bigr)$$
 
-이므로 $E\otimes_AE'$도 associative이고, 같은 방식으로 $E,E'$이 commutative라면 $E\otimes_AE'$도 commutative이다. 또 $E,E'$이 unital이라면 $1_E\otimes 1_{E'}$이 $E\otimes_AE'$의 항등원이 된다. 특히 $E,E'$이 associative unital이라면 두 $A$-algebra homomorphism
+이므로 $E\otimes_AE'$도 associative이고, 같은 방식으로 $E,E'$이 commutative라면 $E\otimes_AE'$도 commutative이다. 또 $E,E'$이 unital이라면 $1_E\otimes 1_{E'}$이 $E\otimes_AE'$의 항등원이 된다. 특히 $E,E'$이 unital이라면 두 unital $A$-algebra homomorphism
 
 $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':E' \rightarrow E\otimes_AE';\quad x'\mapsto 1_E\otimes x'$$
 
 이 정의되며, 이들의 image는 서로 commute한다. 즉 $(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$이다. 
 
-우리가 처음 도입했던 것과 같이, tensor product는 commutative $A$-algebra들의 category에서 coproduct가 된다. 이를 설명하는 것이 다음의 정리이다. 
+우리가 처음 도입했던 것과 같이, tensor product는 $\cAlg{A}$에서 coproduct가 된다. 이를 설명하는 것이 다음의 정리이다. 
 
 ::: 정리 8
-Commutative $A$-algebra $E,E'$과, 임의의 commutative $A$-algebra $F$, 그리고 항등원을 보존하는 $A$-algebra homomorphism들 $u:E \rightarrow F$, $u':E' \rightarrow F$가 주어졌다 하자. 그럼 $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 $A$-algebra homomorphism $w:E\otimes_AE' \rightarrow F$가 존재한다. 
+Commutative associative unital $A$-algebra $E,E',F$와 unital $A$-algebra homomorphism들 $u:E \rightarrow F$, $u':E' \rightarrow F$가 주어졌다 하자. 그럼 $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 unital $A$-algebra homomorphism $w:E\otimes_AE' \rightarrow F$가 존재한다. 
 :::
 ::: 증명
 함수 $E\times E' \rightarrow F$를 $(x,x')\mapsto u(x)u'(x')$으로 정의하면 이는 $A$-bilinear이므로, $w(x\otimes x')=u(x)u'(x')$이도록 하는 유일한 $A$-linear map $w:E\otimes_AE' \rightarrow F$가 존재한다. $w$가 곱셈을 보존하는 것은 generator들 위에서 확인하면 충분한데,
 
 $$w\bigl((x\otimes x')(y\otimes y')\bigr)=w(xy\otimes x'y')=u(xy)u'(x'y')=u(x)u(y)u'(x')u'(y')=u(x)u'(x')u(y)u'(y')=w(x\otimes x')w(y\otimes y')$$
 
-이고, 네 번째 등식에서 $F$가 commutative라는 가정이 사용되었다. 또 $w(1_E\otimes 1_{E'})=u(1_E)u'(1_{E'})=1_F$이며, $w\circ\iota=u$와 $w\circ\iota'=u'$은 정의로부터 자명하다.
+이고, 네 번째 등식에서 $F$가 associative이고 commutative라는 가정이 사용되었다. 또 $w(1_E\otimes 1_{E'})=u(1_E)u'(1_{E'})=1_F$이며, $w\circ\iota=u$와 $w\circ\iota'=u'$은 정의로부터 자명하다.
 
 유일성을 보이자. $w'$이 같은 조건을 만족한다면, 임의의 generator에 대하여
 
@@ -148,7 +150,9 @@ $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(
 이므로 $w'=w$이다.
 :::
 
-즉, $E\otimes_AE'$은 commutative $A$-algebra들의 category에서 $E$와 $E'$의 coproduct이다.
+즉, $E\otimes_AE'$은 $\cAlg{A}$에서 $E$와 $E'$의 coproduct이다. 그런데 위 정리의 증명을 살펴보면, $F$의 commutativity는 $u(x)$와 $u'(x')$의 순서를 바꾸는 데에만 사용되므로, commutativity 대신 실질적으로 필요한 조건은 $u(E)$와 $u'(E')$가 서로 commute하는 것뿐이다. 따라서 더 일반적인 다음의 주장을 얻는다.
+
+> $E,E'$이 unital $A$-algebra이고 $F$가 associative unital $A$-algebra라 하자. 두 unital $A$-algebra homomorphism $u:E\rightarrow F$, $u':E'\rightarrow F$의 image들이 서로 commute한다면, $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 unital $A$-algebra homomorphism $w:E\otimes_AE'\rightarrow F$가 존재한다.
 
 ::: 예시 9
 Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebra이다. 즉

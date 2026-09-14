@@ -296,7 +296,7 @@ $$\frac{\x_l}{\x_i}=\frac{\x_l}{\x_k}\cdot\frac{\x_k}{\x_i},\qquad d\Bigl(\frac{
 to expand $\dd{(\x_l/\x_i)}$ in terms of the basis on the $U_k$ side and then apply the above correspondence, the $e_k$ terms cancel and we obtain $\x_i^{-2}(\x_ie_l-\x_le_i)$, which equals the value on the $U_i$ side. Therefore they glue to a global morphism $\Omega_{\mathbb{P}^n/A} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}$ forming an exact sequence, and since exactness is a local property, they form a short exact sequence of sheaves.
 :::
 
-As in [Proposition 9](#prop9){: data-relation="weak" }, the base can be lifted to an arbitrary scheme. For $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$ with projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$, define $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$; then the generators $\x_i^d$ and transition functions $(\x_i/\x_j)^d$ on each chart carry over unchanged. In particular, when the base is affine this agrees with the twisting sheaf of [§Sheaf Cohomology of Schemes, ⁋Definition 5](/en/math/scheme_theory/sheaf_cohomology_of_schemes#def5){: data-relation="weak" }, and by [Proposition 5](#prop5){: data-relation="required" } we have $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$. On the other hand, applying [Theorem 10](#thm10){: data-relation="required" } with $A=\mathbb{Z}$ yields the sequence
+As in [Proposition 9](#prop9){: data-relation="weak" }, the base can be lifted to an arbitrary scheme. For $\mathbb{P}^n_S=\mathbb{P}^n_\mathbb{Z}\times_{\Spec \mathbb{Z}}S$ with projection $\pi:\mathbb{P}^n_S \rightarrow \mathbb{P}^n_\mathbb{Z}$, define $\mathcal{O}_{\mathbb{P}^n_S}(d)=\pi^\ast\mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(d)$; then the generators $\x_i^d$ and transition functions $(\x_i/\x_j)^d$ on each chart carry over unchanged. In particular, when the base is affine this agrees with the twisting sheaf of [§Sheaf Cohomology of Schemes, ⁋Definition 6](/en/math/scheme_theory/sheaf_cohomology_of_schemes#def6){: data-relation="weak" }, and by [Proposition 5](#prop5){: data-relation="required" } we have $\Omega_{\mathbb{P}^n_S/S}\cong\pi^\ast\Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}}$. On the other hand, applying [Theorem 10](#thm10){: data-relation="required" } with $A=\mathbb{Z}$ yields the sequence
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_\mathbb{Z}/\mathbb{Z}} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_\mathbb{Z}} \rightarrow 0,$$
 
@@ -352,7 +352,7 @@ Consider the projective space $\mathbb{P}^n$ over a field $\mathbb{K}$. Applying
 
 $$\det\bigl(\mathcal{O}(-1)^{\oplus(n+1)}\bigr)\cong \omega_{\mathbb{P}^n}\otimes_{\mathcal{O}_{\mathbb{P}^n}}\det\mathcal{O}_{\mathbb{P}^n}\cong\omega_{\mathbb{P}^n}.$$
 
-Applying the same proposition repeatedly to a direct sum, the left-hand side is $\mathcal{O}(-1)^{\otimes(n+1)}$, and since the transition function of $\mathcal{O}(d)$ is $(\x_i/\x_j)^d$ ([§Sheaf Cohomology of Schemes, ⁋Definition 5](/en/math/scheme_theory/sheaf_cohomology_of_schemes#def5){: data-relation="required" } and the discussion following), this is $\mathcal{O}_{\mathbb{P}^n}(-n-1)$. Therefore we obtain
+Applying the same proposition repeatedly to a direct sum, the left-hand side is $\mathcal{O}(-1)^{\otimes(n+1)}$, and since the transition function of $\mathcal{O}(d)$ is $(\x_i/\x_j)^d$ ([§Sheaf Cohomology of Schemes, ⁋Definition 6](/en/math/scheme_theory/sheaf_cohomology_of_schemes#def6){: data-relation="required" } and the discussion following), this is $\mathcal{O}_{\mathbb{P}^n}(-n-1)$. Therefore we obtain
 
 $$\omega_{\mathbb{P}^n}\cong\mathcal{O}_{\mathbb{P}^n}(-n-1).$$
 
@@ -366,7 +366,7 @@ Let $\Omega_{X/\mathbb{K}}$ be a locally free sheaf of rank $n$ for an $n$-dimen
 
 $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathcal{E}^\vee\bigr)^\ast$$
 
-Here $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$, and $(-)^\ast$ denotes the dual of a finite-dimensional $\mathbb{K}$-vector space. ([§Sheaf Cohomology of Schemes, ⁋Theorem 8](/en/math/scheme_theory/sheaf_cohomology_of_schemes#thm8){: data-relation="required" })
+Here $\mathcal{E}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{E}, \mathcal{O}_X)$, and $(-)^\ast$ denotes the dual of a finite-dimensional $\mathbb{K}$-vector space. ([§Sheaf Cohomology of Schemes, ⁋Theorem 9](/en/math/scheme_theory/sheaf_cohomology_of_schemes#thm9){: data-relation="required" })
 :::
 
 The proof of this theorem proceeds by showing that the pairing constructed from the trace map and cup product on $\mathbb{P}^n$ is a perfect pairing, and then transporting this to a general $X$ via a finite surjective morphism; since the concrete proof lies beyond the scope of this article, we refer the reader to [\[Algebraic Varieties\] §Serre Duality, §§Serre Duality on Projective Space](/en/math/algebraic_varieties/serre_duality#serre-duality-on-projective-space).
