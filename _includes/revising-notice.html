@@ -24,9 +24,9 @@
     {% assign _notice = site.data.ui-text[_lang].revising_notice_wip %}
   {% endif %}
   {% if _notice and _notice != "" %}
-  <div class="notice--warning revising-notice" role="note">
+  <aside class="revising-notice" role="note">
     <i class="material-icons revising-notice__icon" aria-hidden="true">edit_note</i>
-    <div class="revising-notice__text">{{ _notice | markdownify }}</div>
-  </div>
+    <div class="revising-notice__content">{{ _notice | markdownify }}</div>
+  </aside>
   {% endif %}
 {% endif %}

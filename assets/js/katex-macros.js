@@ -203,6 +203,7 @@ window.KATEX_MACROS = {
     "\\sat":"\\mathrm{sat}",
     "\\scl":"\\operatorname{scl}",
     "\\sgn":"\\mathrm{sgn}",
+    "\\Sing":"\\operatorname{Sing}",
     "\\sExt":"\\mathop{\\mathcal{Ext}}",
     "\\sHom":"\\mathop{\\mathcal{Hom}}",
     "\\sk":"\\operatorname{sk}",

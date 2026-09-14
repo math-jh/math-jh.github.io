@@ -13,6 +13,54 @@ import ko_followup_worker as worker
 
 
 class FollowupBatchTest(unittest.TestCase):
+    def test_scoped_diff_ignores_another_links_metadata(self) -> None:
+        baseline = (
+            "결과적으로 이를 두 quotient가 같게 되는 것이다.\n"
+            + "문맥입니다.\n" * 10
+            + '[다른 글](other){: data-relation="requires-review" }\n'
+        )
+        current = baseline.replace(
+            "이를 두 quotient가", "이들 두 quotient가",
+        ).replace('data-relation="requires-review"', 'data-relation="weak"')
+
+        diff = worker._scoped_ko_diff(
+            baseline, current,
+            [{"quote": "결과적으로 이를 두 quotient가 같게 되는 것이다.",
+              "line": 1}],
+            "ko.md",
+        )
+
+        self.assertIn("이들 두 quotient가", diff)
+        self.assertNotIn('data-relation="weak"', diff)
+
+    def test_scoped_diff_keeps_the_finding_links_metadata(self) -> None:
+        baseline = '[대상](target){: data-relation="requires-review" }\n'
+        current = '[대상](target){: data-relation="required" }\n'
+
+        diff = worker._scoped_ko_diff(
+            baseline, current, [{"quote": "[대상](target)", "line": 1}],
+            "ko.md",
+        )
+
+        self.assertIn('data-relation="required"', diff)
+
+    def test_persists_migrated_state_with_an_empty_request_queue(self) -> None:
+        state = {"files": {"new.md": {"status": "done"}}}
+        with tempfile.TemporaryDirectory(prefix="ko-followup-test-") as tmp:
+            request_state = Path(tmp) / "requests.json"
+            request_state.write_text("{}", encoding="utf-8")
+            with (
+                patch.object(worker, "REQUEST_STATE", request_state),
+                patch.object(worker.tw, "load_state", return_value=state),
+                patch.object(worker.tw, "_migrated_keys", 1),
+                patch.object(worker.tw, "save_state") as save_state,
+                patch.object(worker, "log"),
+            ):
+                rc = worker.run_all()
+
+        self.assertEqual(rc, 0)
+        save_state.assert_called_once_with(state)
+
     def _run_with(self, requests: dict, files: dict, process):
         with tempfile.TemporaryDirectory(prefix="ko-followup-test-") as tmp:
             request_state = Path(tmp) / "requests.json"

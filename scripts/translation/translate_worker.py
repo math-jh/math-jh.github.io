@@ -2458,6 +2458,30 @@ def _fixup_pass(en_path: Path, ko_path: Path, key: str,
     return remain
 
 
+def _run_output_gate(
+    en_path: Path, ko_path: Path, key: str, warnings: List[str],
+) -> Tuple[List[str], List[str]]:
+    """Run the shared deterministic/fixup gate and refresh Hangul warnings."""
+    gate_residual: List[str] = [w for w in warnings if "Hangul" in w]
+    try:
+        from section_anchor_gate import run_gate
+        gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
+        for line in gres.log_lines:
+            log(f"GATE ({key}): {line}")
+        # Recompute Hangul findings after deterministic repairs.  Passing the
+        # stale translation warning would ask Opus to repair an anchor that is
+        # already fixed.
+        residual = gres.fails + gres.mdlint_lines + _hangul_findings(en_path)
+        gate_residual = _fixup_pass(en_path, ko_path, key, residual) \
+            if residual else []
+    except Exception as e:
+        log(f"GATE exception (non-fatal): {_flat(e)[:160]}")
+
+    final_warnings = [w for w in warnings if "Hangul" not in w] \
+        + _hangul_findings(en_path)
+    return final_warnings, gate_residual
+
+
 def verify_math_mismatch(
     ko_content: str, en_new: str, ko_count: int, en_count: int,
     *, en_old: Optional[str] = None,   # unused; kept for call-site compatibility
@@ -2680,6 +2704,22 @@ def translate_drift_incremental(
     en_fm = _compose_en_frontmatter(
         ko_fm_text, en_fields, translated_at_iso=translated_at_iso)
     assembled = f"---\n{en_fm}---\n{new_body.lstrip(chr(10))}"
+
+    # The normal path runs this deterministic gate after writing the candidate,
+    # but incremental drift validates in memory before any write.  Normalize
+    # repairable section anchors here as well, so one KO anchor copied into an
+    # otherwise clean changed region does not discard the incremental result
+    # and trigger a full-post retranslation.
+    try:
+        from section_anchor_gate import gate_text
+        assembled, gres = gate_text(assembled, en_path)
+        for line in gres.log_lines:
+            log(f"GATE-INCREMENTAL ({ko_path.relative_to(BLOG_ROOT)}): {line}")
+    except Exception as e:
+        # Validation below remains authoritative.  A residual Hangul anchor or
+        # other warning will still take the conservative full-fallback path.
+        log(f"GATE-INCREMENTAL ({ko_path.relative_to(BLOG_ROOT)}): "
+            f"exception (non-fatal): {e!r}")
 
     warns: list = []
     err = validate_translation(
@@ -3118,6 +3158,9 @@ def main() -> int:
                 assembled, in_chars, out_chars, n_re, n_tot = inc
                 en_path.write_text(assembled, encoding="utf-8")
                 clear_drift_flag(ko_path)
+                warnings, gate_residual = _run_output_gate(
+                    en_path, ko_path, key, [],
+                )
                 state["files"][key] = {
                     "status": "done",
                     "last_attempt_ts": time.time(),
@@ -3127,7 +3170,11 @@ def main() -> int:
                     "in_chars": in_chars, "out_chars": out_chars,
                     "reason": "drift-incremental",
                     "regions_retranslated": n_re, "regions_total": n_tot,
+                    "warnings": warnings or None,
                 }
+                hangul_warns = [w for w in warnings if "Hangul" in w]
+                if hangul_warns:
+                    state["files"][key]["needs_review"] = hangul_warns
                 state.pop("failure_notice", None)   # 엔진이 살아났다 — 다음 장애는 첫 통부터
                 stats = state.setdefault("stats", {})
                 stats["total_done"]      = stats.get("total_done", 0) + 1
@@ -3137,6 +3184,15 @@ def main() -> int:
                 log(f"DONE (incremental drift): {en_path.relative_to(BLOG_ROOT)} — "
                     f"re-translated {n_re}/{n_tot} region(s), kept {n_tot - n_re} "
                     f"(in={in_chars}c, out={out_chars}c)")
+                gate_only = [item for item in gate_residual if item not in warnings]
+                if warnings or gate_only:
+                    body = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
+                    body += [f"• {warning}" for warning in warnings]
+                    body += [f"• (게이트 잔여) {item}" for item in gate_only]
+                    _notify(
+                        "[translate-worker] drift-incremental warnings",
+                        "\n".join(body),
+                    )
                 return 0
             log(f"drift: incremental unavailable for {key}, full re-translation")
 
@@ -3218,29 +3274,9 @@ def main() -> int:
         # 상태 기록·알림보다 **먼저** 돈다. 게이트가 고칠 수 있는 것까지 경고로
         # 올리면 이미 해소된 일로 알림이 나가고 needs_review 마커가 남는다.
         # 게이트 실패는 번역을 죽이지 않는다 — 커밋은 진행하고 잔여만 넘긴다.
-        hangul_warns = [w for w in warnings if "Hangul" in w]
-        gate_residual: List[str] = list(hangul_warns)
-        try:
-            from section_anchor_gate import run_gate
-            gres = run_gate(en_path, ko_path, apply=True, mdlint=True)
-            for ln in gres.log_lines:
-                log(f"GATE ({key}): {ln}")
-            # opus 로 넘기는 입력은 결정론 게이트의 잔여 + 한글 경고다. 한글
-            # 경고는 **게이트가 돈 뒤 파일로 다시 뽑는다** — 한글 앵커는 게이트가
-            # 결정론으로 고치는 부류라, 번역 단계의 낡은 경고를 그대로 넘기면
-            # 이미 고쳐진 것을 고치라고 부르는 헛돈이 된다. 수식 개수 불일치는
-            # 넣지 않는다 — 프롬프트가 수식을 못 만지게 돼 있고, 그쪽은
-            # verify_math_mismatch 라는 자기 검증 경로가 따로 있다.
-            residual = gres.fails + gres.mdlint_lines + _hangul_findings(en_path)
-            gate_residual = _fixup_pass(en_path, ko_path, key, residual) \
-                if residual else []
-        except Exception as e:
-            log(f"GATE exception (non-fatal): {_flat(e)[:160]}")
-
-        # 한글 경고는 최종 파일로 재판정한다. 게이트가 고쳤으면 알림에서도
-        # needs_review 에서도 빠져야 한다 (마커만 남아 --status 를 오염시킨 사례 있음).
-        warnings = [w for w in warnings if "Hangul" not in w] \
-            + _hangul_findings(en_path)
+        warnings, gate_residual = _run_output_gate(
+            en_path, ko_path, key, warnings,
+        )
         hangul_warns = [w for w in warnings if "Hangul" in w]
 
         # 폴리싱 때마다 Antigravity가 KO 자체의 오류/설명 누락 후보를 별도로

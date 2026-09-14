@@ -31,6 +31,7 @@ REQUEST_STATE = Path.home() / ".local/state/blog_dashboard_kotypo.json"
 LOG_PREFIX = "KO-FOLLOWUP"
 MAX_REPLACEMENTS = 12
 MAX_PROPOSAL_ATTEMPTS = 2
+FINDING_CHANGE_RADIUS = 2
 
 
 def log(message: str) -> None:
@@ -78,6 +79,58 @@ def _diff(old: str, new: str, old_name: str, new_name: str) -> str:
         lineterm="", n=4,
     )
     return "\n".join(lines) or "(no changes)"
+
+
+def _finding_line_spans(baseline: str, findings: list[dict]) -> list[tuple[int, int]]:
+    """Return zero-based baseline line spans occupied by actionable findings."""
+    spans = []
+    for finding in findings:
+        quote = str(finding.get("quote") or "")
+        pos = baseline.find(quote) if quote else -1
+        if pos >= 0:
+            start = baseline.count("\n", 0, pos)
+            spans.append((start, start + quote.count("\n") + 1))
+            continue
+        try:
+            start = max(0, int(finding.get("line")) - 1)
+        except (TypeError, ValueError):
+            continue
+        spans.append((start, start + 1))
+    return spans
+
+
+def _scoped_ko_diff(
+    baseline: str, current: str, findings: list[dict], path: str,
+) -> str:
+    """Show only changes at the findings, not unrelated edits in the post.
+
+    Follow-up review owns the correction identified by each finding. Link
+    metadata or prose edited elsewhere belongs to its own workflow and must not
+    make this request pass or fail.
+    """
+    before = baseline.splitlines(keepends=True)
+    after = current.splitlines(keepends=True)
+    spans = _finding_line_spans(baseline, findings)
+    if not spans:
+        return "(no changes)"
+
+    matcher = difflib.SequenceMatcher(None, before, after, autojunk=False)
+    scoped = []
+    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+        if tag == "equal":
+            scoped.extend(before[i1:i2])
+            continue
+        # Replacements/deletions occupy [i1, i2); insertions sit at i1.
+        change_start = i1
+        change_end = max(i1 + 1, i2)
+        relevant = any(
+            change_start < end + FINDING_CHANGE_RADIUS
+            and change_end > start - FINDING_CHANGE_RADIUS
+            for start, end in spans
+        )
+        scoped.extend(after[j1:j2] if relevant else before[i1:i2])
+
+    return _diff(baseline, "".join(scoped), f"a/{path}", f"b/{path}")
 
 
 def _fallback_ko_base(path: str, reviewed_at: str) -> str | None:
@@ -172,8 +225,11 @@ CODEX_PROMPT = """Review one completed Korean-source correction and its English 
 
 You receive the original reviewed findings, the two unified diffs, and the final
 English text after the proposed follow-up. Judge whether the KO diff resolves
-exactly the original issue, and whether the final English faithfully reflects that
-resolved Korean meaning without invention, omission, or unrelated rewriting. When
+the original issue, and whether the final English faithfully reflects that resolved
+Korean meaning without invention, omission, or unrelated rewriting. The KO diff is
+deliberately scoped to the finding. Do not judge other edits in the post; in
+particular, another link's data-relation metadata belongs to a separate link-level
+workflow. When
 the EN diff is empty, inspect FINAL EN rather than assuming the correction is
 missing: it is acceptable only when FINAL EN already expresses the corrected
 meaning. Do not use outside mathematical knowledge to broaden the requested
@@ -375,9 +431,13 @@ def _process_target_locked(target: tuple, state: dict) -> int:
 
     current_ko = ko_path.read_text(encoding="utf-8")
     current_en = en_path.read_text(encoding="utf-8")
-    ko_diff = _diff(baseline, current_ko, f"a/{path}", f"b/{path}")
-    if ko_diff == "(no changes)":
+    full_ko_diff = _diff(baseline, current_ko, f"a/{path}", f"b/{path}")
+    if full_ko_diff == "(no changes)":
         log(f"WAIT {path}: 체크 후 KO 변경이 없음")
+        return 0
+    ko_diff = _scoped_ko_diff(baseline, current_ko, findings, path)
+    if ko_diff == "(no changes)":
+        log(f"WAIT {path}: 다른 변경은 있으나 지적 위치의 KO 변경이 없음")
         return 0
 
     log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영")
@@ -428,6 +488,12 @@ def _process_target_locked(target: tuple, state: dict) -> int:
 def run_all() -> int:
     requests = _read_json(REQUEST_STATE)
     state = tw.load_state()
+    # main() already holds the shared translation lock.  Persist path-key
+    # migrations even when the follow-up queue is empty; otherwise every
+    # follow-up tick rediscovers and logs the same rename until the primary
+    # translation worker happens to run.
+    if tw._migrated_keys:
+        tw.save_state(state)
     files = state.get("files", {})
 
     targets = []

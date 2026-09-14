@@ -407,33 +407,14 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
   }
 }
 
-/* Icon + text notices (mockup look): post under revision */
-.revising-notice {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  gap: 0.7em;
-
-  &__icon {
-    flex: 0 0 auto;
-    font-size: 1.5rem;
-    color: $warning-color;
-    opacity: 0.9;
-  }
-
-  &__text { min-width: 0; }
-  &__text > :first-child { margin-top: 0; }
-  &__text > :last-child { margin-bottom: 0; }
-}
-
-/* Machine translation & AI author notices:
+/* Machine translation, AI author, and post under revision notices:
    reading prerequisites(semantic-reading)의 인쇄물 괘선 문법을 따르되,
-   사면 1px 괘선, 쨍한 레드 계열($translation-notice-red), 기계 아이콘(smart_toy) 사용. */
+   사면 1px 괘선, 쨍한 레드 계열($translation-notice-red) 사용. */
 $translation-notice-red: #d32f2f;
 
 .translation-notice,
-.ai-author-notice {
+.ai-author-notice,
+.revising-notice {
   display: flex;
   align-items: center;
   gap: 0.65em;
@@ -452,6 +433,7 @@ $translation-notice-red: #d32f2f;
     font-size: 1.3em;
     line-height: 1;
     color: mix($translation-notice-red, $text-color, 85%);
+    transform: translateY(1px);
   }
 
   &__content {
@@ -459,6 +441,10 @@ $translation-notice-red: #d32f2f;
     font-family: $sans-serif;
     font-size: 0.88em;
     line-height: 1.5;
+
+    &:lang(ko) {
+      transform: translateY(1px);
+    }
 
     > :first-child { margin-top: 0; }
     > :last-child { margin-bottom: 0; }
@@ -515,7 +501,7 @@ $related-notice-blue: #216ba5;
     position: absolute;
     left: 0.75em;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% + 1px));
     color: mix($related-notice-blue, $text-color, 85%);
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
@@ -523,6 +509,11 @@ $related-notice-blue: #216ba5;
 
   > :first-child { margin-top: 0; }
   > :last-child { margin-bottom: 0; }
+
+  &:lang(ko) {
+    padding-top: calc(0.75em + 1px) !important;
+    padding-bottom: calc(0.75em - 1px) !important;
+  }
 
   p {
     margin: 0;
