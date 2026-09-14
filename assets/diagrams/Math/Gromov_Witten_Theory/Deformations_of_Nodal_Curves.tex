@@ -23,4 +23,43 @@
   \node[right] at (1.05,-1.1) {$C$};
 \end{tikzpicture}
 
+%%FIG the local fibers xy=t over the deformation space (Deformations_of_Nodal_Curves-2.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \path[use as bounding box] (-8.3,-2.65) rectangle (8.8,4.75);
+
+  % Fibres xy=-tau, xy=0, xy=tau for a very small positive tau.
+  \begin{scope}[shift={(-5.5,3)}]
+    \foreach \sgn in {-1,1}{
+      \draw[accent1, line width=.9pt]
+        plot[domain=.0087:1.52, variable=\s, samples=120]
+          ({\sgn*\s},{-\sgn*.0115/\s});
+    }
+  \end{scope}
+
+  \begin{scope}[shift={(0,3)}]
+    \draw[line width=.9pt] (-1.52,0)--(1.52,0);
+    \draw[line width=.9pt] (0,-1.52)--(0,1.52);
+    \fill (0,0) circle[radius=1.7pt];
+  \end{scope}
+
+  \begin{scope}[shift={(5.5,3)}]
+    \foreach \sgn in {-1,1}{
+      \draw[accent1, line width=.9pt]
+        plot[domain=.0087:1.52, variable=\s, samples=120]
+          ({\sgn*\s},{\sgn*.0115/\s});
+    }
+  \end{scope}
+
+  % The family projects to its deformation parameter space.
+  \draw[-{Stealth}, black!50, line width=.8pt] (0,.4)--(0,-1.35);
+
+  % Parameter line; only its origin is labelled.
+  \draw[line width=.8pt] (-8,-1.75)--(8,-1.75);
+  \fill[accent1] (-5.5,-1.75) circle[radius=2.1pt];
+  \fill (0,-1.75) circle[radius=2.1pt];
+  \fill[accent1] (5.5,-1.75) circle[radius=2.1pt];
+  \node[below=4pt] at (0,-1.75) {$0$};
+  \node[below] at (8,-1.75) {$\mathbb{K}\cong T_p^1$};
+\end{tikzpicture}
+
 \end{document}
