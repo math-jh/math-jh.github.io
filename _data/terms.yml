@@ -11537,7 +11537,7 @@ M:
   ko: 표시된 점
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: matching_family
   en: matching family
@@ -14127,7 +14127,7 @@ P:
   ko: 준안정 곡선
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: prestack
   en: prestack
@@ -17309,7 +17309,7 @@ S:
   ko: 안정사상
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
   - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
     url: /ko/math/gromov-witten_theory/intro_reading_note
@@ -19515,7 +19515,7 @@ V:
   ko: 가상 클래스
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: virtual_cycle
   en: virtual cycle
