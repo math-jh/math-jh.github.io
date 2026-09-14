@@ -187,12 +187,12 @@ $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k
 임을 안다. 즉, $p_A$에서 $\lambda$의 대수적 중복도는 최소 $k$이다. 
 :::
 
-$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 degree인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4){: data-relation="required" } 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4){: data-relation="required" } 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 ::: 명제 6
-임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{K}^n$이 $A$의 고유공간들의 direct sum으로 representable할 필요충분조건은 
+임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{K}^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
-1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 root를 가지며,
+1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.
 :::
 
@@ -226,7 +226,7 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 [명제 6](#prop6){: data-relation="required" }의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
 :::
 
-혹은, [명제 6](#prop6){: data-relation="required" }은 필요충분조건이었으므로, 대각행렬과 similar를 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 similarity class는 중복도를 포함한 eigenvalue들에 의해 완전하게 결정된다. 
+혹은, [명제 6](#prop6){: data-relation="required" }은 필요충분조건이었으므로, 대각행렬과 닮은 행렬을 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 similarity class는 중복도를 포함한 eigenvalue들에 의해 완전하게 결정된다. 
 
 Diagonalizable matrix들이 개념적으로 중요하다는 것은 위에서 충분히 살펴보았다. 이 뿐만 아니라 diagonalizable matrix들은 계산의 편의성 측면에서도 크게 도움이 된다. 가령 행렬 $A$가 대각화 가능하여 $A=XDX^{-1}$이라면, $A$의 거듭제곱은 $A^k=XD^kX^{-1}$로 주어지며 대각행렬의 거듭제곱은 각 성분의 거듭제곱으로 만들어진 대각행렬에 불과하므로 $A$의 거듭제곱을 계산하는 것은 아주 쉬운 일이 된다. 
 
@@ -267,7 +267,7 @@ $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
 ## 선형연산자의 고유공간분해
 
-지금까지 우리는 주어진 행렬을 대각화하는 과정을 살펴보았고, 기본적으로 이는 (대각화가능한) 선형연산자가 주어졌을 때 벡터공간을 고유공간들로 분해하는 것과 같다. 이에 대한 증명을 위해 우리는 고유공간의 basis를 적극적으로 활용했다. 이를 basis의 선택없이 설명하는 것은 다음 글에서 다룰 Jordan canonical form을 살펴볼 때 도움이 될 것이다. 
+지금까지 우리는 주어진 행렬을 대각화하는 과정을 살펴보았고, 기본적으로 이는 (대각화가능한) 선형연산자가 주어졌을 때 벡터공간을 고유공간들로 분해하는 것과 같다. 이에 대한 증명을 위해 우리는 고유공간의 기저를 적극적으로 활용했다. 이를 기저의 선택없이 설명하는 것은 다음 글에서 다룰 조르당 표준형을 살펴볼 때 도움이 될 것이다. 
 
 유한차원 벡터공간 $V$와 linear operator $L:V\rightarrow V$에 대하여, 우리는 다음의 식
 

@@ -37,10 +37,10 @@ $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) symmetric matrix의 고윳값이 항상 실수라는 것이다. 
 
 ::: 보조정리 2
-실수 symmetric matrix $A$의 모든 고윳값은 실수이다. 즉 $A$의 특성다항식의 모든 root는 실수이다. 
+실수 symmetric matrix $A$의 모든 고윳값은 실수이다. 즉 $A$의 특성다항식의 모든 근은 실수이다. 
 :::
 ::: 증명
-$A$의 특성다항식은 실수를 계수로 갖는 $n$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8){: data-relation="required" }에 의하여, 이 다항식은 $\mathbb{C}$까지 포함하면 $n$개의 root $\lambda$를 가진다. 
+$A$의 특성다항식은 실수를 계수로 갖는 $n$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8){: data-relation="required" }에 의하여, 이 다항식은 $\mathbb{C}$까지 포함하면 $n$개의 근 $\lambda$를 가진다. 
 
 이제 이에 해당하는 eigenvector $z\in\mathbb{C}^n$를 생각하고, $z$의 각 성분을 켤레복소수로 바꾼 벡터를 $\bar z$라 하고, 다음의 복소수
 
@@ -57,13 +57,13 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 이므로, $s$는 실수이다. 그런데 $\sum_i\lvert z_i\rvert^2$은 $z\neq 0$이므로 양의 실수이고, 따라서 $s=\lambda\sum_i\lvert z_i\rvert^2$이 실수이려면 $\lambda$ 또한 실수여야 한다.
 :::
 
-이 명제의 증명을 위해 $\mathbb{C}$로 다항식을 옮겨야만 하는 것은 필연적이며, 실제로 다음 글에서 우리는 복소수 버전의 spectrum 정리를 증명하게 될 것이다. 특히 이로부터 self-adjoint operator가 항상 고윳값을 (따라서 고유벡터를) 가짐을 안다. 
+이 명제의 증명을 위해 $\mathbb{C}$로 다항식을 옮겨야만 하는 것은 필연적이며, 실제로 다음 글에서 우리는 복소수 버전의 스펙트럼 정리를 증명하게 될 것이다. 특히 이로부터 self-adjoint operator가 항상 고윳값을 (따라서 고유벡터를) 가짐을 안다. 
 
 ::: 따름정리 3
 $0$이 아닌 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$는 항상 고유벡터를 가진다. 
 :::
 ::: 증명
-$V$의 orthonormal basis를 택하면 $L$의 행렬표현 $A$는 실수 symmetric matrix이다. $\dim V\geq 1$이므로 $A$의 특성다항식은 degree가 $1$ 이상이고, 대수학의 기본정리에 의하여 $\mathbb{C}$에서 root를 가진다. [보조정리 2](#lem2){: data-relation="required" }에 의하여 이 root는 실수이므로, $A$는 실수인 고윳값 $\lambda$를 가진다. 그럼 $\lambda I-A$가 singular이므로 $(\lambda I-A)v=0$을 만족하는 영이 아닌 $v\in\mathbb{R}^n$이 존재하고, 이것이 $L$의 고유벡터이다. 
+$V$의 orthonormal basis를 택하면 $L$의 행렬표현 $A$는 실수 symmetric matrix이다. $\dim V\geq 1$이므로 $A$의 특성다항식은 차수가 $1$ 이상이고, 대수학의 기본정리에 의하여 $\mathbb{C}$에서 근을 가진다. [보조정리 2](#lem2){: data-relation="required" }에 의하여 이 근은 실수이므로, $A$는 실수인 고윳값 $\lambda$를 가진다. 그럼 $\lambda I-A$가 singular이므로 $(\lambda I-A)v=0$을 만족하는 영이 아닌 $v\in\mathbb{R}^n$이 존재하고, 이것이 $L$의 고유벡터이다. 
 :::
 
 ## 스펙트럼 정리
@@ -81,7 +81,7 @@ $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 이고, $L(U)\subseteq U$이므로 $Lu\in U$이며 $w\in U^\perp$이므로 $\langle w,Lu\rangle=0$이다. 즉 $\langle Lw,u\rangle=0$이 모든 $u\in U$에 대해 성립하므로 $Lw\in U^\perp$이다. 
 :::
 
-이제 spectrum 정리를 증명할 준비가 되었다. 
+이제 스펙트럼 정리를 증명할 준비가 되었다. 
 
 ::: 정리 5 (스펙트럼 정리)
 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$에 대하여, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재한다. 특히 이 고윳값들은 모두 실수이다. 
@@ -94,7 +94,7 @@ $U=\span v_1$이라 하면 $L(U)\subseteq U$이므로 [보조정리 4](#lem4){: 
 이 벡터들은 모두 $L$의 고유벡터이기도 하며, $v_1\in U$이고 $v_2,\ldots, v_n\in U^\perp$이므로 $v_1$은 나머지와 직교한다. 따라서 $\{v_1,v_2,\ldots, v_n\}$은 $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis이다. 
 :::
 
-행렬의 언어로 옮기면 spectrum 정리는 실수 대칭행렬의 직교대각화를 의미한다. 
+행렬의 언어로 옮기면 스펙트럼 정리는 실수 대칭행렬의 직교대각화를 의미한다. 
 
 ::: 따름정리 6
 임의의 실수 대칭행렬 $A$에 대하여, 적당한 orthogonal matrix $Q$와 실수 대각행렬 $D$가 존재하여 
@@ -111,7 +111,7 @@ $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 이고, 여기서 $D=\diag(\lambda_1,\ldots,\lambda_n)$이다. 양변에 오른쪽에서 $Q^t=Q^{-1}$을 곱하면 $A=QDQ^t$를 얻는다. 
 :::
 
-Spectrum 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
+스펙트럼 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
 
 ::: 따름정리 7
 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L$의 서로 다른 두 고윳값 $\lambda\neq\mu$와 이에 해당하는 고유벡터 $v,w$에 대하여, $\langle v,w\rangle=0$이다. 따라서 $V$는 고유공간들의 직교하는 direct sum으로 분해된다. 

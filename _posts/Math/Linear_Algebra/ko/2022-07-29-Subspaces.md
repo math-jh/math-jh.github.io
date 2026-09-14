@@ -95,7 +95,7 @@ $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
 $$p(\x)=\alpha_n\x^n+\alpha_{n-1}\x^{n-1}+\cdots+\alpha_1\x+\alpha_0$$
 
-의 꼴이다. 만일 $\alpha_n\neq0$이라면 이를 $p(\x)$의 *degree<sub>차수</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 영다항식 $0$의 degree는 정의하지 않거나 형식적으로는 $-\infty$인 것으로 간주하며, 따라서 degree가 $n$ 이하인 다항식들을 말할 때에는 $0$도 함께 포함시키기로 한다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
+의 꼴이다. 만일 $\alpha_n\neq0$이라면 이를 $p(\x)$의 *차수<sub>degree</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 영다항식 $0$의 degree는 정의하지 않거나 형식적으로는 $-\infty$인 것으로 간주하며, 따라서 degree가 $n$ 이하인 다항식들을 말할 때에는 $0$도 함께 포함시키기로 한다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
 
 $$q(\x)=\beta_m\x^m+\beta_{m-1}\x^{m-1}+\cdots+\beta_1\x+\beta_0$$
 
@@ -113,7 +113,7 @@ $$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha
 
 으로 정의된다. 어렵지 않게 이들 정의가 $\mathbb{K}[\x]$에 $\mathbb{K}$-벡터공간 구조를 부여한다는 것을 확인할 수 있다.
 
-이제 $n$차 이하의 degree를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$는 $\mathbb{K}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> degree $n$을 갖는 다항식들의 집합은 $0$을 포함하지 않으므로 부분공간은 되지 않고, $n\geq1$이면 $0$을 넣어주더라도 $\x^n$과 $1-\x^n$의 합이 보여주듯 덧셈에 대해 닫히지 않아 여전히 부분공간이 아니다. 
+이제 $n$차 이하의 차수를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$는 $\mathbb{K}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> 차수 $n$을 갖는 다항식들의 집합은 $0$을 포함하지 않으므로 부분공간은 되지 않고, $n\geq1$이면 $0$을 넣어주더라도 $\x^n$과 $1-\x^n$의 합이 보여주듯 덧셈에 대해 닫히지 않아 여전히 부분공간이 아니다. 
 :::
 
 ::: 예시 6

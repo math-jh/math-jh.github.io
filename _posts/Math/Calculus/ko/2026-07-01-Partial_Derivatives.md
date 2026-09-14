@@ -229,22 +229,22 @@ D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u} &\leq \lVert
 
 ## 극값과 헤세 행렬
 
-한 변수에서 극값이 critical point에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *critical point*에서만 일어난다. 일변수함수의 경우 우리는 이 critical point가 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17){: data-relation="weak" }), 비슷한 상황이 다변수함수에서도 일어난다. 
+한 변수에서 극값이 임계점에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *임계점*에서만 일어난다. 일변수함수의 경우 우리는 이 임계점이 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17){: data-relation="weak" }), 비슷한 상황이 다변수함수에서도 일어난다. 
 
-다만 주의할 것은, 이제 미분을 취할 수 있는 방향이 여럿이므로 한 방향에서는 극소, 다른 한 방향에서는 극대인 점이 존재할 수 있다는 것이다. 이러한 점을 *안장점<sub>saddle point</sub>*이라 부른다. 이 섹션에서 우리는 critical point가 언제 극대, 극소, 안장점인지를 판별할 것인데, 계산의 편의상 $\mathbb{R}^2$에서 정의된 다변수함수로 우리 관심을 제한한다. 
+다만 주의할 것은, 이제 미분을 취할 수 있는 방향이 여럿이므로 한 방향에서는 극소, 다른 한 방향에서는 극대인 점이 존재할 수 있다는 것이다. 이러한 점을 *안장점<sub>saddle point</sub>*이라 부른다. 이 섹션에서 우리는 임계점이 언제 극대, 극소, 안장점인지를 판별할 것인데, 계산의 편의상 $\mathbb{R}^2$에서 정의된 다변수함수로 우리 관심을 제한한다. 
 
-미분가능한 이변수함수의 critical point 근방에서 테일러 전개하면, 일차항이 $\nabla f(\mathbf{a}) = 0$으로 사라지고 남는 이차항은
+미분가능한 이변수함수의 임계점 근방에서 테일러 전개하면, 일차항이 $\nabla f(\mathbf{a}) = 0$으로 사라지고 남는 이차항은
 
 $$f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \frac{1}{2}\bigl(f_{xx}(\mathbf{a})h_1^2 + 2f_{xy}(\mathbf{a})h_1 h_2 + f_{yy}(\mathbf{a})h_2^2\bigr)$$
 
-이다. 이 이차형식의 계수들을 정사각행렬로 모은 것이 critical point $\mathbf{a}$에서의 *헤세 행렬<sub>Hessian</sub>*로, 이는 다음의 식
+이다. 이 이차형식의 계수들을 정사각행렬로 모은 것이 임계점 $\mathbf{a}$에서의 *헤세 행렬<sub>Hessian</sub>*로, 이는 다음의 식
 
 $$H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
 
-으로 주어진다. Critical point의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
+으로 주어진다. 임계점의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
 
 ::: 명제 9 (이계도함수 판정)
-$f$가 $C^2$급이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
+$f$가 $C^2$급이고 $\mathbf{a}$가 임계점($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
 
 1. $D > 0$이고 $f_{xx} > 0$이면 $\mathbf{a}$는 극소이다. 
 2. $D > 0$이고 $f_{xx} < 0$이면 이 점은 극대이다. 
@@ -252,7 +252,7 @@ $f$가 $C^2$급이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)
 :::
 
 ::: 증명
-Critical point 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자. 우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
+임계점 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자. 우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
 
 $$\begin{aligned}
 f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2
@@ -269,10 +269,10 @@ $$2f_{xy}h_1 h_2 + f_{yy}h_2^2 = h_2\bigl(2f_{xy}h_1 + f_{yy}h_2\bigr)$$
 이므로, $h_2$를 $0$이 아닌 값으로 고정한 채 $\lvert h_1\rvert$을 충분히 크게 잡으면 괄호 안의 부호가 $f_{xy}h_1$을 따라가고, 따라서 $h_1$의 부호를 바꾸는 것만으로 이차항이 양과 음 양쪽 값을 모두 가진다. 이차형식은 $(h_1,h_2)$를 같은 비율로 줄여도 부호가 변하지 않으므로 이는 $\mathbf{a}$에 얼마든지 가까운 곳에서 일어나며, 이 경우에도 $\mathbf{a}$는 안장점이다.
 :::
 
-판별식이 음일 때 나타나는 안장점은 방향에 따라 함수가 오르내리는 가장 단순한 critical point라 할 수 있다.
+판별식이 음일 때 나타나는 안장점은 방향에 따라 함수가 오르내리는 가장 단순한 임계점이라 할 수 있다.
 
 ::: 예시 10 (안장점)
-$f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 critical point $(0,0)$을 가진다. 헤세 행렬은 $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$로 $\det H = -4 < 0$이므로 안장점이다. 실제로 $x$축을 따라가면 $f = x^2$로 극소, $y$축을 따라가면 $f = -y^2$로 극대라, 방향에 따라 오르내리는 말안장 모양이다. 아래 그림은 이 곡면 $z = x^2 - y^2$의 모습으로, 원점(검은 점)이 안장점이다.
+$f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 임계점 $(0,0)$을 가진다. 헤세 행렬은 $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$로 $\det H = -4 < 0$이므로 안장점이다. 실제로 $x$축을 따라가면 $f = x^2$로 극소, $y$축을 따라가면 $f = -y^2$로 극대라, 방향에 따라 오르내리는 말안장 모양이다. 아래 그림은 이 곡면 $z = x^2 - y^2$의 모습으로, 원점(검은 점)이 안장점이다.
 
 {% diagram Math/Calculus/Partial_Derivatives-1.svg width="21.37em" alt="saddle_surface" %}
 :::
@@ -291,7 +291,7 @@ $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 가 성립한다.
 :::
 ::: 증명
-제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth curve $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6){: data-relation="required" }으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 tangent space가 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
+제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 매끄러운 곡선 $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6){: data-relation="required" }으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 접공간에 직교한다. 그런데 전체 공간이 $m$차원이고, 제약면의 접공간이 $m-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
 :::
 
 실제 계산에서는 새로 도입된 실수 $\lambda$를 미지수로 추가하여 $\nabla f = \lambda \nabla g$와 제약식 $g = c$를 함께 연립하여 푸는데, 이 $\lambda$를 *라그랑주 승수<sub>Lagrange multiplier</sub>*라 부른다.

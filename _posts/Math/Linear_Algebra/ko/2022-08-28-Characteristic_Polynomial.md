@@ -27,11 +27,11 @@ weight: 15
 
 $$\det(\x I-A)=\sum_{\tau\in S_n}\sgn(\tau)(\x I-A)_{\tau(1),1}\cdots(\x I-A)_{\tau(n),n}\tag{1}$$
 
-으로부터, $A$의 특성다항식의 degree는 많아봐야 $n$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $n$개 항들의 곱인데, 이 때 각 $(\x I-A)_{\tau(k),k}$는 $\tau(k)=k$일 때에만 $\x$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $n$차식이라면, degree $n$의 항은 <em-ko>반드시</em-ko> 모든 $k$에 대해 $\tau(k)=k$를 만족하는 $\tau$, 즉 $\tau=\id_{S_n}$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
+으로부터, $A$의 특성다항식의 차수는 많아봐야 $n$차라는 것을 알 수 있다. 우변에서 더해지는 다항식은 $n$개 항들의 곱인데, 이 때 각 $(\x I-A)_{\tau(k),k}$는 $\tau(k)=k$일 때에만 $\x$에 대한 일차식이고, 그렇지 않으면 상수이기 때문이다. 이로부터 만일 특성다항식이 실제로 $n$차식이라면, 차수 $n$의 항은 <em-ko>반드시</em-ko> 모든 $k$에 대해 $\tau(k)=k$를 만족하는 $\tau$, 즉 $\tau=\id_{S_n}$일 때에만 나타난다는 것을 안다. 이 때, 해당하는 항은
 
 $$(\x I-A)_{1,1}\cdots(\x I-A)_{n,n}=(\x-A_{11})\cdots(\x-A_{nn})\tag{2}$$
 
-이 되며, 이를 전개하면 $\x^n$의 계수는 $1$이므로 특성다항식의 degree는 항상 $n$이라는 것을 알 수 있다. 
+이 되며, 이를 전개하면 $\x^n$의 계수는 $1$이므로 특성다항식의 차수는 항상 $n$이라는 것을 알 수 있다. 
 
 만일 $\tau(i)\neq i$인 $i$가 하나 존재한다면, 비둘기집 원리에 의해 반드시 또 다른 $j$에 대하여 $\tau(j)\neq j$가 성립한다. 이로부터 식 (1)의 우변에서 더해지는 항들에는 $n-1$차식이 존재하지 않음을 안다. 즉, 특성다항식의 $n-1$차 항은 반드시 식 (2)에 의해서만 생기고, 이 때의 계수는 
 
@@ -57,7 +57,7 @@ $n$차 정사각행렬의 특성다항식은 반드시 $n$차다항식이며, �
 $n\times n$ 행렬 $A$에 대하여, $A$의 특성다항식 $\det(\x I-A)=0$의 해를 $A$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $A$의 고윳값들의 모임을 $A$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $\Spec(A)$으로 표기한다.
 :::
 
-서로 similar한 두 $n\times n$ 행렬 $A,B$를 생각하자. 그럼 $A=PBP^{-1}$로부터, 
+두 닮은 $n\times n$ 행렬 $A,B$를 생각하자. 그럼 $A=PBP^{-1}$로부터, 
 
 $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det P^{-1}=\det(\x I-B)$$
 
@@ -67,13 +67,13 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 임의의 유한차원 벡터공간 $V$와 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 :::
 ::: 증명
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5){: data-relation="required" } 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5){: data-relation="required" } 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
 :::
 
 편의상 앞으로의 논의는 모두 행렬에 대한 것으로 통일하지만, 위의 따름정리를 통해 우리는 똑같은 내용을 임의의 linear map $L$에 대하여도 증명할 수 있다.
 
 ::: 따름정리 5
-서로 similar한 행렬의 trace와 행렬식은 같다. 
+서로 닮은 행렬의 trace와 행렬식은 같다. 
 :::
 ::: 증명
 앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2){: data-relation="required" }로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 

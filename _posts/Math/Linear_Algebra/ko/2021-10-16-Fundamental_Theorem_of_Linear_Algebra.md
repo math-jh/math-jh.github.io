@@ -134,7 +134,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 $n$차원 $\mathbb{K}$-벡터공간 $V$와 $m$차원 $\mathbb{K}$-벡터공간 $W$에 대하여, $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
 :::
 ::: 증명
-$V$, $W$의 basis $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}_\mathcal{C}$가 linear임을 보여야 한다.
+$V$, $W$의 기저 $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}_\mathcal{C}$가 linear임을 보여야 한다.
 
 $L_1,L_2$가 모두 $\Hom(V,W)$의 원소라 하자. 그럼 각각의 $x_i\in\mathcal{B}$에 대하여, 
 
@@ -179,20 +179,20 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 위의 [정리 4](#thm4){: data-relation="required" }는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 가령 $\Mat_{m\times n}(\mathbb{K})$의 $mn$개의 basis 원소는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5){: data-relation="weak" }에서 살펴본 $mn$개의 basis 원소에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
 
 ::: 따름정리 6
-두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 basis $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 isomorphism $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 basis $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}_\mathcal{C}$의 역행렬과 같다.
+두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 isomorphism $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}_\mathcal{C}$의 역행렬과 같다.
 :::
 ::: 증명
 [정리 5](#thm5){: data-relation="required" }를 $L^{-1}\circ L=\id_V$와 $L\circ L^{-1}=\id_W$에 적용하면 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}[L]^{\mathcal{B}}_{\mathcal{C}}=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=I$와 $[L]^{\mathcal{B}}_{\mathcal{C}}[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}=[\id_W]^{\mathcal{C}}_{\mathcal{C}}=I$를 얻는다.
 :::
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrices){: data-relation="weak" }에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 dual space를 살펴보면 그 의미를 알 수 있다. 
+이와 같이 [§행렬](/ko/math/linear_algebra/matrices){: data-relation="weak" }에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 쌍대공간을 살펴보면 그 의미를 알 수 있다. 
 
 ## 기저변환 행렬
 
 [정리 4](#thm4){: data-relation="required" }를 한 마디로 요약하자면, $n$차원 벡터공간 $V$에서 $m$차원 벡터공간 $W$로의 linear map은, 이들 각각의 basis $\mathcal{B}, \mathcal{C}$를 고정하면, 이를 $m\times n$ 행렬로 나타낼 수 있고 거꾸로 임의의 $m\times n$ 행렬 또한 linear map으로 이해할 수 있다는 것이다. 그렇다면 자연스러운 질문 중 하나는 우리가 basis를 바꾸었을 때 어떠한 일이 생기는지이며, 이는 사실 [정리 5](#thm5){: data-relation="required" }에 이미 그 답이 나와있다. 
 
 ::: 정의 7
-임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *change-of-basis matrix<sub>기저변환행렬</sub>*은 
+임의의 유한차원 $\mathbb{K}$-벡터공간 $V$와, $V$의 두 basis $\mathcal{B},\mathcal{B}'$에 대하여, $\mathcal{B}$에서 $\mathcal{B}'$로의 *기저변환행렬<sub>change-of-basis matrix</sub>*은 
 
 $$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
 
@@ -205,11 +205,11 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
 
-Change of basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
+기저변환행렬이 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
 {% diagram Math/Linear_Algebra/Change_of_Basis-1.svg width="6.42em" alt="change_of_basis" %}
 
-이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]_\mathcal{B}$와 $v\mapsto[v]_{\mathcal{B}'}$를 의미한다. 따라서 change of basis matrix는 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
+이 때 두 개의 수직방향 함수는 각각 $v\mapsto [v]_\mathcal{B}$와 $v\mapsto[v]_{\mathcal{B}'}$를 의미한다. 따라서 기저변환행렬은 $v\in V$의 $\mathcal{B}$에 대한 좌표표현을 받아, $\mathcal{B}'$에 대한 좌표표현으로 바꾸어주는 행렬이라 생각할 수 있다. 더 일반적으로 임의의 linear map $L:V\rightarrow W$가 주어졌다 하고, $V,W$의 basis $\mathcal{B},\mathcal{C}$, 그리고 또 다른 basis $\mathcal{B}',\mathcal{C}'$가 주어졌다 하면, 선형대수학의 기본정리로부터 다음의 식
 
 $$[L]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_W]_{\mathcal{C}'}^\mathcal{C}[L]_{\mathcal{C}}^\mathcal{B}[\id_V]^{\mathcal{B}'}_{\mathcal{B}}$$
 
@@ -230,10 +230,10 @@ $$\begin{pmatrix}I&O\\O&O\end{pmatrix}$$
 따라서 우리는 이 동치관계보다 세밀한 관계를 정의해야 한다.
 
 ::: 정의 8
-임의의 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 $A$와 $B$가 *similar matrix<sub>닮은 행렬</sub>*라는 것은 적당한 가역행렬 $P$가 존재하여 $A=PBP^{-1}$이 성립하는 것이다.
+임의의 $n\times n$ 행렬 $A,B$가 주어졌다 하자. 그럼 $A$와 $B$가 *닮은 행렬<sub>similar matrix</sub>*이라는 것은 적당한 가역행렬 $P$가 존재하여 $A=PBP^{-1}$이 성립하는 것이다.
 :::
 
-즉 행렬 $A,B$가 similar라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 <em-ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em-ko>이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 <em-ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em-ko>이라 생각할 수 있는 것이다. 그럼 이 때 
+즉 행렬 $A,B$가 닮은 행렬이라는 것은, 고정된 벡터공간 $V$에 대해 $A$를 <em-ko>basis $\mathcal{B}$에 대한 선형변환 $L:V\rightarrow V$의 행렬표현</em-ko>이라 생각했을 때, 적당한 basis $\mathcal{C}$가 존재하여 $B$를 <em-ko>basis $\mathcal{C}$에 대한 $L$의 행렬표현</em-ko>이라 생각할 수 있는 것이다. 그럼 이 때 
 
 $$A=[L]_{\mathcal{B}}^\mathcal{B}=[\id_V]^\mathcal{C}_\mathcal{B}[L]^\mathcal{C}_\mathcal{C}[\id_V]^\mathcal{B}_\mathcal{C}=PBP^{-1}$$
 

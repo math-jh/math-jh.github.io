@@ -52,7 +52,7 @@ $$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linea
 
 즉 $V$에서 $W$로의 linear map $L$은 basis $\mathcal{B}$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $V$가 유한차원이었다면 이는 linear map $L$이 오직 <em-ko>유한 개</em-ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
-특별히 공역 $W$ 또한 유한차원 $\mathbb{K}$-벡터공간이라 가정하고, $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$, 그리고 $W$의 basis $\mathcal{C}=\{y_1,\ldots,y_m\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
+특별히 공역 $W$ 또한 유한차원 $\mathbb{K}$-벡터공간이라 가정하고, $V$의 기저 $\mathcal{B}=\{x_1,\ldots, x_n\}$, 그리고 $W$의 기저 $\mathcal{C}=\{y_1,\ldots,y_m\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
 
 $$L(x_1),L(x_2),\ldots, L(x_n)$$
 

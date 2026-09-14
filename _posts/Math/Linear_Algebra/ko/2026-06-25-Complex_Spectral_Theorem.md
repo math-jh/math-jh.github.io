@@ -42,7 +42,7 @@ $$LL^\ast=L^\ast L$$
 
 ## Schur 분해
 
-복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 spectrum 정리를 되돌려준다.
+복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 스펙트럼 정리를 되돌려준다.
 
 ::: 정리 3 (Schur)
 복소내적공간 $V$ 위의 임의의 linear operator $L:V\rightarrow V$에 대하여, $L$의 행렬표현이 upper triangular matrix가 되도록 하는 $V$의 orthonormal basis가 존재한다. 행렬의 언어로는, 임의의 $A\in\Mat_n(\mathbb{C})$에 대하여 적당한 unitary matrix $U$와 upper triangular matrix $T$가 존재하여 $A=UTU^\ast$이다.
@@ -50,7 +50,7 @@ $$LL^\ast=L^\ast L$$
 ::: 증명
 $\dim V$에 대한 귀납법으로 진행한다. 우리는 $V$의 orthonormal basis $\{e_1,\ldots,e_n\}$이 존재하여 각 $j$에 대해 $Le_j\in\span(e_1,\ldots,e_j)$임을 보여야 한다. $\dim V\leq 1$인 경우는 자명하므로, $\dim V=n\geq 2$라 하자.
 
-$L^\ast$의 특성다항식은 degree가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8){: data-relation="required" }에 의하여 근을 가지고, 따라서 $L^\ast$은 어떤 고윳값 $\mu$에 대하여 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
+$L^\ast$의 특성다항식은 차수가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8){: data-relation="required" }에 의하여 근을 가지고, 따라서 $L^\ast$은 어떤 고윳값 $\mu$에 대하여 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
 
 $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu\langle w,e_n\rangle=0$$
 
@@ -77,13 +77,13 @@ $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\l
 이고, 따라서 $\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$이므로 $j>1$에 대해 $T_{1j}=0$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $0$이다. 그럼 $T$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $(n-1)\times(n-1)$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $T$ 전체가 대각이다. 따라서 $A=UTU^\ast$은 unitary diagonalization이다.
 :::
 
-Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form){: data-relation="weak" }과 좋은 대조를 이룬다. Jordan canonical form은 일반적으로 unitary가 아닌 change of basis를 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 change of basis를 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
+Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form){: data-relation="weak" }과 좋은 대조를 이룬다. 조르당 표준형은 일반적으로 unitary가 아닌 change of basis를 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 change of basis를 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
 
 ## 복소 스펙트럼 정리
 
-Normal matrix의 unitary diagonalization은 [정리 3](#thm3){: data-relation="required" }의 직접적 결과이다. 더 정밀하게, 복소수 버전의 spectrum 정리는 normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
+Normal matrix의 unitary diagonalization은 [정리 3](#thm3){: data-relation="required" }의 직접적 결과이다. 더 정밀하게, 복소수 버전의 스펙트럼 정리는 normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
 
-::: 정리 5 (복소 spectrum 정리)
+::: 정리 5 (복소 스펙트럼 정리)
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 normal operator인 것은, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재하는 것과 동치이다.
 :::
 ::: 증명
@@ -125,7 +125,7 @@ $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\l
 이고, $\lVert v\rVert^2>0$이므로 $\lvert\lambda\rvert^2=1$, 즉 $\lvert\lambda\rvert=1$이다.
 :::
 
-복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-relation="weak" }를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7){: data-relation="required" }에 의하여 그 고윳값은 모두 실수이기 때문이다. 고윳값 $\lambda$가 실수이면 $A-\lambda I$가 실수행렬이므로 그 kernel도 실수 위에서 같은 차원을 가지고, 따라서 고유벡터를 실수 범위에서 택해 orthonormal basis를 만들 수 있다.  
+복소 스펙트럼 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-relation="weak" }를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7){: data-relation="required" }에 의하여 그 고윳값은 모두 실수이기 때문이다. 고윳값 $\lambda$가 실수이면 $A-\lambda I$가 실수행렬이므로 그 kernel도 실수 위에서 같은 차원을 가지고, 따라서 고유벡터를 실수 범위에서 택해 orthonormal basis를 만들 수 있다.  
 
 ---
 

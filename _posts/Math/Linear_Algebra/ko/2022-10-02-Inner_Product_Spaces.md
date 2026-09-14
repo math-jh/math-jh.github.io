@@ -200,7 +200,7 @@ $$[\id]_\mathcal{C}^\mathcal{B}=\begin{pmatrix}\langle x_1,x'_1\rangle&\langle x
 
 $$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,x_n\rangle\end{pmatrix}$$
 
-이므로, $\langle-,-\rangle$이 symmetric이라는 조건으로부터 두 orthonormal basis들 간의 change-of-basis matrix는 항상 orthogonal matrix가 된다는 것을 확인할 수 있다. 거꾸로 임의의 orthogonal matrix는 항상 orthonormal basis 사이의 change-of-basis matrix로 해석할 수 있다.
+이므로, $\langle-,-\rangle$이 symmetric이라는 조건으로부터 두 orthonormal basis들 간의 기저변환행렬은 항상 orthogonal matrix가 된다는 것을 확인할 수 있다. 거꾸로 임의의 orthogonal matrix는 항상 orthonormal basis 사이의 기저변환행렬로 해석할 수 있다.
 
 ## Projection theorem
 

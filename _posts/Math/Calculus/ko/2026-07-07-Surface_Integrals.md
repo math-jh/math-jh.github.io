@@ -29,33 +29,33 @@ $u$를 고정하고 $v$만 움직이면 곡면 위의 곡선이 그려지고 그
 
 $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 
-가 곡면의 normal vector이다. 우리는 모든 $(u,v) \in D$에 대하여 $\mathbf{N}(u,v) \neq \mathbf{0}$인 매개곡면을 *regular<sub>정칙</sub>*이라 한다.
+가 곡면의 법선벡터이다. 우리는 모든 $(u,v) \in D$에 대하여 $\mathbf{N}(u,v) \neq \mathbf{0}$인 매개곡면을 *regular<sub>정칙</sub>*이라 한다.
 
 ## 곡면넓이
 
 곡면을 매개변수 영역의 작은 직사각형들로 쪼개면, 각 조각은 접평면 위의 작은 평행사변형, 더 구체적으로는 $\mathbf{r}_u\Delta u$와 $\mathbf{r}_v\Delta v$가 만드는 평행사변형으로 근사된다. 이 넓이가 $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$이므로, 이를 모아 극한을 취한 것이 곡면넓이이다.
 
 ::: 정의 2
-Regular인 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
+정칙인 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
 
 $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
-이고, area element를 $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$로 적는다.
+이고, 면적원소를 $\dd{S} = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$로 적는다.
 :::
 
 우리가 다룰 매개화는 regular이라는 조건을 $D$ 전체에서 만족하지 않는 경우가 많다. 유한 개의 점과 곡선에서 $\mathbf{N}$이 $\mathbf{0}$이 되거나 서로 다른 매개변수가 같은 점으로 가더라도, 그 예외 집합은 넓이가 $0$이라 위 이중적분의 값에 기여하지 않는다. 그러므로 앞으로 곡면넓이와 면적분을 말할 때에는 유한 개의 점과 곡선을 제외하고 regular이며 단사인 매개화, 즉 곡면을 한 번만 덮는 매개화까지 허용하기로 한다.
 
-Area element $\dd{S}$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 area element $\dd{S}$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
+면적원소 $\dd{S}$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 면적원소 $\dd{S}$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
 
 ::: 정의 3
-Regular인 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 image $S = \mathbf{r}(D)$ 위에서 continuous scalar field $f$의 *면적분<sub>surface integral</sub>*은
+정칙인 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 image $S = \mathbf{r}(D)$ 위에서 continuous scalar field $f$의 *면적분<sub>surface integral</sub>*은
 
 $$\iint_S f\dd{S} = \iint_D f(\mathbf{r}(u,v))\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \dd{u}\dd{v}$$
 
 이다.
 :::
 
-선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 area element로 적분하여 곡면의 매개화에 무관하다. 실제로 두 매개곡면 $\mathbf{r}(u,v)$와 $\tilde{\mathbf{r}}(s,t)$가 같은 image를 주고 $C^1$ 변수변환 $(u,v) \mapsto (s,t)$로 이어져 있으면, 연쇄법칙에서 $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$이므로 크기를 취해 [§다중적분, ⁋정리 4](/ko/math/calculus/multiple_integrals#thm4){: data-relation="required" }를 적용하면 두 매개화가 주는 이중적분이 서로 같다. 
+선적분이 arc length parametrization으로 적분하여 곡선의 매개화에 무관했듯, 면적분도 면적원소로 적분하여 곡면의 매개화에 무관하다. 실제로 두 매개곡면 $\mathbf{r}(u,v)$와 $\tilde{\mathbf{r}}(s,t)$가 같은 image를 주고 $C^1$ 변수변환 $(u,v) \mapsto (s,t)$로 이어져 있으면, 연쇄법칙에서 $\mathbf{r}_u \times \mathbf{r}_v = (\partial(s,t)/\partial(u,v))(\tilde{\mathbf{r}}_s \times \tilde{\mathbf{r}}_t)$이므로 크기를 취해 [§다중적분, ⁋정리 4](/ko/math/calculus/multiple_integrals#thm4){: data-relation="required" }를 적용하면 두 매개화가 주는 이중적분이 서로 같다. 
 
 ## 선속
 
