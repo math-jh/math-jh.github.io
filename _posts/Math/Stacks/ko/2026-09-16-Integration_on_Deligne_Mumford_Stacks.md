@@ -11,7 +11,6 @@ sidebar:
 date: 2026-09-16
 weight: 6
 
-published: false
 ---
 
 이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이번 글에서 다룰 proper finite type Deligne–Mumford stack에서는 geometric stabilizer가 finite하므로 이러한 가중치가 잘 정의된다.
@@ -236,35 +235,32 @@ $f$가 representable이므로 geometric fiber $\mathcal{C}_y$는 algebraic space
 
 $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal{Y}^\ast\beta=\left(\int_\mathcal{X}\alpha\right)\left(\int_\mathcal{Y}\beta\right)$$
 
-를 얻는다. 즉 서로 독립적인 두 조건에 대한 적분은 product 위에서 각 적분의 곱으로 분리된다.
+를 얻는다. 즉 서로 독립적인 두 조건에 대한 적분은 product 위에서 각 적분의 곱으로 분리된다. 
 
-이제 두 공간 위의 조건이 서로 독립적이지 않고, 같은 target point에서 만나야 하는 경우를 생각하자. Smooth $d$-dimensional variety $X$와 smooth proper Deligne-Mumford stack $\mathcal{M},\mathcal{N}$ 및 morphism
+위와 같이 두 stack을 단순히 함께 고려할 때에는 product를 사용하지만, 두 morphism을 같은 base 위에서 비교하려면 fiber product를 사용해야 한다. 이를 위해 morphism
 
 $$u:\mathcal{M}\rightarrow X,\qquad v:\mathcal{N}\rightarrow X$$
 
-가 주어졌다고 하자. 두 점 $m\in\mathcal{M}$, $n\in\mathcal{N}$의 image가 같다는 조건
-
-$$u(m)=v(n)$$
-
-은 $(u(m),v(n))\in X\times X$가 diagonal $\Delta_X\subseteq X\times X$ 위에 놓인다는 조건과 같다. 따라서 이 조건을 만족하는 공간은 fiber product
+이 주어졌다고 하자. 그럼 fiber product
 
 $$\mathcal{Z}=\mathcal{M}\times_X\mathcal{N}$$
 
-이고, 이는 $(u,v):\mathcal{M}\times\mathcal{N}\rightarrow X\times X$를 diagonal $\Delta_X:X\hookrightarrow X\times X$와 base change하여 얻어진다.
+는 두 morphism의 image가 $X$에서 일치하는 부분을 나타내며, 이 fiber product는 diagonal을 이용하여 ordinary product 안의 intersection으로 표현할 수 있다. 이를 위해
 
-Diagonal $\Delta_X$는 codimension $d$인 closed regular embedding이므로 앞에서 정의한 refined Gysin pullback을 적용할 수 있다. 이에 따라
+$$(u,v):\mathcal{M}\times\mathcal{N}\longrightarrow X\times X$$
+
+를 생각하면
+
+$$\mathcal{M}\times_X\mathcal{N}=(\mathcal{M}\times\mathcal{N})\times_{X\times X}X$$
+
+이며, 여기서 $X\rightarrow X\times X$는 diagonal $\Delta_X$이다. 즉, 직관적으로 fiber product를 형성하는 것은 $\mathcal{M}\times\mathcal{N}$을 diagonal $\Delta_X$와 base change하여 intersect하는 것으로 볼 수 있으며, 우리는 이러한 상황에서 사용하기 위해 앞에서 이미 refined Gysin pullback을 정의하였다. 즉, diagonal $\Delta_X$는 codimension $d$인 closed regular embedding이므로 앞에서 정의한 refined Gysin pullback을 적용할 수 있으며, 이를 통해 
 
 $$[\mathcal{Z}]_\Delta:=\Delta_X^!\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)\in A_{\dim\mathcal{M}+\dim\mathcal{N}-d}(\mathcal{Z})_\mathbb{Q}$$
 
-를 정의하며, 이를 $\mathcal{Z}$의 refined intersection class라 하자. 이 class는 실제 fiber product가 transverse하지 않더라도 expected dimension의 intersection class를 주며, $(u,v)$가 diagonal과 transverse한 경우에는 ordinary fundamental cycle과 일치하여
-
-$$[\mathcal{Z}]_\Delta=[\mathcal{Z}]$$
-
-가 된다.
+를 정의할 수 있다. 이를 $\mathcal{Z}$의 *refined intersection class*라 부른다. 
 
 ::: 명제 9 (대각선 교차 공식)
-
-$j:\mathcal{Z}\rightarrow\mathcal{M}\times\mathcal{N}$을 자연스러운 closed immersion이라 하자. 그러면
+위의 상황에서, $j:\mathcal{Z}\rightarrow\mathcal{M}\times\mathcal{N}$을 자연스러운 closed immersion이라 하자. 그러면
 
 $$j_\ast[\mathcal{Z}]_\Delta=(u,v)^\ast[\Delta_X]\cap\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)$$
 
@@ -276,27 +272,39 @@ $$\deg\bigl(j^\ast\eta\cap[\mathcal{Z}]_\Delta\bigr)=\int_{\mathcal{M}\times\mat
 
 :::
 
-Refined Gysin pullback과 proper pushforward의 compatibility에 의해 첫 번째 식이 성립하고, 두 번째 식은 projection formula를 적용하면 바로 따른다. 즉 fiber product $\mathcal{Z}$ 위에서의 intersection은 product $\mathcal{M}\times\mathcal{N}$ 위에서 diagonal class를 하나 더 곱하는 계산으로 바꿀 수 있다.
+이에 대한 증명으로는, refined Gysin pullback과 proper pushforward의 compatibility에 의해 첫 번째 식이 성립하고, 두 번째 식은 projection formula를 적용하면 바로 따른다. 즉 fiber product $\mathcal{Z}$ 위에서의 intersection은 product $\mathcal{M}\times\mathcal{N}$ 위에서 diagonal class를 하나 더 곱하는 계산으로 바꿀 수 있다.
 
-Divisor를 통과한다는 incidence condition도 같은 원리의 codimension $1$인 경우이다. Smooth Cartier divisor $i_D:D\hookrightarrow X$와 morphism $u:\mathcal{M}\rightarrow X$에 대하여
+앞에서는 diagonal $\Delta_X\hookrightarrow X\times X$을 따라 fiber product를 형성하여 두 morphism의 값이 일치한다는 조건을 intersection으로 표현하였다. 비슷한 방법으로 우리는 $X$의 부분공간을 통과한다는 조건에도 이러한 방식을 적용할 수 있다. 
 
-$$\mathcal{Z}_D=\mathcal{M}\times_XD$$
+Smooth Cartier divisor $i_D:D\hookrightarrow X$와 morphism $u:\mathcal{M}\rightarrow X$가 주어졌다고 하자. Fiber product
 
-라 하고 $j_D:\mathcal{Z}_D\rightarrow\mathcal{M}$을 자연스러운 closed immersion이라 하자. Refined Gysin pullback으로
+$$\mathcal{Z}_D:=\mathcal{M}\times_XD$$
+
+는 $\mathcal{M}$의 점 가운데 그 image가 $D$ 위에 놓이는 부분을 나타낸다. 즉 $\mathcal{Z}_D$는 geometric condition
+
+$$u(m)\in D$$
+
+를 부과하여 얻어지는 locus이다. 
+
+이제 위와 같은 방식을 적용하기 위해, $j_D:\mathcal{Z}_D\rightarrow\mathcal{M}$을 자연스러운 closed immersion이라 하자. 그럼 $D\hookrightarrow X$는 codimension $1$인 regular embedding이므로 refined Gysin pullback에 의해 다음의 refined intersection class
 
 $$[\mathcal{Z}_D]_D:=i_D^![\mathcal{M}]$$
 
-를 정의하면
+가 정의된다. 이를 $\mathcal{M}$으로 pushforward하면
 
-$$j_{D\ast}[\mathcal{Z}_D]_D=u^\ast[D]\cap[\mathcal{M}]=u^\ast c_1(\mathcal{O}_X(D))\cap[\mathcal{M}]$$
+$$j_{D\ast}[\mathcal{Z}_D]_D=u^\ast[D]\cap[\mathcal{M}]$$
 
-이다. 따라서 적절한 class $\alpha\in A^\ast(\mathcal{M})_\mathbb{Q}$에 대하여
+를 얻으며, Cartier divisor의 class는 $[D]=c_1(\mathcal{O}_X(D))$이므로 이를
+
+$$j_{D\ast}[\mathcal{Z}_D]_D=u^\ast c_1(\mathcal{O}_X(D))\cap[\mathcal{M}]$$
+
+로도 쓸 수 있다.
+
+따라서 적절한 class $\alpha\in A^\ast(\mathcal{M})_\mathbb{Q}$에 대하여
 
 $$\deg\bigl(j_D^\ast\alpha\cap[\mathcal{Z}_D]_D\bigr)=\int_\mathcal{M}\alpha\cdot u^\ast[D]$$
 
-를 얻는다. 즉 geometric condition $u(m)\in D$를 imposing하는 것은 Chow theory에서는 pullback divisor class $u^\ast[D]$와 intersect하는 것으로 바뀐다.
-
-지금까지의 논의는 모두 rational Chow group 안에서 이루어졌다. 특히 stack 위의 $1/|\Aut(x)|$ 가중치는 별도로 부여한 convention이 아니라 proper pushforward의 stack-theoretic degree에서 자연스럽게 발생한다. Proper pushforward를 상대적인 적분으로 해석하고, refined Gysin pullback을 이용하여 fiber와 intersection condition을 다루는 이 형식이 이후 stack 위의 여러 교차 계산의 기본이 된다.
+이다. 즉, $u(m)\in D$라는 geometric condition을 직접 fiber product 위에서 다루는 대신, $\mathcal{M}$ 위에서 divisor class $u^\ast[D]$와 intersect하는 것으로 바꾸어 계산할 수 있다.
 
 ---
 
