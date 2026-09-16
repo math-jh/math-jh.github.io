@@ -14,25 +14,23 @@ weight: 6
 published: false
 ---
 
-이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이것이 의미가 있기 위해서는 우선 $\lvert G\rvert$가 유한해야 하므로, 적분은 [§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-relation="required" }의 Deligne–Mumford stack 위에서 정의된다. 또, fundamental class $[\mathcal{X}]$가 잘 정의되고 원하는 성질을 갖기 위해서는 properness가 필요하며, Poincaré duality에 해당하는 
+이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이것이 의미가 있기 위해서는 우선 $\lvert G\rvert$가 유한해야 하므로, 적분은 [§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-relation="required" }의 Deligne–Mumford stack 위에서 정의된다. Fundamental cycle $[\mathcal{X}]\in A_d(\mathcal{X})_\mathbb{Q}$ 자체는 pure-dimensional stack에 대해 정의되지만, 이를 구조사상을 따라 점으로 pushforward하여 수치적인 적분을 얻기 위해 properness가 필요하며, operational Chow cohomology와 Chow homology 사이의 isomorphism
 
 $$A^p(\mathcal{X})_\mathbb{Q}\cong A_{d-p}(\mathcal{X})_\mathbb{Q}$$
 
-같은 표기를 위해서는 smoothness가 필요하다. 따라서 이번 글에서 우리는 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack $\mathcal{X}$ 위에서의 적분을 살펴본다.
+을 통해 cohomology class를 적분하기 위해서는 smoothness가 필요하다. 따라서 이번 글에서 우리는 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack $\mathcal{X}$ 위에서의 적분을 살펴본다.
 
 ## Chow group과 stack의 degree
 
 본질적으로 적분은 cohomology class와 homology class의 pairing이다. [\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-relation="required" }에서 우리는 variety $X$의 algebraic cycle들을 rational equivalence로 나누어 Chow group $A_k(X)$를 정의하였다.
 
-우리는 Deligne–Mumford stack $\mathcal{X}$에서도 마찬가지로 $k$-cycle group $Z_k(\mathcal{X})_\mathbb{Q}$를 $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들로 생성되는 $\mathbb{Q}$-vector space로 정의한다. 여기서 계수 $\mathbb{Q}$의 선택은 위에서 언급한, automorphism group $\lvert G\rvert$를 담기 위한 선택이고 
+우리는 Deligne–Mumford stack $\mathcal{X}$에서도 마찬가지로 $k$-cycle group $Z_k(\mathcal{X})_\mathbb{Q}$를 $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들로 생성되는 $\mathbb{Q}$-vector space로 정의한다. 여기서 계수 $\mathbb{Q}$의 선택은 위에서 언급한, automorphism group $\lvert G\rvert$를 담기 위한 선택이다. 
 
-$(k+1)$차원 integral substack $\mathcal{W}$와 그 function field의 원소 $f\in K(\mathcal{W})^\ast$가 주는 divisor $\operatorname{div}(f)$들로 생성되는 부분공간을 $R_k(\mathcal{X})_\mathbb{Q}$라 할 때, *rational Chow group*은
+그럼 $(k+1)$차원 integral substack $\mathcal{W}$와 그 function field의 원소 $f\in K(\mathcal{W})^\times$가 주는 divisor $\divisor(f)$들로 생성되는 부분공간을 $R_k(\mathcal{X})_\mathbb{Q}$라 할 때, *rational Chow group*은
 
 $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mathbb{Q}$$
 
-로 정의된다.
-
-Stack 위의 적분과 $1/\lvert G\rvert$ 가중치는 별도의 인위적인 선언이 아니라, cycle 수준에서 정의되는 proper pushforward의 고유한 성질로부터 자연스럽게 도출된다.
+로 정의한다. 이제 stack 위의 적분과 그 과정에서 나오는 $1/\lvert G\rvert$는 [\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-relation="required" }의 proper pushforward를 stack으로 확장한 다음의 정의로부터 자연스럽게 도출된다.
 
 ::: 정의 1 (Proper pushforward)
 $f:\mathcal{X}\rightarrow\mathcal{Y}$를 Deligne–Mumford stack들 사이의 proper morphism이라 하고, $\mathcal{V}\subseteq\mathcal{X}$를 $k$차원 integral closed substack이라 하자. Image의 closure를 $\mathcal{W}=\overline{f(\mathcal{V})}$라 두자.
@@ -44,7 +42,7 @@ $f:\mathcal{X}\rightarrow\mathcal{Y}$를 Deligne–Mumford stack들 사이의 pr
    로 정의하고 linear하게 확장한다.
 :::
 
-이 정의에서 $e_\mathcal{W}/e_\mathcal{V}$라는 비율이 들어가는 이유는 stack-theoretic generic degree를 올바르게 세기 위함이다. $\mathcal{V}$ 위의 generic point의 stabilizer $G_\mathcal{V}$는 $f$에 의하여 target의 stabilizer $G_\mathcal{W}$로 단사되므로, fiber의 점 하나는 automorphism에 의해 $\lvert G_\mathcal{W}\rvert/\lvert G_\mathcal{V}\rvert$배만큼 두꺼워진 효과를 낸다. 이 정의는 proper pushforward의 functoriality $(g\circ f)_\ast=g_\ast\circ f_\ast$를 완벽하게 보존한다. ([Vis, Proposition 3.7])
+이 정의에서 $e_\mathcal{W}/e_\mathcal{V}$라는 비율이 들어가는 이유는 stack-theoretic generic degree를 올바르게 세기 위함이다. 만약 $f$가 representable morphism이라면 generic stabilizer 사이에 단사 $G_\mathcal{V}\hookrightarrow G_\mathcal{W}$가 유도되지만, 일반적인 morphism(예: 구조사상 $\bB G\rightarrow\Spec\mathbb{C}$)에서는 stabilizer가 축소될 수 있다. Vistoli의 정의는 automorphism의 크기 비율 $e_\mathcal{W}/e_\mathcal{V}$를 가중치로 반영하여, subgroup의 포함관계 $H\le G$가 유도하는 representable morphism $\bB H\rightarrow\bB G$의 degree는 $[G:H]$가 되고, non-representable morphism인 구조사상 $\bB G\rightarrow\Spec\mathbb{C}$의 degree는 $1/\lvert G\rvert$가 되도록 보정한다. 이 가중치 덕분에 proper pushforward의 functoriality $(g\circ f)_\ast=g_\ast\circ f_\ast$가 representability 가정 없이 완벽하게 성립한다. ([Vis, Proposition 3.7])
 
 이제 proper Deligne–Mumford stack $\mathcal{X}$의 구조사상 $p:\mathcal{X}\rightarrow\Spec\mathbb{C}$를 생각하자. Target $\Spec\mathbb{C}$의 Chow group은 $A_0(\Spec\mathbb{C})_\mathbb{Q}=\mathbb{Q}[\Spec\mathbb{C}]\cong\mathbb{Q}$이므로, proper pushforward는 곧바로 *degree map*
 
@@ -94,11 +92,11 @@ $$\int_\mathcal{X}\alpha:=\deg(\alpha\cap[\mathcal{X}])=p_\ast(\alpha\cap[\mathc
    $$\int_{[U/G]}\alpha=\frac{1}{\lvert G\rvert}\int_U p^\ast\alpha$$
    
    이다. 특히 $\int_{\bB G}1=1/\lvert G\rvert$이다.
-2. 연결된 smooth proper Deligne–Mumford stack $\mathcal{X}$의 coarse moduli morphism을 $\pi:\mathcal{X}\rightarrow X$라 하고 generic stabilizer order를 $e$라 하자. 임의의 $\beta\in A^d(X)_\mathbb{Q}$에 대하여
+2. 연결된 smooth proper Deligne–Mumford stack $\mathcal{X}$의 coarse moduli morphism을 $\pi:\mathcal{X}\rightarrow X$라 하고 generic stabilizer order를 $e$라 하자. Coarse moduli space $X$는 일반적으로 singularity를 가지므로 cohomology class는 operational Chow cohomology class $\beta\in A_{\mathrm{op}}^d(X)_\mathbb{Q}$로 잡는다. 이때
    
    $$\int_\mathcal{X}\pi^\ast\beta=\frac{1}{e}\int_X\beta$$
    
-   이다.
+   이다. (여기서 $\int_X\beta:=\deg(\beta\cap[X])$이다.)
 :::
 
 ::: 증명
