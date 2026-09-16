@@ -3806,7 +3806,7 @@ C:
     url: '/ko/math/calculus/mean_value_theorem'
   - label: '[복소해석학] §Cauchy 정리'
     url: '/ko/math/complex_analysis/cauchy_theorem'
-  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: '/ko/math/gromov-witten_theory/moduli_of_stable_maps'
 - id: coordinate
   en: coordinate
@@ -7649,8 +7649,8 @@ G:
   ko: 그로모프-위튼 불변량
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
-    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
 - id: gromov-witten_potential
   en: Gromov-Witten potential
   ko: 그로모프-위튼 퍼텐셜
@@ -9717,7 +9717,7 @@ I:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: '/ko/math/representation_theory/representations_of_finite_groups'
-  - label: '[환론] §Semisimple module'
+  - label: '[환론] §반단순가군'
     url: '/ko/math/ring_theory/semisimple_modules'
   see:
   - label: Weight decomposition
@@ -13857,8 +13857,8 @@ P:
   ko: 푸앙카레 쌍
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
-    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
 - id: point
   en: point
   ko: 점
@@ -14744,8 +14744,8 @@ Q:
   ko: 양자 코호몰로지
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
-    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
   see:
   - label: Gromov-Witten invariant
     id: gromov-witten_invariant
@@ -19558,8 +19558,8 @@ W:
   ko: WDVV 방정식
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Gromov-Witten 불변량과 공리계: 대수적 관점'
-    url: /ko/math/gromov-witten_theory/gw_invariants_axioms
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
   see:
   - label: Gromov-Witten invariant
     id: gromov-witten_invariant

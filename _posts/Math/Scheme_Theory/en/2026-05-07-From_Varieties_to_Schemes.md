@@ -8,6 +8,7 @@ sidebar:
     nav: "scheme_theory-en"
 date: 2026-05-07
 weight: 1
+revising: true
 translated_at: 2026-07-27T02:15:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T02:15:02+00:00
@@ -31,19 +32,19 @@ $$(\y-\x)+(\y)=(\x,\y),\qquad (\y-\x^2)+(\y)=(\x^2,\y)$$
 
 so, unlike the first case, in the second case there remains a nilpotent element $\bar{\x}$ in $\mathbb{K}[\x,\y]/(\x^2, \y)$. In fact,
 
-$$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilon^2)}$$
+$$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\t]}{(\t^2)}=\mathbb{K}[\epsilon]$$
 
-holds, and the dimension of this ring as a $\mathbb{K}$-vector space is $2$. This dimension is precisely the heart of the scheme-theoretic intersection, which reflects the intersection multiplicity as a coefficient.
+holds, where $\epsilon$ denotes the residue class of $\t$. The dimension of this ring as a $\mathbb{K}$-vector space is $2$. This dimension is precisely the heart of the scheme-theoretic intersection, which reflects the intersection multiplicity as a coefficient.
 :::
 
 This was in fact anticipated to some extent by [\[Algebraic Varieties\] §Affine Varieties, ⁋Theorem 10](/en/math/algebraic_varieties/affine_varieties#thm10){: data-relation="weak" }: since the points of a classical variety are defined only by radical ideals, all nilpotent elements are discarded, and as a result all infinitesimal information must be thrown away. The key idea of schemes is to preserve and retain all of this information that was previously discarded.
 
 ::: Example 2
-Consider the ring $\mathbb{K}[\epsilon]/(\epsilon^2)$ examined above. Since this ring has a single prime ideal $(\epsilon)$, in classical algebraic geometry this space looks like a single point, and this remains true in the world of schemes as well.
+Consider the ring $\mathbb{K}[\epsilon]$ examined above. Since this ring has a single prime ideal $(\epsilon)$, in classical algebraic geometry this space looks like a single point, and this remains true in the world of schemes as well.
 
-What is crucially different is that in the world of schemes, functions defined on this space are more refined. To see this refinement properly, we must understand this space not as a mere single point, but as a point with an extra tangent direction attached. That is, $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ is a *fat point* obtained by attaching an infinitesimal direction $\epsilon$ to a point; whereas an ordinary point $\Spec \mathbb{K}$ only remembers the value at the point, this space also carries information about the tangent direction at that point.
+What is crucially different is that in the world of schemes, functions defined on this space are more refined. To see this refinement properly, we must understand this space not as a mere single point, but as a point with an extra tangent direction attached. That is, $\Spec \mathbb{K}[\epsilon]$ is a *fat point* obtained by attaching an infinitesimal direction $\epsilon$ to a point; whereas an ordinary point $\Spec \mathbb{K}$ only remembers the value at the point, this space also carries information about the tangent direction at that point.
 
-From this perspective, a regular function—that is, an element $a+b\epsilon$ of $\mathbb{K}[\epsilon]/(\epsilon^2)$—simultaneously encodes two pieces of information. The coefficient $a$ is the function value (in the usual sense) at the point, and $b$ is the coordinate indicating how the function changes along that tangent direction—in other words, the first-order differential information at that point. Thus, even if two functions have the same value $a$ at the point, they are different functions if $b$ differs. For instance, $a+b\epsilon$ and $a+b'\epsilon$ (with $b\ne b'$) have the same value at the same point, but since their behavior in the tangent direction differs, they are distinguished as regular functions on this space. Two functions are equal only when not only the value $a$ but also the tangent coordinate $b$ coincide—that is, only when they share both the value and the first derivative at the point. Viewing a point with the thickness of a tangent direction attached in this way is the essence of a *fat point*, and the fact that this thickness remains is the key to capturing infinitesimal information, including intersection multiplicities.
+From this perspective, a regular function—that is, an element $a+b\epsilon$ of $\mathbb{K}[\epsilon]$—simultaneously encodes two pieces of information. The coefficient $a$ is the function value (in the usual sense) at the point, and $b$ is the coordinate indicating how the function changes along that tangent direction—in other words, the first-order differential information at that point. Thus, even if two functions have the same value $a$ at the point, they are different functions if $b$ differs. For instance, $a+b\epsilon$ and $a+b'\epsilon$ (with $b\ne b'$) have the same value at the same point, but since their behavior in the tangent direction differs, they are distinguished as regular functions on this space. Two functions are equal only when not only the value $a$ but also the tangent coordinate $b$ coincide—that is, only when they share both the value and the first derivative at the point. Viewing a point with the thickness of a tangent direction attached in this way is the essence of a *fat point*, and the fact that this thickness remains is the key to capturing infinitesimal information, including intersection multiplicities.
 :::
 
 Another fundamental limitation of classical varieties is that base change, or fiber product, is not natural. This already appears in seemingly trivial situations: for example, even the fact that the product of two projective spaces $\mathbb{P}^n\times \mathbb{P}^m$ is a projective variety had to be shown by hand, using the Segre embedding to embed it into a (larger) projective space. The need for additional machinery just to handle the product of the simplest spaces is evidence that we have not been working in such a favorable world.
@@ -81,13 +82,13 @@ then this theorem shows that $h_X$ completely determines the scheme $X$ without 
 A $\mathbb{K}$-rational point on a classical variety $V$ was understood simply as a set of coordinates $(a_1,\dotsc,a_n)$ with values in $\mathbb{K}$. In the language of schemes this corresponds to a morphism $\Spec \mathbb{K}\rightarrow V$. The functor of points extends this viewpoint by defining a $T$-valued point of $V$ as a morphism from an arbitrary scheme $T$.
 
 ::: Example 4
-The set of $\mathbb{K}$-rational points of a classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$ is $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$. This corresponds to evaluating the functor of points $h_V$ at the base scheme $T=\Spec \mathbb{K}$, i.e., $h_V(\Spec \mathbb{K})$. However, substituting $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ makes $h_V(T)$ parameterize the tangent vectors to $V$ at its $\mathbb{K}$-points.
+The set of $\mathbb{K}$-rational points of a classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$ is $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$. This corresponds to evaluating the functor of points $h_V$ at the base scheme $T=\Spec \mathbb{K}$, i.e., $h_V(\Spec \mathbb{K})$. However, substituting $T=\Spec \mathbb{K}[\epsilon]$ makes $h_V(T)$ parameterize the tangent vectors to $V$ at its $\mathbb{K}$-points.
 :::
 
 In particular, for the projective line $\mathbb{P}_\mathbb{K}^1$, we can see clearly how infinitesimal structure is revealed through the functor of points. Since $\mathbb{P}_\mathbb{K}^1$ is itself a scheme with homogeneous coordinates, for any $\mathbb{K}$-algebra $R$ the set $\mathbb{P}_\mathbb{K}^1(R)$ is defined as the points on the projective line over $R$.
 
 ::: Example 5
-Let $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$. Considering the $T$-valued points of $\mathbb{P}_\mathbb{K}^1$, that is, morphisms $T\rightarrow\mathbb{P}_\mathbb{K}^1$, these simultaneously determine a point $P$ on $\mathbb{P}_\mathbb{K}^1$ and a tangent vector at that point. Specifically, the point $P$ is obtained by composing the closed embedding $\Spec \mathbb{K}\hookrightarrow T$ with $T\rightarrow\mathbb{P}_\mathbb{K}^1$, and the remaining information becomes an element of the Zariski tangent space at $P$. Thus the $\mathbb{K}[\epsilon]/(\epsilon^2)$-points of $\mathbb{P}_\mathbb{K}^1$ are in bijection with the points constituting the tangent bundle of $\mathbb{P}_\mathbb{K}^1$.
+Let $T=\Spec \mathbb{K}[\epsilon]$. Considering the $T$-valued points of $\mathbb{P}_\mathbb{K}^1$, that is, morphisms $T\rightarrow\mathbb{P}_\mathbb{K}^1$, these simultaneously determine a point $P$ on $\mathbb{P}_\mathbb{K}^1$ and a tangent vector at that point. Specifically, the point $P$ is obtained by composing the closed embedding $\Spec \mathbb{K}\hookrightarrow T$ with $T\rightarrow\mathbb{P}_\mathbb{K}^1$, and the remaining information becomes an element of the Zariski tangent space at $P$. Thus the $\mathbb{K}[\epsilon]$-points of $\mathbb{P}_\mathbb{K}^1$ are in bijection with the points constituting the tangent bundle of $\mathbb{P}_\mathbb{K}^1$.
 :::
 
 The functor of points serves as a bridge between geometric intuition and categorical formalism by allowing us to understand a scheme as a representable functor.
