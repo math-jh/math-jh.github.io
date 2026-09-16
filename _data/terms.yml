@@ -9567,6 +9567,13 @@ I:
   defs:
   - label: '[가환대수학] §으뜸분해'
     url: /ko/math/commutative_algebra/primary_decomposition
+- id: irreducible_element
+  en: irreducible element
+  ko: 기약원
+  primary: en
+  defs:
+  - label: '[환론] §정역'
+    url: /ko/math/ring_theory/integral_domains
 - id: irreducible_highest_weight_module
   en: irreducible highest weight module
   ko: 기약 최고무게 가군
