@@ -225,7 +225,7 @@ $$\operatorname{vdim}(W)=d_X+d_Y-d_Z$$
 
 이다. 이 virtual 차원이 고전적으로 기대되는 교차 차원과 정확히 일치한다.
 
-3. 위 상황에서 $W$은 $t_0(W)$ 위의 *virtual fundamental class* $[W]^{\mathrm{vir}}\in \CH_{\operatorname{vdim}(W)}(t_0(W))$을 낳으며, $Z$이 smooth이고 교차가 proper이면 그 pushforward가 고전적 교차곱 $[X]\cdot[Y]$을 계산한다. 특히 교차가 isolated point $p$에서 일어나면 그 국소 중복도는 Serre의 Tor 공식
+3. 위 상황에서 $W$은 $t_0(W)$ 위의 *virtual fundamental class* $[W]^{\mathrm{vir}}\in A_{\operatorname{vdim}(W)}(t_0(W))$을 낳으며, $Z$이 smooth이고 교차가 proper이면 그 pushforward가 고전적 교차곱 $[X]\cdot[Y]$을 계산한다. 특히 교차가 isolated point $p$에서 일어나면 그 국소 중복도는 Serre의 Tor 공식
 
 $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum_{n\geq0}(-1)^n\operatorname{length}\Tor_n^{\mathcal{O}_{Z,p}}(\mathcal{O}_{X,p},\mathcal{O}_{Y,p})$$
 

@@ -14,11 +14,19 @@ weight: 6
 published: false
 ---
 
-이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이것이 의미가 있기 위해서는 우선 $\lvert G\rvert$가 유한해야 하므로, 적분은 [§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-relation="required" }의 Deligne–Mumford stack 위에서 정의된다. Fundamental cycle $[\mathcal{X}]$ 자체는 임의의 pure-dimensional algebraic stack 위에 존재하지만, 이를 점으로 pushforward하여 수치적인 degree와 적분을 얻기 위해서는 properness가 필요하다. 또한 intersection product와 $A^p(\mathcal{X})_\mathbb{Q}\cong A_{d-p}(\mathcal{X})_\mathbb{Q}$ 같은 codimension 표기법을 단순하고 깨끗하게 쓰기 위해 smoothness를 가정한다. 따라서 이번 글에서는 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack $\mathcal{X}$ (pure dimension $d$)를 중심으로 적분 이론을 전개한다.
+이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이것이 의미가 있기 위해서는 우선 $\lvert G\rvert$가 유한해야 하므로, 적분은 [§대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-relation="required" }의 Deligne–Mumford stack 위에서 정의된다. 또, fundamental class $[\mathcal{X}]$가 잘 정의되고 원하는 성질을 갖기 위해서는 properness가 필요하며, Poincaré duality에 해당하는 
+
+$$A^p(\mathcal{X})_\mathbb{Q}\cong A_{d-p}(\mathcal{X})_\mathbb{Q}$$
+
+같은 표기를 위해서는 smoothness가 필요하다. 따라서 이번 글에서 우리는 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack $\mathcal{X}$ 위에서의 적분을 살펴본다.
 
 ## Chow group과 stack의 degree
 
-Vistoli의 교차 이론에 따르면, Deligne–Mumford stack $\mathcal{X}$의 $k$-cycle group $Z_k(\mathcal{X})_\mathbb{Q}$는 $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들로 생성되는 $\mathbb{Q}$-vector space로 정의된다. $(k+1)$차원 integral substack $\mathcal{W}$와 그 function field의 원소 $f\in K(\mathcal{W})^\ast$가 주는 divisor $\operatorname{div}(f)$들로 생성되는 부분공간을 $R_k(\mathcal{X})_\mathbb{Q}$라 할 때, *rational Chow group*은
+본질적으로 적분은 cohomology class와 homology class의 pairing이다. [\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-relation="required" }에서 우리는 variety $X$의 algebraic cycle들을 rational equivalence로 나누어 Chow group $A_k(X)$를 정의하였다.
+
+우리는 Deligne–Mumford stack $\mathcal{X}$에서도 마찬가지로 $k$-cycle group $Z_k(\mathcal{X})_\mathbb{Q}$를 $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들로 생성되는 $\mathbb{Q}$-vector space로 정의한다. 여기서 계수 $\mathbb{Q}$의 선택은 위에서 언급한, automorphism group $\lvert G\rvert$를 담기 위한 선택이고 
+
+$(k+1)$차원 integral substack $\mathcal{W}$와 그 function field의 원소 $f\in K(\mathcal{W})^\ast$가 주는 divisor $\operatorname{div}(f)$들로 생성되는 부분공간을 $R_k(\mathcal{X})_\mathbb{Q}$라 할 때, *rational Chow group*은
 
 $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mathbb{Q}$$
 

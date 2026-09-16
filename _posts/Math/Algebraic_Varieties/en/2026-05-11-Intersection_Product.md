@@ -14,7 +14,7 @@ translated_at: 2026-08-19T03:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T03:15:04+00:00
 ---
-In [§Chow Groups](/en/math/algebraic_varieties/chow_groups){: data-relation="required" } we defined the Chow group $\CH^\ast(X)$. At the end of that post we claimed that one can define an intersection product on it, thereby giving it a ring structure; in this post we construct this product and examine its properties.
+In [§Chow Groups](/en/math/algebraic_varieties/chow_groups){: data-relation="required" } we defined the Chow group $A^\ast(X)$. At the end of that post we claimed that one can define an intersection product on it, thereby giving it a ring structure; in this post we construct this product and examine its properties.
 
 The following definition shows what the intersection of two varieties $V,W$ near a point $p$ is. By definition this is a local matter at $p$, so it suffices to pick an affine chart and take the ambient space to be $\mathbb{A}^n$.
 
@@ -77,7 +77,7 @@ Here $i_T(V, W)$ is the intersection multiplicity along the component $T$, the n
 ::: Proposition 6
 On a smooth irreducible quasi-projective variety $X$, if two cycles $Z, W$ of codimension $k$, $l$ respectively intersect properly, the above formula well-defines the *intersection product*
 
-$$Z \cdot W \in \CH^{k+l}(X).$$
+$$Z \cdot W \in A^{k+l}(X).$$
 
 Moreover, it satisfies the following properties.
 
@@ -89,7 +89,7 @@ Moreover, it satisfies the following properties.
 Then the following definition is what was anticipated from the previous post.
 
 ::: Definition 7
-For a smooth quasi-projective variety $X$, the intersection product makes $\CH^\ast(X) = \bigoplus_k \CH^k(X)$ a *graded ring*. This is called the *Chow ring*.
+For a smooth quasi-projective variety $X$, the intersection product makes $A^\ast(X) = \bigoplus_k A^k(X)$ a *graded ring*. This is called the *Chow ring*.
 :::
 
 ## Moving Lemma
@@ -117,7 +117,7 @@ For a closed embedding $i: Y \hookrightarrow X$, one can construct a family $M \
 :::
 
 ::: Proof
-The construction uses blow-up. First blow up $X \times \mathbb{A}^1$ along $Y \times \{0\}$ to obtain $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$, then remove the proper transform of $X \times \{0\}$ to define $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$. The exceptional divisor of this blow-up is $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$, and removing the proper transform leaves exactly the normal cone $C_{Y/X}$ in the $t=0$ fiber. For $t \neq 0$ the blow-up is an isomorphism so the fiber is just $X$. Hence $M \rightarrow \mathbb{A}^1$ provides a deformation connecting $X$ at $t=1$ to $C_{Y/X}$ at $t=0$. In the Chow group one can define a specialization map $\sigma: \CH^\ast(X) \rightarrow \CH^\ast(C_{Y/X})$ on $M$, and when the normal cone has a vector bundle structure (that is, in the regular embedding case) the Thom isomorphism gives $\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$, establishing the well-definedness of the intersection product.
+The construction uses blow-up. First blow up $X \times \mathbb{A}^1$ along $Y \times \{0\}$ to obtain $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$, then remove the proper transform of $X \times \{0\}$ to define $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$. The exceptional divisor of this blow-up is $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$, and removing the proper transform leaves exactly the normal cone $C_{Y/X}$ in the $t=0$ fiber. For $t \neq 0$ the blow-up is an isomorphism so the fiber is just $X$. Hence $M \rightarrow \mathbb{A}^1$ provides a deformation connecting $X$ at $t=1$ to $C_{Y/X}$ at $t=0$. In the Chow group one can define a specialization map $\sigma: A^\ast(X) \rightarrow A^\ast(C_{Y/X})$ on $M$, and when the normal cone has a vector bundle structure (that is, in the regular embedding case) the Thom isomorphism gives $A^\ast(C_{Y/X}) \cong A^\ast(Y)$, establishing the well-definedness of the intersection product.
 :::
 
 The idea of this method is to deform $X$ continuously and shrink it onto the normal cone of $Y$. Geometrically, at $t=1$ we see the original space $X$, and as $t$ goes to $0$ the space $X$ becomes increasingly *flattened* along $Y$ until at $t=0$ it becomes the normal cone opened up along $Y$. If the blow-up in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" } was the deformation that blows up a point to a $\mathbb{P}^1$, then deformation to normal cone performs this for a more general embedding.
@@ -127,23 +127,23 @@ The idea of this method is to deform $X$ continuously and shrink it onto the nor
 Let us verify the properties of the intersection product through concrete examples.
 
 ::: Example 10 ($\mathbb{P}^n$)
-$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$. Here $H$ is the hyperplane class, and adding the intersection product to the $\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$ that we already computed gives the additional multiplications $H \cdot H = H^2$, $H \cdot H^2 = H^3$, ... completing the Chow ring.
+$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$. Here $H$ is the hyperplane class, and adding the intersection product to the $\Pic(\mathbb{P}^n) \cong A^1(\mathbb{P}^n) \cong \mathbb{Z}$ that we already computed gives the additional multiplications $H \cdot H = H^2$, $H \cdot H^2 = H^3$, ... completing the Chow ring.
 :::
 
 ::: Example 11 (Surface)
 In the previous post we saw that for two curves $C, D$ on a surface $S$:
 
-$$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S).$$
+$$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in A^2(S).$$
 
-For a general surface the structure of $\CH^2(S)$ is very complicated, and although the intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$ yields an integer value as the image of the degree map, its kernel can be nontrivial so that $\CH^2(S)$ need not be $\mathbb{Z}$.
+For a general surface the structure of $A^2(S)$ is very complicated, and although the intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$ yields an integer value as the image of the degree map, its kernel can be nontrivial so that $A^2(S)$ need not be $\mathbb{Z}$.
 
-However, the situation in $\mathbb{P}^2$ is simple. Since $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$ we have $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$, and the intersection number is completely determined. In the Chow ring the class of a conic is $[C] = 2H$ and the class of a line is $[L] = H$, so $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{pt}]$.
+However, the situation in $\mathbb{P}^2$ is simple. Since $A^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$ we have $A^2(\mathbb{P}^2) \cong \mathbb{Z}$, and the intersection number is completely determined. In the Chow ring the class of a conic is $[C] = 2H$ and the class of a line is $[L] = H$, so $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{pt}]$.
 :::
 
 ::: Example 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)
 As a slightly more complicated example, we saw in [§Rational Maps, ⁋Example 11](/en/math/algebraic_varieties/rational_maps#ex11){: data-relation="weak" } that $\mathbb{P}^1 \times \mathbb{P}^1$ and the quadric surface $Q = V(\x\y - \z\w)$ are isomorphic. The Chow ring of $\mathbb{P}^1 \times \mathbb{P}^1$ is
 
-$$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2),$$
+$$A^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2),$$
 
 where $H_1 = [\mathbb{P}^1 \times \{p\}]$, $H_2 = [\{p\} \times \mathbb{P}^1]$. For a curve $C$ of bidegree $(a, b)$ we have $[C] = aH_1 + bH_2$, and hence the intersection product of two curves $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$ is computed as
 
@@ -161,7 +161,7 @@ Through this we can transfer intersection computations in $\mathbb{P}^3$ to $\ma
 We close this post by introducing the following useful formula.
 
 ::: Proposition 14 (Projection Formula)
-For a proper morphism $f: X \rightarrow Y$ between smooth varieties and $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$,
+For a proper morphism $f: X \rightarrow Y$ between smooth varieties and $\alpha \in A^\ast(X)$, $\beta \in A^\ast(Y)$,
 
 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
 

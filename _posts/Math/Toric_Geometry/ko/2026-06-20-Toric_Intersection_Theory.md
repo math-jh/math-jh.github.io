@@ -15,7 +15,7 @@ weight: 7
 published: false
 ---
 
-[\[대수다양체\] §교차곱, ⁋정의 7](/ko/math/algebraic_varieties/intersection_product#def7){: data-relation="weak" }에서 우리는 smooth variety $X$의 Chow group들 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$이 intersection product에 의해 graded ring을 이룸을 보았고, 이를 Chow ring이라 불렀다. 일반적인 variety에서 Chow ring을 명시적으로 계산하는 일은 대단히 어렵지만, toric variety의 경우 모든 것이 fan $\Sigma$의 조합론으로 환원된다. 이번 글의 목표는 smooth complete toric variety $X_\Sigma$에 대해 그 Chow ring을 fan의 데이터로 완전히 기술하고, torus-invariant divisor들의 intersection number를 cone과 polytope으로부터 직접 읽어내는 방법을 정리하는 것이다.
+[\[대수다양체\] §교차곱, ⁋정의 7](/ko/math/algebraic_varieties/intersection_product#def7){: data-relation="weak" }에서 우리는 smooth variety $X$의 Chow group들 $A^\ast(X) = \bigoplus_k A^k(X)$이 intersection product에 의해 graded ring을 이룸을 보았고, 이를 Chow ring이라 불렀다. 일반적인 variety에서 Chow ring을 명시적으로 계산하는 일은 대단히 어렵지만, toric variety의 경우 모든 것이 fan $\Sigma$의 조합론으로 환원된다. 이번 글의 목표는 smooth complete toric variety $X_\Sigma$에 대해 그 Chow ring을 fan의 데이터로 완전히 기술하고, torus-invariant divisor들의 intersection number를 cone과 polytope으로부터 직접 읽어내는 방법을 정리하는 것이다.
 
 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 lattice, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice이며, $\Sigma$는 $N_\mathbb{R}$ 위의 fan으로 그것이 정의하는 toric variety $X_\Sigma$가 smooth complete라고 가정한다. $\Sigma(d)$로 $\Sigma$의 $d$차원 cone들의 모임을, $\Sigma(1)$로 ray들의 모임을 적으며, 각 $\rho \in \Sigma(1)$에 대해 $v_\rho \in N$은 그 primitive generator이다. $X_\Sigma$가 smooth이므로 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11){: data-relation="required" }) 모든 cone $\sigma \in \Sigma$의 generator들은 lattice $N$의 $\mathbb{Z}$-basis의 일부를 이룬다 ([§아핀 토릭 다양체, ⁋정의 8](/ko/math/toric_geometry/affine_toric_varieties#def8){: data-relation="required" }).
 
@@ -31,21 +31,21 @@ $$V(\sigma) = \overline{O(\sigma)} \subseteq X_\Sigma$$
 이다.
 :::
 
-$O(\sigma)$의 차원이 $n - d$이므로 $V(\sigma)$는 codimension $d$의 irreducible closed subvariety이며, 따라서 cycle class $[V(\sigma)] \in \CH^d(X_\Sigma)$을 정의한다 ([\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-relation="required" }). 두 극단적인 경우가 익숙하다. $d = 0$일 때, 즉 $\sigma = \{0\}$일 때 $V(\{0\}) = X_\Sigma$ 전체이며 이는 $\CH^0(X_\Sigma)$의 fundamental class이다. $d = 1$일 때, 즉 ray $\rho \in \Sigma(1)$에 대해 $V(\rho)$는 codimension $1$의 irreducible subvariety, 즉 [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1){: data-relation="required" }의 torus-invariant prime divisor $D_\rho$와 정확히 일치한다. 우리는 이하에서 $V(\rho) = D_\rho$로 두고 이 두 표기를 자유로이 혼용한다.
+$O(\sigma)$의 차원이 $n - d$이므로 $V(\sigma)$는 codimension $d$의 irreducible closed subvariety이며, 따라서 cycle class $[V(\sigma)] \in A^d(X_\Sigma)$을 정의한다 ([\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-relation="required" }). 두 극단적인 경우가 익숙하다. $d = 0$일 때, 즉 $\sigma = \{0\}$일 때 $V(\{0\}) = X_\Sigma$ 전체이며 이는 $A^0(X_\Sigma)$의 fundamental class이다. $d = 1$일 때, 즉 ray $\rho \in \Sigma(1)$에 대해 $V(\rho)$는 codimension $1$의 irreducible subvariety, 즉 [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1){: data-relation="required" }의 torus-invariant prime divisor $D_\rho$와 정확히 일치한다. 우리는 이하에서 $V(\rho) = D_\rho$로 두고 이 두 표기를 자유로이 혼용한다.
 
-반대편 극단으로, $X_\Sigma$가 complete이고 $\sigma$가 maximal cone, 즉 $\dim \sigma = n$이면 $O(\sigma)$는 $0$차원 orbit, 즉 $T_N$의 fixed point이며 $V(\sigma)$는 그 한 점이다. 이는 $\CH^n(X_\Sigma)$의 class를 준다.
+반대편 극단으로, $X_\Sigma$가 complete이고 $\sigma$가 maximal cone, 즉 $\dim \sigma = n$이면 $O(\sigma)$는 $0$차원 orbit, 즉 $T_N$의 fixed point이며 $V(\sigma)$는 그 한 점이다. 이는 $A^n(X_\Sigma)$의 class를 준다.
 
 Orbit closure $V(\sigma)$ 자체도 toric variety의 구조를 갖는다. 더 정확히는, $\sigma$를 포함하는 cone들이 quotient lattice $N(\sigma) = N / (N \cap \mathbb{R}\sigma)$ 안에서 *star* $\operatorname{Star}(\sigma)$라 불리는 fan을 이루고, $V(\sigma)$는 이 fan이 정의하는 toric variety와 isomorphic이다. 이 사실은 orbit closure 사이의 교차를 다시 더 작은 toric variety 위의 문제로 환원해 주며, 아래 intersection number 계산의 바탕이 된다.
 
 ## Linear relation과 Stanley-Reisner relation
 
-이제 우리는 ray들이 주는 divisor class $[D_\rho] \in \CH^1(X_\Sigma)$들이 Chow ring 전체를 generate한다는 사실과, 그들 사이에 성립하는 관계를 기술한다. 두 종류의 관계가 있다. 하나는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }의 character divisor로부터 오는 *linear* relation이고, 다른 하나는 cone을 이루지 않는 ray들의 곱이 사라진다는 *Stanley-Reisner* relation이다.
+이제 우리는 ray들이 주는 divisor class $[D_\rho] \in A^1(X_\Sigma)$들이 Chow ring 전체를 generate한다는 사실과, 그들 사이에 성립하는 관계를 기술한다. 두 종류의 관계가 있다. 하나는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }의 character divisor로부터 오는 *linear* relation이고, 다른 하나는 cone을 이루지 않는 ray들의 곱이 사라진다는 *Stanley-Reisner* relation이다.
 
 먼저 linear relation을 본다. [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }에 의해 임의의 $m \in M$에 대해 character $\rchi^m$의 divisor는
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho$$
 
-이며, 이는 principal divisor이므로 $\CH^1(X_\Sigma) \cong \Cl(X_\Sigma)$ ([\[대수다양체\] §저우 군, ⁋명제 11](/ko/math/algebraic_varieties/chow_groups#prop11){: data-relation="required" }) 안에서 $0$이 된다. 따라서 각 $m \in M$은 divisor class 사이의 선형 관계
+이며, 이는 principal divisor이므로 $A^1(X_\Sigma) \cong \Cl(X_\Sigma)$ ([\[대수다양체\] §저우 군, ⁋명제 11](/ko/math/algebraic_varieties/chow_groups#prop11){: data-relation="required" }) 안에서 $0$이 된다. 따라서 각 $m \in M$은 divisor class 사이의 선형 관계
 
 $$\sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle [D_\rho] = 0$$
 
@@ -56,7 +56,7 @@ $$\sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle [D_\rho] = 0$$
 ::: 명제 2
 서로 다른 ray들 $\rho_1, \ldots, \rho_k \in \Sigma(1)$에 대해 다음이 성립한다.
 
-1. 만일 $\rho_1, \ldots, \rho_k$가 함께 하나의 cone $\sigma = \rho_1 + \cdots + \rho_k \in \Sigma$를 이루면, $X_\Sigma$가 smooth라는 가정 하에 $\CH^\ast(X_\Sigma)$ 안에서
+1. 만일 $\rho_1, \ldots, \rho_k$가 함께 하나의 cone $\sigma = \rho_1 + \cdots + \rho_k \in \Sigma$를 이루면, $X_\Sigma$가 smooth라는 가정 하에 $A^\ast(X_\Sigma)$ 안에서
 
     $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
@@ -87,7 +87,7 @@ $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
 $$[D_{\rho_1}] \cdots [D_{\rho_k}] = \frac{1}{\mult(\sigma)}\,[V(\sigma)], \qquad [V(\sigma)] = \mult(\sigma)\,[D_{\rho_1}] \cdots [D_{\rho_k}]$$
 
-의 꼴로 나타난다 ([CLS] Proposition 12.5.2). 여기서 $N_\sigma = N \cap \mathbb{R}\sigma$는 $\sigma$가 span하는 부분공간 안의 lattice이다. Smooth cone은 그 generator가 $N_\sigma$의 basis를 이루어 $\mult(\sigma) = 1$이므로, 위 식은 명제 2의 (1)로 환원된다. Simplicial이지만 smooth가 아닌 경우 Chow group이 torsion을 가질 수 있어 위 식은 $\CH^\ast(X_\Sigma)_\mathbb{Q}$ 위에서만 성립한다.
+의 꼴로 나타난다 ([CLS] Proposition 12.5.2). 여기서 $N_\sigma = N \cap \mathbb{R}\sigma$는 $\sigma$가 span하는 부분공간 안의 lattice이다. Smooth cone은 그 generator가 $N_\sigma$의 basis를 이루어 $\mult(\sigma) = 1$이므로, 위 식은 명제 2의 (1)로 환원된다. Simplicial이지만 smooth가 아닌 경우 Chow group이 torsion을 가질 수 있어 위 식은 $A^\ast(X_\Sigma)_\mathbb{Q}$ 위에서만 성립한다.
 :::
 
 ## Chow 환의 표현
@@ -114,33 +114,33 @@ $\mathcal{I}_{SR}$은 모든 non-face에 대응하는 monomial을 다 모을 필
 ::: 정리 5 (Chow ring의 조합론적 표현)
 $X_\Sigma$가 smooth complete toric variety이면, $\x_\rho \mapsto [D_\rho]$로 정의되는 morphism은 graded ring의 isomorphism
 
-$$\CH^\ast(X_\Sigma) \cong \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)] \,/\, (\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$$
+$$A^\ast(X_\Sigma) \cong \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)] / (\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$$
 
 을 유도한다.
 :::
 
 ::: 증명
-표기를 위해 $R = \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)]$이라 두자. $\x_\rho \mapsto [D_\rho]$는 ring homomorphism $\varphi: R \rightarrow \CH^\ast(X_\Sigma)$로 유일하게 확장된다. 우리는 $\varphi$가 surjective이고 $\ker \varphi = \mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}$임을 보인다.
+표기를 위해 $R = \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)]$이라 두자. $\x_\rho \mapsto [D_\rho]$는 ring homomorphism $\varphi: R \rightarrow A^\ast(X_\Sigma)$로 유일하게 확장된다. 우리는 $\varphi$가 surjective이고 $\ker \varphi = \mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}$임을 보인다.
 
-$\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으로 보냄은 이미 보았다. 즉 $\mathcal{J}_{\mathrm{lin}}$의 generator는 $\varphi$ 하에서 $\sum_\rho \langle m, v_\rho\rangle [D_\rho] = [\divisor(\rchi^m)] = 0$이 되고 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }), $\mathcal{I}_{SR}$의 generator는 명제 2의 (2)에 의해 $0$이 된다. 따라서 $\varphi$는 quotient ring $\overline{\varphi}: R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}) \rightarrow \CH^\ast(X_\Sigma)$로 factor된다.
+$\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으로 보냄은 이미 보았다. 즉 $\mathcal{J}_{\mathrm{lin}}$의 generator는 $\varphi$ 하에서 $\sum_\rho \langle m, v_\rho\rangle [D_\rho] = [\divisor(\rchi^m)] = 0$이 되고 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-relation="required" }), $\mathcal{I}_{SR}$의 generator는 명제 2의 (2)에 의해 $0$이 된다. 따라서 $\varphi$는 quotient ring $\overline{\varphi}: R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}) \rightarrow A^\ast(X_\Sigma)$로 factor된다.
 
-다음으로 $\overline{\varphi}$의 surjectivity를 본다. $X_\Sigma$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $\{[V(\sigma)] \mid \sigma \in \Sigma\}$이 $\CH^\ast(X_\Sigma)$를 $\mathbb{Z}$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 [\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8){: data-relation="required" }를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $[V(\sigma)]$는 명제 2의 (1)에 의해 $\sigma$를 generate하는 ray들의 divisor 곱 $[D_{\rho_1}] \cdots [D_{\rho_k}]$로 표현되므로 $[D_\rho]$들의 monomial이며, 따라서 $\varphi$의 image에 속한다. 결국 $\overline{\varphi}$는 surjective이다.
+다음으로 $\overline{\varphi}$의 surjectivity를 본다. $X_\Sigma$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $\{[V(\sigma)] \mid \sigma \in \Sigma\}$이 $A^\ast(X_\Sigma)$를 $\mathbb{Z}$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 [\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8){: data-relation="required" }를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $[V(\sigma)]$는 명제 2의 (1)에 의해 $\sigma$를 generate하는 ray들의 divisor 곱 $[D_{\rho_1}] \cdots [D_{\rho_k}]$로 표현되므로 $[D_\rho]$들의 monomial이며, 따라서 $\varphi$의 image에 속한다. 결국 $\overline{\varphi}$는 surjective이다.
 
-마지막으로 injectivity를 본다. 이를 직접 보이는 대신, $X_\Sigma$가 smooth complete일 때 두 graded abelian group이 각 degree에서 같은 finite rank를 가짐을 이용한다. $X_\Sigma$가 smooth complete이면 maximal cone들이 주는 affine cell에 의한 cellular decomposition이 존재하여 $\CH^k(X_\Sigma)$는 free abelian group이며 그 degree별 rank는 fan의 $h$-vector로 주어진다. 한편 quotient $R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$의 degree별 rank도 동일한 $h$-vector로 계산됨이 알려져 있다 ([Sta] 또는 [CLS] Theorem 12.4.4). 두 graded group이 surjection $\overline{\varphi}$로 연결되어 있고 각 degree에서 같은 finite rank를 가지므로, free abelian group 사이의 degree별 surjection이 rank를 보존하면 isomorphism이라는 사실로부터 $\overline{\varphi}$는 isomorphism이다.
+마지막으로 injectivity를 본다. 이를 직접 보이는 대신, $X_\Sigma$가 smooth complete일 때 두 graded abelian group이 각 degree에서 같은 finite rank를 가짐을 이용한다. $X_\Sigma$가 smooth complete이면 maximal cone들이 주는 affine cell에 의한 cellular decomposition이 존재하여 $A^k(X_\Sigma)$는 free abelian group이며 그 degree별 rank는 fan의 $h$-vector로 주어진다. 한편 quotient $R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$의 degree별 rank도 동일한 $h$-vector로 계산됨이 알려져 있다 ([Sta] 또는 [CLS] Theorem 12.4.4). 두 graded group이 surjection $\overline{\varphi}$로 연결되어 있고 각 degree에서 같은 finite rank를 가지므로, free abelian group 사이의 degree별 surjection이 rank를 보존하면 isomorphism이라는 사실로부터 $\overline{\varphi}$는 isomorphism이다.
 :::
 
-정리 5는 smooth complete toric variety의 Chow ring을 fan으로부터 완전히 기계적으로 계산하게 해 준다. 변수는 ray의 개수 $\lvert \Sigma(1) \rvert$만큼이고, linear ideal이 $n$개의 변수를 소거하므로 $\CH^1(X_\Sigma) \cong \Cl(X_\Sigma)$의 rank가 $\lvert \Sigma(1) \rvert - n$이 되는 것은 [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4){: data-relation="weak" }의 exact sequence와 부합한다.
+정리 5는 smooth complete toric variety의 Chow ring을 fan으로부터 완전히 기계적으로 계산하게 해 준다. 변수는 ray의 개수 $\lvert \Sigma(1) \rvert$만큼이고, linear ideal이 $n$개의 변수를 소거하므로 $A^1(X_\Sigma) \cong \Cl(X_\Sigma)$의 rank가 $\lvert \Sigma(1) \rvert - n$이 되는 것은 [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4){: data-relation="weak" }의 exact sequence와 부합한다.
 
 ::: 참고 6
-정리 5의 표현은 $X_\Sigma$가 smooth complete일 때 위상적 cohomology ring $H^\ast(X_\Sigma, \mathbb{Z})$의 표현과도 일치한다. Smooth complete toric variety는 odd cohomology가 사라지고 cycle class map이 ([\[대수다양체\] §저우 군, ⁋명제 12](/ko/math/algebraic_varieties/chow_groups#prop12){: data-relation="weak" }) isomorphism $\CH^k(X_\Sigma) \cong H^{2k}(X_\Sigma, \mathbb{Z})$을 주기 때문이다. 따라서 위 ideal 표현은 Danilov와 Jurkiewicz에 의한 toric variety의 cohomology ring 계산으로도 알려져 있다.
+정리 5의 표현은 $X_\Sigma$가 smooth complete일 때 위상적 cohomology ring $H^\ast(X_\Sigma, \mathbb{Z})$의 표현과도 일치한다. Smooth complete toric variety는 odd cohomology가 사라지고 cycle class map이 ([\[대수다양체\] §저우 군, ⁋명제 12](/ko/math/algebraic_varieties/chow_groups#prop12){: data-relation="weak" }) isomorphism $A^k(X_\Sigma) \cong H^{2k}(X_\Sigma, \mathbb{Z})$을 주기 때문이다. 따라서 위 ideal 표현은 Danilov와 Jurkiewicz에 의한 toric variety의 cohomology ring 계산으로도 알려져 있다.
 :::
 
 ## 교차수와 polytope
 
-Chow ring을 알면 $0$차원 class까지 곱을 내려보내 *intersection number*를 얻을 수 있다. $X_\Sigma$가 complete이므로 $\CH^n(X_\Sigma) \cong \mathbb{Z}$이며, 한 점의 class $[\mathrm{pt}]$가 generator이다. Codimension의 합이 $n$인 divisor들의 곱은 $\CH^n(X_\Sigma)$의 원소, 즉 정수배의 점이 되고, 그 정수를 intersection number라 부른다. Smooth case에서 이 intersection number는 maximal cone의 조합론으로 직접 읽힌다.
+Chow ring을 알면 $0$차원 class까지 곱을 내려보내 *intersection number*를 얻을 수 있다. $X_\Sigma$가 complete이므로 $A^n(X_\Sigma) \cong \mathbb{Z}$이며, 한 점의 class $[\mathrm{pt}]$가 generator이다. Codimension의 합이 $n$인 divisor들의 곱은 $A^n(X_\Sigma)$의 원소, 즉 정수배의 점이 되고, 그 정수를 intersection number라 부른다. Smooth case에서 이 intersection number는 maximal cone의 조합론으로 직접 읽힌다.
 
 ::: 명제 7
-$X_\Sigma$가 smooth complete toric variety이고 $\rho_1, \ldots, \rho_n \in \Sigma(1)$이 서로 다른 ray라 하자. 그러면 intersection number $D_{\rho_1} \cdots D_{\rho_n} \in \CH^n(X_\Sigma) \cong \mathbb{Z}$는 다음과 같다.
+$X_\Sigma$가 smooth complete toric variety이고 $\rho_1, \ldots, \rho_n \in \Sigma(1)$이 서로 다른 ray라 하자. 그러면 intersection number $D_{\rho_1} \cdots D_{\rho_n} \in A^n(X_\Sigma) \cong \mathbb{Z}$는 다음과 같다.
 
 $$D_{\rho_1} \cdots D_{\rho_n} = \begin{cases} 1 & \text{if } \rho_1 + \cdots + \rho_n \in \Sigma(n), \\ 0 & \text{otherwise.} \end{cases}$$
 :::
@@ -181,7 +181,7 @@ $$\chi(\mathcal{O}_{X_\Sigma}(kD)) = \frac{D^n}{n!}\, k^n + O(k^{n-1})$$
 이다. 한편 lattice point의 개수 $\#(kP_D \cap M)$는 Ehrhart 다항식으로, 그 최고차항은 $\vol(P_D)\, k^n$이다. 두 다항식의 최고차항을 비교하면 $D^n / n! = \vol(P_D)$, 즉 $D^n = n!\, \vol(P_D)$를 얻는다.
 :::
 
-이 결과는 toric variety의 교차 이론과 convex geometry의 격자점 셈을 잇는 다리이다. 가장 단순한 예로 $\mathbb{P}^n$의 hyperplane class $H$는 $P_H$가 standard simplex $\Delta_n$이 되어 $H^n = n!\, \vol(\Delta_n) = n! \cdot \frac{1}{n!} = 1$을 주며, 이는 $\CH^\ast(\mathbb{P}^n) = \mathbb{Z}[H]/(H^{n+1})$에서 $H^n = [\mathrm{pt}]$인 것과 일치한다 ([\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="weak" }).
+이 결과는 toric variety의 교차 이론과 convex geometry의 격자점 셈을 잇는 다리이다. 가장 단순한 예로 $\mathbb{P}^n$의 hyperplane class $H$는 $P_H$가 standard simplex $\Delta_n$이 되어 $H^n = n! \vol(\Delta_n) = n! \cdot \frac{1}{n!} = 1$을 주며, 이는 $A^\ast(\mathbb{P}^n) = \mathbb{Z}[H]/(H^{n+1})$에서 $H^n = [\mathrm{pt}]$인 것과 일치한다 ([\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="weak" }).
 
 ## 사영공간
 
@@ -198,11 +198,11 @@ $$\mathcal{I}_{SR} = (\x_0 \x_1 \cdots \x_n)$$
 
 이다. Linear relation은 각 $m = e_j^\ast$에 대해 $\sum_i \langle e_j^\ast, v_i \rangle \x_i = \x_j - \x_0 = 0$, 즉 $\x_j = \x_0$ ($1 \le j \le n$)을 준다. 따라서 정리 5에 의해
 
-$$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[\x_0, \ldots, \x_n] / (\x_0 \cdots \x_n,\ \x_1 - \x_0,\ \ldots,\ \x_n - \x_0)$$
+$$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[\x_0, \ldots, \x_n] / (\x_0 \cdots \x_n, \x_1 - \x_0, \ldots, \x_n - \x_0)$$
 
 이며, 모든 $\x_i$를 $H := \x_0$로 동일시하면 유일한 Stanley-Reisner 관계가 $H^{n+1} = 0$이 되어
 
-$$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
+$$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 을 회복한다. 이는 [\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="weak" }의 결과와 정확히 일치한다. Intersection number의 관점에서, 명제 7에 의해 서로 다른 $n$개의 $D_i$의 곱은 그들이 maximal cone을 이루므로 항상 $1$이고, 가령 $D_1 \cdots D_n = [\mathrm{pt}]$이다. 한편 $H^n = D_0^n$은 linear relation으로 $D_0 = D_1 = \cdots$이 되므로 $D_0^n = D_1 D_2 \cdots D_n = 1$로 계산되어 같은 답을 준다.
 :::
@@ -226,7 +226,7 @@ $$\mathcal{I}_{SR} = (\x_1 \x_3,\ \x_2 \x_4)$$
 
 이다. Linear relation은 $m = e_1^\ast$에 대해 $\langle e_1^\ast, v_1\rangle \x_1 + \cdots = \x_1 - \x_3 = 0$, $m = e_2^\ast$에 대해 $\x_2 - \x_4 = 0$을 주어 $\x_1 = \x_3$, $\x_2 = \x_4$이다. $H_1 := \x_1 = \x_3$, $H_2 := \x_2 = \x_4$로 두면 Stanley-Reisner 관계는 $H_1^2 = 0$, $H_2^2 = 0$이 되어
 
-$$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2,\ H_2^2)$$
+$$A^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
 
 을 얻는다. 이는 [\[대수다양체\] §교차곱, ⁋예시 12](/ko/math/algebraic_varieties/intersection_product#ex12){: data-relation="weak" }의 결과와 일치한다. Intersection number를 직접 확인하면, $\rho_1, \rho_2$는 maximal cone $\sigma_{12}$를 이루므로 명제 7에 의해 $D_1 D_2 = H_1 H_2 = 1 = [\mathrm{pt}]$이고, $\rho_1, \rho_3$은 cone을 이루지 않으므로 $D_1 D_3 = H_1^2 = 0$이다. 따라서 두 곡선 $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 intersection number는
 
@@ -270,7 +270,7 @@ $$\x_0 \x_3 = H E = 0, \qquad \x_1 \x_2 = (H - E)^2 = 0$$
 
 이 된다. 둘째 관계를 전개하면 $H^2 - 2 HE + E^2 = 0$인데 $HE = 0$이므로 $H^2 + E^2 = 0$, 즉 $E^2 = -H^2$이다. 따라서
 
-$$\CH^\ast(\Bl_p \mathbb{P}^2) \cong \mathbb{Z}[H, E] / (HE,\ H^2 + E^2)$$
+$$A^\ast(\Bl_p \mathbb{P}^2) \cong \mathbb{Z}[H, E] / (HE, H^2 + E^2)$$
 
 이며, intersection number의 관점에서
 

@@ -10,11 +10,11 @@ sidebar:
 
 date: 2026-05-11
 weight: 20
-
+revising: true
 
 ---
 
-[§저우 군](/ko/math/algebraic_varieties/chow_groups){: data-relation="required" }에서 우리는 Chow group $\CH^\ast(X)$를 정의하였다. 우리는 해당 글의 말미에서 여기에 intersection product를 정의하여 ring구조를 줄 수 있다고 주장했었는데, 이번 글에서는 이를 정의하고 성질들을 살펴본다. 
+[§저우 군](/ko/math/algebraic_varieties/chow_groups){: data-relation="required" }에서 우리는 Chow group $A^\ast(X)$를 정의하였다. 우리는 해당 글의 말미에서 여기에 intersection product를 정의하여 ring구조를 줄 수 있다고 주장했었는데, 이번 글에서는 이를 정의하고 성질들을 살펴본다. 
 
 다음 정의는 한 점 $p$ 근방에서 두 variety $V,W$의 intersection이 무엇인지 보여준다. 정의에 의해 이는 점 $p$ 근방에서 일어나는 일이므로, affine chart를 택한 후 ambient space를 $\mathbb{A}^n$으로 두고 정의해도 충분하다. 
 
@@ -79,7 +79,7 @@ $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T]$$
 ::: 명제 6
 Smooth irreducible quasi-projective variety $X$ 위에서 codimension $k$, $l$의 두 cycle $Z, W$가 properly intersect하면, 위의 식은 *intersection product* 
 
-$$Z \cdot W \in \CH^{k+l}(X)$$
+$$Z \cdot W \in A^{k+l}(X)$$
 
 를 잘 정의한다. 뿐만 아니라, 이는 다음의 성질들을 만족한다. 
 
@@ -91,7 +91,7 @@ $$Z \cdot W \in \CH^{k+l}(X)$$
 그럼 다음 정의는 앞선 글에서부터 예견되었던 것이다. 
 
 ::: 정의 7
-Smooth quasi-projective variety $X$에 대하여, intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded ring*이 된다. 이를 *Chow ring<sub>저우 환</sub>*이라 부른다.
+Smooth quasi-projective variety $X$에 대하여, intersection product에 의해 $A^\ast(X) = \bigoplus_k A^k(X)$는 *graded ring*이 된다. 이를 *Chow ring<sub>저우 환</sub>*이라 부른다.
 :::
 
 ## Moving Lemma
@@ -121,7 +121,7 @@ Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변
 :::
 
 ::: 증명
-구성은 blow-up을 사용한다. 먼저 $X \times \mathbb{A}^1$ 안에서 $Y \times \{0\}$를 따라 blow-up하여 $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$을 얻고, 그 후 $X \times \{0\}$의 proper transform을 제거하여 $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$로 정의한다. 이 blow-up의 exceptional divisor는 $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$이며, proper transform을 제거하면 $t=0$ fiber에서 정확히 normal cone $C_{Y/X}$가 남는다. $t \neq 0$에서는 blow-up이 isomorphism이므로 fiber가 $X$ 그대로이다. 따라서 $M \rightarrow \mathbb{A}^1$은 $t=1$에서의 $X$를 $t=0$에서의 $C_{Y/X}$로 연결하는 deformation을 제공한다. Chow group에서 $M$ 위의 specialization map $\sigma: \CH^\ast(X) \rightarrow \CH^\ast(C_{Y/X})$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$가 되어 intersection product의 well-definedness가 확립된다.
+구성은 blow-up을 사용한다. 먼저 $X \times \mathbb{A}^1$ 안에서 $Y \times \{0\}$를 따라 blow-up하여 $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$을 얻고, 그 후 $X \times \{0\}$의 proper transform을 제거하여 $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$로 정의한다. 이 blow-up의 exceptional divisor는 $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$이며, proper transform을 제거하면 $t=0$ fiber에서 정확히 normal cone $C_{Y/X}$가 남는다. $t \neq 0$에서는 blow-up이 isomorphism이므로 fiber가 $X$ 그대로이다. 따라서 $M \rightarrow \mathbb{A}^1$은 $t=1$에서의 $X$를 $t=0$에서의 $C_{Y/X}$로 연결하는 deformation을 제공한다. Chow group에서 $M$ 위의 specialization map $\sigma: A^\ast(X) \rightarrow A^\ast(C_{Y/X})$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $A^\ast(C_{Y/X}) \cong A^\ast(Y)$가 되어 intersection product의 well-definedness가 확립된다.
 :::
 
 이 방법의 아이디어는 $X$를 연속적으로 변형하여 $Y$의 normal cone으로 수축시키는 것이다. 기하적으로, $t=1$에서는 원래 공간 $X$를 보고, $t$가 $0$으로 갈수록 $X$가 $Y$를 따라 점점 더 <em-ko>펴지면서</em-ko> 결국 $t=0$에서는 $Y$를 따라 벌어진 normal cone이 된다. [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" }의 blow-up이 한 점을 $\mathbb{P}^1$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
@@ -131,24 +131,24 @@ Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변
 Intersection product의 성질을 구체적인 예시들을 통해 확인해 보자.
 
 ::: 예시 10 ($\mathbb{P}^n$)
-$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$이다. 여기서 $H$는 hyperplane class로, 우리가 이미 계산한 $\Pic(\mathbb{P}^n) \cong \CH^1(\mathbb{P}^n) \cong \mathbb{Z}$에 intersection product를 추가하면, $H \cdot H = H^2$, $H \cdot H^2 = H^3$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
+$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$이다. 여기서 $H$는 hyperplane class로, 우리가 이미 계산한 $\Pic(\mathbb{P}^n) \cong A^1(\mathbb{P}^n) \cong \mathbb{Z}$에 intersection product를 추가하면, $H \cdot H = H^2$, $H \cdot H^2 = H^3$, ...의 곱셈이 추가되어 Chow ring이 완성된다.
 :::
 
 ::: 예시 11 (Surface)
 앞선 글에서 우리는 surface $S$ 위의 두 curve $C, D$에 대해:
 
-$$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
+$$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in A^2(S)$$
 
-임을 보았다. 일반적인 surface의 경우 $\CH^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial일 수 있어 $\CH^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
+임을 보았다. 일반적인 surface의 경우 $A^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial일 수 있어 $A^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
 
-그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[C] = 2H$이고 직선의 class는 $[L] = H$이므로, $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{pt}]$이다.
+그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $A^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $A^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[C] = 2H$이고 직선의 class는 $[L] = H$이므로, $[C] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{pt}]$이다.
 :::
 
 ::: 예시 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)
 약간 더 복잡한 예시로, 우리는 [§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex11){: data-relation="weak" }에서 $\mathbb{P}^1 \times \mathbb{P}^1$과 quadric surface $Q = V(\x\y - \z\w)$가 isomorphic함
 을 보았다. $\mathbb{P}^1 \times \mathbb{P}^1$의 Chow ring은
 
-$$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
+$$A^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
 
 이며, 여기서 $H_1 = [\mathbb{P}^1 \times \{p\}]$, $H_2 = [\{p\} \times \mathbb{P}^1]$이다. Bidegree $(a, b)$의 curve $C$에 대해 $[C] = aH_1 + bH_2$이며, 따라서 두 curve $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 intersection product는
 
@@ -168,7 +168,7 @@ Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}
 마지막으로 유용한 다음의 공식을 소개하며 이 글을 마친다.
 
 ::: 명제 14 (Projection Formula)
-Smooth variety 사이의 proper morphism $f: X \rightarrow Y$와 $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$에 대해 
+Smooth variety 사이의 proper morphism $f: X \rightarrow Y$와 $\alpha \in A^\ast(X)$, $\beta \in A^\ast(Y)$에 대해 
 
 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
 

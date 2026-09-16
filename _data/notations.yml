@@ -3777,12 +3777,12 @@
     defs:
     - label: §곡면에서의 리만-로흐 정리
       url: /ko/math/algebraic_varieties/riemann_roch_surfaces
-  - symbol: \CH^\ast(X)
+  - symbol: A^\ast(X)
     meaning: 전체 Chow group
     defs:
     - label: §저우 군
       url: /ko/math/algebraic_varieties/chow_groups
-  - symbol: \CH^\ast(X)
+  - symbol: A^\ast(X)
     meaning: Chow ring
     defs:
     - label: §교차곱
@@ -3792,12 +3792,12 @@
     defs:
     - label: §층 코호몰로지
       url: /ko/math/algebraic_varieties/sheaf_cohomology
-  - symbol: \CH_k(X)
+  - symbol: A_k(X)
     meaning: Chow group
     defs:
     - label: §저우 군
       url: /ko/math/algebraic_varieties/chow_groups
-  - symbol: \CH^k(X)
+  - symbol: A^k(X)
     meaning: codimension $k$ Chow group
     defs:
     - label: §저우 군
