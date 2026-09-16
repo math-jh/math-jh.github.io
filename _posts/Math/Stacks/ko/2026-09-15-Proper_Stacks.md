@@ -104,7 +104,36 @@ $$\mathcal{X}\times_X U\cong[V/G_x],\qquad U\cong V/G_x$$
 이도록 할 수 있다. 뿐만 아니라, 만일 $\mathcal{X}$가 smooth이면 $V$ 역시 smooth하게 택할 수 있다.
 :::
 
-이는 separated finite type Deligne-Mumford stack의 local structure theorem이라 부를 만하다. 뿐만 아니라 이 경우 coarse moduli는 국소적으로 categorical quotient $V/G_x$를 étale하게 이어붙인 것으로 생각할 수 있다. 따라서 coarse moduli는 finite quotient singularity를 갖는 공간이 된다. 또한 finite group action에 대하여, local quotient map $[V/G_x]\rightarrow V/G_x$가 항상 proper이므로, coarse moduli $\pi:\mathcal{X}\rightarrow X$ 역시 proper morphism이 된다.
+이는 separated finite type Deligne-Mumford stack의 local structure theorem이라 부를 만하다. 즉 Deligne-Mumford stack은 coarse moduli space의 étale topology에서 finite group에 의한 quotient stack으로 국소적으로 표현되며, 그 coarse moduli space 역시 대응하는 categorical quotient들을 étale하게 이어붙인 것으로 생각할 수 있다. 특히 $\mathcal{X}$가 smooth하면 $V$를 smooth하게 택할 수 있으므로, coarse moduli space $X$는 국소적으로 smooth variety의 finite quotient $V/G_x$의 꼴로 나타난다. 따라서 $X$는 일반적으로 smooth하지는 않더라도 finite quotient singularity만을 갖는다.
+
+눈여겨볼 만한 것은 여기서 quotient를 만드는 finite group $G_x$ 전체가 coarse moduli의 function field degree에 나타나는 것은 아니라는 것이다. 이를 보기 위해 $V$가 integral이라고 하고, $V$의 generic point의 stabilizer를 $H\subseteq G_x$라 하자. 여기서 $H$는 $G_x$ 가운데 generic point를 움직이지 않는 부분이며, 동치적으로 $K(V)$에 trivial하게 작용하는 subgroup이다. 따라서 $G_x/H$가 $K(V)$에 faithful하게 작용하고
+
+$$K(V/G_x)=K(V)^{G_x}=K(V)^{G_x/H}$$
+
+이다. Characteristic $0$에서는 이 extension이 separable하므로
+
+$$[K(V):K(V/G_x)]=\lvert G_x/H\rvert=\frac{\lvert G_x\rvert}{\lvert H\rvert}.$$
+
+즉 coarse quotient $V/G_x$의 function field는 $G_x$의 작용 가운데 generic point를 실제로 움직이는 부분 $G_x/H$만을 기억한다. 반면 generic point를 움직이지 않는 subgroup $H$는 coarse moduli를 취하면 보이지 않지만, quotient stack $[V/G_x]$에서는 generic stabilizer로 그대로 남아 있다. 따라서 group의 order는
+
+$$\lvert G_x\rvert=\underbrace{\lvert G_x/H\rvert}_{\text{coarse quotient가 보는 generic orbit}}\cdot\underbrace{\lvert H\rvert}_{\text{stack에 남는 generic stabilizer}}$$
+
+와 같이 두 종류의 정보로 나뉜다. 다시 말해 coarse moduli를 취하는 과정은 stabilizer 정보를 function field degree에 모두 포함시키는 것이 아니라, 점을 실제로 움직여 orbit을 만드는 부분과 점을 움직이지 않고 automorphism으로 남는 부분을 서로 분리한다.
+
+두 극단을 보면 이 차이가 더욱 분명하다. $G_x$가 $V$에 generically freely 작용하면 $H=1$이므로
+
+$$[K(V):K(V/G_x)]=\lvert G_x\rvert,$$
+
+즉 group action의 효과가 모두 coarse function field degree에 나타난다. 반대로 $G_x$가 $V$에 trivial하게 작용하면 $H=G_x$이고 $V/G_x=V$이므로
+
+$$[K(V):K(V/G_x)]=1.$$
+
+이 경우 coarse moduli space에서는 group action이 전혀 보이지 않고, $G_x$ 전체가 stack의 generic stabilizer 정보로 남는다.
+
+이 구분은 뒤에서 Deligne-Mumford stack 사이의 proper pushforward를 정의할 때 중요해진다. Scheme 사이의 generically finite morphism에서는 function field degree만으로 pushforward의 multiplicity를 결정할 수 있지만, stack에서는 coarse function field degree가 generic stabilizer를 보지 못하므로 이것만으로는 충분하지 않다. 따라서 coarse space에서 측정한 generic degree에 source와 target의 generic stabilizer order를 별도로 보정해야 한다. 뒤에서 나타날 stabilizer factor는 coarse function field degree와 같은 정보를 중복하여 세는 것이 아니라, coarse moduli를 취하면서 사라진 automorphism 정보를 보충하는 역할을 한다.
+
+또한 finite group action에 대한 local quotient morphism $[V/G_x]\rightarrow V/G_x$는 proper하므로, 이러한 local description을 이용하면 coarse moduli morphism $\pi:\mathcal{X}\rightarrow X$ 역시 proper morphism이 된다.
+
 
 ::: 정리 5
 Field $\mathbb{K}$ 위의 separated finite type Deligne–Mumford stack $\mathcal{X}$와 coarse moduli space $\pi:\mathcal{X}\rightarrow X$에 대하여 다음 두 조건은 동치이다.
