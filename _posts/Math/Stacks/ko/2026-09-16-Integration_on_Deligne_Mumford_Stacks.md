@@ -47,67 +47,34 @@ $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mat
 
 $$[V]\longmapsto [K(V):K(W)][W]$$
 
-로 주어졌던 것을 기억하자. 위 정의는 바로 이 공식을 Deligne–Mumford stack으로 확장한 것으로, 차이는 generic stabilizer의 비율 $e_{\mathcal W}/e_{\mathcal V}$이 추가된다는 점이다.
-
-실제로 $\dim\mathcal W=\dim\mathcal V$이면 coarse moduli space 사이의 유도된 morphism $V\rightarrow W$는 같은 차원의 integral algebraic space 사이의 dominant proper morphism이므로 generically finite이고, 따라서 $[K(V):K(W)]$가 유한한 값으로 잘 정의된다. 이 항은 stabilizer를 잊어버린 coarse space 위에서의 generic degree만을 측정한다. 반면 $e_{\mathcal V}$와 $e_{\mathcal W}$는 각각 source와 target의 generic point에 남아 있는 automorphism group의 크기를 측정하므로, coarse function field에는 나타나지 않는 stack의 정보를 보정한다. 따라서 두 항은 같은 정보를 중복해서 세는 것이 아니라
-
-$$\underbrace{[K(V):K(W)]}_{\text{coarse generic degree}}\qquad\text{와}\qquad
-\underbrace{\frac{e_{\mathcal W}}{e_{\mathcal V}}}_{\text{generic stabilizer correction}}$$
-
-이라는 서로 다른 정보를 담는다. 그 곱
+로 주어졌던 것을 기억하자. 위 정의는 바로 이 공식을 Deligne–Mumford stack으로 확장한 것으로, 차이는 generic stabilizer의 비율 $e_{\mathcal W}/e_{\mathcal V}$이 추가된다는 점이다. 이는 근본적으로 [§고유스택, ⁋명제 4](/ko/math/stacks/proper_stacks#prop4) 직후에 살펴보았듯 coarse moduli에서 scheme-theoretic하게 보이는 degree와, stack이 고유하게 가지고 있는 automorphism 정보가 분리해서 보이는 것으로, 이런 이유에서 곱
 
 $$[K(V):K(W)]\frac{e_{\mathcal W}}{e_{\mathcal V}}$$
 
-을 $f$의 stack-theoretic generic degree라고 생각할 수 있다.
+을 $f$의 stack-theoretic generic degree라고 생각할 수 있다. 이러한 이유로 stack에서는 rational coefficient가 자연스럽게 나타나게 되는 것이다. 그럼 이렇게 정의한 pushforward의 성질은 다음의 functoriality이다. 
 
-이 차이는 quotient stack에서 특히 잘 드러난다. 예를 들어 integral variety $U$에 finite group $G$가 작용하고 generic stabilizer가 $H\subseteq G$라 하자. Coarse quotient $U/G$ 위에서는 generic orbit의 크기만 보이므로
-
-$$[K(U):K(U/G)]=\frac{|G|}{|H|},$$
-
-인 반면 quotient stack $[U/G]$에는 generic stabilizer $H$가 여전히 남아 있다. 따라서 quotient morphism $U\rightarrow[U/G]$의 stack-theoretic generic degree는
-
-$$\frac{|G|}{|H|}\cdot |H|=|G|$$
-
-가 된다. 즉 coarse degree는 generic orbit을 세고, stabilizer factor는 coarse quotient에서 잊힌 automorphism을 보정한다.
-
-특히 $f$가 representable일 필요는 없으므로, 일반적으로 source의 stabilizer가 target의 stabilizer에 포함된다고 생각해서는 안 된다. 예를 들어 subgroup $H\subseteq G$가 주는 representable morphism
-
-$$[\Spec\mathbb C/H]\longrightarrow[\Spec\mathbb C/G]$$
-
-에서는 coarse space가 양쪽 모두 한 점이어서 field degree는 $1$이지만 stabilizer ratio가
-
-$$\frac{|G|}{|H|}=[G:H]$$
-
-를 만들어 낸다. 반대로 구조사상
-
-$$[\Spec\mathbb C/G]\longrightarrow\Spec\mathbb C$$
-
-에서도 coarse space 사이의 field degree는 $1$이지만 stabilizer ratio가 $1/|G|$이므로
-
-$$[\Spec\mathbb C/G]\longmapsto \frac1{|G|}[\Spec\mathbb C].$$
-
-바로 이 점 때문에 stack의 Chow theory에서는 rational coefficient가 자연스럽게 나타난다.
-
-이 proper pushforward는 functoriality
+::: 명제 2 (Functoriality)
+Deligne–Mumford stack들 사이의 proper morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$와 $g:\mathcal{Y}\rightarrow\mathcal{Z}$에 대하여
 
 $$(g\circ f)_\ast=g_\ast\circ f_\ast$$
 
-를 만족한다. ([Vis, Proposition 3.7])
+가 성립한다.
+:::
 
 
 ## Zero-cycle의 degree
 
-이제 proper Deligne–Mumford stack $\mathcal{X}$의 구조사상 $p:\mathcal{X}\rightarrow\Spec\mathbb{C}$를 생각하자. Target의 zero-dimensional Chow group은
+일반적인 scheme에서 cycle의 degree나 적분이 한 점으로 가는 structure morphism의 proper pushforward이듯, Deligne–Mumford stack 위의 적분 또한 본질적으로 구조사상 $p:\mathcal{X}\rightarrow\Spec\mathbb{C}$에 의한 proper pushforward 그 자체이다. Target의 zero-dimensional Chow group은
 
 $$A_0(\Spec\mathbb{C})_\mathbb{Q}=\mathbb{Q}[\Spec\mathbb{C}]\cong\mathbb{Q}$$
 
-이므로 proper pushforward는 곧바로 *degree map*
+이므로, proper pushforward는 곧바로 *degree map*
 
 $$\deg:=p_\ast:A_0(\mathcal{X})_\mathbb{Q}\longrightarrow\mathbb{Q}$$
 
-을 정의한다. 이 정의만으로 stack의 점에 붙는 $1/\lvert G\rvert$ 가중치가 자동으로 나온다.
+을 정의한다. 스택의 점에 붙는 $1/\lvert G\rvert$ 가중치 역시 외부에서 인위적으로 부여하는 것이 아니라, [정의 1](#def1){: data-relation="required" }의 proper pushforward가 한 점으로 갈 때 stabilizer ratio를 계산하면서 자연스럽게 유도된다.
 
-::: 따름정리 2 (Zero-cycle의 stabilizer 가중치)
+::: 따름정리 3 (Zero-cycle의 stabilizer 가중치)
 $\mathcal{Z}\subseteq\mathcal{X}$를 $0$-dimensional integral closed substack이라 하고, 그 generic stabilizer의 order를 $e_\mathcal{Z}$라 하자. 그러면
 
 $$\deg[\mathcal{Z}]=\frac{1}{e_\mathcal{Z}}$$
@@ -141,7 +108,7 @@ $$A^k(\mathcal{X})_\mathbb{Q}\xrightarrow{\sim} A_{d-k}(\mathcal{X})_\mathbb{Q},
 
 라는 identification을 얻는다. 따라서 top codimension class는 자연스럽게 zero-cycle을 결정하고, 앞에서 정의한 degree를 적용할 수 있다.
 
-::: 정의 3 (적분)
+::: 정의 4 (적분)
 $\mathcal{X}$를 smooth proper Deligne–Mumford stack of pure dimension $d$라 하자. Top Chow class $\alpha\in A^d(\mathcal{X})_\mathbb{Q}$의 *적분*을
 
 $$\int_\mathcal{X}\alpha:=\deg(\alpha\cap[\mathcal{X}])=p_\ast(\alpha\cap[\mathcal{X}])\in\mathbb{Q}$$
@@ -151,7 +118,7 @@ $$\int_\mathcal{X}\alpha:=\deg(\alpha\cap[\mathcal{X}])=p_\ast(\alpha\cap[\mathc
 
 따라서 stack 위의 적분은 별도의 위상수학적 normalization을 추가하여 정의되는 것이 아니다. Proper pushforward 자체에 이미 stabilizer의 비율이 들어 있고, 적분은 그것을 top-dimensional intersection에 적용한 것에 불과하다.
 
-::: 명제 4 (Quotient와 coarse space의 적분)
+::: 명제 5 (Quotient와 coarse space의 적분)
 1. 연결된 smooth proper variety $U$에 finite group $G$가 작용하고 $p:U\rightarrow[U/G]$를 quotient morphism이라 하자. 그러면 임의의 $\alpha\in A^{\dim U}([U/G])_\mathbb{Q}$에 대하여
 
    $$\int_{[U/G]}\alpha=\frac{1}{\lvert G\rvert}\int_U p^\ast\alpha$$
@@ -193,7 +160,7 @@ $$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\longrightarrow A^{k-r}(\mathcal{Y})_\mathbb
 
 로 쓸 수 있다. 정확히는 $f_\ast\alpha$를 $(f_\ast\alpha)\cap[\mathcal{Y}]:=f_\ast(\alpha\cap[\mathcal{X}])$로 정의한다.
 
-::: 명제 5 (Projection formula와 fiber integration)
+::: 명제 6 (Projection formula와 fiber integration)
 위의 $f$에 대하여 다음이 성립한다.
 1. *Projection formula*: 임의의 $\alpha\in A^\ast(\mathcal{X})_\mathbb{Q}$, $\beta\in A^\ast(\mathcal{Y})_\mathbb{Q}$에 대하여
 
@@ -234,7 +201,7 @@ $$i^!:A_k(V)_\mathbb{Q}\longrightarrow A_{k-c}(W)_\mathbb{Q}$$
 
 이 핵심 역할을 한다. ([Vis, §3], [Kre, §2])
 
-::: 명제 6 (Refined Gysin과 diagonal 분해)
+::: 명제 7 (Refined Gysin과 diagonal 분해)
 1. **Product integration**: Smooth proper Deligne–Mumford stack $\mathcal{X},\mathcal{Y}$와 top-degree class $\alpha\in A^{\dim\mathcal{X}}(\mathcal{X})_\mathbb{Q}$, $\beta\in A^{\dim\mathcal{Y}}(\mathcal{Y})_\mathbb{Q}$에 대하여
 
    $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal{Y}^\ast\beta=\left(\int_\mathcal{X}\alpha\right)\left(\int_\mathcal{Y}\beta\right)$$
