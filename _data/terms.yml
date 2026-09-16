@@ -10182,6 +10182,13 @@ K:
   defs:
   - label: '[다중선형대수학] §행렬의 텐서곱'
     url: /ko/math/multilinear_algebra/tensor_product_of_matrices
+- id: kronecker_quiver
+  en: Kronecker quiver
+  ko: 크로네커 화살집
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: krull_dimension
   en: Krull dimension
   ko: 크룰 차원
@@ -13311,6 +13318,13 @@ O:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: oriented_cycle
+  en: oriented cycle
+  ko: 유향 순환
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: oriented_manifold
   en: oriented manifold
   ko: 향을 가진 다양체
@@ -17679,6 +17693,8 @@ S:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: subring
   en: subring
   ko: 부분환
