@@ -345,7 +345,9 @@ Finally for item 5. Consider the graph morphism $\Gamma_\varphi:X \rightarrow X\
 
 The assumption that $\psi$ is separated in item 5 is because the reason $\Gamma_\varphi$ becomes a closed embedding in the proof is exactly that $\Delta_{Y/Z}$ is a closed embedding. Without this assumption, the guarantee that $\Gamma_\varphi$ is a closed embedding disappears and the argument does not work. Note that item 5 of [Corollary 8](#cor8){: data-relation="required" } did not require such an assumption, so the shapes of the two items differ.
 
-Meanwhile item 1 of [Corollary 13](#cor13){: data-relation="weak" } is the following special case. This is the most typical example showing how the criterion is actually used, where existence comes from the single fact that a valuation ring is integrally closed.
+The first result above is used frequently, so it is useful to examine it in more detail. First, since it is obvious that a closed embedding is a monomorphism, by the first result of the corollary above a closed embedding is a proper monomorphism. Importantly, the converse of this statement also holds: a proper monomorphism is a closed embedding. The proof of this claim requires Zariski's Main Theorem, so we omit its proof here.
+
+Meanwhile, this first result can also be viewed as a special case of the following. This is the most typical example showing how the criterion is actually used, where existence comes from the single fact that a valuation ring is integrally closed.
 
 ::: Corollary 14
 A finite morphism between Noetherian schemes is proper.

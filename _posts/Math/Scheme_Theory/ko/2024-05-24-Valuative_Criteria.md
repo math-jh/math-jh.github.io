@@ -346,7 +346,9 @@ $$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
 
 5번에서 $\psi$가 separated라는 가정이 붙는 것은, 증명에서 $\Gamma_\varphi$가 closed embedding이 되는 근거가 정확히 $\Delta_{Y/Z}$가 closed embedding이라는 것이기 때문이다. 이 가정이 없으면 $\Gamma_\varphi$가 closed embedding이라는 보장이 사라지고 논증이 작동하지 않는다. [따름정리 8](#cor8){: data-relation="weak" }의 5번에는 이러한 가정이 필요하지 않았으므로, 두 항목의 모양이 서로 다르다는 점에 주의해야 한다.
 
-한편 [따름정리 13](#cor13){: data-relation="weak" }의 1번은 다음의 특수한 경우이다. 이는 판정법이 실제로 어떻게 쓰이는지를 보여주는 가장 전형적인 예로, valuation ring이 integrally closed라는 사실 하나로 존재성이 나온다.
+위의 결과 중 첫째 결과는 종종 사용되는 것이므로 조금 더 자세히 살펴보는 것이 유용하다. 우선 closed embedding이 monomorphism인 것은 자명하므로, 위 따름정리의 첫째 결과에 의해 closed embedding은 proper monomorphism이다. 중요한 것은 이 명제의 반대방향 또한 성립한다는 것이다. 즉 proper monomorphism이 곧 closed embedding이 된다. 그러나 이 주장은 증명과정에서 Zariski's main theorem을 필요로 하므로, 우리는 이에 대한 증명은 생략하기로 한다.
+
+한편 이 첫째 결과는 다음의 특수한 경우로 볼 수도 있다. 이는 판정법이 실제로 어떻게 쓰이는지를 보여주는 가장 전형적인 예로, valuation ring이 integrally closed라는 사실 하나로 존재성이 나온다.
 
 ::: 따름정리 14
 Noetherian scheme들 사이의 finite morphism은 proper이다.

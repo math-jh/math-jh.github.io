@@ -11,12 +11,9 @@ sidebar:
 date: 2026-09-13
 
 weight: 7
-
-published: false
-
 ---
 
-이 글에서 ring $A$는 항등원을 갖는, commutative이라 가정하지 않는 ring이며, module은 언제나 left module이다.
+이 글에서 ring $A$는 항등원을 갖는, commutative라 가정하지 않는 ring이며, module은 언제나 left module이다.
 
 ## Semisimple module의 정의
 
@@ -39,7 +36,7 @@ $$M=\bigoplus_{i\in I}S_i$$
 Index set $I$가 공집합인 경우, 관례적으로 이는 $0$으로 정의되며, 따라서 정의상 $0$은 semisimple module이다. 
 
 ::: 예시 3
-Division ring $D$를 자기 자신 위의 left module로 보면 [\[대수적 구조\] §분수체, ⁋명제 4](/ko/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }에 의해 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터공간 $V$는 기저 $B$를 가지므로, 이를 사용하여 $V=\bigoplus_{b\in B}Db$로 나타내면 division ring 위의 vector space는 semisimple $D$-module이라는 것을 안다.
+Division ring $D$를 자기 자신 위의 left module로 보면 [\[대수적 구조\] §분수체, ⁋명제 4](/ko/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }에 의해 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터공간 $V$는 basis $B$를 가지므로, 이를 사용하여 $V=\bigoplus_{b\in B}Db$로 나타내면 division ring 위의 벡터공간은 semisimple $D$-module이라는 것을 안다.
 :::
 
 직관적으로 simple module은 module을 분해할 수 있는 가장 작은 단위이며, 이 직관은 다음 보조정리에 녹아있다. 
@@ -52,7 +49,7 @@ $$M=N\oplus\bigoplus_{j\in J}S_j$$
 이다.
 :::
 ::: 증명
-우선 $N+\sum_{j\in J}S_j$가 direct sum이 되도록 하는 부분집합 $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 그럼 자명하게 $\emptyset\in \mathcal{J}$이며, direct sum 조건에 관여하는 것은 유한개의 원소들 뿐이므로, $\mathcal{J}$의 임의의 chain이 주어졌을 때 그 합집합 또한 $\mathcal{J}$에 속한다. 따라서 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
+우선 $N+\sum_{j\in J}S_j$가 direct sum이 되도록 하는 subset $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 그럼 자명하게 $\emptyset\in \mathcal{J}$이며, direct sum 조건에 관여하는 것은 유한개의 원소들 뿐이므로, $\mathcal{J}$의 임의의 chain이 주어졌을 때 그 합집합 또한 $\mathcal{J}$에 속한다. 따라서 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
 
 우리 주장은 임의의 $i\in I$에 대하여 $S_i\subseteq M'$이고, 따라서
 
@@ -73,77 +70,79 @@ $A$-module $M$에 대하여 다음이 모두 동치이다.
 ::: 증명
 첫째 주장이 둘째 주장과 셋째 주장을 함의하는 것은 [보조정리 4](#lem4){: data-relation="required" }의 결과이며, 둘째 주장이 첫째 주장을 함의하는 것은 자명하다. 따라서 셋째 주장이 첫째 주장을 함의하는 것만 보이면 충분하다. 
 
-우선 우리는 셋째 성질이 $M$의 임의의 submodule으로 내려간다는 것을 확인한다. 
+우선 우리는 셋째 성질이 $M$의 임의의 submodule로 내려간다는 것을 확인한다. 이를 위해 $M$의 submodule $N$을 고정하고, $N$의 임의의 submodule $L$이 주어졌다 하자. 그럼 $M$에 대한 가정으로부터 $M=L\oplus C$인 $M$의 submodule $C$가 존재한다. 그럼 이제 임의의 $n\in N$에 대하여, 이 direct sum decomposition은 $n=l+c$인 $l\in L$과 $c\in C$를 유일하게 결정한다. 이제 $c=n-l\in N\cap C$이므로 $N=L+(N\cap C)$이고, 뿐만 아니라
 
-우선 성질 3이 submodule에 유전됨을 확인한다. $N$이 $M$의 submodule이고 $L$이 $N$의 submodule이라 하자. 가정에 의해 $M=L\oplus C$인 submodule $C$가 존재한다. 임의의 $n\in N$을 $n=l+c$로 쓰면 $l\in L\subseteq N$이므로 $c=n-l\in N\cap C$이고, 따라서 $N=L+(N\cap C)$이다. 한편 $L\cap(N\cap C)\subseteq L\cap C=0$이므로 이 합은 직합이고, $L$은 $N$의 direct summand이다.
+$$L\cap(N\cap C)\subseteq L\cap C=0$$
 
-다음으로 $M$의 임의의 nonzero submodule $N$이 simple submodule을 포함함을 보인다. $0\neq x\in N$을 택하고 cyclic submodule $Ax\subseteq N$을 생각하자. $Ax$의 submodule 중 $x$를 포함하지 않는 것들의 모임은 $0$을 포함하므로 비어 있지 않고, chain의 합집합 또한 $x$를 포함하지 않으므로 Zorn 보조정리에 의해 maximal element $K$가 존재한다. $K$를 진포함하는 $Ax$의 submodule은 최대성에 의해 $x$를 포함하므로 $Ax$ 전체와 같고, 따라서 $K$는 $Ax$의 maximal proper submodule이다. 첫 단계에 의해 $Ax$ 또한 성질 3을 가지므로 $Ax=K\oplus S$인 submodule $S$가 존재하고, $S\cong Ax/K$이다. $Ax/K$의 submodule은 $K$와 $Ax$ 사이의 submodule과 대응되는데 $K$가 maximal이므로 $Ax/K$는 simple이다. 즉 $S$는 $N$에 포함된 simple submodule이다.
+이므로 이 합은 direct sum이다. 
 
-마지막으로 $M$의 모든 simple submodule의 합을 $N_0$이라 하자. 성질 3에 의해 $M=N_0\oplus C$인 $C$가 존재한다. 만일 $C\neq 0$이라면 둘째 단계에 의해 $C$는 simple submodule $S$를 포함하고, $S$는 $M$의 simple submodule이므로 $S\subseteq N_0\cap C=0$이 되어 모순이다. 따라서 $C=0$이고 $M=N_0$은 simple submodule들의 합이다.
+다음 주장은 $M$의 임의의 nonzero submodule $N$이 simple submodule을 항상 포함한다는 것이다. 이를 위해 $N$의 임의의 nonzero element $x\in N$을 택하고, 이것이 생성하는 cyclic submodule $Ax\subseteq N$을 생각하자. 그럼 $Ax$의 submodule 중, $x$를 포함하지 <em-ko>않는</em-ko> 것들의 모임은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }의 전제조건을 만족하고, 따라서 이들 중 maximal한 $K$가 존재한다. 한편, $K$를 strict하게 포함하는 $Ax$의 submodule은 $K$의 maximality에 의해 반드시 $x$를 포함하므로 $Ax$와 같게 되고, 따라서 $K$는 $Ax$의 maximal proper submodule이다. 이제 $M$의 submodule $Ax$에 셋째 조건을 적용하면 $Ax=K\oplus S$인 submodule $S$가 존재하며, 그럼 $S\cong Ax/K$이므로 다시 $K$의 maximality에 의하여 이는 simple이다. 
+
+이제 마지막으로 $M$의 모든 simple submodule들의 합을 $N_0$라 하면, 다시 셋째 조건에 의해 $M=N_0\oplus C$를 만족하는 $C$가 존재한다. 만일 $C\neq 0$이라면 이는 simple submodule을 포함하므로 $N_0$의 정의에 모순이고, 따라서 $C=0$이며 $M=N_0$은 simple submodule들의 합이다. 
 :::
 
-조건 3은 $M$을 가운데 항으로 갖는 모든 short exact sequence가 split한다는 말과 같다. 즉 semisimple module 위에서는 extension 문제가 완전히 자명해진다. 또 조건 1은 semisimple module들의 임의의 합과 직합이 다시 semisimple임을 바로 보여 주는데, simple submodule들의 합들의 합은 여전히 simple submodule들의 합이기 때문이다.
+그럼 특히 셋째 조건에 의하여 semisimple module을 가운데 항으로 갖는 $A$-module들의 short exact sequence는 항상 split-exact이다. 다음 따름정리는 이에 대한 역으로, semisimple module의 모든 submodule과 quotient가 semisimple이라는 것이다. 
 
 ::: 따름정리 6
 Semisimple module $M$의 모든 submodule과 quotient는 semisimple이다.
 :::
 ::: 증명
-먼저 quotient의 경우를 보자. $\pi:M\rightarrow M/N$을 canonical projection이라 하고 $M=\sum_{i\in I}S_i$를 simple들의 합으로 쓰면 $M/N=\sum_{i\in I}\pi(S_i)$이다. 각 $i$에 대하여 $\pi(S_i)\cong S_i/(S_i\cap N)$인데, $S_i$가 simple이므로 $S_i\cap N$은 $0$이거나 $S_i$이고, 따라서 $\pi(S_i)$는 $S_i$와 isomorphic하거나 $0$이다. 즉 $M/N$은 simple submodule들의 합이고 [정리 5](#thm5){: data-relation="required" }에 의해 semisimple이다.
+Quotient $M/N$의 경우, canonical projection $\pr: M\rightarrow M/N$에 대하여, $M$을 simple module들의 합 $M=\sum S_i$로 쓰면 $M/N=\sum \pr(S_i)$이고 $\pr(S_i)\cong S_i/(S_i\cap N)$이므로 $S_i$가 simple이라는 가정으로부터 따라나온다. 
 
-Submodule $N$의 경우, [보조정리 4](#lem4){: data-relation="required" }에 의해 $M=N\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재하므로 $N\cong M/\bigoplus_{j\in J}S_j$이고, 방금 보인 quotient의 경우로 환원된다.
+Submodule의 경우, $M$의 임의의 submodule $N$에 대하여 [보조정리 4](#lem4){: data-relation="required" }에 의해 $M=N\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재하므로 $N\cong M/\bigoplus_{j\in J}S_j$이고, quotient에 대한 주장으로부터 증명이 완료된다.
 :::
 
 ## Isotypic decomposition
 
-[예시 3](#ex3){: data-relation="weak" }의 벡터 space에서 보듯 semisimple module의 direct sum 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
+Semisimple module은 그 정의에 의해 direct sum decomposition $M=\bigoplus S_i$를 가지지만, 일반적으로 이는 유일하지 않다. 그러나 서로 isomorphic한 summand들을 같은 것으로 취급하면 이 표현은 유일하며, 이를 증명하기 위해서는 우선 simple submodule들의 합 안에 어떠한 simple submodule들이 살 수 있는지를 확인한다.
 
 ::: 보조정리 7
-$M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하자. 그럼 $M$의 임의의 simple submodule $U$는 적당한 $i\in I$에 대하여 $S_i$와 isomorphic하다.
+Semisimple module $M$과 그 direct sum decomposition $M=\bigoplus S_i$를 고정하자. $M$의 임의의 simple submodule $U$에 대하여, $U\cong S_i$이도록 하는 $i\in I$가 존재한다. 
 :::
 ::: 증명
-[보조정리 4](#lem4){: data-relation="required" }을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 restriction $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 isomorphism이다.
+주어진 direct sum decomposition이 주는 canonical projection $\pr_i: M\rightarrow S_i$에 대하여, $U\neq 0$이므로 $\pr_i(U)\neq 0$인 $i$가 존재한다. 이제 $\pr_i\vert_U: U\rightarrow S_i$는 simple module 사이의 nonzero homomorphism이므로, [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 isomorphism이다. 
 :::
+
+이를 다음과 같이 이름붙인다.
 
 ::: 정의 8
 Simple $A$-module $S$에 대하여, $A$-module $M$의 *$S$-isotypic component<sub>등형 성분</sub>* $M_S$는 $S$와 isomorphic한 $M$의 simple submodule 전부의 합으로 정의한다.
 :::
 
-정의에서 $M_S$는 $S$의 isomorphism class에만 의존한다. $S$와 isomorphic한 simple submodule이 없다면 $M_S=0$이다. 임의의 semisimple module은 그 정의에 의해 isotypic component들의 합이 되는데, 다음 명제는 이 합이 사실 직합이며 module의 구조만으로 결정되는 canonical한 분해임을 보여 준다.
+그럼 다음이 성립한다.
 
 ::: 명제 9
 Semisimple module $M$, $N$에 대하여 다음이 성립한다.
 
-1. Simple module들의 isomorphism class 대표들 $S$에 대하여 $M=\bigoplus_{[S]}M_S$이다.
+1. Simple module의 isomorphism class에 대해 $M=\bigoplus M_S$이다.
 2. 임의의 $A$-module homomorphism $f:M\rightarrow N$은 $f(M_S)\subseteq N_S$를 만족한다.
 :::
 ::: 증명
-2를 먼저 보인다. $T$가 $S$와 isomorphic한 $M$의 simple submodule이라 하자. $f(T)\cong T/(T\cap\ker f)$는 $T$가 simple이므로 $0$이거나 $T\cong S$와 isomorphic하고, 어느 경우에도 $f(T)\subseteq N_S$이다. $M_S$는 이러한 $T$들의 합이므로 $f(M_S)\subseteq N_S$이다.
+둘째 결과를 먼저 보인다. $T$가 $S$와 isomorphic한 $M$의 simple submodule이라 하자. $f(T)\cong T/(T\cap\ker f)$는 $T$가 simple이므로 $0$이거나 $S$와 isomorphic하고, 어느 경우에도 $f(T)\subseteq N_S$이다. $M_S$는 이러한 $T$들의 합이므로 $f(M_S)\subseteq N_S$이다.
 
-이제 1을 보인다. $M$의 semisimple 분해의 각 인자는 자신의 isomorphism class에 대응하는 isotypic component에 포함되므로 $M=\sum_{[S]}M_S$이다. 직합임을 보이기 위해, 고정된 class $[S]$에 대하여 $W=M_S\cap\sum_{[T]\neq[S]}M_T$가 $0$임을 확인하면 충분하다. $W$는 semisimple module $M$의 submodule이므로 [따름정리 6](#cor6){: data-relation="required" }에 의해 semisimple이고, 만일 $W\neq 0$이라면 simple submodule $U\subseteq W$가 존재한다. $U$는 $S$-type simple들의 합 $M_S$에 포함되므로 [보조정리 7](#lem7){: data-relation="required" }에 의해 $U\cong S$이다. 그러나 $U$는 동시에 $S$와 isomorphic하지 않은 simple들의 합 $\sum_{[T]\neq[S]}M_T$에도 포함되므로, 다시 [보조정리 7](#lem7){: data-relation="required" }에 의해 $U$는 어떤 $T\not\cong S$와 isomorphic해야 하고 이는 모순이다. 따라서 $W=0$이다.
+이제 첫째 결과를 보인다. Semisimple module $M$의 direct sum 분해 $M=\bigoplus_{i\in I}S_i$를 고르고 canonical projection $\pr_i:M\rightarrow S_i$를 생각하자. 위의 결과에 의해 $\pr_i(M_S)\subseteq (S_i)_S$인데, $S_i$는 simple이므로 $S_i\cong S$이면 $(S_i)_S=S_i$이고 그렇지 않으면 $(S_i)_S=0$이다. 따라서 $M_S=\bigoplus_{S_i\cong S}S_i$이고,
+
+$$M=\bigoplus M_S$$
+
+를 얻는다.
 :::
 
-명제의 둘째 결과는 isotypic 분해가 canonical하다는 말의 정확한 내용이다. 임의의 endomorphism이 각 isotypic component를 보존하므로, 이 분해는 직합 인자의 선택과 무관하게 $M$의 module 구조만으로 결정된다.
-
-## 분해의 유일성
-
-Semisimple 분해에서 인자들 자체는 유일하지 않지만, 각 isomorphism class가 등장하는 횟수는 유일하다. 유한 direct sum의 경우 이는 다음과 같이 정확해진다.
+이 분해에서, direct summand들 자체는 유일하지 않지만, [명제 9](#prop9){: data-relation="weak" }와 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="weak" }을 결합하면 각 isomorphism class가 등장하는 횟수는 유일함을 알 수 있다. 
 
 ::: 명제 10
 Simple module들 $S_1,\ldots,S_n$과 $T_1,\ldots,T_m$에 대하여 $\bigoplus_{a=1}^nS_a\cong\bigoplus_{b=1}^mT_b$라면 $n=m$이고, 적당한 permutation $\sigma$에 대하여 모든 $a$에서 $S_a\cong T_{\sigma(a)}$이다.
 :::
 ::: 증명
-$n$에 대한 induction으로 보인다. $n=0$이면 좌변이 $0$이므로 우변도 $0$이고 $m=0$이다.
+$M=\bigoplus_{a=1}^nS_a\cong\bigoplus_{b=1}^mT_b$라 하자. [명제 9](#prop9){: data-relation="required" }에 의해 각 simple module $S$의 isotypic component는
 
-$n\geq 1$이라 하고 $\varphi:\bigoplus_aS_a\rightarrow\bigoplus_bT_b$를 isomorphism이라 하자. $\varphi(S_1)\neq 0$이므로 projection $\pi_b:\bigoplus T_b\rightarrow T_b$ 중 $\pi_b\vert_{\varphi(S_1)}\neq 0$인 $b$가 존재하고, 재배열하여 $b=1$이라 하자. $N=\varphi(S_1)$으로 두면 $N\cong S_1$은 simple이고, $\pi_1\vert_N:N\rightarrow T_1$은 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 isomorphism이다. 특히 $S_1\cong T_1$이다.
+$$M_S=\bigoplus_{S_a\cong S}S_a\cong\bigoplus_{T_b\cong S}T_b$$
 
-이제 $\bigoplus_bT_b=N\oplus(T_2\oplus\cdots\oplus T_m)$임을 주장한다. $N\cap(T_2\oplus\cdots\oplus T_m)=N\cap\ker\pi_1=\ker(\pi_1\vert_N)=0$이다. 또 임의의 $t\in\bigoplus T_b$에 대하여 $x=(\pi_1\vert_N)^{-1}(\pi_1(t))\in N$으로 두면 $t-x\in\ker\pi_1=T_2\oplus\cdots\oplus T_m$이므로 합이 전체가 된다. 따라서
+이므로, $S_a\cong S$인 인자의 개수를 $n_S$, $T_b\cong S$인 인자의 개수를 $m_S$라 두면 $S^{\oplus n_S}\cong S^{\oplus m_S}$이다. 이제 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="required" }에 의해 $D=\End_A(S)$는 division ring이고, $\Hom_A(S, -)$를 취하면
 
-$$T_2\oplus\cdots\oplus T_m\cong\Big(\bigoplus_bT_b\Big)/N\cong\Big(\bigoplus_aS_a\Big)/S_1\cong S_2\oplus\cdots\oplus S_n$$
+$$D^{n_S}\cong\Hom_A(S, S^{\oplus n_S})\cong\Hom_A(S, S^{\oplus m_S})\cong D^{m_S}$$
 
-이고, 가운데 isomorphism은 $\varphi(S_1)=N$이므로 $\varphi$가 유도하는 것이다. Induction 가정에 의해 $n-1=m-1$이고 나머지 인자들이 대응되므로, $S_1\cong T_1$과 합쳐 증명이 끝난다.
+이다. $D$-vector space의 차원의 유일성에 의해 $n_S=m_S$이고, 이 등식이 모든 isomorphism class $S$에 대해 성립하므로 $n=\sum n_S=\sum m_S=m$이며 적당한 permutation $\sigma$에 대하여 $S_a\cong T_{\sigma(a)}$이다.
 :::
-
-즉 유한개의 simple module의 direct sum은 그 인자들의 isomorphism class와 중복도를 (순서를 무시하면) 완전히 결정한다. [명제 9](#prop9){: data-relation="weak" }의 isotypic 분해와 함께 쓰면, 유한개의 simple의 직합인 semisimple module은 각 class $[S]$의 중복도 자료만으로 분류된다. 이 유일성은 semisimple ring의 구조 정리에서 행렬 크기와 division ring의 유일성을 담당하게 된다.
 
 ---
 

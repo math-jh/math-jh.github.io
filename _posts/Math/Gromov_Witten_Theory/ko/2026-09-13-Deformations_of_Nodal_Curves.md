@@ -11,6 +11,8 @@ sidebar:
 date: 2026-09-13
 weight: 1
 
+drift_needed: true
+
 ---
 
 Gromov--Witten theory에서 우리는 target space $X$로 들어오는 stable map들 $\mu: C\rightarrow X$를 다룬다. 이 때 $\mu$의 정의역 $C$는 nodal curve에, 특별한 점들을 추가로 선택해준 것이다. 이 때문에 이 카테고리는 이들 nodal curve를 다루는 글로 시작한다. 더 구체적으로, 우리는 이 nodal curve가 어떻게 변형되고, 어떤 automorphism을 갖는지 계산하게 된다. 
@@ -118,6 +120,12 @@ $$\mathcal{T}_{C/\mathbb{K}}\cong\nu_\ast\bigl(\mathcal{T}_{\widetilde{C}/\mathb
 $$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)=H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
 
 이다. 여기서 마지막 등식은 pushforward의 정의에 따라 $H^0(C,\nu_\ast\mathcal F)=H^0(\widetilde C,\mathcal F)$이기 때문이다. 곧 infinitesimal automorphism은 normalization 위에서 node의 모든 preimage와 marked point에서 소멸하는 derivation으로 계산된다.
+
+표준적인 deformation theory 해석에 따라 이 계산은 nodal curve, 혹은 더 일반적으로 prestable curve의 automorphism group의 tangent space를 구한 것으로 해석할 수 있다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5){: data-relation="required" }) 이 automorphism group을 $G=\Aut(C,p_\bullet)$라 하고 그 항등원을 $e$라 하면, 항등원에서의 tangent space $T_eG$의 원소는 $\mathbb K[\epsilon]$-valued point $\Spec\mathbb K[\epsilon]\rightarrow G$ 중 closed point가 항등원으로 가는 것들의 모임이다. ([\[스킴\] §다양체에서 스킴으로, ⁋예시 4](/ko/math/scheme_theory/from_varieties_to_schemes#ex4){: data-relation="required" }) 즉 직관적으로 이는 central fiber로 제한했을 때 항등사상이 되는 automorphism들의 family로 생각할 수 있으며, 이로부터 다음의 identification 
+
+$$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
+
+을 얻는다. 위의 계산에서 우리는 임의의 automorphism은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴로 쓰이는 것을 알고 있으며, 이때 derivation $v$는 smooth curve $\widetilde C$ 위에서 vector field를 의미하므로 이 식은 automorphism을 항등원에서 infinitesimal하게 움직이는 방향이 normalization 위의 vector field로 나타난다는 것으로 해석할 수 있다.
 
 ## 차원 계산
 
