@@ -83,8 +83,10 @@ except Exception as _e:  # noqa: BLE001
 # ── 워커 정의 ────────────────────────────────────────────────────────────────
 # interval: cron 주기(초). age > 2.5*interval 이면 stale(빨간불) 판정.
 WORKERS = [
-    dict(key="translation", name="번역 워커", schedule="00시부터 4시간 · 후속은 02시부터 4시간", interval=7200,
-         log=f"{ROOT}/scripts/translation/translation.log"),
+    dict(key="translation", name="번역 워커", schedule="00:15부터 4시간", interval=14400,
+         log=f"{ROOT}/scripts/translation/translation.log", log_kind="translation"),
+    dict(key="translation_followup", name="한글 수정 후속 워커", schedule="02:15부터 4시간", interval=14400,
+         log=f"{ROOT}/scripts/translation/translation.log", log_kind="followup"),
     dict(key="terms", name="용어 추출", schedule="홀수 시각 :15", interval=7200,
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
     dict(key="dependency", name="의존성 링크 분류", schedule=":30 / :45", interval=1800,
@@ -311,11 +313,27 @@ def sec_posts(posts):
 _RUN_TS_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?")
 
 
-def _log_runs(path, now, window=86400):
+def worker_log_lines(w, n=2000):
+    """공유 번역 로그의 후속 접두사와 그 연속 줄을 같은 워커에 귀속한다."""
+    lines = tail(w["log"], 20000, maxbytes=2_000_000)
+    kind = w.get("log_kind")
+    if kind:
+        selected = []
+        followup = False
+        for ln in lines:
+            if _RUN_TS_RE.match(ln.lstrip("[")):
+                followup = bool(re.match(r"^\[[^]]+\] KO-FOLLOWUP:", ln))
+            if followup == (kind == "followup"):
+                selected.append(ln)
+        lines = selected
+    return lines[-n:]
+
+
+def _log_runs(path, now, window=86400, lines=None):
     """로그의 타임스탬프(local)로 최근 24시간 실행 시각 목록을 만든다.
     분 단위로 dedupe — 한 실행이 여러 줄을 남겨도 틱 하나."""
     seen, out = set(), []
-    for ln in tail(path, 2000, maxbytes=500_000):
+    for ln in (tail(path, 2000, maxbytes=500_000) if lines is None else lines):
         m = _RUN_TS_RE.search(ln)
         if not m:
             continue
@@ -345,7 +363,7 @@ _ERR_RE = re.compile(r"traceback|\bexception\b|\bfail(ed|ure)\b|\berrors?\s*[:=]
 _LOG_ECHO_RE = re.compile(r"\bVERIFY \([^)]*\) attempt \d+: ")
 
 
-def _last_run_lines(path, interval, n=10):
+def _last_run_lines(path, interval, n=10, lines=None):
     """마지막 실행이 남긴 줄만 돌려준다. 오류 판정 범위를 여기로 좁히면,
     지난 실행에서 난 오류가 로그 꼬리에 남아 있어도 최신 실행이 깨끗하면
     불이 꺼진다.
@@ -354,7 +372,7 @@ def _last_run_lines(path, interval, n=10):
     타임스탬프 없는 줄(트레이스백 등)은 직전 줄의 실행에 붙으므로, 마지막
     줄 뒤에 붙은 크래시도 잡힌다. 날짜 없는 로그(blogdev-bot·audit)는
     경계를 알 수 없어 마지막 n 줄로 폴백한다."""
-    lines = tail(path, 400, maxbytes=500_000)
+    lines = tail(path, 400, maxbytes=500_000) if lines is None else lines
     stamps = []
     for i, ln in enumerate(lines):
         m = _RUN_TS_RE.search(ln)
@@ -383,15 +401,18 @@ def sec_workers():
     out = []
     # 일시정지된 워커는 로그가 늙는 게 정상이다 — stale 로 불을 켜면 의도된 정지가
     # 고장으로 읽힌다. 프런트가 그 구분을 할 수 있게 정지 상태를 같이 실어 보낸다.
-    # 번역처럼 같은 워커를 여러 cron이 깨우는 경우가 있다. 하나라도 실행 가능하면
-    # 워커는 정지 상태가 아니다.
+    # 번역과 한글 수정 후속은 별도 worker 키로 각각의 hold를 판정한다.
     cron_by_worker = {}
     for job in sec_cron()["items"]:
         if job.get("worker"):
             cron_by_worker.setdefault(job["worker"], []).append(job)
     for w in WORKERS:
         target = w.get("log") or w.get("watch")
+        log_lines = worker_log_lines(w) if w.get("log") else []
         ts = mtime(target)
+        if w.get("log_kind"):
+            stamps = _log_runs(w["log"], now, window=float("inf"), lines=log_lines)
+            ts = stamps[-1] if stamps else None
         age = None if ts is None else now - ts
         if age is None:
             status = "missing"
@@ -403,16 +424,16 @@ def sec_workers():
             status = "ok"
         # 타임라인용 실측 실행 기록. 타임스탬프 없는 로그(또는 watch 파일)는
         # 마지막 갱신 시각 하나로 폴백한다.
-        runs = _log_runs(w["log"], now) if w.get("log") else []
+        runs = _log_runs(w["log"], now, lines=log_lines) if w.get("log") else []
         if not runs and ts is not None and now - ts <= 86400:
             runs = [int(ts)]
-        lines = tail(w["log"], 10) if w.get("log") else []
+        lines = log_lines[-10:]
         # 표시용 꼬리는 10 줄이지만 오류 판정은 마지막 실행분만 본다.
         # errors=0 / error_count: 0 같은 정상 요약줄을 오탐하지 않도록 좁게 잡는다.
         # quota-gate blocked 는 설계된 스킵이지 오류가 아니다.
         # 모델 출력을 그대로 실은 줄(_LOG_ECHO_RE)은 스캔에서 뺀다.
         err = any(_ERR_RE.search(ln) and not _LOG_ECHO_RE.search(ln)
-                  for ln in (_last_run_lines(w["log"], w["interval"]) if w.get("log") else []))
+                  for ln in (_last_run_lines(w["log"], w["interval"], lines=log_lines) if w.get("log") else []))
         schedules = cron_by_worker.get(w["key"], [])
         paused = bool(schedules) and all(p.get("paused") for p in schedules)
         # 기존 단일 cron_id 필드는 유지하되, 실행 가능한 스케줄을 우선 가리킨다.
@@ -784,7 +805,7 @@ QUOTA_GOVERNOR = os.path.expanduser("~/.local/bin/quota-reset-watch.py")
 # 키가 곧 허용목록이다. 연구 파이프라인(research-*)은 Pi 대시보드(:8088) 소관.
 CRON_JOBS = [
     dict(id="blog-translation",      name="번역 워커",        worker="translation"),
-    dict(id="blog-translation-followup", name="한글 수정 후속", worker="translation"),
+    dict(id="blog-translation-followup", name="한글 수정 후속", worker="translation_followup"),
     dict(id="blog-terms",            name="용어 추출",        worker="terms"),
     dict(id="blog-dependency-classifier", name="의존성 링크 분류", worker="dependency"),
     dict(id="blog-terms-lint",       name="용어 lint",        worker="terms_lint"),
@@ -962,7 +983,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(404, json.dumps({"error": "unknown worker"}))
             n = min(int((q.get("n") or ["200"])[0] or 200), 2000)
             return self._send(200, json.dumps(
-                {"name": w["name"], "path": w["log"], "lines": tail(w["log"], n)},
+                {"name": w["name"], "path": w["log"], "lines": worker_log_lines(w, n)},
                 ensure_ascii=False))
 
         if path == "/api/lint":
