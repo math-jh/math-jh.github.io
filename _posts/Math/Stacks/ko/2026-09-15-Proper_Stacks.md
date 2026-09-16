@@ -35,7 +35,7 @@ Scheme theory에서 다룬 많은 성질들이 그러하듯, properness 또한 s
 두 algebraic stack $\mathcal{X}$, $\mathcal{Y}$와 이들 사이의 morphism $f: \mathcal{X}\rightarrow \mathcal{Y}$가 주어졌다 하자. 
 
 1. $f$가 *separated*라는 것은 diagonal $\Delta_f$가 proper라는 것이다. 
-2. $f$가 *proper*라는 것은 $f$가 finite type, separated, universally closed라는 것이다. 
+2. $f$가 *proper<sub>고유(의)</sub>*라는 것은 $f$가 finite type, separated, universally closed라는 것이다. 
 
 특히 structure morphism $\mathcal{X}\rightarrow\Spec\mathbb{K}$가 각각 separated 또는 proper일 때 $\mathcal{X}$를 separated 또는 proper algebraic stack이라 부른다.
 :::

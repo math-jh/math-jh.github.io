@@ -14523,6 +14523,13 @@ P:
   see:
   - label: Affine variety
     id: affine_variety
+- id: proper
+  en: proper
+  ko: 고유(의)
+  primary: en
+  defs:
+  - label: '[스택] §고유스택'
+    url: /ko/math/stacks/proper_stacks#def1
 - id: proper_direct_image
   en: proper direct image
   ko: 고유 받음
