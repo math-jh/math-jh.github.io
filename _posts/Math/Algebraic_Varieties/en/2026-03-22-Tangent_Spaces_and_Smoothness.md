@@ -159,7 +159,7 @@ Any algebraic variety is smooth at most of its points. To show this, we need the
 The *generic point* $\eta$ of an irreducible variety $X$ is the unique point belonging to every nonempty open subset of $X$.
 :::
 
-In the affine case $X = \Spec A$, the generic point $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the ideal $(0)$), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $\mathbb{K}(X) = \Frac(A)$. Geometrically, the generic point is the "most general point" of $X$, thought of as a point having no particular property of $X$. We can exploit this idea in the following proof.
+In the affine case $X = \Spec A$, the generic point $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the ideal $(0)$), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $K(X) = \Frac(A)$. Geometrically, the generic point is the "most general point" of $X$, thought of as a point having no particular property of $X$. We can exploit this idea in the following proof.
 
 ::: Proposition 10
 The set $X_\sm$ of smooth points of a variety $X$ is a dense open subset of $X$. In particular, $X_\sm \ne \emptyset$.
@@ -172,7 +172,7 @@ $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}.$$
 
 We now show that this set is a dense open subset. That $X_\sm$ is open is relatively clear. By [Proposition 3](#prop3){: data-relation="required" } and [Proposition 4](#prop4){: data-relation="required" }, at any point of $X$ we automatically have $n - \rank(J_x) = \dim T_x X \ge d$, i.e., $\rank(J_x) \le n-d$. Hence the condition that the rank is exactly $n-d$ is equivalent to the condition that the rank is at least $n-d$. But the latter is equivalent to the nonvanishing of the determinant of some $(n-d) \times (n-d)$ minor, which is an open condition in the Zariski topology. Thus $X_\sm$ is an open subset of $X$.
 
-Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that a general point should be smooth, so we consider the generic point $\eta$ of $X$. Considering the localization at $\eta$, the local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$ is a field, hence a regular local ring. But by [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2){: data-relation="required" },
+Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that a general point should be smooth, so we consider the generic point $\eta$ of $X$. Considering the localization at $\eta$, the local ring $\mathcal{O}_{X,\eta} = K(X)$ is a field, hence a regular local ring. But by [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2){: data-relation="required" },
 
 $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d,$$
 

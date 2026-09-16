@@ -94,18 +94,18 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3){: data-relation="required" })
+차원을 정의하는 또 다른 방법은 function field를 사용하는 것이다. Function field $K(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 3](/ko/math/commutative_algebra/noether_normalization#thm3){: data-relation="required" })
 
 ::: 명제 7
-Variety $X$의 차원은 function field $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
+Variety $X$의 차원은 function field $K(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
 :::
 
 ::: 예시 8
 다음은 function field를 통한 차원 계산의 예시들이다.
 
-1. $\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(\x_1, \ldots, \x_n)$이고, $\x_1, \ldots, \x_n$은 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{A}^n = n$이다. 
-2. $\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(\x)$이고, $\x$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim V(\y - \x^2) = 1$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
-3. $\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$이고, $\x_1/\x_0, \ldots, \x_n/\x_0$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{P}^n = n$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
+1. $K(\mathbb{A}^n) = \mathbb{K}(\x_1, \ldots, \x_n)$이고, $\x_1, \ldots, \x_n$은 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{A}^n = n$이다. 
+2. $K(V(\y - \x^2)) = \mathbb{K}(\x)$이고, $\x$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim V(\y - \x^2) = 1$이다. 이는 parabola가 곡선이라는 직관과 일치한다.
+3. $K(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$이고, $\x_1/\x_0, \ldots, \x_n/\x_0$는 $\mathbb{K}$ 위에서 algebraically independent이므로 $\dim \mathbb{P}^n = n$이다. 이는 projective space가 affine space와 birationally equivalent함을 반영한다.
 :::
 
 ## 차원의 기본 성질
@@ -138,7 +138,7 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 :::
 
 ::: 증명
-둘째 결과부터 보이자. $\varphi$가 dominant라면, pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$가 injective이고, 따라서 [명제 7](#prop7){: data-relation="required" }로부터 원하는 결과를 얻는다. 
+둘째 결과부터 보이자. $\varphi$가 dominant라면, pullback $\varphi^\ast: K(Y)\rightarrow K(X)$가 injective이고, 따라서 [명제 7](#prop7){: data-relation="required" }로부터 원하는 결과를 얻는다. 
 
 첫째 결과는 이로부터 따라온다. $X$가 irreducible이고 $\varphi$가 연속이므로 $\varphi(X)$ 또한 irreducible이고, 따라서 $Y$에서의 closure $\overline{\varphi(X)}$는 $Y$의 closed subvariety이다. $\varphi$의 공역을 $\overline{\varphi(X)}$로 제한하여 얻은 regular map은 정의에 의해 dominant이므로, 방금 보인 둘째 결과로부터 $\dim \overline{\varphi(X)}\leq \dim X$를 얻는다. 한편 $\varphi(X)$의 irreducible closed subset들의 chain
 
@@ -164,7 +164,7 @@ Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 차원
 :::
 
 ::: 증명
-$\varphi$가 finite이면, coordinate ring level에서 $\mathbb{K}[X]$는 $\mathbb{K}[Y]$-module로서 finitely generated이다. 따라서 $\mathbb{K}(X)$는 $\mathbb{K}(Y)$의 finite degree extension이고, transcendence degree가 같다. 즉, $\dim X = \dim Y$이다.
+$\varphi$가 finite이면, coordinate ring level에서 $\mathbb{K}[X]$는 $\mathbb{K}[Y]$-module로서 finitely generated이다. 따라서 $K(X)$는 $K(Y)$의 finite degree extension이고, transcendence degree가 같다. 즉, $\dim X = \dim Y$이다.
 :::
 
 ::: 예시 13

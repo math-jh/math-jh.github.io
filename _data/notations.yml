@@ -3965,13 +3965,6 @@
       url: /ko/math/algebraic_varieties/canonical_bundle
     - label: §스킴
       url: /ko/math/scheme_theory/schemes#def5
-  - symbol: \mathbb{K}(X)
-    meaning: 함수체
-    defs:
-    - label: §유리사상
-      url: /ko/math/algebraic_varieties/rational_maps
-    - label: §인자
-      url: /ko/math/algebraic_varieties/divisors
   - symbol: \mathbb{K}[\x_0, \ldots, \x_n]_d
     meaning: 차수 $d$ homogeneous polynomial들의 공간
     defs:
@@ -4296,8 +4289,12 @@
     - label: §올곱
       url: /ko/math/scheme_theory/fiber_products
   - symbol: K(X)
-    meaning: integral 스킴 $X$의 함수체
+    meaning: 함수체
     defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
     - label: §차원
       url: /ko/math/scheme_theory/dimension
   - symbol: K(X)

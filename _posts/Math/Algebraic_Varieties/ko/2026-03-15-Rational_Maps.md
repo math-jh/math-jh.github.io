@@ -28,26 +28,26 @@ Variety $X$ 위의 *rational function<sub>유리함수</sub>*는 $X$의 공집�
 
 이에 대한 직관은 다음과 같다. Zariski topology 상에서 닫힌집합은 작고, 열린집합은 크다. 따라서 rational function은 작은 집합에서 정의되지 않지만, 나머지 대부분의 점에서는 정의되는 함수이다. 가령, 본질적으로 Zariski topology 상에서 열린집합은 $D(g)$ 꼴의 집합들이라 생각해도 되는데, 이 위에서 정의된 regular function $f/g$들을 이제 우리는 함수로 생각하는 것이다. ([§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14){: data-relation="weak" }) 물론 $g$가 $0$이 되는 점에서 이 함수는 정의되지 않겠지만, 정확히 그것이 우리가 열린집합 $U$에서 정의되는 함수들을 생각하는 이유이며, 어쨌든 $g$가 $0$이 되는 점들은 공간 전체에서 보면 작다. 
 
-$X$ 위의 모든 rational function들의 equivalence class들의 집합을 $\mathbb{K}(X)$로 표기한다. 두 rational function의 합과 곱은 정의되는 영역의 교집합에서 정의되며, 0이 아닌 rational function의 역은 그 함수가 0이 아닌 점들에서 정의된다. 따라서 $\mathbb{K}(X)$는 field가 되며, 우리는 이를 *function field*라 부른다. 
+$X$ 위의 모든 rational function들의 equivalence class들의 집합을 $K(X)$로 표기한다. 두 rational function의 합과 곱은 정의되는 영역의 교집합에서 정의되며, 0이 아닌 rational function의 역은 그 함수가 0이 아닌 점들에서 정의된다. 따라서 $K(X)$는 field가 되며, 우리는 이를 *function field*라 부른다. 
 
 ::: 명제 2
-Affine variety $X$에 대하여, $\mathbb{K}(X)=\Frac\mathbb{K}[X]$이 성립한다.
+Affine variety $X$에 대하여, $K(X)=\Frac\mathbb{K}[X]$이 성립한다.
 :::
 
 이 명제의 핵심적인 부분은 임의의 열린집합 $U$와 그 위에서 정의된 임의의 regular function $f:U\rightarrow \mathbb{K}$를 실제로 분수꼴로 나타내는 것인데, 어차피 $U$는 $D(g_i)$들의 합집합으로 나타낼 수 있고 ([§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6){: data-relation="required" }), $D(g_i)\cap X$의 coordinate ring이 $\mathbb{K}[X]_{g_i}$이므로 이 위의 regular function은 $g_i$의 거듭제곱을 분모로 갖는 유리식의 꼴이 되어 증명이 어렵지 않다.
 
-중요한 것은, 이 명제가 rational function을 계산하는 실질적인 방법을 제공한다는 것이다. 예를 들어, $X = V(\y - \x^2)$의 coordinate ring은 $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$이고, 따라서 $\mathbb{K}(X) = \Frac(\mathbb{K}[\x]) = \mathbb{K}(\x)$이다.
+중요한 것은, 이 명제가 rational function을 계산하는 실질적인 방법을 제공한다는 것이다. 예를 들어, $X = V(\y - \x^2)$의 coordinate ring은 $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$이고, 따라서 $K(X) = \Frac(\mathbb{K}[\x]) = \mathbb{K}(\x)$이다.
 
 ::: 명제 3
-Variety $X$와 공집합이 아닌 열린집합 $U$에 대하여, $\mathbb{K}(U) = \mathbb{K}(X)$가 성립한다.
+Variety $X$와 공집합이 아닌 열린집합 $U$에 대하여, $K(U) = K(X)$가 성립한다.
 :::
 ::: 증명
-우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 inclusion이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="weak" })
+우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: K(X)\rightarrow K(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 inclusion이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="weak" })
 
-그런데 임의의 $f \in \mathbb{K}(U)$에 대하여, $f$는 $U$의 어떤 nonempty open subset $V$에서의 regular function이며, 그럼 이 $V$는 $X$의 열린집합이기도 하므로 이 pair $(V,f)$는 $\mathbb{K}(X)$에 속한다. 
+그런데 임의의 $f \in K(U)$에 대하여, $f$는 $U$의 어떤 nonempty open subset $V$에서의 regular function이며, 그럼 이 $V$는 $X$의 열린집합이기도 하므로 이 pair $(V,f)$는 $K(X)$에 속한다. 
 :::
 ::: 예시 4
-$\mathbb{P}^n$의 function field $\mathbb{K}(\mathbb{P}^n)$을 생각하면, [명제 3](#prop3){: data-relation="required" }에 의해 $\mathbb{P}^n$의 open set $U_0$에서의 function field를 계산하면 충분하다. 그런데 $U_0$은 affine variety이므로, [명제 2](#prop2){: data-relation="required" }에 의해 $\mathbb{K}[U_0]$의 fraction field와 같고 따라서 $\mathbb{P}^n$의 function field는 $n$개의 indeterminate로 생성되는 field $\mathbb{K}(\t_1,\ldots, \t_n)$와 같다. 
+$\mathbb{P}^n$의 function field $K(\mathbb{P}^n)$을 생각하면, [명제 3](#prop3){: data-relation="required" }에 의해 $\mathbb{P}^n$의 open set $U_0$에서의 function field를 계산하면 충분하다. 그런데 $U_0$은 affine variety이므로, [명제 2](#prop2){: data-relation="required" }에 의해 $\mathbb{K}[U_0]$의 fraction field와 같고 따라서 $\mathbb{P}^n$의 function field는 $n$개의 indeterminate로 생성되는 field $\mathbb{K}(\t_1,\ldots, \t_n)$와 같다. 
 
 구체적으로, 이는 $\mathbb{P}^n$의 원소를 $[x_0:\cdots: x_n]$과 같이 표현하고 $i$번째 좌표를 읽어오는 좌표함수를 $\x_i$라 했을 때, $\t_i=\x_i/\x_0$로 두어 얻어진다. 만일 다른 open set $U_j$를 잡았다면 $\t_i=\x_i/\x_j$를 통해 비슷한 꼴의 유리함수들이 정의되었을 것이며, 따라서 일반적으로 $\mathbb{P}^n$의 rational function들은 같은 degree의 homogeneous polynomial들의 비율 $F/G$ 형태로 나타난다는 것을 안다. 
 :::
@@ -100,13 +100,13 @@ Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic
 두 variety $X, Y$에 대하여 다음이 동치이다.
 
 1. $X$와 $Y$는 birationally equivalent하다.
-2. $\mathbb{K}$-algebra isomorphism $\mathbb{K}(X) \cong \mathbb{K}(Y)$이 성립한다.
+2. $\mathbb{K}$-algebra isomorphism $K(X) \cong K(Y)$이 성립한다.
 3. $X$와 $Y$의 isomorphic한 비어있지 않은 열린부분집합들이 존재한다.
 :::
 ::: 증명
-우선 $X, Y$가 birationally equivalent하다고 하자. 그럼 birational map $\varphi: X\dashrightarrow Y$의 정의역 $\dom(\varphi)$를 생각하면 $\varphi$가 유도하는 function field의 $\mathbb{K}$-algebra homomorphism $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$가 존재한다. 비슷한 방식으로 $\varphi$의 birational inverse $\psi: Y\dashrightarrow X$는 $\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$를 정의한다. 이제 [명제 3](#prop3){: data-relation="required" }에 의해 $\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$, $\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$이므로 이를 사용하면 $\psi\circ\varphi=\id_X$와 $\varphi\circ\psi=\id_Y$로부터 $\varphi^\ast$와 $\psi^\ast$가 서로 역임을 알고, 따라서 $\mathbb{K}(X)\cong \mathbb{K}(Y)$임을 안다.
+우선 $X, Y$가 birationally equivalent하다고 하자. 그럼 birational map $\varphi: X\dashrightarrow Y$의 정의역 $\dom(\varphi)$를 생각하면 $\varphi$가 유도하는 function field의 $\mathbb{K}$-algebra homomorphism $\varphi^\ast: K(Y)\rightarrow K(\dom(\varphi))$가 존재한다. 비슷한 방식으로 $\varphi$의 birational inverse $\psi: Y\dashrightarrow X$는 $\psi^\ast: K(X)\rightarrow K(\dom(\psi))$를 정의한다. 이제 [명제 3](#prop3){: data-relation="required" }에 의해 $K(\dom(\varphi))=K(X)$, $K(\dom(\psi))=K(Y)$이므로 이를 사용하면 $\psi\circ\varphi=\id_X$와 $\varphi\circ\psi=\id_Y$로부터 $\varphi^\ast$와 $\psi^\ast$가 서로 역임을 알고, 따라서 $K(X)\cong K(Y)$임을 안다.
 
-이제 $\mathbb{K}$-algebra isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$가 주어졌다 하자. $X$의 임의의 affine open subset $U \subseteq X$에 대하여, coordinate ring $\mathbb{K}[U]$는 $\mathbb{K}(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 이제 이들의 generator들의 $\Phi$에 대한 image들이 모두 regular이도록 하는 $Y$의 affine open subset $V\subseteq Y$를 잡으면 $\Phi(\mathbb{K}[U])\subseteq \mathbb{K}[V]$이고, 한편 비슷한 방식으로 $\Phi^{-1}$을 이용하면 $\Phi^{-1}(\mathbb{K}[V])\subseteq \mathbb{K}[U]_f$를 만족하는 $0$이 아닌 $f\in \mathbb{K}[U]$를 얻는다. 이제 $h=\Phi(f)$라 두면 $\Phi(1/f)=1/h$이므로 위의 두 포함관계로부터 $\Phi(\mathbb{K}[U]_f)\subseteq \mathbb{K}[V]_h$와 $\Phi^{-1}(\mathbb{K}[V]_h)\subseteq \mathbb{K}[U]_f$를 얻고, 따라서 $\Phi$는 $\mathbb{K}[U]_f$와 $\mathbb{K}[V]_h$ 사이의 isomorphism으로 제한된다. 그런데 이들은 각각 affine variety $D(f)\cap U$와 $D(h)\cap V$의 coordinate ring이므로 ([§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7){: data-relation="required" }), [§아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18){: data-relation="required" }에 의해 이 두 열린집합은 서로 isomorphic하다.
+이제 $\mathbb{K}$-algebra isomorphism $\Phi: K(X) \rightarrow K(Y)$가 주어졌다 하자. $X$의 임의의 affine open subset $U \subseteq X$에 대하여, coordinate ring $\mathbb{K}[U]$는 $K(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 이제 이들의 generator들의 $\Phi$에 대한 image들이 모두 regular이도록 하는 $Y$의 affine open subset $V\subseteq Y$를 잡으면 $\Phi(\mathbb{K}[U])\subseteq \mathbb{K}[V]$이고, 한편 비슷한 방식으로 $\Phi^{-1}$을 이용하면 $\Phi^{-1}(\mathbb{K}[V])\subseteq \mathbb{K}[U]_f$를 만족하는 $0$이 아닌 $f\in \mathbb{K}[U]$를 얻는다. 이제 $h=\Phi(f)$라 두면 $\Phi(1/f)=1/h$이므로 위의 두 포함관계로부터 $\Phi(\mathbb{K}[U]_f)\subseteq \mathbb{K}[V]_h$와 $\Phi^{-1}(\mathbb{K}[V]_h)\subseteq \mathbb{K}[U]_f$를 얻고, 따라서 $\Phi$는 $\mathbb{K}[U]_f$와 $\mathbb{K}[V]_h$ 사이의 isomorphism으로 제한된다. 그런데 이들은 각각 affine variety $D(f)\cap U$와 $D(h)\cap V$의 coordinate ring이므로 ([§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7){: data-relation="required" }), [§아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18){: data-relation="required" }에 의해 이 두 열린집합은 서로 isomorphic하다.
 
 마지막 조건이 첫째 조건을 함의하는 것은 [명제 3](#prop3){: data-relation="required" }에 의해 자명하다. 
 :::
@@ -118,9 +118,9 @@ $\mathbb{P}^1 \times \mathbb{P}^1$과, $\mathbb{P}^3$에서의 quadric surface $
 
 우선 $\mathbb{P}^1 \times \mathbb{P}^1$의 경우, [명제 3](#prop3){: data-relation="required" }에 의해 각 factor의 product open set $U_0 \times U_0$에서 계산하면 충분하다. 첫 번째 factor $\mathbb{P}^1$의 function field는 [예시 4](#ex4){: data-relation="required" }에서 보았듯 $\mathbb{K}(\t_1)$이고, 두 번째 factor도 마찬가지로 $\mathbb{K}(\t_2)$이다. 그럼 이를 통해 이들의 function field는 $\mathbb{K}(\t_1,\t_2)$로 주어짐을 안다.
 
-이제 quadric surface $Q = V(\x\y - \z\w) \subseteq \mathbb{P}^3$를 생각하자. 마찬가지로 [명제 3](#prop3){: data-relation="required" }에 의해 affine patch $\{\w \ne 0\}$에서 계산하면 충분하다. 이 patch에서 $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$로 두면, 방정식 $\x\y - \z\w = 0$은 $\x'\y' - \z' = 0$이 된다. 따라서 $\z' = \x'\y'$이고, 이 patch의 coordinate ring은 $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$이다. [명제 2](#prop2){: data-relation="required" }에 의해 $\mathbb{K}(Q) = \Frac(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$이다.
+이제 quadric surface $Q = V(\x\y - \z\w) \subseteq \mathbb{P}^3$를 생각하자. 마찬가지로 [명제 3](#prop3){: data-relation="required" }에 의해 affine patch $\{\w \ne 0\}$에서 계산하면 충분하다. 이 patch에서 $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$로 두면, 방정식 $\x\y - \z\w = 0$은 $\x'\y' - \z' = 0$이 된다. 따라서 $\z' = \x'\y'$이고, 이 patch의 coordinate ring은 $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$이다. [명제 2](#prop2){: data-relation="required" }에 의해 $K(Q) = \Frac(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$이다.
 
-따라서 $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$이므로, [명제 10](#prop10){: data-relation="required" }에 의해 두 variety는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="weak" }에서 다루는 Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$의 image는 정확히 $V(\x\w - \y\z)$이며, 이는 $\y$와 $\w$를 맞바꾸면 $Q$가 되는 quadric이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
+따라서 $K(\mathbb{P}^1 \times \mathbb{P}^1) \cong K(Q) \cong \mathbb{K}(\t_1, \t_2)$이므로, [명제 10](#prop10){: data-relation="required" }에 의해 두 variety는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="weak" }에서 다루는 Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$의 image는 정확히 $V(\x\w - \y\z)$이며, 이는 $\y$와 $\w$를 맞바꾸면 $Q$가 되는 quadric이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
 :::
 
 ## Blow-up

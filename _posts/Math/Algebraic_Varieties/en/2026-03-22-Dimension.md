@@ -94,18 +94,18 @@ where the first equality follows from [\[Commutative Algebra\] §Noether Normali
 
 ## Dimension via Function Fields
 
-Another way to define dimension is through the function field. The function field $\mathbb{K}(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3))
+Another way to define dimension is through the function field. The function field $K(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3))
 
 ::: Proposition 7
-The dimension of a variety $X$ equals the transcendence degree of its function field $\mathbb{K}(X)$ over $\mathbb{K}$.
+The dimension of a variety $X$ equals the transcendence degree of its function field $K(X)$ over $\mathbb{K}$.
 :::
 
 ::: Example 8
 The following are examples of dimension computations using function fields.
 
-1. $\mathbb{K}(\mathbb{A}^n) = \mathbb{K}(\x_1, \ldots, \x_n)$, and since $\x_1, \ldots, \x_n$ are algebraically independent over $\mathbb{K}$, we have $\dim \mathbb{A}^n = n$.
-2. $\mathbb{K}(V(\y - \x^2)) = \mathbb{K}(\x)$, and since $\x$ is algebraically independent over $\mathbb{K}$, we have $\dim V(\y - \x^2) = 1$. This agrees with the intuition that a parabola is a curve.
-3. $\mathbb{K}(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$, and since $\x_1/\x_0, \ldots, \x_n/\x_0$ are algebraically independent over $\mathbb{K}$, we have $\dim \mathbb{P}^n = n$. This reflects the fact that projective space is birationally equivalent to affine space.
+1. $K(\mathbb{A}^n) = \mathbb{K}(\x_1, \ldots, \x_n)$, and since $\x_1, \ldots, \x_n$ are algebraically independent over $\mathbb{K}$, we have $\dim \mathbb{A}^n = n$.
+2. $K(V(\y - \x^2)) = \mathbb{K}(\x)$, and since $\x$ is algebraically independent over $\mathbb{K}$, we have $\dim V(\y - \x^2) = 1$. This agrees with the intuition that a parabola is a curve.
+3. $K(\mathbb{P}^n) = \mathbb{K}(\x_1/\x_0, \ldots, \x_n/\x_0)$, and since $\x_1/\x_0, \ldots, \x_n/\x_0$ are algebraically independent over $\mathbb{K}$, we have $\dim \mathbb{P}^n = n$. This reflects the fact that projective space is birationally equivalent to affine space.
 :::
 
 ## Basic Properties of Dimension
@@ -138,7 +138,7 @@ For two varieties $X, Y$ and a regular map $\varphi: X \rightarrow Y$, the follo
 :::
 
 ::: Proof
-Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(X)$ is injective, and the desired result follows from [Proposition 7](#prop7){: data-relation="required" }.
+Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: K(Y)\rightarrow K(X)$ is injective, and the desired result follows from [Proposition 7](#prop7){: data-relation="required" }.
 
 The first statement follows from this. Since $X$ is irreducible and $\varphi$ is continuous, $\varphi(X)$ is also irreducible; hence its closure $\overline{\varphi(X)}$ in $Y$ is a closed subvariety. The regular map obtained by restricting the codomain of $\varphi$ to $\overline{\varphi(X)}$ is dominant by definition, so the second result gives $\dim \overline{\varphi(X)}\leq \dim X$. On the other hand, given a chain of irreducible closed subsets of $\varphi(X)$
 
@@ -164,7 +164,7 @@ For two varieties $X, Y$ and a finite surjective map $\varphi: X \rightarrow Y$,
 :::
 
 ::: Proof
-If $\varphi$ is finite, then at the level of coordinate rings $\mathbb{K}[X]$ is finitely generated as a module over $\mathbb{K}[Y]$. Hence $\mathbb{K}(X)$ is a finite extension of $\mathbb{K}(Y)$, and the transcendence degrees are equal. That is, $\dim X = \dim Y$.
+If $\varphi$ is finite, then at the level of coordinate rings $\mathbb{K}[X]$ is finitely generated as a module over $\mathbb{K}[Y]$. Hence $K(X)$ is a finite extension of $K(Y)$, and the transcendence degrees are equal. That is, $\dim X = \dim Y$.
 :::
 
 ::: Example 13

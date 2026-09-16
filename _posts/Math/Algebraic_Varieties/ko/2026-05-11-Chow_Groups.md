@@ -30,7 +30,7 @@ $$Z = \sum_{i} n_i V_i$$
 그 정의에 의해 algebraic $k$-cycle은 homology에 가까운 것이다. 만일 이를 (duality를 통해) cohomology의 관점에서 해석해야 할 일이 있을 때에는 *codimension $k$ cycle<sub>여차원 $k$ 순환</sub>*을 $Z^k(X) = Z_{n-k}(X)$ (단 $n = \dim X$)로 표기한다. 위에서 언급한 것과 같이 Chow group은 이들 $Z_k(X)$에 특정한 equivalence를 취하여 얻어지는 것이다. 
 
 ::: 정의 2
-Variety $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$ 위의 rational function $f \in \mathbb{K}(Y)^\times$에 대해 *principal cycle<sub>주순환</sub>* $\divisor(f) \in Z_k(X)$를 다음의 식
+Variety $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$ 위의 rational function $f \in K(Y)^\times$에 대해 *principal cycle<sub>주순환</sub>* $\divisor(f) \in Z_k(X)$를 다음의 식
 
 $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 
@@ -41,12 +41,12 @@ $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 
 즉 위에서 order $v_V(f)$는 $Y$의 normalization $\nu: \widetilde{Y}\rightarrow Y$를 통해 정의한다. ([\[가환대수학\] §정칙국소환, ⁋정의 9](/ko/math/commutative_algebra/regular_local_rings#def9){: data-relation="required" }) 곧
 
-$$v_V(f) = \sum_{\nu(\widetilde{V})=V} [\mathbb{K}(\widetilde{V}):\mathbb{K}(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
+$$v_V(f) = \sum_{\nu(\widetilde{V})=V} [K(\widetilde{V}):K(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
 
 이며, 이 합은 $\nu^{-1}(V)$의 $k$-dimensional irreducible component $\widetilde{V}$들에 대한 것이다. $\widetilde{Y}$는 normal이므로 각 $v_{\widetilde{V}}$는 $\widetilde{V}$의 generic point에서의 local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$가 주는 valuation이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="weak" }), $\mathcal{O}_{Y, \eta_V}$ 자체가 discrete valuation ring인 경우 $v_V(f)$는 그 valuation과 일치한다. 이를 염두에 두고 다음을 정의한다. 
 
 ::: 정의 3
-두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in \mathbb{K}(Y_j)^\times$들이 존재하여
+두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in K(Y_j)^\times$들이 존재하여
 
 $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
@@ -77,9 +77,9 @@ Codimension $k$ Chow group은 $A^k(X) = A_{n-k}(X)$로 정의하고, 위에서 �
 
 대수위상에서 homology 및 cohomology는 임의의 연속함수에 대해 functoriality를 갖지만, Chow group은 그렇지 않다. Chow group은 **proper morphism**에 대해서만 pushforward functoriality를, **flat morphism**에 대해서만 pullback functoriality를 갖는다. 
 
-우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9){: data-relation="required" }) 다소 주의할 것은, compactness의 경우 algebraic geometry에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16){: data-relation="weak" }) 한편 subvariety $V\subseteq X$가 $\dim f(V)=\dim V$를 만족하면 $V$는 $f(V)$를 유한 겹으로 덮으며, 그 겹수가 function field의 extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$이다. 편의상
+우선 두 variety 사이의 morphism $f: X \rightarrow Y$가 *proper morphism*이라는 것은 대략적으로 compact map의 대수기하적 analogue라 할 수 있다. ([\[스킴\] §값매김환, ⁋정의 9](/ko/math/scheme_theory/valuative_criteria#def9){: data-relation="required" }) 다소 주의할 것은, compactness의 경우 algebraic geometry에서는 잘 작동하지 않으므로 이를 곧바로 옮겨올 수는 없다는 것이다. 직관은 compact map의 fiber와 image가 무한대로 새어나가지 않듯이 proper morphism 또한 그러하다는 것이며, 특히 중요한 것은 이 fiber를 묘사하는 데 유한 개의 좌표만 추가적으로 필요하다는 것이다. ([\[스킴\] §스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16){: data-relation="weak" }) 한편 subvariety $V\subseteq X$가 $\dim f(V)=\dim V$를 만족하면 $V$는 $f(V)$를 유한 겹으로 덮으며, 그 겹수가 function field의 extension degree $[K(V):K(f(V))]$이다. 편의상
 
-$$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
+$$\deg(V/f(V))=\begin{cases}[K(V):K(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 
 으로 적으면, 다음이 성립한다.
 
@@ -142,7 +142,7 @@ $$A_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 
 $$f([x:y]) = [x^d:y^d]$$
 
-으로 정의하면 이는 proper이며, $\mathbb{P}^1$ 위의 coordinate $t = x/y$에 대해 $f^\ast(t) = t^d$이므로 field extension $\mathbb{K}(\mathbb{P}^1) \hookrightarrow \mathbb{K}(\mathbb{P}^1)$는 $t \mapsto t^d$에 의해 주어지고, 이 때의 extension degree는 $d$이다. 따라서 [명제 6](#prop6){: data-relation="required" }에 의해
+으로 정의하면 이는 proper이며, $\mathbb{P}^1$ 위의 coordinate $t = x/y$에 대해 $f^\ast(t) = t^d$이므로 field extension $K(\mathbb{P}^1) \hookrightarrow K(\mathbb{P}^1)$는 $t \mapsto t^d$에 의해 주어지고, 이 때의 extension degree는 $d$이다. 따라서 [명제 6](#prop6){: data-relation="required" }에 의해
 
 $$f_\ast[\mathbb{P}^1] = d \cdot [\mathbb{P}^1] \in A_1(\mathbb{P}^1) \cong \mathbb{Z}$$
 

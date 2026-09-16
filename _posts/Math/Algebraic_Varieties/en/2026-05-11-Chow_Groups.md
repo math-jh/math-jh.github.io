@@ -31,7 +31,7 @@ of $k$-dimensional closed irreducible subvarieties of $X$. Here each $V_i \subse
 By this definition, an algebraic $k$-cycle is close to homology. When there is occasion to interpret it from the cohomology point of view (via duality), we write a *codimension $k$ cycle* as $Z^k(X) = Z_{n-k}(X)$ (where $n = \dim X$). As mentioned above, the Chow group is obtained from these $Z_k(X)$ by imposing a certain equivalence relation.
 
 ::: Definition 2
-For a variety $X$, a $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$, and a rational function $f \in \mathbb{K}(Y)^\times$ on it, we define the *principal cycle* $\divisor(f) \in Z_k(X)$ by the formula
+For a variety $X$, a $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$, and a rational function $f \in K(Y)^\times$ on it, we define the *principal cycle* $\divisor(f) \in Z_k(X)$ by the formula
 
 $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 
@@ -42,12 +42,12 @@ Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Defi
 
 That is, the order $v_V(f)$ is defined via the normalization $\nu: \widetilde{Y}\rightarrow Y$ of $Y$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 9](/en/math/commutative_algebra/regular_local_rings#def9){: data-relation="required" }) Namely,
 
-$$v_V(f) = \sum_{\nu(\widetilde{V})=V} [\mathbb{K}(\widetilde{V}):\mathbb{K}(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
+$$v_V(f) = \sum_{\nu(\widetilde{V})=V} [K(\widetilde{V}):K(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
 
 where the sum is over the $k$-dimensional irreducible components $\widetilde{V}$ of $\nu^{-1}(V)$. Since $\widetilde{Y}$ is normal, each $v_{\widetilde{V}}$ is the valuation given by the local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$ at the generic point of $\widetilde{V}$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="required" }), and if $\mathcal{O}_{Y, \eta_V}$ itself is a discrete valuation ring then $v_V(f)$ coincides with that valuation. Keeping this in mind, we make the following definition.
 
 ::: Definition 3
-Two $k$-cycles $Z_1, Z_2$ are said to be *rationally equivalent* if there exist $(k+1)$-dimensional closed irreducible subvarieties $Y_j$ of $X$ and rational functions $f_j \in \mathbb{K}(Y_j)^\times$ on them such that
+Two $k$-cycles $Z_1, Z_2$ are said to be *rationally equivalent* if there exist $(k+1)$-dimensional closed irreducible subvarieties $Y_j$ of $X$ and rational functions $f_j \in K(Y_j)^\times$ on them such that
 
 $$Z_1 - Z_2 = \sum_j \divisor(f_j)$$
 
@@ -78,9 +78,9 @@ The codimension $k$ Chow group is defined as $A^k(X) = A_{n-k}(X)$, and as menti
 
 In algebraic topology, homology and cohomology are functorial for arbitrary continuous maps, but the Chow group is not. The Chow group has pushforward functoriality only for **proper morphisms**, and pullback functoriality only for **flat morphisms**.
 
-First, a morphism $f: X \rightarrow Y$ between two varieties being a *proper morphism* can roughly be described as the algebraic-geometric analogue of a compact map. ([\[Schemes\] §Valuation Rings, ⁋Definition 9](/en/math/scheme_theory/valuative_criteria#def9){: data-relation="required" }) Something to be careful about is that compactness does not work well in algebraic geometry, so this cannot be transferred directly. The intuition is that, just as the fiber and image of a compact map do not leak off to infinity, a proper morphism also does not; what is particularly important is that only finitely many additional coordinates are needed to describe this fiber. ([\[Schemes\] §Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16){: data-relation="weak" }) On the other hand, if a subvariety $V\subseteq X$ satisfies $\dim f(V)=\dim V$, then $V$ covers $f(V)$ with finite multiplicity, and this multiplicity is the extension degree $[\mathbb{K}(V):\mathbb{K}(f(V))]$ of function fields. For convenience, writing
+First, a morphism $f: X \rightarrow Y$ between two varieties being a *proper morphism* can roughly be described as the algebraic-geometric analogue of a compact map. ([\[Schemes\] §Valuation Rings, ⁋Definition 9](/en/math/scheme_theory/valuative_criteria#def9){: data-relation="required" }) Something to be careful about is that compactness does not work well in algebraic geometry, so this cannot be transferred directly. The intuition is that, just as the fiber and image of a compact map do not leak off to infinity, a proper morphism also does not; what is particularly important is that only finitely many additional coordinates are needed to describe this fiber. ([\[Schemes\] §Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16){: data-relation="weak" }) On the other hand, if a subvariety $V\subseteq X$ satisfies $\dim f(V)=\dim V$, then $V$ covers $f(V)$ with finite multiplicity, and this multiplicity is the extension degree $[K(V):K(f(V))]$ of function fields. For convenience, writing
 
-$$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
+$$\deg(V/f(V))=\begin{cases}[K(V):K(f(V))]&\text{if $\dim f(V)=\dim V$,}\\ 0&\text{if $\dim f(V)<\dim V$}\end{cases}$$
 
 the following holds.
 
@@ -143,7 +143,7 @@ To make the above example more concrete, define a degree $d$ morphism $f: \mathb
 
 $$f([x:y]) = [x^d:y^d]$$
 
-This is proper, and for the coordinate $t = x/y$ on $\mathbb{P}^1$ we have $f^\ast(t) = t^d$, so the field extension $\mathbb{K}(\mathbb{P}^1) \hookrightarrow \mathbb{K}(\mathbb{P}^1)$ is given by $t \mapsto t^d$, and the extension degree in this case is $d$. Hence by [Proposition 6](#prop6){: data-relation="required" },
+This is proper, and for the coordinate $t = x/y$ on $\mathbb{P}^1$ we have $f^\ast(t) = t^d$, so the field extension $K(\mathbb{P}^1) \hookrightarrow K(\mathbb{P}^1)$ is given by $t \mapsto t^d$, and the extension degree in this case is $d$. Hence by [Proposition 6](#prop6){: data-relation="required" },
 
 $$f_\ast[\mathbb{P}^1] = d \cdot [\mathbb{P}^1] \in A_1(\mathbb{P}^1) \cong \mathbb{Z}$$
 
