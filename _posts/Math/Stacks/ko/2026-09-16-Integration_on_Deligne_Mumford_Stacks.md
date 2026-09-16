@@ -138,118 +138,218 @@ $\pi:\mathcal{X}\rightarrow X$를 coarse moduli morphism이라 하고, $\mathcal
 
 $$\pi_\ast[\mathcal{X}]=\frac{1}{e}[X]$$
 
-가 성립한다. 실제로 coarse moduli morphism $\pi$가 coarse space 사이에 유도하는 morphism은 $\mathrm{id}_X$이므로 coarse function field degree는 $1$이다. 한편 source $\mathcal{X}$의 generic stabilizer order는 $e$이고 target $X$는 algebraic space이므로 stabilizer가 trivial하다. 따라서 [정의 1](#def1){: data-relation="required" }에 의해
+가 성립한다. 실제로 coarse moduli morphism $\pi$가 coarse space 사이에 유도하는 morphism은 $\mathrm{id}_X$이므로 function field degree는 $1$이다. 한편 source $\mathcal{X}$의 generic stabilizer order는 $e$이고 target $X$는 algebraic space (혹은 scheme)이므로 stabilizer가 trivial하다. 따라서 [정의 1](#def1){: data-relation="required" }에 의해
 
 $$\pi_\ast[\mathcal{X}]=1\cdot\frac{1}{e}[X]=\frac{1}{e}[X]$$
 
-를 얻는다.
-
-이로부터 coarse space 위의 top operational Chow class의 적분도 바로 비교할 수 있다. 임의의
-
-$$\beta\in A_{\mathrm{op}}^{\dim\mathcal{X}}(X)_\mathbb{Q}$$
-
-에 대하여
-
-$$\int_X\beta:=\deg(\beta\cap[X])$$
-
-로 두자. Operational Chow class는 $X$가 singular하더라도 arbitrary morphism에 따라 pullback할 수 있고, proper pushforward에 대한 projection formula
-
-$$\pi_\ast\bigl(\pi^\ast\beta\cap[\mathcal{X}]\bigr)=\beta\cap\pi_\ast[\mathcal{X}]$$
-
-를 만족한다. 따라서
-
-$$\int_\mathcal{X}\pi^\ast\beta=\deg\bigl(\pi^\ast\beta\cap[\mathcal{X}]\bigr)=\deg\bigl(\beta\cap\pi_\ast[\mathcal{X}]\bigr)=\frac{1}{e}\deg(\beta\cap[X])=\frac{1}{e}\int_X\beta.$$
-
-즉 coarse moduli morphism을 따라 적분을 비교하면, coarse space의 geometry에서는 보이지 않는 generic stabilizer가 정확히 $1/e$의 factor로 나타난다.
+를 얻는다. 즉 coarse moduli space에서는 보이지 않는 generic stabilizer가 fundamental cycle의 pushforward에서 정확히 $1/e$의 가중치로 나타난다.
 :::
 
-따라서 generic stabilizer가 trivial한 경우에는 fundamental cycle 수준에서 stack과 coarse space 사이에 추가적인 rational factor가 나타나지 않는다. 반면 generic stabilizer가 nontrivial하면 그 order가 전체 적분의 normalization에 직접 반영된다.
+## Proper pushforward와 projection formula
 
-## Proper pushforward와 fiber integration
-
-이제 smooth proper Deligne–Mumford stack 사이의 proper morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$을 생각하자. $\dim\mathcal{X}=m$, $\dim\mathcal{Y}=n$이라 하고 relative dimension을 $r=m-n$이라 하자.
+이제 smooth proper Deligne-Mumford stack 사이의 proper morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$을 생각하자. $\dim\mathcal{X}=m$, $\dim\mathcal{Y}=n$이라 하고 relative dimension을 $r=m-n$이라 하자.
 
 Smoothness에 의해 Chow cohomology와 homology를 fundamental class를 통해 식별하면 proper pushforward는 codimension notation에서
 
 $$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\longrightarrow A^{k-r}(\mathcal{Y})_\mathbb{Q}$$
 
-로 쓸 수 있다. 정확히는 $f_\ast\alpha$를 $(f_\ast\alpha)\cap[\mathcal{Y}]:=f_\ast(\alpha\cap[\mathcal{X}])$로 정의한다.
+로 쓸 수 있다. 정확히는 $f_\ast\alpha$를
+
+$$(f_\ast\alpha)\cap[\mathcal{Y}]:=f_\ast(\alpha\cap[\mathcal{X}])$$
+
+로 정의한다.
 
 ::: 명제 7 (Projection formula)
+
 위의 $f:\mathcal{X}\rightarrow\mathcal{Y}$에 대하여 임의의 $\alpha\in A^\ast(\mathcal{X})_\mathbb{Q}$, $\beta\in A^\ast(\mathcal{Y})_\mathbb{Q}$에 대하여
 
 $$f_\ast(\alpha\cdot f^\ast\beta)=f_\ast\alpha\cdot\beta$$
 
-이며, complementary degree에 대하여 $\int_\mathcal{X}\alpha\cdot f^\ast\beta=\int_\mathcal{Y}f_\ast\alpha\cdot\beta$이다.
+이며, 양변이 top degree가 되는 경우
+
+$$\int_\mathcal{X}\alpha\cdot f^\ast\beta=\int_\mathcal{Y}f_\ast\alpha\cdot\beta$$
+
+이다.
+
 :::
 
 ::: 증명
+
 Cycle-level proper pushforward와 Chow cohomology의 cap product는 projection formula
 
-$$f_\ast\bigl((\alpha\cap[\mathcal{X}])\cap f^\ast\beta\bigr)=f_\ast(\alpha\cap[\mathcal{X}])\cap\beta$$
+$$f_\ast\bigl(f^\ast\beta\cap(\alpha\cap[\mathcal{X}])\bigr)=\beta\cap f_\ast(\alpha\cap[\mathcal{X}])$$
 
-를 만족한다. Smoothness를 이용하여 이를 Chow cohomology notation으로 옮기면 첫째 식을 얻는다. $\mathcal{Y}$의 구조사상을 $q:\mathcal{Y}\rightarrow\Spec\mathbb{C}$라 하면 $\mathcal{X}$의 구조사상은 $q\circ f$이므로 proper pushforward의 functoriality ([명제 2](#prop2){: data-relation="required" })에 의해 적분 보존 식도 성립한다.
+를 만족한다. Smoothness를 이용하여 이를 Chow cohomology notation으로 옮기면 첫째 식을 얻는다.
+
+한편 $\mathcal{Y}$의 구조사상을 $q:\mathcal{Y}\rightarrow\Spec\mathbb{C}$라 하면 $\mathcal{X}$의 구조사상은 $q\circ f$이다. 따라서 proper pushforward의 functoriality와 위의 projection formula에 의해 적분에 대한 식도 성립한다.
+
 :::
 
+## Refined Gysin pullback
+
+Fiber 위의 cycle을 total space의 cycle과 비교하거나, 두 공간을 fiber product로 붙일 때에는 regular embedding에 대한 refined Gysin pullback이 필요하다.
+
+Codimension $c$인 closed regular embedding $i:Z\hookrightarrow Y$와 morphism $g:V\rightarrow Y$가 주어졌다고 하자. Cartesian square
+
+$$W=V\times_Y Z$$
+
+에서 induced closed embedding을 $i':W\hookrightarrow V$라 하면 refined Gysin pullback
+
+$$i^!:A_k(V)_\mathbb{Q}\longrightarrow A_{k-c}(W)_\mathbb{Q}$$
+
+이 정의된다. ([Vis, §3], [Kre, §2])
+
+이 refined Gysin pullback은 proper pushforward와 호환된다. 즉 $g:V\rightarrow Y$가 proper이고 $g':W\rightarrow Z$가 induced morphism이면
+
+$$i^!g_\ast=g'_\ast{i'}^!$$
+
+가 성립한다. 이 base change formula를 이용하면 total space 위의 proper pushforward를 fiber 위의 pushforward와 비교할 수 있다.
+
+## Fiber integration
+
+이제 refined Gysin base change를 이용하여 proper pushforward를 fiber 위의 적분으로 해석하자.
+
 ::: 명제 8 (Fiber integration)
-$f:\mathcal{C}\rightarrow\mathcal{M}$을 relative dimension $1$인 proper flat representable morphism이라 하고, $\mathcal{C},\mathcal{M}$을 smooth proper Deligne–Mumford stack이라 하자 ($\mathcal{M}$은 connected). 그러면 $\alpha\in A^1(\mathcal{C})_\mathbb{Q}$에 대하여 $f_\ast\alpha\in A^0(\mathcal{M})_\mathbb{Q}$이고, geometric point $y:\Spec\mathbb{C}\rightarrow\mathcal{M}$에서 그 값은 fiber 위의 degree
 
-$$\left.f_\ast\alpha\right\vert_y=\deg\bigl(\alpha\vert_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+$f:\mathcal{C}\rightarrow\mathcal{M}$을 relative dimension $1$인 proper flat representable morphism이라 하고, $\mathcal{C},\mathcal{M}$을 smooth proper Deligne-Mumford stack이라 하자. 또한 $\mathcal{M}$은 connected라고 가정하자.
 
-로 주어진다. 특히 $f_\ast 1=0$이며, $X$가 smooth projective variety이고 $h:\mathcal{C}\rightarrow X$가 모든 geometric fiber에서 같은 curve class $\beta\in A_1(X)_\mathbb{Q}$를 나타낼 때 $D\in A^1(X)_\mathbb{Q}$이면
+그러면 $\alpha\in A^1(\mathcal{C})_\mathbb{Q}$에 대하여
+
+$$f_\ast\alpha\in A^0(\mathcal{M})_\mathbb{Q}$$
+
+이고, geometric point $y:\Spec\mathbb{C}\rightarrow\mathcal{M}$에서 그 값은 fiber 위의 degree
+
+$$\left.f_\ast\alpha\right|_y=\deg\bigl(\alpha|_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+
+로 주어진다. 특히
+
+$$f_\ast1=0$$
+
+이다.
+
+또 $X$가 smooth projective variety이고 $h:\mathcal{C}\rightarrow X$가 모든 geometric fiber에서 같은 curve class $\beta\in A_1(X)_\mathbb{Q}$를 나타낼 때, $D\in A^1(X)_\mathbb{Q}$이면
 
 $$f_\ast h^\ast D=(D\cdot\beta)1$$
 
 이다.
+
 :::
 
 ::: 증명
-Point inclusion $i_y:\Spec\mathbb{C}\rightarrow\mathcal{M}$는 flat morphism이 아니지만, $\mathcal{M}$이 smooth하므로 codimension $m=\dim\mathcal{M}$인 closed regular embedding이다. 다음 절의 regular embedding refined Gysin pullback과 proper pushforward의 base change compatibility $i_y^! f_\ast=(f_y)_\ast {i'_y}^!$에 의하여 fiber restriction은
 
-$$i_y^! f_\ast(\alpha\cap[\mathcal{C}])=(f_y)_\ast\bigl(\alpha\vert_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+Geometric point $y:\Spec\mathbb{C}\rightarrow\mathcal{M}$를 포함하는 étale scheme chart $T\rightarrow\mathcal{M}$과 $y$의 lift $\widetilde y\in T$를 잡자. $\mathcal{M}$이 smooth하므로 $T$ 역시 smooth하고, point inclusion
 
-로 계산된다. $f_y:\mathcal{C}_y\rightarrow\Spec\mathbb{C}$는 proper curve의 구조사상이므로 이는 정확히 fiber 위 zero-cycle의 degree이다. Relative dimension이 $1$이므로 $f_\ast 1\in A^{-1}(\mathcal{M})_\mathbb{Q}=0$이고, 각 fiber에서 $\deg(h\vert_{\mathcal{C}_y}^\ast D\cap[\mathcal{C}_y])=D\cdot\beta$이므로 $f_\ast h^\ast D=(D\cdot\beta)1$을 얻는다.
+$$i_{\widetilde y}:\Spec\mathbb{C}\hookrightarrow T$$
+
+는 regular embedding이다.
+
+$f$를 $T$ 위로 base change하여
+
+$$f_T:\mathcal{C}_T=\mathcal{C}\times_\mathcal{M}T\longrightarrow T$$
+
+를 얻는다. Refined Gysin pullback과 proper pushforward의 base change compatibility에 의해
+
+$$i_{\widetilde y}^!(f_T)_\ast=(f_y)_\ast{i'}_{\widetilde y}^!$$
+
+가 성립한다.
+
+또한 $f$가 flat하므로
+
+$${i'}_{\widetilde y}^![\mathcal{C}_T]=[\mathcal{C}_y]$$
+
+이고, 따라서
+
+$$i_{\widetilde y}^!(f_T)_\ast\bigl(\alpha|_{\mathcal{C}_T}\cap[\mathcal{C}_T]\bigr)=(f_y)_\ast\bigl(\alpha|_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+
+를 얻는다. 왼쪽은 $f_\ast\alpha$의 $y$에서의 값을 계산한 것이고, 오른쪽은 fiber 위 zero-cycle의 degree이므로
+
+$$\left.f_\ast\alpha\right|_y=\deg\bigl(\alpha|_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+
+이다.
+
+한편 relative dimension이 $1$이므로
+
+$$f_\ast1\in A^{-1}(\mathcal{M})_\mathbb{Q}=0$$
+
+이고, 따라서 $f_\ast1=0$이다.
+
+마지막으로 각 geometric fiber에서
+
+$$\deg\bigl(h|_{\mathcal{C}_y}^\ast D\cap[\mathcal{C}_y]\bigr)=D\cdot\beta$$
+
+이므로 $f_\ast h^\ast D\in A^0(\mathcal{M})_\mathbb{Q}$는 모든 geometric point에서 같은 값 $D\cdot\beta$를 갖는다. $\mathcal{M}$이 connected이므로
+
+$$f_\ast h^\ast D=(D\cdot\beta)1$$
+
+을 얻는다.
+
 :::
 
-Representability 때문에 geometric fiber $\mathcal{C}_y$는 algebraic space이며, moduli of curves에서 나타나는 일반적인 경우에는 proper nodal curve이다. 따라서 위 fiber degree에는 stack stabilizer에 의한 별도의 분모가 새로 생기지 않는다. Node나 여러 irreducible component가 있을 경우에는 ordinary fundamental cycle이 그 component들을 scheme-theoretic multiplicity와 함께 센다.
+$f$가 representable이므로 geometric fiber $\mathcal{C}_y$는 algebraic space이다. 특히 moduli of curves에서 나타나는 경우에는 proper nodal curve가 된다. 따라서 위 fiber degree에는 stack stabilizer에서 오는 별도의 분모가 새로 나타나지 않는다. Reducible fiber의 경우에는 fundamental cycle $[\mathcal{C}_y]$가 각 irreducible component를 그 scheme-theoretic multiplicity와 함께 센다.
 
 ## 곱과 diagonal의 refined intersection
 
-두 stack 위의 독립적인 intersection은 product 위에서 서로 곱해진다. Moduli problem을 diagonal을 따라 붙이거나 incidence condition을 부여하기 위해서는 regular embedding의 *refined Gysin pullback*
+두 stack 위의 독립적인 intersection은 product 위에서 서로 곱해진다. 한편 moduli problem을 diagonal을 따라 붙이거나 incidence condition을 부여할 때에는 앞에서 정의한 refined Gysin pullback을 사용한다.
 
-$$i^!:A_k(V)_\mathbb{Q}\longrightarrow A_{k-c}(W)_\mathbb{Q}$$
+::: 명제 9 (Product integration과 diagonal intersection)
 
-이 핵심 역할을 한다. ([Vis, §3], [Kre, §2])
-
-::: 명제 9 (Refined Gysin과 diagonal 분해)
-1. **Product integration**: Smooth proper Deligne–Mumford stack $\mathcal{X},\mathcal{Y}$와 top-degree class $\alpha\in A^{\dim\mathcal{X}}(\mathcal{X})_\mathbb{Q}$, $\beta\in A^{\dim\mathcal{Y}}(\mathcal{Y})_\mathbb{Q}$에 대하여
+1. **Product integration**: Smooth proper Deligne-Mumford stack $\mathcal{X},\mathcal{Y}$와 top-degree class $\alpha\in A^{\dim\mathcal{X}}(\mathcal{X})_\mathbb{Q}$, $\beta\in A^{\dim\mathcal{Y}}(\mathcal{Y})_\mathbb{Q}$에 대하여
 
    $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal{Y}^\ast\beta=\left(\int_\mathcal{X}\alpha\right)\left(\int_\mathcal{Y}\beta\right)$$
 
    이다.
-2. **Diagonal refined Gysin formula**: Smooth $d$-dimensional variety $X$와 smooth proper Deligne–Mumford stack $\mathcal{M},\mathcal{N}$ 및 morphism $u:\mathcal{M}\rightarrow X$, $v:\mathcal{N}\rightarrow X$를 잡자. Fiber product를 $\mathcal{Z}=\mathcal{M}\times_X\mathcal{N}$이라 하고 $j:\mathcal{Z}\rightarrow\mathcal{M}\times\mathcal{N}$을 자연스러운 closed immersion이라 하자. Diagonal $\Delta_X:X\hookrightarrow X\times X$는 codimension $d$인 closed regular embedding이므로, refined Gysin pullback은 $\mathcal{Z}$의 refined intersection class
+
+2. **Diagonal refined Gysin formula**: Smooth $d$-dimensional variety $X$와 smooth proper Deligne-Mumford stack $\mathcal{M},\mathcal{N}$ 및 morphism $u:\mathcal{M}\rightarrow X$, $v:\mathcal{N}\rightarrow X$를 잡자. Fiber product를 $\mathcal{Z}=\mathcal{M}\times_X\mathcal{N}$이라 하고 $j:\mathcal{Z}\rightarrow\mathcal{M}\times\mathcal{N}$을 자연스러운 closed immersion이라 하자.
+
+   Diagonal $\Delta_X:X\hookrightarrow X\times X$는 codimension $d$인 closed regular embedding이므로 refined Gysin pullback은 $\mathcal{Z}$의 refined intersection class
 
    $$[\mathcal{Z}]_\Delta:=\Delta_X^!\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)\in A_{\dim\mathcal{M}+\dim\mathcal{N}-d}(\mathcal{Z})_\mathbb{Q}$$
 
-   를 정의하며, $j_\ast[\mathcal{Z}]_\Delta=(u,v)^\ast[\Delta_X]\cap\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)$이 성립한다. 따라서 적절한 codimension의 $\eta\in A^\ast(\mathcal{M}\times\mathcal{N})_\mathbb{Q}$에 대하여
+   를 정의한다. 또한
+
+   $$j_\ast[\mathcal{Z}]_\Delta=(u,v)^\ast[\Delta_X]\cap\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)$$
+
+   이 성립한다. 따라서 적절한 codimension의 $\eta\in A^\ast(\mathcal{M}\times\mathcal{N})_\mathbb{Q}$에 대하여
 
    $$\deg\bigl(j^\ast\eta\cap[\mathcal{Z}]_\Delta\bigr)=\int_{\mathcal{M}\times\mathcal{N}}\eta\cdot(u,v)^\ast[\Delta_X]$$
 
-   이다. 특히 $(u,v)$가 diagonal과 transverse한 경우에는 $[\mathcal{Z}]_\Delta=[\mathcal{Z}]$이다.
-3. **Divisor incidence**: Smooth Cartier divisor $D\hookrightarrow X$에 대하여 $\mathcal{Z}_D=\mathcal{M}\times_X D$라 하면 refined intersection class $[\mathcal{Z}_D]_D:=i_D^![\mathcal{M}]$이 정의되고, $j_\ast[\mathcal{Z}_D]_D=u^\ast[D]\cap[\mathcal{M}]=u^\ast c_1(\mathcal{O}_X(D))\cap[\mathcal{M}]$ 및
+   이다. 특히 $(u,v)$가 diagonal과 transverse한 경우에는
+
+   $$[\mathcal{Z}]_\Delta=[\mathcal{Z}]$$
+
+   이다.
+
+3. **Divisor incidence**: Smooth Cartier divisor $D\hookrightarrow X$에 대하여 $\mathcal{Z}_D=\mathcal{M}\times_XD$라 하면 refined intersection class
+
+   $$[\mathcal{Z}_D]_D:=i_D^![\mathcal{M}]$$
+
+   이 정의되고,
+
+   $$j_\ast[\mathcal{Z}_D]_D=u^\ast[D]\cap[\mathcal{M}]=u^\ast c_1(\mathcal{O}_X(D))\cap[\mathcal{M}]$$
+
+   및
 
    $$\deg\bigl(j^\ast\alpha\cap[\mathcal{Z}_D]_D\bigr)=\int_\mathcal{M}\alpha\cdot u^\ast[D]$$
 
    가 성립한다.
+
 :::
 
 ::: 증명
-1. External product와 proper pushforward의 compatibility로부터 즉시 따른다. Stack의 stabilizer 가중치는 각 factor에서 이미 degree map에 들어 있으므로 product에서도 자동으로 곱해진다.
-2. Refined Gysin과 proper pushforward의 호환성에 의해 $j_\ast\Delta_X^!([\mathcal{M}]\times[\mathcal{N}])=(u,v)^\ast[\Delta_X]\cap([\mathcal{M}]\times[\mathcal{N}])$이 성립하며, projection formula에 의해 적분 공식이 얻어진다. Transverse할 때 ordinary fundamental cycle과 일치함은 Gysin map의 기본 성질이다.
-3. $D\hookrightarrow X$는 codimension $1$ closed regular embedding이므로 2번의 특수한 경우로 즉시 성립한다.
+
+1. External product와 proper pushforward의 compatibility로부터 즉시 따른다. Stack의 stabilizer 가중치는 각 factor의 degree map에 이미 포함되어 있으므로 product에서도 자동으로 곱해진다.
+
+2. Refined Gysin pullback과 proper pushforward의 compatibility에 의해
+
+   $$j_\ast\Delta_X^!\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)=(u,v)^\ast[\Delta_X]\cap\bigl([\mathcal{M}]\times[\mathcal{N}]\bigr)$$
+
+   이 성립한다. 여기에 [명제 7](#prop7){: data-relation="required" }의 projection formula를 적용하면 적분 공식을 얻는다. Transverse한 경우 refined intersection class가 ordinary fundamental cycle과 일치하는 것은 refined Gysin pullback의 기본 성질이다.
+
+3. $D\hookrightarrow X$는 codimension $1$인 closed regular embedding이므로 같은 refined Gysin 공식을 적용하면 바로 따른다.
+
 :::
 
-지금까지의 논의는 모두 rational Chow group 안에서 이루어졌다. 특히 stack 위의 $1/\lvert\Aut(x)\rvert$ 가중치는 별도로 부여한 convention이 아니라 proper pushforward의 stack-theoretic degree에서 자연스럽게 발생한다. 이후 moduli problem에서 ordinary fundamental cycle을 virtual fundamental class로 대체하거나 arbitrary cohomology class를 insertion으로 사용하는 경우에도 이 intersection-theoretic 구조가 기본 토대가 된다.
+지금까지의 논의는 모두 rational Chow group 안에서 이루어졌다. 특히 stack 위의 $1/|\Aut(x)|$ 가중치는 별도로 부여한 convention이 아니라 proper pushforward의 stack-theoretic degree에서 자연스럽게 발생한다. 이후 moduli problem에서 ordinary fundamental cycle을 virtual fundamental class로 대체하거나 arbitrary cohomology class를 insertion으로 사용하는 경우에도 이러한 intersection-theoretic 구조가 기본 토대가 된다.
 
 ---
 
