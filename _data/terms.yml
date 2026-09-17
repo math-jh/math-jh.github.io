@@ -8328,6 +8328,13 @@ H:
   defs:
   - label: '[가환대수학] §차원'
     url: /ko/math/commutative_algebra/Krull_dimension
+- id: homogeneous_space
+  en: homogeneous space
+  ko: 동질공간
+  primary: en
+  defs:
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: homological_delta_-functor
   en: homological $\delta$-functor
   ko: 호몰로지 $\delta$-함자
@@ -8359,6 +8366,8 @@ H:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: homotopically_equivalent
   en: homotopically equivalent
   ko: 호모토피 동형
