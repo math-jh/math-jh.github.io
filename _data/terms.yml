@@ -11048,6 +11048,13 @@ L:
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
+- id: local_algebra
+  en: local algebra
+  ko: 국소대수
+  primary: en
+  defs:
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
 - id: local_basis
   en: local basis
   ko: 국소기저
@@ -15268,6 +15275,13 @@ R:
   see:
   - label: Irreducible
     id: irreducible
+- id: reduced_algebra
+  en: reduced algebra
+  ko: 감약대수
+  primary: en
+  defs:
+  - label: '[체론] §분리가능확대체'
+    url: /ko/math/field_theory/separable_extensions
 - id: reduced_expression
   en: reduced expression
   ko: 기약 표현
