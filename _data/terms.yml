@@ -17291,6 +17291,13 @@ S:
   defs:
   - label: '[다중선형대수학] §완전열'
     url: /ko/math/multilinear_algebra/exact_sequences
+- id: split_monomorphism
+  en: split monomorphism
+  ko: 분할 단사사상
+  primary: en
+  defs:
+  - label: '[표현론] §Krull–Schmidt 정리'
+    url: /ko/math/representation_theory/krull_schmidt
 - id: splitting_exact_sequence
   en: splitting exact sequence
   ko: 분해완전열
