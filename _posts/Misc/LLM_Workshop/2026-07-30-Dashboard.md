@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-30
-last_modified_at: 2026-09-06
+last_modified_at: 2026-09-17
 weight: 35
 
 ---
@@ -314,3 +314,22 @@ if paused:
     err = False
 ```
 {: data-filename="scripts/dashboard/server.py"}
+
+## 같은 워커 키를 쓰는 두 크론
+
+`paused_of`는 dict comprehension이라 같은 워커 키를 쓰는 크론 잡이 둘이면 하나가 남는다. 한동안 `blog-translation`과 `blog-translation-followup`가 둘 다 `worker="translation"`을 달고 있었다. 번역 본 작업과 그 뒤를 잇는 한글 수정 팔로업이 로그도 `translation.log` 하나를 같이 쓰다 보니 워커 카드도 하나로 묶여 있었던 자리다. `paused_of = {j["worker"]: j for j in ...}`는 같은 키가 두 번 오면 나중 것이 앞의 것을 덮어써서, 본 작업만 멈추고 팔로업은 돌고 있어도 대시보드가 보는 `paused`는 크론 목록에서 어느 잡이 나중에 나오느냐로 정해졌다.
+
+```python
+cron_by_worker = {}
+for job in sec_cron()["items"]:
+    if job.get("worker"):
+        cron_by_worker.setdefault(job["worker"], []).append(job)
+...
+schedules = cron_by_worker.get(w["key"], [])
+paused = bool(schedules) and all(p.get("paused") for p in schedules)
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+키를 dict가 아니라 리스트로 모으고, "정지"는 그 워커에 걸린 크론 전부가 정지일 때만 참이 되도록 바꿨다. 하나라도 실행 가능하면 로그가 계속 갱신될 수 있으니 워커는 정지가 아니다. hold 조합 표시에 쓰던 `p`(단일 잡 대표)는 실행 가능한 스케줄이 있으면 그것을, 전부 정지면 첫 번째 것을 대표로 남겨 기존 로직을 그대로 쓸 수 있게 했다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/d625b035).
+
+이 이원화는 오래가지 않았다. 번역 본 작업과 팔로업은 이후 커밋에서 워커 키 자체가 `translation`/`translation_followup`로 갈라졌고, 지금 크론 테이블에는 같은 키를 공유하는 잡이 없다. 그래도 이 집계 코드는 남았다. 다음에 워커 하나를 여러 스케줄이 깨우는 구성이 다시 생기면, dict 오버라이트로 되돌아가지 않게.
