@@ -42,7 +42,7 @@ Scheme theory에서 다룬 많은 성질들이 그러하듯, properness 또한 s
 
 위에서 설명한 것과 같이, stack으로 올라오며 생긴 유일한 차이는 $f$의 separatedness가 diagonal의 properness를 요구한다는 것으로, 만일 $f$가 scheme 혹은 algebraic space 사이의 morphism이었다면 diagonal이 monomorphism이므로 이 정의는 원래의 조건을 정확하게 보존한다. 
 
-일반적인 stack에서 geometric point $x:\Spec\mathbb{K}\rightarrow\mathcal{X}$의 stabilizer $\rAut_\mathbb{K}(x)$는 diagonal $\Delta_\mathcal{X}:\mathcal{X}\rightarrow\mathcal{X}\times_\mathbb{K}\mathcal{X}$를 $(x,x):\Spec\mathbb{K}\rightarrow\mathcal{X}\times_\mathbb{K}\mathcal{X}$를 따라 base change한 fiber로 얻어졌던 것을 기억하자. ([§대수적 스택, ⁋명제 5](/ko/math/stacks/algebraic_stacks#prop5){: data-relation="weak" }) Deligne-Mumford stack의 경우 이 diagonal이 unramified이므로, 이를 base change하여 얻어지는 stabilizer $\rAut_\mathbb{K}(x)$ 또한 $\mathbb{K}$ 위에서 unramified group scheme이며, 따라서 이는 locally quasi-finite group scheme이 된다. 여기에 만일 추가로 $\mathcal{X}$가 separated라면, diagonal이 proper이므로 automorphism group 역시 proper이다. Proper morphism은 quasi-compact이므로 locally quasi-finite인 $\Aut_{\mathbb{K}}(x)$는 quasi-finite이고, 따라서 proper quasi-finite morphism이 finite라는 사실에 의해 $\Aut_{\mathbb{K}}(x)$는 $\mathbb{K}$ 위의 finite group scheme이다. 더욱이 이는 unramified이므로 실제로 finite étale group scheme이다.
+일반적인 stack에서 geometric point $x:\Spec\mathbb{K}\rightarrow\mathcal{X}$의 stabilizer $\rAut_\mathbb{K}(x)$는 diagonal $\Delta_\mathcal{X}:\mathcal{X}\rightarrow\mathcal{X}\times_\mathbb{K}\mathcal{X}$를 $(x,x):\Spec\mathbb{K}\rightarrow\mathcal{X}\times_\mathbb{K}\mathcal{X}$를 따라 base change한 fiber로 얻어졌던 것을 기억하자. ([§대수적 스택, ⁋명제 5](/ko/math/stacks/algebraic_stacks#prop5){: data-relation="weak" }) Deligne-Mumford stack의 경우 이 diagonal이 unramified이므로, 이를 base change하여 얻어지는 stabilizer $\rAut_\mathbb{K}(x)$ 또한 $\mathbb{K}$ 위에서 unramified group scheme이며, 따라서 이는 locally quasi-finite group scheme이 된다. 여기에 만일 추가로 $\mathcal{X}$가 separated라면, diagonal이 proper이므로 automorphism group 역시 proper이다. Proper morphism은 quasi-compact이므로 locally quasi-finite인 $\rAut_{\mathbb{K}}(x)$는 quasi-finite이고, 따라서 proper quasi-finite morphism이 finite라는 사실에 의해 $\rAut_{\mathbb{K}}(x)$는 $\mathbb{K}$ 위의 finite group scheme이다. 더욱이 이는 unramified이므로 실제로 finite étale group scheme이다.
 
 ## Valuative criterion
 
@@ -108,7 +108,7 @@ $$\mathcal{X}\times_X U\cong[V/G_x],\qquad U\cong V/G_x$$
 
 눈여겨볼 만한 것은 여기서 등장하는 group $G_x$는, 설령 원래 stack이 전역적으로 $\mathcal{X}=[M/G]$의 꼴로 주어져 있더라도 이 $G$와 같을 필요는 없다는 것이다. 이는 quotient stack에서 coarse moduli로 넘어가는 과정을 생각하면 자연스럽게 이해할 수 있다.
 
-Quotient stack $[M/G]$에서 $G$의 작용은 두 종류의 정보를 동시에 담고 있다. 하나는 $M$ 위에서 실제로 점들을 움직이는 작용에 해당하는 부분이며, 다른 부분은 그 점을 움직이지 않은 채, 그 점의 automorphism으로만 남는 stabilizer $H$ 부분이다. Coarse moduli $M/G$를 취하는 과정에서, 전자의 경우에는 하나의 orbit에 속한 점들을 모두 한 점으로 identify하는 방식으로 scheme 단계에서도 보이는 것이지만, 후자의 stabilizer 정보는 점에 붙어 있던 automorphism data 자체가 사라지므로 없어지는 정보이다. 즉 coarse moduli에는 orbit만 남고, 각 점이 원래 어떤 stabilizer를 가지고 있었는지는 기록되지 않는다.
+Quotient stack $[M/G]$에서 $G$의 action은 두 종류의 정보를 동시에 담고 있다. 하나는 $M$ 위에서 실제로 점들을 움직이는 action에 해당하는 부분이며, 다른 부분은 그 점을 움직이지 않은 채, 그 점의 automorphism으로만 남는 stabilizer $H$ 부분이다. Coarse moduli $M/G$를 취하는 과정에서, 전자의 경우에는 하나의 orbit에 속한 점들을 모두 한 점으로 identify하는 방식으로 scheme 단계에서도 보이는 것이지만, 후자의 stabilizer 정보는 점에 붙어 있던 automorphism data 자체가 사라지므로 없어지는 정보이다. 즉 coarse moduli에는 orbit만 남고, 각 점이 원래 어떤 stabilizer를 가지고 있었는지는 기록되지 않는다.
 
 이제 위의 정리의 관점에서, 한 점 $x\in\mathcal{X}$를 잡고 이를 전역 quotient presentation $[M/G]$의 점 $p\in M$으로 나타낸다면, $x$의 automorphism group $G_x=\Stab_G(p)$은 $G$의 subgroup으로, $G$ 전체 원소 중 $p$를 고정하는 부분만 $G_x$로 남게 되며, 이를 사용한 것이 위의 local model이다. 
 

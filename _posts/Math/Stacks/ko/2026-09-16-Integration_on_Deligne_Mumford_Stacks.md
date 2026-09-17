@@ -15,7 +15,7 @@ weight: 6
 
 이제 우리는 stack 위의 적분을 정의한다. 직관적으로 stack의 점은 automorphism group $G$를 가져 점이 $\lvert G\rvert$번 중복되는 효과를 내므로, 적분에서는 $1/\lvert G\rvert$의 보정이 필요하다. 이번 글에서 다룰 proper finite type Deligne–Mumford stack에서는 geometric stabilizer가 finite하므로 이러한 가중치가 잘 정의된다.
 
-한편 pure dimensional algebraic stack에서 fundamental cycle 자체는 properness와 관계없이 정의되지만, 우리가 적분을 하려는 이유는 이를 structure morphism을 따라 한 점으로 pushforward하여 수치적인 degree를 얻기 위해서이다. 또,  smooth stack에서는 Chow cohomology와 Chow homology가 fundamental class와의 cap product를 통해 서로 대응하므로, cohomological notation을 사용해 적분을 다루기에도 편리하다. 따라서 이번 글에서 등장하는 모든 stack은 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack을 의미한다. 
+한편 pure dimensional algebraic stack에서 fundamental cycle 자체는 properness와 관계없이 정의되지만, 우리가 적분을 하려는 이유는 이를 structure morphism을 따라 한 점으로 pushforward하여 수치적인 degree를 얻기 위해서이다. 또, smooth stack에서는 Chow cohomology와 Chow homology가 fundamental class와의 cap product를 통해 서로 대응하므로, cohomological notation을 사용해 적분을 다루기에도 편리하다. 따라서 이번 글에서 등장하는 모든 stack은 $\mathbb{C}$ 위의 smooth proper connected Deligne–Mumford stack을 의미한다. 
 
 ## 스택의 저우 군
 
@@ -102,10 +102,10 @@ $$\int_\mathcal{X}\alpha:=\deg(\alpha\cap[\mathcal{X}])=p_\ast(\alpha\cap[\mathc
 로 정의한다.
 :::
 
-우리는 위의 [보조정리 3](#lem3)에서 바로 이 degree map $\deg$에 automorphism에서 나오는 성분 $1/\lvert G\rvert$가 개입함을 보였다. 우선 이를 구체적인 예시에서 확인하.
+우리는 위의 [보조정리 3](#lem3)에서 바로 이 degree map $\deg$에 automorphism에서 나오는 성분 $1/\lvert G\rvert$가 개입함을 보였다. 우선 이를 구체적인 예시에서 확인하자.
 
 ::: 예시 5
-Smooth proper variety $U$에 finite group $G$가 작용한다 하고, quotient stack $\mathcal{X}=\mathcal{X}$를 생각하자. 그럼 atlas $p:U\rightarrow \mathcal{X}$를 이용하여 이 위의 적분을 써줄 수 있다. 즉, $d=\dim U$라 하면, 임의의 $\alpha\in A^d(\mathcal{X})_\mathbb{Q}$에 대하여
+Smooth proper variety $U$에 finite group $G$가 작용한다 하고, quotient stack $\mathcal{X}=[U/G]$를 생각하자. 그럼 atlas $p:U\rightarrow \mathcal{X}$를 이용하여 이 위의 적분을 써줄 수 있다. 즉, $d=\dim U$라 하면, 임의의 $\alpha\in A^d(\mathcal{X})_\mathbb{Q}$에 대하여
 
 $$\int_{\mathcal{X}}\alpha=\frac{1}{\lvert G\rvert}\int_U p^\ast\alpha$$
 
@@ -197,7 +197,7 @@ $$f_\ast\alpha\in A^0(\mathcal{M})_\mathbb{Q}$$
 
 이고, geometric point $y:\Spec\mathbb{C}\rightarrow\mathcal{M}$에서 그 값은 fiber 위의 degree
 
-$$\left.f_\ast\alpha\right|_y=\deg\bigl(\alpha|_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+$$\left.f_\ast\alpha\right\vert_y=\deg\bigl(\alpha\vert_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
 
 로 주어진다. 특히
 
@@ -218,7 +218,7 @@ $$\left.f_\ast\alpha\right\vert_y=(f_y)_\ast\bigl(\alpha\vert_{\mathcal{C}_y}\ca
 
 를 얻는다. 여기서 $f$가 flat이므로 fiber에 대한 refined Gysin pullback은 fundamental class $[\mathcal{C}_y]$를 준다. 우변은 $f_y:\mathcal{C}_y\rightarrow\Spec\mathbb{C}$에 의한 zero-cycle의 pushforward이므로
 
-$$\left.f_\ast\alpha\right|_y=\deg\bigl(\alpha|_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
+$$\left.f_\ast\alpha\right\vert_y=\deg\bigl(\alpha\vert_{\mathcal{C}_y}\cap[\mathcal{C}_y]\bigr)$$
 
 이다. 한편 relative dimension이 $1$이므로 $f_\ast1\in A^{-1}(\mathcal{M})_\mathbb{Q}=0$이다. 또한 각 fiber에서 $h^\ast D$의 degree가 $D\cdot\beta$이므로
 
@@ -231,7 +231,7 @@ $f$가 representable이므로 geometric fiber $\mathcal{C}_y$는 algebraic space
 
 ## 곱공간과 대각선 교차
 
-이제 우리는 몇 가지 유용한 공식을 소개하며 이 글을 맞춘다. 두 stack 위에서 서로 독립적으로 주어진 intersection은 product 위에서 함께 다룰 수 있다. Smooth proper Deligne-Mumford stack $\mathcal{X},\mathcal{Y}$와 top-degree class $\alpha\in A^{\dim\mathcal{X}}(\mathcal{X})_\mathbb{Q}$, $\beta\in A^{\dim\mathcal{Y}}(\mathcal{Y})_\mathbb{Q}$에 대하여 external product와 degree의 multiplicativity로부터
+이제 우리는 몇 가지 유용한 공식을 소개하며 이 글을 마친다. 두 stack 위에서 서로 독립적으로 주어진 intersection은 product 위에서 함께 다룰 수 있다. Smooth proper Deligne-Mumford stack $\mathcal{X},\mathcal{Y}$와 top-degree class $\alpha\in A^{\dim\mathcal{X}}(\mathcal{X})_\mathbb{Q}$, $\beta\in A^{\dim\mathcal{Y}}(\mathcal{Y})_\mathbb{Q}$에 대하여 external product와 degree의 multiplicativity로부터
 
 $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal{Y}^\ast\beta=\left(\int_\mathcal{X}\alpha\right)\left(\int_\mathcal{Y}\beta\right)$$
 
