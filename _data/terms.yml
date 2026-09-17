@@ -8743,6 +8743,13 @@ I:
   defs:
   - label: '[표현론] §Krull–Schmidt 정리'
     url: /ko/math/representation_theory/krull_schmidt
+- id: indecomposable_module
+  en: indecomposable module
+  ko: 직기약가군
+  primary: en
+  defs:
+  - label: '[표현론] §Krull–Schmidt 정리'
+    url: /ko/math/representation_theory/krull_schmidt
 - id: indefinite_integral
   en: indefinite integral
   ko: 부정적분
@@ -14473,6 +14480,13 @@ P:
   defs:
   - label: '[대수적 위상수학] §사영다발과 Leray–Hirsch 정리'
     url: /ko/math/algebraic_topology/projective_bundles
+- id: projective_cover
+  en: projective cover
+  ko: 사영 덮개
+  primary: en
+  defs:
+  - label: '[표현론] §Auslander–Reiten 이론'
+    url: /ko/math/representation_theory/auslander_reiten
 - id: projective_dimension
   en: projective dimension
   ko: 사영차원
