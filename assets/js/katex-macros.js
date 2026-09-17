@@ -257,6 +257,8 @@ window.KATEX_MACROS = {
     "\\MF":"\\operatorname{MF}",
     "\\Lag":"\\operatorname{Lag}",
     "\\Ovir":"\\widehat{\\mathcal{O}}^{\\,\\mathrm{vir}}",
+    // virtual class 의 상첨자: [M]^\vir
+    "\\vir":"{\\mathrm{vir}}",
     // misc
     "\\half":"\\tfrac{1}{2}",
     "\\shift":"(#1)\\text{-shifted}",
