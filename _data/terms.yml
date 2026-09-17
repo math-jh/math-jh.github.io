@@ -7766,8 +7766,8 @@ G:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
-  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
-    url: /ko/math/gromov-witten_theory/refined_gysin
+  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: gysin_sequence
   en: Gysin sequence
   ko: 가신 완전열
@@ -12775,8 +12775,8 @@ N:
   defs:
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
-  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
-    url: /ko/math/gromov-witten_theory/refined_gysin
+  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: normal_cone
   en: normal cone
   ko: 법원뿔
@@ -13753,7 +13753,7 @@ P:
   ko: 완전 장애 이론
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: perfect_pairing
   en: perfect pairing
@@ -15404,8 +15404,8 @@ R:
   ko: 정련된 귀진 사상
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
-    url: /ko/math/gromov-witten_theory/refined_gysin
+  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: refinement
   en: refinement
   ko: 세분화
@@ -15477,8 +15477,8 @@ R:
   ko: 정칙 매입
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
-    url: /ko/math/gromov-witten_theory/refined_gysin
+  - label: '[스킴] §완전교차'
+    url: /ko/math/scheme_theory/complete_intersections#def1
 - id: regular_function
   en: regular function
   ko: 정칙함수
@@ -15552,8 +15552,8 @@ R:
   ko: 정칙렬
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
-    url: /ko/math/gromov-witten_theory/refined_gysin
+  - label: '[가환대수학] §정칙국소환'
+    url: /ko/math/commutative_algebra/regular_local_rings#def2
 - id: regular_space
   en: regular space
   ko: 정칙공간
@@ -15610,7 +15610,7 @@ R:
   ko: 상대접다발
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: relative_trace
   en: relative trace
@@ -15622,7 +15622,7 @@ R:
 - id: relative_virtual_cycle
   en: relative virtual cycle
   ko: 상대 가상류
-  primary: ko
+  primary: en
   defs:
   - label: '[그로모프-위튼 이론] §Very ample hypersurface의 상대 GW 불변량: Gathmann의 정리'
     url: /ko/math/gromov-witten_theory/gathmann_relative_gw
@@ -19587,23 +19587,23 @@ V:
 - id: virtual_cycle
   en: virtual cycle
   ko: 가상류
-  primary: ko
+  primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: virtual_dimension
   en: virtual dimension
   ko: 기대 차원
   primary: ko
   defs:
-  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: virtual_fundamental_class
   en: virtual fundamental class
   ko: 가상 기본류
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory'
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: virtual_relative_dimension
   en: virtual relative dimension
