@@ -15547,6 +15547,13 @@ R:
   see:
   - label: Rational map
     id: rational_map
+- id: regular_module
+  en: regular module
+  ko: 정규가군
+  primary: en
+  defs:
+  - label: '[환론] §Artin-Wedderburn 정리'
+    url: /ko/math/ring_theory/artin_wedderburn
 - id: regular_nilpotent_element
   en: regular nilpotent element
   ko: 정규 멱영원소
