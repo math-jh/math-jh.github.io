@@ -1379,6 +1379,13 @@ B:
   see:
   - label: Intersection theory
     id: intersection_theory
+- id: biduality
+  en: biduality
+  ko: 이중쌍대성
+  primary: en
+  defs:
+  - label: '[층론] §Verdier duality'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: bifunctor
   en: bifunctor
   ko: 쌍함자
@@ -1614,6 +1621,13 @@ B:
   defs:
   - label: '[토릭 기하학] §동변 코호몰로지'
     url: /ko/math/toric_geometry/equivariant_cohomology
+- id: borel_moore_homology
+  en: Borel–Moore homology
+  ko: Borel–Moore 호몰로지
+  primary: en
+  defs:
+  - label: '[층론] §Verdier duality'
+    url: /ko/math/sheaf_theory/verdier_duality
 - id: borel_subalgebra
   en: Borel subalgebra
   ko: 보렐 부분대수
@@ -15304,6 +15318,13 @@ R:
   - label: 복소켤레
     lang: ko
     id: complex_conjugate
+- id: recollement
+  en: recollement
+  ko: 르콜망
+  primary: en
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: recursion_theorem
   en: recursion theorem
   ko: 재귀정리
