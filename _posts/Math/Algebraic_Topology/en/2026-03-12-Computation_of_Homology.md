@@ -14,7 +14,7 @@ translated_at: 2026-08-18T14:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T14:15:05+00:00
 ---
-We now examine tools that allow us to compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is nearly impossible, so we must develop methods for breaking large spaces into smaller pieces and computing the homology of the large space from those of the pieces. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13){: data-relation="required" }, where we saw that the functor $\pi_1:\Top_\ast \rightarrow \Grp$ preserves colimits. Now the abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)), and the first homology functor $H_1:\Top \rightarrow \Ab$ is the composite of these. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined, and when $X$ is path-connected its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, yielding $H_1(X)\cong\pi_1(X)^\ab$. Thus for pushouts of the type given by [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14){: data-relation="weak" }, we can expect an analogous result for $H_1$. In particular, suppose as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14){: data-relation="weak" } that a topological space $X$ is the union of two connected open subsets $U,V$ with $U\cap V$ also connected. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so for the maps $f:H_1(U\cap V)\rightarrow H_1(U)$ and $g:H_1(U\cap V)\rightarrow H_1(V)$ induced by the two inclusions, we have the isomorphism
+We now examine tools that allow us to compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is nearly impossible, so we must develop methods for breaking large spaces into smaller pieces and computing the homology of the large space from those of the pieces. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13){: data-relation="required" }, where we saw that the functor $\pi_1:\Top_\ast \rightarrow \Grp$ preserves colimits. Now the abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7){: data-relation="weak" }), left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-relation="weak" }), and the first homology functor $H_1:\Top \rightarrow \Ab$ is the composite of these. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined, and when $X$ is path-connected its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, yielding $H_1(X)\cong\pi_1(X)^\ab$. Thus for pushouts of the type given by [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14){: data-relation="weak" }, we can expect an analogous result for $H_1$. In particular, suppose as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14){: data-relation="weak" } that a topological space $X$ is the union of two connected open subsets $U,V$ with $U\cap V$ also connected. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so for the maps $f:H_1(U\cap V)\rightarrow H_1(U)$ and $g:H_1(U\cap V)\rightarrow H_1(V)$ induced by the two inclusions, we have the isomorphism
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -38,7 +38,7 @@ Now consider the short exact sequence in the category $\Ch_{\geq 0}(\Ab)$
 
 $$0 \rightarrow C_\bullet(A) \rightarrow C_\bullet(X) \rightarrow C_\bullet(X,A) \rightarrow 0$$
 
-Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1), we have the following long exact sequence
+Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-relation="required" }, we have the following long exact sequence
 
 $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H_{k-1}(A) \rightarrow \cdots$$
 
@@ -74,7 +74,7 @@ Given a good pair $(X,A)$, let $U$ be an open subset satisfying the hypothesis o
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-2.svg width="27.21em" alt="3*3_diagram" %}
 
-each row is exact and the first two columns are also exact, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 7](/en/math/homological_algebra/diagram_chasing#cor7) we obtain a short exact sequence of chain complexes
+each row is exact and the first two columns are also exact, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 7](/en/math/homological_algebra/diagram_chasing#cor7){: data-relation="required" } we obtain a short exact sequence of chain complexes
 
 $$0\rightarrow C_\bullet(U,A)\rightarrow C_\bullet(X,A)\rightarrow C_\bullet(X,U)\rightarrow 0$$
 
@@ -152,7 +152,7 @@ and similarly we have the following canonical homomorphisms
 
 $$H_\bullet^\Delta(A)\rightarrow H_\bullet(A),\qquad H_\bullet^\Delta(X,A)\rightarrow H_\bullet(X,A)$$
 
-Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2) these define the following commutative diagram
+Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Proposition 2](/en/math/homological_algebra/long_exact_sequence#prop2){: data-relation="required" } these define the following commutative diagram
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-5.svg width="36.61em" alt="functoriality" %}
 
@@ -166,7 +166,7 @@ We sketch the main idea. Using the above commutative diagram, we consider the fi
 
 $$X^0\subseteq X^1\subseteq\cdots\subseteq X^l=X$$
 
-and apply [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) to the following diagram
+and apply [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2){: data-relation="required" } to the following diagram
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-6.svg width="56.75em" alt="induction" %}
 
@@ -174,7 +174,7 @@ to run an induction. For the induction step, it suffices to show that for any $n
 
 $$H_n^\Delta(X^k, X^{k-1})\rightarrow H_n(X^k, X^{k-1})$$
 
-is an isomorphism. Once this is assumed, first by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="required" } we have $H_n^\Delta(X^0)\cong H_n(X^0)$ for all $n$ when $k=1$, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) we can show $H_n^\Delta(X^1)\cong H_n(X^1)$, and then inductively construct the desired isomorphism for larger $k$.
+is an isomorphism. Once this is assumed, first by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="required" } we have $H_n^\Delta(X^0)\cong H_n(X^0)$ for all $n$ when $k=1$, so by [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2){: data-relation="required" } we can show $H_n^\Delta(X^1)\cong H_n(X^1)$, and then inductively construct the desired isomorphism for larger $k$.
 
 First, by definition $C_n^\Delta(X^k, X^{k-1})$ is nontrivial only when $n=k$, so $H_n^\Delta(X^k, X^{k-1})$ is a nontrivial free abelian group (generated by the $k$-simplices) only when $n=k$, and trivial otherwise.
 
@@ -235,7 +235,7 @@ induces an isomorphism in homology by the excision axiom, so the corresponding m
 
 {% diagram Math/Algebraic_Topology/Computation_of_Homology-8.svg width="43.25em" alt="morphism_of_les" %}
 
-where $i,j,k$ are the maps induced by the respective inclusions, the $\partial$'s are connecting maps, and the $p$'s are cokernel morphisms. We have omitted the indices for convenience. Now let $\alpha$ denote this morphism of long exact sequences, and consider the mapping cone exact sequence of $\alpha$ given by [\[Homological Algebra\] §Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8)
+where $i,j,k$ are the maps induced by the respective inclusions, the $\partial$'s are connecting maps, and the $p$'s are cokernel morphisms. We have omitted the indices for convenience. Now let $\alpha$ denote this morphism of long exact sequences, and consider the mapping cone exact sequence of $\alpha$ given by [\[Homological Algebra\] §Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-relation="required" }
 
 $$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(V, U\cap V)\oplus H_{n+1}(X)\overset{\overline{\Phi}}{\longrightarrow} H_n(U\cap V)\oplus H_{n+1}(X,U)\overset{\overline{\Psi}}{\longrightarrow} H_n(V)\oplus H_n(U)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\longrightarrow} H_n(V, U\cap V)\oplus H_n(X)\rightarrow \cdots\end{aligned}$$
 
@@ -247,7 +247,7 @@ Here the differential of $\Cone(\alpha)$ sends an element of the first component
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarrow H_n(U\cap V)\rightarrow H_n(U)\oplus H_n(V)\rightarrow\cdots\tag{5}$$
 
-Now since the two long exact sequences connected by $\alpha$ are both exact, $\alpha$ is a quasi-isomorphism, and therefore by [\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9), $\Cone(\alpha)$ is exact. Then since (4) is also exact, (5) is exact as well, and the differential maps of the exact sequence (5) are obtained through the above change of basis. Computing this explicitly gives the following.
+Now since the two long exact sequences connected by $\alpha$ are both exact, $\alpha$ is a quasi-isomorphism, and therefore by [\[Homological Algebra\] §Long Exact Sequence, ⁋Corollary 9](/en/math/homological_algebra/long_exact_sequence#cor9){: data-relation="required" }, $\Cone(\alpha)$ is exact. Then since (4) is also exact, (5) is exact as well, and the differential maps of the exact sequence (5) are obtained through the above change of basis. Computing this explicitly gives the following.
 
 ::: Proposition 7 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union of two open sets $X=U\cup V$, and consider a homology theory $H$ defined on it. Then there exists a long exact sequence
