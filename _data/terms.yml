@@ -7062,6 +7062,13 @@ G:
     id: representation
   - label: Group algebra
     id: group_algebra
+- id: gabriel_s_theorem
+  en: 'Gabriel''s theorem'
+  ko: Gabriel 정리
+  primary: ko
+  defs:
+  - label: '[표현론] §Gabriel 정리'
+    url: /ko/math/representation_theory/gabriel_theorem
 - id: galois_cohomology
   en: Galois cohomology
   ko: 갈루아 코호몰로지
@@ -8750,6 +8757,13 @@ I:
   defs:
   - label: '[표현론] §Krull–Schmidt 정리'
     url: /ko/math/representation_theory/krull_schmidt
+- id: indecomposable_representation
+  en: indecomposable representation
+  ko: 직기약 표현
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: indefinite_integral
   en: indefinite integral
   ko: 부정적분
