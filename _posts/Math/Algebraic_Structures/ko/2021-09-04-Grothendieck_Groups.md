@@ -64,7 +64,7 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta_S'=\
 만일 $S$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $K(S)$는 $K(S)\cong S$를 만족한다.
 :::
 ::: 증명
-$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1){: data-relation="required" }에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
+$S$와 $\id_S$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1){: data-relation="required" reviewed="" }에 의하여 universal property를 만족하는 임의의 abelian group은 $S$와 동형이어야 한다.
 :::
 
 위의 두 명제들은 universal mapping problem을 만족하는 $K(S)$가 우리가 찾는 abelian group이라는 것을 보여주지만, 실제로 $K(S)$가 존재한다는 것은 보여주지 않는다. 

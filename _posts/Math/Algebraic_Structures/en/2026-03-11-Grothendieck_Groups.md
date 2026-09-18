@@ -66,7 +66,7 @@ On the other hand, if $S$ was already an abelian group, $K(S)$ should turn out t
 If $S$ is an abelian group, the abelian group $K(S)$ satisfying the above universal mapping problem satisfies $K(S)\cong S$.
 :::
 ::: Proof
-Since $S$ and $\id_S$ trivially satisfy the universal property, by the preceding [Proposition 1](#prop1){: data-relation="required" }, any abelian group satisfying the universal property must be isomorphic to $S$.
+Since $S$ and $\id_S$ trivially satisfy the universal property, by the preceding [Proposition 1](#prop1){: data-relation="required" reviewed="" }, any abelian group satisfying the universal property must be isomorphic to $S$.
 :::
 
 The two propositions above show that $K(S)$ satisfying the universal mapping problem is the abelian group we are seeking, but they do not show that $K(S)$ actually exists. 
