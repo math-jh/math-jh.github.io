@@ -10191,6 +10191,13 @@ K:
   defs:
   - label: '[호몰로지 대수학] §Ext와 Tor'
     url: /ko/math/homological_algebra/ext_and_tor
+- id: koszul_formula
+  en: Koszul formula
+  ko: Koszul 공식
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: koszul_homology
   en: Koszul homology
   ko: 코쥘 호몰로지
