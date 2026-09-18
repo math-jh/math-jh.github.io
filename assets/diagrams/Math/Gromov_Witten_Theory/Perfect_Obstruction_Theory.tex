@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\newcommand{\dd}[1][]{d#1}
+\begin{document}
+
+%%FIG morphism from the local complex to the truncated cotangent complex (Perfect_Obstruction_Theory-1.svg)
+\begin{tikzcd}
+	{E^\vee\vert_{Z(s)}} & {\Omega_X\vert_{Z(s)}} \\
+	{\mathcal{I}/\mathcal{I}^2} & {\Omega_X\vert_{Z(s)}}
+	\arrow["{(\dd{s})^\vee}", from=1-1, to=1-2]
+	\arrow["\dd"', from=2-1, to=2-2]
+	\arrow[two heads, from=1-1, to=2-1]
+	\arrow[equals, from=1-2, to=2-2]
+\end{tikzcd}
+
+\end{document}
