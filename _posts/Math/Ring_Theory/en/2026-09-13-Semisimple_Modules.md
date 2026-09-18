@@ -1,0 +1,150 @@
+---
+title: "Semisimple Modules"
+description: "We define semisimple modules as direct sums of simple modules and prove three equivalent characterizations using Zorn's lemma. The canonical decomposition into isotypic components and the uniqueness of finite direct sum decompositions are derived from Schur's lemma."
+excerpt: "Equivalent characterizations of semisimple modules, isotypic decomposition, and uniqueness of decomposition"
+
+categories: [Math / Ring Theory]
+permalink: /en/math/ring_theory/semisimple_modules
+sidebar: 
+    nav: "ring_theory-en"
+
+date: 2026-09-13
+
+weight: 7
+translated_at: 2026-09-18T19:15:04+00:00
+translation_source: antigravity-gemini-3.8-flash-high
+---
+In this article, a ring $A$ is a ring with identity, not assumed to be commutative, and modules are always left modules.
+
+## Definition of Semisimple Modules
+
+We briefly defined simple modules in [§Division Rings, §§Endomorphism Rings of Simple Modules](/en/math/ring_theory/division_rings#endomorphism-rings-of-simple-modules){: data-relation="weak" }, and the subject of this post is to examine related topics in detail. Therefore, let us first give the following definition (formally).
+
+::: Definition 1
+When a non-$0$ $A$-module $M$ has no submodules other than $0$ and $M$, we call $M$ a *simple module*.
+:::
+
+However, since in general there is not much to say about simple modules, we define the following more generally.
+
+::: Definition 2
+When an $A$-module $M$ can be expressed, for some family $(S_i)_{i\in I}$ of simple submodules, as
+
+$$M=\bigoplus_{i\in I}S_i$$
+
+$M$ is called a *semisimple module*.
+:::
+
+When the index set $I$ is empty, by convention this is defined to be $0$, and thus by definition $0$ is a semisimple module.
+
+::: Example 3
+If we view a division ring $D$ as a left module over itself, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 4](/en/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }, $D$ is a simple $D$-module. In general, over $D$, a vector space $V$ has a basis $B$, so using this to write $V=\bigoplus_{b\in B}Db$, we see that a vector space over a division ring is a semisimple $D$-module.
+:::
+
+Intuitively, a simple module is the smallest unit into which a module can be decomposed, and this intuition is reflected in the following lemma.
+
+::: Lemma 4
+Let $M=\sum_{i\in I}S_i$ be a sum of simple submodules, and let $N$ be a submodule of $M$. Then there exists some $J\subseteq I$ such that
+
+$$M=N\oplus\bigoplus_{j\in J}S_j$$
+.
+:::
+::: Proof
+First, requiring $N+\sum_{j\in J}S_j$ to be a direct sum, let the collection of subsets $J\subseteq I$ be $\mathcal{J}$. Then clearly $\emptyset\in \mathcal{J}$, and since the direct sum condition involves only finitely many elements, for any chain in $\mathcal{J}$, its union also belongs to $\mathcal{J}$. Therefore, by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }, $\mathcal{J}$ has a maximal element $J$. Let $M'=N\oplus\bigoplus_{j\in J}S_j$.
+
+Our claim is that for any $i\in I$, we have $S_i\subseteq M'$, and therefore
+
+$$M=N+\sum_{i\in I}S_i\subseteq M'$$
+
+so that $M=M'$. Suppose to the contrary that $S_i\not\subseteq M'$ for some $S_i$. Then by the simplicity of $S_i$, we have $S_i\cap M'=0$, so the sum $N+\sum_{j\in J}S_j+S_i$ is again a direct sum. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 6](/en/math/multilinear_algebra/exact_sequences#prop6){: data-relation="required" }) Hence $J\cup\{i\}\in\mathcal{J}$, which contradicts the maximality of $J$, so no such $i$ can exist.
+:::
+
+From this lemma, we can characterize semisimple modules as follows.
+
+::: Theorem 5
+For an $A$-module $M$, the following are all equivalent:
+
+1. $M$ is a sum of simple submodules.
+2. $M$ is semisimple; that is, a direct sum of simple submodules.
+3. Every submodule of $M$ is a direct summand.
+:::
+::: Proof
+That the first assertion implies the second and third assertions is a consequence of [Lemma 4](#lem4){: data-relation="required" }, and that the second assertion implies the first assertion is trivial. Thus, it suffices to show that the third assertion implies the first assertion.
+
+First, we verify that the third property is inherited by any submodule of $M$. To this end, in $M$, fix a submodule $N$, and in $N$, let an arbitrary submodule $L$ be given. Then from the hypothesis on $M$, we have $M=L\oplus C$ for some submodule of $M$, say $C$. Now for any $n\in N$, this direct sum decomposition uniquely determines the expression $n=l+c$ with $l\in L$ and $c\in C$. Now since $c=n-l\in N\cap C$, we have $N=L+(N\cap C)$, and moreover, since
+
+$$L\cap(N\cap C)\subseteq L\cap C=0$$
+
+this sum is a direct sum.
+
+The next claim is that for $M$, any nonzero submodule $N$ always contains a simple submodule. To this end, from $N$, choose a nonzero element $x\in N$, and consider the cyclic submodule $Ax\subseteq N$ generated by it. Then among the submodules of $Ax$, the collection of those that do *not* contain $x$ satisfies the hypothesis of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }, and hence there exists a maximal element $K$ among them. On the other hand, any submodule strictly containing $K$ in $Ax$ must, by the maximality of $K$, contain $x$, and hence is equal to $Ax$; thus $K$ is a maximal proper submodule of $Ax$. Now, applying the third condition within $M$ to the submodule $Ax$, we have $Ax=K\oplus S$ for some submodule $S$, and then $S\cong Ax/K$, so again by the maximality of $K$, this is simple.
+
+Finally, letting the sum of all simple submodules of $M$ be $N_0$, by the third condition again we have $M=N_0\oplus C$ for some $C$. If $C\neq 0$, then it contains a simple submodule, which contradicts the definition of $N_0$; hence $C=0$, and $M=N_0$ is a sum of simple submodules.
+:::
+
+Then, in particular, by the third condition, any short exact sequence of $A$-modules having a semisimple module as the middle term is always split-exact. The following corollary is a converse to this, stating that every submodule and quotient of a semisimple module is semisimple.
+
+::: Corollary 6
+Every submodule and quotient of a semisimple module $M$ is semisimple.
+:::
+::: Proof
+For the quotient $M/N$, with respect to the canonical projection $\pr: M\rightarrow M/N$, if we write $M$ as the sum of simple modules $M=\sum S_i$, then $M/N=\sum \pr(S_i)$, and since $\pr(S_i)\cong S_i/(S_i\cap N)$, this follows from the assumption that $S_i$ is simple. 
+
+For a submodule, given $M$, for any submodule $N$, by [Lemma 4](#lem4){: data-relation="required" }, we have $M=N\oplus\bigoplus_{j\in J}S_j$ for some $J$, so $N\cong M/\bigoplus_{j\in J}S_j$, which completes the proof by the statement for quotients.
+:::
+
+## Isotypic decomposition
+
+By definition, a semisimple module has a direct sum decomposition $M=\bigoplus S_i$, but in general this is not unique. However, if we treat isomorphic summands as the same, this expression is unique; to prove this, we first examine what kinds of simple submodules can live inside a sum of simple submodules.
+
+::: Lemma 7
+Fix a semisimple module $M$ and its direct sum decomposition $M=\bigoplus S_i$. In $M$, for any simple submodule $U$, we have $U\cong S_i$ for some $i\in I$. 
+:::
+::: Proof
+For the canonical projection $\pr_i: M\rightarrow S_i$ given by the direct sum decomposition, since $U\neq 0$, we have $\pr_i(U)\neq 0$ for some $i$. Now $\pr_i\vert_U: U\rightarrow S_i$ is a nonzero homomorphism between simple modules, so it is an isomorphism by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-relation="required" }. 
+:::
+
+We give this a name as follows.
+
+::: Definition 8
+For a simple $A$-module $S$, for an $A$-module $M$, the *$S$-isotypic component* $M_S$ is defined as the sum of all simple submodules isomorphic to $S$ in $M$.
+:::
+
+Then the following holds.
+
+::: Proposition 9
+For semisimple modules $M$ and $N$, the following hold:
+
+1. Over the isomorphism classes of simple modules, $M=\bigoplus M_S$.
+2. Any $A$-module homomorphism $f:M\rightarrow N$ satisfies $f(M_S)\subseteq N_S$.
+:::
+::: Proof
+We first show the second result. Let $T$ be a simple submodule isomorphic to $S$ in $M$. For $f(T)\cong T/(T\cap\ker f)$, since $T$ is simple, it is either $0$ or isomorphic to $S$, and in either case $f(T)\subseteq N_S$. Since $M_S$ is the sum of such $T$, we have $f(M_S)\subseteq N_S$.
+
+Now we show the first result. For the semisimple module $M$, choose a direct sum decomposition $M=\bigoplus_{i\in I}S_i$ and consider the canonical projection $\pr_i:M\rightarrow S_i$. By the above result, $\pr_i(M_S)\subseteq (S_i)_S$, and since $S_i$ is simple, if $S_i\cong S$ then $(S_i)_S=S_i$, and otherwise $(S_i)_S=0$. Therefore $M_S=\bigoplus_{S_i\cong S}S_i$, and we obtain
+
+$$M=\bigoplus M_S$$
+:::
+
+In this decomposition, the direct summands themselves are not unique, but combining [Proposition 9](#prop9){: data-relation="weak" } and [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-relation="weak" }, we see that the number of times each isomorphism class appears is unique. 
+
+::: Proposition 10
+For simple modules $S_1,\ldots,S_n$ and $T_1,\ldots,T_m$, if $\bigoplus_{a=1}^nS_a\cong\bigoplus_{b=1}^mT_b$, then $n=m$, and for some permutation $\sigma$, for all $a$, $S_a\cong T_{\sigma(a)}$.
+:::
+::: Proof
+Let $M=\bigoplus_{a=1}^nS_a\cong\bigoplus_{b=1}^mT_b$. By [Proposition 9](#prop9){: data-relation="required" }, the isotypic component of each simple module $S$ is
+
+$$M_S=\bigoplus_{S_a\cong S}S_a\cong\bigoplus_{T_b\cong S}T_b$$
+
+so letting the number of factors with $S_a\cong S$ be $n_S$, and the number of factors with $T_b\cong S$ be $m_S$, we have $S^{\oplus n_S}\cong S^{\oplus m_S}$. Now by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-relation="required" }, $D=\End_A(S)$ is a division ring, and applying $\Hom_A(S, -)$ yields
+
+$$D^{n_S}\cong\Hom_A(S, S^{\oplus n_S})\cong\Hom_A(S, S^{\oplus m_S})\cong D^{m_S}$$
+
+By the uniqueness of the dimension of a $D$-vector space, $n_S=m_S$, and since this equality holds for all isomorphism classes $S$, we have $n=\sum n_S=\sum m_S=m$, and for some permutation $\sigma$, $S_a\cong T_{\sigma(a)}$.
+:::
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.  
+**[Lam]** T. Y. Lam, *A first course in noncommutative rings*, 2nd ed., Graduate Texts in Mathematics 131, Springer, 2001.
