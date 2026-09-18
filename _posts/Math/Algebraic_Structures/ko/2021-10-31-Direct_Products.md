@@ -14,13 +14,13 @@ weight: 7
 
 ## 군들의 곱
 
-우리는 임의의 category $\mathcal{A}$에서 product를 정의하는 방법을 알고 있다. ([\[범주론\] §극한, ⁋예시 6](/ko/math/category_theory/limits#ex6){: data-relation="required" }) 다음 보조정리는 category $\Grp$의 임의의 product가 항상 존재한다는 것을 보여준다. 
+우리는 임의의 category $\mathcal{A}$에서 product를 정의하는 방법을 알고 있다. ([\[범주론\] §극한, ⁋예시 6](/ko/math/category_theory/limits#ex6){: data-relation="required" reviewed="" }) 다음 보조정리는 category $\Grp$의 임의의 product가 항상 존재한다는 것을 보여준다. 
 
 ::: 보조정리 1
-$\Grp$은 임의의 곱을 가지며, 특히 cartesian monoidal category이다. ([\[범주론\] §모노이드 범주](/ko/math/category_theory/monoidal_categories){: data-relation="weak" })
+$\Grp$은 임의의 곱을 가지며, 특히 cartesian monoidal category이다. ([\[범주론\] §모노이드 범주](/ko/math/category_theory/monoidal_categories){: data-relation="weak" reviewed="" })
 :::
 ::: 증명
-우선 $\Set$에서 product의 universal property을 만족하는 곱집합 $\prod_{i\in I} G_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1){: data-relation="required" }에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a_i)_{i\in I}$으로 표기하기로 한다.
+우선 $\Set$에서 product의 universal property을 만족하는 곱집합 $\prod_{i\in I} G_i$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1){: data-relation="required" reviewed="" }에서 정의했다. 표기상의 편의를 위해 $\prod_{i\in I}G_i$의 원소 $f:I\rightarrow \bigcup G_i$를 순서쌍 $(a_i)_{i\in I}$으로 표기하기로 한다.
 
 이제 집합 $\prod_{i\in I}G_i$의 임의의 두 원소 $x=(x_i)_{i\in I},y=(y_i)_{i\in I}$에 대하여, 
 
@@ -56,7 +56,7 @@ $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 f
 을 commute하도록 하는 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$이 존재한다. 이 때 $\ker f=\prod\ker f_i$이고, $\im f=\prod\im f_i$이다.
 :::
 ::: 증명
-$\prod H_i$는 주어진 조건을 만족하는 cone들의 모임의 terminal object이다. ([\[범주론\] §극한, §§극한의 보편성질](/ko/math/category_theory/limits#극한의-보편성질){: data-relation="required" }) 이렇게 정의되는 commutative diagram에 의하여
+$\prod H_i$는 주어진 조건을 만족하는 cone들의 모임의 terminal object이다. ([\[범주론\] §극한, §§극한의 보편성질](/ko/math/category_theory/limits#극한의-보편성질){: data-relation="required" reviewed="" }) 이렇게 정의되는 commutative diagram에 의하여
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
 
@@ -73,7 +73,7 @@ $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$에 대하여 $H_i$들이 $G_i$의 normal subgroup이라면, $\prod H_i$도 $\prod G_i$의 normal subgroup이고 그 quotient group은 $\prod (G_i/H_i)$와 같다.
 :::
 ::: 증명
-Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3){: data-relation="required" }을 적용하면 된다.
+Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3){: data-relation="required" reviewed="" }을 적용하면 된다.
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
@@ -90,7 +90,7 @@ $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\pro
 Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 만일 각각의 $i\in I$에 대하여 $H_i\leq G_i$라면, $\prod H_i$는 $\prod G_i$의 subgroup이다.
 :::
 ::: 증명
-Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 [따름정리 3](#cor3){: data-relation="required" }를 적용하면, $\iota$는 단사이고 $\prod H_i$는 정확히 $\iota$의 image이므로 $\prod G_i$의 subgroup이다.
+Inclusion homomorphism들 $\iota_i:H_i\hookrightarrow G_i$에 [따름정리 3](#cor3){: data-relation="required" reviewed="" }를 적용하면, $\iota$는 단사이고 $\prod H_i$는 정확히 $\iota$의 image이므로 $\prod G_i$의 subgroup이다.
 :::
 
 ## 부분곱
