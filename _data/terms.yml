@@ -12326,6 +12326,13 @@ M:
   defs:
   - label: '[가환대수학] §등급환의 국소화'
     url: /ko/math/commutative_algebra/localization_of_graded_rings
+- id: multiplicative_subset
+  en: multiplicative subset
+  ko: 곱셈 부분집합
+  primary: en
+  defs:
+  - label: '[가환대수학] §국소화'
+    url: /ko/math/commutative_algebra/localization
 - id: multiplicatively_closed
   en: multiplicatively closed
   ko: 곱셈에 대하여 닫혀있다
