@@ -14133,6 +14133,13 @@ P:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: preinjective_module
+  en: preinjective module
+  ko: 전입사 가군
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: preorder_relation
   en: preorder relation
   ko: 원순서관계
@@ -14146,6 +14153,13 @@ P:
 - id: preprojective
   en: preprojective
   ko: 전사영적
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
+- id: preprojective_module
+  en: preprojective module
+  ko: 전사영 가군
   primary: en
   defs:
   - label: '[표현론] §반사 함자'
