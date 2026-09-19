@@ -2333,6 +2333,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: characteristic_exponent
+  en: characteristic exponent
+  ko: 표수 지수
+  primary: en
+  defs:
+  - label: '[체론] §체'
+    url: /ko/math/field_theory/fields
 - id: characteristic_function
   en: characteristic function
   ko: 특성함수
