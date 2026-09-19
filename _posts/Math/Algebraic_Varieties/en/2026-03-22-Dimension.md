@@ -19,7 +19,7 @@ Dimension is one of the most fundamental invariants in geometry. In algebraic ge
 
 ## Dimension as a Topological Space
 
-Since an algebraic variety is already a topological space, we may use [\[Topology\] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10){: data-relation="required" } to define the dimension of $X$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
+Since an algebraic variety is already a topological space, we may use [\[Topology\] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10){: data-relation="required" reviewed="" } to define the dimension of $X$ as the supremum of the lengths of strictly descending chains of irreducible closed subsets.
 
 ::: Example 1
 For an infinite field $\mathbb{K}$, the closed subsets of $\mathbb{A}^1$ are $\mathbb{A}^1$ itself and the finite sets. Hence the longest chain is $\mathbb{A}^1 \supsetneq \{p\}$, which has length $1$, so $\mathbb{A}^1$ has dimension $1$ under this definition.
@@ -32,25 +32,25 @@ This definition has the virtue of being purely topological. However, it is not v
 On the other hand, we already know that an algebraic variety and the functions defined on it are intimately related. Thus it should come as no surprise that the algebraic structure of these functions carries information about the dimension. To pursue this viewpoint, it is best to begin with the case of *affine* varieties, where the coordinate ring $\mathbb{K}[X]$ is given explicitly.
 
 ::: Proposition 2
-For an affine variety $X$ over an algebraically closed field $\mathbb{K}$, the dimension of $X$ equals the Krull dimension of its coordinate ring $\mathbb{K}[X]$. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1){: data-relation="required" })
+For an affine variety $X$ over an algebraically closed field $\mathbb{K}$, the dimension of $X$ equals the Krull dimension of its coordinate ring $\mathbb{K}[X]$. ([\[Commutative Algebra\] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1){: data-relation="required" reviewed="" })
 :::
 
 ::: Proof
-By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12){: data-relation="required" }, irreducible closed subsets of an affine variety correspond bijectively to prime ideals of $\mathbb{K}[X]$.
+By [§Affine Varieties, ⁋Proposition 12](/en/math/algebraic_varieties/affine_varieties#prop12){: data-relation="required" reviewed="" }, irreducible closed subsets of an affine variety correspond bijectively to prime ideals of $\mathbb{K}[X]$.
 :::
 ::: Corollary 3
 For an infinite field $\mathbb{K}$, we have $\dim \mathbb{A}^n = n$.
 :::
 
 ::: Proof
-[\[Commutative Algebra\] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11){: data-relation="required" }
+[\[Commutative Algebra\] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11){: data-relation="required" reviewed="" }
 :::
 
 On the other hand, for any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$, we know that the identity
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
-holds. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" }) Here the codimension of $\mathfrak{p}$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2){: data-relation="weak" } as the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$; geometrically, it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, this allows us to interpret ($\ast$) geometrically.
+holds. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" reviewed="" }) Here the codimension of $\mathfrak{p}$ is defined in [\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2){: data-relation="weak" reviewed="" } as the supremum of the lengths of chains of prime ideals contained in $\mathfrak{p}$; geometrically, it is the supremum of the lengths of chains of closed subvarieties of $\mathbb{A}^n$ containing $X=Z(\mathfrak{p})$. Since $\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}$ is the dimension of $Z(\mathfrak{p})$, this allows us to interpret ($\ast$) geometrically.
 
 ## Dimension of a Projective Variety
 
@@ -89,12 +89,12 @@ Since $f$ is irreducible, $(f)$ is a prime ideal, and hence the coordinate ring 
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
-where the first equality follows from [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" }.
+where the first equality follows from [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" reviewed="" }.
 :::
 
 ## Dimension via Function Fields
 
-Another way to define dimension is through the function field. The function field $K(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3){: data-relation="required" })
+Another way to define dimension is through the function field. The function field $K(X)$ captures information about the generic point of the variety and is a birational invariant. The following proposition is also deduced from an algebraic fact. ([\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 3](/en/math/commutative_algebra/noether_normalization#thm3){: data-relation="required" reviewed="" })
 
 ::: Proposition 7
 The dimension of a variety $X$ equals the transcendence degree of its function field $K(X)$ over $\mathbb{K}$.
@@ -128,17 +128,17 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 is a chain of closed subvarieties of $X$ of length $n+1$.
 :::
 
-This may be viewed as a weak generalization of [Proposition 6](#prop6){: data-relation="weak" }. Applied to a hypersurface $Z(f)\subsetneq \mathbb{A}^n$, it yields only $\dim Z(f)\leq n-1$, so it does not suffice to show that a single equation drops the dimension by exactly one. We now turn to the relationship between regular maps and dimension.
+This may be viewed as a weak generalization of [Proposition 6](#prop6){: data-relation="weak" reviewed="" }. Applied to a hypersurface $Z(f)\subsetneq \mathbb{A}^n$, it yields only $\dim Z(f)\leq n-1$, so it does not suffice to show that a single equation drops the dimension by exactly one. We now turn to the relationship between regular maps and dimension.
 
 ::: Proposition 10
 For two varieties $X, Y$ and a regular map $\varphi: X \rightarrow Y$, the following hold.
 
 1. We have $\dim \varphi(X) \le \dim X$.
-2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8){: data-relation="weak" })
+2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8){: data-relation="requires-review" })
 :::
 
 ::: Proof
-Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: K(Y)\rightarrow K(X)$ is injective, and the desired result follows from [Proposition 7](#prop7){: data-relation="required" }.
+Let us prove the second statement first. If $\varphi$ is dominant, the pullback $\varphi^\ast: K(Y)\rightarrow K(X)$ is injective, and the desired result follows from [Proposition 7](#prop7){: data-relation="required" reviewed="" }.
 
 The first statement follows from this. Since $X$ is irreducible and $\varphi$ is continuous, $\varphi(X)$ is also irreducible; hence its closure $\overline{\varphi(X)}$ in $Y$ is a closed subvariety. The regular map obtained by restricting the codomain of $\varphi$ to $\overline{\varphi(X)}$ is dominant by definition, so the second result gives $\dim \overline{\varphi(X)}\leq \dim X$. On the other hand, given a chain of irreducible closed subsets of $\varphi(X)$
 
