@@ -18,7 +18,7 @@ Geometrically, in favorable cases there is a natural duality between dimension $
 
 $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
-and through it obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11). More concretely, since this pairing is constructed via the cap product and the fundamental class $[M] \in H_n(M;R)$, we may say that the source of duality in topology is the orientation class $[M]$.
+and through it obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-relation="weak" }. More concretely, since this pairing is constructed via the cap product and the fundamental class $[M] \in H_n(M;R)$, we may say that the source of duality in topology is the orientation class $[M]$.
 
 In this post we examine Serre duality, the algebraic-geometry analogue of duality.
 
@@ -127,7 +127,7 @@ In particular, since each fiber is a variety it is connected, and therefore $f_\
 
 Let us retrace the process of generalizing Serre duality. We first proved Serre duality on $\mathbb{P}^n$ using the trace map and cup product ([Proposition 2](#prop2){: data-relation="weak" }), and extended this to arbitrary smooth projective varieties via a finite morphism. The extension to coherent sheaves was handled by induction through locally free resolutions, and the extension to singular varieties was handled by introducing the dualizing sheaf. [Proposition 4](#prop4){: data-relation="weak" } was the generalization replacing the target point with an arbitrary variety.
 
-The most modern interpretation of Serre duality is Grothendieck duality, which is formulated in the language of derived categories. ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2)) This generalization has quite a convincing motivation: for example, when we defined sheaf cohomology we already had to think about injective resolutions, and when we generalized Serre duality to arbitrary coherent sheaves above we also had to think about locally free resolutions, so we know that the derived category is where everything actually happens. In particular, the key point is that the perfect pairing in Serre duality encodes exactly the same information as the choice of a concrete isomorphism
+The most modern interpretation of Serre duality is Grothendieck duality, which is formulated in the language of derived categories. ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2){: data-relation="required" }) This generalization has quite a convincing motivation: for example, when we defined sheaf cohomology we already had to think about injective resolutions, and when we generalized Serre duality to arbitrary coherent sheaves above we also had to think about locally free resolutions, so we know that the derived category is where everything actually happens. In particular, the key point is that the perfect pairing in Serre duality encodes exactly the same information as the choice of a concrete isomorphism
 
 $$H^n(X, \omega_X) \cong \mathbb{K}$$
 
@@ -148,7 +148,7 @@ For a proper morphism $f \colon X \rightarrow Y$ and a coherent sheaf $\mathcal{
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-Here $R\mathcal{H}om$ is derived Hom ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 11](/en/math/homological_algebra/derived_categories#prop11)), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
+Here $R\mathcal{H}om$ is derived Hom ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 11](/en/math/homological_algebra/derived_categories#prop11){: data-relation="weak" }), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
 :::
 
 Intuitively, this theorem says that 'Hom after pushforward' and 'pushforward after Hom' agree. That is, computing the Hom between $\mathcal{F}$ and $f^! \mathcal{G}$ on $X$ and then pushing down to $Y$ is the same as first pushing $\mathcal{F}$ down to $Y$ and then computing the Hom with $\mathcal{G}$.
