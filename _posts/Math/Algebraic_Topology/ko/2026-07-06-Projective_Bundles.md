@@ -93,11 +93,11 @@ $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 free module의 basis를 이루므로 결과는 같다. [정리 3](#thm3){: data-relation="weak" reviewed="" }은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
 
 ::: 참고 4
-[정리 3](#thm3){: data-relation="requires-review" }은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
+[정리 3](#thm3){: data-relation="weak" reviewed="" }은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
 
 $$\xi^n+\pi^\ast c_1(E)\smile \xi^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
 
-을 만족하는 것으로 표현되며, 곧 $H^\bullet(\mathbb{P}(E))=H^\bullet(B)[\xi]/\bigl(\sum_{i=0}^n\pi^\ast c_i(E)\xi^{n-i}\bigr)$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6){: data-relation="requires-review" }의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
+을 만족하는 것으로 표현되며, 곧 $H^\bullet(\mathbb{P}(E))=H^\bullet(B)[\xi]/\bigl(\sum_{i=0}^n\pi^\ast c_i(E)\xi^{n-i}\bigr)$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6){: data-relation="weak" reviewed="" }의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
 :::
 
 ## Splitting principle
@@ -125,7 +125,7 @@ $$\rho^\ast E=\rho'^\ast\pi^\ast E=\rho'^\ast(\gamma_E\oplus\gamma_E^\perp)=\rho
 이 되어 $L_1=\rho'^\ast\gamma_E$로 두면 line bundle들의 합이다.
 :::
 
-이렇게 얻어진 $F(E)$는 $E$의 *flag bundle*로, 각 점 $x\in B$ 위의 fiber가 $E_x$의 완전한 flag들의 공간인 fiber bundle이다. 두 조건 가운데 실질적인 힘은 단사성에 있다. Pullback과 호환되는 (곧 naturality를 갖는) 특성류의 등식을 증명하려 할 때, [정리 5](#thm5){: data-relation="required" reviewed="" }에 의하여 그 등식을 $F(E)$ 위로 pullback한 뒤 증명해도 충분한데, 그 위에서는 $E$가 line bundle들의 합으로 쪼개져 모든 Chern class가 first Chern class들의 다항식으로 환원되기 때문이다. 등식이 $F(E)$ 위에서 성립하면 $\rho^\ast$의 단사성에 의해 $B$ 위에서도 성립한다. [§벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9){: data-relation="requires-review" }과 [§벡터다발의 특성류, ⁋명제 10](/ko/math/algebraic_topology/characteristic_classes#prop10){: data-relation="requires-review" }의 켤레 공식이 바로 이 방식으로 증명된다.
+이렇게 얻어진 $F(E)$는 $E$의 *flag bundle*로, 각 점 $x\in B$ 위의 fiber가 $E_x$의 완전한 flag들의 공간인 fiber bundle이다. 두 조건 가운데 실질적인 힘은 단사성에 있다. Pullback과 호환되는 (곧 naturality를 갖는) 특성류의 등식을 증명하려 할 때, [정리 5](#thm5){: data-relation="required" reviewed="" }에 의하여 그 등식을 $F(E)$ 위로 pullback한 뒤 증명해도 충분한데, 그 위에서는 $E$가 line bundle들의 합으로 쪼개져 모든 Chern class가 first Chern class들의 다항식으로 환원되기 때문이다. 등식이 $F(E)$ 위에서 성립하면 $\rho^\ast$의 단사성에 의해 $B$ 위에서도 성립한다. [§벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9){: data-relation="weak" reviewed="" }과 [§벡터다발의 특성류, ⁋명제 10](/ko/math/algebraic_topology/characteristic_classes#prop10){: data-relation="weak" reviewed="" }의 켤레 공식이 바로 이 방식으로 증명된다.
 
 ---
 

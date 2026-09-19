@@ -51,7 +51,7 @@ Through this, each fiber $p^{-1}(x)$ inherits a vector space structure from $F$.
 
 where, restricting $g$ to $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$ for each $x\in B_1$, this function must be a linear map between vector spaces. How to define an isomorphism between vector bundles is then obvious.
 
-Meanwhile, in [Definition 2](#def2){: data-relation="requires-review" } above, we only considered the case where $F$ is an $\mathbb{R}$-vector space, and we defined a topology on it using the inner product structure on $\mathbb{R}^n$ and the topology on $\mathbb{R}$. But strictly speaking, the only information needed here is the topology on the vector space $F$, and when we view $F$ as an inner product space, this is called a *Euclidean bundle*. In any case, since we will mostly consider $\mathbb{R}$-vector spaces, we shall gloss over this distinction.
+Meanwhile, in [Definition 2](#def2){: data-relation="weak" reviewed="" } above, we only considered the case where $F$ is an $\mathbb{R}$-vector space, and we defined a topology on it using the inner product structure on $\mathbb{R}^n$ and the topology on $\mathbb{R}$. But strictly speaking, the only information needed here is the topology on the vector space $F$, and when we view $F$ as an inner product space, this is called a *Euclidean bundle*. In any case, since we will mostly consider $\mathbb{R}$-vector spaces, we shall gloss over this distinction.
 
 ::: Example 3
 As a non-trivial example, the Möbius strip considered as a line bundle over $S^1$ is a classic instance. On the other hand, in [§Poincaré Duality, ⁋Example 5](/en/math/algebraic_topology/Poincare_duality#ex5){: data-relation="weak" reviewed="" } we also considered a non-trivial cover of $S^1$, which can be generalized geometrically as follows.
@@ -152,7 +152,7 @@ On the other hand, since $A$ is a commutative ring, this group homomorphism fact
 
 $$H_1(M)\rightarrow A^\times$$
 
-and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-relation="requires-review" } this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. On the other hand, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology encodes information about covering spaces.
+and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-relation="required" reviewed="" } this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. On the other hand, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology encodes information about covering spaces.
 
 In this manner, information about a vector bundle $E\rightarrow B$ of rank $k$ can be regarded as being contained in $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$. However, since the coefficients in the cohomology of $B$ that we use are $\mathbb{Z}$, we do not have all the data contained there. Instead, our goal is to find weaker substitutes for this, namely invariants in the cohomology ring $H^\bullet(B)$.
 
@@ -185,7 +185,7 @@ For the first claim, an isomorphism between $E_1$ and $E_2$ gives $E_1\cong \id_
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg width="5.34em" alt="trivial_bundle" %}
 
-An interesting observation is that the isomorphism classes of line bundles over $S^1$ are only two, namely the trivial line bundle and the line bundle of [Example 3](#ex3){: data-relation="requires-review" }; indeed, one can check that a line bundle over $S^1$ obtained by "twisting twice" is isomorphic to the trivial line bundle. This is to some extent predictable from [Proposition 6](#prop6){: data-relation="weak" reviewed="" }, because the Stiefel-Whitney class of a line bundle over $S^1$ must lie in $H^1(S^1;\mathbb{Z}/2)$, which is isomorphic to $\mathbb{Z}/2$.
+An interesting observation is that the isomorphism classes of line bundles over $S^1$ are only two, namely the trivial line bundle and the line bundle of [Example 3](#ex3){: data-relation="required" reviewed="" }; indeed, one can check that a line bundle over $S^1$ obtained by "twisting twice" is isomorphic to the trivial line bundle. This is to some extent predictable from [Proposition 6](#prop6){: data-relation="weak" reviewed="" }, because the Stiefel-Whitney class of a line bundle over $S^1$ must lie in $H^1(S^1;\mathbb{Z}/2)$, which is isomorphic to $\mathbb{Z}/2$.
 
 Another observation is that these are pullbacks of the tautological line bundle over $\RP^1$. The trivial line bundle over $S^1$ is the pullback via a continuous map sending every point of $S^1$ to a fixed point of $\RP^1$, while the nontrivial line bundle is the pullback of the line bundle via a homeomorphism $S^1 \rightarrow \RP^1$.
 
@@ -258,7 +258,7 @@ For example, let us look at $H^\bullet(\Gr(2,\mathbb{R}^4);\mathbb{Z}/2)$. We sh
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}.$$
 
-To utilize our geometric intuition, let us think of this as an intersection of Schubert cycles, just as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16){: data-relation="requires-review" }. For this, we need to consider two subspaces in general position corresponding to the homology class of $\sigma_{(1,0)}$, which is possible by changing the choice of flag.
+To utilize our geometric intuition, let us think of this as an intersection of Schubert cycles, just as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16){: data-relation="weak" reviewed="" }. For this, we need to consider two subspaces in general position corresponding to the homology class of $\sigma_{(1,0)}$, which is possible by changing the choice of flag.
 
 For a fixed flag $F_\bullet$, let us explicitly write out what condition the partition $\lambda=(1,0)$ represents:
 

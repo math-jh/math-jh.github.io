@@ -69,7 +69,7 @@ The following hold.
 5. $Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$.
 :::
 ::: Proof
-The first two statements were already examined in [Example 3](#ex3){: data-relation="requires-review" }.
+The first two statements were already examined in [Example 3](#ex3){: data-relation="required" reviewed="" }.
 
 To prove the third result, suppose $\mathfrak{a}\subseteq \mathfrak{b}$ and let $x\in Z(\mathfrak{b})$. Then $f(x) = 0$ for all $f \in \mathfrak{b}$, and since $\mathfrak{a} \subseteq \mathfrak{b}$, the desired identity holds for all elements of $\mathfrak{a}$ as well.
 
@@ -158,7 +158,7 @@ This issue may confuse us somewhat when we understand regular functions, so we w
 
 ## Nullstellensatz
 
-The $Z$ examined in [Proposition 4](#prop4){: data-relation="requires-review" } sends algebraic objects, that is, polynomials in $\mathbb{K}[\x_1,\ldots, \x_n]$, to geometric objects, that is, the zero sets defined by these polynomials. Conversely, we can also take a geometric object and assign algebraic objects to it.
+The $Z$ examined in [Proposition 4](#prop4){: data-relation="weak" reviewed="" } sends algebraic objects, that is, polynomials in $\mathbb{K}[\x_1,\ldots, \x_n]$, to geometric objects, that is, the zero sets defined by these polynomials. Conversely, we can also take a geometric object and assign algebraic objects to it.
 
 ::: Definition 8
 For an arbitrary subset $X \subseteq \mathbb{A}^n$, we define the subset $I(X)$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ as
@@ -185,7 +185,7 @@ For subsets $X,Y$ of $\mathbb{A}^n$ and an arbitrary subset $S$ of $\mathbb{K}[\
 5. If $f \in S$ and $a \in Z(S)$, then $f(a) = 0$. That is, $f \in I(Z(S))$.
 :::
 
-That is, $Z$ and $I$ define an antitone Galois connection. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6){: data-relation="requires-review" }) Therefore, each of the two compositions $ZI$ and $IZ$ defines a closure operator. In the case of $ZI$, this closure becomes the closure in the Zariski topology. This is because if $X \subseteq Y = Z(J)$, then $I(Z(J)) \subseteq I(X)$, and since $J \subseteq I(Z(J))$ by condition 5 of [Proposition 9](#prop9){: data-relation="required" reviewed="" }, we get $ZI(X) \subseteq Z(J) = Y$, so that $ZI(X)$ is the smallest Zariski closed set containing $X$. In the case of $IZ$, this is not immediately visible; for this, we need the notion of the radical of an ideal. ([\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" reviewed="" })
+That is, $Z$ and $I$ define an antitone Galois connection. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 6](/en/math/set_theory/filter_and_ideal#def6){: data-relation="weak" reviewed="" }) Therefore, each of the two compositions $ZI$ and $IZ$ defines a closure operator. In the case of $ZI$, this closure becomes the closure in the Zariski topology. This is because if $X \subseteq Y = Z(J)$, then $I(Z(J)) \subseteq I(X)$, and since $J \subseteq I(Z(J))$ by condition 5 of [Proposition 9](#prop9){: data-relation="required" reviewed="" }, we get $ZI(X) \subseteq Z(J) = Y$, so that $ZI(X)$ is the smallest Zariski closed set containing $X$. In the case of $IZ$, this is not immediately visible; for this, we need the notion of the radical of an ideal. ([\[Commutative Algebra\] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" reviewed="" })
 
 ::: Theorem 10 (Nullstellensatz)
 Let $\mathbb{K}$ be an algebraically closed field and let $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$ be an ideal. Then
@@ -198,7 +198,7 @@ holds.
 [\[Commutative Algebra\] §Nullstellensatz, ⁋Proposition 6](/en/math/commutative_algebra/nullstellensatz#prop6){: data-relation="required" reviewed="" }
 :::
 
-Broadly speaking, this could be said to be a somewhat anticipated result, since from condition 5 of [Proposition 4](#prop4){: data-relation="requires-review" } we already have
+Broadly speaking, this could be said to be a somewhat anticipated result, since from condition 5 of [Proposition 4](#prop4){: data-relation="weak" reviewed="" } we already have
 
 $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 

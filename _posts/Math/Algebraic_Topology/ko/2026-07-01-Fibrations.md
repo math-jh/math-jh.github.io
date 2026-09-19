@@ -191,7 +191,7 @@ $$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\longrightarrow}\pi_n(E,e_0)\ove
 수열이 $\pi_0(F)\rightarrow\pi_0(E)$에서 끝나는 것은 [명제 8](#prop8){: data-relation="required" reviewed="" }의 쌍의 exact sequence가 그 지점에서 끝나기 때문이다. $B$가 path-connected라는 가정은 $\pi_0(B)$가 자명하여 마지막 $\pi_0$ 항들의 완전성이 올바르게 해석됨을 보장한다.
 :::
 
-정리의 exact sequence에서 세 종류의 morphism이 등장한다. $i_\ast$는 fiber의 loop를 전공간의 loop로 포함시키는 것이고, $p_\ast$는 전공간의 함수를 밑공간으로 밀어내리는 것이며, connecting homomorphism $\partial$은 밑공간의 $n$차원 원소를 fiber의 $(n-1)$차원 원소로 떨어뜨리는 것이다. 특히 $\partial$은 [보조정리 9](#lem9){: data-relation="requires-review" }에 의해 밑공간의 원소를 전공간으로 들어올린 뒤 그 경계면이 fiber에 남긴 흔적을 취하는 것으로 이해할 수 있으며, 이것이 이 exact sequence가 계산에서 위력을 발휘하는 근본적인 이유이다. 가령 전공간의 homotopy가 모두 자명하다면 $\partial$이 isomorphism이 되어 밑공간과 fiber의 homotopy group이 한 차원 차이로 맞물리게 된다.
+정리의 exact sequence에서 세 종류의 morphism이 등장한다. $i_\ast$는 fiber의 loop를 전공간의 loop로 포함시키는 것이고, $p_\ast$는 전공간의 함수를 밑공간으로 밀어내리는 것이며, connecting homomorphism $\partial$은 밑공간의 $n$차원 원소를 fiber의 $(n-1)$차원 원소로 떨어뜨리는 것이다. 특히 $\partial$은 [보조정리 9](#lem9){: data-relation="weak" reviewed="" }에 의해 밑공간의 원소를 전공간으로 들어올린 뒤 그 경계면이 fiber에 남긴 흔적을 취하는 것으로 이해할 수 있으며, 이것이 이 exact sequence가 계산에서 위력을 발휘하는 근본적인 이유이다. 가령 전공간의 homotopy가 모두 자명하다면 $\partial$이 isomorphism이 되어 밑공간과 fiber의 homotopy group이 한 차원 차이로 맞물리게 된다.
 
 ## 예시
 
@@ -292,7 +292,7 @@ $$E_2^{p,q}=H^p\bigl(B;H^q(F;\mathbb{Z})\bigr)$$
 이고, 미분은 $d_r:E_r^{p,q}\rightarrow E_r^{p+r,q-r+1}$의 형태이며, 이 spectral sequence는 전공간의 cohomology에 수렴한다. 곧 $E_2^{p,q}\Rightarrow H^{p+q}(E;\mathbb{Z})$이다.
 :::
 
-$E_2$-page는 밑공간의 cohomology를 fiber의 cohomology를 계수로 삼아 적은 것이다. 만일 모든 미분 $d_r$이 소멸한다면 $E_2=E_\infty$가 되어 전공간의 cohomology가 $H^\bullet(B)$와 $H^\bullet(F)$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10){: data-relation="weak" reviewed="" }이 곱공간 $B\times F$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 cohomology를 준다. [정리 15](#thm15){: data-relation="required" reviewed="" }에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5){: data-relation="requires-review" }에서와 같이 $H^n(E)$ 위의 filtration의 associated graded가 $\bigoplus_{p+q=n}E_\infty^{p,q}$이라는 것이다.
+$E_2$-page는 밑공간의 cohomology를 fiber의 cohomology를 계수로 삼아 적은 것이다. 만일 모든 미분 $d_r$이 소멸한다면 $E_2=E_\infty$가 되어 전공간의 cohomology가 $H^\bullet(B)$와 $H^\bullet(F)$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10){: data-relation="weak" reviewed="" }이 곱공간 $B\times F$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 cohomology를 준다. [정리 15](#thm15){: data-relation="required" reviewed="" }에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5){: data-relation="required" reviewed="" }에서와 같이 $H^n(E)$ 위의 filtration의 associated graded가 $\bigoplus_{p+q=n}E_\infty^{p,q}$이라는 것이다.
 
 이 spectral sequence는 전공간의 singular cochain complex를 밑공간의 skeleton들의 preimage로 여과하여 얻은 filtered complex에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" reviewed="" }을 적용하여 얻어지며, 비자명한 부분은 그 $E_2$-page가 위와 같이 밑공간의 cohomology로 식별된다는 데 있다. 밑공간이 단순연결이 아닐 때에는 $\pi_1(B)$의 action을 담는 국소계수계로 $E_2$를 적어야 한다. 자세한 구성은 [May]와 [tD]에 있다.
 

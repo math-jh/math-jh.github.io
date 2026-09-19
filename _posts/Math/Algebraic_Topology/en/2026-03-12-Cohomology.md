@@ -105,7 +105,7 @@ Fixing an abelian group $A$ as the coefficient group, we may form the dual cocha
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" reviewed="" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="requires-review" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
+If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" reviewed="" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" reviewed="" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -197,7 +197,7 @@ and for $k=0$, the functions with vanishing derivative are exactly the constant 
 
 $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
-This de Rham cohomology, defined in this manner, also satisfies all the conditions of [Definition 2](#def2){: data-relation="required" reviewed="" } on the category of pairs of smooth manifolds; therefore, by the uniqueness of cohomology theories and the fact that any singular chain can be approximated by a smooth chain, we may verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="weak" reviewed="" } into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3){: data-relation="requires-review" }.
+This de Rham cohomology, defined in this manner, also satisfies all the conditions of [Definition 2](#def2){: data-relation="required" reviewed="" } on the category of pairs of smooth manifolds; therefore, by the uniqueness of cohomology theories and the fact that any singular chain can be approximated by a smooth chain, we may verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="weak" reviewed="" } into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3){: data-relation="weak" reviewed="" }.
  
 ## Coefficients of (Co)homology
 
@@ -379,4 +379,4 @@ Of course, using this result together with [Theorem 5](#thm5){: data-relation="w
 
 ---
 
-[^1]: Of course, one would hope that this pairing gives a homomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but as we know from [Proposition 3](#prop3){: data-relation="requires-review" }, the situation is not so simple and an $\Ext$ term containing hidden torsion must appear.
+[^1]: Of course, one would hope that this pairing gives a homomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but as we know from [Proposition 3](#prop3){: data-relation="weak" reviewed="" }, the situation is not so simple and an $\Ext$ term containing hidden torsion must appear.

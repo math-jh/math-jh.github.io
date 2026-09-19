@@ -182,7 +182,7 @@ $$\widetilde{f}:P\rightarrow \E G,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 이제 injectivity를 보이기 위해 $f_0,f_1:X\rightarrow \B G$에 대하여 $f_0^\ast \E G\cong f_1^\ast \E G=:P$라 하자. 우리는 $f_0$과 $f_1$이 homotopic한 것을 보여야 한다. 각 $f_i$는 bundle map $P\cong f_i^\ast \E G\rightarrow \E G$, 곧 $P$에서 universal bundle로 가는 $G$-equivariant bundle map $\Phi_i:P\rightarrow \E G$을 가진다. 그런데 $\E G$가 contractible이므로, paracompact 공간 위의 principal bundle $P$에서 $\E G$로 가는 임의의 두 $G$-equivariant map은 서로 $G$-equivariant homotopic하며, 따라서 $\Phi_0$과 $\Phi_1$을 잇는 $G$-equivariant homotopy $P\times[0,1]\rightarrow \E G$가 존재하고, 이것이 base로 내려가 $f_0$과 $f_1$ 사이의 homotopy를 주므로 $[f_0]=[f_1]$이다. 
 :::
 
-이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4){: data-relation="requires-review" }와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
+이 정리는 principal $G$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $[X,\B G]$로 옮긴다. [명제 4](#prop4){: data-relation="required" reviewed="" }와 결합하면 rank $n$ real vector bundle의 분류가 $[X,\B\GL(n;\mathbb{R})]$로, complex의 경우 $[X,\B\GL(n;\mathbb{C})]$로 옮겨지게 되며, 실제로 이들 $\B\GL(n; \mathbb{R})$과 $\B\GL(n; \mathbb{C})$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
 
 ::: 보조정리 9
 Classifying space의 구성은 $G$에 대해 functorial이다. Continuous group homomorphism $\phi:G\rightarrow H$가 주어지면, $\E G$ 위의 $G$-작용을 $\phi$를 통해 $H$-action으로 바꾸어 얻는 associated bundle $\E G\times_G H$를 분류하는 morphism이 $\B\phi:\B G\rightarrow \B H$를 유도한다. 이는 $\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$를 만족하여, $G\mapsto \B G$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$이 유도하는 $\B\Umat(n)\rightarrow \B\GL(n;\mathbb{C})$이 아래에서 쓰인다.
@@ -277,7 +277,7 @@ $$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$
 
 ## 분류공간의 코호몰로지
 
-[정리 8](#thm8){: data-relation="requires-review" }에 따르면 구조군 $G$를 갖는 bundle의 특성류란 $\B G$의 cohomology class를 분류사상으로 pullback한 것이다. 따라서 특성류 이론은 $\B G$의 cohomology ring을 계산하는 일과 같으며, 우리는 가장 기본적인 group들에 대해 이를 정리한다.
+[정리 8](#thm8){: data-relation="required" reviewed="" }에 따르면 구조군 $G$를 갖는 bundle의 특성류란 $\B G$의 cohomology class를 분류사상으로 pullback한 것이다. 따라서 특성류 이론은 $\B G$의 cohomology ring을 계산하는 일과 같으며, 우리는 가장 기본적인 group들에 대해 이를 정리한다.
 
 출발점은 complex projective space의 cohomology ring이다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8){: data-relation="required" reviewed="" }에서 우리는
 

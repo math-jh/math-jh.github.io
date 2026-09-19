@@ -28,7 +28,7 @@ Topological manifold는 다음과 같이 정의된다.
 Second countable, Hausdorff, locally Euclidean of dimension $m$인 공간을 *topological manifold of dimension $m$*이라 부른다. 
 :::
 
-편의상 topological manifold of dimension $m$을 *$m$-manifold*라 부르자. [정의 1](#def1){: data-relation="requires-review" }에서는 다루지 않았지만, 종종 우리는 위의 정의에서 $\mathbb{R}^m$을 *half-space*
+편의상 topological manifold of dimension $m$을 *$m$-manifold*라 부르자. [정의 1](#def1){: data-relation="weak" reviewed="" }에서는 다루지 않았지만, 종종 우리는 위의 정의에서 $\mathbb{R}^m$을 *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 
@@ -43,7 +43,7 @@ $m$-manifold $M$의 open subspace $U$는 다시 $m$-manifold이다. 이는 $M$�
 
 $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 
-이 $U$의 base가 되는 것으로부터 $U$가 second-countable이며, Hausdorff space의 subspace는 항상 Hausdorff이며 ([\[위상수학\] §하우스도르프 공간, §§하우스도르프 공간의 부분공간과 곱](/ko/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱){: data-relation="requires-review" }) 만일 $x\in U$가 임의로 주어졌다면, $M$이 locally Euclidean이라는 가정으로부터 $x$의 $M$에서의 열린근방 $V$를 택하여 $V$가 $\mathbb{R}^m$의 열린집합과 homeomorphic하도록 할 수 있고 따라서 $U\cap V$가 $x$의 $U$에서의 열린근방이며 $\mathbb{R}^m$의 열린집합과 homeomorphic하기 때문이다. 
+이 $U$의 base가 되는 것으로부터 $U$가 second-countable이며, Hausdorff space의 subspace는 항상 Hausdorff이며 ([\[위상수학\] §하우스도르프 공간, §§하우스도르프 공간의 부분공간과 곱](/ko/math/topology/Hausdorff_spaces#하우스도르프-공간의-부분공간과-곱){: data-relation="required" reviewed="" }) 만일 $x\in U$가 임의로 주어졌다면, $M$이 locally Euclidean이라는 가정으로부터 $x$의 $M$에서의 열린근방 $V$를 택하여 $V$가 $\mathbb{R}^m$의 열린집합과 homeomorphic하도록 할 수 있고 따라서 $U\cap V$가 $x$의 $U$에서의 열린근방이며 $\mathbb{R}^m$의 열린집합과 homeomorphic하기 때문이다. 
 :::
 
 비슷하게 [\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7){: data-relation="weak" reviewed="" }의 집합 또한 다음과 같이 topological manifold의 예시를 준다. 
@@ -60,7 +60,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 가 서로의 inverse이므로 $\graph(f)$와 $U$가 homeomorphic하기 때문이다. 
 :::
 
-[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7){: data-relation="requires-review" }에 의해 $\graph(f)$는 $U\times \mathbb{R}^k$의 닫힌집합이며, 특히 $U=\mathbb{R}^n$인 경우 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로 이는 [예시 3](#ex3){: data-relation="weak" reviewed="" }과는 다소 다른 결의 예시를 준다. 
+[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7){: data-relation="required" reviewed="" }에 의해 $\graph(f)$는 $U\times \mathbb{R}^k$의 닫힌집합이며, 특히 $U=\mathbb{R}^n$인 경우 $\graph(f)$는 $\mathbb{R}^{n+k}$의 닫힌집합이므로 이는 [예시 3](#ex3){: data-relation="weak" reviewed="" }과는 다소 다른 결의 예시를 준다. 
 
 한편 product topology에 대해서도 다음이 성립한다. 
 
@@ -69,7 +69,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 
 $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 
-으로 주어지는 $\mathcal{B}$가 $M_1\times M_2$의 basis가 되므로 $M_1\times M_2$는 second countable이며, Hausdorff space의 곱은 Hausdorff이고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 8](/ko/math/topology/Hausdorff_spaces#prop8){: data-relation="requires-review" }) 임의의 $(x_1,x_2)\in M_1\times M_2$에 대하여 $U_i$가 $M_i$에서의 $x_i$의 Euclidean neighborhood라면 $U_1\times U_2$가 $(x_1,x_2)$의 $M_1\times M_2$에서의 Euclidean neighborhood가 되기 때문이다. 
+으로 주어지는 $\mathcal{B}$가 $M_1\times M_2$의 basis가 되므로 $M_1\times M_2$는 second countable이며, Hausdorff space의 곱은 Hausdorff이고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 8](/ko/math/topology/Hausdorff_spaces#prop8){: data-relation="required" reviewed="" }) 임의의 $(x_1,x_2)\in M_1\times M_2$에 대하여 $U_i$가 $M_i$에서의 $x_i$의 Euclidean neighborhood라면 $U_1\times U_2$가 $(x_1,x_2)$의 $M_1\times M_2$에서의 Euclidean neighborhood가 되기 때문이다. 
 :::
 
 마지막으로 살펴볼 일반적인 construction은 quotient space이다. 그러나 [\[위상수학\] §하우스도르프 공간, §§하우스도르프 공간의 몫공간](/ko/math/topology/Hausdorff_spaces#하우스도르프-공간의-몫공간){: data-relation="weak" reviewed="" }에서 살펴보았듯 Hausdorff space의 임의의 quotient space가 Hausdorff가 되는 것은 아니다. 또, Euclidean space의 quotient space가 Euclidean이라는 보장도 없으므로 quotient space가 topological manifold임을 보이기 위해서는 적어도 Hausdorff 조건과 locally Euclidean 조건은 따로 보여줘야 한다. 대신 second countability는 locally Euclidean 조건으로부터 따라나온다. 

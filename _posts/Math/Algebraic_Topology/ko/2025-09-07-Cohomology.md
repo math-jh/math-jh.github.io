@@ -112,7 +112,7 @@ $$C_\bullet(X):\qquad\cdots \rightarrow C_{k+1}(X)\rightarrow C_k(X) \rightarrow
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-를 생각할 수 있다. 만일 $A$가 commutative ring이라면, ([\[대수적 구조\] §환의 정의, ⁋정의 1](/ko/math/algebraic_structures/rings#def1){: data-relation="weak" reviewed="" }) ring homomorphism $\mathbb{Z}\rightarrow A$에 대한 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="requires-review" }의 adjunction은 임의의 abelian group $M$과 $A$-module $N$에 대하여 isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$을 준다. 따라서 이 경우 위의 chain complex를 
+를 생각할 수 있다. 만일 $A$가 commutative ring이라면, ([\[대수적 구조\] §환의 정의, ⁋정의 1](/ko/math/algebraic_structures/rings#def1){: data-relation="weak" reviewed="" }) ring homomorphism $\mathbb{Z}\rightarrow A$에 대한 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" reviewed="" }의 adjunction은 임의의 abelian group $M$과 $A$-module $N$에 대하여 isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$을 준다. 따라서 이 경우 위의 chain complex를 
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -122,7 +122,7 @@ $$H^k(X;A):=H_k(C^\vee)$$
 
 로 적고, 이를 $X$의 *$k$번째 cohomology*라 부른다. 여기서 $H$와 $C^\vee$에 위첨자를 이용하여 index를 표기해주는 이유는 homology와 반대로, long exact sequence가 index가 커지는 방향으로 만들어지기 때문이며, 앞으로는 혼동의 여지가 없다면 $(C^\vee)^\bullet(X)$를 $C^\bullet(X;A)$라 쓰기로 하자.
 
-그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1){: data-relation="requires-review" }의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
+그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1){: data-relation="weak" reviewed="" }의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
 
 ::: 명제 3 (Universal coefficient theorem for cohomology)
 임의의 위상공간 $X$와 abelian group $A$에 대하여, 다음의 short exact sequence
@@ -351,7 +351,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 
 ## 아일렌베르크-질버 정리와 퀴네트 공식
 
-[보조정리 8](#lem8){: data-relation="requires-review" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
+[보조정리 8](#lem8){: data-relation="weak" reviewed="" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 
 ::: 정리 9 (Eilenberg-Zilber)
 두 위상공간 $X,Y$와 이들로부터 얻어지는 chain complex $C_\bullet(X),C_\bullet(Y)$, 그리고 $C_\bullet(X\times Y)$에 대하여, 두 chain complex $(C(X)\otimes C(Y))_\bullet$과 $C_\bullet(X\times Y)$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
@@ -397,7 +397,7 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 이 존재한다.
 :::
 
-물론, 이 결과와 [정리 5](#thm5){: data-relation="requires-review" }를 사용하면 cohomology 버전의 Künneth formula를 얻을 수 있다.
+물론, 이 결과와 [정리 5](#thm5){: data-relation="required" reviewed="" }를 사용하면 cohomology 버전의 Künneth formula를 얻을 수 있다.
 
 --- 
 

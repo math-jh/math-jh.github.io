@@ -123,7 +123,7 @@ $$f^\ast P=\{(x',y)\in X'\times P\mid f(x')=p(y)\}$$
 is defined. Giving the action by $(x',y)\cdot g=(x',y\cdot g)$ makes $f^\ast P\rightarrow X'$ again a principal $G$-bundle, and from the perspective of transition functions this corresponds to pulling back $g_{ij}$ to $g_{ij}\circ f$. The crucial fact is that this pullback depends only on the homotopy class of $f$.
 
 ::: Theorem 5 (Homotopy Invariance of Pullback)
-Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2){: data-relation="requires-review" }). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
+Suppose $X$ is paracompact Hausdorff and $f_0,f_1:X\rightarrow Y$ are homotopic ([§Homotopy, ⁋Definition 2](/en/math/algebraic_topology/homotopy#def2){: data-relation="required" reviewed="" }). Then for any principal $G$-bundle $p:P\rightarrow Y$, the pullbacks $f_0^\ast P$ and $f_1^\ast P$ are isomorphic over $X$.
 :::
 ::: Proof
 The key is the following fact.
@@ -142,7 +142,7 @@ In particular, if $X$ is contractible then the identity map is homotopic to a co
 [Theorem 5](#thm5){: data-relation="required" reviewed="" } tells us that assigning a function $f$ to $f^\ast P$ depends only on the homotopy class of $f$. Therefore, if we can take some fixed principal $G$-bundle as a source from which all other bundles can be obtained by pullback, the classification of principal $G$-bundles will reduce to counting homotopy classes into that source space, generalizing the situation in vector bundles where the universal bundle over $\Gr(k,\mathbb{R}^\infty)$ was such a source.
 
 ::: Definition 6
-For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4){: data-relation="requires-review" }). In this case we call the base space $\B G$ the *classifying space* of $G$.
+For a topological group $G$, a principal $G$-bundle $p:\E G\rightarrow \B G$ is called a *universal bundle* if the total space $\E G$ is contractible, that is, $\E G$ is homotopy equivalent to a point ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4){: data-relation="required" reviewed="" }). In this case we call the base space $\B G$ the *classifying space* of $G$.
 :::
 
 Thus, a universal $G$-bundle is a free $G$-action on a contractible space, whose orbit space $\B G=\E G/G$ is the base space and whose projection map is the bundle map. The condition that $\E G$ is contractible will be used crucially in [Theorem 8](#thm8){: data-relation="forward" reviewed="" }. Before that, the following holds.

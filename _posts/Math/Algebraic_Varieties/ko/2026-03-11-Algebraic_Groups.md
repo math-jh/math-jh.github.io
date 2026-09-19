@@ -20,7 +20,7 @@ published: false
 
 Variety 위에 group 구조를 얹되 두 구조가 서로 어긋나지 않기를 요구하는 것이 우리의 정의가 될 것이다. 그 전에 두 가지를 정리해 두어야 한다.
 
-첫째로 우리가 다룰 대상은 irreducible일 필요가 없다. [§준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1){: data-relation="requires-review" }의 quasi-projective variety는 irreducible한 것만을 가리키지만, orthogonal group처럼 흔히 쓰이는 algebraic group 가운데 irreducible이 아닌 것이 있기 때문이다. 그래서 이 글에서는 projective algebraic set의 열린부분집합을 *quasi-projective algebraic set*이라 부르고 이것을 대상으로 삼는다. Irreducibility를 요구하지 않아도 잃는 것은 없다. [§아핀다양체, ⁋정의 11](/ko/math/algebraic_varieties/affine_varieties#def11){: data-relation="requires-review" }의 coordinate ring $\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$과 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14){: data-relation="required" reviewed="" }의 regular function, 그리고 [§준사영다양체, ⁋정의 7](/ko/math/algebraic_varieties/quasi_projective_varieties#def7){: data-relation="required" reviewed="" }의 morphism은 정의에 irreducibility가 들어가지 않으므로 affine algebraic set과 quasi-projective algebraic set에 그대로 적용되고, [§아핀다양체, ⁋정리 10](/ko/math/algebraic_varieties/affine_varieties#thm10){: data-relation="weak" reviewed="" }도 임의의 ideal에 대한 진술이며, [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16){: data-relation="weak" reviewed="" }과 [§아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18){: data-relation="weak" reviewed="" }의 증명도 irreducibility를 쓰지 않는다. 게다가 [명제 4](#prop4){: data-relation="forward" reviewed="" }에서 보듯 이 완화는 서로소인 유한개의 variety를 나란히 놓는 것 이상을 허용하지 않는다.
+첫째로 우리가 다룰 대상은 irreducible일 필요가 없다. [§준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1){: data-relation="required" reviewed="" }의 quasi-projective variety는 irreducible한 것만을 가리키지만, orthogonal group처럼 흔히 쓰이는 algebraic group 가운데 irreducible이 아닌 것이 있기 때문이다. 그래서 이 글에서는 projective algebraic set의 열린부분집합을 *quasi-projective algebraic set*이라 부르고 이것을 대상으로 삼는다. Irreducibility를 요구하지 않아도 잃는 것은 없다. [§아핀다양체, ⁋정의 11](/ko/math/algebraic_varieties/affine_varieties#def11){: data-relation="required" reviewed="" }의 coordinate ring $\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$과 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14){: data-relation="required" reviewed="" }의 regular function, 그리고 [§준사영다양체, ⁋정의 7](/ko/math/algebraic_varieties/quasi_projective_varieties#def7){: data-relation="required" reviewed="" }의 morphism은 정의에 irreducibility가 들어가지 않으므로 affine algebraic set과 quasi-projective algebraic set에 그대로 적용되고, [§아핀다양체, ⁋정리 10](/ko/math/algebraic_varieties/affine_varieties#thm10){: data-relation="weak" reviewed="" }도 임의의 ideal에 대한 진술이며, [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16){: data-relation="weak" reviewed="" }과 [§아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18){: data-relation="weak" reviewed="" }의 증명도 irreducibility를 쓰지 않는다. 게다가 [명제 4](#prop4){: data-relation="forward" reviewed="" }에서 보듯 이 완화는 서로소인 유한개의 variety를 나란히 놓는 것 이상을 허용하지 않는다.
 
 둘째로 곱 $G \times G$ 위의 구조를 정해야 한다. [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="weak" reviewed="" }의 Segre embedding을 일반화한
 
@@ -64,7 +64,7 @@ Algebraic group $G$와 $g \in G$에 대하여 left translation $\lambda_g: x \ma
 :::
 
 ::: 증명
-$\lambda_g$는 morphism $x \mapsto (g,x)$와 $m$의 합성이므로 morphism이고 ([§준사영다양체, ⁋명제 11](/ko/math/algebraic_varieties/quasi_projective_varieties#prop11){: data-relation="required" reviewed="" }), $\lambda_{g^{-1}}$이 그 역사상이므로 isomorphism이다. ([§준사영다양체, ⁋정의 13](/ko/math/algebraic_varieties/quasi_projective_varieties#def13){: data-relation="requires-review" }) $\rho_g$도 같은 이유로 isomorphism이다. Inversion $i$는 [정의 1](#def1){: data-relation="required" reviewed="" }에 의해 morphism이고 $i \circ i = \id_G$이므로 isomorphism이다.
+$\lambda_g$는 morphism $x \mapsto (g,x)$와 $m$의 합성이므로 morphism이고 ([§준사영다양체, ⁋명제 11](/ko/math/algebraic_varieties/quasi_projective_varieties#prop11){: data-relation="required" reviewed="" }), $\lambda_{g^{-1}}$이 그 역사상이므로 isomorphism이다. ([§준사영다양체, ⁋정의 13](/ko/math/algebraic_varieties/quasi_projective_varieties#def13){: data-relation="required" reviewed="" }) $\rho_g$도 같은 이유로 isomorphism이다. Inversion $i$는 [정의 1](#def1){: data-relation="required" reviewed="" }에 의해 morphism이고 $i \circ i = \id_G$이므로 isomorphism이다.
 :::
 
 따라서 임의의 두 점 $x, y \in G$에 대하여 $\lambda_{yx^{-1}}$은 $x$를 $y$로 옮기는 $G$의 automorphism이다. 즉 algebraic group은 어느 점에서 보나 똑같이 생겼으며, 이 homogeneity가 다음 두 명제의 원천이다.
@@ -171,7 +171,7 @@ $$\alpha: G \times X \rightarrow X;\qquad (g, x) \mapsto g \cdot x$$
 로서 모든 $g, h \in G$와 $x \in X$에 대하여 $e \cdot x = x$와 $g \cdot (h \cdot x) = (gh) \cdot x$를 만족하는 것이다.
 :::
 
-Action이 주어지면 각 $g \in G$마다 $x \mapsto g \cdot x$는 [명제 3](#prop3){: data-relation="requires-review" }에서와 같은 이유로 $X$의 automorphism이 된다. 즉 action은 $G$에서 $X$의 automorphism들의 group으로 가는 group homomorphism이며, 여기에 morphism 조건이 얹힌 것이다. $G$와 $X$가 모두 affine이면 이 데이터는 완전히 대수적인 것이 된다. $A = \mathbb{K}[G]$, $B = \mathbb{K}[X]$라 하고 $B$ 위에 $(g \cdot f)(x) = f(g^{-1} \cdot x)$로 $G$의 action을 주자. 역원을 넣은 것은 이렇게 두어야 $B$ 위의 것이 다시 left action이 되기 때문이다.
+Action이 주어지면 각 $g \in G$마다 $x \mapsto g \cdot x$는 [명제 3](#prop3){: data-relation="weak" reviewed="" }에서와 같은 이유로 $X$의 automorphism이 된다. 즉 action은 $G$에서 $X$의 automorphism들의 group으로 가는 group homomorphism이며, 여기에 morphism 조건이 얹힌 것이다. $G$와 $X$가 모두 affine이면 이 데이터는 완전히 대수적인 것이 된다. $A = \mathbb{K}[G]$, $B = \mathbb{K}[X]$라 하고 $B$ 위에 $(g \cdot f)(x) = f(g^{-1} \cdot x)$로 $G$의 action을 주자. 역원을 넣은 것은 이렇게 두어야 $B$ 위의 것이 다시 left action이 되기 때문이다.
 
 ::: 정의 11
 $G$가 affine algebraic group이고 $A = \mathbb{K}[G]$라 하자. $\mathbb{K}$-벡터공간 $V$ 위의 *comodule structure*란 선형사상 $\Delta_V: V \rightarrow V \otimes_\mathbb{K} A$로서 다음 두 조건
@@ -365,7 +365,7 @@ $$0 = \Delta_B\left(\sum_\rchi f_\rchi\right) = \sum_\rchi f_\rchi \otimes \rchi
 이고, $X^\ast(T)$가 basis이므로 모든 $f_\rchi$가 $0$이다.
 :::
 
-$B_\rchi$의 $0$이 아닌 원소가 *weight* $\rchi$를 갖는다고 말하고, $B_\rchi$를 $\rchi$의 *weight space*, [명제 20](#prop20){: data-relation="requires-review" }의 분해를 $B$의 *weight decomposition*이라 부른다. $B$가 유한차원이 아니어도 분해가 성립한다는 점과 각 조각이 character 하나로 기술된다는 점이 torus에 특유한 것이며, 이 때문에 torus의 action은 계산 가능한 대상이 된다.
+$B_\rchi$의 $0$이 아닌 원소가 *weight* $\rchi$를 갖는다고 말하고, $B_\rchi$를 $\rchi$의 *weight space*, [명제 20](#prop20){: data-relation="required" reviewed="" }의 분해를 $B$의 *weight decomposition*이라 부른다. $B$가 유한차원이 아니어도 분해가 성립한다는 점과 각 조각이 character 하나로 기술된다는 점이 torus에 특유한 것이며, 이 때문에 torus의 action은 계산 가능한 대상이 된다.
 
 $T = (\mathbb{G}_m)^n$이 $\mathbb{A}^n$ 위에 좌표별 multiplication으로 작용하는 경우 $B = \mathbb{K}[\x_1, \ldots, \x_n]$이고, monomial $\x^b$에 대해 $(t \cdot \x^b)(x) = (t^{-1}x)^b = t^{-b} x^b$이므로 $t \cdot \x^b = \rchi^{-b}(t) \x^b$이며 $\x^b$는 weight $\rchi^{-b}$를 갖는다. 따라서 이 경우 [명제 20](#prop20){: data-relation="weak" reviewed="" }의 분해는 다항식을 monomial들의 합으로 적는 것에 지나지 않는다. 반면 $T_n$이 $\GL(n;\mathbb{K})$ 위에 conjugation으로 작용하면 좌표함수 $\x_{ij}$에 대하여
 
@@ -455,7 +455,7 @@ $$H = \{g \in G \mid \rho(g)L = L\}$$
 $\operatorname{char}\mathbb{K} = 0$일 때에는 더 나아가, $G$가 $X$ 위에 transitive하게 작용하면 $x \in X$에 대해 $gG_x \mapsto g \cdot x$가 유도하는 morphism $G/G_x \rightarrow X$가 isomorphism이 된다. Positive characteristic에서는 이것이 bijective morphism이기는 하나 isomorphism이 아닐 수 있다. Transitive한 action이 주어진 variety를 *homogeneous space*라 부르며, 위의 사실은 homogeneous space가 언제나 $G/H$ 꼴로 나타남을 말해준다.
 
 ::: 예시 25
-이 예시에서는 $\operatorname{char}\mathbb{K} = 0$을 가정한다. $\GL(n;\mathbb{K})$는 Grassmannian $\Gr(k, n)$ 위에 $g \cdot W = g(W)$로 작용한다. ([§그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-relation="requires-review" }) 임의의 $k$차원 부분공간의 basis를 전체 공간의 basis로 확장할 수 있으므로 이 action은 transitive하다. Standard subspace $W_0 = \operatorname{span}(e_1, \ldots, e_k)$의 stabilizer는 $W_0$을 보존하는 가역행렬들, 곧 왼쪽 아래 $(n-k) \times k$ block이 $0$인 행렬들의 집합
+이 예시에서는 $\operatorname{char}\mathbb{K} = 0$을 가정한다. $\GL(n;\mathbb{K})$는 Grassmannian $\Gr(k, n)$ 위에 $g \cdot W = g(W)$로 작용한다. ([§그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-relation="required" reviewed="" }) 임의의 $k$차원 부분공간의 basis를 전체 공간의 basis로 확장할 수 있으므로 이 action은 transitive하다. Standard subspace $W_0 = \operatorname{span}(e_1, \ldots, e_k)$의 stabilizer는 $W_0$을 보존하는 가역행렬들, 곧 왼쪽 아래 $(n-k) \times k$ block이 $0$인 행렬들의 집합
 
 $$P = \left\{ \begin{pmatrix} A & B \\ 0 & D \end{pmatrix} \in \GL(n;\mathbb{K}) \right\}$$
 

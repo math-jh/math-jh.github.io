@@ -189,7 +189,7 @@ $${\frown}:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 
 $${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
 
-또한 앞으로 같은 기호로 적기로 하며, $X_0=\emptyset$인 경우가 [정의 5](#def5){: data-relation="requires-review" }이다. 그럼 다음이 성립한다.
+또한 앞으로 같은 기호로 적기로 하며, $X_0=\emptyset$인 경우가 [정의 5](#def5){: data-relation="weak" reviewed="" }이다. 그럼 다음이 성립한다.
 
 ::: 명제 6 (Projection formula)
 Pair들 사이의 연속함수 $f:(X,X_0) \rightarrow (Y,Y_0)$와 $\beta\in H^q(Y,Y_0;A)$, 그리고 $\sigma\in H_{p+q}(X,X_0;A)$에 대하여 다음의 식
