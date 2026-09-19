@@ -4749,6 +4749,13 @@ D:
     url: /ko/math/linear_algebra/eigenspace_decomposition
   - label: '[체론] §에탈대수'
     url: /ko/math/field_theory/etale_algebras#def5
+- id: diagonalizable_algebra
+  en: diagonalizable algebra
+  ko: 대각화가능 대수
+  primary: en
+  defs:
+  - label: '[체론] §에탈대수'
+    url: /ko/math/field_theory/etale_algebras
 - id: diagonalization
   en: diagonalization
   ko: 대각화
