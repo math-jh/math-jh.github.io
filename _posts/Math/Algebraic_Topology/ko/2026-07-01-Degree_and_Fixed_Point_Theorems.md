@@ -18,7 +18,7 @@ published: false
 
 ## 구면의 호몰로지와 사상의 차수
 
-앞선 글에서 우리는 homology를 계산하는 도구들을 마련하였고, 특히 Mayer-Vietoris exact sequence를 이용해 여러 공간의 homology를 얻을 수 있음을 보았다. ([§호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-relation="requires-review" }) 이 절의 출발점은 구 $S^n$의 최고차 homology가 정확히 $\mathbb{Z}$ 하나라는 사실이다. 이 사실은 대단히 강력한 결과를 함축한다. 임의의 연속함수 $f:S^n\rightarrow S^n$은 함수 $H_n(f):H_n(S^n)\rightarrow H_n(S^n)$을 유도하는데 ([§호몰로지, ⁋명제 12](/ko/math/algebraic_topology/homology#prop12){: data-relation="required" reviewed="" }), $H_n(S^n)\cong\mathbb{Z}$이므로 $\mathbb{Z}$에서 $\mathbb{Z}$로의 group homomorphism은 어떤 정수를 곱하는 것에 지나지 않는다. 곧 임의의 자기사상 $f$에 정수 하나가 자연스럽게 붙으며, 우리는 이 정수 하나가 fixed point의 존재나 구면 위의 벡터장 문제와 같은 기하학적 물음들을 지배함을 보게 된다.
+앞선 글에서 우리는 homology를 계산하는 도구들을 마련하였고, 특히 Mayer-Vietoris exact sequence를 이용해 여러 공간의 homology를 얻을 수 있음을 보았다. ([§호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" reviewed="" }) 이 절의 출발점은 구 $S^n$의 최고차 homology가 정확히 $\mathbb{Z}$ 하나라는 사실이다. 이 사실은 대단히 강력한 결과를 함축한다. 임의의 연속함수 $f:S^n\rightarrow S^n$은 함수 $H_n(f):H_n(S^n)\rightarrow H_n(S^n)$을 유도하는데 ([§호몰로지, ⁋명제 12](/ko/math/algebraic_topology/homology#prop12){: data-relation="required" reviewed="" }), $H_n(S^n)\cong\mathbb{Z}$이므로 $\mathbb{Z}$에서 $\mathbb{Z}$로의 group homomorphism은 어떤 정수를 곱하는 것에 지나지 않는다. 곧 임의의 자기사상 $f$에 정수 하나가 자연스럽게 붙으며, 우리는 이 정수 하나가 fixed point의 존재나 구면 위의 벡터장 문제와 같은 기하학적 물음들을 지배함을 보게 된다.
 
 먼저 구의 homology를 확정한다. 표기의 편의를 위해, [§호몰로지의 계산, ⁋명제 4](/ko/math/algebraic_topology/computation_of_homology#prop4){: data-relation="weak" reviewed="" } 부근에서 도입한 reduced homology $\widetilde{H}_k(X)=H_k(X,x)$를 사용한다. 이는 nonempty path-connected space에 대하여 $H_k(X)$와 $k>0$에서 일치하고 $k=0$에서만 $\mathbb{Z}$ 하나만큼 작다.
 
