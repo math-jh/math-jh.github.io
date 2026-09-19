@@ -13058,7 +13058,7 @@ O:
   ko: 장애이론
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Family Gromov-Witten 불변량과 family quantum cohomology'
+  - label: '[그로모프-위튼 이론] §Family 위에서 정의된 그로모프-위튼 불변량'
     url: /ko/math/gromov-witten_theory/family_gw_invariants
 - id: odd_map
   en: odd map
