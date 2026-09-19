@@ -261,7 +261,7 @@ holds.
 :::
 
 ::: Proof
-The homogeneous coordinate ring $S(X)$ of $X \subseteq \mathbb{P}^M$ has Krull dimension $n+1$, so by [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 1](/en/math/commutative_algebra/noether_normalization#thm1) there exists a polynomial subring over which $S(X)$ is a finitely generated module, and since $\mathbb{K}$ is algebraically closed it is an infinite field, so by the second case of [\[Commutative Algebra\] §Noether Normalization, ⁋Lemma 2](/en/math/commutative_algebra/noether_normalization#lem2) we can choose its generators to be linear forms $\y_0, \ldots, \y_n$. These have no common zero on $X$, so they define a morphism
+The homogeneous coordinate ring $S(X)$ of $X \subseteq \mathbb{P}^M$ has Krull dimension $n+1$, so by [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 1](/en/math/commutative_algebra/noether_normalization#thm1){: data-relation="required" } there exists a polynomial subring over which $S(X)$ is a finitely generated module, and since $\mathbb{K}$ is algebraically closed it is an infinite field, so by the second case of [\[Commutative Algebra\] §Noether Normalization, ⁋Lemma 2](/en/math/commutative_algebra/noether_normalization#lem2){: data-relation="required" } we can choose its generators to be linear forms $\y_0, \ldots, \y_n$. These have no common zero on $X$, so they define a morphism
 
 $$\pi \colon X \rightarrow \mathbb{P}^n, \qquad p \mapsto [\y_0(p) : \cdots : \y_n(p)]$$
 
