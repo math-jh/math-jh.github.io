@@ -7097,6 +7097,13 @@ G:
   defs:
   - label: '[표현론] §Gabriel 정리'
     url: /ko/math/representation_theory/gabriel_theorem
+- id: galois
+  en: Galois
+  ko: 갈루아
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 확장'
+    url: /ko/math/field_theory/galois_extension
 - id: galois_cohomology
   en: Galois cohomology
   ko: 갈루아 코호몰로지
