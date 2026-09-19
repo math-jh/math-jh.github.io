@@ -448,7 +448,7 @@ def sec_workers():
         out.append(dict(key=w["key"], name=w["name"], schedule=w["schedule"],
                         status=status, age=age, last_ts=ts, err=err, tail=lines,
                         runs=runs, has_log=bool(w.get("log")),
-                        paused=paused, cron_id=p.get("id")))
+                        paused=paused, cron_id=p.get("id"), interval=w["interval"]))
     return out
 
 
@@ -817,6 +817,7 @@ CRON_JOBS = [
     dict(id="blog-gsc-monitor",      name="GSC 색인 모니터",  worker="index_monitor"),
     dict(id="blog-indexnow",         name="IndexNow 제출",    worker=None),
     dict(id="blog-pr-notify",        name="PR 알림",          worker=None),
+    dict(id="blog-worker-health",    name="워커 감시",        worker=None),
     dict(id="timer:blog-autopush",   name="autopush",         worker=None),
 ]
 CRON_IDS = {j["id"] for j in CRON_JOBS}
