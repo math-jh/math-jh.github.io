@@ -5408,3 +5408,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-09-10 03:15
 
 - _posts/Math/Stacks/ko/2026-09-02-Moduli_Spaces.md: 병기 필요 'set-valued moduli functor' — 위키 ko 문서 '모듈라이 공간' — 병기형 도출 필요
+
+## term_extract_worker 2026-09-19 19:15
+
+- _posts/Math/Gromov_Witten_Theory/ko/2026-09-19-Family_GW_Invariants.md: 병기 필요 'structure group    의    -fiber bundle' — 위키 ko 문서 'TripleS' — 병기형 도출 필요
+- _posts/Math/Gromov_Witten_Theory/ko/2026-09-19-Family_GW_Invariants.md: 병기 필요 'family Gromov-Witten invariant' — 위키 ko 문서 '에드워드 위튼' — 병기형 도출 필요
