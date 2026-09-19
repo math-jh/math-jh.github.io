@@ -14,21 +14,21 @@ translated_at: 2026-08-18T22:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T22:45:05+00:00
 ---
-In [§Linear Systems](/en/math/algebraic_varieties/linear_systems){: data-relation="weak" }, we saw that a basepoint-free complete linear system of a line bundle can be used to embed a variety into projective space, and when this defines a closed embedding, such a line bundle is called *very ample*.
+In [§Linear Systems](/en/math/algebraic_varieties/linear_systems){: data-relation="weak" reviewed="" }, we saw that a basepoint-free complete linear system of a line bundle can be used to embed a variety into projective space, and when this defines a closed embedding, such a line bundle is called *very ample*.
 
-Despite the considerable geometric influence that line bundles exert, we have not yet properly examined how to define a line bundle on an arbitrary variety in general. If $X$ is a *smooth* variety, we can consider the cotangent bundle $\Omega_X^1$ defined on it via [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="required" }, and by taking its top exterior power we obtain the *canonical bundle* $\omega_X$. The goal of this post is to study this bundle $\omega_X$.
+Despite the considerable geometric influence that line bundles exert, we have not yet properly examined how to define a line bundle on an arbitrary variety in general. If $X$ is a *smooth* variety, we can consider the cotangent bundle $\Omega_X^1$ defined on it via [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="required" reviewed="" }, and by taking its top exterior power we obtain the *canonical bundle* $\omega_X$. The goal of this post is to study this bundle $\omega_X$.
 
 ## Vector Bundles and Quasi-Coherent Sheaves
 
-As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3){: data-relation="required" }) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
+As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3){: data-relation="required" reviewed="" }) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
 
-Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5){: data-relation="required" }, we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
+Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5){: data-relation="required" reviewed="" }, we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
 
-However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" }, if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" } to this gives a morphism from some variety $V(M)$ to $X$.
+However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" }, if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" } to this gives a morphism from some variety $V(M)$ to $X$.
 
 Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to a maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and thus the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ over $x$ in $V(M) \rightarrow X$ consists of the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$.
 
-Algebraically, to obtain the coordinate ring defining this fiber, we must first ask what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to regard functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$; in general, $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([\[Commutative Algebra\] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4){: data-relation="weak" }) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply regard $\kappa(x)$ as $\mathbb{K}$.
+Algebraically, to obtain the coordinate ring defining this fiber, we must first ask what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to regard functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$; in general, $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([\[Commutative Algebra\] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4){: data-relation="weak" reviewed="" }) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply regard $\kappa(x)$ as $\mathbb{K}$.
 
 Now, from the above discussion, we know that we should consider the collection of $\kappa(x)$-valued functions on $\S_A(M^\vee)$, namely $\S_A(M^\vee)\otimes_A\kappa(x)$. Then, from the fact that the symmetric algebra commutes with tensor products, we obtain the identity
 
@@ -54,7 +54,7 @@ so that $M$ becomes the space of global sections of $\widetilde{M}$.
 
 These two definitions merely express the same object in different geometric languages. That is, for an affine variety $X$ with coordinate ring $A$ and a finitely generated projective $A$-module $M$, the total space corresponding to $\widetilde{M}$ is precisely $V(M)$, and the sheaf of sections of $V(M)$ is $\widetilde{M}$.
 
-In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general situations. For example, we define the following. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8){: data-relation="weak" })
+In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general situations. For example, we define the following. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8){: data-relation="weak" reviewed="" })
 
 ::: Definition 1
 An $\mathcal{O}_X$-module $\mathcal{F}$ on a general variety $X$ is called a *quasi-coherent sheaf* if there exists an affine open cover $\{U_i\}$ of $X$ and $A_i=\mathcal{O}_X(U_i)$-modules $M_i$ for each such that $\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$. If each $M_i$ is a finitely generated $A_i$-module, then $\mathcal{F}$ is called a *coherent sheaf*.
@@ -64,11 +64,11 @@ When dealing with quasi-coherent sheaves in general, one must be careful because
 
 From this perspective, a vector bundle can be thought of as a very special case of a (quasi-)coherent sheaf. Or conversely, when thinking of these (quasi-)coherent sheaves, one may regard them as very general forms of vector bundles. Specifically, a coherent sheaf can be thought of as an extension of the category of (finite rank) vector bundles so that it is closed under the operations of an abelian category, namely kernels, images, cokernels, etc., and intuitively it can be thought of as a vector bundle whose fiber dimension may vary from point to point. A quasi-coherent sheaf is what remains after removing the finite rank condition.
 
-Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9){: data-relation="weak" } the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
+Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9){: data-relation="requires-review" } the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
 
 ## Canonical Bundle
 
-We are now ready to define the canonical bundle. For this, we must first introduce the cotangent bundle on a variety, and the following definition is what we already saw in [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" }, but we introduce it again for completeness.
+We are now ready to define the canonical bundle. For this, we must first introduce the cotangent bundle on a variety, and the following definition is what we already saw in [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" reviewed="" }, but we introduce it again for completeness.
 
 ::: Definition 2
 The *cotangent bundle* $\Omega_X^1$ of a smooth variety $X$ is the dual vector bundle of the tangent bundle $\mathcal{T}_X$.
@@ -77,13 +77,13 @@ The *cotangent bundle* $\Omega_X^1$ of a smooth variety $X$ is the dual vector b
 Then the construction we examined in the previous section is for the following.
 
 ::: Proposition 3
-For a smooth affine variety $X$ with coordinate ring $A$, $\Omega_X^1$ is the vector bundle corresponding to $\widetilde{\Omega_{A/\mathbb{K}}}$. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3){: data-relation="required" })
+For a smooth affine variety $X$ with coordinate ring $A$, $\Omega_X^1$ is the vector bundle corresponding to $\widetilde{\Omega_{A/\mathbb{K}}}$. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3){: data-relation="required" reviewed="" })
 :::
 
 ::: Proof
 For this, it will be convenient to rewrite the previously defined tangent bundle and cotangent bundle in the language of sheaves. First, let us define the tangent sheaf $\mathcal{T}_X$. For an open subset $U$ of $X$, we define the sheaf given by the collection of $\mathbb{K}$-derivations $\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$ on $\mathcal{O}_X(U)$ as the tangent sheaf.
 
-Our main tool is the universal property of Kähler differentials. ([\[Commutative Algebra\] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2){: data-relation="required" }) That is, for any $A$-module $N$, we use the natural isomorphism
+Our main tool is the universal property of Kähler differentials. ([\[Commutative Algebra\] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2){: data-relation="required" reviewed="" }) That is, for any $A$-module $N$, we use the natural isomorphism
 
 $$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
@@ -112,7 +112,7 @@ This result shows that the cotangent bundle is represented by differential $1$-f
 The cotangent bundle of $\mathbb{A}^n$ is $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$. Algebraically, if we fix the coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$ of $\mathbb{A}^n$, then the Kähler differentials of this $\mathbb{K}$-algebra form the free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$, so this result aligns well with our intuition.
 :::
 
-On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent bundle $\Omega_X^1$, since each fiber of $\Omega_X^1$ is $n$-dimensional, we know that taking its $n$-fold exterior product yields a line bundle. ([§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" })
+On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent bundle $\Omega_X^1$, since each fiber of $\Omega_X^1$ is $n$-dimensional, we know that taking its $n$-fold exterior product yields a line bundle. ([§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" reviewed="" })
 
 ::: Definition 5
 The *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dimension $n$ is defined as the top exterior power of the cotangent bundle
@@ -120,7 +120,7 @@ The *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dimension $n$ 
 $$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 :::
 
-We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are $n$-forms of the form $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$ for a regular function $f$, when we pick a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle over affine space as in [Example 4](#ex4){: data-relation="weak" }.
+We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are $n$-forms of the form $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$ for a regular function $f$, when we pick a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle over affine space as in [Example 4](#ex4){: data-relation="requires-review" }.
 
 On the other hand, from the correspondence between line bundles and divisor classes, we can define the following.
 
@@ -128,7 +128,7 @@ On the other hand, from the correspondence between line bundles and divisor clas
 The divisor class corresponding to the canonical bundle $\omega_X$ is called the *canonical divisor* and denoted by $K_X$. That is, $\omega_X \cong \mathcal{O}_X(K_X)$.
 :::
 
-Since we use [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19){: data-relation="required" } for this, note that $K_X$ is defined only as a divisor class.
+Since we use [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19){: data-relation="required" reviewed="" } for this, note that $K_X$ is defined only as a divisor class.
 
 ## Canonical Bundle of $\mathbb{P}^n$
 
@@ -156,7 +156,7 @@ where $E$ is a vector bundle of rank $r$ and $L$ is a vector bundle of rank $1$.
 
 $$\det(F)\cong \det(E)\otimes \det(L)$$
 
-Now let us apply this to the Euler exact sequence of [Proposition 7](#prop7){: data-relation="required" }. Since $E=\Omega_{\mathbb{P}^n}^1$ has rank $n$, $F=\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}$ has rank $n+1$, and $L=\mathcal{O}_{\mathbb{P}^n}$ has rank $1$, we have
+Now let us apply this to the Euler exact sequence of [Proposition 7](#prop7){: data-relation="required" reviewed="" }. Since $E=\Omega_{\mathbb{P}^n}^1$ has rank $n$, $F=\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}$ has rank $n+1$, and $L=\mathcal{O}_{\mathbb{P}^n}$ has rank $1$, we have
 
 $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \det(\Omega_{\mathbb{P}^n}^1)\otimes \det(\mathcal{O}_{\mathbb{P}^n})$$
 
@@ -164,7 +164,7 @@ On the right-hand side, $\det(\mathcal{O}_{\mathbb{P}^n})\cong \mathcal{O}_{\mat
 
 $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
-At this point, the canonical divisor is given by $K_{\mathbb{P}^n}=-(n+1)H$. From this computation and [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" }, we know that $\omega_{\mathbb{P}^n}$ has no regular sections.
+At this point, the canonical divisor is given by $K_{\mathbb{P}^n}=-(n+1)H$. From this computation and [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" reviewed="" }, we know that $\omega_{\mathbb{P}^n}$ has no regular sections.
 
 ::: Example 8
 We can also verify the above computation from the perspective of transition functions of $n$-forms. On the standard open cover $U_i = \{\x_i \neq 0\}$ of $\mathbb{P}^n$, setting affine coordinates $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$), we can consider the $n$-form on $U_i$
@@ -185,7 +185,7 @@ $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \
 
 Here $(-1)^{i+j}$ is the sign arising from gathering the sign of the factor with $k=i$ and rearranging the factors in order, and this can be absorbed by multiplying the $n$-form on each $U_i$ by $(-1)^i$, so it is safe to ignore.
 
-Then the $n$-forms on $U_i$ have the frame $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$, and the above computation says that the relation between the two frames is $\alpha_j = c_{ij}\alpha_i$ with $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$. Now writing a section as $s = f_i\alpha_i = f_j\alpha_j$, we have $f_i = c_{ij}f_j$, so by the convention of [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12){: data-relation="weak" }, the transition function between the trivialized functions is its inverse $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$. This matches the transition function of $\mathcal{O}_{\mathbb{P}^n}(-n-1)$.
+Then the $n$-forms on $U_i$ have the frame $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$, and the above computation says that the relation between the two frames is $\alpha_j = c_{ij}\alpha_i$ with $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$. Now writing a section as $s = f_i\alpha_i = f_j\alpha_j$, we have $f_i = c_{ij}f_j$, so by the convention of [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12){: data-relation="requires-review" }, the transition function between the trivialized functions is its inverse $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$. This matches the transition function of $\mathcal{O}_{\mathbb{P}^n}(-n-1)$.
 :::
 
 ## Adjunction Formula
@@ -196,7 +196,7 @@ For this, recall for a smooth variety $X$ and a smooth divisor $D$ the ideal she
 
 $$0\rightarrow \mathcal{I}_D\rightarrow \mathcal{O}_X\rightarrow \mathcal{O}_D\rightarrow 0$$
 
-([§Line Bundles and Vector Bundles, ⁋Definition 17](/en/math/algebraic_varieties/line_bundles#def17){: data-relation="required" }) Then from this we can compute that the first-order approximation of $\mathcal{I}_D$ is given by
+([§Line Bundles and Vector Bundles, ⁋Definition 17](/en/math/algebraic_varieties/line_bundles#def17){: data-relation="required" reviewed="" }) Then from this we can compute that the first-order approximation of $\mathcal{I}_D$ is given by
 
 $$\mathcal{I}_D/\mathcal{I}_D^2=\mathcal{I}_D\otimes_{\mathcal{O}_X}\mathcal{O}_D=\mathcal{O}_X(-D)\vert_D$$
 
@@ -244,7 +244,7 @@ The degree-genus formula is in fact a special case of the Riemann-Roch theorem, 
 
 ## Canonical Divisor of a Blow-up
 
-In [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" }, we examined the blow-up of $\mathbb{A}^2$ at a point $0$. We now generalize this example further and examine how the canonical divisor behaves in this general setting.
+In [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" reviewed="" }, we examined the blow-up of $\mathbb{A}^2$ at a point $0$. We now generalize this example further and examine how the canonical divisor behaves in this general setting.
 
 For a smooth variety $X$ and a smooth subvariety $Z$ of codimension $r$, the blow-up of $X$ along $Z$ is given by the birational morphism
 
@@ -254,7 +254,7 @@ where $\pi$ is an isomorphism away from the fiber over $Z$, and the fiber over $
 
 $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
-Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what we did in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" }, where the exceptional divisor corresponding to the fiber over a point $0$ was attached by projectivizing the directions *coming into* this point from outside it.
+Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what we did in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" reviewed="" }, where the exceptional divisor corresponding to the fiber over a point $0$ was attached by projectivizing the directions *coming into* this point from outside it.
 
 Now restricting $\pi:\widetilde{X}\rightarrow X$ to $E$, let us consider
 
@@ -264,7 +264,7 @@ For notational convenience, we abbreviate this as $\pi_E$. Now thinking of the t
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
-On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-relation="weak" }, we obtain the following.
+On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-relation="weak" reviewed="" }, we obtain the following.
 
 ::: Proposition 11 (Relative Euler Sequence)
 For any vector bundle $V\rightarrow B$ and projectivized vector bundle $\pi: \mathbb{P}(V)\rightarrow B$, there exists a short exact sequence
@@ -284,7 +284,7 @@ holds. Now examining the part
 
 $$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
 
-we have already seen in the proof of [Proposition 7](#prop7){: data-relation="required" } that viewing how a line in $\mathbb{P}^n$ maps to some quotient is precisely the tangent space, so similarly
+we have already seen in the proof of [Proposition 7](#prop7){: data-relation="required" reviewed="" } that viewing how a line in $\mathbb{P}^n$ maps to some quotient is precisely the tangent space, so similarly
 
 $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 
@@ -354,7 +354,7 @@ Comparing these two expressions, we obtain $-a-1 = -r$, that is, $a = r-1$.
 Let us examine the following concrete case.
 
 ::: Example 13 (Blow-up of $\mathbb{A}^2$ at a Point)
-Consider the blow-up of $X = \mathbb{A}^2$ at the origin $Z = \{0\}$. Since $K_{\mathbb{A}^2} = 0$ and the codimension of $Z$ is $r = 2$, by [Proposition 12](#prop12){: data-relation="required" },
+Consider the blow-up of $X = \mathbb{A}^2$ at the origin $Z = \{0\}$. Since $K_{\mathbb{A}^2} = 0$ and the codimension of $Z$ is $r = 2$, by [Proposition 12](#prop12){: data-relation="required" reviewed="" },
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
