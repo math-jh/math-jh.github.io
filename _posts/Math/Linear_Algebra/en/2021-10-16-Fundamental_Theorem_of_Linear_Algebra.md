@@ -149,7 +149,7 @@ $$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\be
 and therefore the matrix representation $[L_1+L_2]^\mathcal{B}_\mathcal{C}$ of $L_1+L_2$ is exactly $[L_1]^\mathcal{B}_\mathcal{C}+[L_2]^\mathcal{B}_\mathcal{C}$. Similarly, the scalar multiplication property also holds.
 :::
 
-[Theorem 3](#thm3){: data-relation="required" } also admits a similar generalization.
+[Theorem 3](#thm3){: data-lid="y9mfy" data-relation="required" } also admits a similar generalization.
 
 ::: Theorem 5
 Let three $\mathbb{K}$-vector spaces $V_1,V_2,V_3$ and bases $\mathcal{B}_1=\{x_1,\ldots,x_n\}$, $\mathcal{B}_2=\{y_1,\ldots, y_m\}$, $\mathcal{B}_3=\{z_1,\ldots, z_k\}$ of each be given. Then for any $L_1:V_1\rightarrow V_2$, $L_2:V_2\rightarrow V_3$, we always have
@@ -171,7 +171,7 @@ Now, grouping the above expression by the $z$'s, we get
 
 $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)z_k$$
 
-As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3){: data-relation="weak" }, this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
+As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3){: data-lid="of699" data-relation="weak" }, this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
 :::
 
 [Theorem 4](#thm4){: data-lid="pbgw2" data-relation="required" } above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="3646q" data-relation="weak" }. The following corollary is also a consequence of the fundamental theorem.

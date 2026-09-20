@@ -133,7 +133,7 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 ::: Proof
 The second claim is a tautology.
 
-If $L$ is injective, then the $v$ satisfying $L(v)=0$ must be unique, and by [Proposition 2](#prop2){: data-relation="required" }, $0$ satisfies this equation, so we must have $\ker L=\{0\}$. Thus, for the first claim it suffices to show
+If $L$ is injective, then the $v$ satisfying $L(v)=0$ must be unique, and by [Proposition 2](#prop2){: data-lid="86c0z" data-relation="required" }, $0$ satisfies this equation, so we must have $\ker L=\{0\}$. Thus, for the first claim it suffices to show
 
 > $$\ker L=\{0\}\implies\text{$L$ is injective}$$
 
@@ -157,7 +157,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 
     $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
 
-    then by [Proposition 3](#prop3){: data-relation="required" },
+    then by [Proposition 3](#prop3){: data-lid="js08x" data-relation="required" },
 
     $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
 
@@ -167,7 +167,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
-    Applying $L$ to both sides and using [Proposition 3](#prop3){: data-relation="required" },
+    Applying $L$ to both sides and using [Proposition 3](#prop3){: data-lid="kezui" data-relation="required" },
     
     $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
