@@ -75,7 +75,7 @@ so $[G,G]\leq\ker f$. Now by [§Group Isomorphisms, ⁋Proposition 3](/en/math/a
 Consider any group $G$ and the quotient homomorphism $p:G\rightarrow G/[G,G]$. Then for any abelian group $H$ and group homomorphism $f:G \rightarrow H$, there exists a unique group homomorphism satisfying $f=\bar{f}\circ p$, namely $\bar{f}:G/[G,G]\rightarrow H$.
 :::
 
-In particular, suppose a group homomorphism $f:G\rightarrow H$ is given. Then by the composition $G\rightarrow H\rightarrow H/[H,H]$, we obtain a group homomorphism from the group $G$ to the abelian group $H/[H,H]$, and by [Proposition 5](#prop5){: data-relation="required" reviewed="" }, this induces a group homomorphism from $G/[G,G]$ to $H/[H,H]$.
+In particular, suppose a group homomorphism $f:G\rightarrow H$ is given. Then by the composition $G\rightarrow H\rightarrow H/[H,H]$, we obtain a group homomorphism from the group $G$ to the abelian group $H/[H,H]$, and by [Proposition 5](#prop5){: data-lid="ymc1d" data-relation="required" reviewed="" }, this induces a group homomorphism from $G/[G,G]$ to $H/[H,H]$.
 
 ::: Definition 6
 For any group $G$, we call the quotient group $G/[G,G]$ the *abelianization* of $G$, and denote it by $G^\ab$.
@@ -91,7 +91,7 @@ hold, and these two equalities follow from uniqueness once we show that the righ
 For the forgetful functor $U:\Ab \rightarrow \Grp$ and the abelianization functor $\ab:\Grp \rightarrow \Ab$, there exists an adjunction $\ab\dashv U$.
 :::
 
-The bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$ for this claim follows immediately from the correspondence $\bar{f}\mapsto\bar{f}\circ p$ of [Proposition 5](#prop5){: data-relation="required" reviewed="" }, and the only remaining thing to show is naturality in each factor; but this too follows by an argument similar to the uniqueness argument examined above.
+The bijection $\Hom_\Ab(G^\ab,H)\cong \Hom_\Grp(G,U(H))$ for this claim follows immediately from the correspondence $\bar{f}\mapsto\bar{f}\circ p$ of [Proposition 5](#prop5){: data-lid="3le7d" data-relation="required" reviewed="" }, and the only remaining thing to show is naturality in each factor; but this too follows by an argument similar to the uniqueness argument examined above.
 
 ## Free Abelian Groups
 
@@ -148,7 +148,7 @@ Therefore, in order to regard $\Hom_\Ab(-,-)$ as an internal $\Hom$, we must end
 
 ## Tensor Product
 
-The fundamental reason why the equation in [Example 10](#ex10){: data-relation="required" reviewed="" } cannot hold is quite simple. The reason why the above isomorphism held in $\Set$ was that for any function $f:A\times B \rightarrow C$, fixing an element of $A$ or an element of $B$ left a function from $B$ or $A$ to $C$.
+The fundamental reason why the equation in [Example 10](#ex10){: data-lid="389d8" data-relation="required" reviewed="" } cannot hold is quite simple. The reason why the above isomorphism held in $\Set$ was that for any function $f:A\times B \rightarrow C$, fixing an element of $A$ or an element of $B$ left a function from $B$ or $A$ to $C$.
 
 On the other hand, among group homomorphisms $f:G\times H \rightarrow A$, the only $f$ such that fixing each component yields a group homomorphism is the zero map. This is because for any $x\in G$, if $f(x, -)$ is a group homomorphism, then we must have $f(x,0)=0$, and similarly for any $y\in H$, we must have $f(0,y)=0$, so substituting this into the condition that $f$ is a group homomorphism
 
@@ -170,7 +170,7 @@ Now for fixed $G,H\in\obj(\Ab)$, define the set $\Bilin(G,H;A)$ by
 
 $$\Bilin(G,H;A)=\{\text{bilinear maps from $G\times H$ to $A$}\}$$
 
-By the above argument, if we replace the left-hand side of the first equation in [Example 10](#ex10){: data-relation="required" reviewed="" } with $\Bilin(G,H;A)$, we can verify that we obtain the isomorphism
+By the above argument, if we replace the left-hand side of the first equation in [Example 10](#ex10){: data-lid="4j458" data-relation="required" reviewed="" } with $\Bilin(G,H;A)$, we can verify that we obtain the isomorphism
 
 $$\Bilin(G,H;A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
