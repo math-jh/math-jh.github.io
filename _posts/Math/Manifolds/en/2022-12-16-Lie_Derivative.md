@@ -118,7 +118,7 @@ In other words, $X$ and $Y$ being $F$-related means that the following diagram c
 
 {% diagram Math/Manifolds/Lie_Derivative-1.svg width="7.49em" alt="F-related" %}
 
-As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2){: data-relation="weak" }) to each function $f$, whether $X$ and $Y$ are $F$-related can also be tested by applying them to each function.
+As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2){: data-lid="eu3wt" data-relation="weak" }) to each function $f$, whether $X$ and $Y$ are $F$-related can also be tested by applying them to each function.
 
 ::: Proposition 7
 Let $F:M\rightarrow N$ be a $C^\infty$ map, and let $X\in\mathfrak{X}(M)$ and $Y\in\mathfrak{X}(N)$. Then $X$ and $Y$ are $F$-related if and only if for every $f$,

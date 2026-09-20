@@ -104,7 +104,7 @@ Nevertheless, if additional conditions are imposed on $(A,\iota)$, the submanifo
 Fix a subset $A$ of a manifold $M$ and a topology $\mathcal{T}$ on $A$. Then there exists at most one differentiable structure making $(A,\iota)$ a submanifold of $M$.
 :::
 ::: Proof
-This is immediate from the first claim of [Proposition 2](#prop2){: data-relation="required" }.
+This is immediate from the first claim of [Proposition 2](#prop2){: data-lid="zv4if" data-relation="required" }.
 :::
 
 ::: Proposition 5
@@ -115,7 +115,7 @@ First, applying [Proposition 4](#prop4){: data-lid="k0mgi" data-relation="requir
 
 {% diagram Math/Manifolds/Uniqueness_of_Submanifold-4.svg width="12.99em" alt="uniqueness" %}
 
-Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2){: data-relation="required" }. Moreover, by the chain rule
+Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2){: data-lid="am0a8" data-relation="required" }. Moreover, by the chain rule
 
 $$\dd{\iota}'=\dd{\iota}\circ \dd{(\id)}$$
 

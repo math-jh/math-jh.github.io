@@ -125,9 +125,9 @@ holds for all $u$, so the directional derivative of this correspondence in the $
 The following are all examples of smooth functors.
 
 - Dual functor $(-)^\ast$ ([\[Linear Algebra\] §Dual Space](/en/math/linear_algebra/dual_space){: data-lid="cqup0" data-relation="weak" }),
-- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
-- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
-- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-relation="weak" }),
+- $k$-th tensor functor $\mathcal{T}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-lid="y0f09" data-relation="weak" }),
+- $k$-th symmetric functor $\mathcal{S}^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-lid="pba1v" data-relation="weak" }),
+- $k$-th exterior functor $\bigwedge\nolimits^k(-)$ ([\[Multilinear Algebra\] §Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras){: data-lid="rdkzz" data-relation="weak" }),
 - Tensor product $-\otimes -$,
 - Direct sum $-\oplus-$.
 :::
