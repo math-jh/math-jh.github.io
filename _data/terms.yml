@@ -15757,7 +15757,7 @@ R:
   ko: 상대 가상류
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §Very ample hypersurface의 상대 GW 불변량: Gathmann의 정리'
+  - label: '[그로모프-위튼 이론] §Very ample hypersurface의 그로모프-위튼 불변량'
     url: /ko/math/gromov-witten_theory/gathmann_relative_gw
 - id: relatively_algebraically_closed_field
   en: relatively algebraically closed field
