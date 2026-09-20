@@ -466,6 +466,48 @@ def extract_links(
 _TEXT_OVERRIDE: dict[Path, str] = {}
 
 
+LID_RE = re.compile(r'\bdata-lid\s*=\s*["\']([^"\']*)["\']')
+
+
+def link_lid(text: str, link: Link) -> str | None:
+    """이 링크 IAL 의 `data-lid` — 출현의 영속 식별자."""
+    if link.ial_start is None or link.ial_end is None:
+        return None
+    found = LID_RE.search(text[link.ial_start:link.ial_end])
+    return found.group(1) if found else None
+
+
+def ko_reviewed_lids(paths: list[Path], texts: dict[Path, str]) -> set[str]:
+    """이 unit 의 KO 쪽에서 사람이 검토를 마친 링크들의 lid."""
+    done: set[str] = set()
+    for path in paths:
+        if path.parent.name != "ko":
+            continue
+        for kwargs in ({}, {"tagged": True}, {"review": True}):
+            for link in extract_links(path, texts[path], **kwargs):
+                if link.reviewed:
+                    lid = link_lid(texts[path], link)
+                    if lid:
+                        done.add(lid)
+    return done
+
+
+def settled_for_human(link: Link, text: str, ko_done: set[str]) -> bool:
+    """이 링크의 검토가 끝났는가.
+
+    판정의 정본은 KO 다. EN 링크는 자기 번역본의 사본이므로, 같은 출현을 가리키는
+    KO 링크를 사람이 검토했다면 EN 을 다시 물을 이유가 없다 — 같은 문장을 두 번
+    읽게 만들 뿐이고, 실제로 그 두 번이 갈려서 66건의 불일치가 생겼다.
+    그래서 EN 은 `lid` 로 KO 의 완료를 상속한다.
+    """
+    if link.reviewed:
+        return True
+    if link.source.parent.name != "en":
+        return False
+    lid = link_lid(text, link)
+    return bool(lid) and lid in ko_done
+
+
 def read_post(path: Path) -> str:
     """Article text as the current pass should see it.
 
@@ -1079,6 +1121,21 @@ def select_unit(
                     # reopens it.
                     lease.release()
                     continue
+                # 판정의 정본은 KO 다. 양쪽에 미태그 링크가 있으면 KO 만 먼저
+                # 모델에 넘긴다 — 둘을 한 패스에 같이 넘기면 EN 이 독립 판정을
+                # 받아 같은 출현에 다른 값이 붙고, 그게 불일치의 발생원이다.
+                ko_open = [link for link in links if link.source.parent.name == "ko"]
+                if ko_open and len(ko_open) != len(links):
+                    return "first", paths, texts, ko_open, lease
+                # KO 가 끝났으면 EN 은 같은 lid 를 따라 값을 물려받는다.
+                relations = ko_relations(paths, texts)
+                inheritable = [
+                    link for link in links
+                    if link.source.parent.name == "en"
+                    and relations.get(link_lid(texts[link.source], link) or "")
+                ]
+                if inheritable:
+                    return "inherit", paths, texts, inheritable, lease
                 return "first", paths, texts, links, lease
             tagged = [p_link for p in paths
                       for p_link in extract_links(p, texts[p], tagged=True)
@@ -1092,7 +1149,9 @@ def select_unit(
                 }
                 lease.release()
                 continue
-            pending_review = [link for link in tagged if not link.reviewed]
+            ko_done = ko_reviewed_lids(paths, texts)
+            pending_review = [link for link in tagged
+                              if not settled_for_human(link, texts[link.source], ko_done)]
             if not pending_review:
                 updates[key] = {
                     **cleared(entry), "status": "done", "hash": fingerprint,
@@ -1157,9 +1216,11 @@ def backlog_complete() -> bool:
         entry = state.get("units", {}).get(key, {})
         raw_hash = sha("\0".join(texts[p] for p in paths))
         content_hash = verification_fingerprint(paths, texts, parked)
+        ko_done = ko_reviewed_lids(paths, texts)
         pending_review = [
             link for p in paths for link in extract_links(p, texts[p], tagged=True)
-            if link.ident not in parked and not link.reviewed
+            if link.ident not in parked
+            and not settled_for_human(link, texts[p], ko_done)
         ]
         legacy_complete = (not entry.get("reviewed_marker_version")
                            and verified_at_content(entry, raw_hash, content_hash))
@@ -1340,6 +1401,49 @@ def run_verify_pass(
     return 0
 
 
+def ko_relations(paths: list[Path], texts: dict[Path, str]) -> dict[str, str]:
+    """이 unit 의 KO 쪽에서 판정이 끝난 링크들의 {lid: relation}."""
+    out: dict[str, str] = {}
+    for path in paths:
+        if path.parent.name != "ko":
+            continue
+        for link in extract_links(path, texts[path], tagged=True):
+            if link.relation in RELATIONS:
+                lid = link_lid(texts[path], link)
+                if lid:
+                    out[lid] = link.relation
+    return out
+
+
+def run_inherit_pass(
+    paths: list[Path], originals: dict[Path, str], links: list[Link],
+    entry: dict, *, commit: bool,
+) -> int:
+    """KO 에서 이미 내린 판정을 같은 lid 의 EN 링크에 옮긴다. 모델을 부르지 않는다.
+
+    EN 링크는 KO 링크의 번역이므로 같은 출현에 대해 두 번 판단할 이유가 없다.
+    두 번 판단한 결과가 갈린 것이 지금 남아 있는 불일치이고, 이 패스는 그
+    발생원을 막는다. 여기서 값이 붙은 링크는 사람 검토도 KO 에서 상속한다.
+    """
+    key = unit_key(paths)
+    relations = ko_relations(paths, originals)
+    decisions = {link.ident: relations[link_lid(originals[link.source], link)]
+                 for link in links}
+    guard_unchanged(paths, originals)
+    rendered = {p: annotate(originals[p], [x for x in links if x.source == p], decisions)
+                for p in paths}
+    publish(paths, originals, rendered, commit=commit,
+            detail=f"{paths[0].stem} EN 링크 {len(links)}건 KO 판정 상속")
+    merge_unit_states({key: {
+        **cleared(entry), "hash": sha("\0".join(rendered[p] for p in paths)),
+        "checked_at": int(time.time()),
+    }})
+    for link in links:
+        log(f"inherited {link.where()} {decisions[link.ident]} {link.brief()}")
+    log(f"inherited {key}: {len(links)} relation tag(s) from KO")
+    return 0
+
+
 def run_stamp_pass(
     paths: list[Path], originals: dict[Path, str], links: list[Link],
     entry: dict, *, commit: bool,
@@ -1383,7 +1487,7 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
         return 0
     stage, paths, originals, links, lease = selected
     key = unit_key(paths)
-    noun = "unclassified" if stage == "first" else "classified"
+    noun = "unclassified" if stage in ("first", "inherit") else "classified"
     try:
         log(f"selected {key} for {stage} pass: {len(links)} {noun} link(s)")
         if dry_run:
@@ -1399,6 +1503,8 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
         try:
             if stage == "stamp":
                 return run_stamp_pass(paths, originals, links, entry, commit=commit)
+            if stage == "inherit":
+                return run_inherit_pass(paths, originals, links, entry, commit=commit)
             assert runner is not None
             return runner(paths, originals, links, entry, fingerprint, commit=commit)
         except Exception as exc:

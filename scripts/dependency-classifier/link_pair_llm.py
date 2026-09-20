@@ -53,8 +53,8 @@ SCHEMA = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
-                "required": ["en_line", "lid"],
-                "properties": {"en_line": {"type": "integer"},
+                "required": ["en_ref", "lid"],
+                "properties": {"en_ref": {"type": "string"},
                                "lid": {"type": "string"}},
             },
         },
@@ -63,8 +63,8 @@ SCHEMA = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
-                "required": ["en_line", "why"],
-                "properties": {"en_line": {"type": "integer"},
+                "required": ["en_ref", "why"],
+                "properties": {"en_ref": {"type": "string"},
                                "why": {"type": "string"}},
             },
         },
@@ -95,7 +95,10 @@ times in one article and only the sentences say which occurrence is which. \
 Translation may reorder them, and may merge two Korean links into one English \
 link, so an English link legitimately has no counterpart sometimes.
 
-For each English link listed here, decide which Korean occurrence it renders.
+For each English link listed here, decide which Korean occurrence it renders. \
+Each one carries a tag like `[e3]`; answer with that tag, because a single line \
+can hold several links to the same target and the line number alone would not \
+say which of them you mean.
 
 {groups}
 
@@ -133,6 +136,7 @@ def open_groups(ko_post, en_post):
     en_text, en_groups = P._grouped(en_post)
     taken = set(L.LID_RE.findall(en_text))
     out = []
+    counter = 0
     for key, en_links in en_groups.items():
         loose_en = [lk for lk in en_links if P._lid_of(en_text, lk) is None]
         if not loose_en:
@@ -142,17 +146,23 @@ def open_groups(ko_post, en_post):
             lid = P._lid_of(ko_text, lk)
             if lid and lid not in taken:
                 candidates.append((lid, lk.line, lk.target))
-        if candidates:
-            out.append((key, loose_en, candidates))
+        if not candidates:
+            continue
+        # 한 줄에 같은 대상 링크가 여럿일 수 있으므로 줄번호로는 가리킬 수 없다.
+        tagged = []
+        for lk in loose_en:
+            counter += 1
+            tagged.append((f"e{counter}", lk))
+        out.append((key, tagged, candidates))
     return ko_text, en_text, out
 
 
 def render_groups(groups) -> str:
     blocks = []
-    for key, en_links, candidates in groups:
+    for key, tagged, candidates in groups:
         lines = [f"Target `{key[0]}` anchor `{key[1] or '(none)'}`:"]
-        for lk in en_links:
-            lines.append(f"  English link at line {lk.line}  ->  {lk.target}")
+        for ref, lk in tagged:
+            lines.append(f"  [{ref}] English link at line {lk.line}  ->  {lk.target}")
         lines.append("  Korean candidates:")
         for lid, line, target in candidates:
             lines.append(f"    lid {lid}  line {line}  {target}")
@@ -184,23 +194,26 @@ def call_model(ko_post, en_post, groups) -> dict:
 
 def validate(answer: dict, groups) -> tuple[list, list[str]]:
     """(EN 링크, lid) 목록과 거절 사유들. 규칙을 어긴 항목만 버린다."""
-    by_line, allowed = {}, {}
-    for _key, en_links, candidates in groups:
-        for lk in en_links:
-            by_line[lk.line] = lk
-            allowed[lk.line] = {lid for lid, _l, _t in candidates}
-    accepted, refused, used = [], [], set()
+    by_ref, allowed = {}, {}
+    for _key, tagged, candidates in groups:
+        for ref, lk in tagged:
+            by_ref[ref] = lk
+            allowed[ref] = {lid for lid, _l, _t in candidates}
+    accepted, refused, used, answered = [], [], set(), set()
     for item in answer.get("assignments", []):
-        line, lid = item.get("en_line"), item.get("lid")
-        if line not in by_line:
-            refused.append(f"line {line}: 묻지 않은 링크")
-        elif lid not in allowed[line]:
-            refused.append(f"line {line}: 후보 밖의 lid {lid}")
+        ref, lid = item.get("en_ref"), item.get("lid")
+        if ref not in by_ref:
+            refused.append(f"{ref}: 묻지 않은 링크")
+        elif ref in answered:
+            refused.append(f"{ref}: 한 링크에 두 번 답함")
+        elif lid not in allowed[ref]:
+            refused.append(f"{ref}: 후보 밖의 lid {lid}")
         elif lid in used:
-            refused.append(f"line {line}: lid {lid} 중복 사용")
+            refused.append(f"{ref}: lid {lid} 중복 사용")
         else:
+            answered.add(ref)
             used.add(lid)
-            accepted.append((by_line[line], lid))
+            accepted.append((by_ref[ref], lid))
     return accepted, refused
 
 
@@ -305,6 +318,10 @@ def main() -> int:
     if written:
         detail = "\n".join(f"- {path}" for path in written)
         commit_outputs("Link Pairing", written, detail, log=print)
+        # 방금 lid 를 채운 EN 링크는 이제 KO 의 완료를 상속할 수 있다. 그 자리에서
+        # 마커를 회수해 두면 이 백필이 끝나는 시점에 남는 잔재가 없다.
+        subprocess.run([sys.executable, str(Path(__file__).with_name(
+            "retire_en_reviewed.py")), "--apply", "--quiet"], cwd=str(ROOT))
     if done == 0:
         print("남은 쌍 없음")
     return 0
