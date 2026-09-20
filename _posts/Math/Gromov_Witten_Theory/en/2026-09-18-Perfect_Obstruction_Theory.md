@@ -201,11 +201,11 @@ Indeed, at each point $((C,p_\bullet),x)$, the pullback by the constant map $\mu
 
 $$H^1(C,\mu^\ast T_X)\cong H^1(C,\mathcal{O}_C)\otimes T_x X$$
 
-Since $C$ is a genus $1$ curve, $\dim H^1(C,\mathcal{O}_C)=1$, and hence the rank of this bundle is $\dim X=d$, matching exactly the excess dimension $d$ between the actual dimension $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$ and the virtual dimension $\vdim=n$ of the moduli space. Meanwhile, the moduli stack of prestable curves $\mathfrak{M}_{1,n}$ is smooth and the stability of curves is an open condition, so its open substack $\overline{\mathcal{M}}_{1,n}$ is also smooth, and together with the smoothness of the target $X$, the entire moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ is smooth. Since the obstruction $h^1(((E')^\bullet)^\vee)$ is also a vector bundle, the local model of [Example 1](#ex1){: data-relation="weak" } with $s\equiv0$ applies directly to yield
+Since $C$ is a genus $1$ curve, $\dim H^1(C,\mathcal{O}_C)=1$, and hence the rank of this bundle is $\dim X=d$, matching exactly the excess dimension $d$ between the actual dimension $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$ and the virtual dimension $\vdim=n$ of the moduli space. Meanwhile, the moduli stack of prestable curves $\mathfrak{M}_{1,n}$ is smooth and the stability of curves is an open condition, so its open substack $\overline{\mathcal{M}}_{1,n}$ is also smooth, and together with the smoothness of the target $X$, the entire moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ is smooth. Since the obstruction $h^1(((E')^\bullet)^\vee)$ is also a vector bundle, the local model of [Example 1](#ex1){: data-lid="1f2tf" data-relation="weak" } with $s\equiv0$ applies directly to yield
 
 $$[\overline{\mathcal{M}}_{1,n}(X,0)]^\vir=e(p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X)\cap[\overline{\mathcal{M}}_{1,n}\times X]$$
 
-This recovers a class of dimension $n$ by capping with the Euler class on an $(n+d)$-dimensional space, effectively reenacting the situation where $s\equiv0$ from [Example 1](#ex1){: data-relation="weak" } in the moduli space of stable maps.
+This recovers a class of dimension $n$ by capping with the Euler class on an $(n+d)$-dimensional space, effectively reenacting the situation where $s\equiv0$ from [Example 1](#ex1){: data-lid="m97nc" data-relation="weak" } in the moduli space of stable maps.
 :::
 
 ---

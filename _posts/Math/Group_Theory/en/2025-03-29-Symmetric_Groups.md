@@ -162,7 +162,7 @@ For example, the identity permutation has 0 inversions so is an even permutation
 
 > a permutation that can be expressed as a product of an even number of transpositions
 
-The strength of this definition compared to ours just now is that properties such as the product of two even permutations being even and the product of an odd and an even permutation being odd are more intuitively obvious. But unlike our definition just now, it is not obvious that the parity (i.e., whether $\sigma$ is even or odd) is well defined. Therefore it is convenient to carry both definitions along. These books therefore show through the following lemma that this definition is the same as [Definition 9](#def9){: data-relation="required" } we just defined.
+The strength of this definition compared to ours just now is that properties such as the product of two even permutations being even and the product of an odd and an even permutation being odd are more intuitively obvious. But unlike our definition just now, it is not obvious that the parity (i.e., whether $\sigma$ is even or odd) is well defined. Therefore it is convenient to carry both definitions along. These books therefore show through the following lemma that this definition is the same as [Definition 9](#def9){: data-lid="uzrn8" data-relation="required" } we just defined.
 
 ::: Lemma 10
 That $\sigma$ is an even permutation is equivalent to $\sigma$ being expressible as a product of an even number of transpositions.
@@ -180,7 +180,7 @@ Then for each pair $(i,j)$, the term $(x_{\sigma(i)}-x_{\sigma(j)})$ can be rewr
 
 $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text{if $\sigma(i)<\sigma(j)$}\\-(x_{\sigma(j)}-x_{\sigma(i)})&\text{if $\sigma(i)>\sigma(j)$}\end{cases}\tag{1}$$
 
-Moreover, since $\sigma$ is a bijection, if we rewrite all terms in this way we see that $\sigma(\Delta)$ is exactly the same polynomial as $\Delta$ up to sign. Therefore, defining $\sgn(\sigma)=\sigma(\Delta)/\Delta$, the quantity $\sgn(\sigma)$ becomes exactly the parity of $\sigma$ defined in the sense of [Definition 9](#def9){: data-relation="required" }.
+Moreover, since $\sigma$ is a bijection, if we rewrite all terms in this way we see that $\sigma(\Delta)$ is exactly the same polynomial as $\Delta$ up to sign. Therefore, defining $\sgn(\sigma)=\sigma(\Delta)/\Delta$, the quantity $\sgn(\sigma)$ becomes exactly the parity of $\sigma$ defined in the sense of [Definition 9](#def9){: data-lid="x677c" data-relation="required" }.
 
 From the definition, it is obvious that if $\sigma$ is a transposition then $\sgn(\sigma)=-1$. Therefore, if we can only show that $\sgn$ is multiplicative,
 
