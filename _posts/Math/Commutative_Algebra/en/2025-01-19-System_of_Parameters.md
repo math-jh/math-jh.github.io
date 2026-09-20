@@ -15,7 +15,7 @@ translation_source: antigravity-gemini-3.8-flash-high
 ---
 ## System of parameters
 
-Combining [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-relation="required" } and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-relation="required" } from the previous post, we have the following.
+Combining [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jfybw" data-relation="required" } and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-lid="a7vwh" data-relation="required" } from the previous post, we have the following.
 
 ::: Corollary 1
 Let $(A, \mathfrak{m})$ be a Noetherian local ring. Then $\dim A$ is, among those integers for which the following condition
@@ -25,9 +25,9 @@ Let $(A, \mathfrak{m})$ be a Noetherian local ring. Then $\dim A$ is, among thos
 holds, the smallest such $d$.
 :::
 ::: Proof
-First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" data-relation="required" }, $\mathfrak{m}$ is minimal among the prime ideals containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-relation="required" }, we have $\codim \mathfrak{m}\leq d$. 
+First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" data-relation="required" }, $\mathfrak{m}$ is minimal among the prime ideals containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jtvir" data-relation="required" }, we have $\codim \mathfrak{m}\leq d$. 
 
-Conversely, suppose that $(A,\mathfrak{m})$ satisfies $\dim A=d$. Then by definition, the supremum of lengths, $d$, comes from a chain of prime ideals starting at $\mathfrak{m}$, so it is precisely equal to $\codim \mathfrak{m}$. Therefore, using [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-relation="required" }, we can ensure that $\mathfrak{m}$ is a minimal prime containing the ideal $(a_1,\ldots, a_d)$. Then $\mathfrak{m}$ is the unique prime ideal in $A/(a_1,\ldots, a_d)$, so this must be precisely the nilradical of $A/(a_1,\ldots, a_d)$ ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" }), which yields the desired result. 
+Conversely, suppose that $(A,\mathfrak{m})$ satisfies $\dim A=d$. Then by definition, the supremum of lengths, $d$, comes from a chain of prime ideals starting at $\mathfrak{m}$, so it is precisely equal to $\codim \mathfrak{m}$. Therefore, using [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-lid="97tva" data-relation="required" }, we can ensure that $\mathfrak{m}$ is a minimal prime containing the ideal $(a_1,\ldots, a_d)$. Then $\mathfrak{m}$ is the unique prime ideal in $A/(a_1,\ldots, a_d)$, so this must be precisely the nilradical of $A/(a_1,\ldots, a_d)$ ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="l97sy" data-relation="required" }), which yields the desired result. 
 :::
 
 ::: Proposition 2
@@ -38,7 +38,7 @@ $$\dim_K(\mathfrak{m}/\mathfrak{m}^2) \ge \dim A$$
 where $K = A/\mathfrak{m}$.
 :::
 ::: Proof
-Let $n=\dim_K(\mathfrak{m}/\mathfrak{m}^2)$, choose a basis of $\mathfrak{m}/\mathfrak{m}^2$, and lift its elements to $y_1,\ldots, y_n\in \mathfrak{m}$. Since $A$ is Noetherian, $\mathfrak{m}$ is finitely generated, and hence by the second result of [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }, $y_1,\ldots, y_n$ generate $\mathfrak{m}$. Then for any $k\geq 1$, we have $\mathfrak{m}^k\subseteq \mathfrak{m}=(y_1,\ldots, y_n)$, so by [Corollary 1](#cor1){: data-relation="required" }, $\dim A\leq n$.
+Let $n=\dim_K(\mathfrak{m}/\mathfrak{m}^2)$, choose a basis of $\mathfrak{m}/\mathfrak{m}^2$, and lift its elements to $y_1,\ldots, y_n\in \mathfrak{m}$. Since $A$ is Noetherian, $\mathfrak{m}$ is finitely generated, and hence by the second result of [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-lid="awz6r" data-relation="required" }, $y_1,\ldots, y_n$ generate $\mathfrak{m}$. Then for any $k\geq 1$, we have $\mathfrak{m}^k\subseteq \mathfrak{m}=(y_1,\ldots, y_n)$, so by [Corollary 1](#cor1){: data-lid="k03gz" data-relation="required" }, $\dim A\leq n$.
 :::
 
 We now define the following. 
@@ -60,9 +60,9 @@ Showing that these conditions are all equivalent is what we have already done in
 
 $$d=\dim A=\codim \mathfrak{m}$$
 
-a parameter ideal of $A$, $\mathfrak{a}$, can only be generated by at least $d$ elements by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-relation="required" }. 
+a parameter ideal of $A$, $\mathfrak{a}$, can only be generated by at least $d$ elements by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-lid="kl744" data-relation="required" }. 
 
-In the case of an $A$-module $M$ and a parameter ideal $\mathfrak{a}$, we know by the equivalence between the first and second conditions of [§Jordan–Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-relation="required" } that $M/\mathfrak{a}M$ having finite length is equivalent to sufficiently high powers of $\mathfrak{m}$ always annihilating $M/\mathfrak{a}M$. That is, $\mathfrak{m}^k M \subseteq \mathfrak{a}M$ must hold, from which we see that the two definitions coincide when viewing $A$ itself as an $A$-module. In a similar way, we can transfer our previous results on the relationship between ideals and dimension of a ring to results on parameter ideals of a module; for this, we first need the following simple lemmas.
+In the case of an $A$-module $M$ and a parameter ideal $\mathfrak{a}$, we know by the equivalence between the first and second conditions of [§Jordan–Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="y31hd" data-relation="required" } that $M/\mathfrak{a}M$ having finite length is equivalent to sufficiently high powers of $\mathfrak{m}$ always annihilating $M/\mathfrak{a}M$. That is, $\mathfrak{m}^k M \subseteq \mathfrak{a}M$ must hold, from which we see that the two definitions coincide when viewing $A$ itself as an $A$-module. In a similar way, we can transfer our previous results on the relationship between ideals and dimension of a ring to results on parameter ideals of a module; for this, we first need the following simple lemmas.
 
 ::: Lemma 4
 For a Noetherian ring $A$, a finitely generated $A$-module $M$, and an $A$-ideal $\mathfrak{a}$, the identity
@@ -72,7 +72,7 @@ $$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 holds.
 :::
 ::: Proof
-By [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" }, it suffices to show that the set of prime ideals containing $\ann(M/\mathfrak{a}M)$ and the set of prime ideals containing $\mathfrak{a}+\ann(M)$ are precisely the same. Now, for a prime ideal $\mathfrak{p}$, containing $\ann(M/\mathfrak{a}M)$ is equivalent to $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$ by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5){: data-relation="required" }. Then $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$ is equivalent, by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }, to $M_\mathfrak{p}\neq 0$ and $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$. This in turn is equivalent, by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5){: data-relation="required" }, to $\mathfrak{p}\supseteq \ann(M)$ and $\mathfrak{p}\supseteq \mathfrak{a}$, that is, $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$, which yields the desired result.
+By [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="y7jbo" data-relation="required" }, it suffices to show that the set of prime ideals containing $\ann(M/\mathfrak{a}M)$ and the set of prime ideals containing $\mathfrak{a}+\ann(M)$ are precisely the same. Now, for a prime ideal $\mathfrak{p}$, containing $\ann(M/\mathfrak{a}M)$ is equivalent to $(M/\mathfrak{a}M)_\mathfrak{p}\neq 0$ by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5){: data-lid="1w7kd" data-relation="required" }. Then $(M/\mathfrak{a}M)_\mathfrak{p}=M_\mathfrak{p}/\mathfrak{a}M_\mathfrak{p}\neq 0$ is equivalent, by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-lid="e93g8" data-relation="required" }, to $M_\mathfrak{p}\neq 0$ and $\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$. This in turn is equivalent, by [§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5){: data-lid="mmkq9" data-relation="required" }, to $\mathfrak{p}\supseteq \ann(M)$ and $\mathfrak{p}\supseteq \mathfrak{a}$, that is, $\mathfrak{p}\supseteq \mathfrak{a}+\ann(M)$, which yields the desired result.
 :::
 
 Also, the following holds.
@@ -112,7 +112,7 @@ For a Noetherian local ring $(A,\mathfrak{m})$, its ideal $\mathfrak{a}$, and a 
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
     so we know that for sufficiently large $n$, $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$ must hold.  
-    Now suppose the second condition holds. Then, for sufficiently large $n$, the product of maximal ideals $\mathfrak{m}^n$ annihilates the $A$-module $A/(\mathfrak{a}+\ann(M))$, so by the equivalence of the first and second conditions of [§Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-relation="required" }, $A/(\mathfrak{a}+\ann(M))$ has finite length.  
+    Now suppose the second condition holds. Then, for sufficiently large $n$, the product of maximal ideals $\mathfrak{m}^n$ annihilates the $A$-module $A/(\mathfrak{a}+\ann(M))$, so by the equivalence of the first and second conditions of [§Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="1ecwu" data-relation="required" }, $A/(\mathfrak{a}+\ann(M))$ has finite length.  
     As for the last equivalence, it is clear from the following inclusion:
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$
@@ -122,7 +122,7 @@ For a Noetherian local ring $(A,\mathfrak{m})$, its ideal $\mathfrak{a}$, and a 
     $$M'/\mathfrak{a}M' \rightarrow M/ \mathfrak{a}M \rightarrow M''/\mathfrak{a}M'' \rightarrow 0$$
 
     we see that if $M'/\mathfrak{a}M'$ and $M''/\mathfrak{a}M''$ have finite length, then $M/\mathfrak{a}M$ must also have finite length.
-3. By definition, $\dim M=\dim A/\ann(M)$, so this is clear from the first result and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-relation="required" }. 
+3. By definition, $\dim M=\dim A/\ann(M)$, so this is clear from the first result and [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-lid="vrks6" data-relation="required" }. 
 :::
 
 ::: Corollary 7
@@ -133,11 +133,11 @@ $$\dim M/ aM \geq \dim M-1$$
 holds. 
 :::
 ::: Proof
-By definition, $\dim M/aM=d$ means that the dimension of the ring $A/\ann(M/aM)$ is $d$. Then by [Corollary 1](#cor1){: data-relation="required" }, $A/\ann(M/aM)$ has a parameter ideal $\mathfrak{a}=(a_1,\ldots, a_d)$ generated by $d$ elements, and by the first result of [Proposition 6](#prop6){: data-relation="required" }, this is also a parameter ideal of $M/aM$. Since 
+By definition, $\dim M/aM=d$ means that the dimension of the ring $A/\ann(M/aM)$ is $d$. Then by [Corollary 1](#cor1){: data-lid="qu4ce" data-relation="required" }, $A/\ann(M/aM)$ has a parameter ideal $\mathfrak{a}=(a_1,\ldots, a_d)$ generated by $d$ elements, and by the first result of [Proposition 6](#prop6){: data-lid="vo9n5" data-relation="required" }, this is also a parameter ideal of $M/aM$. Since 
 
 $$\frac{M/aM}{\mathfrak{a}(M/aM)}\cong \frac{M}{((a)+\mathfrak{a})M}=\frac{M}{(a,a_1,\ldots, a_d)M}$$
 
-has finite length, $(a,a_1,\ldots, a_d)$ is an ideal generated by $d+1$ elements such that $M/(a,a_1,\ldots, a_d)M$ has finite length. Therefore, by the third result of [Proposition 6](#prop6){: data-relation="required" }, $\dim M\leq 1+d$. 
+has finite length, $(a,a_1,\ldots, a_d)$ is an ideal generated by $d+1$ elements such that $M/(a,a_1,\ldots, a_d)M$ has finite length. Therefore, by the third result of [Proposition 6](#prop6){: data-lid="8uyqf" data-relation="required" }, $\dim M\leq 1+d$. 
 :::
 
 ## Flat Morphisms and Dimension
