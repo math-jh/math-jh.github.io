@@ -87,7 +87,7 @@ For convenience of exposition, in the remainder of this post we treat only the c
 
 ## Universal property
 
-Looking at [Definition 1](#def1){: data-lid="6kanm" data-relation="required" }, we agreed to call the choice of an object $A$ and a natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$ together a *representation*. But by [Theorem 3](#thm3){: data-relation="required" }, choosing a natural isomorphism is the same as picking out a suitable element of $F(A)$. We define this as follows.
+Looking at [Definition 1](#def1){: data-lid="6kanm" data-relation="required" }, we agreed to call the choice of an object $A$ and a natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$ together a *representation*. But by [Theorem 3](#thm3){: data-lid="jgko5" data-relation="required" }, choosing a natural isomorphism is the same as picking out a suitable element of $F(A)$. We define this as follows.
 
 ::: Definition 5
 Let a representable functor $F:\mathcal{A}\rightarrow\Set$ be given. For a natural isomorphism $\alpha:\Hom_\mathcal{A}(A,-)\cong F$, we call the element $x=\alpha_A(\id_A)\in F(A)$ corresponding to it by [Theorem 3](#thm3){: data-lid="6irrk" data-relation="required" } a *universal element*, and we call $A$ together with $x$ a *universal property*.
@@ -134,7 +134,7 @@ A functor $F:\mathcal{A}\rightarrow\Set$ is representable if and only if $\int F
 ::: Proof
 If $F$ is representable, then there exist an object $A$ and a natural isomorphism $\alpha$ such that $F\cong\Hom_\mathcal{A}(A,-)$. From this we can construct an isomorphism $(X,x)\mapsto (X,\alpha_X(x))$ from $\int F$ to $\int\Hom_\mathcal{A}(A,-)$. But $\int\Hom_\mathcal{A}(A,-)={}_{A/}\mathcal{A}$ has the initial object $\id_A$.
 
-Now suppose $\int F$ has an initial object $(A,x)$; from this we must construct a natural isomorphism $\Hom_\mathcal{A}(A,-)\Rightarrow F$. First, from [Theorem 3](#thm3){: data-relation="required" } we know that the bijection
+Now suppose $\int F$ has an initial object $(A,x)$; from this we must construct a natural isomorphism $\Hom_\mathcal{A}(A,-)\Rightarrow F$. First, from [Theorem 3](#thm3){: data-lid="p9662" data-relation="required" } we know that the bijection
 
 $$\Phi:\{\text{natural transformations from $\Hom_\mathcal{A}(A,-)$ to $F$}\}\rightarrow F(A)$$
 
