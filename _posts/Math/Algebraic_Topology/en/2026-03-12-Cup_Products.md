@@ -181,7 +181,7 @@ On the other hand, since the Alexander–Whitney map sends chains of a subspace 
 
 $${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
 
-will also be denoted by the same symbol; the case $X_0=\emptyset$ is [Definition 5](#def5){: data-lid="pofnt" data-relation="weak" reviewed="" }. Then the following holds.
+will also be denoted by the same symbol; the case $X_0=\emptyset$ is [Definition 5](#def5){: data-lid="pofnt" data-relation="weak" }. Then the following holds.
 
 ::: Proposition 6 (Projection formula)
 For a continuous map of pairs $f:(X,X_0) \rightarrow (Y,Y_0)$, and for $\beta\in H^q(Y,Y_0;A)$ and $\sigma\in H_{p+q}(X,X_0;A)$, the identity
@@ -191,7 +191,7 @@ $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 holds.
 :::
 ::: Proof
-Let $\sigma$ be a relative cycle representing the class, and apply the Alexander–Whitney map to write $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$. Then since $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$, the explicit formula used to derive [Definition 5](#def5){: data-lid="pho4o" data-relation="required" reviewed="" } gives
+Let $\sigma$ be a relative cycle representing the class, and apply the Alexander–Whitney map to write $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$. Then since $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$, the explicit formula used to derive [Definition 5](#def5){: data-lid="pho4o" data-relation="required" } gives
 
 $$C_\bullet(f)(f^\ast\beta\frown\sigma)=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(C_\bullet(f)(\tau_i))C_\bullet(f)(\sigma_i)$$
 
