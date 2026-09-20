@@ -58,7 +58,7 @@ $$\sum_{i=1}^n\alpha_i w_i=\alpha_1w_1+\alpha_2w_2+\cdots+\alpha_nw_n\tag{1}$$
 is an element of $W$.
 :::
 ::: Proof
-We proceed by induction. The case $n=1$ gives $\alpha_1w_1\in W$ by [Proposition 2](#prop2){: data-relation="required" }. Now consider the case $n=2$. In this case, by [Proposition 2](#prop2){: data-relation="required" }, each of $\alpha_1w_1,\alpha_2w_2$ is an element of $W$, and hence their sum $\alpha_1w_1+\alpha_2w_2$ is also an element of $W$.
+We proceed by induction. The case $n=1$ gives $\alpha_1w_1\in W$ by [Proposition 2](#prop2){: data-lid="1oltp" data-relation="required" }. Now consider the case $n=2$. In this case, by [Proposition 2](#prop2){: data-lid="0wir2" data-relation="required" }, each of $\alpha_1w_1,\alpha_2w_2$ is an element of $W$, and hence their sum $\alpha_1w_1+\alpha_2w_2$ is also an element of $W$.
 
 For a general $n$, since addition on $W$ satisfies the associative law,
 

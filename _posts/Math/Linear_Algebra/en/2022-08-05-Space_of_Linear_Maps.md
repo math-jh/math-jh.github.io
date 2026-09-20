@@ -89,13 +89,13 @@ Let $V,W$ be two $\mathbb{K}$-vector spaces and let $L:V\rightarrow W$ be a line
     
     $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
 
-    and apply [Theorem 1](#thm1){: data-relation="required" } to obtain a linear map, which we call $R$. Then for any element $x_i$ of the basis $\{x_1,\ldots,x_n\}$ of $V$, we have $(R\circ L)(x_i)=x_i$, and hence by the uniqueness part of Theorem 1, $R\circ L=\id_V$.
+    and apply [Theorem 1](#thm1){: data-lid="a3qxb" data-relation="required" } to obtain a linear map, which we call $R$. Then for any element $x_i$ of the basis $\{x_1,\ldots,x_n\}$ of $V$, we have $(R\circ L)(x_i)=x_i$, and hence by the uniqueness part of Theorem 1, $R\circ L=\id_V$.
 
 2. Suppose $L$ is surjective, and choose a basis $x_1,\ldots,x_n$ of $V$. Then $L(x_1),\ldots, L(x_n)$ span $W$, so we can select some of these vectors to form a basis $\mathcal{B}$ of $W$. Without loss of generality, let $\mathcal{B}=\{L(x_1),\ldots, L(x_m)\}$ ($m\leq n$). Define a function $s:\mathcal{B}\rightarrow V$ by
     
     $$s(v)=x_k\qquad v=L(x_k)$$
 
-    and apply [Theorem 1](#thm1){: data-relation="required" } to obtain a linear map, which we call $S$. Now for any element $L(x_k)$ of the basis $\mathcal{B}$ of $W$, we have $(L\circ S)(L(x_k))=L(x_k)$, so again by the uniqueness part of Theorem 1, $L\circ S=\id_W$.
+    and apply [Theorem 1](#thm1){: data-lid="jlj1s" data-relation="required" } to obtain a linear map, which we call $S$. Now for any element $L(x_k)$ of the basis $\mathcal{B}$ of $W$, we have $(L\circ S)(L(x_k))=L(x_k)$, so again by the uniqueness part of Theorem 1, $L\circ S=\id_W$.
 :::
 
 ## Space of Linear Maps
@@ -142,7 +142,7 @@ Suppose both spaces $V,W$ are finite-dimensional, and let $\mathcal{B}=\{x_1,\ld
 
 $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
-That is, $f_i^j$ is the function sending only $x_i$ to $y_j$ and everything else to 0. Then by [Theorem 1](#thm1){: data-relation="required" }, there exists a unique linear map $B_i^j$ such that $f_i^j=B_i^j\circ\iota$.
+That is, $f_i^j$ is the function sending only $x_i$ to $y_j$ and everything else to 0. Then by [Theorem 1](#thm1){: data-lid="bbbep" data-relation="required" }, there exists a unique linear map $B_i^j$ such that $f_i^j=B_i^j\circ\iota$.
 
 ::: Proposition 5
 Let $V,W$ be two finite-dimensional $\mathbb{K}$-vector spaces with bases $\{x_1,\ldots,x_n\}$ and $\{y_1,\ldots,y_m\}$, respectively. Then $\Hom(V,W)$ is an $mn$-dimensional vector space, and the $mn$ linear maps $B_i^j$ defined above form a basis of $\Hom(V,W)$.
@@ -176,7 +176,7 @@ is a linear map. Moreover, substituting $v=x_k$ gives
 
 $$L'(x_k)=\sum_{i,j}\alpha_{ji}B_i^j(x_k)=\sum_{j=1}^m\alpha_{jk}B_k^j(x_k)=\sum_{j=1}^m\alpha_{jk}y_j=L(x_k)$$
 
-Hence by the uniqueness part of [Theorem 1](#thm1){: data-relation="required" }, we have $L'=L$.
+Hence by the uniqueness part of [Theorem 1](#thm1){: data-lid="nfvf9" data-relation="required" }, we have $L'=L$.
 :::
 
 ---
