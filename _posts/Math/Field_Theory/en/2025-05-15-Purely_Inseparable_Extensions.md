@@ -52,20 +52,20 @@ Assume that an element $a$ of a field $\mathbb{K}$ satisfies $a\not\in \mathbb{K
 ::: Proof
 If $p=1$, then $\mathbb{K}^p=\mathbb{K}$, so no $a$ satisfying the assumption exists. Thus it suffices to consider the case where $p$ is prime. Also, if $e=0$, then $f$ is linear and trivially irreducible, so it suffices to consider $e\geq 1$.
 
-Choose a root $\alpha$ of $f$ in $\overline{\mathbb{K}}$, so that $\alpha^{p^e}=a$. Then applying the Frobenius endomorphism of [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-relation="required" } repeatedly to the characteristic $p$ ring $\overline{\mathbb{K}}[\x]$ yields
+Choose a root $\alpha$ of $f$ in $\overline{\mathbb{K}}$, so that $\alpha^{p^e}=a$. Then applying the Frobenius endomorphism of [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-lid="f5lhw" data-relation="required" } repeatedly to the characteristic $p$ ring $\overline{\mathbb{K}}[\x]$ yields
 
 $$f(\x)=\x^{p^e}-\alpha^{p^e}=(\x-\alpha)^{p^e}.$$
 
 On the other hand, if $\alpha^{p^m}\in \mathbb{K}$ for some $m<e$, then $a=(\alpha^{p^m})^{p^{e-m}}\in \mathbb{K}^p$, contradicting the assumption; therefore any $m$ with $\alpha^{p^m}\in\mathbb{K}$ must satisfy $m\geq e$.
 
-Now let $g\in \mathbb{K}[\x]$ be a monic factor of $f$ of degree at least one. Then in $\overline{\mathbb{K}}[\x]$, $g$ is a monic factor of $(\x-\alpha)^{p^e}$, so it must be of the form $g=(\x-\alpha)^d$ for some $0< d\leq p^e$. Write $d=p^cu$, where $u$ is a positive integer coprime to $p$. Then again by [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-relation="required" },
+Now let $g\in \mathbb{K}[\x]$ be a monic factor of $f$ of degree at least one. Then in $\overline{\mathbb{K}}[\x]$, $g$ is a monic factor of $(\x-\alpha)^{p^e}$, so it must be of the form $g=(\x-\alpha)^d$ for some $0< d\leq p^e$. Write $d=p^cu$, where $u$ is a positive integer coprime to $p$. Then again by [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-lid="zk46j" data-relation="required" },
 
 $$g=\bigl((\x-\alpha)^{p^c}\bigr)^u=(\x^{p^c}-\alpha^{p^c})^u,$$
 
 and expanding this, the coefficient of $\x^{p^c(u-1)}$ is $-u\alpha^{p^c}$. Since $g\in\mathbb{K}[\x]$, we have $-u\alpha^{p^c}\in \mathbb{K}$; but $p$ does not divide $u$, so $u\cdot 1$ is invertible in $\mathbb{K}$, and hence $\alpha^{p^c}\in \mathbb{K}$. Then by the preceding paragraph we must have $c\geq e$, and therefore $d\geq p^c\geq p^e$, so $d=p^e$, i.e. $g=f$. Thus $f$ has no monic factor of degree at least one other than itself, which means $f$ is irreducible.
 :::
 
-Assuming this, the proof of [Proposition 2](#prop2){: data-relation="required" } is also easily obtained.
+Assuming this, the proof of [Proposition 2](#prop2){: data-lid="1g6k7" data-relation="required" } is also easily obtained.
 
 ::: Proof (Proposition 2)
 If $e=0$, then $x=a\in \mathbb{K}$, so the minimal polynomial of $x$ is $\x-a$, i.e. $\x^{p^0}-a$, and $[\mathbb{K}(x):\mathbb{K}]=1=p^0$.
@@ -79,7 +79,7 @@ The following definition would have been natural even immediately after [Definit
 A field extension $\mathbb{L}/\mathbb{K}$ is called *$p$-radical* if every element of $\mathbb{L}$ is $p$-radical. If there exists an integer $e$ such that $x^{p^e}\in \mathbb{K}$ holds for <em>every</em> element $x\in \mathbb{L}$, then the smallest such $e$ is called the *height* of $\mathbb{L}$.
 :::
 
-Thus the height of $\mathbb{L}/\mathbb{K}$, if defined, can be thought of as the maximum of the heights of the elements of $\mathbb{L}$. Also, by [Proposition 2](#prop2){: data-relation="required" }, any $p$-radical extension is naturally an algebraic extension.
+Thus the height of $\mathbb{L}/\mathbb{K}$, if defined, can be thought of as the maximum of the heights of the elements of $\mathbb{L}$. Also, by [Proposition 2](#prop2){: data-lid="t3j9i" data-relation="required" }, any $p$-radical extension is naturally an algebraic extension.
 
 If the Frobenius endomorphism $\Frob_p:A\rightarrow A$ is a bijection, we called $A$ a *perfect ring*. ([§Fields, ⁋Definition 13](/en/math/field_theory/fields#def13){: data-lid="lqsbi" data-relation="weak" }) Therefore, if $\mathbb{K}$ were a perfect field, then $\mathbb{K}^p=\mathbb{K}$, so any $p$-radical extension of a perfect field must be the field itself. Moreover, it is obvious from the definition that the compositum of $p$-radical extensions is $p$-radical. The following proposition concerns the existence of a (relative) $p$-radical closure.
 
@@ -92,7 +92,7 @@ Then the union $\mathbb{L}_\infty$ of the increasing sequence $\mathbb{L}_n$ is 
 :::
 
 ::: Proof
-That $\mathbb{L}_n\subseteq \mathbb{L}_{n+1}$ is obvious from the definition. Let us show that $\mathbb{L}_\infty$ is a subfield. If $x,y\in \mathbb{L}_\infty$, then we can choose $N$ so that $x^{p^N},y^{p^N}\in \mathbb{K}$, and from the Frobenius endomorphism of [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-relation="required" },
+That $\mathbb{L}_n\subseteq \mathbb{L}_{n+1}$ is obvious from the definition. Let us show that $\mathbb{L}_\infty$ is a subfield. If $x,y\in \mathbb{L}_\infty$, then we can choose $N$ so that $x^{p^N},y^{p^N}\in \mathbb{K}$, and from the Frobenius endomorphism of [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-lid="d03w8" data-relation="required" },
 
 $$(x\pm y)^{p^N}=x^{p^N}\pm y^{p^N}\in \mathbb{K},\qquad (xy)^{p^N}=x^{p^N}y^{p^N}\in\mathbb{K},$$
 
@@ -136,7 +136,7 @@ A field extension $\mathbb{L}/\mathbb{K}$ is the perfect closure of $\mathbb{K}$
 ::: Proof
 Since the perfect closure is defined by a universal property and is uniquely determined up to $\mathbb{K}$-isomorphism, it suffices to verify the necessity for $\mathbb{K}^{1/p^\infty}$. By construction, every element of $\mathbb{K}^{1/p^\infty}$ has finite height, so $\mathbb{K}^{1/p^\infty}/\mathbb{K}$ is a $p$-radical extension. Also, if $x\in \mathbb{K}^{1/p^\infty}$, then since $\overline{\mathbb{K}}$ is algebraically closed there exists $y\in \overline{\mathbb{K}}$ with $y^p=x$; if $x^{p^n}\in \mathbb{K}$, then $y^{p^{n+1}}=x^{p^n}\in \mathbb{K}$, so $y\in \mathbb{K}^{1/p^\infty}$. That is, Frobenius is surjective on $\mathbb{K}^{1/p^\infty}$, and since Frobenius is always injective in a field, $\mathbb{K}^{1/p^\infty}$ is perfect.
 
-Conversely, suppose $\mathbb{L}/\mathbb{K}$ is $p$-radical and $\mathbb{L}$ is perfect. Applying [Proposition 6](#prop6){: data-relation="required" } to the inclusion $u:\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$ yields a $\mathbb{K}$-homomorphism $v:\mathbb{L} \rightarrow \mathbb{K}^{1/p^\infty}$. First, $v(\mathbb{L})$ is a perfect field: given $v(x)\in v(\mathbb{L})$, the fact that $\mathbb{L}$ is perfect yields $z\in \mathbb{L}$ with $x=z^p$, and then $v(x)=v(z)^p$. On the other hand, any element $t\in \mathbb{K}^{1/p^\infty}$ satisfies $t^{p^n}\in \mathbb{K}\subseteq v(\mathbb{L})$ for some $n$, and since $v(\mathbb{L})$ is perfect there exists $\xi\in v(\mathbb{L})$ with $\xi^{p^n}=t^{p^n}$. But Frobenius is injective in a field, so $t=\xi\in v(\mathbb{L})$. That is, $v$ is surjective, and since a nonzero homomorphism between fields is injective ([§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-lid="f6ale" data-relation="required" }), $v$ is a $\mathbb{K}$-isomorphism. Therefore $\mathbb{L}$ is the perfect closure of $\mathbb{K}$.
+Conversely, suppose $\mathbb{L}/\mathbb{K}$ is $p$-radical and $\mathbb{L}$ is perfect. Applying [Proposition 6](#prop6){: data-lid="eewk9" data-relation="required" } to the inclusion $u:\mathbb{K}\hookrightarrow \mathbb{K}^{1/p^\infty}$ yields a $\mathbb{K}$-homomorphism $v:\mathbb{L} \rightarrow \mathbb{K}^{1/p^\infty}$. First, $v(\mathbb{L})$ is a perfect field: given $v(x)\in v(\mathbb{L})$, the fact that $\mathbb{L}$ is perfect yields $z\in \mathbb{L}$ with $x=z^p$, and then $v(x)=v(z)^p$. On the other hand, any element $t\in \mathbb{K}^{1/p^\infty}$ satisfies $t^{p^n}\in \mathbb{K}\subseteq v(\mathbb{L})$ for some $n$, and since $v(\mathbb{L})$ is perfect there exists $\xi\in v(\mathbb{L})$ with $\xi^{p^n}=t^{p^n}$. But Frobenius is injective in a field, so $t=\xi\in v(\mathbb{L})$. That is, $v$ is surjective, and since a nonzero homomorphism between fields is injective ([§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-lid="f6ale" data-relation="required" }), $v$ is a $\mathbb{K}$-isomorphism. Therefore $\mathbb{L}$ is the perfect closure of $\mathbb{K}$.
 :::
 
 From this, the uniqueness of the perfect closure also follows.
@@ -145,7 +145,7 @@ From this, the uniqueness of the perfect closure also follows.
 Let $\mathbb{M}_1$, $\mathbb{M}_2$ be two perfect closures of a field $\mathbb{K}$, i.e. two fields that are perfect and $p$-radical extensions of $\mathbb{K}$. Then there exists a unique $\mathbb{K}$-isomorphism $\mathbb{M}_1 \rightarrow \mathbb{M}_2$.
 :::
 ::: Proof
-Applying [Proposition 6](#prop6){: data-relation="required" } to the inclusion $\mathbb{K}\hookrightarrow \mathbb{M}_2$ yields a unique $\mathbb{K}$-homomorphism $v:\mathbb{M}_1 \rightarrow \mathbb{M}_2$, and interchanging the roles of $\mathbb{M}_1$ and $\mathbb{M}_2$ yields a unique $\mathbb{K}$-homomorphism $w:\mathbb{M}_2 \rightarrow \mathbb{M}_1$. Then the composition $w\circ v:\mathbb{M}_1 \rightarrow \mathbb{M}_1$ is a homomorphism extending the inclusion $\mathbb{K}\hookrightarrow\mathbb{M}_1$, and since $\id_{\mathbb{M}_1}$ also does so, the uniqueness in [Proposition 6](#prop6){: data-relation="required" } gives $w\circ v=\id_{\mathbb{M}_1}$. For the same reason $v\circ w=\id_{\mathbb{M}_2}$, so $v$ is an isomorphism, and its uniqueness was already observed.
+Applying [Proposition 6](#prop6){: data-lid="khs2y" data-relation="required" } to the inclusion $\mathbb{K}\hookrightarrow \mathbb{M}_2$ yields a unique $\mathbb{K}$-homomorphism $v:\mathbb{M}_1 \rightarrow \mathbb{M}_2$, and interchanging the roles of $\mathbb{M}_1$ and $\mathbb{M}_2$ yields a unique $\mathbb{K}$-homomorphism $w:\mathbb{M}_2 \rightarrow \mathbb{M}_1$. Then the composition $w\circ v:\mathbb{M}_1 \rightarrow \mathbb{M}_1$ is a homomorphism extending the inclusion $\mathbb{K}\hookrightarrow\mathbb{M}_1$, and since $\id_{\mathbb{M}_1}$ also does so, the uniqueness in [Proposition 6](#prop6){: data-lid="u2sar" data-relation="required" } gives $w\circ v=\id_{\mathbb{M}_1}$. For the same reason $v\circ w=\id_{\mathbb{M}_2}$, so $v$ is an isomorphism, and its uniqueness was already observed.
 :::
 
 We close this post by presenting the counterexample mentioned in the introduction.

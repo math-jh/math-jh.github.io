@@ -78,14 +78,14 @@ Fix a monoid $\Gamma$ and a field $\mathbb{L}$, and let $X$ be the set of homomo
 ::: Proof
 Consider the monoid algebra $A=L\Gamma$ and its canonical basis $(e_\gamma)_{\gamma\in\Gamma}$.
 
-Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras#prop6){: data-lid="lgpkb" data-relation="required" } there is a bijection between $X$ and $\Hom_\mathbb{L}(A,\mathbb{L})$, so the claim follows immediately from [Theorem 1](#thm1){: data-relation="required" }.
+Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras#prop6){: data-lid="lgpkb" data-relation="required" } there is a bijection between $X$ and $\Hom_\mathbb{L}(A,\mathbb{L})$, so the claim follows immediately from [Theorem 1](#thm1){: data-lid="pdcbe" data-relation="required" }.
 :::
 
 ::: Corollary 3 (Dedekind)
 For two extensions $\mathbb{L}/\mathbb{K}$ and $\mathbb{M}/\mathbb{K}$, the set of morphisms from $\mathbb{M}$ to $\mathbb{L}$ is free as an $\mathbb{L}$-vector space. In particular, if $\mathbb{M}/\mathbb{K}$ is a finite degree extension then this set has at most $[\mathbb{M}:\mathbb{K}]$ elements.
 :::
 ::: Proof
-Set $A=\mathbb{M}$ and apply [Theorem 1](#thm1){: data-relation="required" }. The second assertion is clear because $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$ is an $\mathbb{L}$-vector space of dimension $[\mathbb{M}:\mathbb{K}]$.
+Set $A=\mathbb{M}$ and apply [Theorem 1](#thm1){: data-lid="l0e4f" data-relation="required" }. The second assertion is clear because $\Hom_\mathbb{K}(\mathbb{M},\mathbb{L})$ is an $\mathbb{L}$-vector space of dimension $[\mathbb{M}:\mathbb{K}]$.
 :::
 
 Furthermore, if $\mathbb{K}$ is infinite then these maps are also *algebraically independent*.
@@ -94,7 +94,7 @@ Furthermore, if $\mathbb{K}$ is infinite then these maps are also *algebraically
 Let an infinite field $\mathbb{K}$ and an extension $\mathbb{L}/\mathbb{K}$ be given, and fix a $\mathbb{K}$-algebra $A$. If for $\mathbb{K}$-algebra homomorphisms $u_1,\ldots, u_n:A \rightarrow \mathbb{L}$ a polynomial $f\in \mathbb{L}[\x_1,\ldots, \x_n]$ satisfies $f(u_1,\ldots, u_n)=0$ identically, then $f=0$.
 :::
 ::: Proof
-Let $B$ be the subset of $\mathbb{L}^n$ consisting of elements of the form $(u_1(x), \dots, u_n(x))$. Then by [Theorem 1](#thm1){: data-relation="required" } we know that there do not exist $\alpha_1,\ldots, \alpha_n$ satisfying
+Let $B$ be the subset of $\mathbb{L}^n$ consisting of elements of the form $(u_1(x), \dots, u_n(x))$. Then by [Theorem 1](#thm1){: data-lid="3c12m" data-relation="required" } we know that there do not exist $\alpha_1,\ldots, \alpha_n$ satisfying
 
 $$\sum_{i=1}^n\alpha_i u_i(x)=0$$
 
@@ -145,7 +145,7 @@ Conversely, assume that the third condition holds and choose a basis $u_1,\ldots
 It remains to show the equivalence of the fourth condition. For this, assume that the second condition holds and pick any $A$-module $M$. Considering the $A$-endomorphism of $M$ defined by $x\mapsto e_ix$, we see that $M$ is the direct sum of the $e_iM$, which yields the fourth condition. Conversely, assuming the fourth condition, we can in particular write $A$ itself as an internal direct sum of one-dimensional $\mathbb{K}$-vector spaces, and one checks that the resulting basis satisfies the condition of the second equivalence.
 :::
 
-In particular, the fourth condition provides some justification for calling $A$ *diagonalizable*. The next corollary tells us when the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ of [Theorem 1](#thm1){: data-relation="weak" } becomes a *basis*.
+In particular, the fourth condition provides some justification for calling $A$ *diagonalizable*. The next corollary tells us when the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ of [Theorem 1](#thm1){: data-lid="fix6z" data-relation="weak" } becomes a *basis*.
 
 ::: Corollary 7
 Consider a field extension $\mathbb{L}/\mathbb{K}$ and the collection $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ of $\mathbb{K}$-algebra homomorphisms $A \rightarrow \mathbb{L}$. Then equality holds in the inequality
@@ -156,9 +156,9 @@ if and only if $A$ is diagonalized by $\mathbb{L}$, and in this case $\Hom_{\Alg
 :::
 
 ::: Proof
-We already know that $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$, and by [Theorem 1](#thm1){: data-relation="required" } we know that $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is a free subset of $\Hom_\mathbb{K}(A,\mathbb{L})$. Hence the inequality in the claim is obvious, and equality holds only when $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is a basis of $\Hom_\mathbb{K}(A,\mathbb{L})$.
+We already know that $\dim_\mathbb{L}\Hom_\mathbb{K}(A,\mathbb{L})=\dim_\mathbb{K}A$, and by [Theorem 1](#thm1){: data-lid="n96uv" data-relation="required" } we know that $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is a free subset of $\Hom_\mathbb{K}(A,\mathbb{L})$. Hence the inequality in the claim is obvious, and equality holds only when $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is a basis of $\Hom_\mathbb{K}(A,\mathbb{L})$.
 
-On the other hand, the $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$ sends the subset $\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$ to the set $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$ of algebra homomorphisms $A_{(\mathbb{L})} \rightarrow \mathbb{L}$. Now by the third equivalent condition of [Proposition 6](#prop6){: data-relation="required" }, the fact that this set $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$ generates $(A_{(\mathbb{L})})^\ast$ is equivalent to $A$ being diagonalized by $\mathbb{L}$, which gives the desired result.
+On the other hand, the $\mathbb{L}$-vector space isomorphism $\Hom_\mathbb{K}(A,\mathbb{L}) \rightarrow (A_{(\mathbb{L})})^\ast$ sends the subset $\Hom_\Alg{\mathbb{K}}(A, \mathbb{L})$ to the set $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$ of algebra homomorphisms $A_{(\mathbb{L})} \rightarrow \mathbb{L}$. Now by the third equivalent condition of [Proposition 6](#prop6){: data-lid="g11br" data-relation="required" }, the fact that this set $\Hom_\Alg{\mathbb{K}}(A_{(\mathbb{L})}, \mathbb{L})$ generates $(A_{(\mathbb{L})})^\ast$ is equivalent to $A$ being diagonalized by $\mathbb{L}$, which gives the desired result.
 :::
 
 Thus, if $A$ is an étale algebra then the extension degree of $A$ over $\mathbb{K}$ equals the number of elements of $\Hom_{\Alg{\mathbb{K}}} (A, \mathbb{L})$; carefully unwinding the proof one sees that what we are actually computing is $[A_{(\mathbb{L})}:\mathbb{L}]$ for an extension $\mathbb{L}/\mathbb{K}$ that diagonalizes $A$. From this point of view the following holds.
@@ -172,7 +172,7 @@ For a $\mathbb{K}$-algebra $A$, the following are all equivalent.
 :::
 
 ::: Proof
-First assume condition 1, let $n=[A:\mathbb{K}]$, and suppose that $\mathbb{L}/\mathbb{K}$ diagonalizes $A$. Then by [Corollary 7](#cor7){: data-relation="required" } the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ has size $n$. On the other hand, for any $u\in \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ it is obvious that $[u(A):\mathbb{K}]\leq n$; hence the subextension $\mathbb{L}'$ of $\mathbb{L}$ generated by the images of the elements of $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is of finite degree over $\mathbb{K}$. Since there are now $n$ distinct homomorphisms from $A$ to $\mathbb{L}'$, [Corollary 7](#cor7){: data-relation="required" } again implies that $\mathbb{L}'$ diagonalizes $A$.
+First assume condition 1, let $n=[A:\mathbb{K}]$, and suppose that $\mathbb{L}/\mathbb{K}$ diagonalizes $A$. Then by [Corollary 7](#cor7){: data-lid="4nkxj" data-relation="required" } the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ has size $n$. On the other hand, for any $u\in \Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ it is obvious that $[u(A):\mathbb{K}]\leq n$; hence the subextension $\mathbb{L}'$ of $\mathbb{L}$ generated by the images of the elements of $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ is of finite degree over $\mathbb{K}$. Since there are now $n$ distinct homomorphisms from $A$ to $\mathbb{L}'$, [Corollary 7](#cor7){: data-lid="9rfo6" data-relation="required" } again implies that $\mathbb{L}'$ diagonalizes $A$.
 
 That condition 2 implies condition 3 follows immediately from the fact that any finite degree extension $\mathbb{L}/\mathbb{K}$ can be viewed as a subextension of $\overline{\mathbb{K}}$, and that condition 3 implies condition 1 is simply by definition.
 :::
@@ -188,9 +188,9 @@ It suffices to show that $\mathbb{K}^n$ has only finitely many subalgebras and i
 
 Let $(e_1, \dots, e_n)$ be the canonical basis of $\mathbb{K}^n$, and for a subalgebra $A$ of $\mathbb{K}^n$ let $v_1,\ldots, v_n$ be the restrictions to $A$ of the projection maps $\mathbb{K}^n \rightarrow \mathbb{K}$. Then the intersection of their kernels is $0$, so the $v_i$ generate $A^\ast$ (as a $\mathbb{K}$-vector space) and hence $A$ is diagonalizable.
 
-Therefore every subalgebra of $A$ is also diagonalizable, and so for any given subalgebra of $A$ we must be able to find a basis satisfying the second condition of [Proposition 6](#prop6){: data-relation="required" }. Now the idempotents of $\mathbb{K}^n$ are exactly those of the form $e_I=\sum_{i\in I} e_i$ for subsets $I\subseteq\{1,\ldots, n\}$, and they satisfy $e_Ie_J=e_{I\cap J}$. Hence the pairs of idempotents satisfying the second condition are at most as many as the number of partitions of $\{1,\ldots, n\}$, and therefore any subalgebra of $A$ is one of only finitely many.
+Therefore every subalgebra of $A$ is also diagonalizable, and so for any given subalgebra of $A$ we must be able to find a basis satisfying the second condition of [Proposition 6](#prop6){: data-lid="fmqxm" data-relation="required" }. Now the idempotents of $\mathbb{K}^n$ are exactly those of the form $e_I=\sum_{i\in I} e_i$ for subsets $I\subseteq\{1,\ldots, n\}$, and they satisfy $e_Ie_J=e_{I\cap J}$. Hence the pairs of idempotents satisfying the second condition are at most as many as the number of partitions of $\{1,\ldots, n\}$, and therefore any subalgebra of $A$ is one of only finitely many.
 
-Similarly, letting $\mathfrak{a}_I$ be the $\mathbb{K}$-subspace spanned by $(e_i)_{i\in I}$, we can show the finiteness of ideals and the diagonalizability of $\mathbb{K}^n/\mathfrak{a}_I$ again by [Proposition 6](#prop6){: data-relation="required" }.
+Similarly, letting $\mathfrak{a}_I$ be the $\mathbb{K}$-subspace spanned by $(e_i)_{i\in I}$, we can show the finiteness of ideals and the diagonalizability of $\mathbb{K}^n/\mathfrak{a}_I$ again by [Proposition 6](#prop6){: data-lid="18aun" data-relation="required" }.
 :::
 
 ## Separable Degree
