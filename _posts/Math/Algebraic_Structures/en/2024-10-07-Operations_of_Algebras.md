@@ -90,7 +90,7 @@ On the other hand, in the category of associative unital $A$-algebras and unital
 
 ## Tensor Product of Algebras
 
-In the category of commutative associative unital $A$-algebras, it is the tensor product that gives the correct notion of coproduct. Fundamentally, this is obtained by suitably defining a multiplication on the $A$-module $E\otimes_AE'$ ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" reviewed="" }) to form an $A$-algebra, and the multiplication we desire is given by the formula
+In the category of commutative associative unital $A$-algebras, it is the tensor product that gives the correct notion of coproduct. Fundamentally, this is obtained by suitably defining a multiplication on the $A$-module $E\otimes_AE'$ ([§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="9h7dd" data-relation="required" reviewed="" }) to form an $A$-algebra, and the multiplication we desire is given by the formula
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -104,7 +104,7 @@ First, fix $(y,y')\in E\times E'$. Then the function
 
 $$E\times E' \rightarrow E\otimes_AE';\qquad (x,x')\mapsto xy\otimes x'y'$$
 
-is, since the multiplications on $E,E'$ are $A$-linear in each variable, $A$-bilinear, and thus, by the universal property of [§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-relation="required" reviewed="" }, induces, such that $x\otimes x'\mapsto xy\otimes x'y'$, a unique $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$.
+is, since the multiplications on $E,E'$ are $A$-linear in each variable, $A$-bilinear, and thus, by the universal property of [§Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="8vyg4" data-relation="required" reviewed="" }, induces, such that $x\otimes x'\mapsto xy\otimes x'y'$, a unique $A$-linear map $m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$.
 
 Now consider the assignment $(y,y')\mapsto m_{(y,y')}$; this is a function from $E\times E'$ to $\End_{\lMod{A}}(E\otimes_AE')$, which is again $A$-bilinear by the bilinearity of multiplication. For instance, since
 
