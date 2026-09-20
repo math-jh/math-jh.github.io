@@ -24,7 +24,7 @@ In this post we examine Serre duality, the algebraic-geometry analogue of dualit
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-lid="0hq5l" data-relation="required" } that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="relbx" data-relation="required" reviewed="" } we obtain the following.
+We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-lid="0hq5l" data-relation="required" } that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="relbx" data-relation="required" } we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, there exists an isomorphism
@@ -53,7 +53,7 @@ and then, using the evaluation map $\mathcal{E}\otimes \mathcal{E}^\vee\rightarr
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-We show non-degeneracy for $\mathcal{O}(d)$ by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="yhtau" data-relation="required" reviewed="" }, and extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
+We show non-degeneracy for $\mathcal{O}(d)$ by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="yhtau" data-relation="required" }, and extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
 
 From the discussion so far we obtain the following.
 
@@ -76,7 +76,7 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 ::: Example 3
 Let us look concretely at [Proposition 2](#prop2){: data-lid="yyn3c" data-relation="required" } on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
 
-First, for $d=0$, by [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="zktc0" data-relation="required" reviewed="" } we have
+First, for $d=0$, by [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="zktc0" data-relation="required" } we have
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -88,7 +88,7 @@ so we see that Serre duality holds. Similarly, for $d=1$, the only nonzero cohom
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4))$ should be $3$. Applying [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="7jkzc" data-relation="required" reviewed="" } again, the $H^2$ of $\mathcal{O}(-4)$ indeed has dimension
+and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4))$ should be $3$. Applying [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-lid="7jkzc" data-relation="required" } again, the $H^2$ of $\mathcal{O}(-4)$ indeed has dimension
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
