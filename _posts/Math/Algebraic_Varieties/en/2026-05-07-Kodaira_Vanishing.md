@@ -92,7 +92,7 @@ To apply the Kodaira vanishing theorem in this situation, suppose $\mathcal{L} \
 
 $$\omega_S \otimes \mathcal{L} \cong \mathcal{O}_S(K_S + L)$$
 
-and substituting this above and using $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$ from [Proposition 1](#prop1){: data-lid="jyw93" data-relation="required" reviewed="" }, we obtain
+and substituting this above and using $h^1(S, \omega_S \otimes \mathcal{L}) = h^2(S, \omega_S \otimes \mathcal{L}) = 0$ from [Proposition 1](#prop1){: data-lid="jyw93" data-relation="required" }, we obtain
 
 $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$$
 
@@ -110,7 +110,7 @@ and to compute plurigenera, using $\omega_S^{\otimes m} \cong \mathcal{O}_S(mK_S
 
 $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
-Now, if $m \geq 2$ and $K_S$ is ample, then $(m-1)K_S$ is also ample, so applying [Proposition 1](#prop1){: data-lid="tx4ui" data-relation="required" reviewed="" } to $mK_S = K_S + (m-1)K_S$ yields $h^1 = h^2 = 0$. Therefore, from this formula we can directly compute $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$.
+Now, if $m \geq 2$ and $K_S$ is ample, then $(m-1)K_S$ is also ample, so applying [Proposition 1](#prop1){: data-lid="tx4ui" data-relation="required" } to $mK_S = K_S + (m-1)K_S$ yields $h^1 = h^2 = 0$. Therefore, from this formula we can directly compute $P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$.
 
 In this case, moreover, the expression for plurigenera is asymptotically quadratic. This leads to the following definition.
 
@@ -173,7 +173,7 @@ shows that if $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$, the
 
 Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-lid="upowc" data-relation="required" } to $\mathcal{F} = \mathcal{I}_Z$ and $\mathcal{F} = \mathcal{I}_p^2$, the two $H^1$'s above both vanish for sufficiently large $m$. Therefore, the sections of $\mathcal{L}^{\otimes m}$ satisfy both separation conditions, and by [Proposition 5](#prop5){: data-lid="7k0ct" data-relation="required" }, $\mathcal{L}^{\otimes m}$ is very ample. That is, for an ample line bundle, $\mathcal{L}^{\otimes m}$ is very ample for all sufficiently large $m$.
 
-Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6){: data-lid="hld30" data-relation="forward" } in a different way. In that proof, one applies vanishing to a line bundle on the blow-up $\pi: \widetilde{X} \rightarrow X$ of $p$ and $q$ with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1){: data-lid="467qy" data-relation="required" reviewed="" }. Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
+Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6){: data-lid="hld30" data-relation="forward" } in a different way. In that proof, one applies vanishing to a line bundle on the blow-up $\pi: \widetilde{X} \rightarrow X$ of $p$ and $q$ with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1){: data-lid="467qy" data-relation="required" }. Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
