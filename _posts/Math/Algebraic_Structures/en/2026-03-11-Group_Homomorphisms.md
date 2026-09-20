@@ -53,11 +53,11 @@ $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 is a subgroup of $G$.
 :::
 ::: Proof
-If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-relation="required" reviewed="" }, a monoid homomorphism between groups preserves inverses, so
+If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="qjsvp" data-relation="required" reviewed="" }, a monoid homomorphism between groups preserves inverses, so
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-relation="required" reviewed="" } we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="fyyhe" data-relation="required" reviewed="" }, we obtain the desired result. 
+and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="wchiy" data-relation="required" reviewed="" } we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="fyyhe" data-relation="required" reviewed="" }, we obtain the desired result. 
 :::
 
 For $\Eq(f,g)$ defined in this way, the inclusion $i:\Eq(f,g)\rightarrow G$ has the following property.
