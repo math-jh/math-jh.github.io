@@ -5413,3 +5413,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Gromov_Witten_Theory/ko/2026-09-19-Family_GW_Invariants.md: 병기 필요 'structure group    의    -fiber bundle' — 위키 ko 문서 'TripleS' — 병기형 도출 필요
 - _posts/Math/Gromov_Witten_Theory/ko/2026-09-19-Family_GW_Invariants.md: 병기 필요 'family Gromov-Witten invariant' — 위키 ko 문서 '에드워드 위튼' — 병기형 도출 필요
+
+## term_extract_worker 2026-09-21 03:15
+
+- _posts/Math/Gromov_Witten_Theory/ko/2026-09-21-Gathmann_Relative_GW.md: 병기 필요 'Relative stable map moduli' — 위키 ko 문서 '데이비드 멈퍼드' — 병기형 도출 필요
+- _posts/Math/Gromov_Witten_Theory/ko/2026-09-21-Gathmann_Relative_GW.md: 병기 필요 'comb 보정 공간' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
