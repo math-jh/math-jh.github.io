@@ -70,7 +70,7 @@ From this we obtain the following two corollaries.
 Any algebraic extension of a perfect field $\mathbb{K}$ is perfect.
 :::
 
-The proof of this is almost obvious from [Proposition 2](#prop2){: data-relation="required" }.
+The proof of this is almost obvious from [Proposition 2](#prop2){: data-lid="dsu0p" data-relation="required" }.
 
 Moreover, the following holds.
 
@@ -82,7 +82,7 @@ As always, it suffices to consider the case where $\mathbb{L}/\mathbb{K}$ is of 
 
 $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 
-must always hold. Now taking the $p^n$-th power of both sides, we see that the $x_i^{p^n}$ must be linearly independent, and therefore they must form a basis of $\mathbb{L}$; the converse also holds. Considering dimensions, this is equivalent to $\mathbb{L}=\mathbb{K}(\mathbb{L}^p)$, so we obtain the desired result from [Proposition 2](#prop2){: data-relation="required" }.
+must always hold. Now taking the $p^n$-th power of both sides, we see that the $x_i^{p^n}$ must be linearly independent, and therefore they must form a basis of $\mathbb{L}$; the converse also holds. Considering dimensions, this is equivalent to $\mathbb{L}=\mathbb{K}(\mathbb{L}^p)$, so we obtain the desired result from [Proposition 2](#prop2){: data-lid="6x0us" data-relation="required" }.
 :::
 
 ## Separable Closure
@@ -93,7 +93,7 @@ On the other hand, just as with algebraic closures or perfect closures, we can a
 For a field extension $\mathbb{L}/\mathbb{K}$, let $\mathbb{L}_s$ be the set of elements that are algebraic and separable over $\mathbb{K}$. Then $\mathbb{L}_s$ is a subextension of $\mathbb{L}/\mathbb{K}$, and moreover it is the largest algebraic extension contained in $\mathbb{L}$ that is separable.
 :::
 ::: Proof
-First, since every element of a separable extension is separable ([§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12){: data-relation="required" }), any subextension of $\mathbb{L}$ that is separable is always contained in $\mathbb{L}_s$. Conversely, an algebraic extension generated solely by separable elements is again separable by [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12){: data-relation="required" }, so $\mathbb{K}(\mathbb{L}_s)$ is itself a separable extension; hence by the preceding claim we have $\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$. Thus $\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$, which shows that $\mathbb{L}_s$ itself is a subextension of $\mathbb{L}/\mathbb{K}$; combining this with the maximality observed above, we obtain that $\mathbb{L}_s$ is the largest separable subextension.
+First, since every element of a separable extension is separable ([§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12){: data-lid="8kpyo" data-relation="required" }), any subextension of $\mathbb{L}$ that is separable is always contained in $\mathbb{L}_s$. Conversely, an algebraic extension generated solely by separable elements is again separable by [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12){: data-lid="r1ury" data-relation="required" }, so $\mathbb{K}(\mathbb{L}_s)$ is itself a separable extension; hence by the preceding claim we have $\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$. Thus $\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$, which shows that $\mathbb{L}_s$ itself is a subextension of $\mathbb{L}/\mathbb{K}$; combining this with the maximality observed above, we obtain that $\mathbb{L}_s$ is the largest separable subextension.
 :::
 
 As mentioned above, we call $\mathbb{L}_s$ the *relative separable algebraic closure* (in $\mathbb{L}/\mathbb{K}$).
@@ -108,11 +108,11 @@ For an algebraic extension $\mathbb{L}/\mathbb{K}$ and $\mathbb{L}_s$ defined in
 3. $\mathbb{L}_s$ is the unique subextension of $\mathbb{L}$ that is separable over $\mathbb{K}$ and such that $\mathbb{L}$ is $p$-radical over it.
 :::
 ::: Proof
-First, for the first claim, the case $\ch(\mathbb{K})=0$ is trivial, so let us consider the case $\ch(\mathbb{K})=p>0$. Given $x\in \mathbb{L}$ and its minimal polynomial $f$, there exists a suitable $m\geq 0$ such that $f\in\mathbb{K}[\x^{p^m}]$ but $f\not\in \mathbb{K}[\x^{p^{m+1}}]$, and in this case we can choose a polynomial $g$ such that $f(\x)=g(\x^{p^m})$. Since $f$ is irreducible, so is $g$, and therefore $g$ is the minimal polynomial of the element $x^{p^m}$ over $\mathbb{K}$. Now, from the last equivalent condition of [§Separable Extensions, ⁋Proposition 10](/en/math/field_theory/separable_extensions#prop10){: data-relation="required" }, $g$ is separable, and therefore $x^{p^m}$ belongs to $\mathbb{L}_s$. Hence $x$ is $p$-radical over $\mathbb{L}/\mathbb{L}_s$, and from this we obtain the desired result.
+First, for the first claim, the case $\ch(\mathbb{K})=0$ is trivial, so let us consider the case $\ch(\mathbb{K})=p>0$. Given $x\in \mathbb{L}$ and its minimal polynomial $f$, there exists a suitable $m\geq 0$ such that $f\in\mathbb{K}[\x^{p^m}]$ but $f\not\in \mathbb{K}[\x^{p^{m+1}}]$, and in this case we can choose a polynomial $g$ such that $f(\x)=g(\x^{p^m})$. Since $f$ is irreducible, so is $g$, and therefore $g$ is the minimal polynomial of the element $x^{p^m}$ over $\mathbb{K}$. Now, from the last equivalent condition of [§Separable Extensions, ⁋Proposition 10](/en/math/field_theory/separable_extensions#prop10){: data-lid="tvjln" data-relation="required" }, $g$ is separable, and therefore $x^{p^m}$ belongs to $\mathbb{L}_s$. Hence $x$ is $p$-radical over $\mathbb{L}/\mathbb{L}_s$, and from this we obtain the desired result.
 
-On the other hand, given a subextension $\mathbb{M}/\mathbb{K}$ satisfying the second assumption, let $x\in \mathbb{L}_s$. Then $x$ is separable over $\mathbb{K}$, and hence also over $\mathbb{M}$. However, since $\mathbb{L}/\mathbb{M}$ is $p$-radical, $x$ is $p$-radical over $\mathbb{M}$. Again, from the last equivalent condition of [§Separable Extensions, ⁋Proposition 10](/en/math/field_theory/separable_extensions#prop10){: data-relation="required" }, the minimal polynomial of $x$ must lie in $\mathbb{K}[\x^p]$, but at the same time, from the condition that $x$ is $p$-radical, for the height $e$ of $x$, the polynomial $\x^{p^e}-x^{p^e}$ must be the minimal polynomial of $x$. Therefore $e=0$ and $\x-x$ must be the minimal polynomial of $x$, so $x$ must belong to $\mathbb{M}$.
+On the other hand, given a subextension $\mathbb{M}/\mathbb{K}$ satisfying the second assumption, let $x\in \mathbb{L}_s$. Then $x$ is separable over $\mathbb{K}$, and hence also over $\mathbb{M}$. However, since $\mathbb{L}/\mathbb{M}$ is $p$-radical, $x$ is $p$-radical over $\mathbb{M}$. Again, from the last equivalent condition of [§Separable Extensions, ⁋Proposition 10](/en/math/field_theory/separable_extensions#prop10){: data-lid="ic8mg" data-relation="required" }, the minimal polynomial of $x$ must lie in $\mathbb{K}[\x^p]$, but at the same time, from the condition that $x$ is $p$-radical, for the height $e$ of $x$, the polynomial $\x^{p^e}-x^{p^e}$ must be the minimal polynomial of $x$. Therefore $e=0$ and $\x-x$ must be the minimal polynomial of $x$, so $x$ must belong to $\mathbb{M}$.
 
-The last claim follows from the uniqueness in [Proposition 5](#prop5){: data-relation="required" }.
+The last claim follows from the uniqueness in [Proposition 5](#prop5){: data-lid="2767h" data-relation="required" }.
 :::
 
 Since the property of an algebraic extension being separable is stable under base change, if we take two subextensions $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$ of some extension, and the relative separable closure $\mathbb{L}_s$ of $\mathbb{K}$ in $\mathbb{L}$, then we can verify that $\mathbb{K}'(\mathbb{L}_s)$ is the relative separable closure of $\mathbb{K}'$ in $\mathbb{K}'(\mathbb{L})$. Also, from the uniqueness of the relative separable closure, for a finite degree extension $\mathbb{L}/\mathbb{K}$ we can verify that the formula
@@ -138,15 +138,15 @@ Fix an algebraic closure $\overline{\mathbb{K}}$ of a field $\mathbb{K}$.
 2. The separable algebraic closure of $\mathbb{K}$ is uniquely determined up to isomorphism.
 :::
 ::: Proof
-1. $\overline{\mathbb{K}}_s$ is separable by [Proposition 5](#prop5){: data-relation="required" }, and since it is a subextension of the algebraic closure $\overline{\mathbb{K}}$, it is algebraic. Therefore, the claim is proved once we show that any separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$ is trivial. Since the extension $\mathbb{L}/\overline{\mathbb{K}}_s$ is algebraic, there exists a unique $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$ ([§Algebraic Closures, ⁋Theorem 5](/en/math/field_theory/algebraically_closed_extensions#thm5){: data-relation="required" }), and its image $u(\mathbb{L})$ is separable algebraic by [§Separable Extensions, ⁋Proposition 15](/en/math/field_theory/separable_extensions#prop15){: data-lid="s9k68" data-relation="required" }, so $u(\mathbb{L})=\overline{\mathbb{K}}_s$ holds.
-2. Similarly, this follows by using [§Algebraic Closures, ⁋Theorem 5](/en/math/field_theory/algebraically_closed_extensions#thm5){: data-relation="required" }.
+1. $\overline{\mathbb{K}}_s$ is separable by [Proposition 5](#prop5){: data-lid="ubmb1" data-relation="required" }, and since it is a subextension of the algebraic closure $\overline{\mathbb{K}}$, it is algebraic. Therefore, the claim is proved once we show that any separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$ is trivial. Since the extension $\mathbb{L}/\overline{\mathbb{K}}_s$ is algebraic, there exists a unique $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$ ([§Algebraic Closures, ⁋Theorem 5](/en/math/field_theory/algebraically_closed_extensions#thm5){: data-lid="lil5u" data-relation="required" }), and its image $u(\mathbb{L})$ is separable algebraic by [§Separable Extensions, ⁋Proposition 15](/en/math/field_theory/separable_extensions#prop15){: data-lid="s9k68" data-relation="required" }, so $u(\mathbb{L})=\overline{\mathbb{K}}_s$ holds.
+2. Similarly, this follows by using [§Algebraic Closures, ⁋Theorem 5](/en/math/field_theory/algebraically_closed_extensions#thm5){: data-lid="xpakq" data-relation="required" }.
 :::
 
 From this, we know that the separable algebraic closure is the smallest separably closed algebraic extension. That is, if $\mathbb{L}/\mathbb{K}$ is a separable algebraic closure of $\mathbb{K}$, and for a field extension $\mathbb{M}/\mathbb{K}$ the field $\mathbb{M}$ is separably closed, then there exists a unique morphism $\mathbb{L}\rightarrow\mathbb{M}$.
 
 ## Separable Degree
 
-By [Theorem 6](#thm6){: data-relation="required" }, any finite degree extension $\mathbb{L}/\mathbb{K}$ can be split into a separable part and a non-separable part, written as $\mathbb{L}/\mathbb{L}_s/\mathbb{K}$.
+By [Theorem 6](#thm6){: data-lid="xalgl" data-relation="required" }, any finite degree extension $\mathbb{L}/\mathbb{K}$ can be split into a separable part and a non-separable part, written as $\mathbb{L}/\mathbb{L}_s/\mathbb{K}$.
 
 ::: Proposition 9
 In the above situation, $[\mathbb{L}:\mathbb{K}]_s=[\mathbb{L}_s:\mathbb{K}]$.
@@ -165,7 +165,7 @@ $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\m
 
 we can define the *inseparable degree* of the extension $\mathbb{L}/\mathbb{K}$ as $[\mathbb{L}:\mathbb{K}]_i=[\mathbb{L}:\mathbb{L}_s]$.
 
-If $\ch\mathbb{K}=0$, then $[\mathbb{L}:\mathbb{K}]_i=1$ always holds, and if $\ch\mathbb{K}=p$, then $[\mathbb{L}:\mathbb{K}]_i$ is always a power of $p$. ([Theorem 6](#thm6){: data-relation="required" }) However, since there are plenty of polynomials of degree $p^e$ that do not define a $p$-radical extension, there is no way to determine the value of $[\mathbb{L}:\mathbb{K}]_i$ from (say) $[\mathbb{L}:\mathbb{K}]$ alone.
+If $\ch\mathbb{K}=0$, then $[\mathbb{L}:\mathbb{K}]_i=1$ always holds, and if $\ch\mathbb{K}=p$, then $[\mathbb{L}:\mathbb{K}]_i$ is always a power of $p$. ([Theorem 6](#thm6){: data-lid="9ye69" data-relation="required" }) However, since there are plenty of polynomials of degree $p^e$ that do not define a $p$-radical extension, there is no way to determine the value of $[\mathbb{L}:\mathbb{K}]_i$ from (say) $[\mathbb{L}:\mathbb{K}]$ alone.
 
 Nevertheless, the following still holds.
 
