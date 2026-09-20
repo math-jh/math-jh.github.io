@@ -136,7 +136,7 @@ $$A_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 hold. This agrees with the Borel–Moore homology of Euclidean space and projective space, showing that our defined Chow group actually reflects geometric intuition well. ([Proposition 12](#prop12){: data-lid="bc0wh" data-relation="forward" })
 :::
 
-In general, for an $n$-dimensional variety $X$, we have $A_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9){: data-lid="g55fo" data-relation="required" }, and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9){: data-lid="3hlxy" data-relation="weak" reviewed="" } corresponds to this. On the other hand, for $k < n$, the generator of $A_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
+In general, for an $n$-dimensional variety $X$, we have $A_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9){: data-lid="g55fo" data-relation="required" }, and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9){: data-lid="3hlxy" data-relation="weak" } corresponds to this. On the other hand, for $k < n$, the generator of $A_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
 
 ::: Example 10
 To make the above example more concrete, define a degree $d$ morphism $f: \mathbb{P}^1 \rightarrow \mathbb{P}^1$ by
@@ -160,7 +160,7 @@ $$A^1(X) \cong \Cl(X) \cong \Pic(X)$$
 holds.
 :::
 
-Also, in [Example 9](#ex9){: data-lid="kv46r" data-relation="weak" reviewed="" } we saw that the cases of $\mathbb{A}^n$ and $\mathbb{P}^n$ match classical computations, and this can be formulated rigorously as follows.
+Also, in [Example 9](#ex9){: data-lid="kv46r" data-relation="weak" } we saw that the cases of $\mathbb{A}^n$ and $\mathbb{P}^n$ match classical computations, and this can be formulated rigorously as follows.
 
 ::: Proposition 12
 For a complex variety $X$, there exists a *cycle class map*
