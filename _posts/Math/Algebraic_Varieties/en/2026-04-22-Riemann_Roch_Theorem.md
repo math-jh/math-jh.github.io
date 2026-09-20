@@ -138,7 +138,7 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 considered for all $p_i$ simultaneously. Then the dimension of the target of the above linear map is $\sum n_i = \deg D$, and its kernel consists of the pole-free global sections, i.e. $H^0(C, \mathcal{O}_C) = \mathbb{K}$, whence $\ell(D) \leq 1 + \deg D$. If $D$ is not effective but $\ell(D) > 0$, then $D$ is linearly equivalent to some effective divisor, so the same inequality holds.
 
-In general, for this inequality to be an equality the linear map must be surjective, but this is not always the case. To see why, consider the long exact sequence induced by the short exact sequence examined in the proof of [Proposition 3](#prop3){: data-relation="weak" reviewed="" }:
+In general, for this inequality to be an equality the linear map must be surjective, but this is not always the case. To see why, consider the long exact sequence induced by the short exact sequence examined in the proof of [Proposition 3](#prop3){: data-lid="pe306" data-relation="weak" reviewed="" }:
 
 $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
 
@@ -156,7 +156,7 @@ Applying formula (1), we obtain
 
 $$\dim\coker p^\ast=\dim H^1(C, \mathcal{O}_C)-\dim H^0(C, \mathcal{O}_C(K_C-D))^\vee=g-\ell(K_C-D)$$
 
-In the inequality ($3$), the gap between $\deg(D)+1$ and $\ell(D)$ is precisely the dimension of this cokernel, so these computations recover the result of [Proposition 3](#prop3){: data-relation="weak" reviewed="" }. In other words, $\ell(K_C-D)$ measures how far $\ell(D)$ falls below its upper bound $\deg D+1$; originally this was a counting problem for $1$-forms vanishing along $D$, but Serre duality rewrites it as $\ell(K_C-D)$.
+In the inequality ($3$), the gap between $\deg(D)+1$ and $\ell(D)$ is precisely the dimension of this cokernel, so these computations recover the result of [Proposition 3](#prop3){: data-lid="lk2wi" data-relation="weak" reviewed="" }. In other words, $\ell(K_C-D)$ measures how far $\ell(D)$ falls below its upper bound $\deg D+1$; originally this was a counting problem for $1$-forms vanishing along $D$, but Serre duality rewrites it as $\ell(K_C-D)$.
 
 For example, suppose $\deg D$ is very large, so that $\deg(K_C-D)<0$. Then $\ell(K_C-D)=0$, and the Riemann–Roch theorem gives
 
