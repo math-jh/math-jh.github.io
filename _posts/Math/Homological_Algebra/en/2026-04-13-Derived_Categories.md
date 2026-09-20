@@ -144,7 +144,7 @@ holds, so we see that $RF$ correctly recovers the classical right derived functo
 $R F$ and $L F$ are functors on the derived category; that is, they send quasi-isomorphisms to quasi-isomorphisms.
 :::
 ::: Proof
-Let a quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$ be given, and let $A^\bullet \rightarrow I^\bullet$ and $B^\bullet \rightarrow J^\bullet$ be $K$-injective resolutions. By the lifting property of $K$-injective resolutions ([Definition 6](#def6){: data-relation="required" }), the quasi-isomorphism $s$ extends uniquely (up to homotopy) to a map $\tilde{s} : I^\bullet \rightarrow J^\bullet$. Thus we obtain $F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$. Since we have applied $F$ over a $K$-injective resolution, $F(\tilde{s})$ is a quasi-isomorphism, and hence $R F(A^\bullet) \cong R F(B^\bullet)$ in $D(\mathcal{B})$. The argument for the left derived functor is similar.
+Let a quasi-isomorphism $s : A^\bullet \rightarrow B^\bullet$ be given, and let $A^\bullet \rightarrow I^\bullet$ and $B^\bullet \rightarrow J^\bullet$ be $K$-injective resolutions. By the lifting property of $K$-injective resolutions ([Definition 6](#def6){: data-lid="i3awo" data-relation="required" }), the quasi-isomorphism $s$ extends uniquely (up to homotopy) to a map $\tilde{s} : I^\bullet \rightarrow J^\bullet$. Thus we obtain $F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$. Since we have applied $F$ over a $K$-injective resolution, $F(\tilde{s})$ is a quasi-isomorphism, and hence $R F(A^\bullet) \cong R F(B^\bullet)$ in $D(\mathcal{B})$. The argument for the left derived functor is similar.
 :::
 
 As a concrete example, the Hom functor $\Hom(-, B)$ on $\mathcal{A}$ is a contravariant left exact functor; deriving it yields the derived Hom $R\Hom$ at the complex level, and the cohomology of $R\Hom(A, B)$ coincides with $\Ext^i(A, B)$.
@@ -243,13 +243,13 @@ is one where we might wish to obtain an isomorphism of the same form for complex
 
 To see this concretely, consider $R = \mathbb{Z}$ and $M = \mathbb{Z}/n\mathbb{Z}$. Since $M$ is not flat, tensoring is not exact. Applying $-\otimes M$ to $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$ breaks exactness; specifically, since $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$ exists, the naive adjunction does not work as expected. ([§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-lid="hy3bb" data-relation="required" })
 
-To resolve this exactness failure we construct $\otimes^L$ and $R\Hom$ using projective resolutions, and by [Proposition 14](#prop14){: data-relation="required" } the adjunction is restored. Specifically, $A \otimes^L B$ is obtained by applying $-\otimes B$ to a projective resolution of $A$, and $R\Hom(B, C)$ is obtained by applying $\Hom(-, C)$ to a projective resolution of $B$. This yields
+To resolve this exactness failure we construct $\otimes^L$ and $R\Hom$ using projective resolutions, and by [Proposition 14](#prop14){: data-lid="2ktiu" data-relation="required" } the adjunction is restored. Specifically, $A \otimes^L B$ is obtained by applying $-\otimes B$ to a projective resolution of $A$, and $R\Hom(B, C)$ is obtained by applying $\Hom(-, C)$ to a projective resolution of $B$. This yields
 
 $$\Hom_{D(\mathcal{A})}(A \otimes^L B, C) \cong \Hom_{D(\mathcal{A})}(A, R\Hom(B, C))$$
 
 . In the process of taking a projective resolution, the $\Tor$ information lost by $-\otimes B$ and the $\Ext$ information lost by $\Hom(B,-)$ are preserved in the higher degrees of the complex, and one can verify that the two sides agree by computing chain maps.
 
-In summary, the classical adjunction in an abelian category exists at the underived level, but it does not automatically survive localization with respect to quasi-isomorphisms. Because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact, quasi-isomorphisms are not preserved, and consequently the naive adjunction breaks. This failure of exactness is resolved by constructing $\otimes^L$ and $R\Hom$ via resolutions, and the derived adjunction guaranteed by [Proposition 14](#prop14){: data-relation="required" } precisely replaces the classical adjunction.
+In summary, the classical adjunction in an abelian category exists at the underived level, but it does not automatically survive localization with respect to quasi-isomorphisms. Because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact, quasi-isomorphisms are not preserved, and consequently the naive adjunction breaks. This failure of exactness is resolved by constructing $\otimes^L$ and $R\Hom$ via resolutions, and the derived adjunction guaranteed by [Proposition 14](#prop14){: data-lid="swsqu" data-relation="required" } precisely replaces the classical adjunction.
 
 ---
 

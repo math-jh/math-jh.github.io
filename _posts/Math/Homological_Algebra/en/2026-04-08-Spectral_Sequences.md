@@ -171,7 +171,7 @@ Let $(A^\bullet, F)$ be a bounded filtered complex, and let $(E_r^{p,q})$ be the
 
 ## Spectral Sequences of Double Complexes
 
-We have taken the proof of the balancing of $\Ext$ and $\Tor$ in [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" } as the motivation for our theory. We close this post by examining the spectral sequence defined from a double complex.
+We have taken the proof of the balancing of $\Ext$ and $\Tor$ in [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="pysxe" data-relation="weak" } as the motivation for our theory. We close this post by examining the spectral sequence defined from a double complex.
 
 ::: Example 11
 Consider the total complex $\Tot(K)^\bullet$ of an arbitrary double complex $K^{p,q}$. We can equip this total complex with a filtration in two ways.
@@ -203,7 +203,7 @@ $$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
 and $d_1$ is induced by the vertical differential $d_v$.
 :::
 
-In particular, let $K^{p,q}$ be a first quadrant double complex. Then both filtrations define bounded filtered complexes, so by [Proposition 10](#prop10){: data-lid="sqlml" data-relation="required" } each spectral sequence converges to $H^\bullet(\Tot(K))$. From this we can reconstruct the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-relation="weak" } in fancier language.
+In particular, let $K^{p,q}$ be a first quadrant double complex. Then both filtrations define bounded filtered complexes, so by [Proposition 10](#prop10){: data-lid="sqlml" data-relation="required" } each spectral sequence converges to $H^\bullet(\Tot(K))$. From this we can reconstruct the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="31ppi" data-relation="weak" } in fancier language.
 
 ---
 

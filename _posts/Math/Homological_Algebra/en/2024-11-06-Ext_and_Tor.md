@@ -88,7 +88,7 @@ Consider the double complex
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
 
-The horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$ is obtained by applying $\Hom_\lMod{A}(P_q,-)$ to $I^p\rightarrow I^{p+1}$, and similarly the vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$ is obtained by applying $\Hom_\lMod{A}(-,I^p)$ to $P_{q+1}\rightarrow P_q$. Now consider the total complex $\Tot(K)^\bullet$ of this double complex. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="required" }) Then the stated isomorphism is obtained by computing the $n$-th cohomology of $\Tot(K)^\bullet$ in two different ways.
+The horizontal differential $d_h:K^{p,q} \rightarrow K^{p+1,q}$ is obtained by applying $\Hom_\lMod{A}(P_q,-)$ to $I^p\rightarrow I^{p+1}$, and similarly the vertical differential $d_v: K^{p,q}\rightarrow K^{p,q+1}$ is obtained by applying $\Hom_\lMod{A}(-,I^p)$ to $P_{q+1}\rightarrow P_q$. Now consider the total complex $\Tot(K)^\bullet$ of this double complex. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-lid="4rcz5" data-relation="required" }) Then the stated isomorphism is obtained by computing the $n$-th cohomology of $\Tot(K)^\bullet$ in two different ways.
 
 To verify this, we first check that the cohomologies of the rows $K^{\bullet, q}$ and columns $K^{p,\bullet}$ of the cochain complex are given by
 
@@ -96,7 +96,7 @@ $$H^q(K^{p, \bullet}) = \begin{cases} \Hom_\lMod{A}(M, I^p) & q = 0 \\ 0 & q > 0
 
 Here, the vanishing of cohomology follows from the definitions of projective and injective modules. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3){: data-lid="7b7t3" data-relation="required" })
 
-As in the computation carried out right after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="required" }, computing the cohomology of the total complex requires some care because the differentials mix the terms. For this we use a *filtration*.
+As in the computation carried out right after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-lid="mi2ik" data-relation="required" }, computing the cohomology of the total complex requires some care because the differentials mix the terms. For this we use a *filtration*.
 
 First, consider the filtration on $\Tot(K)^\bullet$ defined by
 
@@ -206,7 +206,7 @@ Here $A[n] = \{a \in A \mid na = 0\}$ is the $n$-torsion subgroup.
 :::
 
 ::: Proof
-Consider the same projective resolution as in [Proposition 5](#prop5){: data-relation="required" },
+Consider the same projective resolution as in [Proposition 5](#prop5){: data-lid="z5dbm" data-relation="required" },
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 
@@ -221,7 +221,7 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 That $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$ is a simple computation.
 :::
 
-More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5){: data-relation="weak" }, [Proposition 6](#prop6){: data-lid="jabk6" data-relation="forward" } can also be said to show the origin of the name $\Ext$ in this sense.
+More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5){: data-lid="gajz3" data-relation="weak" }, [Proposition 6](#prop6){: data-lid="jabk6" data-relation="forward" } can also be said to show the origin of the name $\Ext$ in this sense.
 
 Finally we define the following.
 
