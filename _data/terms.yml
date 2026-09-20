@@ -3612,6 +3612,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+- id: connecting_map
+  en: connecting map
+  ko: 연결 사상
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Diagram chasing'
+    url: /ko/math/homological_algebra/diagram_chasing
 - id: connection
   en: connection
   ko: 접속
@@ -6626,6 +6633,13 @@ F:
   defs:
   - label: '[가환대수학] §Fitting 아이디얼'
     url: /ko/math/commutative_algebra/fitting_ideals
+- id: five_lemma
+  en: five lemma
+  ko: 5항 보조정리
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Diagram chasing'
+    url: /ko/math/homological_algebra/diagram_chasing
 - id: fixed_point
   en: fixed point
   ko: 고정점
@@ -6870,6 +6884,13 @@ F:
   defs:
   - label: '[호몰로지 대수학] §Ext와 Tor'
     url: /ko/math/homological_algebra/ext_and_tor
+- id: freyd-mitchell_embedding_theorem
+  en: Freyd-Mitchell embedding theorem
+  ko: 프라이드-미첼 매장 정리
+  primary: en
+  defs:
+  - label: '[범주론] §아벨 카테고리'
+    url: /ko/math/category_theory/abelian_categories
 - id: frobenius_algebra
   en: Frobenius algebra
   ko: 프로베니우스 대수
@@ -16871,6 +16892,13 @@ S:
   see:
   - label: Long exact sequence
     id: long_exact_sequence
+- id: short_five_lemma
+  en: short five lemma
+  ko: 짧은 5항 보조정리
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §Diagram chasing'
+    url: /ko/math/homological_algebra/diagram_chasing
 - id: sieve
   en: sieve
   ko: 시브
