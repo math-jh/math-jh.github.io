@@ -238,6 +238,39 @@ def write_pair(en_post, old_text, accepted) -> str | None:
     return None
 
 
+DONE_KEY = "_finished"
+NOTIFY = Path.home() / ".local" / "bin" / "notify"
+
+
+def announce_done(state: dict) -> None:
+    """백필이 끝났음을 한 번만 알리고 스스로 멈춘다.
+
+    일회성 작업이라 소진된 뒤에도 10분마다 코퍼스를 다시 훑을 이유가 없다.
+    알림은 notify 가 유일한 발신 지점이고 실패해도 예외를 올리지 않는다 —
+    알림 때문에 워커가 죽으면 안 된다. 상태에 남긴 표시로 재발신을 막는다.
+    """
+    if state.get(DONE_KEY):
+        return
+    pairs = [k for k in state if not k.startswith("_")]
+    matched = sum(state[k].get("matched", 0) for k in pairs)
+    held = sum(state[k].get("unmatched", 0) for k in pairs)
+    refused = sum(len(state[k].get("refused", [])) for k in pairs)
+    problems = sum(len(state[k].get("problems", [])) for k in pairs)
+    body = (f"{len(pairs)}쌍 처리 · 대응 확정 {matched}건\n"
+            f"모델 보류 {held} · 규칙위반 거절 {refused} · 지적 {problems}\n"
+            "크론은 스스로 정지했다. 분류기·번역 워커를 재개할 수 있다.")
+    state[DONE_KEY] = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "matched": matched}
+    _save_state(state)
+    for command in ([str(NOTIFY), "-s", "링크 대응 백필 완료", "-b", body,
+                     "-l", "timeSensitive", "--archive"],
+                    [str(Path.home() / ".local" / "bin" / "cron-gate"),
+                     "--pause", "blog-link-pairing"]):
+        try:
+            subprocess.run(command, capture_output=True, timeout=30)
+        except Exception as exc:                       # noqa: BLE001
+            print(f"완료 처리 실패({command[0]}): {exc}")
+
+
 def pending_pairs():
     posts = P.sag._posts()
     pairs = [(p, P.sag._counterpart(p, "en")) for p in posts if p.lang == "ko"]
@@ -324,6 +357,7 @@ def main() -> int:
             "retire_en_reviewed.py")), "--apply", "--quiet"], cwd=str(ROOT))
     if done == 0:
         print("남은 쌍 없음")
+        announce_done(state)
     return 0
 
 
