@@ -26,7 +26,7 @@ In particular, when $I$ is finite and $A$ is commutative, $\Mat_{n}(A)$ has addi
 In this situation, $\Mat_n(A)$ is a unital associative algebra.
 :::
 ::: Proof
-That $\Mat_n(A)$ is an associative $A$-algebra follows immediately from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication){: data-relation="required" }. The identity element for multiplication in $\Mat_n(A)$ is the identity matrix
+That $\Mat_n(A)$ is an associative $A$-algebra follows immediately from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication){: data-lid="qpbzv" data-relation="required" }. The identity element for multiplication in $\Mat_n(A)$ is the identity matrix
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 
@@ -41,7 +41,7 @@ $$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 We denote by $\GL_n(A)$ the subset of $\Mat_n(A)$ consisting of those elements that admit a multiplicative inverse.
 :::
 
-Fix a basis $\mathcal{B}=(e_i)_{i\in I}$ of a free $A$-module $M$, and let $\lvert I\rvert=n$. Then for any $u\in \End_{\lMod{A}}(M)$, we have $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$; moreover, if $u$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-relation="required" } we have $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5){: data-relation="required" } and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5){: data-relation="required" } yield the identity
+Fix a basis $\mathcal{B}=(e_i)_{i\in I}$ of a free $A$-module $M$, and let $\lvert I\rvert=n$. Then for any $u\in \End_{\lMod{A}}(M)$, we have $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$; moreover, if $u$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-lid="98wrl" data-relation="required" } we have $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5){: data-lid="oze3w" data-relation="required" } and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5){: data-lid="rsngm" data-relation="required" } yield the identity
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -94,7 +94,7 @@ In the same context as the discussion preceding [§Change of Basis, ⁋Definitio
 Two $n\times n$ matrices $X, X'$ are called *similar* if there exists a square matrix $P\in\GL_n(A)$ such that $X'=PXP^{-1}$.
 :::
 
-Then, setting $M=N$, $\mathcal{B}=\mathcal{C}$, and $\mathcal{B}'=\mathcal{C}'$ in [Proposition 5](#prop5){: data-relation="required" } above, we see that the matrix representations of an element $u\in\End_\rMod{A}(M)$ with respect to different bases are similar to one another.
+Then, setting $M=N$, $\mathcal{B}=\mathcal{C}$, and $\mathcal{B}'=\mathcal{C}'$ in [Proposition 5](#prop5){: data-lid="gde8w" data-relation="required" } above, we see that the matrix representations of an element $u\in\End_\rMod{A}(M)$ with respect to different bases are similar to one another.
 
 ---
 

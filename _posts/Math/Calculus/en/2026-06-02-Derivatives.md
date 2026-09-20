@@ -14,7 +14,7 @@ translated_at: 2026-08-19T03:45:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T03:45:05+00:00
 ---
-We previously reformulated the notion of a function being continuous in the language of $\epsilon$-$\delta$ in [§Continuous Functions](/en/math/calculus/continuity){: data-relation="required" reviewed="" }. The natural next step is to define the derivative of a function.
+We previously reformulated the notion of a function being continuous in the language of $\epsilon$-$\delta$ in [§Continuous Functions](/en/math/calculus/continuity){: data-lid="jv8y8" data-relation="required" reviewed="" }. The natural next step is to define the derivative of a function.
 
 ## Definition of the Derivative
 
@@ -53,7 +53,7 @@ For $x \neq a$,
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a).$$
 
-As $x \rightarrow a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" reviewed="" },
+As $x \rightarrow a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="hocyr" data-relation="required" reviewed="" },
 
 $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0.$$
 
@@ -87,7 +87,7 @@ Consider the function
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}.$$
 
-For $a \neq 0$, taking a sequence of rationals and a sequence of irrationals both converging to $a$, the function values diverge to $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 2](#prop2){: data-relation="required" reviewed="" } it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and the average rate of change satisfies
+For $a \neq 0$, taking a sequence of rationals and a sequence of irrationals both converging to $a$, the function values diverge to $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 2](#prop2){: data-lid="v5ru4" data-relation="required" reviewed="" } it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and the average rate of change satisfies
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0,$$
 
@@ -128,7 +128,7 @@ The *right-hand derivative* and *left-hand derivative* of a function $f$ at a po
 $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}.$$
 :::
 
-Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-relation="weak" reviewed="" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt x$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
+Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="wtbpm" data-relation="weak" reviewed="" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt x$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
 
 ---
 

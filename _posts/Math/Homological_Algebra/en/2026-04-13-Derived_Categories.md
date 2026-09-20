@@ -14,7 +14,7 @@ translated_at: 2026-05-31T15:30:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T15:30:05+00:00
 ---
-In [§Derived Functors](/en/math/homological_algebra/derived_functors){: data-relation="required" } we saw how to address the issue when a functor is not exact. Specifically, given a left (resp. right) exact functor $F$, we chose an injective (resp. projective) resolution of an object $A$ and took the cohomology (resp. homology) of that resolution to define the right (resp. left) derived functor.
+In [§Derived Functors](/en/math/homological_algebra/derived_functors){: data-lid="cpt24" data-relation="required" } we saw how to address the issue when a functor is not exact. Specifically, given a left (resp. right) exact functor $F$, we chose an injective (resp. projective) resolution of an object $A$ and took the cohomology (resp. homology) of that resolution to define the right (resp. left) derived functor.
 
 What deserves attention is that while the choice of injective or projective resolution does not affect the (co)homology, at the level of concrete chain complexes these choices are not natural. We now refine the framework conceptually. Specifically, we take chain complexes as our objects and regard quasi-isomorphic chain complexes as identical from the outset, thereby resolving this issue. That is, the category $\Ch(\mathcal{A})$ of chain complexes in $\mathcal{A}$, rather than the abelian category $\mathcal{A}$ itself, becomes our primary object of study.
 
@@ -30,13 +30,13 @@ $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bulle
 .
 :::
 
-We can verify that $\mathbf{K}(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4){: data-relation="required" } that a quasi-isomorphism is generally not an isomorphism in $\mathbf{K}(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
+We can verify that $\mathbf{K}(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4){: data-lid="2tfxp" data-relation="required" } that a quasi-isomorphism is generally not an isomorphism in $\mathbf{K}(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
 
 ::: Definition 2
 The *derived category* $D(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the Verdier quotient $\mathbf{K}(\mathcal{A})/S$ of the homotopy category $\mathbf{K}(\mathcal{A})$ by the class $S$ of quasi-isomorphisms.
 :::
 
-We will not treat this definition with full rigor, but it is essentially the same construction as in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $\mathbf{K}(\mathcal{A})$.
+We will not treat this definition with full rigor, but it is essentially the same construction as in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2){: data-lid="hng0g" }. The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $\mathbf{K}(\mathcal{A})$.
 
 More concretely, when describing morphisms in $D(\mathcal{A})$ we often use roof diagrams. A morphism in $D(\mathcal{A})$ from $X$ to $Y$ is represented by a diagram
 
@@ -86,7 +86,7 @@ We also formally make the following definition.
 The *shift functor* $[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$ on $D(\mathcal{A})$ shifts a complex $A^\bullet$ by $n$ places. Specifically, $(A[n])^i = A^{i+n}$, and the differential is defined by $(d_{A[n]})^i = (-1)^n d_A^{i+n}$.
 :::
 
-The sign convention for the differential has already been explained after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="weak" }. However, the sign change does not affect the (co)homology at all, so for example we have
+The sign convention for the differential has already been explained after [§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-lid="688bf" data-relation="weak" }. However, the sign change does not affect the (co)homology at all, so for example we have
 
 $$H^i(A[n]) = H^{i+n}(A)$$
 
@@ -157,7 +157,7 @@ $$H^{i}(R\Hom(A, B)) \cong \Ext^i(A, B)$$
 holds.
 :::
 ::: Proof
-Let us define $R\Hom(A, B)$ precisely. View $A$ as $A[0] \in D(\mathcal{A})$ and choose a projective resolution $P_\bullet \rightarrow A$. By [Proposition 7](#prop7){: data-relation="required" }, $P_\bullet$ is a $K$-projective complex, so
+Let us define $R\Hom(A, B)$ precisely. View $A$ as $A[0] \in D(\mathcal{A})$ and choose a projective resolution $P_\bullet \rightarrow A$. By [Proposition 7](#prop7){: data-lid="qrqll" data-relation="required" }, $P_\bullet$ is a $K$-projective complex, so
 
 $$R\Hom(A, B) = \Hom(P_\bullet, B)$$
 
@@ -185,7 +185,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 - (TR4) Octahedral axiom: Given a composition $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$, there exist three distinguished triangles forming the associated octahedron.
 :::
 
-The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-relation="required" }) In other words, a short exact sequence becomes a distinguished triangle in the derived category
+The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-lid="3mq91" data-relation="required" }) In other words, a short exact sequence becomes a distinguished triangle in the derived category
 
 $$A'[0] \overset{f}{\rightarrow} A[0] \rightarrow A''[0] \rightarrow A'[1]$$
 
@@ -241,7 +241,7 @@ $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
 is one where we might wish to obtain an isomorphism of the same form for complexes $X, Y, Z$ in the derived category as well. However, the raw functors $-\otimes B$ and $\Hom(B,-)$ do not preserve quasi-isomorphisms, so this adjunction does not descend naively to the derived category. We verified earlier that when defining derived functors one must take a projective or injective resolution in order to descend well from $\mathbf{K}(\mathcal{A})$ to $D(\mathcal{A})$; this is precisely because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact. Since localization with respect to quasi-isomorphisms does not automatically preserve the classical adjoint, a derived version that compensates for this lack of exactness is needed.
 
-To see this concretely, consider $R = \mathbb{Z}$ and $M = \mathbb{Z}/n\mathbb{Z}$. Since $M$ is not flat, tensoring is not exact. Applying $-\otimes M$ to $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$ breaks exactness; specifically, since $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$ exists, the naive adjunction does not work as expected. ([§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-relation="required" })
+To see this concretely, consider $R = \mathbb{Z}$ and $M = \mathbb{Z}/n\mathbb{Z}$. Since $M$ is not flat, tensoring is not exact. Applying $-\otimes M$ to $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$ breaks exactness; specifically, since $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$ exists, the naive adjunction does not work as expected. ([§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-lid="hy3bb" data-relation="required" })
 
 To resolve this exactness failure we construct $\otimes^L$ and $R\Hom$ using projective resolutions, and by [Proposition 14](#prop14){: data-relation="required" } the adjunction is restored. Specifically, $A \otimes^L B$ is obtained by applying $-\otimes B$ to a projective resolution of $A$, and $R\Hom(B, C)$ is obtained by applying $\Hom(-, C)$ to a projective resolution of $B$. This yields
 

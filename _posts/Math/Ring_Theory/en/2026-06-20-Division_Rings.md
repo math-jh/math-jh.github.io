@@ -21,13 +21,13 @@ Unless otherwise stated, a ring is always assumed to have an identity $1\neq 0$,
 
 ## Division Rings and Zero Divisors
 
-The definition of a division ring has already been given, but we restate it to begin this post. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3))
+The definition of a division ring has already been given, but we restate it to begin this post. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3){: data-lid="b3gmq" })
 
 ::: Definition 1
 A ring $D\neq 0$ is called a *division ring* or *skew field* if every nonzero element of $D$ has a two-sided multiplicative inverse. A commutative division ring is called a *field*.
 :::
 
-We have already verified in [§Units and Zero Divisors, ⁋Definition 1](/en/math/ring_theory/units_and_zero_divisors#def1){: data-relation="required" } that the unit group $D^\times$ is a group under multiplication, and by definition $D^\times=D\setminus\{0\}$ in a division ring, so this is a group under multiplication. We call this group the *multiplicative group* of $D$.
+We have already verified in [§Units and Zero Divisors, ⁋Definition 1](/en/math/ring_theory/units_and_zero_divisors#def1){: data-lid="8ud4t" data-relation="required" } that the unit group $D^\times$ is a group under multiplication, and by definition $D^\times=D\setminus\{0\}$ in a division ring, so this is a group under multiplication. We call this group the *multiplicative group* of $D$.
 
 The first property of a division ring is as follows.
 
@@ -39,16 +39,16 @@ Let $a,b\in D$ with $ab=0$ and $a\neq 0$. Since $D$ is a division ring, $a$ has 
 
 $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
-Thus if $a\neq 0$ then $b=0$, which means that $a=0$ or $b=0$ whenever $ab=0$. Hence $D$ has no nonzero zero divisors. If $D$ is a field, then it is additionally commutative and $0\neq 1$, so it is an integral domain ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5)).
+Thus if $a\neq 0$ then $b=0$, which means that $a=0$ or $b=0$ whenever $ab=0$. Hence $D$ has no nonzero zero divisors. If $D$ is a field, then it is additionally commutative and $0\neq 1$, so it is an integral domain ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="1x1pe" }).
 :::
 
 ## Wedderburn's Little Theorem
 
-The above [Proposition 2](#prop2){: data-relation="required" } can in fact be obtained immediately from [§Units and Zero Divisors, ⁋Proposition 4](/en/math/ring_theory/units_and_zero_divisors#prop4){: data-relation="required" }, since in a division ring every nonzero element is a unit, so there is no possibility of a nonzero zero divisor existing. However, the converse is not generally true; for instance, $\mathbb{Z}$ is such an example, as we already observed right after the above proposition.
+The above [Proposition 2](#prop2){: data-relation="required" } can in fact be obtained immediately from [§Units and Zero Divisors, ⁋Proposition 4](/en/math/ring_theory/units_and_zero_divisors#prop4){: data-lid="8aebo" data-relation="required" }, since in a division ring every nonzero element is a unit, so there is no possibility of a nonzero zero divisor existing. However, the converse is not generally true; for instance, $\mathbb{Z}$ is such an example, as we already observed right after the above proposition.
 
 Moreover, in that post we already examined a partial converse of the above [Proposition 2](#prop2){: data-relation="required" }, namely that for *finite* rings, an integral domain is always a field. ([§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-relation="weak" }) The proof of this corollary does not essentially use the commutativity of the ring, yet commutativity was assumed in that corollary because there simply do not exist any finite non-commutative zero-divisor-free rings when commutativity is dropped.
 
-To examine this phenomenon, we first organize properties of the center $Z(D)$ of a division ring $D$. This is a commutative subring of $D$ ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 8](/en/math/algebraic_structures/rings#def8)), and moreover it is a field. This is because any nonzero $z\in Z(D)$ has an inverse $z^{-1}$ in $D$, and for any $x\in D$ we have
+To examine this phenomenon, we first organize properties of the center $Z(D)$ of a division ring $D$. This is a commutative subring of $D$ ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 8](/en/math/algebraic_structures/rings#def8){: data-lid="qozsj" }), and moreover it is a field. This is because any nonzero $z\in Z(D)$ has an inverse $z^{-1}$ in $D$, and for any $x\in D$ we have
 
 $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
@@ -68,7 +68,7 @@ We use two basic properties of cyclotomic polynomials. First, every root of $\x^
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 
-holds, and therefore by performing the division from [§Polynomial Rings, ⁋Proposition 5](/en/math/ring_theory/polynomial_rings#prop5){: data-relation="required" } inside $\mathbb{Z}[\x]$, we inductively know that each $\Phi_d(\x)$ has integer coefficients. Second, for a proper divisor $d$ of $n$,
+holds, and therefore by performing the division from [§Polynomial Rings, ⁋Proposition 5](/en/math/ring_theory/polynomial_rings#prop5){: data-lid="6hf3r" data-relation="required" } inside $\mathbb{Z}[\x]$, we inductively know that each $\Phi_d(\x)$ has integer coefficients. Second, for a proper divisor $d$ of $n$,
 
 $$\x^n-1=(\x^d-1)\cdot\prod_{e\mid n\text{ but }e\nmid d}\Phi_e(\x)$$
 
@@ -80,7 +80,7 @@ Finally, we isolate one analytic inequality that we will need.
 For integers $q\geq 2$ and $n\geq 2$, we have $|\Phi_n(q)|>q-1$.
 :::
 ::: Proof
-Substituting $q$ into the cyclotomic polynomial, by [Definition 3](#def3){: data-relation="required" } we have
+Substituting $q$ into the cyclotomic polynomial, by [Definition 3](#def3){: data-lid="oxsio" data-relation="required" } we have
 
 $$\Phi_n(q)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}(q-\zeta^m)$$
 
@@ -107,11 +107,11 @@ Every finite division ring is a field. That is, every finite division ring is co
 ::: Proof
 Let $D$ be a finite division ring and $Z=Z(D)$ its center. As we saw above, $Z$ is a finite field; letting $q\geq 2$ be its number of elements, $D$ is a finite-dimensional vector space over $Z$ with $|D|=q^n$ elements. Our claim is that $n=1$, so that $D=Z$ is commutative.
 
-To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14)) The class equation of $D^\times$ for the conjugation action from [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9) is
+To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="zj5ue" }) The class equation of $D^\times$ for the conjugation action from [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9){: data-lid="874le" } is
 
 $$|D^\times|=|Z(D^\times)|+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
-where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12), and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $|Z(D^\times)|=q-1$.
+where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12){: data-lid="6xd4d" }, and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $|Z(D^\times)|=q-1$.
 
 Now for each $x\in D^\times$, the set $C_D(x)=\{y\in D\mid xy=yx\}$ is a sub-division ring of $D$ containing $Z$. In this case we have seen that $C_D(x)$ is a $Z$-vector space, and since $|Z|=q$, we have $|C_D(x)|=q^{d(x)}$ for some $d(x)$. Also, since $D$ is a vector space over $C_D(x)$, we have $d(x)\mid n$. Since $C_{D^\times}(x)=C_D(x)\setminus\{0\}$, we have
 
@@ -123,7 +123,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 
 where each $d(x)$ in the sum is a proper divisor of $n$.
 
-Now assume $n\geq 2$ and derive a contradiction. The cyclotomic polynomial $\Phi_n(\x)$ divides $q^n-1$, and for each proper divisor $d=d(x)<n$, it also divides $\frac{q^n-1}{q^d-1}$. Therefore, from $(\ast)$ above, $\Phi_n(q)$ must also divide $q-1$. That is, $\Phi_n(q)\mid q-1$ and $q-1\geq 1$, so $|\Phi_n(q)|\leq q-1$. However, by [Proposition 4](#prop4){: data-relation="required" }, if $n\geq 2$ then $|\Phi_n(q)|>q-1$, a contradiction.
+Now assume $n\geq 2$ and derive a contradiction. The cyclotomic polynomial $\Phi_n(\x)$ divides $q^n-1$, and for each proper divisor $d=d(x)<n$, it also divides $\frac{q^n-1}{q^d-1}$. Therefore, from $(\ast)$ above, $\Phi_n(q)$ must also divide $q-1$. That is, $\Phi_n(q)\mid q-1$ and $q-1\geq 1$, so $|\Phi_n(q)|\leq q-1$. However, by [Proposition 4](#prop4){: data-lid="69hcj" data-relation="required" }, if $n\geq 2$ then $|\Phi_n(q)|>q-1$, a contradiction.
 :::
 
 The first consequence of this theorem is to reconfirm the result about finite integral domains.
@@ -139,7 +139,7 @@ What makes this essentially different from [§Units and Zero Divisors, ⁋Coroll
 
 ## Quaternions
 
-By [Theorem 5](#thm5){: data-relation="required" }, a non-commutative division ring must necessarily be infinite, so we must look for examples among infinite rings. The most classical one is the space of *quaternions* defined by Hamilton, which is a 4-dimensional vector space over the real field $\mathbb{R}$ equipped with a multiplication.
+By [Theorem 5](#thm5){: data-lid="hmkyl" data-relation="required" }, a non-commutative division ring must necessarily be infinite, so we must look for examples among infinite rings. The most classical one is the space of *quaternions* defined by Hamilton, which is a 4-dimensional vector space over the real field $\mathbb{R}$ equipped with a multiplication.
 
 ::: Definition 7
 The *quaternion algebra* $\mathbb{H}$ is the 4-dimensional vector space over $\mathbb{R}$ with basis $1,i,j,k$, whose elements are of the form
@@ -246,7 +246,7 @@ that
 
 $$M_q=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
 
-This is the matrix representation written above, and its determinant $|z|^2+|w|^2$ is precisely the norm $N(q)$, so the fact that $M_q$ is invertible for nonzero $q$ is the same content as what [Proposition 9](#prop9){: data-relation="weak" } showed.
+This is the matrix representation written above, and its determinant $|z|^2+|w|^2$ is precisely the norm $N(q)$, so the fact that $M_q$ is invertible for nonzero $q$ is the same content as what [Proposition 9](#prop9){: data-lid="ab0ch" data-relation="weak" } showed.
 
 ---
 

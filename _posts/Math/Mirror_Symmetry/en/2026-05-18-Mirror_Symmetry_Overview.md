@@ -16,7 +16,7 @@ last_polished_at: 2026-08-19T19:15:05+00:00
 ---
 ## Historical Background
 
-Mirror symmetry did not arise naturally from within mathematics itself; rather, it is rooted in superstring theory. In superstring theory, the fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Consequently, when a particle moves along the time axis, its trajectory in spacetime is no longer a $1$-dimensional worldline but a $2$-dimensional worldsheet, and its equation of motion is determined by a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action). To reconcile this interpretation with the existing framework of quantum mechanics, spacetime is forced to be $10$-dimensional; thus physicists regard this $10$-dimensional spacetime as the product of a $4$-dimensional Minkowski spacetime and a compact manifold $X$ that accounts for the remaining $6$ dimensions. Writing out the physical conditions that this space $X$ must satisfy, one finds that $X$ must be a *Calabi-Yau threefold*.
+Mirror symmetry did not arise naturally from within mathematics itself; rather, it is rooted in superstring theory. In superstring theory, the fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Consequently, when a particle moves along the time axis, its trajectory in spacetime is no longer a $1$-dimensional worldline but a $2$-dimensional worldsheet, and its equation of motion is determined by a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action){: data-lid="c1tlf" }. To reconcile this interpretation with the existing framework of quantum mechanics, spacetime is forced to be $10$-dimensional; thus physicists regard this $10$-dimensional spacetime as the product of a $4$-dimensional Minkowski spacetime and a compact manifold $X$ that accounts for the remaining $6$ dimensions. Writing out the physical conditions that this space $X$ must satisfy, one finds that $X$ must be a *Calabi-Yau threefold*.
 
 Meanwhile, $10$-dimensional superstring theory splits into five types according to the choice of boundary conditions and quantum-mechanical conditions imposed on the worldsheet. Among these, the direct setting for mirror symmetry is Type IIA and Type IIB superstring theory, which, as their names suggest, are closely related. Type IIA superstring theory on a Calabi-Yau threefold $X$ involves both a Kähler structure and a complex structure, while Type IIB superstring theory interchanges these two structures and defines a new Calabi-Yau threefold $\check{X}$.
 
@@ -30,7 +30,7 @@ In the posts of this category we will explain the A-model and B-model in turn, a
 
 ## Hori-Vafa Mirror Construction
 
-In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Varieties, ⁋Definition 3](/en/math/toric_geometry/toric_varieties#def3)), mirror symmetry takes a very concrete form, so before embarking on the full story we examine how mirror symmetry works in this setting.
+In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Varieties, ⁋Definition 3](/en/math/toric_geometry/toric_varieties#def3){: data-lid="s27qv" }), mirror symmetry takes a very concrete form, so before embarking on the full story we examine how mirror symmetry works in this setting.
 
 Let the fan of a smooth projective toric variety $X=X_\Sigma$ be $\Sigma$, and let the primitive generators of its $1$-dimensional cones be $v_1, \ldots, v_m \in \mathbb{Z}^n$. If $\Sigma$ is a complete fan, then the $v_i$ span $\mathbb{R}^n$. However, since $m>n$, they are $\mathbb{Z}$-linearly dependent, and hence there exist $r=m-n$ integral relations among them.
 
@@ -82,7 +82,7 @@ The purpose of this post is to examine this phenomenon through light computation
 
 $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}.$$
 
-Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$ and $\partial_i$ are the partial derivatives with respect to these. Geometrically $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4){: data-relation="required" } recovers the data of the original A-side model.
+Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$ and $\partial_i$ are the partial derivatives with respect to these. Geometrically $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{\dd{W} = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4){: data-lid="5bbc3" data-relation="required" } recovers the data of the original A-side model.
 
 ::: Definition 4
 For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_1,\ldots, q_r)\in (\mathbb{C}^\ast)^r$, the *Hori-Vafa mirror* defined by this data is the following Landau-Ginzburg model.
@@ -128,7 +128,7 @@ This statement matches the picture we already knew in several respects; for exam
 In general, examining $QH^\ast(X_\Sigma)$ on the right-hand side of the above isomorphism amounts to counting curves passing through given classes simultaneously, which is regarded as a relatively complex and difficult task, but mirror symmetry reduces this to a simple ring computation. Let us verify that this actually holds in the two simple cases $\mathbb{P}^1$ and $\mathbb{P}^2$.
 
 ::: Example 5 ($\mathbb{P}^1$ case)
-In [Example 2](#ex2){: data-relation="required" } we checked that the charge matrix of $\mathbb{P}^1$ is $Q = (1, 1)$. Hence the domain $\check{X}$ of the Hori-Vafa mirror is the submanifold of $(\mathbb{C}^\ast)^2$ satisfying
+In [Example 2](#ex2){: data-lid="m391m" data-relation="required" } we checked that the charge matrix of $\mathbb{P}^1$ is $Q = (1, 1)$. Hence the domain $\check{X}$ of the Hori-Vafa mirror is the submanifold of $(\mathbb{C}^\ast)^2$ satisfying
 
 $$\x_0 \x_1 = q.$$
 

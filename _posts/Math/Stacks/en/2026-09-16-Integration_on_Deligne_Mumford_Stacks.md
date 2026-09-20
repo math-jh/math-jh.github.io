@@ -19,7 +19,7 @@ Meanwhile, on a pure-dimensional algebraic stack, the fundamental cycle itself i
 
 ## Chow Groups of Stacks
 
-In [\[Algebraic Varieties\] §Chow Groups, ⁋Definition 5](/en/math/algebraic_varieties/chow_groups#def5){: data-relation="required" }, we defined the Chow group of a variety by quotienting algebraic cycles by rational equivalence. On a Deligne–Mumford stack, cycles and rational equivalence can be defined in the same way. For $k$-dimensional integral closed substacks $\mathcal{V}\subseteq\mathcal{X}$, let the vector space consisting of their formal $\mathbb{Q}$-linear combinations be
+In [\[Algebraic Varieties\] §Chow Groups, ⁋Definition 5](/en/math/algebraic_varieties/chow_groups#def5){: data-lid="846c5" data-relation="required" }, we defined the Chow group of a variety by quotienting algebraic cycles by rational equivalence. On a Deligne–Mumford stack, cycles and rational equivalence can be defined in the same way. For $k$-dimensional integral closed substacks $\mathcal{V}\subseteq\mathcal{X}$, let the vector space consisting of their formal $\mathbb{Q}$-linear combinations be
 
 $$Z_k(\mathcal{X})_\mathbb{Q}$$
 
@@ -44,7 +44,7 @@ Recall that in [\[Algebraic Varieties\] §Chow Groups, ⁋Proposition 6](/en/mat
 
 $$[V]\longmapsto [K(V):K(W)][W]$$
 
-The above definition is precisely the extension of this formula to Deligne–Mumford stacks, the difference being the addition of the ratio of generic stabilizers $e_{\mathcal W}/e_{\mathcal V}$. Fundamentally, as observed right after [§Proper Stacks, ⁋Proposition 4](/en/math/stacks/proper_stacks#prop4), the degree seen scheme-theoretically on the coarse moduli and the automorphism data inherently possessed by the stack are seen separately; for this reason, the product
+The above definition is precisely the extension of this formula to Deligne–Mumford stacks, the difference being the addition of the ratio of generic stabilizers $e_{\mathcal W}/e_{\mathcal V}$. Fundamentally, as observed right after [§Proper Stacks, ⁋Proposition 4](/en/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" }, the degree seen scheme-theoretically on the coarse moduli and the automorphism data inherently possessed by the stack are seen separately; for this reason, the product
 
 $$[K(V):K(W)]\frac{e_{\mathcal W}}{e_{\mathcal V}}$$
 
@@ -77,7 +77,7 @@ holds.
 :::
 
 ::: Proof
-Since $\mathcal{Z}$ is a $0$-dimensional integral proper stack, its coarse moduli space is a single point $\Spec\mathbb{C}$, and $\mathcal{Z}\cong[\Spec\mathbb{C}/\Aut(x)]$. Therefore, applying [Definition 1](#def1){: data-relation="required" } to the structure morphism $p:\mathcal{Z}\rightarrow\Spec\mathbb{C}$, the coarse function field degree is $1$, the generic stabilizer order of the source is $\lvert\Aut(x)\rvert$, and the stabilizer order of the target is $1$. Therefore,
+Since $\mathcal{Z}$ is a $0$-dimensional integral proper stack, its coarse moduli space is a single point $\Spec\mathbb{C}$, and $\mathcal{Z}\cong[\Spec\mathbb{C}/\Aut(x)]$. Therefore, applying [Definition 1](#def1){: data-lid="7hydh" data-relation="required" } to the structure morphism $p:\mathcal{Z}\rightarrow\Spec\mathbb{C}$, the coarse function field degree is $1$, the generic stabilizer order of the source is $\lvert\Aut(x)\rvert$, and the stabilizer order of the target is $1$. Therefore,
 
 $$p_\ast[\mathcal{Z}]=\frac{1}{\lvert\Aut(x)\rvert}[\Spec\mathbb{C}]$$
 
@@ -99,7 +99,7 @@ $$\int_\mathcal{X}\alpha:=\deg(\alpha\cap[\mathcal{X}])=p_\ast(\alpha\cap[\mathc
 
 :::
 
-In [Lemma 3](#lem3) above, we showed that into this degree map $\deg$, the factor $1/\lvert G\rvert$ coming from automorphisms intervenes. First, let us verify this in a concrete example.
+In [Lemma 3](#lem3){: data-lid="bzb7b" } above, we showed that into this degree map $\deg$, the factor $1/\lvert G\rvert$ coming from automorphisms intervenes. First, let us verify this in a concrete example.
 
 ::: Example 5
 Suppose a smooth proper variety $U$ is equipped with an action of a finite group $G$, and consider the quotient stack $\mathcal{X}=[U/G]$. Then we can write the integral on it using the atlas $p:U\rightarrow \mathcal{X}$. That is, if $d=\dim U$, then for any $\alpha\in A^d(\mathcal{X})_\mathbb{Q}$,
@@ -110,7 +110,7 @@ holds. To verify this directly, let the zero-cycle corresponding to $\alpha$ be
 
 $$z=\alpha\cap[\mathcal{X}]=\sum_i m_i[\mathcal{Z}_i]$$
 
-Then for each $0$-dimensional integral closed substack $\mathcal{Z}_i$, letting $x_i$ be its geometric point and $G_i=\Aut(x_i)$ its stabilizer, we have $\deg[\mathcal{Z}_i]=1/\lvert G_i\rvert$ by [Lemma 3](#lem3){: data-relation="required" }.
+Then for each $0$-dimensional integral closed substack $\mathcal{Z}_i$, letting $x_i$ be its geometric point and $G_i=\Aut(x_i)$ its stabilizer, we have $\deg[\mathcal{Z}_i]=1/\lvert G_i\rvert$ by [Lemma 3](#lem3){: data-lid="it1em" data-relation="required" }.
 
 Meanwhile, if we represent $x_i$ by a point in $U$, denoted $u_i$, the pullback under $p$ of $\mathcal{Z}_i$ corresponds to the orbit of $u_i$ under $G$. Then by the orbit-stabilizer formula, this orbit consists of $\lvert G\rvert/\lvert G_i\rvert$ distinct points, and since each point is a point of the scheme $U$, each has degree $1$. Therefore,
 
@@ -134,7 +134,7 @@ Let $\pi:\mathcal{X}\rightarrow X$ be the coarse moduli morphism, and let the ge
 
 $$\pi_\ast[\mathcal{X}]=\frac{1}{e}[X]$$
 
-holds. Indeed, the morphism induced between coarse spaces by the coarse moduli morphism $\pi$ is $\mathrm{id}_X$, so the degree of the function field extension is $1$. Meanwhile, the order of the generic stabilizer of the source $\mathcal{X}$ is $e$, and since the target $X$ is an algebraic space (or scheme), its stabilizer is trivial. Therefore, by [Definition 1](#def1){: data-relation="required" }, we obtain
+holds. Indeed, the morphism induced between coarse spaces by the coarse moduli morphism $\pi$ is $\mathrm{id}_X$, so the degree of the function field extension is $1$. Meanwhile, the order of the generic stabilizer of the source $\mathcal{X}$ is $e$, and since the target $X$ is an algebraic space (or scheme), its stabilizer is trivial. Therefore, by [Definition 1](#def1){: data-lid="m2lwy" data-relation="required" }, we obtain
 
 $$\pi_\ast[\mathcal{X}]=1\cdot\frac{1}{e}[X]=\frac{1}{e}[X]$$
 
@@ -151,7 +151,7 @@ That is, for a cohomology class $\alpha$, we define $f_\ast \alpha$ by the formu
 
 $$(f_\ast\alpha)\cap[\mathcal{Y}]:=f_\ast(\alpha\cap[\mathcal{X}])$$
 
-Then the following projection formula holds. ([\[Algebraic Varieties\] §Intersection Product, ⁋Proposition 14](/en/math/algebraic_varieties/intersection_product#prop14){: data-relation="required" })
+Then the following projection formula holds. ([\[Algebraic Varieties\] §Intersection Product, ⁋Proposition 14](/en/math/algebraic_varieties/intersection_product#prop14){: data-lid="ldjfi" data-relation="required" })
 
 ::: Proposition 7 (Projection formula)
 In the situation above, for any $\alpha\in A^\ast(\mathcal{X})_\mathbb{Q}$ and $\beta\in A^\ast(\mathcal{Y})_\mathbb{Q}$,

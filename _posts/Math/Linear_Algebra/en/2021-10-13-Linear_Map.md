@@ -39,7 +39,7 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 3. For any $u,v\in V$, $L(u-v)=L(u)-L(v)$.
 :::
 ::: Proof
-Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-relation="required" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-relation="required" }. Now, using the fact that a linear map preserves vector addition together with the second claim, we have
+Since a linear map preserves scalar multiplication, the first and second claims follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-lid="1y4gg" data-relation="required" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-lid="a2sgz" data-relation="required" }. Now, using the fact that a linear map preserves vector addition together with the second claim, we have
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
@@ -196,7 +196,7 @@ $$\iota(w)=w\text{ for all $w\in W$}$$
 is a linear map. In this case, $\im\iota=W$ and $\ker \iota=\{0\}$. That is, $\iota$ is injective.
 :::
 
-In the above example, in the special case where $W=V$, the map $\iota$ becomes the identity function $\id_V$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3){: data-relation="weak" }) 
+In the above example, in the special case where $W=V$, the map $\iota$ becomes the identity function $\id_V$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3){: data-lid="pi15u" data-relation="weak" }) 
 
 ::: Example 12
 Consider arbitrary $\mathbb{K}$-vector spaces $V$, $W$, and their product $V\times W$. Then the map $\pr_1:V\times W\rightarrow V$ defined by the formula

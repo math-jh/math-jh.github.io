@@ -17,7 +17,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Fraction Rings
 
-The monoid of natural numbers $\mathbb{N}$ defined in [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers){: data-relation="weak" reviewed="" } could (aside from some technical issues) be written in the language of set theory. And $\mathbb{Z}$ was defined as the Grothendieck group of the commutative monoid $\mathbb{N}$. Thinking back to the number systems learned in middle school, the next object to define is the set of rational numbers $\mathbb{Q}$.
+The monoid of natural numbers $\mathbb{N}$ defined in [\[Set Theory\] §Natural Numbers and Infinite Sets](/en/math/set_theory/natural_numbers){: data-lid="5uoxl" data-relation="weak" reviewed="" } could (aside from some technical issues) be written in the language of set theory. And $\mathbb{Z}$ was defined as the Grothendieck group of the commutative monoid $\mathbb{N}$. Thinking back to the number systems learned in middle school, the next object to define is the set of rational numbers $\mathbb{Q}$.
 
 If we forget the additive structure of $\mathbb{Z}$ and remember only the multiplicative structure, then $(\mathbb{Z},\cdot,1)$ is a commutative monoid. What we need to do is add reciprocals, and since $1/0$ is undefined, if we set $S=\mathbb{Z}\setminus\{0\}$ and consider the monoid of fractions from [§Grothendieck Group, ⁋Definition 7](/en/math/algebraic_structures/Grothendieck_groups#def7){: data-relation="required" reviewed="" }, we obtain the multiplicative monoid $\mathbb{Q}$.
 
@@ -144,7 +144,7 @@ From the assumption that $A$ is an integral domain, we know that $S=A\setminus\{
 :::
 
 ::: Definition 7
-The field $S^{-1}A$ obtained from [Proposition 6](#prop6){: data-relation="required" reviewed="" } above is called the *field of fractions* of $A$, and is denoted by $\Frac(A)$.
+The field $S^{-1}A$ obtained from [Proposition 6](#prop6){: data-lid="afaft" data-relation="required" reviewed="" } above is called the *field of fractions* of $A$, and is denoted by $\Frac(A)$.
 :::
 
 The field of fractions has the following universal property.
@@ -159,12 +159,12 @@ $$\bar{f}(\alpha/\beta)=\bar{f}(\epsilon(\alpha)\epsilon(\beta)^{-1})=f(\alpha)f
 
 and therefore $\bar{f}$ is unique if it exists.
 
-To show existence, define $\bar{f}(\alpha/\beta)=f(\alpha)f(\beta)^{-1}$. Since $f$ is injective, $\beta\neq 0$ implies $f(\beta)\neq 0$, and since $\mathbb{K}$ is a field, $f(\beta)$ is invertible. Now let $\alpha/\beta=\alpha'/\beta'$. Since $A$ is an integral domain, the definition of the equivalence relation in [Theorem 1](#thm1){: data-relation="required" reviewed="" } gives $\alpha\beta'=\alpha'\beta$, and thus from $f(\alpha)f(\beta')=f(\alpha')f(\beta)$ we obtain $f(\alpha)f(\beta)^{-1}=f(\alpha')f(\beta')^{-1}$. That is, $\bar{f}$ is well-defined. That it preserves addition and multiplication follows immediately from the definition of addition and multiplication on $\Frac(A)$, and since $\bar{f}(\epsilon(\alpha))=f(\alpha)f(1)^{-1}=f(\alpha)$, it holds that $\bar{f}\circ\epsilon=f$.
+To show existence, define $\bar{f}(\alpha/\beta)=f(\alpha)f(\beta)^{-1}$. Since $f$ is injective, $\beta\neq 0$ implies $f(\beta)\neq 0$, and since $\mathbb{K}$ is a field, $f(\beta)$ is invertible. Now let $\alpha/\beta=\alpha'/\beta'$. Since $A$ is an integral domain, the definition of the equivalence relation in [Theorem 1](#thm1){: data-lid="bngs0" data-relation="required" reviewed="" } gives $\alpha\beta'=\alpha'\beta$, and thus from $f(\alpha)f(\beta')=f(\alpha')f(\beta)$ we obtain $f(\alpha)f(\beta)^{-1}=f(\alpha')f(\beta')^{-1}$. That is, $\bar{f}$ is well-defined. That it preserves addition and multiplication follows immediately from the definition of addition and multiplication on $\Frac(A)$, and since $\bar{f}(\epsilon(\alpha))=f(\alpha)f(1)^{-1}=f(\alpha)$, it holds that $\bar{f}\circ\epsilon=f$.
 :::
 
 ## Prime Ideals
 
-From the fourth isomorphism theorem for ring homomorphisms, we know that for any commutative ring $A\neq 0$ and maximal ideal $\mathfrak{m}$, the only ideals of $A/\mathfrak{m}$ are $0$ and $A/\mathfrak{m}$ itself. Thus by [Proposition 4](#prop4){: data-relation="required" reviewed="" }, $A/\mathfrak{m}$ is a division ring, that is, a field. Integral domains can also be characterized in a similar manner.
+From the fourth isomorphism theorem for ring homomorphisms, we know that for any commutative ring $A\neq 0$ and maximal ideal $\mathfrak{m}$, the only ideals of $A/\mathfrak{m}$ are $0$ and $A/\mathfrak{m}$ itself. Thus by [Proposition 4](#prop4){: data-lid="h23ac" data-relation="required" reviewed="" }, $A/\mathfrak{m}$ is a division ring, that is, a field. Integral domains can also be characterized in a similar manner.
 
 ::: Proposition 9
 For a commutative ring $A$ and an ideal $\mathfrak{p}\neq A$, the following are all equivalent.
@@ -220,7 +220,7 @@ and we can see that all terms on the right-hand side are $0$. From the above, $x
 :::
 
 ::: Definition 14
-The ideal $\mathfrak{N}$ of [Proposition 13](#prop13){: data-relation="required" reviewed="" } is called the *nilradical* of $A$.
+The ideal $\mathfrak{N}$ of [Proposition 13](#prop13){: data-lid="7ajt4" data-relation="required" reviewed="" } is called the *nilradical* of $A$.
 :::
 
 By definition, $A$ being reduced is equivalent to the nilradical of $A$ being $0$. On the other hand, if $x\in \mathfrak{N}$, then from the equation $x^n=0$ and the definition of a prime ideal we see that $x\in \mathfrak{p}$ holds for every prime ideal $\mathfrak{p}$. That is, the inclusion
@@ -237,7 +237,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 holds. 
 :::
 ::: Proof
-If $x\not\in \mathfrak{N}$, it suffices to show that for some $\mathfrak{p}$ we have $x\not\in \mathfrak{p}$. First, consider the ring of fractions formed from the multiplicative subset $S=\{1,x,x^2,\ldots\}$, namely $A_x=S^{-1}A$. Then in $A_x$, the multiplicative identity $x/x$ must be different from $0/1$, because $x/x=0/1$ means that for some $k\geq 0$ we have $x^{k+1}=0$, which contradicts the assumption that $x\not\in\mathfrak{N}$. In particular $A_x\neq 0$. Now from [§Definition of a Ring, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10){: data-relation="required" reviewed="" }, $A_x$ necessarily has a maximal ideal $\mathfrak{m}$, and since every maximal ideal is a prime ideal, $\mathfrak{m}$ is a prime ideal of $A_x$. Applying [Proposition 10](#prop10){: data-relation="required" reviewed="" } to $\epsilon:A \rightarrow A_x$, $\epsilon^{-1}(\mathfrak{m})$ is a prime ideal of $A$, and if $x\in\epsilon^{-1}(\mathfrak{m})$, then $x/1\in \mathfrak{m}$ and $x/1$ is invertible in $A_x$, so $\mathfrak{m}=A_x$, a contradiction. 
+If $x\not\in \mathfrak{N}$, it suffices to show that for some $\mathfrak{p}$ we have $x\not\in \mathfrak{p}$. First, consider the ring of fractions formed from the multiplicative subset $S=\{1,x,x^2,\ldots\}$, namely $A_x=S^{-1}A$. Then in $A_x$, the multiplicative identity $x/x$ must be different from $0/1$, because $x/x=0/1$ means that for some $k\geq 0$ we have $x^{k+1}=0$, which contradicts the assumption that $x\not\in\mathfrak{N}$. In particular $A_x\neq 0$. Now from [§Definition of a Ring, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10){: data-lid="094gg" data-relation="required" reviewed="" }, $A_x$ necessarily has a maximal ideal $\mathfrak{m}$, and since every maximal ideal is a prime ideal, $\mathfrak{m}$ is a prime ideal of $A_x$. Applying [Proposition 10](#prop10){: data-lid="dhhcs" data-relation="required" reviewed="" } to $\epsilon:A \rightarrow A_x$, $\epsilon^{-1}(\mathfrak{m})$ is a prime ideal of $A$, and if $x\in\epsilon^{-1}(\mathfrak{m})$, then $x/1\in \mathfrak{m}$ and $x/1$ is invertible in $A_x$, so $\mathfrak{m}=A_x$, a contradiction. 
 :::
 
 

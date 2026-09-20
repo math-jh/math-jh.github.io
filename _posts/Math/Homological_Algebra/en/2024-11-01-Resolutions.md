@@ -16,7 +16,7 @@ last_polished_at: 2026-07-14T00:30:02+00:00
 ---
 ## Projective and Injective Resolutions
 
-We defined projective and injective modules in [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3). Rephrasing this in the language of diagrams, we obtain the notions of projective object and injective object in a general abelian category.
+We defined projective and injective modules in [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3){: data-lid="r6nwy" }. Rephrasing this in the language of diagrams, we obtain the notions of projective object and injective object in a general abelian category.
 
 ::: Definition 1
 Fix an abelian category $\mathcal{A}$.
@@ -85,13 +85,13 @@ $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})
 Here, the identity $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$ uses the fact that $\epsilon_n$ is surjective, and the identity $\ker(\epsilon_{n-1})=\ker(d_{n-1})$ uses the fact that $\iota_{n-2}$ is injective. Therefore $P_\bullet$ is a projective resolution of $M$.
 :::
 
-One of our goals in this post is to prove that every $A$-module always has both a projective resolution and an injective resolution. Using [Proposition 3](#prop3){: data-relation="required" }, it suffices to prove that $\lMod{A}$ has enough projectives and enough injectives. That $\lMod{A}$ has enough projectives is trivial.
+One of our goals in this post is to prove that every $A$-module always has both a projective resolution and an injective resolution. Using [Proposition 3](#prop3){: data-lid="f3ivp" data-relation="required" }, it suffices to prove that $\lMod{A}$ has enough projectives and enough injectives. That $\lMod{A}$ has enough projectives is trivial.
 
 ::: Proposition 4
 The category $\lMod{A}$ has enough projectives.
 :::
 ::: Proof
-This follows immediately from [\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4).
+This follows immediately from [\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="39ptc" } and [\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4){: data-lid="vumg5" }.
 :::
 
 However, since we know nothing about $\lMod{A}^\op$, it does not follow from the above result that $\lMod{A}$ has enough injectives. Therefore the following proposition requires a separate proof.
@@ -100,7 +100,7 @@ However, since we know nothing about $\lMod{A}^\op$, it does not follow from the
 The category $\lMod{A}$ has enough injectives.
 :::
 ::: Proof
-One can easily show that a right adjoint preserves injective objects. Then the coextension of scalars $\Ab \rightarrow \lMod{A}$ obtained from the ring homomorphism $\mathbb{Z}\rightarrow A$ is a right adjoint of restriction of scalars, so injective objects in $\Ab$ become injective objects in $\lMod{A}$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Thus it suffices to prove that $\Ab$ has enough injectives. For any $A\in\Ab$, this is achieved by setting
+One can easily show that a right adjoint preserves injective objects. Then the coextension of scalars $\Ab \rightarrow \lMod{A}$ obtained from the ring homomorphism $\mathbb{Z}\rightarrow A$ is a right adjoint of restriction of scalars, so injective objects in $\Ab$ become injective objects in $\lMod{A}$. ([\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7){: data-lid="r62ex" }) Thus it suffices to prove that $\Ab$ has enough injectives. For any $A\in\Ab$, this is achieved by setting
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 

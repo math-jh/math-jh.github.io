@@ -15,11 +15,11 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-08T07:15:04+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products){: data-relation="required" reviewed="" } that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms){: data-relation="weak" reviewed="" } that every pair of parallel morphisms in $\Grp$ has an equalizer. Hence, by the argument following [\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7){: data-relation="weak" reviewed="" }, $\Grp$ is a complete category.
+Previously, we verified in [§Direct Product of Groups](/en/math/algebraic_structures/direct_products){: data-lid="fya78" data-relation="required" reviewed="" } that arbitrary products exist in $\Grp$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms){: data-lid="mkzxm" data-relation="weak" reviewed="" } that every pair of parallel morphisms in $\Grp$ has an equalizer. Hence, by the argument following [\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7){: data-lid="e9tag" data-relation="weak" reviewed="" }, $\Grp$ is a complete category.
 
-On the other hand, every pair of parallel morphisms in $\Grp$ also has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-relation="weak" reviewed="" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
+On the other hand, every pair of parallel morphisms in $\Grp$ also has a coequalizer. ([§Group Isomorphisms, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8){: data-lid="eaggw" data-relation="weak" reviewed="" }) Therefore, if $\Grp$ has arbitrary coproducts, $\Grp$ would be a cocomplete category, and hence a bicomplete category. 
 
-However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1){: data-relation="weak" }, finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-relation="weak" reviewed="" })
+However, as in [§Direct Product of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1){: data-lid="04sw7" data-relation="weak" }, finding an obvious way to endow the coproduct in $\Set$, $\coprod G_i$, with a group structure seems difficult. ([\[Set Theory\] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5){: data-lid="l35q3" data-relation="weak" reviewed="" })
 
 Instead, we look for the answer inside the product $\prod G_i$, whose existence is already known. By viewing each $G_i$ as a subgroup of $\prod G_i$ and considering the subgroup they generate together, in this post we call the group obtained in this way the weak direct product and verify its universal property.
 
@@ -90,7 +90,7 @@ The condition imposed on the $f_i$,
 
 > for any $i\neq j$, if $x\in G_i$ and $y\in G_j$, then $f_i(x)f_j(y)=f_j(y)f_i(x)$
 
-is a condition that inevitably had to arise, because these conditions are precisely those satisfied by the $\iota_i$. Because of this, [Theorem 2](#thm2){: data-relation="required" reviewed="" } is the answer to our question only for abelian groups.
+is a condition that inevitably had to arise, because these conditions are precisely those satisfied by the $\iota_i$. Because of this, [Theorem 2](#thm2){: data-lid="29rat" data-relation="required" reviewed="" } is the answer to our question only for abelian groups.
 
 Using the universal property of the weak direct product, one can show several properties similar to those for the direct product. For example, the following holds.
 
@@ -100,7 +100,7 @@ If the $G_i$ are groups and the $H_i$ are normal subgroups of the $G_i$, then $\
 ::: Proof
 Consider the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$. For any $x\in\prod^wG_i$, the element $\bigl(p_i(\pr_ix)\bigr)_{i\in I}$ is the identity except for finitely many $i$, so it is an element of $\prod^w(G_i/H_i)$, and the map $p:\prod^wG_i\rightarrow\prod^w(G_i/H_i)$ obtained in this way is a homomorphism since each $p_i$ is a homomorphism on each component.
 
-Given an element of $\prod^w(G_i/H_i)$, $y$, at indices where $\pr_iy$ is the identity, for such $i$ we choose $e$ as the representative, and for the remaining finitely many $i$ we choose arbitrary representatives to obtain an element of $\prod^wG_i$; hence $p$ is surjective. Also, $p(x)$ being the identity is equivalent to having for every $i$ that $\pr_ix\in H_i$, so $\ker p=\prod^wH_i$. Therefore, by [§Group Isomorphisms, ⁋Lemma 1](/en/math/algebraic_structures/isomorphism_theorems#lem1){: data-relation="required" reviewed="" }, $\prod^wH_i$ is a normal subgroup of $\prod^wG_i$, and by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2){: data-relation="required" reviewed="" }, the identity
+Given an element of $\prod^w(G_i/H_i)$, $y$, at indices where $\pr_iy$ is the identity, for such $i$ we choose $e$ as the representative, and for the remaining finitely many $i$ we choose arbitrary representatives to obtain an element of $\prod^wG_i$; hence $p$ is surjective. Also, $p(x)$ being the identity is equivalent to having for every $i$ that $\pr_ix\in H_i$, so $\ker p=\prod^wH_i$. Therefore, by [§Group Isomorphisms, ⁋Lemma 1](/en/math/algebraic_structures/isomorphism_theorems#lem1){: data-lid="9ialn" data-relation="required" reviewed="" }, $\prod^wH_i$ is a normal subgroup of $\prod^wG_i$, and by [§Group Isomorphisms, ⁋Theorem 2](/en/math/algebraic_structures/isomorphism_theorems#thm2){: data-lid="wq0h3" data-relation="required" reviewed="" }, the identity
 
 $$\biggl({\prod_{i\in I}}^wG_i\biggr)\bigg/\biggl({\prod_{i\in I}}^wH_i\biggr)\cong{\prod_{i\in I}}^w(G_i/H_i)$$
 

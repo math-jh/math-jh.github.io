@@ -20,13 +20,13 @@ We have seen that for a ring $A$ and an arbitrary ideal $\mathfrak{a}$, the iden
 
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
-holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-relation="required" }) In particular, if $\mathfrak{a}$ is a prime ideal, then $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should naturally hold. More generally, we define the following.
+holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="k67s8" data-relation="required" }) In particular, if $\mathfrak{a}$ is a prime ideal, then $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should naturally hold. More generally, we define the following.
 
 ::: Definition 1
 An ideal $\mathfrak{a}$ of a ring $A$ is called a *radical ideal* if $\mathfrak{a}=\sqrt{\mathfrak{a}}$ holds.
 :::
 
-In other words, the observation above says that every prime ideal is radical. The proof of this observation is more or less trivial; however, had we considered, instead of the intersection of the prime ideals containing $\mathfrak{p}$, the intersection of the *maximal* ideals containing $\mathfrak{p}$ (in a manner similar to [§Integral Extensions, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma){: data-relation="weak" }), the observation would be far from trivial, and indeed it does not hold. For instance, any local ring possessing a prime ideal that is not maximal, such as $\mathbb{Z}_{(2)}$, gives a counterexample.
+In other words, the observation above says that every prime ideal is radical. The proof of this observation is more or less trivial; however, had we considered, instead of the intersection of the prime ideals containing $\mathfrak{p}$, the intersection of the *maximal* ideals containing $\mathfrak{p}$ (in a manner similar to [§Integral Extensions, §§Nakayama's Lemma](/en/math/commutative_algebra/integral_extension#nakayamas-lemma){: data-lid="y59z8" data-relation="weak" }), the observation would be far from trivial, and indeed it does not hold. For instance, any local ring possessing a prime ideal that is not maximal, such as $\mathbb{Z}_{(2)}$, gives a counterexample.
 
 ::: Definition 2
 A ring $A$ is called a *Jacobson ring* if every prime ideal is an intersection of maximal ideals.
@@ -41,13 +41,13 @@ For a ring $A$, the following are equivalent.
 2. For a prime ideal $\mathfrak{p}$ of $A$, if there exists $a\in A/\mathfrak{p}$ such that $(A/\mathfrak{p})[a^{-1}]$ is a field, then $A/\mathfrak{p}$ is a field.
 :::
 ::: Proof
-First, suppose that $A$ is Jacobson. Then its quotient $A/ \mathfrak{p}$ is also Jacobson, which is immediate from the definition. Meanwhile, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="required" }, $A/\mathfrak{p}$ is an integral domain, and since $(0)$ is a prime ideal in an integral domain, we can express $(0)$ as an intersection of maximal ideals. Now, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-relation="required" }, there is a one-to-one correspondence between the prime ideals of $(A/\mathfrak{p})[a^{-1}]$ and the prime ideals of $A/\mathfrak{p}$ not containing $a$; since by assumption the only prime ideal of $(A/\mathfrak{p})[a^{-1}]$ is $0$, the only prime ideal of $A/\mathfrak{p}$ not containing $a$ is also $0$. In other words, every nonzero prime ideal of $A/\mathfrak{p}$ must contain $a$. But if such a prime ideal exists, then $(0)$ is not a maximal ideal, so every maximal ideal of $A/\mathfrak{p}$ is nonzero and therefore contains $a$. Meanwhile,
+First, suppose that $A$ is Jacobson. Then its quotient $A/ \mathfrak{p}$ is also Jacobson, which is immediate from the definition. Meanwhile, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-lid="ae64m" data-relation="required" }, $A/\mathfrak{p}$ is an integral domain, and since $(0)$ is a prime ideal in an integral domain, we can express $(0)$ as an intersection of maximal ideals. Now, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-lid="lk9az" data-relation="required" }, there is a one-to-one correspondence between the prime ideals of $(A/\mathfrak{p})[a^{-1}]$ and the prime ideals of $A/\mathfrak{p}$ not containing $a$; since by assumption the only prime ideal of $(A/\mathfrak{p})[a^{-1}]$ is $0$, the only prime ideal of $A/\mathfrak{p}$ not containing $a$ is also $0$. In other words, every nonzero prime ideal of $A/\mathfrak{p}$ must contain $a$. But if such a prime ideal exists, then $(0)$ is not a maximal ideal, so every maximal ideal of $A/\mathfrak{p}$ is nonzero and therefore contains $a$. Meanwhile,
 
 $$(0)=\bigcap_\text{\scriptsize$\mathfrak{m}$ maximal} \mathfrak{m}$$
 
 and hence $a=0$, a contradiction.
 
-Conversely, let us assume the second condition and prove the first. That is, we fix a prime ideal $\mathfrak{p}$ of $A$, and, writing $\mathfrak{P}$ for the intersection of all maximal ideals containing $\mathfrak{p}$, we must show that $\mathfrak{p}=\mathfrak{P}$. Suppose, contrary to the conclusion, that there exists some element $a\in \mathfrak{P}\setminus \mathfrak{p}$. Then by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" }, there exists a prime ideal $\mathfrak{q}$ that is maximal among the prime ideals containing $\mathfrak{p}$ but not containing $a$. Since $a\not\in \mathfrak{q}$ by definition, $\mathfrak{q}$ is not a maximal ideal, and therefore $A/\mathfrak{q}$ is not a field. However, in $A[a^{-1}]$ the ideal $\mathfrak{q}$ must be maximal by construction, which contradicts the second condition; hence we must have $\mathfrak{p}=\mathfrak{P}$.
+Conversely, let us assume the second condition and prove the first. That is, we fix a prime ideal $\mathfrak{p}$ of $A$, and, writing $\mathfrak{P}$ for the intersection of all maximal ideals containing $\mathfrak{p}$, we must show that $\mathfrak{p}=\mathfrak{P}$. Suppose, contrary to the conclusion, that there exists some element $a\in \mathfrak{P}\setminus \mathfrak{p}$. Then by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-lid="4m2q3" data-relation="required" }, there exists a prime ideal $\mathfrak{q}$ that is maximal among the prime ideals containing $\mathfrak{p}$ but not containing $a$. Since $a\not\in \mathfrak{q}$ by definition, $\mathfrak{q}$ is not a maximal ideal, and therefore $A/\mathfrak{q}$ is not a field. However, in $A[a^{-1}]$ the ideal $\mathfrak{q}$ must be maximal by construction, which contradicts the second condition; hence we must have $\mathfrak{p}=\mathfrak{P}$.
 :::
 
 ## The Nullstellensatz
@@ -103,7 +103,7 @@ shows that $\mathfrak{m}_a$ is a maximal ideal.
 
 Moreover, if $\mathbb{K}$ is an algebraically closed field, then every maximal ideal of $E$ is of this form. Indeed, for any maximal ideal $\mathfrak{n}$ of $E$, the quotient $E/\mathfrak{n}$ is an algebraic extension of $\mathbb{K}/(\mathfrak{n}\cap \mathbb{K})=\mathbb{K}$; but if $\mathbb{K}$ is algebraically closed, the only such extension is $\mathbb{K}$ itself, so we must have $E/\mathfrak{n}\cong \mathbb{K}$. If we let $a_i$ denote the element of $\mathbb{K}$ to which each $\x_i$ is sent under the canonical surjection $E \rightarrow E/\mathfrak{n}\cong \mathbb{K}$, then $\mathfrak{m}_a\subseteq \mathfrak{n}$, and the maximality of $\mathfrak{m}_a$ now yields the desired result.
 
-Therefore, from [§Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11){: data-relation="required" }, we obtain the following.
+Therefore, from [§Basic Notions, ⁋Proposition 11](/en/math/commutative_algebra/basic_notions#prop11){: data-lid="47akg" data-relation="required" }, we obtain the following.
 
 ::: Lemma 5
 Let a field $\mathbb{K}$ be given. Then $\mathfrak{m}_a=(\x_1-a_1,\ldots, \x_n-a_n)$ is a maximal ideal of $\mathbb{K}[\x_1,\ldots, \x_n]$. Moreover, if $\mathbb{K}$ is algebraically closed, then there is a one-to-one correspondence between the maximal ideals of $\mathbb{K}[\x_1,\ldots,\x_n]/(f_1,\ldots, f_r)$ and the tuples $(x_1,\ldots, x_n)$ satisfying the equation
@@ -129,7 +129,7 @@ $$I(Z(\mathfrak{a}))=\sqrt{\mathfrak{a}}$$
 holds.
 :::
 ::: Proof
-By [Lemma 5](#lem5){: data-relation="required" }, the elements of $Z(\mathfrak{a})$ are in one-to-one correspondence with the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$. Hence $I(Z(\mathfrak{a}))$ is the intersection of the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$; since $\mathbb{K}[\x_1,\ldots, \x_n]$ is Jacobson by [Theorem 4](#thm4){: data-relation="required" }, this equals the intersection of the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$, which is exactly the right-hand side.
+By [Lemma 5](#lem5){: data-lid="bh482" data-relation="required" }, the elements of $Z(\mathfrak{a})$ are in one-to-one correspondence with the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$. Hence $I(Z(\mathfrak{a}))$ is the intersection of the maximal ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$; since $\mathbb{K}[\x_1,\ldots, \x_n]$ is Jacobson by [Theorem 4](#thm4){: data-lid="inxml" data-relation="required" }, this equals the intersection of the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$ containing $\mathfrak{a}$, which is exactly the right-hand side.
 :::
 
 ---

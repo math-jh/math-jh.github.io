@@ -14,11 +14,11 @@ translated_at: 2026-08-18T16:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T16:15:05+00:00
 ---
-In this post we discuss Poincaré duality, a beautiful theorem of algebraic topology. As mentioned in the previous post, Poincaré duality exhibits a duality between homology and cohomology. The case of [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5){: data-relation="weak" reviewed="" }, which we have already examined, was somewhat expected when $C^\bullet(X;A)$ was defined as the dual of $C_\bullet(X;A)$, but Poincaré duality carries a deeper geometric meaning.
+In this post we discuss Poincaré duality, a beautiful theorem of algebraic topology. As mentioned in the previous post, Poincaré duality exhibits a duality between homology and cohomology. The case of [§Cohomology, ⁋Theorem 5](/en/math/algebraic_topology/cohomology#thm5){: data-lid="vfmu8" data-relation="weak" reviewed="" }, which we have already examined, was somewhat expected when $C^\bullet(X;A)$ was defined as the dual of $C_\bullet(X;A)$, but Poincaré duality carries a deeper geometric meaning.
 
 ## Orientation Sheaf
 
-To define Poincaré duality, we must first define the notion of orientation. This is a concept defined on a topological manifold ([§Topological Manifolds, ⁋Definition 2](/en/math/algebraic_topology/topological_manifolds#def2){: data-relation="required" reviewed="" }); in this post, unless stated otherwise, we assume every manifold is *connected*.
+To define Poincaré duality, we must first define the notion of orientation. This is a concept defined on a topological manifold ([§Topological Manifolds, ⁋Definition 2](/en/math/algebraic_topology/topological_manifolds#def2){: data-lid="p5dud" data-relation="required" reviewed="" }); in this post, unless stated otherwise, we assume every manifold is *connected*.
 
 Given any topological manifold $M$ of dimension $m$ and an open set $U$, the assignment
 
@@ -31,7 +31,7 @@ $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})$$
 for every $U\subseteq V$, and hence forms a presheaf.
 
 ::: Definition 1
-The sheafification of the assignment (1) is called the *orientation sheaf* and is denoted $\or_M$. ([\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5){: data-relation="required" reviewed="" })
+The sheafification of the assignment (1) is called the *orientation sheaf* and is denoted $\or_M$. ([\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5){: data-lid="45wns" data-relation="required" reviewed="" })
 :::
 
 Then for any $x\in M$ and any open neighborhood $U$ of $x$, there is a canonical map
@@ -48,11 +48,11 @@ By definition, an element of $H_m(M,M\setminus\{x\};\mathbb{Z})$ is represented 
 
 $$\varinjlim_{x\in U}H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus \{x\};\mathbb{Z})$$
 
-is an isomorphism. Moreover, by [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-relation="required" reviewed="" },
+is an isomorphism. Moreover, by [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="zbzhj" data-relation="required" reviewed="" },
 
 $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong H_m(\mathbb{R}^m, \mathbb{R}^m\setminus\{0\};\mathbb{Z}),$$
 
-and since $\mathbb{R}^m\setminus\{0\}$ deformation retracts onto $S^{m-1}$, the long exact sequence of relative homology shows that the right-hand side is isomorphic to $\mathbb{Z}$. One can also verify that this sheaf is locally constant: for every $x\in M$ there exists a suitable open neighborhood $U$ such that $\or_M\vert_U$ is a constant sheaf. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-relation="weak" reviewed="" })
+and since $\mathbb{R}^m\setminus\{0\}$ deformation retracts onto $S^{m-1}$, the long exact sequence of relative homology shows that the right-hand side is isomorphic to $\mathbb{Z}$. One can also verify that this sheaf is locally constant: for every $x\in M$ there exists a suitable open neighborhood $U$ such that $\or_M\vert_U$ is a constant sheaf. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-lid="k8z6a" data-relation="weak" reviewed="" })
 
 ::: Definition 2
 The relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$ is called the *local homology group* at $x\in M$.
@@ -60,11 +60,11 @@ The relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$ is called the 
 
 ## Constant Sheaves, Covering Spaces, and Orientation-Generator Sheaves
 
-To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection $X\times A \rightarrow X$ is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves){: data-relation="required" reviewed="" }) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
+To examine the orientation sheaf $\or_M$ defined above in more detail, we need to look more closely at constant and locally constant sheaves. First, consider an arbitrary abelian group $A$ equipped with the discrete topology, regarded as a topological space. Then the projection $X\times A \rightarrow X$ is a trivial covering space, and the sheaf of sections of this covering map is precisely the constant sheaf $\underline{A}$. Conversely, given a constant sheaf $\underline{A}$, one can check that its étale space $\Spe(\underline{A})$ is the covering space $X\times A \rightarrow X$. ([\[Topology\] §Presheaves](/en/math/topology/presheaves){: data-lid="oiwxg" data-relation="required" reviewed="" }) Thus a locally constant sheaf is nothing more than a sheaf whose étale space is a covering space.
 
 Intuitively, $H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$ records how many times an $m$-simplex $\sigma:\Delta^m\rightarrow M$ having $x$ in its interior covers $x$. On the other hand, $\Delta^m$ can be given a sign depending on how an ordering is assigned to its vertices; then via this isomorphism, when we assign an element of $\mathbb{Z}$ to such $m$-simplices, the sign difference between two $m$-simplices can be interpreted as either their sources $\Delta^m$ being assigned opposite orientations, or, fixing the orientation of $\Delta^m$, the two simplex maps specifying different directions. In other words, $H_m(M,M\setminus\{x\};\mathbb{Z})$ encodes information about the orientation at the point $x$.
 
-Then a natural question is whether, for every point $x\in M$, we can choose an orientation so that these orientations patch together to yield a global orientation on $M$. For this we first need a reference copy of $\mathbb{Z}$. Fix a constant sheaf $\underline{\mathbb{Z}}$ on $M$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-relation="required" reviewed="" }) Then for each $x\in M$, its stalk $\underline{\mathbb{Z}}_x$ can be thought of as having the generator $1$ chosen in a consistent manner, and thus choosing an isomorphism
+Then a natural question is whether, for every point $x\in M$, we can choose an orientation so that these orientations patch together to yield a global orientation on $M$. For this we first need a reference copy of $\mathbb{Z}$. Fix a constant sheaf $\underline{\mathbb{Z}}$ on $M$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-lid="f8yf7" data-relation="required" reviewed="" }) Then for each $x\in M$, its stalk $\underline{\mathbb{Z}}_x$ can be thought of as having the generator $1$ chosen in a consistent manner, and thus choosing an isomorphism
 
 $$\Iso_\mathbb{Z}(H_m(M, M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$
 
@@ -78,7 +78,7 @@ What matters here is not picking local orientations arbitrarily at each point, b
 
 $$\omega_M(U)=\{s\in \or_M(U)\mid s_x \text{ generates } \or_{M,x} \text{ for all } x\in U\},$$
 
-with the restriction map inherited from $\or_M$. At each $x\in M$, the stalk $\or_{M,x}$ is $H_m(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$, so choosing its generator is the same as choosing a local orientation in the sense of [Definition 3](#def3){: data-relation="required" reviewed="" }, i.e., an isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow \underline{\mathbb{Z}}_x$. Since whether a germ is a generator is a condition checked pointwise, the gluing procedure for sections of $\or_M$ works just as well, and hence $\omega_M$ is a subsheaf of $\or_M$. Moreover, on an open neighborhood $U$ where $\or_M\vert_U$ is a constant sheaf, sections of $\or_M$ are given by locally constant functions, so a germ that is a generator at $x$ remains a generator on a sufficiently small neighborhood of $x$; consequently, the stalk $\omega_{M,x}$ of $\omega_M$ at $x$ is the set of generators of $\or_{M,x}$, namely $\{\pm 1\}$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-relation="required" reviewed="" })
+with the restriction map inherited from $\or_M$. At each $x\in M$, the stalk $\or_{M,x}$ is $H_m(M,M\setminus\{x\};\mathbb{Z})\cong\mathbb{Z}$, so choosing its generator is the same as choosing a local orientation in the sense of [Definition 3](#def3){: data-lid="a4om8" data-relation="required" reviewed="" }, i.e., an isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow \underline{\mathbb{Z}}_x$. Since whether a germ is a generator is a condition checked pointwise, the gluing procedure for sections of $\or_M$ works just as well, and hence $\omega_M$ is a subsheaf of $\or_M$. Moreover, on an open neighborhood $U$ where $\or_M\vert_U$ is a constant sheaf, sections of $\or_M$ are given by locally constant functions, so a germ that is a generator at $x$ remains a generator on a sufficiently small neighborhood of $x$; consequently, the stalk $\omega_{M,x}$ of $\omega_M$ at $x$ is the set of generators of $\or_{M,x}$, namely $\{\pm 1\}$. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-lid="gvju9" data-relation="required" reviewed="" })
 
 This $\omega_M$ is called the *orientation-generator sheaf* of $M$. When the orientation of the constant sheaf $\underline{\mathbb{Z}}$ is fixed and its generator $1$ is chosen, this sheaf records, at each $x$, whether the isomorphism $H_m(M,M\setminus\{x\};\mathbb{Z})\rightarrow\underline{\mathbb{Z}}_x$ sends $1$ to $1$ or to $-1$, by examining which choice arises from a local section of $\or_M$. Then, on a neighborhood $U$ as above, $\omega_M\vert_U$ is the constant sheaf on $\{\pm 1\}$, so $\omega_M$ is also locally constant; therefore its étale space $\Spe(\omega_M)$ is a covering space of $M$ with two-element fibers.
 
@@ -106,7 +106,7 @@ To observe this, consider the orientation cover of the Möbius strip $M$. Just a
 But attempting to glue these together over all of $M$ runs into a problem: if we glue the two covers shown in this figure while respecting orientation, proceeding counterclockwise, then upon returning to $x$ the points $(x,+)$ and $(x,-)$ have been interchanged, so we must cross-glue the upper and lower components. The resulting double cover of $M$ is homeomorphic to a cylinder.
 :::
 
-By definition, $M$ is orientable if and only if $\omega_M$ admits a global section, which is equivalent to $\Spe(\omega_M)$ being a trivial covering space, which in turn is equivalent to $\omega_M$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12 (Fundamental theorem of covering spaces, classical version)](/en/math/algebraic_topology/covering_spaces#cor12){: data-relation="required" reviewed="" }, we obtain the following proposition.
+By definition, $M$ is orientable if and only if $\omega_M$ admits a global section, which is equivalent to $\Spe(\omega_M)$ being a trivial covering space, which in turn is equivalent to $\omega_M$ being a constant sheaf. Applying [§Covering Spaces, ⁋Corollary 12 (Fundamental theorem of covering spaces, classical version)](/en/math/algebraic_topology/covering_spaces#cor12){: data-lid="8arzy" data-relation="required" reviewed="" }, we obtain the following proposition.
 
 ::: Proposition 6
 For a (connected) topological manifold $M$, the following are equivalent.
@@ -116,7 +116,7 @@ For a (connected) topological manifold $M$, the following are equivalent.
 3. The monodromy action of $\pi_1(M)$ on $\Spe(\omega_M)$ is trivial.
 :::
 
-However, since we have already extended homology and cohomology from $\mathbb{Z}$-modules to general $A$-modules, the above argument can also be extended to a general $A$-module. To this end, first consider the relative homology version of [§Cohomology, ⁋Proposition 1](/en/math/algebraic_topology/cohomology#prop1){: data-relation="required" reviewed="" }; observe that there is a (non-canonical) isomorphism
+However, since we have already extended homology and cohomology from $\mathbb{Z}$-modules to general $A$-modules, the above argument can also be extended to a general $A$-module. To this end, first consider the relative homology version of [§Cohomology, ⁋Proposition 1](/en/math/algebraic_topology/cohomology#prop1){: data-lid="owsnq" data-relation="required" reviewed="" }; observe that there is a (non-canonical) isomorphism
 
 $$H_k(M, M\setminus\{x\};A)\cong H_k(M,M\setminus\{x\})\otimes_\mathbb{Z}A\oplus\Tor_1^\mathbb{Z}(H_{k-1}(M, M\setminus\{x\}), A).$$
 
@@ -130,7 +130,7 @@ $$\omega_M^A(U)=\prod_{x\in U}\Iso_A(H_m(M,M\setminus\{x\};A), \underline{A}_x)$
 
 and the global $A$-orientation defined from it. The resulting $A$-orientation sheaf $\omega_M^A$ is nothing other than $\or_M\otimes A$.
 
-To derive a result analogous to [Proposition 6](#prop6){: data-relation="weak" reviewed="" } from this definition, let us revisit [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11){: data-relation="required" reviewed="" }. For each covering space $p:E \rightarrow M$, we considered the $\pi_1(M,x)$-action on the fiber $p^{-1}(x)$ defined by the monodromy functor, which was the same as giving a group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$. Then for the covering space $p:\Spe(\omega_M)\rightarrow M$, we must examine how the $\pi_1(M,x)$-action is defined: the fiber $p^{-1}(x)$ is determined by the automorphisms of the stalk $\mathbb{Z}$,
+To derive a result analogous to [Proposition 6](#prop6){: data-relation="weak" reviewed="" } from this definition, let us revisit [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11){: data-lid="v37uy" data-relation="required" reviewed="" }. For each covering space $p:E \rightarrow M$, we considered the $\pi_1(M,x)$-action on the fiber $p^{-1}(x)$ defined by the monodromy functor, which was the same as giving a group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$. Then for the covering space $p:\Spe(\omega_M)\rightarrow M$, we must examine how the $\pi_1(M,x)$-action is defined: the fiber $p^{-1}(x)$ is determined by the automorphisms of the stalk $\mathbb{Z}$,
 
 $$\Iso_\mathbb{Z}(\mathbb{Z},\mathbb{Z})\cong \mathbb{Z}^\times\cong \{\pm 1\},$$
 
@@ -216,10 +216,10 @@ Let $M$ be a compact connected topological manifold of dimension $m$. Then for e
 Then by [Lemma 8](#lem8){: data-relation="required" reviewed="" }, $H_m(M;A)$ is the free $A$-module of rank 1 generated by $[M]$, and different choices of global orientation correspond to different choices of generator of $H_m(M;A)$.
 
 ::: Definition 10
-We call the class $[M]$ defined in [Theorem 9](#thm9){: data-relation="required" reviewed="" } above the *fundamental class* of $M$ determined by the global orientation $s$.
+We call the class $[M]$ defined in [Theorem 9](#thm9){: data-lid="uhv6t" data-relation="required" reviewed="" } above the *fundamental class* of $M$ determined by the global orientation $s$.
 :::
 
-Moreover, if a homology class $[M]$ satisfying the condition of [Theorem 9](#thm9){: data-relation="required" reviewed="" } exists, then it gives rise to a global section $s:M \rightarrow \Spe(\omega_M^A)$.
+Moreover, if a homology class $[M]$ satisfying the condition of [Theorem 9](#thm9){: data-lid="z0i6n" data-relation="required" reviewed="" } exists, then it gives rise to a global section $s:M \rightarrow \Spe(\omega_M^A)$.
 
 ## Poincaré Duality
 
@@ -283,7 +283,7 @@ constructed from these $s_K$ satisfy the compatibility condition for the direct 
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-holds by [§Cup Product, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6){: data-relation="required" reviewed="" }, and by the uniqueness in [Lemma 8](#lem8){: data-relation="required" reviewed="" } we have $i_\ast s_{K'}=s_K$, so we see that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ well.
+holds by [§Cup Product, ⁋Proposition 6](/en/math/algebraic_topology/cup_products#prop6){: data-lid="isiu7" data-relation="required" reviewed="" }, and by the uniqueness in [Lemma 8](#lem8){: data-relation="required" reviewed="" } we have $i_\ast s_{K'}=s_K$, so we see that this defines the homomorphism $H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ well.
 
 Our claim is that this homomorphism $D_M:H_c^p(M;A)\rightarrow H_{m-p}(M;A)$ is an isomorphism, and to show this we use induction via the Mayer–Vietoris sequence, just as in the proof of [Lemma 8](#lem8){: data-relation="weak" reviewed="" }.
 
@@ -291,7 +291,7 @@ The base step of the induction is the case $M=\mathbb{R}^m$. In this case, we kn
 
 $$H_m(\mathbb{R}^m, \mathbb{R}^m\setminus B;A)\cong A,$$
 
-and from [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-relation="required" reviewed="" } we have $H^m(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong A$; at this point, the element $\alpha_B$ corresponding to the dual basis of the orientation of $B$ satisfies
+and from [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="wg89y" data-relation="required" reviewed="" } we have $H^m(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong A$; at this point, the element $\alpha_B$ corresponding to the dual basis of the orientation of $B$ satisfies
 
 $$\langle 1\smile \alpha_B, s_B\rangle=\langle 1,\alpha_B\frown s_B\rangle,$$
 
@@ -309,7 +309,7 @@ and after excision and taking the limit, we obtain the following diagram
 
 {% diagram Math/Algebraic_Topology/Poincare_Duality-4.svg width="39.02em" alt="MVseq_duality" %}
 
-In this diagram, the square involving the connecting homomorphism may fail to commute up to sign, so it is only commutative when signs are ignored; however, signs are not needed to apply [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2){: data-relation="required" reviewed="" }, so the inductive step completes the induction.
+In this diagram, the square involving the connecting homomorphism may fail to commute up to sign, so it is only commutative when signs are ignored; however, signs are not needed to apply [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2){: data-lid="s99sb" data-relation="required" reviewed="" }, so the inductive step completes the induction.
 
 However, since we do not assume $M$ is compact, a little extra argument is needed. First, suppose $M$ is the union of a nested family of open subsets
 
@@ -342,7 +342,7 @@ In particular, from the proof, if $M$ itself were compact, then the duality map 
 
 ## Twisted Poincaré Duality
 
-When $M$ is not $A$-orientable, the main reason [Theorem 11](#thm11){: data-relation="weak" reviewed="" } fails is that, fundamentally, $\omega_M^A$ fails to be a constant sheaf and is only locally constant. In the language of covering spaces, this can be thought of as the monodromy action acting nontrivially on the stalk $A$, so that after going "once around" the stalk $A$ becomes twisted upon returning. Since this twist is an automorphism of $A$, it was enough for us to consider elements of the unit group $A^\times$ of $A$.
+When $M$ is not $A$-orientable, the main reason [Theorem 11](#thm11){: data-lid="kxxf7" data-relation="weak" reviewed="" } fails is that, fundamentally, $\omega_M^A$ fails to be a constant sheaf and is only locally constant. In the language of covering spaces, this can be thought of as the monodromy action acting nontrivially on the stalk $A$, so that after going "once around" the stalk $A$ becomes twisted upon returning. Since this twist is an automorphism of $A$, it was enough for us to consider elements of the unit group $A^\times$ of $A$.
 
 To account for this twist in duality, we now define *homology with local coefficients*.
 
@@ -350,7 +350,7 @@ To account for this twist in duality, we now define *homology with local coeffic
 A locally constant sheaf $\mathcal{L}$ defined on $M$ is called a *local coefficient system*. 
 :::
 
-Let $L$ be the stalk of a local system $\mathcal{L}$. Then by [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11){: data-relation="required" reviewed="" }, we know that for any path $\alpha:[0,1]\rightarrow M$, there exists an isomorphism $\mathcal{L}_{\alpha(0)}\rightarrow \mathcal{L}_{\alpha(1)}$ between stalks. This is nothing other than the isomorphism obtained by lifting the path $\alpha$ in the covering space $\Spe(\mathcal{L})\rightarrow M$. That is, we obtain the following functor
+Let $L$ be the stalk of a local system $\mathcal{L}$. Then by [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11){: data-lid="wpi26" data-relation="required" reviewed="" }, we know that for any path $\alpha:[0,1]\rightarrow M$, there exists an isomorphism $\mathcal{L}_{\alpha(0)}\rightarrow \mathcal{L}_{\alpha(1)}$ between stalks. This is nothing other than the isomorphism obtained by lifting the path $\alpha$ in the covering space $\Spe(\mathcal{L})\rightarrow M$. That is, we obtain the following functor
 
 $$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathcal{L}_x$$
 
@@ -406,7 +406,7 @@ $$H^k(X; \mathcal{F})$$
 and is called *sheaf cohomology*.
 :::
 
-For more details on this, see [\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-relation="weak" reviewed="" }. Now if $M$ is compact, Poincaré duality generalizes to the following isomorphism
+For more details on this, see [\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="loirx" data-relation="weak" reviewed="" }. Now if $M$ is compact, Poincaré duality generalizes to the following isomorphism
 
 $$H^k(M;\mathcal{L})\cong H_{m-k}(M;\omega_M^A\otimes \mathcal{L})$$
 
@@ -431,7 +431,7 @@ Consider the torus $T^2=S^1\times S^1$. Then from the Künneth formula we know t
 
 $$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})\cong \mathbb{Z}$$
 
-The only non-trivial product in this cohomology ring is the product of two generators $\alpha,\beta$ of $H^1(T^2;\mathbb{Z})$. By [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-relation="weak" reviewed="" }, these correspond to the duals of two circles on $T^2$. Then taking their cup product gives a generator of $H^2(T^2;\mathbb{Z})$, which is immediate from the definition of cup product or algebraically from
+The only non-trivial product in this cohomology ring is the product of two generators $\alpha,\beta$ of $H^1(T^2;\mathbb{Z})$. By [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="ebox7" data-relation="weak" reviewed="" }, these correspond to the duals of two circles on $T^2$. Then taking their cup product gives a generator of $H^2(T^2;\mathbb{Z})$, which is immediate from the definition of cup product or algebraically from
 
 $$H^2(T^2;\mathbb{Z})=H^1(S^1;\mathbb{Z})\otimes H^1(S^1;\mathbb{Z})\cong \mathbb{Z}\otimes \mathbb{Z}\cong \mathbb{Z}$$
 

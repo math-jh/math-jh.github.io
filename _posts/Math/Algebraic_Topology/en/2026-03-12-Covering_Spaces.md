@@ -36,7 +36,7 @@ is the continuous function required by the third condition. Conversely, assuming
 :::
 
 ::: Definition 2
-If the equivalent conditions of [Lemma 1](#lem1){: data-relation="required" reviewed="" } hold, we call a path-connected $X$ a *simply connected space*.
+If the equivalent conditions of [Lemma 1](#lem1){: data-lid="173qe" data-relation="required" reviewed="" } hold, we call a path-connected $X$ a *simply connected space*.
 :::
 
 ## Covering Spaces
@@ -55,7 +55,7 @@ This depicts the covering map
 
 $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 
-and we know that it satisfies the condition of [Definition 3](#def3){: data-relation="required" reviewed="" }. Meanwhile, in general, one can easily prove that covering maps behave well with respect to subspaces and products, as follows.
+and we know that it satisfies the condition of [Definition 3](#def3){: data-lid="k6hcl" data-relation="required" reviewed="" }. Meanwhile, in general, one can easily prove that covering maps behave well with respect to subspaces and products, as follows.
 
 ::: Proposition 4
 The following hold.
@@ -180,7 +180,7 @@ Since this alone still does not make clear what a functor $\mathcal{G}\rightarro
 
 That is, as can be guessed from the notation, this information is precisely an action of the group $\mathcal{G}$, and $\Fun(\mathcal{G},\Set)$ is precisely the collection of $\mathcal{G}$-sets, and morphisms between them are $\mathcal{G}$-equivariant maps. For a general groupoid $\mathcal{G}$, it is simply that several groups act separately on several sets, but two isomorphic objects of $\mathcal{G}$, $G,H$, must act in the same way on their respective (isomorphic) sets $S_G$ and $S_H$.
 
-However, since the space $B$ is path-connected, the fundamental groupoid $\Pi_1(B)$ is a connected groupoid; therefore, $\Pi_1(B)$ is, for any $x\in B$, equivalent as a category to the group $\pi_1(B,x)$. That is, a groupoid action of $\Pi_1(B)$ is nothing more than replicating the group action of the group $\pi_1(B,x)$ along isomorphisms in the groupoid $\Pi_1(B)$. Therefore, the information contained in [Theorem 11](#thm11){: data-relation="required" reviewed="" } above is essentially contained in the skeleton. Thus, let us consider
+However, since the space $B$ is path-connected, the fundamental groupoid $\Pi_1(B)$ is a connected groupoid; therefore, $\Pi_1(B)$ is, for any $x\in B$, equivalent as a category to the group $\pi_1(B,x)$. That is, a groupoid action of $\Pi_1(B)$ is nothing more than replicating the group action of the group $\pi_1(B,x)$ along isomorphisms in the groupoid $\Pi_1(B)$. Therefore, the information contained in [Theorem 11](#thm11){: data-lid="1wvxb" data-relation="required" reviewed="" } above is essentially contained in the skeleton. Thus, let us consider
   
 $$\sk(M):\sk(\Cov(B))\rightarrow \sk(\Fun(\Pi_1(B), \ Set))$$
 
@@ -190,7 +190,7 @@ $$\sk(\Fun(\Pi_1(B),\Set))\simeq\Fun(\sk(\Pi_1(B)), \Set)$$
 
 using again here that $B$ is path-connected, we know that there exists a categorical equivalence that takes an isomorphism class of covering spaces and yields a $\pi_1(B,x)$-set.
 
-However, considering [\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-relation="required" reviewed="" } and its proof, given any $G$-set $E$, we can decompose $E$ into orbits of $G$, and then the $G$-action restricted to each of these orbits is transitive, and for a suitable subgroup of $G$, $H$, endowed with the canonical $G$-action, $G/H$ is isomorphic to each of these. Therefore, if we decide to consider only transitive group actions, by the definition of the monodromy functor this amounts to considering only *connected* covers on the target side. That is, there exists the following equivalence
+However, considering [\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="fvy1a" data-relation="required" reviewed="" } and its proof, given any $G$-set $E$, we can decompose $E$ into orbits of $G$, and then the $G$-action restricted to each of these orbits is transitive, and for a suitable subgroup of $G$, $H$, endowed with the canonical $G$-action, $G/H$ is isomorphic to each of these. Therefore, if we decide to consider only transitive group actions, by the definition of the monodromy functor this amounts to considering only *connected* covers on the target side. That is, there exists the following equivalence
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
@@ -198,7 +198,7 @@ and considering again the skeleton category classifying transitive $\pi_1(B,x)$-
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-Now, if we order each of these by the relation that there exists a morphism from one to the other, they are merely partially ordered sets ([\[Category Theory\] §Category, ⁋Example 3](/en/math/category_theory/categories#ex3){: data-relation="weak" reviewed="" }), and we know that this equivalence is an isomorphism between posets. That is, we obtain the following result.
+Now, if we order each of these by the relation that there exists a morphism from one to the other, they are merely partially ordered sets ([\[Category Theory\] §Category, ⁋Example 3](/en/math/category_theory/categories#ex3){: data-lid="9pgag" data-relation="weak" reviewed="" }), and we know that this equivalence is an isomorphism between posets. That is, we obtain the following result.
 
 ::: Corollary 12 (Fundamental theorem of covering spaces, classical version)
 For a path-connected, locally path-connected, semi-locally simply connected space $B$, there exists a Galois correspondence between the set of isomorphism classes of connected covering spaces and the conjugacy classes of subgroups of $\pi_1(B)$. 
@@ -237,7 +237,7 @@ For a topological space $X$, let an open cover $\mathcal{O}=(U_i)$ be given, and
 That is, it suffices to show that for any groupoid $\mathcal{G}\in\Grpd$ and any cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathcal{G}$, so that for each $U\in \mathcal{O}$, $\widetilde{\lambda}$ and $\lambda_U$ are equal, there exists a unique $\widetilde{\lambda}:\Pi_1(X)\rightarrow \mathcal{G}$. Naturally, for each $x\in X$, after finding that $x\in U$ for some $U$, since on $U$, $\lambda_U$ is defined, we can define $\widetilde{\lambda}(x)$ to be this value $\lambda_U(x)$. Meanwhile, we can make a similar definition for morphisms: for a path completely contained in some $U\in \mathcal{O}$, say $f$, this definition is well-defined for the same reason as above, and the only thing that remains to be shown is how it should be defined when the path does not belong to a single $U\in \mathcal{O}$. But in that case we can simply use concatenation of paths. We only need to show that this is always defined and well-defined. 
 :::
 
-Now, just as when we derived [Corollary 12](#cor12){: data-relation="weak" reviewed="" } above, we apply this theorem to a single object, thus replace $\Grpd$ by $\Grp$, and use the fact that pushouts in $\Grp$ are amalgamated free products to obtain the following result. 
+Now, just as when we derived [Corollary 12](#cor12){: data-lid="owd7a" data-relation="weak" reviewed="" } above, we apply this theorem to a single object, thus replace $\Grpd$ by $\Grp$, and use the fact that pushouts in $\Grp$ are amalgamated free products to obtain the following result. 
 
 ::: Corollary 14 (Seifert–van Kampen theorem, classical version)
 Suppose a topological space $X$ is expressed as the union of two path-connected open subsets $U,V$, and assume that $U\cap V$ is nonempty and path-connected. Then the following diagram

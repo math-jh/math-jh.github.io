@@ -14,7 +14,7 @@ translated_at: 2026-08-01T12:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-01T12:15:04+00:00
 ---
-Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-relation="weak" }, we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements selecting each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
+Previously, in [§Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6){: data-lid="sdplk" data-relation="weak" }, we saw that pairwise comaximal two-sided ideals decompose a given ring into a product of quotient rings. In that decomposition, the elements selecting each factor were those whose $i$th component is $1$ and the rest are $0$, and such elements are characterized as *idempotents* lying in the center of the ring.
 
 In this post, we formally define these idempotents, prove that a complete set of central orthogonal idempotents is in bijection with a direct product decomposition of the ring, and then examine how the general Chinese remainder theorem is recovered from this.
 
@@ -52,7 +52,7 @@ $$e_1+\cdots+e_n=1,\qquad e_ie_j=0\quad\text{for $i\neq j$}.$$
 If each $e_i$ is central, we call this a *central* complete set.
 :::
 
-The simplest complete set is $\{1\}$ when $n=1$, and in [Example 2](#ex2){: data-relation="weak" } the sets $\{0,1\}$ and $\{3,4\}$ in $\mathbb{Z}/6\mathbb{Z}$ are examples of central complete sets with $n=2$. More generally, given a single idempotent $e$, the set $\{e,1-e\}$ is always a complete set of orthogonal idempotents. Thus a complete set can be viewed as a generalization of splitting an idempotent into several pieces. Let us now see how this splitting decomposes the ring.
+The simplest complete set is $\{1\}$ when $n=1$, and in [Example 2](#ex2){: data-lid="0dm9h" data-relation="weak" } the sets $\{0,1\}$ and $\{3,4\}$ in $\mathbb{Z}/6\mathbb{Z}$ are examples of central complete sets with $n=2$. More generally, given a single idempotent $e$, the set $\{e,1-e\}$ is always a complete set of orthogonal idempotents. Thus a complete set can be viewed as a generalization of splitting an idempotent into several pieces. Let us now see how this splitting decomposes the ring.
 
 ::: Proposition 4
 Let a ring $A$ and a complete set of orthogonal idempotents $\{e_1,\ldots, e_n\}$ in $A$ be given. Then the decomposition as left $A$-modules
@@ -136,7 +136,7 @@ For a ring $A$, consider the $n\times n$ matrix ring $\Mat_n(A)$. Let $E_{ij}$ b
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
-so they form a complete set of orthogonal idempotents. Hence by [Proposition 4](#prop4){: data-relation="required" } we obtain the left module decomposition
+so they form a complete set of orthogonal idempotents. Hence by [Proposition 4](#prop4){: data-lid="fwck4" data-relation="required" } we obtain the left module decomposition
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn},$$
 
@@ -207,7 +207,7 @@ is clearly surjective, and if $ae_i=0$ then $a=a(1-e_i)$ while conversely $a(1-e
 Let us apply this to the most familiar case, the ring of integers.
 
 ::: Example 8
-Let the prime factorization of $n\geq 2$ be $n=p_1^{a_1}\cdots p_r^{a_r}$ (distinct primes $p_k$), and consider the ideals $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$ of $A=\mathbb{Z}/n\mathbb{Z}$. In $\mathbb{Z}$, the ideals $p_k^{a_k}\mathbb{Z}$ are pairwise comaximal and their intersection is $n\mathbb{Z}$, so inside $A$ the $\mathfrak{a}_k$ are pairwise comaximal and $\bigcap_k\mathfrak{a}_k=0$. Hence [Theorem 7](#thm7){: data-relation="required" } applies, yielding the classical Chinese remainder theorem
+Let the prime factorization of $n\geq 2$ be $n=p_1^{a_1}\cdots p_r^{a_r}$ (distinct primes $p_k$), and consider the ideals $\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}/n\mathbb{Z}$ of $A=\mathbb{Z}/n\mathbb{Z}$. In $\mathbb{Z}$, the ideals $p_k^{a_k}\mathbb{Z}$ are pairwise comaximal and their intersection is $n\mathbb{Z}$, so inside $A$ the $\mathfrak{a}_k$ are pairwise comaximal and $\bigcap_k\mathfrak{a}_k=0$. Hence [Theorem 7](#thm7){: data-lid="stdzj" data-relation="required" } applies, yielding the classical Chinese remainder theorem
 
 $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
@@ -215,7 +215,7 @@ together with the central complete set of orthogonal idempotents in $\mathbb{Z}/
 
 Concretely, for $n=6=2\cdot 3$ we have $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$. Pulling back the two idempotents $\bar e_1=(1,0)$, $\bar e_2=(0,1)$ of the product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$ along the isomorphism, the element of $\mathbb{Z}/6\mathbb{Z}$ corresponding to $(1,0)$ is $3$, and the one corresponding to $(0,1)$ is $4$. Indeed $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$ and $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$. This matches exactly the idempotents $3,4$ found by hand in [Example 2](#ex2){: data-relation="weak" }.
 
-On the other hand, for a prime $p$ and $a\geq 1$, the ring $\mathbb{Z}/p^a\mathbb{Z}$ has no idempotents other than $0,1$. This is because $x^2\equiv x\ (\mathrm{mod}\ p^a)$ is the same as $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$, and since $x$ and $x-1$ are coprime, $p^a$ must divide exactly one of them. Hence each factor in the above decomposition is indecomposable in the sense of [Theorem 5](#thm5){: data-relation="required" }, and the direct product decomposition according to prime factorization is the finest decomposition that cannot be split any further. That $\mathbb{Z}/4\mathbb{Z}$ had only trivial idempotents in [Example 2](#ex2){: data-relation="weak" } is the special case of this.
+On the other hand, for a prime $p$ and $a\geq 1$, the ring $\mathbb{Z}/p^a\mathbb{Z}$ has no idempotents other than $0,1$. This is because $x^2\equiv x\ (\mathrm{mod}\ p^a)$ is the same as $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$, and since $x$ and $x-1$ are coprime, $p^a$ must divide exactly one of them. Hence each factor in the above decomposition is indecomposable in the sense of [Theorem 5](#thm5){: data-lid="oe3vf" data-relation="required" }, and the direct product decomposition according to prime factorization is the finest decomposition that cannot be split any further. That $\mathbb{Z}/4\mathbb{Z}$ had only trivial idempotents in [Example 2](#ex2){: data-relation="weak" } is the special case of this.
 :::
 
 ---

@@ -96,7 +96,7 @@ so the triangle inequality follows.
 However, the converse of the above proposition does not hold in general. That is, an inner product on $V$ induces a norm, but a given norm need not arise from any inner product.
 
 ::: Proposition 5
-Let $V$ be an $\mathbb{R}$-inner product space. If $\lVert -\rVert$ is the norm obtained from the inner product of $V$ via the formula in [Proposition 4](#prop4){: data-relation="required" }, then the *parallelogram law*
+Let $V$ be an $\mathbb{R}$-inner product space. If $\lVert -\rVert$ is the norm obtained from the inner product of $V$ via the formula in [Proposition 4](#prop4){: data-lid="dtbso" data-relation="required" }, then the *parallelogram law*
 
 $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 
@@ -114,14 +114,14 @@ Then $\lVert-\rVert_1$ satisfies all the conditions of a norm. If there were an 
 
 $$\lVert v\rVert_1=\sqrt{\langle v,v\rangle_1}$$
 
-then by [Proposition 5](#prop5){: data-relation="required" } the identity
+then by [Proposition 5](#prop5){: data-lid="kb94f" data-relation="required" } the identity
 
 $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^2_1$$
 
 would have to hold. But substituting $u=(1,0,\ldots, 0)$ and $v=(0,1,\ldots, 0)$ shows that the parallelogram law fails. Therefore $\lVert -\rVert_1$ is not induced by any inner product.
 :::
 
-In fact, the converse of [Proposition 5](#prop5){: data-relation="required" } also holds: if $\lVert-\rVert$ satisfies the parallelogram law, then the form defined by
+In fact, the converse of [Proposition 5](#prop5){: data-lid="7ic9l" data-relation="required" } also holds: if $\lVert-\rVert$ satisfies the parallelogram law, then the form defined by
 
 $$\langle u,v\rangle:=\frac{1}{4}\left(\lVert u+v\rVert^2-\lVert u-v\rVert^2\right)$$
 
@@ -129,7 +129,7 @@ is an inner product. The proof is not very difficult, but it requires the fact t
 
 ## Orthonormal Bases
 
-Since we know that $\ch\mathbb{R}=0$, from [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12){: data-relation="required" } we know that every $\mathbb{R}$-inner product space $V$ admits an orthogonal basis.
+Since we know that $\ch\mathbb{R}=0$, from [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12){: data-lid="67ck0" data-relation="required" } we know that every $\mathbb{R}$-inner product space $V$ admits an orthogonal basis.
 
 Let $V$ be an $\mathbb{R}$-inner product space, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ be a basis of $V$. First define
 
@@ -155,7 +155,7 @@ Let $V$ be an $\mathbb{R}$-inner product space and consider a linear operator $L
 
 $$(Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
-with respect to the canonical pairing $(-,-)$. On the other hand, if an inner product is given on $V$, then for any $0\neq v\in V$ we have $\langle v,v\rangle>0$, so the inner product is non-degenerate; therefore by [§Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4){: data-relation="required" },
+with respect to the canonical pairing $(-,-)$. On the other hand, if an inner product is given on $V$, then for any $0\neq v\in V$ we have $\langle v,v\rangle>0$, so the inner product is non-degenerate; therefore by [§Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4){: data-lid="ef1g9" data-relation="required" },
 
 $$v\mapsto\langle v,-\rangle$$
 

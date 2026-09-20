@@ -33,7 +33,7 @@ A binary relation $(R,A,A)$ is called an *order relation* if $R$ is reflexive, t
 In this case, we say that $A$ is *ordered by* $R$, and we often call $A$ an *ordered set*. Also, as with equivalence relations, we write $x\mathrel{R}y$ as $x\leq_{\tiny R}y$.
 
 ::: Example 3
-The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2){: data-relation="weak" } and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3){: data-relation="weak" })
+The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2){: data-lid="xlgon" data-relation="weak" } and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3){: data-lid="fy2i4" data-relation="weak" })
 :::
 
 Since an ordered set is a set equipped with an additional relation $\leq$, when we consider functions between such sets we usually focus on those that also preserve $\leq$. In particular, we define the following.
@@ -60,7 +60,7 @@ That the first condition is equivalent to transitivity was already shown in the 
 First let us look at the following example.
 
 ::: Example 6
-Consider a function $f:A\rightarrow B$, and suppose an order relation $\leq$ is defined on $B$. Then, just as we derive an equivalence relation from a function, we can define a relation $\preceq$ on $A$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-relation="weak" })
+Consider a function $f:A\rightarrow B$, and suppose an order relation $\leq$ is defined on $B$. Then, just as we derive an equivalence relation from a function, we can define a relation $\preceq$ on $A$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-lid="93sml" data-relation="weak" })
 
 $$x\preceq y\iff f(x)\leq f(y)$$
 

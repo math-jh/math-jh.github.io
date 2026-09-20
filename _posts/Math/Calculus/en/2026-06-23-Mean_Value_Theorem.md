@@ -14,7 +14,7 @@ translated_at: 2026-08-19T07:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T07:15:05+00:00
 ---
-In [§Differentiation and Derivatives](/en/math/calculus/derivatives){: data-relation="required" } we examined the definition of the derivative. Now we turn to what information the derivative carries about a function, and the first key result is the mean value theorem.
+In [§Differentiation and Derivatives](/en/math/calculus/derivatives){: data-lid="bt0mi" data-relation="required" } we examined the definition of the derivative. Now we turn to what information the derivative carries about a function, and the first key result is the mean value theorem.
 
 ## Rolle's Theorem and the Mean Value Theorem
 
@@ -39,7 +39,7 @@ If $f$ is continuous on the closed interval $[a,b]$, differentiable on the open 
 :::
 
 ::: Proof
-Since $f$ is continuous on $[a,b]$, by [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-relation="required" } it attains a maximum and a minimum on $[a,b]$. If both occur only at the endpoints, then $f(a) = f(b)$ implies the maximum and minimum are equal, so $f$ is constant and $f' = 0$ at every interior point. Otherwise at least one of the maximum or minimum occurs at an interior point $c$, and since $f$ then has a local extremum at $c$, [Theorem 2](#thm2){: data-relation="required" } gives $f'(c) = 0$.
+Since $f$ is continuous on $[a,b]$, by [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-lid="m699v" data-relation="required" } it attains a maximum and a minimum on $[a,b]$. If both occur only at the endpoints, then $f(a) = f(b)$ implies the maximum and minimum are equal, so $f$ is constant and $f' = 0$ at every interior point. Otherwise at least one of the maximum or minimum occurs at an interior point $c$, and since $f$ then has a local extremum at $c$, [Theorem 2](#thm2){: data-lid="n724d" data-relation="required" } gives $f'(c) = 0$.
 :::
 
 ::: Theorem 4 (Mean Value Theorem)
@@ -57,7 +57,7 @@ $$g(x) = f(x) - \left[ f(a) + \frac{f(b)-f(a)}{b-a}(x - a) \right].$$
 Then $g$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $g(a) = g(b) = 0$. By [Theorem 3](#thm3){: data-relation="required" } there exists $c \in (a,b)$ with $g'(c) = 0$, and since $g'(c) = f'(c) - (f(b)-f(a))/(b-a)$, the theorem follows.
 :::
 
-The claim of [Theorem 4](#thm4){: data-relation="weak" } is that somewhere on the interval the instantaneous rate of change equals the average rate of change, thereby connecting the endpoint data $f(a), f(b)$ with the interior derivative.
+The claim of [Theorem 4](#thm4){: data-lid="6xez9" data-relation="weak" } is that somewhere on the interval the instantaneous rate of change equals the average rate of change, thereby connecting the endpoint data $f(a), f(b)$ with the interior derivative.
 
 ## Applications of the Mean Value Theorem
 
@@ -85,7 +85,7 @@ In particular, if $g(a) \neq g(b)$ and $g' \neq 0$, then $(f(b)-f(a))/(g(b)-g(a)
 Set $h(x) = \bigl(f(b)-f(a)\bigr)g(x) - \bigl(g(b)-g(a)\bigr)f(x)$. Then $h(a) = h(b) = f(b)g(a) - f(a)g(b)$. By [Theorem 3](#thm3){: data-relation="required" } there exists $c \in (a,b)$ with $h'(c) = 0$, which is exactly the claimed equality.
 :::
 
-Setting $g(x) = x$ in [Theorem 6](#thm6){: data-relation="required" } gives $g'(c) = 1$ and $g(b) - g(a) = b - a$, recovering [Theorem 4](#thm4){: data-relation="weak" }.
+Setting $g(x) = x$ in [Theorem 6](#thm6){: data-lid="omdku" data-relation="required" } gives $g'(c) = 1$ and $g(b) - g(a) = b - a$, recovering [Theorem 4](#thm4){: data-relation="weak" }.
 
 The most frequent application of results of this form is reading the increase or decrease of a function from the sign of its derivative. Replacing the difference $f(x_2) - f(x_1)$ by $f'(c)(x_2 - x_1)$, the sign of the derivative immediately determines the sign of this value.
 
@@ -108,7 +108,7 @@ As an application, let us show that $\ln(1 + x) < x$ for all $x > 0$. Set $f(x) 
 
 $$f'(x) = 1 - \frac{1}{1+x} = \frac{x}{1+x} > 0 \qquad (x > 0).$$
 
-By [Proposition 7](#prop7){: data-relation="required" }, $f$ is strictly increasing on $[0, \infty)$, so for $x > 0$ we have $f(x) > f(0) = 0$, i.e. $x > \ln(1+x)$. Similarly, applying the same argument to $g(x) = \ln(1+x) - x/(1+x)$ gives $g(0) = 0$ and $g'(x) = x/(1+x)^2 > 0$, yielding $x/(1+x) < \ln(1+x)$. Combining these,
+By [Proposition 7](#prop7){: data-lid="11ha4" data-relation="required" }, $f$ is strictly increasing on $[0, \infty)$, so for $x > 0$ we have $f(x) > f(0) = 0$, i.e. $x > \ln(1+x)$. Similarly, applying the same argument to $g(x) = \ln(1+x) - x/(1+x)$ gives $g(0) = 0$ and $g'(x) = x/(1+x)^2 > 0$, yielding $x/(1+x) < \ln(1+x)$. Combining these,
 
 $$\frac{x}{1+x} < \ln(1+x) < x \qquad (x > 0).$$
 
@@ -153,11 +153,11 @@ The points $c_1 < c_2 < \cdots < c_{k+1}$ thus obtained are $k + 1$ distinct poi
 This principle is especially useful when dealing with non-polynomial functions, because while polynomials have the powerful tool of factorization to analyze roots (not always, but often), for arbitrary functions this is far from obvious. In the next example we illustrate how this works for a polynomial that does not factor nicely.
 
 ::: Example 11
-Let us show that the equation $x^3 + x - 1 = 0$ has exactly one real root. Set $f(x) = x^3 + x - 1$; then $f(0) = -1 < 0$ and $f(1) = 1 > 0$, so by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5){: data-relation="required" } there is at least one root in $(0, 1)$. On the other hand,
+Let us show that the equation $x^3 + x - 1 = 0$ has exactly one real root. Set $f(x) = x^3 + x - 1$; then $f(0) = -1 < 0$ and $f(1) = 1 > 0$, so by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5){: data-lid="f44rx" data-relation="required" } there is at least one root in $(0, 1)$. On the other hand,
 
 $$f'(x) = 3x^2 + 1 > 0,$$
 
-so $f'$ has no roots. Taking $k = 0$ in [Proposition 10](#prop10){: data-relation="required" }, $f$ has at most one root. Since there is at least one and at most one, there is exactly one real root.
+so $f'$ has no roots. Taking $k = 0$ in [Proposition 10](#prop10){: data-lid="v03on" data-relation="required" }, $f$ has at most one root. Since there is at least one and at most one, there is exactly one real root.
 :::
 
 Recall from [Theorem 2](#thm2){: data-relation="required" } that extrema can only occur at critical points. Therefore, to find extrema we first locate critical points (which are relatively easy to find), and then determine which of them actually give extrema. The following proposition assists in this process.
@@ -189,7 +189,7 @@ Let $f(x) = x e^{-x}$ be given on $\mathbb{R}$. Its first and second derivatives
 
 $$f'(x) = (1 - x)e^{-x}, \qquad f''(x) = (x - 2)e^{-x}.$$
 
-Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and that of $f''$ by $x - 2$. Hence by [Proposition 7](#prop7){: data-relation="required" } the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Moreover, by [Proposition 12](#prop12){: data-relation="required" }, $f$ has a local maximum at $x = 1$ where the sign of $f'$ changes, with value $f(1) = e^{-1}$. Finally, since $\lim_{x\rightarrow\infty} x e^{-x} = 0$ and $\lim_{x\rightarrow -\infty} x e^{-x} = -\infty$, the graph descends from negative infinity on the left, reaches its highest point $e^{-1}$ at $x = 1$, and then asymptotically approaches the $x$-axis.
+Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and that of $f''$ by $x - 2$. Hence by [Proposition 7](#prop7){: data-lid="ixqid" data-relation="required" } the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Moreover, by [Proposition 12](#prop12){: data-lid="n7l3e" data-relation="required" }, $f$ has a local maximum at $x = 1$ where the sign of $f'$ changes, with value $f(1) = e^{-1}$. Finally, since $\lim_{x\rightarrow\infty} x e^{-x} = 0$ and $\lim_{x\rightarrow -\infty} x e^{-x} = -\infty$, the graph descends from negative infinity on the left, reaches its highest point $e^{-1}$ at $x = 1$, and then asymptotically approaches the $x$-axis.
 :::
 
 ## Extrema and Convexity Tests
@@ -209,11 +209,11 @@ Let $f$ be twice differentiable on an interval $I$. If $f''(x) \geq 0$ on $I$, t
 :::
 
 ::: Proof
-If $f'' \geq 0$, then by [Proposition 7](#prop7){: data-relation="required" } the derivative $f'$ is nondecreasing. That convexity is equivalent to $f'$ being increasing can be verified using the mean value theorem. For $x_1 < x < x_2$, applying [Theorem 4](#thm4){: data-relation="required" } to $[x_1, x]$ and $[x, x_2]$ yields $\xi_1 < \xi_2$ with
+If $f'' \geq 0$, then by [Proposition 7](#prop7){: data-lid="92e50" data-relation="required" } the derivative $f'$ is nondecreasing. That convexity is equivalent to $f'$ being increasing can be verified using the mean value theorem. For $x_1 < x < x_2$, applying [Theorem 4](#thm4){: data-lid="cviq7" data-relation="required" } to $[x_1, x]$ and $[x, x_2]$ yields $\xi_1 < \xi_2$ with
 
 $$\frac{f(x)-f(x_1)}{x - x_1} = f'(\xi_1) \leq f'(\xi_2) = \frac{f(x_2)-f(x)}{x_2 - x},$$
 
-and rearranging gives the inequality of [Definition 15](#def15){: data-relation="required" }. The case $f'' \leq 0$ follows by applying the same argument to $-f$.
+and rearranging gives the inequality of [Definition 15](#def15){: data-lid="is9e5" data-relation="required" }. The case $f'' \leq 0$ follows by applying the same argument to $-f$.
 :::
 
 A point where convex and concave behavior switch, i.e. where the bending direction of the graph changes, is called an *inflection point*. For example, for the function $f$ of [Example 14](#ex14){: data-relation="weak" }, we have $f'' < 0$ for $x < 2$, so the function is concave there, and $f'' > 0$ for $x > 2$, so it is convex there. The inflection point is $x = 2$, and the bending direction of the graph changes across this point.
@@ -229,7 +229,7 @@ Suppose $f''(c) < 0$. Since $f'(c) = 0$,
 
 $$f''(c) = \lim_{x\rightarrow c}\frac{f'(x) - f'(c)}{x - c} = \lim_{x\rightarrow c}\frac{f'(x)}{x - c} < 0,$$
 
-so in a neighborhood of $c$ we have $f'(x)/(x - c) < 0$. That is, $f'(x) > 0$ to the left of $c$ ($x < c$) and $f'(x) < 0$ to the right, and by [Proposition 12](#prop12){: data-relation="required" } $f$ has a local maximum at $c$.
+so in a neighborhood of $c$ we have $f'(x)/(x - c) < 0$. That is, $f'(x) > 0$ to the left of $c$ ($x < c$) and $f'(x) < 0$ to the right, and by [Proposition 12](#prop12){: data-lid="hi5kp" data-relation="required" } $f$ has a local maximum at $c$.
 :::
 
 Indeed, for the function $f$ of [Example 14](#ex14){: data-relation="weak" }, the value of the second derivative at the critical point $x=1$ is $-e^{-1}<0$, confirming that $f$ has a local maximum at $x=1$.
@@ -254,7 +254,7 @@ $$\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = L.$$
 :::
 
 ::: Proof
-Redefine $f(a) = g(a) = 0$ so that both functions are continuous at $a$. Also, for $x$ in the neighborhood, if $g(x) = g(a)$ then by [Theorem 3](#thm3){: data-relation="required" } there would be a root of $g'$ between $a$ and $x$, contradicting the hypothesis; hence $g(x) \neq g(a) = 0$. For $x$ sufficiently close to $a$, applying [Theorem 6](#thm6){: data-relation="required" } between $a$ and $x$ gives
+Redefine $f(a) = g(a) = 0$ so that both functions are continuous at $a$. Also, for $x$ in the neighborhood, if $g(x) = g(a)$ then by [Theorem 3](#thm3){: data-lid="42nuq" data-relation="required" } there would be a root of $g'$ between $a$ and $x$, contradicting the hypothesis; hence $g(x) \neq g(a) = 0$. For $x$ sufficiently close to $a$, applying [Theorem 6](#thm6){: data-lid="wv4p9" data-relation="required" } between $a$ and $x$ gives
 
 $$\frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = \frac{f'(\xi_x)}{g'(\xi_x)}$$
 
@@ -272,11 +272,11 @@ L'Hôpital's rule also holds in the following variants.
 
 1. For one-sided limits $x \rightarrow a^+$, $x \rightarrow a^-$, the proof works unchanged by sending $x$ to $a$ from only one side.
 2. For $x \rightarrow \infty$ in the $0/0$ form, set $t = 1/x$; then $F(t) = f(1/t)$ and $G(t) = g(1/t)$ give a $0/0$ form as $t \rightarrow 0^+$, and by the chain rule $F'(t)/G'(t) = f'(1/t)/g'(1/t)$, so variant 1 applies.
-3. For the $\infty/\infty$ form where both numerator and denominator diverge as $x \rightarrow a$, a small additional argument is needed. Fix $x_0$; then for $x$ between $a$ and $x_0$, by [Theorem 6](#thm6){: data-relation="required" } there exists $\xi$ between $x$ and $x_0$ such that
+3. For the $\infty/\infty$ form where both numerator and denominator diverge as $x \rightarrow a$, a small additional argument is needed. Fix $x_0$; then for $x$ between $a$ and $x_0$, by [Theorem 6](#thm6){: data-lid="ff7ky" data-relation="required" } there exists $\xi$ between $x$ and $x_0$ such that
     
     $$\frac{f(x)-f(x_0)}{g(x)-g(x_0)}=\frac{f'(\xi)}{g'(\xi)}.$$
     
-    Taking $x_0$ close to $a$ forces the intermediate $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18){: data-relation="required" } the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by choosing $x_0$ sufficiently close to $a$ we can make the left-hand ratio as close to $L$ as desired. Then keeping this $x_0$ fixed and sending $x \rightarrow a$, since $f(x), g(x)\rightarrow\infty$ the contribution of the fixed terms $f(x_0), g(x_0)$ vanishes and the difference between the left-hand side and $f(x)/g(x)$ goes to $0$. Thus first trapping the left-hand side near $L$ by choosing $x_0$, and then sending $x$ sufficiently close to $a$, brings $f(x)/g(x)$ arbitrarily close to $L$, which means $\lim_{x\rightarrow a} f(x)/g(x)=L$.
+    Taking $x_0$ close to $a$ forces the intermediate $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18){: data-lid="i7nes" data-relation="required" } the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by choosing $x_0$ sufficiently close to $a$ we can make the left-hand ratio as close to $L$ as desired. Then keeping this $x_0$ fixed and sending $x \rightarrow a$, since $f(x), g(x)\rightarrow\infty$ the contribution of the fixed terms $f(x_0), g(x_0)$ vanishes and the difference between the left-hand side and $f(x)/g(x)$ goes to $0$. Thus first trapping the left-hand side near $L$ by choosing $x_0$, and then sending $x$ sufficiently close to $a$, brings $f(x)/g(x)$ arbitrarily close to $L$, which means $\lim_{x\rightarrow a} f(x)/g(x)=L$.
 :::
 
 ---

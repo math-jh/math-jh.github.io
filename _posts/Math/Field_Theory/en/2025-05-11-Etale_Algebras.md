@@ -18,7 +18,7 @@ Fix a $\mathbb{K}$-algebra $A$ and a field extension $\mathbb{L}/\mathbb{K}$. Th
 
 $$\Hom_\mathbb{K}(A,\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K}\otimes_\mathbb{K}\mathbb{L})\cong\Hom_\mathbb{K}(A, \mathbb{K})\otimes_\mathbb{K}\mathbb{L}=A^\ast\otimes_\mathbb{K}\mathbb{L}$$
 
-it can also be regarded as an $\mathbb{L}$-vector space. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 3](/en/math/multilinear_algebra/hom_and_tensor#prop3){: data-relation="required" })
+it can also be regarded as an $\mathbb{L}$-vector space. ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 3](/en/math/multilinear_algebra/hom_and_tensor#prop3){: data-lid="ltvqw" data-relation="required" })
 
 Rearranging the above construction slightly, consider the dual $(A_{(\mathbb{L})})^\ast$ of $A_{(\mathbb{L})}=\mathbb{L}\otimes_\mathbb{K}A$ (as an $\mathbb{L}$-vector space). Then by the Hom-tensor adjunction
 
@@ -78,7 +78,7 @@ Fix a monoid $\Gamma$ and a field $\mathbb{L}$, and let $X$ be the set of homomo
 ::: Proof
 Consider the monoid algebra $A=L\Gamma$ and its canonical basis $(e_\gamma)_{\gamma\in\Gamma}$.
 
-Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras#prop6){: data-relation="required" } there is a bijection between $X$ and $\Hom_\mathbb{L}(A,\mathbb{L})$, so the claim follows immediately from [Theorem 1](#thm1){: data-relation="required" }.
+Then by a generalization of [\[Algebraic Structures\] §Algebras, ⁋Proposition 6](/en/math/algebraic_structures/algebras#prop6){: data-lid="lgpkb" data-relation="required" } there is a bijection between $X$ and $\Hom_\mathbb{L}(A,\mathbb{L})$, so the claim follows immediately from [Theorem 1](#thm1){: data-relation="required" }.
 :::
 
 ::: Corollary 3 (Dedekind)
@@ -195,11 +195,11 @@ Similarly, letting $\mathfrak{a}_I$ be the $\mathbb{K}$-subspace spanned by $(e_
 
 ## Separable Degree
 
-Before looking further into the properties of étale algebras, let us introduce a useful concept. In the discussion so far the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ that first appeared in [Theorem 1](#thm1){: data-relation="required" } has played an important role. Now fix a commutative $\mathbb{K}$-algebra $A$ of finite degree, and for any extension $\mathbb{L}/\mathbb{K}$ define a natural number $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$. Then we know the inequality
+Before looking further into the properties of étale algebras, let us introduce a useful concept. In the discussion so far the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ that first appeared in [Theorem 1](#thm1){: data-lid="p0owb" data-relation="required" } has played an important role. Now fix a commutative $\mathbb{K}$-algebra $A$ of finite degree, and for any extension $\mathbb{L}/\mathbb{K}$ define a natural number $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$. Then we know the inequality
 
 $$h(\mathbb{L})\leq [A:\mathbb{K}]=n$$
 
-always holds. Moreover, considering the third condition of [Proposition 8](#prop8){: data-relation="required" }, if there exists an $\mathbb{L}$ that makes the above inequality an equality then $h(\overline{\mathbb{K}})$ must also make it an equality. Motivated by this we make the following definition.
+always holds. Moreover, considering the third condition of [Proposition 8](#prop8){: data-lid="5o0qw" data-relation="required" }, if there exists an $\mathbb{L}$ that makes the above inequality an equality then $h(\overline{\mathbb{K}})$ must also make it an equality. Motivated by this we make the following definition.
 
 ::: Definition 10
 We define the natural number $h(\overline{\mathbb{K}})$ to be the *separable degree* of $A$ and write it as $[A:\mathbb{K}]_s$.
@@ -217,12 +217,12 @@ $$[u(A):\mathbb{K}]\leq n$$
 
 That is, $u(A)$ is an algebraic extension and hence is contained in $\mathbb{L}'$. From this we see that $h(\mathbb{L}')=h(\mathbb{L})$ must hold.
 
-On the other hand, by [§Algebraic Closures, ⁋Proposition 11](/en/math/field_theory/algebraically_closed_extensions#prop11){: data-relation="required" } $\mathbb{L}'$ is isomorphic to a suitable subextension of $\Omega$, and therefore
+On the other hand, by [§Algebraic Closures, ⁋Proposition 11](/en/math/field_theory/algebraically_closed_extensions#prop11){: data-lid="32jrt" data-relation="required" } $\mathbb{L}'$ is isomorphic to a suitable subextension of $\Omega$, and therefore
 
 $$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 :::
 
-Hence, if $\mathbb{L}$ is algebraically closed we can interchange the roles of $\mathbb{L}$ and $\Omega$, so equality must hold; consequently [Definition 10](#def10){: data-relation="required" } is well defined. The following are basic properties of this notion.
+Hence, if $\mathbb{L}$ is algebraically closed we can interchange the roles of $\mathbb{L}$ and $\Omega$, so equality must hold; consequently [Definition 10](#def10){: data-lid="sjw47" data-relation="required" } is well defined. The following are basic properties of this notion.
 
 ::: Proposition 12
 The following hold.
@@ -257,13 +257,13 @@ The following hold.
     Now for each fixed $u$, since $\mathbb{L}$ is an algebraic closure of $\mathbb{K}'$, the above set $\Hom_\Alg{\mathbb{K}}(A', \mathbb{L})_u$ has size $[A':\mathbb{K}']$ by definition. From this we obtain the desired equality.
 :::
 
-In this language [Corollary 7](#cor7){: data-relation="required" } translates as follows.
+In this language [Corollary 7](#cor7){: data-lid="422f2" data-relation="required" } translates as follows.
 
 ::: Proposition 13
 For a finite degree commutative $\mathbb{K}$-algebra $A$, we have $[A:\mathbb{K}]_s\leq [A:\mathbb{K}]$, and equality holds when $A$ is an étale algebra.
 :::
 
-In particular, combining this with [Proposition 12](#prop12){: data-relation="required" } we obtain the following corollary.
+In particular, combining this with [Proposition 12](#prop12){: data-lid="577cy" data-relation="required" } we obtain the following corollary.
 
 ::: Corollary 14
 The following hold.

@@ -28,7 +28,7 @@ Next, we prove that
 
 > Every well-ordered set is order-isomorphic to some ordinal.
 
-As we saw in [§Ordinals and Well-Ordered Sets, ⁋Example 3](/en/math/set_theory/ordinals#ex3){: data-relation="weak" }, many ordered sets are not well-ordered, so the condition in the above proposition may seem very restrictive. However, by a clever use of the axiom of choice, we can prove the following theorem.
+As we saw in [§Ordinals and Well-Ordered Sets, ⁋Example 3](/en/math/set_theory/ordinals#ex3){: data-lid="yg6uq" data-relation="weak" }, many ordered sets are not well-ordered, so the condition in the above proposition may seem very restrictive. However, by a clever use of the axiom of choice, we can prove the following theorem.
 
 ::: Theorem 1. (Zermelo)
 Every set $A$ can be well-ordered.

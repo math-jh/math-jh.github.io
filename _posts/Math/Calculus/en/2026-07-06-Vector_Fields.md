@@ -14,7 +14,7 @@ translated_at: 2026-08-19T11:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T11:45:04+00:00
 ---
-What we ultimately want to develop is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We prepared for this by raising the dimension of the codomain in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions){: data-relation="required" }, and then the dimension of the domain starting from [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-relation="required" }. Now we combine both directions and begin the general case where the domain and codomain are both multidimensional. In particular, the case where the two dimensions coincide, $\mathbb{R}^n\rightarrow\mathbb{R}^n$, is the most natural object of study; such a function takes an $n$-dimensional vector and outputs an $n$-dimensional vector.
+What we ultimately want to develop is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We prepared for this by raising the dimension of the codomain in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions){: data-lid="glm3l" data-relation="required" }, and then the dimension of the domain starting from [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-lid="q8s28" data-relation="required" }. Now we combine both directions and begin the general case where the domain and codomain are both multidimensional. In particular, the case where the two dimensions coincide, $\mathbb{R}^n\rightarrow\mathbb{R}^n$, is the most natural object of study; such a function takes an $n$-dimensional vector and outputs an $n$-dimensional vector.
 
 ## Vector Fields
 
@@ -24,7 +24,7 @@ However, since the cross product (one of the most powerful tools at our disposal
 A function $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$ that assigns to each point $\mathbf{x}$ in a domain $D \subseteq \mathbb{R}^n$ a vector $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$ is called a *vector field*. In the plane we write $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, and in space $\mathbf{F}(x,y,z) = (P, Q, R)$; if each component $P, Q, R$ is $C^1$, we call $\mathbf{F}$ a $C^1$ vector field.
 :::
 
-A vector field is most intuitively visualized as a picture of arrows emanating from each point. For instance, the flow velocity of a fluid at each point constitutes a vector field. We have already encountered one such object. ([§Functions of Several Variables and Partial Derivatives, ⁋Definition 2](/en/math/calculus/partial_derivatives#def2){: data-relation="required" })
+A vector field is most intuitively visualized as a picture of arrows emanating from each point. For instance, the flow velocity of a fluid at each point constitutes a vector field. We have already encountered one such object. ([§Functions of Several Variables and Partial Derivatives, ⁋Definition 2](/en/math/calculus/partial_derivatives#def2){: data-lid="8byij" data-relation="required" })
 
 ::: Definition 2
 The vector field given by the gradient $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$ of a $C^1$ scalar field $f$ is called the *gradient field* of $f$. A vector field $\mathbf{F}$ that can be written as $\mathbf{F} = \nabla f$ for some scalar field $f$ is called a *conservative field*, and that $f$ is called a *potential* of $\mathbf{F}$.

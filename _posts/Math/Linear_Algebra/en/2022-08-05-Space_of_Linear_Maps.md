@@ -76,7 +76,7 @@ Therefore $L$ can be understood as the correspondence
 
 $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{ji}v_i\right)y_j=L(v)$$
 
-Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1){: data-relation="weak" }.
+Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1){: data-lid="7jn0o" data-relation="weak" }.
 
 ::: Corollary 2
 Let $V,W$ be two $\mathbb{K}$-vector spaces and let $L:V\rightarrow W$ be a linear map.
@@ -131,12 +131,12 @@ Therefore $L_1+L_2$ is a linear map. The second claim can be shown similarly.
 Thus we may make the following definition.
 
 ::: Definition 4
-For two $\mathbb{K}$-vector spaces $V,W$, the $\mathbb{K}$-vector space obtained by equipping the set of linear maps from $V$ to $W$ with the operations from [Lemma 3](#lem3){: data-relation="required" } is denoted $\Hom_\mathbb{K}(V,W)$, or simply $\Hom(V,W)$ when the field $\mathbb{K}$ is clear from context.
+For two $\mathbb{K}$-vector spaces $V,W$, the $\mathbb{K}$-vector space obtained by equipping the set of linear maps from $V$ to $W$ with the operations from [Lemma 3](#lem3){: data-lid="sg0kl" data-relation="required" } is denoted $\Hom_\mathbb{K}(V,W)$, or simply $\Hom(V,W)$ when the field $\mathbb{K}$ is clear from context.
 
 In particular, when $W=\mathbb{K}$, we call $\Hom(V,\mathbb{K})$ the *dual space* of $V$ and denote it by $V^\ast$. The elements of $V^\ast$ are called *linear functionals*.
 :::
 
-The zero vector in the vector space $\Hom(V,W)$ is the function $0$ sending every element to 0. ([§Linear Maps, ⁋Example 10](/en/math/linear_algebra/linear_map#ex10){: data-relation="weak" }) When referring to this function, we shall call it the zero function for convenience.
+The zero vector in the vector space $\Hom(V,W)$ is the function $0$ sending every element to 0. ([§Linear Maps, ⁋Example 10](/en/math/linear_algebra/linear_map#ex10){: data-lid="a7fkx" data-relation="weak" }) When referring to this function, we shall call it the zero function for convenience.
 
 Suppose both spaces $V,W$ are finite-dimensional, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ and $\mathcal{C}=\{y_1,\ldots, y_m\}$ be bases of $V$ and $W$, respectively. Consider the $mn$ functions from $\mathcal{B}$ to $W$
 

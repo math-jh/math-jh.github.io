@@ -42,7 +42,7 @@ $$\uparrow x=\{y\in A\mid y\geq x\}$$
 is a filter of $A$, and such a filter is called a *principal filter*.
 :::
 
-We are mostly interested in the case where $A$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4){: data-relation="required" })
+We are mostly interested in the case where $A$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4){: data-lid="hmj9a" data-relation="required" })
 
 - A nonempty lower set $I$ is an ideal if and only if $x\vee y\in I$ for all $x,y\in I$.
 - A nonempty upper set $F$ is a filter if and only if $x\wedge y\in F$ for all $x,y\in F$.
@@ -58,7 +58,7 @@ $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\
 :::
 
 ::: Definition 4
-Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-relation="weak" })
+Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-lid="545p8" data-relation="weak" })
 :::
 
 Equivalently, one may define $I$ to be a prime ideal by requiring that $A\setminus I$ be a filter.

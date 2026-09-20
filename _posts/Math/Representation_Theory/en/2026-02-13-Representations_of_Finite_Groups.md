@@ -50,7 +50,7 @@ For a representation $G\times V\rightarrow V$ of a group $G$, we define the foll
 3. If $V$ is not the zero representation and the only subrepresentations of $V$ are the trivial ones, namely $V$ itself and $G\times\{0\}\rightarrow\{0\}$, then $V$ is called an *irreducible representation*.
 :::
 
-From the same perspective, for arbitrary representations $V,W$ we can define $V\oplus W$, $V\otimes W$, etc., using the operations on their underlying vector spaces. One subtle point to watch in the next definition is that, unlike in [Definition 2](#def2){: data-relation="weak" } above, for $V\otimes W$ etc. a *natural* $G$-action may not exist; therefore we explicitly define a $G$-action on each vector space.
+From the same perspective, for arbitrary representations $V,W$ we can define $V\oplus W$, $V\otimes W$, etc., using the operations on their underlying vector spaces. One subtle point to watch in the next definition is that, unlike in [Definition 2](#def2){: data-lid="clc16" data-relation="weak" } above, for $V\otimes W$ etc. a *natural* $G$-action may not exist; therefore we explicitly define a $G$-action on each vector space.
 
 ::: Definition 3
 For $G$-representations $V, W$, we define new $G$-representations via the following $G$-actions.
@@ -64,7 +64,7 @@ For $G$-representations $V, W$, we define new $G$-representations via the follow
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-In [Definition 3](#def3){: data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-relation="weak" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
+In [Definition 3](#def3){: data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="8vat6" data-relation="weak" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
@@ -172,7 +172,7 @@ Earlier we examined the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-What [Corollary 7](#cor7){: data-relation="required" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2)). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-relation="required" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11) we know that a decomposition into simple modules
+What [Corollary 7](#cor7){: data-relation="required" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" }). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-relation="required" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11) we know that a decomposition into simple modules
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
@@ -190,7 +190,7 @@ Let a (compact) group $G$ and irreducible $G$-modules $V,W$ be given. Then the f
 3. The space of $G$-maps $\Hom_G(V,W)$ is either $\mathbb{C}$ or $0$.
 :::
 ::: Proof
-1. A $G$-map is a $\mathbb{C}[G]$-module homomorphism, and an irreducible $G$-module is a simple $\mathbb{C}[G]$-module, so this is a special case of [\[Ring Theory\] §Division ring, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-relation="required" }.
+1. A $G$-map is a $\mathbb{C}[G]$-module homomorphism, and an irreducible $G$-module is a simple $\mathbb{C}[G]$-module, so this is a special case of [\[Ring Theory\] §Division ring, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="w3u04" data-relation="required" }.
 2. Since $f$ is a $\mathbb{C}$-linear map before being a $G$-linear map, $f$ has an eigenvalue $\lambda$. Letting $V_\lambda$ be the eigenspace of this eigenvalue, for any $w\in V_\lambda$ and $g\in G$ we have $f(g\cdot w)=g\cdot f(w)=\lambda(g\cdot w)$, so $V_\lambda$ is a nonzero $G$-submodule of $V$. Since $V$ is irreducible, $V_\lambda=V$, and hence $f=\lambda\id_V$.
 3. If $V\not\cong W$ then $\Hom_G(V,W)=0$ by 1. If $V\cong W$ then $\Hom_G(V,W)\cong\End_G(V)$, and since any nonzero $f\in\End_G(V)$ is of the form $\lambda\id_V$ by 2, we have $\End_G(V)=\mathbb{C}\id_V\cong\mathbb{C}$.
 :::
@@ -205,11 +205,11 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 is an isomorphism.
 :::
 ::: Proof
-By [Corollary 7](#cor7){: data-relation="required" } there exists an irreducible decomposition $V=\bigoplus_j V_j$, and thus we obtain
+By [Corollary 7](#cor7){: data-lid="jq7oo" data-relation="required" } there exists an irreducible decomposition $V=\bigoplus_j V_j$, and thus we obtain
 
 $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
 
-By [Lemma 8](#lem8){: data-relation="required" } each term is $1$-dimensional when $V_j\cong W$ and $0$ otherwise, so choosing an isomorphism $u_j:W\rightarrow V_j$ for each $j$ with $V_j\cong W$ gives a basis of $\Hom_G(W,V)$. Then $d_W$ is the direct sum of isomorphisms sending each $\mathbb{C}u_j\otimes_\mathbb{C}W$ onto $V_j$ via $u_j$, so it is an isomorphism onto $\bigoplus_{V_j\cong W}V_j$, and taking the direct sum over all isomorphism classes gives all of $\bigoplus_jV_j=V$, so $d$ is an isomorphism.
+By [Lemma 8](#lem8){: data-lid="quask" data-relation="required" } each term is $1$-dimensional when $V_j\cong W$ and $0$ otherwise, so choosing an isomorphism $u_j:W\rightarrow V_j$ for each $j$ with $V_j\cong W$ gives a basis of $\Hom_G(W,V)$. Then $d_W$ is the direct sum of isomorphisms sending each $\mathbb{C}u_j\otimes_\mathbb{C}W$ onto $V_j$ via $u_j$, so it is an isomorphism onto $\bigoplus_{V_j\cong W}V_j$, and taking the direct sum over all isomorphism classes gives all of $\bigoplus_jV_j=V$, so $d$ is an isomorphism.
 :::
 
 Although written in a complicated way, the above $d$ simply counts how many copies of each irreducible $G$-module $W$ (or its isomorphism class) appear inside $V$, so the following definition is natural.
@@ -218,9 +218,9 @@ Although written in a complicated way, the above $d$ simply counts how many copi
 The image of $W\in\Irr(G, \mathbb{C})$ under the above function is called the *$W$-isotypical summand* of $V$, and $\Hom_G(W, V)$ is called the *multiplicity* of $W$.
 :::
 
-This definition agrees with the general theory. The image of $d_W$ is the subspace generated by the simple submodules of $V$ isomorphic to $W$, so it is exactly the $W$-isotypic component of [\[Ring Theory\] §Semisimple module, ⁋Definition 8](/en/math/ring_theory/semisimple_modules#def8), and by [the same post, ⁋Proposition 9](/en/math/ring_theory/semisimple_modules#prop9) this decomposition is canonical, independent of the choice of irreducible decomposition.
+This definition agrees with the general theory. The image of $d_W$ is the subspace generated by the simple submodules of $V$ isomorphic to $W$, so it is exactly the $W$-isotypic component of [\[Ring Theory\] §Semisimple module, ⁋Definition 8](/en/math/ring_theory/semisimple_modules#def8){: data-lid="fgneo" }, and by [the same post, ⁋Proposition 9](/en/math/ring_theory/semisimple_modules#prop9){: data-lid="cbnum" } this decomposition is canonical, independent of the choice of irreducible decomposition.
 
-Uniqueness of the representation also follows now from [\[Ring Theory\] §Semisimple module, ⁋Proposition 10](/en/math/ring_theory/semisimple_modules#prop10). That is, we know that given any representation $V$, it can be written in the form of the decomposition
+Uniqueness of the representation also follows now from [\[Ring Theory\] §Semisimple module, ⁋Proposition 10](/en/math/ring_theory/semisimple_modules#prop10){: data-lid="9hfdt" }. That is, we know that given any representation $V$, it can be written in the form of the decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 

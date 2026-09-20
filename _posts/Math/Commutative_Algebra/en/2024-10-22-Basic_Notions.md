@@ -14,7 +14,7 @@ translated_at: 2026-06-26T15:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T15:00:01+00:00
 ---
-In this category, every ring that appears is a commutative ring. Also, any $A$-algebra is always understood to be a commutative associative unital $A$-algebra. In particular, since we have already seen after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-relation="required" } that an associative unital $A$-algebra $E$ and a ring homomorphism $A\rightarrow Z(E)$ are the same thing, it suffices for our subsequent discussion to think of an $A$-algebra as a ring homomorphism $A\rightarrow E$.
+In this category, every ring that appears is a commutative ring. Also, any $A$-algebra is always understood to be a commutative associative unital $A$-algebra. In particular, since we have already seen after [\[Algebraic Structures\] §Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1){: data-lid="nf5y3" data-relation="required" } that an associative unital $A$-algebra $E$ and a ring homomorphism $A\rightarrow Z(E)$ are the same thing, it suffices for our subsequent discussion to think of an $A$-algebra as a ring homomorphism $A\rightarrow E$.
 
 ## Basic Definitions
 
@@ -36,7 +36,7 @@ $$(N_1:N_2)=\{a\in A\mid aN_2\subseteq N_1\}$$
 
 The ideal quotient $(\mathfrak{a}:\mathfrak{b})$ can roughly be thought of as something like $\mathfrak{a}/\mathfrak{b}$, and for any $A$-module $M$ we have $\ann(M)=(0:M)$.
 
-On the other hand, in [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-relation="weak" } we examined two useful short exact sequences; it is worth adding the following short exact sequence to them:
+On the other hand, in [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-lid="rrfod" data-relation="weak" } we examined two useful short exact sequences; it is worth adding the following short exact sequence to them:
 
 $$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
 
@@ -92,7 +92,7 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 let $M'=\bigcup M_k$; then $M'$ is finitely generated, so write $M'=\langle x_1,\ldots, x_n\rangle$. Now for each $i$, we can choose $k_i$ such that $x_i\in M_{k_i}$ holds, and if $k$ is the largest of these $k_i$ then $M_k$ must equal $M'$.
 
-Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $M$ the premise of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-relation="required" } is satisfied by the ACC, so condition 3 obviously holds. Conversely, if condition 3 is satisfied, then given an ascending chain of submodules of $M$
+Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $M$ the premise of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4){: data-lid="kmyvk" data-relation="required" } is satisfied by the ACC, so condition 3 obviously holds. Conversely, if condition 3 is satisfied, then given an ascending chain of submodules of $M$
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
@@ -231,9 +231,9 @@ In particular, by applying this repeatedly we see that the polynomial ring $A[\x
 A finitely generated $A$-algebra $B$ over a Noetherian ring $A$ is Noetherian.
 :::
 ::: Proof
-Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12){: data-relation="required" } repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
+Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12){: data-lid="5oi67" data-relation="required" } repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
 
-Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-relation="required" }, the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3){: data-relation="required" } the ring $B$ is Noetherian.
+Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3){: data-lid="516ei" data-relation="required" }, the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3){: data-relation="required" } the ring $B$ is Noetherian.
 :::
 
 ---

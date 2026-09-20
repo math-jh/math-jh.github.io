@@ -65,9 +65,9 @@ Now, considering again $\det:\GL(n; \mathbb{R})\rightarrow \mathbb{R}^\times$, w
 
 $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
-This function is a polynomial in the entries of the matrix, hence smooth, and a short calculation shows that it is regular at every point. By [\[Differential Manifolds\] §Implicit Function Theorem, ⁋Corollary 4](/en/math/manifolds/implicit_function_theorem#cor4), $\SL(n;\mathbb{R})$ becomes an $n^2-1$-dimensional manifold. The multiplication and inversion of $\GL(n;\mathbb{R})$ also restrict well to $\SL(n;\mathbb{R})$, and therefore $\SL(n; \mathbb{R})$ is also a Lie group.
+This function is a polynomial in the entries of the matrix, hence smooth, and a short calculation shows that it is regular at every point. By [\[Differential Manifolds\] §Implicit Function Theorem, ⁋Corollary 4](/en/math/manifolds/implicit_function_theorem#cor4){: data-lid="g6h91" }, $\SL(n;\mathbb{R})$ becomes an $n^2-1$-dimensional manifold. The multiplication and inversion of $\GL(n;\mathbb{R})$ also restrict well to $\SL(n;\mathbb{R})$, and therefore $\SL(n; \mathbb{R})$ is also a Lie group.
 
-In a similar way, one can verify that classical matrix groups such as $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$, etc., also carry Lie group structures. More generally, [Theorem 5](#thm5){: data-relation="forward" } below shows that any closed subgroup of $\GL(n;\mathbb{R})$ is automatically a Lie group.
+In a similar way, one can verify that classical matrix groups such as $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$, etc., also carry Lie group structures. More generally, [Theorem 5](#thm5){: data-lid="tie8d" data-relation="forward" } below shows that any closed subgroup of $\GL(n;\mathbb{R})$ is automatically a Lie group.
 :::
 
 On the other hand, even without knowing what the determinant looks like, information about what $\SL(n;\mathbb{R})$ looks like as a group comes from linear algebra. The following theorem for an arbitrary Lie group $G$ shows more generally that any *closed* subgroup is always an embedded submanifold.
@@ -108,7 +108,7 @@ $$\left(\dd{(L_g)}\right)(X_p)=X_{gp}$$
 
 always holds. From the above equation, we can see that to specify a left invariant vector field $X$ defined on $G$, it suffices to know its value $X_p$ at *only a single point* $p\in G$, and of course the most natural choice of $p$ is the identity element $e$ of $G$. Also, since the values of $X$ at each point are defined in this way, one can guess that the fact that $X$ is left-invariant will yield the smoothness of $X$.
 
-In other words, left-invariant vector fields defined on $G$ are exactly the same as the tangent space $T_eG$ at the identity of $G$. On the other hand, in [\[Differential Manifolds\] §Lie Derivative, ⁋Definition 5](/en/math/manifolds/Lie_derivative#def5) we defined an operation $[-,-]$ that makes $\mathfrak{X}(G)$ a $C^\infty(G)$-algebra, so one of our questions is whether the collection of left-invariant vector fields forms a subalgebra under this operation. Let us first consider the following definition generalizing $[-,-]$.
+In other words, left-invariant vector fields defined on $G$ are exactly the same as the tangent space $T_eG$ at the identity of $G$. On the other hand, in [\[Differential Manifolds\] §Lie Derivative, ⁋Definition 5](/en/math/manifolds/Lie_derivative#def5){: data-lid="vayua" } we defined an operation $[-,-]$ that makes $\mathfrak{X}(G)$ a $C^\infty(G)$-algebra, so one of our questions is whether the collection of left-invariant vector fields forms a subalgebra under this operation. Let us first consider the following definition generalizing $[-,-]$.
 
 ::: Definition 8
 An $\mathbb{R}$-vector space $\mathfrak{g}$ is called a *Lie algebra* over $\mathbb{R}$ if a *Lie bracket* $[-,-]:\mathfrak{g}\times\mathfrak{g}\rightarrow\mathfrak{g}$ is defined on it satisfying the following two conditions:
@@ -136,7 +136,7 @@ Let a Lie group $G$ be given, and let $\mathfrak{g}$ be the collection of all le
     $$X_g=(\dd{L_g})_e(X_e)=(\dd{L_g})_e(Y_e)=Y_g$$
 
     so $X=Y$. Conversely, for any $v\in T_eG$, defining $X_g$ as $(\dd{L_g})_e(v)$ gives a left invariant vector field $X$, and it is obvious that $\alpha(X)=v$.
-2. To show that $X\in\mathfrak{g}$ is $C^\infty$, it suffices to show that $Xf$ is $C^\infty$ for an arbitrary function $f$. ([\[Differential Manifolds\] §Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) On the other hand, for any $p\in G$,
+2. To show that $X\in\mathfrak{g}$ is $C^\infty$, it suffices to show that $Xf$ is $C^\infty$ for an arbitrary function $f$. ([\[Differential Manifolds\] §Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2){: data-lid="xu8xk" }) On the other hand, for any $p\in G$,
     
     $$(Xf)(p)=X_pf=(\dd{L_p})_e(X_e)f=X_e(f\circ L_p)$$
     
@@ -153,15 +153,15 @@ Let a Lie group $G$ be given, and let $\mathfrak{g}$ be the collection of all le
     $$\begin{aligned}\bigl((0,Y)(f\circ m)\bigr)(\iota_1^e(p))&=(0,Y)_{(p,e)}(f\circ m)=0_p(f\circ m\circ\iota_1^e)+Y_e(f\circ m\circ\iota_2^p)\\&=X_e(f\circ m\circ\iota_2^p)=X_e(f\circ L_p)\end{aligned}$$
 
     so we obtain the desired result.
-3. This is obvious by [\[Differential Manifolds\] §Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9).
+3. This is obvious by [\[Differential Manifolds\] §Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9){: data-lid="zhs7c" }.
 :::
 
 The Lie algebra $\mathfrak{g}$ obtained through the above process is called the *Lie algebra of $G$*. In general, when a Lie group is written as $G$, it is customary to denote its Lie algebra by the corresponding Fraktur lowercase $\mathfrak{g}$.
 
-As a special example, consider the group $\Diff(M)$ of diffeomorphisms from a manifold $M$ to itself; this can be thought of as an infinite-dimensional Lie group. The tangent space at the identity $\id_M$ of this Lie group is a suitable equivalence class of curves in $\Diff(M)$ passing through $\id_M$, and by [\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), this information is exactly contained in $\mathfrak{X}(M)$. In this way, the Lie algebra $\mathfrak{g}$ of a Lie group $G$ defines the infinitesimal action when $G$ acts on itself.
+As a special example, consider the group $\Diff(M)$ of diffeomorphisms from a manifold $M$ to itself; this can be thought of as an infinite-dimensional Lie group. The tangent space at the identity $\id_M$ of this Lie group is a suitable equivalence class of curves in $\Diff(M)$ passing through $\id_M$, and by [\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-lid="aymg8" }, this information is exactly contained in $\mathfrak{X}(M)$. In this way, the Lie algebra $\mathfrak{g}$ of a Lie group $G$ defines the infinitesimal action when $G$ acts on itself.
 
 ::: Example 10
-In the cases of [Example 2](#ex2){: data-relation="weak" }, [Example 3](#ex3){: data-relation="weak" }, and $\GL(n;\mathbb{R})$ from [Example 4](#ex4){: data-relation="required" }, all come from vector spaces, so their tangent spaces are isomorphic to the original vector spaces respectively. That is, for $\mathbb{R}^n$ its tangent space is $\mathbb{R}^n$ itself, and similarly for the $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$, the tangent space at each point is the same as $\mathbb{R}^n$ before taking the quotient topology. For $\GL(n;\mathbb{R})$, since it is an open submanifold of the vector space $\Mat_n(\mathbb{R})$, likewise the tangent space at each point is the same as $\Mat_n(\mathbb{R})$.
+In the cases of [Example 2](#ex2){: data-lid="hqbds" data-relation="weak" }, [Example 3](#ex3){: data-lid="427al" data-relation="weak" }, and $\GL(n;\mathbb{R})$ from [Example 4](#ex4){: data-lid="be31p" data-relation="required" }, all come from vector spaces, so their tangent spaces are isomorphic to the original vector spaces respectively. That is, for $\mathbb{R}^n$ its tangent space is $\mathbb{R}^n$ itself, and similarly for the $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$, the tangent space at each point is the same as $\mathbb{R}^n$ before taking the quotient topology. For $\GL(n;\mathbb{R})$, since it is an open submanifold of the vector space $\Mat_n(\mathbb{R})$, likewise the tangent space at each point is the same as $\Mat_n(\mathbb{R})$.
 :::
 
 However, finding the Lie algebra of $\SL(n;\mathbb{R})$ requires a slightly more complicated calculation. Specifically, we need to know the differential of the determinant map $\GL(n; \mathbb{R})\rightarrow \mathbb{R}$.
@@ -230,7 +230,7 @@ A form $\omega$ defined on a Lie group $G$ is called *left invariant* if $(\dd{L
 
 In particular, elements of $\Omega_\text{l.inv}^1(G)$ are called *Maurer-Cartan forms*.
 
-In the same way as [Proposition 9](#prop9){: data-relation="required" }, the following proposition can be proved.
+In the same way as [Proposition 9](#prop9){: data-lid="agqg2" data-relation="required" }, the following proposition can be proved.
     
 ::: Proposition 14
 For a Lie group $G$ and $\Omega_\text{l.inv}^\ast(G)$, the following hold.
@@ -293,7 +293,7 @@ holds.
 
 Strictly speaking, the above "theorem" lacks information about the coefficients of the terms corresponding to $\cdots$, but these coefficients are rarely needed in concrete applications. What is important is that when two elements (of the Lie group) in the directions specified by the Lie algebra elements $X,Y$ are multiplied, their product lies in the direction corresponding to the linear combination of $X,Y$ and the sum of their Lie brackets, and if $X,Y$ are sufficiently small vectors then this series also converges. On the other hand, in a Lie group $G$, any element near the identity $e$ can be written in the form $g=\exp(X)$, so this theorem contains exactly all information about the group operation of $G$ (near the identity). More concretely, we can view the Lie algebra $\mathfrak{g}$ as a manifold and $\exp: \mathfrak{g}\rightarrow G$ as a smooth map between manifolds, and then the differential at $0\in \mathfrak{g}$ is exactly $\id_\mathfrak{g}$. Therefore, there exists a suitable neighborhood $U$ of $0$ in $\mathfrak{g}$ such that $\exp$ defines a diffeomorphism between $U$ and $\exp(U)$ (in particular, the inverse $\log$ of the local diffeomorphism exists), but we cannot assert how the exponential map behaves outside this $U$.
 
-When we learned [Theorem 15](#thm15){: data-relation="weak" } above, one natural question is whether, given a Lie group $G$ and its Lie algebra $\mathfrak{g}$, and a Lie subalgebra $\mathfrak{h}$ of $\mathfrak{g}$, there exists a Lie subgroup $H$ of $G$ having $\mathfrak{h}$ as its tangent space at the identity. However, by definition a Lie subalgebra is closed under the Lie bracket, so by [\[Differential Manifolds\] §Distribution, ⁋Theorem 3](/en/math/manifolds/distribution#thm3) this defines a submanifold of $G$. These will also have the group operation by [Theorem 17](#thm17){: data-relation="required" } above, but the problem is that, as pointed out earlier, this theorem is effective only in a local region. However, if $G$ were simply connected, there would be no topological obstacle to extending this to all of $G$, so the following theorem holds.
+When we learned [Theorem 15](#thm15){: data-relation="weak" } above, one natural question is whether, given a Lie group $G$ and its Lie algebra $\mathfrak{g}$, and a Lie subalgebra $\mathfrak{h}$ of $\mathfrak{g}$, there exists a Lie subgroup $H$ of $G$ having $\mathfrak{h}$ as its tangent space at the identity. However, by definition a Lie subalgebra is closed under the Lie bracket, so by [\[Differential Manifolds\] §Distribution, ⁋Theorem 3](/en/math/manifolds/distribution#thm3){: data-lid="nl83g" } this defines a submanifold of $G$. These will also have the group operation by [Theorem 17](#thm17){: data-lid="sqt1y" data-relation="required" } above, but the problem is that, as pointed out earlier, this theorem is effective only in a local region. However, if $G$ were simply connected, there would be no topological obstacle to extending this to all of $G$, so the following theorem holds.
 
 ::: Theorem 18
 When a simply connected Lie group $G$ and its Lie algebra $\mathfrak{g}$, and a Lie subalgebra $\mathfrak{h}$ of $\mathfrak{g}$ are given, there exists a Lie subgroup $H$ of $G$ having $\mathfrak{h}$ as its Lie algebra.
@@ -305,7 +305,7 @@ Finally, we now carry out the classification of abelian Lie groups. By definitio
 
 $$\rho_g: G \rightarrow G; \quad h\mapsto \rho_g(h)=ghg^{-1}$$
 
-([\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9)) This is a Lie group automorphism, and therefore differentiating it at the identity $h=e$ gives $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$, which becomes a Lie algebra automorphism.
+([\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9){: data-lid="tnvix" }) This is a Lie group automorphism, and therefore differentiating it at the identity $h=e$ gives $\dd{\rho_g}: \mathfrak{g}\rightarrow \mathfrak{g}$, which becomes a Lie algebra automorphism.
 
 ::: Definition 19
 For a Lie group $G$, the correspondence
@@ -319,7 +319,7 @@ $$\ad: \mathfrak{g}\rightarrow \Lie(\Aut(\mathfrak{g}))$$
 obtained by differentiating this is called the *adjoint representation* of $\mathfrak{g}$.
 :::
 
-Then by definition, within a sufficiently small range, the adjoint representation of $G$ is exactly the same as looking at the Lie derivative, and therefore by [\[Differential Manifolds\] §Lie Derivative, ⁋Proposition 4](/en/math/manifolds/Lie_derivative#prop4) the formula
+Then by definition, within a sufficiently small range, the adjoint representation of $G$ is exactly the same as looking at the Lie derivative, and therefore by [\[Differential Manifolds\] §Lie Derivative, ⁋Proposition 4](/en/math/manifolds/Lie_derivative#prop4){: data-lid="1jly4" } the formula
 
 $$\ad(X)Y =[X,Y]$$
 
@@ -333,7 +333,7 @@ For a connected compact Lie group $G$, the following hold.
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::
 
-If $G$ were an abelian group, then $\rho_g$ would simply be the identity map, and therefore $\Ad_g(X)=X$ would hold for any $g\in G$ and any $X\in \mathfrak{g}$, and thus the adjoint representation of $\mathfrak{g}$, being its differential, would be $0$. That is, for any abelian Lie group, the Lie bracket of its Lie algebra is always $0$, and we call this an *abelian* Lie algebra. This is not an awkward name because by [Definition 8](#def8){: data-relation="required" } this is the only way for an anticommutative Lie bracket to also be commutative.
+If $G$ were an abelian group, then $\rho_g$ would simply be the identity map, and therefore $\Ad_g(X)=X$ would hold for any $g\in G$ and any $X\in \mathfrak{g}$, and thus the adjoint representation of $\mathfrak{g}$, being its differential, would be $0$. That is, for any abelian Lie group, the Lie bracket of its Lie algebra is always $0$, and we call this an *abelian* Lie algebra. This is not an awkward name because by [Definition 8](#def8){: data-lid="teexh" data-relation="required" } this is the only way for an anticommutative Lie bracket to also be commutative.
 
 Then, when $G$ is abelian, in particular by [Theorem 17](#thm17){: data-relation="required" } we have $\exp(X+Y)=\exp(X)\exp(Y)$. That is, $\exp$ is a group homomorphism. Moreover, in this case the expression inside $\exp$ on the right-hand side of [Theorem 17](#thm17){: data-relation="required" } necessarily converges, and this results in $\exp$ being a *surjective* group homomorphism (when $G$ is connected). Therefore, by the first isomorphism theorem,
 

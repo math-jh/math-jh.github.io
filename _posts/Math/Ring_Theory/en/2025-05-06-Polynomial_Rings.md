@@ -18,7 +18,7 @@ last_polished_at: 2026-06-26T23:00:01+00:00
 In this post, $A$ is always a commutative ring.
 :::
 
-We defined the polynomial algebra $A[\x_i]_{i\in I}$ for an arbitrary (commutative) ring $A$ in [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7){: data-relation="required" }. This carries an $A$-algebra structure, but since the scalar multiplication of $A$ on $A[\x_i]_{i\in I}$ arises from the inclusion $A\hookrightarrow A[\x_i]_{i\in I}$ when we regard $A[\x_i]_{i\in I}$ as a ring, it suffices to consider $A[\x_i]_{i\in I}$ merely as a ring when studying its properties.
+We defined the polynomial algebra $A[\x_i]_{i\in I}$ for an arbitrary (commutative) ring $A$ in [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7){: data-lid="80gl1" data-relation="required" }. This carries an $A$-algebra structure, but since the scalar multiplication of $A$ on $A[\x_i]_{i\in I}$ arises from the inclusion $A\hookrightarrow A[\x_i]_{i\in I}$ when we regard $A[\x_i]_{i\in I}$ as a ring, it suffices to consider $A[\x_i]_{i\in I}$ merely as a ring when studying its properties.
 
 ## Degree of Polynomials
 
@@ -93,7 +93,7 @@ For an integral domain $A$, the following hold.
 3. $A[\x]$ is an integral domain.
 :::
 
-Now let us return to the general case. If any two polynomials $u,v\in A[\x_i]_{i\in I}$ are given, since only finitely many indeterminates appear in these polynomials, when computing $uv$ it suffices to consider $A[\x_j]_{j\in J}$ for some finite set $J\subseteq I$ instead of $A[\x_i]_{i\in I}$. Then the fact that $A[\x_j]_{j\in J}$ is an integral domain follows from [Lemma 3](#lem3){: data-relation="required" } and the isomorphism
+Now let us return to the general case. If any two polynomials $u,v\in A[\x_i]_{i\in I}$ are given, since only finitely many indeterminates appear in these polynomials, when computing $uv$ it suffices to consider $A[\x_j]_{j\in J}$ for some finite set $J\subseteq I$ instead of $A[\x_i]_{i\in I}$. Then the fact that $A[\x_j]_{j\in J}$ is an integral domain follows from [Lemma 3](#lem3){: data-lid="z7kwa" data-relation="required" } and the isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 
@@ -155,7 +155,7 @@ we see that $\mathbb{K}[\x]$ is a Euclidean domain.
 For any field $\mathbb{K}$, $\mathbb{K}[\x]$ is a Euclidean domain.
 :::
 
-In particular, the notion of greatest common divisor is well-defined over a Euclidean domain, and related to this, Bézout's lemma also holds. ([§Integral Domains, ⁋Theorem 7](/en/math/ring_theory/integral_domains#thm7){: data-relation="weak" })
+In particular, the notion of greatest common divisor is well-defined over a Euclidean domain, and related to this, Bézout's lemma also holds. ([§Integral Domains, ⁋Theorem 7](/en/math/ring_theory/integral_domains#thm7){: data-lid="g0mdk" data-relation="weak" })
 
 We have previously seen that the images of arbitrary (nonzero) elements of $\mathbb{K}$ in $\mathbb{K}[\x]$ are units of $\mathbb{K}[\x]$. ([Lemma 3](#lem3){: data-relation="required" }) On the other hand, in a Euclidean domain whether one element divides another can be determined by running the Euclidean algorithm, so an arbitrary non-constant $u\in \mathbb{K}[\x]$ being irreducible is equivalent to $u$ not being divisible by any $v\in \mathbb{K}[\x]$ satisfying $\deg(v)<\deg(u)$.
 
@@ -281,7 +281,7 @@ is a nonzero polynomial. On the other hand, the set
 
 $$\{a\in H_n\mid w(a)\neq 0\}$$
 
-has, by the fact that $H_n$ is infinite and the argument after [Proposition 9](#prop9){: data-relation="required" }, and by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Proposition 13](/en/math/set_theory/natural_numbers#prop13){: data-relation="required" },
+has, by the fact that $H_n$ is infinite and the argument after [Proposition 9](#prop9){: data-lid="yw1c8" data-relation="required" }, and by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Proposition 13](/en/math/set_theory/natural_numbers#prop13){: data-lid="z3cnq" data-relation="required" },
 
 $$\lvert H\rvert\geq \lvert H_u\rvert\geq \lvert H_{v_m}\rvert\lvert H_n\rvert=\lvert H\rvert$$
 
@@ -308,11 +308,11 @@ Then multiplying both sides by the least common multiple of the coefficients of 
 
 $$a u(\x)=v_1(\x)v_2(\x)$$
 
-If $a$ is a unit, there is nothing more to prove, so assume $a$ is not a unit. Then there exist irreducible elements $p_i\in A$ such that $a=p_1\cdots p_r$. In this case, by [§Integral Domains, ⁋Proposition 17](/en/math/ring_theory/integral_domains#prop17){: data-relation="required" }, $(p_i)$ is a prime ideal of $A$, and thus
+If $a$ is a unit, there is nothing more to prove, so assume $a$ is not a unit. Then there exist irreducible elements $p_i\in A$ such that $a=p_1\cdots p_r$. In this case, by [§Integral Domains, ⁋Proposition 17](/en/math/ring_theory/integral_domains#prop17){: data-lid="iken1" data-relation="required" }, $(p_i)$ is a prime ideal of $A$, and thus
 
 $$(A/p_iA)[\x]\cong A[\x]/P_i$$
 
-is an integral domain by [Proposition 4](#prop4){: data-relation="required" }. Therefore, reducing the equation $au=v_1v_2$ modulo $P_i$, we see that either $v_1$ or $v_2$ must become $0$ in $(A/p_iA)[x]$. That is, the coefficients of one of $v_1$ or $v_2$ are all multiples of $p_i$, and thus we can cancel this $p_i$ to obtain another polynomial in $A[\x]$. Applying this to all $p_i$ gives the desired result.
+is an integral domain by [Proposition 4](#prop4){: data-lid="s1jyj" data-relation="required" }. Therefore, reducing the equation $au=v_1v_2$ modulo $P_i$, we see that either $v_1$ or $v_2$ must become $0$ in $(A/p_iA)[x]$. That is, the coefficients of one of $v_1$ or $v_2$ are all multiples of $p_i$, and thus we can cancel this $p_i$ to obtain another polynomial in $A[\x]$. Applying this to all $p_i$ gives the desired result.
 :::
 
 From this we obtain the following.
@@ -340,12 +340,12 @@ That $A[\x]$ being a UFD implies $A$ is also a UFD is trivial, so it suffices to
 
 For a UFD $A$, let a nonzero element of $A[\x]$ be $u(\x)$, and if the greatest common divisor of the coefficients of $u(\x)$ is $d$, then we can write $u(\x)=du_0(\x)$ to obtain a polynomial $u_0\in A[\x]$ whose coefficients have greatest common divisor $1$; thus we may assume without loss of generality that the greatest common divisor of the coefficients of $u$ is $1$.
 
-By [Proposition 6](#prop6){: data-relation="required" }, $u$ can be uniquely factored in $(\Frac A)[\x]$, and applying [Proposition 14](#prop14){: data-relation="required" } to this factorization, we can factor $u$ in $A[\x]$. On the other hand, since the greatest common divisor of the coefficients of $u$ is $1$, the greatest common divisor of the coefficients of the factors of $u$ thus obtained is also $1$, and therefore by [Corollary 15](#cor15){: data-relation="required" } they are irreducible in $A[\x]$. From this we obtain a factorization of $u$ in $A[\x]$, and uniqueness is trivial using the fact that each of these components is a $\Frac A$-multiple of the corresponding factor in $(\Frac A)[\x]$.
+By [Proposition 6](#prop6){: data-relation="required" }, $u$ can be uniquely factored in $(\Frac A)[\x]$, and applying [Proposition 14](#prop14){: data-relation="required" } to this factorization, we can factor $u$ in $A[\x]$. On the other hand, since the greatest common divisor of the coefficients of $u$ is $1$, the greatest common divisor of the coefficients of the factors of $u$ thus obtained is also $1$, and therefore by [Corollary 15](#cor15){: data-lid="3l40r" data-relation="required" } they are irreducible in $A[\x]$. From this we obtain a factorization of $u$ in $A[\x]$, and uniqueness is trivial using the fact that each of these components is a $\Frac A$-multiple of the corresponding factor in $(\Frac A)[\x]$.
 :::
 
 ## Field of Rational Functions
 
-We now define rational function fields and power series rings, which are variants of polynomial rings. Earlier in [Proposition 4](#prop4){: data-relation="required" }, we proved that for any field $\mathbb{K}$, $\mathbb{K}[\x_i]_{i\in I}$ is an integral domain. Therefore, the field of fractions of $\mathbb{K}[\x_i]_{i\in I}$ is well-defined.
+We now define rational function fields and power series rings, which are variants of polynomial rings. Earlier in [Proposition 4](#prop4){: data-lid="u4tvs" data-relation="required" }, we proved that for any field $\mathbb{K}$, $\mathbb{K}[\x_i]_{i\in I}$ is an integral domain. Therefore, the field of fractions of $\mathbb{K}[\x_i]_{i\in I}$ is well-defined.
 
 ::: Definition 17
 We call the field of fractions of the polynomial ring $\mathbb{K}[\x_i]_{i\in I}$ defined over a field $\mathbb{K}$ the *field of rational functions*, and denote it by $\mathbb{K}(\x_i)_{i\in I}$.
@@ -370,7 +370,7 @@ For two rational fractions $r, s$, the following hold.
 2. $\deg(rs) = \deg r + \deg s$.
 :::
 ::: Proof
-For both claims, it suffices to consider only the case where $r, s \ne 0$. Therefore, let $r =u/v$, $s = w/z$ with $u, v, w, z$ all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [Proposition 2](#prop2){: data-relation="required" } and [Lemma 3](#lem3){: data-relation="required" }.
+For both claims, it suffices to consider only the case where $r, s \ne 0$. Therefore, let $r =u/v$, $s = w/z$ with $u, v, w, z$ all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [Proposition 2](#prop2){: data-relation="required" } and [Lemma 3](#lem3){: data-lid="ffcyl" data-relation="required" }.
 
 1. $r + s = (uz+vw)/(vz)$. First, suppose $\deg r \ne \deg s$, that is, $\deg u + \deg z \ne \deg w + \deg v$. Then $uz + vw \ne 0$, and
 

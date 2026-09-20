@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T17:00:07+00:00
 ---
 ## Coordinate Representation
 
-We now examine the relationship between matrices and linear maps. This can be regarded as a generalization of [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5). For convenience,
+We now examine the relationship between matrices and linear maps. This can be regarded as a generalization of [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5){: data-lid="5u97v" }. For convenience,
 
 let a free $A$-module $M$ be given, and fix a basis $\mathcal{B}=(e_i)_{i\in I}$ of $M$. Then any $x\in M$ can be written as
 
@@ -26,7 +26,7 @@ and the column vector $(x_{i0})_{(i,0)\in I\times\{0\}}$ consisting of the coeff
 
 $$x_i=\langle x,e_i^\ast\rangle\tag{1}$$
 
-without further ado. ([§Dual Spaces, ⁋Definition 6](/en/math/multilinear_algebra/dual_spaces#def6){: data-relation="required" })
+without further ado. ([§Dual Spaces, ⁋Definition 6](/en/math/multilinear_algebra/dual_spaces#def6){: data-lid="y8nzd" data-relation="required" })
 
 ## Matrix Representation of Linear Maps
 
@@ -68,7 +68,7 @@ to construct the inverse of the above $Z(A)$-linear map; hence it is a $Z(A)$-is
 
 ## Product of Matrix Representations
 
-We previously examined how the product of two matrices is defined. As in [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5), this product corresponds to the composition of linear maps. Let us first prove the following proposition.
+We previously examined how the product of two matrices is defined. As in [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5){: data-lid="21nb7" }, this product corresponds to the composition of linear maps. Let us first prove the following proposition.
 
 ::: Proposition 3
 If $I,J$ are finite sets, then for any linear map $u:M \rightarrow N$ and any $x\in M$, the formula
@@ -78,7 +78,7 @@ $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 holds.
 :::
 ::: Proof
-We can verify that the right-hand side yields a column vector, and by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication){: data-relation="required" }, its $j$-th component is
+We can verify that the right-hand side yields a column vector, and by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication){: data-lid="e123n" data-relation="required" }, its $j$-th component is
 
 $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
@@ -89,7 +89,7 @@ $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right),
 yielding the desired result.
 :::
 
-Combining this with [Proposition 2](#prop2){: data-relation="required" }, we obtain the following.
+Combining this with [Proposition 2](#prop2){: data-lid="3b8cl" data-relation="required" }, we obtain the following.
 
 ::: Corollary 4
 Suppose three $A$-modules $M,N,L$ are given, and fix finite bases $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$. Then for any linear maps $u:M \rightarrow N$, $v:N \rightarrow L$, the formula
@@ -118,7 +118,7 @@ $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^t\right]_{\mathcal{B}^\ast}
 holds. Here $\mathcal{B}^\ast$ and $\mathcal{C}^\ast$ are the dual bases of $\mathcal{B},\mathcal{C}$ respectively.
 :::
 ::: Proof
-By [§Dual Spaces, ⁋Proposition 8](/en/math/multilinear_algebra/dual_spaces#prop8){: data-relation="required" }, we may identify $M$ with $M^{\ast\ast}$, and then $\mathcal{B}$ corresponds to the dual basis $\mathcal{B}^{\ast\ast}$ of $\mathcal{B}^\ast$. Now
+By [§Dual Spaces, ⁋Proposition 8](/en/math/multilinear_algebra/dual_spaces#prop8){: data-lid="d8nlt" data-relation="required" }, we may identify $M$ with $M^{\ast\ast}$, and then $\mathcal{B}$ corresponds to the dual basis $\mathcal{B}^{\ast\ast}$ of $\mathcal{B}^\ast$. Now
 
 $$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
@@ -127,7 +127,7 @@ so we obtain the desired result.
 
 ## Matrix Representations and Trace
 
-Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6){: data-relation="weak" }. Now, for any $n\times n$ matrix $X$, we define the trace of $X$ by
+Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6){: data-lid="odc8j" data-relation="weak" }. Now, for any $n\times n$ matrix $X$, we define the trace of $X$ by
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 

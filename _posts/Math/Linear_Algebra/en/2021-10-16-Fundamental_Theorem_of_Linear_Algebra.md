@@ -16,13 +16,13 @@ translated_at: 2026-05-31T20:00:06+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T20:00:06+00:00
 ---
-In the previous post, we saw that for two $\mathbb{K}$-vector spaces $V,W$ of dimensions $n$ and $m$ respectively, $\Hom(V,W)$ is an $mn$-dimensional $\mathbb{K}$-vector space. The space $\Mat_{m\times n}(\mathbb{K})$ of $m\times n$ matrices is also an $mn$-dimensional $\mathbb{K}$-vector space. Thus, by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-relation="required" }, these two vector spaces are isomorphic.
+In the previous post, we saw that for two $\mathbb{K}$-vector spaces $V,W$ of dimensions $n$ and $m$ respectively, $\Hom(V,W)$ is an $mn$-dimensional $\mathbb{K}$-vector space. The space $\Mat_{m\times n}(\mathbb{K})$ of $m\times n$ matrices is also an $mn$-dimensional $\mathbb{K}$-vector space. Thus, by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-lid="vpa9k" data-relation="required" }, these two vector spaces are isomorphic.
 
 The fundamental theorem of linear algebra that we prove in this post shows not only that they are isomorphic merely because they have the same dimension, but that a *natural* isomorphism exists between them, so that they are in fact the same space.
 
 ## Fundamental Theorem: Euclidean Spaces
 
-In [§Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps){: data-relation="required" }, we agreed to understand a linear map $L$ satisfying
+In [§Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps){: data-lid="wljxb" data-relation="required" }, we agreed to understand a linear map $L$ satisfying
 
 $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
@@ -54,9 +54,9 @@ Given any linear map $L$ from $\mathbb{K}^n$ to $\mathbb{K}^m$, one can easily v
 
 $$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
   
-More precisely, the maps $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ and $A\mapsto L_A$ (the definition from [Example 1](#ex1){: data-relation="required" }) are bijections that are inverses of each other.
+More precisely, the maps $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ and $A\mapsto L_A$ (the definition from [Example 1](#ex1){: data-lid="ol3cg" data-relation="required" }) are bijections that are inverses of each other.
 
-Since the set on the left is precisely $\Hom(\mathbb{K}^n, \mathbb{K}^m)$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3){: data-relation="weak" } below, we call this result the fundamental theorem of linear algebra.
+Since the set on the left is precisely $\Hom(\mathbb{K}^n, \mathbb{K}^m)$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3){: data-lid="e4c78" data-relation="weak" } below, we call this result the fundamental theorem of linear algebra.
 
 ::: Theorem 2
 $$\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$$
@@ -101,7 +101,7 @@ Now grouping the above expression by the basis elements $e_1,\ldots, e_k$ of $\m
 
 $$(L_2\circ L_1)(e_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)e_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)e_k.$$
 
-Since the $i$-th column of $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$ is the vector to which $e_i$ is mapped by $L_2\circ L_1$, the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Now from the calculation immediately following [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2){: data-relation="required" }, we know that this is the $(i,j)$-entry of the product of the two matrices $[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$ and $[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$.
+Since the $i$-th column of $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$ is the vector to which $e_i$ is mapped by $L_2\circ L_1$, the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{E}_n}_{\mathcal{E}_k}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Now from the calculation immediately following [§Matrices, ⁋Definition 2](/en/math/linear_algebra/matrices#def2){: data-lid="km9ia" data-relation="required" }, we know that this is the $(i,j)$-entry of the product of the two matrices $[L_2]_{\mathcal{E}_k}^{\mathcal{E}_m}$ and $[L_1]_{\mathcal{E}_m}^{\mathcal{E}_n}$.
 :::
 
 ## Fundamental Theorem: General Case
@@ -126,7 +126,7 @@ Now comparing equations (2) and (1), one can verify that for any $v\in V$, the c
 
 $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
-Then the general version of [Theorem 2](#thm2){: data-relation="weak" } is given by the following theorem.
+Then the general version of [Theorem 2](#thm2){: data-lid="ty7pq" data-relation="weak" } is given by the following theorem.
 
 ::: Theorem 4
 $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
@@ -174,7 +174,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3){: data-relation="weak" }, this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
 :::
 
-[Theorem 4](#thm4){: data-relation="required" } above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-relation="weak" }. The following corollary is also a consequence of the fundamental theorem.
+[Theorem 4](#thm4){: data-lid="pbgw2" data-relation="required" } above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="3646q" data-relation="weak" }. The following corollary is also a consequence of the fundamental theorem.
 
 ::: Corollary 6
 Let two $n$-dimensional $\mathbb{K}$-vector spaces $V,W$ be given, and fix their bases $\mathcal{B},\mathcal{C}$. Then for any $L\in\Hom(V,W)$, the matrix representation $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$ of $L^{-1}\in\Hom(W,V)$ with respect to the bases $\mathcal{C},\mathcal{B}$ is equal to the inverse matrix of $[L]^{\mathcal{B}}_\mathcal{C}$.
@@ -183,11 +183,11 @@ Let two $n$-dimensional $\mathbb{K}$-vector spaces $V,W$ be given, and fix their
 Obvious by the uniqueness of inverse matrices and inverse functions.
 :::
 
-In this way, most of the concepts defined in [§Matrices](/en/math/linear_algebra/matrices){: data-relation="required" } can be transferred to $\Hom(V,W)$. One concept that cannot be immediately transferred is the transpose matrix $A^t$; we will understand its meaning later when we examine dual spaces.
+In this way, most of the concepts defined in [§Matrices](/en/math/linear_algebra/matrices){: data-lid="9v4wc" data-relation="required" } can be transferred to $\Hom(V,W)$. One concept that cannot be immediately transferred is the transpose matrix $A^t$; we will understand its meaning later when we examine dual spaces.
 
 ## Change-of-Basis Matrices
 
-To summarize [Theorem 4](#thm4){: data-relation="required" } in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B}, \mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5){: data-relation="weak" }.
+To summarize [Theorem 4](#thm4){: data-lid="ganzk" data-relation="required" } in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B}, \mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5){: data-lid="5ds63" data-relation="weak" }.
 
 ::: Definition 7
 For any finite-dimensional $\mathbb{K}$-vector space $V$ and two bases $\mathcal{B},\mathcal{B}'$ of $V$, the *change-of-basis matrix* from $\mathcal{B}$ to $\mathcal{B}'$ is

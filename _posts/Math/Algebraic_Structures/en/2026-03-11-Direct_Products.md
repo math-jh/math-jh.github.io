@@ -17,13 +17,13 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Products of Groups
 
-We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-relation="required" reviewed="" }) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
+We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-lid="lmrho" data-relation="required" reviewed="" }) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
 
 ::: Lemma 1
-$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories){: data-relation="weak" reviewed="" })
+$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories){: data-lid="3532e" data-relation="weak" reviewed="" })
 :::
 ::: Proof
-First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-relation="required" reviewed="" }. For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
+First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-lid="cezet" data-relation="required" reviewed="" }. For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
 
 Now, for any two elements of the set $\prod_{i\in I}G_i$, $x=(x_i)_{i\in I},y=(y_i)_{i\in I}$, define
 
@@ -59,7 +59,7 @@ Let $(G_i)$ and $(H_i)$ be families of groups having the same set $I$ as their i
 commute. In this case, $\ker f=\prod\ker f_i$ and $\im f=\prod\im f_i$.
 :::
 ::: Proof
-$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([\[Category Theory\] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits){: data-relation="required" }) From the commutative diagram defined in this way,
+$\prod H_i$ is the terminal object of the collection of cones satisfying the given condition. ([\[Category Theory\] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits){: data-lid="vuf1h" data-relation="required" }) From the commutative diagram defined in this way,
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
 
@@ -108,7 +108,7 @@ the family $(G_i')$ of groups, and the group homomorphisms from $G_i'$ to $G_i$
 
 $$f_i=\begin{cases} \id_{G_i}&i\in J\\ \iota_i&i\not\in J\end{cases}$$
 
-Then one can show without difficulty that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and therefore by [Corollary 4](#cor4){: data-relation="required" reviewed="" } one can verify that the following formula
+Then one can show without difficulty that $\prod_{i\in I}G_i'\cong\prod_{j\in J}G_j$, and therefore by [Corollary 4](#cor4){: data-lid="wta98" data-relation="required" reviewed="" } one can verify that the following formula
 
 $$\biggl(\prod_{i\in I}G_i\biggr)\bigg/\biggl(\prod_{j\in J}G_j\biggr)\cong\prod_{i\in I\setminus J} G_i$$
 

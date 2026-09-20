@@ -28,11 +28,11 @@ For the converse, we again invoke [§Flatness, ⁋Proposition 1](/en/math/commut
 
 $$\mathfrak{m}^n(\mathfrak{a}\otimes_AM )\subseteq \mathfrak{n}^n(\mathfrak{a}\otimes_AM)$$	 
 
-holds. On the other hand, since these are finitely generated $E$-modules, part 1 of [§Blowup Algebras, ⁋Corollary 8](/en/math/commutative_algebra/blowup_algebra#cor8){: data-relation="required" } yields an element $a\in \mathfrak{n}$ such that $(1-a)(\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM))=0$, and since $E$ is a local ring, $1-a$ is a unit, so
+holds. On the other hand, since these are finitely generated $E$-modules, part 1 of [§Blowup Algebras, ⁋Corollary 8](/en/math/commutative_algebra/blowup_algebra#cor8){: data-lid="s00rk" data-relation="required" } yields an element $a\in \mathfrak{n}$ such that $(1-a)(\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM))=0$, and since $E$ is a local ring, $1-a$ is a unit, so
 
 $$\bigcap \mathfrak{m}^n(\mathfrak{a}\otimes_AM)=\bigcap \mathfrak{n}^n(\mathfrak{a}\otimes_AM)=0.$$
 
-Therefore, to show that $x=0$, it suffices to show that $x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$ for every $n$. Now, $\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$ can be identified with $(\mathfrak{m}^n \mathfrak{a})\otimes_AM$, and applying [§Blowup Algebras, ⁋Lemma 7](/en/math/commutative_algebra/blowup_algebra#lem7){: data-relation="required" } to the $\mathfrak{m}$-stable filtration
+Therefore, to show that $x=0$, it suffices to show that $x\in \mathfrak{m}^n(\mathfrak{a}\otimes_AM)$ for every $n$. Now, $\mathfrak{m}^n(\mathfrak{a}\otimes_AM)$ can be identified with $(\mathfrak{m}^n \mathfrak{a})\otimes_AM$, and applying [§Blowup Algebras, ⁋Lemma 7](/en/math/commutative_algebra/blowup_algebra#lem7){: data-lid="nv2j6" data-relation="required" } to the $\mathfrak{m}$-stable filtration
 
 $$\mathfrak{m}\supseteq \mathfrak{m}^2\supseteq\cdots$$
 
@@ -82,7 +82,7 @@ what we must show is that $\Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M)=0$.
 
 Now, $A/(\mathfrak{a}+\mathfrak{m}^t)$ is annihilated by $\mathfrak{m}^t$, and since $\mathfrak{m}^t$ is finitely generated, this implies that $A/(\mathfrak{a}+\mathfrak{m}^t)$ has finite length. Therefore, we obtain the desired result once we show, more generally, that $\Tor_1^A(N, M)=0$ for every $A$-module $N$ of finite length.
 
-We proceed by induction. If $N$ has length $1$, then by the argument following [§The Jordan-Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-relation="required" }, we must have $N=A/\mathfrak{m}$, and so $\Tor_1^A(N, M)=0$ is exactly the hypothesis of the theorem. Now let $N$ be an $A$-module of finite length, and choose any nonzero proper submodule $N'$ of $N$. Applying the $\Tor$ long exact sequence to the exact sequence
+We proceed by induction. If $N$ has length $1$, then by the argument following [§The Jordan-Hölder Theorem, ⁋Definition 1](/en/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rlgxq" data-relation="required" }, we must have $N=A/\mathfrak{m}$, and so $\Tor_1^A(N, M)=0$ is exactly the hypothesis of the theorem. Now let $N$ be an $A$-module of finite length, and choose any nonzero proper submodule $N'$ of $N$. Applying the $\Tor$ long exact sequence to the exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
@@ -138,7 +138,7 @@ Suppose $M/aM$ is a flat $A/(a)$-module. Since the residue field of $A/(a)$ is $
 
 $$\Tor_1^{A/(a)}(A/\mathfrak{m}, M/aM)=0,$$
 
-and applying [Lemma 2](#lem2){: data-relation="required" }, we obtain $\Tor_1^A(A/\mathfrak{m}, M)=0$. Therefore, by [Theorem 1](#thm1){: data-relation="required" }, $M$ is a flat $A$-module.
+and applying [Lemma 2](#lem2){: data-lid="84lc7" data-relation="required" }, we obtain $\Tor_1^A(A/\mathfrak{m}, M)=0$. Therefore, by [Theorem 1](#thm1){: data-relation="required" }, $M$ is a flat $A$-module.
 :::
 
 Whereas [Corollary 3](#cor3){: data-relation="weak" } above essentially cuts by an element on the base side, the following variant, which cuts by an element on the fiber side, is used to lift flatness from the fiber to the base.
@@ -169,7 +169,7 @@ We must now show that $K=0$. Since $C$ is flat, computing $\Tor_i^A(N, C)$ for a
 
 $$0=\Tor_2^A(N,C) \rightarrow \Tor_1^A(N, fM) \rightarrow \Tor_1^A(N,M)=0,$$
 
-so $\Tor_1^A(N, fM)=0$, and by [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-relation="required" }, $fM$ is also a flat $A$-module. Therefore, the sequence obtained by applying $-\otimes_A\kappa$ to $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$ is exact on the left as well, so $K\otimes_A\kappa \rightarrow M\otimes_A\kappa$ is injective; but its image is the kernel of $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$, and since this morphism is an isomorphism, the image is zero. That is, $K\otimes_A\kappa=K/\mathfrak{m}K=0$, and since $K$ is a finitely generated $E$-module with $\mathfrak{m}K\subseteq \mathfrak{n}K$, Nakayama's lemma ([§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-relation="required" }) gives $K=0$.
+so $\Tor_1^A(N, fM)=0$, and by [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-relation="required" }, $fM$ is also a flat $A$-module. Therefore, the sequence obtained by applying $-\otimes_A\kappa$ to $0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$ is exact on the left as well, so $K\otimes_A\kappa \rightarrow M\otimes_A\kappa$ is injective; but its image is the kernel of $M\otimes_A\kappa \rightarrow fM\otimes_A\kappa$, and since this morphism is an isomorphism, the image is zero. That is, $K\otimes_A\kappa=K/\mathfrak{m}K=0$, and since $K$ is a finitely generated $E$-module with $\mathfrak{m}K\subseteq \mathfrak{n}K$, Nakayama's lemma ([§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-lid="a4xpd" data-relation="required" }) gives $K=0$.
 
 The final claim follows by induction on $r$. We saw above that $M/f_1M$ is a flat $A$-module, and since
 

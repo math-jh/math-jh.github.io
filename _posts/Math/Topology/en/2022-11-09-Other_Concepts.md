@@ -34,7 +34,7 @@ Suppose a collection $\mathcal{C}$ on a set $X$ is given satisfying the followin
 Then there exists a unique topology $\mathcal{T}$ whose open sets are exactly the complements of the elements of $\mathcal{C}$.
 :::
 ::: Proof
-From De Morgan's laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8){: data-relation="required" })
+From De Morgan's laws ([\[Set Theory\] §Union and Intersection, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8){: data-lid="zn8cs" data-relation="required" })
 
 $$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 
@@ -78,7 +78,7 @@ By definition, $\interior(A^c)$ is the largest open set contained in $A^c$, whic
 
 The same argument shows that if we have any one of interior, closure, or exterior, we can construct the other two.
 
-Consider the interior of a set $A$. The statement $x\in\interior(A)$ means that there exists an open set $U$ containing $x$ and contained in $A$, which is equivalent to saying that $A$ is a neighborhood of $x$. Therefore, for any two sets $A,B$, the condition $x\in\interior(A\cap B)$ is equivalent to $x\in\interior(A)\cap\interior(B)$. (The second condition of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-relation="required" }.) Translating this into a proposition about closure via the method explained above, we obtain the equality
+Consider the interior of a set $A$. The statement $x\in\interior(A)$ means that there exists an open set $U$ containing $x$ and contained in $A$, which is equivalent to saying that $A$ is a neighborhood of $x$. Therefore, for any two sets $A,B$, the condition $x\in\interior(A\cap B)$ is equivalent to $x\in\interior(A)\cap\interior(B)$. (The second condition of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-lid="k6cox" data-relation="required" }.) Translating this into a proposition about closure via the method explained above, we obtain the equality
 
 $$\cl(A\cup B)=\cl(A)\cup\cl(B).$$
 
@@ -129,7 +129,7 @@ Thus $\partial A$ is a closed set.
 A subset $A$ of a topological space $X$ is called a *dense subset* if $\cl(A)=X$.
 :::
 
-By [Proposition 6](#prop6){: data-relation="required" }, the condition that $A$ is dense in $X$ means that every nonempty open subset of $X$ must intersect $A$. Intuitively, one may think that if we find a dense subset of $X$, then we can recover all of $X$ with only a slight perturbation. In more everyday language, a dense subset of $X$ can be thought of as containing "almost all" of $X$.
+By [Proposition 6](#prop6){: data-lid="yleva" data-relation="required" }, the condition that $A$ is dense in $X$ means that every nonempty open subset of $X$ must intersect $A$. Intuitively, one may think that if we find a dense subset of $X$, then we can recover all of $X$ with only a slight perturbation. In more everyday language, a dense subset of $X$ can be thought of as containing "almost all" of $X$.
 
 On the other hand, in topology the notion of size is also given by the cardinality of a base, as shown in the following proposition.
 

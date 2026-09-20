@@ -18,7 +18,7 @@ last_polished_at: 2026-06-24T09:00:03+00:00
 
 Previously, we saw that whenever a diagonalizable operator $A$ is given, we can decompose the given space into eigenspaces on which $A$ acts like scalar multiplication. However, as examined in [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" }, even if we assume $\mathbb{K}$ is an algebraically closed field (and, as we examined after that proposition, we will always assume this), not every linear operator is diagonalizable.
 
-The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" } tells us that for some eigenvalue $\lambda$ of $A$, the geometric multiplicity of $\lambda$ is less than the algebraic multiplicity of $\lambda$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5){: data-relation="required" }) In other words, intuitively, the following vector space
+The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" } tells us that for some eigenvalue $\lambda$ of $A$, the geometric multiplicity of $\lambda$ is less than the algebraic multiplicity of $\lambda$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5){: data-lid="hkefb" data-relation="required" }) In other words, intuitively, the following vector space
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
@@ -120,7 +120,7 @@ $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
 so we saw that necessarily $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$. Then $\im (A-\lambda I)$ becomes $A$-invariant, so we can view $A$ as a linear operator on this space, and at that time (since by [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4){: data-relation="required" }, $E_\lambda(A)\cap E_\mu(A)=\{0\}$), the eigenvalue--eigenvector pairs match up, so repeating this inductively gives the eigenspace decomposition; this was the gist of the proof.
 
-Now, thinking about how to utilize [Definition 3](#def3){: data-relation="required" } from the above perspective, for an arbitrary linear operator $L$ and $k$ satisfying
+Now, thinking about how to utilize [Definition 3](#def3){: data-lid="g9sea" data-relation="required" } from the above perspective, for an arbitrary linear operator $L$ and $k$ satisfying
 
 $$\ker L^k=\ker L^{k+1}=\cdots$$
 
@@ -138,7 +138,7 @@ Then it is obvious that $W_\lambda(A)$ is $A$-invariant and therefore $A\vert_{W
 For a linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$ and two distinct eigenvalues $\lambda, \mu$ of $A$, we have $G_\lambda(A)\cap G_\mu(A)=\{0\}$.
 :::
 ::: Proof
-First, assume $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$ and $v\neq 0$. From [Corollary 4](#cor4){: data-relation="required" }, there exist integers $k_i, k_j$ satisfying
+First, assume $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$ and $v\neq 0$. From [Corollary 4](#cor4){: data-lid="ssaoz" data-relation="required" }, there exist integers $k_i, k_j$ satisfying
 
 $$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
 
@@ -187,7 +187,7 @@ be given. Here $d_\lambda$ is the algebraic multiplicity of $\lambda$, and $\sum
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-([§Existence and Uniqueness of the Determinant, ⁋Corollary 10](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10){: data-relation="required" }) Since we verified in [Lemma 5](#lem5){: data-relation="required" } that when $A$ is restricted to $G_\lambda(A)$, the only eigenvalue is $\lambda$, each $p_{G_\lambda(A)}(\x)$ must have only $\x-\lambda$ as a factor. Therefore, for the two formulas above to be equal, we know that $p_{G_\lambda(A)}(\x)$ must be exactly the polynomial of degree $d_\lambda$
+([§Existence and Uniqueness of the Determinant, ⁋Corollary 10](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10){: data-lid="z93i9" data-relation="required" }) Since we verified in [Lemma 5](#lem5){: data-lid="nzyj6" data-relation="required" } that when $A$ is restricted to $G_\lambda(A)$, the only eigenvalue is $\lambda$, each $p_{G_\lambda(A)}(\x)$ must have only $\x-\lambda$ as a factor. Therefore, for the two formulas above to be equal, we know that $p_{G_\lambda(A)}(\x)$ must be exactly the polynomial of degree $d_\lambda$
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
@@ -197,7 +197,7 @@ Thus, we have now verified that for an arbitrary linear operator $A:V \rightarro
 
 $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
-holds, and moreover for each $\lambda$, $\dim G_\lambda(A)$ matches the expected dimension, namely the algebraic multiplicity of $\lambda$ in the characteristic polynomial of $A$. Then what remains for us is to find a suitable basis of $V$ and represent an arbitrary matrix in a form similar to [§Eigenspace Decomposition, ⁋Proposition 7](/en/math/linear_algebra/eigenspace_decomposition#prop7){: data-relation="weak" }.
+holds, and moreover for each $\lambda$, $\dim G_\lambda(A)$ matches the expected dimension, namely the algebraic multiplicity of $\lambda$ in the characteristic polynomial of $A$. Then what remains for us is to find a suitable basis of $V$ and represent an arbitrary matrix in a form similar to [§Eigenspace Decomposition, ⁋Proposition 7](/en/math/linear_algebra/eigenspace_decomposition#prop7){: data-lid="kcdc1" data-relation="weak" }.
 
 A useful fact here is that for an arbitrary eigenvalue $\lambda\in \sigma(A)$ of a linear operator $A:V\rightarrow V$, when restricted to the generalized eigenspace $G_\lambda(A)$, the linear operator
 
@@ -211,7 +211,7 @@ A linear operator $N:V \rightarrow V$ defined on a vector space $V$ is called *n
 
 That is, if we can find the canonical form of an arbitrary nilpotent operator, then we can also represent the entire matrix $A$ in canonical form.
 
-Let a nilpotent operator $N: V\rightarrow V$ of index $k$ be given. Then there exists suitable $v\in V$ such that $N^{k-1}v\neq 0$. Using this vector, we can also show that the inclusions in [Lemma 1](#lem1){: data-relation="required" } are strict, because $N^{k-i}v\in \ker N^i$ but $N^{k-i}v\not\in\ker N^{i-1}$. In other words, $v, Nv, \ldots, N^{k-1}v$ are all distinct elements. More generally, the following holds.
+Let a nilpotent operator $N: V\rightarrow V$ of index $k$ be given. Then there exists suitable $v\in V$ such that $N^{k-1}v\neq 0$. Using this vector, we can also show that the inclusions in [Lemma 1](#lem1){: data-lid="5he7w" data-relation="required" } are strict, because $N^{k-i}v\in \ker N^i$ but $N^{k-i}v\not\in\ker N^{i-1}$. In other words, $v, Nv, \ldots, N^{k-1}v$ are all distinct elements. More generally, the following holds.
 
 ::: Lemma 8
 Let a linear operator $N: V\rightarrow V$ defined on a vector space $V$ and a vector $v$ satisfying $N^kv=0$ and $N^{k-1}v\neq 0$ be given. Then the following vectors
@@ -278,7 +278,7 @@ The *Jordan block* of size $k$, $J_k(\lambda)$, is defined as the following $k\t
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 :::
 
-Then combining [Theorem 6](#thm6){: data-relation="required" } and [Theorem 9](#thm9){: data-relation="required" }, we obtain the following theorem.
+Then combining [Theorem 6](#thm6){: data-lid="vro9x" data-relation="required" } and [Theorem 9](#thm9){: data-lid="uxmzd" data-relation="required" }, we obtain the following theorem.
 
 ::: Theorem 12 (Jordan Canonical Form)
 For an arbitrary linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$, by choosing a suitable basis of $V$, the matrix representation of $A$ takes the following form:
@@ -289,7 +289,7 @@ where each $J_{k_i}(\lambda_i)$ is a Jordan block. A matrix of this form is call
 :::
 
 ::: Example 13
-Let us find the Jordan canonical form of the matrix from [Example 2](#ex2){: data-relation="weak" }
+Let us find the Jordan canonical form of the matrix from [Example 2](#ex2){: data-lid="yr2k6" data-relation="weak" }
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -301,9 +301,9 @@ and
 
 $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \ker(A-I)^3=\mathbb{R}^3$$
 
-which we have already computed. That is, applying [Theorem 6](#thm6){: data-relation="required" } to $A$ simply gives $V=G_1(A)$.
+which we have already computed. That is, applying [Theorem 6](#thm6){: data-lid="9suiv" data-relation="required" } to $A$ simply gives $V=G_1(A)$.
 
-Now we need to apply [Theorem 9](#thm9){: data-relation="required" } on $G_1(A)$. As examined earlier, $(A-I)^3=0$ but $(A-I)^2\neq 0$, and we know that $v=(0,0,1)$ actually satisfies $(A-I)^2 v\neq 0$. Then
+Now we need to apply [Theorem 9](#thm9){: data-lid="2ab5v" data-relation="required" } on $G_1(A)$. As examined earlier, $(A-I)^3=0$ but $(A-I)^2\neq 0$, and we know that $v=(0,0,1)$ actually satisfies $(A-I)^2 v\neq 0$. Then
 
 $$v_1=(A-I)^2v=(1,0,0),\qquad v_2=(A-I)v=(1,1,0),\qquad v_3=v=(0,0,1)$$
 
@@ -337,7 +337,7 @@ $$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\
 An operator $T:V\rightarrow V$ is called *cyclic* if there exists suitable $v\in V$ such that $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$) is a basis of $V$; such a $v$ is called a cyclic vector.
 
 ::: Proposition 15
-The minimal polynomial $p$ of an operator $T:V\rightarrow V$ of dimension $d$ having a cyclic vector $v$ has degree $d$, and the matrix representation of $T$ with respect to the cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$ is $C(p)$. In particular, the Jordan block $J_k(\lambda)$ of [Definition 11](#def11){: data-relation="required" } is similar to the companion matrix of $(\x-\lambda)^k$.
+The minimal polynomial $p$ of an operator $T:V\rightarrow V$ of dimension $d$ having a cyclic vector $v$ has degree $d$, and the matrix representation of $T$ with respect to the cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$ is $C(p)$. In particular, the Jordan block $J_k(\lambda)$ of [Definition 11](#def11){: data-lid="dxeiz" data-relation="required" } is similar to the companion matrix of $(\x-\lambda)^k$.
 :::
 ::: Proof
 Since $\{v,Tv,\ldots,T^{d-1}v\}$ is linearly independent, expressing $T^dv$ as their linear combination
@@ -346,10 +346,10 @@ $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 
 and defining $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$ with these coefficients, we have $p(T)v=0$. Then for arbitrary $T^iv$, we have $p(T)T^iv=T^ip(T)v=0$, and since these generate $V$, $p(T)=0$. On the other hand, for a nonzero polynomial $q$ of degree less than $d$, $q(T)v$ is a nontrivial linear combination of $\{v,\ldots,T^{d-1}v\}$, so it is not $0$; therefore $p$ is the minimal polynomial of $T$. In this basis, $T$ acts as $T^iv\mapsto T^{i+1}v$ ($i<d-1$), and $T^{d-1}v$ acts by the above formula, so its matrix representation is exactly $C(p)$.
 
-For $J_k(\lambda)$, since $N=J_k(\lambda)-\lambda I$ is a nilpotent of index $k$, choosing $v$ with $N^{k-1}v\neq 0$, by [Lemma 8](#lem8){: data-relation="required" }, $\{v,Nv,\ldots,N^{k-1}v\}$ is a basis. Since $J_k(\lambda)=\lambda I+N$, $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$ also generates the same space, so $v$ is a cyclic vector, and since the minimal polynomial of $J_k(\lambda)$ is $(\x-\lambda)^k$, by the above result $J_k(\lambda)$ is similar to the companion matrix of $(\x-\lambda)^k$.
+For $J_k(\lambda)$, since $N=J_k(\lambda)-\lambda I$ is a nilpotent of index $k$, choosing $v$ with $N^{k-1}v\neq 0$, by [Lemma 8](#lem8){: data-lid="04k8g" data-relation="required" }, $\{v,Nv,\ldots,N^{k-1}v\}$ is a basis. Since $J_k(\lambda)=\lambda I+N$, $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$ also generates the same space, so $v$ is a cyclic vector, and since the minimal polynomial of $J_k(\lambda)$ is $(\x-\lambda)^k$, by the above result $J_k(\lambda)$ is similar to the companion matrix of $(\x-\lambda)^k$.
 :::
 
-The reason this does not actually become the same matrix is purely conventional: the companion matrix of [Definition 14](#def14){: data-relation="weak" } orders the basis from lower degree to higher degree, whereas the Jordan block orders from higher degree to lower degree. However, both of these canonical forms are deeply rooted, and if we align one with the other, the standard breaks, so we replace this with the brief remark above. Then more generally we obtain the following.
+The reason this does not actually become the same matrix is purely conventional: the companion matrix of [Definition 14](#def14){: data-lid="pjzpy" data-relation="weak" } orders the basis from lower degree to higher degree, whereas the Jordan block orders from higher degree to lower degree. However, both of these canonical forms are deeply rooted, and if we align one with the other, the standard breaks, so we replace this with the brief remark above. Then more generally we obtain the following.
 
 ::: Theorem 16 (Rational Canonical Form)
 For an arbitrary linear operator $A$ defined on a finite-dimensional vector space over an algebraically closed field, by choosing a suitable basis of $V$, the matrix representation of $A$ becomes a block diagonal of companion matrices
@@ -359,7 +359,7 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 where each $(\x-\lambda_i)^{k_i}$ is the *elementary divisor* corresponding to the Jordan block $J_{k_i}(\lambda_i)$ of $A$.
 :::
 ::: Proof
-By [Theorem 12](#thm12){: data-relation="required" }, $A$ is similar to a direct sum of Jordan blocks $J_{k_i}(\lambda_i)$, and by [Proposition 15](#prop15){: data-relation="required" }, each $J_{k_i}(\lambda_i)$ is similar to $C((\x-\lambda_i)^{k_i})$, so collecting these gives the desired block diagonal form.
+By [Theorem 12](#thm12){: data-lid="l7u21" data-relation="required" }, $A$ is similar to a direct sum of Jordan blocks $J_{k_i}(\lambda_i)$, and by [Proposition 15](#prop15){: data-lid="lviva" data-relation="required" }, each $J_{k_i}(\lambda_i)$ is similar to $C((\x-\lambda_i)^{k_i})$, so collecting these gives the desired block diagonal form.
 :::
 
 Of course, the true usefulness of the rational canonical form lies in the fact that it can be applied even when $\mathbb{K}$ is <em>not</em> algebraically closed. In the flow of the proof above, we used the Jordan form to obtain the companion form of elementary divisors $(\x-\lambda_i)^{k_i}$, but even when eigenvalues do not exist in $\mathbb{K}$, an arbitrary operator is standardized by companion matrices of *invariant factors* $p_1\mid p_2\mid\cdots\mid p_r$ ($p_r$ being the minimal polynomial) through the irreducible factorization of the minimal polynomial and cyclic decomposition. This general form follows from the structure theorem for $\mathbb{K}[\x]$-modules, and gives a canonical form defined entirely over $\mathbb{K}$ without mentioning eigenvalues at all.

@@ -128,7 +128,7 @@ Looking back at what was needed to make [Definition 3](#def3){: data-relation="r
 Let a monoidal category $(\mathcal{A},\otimes,I)$ be given. We say that an object $M$ of $\mathcal{A}$ is a *comonoid* if $M$ is a monoid object in $\mathcal{A}^\op$.
 :::
 
-Unpacking this, the data contained in a comonoid consists of a *comultiplication* $\Delta: M \rightarrow M\otimes M$ and a *counit* $\epsilon:M \rightarrow I$, and these satisfy the dual versions of the two conditions of [Definition 1](#def1){: data-relation="required" }.
+Unpacking this, the data contained in a comonoid consists of a *comultiplication* $\Delta: M \rightarrow M\otimes M$ and a *counit* $\epsilon:M \rightarrow I$, and these satisfy the dual versions of the two conditions of [Definition 1](#def1){: data-lid="egwxw" data-relation="required" }.
 
 ::: Definition 6
 Let a symmetric monoidal category $(\mathcal{A},\otimes,I)$ be given. Then $(M,\mu,\eta,\Delta,\epsilon)$ is a *bimonoid* if the following hold.
@@ -141,7 +141,7 @@ Let a symmetric monoidal category $(\mathcal{A},\otimes,I)$ be given. Then $(M,\
 When a monoid object $M$ is given, the role of the symmetry is important in giving $M\otimes M$ a monoid structure, so the notion of a bimonoid is generally defined only in a symmetric monoidal category. We now define a Hopf monoid as follows.
 
 ::: Definition 7
-In a symmetric monoidal category $(\mathcal{A},\otimes,I)$, $(H,\mu,\eta,\Delta,\epsilon,\iota)$ is a *Hopf monoid* if $(H,\mu,\eta,\Delta,\epsilon)$ is a bimonoid and $\iota$ satisfies the same condition as the last diagram of [Definition 3](#def3){: data-relation="required" }.
+In a symmetric monoidal category $(\mathcal{A},\otimes,I)$, $(H,\mu,\eta,\Delta,\epsilon,\iota)$ is a *Hopf monoid* if $(H,\mu,\eta,\Delta,\epsilon)$ is a bimonoid and $\iota$ satisfies the same condition as the last diagram of [Definition 3](#def3){: data-lid="13tfg" data-relation="required" }.
 :::
 
 To write the condition on $\iota$ explicitly, we need to translate all the diagrams given in [Definition 3](#def3){: data-relation="required" } into the data that a Hopf monoid possesses; for instance, one of the triangles can be expanded as the diagram

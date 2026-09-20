@@ -110,7 +110,7 @@ This is immediate from the two inequalities
 $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V.$$
 :::
 
-In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3){: data-relation="required" } with $W=V^\ast$, we obtain an isomorphism from $V$ to $V^{\ast\ast}$. Explicitly, this function is the *evaluation map*
+In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3){: data-lid="df5k7" data-relation="required" } with $W=V^\ast$, we obtain an isomorphism from $V$ to $V^{\ast\ast}$. Explicitly, this function is the *evaluation map*
 
 $$\ev_v:f\mapsto f(v)$$
 
@@ -136,7 +136,7 @@ Now suppose in particular that $V$ and $W$ are both finite-dimensional $\mathbb{
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots,\xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
-respectively. By [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-relation="required" }, every linear map can be represented by a matrix once bases are chosen; hence we can represent $L^\ast$ as a matrix with respect to the bases $\mathcal{C}^\ast$ and $\mathcal{B}^\ast$.
+respectively. By [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-lid="6p4pa" data-relation="required" }, every linear map can be represented by a matrix once bases are chosen; hence we can represent $L^\ast$ as a matrix with respect to the bases $\mathcal{C}^\ast$ and $\mathcal{B}^\ast$.
 
 First, suppose $L$ is represented by the following matrix with respect to $\mathcal{B}$ and $\mathcal{C}$:
 
@@ -175,7 +175,7 @@ Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a lin
 2. If $L$ is surjective, then $L^\ast$ is injective.
 :::
 ::: Proof
-Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2){: data-relation="required" }.
+Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2){: data-lid="tuwru" data-relation="required" }.
 
 1. If $L$ is injective, there exists $R:W\rightarrow V$ satisfying $R\circ L=\id_V$. Then for any $f\in V^\ast$, the composition $f\circ R$ is a function from $W$ to $\mathbb{K}$, i.e., an element of $W^\ast$, and
 
@@ -203,7 +203,7 @@ That $v^\perp$ is a subspace of $V^\ast$ for any $v\in V$ is obvious from the bi
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
-and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3){: data-relation="required" }, we see that $S^\perp$ is a subspace of $V^\ast$. Similarly, for any $T\subseteq V^\ast$, the set $T^\perp$ is a subspace of $V$.
+and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3){: data-lid="ymlyq" data-relation="required" }, we see that $S^\perp$ is a subspace of $V^\ast$. Similarly, for any $T\subseteq V^\ast$, the set $T^\perp$ is a subspace of $V$.
 
 ::: Proposition 8
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. For any subspace $U\subseteq V$ and its orthogonal complement $U^\perp$,
@@ -248,7 +248,7 @@ which gives the claim.
 Let $V,W$ be two $\mathbb{K}$-vector spaces, and let $L:V\rightarrow W$ be a linear map and $L^\ast:W^\ast\rightarrow V^\ast$ its dual. Then $\bigl(\im L^\ast\bigr)^\perp=\ker L$.
 :::
 ::: Proof
-It suffices to take $U=W^\ast$ in [Proposition 10](#prop10){: data-relation="required" }.
+It suffices to take $U=W^\ast$ in [Proposition 10](#prop10){: data-lid="jzl2f" data-relation="required" }.
 :::
 
 ---

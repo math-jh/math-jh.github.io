@@ -84,7 +84,7 @@ is an element of $\mathfrak{X}(M)$. However, for any $C^\infty$ function $f:\mat
 
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{\dd{x}}\bigg\vert_p$$
 
-also belongs to $\mathfrak{X}(M)$ ([Proposition 2](#prop2){: data-relation="required" }), and this element cannot be expressed as a constant multiple of $X$ unless $f$ is constant. Moreover, since $C^\infty(M)$ is an infinite-dimensional vector space over $\mathbb{R}$, the space $\mathfrak{X}(M)$ is also infinite-dimensional.
+also belongs to $\mathfrak{X}(M)$ ([Proposition 2](#prop2){: data-lid="6qzn8" data-relation="required" }), and this element cannot be expressed as a constant multiple of $X$ unless $f$ is constant. Moreover, since $C^\infty(M)$ is an infinite-dimensional vector space over $\mathbb{R}$, the space $\mathfrak{X}(M)$ is also infinite-dimensional.
 :::
 
 In such a situation, it is relatively more convenient to regard $\mathfrak{X}(M)$ as a $C^\infty(M)$-module.

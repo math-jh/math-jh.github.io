@@ -18,9 +18,9 @@ We have previously defined Galois extensions and Galois groups. The central resu
 
 ## Topology of the Galois Group
 
-Let $\mathbb{L}/\mathbb{K}$ be a Galois extension, and let $\Gal(\mathbb{L}/\mathbb{K})$ be its Galois group. Since the Galois group is a collection of functions from the set $\mathbb{L}$ to itself, if we equip the set $\Fun(\mathbb{L},\mathbb{L})=\mathbb{L}^\mathbb{L}$ of all functions from $\mathbb{L}$ to $\mathbb{L}$ with a topology, we can induce a topology on $\Gal(\mathbb{L}/\mathbb{K})$ as a subset. ([\[Topology\] §Subspaces, ⁋Definition 1](/en/math/topology/subspaces#def1))
+Let $\mathbb{L}/\mathbb{K}$ be a Galois extension, and let $\Gal(\mathbb{L}/\mathbb{K})$ be its Galois group. Since the Galois group is a collection of functions from the set $\mathbb{L}$ to itself, if we equip the set $\Fun(\mathbb{L},\mathbb{L})=\mathbb{L}^\mathbb{L}$ of all functions from $\mathbb{L}$ to $\mathbb{L}$ with a topology, we can induce a topology on $\Gal(\mathbb{L}/\mathbb{K})$ as a subset. ([\[Topology\] §Subspaces, ⁋Definition 1](/en/math/topology/subspaces#def1){: data-lid="kk314" })
 
-To this end, we endow $\mathbb{L}$ with the discrete topology. ([\[Topology\] §Open Sets, ⁋Example 2](/en/math/topology/open_sets#ex2)) Then, by the discussion following [\[Topology\] §Product Spaces, ⁋Definition 1](/en/math/topology/product_spaces#def1), the sets of the form $\pr_x^{-1}(U)$ for the projections $\pr_x:\mathbb{L}^\mathbb{L}\rightarrow\mathbb{L}$ constitute a subbase for $\mathbb{L}^\mathbb{L}$, and since $\mathbb{L}$ is discrete we may restrict to singletons $U$ and still obtain a subbase. That is, a subbase for this set is given by the collection of sets of the form
+To this end, we endow $\mathbb{L}$ with the discrete topology. ([\[Topology\] §Open Sets, ⁋Example 2](/en/math/topology/open_sets#ex2){: data-lid="3oua0" }) Then, by the discussion following [\[Topology\] §Product Spaces, ⁋Definition 1](/en/math/topology/product_spaces#def1){: data-lid="pfywy" }, the sets of the form $\pr_x^{-1}(U)$ for the projections $\pr_x:\mathbb{L}^\mathbb{L}\rightarrow\mathbb{L}$ constitute a subbase for $\mathbb{L}^\mathbb{L}$, and since $\mathbb{L}$ is discrete we may restrict to singletons $U$ and still obtain a subbase. That is, a subbase for this set is given by the collection of sets of the form
 
 $$U_{x,y}=\left\{\sigma\mid\sigma(x)=y \right\}$$
 
@@ -28,7 +28,7 @@ so regarding $\Gal(\mathbb{L}/\mathbb{K})$ as a subspace, for any $\sigma\in\Gal
 
 $$U_{x_1,\ldots,x_n}=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \text{$\tau(x_i)=\sigma(x_i)$ for all $i$}\right\}$$
 
-constitutes a local base at $\sigma$. ([\[Topology\] §Bases of Topological Spaces, ⁋Definition 4](/en/math/topology/topological_bases#def4))
+constitutes a local base at $\sigma$. ([\[Topology\] §Bases of Topological Spaces, ⁋Definition 4](/en/math/topology/topological_bases#def4){: data-lid="okdxw" })
 
 On the other hand, the functions satisfying the above condition are precisely those that agree with $\sigma$ when restricted to the finite subextension $\mathbb{M}=\mathbb{K}(x_1,\ldots,x_n )$ of $\mathbb{L}$, and conversely any finite subextension $\mathbb{M}/\mathbb{K}$ defines an element of the local base at $\sigma$ in this manner. Thus, letting $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$ denote the collection of *finite* subextensions of $\mathbb{L}/\mathbb{K}$, and for any $\mathbb{M}/\mathbb{K}\in \Ext_{\fin}(\mathbb{L}/\mathbb{K})$ and any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ defining the subset $U_\mathbb{M}(\sigma)$ of $\Gal(\mathbb{L}/\mathbb{K})$ by
 
@@ -37,7 +37,7 @@ $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\ver
 this set becomes an element of the local base at $\sigma$, and the collection $(U_\mathbb{M}(\sigma))_{\mathbb{M}\in\Ext_{\fin}(\mathbb{L}/\mathbb{K})}$ is exactly the local base at $\sigma$. The topology on $\Gal(\mathbb{L}/\mathbb{K})$ obtained in this way is called the *Krull topology*.
 
 ::: Example 1
-In particular, consider the case where $\mathbb{L}/\mathbb{K}$ is a finite degree Galois extension. Then from the discussion following [\[Galois Extension\] §Galois Extension, ⁋Definition 12](/en/math/field_theory/galois_extension#def12) we know that $\Gal(\mathbb{L}/\mathbb{K})$ is a finite set. On the other hand, since $\mathbb{L}/\mathbb{K}$ is of finite degree, $\mathbb{L}/\mathbb{K}$ itself is already an element of $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$, and thus for any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$
+In particular, consider the case where $\mathbb{L}/\mathbb{K}$ is a finite degree Galois extension. Then from the discussion following [\[Galois Extension\] §Galois Extension, ⁋Definition 12](/en/math/field_theory/galois_extension#def12){: data-lid="4hrt0" } we know that $\Gal(\mathbb{L}/\mathbb{K})$ is a finite set. On the other hand, since $\mathbb{L}/\mathbb{K}$ is of finite degree, $\mathbb{L}/\mathbb{K}$ itself is already an element of $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$, and thus for any $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
@@ -79,13 +79,13 @@ instead of the above. Then by definition, as a set
 
 $$U_\mathbb{M}(\id_\mathbb{L})=\Gal(\mathbb{L}/\mathbb{M})$$
 
-Here, the third condition of [Theorem 8](/en/math/field_theory/galois_extension#thm8){: data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension) holds with $\mathbb{M}$ in place of $\mathbb{K}$, so $\mathbb{L}/\mathbb{M}$ is also a Galois extension, and the inclusion of the group on the right into $\Gal(\mathbb{L}/\mathbb{K})$ is simply obtained by viewing an $\mathbb{M}$-automorphism as a $\mathbb{K}$-automorphism. Moreover, the topology on $\Gal(\mathbb{L}/\mathbb{M})$ coincides with the subspace topology inherited from $\Gal(\mathbb{L}/\mathbb{K})$. Then by the first condition of the same theorem, since $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$,
+Here, the third condition of [Theorem 8](/en/math/field_theory/galois_extension#thm8){: data-lid="jo2v7" data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension) holds with $\mathbb{M}$ in place of $\mathbb{K}$, so $\mathbb{L}/\mathbb{M}$ is also a Galois extension, and the inclusion of the group on the right into $\Gal(\mathbb{L}/\mathbb{K})$ is simply obtained by viewing an $\mathbb{M}$-automorphism as a $\mathbb{K}$-automorphism. Moreover, the topology on $\Gal(\mathbb{L}/\mathbb{M})$ coincides with the subspace topology inherited from $\Gal(\mathbb{L}/\mathbb{K})$. Then by the first condition of the same theorem, since $\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$,
 
 $$U_\mathbb{M}(\id_\mathbb{L})\subseteq U_\mathbb{N}(\id_\mathbb{L})\iff \mathbb{M}\supseteq \mathbb{N}$$
 
 holds. The right-to-left direction follows immediately from the definition, and the left-to-right direction follows from $\mathbb{N}=\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{N})}\subseteq\mathbb{L}^{\Gal(\mathbb{L}/\mathbb{M})}=\mathbb{M}$.
 
-Now consider the collection $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ of finite degree *Galois* subextensions. By [Proposition 11](/en/math/field_theory/galois_extension#prop11){: data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), this is a cofinal subset of $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$. Hence $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})}$ is also a local base at $\id_\mathbb{L}$. Then for any $\mathbb{M}\in \Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$, considering the restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$ examined in [Proposition 13](/en/math/field_theory/galois_extension#prop13){: data-relation="required" } of [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), since any finite degree subextension of $\mathbb{M}$ is also a finite degree subextension of $\mathbb{L}$, this restriction homomorphism is continuous with respect to the topology defined above. In this situation, $\rho$ is a continuous map from $\Gal(\mathbb{L}/\mathbb{K})$ to the finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$ ([Example 1](#ex1){: data-relation="required" }), so $\ker\rho$ is a closed subgroup of $\Gal(\mathbb{L}/\mathbb{K})$. However, by definition
+Now consider the collection $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ of finite degree *Galois* subextensions. By [Proposition 11](/en/math/field_theory/galois_extension#prop11){: data-lid="pljwz" data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), this is a cofinal subset of $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$. Hence $(U_\mathbb{M}(\id_\mathbb{L}))_{\mathbb{M}\in\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})}$ is also a local base at $\id_\mathbb{L}$. Then for any $\mathbb{M}\in \Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$, considering the restriction homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{M}/\mathbb{K})$ examined in [Proposition 13](/en/math/field_theory/galois_extension#prop13){: data-lid="72rks" data-relation="required" } of [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), since any finite degree subextension of $\mathbb{M}$ is also a finite degree subextension of $\mathbb{L}$, this restriction homomorphism is continuous with respect to the topology defined above. In this situation, $\rho$ is a continuous map from $\Gal(\mathbb{L}/\mathbb{K})$ to the finite discrete space $\Gal(\mathbb{M}/\mathbb{K})$ ([Example 1](#ex1){: data-lid="ij77y" data-relation="required" }), so $\ker\rho$ is a closed subgroup of $\Gal(\mathbb{L}/\mathbb{K})$. However, by definition
 
 $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in U_\mathbb{M}(\id_\mathbb{L})$$
 
@@ -102,17 +102,17 @@ holds.
 Let $\sigma\in \Gal(\mathbb{L}/\mathbb{K})$ be given. If $\sigma\neq\id_\mathbb{L}$, then there exists $x\in \mathbb{L}$ such that $\sigma(x)\neq x$. Taking $\mathbb{M}=\mathbb{K}(x)$, we have $\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$. Now, as observed earlier, since $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ is a cofinal subset of $\Ext_{\fin}(\mathbb{L}/\mathbb{K})$, we obtain the desired result.
 :::
 
-Therefore, by this proposition, the connected component containing $\id_\mathbb{L}$ is $\left\{\id_\mathbb{L}\right\}$. On the other hand, by [Proposition 2](#prop2){: data-relation="required" }, left translation by any $\sigma$ is a homeomorphism, so the connected component containing any point is also a singleton, and hence $\Gal(\mathbb{L}/\mathbb{K})$ is a totally disconnected space. ([\[Topology\] §Connected Spaces, ⁋Definition 7](/en/math/topology/connected_spaces#def7)) Moreover, the following holds.
+Therefore, by this proposition, the connected component containing $\id_\mathbb{L}$ is $\left\{\id_\mathbb{L}\right\}$. On the other hand, by [Proposition 2](#prop2){: data-lid="tbehr" data-relation="required" }, left translation by any $\sigma$ is a homeomorphism, so the connected component containing any point is also a singleton, and hence $\Gal(\mathbb{L}/\mathbb{K})$ is a totally disconnected space. ([\[Topology\] §Connected Spaces, ⁋Definition 7](/en/math/topology/connected_spaces#def7){: data-lid="qk2i3" }) Moreover, the following holds.
 
 ::: Proposition 4
 $\Gal(\mathbb{L}/\mathbb{K})$ is compact.
 :::
 ::: Proof
-First, for each $x\in \mathbb{L}$, since $\mathbb{L}/\mathbb{K}$ is an algebraic extension, $x$ is algebraic, and hence there are only finitely many elements conjugate to $x$. ([\[Galois Extension\] §Galois Extension, ⁋Proposition 3](/en/math/field_theory/galois_extension#prop3)) In other words, considering
+First, for each $x\in \mathbb{L}$, since $\mathbb{L}/\mathbb{K}$ is an algebraic extension, $x$ is algebraic, and hence there are only finitely many elements conjugate to $x$. ([\[Galois Extension\] §Galois Extension, ⁋Proposition 3](/en/math/field_theory/galois_extension#prop3){: data-lid="gm9dq" }) In other words, considering
 
 $$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\longrightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
 
-the image of this map is a finite set. Therefore $\Gal(\mathbb{L}/\mathbb{K})$ is a subset of a product of finite sets, and since finite sets are compact, this product is also compact. ([\[Topology\] §Compactness and Convergence of Filters, ⁋Theorem 19 (Tychonoff)](/en/math/topology/filter_convergence#thm19)) Thus proving the given proposition amounts to showing that $\Gal(\mathbb{L}/\mathbb{K})$ is closed in $\mathbb{L}^\mathbb{L}$.
+the image of this map is a finite set. Therefore $\Gal(\mathbb{L}/\mathbb{K})$ is a subset of a product of finite sets, and since finite sets are compact, this product is also compact. ([\[Topology\] §Compactness and Convergence of Filters, ⁋Theorem 19 (Tychonoff)](/en/math/topology/filter_convergence#thm19){: data-lid="fa6xx" }) Thus proving the given proposition amounts to showing that $\Gal(\mathbb{L}/\mathbb{K})$ is closed in $\mathbb{L}^\mathbb{L}$.
 
 Suppose a function $u$ belongs to the closure of $\Gal(\mathbb{L}/\mathbb{K})$ in $\mathbb{L}^\mathbb{L}$. First, a field homomorphism $u:\mathbb{L}\rightarrow\mathbb{L}$ fixing $\mathbb{K}$ is always an element of $\Gal(\mathbb{L}/\mathbb{K})$, because $u$ is injective and for any $x\in \mathbb{L}$, since the finite set of roots of the minimal polynomial of $x$ in $\mathbb{L}$ is mapped to itself, $u$ is surjective on this set, and hence $x$ belongs to the image of $u$. Therefore, if $u$ is not an element of $\Gal(\mathbb{L}/\mathbb{K})$, then either $u$ is not a field homomorphism or $u$ does not fix $\mathbb{K}$. Adopting the first assumption, suppose there exist $x,y\in\mathbb{L}$ such that $u(x+y)\neq u(x)+u(y)$. Then the set
 
@@ -137,7 +137,7 @@ These are continuous homomorphisms, and therefore their inverse limit
 
 $$\varprojlim_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})=\left\{(\sigma_i)\in\prod_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})\mid\text{$\rho_{ij}(\sigma_j)=\sigma_i$ whenever $i\leq j$}\right\}$$
 
-and the canonical morphisms $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$ exist. ([\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5))
+and the canonical morphisms $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$ exist. ([\[Category Theory\] §Limits, ⁋Example 5](/en/math/category_theory/limits#ex5){: data-lid="vherg" })
 
 On the other hand, considering the restriction maps
 
@@ -149,12 +149,12 @@ these satisfy $\lambda_i=\rho_{ij}\circ\lambda_j$, so there exists an induced co
 The $\lambda$ defined above is an isomorphism of topological groups.
 :::
 ::: Proof
-Each $\Gal(\mathbb{L}_i/\mathbb{K})$ is a subspace of the Hausdorff space $\mathbb{L}_i^{\mathbb{L}_i}$ and hence is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$ is also Hausdorff. On the other hand, since $\Gal(\mathbb{L}/\mathbb{K})$ is compact by [Proposition 4](#prop4){: data-relation="required" }, by [\[Topology\] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) it suffices to show that $\lambda$ is bijective.
+Each $\Gal(\mathbb{L}_i/\mathbb{K})$ is a subspace of the Hausdorff space $\mathbb{L}_i^{\mathbb{L}_i}$ and hence is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$ is also Hausdorff. On the other hand, since $\Gal(\mathbb{L}/\mathbb{K})$ is compact by [Proposition 4](#prop4){: data-lid="39hru" data-relation="required" }, by [\[Topology\] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9){: data-lid="jimmm" } it suffices to show that $\lambda$ is bijective.
 
 First, if $\lambda(\sigma)$ is the identity, then $\sigma\vert_{\mathbb{L}_i}=\id_{\mathbb{L}_i}$ for all $i$, and since $\mathbb{L}=\bigcup_i\mathbb{L}_i$, we have $\sigma=\id_\mathbb{L}$. That is, $\lambda$ is injective. Now let $(\sigma_i)\in\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$ be given, and for $x\in \mathbb{L}_i$ define $\sigma(x)=\sigma_i(x)$. If $x$ belongs to both $\mathbb{L}_i$ and $\mathbb{L}_j$, then taking $k$ with $\mathbb{L}_i\cup\mathbb{L}_j\subseteq \mathbb{L}_k$ we have $\sigma_i(x)=\rho_{ik}(\sigma_k)(x)=\sigma_k(x)$ and by the same reasoning $\sigma_j(x)=\sigma_k(x)$, so $\sigma$ is well-defined, and any two elements of $\mathbb{L}$ also belong to some common $\mathbb{L}_k$, so $\sigma$ is a field homomorphism fixing $\mathbb{K}$. On the other hand, since the $\rho_{ij}$ are homomorphisms, $(\sigma_i^{-1})$ is also an element of $\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$, and the function obtained in the same way is the inverse of $\sigma$. That is, $\sigma\in\Gal(\mathbb{L}/\mathbb{K})$ and $\lambda(\sigma)=(\sigma_i)$, so $\lambda$ is surjective.
 :::
 
-In particular, the family of finite degree Galois subextensions $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ satisfies the conditions of this proposition. The compositum of any two elements of this family is again a finite degree Galois subextension by [Proposition 10](/en/math/field_theory/galois_extension#prop10){: data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), and any element $x$ of $\mathbb{L}$ belongs to an element of $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ containing $\mathbb{K}(x)$. That is, the Galois group of any Galois extension is an inverse limit of finite groups, namely a *profinite group*.
+In particular, the family of finite degree Galois subextensions $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ satisfies the conditions of this proposition. The compositum of any two elements of this family is again a finite degree Galois subextension by [Proposition 10](/en/math/field_theory/galois_extension#prop10){: data-lid="dbv05" data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension), and any element $x$ of $\mathbb{L}$ belongs to an element of $\Ext_{\fin,\gal}(\mathbb{L}/\mathbb{K})$ containing $\mathbb{K}(x)$. That is, the Galois group of any Galois extension is an inverse limit of finite groups, namely a *profinite group*.
 
 ## Galois Cohomology
 
@@ -178,7 +178,7 @@ Also, since $\mathbb{L}^\times$ is abelian, the 1-cocycles form an abelian group
 For a finite degree Galois extension $\mathbb{L}/\mathbb{K}$, every 1-cocycle $\varphi:G \rightarrow \mathbb{L}^\times$ is a 1-coboundary. That is, $H^1(G,\mathbb{L}^\times)$ is trivial.
 :::
 ::: Proof
-The elements of $G$ are distinct homomorphisms from $\mathbb{L}$ to $\mathbb{L}$, so they are linearly independent over $\mathbb{L}$ by [\[Étale Algebras\] §Étale Algebras, ⁋Corollary 3](/en/math/field_theory/etale_algebras#cor3). Since the values of $\varphi$ are all nonzero, the linear combination
+The elements of $G$ are distinct homomorphisms from $\mathbb{L}$ to $\mathbb{L}$, so they are linearly independent over $\mathbb{L}$ by [\[Étale Algebras\] §Étale Algebras, ⁋Corollary 3](/en/math/field_theory/etale_algebras#cor3){: data-lid="kcojb" }. Since the values of $\varphi$ are all nonzero, the linear combination
 
 $$\sum_{\tau\in G}\varphi(\tau)\tau$$
 
@@ -201,7 +201,7 @@ The classical form of Hilbert 90 concerns cyclic extensions. Let $G=\langle\sigm
 
 $$N_{\mathbb{L}/\mathbb{K}}(x)=\prod_{i=0}^{n-1}\sigma^i(x)$$
 
-Applying $\sigma$ merely permutes the factors, so $N_{\mathbb{L}/\mathbb{K}}(x)$ is $G$-invariant, and since $\mathbb{L}/\mathbb{K}$ is Galois, by [Theorem 8](/en/math/field_theory/galois_extension#thm8){: data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension) we have $N_{\mathbb{L}/\mathbb{K}}(x)\in\mathbb{K}$.
+Applying $\sigma$ merely permutes the factors, so $N_{\mathbb{L}/\mathbb{K}}(x)$ is $G$-invariant, and since $\mathbb{L}/\mathbb{K}$ is Galois, by [Theorem 8](/en/math/field_theory/galois_extension#thm8){: data-lid="0c0mf" data-relation="required" } in [\[Galois Extension\] §Galois Extension](/en/math/field_theory/galois_extension) we have $N_{\mathbb{L}/\mathbb{K}}(x)\in\mathbb{K}$.
 
 ::: Corollary 8
 Let $\mathbb{L}/\mathbb{K}$ be a finite degree Galois extension and let $G=\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$ be cyclic. Then for $x\in\mathbb{L}^\times$ the following are equivalent.
@@ -230,7 +230,7 @@ $$\prod_{k=0}^{a+b-1}\sigma^k(x)=\prod_{k=0}^{n-1}\sigma^k(x)\cdot\prod_{k=n}^{a
 
 and since $\sigma^a\sigma^b=\sigma^{a+b-n}$, the cocycle condition again holds. The assumption $N_{\mathbb{L}/\mathbb{K}}(x)=1$ was used in the last equality.
 
-Now by [Theorem 7](#thm7){: data-relation="required" }, $\varphi$ is a 1-coboundary. That is, for some $c\in\mathbb{L}^\times$ we have $\varphi(\sigma^i)=\sigma^i(c)/c$, and in particular for $i=1$
+Now by [Theorem 7](#thm7){: data-lid="85it1" data-relation="required" }, $\varphi$ is a 1-coboundary. That is, for some $c\in\mathbb{L}^\times$ we have $\varphi(\sigma^i)=\sigma^i(c)/c$, and in particular for $i=1$
 
 $$x=\varphi(\sigma)=\frac{\sigma(c)}{c}$$
 

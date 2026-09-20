@@ -70,7 +70,7 @@ and through it define the *semigroup algebra*
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma].$$
 
-([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-relation="weak" }) Here $\rchi^u$ is the monomial corresponding to the element $u \in M$.
+([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="117ax" data-relation="weak" }) Here $\rchi^u$ is the monomial corresponding to the element $u \in M$.
 :::
 
 Unwinding this, we have the following. By definition $S_\sigma$ is a semigroup under addition, and the semigroup algebra $\mathbb{C}[S_\sigma]$ is most neatly described as the free $\mathbb{C}$-vector space on the set $S_\sigma$ endowed with the multiplication
@@ -204,7 +204,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}.$$
 
 Thus the *character group* $\Hom(T_N, \mathbb{C}^\ast)$ is isomorphic to the dual lattice $M$.
 
-Building on this understanding of the torus, we now define a $T_N$-action on $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$. Since $\Spec$ is a contravariant functor, a geometric action $T_N \times U_\sigma \rightarrow U_\sigma$ is encoded by a comodule structure on the coordinate ring $\mathbb{C}[S_\sigma]$; how this contravariance manifests at the level of points will be checked directly in [Example 14](#ex14){: data-relation="forward" }.
+Building on this understanding of the torus, we now define a $T_N$-action on $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$. Since $\Spec$ is a contravariant functor, a geometric action $T_N \times U_\sigma \rightarrow U_\sigma$ is encoded by a comodule structure on the coordinate ring $\mathbb{C}[S_\sigma]$; how this contravariance manifests at the level of points will be checked directly in [Example 14](#ex14){: data-lid="uyayd" data-relation="forward" }.
 
 Specifically, define the $\mathbb{C}$-algebra homomorphism $\rho$ on the coordinate ring $\mathbb{C}[S_\sigma]$ by
 
@@ -281,13 +281,13 @@ $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u).$$
 This yields the following proposition.
 
 ::: Proposition 13
-For a face $\tau$ of a cone $\sigma$, the variety $U_\tau$ is a principal open subset of $U_\sigma$. ([\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 5](/en/math/algebraic_varieties/affine_varieties#def5){: data-relation="weak" }) Specifically, choosing $u \in S_\sigma$ with $\tau = \sigma \cap u^{\perp}$, we have
+For a face $\tau$ of a cone $\sigma$, the variety $U_\tau$ is a principal open subset of $U_\sigma$. ([\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 5](/en/math/algebraic_varieties/affine_varieties#def5){: data-lid="kc019" data-relation="weak" }) Specifically, choosing $u \in S_\sigma$ with $\tau = \sigma \cap u^{\perp}$, we have
 
 $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$$
 :::
 
 ::: Proof
-Let $u \in S_\sigma$ with $\tau = \sigma \cap u^\perp$. By [Lemma 12](#lem12){: data-relation="required" } we have $\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$, so
+Let $u \in S_\sigma$ with $\tau = \sigma \cap u^\perp$. By [Lemma 12](#lem12){: data-lid="cww19" data-relation="required" } we have $\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u)$, so
 
 $$S_\tau = \tau^\vee \cap M = (\sigma^\vee + \mathbb{R}_{\ge 0}(-u)) \cap M = S_\sigma + \mathbb{Z}_{\ge 0}(-u).$$
 
@@ -300,14 +300,14 @@ Here $\rchi^u \in \mathbb{C}[S_\sigma]$ and $\rchi^{-u}$ is the inverse of $\rch
 $$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (U_\sigma)_{\rchi^u} = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$$
 :::
 
-For instance, in the two-dimensional cone $\sigma$ of [Example 7](#ex7){: data-relation="weak" }, the faces $\tau_1=\mathbb{R}_{\geq 0}e_1$ and $\tau_2=\mathbb{R}_{\geq 0}e_2$ are themselves one-dimensional cones, and their faces are the origin. In this structure, each of $U_{\tau_1}$ and $U_{\tau_2}$ is a principal open subset inside the whole $U_\sigma$, and according to this face structure $U_\sigma$ acquires a stratification reminiscent of a CW complex.
+For instance, in the two-dimensional cone $\sigma$ of [Example 7](#ex7){: data-lid="jz4bh" data-relation="weak" }, the faces $\tau_1=\mathbb{R}_{\geq 0}e_1$ and $\tau_2=\mathbb{R}_{\geq 0}e_2$ are themselves one-dimensional cones, and their faces are the origin. In this structure, each of $U_{\tau_1}$ and $U_{\tau_2}$ is a principal open subset inside the whole $U_\sigma$, and according to this face structure $U_\sigma$ acquires a stratification reminiscent of a CW complex.
 
 We claim that the open embedding $U_\tau \hookrightarrow U_\sigma$ is $T_N$-equivariant. That is, the actions of $T_N$ on $U_\tau$ and on $U_\sigma$ are compatible with the inclusion. This follows from a straightforward computation, so the above inclusion is also an inclusion of toric varieties.
 
 ::: Example 14
 In [Example 7](#ex7){: data-relation="weak" } we saw that when $N = \mathbb{Z}^2$ and $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$, we have $U_\sigma = \mathbb{C}^2$. Let us now examine concretely how the torus $T_N = (\mathbb{C}^\ast)^2$ acts on $U_\sigma = \mathbb{C}^2$.
 
-First, as we saw in [Example 7](#ex7){: data-relation="weak" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
+First, as we saw in [Example 7](#ex7){: data-relation="weak" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-lid="k15rn" data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2.$$
 
@@ -321,7 +321,7 @@ $$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2).$$
 
 This is the most natural action, in which each component of $(\mathbb{C}^\ast)^2$ scales the corresponding coordinate of $\mathbb{C}^2$.
 
-Let us now examine the orbit structure of this action. The open dense orbit provided by [Proposition 11](#prop11){: data-relation="required" } is
+Let us now examine the orbit structure of this action. The open dense orbit provided by [Proposition 11](#prop11){: data-lid="0x8w0" data-relation="required" } is
 
 $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\},$$
 

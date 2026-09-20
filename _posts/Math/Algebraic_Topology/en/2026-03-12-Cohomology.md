@@ -20,7 +20,7 @@ In fact, cohomology provides a more refined invariant than homology: for instanc
 
 ## The Universal Coefficient Theorem for Homology
 
-Before diving into the main discussion, we first revisit homology with coefficients, which was treated after [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-relation="weak" reviewed="" }. When defining simplicial or singular homology, we considered the chain complexes obtained by taking the tensor product with an abelian group $A$,
+Before diving into the main discussion, we first revisit homology with coefficients, which was treated after [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="071az" data-relation="weak" reviewed="" }. When defining simplicial or singular homology, we considered the chain complexes obtained by taking the tensor product with an abelian group $A$,
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
@@ -44,7 +44,7 @@ is also split short exact. The splitting gives a direct sum decomposition $C_\bu
 
 {% diagram Math/Algebraic_Topology/Cohomology-1.svg width="31.09em" alt="snake_lemma" %}
 
-and therefore, by [\[Homological Algebra\] §Long Exact Sequence, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-relation="required" reviewed="" }, the long exact sequence
+and therefore, by [\[Homological Algebra\] §Long Exact Sequence, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-lid="8v7n3" data-relation="required" reviewed="" }, the long exact sequence
 
 $$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
@@ -64,7 +64,7 @@ and substituting these into (2) yields the short exact sequence
 
 $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^\mathbb{Z}(H_{k-1}(C), A)\rightarrow 0$$
 
-On the other hand, since (1) is a split short exact sequence, we may choose a retraction $r_k:C_k\rightarrow Z_k$. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-relation="required" reviewed="" }) With this choice, $(p_k\circ r_k)\otimes\id_A$ induces a map $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$ on homology, and one checks that this is a retraction of the map $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$ above. Thus we obtain:
+On the other hand, since (1) is a split short exact sequence, we may choose a retraction $r_k:C_k\rightarrow Z_k$. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="p6arh" data-relation="required" reviewed="" }) With this choice, $(p_k\circ r_k)\otimes\id_A$ induces a map $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$ on homology, and one checks that this is a retraction of the map $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$ above. Thus we obtain:
 
 ::: Proposition 1 (Universal coefficient theorem for homology)
 For any topological space $X$ and abelian group $A$, there exists a short exact sequence
@@ -79,7 +79,7 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 
 ## Definition of Cohomology and the Universal Coefficient Theorem
 
-Just as in [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-relation="weak" reviewed="" }, we define the Eilenberg-Steenrod axioms for cohomology; a contravariant functor together with connecting morphisms satisfying these axioms will be called a cohomology theory. Explicitly, the axioms are as follows.
+Just as in [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="5a8ej" data-relation="weak" reviewed="" }, we define the Eilenberg-Steenrod axioms for cohomology; a contravariant functor together with connecting morphisms satisfying these axioms will be called a cohomology theory. Explicitly, the axioms are as follows.
 
 ::: Definition 2 (Eilenberg-Steenrod axioms)
 For contravariant functors $H^k$ from the category of pairs of topological spaces to the category of abelian groups, together with natural transformations
@@ -89,7 +89,7 @@ $$\delta: H^k(A) \rightarrow H^{k+1}(X,A)$$
 the *Eilenberg-Steenrod axioms* are the following:
 
 - (Homotopy) If two maps $(X,A)\rightarrow(Y,B)$ are homotopic, then the induced homomorphisms $H^k(Y,B)\rightarrow H^k(X,A)$ coincide.
-- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-relation="required" reviewed="" }, the inclusion $(X\setminus Z, A\setminus Z)\hookrightarrow(X,A)$ induces an isomorphism.
+- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="opm3m" data-relation="required" reviewed="" }, the inclusion $(X\setminus Z, A\setminus Z)\hookrightarrow(X,A)$ induces an isomorphism.
 - (Dimension) For the one-point space $\ast$, we have $H^k(\ast)=0$ for all $k>0$.
 - (Additivity) If $X=\coprod X_\alpha$, then $H^k(X)\cong\prod H^k(X_\alpha)$.
 - (Exactness) For each pair $(X,A)$ and the two inclusions $(A,\emptyset)\hookrightarrow(X,\emptyset)$ and $(X,\emptyset)\hookrightarrow(X,A)$, we have the long exact sequence
@@ -97,7 +97,7 @@ the *Eilenberg-Steenrod axioms* are the following:
     $$\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$$
 :::
 
-To establish the existence of a cohomology theory satisfying these conditions, just as in [§Homology](/en/math/algebraic_topology/homology){: data-relation="required" reviewed="" }, we consider the chain complex of singular simplices of a topological space $X$,
+To establish the existence of a cohomology theory satisfying these conditions, just as in [§Homology](/en/math/algebraic_topology/homology){: data-lid="zp566" data-relation="required" reviewed="" }, we consider the chain complex of singular simplices of a topological space $X$,
 
 $$C_\bullet(X):\qquad\cdots \rightarrow C_{k+1}(X)\rightarrow C_k(X) \rightarrow C_{k-1}(X)\rightarrow \cdots$$
 
@@ -105,7 +105,7 @@ Fixing an abelian group $A$ as the coefficient group, we may form the dual cocha
 
 $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\leftarrow\Hom_\mathbb{Z}(C_k(X),A)\leftarrow\Hom_\mathbb{Z}(C_{k-1}(X),A)\leftarrow\cdots$$
 
-If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-relation="weak" reviewed="" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" reviewed="" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
+If $A$ is a commutative ring, ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 1](/en/math/algebraic_structures/rings#def1){: data-lid="8ua52" data-relation="weak" reviewed="" }) then the adjunction of [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-lid="w1xzz" data-relation="required" reviewed="" } for the ring homomorphism $\mathbb{Z}\rightarrow A$ gives an isomorphism $\Hom_A(M\otimes_\mathbb{Z}A,N)\cong\Hom_\mathbb{Z}(M,N)$ for any abelian group $M$ and $A$-module $N$. Hence in this case the above cochain complex may be written as
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
@@ -127,7 +127,7 @@ Moreover, this sequence splits (non-canonically), and therefore we have a (non-c
 $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$$
 :::
 
-Roughly speaking, this may be thought of as translating [Proposition 1](#prop1){: data-relation="weak" reviewed="" } via [\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15){: data-relation="weak" reviewed="" }.
+Roughly speaking, this may be thought of as translating [Proposition 1](#prop1){: data-relation="weak" reviewed="" } via [\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15){: data-lid="qfrxz" data-relation="weak" reviewed="" }.
 
 ## de Rham Cohomology
 
@@ -197,7 +197,7 @@ and for $k=0$, the functions with vanishing derivative are exactly the constant 
 
 $$H^0_\dR(\mathbb{R}^n)=\mathbb{R}$$
 
-This de Rham cohomology, defined in this manner, also satisfies all the conditions of [Definition 2](#def2){: data-relation="required" reviewed="" } on the category of pairs of smooth manifolds; therefore, by the uniqueness of cohomology theories and the fact that any singular chain can be approximated by a smooth chain, we may verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-relation="weak" reviewed="" } into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3){: data-relation="weak" reviewed="" }.
+This de Rham cohomology, defined in this manner, also satisfies all the conditions of [Definition 2](#def2){: data-lid="0nylx" data-relation="required" reviewed="" } on the category of pairs of smooth manifolds; therefore, by the uniqueness of cohomology theories and the fact that any singular chain can be approximated by a smooth chain, we may verify that singular cohomology with $\mathbb{R}$ coefficients and de Rham cohomology coincide. The computation above is then nothing more than translating the computation of [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11){: data-lid="3t7fb" data-relation="weak" reviewed="" } into $\mathbb{R}$-valued cohomology via [Proposition 3](#prop3){: data-lid="c7afp" data-relation="weak" reviewed="" }.
  
 ## Coefficients of (Co)homology
 
@@ -207,7 +207,7 @@ Such a cohomology theory enjoys nice properties: for instance, since $\mathbb{R}
 
 $$H_k(X;\mathbb{R})\cong H_k(X)\otimes_\mathbb{Z}\mathbb{R}$$
 
-Moreover, since $\mathbb{R}$ is an injective $\mathbb{Z}$-module, $\Ext_\mathbb{Z}^1(A,\mathbb{R})=0$ for any abelian group $A$, and thus this time [Proposition 3](#prop3){: data-relation="required" reviewed="" } gives the isomorphism
+Moreover, since $\mathbb{R}$ is an injective $\mathbb{Z}$-module, $\Ext_\mathbb{Z}^1(A,\mathbb{R})=0$ for any abelian group $A$, and thus this time [Proposition 3](#prop3){: data-lid="iqix3" data-relation="required" reviewed="" } gives the isomorphism
 
 $$H^k(X;\mathbb{R})\cong \Hom_\mathbb{Z}(H_k(X),\mathbb{R})$$
 
@@ -241,7 +241,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## The Mayer-Vietoris Sequence
 
-Among the axioms of [Definition 2](#def2){: data-relation="required" reviewed="" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" reviewed="" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-relation="required" reviewed="" } to [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" reviewed="" }, starting from [Definition 2](#def2){: data-relation="required" reviewed="" }.
+Among the axioms of [Definition 2](#def2){: data-relation="required" reviewed="" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" reviewed="" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="dvoei" data-relation="required" reviewed="" } to [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-relation="required" reviewed="" }, starting from [Definition 2](#def2){: data-relation="required" reviewed="" }.
 
 ::: Proposition 6 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union $X=U\cup V$ of two open sets, and let $H$ be a cohomology theory defined on $X$. Then there exists a long exact sequence
@@ -269,7 +269,7 @@ $$\partial(x\otimes y)=\partial^Cx\otimes y+(-1)^{\deg(x)}x\otimes\partial^Dy$$
 and extended linearly.
 :::
 
-That is, $(C\otimes D)_\bullet$ is the total complex of the double complex whose $(p,q)$-entry is $C_p\otimes D_q$, with horizontal differential $\partial^C\otimes\id_D$ and vertical differential $\id_C\otimes\partial^D$. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-relation="weak" reviewed="" })
+That is, $(C\otimes D)_\bullet$ is the total complex of the double complex whose $(p,q)$-entry is $C_p\otimes D_q$, with horizontal differential $\partial^C\otimes\id_D$ and vertical differential $\id_C\otimes\partial^D$. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5){: data-lid="rlunk" data-relation="weak" reviewed="" })
 
 The algebraic content of the Künneth formula is contained in the following lemma.
 
@@ -352,7 +352,7 @@ The Eilenberg-Zilber map $\EZ:(C(X)\otimes C(Y))_\bullet\rightarrow C_\bullet(X\
 
 $$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p,\quad \beta_1<\cdots <\beta_q\\ \{\alpha_1,\ldots,\alpha_p\}\sqcup\{\beta_1,\ldots,\beta_q\}=\{0,1,\ldots,p+q-1\}}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\beta_q}\cdots s_{\beta_1})\times(\tau\circ s_{\alpha_p}\cdots s_{\alpha_1})$$
 
-Although this looks complicated, it is merely the formula describing the decomposition of the prism $\Delta^p\times\Delta^q$ into simplices, i.e., the functions $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6){: data-relation="weak" reviewed="" }. The conclusion of [Theorem 9](#thm9){: data-relation="required" reviewed="" } then follows from the two identities
+Although this looks complicated, it is merely the formula describing the decomposition of the prism $\Delta^p\times\Delta^q$ into simplices, i.e., the functions $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6){: data-lid="m90xp" data-relation="weak" reviewed="" }. The conclusion of [Theorem 9](#thm9){: data-relation="required" reviewed="" } then follows from the two identities
 
 $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_\bullet(X\times Y)}$$
 
@@ -368,7 +368,7 @@ Moreover, this short exact sequence splits (non-canonically), and therefore ther
 $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 :::
 
-Of course, using this result together with [Theorem 5](#thm5){: data-relation="weak" reviewed="" }, one may obtain the cohomology version of the Künneth formula.
+Of course, using this result together with [Theorem 5](#thm5){: data-lid="w18l1" data-relation="weak" reviewed="" }, one may obtain the cohomology version of the Künneth formula.
 
 --- 
 
@@ -379,4 +379,4 @@ Of course, using this result together with [Theorem 5](#thm5){: data-relation="w
 
 ---
 
-[^1]: Of course, one would hope that this pairing gives a homomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but as we know from [Proposition 3](#prop3){: data-relation="weak" reviewed="" }, the situation is not so simple and an $\Ext$ term containing hidden torsion must appear.
+[^1]: Of course, one would hope that this pairing gives a homomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but as we know from [Proposition 3](#prop3){: data-lid="7yee4" data-relation="weak" reviewed="" }, the situation is not so simple and an $\Ext$ term containing hidden torsion must appear.

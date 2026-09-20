@@ -42,7 +42,7 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots +xx_ny_n$$
 and since $xx_i\in \mathfrak{a}$, we have $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$. A similar argument holds when multiplying by $x$ on the right, so $\mathfrak{a}\mathfrak{b}$ is a two-sided ideal of $A$.
 
 ::: Proposition 2
-With multiplication defined as above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)). Moreover, the distributive laws
+With multiplication defined as above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-lid="a6jg7" }). Moreover, the distributive laws
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
@@ -122,7 +122,7 @@ $$x=x\cdot 1=x(u+v)=xu+xv\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathf
 
 holds. Therefore $\mathfrak{b}_1\cap\mathfrak{b}_2=\mathfrak{b}_1\mathfrak{b}_2$.
 
-Now let $n>2$. It is obvious that the ideal $\mathfrak{a}=\mathfrak{b}_n$ and $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$ are pairwise comaximal, so applying [Proposition 4](#prop4){: data-relation="required" } gives
+Now let $n>2$. It is obvious that the ideal $\mathfrak{a}=\mathfrak{b}_n$ and $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$ are pairwise comaximal, so applying [Proposition 4](#prop4){: data-lid="zto05" data-relation="required" } gives
 
 $$A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_{n-1})$$
 
@@ -188,7 +188,7 @@ Let two-sided ideals $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$ of a ring $A$ be pa
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
 
-holds. In particular, if $A$ is a commutative ring then all products in different orders coincide, so we recover [Proposition 5](#prop5){: data-relation="weak" }.
+holds. In particular, if $A$ is a commutative ring then all products in different orders coincide, so we recover [Proposition 5](#prop5){: data-lid="zejo3" data-relation="weak" }.
 :::
 
 ::: Proof
@@ -200,7 +200,7 @@ $$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_1\mathfrak{b}_2+\mathfrak{b}_2
 
 holds.
 
-Now let $n>2$. Applying [Proposition 4](#prop4){: data-relation="required" } to $\mathfrak{a}=\mathfrak{b}_n$ and $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$, we have $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$, so the two ideals $\mathfrak{b}_n$ and $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$ are comaximal. Applying the $n=2$ result,
+Now let $n>2$. Applying [Proposition 4](#prop4){: data-lid="zlwur" data-relation="required" } to $\mathfrak{a}=\mathfrak{b}_n$ and $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$, we have $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$, so the two ideals $\mathfrak{b}_n$ and $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$ are comaximal. Applying the $n=2$ result,
 
 $$\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})\mathfrak{b}_n+\mathfrak{b}_n(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$$
 
@@ -211,7 +211,7 @@ $$\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sig
 and since each term on the right-hand side is contained in $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$, we obtain the desired reverse inclusion.
 :::
 
-Applying [Proposition 7](#prop7){: data-relation="required" } to the kernel $\bigcap_i\mathfrak{a}_i$ in [Proposition 6](#prop6){: data-relation="required" }, the Chinese remainder theorem in the noncommutative case also takes the form
+Applying [Proposition 7](#prop7){: data-lid="i4nkn" data-relation="required" } to the kernel $\bigcap_i\mathfrak{a}_i$ in [Proposition 6](#prop6){: data-relation="required" }, the Chinese remainder theorem in the noncommutative case also takes the form
 
 $$A\Big/\left(\sum_{\sigma\in S_n}\mathfrak{a}_{\sigma(1)}\cdots\mathfrak{a}_{\sigma(n)}\right)\cong \prod_{i=1}^n A/\mathfrak{a}_i.$$
 

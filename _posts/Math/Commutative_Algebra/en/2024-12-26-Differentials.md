@@ -63,7 +63,7 @@ giving an $E$-module denoted by $\Omega_{E/A}$. Here, defined by $f\mapsto \dd{f
 
 Then one can easily verify that $\Omega_{E/A}$ satisfies the universal property of [Lemma 2](#lem2){: data-relation="required" }.
 
-Meanwhile, we have already constructed the same module in a different way. In [\[Multilinear Algebra\] §Differential Modules, ⁋Definition 9](/en/math/multilinear_algebra/differential_modules#def9){: data-relation="weak" }, starting with the multiplication map $m:E\otimes_AE \rightarrow E$, we took its kernel $\mathfrak{I}$ to define the $E$-module $\mathfrak{I}/\mathfrak{I}^2$ as the module of $A$-differentials, and showed that $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$ plays the role of the universal $A$-derivation. Although the starting point differs from [Definition 3](#def3){: data-relation="required" }, which is built directly from generators and relations, the two constructions canonically coincide.
+Meanwhile, we have already constructed the same module in a different way. In [\[Multilinear Algebra\] §Differential Modules, ⁋Definition 9](/en/math/multilinear_algebra/differential_modules#def9){: data-lid="wuimn" data-relation="weak" }, starting with the multiplication map $m:E\otimes_AE \rightarrow E$, we took its kernel $\mathfrak{I}$ to define the $E$-module $\mathfrak{I}/\mathfrak{I}^2$ as the module of $A$-differentials, and showed that $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$ plays the role of the universal $A$-derivation. Although the starting point differs from [Definition 3](#def3){: data-relation="required" }, which is built directly from generators and relations, the two constructions canonically coincide.
 
 ::: Proposition 4
 For an $A$-algebra $E$, let the kernel of the multiplication map $m:E\otimes_AE \rightarrow E$ be $\mathfrak{I}$. Then, sending $(x\otimes1-1\otimes x)+\mathfrak{I}^2$ to $\dd{x}$, there exists a canonical isomorphism
@@ -71,7 +71,7 @@ For an $A$-algebra $E$, let the kernel of the multiplication map $m:E\otimes_AE 
 $$\mathfrak{I}/\mathfrak{I}^2\cong\Omega_{E/A}$$
 :::
 ::: Proof
-By [\[Multilinear Algebra\] §Differential Modules, ⁋Proposition 8](/en/math/multilinear_algebra/differential_modules#prop8){: data-relation="required" }, for any $E$-module $M$, the natural isomorphism $\Hom_E(\mathfrak{I}/\mathfrak{I}^2, M)\cong\Der_A(E, M)$ holds, and by [Lemma 2](#lem2){: data-relation="required" }, $\Omega_{E/A}$ also represents the same functor. That is, since the two $E$-modules represent the same functor on $\lMod{E}$, they are canonically isomorphic, and this isomorphism identifies the universal $A$-derivations on both sides. Therefore, for each $x\in E$, $(x\otimes1-1\otimes x)+\mathfrak{I}^2$ is sent to $\dd{x}$.
+By [\[Multilinear Algebra\] §Differential Modules, ⁋Proposition 8](/en/math/multilinear_algebra/differential_modules#prop8){: data-lid="ag6i1" data-relation="required" }, for any $E$-module $M$, the natural isomorphism $\Hom_E(\mathfrak{I}/\mathfrak{I}^2, M)\cong\Der_A(E, M)$ holds, and by [Lemma 2](#lem2){: data-relation="required" }, $\Omega_{E/A}$ also represents the same functor. That is, since the two $E$-modules represent the same functor on $\lMod{E}$, they are canonically isomorphic, and this isomorphism identifies the universal $A$-derivations on both sides. Therefore, for each $x\in E$, $(x\otimes1-1\otimes x)+\mathfrak{I}^2$ is sent to $\dd{x}$.
 :::
 
 In the most basic case of a polynomial algebra, this module is the free module spanned by the differentials of the coordinates.
@@ -89,7 +89,7 @@ By [Definition 3](#def3){: data-relation="required" }, $\Omega_{R/A}$ is generat
 To show that these are linearly independent over $R$, for each $t\in S$ consider the partial derivative $\partial/\partial \x_t:R \rightarrow R$. Since this is an $A$-derivation, by [Lemma 2](#lem2){: data-relation="required" } it induces an $R$-linear map $\partial_t:\Omega_{R/A} \rightarrow R$, which satisfies $\partial_t(\dd{\x_s})=\delta_{st}$ by definition. Then, for the finite sum $\sum_sf_s\dd{\x_s}=0$, applying $\partial_t$ yields $f_t=0$.
 :::
 
-This is the same as the computation in the case where $M$ is a free $A$-module for the symmetric algebra $\S(M)$ ([\[Multilinear Algebra\] §Differential Modules, ⁋Example 10](/en/math/multilinear_algebra/differential_modules#ex10){: data-relation="weak" }). Moreover, if we view $\Omega$ as a functor taking an $A$-algebra $A \rightarrow E$ to $\Omega_{E/A}$, the following kind of functoriality also holds.
+This is the same as the computation in the case where $M$ is a free $A$-module for the symmetric algebra $\S(M)$ ([\[Multilinear Algebra\] §Differential Modules, ⁋Example 10](/en/math/multilinear_algebra/differential_modules#ex10){: data-lid="6y6rs" data-relation="weak" }). Moreover, if we view $\Omega$ as a functor taking an $A$-algebra $A \rightarrow E$ to $\Omega_{E/A}$, the following kind of functoriality also holds.
 
 ::: Proposition 6
 Suppose we are given a commutative diagram of ring homomorphisms
@@ -117,7 +117,7 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 The most basic consequence of this functoriality is that the Kähler differential module is compatible with localization.
 
 ::: Proposition 7
-Suppose an $A$-algebra $E$ and, in $E$, a multiplicative subset $S$ are given ([§Localization, ⁋Definition 3](/en/math/commutative_algebra/localization#def3){: data-relation="weak" }). Via the canonical homomorphism $\varphi:E \rightarrow S^{-1}E$, view $S^{-1}E$ as an $A$-algebra. Then the $S^{-1}E$-linear homomorphism given by [Proposition 6](#prop6){: data-relation="required" }
+Suppose an $A$-algebra $E$ and, in $E$, a multiplicative subset $S$ are given ([§Localization, ⁋Definition 3](/en/math/commutative_algebra/localization#def3){: data-lid="1mgpv" data-relation="weak" }). Via the canonical homomorphism $\varphi:E \rightarrow S^{-1}E$, view $S^{-1}E$ as an $A$-algebra. Then the $S^{-1}E$-linear homomorphism given by [Proposition 6](#prop6){: data-lid="1bkj7" data-relation="required" }
 
 $$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
 
@@ -134,7 +134,7 @@ For $D\in\Der_A(S^{-1}E, M)$, $x\in E$, and $s\in S$, applying the Leibniz rule 
 
 $$D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$$
 
-and thus $D$ is determined by its values on $E$, so $\varphi^\ast$ is injective. For surjectivity, given $D\in\Der_A(E, M)$, we may take the above formula as a definition and set $\widetilde D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$. To show that this is well-defined, suppose $x/s=y/t$. Then some $u\in S$ satisfies $u(tx-sy)=0$ ([§Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4){: data-relation="required" }), and applying $D$ to this yields
+and thus $D$ is determined by its values on $E$, so $\varphi^\ast$ is injective. For surjectivity, given $D\in\Der_A(E, M)$, we may take the above formula as a definition and set $\widetilde D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$. To show that this is well-defined, suppose $x/s=y/t$. Then some $u\in S$ satisfies $u(tx-sy)=0$ ([§Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4){: data-lid="572de" data-relation="required" }), and applying $D$ to this yields
 
 $$utD(x)+uxD(t)+txD(u)=usD(y)+uyD(s)+syD(u)$$
 
@@ -235,7 +235,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 is exact. 
 :::
 ::: Proof
-The middle map is $\Omega_{\varphi/A}'$ from [Proposition 8](#prop8){: data-relation="weak" }. Let $N'$ be the submodule generated by the image of $\bar{d}$ in $\Omega_{E/A}\otimes_EE'$ as an $E'$-submodule, and consider $C'=(\Omega_{E/A}\otimes_EE')/N'$ and the quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$.
+The middle map is $\Omega_{\varphi/A}'$ from [Proposition 8](#prop8){: data-lid="h9rrr" data-relation="weak" }. Let $N'$ be the submodule generated by the image of $\bar{d}$ in $\Omega_{E/A}\otimes_EE'$ as an $E'$-submodule, and consider $C'=(\Omega_{E/A}\otimes_EE')/N'$ and the quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$.
 
 First, we show that $\Omega_{\varphi/A}'$ is surjective. This is because $\varphi$ is surjective, so any generator of $\Omega_{E'/A}$ can, for some $x\in E$, be written in the form $d_{E'/A}\varphi(x)$, which is equal to $\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$.
 
@@ -258,7 +258,7 @@ This exact sequence is also called the *conormal sequence*.
 
 The conormal sequence of [Proposition 9](#prop9){: data-relation="required" } is exact only at the right end, and in general $\bar{d}$ is not injective. A natural question is what meaning the kernel of $\bar{d}$ has, and whether this sequence can be extended to the left. In this section, we examine the *naive cotangent complex*, which is a first answer to this question.
 
-The key idea is to express $E$ as a quotient of the most tractable algebra, namely a polynomial algebra. If we choose any spanning set of $E$, say $(t_s)_{s\in S}$ (for instance, all of $E$), then by the adjunction of [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" }, extending $\x_s\mapsto t_s$, a surjective $A$-algebra homomorphism
+The key idea is to express $E$ as a quotient of the most tractable algebra, namely a polynomial algebra. If we choose any spanning set of $E$, say $(t_s)_{s\in S}$ (for instance, all of $E$), then by the adjunction of [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="rynig" data-relation="required" }, extending $\x_s\mapsto t_s$, a surjective $A$-algebra homomorphism
 
 $$p: R=A[\x_s]_{s\in S}\longrightarrow E$$
 
@@ -272,11 +272,11 @@ $$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longr
 Here, we place $\mathfrak{I}/\mathfrak{I}^2$ in degree $1$ and $\Omega_{R/A}\otimes_RE$ in degree $0$.
 :::
 
-That is, $\operatorname{NL}(p)$ is a chain complex with only two nonzero terms ([\[Homological Algebra\] §Homology](/en/math/homological_algebra/homology){: data-relation="required" }), and its homology consists only of
+That is, $\operatorname{NL}(p)$ is a chain complex with only two nonzero terms ([\[Homological Algebra\] §Homology](/en/math/homological_algebra/homology){: data-lid="aww3c" data-relation="required" }), and its homology consists only of
 
 $$H_0\bigl(\operatorname{NL}(p)\bigr)=\coker\bar{d},\qquad H_1\bigl(\operatorname{NL}(p)\bigr)=\ker\bar{d}$$
 
-. Since $\Omega_{R/A}$ is a free $R$-module with basis the $\dd{\x_s}$ by [Proposition 5](#prop5){: data-relation="required" }, the degree $0$ term of $\operatorname{NL}(p)$ is a free $E$-module.
+. Since $\Omega_{R/A}$ is a free $R$-module with basis the $\dd{\x_s}$ by [Proposition 5](#prop5){: data-lid="xdnya" data-relation="required" }, the degree $0$ term of $\operatorname{NL}(p)$ is a free $E$-module.
 
 ::: Proposition 11
 For any presentation $p:R \rightarrow E$, a canonical isomorphism
@@ -301,7 +301,7 @@ To compare two presentations, let us first observe the following. Suppose we are
 
 $$\operatorname{NL}(\varphi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p');\qquad \overline{f}\mapsto\overline{\varphi(f)},\quad \dd{\x_s}\otimes1\mapsto \dd{\varphi}(\x_s)\otimes1$$
 
-. That the square commutes is verified from the identity $\dd{\varphi}(f)=\sum_s\varphi(\partial f/\partial\x_s)\dd{\varphi}(\x_s)$ given by [Proposition 5](#prop5){: data-relation="required" }.
+. That the square commutes is verified from the identity $\dd{\varphi}(f)=\sum_s\varphi(\partial f/\partial\x_s)\dd{\varphi}(\x_s)$ given by [Proposition 5](#prop5){: data-lid="9wc28" data-relation="required" }.
 
 ::: Lemma 12
 In the situation above, suppose we are given two $A$-algebra homomorphisms $\varphi,\psi:R \rightarrow R'$ satisfying $p'\circ\varphi=p=p'\circ\psi$. Then for any $f\in R$, the congruence
@@ -325,7 +325,7 @@ $$\varphi(fg)-\psi(fg)\equiv\varphi(f)\beta+\varphi(g)\alpha\pmod{\mathfrak{I}'^
 :::
 
 ::: Proposition 13
-In the situation of [Lemma 12](#lem12){: data-relation="required" }, the two morphisms $\operatorname{NL}(\varphi),\operatorname{NL}(\psi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p')$ are chain homotopic. In particular, the morphisms they induce on homology coincide.
+In the situation of [Lemma 12](#lem12){: data-lid="x3of5" data-relation="required" }, the two morphisms $\operatorname{NL}(\varphi),\operatorname{NL}(\psi):\operatorname{NL}(p) \rightarrow \operatorname{NL}(p')$ are chain homotopic. In particular, the morphisms they induce on homology coincide.
 :::
 ::: Proof
 Since $\Omega_{R/A}\otimes_RE$ is a free $E$-module with basis $\dd{\x_s}\otimes1$, the $E$-linear map
@@ -342,7 +342,7 @@ $$\bar{d}'\bigl(h(\dd{\x_s}\otimes1)\bigr)=d\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)
 
 $$h\bigl(\bar{d}(\overline{f})\bigr)=\sum_sp\left(\frac{\partial f}{\partial\x_s}\right)\cdot\overline{\varphi(\x_s)-\psi(\x_s)}=\overline{\sum_s\varphi\left(\frac{\partial f}{\partial\x_s}\right)\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)}$$
 
-. The last equality holds because the action of $E=R'/\mathfrak{I}'$ on $\mathfrak{I}'/\mathfrak{I}'^2$ is given via $p'$, and $p'\circ\varphi=p$. Then by [Lemma 12](#lem12){: data-relation="required" }, this is equal to $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$. Therefore $h$ is a chain homotopy, and that chain homotopic morphisms induce the same morphism on homology was seen in [\[Homological Algebra\] §Homology](/en/math/homological_algebra/homology){: data-relation="required" }.
+. The last equality holds because the action of $E=R'/\mathfrak{I}'$ on $\mathfrak{I}'/\mathfrak{I}'^2$ is given via $p'$, and $p'\circ\varphi=p$. Then by [Lemma 12](#lem12){: data-relation="required" }, this is equal to $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$. Therefore $h$ is a chain homotopy, and that chain homotopic morphisms induce the same morphism on homology was seen in [\[Homological Algebra\] §Homology](/en/math/homological_algebra/homology){: data-lid="zaqi5" data-relation="required" }.
 :::
 
 ::: Theorem 14

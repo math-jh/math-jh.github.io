@@ -122,7 +122,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 
 the *cartesian product* of $A$ and $B$, and simply denote it by $A\times B$.
 
-Also, similarly to [Definition 7](#def7){: data-relation="weak" }, we call the sets $A$ and $B$ the first and second components of $A\times B$.
+Also, similarly to [Definition 7](#def7){: data-lid="1888f" data-relation="weak" }, we call the sets $A$ and $B$ the first and second components of $A\times B$.
 :::
 
 To know when two product sets $A\times B$ and $A'\times B'$ are equal, it suffices to determine precisely when one product set is contained in the other.
@@ -157,5 +157,5 @@ Conversely, assume $A$ or $B$ is empty. Once again, if we deny the conclusion an
 
 ---
 
-[^1]: Of course this "set" is not a set. ([§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-relation="weak" })
+[^1]: Of course this "set" is not a set. ([§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-lid="p57o8" data-relation="weak" })
 [^2]: From the end of the proof of this lemma onward, we no longer mention the axioms used in the proof process.

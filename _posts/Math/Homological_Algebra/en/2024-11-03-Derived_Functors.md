@@ -127,7 +127,7 @@ First, suppose a short exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
-is given. If projective resolutions $P_\bullet$ of $A$ and $R_\bullet$ of $C$ are given, then using [§Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7){: data-relation="required" } we obtain a projective resolution $Q_\bullet \rightarrow B$. On the other hand, since each $R_n$ is projective, the sequence
+is given. If projective resolutions $P_\bullet$ of $A$ and $R_\bullet$ of $C$ are given, then using [§Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7){: data-lid="s9agy" data-relation="required" } we obtain a projective resolution $Q_\bullet \rightarrow B$. On the other hand, since each $R_n$ is projective, the sequence
 
 $$0 \rightarrow P_n \rightarrow Q_n \rightarrow R_n \rightarrow 0$$
 
@@ -135,14 +135,14 @@ is split exact. From this,
 
 $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \rightarrow 0$$
 
-is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1){: data-relation="required" }), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
+is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1){: data-lid="hbaz7" data-relation="required" }), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
 
 $$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
 
-That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-relation="required" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" }.
+That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-lid="7kyzg" data-relation="required" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" }.
 :::
 
-Moreover, they define a *universal* homological $\delta$-functor in the sense of [Definition 3](#def3){: data-relation="required" }. We omit the proof of this.
+Moreover, they define a *universal* homological $\delta$-functor in the sense of [Definition 3](#def3){: data-lid="ejbqi" data-relation="required" }. We omit the proof of this.
 
 ::: Proposition 8
 Consider an abelian category $\mathcal{A}$ with enough projectives and any right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$. Then the derived functors $L_nF$ are universal $\delta$-functors.

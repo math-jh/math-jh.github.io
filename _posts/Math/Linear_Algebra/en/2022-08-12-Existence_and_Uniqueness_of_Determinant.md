@@ -20,7 +20,7 @@ In this post we show that the determinant exists uniquely and examine methods fo
 
 ## The Symmetric Group
 
-In this section we define the symmetric group. The results introduced here are presented without detailed proof, but the proofs can be found in [\[Group Theory\] §Symmetric Groups](/en/math/group_theory/symmetric_groups){: data-relation="weak" } if desired.
+In this section we define the symmetric group. The results introduced here are presented without detailed proof, but the proofs can be found in [\[Group Theory\] §Symmetric Groups](/en/math/group_theory/symmetric_groups){: data-lid="6sup7" data-relation="weak" } if desired.
 
 ::: Definition 1
 The collection of all bijections from the set $\{1,\ldots, n\}$ to itself is called the *symmetric group*, denoted $S_n$. The elements of $S_n$ are called *permutations*.
@@ -57,7 +57,7 @@ holds.
 ## Existence and Uniqueness of the Determinant
 
 ::: Lemma 2
-The function $D$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4){: data-relation="required" } exists uniquely.
+The function $D$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4){: data-lid="z5mif" data-relation="required" } exists uniquely.
 :::
 ::: Proof
 Let $f$ be an alternating linear map. For arbitrary $v_1,\ldots, v_n\in V$, if
@@ -136,7 +136,7 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 thus completing the proof.
 :::
 
-In the previous post we explained geometrically that a matrix $A$ is invertible if and only if $\det A\neq 0$. Using [Lemma 4](#lem4){: data-relation="required" } above, we can prove this rigorously.
+In the previous post we explained geometrically that a matrix $A$ is invertible if and only if $\det A\neq 0$. Using [Lemma 4](#lem4){: data-lid="mh6o9" data-relation="required" } above, we can prove this rigorously.
 
 ::: Proposition 5
 For any matrix $A\in\Mat_n(\mathbb{K})$, $\det A\neq 0$ is equivalent to $A$ being invertible.
@@ -167,7 +167,7 @@ A matrix $A\in\Mat_n(\mathbb{K})$ is called an *upper triangular matrix* if $A_{
 On the other hand, the entries $A_{ii}$ of a matrix $A$ are called the *diagonal entries*, and if $A_{ij}=0$ whenever $i\neq j$, then $A$ is called a *diagonal matrix*.
 :::
 
-In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4){: data-relation="weak" })
+In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4){: data-lid="bogif" data-relation="weak" })
 
 
 ::: Proposition 8
@@ -181,7 +181,7 @@ $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}
 For any $\tau\in S_n$, since $\tau$ is a bijection, if there exists an $i$ such that $\tau(i)>i$, then there must necessarily exist a $j$ such that $\tau(j)<j$. Therefore, among the terms summed in the above formula, all are 0 except when $\tau=\id$.
 :::
 
-By [§Gaussian Elimination](/en/math/linear_algebra/Gaussian_elimination){: data-relation="required" }, any matrix can be transformed into row echelon form by repeated elementary row operations. Since every row echelon matrix is an upper triangular matrix, by the above proposition we can very easily find the determinant of the resulting row echelon matrix. On the other hand, applying elementary row operations is equivalent to multiplying by elementary matrices. Therefore, if from a matrix $A$ we obtain a row echelon matrix $A'$ by repeated elementary row operations $E_1,\ldots, E_k$, then
+By [§Gaussian Elimination](/en/math/linear_algebra/Gaussian_elimination){: data-lid="kek14" data-relation="required" }, any matrix can be transformed into row echelon form by repeated elementary row operations. Since every row echelon matrix is an upper triangular matrix, by the above proposition we can very easily find the determinant of the resulting row echelon matrix. On the other hand, applying elementary row operations is equivalent to multiplying by elementary matrices. Therefore, if from a matrix $A$ we obtain a row echelon matrix $A'$ by repeated elementary row operations $E_1,\ldots, E_k$, then
 
 $$A'=E_kE_{k-1}\cdots E_1 A$$
 
@@ -230,7 +230,7 @@ This follows immediately from the formula
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-and [Proposition 9](#prop9){: data-relation="required" }, and [Lemma 4](#lem4){: data-relation="required" }. For the last matrix, after $l$ row swaps and $l$ column swaps, there are $2l$ sign changes, so the determinant of the given matrix becomes equal to $\det B$.
+and [Proposition 9](#prop9){: data-lid="l13qf" data-relation="required" }, and [Lemma 4](#lem4){: data-lid="ausxq" data-relation="required" }. For the last matrix, after $l$ row swaps and $l$ column swaps, there are $2l$ sign changes, so the determinant of the given matrix becomes equal to $\det B$.
 :::
 
 It is not difficult to extend the above results inductively. That is,

@@ -18,7 +18,7 @@ In algebraic geometry, the local geometry of a space is understood through the r
 
 For example, in $\mathbb{A}^3$, consider the space defined by the two equations $\x\y=0$ and $\x\z=0$, denoted by $X=Z(\x\y,\x\z)$. Since this space is defined by two equations, the dimension we expect is $3-2=1$, but if we actually draw it, it is the union of the locus where $\x=0$ holds, namely the $\y\z$-plane, and the locus where $\y,\z$ are simultaneously $0$, namely the $\x$-axis. In this picture, on the $\x$-axis part, the two equations act fully on the three unknowns to cut down the dimension, so it becomes a $1$-dimensional space; however, on the $\y\z$-plane, these equations cut down the dimension by only one, so the actual dimension inflates by one above the expected dimension. Furthermore, at the origin where these two components meet, the order-$1$ derivatives of the equations all become $0$, so that even the dimension of the tangent space becomes $3$.
 
-The virtual dimension we computed in [§Moduli Space of Stable Maps, ⁋Proposition 4](/en/math/gromov-witten_theory/moduli_of_stable_maps#prop4) was precisely the *correct* dimension that captured this intuition. In the moduli space of stable maps, the tangent space is the direction in which stable maps can move, namely the deformation space of stable maps, and $T^2$ plays the role of the equations cutting it out; this was the meaning of the definition
+The virtual dimension we computed in [§Moduli Space of Stable Maps, ⁋Proposition 4](/en/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="31q1v" } was precisely the *correct* dimension that captured this intuition. In the moduli space of stable maps, the tangent space is the direction in which stable maps can move, namely the deformation space of stable maps, and $T^2$ plays the role of the equations cutting it out; this was the meaning of the definition
 
 $$\vdim=\dim T^1(C,p_\bullet,\mu)-\dim T^2(C,p_\bullet,\mu)$$
 
@@ -69,7 +69,7 @@ $$\int_{\mathbb{P}^2}e(E)=\int_{\mathbb{P}^2}c_1(\mathcal{O}(1))^2=1$$
 
 $$e(E)\cap[\mathbb{P}^2]=c_2(\mathcal{O}(1)^{\oplus2})\cap[\mathbb{P}^2]$$
 
-still yields a point class of degree $1$. ([\[Algebraic Varieties\] §Intersection Product, ⁋Example 11](/en/math/algebraic_varieties/intersection_product#ex11){: data-relation="weak" })
+still yields a point class of degree $1$. ([\[Algebraic Varieties\] §Intersection Product, ⁋Example 11](/en/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" data-relation="weak" })
 :::
 
 To accommodate the deformation space $T^1$ and obstruction space $T^2$, we constructed such a smooth variety $X$ and vector bundle $E$, and our goal in this section is to make this rigorous. For a fixed $x\in X$, the vector space containing all directions in which it can be perturbed is the tangent space to $X$, $T_{X,x}$, and the fiber $E_x$ at each point serves as the obstruction space. 
@@ -94,7 +94,7 @@ $$h^0((E^\bullet)^\vee)=\ker(\dd{s}),\qquad h^1((E^\bullet)^\vee)=\coker(T_X\ver
 
 give the actual tangent space and obstruction space. 
 
-The crucial observation is that, even if the tangent space is inflated beyond expectation as in [Example 1](#ex1){: data-relation="required" }, the obstruction space also increases by the same amount, so their difference
+The crucial observation is that, even if the tangent space is inflated beyond expectation as in [Example 1](#ex1){: data-lid="fkmo8" data-relation="required" }, the obstruction space also increases by the same amount, so their difference
 
 $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
@@ -102,7 +102,7 @@ is always preserved as the virtual dimension $\vdim$. In other words, no matter 
 
 ## Perfect obstruction theory
 
-Now it is clear how to apply the discussion above. That is, a general stack $M$ has a cotangent complex $\LL_M$, and we only need to look at the truncation $\tau_{\geq -1}\LL_M$ where deformations and obstructions are captured. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Obstructions to Deformation and Higher-Order Deformation Theory](/en/math/scheme_theory/deformation_theory#obstructions-to-deformation-and-higher-order-deformation-theory){: data-relation="weak" }) If étale-locally $M$ is represented as a closed subscheme in a smooth variety $X$, and its ideal sheaf is $\mathcal{I}$, then this truncation takes the form
+Now it is clear how to apply the discussion above. That is, a general stack $M$ has a cotangent complex $\LL_M$, and we only need to look at the truncation $\tau_{\geq -1}\LL_M$ where deformations and obstructions are captured. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Obstructions to Deformation and Higher-Order Deformation Theory](/en/math/scheme_theory/deformation_theory#obstructions-to-deformation-and-higher-order-deformation-theory){: data-lid="0fpnl" data-relation="weak" }) If étale-locally $M$ is represented as a closed subscheme in a smooth variety $X$, and its ideal sheaf is $\mathcal{I}$, then this truncation takes the form
 
 $$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd\ }\at{0}{\Omega_X\vert_M}\Bigr]$$
 
@@ -132,7 +132,7 @@ the morphism $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_{Z(s)}$ is given by the 
 
 In particular, in degree $-1$, it is defined by descending the pairing with the section $s$, $s^\vee:E^\vee\rightarrow\mathcal{O}_X$, to $\mathcal{I}/\mathcal{I}^2$; since the image of $s^\vee$ is precisely $\mathcal{I}$, this is a surjection, and thus this complex indeed becomes a perfect obstruction theory. 
 
-Now, from a perfect obstruction theory given in this way, let us define the virtual fundamental class. In ordinary intersection theory, given a closed embedding $Z(s)\hookrightarrow X$, deformation to the normal cone deforms $X$ to the normal cone $C_{Z(s)/X}$, allowing us to define the intersection product and the Gysin map. ([\[Algebraic Varieties\] §Intersection Product, ⁋Proposition 9](/en/math/algebraic_varieties/intersection_product#prop9){: data-relation="required" }) The key result of [BF] is the construction of the *intrinsic normal cone* $\mathfrak{c}_M=[C_{Z(s)/X}/T_X\vert_{Z(s)}]$, which can be obtained intrinsically without an explicit embedding being given; the perfect obstruction theory $\phi$ above realizes this as a closed embedding into the vector bundle stack $\mathfrak{E}=h^1/h^0((E^\bullet)^\vee)$:
+Now, from a perfect obstruction theory given in this way, let us define the virtual fundamental class. In ordinary intersection theory, given a closed embedding $Z(s)\hookrightarrow X$, deformation to the normal cone deforms $X$ to the normal cone $C_{Z(s)/X}$, allowing us to define the intersection product and the Gysin map. ([\[Algebraic Varieties\] §Intersection Product, ⁋Proposition 9](/en/math/algebraic_varieties/intersection_product#prop9){: data-lid="7fg7b" data-relation="required" }) The key result of [BF] is the construction of the *intrinsic normal cone* $\mathfrak{c}_M=[C_{Z(s)/X}/T_X\vert_{Z(s)}]$, which can be obtained intrinsically without an explicit embedding being given; the perfect obstruction theory $\phi$ above realizes this as a closed embedding into the vector bundle stack $\mathfrak{E}=h^1/h^0((E^\bullet)^\vee)$:
 
 $$\mathfrak{c}_M\hookrightarrow\mathfrak{E}=[E_1/E_0]$$
 
@@ -175,7 +175,7 @@ $$q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow (E')^\bullet\rightarrow E^\bullet\ri
 between them. Here, the smoothness of the base ensures that $q^\ast\LL_{\mathfrak{M}_{g,n}}$ has no terms in negative degrees, and the fact that $M$ is a Deligne–Mumford stack kills the degree $1$ term carrying the infinitesimal automorphisms of the curve; together they keep the amplitude of $(E')^\bullet$ in $[-1,0]$, making it a perfect obstruction theory.
 
 ::: Example 5
-When $X$ is convex, $H^1(C,\mu^\ast T_X)=0$ for all genus $0$ stable maps ([§Moduli Space of Stable Maps, ⁋Proposition 5](/en/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-relation="required" }), so the obstruction space is $h^1((E^\bullet)^\vee)=R^1\pi_\ast\mu^\ast T_X=0$. Now, for the same reason discussed above, the smoothness of $\mathfrak{M}_{0,n}$ also implies that the absolute obstruction is $h^1(((E')^\bullet)^\vee)=0$. Thus, by (3) of [Proposition 3](#prop3){: data-relation="required" },
+When $X$ is convex, $H^1(C,\mu^\ast T_X)=0$ for all genus $0$ stable maps ([§Moduli Space of Stable Maps, ⁋Proposition 5](/en/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-lid="c4h5h" data-relation="required" }), so the obstruction space is $h^1((E^\bullet)^\vee)=R^1\pi_\ast\mu^\ast T_X=0$. Now, for the same reason discussed above, the smoothness of $\mathfrak{M}_{0,n}$ also implies that the absolute obstruction is $h^1(((E')^\bullet)^\vee)=0$. Thus, by (3) of [Proposition 3](#prop3){: data-lid="vrq63" data-relation="required" },
 
 $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\beta)]$$
 

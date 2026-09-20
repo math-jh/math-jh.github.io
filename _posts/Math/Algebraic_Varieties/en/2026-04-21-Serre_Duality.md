@@ -18,13 +18,13 @@ Geometrically, in favorable cases there is a natural duality between dimension $
 
 $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
-and through it obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-relation="weak" reviewed="" }. More concretely, since this pairing is constructed via the cap product and the fundamental class $[M] \in H_n(M;R)$, we may say that the source of duality in topology is the orientation class $[M]$.
+and through it obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-lid="c1nny" data-relation="weak" reviewed="" }. More concretely, since this pairing is constructed via the cap product and the fundamental class $[M] \in H_n(M;R)$, we may say that the source of duality in topology is the orientation class $[M]$.
 
 In this post we examine Serre duality, the algebraic-geometry analogue of duality.
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-relation="required" reviewed="" } that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" reviewed="" } we obtain the following.
+We first look carefully at the case $X=\mathbb{P}^n$ only. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-lid="0hq5l" data-relation="required" reviewed="" } that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" reviewed="" } we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, there exists an isomorphism
@@ -74,7 +74,7 @@ More generally, by the Noether normalization theorem, for any $n$-dimensional sm
 $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 ::: Example 3
-Let us look concretely at [Proposition 2](#prop2){: data-relation="required" reviewed="" } on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
+Let us look concretely at [Proposition 2](#prop2){: data-lid="yyn3c" data-relation="required" reviewed="" } on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
 
 First, for $d=0$, by [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" reviewed="" } we have
 
@@ -97,7 +97,7 @@ so we verify that they match.
 
 ## Generalizations of Serre Duality
 
-We now generalize the preceding discussion. The first thing one can do is to extend from locally free sheaves to arbitrary coherent sheaves. This is not as difficult as it might seem, because on a smooth variety any coherent sheaf has a finite locally free resolution, so one can inductively carry Serre duality along the terms of the resolution. ([§Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle){: data-relation="weak" reviewed="" }) However, the statement obtained this way is not a duality between $H^i(X,\mathcal{E})$ and $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$, but rather takes the form using $\Ext$ that we shall see below.
+We now generalize the preceding discussion. The first thing one can do is to extend from locally free sheaves to arbitrary coherent sheaves. This is not as difficult as it might seem, because on a smooth variety any coherent sheaf has a finite locally free resolution, so one can inductively carry Serre duality along the terms of the resolution. ([§Canonical Line Bundle](/en/math/algebraic_varieties/canonical_bundle){: data-lid="iptvt" data-relation="weak" reviewed="" }) However, the statement obtained this way is not a duality between $H^i(X,\mathcal{E})$ and $H^{n-i}(X,\omega_X\otimes\mathcal{E}^\vee)$, but rather takes the form using $\Ext$ that we shall see below.
 
 Next we drop the smoothness condition on $X$. In this case there are two major problems. The first visible one is that $X$ need not have a canonical line bundle. Another problem is somewhat more subtle: when we obtained the explicit isomorphism from the perfect pairing, we somewhat implicitly used the isomorphism
 
@@ -125,9 +125,9 @@ In particular, since each fiber is a variety it is connected, and therefore $f_\
 
 ## Grothendieck Duality
 
-Let us retrace the process of generalizing Serre duality. We first proved Serre duality on $\mathbb{P}^n$ using the trace map and cup product ([Proposition 2](#prop2){: data-relation="weak" reviewed="" }), and extended this to arbitrary smooth projective varieties via a finite morphism. The extension to coherent sheaves was handled by induction through locally free resolutions, and the extension to singular varieties was handled by introducing the dualizing sheaf. [Proposition 4](#prop4){: data-relation="weak" reviewed="" } was the generalization replacing the target point with an arbitrary variety.
+Let us retrace the process of generalizing Serre duality. We first proved Serre duality on $\mathbb{P}^n$ using the trace map and cup product ([Proposition 2](#prop2){: data-lid="dp6qq" data-relation="weak" reviewed="" }), and extended this to arbitrary smooth projective varieties via a finite morphism. The extension to coherent sheaves was handled by induction through locally free resolutions, and the extension to singular varieties was handled by introducing the dualizing sheaf. [Proposition 4](#prop4){: data-lid="rotdz" data-relation="weak" reviewed="" } was the generalization replacing the target point with an arbitrary variety.
 
-The most modern interpretation of Serre duality is Grothendieck duality, which is formulated in the language of derived categories. ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2){: data-relation="required" reviewed="" }) This generalization has quite a convincing motivation: for example, when we defined sheaf cohomology we already had to think about injective resolutions, and when we generalized Serre duality to arbitrary coherent sheaves above we also had to think about locally free resolutions, so we know that the derived category is where everything actually happens. In particular, the key point is that the perfect pairing in Serre duality encodes exactly the same information as the choice of a concrete isomorphism
+The most modern interpretation of Serre duality is Grothendieck duality, which is formulated in the language of derived categories. ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2){: data-lid="8eaod" data-relation="required" reviewed="" }) This generalization has quite a convincing motivation: for example, when we defined sheaf cohomology we already had to think about injective resolutions, and when we generalized Serre duality to arbitrary coherent sheaves above we also had to think about locally free resolutions, so we know that the derived category is where everything actually happens. In particular, the key point is that the perfect pairing in Serre duality encodes exactly the same information as the choice of a concrete isomorphism
 
 $$H^n(X, \omega_X) \cong \mathbb{K}$$
 
@@ -148,7 +148,7 @@ For a proper morphism $f \colon X \rightarrow Y$ and a coherent sheaf $\mathcal{
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-Here $R\mathcal{H}om$ is derived Hom ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 11](/en/math/homological_algebra/derived_categories#prop11){: data-relation="required" reviewed="" }), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
+Here $R\mathcal{H}om$ is derived Hom ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 11](/en/math/homological_algebra/derived_categories#prop11){: data-lid="24lhg" data-relation="required" reviewed="" }), and $\mathcal{G}$ is a bounded complex of coherent sheaves on $Y$.
 :::
 
 Intuitively, this theorem says that 'Hom after pushforward' and 'pushforward after Hom' agree. That is, computing the Hom between $\mathcal{F}$ and $f^! \mathcal{G}$ on $X$ and then pushing down to $Y$ is the same as first pushing $\mathcal{F}$ down to $Y$ and then computing the Hom with $\mathcal{G}$.

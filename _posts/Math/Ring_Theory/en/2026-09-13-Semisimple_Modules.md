@@ -18,7 +18,7 @@ In this article, a ring $A$ is a ring with identity, not assumed to be commutati
 
 ## Definition of Semisimple Modules
 
-We briefly defined simple modules in [§Division Rings, §§Endomorphism Rings of Simple Modules](/en/math/ring_theory/division_rings#endomorphism-rings-of-simple-modules){: data-relation="weak" }, and the subject of this post is to examine related topics in detail. Therefore, let us first give the following definition (formally).
+We briefly defined simple modules in [§Division Rings, §§Endomorphism Rings of Simple Modules](/en/math/ring_theory/division_rings#endomorphism-rings-of-simple-modules){: data-lid="don6w" data-relation="weak" }, and the subject of this post is to examine related topics in detail. Therefore, let us first give the following definition (formally).
 
 ::: Definition 1
 When a non-$0$ $A$-module $M$ has no submodules other than $0$ and $M$, we call $M$ a *simple module*.
@@ -37,7 +37,7 @@ $M$ is called a *semisimple module*.
 When the index set $I$ is empty, by convention this is defined to be $0$, and thus by definition $0$ is a semisimple module.
 
 ::: Example 3
-If we view a division ring $D$ as a left module over itself, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 4](/en/math/algebraic_structures/field_of_fractions#prop4){: data-relation="required" }, $D$ is a simple $D$-module. In general, over $D$, a vector space $V$ has a basis $B$, so using this to write $V=\bigoplus_{b\in B}Db$, we see that a vector space over a division ring is a semisimple $D$-module.
+If we view a division ring $D$ as a left module over itself, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 4](/en/math/algebraic_structures/field_of_fractions#prop4){: data-lid="ge4aq" data-relation="required" }, $D$ is a simple $D$-module. In general, over $D$, a vector space $V$ has a basis $B$, so using this to write $V=\bigoplus_{b\in B}Db$, we see that a vector space over a division ring is a semisimple $D$-module.
 :::
 
 Intuitively, a simple module is the smallest unit into which a module can be decomposed, and this intuition is reflected in the following lemma.
@@ -55,7 +55,7 @@ Our claim is that for any $i\in I$, we have $S_i\subseteq M'$, and therefore
 
 $$M=N+\sum_{i\in I}S_i\subseteq M'$$
 
-so that $M=M'$. Suppose to the contrary that $S_i\not\subseteq M'$ for some $S_i$. Then by the simplicity of $S_i$, we have $S_i\cap M'=0$, so the sum $N+\sum_{j\in J}S_j+S_i$ is again a direct sum. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 6](/en/math/multilinear_algebra/exact_sequences#prop6){: data-relation="required" }) Hence $J\cup\{i\}\in\mathcal{J}$, which contradicts the maximality of $J$, so no such $i$ can exist.
+so that $M=M'$. Suppose to the contrary that $S_i\not\subseteq M'$ for some $S_i$. Then by the simplicity of $S_i$, we have $S_i\cap M'=0$, so the sum $N+\sum_{j\in J}S_j+S_i$ is again a direct sum. ([\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 6](/en/math/multilinear_algebra/exact_sequences#prop6){: data-lid="5ih46" data-relation="required" }) Hence $J\cup\{i\}\in\mathcal{J}$, which contradicts the maximality of $J$, so no such $i$ can exist.
 :::
 
 From this lemma, we can characterize semisimple modules as follows.

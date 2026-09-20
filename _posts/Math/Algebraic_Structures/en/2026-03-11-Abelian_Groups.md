@@ -18,7 +18,7 @@ We have not paid much attention to the category $\Ab$ so far, but in this post w
 
 ## Sums of Abelian Groups
 
-First, the universal property of the weak direct product shown in [§Restricted Sum, ⁋Theorem 2](/en/math/algebraic_structures/restricted_sums#thm2){: data-relation="required" reviewed="" } applies particularly well when the group $H$ is abelian.
+First, the universal property of the weak direct product shown in [§Restricted Sum, ⁋Theorem 2](/en/math/algebraic_structures/restricted_sums#thm2){: data-lid="h4gcr" data-relation="required" reviewed="" } applies particularly well when the group $H$ is abelian.
 
 ::: Theorem 1
 Given a family $(G_i)$ of abelian groups, consider $\prod^w G_i$ and the inclusion maps $\iota_i$. Then for any abelian group $H$ and group homomorphisms $f_i:G_i\rightarrow H$, there exists a unique group homomorphism satisfying $f_i=f\circ\iota_i$, namely $f:\prod^wG_i\rightarrow H$.
@@ -69,7 +69,7 @@ On the other hand, for any abelian group $H$, if a group homomorphism $f:G\right
 
 $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 
-so $[G,G]\leq\ker f$. Now by [§Group Isomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3){: data-relation="required" reviewed="" } we obtain the following.
+so $[G,G]\leq\ker f$. Now by [§Group Isomorphisms, ⁋Proposition 3](/en/math/algebraic_structures/isomorphism_theorems#prop3){: data-lid="6ezzc" data-relation="required" reviewed="" } we obtain the following.
 
 ::: Proposition 5
 Consider any group $G$ and the quotient homomorphism $p:G\rightarrow G/[G,G]$. Then for any abelian group $H$ and group homomorphism $f:G \rightarrow H$, there exists a unique group homomorphism satisfying $f=\bar{f}\circ p$, namely $\bar{f}:G/[G,G]\rightarrow H$.
@@ -105,11 +105,11 @@ $$F_\Ab(X)=\bigoplus_{x\in X} \mathbb{Z}$$
 
 and call this the *free abelian group* defined by $X$. Since a function $u:X\rightarrow Y$ induces a homomorphism $F_\Ab(u)$ sending the $x$-th generator to the $u(x)$-th generator, $F_\Ab$ becomes a functor $\Set\rightarrow\Ab$.
 
-Now, applying [Theorem 1](#thm1){: data-relation="required" reviewed="" } and the fact that a group homomorphism out of $\mathbb{Z}$ is determined by the image of $1$ in turn, we obtain for any abelian group $H$ the following isomorphism
+Now, applying [Theorem 1](#thm1){: data-lid="2a1kj" data-relation="required" reviewed="" } and the fact that a group homomorphism out of $\mathbb{Z}$ is determined by the image of $1$ in turn, we obtain for any abelian group $H$ the following isomorphism
 
 $$\Hom_\Ab\biggl(\bigoplus_{x\in X}\mathbb{Z},H\biggr)\cong\prod_{x\in X}\Hom_\Ab(\mathbb{Z},H)\cong\prod_{x\in X}U(H)\cong\Hom_\Set(X,U(H))$$
 
-Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1){: data-relation="weak" })
+Here each correspondence is given only by composition of homomorphisms and composition of functions, so it is natural in both $X$ and $H$, and thus we obtain the following. ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1){: data-lid="se8ah" data-relation="weak" })
 
 ::: Proposition 8
 There exists a left adjoint $F_\Ab:\Set \rightarrow\Ab$ of the forgetful functor $U:\Ab \rightarrow \Set$.
@@ -130,10 +130,10 @@ $$(f+g)(x)=f(x)+g(x)\qquad\text{for all $x\in G$}$$
 That $f+g$ is again a group homomorphism is due to $H$ being abelian: swapping the middle two terms of $(f+g)(x+y)=f(x)+f(y)+g(x)+g(y)$ yields $(f+g)(x)+(f+g)(y)$. The identity element is the zero map, the inverse of $f$ is $(-f)(x)=-f(x)$, and the commutativity of $\Hom_\Ab(G,H)$ also follows from the commutativity of $H$.
 :::
 
-$\Hom_\Ab(-,-)$ was originally defined as a bifunctor from $\Ab^\op\times \Ab$ to $\Set$, but by this proposition we can in fact view it as a bifunctor to $\Ab$. That is, we may think of $\Hom_\Ab(-,-)$ as something similar to the internal $\Hom$ of [\[Category Theory\] §Adjoint Functors, ⁋Definition 8](/en/math/category_theory/adjoints#def8){: data-relation="required" reviewed="" }. However, using only the language we have so far, this is impossible.
+$\Hom_\Ab(-,-)$ was originally defined as a bifunctor from $\Ab^\op\times \Ab$ to $\Set$, but by this proposition we can in fact view it as a bifunctor to $\Ab$. That is, we may think of $\Hom_\Ab(-,-)$ as something similar to the internal $\Hom$ of [\[Category Theory\] §Adjoint Functors, ⁋Definition 8](/en/math/category_theory/adjoints#def8){: data-lid="h74wi" data-relation="required" reviewed="" }. However, using only the language we have so far, this is impossible.
 
 ::: Example 10
-$\Ab$ is a cartesian monoidal category with respect to $\times$, as immediately after [\[Category Theory\] §Monoidal Categories, ⁋Proposition 4](/en/math/category_theory/monoidal_categories#prop4){: data-relation="weak" reviewed="" }. However, $\Hom_\Ab(-,-)$ cannot be regarded as an internal $\Hom$ for this structure. That is,
+$\Ab$ is a cartesian monoidal category with respect to $\times$, as immediately after [\[Category Theory\] §Monoidal Categories, ⁋Proposition 4](/en/math/category_theory/monoidal_categories#prop4){: data-lid="nib98" data-relation="weak" reviewed="" }. However, $\Hom_\Ab(-,-)$ cannot be regarded as an internal $\Hom$ for this structure. That is,
 
 $$\Hom_\Ab(G\times H, A)\cong \Hom_\Ab(G,\Hom_\Ab(H,A))$$
 
@@ -190,7 +190,7 @@ Although the naturality of the isomorphism $\Bilin(G,H;A)\cong\Hom_\Ab(F_\Ab(G\t
 :::
 
 ::: Definition 13
-We call the representation of [Theorem 12](#thm12){: data-relation="required" reviewed="" } the *tensor product* of $G$ and $H$, and denote it by $G\otimes H$.
+We call the representation of [Theorem 12](#thm12){: data-lid="qbgj5" data-relation="required" reviewed="" } the *tensor product* of $G$ and $H$, and denote it by $G\otimes H$.
 :::
 
 We can see that elements of $G\otimes H$ are represented as finite sums of elements of the form $x\otimes y$. Then we can verify that $\otimes$ is a monoidal product with $\mathbb{Z}$ as the tensor unit.

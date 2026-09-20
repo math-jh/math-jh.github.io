@@ -29,7 +29,7 @@ A topological space $M$ is *locally Euclidean of dimension $m$* if for every $x\
 A space that is second countable, Hausdorff, and locally Euclidean of dimension $m$ is called a *topological manifold of dimension $m$*.
 :::
 
-For convenience, let us call a topological manifold of dimension $m$ an *$m$-manifold*. Although not treated in [Definition 1](#def1){: data-relation="weak" reviewed="" }, we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
+For convenience, let us call a topological manifold of dimension $m$ an *$m$-manifold*. Although not treated in [Definition 1](#def1){: data-lid="ja3bx" data-relation="weak" reviewed="" }, we sometimes replace $\mathbb{R}^m$ in the above definition by the *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 
@@ -44,7 +44,7 @@ An open subspace $U$ of an $m$-manifold $M$ is again an $m$-manifold. This is be
 
 $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 
-is a base for $U$; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#subspaces-and-products-of-hausdorff-spaces){: data-relation="required" reviewed="" }); and if $x\in U$ is given arbitrarily, from the assumption that $M$ is locally Euclidean we can choose an open neighborhood $V$ of $x$ in $M$ such that $V$ is homeomorphic to an open subset of $\mathbb{R}^m$, and hence $U\cap V$ is an open neighborhood of $x$ in $U$ homeomorphic to an open subset of $\mathbb{R}^m$.
+is a base for $U$; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#subspaces-and-products-of-hausdorff-spaces){: data-lid="1jng9" data-relation="required" reviewed="" }); and if $x\in U$ is given arbitrarily, from the assumption that $M$ is locally Euclidean we can choose an open neighborhood $V$ of $x$ in $M$ such that $V$ is homeomorphic to an open subset of $\mathbb{R}^m$, and hence $U\cap V$ is an open neighborhood of $x$ in $U$ homeomorphic to an open subset of $\mathbb{R}^m$.
 :::
 
 Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-relation="weak" reviewed="" } also gives an example of a topological manifold as follows.
@@ -61,7 +61,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 are inverses of each other, so $\graph(f)$ and $U$ are homeomorphic.
 :::
 
-By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-relation="required" reviewed="" }, $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-relation="weak" reviewed="" }.
+By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-relation="required" reviewed="" }, $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-lid="y0hcz" data-relation="weak" reviewed="" }.
 
 Meanwhile, the following also holds for the product topology.
 
@@ -70,16 +70,16 @@ Suppose two topological manifolds $M_1$, $M_2$ are given, of dimensions $m_1,m_2
 
 $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 
-gives $\mathcal{B}$ as a basis for $M_1\times M_2$, so $M_1\times M_2$ is second countable; the product of Hausdorff spaces is Hausdorff ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 8](/en/math/topology/Hausdorff_spaces#prop8){: data-relation="required" reviewed="" }); and for any $(x_1,x_2)\in M_1\times M_2$, if $U_i$ is a Euclidean neighborhood in $M_i$ of $x_i$, then $U_1\times U_2$ is a Euclidean neighborhood of $(x_1,x_2)$ in $M_1\times M_2$.
+gives $\mathcal{B}$ as a basis for $M_1\times M_2$, so $M_1\times M_2$ is second countable; the product of Hausdorff spaces is Hausdorff ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 8](/en/math/topology/Hausdorff_spaces#prop8){: data-lid="e17km" data-relation="required" reviewed="" }); and for any $(x_1,x_2)\in M_1\times M_2$, if $U_i$ is a Euclidean neighborhood in $M_i$ of $x_i$, then $U_1\times U_2$ is a Euclidean neighborhood of $(x_1,x_2)$ in $M_1\times M_2$.
 :::
 
-The last general construction we will examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#quotient-spaces-of-hausdorff-spaces){: data-relation="weak" reviewed="" }, an arbitrary quotient space of a Hausdorff space is not necessarily Hausdorff. Moreover, there is no guarantee that a quotient space of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify at least the Hausdorff condition and the locally Euclidean condition separately. Instead, second countability follows from the locally Euclidean condition.
+The last general construction we will examine is the quotient space. However, as we saw in [\[Topology\] §Hausdorff Spaces, §§Quotient Spaces of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#quotient-spaces-of-hausdorff-spaces){: data-lid="tdxr7" data-relation="weak" reviewed="" }, an arbitrary quotient space of a Hausdorff space is not necessarily Hausdorff. Moreover, there is no guarantee that a quotient space of a Euclidean space is Euclidean, so to show that a quotient space is a topological manifold one must verify at least the Hausdorff condition and the locally Euclidean condition separately. Instead, second countability follows from the locally Euclidean condition.
 
 ::: Proposition 6
 Let $\pi:X \rightarrow X/R$ be a quotient map, and suppose $X$ is second-countable and $X/R$ is locally Euclidean. Then $X/R$ is second countable.
 :::
 ::: Proof
-Since $X/R$ is locally Euclidean, we can cover $X/R$ by Euclidean neighborhoods $(U_i)_{i\in I}$; their preimages $(\pi^{-1}(U_i))_{i\in I}$ then cover $X$. Any second-countable space is Lindelöf ([\[Topology\] §Compactness and Convergence of Filters, ⁋Proposition 12](/en/math/topology/filter_convergence#prop12){: data-relation="required" reviewed="" }), so there exists a countable subset $J\subseteq I$ such that $(\pi^{-1}(U_i))_{i\in J}$ is a countable open cover of $X$, and hence the corresponding $(U_i)_{i\in J}$ form a countable cover of $X/R$. But each of these is a Euclidean neighborhood and therefore has a countable base; since there are countably many of them, their union yields a countable base for $X/R$.
+Since $X/R$ is locally Euclidean, we can cover $X/R$ by Euclidean neighborhoods $(U_i)_{i\in I}$; their preimages $(\pi^{-1}(U_i))_{i\in I}$ then cover $X$. Any second-countable space is Lindelöf ([\[Topology\] §Compactness and Convergence of Filters, ⁋Proposition 12](/en/math/topology/filter_convergence#prop12){: data-lid="tref7" data-relation="required" reviewed="" }), so there exists a countable subset $J\subseteq I$ such that $(\pi^{-1}(U_i))_{i\in J}$ is a countable open cover of $X$, and hence the corresponding $(U_i)_{i\in J}$ form a countable cover of $X/R$. But each of these is a Euclidean neighborhood and therefore has a countable base; since there are countably many of them, their union yields a countable base for $X/R$.
 :::
 
 Viewed solely within the flow of this category, it would suffice to restrict our attention to topological manifolds; however, when we treat the multiplicative structure of cohomology, it is more convenient to keep in mind the notion of integration on smooth manifolds.

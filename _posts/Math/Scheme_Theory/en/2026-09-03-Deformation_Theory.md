@@ -30,7 +30,7 @@ Now, since $C$ is an $A$-algebra locally of finite presentation, there exist a p
 
 $$\overline{\rho}_0:B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
 
-Then, since $q$ is surjective, for each variable $\x_i$, to satisfy $q(r_i)=\overline{\rho}_0(\x_i)$ we can choose elements $r_i\in R$, and by [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-relation="required" }, the assignment $\x_i\mapsto r_i$ uniquely defines an $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$. This satisfies $q\circ \widetilde{\rho}=\overline{\rho}_0$, where in the choice of each $r_i$ there is freedom parameterized by $\ker q=\mathfrak{b}$. 
+Then, since $q$ is surjective, for each variable $\x_i$, to satisfy $q(r_i)=\overline{\rho}_0(\x_i)$ we can choose elements $r_i\in R$, and by [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="7rl2f" data-relation="required" }, the assignment $\x_i\mapsto r_i$ uniquely defines an $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$. This satisfies $q\circ \widetilde{\rho}=\overline{\rho}_0$, where in the choice of each $r_i$ there is freedom parameterized by $\ker q=\mathfrak{b}$. 
 
 What we originally wish to find is a lifting from $C$, namely $\rho:C\rightarrow R$. If the chosen $\widetilde{\rho}$ satisfies $\widetilde{\rho}(\mathfrak{a})=0$, then $\widetilde{\rho}$ will directly factor through $C=B/\mathfrak{a}$ to induce the desired lifting $\rho$, but that is not all. As observed above, since the definition of $\widetilde{\rho}$ varies by the lifts of each variable, another choice of $\widetilde{\rho}$ might give $\widetilde{\rho}(\mathfrak{a})=0$. Therefore, to determine the failure of this lifting, we must compute a quantity that does not depend on the choice of $\widetilde{\rho}$.
 
@@ -126,9 +126,9 @@ Now suppose that $H_1(\NL_{C/A})=0$ and $\Omega_{C/A}$ is projective. The conorm
 
 $$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
 
-is always right exact ([§Kähler Differentials and Cotangent Sheaves, ⁋Proposition 2](/en/math/scheme_theory/sheaf_of_differentials#prop2){: data-relation="required" }), and since the condition $H_1(\NL_{C/A})=\ker\bar{d}=0$ is given, we can append $0$ on the left to obtain a short exact sequence. Moreover, since $\Omega_{C/A}$ is projective, the surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$ splits ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4){: data-relation="required" }). Therefore, by [§Smooth and Étale Morphisms, ⁋Proposition 8](/en/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-relation="required" }, $C$ is smooth over $A$.
+is always right exact ([§Kähler Differentials and Cotangent Sheaves, ⁋Proposition 2](/en/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="1fipr" data-relation="required" }), and since the condition $H_1(\NL_{C/A})=\ker\bar{d}=0$ is given, we can append $0$ on the left to obtain a short exact sequence. Moreover, since $\Omega_{C/A}$ is projective, the surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$ splits ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Proposition 4](/en/math/multilinear_algebra/various_modules#prop4){: data-lid="dqrmi" data-relation="required" }). Therefore, by [§Smooth and Étale Morphisms, ⁋Proposition 8](/en/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-relation="required" }, $C$ is smooth over $A$.
 
-Finally, we show that smoothness is equivalent to the condition that for every $C$-module $M$, $T^1(C/A,M)=0$. First, if $C$ is smooth, then by the splitting obtained above, we have $r\circ\bar{d}=\id$ for some retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$. Now, given any $C$-module $M$ and $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$, setting $h=\delta\circ r$ yields $h\circ\bar{d}=\delta$, so $\bar{d}^\ast$ is surjective and $T^1(C/A,M)=0$. Conversely, suppose that for all $M$, $T^1(C/A,M)=0$. Then in any lifting problem from the introduction, $[\delta]\in T^1(C/A,\mathfrak{b})$ is $0$, so a lifting exists. Since $C$ is finitely presented, by [§Smooth and Étale Morphisms, ⁋Theorem 15](/en/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-relation="required" }, $C$ is smooth over $A$ .
+Finally, we show that smoothness is equivalent to the condition that for every $C$-module $M$, $T^1(C/A,M)=0$. First, if $C$ is smooth, then by the splitting obtained above, we have $r\circ\bar{d}=\id$ for some retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$. Now, given any $C$-module $M$ and $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$, setting $h=\delta\circ r$ yields $h\circ\bar{d}=\delta$, so $\bar{d}^\ast$ is surjective and $T^1(C/A,M)=0$. Conversely, suppose that for all $M$, $T^1(C/A,M)=0$. Then in any lifting problem from the introduction, $[\delta]\in T^1(C/A,\mathfrak{b})$ is $0$, so a lifting exists. Since $C$ is finitely presented, by [§Smooth and Étale Morphisms, ⁋Theorem 15](/en/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="71hn7" data-relation="required" }, $C$ is smooth over $A$ .
 :::
 
 In particular, if $C$ is smooth, the splitting obtained in the above proof yields a splitting of the naive cotangent complex
@@ -143,15 +143,15 @@ and since
 
 $$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr],$$
 
-we have, for all $n$, $H_n(\ker p)=0$. Applying [\[Homological Algebra\] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-relation="required" } to the above short exact sequence, $H_n(p)$ becomes an isomorphism in all degrees, so $p$ is a quasi-isomorphism from $\NL_{C/A}$ to the degree $0$ projective module $\Omega_{C/A}$. That is, in this case, looking only at $\Omega_{C/A}$ suffices to compute the difference between liftings, $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$, and the obstruction space $T^1$ preventing the existence of a lifting always vanishes.
+we have, for all $n$, $H_n(\ker p)=0$. Applying [\[Homological Algebra\] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-lid="wwnua" data-relation="required" } to the above short exact sequence, $H_n(p)$ becomes an isomorphism in all degrees, so $p$ is a quasi-isomorphism from $\NL_{C/A}$ to the degree $0$ projective module $\Omega_{C/A}$. That is, in this case, looking only at $\Omega_{C/A}$ suffices to compute the difference between liftings, $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$, and the obstruction space $T^1$ preventing the existence of a lifting always vanishes.
 
-However, for a general $C$, we must first examine whether the kernel of the conormal morphism and its image are direct summands. Since $\Omega_{C/A}$ is the cokernel of this morphism, dealing directly with these two conditions essentially requires $\NL_{C/A}$, which retains the preceding term and the morphism. A representative case of this situation is that of an lci ([§Complete Intersections, ⁋Definition 1](/en/math/scheme_theory/complete_intersections#def1){: data-relation="weak" }). In general non-lci situations, we may need to examine the entire cotangent complex to perform similar computations, but for an lci, the naive cotangent complex is quasi-isomorphic to the full cotangent complex. From this perspective, an lci can be viewed as a representative case where the necessary cotangent data can be read off directly from the naive cotangent complex.
+However, for a general $C$, we must first examine whether the kernel of the conormal morphism and its image are direct summands. Since $\Omega_{C/A}$ is the cokernel of this morphism, dealing directly with these two conditions essentially requires $\NL_{C/A}$, which retains the preceding term and the morphism. A representative case of this situation is that of an lci ([§Complete Intersections, ⁋Definition 1](/en/math/scheme_theory/complete_intersections#def1){: data-lid="cd9vj" data-relation="weak" }). In general non-lci situations, we may need to examine the entire cotangent complex to perform similar computations, but for an lci, the naive cotangent complex is quasi-isomorphic to the full cotangent complex. From this perspective, an lci can be viewed as a representative case where the necessary cotangent data can be read off directly from the naive cotangent complex.
 
 To see a concrete situation, set $B=A[\x_1,\ldots,\x_n]$ and $C=B/\mathfrak{a}$, and suppose that $\mathfrak{a}=(f_1,\ldots,f_r)$ is generated by a $B$-regular sequence. The map sending the class of each $f_j$ defines a $C$-linear morphism
 
 $$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\bar{f}_j$$
 
-which is an isomorphism by [§Complete Intersections, ⁋Proposition 5](/en/math/scheme_theory/complete_intersections#prop5){: data-relation="required" } and its proof; hence in this case, the naive cotangent complex is given via the Jacobian by
+which is an isomorphism by [§Complete Intersections, ⁋Proposition 5](/en/math/scheme_theory/complete_intersections#prop5){: data-lid="6laqx" data-relation="required" } and its proof; hence in this case, the naive cotangent complex is given via the Jacobian by
 
 $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
 
@@ -161,7 +161,7 @@ and both terms are finitely generated free (hence finitely generated projective)
 
 Above, we have seen how the naive cotangent complex records the infinitesimal lifting property of smoothness. This complex also plays a central role in deformation theory.
 
-The geometric starting point of deformation theory is to fix an $A$-scheme $X_0$, and, with a section $\t_0:\Spec A\rightarrow T$ equipping a pointed $A$-scheme $(T,\t_0)$, to look for a family $\pi:X\rightarrow T$ and an identification of the central fiber $X\times_T\Spec A\cong X_0$. As in [§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10){: data-relation="weak" }, if we view a scheme morphism $\pi:X\rightarrow T$ as a family parameterized by $T$, this means looking at a family of schemes varying over $T$ whose fiber obtained along the section $\t_0$ is given by $X_0$. For this perspective, it is reasonable to require that $\pi$ be flat ([§Flat Morphisms](/en/math/scheme_theory/flat_morphisms){: data-relation="weak" }), and under this assumption, we compare the fibers by viewing them as the variation of a single object $X_0$.
+The geometric starting point of deformation theory is to fix an $A$-scheme $X_0$, and, with a section $\t_0:\Spec A\rightarrow T$ equipping a pointed $A$-scheme $(T,\t_0)$, to look for a family $\pi:X\rightarrow T$ and an identification of the central fiber $X\times_T\Spec A\cong X_0$. As in [§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10){: data-lid="dohnh" data-relation="weak" }, if we view a scheme morphism $\pi:X\rightarrow T$ as a family parameterized by $T$, this means looking at a family of schemes varying over $T$ whose fiber obtained along the section $\t_0$ is given by $X_0$. For this perspective, it is reasonable to require that $\pi$ be flat ([§Flat Morphisms](/en/math/scheme_theory/flat_morphisms){: data-lid="bjqez" data-relation="weak" }), and under this assumption, we compare the fibers by viewing them as the variation of a single object $X_0$.
 
 As the simplest example, consider the node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$ where two lines meet at the origin. The simplest way to deform this is to replace the equation $\x\y=0$ with $\x\y=\t$ and consider the family
 
@@ -169,7 +169,7 @@ $$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t].$$
 
 At $\t=0$, this has $X_0$ as its fiber, and over the open set where $\t$ is inverted, both $\x$ and $\y$ become invertible, forming a smooth family. Moreover, by the relation $\x\y=\t$, every monomial can be uniquely reduced to one of $\t^n$, $\t^n\x^i$, or $\t^n\y^j$, so this coordinate ring has $\{1\}\cup\{\x^i\mid i\geq1\}\cup\{\y^j\mid j\geq1\}$ as a basis and is a free $A[\t]$-module. Therefore $\pi$ is flat. In other words, looking at this family allows us to see how the singularity at the origin of $X_0$ disappears along the parameter $\t$.
 
-The first step in finding a deformation of a general scheme $X_0$ is to examine each of the infinitesimal directions at the central section $\t_0$ of the base. Setting $A[\epsilon]=A[\t]/(\t^2)$, a tangent direction of $(T,\t_0)$ relative to $A$ is expressed via its restriction at $\t=0$ to $\t_0$ as an $A$-morphism $\Spec A[\epsilon]\rightarrow T$ ([§Smooth and Étale Morphisms, §§Infinitesimal lifting criterion](/en/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion){: data-relation="required" }). Pulling back $\pi:X\rightarrow T$ along this morphism yields a family over $\Spec A[\epsilon]$, which intuitively records how $X_0$ varies to first order along that tangent direction.
+The first step in finding a deformation of a general scheme $X_0$ is to examine each of the infinitesimal directions at the central section $\t_0$ of the base. Setting $A[\epsilon]=A[\t]/(\t^2)$, a tangent direction of $(T,\t_0)$ relative to $A$ is expressed via its restriction at $\t=0$ to $\t_0$ as an $A$-morphism $\Spec A[\epsilon]\rightarrow T$ ([§Smooth and Étale Morphisms, §§Infinitesimal lifting criterion](/en/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion){: data-lid="5bh3o" data-relation="required" }). Pulling back $\pi:X\rightarrow T$ along this morphism yields a family over $\Spec A[\epsilon]$, which intuitively records how $X_0$ varies to first order along that tangent direction.
 
 In reality, however, this parameter scheme $T$ and the family $\pi:X\rightarrow T$ over it are not given in advance; finding them is the very beginning of the problem. All that is initially given to us is that $X_0$ is an $S$-scheme, with only the structure morphism $X_0\rightarrow S$, and our strategy is to define the parameter scheme by extending the base $S$ in *all possible directions*. The process of infinitesimally thickening the base at each step is precisely given by square-zero extensions, and simultaneously with the parameter space, we define the fibers lying over the base $S$ thickened by this process.
 
@@ -211,7 +211,7 @@ these, with morphisms given by the following commutative diagram
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-3.svg width="18.74em" alt="morphism of extensions" %}
 
-form a category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$, where these morphisms are all isomorphisms by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 3](/en/math/homological_algebra/diagram_chasing#cor3){: data-relation="required" }. That is, this category is a groupoid, and the isomorphism classes of square-zero extensions are partitioned according to whether a morphism exists between their objects. Indeed, suppose we are given arbitrary data
+form a category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$, where these morphisms are all isomorphisms by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 3](/en/math/homological_algebra/diagram_chasing#cor3){: data-lid="mj4ii" data-relation="required" }. That is, this category is a groupoid, and the isomorphism classes of square-zero extensions are partitioned according to whether a morphism exists between their objects. Indeed, suppose we are given arbitrary data
 
 $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
 
@@ -434,7 +434,7 @@ $$T^i(C/A,M)=H^i\bigl(\Hom_C(\operatorname{LS}_{C/A},M)\bigr)$$
 is called the *Lichtenbaum–Schlessinger functor* of $C$.
 :::
 
-It is not difficult to see that $T^0$ and $T^1$ in this definition coincide exactly with those defined in [Definition 1](#def1){: data-relation="required" }, and our claim is that the obstruction class is a class living in $T^2$. For a first-order deformation $\xi$, as in the earlier calculation, for each relation $(a_1,\ldots,a_m)\in\Rel$, choosing elements satisfying $\sum_ja_jg_j=\sum_jc_jf_j$, namely $c_j\in B$, we obtain
+It is not difficult to see that $T^0$ and $T^1$ in this definition coincide exactly with those defined in [Definition 1](#def1){: data-lid="3ydkr" data-relation="required" }, and our claim is that the obstruction class is a class living in $T^2$. For a first-order deformation $\xi$, as in the earlier calculation, for each relation $(a_1,\ldots,a_m)\in\Rel$, choosing elements satisfying $\sum_ja_jg_j=\sum_jc_jf_j$, namely $c_j\in B$, we obtain
 
 $$\eta(a_1,\ldots, a_m)=\overline{\sum_jc_jg_j}\in C$$
 
@@ -468,7 +468,7 @@ Therefore, setting, for any $C$-module $M$,
 
 $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$$
 
-$T^0$ represents infinitesimal automorphisms, $T^1$ represents first-order deformations and the differences between choices of extensions when an extension exists ([Theorem 5](#thm5){: data-relation="weak" }), and $T^2$ controls the obstructions to extensions ([Theorem 8](#thm8){: data-relation="weak" }). Applying the smoothness criterion of [Proposition 2](#prop2){: data-relation="required" } to the full cotangent complex, we now obtain the following conclusion for deformations in all degrees.
+$T^0$ represents infinitesimal automorphisms, $T^1$ represents first-order deformations and the differences between choices of extensions when an extension exists ([Theorem 5](#thm5){: data-relation="weak" }), and $T^2$ controls the obstructions to extensions ([Theorem 8](#thm8){: data-lid="gqa0w" data-relation="weak" }). Applying the smoothness criterion of [Proposition 2](#prop2){: data-lid="h13ib" data-relation="required" } to the full cotangent complex, we now obtain the following conclusion for deformations in all degrees.
 
 ::: Proposition 9
 If $C$ is smooth over $A$, then for every $C$-module $M$,
@@ -501,7 +501,7 @@ The content of the previous section was that the existence of such an extension 
 
 $$\eta:\Rel/\TrivRel\rightarrow M_C$$
 
-where changing the choices of presentation and lifts changes $\eta$ by a coboundary, so that its class $[\eta]\in T^2(C/A,M_C)$ is well-defined. This class is precisely the obstruction class, and we know that $[\eta]=0$ is equivalent to the existence of such a square-zero extension $C'$. From this perspective, the earlier [Theorem 8](#thm8){: data-relation="weak" } was the result for the special case of lifting a first-order deformation $\xi$ to second order. Then, when the obstruction vanishes, the isomorphism classes of deformations form a torsor over $T^1(C/A,M_C)$, and the infinitesimal automorphisms of each deformation are classified by $T^0(C/A,M_C)$.
+where changing the choices of presentation and lifts changes $\eta$ by a coboundary, so that its class $[\eta]\in T^2(C/A,M_C)$ is well-defined. This class is precisely the obstruction class, and we know that $[\eta]=0$ is equivalent to the existence of such a square-zero extension $C'$. From this perspective, the earlier [Theorem 8](#thm8){: data-lid="orkga" data-relation="weak" } was the result for the special case of lifting a first-order deformation $\xi$ to second order. Then, when the obstruction vanishes, the isomorphism classes of deformations form a torsor over $T^1(C/A,M_C)$, and the infinitesimal automorphisms of each deformation are classified by $T^0(C/A,M_C)$.
 
 Now what remains is to lift this computation to general schemes. For this, we must first fix a square-zero thickening of the base, construct a flat family over each affine patch, and then choose isomorphisms identifying these families on the overlap of two patches. Finally, these isomorphisms must satisfy the cocycle condition on triple overlaps in order to yield a single deformation of schemes. Moreover, the cotangent complex must also be computed on each affine patch and glued compatibly with restrictions. Rather than repeating this entire process, in this section we clarify what data and obstructions appear at which levels, and summarize how they assemble into a single global $\Ext$.
 
@@ -541,13 +541,13 @@ The issue is that the model of the naive cotangent complex defined on each of th
 
 $$\widetilde{\LL_{C/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
-. That is, the rigorous gluing takes place in the derived category $D(\mathcal{O}_{X_0})$ ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2){: data-relation="required" }), and we denote the resulting object by $\LL_{X_0/S}$.
+. That is, the rigorous gluing takes place in the derived category $D(\mathcal{O}_{X_0})$ ([\[Homological Algebra\] §Derived Categories, ⁋Definition 2](/en/math/homological_algebra/derived_categories#def2){: data-lid="983qj" data-relation="required" }), and we denote the resulting object by $\LL_{X_0/S}$.
 
 Now, since $\LL_{X_0/S}$ is an object of the derived category, given on $X_0$ a quasi-coherent module $\mathcal{G}$ as coefficients, the degree $i$ data is computed by the formula
 
 $$\Hom_{D(\mathcal{O}_{X_0})}(\LL_{X_0/S},\mathcal{G}[i])\cong H^i\bigl(R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
 
-. Here, the single complex $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$ contains the coefficient data in all degrees together, and the shift $\mathcal{G}[i]$ is the notation for reading its $i$-th cohomology as a morphism set in the derived category ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 10](/en/math/homological_algebra/derived_categories#prop10){: data-relation="required" }). We write this as
+. Here, the single complex $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$ contains the coefficient data in all degrees together, and the shift $\mathcal{G}[i]$ is the notation for reading its $i$-th cohomology as a morphism set in the derived category ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 10](/en/math/homological_algebra/derived_categories#prop10){: data-lid="bz5fv" data-relation="required" }). We write this as
 
 $$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qquad T^i(X_0/S)=T^i(X_0/S,\mathcal{O}_{X_0})$$
 
@@ -563,7 +563,7 @@ such that a deformation over $S'$ exists if and only if $\ob(X_0/S')=0$. In this
 
 In particular, when $S'=S[\epsilon]$, the isomorphism classes of first-order deformations are in natural bijection with $T^1(X_0/S)$, where the trivial deformation corresponds to $0$.
 
-Since the invariants $T^i(X_0/S)$ obtained in [Theorem 11](#thm11){: data-relation="required" } above are defined as the global $\Ext$ of the cotangent complex, to read off information directly on each affine piece we must consider the *sheaf Ext*
+Since the invariants $T^i(X_0/S)$ obtained in [Theorem 11](#thm11){: data-lid="z7f7e" data-relation="required" } above are defined as the global $\Ext$ of the cotangent complex, to read off information directly on each affine piece we must consider the *sheaf Ext*
 
 $$\sExt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})$$
 
@@ -587,7 +587,7 @@ $$0\longrightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^1(X_0/S)\long
 holds.
 :::
 ::: Proof
-By [\[Homological Algebra\] §Spectral Sequences, ⁋Proposition 10](/en/math/homological_algebra/spectral_sequences#prop10){: data-relation="required" }, the filtration on $T^1(X_0/S)$ given by convergence yields a short exact sequence $0\rightarrow E_\infty^{1,0}\rightarrow T^1(X_0/S)\rightarrow E_\infty^{0,1}\rightarrow0$. By the first quadrant condition, $E_\infty^{1,0}=E_2^{1,0}$ and $E_\infty^{0,1}=\ker(d_2:E_2^{0,1}\rightarrow E_2^{2,0})$. On the other hand, in total degree $2$, we have $E_\infty^{2,0}=E_2^{2,0}/\im d_2$, which is isomorphic to the first term $F^2T^2(X_0/S)\subseteq T^2(X_0/S)$ of the convergence filtration. Splicing these together and substituting $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)$, we obtain the given exact sequence.
+By [\[Homological Algebra\] §Spectral Sequences, ⁋Proposition 10](/en/math/homological_algebra/spectral_sequences#prop10){: data-lid="e2vso" data-relation="required" }, the filtration on $T^1(X_0/S)$ given by convergence yields a short exact sequence $0\rightarrow E_\infty^{1,0}\rightarrow T^1(X_0/S)\rightarrow E_\infty^{0,1}\rightarrow0$. By the first quadrant condition, $E_\infty^{1,0}=E_2^{1,0}$ and $E_\infty^{0,1}=\ker(d_2:E_2^{0,1}\rightarrow E_2^{2,0})$. On the other hand, in total degree $2$, we have $E_\infty^{2,0}=E_2^{2,0}/\im d_2$, which is isomorphic to the first term $F^2T^2(X_0/S)\subseteq T^2(X_0/S)$ of the convergence filtration. Splicing these together and substituting $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)$, we obtain the given exact sequence.
 :::
 
 Each term of the above five-term exact sequence corresponds in an exact one-to-one manner to the three kinds of data examined earlier. First, the canonical morphism $T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)$ in the middle forgets the gluing data from a global deformation and retains only the local deformation classes on each affine piece. Therefore, its codomain $H^0(X_0,\mathcal{T}_{X_0/S}^1)$ is the collection of local deformation classes on each piece whose restrictions to overlaps are mutually compatible.
@@ -604,7 +604,7 @@ $$T^i(X_0/S)\cong H^i(X_0,\mathcal{T}_{X_0/S})$$
 holds. In particular, $H^1(X_0,\mathcal{T}_{X_0/S})$ classifies the isomorphism classes of first-order deformations.
 :::
 ::: Proof
-In the smooth case, $\LL_{X_0/S}\simeq\Omega_{X_0/S}$ and $\Omega_{X_0/S}$ is locally free, so $\mathcal{T}_{X_0/S}^q=0$ for $q>0$ and $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$. Thus the spectral sequence of [Theorem 12](#thm12){: data-relation="required" } degenerates to the single row $q=0$.
+In the smooth case, $\LL_{X_0/S}\simeq\Omega_{X_0/S}$ and $\Omega_{X_0/S}$ is locally free, so $\mathcal{T}_{X_0/S}^q=0$ for $q>0$ and $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$. Thus the spectral sequence of [Theorem 12](#thm12){: data-lid="51og8" data-relation="required" } degenerates to the single row $q=0$.
 :::
 
 ---
