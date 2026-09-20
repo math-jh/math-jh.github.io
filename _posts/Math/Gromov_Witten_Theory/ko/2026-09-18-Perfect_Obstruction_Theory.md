@@ -12,6 +12,8 @@ date: 2026-09-18
 
 weight: 4
 
+drift_needed: true
+
 ---
 
 대수기하학에서 공간의 국소적인 기하학은 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들의 관계로 이해된다. 일반적인 smooth point에서는 점 근방이 tangent space와 같은 차원을 갖지만, singular point에서는 tangent space, 즉 $1$차 미분이 공간을 온전히 복원하지 못해서 그 tangent space가 실제 공간보다 더 큰 공간의 역할을 한다. 때문에 이러한 곳에서는 $2$차 이상의 고차항이 tangent space를 잘라내서 원래의 공간을 결정하도록 해야 한다. 이러한 고차 방정식들이 $r$개의 독립적인 구속조건으로 작동한다면 기대 차원은 tangent space의 차원보다 $r$만큼 작지만, 방정식들이 서로 종속이 되거나 무력화되면 차원을 기대만큼 깎지 못해 실제 차원이 이 기대치를 초과할 수 있다.
@@ -182,6 +184,9 @@ $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\
 
 이 되어 virtual class가 보통의 fundamental class와 일치한다. $X=\mathbb{P}^r$와 Grassmannian, 일반적인 flag variety $G/P$가 모두 이 경우에 해당하며, 여기에서의 genus $0$ curve counting은 smooth moduli의 (진짜) fundamental class에 대한 적분과 동일하게 나오며, 이것이 이전 글의 계산을 정당화한다. 
 :::
+
+[§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-relation="required" }에서 우리는 fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$가 존재하는 경우에 대해서만 정의하였으나, 이 fundamental class만 virtual fundamental class로 바꿔주면 convex 가정 없이도 임의의 smooth projective target $X$에 대한 genus $0$ Gromov-Witten invariant를 정의할 수 있으며, convex 가정 하에서 이 두 정의가 같은 것은 위의 [예시 5](#ex5){: data-relation="required" }에 의해 자명하다. 그럼 이 정의 하에서, virtual class가 forgetful morphism 및 gluing morphism에 대해 잘 행동하는 것을 확인할 수 있으므로 [§그로모프-위튼 불변량, §§그로모프-위튼 불변량의 공리들](/ko/math/gromov-witten_theory/gromov-witten_invariants#그로모프-위튼-불변량의-공리들){: data-relation="required" }의 string·divisor·splitting 공리와 WDVV 관계도 해당 적분들을 virtual class에 대한 적분으로 해석하면 그대로 성립한다.
+
 ::: 예시 6
 반대편 극단으로 도입에서 본 constant map의 moduli $\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$을 살펴보며 글을 마친다. 여기서는 obstruction이 통째로 살아있다는 것이 우리의 도입부의 주장이었으므로, 이제 엄밀한 언어로 이를 다시 계산하자. 
 
