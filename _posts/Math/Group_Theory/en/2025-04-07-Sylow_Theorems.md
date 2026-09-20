@@ -104,7 +104,7 @@ then by applying this action to each element of each element of $E$ (that is, to
 
 $$G \times \{s\},\qquad s\in S$$
 
-so $\lvert E^G\rvert=m$, and now by [Lemma 2](#lem2){: data-relation="required" }
+so $\lvert E^G\rvert=m$, and now by [Lemma 2](#lem2){: data-lid="w0sse" data-relation="required" }
 
 $$\binom{n}{p^r} = \lvert E\rvert \equiv \lvert E^G\rvert = m \not\equiv 0 \pmod{p}$$
 
@@ -117,7 +117,7 @@ Then the first result of the Sylow theorems is the existence of Sylow $p$-subgro
 $G$ has a Sylow $p$-subgroup.
 :::
 ::: Proof
-Let $E$ be the set of subsets of $G$ with $p^r$ elements. Then by [Lemma 6](#lem6){: data-relation="required" }
+Let $E$ be the set of subsets of $G$ with $p^r$ elements. Then by [Lemma 6](#lem6){: data-lid="wmnec" data-relation="required" }
 
 $$\lvert E\rvert = \binom{n}{p^r}\not\equiv 0\pmod{p}$$
 
@@ -125,9 +125,9 @@ Now consider the left translation action of $G$ on itself
 
 $$L_g:G \rightarrow G;\qquad x\mapsto gx$$
 
-and view this action as an action on $E$ in the same way as in the proof of [Lemma 6](#lem6){: data-relation="required" }. Then from the assumption $\lvert E\rvert\not\equiv 0\pmod{p}$, there exists an orbit $O$ whose size is not a multiple of $p$. Now let $X$ be an element of $O$, and let the stabilizer of $X$ be $\Stab(\{X\})=\Stab(X)$. Then $\Stab(X)$ is a subgroup of $G$, and by ([\[Algebraic Structures\] §Group Actions, ⁋Corollary 8](/en/math/algebraic_structures/group_actions#cor8){: data-lid="5p0t3" data-relation="required" }) this is the subgroup we want.
+and view this action as an action on $E$ in the same way as in the proof of [Lemma 6](#lem6){: data-lid="jhsc5" data-relation="required" }. Then from the assumption $\lvert E\rvert\not\equiv 0\pmod{p}$, there exists an orbit $O$ whose size is not a multiple of $p$. Now let $X$ be an element of $O$, and let the stabilizer of $X$ be $\Stab(\{X\})=\Stab(X)$. Then $\Stab(X)$ is a subgroup of $G$, and by ([\[Algebraic Structures\] §Group Actions, ⁋Corollary 8](/en/math/algebraic_structures/group_actions#cor8){: data-lid="5p0t3" data-relation="required" }) this is the subgroup we want.
 
-To show this, we first obtain from [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-relation="required" }
+To show this, we first obtain from [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="2r8ij" data-relation="required" }
 
 $$\lvert O\rvert=\lvert G\cdot X\rvert=[G:\Stab(X)]=\frac{\lvert G\rvert}{\lvert\Stab(X)\rvert}\not\equiv 0\pmod{p}$$
 
@@ -155,7 +155,7 @@ The following hold.
 2. Every $p$-subgroup of $G$ is contained in some Sylow $p$-subgroup.
 :::
 ::: Proof
-Let $P$ be a Sylow $p$-subgroup of $G$, and let $H$ be a $p$-subgroup of $G$. Considering the left translation action of $H$ on the set $E = G/P$, by [Lemma 2](#lem2){: data-relation="required" } we have $\lvert E^H\rvert\neq 0$, so there exists $x\in G/P$ with $Hx=x$. Now choose a representative $g\in G$ of the element $x$ of $G/P$. Then for any $h \in H$ we have $h(gP) = gP$, so $g^{-1} h g \in P$. Therefore $H \subseteq gPg^{-1}$, and this proves the second claim.
+Let $P$ be a Sylow $p$-subgroup of $G$, and let $H$ be a $p$-subgroup of $G$. Considering the left translation action of $H$ on the set $E = G/P$, by [Lemma 2](#lem2){: data-lid="jety3" data-relation="required" } we have $\lvert E^H\rvert\neq 0$, so there exists $x\in G/P$ with $Hx=x$. Now choose a representative $g\in G$ of the element $x$ of $G/P$. Then for any $h \in H$ we have $h(gP) = gP$, so $g^{-1} h g \in P$. Therefore $H \subseteq gPg^{-1}$, and this proves the second claim.
 
 Now suppose $H$ is a Sylow $p$-subgroup. Then
 
@@ -169,7 +169,7 @@ Suppose for contradiction that there is another fixed point $Q \in \Syl_p(G)$. T
 
 $$P = nQn^{-1} = Q$$
 
-holds. Therefore by [Lemma 2](#lem2){: data-relation="required" } we know that $\lvert \Syl_p(G) \rvert \equiv \lvert \Syl_p(G)^P \rvert = 1 \pmod{p}$.
+holds. Therefore by [Lemma 2](#lem2){: data-lid="2kbrn" data-relation="required" } we know that $\lvert \Syl_p(G) \rvert \equiv \lvert \Syl_p(G)^P \rvert = 1 \pmod{p}$.
 :::
 
 ::: Corollary 9
@@ -205,7 +205,7 @@ Let $N$ be a normal subgroup of $G$. Then the image of a Sylow $p$-subgroup of $
 ::: Proof
 Fix $P\in \Syl_p(G)$, let $G' = G/N$, and let $P'$ be the image of $P$ in $G'$.
 
-Considering the left translation action of $G$ on $G'/P'$, this is a transitive action, so the orbit of $G$ is $G'/P'$ itself. Now by [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-relation="required" }
+Considering the left translation action of $G$ on $G'/P'$, this is a transitive action, so the orbit of $G$ is $G'/P'$ itself. Now by [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="aj9q9" data-relation="required" }
 
 $$\lvert G'/P'\rvert=[G:\Stab(G'/P')]$$
 
@@ -216,7 +216,7 @@ For the converse, if we consider another Sylow $p$-subgroup $Q'$ of $G'$, then f
 
 ## Applications of the Sylow Theorems
 
-As mentioned earlier, the Sylow theorems are useful for the classification of finite groups. To this end, let us examine [Theorem 8](#thm8){: data-relation="required" } more closely. Let $n_p$ be the size of $\Syl_p(G)$. By the second part of the first result of [Theorem 8](#thm8){: data-relation="required" }, we have $n_p\equiv 1\pmod{p}$. On the other hand, the first part of the first result of [Theorem 8](#thm8){: data-relation="required" } shows that $G$ acts transitively on $\Syl_p(G)$, so by [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="pkkly" data-relation="required" }
+As mentioned earlier, the Sylow theorems are useful for the classification of finite groups. To this end, let us examine [Theorem 8](#thm8){: data-lid="z4myc" data-relation="required" } more closely. Let $n_p$ be the size of $\Syl_p(G)$. By the second part of the first result of [Theorem 8](#thm8){: data-lid="4wf13" data-relation="required" }, we have $n_p\equiv 1\pmod{p}$. On the other hand, the first part of the first result of [Theorem 8](#thm8){: data-lid="vroku" data-relation="required" } shows that $G$ acts transitively on $\Syl_p(G)$, so by [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="pkkly" data-relation="required" }
 
 $$n_p=\lvert \Syl_p(G)\rvert=[G:\Stab(P)],\qquad P\in\Syl_p(G)$$
 
@@ -227,12 +227,12 @@ Let us classify finite groups of order $15$.
 
 $$\lvert G\rvert = 15 = 3\times 5$$
 
-First consider the Sylow 3-subgroups. Then by [Theorem 8](#thm8){: data-relation="required" } the number $n_3$ of Sylow 3-subgroups satisfies the following two conditions:
+First consider the Sylow 3-subgroups. Then by [Theorem 8](#thm8){: data-lid="3sckx" data-relation="required" } the number $n_3$ of Sylow 3-subgroups satisfies the following two conditions:
 
 - $n_3\equiv 1\pmod{3}$,
 - $n_3$ divides $5$.
 
-The only $n_3$ satisfying these two conditions is $1$, and by the result of [Theorem 8](#thm8){: data-relation="required" } this means that the (unique) Sylow $3$-subgroup $P_3$ of $G$ is a normal subgroup.
+The only $n_3$ satisfying these two conditions is $1$, and by the result of [Theorem 8](#thm8){: data-lid="grova" data-relation="required" } this means that the (unique) Sylow $3$-subgroup $P_3$ of $G$ is a normal subgroup.
 
 Similarly, consider the Sylow 5-subgroups. By the Sylow theorems, the number $n_5$ of Sylow 5-subgroups satisfies:
 
@@ -248,7 +248,7 @@ $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert
 so eventually $G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$.
 :::
 
-As another powerful application of the Sylow theorems, we show that the alternating group $A_5$ is a simple group. This was already proved in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-relation="weak" } by directly investigating the structure of conjugacy classes. There, the fact that $A_5$ is not such a large group was used to classify the types of elements one by one; here we derive the same conclusion by counting the Sylow subgroups that a normal subgroup must contain.
+As another powerful application of the Sylow theorems, we show that the alternating group $A_5$ is a simple group. This was already proved in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-lid="mjchw" data-relation="weak" } by directly investigating the structure of conjugacy classes. There, the fact that $A_5$ is not such a large group was used to classify the types of elements one by one; here we derive the same conclusion by counting the Sylow subgroups that a normal subgroup must contain.
 
 ::: Proposition 14
 The alternating group $A_5$ is a simple group.
@@ -259,11 +259,11 @@ The order of the alternating group is
 
 $$\lvert A_5\rvert=\frac{5!}{2}=60=2^2\cdot 3\cdot 5$$
 
-Also, as we saw in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-relation="weak" }, the elements of $A_5$ consist of $1$ identity element, $20$ elements of order $3$ (3-cycles), $15$ elements of order $2$ (double transpositions), and $24$ elements of order $5$ (5-cycles).
+Also, as we saw in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-lid="e936n" data-relation="weak" }, the elements of $A_5$ consist of $1$ identity element, $20$ elements of order $3$ (3-cycles), $15$ elements of order $2$ (double transpositions), and $24$ elements of order $5$ (5-cycles).
 
 Now suppose $N\triangleleft A_5$ satisfies $N\neq\{e\}$, and let us show that $N=A_5$. The order $\lvert N\rvert$ divides $60$, and among the divisors of $60$, those not divisible by the primes $3$ or $5$ are only $1,2,4$. Therefore either $3$ or $5$ divides $\lvert N\rvert$, or else $\lvert N\rvert\in\{2,4\}$.
 
-First suppose $5\mid\lvert N\rvert$. Then $N$ has an element of order $5$, and the subgroup $P$ generated by this element is a Sylow 5-subgroup of $A_5$. Since $N$ is normal, for any $g\in A_5$ we have $gPg^{-1}\subseteq gNg^{-1}=N$, and by [Theorem 8](#thm8){: data-relation="required" } every Sylow 5-subgroup of $A_5$ is conjugate to $P$, so eventually $N$ contains all of them. On the other hand, there are $24$ 5-cycles in $A_5$, each Sylow 5-subgroup contains exactly $4$ 5-cycles, and distinct Sylow 5-subgroups are subgroups of order $5$ so they share only the identity element. Therefore the number of Sylow 5-subgroups is $n_5=24/4=6$, which is consistent with the Sylow theorem results $n_5\equiv 1\pmod{5}$ and $n_5\mid 12$. Thus $N$ contains $24$ elements of order $5$, so $\lvert N\rvert\geq 25$, and since $5\mid\lvert N\rvert$ and $\lvert N\rvert\mid 60$, we must have $\lvert N\rvert\in\{30,60\}$.
+First suppose $5\mid\lvert N\rvert$. Then $N$ has an element of order $5$, and the subgroup $P$ generated by this element is a Sylow 5-subgroup of $A_5$. Since $N$ is normal, for any $g\in A_5$ we have $gPg^{-1}\subseteq gNg^{-1}=N$, and by [Theorem 8](#thm8){: data-lid="7cqts" data-relation="required" } every Sylow 5-subgroup of $A_5$ is conjugate to $P$, so eventually $N$ contains all of them. On the other hand, there are $24$ 5-cycles in $A_5$, each Sylow 5-subgroup contains exactly $4$ 5-cycles, and distinct Sylow 5-subgroups are subgroups of order $5$ so they share only the identity element. Therefore the number of Sylow 5-subgroups is $n_5=24/4=6$, which is consistent with the Sylow theorem results $n_5\equiv 1\pmod{5}$ and $n_5\mid 12$. Thus $N$ contains $24$ elements of order $5$, so $\lvert N\rvert\geq 25$, and since $5\mid\lvert N\rvert$ and $\lvert N\rvert\mid 60$, we must have $\lvert N\rvert\in\{30,60\}$.
 
 Similarly, in the case $3\mid\lvert N\rvert$, by the same argument we know that $N$ contains all Sylow 3-subgroups of $A_5$. There are $20$ 3-cycles, each Sylow 3-subgroup has $2$ 3-cycles, and distinct ones share only the identity element, so $n_3=20/2=10$, and $N$ contains $20$ elements of order $3$, so $\lvert N\rvert\geq 21$. Likewise $\lvert N\rvert\in\{30,60\}$.
 

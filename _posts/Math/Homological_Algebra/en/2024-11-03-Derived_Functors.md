@@ -99,7 +99,7 @@ For this definition to make sense, $L_iF(A)$ must not depend on the choice of $P
 $L_iF(A)$ does not depend on the choice of $P_\bullet$ above.
 :::
 ::: Proof
-Take two projective resolutions and apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" } to the identity map.
+Take two projective resolutions and apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="ah953" data-relation="required" } to the identity map.
 :::
 
 Now let us examine left derived functors in more detail. First, since $F$ is right exact, we know that the sequence
@@ -116,7 +116,7 @@ To show that the $L_\bullet F$ form a homological $\delta$-functor, we must firs
 The $L_iF$ are additive functors.
 :::
 ::: Proof
-First, given any $f: A' \rightarrow A$ and projective resolutions of $A'$ and $A$ respectively, we can apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" } to obtain $L_nF(f)$. That this satisfies functoriality and additivity is obvious from the universal property.
+First, given any $f: A' \rightarrow A$ and projective resolutions of $A'$ and $A$ respectively, we can apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="i37s0" data-relation="required" } to obtain $L_nF(f)$. That this satisfies functoriality and additivity is obvious from the universal property.
 :::
 
 ::: Lemma 7
@@ -139,7 +139,7 @@ is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Pr
 
 $$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
 
-That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-lid="7kyzg" data-relation="required" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" }.
+That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-lid="7kyzg" data-relation="required" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="zwx4w" data-relation="required" }.
 :::
 
 Moreover, they define a *universal* homological $\delta$-functor in the sense of [Definition 3](#def3){: data-lid="ejbqi" data-relation="required" }. We omit the proof of this.
@@ -148,7 +148,7 @@ Moreover, they define a *universal* homological $\delta$-functor in the sense of
 Consider an abelian category $\mathcal{A}$ with enough projectives and any right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$. Then the derived functors $L_nF$ are universal $\delta$-functors.
 :::
 
-Just as in the discussion above, we can also define right derived functors for a left exact functor. Its definition is the "dual" of [Definition 4](#def4){: data-relation="required" }.
+Just as in the discussion above, we can also define right derived functors for a left exact functor. Its definition is the "dual" of [Definition 4](#def4){: data-lid="2m78g" data-relation="required" }.
 
 ::: Definition 9
 Let a left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given, and suppose $\mathcal{A}$ has enough injectives. Then the *right derived functors* $R^i F$ of $F$ are defined by the formula
@@ -156,7 +156,7 @@ Let a left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given, and su
 $$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
 :::
 
-Then one can also show that these are universal cohomological $\delta$-functors. The reason we use superscripts, unlike in [Definition 4](#def4){: data-relation="weak" }, is that these are literally *cohomological* $\delta$-functors, and they arise mainly when dealing with matters related to cohomology.
+Then one can also show that these are universal cohomological $\delta$-functors. The reason we use superscripts, unlike in [Definition 4](#def4){: data-lid="jy33o" data-relation="weak" }, is that these are literally *cohomological* $\delta$-functors, and they arise mainly when dealing with matters related to cohomology.
 
 ---
 
