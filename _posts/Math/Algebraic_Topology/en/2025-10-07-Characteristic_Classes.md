@@ -133,7 +133,7 @@ with determinant $a^2+b^2>0$, and for general $A$ the determinant always becomes
 
 In particular, the Euler class is canonically and well defined for any complex vector bundle. Moreover, there are additional invariants beyond the Euler class. For example, a complex vector bundle $E$ and its conjugate $\bar{E}$ are the same as underlying real vector bundles, but they are generally different as complex vector bundles, and the *Chern classes* we will define can distinguish them.
 
-The Chern classes satisfy $c_n=e(E_\mathbb{R})$ for the top Chern class, so they can be thought of as characteristic classes extending the Euler class. There are several ways to define them. In differential geometry one derives them from the curvature of a connection via Chern–Weil theory, or one can take an axiomatic approach as was done for Stiefel-Whitney classes. (Of course in this case existence must be proved separately.) Following [MS], we define Chern classes by descending step by step from the Euler class, i.e. the top Chern class. What is needed in this process is the *Gysin exact sequence* of [Theorem 5](#thm5){: data-relation="forward" }.
+The Chern classes satisfy $c_n=e(E_\mathbb{R})$ for the top Chern class, so they can be thought of as characteristic classes extending the Euler class. There are several ways to define them. In differential geometry one derives them from the curvature of a connection via Chern–Weil theory, or one can take an axiomatic approach as was done for Stiefel-Whitney classes. (Of course in this case existence must be proved separately.) Following [MS], we define Chern classes by descending step by step from the Euler class, i.e. the top Chern class. What is needed in this process is the *Gysin exact sequence* of [Theorem 5](#thm5){: data-lid="kr8al" data-relation="forward" }.
 
 To describe this, we first make the following definition. If the base $B$ is paracompact, then by a partition of unity we can put a fiber metric on $E$ giving an inner product on each fiber, and then the set of vectors of length $1$
 
@@ -166,7 +166,7 @@ Consider the cohomology long exact sequence of the pair $(D(E), S(E))$
 
 $$\cdots\rightarrow H^k(D(E), S(E))\rightarrow H^k(D(E))\rightarrow H^k(S(E))\xrightarrow{\ \delta\ }H^{k+1}(D(E), S(E))\rightarrow\cdots$$
 
-First, the first term is identified using [Theorem 2](#thm2){: data-relation="required" reviewed="" } as
+First, the first term is identified using [Theorem 2](#thm2){: data-lid="48aa1" data-relation="required" reviewed="" } as
 
 $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
@@ -187,7 +187,7 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 
 The third morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$ has a somewhat special property. The natural morphism that a continuous map $\pi:S(E)\rightarrow B$ induces on cohomology is usually the pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$, which goes in the reverse direction of $\pi$ and preserves degree. By contrast, $\pi_!$ goes in the same direction as $\pi$ while lowering degree by $(n-1)$; a morphism that goes against the direction naturally induced by a continuous function is conventionally called a *wrong-way map* and denoted with the subscript $!$.
 
-The intuition for this morphism lies in reversing [Theorem 2](#thm2){: data-relation="weak" }. If the Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$ was a lift in the fiber direction, copying the base class $\alpha$ to each point of the fiber via $p^\ast\alpha$ and then multiplying by the fiber-direction class $u$ to raise degree, then $\pi_!$ should be thought of as its inverse. That is, viewing a class on $S(E)$ as having a base-direction component and a fiber-direction component, the fiber-direction component is integrated out along each fiber $S^{n-1}$, and the remaining base-direction class is returned as-is; in this process the fiber dimension $n-1$ is lost. The precise mathematical formulation of this property is the *projection formula*
+The intuition for this morphism lies in reversing [Theorem 2](#thm2){: data-lid="ucgpa" data-relation="weak" }. If the Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$ was a lift in the fiber direction, copying the base class $\alpha$ to each point of the fiber via $p^\ast\alpha$ and then multiplying by the fiber-direction class $u$ to raise degree, then $\pi_!$ should be thought of as its inverse. That is, viewing a class on $S(E)$ as having a base-direction component and a fiber-direction component, the fiber-direction component is integrated out along each fiber $S^{n-1}$, and the remaining base-direction class is returned as-is; in this process the fiber dimension $n-1$ is lost. The precise mathematical formulation of this property is the *projection formula*
 
 $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\ast(B), \quad\beta\in H^\ast(S(E))$$
 
@@ -205,7 +205,7 @@ so $\pi^\ast:H^k(B)\rightarrow H^k(S(E))$ is an isomorphism. That is, the cohomo
 
 Henceforth let $E\rightarrow B$ be a *complex* rank $n$ vector bundle, and consider the deleted total space $E_0=E\setminus 0(B)$ that we have been examining. A point of $E_0$ is an ordered pair of a point $x\in B$ of the base and a *nonzero* $v\in E_x$ in the fiber of $E$ at that point. Now define the *tautological bundle* $\pi_0^\ast E$ over $E_0$. This is the vector bundle obtained by pulling back $E\rightarrow B$ along the projection map $\pi_0:E_0\rightarrow B$, and concretely it is the vector bundle having fiber $(\pi_0^\ast E)_{(x,v)}= E_x$ at each point $(x,v)\in E_0$. That is, $v$ is also an element of the vector space attached to each point $(x,v)$, and since it is nonzero it defines a 1-dimensional subspace $\langle v\rangle$ inside this vector space. Now attaching such a line to every point of $E_0$ in this way produces a line bundle $L\rightarrow E_0$, and we can consider the quotient $(\pi_0^\ast E)/L\rightarrow E_0$ defined inside $\pi_0^\ast E$. This is the canonical complex rank $(n-1)$ bundle over $E_0$ with fiber $E_x/\langle v\rangle$ at each point $(x,v)$, and if we give a Hermitian inner product on each fiber it is also realized as the orthogonal complement $v^\perp\subseteq E_x$ of $v$. ([\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 4](/en/math/linear_algebra/complex_inner_product_spaces#prop4){: data-lid="hb22d" data-relation="weak" }) Since the two realizations are canonically isomorphic, we shall denote this rank $(n-1)$ bundle by $L^\perp$ for notational convenience.
 
-Now write $E_\mathbb{R}$ for $E$ viewed as an (oriented) real vector bundle. Since $E$ has complex dimension $n$, $E_\mathbb{R}$ has real dimension $2n$. Then $E_0$ is homotopy equivalent to the sphere bundle $S(E_{\mathbb{R}})$ of $E_{\mathbb{R}}$, so by [Theorem 5](#thm5){: data-relation="required" reviewed="" }
+Now write $E_\mathbb{R}$ for $E$ viewed as an (oriented) real vector bundle. Since $E$ has complex dimension $n$, $E_\mathbb{R}$ has real dimension $2n$. Then $E_0$ is homotopy equivalent to the sphere bundle $S(E_{\mathbb{R}})$ of $E_{\mathbb{R}}$, so by [Theorem 5](#thm5){: data-lid="c70pi" data-relation="required" reviewed="" }
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ {\smile}e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
@@ -236,9 +236,9 @@ The Chern class satisfies the following.
 :::
 
 ::: Proof
-The second and third conditions follow immediately from the definition once we use the vanishing of $c_n=e(E_{\mathbb{R}})$ via the third condition of [Proposition 4](#prop4){: data-relation="required" reviewed="" }.
+The second and third conditions follow immediately from the definition once we use the vanishing of $c_n=e(E_{\mathbb{R}})$ via the third condition of [Proposition 4](#prop4){: data-lid="vx48s" data-relation="required" reviewed="" }.
 
-The first condition is proved by induction on $n$. The naturality of $c_n$ comes from the naturality of the Euler class. (First condition of [Proposition 4](#prop4){: data-relation="required" reviewed="" }) For $0<i<n$, $f$ induces a bundle map $E_0'\rightarrow E_0$ compatible with the deleted spaces, complement bundles, and the entire Gysin sequence, and on it $f^\ast(L^\perp)\cong(f^\ast L)^\perp$, so the naturality of $c_i$ follows from the inductive hypothesis and the naturality of $\pi_0^\ast$.
+The first condition is proved by induction on $n$. The naturality of $c_n$ comes from the naturality of the Euler class. (First condition of [Proposition 4](#prop4){: data-lid="j4k6t" data-relation="required" reviewed="" }) For $0<i<n$, $f$ induces a bundle map $E_0'\rightarrow E_0$ compatible with the deleted spaces, complement bundles, and the entire Gysin sequence, and on it $f^\ast(L^\perp)\cong(f^\ast L)^\perp$, so the naturality of $c_i$ follows from the inductive hypothesis and the naturality of $\pi_0^\ast$.
 :::
 
 That is, the Chern class satisfies axiomatic properties of a similar kind to the Stiefel-Whitney class. ([§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5){: data-lid="d4x9w" data-relation="weak" }) We showed the existence of Stiefel-Whitney classes by considering the real infinite Grassmannian $\Gr(k,\mathbb{R}^\infty)$ and then pulling back cohomology classes from there to the original space to show that they satisfy the axiomatic conditions for Stiefel-Whitney classes; a similar construction is possible for Chern classes.
@@ -290,23 +290,23 @@ The key is the two identities for two line bundles $L,L'$:
 
 $$c_1(L\oplus L')=c_1(L)+c_1(L'),\qquad c_2(L\oplus L')=c_1(L)\smile c_1(L').$$
 
-The second identity is obtained immediately over an arbitrary base. By [Definition 6](#def6){: data-relation="required" reviewed="" }, the top class of a rank $2$ bundle is
+The second identity is obtained immediately over an arbitrary base. By [Definition 6](#def6){: data-lid="n2cbu" data-relation="required" reviewed="" }, the top class of a rank $2$ bundle is
 
 $$c_2(L\oplus L')=e\bigl((L\oplus L')_{\mathbb{R}}\bigr),$$
 
-and by the second result of [Proposition 4](#prop4){: data-relation="required" reviewed="" }, this equals $e(L_{\mathbb{R}})\smile e(L'_{\mathbb{R}})=c_1(L)\smile c_1(L')$.
+and by the second result of [Proposition 4](#prop4){: data-lid="88k6n" data-relation="required" reviewed="" }, this equals $e(L_{\mathbb{R}})\smile e(L'_{\mathbb{R}})=c_1(L)\smile c_1(L')$.
 
 For the first identity, let us first show that for any rank $n$ complex vector bundle $E$ and trivial line bundle $\varepsilon^1$,
 
 $$c(E\oplus\varepsilon^1)=c(E)$$
 
-holds. If $E'=E\oplus\varepsilon^1$, then the section $s(x)=(0,1)$ taking the constant $1$ from the trivial component is nowhere zero, giving a section $s:B\rightarrow E'_0$ with $\pi_0\circ s=\id$. Now at each point, the orthogonal complement of $(0,1)$ is exactly the fiber of $E$, so $s^\ast(E'^\perp)\cong E$, and thus applying $s^\ast$ to the formula $\pi_0^\ast c_i(E')=c_i(E'^\perp)$ from [Definition 6](#def6){: data-relation="required" reviewed="" } for $0<i\leq n$ yields, by naturality from [Proposition 7](#prop7){: data-relation="required" reviewed="" },
+holds. If $E'=E\oplus\varepsilon^1$, then the section $s(x)=(0,1)$ taking the constant $1$ from the trivial component is nowhere zero, giving a section $s:B\rightarrow E'_0$ with $\pi_0\circ s=\id$. Now at each point, the orthogonal complement of $(0,1)$ is exactly the fiber of $E$, so $s^\ast(E'^\perp)\cong E$, and thus applying $s^\ast$ to the formula $\pi_0^\ast c_i(E')=c_i(E'^\perp)$ from [Definition 6](#def6){: data-lid="fy0xo" data-relation="required" reviewed="" } for $0<i\leq n$ yields, by naturality from [Proposition 7](#prop7){: data-lid="37vfh" data-relation="required" reviewed="" },
 
 $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i(E).$$
 
-The top class $c_{n+1}(E')=e(E'_{\mathbb{R}})$ is zero by (3) of [Proposition 4](#prop4){: data-relation="required" } since there exists a nowhere vanishing section, which agrees with $c_{n+1}(E)=0$.
+The top class $c_{n+1}(E')=e(E'_{\mathbb{R}})$ is zero by (3) of [Proposition 4](#prop4){: data-lid="n35pd" data-relation="required" } since there exists a nowhere vanishing section, which agrees with $c_{n+1}(E)=0$.
 
-On the other hand, as we saw in [Example 8](#ex8){: data-relation="required" reviewed="" }, $\gamma$ is the universal family of complex line bundles, so any two line bundles $L,L'$ over a base $B$ are pullbacks $f_1^\ast\gamma$, $f_2^\ast\gamma$ along morphisms $f_1,f_2:B\rightarrow\CP^\infty$ of the base. Now setting
+On the other hand, as we saw in [Example 8](#ex8){: data-lid="yvcgd" data-relation="required" reviewed="" }, $\gamma$ is the universal family of complex line bundles, so any two line bundles $L,L'$ over a base $B$ are pullbacks $f_1^\ast\gamma$, $f_2^\ast\gamma$ along morphisms $f_1,f_2:B\rightarrow\CP^\infty$ of the base. Now setting
 
 $$f=(f_1, f_2): B\rightarrow \CP^\infty\times\CP^\infty,$$
 
@@ -322,7 +322,7 @@ that is,
 
 $$c_1(f^\ast(\pi_1^\ast\gamma \oplus \pi_2^\ast\gamma))=c_1(f_1^\ast\gamma)+c_1(f_2^\ast\gamma),$$
 
-is, by the first result of [Proposition 7](#prop7){: data-relation="required" reviewed="" }, the same as showing
+is, by the first result of [Proposition 7](#prop7){: data-lid="980z9" data-relation="required" reviewed="" }, the same as showing
 
 $$c_1(\pi_1^\ast\gamma\oplus \pi_2^\ast\gamma)=c_1(\pi_1^\ast\gamma)+c_1(\pi_2^\ast\gamma).$$
 
@@ -359,12 +359,12 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 holds for all $i$.
 :::
 ::: Proof
-Let us first consider the case of a line bundle $L$. By [Definition 6](#def6){: data-relation="required" reviewed="" }, $c_1(L)=e(L_{\mathbb{R}})$, and $L$ and $\bar{L}$ have the same underlying real bundle but opposite standard orientations. Indeed, for a nonzero vector $v$ in the fiber, the standard orientation of $L$ is given by the ordered basis $(v,iv)$, while in $\bar{L}$ since $i$ sends $v$ to $-iv$, the standard orientation is given by $(v,-iv)$, and the determinant of the change of basis matrix between the two bases is $-1$. Therefore by (5) of [Proposition 4](#prop4){: data-relation="required" reviewed="" }, $c_1(\bar{L})=-c_1(L)$.
+Let us first consider the case of a line bundle $L$. By [Definition 6](#def6){: data-lid="og5oh" data-relation="required" reviewed="" }, $c_1(L)=e(L_{\mathbb{R}})$, and $L$ and $\bar{L}$ have the same underlying real bundle but opposite standard orientations. Indeed, for a nonzero vector $v$ in the fiber, the standard orientation of $L$ is given by the ordered basis $(v,iv)$, while in $\bar{L}$ since $i$ sends $v$ to $-iv$, the standard orientation is given by $(v,-iv)$, and the determinant of the change of basis matrix between the two bases is $-1$. Therefore by (5) of [Proposition 4](#prop4){: data-lid="3yqkg" data-relation="required" reviewed="" }, $c_1(\bar{L})=-c_1(L)$.
 
 The general case also follows by the splitting principle, just as in the proof above.
 :::
 
-For instance, for the tautological bundle $\gamma$ of [Example 8](#ex8){: data-relation="weak" }, $c_1(\gamma)$ is a generator of $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$, so $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$, and therefore $\gamma\not\cong\bar{\gamma}$. Of course this distinction has its limitations: the conjugate of a bundle whose odd Chern classes are all $2$-torsion or $0$ cannot be distinguished by Chern classes alone, but we can still confirm that Chern classes carry richer information than real bundles.
+For instance, for the tautological bundle $\gamma$ of [Example 8](#ex8){: data-lid="uf9ox" data-relation="weak" }, $c_1(\gamma)$ is a generator of $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$, so $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$, and therefore $\gamma\not\cong\bar{\gamma}$. Of course this distinction has its limitations: the conjugate of a bundle whose odd Chern classes are all $2$-torsion or $0$ cannot be distinguished by Chern classes alone, but we can still confirm that Chern classes carry richer information than real bundles.
 
 Since all examples so far have been line bundles, let us look at one example showing how [Theorem 9](#thm9){: data-lid="jqjbq" data-relation="required" } is actually used in calculations for bundles of higher rank.
 
@@ -406,7 +406,7 @@ The *Pontryagin class* $p_i(E)\in H^{4i}(B;\mathbb{Z})$ of a real vector bundle 
 $$p_i(E)=(-1)^i c_{2i}(E\otimes_{\mathbb{R}}\mathbb{C}).$$
 :::
 
-The complexification $E\otimes_{\mathbb{R}}\mathbb{C}$ is isomorphic to its conjugate $\overline{E\otimes\mathbb{C}}$ via $v\otimes z\mapsto v\otimes\bar{z}$. Then by [Proposition 10](#prop10){: data-relation="required" reviewed="" }, $c_{2i+1}(E\otimes\mathbb{C})=-c_{2i+1}(E\otimes\mathbb{C})$, that is, the odd Chern classes all become $2$-torsion ($2c_{2i+1}=0$) and thus carry no essential information. For this reason we define the $i$-th class using only the even Chern classes (with sign), and since Chern classes live in cohomology of index twice their own number, Pontryagin classes end up living in $H^{4i}(B;\mathbb{Z})$. Intuitively, this can be thought of as bringing what Stiefel–Whitney classes did over $\mathbb{Z}/2$ to $\mathbb{Z}$-coefficients (without passing to complex vector bundles), or as bringing down what Chern classes did for complex vector bundles to real vector bundles.
+The complexification $E\otimes_{\mathbb{R}}\mathbb{C}$ is isomorphic to its conjugate $\overline{E\otimes\mathbb{C}}$ via $v\otimes z\mapsto v\otimes\bar{z}$. Then by [Proposition 10](#prop10){: data-lid="1gczf" data-relation="required" reviewed="" }, $c_{2i+1}(E\otimes\mathbb{C})=-c_{2i+1}(E\otimes\mathbb{C})$, that is, the odd Chern classes all become $2$-torsion ($2c_{2i+1}=0$) and thus carry no essential information. For this reason we define the $i$-th class using only the even Chern classes (with sign), and since Chern classes live in cohomology of index twice their own number, Pontryagin classes end up living in $H^{4i}(B;\mathbb{Z})$. Intuitively, this can be thought of as bringing what Stiefel–Whitney classes did over $\mathbb{Z}/2$ to $\mathbb{Z}$-coefficients (without passing to complex vector bundles), or as bringing down what Chern classes did for complex vector bundles to real vector bundles.
 
 The basic properties also descend from Chern classes via complexification. The total Pontryagin class is written as $p(E)=1+p_1(E)+p_2(E)+\cdots$.
 
@@ -418,9 +418,9 @@ For real vector bundles $E,F\rightarrow B$, the following hold.
 3. For a complex vector bundle $E$, $E_{\mathbb{R}}\otimes_{\mathbb{R}}\mathbb{C}\cong E\oplus\bar{E}$, and therefore $p_i(E_{\mathbb{R}})$ is a polynomial in the Chern classes of $E$. For instance, $p_1(E_{\mathbb{R}})=c_1(E)^2-2c_2(E)$.
 :::
 ::: Proof
-(1) follows immediately from the fact that complexification commutes with pullback and naturality from [Proposition 7](#prop7){: data-lid="36fag" data-relation="required" }. (2) also follows by applying [Theorem 9](#thm9){: data-relation="required" } to $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$: as observed below [Definition 12](#def12){: data-lid="yz9y7" data-relation="required" }, the odd Chern classes are all $2$-torsion, so the terms involving them vanish upon multiplication by $2$, and the remaining even terms give $p(E)\smile p(F)$.
+(1) follows immediately from the fact that complexification commutes with pullback and naturality from [Proposition 7](#prop7){: data-lid="36fag" data-relation="required" }. (2) also follows by applying [Theorem 9](#thm9){: data-lid="wciyz" data-relation="required" } to $(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$: as observed below [Definition 12](#def12){: data-lid="yz9y7" data-relation="required" }, the odd Chern classes are all $2$-torsion, so the terms involving them vanish upon multiplication by $2$, and the remaining even terms give $p(E)\smile p(F)$.
 
-Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes\mathbb{C}$, the complex structure emerges as $J\in \End(E_{\mathbb{R}})$. Extending this $\mathbb{C}$-linearly, its $\pm i$ eigenspace decomposition gives $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$. Then by [Theorem 9](#thm9){: data-relation="required" } and [Proposition 10](#prop10){: data-relation="required" reviewed="" }, $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$, and bringing this down to the Pontryagin class gives the desired result.
+Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes\mathbb{C}$, the complex structure emerges as $J\in \End(E_{\mathbb{R}})$. Extending this $\mathbb{C}$-linearly, its $\pm i$ eigenspace decomposition gives $E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$. Then by [Theorem 9](#thm9){: data-lid="em16x" data-relation="required" } and [Proposition 10](#prop10){: data-lid="82co8" data-relation="required" reviewed="" }, $c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$, and bringing this down to the Pontryagin class gives the desired result.
 :::
 
 ---
