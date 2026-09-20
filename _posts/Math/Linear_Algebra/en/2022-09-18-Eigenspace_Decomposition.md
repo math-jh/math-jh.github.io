@@ -201,15 +201,15 @@ We assume that the field $\mathbb{K}$ is algebraically closed while dealing with
 
 ## Diagonalization of Matrices
 
-We have previously examined how to decompose $\mathbb{R}^n$ through the eigenvalues and eigenspaces of an arbitrary $n\times n$ matrix $A$, and from [Proposition 6](#prop6){: data-relation="required" } we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5){: data-relation="required" } that we used to establish this. We added $n-k$ arbitrary vectors to a basis $x_1,\ldots, x_k$ of $E_\lambda$, then defined the matrix $X=(x_1\mid\cdots\mid x_n)$ through these, and showed by calculation that
+We have previously examined how to decompose $\mathbb{R}^n$ through the eigenvalues and eigenspaces of an arbitrary $n\times n$ matrix $A$, and from [Proposition 6](#prop6){: data-lid="ev2so" data-relation="required" } we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5){: data-lid="hcskw" data-relation="required" } that we used to establish this. We added $n-k$ arbitrary vectors to a basis $x_1,\ldots, x_k$ of $E_\lambda$, then defined the matrix $X=(x_1\mid\cdots\mid x_n)$ through these, and showed by calculation that
 
 $$X^{-1}AX=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
-has the upper left $k\times k$ block equal to the diagonal matrix $\lambda I_k$. However, if $A$ satisfies all the conditions of [Proposition 6](#prop6){: data-relation="required" }, instead of adding the $n-k$ vectors $x_{k+1},\ldots, x_n$ arbitrarily, we can choose them so that all $n$ vectors $x_1,\ldots, x_n$ form a basis of eigenspaces of $A$. Then from
+has the upper left $k\times k$ block equal to the diagonal matrix $\lambda I_k$. However, if $A$ satisfies all the conditions of [Proposition 6](#prop6){: data-lid="k8eaf" data-relation="required" }, instead of adding the $n-k$ vectors $x_{k+1},\ldots, x_n$ arbitrarily, we can choose them so that all $n$ vectors $x_1,\ldots, x_n$ form a basis of eigenspaces of $A$. Then from
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
-in the proof of [Proposition 5](#prop5){: data-relation="required" }, we see that $C$ also becomes a diagonal matrix and $B$ becomes the zero matrix. Therefore the following holds.
+in the proof of [Proposition 5](#prop5){: data-lid="vq7ry" data-relation="required" }, we see that $C$ also becomes a diagonal matrix and $B$ becomes the zero matrix. Therefore the following holds.
 
 ::: Proposition 7
 Consider an $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6){: data-lid="wv88r" data-relation="required" }, and let $x_1,\ldots, x_n$ be a basis of $\mathbb{R}^n$ consisting of eigenvectors of $A$. Let $Ax_i=\lambda_ix_i$ and $X=(x_1\mid\cdots\mid x_n)$. Then for the diagonal matrix
@@ -225,7 +225,7 @@ Thus we can give a suitable name to a matrix $A$ satisfying this condition.
 An $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6){: data-lid="k64zd" data-relation="required" } is called *diagonalizable*.
 :::
 
-Alternatively, since [Proposition 6](#prop6){: data-relation="weak" } gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
+Alternatively, since [Proposition 6](#prop6){: data-lid="n8ii6" data-relation="weak" } gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
 
 That diagonalizable matrices are conceptually important has been sufficiently examined above. Moreover, diagonalizable matrices are also of great computational utility. For example, if a matrix $A$ is diagonalizable with $A=XDX^{-1}$, then the powers of $A$ are given by $A^k=XD^kX^{-1}$, and since the power of a diagonal matrix is merely the diagonal matrix formed from the powers of each diagonal entry, computing powers of $A$ becomes a very easy task.
 
@@ -272,7 +272,7 @@ For a finite-dimensional vector space $V$ and a linear operator $L:V\rightarrow 
 
 $$\rank L +\nullity L=\dim V$$
 
-holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" }) Here $\rank L=\dim\im L$ and $\nullity L=\dim\ker L$. However, this does not mean that $V$ can be expressed as a direct sum of $\im L$ and $\ker L$. For example, for the matrix $A$ that was the non-diagonalizable example after [Proposition 4](#prop4){: data-relation="required" },
+holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="q7q8n" data-relation="required" }) Here $\rank L=\dim\im L$ and $\nullity L=\dim\ker L$. However, this does not mean that $V$ can be expressed as a direct sum of $\im L$ and $\ker L$. For example, for the matrix $A$ that was the non-diagonalizable example after [Proposition 4](#prop4){: data-lid="lc5f4" data-relation="required" },
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
@@ -293,7 +293,7 @@ $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subseteq \ker L$$
 so $w\in \ker L$. That is, $v=Lw=0$.
 :::
 
-Returning to the original story, we are particularly interested in the case where $L$ is of the form $A-\lambda I$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11){: data-relation="required" } to characterize diagonalizability concisely.
+Returning to the original story, we are particularly interested in the case where $L$ is of the form $A-\lambda I$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11){: data-lid="uav98" data-relation="required" } to characterize diagonalizability concisely.
 
 ::: Proposition 12
 A linear operator $A:V\rightarrow V$ is diagonalizable if and only if for every eigenvalue $\lambda\in\sigma(A)$,
@@ -311,11 +311,11 @@ By the uniqueness of the eigenspace decomposition, $(\mu-\lambda)^2v_\mu=0$ must
 
 $$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
-Conversely, suppose that for every eigenvalue $\lambda$, we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$. From [Lemma 11](#lem11){: data-relation="required" }, for each $\lambda$,
+Conversely, suppose that for every eigenvalue $\lambda$, we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$. From [Lemma 11](#lem11){: data-lid="l2y9s" data-relation="required" }, for each $\lambda$,
 
 $$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 
-and by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="required" },
+and by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="dowus" data-relation="required" },
 
 $$\dim\ker(A-\lambda I)+\dim\im(A-\lambda I)=\dim V$$
 
@@ -327,7 +327,7 @@ we see that $W_\lambda(A)$ is an $A$-invariant subspace. That is,
 
 $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
-is well-defined. Then from [Proposition 4](#prop4){: data-relation="required" }, if $w\in W_\lambda(A)$ is an eigenvector of $A\vert_{W_\lambda(A)}$ with eigenvalue $\mu$, then viewing $w$ as an element of $V$, it is also an eigenvector of $A$ (corresponding to eigenvalue $\mu$), and conversely, if an eigenvalue $\mu\neq \lambda$ of $A$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $A\vert_{W_\lambda(A)}$. Also, for any eigenvalue $\mu$ of $A\vert_{W_\lambda(A)}$,
+is well-defined. Then from [Proposition 4](#prop4){: data-lid="jvkku" data-relation="required" }, if $w\in W_\lambda(A)$ is an eigenvector of $A\vert_{W_\lambda(A)}$ with eigenvalue $\mu$, then viewing $w$ as an element of $V$, it is also an eigenvector of $A$ (corresponding to eigenvalue $\mu$), and conversely, if an eigenvalue $\mu\neq \lambda$ of $A$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $A\vert_{W_\lambda(A)}$. Also, for any eigenvalue $\mu$ of $A\vert_{W_\lambda(A)}$,
 
 $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 

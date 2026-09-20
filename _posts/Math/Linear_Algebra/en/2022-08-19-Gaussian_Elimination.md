@@ -188,7 +188,7 @@ Now, when an arbitrary system of linear equations is given, we can manipulate th
 The basic idea is that when performing Gaussian elimination, the columns do not mix with each other, which can also be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, since the right-hand side containing constants is subjected to the same operations as the left-hand side, we can add the components of the right-hand side to the matrix and compute them all at once.
 
 ::: Example 5
-Let us use the system of equations given in [Example 2](#ex2){: data-relation="weak" }:
+Let us use the system of equations given in [Example 2](#ex2){: data-lid="cgq0t" data-relation="weak" }:
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -196,7 +196,7 @@ From this system of equations, we consider the following *augmented matrix*:
 
 $$\begin{pmatrix} 1&2&4&3&2\\ 0&3&0&6&3\\ 0&0&1&5&1\end{pmatrix}$$
 
-The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2){: data-relation="weak" } to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
+The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2){: data-lid="ookai" data-relation="weak" } to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
 
 $$\begin{pmatrix}1&2&0&-17&-2\\ 0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 
@@ -208,7 +208,7 @@ and multiply the second row by $1/3$ to obtain:
 
 $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 
-Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2){: data-relation="weak" }:
+Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2){: data-lid="31ihf" data-relation="weak" }:
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 :::

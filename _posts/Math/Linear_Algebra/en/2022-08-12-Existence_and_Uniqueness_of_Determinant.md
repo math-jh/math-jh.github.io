@@ -69,7 +69,7 @@ then
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots, v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-holds. By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-relation="required" }, if there are duplicates among $i_1,\ldots, i_n$, then the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
+holds. By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="zj3f0" data-relation="required" }, if there are duplicates among $i_1,\ldots, i_n$, then the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
 
 $$f(v_1,\ldots, v_n)=\sum_{\tau\in S_n}v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}f(e_{\tau(1)},\ldots, e_{\tau(n)})$$
 
@@ -142,7 +142,7 @@ In the previous post we explained geometrically that a matrix $A$ is invertible 
 For any matrix $A\in\Mat_n(\mathbb{K})$, $\det A\neq 0$ is equivalent to $A$ being invertible.
 :::
 ::: Proof
-From the fundamental theorem of linear algebra, we know that $A$ being invertible is equivalent to the linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ defined by $A$ being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is equivalent to $L_A$ being surjective, which is equivalent to the column vectors $A_1,\ldots, A_n$ forming a basis of $\col(A)$, i.e., being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-relation="required" }, $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
+From the fundamental theorem of linear algebra, we know that $A$ being invertible is equivalent to the linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ defined by $A$ being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is equivalent to $L_A$ being surjective, which is equivalent to the column vectors $A_1,\ldots, A_n$ forming a basis of $\col(A)$, i.e., being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="zcri0" data-relation="required" }, $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
 
 Conversely, assume $A$ is invertible. Then from the formula
 
@@ -207,7 +207,7 @@ $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 equals $\det A$.
 :::
 ::: Proof
-This is almost identical to the proof of [Proposition 8](#prop8){: data-relation="required" }. Computing the determinant of the given matrix using formula (2), we get
+This is almost identical to the proof of [Proposition 8](#prop8){: data-lid="dbzx9" data-relation="required" }. Computing the determinant of the given matrix using formula (2), we get
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(k)k}B_{\tau(k+1)(k+1)}\cdots B_{\tau(k+l)(k+l)}$$
 
