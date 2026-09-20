@@ -97,19 +97,19 @@ The Cayley–Hamilton theorem shows that there always exists a nonzero polynomia
 For an $n\times n$ matrix $A$, among the monic polynomials satisfying $p(A)=0$, the one of smallest degree is called the *minimal polynomial* of $A$ and is denoted $m_A$.
 :::
 
-By [Theorem 4](#thm4){: data-relation="required" }, we have $p_A(A)=0$, and dividing $p_A$ by its leading coefficient yields a monic polynomial, so the monic polynomial of smallest degree in the above definition certainly exists. The following proposition shows that this minimal polynomial is unique and divides every polynomial that annihilates $A$.
+By [Theorem 4](#thm4){: data-lid="bvjgj" data-relation="required" }, we have $p_A(A)=0$, and dividing $p_A$ by its leading coefficient yields a monic polynomial, so the monic polynomial of smallest degree in the above definition certainly exists. The following proposition shows that this minimal polynomial is unique and divides every polynomial that annihilates $A$.
 
 ::: Proposition 6
 For an $n\times n$ matrix $A$, if a polynomial $p$ satisfies $p(A)=0$, then $m_A\mid p$. In particular, the minimal polynomial of $A$ is unique, and $m_A\mid p_A$ holds.
 :::
 ::: Proof
-By the division algorithm for polynomials, there exist polynomials $q,r$ such that $p=qm_A+r$ and either $r=0$ or $\deg r<\deg m_A$. By [Proposition 2](#prop2){: data-relation="required" },
+By the division algorithm for polynomials, there exist polynomials $q,r$ such that $p=qm_A+r$ and either $r=0$ or $\deg r<\deg m_A$. By [Proposition 2](#prop2){: data-lid="53tlz" data-relation="required" },
 
 $$r(A)=p(A)-q(A)m_A(A)=0-q(A)\cdot 0=0$$
 
 If $r\neq 0$, then dividing $r$ by its leading coefficient would yield a monic polynomial of degree less than $m_A$ that annihilates $A$, contradicting the minimality of $m_A$. Therefore $r=0$ and $m_A\mid p$.
 
-To show uniqueness, suppose $m_A'$ also satisfies the condition for a minimal polynomial. Then by the argument above, $m_A\mid m_A'$ and $m_A'\mid m_A$, and since both are monic polynomials of the same degree, $m_A=m_A'$. Finally, from [Theorem 4](#thm4){: data-relation="required" } we have $p_A(A)=0$, so $m_A\mid p_A$.
+To show uniqueness, suppose $m_A'$ also satisfies the condition for a minimal polynomial. Then by the argument above, $m_A\mid m_A'$ and $m_A'\mid m_A$, and since both are monic polynomials of the same degree, $m_A=m_A'$. Finally, from [Theorem 4](#thm4){: data-lid="un5f8" data-relation="required" } we have $p_A(A)=0$, so $m_A\mid p_A$.
 :::
 
 The roots of the minimal polynomial coincide exactly with the roots of the characteristic polynomial. That is, the degree may be smaller, but the only way degrees drop is by lowering multiplicities at repeated eigenvalues, so no eigenvalue is lost in this process.
@@ -137,7 +137,7 @@ Fix $\lambda=\lambda_i$ and let $e_\lambda$ be the nilpotency index of $N_\lambd
 
 $$p(\x)=\sum_{j\geq 0}c_j(\x-\lambda)^j$$
 
-then on $G_\lambda(A)$ we have $(A-\lambda I)\vert_{G_\lambda(A)}=N_\lambda$, so by [Proposition 2](#prop2){: data-relation="required" }
+then on $G_\lambda(A)$ we have $(A-\lambda I)\vert_{G_\lambda(A)}=N_\lambda$, so by [Proposition 2](#prop2){: data-lid="c9xto" data-relation="required" }
 
 $$p(A)\vert_{G_\lambda(A)}=\sum_{j\geq 0}c_jN_\lambda^j=\sum_{j=0}^{e_\lambda-1}c_jN_\lambda^j$$
 
@@ -164,11 +164,11 @@ Consider the matrix from [§Jordan Canonical Form, ⁋Example 2](/en/math/linear
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
-The characteristic polynomial of this matrix is $(\x-1)^3$, and for the unique eigenvalue $1$ we have $(A-I)^2\neq 0$ but $(A-I)^3=0$, so $e_1=3$. Therefore $m_A(\x)=(\x-1)^3=p_A(\x)$, and since this is a power of a linear factor, $A$ is not diagonalizable by [Corollary 9](#cor9){: data-relation="required" }. On the other hand, for the matrix
+The characteristic polynomial of this matrix is $(\x-1)^3$, and for the unique eigenvalue $1$ we have $(A-I)^2\neq 0$ but $(A-I)^3=0$, so $e_1=3$. Therefore $m_A(\x)=(\x-1)^3=p_A(\x)$, and since this is a power of a linear factor, $A$ is not diagonalizable by [Corollary 9](#cor9){: data-lid="hcgtd" data-relation="required" }. On the other hand, for the matrix
 
 $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
-the characteristic polynomial is $\x^2-1=(\x-1)(\x+1)$, and since $B^2=I$, we have $(B-I)(B+I)=B^2-I=0$. Thus $m_B(\x)=(\x-1)(\x+1)$, which is a product of two distinct linear factors, so $B$ is diagonalizable by [Corollary 9](#cor9){: data-relation="required" }. That is, what determines diagonalizability is not the characteristic polynomial but whether the minimal polynomial has repeated factors; in the case of $A$, $m_A=(\x-1)^3$ retains a repeated factor and fails to diagonalize.
+the characteristic polynomial is $\x^2-1=(\x-1)(\x+1)$, and since $B^2=I$, we have $(B-I)(B+I)=B^2-I=0$. Thus $m_B(\x)=(\x-1)(\x+1)$, which is a product of two distinct linear factors, so $B$ is diagonalizable by [Corollary 9](#cor9){: data-lid="5ewaz" data-relation="required" }. That is, what determines diagonalizability is not the characteristic polynomial but whether the minimal polynomial has repeated factors; in the case of $A$, $m_A=(\x-1)^3$ retains a repeated factor and fails to diagonalize.
 :::
 
 ## Jordan–Chevalley Decomposition

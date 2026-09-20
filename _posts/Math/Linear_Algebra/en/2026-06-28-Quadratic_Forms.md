@@ -79,13 +79,13 @@ $$Q(v)=a_1^2+\cdots+a_p^2-a_{p+1}^2-\cdots-a_{p+q}^2$$
 
 ## Sylvester's Law of Inertia
 
-[Proposition 2](#prop2){: data-relation="required" } shows that by choosing an appropriate basis, a quadratic form can be reduced to a sum of signed squares, but it is not yet clear whether the numbers $p,q,r$ appearing in this process can vary depending on the choice of basis. The following theorem shows that these three numbers are actually invariants of the bilinear form itself.
+[Proposition 2](#prop2){: data-lid="hm0bv" data-relation="required" } shows that by choosing an appropriate basis, a quadratic form can be reduced to a sum of signed squares, but it is not yet clear whether the numbers $p,q,r$ appearing in this process can vary depending on the choice of basis. The following theorem shows that these three numbers are actually invariants of the bilinear form itself.
 
 ::: Theorem 3 (Sylvester's Law of Inertia)
 For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vector space $V$, the numbers $p$, $q$, and $r$ counting how many of the values $\langle e_i,e_i\rangle$ are $1$, $-1$, and $0$ respectively in a basis as in [Proposition 2](#prop2){: data-lid="fiz6d" data-relation="required" } are determined independently of the choice of basis.
 :::
 ::: Proof
-Let the basis of [Proposition 2](#prop2){: data-relation="required" } be $\{e_1,\ldots, e_n\}$, and suppose it has been reordered so that there are $p$ copies of $+1$, $q$ copies of $-1$, and $r$ copies of $0$. The rank of a Gram matrix is invariant under congruence (since if $P$ is invertible, $\rank(P^tGP)=\rank G$), and the rank in this basis is $p+q$, so $p+q$ is independent of the choice of basis. Therefore $r=n-(p+q)$ is also independent. Now if we show that $p$ is invariant, then $q$ follows as well.
+Let the basis of [Proposition 2](#prop2){: data-lid="vgm5i" data-relation="required" } be $\{e_1,\ldots, e_n\}$, and suppose it has been reordered so that there are $p$ copies of $+1$, $q$ copies of $-1$, and $r$ copies of $0$. The rank of a Gram matrix is invariant under congruence (since if $P$ is invertible, $\rank(P^tGP)=\rank G$), and the rank in this basis is $p+q$, so $p+q$ is independent of the choice of basis. Therefore $r=n-(p+q)$ is also independent. Now if we show that $p$ is invariant, then $q$ follows as well.
 
 We show that $p$ can be characterized by the formula
 
@@ -122,7 +122,7 @@ Sylvester's law immediately gives a complete classification of real symmetric ma
 Two real symmetric matrices are congruent if and only if the bilinear forms they define have the same signature.
 :::
 ::: Proof
-If two matrices $G,G'$ are congruent, then they are the same bilinear form written with respect to different bases, so their signatures are the same. Conversely, if the signature is $(p,q,r)$ for both, then by [Proposition 2](#prop2){: data-relation="required" } both $G$ and $G'$ are congruent to the same diagonal matrix with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$, and since congruence is an equivalence relation, $G$ and $G'$ are congruent to each other.
+If two matrices $G,G'$ are congruent, then they are the same bilinear form written with respect to different bases, so their signatures are the same. Conversely, if the signature is $(p,q,r)$ for both, then by [Proposition 2](#prop2){: data-lid="cmtw8" data-relation="required" } both $G$ and $G'$ are congruent to the same diagonal matrix with $p$ copies of $1$, $q$ copies of $-1$, and $r$ copies of $0$, and since congruence is an equivalence relation, $G$ and $G'$ are congruent to each other.
 :::
 
 ## Positive Definiteness

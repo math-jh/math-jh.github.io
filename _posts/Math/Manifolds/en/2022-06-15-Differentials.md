@@ -121,11 +121,11 @@ Let $F:M\rightarrow N$ be a $C^\infty$ function between two manifolds. For any $
 $$(\dd{F_p}(v))g=v(g\circ F)$$
 :::
 
-Several consequences are immediate from the definition. First, for $\id_M:M\rightarrow M$, the differential $\dd{(\id_M)_p}$ is always the identity map $\id_{T_pM}$ on $T_pM$. This is clear from the formula in [Definition 7](#def7){: data-relation="required" }. Also, for three manifolds $M,N,P$, if $F:M\rightarrow N$ and $G:N\rightarrow P$ are $C^\infty$, then the formula
+Several consequences are immediate from the definition. First, for $\id_M:M\rightarrow M$, the differential $\dd{(\id_M)_p}$ is always the identity map $\id_{T_pM}$ on $T_pM$. This is clear from the formula in [Definition 7](#def7){: data-lid="esjrg" data-relation="required" }. Also, for three manifolds $M,N,P$, if $F:M\rightarrow N$ and $G:N\rightarrow P$ are $C^\infty$, then the formula
 
 $$\dd{(G\circ F)_p}=(\dd{G_{F(p)}})\circ (\dd{F_p})$$
 
-holds. This is obvious either from the fact that the pullback used to define the differential preserves composition, or by directly substituting $G\circ F$ into the formula of [Definition 7](#def7){: data-relation="required" }. From this one can show, among other things, that for a diffeomorphism $F$, the differential $\dd{F_p}$ is always an isomorphism of vector spaces.
+holds. This is obvious either from the fact that the pullback used to define the differential preserves composition, or by directly substituting $G\circ F$ into the formula of [Definition 7](#def7){: data-lid="rpk1o" data-relation="required" }. From this one can show, among other things, that for a diffeomorphism $F$, the differential $\dd{F_p}$ is always an isomorphism of vector spaces.
 
 However, there are many $C^\infty$ functions whose differential is an isomorphism but which are not diffeomorphisms.
 
