@@ -23,7 +23,7 @@ weight: 3
 
 우리는 stable curve의 $i$번째 marked point가 subvariety $\Gamma_i\subseteq X$를 지난다는 incidence condition을 evaluation map $\ev_i:\overline{\mathcal{M}}_{0,n}(X,\beta)\rightarrow X$를 통해 moduli stack $\overline{\mathcal{M}}_{0,n}(X,\beta)$ 위의 cohomology class $\ev_i^\ast[\Gamma_i]$로 옮겨서 계산한다. 직관적으로 이들의 곱은 이러한 condition들을 모두 만족하는 class에 해당하므로, 이들의 곱을 moduli 전체에서 적분하면 모든 조건을 동시에 만족하는 stable map의 개수에 해당하는 수를 얻는다. 
 
-우리는 이미 [§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-relation="required" reviewed="" }에서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 smooth proper Deligne–Mumford stack인 것을 살펴보았다. 따라서 특히 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋정의 4](/ko/math/stacks/integration_on_deligne_mumford_stacks#def4){: data-relation="required" reviewed="" }이 잘 적용된다. 
+우리는 이미 [§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-lid="5omgf" data-relation="required" reviewed="" }에서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 smooth proper Deligne–Mumford stack인 것을 살펴보았다. 따라서 특히 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋정의 4](/ko/math/stacks/integration_on_deligne_mumford_stacks#def4){: data-lid="7zvbr" data-relation="required" reviewed="" }이 잘 적용된다. 
 
 ::: 정의 1
 주어진 cohomology class $\gamma_1,\ldots,\gamma_n\in H^\ast(X,\mathbb{Q})$에 대하여, *Gromov-Witten invariant<sub>그로모프-위튼 불변량</sub>*을
@@ -33,7 +33,7 @@ $$\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}=\int_{\overline{\mathcal{M}
 으로 정의한다.
 :::
 
-예를 들어, [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋보조정리 3](/ko/math/stacks/integration_on_deligne_mumford_stacks#lem3){: data-relation="required" reviewed="" }에서 살펴본 것과 같이, 일반적으로 위 식의 값은 유리수가 나온다. 
+예를 들어, [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋보조정리 3](/ko/math/stacks/integration_on_deligne_mumford_stacks#lem3){: data-lid="e9fi8" data-relation="required" reviewed="" }에서 살펴본 것과 같이, 일반적으로 위 식의 값은 유리수가 나온다. 
 
 뿐만 아니라, 정의로부터 바로 나오는 사실이 몇 가지 있다. 우선 일반적으로 두 insertion $\gamma_i,\gamma_j$를 교환할 때는
 
@@ -83,7 +83,7 @@ $\beta=0$인 stable map은 domain을 한 점 $x\in X$로 보내는 constant map�
 
 $$\ev_1^\ast\gamma_1\smile\cdots\smile\ev_n^\ast\gamma_n=\mathrm{pr}_X^\ast(\gamma_1\smile\cdots\smile\gamma_n)$$
 
-이고, [\[스택\] §Deligne–Mumford 스택 위의 적분, §§곱공간과 대각선 교차](/ko/math/stacks/integration_on_deligne_mumford_stacks#곱공간과-대각선-교차){: data-relation="required" reviewed="" }의 곱의 적분 공식에 의하여 이를 $\overline{\mathcal{M}}_{0,n}\times X$ 위에서 적분하면 
+이고, [\[스택\] §Deligne–Mumford 스택 위의 적분, §§곱공간과 대각선 교차](/ko/math/stacks/integration_on_deligne_mumford_stacks#곱공간과-대각선-교차){: data-lid="v64ai" data-relation="required" reviewed="" }의 곱의 적분 공식에 의하여 이를 $\overline{\mathcal{M}}_{0,n}\times X$ 위에서 적분하면 
 
 $$\left(\int_{\overline{\mathcal{M}}_{0,n}}1\right)\left(\int_X\gamma_1\smile\cdots\smile\gamma_n\right)$$
 
@@ -120,7 +120,7 @@ $$\langle\gamma_1,\ldots,\gamma_n,1\rangle_{0,n+1,\beta}=0$$
 이다.
 :::
 ::: 증명
-가정에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 정의되므로 $\pi$를 쓸 수 있다. $\ev_i=\ev_i\circ\pi$와 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 7](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop7){: data-relation="required" reviewed="" }에 의하여
+가정에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 정의되므로 $\pi$를 쓸 수 있다. $\ev_i=\ev_i\circ\pi$와 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 7](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop7){: data-lid="4bxwp" data-relation="required" reviewed="" }에 의하여
 
 $$\langle\gamma_1,\ldots,\gamma_n,1\rangle_{0,n+1,\beta}=\int_{\overline{\mathcal{M}}_{0,n+1}(X,\beta)}\pi^\ast\Bigl(\prod_{i=1}^n\ev_i^\ast\gamma_i\Bigr)=\int_{\overline{\mathcal{M}}_{0,n}(X,\beta)}\pi_\ast(1)\smile\prod_{i=1}^n\ev_i^\ast\gamma_i$$
 
@@ -137,24 +137,24 @@ $$\langle\gamma_1,\ldots,\gamma_n,D\rangle_{0,n+1,\beta}=\left(\int_\beta D\righ
 이다.
 :::
 ::: 증명
-$\pi$는 proper flat representable family of nodal curves이므로 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 8](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop8){: data-relation="required" reviewed="" }에 의하여 $\pi_\ast(\ev_{n+1}^\ast D)$의 값은 scheme fiber 위의 적분으로 계산되고, stable map $(C,p_\bullet,\mu)$ 위의 fiber에서 $\ev_{n+1}$은 $\mu$이므로 그 값은
+$\pi$는 proper flat representable family of nodal curves이므로 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 8](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop8){: data-lid="mf2jg" data-relation="required" reviewed="" }에 의하여 $\pi_\ast(\ev_{n+1}^\ast D)$의 값은 scheme fiber 위의 적분으로 계산되고, stable map $(C,p_\bullet,\mu)$ 위의 fiber에서 $\ev_{n+1}$은 $\mu$이므로 그 값은
 
 $$\int_C\mu^\ast D=\int_{\mu_\ast[C]}D=\int_\beta D$$
 
-이다. 따라서 $\pi_\ast(\ev_{n+1}^\ast D)$는 fiber에 무관한 상수 $\int_\beta D$이고, 이를 [명제 3](#prop3){: data-relation="required" }의 증명과 같은 projection formula 계산에 대입하면 남는 적분이 $\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}$이다.
+이다. 따라서 $\pi_\ast(\ev_{n+1}^\ast D)$는 fiber에 무관한 상수 $\int_\beta D$이고, 이를 [명제 3](#prop3){: data-lid="y5lor" data-relation="required" }의 증명과 같은 projection formula 계산에 대입하면 남는 적분이 $\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}$이다.
 :::
 
 위의 결과들은 모두 forgetful morphism으로부터 나오는 것이었으나, moduli space에 풍부한 조합론적 데이터를 주는 것은 boundary 구조였다. Marked point 집합의 분할 $\{1,\ldots,n\}=A\sqcup B$와 effective class의 분해 $\beta=\beta_1+\beta_2$에 대하여, domain이 node 하나에서 갈라지고 $A$와 $\beta_1$과 $B$와 $\beta_2$가 각각의 조각에 놓이는 stable map들의 locus를 $D(A,B;\beta_1,\beta_2)$로 적는다. 
 
 그럼 이렇게 얻어진 $D(A, B; \beta_1, \beta_2)$가 전체 moduli space의 codimension $1$ locus, 즉 divisor가 된다. 두 조각에는 이름이 없으므로 $D(A,B;\beta_1,\beta_2)$와 $D(B,A;\beta_2,\beta_1)$은 같은 divisor이며, 전체 moduli space의 boundary는 이러한 divisor들의 합집합이고 이들이 stack 위에서 étale-local하게 normal crossing을 이룬다는 것이 알려져 있다. 
 
-이제 $A$와 $B$가 모두 공집합이 아닐 때 각 성분은 [§안정사상들의 모듈라이 공간, §§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps#안정사상들의-모듈라이-공간){: data-relation="required" }의 gluing morphism
+이제 $A$와 $B$가 모두 공집합이 아닐 때 각 성분은 [§안정사상들의 모듈라이 공간, §§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps#안정사상들의-모듈라이-공간){: data-lid="qcz34" data-relation="required" }의 gluing morphism
 
 $$\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)\times_X\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)\rightarrow\overline{\mathcal{M}}_{0,n}(X,\beta)$$
 
 의 image이고, 두 조각을 구별할 수 있으므로 이 morphism은 image로의 isomorphism이다. 즉 두 조각이 node에서 붙어 있다는 조건은 위 fiber product에 따르면 $(\ev_\bullet,\ev_\bullet)$이 diagonal $\Delta_X\subseteq X\times X$로 간다는 조건으로 해석할 수 있다.
 
-한편 우리는 이미 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 9](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop9){: data-relation="required" reviewed="" }에서, 이러한 상황에서의 refined class를 계산하는 방법을 살펴보았다. 두 조각의 moduli를 $M_A=\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)$, $M_B=\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)$로 적으면, convex target에서는 이 교차에 여분의 성분이 생기지 않으므로 $D(A,B;\beta_1,\beta_2)$ 위에서 $\prod_i\ev_i^\ast\gamma_i$를 적분하는 것은 refined fundamental class에 대한 적분
+한편 우리는 이미 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 9](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop9){: data-lid="9wmoh" data-relation="required" reviewed="" }에서, 이러한 상황에서의 refined class를 계산하는 방법을 살펴보았다. 두 조각의 moduli를 $M_A=\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)$, $M_B=\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)$로 적으면, convex target에서는 이 교차에 여분의 성분이 생기지 않으므로 $D(A,B;\beta_1,\beta_2)$ 위에서 $\prod_i\ev_i^\ast\gamma_i$를 적분하는 것은 refined fundamental class에 대한 적분
 
 $$\int_{M_A\times M_B}\Bigl(\prod_{a\in A}\ev_a^\ast\gamma_a\otimes\prod_{b\in B}\ev_b^\ast\gamma_b\Bigr)\smile(\ev_\bullet,\ev_\bullet)^\ast[\Delta_X]$$
 
@@ -203,14 +203,14 @@ $$\phi:\overline{\mathcal{M}}_{0,n}(X,\beta)\rightarrow\overline{\mathcal{M}}_{0
 
 $$\sum_{\substack{A\ni1,2, B\ni3,4\\ \beta_1+\beta_2=\beta}}D(A,B;\beta_1,\beta_2)\sim\sum_{\substack{A\ni1,3, B\ni2,4\\ \beta_1+\beta_2=\beta}}D(A,B;\beta_1,\beta_2)$$
 
-이다. 이제 양변에 $\prod_i\ev_i^\ast\gamma_i$를 곱해 적분하면 두 값이 같고, 각 항에서 $A,B$는 모두 marked point를 둘 이상 포함하므로 [명제 5](#prop5){: data-relation="required" }를 적용하면 주장의 양변을 얻는다.
+이다. 이제 양변에 $\prod_i\ev_i^\ast\gamma_i$를 곱해 적분하면 두 값이 같고, 각 항에서 $A,B$는 모두 marked point를 둘 이상 포함하므로 [명제 5](#prop5){: data-lid="0m7u6" data-relation="required" }를 적용하면 주장의 양변을 얻는다.
 :::
 
 ## Kontsevich 공식
 
 이 글의 도입부에서 설명했듯 우리의 목표는 $N_d$를 구하는 것이다. 이를 위해 우리는 genus $0$ Gromov-Witten invariant가 실제로 이 값을 담아내는 것을 보았고, 이 Gromov-Witten invariant가 갖는 성질 또한 확인하였으므로 남은 것은 식을 유도하는 것 뿐이다. 
 
-우리 상황에서 $X=\mathbb{P}^2$이고, $T_0=1$, $T_1=h$, $T_2=h^2$로 두면 $T^k=T_{2-k}$이다. 핵심적인 아이디어는 [명제 6](#prop6){: data-relation="required" }을 사용하여 이 값을 recursive하게 식으로 써 주는 것이다. 이를 위해서는 incidence condition이 부여하는 $3d-1$개 중 하나를 덜 사용해야 하고, 이렇게 하나의 점을 뺐을 때 적분의 degree가 맞아서 $0$ 아닌 값이 나오기 위해서는 직선 두 개를 넣어주어야 한다. 즉 우리는 점 $3d-2$개와 직선 $2$개에 대한 incidence condition이 주어진, $n=3d$개의 marked point를 갖는 moduli 위의 class를 생각한다. [명제 6](#prop6){: data-relation="required" }을 사용하기 위해, 이 직선 두 개를 앞쪽에 넣어 insertion class들을
+우리 상황에서 $X=\mathbb{P}^2$이고, $T_0=1$, $T_1=h$, $T_2=h^2$로 두면 $T^k=T_{2-k}$이다. 핵심적인 아이디어는 [명제 6](#prop6){: data-lid="9d28y" data-relation="required" }을 사용하여 이 값을 recursive하게 식으로 써 주는 것이다. 이를 위해서는 incidence condition이 부여하는 $3d-1$개 중 하나를 덜 사용해야 하고, 이렇게 하나의 점을 뺐을 때 적분의 degree가 맞아서 $0$ 아닌 값이 나오기 위해서는 직선 두 개를 넣어주어야 한다. 즉 우리는 점 $3d-2$개와 직선 $2$개에 대한 incidence condition이 주어진, $n=3d$개의 marked point를 갖는 moduli 위의 class를 생각한다. [명제 6](#prop6){: data-lid="a8kwg" data-relation="required" }을 사용하기 위해, 이 직선 두 개를 앞쪽에 넣어 insertion class들을
 
 $$\gamma_1=\gamma_2=h^2,\qquad\gamma_3=\gamma_4=h,\qquad\gamma_5=\cdots=\gamma_n=h^2$$
 
@@ -224,7 +224,7 @@ $$N_d=\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}N_{d_1}N_{d_2}\left[d_1^2d_2^2\b
 이 성립한다.
 :::
 ::: 증명
-위에서 말한 것과 같이 이 세팅에 [명제 6](#prop6){: data-relation="required" }을 적용한다. 나머지 marked point의 집합 $S=\{5,\ldots,n\}$은 $3d-4$개의 원소를 가지며, 분할 $A\sqcup B$는 처음의 네 점짜리 집합의 분할에 나머지 점들의 집합 $S$의 분할 $S_1\sqcup S_2$를 얹는 것으로 정해진다. 
+위에서 말한 것과 같이 이 세팅에 [명제 6](#prop6){: data-lid="lhuki" data-relation="required" }을 적용한다. 나머지 marked point의 집합 $S=\{5,\ldots,n\}$은 $3d-4$개의 원소를 가지며, 분할 $A\sqcup B$는 처음의 네 점짜리 집합의 분할에 나머지 점들의 집합 $S$의 분할 $S_1\sqcup S_2$를 얹는 것으로 정해진다. 
 
 우선 식의 좌변을 $A=\{1,2\}\sqcup S_1$, $B=\{3,4\}\sqcup S_2$, degree를 $d_1+d_2=d$로 나눈 것으로 두면, 각 summand는 
 
@@ -232,7 +232,7 @@ $$\langle h^2,h^2,(h^2)_{S_1},T_k\rangle_{0,\lvert A\rvert+1,d_1}\langle T_{2-k}
 
 의 꼴이다.  
 
-만일 $d_1=0$이라면, [명제 2](#prop2){: data-relation="required" }에 의해 첫째 인자가 $0$이 아니기 위해서는 반드시 $S_1=\emptyset$이어야 한다. 그런데 이 경우에도 첫째 인자가 차원 문제로
+만일 $d_1=0$이라면, [명제 2](#prop2){: data-lid="uzmtm" data-relation="required" }에 의해 첫째 인자가 $0$이 아니기 위해서는 반드시 $S_1=\emptyset$이어야 한다. 그런데 이 경우에도 첫째 인자가 차원 문제로
 
 $$\int h^2\smile h^2\smile T_k=0$$
 
@@ -240,13 +240,13 @@ $$\int h^2\smile h^2\smile T_k=0$$
 
 $$\int T_{2-k}\smile h\smile h$$
 
-이 $0$이 아니어야 하므로 반드시 $k=2$여야 한다. 뿐만 아니라, $k=2$인 경우의 첫째 인자를 계산하면, $T_2$가 point class이므로 이 값은 정확히 우리가 구하고자 하는 $N_d$이다. 즉 $d_2=0$인 경우는 [명제 6](#prop6){: data-relation="required" }의 좌변에서 정확히 $N_d$로 기여하고, $d_1=0$인 경우는 이 좌변에서 어떠한 기여도 없다. 
+이 $0$이 아니어야 하므로 반드시 $k=2$여야 한다. 뿐만 아니라, $k=2$인 경우의 첫째 인자를 계산하면, $T_2$가 point class이므로 이 값은 정확히 우리가 구하고자 하는 $N_d$이다. 즉 $d_2=0$인 경우는 [명제 6](#prop6){: data-lid="jvr2t" data-relation="required" }의 좌변에서 정확히 $N_d$로 기여하고, $d_1=0$인 경우는 이 좌변에서 어떠한 기여도 없다. 
 
-이제 나머지 경우, 즉 $d_1,d_2$가 모두 $0$이 아닌 경우를 보자. 그럼 [명제 3](#prop3){: data-relation="required" }에 의하여 $k=0$이 기여하는 부분과 $k=2$가 기여하는 부분이 사라지므로 남는 것은 $k=1$에 대한 항 뿐이다. 역시 이 경우의 차원 조건을 맞춰주면, 첫째 인자의 차원 조건으로부터
+이제 나머지 경우, 즉 $d_1,d_2$가 모두 $0$이 아닌 경우를 보자. 그럼 [명제 3](#prop3){: data-lid="w7b4c" data-relation="required" }에 의하여 $k=0$이 기여하는 부분과 $k=2$가 기여하는 부분이 사라지므로 남는 것은 $k=1$에 대한 항 뿐이다. 역시 이 경우의 차원 조건을 맞춰주면, 첫째 인자의 차원 조건으로부터
 
 $$4+2\lvert S_1\rvert+1=3d_1+2+\lvert S_1\rvert$$
 
-이므로 $\lvert S_1\rvert=3d_1-3$여야 하고, 이 때의 값은 [명제 4](#prop4){: data-relation="required" }에 의하여 $d_1N_{d_1}$이다. 이 때, $\lvert S_1\rvert=3d_1-3$인 것은 $\lvert S_2\rvert=3d_2-1$일 것을 강제하며, 이 상황에서 둘째 인자는 [명제 4](#prop4){: data-relation="required" }를 세 번 적용하여 $d_2^3N_{d_2}$이 된다. 이제 집합 $S_1$을 고르는 방법은 $\binom{3d-4}{3d_1-3}$가지이므로 좌변은
+이므로 $\lvert S_1\rvert=3d_1-3$여야 하고, 이 때의 값은 [명제 4](#prop4){: data-lid="ybjc8" data-relation="required" }에 의하여 $d_1N_{d_1}$이다. 이 때, $\lvert S_1\rvert=3d_1-3$인 것은 $\lvert S_2\rvert=3d_2-1$일 것을 강제하며, 이 상황에서 둘째 인자는 [명제 4](#prop4){: data-lid="l70dv" data-relation="required" }를 세 번 적용하여 $d_2^3N_{d_2}$이 된다. 이제 집합 $S_1$을 고르는 방법은 $\binom{3d-4}{3d_1-3}$가지이므로 좌변은
 
 $$N_d+\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1d_2^3\binom{3d-4}{3d_1-3}N_{d_1}N_{d_2}$$
 
@@ -260,14 +260,14 @@ $$\langle h^2,h,(h^2)_{S_1},T_k\rangle_{0,\lvert A\rvert+1,d_1}\langle T_{2-k},h
 
 $$\int h^2\smile h\smile T_k=0$$
 
-이고, $d_2=0$일 때도 같은 계산으로 둘째 인자가 $0$이 되므로 합에 기여하는 것은 $d_1,d_2\neq 0$인 경우 뿐이다. 이 경우, 좌변에서의 계산과 마찬가지로 $k=1$에 대한 부분만 남으며, 차원 조건이 $\lvert S_1\rvert=3d_1-2$와 $\lvert S_2\rvert=3d_2-2$를 강제한다. 이제 각각의 인자에 [명제 4](#prop4){: data-relation="required" }를 두 번씩 적용하면 첫째 인자는 $d_1^2N_{d_1}$, 둘째 인자는 $d_2^2N_{d_2}$가 나오고, 따라서 $S_1$을 택하는 경우의 수까지 포함하면 우변은
+이고, $d_2=0$일 때도 같은 계산으로 둘째 인자가 $0$이 되므로 합에 기여하는 것은 $d_1,d_2\neq 0$인 경우 뿐이다. 이 경우, 좌변에서의 계산과 마찬가지로 $k=1$에 대한 부분만 남으며, 차원 조건이 $\lvert S_1\rvert=3d_1-2$와 $\lvert S_2\rvert=3d_2-2$를 강제한다. 이제 각각의 인자에 [명제 4](#prop4){: data-lid="oqs4h" data-relation="required" }를 두 번씩 적용하면 첫째 인자는 $d_1^2N_{d_1}$, 둘째 인자는 $d_2^2N_{d_2}$가 나오고, 따라서 $S_1$을 택하는 경우의 수까지 포함하면 우변은
 
 $$\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1^2d_2^2\binom{3d-4}{3d_1-2}N_{d_1}N_{d_2}$$
 
 이다. 이제 양변을 비교하면 주장한 식을 얻는다. 
 :::
 
-이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-relation="required" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
+이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" data-relation="required" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
 
 ---
 

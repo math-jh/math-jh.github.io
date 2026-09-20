@@ -13,9 +13,9 @@ weight: 11
 
 ---
 
-앞서 우리는 [§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 variety $X$의 (Weil) divisor를 정의하였다. Zariski topology의 정의에 의하여, 이는 기본적으로 $X$ 위에 정의된 어떤 <em-ko>함수</em-ko>의 zero set에, 이 zero의 order를 더한 것으로 생각할 수 있으며, 이를 $\mathbb{P}^n$과 같은 경우에도 잘 정의하기 위해 우리는 <em-ko>함수</em-ko>를 <em-ko>적당한 line bundle의 section</em-ko>으로 일반화했다. 
+앞서 우리는 [§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1){: data-lid="70nq9" }에서 variety $X$의 (Weil) divisor를 정의하였다. Zariski topology의 정의에 의하여, 이는 기본적으로 $X$ 위에 정의된 어떤 <em-ko>함수</em-ko>의 zero set에, 이 zero의 order를 더한 것으로 생각할 수 있으며, 이를 $\mathbb{P}^n$과 같은 경우에도 잘 정의하기 위해 우리는 <em-ko>함수</em-ko>를 <em-ko>적당한 line bundle의 section</em-ko>으로 일반화했다. 
 
-한편, divisor는 음수 계수 또한 허용하므로 이 zero set은 zero set이 아니라, 음수 order의 zero, 즉 pole이 될 수도 있다. 이런 경우 우리는 주어진 divisor와 linearly equivalent한 *effective* divisor를 찾은 후, 이 성질을 탐구할 수 있다. ([§인자, ⁋정의 7](/ko/math/algebraic_varieties/divisors#def7)) 
+한편, divisor는 음수 계수 또한 허용하므로 이 zero set은 zero set이 아니라, 음수 order의 zero, 즉 pole이 될 수도 있다. 이런 경우 우리는 주어진 divisor와 linearly equivalent한 *effective* divisor를 찾은 후, 이 성질을 탐구할 수 있다. ([§인자, ⁋정의 7](/ko/math/algebraic_varieties/divisors#def7){: data-lid="ptxue" }) 
 
 위에서 우리는 서술의 편의상 Weil divisor에 대한 논의만 하였지만, Cartier divisor에 대해서도 비슷한 논증을 할 수 있으며, 그 결과로 나오는 정의는 다음과 같다. 
 
@@ -23,7 +23,7 @@ weight: 11
 Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 것은 모든 $i$에 대해 $n_i\geq 0$인 것이다. Cartier divisor $\{(U_i, f_i)\}$가 *effective*라는 것은 모든 $i$에 대해 $f_i$가 $U_i$ 위에서 regular인 것이다. 
 :::
 
-그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$가 $s$의 nonzero scalar 배에 의존하지 않는다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
+그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17){: data-lid="x6fif" }) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$가 $s$의 nonzero scalar 배에 의존하지 않는다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
 
 ::: 정의 2
 Variety $X$ 위의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}$의 *complete linear system<sub>완비 선형계</sub>*은 $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$의 projectivization
@@ -35,7 +35,7 @@ $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 ## Projective space의 linear system
 
-앞서 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16) 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 degree $d$의 homogeneous polynomial들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
+앞서 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-lid="iyrg6" } 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 degree $d$의 homogeneous polynomial들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
 
 $$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)))\cong \mathbb{P}(\mathbb{K}[\x_0,\ldots, \x_n]_d)\cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
 
@@ -87,7 +87,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 {% diagram Math/Algebraic_Varieties/Linear_Systems-1.svg width="40em" alt="pencil_of_circles" %}
 :::
 
-물론 [정의 2](#def2)는 $X$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $X\subseteq \mathbb{P}^n$에 대해서도 $D$가 어떠한 $\mathcal{O}_{\mathbb{P}^n}(d)$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
+물론 [정의 2](#def2){: data-lid="3xcxl" }는 $X$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3){: data-lid="ynxf2" }을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $X\subseteq \mathbb{P}^n$에 대해서도 $D$가 어떠한 $\mathcal{O}_{\mathbb{P}^n}(d)$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
@@ -105,7 +105,7 @@ $$\varphi_L:X\rightarrow \mathbb{P}^r;\qquad x\mapsto [F_0(x):\cdots:F_r(x)]$$
 
 을 정의한다. 
 
-물론 이것이 항상 가능한 것은 아니다. 가령 [예시 3](#ex3)에서, $(a_{00},a_{02})=(1,0), (0,1)$에 해당하는 다음의 두 basis
+물론 이것이 항상 가능한 것은 아니다. 가령 [예시 3](#ex3){: data-lid="r3i9y" }에서, $(a_{00},a_{02})=(1,0), (0,1)$에 해당하는 다음의 두 basis
 
 $$G_1(\x_0,\x_1,\x_2)=\x_0^2+\x_1^2-5\x_2^2, \qquad G_2(\x_0,\x_1,\x_2)=\x_0\x_2$$
 
@@ -150,23 +150,23 @@ $$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
 의 zero set, 즉 $\divisor(\sigma)$와 일치한다는 것을 확인하면 된다. 좀 더 구체적인 예시를 살펴 보자.
 
 ::: 예시 7
-[예시 3](#ex3)에서 살펴 본 $\mathbb{P}^2$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
+[예시 3](#ex3){: data-lid="czpbz" }에서 살펴 본 $\mathbb{P}^2$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
 
 을 생각하자. 벡터공간 $\mathbb{K}[\x_0,\x_1,\x_2]_1$의 basis를 $\x_0,\x_1,\x_2$로 택하면, $\x_0,\x_1,\x_2$가 동시에 $0$이 되는 $\mathbb{P}^2$의 점은 없으므로 이는 basepoint-free이다. 이 basis의 선택이 정의하는 $\varphi_L$은 그냥 identity이다.
 
-두 conic의 base locus의 경우, 위에서 살펴보았듯 base locus가 공집합이 아니다. 실제로, base locus는 [예시 3](#ex3)에서 이미 살펴본 $C_1\cap C_2$의 네 개의 교점이며, 기하적으로 pencil의 각 원소들은 정확히 $C_1\cap C_2$의 네 교점을 공유하므로 이것이 base locus의 정의와 맞아떨어지는 것을 안다.
+두 conic의 base locus의 경우, 위에서 살펴보았듯 base locus가 공집합이 아니다. 실제로, base locus는 [예시 3](#ex3){: data-lid="5uvlk" }에서 이미 살펴본 $C_1\cap C_2$의 네 개의 교점이며, 기하적으로 pencil의 각 원소들은 정확히 $C_1\cap C_2$의 네 교점을 공유하므로 이것이 base locus의 정의와 맞아떨어지는 것을 안다.
 :::
 
-위의 예시는 basepoint라는 이름의 유래를 직관적으로 보여주지만, $\varphi_L$이 identity이므로 [명제 6](#prop6)은 사실 큰 의미가 없다. 좀 더 non-trivial한 예시를 살펴 보자.
+위의 예시는 basepoint라는 이름의 유래를 직관적으로 보여주지만, $\varphi_L$이 identity이므로 [명제 6](#prop6){: data-lid="azmsu" }은 사실 큰 의미가 없다. 좀 더 non-trivial한 예시를 살펴 보자.
 
 ::: 예시 8
 $\mathbb{P}^1$에서 $d \ge 1$일 때, complete linear system $\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$이 정의하는 map은
 
 $$\nu_d: \mathbb{P}^1 \rightarrow \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
-이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
+이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-lid="k27yh" }에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
 
 예를 들어 $\mathbb{P}^d$의 hyperplane $H_0: \x_0 = 0$을 생각하면,
 
@@ -183,19 +183,19 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
 비록 우리는 모든 variety가 quasi-projective임을 가정하고 있지만, 일반적으로 variety는 더 추상적으로 정의할 수 있다. 이러한 접근에는 장단점이 있는데, 좋은 점은 우리의 논의가 더 유연해진다는 것이고, 그로 인해 포기하게 되는 것은 variety를 embed하는 것이 더 이상 자명하지 않다는 것이다.
 
-가령 우리의 언어에서 $\mathbb{P}^1\times \mathbb{P}^1$이 (quasi-projective) variety라고 하려면 반드시 이를 어떤 projective space로 넣어주어야 한다. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 대신, variety의 정의에서 ambient projective space의 존재를 가정하지 않는다면 이를 굳이 보이지 않아도 $\mathbb{P}^1\times \mathbb{P}^1$은 자동으로 variety이지만, 일반적인 variety가 projective space로 embed되는지는 불분명하다는 것이다. 
+가령 우리의 언어에서 $\mathbb{P}^1\times \mathbb{P}^1$이 (quasi-projective) variety라고 하려면 반드시 이를 어떤 projective space로 넣어주어야 한다. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-lid="4o12n" }) 대신, variety의 정의에서 ambient projective space의 존재를 가정하지 않는다면 이를 굳이 보이지 않아도 $\mathbb{P}^1\times \mathbb{P}^1$은 자동으로 variety이지만, 일반적인 variety가 projective space로 embed되는지는 불분명하다는 것이다. 
 
-그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
+그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6){: data-lid="sjhs0" }을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
 ::: 정의 9
 Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L})^\ast)$이 closed embedding인 것이다.
 :::
 
-여기서 target이 $\Gamma(X, \mathcal{L})$의 projectivization이 아니라 그 dual의 projectivization인 것은, [명제 6](#prop6)에서 보았듯 linear system의 원소들이 target의 hyperplane들에 대응하기 때문이다. $\Gamma(X, \mathcal{L})$의 basis $s_0,\ldots,s_r$을 택하고 그 dual basis를 좌표로 삼으면 $\mathbb{P}(\Gamma(X, \mathcal{L})^\ast)\cong \mathbb{P}^r$이 되며, 이 좌표에서 $\varphi_{\mathcal{L}}$은 $x\mapsto [s_0(x):\cdots:s_r(x)]$로 주어진다. $\varphi_L$은 basis의 선택에 따라 $\mathbb{P}^r$의 automorphism만큼 달라지므로, 이것이 closed embedding인지의 여부는 basis의 선택에 의존하지 않는다. 
+여기서 target이 $\Gamma(X, \mathcal{L})$의 projectivization이 아니라 그 dual의 projectivization인 것은, [명제 6](#prop6){: data-lid="kwfqo" }에서 보았듯 linear system의 원소들이 target의 hyperplane들에 대응하기 때문이다. $\Gamma(X, \mathcal{L})$의 basis $s_0,\ldots,s_r$을 택하고 그 dual basis를 좌표로 삼으면 $\mathbb{P}(\Gamma(X, \mathcal{L})^\ast)\cong \mathbb{P}^r$이 되며, 이 좌표에서 $\varphi_{\mathcal{L}}$은 $x\mapsto [s_0(x):\cdots:s_r(x)]$로 주어진다. $\varphi_L$은 basis의 선택에 따라 $\mathbb{P}^r$의 automorphism만큼 달라지므로, 이것이 closed embedding인지의 여부는 basis의 선택에 의존하지 않는다. 
 
 Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *closed* embedding이라는 점이다. 즉, 위에서 설명한 것과 같이 추상적인 variety의 세계에서도 이를 사용하여 projective variety를 정의하고, 심지어 very ample line bundle $\mathcal{L}$을 사용하면 $X$를 이 ambient projective space에서 명시적인 좌표로 표현할 수도 있게 된다. 
 
-우리는 $\mathcal{O}_{\mathbb{P}^n}(1)$은 very ample이지만, $\mathcal{O}_{\mathbb{P}^n}(-1)$은 그렇지 않다는 것을 안다. [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 살펴보았듯, 이는 $\mathcal{O}_{\mathbb{P}^n}(-1)$은 fiber가 base를 따라 이동할 때 꼬이는 방향이 section들이 zero section을 넘어가는 것을 허용하지 않아 global section이 존재하지 않기 때문이다. 반면 $\mathcal{O}_{\mathbb{P}^n}(1)$이 가지고 있는 꼬임은 이를 허용해주어 global section을 존재하게 해 준다. 
+우리는 $\mathcal{O}_{\mathbb{P}^n}(1)$은 very ample이지만, $\mathcal{O}_{\mathbb{P}^n}(-1)$은 그렇지 않다는 것을 안다. [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-lid="gc1d4" }에서 살펴보았듯, 이는 $\mathcal{O}_{\mathbb{P}^n}(-1)$은 fiber가 base를 따라 이동할 때 꼬이는 방향이 section들이 zero section을 넘어가는 것을 허용하지 않아 global section이 존재하지 않기 때문이다. 반면 $\mathcal{O}_{\mathbb{P}^n}(1)$이 가지고 있는 꼬임은 이를 허용해주어 global section을 존재하게 해 준다. 
 
 이 예시는 너무 간단한 예시이기는 하지만, 만일 $\mathbb{P}^n$보다 복잡한 어떤 공간이 있고, 이 공간의 복잡성이 특정한 line bundle의 꼬임만으로는 (올바른 방향임에도) 해소가 안 된다면, 우리는 이것이 해소될 때까지 더욱 더 꼬임을 추가해줄 수 있을 것이다. 이러한 상상으로부터 다음을 정의한다.
 
@@ -207,9 +207,9 @@ $\mathcal{L}$이 *ample<sub>풍부한</sub>*이라는 것은 어떤 $m > 0$에 �
 
 ## 일반적인 원소
 
-Linear system의 원소는 nonzero section을 상수배만큼의 차이로 본 것이고 ([정의 2](#def2)), 각각의 원소가 실제로 우리에게 주는 것은 그 section의 zero locus였다. 그럼 이 zero locus가 어떻게 생긴 공간인지를 묻는 것이 자연스럽다. [예시 3](#ex3)의 pencil을 다시 보면, 이는 $G_1=\x_0^2+\x_1^2-5\x_2^2$와 $G_2=\x_0\x_2$가 생성하므로 그 원소들은 conic $Z(\lambda G_1+\mu G_2)$이다. 이 quadratic form에 대응하는 symmetric matrix의 행렬식은 $-\lambda(20\lambda^2+\mu^2)/4$이고, conic이 singular인 것은 이 값이 $0$인 것과 같으므로, 나쁜 원소는 $[\lambda:\mu]$가 세 점 $[0:1]$, $[1:\pm 2\sqrt{5}i]$일 때뿐이다. 가령 $\lambda=0$인 원소는 두 직선 $Z(\x_0)$과 $Z(\x_2)$로 쪼개져 그 교점에서 singular point를 갖는다. 나머지 원소는 모두 smooth conic이며, 우리가 알고 싶은 것은 이렇게 <em-ko>거의 모든</em-ko> 원소가 갖는 성질이다. 
+Linear system의 원소는 nonzero section을 상수배만큼의 차이로 본 것이고 ([정의 2](#def2){: data-lid="zyflw" }), 각각의 원소가 실제로 우리에게 주는 것은 그 section의 zero locus였다. 그럼 이 zero locus가 어떻게 생긴 공간인지를 묻는 것이 자연스럽다. [예시 3](#ex3){: data-lid="pwqen" }의 pencil을 다시 보면, 이는 $G_1=\x_0^2+\x_1^2-5\x_2^2$와 $G_2=\x_0\x_2$가 생성하므로 그 원소들은 conic $Z(\lambda G_1+\mu G_2)$이다. 이 quadratic form에 대응하는 symmetric matrix의 행렬식은 $-\lambda(20\lambda^2+\mu^2)/4$이고, conic이 singular인 것은 이 값이 $0$인 것과 같으므로, 나쁜 원소는 $[\lambda:\mu]$가 세 점 $[0:1]$, $[1:\pm 2\sqrt{5}i]$일 때뿐이다. 가령 $\lambda=0$인 원소는 두 직선 $Z(\x_0)$과 $Z(\x_2)$로 쪼개져 그 교점에서 singular point를 갖는다. 나머지 원소는 모두 smooth conic이며, 우리가 알고 싶은 것은 이렇게 <em-ko>거의 모든</em-ko> 원소가 갖는 성질이다. 
 
-$\mathcal{L}$이 very ample이면 이 질문은 hyperplane에 대한 질문으로 번역된다. $X$는 $\varphi_{\mathcal{L}}$을 통해 $\mathbb{P}^N = \mathbb{P}(\Gamma(X,\mathcal{L})^\ast)$의 closed subvariety가 되고, [명제 6](#prop6)에 의해 $\lvert \mathcal{L}\rvert$의 원소들은 정확히 hyperplane $H\subseteq \mathbb{P}^N$이 $X$를 자른 자취 $X\cap H$이기 때문이다. 즉 $\lvert \mathcal{L}\rvert$은 dual projective space $(\mathbb{P}^N)^\ast$와 동일시되고, 따라서 우리의 질문은 일반적인 hyperplane이 $X$를 어떻게 자르는지를 묻는 것이 된다. 이에 대한 답이 다음의 정리이다. 
+$\mathcal{L}$이 very ample이면 이 질문은 hyperplane에 대한 질문으로 번역된다. $X$는 $\varphi_{\mathcal{L}}$을 통해 $\mathbb{P}^N = \mathbb{P}(\Gamma(X,\mathcal{L})^\ast)$의 closed subvariety가 되고, [명제 6](#prop6){: data-lid="yimmi" }에 의해 $\lvert \mathcal{L}\rvert$의 원소들은 정확히 hyperplane $H\subseteq \mathbb{P}^N$이 $X$를 자른 자취 $X\cap H$이기 때문이다. 즉 $\lvert \mathcal{L}\rvert$은 dual projective space $(\mathbb{P}^N)^\ast$와 동일시되고, 따라서 우리의 질문은 일반적인 hyperplane이 $X$를 어떻게 자르는지를 묻는 것이 된다. 이에 대한 답이 다음의 정리이다. 
 
 ::: 명제 11 (Bertini's theorem)
 Projective variety $X\subseteq \mathbb{P}^N$에 대하여, dual projective space $(\mathbb{P}^N)^\ast$의 dense open subset $U$가 존재하여 모든 $H\in U$에 대해 다음이 성립한다. 
@@ -227,7 +227,7 @@ Smooth projective variety $X$와 very ample line bundle $\mathcal{L}$에 대하�
 :::
 
 ::: 증명
-[정의 9](#def9)에 의해 $\varphi_{\mathcal{L}}$은 closed embedding이므로 $X$를 $\mathbb{P}^N$의 closed subvariety로 볼 수 있고, [명제 6](#prop6)에 의해 이 동일시 아래에서 $\lvert \mathcal{L}\rvert$의 원소는 hyperplane $H$에 대한 $X\cap H$의 꼴이다. 여기에 [명제 11](#prop11)을 적용하면 된다. 
+[정의 9](#def9){: data-lid="xlgts" }에 의해 $\varphi_{\mathcal{L}}$은 closed embedding이므로 $X$를 $\mathbb{P}^N$의 closed subvariety로 볼 수 있고, [명제 6](#prop6){: data-lid="xkhb2" }에 의해 이 동일시 아래에서 $\lvert \mathcal{L}\rvert$의 원소는 hyperplane $H$에 대한 $X\cap H$의 꼴이다. 여기에 [명제 11](#prop11){: data-lid="hnjbl" }을 적용하면 된다. 
 :::
 
 ---
@@ -239,4 +239,4 @@ Smooth projective variety $X$와 very ample line bundle $\mathcal{L}$에 대하�
 
 ---
 
-[^1]: $\mathbb{P}^2$의 <em-ko>무한대 직선</em-ko>과 그 기하적인 직관에 대해서는 [§사영다양체, ⁋예시 11](/ko/math/algebraic_varieties/projective_varieties#ex11)에서 이미 분석하였다. 
+[^1]: $\mathbb{P}^2$의 <em-ko>무한대 직선</em-ko>과 그 기하적인 직관에 대해서는 [§사영다양체, ⁋예시 11](/ko/math/algebraic_varieties/projective_varieties#ex11){: data-lid="wtp0z" }에서 이미 분석하였다. 

@@ -21,7 +21,7 @@ weight: 6
 위상공간 $X$의 한 점 $x$가 *closed point<sub>닫힌점</sub>*이라는 것은 $\{x\}$가 $X$의 닫힌집합이라는 것이다.
 :::
 
-따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) [§스킴, ⁋예시 7](/ko/math/scheme_theory/schemes#ex7)에서 보았듯 classical algebraic geometry에서는 maximal ideal들만 생각하였으므로, 이러한 maximal ideal $\mathfrak{m}$에 대해서는 $Z(\mathfrak{m})=\{\mathfrak{m}\}$이고, 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)과 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 7](/ko/math/set_theory/filter_and_ideal#prop7)을 적용하면
+따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3){: data-lid="hyi4p" }) [§스킴, ⁋예시 7](/ko/math/scheme_theory/schemes#ex7){: data-lid="2gtpa" }에서 보았듯 classical algebraic geometry에서는 maximal ideal들만 생각하였으므로, 이러한 maximal ideal $\mathfrak{m}$에 대해서는 $Z(\mathfrak{m})=\{\mathfrak{m}\}$이고, 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14){: data-lid="1v1xk" }과 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 7](/ko/math/set_theory/filter_and_ideal#prop7){: data-lid="ml811" }을 적용하면
 
 $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
@@ -39,7 +39,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 
 논리 전개의 편의상 $f$가 prime element여서, $f$가 생성하는 ideal $\mathfrak{p}_f=(f)$가 prime ideal이라 하자. 그럼 $\mathfrak{p}_f$는 우선 정의에 의해 $\mathbb{A}^n$의 (closed일 필요는 없는) 점이며, 바로 이 점이 $f$가 정의하는 closed subscheme의 generic point이다. 이 점은 $Z(f)$의 대부분의 정보를 담고 있는데, 가령 $Z(f)$에 포함된 (classical한) 점들을 얻기 위해서는 $\mathfrak{p}_f$에 closure를 취하여 $Z(f)$를 얻은 후 maximal ideal들만 택하면 되고, 대수적으로는 $\mathfrak{p}_f$를 포함하는 maximal ideal들을 모두 가져오면 된다. 
 
-이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. $Z(\mathfrak{a})$는 위상공간으로서 $\Spec (A/\mathfrak{a})$와 homeomorphic하므로 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)), [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의하여 $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
+이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. $Z(\mathfrak{a})$는 위상공간으로서 $\Spec (A/\mathfrak{a})$와 homeomorphic하므로 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9){: data-lid="g7ddx" }), [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17){: data-lid="vnfah" }에 의하여 $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
 
 ## 스킴의 위상적 성질들
 
@@ -49,23 +49,23 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 Scheme $(X,\mathcal{O}_X)$가 주어졌다 하자. 만일 $X$가 위상공간으로서 quasi-compact (resp. irreducible, connected)라면, $X$를 quasi-compact (resp. irreducible, connected) scheme이라 부른다. 
 :::
 
-위 정의에 해당하는 위상수학의 정의들은 각각 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1), [\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)과 [\[위상수학\] §연결공간, ⁋정의 1](/ko/math/topology/connected_spaces#def1)에서 각각 찾아볼 수 있다.[^1] 다음은 이 정의에 대한 예시와 반례들이다. 
+위 정의에 해당하는 위상수학의 정의들은 각각 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1){: data-lid="85wo1" }, [\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6){: data-lid="vrc7d" }과 [\[위상수학\] §연결공간, ⁋정의 1](/ko/math/topology/connected_spaces#def1){: data-lid="f7h29" }에서 각각 찾아볼 수 있다.[^1] 다음은 이 정의에 대한 예시와 반례들이다. 
 
 ::: 예시 4
-우리는 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 임의의 affine scheme은 quasi-compact임을 안다. Quasi-compact가 아닌 scheme의 예시로는, 당연히 무한히 많은 scheme들의 disjoint union이 있다. 
+우리는 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="jkdg0" }에 의해 임의의 affine scheme은 quasi-compact임을 안다. Quasi-compact가 아닌 scheme의 예시로는, 당연히 무한히 많은 scheme들의 disjoint union이 있다. 
 :::
 
 Irreducibility의 경우 다음 예시들을 보자. 
 
 ::: 예시 5
-임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $(0)$을 생각하면, $(0)$을 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 $\mathbb{A}^n_\mathbb{K}$와 isomorphic한 열린집합들 $D_+(\x_i)$로 덮이고, 임의의 $i,j$에 대하여 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 가령 $\x_i\x_j$를 포함하지 않는 prime ideal $(0)$을 원소로 가져 공집합이 아니므로, [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
+임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $(0)$을 생각하면, $(0)$을 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 $\mathbb{A}^n_\mathbb{K}$와 isomorphic한 열린집합들 $D_+(\x_i)$로 덮이고, 임의의 $i,j$에 대하여 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 가령 $\x_i\x_j$를 포함하지 않는 prime ideal $(0)$을 원소로 가져 공집합이 아니므로, [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8){: data-lid="tyxbh" }에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
 
-거꾸로 affine scheme $\Spec A$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)) 
+거꾸로 affine scheme $\Spec A$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16){: data-lid="mb98d" }) 
 :::
 
 Irreducible space는 항상 connected이므로, 위의 예시들은 connected space의 예시이기도 하다. 다음 예시는 connected가 아닌 scheme과, connected이지만 irreducible이 아닌 scheme들의 예시를 위한 것으로, affine plane $\mathbb{A}^2_\mathbb{K}$의 특정한 *closed subscheme*들이 주어져 있다. 
 
-우리는 아직 closed subscheme을 정의하지 않았으나, 적어도 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에서 우리는 affine scheme $\Spec A$와 $A$의 임의의 ideal $\mathfrak{a}$에 대하여 canonical morphism $A \rightarrow A/\mathfrak{a}$을 통해 $\Spec A/\mathfrak{a}$와 $Z(\mathfrak{a})\subseteq \Spec A$가 위상공간으로서 homeomorphic한 것은 이미 살펴보았다. Connectedness와 irreducibility는 모두 위상공간의 성질이므로, $\Spec A/\mathfrak{a}$의 위상적인 성질은 $\Spec A$의 닫힌집합 $Z(\mathfrak{a})$의 위상구조를 살펴보아 확인할 수 있다. 이들을 closed subscheme이라 부를 때, 부족한 것은 오직 $\Spec A/\mathfrak{a}$의 structure sheaf와 $\Spec A$의 structure sheaf(를 $Z(\mathfrak{a})$로 제한한 것)이 어떤 관계에 있는지 뿐이며, 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 다시 살펴보게 된다. 
+우리는 아직 closed subscheme을 정의하지 않았으나, 적어도 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9){: data-lid="gf212" }에서 우리는 affine scheme $\Spec A$와 $A$의 임의의 ideal $\mathfrak{a}$에 대하여 canonical morphism $A \rightarrow A/\mathfrak{a}$을 통해 $\Spec A/\mathfrak{a}$와 $Z(\mathfrak{a})\subseteq \Spec A$가 위상공간으로서 homeomorphic한 것은 이미 살펴보았다. Connectedness와 irreducibility는 모두 위상공간의 성질이므로, $\Spec A/\mathfrak{a}$의 위상적인 성질은 $\Spec A$의 닫힌집합 $Z(\mathfrak{a})$의 위상구조를 살펴보아 확인할 수 있다. 이들을 closed subscheme이라 부를 때, 부족한 것은 오직 $\Spec A/\mathfrak{a}$의 structure sheaf와 $\Spec A$의 structure sheaf(를 $Z(\mathfrak{a})$로 제한한 것)이 어떤 관계에 있는지 뿐이며, 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes){: data-lid="dp2ug" }에서 다시 살펴보게 된다. 
 
 ::: 예시 6
 우선 connected가 아닌 scheme의 예시는 $\mathbb{A}^2_\mathbb{K}$의 closed subscheme 
@@ -85,7 +85,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 ideal $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 generic point로 대표하는 prime ideal이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 ideal은 이들 두 ideal의 교집합에 포함되어야 할테지만 이 두 ideal의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
 :::
 
-우리는 [\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)에서 위상공간이 Noetherian이라는 개념을 정의하였다. 이를 scheme의 언어로 옮겨올 때에는 약간의 주의가 필요한데, 우선 affine scheme에 대해서는 다음 명제가 성립한다.
+우리는 [\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11){: data-lid="73z76" }에서 위상공간이 Noetherian이라는 개념을 정의하였다. 이를 scheme의 언어로 옮겨올 때에는 약간의 주의가 필요한데, 우선 affine scheme에 대해서는 다음 명제가 성립한다.
 
 ::: 명제 7
 Noetherian ring $A$에 대하여, $\Spec A$는 항상 Noetherian topological space이다. 
@@ -111,7 +111,7 @@ $$\sqrt{\mathfrak{a}_k}=\sqrt{\mathfrak{a}_{k+1}}=\cdots$$
 
 $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
-이다. 이제 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)로부터 원하는 결과를 얻는다.
+이다. 이제 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5){: data-lid="ash2y" }로부터 원하는 결과를 얻는다.
 :::
 
 그러나 일반적으로 그 역은 성립하지 않는다. 즉 어떠한 affine scheme이 주어졌을 때, 이 scheme이 위상공간으로서 Noetherian이더라도 이를 정의하는 ring은 Noetherian이 아닐 수 있다. 가령 $\mathfrak{m}=(\x_1,\x_2,\ldots)$에 대하여 $A=\mathbb{K}[\x_1,\x_2,\ldots]/\mathfrak{m}^2$이라 두면, $A$의 임의의 prime ideal은 nilpotent element들을 모두 포함하므로 $\mathfrak{m}/\mathfrak{m}^2$을 포함하며, 이 ideal에 의한 quotient는 field $\mathbb{K}$이다. 즉 $\Spec A$는 한 점만을 갖는 Noetherian space이다. 그러나 $A$에서 $\mathfrak{m}/\mathfrak{m}^2$의 제곱은 $0$이므로 이 ideal을 생성하는 것은 $\mathbb{K}$-벡터공간으로서 생성하는 것과 같고, $\mathfrak{m}/\mathfrak{m}^2$은 무한차원이므로 이는 finitely generated ideal이 아니다. 따라서 $A$는 Noetherian ring이 아니다. 
@@ -120,7 +120,7 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
 Scheme은 정의상 affine scheme들을 붙여서 얻어지는 대상이므로, 그 성질을 탐구하기 위해 선택하는 전략 중 하나는 어떠한 성질들을 local하게 탐구하는 것이다. 실제로 위에서 다룬 많은 예시가 affine scheme이었듯, 일반적인 scheme의 성질도 affine 조각을 이어붙여 다루는 것이 이 전략의 핵심이다. 뿐만 아니라, 이 접근방식의 장점은 우리의 affine scheme에 대한 이해가 위상적인 영역에만 국한되지는 <em-ko>않는다</em-ko>는 점에 있다. 즉, 이번 글에서 도입한 위상적인 데이터 뿐만 아니라, affine scheme $\Spec A$는 $A$가 ring으로서 가지는 대수적인 성질도 가지고 있으며, 이 국소성은 이러한 대수적인 성질들도 global하게 이어붙이는 데에 도움을 줄 것이다. 
 
-이러한 상황에서 흥미롭게 동작하는 개념 중 하나는 Noetherian property로, 이는 Noetherian이라는 조건이 위상수학에서도, 대수학에서도 각각 정의되기 때문이며, 이것이 [명제 7](#prop7)을 도입하기 전에 지적한 ambiguity의 정체이다.
+이러한 상황에서 흥미롭게 동작하는 개념 중 하나는 Noetherian property로, 이는 Noetherian이라는 조건이 위상수학에서도, 대수학에서도 각각 정의되기 때문이며, 이것이 [명제 7](#prop7){: data-lid="3woa2" }을 도입하기 전에 지적한 ambiguity의 정체이다.
 
 우리는 이번 글에서 local property를 정의하고, 이를 Noetherian property에 적용하며 글을 마친다. 우선 ring의 성질이 local하다는 것이 어떤 의미인지 살펴보자.
 
@@ -135,12 +135,12 @@ Ring의 성질 $P_\alg$가 *local<sub>국소적</sub>*이라는 것은 다음의
 
 $$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-으로부터 $D(f_i)$들이 $\Spec A$를 덮는다는 것을 안다. 이를 사용하여 [정의 8](#def8)의 두 조건은 다음과 같이 번역된다.
+으로부터 $D(f_i)$들이 $\Spec A$를 덮는다는 것을 안다. 이를 사용하여 [정의 8](#def8){: data-lid="vhn15" }의 두 조건은 다음과 같이 번역된다.
 
 1. $\Spec A$가 $P_\geo$를 만족한다면, 임의의 principal open set $D(f)$ 또한 $P_\geo$를 만족한다.
 2. $\Spec A$를 덮는 open covering $D(f_1),\ldots, D(f_r)$가 각각 $P_\geo$를 만족한다면, $\Spec A$도 $P_\geo$를 만족한다. 
 
-한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 실제로 affine open subset $U=\Spec B$는 quasi-compact이므로 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)) $U$를 덮는 principal open set들 중 유한개 $D_A(f_1),\ldots, D_A(f_r)$만 남길 수 있고, 각각의 $D_A(f_i)$는 restriction $A \rightarrow B$에 의한 $f_i$의 image $g_i$에 대하여 $B$의 principal open set $D_B(g_i)$이면서 $B_{g_i}\cong A_{f_i}$이므로, $D_B(g_i)$들이 $\Spec B$를 덮는다는 것으로부터 $(g_1,\ldots, g_r)=B$를 얻어 [정의 8](#def8)의 둘째 조건을 $B$에 적용할 수 있다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
+한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11){: data-lid="foxl3" }), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 실제로 affine open subset $U=\Spec B$는 quasi-compact이므로 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="pi440" }) $U$를 덮는 principal open set들 중 유한개 $D_A(f_1),\ldots, D_A(f_r)$만 남길 수 있고, 각각의 $D_A(f_i)$는 restriction $A \rightarrow B$에 의한 $f_i$의 image $g_i$에 대하여 $B$의 principal open set $D_B(g_i)$이면서 $B_{g_i}\cong A_{f_i}$이므로, $D_B(g_i)$들이 $\Spec B$를 덮는다는 것으로부터 $(g_1,\ldots, g_r)=B$를 얻어 [정의 8](#def8){: data-lid="lsrkl" }의 둘째 조건을 $B$에 적용할 수 있다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
 
 ::: 정의 9
 Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property<sub>아핀-국소 성질</sub>*라는 것은 다음 두 조건이 성립하는 것이다. 
@@ -149,19 +149,19 @@ Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *a
 2. 만일 $A=(f_1,\ldots, f_r)$이고 $\Spec A_{f_i}\subseteq X$가 모두 $P$를 만족한다면 $\Spec A \subseteq X$ 또한 $P$를 만족한다. 
 :::
 
-반면 우리는 [§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8)에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 정말로 local한 성질을 살펴보기 위해서는 다음과 같이 정의하면 된다. 
+반면 우리는 [§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8){: data-lid="da2zb" }에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 정말로 local한 성질을 살펴보기 위해서는 다음과 같이 정의하면 된다. 
 
 ::: 정의 10
 Scheme의 affine-local property $P$에 대하여, scheme $(X, \mathcal{O}_X)$가 *locally $P$*라는 것은 임의의 $x\in X$마다 적절한 open affine neighborhood $U$가 존재하여 $X$의 affine open subscheme $U$가 $P$를 만족하는 것이다. 
 :::
 
-그럼 [보조정리 12](#lem12)에서 우리는 scheme $X$가 locally $P$라면, $X$의 임의의 open subscheme이 locally $P$라는 것을 보인다. 우선 다음 보조정리를 보이자.
+그럼 [보조정리 12](#lem12){: data-lid="scrhy" }에서 우리는 scheme $X$가 locally $P$라면, $X$의 임의의 open subscheme이 locally $P$라는 것을 보인다. 우선 다음 보조정리를 보이자.
 
 ::: 보조정리 11 (Nike)
 Scheme $X$와 임의의 affine open subset $U,V$가 주어졌다 하자. 그럼 임의의 $x\in U\cap V$에 대하여, 적당한 $x\in W\subseteq U\cap V$가 존재하여 $W$가 $U$와 $V$ 모두에서 principal open subset이도록 할 수 있다. 
 :::
 ::: 증명
-표기를 위해 $U=\Spec A$, $V=\Spec B$라 하고, $x$가 이들 각각에서 prime ideal들 $\mathfrak{p}\subseteq A$, $\mathfrak{q}\subseteq B$에 대응된다 하자. 그럼 우선 $U\cap V$를 $U$의 열린집합으로 보아 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)를 적용하면 $U$의 principal open set $D(f)$를 택하여
+표기를 위해 $U=\Spec A$, $V=\Spec B$라 하고, $x$가 이들 각각에서 prime ideal들 $\mathfrak{p}\subseteq A$, $\mathfrak{q}\subseteq B$에 대응된다 하자. 그럼 우선 $U\cap V$를 $U$의 열린집합으로 보아 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11){: data-lid="ury23" }를 적용하면 $U$의 principal open set $D(f)$를 택하여
 
 $$\mathfrak{p}\in D(f)\subseteq U\cap V$$
 
@@ -185,28 +185,28 @@ Scheme $X$와 scheme의 affine-local property $P$에 대하여 다음이 모두 
 특히, 만일 $X$가 locally $P$라면 $X$의 임의의 open subscheme이 locally $P$이다. 
 :::
 ::: 증명
-첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 10](#def10)에서 요구하는 $x$의 open affine neighborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
+첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 10](#def10){: data-lid="swurw" }에서 요구하는 $x$의 open affine neighborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
 
-이제 셋째 조건이 성립한다 가정하고 둘째 조건이 성립함을 보인다. 셋째 조건을 만족하는 $X$의 affine open covering $\{U_i=\Spec A_i\}$가 주어졌다 하자. 그럼 $X$의 임의의 affine open subset $V=\Spec A$에 대하여, 각각의 $V\cap U_i$들은 $V$의 열린집합이기도 하므로 [보조정리 11](#lem11)로부터 
+이제 셋째 조건이 성립한다 가정하고 둘째 조건이 성립함을 보인다. 셋째 조건을 만족하는 $X$의 affine open covering $\{U_i=\Spec A_i\}$가 주어졌다 하자. 그럼 $X$의 임의의 affine open subset $V=\Spec A$에 대하여, 각각의 $V\cap U_i$들은 $V$의 열린집합이기도 하므로 [보조정리 11](#lem11){: data-lid="nce5a" }로부터 
 
 $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_{ij}}$$
 
-를 만족하는 $f_{ij}\in A_i$들을 찾을 수 있고, $\Spec (A_i)_{f_{ij}}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_{ij}}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)를 사용하면 $g_{ij}$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9)의 첫째 조건으로부터 각각의 $\Spec (A_i)_{f_{ij}}=\Spec A_{g_{ij}}$가 $P$를 만족하는 것을 알고, 둘째 조건으로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
+를 만족하는 $f_{ij}\in A_i$들을 찾을 수 있고, $\Spec (A_i)_{f_{ij}}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_{ij}}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="xehpb" }를 사용하면 $g_{ij}$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9){: data-lid="6ei1u" }의 첫째 조건으로부터 각각의 $\Spec (A_i)_{f_{ij}}=\Spec A_{g_{ij}}$가 $P$를 만족하는 것을 알고, 둘째 조건으로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
 
 이상에서 첫째 조건부터 셋째 조건이 모두 동치임을 안다. 
 
-이제 $X$가 locally $P$라 하고, $U$가 $X$의 임의의 open subscheme이라 하자. 그럼 임의의 $x\in U$에 대하여, [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)로부터 $x\in D(f)\subseteq U$를 만족하는 $X$의 affine open subset $D(f)$를 잡을 수 있고 이제 둘째 조건으로부터 $D(f)$가 $P$를 만족하는 affine scheme인 것을 안다. 따라서 scheme $U$ 또한 locally $P$가 되어 마지막 주장을 얻는다. 마지막으로 넷째 조건과 나머지 조건이 동치인 것은 이 주장을 사용하여 둘째 조건과 셋째 조건에서 affine이라는 가정만 빼면 얻어진다. 
+이제 $X$가 locally $P$라 하고, $U$가 $X$의 임의의 open subscheme이라 하자. 그럼 임의의 $x\in U$에 대하여, [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11){: data-lid="waeba" }로부터 $x\in D(f)\subseteq U$를 만족하는 $X$의 affine open subset $D(f)$를 잡을 수 있고 이제 둘째 조건으로부터 $D(f)$가 $P$를 만족하는 affine scheme인 것을 안다. 따라서 scheme $U$ 또한 locally $P$가 되어 마지막 주장을 얻는다. 마지막으로 넷째 조건과 나머지 조건이 동치인 것은 이 주장을 사용하여 둘째 조건과 셋째 조건에서 affine이라는 가정만 빼면 얻어진다. 
 :::
 
-한편 우리는 [명제 7](#prop7)에서 Noetherian ring $A$에 대하여 $\Spec A$가 Noetherian space임을 보았다. 이제 임의의 scheme $X$에 대하여 $X$가 Noetherian인 것이 무엇인지를 정의하자.
+한편 우리는 [명제 7](#prop7){: data-lid="nd7kf" }에서 Noetherian ring $A$에 대하여 $\Spec A$가 Noetherian space임을 보았다. 이제 임의의 scheme $X$에 대하여 $X$가 Noetherian인 것이 무엇인지를 정의하자.
 
 ::: 보조정리 13
 Ring $A$가 Noetherian인 것은 local property이고, 따라서 affine-local property $P$를 정의한다. 
 :::
 ::: 증명
-[정의 8](#def8)의 두 조건을 증명해야 한다. 
+[정의 8](#def8){: data-lid="k4zb9" }의 두 조건을 증명해야 한다. 
 
-첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어진다.
+첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9){: data-lid="rikvx" }로부터 얻어진다.
 
 둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 Noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 finitely generated임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 Noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 finitely generated이며, generator들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 image가 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
 
@@ -221,9 +221,9 @@ $$m=\sum_{i=1}^r g_if_i^nm=0$$
 Scheme $X$가 *locally Noetherian scheme<sub>국소뇌터스킴</sub>*인 것은 $A_i$가 모두 Noetherian인 $X$의 affine open covering $\{U_i=\Spec A_i\}$가 존재하는 것이다. 만일 $X$가 quasi-compact locally Noetherian scheme이라면 이를 *Noetherian scheme<sub>뇌터스킴</sub>*이라 부른다. 
 :::
 
-그럼 만일 $A$가 Noetherian이라면 $\Spec A$가 Noetherian scheme인 것은 정의와 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)로부터 자명하다. 또, [명제 7](#prop7)과 마찬가지로 임의의 Noetherian scheme은 위상공간으로서 Noetherian이다. 그러나 [명제 7](#prop7) 이후에 지적했듯, scheme $X$가 위상공간으로서 Noetherian이라 해서 위의 조건이 성립하는 것은 아니라는 것에 주의해야 한다.
+그럼 만일 $A$가 Noetherian이라면 $\Spec A$가 Noetherian scheme인 것은 정의와 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="oi3l1" }로부터 자명하다. 또, [명제 7](#prop7){: data-lid="ddals" }과 마찬가지로 임의의 Noetherian scheme은 위상공간으로서 Noetherian이다. 그러나 [명제 7](#prop7){: data-lid="yeyaj" } 이후에 지적했듯, scheme $X$가 위상공간으로서 Noetherian이라 해서 위의 조건이 성립하는 것은 아니라는 것에 주의해야 한다.
 
-마지막으로 우리는 [정의 9](#def9)와는 조금 다른 국소성의 개념을 정의하는데, *stalk-local*의 개념이 그것이다. 
+마지막으로 우리는 [정의 9](#def9){: data-lid="hot5g" }와는 조금 다른 국소성의 개념을 정의하는데, *stalk-local*의 개념이 그것이다. 
 
 ::: 정의 15
 Scheme $X$의 성질 $P$가 *stalk-local<sub>줄기-국소</sub>*이라는 것은 각각의 $x\in X$에 대하여 ring $\mathcal{O}_{X,x}$가 ring의 성질 $Q$를 만족하는 것이다. 
@@ -258,7 +258,7 @@ $$\text{$X$ is $P$}\iff \text{$\mathcal{O}_{X,x}$ satisfies $Q$ for all $x\in X$
 
 $$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$$
 
-을 생각하면 $A$의 임의의 원소 $x$는 $x^2=x$를 만족하고, 따라서 임의의 localization $A_\mathfrak{p}$의 원소도 그러하다. 이제 $A_{\mathfrak{p}}$에서 성립하는 $x(1-x)=0$으로부터 우리는 $x\in \mathfrak{p}A_\mathfrak{p}$이거나 $1-x\in \mathfrak{p}A_\mathfrak{p}$임을 알고, $\mathfrak{p}A_\mathfrak{p}$에 속하지 않는 원소는 unit임을 안다. ([\[가환대수학\] §국소화, ⁋명제 2](/ko/math/commutative_algebra/localization#prop2)) 따라서 $x=0$ 혹은 $x=1$이므로 $A_\mathfrak{p}$의 ideal의 chain은 $(0)\subseteq (1)=A_\mathfrak{p}$ 뿐이다. 이로부터 $A_\mathfrak{p}$ 각각은 Noetherian이지만, 
+을 생각하면 $A$의 임의의 원소 $x$는 $x^2=x$를 만족하고, 따라서 임의의 localization $A_\mathfrak{p}$의 원소도 그러하다. 이제 $A_{\mathfrak{p}}$에서 성립하는 $x(1-x)=0$으로부터 우리는 $x\in \mathfrak{p}A_\mathfrak{p}$이거나 $1-x\in \mathfrak{p}A_\mathfrak{p}$임을 알고, $\mathfrak{p}A_\mathfrak{p}$에 속하지 않는 원소는 unit임을 안다. ([\[가환대수학\] §국소화, ⁋명제 2](/ko/math/commutative_algebra/localization#prop2){: data-lid="a0fk6" }) 따라서 $x=0$ 혹은 $x=1$이므로 $A_\mathfrak{p}$의 ideal의 chain은 $(0)\subseteq (1)=A_\mathfrak{p}$ 뿐이다. 이로부터 $A_\mathfrak{p}$ 각각은 Noetherian이지만, 
 
 $$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\times\{0\}\times\cdots\subseteq\cdots$$
 
@@ -272,4 +272,4 @@ $$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/
 
 ---
 
-[^1]: 우리는 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11) 이후에 (Hausdorff가 아닐 수 있는) compact한 위상공간을 *quasi-compact*라 부르기로 하였다. 
+[^1]: 우리는 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11){: data-lid="ogl65" } 이후에 (Hausdorff가 아닐 수 있는) compact한 위상공간을 *quasi-compact*라 부르기로 하였다. 
