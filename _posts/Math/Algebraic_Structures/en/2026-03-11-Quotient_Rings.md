@@ -59,7 +59,7 @@ For a ring $A$ and a two-sided ideal $\mathfrak{a}$, the following hold.
     $\bar{\phi}$ preserves multiplication. Similarly, from $\bar{\phi}(1+\mathfrak{a})=\bar{\phi}(\pi(1))=\phi(1)=1$, $\bar{\phi}$ sends $1$ to $1$. 
 :::
 
-The following theorem can be regarded as the ring homomorphism version of [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-relation="required" reviewed="" }.
+The following theorem can be regarded as the ring homomorphism version of [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-lid="litlx" data-relation="required" reviewed="" }.
 
 ::: Theorem 3
 For a ring homomorphism $\phi:A \rightarrow B$, its kernel $\ker \phi$, and its image $\im\phi$, the following hold.
@@ -70,7 +70,7 @@ For a ring homomorphism $\phi:A \rightarrow B$, its kernel $\ker \phi$, and its 
 4. For a two-sided ideal of $A$, $\mathfrak{a}$, there exists an inclusion-preserving bijection between the set of two-sided ideals of $A/\mathfrak{a}$ and the set of two-sided ideals containing $\mathfrak{a}$ in $A$.
 :::
 ::: Proof
-Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-relation="required" }; one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2){: data-lid="xwl8y" data-relation="required" reviewed="" }.
+Parts 1 and 3 proceed almost identically to what was treated in [§Group Isomorphisms](/en/math/algebraic_structures/isomorphism_theorems){: data-lid="r7xvb" data-relation="required" }; one only needs to verify that the group homomorphism obtained there is in fact also a ring homomorphism in the same manner as part 2 of [Proposition 2](#prop2){: data-lid="xwl8y" data-relation="required" reviewed="" }.
 
 In the case of 2, that $S+\ker \phi$ is a subgroup under addition is the same as in the case of groups. For any $\alpha,\alpha'\in S$ and $x,x'\in\ker \phi$, in
 
