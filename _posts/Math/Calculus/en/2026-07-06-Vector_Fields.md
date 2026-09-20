@@ -64,11 +64,11 @@ $$\curl(\nabla f) = 0, \qquad \divergence(\curl \mathbf{F}) = 0.$$
 :::
 
 ::: Proof
-The first component of the curl of $\nabla f = (f_x, f_y, f_z)$ is $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$, which vanishes by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-relation="required" }, and the remaining two components are zero for the same reason. Also, the divergence of $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$ is
+The first component of the curl of $\nabla f = (f_x, f_y, f_z)$ is $\partial_y f_z - \partial_z f_y = f_{zy} - f_{yz}$, which vanishes by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-lid="e0214" data-relation="required" }, and the remaining two components are zero for the same reason. Also, the divergence of $\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$ is
 
 $$\partial_x(R_y - Q_z) + \partial_y(P_z - R_x) + \partial_z(Q_x - P_y) = (R_{yx} - R_{xy}) + (P_{zy} - P_{yz}) + (Q_{xz} - Q_{zx})$$
 
-and applying [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-relation="required" } to each parenthesis again shows that it is zero.
+and applying [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-lid="o06o9" data-relation="required" } to each parenthesis again shows that it is zero.
 :::
 
 The first identity yields a necessary condition for conservativity. If $\mathbf{F} = \nabla f$, then $\curl \mathbf{F} = \curl(\nabla f) = 0$, so a vector field with nonzero curl can never be conservative. That is, the following holds.

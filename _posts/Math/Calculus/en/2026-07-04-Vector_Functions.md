@@ -169,7 +169,7 @@ $$\mathbf{N} = \frac{d\mathbf{T}/\dd{s}}{\lVert d\mathbf{T}/\dd{s}\rVert}$$
 is called the *unit normal vector*.
 :::
 
-Note that by [Proposition 6](#prop6){: data-lid="smni0" data-relation="required" }, $\mathbf{T} = d\mathbf{r}/\dd{s}$ is a unit vector. Then by the observation examined right after [Proposition 3](#prop3){: data-relation="required" }, that the derivative of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/\dd{s} \perp \mathbf{T}$. Thus the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside into which the curve is bending.
+Note that by [Proposition 6](#prop6){: data-lid="smni0" data-relation="required" }, $\mathbf{T} = d\mathbf{r}/\dd{s}$ is a unit vector. Then by the observation examined right after [Proposition 3](#prop3){: data-lid="xseen" data-relation="required" }, that the derivative of a vector of constant length is perpendicular to that vector, we have $d\mathbf{T}/\dd{s} \perp \mathbf{T}$. Thus the unit normal vector $\mathbf{N}$ is always perpendicular to the tangent, and points to the inside into which the curve is bending.
 
 The above definition applies to curves in general $n$-dimensional space, but in $3$-dimensional space the cross product allows us to compute curvature more conveniently. In particular, the following formula can be applied directly without arc length parametrization, which is far more practical.
 
@@ -192,7 +192,7 @@ and by the chain rule $\mathbf{T}'(t) = (d\mathbf{T}/\dd{s})v$ and $\lVert d\mat
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + v\mathbf{T}'(t)) = v^2(\mathbf{T} \times \mathbf{T}'(t)).$$
 
-Here the second equality follows from $\mathbf{T}\times \mathbf{T}=0$. Now $\mathbf{T}$ is a unit vector, and by the observation right after [Proposition 3](#prop3){: data-relation="required" } that the derivative of a vector of constant length is perpendicular to that vector, we have $\mathbf{T} \perp \mathbf{T}'(t)$, so $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$, and
+Here the second equality follows from $\mathbf{T}\times \mathbf{T}=0$. Now $\mathbf{T}$ is a unit vector, and by the observation right after [Proposition 3](#prop3){: data-lid="iz0v0" data-relation="required" } that the derivative of a vector of constant length is perpendicular to that vector, we have $\mathbf{T} \perp \mathbf{T}'(t)$, so $\lVert \mathbf{T} \times \mathbf{T}'(t)\rVert = \lVert \mathbf{T}'(t)\rVert = \kappa v$, and
 
 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$
 

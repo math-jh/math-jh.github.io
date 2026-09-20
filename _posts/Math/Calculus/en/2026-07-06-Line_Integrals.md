@@ -67,7 +67,7 @@ $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \ma
 
 :::
 
-[Theorem 3](#thm3){: data-relation="weak" } states that the line integral of a conservative field is independent of the path. Surprisingly, the converse also holds.
+[Theorem 3](#thm3){: data-lid="p22mi" data-relation="weak" } states that the line integral of a conservative field is independent of the path. Surprisingly, the converse also holds.
 
 ::: Theorem 4
 Let $\mathbf{F}$ be continuous on a connected open region $D$. Then the following are equivalent.
@@ -78,7 +78,7 @@ Let $\mathbf{F}$ be continuous on a connected open region $D$. Then the followin
 :::
 
 ::: Proof
-$(1 \Rightarrow 3)$ is [Theorem 3](#thm3){: data-relation="required" }. Here, since $\mathbf{F} = \nabla f$ is continuous, the potential $f$ is automatically $C^1$. $(3 \Leftrightarrow 2)$ follows from cutting a closed curve at a point into two paths, and noting that reversing one path yields a closed curve. The integral over this reversed path is the negative of the original integral by the change of variables $t \mapsto a + b - t$, so the integral over a closed curve being zero is equivalent to the integrals over the two paths being equal.
+$(1 \Rightarrow 3)$ is [Theorem 3](#thm3){: data-lid="pxo9x" data-relation="required" }. Here, since $\mathbf{F} = \nabla f$ is continuous, the potential $f$ is automatically $C^1$. $(3 \Leftrightarrow 2)$ follows from cutting a closed curve at a point into two paths, and noting that reversing one path yields a closed curve. The integral over this reversed path is the negative of the original integral by the change of variables $t \mapsto a + b - t$, so the integral over a closed curve being zero is equivalent to the integrals over the two paths being equal.
 
 Thus the key claim is $(3 \Rightarrow 1)$. For this, we must construct the potential directly. Fix a base point $\mathbf{x}_0 \in D$, and for any $\mathbf{x}\in D$, define $f(\mathbf{x})$ to be the line integral of $\mathbf{F}$ from $\mathbf{x}_0$ to $\mathbf{x}$. This would normally depend on the choice of curve $\mathbf{r}$ joining $\mathbf{x}_0$ and $\mathbf{x}$, but since we are assuming the third condition, this definition is well-defined. Now the average rate of change in the coordinate direction $\mathbf{e}_i$
 
