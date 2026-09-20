@@ -85,7 +85,7 @@ $$\Pi_1(p):\Pi_1(E) \rightarrow \Pi_1(B)$$
 
 $$\Hom_{\Pi_1(E)}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
-가 잘 정의된다. 만일 $p(y_0)=p(y_1)=x$라면 ($\ast$)의 공역은 fundamental group $\pi_1(B,x)$이며, 특히 $y_0=y_1$인 경우 ($\ast$)는 group homomorphism $\pi_1(E,y_0)\rightarrow \pi_1(B,x)$가 된다. 만일 $E$가 $B$의 fundamental group (혹은 groupoid)에 대한 정보를 모두 가지고 있다면 적어도 이 함수가 surjective여야 한다. 
+가 잘 정의된다. 만일 $p(y_0)=p(y_1)=x$라면 ($\ast$)의 공역은 fundamental group $\pi_1(B,x)$이며, 특히 $y_0=y_1$인 경우 ($\ast$)는 group homomorphism $\pi_1(E,y_0)\rightarrow \pi_1(B,x)$가 된다. 
 
 ::: 정의 5
 Continuous map $p:E\rightarrow B$를 고정하자. 그럼 임의의 continuous map $f:X \rightarrow B$에 대하여, $f$의 $p$에 대한 *lifting<sub>올림</sub>*이란 식 $p\circ\widetilde{f}=f$를 만족하는 $\widetilde{f}:X\rightarrow E$를 의미한다. 

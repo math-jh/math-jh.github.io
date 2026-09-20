@@ -102,7 +102,7 @@ Smooth quasi-projective variety $X$에 대하여, intersection product에 의해
 Smooth quasi-projective variety $X$와 cycle $Z \in Z^k(X)$, 그리고 임의의 cycle $W \in Z^l(X)$에 대해, $Z' \sim_{\text{rat}} Z$이고 $Z'$과 $W$가 properly intersect하는 $Z'$가 존재한다.
 :::
 
-핵심 아이디어는 $Z$를 구성하는 irreducible component $V_i$를 직접 움직이는 대신, 이를 더 큰 cycle에서 잘라내어 표현하는 것이다. $X$를 $\mathbb{P}^n$ 안에 embed해 두고 일반적인 linear subspace $L$을 vertex로 하는 $V_i$ 위의 cone $C_L(V_i)$를 잡으면, 차원이 맞아떨어져 $C_L(V_i)$와 $X$가 properly intersect하고 cycle 수준에서 $C_L(V_i) \cdot X = V_i + R_i$의 꼴로 residual cycle $R_i$가 남는다. 그럼 $C_L(V_i)$를 $\mathbb{P}^n$ 안에서 일반적인 위치의 cycle $C$로 옮기는 rational equivalence로부터 $V_i \sim_{\text{rat}} C \cdot X - R_i$를 얻고, 우변의 첫 항은 이미 $W$와 properly intersect한다. 남은 $R_i$에 대해서는 $L$을 일반적으로 잡을 때 $R_i$가 $W$에 대해 갖는 excess, 즉 교집합의 차원이 기대 차원을 초과하는 정도가 $V_i$의 것보다 엄격히 작아지므로, 이 excess에 대한 induction으로 원하는 $Z'$를 얻는다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5){: data-relation="requires-review" }에서 보았듯 basepoint-free linear system을 사용하면 이러한 <em-ko>일반적인</em-ko> 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
+핵심 아이디어는 $Z$를 구성하는 irreducible component $V_i$를 직접 움직이는 대신, 이를 더 큰 cycle에서 잘라내어 표현하는 것이다. $X$를 $\mathbb{P}^n$ 안에 embed해 두고 일반적인 linear subspace $L$을 vertex로 하는 $V_i$ 위의 cone $C_L(V_i)$를 잡으면, 차원이 맞아떨어져 $C_L(V_i)$와 $X$가 properly intersect하고 cycle 수준에서 $C_L(V_i) \cdot X = V_i + R_i$의 꼴로 residual cycle $R_i$가 남는다. 그럼 $C_L(V_i)$를 $\mathbb{P}^n$ 안에서 일반적인 위치의 cycle $C$로 옮기는 rational equivalence로부터 $V_i \sim_{\text{rat}} C \cdot X - R_i$를 얻고, 우변의 첫 항은 이미 $W$와 properly intersect한다. 남은 $R_i$에 대해서는 $L$을 일반적으로 잡을 때 $R_i$가 $W$에 대해 갖는 excess, 즉 교집합의 차원이 기대 차원을 초과하는 정도가 $V_i$의 것보다 엄격히 작아지므로, 이 excess에 대한 induction으로 원하는 $Z'$를 얻는다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5){: data-relation="weak" reviewed="" }에서 보았듯 basepoint-free linear system을 사용하면 이러한 <em-ko>일반적인</em-ko> 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
 
 그럼 우리는 위의 보조정리를 사용하여 $Z$를 $Z'$로 옮겨준 후, 다음의 식
 
@@ -114,7 +114,7 @@ $$Z \cdot W := Z' \cdot W = \sum_{T \subseteq Z' \cap W} i_T(Z', W) [T]$$
 
 Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection을 계산한다는 점에서 우리의 직관을 현실화한다. 그러나 이 접근은 quasi-projectivity라는 가정에 의존하며, 이를 일반적인 세팅으로 확장하기 위해서는 *deformation to normal cone*을 해야 한다. 
 
-핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13){: data-relation="requires-review" }에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $i: Y \hookrightarrow X$에 대해 $Y$의 $X$ 안에서의 *normal cone* $C_{Y/X}$를 정의할 수 있다. 만일 $i$가 regular embedding이라면 (가령 $X$와 $Y$가 모두 smooth하다면) normal cone은 normal bundle $N_{Y/X}$가 되지만, 일반적으로는 cone 구조를 가진다.
+핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13){: data-relation="required" reviewed="" }에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $i: Y \hookrightarrow X$에 대해 $Y$의 $X$ 안에서의 *normal cone* $C_{Y/X}$를 정의할 수 있다. 만일 $i$가 regular embedding이라면 (가령 $X$와 $Y$가 모두 smooth하다면) normal cone은 normal bundle $N_{Y/X}$가 되지만, 일반적으로는 cone 구조를 가진다.
 
 ::: 명제 9 (Deformation to Normal Cone)
 Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변수로 하는 family $M \rightarrow \mathbb{A}^1$을 구성할 수 있다. 구체적으로, $t \neq 0$에서의 fiber $M_t$는 $X$ 자신이며, $t = 0$에서의 fiber $M_0$는 normal cone $C_{Y/X}$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
@@ -145,8 +145,7 @@ $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in A^2(S)$$
 :::
 
 ::: 예시 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)
-약간 더 복잡한 예시로, 우리는 [§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex11){: data-relation="requires-review" }에서 $\mathbb{P}^1 \times \mathbb{P}^1$과 quadric surface $Q = V(\x\y - \z\w)$가 isomorphic함
-을 보았다. $\mathbb{P}^1 \times \mathbb{P}^1$의 Chow ring은
+약간 더 복잡한 예시로, 우리는 [§유리사상, ⁋예시 11](/ko/math/algebraic_varieties/rational_maps#ex11){: data-relation="required" reviewed="" }에서 $\mathbb{P}^1 \times \mathbb{P}^1$과 quadric surface $Q = V(\x\y - \z\w)$가 isomorphic함을 보았다. $\mathbb{P}^1 \times \mathbb{P}^1$의 Chow ring은
 
 $$A^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2)$$
 
@@ -158,7 +157,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 :::
 
 ::: 예시 13
-Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$를 생각하자. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="requires-review" }) 이 embedding의 image는 quadric surface $Q = V(\x\y - \z\w)$이다. [§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop20){: data-relation="required" reviewed="" }에 의해 pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$은 $\mathbb{P}^1 \times \mathbb{P}^1$ 위의 line bundle이며, 실제로 $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$이다. 이는 Chow ring 수준에서도 확인할 수 있는데, $\mathbb{P}^3$에서 hyperplane class $H_{\mathbb{P}^3}$를 pullback하면 $H_1 + H_2$를 얻고, 이는 bidegree $(1,1)$에 해당한다.
+Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$를 생각하자. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16){: data-relation="required" reviewed="" }) 이 embedding의 image는 quadric surface $Q = V(\x\y - \z\w)$이다. [§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop20){: data-relation="required" reviewed="" }에 의해 pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$은 $\mathbb{P}^1 \times \mathbb{P}^1$ 위의 line bundle이며, 실제로 $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$이다. 이는 Chow ring 수준에서도 확인할 수 있는데, $\mathbb{P}^3$에서 hyperplane class $H_{\mathbb{P}^3}$를 pullback하면 $H_1 + H_2$를 얻고, 이는 bidegree $(1,1)$에 해당한다.
 
 이를 통해 $\mathbb{P}^3$에서의 교차 계산을 $\mathbb{P}^1 \times \mathbb{P}^1$으로 옮겨 수행할 수 있다. 가령 $\mathbb{P}^3$에서 두 hyperplane $H, H'$ 각각과 quadric surface $Q$의 교차, 즉 $(H \cap Q)$와 $(H' \cap Q)$의 교차는 $\mathbb{P}^1 \times \mathbb{P}^1$에서 $(H_1 + H_2)^2 = 2H_1 H_2$로 계산된다. 즉, 두 hyperplane과 quadric surface의 교차는 $2$개의 점으로, 이는 $Q \cong \mathbb{P}^1 \times \mathbb{P}^1$에서 두 개의 bidegree $(1,1)$ curve가 만나는 것과 같다.
 :::
