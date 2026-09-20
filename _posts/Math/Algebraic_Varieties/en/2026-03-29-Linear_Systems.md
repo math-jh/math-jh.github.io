@@ -149,13 +149,13 @@ $$\sigma=a_0F_0+\cdots+a_rF_r\in V,$$
 that is, with $\divisor(\sigma)$. Let us look at a more concrete example.
 
 ::: Example 7
-Let us examine the two examples of $\mathbb{P}^2$ from [Example 3](#ex3). First, consider the complete linear system
+Let us examine the two examples of $\mathbb{P}^2$ from [Example 3](#ex3){: data-lid="czpbz" }. First, consider the complete linear system
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1).$$
 
 Choosing the basis $\x_0,\x_1,\x_2$ for the vector space $\mathbb{K}[\x_0,\x_1,\x_2]_1$, there is no point in $\mathbb{P}^2$ where $\x_0,\x_1,\x_2$ all vanish simultaneously, so this is basepoint-free. The $\varphi_L$ defined by this choice of basis is simply the identity.
 
-In the case of the base locus of the two conics, as we saw above, the base locus is not empty. In fact, the base locus is the four intersection points of $C_1\cap C_2$ already examined in [Example 3](#ex3), and geometrically, since each element of the pencil shares exactly these four intersection points of $C_1\cap C_2$, this matches the definition of the base locus.
+In the case of the base locus of the two conics, as we saw above, the base locus is not empty. In fact, the base locus is the four intersection points of $C_1\cap C_2$ already examined in [Example 3](#ex3){: data-lid="5uvlk" }, and geometrically, since each element of the pencil shares exactly these four intersection points of $C_1\cap C_2$, this matches the definition of the base locus.
 :::
 
 The above example intuitively shows the origin of the name basepoint, but since $\varphi_L$ is the identity, [Proposition 6](#prop6){: data-lid="azmsu" } does not actually have much meaning. Let us look at a more non-trivial example.
@@ -184,13 +184,13 @@ Although we are assuming that every variety is quasi-projective, varieties can g
 
 For example, in our language, to say that $\mathbb{P}^1\times \mathbb{P}^1$ is a (quasi-projective) variety, we must embed it into some projective space. ([§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16){: data-lid="4o12n" }) Instead, if we do not assume the existence of an ambient projective space in the definition of a variety, then $\mathbb{P}^1\times \mathbb{P}^1$ automatically becomes a variety without our having to show this, but it is unclear whether a general variety embeds into projective space.
 
-However, even on an abstract variety, we can define line bundles, linear systems, and so on. Then in particular, using [Proposition 6](#prop6), we can define a suitable map to projective space. The importance of the following definition should be understood in this context.
+However, even on an abstract variety, we can define line bundles, linear systems, and so on. Then in particular, using [Proposition 6](#prop6){: data-lid="sjhs0" }, we can define a suitable map to projective space. The importance of the following definition should be understood in this context.
 
 ::: Definition 9
 A line bundle $\mathcal{L}$ (or the corresponding linear system $\lvert \mathcal{L} \rvert$) is said to be *very ample* if the regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L})^\ast)$ defined by the complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$ is a closed embedding.
 :::
 
-Here, the reason the target is the projectivization of the dual of $\Gamma(X, \mathcal{L})$, rather than the projectivization of $\Gamma(X, \mathcal{L})$ itself, is that, as we saw in [Proposition 6](#prop6), the elements of the linear system correspond to the hyperplanes of the target. Choosing a basis $s_0,\ldots,s_r$ of $\Gamma(X, \mathcal{L})$ and taking the dual basis as coordinates, we get $\mathbb{P}(\Gamma(X, \mathcal{L})^\ast)\cong \mathbb{P}^r$, and in these coordinates $\varphi_{\mathcal{L}}$ is given by $x\mapsto [s_0(x):\cdots:s_r(x)]$. Since $\varphi_L$ differs by an automorphism of $\mathbb{P}^r$ depending on the choice of basis, whether this is a closed embedding does not depend on the choice of basis.
+Here, the reason the target is the projectivization of the dual of $\Gamma(X, \mathcal{L})$, rather than the projectivization of $\Gamma(X, \mathcal{L})$ itself, is that, as we saw in [Proposition 6](#prop6){: data-lid="kwfqo" }, the elements of the linear system correspond to the hyperplanes of the target. Choosing a basis $s_0,\ldots,s_r$ of $\Gamma(X, \mathcal{L})$ and taking the dual basis as coordinates, we get $\mathbb{P}(\Gamma(X, \mathcal{L})^\ast)\cong \mathbb{P}^r$, and in these coordinates $\varphi_{\mathcal{L}}$ is given by $x\mapsto [s_0(x):\cdots:s_r(x)]$. Since $\varphi_L$ differs by an automorphism of $\mathbb{P}^r$ depending on the choice of basis, whether this is a closed embedding does not depend on the choice of basis.
 
 The key point in the definition of very ample is that the map is not merely a morphism but a *closed* embedding. That is, as explained above, even in the world of abstract varieties, we can use this to define a projective variety, and moreover, using a very ample line bundle $\mathcal{L}$, we can express $X$ in explicit coordinates in this ambient projective space.
 
@@ -208,7 +208,7 @@ To see the usefulness of this definition, one should think of a space having a l
 
 An element of a linear system is a nonzero section modulo scalar multiplication ([Definition 2](#def2){: data-lid="zyflw" }), and what each element actually gives us is the zero locus of that section. Then it is natural to ask what kind of space this zero locus looks like. Looking again at the pencil of [Example 3](#ex3){: data-lid="pwqen" }, this is generated by $G_1=\x_0^2+\x_1^2-5\x_2^2$ and $G_2=\x_0\x_2$, so its elements are the conics $Z(\lambda G_1+\mu G_2)$. The determinant of the symmetric matrix corresponding to this quadratic form is $-\lambda(20\lambda^2+\mu^2)/4$, and a conic is singular exactly when this value is $0$, so the bad elements are only when $[\lambda:\mu]$ is one of the three points $[0:1]$, $[1:\pm 2\sqrt{5}i]$. For example, the element with $\lambda=0$ splits into two lines $Z(\x_0)$ and $Z(\x_2)$ and has a singular point at their intersection. All other elements are smooth conics, and what we want to know is the property that *almost all* elements have in this way.
 
-If $\mathcal{L}$ is very ample, this question translates into a question about hyperplanes. Through $\varphi_{\mathcal{L}}$, $X$ becomes a closed subvariety of $\mathbb{P}^N = \mathbb{P}(\Gamma(X,\mathcal{L})^\ast)$, and by [Proposition 6](#prop6), the elements of $\lvert \mathcal{L}\rvert$ are exactly the traces $X\cap H$ of hyperplanes $H\subseteq \mathbb{P}^N$ on $X$. That is, $\lvert \mathcal{L}\rvert$ is identified with the dual projective space $(\mathbb{P}^N)^\ast$, and so our question becomes one of how a general hyperplane cuts $X$. The answer to this is the following theorem.
+If $\mathcal{L}$ is very ample, this question translates into a question about hyperplanes. Through $\varphi_{\mathcal{L}}$, $X$ becomes a closed subvariety of $\mathbb{P}^N = \mathbb{P}(\Gamma(X,\mathcal{L})^\ast)$, and by [Proposition 6](#prop6){: data-lid="yimmi" }, the elements of $\lvert \mathcal{L}\rvert$ are exactly the traces $X\cap H$ of hyperplanes $H\subseteq \mathbb{P}^N$ on $X$. That is, $\lvert \mathcal{L}\rvert$ is identified with the dual projective space $(\mathbb{P}^N)^\ast$, and so our question becomes one of how a general hyperplane cuts $X$. The answer to this is the following theorem.
 
 ::: Proposition 11 (Bertini's theorem)
 For a projective variety $X\subseteq \mathbb{P}^N$, there exists a dense open subset $U$ of the dual projective space $(\mathbb{P}^N)^\ast$ such that for every $H\in U$, the following hold.
@@ -226,7 +226,7 @@ For a smooth projective variety $X$ and a very ample line bundle $\mathcal{L}$, 
 :::
 
 ::: Proof
-By [Definition 9](#def9){: data-lid="xlgts" }, $\varphi_{\mathcal{L}}$ is a closed embedding, so we can view $X$ as a closed subvariety of $\mathbb{P}^N$, and by [Proposition 6](#prop6), under this identification the elements of $\lvert \mathcal{L}\rvert$ are of the form $X\cap H$ for a hyperplane $H$. Applying [Proposition 11](#prop11){: data-lid="hnjbl" } to this gives the result.
+By [Definition 9](#def9){: data-lid="xlgts" }, $\varphi_{\mathcal{L}}$ is a closed embedding, so we can view $X$ as a closed subvariety of $\mathbb{P}^N$, and by [Proposition 6](#prop6){: data-lid="xkhb2" }, under this identification the elements of $\lvert \mathcal{L}\rvert$ are of the form $X\cap H$ for a hyperplane $H$. Applying [Proposition 11](#prop11){: data-lid="hnjbl" } to this gives the result.
 :::
 
 ---
