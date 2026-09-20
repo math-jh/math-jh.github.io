@@ -201,7 +201,9 @@ def validate(answer: dict, groups) -> tuple[list, list[str]]:
             allowed[ref] = {lid for lid, _l, _t in candidates}
     accepted, refused, used, answered = [], [], set(), set()
     for item in answer.get("assignments", []):
-        ref, lid = item.get("en_ref"), item.get("lid")
+        # 프롬프트가 태그를 `[e3]` 꼴로 보여주므로 대괄호째 돌아오는 것이 자연스럽다.
+        ref = str(item.get("en_ref") or "").strip().strip("[]").strip()
+        lid = item.get("lid")
         if ref not in by_ref:
             refused.append(f"{ref}: 묻지 않은 링크")
         elif ref in answered:
@@ -251,7 +253,14 @@ def announce_done(state: dict) -> None:
     """
     if state.get(DONE_KEY):
         return
-    pairs = [k for k in state if not k.startswith("_")]
+    # 틱마다 도는 회수는 그 틱이 고친 글만 본다. KO 쪽에서 사람이 검토를 마쳐
+    # 회수 조건이 성립한 글은 그 경로로 안 잡히므로, 끝낼 때 한 번 전부 훑는다.
+    try:
+        subprocess.run([sys.executable, str(Path(__file__).with_name(
+            "retire_en_reviewed.py")), "--apply"], cwd=str(ROOT), timeout=600)
+    except Exception as exc:                           # noqa: BLE001
+        print(f"마무리 회수 실패: {exc}")
+    pairs = [k for k in state if k != DONE_KEY]
     matched = sum(state[k].get("matched", 0) for k in pairs)
     held = sum(state[k].get("unmatched", 0) for k in pairs)
     refused = sum(len(state[k].get("refused", [])) for k in pairs)
@@ -354,7 +363,7 @@ def main() -> int:
         # 방금 lid 를 채운 EN 링크는 이제 KO 의 완료를 상속할 수 있다. 그 자리에서
         # 마커를 회수해 두면 이 백필이 끝나는 시점에 남는 잔재가 없다.
         subprocess.run([sys.executable, str(Path(__file__).with_name(
-            "retire_en_reviewed.py")), "--apply", "--quiet"], cwd=str(ROOT))
+            "retire_en_reviewed.py")), "--apply", "--quiet", *written], cwd=str(ROOT))
     if done == 0:
         print("남은 쌍 없음")
         announce_done(state)

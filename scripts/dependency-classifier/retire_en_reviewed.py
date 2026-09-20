@@ -78,13 +78,21 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("paths", nargs="*", help="EN 글 경로 — 생략하면 전 코퍼스")
     args = ap.parse_args()
+
+    if args.paths:
+        # 호출자가 방금 고친 글만 준 경우. 회수 조건은 그 글의 lid 나 KO 의
+        # reviewed 가 바뀔 때만 새로 성립하므로, 무관한 400여 편을 다시 훑지 않는다.
+        targets = [ROOT / p if not os.path.isabs(p) else Path(p) for p in args.paths]
+    else:
+        targets = sorted((ROOT / "_posts" / "Math").rglob("*.md"))
 
     files = retired = 0
     left = 0
     written: list[str] = []
     refused: list[tuple[str, str]] = []
-    for en_path in sorted((ROOT / "_posts" / "Math").rglob("*.md")):
+    for en_path in targets:
         if en_path.parent.name != "en":
             continue
         twin = ko_twin(en_path)
