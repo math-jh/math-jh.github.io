@@ -116,7 +116,7 @@ $$H^k(X;A):=H_k(C^\vee)$$
 
 and call it the *$k$th cohomology* of $X$. The reason for denoting the index using superscripts on $H$ and $C^\vee$ is that, contrary to homology, the long exact sequence is formed in the direction of increasing index; hereafter, when there is no danger of confusion, let us write $C^\bullet(X;A)$ for $(C^\vee)^\bullet(X)$.
 
-We must now examine what relationship exists between $H^k(X;A)$ thus defined and $H_k(X)$. As stated at the beginning of this post, it is not simply the case that $H^k(X;A)\cong H_k(X)^\ast$ holds. However, in a manner similar to the proof of [Proposition 1](#prop1){: data-lid="p70te" data-relation="required" reviewed="" } above, we can obtain the following proposition.
+We must now examine what relationship exists between $H^k(X;A)$ thus defined and $H_k(X)$. As stated at the beginning of this post, it is not simply the case that $H^k(X;A)\cong H_k(X)^\ast$ holds. However, in a manner similar to the proof of [Proposition 1](#prop1){: data-lid="p70te" data-relation="required" } above, we can obtain the following proposition.
 
 ::: Proposition 3 (Universal coefficient theorem for cohomology)
 For any topological space $X$ and abelian group $A$, there exists the following short exact sequence:
@@ -128,7 +128,7 @@ Moreover, this sequence splits (non-canonically), and therefore gives the follow
 $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$$
 :::
 
-Roughly speaking, this may be thought of as translating [Proposition 1](#prop1){: data-lid="n6vt9" data-relation="weak" reviewed="" } via [\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15){: data-lid="qfrxz" data-relation="weak" }.
+Roughly speaking, this may be thought of as translating [Proposition 1](#prop1){: data-lid="n6vt9" data-relation="weak" } via [\[Algebraic Structures\] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15){: data-lid="qfrxz" data-relation="weak" }.
 
 ## de Rham Cohomology
 
@@ -206,7 +206,7 @@ The de Rham cohomology defined in this manner also satisfies all the conditions 
 
 The de Rham cohomology examined above is an example of a cohomology theory whose coefficient group is not $\mathbb{Z}$. Unlike singular cohomology or simplicial cohomology theory, for de Rham cohomology it is natural by definition that the coefficient group is $\mathbb{R}$.
   
-Such cohomology theories have good properties: for instance, since $\mathbb{R}$ is a torsion-free abelian group, $\Tor_1^\mathbb{Z}(A,\mathbb{R})=0$ holds for any abelian group $A$, and hence by [Proposition 1](#prop1){: data-lid="grazk" data-relation="required" reviewed="" } we know that the following isomorphism
+Such cohomology theories have good properties: for instance, since $\mathbb{R}$ is a torsion-free abelian group, $\Tor_1^\mathbb{Z}(A,\mathbb{R})=0$ holds for any abelian group $A$, and hence by [Proposition 1](#prop1){: data-lid="grazk" data-relation="required" } we know that the following isomorphism
 
 $$H_k(X;\mathbb{R})\cong H_k(X)\otimes_\mathbb{Z}\mathbb{R}$$
 
@@ -220,7 +220,7 @@ $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=
 
 are, if $A$ were a ring, chain complexes of $A$-modules, and the previously defined $C^\bullet(X;A)$ is also such. Therefore, taking homology or cohomology of these, the result will also be an $A$-module.
 
-Meanwhile, we know that if $A$ is a principal ideal domain, any submodule of a free $A$-module is again a free $A$-module. Looking back at the proof of [Proposition 1](#prop1){: data-lid="9tm4t" data-relation="required" reviewed="" }, it made use of the fact that, since $\mathbb{Z}$ is a principal ideal domain, a submodule of a free $\mathbb{Z}$-module (that is, a free abelian group) is again a free $\mathbb{Z}$-module, and based on this, we can generalize the preceding two propositions as follows.
+Meanwhile, we know that if $A$ is a principal ideal domain, any submodule of a free $A$-module is again a free $A$-module. Looking back at the proof of [Proposition 1](#prop1){: data-lid="9tm4t" data-relation="required" }, it made use of the fact that, since $\mathbb{Z}$ is a principal ideal domain, a submodule of a free $\mathbb{Z}$-module (that is, a free abelian group) is again a free $\mathbb{Z}$-module, and based on this, we can generalize the preceding two propositions as follows.
 
 ::: Theorem 4 (Universal coefficient theorem for homology, general version)
 For a principal ideal domain $A$, a chain complex of free $A$-modules $C_\bullet$, and an arbitrary $A$-module $M$, there exists the following short exact sequence:
@@ -244,7 +244,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## The Mayer-Vietoris Sequence
 
-Meanwhile, among the axioms of [Definition 2](#def2){: data-lid="k1d4c" data-relation="required" reviewed="" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="8kgac" data-relation="required" reviewed="" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="dvoei" data-relation="required" } to [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="jl7od" data-relation="required" reviewed="" }, starting from [Definition 2](#def2){: data-lid="bw236" data-relation="required" reviewed="" }.
+Meanwhile, among the axioms of [Definition 2](#def2){: data-lid="k1d4c" data-relation="required" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="8kgac" data-relation="required" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="dvoei" data-relation="required" } to [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="jl7od" data-relation="required" }, starting from [Definition 2](#def2){: data-lid="bw236" data-relation="required" }.
 
 ::: Proposition 6 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union $X=U\cup V$ of two open sets, and consider a cohomology theory $H$ defined on it. Then there exists a long exact sequence
@@ -333,7 +333,7 @@ is a split exact sequence, a section $B_{\bullet-1}(C)\rightarrow C_\bullet$ ind
 
 ## The Eilenberg-Zilber Theorem and the Künneth Formula
 
-Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="required" reviewed="" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the homology $H_\bullet(X\times Y)$ of the product space $X\times Y$ and, for the two chain complexes $H_\bullet(X)$, $H_\bullet(Y)$, their tensor product $(H(X)\otimes H(Y))_\bullet$. The following theorem shows that these two algebraic objects are the same.
+Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="required" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the homology $H_\bullet(X\times Y)$ of the product space $X\times Y$ and, for the two chain complexes $H_\bullet(X)$, $H_\bullet(Y)$, their tensor product $(H(X)\otimes H(Y))_\bullet$. The following theorem shows that these two algebraic objects are the same.
 
 ::: Theorem 9 (Eilenberg-Zilber)
 For two topological spaces $X,Y$ and the chain complexes $C_\bullet(X),C_\bullet(Y)$, and $C_\bullet(X\times Y)$ obtained from them, there exists a chain homotopy equivalence between the two chain complexes $(C(X)\otimes C(Y))_\bullet$ and $C_\bullet(X\times Y)$, and therefore 
@@ -359,11 +359,11 @@ The Eilenberg-Zilber map $\EZ:(C(X)\otimes C(Y))_\bullet \rightarrow C_\bullet(X
 
 $$\EZ(\sigma\otimes\tau)=\sum_{\substack{\alpha_1<\cdots <\alpha_p,\quad \beta_1<\cdots <\beta_q\\ \{\alpha_1,\ldots,\alpha_p\}\sqcup\{\beta_1,\ldots,\beta_q\}=\{0,1,\ldots,p+q-1\}}}\sgn(\alpha_1,\ldots,\alpha_p,\beta_1,\ldots,\beta_q)(\sigma\circ s_{\beta_q}\cdots s_{\beta_1})\times(\tau\circ s_{\alpha_p}\cdots s_{\alpha_1})$$
 
-and although this looks complicated as a formula, it merely represents the function $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6){: data-lid="m90xp" data-relation="weak" }, that is, the method of decomposing the prism $\Delta^p\times \Delta^q$ into simplices. Then the result of [Theorem 9](#thm9){: data-lid="vkr16" data-relation="required" reviewed="" } follows from the two identities
+and although this looks complicated as a formula, it merely represents the function $h_n$ appearing in the proof of [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6){: data-lid="m90xp" data-relation="weak" }, that is, the method of decomposing the prism $\Delta^p\times \Delta^q$ into simplices. Then the result of [Theorem 9](#thm9){: data-lid="vkr16" data-relation="required" } follows from the two identities
 
 $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_\bullet(X\times Y)}$$
 
-Since the chain homotopy equivalence of [Theorem 9](#thm9){: data-lid="1r5ra" data-relation="required" reviewed="" } is between free complexes, it persists after applying $\otimes_\mathbb{Z}A$, and from this we obtain $C_\bullet(X\times Y)\otimes_\mathbb{Z}A\simeq (C(X)\otimes C(Y))_\bullet\otimes_\mathbb{Z}A\cong C_\bullet(X;A)\otimes_AC_\bullet(Y;A)$. Therefore, combining [Lemma 8](#lem8){: data-lid="ztb2y" data-relation="required" reviewed="" } with [Theorem 9](#thm9){: data-lid="27ctq" data-relation="required" reviewed="" }, we obtain the following result.
+Since the chain homotopy equivalence of [Theorem 9](#thm9){: data-lid="1r5ra" data-relation="required" } is between free complexes, it persists after applying $\otimes_\mathbb{Z}A$, and from this we obtain $C_\bullet(X\times Y)\otimes_\mathbb{Z}A\simeq (C(X)\otimes C(Y))_\bullet\otimes_\mathbb{Z}A\cong C_\bullet(X;A)\otimes_AC_\bullet(Y;A)$. Therefore, combining [Lemma 8](#lem8){: data-lid="ztb2y" data-relation="required" } with [Theorem 9](#thm9){: data-lid="27ctq" data-relation="required" }, we obtain the following result.
 
 ::: Corollary 10 (Künneth)
 Fix topological spaces $X,Y$. Then for their product space $X\times Y$ and a principal ideal domain $A$, there exists a short exact sequence

@@ -111,21 +111,21 @@ As for uniqueness, since $[s_i,s_{i+1}]$ is connected and inductively the compon
 
 The proof may appear somewhat technical, but the key idea is that any path starting at $x_0\in B$ will, at least for a short time, be contained in an open neighborhood evenly covered by $p$ of $x_0$, namely $U$, and by definition $p^{-1}(U)$ is a union of disjoint open subsets homeomorphic to $U$ in $E$; thus, knowing only which of these the starting point belongs to determines (by connectedness) which component the path stays in during this short time. The Lebesgue number lemma was used only to show that this process is finite. 
 
-Let us look again at the groupoid homomorphism ($\ast$). By [Lemma 6](#lem6){: data-lid="dmqxr" data-relation="required" reviewed="" }, in a covering space $p:E \rightarrow B$, given any $x_0,x_1\in B$ and a path $\alpha$ having these as endpoints, a choice of $y_0\in p^{-1}(x_0)$ determines $y_1\in p^{-1}(x_1)$ and $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$. Then the natural question would be whether, for a path that is path-homotopic to $\alpha$, $\alpha'$, the same choice of $y_0$ gives the same $y_1$ and homotopy type. If $p$ is a covering map, the answer to this is also affirmative. 
+Let us look again at the groupoid homomorphism ($\ast$). By [Lemma 6](#lem6){: data-lid="dmqxr" data-relation="required" }, in a covering space $p:E \rightarrow B$, given any $x_0,x_1\in B$ and a path $\alpha$ having these as endpoints, a choice of $y_0\in p^{-1}(x_0)$ determines $y_1\in p^{-1}(x_1)$ and $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$. Then the natural question would be whether, for a path that is path-homotopic to $\alpha$, $\alpha'$, the same choice of $y_0$ gives the same $y_1$ and homotopy type. If $p$ is a covering map, the answer to this is also affirmative. 
 
 ::: Lemma 7
 Consider a covering map $p:E \rightarrow B$ and an arbitrary point of $E$, $y_0$, and let $p(y_0)=x_0$. Then whenever a continuous function satisfying $F(0,0)=x_0$, $F:I\times I \rightarrow B$, is given, there exists a unique lifting satisfying $\widetilde{F}(0,0)=y_0$, $\widetilde{F}:I\times I \rightarrow E$. Furthermore, if $F$ is a path homotopy, then $\widetilde{F}$ is also a path homotopy.  
 :::
 
-The proof of this is essentially no different from [Lemma 6](#lem6){: data-lid="n5mor" data-relation="required" reviewed="" }, so we omit it. What is important is that, by the path homotopy given by this lemma, given a covering space $p:E \rightarrow B$ and a path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, a choice of $y_0\in p^{-1}(x_0)$ uniquely determines a path class of $E$, $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$. 
+The proof of this is essentially no different from [Lemma 6](#lem6){: data-lid="n5mor" data-relation="required" }, so we omit it. What is important is that, by the path homotopy given by this lemma, given a covering space $p:E \rightarrow B$ and a path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, a choice of $y_0\in p^{-1}(x_0)$ uniquely determines a path class of $E$, $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$. 
 
-Now consider the fundamental groupoid $\Pi_1(B)$ again and fix a covering map $p:E \rightarrow B$. Then, by the evenly covered condition, for each $x\in B$, $p^{-1}(x)$ is a discrete set. At this time, for any path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, if we choose $y_0\in p^{-1}(x_0)$, [Lemma 7](#lem7){: data-lid="sifjg" data-relation="required" reviewed="" } defines a unique path class $[\widetilde{\alpha}]$, and thus defines $y_1\in p^{-1}(x_1)$. That is, $[\alpha]$ defines a function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$.
+Now consider the fundamental groupoid $\Pi_1(B)$ again and fix a covering map $p:E \rightarrow B$. Then, by the evenly covered condition, for each $x\in B$, $p^{-1}(x)$ is a discrete set. At this time, for any path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, if we choose $y_0\in p^{-1}(x_0)$, [Lemma 7](#lem7){: data-lid="sifjg" data-relation="required" } defines a unique path class $[\widetilde{\alpha}]$, and thus defines $y_1\in p^{-1}(x_1)$. That is, $[\alpha]$ defines a function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$.
 
 ::: Definition 8
 In the situation above, we call the function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ the *transport map* and denote it by $T_{[\alpha]}$. 
 :::
 
-The transport map is bijective. First, this is because, given any $y_1\in p^{-1}(x_1)$, we can use the path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$ to find a path starting at $y_1$ and ending in $p^{-1}(x_0)$ at some element $y_0$, and this process is unique by [Lemma 7](#lem7){: data-lid="il848" data-relation="required" reviewed="" }. Similarly, by the uniqueness of liftings, we know that this correspondence preserves path concatenation well. That is, the assignment sending $x\in \Pi_1(B)$ to $p^{-1}(x)$ and $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$ to $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ is functorial. 
+The transport map is bijective. First, this is because, given any $y_1\in p^{-1}(x_1)$, we can use the path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$ to find a path starting at $y_1$ and ending in $p^{-1}(x_0)$ at some element $y_0$, and this process is unique by [Lemma 7](#lem7){: data-lid="il848" data-relation="required" }. Similarly, by the uniqueness of liftings, we know that this correspondence preserves path concatenation well. That is, the assignment sending $x\in \Pi_1(B)$ to $p^{-1}(x)$ and $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$ to $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ is functorial. 
 
 ::: Definition 9
 We call the functor $\Pi_1(B) \rightarrow \Set$ defined above the *monodromy functor* defined by $p$, and denote it by $M_p$. 
@@ -220,11 +220,11 @@ Meanwhile, in the poset of subgroups (or their conjugacy classes) of $\pi_1(B,x)
 
 For nice spaces that we know, we can compute the fundamental group or homology from the definition, but in most cases computing this from the definition is excessively complicated or nearly impossible. Our idea is to express a large space in terms of smaller spaces to compute its fundamental group. 
 
-The simplest among these methods would be the case where a space $X$ is expressed as the union $X=U\cup V$ of two open sets. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="txq8n" data-relation="required" reviewed="" }, we know that the following diagram 
+The simplest among these methods would be the case where a space $X$ is expressed as the union $X=U\cup V$ of two open sets. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="txq8n" data-relation="required" }, we know that the following diagram 
 
 {% diagram Math/Algebraic_Topology/Covering_Spaces-3.svg width="7.54em" alt="union_as_colimit" %}
 
-is a colimit diagram. In this case, our goal will be to apply the fundamental groupoid functor $\Pi_1$ to this diagram to express $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$. Meanwhile, by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="chsfk" data-relation="required" reviewed="" }, we know that for any open covering $(U_i)$, the following diagram 
+is a colimit diagram. In this case, our goal will be to apply the fundamental groupoid functor $\Pi_1$ to this diagram to express $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$. Meanwhile, by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="chsfk" data-relation="required" }, we know that for any open covering $(U_i)$, the following diagram 
   
 {% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="17.30em" alt="general_union_colimit" %}
 
