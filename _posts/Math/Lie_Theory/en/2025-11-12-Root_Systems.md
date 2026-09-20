@@ -334,11 +334,11 @@ We consider the subset of this vector space
 
 $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}.$$
 
-Then we know that this set satisfies all the conditions of [Definition 9](#def9){: data-relation="required" }. That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
+Then we know that this set satisfies all the conditions of [Definition 9](#def9){: data-lid="bwu4k" data-relation="required" }. That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 9](#def9){: data-relation="required" } holds, and the fourth condition is obvious.
+and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 9](#def9){: data-lid="krlma" data-relation="required" } holds, and the fourth condition is obvious.
 :::
 
 Similarly we can consider the following example.

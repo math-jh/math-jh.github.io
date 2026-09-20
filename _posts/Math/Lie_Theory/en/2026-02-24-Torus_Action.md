@@ -22,7 +22,7 @@ Once we choose a basis for $V$, analyzing the image of $G$ under $\rho$ becomes 
 
 For Lie groups, this representation-theoretic perspective is even more useful, because Lie groups such as $\GL(n;\mathbb{R})$ or $\Diff(M)$ are inherently things that act on other objects.
 
-However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }, if we define the representation theory of $G$ in this way, we lose the smooth structure on the Lie group $G$. Thus we must modify the definition as follows.
+However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-lid="qmibx" data-relation="weak" }, if we define the representation theory of $G$ in this way, we lose the smooth structure on the Lie group $G$. Thus we must modify the definition as follows.
 
 ::: Definition 1
 For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional vector space $V$ together with a smooth map
@@ -30,7 +30,7 @@ For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional 
 $$\rho:G\rightarrow \Aut(V)$$
 :::
 
-If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-relation="weak" }. Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Notions of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-notions-of-representation-theory){: data-lid="mqls6" data-relation="weak" } can be carried over to Lie groups.
+If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1){: data-lid="11bya" data-relation="weak" }. Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Notions of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-notions-of-representation-theory){: data-lid="mqls6" data-relation="weak" } can be carried over to Lie groups.
 
 What played a crucial role in the preceding discussion was the fact that $G$ is a finite group. For instance, the idea of averaging over all elements of $G$ relied on this. To generalize this to Lie groups, we must impose some kind of finiteness condition on $G$.
 
@@ -58,13 +58,13 @@ is called a *generator* of $T$.
 
 ## Weight decomposition
 
-Our claim is that $\rho(T)$ is simultaneously diagonalizable. To show this, it suffices to prove that each element of $\rho(T)$ is diagonalizable. To this end, consider an arbitrary finite-dimensional representation $\rho:G\rightarrow \Aut(V)$ and its restriction $\rho\vert_T$ to a maximal torus $T$. The first thing to check is that $T$ is a compact Lie group. Therefore, both [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6){: data-lid="r86tg" data-relation="required" } and [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" } hold.
+Our claim is that $\rho(T)$ is simultaneously diagonalizable. To show this, it suffices to prove that each element of $\rho(T)$ is diagonalizable. To this end, consider an arbitrary finite-dimensional representation $\rho:G\rightarrow \Aut(V)$ and its restriction $\rho\vert_T$ to a maximal torus $T$. The first thing to check is that $T$ is a compact Lie group. Therefore, both [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6){: data-lid="r86tg" data-relation="required" } and [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="i0it7" data-relation="required" } hold.
 
 Writing these out in more detail, first from the fact that $\rho\vert_T$ is a unitary representation, we obtain the following irreducible decomposition
 
 $$V=\bigoplus_i V_i$$
 
-Here each $V_i$ is an irreducible $T$-representation. On the other hand, since $T$ is abelian, for any $t\in T$, $\rho(t)$ commutes with the $T$-action, and thus the restriction of $\rho(t)$ to each $V_i$ is a $T$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-relation="required" }, $\rho(t)$ acts by a scalar multiple
+Here each $V_i$ is an irreducible $T$-representation. On the other hand, since $T$ is abelian, for any $t\in T$, $\rho(t)$ commutes with the $T$-action, and thus the restriction of $\rho(t)$ to each $V_i$ is a $T$-automorphism. Now by the second result of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="tzupu" data-relation="required" }, $\rho(t)$ acts by a scalar multiple
 
 $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
@@ -267,7 +267,7 @@ The Cartan decomposition tells us that each element of $G$ belongs to some maxim
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-defined in [Lemma 7](#lem7){: data-relation="required" } is a $\lvert W\rvert$-to-1 covering. From this, each element of $G$ has $\lvert W\rvert$ preimages, and the relations among them are exactly described by the Weyl group.
+defined in [Lemma 7](#lem7){: data-lid="g8ycq" data-relation="required" } is a $\lvert W\rvert$-to-1 covering. From this, each element of $G$ has $\lvert W\rvert$ preimages, and the relations among them are exactly described by the Weyl group.
 
 Specifically, define the following $W$-action on $G/T\times T$:
 
@@ -281,7 +281,7 @@ so $q$ is $W$-invariant, and thus induces a function from the orbit space $(G/T\
 
 $$(G/T\times T)/W\rightarrow G$$
 
-[Lemma 7](#lem7){: data-relation="required" } proves that this function is a bijection.
+[Lemma 7](#lem7){: data-lid="tszxp" data-relation="required" } proves that this function is a bijection.
 
 On the other hand, let $\Conj(G)$ denote the space of conjugacy classes of $G$. Then each conjugacy class
 
