@@ -112,7 +112,7 @@ If $f$ is integrable on $[a, t]$ for every $t > a$ and $\int_a^\infty \lvert f(x
 :::
 
 ::: Proof
-Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3){: data-relation="required" } implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and therefore $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
+Since $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$, [Proposition 3](#prop3){: data-lid="xdge1" data-relation="required" } implies that $\int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x}$ converges, and therefore $\int_a^\infty f(x) \dd{x} = \int_a^\infty (f(x) + \lvert f(x)\rvert) \dd{x} - \int_a^\infty \lvert f(x)\rvert \dd{x}$ also converges.
 :::
 
 The converse does not hold. The integral $\int_0^\infty \frac{\sin x}{x} \dd{x}$ converges, but $\int_0^\infty \lvert \sin x/x\rvert \dd{x}$ diverges, so it is *conditionally convergent*, corresponding to conditional convergence for series.
@@ -121,7 +121,7 @@ The two criteria above were stated for integrals over infinite intervals, but af
 
 $$\int_c^b f(x) \dd{x} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \dd{u}$$
 
-which is an integral over an infinite interval. The factor $u^{-2} > 0$ preserves inequalities and absolute values, so [Proposition 3](#prop3){: data-relation="required" } and [Proposition 4](#prop4){: data-lid="dvtce" data-relation="required" } remain valid as convergence tests for improper integrals.
+which is an integral over an infinite interval. The factor $u^{-2} > 0$ preserves inequalities and absolute values, so [Proposition 3](#prop3){: data-lid="2czby" data-relation="required" } and [Proposition 4](#prop4){: data-lid="dvtce" data-relation="required" } remain valid as convergence tests for improper integrals.
 
 For these tests to be useful in practice, one needs standard functions to compare against, and this role is almost always filled by power functions or the exponential $e^{-x}$. Among these, the integral of a power function provides a (nearly) sharp boundary between convergence and divergence.
 

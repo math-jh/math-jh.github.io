@@ -33,11 +33,11 @@ Here differentiability at the endpoints $a,b$ means the right-hand and left-hand
 :::
 
 ::: Proof
-By the second part of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-relation="required" }, for $h>0$ we have
+By the second part of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-lid="x9zzm" data-relation="required" }, for $h>0$ we have
 
 $$F(x+h)-F(x)=\int_a^{x+h}f-\int_a^x f=\int_x^{x+h}f(t)\dd{t}.$$
 
-Since $f$ is continuous on $[x,x+h]$, by [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-lid="glzzv" data-relation="required" } it attains a minimum $m_h$ and a maximum $M_h$ on that interval, and by the third part of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-relation="required" } we have
+Since $f$ is continuous on $[x,x+h]$, by [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4){: data-lid="glzzv" data-relation="required" } it attains a minimum $m_h$ and a maximum $M_h$ on that interval, and by the third part of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-lid="tug1a" data-relation="required" } we have
 
 $$m_h\le \frac{F(x+h)-F(x)}{h}\le M_h.$$
 
@@ -68,7 +68,7 @@ Likewise, the *logarithmic integral* $\mathrm{Li}(x)=\int_2^x \dd{t}/\ln t$ has 
 
 A slightly more advanced version of this statement will be introduced again after we examine term-by-term integration of power series in [Proposition 7](#prop7){: data-lid="lqmnw" data-relation="forward" }.
 
-Meanwhile, combining [Theorem 1](#thm1){: data-relation="required" } with the fact that a function whose derivative is $0$ must be constant yields a powerful tool for computing definite integrals as differences of primitives.
+Meanwhile, combining [Theorem 1](#thm1){: data-lid="n0gpw" data-relation="required" } with the fact that a function whose derivative is $0$ must be constant yields a powerful tool for computing definite integrals as differences of primitives.
 
 ::: Theorem 4
 If $f$ is continuous on $[a,b]$ and $G$ is any primitive of $f$, then
@@ -77,14 +77,14 @@ $$\int_a^b f(x)\dd{x}=G(b)-G(a).$$
 :::
 
 ::: Proof
-Let $F(x)=\int_a^x f$. By [Theorem 1](#thm1){: data-relation="required" }, $F$ is also a primitive of $f$. Any two primitives differ by a constant, so (by [§Mean Value Theorem, ⁋Corollary 5](/en/math/calculus/mean_value_theorem#cor5){: data-lid="zn57a" data-relation="required" }) there exists a constant $C$ such that $F=G+C$. Since $F(a)=\int_a^a f=0$, we have $C=-G(a)$, and therefore
+Let $F(x)=\int_a^x f$. By [Theorem 1](#thm1){: data-lid="ilegl" data-relation="required" }, $F$ is also a primitive of $f$. Any two primitives differ by a constant, so (by [§Mean Value Theorem, ⁋Corollary 5](/en/math/calculus/mean_value_theorem#cor5){: data-lid="zn57a" data-relation="required" }) there exists a constant $C$ such that $F=G+C$. Since $F(a)=\int_a^a f=0$, we have $C=-G(a)$, and therefore
 
 $$\int_a^b f=F(b)=G(b)+C=G(b)-G(a).$$
 :::
 
 One commonly writes $G(b)-G(a)$ as $\bigl[G(x)\bigr]_a^b$. Thanks to this theorem, the computation of a definite integral is reduced to the problem of finding a primitive rather than taking a limit of Riemann sums. For instance, $\int_0^1 x^2\dd{x}=\bigl[x^3/3\bigr]_0^1=1/3$ agrees with the value obtained laboriously via Riemann sums in [§Integration](/en/math/calculus/integration){: data-lid="uh4ol" data-relation="weak" }, but here it is obtained by an entirely different calculation, namely substituting the endpoints into the primitive.
 
-In particular, [Theorem 1](#thm1){: data-relation="required" } combines with [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="pg7nd" data-relation="required" } when the upper and lower limits of integration depend on a variable. If the upper limit is a function $g(x)$, then letting $F(u)=\int_a^u f$ we have $\int_a^{g(x)} f=F(g(x))$, and since $F'(u)=f(u)$ the chain rule gives $\frac{d}{\dd{x}}\int_a^{g(x)} f(t)\dd{t}=f(g(x))g'(x)$. If both limits are variable, one splits the interval into two parts and applies the rule to each side.
+In particular, [Theorem 1](#thm1){: data-lid="sd06j" data-relation="required" } combines with [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="pg7nd" data-relation="required" } when the upper and lower limits of integration depend on a variable. If the upper limit is a function $g(x)$, then letting $F(u)=\int_a^u f$ we have $\int_a^{g(x)} f=F(g(x))$, and since $F'(u)=f(u)$ the chain rule gives $\frac{d}{\dd{x}}\int_a^{g(x)} f(t)\dd{t}=f(g(x))g'(x)$. If both limits are variable, one splits the interval into two parts and applies the rule to each side.
 
 ::: Proposition 5 (Leibniz rule)
 If $f$ is continuous on an interval $I$, and $g,h$ are differentiable with values in $I$, then
@@ -93,11 +93,11 @@ $$\frac{d}{\dd{x}}\int_{h(x)}^{g(x)} f(t)\dd{t}=f(g(x))g'(x)-f(h(x))h'(x).$$
 :::
 
 ::: Proof
-Pick a point $c$ in $I$ and split the integral into two parts using the additivity over intervals from [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-relation="required" }:
+Pick a point $c$ in $I$ and split the integral into two parts using the additivity over intervals from [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11){: data-lid="2q3hr" data-relation="required" }:
 
 $$\int_{h(x)}^{g(x)} f(t)\dd{t}=\int_c^{g(x)} f(t)\dd{t}-\int_c^{h(x)} f(t)\dd{t}.$$
 
-Letting $F(u)=\int_c^u f(v)\dd{v}$, we have $F'(u)=f(u)$ by [Theorem 1](#thm1){: data-relation="required" }, and the right-hand side is $F(g(x))-F(h(x))$. Applying the chain rule to each term gives
+Letting $F(u)=\int_c^u f(v)\dd{v}$, we have $F'(u)=f(u)$ by [Theorem 1](#thm1){: data-lid="kmlyw" data-relation="required" }, and the right-hand side is $F(g(x))-F(h(x))$. Applying the chain rule to each term gives
 
 $$\begin{aligned}
 \frac{d}{\dd{x}}\bigl[F(g(x))-F(h(x))\bigr] &= F'(g(x))g'(x)-F'(h(x))h'(x) \\[2pt]
