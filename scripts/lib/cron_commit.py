@@ -50,15 +50,18 @@ def _git(repo: Path, *args: str, author: dict[str, str] | None = None) -> tuple[
     return p.returncode, p.stdout, p.stderr
 
 
-def message(title: str, detail: str = "", *, marker: str | None = LASTMOD_SKIP) -> str:
-    """`[Cron] <title> <marker>` 한 줄 + 빈 줄 + 세부.
+def message(title: str, detail: str = "", *, marker: str | None = LASTMOD_SKIP,
+            prefix: str = "Cron") -> str:
+    """`[<prefix>] <title> <marker>` 한 줄 + 빈 줄 + 세부.
 
     제목은 어느 크론인지만 밝히고 무엇을 했는지는 본문으로 내린다 — `git log
     --oneline` 이 크론 소행으로 균일하게 보이고, 글 제목·건수 같은 매 커밋 다른
     값은 본문에서 읽는다. 마커는 제목에 남긴다: 소비자(last_modified_git.rb)는
     메시지 전체를 보지만, 사람이 훑을 때 제목에 있어야 보인다.
+
+    prefix 는 크론이 아닌 소행을 구분한다 — 대시보드 버튼이 낸 커밋은 `[Dash]` 다.
     """
-    subject = f"[Cron] {title}".rstrip()
+    subject = f"[{prefix}] {title}".rstrip()
     if marker:
         subject += f" {marker}"
     return f"{subject}\n\n{detail.strip()}\n" if detail.strip() else subject
@@ -81,6 +84,7 @@ def dirty_paths(paths: Iterable[str], repo: Path = BLOG_ROOT) -> list[str]:
 
 def commit_outputs(title: str, paths: Sequence[str], detail: str, *,
                    marker: str | None = LASTMOD_SKIP,
+                   prefix: str = "Cron",
                    log: Callable[[str], None] | None = None,
                    repo: Path = BLOG_ROOT,
                    author: dict[str, str] | None = None,
@@ -100,7 +104,7 @@ def commit_outputs(title: str, paths: Sequence[str], detail: str, *,
     if not changed:
         return False
 
-    msg = message(title, detail, marker=marker)
+    msg = message(title, detail, marker=marker, prefix=prefix)
 
     fd = os.open(str(AUTOPUSH_LOCK), os.O_CREAT | os.O_RDWR)
     try:

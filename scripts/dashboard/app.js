@@ -16,7 +16,10 @@ var state = {
   stampErr: false,
   kotypoDone: {},
   draftCat: '', draftSort: 'mtime', draftLimit: DRAFT_PAGE,
-  wSortKey: 'un', wSortDesc: true
+  wSortKey: 'un', wSortDesc: true,
+  /* 링크 보류에서 고른 건. 고르는 순간 주기 렌더를 멈춘다 — #app 을 통째로 다시
+     그리면 미리보기 iframe 이 새로 만들어져 글을 처음부터 다시 굽는다. */
+  holdSel: null, holdFreeze: false
 };
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
@@ -766,69 +769,267 @@ function secTranslation(d) {
 }
 
 /* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 값을
-   requires-review 로 바꿔 둔 상태라 그 링크는 의존성 그래프에서 빠져 있다. 판정은 사용자가 글에 직접 쓰고,
-   체크는 그 태그가 파일에 있는지 서버가 확인한 뒤 목록에서 빼는 일만 한다. */
-function linkAuditBlock(d) {
-  var a = d.link_audit || { held: [], ready: 0, settled: 0 };
-  var wrap = el('div');
-  wrap.appendChild(el('h3', null, '의존성 링크 보류 — ' + a.held.length + '건'));
-  if (!a.held.length) {
-    wrap.appendChild(el('p', 'hint', '1차와 2차 판정이 갈린 링크가 없다.'));
-    return wrap;
+   requires-review 로 바꿔 둔 상태라 그 링크는 의존성 그래프에서 빠져 있다.
+   목록에서 한 건을 고르면 오른쪽에 구워진 글이 그대로 뜨고(그 링크를 강조한다),
+   판정 버튼이 그 링크 IAL 하나에 값과 reviewed="" 를 쓴 뒤 원장에서 뺀다.
+   글에서 직접 태그를 단 경우를 위해 '파일 태그 확인' 경로도 남아 있다. */
+function heldItems(d) {
+  return ((d.link_audit || {}).held) || [];
+}
+function heldByIdent(d, ident) {
+  var list = heldItems(d), i;
+  for (i = 0; i < list.length; i++) if (list[i].ident === ident) return list[i];
+  return null;
+}
+
+/* 미리보기 iframe 안에서 그 링크 하나를 짚는다. 본문 링크는 소스 순서 그대로
+   `.page__content` 에 나오므로, 같은 href 중 서버가 준 rank 번째가 그 출현이다.
+   livereload 로 프레임이 다시 뜨면 onload 가 같은 일을 다시 한다. */
+function markPreview(frame) {
+  var k = frame.__hold, doc;
+  if (!k) return;
+  try { doc = frame.contentDocument; } catch (e) { return; }
+  if (!doc || !doc.body) return;
+  if (!doc.getElementById('dash-hl')) {
+    var st = doc.createElement('style');
+    st.id = 'dash-hl';
+    st.textContent = '.dash-hl{outline:2px solid #b3541e;outline-offset:3px;' +
+      'background:rgba(179,84,30,.14)}';
+    (doc.head || doc.body).appendChild(st);
   }
-  var err = el('p', 'hint', '');
-  err.style.color = 'var(--bad)';
-  wrap.appendChild(table(['위치', '판정', { label: '해소', num: true }],
-    a.held.map(function (k, i) {
-      var tr = row([
-        { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) +
-                '</span><span class="muted">:' + k.line + '</span>' },
-        { html: esc(k.old || '—') + ' <span class="muted">→</span> ' + esc(k.new) +
-                ' <span class="muted">(' + esc(k.verifier) + ')</span>' },
-        { html: '<input type="checkbox" class="hold-chk"' +
-                (k.verdict ? '' : ' title="글에 태그를 단 뒤 체크한다"') + '>', cls: 'num' }
-      ], 'clickable' + (k.verdict ? '' : ' typo-pending') +
-         (i && a.held[i - 1].pair !== k.pair ? ' pair-start' : ''));
-      tr.onclick = function () {
-        openModal('의존성 링크 — ' + k.path + ':' + k.line,
-          k.brief + '\n→ ' + k.target +
-          '\n\n1차 ' + (k.old || '—') + ' (' + (k.decided_by || '기록 없음') + ')' +
-          '\n2차 ' + k.new + ' (' + k.verifier + ')' +
-          '\n\n2차 근거: ' + (k.reason || '—') +
-          '\n\n글에서 이 링크의 data-relation 을 required·weak·forward 중 하나로 직접 달고 ' +
-          '(requires-review 표시가 있으면 그 값을 바꾸고) 저장한 뒤 체크하면 ' +
-          '목록에서 빠진다. 체크는 판정이 아니라 확인이다.');
-      };
-      var chk = tr.querySelector('.hold-chk');
-      chk.onclick = function (e) { e.stopPropagation(); };
-      chk.onchange = function () {
-        if (!chk.checked) return;
-        chk.disabled = true;
-        err.textContent = '';
-        fetch(API + 'linkaudit/resolve', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
-          body: JSON.stringify({ ident: k.ident })
-        })
-          .then(function (r) {
-            return r.json().catch(function () { return {}; }).then(function (v) {
-              if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
-              return v;
-            });
-          })
-          .then(function () { load(true); })
-          .catch(function (e) {
-            chk.disabled = false;
-            chk.checked = false;
-            err.textContent = k.path + ':' + k.line + ' — ' + (e.message || e);
-          });
-      };
-      return tr;
-    })));
-  wrap.appendChild(err);
-  wrap.appendChild(el('p', 'hint',
-    '태그를 단 것 ' + num(a.ready) + '건 · 지금까지 확정 ' + num(a.settled) + '건 · ' +
-    ago(a.mtime) + ' 갱신. 확정한 링크는 검증기가 다시 걸지 않는다.'));
+  Array.prototype.forEach.call(doc.querySelectorAll('.dash-hl'), function (a) {
+    a.classList.remove('dash-hl');
+  });
+  var root = doc.querySelector('.page__content') || doc.body;
+  var all = Array.prototype.filter.call(
+    root.querySelectorAll('a[href]'),
+    function (a) { return a.getAttribute('href') === k.target; });
+  var hit = all[k.rank >= 0 ? k.rank : 0] || all[0];
+  if (!hit) return;
+  hit.classList.add('dash-hl');
+  /* 프레임 안에서만 스크롤한다 — scrollIntoView 는 바깥 대시보드 페이지까지 끌고 간다. */
+  var win = frame.contentWindow;
+  win.scrollTo(0, Math.max(0, hit.getBoundingClientRect().top + win.scrollY
+                              - win.innerHeight * 0.4));
+}
+
+function renderHoldPreview(d) {
+  var box = document.getElementById('holds-preview');
+  if (!box) return;
+  var k = state.holdSel ? heldByIdent(d, state.holdSel) : null;
+  if (!k) {
+    state.holdSel = null;
+    state.holdFreeze = false;
+    box.innerHTML = '<p class="hint">왼쪽에서 한 건을 고르면 그 링크가 있는 글을 ' +
+      '구워진 채로 띄운다. 링크에 마우스를 올리면 가리키는 대상도 보인다.</p>';
+    return;
+  }
+  var frame = document.getElementById('holds-frame');
+  if (!frame || frame.__permalink !== k.permalink) {
+    box.innerHTML = '';
+    var head = el('div', 'lp__head');
+    head.appendChild(el('span', 'path', k.path.replace(/^_posts\//, '') + ':' + k.line));
+    if (k.permalink) {
+      var open = el('a', 'lp__open', '새 탭 ↗');
+      open.href = k.permalink;
+      open.target = '_blank';
+      head.appendChild(open);
+    }
+    box.appendChild(head);
+    frame = el('iframe', 'lp__frame');
+    frame.id = 'holds-frame';
+    frame.__permalink = k.permalink;
+    frame.__hold = k;
+    frame.onload = function () { markPreview(frame); };
+    frame.src = k.permalink || 'about:blank';
+    box.appendChild(frame);
+    box.appendChild(el('div', 'lp__acts'));
+    box.appendChild(el('div', 'lp__why'));
+  } else {
+    frame.__hold = k;
+    box.querySelector('.lp__head .path').textContent =
+      k.path.replace(/^_posts\//, '') + ':' + k.line;
+    markPreview(frame);
+  }
+  var acts = box.querySelector('.lp__acts');
+  var why = box.querySelector('.lp__why');
+  acts.innerHTML = '';
+  var err = el('span', 'lp__err', '');
+  ['required', 'weak', 'forward'].forEach(function (rel) {
+    var b = el('button', 'ghost-btn' + (rel === k.new ? ' ghost-btn--on' : ''), rel);
+    b.onclick = function () { resolveHold(k, rel, acts, err); };
+    acts.appendChild(b);
+  });
+  if (k.verdict) {
+    var c = el('button', 'ghost-btn', '파일 태그 확인 (' + k.verdict + ')');
+    c.onclick = function () { resolveHold(k, '', acts, err); };
+    acts.appendChild(c);
+  }
+  acts.appendChild(err);
+  why.innerHTML =
+    '<div class="lp__line"><b>1차</b> ' + esc(k.old || '—') +
+    ' <span class="muted">(' + esc(k.decided_by || '기록 없음') + ')</span>' +
+    ' · <b>2차</b> ' + esc(k.new) +
+    ' <span class="muted">(' + esc(k.verifier) + ')</span>' +
+    ' · <span class="muted">' + esc(k.target) + '</span></div>' +
+    '<div class="lp__line">' + esc(k.reason || '근거 기록 없음') + '</div>';
+}
+
+function selectHold(ident) {
+  /* 고른 행을 다시 누르면 선택을 푼다 — 그래야 주기 갱신이 돌아온다. */
+  var same = state.holdSel === ident;
+  state.holdSel = same ? null : ident;
+  state.holdFreeze = !same;
+  var list = document.getElementById('holds-list');
+  if (list) {
+    Array.prototype.forEach.call(list.querySelectorAll('tr'), function (tr) {
+      tr.classList.toggle('is-sel', tr.dataset.ident === state.holdSel);
+    });
+  }
+  renderHoldPreview(state.data);
+}
+
+/* 판정 한 건. relation 이 비면 글에 직접 단 태그를 서버가 확인하는 예전 경로다. */
+function resolveHold(k, relation, acts, err) {
+  Array.prototype.forEach.call(acts.querySelectorAll('button'), function (b) {
+    b.disabled = true;
+  });
+  err.textContent = '';
+  fetch(API + 'linkaudit/resolve', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+    body: JSON.stringify(relation ? { ident: k.ident, relation: relation }
+                                  : { ident: k.ident })
+  })
+    .then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (v) {
+        if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
+        return v;
+      });
+    })
+    .then(function () { afterResolve(k.ident); })
+    .catch(function (e) {
+      Array.prototype.forEach.call(acts.querySelectorAll('button'), function (b) {
+        b.disabled = false;
+      });
+      err.textContent = e.message || String(e);
+    });
+}
+
+/* 해소된 건을 목록에서 빼고 다음 건으로 넘어간다. 전체 재렌더 대신 목록·미리보기만
+   손대는 이유는 iframe 이다 — 다시 만들면 글을 처음부터 다시 굽는다. */
+function afterResolve(ident) {
+  var list = heldItems(state.data);
+  var at = -1, i;
+  for (i = 0; i < list.length; i++) if (list[i].ident === ident) at = i;
+  if (at >= 0) list.splice(at, 1);
+  var next = list[Math.min(at, list.length - 1)];
+  state.holdSel = next ? next.ident : null;
+  renderHoldList(state.data);
+  renderHoldPreview(state.data);
+  /* 서버 값(확정 수·커밋 대기 편수)은 조용히 맞춰 온다. 화면은 이미 갱신돼 있고,
+     이 응답으로 목록을 다시 그리면 사용자가 고른 건이 튄다. */
+  fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
+    .then(function (fresh) {
+      var keep = state.holdSel;
+      state.data = fresh;
+      state.holdSel = heldByIdent(fresh, keep) ? keep : null;
+      renderHoldList(state.data);
+      renderHoldPreview(state.data);
+    })
+    .catch(function () { });
+}
+
+function renderHoldList(d) {
+  var a = d.link_audit || { held: [], ready: 0, settled: 0, uncommitted: [] };
+  var list = document.getElementById('holds-list');
+  var title = document.getElementById('holds-title');
+  var foot = document.getElementById('holds-foot');
+  var commit = document.getElementById('holds-commit');
+  if (!list) return;
+  if (title) title.textContent = '의존성 링크 보류 — ' + a.held.length + '건';
+  var pend = (a.uncommitted || []).length;
+  if (commit) {
+    commit.textContent = pend ? '링크 변경 커밋 (' + pend + '편)' : '커밋할 변경 없음';
+    commit.disabled = !pend;
+  }
+  if (foot) {
+    foot.textContent = '태그를 단 것 ' + num(a.ready) + '건 · 지금까지 확정 ' +
+      num(a.settled) + '건 · ' + ago(a.mtime) +
+      ' 갱신. 확정한 링크는 검증기가 다시 걸지 않는다.';
+  }
+  list.innerHTML = '';
+  if (!a.held.length) {
+    list.appendChild(el('p', 'hint', '1차와 2차 판정이 갈린 링크가 없다.'));
+    return;
+  }
+  list.appendChild(table(['위치', '판정'], a.held.map(function (k, i) {
+    var tr = row([
+      { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) +
+              '</span><span class="muted">:' + k.line + '</span>' +
+              '<div class="holdrow__brief">' + esc(k.brief) + '</div>' },
+      { html: esc(k.old || '—') + ' <span class="muted">→</span> ' + esc(k.new) +
+              (k.verdict ? ' <span class="muted">· 태그 ' + esc(k.verdict) + '</span>' : ''),
+        cls: 'sans' }
+    ], 'clickable' + (k.ident === state.holdSel ? ' is-sel' : '') +
+       (i && a.held[i - 1].pair !== k.pair ? ' pair-start' : ''));
+    tr.dataset.ident = k.ident;
+    tr.onclick = function () { selectHold(k.ident); };
+    return tr;
+  })));
+}
+
+function commitLinkChanges(btn, err) {
+  btn.disabled = true;
+  err.textContent = '';
+  fetch(API + 'linkaudit/commit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+    body: '{}'
+  })
+    .then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (v) {
+        if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
+        return v;
+      });
+    })
+    .then(function (v) {
+      err.textContent = v.n + '편 커밋됨 (push 는 autopush)';
+      return fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
+        .then(function (fresh) { state.data = fresh; renderHoldList(state.data); });
+    })
+    .catch(function (e) {
+      btn.disabled = false;
+      err.textContent = e.message || String(e);
+    });
+}
+
+function linkAuditBlock(d) {
+  var wrap = el('div', 'holds');
+  var head = el('div', 'holds__head');
+  var title = el('h3', null, '의존성 링크 보류');
+  title.id = 'holds-title';
+  var commit = el('button', 'ghost-btn');
+  commit.id = 'holds-commit';
+  var cerr = el('span', 'lp__err', '');
+  commit.onclick = function () { commitLinkChanges(commit, cerr); };
+  head.appendChild(title);
+  head.appendChild(commit);
+  head.appendChild(cerr);
+  wrap.appendChild(head);
+  var cols = el('div', 'holds__cols');
+  var left = el('div', 'holds__list');
+  left.id = 'holds-list';
+  var right = el('div', 'lp');
+  right.id = 'holds-preview';
+  cols.appendChild(left);
+  cols.appendChild(right);
+  wrap.appendChild(cols);
+  var foot = el('p', 'hint');
+  foot.id = 'holds-foot';
+  wrap.appendChild(foot);
+  /* 목록·미리보기는 DOM 이 붙은 뒤에 채운다 (id 로 찾는다). */
+  setTimeout(function () { renderHoldList(d); renderHoldPreview(d); }, 0);
   return wrap;
 }
 
@@ -858,7 +1059,6 @@ function secAudit(d) {
     left.appendChild(el('p', 'hint', a.scanned + '편 검사 · 이슈 있는 글 ' + a.posts_with_issues +
       '편 · ' + ago(a.mtime) + ' 갱신 (주간 cron, 일 05:00) · 행을 누르면 글·줄 단위 상세'));
   } else left.appendChild(el('p', 'hint', 'audit-report.md 없음'));
-  left.appendChild(linkAuditBlock(d));
   right.appendChild(el('h3', null, '번역 짝 맞춤'));
   right.appendChild(table(['항목', { label: '건수', num: true }], [
     row([{ text: '발행글 중 EN 없음' }, { text: num(d.stats.missing_en), cls: 'num' }]),
@@ -869,6 +1069,8 @@ function secAudit(d) {
     right.appendChild(el('pre', 'log', d.orphan_en.map(function (o) { return o.path; }).join('\n')));
   }
   c.appendChild(left); c.appendChild(right); s.appendChild(c);
+  /* 보류 목록과 미리보기는 폭을 다 쓴다 — 왼쪽 목록, 오른쪽에 그 링크가 있는 글. */
+  s.appendChild(linkAuditBlock(d));
   return s;
 }
 
@@ -1130,6 +1332,11 @@ function load(fresh) {
         }
       } catch (e) { }
       state.stampErr = false;
+      if (state.holdFreeze && route() === 'audit') {
+        /* 링크 판정 중이다. 새 스냅샷은 받아 두되 화면은 건드리지 않는다. */
+        renderHoldList(state.data);
+        return;
+      }
       render();
     })
     .catch(function (e) {
@@ -1146,7 +1353,11 @@ function load(fresh) {
     });
 }
 
-window.addEventListener('hashchange', function () { window.scrollTo(0, 0); render(); });
+window.addEventListener('hashchange', function () {
+  state.holdFreeze = false;
+  window.scrollTo(0, 0);
+  render();
+});
 wireModal();
 applyTheme(themeMode());
 load(false);

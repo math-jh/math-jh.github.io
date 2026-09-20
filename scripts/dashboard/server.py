@@ -12,7 +12,8 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
     GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
-    POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (사람이 단 태그를 확인)
+    POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (판정 버튼 또는 태그 확인)
+    POST /api/linkaudit/commit   data-relation·reviewed 만 바뀐 글들을 한 커밋으로
 
 보류 해소 시 확정된 링크 IAL에 `reviewed=""`를 추가한다. 그 외의 쓰기는
 세 상태 파일뿐이다:
@@ -60,6 +61,17 @@ except Exception:
 
 sys.path.insert(0, f"{ROOT}/scripts/lib")
 from blog_file_lock import try_acquire_file_locks
+from cron_commit import commit_outputs
+
+# 링크 판정 버튼이 고칠 IAL 을 **분류기와 같은 파서**로 찾는다. 보류 항목의 ident 는
+# `경로:서수:target:label` 의 sha1 이라 같은 문구의 다른 출현과 구별되므로, 여기서
+# 같은 규칙으로 다시 훑어야 그 한 출현만 고칠 수 있다. 사본을 두면 서수 계산이
+# 갈리는 순간 엉뚱한 링크에 판정이 찍힌다.
+sys.path.insert(0, f"{ROOT}/scripts/dependency-classifier")
+try:
+    import dependency_classifier as _depc
+except Exception:
+    _depc = None
 
 # KO-TYPOS 파싱도 워커와 **같은 모듈**을 쓴다. 복제해 두면 한쪽만 늙는다 —
 # 2026-08-15 실측: 대시보드 사본에 legacy fallback 이 없어 워커가 보는 8건 중
@@ -619,14 +631,171 @@ def mark_hold_reviewed(item, *, content_lock_held=False):
             lease.release()
 
 
+def hold_link(ident, item):
+    """보류 항목이 가리키는 **그 출현 하나**를 분류기 파서로 되찾는다.
+
+    ident 는 `경로:서수:target:label` 의 sha1 이라 같은 문구가 한 글에 여러 번 나와도
+    출현끼리 구별된다. 서수는 태그가 붙은 링크·안 붙은 링크·requires-review 를 모두
+    세므로 세 갈래를 다 훑어야 그 ident 가 나온다.
+    """
+    if _depc is None:
+        raise RuntimeError("dependency_classifier 를 불러오지 못했다")
+    full = os.path.normpath(os.path.join(ROOT, item.get("path") or ""))
+    if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+        raise ValueError("bad path")
+    path = _depc.Path(full)
+    text = path.read_text(encoding="utf-8")
+    for kwargs in ({}, {"tagged": True}, {"review": True}):
+        for link in _depc.extract_links(path, text, **kwargs):
+            if link.ident == ident:
+                return full, text, link
+    raise ValueError("그 링크를 지금 글에서 찾지 못했다 — 새로고침")
+
+
+def write_relation(ident, item, relation, *, content_lock_held=False):
+    """버튼으로 내린 판정을 그 링크 IAL 하나에 쓴다 (`reviewed=""` 포함).
+
+    markup 이 원장과 다르면 쓰지 않는다. 서수가 같아도 글이 그사이 바뀌었다면
+    사용자가 화면에서 읽은 문장과 지금 파일의 그 자리가 다른 링크일 수 있다.
+    """
+    full, text, link = hold_link(ident, item)
+    if link.markup != (item.get("markup") or ""):
+        raise ValueError("글이 바뀌었다 — 새로고침")
+    attr = f'data-relation="{relation}"'
+    if link.ial_start is None or link.ial_end is None:
+        start, end = link.end, link.end
+        ial = f'{{: {attr} reviewed="" }}'
+    else:
+        start, end = link.ial_start, link.ial_end
+        ial = text[start:end]
+        ial = _depc.REVIEWED_ATTR_RE.sub("", ial)
+        if _depc.RELATION_ATTR_RE.search(ial):
+            ial = _depc.RELATION_ATTR_RE.sub(attr, ial, count=1)
+        else:
+            ial = ial[:2] + f" {attr}" + ial[2:]
+        ial = ial[:-1].rstrip() + ' reviewed="" }'
+    lease = None if content_lock_held else try_acquire_file_locks([full])
+    if not content_lock_held and lease is None:
+        raise RuntimeError("다른 워커가 이 글을 수정 중이다")
+    try:
+        source_mode = os.stat(full).st_mode & 0o7777
+        _atomic_write(full, text[:start] + ial + text[end:], source_mode)
+    finally:
+        if lease is not None:
+            lease.release()
+
+
+def _atomic_write(full, text, mode):
+    fd, tmp = tempfile.mkstemp(prefix=".link-write.", suffix=".tmp",
+                               dir=os.path.dirname(full))
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(text)
+        os.chmod(tmp, mode)
+        os.replace(tmp, full)
+    finally:
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
+
+
+# 링크 판정만 담긴 변경인지 가리는 정규화 — 두 속성을 걷어낸 본문이 HEAD 와 같으면
+# 그 글의 변경은 관계 태그뿐이다. 줄 단위 diff 로 판별하면 한 줄에 본문 수정과
+# 태그 변경이 같이 있는 경우를 구별하지 못한다.
+_REL_ATTR_ANY = re.compile(r'\s*\bdata-relation\s*=\s*["\'][^"\']*["\']')
+_REVIEWED_ANY = re.compile(r'\s*\breviewed\s*=\s*["\'][^"\']*["\']')
+
+
+def _without_relations(text):
+    return _REVIEWED_ANY.sub("", _REL_ATTR_ANY.sub("", text))
+
+
+_link_only_cache = {}
+
+
+def link_only_changes():
+    """워킹트리에서 data-relation·reviewed 만 바뀐 `_posts` 글들의 경로.
+
+    판정 한 건마다 다시 물으므로 글당 판정은 (경로, mtime) 로 기억한다 — 안 그러면
+    더러운 글 수만큼 `git show` 가 매번 돈다.
+    """
+    rc, out, _ = run(["/usr/bin/git", "-C", ROOT, "status", "--porcelain", "-z",
+                      "--", "_posts"])
+    if rc != 0:
+        return []
+    found = []
+    for rec in out.split("\0"):
+        if len(rec) <= 3 or rec[:2] != " M" or not rec.endswith(".md"):
+            continue
+        rel = rec[3:]
+        full = os.path.join(ROOT, rel)
+        try:
+            stamp = os.stat(full).st_mtime
+        except OSError:
+            continue
+        hit = _link_only_cache.get(rel)
+        if not hit or hit[0] != stamp:
+            rc2, head, _ = run(["/usr/bin/git", "-C", ROOT, "show", f"HEAD:{rel}"])
+            if rc2 != 0:
+                continue
+            try:
+                with open(full, encoding="utf-8") as f:
+                    cur = f.read()
+            except OSError:
+                continue
+            hit = _link_only_cache[rel] = (
+                stamp, _without_relations(head) == _without_relations(cur))
+        if hit[1]:
+            found.append(rel)
+    return found
+
+
+_rank_cache = {}
+
+
+def link_rank(ident, item):
+    """같은 곳을 가리키는 링크 중 이 링크가 글에서 몇 번째인지 (0 기준).
+
+    미리보기가 구워진 글에서 이 출현 하나를 짚는 데 쓴다. 본문 링크는 소스 순서대로
+    `.page__content` 안에 같은 순서로 나오므로, href 가 같은 것들 중 같은 번째를
+    고르면 그 출현이다. 관계 태그 유무는 세지 않는다 — 태그가 이미 붙은 보류도
+    같은 방법으로 짚어야 한다. 찾지 못하면 -1 이고 미리보기는 강조 없이 글만 띄운다.
+    """
+    if _depc is None:
+        return -1
+    full = os.path.normpath(os.path.join(ROOT, item.get("path") or ""))
+    try:
+        stamp = os.stat(full).st_mtime
+    except OSError:
+        return -1
+    hit = _rank_cache.get(full)
+    if not hit or hit[0] != stamp:
+        ranks, seen = {}, {}
+        try:
+            path = _depc.Path(full)
+            text = path.read_text(encoding="utf-8")
+            links = [x for kw in ({}, {"tagged": True}, {"review": True})
+                     for x in _depc.extract_links(path, text, **kw)]
+            for link in sorted(links, key=lambda x: x.start):
+                ranks[link.ident] = seen.get(link.target, 0)
+                seen[link.target] = ranks[link.ident] + 1
+        except Exception:  # noqa: BLE001
+            ranks = {}
+        hit = _rank_cache[full] = (stamp, ranks)
+    return hit[1].get(ident, -1)
+
+
 def sec_link_audit():
     """의존성 링크 분류의 1차 ↔ 2차 불일치로 판정 태그가 없는(requires-review) 링크."""
     holds = load_holds()
+    by_path = posts_indexed()["by_path"]
     items = []
     for ident, item in holds["held"].items():
         # 라벨은 한 줄이 아닐 수 있다 — 링크 정규식이 escape 된 `\[` 를 여는 괄호로
         # 읽어 다음 링크까지의 본문을 통째로 삼킨 경우다. 표시는 잘라서 한다.
         flat = " ".join((item.get("markup") or "").split())
+        post = by_path.get(item.get("path", "")) or {}
         items.append(dict(
             ident=ident, path=item.get("path", ""), line=item.get("line", 0),
             brief=flat if len(flat) <= 90 else flat[:87] + "…",
@@ -635,6 +804,11 @@ def sec_link_audit():
             reason=item.get("reason", ""), verifier=item.get("verifier", ""),
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
             verdict=hold_verdict(item),
+            # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 렌더된 <a> 는
+            # data-relation 을 그대로 달고 나오므로, 같은 target 의 requires-review
+            # 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.
+            permalink=post.get("permalink", ""), title=post.get("title", ""),
+            rank=link_rank(ident, item),
         ))
     # 같은 글의 KO/EN 판본은 붙여서 보인다 — 짝 키는 언어 디렉토리와 날짜를 뗀 경로.
     # 태그를 단 건이 하나라도 있는 글이 위로 오고, 글 안에서는 KO → EN, 줄 순서.
@@ -647,7 +821,8 @@ def sec_link_audit():
     for x in items:
         del x["_lang"]
     return dict(held=items, settled=len(holds["settled"]),
-                ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE))
+                ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
+                uncommitted=link_only_changes())
 
 
 def sec_comment_prs():
@@ -1112,6 +1287,7 @@ class Handler(BaseHTTPRequestHandler):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
         if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume", "/api/linkaudit/resolve",
+                        "/api/linkaudit/commit",
                         "/api/review", "/api/compare/snapshot",
                         "/api/compare/snapshot-delete", "/api/compare/prefs"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
@@ -1134,6 +1310,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._review()
         if path == "/api/linkaudit/resolve":
             return self._linkaudit_resolve()
+        if path == "/api/linkaudit/commit":
+            return self._linkaudit_commit()
         if path != "/api/kotypo":
             return self._cron_action(path)
         # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
@@ -1227,19 +1405,24 @@ class Handler(BaseHTTPRequestHandler):
                                           ensure_ascii=False))
 
     def _linkaudit_resolve(self):
-        """보류 한 건을 해소 — 사람이 단 태그를 파일에서 확인한 뒤에만 지운다.
+        """보류 한 건을 해소한다. 판정을 내리는 길이 둘이다.
 
-        체크가 곧 판정이 아니다. 판정은 사용자가 글에 직접 써 넣은 data-relation
-        이고, 여기서는 그게 실제로 디스크에 있는지 보고 원장에서 그 항목을 뺀다.
+        `relation` 을 함께 받으면 그게 사용자의 판정이다 — 서버가 그 링크 IAL 하나에
+        값과 `reviewed=""` 를 쓰고 원장에서 뺀다. 값이 없으면 사용자가 글에 직접 써
+        넣은 태그를 파일에서 확인하는 예전 경로다. 어느 쪽이든 판정의 출처는 사람이고,
         빠진 항목은 settled 로 옮긴다 — 검증기는 그 링크를 다시 걸지 않는다.
         """
         try:
             n = int(self.headers.get("Content-Length") or 0)
             if not 0 <= n <= 4096:
                 raise ValueError
-            ident = json.loads(self.rfile.read(n).decode("utf-8") or "{}").get("ident")
+            body = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+            ident = body.get("ident")
+            relation = body.get("relation") or ""
             if not isinstance(ident, str) or not ident:
                 raise ValueError("bad ident")
+            if relation and relation not in ("required", "weak", "forward"):
+                raise ValueError("bad relation")
         except Exception as e:  # noqa: BLE001
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
@@ -1264,16 +1447,25 @@ class Handler(BaseHTTPRequestHandler):
                 if item is None:
                     return self._send(200, json.dumps(
                         {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
-                verdict = hold_verdict(item)
-                if verdict is None:
-                    return self._send(200, json.dumps(
-                        {"ok": False, "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
-                        ensure_ascii=False))
-                try:
-                    mark_hold_reviewed(item, content_lock_held=True)
-                except Exception as e:  # noqa: BLE001
-                    return self._send(200, json.dumps(
-                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                if relation:
+                    try:
+                        write_relation(ident, item, relation, content_lock_held=True)
+                    except Exception as e:  # noqa: BLE001
+                        return self._send(200, json.dumps(
+                            {"ok": False, "error": str(e)}, ensure_ascii=False))
+                    verdict = relation
+                else:
+                    verdict = hold_verdict(item)
+                    if verdict is None:
+                        return self._send(200, json.dumps(
+                            {"ok": False,
+                             "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
+                            ensure_ascii=False))
+                    try:
+                        mark_hold_reviewed(item, content_lock_held=True)
+                    except Exception as e:  # noqa: BLE001
+                        return self._send(200, json.dumps(
+                            {"ok": False, "error": str(e)}, ensure_ascii=False))
                 holds["held"].pop(ident)
                 holds["settled"][ident] = {
                     "path": item.get("path", ""), "target": item.get("target", ""),
@@ -1287,6 +1479,33 @@ class Handler(BaseHTTPRequestHandler):
             content_lease.release()
         _cache["ts"] = 0
         return self._send(200, json.dumps({"ok": True, "relation": verdict},
+                                          ensure_ascii=False))
+
+    def _linkaudit_commit(self):
+        """관계 태그만 바뀐 글들을 한 커밋으로 묶는다.
+
+        대상은 기계적으로 고른다 — 두 속성을 걷어낸 본문이 HEAD 와 같은 글만 넣으므로,
+        같은 파일에 본문 수정이 섞여 있으면 그 글은 통째로 빠진다. 커밋은
+        `[lastmod-skip]` 을 달고 나간다: 관계 태그는 본문이 아니라서 글의 수정일을
+        움직이면 안 된다. push 는 autopush 소관이다.
+        """
+        paths = link_only_changes()
+        if not paths:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "커밋할 링크 변경이 없다"}, ensure_ascii=False))
+        detail = "\n".join(f"- {p}" for p in paths)
+        try:
+            done = commit_outputs("Link Review", paths,
+                                  f"{len(paths)} post(s)\n\n{detail}", prefix="Dash")
+        except Exception as e:  # noqa: BLE001
+            return self._send(200, json.dumps({"ok": False, "error": str(e)},
+                                              ensure_ascii=False))
+        _cache["ts"] = 0
+        if not done:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "autopush 가 락을 쥐고 있다 — 잠시 뒤 다시"},
+                ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, "n": len(paths)},
                                           ensure_ascii=False))
 
     def _cron_action(self, path):

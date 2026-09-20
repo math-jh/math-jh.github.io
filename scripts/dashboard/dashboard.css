@@ -297,3 +297,26 @@ html,.tbl-scroll,pre.log,.modal__box pre{scrollbar-width:thin;scrollbar-color:va
 html::-webkit-scrollbar,.tbl-scroll::-webkit-scrollbar,pre.log::-webkit-scrollbar,.modal__box pre::-webkit-scrollbar{width:7px;height:7px}
 html::-webkit-scrollbar-track,.tbl-scroll::-webkit-scrollbar-track,pre.log::-webkit-scrollbar-track,.modal__box pre::-webkit-scrollbar-track{background:transparent}
 html::-webkit-scrollbar-thumb,.tbl-scroll::-webkit-scrollbar-thumb,pre.log::-webkit-scrollbar-thumb,.modal__box pre::-webkit-scrollbar-thumb{background:var(--brass);border-radius:0}
+
+/* ── 의존성 링크 보류 — 목록(왼쪽) + 구워진 글 미리보기(오른쪽) ────────── */
+.holds{margin-top:2.4rem}
+.holds__head{display:flex;align-items:baseline;gap:1rem;margin-bottom:.8rem}
+.holds__head h3{margin:0}
+.holds__cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.6rem;align-items:start}
+@media (max-width:1000px){.holds__cols{grid-template-columns:1fr}}
+/* 목록이 길어져도 페이지가 같이 길어지지 않게 가둔다. */
+.holds__list{max-height:32rem;overflow-y:auto;border:1px solid var(--rule)}
+.holds__list table{margin:0}
+.holds__list th{position:sticky;top:0;background:var(--paper);padding-top:.5rem}
+.holds__list td{padding:.5rem .7rem}
+.holds__list tr.is-sel td{background:var(--panel);box-shadow:inset 2px 0 0 var(--brass)}
+.holdrow__brief{font-family:var(--sans);font-size:.72rem;color:var(--ink);margin-top:.25rem;word-break:break-word}
+.lp{border:1px solid var(--rule);padding:.7rem;min-height:12rem}
+.lp__head{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.5rem}
+.lp__open{font-family:var(--sans);font-size:.72rem;white-space:nowrap}
+.lp__frame{width:100%;height:30rem;border:1px solid var(--rule);background:var(--paper);display:block}
+.lp__acts{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.7rem 0 .5rem}
+.lp__acts .ghost-btn--on{color:var(--brass);border-color:var(--brass);font-weight:bold}
+.lp__err{font-family:var(--sans);font-size:.72rem;color:var(--bad)}
+.lp__why{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);border-top:1px solid var(--rule);padding-top:.5rem}
+.lp__line+.lp__line{margin-top:.3rem}
