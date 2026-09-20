@@ -683,6 +683,58 @@ def write_relation(ident, item, relation, *, content_lock_held=False):
     finally:
         if lease is not None:
             lease.release()
+    found = _LID_ATTR.search(ial)
+    return found.group(1) if found else None
+
+
+_LID_ATTR = re.compile(r'\bdata-lid\s*=\s*"([^"]*)"')
+
+
+def _en_twin(full):
+    """KO 글 파일의 EN 짝. 날짜 접두는 양쪽이 다르므로 Base 이름으로 찾는다."""
+    path = _depc.Path(full)
+    if path.parent.name != "ko":
+        return None
+    base = path.name.split("-", 3)[-1]
+    found = sorted((path.parent.parent / "en").glob(f"*-{base}"))
+    return found[0] if len(found) == 1 else None
+
+
+def propagate_relation(full, lid, relation):
+    """KO 에서 내린 판정을 같은 `data-lid` 를 가진 EN 링크에 옮긴다.
+
+    KO 가 정본이고 EN 은 그 번역이므로, 같은 출현을 가리키는 두 링크가 서로 다른
+    관계를 가질 이유가 없다. 여기서 옮기지 않으면 EN 은 분류기가 독립으로 판정해
+    양쪽이 갈린다 — 지금 남아 있는 66건이 그렇게 생겼다.
+
+    `reviewed` 는 손대지 않는다. EN 에서 그 마커를 떼는 것은 분류기가 lid 로 완료를
+    상속하게 된 뒤에 할 일이고, 먼저 떼면 그 글이 검증 대기로 되돌아간다.
+    """
+    twin = _en_twin(full)
+    if twin is None:
+        return "EN 짝 글 없음"
+    text = twin.read_text(encoding="utf-8")
+    hit = re.search(r'\{:[^}\n]*\bdata-lid\s*=\s*"%s"[^}\n]*\}' % re.escape(lid), text)
+    if hit is None:
+        return "EN 에 같은 lid 없음"
+    ial = hit.group(0)
+    attr = f'data-relation="{relation}"'
+    if _depc.RELATION_ATTR_RE.search(ial):
+        if _depc.RELATION_ATTR_RE.search(ial).group(0) == attr:
+            return "EN 이미 같은 값"
+        new_ial = _depc.RELATION_ATTR_RE.sub(attr, ial, count=1)
+    else:
+        new_ial = ial[:-1].rstrip() + f" {attr} }}"
+    lease = try_acquire_file_locks([str(twin)])
+    if lease is None:
+        return "EN 글이 잠겨 있다"
+    try:
+        source_mode = os.stat(twin).st_mode & 0o7777
+        _atomic_write(str(twin), text[:hit.start()] + new_ial + text[hit.end():],
+                      source_mode)
+    finally:
+        lease.release()
+    return f"EN 도 {relation} 로 기입"
 
 
 def _atomic_write(full, text, mode):
@@ -1449,11 +1501,19 @@ class Handler(BaseHTTPRequestHandler):
                         {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
                 if relation:
                     try:
-                        write_relation(ident, item, relation, content_lock_held=True)
+                        lid = write_relation(ident, item, relation,
+                                             content_lock_held=True)
                     except Exception as e:  # noqa: BLE001
                         return self._send(200, json.dumps(
                             {"ok": False, "error": str(e)}, ensure_ascii=False))
                     verdict = relation
+                    if lid:
+                        try:
+                            note = propagate_relation(full, lid, relation)
+                        except Exception as e:  # noqa: BLE001
+                            note = f"EN 기입 실패: {str(e)[:120]}"
+                    else:
+                        note = "lid 없음 — EN 은 따로 판정"
                 else:
                     verdict = hold_verdict(item)
                     if verdict is None:
@@ -1466,6 +1526,7 @@ class Handler(BaseHTTPRequestHandler):
                     except Exception as e:  # noqa: BLE001
                         return self._send(200, json.dumps(
                             {"ok": False, "error": str(e)}, ensure_ascii=False))
+                    note = ""
                 holds["held"].pop(ident)
                 holds["settled"][ident] = {
                     "path": item.get("path", ""), "target": item.get("target", ""),
@@ -1478,8 +1539,8 @@ class Handler(BaseHTTPRequestHandler):
         finally:
             content_lease.release()
         _cache["ts"] = 0
-        return self._send(200, json.dumps({"ok": True, "relation": verdict},
-                                          ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, "relation": verdict,
+                                           "note": note}, ensure_ascii=False))
 
     def _linkaudit_commit(self):
         """관계 태그만 바뀐 글들을 한 커밋으로 묶는다.

@@ -576,6 +576,37 @@ def strip_reviewed_attrs(text: str) -> str:
         lambda match: _REVIEWED_ATTR_RE.sub("", match.group(0)), text)
 
 
+_LID_ATTR_RE = re.compile(r'\s+data-lid\s*=\s*"([^"]*)"')
+
+
+def enforce_lid_integrity(en_text: str, ko_text: str) -> tuple[str, list[str]]:
+    """EN 의 `data-lid` 중 KO 에 없는 것과 중복을 떼고, 뗀 이유를 함께 돌려준다.
+
+    lid 는 KO 링크 출현에서 태어나 번역을 타고 EN 으로 건너오는 불투명 토큰이다.
+    `data-relation` 의 값과 달리 모델이 복원할 수 없으므로, 흘리거나 복제하거나
+    지어냈을 때 알아채는 것은 여기뿐이다. 틀린 것은 떼기만 한다 — 번역을 통째로
+    실패시키는 것보다 낫고, 빈 자리는 link_pair_llm 이 나중에 채운다.
+    """
+    known = {lid for ial in _IAL_BLOCK_RE.findall(ko_text)
+             for lid in _LID_ATTR_RE.findall(ial)}
+    seen: set[str] = set()
+    notes: list[str] = []
+
+    def keep(match: re.Match) -> str:
+        lid = match.group(1)
+        if lid not in known:
+            notes.append(f"KO 에 없는 lid {lid}")
+        elif lid in seen:
+            notes.append(f"중복된 lid {lid}")
+        else:
+            seen.add(lid)
+            return match.group(0)
+        return ""
+
+    # 산문에 같은 글자가 있어도 건드리지 않도록 IAL 블록 안에서만 고친다.
+    return _IAL_BLOCK_RE.sub(lambda m: _LID_ATTR_RE.sub(keep, m.group(0)), en_text), notes
+
+
 def apply_reviewed_policy(text: str, reason: str) -> str:
     """Fresh and drift EN must earn review independently; polish keeps EN state."""
     return text if reason == "polish" else strip_reviewed_attrs(text)
@@ -969,7 +1000,7 @@ Conversion rules for the body:
    - Category bracket: `[\\[대수다양체\\] §..., ⁋정의 7]` → `[\\[Algebraic Varieties\\] §..., ⁋Definition 7]`.
    - Labels: 정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark.
    - Within-doc refs: `[정의 3](#def3)` → `[Definition 3](#def3)` (id unchanged).
-   - A Kramdown IAL immediately after an internal link is part of that link. Its `data-relation` value is `required`, `weak`, `forward`, or the review marker `requires-review`, as in `[label](path){: data-relation="required" }`. Copy the value exactly, keep the IAL attached to the translated link, and keep it before any following punctuation or outer parenthesis. Never infer, remove, or reclassify it. The language-local `reviewed=""` attribute is deliberately absent from the Korean input supplied to you; do not invent it in English.
+   - A Kramdown IAL immediately after an internal link is part of that link. Its `data-relation` value is `required`, `weak`, `forward`, or the review marker `requires-review`, as in `[label](path){: data-relation="required" }`. Copy the value exactly, keep the IAL attached to the translated link, and keep it before any following punctuation or outer parenthesis. Never infer, remove, or reclassify it. The same IAL may also carry `data-lid="xxxxx"`, a permanent identifier naming which Korean link occurrence this is; copy it verbatim onto the English link that renders that occurrence. When you merge two Korean links into one English link, keep the identifier of the occurrence you actually rendered and drop the other — never put two of them on one link, and never invent one. The language-local `reviewed=""` attribute is deliberately absent from the Korean input supplied to you; do not invent it in English.
    - **Verification rule**: only emit a link `[display](url)` or an in-doc anchor `#labelN` if you are confident the target exists in the source body or in the linked post's English form. If uncertain about the precise English wording of a cross-reference label, keep the KO source form verbatim — a post-processing pass will normalise it. Do NOT invent English titles, definition numbers, or anchor ids that you have not seen.
 
 3. Bilingual italic terms:
@@ -997,7 +1028,7 @@ Conversion rules for the body:
 
 - Same math delimiters as the KO body: EN must have exactly as many `$$...$$` display spans AND exactly as many `$...$` inline spans as KO. None downgraded, none promoted, none added/dropped/split/merged.
 - Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
-- Every internal-link `data-relation` IAL from KO remains attached to the corresponding EN link with the same value. Never add `reviewed=""`; KO and EN complete dependency review independently.
+- Every internal-link `data-relation` IAL from KO remains attached to the corresponding EN link with the same value, and each `data-lid` is carried over verbatim onto the link that renders that Korean occurrence, at most once. Never add `reviewed=""`; KO and EN complete dependency review independently.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - **No Korean prose remains anywhere.** Every Korean sentence and paragraph is translated into English. Translating only headings, labels, and links while copying Korean paragraphs verbatim is a FAILED translation and will be rejected.
 - If the input contained the line `@@REFERENCES@@`, the output contains it verbatim, exactly once.
@@ -1126,7 +1157,7 @@ After semantic fidelity is restored, make the English idiomatic and precise. Imp
 
 1. **Math spans** — copy from the Korean byte-for-byte: LaTeX commands, variables, spacing, order, and delimiter. Inline `$...$` and display `$$...$$` counts and order must match the Korean exactly. Never silently correct a suspicious Korean formula.
 2. **Fenced theorem boxes** — preserve every `:::` opener and closer in the same order. Keep kind, number, derived anchor, and every explicit `{#id}` unchanged. Translate Korean labels to the established English kind only where required.
-3. **Cross-references** — preserve paths and anchors. Keep `/en/` paths already produced by the translation pipeline; never invent or retarget an anchor. Visible labels may be translated faithfully. Preserve every existing English internal-link Kramdown IAL, its `data-relation` value (`required`, `weak`, or `forward`), and any `reviewed=""` attribute exactly; never infer or reclassify them. The Korean input contains no review markers, and must never supply one to English.
+3. **Cross-references** — preserve paths and anchors. Keep `/en/` paths already produced by the translation pipeline; never invent or retarget an anchor. Visible labels may be translated faithfully. Preserve every existing English internal-link Kramdown IAL, its `data-relation` value (`required`, `weak`, or `forward`), its `data-lid` identifier, and any `reviewed=""` attribute exactly; never infer, reclassify, duplicate, or invent them. The Korean input contains no review markers, and must never supply one to English.
 4. **HTML and Markdown structure** — preserve legacy theorem HTML, element ids, inline HTML, heading levels, list structure, footnote identifiers, and fenced blocks.
 5. **References sentinel** — if `@@REFERENCES@@` appears, copy it verbatim exactly once in the same position. Never generate bibliography entries.
 6. **Proof presence** — preserve whether each result has a proof. Never add a proof, proof sketch, omission notice, or external-proof pointer merely because a result has no proof; never drop an existing proof.
@@ -1137,7 +1168,7 @@ Before output, compare the proposed English against the Korean again and repair 
 
 Confirm that:
 - math spans and delimiters match the Korean in count and order;
-- theorem fences, ids, footnotes, links, anchors, internal-link `data-relation` IALs, and the English draft's own `reviewed=""` attributes are intact;
+- theorem fences, ids, footnotes, links, anchors, internal-link `data-relation` IALs, each `data-lid` identifier (no duplicates, none invented), and the English draft's own `reviewed=""` attributes are intact;
 - all Korean prose and labels have been translated into English;
 - every English claim is traceable to the Korean;
 - the output contains only the complete English body.
@@ -1823,6 +1854,9 @@ def translate(
     # `/ko/` in prose or code, so we don't need a guarded regex.
     en_body = en_body.replace("/ko/", "/en/")
     en_body = apply_reviewed_policy(en_body, reason)
+    en_body, lid_notes = enforce_lid_integrity(en_body, ko_body)
+    for note in lid_notes:
+        log(f"lid: {note} — 떼어냄")
     # 수식 구분자는 더 이상 정규화하지 않는다. 2026-07-13 부터 인라인은 표준 `$...$`,
     # 디스플레이는 `$$...$$` 이므로, 모델이 원래 내던 출력이 곧 정답이다. 남은 위험
     # (KO 의 디스플레이를 인라인으로 낮추는 것) 은 validate_translation 의 KO/EN

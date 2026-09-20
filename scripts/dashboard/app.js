@@ -19,7 +19,7 @@ var state = {
   wSortKey: 'un', wSortDesc: true,
   /* 링크 보류에서 고른 건. 고르는 순간 주기 렌더를 멈춘다 — #app 을 통째로 다시
      그리면 미리보기 iframe 이 새로 만들어져 글을 처음부터 다시 굽는다. */
-  holdSel: null, holdFreeze: false
+  holdSel: null, holdFreeze: false, holdNote: ''
 };
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
@@ -907,7 +907,7 @@ function resolveHold(k, relation, acts, err) {
         return v;
       });
     })
-    .then(function () { afterResolve(k.ident); })
+    .then(function (v) { afterResolve(k.ident, v.note); })
     .catch(function (e) {
       Array.prototype.forEach.call(acts.querySelectorAll('button'), function (b) {
         b.disabled = false;
@@ -918,7 +918,8 @@ function resolveHold(k, relation, acts, err) {
 
 /* 해소된 건을 목록에서 빼고 다음 건으로 넘어간다. 전체 재렌더 대신 목록·미리보기만
    손대는 이유는 iframe 이다 — 다시 만들면 글을 처음부터 다시 굽는다. */
-function afterResolve(ident) {
+function afterResolve(ident, note) {
+  state.holdNote = note || '';
   var list = heldItems(state.data);
   var at = -1, i;
   for (i = 0; i < list.length; i++) if (list[i].ident === ident) at = i;
@@ -947,7 +948,11 @@ function renderHoldList(d) {
   var foot = document.getElementById('holds-foot');
   var commit = document.getElementById('holds-commit');
   if (!list) return;
-  if (title) title.textContent = '의존성 링크 보류 — ' + a.held.length + '건';
+  if (title) {
+    /* 방금 내린 판정이 EN 짝에도 갔는지는 화면에 남는 흔적이 없으므로 제목 옆에 붙인다. */
+    title.textContent = '의존성 링크 보류 — ' + a.held.length + '건'
+      + (state.holdNote ? ' · ' + state.holdNote : '');
+  }
   var pend = (a.uncommitted || []).length;
   if (commit) {
     commit.textContent = pend ? '링크 변경 커밋 (' + pend + '편)' : '커밋할 변경 없음';
