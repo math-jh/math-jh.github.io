@@ -97,9 +97,9 @@ The above argument also works in the reverse direction.
 
 The simplest example of localization is the ring of fractions examined in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2){: data-lid="059uz" }. Here we take $M=A$. In particular, we also saw that if $A$ is an integral domain, then its ring of fractions $\Frac(A)$ is a field. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6){: data-lid="ls922" })
 
-As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4){: data-relation="required" } we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
+As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4){: data-lid="xoitz" data-relation="required" } we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
 
-Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4){: data-relation="required" }. Explicitly, this structure is given by
+Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4){: data-lid="h58hy" data-relation="required" }. Explicitly, this structure is given by
 
 $$\frac{x}{s}\frac{x'}{s'}=\frac{xx'}{ss'}$$
 

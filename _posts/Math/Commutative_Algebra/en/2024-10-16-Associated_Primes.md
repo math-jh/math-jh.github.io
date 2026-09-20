@@ -80,7 +80,7 @@ Let $M$ be a module over a Noetherian ring $A$. Then the following hold.
 3. An $A$-linear map $u:M \rightarrow N$ is injective if and only if $u_\mathfrak{p}$ is injective for every $\mathfrak{p}\in \Ass M$.
 :::
 ::: Proof
-For the first result, since $A$ is Noetherian, for any nonzero $x\in M$ we can choose an ideal $\mathfrak{p}$ maximal among annihilator ideals containing $\ann(x)$, and by [Proposition 3](#prop3){: data-relation="required" } we have $\mathfrak{p}\in \Ass M$. Hence $x/1$ is nonzero in $M_\mathfrak{p}$. The second result is immediate from the first, and the third follows from the second by taking $L=\ker u$.
+For the first result, since $A$ is Noetherian, for any nonzero $x\in M$ we can choose an ideal $\mathfrak{p}$ maximal among annihilator ideals containing $\ann(x)$, and by [Proposition 3](#prop3){: data-lid="gku3b" data-relation="required" } we have $\mathfrak{p}\in \Ass M$. Hence $x/1$ is nonzero in $M_\mathfrak{p}$. The second result is immediate from the first, and the third follows from the second by taking $L=\ker u$.
 :::
 
 The goal of this post is to prove [Theorem 7](#thm7){: data-lid="ipx68" data-relation="forward" }. For this we need the following two lemmas.
@@ -110,7 +110,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\con
 satisfying the above conditions.
 :::
 ::: Proof
-First, using [Proposition 3](#prop3){: data-relation="required" } we can find an associated prime $\mathfrak{p}_1\in\Ass M$ of $M$, and thus there exists a submodule $M_1$ with $M_1\cong A/\mathfrak{p}_1$. Applying the same argument to $M/M_1$ yields $M_2$, and repeating this process, we obtain the desired conclusion from the fact that $M$ is Noetherian.
+First, using [Proposition 3](#prop3){: data-lid="i3g5y" data-relation="required" } we can find an associated prime $\mathfrak{p}_1\in\Ass M$ of $M$, and thus there exists a submodule $M_1$ with $M_1\cong A/\mathfrak{p}_1$. Applying the same argument to $M/M_1$ yields $M_2$, and repeating this process, we obtain the desired conclusion from the fact that $M$ is Noetherian.
 :::
 
 ::: Theorem 7
@@ -124,7 +124,7 @@ For a nonzero finitely generated module $M$ over a Noetherian ring $A$, the foll
 
 :::
 ::: Proof
-For the first result, that $\Ass M$ is nonempty follows from [Proposition 3](#prop3){: data-relation="required" }, and that each element of $\Ass M$ contains $\ann M$ is obvious. Now, by [Lemma 5](#lem5){: data-lid="j7b0k" data-relation="required" }, considering the short exact sequence
+For the first result, that $\Ass M$ is nonempty follows from [Proposition 3](#prop3){: data-lid="0iqbt" data-relation="required" }, and that each element of $\Ass M$ contains $\ann M$ is obvious. Now, by [Lemma 5](#lem5){: data-lid="j7b0k" data-relation="required" }, considering the short exact sequence
 
 $$0 \rightarrow M_{n-1} \rightarrow M_n \rightarrow M_n/M_{n-1} \rightarrow 0$$
 

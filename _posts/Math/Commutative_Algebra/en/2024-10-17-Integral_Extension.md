@@ -79,7 +79,7 @@ Let $\phi:A\rightarrow E$ be a ring homomorphism.
 
 When the structure morphism $\phi: A \rightarrow E$ is clear from context, we also say that $x$ is integral over $A$ instead of saying that $x$ is integral over $\phi$. Similarly, in this situation we say that $E$ is integral over $A$ instead of saying that $\phi$ is an integral homomorphism.
 
-Any finite homomorphism is of finite type by definition. On the other hand, given a finite homomorphism $\phi: A \rightarrow E$ and any $x\in E$, the map $x\times-: E \rightarrow E$ is an $A$-module endomorphism, so applying [Theorem 1](#thm1){: data-relation="required" } shows that $x$ is integral over $\phi$. That is, finite homomorphisms are also integral. The following lemma proves the converse.
+Any finite homomorphism is of finite type by definition. On the other hand, given a finite homomorphism $\phi: A \rightarrow E$ and any $x\in E$, the map $x\times-: E \rightarrow E$ is an $A$-module endomorphism, so applying [Theorem 1](#thm1){: data-lid="unsxg" data-relation="required" } shows that $x$ is integral over $\phi$. That is, finite homomorphisms are also integral. The following lemma proves the converse.
 
 ::: Lemma 4
 A ring homomorphism $\phi$ is finite if and only if $\phi$ is an integral homomorphism of finite type.
@@ -94,10 +94,10 @@ Now, it is natural to expect a relationship between $E$ being integral over $A$ 
 Let $\phi: A \rightarrow E$ be a ring homomorphism and let $x$ be an element of $E$. Then $x$ is integral over $A$ if and only if there exist an $E$-module $N$ and an $A$-submodule $M$ of $N$, finitely generated as an $A$-module, such that $M$ is not annihilated by any nonzero element of $E$ and the inclusion $xM\subseteq M$ holds.
 :::
 ::: Proof
-First, suppose $x$ is integral over $A$. Then taking $N=E$, we know by [Proposition 2](#prop2){: data-relation="required" } that $M=A[x]$ is finitely generated. For the converse, as in the proof of [Proposition 2](#prop2){: data-relation="required" }, regard multiplication by $x$ as an endomorphism of $M$ and apply [Theorem 1](#thm1){: data-relation="required" }.
+First, suppose $x$ is integral over $A$. Then taking $N=E$, we know by [Proposition 2](#prop2){: data-lid="e77qo" data-relation="required" } that $M=A[x]$ is finitely generated. For the converse, as in the proof of [Proposition 2](#prop2){: data-lid="kpb02" data-relation="required" }, regard multiplication by $x$ as an endomorphism of $M$ and apply [Theorem 1](#thm1){: data-lid="cplj4" data-relation="required" }.
 :::
 
-The following theorem states exactly what one would expect, but proving it directly from the definition without [Lemma 5](#lem5){: data-relation="required" } is nearly impossible.
+The following theorem states exactly what one would expect, but proving it directly from the definition without [Lemma 5](#lem5){: data-lid="wu8lk" data-relation="required" } is nearly impossible.
 
 ::: Theorem 6
 For an $A$-algebra $E$, the integral closure of $A$ in $E$ is again an $A$-algebra.
@@ -107,7 +107,7 @@ Suppose two elements $x,y\in E$ are integral over $A$. We must show that $x+y$ a
 
 $$(xy)MM'=(xM)(yM')\subseteq MM',\qquad (x+y)MM'\subseteq xMM'+M(yM')\subseteq MM'$$
 
-the desired result follows from [Lemma 5](#lem5){: data-relation="required" }.
+the desired result follows from [Lemma 5](#lem5){: data-lid="ty99a" data-relation="required" }.
 :::
 
 ## Nakayama's Lemma
@@ -191,7 +191,7 @@ Normalization also commutes with localization, and the proof is trivial.
 Let $A\subseteq B$ be rings and let $S$ be a multiplicative subset of $A$. If $A'$ is the integral closure of $A$ in $B$, then $S^{-1}A'$ is the integral closure of $S^{-1}A$ in $S^{-1}B$.
 :::
 
-Another result related to localization is a slight strengthening of [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-relation="weak" }. Recall first that a ring $A$ is called a *semilocal ring* if it has only finitely many maximal ideals. Then the following holds.
+Another result related to localization is a slight strengthening of [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-lid="tmmtd" data-relation="weak" }. Recall first that a ring $A$ is called a *semilocal ring* if it has only finitely many maximal ideals. Then the following holds.
 
 ::: Proposition 13
 Let $A$ be a semilocal ring and let $M,N$ be finitely presented $A$-modules. If $M_\mathfrak{m}\cong N_\mathfrak{m}$ for every maximal ideal $\mathfrak{m}$, then $M\cong N$.
@@ -207,7 +207,7 @@ Meanwhile, since $\mathfrak{m}_k$ is prime, if $\bigcap_{l\neq k} \mathfrak{m}_l
 
 $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
-so there exists an element $a_k$ with $a_k\in \bigcap_{l\neq k}\mathfrak{m}_l$ but $a_k\not\in \mathfrak{m}_k$. For the elements $a_k$ so constructed, set $v=\sum_{k=1}^n a_kv_k$; we claim this is the desired isomorphism. By [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-relation="required" }, it suffices to check this after localizing at each maximal ideal $\mathfrak{m}_k$.
+so there exists an element $a_k$ with $a_k\in \bigcap_{l\neq k}\mathfrak{m}_l$ but $a_k\not\in \mathfrak{m}_k$. For the elements $a_k$ so constructed, set $v=\sum_{k=1}^n a_kv_k$; we claim this is the desired isomorphism. By [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4){: data-lid="tn3u7" data-relation="required" }, it suffices to check this after localizing at each maximal ideal $\mathfrak{m}_k$.
 
 More generally, we show that for any local ring $(B, \mathfrak{n})$ and any maps $s,t:K \rightarrow L$ between finitely generated $B$-modules, if $s$ is an isomorphism and $t(K)\subseteq \mathfrak{n}L$, then $s+t$ is also an isomorphism. Applying this to the local ring $(A_{\mathfrak{m}_k}, \mathfrak{m}_kA_{\mathfrak{m}_k})$ and the maps $s=a_k v_k$ and $t=\sum_{l\neq k} a_lv_l$ from $M_{\mathfrak{m}_k}$ to $N_{\mathfrak{m}_k}$ will then complete the proof.
 
