@@ -137,7 +137,7 @@ Therefore $\{x_{k+1}+W,\ldots, x_n+W\}$ is a basis of $V/W$, and since it has $n
 
 ## First Isomorphism Theorem
 
-One reason this post exists as a separate article is to give a more essential meaning to [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }. In this final section we resolve this.
+One reason this post exists as a separate article is to give a more essential meaning to [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="xyiwg" data-relation="weak" }. In this final section we resolve this.
 
 For any $\mathbb{K}$-vector space $V$ and subspace $W\leq V$, consider the function $p:V\rightarrow V/W$ defined by
 
@@ -191,7 +191,7 @@ Combining [Theorem 7](#thm7){: data-lid="3upyz" data-relation="required" } and [
 
 $$\rank L=\dim\im L=\dim(V/\ker L)=\dim V-\dim\ker L=\dim V-\nullity L$$
 
-holds, which is exactly the formula of [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-relation="weak" }. In other words, the rank-nullity theorem is nothing more than the statement that after "folding away" $\ker L$, $L$ becomes injective, expressed in the language of dimensions.
+holds, which is exactly the formula of [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="nhl7t" data-relation="weak" }. In other words, the rank-nullity theorem is nothing more than the statement that after "folding away" $\ker L$, $L$ becomes injective, expressed in the language of dimensions.
 
 ---
 

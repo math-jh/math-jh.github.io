@@ -16,9 +16,9 @@ last_polished_at: 2026-06-24T09:00:03+00:00
 ---
 ## Generalized Eigenspaces
 
-Previously, we saw that whenever a diagonalizable operator $A$ is given, we can decompose the given space into eigenspaces on which $A$ acts like scalar multiplication. However, as examined in [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" }, even if we assume $\mathbb{K}$ is an algebraically closed field (and, as we examined after that proposition, we will always assume this), not every linear operator is diagonalizable.
+Previously, we saw that whenever a diagonalizable operator $A$ is given, we can decompose the given space into eigenspaces on which $A$ acts like scalar multiplication. However, as examined in [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-lid="b8nee" data-relation="required" }, even if we assume $\mathbb{K}$ is an algebraically closed field (and, as we examined after that proposition, we will always assume this), not every linear operator is diagonalizable.
 
-The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-relation="required" } tells us that for some eigenvalue $\lambda$ of $A$, the geometric multiplicity of $\lambda$ is less than the algebraic multiplicity of $\lambda$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5){: data-lid="hkefb" data-relation="required" }) In other words, intuitively, the following vector space
+The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6){: data-lid="zwl6p" data-relation="required" } tells us that for some eigenvalue $\lambda$ of $A$, the geometric multiplicity of $\lambda$ is less than the algebraic multiplicity of $\lambda$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5){: data-lid="hkefb" data-relation="required" }) In other words, intuitively, the following vector space
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
@@ -43,7 +43,7 @@ $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 and the base step $\ker L^k=\ker L^{k+1}$, we obtain the desired result.
 :::
 
-Our key observation is that although the eigenspace $E_\lambda(A)$ has insufficient dimension, if we apply [Lemma 1](#lem1){: data-relation="required" } to $L=A-\lambda I$ and enlarge this space, we eventually obtain the "correct dimension."
+Our key observation is that although the eigenspace $E_\lambda(A)$ has insufficient dimension, if we apply [Lemma 1](#lem1){: data-lid="8t70t" data-relation="required" } to $L=A-\lambda I$ and enlarge this space, we eventually obtain the "correct dimension."
 
 ::: Example 2
 Consider the following matrix
@@ -85,13 +85,13 @@ For a linear operator $A$ defined on a finite-dimensional vector space $V$ and a
 $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
 :::
 
-Then from [Lemma 1](#lem1){: data-relation="required" } we obtain the following.
+Then from [Lemma 1](#lem1){: data-lid="tlklp" data-relation="required" } we obtain the following.
 
 ::: Corollary 4
 For a linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$ and its eigenvalue $\lambda$, there exists a suitable positive integer $k$ such that $G_\lambda(A)=\ker(A-\lambda I)^k$.
 :::
 ::: Proof
-Applying [Lemma 1](#lem1){: data-relation="required" } to the linear operator $A-\lambda I$, there exists $k$ satisfying
+Applying [Lemma 1](#lem1){: data-lid="9itkd" data-relation="required" } to the linear operator $A-\lambda I$, there exists $k$ satisfying
 
 $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k+1}=\cdots$$
 
@@ -110,15 +110,15 @@ Intuitively, generalized eigenspaces include not only genuine eigenvectors but a
 
 ## Primary Decomposition Theorem
 
-Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-relation="weak" }. To show the diagonalizability of $A$, for a fixed eigenvalue $\lambda$ we assumed that
+Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="kim1o" data-relation="weak" }. To show the diagonalizability of $A$, for a fixed eigenvalue $\lambda$ we assumed that
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
-holds, and then by [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-relation="required" }
+holds, and then by [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-lid="2pmmg" data-relation="required" }
 
 $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
-so we saw that necessarily $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$. Then $\im (A-\lambda I)$ becomes $A$-invariant, so we can view $A$ as a linear operator on this space, and at that time (since by [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4){: data-relation="required" }, $E_\lambda(A)\cap E_\mu(A)=\{0\}$), the eigenvalue--eigenvector pairs match up, so repeating this inductively gives the eigenspace decomposition; this was the gist of the proof.
+so we saw that necessarily $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$. Then $\im (A-\lambda I)$ becomes $A$-invariant, so we can view $A$ as a linear operator on this space, and at that time (since by [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4){: data-lid="hvvsf" data-relation="required" }, $E_\lambda(A)\cap E_\mu(A)=\{0\}$), the eigenvalue--eigenvector pairs match up, so repeating this inductively gives the eigenspace decomposition; this was the gist of the proof.
 
 Now, thinking about how to utilize [Definition 3](#def3){: data-lid="g9sea" data-relation="required" } from the above perspective, for an arbitrary linear operator $L$ and $k$ satisfying
 
@@ -128,7 +128,7 @@ we know that
 
 $$\ker L^k=\ker L^{2k}$$
 
-holds. In other words, for $L^k:V \rightarrow V$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-relation="required" } is satisfied. Applying this to $L=A-\lambda I$, we obtain the first step of induction---that is, the direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-relation="weak" }, let us write this as
+holds. In other words, for $L^k:V \rightarrow V$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-lid="acd14" data-relation="required" } is satisfied. Applying this to $L=A-\lambda I$, we obtain the first step of induction---that is, the direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="3ilra" data-relation="weak" }, let us write this as
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
@@ -160,7 +160,7 @@ so $w'$ is an eigenvector corresponding to eigenvalue $\lambda_j$. On the other 
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w=\lambda_i w'$$
 
-we know that $w'$ is also an eigenvector corresponding to $\lambda_i$. This contradicts [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4){: data-relation="required" }, so by contradiction we know that $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$ when $i\neq j$.
+we know that $w'$ is also an eigenvector corresponding to $\lambda_i$. This contradicts [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4){: data-lid="kmp8q" data-relation="required" }, so by contradiction we know that $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$ when $i\neq j$.
 :::
 
 Therefore, considering the preceding decomposition
