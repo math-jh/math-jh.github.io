@@ -84,7 +84,7 @@ In this way, stability determines whether continuous degrees of freedom remain i
 
 ## Moduli Space of Stable Maps
 
-As seen in [Example 2](#ex2){: data-relation="required" }, a stable map can have nontrivial automorphisms. Therefore, the space collecting stable maps is treated as a stack that remembers even the automorphisms of the map represented by each point. For a fixed genus $g$, number of marked points $n$, and effective class $\beta$ (that is, a class given by a sum of homology classes of irreducible curves in $X$ with non-negative integer coefficients), we denote by
+As seen in [Example 2](#ex2){: data-lid="nr248" data-relation="required" }, a stable map can have nontrivial automorphisms. Therefore, the space collecting stable maps is treated as a stack that remembers even the automorphisms of the map represented by each point. For a fixed genus $g$, number of marked points $n$, and effective class $\beta$ (that is, a class given by a sum of homology classes of irreducible curves in $X$ with non-negative integer coefficients), we denote by
 
 $$\overline{\mathcal{M}}_{g,n}(X,\beta)$$
 
@@ -121,7 +121,7 @@ $$\overline{\mathcal{M}}_{g_1,A\cup\{\bullet\}}(X,\beta_1)\times_X\overline{\mat
 .
 Since the evaluations of the newly attached marked points $\bullet$ on the two factors must agree to glue them into a single node, the fiber product is formed over $X$. At this time, the source distinguishes the two curves before gluing as first and second, but the glued result does not remember their order. Therefore, when the genus, marking, and class data of the two factors are identical so that they can be interchanged, this morphism may not be isomorphic to its image. Furthermore, on a curve with multiple nodes, one may choose different nodes that yield the same decomposition data, and in this case as well, different gluing data can yield the same stable map. This is the situation where different local branches of the boundary meet.
 
-On the other hand, even after separating the two branches of a node, the curve may still be connected. The irreducible nodal cubic in [Example 2](#ex2){: data-relation="weak" } is precisely such a case: resolving the node does not split the curve into two, but instead on a single $\mathbb{P}^1$, two points $0,\infty$ appear. In general, resolving the node in this case reduces the arithmetic genus by one, so we attach two marked points on a connected curve of genus $g-1$. The corresponding gluing morphism is
+On the other hand, even after separating the two branches of a node, the curve may still be connected. The irreducible nodal cubic in [Example 2](#ex2){: data-lid="vz072" data-relation="weak" } is precisely such a case: resolving the node does not split the curve into two, but instead on a single $\mathbb{P}^1$, two points $0,\infty$ appear. In general, resolving the node in this case reduces the arithmetic genus by one, so we attach two marked points on a connected curve of genus $g-1$. The corresponding gluing morphism is
 
 $$\overline{\mathcal{M}}_{g-1,n+2}(X,\beta)\times_{X\times X}X\rightarrow\overline{\mathcal{M}}_{g,n}(X,\beta)$$
 

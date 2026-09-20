@@ -65,7 +65,7 @@ holds.
 
 ## Deformations of Semistable Curves
 
-We now consider the deformation theory of nodal curves. Let $T_p^1$ denote the first-order local deformation space at a node $p$. In [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-relation="required"}, we have already computed that $T_p^1\cong\mathbb{K}$ for the affine node $Z(\x\y)$, and that its generator can be represented by $\x\y-\epsilon$. Since every node has this local model while the local deformation of a smooth point is trivial, we obtain the following.
+We now consider the deformation theory of nodal curves. Let $T_p^1$ denote the first-order local deformation space at a node $p$. In [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-lid="y2bip" data-relation="required"}, we have already computed that $T_p^1\cong\mathbb{K}$ for the affine node $Z(\x\y)$, and that its generator can be represented by $\x\y-\epsilon$. Since every node has this local model while the local deformation of a smooth point is trivial, we obtain the following.
 
 ::: Proposition 3
 At each node $p$ of a nodal curve $C$, the space $T_p^1$ of first-order local deformations is $1$-dimensional.
@@ -93,7 +93,7 @@ $$\sHom(\Omega_{C/\mathbb{K}},\mathcal{I}_\Sigma)=\mathcal{T}_{C/\mathbb{K}}\oti
 
 and this computes the infinitesimal automorphisms of the marked curve.
 
-Now what remains is the calculation of $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$. For this, we choose the local model $R=\mathbb K[\x,\y]/(\x\y)$ and examine derivations on it. Any derivation $v$ is determined by its values on the generators, $a=v(\x)$ and $b=v(\y)$, and as in the computation of [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-relation="required" }, in order to preserve the relation $\x\y=0$, we must have
+Now what remains is the calculation of $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$. For this, we choose the local model $R=\mathbb K[\x,\y]/(\x\y)$ and examine derivations on it. Any derivation $v$ is determined by its values on the generators, $a=v(\x)$ and $b=v(\y)$, and as in the computation of [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" data-relation="required" }, in order to preserve the relation $\x\y=0$, we must have
 
 $$0=v(\x\y)=\y a+\x b$$
 
