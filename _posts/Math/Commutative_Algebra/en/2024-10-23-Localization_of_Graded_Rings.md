@@ -132,7 +132,7 @@ In the remainder of this post, for an arbitrary graded $A$-module $M$ we write
 
 $$M^{(d)}=\bigoplus_{k\geq 0} M_{kd}.$$
 
-Then the following is a generalization of [Proposition 4](#prop4){: data-relation="weak" }.
+Then the following is a generalization of [Proposition 4](#prop4){: data-lid="ruesl" data-relation="weak" }.
 
 ::: Proposition 6
 Fix a homogeneous element $f\in A$ of degree $d$. Then the following isomorphism
@@ -151,13 +151,13 @@ Then it is not difficult to show that $u$ is surjective and that $\ker u=(f-1)M^
 
 If $\deg f=1$, then the above isomorphism can be written as $M_{(f)}\cong M/(f-1)M$.
 
-On the other hand, if $S$ contains at least one element of degree $1$, then applying [Proposition 4](#prop4){: data-relation="required" } to each element, we obtain the following.
+On the other hand, if $S$ contains at least one element of degree $1$, then applying [Proposition 4](#prop4){: data-lid="g031e" data-relation="required" } to each element, we obtain the following.
 
 ::: Proposition 7
 If $S$ is a homogeneous multiplicative set containing at least one element of degree $1$, then $S^{-1}A\cong (S^{-1}A)_0[T,T^{-1}]$ holds.
 :::
 ::: Proof
-This is essentially the same proof as [Proposition 4](#prop4){: data-relation="required" }: choose an element $f$ of degree $1$ belonging to $S$ and define the homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$ in the same way as in the proof of [Proposition 4](#prop4){: data-relation="required" }. Then that the kernel of this homomorphism is $(T_1T_2-1)$ can be shown by the same proof, and that this homomorphism is surjective can be easily shown by using the fact that an arbitrary element $a/s$ of $S^{-1}A$ of degree $d$ can be written in the form
+This is essentially the same proof as [Proposition 4](#prop4){: data-lid="g2fld" data-relation="required" }: choose an element $f$ of degree $1$ belonging to $S$ and define the homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$ in the same way as in the proof of [Proposition 4](#prop4){: data-lid="f9pqu" data-relation="required" }. Then that the kernel of this homomorphism is $(T_1T_2-1)$ can be shown by the same proof, and that this homomorphism is surjective can be easily shown by using the fact that an arbitrary element $a/s$ of $S^{-1}A$ of degree $d$ can be written in the form
 
 $$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}.$$
 :::
