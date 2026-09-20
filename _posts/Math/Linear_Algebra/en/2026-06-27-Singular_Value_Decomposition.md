@@ -81,7 +81,7 @@ In $A=U\Sigma V^t$, the matrices $U$ and $V$ are invertible, so $\rank A=\rank\S
 
 ## General Pseudoinverse
 
-In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-relation="required" }, we defined the pseudoinverse when $A$ has full column rank or full row rank, and we announced that the definition in the general case would use the singular value decomposition. We now present that definition.
+In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-lid="fimxb" data-relation="required" }, we defined the pseudoinverse when $A$ has full column rank or full row rank, and we announced that the definition in the general case would use the singular value decomposition. We now present that definition.
 
 ::: Definition 5
 Let a singular value decomposition $A=U\Sigma V^t$ of a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ be given. For the positive singular values $\sigma_i$ of $\Sigma$, let $\Sigma^+$ be the $n\times m$ diagonal matrix whose $(i,i)$-entry is $1/\sigma_i$ and whose remaining entries are $0$. Then we define the *Moore–Penrose pseudoinverse* of $A$ as
@@ -112,7 +112,7 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 so the first and second conditions also hold.
 :::
 
-Now, in [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-relation="required" } we saw that the above four conditions uniquely determine $A^+$, so the $A^+$ of [Definition 5](#def5){: data-lid="a6ok6" data-relation="required" } is well defined independently of the choice of singular value decomposition, and we also know that the two definitions agree in the full-rank case. For example, if $A$ has full column rank, then $A^tA$ is invertible, and one can verify directly from
+Now, in [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7){: data-lid="j55ph" data-relation="required" } we saw that the above four conditions uniquely determine $A^+$, so the $A^+$ of [Definition 5](#def5){: data-lid="a6ok6" data-relation="required" } is well defined independently of the choice of singular value decomposition, and we also know that the two definitions agree in the full-rank case. For example, if $A$ has full column rank, then $A^tA$ is invertible, and one can verify directly from
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 

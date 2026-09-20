@@ -104,7 +104,7 @@ $$A=QDQ^t$$
 holds. Here the diagonal entries of $D$ are the eigenvalues of $A$, and the columns of $Q$ are the corresponding orthonormal eigenvectors.
 :::
 ::: Proof
-Viewing $A$ as a self-adjoint operator on $\mathbb{R}^n$, by [Theorem 5](#thm5){: data-relation="required" } there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $A$. Let $Av_i=\lambda_iv_i$, and consider the matrix $Q=(v_1\mid\cdots\mid v_n)$ having $v_i$ as columns. Since the columns of $Q$ are orthonormal, $Q$ is an orthogonal matrix. ([§Inner Product Spaces, ⁋Definition 7](/en/math/linear_algebra/inner_product_spaces#def7){: data-lid="q6oue" data-relation="weak" }) Then
+Viewing $A$ as a self-adjoint operator on $\mathbb{R}^n$, by [Theorem 5](#thm5){: data-lid="w9szm" data-relation="required" } there exists an orthonormal basis $\{v_1,\ldots, v_n\}$ consisting of eigenvectors of $A$. Let $Av_i=\lambda_iv_i$, and consider the matrix $Q=(v_1\mid\cdots\mid v_n)$ having $v_i$ as columns. Since the columns of $Q$ are orthonormal, $Q$ is an orthogonal matrix. ([§Inner Product Spaces, ⁋Definition 7](/en/math/linear_algebra/inner_product_spaces#def7){: data-lid="q6oue" data-relation="weak" }) Then
 
 $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 
@@ -121,7 +121,7 @@ Since $L$ is self-adjoint,
 
 $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v,w\rangle$$
 
-and thus $(\lambda-\mu)\langle v,w\rangle=0$. Since $\lambda\neq\mu$, we have $\langle v,w\rangle=0$. Grouping the orthonormal basis from [Theorem 5](#thm5){: data-relation="required" } by eigenvalues, we obtain an orthonormal basis for each eigenspace, and by the orthogonality just shown, distinct eigenspaces are orthogonal.
+and thus $(\lambda-\mu)\langle v,w\rangle=0$. Since $\lambda\neq\mu$, we have $\langle v,w\rangle=0$. Grouping the orthonormal basis from [Theorem 5](#thm5){: data-lid="xih5t" data-relation="required" } by eigenvalues, we obtain an orthonormal basis for each eigenspace, and by the orthogonality just shown, distinct eigenspaces are orthogonal.
 :::
 
 ## Positive Definite Operator
