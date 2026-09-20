@@ -47,7 +47,7 @@ $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 is a base for $U$; a subspace of a Hausdorff space is always Hausdorff ([\[Topology\] §Hausdorff Spaces, §§Subspaces and Products of Hausdorff Spaces](/en/math/topology/Hausdorff_spaces#subspaces-and-products-of-hausdorff-spaces){: data-lid="1jng9" data-relation="required" }); and if $x\in U$ is given arbitrarily, from the assumption that $M$ is locally Euclidean we can choose an open neighborhood $V$ of $x$ in $M$ such that $V$ is homeomorphic to an open subset of $\mathbb{R}^m$, and hence $U\cap V$ is an open neighborhood of $x$ in $U$ homeomorphic to an open subset of $\mathbb{R}^m$.
 :::
 
-Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-lid="8q8tv" data-relation="weak" reviewed="" } also gives an example of a topological manifold as follows.
+Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-lid="8q8tv" data-relation="weak" } also gives an example of a topological manifold as follows.
 
 ::: Example 4
 For an open set $U\subseteq \mathbb{R}^n$ and a continuous function $f:U\rightarrow\mathbb{R}^k$, the graph of $f$
@@ -61,7 +61,7 @@ $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 are inverses of each other, so $\graph(f)$ and $U$ are homeomorphic.
 :::
 
-By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-lid="n5g6y" data-relation="required" reviewed="" }, $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-lid="y0hcz" data-relation="weak" }.
+By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7){: data-lid="n5g6y" data-relation="required" }, $\graph(f)$ is a closed subset of $U\times \mathbb{R}^k$, and in particular when $U=\mathbb{R}^n$, $\graph(f)$ is a closed subset of $\mathbb{R}^{n+k}$; thus this gives an example of a somewhat different character from [Example 3](#ex3){: data-lid="y0hcz" data-relation="weak" }.
 
 Meanwhile, the following also holds for the product topology.
 
