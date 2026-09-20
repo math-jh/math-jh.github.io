@@ -117,7 +117,7 @@ $$n = (1 + h_n)^n \geq \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2$$
 수열 $(a_n)$이 *양의 무한대로 발산<sub>diverges to infinity</sub>*한다는 것은, 임의의 $M > 0$에 대하여 자연수 $N$이 존재하여 모든 $n \geq N$에서 $a_n > M$이 성립하는 것이며, 이때 $\lim_{n\rightarrow\infty} a_n = \infty$로 적는다. $(-a_n)$이 양의 무한대로 발산하면 $(a_n)$이 *음의 무한대로 발산*한다고 하고 $\lim_{n\rightarrow\infty} a_n = -\infty$로 적는다.
 :::
 
-무한대로의 발산은 [명제 3](#prop3){: data-relation="requires-review" }과 짝을 이룬다. [명제 3](#prop3){: data-relation="required" reviewed="" }에 의해 bounded가 아닌 수열은 수렴할 수 없으므로, 무한대로 발산하는 수열은 반드시 발산하지만, 그 역은 거짓이다. 예컨대 $a_n = (-1)^n n$은 bounded가 아니지만 양·음 어느 무한대로도 가지 않는다. 한편 bounded이면서도 발산하는 가장 단순한 예는 다음이다.
+무한대로의 발산은 [명제 3](#prop3){: data-relation="required" reviewed="" }과 짝을 이룬다. [명제 3](#prop3){: data-relation="required" reviewed="" }에 의해 bounded가 아닌 수열은 수렴할 수 없으므로, 무한대로 발산하는 수열은 반드시 발산하지만, 그 역은 거짓이다. 예컨대 $a_n = (-1)^n n$은 bounded가 아니지만 양·음 어느 무한대로도 가지 않는다. 한편 bounded이면서도 발산하는 가장 단순한 예는 다음이다.
 
 ::: 예시 11 (진동하는 수열)
 $a_n = (-1)^n$은 bounded($\lvert a_n\rvert = 1$)이지만 발산한다. 만약 $a_n \rightarrow L$이라면 $\varepsilon = 1$에 대해 충분히 큰 $n$에서 $\lvert a_n - L\rvert < 1$이어야 한다. 그런데 인접한 두 항 $a_n = 1$, $a_{n+1} = -1$ (또는 그 반대)에 대해 삼각부등식으로

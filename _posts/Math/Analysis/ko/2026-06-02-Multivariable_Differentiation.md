@@ -15,7 +15,7 @@ weight: 19
 published: false
 ---
 
-[\[미적분학\] §다변수함수와 편미분](/ko/math/calculus/partial_derivatives){: data-relation="requires-review" }에서 편미분과 기울기를 다루었다. 다변수 미분의 본질을 가장 잘 드러내는 관점은 미분을 하나의 *선형사상*, 곧 함수를 한 점 근방에서 가장 잘 근사하는 일차사상으로 보는 것이며, 이것이 한 변수의 "$f(a+h)\approx f(a)+f'(a)h$"를 곧바로 일반화한다.
+[\[미적분학\] §다변수함수와 편미분](/ko/math/calculus/partial_derivatives){: data-relation="required" reviewed="" }에서 편미분과 기울기를 다루었다. 다변수 미분의 본질을 가장 잘 드러내는 관점은 미분을 하나의 *선형사상*, 곧 함수를 한 점 근방에서 가장 잘 근사하는 일차사상으로 보는 것이며, 이것이 한 변수의 "$f(a+h)\approx f(a)+f'(a)h$"를 곧바로 일반화한다.
 
 한 변수에서 도함수 $f'(a)$는 하나의 수였지만, 그 수가 하는 일은 증분 $h$를 받아 함수값의 변화 $f'(a)h$를 돌려주는 *곱하기 사상*이다. 변수가 여럿이 되면 입력 $h \in \mathbb{R}^n$과 출력 $f(a+h)-f(a) \in \mathbb{R}^m$이 모두 벡터이므로, 둘을 잇는 가장 단순한 대응은 더 이상 한 수가 아니라 선형사상이다. 따라서 미분의 올바른 일반화는 "도함수"라는 수가 아니라 $\mathbb{R}^n$에서 $\mathbb{R}^m$으로 가는 선형사상이며, 이 사상이 함수를 한 점에서 *접*하는 일차 모형을 준다. 이 관점은 정의를 통일할 뿐 아니라, 연쇄법칙을 행렬의 곱으로 환원하고 [§역함수 정리와 음함수 정리, ⁋정리 1](/ko/math/analysis/inverse_function_theorem#thm1){: data-relation="forward" reviewed="" } 같은 깊은 결과로 가는 길을 닦는다.
 
@@ -150,7 +150,7 @@ $$f(x) = \begin{cases} x^2 \sin\frac{1}{x}, & x \neq 0, \\ 0, & x = 0 \end{cases
 
 $$f'(0) = \lim_{t\rightarrow 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\rightarrow 0} t\sin\frac1t = 0$$
 
-이므로 $f$는 모든 점에서 미분가능하다. 그러나 $x \rightarrow 0$일 때 $f'(x)$의 $-\cos(1/x)$ 항이 진동하여 극한이 없으므로 $f'$는 $0$에서 불연속이다. 즉 미분가능성이 도함수의 연속성을 함의하지 않으며, [명제 4](#prop4){: data-relation="requires-review" }의 역이 거짓임을 보인다.
+이므로 $f$는 모든 점에서 미분가능하다. 그러나 $x \rightarrow 0$일 때 $f'(x)$의 $-\cos(1/x)$ 항이 진동하여 극한이 없으므로 $f'$는 $0$에서 불연속이다. 즉 미분가능성이 도함수의 연속성을 함의하지 않으며, [명제 4](#prop4){: data-relation="required" reviewed="" }의 역이 거짓임을 보인다.
 :::
 
 가령 극좌표 변환 $f(r,\theta) = (r\cos\theta, r\sin\theta)$는 성분이 모두 $C^1$이라 미분가능하고, 편미분을 모으면 $J_f(r,\theta) = \begin{pmatrix} \cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta \end{pmatrix}$이며 그 행렬식은 $\det J_f = r(\cos^2\theta + \sin^2\theta) = r$이다. 극좌표 적분에서 등장하는 면적 배율 $r$가 정확히 미분의 행렬식임을 볼 수 있다.

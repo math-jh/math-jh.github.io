@@ -201,7 +201,7 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 ## 메이어-피토리스 열
 
-분량상 증명을 적지는 않았지만, [정리 2](#thm2){: data-relation="requires-review" }의 excision theorem은 homology 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5){: data-relation="weak" reviewed="" }의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
+분량상 증명을 적지는 않았지만, [정리 2](#thm2){: data-relation="weak" reviewed="" }는 homology 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5){: data-relation="weak" reviewed="" }의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
 
 ::: 정의 6 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $H_k$과, 이들 사이의 natural transformation
@@ -231,7 +231,7 @@ $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
-로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13){: data-relation="required" reviewed="" }) 특히 계수 $A$가 commutative ring $R$인 경우, 이는 ring homomorphism $\mathbb{Z}\rightarrow R$에 대한 extension of scalar를 취하는 것이며 ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="requires-review" }), 이로부터 얻어지는 chain complex와 homology는 자연스럽게 $R$-module 구조를 갖는다.
+로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. ([\[대수적 구조\] §가환군, ⁋정의 13](/ko/math/algebraic_structures/abelian_groups#def13){: data-relation="required" reviewed="" }) 특히 계수 $A$가 commutative ring $R$인 경우, 이는 ring homomorphism $\mathbb{Z}\rightarrow R$에 대한 extension of scalar를 취하는 것이며 ([\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-relation="required" reviewed="" }), 이로부터 얻어지는 chain complex와 homology는 자연스럽게 $R$-module 구조를 갖는다.
 
 Homology의 대부분의 성질들은 [정의 6](#def6){: data-relation="required" reviewed="" }의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로부터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 

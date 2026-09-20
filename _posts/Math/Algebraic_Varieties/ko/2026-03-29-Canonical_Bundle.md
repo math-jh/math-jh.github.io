@@ -16,7 +16,7 @@ weight: 12
 
 [§선형계](/ko/math/algebraic_varieties/linear_systems){: data-relation="weak" reviewed="" }에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
 
-이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $X$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24){: data-relation="requires-review" }를 사용하여 이 위에 정의된 cotangent bundle $\Omega_X^1$을 생각할 수 있으며 이것의 top exterior power를 생각하여 *canonical bundle* $\omega_X$를 생각할 수 있다. 이번 글에서 우리의 목표는 이 bundle $\omega_X$를 살펴보는 것이다. 
+이렇듯 line bundle이 우리의 기하학에 꽤나 중요한 영향을 미치고 있음에도 불구하고, 우리는 아직까지 임의의 variety 위에 일반적으로 line bundle을 정의하는 방법을 제대로 살펴보지 않았다. 만일 $X$가 *smooth* variety라면, 우리는 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24){: data-relation="required" reviewed="" }를 사용하여 이 위에 정의된 cotangent bundle $\Omega_X^1$을 생각할 수 있으며 이것의 top exterior power를 생각하여 *canonical bundle* $\omega_X$를 생각할 수 있다. 이번 글에서 우리의 목표는 이 bundle $\omega_X$를 살펴보는 것이다. 
 
 ## 벡터다발과 준연접층
 
@@ -64,7 +64,7 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이러한 관점에서는 vector bundle은 아주 특수한 경우의 (quasi-)coherent sheaf라 생각할 수 있다. 혹은 반대로 이들 (quasi-)coherent sheaf들을 생각할 때 아주 일반적인 형태의 vector bundle이라 생각해도 된다. 구체적으로, coherent sheaf는 (finite rank) vector bundle들의 category에서 이들이 abelian category의 연산, 즉 kernel이나 image, cokernel 등에 대해 닫혀있도록 하기 위해서 확장한 것이라 생각할 수 있으며 직관적으로는 fiber dimension이 점마다 달라질 수 있는 vector bundle이라 생각할 수 있다. Quasi-coherent sheaf는 여기에서 finite rank 조건까지 뺀 것이다. 
 
-Variety의 coordinate ring은 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9){: data-relation="requires-review" }에 의하여 coherent 조건과 finitely generated 조건이 일치하는 것은 singular variety 위에서도 마찬가지이며, 따라서 위의 슬로건은 기하학적 상황에서도 그대로 성립한다. 다만 위의 직관에서 다소 주의할 부분은 coherent sheaf가 vector bundle에 얼마나 가까운지가 $X$의 기하에 따라 달라진다는 것이다. Smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
+Variety의 coordinate ring은 Noetherian이므로 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9){: data-relation="weak" reviewed="" }에 의하여 coherent 조건과 finitely generated 조건이 일치하는 것은 singular variety 위에서도 마찬가지이며, 따라서 위의 슬로건은 기하학적 상황에서도 그대로 성립한다. 다만 위의 직관에서 다소 주의할 부분은 coherent sheaf가 vector bundle에 얼마나 가까운지가 $X$의 기하에 따라 달라진다는 것이다. Smooth variety 위에 정의된 임의의 coherent sheaf는 유한한 길이의 locally free resolution을 갖지만, singular variety에서는 그렇지 않다. 
 
 ## Canonical Bundle
 
@@ -122,7 +122,7 @@ $$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 로 정의한다. 
 :::
 
-우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4){: data-relation="requires-review" }과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$의 꼴로 나타나는 $n$-form들이다. 
+우리는 canonical bundle $\omega_X$의 global section $s\in \Gamma(X, \omega_X)$을 $X$ 위의 *regular $n$-form*이라 부른다. 이들은 만일 $\omega_X$의 trivializing open set $U$를 잡고, 이를 [예시 4](#ex4){: data-relation="weak" reviewed="" }과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $f$에 대하여 $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$의 꼴로 나타나는 $n$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
@@ -168,7 +168,7 @@ $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \det(\Omega_{\mathbb{P
 
 $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
-을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="requires-review" }으로부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
+을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-relation="required" reviewed="" }으로부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
 
 ::: 예시 8
 위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate를 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
@@ -189,7 +189,7 @@ $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \
 
 로 변환된다. 여기서 $(-1)^{i+j}$는 $k=i$인 인자의 부호까지 모아 인자들을 순서대로 다시 배열하며 붙는 부호이며, 각 $U_i$ 위의 $n$-form을 $(-1)^i$배 하여 흡수할 수 있으므로 무시해도 안전하다. 
 
-그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="requires-review" }의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
+그럼 $U_i$ 위의 $n$-form들은 $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$을 frame으로 가지며, 위의 계산은 두 frame 사이의 관계 $\alpha_j = c_{ij}\alpha_i$가 $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$로 주어진다는 것을 말한다. 이제 section을 $s = f_i\alpha_i = f_j\alpha_j$로 적으면 $f_i = c_{ij}f_j$이므로, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" reviewed="" }의 컨벤션에서 trivialize된 함수들 사이의 transition function은 그 역수 $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$이다. 이는 $\mathcal{O}_{\mathbb{P}^n}(-n-1)$의 transition function과 일치한다.
 :::
 
 ## Adjunction Formula
@@ -248,7 +248,7 @@ Degree-genus formula는, 실은 나중에 살펴 볼 Riemann-Roch theorem의 특
 
 ## Blow-up의 canonical divisor
 
-우리는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="requires-review" }에서 $\mathbb{A}^2$ 위의 한 점 $0$에서의 blow-up을 살펴보았다. 우리는 이제 이 예시를 더 일반화시키고, 이 일반적인 세팅에서 canonical divisor가 어떻게 행동하는지를 살펴볼 것이다.
+우리는 [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" reviewed="" }에서 $\mathbb{A}^2$ 위의 한 점 $0$에서의 blow-up을 살펴보았다. 우리는 이제 이 예시를 더 일반화시키고, 이 일반적인 세팅에서 canonical divisor가 어떻게 행동하는지를 살펴볼 것이다.
 
 Smooth variety $X$와 codimension $r$ smooth subvariety $Z$에 대하여, $Z$를 따라 $X$를 blowup한 것은 다음의 birational morphism
 
@@ -270,7 +270,7 @@ $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0
 
 를 얻는다. 
 
-한편 가정에 의해 $Z$는 codimension $r$이었으므로, $\mathcal{N}_{Z/X}$는 rank $r$이고 따라서 $E$의 각 fiber는 $\mathbb{P}^{r-1}$이다. 우리는 [명제 7](#prop7){: data-relation="requires-review" }을 일반화하여 다음을 얻는다. 
+한편 가정에 의해 $Z$는 codimension $r$이었으므로, $\mathcal{N}_{Z/X}$는 rank $r$이고 따라서 $E$의 각 fiber는 $\mathbb{P}^{r-1}$이다. 우리는 [명제 7](#prop7){: data-relation="required" reviewed="" }을 일반화하여 다음을 얻는다. 
 
 ::: 명제 11 (Relative Euler sequence)
 임의의 vector bundle $V\rightarrow B$와 projectivized vector bundle $\pi: \mathbb{P}(V)\rightarrow B$에 대하여, 다음의 short exact sequence

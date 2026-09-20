@@ -81,7 +81,7 @@ $$y'(t) = f(t, y(t)), \qquad y(t_0) = y_0$$
 평면의 영역 $D$ 위에서 정의된 $f(t, y)$가 $y$에 대해 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $L \geq 0$이 존재하여 $(t, y_1) \in D$이고 $(t, y_2) \in D$인 모든 $t, y_1, y_2$에 대해 $\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$이 성립하는 것이다.
 :::
 
-상수 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 부른다. 기하적으로 이 조건은 같은 $t$에서 그래프 $y \mapsto f(t, y)$의 두 점을 잇는 모든 할선의 기울기가 $\lvert$기울기$\rvert \leq L$로 균등하게 bounded임을 뜻한다. 만약 $f$가 둘째 변수에 대해 연속미분가능하고 $\partial f / \partial y$가 bounded이면, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-relation="requires-review" }에 의해
+상수 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 부른다. 기하적으로 이 조건은 같은 $t$에서 그래프 $y \mapsto f(t, y)$의 두 점을 잇는 모든 할선의 기울기가 $\lvert$기울기$\rvert \leq L$로 균등하게 bounded임을 뜻한다. 만약 $f$가 둘째 변수에 대해 연속미분가능하고 $\partial f / \partial y$가 bounded이면, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-relation="required" reviewed="" }에 의해
 
 $$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}(t, \xi)\right\rvert \lvert y_1 - y_2\rvert \leq L \lvert y_1 - y_2\rvert$$
 
@@ -161,7 +161,7 @@ $$\begin{aligned}
 을 얻는다. 따라서 $\lvert t - t_0\rvert \leq a$에서 $\lVert y_{n+1} - y_n\rVert_\infty \leq M (La)^{n+1}/(L (n+1)!)$이고, 우변은 지수급수의 항이라 그 합이 유한하다. 망원합 $y_n = y_0 + \sum_{k=0}^{n-1}(y_{k+1} - y_k)$이 상한노름에서 절대수렴하므로 $y_n$은 어떤 연속함수 $y$로 균등수렴하고, 극한에서 $y = Ty$이다. 유일성은 [정리 4](#thm4){: data-relation="required" reviewed="" }의 논법을 구간 전체에서 그뢴발 부등식으로 잇거나, 구간을 길이 $1/(2L)$ 이하의 조각으로 나누어 각 조각에서 [정리 2](#thm2){: data-relation="required" reviewed="" }를 적용해 얻는다.
 :::
 
-[명제 6](#prop6){: data-relation="requires-review" }의 핵심은 립시츠 상수 $L$이 $y$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $L^n / n!$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4){: data-relation="requires-review" }에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $y$에 대해 선형인 방정식이다. 실제로 $y' = a(t) y + b(t)$에서 $a, b$가 닫힌구간 $I$에서 연속이면 $\lvert a(t)\rvert$이 $I$에서 bounded라 그 상한 $L$이 전역 립시츠 상수가 되고, [명제 6](#prop6){: data-relation="required" reviewed="" }에 의해 해가 $I$ 전체에서 유일하게 존재한다. 가령 $y' = -2t y$의 해 $e^{-t^2}$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
+[명제 6](#prop6){: data-relation="required" reviewed="" }의 핵심은 립시츠 상수 $L$이 $y$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $L^n / n!$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4){: data-relation="required" reviewed="" }에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $y$에 대해 선형인 방정식이다. 실제로 $y' = a(t) y + b(t)$에서 $a, b$가 닫힌구간 $I$에서 연속이면 $\lvert a(t)\rvert$이 $I$에서 bounded라 그 상한 $L$이 전역 립시츠 상수가 되고, [명제 6](#prop6){: data-relation="required" reviewed="" }에 의해 해가 $I$ 전체에서 유일하게 존재한다. 가령 $y' = -2t y$의 해 $e^{-t^2}$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
 
 ::: 예시 7 (유한 시간 폭발)
 $y' = y^2$, $y(0) = 1$을 보자. 여기서 $f(t, y) = y^2$는 임의의 bounded 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로

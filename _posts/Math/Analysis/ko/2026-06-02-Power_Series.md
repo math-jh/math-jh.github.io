@@ -86,7 +86,7 @@ d_n &= \frac{f^{(n)}(a)}{n!}
 
 ## 수렴반경의 계산
 
-[정리 1](#thm1){: data-relation="requires-review" }은 모든 멱급수에 통하지만, 실제 계산에서는 [§무한급수, ⁋정리 7](/ko/math/analysis/series#thm7){: data-relation="required" reviewed="" }이 더 다루기 쉬운 경우가 많다. 계수의 비 $\lvert c_{n+1}/c_n\rvert$이 극한을 가지면 그 극한의 역수가 곧 수렴반경이 된다.
+[정리 1](#thm1){: data-relation="required" reviewed="" }은 모든 멱급수에 통하지만, 실제 계산에서는 [§무한급수, ⁋정리 7](/ko/math/analysis/series#thm7){: data-relation="required" reviewed="" }이 더 다루기 쉬운 경우가 많다. 계수의 비 $\lvert c_{n+1}/c_n\rvert$이 극한을 가지면 그 극한의 역수가 곧 수렴반경이 된다.
 
 ::: 명제 6 (비판정에 의한 수렴반경)
 $c_n \neq 0$이 충분히 큰 $n$에서 성립하고 $\lim_{n\rightarrow\infty}\lvert c_{n+1}/c_n\rvert = L$이 존재하면, 멱급수 $\sum c_n (x-a)^n$의 수렴반경은 $R = 1/L$이다 ($L = 0$이면 $R = \infty$, $L = \infty$이면 $R = 0$).
@@ -104,7 +104,7 @@ $$\begin{aligned}
 이다. 이 값이 $1$보다 작으면, 곧 $\lvert x - a\rvert < 1/L$이면 절대수렴하고, $1$보다 크면 발산한다. 따라서 수렴반경은 $R = 1/L$이다. 비판정으로 극한이 존재할 때 근판정의 $\limsup$도 같은 값을 가지므로, 이는 [정리 1](#thm1){: data-relation="weak" reviewed="" }과 모순되지 않는다.
 :::
 
-가령 $c_n = n^2/2^n$이면 $\lvert c_{n+1}/c_n\rvert = (1/2)(n+1)^2/n^2 \rightarrow 1/2$이므로 [명제 6](#prop6){: data-relation="required" reviewed="" }에서 곧바로 $R = 2$를 얻는다. 그러나 계수가 진동하여 비의 극한이 아예 존재하지 않는 급수에서는 [명제 6](#prop6){: data-relation="requires-review" }이 무력하고, Cauchy–Hadamard 공식의 $\limsup$만이 답을 준다.
+가령 $c_n = n^2/2^n$이면 $\lvert c_{n+1}/c_n\rvert = (1/2)(n+1)^2/n^2 \rightarrow 1/2$이므로 [명제 6](#prop6){: data-relation="required" reviewed="" }에서 곧바로 $R = 2$를 얻는다. 그러나 계수가 진동하여 비의 극한이 아예 존재하지 않는 급수에서는 [명제 6](#prop6){: data-relation="required" reviewed="" }이 무력하고, Cauchy–Hadamard 공식의 $\limsup$만이 답을 준다.
 
 ::: 예시 7 (비판정이 통하지 않는 경우)
 계수가 짝·홀에 따라 달라 비의 극한이 없을 때는 근판정을 쓴다. 멱급수
@@ -123,7 +123,7 @@ $$\begin{aligned}
 
 ## 응용: 항별 미분의 계산
 
-[정리 3](#thm3){: data-relation="requires-review" }의 항별 미분은 알려진 멱급수에서 새 항등식을 끌어내는 도구이다. 수렴반경 안에서 멱급수는 다항식처럼 다룰 수 있으므로, 미분·적분과 대입을 자유롭게 조합해 함수의 값이나 수치급수의 합을 얻는다.
+[정리 3](#thm3){: data-relation="required" reviewed="" }의 항별 미분은 알려진 멱급수에서 새 항등식을 끌어내는 도구이다. 수렴반경 안에서 멱급수는 다항식처럼 다룰 수 있으므로, 미분·적분과 대입을 자유롭게 조합해 함수의 값이나 수치급수의 합을 얻는다.
 
 ::: 예시 8 (등비급수의 미분)
 기하급수 $1/(1-x) = \sum_{n=0}^\infty x^n$ ($\lvert x\rvert < 1$) 을 [정리 3](#thm3){: data-relation="required" reviewed="" }으로 항별 미분하면

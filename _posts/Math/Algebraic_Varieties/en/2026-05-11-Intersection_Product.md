@@ -46,14 +46,14 @@ The above is an example of two 1-dimensional subvarieties meeting in dimension 2
 Two varieties $V, W \subseteq \mathbb{A}^n$ are said to *intersect transversely* at a point $p \in V \cap W$ which is a smooth point of both if the sum of their tangent spaces fills the whole space.
 :::
 
-Then the following two propositions are natural generalizations of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2){: data-relation="requires-review" }.
+Then the following two propositions are natural generalizations of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2){: data-relation="weak" reviewed="" }.
 
 ::: Proposition 4
 Intersection multiplicity satisfies the following conditions.
 
 1. For any $p$ which is an isolated point of $V\cap W$ and any $V,W$, we have $0\leq i_p(V,W)<\infty$, and if $p\not\in V\cap W$ then $i_p(V,W)=0$.
 2. $V,W$ intersect transversally at $p$ if and only if $i_p(V,W)=1$.
-3. $i_p$ satisfies the symmetry and bilinearity of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2){: data-relation="requires-review" }.
+3. $i_p$ satisfies the symmetry and bilinearity of [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 2](/en/math/algebraic_varieties/riemann_roch_surfaces#prop2){: data-relation="required" reviewed="" }.
 :::
 
 ## Definition of the Intersection Product
@@ -68,7 +68,7 @@ $$\codim(V \cap W) = \codim V + \codim W$$
 holds.
 :::
 
-In particular [Definition 1](#def1){: data-relation="requires-review" } is the special case where $\codim (V\cap W)=n$. Now, if the above equality holds for every irreducible component of $V\cap W$, we can use it to define
+In particular [Definition 1](#def1){: data-relation="weak" reviewed="" } is the special case where $\codim (V\cap W)=n$. Now, if the above equality holds for every irreducible component of $V\cap W$, we can use it to define
 
 $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T].$$
 
@@ -110,7 +110,7 @@ $$Z \cdot W := Z' \cdot W = \sum_{T \subseteq Z' \cap W} i_T(Z', W) [T].$$
 
 The moving lemma realizes our intuition that, given two classes, we perturb them to compute the intersection. However, this approach relies on the quasi-projectivity assumption, and to extend it to a general setting one needs the *deformation to normal cone*.
 
-The key observation is as follows. First recall that in [§Tangent Spaces and Smoothness, ⁋Definition 13](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def13){: data-relation="requires-review" } we defined the tangent cone. This was a tool for understanding the local structure at a singular point, and generalizing this we can define the *normal cone* $C_{Y/X}$ of a closed embedding $i: Y \hookrightarrow X$ inside $X$. If $i$ is a regular embedding (for instance if both $X$ and $Y$ are smooth) the normal cone becomes the normal bundle $N_{Y/X}$, but in general it has a cone structure.
+The key observation is as follows. First recall that in [§Tangent Spaces and Smoothness, ⁋Definition 13](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def13){: data-relation="required" reviewed="" } we defined the tangent cone. This was a tool for understanding the local structure at a singular point, and generalizing this we can define the *normal cone* $C_{Y/X}$ of a closed embedding $i: Y \hookrightarrow X$ inside $X$. If $i$ is a regular embedding (for instance if both $X$ and $Y$ are smooth) the normal cone becomes the normal bundle $N_{Y/X}$, but in general it has a cone structure.
 
 ::: Proposition 9 (Deformation to Normal Cone)
 For a closed embedding $i: Y \hookrightarrow X$, one can construct a family $M \rightarrow \mathbb{A}^1$ parameterized by $\mathbb{A}^1$. Specifically, the fiber $M_t$ for $t \neq 0$ is $X$ itself, and the fiber $M_0$ at $t = 0$ is the normal cone $C_{Y/X}$. The existence of this family reduces the well-definedness of the intersection product to the compatibility of pushforward and pullback for this family.
@@ -141,7 +141,7 @@ However, the situation in $\mathbb{P}^2$ is simple. Since $A^\ast(\mathbb{P}^2) 
 :::
 
 ::: Example 12 ($\mathbb{P}^1 \times \mathbb{P}^1$)
-As a slightly more complicated example, we saw in [§Rational Maps, ⁋Example 11](/en/math/algebraic_varieties/rational_maps#ex11){: data-relation="requires-review" } that $\mathbb{P}^1 \times \mathbb{P}^1$ and the quadric surface $Q = V(\x\y - \z\w)$ are isomorphic. The Chow ring of $\mathbb{P}^1 \times \mathbb{P}^1$ is
+As a slightly more complicated example, we saw in [§Rational Maps, ⁋Example 11](/en/math/algebraic_varieties/rational_maps#ex11){: data-relation="required" reviewed="" } that $\mathbb{P}^1 \times \mathbb{P}^1$ and the quadric surface $Q = V(\x\y - \z\w)$ are isomorphic. The Chow ring of $\mathbb{P}^1 \times \mathbb{P}^1$ is
 
 $$A^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2, H_2^2),$$
 
@@ -151,7 +151,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 :::
 
 ::: Example 13
-Consider the Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$. ([§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16){: data-relation="requires-review" }) The image of this embedding is the quadric surface $Q = V(\x\y - \z\w)$. By [§Line Bundles and Vector Bundles, ⁋Proposition 20](/en/math/algebraic_varieties/line_bundles#prop20){: data-relation="required" reviewed="" } the pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$ is a line bundle on $\mathbb{P}^1 \times \mathbb{P}^1$, and indeed $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$. This can also be checked at the level of Chow rings: pulling back the hyperplane class $H_{\mathbb{P}^3}$ in $\mathbb{P}^3$ gives $H_1 + H_2$, which corresponds to bidegree $(1,1)$.
+Consider the Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$. ([§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16){: data-relation="required" reviewed="" }) The image of this embedding is the quadric surface $Q = V(\x\y - \z\w)$. By [§Line Bundles and Vector Bundles, ⁋Proposition 20](/en/math/algebraic_varieties/line_bundles#prop20){: data-relation="required" reviewed="" } the pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$ is a line bundle on $\mathbb{P}^1 \times \mathbb{P}^1$, and indeed $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$. This can also be checked at the level of Chow rings: pulling back the hyperplane class $H_{\mathbb{P}^3}$ in $\mathbb{P}^3$ gives $H_1 + H_2$, which corresponds to bidegree $(1,1)$.
 
 Through this we can transfer intersection computations in $\mathbb{P}^3$ to $\mathbb{P}^1 \times \mathbb{P}^1$. For example, the intersection of the two hyperplanes $H, H'$ in $\mathbb{P}^3$ each with the quadric surface $Q$, that is the intersection of $(H \cap Q)$ and $(H' \cap Q)$, is computed in $\mathbb{P}^1 \times \mathbb{P}^1$ as $(H_1 + H_2)^2 = 2H_1 H_2$. That is, the intersection of two hyperplanes with a quadric surface is 2 points, which is the same as two curves of bidegree $(1,1)$ meeting in $Q \cong \mathbb{P}^1 \times \mathbb{P}^1$.
 :::

@@ -27,7 +27,7 @@ $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 일반적으로 우리는 $\mathcal{O}_C(D)$를 $D$를 따라 각 점 $p$에서 order $\operatorname{ord}_p D$ 이하의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $H^0(C, \mathcal{O}_C(D))$는 $C$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
-이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2){: data-relation="requires-review" }에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$의 nonzero section들은 주어진 divisor $D$와 linearly equivalent한 effective divisor들을 정의하며, 이 공간을 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
+이 공간 $H^0(C, \mathcal{O}_C(D))$는 [§선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2){: data-relation="weak" reviewed="" }에서 처음 도입했던 것을 기억하자. 그에 따르면 공간 $H^0(C, \mathcal{O}_C(D))$의 nonzero section들은 주어진 divisor $D$와 linearly equivalent한 effective divisor들을 정의하며, 이 공간을 projectivize하여 $\mathcal{O}_C(D)$의 *complete linear system* $\lvert \mathcal{O}_C(D)\rvert$를 얻을 수 있었다. 이 글에서는 편의상 이를 $\lvert D\rvert$으로 적기로 한다. 그럼 위의 Riemann-Roch dimension은 $\lvert D\rvert$의 projective dimension에 $1$을 더한 값이 된다. 
 
 이제 점 $p\in C$를 고정하자. 그럼 $p$를 지나는 $\lvert D\rvert$의 원소들은 그 정의에 의해 $H^0(C,\mathcal{O}_C(D))$의 원소들 중 $s(p)=0$을 만족하는 section들로 생각할 수 있다. 즉, 이러한 $s$는 $\divisor(s)-p\geq 0$을 만족하는 $H^0(C, \mathcal{O}_C(D))$의 원소이며, 이를 통해 정확히 이러한 원소들의 모임이
 

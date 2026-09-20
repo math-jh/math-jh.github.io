@@ -42,7 +42,7 @@ What is important is that this proposition provides a practical way to compute r
 For a variety $X$ and a nonempty open subset $U$, we have $K(U) = K(X)$.
 :::
 ::: Proof
-First, the inclusion $\iota: U \hookrightarrow X$ obviously induces an embedding $\iota^\ast: K(X)\rightarrow K(U)$ of function fields. Since any nonzero field homomorphism is injective, it suffices to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-relation="requires-review" })
+First, the inclusion $\iota: U \hookrightarrow X$ obviously induces an embedding $\iota^\ast: K(X)\rightarrow K(U)$ of function fields. Since any nonzero field homomorphism is injective, it suffices to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-relation="required" reviewed="" })
 
 Now for any $f \in K(U)$, $f$ is a regular function on some nonempty open subset $V$ of $U$. Then $V$ is also open in $X$, so the pair $(V,f)$ belongs to $K(X)$.
 :::

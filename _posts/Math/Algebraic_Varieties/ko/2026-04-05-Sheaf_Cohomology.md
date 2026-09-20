@@ -13,7 +13,7 @@ weight: 13
 
 ---
 
-우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles){: data-relation="requires-review" }에서 우리는 line bundle $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" reviewed="" }에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
+우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles){: data-relation="weak" reviewed="" }에서 우리는 line bundle $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="weak" reviewed="" }에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
 
 우리는 지금까지 기하적 직관을 위해 주로 line bundle의 언어를 사용하였으나, [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" reviewed="" } 직후에 살펴보았듯 line bundle의 section sheaf를 생각하면 이는 근본적으로는 sheaf의 언어로 바꾸어 쓸 수 있다. 이번 글에서 우리는 sheaf cohomology의 개념을 정의한다.
 
@@ -25,7 +25,7 @@ Sheaf가 위상공간의 모든 정보들을 체계적으로 기술할 수 있�
 
 $$\Gamma(X, -): \QCoh(X) \rightarrow \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X)$$
 
-를 생각하자. 우리가 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1){: data-relation="requires-review" }에서 quasi-coherent sheaf를 정의할 때의 motivation은 vector bundle들의 category $\Bun(X)$가 abelian category가 아니므로, kernel과 cokernel을 추가하는 더 넓은 category를 생각하는 것이었고, 그러한 관점에서 $\QCoh(X)$가 abelian category가 된다는 것은 놀라운 일은 아니다. [^1]
+를 생각하자. 우리가 [§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" reviewed="" }에서 quasi-coherent sheaf를 정의할 때의 motivation은 vector bundle들의 category $\Bun(X)$가 abelian category가 아니므로, kernel과 cokernel을 추가하는 더 넓은 category를 생각하는 것이었고, 그러한 관점에서 $\QCoh(X)$가 abelian category가 된다는 것은 놀라운 일은 아니다. [^1]
 
 만일 $\Gamma(X,-)$가 어떠한 정보도 잃어버리지 않는다면, 이 functor는 exact functor여야 할 것이다. 즉, (quasi-coherent) sheaf들의 short exact sequence
 
@@ -159,7 +159,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 위의 논증을 더 간단히 설명하자면, open cover를 점점 더 세밀하게 잡으며 추가되는 cohomology data를 모두 합쳐 이를 $\check{H}(X, \mathcal{F})$로 정의하겠다는 의미이다.
 
-일반적으로 [정의 7](#def7){: data-relation="requires-review" }의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1){: data-relation="required" reviewed="" }의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 algebraic geometry에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
+일반적으로 [정의 7](#def7){: data-relation="required" reviewed="" }의 $\check{H}^p(X, \mathcal{F})$와 [정의 1](#def1){: data-relation="required" reviewed="" }의 $H^p(X, \mathcal{F})$가 isomorphic하다는 것은 보장되지 않지만, 다행히 algebraic geometry에서 등장하는 대부분의 sheaf에 대해서는 둘이 일치한다. 이를 보이기 위해서는 다소 기술적인 것들이 필요하다.
 
 ::: 정의 8
 Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, 다음을 정의한다.
@@ -283,7 +283,7 @@ $$\Delta_X\hookrightarrow X\times X$$
 
 ## Godement Resolution
 
-우리는 [정의 1](#def1){: data-relation="requires-review" }에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#thm11){: data-relation="weak" reviewed="" }을 사용하는 방법을 살펴보았다.
+우리는 [정의 1](#def1){: data-relation="weak" reviewed="" }에서 sheaf cohomology를 injective resolution을 통해 정의하였으나, 일반적으로 injective resolution을 직접 계산하는 것은 어렵기에 이에 대한 해결책 중 하나로 Čech cohomology와 sheaf cohomology가 isomorphic하다는 앞선 결과 [정리 11](#thm11){: data-relation="weak" reviewed="" }을 사용하는 방법을 살펴보았다.
 
 이번 섹션에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1){: data-relation="weak" reviewed="" }이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다.
 
@@ -407,13 +407,13 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) 
 
 Sheaf cohomology의 가장 강력한 응용 중 하나는 spectral sequence를 통한 cohomology의 계산이다. 우리는 이번 섹션에서 구체적인 계산으로 이 글을 마무리하기로 한다. 지금 소개하는 명제들은 일반적인 위상수학적 설정에서 성립하지만, 우리는 주로 variety와 quasi-coherent sheaf에의 적용을 염두에 둘 것이므로 이 카테고리에 담았다.
 
-연속함수 $f : X \rightarrow Y$와 sheaf $\mathcal{F}$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-relation="required" reviewed="" }와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9){: data-relation="required" reviewed="" }로부터 direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="requires-review" }에서와 마찬가지로 $f_\ast$의 right derived functor를
+연속함수 $f : X \rightarrow Y$와 sheaf $\mathcal{F}$를 고정하자. 그럼 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-relation="required" reviewed="" }와 [\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9){: data-relation="required" reviewed="" }로부터 direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$는 left exact functor임을 안다. 따라서 우리는 [\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors){: data-relation="required" reviewed="" }에서와 마찬가지로 $f_\ast$의 right derived functor를
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
 로 정의할 수 있다. 여기서 $\mathcal{I}^\bullet$은 $\mathcal{F}$의 injective resolution이다. 정의에 의해 $q=0$일 때 $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$이며 $\mathcal{F}$가 injective이면 $\mathcal{F}$ 자체로 injective resolution을 이루므로 모든 $q>0$에 대해 $R^qf_\ast \mathcal{F}=0$이 성립한다.
 
-이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="requires-review" }을 통해 horizontal differential을 정의해주는 것이다.
+이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-relation="required" reviewed="" }을 통해 horizontal differential을 정의해주는 것이다.
 
 ::: 정의 18 (Cartan-Eilenberg Resolution)
 Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resolution<sub>카르탕-아일렌베르크 분해</sub>*은 double complex $I^{p,q}$와 augmentation $K^\bullet \rightarrow I^{\bullet,0}$으로 이루어진 데이터로, 다음 조건들을 만족하는 것이다.
@@ -565,7 +565,7 @@ $$E_2^{p,q} = \check{H}^p(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) \Rightarrow H
 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡고, double complex $C^{p,q} = \check{C}^p(\mathcal{U}, \mathcal{G}^q(\mathcal{F}))$를 구성한다. 두 filtration으로부터 얻어지는 두 spectral sequence가 같은 total cohomology $H^{p+q}(X, \mathcal{F})$에 수렴한다는 것은 [\[호몰로지 대수학\] §스펙트럼 열, ⁋예시 11](/ko/math/homological_algebra/spectral_sequences#ex11){: data-relation="required" reviewed="" }에 의한 것이며, 이 때 Godement sheaf $\mathcal{G}^q(\mathcal{F})$가 flasque이므로 [보조정리 10](#lem10){: data-relation="required" reviewed="" }에 의해 Čech-acyclic이 되어 위에서의 계산과 같은 vanishing을 사용하면 된다.
 :::
 
-이 spectral sequence는 [정리 11](#thm11){: data-relation="requires-review" }를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11){: data-relation="requires-review" }를 포함하는 더 일반적인 결과라 할 수 있다.
+이 spectral sequence는 [정리 11](#thm11){: data-relation="weak" reviewed="" }를 더 넓은 맥락에서 이해할 수 있게 해준다. 만일 $\mathcal{U}$의 모든 유한한 교집합에서 $\mathcal{F}$가 acyclic이면, $\check{C}^\bullet(\mathcal{U}, \mathcal{H}^q(\mathcal{F})) = 0$이 모든 $q > 0$에 대해 성립하므로, $E_2$ page에서 $q > 0$인 항목이 모두 소멸하여 $E_2^{p,0} = \check{H}^p(\mathcal{U}, \mathcal{F}) \cong H^p(X, \mathcal{F})$를 얻는다. 즉, Čech-to-derived functor spectral sequence는 [정리 11](#thm11){: data-relation="weak" reviewed="" }를 포함하는 더 일반적인 결과라 할 수 있다.
 
 ## Line Bundle의 Classification
 

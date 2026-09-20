@@ -64,7 +64,7 @@ When dealing with quasi-coherent sheaves in general, one must be careful because
 
 From this perspective, a vector bundle can be thought of as a very special case of a (quasi-)coherent sheaf. Or conversely, when thinking of these (quasi-)coherent sheaves, one may regard them as very general forms of vector bundles. Specifically, a coherent sheaf can be thought of as an extension of the category of (finite rank) vector bundles so that it is closed under the operations of an abelian category, namely kernels, images, cokernels, etc., and intuitively it can be thought of as a vector bundle whose fiber dimension may vary from point to point. A quasi-coherent sheaf is what remains after removing the finite rank condition.
 
-Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9){: data-relation="requires-review" } the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
+Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9){: data-relation="weak" reviewed="" } the coherent condition and the finitely generated condition coincide even on a singular variety, and thus the above slogan holds just as well in geometric situations. However, one somewhat cautionary point from the above intuition is that how close a coherent sheaf is to a vector bundle depends on the geometry of $X$. Any coherent sheaf on a smooth variety admits a locally free resolution of finite length, but this is not the case on a singular variety.
 
 ## Canonical Bundle
 
@@ -120,7 +120,7 @@ The *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dimension $n$ 
 $$\omega_X = \bigwedge\nolimits^{n} \Omega_X^1$$
 :::
 
-We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are $n$-forms of the form $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$ for a regular function $f$, when we pick a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle over affine space as in [Example 4](#ex4){: data-relation="requires-review" }.
+We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are $n$-forms of the form $f\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}$ for a regular function $f$, when we pick a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle over affine space as in [Example 4](#ex4){: data-relation="weak" reviewed="" }.
 
 On the other hand, from the correspondence between line bundles and divisor classes, we can define the following.
 
@@ -185,7 +185,7 @@ $$\bigwedge_{k \neq j} \dd{\y_k}^{(j)} = (-1)^{i+j}(\y_j^{(i)})^{-(n+1)} \cdot \
 
 Here $(-1)^{i+j}$ is the sign arising from gathering the sign of the factor with $k=i$ and rearranging the factors in order, and this can be absorbed by multiplying the $n$-form on each $U_i$ by $(-1)^i$, so it is safe to ignore.
 
-Then the $n$-forms on $U_i$ have the frame $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$, and the above computation says that the relation between the two frames is $\alpha_j = c_{ij}\alpha_i$ with $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$. Now writing a section as $s = f_i\alpha_i = f_j\alpha_j$, we have $f_i = c_{ij}f_j$, so by the convention of [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12){: data-relation="requires-review" }, the transition function between the trivialized functions is its inverse $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$. This matches the transition function of $\mathcal{O}_{\mathbb{P}^n}(-n-1)$.
+Then the $n$-forms on $U_i$ have the frame $\alpha_i = \bigwedge_{k \neq i} \dd{\y_k}^{(i)}$, and the above computation says that the relation between the two frames is $\alpha_j = c_{ij}\alpha_i$ with $c_{ij} = (\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$. Now writing a section as $s = f_i\alpha_i = f_j\alpha_j$, we have $f_i = c_{ij}f_j$, so by the convention of [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" reviewed="" }, the transition function between the trivialized functions is its inverse $g_{ij} = c_{ij}^{-1} = (\x_i / \x_j)^{-(n+1)}$. This matches the transition function of $\mathcal{O}_{\mathbb{P}^n}(-n-1)$.
 :::
 
 ## Adjunction Formula

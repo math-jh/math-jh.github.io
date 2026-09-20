@@ -15,7 +15,7 @@ weight: 1
 published: false
 ---
 
-[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="weak" reviewed="" }에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6){: data-relation="requires-review" }가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
+[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits){: data-relation="weak" reviewed="" }에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6){: data-relation="forward" reviewed="" }가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
 
 ## 순서체로서의 실수
 

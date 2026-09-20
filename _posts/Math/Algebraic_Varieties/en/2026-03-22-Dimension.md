@@ -134,7 +134,7 @@ This may be viewed as a weak generalization of [Proposition 6](#prop6){: data-re
 For two varieties $X, Y$ and a regular map $\varphi: X \rightarrow Y$, the following hold.
 
 1. We have $\dim \varphi(X) \le \dim X$.
-2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8){: data-relation="requires-review" })
+2. If $\varphi$ is dominant, then $\dim Y \le \dim X$.  ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8){: data-relation="required" reviewed="" })
 :::
 
 ::: Proof

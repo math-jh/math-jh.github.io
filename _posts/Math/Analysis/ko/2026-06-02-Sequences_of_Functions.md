@@ -159,17 +159,17 @@ M_n = f_n(x_n) &= \frac{n}{\sqrt{2n+1}}\Bigl(1 - \frac{1}{2n+1}\Bigr)^n = \frac{
 
 $$M_n = \sup_{x} \lvert f_n(x) - f(x)\rvert$$
 
-를 보면, 균등수렴은 바로 $M_n \rightarrow 0$과 동치가 된다. 점별수렴만으로는 이 값이 $0$으로 가지 않을 수 있다. [예시 2](#ex2){: data-relation="requires-review" }의 $f_n(x) = x^n$에 대해서는
+를 보면, 균등수렴은 바로 $M_n \rightarrow 0$과 동치가 된다. 점별수렴만으로는 이 값이 $0$으로 가지 않을 수 있다. [예시 2](#ex2){: data-relation="required" reviewed="" }의 $f_n(x) = x^n$에 대해서는
 
 $$M_n = \sup_{0\leq x\leq 1} \lvert x^n - f(x)\rvert = \sup_{0\leq x < 1} x^n = 1$$
 
-이라 ($x \rightarrow 1^-$에서 $x^n$이 $1$에 임의로 가까워지므로 상한이 $1$이다) 모든 $n$에서 $M_n = 1$로 $0$에 가지 않는다. [예시 3](#ex3){: data-relation="requires-review" }의 봉우리 함수 $g_n$도 $M_n = \sup_x \lvert g_n(x)\rvert = n \rightarrow \infty$이다. 두 경우 모두 $M_n \not\rightarrow 0$이며, 이것이 연속성·적분이 깨진 정량적 이유이다. 반면 [예시 4](#ex4){: data-relation="requires-review" }의 $f_n(x) = \sin(nx)/\sqrt{n}$은 $M_n = 1/\sqrt{n} \rightarrow 0$이라 함수 자체는 균등수렴하지만, 앞서 보았듯 도함수는 그렇지 못하다.
+이라 ($x \rightarrow 1^-$에서 $x^n$이 $1$에 임의로 가까워지므로 상한이 $1$이다) 모든 $n$에서 $M_n = 1$로 $0$에 가지 않는다. [예시 3](#ex3){: data-relation="required" reviewed="" }의 봉우리 함수 $g_n$도 $M_n = \sup_x \lvert g_n(x)\rvert = n \rightarrow \infty$이다. 두 경우 모두 $M_n \not\rightarrow 0$이며, 이것이 연속성·적분이 깨진 정량적 이유이다. 반면 [예시 4](#ex4){: data-relation="required" reviewed="" }의 $f_n(x) = \sin(nx)/\sqrt{n}$은 $M_n = 1/\sqrt{n} \rightarrow 0$이라 함수 자체는 균등수렴하지만, 앞서 보았듯 도함수는 그렇지 못하다.
 
 ## 균등수렴의 필요
 
-예시들의 공통된 병폐는, 수렴의 빠르기가 점마다 제각각이어서 극한이 "고르게" 일어나지 않는다는 데 있다. 가령 [예시 2](#ex2){: data-relation="requires-review" }에서는 $x$가 $1$에 가까울수록 $x^n$이 $0$으로 가는 속도가 한없이 느려진다. 이를 막으려면 $N$을 모든 점에 대해 *동시에* 잡을 수 있어야 한다.
+예시들의 공통된 병폐는, 수렴의 빠르기가 점마다 제각각이어서 극한이 "고르게" 일어나지 않는다는 데 있다. 가령 [예시 2](#ex2){: data-relation="weak" reviewed="" }에서는 $x$가 $1$에 가까울수록 $x^n$이 $0$으로 가는 속도가 한없이 느려진다. 이를 막으려면 $N$을 모든 점에 대해 *동시에* 잡을 수 있어야 한다.
 
-지금까지의 반례 가운데 미분에 관한 [예시 4](#ex4){: data-relation="weak" reviewed="" }를 뺀 나머지는 $M_n = \sup_x \lvert f_n(x) - f(x)\rvert$이 $0$으로 가지 않는다는 한 가지 사실로 통합된다. 연속성이 깨진 [예시 2](#ex2){: data-relation="weak" reviewed="" }, 적분이 어긋난 [예시 3](#ex3){: data-relation="weak" reviewed="" }, boundedness를 잃은 [예시 6](#ex6){: data-relation="requires-review" }, 연속 극한인데도 봉우리가 커진 [예시 8](#ex8){: data-relation="requires-review" }이 모두 그러했다. 거꾸로, 만약 이 최대 격차가 $0$으로 간다면, 즉 어떤 $N$ 하나로 모든 점에서 $\lvert f_n(x) - f(x)\rvert < \varepsilon$을 동시에 보장할 수 있다면, 위의 병리들은 모두 사라진다. 이것이 점별수렴과 균등수렴을 가르는 결정적 차이이다.
+지금까지의 반례 가운데 미분에 관한 [예시 4](#ex4){: data-relation="weak" reviewed="" }를 뺀 나머지는 $M_n = \sup_x \lvert f_n(x) - f(x)\rvert$이 $0$으로 가지 않는다는 한 가지 사실로 통합된다. 연속성이 깨진 [예시 2](#ex2){: data-relation="weak" reviewed="" }, 적분이 어긋난 [예시 3](#ex3){: data-relation="weak" reviewed="" }, boundedness를 잃은 [예시 6](#ex6){: data-relation="required" reviewed="" }, 연속 극한인데도 봉우리가 커진 [예시 8](#ex8){: data-relation="required" reviewed="" }이 모두 그러했다. 거꾸로, 만약 이 최대 격차가 $0$으로 간다면, 즉 어떤 $N$ 하나로 모든 점에서 $\lvert f_n(x) - f(x)\rvert < \varepsilon$을 동시에 보장할 수 있다면, 위의 병리들은 모두 사라진다. 이것이 점별수렴과 균등수렴을 가르는 결정적 차이이다.
 
 이렇게 점에 무관하게 일정한 수렴을 요구하는 것이 *균등수렴*이며, [§균등수렴](/ko/math/analysis/uniform_convergence){: data-relation="forward" reviewed="" }에서 정의한다.
 

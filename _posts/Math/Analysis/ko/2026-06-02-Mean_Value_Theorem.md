@@ -15,7 +15,7 @@ weight: 13
 published: false
 ---
 
-[§미분](/ko/math/analysis/differentiation){: data-relation="required" reviewed="" }에서 미분을 엄밀하게 정초하고, [§연속함수의 성질](/ko/math/analysis/continuous_functions){: data-relation="requires-review" }에서 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-relation="required" reviewed="" }를 완비성으로부터 증명하였다. 이 둘을 결합하면 미적분학에서 도구로 받아들였던 평균값 정리와 테일러 정리를 빈틈없이 세울 수 있다.
+[§미분](/ko/math/analysis/differentiation){: data-relation="required" reviewed="" }에서 미분을 엄밀하게 정초하고, [§연속함수의 성질](/ko/math/analysis/continuous_functions){: data-relation="required" reviewed="" }에서 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-relation="required" reviewed="" }를 완비성으로부터 증명하였다. 이 둘을 결합하면 미적분학에서 도구로 받아들였던 평균값 정리와 테일러 정리를 빈틈없이 세울 수 있다.
 
 평균값 정리는 도함수라는 국소적 정보가 함수의 전역적 성질을 어떻게 통제하는지를 알려 주는 다리이다. 한 점에서의 미분은 그 점 근방에서의 일차 근사에 지나지 않지만, 두 끝점을 잇는 할선의 기울기가 어딘가의 접선 기울기로 정확히 실현된다는 사실은 국소와 전역을 잇는다. 도함수의 부호로 단조성을 읽고, 도함수의 크기로 함수값의 변화를 가두며, higher-order derivative로 함수를 다항식으로 근사하는 일이 모두 이 한 정리에서 갈라져 나온다.
 

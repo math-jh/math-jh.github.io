@@ -18,7 +18,7 @@ Previously, we defined the intersection number of two divisors in [§The Riemann
 
 ## Chow Groups
 
-In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1){: data-relation="requires-review" }, we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and we defined the divisor class group $\Cl(X)$ by collecting these up to linear equivalence. Similarly, the Chow group is obtained by collecting formal sums of $k$-dimensional closed irreducible subvarieties up to rational equivalence.
+In [§Divisors, ⁋Definition 1](/en/math/algebraic_varieties/divisors#def1){: data-relation="weak" reviewed="" }, we defined a (Weil) divisor as a formal sum of codimension 1 closed irreducible subvarieties, and we defined the divisor class group $\Cl(X)$ by collecting these up to linear equivalence. Similarly, the Chow group is obtained by collecting formal sums of $k$-dimensional closed irreducible subvarieties up to rational equivalence.
 
 ::: Definition 1
 An *algebraic $k$-cycle* of a variety $X$ is a formal sum
@@ -38,13 +38,13 @@ $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 where $v_V(f)$ is the order of the zero or pole of $f$ along $V$.
 :::
 
-Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3){: data-relation="requires-review" } with $Y$ as the ambient variety, and thus it is a natural generalization of that definition. A somewhat subtle point is the issue of normality mentioned in the introduction of that post: even if $X$ is a nice (say, normal) variety, an arbitrary subvariety of $X$ need not inherit this property, so normalization enters the above definition a little more essentially.
+Intuitively, this definition is nothing more than repeating [§Divisors, ⁋Definition 3](/en/math/algebraic_varieties/divisors#def3){: data-relation="weak" reviewed="" } with $Y$ as the ambient variety, and thus it is a natural generalization of that definition. A somewhat subtle point is the issue of normality mentioned in the introduction of that post: even if $X$ is a nice (say, normal) variety, an arbitrary subvariety of $X$ need not inherit this property, so normalization enters the above definition a little more essentially.
 
 That is, the order $v_V(f)$ is defined via the normalization $\nu: \widetilde{Y}\rightarrow Y$ of $Y$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 9](/en/math/commutative_algebra/regular_local_rings#def9){: data-relation="required" reviewed="" }) Namely,
 
 $$v_V(f) = \sum_{\nu(\widetilde{V})=V} [K(\widetilde{V}):K(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
 
-where the sum is over the $k$-dimensional irreducible components $\widetilde{V}$ of $\nu^{-1}(V)$. Since $\widetilde{Y}$ is normal, each $v_{\widetilde{V}}$ is the valuation given by the local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$ at the generic point of $\widetilde{V}$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="requires-review" }), and if $\mathcal{O}_{Y, \eta_V}$ itself is a discrete valuation ring then $v_V(f)$ coincides with that valuation. Keeping this in mind, we make the following definition.
+where the sum is over the $k$-dimensional irreducible components $\widetilde{V}$ of $\nu^{-1}(V)$. Since $\widetilde{Y}$ is normal, each $v_{\widetilde{V}}$ is the valuation given by the local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$ at the generic point of $\widetilde{V}$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="weak" reviewed="" }), and if $\mathcal{O}_{Y, \eta_V}$ itself is a discrete valuation ring then $v_V(f)$ coincides with that valuation. Keeping this in mind, we make the following definition.
 
 ::: Definition 3
 Two $k$-cycles $Z_1, Z_2$ are said to be *rationally equivalent* if there exist $(k+1)$-dimensional closed irreducible subvarieties $Y_j$ of $X$ and rational functions $f_j \in K(Y_j)^\times$ on them such that
@@ -104,7 +104,7 @@ Here $f^{-1}(V)$ should be read not as the set-theoretic inverse image but as th
 
 $$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{X, \xi_i}/\mathcal{I}_{\xi_i})\cdot W_i$$
 
-with multiplicities attached to its irreducible components $W_i$. Here $\xi_i$ is the generic point of $W_i$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="required" reviewed="" }), and $\length$ is the length of the local ring as a module over itself. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" reviewed="" }) Since $W_i$ is an irreducible component of the zero set of $\mathcal{I}$, the ideal $\mathcal{I}_{\xi_i}$ is primary for the maximal ideal of $\mathcal{O}_{X,\xi_i}$, and hence this length is finite. Without this convention, one cannot capture the case where $f^{-1}(V)$ is non-reduced. For example, for the $f$ in [Example 10](#ex10){: data-relation="requires-review" } and the point $p = [0:1]$, the set-theoretic inverse image $f^{-1}(p)$ consists of the single point $q = [0:1]$, but we must have $f^\ast[p] = d\cdot[q]$.
+with multiplicities attached to its irreducible components $W_i$. Here $\xi_i$ is the generic point of $W_i$ ([§Tangent Spaces and Smoothness, ⁋Definition 9](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="required" reviewed="" }), and $\length$ is the length of the local ring as a module over itself. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" reviewed="" }) Since $W_i$ is an irreducible component of the zero set of $\mathcal{I}$, the ideal $\mathcal{I}_{\xi_i}$ is primary for the maximal ideal of $\mathcal{O}_{X,\xi_i}$, and hence this length is finite. Without this convention, one cannot capture the case where $f^{-1}(V)$ is non-reduced. For example, for the $f$ in [Example 10](#ex10){: data-relation="forward" reviewed="" } and the point $p = [0:1]$, the set-theoretic inverse image $f^{-1}(p)$ consists of the single point $q = [0:1]$, but we must have $f^\ast[p] = d\cdot[q]$.
 
 ## Computing Chow Groups
 
@@ -136,7 +136,7 @@ $$A_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 hold. This agrees with the Borel–Moore homology of Euclidean space and projective space, showing that our defined Chow group actually reflects geometric intuition well. ([Proposition 12](#prop12){: data-relation="forward" reviewed="" })
 :::
 
-In general, for an $n$-dimensional variety $X$, we have $A_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9){: data-relation="required" reviewed="" }, and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9){: data-relation="requires-review" } corresponds to this. On the other hand, for $k < n$, the generator of $A_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
+In general, for an $n$-dimensional variety $X$, we have $A_n(X) \cong \mathbb{Z}$, and its generator is the class $[X]$ of $X$ itself. This is because the only $n$-dimensional closed irreducible subvariety of $X$ is $X$ itself by [§Dimension, ⁋Proposition 9](/en/math/algebraic_varieties/dimension#prop9){: data-relation="required" reviewed="" }, and there exists no $(n+1)$-dimensional subvariety to define rational equivalence. The case $k = n$ in the computation of [Example 9](#ex9){: data-relation="weak" reviewed="" } corresponds to this. On the other hand, for $k < n$, the generator of $A_k(\mathbb{P}^n)$ is the class $[\ell_k]$ of a $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$, and any $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$ satisfies $[V] = d[\ell_k]$ for some positive integer $d$. This integer $d$ is the number of intersection points of $V$ with a general $(n-k)$-dimensional linear subspace, and is called the *degree* of $V$.
 
 ::: Example 10
 To make the above example more concrete, define a degree $d$ morphism $f: \mathbb{P}^1 \rightarrow \mathbb{P}^1$ by
@@ -188,7 +188,7 @@ $$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 Here $H$ is the hyperplane class. The class $H^k$ represents a $k$-codimensional linear subspace.
 :::
 
-The intersection product of [Proposition 13](#prop13){: data-relation="requires-review" } will be introduced rigorously in the next post.
+The intersection product of [Proposition 13](#prop13){: data-relation="required" reviewed="" } will be introduced rigorously in the next post.
 
 ---
 

@@ -62,7 +62,7 @@ The *trivial line bundle* $X \times \mathbb{A}^1$ is the line bundle all of whos
 
 Thus the second condition in [Definition 1](#def1){: data-relation="required" reviewed="" } means that the line bundle $\mathcal{L}$ is isomorphic to the trivial line bundle when restricted to a suitable open set $U \subseteq X$.
 
-[Proposition 2](#prop2){: data-relation="requires-review" } is the familiar gluing condition, and by this condition a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-relation="required" reviewed="" }) Concretely, given a line bundle $\mathcal{L}$, we define its sheaf of sections by
+[Proposition 2](#prop2){: data-relation="weak" reviewed="" } is the familiar gluing condition, and by this condition a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-relation="weak" reviewed="" }) Concretely, given a line bundle $\mathcal{L}$, we define its sheaf of sections by
 
 $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}.$$
 
@@ -328,7 +328,7 @@ To verify this, let us look from the viewpoint of transition functions. The tran
 :::
 
 ::: Example 22
-For an embedding $i: C \hookrightarrow \mathbb{P}^n$, the pullback $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general $\mathcal{O}_C(1)$ is nontrivial; for instance, when $\mathbb{P}^1$ is embedded as a line in $\mathbb{P}^n$, the bundle $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ on $C = \mathbb{P}^1$ is nontrivial, as we saw in [Example 12](#ex12){: data-relation="requires-review" }. The name "hyperplane bundle" comes from the fact that it is obtained by pulling back to $C$ the line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ corresponding to a hyperplane $H$, i.e. a hypersurface of degree $1$ in $\mathbb{P}^n$.
+For an embedding $i: C \hookrightarrow \mathbb{P}^n$, the pullback $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general $\mathcal{O}_C(1)$ is nontrivial; for instance, when $\mathbb{P}^1$ is embedded as a line in $\mathbb{P}^n$, the bundle $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ on $C = \mathbb{P}^1$ is nontrivial, as we saw in [Example 12](#ex12){: data-relation="weak" reviewed="" }. The name "hyperplane bundle" comes from the fact that it is obtained by pulling back to $C$ the line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ corresponding to a hyperplane $H$, i.e. a hypersurface of degree $1$ in $\mathbb{P}^n$.
 :::
 
 ## Vector Bundle
@@ -348,7 +348,7 @@ A *rank $r$ vector bundle* $\mathcal{E}$ on a variety $X$ consists of the follow
 
 Comparing with the definition of a line bundle, the only differences are that the fiber is $\mathbb{A}^r$ instead of $\mathbb{A}^1$, and the transition functions take values in $\GL_r(\mathcal{O}_X(U_i \cap U_j))$ rather than in $\mathcal{O}_X(U_i \cap U_j)^\times = \GL_1(\mathcal{O}_X(U_i \cap U_j))$. Hence a line bundle is exactly a rank 1 vector bundle.
 
-The same cocycle condition as in [Proposition 2](#prop2){: data-relation="requires-review" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
+The same cocycle condition as in [Proposition 2](#prop2){: data-relation="weak" reviewed="" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
 
 ::: Example 24
 The simplest example is the rank $r$ *trivial vector bundle* $\mathcal{O}_X^{\oplus r}$ obtained from the line bundle $\mathcal{O}_X$. This is constructed by taking the direct sum of the line bundle $\mathcal{O}_X$ with itself $r$ times.

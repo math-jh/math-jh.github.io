@@ -105,7 +105,7 @@ $C \cap D$가 유한집합임은 $C$와 $D$가 공통 성분을 갖지 않는다
 
 $$i_p(C, D) = \dim_\mathbb{K} \mathcal{O}_{\mathbb{A}^2, p}/(f, g)$$
 
-이다. ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1){: data-relation="requires-review" }) $V(F, G)$가 유한집합이므로 $f, g$는 affine ring $\mathbb{K}[\x, \y]$에서 0차원 ideal $(f, g)$을 생성하며, 중국인의 나머지 정리에 의하여
+이다. ([§교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1){: data-relation="required" reviewed="" }) $V(F, G)$가 유한집합이므로 $f, g$는 affine ring $\mathbb{K}[\x, \y]$에서 0차원 ideal $(f, g)$을 생성하며, 중국인의 나머지 정리에 의하여
 
 $$\mathbb{K}[\x, \y]/(f, g) \cong \prod_{p \in V(f,g)} \mathcal{O}_{\mathbb{A}^2, p}/(f, g)$$
 
@@ -135,7 +135,7 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 $$A^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H]/(H^{n+1})$$
 
-이다. ([§교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="requires-review" }) 여기서 $H$는 hyperplane class이며, codimension이 $k$이며 degree가 $d$인 variety는 class $dH^k$를 갖는다. 특히 degree $d$인 hypersurface는 $dH$에 대응하므로, $n$개의 hypersurface $H_1, \ldots, H_n$의 교차곱은
+이다. ([§교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10){: data-relation="required" reviewed="" }) 여기서 $H$는 hyperplane class이며, codimension이 $k$이며 degree가 $d$인 variety는 class $dH^k$를 갖는다. 특히 degree $d$인 hypersurface는 $dH$에 대응하므로, $n$개의 hypersurface $H_1, \ldots, H_n$의 교차곱은
 
 $$[H_1] \cdot [H_2] \cdots [H_n] = (d_1 H)(d_2 H) \cdots (d_n H) = d_1 d_2 \cdots d_n \cdot H^n$$
 
@@ -153,7 +153,7 @@ $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 $\mathbb{P}^3$ 안의 두 이차곡면(quadric surface) $Q_1, Q_2$를 생각하자. 각각 degree 2이므로 proper intersection을 가질 때 교차 $Q_1 \cap Q_2$는 차원 1, degree 4인 곡선이다. 구체적으로, $Q_1 = Z(\x_0\x_3 - \x_1\x_2)$와 $Q_2 = Z(\x_0\x_2 - \x_1\x_3)$를 잡으면 교차는 네 개의 직선(line)으로 분해되며, 이들의 degree 합은 여전히 4이다.
 :::
 
-명제 6의 증명은 Chow ring을 통한 intersection theory의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product){: data-relation="requires-review" }을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14){: data-relation="weak" reviewed="" }의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
+명제 6의 증명은 Chow ring을 통한 intersection theory의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product){: data-relation="weak" reviewed="" }을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14){: data-relation="weak" reviewed="" }의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
 
 ## 응용
 

@@ -26,7 +26,7 @@ is a maximal ideal. We then proved that the tangent space can be identified with
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast.$$
 
-([\[Differentiable Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1){: data-relation="weak" reviewed="" }) This construction is usually not emphasized in differential geometry, but it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what a function on an algebraic variety is ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5){: data-relation="requires-review" }), and we also know that the set of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
+([\[Differentiable Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1){: data-relation="weak" reviewed="" }) This construction is usually not emphasized in differential geometry, but it is extremely helpful for generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what a function on an algebraic variety is ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5){: data-relation="weak" reviewed="" }), and we also know that the set of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
@@ -87,14 +87,14 @@ By the rank-nullity theorem, $\dim T_x X = n - \rank(J_x)$.
 
 ## Smooth Points and Singular Points
 
-In differential geometry, the dimension of the tangent space at any point always equals the dimension of the manifold. However, this is because the definition of a manifold is rather restrictive; in algebraic geometry, even an affine variety defined by a single polynomial may fail to be a manifold (in the classical picture). ([Example 6](#ex6){: data-relation="requires-review" }, [Example 7](#ex7){: data-relation="requires-review" }) Nevertheless, the dimension of the tangent space is not completely unrelated to the dimension of the variety.
+In differential geometry, the dimension of the tangent space at any point always equals the dimension of the manifold. However, this is because the definition of a manifold is rather restrictive; in algebraic geometry, even an affine variety defined by a single polynomial may fail to be a manifold (in the classical picture). ([Example 6](#ex6){: data-relation="forward" reviewed="" }, [Example 7](#ex7){: data-relation="forward" reviewed="" }) Nevertheless, the dimension of the tangent space is not completely unrelated to the dimension of the variety.
 
 ::: Proposition 4
 For any point $x$ of an irreducible variety $X$, we have $\dim T_x X \ge \dim X$.
 :::
 
 ::: Proof
-We prove only the affine case. Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ be irreducible with $\dim X = d$. Consider the local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$ at the point $x$. Since $X$ is irreducible, $\mathbb{K}[X]$ is a finitely generated $\mathbb{K}$-algebra and a domain, and since $\mathfrak{m}_x$ is a maximal ideal, $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$. Hence the dimension formula of [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" reviewed="" } gives $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$, and since the codimension of a prime ideal is defined as the dimension of its localization ([\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2){: data-relation="requires-review" }), we obtain
+We prove only the affine case. Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ be irreducible with $\dim X = d$. Consider the local ring $\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$ at the point $x$. Since $X$ is irreducible, $\mathbb{K}[X]$ is a finitely generated $\mathbb{K}$-algebra and a domain, and since $\mathfrak{m}_x$ is a maximal ideal, $\dim \mathbb{K}[X]/\mathfrak{m}_x = 0$. Hence the dimension formula of [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4){: data-relation="required" reviewed="" } gives $\codim \mathfrak{m}_x = \dim \mathbb{K}[X]$, and since the codimension of a prime ideal is defined as the dimension of its localization ([\[Commutative Algebra\] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2){: data-relation="required" reviewed="" }), we obtain
 
 $$\dim \mathcal{O}_{X,x} = \codim \mathfrak{m}_x = \dim \mathbb{K}[X] = \dim X = d.$$
 
@@ -186,7 +186,7 @@ A variety $X$ is called *smooth* (or *nonsingular*) if every point is a smooth p
 :::
 
 ::: Example 12
-The varieties in [Example 6](#ex6){: data-relation="requires-review" } are all smooth, and all the varieties in [Example 7](#ex7){: data-relation="requires-review" } are singular.
+The varieties in [Example 6](#ex6){: data-relation="required" reviewed="" } are all smooth, and all the varieties in [Example 7](#ex7){: data-relation="required" reviewed="" } are singular.
 :::
 
 ## Tangent Cones

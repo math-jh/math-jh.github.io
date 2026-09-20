@@ -11,7 +11,6 @@ sidebar:
 date: 2026-05-07
 weight: 18
 
-
 ---
 
 [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-relation="weak" reviewed="" }의 Serre vanishing theorem은 projective variety 위의 ample line bundle $\mathcal{L}$과 coherent sheaf $\mathcal{F}$에 대해, 충분히 큰 $m$에 대하여 $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)이 성립함을 보장한다. 그러나 이 결과는 단지 asymptotic한 성질에 불과하며, 구체적으로 어떤 $m$에서부터 vanishing이 시작되는지에 대해서는 아무 정보도 주지 않는다.
@@ -20,7 +19,7 @@ weight: 18
 
 ## 고다이라 소멸정리
 
-우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5){: data-relation="requires-review" }) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
+우리가 다룰 기본적인 설정은 다음과 같다. $X$는 $n$차원 smooth projective variety이고, $\mathcal{L}$은 $X$ 위의 ample line bundle, $\omega_X = \det \Omega_X^1 = \Omega_X^n$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5){: data-relation="required" reviewed="" }) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
 ::: 명제 1 (Kodaira vanishing)
 $\operatorname{char}\mathbb{K} = 0$일 때, $n$차원 smooth projective variety $X$, ample line bundle $\mathcal{L}$이 주어졌다 하자. 그럼 모든 $p > 0$에 대하여
@@ -59,17 +58,17 @@ $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 Kodaira vanishing이 가장 단순한 nontrivial한 예시를 제공하는 것은 projective space $X = \mathbb{P}^n$에서이다. 
 
 ::: 예시 3
-우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="requires-review" }의 Euler exact sequence로부터
+우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7){: data-relation="required" reviewed="" }의 Euler exact sequence로부터
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
-임을 확인하였고, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="requires-review" }에서 $\mathbb{P}^n$ 위의 임의의 line bundle은 $\mathcal{O}(d)$ 꼴임을 확인하였다. 이 중 $d>0$인 $\mathcal{O}(d)$들이 ample line bundle이다. 따라서, Kodaira vanishing은 다음의 vanishing
+임을 확인하였고, [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-relation="required" reviewed="" }에서 $\mathbb{P}^n$ 위의 임의의 line bundle은 $\mathcal{O}(d)$ 꼴임을 확인하였다. 이 중 $d>0$인 $\mathcal{O}(d)$들이 ample line bundle이다. 따라서, Kodaira vanishing은 다음의 vanishing
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
 이 모든 $d>0$과 모든 $p>0$에 대해 성립함을 주장한다. 
 
-우리는 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="requires-review" }를 통해 모든 line bundle의 cohomology를 알고 있으므로 이를 직접 검증할 수 있다. 이에 따르면
+우리는 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1){: data-relation="required" reviewed="" }를 통해 모든 line bundle의 cohomology를 알고 있으므로 이를 직접 검증할 수 있다. 이에 따르면
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_k & q = 0, k \geq 0 \\
@@ -128,7 +127,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 위 정의에서 최소값을 취하는 집합이 공집합이 아닌 것은 임의의 smooth projective variety에 대해 $P_m(X) = O(m^{\dim X})$가 성립하기 때문이며, 이로부터 $\kappa(X)$가 잘 정의되고 동시에 $\kappa(X) \leq \dim X$가 언제나 성립함을 안다. 따라서 surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$이다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
-우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="requires-review" }에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
+우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-relation="required" reviewed="" }에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
 우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $\dd{\varphi_\mathcal{L}}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 

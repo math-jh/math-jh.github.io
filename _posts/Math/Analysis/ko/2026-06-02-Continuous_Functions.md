@@ -65,7 +65,7 @@ $$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 $f : X \rightarrow Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여 ($x$에 무관하게) 모든 $x, x'$에 대해 $d_X(x, x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
 :::
 
-[§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1){: data-relation="requires-review" }의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
+[§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1){: data-relation="required" reviewed="" }의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
 
 $$\forall \varepsilon  \forall a  \exists \delta  \forall x : \bigl(d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
 
@@ -116,7 +116,7 @@ $$\sup_{x \in (0,1)} x = 1, \qquad \inf_{x \in (0,1)} x = 0$$
 
 $$h(x) = \begin{cases} x, & 0 \leq x < 1, \\ 0, & x = 1 \end{cases}$$
 
-로 두면 $h$의 상한은 $1$이지만 $x = 1$에서의 불연속 때문에 어떤 점에서도 값 $1$을 취하지 않아 최댓값이 없다. 두 가정이 함께 있어야만 [따름정리 2](#cor2){: data-relation="requires-review" }가 성립함이 드러난다.
+로 두면 $h$의 상한은 $1$이지만 $x = 1$에서의 불연속 때문에 어떤 점에서도 값 $1$을 취하지 않아 최댓값이 없다. 두 가정이 함께 있어야만 [따름정리 2](#cor2){: data-relation="required" reviewed="" }가 성립함이 드러난다.
 :::
 
 다음으로 정의역이 컴팩트가 아닐 때 연속이지만 균등연속이 아닌 함수가 어떻게 나타나는지를 본다.
@@ -130,7 +130,7 @@ $$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrig
 
 $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
-이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아, 따라서 컴팩트가 아니어서 [정리 4](#thm4){: data-relation="requires-review" }의 가정이 충족되지 않는 것과 정확히 맞물린다.
+이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아, 따라서 컴팩트가 아니어서 [정리 4](#thm4){: data-relation="required" reviewed="" }의 가정이 충족되지 않는 것과 정확히 맞물린다.
 
 같은 현상은 $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \rightarrow 0$이지만
 
@@ -139,7 +139,7 @@ $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac1n\Bigr)^2 - n^2 = 2 + \frac{1
 이어서 $\varepsilon = 2$가 좌절된다. 여기서는 정의역이 bounded가 아니어서 compactness가 깨진다.
 :::
 
-반대로 정의역을 컴팩트하게 제한하면 [정리 4](#thm4){: data-relation="requires-review" }가 균등연속을 보장한다. 같은 $x^2$이라도 닫힌구간 $[0, R]$ 위에서는 $x, x' \in [0, R]$에 대해
+반대로 정의역을 컴팩트하게 제한하면 [정리 4](#thm4){: data-relation="required" reviewed="" }가 균등연속을 보장한다. 같은 $x^2$이라도 닫힌구간 $[0, R]$ 위에서는 $x, x' \in [0, R]$에 대해
 
 $$\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \leq 2R \cdot \lvert x - x' \rvert$$
 

@@ -62,7 +62,7 @@ Transition functions $\{g_{ij}\}$는 다음의 *cocycle condition*을 만족한�
 
 따라서 [정의 1](#def1){: data-relation="required" reviewed="" }의 둘째 조건은 line bundle $\mathcal{L}$이 적당한 열린집합 $U \subseteq X$로 제한했을 때 trivial line bundle과 isomorphic한 것을 의미한다.
 
-[명제 2](#prop2){: data-relation="required" reviewed="" }는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-relation="requires-review" }) 구체적으로, 우리는 line bundle $\mathcal{L}$이 주어졌을 때, 이 line bundle의 section sheaf를
+[명제 2](#prop2){: data-relation="required" reviewed="" }는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-relation="weak" reviewed="" }) 구체적으로, 우리는 line bundle $\mathcal{L}$이 주어졌을 때, 이 line bundle의 section sheaf를
 
 $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
@@ -331,7 +331,7 @@ $\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \o
 :::
 
 ::: 예시 22
-Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $\mathbb{P}^1$이 $\mathbb{P}^n$에 직선으로 embed된 경우 $C = \mathbb{P}^1$에 대해 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12){: data-relation="requires-review" }에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $\mathbb{P}^1$이 $\mathbb{P}^n$에 직선으로 embed된 경우 $C = \mathbb{P}^1$에 대해 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12){: data-relation="required" reviewed="" }에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
 :::
 
 ## Vector Bundle

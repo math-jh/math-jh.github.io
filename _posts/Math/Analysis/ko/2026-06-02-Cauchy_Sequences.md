@@ -65,7 +65,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 ## 완비성의 동치 형태
 
 ::: 참고 5
-[정리 4](#thm4){: data-relation="requires-review" }가 보인 것, 곧 임의의 Cauchy sequence가 수렴한다는 성질은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4){: data-relation="requires-review" }이다.
+[정리 4](#thm4){: data-relation="required" reviewed="" }가 보인 것, 곧 임의의 Cauchy sequence가 수렴한다는 성질은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4){: data-relation="required" reviewed="" }이다.
 :::
 
 이 동치는 $\mathbb{Q}$ 위에서는 깨진다. 예컨대 $\sqrt{2}$의 십진 근삿값으로 이루어진 유리수열 $1, 1.4, 1.41, 1.414, \ldots$은 항들끼리 한없이 가까워지므로 Cauchy이지만, 그 극한 $\sqrt{2}$가 유리수가 아니므로 $\mathbb{Q}$ 안에서는 수렴하지 않는다. 완비성이란 바로 이런 "수렴해야 마땅한" Cauchy 수열이 실제로 극한을 갖도록 빈틈을 메운 것이다.
@@ -120,7 +120,7 @@ $$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \rightarrow \infty
 이므로, $\varepsilon = 1$에 대해서조차 Cauchy 조건이 깨진다. 따라서 $(\sqrt n)$은 Cauchy가 아니며, 실제로 $\infty$로 발산한다. Cauchy 조건은 "임의로 멀리 떨어진 두 첨자"를 함께 통제해야 하며, 인접 항만의 거리로 환원되지 않는다.
 :::
 
-[예시 8](#ex8){: data-relation="required" reviewed="" }은 [정의 1](#def1){: data-relation="required" reviewed="" }에서 "모든 $m, n \geq N$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 [예시 7](#ex7){: data-relation="requires-review" }과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
+[예시 8](#ex8){: data-relation="required" reviewed="" }은 [정의 1](#def1){: data-relation="required" reviewed="" }에서 "모든 $m, n \geq N$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 [예시 7](#ex7){: data-relation="required" reviewed="" }과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
 
 ## Contractive sequence
 
@@ -139,7 +139,7 @@ $$\lvert a_{n+1} - a_n\rvert \leq c \lvert a_n - a_{n-1}\rvert$$
 
 $$\lvert a_{n+1} - a_n\rvert \leq c^{n-1} \lvert a_2 - a_1\rvert$$
 
-이다. 그러면 $m > n$일 때 [예시 7](#ex7){: data-relation="requires-review" }과 같은 계산으로
+이다. 그러면 $m > n$일 때 [예시 7](#ex7){: data-relation="required" reviewed="" }과 같은 계산으로
 
 $$\begin{aligned}
 \lvert a_m - a_n\rvert &\leq \sum_{k=n}^{m-1} \lvert a_{k+1} - a_k\rvert \\

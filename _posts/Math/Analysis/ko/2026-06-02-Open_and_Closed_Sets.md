@@ -76,11 +76,11 @@ $$X \setminus \bigcap_\alpha F_\alpha = \bigcup_\alpha (X \setminus F_\alpha), \
 을 쓰면, 임의 교집합의 여집합은 열린집합들의 합집합이라 [명제 2](#prop2){: data-relation="required" reviewed="" }의 (2)로 열려 있고, 유한 합집합의 여집합은 열린집합들의 유한 교집합이라 [명제 2](#prop2){: data-relation="required" reviewed="" }의 (3)으로 열려 있다. 따라서 각각의 본래 집합이 닫혀 있다. (1)은 $\emptyset$과 $X$가 서로의 여집합이며 둘 다 열려 있음에서 따른다.
 :::
 
-[명제 2](#prop2){: data-relation="requires-review" }에서 무한 교집합이 열림을 보장하지 못했던 것처럼, 여기서도 무한 합집합은 닫혀 있지 않을 수 있다. 닫힌구간들의 합집합 $\bigcup_{n\geq 1} [1/n, 1] = (0, 1]$은 $\mathbb{R}$에서 닫힌집합이 아니다. 점열 $x_n = 1/n$이 이 집합 안에 있으면서 극한 $0$이 밖에 있기 때문이며, 이는 [명제 4](#prop4){: data-relation="required" reviewed="" }의 점열 판정으로도 곧장 확인된다.
+[명제 2](#prop2){: data-relation="required" reviewed="" }에서 무한 교집합이 열림을 보장하지 못했던 것처럼, 여기서도 무한 합집합은 닫혀 있지 않을 수 있다. 닫힌구간들의 합집합 $\bigcup_{n\geq 1} [1/n, 1] = (0, 1]$은 $\mathbb{R}$에서 닫힌집합이 아니다. 점열 $x_n = 1/n$이 이 집합 안에 있으면서 극한 $0$이 밖에 있기 때문이며, 이는 [명제 4](#prop4){: data-relation="required" reviewed="" }의 점열 판정으로도 곧장 확인된다.
 
 ## 예시와 계산
 
-추상적 정의에 살을 붙이기 위해 실직선과 평면에서 구체적인 집합들을 분류한다. 핵심은 [정의 1](#def1){: data-relation="requires-review" }로 돌아가 "각 점에서 양의 반지름을 가진 공이 통째로 들어가는가"를 직접 확인하는 데 있다.
+추상적 정의에 살을 붙이기 위해 실직선과 평면에서 구체적인 집합들을 분류한다. 핵심은 [정의 1](#def1){: data-relation="required" reviewed="" }로 돌아가 "각 점에서 양의 반지름을 가진 공이 통째로 들어가는가"를 직접 확인하는 데 있다.
 
 한 점이 열림을 막는 유일한 방식은 그 점이 집합의 가장자리에 놓이는 것임을 먼저 짚어 둔다. 가장 간단한 가장자리의 예로, 한 점만 제거한 직선 $\mathbb{R} \setminus \{0\}$은
 

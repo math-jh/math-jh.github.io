@@ -59,11 +59,11 @@ $f$가 연속이고 $V \subseteq Y$가 열려 있다 하자. $a \in f^{-1}(V)$�
 
 [명제 3](#prop3){: data-relation="required" reviewed="" }은 거리를 전혀 언급하지 않으므로, 연속의 개념이 본질적으로 위상적임을 드러낸다. 이것이 [\[위상수학\] §연속함수](/ko/math/topology/continuous_functions){: data-relation="forward" reviewed="" }에서 일반 위상공간 사이의 연속을 열린집합의 preimage로 *정의*하는 근거이다.
 
-세 특징화($\varepsilon$-$\delta$, 점열, 열린집합)는 상황에 따라 골라 쓰인다. 점별 평가가 자연스러운 곳에서는 $\varepsilon$-$\delta$를, 수렴하는 점열이 주어진 곳에서는 [명제 2](#prop2){: data-relation="requires-review" }를, 그리고 공간 전체의 위상적 성질을 다룰 때는 [명제 3](#prop3){: data-relation="requires-review" }을 택하는 것이 보통이다. 아래에서 이 세 관점을 구체적인 함수에 적용해 보고, 연속함수가 합·곱·합성에 대해 닫혀 있음을 확인한다.
+세 특징화($\varepsilon$-$\delta$, 점열, 열린집합)는 상황에 따라 골라 쓰인다. 점별 평가가 자연스러운 곳에서는 $\varepsilon$-$\delta$를, 수렴하는 점열이 주어진 곳에서는 [명제 2](#prop2){: data-relation="required" reviewed="" }를, 그리고 공간 전체의 위상적 성질을 다룰 때는 [명제 3](#prop3){: data-relation="required" reviewed="" }을 택하는 것이 보통이다. 아래에서 이 세 관점을 구체적인 함수에 적용해 보고, 연속함수가 합·곱·합성에 대해 닫혀 있음을 확인한다.
 
 ## 함수의 극한
 
-[정의 1](#def1){: data-relation="requires-review" }은 점 $a$에서의 *함숫값* $f(a)$와 그 근방에서의 값을 한꺼번에 비교한다. 그러나 많은 경우 우리는 $f$가 $a$에서 정의되어 있는지와 무관하게 $x$를 $a$에 가까이 보낼 때 $f(x)$가 어디로 다가가는지만을 묻는다. 이를 위해 함수의 극한을 따로 정의한다. 여기서 $a$는 정의역 $X$의 *집적점<sub>limit point</sub>*, 즉 임의의 $\delta > 0$에 대해 $0 < d_X(x, a) < \delta$인 $x \in X$가 존재하는 점이라 가정한다.
+[정의 1](#def1){: data-relation="required" reviewed="" }은 점 $a$에서의 *함숫값* $f(a)$와 그 근방에서의 값을 한꺼번에 비교한다. 그러나 많은 경우 우리는 $f$가 $a$에서 정의되어 있는지와 무관하게 $x$를 $a$에 가까이 보낼 때 $f(x)$가 어디로 다가가는지만을 묻는다. 이를 위해 함수의 극한을 따로 정의한다. 여기서 $a$는 정의역 $X$의 *집적점<sub>limit point</sub>*, 즉 임의의 $\delta > 0$에 대해 $0 < d_X(x, a) < \delta$인 $x \in X$가 존재하는 점이라 가정한다.
 
 ::: 정의 4
 함수 $f : X \rightarrow Y$에 대하여 $x \rightarrow a$일 때 $f(x)$의 *극한<sub>limit</sub>*이 $L \in Y$이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여
@@ -140,7 +140,7 @@ $$\lvert f(x) - f(y)\rvert = \lvert d(x, p) - d(y, p)\rvert \leq d(x, y)$$
 를 얻는다. 따라서 임의의 $\varepsilon > 0$에 대해 $\delta = \varepsilon$으로 두면 $d(x, y) < \delta$일 때 $\lvert f(x) - f(y)\rvert < \varepsilon$이므로 $f$는 연속이다. 이렇게 $\delta$를 점에 무관하게 잡을 수 있는 함수를 *균등연속<sub>uniformly continuous</sub>*이라 하며, 어떤 상수 $C > 0$에 대해 $\lvert f(x) - f(y)\rvert \leq Cd(x, y)$가 성립하는 특수한 경우를 *Lipschitz function*라 한다. 위의 거리함수는 $C = 1$로 잡을 수 있는 경우이다.
 :::
 
-연속이 점열을 보존한다는 [명제 2](#prop2){: data-relation="requires-review" }는 극한을 계산하는 실용적 도구이기도 하다. $g$가 연속이고 $x_n \rightarrow a$이면
+연속이 점열을 보존한다는 [명제 2](#prop2){: data-relation="required" reviewed="" }는 극한을 계산하는 실용적 도구이기도 하다. $g$가 연속이고 $x_n \rightarrow a$이면
 
 $$\lim_{n \rightarrow \infty} g(x_n) = g \left(\lim_{n \rightarrow \infty} x_n\right) = g(a)$$
 

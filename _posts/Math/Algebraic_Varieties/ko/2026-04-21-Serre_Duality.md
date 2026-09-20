@@ -133,7 +133,7 @@ $$R^i f_\ast \omega_{X/Y} \cong (R^{n-i} f_\ast \mathcal{O}_X)^\vee$$
 
 앞서 Serre duality를 일반화하는 과정들을 되짚어보자. 우리는 먼저 $\mathbb{P}^n$ 위에서 trace map과 cup product를 사용하여 Serre duality를 증명하였고 ([명제 2](#prop2){: data-relation="weak" reviewed="" }), 이를 finite morphism을 통해 임의의 smooth projective variety로 확장하였다. 이후 coherent sheaf로의 확장은 locally free resolution을 통한 귀납으로 처리하였고, singular variety로의 확장은 dualizing sheaf의 도입으로 처리하였다. [명제 4](#prop4){: data-relation="weak" reviewed="" }는 target을 point에서 임의의 variety로 바꾼 일반화였다.
 
-Serre duality의 가장 현대적인 해석은 Grothendieck duality로, 이는 derived category의 언어에서 서술된다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-relation="requires-review" }) 이 일반화는 그 언어에 비해 motivation은 상당히 설득력 있는 것으로, 가령 우리는 sheaf cohomology를 정의할 때만 해도 injective resolution을 생각해야 했고, 위에서 Serre duality를 임의의 coherent sheaf로 일반화할 때도 locally free resolution을 생각해야 했으므로 derived category가 모든 일이 실제로 일어나는 곳임을 안다. 특히 핵심적인 내용은 Serre duality에서 perfect pairing이, 사실은 구체적인 isomorphism
+Serre duality의 가장 현대적인 해석은 Grothendieck duality로, 이는 derived category의 언어에서 서술된다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-relation="weak" reviewed="" }) 이 일반화는 그 언어에 비해 motivation은 상당히 설득력 있는 것으로, 가령 우리는 sheaf cohomology를 정의할 때만 해도 injective resolution을 생각해야 했고, 위에서 Serre duality를 임의의 coherent sheaf로 일반화할 때도 locally free resolution을 생각해야 했으므로 derived category가 모든 일이 실제로 일어나는 곳임을 안다. 특히 핵심적인 내용은 Serre duality에서 perfect pairing이, 사실은 구체적인 isomorphism
 
 $$H^n(X, \omega_X) \cong \mathbb{K}$$
 
@@ -154,7 +154,7 @@ Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
-이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-relation="weak" reviewed="" }), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
+이 성립한다. 여기서 $R\mathcal{H}om$은 derived Hom이며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-relation="required" reviewed="" }), $\mathcal{G}$는 $Y$ 위의 coherent sheaf의 bounded complex이다. 
 :::
 
 직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $\mathcal{F}$와 $f^! \mathcal{G}$ 사이의 Hom을 $X$에서 계산한 후 $Y$로 내려보내는 것과, $\mathcal{F}$를 먼저 $Y$로 내려보낸 후 $\mathcal{G}$와의 Hom을 계산하는 것이 같다는 뜻이다. 

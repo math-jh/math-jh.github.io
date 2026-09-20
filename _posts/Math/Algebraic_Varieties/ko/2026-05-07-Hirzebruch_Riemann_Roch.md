@@ -31,7 +31,7 @@ $$\chi(X,\mathcal{F})=\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}
 여기서 $\operatorname{ch}(\mathcal{F})$는 $\mathcal{F}$의 Chern character, $\operatorname{td}(T_X)$는 tangent bundle $T_X$의 Todd class이며, $\int_X$는 Chow group $A^{\dim X}(X)$ (또는 cohomology $H^{2\dim X}(X,\mathbb{Q})$) 위의 degree map을 의미한다.
 :::
 
-정리 [2](#thm2){: data-relation="required" reviewed="" }에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
+[정리 2](#thm2){: data-relation="required" reviewed="" }에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\deg\bigl[\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr]_n$$
 
@@ -119,11 +119,11 @@ $$f_\ast\bigl(\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr)=\o
 여기서 $f_\ast:A^\bullet(X)\otimes\mathbb{Q}\rightarrow A^\bullet(Y)\otimes\mathbb{Q}$는 Chow group에서의 push-forward, $Rf_\ast\mathcal{F}$는 $\mathcal{F}$의 derived direct image이며, 이의 Chern character는 $\operatorname{ch}(Rf_\ast\mathcal{F})=\sum_i(-1)^i\operatorname{ch}(R^i f_\ast\mathcal{F})$로 정의된다.
 :::
 
-정리 [5](#thm5){: data-relation="required" reviewed="" }에서 $Y=\Spec(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
+[정리 5](#thm5){: data-relation="required" reviewed="" }에서 $Y=\Spec(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\sum_i(-1)^i\dim H^i(X,\mathcal{F})=\chi(X,\mathcal{F})$$
 
-이 되어 정리 [2](#thm2){: data-relation="requires-review" }의 HRR 공식이 특수한 경우로 얻어진다. 따라서 Grothendieck-Riemann-Roch 정리는 HRR 정리의 자연스러운 일반화이다.
+이 되어 [정리 2](#thm2){: data-relation="weak" reviewed="" }의 HRR 공식이 특수한 경우로 얻어진다. 따라서 Grothendieck-Riemann-Roch 정리는 HRR 정리의 자연스러운 일반화이다.
 
 ## 증명 개요
 
@@ -198,7 +198,7 @@ $$\chi(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(d))=\frac{d^2}{2}+\frac{3d}{2}+1=
 를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $\binom{n+d}{n}$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces){: data-relation="weak" reviewed="" }에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $d\geq 0$일 때 $i>0$에 대하여 $H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$이므로 $\chi$가 $h^0$와 일치하여 $\binom{n+d}{n}$이 됨을 알 수 있다. $\square$
 :::
 
-예시 [6](#ex6){: data-relation="required" reviewed="" }에서 얻어진 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$는 $d$에 대한 $n$차 polynomial이며, 이를 $\mathbb{P}^n$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $\mathcal{F}$에 대하여 $d\gg 0$이면 Serre vanishing에 의해 $H^i(\mathbb{P}^n,\mathcal{F}(d))=0$ ($i>0$)이 되므로
+[예시 6](#ex6){: data-relation="required" reviewed="" }에서 얻어진 $\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$는 $d$에 대한 $n$차 polynomial이며, 이를 $\mathbb{P}^n$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $\mathcal{F}$에 대하여 $d\gg 0$이면 Serre vanishing에 의해 $H^i(\mathbb{P}^n,\mathcal{F}(d))=0$ ($i>0$)이 되므로
 
 $$P_{\mathcal{F}}(d)=\chi(\mathbb{P}^n,\mathcal{F}(d))$$
 

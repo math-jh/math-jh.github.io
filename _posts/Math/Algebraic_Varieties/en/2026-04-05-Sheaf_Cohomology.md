@@ -26,7 +26,7 @@ However, if global sections were our only concern, there would be no need to thi
 
 $$\Gamma(X, -): \QCoh(X) \rightarrow \Vect_\mathbb{K}; \qquad \mathcal{F} \mapsto \mathcal{F}(X).$$
 
-When we defined quasi-coherent sheaves in [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1){: data-relation="requires-review" }, our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we considered a larger category that adds kernels and cokernels; from this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
+When we defined quasi-coherent sheaves in [§Canonical Line Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1){: data-relation="weak" reviewed="" }, our motivation was that the category $\Bun(X)$ of vector bundles is not an abelian category, so we considered a larger category that adds kernels and cokernels; from this perspective, it is not surprising that $\QCoh(X)$ becomes an abelian category. [^1]
 
 If $\Gamma(X,-)$ did not lose any information, this functor would have to be exact. That is, given a short exact sequence of (quasi-coherent) sheaves
 
@@ -54,7 +54,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0,$$
 
 whereas $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$, so surjectivity on the right cannot hold.
 
-The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9){: data-relation="requires-review" }). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
+The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9){: data-relation="weak" reviewed="" }). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots.$$
 
@@ -86,7 +86,7 @@ Here $\delta$ is the *connecting homomorphism*.
 
 ## Čech Cohomology
 
-[Definition 1](#def1){: data-relation="requires-review" } is a rigorous definition of sheaf cohomology, but explicitly constructing an injective resolution is generally very difficult. Therefore, in actual computations, we use the Čech approach, which defines cohomology from a different perspective.
+[Definition 1](#def1){: data-relation="weak" reviewed="" } is a rigorous definition of sheaf cohomology, but explicitly constructing an injective resolution is generally very difficult. Therefore, in actual computations, we use the Čech approach, which defines cohomology from a different perspective.
 
 Intuitively, Čech cohomology $\check{H}^i(X, \mathcal{F})$ is a tool that measures the failure of gluing local information. That is, $\check{H}^0(X, \mathcal{F})$ is exactly the global section space, and $\check{H}^1(X, \mathcal{F})$ tells us how much the process of patching local sections together to obtain a global section fails. To make this precise, we begin with the following.
 
@@ -154,7 +154,7 @@ $$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}
 
 To explain the above argument more simply, the meaning is that we take increasingly finer open covers and amalgamate all the additional cohomology data that appears, defining this to be $\check{H}(X, \mathcal{F})$.
 
-In general, it is not guaranteed that the $\check{H}^p(X, \mathcal{F})$ of [Definition 7](#def7){: data-relation="requires-review" } is isomorphic to the $H^p(X, \mathcal{F})$ of [Definition 1](#def1){: data-relation="required" reviewed="" }, but fortunately, for most sheaves that arise in algebraic geometry, the two coincide. Showing this requires some technical machinery.
+In general, it is not guaranteed that the $\check{H}^p(X, \mathcal{F})$ of [Definition 7](#def7){: data-relation="required" reviewed="" } is isomorphic to the $H^p(X, \mathcal{F})$ of [Definition 1](#def1){: data-relation="required" reviewed="" }, but fortunately, for most sheaves that arise in algebraic geometry, the two coincide. Showing this requires some technical machinery.
 
 ::: Definition 8
 For a sheaf $\mathcal{F}$ on a variety $X$, we define the following.
@@ -171,7 +171,7 @@ An injective sheaf $\mathcal{F}$ is flasque.
 :::
 
 ::: Proof
-By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([\[Homological Algebra\] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1){: data-relation="requires-review" }) We now show that for any open sets $V \subseteq U \subseteq X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
+By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([\[Homological Algebra\] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1){: data-relation="required" reviewed="" }) We now show that for any open sets $V \subseteq U \subseteq X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
 
 This map is not a sheaf morphism but a morphism of abelian groups, and since our tools are sheaf morphisms, we must recast this condition in terms of sheaf morphisms. To do this, we introduce the open embeddings
 
@@ -274,7 +274,7 @@ is a *closed* embedding in $X\times X$, then we can show that this condition hol
 
 ## Godement Resolution
 
-In [Definition 1](#def1){: data-relation="weak" reviewed="" } we defined sheaf cohomology via injective resolution, but since injective resolutions are generally difficult to compute directly, we examined one solution: using the result of [Theorem 11](#thm11){: data-relation="requires-review" } that Čech cohomology and sheaf cohomology are isomorphic.
+In [Definition 1](#def1){: data-relation="weak" reviewed="" } we defined sheaf cohomology via injective resolution, but since injective resolutions are generally difficult to compute directly, we examined one solution: using the result of [Theorem 11](#thm11){: data-relation="weak" reviewed="" } that Čech cohomology and sheaf cohomology are isomorphic.
 
 The Godement resolution, which we examine in this section, also starts from the same problem. That is, computing sheaf cohomology in general is a very complicated task, so [Definition 1](#def1){: data-relation="weak" reviewed="" } is conceptually clean but somewhat lacking in practicality. We now define a concrete resolution. It is not an injective resolution, but it is a flasque resolution, and for our purposes this is sufficient.
 
@@ -398,13 +398,13 @@ Together with [Proposition 16](#prop16){: data-relation="required" reviewed="" }
 
 One of the most powerful applications of sheaf cohomology is the computation of cohomology via spectral sequences. In this section we conclude the post with concrete calculations. The propositions introduced now hold in a general topological setting, but since we mainly have in mind applications to varieties and quasi-coherent sheaves, we place them in this category.
 
-Fix a continuous map $f : X \rightarrow Y$ and a sheaf $\mathcal{F}$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11){: data-relation="required" reviewed="" } and [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-relation="required" reviewed="" } we know that the direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$ is left exact. Hence, just as in [\[Homological Algebra\] §Derived Functors](/en/math/homological_algebra/derived_functors){: data-relation="requires-review" }, we can define the right derived functors of $f_\ast$ by
+Fix a continuous map $f : X \rightarrow Y$ and a sheaf $\mathcal{F}$. Then from [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11){: data-relation="required" reviewed="" } and [\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-relation="required" reviewed="" } we know that the direct image functor $f_\ast: \Sh(X)\rightarrow \Sh(Y)$ is left exact. Hence, just as in [\[Homological Algebra\] §Derived Functors](/en/math/homological_algebra/derived_functors){: data-relation="required" reviewed="" }, we can define the right derived functors of $f_\ast$ by
 
 $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 
 where $\mathcal{I}^\bullet$ is an injective resolution of $\mathcal{F}$. By definition, $R^0 f_\ast \mathcal{F}=f_\ast \mathcal{F}$ when $q=0$, and if $\mathcal{F}$ is injective then $\mathcal{F}$ itself forms an injective resolution, so $R^qf_\ast \mathcal{F}=0$ for all $q>0$.
 
-Now consider the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$. Intuitively, what we would like to do is to choose an injective resolution for each $\mathcal{G}^p(\mathcal{F})$, and then use [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="requires-review" } to define the horizontal differentials from the differentials $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$ of the Godement resolution.
+Now consider the Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$ of $\mathcal{F}$. Intuitively, what we would like to do is to choose an injective resolution for each $\mathcal{G}^p(\mathcal{F})$, and then use [\[Homological Algebra\] §Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-relation="required" reviewed="" } to define the horizontal differentials from the differentials $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$ of the Godement resolution.
 
 ::: Definition 18 (Cartan-Eilenberg Resolution)
 In an abelian category, a *Cartan-Eilenberg resolution* of a cochain complex $K^\bullet$ is the data consisting of a double complex $I^{p,q}$ and an augmentation $K^\bullet \rightarrow I^{\bullet,0}$ satisfying the following conditions.
@@ -589,4 +589,4 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 ---
 
-[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves){: data-relation="requires-review" }, the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.
+[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves){: data-relation="weak" reviewed="" }, the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.

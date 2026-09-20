@@ -37,13 +37,13 @@ $$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 으로 정의한다. 여기서 $v_V(f)$는 $f$가 $V$를 따라 갖는 zero 또는 pole의 order이다.
 :::
 
-직관적으로 이 정의는 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3){: data-relation="requires-review" }을, $Y$를 ambient variety 삼아 반복한 것에 불과하며 따라서 해당 정의의 자연스러운 일반화이다. 다소 미묘한 부분은 해당 글의 도입에서 언급한 normality로, $X$가 좋은 (가령 normal) variety라 하더라도 $X$의 임의의 subvariety는 그러한 성질을 물려받지 않을 수 있으므로 위 정의에서 normalization이 조금 더 필수적으로 들어간다는 것이다.
+직관적으로 이 정의는 [§인자, ⁋정의 3](/ko/math/algebraic_varieties/divisors#def3){: data-relation="weak" reviewed="" }을, $Y$를 ambient variety 삼아 반복한 것에 불과하며 따라서 해당 정의의 자연스러운 일반화이다. 다소 미묘한 부분은 해당 글의 도입에서 언급한 normality로, $X$가 좋은 (가령 normal) variety라 하더라도 $X$의 임의의 subvariety는 그러한 성질을 물려받지 않을 수 있으므로 위 정의에서 normalization이 조금 더 필수적으로 들어간다는 것이다.
 
 즉 위에서 order $v_V(f)$는 $Y$의 normalization $\nu: \widetilde{Y}\rightarrow Y$를 통해 정의한다. ([\[가환대수학\] §정칙국소환, ⁋정의 9](/ko/math/commutative_algebra/regular_local_rings#def9){: data-relation="required" reviewed="" }) 곧
 
 $$v_V(f) = \sum_{\nu(\widetilde{V})=V} [K(\widetilde{V}):K(V)]\cdot v_{\widetilde{V}}(\nu^\ast f)$$
 
-이며, 이 합은 $\nu^{-1}(V)$의 $k$-dimensional irreducible component $\widetilde{V}$들에 대한 것이다. $\widetilde{Y}$는 normal이므로 각 $v_{\widetilde{V}}$는 $\widetilde{V}$의 generic point에서의 local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$가 주는 valuation이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="requires-review" }), $\mathcal{O}_{Y, \eta_V}$ 자체가 discrete valuation ring인 경우 $v_V(f)$는 그 valuation과 일치한다. 이를 염두에 두고 다음을 정의한다. 
+이며, 이 합은 $\nu^{-1}(V)$의 $k$-dimensional irreducible component $\widetilde{V}$들에 대한 것이다. $\widetilde{Y}$는 normal이므로 각 $v_{\widetilde{V}}$는 $\widetilde{V}$의 generic point에서의 local ring $\mathcal{O}_{\widetilde{Y}, \eta_{\widetilde{V}}}$가 주는 valuation이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="weak" reviewed="" }), $\mathcal{O}_{Y, \eta_V}$ 자체가 discrete valuation ring인 경우 $v_V(f)$는 그 valuation과 일치한다. 이를 염두에 두고 다음을 정의한다. 
 
 ::: 정의 3
 두 $k$-cycle $Z_1, Z_2$가 *rationally equivalent<sub>유리 동치</sub>*라는 것은, $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y_j$와 그 위의 rational function $f_j \in K(Y_j)^\times$들이 존재하여
@@ -103,7 +103,7 @@ Flat morphism $f: X \rightarrow Y$에 대해 pullback $f^\ast: A^k(Y) \rightarro
 
 $$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{X, \xi_i}/\mathcal{I}_{\xi_i})\cdot W_i$$
 
-이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="requires-review" }), $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" reviewed="" }) $W_i$가 $\mathcal{I}$의 zero set의 irreducible component이므로 $\mathcal{I}_{\xi_i}$는 $\mathcal{O}_{X,\xi_i}$의 maximal ideal에 대한 primary ideal이고, 따라서 이 length는 유한하다. 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10){: data-relation="requires-review" }의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
+이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-relation="weak" reviewed="" }), $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-relation="required" reviewed="" }) $W_i$가 $\mathcal{I}$의 zero set의 irreducible component이므로 $\mathcal{I}_{\xi_i}$는 $\mathcal{O}_{X,\xi_i}$의 maximal ideal에 대한 primary ideal이고, 따라서 이 length는 유한하다. 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10){: data-relation="forward" reviewed="" }의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
 
 ## 저우 군의 계산
 

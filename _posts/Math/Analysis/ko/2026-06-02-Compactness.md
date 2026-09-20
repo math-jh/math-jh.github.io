@@ -135,7 +135,7 @@ $$C = \{x\} \cup \{x_m \mid m \in \mathbb{N}\}$$
 :::
 
 ::: 증명
-하이네–보렐 정리에 따라 $C$가 닫혀 있고 bounded임을 보이면 충분하다. 수렴하는 수열은 bounded이고 ([§수열의 수렴, ⁋명제 3](/ko/math/analysis/convergence_of_sequences#prop3){: data-relation="requires-review" }) 거기에 limit point 하나를 더해도 bounded이므로, $C$는 bounded이다. 닫혀 있음을 보이기 위해 $C$의 점열 $y_k \rightarrow y$를 잡자. 두 경우로 나눈다.
+하이네–보렐 정리에 따라 $C$가 닫혀 있고 bounded임을 보이면 충분하다. 수렴하는 수열은 bounded이고 ([§수열의 수렴, ⁋명제 3](/ko/math/analysis/convergence_of_sequences#prop3){: data-relation="required" reviewed="" }) 거기에 limit point 하나를 더해도 bounded이므로, $C$는 bounded이다. 닫혀 있음을 보이기 위해 $C$의 점열 $y_k \rightarrow y$를 잡자. 두 경우로 나눈다.
 
 $$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}, \qquad \text{(ii) 그렇지 않은 경우}.$$
 

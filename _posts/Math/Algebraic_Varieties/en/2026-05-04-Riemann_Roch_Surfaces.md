@@ -20,7 +20,7 @@ Revisiting the Riemann–Roch formula for a curve $C$ ([§The Riemann–Roch The
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
-the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§The Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2){: data-relation="requires-review" } guarantees that it consists of only two terms. However, when we generalize to surfaces the dimension of the base space increases by one, so additional terms appear on the left-hand side, and correspondingly the right-hand side acquires extra terms as well.
+the left-hand side is essentially the Euler characteristic of $\mathcal{O}_C(D)$, and [§The Riemann–Roch Theorem for Curves, ⁋Lemma 2](/en/math/algebraic_varieties/riemann_roch_theorem#lem2){: data-relation="weak" reviewed="" } guarantees that it consists of only two terms. However, when we generalize to surfaces the dimension of the base space increases by one, so additional terms appear on the left-hand side, and correspondingly the right-hand side acquires extra terms as well.
 
 Intuitively, the term $\deg D$ on the right-hand side may be thought of as a linear term, but in generalizing to surfaces we must also consider additional *quadratic terms* such as $D\cdot D$, $D\cdot K_S$, and so on. These encode how two divisors on a surface intersect: whereas divisors on a curve, i.e. points, generally do not meet inside the curve, divisors on a surface, i.e. curves, generally intersect in finitely many points.
 
@@ -165,7 +165,7 @@ Fix the hyperplane class $H$ in $\mathbb{P}^2$; we know
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-([§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-relation="requires-review" }, [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="requires-review" }). Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
+([§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-relation="required" reviewed="" }, [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="required" reviewed="" }). Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 

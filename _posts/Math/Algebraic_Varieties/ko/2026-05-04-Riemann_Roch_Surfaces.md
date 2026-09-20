@@ -19,7 +19,7 @@ weight: 17
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
-를 살펴보면, 이 식의 좌변은 본질적으로 $\mathcal{O}_C(D)$의 Euler characteristic이며 [§곡선에서의 리만-로흐 정리, ⁋보조정리 2](/ko/math/algebraic_varieties/riemann_roch_theorem#lem2){: data-relation="requires-review" }가 이 부분이 두 개의 항만으로 나온다는 것을 보장한다. 그러나 이제 곡면에서 이를 일반화하기 위해서는 base space의 차원이 하나 커지므로 추가적인 항이 등장할 것이며, 이에 대응하여 우변의 식 또한 추가적인 항이 등장하게 될 것이다.
+를 살펴보면, 이 식의 좌변은 본질적으로 $\mathcal{O}_C(D)$의 Euler characteristic이며 [§곡선에서의 리만-로흐 정리, ⁋보조정리 2](/ko/math/algebraic_varieties/riemann_roch_theorem#lem2){: data-relation="weak" reviewed="" }가 이 부분이 두 개의 항만으로 나온다는 것을 보장한다. 그러나 이제 곡면에서 이를 일반화하기 위해서는 base space의 차원이 하나 커지므로 추가적인 항이 등장할 것이며, 이에 대응하여 우변의 식 또한 추가적인 항이 등장하게 될 것이다.
 
 직관적으로, 위 식의 우변에서 등장하는 $\deg D$는 일종의 선형인 항이라 생각할 수 있으나, 이렇게 곡면에서의 일반화를 하는 과정에서 우리는 추가적인 <em-ko>이차항들</em-ko> $D\cdot D$, $D\cdot K_S$ 등을 고려하게 된다. 이들은 surface 위의 두 divisor가 얼마나 교차하는지를 담고 있는 양으로, curve case에서의 divisor들, 즉 점들은 곡선 안에서 일반적으로 만나지 않지만, 곡면에서의 divisor들, 즉 곡선들은 이 곡면 안에서 일반적으로 유한 개의 점에서 만나기 때문에 생겨난다. 
 
@@ -166,7 +166,7 @@ Curve의 경우와 마찬가지로, 만약 $D$가 충분히 "양의" 방향이�
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-임을 안다.  ([§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle){: data-relation="requires-review" }, [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="requires-review" }) $\mathbb{P}^2$에서 임의의 두 직선은 일반적으로 한 점에서 만나므로, $H$의 self-intersection number는 1이며 따라서 임의의 divisor $D = dH$에 대해
+임을 안다. ([§표준선다발, §§$\mathbb{P}^n$의 Canonical Bundle](/ko/math/algebraic_varieties/canonical_bundle#mathbbpn의-canonical-bundle){: data-relation="required" reviewed="" }, [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="required" reviewed="" }) $\mathbb{P}^2$에서 임의의 두 직선은 일반적으로 한 점에서 만나므로, $H$의 self-intersection number는 1이며 따라서 임의의 divisor $D = dH$에 대해
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 

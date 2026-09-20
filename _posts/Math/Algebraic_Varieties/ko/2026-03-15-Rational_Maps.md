@@ -42,7 +42,7 @@ Affine variety $X$에 대하여, $K(X)=\Frac\mathbb{K}[X]$이 성립한다.
 Variety $X$와 공집합이 아닌 열린집합 $U$에 대하여, $K(U) = K(X)$가 성립한다.
 :::
 ::: 증명
-우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: K(X)\rightarrow K(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 inclusion이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="requires-review" })
+우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: K(X)\rightarrow K(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 inclusion이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-relation="required" reviewed="" })
 
 그런데 임의의 $f \in K(U)$에 대하여, $f$는 $U$의 어떤 nonempty open subset $V$에서의 regular function이며, 그럼 이 $V$는 $X$의 열린집합이기도 하므로 이 pair $(V,f)$는 $K(X)$에 속한다. 
 :::

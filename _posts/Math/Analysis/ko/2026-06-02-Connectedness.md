@@ -57,7 +57,7 @@ U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \emptyset.
 만약 어떤 $\alpha$에서 $V \cap E_\alpha \neq \emptyset$이라면 위 세 조건이 $E_\alpha$의 분할을 이루어 $E_\alpha$가 connected라는 데 모순이다. 따라서 모든 $\alpha$에서 $V \cap E_\alpha = \emptyset$, 곧 $E_\alpha \subseteq U$이고, 합집합을 취하면 $E \subseteq U$여서 $V \cap E = \emptyset$이다. 이는 $V \cap E \neq \emptyset$이라는 분할 조건에 모순이다. 그러므로 $E$는 connected이다.
 :::
 
-[명제 3](#prop3){: data-relation="requires-review" }은 연결성을 점에 붙여 전파시키는 도구이다. 한 점 $x$를 포함하는 모든 연결집합의 합집합은, [명제 3](#prop3){: data-relation="required" reviewed="" }에 의해 다시 connected이며 그러한 연결집합 가운데 가장 큰 것이 된다. 이를 그 점의 성분이라 부른다.
+[명제 3](#prop3){: data-relation="required" reviewed="" }은 연결성을 점에 붙여 전파시키는 도구이다. 한 점 $x$를 포함하는 모든 연결집합의 합집합은, [명제 3](#prop3){: data-relation="required" reviewed="" }에 의해 다시 connected이며 그러한 연결집합 가운데 가장 큰 것이 된다. 이를 그 점의 성분이라 부른다.
 
 ::: 정의 4
 거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 connected 부분집합의 합집합을 $x$의 *connected component<sub>연결성분</sub>*라 한다.

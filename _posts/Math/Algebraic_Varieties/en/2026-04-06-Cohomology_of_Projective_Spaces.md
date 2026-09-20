@@ -200,7 +200,7 @@ For a coherent sheaf $\mathcal{G}$ on $\mathbb{P}^N$, $\mathcal{G}(n)$ is global
 Let $S = \mathbb{K}[\x_0, \ldots, \x_N]$ and let $M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$ be a graded $S$-module. On each standard affine open set $D_+(\x_j)$, we have $\Gamma(D_+(\x_j), \mathcal{G}) = M_{(\x_j)}$, which is a finitely generated $S_{(\x_j)}$-module. If we write generators of these as $\overline{m}_1, \ldots, \overline{m}_{r_j} \in M_{(\x_j)}$, then we can write $\overline{m}_k = m_k / \x_j^{d_k}$ for homogeneous elements $m_k \in M$. Setting $d_0 = \max_{j,k} d_k$ and multiplying each generator by $\x_j^{d_0 - d_k}$, we obtain homogeneous elements $m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$. These are elements of $\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$, and since multiplying by $\x_j^{d_0}$ gives an isomorphism between $\mathcal{G}$ and $\mathcal{G}(d_0)$ on $D_+(\x_j)$, the global sections obtained in this way generate the stalks of $\mathcal{G}(d_0)$ on $D_+(\x_j)$. As the $D_+(\x_j)$ cover $\mathbb{P}^N$, we conclude that $\mathcal{G}(d_0)$ is globally generated. On the other hand, for $k \geq 0$ the monomials $\x_0^k, \ldots, \x_N^k$ generate the stalks of $\mathcal{O}(k)$, so $\mathcal{O}(k)$ is also globally generated, and taking the tensor product of the two evaluation maps shows that $\mathcal{G}(n) = \mathcal{G}(d_0) \otimes \mathcal{O}(n - d_0)$ is globally generated for all $n \geq d_0$.
 :::
 
-The usefulness of [Lemma 5](#lem5){: data-relation="requires-review" } is that it allows us to write an arbitrary coherent sheaf as a quotient of a direct sum of line bundles, and from this we can extend the computation of [Proposition 1](#prop1){: data-relation="requires-review" } to arbitrary coherent sheaves.
+The usefulness of [Lemma 5](#lem5){: data-relation="weak" reviewed="" } is that it allows us to write an arbitrary coherent sheaf as a quotient of a direct sum of line bundles, and from this we can extend the computation of [Proposition 1](#prop1){: data-relation="weak" reviewed="" } to arbitrary coherent sheaves.
 
 ::: Lemma 6
 For a coherent sheaf $\mathcal{G}$ on $\mathbb{P}^N$, for all sufficiently large $n$,
@@ -267,7 +267,7 @@ $$\pi \colon X \rightarrow \mathbb{P}^n, \qquad p \mapsto [\y_0(p) : \cdots : \y
 
 and on each $D_+(\y_j)$ the coordinate ring of $\pi^{-1}(D_+(\y_j))$ is $S(X)_{(\y_j)}$, which is a finitely generated module over $\mathbb{K}[D_+(\y_j)]$, so $\pi$ is finite in the sense of [§Dimension, ⁋Definition 11](/en/math/algebraic_varieties/dimension#def11){: data-relation="required" reviewed="" }, and surjective by lying over for integral extensions. Geometrically, this is the projection with center the linear subspace $V(\y_0, \ldots, \y_n)$ disjoint from $X$.
 
-Since a finite morphism has affine preimages of affine open sets, the pull-back $\{\pi^{-1}(U_j)\}$ of the standard affine cover $\{U_j\}$ of $\mathbb{P}^n$ is an affine open cover of $X$, and its finite intersections are also affine. Then, just as in the proof of [Proposition 7](#prop7){: data-relation="requires-review" }, the two Čech complexes agree termwise as
+Since a finite morphism has affine preimages of affine open sets, the pull-back $\{\pi^{-1}(U_j)\}$ of the standard affine cover $\{U_j\}$ of $\mathbb{P}^n$ is an affine open cover of $X$, and its finite intersections are also affine. Then, just as in the proof of [Proposition 7](#prop7){: data-relation="weak" reviewed="" }, the two Čech complexes agree termwise as
 
 $$\check{C}^p(\{\pi^{-1}(U_j)\}, \mathcal{F}) = \prod_{j_0 < \cdots < j_p} \mathcal{F}(\pi^{-1}(U_{j_0} \cap \cdots \cap U_{j_p})) = \check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}),$$
 
@@ -310,7 +310,7 @@ Let $X$ be a projective variety, $\mathcal{L}$ a very ample line bundle, and $\m
 ::: Proof
 Set $n = \dim X$ and argue by induction on the dimension of $X$. If $\dim X = 0$, then $X$ is a point and a coherent sheaf $\mathcal{F}$ is a finite-dimensional vector space, so all cohomology except $H^0$ vanishes automatically. Now assume $\dim X \geq 1$.
 
-The key is to use the restriction exact sequence for an effective divisor $D$ defined by a global section $s \in H^0(X, \mathcal{L})$. Since $\mathcal{L}$ is very ample, $D$ is a hyperplane section of $X$ embedded in projective space, and hence by choosing a general $s$, [§Linear Systems, ⁋Proposition 11](/en/math/algebraic_varieties/linear_systems#prop11){: data-relation="requires-review" } implies that $D$ is smooth away from the singular points of $X$. We then obtain the following short exact sequence.
+The key is to use the restriction exact sequence for an effective divisor $D$ defined by a global section $s \in H^0(X, \mathcal{L})$. Since $\mathcal{L}$ is very ample, $D$ is a hyperplane section of $X$ embedded in projective space, and hence by choosing a general $s$, [§Linear Systems, ⁋Proposition 11](/en/math/algebraic_varieties/linear_systems#prop11){: data-relation="required" reviewed="" } implies that $D$ is smooth away from the singular points of $X$. We then obtain the following short exact sequence.
 
 $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes \mathcal{L}^{\otimes k} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D \rightarrow 0$$
 
@@ -363,7 +363,7 @@ Let us compute the regularity of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}
 
 ## Properties of Very Ample and Ample
 
-The above [Proposition 7](#prop7){: data-relation="weak" reviewed="" } and [Proposition 10](#prop10){: data-relation="requires-review" } are representative results on the properties of ample line bundles. We conclude this post by examining additional properties of ample and very ample line bundles.
+The above [Proposition 7](#prop7){: data-relation="weak" reviewed="" } and [Proposition 10](#prop10){: data-relation="weak" reviewed="" } are representative results on the properties of ample line bundles. We conclude this post by examining additional properties of ample and very ample line bundles.
 
 ::: Proposition 12
 If $\mathcal{L}$ is very ample and $\mathcal{M}$ is a globally generated line bundle, then $\mathcal{L} \otimes \mathcal{M}$ is very ample.
