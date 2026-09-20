@@ -17,7 +17,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 For now, we investigate the properties of groups. Therefore, a group homomorphism between groups will simply be called a homomorphism.
 
-From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-lid="8yaqr" data-relation="required" reviewed="" }, a (group) isomorphism can also be defined, and from this definition and [\[Set Theory\] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5){: data-lid="831ij" data-relation="required" reviewed="" }, it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
+From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-lid="8yaqr" data-relation="required" }, a (group) isomorphism can also be defined, and from this definition and [\[Set Theory\] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5){: data-lid="831ij" data-relation="required" }, it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
 
 ::: Proposition 1
 A magma homomorphism $f:A\rightarrow A'$ is an isomorphism if and only if $f$ is bijective. 
@@ -53,18 +53,18 @@ $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 is a subgroup of $G$.
 :::
 ::: Proof
-If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="qjsvp" data-relation="required" reviewed="" }, a monoid homomorphism between groups preserves inverses, so
+If $x,y\in \Eq(f,g)$, then by the argument immediately following [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="qjsvp" data-relation="required" }, a monoid homomorphism between groups preserves inverses, so
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
-and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="wchiy" data-relation="required" reviewed="" } we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="fyyhe" data-relation="required" reviewed="" }, we obtain the desired result. 
+and thus $xy^{-1}\in\Eq(f,g)$. Also, after [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="wchiy" data-relation="required" } we observed that a monoid homomorphism between groups preserves the identity element, and since the identity element of $H$ is unique, $\Eq(f,g)$ is nonempty. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="fyyhe" data-relation="required" }, we obtain the desired result. 
 :::
 
 For $\Eq(f,g)$ defined in this way, the inclusion $i:\Eq(f,g)\rightarrow G$ has the following property.
 
 > If a group homomorphism $j:G' \rightarrow G$ satisfies $f\circ j=g\circ j$, then there exists a unique homomorphism $j': G' \rightarrow \Eq(f,g)$ such that $i\circ j'=j$.
 
-This is because by definition the image of $j$ is contained in $\Eq(f,g)$. Thus any pair of parallel morphisms in $\Grp$ has an equalizer. ([\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7){: data-lid="so9fn" data-relation="weak" reviewed="" }) In fact, any pair of parallel morphisms in $\Grp$ also has a coequalizer, but to define this we must first define normal subgroups and quotient groups.
+This is because by definition the image of $j$ is contained in $\Eq(f,g)$. Thus any pair of parallel morphisms in $\Grp$ has an equalizer. ([\[Category Theory\] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7){: data-lid="so9fn" data-relation="weak" }) In fact, any pair of parallel morphisms in $\Grp$ also has a coequalizer, but to define this we must first define normal subgroups and quotient groups.
 
 ## Kernel and Image of a Homomorphism
 
@@ -106,7 +106,7 @@ On the other hand, when any magma homomorphism $f:A\rightarrow A'$ is given, we 
 For any homomorphism $f:G\rightarrow G'$, $\im f$ is a subgroup of $G'$.
 :::
 ::: Proof
-We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="akd5c" data-relation="required" reviewed="" } it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then from
+We already know that $\im f$ is a submagma of $G'$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15){: data-lid="akd5c" data-relation="required" } it suffices to show that $\im f$ is closed under taking inverses. Let $y\in\im f$ and suppose $x\in G$ satisfies $f(x)=y$. Then from
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 

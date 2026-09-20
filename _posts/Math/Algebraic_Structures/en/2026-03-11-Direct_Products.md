@@ -17,13 +17,13 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Products of Groups
 
-We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-lid="lmrho" data-relation="required" reviewed="" }) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
+We know how to define products in an arbitrary category $\mathcal{A}$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-lid="lmrho" data-relation="required" }) The following lemma shows that arbitrary products in the category $\Grp$ always exist.
 
 ::: Lemma 1
-$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories){: data-lid="3532e" data-relation="weak" reviewed="" })
+$\Grp$ has arbitrary products and, in particular, is a cartesian monoidal category. ([\[Category Theory\] §Monoidal Categories](/en/math/category_theory/monoidal_categories){: data-lid="3532e" data-relation="weak" })
 :::
 ::: Proof
-First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-lid="cezet" data-relation="required" reviewed="" }. For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
+First, in $\Set$, the product set $\prod_{i\in I} G_i$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1){: data-lid="cezet" data-relation="required" }. For notational convenience, an element of $\prod_{i\in I}G_i$, $f:I\rightarrow \bigcup G_i$, is written as a tuple $(a_i)_{i\in I}$.
 
 Now, for any two elements of the set $\prod_{i\in I}G_i$, $x=(x_i)_{i\in I},y=(y_i)_{i\in I}$, define
 
@@ -76,7 +76,7 @@ so $\im f\subseteq\prod\im f_i$ holds. Conversely, if $y\in\prod\im f_i$ is give
 Let a family $(G_i)_{i\in I}$ of groups be given. If for each $i\in I$ the $H_i$ are normal subgroups of $G_i$, then $\prod H_i$ is also a normal subgroup of $\prod G_i$, and its quotient group is equal to $\prod (G_i/H_i)$.
 :::
 ::: Proof
-It suffices to apply [Corollary 3](#cor3){: data-lid="wz81q" data-relation="required" reviewed="" } to the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$.
+It suffices to apply [Corollary 3](#cor3){: data-lid="wz81q" data-relation="required" } to the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$.
 
 {% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
@@ -93,7 +93,7 @@ Of course, even if the $H_i$ are subgroups of the $G_i$ that are not normal, $\p
 Let a family $(G_i)_{i\in I}$ of groups be given. If for each $i\in I$ we have $H_i\leq G_i$, then $\prod H_i$ is a subgroup of $\prod G_i$.
 :::
 ::: Proof
-Applying [Corollary 3](#cor3){: data-lid="j7fr4" data-relation="required" reviewed="" } to the inclusion homomorphisms $\iota_i:H_i\hookrightarrow G_i$, $\iota$ is injective, and since $\prod H_i$ is precisely the image of $\iota$, it is a subgroup of $\prod G_i$.
+Applying [Corollary 3](#cor3){: data-lid="j7fr4" data-relation="required" } to the inclusion homomorphisms $\iota_i:H_i\hookrightarrow G_i$, $\iota$ is injective, and since $\prod H_i$ is precisely the image of $\iota$, it is a subgroup of $\prod G_i$.
 :::
 
 ## Partial Products
