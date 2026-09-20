@@ -68,11 +68,11 @@ $$\codim(V \cap W) = \codim V + \codim W$$
 holds.
 :::
 
-In particular [Definition 1](#def1){: data-relation="weak" reviewed="" } is the special case where $\codim (V\cap W)=n$. Now, if the above equality holds for every irreducible component of $V\cap W$, we can use it to define
+In particular [Definition 1](#def1){: data-lid="9bycy" data-relation="weak" reviewed="" } is the special case where $\codim (V\cap W)=n$. Now, if the above equality holds for every irreducible component of $V\cap W$, we can use it to define
 
 $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T].$$
 
-Here $i_T(V, W)$ is the intersection multiplicity along the component $T$, the natural extension of the pointwise multiplicity of [Definition 1](#def1){: data-relation="required" reviewed="" } to a component $T$. If $T$ is a point $p$ then $i_T(V, W) = i_p(V, W)$, and in general it is the value measuring how the two varieties meet at a general point of $T$, which can be defined rigorously as the intersection multiplicity at the generic point. The following proposition lifts the properties of intersection multiplicity to the intersection product.
+Here $i_T(V, W)$ is the intersection multiplicity along the component $T$, the natural extension of the pointwise multiplicity of [Definition 1](#def1){: data-lid="p0f1o" data-relation="required" reviewed="" } to a component $T$. If $T$ is a point $p$ then $i_T(V, W) = i_p(V, W)$, and in general it is the value measuring how the two varieties meet at a general point of $T$, which can be defined rigorously as the intersection multiplicity at the generic point. The following proposition lifts the properties of intersection multiplicity to the intersection product.
 
 ::: Proposition 6
 On a smooth irreducible quasi-projective variety $X$, if two cycles $Z, W$ of codimension $k$, $l$ respectively intersect properly, the above formula well-defines the *intersection product*

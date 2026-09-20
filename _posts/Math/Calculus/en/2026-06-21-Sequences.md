@@ -76,12 +76,12 @@ Similarly, we collect in the next example several results that are frequently us
 ::: Example 6
 The following are basic examples of sequence limits.
 
-1. For $p > 0$, we have $1/n^p \rightarrow 0$. If $p \geq 1$, then $n^p \geq n$ for $n \geq 1$, so $0 < 1/n^p \leq 1/n \rightarrow 0$, and [Proposition 4](#prop4){: data-relation="required" } applies. If $0 < p < 1$, choose $N > \epsilon^{-1/p}$ for any $\epsilon > 0$; then for $n > N$ we have $n^p > 1/\epsilon$, i.e., $1/n^p < \epsilon$, which follows directly from [Definition 1](#def1){: data-lid="6m9ua" data-relation="required" }.
+1. For $p > 0$, we have $1/n^p \rightarrow 0$. If $p \geq 1$, then $n^p \geq n$ for $n \geq 1$, so $0 < 1/n^p \leq 1/n \rightarrow 0$, and [Proposition 4](#prop4){: data-lid="69e6c" data-relation="required" } applies. If $0 < p < 1$, choose $N > \epsilon^{-1/p}$ for any $\epsilon > 0$; then for $n > N$ we have $n^p > 1/\epsilon$, i.e., $1/n^p < \epsilon$, which follows directly from [Definition 1](#def1){: data-lid="6m9ua" data-relation="required" }.
 2. More generally, the ratio of two polynomials of the same degree is determined by the ratio of their leading coefficients.
 
    $$\frac{a_k n^k + \cdots}{b_k n^k + \cdots}$$
 
-   Dividing numerator and denominator by $n^k$ yields expressions consisting of finitely many terms of the form $1/n^j$ plus a constant. Since $1/n^j \rightarrow 0$, the numerator and denominator each converge to their leading coefficients. If the denominator has larger degree than the numerator, then by [Proposition 4](#prop4){: data-relation="required" } and part 1 above this ratio converges to $0$; similarly, if the numerator has larger degree than the denominator, the ratio diverges.
+   Dividing numerator and denominator by $n^k$ yields expressions consisting of finitely many terms of the form $1/n^j$ plus a constant. Since $1/n^j \rightarrow 0$, the numerator and denominator each converge to their leading coefficients. If the denominator has larger degree than the numerator, then by [Proposition 4](#prop4){: data-lid="85hro" data-relation="required" } and part 1 above this ratio converges to $0$; similarly, if the numerator has larger degree than the denominator, the ratio diverges.
 3. If $\lvert r\rvert < 1$, then $r^n \rightarrow 0$. To verify this, the case $r=0$ is trivial since the sequence is identically $0$, so assume $r \neq 0$ and write $\lvert r\rvert = 1/(1+h)$ for some suitable $h>0$. Then by the binomial theorem $(1+h)^n \geq 1 + nh$, and therefore
 
     $$\lvert r\rvert^n = \frac{1}{(1+h)^n} \leq \frac{1}{1+nh} \rightarrow 0$$
