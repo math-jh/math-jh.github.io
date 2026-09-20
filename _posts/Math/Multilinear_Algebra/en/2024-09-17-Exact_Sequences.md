@@ -163,8 +163,8 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
 
 the following conditions are all equivalent.
 
-1. There exists a linear retraction $r:L \rightarrow M$ of $u$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
-2. There exists a linear section $s:N \rightarrow L$ of $v$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
+1. There exists a linear retraction $r:L \rightarrow M$ of $u$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="1ffj4" })
+2. There exists a linear section $s:N \rightarrow L$ of $v$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="eq9gr" })
 3. There exists an isomorphism $\alpha: L \rightarrow M\oplus N$ making the following diagram commute:
 
     {% diagram Math/Multilinear_Algebra/Exact_Sequences-2.svg width="21.10em" alt="splitting_sequence" %}

@@ -122,7 +122,7 @@ $$\sum_{(j,j')\in J\times J'}(X\otimes X')_{(k,k'),(j,j')}(Y\otimes Y')_{(j,j'),
 which equals $(XY)_{ki}(X'Y')_{k'i'}$, i.e., the corresponding entry of the right-hand side. The last equality uses commutativity of $A$.
 :::
 
-Of course, this proposition can also be obtained by combining [Proposition 2](#prop2){: data-lid="3rmhs" data-relation="weak" }, [Proposition 5](#prop5){: data-relation="weak" }, and [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-lid="bx7zg" data-relation="weak" }, which states that the matrix representation of a composition is the matrix product. From this, the following properties follow.
+Of course, this proposition can also be obtained by combining [Proposition 2](#prop2){: data-lid="3rmhs" data-relation="weak" }, [Proposition 5](#prop5){: data-lid="dizx5" data-relation="weak" }, and [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4){: data-lid="bx7zg" data-relation="weak" }, which states that the matrix representation of a composition is the matrix product. From this, the following properties follow.
 
 ::: Proposition 7
 For matrices $X\in\Mat_{J\times I}(A)$, $X'\in\Mat_{J'\times I'}(A)$, the following hold.
@@ -151,7 +151,7 @@ Finally, let us compute the trace. Even for a square matrix $X=(x_{ji})$ indexed
 $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum_{i\in I}\sum_{i'\in I'}x_{ii}x'_{i'i'}=\left(\sum_{i\in I}x_{ii}\right)\left(\sum_{i'\in I'}x'_{i'i'}\right)=\tr(X)\tr(X').$$
 :::
 
-To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5){: data-relation="required" }, we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representations and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#matrix-representations-and-trace){: data-lid="06q6v" data-relation="required" })
+To read the third property at the level of linear maps, we require $L=M$ and $L'=M'$ to be finitely generated free $A$-modules, with $u\in\End_\rMod{A}(M)$ and $u'\in\End_\rMod{A}(M')$, and we must choose a single basis $\mathcal{B}$ for $M$ and $\mathcal{B}'$ for $M'$. Then $u\otimes u'\in\End_\rMod{A}(M\otimes_AM')$, and combining the fact that the trace is independent of the choice of matrix representation with [Proposition 5](#prop5){: data-lid="l4bbo" data-relation="required" }, we obtain $\tr(u\otimes u')=\tr(u)\tr(u')$. ([§Matrices and Linear Maps, §§Matrix Representations and Trace](/en/math/multilinear_algebra/matrices_and_linear_maps#matrix-representations-and-trace){: data-lid="06q6v" data-relation="required" })
 
 ---
 
