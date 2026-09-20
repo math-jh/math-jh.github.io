@@ -141,7 +141,7 @@ $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}.$$
 :::
 
 ::: Proof
-By [Proposition 1](#prop1){: data-relation="required" reviewed="" }, the cohomology falls into three cases.
+By [Proposition 1](#prop1){: data-lid="vhw1q" data-relation="required" reviewed="" }, the cohomology falls into three cases.
 
 First, if $d \geq 0$, then only $H^0$ is non-zero, so
 
@@ -153,7 +153,7 @@ Finally, consider the case $d \leq -n-1$. In this case, only $H^n$ is non-zero, 
 
 $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}.$$
 
-By the explanation immediately following [Proposition 1](#prop1){: data-relation="required" reviewed="" }, we know that the dimension of this space is
+By the explanation immediately following [Proposition 1](#prop1){: data-lid="zgg0l" data-relation="required" reviewed="" }, we know that the dimension of this space is
 
 $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}.$$
 
@@ -168,7 +168,7 @@ we have $\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$. Thus the
 
 ## Serre Vanishing
 
-By [Proposition 1](#prop1){: data-relation="required" reviewed="" }, on $\mathbb{P}^n$ the higher cohomology of $\mathcal{O}(d)$ vanishes for sufficiently large $d$. Since every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$ for some $d$, this means that for any line bundle $\mathcal{L}$ on $\mathbb{P}^n$, the twisted line bundle
+By [Proposition 1](#prop1){: data-lid="b4w0p" data-relation="required" reviewed="" }, on $\mathbb{P}^n$ the higher cohomology of $\mathcal{O}(d)$ vanishes for sufficiently large $d$. Since every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$ for some $d$, this means that for any line bundle $\mathcal{L}$ on $\mathbb{P}^n$, the twisted line bundle
 
 $$\mathcal{L}\otimes \mathcal{O}(d)$$
 
@@ -200,7 +200,7 @@ For a coherent sheaf $\mathcal{G}$ on $\mathbb{P}^N$, $\mathcal{G}(n)$ is global
 Let $S = \mathbb{K}[\x_0, \ldots, \x_N]$ and let $M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$ be a graded $S$-module. On each standard affine open set $D_+(\x_j)$, we have $\Gamma(D_+(\x_j), \mathcal{G}) = M_{(\x_j)}$, which is a finitely generated $S_{(\x_j)}$-module. If we write generators of these as $\overline{m}_1, \ldots, \overline{m}_{r_j} \in M_{(\x_j)}$, then we can write $\overline{m}_k = m_k / \x_j^{d_k}$ for homogeneous elements $m_k \in M$. Setting $d_0 = \max_{j,k} d_k$ and multiplying each generator by $\x_j^{d_0 - d_k}$, we obtain homogeneous elements $m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$. These are elements of $\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$, and since multiplying by $\x_j^{d_0}$ gives an isomorphism between $\mathcal{G}$ and $\mathcal{G}(d_0)$ on $D_+(\x_j)$, the global sections obtained in this way generate the stalks of $\mathcal{G}(d_0)$ on $D_+(\x_j)$. As the $D_+(\x_j)$ cover $\mathbb{P}^N$, we conclude that $\mathcal{G}(d_0)$ is globally generated. On the other hand, for $k \geq 0$ the monomials $\x_0^k, \ldots, \x_N^k$ generate the stalks of $\mathcal{O}(k)$, so $\mathcal{O}(k)$ is also globally generated, and taking the tensor product of the two evaluation maps shows that $\mathcal{G}(n) = \mathcal{G}(d_0) \otimes \mathcal{O}(n - d_0)$ is globally generated for all $n \geq d_0$.
 :::
 
-The usefulness of [Lemma 5](#lem5){: data-relation="weak" reviewed="" } is that it allows us to write an arbitrary coherent sheaf as a quotient of a direct sum of line bundles, and from this we can extend the computation of [Proposition 1](#prop1){: data-relation="weak" reviewed="" } to arbitrary coherent sheaves.
+The usefulness of [Lemma 5](#lem5){: data-lid="manc3" data-relation="weak" reviewed="" } is that it allows us to write an arbitrary coherent sheaf as a quotient of a direct sum of line bundles, and from this we can extend the computation of [Proposition 1](#prop1){: data-lid="bvs1c" data-relation="weak" reviewed="" } to arbitrary coherent sheaves.
 
 ::: Lemma 6
 For a coherent sheaf $\mathcal{G}$ on $\mathbb{P}^N$, for all sufficiently large $n$,
@@ -211,7 +211,7 @@ holds.
 :::
 
 ::: Proof
-By [Lemma 5](#lem5){: data-relation="required" reviewed="" } we can choose $a \gg 0$ such that $\mathcal{G}(a)$ is globally generated, and from the resulting surjection $\mathcal{O}^{\oplus r} \twoheadrightarrow \mathcal{G}(a)$ we obtain, by tensoring with $\mathcal{O}(-a)$,
+By [Lemma 5](#lem5){: data-lid="jtvxt" data-relation="required" reviewed="" } we can choose $a \gg 0$ such that $\mathcal{G}(a)$ is globally generated, and from the resulting surjection $\mathcal{O}^{\oplus r} \twoheadrightarrow \mathcal{G}(a)$ we obtain, by tensoring with $\mathcal{O}(-a)$,
 
 $$\mathcal{E} := \mathcal{O}(-a)^{\oplus r} \twoheadrightarrow \mathcal{G}.$$
 
@@ -221,10 +221,10 @@ We now prove the claim by descending induction on $i$. For the base step, for $i
 
 $$H^i(\mathcal{E}(n)) \rightarrow H^i(\mathcal{G}(n)) \rightarrow H^{i+1}(\mathcal{K}(n)).$$
 
-Since $\mathcal{E}(n) = \mathcal{O}(n-a)^{\oplus r}$, the left term vanishes for $n - a \geq -N$ by [Proposition 1](#prop1){: data-relation="required" reviewed="" }, and by the inductive hypothesis on $\mathcal{K}$ the right term vanishes for all sufficiently large $n$. Hence $H^i(\mathcal{G}(n)) = 0$ for all sufficiently large $n$. Since there are only finitely many values of $i$ from $1$ to $N$, taking the maximum of the lower bounds obtained for each yields an $n_0$ such that vanishing holds simultaneously for all $i > 0$.
+Since $\mathcal{E}(n) = \mathcal{O}(n-a)^{\oplus r}$, the left term vanishes for $n - a \geq -N$ by [Proposition 1](#prop1){: data-lid="gxu1x" data-relation="required" reviewed="" }, and by the inductive hypothesis on $\mathcal{K}$ the right term vanishes for all sufficiently large $n$. Hence $H^i(\mathcal{G}(n)) = 0$ for all sufficiently large $n$. Since there are only finitely many values of $i$ from $1$ to $N$, taking the maximum of the lower bounds obtained for each yields an $n_0$ such that vanishing holds simultaneously for all $i > 0$.
 :::
 
-What remains is to embed an arbitrary projective variety into $\mathbb{P}^N$ and apply [Lemma 6](#lem6){: data-relation="required" reviewed="" }.
+What remains is to embed an arbitrary projective variety into $\mathbb{P}^N$ and apply [Lemma 6](#lem6){: data-lid="f2zty" data-relation="required" reviewed="" }.
 
 ::: Proposition 7 (Serre Vanishing)
 Let $X$ be a projective variety, $\mathcal{L}$ an ample line bundle, and $\mathcal{F}$ a coherent sheaf. Then for sufficiently large $m$,
@@ -239,7 +239,7 @@ Since $\mathcal{L}$ is ample, for sufficiently large $m_0$ the sheaf $\mathcal{L
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
 
-holds. On the other hand, by [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" reviewed="" }, the cohomology of a quasi-coherent sheaf on a variety is computed by Čech cohomology with respect to an affine open cover, so the following identity
+holds. On the other hand, by [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11){: data-lid="rk14l" data-relation="required" reviewed="" }, the cohomology of a quasi-coherent sheaf on a variety is computed by Čech cohomology with respect to an affine open cover, so the following identity
 
 $$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$$
 
@@ -247,10 +247,10 @@ holds. We apply this identity with $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$
 
 $$i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r}) \otimes \mathcal{O}(n) = \mathcal{G}_r(n), \qquad \mathcal{G}_r := i_\ast(\mathcal{F} \otimes \mathcal{L}^{\otimes r})$$
 
-and therefore $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = H^i(\mathbb{P}^N, \mathcal{G}_r(n))$. Here the $\mathcal{G}_r$ are finitely many coherent sheaves on $\mathbb{P}^N$ determined by $r = 0, \ldots, m_0-1$, and if $m$ is sufficiently large then $n = (m-r)/m_0$ is also sufficiently large, so applying [Lemma 6](#lem6){: data-relation="required" reviewed="" } to each $\mathcal{G}_r$ and taking the maximum of the finitely many lower bounds obtained yields the desired conclusion for all sufficiently large $m$.
+and therefore $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = H^i(\mathbb{P}^N, \mathcal{G}_r(n))$. Here the $\mathcal{G}_r$ are finitely many coherent sheaves on $\mathbb{P}^N$ determined by $r = 0, \ldots, m_0-1$, and if $m$ is sufficiently large then $n = (m-r)/m_0$ is also sufficiently large, so applying [Lemma 6](#lem6){: data-lid="xu3ec" data-relation="required" reviewed="" } to each $\mathcal{G}_r$ and taking the maximum of the finitely many lower bounds obtained yields the desired conclusion for all sufficiently large $m$.
 :::
 
-Generally, vanishing theorems of this kind play a major role in cohomology computations. If [Proposition 7](#prop7){: data-relation="weak" reviewed="" } said that sufficient twisting can make all higher cohomology zero, the next proposition says that cohomology in sufficiently high degree is always zero even without twisting.
+Generally, vanishing theorems of this kind play a major role in cohomology computations. If [Proposition 7](#prop7){: data-lid="hqhf9" data-relation="weak" reviewed="" } said that sufficient twisting can make all higher cohomology zero, the next proposition says that cohomology in sufficiently high degree is always zero even without twisting.
 
 ::: Proposition 8 (Grothendieck Vanishing)
 For an $n$-dimensional projective variety $X$ and a coherent sheaf $\mathcal{F}$ on it, if $i > n$ then
@@ -267,11 +267,11 @@ $$\pi \colon X \rightarrow \mathbb{P}^n, \qquad p \mapsto [\y_0(p) : \cdots : \y
 
 and on each $D_+(\y_j)$ the coordinate ring of $\pi^{-1}(D_+(\y_j))$ is $S(X)_{(\y_j)}$, which is a finitely generated module over $\mathbb{K}[D_+(\y_j)]$, so $\pi$ is finite in the sense of [§Dimension, ⁋Definition 11](/en/math/algebraic_varieties/dimension#def11){: data-lid="4zita" data-relation="required" }, and surjective by lying over for integral extensions. Geometrically, this is the projection with center the linear subspace $V(\y_0, \ldots, \y_n)$ disjoint from $X$.
 
-Since a finite morphism has affine preimages of affine open sets, the pull-back $\{\pi^{-1}(U_j)\}$ of the standard affine cover $\{U_j\}$ of $\mathbb{P}^n$ is an affine open cover of $X$, and its finite intersections are also affine. Then, just as in the proof of [Proposition 7](#prop7){: data-relation="weak" reviewed="" }, the two Čech complexes agree termwise as
+Since a finite morphism has affine preimages of affine open sets, the pull-back $\{\pi^{-1}(U_j)\}$ of the standard affine cover $\{U_j\}$ of $\mathbb{P}^n$ is an affine open cover of $X$, and its finite intersections are also affine. Then, just as in the proof of [Proposition 7](#prop7){: data-lid="56n3v" data-relation="weak" reviewed="" }, the two Čech complexes agree termwise as
 
 $$\check{C}^p(\{\pi^{-1}(U_j)\}, \mathcal{F}) = \prod_{j_0 < \cdots < j_p} \mathcal{F}(\pi^{-1}(U_{j_0} \cap \cdots \cap U_{j_p})) = \check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}),$$
 
-and by [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11){: data-relation="required" reviewed="" } the Čech cohomology on each side is $H^i(X, \mathcal{F})$ and $H^i(\mathbb{P}^n, \pi_\ast\mathcal{F})$ respectively, so these are equal. Now $\{U_j\}$ consists of $n+1$ open sets, so $\check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}) = 0$ for $p > n$, and therefore the right-hand side vanishes when $i > n$.
+and by [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11){: data-lid="bfou6" data-relation="required" reviewed="" } the Čech cohomology on each side is $H^i(X, \mathcal{F})$ and $H^i(\mathbb{P}^n, \pi_\ast\mathcal{F})$ respectively, so these are equal. Now $\{U_j\}$ consists of $n+1$ open sets, so $\check{C}^p(\{U_j\}, \pi_\ast\mathcal{F}) = 0$ for $p > n$, and therefore the right-hand side vanishes when $i > n$.
 :::
 
 ## Regularity
@@ -363,7 +363,7 @@ Let us compute the regularity of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}
 
 ## Properties of Very Ample and Ample
 
-The above [Proposition 7](#prop7){: data-relation="weak" reviewed="" } and [Proposition 10](#prop10){: data-relation="weak" reviewed="" } are representative results on the properties of ample line bundles. We conclude this post by examining additional properties of ample and very ample line bundles.
+The above [Proposition 7](#prop7){: data-lid="xhifk" data-relation="weak" reviewed="" } and [Proposition 10](#prop10){: data-lid="bzzju" data-relation="weak" reviewed="" } are representative results on the properties of ample line bundles. We conclude this post by examining additional properties of ample and very ample line bundles.
 
 ::: Proposition 12
 If $\mathcal{L}$ is very ample and $\mathcal{M}$ is a globally generated line bundle, then $\mathcal{L} \otimes \mathcal{M}$ is very ample.
@@ -390,11 +390,11 @@ For an ample line bundle $\mathcal{L}$ and an arbitrary line bundle $\mathcal{M}
 :::
 
 ::: Proof
-First, since $\mathcal{L}$ is ample, $\mathcal{L}^{\otimes m}$ is very ample for some $m > 0$. On the other hand, by [Proposition 7](#prop7){: data-relation="required" reviewed="" } there exists $k_0$ such that $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$ for all $k \geq k_0$ and $i > 0$. Now set $k = k_0 + m\dim X$; then for $1 \leq i \leq \dim X$ we have $k - mi \geq k_0$, so
+First, since $\mathcal{L}$ is ample, $\mathcal{L}^{\otimes m}$ is very ample for some $m > 0$. On the other hand, by [Proposition 7](#prop7){: data-lid="66yi1" data-relation="required" reviewed="" } there exists $k_0$ such that $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$ for all $k \geq k_0$ and $i > 0$. Now set $k = k_0 + m\dim X$; then for $1 \leq i \leq \dim X$ we have $k - mi \geq k_0$, so
 
 $$H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k} \otimes (\mathcal{L}^{\otimes m})^{\otimes -i}) = H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k-mi}) = 0$$
 
-and for $i > \dim X$, this cohomology vanishes automatically by [Proposition 8](#prop8){: data-lid="itygd" data-relation="required" }. That is, $\mathcal{M} \otimes \mathcal{L}^{\otimes k}$ is $0$-regular with respect to the very ample line bundle $\mathcal{L}^{\otimes m}$, so by [Proposition 10](#prop10){: data-relation="required" reviewed="" } it is globally generated. Now by [Proposition 12](#prop12){: data-lid="5jqro" data-relation="required" },
+and for $i > \dim X$, this cohomology vanishes automatically by [Proposition 8](#prop8){: data-lid="itygd" data-relation="required" }. That is, $\mathcal{M} \otimes \mathcal{L}^{\otimes k}$ is $0$-regular with respect to the very ample line bundle $\mathcal{L}^{\otimes m}$, so by [Proposition 10](#prop10){: data-lid="as1tu" data-relation="required" reviewed="" } it is globally generated. Now by [Proposition 12](#prop12){: data-lid="5jqro" data-relation="required" },
 
 $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$
 
