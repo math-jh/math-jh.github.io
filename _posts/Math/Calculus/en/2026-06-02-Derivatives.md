@@ -96,7 +96,7 @@ so $f'(0) = 0$ exists. That is, $f$ is differentiable only at $0$.
 
 ## Properties of Differentiation
 
-Meanwhile, since the derivative is ultimately the limit of the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" reviewed="" } that differentiation also possesses linearity.
+Meanwhile, since the derivative is ultimately the limit of the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="4jdpl" data-relation="required" reviewed="" } that differentiation also possesses linearity.
 
 ::: Proposition 4
 If $f, g$ are differentiable at $a$ and $c$ is a constant, then $f + g$ and $cf$ are also differentiable at $a$, and
@@ -109,7 +109,7 @@ The average rate of change splits as
 
 $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h},$$
 
-and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" reviewed="" }. The same result for $cf$ follows by examining its average rate of change.
+and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="bwos3" data-relation="required" reviewed="" }. The same result for $cf$ follows by examining its average rate of change.
 :::
 
 On the other hand, since the derivative $f'$ is itself a function, if it is differentiable we can differentiate it again.
