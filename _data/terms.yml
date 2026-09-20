@@ -159,6 +159,13 @@ A:
     id: abelian_category
   - label: Abelian group
     id: abelian_group
+- id: abelian_lie_group
+  en: abelian Lie group
+  ko: 가환 리 군
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
 - id: abelian_presheaf
   en: abelian presheaf
   ko: 아벨 준층
@@ -10725,6 +10732,13 @@ L:
 - id: left_invariant
   en: left invariant
   ko: 좌불변
+  primary: en
+  defs:
+  - label: '[리 이론] §리 군'
+    url: /ko/math/lie_theory/Lie_groups
+- id: left-invariant_vector_field
+  en: left-invariant vector field
+  ko: 좌불변 벡터장
   primary: en
   defs:
   - label: '[리 이론] §리 군'
