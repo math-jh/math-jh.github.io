@@ -15,7 +15,7 @@ sidebar:
 author: Marvin
 
 date: 2026-08-14
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-20
 
 weight: 39
 
@@ -106,3 +106,63 @@ var WORD = /[^\s가-힣]*[A-Za-z][A-Za-z'-]*[^\s가-힣]*/g;
 `{5,}`를 `*`로 바꿔 길이 제한을 없앴다. 짧은 낱말에 `hyphens: auto`가 붙어도 브라우저가 그것을 쪼개지는 않으므로 잃는 것은 없다.
 
 바로 앞 절을 "하나를 켜면 다른 하나의 전제를 바꾼다"로 맺어 놓고, 정작 그 문장이 가리키는 자리를 하나 남겨둔 채 올린 셈이다.
+
+## 수학 글에만, 그리고 경로 사이의 줄바꿈
+
+양끝맞춤은 처음에 사이트 전체에 걸렸다. 그 뒤 사용자가 LLM Workshop과 개발일지 글에서 어색하다고 짚었다.
+
+> 지금 우리 글이 양끝맞춤이 되어 있는데, 양끝맞춤은 LLM Workshop 글과 블로그 개발일지, 주변기기 글들에는 어울리지 않는 것 같아. 그 카테고리 글들에서만 빼는 것도 가능할까?
+
+몇 분 뒤에 방향이 뒤집혔다. 뺄 카테고리를 나열하는 대신 거는 쪽을 좁히자는 것이었다.
+
+> 아 미안, 반대로 /math/ 들어간거에서만 양끝맞춤 거는 방향으로 하자.
+
+[구현](https://github.com/math-jh/math-jh.github.io/commit/bbe5abf0)은 레이아웃이 클래스 하나를 붙이고 SCSS가 그 클래스 안에서만 규칙을 여는 형태다. 판정은 permalink이고, KO와 EN이 같은 `/math/` 아래에 있으므로 두 언어에 함께 걸린다.
+
+{% raw %}
+```liquid
+<section class="page__content{% if page.url contains '/math/' %} page__content--justified{% endif %}" itemprop="text">
+```
+{: data-filename="_layouts/single.html"}
+{% endraw %}
+
+```scss
+&:lang(ko) {
+  @include breakpoint($medium) {
+    overflow-wrap: break-word;
+  }
+}
+
+&--justified:lang(ko) {
+  @include breakpoint($medium) {
+    @supports (text-justify: inter-character) {
+      p,
+      li {
+        text-align: justify;
+        text-justify: inter-character;
+```
+{: data-filename="_sass/minimal-mistakes/_page.scss"}
+
+`overflow-wrap`은 양끝맞춤과 무관하게 긴 URL이 컨테이너를 넘치지 않게 하는 장치라서 `:lang(ko)`에 남았다. `text-align: justify`와 `inter-character`, EN 쪽의 `hyphens: auto`는 `--justified` 안으로 들어갔다. 앞 절들에서 `:lang(ko)`와 `:lang(en)`에 걸려 있던 규칙이 각각 `&--justified:lang(ko)`, `&--justified:lang(en)`으로 바뀐 것이 diff의 전부다.
+
+이 결정을 내리게 한 것은 왼쪽 정렬로 돌아간 개발일지 글에서 사용자가 발견한 다른 문제였다. 스크롤바 리팩토링 글에서 백업 파일 경로 셋을 나열한 문단이 있었다.
+
+> 이 코드블럭이 안 깨지는 게 오히려 안 좋은 것 같기도 한데 어떻게 생각해? 지금 저 각각의 코드블럭 (파일 경로)가 길어서, 한 줄에 두 블럭 이상 못 들어가서 블럭들 사이마다 자동 엔터가 들어가고 있어.
+
+인라인 코드의 파일 경로는 공백이 없어 브라우저에 낱말 하나다. 한 줄에 남은 폭보다 길면 통째로 다음 줄로 밀리고, 앞줄 끝에는 빈 자리가 남는다. 이런 경로를 여럿 늘어놓은 문단은 항목마다 줄이 바뀐다. 사용자는 몇 가지 안 중에서 전역에 거는 쪽을 골랐다. 근거는 이랬다.
+
+> 수학 글은 어차피 인라인 코드 거의 없어. 전역으로 걸어
+
+`overflow-wrap: anywhere`류는 낱말 한가운데를 끊으므로 후보에서 빠지고, 경로의 구분자 뒤에만 `<wbr>`(줄바꿈 가능 지점)을 넣는 Jekyll 플러그인이 만들어졌다. 최종 HTML에 `:post_render`로 돌기 때문에 마크다운·Liquid 어느 쪽 출력이든 같은 자리에서 처리된다.
+
+```ruby
+PRE_BLOCK = %r{<pre\b.*?</pre>}m
+CODE_SPAN = %r{(<code\b[^>]*>)(.*?)(</code>)}m
+MARKUP    = %r{(?:<[^>]*>|&[^;\s]{1,10};)}
+SEPARATOR = %r{(?<=\w\w)([/.\-]+)(_*)(?=\w)}
+```
+{: data-filename="_plugins/inline_code_wbr.rb"}
+
+정규식 네 개가 규칙의 전부다. `<pre>` 블록은 통째로 건너뛴다. 코드블럭은 폭이 넘치면 가로 스크롤이 답이기 때문이다. `<code>` 안에서는 태그와 문자 엔티티(`MARKUP`)를 잘라 내고 텍스트 조각에만 `SEPARATOR`를 적용하므로 `<span>`이나 `&lt;` 한가운데에 `<wbr>`이 들어가는 일이 없다. 구분자는 `/`, `.`, `-` 셋이고 그 뒤에 넣는다. 다만 뒤에 밑줄이 붙어 있으면 `(_*)`가 밑줄을 `<wbr>` 뒤로 넘긴다. `skins/_custom`은 `skins/`에서 끊겨 `_custom`이 다음 줄에서 시작한다. 줄 끝에 밑줄이 남으면 다음 줄과의 경계가 눈에 안 보이기 때문이다. `(?<=\w\w)`는 구분자 앞에 두 글자 이상을 요구하는데, `_includes`의 맨 앞 밑줄 같은 짧은 조각이 줄 끝에 홀로 남는 것을 막는다. 16자 미만의 짧은 코드(`MIN_LENGTH`)는 애초에 줄을 밀어내지 않으므로 건드리지 않는다.
+
+`<wbr>`은 복사할 때 문자가 끼지 않는다. 경로를 드래그해서 붙여 넣으면 원래 문자열 그대로다. 양끝맞춤 규칙을 수학 글로 좁힌 일과 이 플러그인은 같은 커밋에 들어갔다. 인라인 코드가 거의 없는 수학 글에서는 플러그인이 할 일이 없고, 개발일지에서만 실제로 일한다.
