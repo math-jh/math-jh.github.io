@@ -196,8 +196,12 @@ def apply_copies(text, copies):
 
 
 def gate(en_post, old, new, copies) -> str | None:
-    """통과하면 None, 아니면 거절 사유."""
-    if L.strip_lids(new) != old:
+    """통과하면 None, 아니면 거절 사유.
+
+    양쪽에서 lid 를 떼고 비교한다 — 글에는 앞선 단계가 박아 둔 lid 가 이미 있고,
+    이 단계가 건드린 것이 lid 속성뿐임을 보이는 것이 이 비교의 목적이다.
+    """
+    if L.strip_lids(new) != L.strip_lids(old):
         return "역연산 불일치"
     if L.depc.hard_lint(en_post.path, new) - L.depc.hard_lint(en_post.path, old):
         return "lint 악화"
