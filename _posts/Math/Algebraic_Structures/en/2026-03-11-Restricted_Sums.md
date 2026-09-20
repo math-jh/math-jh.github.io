@@ -117,7 +117,7 @@ We also define the following.
 In the situation above, if $\iota$ is an isomorphism, we say that $G$ is the *internal weak direct product* of the $H_i$. 
 :::
 
-Considering the form of the homomorphism $f$ constructed in [Theorem 2](#thm2){: data-relation="required" reviewed="" }, one can verify that $G$ being the internal weak direct product of the $H_i$ is equivalent to the condition
+Considering the form of the homomorphism $f$ constructed in [Theorem 2](#thm2){: data-lid="5887s" data-relation="required" reviewed="" }, one can verify that $G$ being the internal weak direct product of the $H_i$ is equivalent to the condition
 
 > any $x\in G$ can be uniquely expressed, with $y_i\in H_i$, as the product of a finitely supported family $(y_i)_{i\in I}$, $\prod y_i$.
 
@@ -136,7 +136,7 @@ First, condition 2 shows in particular that $H_i\cap H_j=\{e\}$ holds for every 
 
 $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}\bigr)x_j^{-1}\in H_i\cap H_j=\{e\}$$
 
-we see that the elements of $H_i$ and $H_j$ commute. Hence the inclusion homomorphisms $\iota_i$ induce $\iota$ properly as in [Theorem 2](#thm2){: data-relation="required" reviewed="" }.
+we see that the elements of $H_i$ and $H_j$ commute. Hence the inclusion homomorphisms $\iota_i$ induce $\iota$ properly as in [Theorem 2](#thm2){: data-lid="4dqye" data-relation="required" reviewed="" }.
 
 To show that $G$ is the internal weak direct product of the $H_i$, we must show that the $\iota$ induced in this way is an isomorphism. First, by condition 1, any $a\in G$ is obtained through *finite* operations of $\bigcup H_i$. Moreover, since the $H_i$ commute with each other, we can write $a$ as
 
