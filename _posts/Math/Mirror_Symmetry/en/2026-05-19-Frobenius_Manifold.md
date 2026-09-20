@@ -196,7 +196,7 @@ A tuple $(M, \eta, \circ, e, E)$ is called a *Frobenius manifold* if the followi
 
 ## The WDVV Equation
 
-The last condition in [Definition 5](#def5){: data-relation="required" } is called potentiality because it allows the trilinear form $c$ to be expressed as the third partial derivatives of a suitable scalar function $F:M \rightarrow \mathbb{C}$.
+The last condition in [Definition 5](#def5){: data-lid="zvo4a" data-relation="required" } is called potentiality because it allows the trilinear form $c$ to be expressed as the third partial derivatives of a suitable scalar function $F:M \rightarrow \mathbb{C}$.
 
 ::: Proposition 6
 For a Frobenius manifold $(M, \eta, \circ, e, E)$ with flat coordinates $t^1, \ldots, t^n$, there exists a holomorphic function $F: M \rightarrow \mathbb{C}$ (defined locally) such that
@@ -207,7 +207,7 @@ holds for all $\alpha, \beta, \gamma$.
 :::
 
 ::: Proof
-For flat coordinates $t^\alpha$ the covariant derivative $\nabla_{\partial_{t^\delta}}$ coincides with the ordinary partial derivative $\partial_{t^\delta}$, so the potentiality condition in [Definition 5](#def5){: data-relation="required" } means that
+For flat coordinates $t^\alpha$ the covariant derivative $\nabla_{\partial_{t^\delta}}$ coincides with the ordinary partial derivative $\partial_{t^\delta}$, so the potentiality condition in [Definition 5](#def5){: data-lid="k6ngz" data-relation="required" } means that
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
@@ -318,7 +318,7 @@ The Gromov–Witten potential of $\mathbb{P}^1$ is now given by
 
 $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}.$$
 
-([\[Symplectic Geometry\] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)) Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $\langle H, H, H\rangle_{0,3,1} = 1$ from the degree-$1$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-relation="weak" }, accumulated exponentially along the $H^2$ direction coordinate $t^1$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4){: data-lid="p30hw" data-relation="required" }, and computing the third partial derivatives of $F$ from the above formula gives
+([\[Symplectic Geometry\] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)) Here the first term is the contribution from the classical cup product, and the second term can be thought of as the contribution $\langle H, H, H\rangle_{0,3,1} = 1$ from the degree-$1$ rational curve of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-lid="xphkx" data-relation="weak" }, accumulated exponentially along the $H^2$ direction coordinate $t^1$ (via the Euler vector field). The metric was already computed in [Example 4](#ex4){: data-lid="p30hw" data-relation="required" }, and computing the third partial derivatives of $F$ from the above formula gives
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}.$$
 
@@ -348,7 +348,7 @@ $$\mathcal{L}_E\bigl(e^{t^1}\dd{t}^1 \otimes \dd{t}^1 \otimes \partial_{t^0}\big
 
 so $\mathcal{L}_E(\circ) = \circ$.
 
-Now setting the Novikov variable to $q = e^{t^1}$, the second equation becomes $\partial_{t^1} \circ \partial_{t^1} = qe$, which translates back into cohomology language as $H \star H = q \cdot 1$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-relation="weak" }. Moreover, this isomorphism is now parametrized by the variation of $q=e^{t^1}$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
+Now setting the Novikov variable to $q = e^{t^1}$, the second equation becomes $\partial_{t^1} \circ \partial_{t^1} = qe$, which translates back into cohomology language as $H \star H = q \cdot 1$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5){: data-lid="6xwdd" data-relation="weak" }. Moreover, this isomorphism is now parametrized by the variation of $q=e^{t^1}$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
 :::
 
 Thus a Frobenius manifold provides the stage on which the ring structure of quantum cohomology can be treated consistently as a *function of the deformation parameter $t$*. From the next post onward we can now explore mirror symmetry in earnest.

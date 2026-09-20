@@ -54,7 +54,7 @@ $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 Here $E$ is the Euler vector field ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-lid="cgb1z" data-relation="required" }), and $\mu$ is the *grading operator*, defined by $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$ from the half-degree $d_\alpha = (\deg\sigma^\alpha)/2$ of the cohomology class $\sigma^\alpha$ corresponding to the flat coordinate $t^\alpha$ and the conformal dimension $d$.
 :::
 
-Recall that in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="weak" }, when defining a Frobenius manifold, we introduced $E$ to encode the grading structure of the Frobenius algebra at each point. Specifically,
+Recall that in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-lid="klvpt" data-relation="weak" }, when defining a Frobenius manifold, we introduced $E$ to encode the grading structure of the Frobenius algebra at each point. Specifically,
 
 $$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
@@ -78,7 +78,7 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = [\partial_\alpha + z
 
 For this curvature to vanish for all $z$, the coefficients of $z^{-1}$ and $z^{-2}$ must each vanish; the $z^{-1}$ term vanishes by the *potentiality* of $\mathcal{C}$, namely $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$, and the $z^{-2}$ term vanishes by the *associativity* of the product, $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$.
 
-Moreover, the following proposition shows that the flatness of these connections is *exactly* equivalent to these two conditions. These were the axioms of a Frobenius manifold ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="required" }), and therefore the $M$-direction flatness of $\nabla^z$ is not merely a by-product of adjusting moduli, but is the Frobenius structure itself.
+Moreover, the following proposition shows that the flatness of these connections is *exactly* equivalent to these two conditions. These were the axioms of a Frobenius manifold ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-lid="b2dwj" data-relation="required" }), and therefore the $M$-direction flatness of $\nabla^z$ is not merely a by-product of adjusting moduli, but is the Frobenius structure itself.
 
 ::: Proposition 2
 Consider the connection $\nabla^z$ on a Frobenius manifold $M$ ([Definition 1](#def1){: data-lid="td83y" data-relation="required" }). Under the assumption that the product $\circ$ is commutative, $\nabla^z$ being flat in the $M$-directions (i.e. among the $\partial_\alpha$ directions) for every $z$ is equivalent to the following two conditions both holding.
@@ -95,7 +95,7 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\parti
 is a Laurent polynomial in $z^{-1}$ and $z^{-2}$, so its vanishing for all $z$ is equivalent to the two coefficients vanishing separately. The vanishing of the $z^{-1}$ coefficient is exactly the first condition $\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$, and writing the vanishing of the $z^{-2}$ coefficient, $[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$, in components gives $\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$, which under the assumption that $\circ$ is commutative is exactly associativity, i.e. the WDVV equation. ([§Frobenius Manifolds, ⁋Proposition 7](/en/math/mirror_symmetry/frobenius_manifold#prop7){: data-lid="y6o0z" data-relation="required" })
 :::
 
-On the other hand, flatness in the $z$-direction, $[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$, requires the condition that the Euler vector field $E$ and the grading operator $\mu$ are compatible with the product, i.e. the homogeneity (or conformal) condition of the Frobenius manifold. Since this condition is already built into our definition as the fourth condition in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-relation="required" }, in our definition we obtain the full flatness of $\nabla^z$ including the $z$-direction.
+On the other hand, flatness in the $z$-direction, $[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$, requires the condition that the Euler vector field $E$ and the grading operator $\mu$ are compatible with the product, i.e. the homogeneity (or conformal) condition of the Frobenius manifold. Since this condition is already built into our definition as the fourth condition in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5){: data-lid="aseki" data-relation="required" }, in our definition we obtain the full flatness of $\nabla^z$ including the $z$-direction.
 
 ## D-module
 
