@@ -22,9 +22,9 @@ Despite the considerable geometric influence that line bundles exert, we have no
 
 As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3){: data-lid="ah91t" data-relation="required" }) For this, we need to examine the process of transferring an $A$-module $M$ to a vector bundle over $X$, given an affine variety $X$ with coordinate ring $A$ and an $A$-module $M$.
 
-Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5){: data-lid="88str" data-relation="required" }, we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
+Our basic philosophy, using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="tad82" data-relation="required" reviewed="" }, is that a homomorphism between coordinate *rings* can be transferred to a morphism between varieties in the opposite direction, and thus we can obtain a bundle over $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet, according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5){: data-lid="88str" data-relation="required" }, we can consider the symmetric algebra $\S(M)$, which forcibly introduces a (commutative) multiplication on $M$.
 
-However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" }, if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-relation="required" reviewed="" } to this gives a morphism from some variety $V(M)$ to $X$.
+However, there is a problem in applying this directly. Recall that our goal is to view $M$ as a vector bundle over $X$. Roughly speaking, we want to attach $M$ nicely over each point of $X$, and according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="neoe7" data-relation="required" reviewed="" }, if $M$ appears in the world of varieties (as fibers), then the coordinate ring defining it should be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. This is an $A$-algebra, so we obtain a map of coordinate rings $A\rightarrow \S_A(M^\vee)$, and applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="nvjjz" data-relation="required" reviewed="" } to this gives a morphism from some variety $V(M)$ to $X$.
 
 Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to a maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and thus the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ over $x$ in $V(M) \rightarrow X$ consists of the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$.
 
@@ -68,7 +68,7 @@ Since the coordinate ring of a variety is Noetherian, by [\[Commutative Algebra\
 
 ## Canonical Bundle
 
-We are now ready to define the canonical bundle. For this, we must first introduce the cotangent bundle on a variety, and the following definition is what we already saw in [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" reviewed="" }, but we introduce it again for completeness.
+We are now ready to define the canonical bundle. For this, we must first introduce the cotangent bundle on a variety, and the following definition is what we already saw in [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-lid="smwlv" data-relation="weak" reviewed="" }, but we introduce it again for completeness.
 
 ::: Definition 2
 The *cotangent bundle* $\Omega_X^1$ of a smooth variety $X$ is the dual vector bundle of the tangent bundle $\mathcal{T}_X$.
@@ -112,7 +112,7 @@ This result shows that the cotangent bundle is represented by differential $1$-f
 The cotangent bundle of $\mathbb{A}^n$ is $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$. Algebraically, if we fix the coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$ of $\mathbb{A}^n$, then the Kähler differentials of this $\mathbb{K}$-algebra form the free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  \dd{\x_i}$, so this result aligns well with our intuition.
 :::
 
-On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent bundle $\Omega_X^1$, since each fiber of $\Omega_X^1$ is $n$-dimensional, we know that taking its $n$-fold exterior product yields a line bundle. ([§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-relation="weak" reviewed="" })
+On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent bundle $\Omega_X^1$, since each fiber of $\Omega_X^1$ is $n$-dimensional, we know that taking its $n$-fold exterior product yields a line bundle. ([§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24){: data-lid="pyexc" data-relation="weak" reviewed="" })
 
 ::: Definition 5
 The *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dimension $n$ is defined as the top exterior power of the cotangent bundle
@@ -244,7 +244,7 @@ The degree-genus formula is in fact a special case of the Riemann-Roch theorem, 
 
 ## Canonical Divisor of a Blow-up
 
-In [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" reviewed="" }, we examined the blow-up of $\mathbb{A}^2$ at a point $0$. We now generalize this example further and examine how the canonical divisor behaves in this general setting.
+In [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-lid="e0nn1" data-relation="weak" reviewed="" }, we examined the blow-up of $\mathbb{A}^2$ at a point $0$. We now generalize this example further and examine how the canonical divisor behaves in this general setting.
 
 For a smooth variety $X$ and a smooth subvariety $Z$ of codimension $r$, the blow-up of $X$ along $Z$ is given by the birational morphism
 
@@ -254,7 +254,7 @@ where $\pi$ is an isomorphism away from the fiber over $Z$, and the fiber over $
 
 $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
-Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what we did in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-relation="weak" reviewed="" }, where the exceptional divisor corresponding to the fiber over a point $0$ was attached by projectivizing the directions *coming into* this point from outside it.
+Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what we did in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-lid="x78tn" data-relation="weak" reviewed="" }, where the exceptional divisor corresponding to the fiber over a point $0$ was attached by projectivizing the directions *coming into* this point from outside it.
 
 Now restricting $\pi:\widetilde{X}\rightarrow X$ to $E$, let us consider
 
@@ -264,7 +264,7 @@ For notational convenience, we abbreviate this as $\pi_E$. Now thinking of the t
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
-On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-relation="weak" reviewed="" }, we obtain the following.
+On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-lid="2fx0h" data-relation="weak" reviewed="" }, we obtain the following.
 
 ::: Proposition 11 (Relative Euler Sequence)
 For any vector bundle $V\rightarrow B$ and projectivized vector bundle $\pi: \mathbb{P}(V)\rightarrow B$, there exists a short exact sequence
@@ -284,7 +284,7 @@ holds. Now examining the part
 
 $$\mathcal{Q}\otimes \mathcal{O}(1)\cong \Hom(\mathcal{O}(-1),\mathcal{Q})$$
 
-we have already seen in the proof of [Proposition 7](#prop7){: data-relation="required" reviewed="" } that viewing how a line in $\mathbb{P}^n$ maps to some quotient is precisely the tangent space, so similarly
+we have already seen in the proof of [Proposition 7](#prop7){: data-lid="h3lvg" data-relation="required" reviewed="" } that viewing how a line in $\mathbb{P}^n$ maps to some quotient is precisely the tangent space, so similarly
 
 $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 

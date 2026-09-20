@@ -133,14 +133,14 @@ is a map between affine varieties, and hence by [§Affine Varieties, ⁋Proposit
 The *Picard group* $\Pic(X)$ of a variety $X$ is the group obtained by taking the set of isomorphism classes of line bundles on $X$ with tensor product as the operation. The identity element is the trivial bundle $\mathcal{O}_X$, and the inverse of $\mathcal{L}$ is $\mathcal{L}^\vee$.
 :::
 
-That the trivial bundle actually serves as the identity element is verified directly from [Example 3](#ex3){: data-lid="7fv56" data-relation="required" } and [Proposition 6](#prop6){: data-relation="required" reviewed="" }. Moreover, by the properties of tensor product the following holds.
+That the trivial bundle actually serves as the identity element is verified directly from [Example 3](#ex3){: data-lid="7fv56" data-relation="required" } and [Proposition 6](#prop6){: data-lid="qaum8" data-relation="required" reviewed="" }. Moreover, by the properties of tensor product the following holds.
 
 ::: Proposition 10
 $\Pic(X)$ is an abelian group.
 :::
 
 ::: Proof
-By [Proposition 6](#prop6){: data-relation="required" reviewed="" } the tensor product is a binary operation on line bundles, and by [Proposition 8](#prop8){: data-lid="nq5mg" data-relation="required" } the element $\mathcal{O}_X$ is the identity and $\mathcal{L}^\vee$ is the inverse of $\mathcal{L}$. The commutativity $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$ and associativity $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$ of tensor product follow directly at the level of transition functions from $g_{ij}h_{ij} = h_{ij}g_{ij}$ and $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$.
+By [Proposition 6](#prop6){: data-lid="y0mld" data-relation="required" reviewed="" } the tensor product is a binary operation on line bundles, and by [Proposition 8](#prop8){: data-lid="nq5mg" data-relation="required" } the element $\mathcal{O}_X$ is the identity and $\mathcal{L}^\vee$ is the inverse of $\mathcal{L}$. The commutativity $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$ and associativity $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$ of tensor product follow directly at the level of transition functions from $g_{ij}h_{ij} = h_{ij}g_{ij}$ and $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$.
 :::
 
 As in the previous post, our toy examples are $\mathbb{A}^n$ and $\mathbb{P}^n$.
@@ -181,7 +181,7 @@ $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \ma
 Now setting $e:=d-d'$, the statement $\mathcal{O}_{\mathbb{P}^n}(e)\cong \mathcal{O}_{\mathbb{P}^n}$ means that there exist $u_i\in \mathcal{O}(U_i)^\ast$ satisfying $(\x_i/\x_j)^e=u_i/u_j$, but since $U_i\cong \mathbb{A}^n$ we have $\mathcal{O}(U_i)^\ast=\mathbb{K}^\ast$ and therefore $(\x_i/\x_j)^e$ must be constant, i.e. $e=0$. Hence it is also injective.
 :::
 
-Intuitively, the integer $d$ in the line bundle $\mathcal{O}_{\mathbb{P}^n}(d)$ on $\mathbb{P}^n$ can be understood as a measure of how many times the fiber twists as it moves over the base. When $d=0$ the bundle $\mathcal{O}(0)$ is trivial so there is no twist, when $d>0$ it twists $d$ times in one direction, and when $d<0$ it twists $\lvert d\rvert$ times in the opposite direction. This means that $d$ in the transition function $g_{ij}(x) = (x_i/x_j)^d(x)$ directly represents the amount of twisting. However, this intuition may be somewhat imprecise, so some additional explanation will be needed after [Example 16](#ex16){: data-relation="forward" reviewed="" }.
+Intuitively, the integer $d$ in the line bundle $\mathcal{O}_{\mathbb{P}^n}(d)$ on $\mathbb{P}^n$ can be understood as a measure of how many times the fiber twists as it moves over the base. When $d=0$ the bundle $\mathcal{O}(0)$ is trivial so there is no twist, when $d>0$ it twists $d$ times in one direction, and when $d<0$ it twists $\lvert d\rvert$ times in the opposite direction. This means that $d$ in the transition function $g_{ij}(x) = (x_i/x_j)^d(x)$ directly represents the amount of twisting. However, this intuition may be somewhat imprecise, so some additional explanation will be needed after [Example 16](#ex16){: data-lid="1vvn2" data-relation="forward" reviewed="" }.
 
 On the other hand, on projective space $\mathbb{P}^n$ there is a special line bundle that arises naturally from its very definition. This *tautological bundle* is the bundle that assigns to each point of $\mathbb{P}^n$ the line represented by that point, and it plays a fundamental role in understanding the geometry of projective space.
 
@@ -193,7 +193,7 @@ $$\mathcal{O}_{\mathbb{P}^n}(-1) = \{(x, v) \in \mathbb{P}^n \times \mathbb{A}^{
 Then the line bundle over $\mathbb{P}^n$ defined by the projection map $\pi=\pr_1$ from $\mathcal{O}_{\mathbb{P}^n}(-1)$ to $\mathbb{P}^n$ is called the *tautological line bundle*.
 :::
 
-That is, in this definition each fiber $\mathcal{O}_{\mathbb{P}^n}(-1)_x$ is the very line represented by the point $x$. As the notation suggests, the following holds. For distinction, in the next proposition only, let us regard $\mathcal{O}_{\mathbb{P}^n}(-1)$ as the bundle from [Definition 13](#def13){: data-lid="lp5ww" data-relation="required" }, not from [Example 12](#ex12){: data-relation="required" reviewed="" }.
+That is, in this definition each fiber $\mathcal{O}_{\mathbb{P}^n}(-1)_x$ is the very line represented by the point $x$. As the notation suggests, the following holds. For distinction, in the next proposition only, let us regard $\mathcal{O}_{\mathbb{P}^n}(-1)$ as the bundle from [Definition 13](#def13){: data-lid="lp5ww" data-relation="required" }, not from [Example 12](#ex12){: data-lid="l2zmw" data-relation="required" reviewed="" }.
 
 ::: Proposition 14
 The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathcal{O}_{\mathbb{P}^n}(1)$ defined in [Example 12](#ex12){: data-lid="cnyy2" data-relation="required" } above. That is, $\mathcal{O}_{\mathbb{P}^n}(-1) \cong \mathcal{O}_{\mathbb{P}^n}(1)^\vee$.
@@ -225,9 +225,9 @@ However, since $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i},
 
 This proposition shows the *twist* of the tautological bundle from the viewpoint of sections. For instance, the fact that $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$ means in particular that there is not even a "constant function" assigning $1$ in the fiber for every $x\in \mathbb{P}^1$. From the geometric viewpoint above, this is because after going around $\mathbb{P}^1$ once, the original $1$ has become (for example) $-1$.
 
-Meanwhile, the computation in [Example 16](#ex16){: data-relation="required" reviewed="" } can be extended to arbitrary $d$; in particular, for any $d<0$ one can show by the same logic that $\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$, and for $d=0$, that is, for $\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$, the sections are homogeneous polynomials of degree $0$, i.e., constant functions, so the computation in [§Quasi-Projective Varieties, ⁋Example 6](/en/math/algebraic_varieties/quasi_projective_varieties#ex6){: data-lid="nh4ro" data-relation="weak" } is confirmed again.
+Meanwhile, the computation in [Example 16](#ex16){: data-lid="hozyz" data-relation="required" reviewed="" } can be extended to arbitrary $d$; in particular, for any $d<0$ one can show by the same logic that $\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$, and for $d=0$, that is, for $\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$, the sections are homogeneous polynomials of degree $0$, i.e., constant functions, so the computation in [§Quasi-Projective Varieties, ⁋Example 6](/en/math/algebraic_varieties/quasi_projective_varieties#ex6){: data-lid="nh4ro" data-relation="weak" } is confirmed again.
 
-The case to pay attention to is $d>0$. In this case, by exactly the same computation as in [Example 16](#ex16){: data-relation="required" reviewed="" }, one can verify that the sections are homogeneous polynomials of degree $d$. In particular $\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$, which can be regarded as a calculation showing that the intuition after [Example 12](#ex12){: data-relation="weak" reviewed="" } was somewhat overly simplistic.
+The case to pay attention to is $d>0$. In this case, by exactly the same computation as in [Example 16](#ex16){: data-lid="1kffz" data-relation="required" reviewed="" }, one can verify that the sections are homogeneous polynomials of degree $d$. In particular $\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$, which can be regarded as a calculation showing that the intuition after [Example 12](#ex12){: data-lid="lijbn" data-relation="weak" reviewed="" } was somewhat overly simplistic.
 
 A more precise explanation of this phenomenon is as follows. For convenience, let us look at the example on $\mathbb{P}^1$. The sections of $\mathcal{O}(-1)$ are homogeneous of degree $-1$, so they have the form, for instance,
 
