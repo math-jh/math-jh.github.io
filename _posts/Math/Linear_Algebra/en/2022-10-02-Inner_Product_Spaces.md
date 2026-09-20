@@ -151,7 +151,7 @@ always holds. If $\mathcal{B}$ were merely an orthogonal basis, we would have ha
 
 ## Orthogonal Matrices
 
-Let $V$ be an $\mathbb{R}$-inner product space and consider a linear operator $L:V\rightarrow V$ on it. In [§Dual Space](/en/math/linear_algebra/dual_space){: data-relation="required" } we defined the dual $L^\ast:V^\ast\rightarrow V^\ast$ of $L$ as the linear operator satisfying
+Let $V$ be an $\mathbb{R}$-inner product space and consider a linear operator $L:V\rightarrow V$ on it. In [§Dual Space](/en/math/linear_algebra/dual_space){: data-lid="c78fo" data-relation="required" } we defined the dual $L^\ast:V^\ast\rightarrow V^\ast$ of $L$ as the linear operator satisfying
 
 $$(Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
@@ -169,7 +169,7 @@ $$\langle v,Lw\rangle=\langle L^t v,w\rangle$$
 
 holding for all $v,w\in V$.
 
-In particular, if we choose an orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$, then since $\langle x_i,x_j\rangle=\delta_{ij}$, the set $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$ is exactly the dual basis of $\mathcal{B}$. Thus the above isomorphism sends an orthonormal basis to its dual basis, so the matrix representation of $L^t$ with respect to $\mathcal{B}$ coincides with the matrix representation of $L^\ast$ with respect to the dual basis. As we saw in [§Dual Space](/en/math/linear_algebra/dual_space){: data-relation="required" }, the latter is the transpose of $[L]_\mathcal{B}^\mathcal{B}$; hence for an orthonormal basis, the matrix of the adjoint $L^t$ is the transpose of the matrix of $L$. The notation $L^t$ originates from this.
+In particular, if we choose an orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$, then since $\langle x_i,x_j\rangle=\delta_{ij}$, the set $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$ is exactly the dual basis of $\mathcal{B}$. Thus the above isomorphism sends an orthonormal basis to its dual basis, so the matrix representation of $L^t$ with respect to $\mathcal{B}$ coincides with the matrix representation of $L^\ast$ with respect to the dual basis. As we saw in [§Dual Space](/en/math/linear_algebra/dual_space){: data-lid="yr4si" data-relation="required" }, the latter is the transpose of $[L]_\mathcal{B}^\mathcal{B}$; hence for an orthonormal basis, the matrix of the adjoint $L^t$ is the transpose of the matrix of $L$. The notation $L^t$ originates from this.
 
 Now if an arbitrary linear map $L$ preserves $\langle-,-\rangle$, then for any $v,w$,
 

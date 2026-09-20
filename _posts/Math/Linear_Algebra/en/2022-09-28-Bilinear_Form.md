@@ -171,10 +171,10 @@ $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 is an isomorphism.
 :::
 ::: Proof
-Since $W$ is non-degenerate, by [Proposition 8](#prop8){: data-relation="required" } we have $V=W\oplus W^\perp$. The natural projection satisfies $\ker p=W$, so the kernel of $p\vert_{W^\perp}$ is $W^\perp\cap W=\{0\}$, hence it is injective; and since $V=W+W^\perp$, for any $v=w+w'$ ($w\in W$, $w'\in W^\perp$) we have $p(w')=w'+W=v+W$, so it is surjective. Therefore $p\vert_{W^\perp}$ is an isomorphism.
+Since $W$ is non-degenerate, by [Proposition 8](#prop8){: data-lid="xualb" data-relation="required" } we have $V=W\oplus W^\perp$. The natural projection satisfies $\ker p=W$, so the kernel of $p\vert_{W^\perp}$ is $W^\perp\cap W=\{0\}$, hence it is injective; and since $V=W+W^\perp$, for any $v=w+w'$ ($w\in W$, $w'\in W^\perp$) we have $p(w')=w'+W=v+W$, so it is surjective. Therefore $p\vert_{W^\perp}$ is an isomorphism.
 :::
 
-Thus, from the direct sum $V=W\oplus W^\perp$, if we fold away $W$, then $W^\perp$ exactly realizes the quotient $V/W$. In general, the quotient space $V/W$ is a canonical object defined even without $\langle-,-\rangle$, whereas $W^\perp$, which realizes it inside $V$, depends on the form, and without the non-degeneracy of [Proposition 8](#prop8){: data-relation="required" } such an expression is impossible. For example, if $W$ is isotropic, then $W\cap W^\perp\neq\{0\}$, so $p\vert_{W^\perp}$ cannot be injective.
+Thus, from the direct sum $V=W\oplus W^\perp$, if we fold away $W$, then $W^\perp$ exactly realizes the quotient $V/W$. In general, the quotient space $V/W$ is a canonical object defined even without $\langle-,-\rangle$, whereas $W^\perp$, which realizes it inside $V$, depends on the form, and without the non-degeneracy of [Proposition 8](#prop8){: data-lid="cym0t" data-relation="required" } such an expression is impossible. For example, if $W$ is isotropic, then $W\cap W^\perp\neq\{0\}$, so $p\vert_{W^\perp}$ cannot be injective.
 
 ## The Four Fundamental Subspaces
 
