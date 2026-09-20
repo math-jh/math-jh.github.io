@@ -65,7 +65,7 @@ $$\area(D) = \oint_C x\dd{y} = -\oint_C y\dd{x} = \frac{1}{2}\oint_C (x\dd{y} - 
 :::
 
 ::: Proof
-In [Theorem 1](#thm1){: data-relation="required" }, taking $(P, Q) = (0, x)$ gives $Q_x - P_y = 1$, so
+In [Theorem 1](#thm1){: data-lid="9tuky" data-relation="required" }, taking $(P, Q) = (0, x)$ gives $Q_x - P_y = 1$, so
 
 $$\oint_C x\dd{y} = \iint_D 1\dd{A} = \area(D),$$
 
@@ -76,7 +76,7 @@ $$\oint_C -y\dd{x} = \area(D).$$
 The third identity is the average of these two.
 :::
 
-Meanwhile, Green's theorem can be rewritten in two forms that interpret two differential quantities of the planar vector field $\mathbf{F} = (P, Q)$ as boundary integrals. Here, the divergence of a planar vector field is obtained by viewing $\mathbf{F}$ as $(P, Q, 0)$ independent of $z$, giving $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$, just as in the case of curl. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-relation="weak" })
+Meanwhile, Green's theorem can be rewritten in two forms that interpret two differential quantities of the planar vector field $\mathbf{F} = (P, Q)$ as boundary integrals. Here, the divergence of a planar vector field is obtained by viewing $\mathbf{F}$ as $(P, Q, 0)$ independent of $z$, giving $\divergence \mathbf{F} = \partial P/\partial x + \partial Q/\partial y$, just as in the case of curl. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-lid="3mz82" data-relation="weak" })
 
 ::: Proposition 3
 If the boundary $C$ of $D$ is positively oriented and $\mathbf{F} = (P, Q)$ is $C^1$, then for the unit tangent $\mathbf{T}$ and the outward unit normal $\mathbf{n}$,
@@ -91,13 +91,13 @@ For the first identity,
 
 $$\oint_C \mathbf{F}\cdot \mathbf{T}\dd{s} = \oint_C P\dd{x} + Q\dd{y}$$
 
-is precisely the left-hand side of [Theorem 1](#thm1){: data-relation="required" }, and the integrand $Q_x - P_y$ on the right-hand side is the curl of the planar vector field. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-relation="weak" })
+is precisely the left-hand side of [Theorem 1](#thm1){: data-lid="mcima" data-relation="required" }, and the integrand $Q_x - P_y$ on the right-hand side is the curl of the planar vector field. ([§Vector Fields, ⁋Definition 3](/en/math/calculus/vector_fields#def3){: data-lid="yu4mu" data-relation="weak" })
 
 For the second identity, using that on the positively oriented boundary the outward unit normal $\mathbf{n}$ satisfies $\mathbf{n}\dd{s} = (\dd{y}, -\dd{x})$, we have
 
 $$\oint_C \mathbf{F}\cdot \mathbf{n}\dd{s} = \oint_C P\dd{y} - Q\dd{x},$$
 
-and applying [Theorem 1](#thm1){: data-relation="required" } to $(P, Q) \mapsto (-Q, P)$ shows that this equals
+and applying [Theorem 1](#thm1){: data-lid="wt54t" data-relation="required" } to $(P, Q) \mapsto (-Q, P)$ shows that this equals
 
 $$\iint_D (P_x + Q_y)\dd{A} = \iint_D \divergence \mathbf{F}\dd{A}.$$
 :::
