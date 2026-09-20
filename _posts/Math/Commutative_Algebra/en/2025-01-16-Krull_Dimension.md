@@ -56,7 +56,7 @@ On the other hand, for a local ring $(A, \mathfrak{m})$, any chain of prime idea
 
 ## Computing Dimensions
 
-When working with dimension, one mostly deals with the case where the ring $A$ is Noetherian. One of the main reasons is that [Theorem 7](#thm7){: data-relation="forward" } holds only for Noetherian rings. Before computing dimensions in earnest, let us first look at a simple example.
+When working with dimension, one mostly deals with the case where the ring $A$ is Noetherian. One of the main reasons is that [Theorem 7](#thm7){: data-lid="6waej" data-relation="forward" } holds only for Noetherian rings. Before computing dimensions in earnest, let us first look at a simple example.
 
 To begin with, the equivalence of the first and third conditions of [§The Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="yu1m9" data-relation="required" } tells us exactly what the $0$-dimensional Noetherian rings are.
 
@@ -70,7 +70,7 @@ Next, the following proposition tells us that, in general, if $\phi:A \rightarro
 Let $\phi: A \rightarrow B$ be integral. Then for any prime ideal $\mathfrak{p}$ of $A$ containing $\ker\phi$, there exists a prime ideal $\mathfrak{q}$ of $B$ such that $\mathfrak{p}=\phi^{-1} \mathfrak{q}$. Moreover, for any ideal $\mathfrak{b}$ of $B$, we have $\dim \mathfrak{b}=\dim \phi^{-1} \mathfrak{b}$.
 :::
 ::: Proof
-The first statement is simply [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1){: data-relation="required" }. For the second, since $\phi^{-1}\mathfrak{b}$ is the kernel of the composition $A \rightarrow B \rightarrow B/\mathfrak{b}$, the inclusion $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ is again an integral extension; the inequality $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$ holds by the second statement of [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1){: data-relation="required" }, and the reverse inequality holds by [§Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4){: data-lid="n2ayk" data-relation="required" }.
+The first statement is simply [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1){: data-lid="ffffe" data-relation="required" }. For the second, since $\phi^{-1}\mathfrak{b}$ is the kernel of the composition $A \rightarrow B \rightarrow B/\mathfrak{b}$, the inclusion $A/\phi^{-1}\mathfrak{b}\hookrightarrow B/\mathfrak{b}$ is again an integral extension; the inequality $\dim \mathfrak{b}\geq \dim \phi^{-1}\mathfrak{b}$ holds by the second statement of [§Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1){: data-lid="n9pyo" data-relation="required" }, and the reverse inequality holds by [§Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4){: data-lid="n2ayk" data-relation="required" }.
 :::
 
 We now turn our attention to what happens in dimension 1. Before doing so, we lay down the following somewhat technical definition.
@@ -98,7 +98,7 @@ Now, in $A_\mathfrak{p}$ the ideal $\mathfrak{p}A_\mathfrak{p}$ is the unique ma
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$.
 
-Meanwhile, since $\mathfrak{p}A_\mathfrak{p}$ is minimal among the prime ideals containing $\mathfrak{a}A_\mathfrak{p}$, the ring $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is Artinian by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-relation="required" }. It follows that the descending chain of symbolic powers
+Meanwhile, since $\mathfrak{p}A_\mathfrak{p}$ is minimal among the prime ideals containing $\mathfrak{a}A_\mathfrak{p}$, the ring $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is Artinian by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="6uki0" data-relation="required" }. It follows that the descending chain of symbolic powers
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -122,7 +122,7 @@ and since $a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$, [§Integral Exten
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$,
 
-and since $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$, we have $(\mathfrak{q}A_\mathfrak{q})^{n}=0$. From the equivalence of the second and third conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-relation="required" }, the ring $A_\mathfrak{q}=A_\mathfrak{q}/(0)$ is Artinian, and therefore $\dim A_\mathfrak{q}=0$ by [Corollary 3](#cor3){: data-lid="io2lp" data-relation="required" }.
+and since $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$, we have $(\mathfrak{q}A_\mathfrak{q})^{n}=0$. From the equivalence of the second and third conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="dsjy3" data-relation="required" }, the ring $A_\mathfrak{q}=A_\mathfrak{q}/(0)$ is Artinian, and therefore $\dim A_\mathfrak{q}=0$ by [Corollary 3](#cor3){: data-lid="io2lp" data-relation="required" }.
 :::
 
 Using this, we can now prove the following by induction.
@@ -133,7 +133,7 @@ Let $A$ be a Noetherian ring and let $a_1,\ldots, a_c\in A$ be arbitrary. Suppos
 
 In other words, every prime ideal of a Noetherian ring satisfies the descending chain condition, and the length of any chain starting at $\mathfrak{p}$ is at most the number of generators of $\mathfrak{p}$. Nevertheless, there exist Noetherian rings of infinite dimension. (**[Nag, Appendix, Example 1]**)
 
-Meanwhile, [Theorem 7](#thm7){: data-relation="required" } also admits the following converse.
+Meanwhile, [Theorem 7](#thm7){: data-lid="etgwe" data-relation="required" } also admits the following converse.
 
 ::: Corollary 8
 In a Noetherian ring $A$, a prime ideal $\mathfrak{p}$ of codimension $c$ is minimal among the prime ideals containing some ideal generated by $c$ elements.
@@ -141,9 +141,9 @@ In a Noetherian ring $A$, a prime ideal $\mathfrak{p}$ of codimension $c$ is min
 ::: Proof
 Suppose $\mathfrak{p}$ has codimension $c$. Starting from the zero ideal $(0)$ (generated by $0$ elements), we will inductively choose elements $x_1,\ldots, x_r$ to build the desired ideal. Suppose that for some $r$ with $0\leq r< c$, we have constructed the ideal generated by $x_1,\ldots, x_r$. We must then choose a suitable $x_{r+1}\in \mathfrak{p}$ that does not belong to any of the minimal prime ideals containing $(x_1,\ldots, x_r)$.
 
-Let the minimal prime ideals containing $(x_1,\ldots, x_r)$ be $\mathfrak{q}_1,\ldots, \mathfrak{q}_s$. By [Theorem 7](#thm7){: data-relation="required" }, each $\mathfrak{q}_i$ has codimension $\leq r$, and since $r< c$, all of them have codimension $< c$. Therefore $\mathfrak{p}$ cannot equal any of them, and in particular $\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$. Hence we can choose $x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$.
+Let the minimal prime ideals containing $(x_1,\ldots, x_r)$ be $\mathfrak{q}_1,\ldots, \mathfrak{q}_s$. By [Theorem 7](#thm7){: data-lid="v73fq" data-relation="required" }, each $\mathfrak{q}_i$ has codimension $\leq r$, and since $r< c$, all of them have codimension $< c$. Therefore $\mathfrak{p}$ cannot equal any of them, and in particular $\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$. Hence we can choose $x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$.
 
-Inductively, we obtain $c$ elements $x_1,\ldots, x_c$ belonging to $\mathfrak{p}$. Now choose a minimal prime ideal $\mathfrak{q}$ containing the ideal $(x_1,\ldots, x_c)$; then $\codim \mathfrak{q}\leq c$ by [Theorem 7](#thm7){: data-relation="required" }. On the other hand, since $\mathfrak{q}\subseteq \mathfrak{p}$ and $\codim \mathfrak{p}=c$, we must have $\mathfrak{q}=\mathfrak{p}$.
+Inductively, we obtain $c$ elements $x_1,\ldots, x_c$ belonging to $\mathfrak{p}$. Now choose a minimal prime ideal $\mathfrak{q}$ containing the ideal $(x_1,\ldots, x_c)$; then $\codim \mathfrak{q}\leq c$ by [Theorem 7](#thm7){: data-lid="uypzt" data-relation="required" }. On the other hand, since $\mathfrak{q}\subseteq \mathfrak{p}$ and $\codim \mathfrak{p}=c$, we must have $\mathfrak{q}=\mathfrak{p}$.
 :::
 
 If in the corollary above $\codim \mathfrak{p}=0$, then $\mathfrak{p}$ is a minimal prime containing an ideal generated by $0$ elements, namely the zero ideal. By [§Associated Primes of Ideals, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7){: data-lid="bdox3" data-relation="required" }, such a prime ideal consists entirely of zerodivisors. Combining this with [Theorem 6](#thm6){: data-lid="u8770" data-relation="required" }, we conclude that if $\mathfrak{p}$ is a minimal prime ideal containing a *non-zerodivisor* $a$, then we must have $\codim \mathfrak{p}=1$.
@@ -158,11 +158,11 @@ $$\dim A/\mathfrak{p}\leq\dim A-1$$
 
 holds.
 
-Recall also that for a Noetherian local ring $(A, \mathfrak{m})$ we saw that $\dim A=\codim \mathfrak{m}$. Therefore, writing $d=\dim A=\codim \mathfrak{m}$, [Theorem 7](#thm7){: data-relation="required" } implies that $\mathfrak{m}$ must be generated by at least $d$ elements.
+Recall also that for a Noetherian local ring $(A, \mathfrak{m})$ we saw that $\dim A=\codim \mathfrak{m}$. Therefore, writing $d=\dim A=\codim \mathfrak{m}$, [Theorem 7](#thm7){: data-lid="1e8du" data-relation="required" } implies that $\mathfrak{m}$ must be generated by at least $d$ elements.
 
 ## Dimension in Graded Rings
 
-Let us now look at some properties that are useful when computing dimension in a graded ring $R = \bigoplus_{d \ge 0} R_d$. We have already defined homogeneous ideals, together with the equivalent conditions of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6){: data-relation="required" }; in particular, an element of a homogeneous ideal has all of its homogeneous components inside that ideal. We give this one more name.
+Let us now look at some properties that are useful when computing dimension in a graded ring $R = \bigoplus_{d \ge 0} R_d$. We have already defined homogeneous ideals, together with the equivalent conditions of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6){: data-lid="deh0k" data-relation="required" }; in particular, an element of a homogeneous ideal has all of its homogeneous components inside that ideal. We give this one more name.
 
 ::: Definition 9
 A prime ideal $\mathfrak{p}$ of a graded ring $R$ is called a *homogeneous prime ideal* if $\mathfrak{p}$ is a homogeneous ideal.
@@ -183,18 +183,18 @@ of $\mathfrak{p}$. That this is a graded prime ideal follows immediately from th
 Write $x$ as its homogeneous decomposition $x = \sum_{d} x_d$. Since $x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$, we have $x_0 = x - x_+ \in \mathfrak{p}$. Now $x' = x - x_0 = x_+ \in \mathfrak{p}$, and in the same way one shows that $x_1 \in \mathfrak{p}$. Inductively, each $x_d \in \mathfrak{p}$, and therefore $x \in \mathfrak{p}^\ast$.
 :::
 
-From [Proposition 10](#prop10){: data-relation="weak" } we know that any prime ideal containing the irrelevant ideal $\mathfrak{m}$ is homogeneous. Conversely, the homogeneous prime ideals not containing $\mathfrak{m}$ correspond to the points of $\operatorname{Proj} R$. We now examine an operation that associates a homogeneous prime ideal to an arbitrary prime ideal.
+From [Proposition 10](#prop10){: data-lid="w51kh" data-relation="weak" } we know that any prime ideal containing the irrelevant ideal $\mathfrak{m}$ is homogeneous. Conversely, the homogeneous prime ideals not containing $\mathfrak{m}$ correspond to the points of $\operatorname{Proj} R$. We now examine an operation that associates a homogeneous prime ideal to an arbitrary prime ideal.
 
 ::: Proposition 11
 For a prime ideal $\mathfrak{p}$ of a graded ring $R$, the ideal $\mathfrak{p}^\ast$ generated by the homogeneous elements belonging to $\mathfrak{p}$ is the largest homogeneous ideal contained in $\mathfrak{p}$, and it is also a prime ideal.
 :::
 ::: Proof
-By definition, $\mathfrak{p}^\ast$ is generated by homogeneous elements, so it is a homogeneous ideal, and since all of its generators belong to $\mathfrak{p}$, we have $\mathfrak{p}^\ast \subseteq \mathfrak{p}$. Now if $\mathfrak{a}\subseteq \mathfrak{p}$ is a homogeneous ideal, then by the third condition of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6){: data-relation="required" }, $\mathfrak{a}$ is generated by homogeneous elements, and since these generators are all homogeneous elements belonging to $\mathfrak{p}$, we have $\mathfrak{a}\subseteq \mathfrak{p}^\ast$. Thus $\mathfrak{p}^\ast$ is the largest homogeneous ideal contained in $\mathfrak{p}$.
+By definition, $\mathfrak{p}^\ast$ is generated by homogeneous elements, so it is a homogeneous ideal, and since all of its generators belong to $\mathfrak{p}$, we have $\mathfrak{p}^\ast \subseteq \mathfrak{p}$. Now if $\mathfrak{a}\subseteq \mathfrak{p}$ is a homogeneous ideal, then by the third condition of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6){: data-lid="45e14" data-relation="required" }, $\mathfrak{a}$ is generated by homogeneous elements, and since these generators are all homogeneous elements belonging to $\mathfrak{p}$, we have $\mathfrak{a}\subseteq \mathfrak{p}^\ast$. Thus $\mathfrak{p}^\ast$ is the largest homogeneous ideal contained in $\mathfrak{p}$.
 
 Now let us show that $\mathfrak{p}^\ast$ is prime. First, since $\mathfrak{p}^\ast \subseteq \mathfrak{p}\subsetneq R$, we have $\mathfrak{p}^\ast\neq R$. By the third condition of [§Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2){: data-lid="1d27h" data-relation="required" }, it then suffices to show that for any homogeneous elements $a,b\in R$ satisfying $ab\in \mathfrak{p}^\ast$, either $a\in \mathfrak{p}^\ast$ or $b\in \mathfrak{p}^\ast$. But $ab\in \mathfrak{p}^\ast\subseteq \mathfrak{p}$ and $\mathfrak{p}$ is prime, so $a\in \mathfrak{p}$ or $b\in \mathfrak{p}$; and since $a$ and $b$ are homogeneous, whichever of them lies in $\mathfrak{p}$ is a generator of $\mathfrak{p}^\ast$, and in particular an element of $\mathfrak{p}^\ast$.
 :::
 
-For an arbitrary chain of prime ideals $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$, we have $\mathfrak{p}_0^\ast \supseteq \cdots \supseteq \mathfrak{p}_s^\ast$, but these inclusions need not be strict. When $R=\mathbb{K}[\x]$ is given the standard grading, every element of $(\x-1)$ vanishes at $\x=1$, whereas the value of a homogeneous element $c\x^n$ at $\x=1$ is $c$; hence the only homogeneous element belonging to $(\x-1)$ is $0$. Thus both terms of the chain $(\x-1)\supsetneq (0)$ are sent to $(0)$. On the other hand, in a chain of prime ideals all containing the irrelevant ideal $\mathfrak{m}$, each term is already homogeneous by [Proposition 10](#prop10){: data-relation="required" }, so such a chain is itself a chain of homogeneous prime ideals.
+For an arbitrary chain of prime ideals $\mathfrak{p}_0 \supsetneq \cdots \supsetneq \mathfrak{p}_s$, we have $\mathfrak{p}_0^\ast \supseteq \cdots \supseteq \mathfrak{p}_s^\ast$, but these inclusions need not be strict. When $R=\mathbb{K}[\x]$ is given the standard grading, every element of $(\x-1)$ vanishes at $\x=1$, whereas the value of a homogeneous element $c\x^n$ at $\x=1$ is $c$; hence the only homogeneous element belonging to $(\x-1)$ is $0$. Thus both terms of the chain $(\x-1)\supsetneq (0)$ are sent to $(0)$. On the other hand, in a chain of prime ideals all containing the irrelevant ideal $\mathfrak{m}$, each term is already homogeneous by [Proposition 10](#prop10){: data-lid="5c40w" data-relation="required" }, so such a chain is itself a chain of homogeneous prime ideals.
 
 ## Regular Local Rings
 
