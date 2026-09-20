@@ -64,7 +64,7 @@ For $G$-representations $V, W$, we define new $G$-representations via the follow
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-In [Definition 3](#def3){: data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="8vat6" data-relation="weak" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
+In [Definition 3](#def3){: data-lid="qebu2" data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="8vat6" data-relation="weak" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
@@ -104,7 +104,7 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 That is, what we called a $G$-module can also be thought of, strictly speaking, as having only looked at the action induced from a $\mathbb{C}[G]$-module structure when $G\hookrightarrow \mathbb{C}[G]$ is given.
 
-Indeed, most of what we discussed above can be explained by this categorical equivalence. For example, for any $G$-representation $V$, a subrepresentation of $V$ is a $G$-submodule of $V$ (more precisely, a $\mathbb{C}[G]$-submodule). Also, the tensor product of [Definition 3](#def3){: data-relation="required" } is reasonable: in general, for a $\mathbb{K}$-algebra $A$ equipped with a coproduct $\Delta:A\rightarrow A\otimes A$ and two $A$-modules $M,N$, to define their tensor product one must use $\Delta$ via
+Indeed, most of what we discussed above can be explained by this categorical equivalence. For example, for any $G$-representation $V$, a subrepresentation of $V$ is a $G$-submodule of $V$ (more precisely, a $\mathbb{C}[G]$-submodule). Also, the tensor product of [Definition 3](#def3){: data-lid="3w66x" data-relation="required" } is reasonable: in general, for a $\mathbb{K}$-algebra $A$ equipped with a coproduct $\Delta:A\rightarrow A\otimes A$ and two $A$-modules $M,N$, to define their tensor product one must use $\Delta$ via
 
 $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (A\otimes M)\otimes (A\otimes N)\rightarrow M\otimes N$$
 
@@ -112,7 +112,7 @@ and the coproduct $A\rightarrow A\otimes A$ used here in the case of $\mathbb{C}
 
 $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
-Similarly, the $\Hom$ defined in [Definition 3](#def3){: data-relation="required" } is adjoint to this $\otimes$, and it is for this reason that the $G$-actions in [Definition 3](#def3){: data-relation="required" }, which look somewhat artificial, arise.
+Similarly, the $\Hom$ defined in [Definition 3](#def3){: data-lid="lkxfx" data-relation="required" } is adjoint to this $\otimes$, and it is for this reason that the $G$-actions in [Definition 3](#def3){: data-lid="2oqok" data-relation="required" }, which look somewhat artificial, arise.
 
 In particular, since subrepresentations of $G$ and $\mathbb{C}[G]$-submodules are the same thing, $V$ being an irreducible representation is equivalent to $V$ being a *simple* $\mathbb{C}[G]$-module.
 
@@ -172,7 +172,7 @@ Earlier we examined the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-What [Corollary 7](#cor7){: data-relation="required" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" }). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-relation="required" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11) we know that a decomposition into simple modules
+What [Corollary 7](#cor7){: data-lid="jp86p" data-relation="required" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" }). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-lid="vrt42" data-relation="required" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11) we know that a decomposition into simple modules
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
