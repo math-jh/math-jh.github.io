@@ -86,7 +86,7 @@ In particular, for any $y_0, y_1\in E$, the following map
 
 $$\Hom_{\Pi_1(E)}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
-is well-defined. If $p(y_0)=p(y_1)=x$, then the codomain of ($\ast$) is the fundamental group $\pi_1(B,x)$, and in particular, when $y_0=y_1$, ($\ast$) becomes the group homomorphism $\pi_1(E,y_0)\rightarrow \pi_1(B,x)$. If $E$ carries all the information about the fundamental group (or groupoid) of $B$, then at least this map should be surjective.
+is well-defined. If $p(y_0)=p(y_1)=x$, then the codomain of ($\ast$) is the fundamental group $\pi_1(B,x)$, and in particular, when $y_0=y_1$, ($\ast$) becomes the group homomorphism $\pi_1(E,y_0)\rightarrow \pi_1(B,x)$.
 
 ::: Definition 5
 Fix a continuous map $p:E\rightarrow B$. Then for any continuous map $f:X \rightarrow B$, a *lifting* of $f$ with respect to $p$ means a map satisfying the equation $p\circ\widetilde{f}=f$, namely $\widetilde{f}:X\rightarrow E$.
