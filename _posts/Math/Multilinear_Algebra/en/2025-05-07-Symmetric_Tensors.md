@@ -119,7 +119,7 @@ holds. Now consider the tower of subgroups of $S_{p_1+\cdots+p_n}$
 
 $$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}.$$
 
-Then by [Proposition 2](#prop2){: data-relation="required" },
+Then by [Proposition 2](#prop2){: data-lid="pf1re" data-relation="required" },
 
 $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
 
@@ -143,7 +143,7 @@ and in particular for $n=3$ this shows the associativity of $\Sym(M)$. For commu
 
 $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
-and apply the first result of [Proposition 2](#prop2){: data-relation="required" }. The unit is of course $1\in \Sym^0(M)$.
+and apply the first result of [Proposition 2](#prop2){: data-lid="whrg3" data-relation="required" }. The unit is of course $1\in \Sym^0(M)$.
 :::
 
 For any $x\in M$ and $k\in \mathbb{N}$, define
