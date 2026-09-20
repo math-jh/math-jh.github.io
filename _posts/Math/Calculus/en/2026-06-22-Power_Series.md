@@ -57,9 +57,9 @@ We write the power series converging for all real numbers seen above as
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
-In particular, substituting $x = 1$ gives $e = \sum 1/n!$, and this number coincides with the natural constant defined as the limit $\lim(1 + 1/n)^n$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-relation="required" }.
+In particular, substituting $x = 1$ gives $e = \sum 1/n!$, and this number coincides with the natural constant defined as the limit $\lim(1 + 1/n)^n$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-lid="9zvbn" data-relation="required" }.
 
-The proof is as follows. Let $L = \lim(1+1/n)^n$ be the limit value and $s_m = \sum 1/k!$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-relation="required" } above, we already showed by the binomial theorem that
+The proof is as follows. Let $L = \lim(1+1/n)^n$ be the limit value and $s_m = \sum 1/k!$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-lid="2rcxn" data-relation="required" } above, we already showed by the binomial theorem that
 
 $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 

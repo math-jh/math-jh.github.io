@@ -87,7 +87,7 @@ Adding and subtracting the same term in the difference quotient gives
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2){: data-lid="hzft9" data-relation="required" }), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } the sum converges to $f'(a)g(a) + f(a)g'(a)$.
+As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2){: data-lid="hzft9" data-relation="required" }), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="edoso" data-relation="required" } the sum converges to $f'(a)g(a) + f(a)g'(a)$.
 :::
 
 The most widely used rule is the derivative of a composite function.
@@ -149,7 +149,7 @@ Now if $y \in J$ with $y \neq b$, then $x = f^{-1}(y)$ differs from $a = f^{-1}(
 
 $$\frac{f^{-1}(y) - f^{-1}(b)}{y - b} = \frac{x - a}{f(x) - f(a)} = \left(\frac{f(x)-f(a)}{x-a}\right)^{-1}$$
 
-As $y \rightarrow b$, continuity of $f^{-1}$ gives $x \rightarrow a$, and the expression in parentheses on the right converges to $f'(a)$, so by $f'(a) \neq 0$ and part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-relation="required" } the above difference quotient converges to $1/f'(a)$. That is, $f^{-1}$ is differentiable at $b$ and $(f^{-1})'(b) = 1/f'(a)$.
+As $y \rightarrow b$, continuity of $f^{-1}$ gives $x \rightarrow a$, and the expression in parentheses on the right converges to $f'(a)$, so by $f'(a) \neq 0$ and part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="bpd9d" data-relation="required" } the above difference quotient converges to $1/f'(a)$. That is, $f^{-1}$ is differentiable at $b$ and $(f^{-1})'(b) = 1/f'(a)$.
 :::
 
 With this we can also proceed with derivatives of the inverses of the functions examined above. For instance, for the inverse $\ln$ of $e^x$, since $(e^x)' = e^x$ we have $(\ln y)' = 1/e^{\ln y} = 1/y$, and for the inverse $\arcsin$ of $\sin$ restricted to $(-\pi/2, \pi/2)$, since $f'(x) = \cos x = \sqrt{1 - \sin^2 x} > 0$ we have
