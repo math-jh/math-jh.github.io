@@ -44,7 +44,7 @@ Under the assumption that the interval is connected, the integration constant $C
 
 ## Properties and Examples of Indefinite Integrals
 
-Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules){: data-relation="weak" } we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
+Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="vu214" data-relation="weak" } we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
 
 ::: Proposition 3 (Linearity of indefinite integration)
 If $f$ and $g$ have antiderivatives and $a, b$ are constants, then
@@ -61,7 +61,7 @@ $$(aF + bG)' = aF' + bG' = af + bg,$$
 so $aF + bG$ is an antiderivative of $af + bg$.
 :::
 
-Reversing the derivative formulas for various functions from [§Differentiation](/en/math/calculus/differentiation_rules){: data-relation="required" } now yields the following basic formulas. That is, differentiating the right-hand side of each formula recovers the integrand.
+Reversing the derivative formulas for various functions from [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="drxbj" data-relation="required" } now yields the following basic formulas. That is, differentiating the right-hand side of each formula recovers the integrand.
 
 $$\int x^r\dd{x} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\dd{x} = \ln\lvert x\rvert + C,$$
 
@@ -75,7 +75,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 or splitting the fraction $(x^2+1)/x$ into $x + 1/x$ so that each term matches one of the formulas above.
 
-Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-relation="required" } and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-relation="required" }.
+Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="vhmth" data-relation="required" } and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-lid="4c97f" data-relation="required" }.
 
 ::: Theorem 4 (Integration by substitution)
 If $f$ has an antiderivative on an interval $I$, and $g$ is differentiable with $g(x) \in I$ for all $x$, then
@@ -85,7 +85,7 @@ $$\int f(g(x)) g'(x) \dd{x} = \int f(u) \dd{u} \quad (u = g(x)).$$
 :::
 
 ::: Proof
-Let $F$ be an antiderivative of $f$. Then by [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-relation="required" },
+Let $F$ be an antiderivative of $f$. Then by [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="lftt1" data-relation="required" },
 
 $$\frac{d}{\dd{x}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
 
@@ -110,7 +110,7 @@ $$\int u v' \dd{x} = uv - \int u' v \dd{x}.$$
 :::
 
 ::: Proof
-By [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-relation="required" }, $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$, and integrating both sides gives $\int (uv)' \dd{x} = uv$, from which the claim follows.
+By [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-lid="wys3l" data-relation="required" }, $(uv)' = u'v + uv'$, so $uv' = (uv)' - u'v$, and integrating both sides gives $\int (uv)' \dd{x} = uv$, from which the claim follows.
 :::
 
 The key is to choose $u$ as the factor that simplifies upon differentiation, and $v'$ as the factor that can be integrated. For example, in $\int x e^x \dd{x}$ we set $u = x$ to obtain $xe^x - e^x + C$, while for functions such as logarithms or inverse trigonometric functions whose derivatives actually become simpler, we place them in the $u$ position with $v' = 1$ (giving $\int \ln x \dd{x} = x\ln x - x + C$). There are also cases where integration by parts does not simplify the integrand but returns to the original integral; then we treat the original integral as an unknown and solve algebraically.

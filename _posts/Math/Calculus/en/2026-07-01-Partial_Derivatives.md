@@ -127,7 +127,7 @@ If $f$ is differentiable at a point $\mathbf{a}$, then the vector $\mathbf{n}$ f
 :::
 
 ::: Proof
-Setting $\mathbf{h} = t \mathbf{e}_i$ in the limit of [Definition 3](#def3){: data-relation="required" }, we have $\lVert \mathbf{h}\rVert = \lvert t\rvert$, so
+Setting $\mathbf{h} = t \mathbf{e}_i$ in the limit of [Definition 3](#def3){: data-lid="l6zln" data-relation="required" }, we have $\lVert \mathbf{h}\rVert = \lvert t\rvert$, so
 
 $$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0.$$
 
@@ -138,7 +138,7 @@ $$\lim_{t\rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} 
 and the very existence of the limit on the left-hand side is the definition of the partial derivative, so $\frac{\partial f}{\partial x_i}(\mathbf{a})$ exists and its value is $n_i$. Collecting this for all $i$ shows that $\nabla f(\mathbf{a})$ is well defined and $\mathbf{n} = \nabla f(\mathbf{a})$.
 :::
 
-Note here that we have explicitly separated [Definition 3](#def3){: data-relation="required" } and [Proposition 4](#prop4){: data-relation="required" }. [Proposition 4](#prop4){: data-relation="required" } says that *if* the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must *not* interpret the converse to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that if each partial derivative is continuous, then $f$ is differentiable.
+Note here that we have explicitly separated [Definition 3](#def3){: data-lid="skf2q" data-relation="required" } and [Proposition 4](#prop4){: data-lid="g60rs" data-relation="required" }. [Proposition 4](#prop4){: data-lid="ddrsx" data-relation="required" } says that *if* the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must *not* interpret the converse to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that if each partial derivative is continuous, then $f$ is differentiable.
 
 ::: Proposition 5
 If all partial derivatives of $f$ exist in a neighborhood of $\mathbf{a}$ and are all continuous at $\mathbf{a}$, then $f$ is differentiable at $\mathbf{a}$.
@@ -156,7 +156,7 @@ and subtracting $\nabla f(a,b)\cdot(h,k) = f_x(a,b)h + f_y(a,b)k$ gives
 
 $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) - f_x(a,b)\bigr)h + \bigl(f_y(a, b+\theta_2 k) - f_y(a,b)\bigr)k.$$
 
-Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3){: data-relation="required" } holds. That is, $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
+Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3){: data-lid="0xf99" data-relation="required" } holds. That is, $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
 :::
 
 Because this situation requiring both the existence and continuity of partial derivatives will appear repeatedly, we borrow the name from [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-lid="oi7c7" data-relation="weak" } and carry it over to the multivariable setting. That is, if all partial derivatives of order $k$ and below exist and are continuous on some region, we say $f$ is of *class $C^k$* on that region; restated, [Proposition 5](#prop5){: data-lid="fk8dx" data-relation="weak" } says that $C^1$ functions are differentiable.
