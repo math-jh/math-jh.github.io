@@ -7756,6 +7756,13 @@ G:
   see:
   - label: Monoid
     id: monoid
+- id: group_action
+  en: group action
+  ko: 군 작용
+  primary: en
+  defs:
+  - label: '[대수적 구조] §군의 작용'
+    url: /ko/math/algebraic_structures/group_actions
 - id: group_algebra
   en: group algebra
   ko: 군대수
@@ -12974,6 +12981,13 @@ N:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: normalizer
+  en: normalizer
+  ko: 정규화 부분군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §군의 작용'
+    url: /ko/math/algebraic_structures/group_actions
 - id: novikov_ring
   en: Novikov ring
   ko: 노비코프 환
@@ -18039,6 +18053,13 @@ S:
 - id: sylow_p_-subgroup
   en: Sylow $p$-subgroup
   ko: 실로우 $p$-부분군
+  primary: en
+  defs:
+  - label: '[군론] §실로우 정리'
+    url: /ko/math/group_theory/Sylow_theorems
+- id: sylow_theorem
+  en: Sylow theorem
+  ko: 실로우 정리
   primary: en
   defs:
   - label: '[군론] §실로우 정리'
