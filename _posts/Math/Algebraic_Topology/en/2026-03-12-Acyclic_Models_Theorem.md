@@ -14,7 +14,7 @@ translated_at: 2026-08-18T15:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-18T15:45:04+00:00
 ---
-As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology){: data-lid="i1fc7" data-relation="weak" }, the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" } in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" } but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-relation="weak" }.
+As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology){: data-lid="i1fc7" data-relation="weak" }, the acyclic models theorem generalizes the original proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-lid="owu2o" data-relation="weak" } in a systematic way, and it can be applied not only to the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-lid="s3j5w" data-relation="weak" } but also to a variety of other situations. In this post, we prove the acyclic models theorem and present several corollaries, including the proof of [§Cohomology, ⁋Theorem 9](/en/math/algebraic_topology/cohomology#thm9){: data-lid="e0tjj" data-relation="weak" }.
 
 ## Category with models
 
