@@ -78,7 +78,7 @@ holds. This follows because $D$ being effective gives a short exact sequence by 
 
 $$0 \rightarrow \mathcal{O}_S(C) \rightarrow \mathcal{O}_S(C+D) \rightarrow \mathcal{O}_S(C+D)\vert_D \rightarrow 0$$
 
-and additivity of the Euler characteristic yields $\rchi(\mathcal{O}_S(C+D)\vert_D) = \rchi(\mathcal{O}_S(C+D)) - \rchi(\mathcal{O}_S(C))$. Indeed, subtracting the case $C=0$ makes the right-hand side exactly $C \cdot D$ by [Definition 1](#def1){: data-lid="rsree" data-relation="required" }, while applying [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-relation="required" reviewed="" } to line bundles on $D$ gives
+and additivity of the Euler characteristic yields $\rchi(\mathcal{O}_S(C+D)\vert_D) = \rchi(\mathcal{O}_S(C+D)) - \rchi(\mathcal{O}_S(C))$. Indeed, subtracting the case $C=0$ makes the right-hand side exactly $C \cdot D$ by [Definition 1](#def1){: data-lid="rsree" data-relation="required" }, while applying [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="qzitc" data-relation="required" reviewed="" } to line bundles on $D$ gives
 
 $$\big(\deg(\mathcal{O}_S(C+D)\vert_D) + 1 - g(D)\big) - \big(\deg(\mathcal{O}_S(D)\vert_D) + 1 - g(D)\big) = \deg(\mathcal{O}_S(C)\vert_D)$$
 
@@ -101,7 +101,7 @@ Taking degrees of both sides,
 
 $$\deg(\omega_D) = \deg(\omega_S\vert_D) + \deg(\mathcal{O}_D(D))$$
 
-We previously derived from [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-relation="required" reviewed="" } that $\deg(\omega_D)=2g-2$, and it remains only to interpret the two terms on the right as intersection numbers. First, since the divisor corresponding to $\omega_S$ is the canonical divisor $K_S$, we have $\omega_S\vert_D = \mathcal{O}_S(K_S)\vert_D$, and substituting $C=K_S$ into the earlier equality gives $\deg(\omega_S\vert_D) = K_S \cdot D$. Similarly $\mathcal{O}_D(D) = \mathcal{O}_S(D)\vert_D$, so substituting $C=D$ yields $\deg(\mathcal{O}_D(D)) = D^2$. The latter is also the degree of the normal bundle $\mathcal{N}_{D/S}$, which geometrically measures how much $D$ meets itself inside $S$. Combining these,
+We previously derived from [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="i83nq" data-relation="required" reviewed="" } that $\deg(\omega_D)=2g-2$, and it remains only to interpret the two terms on the right as intersection numbers. First, since the divisor corresponding to $\omega_S$ is the canonical divisor $K_S$, we have $\omega_S\vert_D = \mathcal{O}_S(K_S)\vert_D$, and substituting $C=K_S$ into the earlier equality gives $\deg(\omega_S\vert_D) = K_S \cdot D$. Similarly $\mathcal{O}_D(D) = \mathcal{O}_S(D)\vert_D$, so substituting $C=D$ yields $\deg(\mathcal{O}_D(D)) = D^2$. The latter is also the degree of the normal bundle $\mathcal{N}_{D/S}$, which geometrically measures how much $D$ meets itself inside $S$. Combining these,
 
 $$2g(D) - 2 = D \cdot K_S + D^2$$
 
@@ -127,7 +127,7 @@ additivity of the Euler characteristic gives
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \rchi(\mathcal{O}_D(D))$$
 
-Since $\mathcal{O}_D(D)$ is a line bundle on $D$, by [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-relation="required" reviewed="" },
+Since $\mathcal{O}_D(D)$ is a line bundle on $D$, by [§The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="w854z" data-relation="required" reviewed="" },
 
 $$\rchi(\mathcal{O}_D(D)) = D^2 + 1 - g(D)$$
 
@@ -165,11 +165,11 @@ Fix the hyperplane class $H$ in $\mathbb{P}^2$; we know
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
-([§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-lid="e71wa" data-relation="required" }, [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="required" reviewed="" }). Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
+([§Canonical Line Bundle, §§Canonical Bundle of $\mathbb{P}^n$](/en/math/algebraic_varieties/canonical_bundle#canonical-bundle-of-mathbbpn){: data-lid="e71wa" data-relation="required" }, [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-lid="xg5w6" data-relation="required" reviewed="" }). Since any two lines in $\mathbb{P}^2$ generally meet at one point, the self-intersection number of $H$ is $1$, and thus for any divisor $D = dH$,
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
-holds. That this is indeed true follows from [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-relation="weak" reviewed="" }. In particular, for $d \ge 0$ we know $h^0 = \binom{d+2}{2}$ and $h^1 = h^2 = 0$, which gives a direct illustration of the vanishing of $h^1, h^2$ mentioned above.
+holds. That this is indeed true follows from [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3){: data-lid="37hxy" data-relation="weak" reviewed="" }. In particular, for $d \ge 0$ we know $h^0 = \binom{d+2}{2}$ and $h^1 = h^2 = 0$, which gives a direct illustration of the vanishing of $h^1, h^2$ mentioned above.
 :::
 
 ::: Example 6 (Blow-up of $\mathbb{P}^2$)
