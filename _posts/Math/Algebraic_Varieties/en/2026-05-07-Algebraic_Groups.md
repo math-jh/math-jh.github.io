@@ -107,7 +107,7 @@ Conversely, given a comodule structure $V \rightarrow V \otimes A$, for each $g 
 
 ## Algebraic Tori and Weight Decomposition
 
-Among algebraic groups, one of the objects we encounter most frequently is a torus $T$. We have already examined the one-dimensional torus. ([Example 2](#ex2){: data-relation="weak" reviewed="" })
+Among algebraic groups, one of the objects we encounter most frequently is a torus $T$. We have already examined the one-dimensional torus. ([Example 2](#ex2){: data-lid="1pg4d" data-relation="weak" reviewed="" })
 
 ::: Definition 9
 An *algebraic torus* is an algebraic group isomorphic to a finite direct sum of copies of $\mathbb{G}_m = \mathbb{C}^\ast$. That is, there exists $n \ge 1$ such that
