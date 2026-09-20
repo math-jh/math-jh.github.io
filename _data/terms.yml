@@ -19021,6 +19021,13 @@ T:
   see:
   - label: Local trivialization
     id: local_trivialization
+- id: truncation
+  en: truncation
+  ko: 절단
+  primary: ko
+  defs:
+  - label: '[호몰로지 대수학] §호몰로지'
+    url: /ko/math/homological_algebra/homology
 - id: twisted_inverse_image
   en: twisted inverse image
   ko: 비틀린 역상
