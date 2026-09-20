@@ -88,7 +88,7 @@ First, the last result of the above proposition shows that for $Z(\mathfrak{a}\m
 
 More importantly, by the above proposition, if we declare the affine algebraic sets defined on $\mathbb{A}^n$ to be closed sets, then the conditions of [\[Topology\] §Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-lid="s427t" data-relation="required" } are all satisfied, and thus a topology on $\mathbb{A}^n$ is uniquely determined. We call this the *Zariski topology*. By definition, any affine variety $X$ is a closed subset of a suitable affine space $\mathbb{A}^n$, and we can define the topology on $X$ via the subspace topology induced from $\mathbb{A}^n$.
 
-As a special example, consider the Zariski topology on $\mathbb{A}^1$: since any element of $\mathbb{K}$ is the zero set of the linear polynomial $\x-x$, any singleton is closed, and therefore any finite set is closed. However, any non-zero element of $\mathbb{K}[\x]$ has at most finitely many roots, so in this topology (provided $\mathbb{K}$ is not finite), the only closed set with infinitely many elements is $\mathbb{K}$ itself. That is, the Zariski topology on $\mathbb{A}^1$ is the cofinite topology, from which we observe that the Zariski topology need not be Hausdorff. More generally, an irreducible space cannot be Hausdorff unless it is a one-point space, and since affine varieties are all irreducible by our definition, no affine variety is a Hausdorff space. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" reviewed="" })
+As a special example, consider the Zariski topology on $\mathbb{A}^1$: since any element of $\mathbb{K}$ is the zero set of the linear polynomial $\x-x$, any singleton is closed, and therefore any finite set is closed. However, any non-zero element of $\mathbb{K}[\x]$ has at most finitely many roots, so in this topology (provided $\mathbb{K}$ is not finite), the only closed set with infinitely many elements is $\mathbb{K}$ itself. That is, the Zariski topology on $\mathbb{A}^1$ is the cofinite topology, from which we observe that the Zariski topology need not be Hausdorff. More generally, an irreducible space cannot be Hausdorff unless it is a one-point space, and since affine varieties are all irreducible by our definition, no affine variety is a Hausdorff space. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" })
 
 Now let us examine the open sets of the Zariski topology.
 
@@ -147,7 +147,7 @@ $$(x_1,\ldots, x_n,y)\mapsto (x_1,\ldots, x_n)$$
 
 That this is a homeomorphism is obvious.
 
-Finally, let us show that $Z(\mathfrak{b})$ is irreducible. By assumption, $D(f)\cap X$ is a non-empty open subset of $X$. Then any two non-empty open sets of $D(f)\cap X$ are also non-empty open sets of $X$, so by the irreducibility of $X$ and the second condition of [\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="dtiba" data-relation="required" reviewed="" }, they intersect. That is, $D(f)\cap X$ is irreducible, and by the above homeomorphism, $Z(\mathfrak{b})$ is also irreducible.
+Finally, let us show that $Z(\mathfrak{b})$ is irreducible. By assumption, $D(f)\cap X$ is a non-empty open subset of $X$. Then any two non-empty open sets of $D(f)\cap X$ are also non-empty open sets of $X$, so by the irreducibility of $X$ and the second condition of [\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="dtiba" data-relation="required" }, they intersect. That is, $D(f)\cap X$ is irreducible, and by the above homeomorphism, $Z(\mathfrak{b})$ is also irreducible.
 :::
 
 At this point, we should note that our definition of an affine variety strictly depends on the ambient space $\mathbb{A}^n$. For example, the principal open set $D(\x)$ of $\mathbb{A}^1$ is, by the above proposition, an affine variety. However, we have already seen that the Zariski topology on $\mathbb{A}^1$ is the cofinite topology, and therefore $D(\x)$ cannot be defined as the zero set of polynomials in $\mathbb{K}[\x]$. In fact, looking closely at the proof of [Proposition 7](#prop7){: data-lid="9f7gm" data-relation="required" }, the fact that $D(\x)$ is an affine variety is obtained through the isomorphism
@@ -158,7 +158,7 @@ This issue may confuse us somewhat when we understand regular functions, so we w
 
 ## Nullstellensatz
 
-The $Z$ examined in [Proposition 4](#prop4){: data-lid="moanv" data-relation="weak" reviewed="" } sends algebraic objects, that is, polynomials in $\mathbb{K}[\x_1,\ldots, \x_n]$, to geometric objects, that is, the zero sets defined by these polynomials. Conversely, we can also take a geometric object and assign algebraic objects to it.
+The $Z$ examined in [Proposition 4](#prop4){: data-lid="moanv" data-relation="weak" } sends algebraic objects, that is, polynomials in $\mathbb{K}[\x_1,\ldots, \x_n]$, to geometric objects, that is, the zero sets defined by these polynomials. Conversely, we can also take a geometric object and assign algebraic objects to it.
 
 ::: Definition 8
 For an arbitrary subset $X \subseteq \mathbb{A}^n$, we define the subset $I(X)$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ as
@@ -198,15 +198,15 @@ holds.
 [\[Commutative Algebra\] §Nullstellensatz, ⁋Proposition 6](/en/math/commutative_algebra/nullstellensatz#prop6){: data-lid="qd91n" data-relation="required" }
 :::
 
-Broadly speaking, this could be said to be a somewhat anticipated result, since from condition 5 of [Proposition 4](#prop4){: data-lid="ejpub" data-relation="weak" reviewed="" } we already have
+Broadly speaking, this could be said to be a somewhat anticipated result, since from condition 5 of [Proposition 4](#prop4){: data-lid="ejpub" data-relation="weak" } we already have
 
 $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
-On the other hand, since $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$ holds for any ideal $\mathfrak{a}$, we know from the third condition of [Proposition 4](#prop4){: data-lid="5uvbh" data-relation="required" reviewed="" } that $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$. But by definition, for any $f\in \sqrt{\mathfrak{a}}$, there exists a suitable $r$ such that $f^r\in \mathfrak{a}$. Therefore, if $x\in Z(\mathfrak{a})$, then we must have $x\in Z(\sqrt{\mathfrak{a}})$, and from this we know that $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$. That is, the radical of an ideal can be thought of as giving the standard method of obtaining the ideal when representing an affine algebraic set as the zero set of an ideal, and to distinguish the difference between them, one can define *schemes*.
+On the other hand, since $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$ holds for any ideal $\mathfrak{a}$, we know from the third condition of [Proposition 4](#prop4){: data-lid="5uvbh" data-relation="required" } that $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$. But by definition, for any $f\in \sqrt{\mathfrak{a}}$, there exists a suitable $r$ such that $f^r\in \mathfrak{a}$. Therefore, if $x\in Z(\mathfrak{a})$, then we must have $x\in Z(\sqrt{\mathfrak{a}})$, and from this we know that $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$. That is, the radical of an ideal can be thought of as giving the standard method of obtaining the ideal when representing an affine algebraic set as the zero set of an ideal, and to distinguish the difference between them, one can define *schemes*.
 
 Henceforth, to use [Theorem 10](#thm10){: data-lid="ru4yp" data-relation="required" } freely, we will assume unless otherwise mentioned that $\mathbb{K}$ is an algebraically closed field.
 
-Now, combining the fifth result of [Proposition 4](#prop4){: data-lid="goe6x" data-relation="required" reviewed="" } with the above result, we can see that for $Z(\mathfrak{a})$ to be an affine variety, $\sqrt{\mathfrak{a}}$ must be a prime ideal. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 10](/en/math/commutative_algebra/basic_notions#def10){: data-lid="9wsx8" data-relation="required" }) That is, there is a Galois correspondence between the irreducible closed algebraic sets of $\mathbb{A}^n$ and the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$.
+Now, combining the fifth result of [Proposition 4](#prop4){: data-lid="goe6x" data-relation="required" } with the above result, we can see that for $Z(\mathfrak{a})$ to be an affine variety, $\sqrt{\mathfrak{a}}$ must be a prime ideal. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 10](/en/math/commutative_algebra/basic_notions#def10){: data-lid="9wsx8" data-relation="required" }) That is, there is a Galois correspondence between the irreducible closed algebraic sets of $\mathbb{A}^n$ and the prime ideals of $\mathbb{K}[\x_1,\ldots, \x_n]$.
 
 ## Coordinate Rings and Regularity
 
@@ -259,7 +259,7 @@ Keeping this in mind, the following definition can also be understood.
 For an arbitrary affine variety $V\subseteq \mathbb{A}^k$ and a function $f:V\rightarrow \mathbb{K}$ defined on it, we say that $f$ is *regular* at a point $p\in V$ if there exist a suitable open neighborhood $D(h)$ of $p$ and a polynomial $g$ such that $f=g/h$ holds on $U$, where $h$ is a polynomial that does not vanish on $U=D(h)$.
 :::
 
-Then under this definition, it would be natural to call a function that is regular at every point a regular function. When $\mathbb{K}$ is algebraically closed, the proof that these two definitions [Definition 11](#def11){: data-lid="mzasp" data-relation="required" reviewed="" } and [Definition 14](#def14){: data-lid="it7y1" data-relation="required" reviewed="" } are equivalent can be somewhat tedious, but since the essential content is contained in the example examined above, we will omit the proof. The key to the proof is to obtain [Definition 11](#def11){: data-lid="qkry5" data-relation="required" reviewed="" } from [Definition 14](#def14){: data-lid="abi7t" data-relation="required" reviewed="" }, which is achieved by gluing together the functions that appear in the form $g/h$ on each $D(h)$.
+Then under this definition, it would be natural to call a function that is regular at every point a regular function. When $\mathbb{K}$ is algebraically closed, the proof that these two definitions [Definition 11](#def11){: data-lid="mzasp" data-relation="required" } and [Definition 14](#def14){: data-lid="it7y1" data-relation="required" } are equivalent can be somewhat tedious, but since the essential content is contained in the example examined above, we will omit the proof. The key to the proof is to obtain [Definition 11](#def11){: data-lid="qkry5" data-relation="required" } from [Definition 14](#def14){: data-lid="abi7t" data-relation="required" }, which is achieved by gluing together the functions that appear in the form $g/h$ on each $D(h)$.
 
 ## Morphisms Between Affine Varieties
 
