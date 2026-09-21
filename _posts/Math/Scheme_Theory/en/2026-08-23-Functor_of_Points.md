@@ -65,7 +65,7 @@ $$\mathbb{A}^1(T)=\Hom_\Sch(T, \Spec \mathbb{Z}[\x])\cong \Hom_\cRing(\mathbb{Z}
 The naturality of this correspondence, that is, the fact that for any $\tau: T' \rightarrow T$ the restriction map $\Gamma(T, \mathcal{O}_T) \rightarrow \Gamma(T', \mathcal{O}_{T'})$ commutes with the correspondence above, follows from the naturality of the adjunction.
 :::
 
-In the language introduced in the previous section, $\mathbb{A}^1$ represents the global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$. The universal element is the one corresponding to the identity morphism $\id_{\mathbb{A}^1}$ inside $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$, and chasing through the correspondence of [Proposition 1](#prop1){: data-relation="required" } above, we see that it corresponds to $\x$ inside $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$.
+In the language introduced in the previous section, $\mathbb{A}^1$ represents the global section functor $T\mapsto\Gamma(T,\mathcal{O}_T)$. The universal element is the one corresponding to the identity morphism $\id_{\mathbb{A}^1}$ inside $h_{\mathbb{A}^1}(\mathbb{A}^1)=\Hom_\Sch(\mathbb{A}^1,\mathbb{A}^1)$, and chasing through the correspondence of [Proposition 1](#prop1){: data-lid="ylmcb" data-relation="required" } above, we see that it corresponds to $\x$ inside $\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})=\mathbb{Z}[\x]$.
 
 Now any scheme morphism $f:T\rightarrow\mathbb{A}^1$ defines, via the pullback map $f^\ast:\Gamma(\mathbb{A}^1,\mathcal{O}_{\mathbb{A}^1})\rightarrow\Gamma(T,\mathcal{O}_T)$, a (global) regular function $f^\ast \x$ on $T$. Conversely, given any global regular function $a\in\Gamma(T,\mathcal{O}_T)$, there is a ring homomorphism $\mathbb{Z}[\x]\rightarrow\Gamma(T,\mathcal{O}_T)$ determined by $\x\mapsto a$, and this very choice gives a unique scheme morphism $f:T\rightarrow\mathbb{A}^1$, which satisfies $f^\ast\x=a$. Generalizing this to $n$ generators, we obtain the following.
 
@@ -77,7 +77,7 @@ $$\mathbb{A}^n(T)\cong \Gamma(T, \mathcal{O}_T)^n$$
 That is, a $T$-point of $\mathbb{A}^n$ is an $n$-tuple of regular functions on $T$.
 :::
 ::: Proof
-Exactly as in the proof of [Proposition 1](#prop1){: data-relation="required" }, a ring homomorphism out of the free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$ freely chooses the images $a_i\in \Gamma(T, \mathcal{O}_T)$ of the generators $\x_i$, so we obtain
+Exactly as in the proof of [Proposition 1](#prop1){: data-lid="sdmh0" data-relation="required" }, a ring homomorphism out of the free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$ freely chooses the images $a_i\in \Gamma(T, \mathcal{O}_T)$ of the generators $\x_i$, so we obtain
 
 $$\mathbb{A}^n(T)\cong \Hom_\cRing(\mathbb{Z}[\x_1,\ldots, \x_n], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)^n$$
 
@@ -93,7 +93,7 @@ $$\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$$
 Here $\Gamma(T, \mathcal{O}_T)^\times$ is the group of units of the ring $\Gamma(T, \mathcal{O}_T)$.
 :::
 ::: Proof
-Since $\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$, ring homomorphisms $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$ are in bijection with those for which the image $a$ of $\t$ is invertible. Indeed, by the universal property of localization, ring homomorphisms out of $\mathbb{Z}[\t]_\t$ correspond exactly to those $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$ sending $\t$ to a unit, and as we saw in [Proposition 1](#prop1){: data-relation="required" }, this amounts to choosing one unit $a\in \Gamma(T, \mathcal{O}_T)^\times$.
+Since $\mathbb{Z}[\t, \t^{-1}]=\mathbb{Z}[\t]_\t$, ring homomorphisms $\mathbb{Z}[\t, \t^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$ are in bijection with those for which the image $a$ of $\t$ is invertible. Indeed, by the universal property of localization, ring homomorphisms out of $\mathbb{Z}[\t]_\t$ correspond exactly to those $\mathbb{Z}[\t] \rightarrow \Gamma(T, \mathcal{O}_T)$ sending $\t$ to a unit, and as we saw in [Proposition 1](#prop1){: data-lid="92m37" data-relation="required" }, this amounts to choosing one unit $a\in \Gamma(T, \mathcal{O}_T)^\times$.
 :::
 
 Using this, one can obtain projective space from affine space. To this end, consider the open subscheme $U$ obtained by removing the origin from $\mathbb{A}^{n+1}$. First, define the scheme morphism
@@ -216,7 +216,7 @@ That is, this correspondence defines a contravariant functor
 
 $$F_{n+1}:\Sch^\op\rightarrow\Set$$
 
-From this perspective, [Theorem 5](#thm5){: data-relation="required" } says that there exists a bijection
+From this perspective, [Theorem 5](#thm5){: data-lid="3kjbs" data-relation="required" } says that there exists a bijection
 
 $$\mathbb{P}^n(T)\cong F_{n+1}(T)$$
 
@@ -236,7 +236,7 @@ $$\Gr(k,n)(T)\cong F_{k,n}(T)$$
 
 natural in every scheme $T$.
 
-When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar S\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" data-relation="weak" }, which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5){: data-relation="required" }.
+When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar S\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" data-relation="weak" }, which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5){: data-lid="hdz1p" data-relation="required" }.
 
 :::
 
@@ -244,7 +244,7 @@ Showing that such a functorial definition is representable is the starting point
 
 ## Fiber Products as Functors
 
-The functor of points perspective fits well with the fiber product defined in [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-relation="required" }. The universal property of the fiber product $X\times_S Y$ tells us directly, at the functor level, how its $T$-points are determined for any test scheme $T$.
+The functor of points perspective fits well with the fiber product defined in [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-lid="gyhpj" data-relation="required" }. The universal property of the fiber product $X\times_S Y$ tells us directly, at the functor level, how its $T$-points are determined for any test scheme $T$.
 
 ::: Proposition 7
 Suppose scheme morphisms $X \rightarrow S$ and $Y \rightarrow S$ are given. Then for any scheme $T$, there exists a natural bijection
@@ -254,7 +254,7 @@ $$(X\times_S Y)(T)\cong X(T)\times_{S(T)} Y(T)$$
 Here the right-hand side is the fiber product in $\Set$, that is, the set of pairs in $X(T)\times Y(T)$ for which $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$ give the same value.
 :::
 ::: Proof
-The universal property of [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-relation="required" } means that a morphism from $T$ to $X\times_S Y$ corresponds uniquely to a pair consisting of $\psi_X: T \rightarrow X$ and $\psi_Y: T \rightarrow Y$ whose compositions to $S$ agree, that is, a pair such that $\psi_X$ and $\psi_Y$ go to the same $S$-point via $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$. Writing this in the language of sets,
+The universal property of [§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1){: data-lid="dbcz8" data-relation="required" } means that a morphism from $T$ to $X\times_S Y$ corresponds uniquely to a pair consisting of $\psi_X: T \rightarrow X$ and $\psi_Y: T \rightarrow Y$ whose compositions to $S$ agree, that is, a pair such that $\psi_X$ and $\psi_Y$ go to the same $S$-point via $X(T) \rightarrow S(T)$ and $Y(T) \rightarrow S(T)$. Writing this in the language of sets,
 
 $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y \text{ map to the same element of } S(T)\}=X(T)\times_{S(T)} Y(T)$$
 
