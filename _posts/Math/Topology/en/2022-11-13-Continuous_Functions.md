@@ -32,7 +32,7 @@ holds. Therefore, to prove that a function $f:X\rightarrow Y$ between two topolo
 Let $f:X\rightarrow Y$ be a function between two topological spaces that is continuous at a point $x$. If $x\in\cl(A)$ for some $A\subseteq X$, then $f(x)\in\cl(f(A))$.
 :::
 ::: Proof
-Choose any neighborhood $V$ of $f(x)\in Y$. Then $f^{-1}(V)$ is a neighborhood of $x$, so $f^{-1}(V)\cap A\neq\emptyset$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" }). Taking $x'\in f^{-1}(V)\cap A$, we have $f(x')\in V\cap f(A)$. In particular, $V\cap f(A)\neq\emptyset$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" } again yields $f(x)\in\cl(f(A))$.
+Choose any neighborhood $V$ of $f(x)\in Y$. Then $f^{-1}(V)$ is a neighborhood of $x$, so $f^{-1}(V)\cap A\neq\emptyset$ ([§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="8n9ux" data-relation="required" }). Taking $x'\in f^{-1}(V)\cap A$, we have $f(x')\in V\cap f(A)$. In particular, $V\cap f(A)\neq\emptyset$, so applying [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="gko4r" data-relation="required" } again yields $f(x)\in\cl(f(A))$.
 :::
 
 ::: Proposition 3

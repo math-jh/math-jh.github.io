@@ -103,14 +103,14 @@ $$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 holds.
 :::
 ::: Proof
-Suppose $x\in A\cap\cl(B)$. Since $A$ is an open neighborhood of $x$, for any neighborhood $V$ of $x$, the intersection $V\cap A$ is also a neighborhood of $x$. Thus, from the fact that $x\in\cl(B)$ and [Proposition 6](#prop6){: data-relation="required" }, we know that $(V\cap A)\cap B\neq\emptyset$. However, this can also be interpreted as saying that the intersection of $A\cap B$ and $V$ is nonempty, and since $V$ is an arbitrary neighborhood of $x$, we again have $x\in\cl(A\cap B)$ by [Proposition 6](#prop6){: data-relation="required" }.
+Suppose $x\in A\cap\cl(B)$. Since $A$ is an open neighborhood of $x$, for any neighborhood $V$ of $x$, the intersection $V\cap A$ is also a neighborhood of $x$. Thus, from the fact that $x\in\cl(B)$ and [Proposition 6](#prop6){: data-lid="wqi0e" data-relation="required" }, we know that $(V\cap A)\cap B\neq\emptyset$. However, this can also be interpreted as saying that the intersection of $A\cap B$ and $V$ is nonempty, and since $V$ is an arbitrary neighborhood of $x$, we again have $x\in\cl(A\cap B)$ by [Proposition 6](#prop6){: data-lid="l47zu" data-relation="required" }.
 :::
 
 ::: Definition 8
 For a topological space $X$ and any subset $A$ of $X$, a point $x\in X$ is called a *limit point* of $A$ if every neighborhood of $x$ meets $A$ at some point other than $x$ itself.
 :::
 
-Then $\cl(A)$ is the union of $A$ and the limit points of $A$. If $x\in\cl(A)\setminus A$, then by [Proposition 6](#prop6){: data-relation="required" } the point $x$ must be a limit point of $A$; conversely, any limit point of $A$ belongs to $\cl(A)$ by [Proposition 6](#prop6){: data-relation="required" } again, because every neighborhood of it meets $A$. On the other hand, if $x\in A$ this need not hold. If, for $x\in A$, there exists a neighborhood $V$ such that $V\cap A=\{x\}$, then we call $x$ an *isolated point* of $A$. A closed set with no isolated points is called a *perfect set*.
+Then $\cl(A)$ is the union of $A$ and the limit points of $A$. If $x\in\cl(A)\setminus A$, then by [Proposition 6](#prop6){: data-lid="dt0j8" data-relation="required" } the point $x$ must be a limit point of $A$; conversely, any limit point of $A$ belongs to $\cl(A)$ by [Proposition 6](#prop6){: data-lid="o8n4l" data-relation="required" } again, because every neighborhood of it meets $A$. On the other hand, if $x\in A$ this need not hold. If, for $x\in A$, there exists a neighborhood $V$ such that $V\cap A=\{x\}$, then we call $x$ an *isolated point* of $A$. A closed set with no isolated points is called a *perfect set*.
 
 ## Boundary of a Set
 
