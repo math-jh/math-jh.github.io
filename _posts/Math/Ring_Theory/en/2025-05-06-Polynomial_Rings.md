@@ -145,7 +145,7 @@ The coefficient $b_n^k$ appearing here arises when we raise the degree one by on
 
 $$u=qv+r,\qquad \deg r < n$$
 
-Moreover, in this case the polynomial ring $\mathbb{K}[\x]$ is an integral domain by [Lemma 3](#lem3){: data-relation="required" }, and thus defining $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$ by
+Moreover, in this case the polynomial ring $\mathbb{K}[\x]$ is an integral domain by [Lemma 3](#lem3){: data-lid="ebkzt" data-relation="required" }, and thus defining $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$ by
 
 $$N: u\mapsto \deg(u)\qquad \text{where $N(0)=0$}$$
 
@@ -157,7 +157,7 @@ For any field $\mathbb{K}$, $\mathbb{K}[\x]$ is a Euclidean domain.
 
 In particular, the notion of greatest common divisor is well-defined over a Euclidean domain, and related to this, Bézout's lemma also holds. ([§Integral Domains, ⁋Theorem 7](/en/math/ring_theory/integral_domains#thm7){: data-lid="g0mdk" data-relation="weak" })
 
-We have previously seen that the images of arbitrary (nonzero) elements of $\mathbb{K}$ in $\mathbb{K}[\x]$ are units of $\mathbb{K}[\x]$. ([Lemma 3](#lem3){: data-relation="required" }) On the other hand, in a Euclidean domain whether one element divides another can be determined by running the Euclidean algorithm, so an arbitrary non-constant $u\in \mathbb{K}[\x]$ being irreducible is equivalent to $u$ not being divisible by any $v\in \mathbb{K}[\x]$ satisfying $\deg(v)<\deg(u)$.
+We have previously seen that the images of arbitrary (nonzero) elements of $\mathbb{K}$ in $\mathbb{K}[\x]$ are units of $\mathbb{K}[\x]$. ([Lemma 3](#lem3){: data-lid="ug3hj" data-relation="required" }) On the other hand, in a Euclidean domain whether one element divides another can be determined by running the Euclidean algorithm, so an arbitrary non-constant $u\in \mathbb{K}[\x]$ being irreducible is equivalent to $u$ not being divisible by any $v\in \mathbb{K}[\x]$ satisfying $\deg(v)<\deg(u)$.
 
 On the other hand, $\mathbb{K}[\x]$ is a UFD, and thus we can define irreducible elements of $\mathbb{K}[\x]$. Since the units of $\mathbb{K}[\x]$ are exactly the units of $\mathbb{K}$, any irreducible polynomial $u$ satisfies $\deg(u)\geq 1$ by definition, and since $u$ is irreducible, if $v\mid u$ then $v$ is either a constant polynomial or a constant multiple of $u$. In particular, any two irreducible polynomials must be constant multiples of each other, so two distinct *monic* irreducible polynomials are coprime. In this way, any polynomial in $A[\x]$ can be uniquely expressed as a product of its leading coefficient and monic irreducible polynomials.
 
@@ -223,7 +223,7 @@ is the unique polynomial of degree less than $n$ satisfying $u(a_i)=b_i$ for eac
 Uniqueness is trivial by the above argument, and it remains only to verify that substituting each $a_i$ into $u$ yields the value $b_i$.
 :::
 
-On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations){: data-relation="weak" }), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
+On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations){: data-lid="dhqm2" data-relation="weak" }), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
 
 $$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=\sum_{i=1}^n i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
@@ -235,7 +235,7 @@ The only property we will use in the remaining discussion is the Leibniz rule
 
 $$D(uv)=(Du)v+u(Dv)$$
 
-which in [\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations){: data-relation="weak" } is the definition of a derivation, but if we accept the formula ($\ast$) as a definition, it can be verified by direct computation.
+which in [\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations){: data-lid="34nqu" data-relation="weak" } is the definition of a derivation, but if we accept the formula ($\ast$) as a definition, it can be verified by direct computation.
 
 ::: Proposition 11
 For any polynomial $u \in A[\x]$, a necessary and sufficient condition for a root $a \in A$ of $u$ to be a simple root is that $a$ is not a root of $Du$.
@@ -294,7 +294,7 @@ In particular, if $I$ is nonempty, then $H_u$ is an infinite set.
 
 If an arbitrary ring homomorphism $\phi:A \rightarrow B$ is given, any $u\in A[\x_i]_{i\in I}$ can be viewed as an element of $B[\x_i]_{i\in I}$ via $\phi$.
 
-In particular, consider the case where $A$ is an integral domain and $\phi$ is the canonical inclusion $A \hookrightarrow \Frac(A)$. Then since $\Frac(A)$ is a field, $(\Frac A)[\x]$ is a Euclidean domain by [Proposition 6](#prop6){: data-relation="required" }, and thus if we view any $u\in A[\x]$ in $(\Frac A)[\x]$, then $u$ can be factored at least in $(\Frac A)[\x]$. It is then natural to examine how this factorization is reflected in $A[\x]$.
+In particular, consider the case where $A$ is an integral domain and $\phi$ is the canonical inclusion $A \hookrightarrow \Frac(A)$. Then since $\Frac(A)$ is a field, $(\Frac A)[\x]$ is a Euclidean domain by [Proposition 6](#prop6){: data-lid="7uocn" data-relation="required" }, and thus if we view any $u\in A[\x]$ in $(\Frac A)[\x]$, then $u$ can be factored at least in $(\Frac A)[\x]$. It is then natural to examine how this factorization is reflected in $A[\x]$.
 
 ::: Proposition 14 (Gauss)
 Consider a UFD $A$, its field of fractions $\Frac(A)$, and an element $u$ of $A[\x]$. If $u$ is reducible in $(\Frac A)[\x]$, then $u$ is also reducible in $A[\x]$.
@@ -321,7 +321,7 @@ From this we obtain the following.
 Consider a UFD $A$ and its field of fractions $\Frac A$, and a polynomial $u(\x) \in A[\x]$, and let the greatest common divisor of the coefficients of $u(\x)$ be $1$. Then $u(\x)$ being irreducible in $A[\x]$ is equivalent to $u(\x)$ being irreducible in $(\Frac A)[\x]$.
 :::
 ::: Proof
-By [Proposition 14](#prop14){: data-relation="required" }, if $u(\x)$ is reducible in $(\Frac A)[\x]$, then it is also reducible in $A[\x]$.
+By [Proposition 14](#prop14){: data-lid="6deee" data-relation="required" }, if $u(\x)$ is reducible in $(\Frac A)[\x]$, then it is also reducible in $A[\x]$.
 
 Conversely, suppose the greatest common divisor of the coefficients of $u(\x)$ is $1$, and assume $u(\x)$ is reducible in $A[\x]$. That is, we can write
 
@@ -340,7 +340,7 @@ That $A[\x]$ being a UFD implies $A$ is also a UFD is trivial, so it suffices to
 
 For a UFD $A$, let a nonzero element of $A[\x]$ be $u(\x)$, and if the greatest common divisor of the coefficients of $u(\x)$ is $d$, then we can write $u(\x)=du_0(\x)$ to obtain a polynomial $u_0\in A[\x]$ whose coefficients have greatest common divisor $1$; thus we may assume without loss of generality that the greatest common divisor of the coefficients of $u$ is $1$.
 
-By [Proposition 6](#prop6){: data-relation="required" }, $u$ can be uniquely factored in $(\Frac A)[\x]$, and applying [Proposition 14](#prop14){: data-relation="required" } to this factorization, we can factor $u$ in $A[\x]$. On the other hand, since the greatest common divisor of the coefficients of $u$ is $1$, the greatest common divisor of the coefficients of the factors of $u$ thus obtained is also $1$, and therefore by [Corollary 15](#cor15){: data-lid="3l40r" data-relation="required" } they are irreducible in $A[\x]$. From this we obtain a factorization of $u$ in $A[\x]$, and uniqueness is trivial using the fact that each of these components is a $\Frac A$-multiple of the corresponding factor in $(\Frac A)[\x]$.
+By [Proposition 6](#prop6){: data-lid="99ytv" data-relation="required" }, $u$ can be uniquely factored in $(\Frac A)[\x]$, and applying [Proposition 14](#prop14){: data-lid="zly8u" data-relation="required" } to this factorization, we can factor $u$ in $A[\x]$. On the other hand, since the greatest common divisor of the coefficients of $u$ is $1$, the greatest common divisor of the coefficients of the factors of $u$ thus obtained is also $1$, and therefore by [Corollary 15](#cor15){: data-lid="3l40r" data-relation="required" } they are irreducible in $A[\x]$. From this we obtain a factorization of $u$ in $A[\x]$, and uniqueness is trivial using the fact that each of these components is a $\Frac A$-multiple of the corresponding factor in $(\Frac A)[\x]$.
 :::
 
 ## Field of Rational Functions
@@ -357,7 +357,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 and we can verify that this is well-defined. As with polynomials, we define $\deg(0)=-\infty$.
 
-Then the following proposition is the analogue of [Proposition 2](#prop2){: data-relation="required" }.
+Then the following proposition is the analogue of [Proposition 2](#prop2){: data-lid="exzkm" data-relation="required" }.
 
 ::: Proposition 18
 For two rational fractions $r, s$, the following hold.
@@ -370,7 +370,7 @@ For two rational fractions $r, s$, the following hold.
 2. $\deg(rs) = \deg r + \deg s$.
 :::
 ::: Proof
-For both claims, it suffices to consider only the case where $r, s \ne 0$. Therefore, let $r =u/v$, $s = w/z$ with $u, v, w, z$ all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [Proposition 2](#prop2){: data-relation="required" } and [Lemma 3](#lem3){: data-lid="ffcyl" data-relation="required" }.
+For both claims, it suffices to consider only the case where $r, s \ne 0$. Therefore, let $r =u/v$, $s = w/z$ with $u, v, w, z$ all nonzero polynomials. In any case, the idea is to first compute the given expression and then apply [Proposition 2](#prop2){: data-lid="0skil" data-relation="required" } and [Lemma 3](#lem3){: data-lid="ffcyl" data-relation="required" }.
 
 1. $r + s = (uz+vw)/(vz)$. First, suppose $\deg r \ne \deg s$, that is, $\deg u + \deg z \ne \deg w + \deg v$. Then $uz + vw \ne 0$, and
 
@@ -417,7 +417,7 @@ For an integral domain $A$, the following hold.
 2. For two nonzero elements $u,v\in A[[x_i]]_{i\in I}$, we have $\omega(uv)=\omega(u)+\omega(v)$.
 :::
 
-However, one must be somewhat careful: unlike [Proposition 4](#prop4){: data-relation="weak" }, the units of $A[[x_i]]_{i\in I}$ are larger than those of $A$. For example, consider the formula
+However, one must be somewhat careful: unlike [Proposition 4](#prop4){: data-lid="vn0u0" data-relation="weak" }, the units of $A[[x_i]]_{i\in I}$ are larger than those of $A$. For example, consider the formula
 
 $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 
