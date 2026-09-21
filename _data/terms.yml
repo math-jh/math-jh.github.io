@@ -6101,6 +6101,13 @@ E:
     url: /ko/math/group_theory/extensions
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: extension_by_linearity
+  en: extension by linearity
+  ko: 선형확장
+  primary: en
+  defs:
+  - label: '[선형대수학] §선형사상들의 공간'
+    url: /ko/math/linear_algebra/space_of_linear_maps
 - id: extension_degree
   en: extension degree
   ko: 확대 차수
