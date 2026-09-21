@@ -121,7 +121,7 @@ However, the converse does not hold in general. That is, given an affine scheme,
 
 By definition a scheme is obtained by gluing affine schemes together, so one strategy for investigating its properties is to study certain properties locally. Indeed, just as many of the examples above were affine schemes, the essence of this strategy is to treat properties of a general scheme by gluing affine pieces. Moreover, the advantage of this approach is that our understanding of affine schemes is *not* confined to the topological realm. That is, in addition to the topological data introduced in this post, an affine scheme $\Spec A$ also carries the algebraic properties that $A$ has as a ring, and this locality will help us glue such algebraic properties globally as well.
 
-One concept that behaves interestingly in this context is the Noetherian property, because the condition of being Noetherian is defined separately in topology and in algebra, and this is precisely the ambiguity pointed out before introducing [Proposition 7](#prop7).
+One concept that behaves interestingly in this context is the Noetherian property, because the condition of being Noetherian is defined separately in topology and in algebra, and this is precisely the ambiguity pointed out before introducing [Proposition 7](#prop7){: data-lid="3woa2" }.
 
 In this post we define the notion of a local property, apply it to the Noetherian property, and then conclude. First let us examine what it means for a property of rings to be local.
 
@@ -136,12 +136,12 @@ Let us rephrase this in the language of affine schemes. For a property $P_\alg$ 
 
 $$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-we see that the $D(f_i)$ cover $\Spec A$. Using this, the two conditions of [Definition 8](#def8) translate as follows.
+we see that the $D(f_i)$ cover $\Spec A$. Using this, the two conditions of [Definition 8](#def8){: data-lid="vhn15" } translate as follows.
 
 1. If $\Spec A$ satisfies $P_\geo$, then any principal open set $D(f)$ also satisfies $P_\geo$.
 2. If an open covering $D(f_1),\ldots, D(f_r)$ of $\Spec A$ satisfies $P_\geo$ respectively, then $\Spec A$ also satisfies $P_\geo$.
 
-On the other hand, a general open set of $\Spec A$ can be expressed as a union of principal open sets ([\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11)), so if $\Spec A$ satisfies $P_\geo$ then any *affine* open subset of $\Spec A$ also satisfies $P_\geo$. Indeed, an affine open subset $U=\Spec B$ is quasi-compact ([\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12)), so among the principal open sets covering $U$ we may retain only finitely many $D_A(f_1),\ldots, D_A(f_r)$, and each $D_A(f_i)$ is the principal open set $D_B(g_i)$ of $B$ for the image $g_i$ of $f_i$ under the restriction $A \rightarrow B$, with $B_{g_i}\cong A_{f_i}$; hence from the fact that the $D_B(g_i)$ cover $\Spec B$ we obtain $(g_1,\ldots, g_r)=B$ and can apply the second condition of [Definition 8](#def8) to $B$. A property determined by checking on principal open sets in this way is called an *affine-local property*, and the following definition generalizes this to a property of affine subschemes of an arbitrary scheme.
+On the other hand, a general open set of $\Spec A$ can be expressed as a union of principal open sets ([\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11){: data-lid="foxl3" }), so if $\Spec A$ satisfies $P_\geo$ then any *affine* open subset of $\Spec A$ also satisfies $P_\geo$. Indeed, an affine open subset $U=\Spec B$ is quasi-compact ([\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12){: data-lid="pi440" }), so among the principal open sets covering $U$ we may retain only finitely many $D_A(f_1),\ldots, D_A(f_r)$, and each $D_A(f_i)$ is the principal open set $D_B(g_i)$ of $B$ for the image $g_i$ of $f_i$ under the restriction $A \rightarrow B$, with $B_{g_i}\cong A_{f_i}$; hence from the fact that the $D_B(g_i)$ cover $\Spec B$ we obtain $(g_1,\ldots, g_r)=B$ and can apply the second condition of [Definition 8](#def8){: data-lid="lsrkl" } to $B$. A property determined by checking on principal open sets in this way is called an *affine-local property*, and the following definition generalizes this to a property of affine subschemes of an arbitrary scheme.
 
 ::: Definition 9
 A property $P$ defined for suitable affine subschemes of a scheme $X$ is called an *affine-local property* if the following two conditions hold.
@@ -162,7 +162,7 @@ Then in [Lemma 12](#lem12){: data-lid="scrhy" } we show that if a scheme $X$ is 
 Let $X$ be a scheme and let $U,V$ be arbitrary affine open subsets. Then for any $x\in U\cap V$, there exists $x\in W\subseteq U\cap V$ such that $W$ is a principal open subset in both $U$ and $V$.
 :::
 ::: Proof
-For notation let $U=\Spec A$, $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subseteq A$ and $\mathfrak{q}\subseteq B$ in each of these. Then, first viewing $U\cap V$ as an open subset of $U$ and applying [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we can choose a principal open set $D(f)$ of $U$ such that
+For notation let $U=\Spec A$, $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subseteq A$ and $\mathfrak{q}\subseteq B$ in each of these. Then, first viewing $U\cap V$ as an open subset of $U$ and applying [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11){: data-lid="ury23" }, we can choose a principal open set $D(f)$ of $U$ such that
 
 $$\mathfrak{p}\in D(f)\subseteq U\cap V.$$
 
@@ -192,20 +192,20 @@ Now assuming the third condition holds, let us show that the second condition ho
 
 $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_{ij}}$$
 
-and knowing that each $\Spec (A_i)_{f_{ij}}$ can be taken as a suitable localization $\Spec A_{g_{ij}}$ of $\Spec A$, and using [\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), we may assume that the $g_{ij}$ are given finitely many. Now from the first condition of [Definition 9](#def9) we know that each $\Spec (A_i)_{f_{ij}}=\Spec A_{g_{ij}}$ satisfies $P$, and from the second condition we know that $\Spec A$ satisfies $P$.
+and knowing that each $\Spec (A_i)_{f_{ij}}$ can be taken as a suitable localization $\Spec A_{g_{ij}}$ of $\Spec A$, and using [\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12){: data-lid="xehpb" }, we may assume that the $g_{ij}$ are given finitely many. Now from the first condition of [Definition 9](#def9){: data-lid="6ei1u" } we know that each $\Spec (A_i)_{f_{ij}}=\Spec A_{g_{ij}}$ satisfies $P$, and from the second condition we know that $\Spec A$ satisfies $P$.
 
 From the above we see that the first through third conditions are all equivalent.
 
-Now let $X$ be locally $P$ and let $U$ be any open subscheme of $X$. Then for any $x\in U$, from [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we can pick an affine open subset $D(f)$ of $X$ satisfying $x\in D(f)\subseteq U$, and now from the second condition we know that $D(f)$ is an affine scheme satisfying $P$. Hence the scheme $U$ is also locally $P$, obtaining the last claim. Finally, the equivalence of the fourth condition with the remaining ones is obtained by using this claim and simply dropping the affine assumption from the second and third conditions.
+Now let $X$ be locally $P$ and let $U$ be any open subscheme of $X$. Then for any $x\in U$, from [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11){: data-lid="waeba" } we can pick an affine open subset $D(f)$ of $X$ satisfying $x\in D(f)\subseteq U$, and now from the second condition we know that $D(f)$ is an affine scheme satisfying $P$. Hence the scheme $U$ is also locally $P$, obtaining the last claim. Finally, the equivalence of the fourth condition with the remaining ones is obtained by using this claim and simply dropping the affine assumption from the second and third conditions.
 :::
 
-On the other hand, we showed in [Proposition 7](#prop7) that for a Noetherian ring $A$, $\Spec A$ is a Noetherian space. Now let us define what it means for an arbitrary scheme $X$ to be Noetherian.
+On the other hand, we showed in [Proposition 7](#prop7){: data-lid="nd7kf" } that for a Noetherian ring $A$, $\Spec A$ is a Noetherian space. Now let us define what it means for an arbitrary scheme $X$ to be Noetherian.
 
 ::: Lemma 13
 A ring $A$ being Noetherian is a local property, and therefore defines an affine-local property $P$.
 :::
 ::: Proof
-We must prove the two conditions of [Definition 8](#def8).
+We must prove the two conditions of [Definition 8](#def8){: data-lid="k4zb9" }.
 
 The first condition is obtained from [\[Commutative Algebra\] §Localization, ⁋Corollary 9](/en/math/commutative_algebra/localization#cor9){: data-lid="rikvx" }.
 
@@ -222,9 +222,9 @@ so $M=0$, that is, $\mathfrak{a}=\mathfrak{b}$ is finitely generated.
 A scheme $X$ is a *locally Noetherian scheme* if there exists an affine open covering $\{U_i=\Spec A_i\}$ of $X$ such that all $A_i$ are Noetherian. If $X$ is a quasi-compact locally Noetherian scheme, we call it a *Noetherian scheme*.
 :::
 
-Then if $A$ is Noetherian, that $\Spec A$ is a Noetherian scheme is immediate from the definition and [\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12). Also, just as in [Proposition 7](#prop7), any Noetherian scheme is Noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7), one must be careful that even if a scheme $X$ is Noetherian as a topological space, the above condition need not hold.
+Then if $A$ is Noetherian, that $\Spec A$ is a Noetherian scheme is immediate from the definition and [\[Scheme Theory\] §Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12){: data-lid="oi3l1" }. Also, just as in [Proposition 7](#prop7){: data-lid="ddals" }, any Noetherian scheme is Noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7){: data-lid="yeyaj" }, one must be careful that even if a scheme $X$ is Noetherian as a topological space, the above condition need not hold.
 
-Finally, we define a notion of locality slightly different from [Definition 9](#def9), namely the notion of *stalk-local*.
+Finally, we define a notion of locality slightly different from [Definition 9](#def9){: data-lid="hot5g" }, namely the notion of *stalk-local*.
 
 ::: Definition 15
 A property $P$ of a scheme $X$ is *stalk-local* if for each $x\in X$ the ring $\mathcal{O}_{X,x}$ satisfies a property $Q$ of rings.
@@ -271,4 +271,4 @@ we see that $A$ is not Noetherian.
 
 ---
 
-[^1]: After [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we agreed to call a compact topological space (which may not be Hausdorff) *quasi-compact*.
+[^1]: After [\[Scheme Theory\] §Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11){: data-lid="ogl65" } we agreed to call a compact topological space (which may not be Hausdorff) *quasi-compact*.
