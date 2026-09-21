@@ -40,7 +40,7 @@ For the first claim, for any open subset $W\subseteq V$, the maps
 
 $$\mathcal{O}_Y(W) \rightarrow \varphi_\ast \mathcal{O}_X(W)=\mathcal{O}_X(\varphi^{-1}(W)) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)\cap U)$$
 
-obtained by composing $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$ with the restriction to $U$ define the sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$ that we must examine. The map this induces on the stalk at any $x\in U$ is determined by germs alone, so it coincides with $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by the original $\varphi$, and hence is a local homomorphism. Thus $(\varphi\vert_U)\vert^V$ is a morphism of $\LRS$, and since $U$ and $V$ are affine schemes, by [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-relation="required" } it is induced from a unique ring homomorphism $B \rightarrow A$.
+obtained by composing $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$ with the restriction to $U$ define the sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$ that we must examine. The map this induces on the stalk at any $x\in U$ is determined by germs alone, so it coincides with $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by the original $\varphi$, and hence is a local homomorphism. Thus $(\varphi\vert_U)\vert^V$ is a morphism of $\LRS$, and since $U$ and $V$ are affine schemes, by [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-lid="tcnxb" data-relation="required" } it is induced from a unique ring homomorphism $B \rightarrow A$.
 
 For the second claim, by the gluing condition the continuous maps $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$ agree on overlaps, so by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="as1eh" } they glue to a continuous map $\varphi: X \rightarrow Y$. We now define the sheaf morphism $\varphi^\sharp$. Given an open subset $W\subseteq Y$ and $s\in \mathcal{O}_Y(W)$, consider the sections
 
@@ -49,14 +49,14 @@ $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i).$$
 These also agree on overlaps for the same reason, and since $\{\varphi^{-1}(W)\cap U_i\}$ is an open covering of $\varphi^{-1}(W)$, the two conditions of [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="lyupd" } yield a unique glued section $s'\in \mathcal{O}_X(\varphi^{-1}(W))$. Defining $\varphi^\sharp(W): s\mapsto s'$, compatibility with restriction maps can be checked on each $U_i$, and the map induced by $\varphi^\sharp$ on the stalk at $x\in U_i$ coincides with that induced by $\varphi_i^\sharp$, so it is a local homomorphism. Hence $\varphi$ is a scheme morphism, and since the condition $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$ completely determines $\varphi$, such a morphism is unique.
 :::
 
-The first claim is nothing more than applying the fact from [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-relation="required" } that $\AffSch$ is a full subcategory of $\LRS$ to the local picture of a scheme morphism. However, one must be careful: the gluing condition in the second claim is not expressed as a condition between ring homomorphisms. When $V_i\neq V_k$, we cannot compare $\varphi_i$ and $\varphi_k$ within a single affine scheme, so we must compare them inside $Y$; moreover $U_i\cap U_k$ is generally not an affine scheme. Thus the data given for gluing scheme morphisms are ring homomorphisms, but the condition determining whether they glue is not.
+The first claim is nothing more than applying the fact from [§Affine Scheme, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11){: data-lid="safzr" data-relation="required" } that $\AffSch$ is a full subcategory of $\LRS$ to the local picture of a scheme morphism. However, one must be careful: the gluing condition in the second claim is not expressed as a condition between ring homomorphisms. When $V_i\neq V_k$, we cannot compare $\varphi_i$ and $\varphi_k$ within a single affine scheme, so we must compare them inside $Y$; moreover $U_i\cap U_k$ is generally not an affine scheme. Thus the data given for gluing scheme morphisms are ring homomorphisms, but the condition determining whether they glue is not.
 
 ::: Example 2
 As an example of a scheme morphism that is not a morphism between affine schemes, for $n\geq 1$ consider the map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space){: data-relation="weak" }. This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-relation="weak" } when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
+that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space){: data-lid="6ddu1" data-relation="weak" }. This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-lid="gbgyj" data-relation="weak" } when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
 
 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n],$$
 
@@ -66,7 +66,7 @@ To define $\varphi$ as a scheme morphism, consider the affine open subscheme of 
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1).$$
 
-([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-relation="weak" }) Also consider the affine space
+([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-lid="318ks" data-relation="weak" }) Also consider the affine space
 
 $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n].$$
 
@@ -78,7 +78,7 @@ and $D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$. Now for each $i$,
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1){: data-lid="03eu8" data-relation="required" } can also be checked by a brief computation. Now borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space){: data-relation="weak" } again, on each $D(\x_i)$ these are given by the formula
+defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1){: data-lid="03eu8" data-relation="required" } can also be checked by a brief computation. Now borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#projective-space){: data-lid="e5kt5" data-relation="weak" } again, on each $D(\x_i)$ these are given by the formula
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right],$$
 
@@ -205,7 +205,7 @@ $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}.$$
 Geometrically, this can be viewed as a situation in which, for each $x_0\in \mathbb{R}_x$, a circle $y^2+z^2=1-x_0^2$ is assigned; hence we may regard $\pi$ as a <em>family of circles parametrized by the $x$-axis</em>. Of course if $\lvert x_0\rvert>1$ this fiber is empty, and if $x_0=\pm 1$ it is a single point, so it is a circle only when $\lvert x_0\rvert<1$. The manner in which members of a family degenerate in this way will become an issue again when we treat flatness later.
 :::
 
-Among the reasons we cannot directly represent this example as a scheme, the less essential one is that $S$ is a closed subset of $\mathbb{R}^3$ and we do not yet know how to endow a closed subset with a scheme structure. This will be resolved in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-relation="forward" }. The more subtle and essential difficulty is that there is no way to represent the fiber $\pi^{-1}(x_0)$ of the function $\pi$ at a point $x_0$. A scheme morphism is of course a continuous map, so we could view this as the fiber of a continuous map; but even doing so (even assuming the content of [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-relation="weak" }) there is no way to give $\pi^{-1}(x_0)$ a scheme structure. To explain this we must wait a little longer.
+Among the reasons we cannot directly represent this example as a scheme, the less essential one is that $S$ is a closed subset of $\mathbb{R}^3$ and we do not yet know how to endow a closed subset with a scheme structure. This will be resolved in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="rrapx" data-relation="forward" }. The more subtle and essential difficulty is that there is no way to represent the fiber $\pi^{-1}(x_0)$ of the function $\pi$ at a point $x_0$. A scheme morphism is of course a continuous map, so we could view this as the fiber of a continuous map; but even doing so (even assuming the content of [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="nh8tr" data-relation="weak" }) there is no way to give $\pi^{-1}(x_0)$ a scheme structure. To explain this we must wait a little longer.
 
 ---
 **References**
