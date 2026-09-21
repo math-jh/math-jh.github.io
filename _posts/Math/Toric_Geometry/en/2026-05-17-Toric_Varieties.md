@@ -52,26 +52,26 @@ which allow us to glue the $U_\tau$ together.
 Given a fan $\Sigma$, the algebraic variety obtained by gluing the affine toric varieties $\{U_\tau\}_{\tau \in \Sigma}$ in the manner described above is called the *toric variety* defined by $\Sigma$, and is denoted $X_\Sigma$.
 :::
 
-The following generalizes [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-relation="required" }.
+The following generalizes [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="ovrqb" data-relation="required" }.
 
 ::: Proposition 4
 The toric variety $X_\Sigma$ is a normal, separated algebraic variety.
 :::
 
 ::: Proof
-The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-relation="required" }, and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$ is closed. On each affine chart this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
+The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="z2vns" data-relation="required" }, and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$ is closed. On each affine chart this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
 :::
 
 One important property that the toric variety $X_\Sigma$ inherits from the affine toric varieties is that it contains the algebraic torus $T_N$ as an open dense subset ([§Affine Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/affine_toric_varieties#prop11){: data-lid="q2dhu" data-relation="required" }). Indeed, the affine chart $U_{\{0\}}$ corresponding to the 0-dimensional cone $\{0\} \in \Sigma$ is isomorphic to $T_N$, and every other $U_\tau$ contains it as an open subset. Hence $T_N \subseteq X_\Sigma$ defines an open dense embedding.
 
-As we saw in [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-relation="required" }, each affine toric variety $U_\tau$ carries a natural action of the algebraic torus $T_N$. In that post we observed that the inclusion between affine toric varieties induced by an inclusion of cones is invariant under the torus action, so this action extends to all of $X_\Sigma$ via gluing.
+As we saw in [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="wpec5" data-relation="required" }, each affine toric variety $U_\tau$ carries a natural action of the algebraic torus $T_N$. In that post we observed that the inclusion between affine toric varieties induced by an inclusion of cones is invariant under the torus action, so this action extends to all of $X_\Sigma$ via gluing.
 
 ::: Proposition 5
 For any fan $\Sigma$, a natural action of the algebraic torus $T_N$ is defined on the toric variety $X_\Sigma$. Under this action, $T_N \subseteq X_\Sigma$ is an open dense $T_N$-invariant subset, and the action of $T_N$ on itself extends to the action on $X_\Sigma$.
 :::
 
 ::: Proof
-For each cone $\tau \in \Sigma$, the $T_N$-action on $U_\tau$ is defined by [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-relation="required" }. Since these actions agree on the intersection $U_{\tau_1 \cap \tau_2}$ of two affine charts $U_{\tau_1}$ and $U_{\tau_2}$, they define a well-defined $T_N$-action on all of $X_\Sigma$. Meanwhile, the chart $U_{\{0\}} \cong T_N$ corresponding to $\{0\} \in \Sigma$ is an open dense subset, and the self-action of $T_N$ is given by left multiplication on this chart, so it extends naturally to the action on $X_\Sigma$.
+For each cone $\tau \in \Sigma$, the $T_N$-action on $U_\tau$ is defined by [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="l2wmx" data-relation="required" }. Since these actions agree on the intersection $U_{\tau_1 \cap \tau_2}$ of two affine charts $U_{\tau_1}$ and $U_{\tau_2}$, they define a well-defined $T_N$-action on all of $X_\Sigma$. Meanwhile, the chart $U_{\{0\}} \cong T_N$ corresponding to $\{0\} \in \Sigma$ is an open dense subset, and the self-action of $T_N$ is given by left multiplication on this chart, so it extends naturally to the action on $X_\Sigma$.
 :::
 
 If a fan $\Sigma$ satisfies $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$, we call it a *complete* fan. In this case $X_\Sigma$ is known to be a *complete* algebraic variety, i.e., a variety proper over $\Spec(\mathbb{C})$. Since completeness is the algebraic analogue of compactness, in this case we call $X_\Sigma$ an *equivariant compactification* of $T_N$.
