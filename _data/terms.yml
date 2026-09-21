@@ -398,6 +398,13 @@ A:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: affine_paving
+  en: affine paving
+  ko: 아핀 페이빙
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: affine_scheme
   en: affine scheme
   ko: 아핀스킴
@@ -17494,6 +17501,13 @@ S:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: springer_fiber
+  en: Springer fiber
+  ko: 슈프링어 파이버
+  primary: en
+  defs:
+  - label: '[리 이론] §Richardson variety와 Peterson variety'
+    url: /ko/math/lie_theory/richardson_peterson_variety
 - id: square_matrix
   en: square matrix
   ko: 정사각행렬
