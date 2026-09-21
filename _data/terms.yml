@@ -767,6 +767,13 @@ A:
   defs:
   - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
     url: /ko/math/algebraic_topology/borsuk_ulam_theorem
+- id: antisymmetric
+  en: antisymmetric
+  ko: 반대칭
+  primary: en
+  defs:
+  - label: '[집합론] §순서관계의 정의'
+    url: /ko/math/set_theory/order_relations
 - id: antisymmetry
   en: antisymmetry
   ko: 반대칭성
@@ -16974,6 +16981,13 @@ S:
     url: /ko/math/linear_algebra/ftla
   - label: '[다중선형대수학] §기저변환'
     url: /ko/math/multilinear_algebra/change_of_basis
+- id: similarity
+  en: similarity
+  ko: 닮음
+  primary: ko
+  defs:
+  - label: '[선형대수학] §행렬식'
+    url: /ko/math/linear_algebra/determinant
 - id: simple
   en: simple
   ko: 단순
