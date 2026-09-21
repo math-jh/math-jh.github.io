@@ -9808,6 +9808,8 @@ I:
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points#def4
+  - label: '[선형대수학] §동형사상'
+    url: /ko/math/linear_algebra/isomorphic_vector_spaces
 - id: isomorphism
   en: isomorphism
   ko: 동형사상
@@ -15343,6 +15345,13 @@ R:
   see:
   - label: Nullity
     id: nullity
+- id: rank-nullity_theorem
+  en: rank-nullity theorem
+  ko: 계수-퇴화차수 정리
+  primary: en
+  defs:
+  - label: '[선형대수학] §동형사상'
+    url: /ko/math/linear_algebra/isomorphic_vector_spaces
 - id: rank_r_vector_bundle
   en: rank $r$ vector bundle
   ko: 랭크 $r$ 벡터다발
