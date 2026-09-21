@@ -44,7 +44,7 @@ If for two order relations $(R, A, A)$ and $(R', A',A')$ there exists a bijectio
 
 Henceforth, when we speak of an isomorphism between ordered sets, we shall always mean an order isomorphism.
 
-We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-relation="weak" }.
+We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-lid="ywgxl" data-relation="weak" }.
 
 ::: Proposition 5
 A binary relation $(R,A,A)$ is an order relation if and only if the following two conditions hold.
@@ -52,7 +52,7 @@ A binary relation $(R,A,A)$ is an order relation if and only if the following tw
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: Proof
-That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-relation="required" }. That the second condition combines reflexivity and antisymmetry can also be easily seen.
+That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3){: data-lid="8aehr" data-relation="required" }. That the second condition combines reflexivity and antisymmetry can also be easily seen.
 :::
 
 ## Preorder Relations

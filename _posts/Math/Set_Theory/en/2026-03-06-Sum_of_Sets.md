@@ -90,7 +90,7 @@ The intuition for why this is called the sum of sets will appear later. ([§Oper
 
 ## Universal property
 
-There is something we did not mention in [Definition 6](#def6){: data-lid="3dyzo" data-relation="weak" }. The sum $X$ of a family of sets $(A_i)$ is not unique. There are infinitely many sets satisfying the conditions of [Proposition 5](#prop5){: data-relation="required" }. For example, in the proof of that proposition we took $S$ to be the set of pairs $(x,i)$, but one can see that taking the set of pairs $(i,x)$ also satisfies the definition of sum. Therefore, strictly speaking, writing the sum of the $A_i$ as $\sum A_i$ is not a well-defined expression.
+There is something we did not mention in [Definition 6](#def6){: data-lid="3dyzo" data-relation="weak" }. The sum $X$ of a family of sets $(A_i)$ is not unique. There are infinitely many sets satisfying the conditions of [Proposition 5](#prop5){: data-lid="tv6c6" data-relation="required" }. For example, in the proof of that proposition we took $S$ to be the set of pairs $(x,i)$, but one can see that taking the set of pairs $(i,x)$ also satisfies the definition of sum. Therefore, strictly speaking, writing the sum of the $A_i$ as $\sum A_i$ is not a well-defined expression.
 
 First, let us examine the *universal property* of the sum as follows.
 
@@ -107,7 +107,7 @@ so the function value $f(x)$ at $x$ must equal $f_i(x_i)$, and therefore $f$ is 
 Now, taking a hint from the uniqueness proof, let us show the existence of the function $f$. Define $f(x)$ to be $f_i(x_i)$ as in the above equation, and prove that $f$ is actually a function. For instance, with this definition $f$ will be defined for all elements of $S$, and moreover a single $x$ is assigned exactly one function value as discussed above.
 :::
 
-In many cases the set $S$ appearing in the proof of [Proposition 5](#prop5){: data-relation="weak" } is defined to be the sum of the $A_i$, but in fact this is putting the cart before the horse. The reason we think of $S$ as the sum of the $A_i$ in many areas is not because the set $S$ itself has any special meaning, but because of notational convenience. The properties of the sum do not come from the set $S$, but from the universal property above.
+In many cases the set $S$ appearing in the proof of [Proposition 5](#prop5){: data-lid="cm7az" data-relation="weak" } is defined to be the sum of the $A_i$, but in fact this is putting the cart before the horse. The reason we think of $S$ as the sum of the $A_i$ in many areas is not because the set $S$ itself has any special meaning, but because of notational convenience. The properties of the sum do not come from the set $S$, but from the universal property above.
 
 Therefore, we could simply define it as follows from the start.
 
