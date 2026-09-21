@@ -49,13 +49,13 @@ Let $\mathcal{M}$ be the collection of relations $R\subseteq A\times A$ satisfyi
 1. $G$ is a well-ordering on $R=\pr_1R$.
 2. For each $x\in U$, we have $S_x\in\mathcal{S}$ and $p(S_x)=x$.
 
-We will show that for each $G\in\mathcal{M}$, the set $U=\pr_1G$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-relation="required" }. To this end, we show that for any $U$, $U'$, either $U$ is a segment of $U'$ or vice versa.
+We will show that for each $G\in\mathcal{M}$, the set $U=\pr_1G$ satisfies the conditions of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-lid="5049s" data-relation="required" }. To this end, we show that for any $U$, $U'$, either $U$ is a segment of $U'$ or vice versa.
 
 Let $G$, $G'\in \mathcal{M}$ be arbitrary, and let $U$, $U'$ be their domains, respectively. Let $V$ be the set of all $x\in U\cap U'$ such that (1) the segment with endpoint $x$ represents the same set in $U$ and in $U'$, and (2) the order on that segment agrees with $G$. If $x\in V$ and $y\in U$ satisfies $y\leq x$, then $y\in S_x$ in both $U$ and $U'$. Moreover, elements less than $y$ in $U$ are also less than $y$ in $U'$. Thus $y\in V$, and $V$ is a segment of $U$.
 
 Now, to show that $U$ and $U'$ satisfy the desired condition, it suffices to show that either $U=V$ or $U'=V$. Assume $V\neq U$ and $V\neq U'$. Then for the least elements $x$ and $x'$ of $U\setminus V$ and $U'\setminus V$, we have $V=S_x=S_{x'}$ in $U$ and $U'$, respectively. However, by the second condition, $V\in\mathcal{S}$, so $x=p(S_x)=p(V)=p(S_{x'})=x'$, and thus $x\in V$.
 
-Now, using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-relation="required" }, we obtain the well-ordered set $M=\bigcup_{G\in\mathcal{M}}\pr_1G$. Trivially $M\in\mathcal{M}$, so $M$ satisfies condition 1 of the lemma. If $M\in\mathcal{S}$, then by the condition on $\mathcal{S}$ we have $p(M)\not\in M$. Adding a greatest element $a=p(M)$ to $M$, we obtain another well-ordered set $M'=M\cup\{a\}$ ($S_a=M$). Since $S_a=M\in\mathcal{S}$ and $p(S_a)=a$, we have $M'\in\mathcal{M}$, contradicting the maximality of $M$. Thus condition 2 of the lemma also holds.
+Now, using [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-lid="dddqx" data-relation="required" }, we obtain the well-ordered set $M=\bigcup_{G\in\mathcal{M}}\pr_1G$. Trivially $M\in\mathcal{M}$, so $M$ satisfies condition 1 of the lemma. If $M\in\mathcal{S}$, then by the condition on $\mathcal{S}$ we have $p(M)\not\in M$. Adding a greatest element $a=p(M)$ to $M$, we obtain another well-ordered set $M'=M\cup\{a\}$ ($S_a=M$). Since $S_a=M\in\mathcal{S}$ and $p(S_a)=a$, we have $M'\in\mathcal{M}$, contradicting the maximality of $M$. Thus condition 2 of the lemma also holds.
 :::
 
 ::: Proof (Theorem 1)

@@ -142,13 +142,13 @@ For an ordered set $A$, a function $f:A\rightarrow A$ is a *closure operator* if
 In this case, $x$ is *closed* if $f(x)=x$.
 :::
 
-Fix an antitone Galois connection. From the result $GFG(y)=G(y)$ in [Proposition 7](#prop7){: data-relation="required" }, substituting $y=F(x)$ for any $x\in A$ gives
+Fix an antitone Galois connection. From the result $GFG(y)=G(y)$ in [Proposition 7](#prop7){: data-lid="fyrn5" data-relation="required" }, substituting $y=F(x)$ for any $x\in A$ gives
 
 $$GFGF(x)=GF(x)$$
 
 Thus the function $GF$ satisfies all the conditions above and is therefore a closure operator. Similarly, in an antitone Galois connection, $FG$ is also a closure operator.
 
-By definition, $x$ and $y$ being closed with respect to $GF$ and $FG$, respectively, means that $GF(x)=x$ and $FG(y)=y$. From [Proposition 7](#prop7){: data-relation="required" }, we know that all elements in the images of $F$ and $G$ are closed. Conversely, if an arbitrary element $x$ is closed with respect to $GF$, then $GF(x)=x$ implies that $x$ belongs to the image of $G$, and the corresponding statement for $FG$ is proved similarly.
+By definition, $x$ and $y$ being closed with respect to $GF$ and $FG$, respectively, means that $GF(x)=x$ and $FG(y)=y$. From [Proposition 7](#prop7){: data-lid="3b7ns" data-relation="required" }, we know that all elements in the images of $F$ and $G$ are closed. Conversely, if an arbitrary element $x$ is closed with respect to $GF$, then $GF(x)=x$ implies that $x$ belongs to the image of $G$, and the corresponding statement for $FG$ is proved similarly.
 
 Through this process, for a Galois connection between ordered sets $A$ and $B$, we can construct collections $A'\subseteq A$ and $B'\subseteq B$ of closed subsets, and the restrictions of $F$ and $G$ to these collections are well defined. Moreover, these restrictions $F\vert_{A'}$ and $G\vert_{B'}$ are bijections and form an *anti-isomorphism*. These are specifically called *Galois correspondences*.
 
