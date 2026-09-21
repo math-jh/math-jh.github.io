@@ -16,7 +16,7 @@ last_polished_at: 2026-06-03T06:30:02+00:00
 ---
 ## Gluing lemma
 
-As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-relation="required" }, given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-lid="ifhee" data-relation="required" } yields a continuous map. Specifically, these conditions correspond to the following two cases:
+As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-lid="o5hv3" data-relation="required" }, given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-lid="ifhee" data-relation="required" } yields a continuous map. Specifically, these conditions correspond to the following two cases:
 
 1. $(A_i)$ is an open covering of $X$, or
 2. $(A_i)$ is a locally finite closed covering of $X$.
@@ -31,7 +31,7 @@ $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 then the function $f:X \rightarrow Y$ obtained by gluing them together is continuous.
 :::
 ::: Proof
-First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2){: data-lid="jm8pb" data-relation="required" }. Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-relation="required" }.
+First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2){: data-lid="jm8pb" data-relation="required" }. Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8){: data-lid="xv91t" data-relation="required" }.
 :::
 
 ## Presheaves of continuous functions

@@ -69,7 +69,7 @@ In particular, the following holds.
 A compact subset of a Hausdorff space is closed.
 :::
 ::: Proof
-From the proof of [Lemma 4](#lem4){: data-relation="required" }, setting
+From the proof of [Lemma 4](#lem4){: data-lid="3pxrl" data-relation="required" }, setting
 
 $$U_x=U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 
@@ -82,7 +82,7 @@ As mentioned above, a compact Hausdorff space satisfies the following additional
 A compact Hausdorff space is regular.
 :::
 ::: Proof
-Fix a compact Hausdorff space $X$, and let $x\in X$ be a point and $Y$ a closed subset of $X$ not containing $x$. Then $Y$ is compact by [Lemma 3](#lem3){: data-relation="required" }, and the desired result follows immediately from [Lemma 4](#lem4){: data-relation="required" }.
+Fix a compact Hausdorff space $X$, and let $x\in X$ be a point and $Y$ a closed subset of $X$ not containing $x$. Then $Y$ is compact by [Lemma 3](#lem3){: data-lid="svb53" data-relation="required" }, and the desired result follows immediately from [Lemma 4](#lem4){: data-lid="mrfyt" data-relation="required" }.
 :::
 
 Moreover, applying this once more yields the following proposition.
@@ -91,7 +91,7 @@ Moreover, applying this once more yields the following proposition.
 A compact Hausdorff space is normal.
 :::
 ::: Proof
-Let $A$ and $B$ be any two disjoint closed subsets of a compact Hausdorff space. Then for each $a\in A$, by [Lemma 6](#lem6){: data-lid="40yv7" data-relation="required" } there exist an open neighborhood $U_a$ of $a$ and an open neighborhood $V_a$ of $B$ such that $U_a\cap V_a=\emptyset$. Now, in the same way as in [Lemma 4](#lem4){: data-relation="required" }, $(U_a)_{a\in A}$ is an open covering of $A$, so again by [Lemma 3](#lem3){: data-relation="required" } we can take a finite subcover $U_{a_1},\ldots, U_{a_n}$ of $(U_a)$. Then the two open sets
+Let $A$ and $B$ be any two disjoint closed subsets of a compact Hausdorff space. Then for each $a\in A$, by [Lemma 6](#lem6){: data-lid="40yv7" data-relation="required" } there exist an open neighborhood $U_a$ of $a$ and an open neighborhood $V_a$ of $B$ such that $U_a\cap V_a=\emptyset$. Now, in the same way as in [Lemma 4](#lem4){: data-lid="aexi2" data-relation="required" }, $(U_a)_{a\in A}$ is an open covering of $A$, so again by [Lemma 3](#lem3){: data-lid="xa9oq" data-relation="required" } we can take a finite subcover $U_{a_1},\ldots, U_{a_n}$ of $(U_a)$. Then the two open sets
 
 $$U_{a_1}\cup\cdots \cup U_{a_n},\qquad V_{a_1}\cap\cdots\cap V_{a_n}$$
 

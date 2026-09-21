@@ -89,7 +89,7 @@ $$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 Then the origin of $\mathbb{R}^J$ belongs to the closure of $A$. This is because any basic open set containing the origin has all but finitely many coordinates equal to $\mathbb{R}$, and by setting those finitely many coordinates to $0$ and the remaining coordinates to $1$, we obtain a point lying in the intersection of this basic open set with $A$. However, no sequence in $A$ converges to the origin. Indeed, given any sequence in $A$, since $J$ is uncountable one can show that there exists $j\in J$ such that the $j$th coordinate of every term of the sequence is $1$; then the open neighborhood of the origin whose $j$th coordinate is $(-1,1)$ and whose remaining coordinates are $\mathbb{R}$ contains no term of the sequence.
 :::
 
-That is, the converse of [Lemma 7](#lem7){: data-relation="required" } also fails in general. Or, using the language above, for a topological space $X$ and a subset $A$ we have $\scl(A)\subsetneq \cl(A)$ in general. If $\scl(A)=\cl(A)$ holds for every subset $A$, then $X$ is called a *sequential space*.
+That is, the converse of [Lemma 7](#lem7){: data-lid="7bwnr" data-relation="required" } also fails in general. Or, using the language above, for a topological space $X$ and a subset $A$ we have $\scl(A)\subsetneq \cl(A)$ in general. If $\scl(A)=\cl(A)$ holds for every subset $A$, then $X$ is called a *sequential space*.
 
 Meanwhile, the following proposition, although slightly generalized, is still familiar.
 
@@ -100,9 +100,9 @@ Let $f:X \rightarrow Y$ be a continuous function and $(x_n)$ an arbitrary sequen
 Choose an arbitrary open neighborhood $V$ of $f(x)$. Since $f$ is continuous, $f^{-1}(V)$ is an open neighborhood of $x$. Hence there exists a suitable $N\in \mathbb{N}$ such that $x_n\in f^{-1}(V)$ for all $n\geq N$. Then $f(x_n)\in V$, so $(f(x_n))$ converges to $f(x)$.
 :::
 
-On the other hand, if the converse of [Lemma 7](#lem7){: data-relation="required" } holds in the space $X$, then using that result together with the second condition of [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-relation="required" }, we can also prove the converse of [Proposition 9](#prop9){: data-lid="sj54x" data-relation="weak" }. That is, if for every sequence $(x_n)$ converging to any $x\in A$, the sequence $f(x_n)$ converges to $f(x)$, then $f$ is continuous at the point $x$.
+On the other hand, if the converse of [Lemma 7](#lem7){: data-lid="4oyes" data-relation="required" } holds in the space $X$, then using that result together with the second condition of [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-lid="9lx73" data-relation="required" }, we can also prove the converse of [Proposition 9](#prop9){: data-lid="sj54x" data-relation="weak" }. That is, if for every sequence $(x_n)$ converging to any $x\in A$, the sequence $f(x_n)$ converges to $f(x)$, then $f$ is continuous at the point $x$.
 
-Suppose $X$ is a space in which the converse of [Lemma 7](#lem7){: data-relation="required" } holds. Then for any $x\in \cl(A)$ we can choose a sequence $(x_n)$ in $X$ converging to $x$. Since the sequence $f(x_n)$ in $Y$ converges to $f(x)$, by [Lemma 7](#lem7){: data-relation="required" } we have $f(x)\in \cl(f(A))$, and the desired result follows from [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-relation="required" }.
+Suppose $X$ is a space in which the converse of [Lemma 7](#lem7){: data-lid="i6oy0" data-relation="required" } holds. Then for any $x\in \cl(A)$ we can choose a sequence $(x_n)$ in $X$ converging to $x$. Since the sequence $f(x_n)$ in $Y$ converges to $f(x)$, by [Lemma 7](#lem7){: data-lid="y5ayz" data-relation="required" } we have $f(x)\in \cl(f(A))$, and the desired result follows from [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-lid="38979" data-relation="required" }.
 
 ## Countability Axioms
 
@@ -211,7 +211,7 @@ The product $X=\prod_{i\in I} X_i$ of compact spaces $(X_i)_{i\in I}$ is compact
 ::: Proof
 If $X$ is compact, then each $X_i$ is compact by the continuity of $\pr_i$ and [§Compact Spaces, ⁋Proposition 8](/en/math/topology/compact_spaces#prop8){: data-lid="sr8n2" data-relation="required" }.
 
-For the converse, given any ultrafilter $\mathcal{F}$ on $X$, we first verify that $\pr_i(\mathcal{F})$ defines an ultrafilter base on $X_i$; then from the assumption that $X_i$ is compact and [Lemma 18](#lem18){: data-relation="required" } we obtain a limit point $x_i$ of this ultrafilter, and we can show that $x=(x_i)_{i\in I}$ is a limit point of $\mathcal{F}$. Thus the proof is complete by [Lemma 18](#lem18){: data-relation="required" }.
+For the converse, given any ultrafilter $\mathcal{F}$ on $X$, we first verify that $\pr_i(\mathcal{F})$ defines an ultrafilter base on $X_i$; then from the assumption that $X_i$ is compact and [Lemma 18](#lem18){: data-lid="qltnq" data-relation="required" } we obtain a limit point $x_i$ of this ultrafilter, and we can show that $x=(x_i)_{i\in I}$ is a limit point of $\mathcal{F}$. Thus the proof is complete by [Lemma 18](#lem18){: data-lid="ydh22" data-relation="required" }.
 :::
 
 ---
