@@ -9804,12 +9804,12 @@ I:
   ko: 동형(인)
   primary: en
   defs:
+  - label: '[선형대수학] §동형사상'
+    url: /ko/math/linear_algebra/isomorphic_vector_spaces
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points#def4
-  - label: '[선형대수학] §동형사상'
-    url: /ko/math/linear_algebra/isomorphic_vector_spaces
 - id: isomorphism
   en: isomorphism
   ko: 동형사상
