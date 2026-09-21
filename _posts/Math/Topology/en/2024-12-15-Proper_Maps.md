@@ -131,13 +131,13 @@ Since $f$ is universally closed, $f\vert_{f^{-1}(C)}$ is universally closed. On 
 
 ## Proper Maps
 
-A function $f$ satisfying the conclusion of [Corollary 7](#cor7){: data-relation="required" } is called a *proper map*. The following proposition shows that the converse of the above corollary also holds in a special case.
+A function $f$ satisfying the conclusion of [Corollary 7](#cor7){: data-lid="6zfsl" data-relation="required" } is called a *proper map*. The following proposition shows that the converse of the above corollary also holds in a special case.
 
 ::: Proposition 8
 Let a continuous function $f:X \rightarrow Y$ between Hausdorff spaces be given, and additionally assume that $Y$ is locally compact. Then $f$ being universally closed and $f$ being proper are equivalent.
 :::
 ::: Proof
-As noted earlier, that $f$ being universally closed implies $f$ is proper is the content of [Corollary 7](#cor7){: data-relation="required" }. Thus the heart of this proposition is the reverse direction. Since $Y$ is locally compact, there exists an open covering $(U_i)$ of $Y$ consisting of open sets each contained in some compact set. Then the $f^{-1}(\cl U_i)$ are compact in $X$ and each $f\vert_{f^{-1}(\cl U_i)}$ is universally closed. Hence by [Proposition 3](#prop3){: data-lid="d16fe" data-relation="required" }, we obtain the desired result.
+As noted earlier, that $f$ being universally closed implies $f$ is proper is the content of [Corollary 7](#cor7){: data-lid="dv3da" data-relation="required" }. Thus the heart of this proposition is the reverse direction. Since $Y$ is locally compact, there exists an open covering $(U_i)$ of $Y$ consisting of open sets each contained in some compact set. Then the $f^{-1}(\cl U_i)$ are compact in $X$ and each $f\vert_{f^{-1}(\cl U_i)}$ is universally closed. Hence by [Proposition 3](#prop3){: data-lid="d16fe" data-relation="required" }, we obtain the desired result.
 :::
 
 In particular, applying this to the one-point compactification examined earlier yields the following result.

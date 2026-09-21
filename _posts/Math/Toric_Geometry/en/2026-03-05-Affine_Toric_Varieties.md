@@ -107,7 +107,7 @@ Hence $U_\sigma = \mathbb{C}^2$.
 
 ## Smoothness
 
-In [Example 6](#ex6){: data-relation="weak" } with $\sigma = \{0\}$ and in [Example 7](#ex7){: data-relation="weak" } with the standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$, the varieties $U_\sigma$ were respectively $T_N$ and $\mathbb{C}^2$, both smooth algebraic varieties. We shall now see that this is no accident: the smoothness of $U_\sigma$ is completely determined by the combinatorial data of the cone $\sigma$.
+In [Example 6](#ex6){: data-lid="c33hh" data-relation="weak" } with $\sigma = \{0\}$ and in [Example 7](#ex7){: data-lid="v0sbv" data-relation="weak" } with the standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$, the varieties $U_\sigma$ were respectively $T_N$ and $\mathbb{C}^2$, both smooth algebraic varieties. We shall now see that this is no accident: the smoothness of $U_\sigma$ is completely determined by the combinatorial data of the cone $\sigma$.
 
 ::: Definition 8
 A strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$ is called *smooth* (or *regular*, or *nonsingular*) if its primitive ray generators $v_1, \ldots, v_k$ (with $k = \dim \sigma$) form part of a $\mathbb{Z}$-basis of the lattice $N$.
@@ -118,7 +118,7 @@ Although the definition may look somewhat abstract, in practice it is equivalent
 1. $\sigma$ is *simplicial*. That is, the number of rays equals the dimension.
 2. (When $\sigma$ is full-dimensional) the determinant of the matrix $[v_1 \mid \cdots \mid v_n] \in \mathrm{Mat}_n(\mathbb{Z})$ whose columns are the primitive ray generators is $\pm 1$.
 
-In particular, for a two-dimensional cone in $N = \mathbb{Z}^2$ it suffices to check that the $2 \times 2$ matrix formed by the two ray generators has determinant $\pm 1$, and indeed [Example 6](#ex6){: data-relation="weak" } and [Example 7](#ex7){: data-relation="weak" } satisfy this.
+In particular, for a two-dimensional cone in $N = \mathbb{Z}^2$ it suffices to check that the $2 \times 2$ matrix formed by the two ray generators has determinant $\pm 1$, and indeed [Example 6](#ex6){: data-relation="weak" } and [Example 7](#ex7){: data-lid="cwte2" data-relation="weak" } satisfy this.
 
 ::: Proposition 9
 The affine toric variety $U_\sigma$ is a smooth algebraic variety if and only if $\sigma$ is a smooth cone. More specifically, if $\sigma$ is smooth and $k = \dim \sigma$, then
@@ -305,9 +305,9 @@ For instance, in the two-dimensional cone $\sigma$ of [Example 7](#ex7){: data-l
 We claim that the open embedding $U_\tau \hookrightarrow U_\sigma$ is $T_N$-equivariant. That is, the actions of $T_N$ on $U_\tau$ and on $U_\sigma$ are compatible with the inclusion. This follows from a straightforward computation, so the above inclusion is also an inclusion of toric varieties.
 
 ::: Example 14
-In [Example 7](#ex7){: data-relation="weak" } we saw that when $N = \mathbb{Z}^2$ and $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$, we have $U_\sigma = \mathbb{C}^2$. Let us now examine concretely how the torus $T_N = (\mathbb{C}^\ast)^2$ acts on $U_\sigma = \mathbb{C}^2$.
+In [Example 7](#ex7){: data-lid="w82de" data-relation="weak" } we saw that when $N = \mathbb{Z}^2$ and $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$, we have $U_\sigma = \mathbb{C}^2$. Let us now examine concretely how the torus $T_N = (\mathbb{C}^\ast)^2$ acts on $U_\sigma = \mathbb{C}^2$.
 
-First, as we saw in [Example 7](#ex7){: data-relation="weak" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-lid="k15rn" data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
+First, as we saw in [Example 7](#ex7){: data-lid="5hr15" data-relation="weak" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-lid="k15rn" data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2.$$
 
