@@ -10826,6 +10826,13 @@ L:
     url: /ko/math/lie_theory/bruhat_decomposition
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
+- id: length_function
+  en: length function
+  ko: 길이 함수
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리
@@ -10847,6 +10854,13 @@ L:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: levi_decomposition
+  en: Levi decomposition
+  ko: 레비 분해
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: lichtenbaum_schlessinger_complex
   en: Lichtenbaum–Schlessinger complex
   ko: 리히텐바움-슐레진저 복합체
