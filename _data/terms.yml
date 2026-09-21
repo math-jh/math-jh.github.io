@@ -6514,6 +6514,13 @@ F:
   defs:
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: finite-dimensional_vector_space
+  en: finite-dimensional vector space
+  ko: 유한차원 벡터공간
+  primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간의 차원'
+    url: /ko/math/linear_algebra/dimension
 - id: finite_extension
   en: finite extension
   ko: 유한 확장
@@ -8954,6 +8961,13 @@ I:
   en: infinite-dimensional
   ko: 무한차원
   primary: ko
+  defs:
+  - label: '[선형대수학] §벡터공간의 차원'
+    url: /ko/math/linear_algebra/dimension
+- id: infinite-dimensional_vector_space
+  en: infinite-dimensional vector space
+  ko: 무한차원 벡터공간
+  primary: en
   defs:
   - label: '[선형대수학] §벡터공간의 차원'
     url: /ko/math/linear_algebra/dimension
