@@ -38,8 +38,8 @@ Let topological spaces $X,Y,Z$ and functions $f:X \rightarrow Y$, $g:Y \rightarr
     
     $$(g\circ f)(f^{-1}(V))=g(f(f^{-1}(V)))=g(V)$$
 
-    holds, so $g(V)$ is an open set of $Z$. Here we used that $f(f^{-1}(V))=V$ since $f$ is a surjection. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" }) On the other hand, if $B$ is an arbitrary closed set of $Y$, then by [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-lid="ohmya" data-relation="required" } we can apply the same argument as above.
-3. As in the second proof, it suffices to consider the open case. For any open set $U$ of $X$, since $g\circ f$ is open, $g(f(U))$ is open, and thus using that $g$ is continuous and the above [\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-relation="required" }, from the following formula
+    holds, so $g(V)$ is an open set of $Z$. Here we used that $f(f^{-1}(V))=V$ since $f$ is a surjection. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="suv4m" data-relation="required" }) On the other hand, if $B$ is an arbitrary closed set of $Y$, then by [§Continuous Functions, ⁋Theorem 4](/en/math/topology/continuous_functions#thm4){: data-lid="ohmya" data-relation="required" } we can apply the same argument as above.
+3. As in the second proof, it suffices to consider the open case. For any open set $U$ of $X$, since $g\circ f$ is open, $g(f(U))$ is open, and thus using that $g$ is continuous and the above [\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="g2zp9" data-relation="required" }, from the following formula
     
     $$g^{-1}(g(f(U)))=f(U)$$
 

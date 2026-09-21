@@ -64,7 +64,7 @@ Now consider an arbitrary subset $A$ of $X\times Y$. Then
 
 $$A\cap (X\times \{y_0\})=\{(x,y)\mid (x,y)\in A,\quad y=y_0\}=\{(x,y_0)\mid (x,y_0)\in A\}$$
 
-Since $\graph(f)$ is equipped with the subspace topology of $X\times Y$, the above set is open in $\graph(f)$ if $A$ is open in $X\times Y$, and closed in $\graph(f)$ if $A$ is closed in $X\times Y$. Therefore, applying [Corollary 4](#cor4){: data-relation="required" } again and sending the above set to $X$, the corresponding set is also open or closed. Let us denote this set by $A(y_0)\subseteq X$. Of course, by a similar argument with the roles of $X$ and $Y$ interchanged, we can also obtain a subset $A(x_0)$ of $Y$.
+Since $\graph(f)$ is equipped with the subspace topology of $X\times Y$, the above set is open in $\graph(f)$ if $A$ is open in $X\times Y$, and closed in $\graph(f)$ if $A$ is closed in $X\times Y$. Therefore, applying [Corollary 4](#cor4){: data-lid="ow5ei" data-relation="required" } again and sending the above set to $X$, the corresponding set is also open or closed. Let us denote this set by $A(y_0)\subseteq X$. Of course, by a similar argument with the roles of $X$ and $Y$ interchanged, we can also obtain a subset $A(x_0)$ of $Y$.
 
 ::: Proposition 5
 For any open set $U$ in $X\times Y$, $\pr_X(U)$ and $\pr_Y(U)$ are open in $X$ and $Y$, respectively.
@@ -75,7 +75,7 @@ This is obvious from the above argument and the following formulas:
 $$\pr_X(U)=\bigcup_{y\in Y} U(y),\qquad \pr_Y(U)=\bigcup_{x\in X} U(x)$$
 :::
 
-However, since an arbitrary union of closed sets need not be closed, the claim obtained by replacing $A$ with a closed set in the above proposition does not hold. On the other hand, by [Corollary 4](#cor4){: data-relation="required" }, we also obtain the following proposition.
+However, since an arbitrary union of closed sets need not be closed, the claim obtained by replacing $A$ with a closed set in the above proposition does not hold. On the other hand, by [Corollary 4](#cor4){: data-lid="bjrg2" data-relation="required" }, we also obtain the following proposition.
 
 ::: Proposition 6
 If a function $f:X_1\times X_2 \rightarrow Y$ is continuous at $(a_1,a_2)\in X_1\times X_2$, then the functions from $X_1$ to $Y$ and from $X_2$ to $Y$ defined by
@@ -105,7 +105,7 @@ together with the fact that projections are continuous so each $\pr_i^{-1}(\cl A
 
 $$\cl\left(\prod_{i\in I}A_i\right)\subseteq \prod_{i\in I}\cl A_i$$
 
-Conversely, suppose $x=(x_i)\in\prod_{i\in I}\cl A_i$ is given, and consider an arbitrary neighborhood $V$ of $x$. Then, thinking of the base for the product topology, there exist open sets $U_i$ such that $x\in\prod U_i\subseteq V$ and $U_i=X_i$ for all but finitely many $i$. For each $i$, since $x_i\in \cl A_i$ and $U_i$ is a neighborhood of $x_i$, by [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" } we have $U_i\cap A_i\neq\emptyset$, and we can choose an element $a_i\in U_i\cap A_i$. Then $a=(a_i)$ is an element of $V\cap \prod A_i$, so every neighborhood of $x$ meets $\prod A_i$, and again by [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-relation="required" } we have $x\in \cl\left(\prod A_i\right)$.
+Conversely, suppose $x=(x_i)\in\prod_{i\in I}\cl A_i$ is given, and consider an arbitrary neighborhood $V$ of $x$. Then, thinking of the base for the product topology, there exist open sets $U_i$ such that $x\in\prod U_i\subseteq V$ and $U_i=X_i$ for all but finitely many $i$. For each $i$, since $x_i\in \cl A_i$ and $U_i$ is a neighborhood of $x_i$, by [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="dmcjo" data-relation="required" } we have $U_i\cap A_i\neq\emptyset$, and we can choose an element $a_i\in U_i\cap A_i$. Then $a=(a_i)$ is an element of $V\cap \prod A_i$, so every neighborhood of $x$ meets $\prod A_i$, and again by [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="wxoyx" data-relation="required" } we have $x\in \cl\left(\prod A_i\right)$.
 :::
 
 However, the above proposition does not always hold for interior; it only holds when $I$ is finite.
