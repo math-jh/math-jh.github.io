@@ -47,7 +47,7 @@ One subtlety is that a unit in a ring need not remain a unit in a given subring.
 
 ## Zero Divisors and Regular Elements
 
-In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="weak" }) Let us first refine the definition a little further.
+In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="xqcr3" data-relation="weak" }) Let us first refine the definition a little further.
 
 ::: Definition 3
 For an element $a\in A$ of a ring $A$, we define the following.
@@ -57,7 +57,7 @@ For an element $a\in A$ of a ring $A$, we define the following.
 3. An element that is not a zero divisor is called a *regular element* or a non-zero-divisor.
 :::
 
-[\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="weak" } does not distinguish between left and right zero divisors, and encompasses both notions. In particular, in a commutative ring this distinction vanishes, so omitting the direction causes no confusion.
+[\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="wdywa" data-relation="weak" } does not distinguish between left and right zero divisors, and encompasses both notions. In particular, in a commutative ring this distinction vanishes, so omitting the direction causes no confusion.
 
 By definition, $0$ itself is a zero divisor: whenever $A\neq 0$, multiplying $0$ by any nonzero element (for instance $1$) yields $0$. The contrapositive shows that every regular element must be nonzero.
 
@@ -74,7 +74,7 @@ $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 so $b=0$, a contradiction. A similar argument applies assuming $bu=0$, and therefore $u$ is a regular element.
 :::
 
-[Proposition 4](#prop4){: data-relation="required" } shows that every unit is regular, but the converse fails in general. For example, in $\mathbb{Z}$ the element $2$ is easily seen to be regular, yet it is not a unit. ([Example 2](#ex2){: data-lid="cx3y6" data-relation="weak" })
+[Proposition 4](#prop4){: data-lid="yqlgq" data-relation="required" } shows that every unit is regular, but the converse fails in general. For example, in $\mathbb{Z}$ the element $2$ is easily seen to be regular, yet it is not a unit. ([Example 2](#ex2){: data-lid="cx3y6" data-relation="weak" })
 
 However, if the ring is *finite*, the converse does hold. This rests essentially on the definition of a finite set ([\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Definition 1](/en/math/set_theory/natural_numbers#def1){: data-lid="gkwn4" data-relation="weak" }): a function from a finite set to itself is automatically bijective as soon as it is either injective or surjective.
 
@@ -82,7 +82,7 @@ However, if the ring is *finite*, the converse does hold. This rests essentially
 In a finite ring $A$, an element is a regular element if and only if it is a unit.
 :::
 ::: Proof
-By [Proposition 4](#prop4){: data-relation="required" } every unit is regular, so it suffices to show that a regular element is a unit. Let $a\in A$ be regular, and consider the left multiplication map
+By [Proposition 4](#prop4){: data-lid="o9enb" data-relation="required" } every unit is regular, so it suffices to show that a regular element is a unit. Let $a\in A$ be regular, and consider the left multiplication map
 
 $$\lambda_a:A\rightarrow A;\qquad x\mapsto ax$$
 
@@ -95,7 +95,7 @@ The most important corollary of this theorem concerns integral domains.
 Every finite integral domain is a field.
 :::
 ::: Proof
-By definition any finite integral domain $A$ is commutative and satisfies $0\neq 1$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-relation="required" }) To show further that $A$ is a field, we must verify that every nonzero element is a unit. Since an integral domain has no zero divisors other than $0$, any nonzero element $a$ is regular and hence a unit by [Theorem 5](#thm5){: data-lid="y5bb5" data-relation="required" }.
+By definition any finite integral domain $A$ is commutative and satisfies $0\neq 1$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="lia9q" data-relation="required" }) To show further that $A$ is a field, we must verify that every nonzero element is a unit. Since an integral domain has no zero divisors other than $0$, any nonzero element $a$ is regular and hence a unit by [Theorem 5](#thm5){: data-lid="y5bb5" data-relation="required" }.
 :::
 
 ## Examples
