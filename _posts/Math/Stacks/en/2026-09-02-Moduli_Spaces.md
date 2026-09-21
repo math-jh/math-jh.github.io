@@ -22,7 +22,7 @@ that assigns to each object $T$ a family of geometric objects defined over $T$, 
 
 ## Moduli Functors
 
-We have already finished formulating such a problem as a $\Grpd$-valued pseudofunctor in [§Stacks, ⁋Example 9](/en/math/stacks/fibered_categories_and_stacks#ex9){: data-relation="required" }, so here we begin by giving that functor a name and fixing notation.
+We have already finished formulating such a problem as a $\Grpd$-valued pseudofunctor in [§Stacks, ⁋Example 9](/en/math/stacks/fibered_categories_and_stacks#ex9){: data-lid="hf8w3" data-relation="required" }, so here we begin by giving that functor a name and fixing notation.
 
 ::: Definition 1
 A pseudofunctor $\mathcal{M}:\Sch^\op \rightarrow \Grpd$ is called a *moduli functor*. ([§Stacks, ⁋Definition 3](/en/math/stacks/fibered_categories_and_stacks#def3){: data-lid="el7xt" data-relation="weak" })
@@ -42,7 +42,7 @@ $$\alpha\mapsto \alpha_M(\id_M)$$
 
 ([\[Category Theory\] §Representable Functors, ⁋Theorem 4](/en/math/category_theory/representable_functors#thm4){: data-lid="ycuek" data-relation="required" }). That is, a natural transformation $\alpha$ is completely determined by its single value $\alpha_M(\id_M)$ at the identity morphism, and when $\alpha$ is a natural isomorphism, the element so obtained was called a *universal element*. ([\[Category Theory\] §Representable Functors, ⁋Definition 5](/en/math/category_theory/representable_functors#def5){: data-lid="h5gek" data-relation="weak" })
 
-The Yoneda lemma itself concerns $\Set$-valued functors, but it can be lifted to the $\Grpd$-valued setting. As in [§Stacks, ⁋Example 9](/en/math/stacks/fibered_categories_and_stacks#ex9){: data-relation="required" }, if we regard each scheme $T$ as the CFG given by its slice category, then the groupoid formed by the morphisms from $T$ to $\mathcal{M}$ and the 2-morphisms between them is equivalent to the fiber groupoid $\mathcal{M}(T)$, and as above this equivalence sends $f:T\rightarrow\mathcal{M}$ to $f(\id_T)$. Hence the entire datum of $f$ is determined up to isomorphism by the $T$-family $X=f(\id_T)$, and a 2-morphism between two morphisms is likewise determined by its component at $\id_T$, that is, by an isomorphism between the two $T$-families. Conversely, $X\in\mathcal{M}(T)$ determines a morphism $f_X:T\rightarrow\mathcal{M}$ assigning $u^\ast X$ to each $u:T'\rightarrow T$.
+The Yoneda lemma itself concerns $\Set$-valued functors, but it can be lifted to the $\Grpd$-valued setting. As in [§Stacks, ⁋Example 9](/en/math/stacks/fibered_categories_and_stacks#ex9){: data-lid="qjh60" data-relation="required" }, if we regard each scheme $T$ as the CFG given by its slice category, then the groupoid formed by the morphisms from $T$ to $\mathcal{M}$ and the 2-morphisms between them is equivalent to the fiber groupoid $\mathcal{M}(T)$, and as above this equivalence sends $f:T\rightarrow\mathcal{M}$ to $f(\id_T)$. Hence the entire datum of $f$ is determined up to isomorphism by the $T$-family $X=f(\id_T)$, and a 2-morphism between two morphisms is likewise determined by its component at $\id_T$, that is, by an isomorphism between the two $T$-families. Conversely, $X\in\mathcal{M}(T)$ determines a morphism $f_X:T\rightarrow\mathcal{M}$ assigning $u^\ast X$ to each $u:T'\rightarrow T$.
 
 Accordingly, we can read $\id_\mathcal{M}:\mathcal{M}\rightarrow\mathcal{M}$ as the universal family over $\mathcal{M}$. Pulling it back along the morphism $f_X:T\rightarrow\mathcal{M}$ corresponding to a $T$-family $X$ amounts to taking $\id_\mathcal{M}\circ f_X=f_X$, which under the equivalence above is again $X$. That is, *every* family defined by the moduli functor $\mathcal{M}$ is obtained by pulling back the single universal family $\id_\mathcal{M}$; this is a direct generalization of [\[Algebraic Topology\] §Classifying Spaces, ⁋Theorem 8](/en/math/algebraic_topology/classifying_spaces#thm8){: data-lid="cmiry" data-relation="weak" }.
 
@@ -104,11 +104,11 @@ $$\mathbb{K}^n\twoheadrightarrow Q_x:=x^\ast\mathcal{Q}^{\mathrm{univ}}$$
 Here $Q_x$ is the geometric fiber of $\mathcal{Q}^{\mathrm{univ}}$ at $x$, and the quotient map $\mathbb{K}^n\twoheadrightarrow Q_x$ is the moduli object corresponding to $x$. Since this quotient is uniquely determined by its kernel $S_x\subseteq\mathbb{K}^n$ and $\dim S_x=n-k$, the $\mathbb{K}$-points of $\Gr(k,n)$ parametrize the $(n-k)$-dimensional subspaces of $\mathbb{K}^n$.
 :::
 
-On the other hand, a general moduli problem need not have a fine moduli space, and the moduli problem classifying vector bundles on a scheme is exactly such an example. By contrast, the functor $F_{k,n}$ of [Example 3](#ex3){: data-relation="required" } classifies a rank $k$ vector bundle $\mathcal{Q}$ together with a quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$, and it is representable by the Grassmannian $\Gr(k,n)$. In other words, once we included the quotient map as extra data on the vector bundle, a fine moduli space appeared. This difference stems from the constraint that the quotient map imposes on automorphisms.
+On the other hand, a general moduli problem need not have a fine moduli space, and the moduli problem classifying vector bundles on a scheme is exactly such an example. By contrast, the functor $F_{k,n}$ of [Example 3](#ex3){: data-lid="d5y41" data-relation="required" } classifies a rank $k$ vector bundle $\mathcal{Q}$ together with a quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$, and it is representable by the Grassmannian $\Gr(k,n)$. In other words, once we included the quotient map as extra data on the vector bundle, a fine moduli space appeared. This difference stems from the constraint that the quotient map imposes on automorphisms.
 
 Why automorphisms cause trouble becomes intuitively clear when one thinks in terms of families. Using an automorphism of a moduli object, one can build a family that is locally constant but not constant over the whole base. If a fine moduli space existed, the classifying morphisms of the two families would agree locally and hence globally, yet one cannot obtain two non-isomorphic families by pulling back a single universal family along the same morphism.
 
-The essential reason the moduli problem classifying vector bundles has no fine moduli space is that a vector bundle $\mathcal{Q}$ can have nontrivial automorphisms. By contrast, if we include the quotient map $q$ as extra data, an automorphism $\theta:\mathcal{Q}\rightarrow\mathcal{Q}$ of the whole datum must preserve $q$, so it satisfies $\theta\circ q=q$. Since $q$ is surjective, this equality forces $\theta=\id_\mathcal{Q}$. In this way, extra data added to the object being classified increases the conditions an automorphism must preserve, shrinking the automorphism group, and with enough conditions only the identity morphism remains. This effect is called rigidity, and extra data such as the quotient map $q$ of [Example 3](#ex3){: data-relation="weak" } is called rigidifying data.
+The essential reason the moduli problem classifying vector bundles has no fine moduli space is that a vector bundle $\mathcal{Q}$ can have nontrivial automorphisms. By contrast, if we include the quotient map $q$ as extra data, an automorphism $\theta:\mathcal{Q}\rightarrow\mathcal{Q}$ of the whole datum must preserve $q$, so it satisfies $\theta\circ q=q$. Since $q$ is surjective, this equality forces $\theta=\id_\mathcal{Q}$. In this way, extra data added to the object being classified increases the conditions an automorphism must preserve, shrinking the automorphism group, and with enough conditions only the identity morphism remains. This effect is called rigidity, and extra data such as the quotient map $q$ of [Example 3](#ex3){: data-lid="285hf" data-relation="weak" } is called rigidifying data.
 
 The following proposition, then, states the failure of fine moduli spaces seen above more precisely.
 
@@ -160,7 +160,7 @@ Then in particular $\Delta\neq 0$, and since $a,b\neq 0$ we have $j(E)\neq0,1728
 
 In the moduli problem, we consider families of elliptic curves satisfying such conditions. Here a family of elliptic curves over a scheme $T$ is a pair consisting of a smooth proper morphism $\pi:\mathcal{E}\rightarrow T$ all of whose geometric fibers are smooth projective genus $1$ curves, and a section $0:T\rightarrow\mathcal{E}$.
 
-The purpose of this example is to compute [Proposition 4](#prop4){: data-relation="required" } in a concrete case. According to it, to show that the moduli of elliptic curves is not a fine moduli space, it suffices to use the nontrivial automorphism $\iota_E$ to construct a family that is locally trivial but not constant. To this end, set $T=\Spec\mathbb{K}(t)$ and consider the extension $\mathbb{K}(t)\subseteq\mathbb{K}(t)[\sqrt{t}]$. Over it, the coordinate change for $c=\sqrt{t}$ gives an isomorphism between $E_{a,b}$ and $E_{c^4a,c^6b}=E_{t^2a,t^3b}$, so we define the curve over $T$ by
+The purpose of this example is to compute [Proposition 4](#prop4){: data-lid="dlwn9" data-relation="required" } in a concrete case. According to it, to show that the moduli of elliptic curves is not a fine moduli space, it suffices to use the nontrivial automorphism $\iota_E$ to construct a family that is locally trivial but not constant. To this end, set $T=\Spec\mathbb{K}(t)$ and consider the extension $\mathbb{K}(t)\subseteq\mathbb{K}(t)[\sqrt{t}]$. Over it, the coordinate change for $c=\sqrt{t}$ gives an isomorphism between $E_{a,b}$ and $E_{c^4a,c^6b}=E_{t^2a,t^3b}$, so we define the curve over $T$ by
 
 $$X:\y^2=\x^3+t^2a\x+t^3b$$
 
@@ -168,7 +168,7 @@ Indeed, the discriminant of $X$ is $\Delta_X=t^6\Delta_E$, which is nonzero, so 
 
 On the other hand, for such an isomorphism to exist over $T$, some $c\in\mathbb{K}(t)^\times$ would have to satisfy $c^4=t^2$ and $c^6=t^3$. Then $c^2=t$, but $t$ is not a square in $\mathbb{K}(t)$. Thus $X$ is constant over $S$ but not constant over $T$.
 
-Therefore, by [Proposition 4](#prop4){: data-relation="required" }, the moduli functor of elliptic curves has no fine moduli space. Moreover, since the powers of $t$ appearing in the coefficients cancel as $t^6$ in both the numerator and the denominator of the $j$-invariant, we have $j(X)=j(E)$. From this we also learn that no universal family can exist even over the affine line $\mathbb{A}^1_j$ that represents geometric isomorphism classes by the value of $j$.
+Therefore, by [Proposition 4](#prop4){: data-lid="nfvqs" data-relation="required" }, the moduli functor of elliptic curves has no fine moduli space. Moreover, since the powers of $t$ appearing in the coefficients cancel as $t^6$ in both the numerator and the denominator of the $j$-invariant, we have $j(X)=j(E)$. From this we also learn that no universal family can exist even over the affine line $\mathbb{A}^1_j$ that represents geometric isomorphism classes by the value of $j$.
 :::
 
 In the Grassmannian, the quotient map eliminated automorphisms, but for elliptic curves $\iota_E$ remains even after fixing the section, producing a nontrivial twist. This difference leads to two approaches: passing to a geometric object that remembers automorphisms, and finding an approximation that discards automorphisms and keeps only isomorphism classes.
@@ -216,13 +216,13 @@ Viewing the coordinate change of elliptic curves as the $\mathbb{G}_m$-action $\
 
 $$\mathcal{M}_{1,1}\cong[U/\mathbb{G}_m]$$
 
-([§Algebraic Stacks, ⁋Definition 7](/en/math/stacks/algebraic_stacks#def7){: data-lid="dx2qe" data-relation="required" }). In this case, the stabilizer of each point is $\Aut(E,0)$, computed earlier. These are finite étale in characteristic $0$, so $\mathcal{M}_{1,1}$ is a Deligne–Mumford stack, and since the inertia is finite, [Theorem 8](#thm8){: data-relation="required" } applies. ([§Algebraic Stacks, ⁋Theorem 10](/en/math/stacks/algebraic_stacks#thm10){: data-lid="i27ki" data-relation="required" })
+([§Algebraic Stacks, ⁋Definition 7](/en/math/stacks/algebraic_stacks#def7){: data-lid="dx2qe" data-relation="required" }). In this case, the stabilizer of each point is $\Aut(E,0)$, computed earlier. These are finite étale in characteristic $0$, so $\mathcal{M}_{1,1}$ is a Deligne–Mumford stack, and since the inertia is finite, [Theorem 8](#thm8){: data-lid="u9kqu" data-relation="required" } applies. ([§Algebraic Stacks, ⁋Theorem 10](/en/math/stacks/algebraic_stacks#thm10){: data-lid="i27ki" data-relation="required" })
 
 In this action, the weights of $a$ and $b$ are $4$ and $6$ respectively, and the weight of $\Delta$ is $12$. Hence the invariant ring is
 
 $$\mathbb{K}[a,b,\Delta^{-1}]^{\mathbb{G}_m}=\mathbb{K}[j]$$
 
-By this computation, the coarse moduli morphism guaranteed by [Theorem 8](#thm8){: data-relation="required" } is given by the natural transformation
+By this computation, the coarse moduli morphism guaranteed by [Theorem 8](#thm8){: data-lid="7bb6w" data-relation="required" } is given by the natural transformation
 
 $$\Phi:\underline{M}_{1,1}\longrightarrow\mathbb{A}^1_j,\qquad(E,0)\longmapsto j(E)$$
 
