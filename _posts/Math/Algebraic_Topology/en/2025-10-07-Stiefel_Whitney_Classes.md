@@ -1,7 +1,7 @@
 ---
 title: "Stiefel-Whitney Characteristic Classes"
-description: "This post defines fiber bundles and vector bundles, then introduces Stiefel-Whitney characteristic classes as the first characteristic classes via Cech cohomology, along with the infinite Grassmannian as their classifying space."
-excerpt: "Vector bundles, Stiefel-Whitney classes, and the infinite Grassmannian"
+description: "This post defines fiber bundles and vector bundles, and via Cech cohomology, covers Stiefel-Whitney characteristic classes as the first characteristic classes and the infinite Grassmannian as their classifying space model."
+excerpt: "Vector bundles, Stiefel-Whitney characteristic classes, and the infinite Grassmannian"
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/stiefel_whitney_classes
@@ -12,17 +12,18 @@ date: 2025-10-07
 weight: 13
 translated_at: 2026-08-18T17:15:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-18T17:15:05+00:00
+last_polished_at: 2026-09-22T07:15:04+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In the previous post, the map $p:\Spe(\or_M^A)\rightarrow M$ played an important role as a covering space, and it had the following properties.
+In the previous post, the map $p:\Spe(\or_M^A)\rightarrow M$, which played an important role, was a covering space, and had the following properties.
 
-1. For any $x\in M$, we have $p^{-1}(x)\cong \{x\}\times A^\times$.
+1. For any $x\in M$, $p^{-1}(x)\cong \{x\}\times A^\times$.
 2. Moreover, for any $x\in M$, there exists a suitable open set $U$ such that $p^{-1}(U)\cong U\times A^\times$.
 
-Now we generalize this further and examine the case where $p^{-1}(x)$ carries additional structure (rather than being merely a discrete set). The most general definition is as follows.
+Now we generalize this further and examine the case where $p^{-1}(x)$ carries additional structure (not a discrete set). The most general definition is as follows.
 
 ::: Definition 1
-For a continuous surjection $p:E \rightarrow B$ between topological spaces and a topological space $F$, we say that $p$ is a *fiber bundle* with fiber space $F$ if for each $x\in B$, there exists an open set $U$ containing $x$ and a homeomorphism $\phi:U\times F\rightarrow p^{-1}(U)$ making the following diagram
+For a continuous surjection $p:E \rightarrow B$ between topological spaces and a topological space $F$, we say that $p$ is a *fiber bundle* with fiber space $F$ if for each $x\in B$, there exists, containing $x$, an open set $U$ and a homeomorphism $\phi:U\times F\rightarrow p^{-1}(U)$ making the following diagram
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-1.svg width="10.09em" alt="fiber_bundle" %}
 
@@ -35,78 +36,78 @@ The two cases of particular interest to us are when the fiber $F$ is a vector sp
 
 ## Vector Bundles
 
-First, we consider the case where $F$ is a vector space. When the fiber $F$ is a topological group, $F$ is already equipped with a topology, so the topology on the product space $U\times F$ in [Definition 1](#def1){: data-lid="8she4" data-relation="required" } is clear; however, when $F$ is a vector space, the situation is somewhat ambiguous. In the most general setting, one could use the notion of a topological vector space $V$ over a topological ring $\mathbb{K}$, but for convenience we shall for now only consider the case where the base field of $F$ is $\mathbb{R}$ and $F$ is equipped with the metric topology arising from the canonical inner product.
+First, we consider the case where $F$ is a vector space. When the fiber $F$ is a topological group, $F$ is already equipped with a topology, so the topology on the product space $U\times F$ in [Definition 1](#def1){: data-lid="8she4" data-relation="required" } is clear, but the case of a vector space is somewhat ambiguous. In the most general setting, one could use the notion of a topological ring $\mathbb{K}$ acting on a topological vector space $V$, but for convenience we shall for now only consider the case where the base field of $F$ is $\mathbb{R}$ and $F$ is a space equipped with the metric topology arising from the canonical inner product.
 
 ::: Definition 2
-A fiber bundle $p:E \rightarrow B$ is called a *vector bundle* if the fiber space $F$ is an $\mathbb{R}$-vector space equipped with a topology as above, and moreover for each $x\in B$ there exists an open set $U$ containing $x$ and a homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$ as in [Definition 1](#def1){: data-lid="uhl5r" data-relation="required" } such that the function
+A fiber bundle $p:E \rightarrow B$ is called a *vector bundle* if the fiber space $F$ is an $\mathbb{R}$-vector space equipped with a topology as above, and moreover for each $x\in B$ there exist, containing $x$, an open set $U$ and a homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$ as in [Definition 1](#def1){: data-lid="uhl5r" data-relation="required" } such that the following function
 
 $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 
-is an isomorphism of vector spaces.
+is an isomorphism between vector spaces.
 :::
 
 Through this, each fiber $p^{-1}(x)$ inherits a vector space structure from $F$. In general, given two vector bundles $p_1:E_1 \rightarrow B_1$ and $p_2:E_2\rightarrow B_2$, a *morphism* between them means a commutative diagram of continuous functions
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-2.svg width="7.15em" alt="morphism_of_bundles" %}
 
-where, restricting $g$ to $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$ for each $x\in B_1$, this function must be a linear map between vector spaces. How to define an isomorphism between vector bundles is then obvious.
+where, restricting $g$, for each $x\in B_1$, to $p_1^{-1}(x)\rightarrow p_2^{-1}(f(x))$, this function must be a linear map between vector spaces. How to define an isomorphism between vector bundles is then obvious.
 
-Meanwhile, in [Definition 2](#def2){: data-lid="ymnjl" data-relation="weak" } above, we only considered the case where $F$ is an $\mathbb{R}$-vector space, and we defined a topology on it using the inner product structure on $\mathbb{R}^n$ and the topology on $\mathbb{R}$. But strictly speaking, the only information needed here is the topology on the vector space $F$, and when we view $F$ as an inner product space, this is called a *Euclidean bundle*. In any case, since we will mostly consider $\mathbb{R}$-vector spaces, we shall gloss over this distinction.
+Meanwhile, in [Definition 2](#def2){: data-lid="ymnjl" data-relation="weak" } above, we only considered the case where $F$ is an $\mathbb{R}$-vector space, and we defined a topology on it using the inner product structure defined on $\mathbb{R}^n$ and the topology on $\mathbb{R}$. But strictly speaking, the only information needed here is the topology on the vector space $F$, and when we view $F$ as an inner product space, this is called a *Euclidean bundle*. In any case, since we will mostly consider $\mathbb{R}$-vector spaces, we shall gloss over this distinction.
 
 ::: Example 3
-As a non-trivial example, the Möbius strip considered as a line bundle over $S^1$ is a classic instance. On the other hand, in [§Poincaré Duality, ⁋Example 5](/en/math/algebraic_topology/Poincare_duality#ex5){: data-lid="foz9f" data-relation="weak" } we also considered a non-trivial cover of $S^1$, which can be generalized geometrically as follows.
+An example that is not a trivial bundle is the Möbius strip considered as a line bundle over $S^1$. On the other hand, in [§Poincaré Duality, ⁋Example 5](/en/math/algebraic_topology/Poincare_duality#ex5){: data-lid="foz9f" data-relation="weak" } we also considered a non-trivial cover of $S^1$, which can be generalized geometrically as follows.
 
-For an $(n+1)$-dimensional vector space $\mathbb{R}^{n+1}$, we call the space of lines through the origin the *projective $n$-space* and denote it by $\RP^n$. Among the points on a line through the origin, the two points at distance $1$ from the origin specify the same line, so we can think of this as the quotient space obtained from the unit $n$-sphere $S^n$ by identifying antipodal points.
+For an $n+1$-dimensional vector space $\mathbb{R}^{n+1}$, we call the space of lines through the origin the *projective $n$-space* and denote it by $\RP^n$. Among the points on a line through the origin, the two points at distance $1$ from the origin specify the same line, so we can think of this as the quotient space obtained from the unit $n$-sphere $S^n$ by identifying antipodal points.
 
-Now let us take this space $\RP^n$ as the base space $B$, and define a vector bundle $E(\gamma_n^1)$ over it as follows. As a set,
+Now let us take this space $\RP^n$ as the base space $B$, and define a vector bundle $E(\gamma_n^1)$ over it as follows. As a set, it is defined by
 
 $$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
-and the projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$ is projection onto the first coordinate. That is, $\gamma_n^1$ attaches to each point $x\in \RP^n$ exactly the line in $\mathbb{R}^{n+1}$ that $x$ originally belonged to.
+and the projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$ is the projection onto the first coordinate. That is, $\gamma_n^1$ attaches to each point $x\in \RP^n$ exactly the line in $\mathbb{R}^{n+1}$ that $x$ originally belonged to.
 
-When $n\geq 1$, this is not a trivial bundle. If it were trivial, there would exist a non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$. For instance, the function sending every point of $B$ to $1$ in the fiber would be such a section. But given any section $s:\RP^n \rightarrow E(\gamma_n^1)$, consider the following composition using the quotient map $q:S^n \rightarrow \RP^n$:
+When $n\geq 1$, this is not a trivial bundle. If this were a trivial bundle, there would exist a non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$. For instance, the function sending every point of $B$ to $1$ in the fiber would be such a section. But suppose an arbitrary section $s:\RP^n \rightarrow E(\gamma_n^1)$ is given; if we consider the following composition using the quotient map $q:S^n \rightarrow \RP^n$:
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
-This function sends $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$ to a scalar multiple of $\mathbf{x}$. Denoting this scalar by $t(\mathbf{x})$, then $t$ is a continuous function from $S^n$ to $\mathbb{R}$, and because of the quotient map $q$ it satisfies
+this function sends $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$ to a scalar multiple of $\mathbf{x}$. If we denote this scalar by $t(\mathbf{x})$, then $t$ is a continuous function from $S^n$ to $\mathbb{R}$, and because of the quotient map $q$ it satisfies
 
-$$t(-\mathbf{x})=-t(\mathbf{x}).$$
+$$t(-\mathbf{x})=-t(\mathbf{x})$$
 
-Now since $S^n$ is connected, by the intermediate value theorem there exists $\mathbf{x}_0\in S^n$ with $t(\mathbf{x}_0)=0$.
+Now since $S^n$ is connected, by the intermediate value theorem there exists $\mathbf{x}_0\in S^n$ such that $t(\mathbf{x}_0)=0$.
 :::
 
 More generally, the following holds.
 
 ::: Proposition 4
-For a vector bundle $E$ of rank $n$ over a topological space $B$, $E$ is a trivial bundle if and only if there exist $n$ everywhere linearly independent sections $s_1,\ldots, s_n$.
+For a topological space $B$ and a vector bundle $E$ of rank $n$ defined on it, $E$ is a trivial bundle if and only if there exist $n$ everywhere linearly independent sections $s_1,\ldots, s_n$.
 :::
 ::: Proof
-If $E$ is trivial, pick an isomorphism $\psi:B\times\mathbb{R}^n\rightarrow E$ and set $s_i(x)=\psi(x,e_i)$; then since $\psi(x,-)$ is an isomorphism for each $x$, these become everywhere linearly independent sections.
+If $E$ is a trivial bundle, choose an isomorphism $\psi:B\times\mathbb{R}^n\rightarrow E$ and set $s_i(x)=\psi(x,e_i)$; then since for each $x$, $\psi(x,-)$ is an isomorphism, these become everywhere linearly independent sections.
 
-Conversely, suppose such sections are given and define
+Conversely, suppose such sections are given and set
 
-$$\varphi:B\times\mathbb{R}^n\rightarrow E;\qquad (x,a)\mapsto \sum_i a_is_i(x).$$
+$$\varphi:B\times\mathbb{R}^n\rightarrow E;\qquad (x,a)\mapsto \sum_i a_is_i(x)$$
 
 Then $\varphi$ is a continuous function covering $\id_B$ and is linear on each fiber; since $s_1(x),\ldots,s_n(x)$ are linearly independent, they form a basis of $p^{-1}(x)$ and so $\varphi(x,-)$ is an isomorphism. It remains to show the continuity of $\varphi^{-1}$; picking a local trivialization $\phi:U\times\mathbb{R}^n \rightarrow p^{-1}(U)$ from [Definition 2](#def2){: data-lid="lnpcm" data-relation="required" } and looking at $\phi^{-1}\circ\varphi$, this has the form $(x,a)\mapsto (x,A(x)a)$ where $A:U\rightarrow \GL(n;\mathbb{R})$ is continuous. Since taking the inverse of a matrix is continuous, $x\mapsto A(x)^{-1}$ is also continuous, and therefore $\varphi^{-1}$ is continuous on each $U$.
 :::
 
-Meanwhile, given any vector bundle $p:E \rightarrow B$ and any continuous map $f:B'\rightarrow B$, we can define a new vector bundle $f^\ast E \rightarrow B'$ by the formula
+Meanwhile, given any vector bundle $p:E \rightarrow B$ and any continuous map $f:B'\rightarrow B$, by setting
 
-$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq B'\times E.$$
+$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq B'\times E$$
 
-We call this the *pullback bundle*, and it is not difficult to see that for any vector bundle $E' \rightarrow B'$, if a bundle map $E'\rightarrow E$ covering $f$ is given, then this factors uniquely through $E'\rightarrow f^\ast E \rightarrow E$.
+we can define a new vector bundle $f^\ast E \rightarrow B'$. We call this the *pullback bundle*, and it is not difficult to see that for any vector bundle $E' \rightarrow B'$, if a bundle map covering $f$, $E'\rightarrow E$, is given, this factors uniquely through $E'\rightarrow f^\ast E \rightarrow E$.
 
-Meanwhile, given any two vector bundles $p_1:E_1\rightarrow B_1$, $p_2:E_2\rightarrow B_2$, their product
+Meanwhile, given any two vector bundles $p_1:E_1\rightarrow B_1$, $p_2:E_2\rightarrow B_2$, we know that their product
 
 $$p_1\times p_2: E_1\times E_2 \rightarrow B_1\times B_2$$
 
-is also a vector bundle over $B_1\times B_2$. Now if $B_1=B_2=B$, then as usual using the diagonal map
+is also a vector bundle over $B_1\times B_2$. Now if $B_1=B_2=B$, then as usual, using the diagonal map
 
 $$\Delta: B\rightarrow B\times B$$
 
 the pullback bundle $\Delta^\ast(p_1\times p_2)$ becomes a bundle over $B$. We call this the *Whitney sum* of the two vector bundles $E_1\rightarrow B$, $E_2\rightarrow B$ and denote it by $p_1\oplus p_2:E_1\oplus E_2\rightarrow B$. As the notation suggests, fiberwise this corresponds to the direct sum of the fibers of the two vector bundles $E_1,E_2$.
 
-Although we have not given detailed proofs, in a similar manner we can lift operations defined on each fiber (that is, on vector spaces) to vector bundles. For instance, given two vector bundles $E_1\rightarrow B$, $E_2 \rightarrow B$, we can form their tensor product bundle $E_1\otimes E_2 \rightarrow B$, and it is also possible to use operations such as $\Hom$ or $\bigwedge$.
+Although we have not given a detailed proof, in a similar manner we can carry over operations defined on each fiber (that is, on vector spaces) to vector bundles. For instance, given two vector bundles $E_1\rightarrow B$, $E_2 \rightarrow B$, we can form their tensor product bundle $E_1\otimes E_2 \rightarrow B$, and it is also possible to use operations such as $\Hom$ or $\bigwedge$.
 
 ## Čech Cohomology
 
@@ -114,84 +115,84 @@ At this point we establish another cohomology theory. Like the sheaf cohomology 
 
 Sheaf cohomology showed that cohomology encodes the obstruction to the existence of global sections of a sheaf. The Čech cohomology we now examine gives a similar result, but differs in that it answers this question by examining the process of patching local sections together to form a global section. In any case, for nice cases including manifolds, Čech cohomology gives the same result as sheaf cohomology, and thus the Čech cohomology of a constant sheaf recovers the cohomology we already knew.
 
-Consider a topological space $X$, a sheaf $\mathcal{F}$ defined on it, and an open cover $\mathcal{U}=\{U_i\}_{i\in I}$ of $X$. For each $p\geq 0$, the group of *Čech $p$-cochains* is defined by the formula
+Consider a topological space $X$, a sheaf $\mathcal{F}$ defined on it, and an open cover of $X$, $\mathcal{U}=\{U_i\}_{i\in I}$. For each $p\geq 0$, the group of *Čech $p$-cochains* is defined by the formula
 
-$$\check{C}^p(\mathcal{U},\mathcal{F})=\prod_{i_0,\ldots,i_p}\mathcal{F}(U_{i_0}\cap \cdots\cap U_{i_p}).$$
+$$\check{C}^p(\mathcal{U},\mathcal{F})=\prod_{i_0,\ldots,i_p}\mathcal{F}(U_{i_0}\cap \cdots\cap U_{i_p})$$
 
-That is, this is the collection of sections defined over all $(p+1)$-fold intersections. The differential
+That is, this is the collection of sections defined over all $(p+1)$-fold intersections. At this time, the differential
 
 $$\check{C}^p(\mathcal{U},\mathcal{F})\rightarrow \check{C}^{p+1}(\mathcal{U}, \mathcal{F})$$
 
 is given by the formula
 
-$$(\delta c)_{i_0,\ldots, i_{p+1}}=\sum_{k=0}^{p+1} (-1)^k c_{i_0,\ldots,\hat{i}_k,\ldots,i_{p+1}}\vert_{U_{i_0}\cap\cdots\cap U_{i_{p+1}}}.$$
+$$(\delta c)_{i_0,\ldots, i_{p+1}}=\sum_{k=0}^{p+1} (-1)^k c_{i_0,\ldots,\hat{i}_k,\ldots,i_{p+1}}\vert_{U_{i_0}\cap\cdots\cap U_{i_{p+1}}}$$
 
 Then *Čech cohomology* is given by the formula
 
-$$\check{H}^p(\mathcal{U}, \mathcal{F})=\frac{\ker(\check{C}^p\rightarrow \check{C}^{p+1})}{\im(\check{C}^{p-1}\rightarrow \check{C}^{p})}.$$
+$$\check{H}^p(\mathcal{U}, \mathcal{F})=\frac{\ker(\check{C}^p\rightarrow \check{C}^{p+1})}{\im(\check{C}^{p-1}\rightarrow \check{C}^{p})}$$
 
-If $\mathcal{U}$ is a sufficiently good cover (for instance, if every finite intersection is contractible, or is acyclic for $\mathcal{F}$), then we obtain a canonical isomorphism
+If $\mathcal{U}$ is a sufficiently good cover (for instance, if every finite intersection is contractible, or is acyclic for $\mathcal{F}$), then we obtain the canonical isomorphism
 
-$$H^p(X,\mathcal{F})\cong \check{H}^p(\mathcal{U},\mathcal{F}).$$
+$$H^p(X,\mathcal{F})\cong \check{H}^p(\mathcal{U},\mathcal{F})$$
 
 Now any rank $n$ vector bundle is determined by how its fiber is glued over an open cover. That is, it is determined by functions
 
-$$g_{ij}:U_{ij}=U_i\cap U_j \rightarrow \GL(n;\mathbb{R}).$$
+$$g_{ij}:U_{ij}=U_i\cap U_j \rightarrow \GL(n;\mathbb{R})$$
 
 These must satisfy the condition
 
-$$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id,$$
+$$g_{ij}\cdot g_{jk}\cdot g_{ki}=\id$$
 
-and if this condition were absent, on a triple intersection $U_i\cap U_j\cap U_k$, carrying the local trivialization from $U_i$ to $U_j$ via $g_{ij}$, then to $U_k$ via $g_{jk}$, then back to $U_i$ via $g_{ki}$, the trivialization would differ, whereas in reality it does not. Then these transition functions $g_{ij}$ form a Čech 1-cocycle by the above condition. If we change the local trivialization over each $U_i$ by a function $h_i:U_i\rightarrow \GL(n;\mathbb{R})$, then $g_{ij}$ changes to $h_ig_{ij}h_j^{-1}$, so cocycles giving the same vector bundle must be identified under this relation. That is, there is a one-to-one correspondence between isomorphism classes of rank $n$ vector bundles trivializable over an open cover $\mathcal{U}$ and $\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$. However, since $\GL(n;\mathbb{R})$ is a non-abelian group, the $\check{H}^1$ here is not the cohomology group defined by the differential above, but rather a pointed set defined separately by the cocycle condition $g_{ij}g_{jk}g_{ki}=\id$ and the equivalence relation just mentioned.
+and if this condition were absent, on a triple intersection $U_i\cap U_j\cap U_k$, when carrying the local trivialization of $U_i$ via $g_{ij}$ to $U_j$, then via $g_{jk}$ to $U_k$, and then via $g_{ki}$ to $U_i$, the trivialization would differ, but this condition means that in reality it does not. Then the transition functions $g_{ij}$ form a Čech 1-cocycle by the above condition. At this time, if we change the local trivialization over each $U_i$ by a function $h_i:U_i\rightarrow \GL(n;\mathbb{R})$, then $g_{ij}$ changes to $h_ig_{ij}h_j^{-1}$, so cocycles giving the same vector bundle must be identified by this relation. That is, over an open cover $\mathcal{U}$, there is a one-to-one correspondence between isomorphism classes of rank $n$ vector bundles trivializable over it and $\check{H}^1(\mathcal{U}, \GL(n;\mathbb{R}))$. However, since $\GL(n;\mathbb{R})$ is a non-abelian group, the $\check{H}^1$ here is not the cohomology group defined by the differential above, but rather a pointed set defined separately by the cocycle condition $g_{ij}g_{jk}g_{ki}=\id$ and the equivalence relation just mentioned.
 
-Earlier, in [§Poincaré Duality, ⁋Proposition 7](/en/math/algebraic_topology/Poincare_duality#prop7){: data-lid="cio1x" data-relation="weak" }, we saw that the $A$-orientability of a manifold $M$ is defined by the group homomorphism
+Earlier, in [§Poincaré Duality, ⁋Proposition 7](/en/math/algebraic_topology/Poincare_duality#prop7){: data-lid="cio1x" data-relation="weak" }, we saw that for a manifold $M$, $A$-orientability is defined by the group homomorphism
 
-$$\pi_1(M,x)\rightarrow A^\times.$$
+$$\pi_1(M,x)\rightarrow A^\times$$
 
-On the other hand, since $A$ is a commutative ring, this group homomorphism factors through the abelian group homomorphism
+Meanwhile, since $A$ is a commutative ring, the above group homomorphism factors through the abelian group homomorphism
 
 $$H_1(M)\rightarrow A^\times$$
 
-and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="t4r1e" data-relation="required" } this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. On the other hand, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology encodes information about covering spaces.
+and by [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="t4r1e" data-relation="required" } this is an element of $H^1(M;A^\times)$. If this element is $0$, this is equivalent to the monodromy action being trivial, which in turn means that $\Spe(\or_M^A)$ is a trivial covering space and so $M$ becomes an $A$-orientable manifold. Meanwhile, for any commutative ring $A$, since the initial object of $\cRing$ is $\mathbb{Z}$, for any manifold $M$ once a $\mathbb{Z}$-orientation $H_1(M)\rightarrow \mathbb{Z}^\times$ is determined, we can compose it with $\mathbb{Z}^\times\rightarrow A^\times$ to determine an $A$-orientation $H_1(M)\rightarrow A^\times$; thus we know that the essential information about whether $\Spe(\or_M^A)$ is a trivial cover is contained in $H^1(M;\mathbb{Z}/2)$, and thinking of $\mathbb{Z}/2$ as $\GL(1;\mathbb{Z})$, this is an example of how first cohomology contains information about covering spaces.
 
-In this manner, information about a vector bundle $E\rightarrow B$ of rank $k$ can be regarded as being contained in $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$. However, since the coefficients in the cohomology of $B$ that we use are $\mathbb{Z}$, we do not have all the data contained there. Instead, our goal is to find weaker substitutes for this, namely invariants in the cohomology ring $H^\bullet(B)$.
+In this manner, information about a vector bundle $E\rightarrow B$ of rank $k$ can be regarded as being contained in $\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$. However, since the coefficient group of the cohomology of $B$ that we use is $\mathbb{Z}$, we do not have all the data contained there. Instead, our goal is to find weaker substitutes for this, namely invariants, in the cohomology ring $H^\bullet(B)$.
 
 ## Stiefel-Whitney Classes
 
-The first characteristic class we examine is the *Stiefel-Whitney class*. First, for any given vector bundle $p:E\rightarrow B$, this is an element $w(p)$ of the cohomology ring $H^\bullet(B;\mathbb{Z}/2)$, and as above, if $E$ is a trivial bundle then $w(p)=1$. Indeed, a trivial bundle has $n=\rank(E)$ everywhere linearly independent continuous sections by [Proposition 4](#prop4){: data-lid="di3od" data-relation="weak" }, and the extent to which $w(p)$ deviates from $1$ measures the obstruction to choosing such sections. To see this, decomposing $w(p)$ according to degree in the cohomology ring as
+The first characteristic class we examine is the *Stiefel-Whitney class*. First of all, whenever any vector bundle $p:E\rightarrow B$ is given, this is an element of the cohomology ring $H^\bullet(B;\mathbb{Z}/2)$, $w(p)$, and just as above, if $E$ is a trivial bundle then $w(p)=1$. In fact, by [Proposition 4](#prop4){: data-lid="di3od" data-relation="weak" }, a trivial bundle has $n=\rank(E)$ everywhere linearly independent continuous sections, and the extent to which $w(p)$ deviates from $1$ measures the obstruction to choosing such sections. To see this, if we decompose $w(p)$ according to degree in the cohomology ring as
 
-$$w(p)=w_0(p)+w_1(p)+\cdots,$$
+$$w(p)=w_0(p)+w_1(p)+\cdots$$
 
-each $w_i(p)$ becomes an *obstruction class* to choosing $n-i+1$ everywhere linearly independent sections. That is, if $w_i(p)\neq 0$, then $n-i+1$ everywhere linearly independent sections cannot exist. In particular, if $w_n(p)\neq 0$, then not even a single everywhere linearly independent section can exist, so any section must vanish somewhere.
+each $w_i(p)$ becomes an *obstruction class* to choosing $n-i+1$ everywhere linearly independent sections. That is, if $w_i(p)\neq 0$, then $n-i+1$ everywhere linearly independent sections cannot exist. In particular, if $w_n(p)\neq 0$, not even $1$ everywhere linearly independent section can exist, so any section must become $0$ somewhere.
 
-For convenience, when the projection map $p$ and base $B$ are clear, we sometimes use notation such as $w(E)$ instead of $w(p)$. We now present the axioms that $w(E)$ satisfies.
+For convenience, when the projection map $p$ and base $B$ are clear, instead of $w(p)$ we also use notation such as $w(E)$. We now present the axioms that $w(E)$ satisfies.
 
 ::: Definition 5
-For a vector bundle $E \rightarrow B$ of rank $n$ and a vector bundle $F\rightarrow B$, the cohomology classes $w_i(E)\in H^i(B;\mathbb{Z}/2)$ satisfying the following axioms are called the *Stiefel-Whitney classes* of $E$.
+For a vector bundle $E \rightarrow B$ of rank $n$ and a vector bundle $F\rightarrow B$, the cohomology classes $w_i(E)\in H^i(B;\mathbb{Z}/2)$ satisfying the following axioms are called the *Stiefel-Whitney classes*.
 
-1. (Rank) $w_0(E)=1$, and if $i>n$ then $w_i(E)=0$.
-2. (Naturality) For any $f:B'\rightarrow B$, we have $w(f^\ast E)=f^\ast w(E)$.
+1. (Rank) $w_0(E)=1$, and if $i>n$, then $w_i(E)=0$.
+2. (Naturality) For any $f:B'\rightarrow B$, $w(f^\ast E)=f^\ast w(E)$ holds.
 3. (Whitney product formula) $w(E\oplus F)=w(E)w(F)$ holds.
-4. (Normalization) For the tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$ of [Example 3](#ex3){: data-lid="q8ttw" data-relation="required" }, we have $w_1(\gamma_1^1)\neq 0$.
+4. (Normalization) For the tautological line bundle $\gamma_1^1:E(\gamma_1^1)\rightarrow \RP^1$ of [Example 3](#ex3){: data-lid="q8ttw" data-relation="required" }, $w_1(\gamma_1^1)\neq 0$.
 :::
 
-From this we obtain the following results.
+Then we obtain the following results.
 
 ::: Proposition 6
-For two vector bundles $p_1:E_1\rightarrow B$, $p_2:E_2\rightarrow B$ defined over a topological space $B$, if $p_1,p_2$ are isomorphic then $w(E_1)=w(E_2)$. In particular, if $p:E\rightarrow B$ is a trivial bundle then $w(E)=1$.
+Over a topological space $B$, for two vector bundles $p_1:E_1\rightarrow B$, $p_2:E_2\rightarrow B$, if $p_1,p_2$ are isomorphic, then $w(E_1)=w(E_2)$. In particular, if $p:E\rightarrow B$ is a trivial bundle, then $w(E)=1$.
 :::
 
-For the first claim, an isomorphism between $E_1$ and $E_2$ gives $E_1\cong \id_B^\ast E_2$, so by naturality in [Definition 5](#def5){: data-lid="5lk8j" data-relation="required" } we have $w(E_1)=\id_B^\ast w(E_2)=w(E_2)$. For the second claim, it suffices to verify that a trivial bundle is given by the following pullback
+For the first claim, an isomorphism between $E_1$ and $E_2$ gives $E_1\cong \id_B^\ast E_2$, so by naturality in [Definition 5](#def5){: data-lid="5lk8j" data-relation="required" }, we have $w(E_1)=\id_B^\ast w(E_2)=w(E_2)$. For the second claim, it suffices to verify that a trivial bundle is given by the following pullback
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg width="5.34em" alt="trivial_bundle" %}
 
-An interesting observation is that the isomorphism classes of line bundles over $S^1$ are only two, namely the trivial line bundle and the line bundle of [Example 3](#ex3){: data-lid="ux9ve" data-relation="required" }; indeed, one can check that a line bundle over $S^1$ obtained by "twisting twice" is isomorphic to the trivial line bundle. This is to some extent predictable from [Proposition 6](#prop6){: data-lid="grzu1" data-relation="weak" }, because the Stiefel-Whitney class of a line bundle over $S^1$ must lie in $H^1(S^1;\mathbb{Z}/2)$, which is isomorphic to $\mathbb{Z}/2$.
+An interesting observation is that there are only two isomorphism classes of line bundles over $S^1$, namely the trivial line bundle and the line bundle of [Example 3](#ex3){: data-lid="ux9ve" data-relation="required" }; indeed, among the line bundles defined over $S^1$, one can verify that the line bundle obtained by "twisting twice" is isomorphic to the trivial line bundle. This is to some extent predictable from [Proposition 6](#prop6){: data-lid="grzu1" data-relation="weak" }, because the Stiefel-Whitney class of a line bundle over $S^1$ must lie in $H^1(S^1;\mathbb{Z}/2)$, which is isomorphic to $\mathbb{Z}/2$.
 
-Another observation is that these are pullbacks of the tautological line bundle over $\RP^1$. The trivial line bundle over $S^1$ is the pullback via a continuous map sending every point of $S^1$ to a fixed point of $\RP^1$, while the nontrivial line bundle is the pullback of the line bundle via a homeomorphism $S^1 \rightarrow \RP^1$.
+Another observation is that these are pullbacks of the tautological line bundle over $\RP^1$. In the case of the trivial line bundle over $S^1$, it is the pullback via a continuous map sending every point of $S^1$ to a fixed point of $\RP^1$, while the nontrivial line bundle is the pullback of the line bundle via a homeomorphism $S^1 \rightarrow \RP^1$.
 
 ## Grassmannians
 
-More generally, any rank $k$ vector bundle over a paracompact space is obtained by pulling back the universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$ from the *infinite Grassmannian* $\Gr(k,\mathbb{R}^\infty)$. That is, given any vector bundle $p:E \rightarrow B$ over a paracompact space $B$, there exists a bundle map from $p$ to $\gamma^k_\infty$, unique up to homotopy, making the following diagram
+More generally, any rank $k$ vector bundle over a paracompact space is obtained by pulling back, from the *infinite Grassmannian* $\Gr(k,\mathbb{R}^\infty)$, the universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$. That is, given a paracompact space $B$ and any vector bundle $p:E \rightarrow B$ over it, there exists a bundle map from $p$ to $\gamma^k_\infty$, unique up to homotopy, making the following diagram
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-4.svg width="8.86em" alt="universality" %}
 
@@ -199,31 +200,31 @@ commute, and this is isomorphic to the following pullback diagram
 
 {% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-5.svg width="10.63em" alt="universality-2" %}
 
-Moreover, the Stiefel-Whitney class of a vector bundle $E$ is also obtained by pulling back the Stiefel-Whitney class $w(\gamma^k_\infty)$ of the universal bundle $\gamma^k_\infty$.
+Moreover, the Stiefel-Whitney class of the vector bundle $E$ is also obtained by pulling back, from the universal bundle $\gamma^k_\infty$, the Stiefel-Whitney class $w(\gamma^k_\infty)$.
 
-In the sense that this single bundle realizes all rank $k$ bundles as its pullbacks without exception, we call $\gamma^k_\infty$ the *universal family* of rank $k$ vector bundles. Soon this one bundle parametrizes all rank $k$ bundles, and the isomorphism class of a bundle corresponds one-to-one with the homotopy class of the classifying map $B\rightarrow\Gr(k,\mathbb{R}^\infty)$.
+In the sense that it realizes all rank $k$ bundles without exception as its pullbacks, $\gamma^k_\infty$ is called the *universal family* of rank $k$ vector bundles. That is, this single bundle parametrizes all rank $k$ bundles, and the isomorphism class of a bundle corresponds one-to-one with the homotopy class of the classifying map $B\rightarrow\Gr(k,\mathbb{R}^\infty)$.
 
-Therefore, we must examine the (infinite) Grassmannian and the universal bundle over it, as well as the cohomology ring $H^\bullet(\Gr(k,\mathbb{R}^\infty), \mathbb{Z}/2)$ of the infinite Grassmannian in which the Stiefel-Whitney class of this bundle lives. Since rigorously proving all properties of Grassmannians is a complex task, in this section we shall content ourselves with an introduction to these properties and, where possible, simple explanations.
+Therefore, we must examine the (infinite) Grassmannian and the universal bundle over it, as well as the cohomology ring $H^\bullet(\Gr(k,\mathbb{R}^\infty), \mathbb{Z}/2)$ of the infinite Grassmannian in which the Stiefel-Whitney class of this bundle lives. Since rigorously proving all properties of Grassmannians is a complex task, in this section we shall content ourselves with an introduction to these properties and, where possible, giving simple explanations.
 
-First, we examine the basic properties and cohomology ring of $\Gr(k,\mathbb{R}^n)$. By definition, $\Gr(k,\mathbb{R}^{n})$ is the space of all $k$-dimensional linear subspaces of $\mathbb{R}^{n}$. For example, $\Gr(1,\mathbb{R}^{n+1})$ is by definition the projective space $\RP^n$. Since each point of $\Gr(k,\mathbb{R}^{n})$ is a subspace of $\mathbb{R}^{n}$, we intuitively know how close two points (that is, two $k$-dimensional subspaces of $\mathbb{R}^{n}$) are to each other. This is the same phenomenon as, for example, points in $\RP^n$ corresponding to lines in $\mathbb{R}^{n+1}$ with similar "slopes" being close to each other; this can be defined rigorously using $n\times k$ matrices, and with this topology $\Gr(k,\mathbb{R}^{n})$ becomes a $k(n-k)$-dimensional compact topological manifold.
+First, we examine the basic properties and cohomology ring of $\Gr(k,\mathbb{R}^n)$. By definition, $\Gr(k,\mathbb{R}^{n})$ is the space of all linear subspaces of $\mathbb{R}^{n}$ of dimension $k$. For example, $\Gr(1,\mathbb{R}^{n+1})$ is by definition the projective space $\RP^n$. Since each point of $\Gr(k,\mathbb{R}^{n})$ is a subspace of $\mathbb{R}^{n}$, we intuitively know how close two points (that is, two subspaces of $\mathbb{R}^{n}$ of dimension $k$) are to each other. This is the same as, for example, points corresponding to two lines with similar "slopes" in $\mathbb{R}^{n+1}$ being close to each other in $\RP^n$; this can be defined rigorously using $n\times k$ matrices, and under this topology $\Gr(k,\mathbb{R}^{n})$ becomes a $k(n-k)$-dimensional compact topological manifold.
 
-Now let us examine the cohomology rings of these spaces. Since we are in any case using $\mathbb{Z}/2$-coefficients, by [§Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-lid="xj32j" data-relation="required" }, we may instead think in terms of homology cycles of $\Gr(k,\mathbb{R}^n)$.
+Now let us examine their cohomology ring. Since we are using $\mathbb{Z}/2$-coefficients anyway, by [§Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11){: data-lid="xj32j" data-relation="required" }, we may consider homology cycles of $\Gr(k,\mathbb{R}^n)$.
 
-For this, fix a full flag of $\mathbb{R}^n$
+To this end, let us fix a full flag of $\mathbb{R}^n$
 
-$$F_\bullet:\qquad 0=F_0\subseteq F_1\subseteq F_2\subseteq\cdots\subseteq F_n=\mathbb{R}^n.$$
+$$F_\bullet:\qquad 0=F_0\subseteq F_1\subseteq F_2\subseteq\cdots\subseteq F_n=\mathbb{R}^n$$
 
-Then for any $k$-plane $X$ in $\mathbb{R}^n$ we have
+Then, in $\mathbb{R}^n$, any $k$-plane $X$ defines
 
-$$0=\dim (X\cap F_0)\leq\dim(X\cap F_1)\leq\cdots\leq \dim(X\cap F_n)=k,$$
+$$0=\dim (X\cap F_0)\leq\dim(X\cap F_1)\leq\cdots\leq \dim(X\cap F_n)=k$$
 
 and this sequence shows how $X$ sits inside $\mathbb{R}^n$. To track this, we define a *Schubert symbol* $\sigma=(\sigma_1,\ldots, \sigma_k)$ as a sequence satisfying the condition
 
-$$1\leq \sigma_1<\sigma_2<\cdots<\sigma_k\leq n.$$
+$$1\leq \sigma_1<\sigma_2<\cdots<\sigma_k\leq n$$
 
-These $\sigma_i$ indicate when the space $X\cap F_i$ grows. That is, they can encode the information measuring where the dimension jumps via
+These $\sigma_i$ show when the space $X\cap F_i$ grows. That is, they can encode the information measuring where the dimension jumps via
 
-$$\dim(X\cap F_{\sigma(i)})=i, \qquad \dim(X\cap F_{\sigma(i)-1})=i-1.$$
+$$\dim(X\cap F_{\sigma(i)})=i, \qquad \dim(X\cap F_{\sigma(i)-1})=i-1$$
 
 Reversing this, we can capture this information by assigning to a suitable partition
 
@@ -231,7 +232,7 @@ $$\lambda:\qquad \lambda_1\geq\lambda_2\geq\cdots\geq\lambda_k,\qquad \lambda_1\
 
 the condition
 
-$$\dim(X\cap F_{n-k+i-\lambda_i})\geq i.$$
+$$\dim(X\cap F_{n-k+i-\lambda_i})\geq i$$
 
 These partitions show, once the flag
 
@@ -247,24 +248,24 @@ These are each dense open subsets inside their closures
 
 $$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $1\leq i\leq k$}\right\}$$
 
-and these $\Omega_\lambda(F_\bullet)$ define homology classes in $H_\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$ by pushing forward their mod $2$ fundamental class along the inclusion 
+and these $\Omega_\lambda(F_\bullet)$ push their mod $2$ fundamental class forward along the inclusion
 
-$$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n).$$
+$$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
-We call the subspace $\Omega_\lambda(F_\bullet)$ a *Schubert cycle*, and the Poincaré dual $\sigma_\lambda$ of the homology class thus obtained a *Schubert class*. These are cohomology classes of degree $\lvert \lambda\rvert=\sum \lambda_i$. The Schubert cycle itself depends on the choice of flag $F_\bullet$, but the Schubert class it defines does not depend on the choice of $F_\bullet$. Also, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$ has the Schubert classes $\sigma_\lambda$ for partitions $\lambda$ satisfying the above conditions as a basis as a $\mathbb{Z}/2$-module, and therefore it suffices for us to examine only the cup product structure among these.
+to define homology classes in $H_\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$. We call the subspace $\Omega_\lambda(F_\bullet)$ a *Schubert cycle*, and the Poincaré dual $\sigma_\lambda$ of the homology class thus obtained a *Schubert class*. These are cohomology classes of degree $\lvert \lambda\rvert=\sum \lambda_i$. Here, the Schubert cycle itself depends on the choice of flag $F_\bullet$, but the Schubert class it defines does not depend on the choice of $F_\bullet$. Also, $H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$ has, for partitions $\lambda$ satisfying the above conditions, their Schubert classes $\sigma_\lambda$ as a basis as a $\mathbb{Z}/2$-module, and therefore it suffices for us to examine only the cup product structure among these.
 
 ::: Example 7
 For example, let us look at $H^\bullet(\Gr(2,\mathbb{R}^4);\mathbb{Z}/2)$. We shall examine the square of the Schubert class $\sigma_{(1,0)}$ corresponding to the partition $(1,0)$:
 
-$$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}.$$
+$$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
 To utilize our geometric intuition, let us think of this as an intersection of Schubert cycles, just as in [§Poincaré Duality, ⁋Example 16](/en/math/algebraic_topology/Poincare_duality#ex16){: data-lid="lk0ni" data-relation="weak" }. For this, we need to consider two subspaces in general position corresponding to the homology class of $\sigma_{(1,0)}$, which is possible by changing the choice of flag.
 
 For a fixed flag $F_\bullet$, let us explicitly write out what condition the partition $\lambda=(1,0)$ represents:
 
-$$\dim(X\cap F_{4-2+1-1})=\dim(X\cap F_2)\geq 1,\qquad \dim(X\cap F_{4-2+2-0})=\dim (X\cap F_4)\geq 2.$$
+$$\dim(X\cap F_{4-2+1-1})=\dim(X\cap F_2)\geq 1,\qquad \dim(X\cap F_{4-2+2-0})=\dim (X\cap F_4)\geq 2$$
 
-That is, the only effectively valid condition is $\dim(X\cap F_2)\geq 1$. This means that $X$ meets $F_2$ in dimension at least $1$, which can be rephrased as the condition that $X$ contains a suitable line $L$ contained in $F_2$.
+That is, the only effectively valid condition is $\dim(X\cap F_2)\geq 1$. This means that $X$ meets $F_2$ in dimension at least 1, which can be rephrased as the condition that $X$ contains a suitable line $L$ contained in $F_2$.
 
 Now to compute the cup product $\sigma_{(1,0)}\smile\sigma_{(1,0)}$, we need to consider two flags $F_\bullet$ and $F_\bullet'$ in general position. For instance,
 
@@ -272,7 +273,7 @@ $$F_\bullet:\quad \langle e_1\rangle\subseteq \langle e_1,e_2\rangle\subseteq \l
 
 are such flags. Now the $V$ we consider must meet both $\langle e_1,e_2\rangle$ and $\langle e_3,e_4\rangle$ in dimension $1$. For this, consider another flag
 
-$$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\subseteq \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle.$$
+$$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\subseteq \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle$$
 
 First, since $F_2\cap F_2'=0$, a $2$-dimensional subspace satisfying both conditions $\dim(V\cap F_2)\geq 1$ and $\dim(V\cap F_2')\geq 1$ is exactly represented as the sum of a line $L$ in $F_2$ and a line $L'$ in $F_2'$. That is, the intersection of the two Schubert cycles is
 
@@ -315,19 +316,19 @@ Carrying over the Schubert cycles of finite Grassmannians to the infinite Grassm
 
 Now consider the $k$ partitions
 
-$$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(1,1,0,\cdots,0),\qquad \lambda_k=(1,\cdots,1).$$
+$$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(1,1,0,\cdots,0),\qquad \lambda_k=(1,\cdots,1)$$
 
 Then we obtain the corresponding Schubert classes
 
-$$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2).$$
+$$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$
 
-The condition imposed by $\lambda_i$ in $\Gr(k,\mathbb{R}^n)$ collapses to the single condition $\dim(V\cap F_{n-k+i-1})\geq i$, which is where $k-i+1$ sections of the tautological bundle lose independence; thus we see that what we earlier read as $w_i$ being the obstruction class to choosing such sections is exactly this. On the other hand, the Schubert class for the single-row partition $(i,0,\cdots,0)$ is the degree $i$ component of the formal inverse $\bar w$ of $w(\gamma^k_\infty)$, so for $i\geq 2$ it differs from $w_i$, as in $\bar w_2=w_1^2+w_2$.
+The condition imposed by $\lambda_i$ in $\Gr(k,\mathbb{R}^n)$ collapses to the single condition $\dim(V\cap F_{n-k+i-1})\geq i$, which is where $k-i+1$ sections of the tautological bundle lose independence; thus we see that what we earlier read as $w_i$ being the obstruction class to choosing such sections is exactly this. On the other hand, the Schubert class of the single-row partition $(i,0,\cdots,0)$ is, in $w(\gamma^k_\infty)$'s formal inverse $\bar w$, the degree $i$ component, so as in $\bar w_2=w_1^2+w_2$, for $i\geq 2$ it differs from $w_i$.
 
 Then $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$ is generated by these $w_i$ as a *polynomial algebra*. For instance, the monomials
 
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
-form a (infinite) basis of this ring as a *$\mathbb{Z}/2$-module*, and the Schubert classes $\sigma_\lambda$ constructed above also form such a basis. However, although the number of elements in each degree is the same for the two bases, they are different bases, so one cannot simply read the parts of a partition as exponents to correspond $\sigma_\lambda$ to a monomial; the cup product between them is computed by the Littlewood-Richardson rule mentioned above. Now these $w_i$ satisfy all the axioms that Stiefel-Whitney classes satisfy, and existence is proved from the fact that this is preserved under pullback.
+form an (infinite) basis of this ring as a *$\mathbb{Z}/2$-module*, and the Schubert classes $\sigma_\lambda$ constructed above also form such a basis. However, although the number of elements in each degree is the same for the two bases, they are different bases, so one cannot simply read the parts of a partition as exponents to correspond $\sigma_\lambda$ to a monomial; the cup product between them is computed by the Littlewood-Richardson rule mentioned above. Now these $w_i$ satisfy all the axioms that Stiefel-Whitney classes satisfy, and existence is proved from the fact that this is preserved under pullback.
 
 ---
 
