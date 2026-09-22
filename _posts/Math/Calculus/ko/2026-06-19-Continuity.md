@@ -34,7 +34,7 @@ $$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 이 성립하는 것이다. 여기서 $x = a$를 제외하는 조건 $0 < \lvert x-a\rvert$가 사라졌는데, 이는 $x = a$일 때는 $\lvert f(a)-f(a)\rvert = 0 < \epsilon$이 자동으로 성립하므로 굳이 제외할 필요가 없기 때문이다.
 
-이렇게 $x$를 정의역 안으로 제한하여 읽으면, 정의역이 $a$의 근방을 통째로 담고 있지 않은 경우에도 연속이 그대로 뜻을 가진다. 가령 정의역이 닫힌구간 $[a,b]$이면 끝점 $a$에서의 연속은 [§함수의 극한, ⁋정의 12](/ko/math/calculus/functions_and_limits#def12){: data-lid="azr5a" data-relation="requires-review" }의 오른쪽 극한으로 $\lim_{x\rightarrow a^+} f(x) = f(a)$인 것을 뜻하고, 끝점 $b$에서의 연속은 왼쪽 극한으로 $\lim_{x\rightarrow b^-} f(x) = f(b)$인 것을 뜻한다. 아래에서 닫힌구간 $[a,b]$ 위의 연속이나 구간 $I$ 위의 연속을 말할 때는 언제나 이 뜻이다.
+이렇게 $x$를 정의역 안으로 제한하여 읽으면, 정의역이 $a$의 근방을 통째로 담고 있지 않은 경우에도 연속이 그대로 뜻을 가진다. 가령 정의역이 닫힌구간 $[a,b]$이면 끝점 $a$에서의 연속은 [§함수의 극한, ⁋정의 12](/ko/math/calculus/functions_and_limits#def12){: data-lid="azr5a" data-relation="required" reviewed="" }의 오른쪽 극한으로 $\lim_{x\rightarrow a^+} f(x) = f(a)$인 것을 뜻하고, 끝점 $b$에서의 연속은 왼쪽 극한으로 $\lim_{x\rightarrow b^-} f(x) = f(b)$인 것을 뜻한다. 아래에서 닫힌구간 $[a,b]$ 위의 연속이나 구간 $I$ 위의 연속을 말할 때는 언제나 이 뜻이다.
 
 이 정의를 뜯어 보면 연속이 성립하려면 세 가지가 모두 충족되어야 함을 알 수 있다.
 
@@ -94,7 +94,7 @@ $f$가 닫힌구간 $[a,b]$에서 연속이고 $f(a) \neq f(b)$이면, $f(a)$와
 
 이 두 정리의 증명은 실수의 *완비성*을 본질적으로 필요로 한다.
 
-[정리 5](#thm5){: data-lid="09p3a" data-relation="requires-review" }에서 사이라는 말은 양 끝값 $f(a)$와 $f(b)$를 제외한다는 뜻이고, 그래서 결론의 $c$도 열린구간 $(a,b)$에서 얻어진다. $y$가 두 끝값 중 하나와 같거나 $f(a) = f(b)$인 경우까지 함께 적으려면 $f(c) = y$인 $c$를 닫힌구간 $[a,b]$에서 찾으면 되며, 이때는 $c$로 $a$나 $b$를 잡으면 된다.
+[정리 5](#thm5){: data-lid="09p3a" data-relation="required" reviewed="" }에서 사이라는 말은 양 끝값 $f(a)$와 $f(b)$를 제외한다는 뜻이고, 그래서 결론의 $c$도 열린구간 $(a,b)$에서 얻어진다. $y$가 두 끝값 중 하나와 같거나 $f(a) = f(b)$인 경우까지 함께 적으려면 $f(c) = y$인 $c$를 닫힌구간 $[a,b]$에서 찾으면 되며, 이때는 $c$로 $a$나 $b$를 잡으면 된다.
 
 마지막으로, 연속이 깨지는 방식을 분류해 두면 함수의 성질을 기술하는 데 편리하다. [§함수의 극한](/ko/math/calculus/functions_and_limits){: data-lid="zt3ye" data-relation="weak" reviewed="" }에서 $\lvert x\rvert/x$를 두고 언급한 jump discontinuity가 그중 한 종류이다.
 

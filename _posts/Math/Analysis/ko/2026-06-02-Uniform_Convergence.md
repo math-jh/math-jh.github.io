@@ -72,7 +72,7 @@ Function series $\sum f_n$의 균등수렴을 보장하는 실용적 기준이�
 부분합 $s_N = \sum_{n=1}^N f_n$을 생각하자. $M > N$에 대해 $\lVert s_M - s_N\rVert_\infty \leq \sum_{n=N+1}^M M_n$인데, $\sum M_n$이 수렴하므로 우변은 $N \rightarrow \infty$에서 $0$으로 간다. 즉 $(s_N)$이 상한노름에 대해 Cauchy이고, 따라서 아래 [명제 5](#prop5){: data-lid="jmn2s" data-relation="required" reviewed="" }에 의해 어떤 극한함수로 균등수렴한다. 각 $x$에서 $\sum \lvert f_n(x)\rvert \leq \sum M_n < \infty$이므로 절대수렴도 따라 나온다.
 :::
 
-M-판정의 위력은 극한함수의 정체를 전혀 몰라도, 각 항의 크기를 $x$에 무관한 수 $M_n$으로 위에서 누르기만 하면 균등수렴이 따라 나온다는 데 있다. 이때 $\sum M_n$이 수렴하는지는 [§무한급수](/ko/math/analysis/series){: data-lid="gpq06" data-relation="requires-review" }에서 익힌 수치급수 판정법으로 결정되므로, function series의 균등수렴 문제가 익숙한 수치급수의 수렴 문제로 환원된다. 가령 $\sum \sin(nx)/n^2$은 $\lvert\sin\rvert \leq 1$로 $x$ 의존성을 한 번에 지워 $M_n = 1/n^2$을 얻으므로 $\mathbb{R}$ 전체에서 균등수렴하며, 더 일반적으로 $\sum a_n \sin(nx)$은 $\sum \lvert a_n\rvert < \infty$이면 같은 방식으로 균등수렴한다. 다만 M-판정은 충분조건일 뿐이어서, 이를 통과하지 못한다고 해서 균등수렴이 곧 부정되는 것은 아니다.
+M-판정의 위력은 극한함수의 정체를 전혀 몰라도, 각 항의 크기를 $x$에 무관한 수 $M_n$으로 위에서 누르기만 하면 균등수렴이 따라 나온다는 데 있다. 이때 $\sum M_n$이 수렴하는지는 [§무한급수](/ko/math/analysis/series){: data-lid="gpq06" data-relation="weak" reviewed="" }에서 익힌 수치급수 판정법으로 결정되므로, function series의 균등수렴 문제가 익숙한 수치급수의 수렴 문제로 환원된다. 가령 $\sum \sin(nx)/n^2$은 $\lvert\sin\rvert \leq 1$로 $x$ 의존성을 한 번에 지워 $M_n = 1/n^2$을 얻으므로 $\mathbb{R}$ 전체에서 균등수렴하며, 더 일반적으로 $\sum a_n \sin(nx)$은 $\sum \lvert a_n\rvert < \infty$이면 같은 방식으로 균등수렴한다. 다만 M-판정은 충분조건일 뿐이어서, 이를 통과하지 못한다고 해서 균등수렴이 곧 부정되는 것은 아니다.
 
 ## 균등 Cauchy 판정
 
@@ -116,7 +116,7 @@ $$\left\lvert \frac{1}{1-x} - \sum_{n=0}^{N} x^n\right\rvert = \left\lvert \frac
 인데, $x \rightarrow 1^-$로 보내면 이 값은 임의로 커지므로 $N$을 아무리 크게 잡아도 상한노름이 $0$으로 가지 않는다.
 :::
 
-[예시 6](#ex6){: data-lid="y9lj1" data-relation="requires-review" }은 균등수렴이 정의역에 민감함을 보여 준다. 같은 급수라도 컴팩트한 부분구간으로 제한하면 균등수렴하지만 boundary에 다가가는 점들을 포함하면 그렇지 않을 수 있다.
+[예시 6](#ex6){: data-lid="y9lj1" data-relation="required" reviewed="" }은 균등수렴이 정의역에 민감함을 보여 준다. 같은 급수라도 컴팩트한 부분구간으로 제한하면 균등수렴하지만 boundary에 다가가는 점들을 포함하면 그렇지 않을 수 있다.
 
 ::: 예시 7 (균등수렴이라도 미분은 안 됨)
 $\mathbb{R}$에서 $f_n(x) = \sin(nx)/\sqrt{n}$을 보자. 모든 $x$에서
@@ -134,7 +134,7 @@ $$\lim_{n\rightarrow\infty} f_n'(0) \neq \Bigl(\lim_{n\rightarrow\infty} f_n\Big
 이다. 이는 함수열의 균등수렴만으로는 극한과 미분의 교환이 보장되지 않으며, 도함수열 $(f_n')$ 자체의 균등수렴이 따로 필요함을 보여 준다.
 :::
 
-[예시 7](#ex7){: data-lid="r598r" data-relation="requires-review" }은 적분과 달리 미분은 균등수렴만으로 극한과 교환되지 않음을 드러낸다. 마지막으로 균등수렴이 함수의 boundedness를 보존함을 확인해 두자.
+[예시 7](#ex7){: data-lid="r598r" data-relation="required" reviewed="" }은 적분과 달리 미분은 균등수렴만으로 극한과 교환되지 않음을 드러낸다. 마지막으로 균등수렴이 함수의 boundedness를 보존함을 확인해 두자.
 
 ::: 명제 8 (boundedness의 보존)
 Bounded function들의 열 $(f_n)$이 $f$로 균등수렴하면 $f$도 bounded이다.
@@ -152,7 +152,7 @@ $$\begin{aligned}
 이므로 $f$는 상수 $1 + B$로 bounded이다.
 :::
 
-Boundedness의 보존은 점별수렴에서는 깨지는 성질이다 ([§함수열과 점별수렴, ⁋예시 6](/ko/math/analysis/sequences_of_functions#ex6){: data-lid="v9br0" data-relation="weak" reviewed="" }). 점별수렴은 각 점에서 독립적으로 수렴값을 줄 뿐이어서, 점마다 다른 속도로 수렴하면 극한이 무한정 커질 수 있다. 균등수렴은 단 하나의 $N$으로 모든 점을 동시에 잡아 두므로 이런 일이 일어나지 않으며, [명제 8](#prop8){: data-lid="wnnr8" data-relation="requires-review" }은 그 차이를 가장 단순하게 드러낸다.
+Boundedness의 보존은 점별수렴에서는 깨지는 성질이다 ([§함수열과 점별수렴, ⁋예시 6](/ko/math/analysis/sequences_of_functions#ex6){: data-lid="v9br0" data-relation="weak" reviewed="" }). 점별수렴은 각 점에서 독립적으로 수렴값을 줄 뿐이어서, 점마다 다른 속도로 수렴하면 극한이 무한정 커질 수 있다. 균등수렴은 단 하나의 $N$으로 모든 점을 동시에 잡아 두므로 이런 일이 일어나지 않으며, [명제 8](#prop8){: data-lid="wnnr8" data-relation="required" reviewed="" }은 그 차이를 가장 단순하게 드러낸다.
 
 균등수렴은 극한 연산과 미적분 연산을 교환할 수 있게 해 주는 핵심 조건이다.
 

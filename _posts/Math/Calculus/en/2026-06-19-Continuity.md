@@ -34,7 +34,7 @@ $$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 holds. Note that the condition $0 < \lvert x-a\rvert$ excluding $x = a$ has disappeared; this is because when $x = a$, we automatically have $\lvert f(a)-f(a)\rvert = 0 < \epsilon$, so there is no need to exclude it.
 
-If we read this with $x$ restricted to the domain, continuity still makes sense even when the domain does not contain an entire neighborhood of $a$. For example, if the domain is a closed interval $[a,b]$, continuity at the endpoint $a$ means the right-hand limit $\lim_{x\rightarrow a^+} f(x) = f(a)$ as in [§Limits of Functions, ⁋Definition 12](/en/math/calculus/functions_and_limits#def12){: data-lid="azr5a" data-relation="requires-review" }, and continuity at the endpoint $b$ means the left-hand limit $\lim_{x\rightarrow b^-} f(x) = f(b)$. Whenever we speak of continuity on a closed interval $[a,b]$ or on an interval $I$ below, we always mean this.
+If we read this with $x$ restricted to the domain, continuity still makes sense even when the domain does not contain an entire neighborhood of $a$. For example, if the domain is a closed interval $[a,b]$, continuity at the endpoint $a$ means the right-hand limit $\lim_{x\rightarrow a^+} f(x) = f(a)$ as in [§Limits of Functions, ⁋Definition 12](/en/math/calculus/functions_and_limits#def12){: data-lid="azr5a" data-relation="required" }, and continuity at the endpoint $b$ means the left-hand limit $\lim_{x\rightarrow b^-} f(x) = f(b)$. Whenever we speak of continuity on a closed interval $[a,b]$ or on an interval $I$ below, we always mean this.
 
 Unpacking this definition, we see that for continuity to hold, all three of the following must be satisfied:
 
@@ -94,7 +94,7 @@ If $f$ is continuous on a closed interval $[a,b]$ and $f(a) \neq f(b)$, then for
 
 The proofs of these two theorems essentially require the *completeness* of the real numbers.
 
-In [Theorem 5](#thm5){: data-lid="09p3a" data-relation="requires-review" }, the word "between" means excluding the two endpoint values $f(a)$ and $f(b)$, and accordingly the conclusion gives $c$ in the open interval $(a,b)$. If one wishes to include the case where $y$ equals one of the two endpoint values or where $f(a) = f(b)$, one simply finds $c \in [a,b]$ with $f(c) = y$, and then $c$ can be taken to be $a$ or $b$.
+In [Theorem 5](#thm5){: data-lid="09p3a" data-relation="required" }, the word "between" means excluding the two endpoint values $f(a)$ and $f(b)$, and accordingly the conclusion gives $c$ in the open interval $(a,b)$. If one wishes to include the case where $y$ equals one of the two endpoint values or where $f(a) = f(b)$, one simply finds $c \in [a,b]$ with $f(c) = y$, and then $c$ can be taken to be $a$ or $b$.
 
 Finally, it is convenient to classify the ways in which continuity can fail when describing properties of functions. The jump discontinuity of $\lvert x\rvert/x$ mentioned in [§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="zt3ye" data-relation="weak" reviewed="" } is one such type.
 
