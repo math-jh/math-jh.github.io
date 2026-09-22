@@ -477,35 +477,38 @@ def link_lid(text: str, link: Link) -> str | None:
     return found.group(1) if found else None
 
 
-def ko_reviewed_lids(paths: list[Path], texts: dict[Path, str]) -> set[str]:
-    """이 unit 의 KO 쪽에서 사람이 검토를 마친 링크들의 lid."""
-    done: set[str] = set()
+def ko_lids(paths: list[Path], texts: dict[Path, str]) -> set[str]:
+    """이 unit 의 KO 쪽에 있는 모든 링크의 lid — 판정 여부와 무관하다."""
+    found: set[str] = set()
     for path in paths:
         if path.parent.name != "ko":
             continue
         for kwargs in ({}, {"tagged": True}, {"review": True}):
             for link in extract_links(path, texts[path], **kwargs):
-                if link.reviewed:
-                    lid = link_lid(texts[path], link)
-                    if lid:
-                        done.add(lid)
-    return done
+                lid = link_lid(texts[path], link)
+                if lid:
+                    found.add(lid)
+    return found
 
 
-def settled_for_human(link: Link, text: str, ko_done: set[str]) -> bool:
-    """이 링크의 검토가 끝났는가.
+def awaits_ko(link: Link, text: str, ko_all: set[str]) -> bool:
+    """이 EN 링크의 판정과 검토가 KO 짝의 몫인가.
 
-    판정의 정본은 KO 다. EN 링크는 자기 번역본의 사본이므로, 같은 출현을 가리키는
-    KO 링크를 사람이 검토했다면 EN 을 다시 물을 이유가 없다 — 같은 문장을 두 번
-    읽게 만들 뿐이고, 실제로 그 두 번이 갈려서 66건의 불일치가 생겼다.
-    그래서 EN 은 `lid` 로 KO 의 완료를 상속한다.
+    판정의 정본은 KO 다. 같은 lid 를 가진 KO 링크가 이 unit 에 있으면 EN 은 그
+    번역이므로 스스로 판정받지 않는다 — 1차 분류도 검증도 거치지 않고, KO 에
+    값이 정해지면 상속 패스가 그 값을 옮기고, KO 가 검토되면 완료도 따라간다.
+    KO 짝이 아직 판정 중이어도 마찬가지다. 그 사이 EN 을 따로 물으면 같은 출현에
+    다른 값이 붙고, 그것이 KO/EN 불일치의 발생원이다.
     """
-    if link.reviewed:
-        return True
     if link.source.parent.name != "en":
         return False
     lid = link_lid(text, link)
-    return bool(lid) and lid in ko_done
+    return bool(lid) and lid in ko_all
+
+
+def settled_for_human(link: Link, text: str, ko_all: set[str]) -> bool:
+    """이 링크가 사람 검토를 기다리지 않는가 — 자기 표지가 있거나 KO 에 위임됐다."""
+    return link.reviewed or awaits_ko(link, text, ko_all)
 
 
 def read_post(path: Path) -> str:
@@ -666,43 +669,43 @@ def prompt_items(links: list[Link], wide: bool, full: bool = False) -> list[dict
     return items
 
 
-FIRST_PROMPT = """You classify semantic relations of internal links in a mathematics blog.
-Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward","confidence":"high|medium","reason":"short"}]}.
-Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
+REASON_LANGUAGE = """Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
+"""
 
-Definitions are about the source article as a learning unit:
-- required: understanding the linked target is genuinely needed before the source passage/article. This includes a cited proof or construction whose substance the source actually reuses.
-- weak: helpful background, analogy, comparison, optional example, attribution, terminology, or a reference that is not a prerequisite.
+# 세 프롬프트가 공유하는 판정 원칙. 한 곳에만 둔다 — 복사본이 여럿이면 따로 표류한다.
+RELATION_PRINCIPLE = """Each class is about the claims the source article itself makes:
+- required: the link is the ground for a claim the source article makes: a fact it states as true and goes on from, a construction it builds on, or a definition it stands on, including one it pauses to recall. This holds whether or not the source reproduces the proof, and whatever kind of target it is. An example is required when the fact or object the source goes on to use was established there.
+- weak: the link supports something the source does not itself claim, such as a remark, a perspective, a passing generalisation, or an attribution, so the sentence it sits in carries no weight in the article. A link that only gives an advanced name to a fact the source has already established on its own (for example, calling an already described inclusion a "full subcategory") is weak for the same reason: the ground of that claim is the source, not the target.
 - forward: the source is self-contained and says the target will later extend, develop, or revisit the present idea.
 
-Classify meaning, not wording or link direction. A link may look like an analogy yet still be required if the source imports the target's proof idea. Conversely, a formal citation may be weak. Same-page anchors must also be classified.
+Decide by asking whether the source article makes the claim this link grounds. Do not decide by form or by the target's type: a parenthetical citation, the word "example", a definition the source restates in full, or a proof the source leaves out does not by itself make a link weak, and dependency-sounding wording such as "by applying" does not by itself make it required. Same-page anchors are classified the same way.
+"""
 
-In particular, do not mark a link required merely because the source uses the target's vocabulary. If the source has already established a fact independently and the link only names or recasts it in more advanced language (for example, calling an already described inclusion a "full subcategory"), classify it as weak. Use required only when a reader must know or import the target's definition, theorem, proof, or construction to follow the source's reasoning or subsequent development. Apply this counterfactual test: if removing the linked terminology and parenthetical citation leaves the mathematical argument understandable and complete, the link is weak.
-
+FIRST_PROMPT = ("""You classify semantic relations of internal links in a mathematics blog.
+Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward","confidence":"high|medium","reason":"short"}]}.
+""" + REASON_LANGUAGE + "\n" + RELATION_PRINCIPLE + """
 Confidence rule is deliberately strict: HIGH only when the supplied context makes exactly one class clear. If there is any plausible doubt, missing context, mixed role, or interpretive choice, output MEDIUM. Never use HIGH merely because a phrase matches a familiar pattern. Do not use tools and do not alter files.
 
 ITEMS:
-"""
+""")
 
-REVIEW_PROMPT = """You are the independent final reviewer for ambiguous dependency-link classifications in a mathematics blog. You have wider excerpts than the first model.
+REVIEW_PROMPT = ("""You are the independent final reviewer for ambiguous dependency-link classifications in a mathematics blog. You have wider excerpts than the first model.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
-Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
-
-Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
+""" + REASON_LANGUAGE + "\n" + RELATION_PRINCIPLE + """
+Choose ambiguous if the excerpts still do not justify one class. Do not use tools and do not alter files.
 
 Each item states its context_scope. "excerpt" means you see passages around the link. "full-article" means source_context and target_context are the complete articles, truncated only if extremely long: there is no wider context to wait for, so decide on the evidence given and reserve ambiguous for links whose role is genuinely undecidable rather than merely unstated.
 
 ITEMS:
-"""
+""")
 
-VERIFY_PROMPT = """You classify semantic relations of internal links in a mathematics blog. Your classification is an independent second opinion: another model has already judged these links, you are deliberately not shown its verdict, and your answer is compared against it. Judge the links on the excerpts alone.
+VERIFY_PROMPT = ("""You classify semantic relations of internal links in a mathematics blog. Your classification is an independent second opinion: another model has already judged these links, you are deliberately not shown its verdict, and your answer is compared against it. Judge the links on the excerpts alone.
 Return JSON only: {"items":[{"id":"...","relation":"required|weak|forward|ambiguous","reason":"short"}]}.
-Write every "reason" in Korean, whatever the language of the article. Keep mathematical terms in English and quote labels (e.g. Theorem 9, 정리 9) exactly as they appear.
-
-Use these exact meanings: required = target knowledge/substance is needed before the source; weak = useful but optional background/analogy/citation/terminology; forward = source is self-contained and target is a later expansion. Judge semantic use, not surface phrasing. A definition link is weak when it merely gives an advanced name or reformulation to a fact already established independently, such as calling an already described inclusion a "full subcategory". It is required only when the source's reasoning or later development actually needs the target's definition, theorem, proof, or construction. Apply the counterfactual test: if removing the linked terminology and citation leaves the mathematical argument understandable and complete, choose weak. Choose ambiguous only when the excerpts leave the link's role genuinely undecidable. Do not use tools and do not alter files.
+""" + REASON_LANGUAGE + "\n" + RELATION_PRINCIPLE + """
+Choose ambiguous only when the excerpts leave the link's role genuinely undecidable. Do not use tools and do not alter files.
 
 ITEMS:
-"""
+""")
 
 PROMPTS = {"first": FIRST_PROMPT, "review": REVIEW_PROMPT, "verify": VERIFY_PROMPT}
 
@@ -1121,22 +1124,27 @@ def select_unit(
                     # reopens it.
                     lease.release()
                     continue
-                # 판정의 정본은 KO 다. 양쪽에 미태그 링크가 있으면 KO 만 먼저
-                # 모델에 넘긴다 — 둘을 한 패스에 같이 넘기면 EN 이 독립 판정을
-                # 받아 같은 출현에 다른 값이 붙고, 그게 불일치의 발생원이다.
+                # KO 에 짝이 있는 EN 링크는 모델에 넘기지 않는다(awaits_ko).
+                # 모델이 보는 것은 KO 링크와, KO 짝이 없는 EN 링크뿐이다.
+                ko_all = ko_lids(paths, texts)
+                deferred = [link for link in links
+                            if awaits_ko(link, texts[link.source], ko_all)]
                 ko_open = [link for link in links if link.source.parent.name == "ko"]
-                if ko_open and len(ko_open) != len(links):
+                if ko_open:
                     return "first", paths, texts, ko_open, lease
-                # KO 가 끝났으면 EN 은 같은 lid 를 따라 값을 물려받는다.
                 relations = ko_relations(paths, texts)
                 inheritable = [
-                    link for link in links
-                    if link.source.parent.name == "en"
-                    and relations.get(link_lid(texts[link.source], link) or "")
+                    link for link in deferred
+                    if relations.get(link_lid(texts[link.source], link) or "")
                 ]
                 if inheritable:
                     return "inherit", paths, texts, inheritable, lease
-                return "first", paths, texts, links, lease
+                waiting = {link.ident for link in deferred}
+                orphans = [link for link in links if link.ident not in waiting]
+                if orphans:
+                    return "first", paths, texts, orphans, lease
+                # 남은 것은 KO 판정을 기다리는 EN 링크뿐이다. 이 unit 에서 지금 할
+                # 일은 없으므로 아래 검증 단계로 넘어간다.
             tagged = [p_link for p in paths
                       for p_link in extract_links(p, texts[p], tagged=True)
                       if p_link.ident not in parked]
@@ -1149,9 +1157,9 @@ def select_unit(
                 }
                 lease.release()
                 continue
-            ko_done = ko_reviewed_lids(paths, texts)
+            ko_all = ko_lids(paths, texts)
             pending_review = [link for link in tagged
-                              if not settled_for_human(link, texts[link.source], ko_done)]
+                              if not settled_for_human(link, texts[link.source], ko_all)]
             if not pending_review:
                 updates[key] = {
                     **cleared(entry), "status": "done", "hash": fingerprint,
@@ -1216,11 +1224,11 @@ def backlog_complete() -> bool:
         entry = state.get("units", {}).get(key, {})
         raw_hash = sha("\0".join(texts[p] for p in paths))
         content_hash = verification_fingerprint(paths, texts, parked)
-        ko_done = ko_reviewed_lids(paths, texts)
+        ko_all = ko_lids(paths, texts)
         pending_review = [
             link for p in paths for link in extract_links(p, texts[p], tagged=True)
             if link.ident not in parked
-            and not settled_for_human(link, texts[p], ko_done)
+            and not settled_for_human(link, texts[p], ko_all)
         ]
         legacy_complete = (not entry.get("reviewed_marker_version")
                            and verified_at_content(entry, raw_hash, content_hash))
