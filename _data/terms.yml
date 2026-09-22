@@ -306,6 +306,13 @@ A:
   defs:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
+- id: adjoint_operator
+  en: adjoint operator
+  ko: 수반작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: adjoint_representation
   en: adjoint representation
   ko: 수반 표현
