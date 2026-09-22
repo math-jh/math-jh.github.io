@@ -10461,6 +10461,13 @@ L:
   - label: 극값
     lang: ko
     id: extremum
+- id: lagrangian
+  en: Lagrangian
+  ko: 라그랑지안
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: lagrangian_morphism
   en: Lagrangian morphism
   ko: 라그랑지안 사상
