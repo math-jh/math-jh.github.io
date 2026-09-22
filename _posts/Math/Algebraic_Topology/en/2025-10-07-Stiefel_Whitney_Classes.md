@@ -159,7 +159,7 @@ In this manner, information about a vector bundle $E\rightarrow B$ of rank $k$ c
 
 ## Stiefel-Whitney Classes
 
-The first characteristic class we examine is the *Stiefel-Whitney class*. First of all, whenever any vector bundle $p:E\rightarrow B$ is given, this is an element of the cohomology ring $H^\bullet(B;\mathbb{Z}/2)$, $w(p)$, and just as above, if $E$ is a trivial bundle then $w(p)=1$. In fact, by [Proposition 4](#prop4){: data-lid="di3od" data-relation="weak" }, a trivial bundle has $n=\rank(E)$ everywhere linearly independent continuous sections, and the extent to which $w(p)$ deviates from $1$ measures the obstruction to choosing such sections. To see this, if we decompose $w(p)$ according to degree in the cohomology ring as
+The first characteristic class we examine is the *Stiefel-Whitney class*. First of all, whenever any vector bundle $p:E\rightarrow B$ is given, this is an element of the cohomology ring $H^\bullet(B;\mathbb{Z}/2)$, $w(p)$, and just as above, if $E$ is a trivial bundle then $w(p)=1$. In fact, by [Proposition 4](#prop4){: data-lid="di3od" data-relation="required" }, a trivial bundle has $n=\rank(E)$ everywhere linearly independent continuous sections, and the extent to which $w(p)$ deviates from $1$ measures the obstruction to choosing such sections. To see this, if we decompose $w(p)$ according to degree in the cohomology ring as
 
 $$w(p)=w_0(p)+w_1(p)+\cdots$$
 

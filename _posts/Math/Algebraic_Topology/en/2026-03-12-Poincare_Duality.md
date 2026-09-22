@@ -407,7 +407,7 @@ $$H^k(X; \mathcal{F})$$
 and is called *sheaf cohomology*.
 :::
 
-This is treated in more detail in [\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="loirx" data-relation="weak" }. Now if $M$ is compact, Poincaré duality generalizes to the following isomorphism:
+This is treated in more detail in [\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="loirx" data-relation="forward" }. Now if $M$ is compact, Poincaré duality generalizes to the following isomorphism:
 
 $$H^k(M;\mathcal{L})\cong H_{m-k}(M;\omega_M^A\otimes \mathcal{L})$$
 

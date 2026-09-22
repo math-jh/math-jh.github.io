@@ -70,7 +70,7 @@ $$\codim(V \cap W) = \codim V + \codim W$$
 이 성립한다면 $V,W$가 *properly intersect*한다고 말한다.
 :::
 
-특히 [정의 1](#def1){: data-lid="9bycy" data-relation="required" reviewed="" }은 $\codim (V\cap W)=n$인 특수한 경우이다. 이제 우리는 만일 위의 등식이 $V\cap W$의 모든 irreducible component에 대해 성립한다면 이를 사용하여 다음의 식
+특히 [정의 1](#def1){: data-lid="9bycy" data-relation="weak" reviewed="" }은 $\codim (V\cap W)=n$인 특수한 경우이다. 이제 우리는 만일 위의 등식이 $V\cap W$의 모든 irreducible component에 대해 성립한다면 이를 사용하여 다음의 식
 
 $$V \cdot W = \sum_{T \subseteq V \cap W} i_T(V, W) [T]$$
 

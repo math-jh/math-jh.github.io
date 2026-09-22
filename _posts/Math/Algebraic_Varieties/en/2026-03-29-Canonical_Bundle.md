@@ -264,7 +264,7 @@ For notational convenience, we abbreviate this as $\pi_E$. Now thinking of the t
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
-On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-lid="2fx0h" data-relation="weak" }, we obtain the following.
+On the other hand, by assumption $Z$ had codimension $r$, so $\mathcal{N}_{Z/X}$ has rank $r$ and thus each fiber of $E$ is $\mathbb{P}^{r-1}$. Generalizing [Proposition 7](#prop7){: data-lid="2fx0h" data-relation="required" }, we obtain the following.
 
 ::: Proposition 11 (Relative Euler Sequence)
 For any vector bundle $V\rightarrow B$ and projectivized vector bundle $\pi: \mathbb{P}(V)\rightarrow B$, there exists a short exact sequence

@@ -53,7 +53,7 @@ $$\varinjlim_{x\in U}H_m(M,M\setminus U;\mathbb{Z})\rightarrow H_m(M,M\setminus 
 
 $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong H_m(\mathbb{R}^m, \mathbb{R}^m\setminus\{0\};\mathbb{Z})$$
 
-이고, $\mathbb{R}^m\setminus\{0\}$은 $S^{m-1}$으로 deformation retract하므로 relative homology long exact sequence에 의하여 위의 식의 우변은 $\mathbb{Z}$와 isomorphic한 것을 알 수 있으며, 이 sheaf는 locally constant sheaf인 것 또한 확인할 수 있다. 즉, 임의의 $x\in M$이 주어질 때마다 적당한 열린근방 $U$가 존재하여 $\or_M\vert_U$가 constant sheaf이도록 할 수 있다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9){: data-lid="k8z6a" data-relation="required" reviewed="" })
+이고, $\mathbb{R}^m\setminus\{0\}$은 $S^{m-1}$으로 deformation retract하므로 relative homology long exact sequence에 의하여 위의 식의 우변은 $\mathbb{Z}$와 isomorphic한 것을 알 수 있으며, 이 sheaf는 locally constant sheaf인 것 또한 확인할 수 있다. 즉, 임의의 $x\in M$이 주어질 때마다 적당한 열린근방 $U$가 존재하여 $\or_M\vert_U$가 constant sheaf이도록 할 수 있다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9){: data-lid="k8z6a" data-relation="weak" reviewed="" })
 
 ::: 정의 2
 Relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$을 $M$의 $x$에서의 *local homology group<sub>국소 호몰로지 군</sub>*이라 부른다. 
