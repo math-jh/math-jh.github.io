@@ -19,7 +19,7 @@ var state = {
   wSortKey: 'un', wSortDesc: true,
   /* 링크 보류에서 고른 건. 고르는 순간 주기 렌더를 멈춘다 — #app 을 통째로 다시
      그리면 미리보기 iframe 이 새로 만들어져 글을 처음부터 다시 굽는다. */
-  holdSel: null, holdFreeze: false, holdNote: '', holdMode: 'hold'
+  holdSel: null, holdFreeze: false, holdNote: ''
 };
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
@@ -774,14 +774,7 @@ function secTranslation(d) {
    판정 버튼이 그 링크 IAL 하나에 값과 reviewed="" 를 쓴 뒤 원장에서 뺀다.
    글에서 직접 태그를 단 경우를 위해 '파일 태그 확인' 경로도 남아 있다. */
 function heldItems(d) {
-  /* 보류(1차↔2차)와 KO/EN 불일치는 같은 원장에 있고 여기서 갈라 본다. 목록·미리보기·
-     판정이 전부 이 함수를 거치므로 전환 하나로 패널 전체가 따라온다. */
-  var all = ((d.link_audit || {}).held) || [];
-  return all.filter(function (x) { return (x.kind || 'hold') === state.holdMode; });
-}
-function heldCount(d, mode) {
-  var all = ((d.link_audit || {}).held) || [];
-  return all.filter(function (x) { return (x.kind || 'hold') === mode; }).length;
+  return ((d.link_audit || {}).held) || [];
 }
 function heldByIdent(d, ident) {
   var list = heldItems(d), i;
@@ -874,9 +867,9 @@ function renderHoldPreview(d) {
   }
   acts.appendChild(err);
   why.innerHTML =
-    '<div class="lp__line"><b>' + (k.kind === 'xlang' ? 'KO' : '1차') + '</b> ' + esc(k.old || '—') +
+    '<div class="lp__line"><b>1차</b> ' + esc(k.old || '—') +
     ' <span class="muted">(' + esc(k.decided_by || '기록 없음') + ')</span>' +
-    ' · <b>' + (k.kind === 'xlang' ? 'EN' : '2차') + '</b> ' + esc(k.new) +
+    ' · <b>2차</b> ' + esc(k.new) +
     ' <span class="muted">(' + esc(k.verifier) + ')</span>' +
     ' · <span class="muted">' + esc(k.target) + '</span></div>' +
     '<div class="lp__line">' + esc(k.reason || '근거 기록 없음') + '</div>';
@@ -957,22 +950,8 @@ function renderHoldList(d) {
   if (!list) return;
   if (title) {
     /* 방금 내린 판정이 EN 짝에도 갔는지는 화면에 남는 흔적이 없으므로 제목 옆에 붙인다. */
-    title.textContent = (state.holdMode === 'xlang' ? 'KO/EN 불일치 — ' : '의존성 링크 보류 — ')
-      + heldItems(d).length + '건' + (state.holdNote ? ' · ' + state.holdNote : '');
-  }
-  var modes = document.getElementById('holds-modes');
-  if (modes) {
-    modes.innerHTML = '';
-    [['hold', '보류'], ['xlang', 'KO/EN 불일치']].forEach(function (m) {
-      var b = el('button', 'ghost-btn' + (state.holdMode === m[0] ? ' ghost-btn--on' : ''),
-                 m[1] + ' ' + heldCount(d, m[0]));
-      b.onclick = function () {
-        state.holdMode = m[0]; state.holdSel = null; state.holdFreeze = false;
-        state.holdNote = '';
-        renderHoldList(d); renderHoldPreview(d);
-      };
-      modes.appendChild(b);
-    });
+    title.textContent = '의존성 링크 보류 — ' + a.held.length + '건'
+      + (state.holdNote ? ' · ' + state.holdNote : '');
   }
   var pend = (a.uncommitted || []).length;
   if (commit) {
@@ -1039,10 +1018,7 @@ function linkAuditBlock(d) {
   commit.id = 'holds-commit';
   var cerr = el('span', 'lp__err', '');
   commit.onclick = function () { commitLinkChanges(commit, cerr); };
-  var modes = el('span', 'holds__modes');
-  modes.id = 'holds-modes';
   head.appendChild(title);
-  head.appendChild(modes);
   head.appendChild(commit);
   head.appendChild(cerr);
   wrap.appendChild(head);

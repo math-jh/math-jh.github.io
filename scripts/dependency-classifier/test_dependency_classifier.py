@@ -287,6 +287,8 @@ class SelectionTest(unittest.TestCase):
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
             ):
@@ -333,6 +335,8 @@ class SelectionTest(unittest.TestCase):
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [ko, en]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
                 patch.object(dc, "dirty_paths", return_value=[]),
                 patch.object(dc, "extract_links", side_effect=lambda p, _text, tagged=False, review=False: [] if tagged or review else ([link] if p == ko_path else [])),
@@ -368,6 +372,8 @@ class SelectionTest(unittest.TestCase):
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "by_permalink", return_value=post),
                 patch.object(dc, "dirty_paths", return_value=[]),
                 patch.object(dc, "provider_available", return_value=True),
@@ -434,6 +440,8 @@ class RetryRoundTest(unittest.TestCase):
             patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
             patch.object(dc, "HOLDS_PATH", root / "holds.json"),
             patch.object(dc, "_POSTS", [post]),
+            patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+            patch.object(dc, "retire_en_markers"),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
             patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
@@ -469,6 +477,8 @@ class RetryRoundTest(unittest.TestCase):
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
                 patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
@@ -481,6 +491,8 @@ class RetryRoundTest(unittest.TestCase):
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
                 patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
@@ -516,6 +528,8 @@ class RetryRoundTest(unittest.TestCase):
             post = SimpleNamespace(lang="ko", published=True, path=target)
             with (
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "by_permalink", return_value=post),
             ):
                 narrow = dc.target_context(link, True)
@@ -548,6 +562,8 @@ class BacklogCompletionTest(unittest.TestCase):
                 patch.object(dc, "STATE_PATH", state_path),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [post]),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
             ):
@@ -755,6 +771,8 @@ class VerificationPassTest(unittest.TestCase):
             patch.object(dc, "HOLDS_LOCK_PATH", self.root / "holds.lock"),
             patch.object(dc, "COMPLETE_PATH", self.root / "complete.json"),
             patch.object(dc, "_POSTS", [self.post]),
+            patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+            patch.object(dc, "retire_en_markers"),
             patch.object(dc, "by_permalink", return_value=self.post),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
@@ -910,3 +928,121 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
         self.assertNotIn("verified_hash", self.entry())
         run.notify.assert_not_called()
+
+
+LID_BODY = """---
+title: t
+---
+
+본문에서 [가](#def1)를 쓰고 [나](#def2){: data-relation="weak" }도 쓴다.
+"""
+
+
+class LidMintingTest(unittest.TestCase):
+    """새 링크의 식별자 발급 — EN 이 KO 를 상속할 수 있으려면 이게 먼저다."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.ko = self.root / "_posts" / "Math" / "Cat" / "ko" / "2025-01-01-A.md"
+        self.en = self.root / "_posts" / "Math" / "Cat" / "en" / "2026-01-01-A.md"
+        for path in (self.ko, self.en):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(LID_BODY, encoding="utf-8")
+        self.ledger = self.root / "link-ids.txt"
+
+    def mint(self, *, dirty: list[str] | None = None, also=()) -> None:
+        patches = [
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "LID_LEDGER", self.ledger),
+            patch.object(dc, "dirty_paths", return_value=dirty or []),
+            patch.object(dc, "hard_lint", return_value=set()),
+            patch.object(dc, "is_local_only_untracked_unit", return_value=False),
+            patch.object(dc, "commit_outputs", return_value=True),
+        ]
+        with ExitStack() as stack:
+            for item in patches:
+                stack.enter_context(item)
+            for item in also:
+                stack.enter_context(item)
+            dc.mint_lids(commit=True)
+
+    def lids(self, path: Path) -> list[str]:
+        return dc.LID_RE.findall(path.read_text(encoding="utf-8"))
+
+    def test_ko_links_get_identifiers_and_the_ledger_records_them(self) -> None:
+        self.mint()
+        minted = self.lids(self.ko)
+        self.assertEqual(len(minted), 2)
+        self.assertEqual(len(set(minted)), 2)
+        self.assertEqual(sorted(self.ledger.read_text(encoding="utf-8").split()), sorted(minted))
+
+    def test_english_posts_are_left_alone(self) -> None:
+        self.mint()
+        self.assertEqual(self.lids(self.en), [])
+
+    def test_existing_identifiers_are_never_reissued(self) -> None:
+        self.mint()
+        before = self.ko.read_text(encoding="utf-8")
+        self.mint()
+        self.assertEqual(self.ko.read_text(encoding="utf-8"), before)
+
+    def test_a_value_already_in_use_is_drawn_again(self) -> None:
+        self.ledger.write_text("aaaaa\n", encoding="utf-8")
+        draws = iter("aaaaa" + "bbbbb" + "ccccc")
+        with patch.object(dc.secrets, "choice", side_effect=lambda _seq: next(draws)):
+            self.mint()
+        self.assertEqual(self.lids(self.ko), ["bbbbb", "ccccc"])
+
+    def test_a_post_with_uncommitted_edits_waits(self) -> None:
+        self.mint(dirty=["_posts/Math/Cat/ko/2025-01-01-A.md"])
+        self.assertEqual(self.lids(self.ko), [])
+        self.assertFalse(self.ledger.exists())
+
+
+class StaleEnglishLinkTest(unittest.TestCase):
+    """KO 가 사람 검토를 마쳤는데 EN 값이 다르면 EN 을 끌어온다."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        root = Path(self.tmp.name)
+        self.ko = root / "_posts" / "Math" / "Cat" / "ko" / "2025-01-01-A.md"
+        self.en = root / "_posts" / "Math" / "Cat" / "en" / "2026-01-01-A.md"
+        for path in (self.ko, self.en):
+            path.parent.mkdir(parents=True, exist_ok=True)
+
+    def links(self, ko_ial: str, en_ial: str):
+        ko_text = f'---\ntitle: t\n---\n\n[가](#def1){ko_ial}\n'
+        en_text = f'---\ntitle: t\n---\n\n[A](#def1){en_ial}\n'
+        self.ko.write_text(ko_text, encoding="utf-8")
+        self.en.write_text(en_text, encoding="utf-8")
+        texts = {self.ko: ko_text, self.en: en_text}
+        paths = [self.ko, self.en]
+        with patch.object(dc, "ROOT", Path(self.tmp.name)):
+            tagged = [x for p in paths for x in dc.extract_links(p, texts[p], tagged=True)]
+            settled = dc.ko_settled(paths, texts)
+            return dc.stale_en_links(tagged, texts, settled), settled
+
+    def test_reviewed_ko_pulls_a_differing_english_link(self) -> None:
+        stale, settled = self.links('{: data-lid="k7m2x" data-relation="required" reviewed="" }',
+                                    '{: data-lid="k7m2x" data-relation="weak" }')
+        self.assertEqual(settled, {"k7m2x": "required"})
+        self.assertEqual([x.source for x in stale], [self.en])
+
+    def test_unreviewed_ko_leaves_english_alone(self) -> None:
+        stale, settled = self.links('{: data-lid="k7m2x" data-relation="required" }',
+                                    '{: data-lid="k7m2x" data-relation="weak" }')
+        self.assertEqual(settled, {})
+        self.assertEqual(stale, [])
+
+    def test_matching_values_need_no_work(self) -> None:
+        stale, _ = self.links('{: data-lid="k7m2x" data-relation="weak" reviewed="" }',
+                              '{: data-lid="k7m2x" data-relation="weak" }')
+        self.assertEqual(stale, [])
+
+    def test_an_english_link_without_a_counterpart_is_its_own(self) -> None:
+        stale, _ = self.links('{: data-lid="k7m2x" data-relation="required" reviewed="" }',
+                              '{: data-lid="zzzzz" data-relation="weak" }')
+        self.assertEqual(stale, [])

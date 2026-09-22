@@ -61,6 +61,7 @@ import hashlib
 import json
 import os
 import re
+import secrets
 import subprocess
 import sys
 import tempfile
@@ -1157,6 +1158,13 @@ def select_unit(
                 }
                 lease.release()
                 continue
+            # 사람이 확정한 KO 와 값이 어긋난 EN 링크는 KO 를 따라오게 한다.
+            # `inherit` 이 미태그 EN 만 채우면, KO 판정이 나중에 바뀔 때 EN 이 옛
+            # 값을 쥔 채 조용히 갈린다. 덮는 기준을 `reviewed` 로 둔 것은, 모델이
+            # 낸 미검토 KO 값이 EN 을 밀어내지 않게 하기 위해서다.
+            stale = stale_en_links(tagged, texts, ko_settled(paths, texts))
+            if stale:
+                return "inherit", paths, texts, stale, lease
             ko_all = ko_lids(paths, texts)
             pending_review = [link for link in tagged
                               if not settled_for_human(link, texts[link.source], ko_all)]
@@ -1423,6 +1431,136 @@ def ko_relations(paths: list[Path], texts: dict[Path, str]) -> dict[str, str]:
     return out
 
 
+LID_LEDGER = Path.home() / ".local" / "state" / "link-ids.txt"
+LID_ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz"
+LID_LENGTH = 5
+
+
+def unit_links(path: Path, text: str) -> list[Link]:
+    """이 글의 모든 링크를 소스 순서로. extract_links 는 한 side 씩만 돌려준다."""
+    seen: dict[int, Link] = {}
+    for kwargs in ({}, {"tagged": True}, {"review": True}):
+        for link in extract_links(path, text, **kwargs):
+            seen[link.start] = link
+    return [seen[k] for k in sorted(seen)]
+
+
+def mint_lids(*, commit: bool) -> None:
+    """KO 글의 lid 없는 링크에 식별자를 발급한다. 판정보다 **먼저** 돈다.
+
+    lid 가 없는 링크는 EN 이 상속할 근거를 갖지 못해 독립 판정으로 새고, 그렇게
+    생긴 값 차이는 아무 에러도 내지 않는다. 그래서 발급을 분류기 바깥의 일회성
+    작업으로 두지 않고 매 틱의 첫 단계로 둔다 — 같은 틱에서 새 링크가 판정되기
+    전에 식별자를 갖는 것이 보장된다.
+
+    값은 36진수 5자 난수이고, `현재 코퍼스 ∪ 발급 대장` 과 대조해 다시 뽑으므로
+    유일성은 확률이 아니라 검사로 보장된다. 지워진 링크의 id 가 풀려서 다른
+    링크에 재배정되지 않도록 대장은 한 번 발급한 값을 계속 들고 있는다.
+    """
+    scope = ROOT / "_posts" / "Math"
+    targets = sorted(p for p in scope.rglob("*.md") if p.parent.name == "ko")
+    texts, pending = {}, {}
+    for path in targets:
+        text = path.read_text(encoding="utf-8")
+        missing = [x for x in unit_links(path, text) if link_lid(text, x) is None]
+        if missing:
+            texts[path], pending[path] = text, missing
+    if not pending:
+        return
+
+    used = set()
+    if LID_LEDGER.exists():
+        used |= {ln.strip() for ln in LID_LEDGER.read_text(encoding="utf-8").splitlines() if ln.strip()}
+    for path in ROOT.joinpath("_posts").rglob("*.md"):
+        used |= set(LID_RE.findall(path.read_text(encoding="utf-8")))
+
+    def draw() -> str:
+        while True:
+            value = "".join(secrets.choice(LID_ALPHABET) for _ in range(LID_LENGTH))
+            if value not in used:
+                used.add(value)
+                return value
+
+    rendered, minted = {}, []
+    for path, links in pending.items():
+        if dirty_paths([str(path.relative_to(ROOT))], ROOT):
+            continue
+        text, edits = texts[path], []
+        for link in links:
+            value = draw()
+            minted.append(value)
+            if link.ial_start is None:
+                edits.append((link.end, link.end, f'{{: data-lid="{value}" }}'))
+            else:
+                ial = text[link.ial_start:link.ial_end]
+                edits.append((link.ial_start, link.ial_end,
+                              ial[:2] + f' data-lid="{value}"' + ial[2:]))
+        for start, end, replacement in sorted(edits, reverse=True):
+            text = text[:start] + replacement + text[end:]
+        rendered[path] = text
+    if not rendered:
+        return
+
+    lease = try_acquire_file_locks(list(rendered))
+    if lease is None:
+        return log("lid: 대상 글이 잠겨 있다 — 다음 틱에")
+    try:
+        LID_LEDGER.parent.mkdir(parents=True, exist_ok=True)
+        with LID_LEDGER.open("a", encoding="utf-8") as handle:
+            handle.write("".join(value + "\n" for value in minted))
+        publish(list(rendered), texts, rendered, commit=commit,
+                detail=f"링크 식별자 {len(minted)}건 발급")
+    finally:
+        lease.release()
+    log(f"lid: {len(minted)} identifier(s) minted across {len(rendered)} post(s)")
+
+
+def ko_settled(paths: list[Path], texts: dict[Path, str]) -> dict[str, str]:
+    """사람이 검토를 마친 KO 링크들의 {lid: relation}."""
+    out: dict[str, str] = {}
+    for path in paths:
+        if path.parent.name != "ko":
+            continue
+        for link in extract_links(path, texts[path], tagged=True):
+            if link.reviewed and link.relation in RELATIONS:
+                lid = link_lid(texts[path], link)
+                if lid:
+                    out[lid] = link.relation
+    return out
+
+
+def retire_en_markers() -> None:
+    """KO 가 검토를 마친 EN 링크에서 `reviewed` 를 거둔다.
+
+    검토 표지는 KO 에만 둔다는 것이 계약이고, EN 은 같은 lid 의 KO 에서 완료를
+    상속한다. 회수할 거리가 생기는 시점이 곧 KO 가 검토되는 시점이므로 여기에
+    붙인다. 실패해도 판정에는 영향이 없으니 로그만 남기고 넘어간다.
+    """
+    script = Path(__file__).with_name("retire_en_reviewed.py")
+    try:
+        done = subprocess.run([sys.executable, str(script), "--apply", "--quiet"],
+                              cwd=str(ROOT), capture_output=True, text=True, timeout=600)
+    except Exception as exc:                           # noqa: BLE001
+        return log(f"marker retire: 실패 — {exc}")
+    for line in (done.stdout or "").splitlines():
+        log(f"marker retire: {line}")
+
+
+def stale_en_links(
+    tagged: list[Link], texts: dict[Path, str], settled: dict[str, str],
+) -> list[Link]:
+    """사람이 확정한 KO 와 값이 어긋난 EN 링크들."""
+    out = []
+    for link in tagged:
+        if link.source.parent.name != "en":
+            continue
+        lid = link_lid(texts[link.source], link)
+        want = settled.get(lid or "")
+        if want is not None and want != link.relation:
+            out.append(link)
+    return out
+
+
 def run_inherit_pass(
     paths: list[Path], originals: dict[Path, str], links: list[Link],
     entry: dict, *, commit: bool,
@@ -1476,6 +1614,9 @@ def run_stamp_pass(
 
 
 def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
+    if not dry_run:
+        mint_lids(commit=commit)
+        retire_en_markers()
     state = load_state()
     scan_updates: dict[str, dict] = {}
     selected = select_unit(state, scan_updates)

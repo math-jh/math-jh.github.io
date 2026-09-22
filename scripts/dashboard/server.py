@@ -848,18 +848,14 @@ def sec_link_audit():
         # 읽어 다음 링크까지의 본문을 통째로 삼킨 경우다. 표시는 잘라서 한다.
         flat = " ".join((item.get("markup") or "").split())
         post = by_path.get(item.get("path", "")) or {}
-        # KO/EN 판정이 갈린 링크(일회성 검토)는 원장에 같이 넣되 화면에서 따로 걸러 본다.
-        # 양쪽 다 이미 값이 있으므로 "태그를 단 건"으로 치지 않는다.
-        xlang = item.get("unit") == "cross-lang"
         items.append(dict(
-            kind="xlang" if xlang else "hold",
             ident=ident, path=item.get("path", ""), line=item.get("line", 0),
             brief=flat if len(flat) <= 90 else flat[:87] + "…",
             target=item.get("target", ""),
             old=item.get("old"), new=item.get("new"),
             reason=item.get("reason", ""), verifier=item.get("verifier", ""),
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
-            verdict=None if xlang else hold_verdict(item),
+            verdict=hold_verdict(item),
             # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 렌더된 <a> 는
             # data-relation 을 그대로 달고 나오므로, 같은 target 의 requires-review
             # 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.

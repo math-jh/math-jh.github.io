@@ -585,7 +585,8 @@ def enforce_lid_integrity(en_text: str, ko_text: str) -> tuple[str, list[str]]:
     lid 는 KO 링크 출현에서 태어나 번역을 타고 EN 으로 건너오는 불투명 토큰이다.
     `data-relation` 의 값과 달리 모델이 복원할 수 없으므로, 흘리거나 복제하거나
     지어냈을 때 알아채는 것은 여기뿐이다. 틀린 것은 떼기만 한다 — 번역을 통째로
-    실패시키는 것보다 낫고, 빈 자리는 link_pair_llm 이 나중에 채운다.
+    실패시키는 것보다 낫다. 빈 자리는 KO 링크가 짝을 잃은 상태로 남으므로
+    사람이 EN 을 손보거나 재번역이 돌 때 채워진다.
     """
     known = {lid for ial in _IAL_BLOCK_RE.findall(ko_text)
              for lid in _LID_ATTR_RE.findall(ial)}
@@ -856,6 +857,60 @@ def _iso_to_ts(iso: str) -> float:
         return 0.0
 
 
+_LID_IAL_RE = re.compile(r'\A\{:[^}\n]*\bdata-lid\s*=\s*"[^"]*"[^}\n]*\}')
+_POST_PERMALINKS: Optional[set[str]] = None
+
+
+def _post_permalinks() -> set[str]:
+    """글의 permalink 집합. 의존성 분류기가 링크를 세는 범위와 맞추기 위한 것으로,
+    카테고리 페이지처럼 글이 아닌 대상은 애초에 식별자를 받지 않는다."""
+    global _POST_PERMALINKS
+    if _POST_PERMALINKS is None:
+        found = set()
+        for path in POSTS_ROOT.glob("*/*/*.md"):
+            try:
+                link = _md_lint.get_permalink(_md_lint.frontmatter(
+                    path.read_text(encoding="utf-8")))
+            except (OSError, UnicodeDecodeError):
+                continue
+            if link:
+                found.add(link.rstrip("/"))
+        _POST_PERMALINKS = found
+    return _POST_PERMALINKS
+
+
+def awaiting_link_ids(ko_path: Path) -> bool:
+    """이 KO 글에 아직 식별자를 못 받은 내부 링크가 있는가.
+
+    `data-lid` 는 KO 링크와 그 번역을 잇는 유일한 끈이고, 발급은 의존성 분류기가
+    한다. 발급 전에 번역해 버리면 그 EN 링크는 이어붙일 대상이 없어 KO 와 끊긴
+    채로 남는다 — 재번역이 일어나기 전까지 되돌릴 방법이 없다. 그래서 식별자가
+    다 붙을 때까지 이 글의 번역을 미룬다. 분류기가 다음 틱에 채운다.
+    """
+    text = _md_lint.strip_code(ko_path.read_text(encoding="utf-8"))
+    # 수식은 마스킹한다. `$[0, 1)$ … $…$` 같은 본문이 링크 정규식에 링크처럼 잡힌다.
+    math = [(m.start(), m.end()) for m in _MATH_SPAN_RE.finditer(text)]
+    for match in _md_lint._LINK_ALL_RE.finditer(text):
+        if any(a <= match.start() < b for a, b in math):
+            continue
+        if match.start() and text[match.start() - 1] == "!":
+            continue
+        markup = match.group(0)
+        pivot = markup.rfind("](")
+        if pivot < 0:
+            continue
+        target = markup[pivot + 2:-1].strip()
+        if target.startswith("/"):
+            base = target.split("#", 1)[0].split("?", 1)[0].rstrip("/")
+            if base not in _post_permalinks():
+                continue
+        elif not target.startswith("#"):
+            continue
+        if not _LID_IAL_RE.match(text[match.end():]):
+            return True
+    return False
+
+
 def find_next_target(
     state: dict, excluded: Optional[set[Path]] = None,
 ) -> Optional[Tuple[Path, Path, str]]:
@@ -863,7 +918,8 @@ def find_next_target(
 
     Returns (ko_path, en_path_to_write, reason) or None.
     """
-    ko_files = sorted(POSTS_ROOT.glob("*/ko/*.md"))
+    ko_files = [p for p in sorted(POSTS_ROOT.glob("*/ko/*.md"))
+                if not awaiting_link_ids(p)]
     now = time.time()
     excluded = excluded or set()
 

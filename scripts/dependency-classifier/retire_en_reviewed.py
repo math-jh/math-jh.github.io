@@ -8,8 +8,10 @@
 회수 조건은 상속 조건과 **같다**: 그 EN 링크에 lid 가 있고, 같은 lid 를 가진 KO
 링크가 `reviewed` 일 때만 뗀다. 둘을 같게 두었으므로 어느 시점에 멈춰도
 "모든 EN 링크는 자기 마커로든 상속으로든 완료"가 유지된다 — 아직 lid 를 못 받은
-링크는 마커를 그대로 갖고 있다가, link_pair_llm 이 lid 를 채운 뒤 다음 스윕에서
-회수된다. 그래서 이 스크립트는 여러 번 돌려도 되고, 돌릴수록 줄어든다.
+링크는 마커를 쥔 채 기다린다. 그래서 여러 번 돌려도 되고, 돌릴수록 줄어든다.
+
+의존성 분류기가 매 틱 `--apply --quiet` 로 부른다. 회수할 거리가 생기는 시점이
+곧 KO 가 검토되는 시점이기 때문이다. 경로를 주면 그 글들만 본다.
 """
 from __future__ import annotations
 
@@ -22,11 +24,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "dependency-classifier"))
 sys.path.insert(0, str(ROOT / "scripts" / "lib"))
-import link_ids as L  # noqa: E402
+import dependency_classifier as depc  # noqa: E402
 from blog_file_lock import try_acquire_file_locks  # noqa: E402
 from cron_commit import commit_outputs  # noqa: E402
-
-depc = L.depc
 
 
 def ko_twin(en_path: Path) -> Path | None:
@@ -39,7 +39,7 @@ def ko_twin(en_path: Path) -> Path | None:
 def ko_reviewed(path: Path) -> set[str]:
     text = path.read_text(encoding="utf-8")
     done = set()
-    for link in L.all_links(path, text):
+    for link in depc.unit_links(path, text):
         if link.reviewed:
             lid = depc.link_lid(text, link)
             if lid:
@@ -50,7 +50,7 @@ def ko_reviewed(path: Path) -> set[str]:
 def plan(en_path: Path, done: set[str]) -> tuple[str, str, int]:
     text = en_path.read_text(encoding="utf-8")
     edits = []
-    for link in L.all_links(en_path, text):
+    for link in depc.unit_links(en_path, text):
         if not link.reviewed or link.ial_start is None:
             continue
         lid = depc.link_lid(text, link)
@@ -98,7 +98,7 @@ def main() -> int:
         twin = ko_twin(en_path)
         done = ko_reviewed(twin) if twin else set()
         old, new, n = plan(en_path, done)
-        text_left = sum(1 for link in L.all_links(en_path, old) if link.reviewed) - n
+        text_left = sum(1 for link in depc.unit_links(en_path, old) if link.reviewed) - n
         left += max(0, text_left)
         if not n:
             continue
