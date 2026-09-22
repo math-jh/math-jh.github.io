@@ -14,7 +14,7 @@ translated_at: 2026-06-01T22:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-01T22:30:02+00:00
 ---
-In the posts in this category, we examine properties of rings in somewhat greater detail. The first topic we cover is integral domains. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="roimg" data-relation="weak" }) 
+In the posts in this category, we examine properties of rings in somewhat greater detail. The first topic we cover is integral domains. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="roimg" data-relation="required" }) 
 
 ## Euclidean Domains
 

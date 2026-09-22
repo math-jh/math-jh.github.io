@@ -22,7 +22,7 @@ weight: 2
 
 $$\ker \prod u_i=\prod \ker u_i,\qquad \coker \bigoplus u_i=\bigoplus \coker u_i $$
 
-이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2){: data-lid="i5v2c" data-relation="weak" }를 다시 써보면 다음의 두 식
+이 성립하며, 위의 논의를 통해  [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_modules#prop2){: data-lid="i5v2c" data-relation="required" }를 다시 써보면 다음의 두 식
 
 $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i$$
 

@@ -102,7 +102,7 @@ and therefore
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\dd{t} = 1.$$
 
-Indeed, since $\mathbf{F} = \nabla(xy)$, by [Theorem 3](#thm3){: data-lid="r0jnd" } we can recover the above computation by calculating the difference of the endpoint values of $xy$, namely $1\cdot 1 - 0\cdot 0 = 1$. This depends only on the endpoints; for instance, if we take $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$), then
+Indeed, since $\mathbf{F} = \nabla(xy)$, by [Theorem 3](#thm3){: data-lid="r0jnd" data-relation="required" } we can recover the above computation by calculating the difference of the endpoint values of $xy$, namely $1\cdot 1 - 0\cdot 0 = 1$. This depends only on the endpoints; for instance, if we take $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$), then
 
 $$\mathbf{F}(\mathbf{r}(t))=(t,t),\qquad \mathbf{r}'(t)=(1,1)$$
 
@@ -112,7 +112,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\dd{t} = 1.$$
 
 :::
 
-Meanwhile, in [§Vector Fields, ⁋Proposition 6](/en/math/calculus/vector_fields#prop6){: data-lid="7o9p2" } we saw that a conservative field necessarily satisfies the irrotational condition. [Theorem 4](#thm4){: data-lid="oq6bx" data-relation="required" } reveals why this is not sufficient, in the language of path independence. Since being a conservative field is equivalent to the integral over every closed curve being zero, if there is even one closed curve whose integral is nonzero despite the field being irrotational, then the field is not conservative. Such examples actually arise when the domain has a hole, and the following example is precisely that.
+Meanwhile, in [§Vector Fields, ⁋Proposition 6](/en/math/calculus/vector_fields#prop6){: data-lid="7o9p2" data-relation="weak" } we saw that a conservative field necessarily satisfies the irrotational condition. [Theorem 4](#thm4){: data-lid="oq6bx" data-relation="required" } reveals why this is not sufficient, in the language of path independence. Since being a conservative field is equivalent to the integral over every closed curve being zero, if there is even one closed curve whose integral is nonzero despite the field being irrotational, then the field is not conservative. Such examples actually arise when the domain has a hole, and the following example is precisely that.
 
 ::: Example 6
 Consider the vector field on the plane with the origin removed, $\mathbb{R}^2 \setminus \{0\}$,

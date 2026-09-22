@@ -181,7 +181,7 @@ Then, just as for nilpotent groups, the following proposition holds.
 For a group homomorphism $f: G \rightarrow G'$, $f(D_n(G)) \subseteq D_n(G')$ always holds. Moreover, if $f$ is surjective then $f(D_n(G)) = D_n(G')$ holds.
 :::
 
-The proof of this is the same as for [Proposition 4](#prop4){: data-lid="hb7ov" data-relation="weak" }, using induction. Just as nilpotent groups were defined by the stability condition of the lower central series, solvable groups are defined by the stability condition of the derived series.
+The proof of this is the same as for [Proposition 4](#prop4){: data-lid="hb7ov" data-relation="required" }, using induction. Just as nilpotent groups were defined by the stability condition of the lower central series, solvable groups are defined by the stability condition of the derived series.
 
 ::: Definition 11
 A group $G$ is called *solvable* if there exists a natural number $n$ such that $D_{n+1}(G) = \{e\}$. The smallest such $n$ is called the *solvability class* of $G$.
@@ -219,7 +219,7 @@ $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}$$
 is called a *subnormal series* if for each $k$, $G_{k+1}$ is a normal subgroup of $G_k$; in this case $G_k/G_{k+1}$ is called a *quotient* of this series. If no subnormal series finer than a subnormal series $G_\bullet$ exists, we call it a *composition series* of $G$.
 :::
 
-Then for any group $G$ and any normal subgroup $N$, since there is a one-to-one correspondence between normal subgroups of $G/N$ and normal subgroups of $G$ containing $N$, the condition that $G_\bullet$ is a composition series is equivalent to $G_k/G_{k+1}$ being simple for each $k$. ([§Symmetric Groups, ⁋Definition 12](/en/math/group_theory/symmetric_groups#def12){: data-lid="2dakz" data-relation="weak" })
+Then for any group $G$ and any normal subgroup $N$, since there is a one-to-one correspondence between normal subgroups of $G/N$ and normal subgroups of $G$ containing $N$, the condition that $G_\bullet$ is a composition series is equivalent to $G_k/G_{k+1}$ being simple for each $k$. ([§Symmetric Groups, ⁋Definition 12](/en/math/group_theory/symmetric_groups#def12){: data-lid="2dakz" data-relation="required" })
 
 If for two subnormal series
 

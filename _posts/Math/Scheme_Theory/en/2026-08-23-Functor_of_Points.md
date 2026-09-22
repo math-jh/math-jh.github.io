@@ -261,7 +261,7 @@ $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y
 Naturality, that is, the fact that for $\tau: T' \rightarrow T$ the pullbacks of both sides agree, follows from the naturality of the universal property.
 :::
 
-[Proposition 7](#prop7){: data-lid="p5afj" data-relation="required" } allows us to interpret the fiber product as the operation of taking the fiber product *pointwise* at the functor level. From this perspective, the existence proof of [§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8){: data-lid="z780l" data-relation="weak" } is reinterpreted as showing that the functor $T\mapsto X(T)\times_{S(T)} Y(T)$, which is trivially defined pointwise, is representable. In particular, for the product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$, one simply has $(X\times Y)(T)\cong X(T)\times Y(T)$.
+[Proposition 7](#prop7){: data-lid="p5afj" data-relation="required" } allows us to interpret the fiber product as the operation of taking the fiber product *pointwise* at the functor level. From this perspective, the existence proof of [§Fiber Products, ⁋Theorem 8](/en/math/scheme_theory/fiber_products#thm8){: data-lid="z780l" data-relation="required" } is reinterpreted as showing that the functor $T\mapsto X(T)\times_{S(T)} Y(T)$, which is trivially defined pointwise, is representable. In particular, for the product $X\times Y=X\times_{\Spec \mathbb{Z}} Y$, one simply has $(X\times Y)(T)\cong X(T)\times Y(T)$.
 
 ---
 

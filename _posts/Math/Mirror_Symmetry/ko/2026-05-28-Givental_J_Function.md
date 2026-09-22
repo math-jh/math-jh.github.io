@@ -291,7 +291,7 @@ $$v_0 = -e_1 - \cdots - e_n,\qquad v_i = e_i\quad (i = 1, \ldots, n)$$
 
 이제 [정의 6](#def6){: data-lid="z1y4k" data-relation="required" }의 $I$-function 공식에 들어가는 데이터를 $\mathbb{P}^n$에 맞춰 풀어 보자. 우선 $H^2(\mathbb{P}^n)$이 $H$ 하나로 생성되므로 $t_{(2)} = tH$이며, Novikov variable이 $q = e^t$로 주어진다. 즉, $t = \ln q$이므로 $e^{t_{(2)}/z} = e^{H \ln q / z}$로 쓸 수 있다. 
 
-다음으로 effective curve class는 line class $H^\vee$의 음이 아닌 배수 $\beta = d H^\vee$ ($d \geq 0$)로 매개되므로 $q^\beta = q^d$이고, $\mathbb{P}^n$의 $n+1$개 toric divisor $D_0, \ldots, D_n$은 ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11){: data-lid="wg0d3" data-relation="weak" }) 모두 $D_i \cdot \beta = H \cdot d H^\vee = d$을 만족하므로, 이를 대입하면 각 인자는 $-\infty$로의 무한곱이 상쇄되어
+다음으로 effective curve class는 line class $H^\vee$의 음이 아닌 배수 $\beta = d H^\vee$ ($d \geq 0$)로 매개되므로 $q^\beta = q^d$이고, $\mathbb{P}^n$의 $n+1$개 toric divisor $D_0, \ldots, D_n$은 ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11){: data-lid="wg0d3" data-relation="required" }) 모두 $D_i \cdot \beta = H \cdot d H^\vee = d$을 만족하므로, 이를 대입하면 각 인자는 $-\infty$로의 무한곱이 상쇄되어
 
 $$\frac{\prod_{k=-\infty}^{0}(D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)} = \frac{\prod_{k=-\infty}^{0}(H + kz)}{\prod_{k=-\infty}^{d}(H + kz)} = \frac{1}{\prod_{j=1}^{d}(H + jz)}$$
 
@@ -354,7 +354,7 @@ $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in 
 
 Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4){: data-lid="ah3k7" data-relation="required" }의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원되는데, $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오고, 이들이 $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$로 합산되며 $\psi$-shift 보정이 추가 $z^{-1}$ 인자를 만들어내어, 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3){: data-lid="fm5qj" data-relation="required" }의 small $J$-function 형태가 그대로 복원된다. 
 
-Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5){: data-lid="6vh4q" data-relation="forward" }도 big 버전으로 격상되어 *전체* $S$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $I = J$도 ([명제 7](#prop7){: data-lid="7kav7" data-relation="forward" }) mirror map $\tau(q)$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
+Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5){: data-lid="6vh4q" data-relation="weak" }도 big 버전으로 격상되어 *전체* $S$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $I = J$도 ([명제 7](#prop7){: data-lid="7kav7" data-relation="weak" }) mirror map $\tau(q)$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
 
 ---
 
@@ -365,4 +365,4 @@ Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들
 
 ---
 
-[^1]: 그 기원은 [명제 4](#prop4){: data-lid="os9n8" data-relation="forward" }의 증명에서 살펴본다. 
+[^1]: 그 기원은 [명제 4](#prop4){: data-lid="os9n8" data-relation="weak" }의 증명에서 살펴본다. 

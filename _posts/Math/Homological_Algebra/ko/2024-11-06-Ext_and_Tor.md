@@ -208,7 +208,7 @@ $$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0,
 :::
 
 ::: 증명
-[명제 5](#prop5){: data-lid="z5dbm" data-relation="weak" }에서와 마찬가지의 projective resolution 
+[명제 5](#prop5){: data-lid="z5dbm" data-relation="required" }에서와 마찬가지의 projective resolution 
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
 

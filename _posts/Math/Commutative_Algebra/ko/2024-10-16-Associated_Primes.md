@@ -69,7 +69,7 @@ $$(a)+\mathfrak{a}\subseteq \ann(bx)=\mathfrak{a}$$
 
 위의 명제로부터 얻어지는 $\mathfrak{a}$는 prime ideal인 동시에 적당한 원소의 annihilator이므로 정의에 의해 $\Ass M$에 속한다. 
 
-한편 [§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3){: data-lid="jcfh9" data-relation="requires-review" }에 의하여, 임의의 $A$-module $M$에 대하여, $x\in M$이 $0$인 것은 localization $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$에서의 image가 모두 $0$인 것과 동치이며, 따라서 $x=0$인 것을 보이기 위해서는 모든 prime ideal $\mathfrak{p}$에 대하여 $\epsilon_\mathfrak{p}(x)=0$임을 보이면 충분하다. 다음 따름정리도 같은 맥락에서 이해할 수 있다. 
+한편 [§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3){: data-lid="jcfh9" data-relation="required" reviewed="" }에 의하여, 임의의 $A$-module $M$에 대하여, $x\in M$이 $0$인 것은 localization $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$에서의 image가 모두 $0$인 것과 동치이며, 따라서 $x=0$인 것을 보이기 위해서는 모든 prime ideal $\mathfrak{p}$에 대하여 $\epsilon_\mathfrak{p}(x)=0$임을 보이면 충분하다. 다음 따름정리도 같은 맥락에서 이해할 수 있다. 
 
 ::: 따름정리 4
 Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다음이 성립한다. 

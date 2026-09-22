@@ -27,7 +27,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$과 injective $\mathbb{K}$-homomorphi
 
     $$0=u(0)=u(f(\alpha))=f(u(\alpha))$$
     
-    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-lid="swwn3" data-relation="weak" }), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
+    이므로 $u(\Phi)\subseteq\Phi$가 성립한다. 그런데 $u$는 zero map이 아니므로 injective이고 ([§체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-lid="swwn3" data-relation="required" }), 따라서 $u$는 $\Phi$에서 $\Phi$로의 bijection이다. 따라서 $x\in\Phi=u(\Phi)\subseteq u(\mathbb{L})$이고 이로부터 $u(\mathbb{L})=\mathbb{L}$이다.
 
 2. $\overline{\mathbb{K}}$는 $u(\mathbb{L})$과 $\mathbb{L}$의 algebraic closure이므로 [§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5){: data-lid="gn9n1" data-relation="required" }의 universal property로부터 $u$를 확장하는 $\overline{\mathbb{K}}$의 $\mathbb{K}$-endomorphism $w$를 얻는다. 이 때 $w$는 injective이므로 $w(\overline{\mathbb{K}})$는 $\overline{\mathbb{K}}$와 isomorphic하여 algebraically closed이고, $\overline{\mathbb{K}}/\mathbb{K}$가 algebraic이므로 $\overline{\mathbb{K}}$는 $w(\overline{\mathbb{K}})$의 algebraic extension이 되어 [§대수적 폐포, ⁋명제 1](/ko/math/field_theory/algebraically_closed_extensions#prop1){: data-lid="69vuw" data-relation="required" }의 넷째 조건으로부터 $w(\overline{\mathbb{K}})=\overline{\mathbb{K}}$, 즉 $w$가 automorphism임을 얻는다. 
 :::
@@ -81,7 +81,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여, 다음이 모두 동�
 5. $\mathbb{L}$은 어떠한 non-constant polynomial들의 family $(f_i\in \mathbb{K}[\x])$의 splitting field이다. 
 :::
 ::: 증명
-우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1){: data-lid="4yhl5" data-relation="required" }로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1){: data-lid="t8ojs" data-relation="weak" }과 같은 논리로 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism은 $f_i$의 해를 $f_i$의 해로 보내므로 $\mathbb{L}$을 $\mathbb{L}$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건이 성립한다면 $x\in \mathbb{L}$의 conjugate들은 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism에 의한 $x$의 image이므로 모두 $\mathbb{L}$에 속하고, 이로부터 둘째 조건이 성립한다. 따라서 
+우선 셋째 조건과 넷째 조건의 동치는 [명제 1](#prop1){: data-lid="4yhl5" data-relation="required" }로부터 나온다. 한편 quasi-Galois extension은 그 원소들의 minimal polynomial들의 splitting field로 볼 수 있으므로 마지막 조건은 첫째 조건에 의해 유도된다. 한편 마지막 조건이 성립한다면 [명제 1](#prop1){: data-lid="t8ojs" data-relation="required" }과 같은 논리로 $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism은 $f_i$의 해를 $f_i$의 해로 보내므로 $\mathbb{L}$을 $\mathbb{L}$로 보낸다. 따라서 셋째 조건이 성립한다. 또 셋째 조건이 성립한다면 $x\in \mathbb{L}$의 conjugate들은 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism에 의한 $x$의 image이므로 모두 $\mathbb{L}$에 속하고, 이로부터 둘째 조건이 성립한다. 따라서 
 
 $$(1)\implies (5)\implies (3)\iff (4)\implies (2)$$
 

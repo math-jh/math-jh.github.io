@@ -74,7 +74,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 로 바꾸거나 분수 $(x^2+1)/x$를 $x + 1/x$로 나누어 각 항을 위 공식에 맞추는 식이다.
 
-특히 유용하게 쓰이는 치환적분과 부분적분은 각각 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-lid="vhmth" data-relation="requires-review" }와 [§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3){: data-lid="4c97f" data-relation="requires-review" }을 거꾸로 읽은 것이다.
+특히 유용하게 쓰이는 치환적분과 부분적분은 각각 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4){: data-lid="vhmth" data-relation="weak" reviewed="" }와 [§미분법, ⁋명제 3](/ko/math/calculus/differentiation_rules#prop3){: data-lid="4c97f" data-relation="weak" reviewed="" }을 거꾸로 읽은 것이다.
 
 ::: 정리 4 (치환적분)
 $f$가 구간 $I$에서 원시함수를 가지고, $g$가 미분가능하며 모든 $x$에 대해 $g(x) \in I$이면

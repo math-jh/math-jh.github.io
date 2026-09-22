@@ -27,7 +27,7 @@ Division ring의 정의는 이미 주어졌으나, 이번 글의 시작을 위�
 Ring $D\neq 0$이 *division ring<sub>나눗셈환</sub>* 혹은 *skew field<sub>비가환체</sub>*라는 것은 $D$의 모든 nonzero 원소가 곱셈에 대한 양쪽 역원을 갖는 것이다. Commutative division ring을 *field<sub>체</sub>*라 부른다.
 :::
 
-우리는 [§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1){: data-lid="8ud4t" data-relation="weak" }에서 unit group $D^\times$가 곱셈에 대한 group임을 이미 확인하였으며, division ring에서는 정의에 의해 $D^\times=D\setminus\{0\}$이므로 이것이 곱셈에 대한 group이 된다. 이 group을 $D$의 *multiplicative group*이라 부른다. 
+우리는 [§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1){: data-lid="8ud4t" data-relation="required" }에서 unit group $D^\times$가 곱셈에 대한 group임을 이미 확인하였으며, division ring에서는 정의에 의해 $D^\times=D\setminus\{0\}$이므로 이것이 곱셈에 대한 group이 된다. 이 group을 $D$의 *multiplicative group*이라 부른다. 
 
 Division ring의 첫 번째 성질은 다음과 같다.
 
@@ -46,7 +46,7 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
 위의 [명제 2](#prop2){: data-lid="86if1" data-relation="weak" }는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4){: data-lid="8aebo" data-relation="required" }로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
 
-뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2){: data-lid="57g8t" data-relation="weak" }의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="75o9q" data-relation="weak" }) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 
+뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2){: data-lid="57g8t" data-relation="required" }의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="75o9q" data-relation="weak" }) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 
 
 이 현상을 살펴보기 위해 우리는 우선 division ring $D$의 center $Z(D)$에 대한 성질을 정리한다. 이는 $D$의 commutative subring이며 ([\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8){: data-lid="qozsj" data-relation="required" }), 나아가 field이다. 이는 임의의 nonzero $z\in Z(D)$가 $D$ 안에서 역원 $z^{-1}$을 갖고, 임의의 $x\in D$에 대하여 
 
@@ -228,7 +228,7 @@ $f:M\rightarrow N$을 nonzero $A$-module homomorphism이라 하자. $\ker f$는 
 이제 $M=N$인 경우를 보면, $\End_A(M)$은 morphism의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 첫째 결과에 의해 nonzero $f\in\End_A(M)$은 isomorphism이고, 그 inverse $f^{-1}$ 또한 $A$-module homomorphism이므로 $\End_A(M)$의 원소이다. 또, $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 즉 모든 nonzero 원소가 unit이고, $\End_A(M)$은 division ring이다.
 :::
 
-이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 반대로 division ring 자신을 그보다 작은 field 위의 vector space로 보면 그 field 위의 linear endomorphism들로 이루어진 ring 안에서 행렬로 나타나며, [정의 7](#def7){: data-lid="6k04p" data-relation="required" } 직후에 손으로 적은 quaternion $\mathbb{H}$의 행렬표현도 이렇게 얻어진다. $\mathbb{H}$의 subfield $\mathbb{C}=\mathbb{R}+\mathbb{R}i$를 왼쪽에서 곱하여 $\mathbb{H}$를 $\mathbb{C}$-vector space로 보면, quaternion $q=a+bi+cj+dk$는 $z=a+bi$, $w=c+di$에 대하여
+이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 반대로 division ring 자신을 그보다 작은 field 위의 vector space로 보면 그 field 위의 linear endomorphism들로 이루어진 ring 안에서 행렬로 나타나며, [정의 7](#def7){: data-lid="6k04p" data-relation="weak" } 직후에 손으로 적은 quaternion $\mathbb{H}$의 행렬표현도 이렇게 얻어진다. $\mathbb{H}$의 subfield $\mathbb{C}=\mathbb{R}+\mathbb{R}i$를 왼쪽에서 곱하여 $\mathbb{H}$를 $\mathbb{C}$-vector space로 보면, quaternion $q=a+bi+cj+dk$는 $z=a+bi$, $w=c+di$에 대하여
 
 $$q=z+wj$$
 

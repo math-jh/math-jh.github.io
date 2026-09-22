@@ -259,7 +259,7 @@ The order of the alternating group is
 
 $$\lvert A_5\rvert=\frac{5!}{2}=60=2^2\cdot 3\cdot 5$$
 
-Also, as we saw in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-lid="e936n" data-relation="weak" }, the elements of $A_5$ consist of $1$ identity element, $20$ elements of order $3$ (3-cycles), $15$ elements of order $2$ (double transpositions), and $24$ elements of order $5$ (5-cycles).
+Also, as we saw in [§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-lid="e936n" data-relation="required" }, the elements of $A_5$ consist of $1$ identity element, $20$ elements of order $3$ (3-cycles), $15$ elements of order $2$ (double transpositions), and $24$ elements of order $5$ (5-cycles).
 
 Now suppose $N\triangleleft A_5$ satisfies $N\neq\{e\}$, and let us show that $N=A_5$. The order $\lvert N\rvert$ divides $60$, and among the divisors of $60$, those not divisible by the primes $3$ or $5$ are only $1,2,4$. Therefore either $3$ or $5$ divides $\lvert N\rvert$, or else $\lvert N\rvert\in\{2,4\}$.
 

@@ -179,7 +179,7 @@ $Y$가 generic point $\eta$를 가지므로, 정의에 의해 $\codim_XY$와 $\c
 
 $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
-를 증명하였는데, 여기에서 사용한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-lid="xn7ku" data-relation="weak" } 대신 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15){: data-lid="ipfh6" data-relation="required" }를 사용하면 scheme $X$와 $X$의 irreducible closed subset $Y$에 대하여 다음의 부등식
+를 증명하였는데, 여기에서 사용한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-lid="xn7ku" data-relation="required" } 대신 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15){: data-lid="ipfh6" data-relation="required" }를 사용하면 scheme $X$와 $X$의 irreducible closed subset $Y$에 대하여 다음의 부등식
 
 $$\dim Y+\codim_XY\leq \dim X$$
 

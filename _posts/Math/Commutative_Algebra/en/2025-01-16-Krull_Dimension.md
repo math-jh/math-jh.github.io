@@ -40,7 +40,7 @@ For a prime ideal $\mathfrak{p}$ of $A$, the *codimension* $\codim \mathfrak{p}$
 Finally, for an arbitrary $A$-module $M$, the dimension and codimension of $M$ are defined as the dimension and codimension of $\ann(M)$, respectively.
 :::
 
-A word of caution: under the definitions above, $\mathfrak{a}$ acquires two notions of dimension (one as an ideal, defined first, and one viewed as an $A$-module), and the values given by these two definitions may differ. Therefore, whenever we use the notation $\dim \mathfrak{a}$, we will mean only the dimension of $\mathfrak{a}$ as an ideal of $A$, as defined first in [Definition 2](#def2){: data-lid="fu4uw" data-relation="weak" }.
+A word of caution: under the definitions above, $\mathfrak{a}$ acquires two notions of dimension (one as an ideal, defined first, and one viewed as an $A$-module), and the values given by these two definitions may differ. Therefore, whenever we use the notation $\dim \mathfrak{a}$, we will mean only the dimension of $\mathfrak{a}$ as an ideal of $A$, as defined first in [Definition 2](#def2){: data-lid="fu4uw" data-relation="required" }.
 
 Now, by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-lid="kyj3x" data-relation="required" }, $\codim \mathfrak{p}$ equals the supremum of the lengths of decreasing chains
 

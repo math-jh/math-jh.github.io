@@ -38,7 +38,7 @@ Therefore, we often consider the case where $G$ is a *compact* Lie group. In thi
 
 On the other hand, given a finite-dimensional representation $G\rightarrow\Aut(V)$, the greatest advantage is that we can regard the images $\rho(g)$ as matrices (via a choice of basis). Hence we can investigate them using our tools for matrices and linear maps.
 
-One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $\rho:G \rightarrow \Aut(V)$, we are interested in choosing a basis of $V$ so that the matrix representation of each $\rho(g)$ becomes diagonal. If $G$ were finite, we could find such a basis for each $g$ individually, but since $G$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10){: data-lid="uaxjr" data-relation="weak" } tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
+One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $\rho:G \rightarrow \Aut(V)$, we are interested in choosing a basis of $V$ so that the matrix representation of each $\rho(g)$ becomes diagonal. If $G$ were finite, we could find such a basis for each $g$ individually, but since $G$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10){: data-lid="uaxjr" data-relation="required" } tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
 
 ::: Definition 2
 For a compact, connected Lie group $G$, a subgroup $T$ of $G$ is called a *maximal torus* if $T$ is a torus and is maximal with respect to inclusion.
@@ -342,7 +342,7 @@ Then for each coset $gN\in G/N$, its fiber is
 
 $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
-and since $g$ is fixed, this fiber is essentially $\{xT\mid x\in N\}$, that is, the same as $N/T$. Furthermore, topologically we can verify that $\pi$ is exactly a $\lvert W\rvert$-fold covering map. ([\[Algebraic Topology\] §Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3){: data-lid="0nuau" data-relation="weak" }) More precisely, this is a principal $W$-bundle with each fiber being $W$.
+and since $g$ is fixed, this fiber is essentially $\{xT\mid x\in N\}$, that is, the same as $N/T$. Furthermore, topologically we can verify that $\pi$ is exactly a $\lvert W\rvert$-fold covering map. ([\[Algebraic Topology\] §Covering Spaces, ⁋Definition 3](/en/math/algebraic_topology/covering_spaces#def3){: data-lid="0nuau" data-relation="required" }) More precisely, this is a principal $W$-bundle with each fiber being $W$.
 
 ## Example: $\SU(2)$
 

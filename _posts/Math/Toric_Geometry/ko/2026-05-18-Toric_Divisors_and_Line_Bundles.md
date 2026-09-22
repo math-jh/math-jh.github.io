@@ -163,7 +163,7 @@ $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \te
 
 을 정의할 수 있다. 이 때, $\Delta_D$의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
 
-한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9){: data-lid="pavgm" data-relation="weak" }에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7){: data-lid="ybvrb" data-relation="required" }의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
+한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9){: data-lid="pavgm" data-relation="required" }에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7){: data-lid="ybvrb" data-relation="required" }의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
 
 이 관점은 toric variety에서 ample이라는 기하학적 조건이 fan의 조합론으로 어떻게 번역되는지를 묻는 것을 자연스럽게 만든다. 결과부터 적자면, 이는 piecewise linear function의 볼록성으로 완전히 기술된다.
 
@@ -218,16 +218,16 @@ Fan $\Sigma$의 ray들 $\Sigma(1)$이 $N_\mathbb{R}$를 span한다고 가정하�
 
 Toric variety의 Picard group은 piecewise linear function의 언어로 명시적으로 기술될 수 있다. $\PL(\Sigma, M)$에서 globally linear한 것들, 즉 전역적으로 하나의 $m \in M$에 의해 $\psi(v) = \langle m, v \rangle$로 주어지는 함수들을 quotient하면 Picard group을 얻는다. 이는 toric variety의 조합론적 불변량을 계산하는 강력한 방법을 제공한다.
 
-이제 마지막으로 지금까지 정리한 도구들을 가장 익숙한 toric variety인 projective space $\mathbb{P}^n$에 적용해 보자. ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="fsnge" data-relation="weak" })
+이제 마지막으로 지금까지 정리한 도구들을 가장 익숙한 toric variety인 projective space $\mathbb{P}^n$에 적용해 보자. ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="fsnge" data-relation="required" })
 
 ::: 예시 11
-$\mathbb{P}^n$을 정의하는 fan의 ray들은 $v_0 = -e_1 - \cdots - e_n$, $v_i = e_i$ ($1 \le i \le n$)에 의해 생성되는 $\rho_0, \rho_1, \ldots, \rho_n$이고, 각 maximal cone $\sigma_i$는 이들 중 $\rho_i$를 빼고 나머지 $n$개로 생성되는 $n$차원 cone으로 $\mathbb{P}^n$의 standard affine chart $U_{\sigma_i} = \{\x_i \neq 0\}$에 대응된다 ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="efajy" data-relation="weak" }). 각 torus-invariant prime divisor $D_i = D_{\rho_i}$는 homogeneous coordinate 표현으로 coordinate hyperplane
+$\mathbb{P}^n$을 정의하는 fan의 ray들은 $v_0 = -e_1 - \cdots - e_n$, $v_i = e_i$ ($1 \le i \le n$)에 의해 생성되는 $\rho_0, \rho_1, \ldots, \rho_n$이고, 각 maximal cone $\sigma_i$는 이들 중 $\rho_i$를 빼고 나머지 $n$개로 생성되는 $n$차원 cone으로 $\mathbb{P}^n$의 standard affine chart $U_{\sigma_i} = \{\x_i \neq 0\}$에 대응된다 ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="efajy" data-relation="required" }). 각 torus-invariant prime divisor $D_i = D_{\rho_i}$는 homogeneous coordinate 표현으로 coordinate hyperplane
 
 $$D_0 = \{\x_0 = 0\}, \quad D_1 = \{\x_1 = 0\}, \quad \ldots, \quad D_n = \{\x_n = 0\}$$
 
 에 대응한다. 이들은 각각 $\mathbb{P}^n$의 hyperplane divisor이고, 우리는 기본적인 algebraic geometry로부터 이들이 하나의 *hyperplane class*를 결정한다는 것을 안다. 편의상 그 representative로 $H = D_0$을 택하자. 
 
-$H$에 대응하는 piecewise linear function $\psi_H$를 계산해 보자. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="gw9lo" data-relation="weak" }의 monomial map convention $(t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$ 하에서 $t_i = \x_i/\x_0$이므로, 각 affine chart에서 $H = \{\x_0 = 0\}$의 local equation은
+$H$에 대응하는 piecewise linear function $\psi_H$를 계산해 보자. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10){: data-lid="gw9lo" data-relation="required" }의 monomial map convention $(t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$ 하에서 $t_i = \x_i/\x_0$이므로, 각 affine chart에서 $H = \{\x_0 = 0\}$의 local equation은
 
 - $i = 0$일 때 $U_{\sigma_0} = \{\x_0 \neq 0\}$에서는 $H$가 비어 있어 $H\rvert_{U_{\sigma_0}} = \divisor(1) = \divisor(\rchi^0)$, 즉 $m_{\sigma_0} = 0$이며,
 - $i \ge 1$일 때 $H \cap U_{\sigma_i}$의 local equation은 $\x_0/\x_i = t_i^{-1} = \rchi^{-e_i^\ast}$이므로 [명제 6](#prop6){: data-lid="tbce9" data-relation="required" }의 규약 $H\rvert_{U_{\sigma_i}} = \divisor(\rchi^{-m_{\sigma_i}})$에서 $m_{\sigma_i} = e_i^\ast$이다.

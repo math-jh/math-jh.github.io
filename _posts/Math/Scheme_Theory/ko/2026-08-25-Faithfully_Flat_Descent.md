@@ -357,7 +357,7 @@ Family $\{\psi_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위�
 일반적인 fpqc cover의 경우, quasi-compact 조건으로 finite subcover를 잡고 그 disjoint union을 단일한 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 gluing하면 된다. Gluing의 consistency는 [정리 10](#thm10){: data-lid="aem78" data-relation="required" }의 sheaf 성질이 보장한다.
 :::
 
-역시 [정리 11](#thm11){: data-lid="cukfi" data-relation="weak" }에서 핵심적인 사실은 위의 형태의 descent datum $(\mathcal{F}_i, \Phi)$가 주어졌을 때 이들을 실제로 붙여서 단일한 sheaf $\mathcal{F}$를 붙일 수 있다는 것이다.
+역시 [정리 11](#thm11){: data-lid="cukfi" data-relation="required" }에서 핵심적인 사실은 위의 형태의 descent datum $(\mathcal{F}_i, \Phi)$가 주어졌을 때 이들을 실제로 붙여서 단일한 sheaf $\mathcal{F}$를 붙일 수 있다는 것이다.
 
 ## 사상의 하강
 

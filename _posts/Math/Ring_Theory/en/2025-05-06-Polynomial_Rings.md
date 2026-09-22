@@ -357,7 +357,7 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 and we can verify that this is well-defined. As with polynomials, we define $\deg(0)=-\infty$.
 
-Then the following proposition is the analogue of [Proposition 2](#prop2){: data-lid="exzkm" data-relation="required" }.
+Then the following proposition is the analogue of [Proposition 2](#prop2){: data-lid="exzkm" data-relation="weak" }.
 
 ::: Proposition 18
 For two rational fractions $r, s$, the following hold.

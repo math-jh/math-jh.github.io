@@ -66,7 +66,7 @@ To define $\varphi$ as a scheme morphism, consider the affine open subscheme of 
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1).$$
 
-([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-lid="318ks" data-relation="weak" }) Also consider the affine space
+([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12){: data-lid="318ks" data-relation="required" }) Also consider the affine space
 
 $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n].$$
 
@@ -205,7 +205,7 @@ $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}.$$
 Geometrically, this can be viewed as a situation in which, for each $x_0\in \mathbb{R}_x$, a circle $y^2+z^2=1-x_0^2$ is assigned; hence we may regard $\pi$ as a <em>family of circles parametrized by the $x$-axis</em>. Of course if $\lvert x_0\rvert>1$ this fiber is empty, and if $x_0=\pm 1$ it is a single point, so it is a circle only when $\lvert x_0\rvert<1$. The manner in which members of a family degenerate in this way will become an issue again when we treat flatness later.
 :::
 
-Among the reasons we cannot directly represent this example as a scheme, the less essential one is that $S$ is a closed subset of $\mathbb{R}^3$ and we do not yet know how to endow a closed subset with a scheme structure. This will be resolved in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="rrapx" data-relation="forward" }. The more subtle and essential difficulty is that there is no way to represent the fiber $\pi^{-1}(x_0)$ of the function $\pi$ at a point $x_0$. A scheme morphism is of course a continuous map, so we could view this as the fiber of a continuous map; but even doing so (even assuming the content of [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="nh8tr" data-relation="weak" }) there is no way to give $\pi^{-1}(x_0)$ a scheme structure. To explain this we must wait a little longer.
+Among the reasons we cannot directly represent this example as a scheme, the less essential one is that $S$ is a closed subset of $\mathbb{R}^3$ and we do not yet know how to endow a closed subset with a scheme structure. This will be resolved in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="rrapx" data-relation="forward" }. The more subtle and essential difficulty is that there is no way to represent the fiber $\pi^{-1}(x_0)$ of the function $\pi$ at a point $x_0$. A scheme morphism is of course a continuous map, so we could view this as the fiber of a continuous map; but even doing so (even assuming the content of [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes){: data-lid="nh8tr" data-relation="forward" }) there is no way to give $\pi^{-1}(x_0)$ a scheme structure. To explain this we must wait a little longer.
 
 ---
 **References**

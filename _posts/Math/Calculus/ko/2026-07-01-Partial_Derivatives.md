@@ -159,7 +159,7 @@ $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) -
 를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\rightarrow(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3){: data-lid="0xf99" data-relation="required" reviewed="" }의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
 :::
 
-이렇게 편미분의 존재와 연속성을 함께 요구하는 상황은 앞으로도 반복해서 나타나므로, [§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5){: data-lid="oi7c7" data-relation="weak" reviewed="" }의 이름을 다변수로 옮겨 쓰기로 한다. 즉 어떤 영역에서 $k$계 이하의 모든 편미분이 존재하고 연속이면 $f$가 그 영역에서 *$C^k$급*이라 하며, 이 말로 다시 적으면 [명제 5](#prop5){: data-lid="fk8dx" data-relation="requires-review" }는 $C^1$급 함수가 미분가능하다는 것이다.
+이렇게 편미분의 존재와 연속성을 함께 요구하는 상황은 앞으로도 반복해서 나타나므로, [§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5){: data-lid="oi7c7" data-relation="weak" reviewed="" }의 이름을 다변수로 옮겨 쓰기로 한다. 즉 어떤 영역에서 $k$계 이하의 모든 편미분이 존재하고 연속이면 $f$가 그 영역에서 *$C^k$급*이라 하며, 이 말로 다시 적으면 [명제 5](#prop5){: data-lid="fk8dx" data-relation="weak" reviewed="" }는 $C^1$급 함수가 미분가능하다는 것이다.
 
 ## 연쇄법칙과 혼합편미분
 

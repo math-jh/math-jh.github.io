@@ -59,7 +59,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 으로 정의한다.
 :::
 
-위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2){: data-lid="xnj0s" data-relation="requires-review" }와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 모든 $i,j$에 대하여 $M_iM_j\subseteq M_{i+j}$를 만족하는 $A$의 ideal들인 경우, [정의 1](#def1){: data-lid="va2wz" data-relation="requires-review" }과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
+위의 정의에서 $\gr_\mathcal{J}M$은 $\gr_\mathfrak{a}A$-module 구조를 가지며, 이는 임의의 $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$과 $x\in M_l/M_{l+1}$에 대하여 이들의 representative $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$을 택한 후 $\tilde{a}\tilde{x}$를 $M_{k+l}/M_{k+l+1}$로 제한시킨 것이며, [보조정리 2](#lem2){: data-lid="xnj0s" data-relation="weak" reviewed="" }와 유사한 계산을 통해 이것이 잘 정의된다는 것을 확인할 수 있다. 특별히 $M=A$이고 $M_i$들이 모든 $i,j$에 대하여 $M_iM_j\subseteq M_{i+j}$를 만족하는 $A$의 ideal들인 경우, [정의 1](#def1){: data-lid="va2wz" data-relation="weak" reviewed="" }과 마찬가지로 $\gr_\mathcal{J}A$ 또한 ring의 구조를 가지며, 이 또한 filtration $\mathcal{J}$에 대한 associated graded ring이라 부른다. 
 
 이제 다음이 성립한다. 
 

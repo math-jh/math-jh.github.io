@@ -302,7 +302,7 @@ $\varphi$가 locally of finite presentation이라 하자. [§스킴 사상의 �
 
 $$B_i\cong A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_m)$$
 
-의 꼴이도록 할 수 있고, 그럼 [예시 9](#ex9){: data-lid="55k7v" data-relation="weak" } 이후에 살펴본 isomorphism $C\otimes_AA[\x_1,\ldots, \x_n]\cong C[\x_1,\ldots, \x_n]$과 [보조정리 10](#lem10){: data-lid="rc4jf" data-relation="required" }으로부터
+의 꼴이도록 할 수 있고, 그럼 [예시 9](#ex9){: data-lid="55k7v" data-relation="required" } 이후에 살펴본 isomorphism $C\otimes_AA[\x_1,\ldots, \x_n]\cong C[\x_1,\ldots, \x_n]$과 [보조정리 10](#lem10){: data-lid="rc4jf" data-relation="required" }으로부터
 
 $$B_i\otimes_AC\cong C[\x_1,\ldots, \x_n]/(\bar{f}_1,\ldots, \bar{f}_m)$$
 

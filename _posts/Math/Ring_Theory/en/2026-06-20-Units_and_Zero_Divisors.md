@@ -40,14 +40,14 @@ and similarly $(u'^{-1}u^{-1})(uu')=1$, so $uu'\in A^\times$ and its inverse is 
 ::: Example 2
 In the ring $\mathbb{Z}$, the only integers $u,v$ satisfying $uv=1$ are $u=v=1$ or $u=v=-1$, so $\mathbb{Z}^\times=\{1,-1\}$.
 
-In any division ring $A$, every nonzero element has an inverse by definition, so $A^\times=A\setminus\{0\}$ ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3){: data-lid="8hpq8" data-relation="weak" }). In particular, for a field $\mathbb{K}$, the set $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$ is an abelian group under multiplication.
+In any division ring $A$, every nonzero element has an inverse by definition, so $A^\times=A\setminus\{0\}$ ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 3](/en/math/algebraic_structures/field_of_fractions#def3){: data-lid="8hpq8" data-relation="required" }). In particular, for a field $\mathbb{K}$, the set $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$ is an abelian group under multiplication.
 
 One subtlety is that a unit in a ring need not remain a unit in a given subring. For example, $2\in\mathbb{Q}$ lies in $\mathbb{Q}^\times$, yet in $\mathbb{Z}$ there is no integer $v$ with $2v=1$, so $2\not\in\mathbb{Z}^\times$.
 :::
 
 ## Zero Divisors and Regular Elements
 
-In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="xqcr3" data-relation="weak" }) Let us first refine the definition a little further.
+In the multiplicative structure, the opposite extreme from a unit may be said to be $0$. Extending this, we examine elements that multiply to $0$, namely zero divisors. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="xqcr3" data-relation="required" }) Let us first refine the definition a little further.
 
 ::: Definition 3
 For an element $a\in A$ of a ring $A$, we define the following.

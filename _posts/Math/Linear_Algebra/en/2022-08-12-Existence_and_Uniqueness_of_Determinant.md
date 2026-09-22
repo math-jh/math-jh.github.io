@@ -167,7 +167,7 @@ A matrix $A\in\Mat_n(\mathbb{K})$ is called an *upper triangular matrix* if $A_{
 On the other hand, the entries $A_{ii}$ of a matrix $A$ are called the *diagonal entries*, and if $A_{ij}=0$ whenever $i\neq j$, then $A$ is called a *diagonal matrix*.
 :::
 
-In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4){: data-lid="bogif" data-relation="weak" })
+In particular, every $n\times n$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4){: data-lid="bogif" data-relation="required" })
 
 
 ::: Proposition 8

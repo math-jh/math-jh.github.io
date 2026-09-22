@@ -18,7 +18,7 @@ In [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="xb591" data-re
 
 ## Dynkin Diagram
 
-The structure of a root system $\Phi$ is completely determined by the relations among its simple roots. The Cartan matrix defined in [§Root Systems, ⁋Definition 16](/en/math/lie_theory/root_systems#def16){: data-lid="kpxp1" data-relation="weak" } encodes these relations in matrix form, but the structure of a root system can be grasped more intuitively through visualization.
+The structure of a root system $\Phi$ is completely determined by the relations among its simple roots. The Cartan matrix defined in [§Root Systems, ⁋Definition 16](/en/math/lie_theory/root_systems#def16){: data-lid="kpxp1" data-relation="required" } encodes these relations in matrix form, but the structure of a root system can be grasped more intuitively through visualization.
 
 ::: Definition 1
 For a root system $\Phi$ and a set of simple roots $\Delta=\{\alpha_1,\ldots,\alpha_l\}$, the *Dynkin diagram* of $\Phi$ is the graph defined as follows.

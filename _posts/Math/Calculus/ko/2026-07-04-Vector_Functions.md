@@ -139,7 +139,7 @@ $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}$$
 이다.
 :::
 
-피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10){: data-lid="s9kqi" data-relation="requires-review" }). 이제 시작점에서 잰 호의 길이
+피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10){: data-lid="s9kqi" data-relation="required" reviewed="" }). 이제 시작점에서 잰 호의 길이
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 

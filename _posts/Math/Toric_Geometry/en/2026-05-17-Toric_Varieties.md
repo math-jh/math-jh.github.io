@@ -30,7 +30,7 @@ Given a lattice $N$, a *fan* $\Sigma$ in $N_\mathbb{R}$ is a collection of stron
 2. The intersection of any two cones in $\Sigma$ is a face of each.
 :::
 
-The second condition is what makes the gluing process described above work in [Definition 3](#def3){: data-lid="8wf61" data-relation="required" }; it forces two distinct cones $\tau_1, \tau_2$ to meet only along their common face. The first condition, meanwhile, can be viewed as a kind of closedness, since a fan contains all faces of each of its cones.
+The second condition is what makes the gluing process described above work in [Definition 3](#def3){: data-lid="8wf61" data-relation="forward" }; it forces two distinct cones $\tau_1, \tau_2$ to meet only along their common face. The first condition, meanwhile, can be viewed as a kind of closedness, since a fan contains all faces of each of its cones.
 
 ::: Example 2
 In $N = \mathbb{Z}^2$, we can consider a fan consisting of three 2-dimensional cones $\tau_0, \tau_1, \tau_2$ arranged radially about the origin and covering $\mathbb{R}^2$. For instance, take the three vectors $e_1, e_2, -e_1-e_2$ and consider the three cones they generate.

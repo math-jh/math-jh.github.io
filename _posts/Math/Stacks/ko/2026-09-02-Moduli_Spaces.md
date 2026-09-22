@@ -76,7 +76,7 @@ $$(s\circ f_X)(\id_T)=f_X^\ast s(\id_M)=f_X^\ast\mathcal{U}\cong X=g(\id_T)$$
 이므로 다시 2-Yoneda lemma에 의하여 $g\simeq s\circ f_X$임을 확인할 수 있다. 즉, scheme에서 $\mathcal{M}$으로 가는 모든 morphism은 $s$를 통해 $M$을 거쳐 up to $2$-isomorphism으로 factor through하며, 거꾸로 이러한 조건 $g\simeq s\circ h$을 만족하는 $h:T\rightarrow M$는 반드시 $X\cong h^\ast\mathcal{U}$을 만족하므로 $h=f_X$이다. 즉 $M$의 universal property처럼 보인 것은 사실 $\mathcal{M}$의 universal property에, factorization에 대한 주장 $g\simeq s\circ f_X$를 더한 것이다. 이 factorization은 up to $2$-isomorphism으로 유일하지만, 그 $2$-isomorphism 자체는 $X$가 nontrivial한 automorphism을 갖는 경우에는 유일하지 않을 수 있다.
 
 ::: 예시 3 (Grassmannian)
-[\[스킴\] §점함자, ⁋예시 6](/ko/math/scheme_theory/functor_of_points#ex6){: data-lid="wh0pe" data-relation="weak" }에서 우리는 정수 $0<k<n$에 대하여 contravariant functor $F_{k,n}:\Sch^\op\rightarrow\Set$를
+[\[스킴\] §점함자, ⁋예시 6](/ko/math/scheme_theory/functor_of_points#ex6){: data-lid="wh0pe" data-relation="required" }에서 우리는 정수 $0<k<n$에 대하여 contravariant functor $F_{k,n}:\Sch^\op\rightarrow\Set$를
 
 $$F_{k,n}(T)=\{\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}\mid\mathcal{Q}\text{ is locally free of rank }k\}/{\cong}$$
 
@@ -103,7 +103,7 @@ $$\mathbb{K}^n\twoheadrightarrow Q_x:=x^\ast\mathcal{Q}^{\mathrm{univ}}$$
 을 얻는다. 여기에서 $Q_x$는 $\mathcal{Q}^{\mathrm{univ}}$의 $x$에서의 geometric fiber이고, quotient map $\mathbb{K}^n\twoheadrightarrow Q_x$가 $x$에 대응하는 moduli object이다. 이 quotient는 kernel $S_x\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되고 $\dim S_x=n-k$이므로, $\Gr(k,n)$의 $\mathbb{K}$-point들은 $\mathbb{K}^n$의 $(n-k)$차원 부분공간들을 parametrize한다.
 :::
 
-한편, 일반적인 moduli problem은 fine moduli space를 가지지 않을 수 있으며, scheme 위의 vector bundle들을 분류하는 moduli problem이 정확히 그러한 예시이다. 반면 [예시 3](#ex3){: data-lid="d5y41" data-relation="weak" }의 functor $F_{k,n}$은 rank $k$ vector bundle $\mathcal{Q}$와 함께 quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$를 분류하며, Grassmannian $\Gr(k,n)$에 의하여 representable하다. 즉 vector bundle에 quotient map을 추가 자료로 포함하자 fine moduli space가 생긴 것이다. 이 차이는 quotient map이 automorphism에 가하는 제약에서 비롯된다.
+한편, 일반적인 moduli problem은 fine moduli space를 가지지 않을 수 있으며, scheme 위의 vector bundle들을 분류하는 moduli problem이 정확히 그러한 예시이다. 반면 [예시 3](#ex3){: data-lid="d5y41" data-relation="required" }의 functor $F_{k,n}$은 rank $k$ vector bundle $\mathcal{Q}$와 함께 quotient map $q:\mathcal{O}_T^{\oplus n}\twoheadrightarrow\mathcal{Q}$를 분류하며, Grassmannian $\Gr(k,n)$에 의하여 representable하다. 즉 vector bundle에 quotient map을 추가 자료로 포함하자 fine moduli space가 생긴 것이다. 이 차이는 quotient map이 automorphism에 가하는 제약에서 비롯된다.
 
 Automorphism이 왜 문제가 되는지는 family를 생각하면 직관적으로 드러난다. 한 moduli object의 automorphism을 이용하면 locally constant이지만 base 전체에서는 constant이 아닌 family를 만들 수 있다. Fine moduli space가 존재한다면 두 family의 classifying morphism은 locally 같으므로 전체에서도 같아야 하지만, 하나의 universal family를 같은 morphism을 따라 pullback하여 서로 isomorphic하지 않은 두 family를 얻을 수는 없다.
 

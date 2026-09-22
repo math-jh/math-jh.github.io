@@ -64,7 +64,7 @@ For $G$-representations $V, W$, we define new $G$-representations via the follow
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-In [Definition 3](#def3){: data-lid="qebu2" data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="8vat6" data-relation="weak" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
+In [Definition 3](#def3){: data-lid="qebu2" data-relation="required" } above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5){: data-lid="8vat6" data-relation="required" }) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 

@@ -14,7 +14,7 @@ translated_at: 2026-07-27T19:45:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-27T19:45:02+00:00
 ---
-In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4){: data-lid="vg435" data-relation="required" }), examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2){: data-lid="8omth" data-relation="weak" }, [Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5){: data-lid="ol61e" data-relation="weak" }). We now add the following concepts.
+In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4){: data-lid="vg435" data-relation="required" }), examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2){: data-lid="8omth" data-relation="required" }, [Closed Subschemes, ⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5){: data-lid="ol61e" data-relation="weak" }). We now add the following concepts.
 
 ::: Definition 1
 Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
@@ -108,7 +108,7 @@ $$A\otimes_BA \rightarrow A;\quad a\otimes a'\mapsto aa'.$$
 This ring homomorphism sends $a\otimes 1$ to $a$, so it is surjective, and hence $\Delta$ is a closed embedding. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3){: data-lid="mk5eq" data-relation="required" })
 :::
 
-An example of a non-separated scheme is the line with double origin constructed in [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="vabl4" data-relation="weak" }. For convenience let us call this scheme $X$ and its two charts $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$. Since these are glued along $D(\x_1)$ and $D(\x_2)$ by identifying $\x_1$ and $\x_2$, the intersection of the two charts is
+An example of a non-separated scheme is the line with double origin constructed in [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="vabl4" data-relation="required" }. For convenience let us call this scheme $X$ and its two charts $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$. Since these are glued along $D(\x_1)$ and $D(\x_2)$ by identifying $\x_1$ and $\x_2$, the intersection of the two charts is
 
 $$X_1\cap X_2=X\setminus \{0_1,0_2\}=\Spec\mathbb{K}[t,1/t]$$
 
@@ -330,7 +330,7 @@ For Noetherian schemes,
 5. If $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$ are scheme morphisms, $\psi$ is separated, and $\psi\circ \varphi$ is a proper morphism, then $\varphi$ is also a proper morphism.
 :::
 ::: Proof
-For item 1, a closed embedding is separated by item 1 of [Corollary 8](#cor8){: data-lid="rgpb4" data-relation="required" }, and is a finite morphism so ([§Closed Subschemes, ⁋Proposition 4](/en/math/scheme_theory/closed_subschemes#prop4){: data-lid="zx1p0" data-relation="required" }) finite type. Also a closed embedding is a closed map and stable under base change (proof of [Theorem 6](#thm6){: data-lid="4vyh4" data-relation="weak" }), so universally closed.
+For item 1, a closed embedding is separated by item 1 of [Corollary 8](#cor8){: data-lid="rgpb4" data-relation="required" }, and is a finite morphism so ([§Closed Subschemes, ⁋Proposition 4](/en/math/scheme_theory/closed_subschemes#prop4){: data-lid="zx1p0" data-relation="required" }) finite type. Also a closed embedding is a closed map and stable under base change (proof of [Theorem 6](#thm6){: data-lid="4vyh4" data-relation="required" }), so universally closed.
 
 For item 2, separated is item 2 of [Corollary 8](#cor8){: data-lid="mp4yr" data-relation="required" } and the composition of finite type morphisms is finite type, so we only need to show universally closed. Given $Z' \rightarrow Z$, since $X\times_ZZ'=X\times_Y(Y\times_ZZ')$, the two morphisms
 
@@ -343,7 +343,7 @@ For item 3, separated is item 3 of [Corollary 8](#cor8){: data-lid="nkost" data-
 Finally for item 5. Consider the graph morphism $\Gamma_\varphi:X \rightarrow X\times_ZY$ induced by $\id_X$ and $\varphi$; then $\varphi=\pi_2\circ\Gamma_\varphi$. The square formed by $\Gamma_\varphi$ and $\varphi\times\id_Y: X\times_ZY \rightarrow Y\times_ZY$ is a cartesian square with base $\Delta_{Y/Z}:Y \rightarrow Y\times_ZY$. Indeed for any $T$, matching two morphisms to $Y\times_ZY$ is choosing a pair $\alpha:T \rightarrow X$ and $\beta:T \rightarrow Y$ with $\varphi\circ \alpha=\beta$, and such a pair is determined by $\alpha$ alone. Then since $\psi$ is separated by assumption, $\Delta_{Y/Z}$ is a closed embedding, so $\Gamma_\varphi$ is also a closed embedding, and by item 1 it is proper. Meanwhile $\pi_2:X\times_ZY \rightarrow Y$ is the base change of $\psi\circ \varphi$ along $\psi$, so by item 3 it is proper. Therefore by item 2, $\varphi=\pi_2\circ\Gamma_\varphi$ is proper.
 :::
 
-The assumption that $\psi$ is separated in item 5 is because the reason $\Gamma_\varphi$ becomes a closed embedding in the proof is exactly that $\Delta_{Y/Z}$ is a closed embedding. Without this assumption, the guarantee that $\Gamma_\varphi$ is a closed embedding disappears and the argument does not work. Note that item 5 of [Corollary 8](#cor8){: data-lid="oyrqc" data-relation="required" } did not require such an assumption, so the shapes of the two items differ.
+The assumption that $\psi$ is separated in item 5 is because the reason $\Gamma_\varphi$ becomes a closed embedding in the proof is exactly that $\Delta_{Y/Z}$ is a closed embedding. Without this assumption, the guarantee that $\Gamma_\varphi$ is a closed embedding disappears and the argument does not work. Note that item 5 of [Corollary 8](#cor8){: data-lid="oyrqc" data-relation="weak" } did not require such an assumption, so the shapes of the two items differ.
 
 The first result above is used frequently, so it is useful to examine it in more detail. First, since it is obvious that a closed embedding is a monomorphism, by the first result of the corollary above a closed embedding is a proper monomorphism. Importantly, the converse of this statement also holds: a proper monomorphism is a closed embedding. The proof of this claim requires Zariski's Main Theorem, so we omit its proof here.
 

@@ -105,7 +105,7 @@ $$\mathbf{F}\cdot \mathbf{r}' = t^2 + 2t^2 = 3t^2$$
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\dd{t} = 1$$
 
-이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3){: data-lid="r0jnd" data-relation="requires-review" }으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$을 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
+이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3){: data-lid="r0jnd" data-relation="required" reviewed="" }으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$을 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
 
 $$\mathbf{F}(\mathbf{r}(t))=(t,t),\qquad \mathbf{r}'(t)=(1,1)$$
 
@@ -116,7 +116,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\dd{t} = 1$$
 임을 확인할 수 있다.
 :::
 
-한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6){: data-lid="7o9p2" data-relation="requires-review" }에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4){: data-lid="oq6bx" data-relation="required" reviewed="" }는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 닫힌 곡선에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 닫힌 곡선 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
+한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6){: data-lid="7o9p2" data-relation="weak" reviewed="" }에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4){: data-lid="oq6bx" data-relation="required" reviewed="" }는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 닫힌 곡선에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 닫힌 곡선 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
 
 ::: 예시 6
 원점을 뺀 평면 $\mathbb{R}^2 \setminus \{0\}$에서 정의된 벡터장

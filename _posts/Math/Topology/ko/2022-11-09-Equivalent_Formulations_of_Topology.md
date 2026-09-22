@@ -71,7 +71,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 ## Neighborhood filter
 
-우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-lid="pn9lb" data-relation="weak" }에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
+우리는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6){: data-lid="pn9lb" data-relation="required" }에서 각 점 $x$마다 *neighborhood filter* $\mathcal{N}(x)$를 주면, 이 정보 또한 유일한 방식으로 $X$에 위상구조를 준다는 것을 확인했다. 해당 명제에서 $\mathcal{N}(x)$가 만족해야 할 첫 번째와 두 번째 조건은 filter의 조건이고 세 번째 조건은 $\mathcal{N}(x)$의 각 원소가 $x$를 포함한다는 것이며, 다음 정의 또한 이미 정의하였던 것이지만 나중의 reference를 위해 남겨둔다.
 
 ::: 정의 3
 집합 $X$ 위에서 정의된 *filter*라는 것은 다음의 세 조건을 만족하는 $\mathcal{P}(X)$의 부분집합 $\mathcal{F}$를 뜻한다.

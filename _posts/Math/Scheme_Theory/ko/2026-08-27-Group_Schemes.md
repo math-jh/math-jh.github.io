@@ -27,7 +27,7 @@ $$\mu_G: G\times_SG \rightarrow G,\qquad \iota_G: G \rightarrow G,\qquad \epsilo
 이 함께 주어져서 [\[범주론\] §모노이드 대상, ⁋정의 3](/ko/math/category_theory/monoid_objects#def3){: data-lid="o700d" data-relation="required" }의 모든 조건들을 만족하는 것이다. 두 group scheme $G, H$ 사이의 *homomorphism*은 이 구조를 보존하는 $S$-morphism이다. 
 :::
 
-[정의 1](#def1){: data-lid="69byc" data-relation="weak" }은 group scheme을 $\Sch_{/S}$ 내부의 구조로 규정한다. 한편, [§점함자](/ko/math/scheme_theory/functor_of_points){: data-lid="kz1ly" data-relation="required" }를 사용하면 이를 실제로 group으로 가져올 수 있는데, 임의의 test scheme $T$에 대해 정의된 $T$-point들의 집합 $G(T)$가 group이 되기 때문이다. 
+[정의 1](#def1){: data-lid="69byc" data-relation="required" }은 group scheme을 $\Sch_{/S}$ 내부의 구조로 규정한다. 한편, [§점함자](/ko/math/scheme_theory/functor_of_points){: data-lid="kz1ly" data-relation="required" }를 사용하면 이를 실제로 group으로 가져올 수 있는데, 임의의 test scheme $T$에 대해 정의된 $T$-point들의 집합 $G(T)$가 group이 되기 때문이다. 
 
 ::: 명제 2
 $S$-scheme $G$가 group scheme이 되는 것은 적당한 functor $\widetilde{h}_G:(\Sch_{/S})^\op\rightarrow\Grp$가 주어져서 forgetful functor $U:\Grp\rightarrow\Set$과의 합성이 $G$의 functor of points $h_G$와 같아지는 것과 동치이다. 뿐만 아니라, 두 group scheme $G,H$ 사이의 $S$-morphism $\varphi:G\rightarrow H$가 group scheme homomorphism인 것과 각각의 $T$에 대하여 $\varphi_T:G(T)\rightarrow H(T)$가 group homomorphism인 것은 동치이다.

@@ -62,7 +62,7 @@ Transition functions $\{g_{ij}\}$는 다음의 *cocycle condition*을 만족한�
 
 따라서 [정의 1](#def1){: data-lid="pmurg" data-relation="required" reviewed="" }의 둘째 조건은 line bundle $\mathcal{L}$이 적당한 열린집합 $U \subseteq X$로 제한했을 때 trivial line bundle과 isomorphic한 것을 의미한다.
 
-[명제 2](#prop2){: data-lid="iwmvs" data-relation="required" reviewed="" }는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-lid="gyqrv" data-relation="weak" reviewed="" }) 구체적으로, 우리는 line bundle $\mathcal{L}$이 주어졌을 때, 이 line bundle의 section sheaf를
+[명제 2](#prop2){: data-lid="iwmvs" data-relation="weak" reviewed="" }는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-lid="gyqrv" data-relation="weak" reviewed="" }) 구체적으로, 우리는 line bundle $\mathcal{L}$이 주어졌을 때, 이 line bundle의 section sheaf를
 
 $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
@@ -127,7 +127,7 @@ $\mathcal{L} \otimes \mathcal{L}^\vee$의 transition functions은 $g_{ij} \cdot 
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16){: data-lid="pav90" data-relation="required" reviewed="" }로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring $A$ 위의 algebra로 만들며, $\pi$의 section들이 이루는 $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$는 trivialization $\phi_i$에 의해 $A$와 동일시되므로 rank $1$의 free module이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1){: data-lid="o9gf5" data-relation="weak" reviewed="" }) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3){: data-lid="3dh2h" data-relation="weak" reviewed="" }의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5){: data-lid="c8t5o" data-relation="weak" reviewed="" }을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
+는 affine variety 사이의 함수이고 따라서 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16){: data-lid="pav90" data-relation="required" reviewed="" }로부터 coordinate ring 사이의 ring homomorphism이 유도된다. 이 ring homomorphism은 $\pi^{-1}(U_i)$의 coordinate ring을 $U_i$의 coordinate ring $A$ 위의 algebra로 만들며, $\pi$의 section들이 이루는 $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$는 trivialization $\phi_i$에 의해 $A$와 동일시되므로 rank $1$의 free module이다. $U_i$의 임의의 열린집합에서도 $\mathcal{L}$은 trivial하므로, 우리는 line bundle은 affine-local하게는 coordinate ring 위의 invertible module이 된다는 것을 확인할 수 있다. ([\[가환대수학\] §분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1){: data-lid="o9gf5" data-relation="required" reviewed="" }) 그럼 이 때 line bundle들 위에서 정의되는 연산 $\otimes$와 $\vee$는 각각 [\[가환대수학\] §분수아이디얼, ⁋정리 3](/ko/math/commutative_algebra/fractional_ideals#thm3){: data-lid="3dh2h" data-relation="weak" reviewed="" }의 연산으로부터 오는 것이며, 따라서 [\[가환대수학\] §분수아이디얼, ⁋정의 5](/ko/math/commutative_algebra/fractional_ideals#def5){: data-lid="c8t5o" data-relation="weak" reviewed="" }을 따라 다음의 이름을 붙이는 것이 어색하지 않다.
 
 ::: 정의 9
 Variety $X$의 *Picard group* $\Pic(X)$는 $X$ 위의 line bundle들의 isomorphism class들의 집합에 tensor product를 연산으로 하여 얻어진 group이다. 항등원은 trivial bundle $\mathcal{O}_X$이고, $\mathcal{L}$의 inverse는 $\mathcal{L}^\vee$이다.
@@ -331,7 +331,7 @@ $\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \o
 :::
 
 ::: 예시 22
-Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $\mathbb{P}^1$이 $\mathbb{P}^n$에 직선으로 embed된 경우 $C = \mathbb{P}^1$에 대해 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12){: data-lid="mza3m" data-relation="required" reviewed="" }에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $\mathbb{P}^1$이 $\mathbb{P}^n$에 직선으로 embed된 경우 $C = \mathbb{P}^1$에 대해 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12){: data-lid="mza3m" data-relation="weak" reviewed="" }에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
 :::
 
 ## Vector Bundle

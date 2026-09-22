@@ -58,7 +58,7 @@ Ring $A$에 대하여, ideal $\mathfrak{a}\subseteq A[\x]$이 주어졌다 하�
 
 $$A\overset{\phi}{\rightarrow}E\hookrightarrow E[\x]$$
 
-으로 정의된 ring homomorphism이 $E[\x]$에 $A$-algebra 구조를 주는 것을 안다. 따라서 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="77068" data-relation="requires-review" }에 의해 유일한 $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$가 정의되며, 구체적으로 이는 임의의 다항식
+으로 정의된 ring homomorphism이 $E[\x]$에 $A$-algebra 구조를 주는 것을 안다. 따라서 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="77068" data-relation="required" reviewed="" }에 의해 유일한 $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$가 정의되며, 구체적으로 이는 임의의 다항식
 
 $$p(\x)=a_n\x^n+\cdots+a_0\in A[\x]$$
 
@@ -95,7 +95,7 @@ Ring homomorphism $\phi$가 finite인 것은 $\phi$가 integral homomorphism of 
 Ring homomorphism $\phi: A \rightarrow E$와 $E$의 원소 $x$가 주어졌다 하자. 그럼 $x$가 $A$에 대해 integral인 것은, 적당한 $E$-module $N$과, $A$-module로서 finitely generated인 $N$의 $A$-submodule $M$이 존재하여, $M$은 $E$의 어떠한 nonzero element에 대해서도 annihilate되지 않으며 포함관계 $xM\subseteq M$이 성립하는 것과 동치이다. 
 :::
 ::: 증명
-우선 $x$가 $A$에 대하여 integral이라 하자. 그럼 $N=E$로 잡으면 $M=A[x]$는 [명제 2](#prop2){: data-lid="e77qo" data-relation="required" reviewed="" }에 의하여 finitely generated인 것을 안다. 반대방향은 [명제 2](#prop2){: data-lid="kpb02" data-relation="requires-review" }의 증명과 마찬가지로 $x$를 곱하는 것을 $M$의 endomorphism으로 본 후 [정리 1](#thm1){: data-lid="cplj4" data-relation="required" reviewed="" }을 적용하면 된다.
+우선 $x$가 $A$에 대하여 integral이라 하자. 그럼 $N=E$로 잡으면 $M=A[x]$는 [명제 2](#prop2){: data-lid="e77qo" data-relation="required" reviewed="" }에 의하여 finitely generated인 것을 안다. 반대방향은 [명제 2](#prop2){: data-lid="kpb02" data-relation="weak" reviewed="" }의 증명과 마찬가지로 $x$를 곱하는 것을 $M$의 endomorphism으로 본 후 [정리 1](#thm1){: data-lid="cplj4" data-relation="required" reviewed="" }을 적용하면 된다.
 :::
 
 다음 정리는 기대하는 것이 당연한 성질이지만, [보조정리 5](#lem5){: data-lid="wu8lk" data-relation="required" reviewed="" } 없이 이를 정의로부터 바로 증명하는 것은 거의 불가능하다. 

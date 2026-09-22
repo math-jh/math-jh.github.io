@@ -146,7 +146,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 위상공간 $X$와 그 위에 정의된 filter $\mathcal{F}$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3){: data-lid="55frh" data-relation="required" }) 그럼 $\mathcal{F}$가 $x\in X$로 *수렴<sub>converge</sub>*한다는 것은 $\mathcal{N}(x)\subseteq \mathcal{F}$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter){: data-lid="twg84" data-relation="required" }) 이 때, $x$를 $\mathcal{F}$의 *limit point<sub>극한점</sub>*라 부른다. 
 :::
 
-[정의 13](#def13){: data-lid="y6olx" data-relation="required" }는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
+[정의 13](#def13){: data-lid="y6olx" data-relation="weak" }는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
 
 ::: 정의 14
 집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $Y$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7){: data-lid="jrvu7" data-relation="required" })

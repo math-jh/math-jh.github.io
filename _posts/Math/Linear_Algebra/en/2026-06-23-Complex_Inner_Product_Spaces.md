@@ -83,7 +83,7 @@ From this, the triangle inequality follows. Applying $\Real\langle v,w\rangle\le
 
 $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\rVert^2=(\lVert v\rVert+\lVert w\rVert)^2$$
 
-and thus $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$. That $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$ follows immediately from $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$, so $\lVert-\rVert$ is indeed a norm. ([§Inner Product Spaces, ⁋Definition 2](/en/math/linear_algebra/inner_product_spaces#def2){: data-lid="mkgoq" data-relation="weak" })
+and thus $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$. That $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$ follows immediately from $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$, so $\lVert-\rVert$ is indeed a norm. ([§Inner Product Spaces, ⁋Definition 2](/en/math/linear_algebra/inner_product_spaces#def2){: data-lid="mkgoq" data-relation="required" })
 
 ## Orthonormal basis
 

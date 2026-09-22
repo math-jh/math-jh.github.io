@@ -171,7 +171,7 @@ $$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in \Mat_{n_k}(A)\right\}\cong\prod_{k=
 
 ## 중국인의 나머지정리와의 연결
 
-한편, 우리는 [정리 5](#thm5){: data-lid="ibt51" data-relation="required" } 이전에 이미 주어진 ring을 direct product로 분해하는 방법을 살펴본 적이 있다. ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-lid="fv0uf" data-relation="weak" }) 이 두 결과는 독립적인 것이 아니며, 우리는 글의 남은 부분에서 이들 둘의 관계를 살펴본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것으로, 다음 정리에서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism 
+한편, 우리는 [정리 5](#thm5){: data-lid="ibt51" data-relation="required" } 이전에 이미 주어진 ring을 direct product로 분해하는 방법을 살펴본 적이 있다. ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-lid="fv0uf" data-relation="required" }) 이 두 결과는 독립적인 것이 아니며, 우리는 글의 남은 부분에서 이들 둘의 관계를 살펴본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것으로, 다음 정리에서 $\pi:A\rightarrow\prod_{i=1}^n A/\mathfrak{a}_i$는 각 quotient로의 projection이 유도하는 morphism 
 
 $$x\mapsto (x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$$
 

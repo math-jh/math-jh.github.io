@@ -38,7 +38,7 @@ $$LL^\ast=L^\ast L$$
 이 성립하는 것이다.
 :::
 
-그럼 특히 self-adjoint operator는 $LL^\ast=L^2=L^\ast L$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6){: data-lid="5btee" data-relation="weak" }) 뿐만 아니라, $L^\ast=-L$을 만족하는 *skew-Hermitian* operator도 $LL^\ast=-L^2=L^\ast L$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
+그럼 특히 self-adjoint operator는 $LL^\ast=L^2=L^\ast L$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6){: data-lid="5btee" data-relation="required" }) 뿐만 아니라, $L^\ast=-L$을 만족하는 *skew-Hermitian* operator도 $LL^\ast=-L^2=L^\ast L$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
 
 ## Schur 분해
 

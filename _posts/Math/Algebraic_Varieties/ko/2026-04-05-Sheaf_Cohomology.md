@@ -87,7 +87,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 
 ## Čech Cohomology
 
-[정의 1](#def1){: data-lid="tmrot" data-relation="required" reviewed="" }는 sheaf cohomology의 정의로서는 엄밀하지만, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 따라서 실제 계산에서는 다른 관점에서 cohomology를 정의하는 Čech approach를 사용한다.
+[정의 1](#def1){: data-lid="tmrot" data-relation="weak" reviewed="" }는 sheaf cohomology의 정의로서는 엄밀하지만, injective resolution을 명시적으로 구성하는 것은 일반적으로 매우 어렵다. 따라서 실제 계산에서는 다른 관점에서 cohomology를 정의하는 Čech approach를 사용한다.
 
 직관적으로 Čech cohomology $\check{H}^i(X, \mathcal{F})$는 국소적인 정보의 gluing의 실패를 측정하는 도구이다. 즉, $\check{H}^0(X, \mathcal{F})$는 정확하게 global section space이며, $\check{H}^1(X, \mathcal{F})$는 local section들을 붙여서 global section을 얻어내는 과정이 얼마나 실패하는지를 알려준다. 이를 엄밀하게 정의하기 위해 다음부터 시작한다.
 

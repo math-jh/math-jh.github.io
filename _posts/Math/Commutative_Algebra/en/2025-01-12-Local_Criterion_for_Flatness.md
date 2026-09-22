@@ -16,7 +16,7 @@ translated_at: 2026-09-02T03:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-09-02T03:45:04+00:00
 ---
-In the previous post, we looked at several criteria for deciding when an $A$-module $M$ is flat; in this post, we examine a criterion for deciding flatness specifically over a Noetherian local ring $(A, \mathfrak{m})$. The following theorem shows that, for a finitely generated module over a local Noetherian $A$-algebra $(E, \mathfrak{n})$ satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$, it suffices to check the condition of [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="weak" } for the maximal ideal alone.
+In the previous post, we looked at several criteria for deciding when an $A$-module $M$ is flat; in this post, we examine a criterion for deciding flatness specifically over a Noetherian local ring $(A, \mathfrak{m})$. The following theorem shows that, for a finitely generated module over a local Noetherian $A$-algebra $(E, \mathfrak{n})$ satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$, it suffices to check the condition of [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="required" } for the maximal ideal alone.
 
 ::: Theorem 1
 Fix a Noetherian local ring $(A, \mathfrak{m})$, and suppose that $(E, \mathfrak{n})$ is a local Noetherian $A$-algebra satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$. Then for a finitely generated $E$-module $M$, $M$ is a flat $A$-module if and only if $\Tor_1^A(A/\mathfrak{m}, M)=0$.

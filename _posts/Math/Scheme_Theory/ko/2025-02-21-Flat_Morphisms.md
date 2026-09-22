@@ -84,7 +84,7 @@ $$K=\ker(M'\otimes_AB \longrightarrow M\otimes_AB)$$
 ::: 명제 3
 Flat morphism은 base change와 합성에 대하여 닫혀 있다. 즉 다음이 성립한다.
 
-1. $\varphi: X \rightarrow Y$가 flat이고 $Z \rightarrow Y$가 임의의 morphism이면, base change $X \times_Y Z \rightarrow Z$는 flat이다. ([§올곱](/ko/math/scheme_theory/fiber_products){: data-lid="ml859" data-relation="weak" })
+1. $\varphi: X \rightarrow Y$가 flat이고 $Z \rightarrow Y$가 임의의 morphism이면, base change $X \times_Y Z \rightarrow Z$는 flat이다. ([§올곱](/ko/math/scheme_theory/fiber_products){: data-lid="ml859" data-relation="required" })
 2. $\varphi: X \rightarrow Y$와 $\psi: Y \rightarrow Z$가 모두 flat이면, 합성 $\psi \circ \varphi: X \rightarrow Z$도 flat이다.
 :::
 ::: 증명
@@ -204,7 +204,7 @@ $$\phi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \phi^{-1}(\mathbb
 
 이 된다. 즉, $\Spec\phi$의 target인 affine line의 원점을 제외한 모든 점은 정확히 $X$의 같은 점을 fiber의 유일한 점으로 가지지만, 원점에서의 fiber는 $X$의 원점과, 원점 위에 있는 한 점의 두 개의 점을 가진다. 즉, fiber의 차원은 어디에서나 $0$이지만, fiber를 이루는 점의 개수가 $1$에서 $2$로 뛴다.
 
-이것이 flat이 아닌 것은 $(0,1)\neq 0$이면서 $t\cdot (0,1)=0$이므로 $t$가 $B$에서 zerodivisor이기 때문이다. ([명제 5](#prop5){: data-lid="35ij5" data-relation="required" }) $X$가 reduced이므로 [따름정리 6](#cor6){: data-lid="k7pfj" data-relation="weak" }으로도 같은 결론을 얻는데, 두 성분 가운데 isolated point가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 못하기 때문이다.
+이것이 flat이 아닌 것은 $(0,1)\neq 0$이면서 $t\cdot (0,1)=0$이므로 $t$가 $B$에서 zerodivisor이기 때문이다. ([명제 5](#prop5){: data-lid="35ij5" data-relation="required" }) $X$가 reduced이므로 [따름정리 6](#cor6){: data-lid="k7pfj" data-relation="required" }으로도 같은 결론을 얻는데, 두 성분 가운데 isolated point가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 못하기 때문이다.
 :::
 
 마지막 예시는 갇히는 것이 embedded point인 경우로 ([§스킴의 대수구조, ⁋정의 9](/ko/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" data-relation="required" }), 이번에는 차원도 점의 개수도 변하지 않지만, fiber의 length가 달라진다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" data-relation="required" })
@@ -218,7 +218,7 @@ $$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
 
 이 morphism의 fiber는 $t=a$ 위에서 $\mathbb{K}[\x]/(\x^2, a\x)$이다. 만일 $a\neq 0$이면 $a$가 unit이라 $\x=0$이 강제되므로 이 fiber는 $\mathbb{K}$가 되지만, $a=0$이면 $\mathbb{K}[\x]/(\x^2)$이 되어 길이 $2$의 한 점이 된다. 위상적으로는 $\Spec \mathbb{K}$도, $\Spec \mathbb{K}[\x]/(\x^2)$도 점 하나이므로 fiber의 차원도 개수도 그대로이지만, 여전히 length는 $1$에서 $2$로 뛴다.
 
-이 morphism은 실제로 $\x\neq 0$이면서 $t\x=0$이므로 [명제 5](#prop5){: data-lid="4avxm" data-relation="required" }에 의하여 flat이 아니다. 다소 주의할 것은 이로부터 따라나오는 판정법인 [따름정리 6](#cor6){: data-lid="au90n" data-relation="weak" }은 이 상황에서 적용할 수 없다는 것으로, 이는 $X$가 reduced가 아니기 때문이다. 실제로 $X$의 reduced structure인 $t$-축은 base와 isomorphic하여 flat이므로, 이 실패는 scheme 구조를 보아야만 드러난다.
+이 morphism은 실제로 $\x\neq 0$이면서 $t\x=0$이므로 [명제 5](#prop5){: data-lid="4avxm" data-relation="required" }에 의하여 flat이 아니다. 다소 주의할 것은 이로부터 따라나오는 판정법인 [따름정리 6](#cor6){: data-lid="au90n" data-relation="required" }은 이 상황에서 적용할 수 없다는 것으로, 이는 $X$가 reduced가 아니기 때문이다. 실제로 $X$의 reduced structure인 $t$-축은 base와 isomorphic하여 flat이므로, 이 실패는 scheme 구조를 보아야만 드러난다.
 :::
 
 이 세 경우를 보면 흥미로운 것이 두 가지 있다. 우선, 우리는 서로 다른 세 가지 예시를 살펴보았으나 본질적으로는 [예시 10](#ex10){: data-lid="8etoe" data-relation="required" }의 length가 [예시 9](#ex9){: data-lid="objc9" data-relation="required" }의 실패까지 포함한다. 뿐만 아니라, 이를 Hilbert polynomial로 한 층 올리면 도입에서 본 예시까지 함께 포괄된다. ([\[대수다양체\] §베주 정리, ⁋명제 3](/ko/math/algebraic_varieties/bezout_theorem#prop3){: data-lid="ilhpc" data-relation="weak" }) 즉, 세 실패는 모두 하나의 다항식이 뛴 것이며, 실제로 Noetherian integral scheme 위의 projective family에 대하여 flat인 것과 fiber의 Hilbert polynomial이 일정한 것은 서로 동치이다. 이 예시들이 알려주는 흥미로운 점 중 다른 하나는 뛰는 방향으로, 세 경우 모두에서 값은 일반적인 열린집합에서는 작다가, flatness가 깨지는 곳으로 가면서 커졌을 뿐, 그 반대로 움직인 적이 없다. 이 글의 말미에서 우리는 이것이 우연이 아니라는 것을 살펴보게 될 것이다. 
@@ -359,7 +359,7 @@ $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\math
 한편 $X$와 $Y$가 locally Noetherian이므로 $\mathcal{O}_{X,x}$와 $\mathcal{O}_{Y,y}$는 Noetherian local ring이고, [보조정리 2](#lem2){: data-lid="0xbu2" data-relation="required" }에 의하여 $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$는 flat local homomorphism이다. 따라서 [\[가환대수학\] §매개계, ⁋정리 9](/ko/math/commutative_algebra/system_of_parameters#thm9){: data-lid="jw98o" data-relation="required" }를 적용하면 원하는 등식을 얻는다.
 :::
 
-만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $\varphi$의 image에 속하는 closed point $y$에 대하여 [명제 17](#prop17){: data-lid="nluh4" data-relation="weak" }는 익숙한 형태
+만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $\varphi$의 image에 속하는 closed point $y$에 대하여 [명제 17](#prop17){: data-lid="nluh4" data-relation="required" }는 익숙한 형태
 
 $$\dim X_y=\dim X-\dim Y$$
 
@@ -436,7 +436,7 @@ $\mu$가 무엇을 재는지는 family의 언어로 옮기면 분명해진다. M
 
 $$\mu(\mathfrak{p})=\sum_{x\in X_\mathfrak{p}}\length(\mathcal{O}_{X_\mathfrak{p},x})\cdot[\kappa(x):\kappa(\mathfrak{p})]$$
 
-가 성립한다. 곧 $\mu$는 fiber의 length에 residue field의 degree까지 실어서 잰 것이며, 만일 fiber의 점이 모두 $\kappa(\mathfrak{p})$-점이면 length 그 자체가 된다. 즉, [예시 9](#ex9){: data-lid="kuzjj" data-relation="weak" }와 [예시 10](#ex10){: data-lid="gq6r8" data-relation="weak" }에서 살펴본 flatness의 실패가 모두 [명제 22](#prop22){: data-lid="2puz4" data-relation="forward" }의 사례가 된다. 만일 이를 Hilbert polynomial까지 올리면 이 글의 도입에서 본 예시 또한 이 프레이밍을 통해 설명할 수 있으나, 우리는 아직 scheme 버전의 sheaf cohomology도 다루지 않았으므로 이는 우선 넘어가기로 한다. 
+가 성립한다. 곧 $\mu$는 fiber의 length에 residue field의 degree까지 실어서 잰 것이며, 만일 fiber의 점이 모두 $\kappa(\mathfrak{p})$-점이면 length 그 자체가 된다. 즉, [예시 9](#ex9){: data-lid="kuzjj" data-relation="weak" }와 [예시 10](#ex10){: data-lid="gq6r8" data-relation="weak" }에서 살펴본 flatness의 실패가 모두 [명제 22](#prop22){: data-lid="2puz4" data-relation="required" }의 사례가 된다. 만일 이를 Hilbert polynomial까지 올리면 이 글의 도입에서 본 예시 또한 이 프레이밍을 통해 설명할 수 있으나, 우리는 아직 scheme 버전의 sheaf cohomology도 다루지 않았으므로 이는 우선 넘어가기로 한다. 
 
 한편 [명제 22](#prop22){: data-lid="0w1z1" data-relation="required" }의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 finite presentation 
 

@@ -358,7 +358,7 @@ $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 즉 $1324$ 아래에는 $1234$만 있고, 길이가 같은 $1423$과 $2314$는 서로 비교 불가능하며 둘 다 $1324$ 위·$2413$ 아래에 놓인다. 이 Hasse diagram은 두 갈래로 갈라졌다 다시 만나는 마름모꼴로, $\Gr(2,4)$의 Schubert class들 사이의 포함관계를 그대로 보여준다. 가령 Schubert variety $X_{2413}$은 $X_{1423}^\circ$, $X_{2314}^\circ$, $X_{1324}^\circ$, $X_{1234}^\circ$를 모두 포함하는 차원 $3$의 subvariety이다.
 
-이 순서는 [예시 15](#ex15){: data-lid="e1xmy" data-relation="weak" }의 jump set으로 곧장 읽힌다. $w$를 그 jump set $\{w(1)<w(2)\}$으로 보면 Bruhat order는 성분별 순서, 즉 $v\le w\iff v(1)\le w(1)$이고 $v(2)\le w(2)$이다. 그래서 두 maximal chain은 $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$와 $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$이고, $1423\leftrightarrow\{1,4\}$와 $2314\leftrightarrow\{2,3\}$이 비교 불가능한 것은 $4\not\le3$이면서 $2\not\le1$이기 때문이다. 기하적으로 이는 [예시 15](#ex15){: data-lid="hhxb0" data-relation="required" }에서 살펴봤듯, 이 두 원소에 의해 결정되는 행렬들이
+이 순서는 [예시 15](#ex15){: data-lid="e1xmy" data-relation="required" }의 jump set으로 곧장 읽힌다. $w$를 그 jump set $\{w(1)<w(2)\}$으로 보면 Bruhat order는 성분별 순서, 즉 $v\le w\iff v(1)\le w(1)$이고 $v(2)\le w(2)$이다. 그래서 두 maximal chain은 $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$와 $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$이고, $1423\leftrightarrow\{1,4\}$와 $2314\leftrightarrow\{2,3\}$이 비교 불가능한 것은 $4\not\le3$이면서 $2\not\le1$이기 때문이다. 기하적으로 이는 [예시 15](#ex15){: data-lid="hhxb0" data-relation="required" }에서 살펴봤듯, 이 두 원소에 의해 결정되는 행렬들이
 
 $$\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},\quad \begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix}$$
 

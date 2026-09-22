@@ -56,7 +56,7 @@ $$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarro
   
 More precisely, the maps $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ and $A\mapsto L_A$ (the definition from [Example 1](#ex1){: data-lid="ol3cg" data-relation="required" }) are bijections that are inverses of each other.
 
-Since the set on the left is precisely $\Hom(\mathbb{K}^n, \mathbb{K}^m)$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3){: data-lid="e4c78" data-relation="weak" } below, we call this result the fundamental theorem of linear algebra.
+Since the set on the left is precisely $\Hom(\mathbb{K}^n, \mathbb{K}^m)$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3){: data-lid="e4c78" data-relation="forward" } below, we call this result the fundamental theorem of linear algebra.
 
 ::: Theorem 2
 $$\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$$
@@ -126,7 +126,7 @@ Now comparing equations (2) and (1), one can verify that for any $v\in V$, the c
 
 $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
-Then the general version of [Theorem 2](#thm2){: data-lid="ty7pq" data-relation="weak" } is given by the following theorem.
+Then the general version of [Theorem 2](#thm2){: data-lid="ty7pq" data-relation="required" } is given by the following theorem.
 
 ::: Theorem 4
 $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
@@ -171,7 +171,7 @@ Now, grouping the above expression by the $z$'s, we get
 
 $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots+\left(\sum_{l=1}^m\alpha_{l,i}\beta_{k,l}\right)z_k$$
 
-As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3){: data-lid="of699" data-relation="weak" }, this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
+As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3){: data-lid="of699" data-relation="required" }, this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
 :::
 
 [Theorem 4](#thm4){: data-lid="pbgw2" data-relation="required" } above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="3646q" data-relation="weak" }. The following corollary is also a consequence of the fundamental theorem.
@@ -187,7 +187,7 @@ In this way, most of the concepts defined in [§Matrices](/en/math/linear_algebr
 
 ## Change-of-Basis Matrices
 
-To summarize [Theorem 4](#thm4){: data-lid="ganzk" data-relation="required" } in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B}, \mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5){: data-lid="5ds63" data-relation="weak" }.
+To summarize [Theorem 4](#thm4){: data-lid="ganzk" data-relation="required" } in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B}, \mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5){: data-lid="5ds63" data-relation="required" }.
 
 ::: Definition 7
 For any finite-dimensional $\mathbb{K}$-vector space $V$ and two bases $\mathcal{B},\mathcal{B}'$ of $V$, the *change-of-basis matrix* from $\mathcal{B}$ to $\mathcal{B}'$ is

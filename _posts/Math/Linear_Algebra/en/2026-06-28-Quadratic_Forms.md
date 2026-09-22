@@ -139,7 +139,7 @@ For a symmetric bilinear form $\langle-,-\rangle$ defined on an $\mathbb{R}$-vec
 ::: Proof
 For the basis $\{e_1,\ldots, e_n\}$ of [Proposition 2](#prop2){: data-lid="qc1qa" data-relation="required" }, if $v=\sum a_ie_i$ then $Q(v)=\sum_i\langle e_i,e_i\rangle a_i^2$. If some $\langle e_i,e_i\rangle$ is $-1$ or $0$, then for $v=e_i$ we have $Q(e_i)\leq 0$, so it is not positive definite. Conversely, if all $\langle e_i,e_i\rangle$ are $1$, i.e., the signature is $(n,0,0)$, then for any $0\neq v$ we have $Q(v)=\sum a_i^2>0$. Thus 1 and 2 are equivalent.
 
-On the other hand, the definition of an inner product is a symmetric bilinear form such that $\langle v,v\rangle\geq 0$ for all $v$ and equality holds only when $v=0$ ([§Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1){: data-lid="607wh" data-relation="weak" }), which is exactly the condition of being positive definite. Thus 1 and 3 are equivalent.
+On the other hand, the definition of an inner product is a symmetric bilinear form such that $\langle v,v\rangle\geq 0$ for all $v$ and equality holds only when $v=0$ ([§Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1){: data-lid="607wh" data-relation="required" }), which is exactly the condition of being positive definite. Thus 1 and 3 are equivalent.
 :::
 
 That is, an inner product is nothing but a symmetric bilinear form with signature $(n,0,0)$, and from the perspective of Sylvester's law, an inner product space corresponds to the most special point among all possible signatures.

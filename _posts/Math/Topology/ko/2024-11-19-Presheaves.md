@@ -66,7 +66,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 - 특별히 열린집합들 $U\subseteq V$와 $s\in \mathcal{F}(V)$에 대하여, $\rho_{VU}(s)\in \mathcal{F}(U)$를 간단히 $s\vert_U$로 표기한다.
 :::
 
-한편 위의 [정의 2](#def2){: data-lid="yvxpx" data-relation="required" }에서, $\Set$은 적절한 category, 예를 들어 $\Ab$와 같은 category로 바꿀 수도 있다. 가령 [예시 3](#ex3){: data-lid="tjnzz" data-relation="weak" }에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1){: data-lid="9yqhp" data-relation="weak" }의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
+한편 위의 [정의 2](#def2){: data-lid="yvxpx" data-relation="required" }에서, $\Set$은 적절한 category, 예를 들어 $\Ab$와 같은 category로 바꿀 수도 있다. 가령 [예시 3](#ex3){: data-lid="tjnzz" data-relation="weak" }에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1){: data-lid="9yqhp" data-relation="required" }의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
 ## 준층의 예시들
 

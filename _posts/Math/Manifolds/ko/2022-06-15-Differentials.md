@@ -63,7 +63,7 @@ $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으
 따라서, manifold들과 smooth function들은 category $\Man$을 이룬다.
 
 ::: remark 참고 {#rmk}
-동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}_1$, $\mathcal{A}_2$를 각각 single chart들 $(\mathbb{R},\id_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4){: data-lid="7fwon" data-relation="weak" })  
+동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}_1$, $\mathcal{A}_2$를 각각 single chart들 $(\mathbb{R},\id_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4){: data-lid="7fwon" data-relation="required" })  
 편의상 $(M,\mathcal{A}_1)$을 $M_1$, $(M,\mathcal{A}_2)$를 $M_2$로 이름붙이고, $\varphi=\id_\mathbb{R}$, 그리고 $\psi=(x\mapsto x^3)$이라 하자. 
 
 이들 두 manifold $M_1, M_2$는 서로 diffeomorphic하다. $M_1$에서 $M_2$로의 함수 $F$를 $x\mapsto x^{1/3}$으로 정의하자. 그럼 자명하게 $F^{-1}$은 $y\mapsto y^3$으로 정의된다. 정의에 의해 $F$는 $C^\infty$이다. 임의의 점 $p\in M_1$에 대하여, $M_1$과 $M_2$ 각각에 정의된 두 coordinate system $(\mathbb{R},\varphi)$와 $(\mathbb{R},\psi)$을 잡으면 $p\in\mathbb{R}$,  $F(\mathbb{R})\subseteq\mathbb{R}$을 만족하는 것은 자명하고, 또 이들이

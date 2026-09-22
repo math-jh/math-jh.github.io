@@ -17,7 +17,7 @@ weight: 17
 
 위상공간 위에서 우리가 다루려는 대상은 흔히 국소적으로 먼저 주어진다. 각 점 근방에서 정의된 연속함수, 국소적으로 얻어진 절단, 좌표조각마다 놓인 구성이 그러하다. 이러한 국소적 자료를 하나의 대역적 대상으로 이어 붙이려면, 각 조각을 자기 정의역 안에서 부드럽게 소멸시키면서 전체에 걸쳐 값이 겹치지 않게 배분하는 장치가 필요하다. 이 역할을 하는 표준적인 도구가 *partition of unity*이며, 그것이 자연스럽게 존재하는 무대가 바로 이 글에서 다루는 paracompact Hausdorff 공간이다.
 
-Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼 것을 요구하지만 ([§옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1){: data-lid="bobvw" data-relation="required" }), 우리가 실제로 다루는 공간의 대부분은 compact가 아니다. Paracompactness는 유한성 대신 국소유한성을 요구하여 compactness를 알맞게 약화시킨 조건으로, compact 공간에서 성립하던 여러 논증을 국소적으로 되살릴 수 있게 해 준다. 우리는 이 개념을 도입하고, paracompact Hausdorff 공간이 normal임을 보인 뒤, 이를 발판으로 임의의 열린 덮개에 종속된 partition of unity를 언제나 구성할 수 있음을 증명한다.
+Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼 것을 요구하지만 ([§옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1){: data-lid="bobvw" data-relation="weak" }), 우리가 실제로 다루는 공간의 대부분은 compact가 아니다. Paracompactness는 유한성 대신 국소유한성을 요구하여 compactness를 알맞게 약화시킨 조건으로, compact 공간에서 성립하던 여러 논증을 국소적으로 되살릴 수 있게 해 준다. 우리는 이 개념을 도입하고, paracompact Hausdorff 공간이 normal임을 보인 뒤, 이를 발판으로 임의의 열린 덮개에 종속된 partition of unity를 언제나 구성할 수 있음을 증명한다.
 
 ## Paracompact 공간
 
@@ -111,7 +111,7 @@ Family $(U_b)_{b\in B}$에 열린집합 $X\setminus B$를 더한 open covering�
 $V=\bigcup\mathcal{D}$는 $B$를 포함하는 열린집합이며, $\mathcal{D}$가 locally finite이므로 [보조정리 5](#lem5){: data-lid="qe6og" data-relation="required" }에 의하여 $\cl(V)=\bigcup_{C\in\mathcal{D}}\cl(C)$이고 이는 $A$와 서로소이다. 따라서 $W=X\setminus\cl(V)$은 $A$를 품는 열린집합으로 $V\supseteq B$와 서로소이다. 그럼 $V$와 $W$가 각각 $B$와 $A$를 담는 서로소인 열린집합이므로 $X$는 normal이다.
 :::
 
-[정리 7](#thm7){: data-lid="jeqiu" data-relation="weak" }은 compact Hausdorff space가 normal이라는 사실의 진정한 일반화이다. 실제로 [명제 3](#prop3){: data-lid="jlj3w" data-relation="weak" }에 의하여 compact space는 paracompact이므로, compact Hausdorff space가 normal이라는 결과는 [정리 7](#thm7){: data-lid="c7mdl" data-relation="weak" }의 특수한 경우로 다시 얻어진다. 정규성이 확보되었으므로 우리는 이제 서로소인 두 닫힌집합을 가르는 연속함수를 언제나 얻을 수 있으며, 이것이 다음 절의 partition of unity 구성을 가능하게 한다.
+[정리 7](#thm7){: data-lid="jeqiu" data-relation="required" }은 compact Hausdorff space가 normal이라는 사실의 진정한 일반화이다. 실제로 [명제 3](#prop3){: data-lid="jlj3w" data-relation="weak" }에 의하여 compact space는 paracompact이므로, compact Hausdorff space가 normal이라는 결과는 [정리 7](#thm7){: data-lid="c7mdl" data-relation="required" }의 특수한 경우로 다시 얻어진다. 정규성이 확보되었으므로 우리는 이제 서로소인 두 닫힌집합을 가르는 연속함수를 언제나 얻을 수 있으며, 이것이 다음 절의 partition of unity 구성을 가능하게 한다.
 
 Paracompact 공간의 가장 풍부한 공급원 가운데 하나는 metric space이다. 모든 metric space가 normal임은 이미 알고 있으나 ([§Urysohn 보조정리와 Tietze 확장정리, ⁋명제 4](/ko/math/topology/urysohn_and_tietze#prop4){: data-lid="14swt" data-relation="weak" }), 사실 이들은 언제나 paracompact이기도 하다. 이는 A. H. Stone의 정리로 알려져 있다.
 
@@ -196,7 +196,7 @@ $$\sum_{\alpha\in J}\phi_\alpha(x)=\frac{1}{\psi(x)}\sum_{\alpha\in J}\psi_\alph
 :::
 
 ::: 참고 12
-[정리 11](#thm11){: data-lid="xr18y" data-relation="weak" }의 역도 성립한다. 임의의 open covering $(U_i)_{i\in I}$에 대하여 이에 종속된 partition of unity $(\phi_i)_{i\in I}$이 존재하는 공간 $X$가 주어졌다 하자. 그럼 열린집합 $G_i=\{x\mid\phi_i(x)>0\}$은 $G_i\subseteq\supp\phi_i\subseteq U_i$를 만족하여 $(U_i)$의 open refinement를 이루고, $(\supp\phi_i)$가 locally finite이므로 $(G_i)$도 locally finite이며, $\sum_i\phi_i(x)=1$로부터 각 $x$에서 $\phi_i(x)>0$인 $i$가 존재하여 $(G_i)$가 $X$를 덮는다. 따라서 $X$는 paracompact이다. Hausdorff 조건을 함께 놓으면 이것은 위상공간이 paracompact Hausdorff인 것과 임의의 open covering이 종속 partition of unity를 허락하는 것이 동치라는 사실을 이룬다.
+[정리 11](#thm11){: data-lid="xr18y" data-relation="required" }의 역도 성립한다. 임의의 open covering $(U_i)_{i\in I}$에 대하여 이에 종속된 partition of unity $(\phi_i)_{i\in I}$이 존재하는 공간 $X$가 주어졌다 하자. 그럼 열린집합 $G_i=\{x\mid\phi_i(x)>0\}$은 $G_i\subseteq\supp\phi_i\subseteq U_i$를 만족하여 $(U_i)$의 open refinement를 이루고, $(\supp\phi_i)$가 locally finite이므로 $(G_i)$도 locally finite이며, $\sum_i\phi_i(x)=1$로부터 각 $x$에서 $\phi_i(x)>0$인 $i$가 존재하여 $(G_i)$가 $X$를 덮는다. 따라서 $X$는 paracompact이다. Hausdorff 조건을 함께 놓으면 이것은 위상공간이 paracompact Hausdorff인 것과 임의의 open covering이 종속 partition of unity를 허락하는 것이 동치라는 사실을 이룬다.
 :::
 
 ## 국소 구성의 대역화

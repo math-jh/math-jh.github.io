@@ -64,7 +64,7 @@ $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 평면의 두 좌표축의 합집합이라
 
 그러나 이는 effective Cartier divisor가 아니다. $\mathbb{K}[\x,\y]/(\x\y,\x)\cong\mathbb{K}[\y]$이므로 $Z$는 $\y$-축이고, 이는 $X$의 두 irreducible component 가운데 하나이므로 $X$에서 codimension $0$을 갖는다. 그런데 [명제 3](#prop3){: data-lid="yij5e" data-relation="required" }에 의하여 effective Cartier divisor의 irreducible component는 codimension $1$이어야 한다.
 
-대수적으로는 [명제 2](#prop2){: data-lid="9wme8" data-relation="weak" }가 같은 것을 말해준다. 원점을 담는 affine open subset $U=\Spec A$를 어떻게 택하더라도 $U$는 두 좌표축과 모두 만나므로 $A$ 안에서 $\y$는 $0$이 아니고, $\mathcal{I}_{Z/X}(U)$를 생성하는 $\x$는 이를 죽이는 zerodivisor이다. 곧 이 ideal은 결코 free module이 될 수 없다.
+대수적으로는 [명제 2](#prop2){: data-lid="9wme8" data-relation="required" }가 같은 것을 말해준다. 원점을 담는 affine open subset $U=\Spec A$를 어떻게 택하더라도 $U$는 두 좌표축과 모두 만나므로 $A$ 안에서 $\y$는 $0$이 아니고, $\mathcal{I}_{Z/X}(U)$를 생성하는 $\x$는 이를 죽이는 zerodivisor이다. 곧 이 ideal은 결코 free module이 될 수 없다.
 :::
 
 위의 예시에서 codimension이 예상대로 행동하지 않은 것은 $\x$가 minimal prime ideal에 포함되어 있었기 때문이다. 원소가 non-zerodivisor임을 요구함으로써 우리는 이와 같은 minimal prime ideal 뿐만 아니라 associated prime ideal 전체를 피할 수 있도록 해 주며, 예를 들어 다음의 scheme

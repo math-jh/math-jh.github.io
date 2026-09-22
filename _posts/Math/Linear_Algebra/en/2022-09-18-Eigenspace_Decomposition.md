@@ -225,7 +225,7 @@ Thus we can give a suitable name to a matrix $A$ satisfying this condition.
 An $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6){: data-lid="k64zd" data-relation="required" } is called *diagonalizable*.
 :::
 
-Alternatively, since [Proposition 6](#prop6){: data-lid="n8ii6" data-relation="weak" } gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
+Alternatively, since [Proposition 6](#prop6){: data-lid="n8ii6" data-relation="required" } gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
 
 That diagonalizable matrices are conceptually important has been sufficiently examined above. Moreover, diagonalizable matrices are also of great computational utility. For example, if a matrix $A$ is diagonalizable with $A=XDX^{-1}$, then the powers of $A$ are given by $A^k=XD^kX^{-1}$, and since the power of a diagonal matrix is merely the diagonal matrix formed from the powers of each diagonal entry, computing powers of $A$ becomes a very easy task.
 

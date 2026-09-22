@@ -181,7 +181,7 @@ The equivalence of conditions 1 and 2 has already been examined. Also, by defini
 
 ## Prime Ideals
 
-Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-lid="0uv0b" data-relation="weak" }.
+Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9){: data-lid="0uv0b" data-relation="required" }.
 
 ::: Definition 10
 An ideal $\mathfrak{p}\subsetneq A$ of a ring $A$ is called a *prime ideal* if, whenever $ab\in \mathfrak{p}$, then necessarily $a\in \mathfrak{p}$ or $b\in \mathfrak{p}$ holds.

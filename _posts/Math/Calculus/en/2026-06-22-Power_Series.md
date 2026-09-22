@@ -82,7 +82,7 @@ $$f(x) + g(x) = \sum_{n=0}^\infty (a_n + b_n)x^n, \qquad f(x)g(x) = \sum_{n=0}^\
 The coefficients of the product are the *Cauchy product* of the two coefficient sequences.
 :::
 
-The Cauchy product is the extension to infinite degree of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $1/(1-x) = \sum_n x^n$ by itself, the coefficient of degree $n$ becomes $\sum_{k=0}^n 1\cdot 1 = n+1$, yielding $1/(1-x)^2 = \sum_n (n+1)x^n$. Applying this computation to $\sum_n x^n/n!$ and $\sum_n y^n/n!$, the $n$th term becomes by the binomial theorem $\sum_{k=0}^n x^ky^{n-k}/(k!(n-k)!) = (x+y)^n/n!$, yielding the exponential law $e^{x+y} = e^xe^y$, which justifies the notation writing the series as $e^x$ in [Example 3](#ex3){: data-lid="tn2hl" data-relation="weak" reviewed="" }.
+The Cauchy product is the extension to infinite degree of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $1/(1-x) = \sum_n x^n$ by itself, the coefficient of degree $n$ becomes $\sum_{k=0}^n 1\cdot 1 = n+1$, yielding $1/(1-x)^2 = \sum_n (n+1)x^n$. Applying this computation to $\sum_n x^n/n!$ and $\sum_n y^n/n!$, the $n$th term becomes by the binomial theorem $\sum_{k=0}^n x^ky^{n-k}/(k!(n-k)!) = (x+y)^n/n!$, yielding the exponential law $e^{x+y} = e^xe^y$, which justifies the notation writing the series as $e^x$ in [Example 3](#ex3){: data-lid="tn2hl" data-relation="required" reviewed="" }.
 
 ## Analytic Functions
 

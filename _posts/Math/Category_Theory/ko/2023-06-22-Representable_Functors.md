@@ -113,7 +113,7 @@ $$\Hom_{\Vect_k}(V\otimes W,-)\cong\operatorname{Bilin}(V,W;-)$$
 바꿔 말하자면, tensor product의 universal property는 대상 $V\otimes W$와, universal element $V\times W\rightarrow V\otimes W$가 담고 있으며, 위의 natural isomorphism이 말해주는 것이 정확히 $V\times W$에서 $U$로의 bilinear map이 주어질 때마다 (우변), 유일한 $k$-linear map $V\otimes W\rightarrow U$ (좌변)이 주어진다는 뜻이 된다.
 :::
 
-위의 예시를 통해 다양한 분야에서 universal property를 통해 정의된 대상들이 실은 위의 꼴인 것을 확인할 수 있다. 그러나 범주론의 관점에서만 보자면 아직까지는 이들을 universal property라 부르는 이유는 [정의 5](#def5){: data-lid="3ep3j" data-relation="requires-review" }에서 그렇게 이름을 붙였다는 것 외에는 찾아볼 수 없다.  
+위의 예시를 통해 다양한 분야에서 universal property를 통해 정의된 대상들이 실은 위의 꼴인 것을 확인할 수 있다. 그러나 범주론의 관점에서만 보자면 아직까지는 이들을 universal property라 부르는 이유는 [정의 5](#def5){: data-lid="3ep3j" data-relation="required" reviewed="" }에서 그렇게 이름을 붙였다는 것 외에는 찾아볼 수 없다.  
 이를 정당화하기 위해 category $\mathcal{A}$의 어떠한 대상 $I$가, 임의의 대상 $A$가 주어질 때마다 유일한 morphism $I\rightarrow A$를 가질 때 이를 $\mathcal{A}$의 *initial object<sub>시작 대상</sub>*라 부르자. 비슷하게 *terminal object<sub>끝 대상</sub>* 또한 정의한다. 그럼 [명제 8](#prop8){: data-lid="w26fy" data-relation="forward" reviewed="" }은 위의 질문에 적절한 답을 준다. 즉, 이러한 대상들은 모두 적절한 category의 initial (혹은 terminal) object로 생각할 수 있다. 이를 설명하기 위해서는 다음 정의가 필요하다. 
 
 ::: 정의 7

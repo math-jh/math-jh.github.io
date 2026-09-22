@@ -315,7 +315,7 @@ A family $\{\psi_i: U_i \rightarrow X\}_{i\in I}$ of morphisms over a scheme $X$
 
 In the fpqc topology, the simplest covering of a single affine scheme $\Spec A$ is $\{\Spec B \rightarrow \Spec A\}$, consisting of one faithfully flat ring homomorphism $A \rightarrow B$.
 
-The reason we took the trouble to lift [Lemma 3](#lem3){: data-lid="a9g5h" data-relation="weak" } to modules is, of course, to deal with quasi-coherent sheaves ([§Quasi-coherent Sheaves, ⁋Definition 8](/en/math/scheme_theory/quasicoherent_sheaves#def8){: data-lid="qetah" data-relation="required" }).
+The reason we took the trouble to lift [Lemma 3](#lem3){: data-lid="a9g5h" data-relation="required" } to modules is, of course, to deal with quasi-coherent sheaves ([§Quasi-coherent Sheaves, ⁋Definition 8](/en/math/scheme_theory/quasicoherent_sheaves#def8){: data-lid="qetah" data-relation="required" }).
 
 ::: Theorem 10
 For any scheme $X$ and any quasi-coherent sheaf $\mathcal{F}$ on $X$, the presheaf
@@ -394,7 +394,7 @@ $$V\times_SU_i\cong\rSpec_{U_i}(\psi_i^\ast\mathcal{A})\cong\rSpec_{U_i}(\mathca
 and these isomorphisms recover the cocycle data given at the start. Moreover, since $\mathcal{A}$ and its algebra structure are unique up to unique isomorphism by [Theorem 11](#thm11){: data-lid="syv1u" data-relation="required" }, and an affine morphism is recovered from its quasi-coherent algebra, $V$ is also unique in the same sense.
 :::
 
-More generally, a quasi-compact, quasi-separated morphism of schemes $\varphi:V\rightarrow U$ is *quasi-affine* if the canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$ is a quasi-compact open embedding. The conclusion of [Theorem 12](#thm12){: data-lid="xmu2q" data-relation="weak" } holds in this case as well. A generalization in another direction is the case of quasi-projective morphisms; being quasi-projective alone is not enough, and one must be given an ample line bundle together with a compatible descent datum on it. Roughly, the proof descends the section algebra of the ample line bundle to form a relative Proj; the original schemes then appear as open subschemes of it, and one glues these together.
+More generally, a quasi-compact, quasi-separated morphism of schemes $\varphi:V\rightarrow U$ is *quasi-affine* if the canonical morphism $V\rightarrow\rSpec_U(\varphi_\ast\mathcal{O}_V)$ is a quasi-compact open embedding. The conclusion of [Theorem 12](#thm12){: data-lid="xmu2q" data-relation="required" } holds in this case as well. A generalization in another direction is the case of quasi-projective morphisms; being quasi-projective alone is not enough, and one must be given an ample line bundle together with a compatible descent datum on it. Roughly, the proof descends the section algebra of the ample line bundle to form a relative Proj; the original schemes then appear as open subschemes of it, and one glues these together.
 
 Meanwhile, faithfully flat base change is not only an exact functor; the essential point is that the exactness verified there can be brought back down to the original, and [Proposition 7](#prop7){: data-lid="of2xw" data-relation="required" } used this to descend flatness and finiteness conditions of modules. Applying the same argument affine-locally, one can also check properties of an already given scheme morphism $\psi:X\rightarrow Y$ over a cover. For this, taking an fpqc cover $\{Y_i\rightarrow Y\}$ of $Y$, the morphism $\psi$ defines morphisms
 

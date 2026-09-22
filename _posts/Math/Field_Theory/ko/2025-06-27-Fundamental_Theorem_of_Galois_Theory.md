@@ -43,7 +43,7 @@ Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\lvert\Gal(
 이제 우리는 [정리 1](#thm1){: data-lid="17xxd" data-relation="required" }의 구체적인 사용을 살펴본다. 우선 처음 살펴볼 것은 가장 단순한 다음의 예이다. 
 
 ::: 예시 3
-$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s26b8" data-relation="required" }의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18){: data-lid="qmp2i" data-relation="required" }에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="9uh6x" data-relation="weak" }), [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8){: data-lid="jzhrk" data-relation="required" }의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
+$\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s26b8" data-relation="required" }의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18){: data-lid="qmp2i" data-relation="required" }에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="9uh6x" data-relation="required" }), [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8){: data-lid="jzhrk" data-relation="required" }의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
 
 우선 $\sqrt{3}\not\in\mathbb{Q}(\sqrt{2})$이다. 만일 $\sqrt{3}=a+b\sqrt{2}$라면 양변을 제곱하여 $3=a^2+2b^2+2ab\sqrt{2}$를 얻는데, $\sqrt{2}$가 유리수가 아니므로 $ab=0$이어야 하고, $b=0$이면 $\sqrt{3}$이, $a=0$이면 $\sqrt{3/2}$가 유리수가 되어 모두 모순이기 때문이다. 따라서 $\mathbb{L}/\mathbb{Q}$는 $\mathbb{Q}(\sqrt{2})$를 intermediate field로 가지고, 따라서 $[\mathbb{L}:\mathbb{Q}]=[\mathbb{L}:\mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}):\mathbb{Q}]=4$이며, [명제 2](#prop2){: data-lid="cz291" data-relation="required" }에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{Q})\rvert=4$이다.
 
@@ -152,7 +152,7 @@ $$\Gal(\mathbb{L}/\mathbb{M})=\left\{\sigma\in \Gal(\mathbb{L}/\mathbb{K})\mid \
 이 성립한다. 그런데 [§갈루아 군의 성질들](/ko/math/field_theory/properties_of_galois_extensions){: data-lid="av26d" data-relation="required" }에서 살펴본 subbase의 표기로 $\{\sigma\mid\sigma(x)=x\}=U_{x,x}\cap\Gal(\mathbb{L}/\mathbb{K})$는 열린집합이고, 그 여집합 또한 열린집합들 $U_{x,y}$ ($y\neq x$)들의 합집합이므로 이들은 모두 clopen이다. 따라서 $\Gal(\mathbb{L}/\mathbb{M})$은 closed set들의 교집합이므로 closed이고, subgroup인 것은 자명하다.
 :::
 
-다음 보조정리는 흔히 *Artin의 보조정리*라는 이름으로 불리는 결과로, [정리 1](#thm1){: data-lid="ibf23" data-relation="required" }의 증명에서 핵심적인 counting을 제공한다.
+다음 보조정리는 흔히 *Artin의 보조정리*라는 이름으로 불리는 결과로, [정리 1](#thm1){: data-lid="ibf23" data-relation="weak" }의 증명에서 핵심적인 counting을 제공한다.
 
 ::: 보조정리 8 (Artin)
 Field $\mathbb{N}$과, $\mathbb{N}$의 automorphism들로 이루어진 유한군 $H$가 주어졌다 하자. $H$의 invariant들의 field를 $\mathbb{N}^H$라 하면, $[\mathbb{N}:\mathbb{N}^H]\leq \lvert H\rvert$가 성립한다.

@@ -87,14 +87,14 @@ $$M'=\bigcap_{k=1}^n M_k,\qquad \text{$M_k$ irreducible}$$
 이를 위해서는 임의의 irreducible submodule $P$이 primary submodule임을 보이면 충분하고, 이는 $M/P$가 coprimary submodule인 것을 보이는 것과 같다. 우선 $P$가 proper submodule이므로 $M/P\neq 0$이고, [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="ff37b" data-relation="required" reviewed="" }의 첫째 결과에 의하여 $\Ass(M/P)$는 공집합이 아니다. 따라서 결론에 반하여 $M/P$가 서로 다른 두 associated prime $\mathfrak{p},\mathfrak{q}$를 갖는다 가정하자. 그럼 $M/P$는 $A/\mathfrak{p}$, $A/\mathfrak{q}$와 각각 isomorphic한 submodule들을 갖는다. 그럼 정의에 의해 $A/\mathfrak{p}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{p}$이고, $A/\mathfrak{q}$의 $0$이 아닌 임의의 원소의 annihilator는 $\mathfrak{q}$이므로 이들은 오직 $0$만을 공통의 원소로 갖는다. 즉, $M/P$의 zero submodule $0$은 reducible submodule이다. 이로부터 $M$에서는 $P$이 reducible submodule이 되어 모순이 얻어진다.
 :::
 
-따라서 $M$의 임의의 proper submodule은 항상 primary decomposition을 갖는다. 이제 [정리 3](#thm3){: data-lid="wdw5i" data-relation="requires-review" }의 나머지 부분을 증명해야 한다. 앞선 보조정리의 증명과 마찬가지로, 이들을 증명할 때는 $M/M'$에 대해 증명하면 충분하므로, 일반성을 잃지 않고 $M'=0$으로 가정해도 충분하다.
+따라서 $M$의 임의의 proper submodule은 항상 primary decomposition을 갖는다. 이제 [정리 3](#thm3){: data-lid="wdw5i" data-relation="weak" reviewed="" }의 나머지 부분을 증명해야 한다. 앞선 보조정리의 증명과 마찬가지로, 이들을 증명할 때는 $M/M'$에 대해 증명하면 충분하므로, 일반성을 잃지 않고 $M'=0$으로 가정해도 충분하다.
 
 ::: 증명 (정리 3)
 우선 첫째 결과를 보이기 위해, $M$의 zero submodule $0$의 primary decomposition
 
 $$0=\bigcap_{k=1}^n M_k$$
 
-이 주어졌다 하자. 그럼 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7){: data-lid="alqlt" data-relation="requires-review" }의 exact sequence를 일반화한 것으로부터 
+이 주어졌다 하자. 그럼 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7){: data-lid="alqlt" data-relation="weak" reviewed="" }의 exact sequence를 일반화한 것으로부터 
 
 $$M\subseteq \bigoplus_{k=1}^n M/M_k$$
 
@@ -158,7 +158,7 @@ Noetherian domain $A$에 대해 다음이 성립한다.
 
 다음으로 임의의 irreducible element $p$가 prime임을 보이자. $A$가 Noetherian이므로 $(p)$를 포함하는 prime ideal들 중 minimal한 것이 존재하며, 이를 $\mathfrak{p}$라 하면 가정에 의해 $\mathfrak{p}=(q)$는 principal이다. 그럼 $p\in (q)$로부터 $p=qc$로 쓸 수 있는데, $p$가 irreducible이고 $q$가 non-unit이므로 $c$는 unit이고 따라서 $(p)=(q)=\mathfrak{p}$가 prime ideal이다. 즉 $p$는 prime element이다.
 
-마지막으로 인수분해의 유일성을 보이자. $up_1\cdots p_m=vq_1\cdots q_k$가 irreducible element들의 곱이고 $u,v$가 unit이라 하면, $m$에 대한 귀납법을 사용한다. $m=0$이면 좌변이 unit이므로 $k=0$이어야 한다. $m\geq 1$이면 $p_m$이 prime이므로 적당한 $j$에 대하여 $p_m\mid q_j$이고, $q_j$가 irreducible이며 $p_m$이 non-unit이므로 $q_j=wp_m$이도록 하는 unit $w$가 존재한다. 그럼 $A$가 domain이므로 양변에서 $p_m$을 소거하여 귀납가정을 적용하면 적절한 재배열 하에서 각 $p_i$와 $q_i$가 associate임을 얻는다. 따라서 $A$는 UFD이다. ([\[환론\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16){: data-lid="oay8k" data-relation="requires-review" })
+마지막으로 인수분해의 유일성을 보이자. $up_1\cdots p_m=vq_1\cdots q_k$가 irreducible element들의 곱이고 $u,v$가 unit이라 하면, $m$에 대한 귀납법을 사용한다. $m=0$이면 좌변이 unit이므로 $k=0$이어야 한다. $m\geq 1$이면 $p_m$이 prime이므로 적당한 $j$에 대하여 $p_m\mid q_j$이고, $q_j$가 irreducible이며 $p_m$이 non-unit이므로 $q_j=wp_m$이도록 하는 unit $w$가 존재한다. 그럼 $A$가 domain이므로 양변에서 $p_m$을 소거하여 귀납가정을 적용하면 적절한 재배열 하에서 각 $p_i$와 $q_i$가 associate임을 얻는다. 따라서 $A$는 UFD이다. ([\[환론\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16){: data-lid="oay8k" data-relation="required" reviewed="" })
 :::
 
 ---

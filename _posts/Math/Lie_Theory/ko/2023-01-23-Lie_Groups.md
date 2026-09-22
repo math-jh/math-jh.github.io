@@ -68,7 +68,7 @@ $$\SL(n;\mathbb{R})=\left\{A\in \GL(n; \mathbb{R})\mid \det(A)=1\right\}$$
 
 을 통해 $\GL(n;\mathbb{R})$의 부분집합 $\SL(n; \mathbb{R})$을 정의할 수 있다. 이 함수는 행렬의 각 성분들에 대한 다항함수이므로 smooth이고, 약간의 계산을 통해 모든 점에서 regular임을 알 수 있다. [\[미분다양체\] §음함수 정리, ⁋따름정리 4](/ko/math/manifolds/implicit_function_theorem#cor4){: data-lid="g6h91" data-relation="required" }로부터 $\SL(n;\mathbb{R})$은 $n^2-1$차원 manifold가 된다. 이 때 $\GL(n;\mathbb{R})$의 곱셈과 역원 또한 $\SL(n;\mathbb{R})$로 잘 제한되며 따라서 $\SL(n; \mathbb{R})$ 또한 Lie group이다. 
 
-비슷한 방식으로, classical matrix group들 $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 더 일반적으로는 아래 [정리 5](#thm5){: data-lid="tie8d" data-relation="required" }를 통해 $\GL(n;\mathbb{R})$의 임의의 closed subgroup이 자동으로 Lie group이 됨을 알 수 있다. 
+비슷한 방식으로, classical matrix group들 $\Omat(n)$, $\SO(n)$, $\Umat(n)$, $\SU(n)$ 등의 matrix group들 또한 Lie group 구조를 갖는 것을 확인할 수 있다. 더 일반적으로는 아래 [정리 5](#thm5){: data-lid="tie8d" data-relation="forward" }를 통해 $\GL(n;\mathbb{R})$의 임의의 closed subgroup이 자동으로 Lie group이 됨을 알 수 있다. 
 :::
 
 한편, 비록 determinant가 어떻게 생겼는지는 알지 못하더라도, $\SL(n;\mathbb{R})$이 group으로서 어떻게 생겼는지에 대한 정보는 선형대수학으로부터 나오는 것이다. 임의의 Lie group $G$에 대한 다음의 정리는 더 일반적으로 임의의 *closed* subgroup은 항상 embedded submanifold라는 것을 보여준다.
@@ -166,7 +166,7 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
 특별한 예시로, 임의의 manifold $M$에서 자기자신으로의 diffeomorphism들의 group $\Diff(M)$을 생각하면, 이는 무한차원 Lie group으로 생각할 수 있다. 이 Lie group의 identity $\id_M$에서의 tangent space는 $\id_M$을 지나는 $\Diff(M)$의 curve들의 적당한 equivalence class이며, 이 때 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-lid="aymg8" data-relation="required" }을 생각하면 이 정보는 정확하게 $\mathfrak{X}(M)$에 담겨있다. 이러한 방식으로 Lie group $G$의 Lie algebra $\mathfrak{g}$는 $G$가 자기 자신 위에 act할 때의 infinitesimal action을 정의한다.
 
 ::: 예시 10
-앞선 [예시 2](#ex2){: data-lid="hqbds" data-relation="weak" }, [예시 3](#ex3){: data-lid="427al" data-relation="weak" }, 그리고 [예시 4](#ex4){: data-lid="be31p" data-relation="weak" }의 $\GL(n;\mathbb{R})$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $\mathbb{R}^n$의 경우 그 tangent space는 $\mathbb{R}^n$ 자기자신이며, 비슷하게 $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $\mathbb{R}^n$과 같다. $\GL(n;\mathbb{R})$의 경우, 벡터공간 $\Mat_n(\mathbb{R})$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 같다.
+앞선 [예시 2](#ex2){: data-lid="hqbds" data-relation="weak" }, [예시 3](#ex3){: data-lid="427al" data-relation="weak" }, 그리고 [예시 4](#ex4){: data-lid="be31p" data-relation="required" }의 $\GL(n;\mathbb{R})$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $\mathbb{R}^n$의 경우 그 tangent space는 $\mathbb{R}^n$ 자기자신이며, 비슷하게 $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $\mathbb{R}^n$과 같다. $\GL(n;\mathbb{R})$의 경우, 벡터공간 $\Mat_n(\mathbb{R})$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 같다.
 :::
 
 그러나 $\SL(n;\mathbb{R})$의 Lie algebra를 알기 위해서는 조금 더 복잡한 계산이 필요하다. 구체적으로 우리는 determinant map $\GL(n; \mathbb{R})\rightarrow \mathbb{R}$의 미분을 알아야 한다. 
@@ -235,7 +235,7 @@ Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</s
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.
 
-[명제 9](#prop9){: data-lid="agqg2" data-relation="weak" }과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
+[명제 9](#prop9){: data-lid="agqg2" data-relation="required" }과 마찬가지 방식으로 다음 명제를 증명할 수 있다.
     
 ::: 명제 14
 Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한다.
@@ -298,7 +298,7 @@ $$\exp(X)\exp(Y)=\exp\left(X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]+\frac{1}{1
 
 엄밀히 말하자면 위의 "정리"는 $\cdots$에 해당하는 항의 계수에 대한 정보가 없기는 하지만 이 계수들이 구체적으로 필요할 일은 드물다. 중요한 것은 Lie algebra의 원소 $X,Y$가 지정하는 방향의 두 (Lie group의) 원소를 각각 곱하였을 때 이들의 곱이 $X,Y$의 일차결합과 그 Lie bracket들의 합에 해당하는 방향이며, 만일 $X,Y$가 충분히 작은 벡터들이라면 이 급수 또한 수렴한다는 것이다. 한편 Lie group $G$에서, identity $e$와 가까운 임의의 원소는 $g=\exp(X)$의 꼴로 쓸 수 있으므로 이 정리는 (identity 근처에서) $G$의 group operation에 대한 정보를 정확하게 모두 담고 있다. 더 구체적으로, 우리는 Lie algebra $\mathfrak{g}$를 manifold로 보고, $\exp: \mathfrak{g}\rightarrow G$를 manifold 사이에서의 smooth map이라 생각할 수 있고 이 때 $0\in \mathfrak{g}$에서의 differential이 정확히 $\id_\mathfrak{g}$가 된다. 따라서 $\mathfrak{g}$에서 $0$의 적당한 neighborhood $U$가 존재하여 $\exp$가 $U$와 $\exp(U)$ 사이의 diffeomorphism을 정의하도록 할 수 있겠으나 (특히 local diffeomorphism의 inverse $\log$가 존재하겠지만), 이 $U$ 바깥에서 exponential map이 어떻게 행동할지는 단언할 수 없다. 
 
-위의 [정리 15](#thm15){: data-lid="e1oh4" data-relation="required" }를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 그런데 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3){: data-lid="nl83g" data-relation="required" }에 의해 이는 $G$의 submanifold를 정의한다. 이들은 위의 [정리 17](#thm17){: data-lid="sqt1y" data-relation="required" }에 의해 group operation도 가질 것이지만, 문제는 이 정리는 앞서 지적했듯 오직 국소적인 영역에서만 효과가 있다는 것이다. 그러나, 만일 $G$가 simply connected였다면 이를 $G$ 전체로 확장하는 데에 위상적인 문제가 없어지므로 다음 정리가 성립한다. 
+위의 [정리 15](#thm15){: data-lid="e1oh4" data-relation="weak" }를 알게 되었을 때, 자연스러운 질문 중 하나는 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 identity에서의 tangent space로 갖는 $G$의 Lie subgroup $H$가 존재하는지의 여부일 것이다. 그런데 정의에 의해 Lie subalgebra는 Lie bracket에 의해 닫혀있으므로 [\[미분다양체\] §Distribution, ⁋정리 3](/ko/math/manifolds/distribution#thm3){: data-lid="nl83g" data-relation="required" }에 의해 이는 $G$의 submanifold를 정의한다. 이들은 위의 [정리 17](#thm17){: data-lid="sqt1y" data-relation="required" }에 의해 group operation도 가질 것이지만, 문제는 이 정리는 앞서 지적했듯 오직 국소적인 영역에서만 효과가 있다는 것이다. 그러나, 만일 $G$가 simply connected였다면 이를 $G$ 전체로 확장하는 데에 위상적인 문제가 없어지므로 다음 정리가 성립한다. 
 
 ::: 정리 18
 Simply connected Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 $\mathfrak{g}$의 Lie subalgebra $\mathfrak{h}$가 주어졌을 때, $\mathfrak{h}$를 Lie algebra로 갖는 $G$의 Lie subgroup $H$가 존재한다. 

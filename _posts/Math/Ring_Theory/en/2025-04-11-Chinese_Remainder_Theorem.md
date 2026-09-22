@@ -181,7 +181,7 @@ The isomorphism $A\cong\prod A/\mathfrak{a}_i$ obtained when $\bigcap\mathfrak{a
 
 ## The Noncommutative Case
 
-In [Proposition 5](#prop5){: data-lid="zuww4" data-relation="weak" }, the commutativity assumption was used to guarantee that the intersection $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ collapses to a single product $\mathfrak{b}_1\cdots\mathfrak{b}_n$. Without this assumption, products in different orders can yield different ideals, and the intersection is expressed as the symmetric sum of all such ordered products. The following proposition gives the generalized version.
+In [Proposition 5](#prop5){: data-lid="zuww4" data-relation="required" }, the commutativity assumption was used to guarantee that the intersection $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$ collapses to a single product $\mathfrak{b}_1\cdots\mathfrak{b}_n$. Without this assumption, products in different orders can yield different ideals, and the intersection is expressed as the symmetric sum of all such ordered products. The following proposition gives the generalized version.
 
 ::: Proposition 7
 Let two-sided ideals $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$ of a ring $A$ be pairwise comaximal. Then

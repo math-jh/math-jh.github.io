@@ -27,7 +27,7 @@ $f$가 $[a,b]$에서 연속이고 $F(x) = \int_a^x f(t)\dd{t}$로 정의하면, 
 
 $$F'(x) = f(x)$$
 
-이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6){: data-lid="jmcp1" data-relation="requires-review" }의 우미분계수·좌미분계수를 뜻한다.
+이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6){: data-lid="jmcp1" data-relation="required" reviewed="" }의 우미분계수·좌미분계수를 뜻한다.
 :::
 
 ::: 증명
@@ -140,7 +140,7 @@ $$\int_0^x f(t)\dd{t} = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
 그럼 앞서 [예시 3](#ex3){: data-lid="054bj" data-relation="weak" reviewed="" }에서 살펴본 $e^{-x^2}$가 어떤 형태로 쓰이는지 알 수 있다. 
 
 ::: 예시 8
-[예시 3](#ex3){: data-lid="cya3g" data-relation="requires-review" }의 오차함수로 돌아가자. 지수함수의 멱급수로부터 
+[예시 3](#ex3){: data-lid="cya3g" data-relation="required" reviewed="" }의 오차함수로 돌아가자. 지수함수의 멱급수로부터 
 
 $$e^{-t^2} = \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}$$
 

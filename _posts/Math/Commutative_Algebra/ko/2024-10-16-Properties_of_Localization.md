@@ -45,7 +45,7 @@ $$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 tensor product는 right exact이지만, 이 경우에는 exact functor가 된다.
 
 ::: 명제 2
-$S^{-1}A$는 flat $A$-module이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7){: data-lid="4i7jv" data-relation="requires-review" })
+$S^{-1}A$는 flat $A$-module이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7){: data-lid="4i7jv" data-relation="required" reviewed="" })
 :::
 ::: 증명
 임의의 injective $A$-linear map $u:M \rightarrow M'$이 주어졌다 하고, $S^{-1}A\otimes_A u$이 injective인 것을 보여야 한다. 그런데 [보조정리 1](#lem1){: data-lid="pirbk" data-relation="required" reviewed="" }에 의해, 이는 linear map $S^{-1}M \rightarrow S^{-1}M'$이 injective인 것을 보이면 충분하다. 어떠한 $x/s\in S^{-1}M$에 대하여, 이를 $S^{-1}M'$으로 보낸 원소인 $u(x)/s$가 $S^{-1}M'$에서 $0$이라 하자. 그럼 $u(x)/s=0/1$로부터 적당한 $t\in S$가 존재하여 

@@ -43,7 +43,7 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 본격적으로 미분규칙들을 살펴보기 전에, 우리는 다양한 함수들의 도함수를 유도한다. 
 
-우선 지수함수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3){: data-lid="00w8x" data-relation="requires-review" }에서 $e^x = \sum_{n\geq 0} x^n/n!$로 정의하였다. 이제 [명제 1](#prop1){: data-lid="z8pkw" data-relation="required" reviewed="" }을 적용하면 그 미분은 항별 미분의 합
+우선 지수함수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3){: data-lid="00w8x" data-relation="required" reviewed="" }에서 $e^x = \sum_{n\geq 0} x^n/n!$로 정의하였다. 이제 [명제 1](#prop1){: data-lid="z8pkw" data-relation="required" reviewed="" }을 적용하면 그 미분은 항별 미분의 합
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -176,7 +176,7 @@ $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 마지막으로 지금까지 살펴본 규칙들을 적용하는 법을 살펴보며 이 글을 마친다. 먼저, [명제 1](#prop1){: data-lid="ms3m5" data-relation="required" reviewed="" }은, 우리가 멱급수를 도입한 이유와는 다소 주객이 전도된 방향이지만, 급수의 값을 구할 때 사용할 수 있다. 
 
 ::: 예시 8 (무한급수의 합)
-기하급수 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2){: data-lid="we10a" data-relation="requires-review" })
+기하급수 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2){: data-lid="we10a" data-relation="required" reviewed="" })
 
 $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 

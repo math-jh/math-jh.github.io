@@ -78,7 +78,7 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 Let $(\mathfrak{a}_i)_{i\in I}$ be a family of cardinals. Then $\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$ if and only if $\mathfrak{a}_i\neq \mathbf{0}$ for all $i\in I$.
 :::
 ::: Proof
-This is the extension of [§Ordered Pairs, ⁋Proposition 10](/en/math/set_theory/ordered_pair#prop10){: data-lid="5h0nt" data-relation="weak" } to arbitrary products. The proof is identical.
+This is the extension of [§Ordered Pairs, ⁋Proposition 10](/en/math/set_theory/ordered_pair#prop10){: data-lid="5h0nt" data-relation="required" } to arbitrary products. The proof is identical.
 :::
 
 ::: Proposition 6

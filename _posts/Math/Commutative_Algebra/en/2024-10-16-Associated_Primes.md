@@ -70,7 +70,7 @@ and we conclude $a\in \mathfrak{a}$.
 
 The $\mathfrak{a}$ obtained from the above proposition is a prime ideal and also the annihilator of some element, so by definition it belongs to $\Ass M$.
 
-On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3){: data-lid="jcfh9" data-relation="weak" reviewed="" }, for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization map $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
+On the other hand, by [§Properties of Localization, ⁋Lemma 3](/en/math/commutative_algebra/properties_of_localization#lem3){: data-lid="jcfh9" data-relation="required" reviewed="" }, for any $A$-module $M$, an element $x\in M$ is zero if and only if its image under the localization map $\epsilon_\mathfrak{m}: M \rightarrow M_\mathfrak{m}$ is zero for every maximal ideal $\mathfrak{m}$; thus to show $x=0$ it suffices to show $\epsilon_\mathfrak{p}(x)=0$ for all prime ideals $\mathfrak{p}$. The following corollary can be understood in the same spirit.
 
 ::: Corollary 4
 Let $M$ be a module over a Noetherian ring $A$. Then the following hold.

@@ -104,7 +104,7 @@ The following are all examples of monoidal categories.
 - In particular, when $R=k$, the above example shows that $\Vect_k$ is a symmetric monoidal category, and when $R=\mathbb{Z}$, we see that $\Ab$ is a symmetric monoidal category.
 :::
 
-The first two examples of [Example 2](#ex2){: data-lid="nnn49" } can be generalized. Let us first define the following.
+The first two examples of [Example 2](#ex2){: data-lid="nnn49" data-relation="weak" } can be generalized. Let us first define the following.
 
 ::: Definition 3
 If every finite family of objects in a category $\mathcal{A}$ always has a categorical product, we call this category a *cartesian category*.

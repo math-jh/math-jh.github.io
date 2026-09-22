@@ -125,7 +125,7 @@ $$\mathbb{K}[\x_1,\x_2] \longrightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapst
 
 가 유도하는 morphism이므로, chart $X_1\times_\mathbb{K}X_2\cong \mathbb{A}^2_\mathbb{K}$ 안에서 $\Delta(X)$는 대각선에서 원점을 뺀 것 $Z(\x_1-\x_2)\cap D(\x_1)$이다. 이 집합의 closure는 대각선 $Z(\x_1-\x_2)$ 전체이고 그 원점이 정확히 $(0_1,0_2)$이므로, $(0_1,0_2)$는 $\Delta(X)$에 속하지 않으면서 그 closure에는 속한다. 따라서 $\Delta(X)$는 닫혀 있지 않고 [명제 4](#prop4){: data-lid="94env" data-relation="required" }에 의하여 $X$는 separated가 아니다. 이 공간은 위상적으로도 Hausdorff가 아닌 공간의 표준적인 예이다. 
 
-이제 separatedness의 판정법을 보자. [예시 2](#ex2){: data-lid="6d5yq" data-relation="weak" }에서와 달리 판정법은 discrete일 필요가 없는 valuation ring 전체, 곧 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$라는 조건만을 만족하는 field $K$의 subring $A$ 전부에 대해 요구된다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5){: data-lid="385vf" data-relation="weak" }) 또 아래에서 $\iota:\Spec K \rightarrow \Spec A$는 언제나 inclusion $A\hookrightarrow K$가 유도하는 morphism을 가리킨다.
+이제 separatedness의 판정법을 보자. [예시 2](#ex2){: data-lid="6d5yq" data-relation="weak" }에서와 달리 판정법은 discrete일 필요가 없는 valuation ring 전체, 곧 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$라는 조건만을 만족하는 field $K$의 subring $A$ 전부에 대해 요구된다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5){: data-lid="385vf" data-relation="required" }) 또 아래에서 $\iota:\Spec K \rightarrow \Spec A$는 언제나 inclusion $A\hookrightarrow K$가 유도하는 morphism을 가리킨다.
 
 ::: 정리 6
 Noetherian scheme $X$와 scheme morphism $\varphi:X \rightarrow Y$에 대하여, $\varphi$가 separated인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
@@ -189,7 +189,7 @@ $$\eta=\chi(\mathfrak{m}_A)=\Delta(\gamma_1(\mathfrak{m}_A))\in \Delta(X)$$
 이 그림을 실제로 확인해 보자.
 
 ::: 예시 7
-앞에서 우리는 line with double origin $X$가 separated가 아님을 [명제 4](#prop4){: data-lid="181gq" data-relation="weak" }로 확인했지만, [정리 6](#thm6){: data-lid="x8rqr" data-relation="required" }을 쓰면 같은 사실이 곡선의 극한이라는 말로 그대로 드러난다. $A=\mathbb{K}[t]_{(t)}$는 uniformizer $t$를 갖는 discrete valuation ring이고 $K=\Frac(A)=\mathbb{K}(t)$이며, $Y=\Spec\mathbb{K}$로 둔다. 이제 ring homomorphism $\mathbb{K}[\x_1] \rightarrow K$, $\x_1\mapsto t$가 정의하는 morphism $\alpha:\Spec K \rightarrow X$를 생각하자. $t$는 $K$의 unit이므로 $\alpha$의 image는 두 chart가 겹치는 열린집합에 들어간다. 모든 것이 $\mathbb{K}$ 위에 있으므로 $\alpha$와 구조사상 $\Spec A \rightarrow \Spec\mathbb{K}$는 바깥쪽 square를 이룬다.
+앞에서 우리는 line with double origin $X$가 separated가 아님을 [명제 4](#prop4){: data-lid="181gq" data-relation="required" }로 확인했지만, [정리 6](#thm6){: data-lid="x8rqr" data-relation="required" }을 쓰면 같은 사실이 곡선의 극한이라는 말로 그대로 드러난다. $A=\mathbb{K}[t]_{(t)}$는 uniformizer $t$를 갖는 discrete valuation ring이고 $K=\Frac(A)=\mathbb{K}(t)$이며, $Y=\Spec\mathbb{K}$로 둔다. 이제 ring homomorphism $\mathbb{K}[\x_1] \rightarrow K$, $\x_1\mapsto t$가 정의하는 morphism $\alpha:\Spec K \rightarrow X$를 생각하자. $t$는 $K$의 unit이므로 $\alpha$의 image는 두 chart가 겹치는 열린집합에 들어간다. 모든 것이 $\mathbb{K}$ 위에 있으므로 $\alpha$와 구조사상 $\Spec A \rightarrow \Spec\mathbb{K}$는 바깥쪽 square를 이룬다.
 
 이제 앞에서와 같이 두 chart를 $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$라 하고, 이들로 들어가는 두 morphism
 

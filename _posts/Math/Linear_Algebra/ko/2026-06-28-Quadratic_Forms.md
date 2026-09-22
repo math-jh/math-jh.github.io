@@ -42,7 +42,7 @@ $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
 ## 합동과 대각형
 
-$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$을 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix){: data-lid="tw4ac" data-relation="weak" }에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, 기저변환행렬 $P=[\id]_\mathcal{B}^\mathcal{C}$에 대하여 
+$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$을 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix){: data-lid="tw4ac" data-relation="required" }에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, 기저변환행렬 $P=[\id]_\mathcal{B}^\mathcal{C}$에 대하여 
 
 $$G_\mathcal{C}=P^tG_\mathcal{B}P$$
 

@@ -208,7 +208,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 가 된다. 즉, *character group* $\Hom(T_N, \mathbb{C}^\ast)$는 dual lattice $M$과 isomorphic하다.
 
-이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \rightarrow U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14){: data-lid="uyayd" data-relation="required" }에서 직접 확인한다.
+이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \rightarrow U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14){: data-lid="uyayd" data-relation="forward" }에서 직접 확인한다.
 
 구체적으로, 다음의 $\mathbb{C}$-algebra homomorphism
 

@@ -281,7 +281,7 @@ $$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u).$$
 This yields the following proposition.
 
 ::: Proposition 13
-For a face $\tau$ of a cone $\sigma$, the variety $U_\tau$ is a principal open subset of $U_\sigma$. ([\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 5](/en/math/algebraic_varieties/affine_varieties#def5){: data-lid="kc019" data-relation="weak" }) Specifically, choosing $u \in S_\sigma$ with $\tau = \sigma \cap u^{\perp}$, we have
+For a face $\tau$ of a cone $\sigma$, the variety $U_\tau$ is a principal open subset of $U_\sigma$. ([\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 5](/en/math/algebraic_varieties/affine_varieties#def5){: data-lid="kc019" data-relation="required" }) Specifically, choosing $u \in S_\sigma$ with $\tau = \sigma \cap u^{\perp}$, we have
 
 $$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$$
 :::
@@ -305,9 +305,9 @@ For instance, in the two-dimensional cone $\sigma$ of [Example 7](#ex7){: data-l
 We claim that the open embedding $U_\tau \hookrightarrow U_\sigma$ is $T_N$-equivariant. That is, the actions of $T_N$ on $U_\tau$ and on $U_\sigma$ are compatible with the inclusion. This follows from a straightforward computation, so the above inclusion is also an inclusion of toric varieties.
 
 ::: Example 14
-In [Example 7](#ex7){: data-lid="w82de" data-relation="weak" } we saw that when $N = \mathbb{Z}^2$ and $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$, we have $U_\sigma = \mathbb{C}^2$. Let us now examine concretely how the torus $T_N = (\mathbb{C}^\ast)^2$ acts on $U_\sigma = \mathbb{C}^2$.
+In [Example 7](#ex7){: data-lid="w82de" data-relation="required" } we saw that when $N = \mathbb{Z}^2$ and $\sigma = \mathbb{R}_{\geq 0}e_1+ \mathbb{R}_{\geq 0}e_2$, we have $U_\sigma = \mathbb{C}^2$. Let us now examine concretely how the torus $T_N = (\mathbb{C}^\ast)^2$ acts on $U_\sigma = \mathbb{C}^2$.
 
-First, as we saw in [Example 7](#ex7){: data-lid="5hr15" data-relation="weak" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-lid="k15rn" data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
+First, as we saw in [Example 7](#ex7){: data-lid="5hr15" data-relation="required" }, $\mathbb{C}[S_\sigma] = \mathbb{C}[\z_1, \z_2]$ (with $\z_i = \rchi^{e_i^\ast}$), and $U_\sigma = \Spec(\mathbb{C}[\z_1, \z_2]) = \mathbb{C}^2$. By [Proposition 10](#prop10){: data-lid="k15rn" data-relation="required" }, an element $t = (t_1, t_2) \in T_N = (\mathbb{C}^\ast)^2$ acts on the coordinate ring by
 
 $$t \cdot \z_i = \rchi^{e_i^\ast}(t) \z_i = t_i \z_i \qquad i = 1, 2.$$
 

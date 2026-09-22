@@ -219,7 +219,7 @@ $$TC_0 X = Z(\y^2).$$
 This is the line $\y = 0$ counted twice, and it shows that the cusp ends sharply in the $\x$-axis direction. By comparison, the tangent space $T_0 X = \mathbb{K}^2$ is too large, containing all directions.
 :::
 
-In general, keeping [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-lid="7imq3" data-relation="weak" } in mind, the singularity of a nodal curve can be resolved by blowup. That is, after blowing up, the two branches $\y-\x$ and $\y+\x$ at the origin are separated by a $\mathbb{P}^1$. However, for a cusp the curve does not split into two branches near the origin, so even after blowup the point lying over the origin is only a single point of $\mathbb{P}^1$; in this sense one generally regards a cusp as a worse singularity than a node.
+In general, keeping [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12){: data-lid="7imq3" data-relation="required" } in mind, the singularity of a nodal curve can be resolved by blowup. That is, after blowing up, the two branches $\y-\x$ and $\y+\x$ at the origin are separated by a $\mathbb{P}^1$. However, for a cusp the curve does not split into two branches near the origin, so even after blowup the point lying over the origin is only a single point of $\mathbb{P}^1$; in this sense one generally regards a cusp as a worse singularity than a node.
 
 ---
 

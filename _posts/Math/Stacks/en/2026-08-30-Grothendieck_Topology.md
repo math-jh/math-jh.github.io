@@ -201,7 +201,7 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G).$$
 Moreover, $a$ preserves finite limits.
 :::
 
-The proof of this theorem is somewhat technical, so we take it as a standard property of the plus construction. The essential point is that, thanks to [Theorem 12](#thm12){: data-lid="qjaa4" data-relation="required" }, the sheafification adjunction treated in [\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5){: data-lid="3n5fn" data-relation="weak" } extends to arbitrary sites. The fact that the left adjoint $a$ preserves finite limits is especially important: it implies that the category of sheaves enjoys the same kind of good structure as the category of sheaves on a topological space.
+The proof of this theorem is somewhat technical, so we take it as a standard property of the plus construction. The essential point is that, thanks to [Theorem 12](#thm12){: data-lid="qjaa4" data-relation="required" }, the sheafification adjunction treated in [\[Topology\] §Sheaves, ⁋Definition 5](/en/math/topology/sheaves#def5){: data-lid="3n5fn" data-relation="required" } extends to arbitrary sites. The fact that the left adjoint $a$ preserves finite limits is especially important: it implies that the category of sheaves enjoys the same kind of good structure as the category of sheaves on a topological space.
 
 The category of sheaves $\Sh(\mathcal{C}; \tau)$ on a site $(\mathcal{C}, \tau)$ is called a *Grothendieck topos*. Topos theory, however, is a vast subject in its own right, so we will develop only as much of it as is needed in the context of stacks later.
 
@@ -213,7 +213,7 @@ In the post [\[Schemes\] §Functor of Points](/en/math/scheme_theory/functor_of_
 A site $(\mathcal{C}, \tau)$ is *subcanonical* if, for every object $X\in \mathcal{C}$, the representable presheaf $h_X=\Hom_\mathcal{C}(-, X)$ is a $\tau$-sheaf. Among the subcanonical topologies there exists a finest one, called the *canonical topology*. In other words, a topology is subcanonical if and only if it is coarser than or equal to the canonical topology.
 :::
 
-The subcanonical condition is stated concretely through [Proposition 10](#prop10){: data-lid="dlw7n" data-relation="weak" }: that $h_X$ is a sheaf means that, for each covering family $\{U_i \rightarrow U\}$, a morphism from $U$ to $X$ glues uniquely from morphisms given compatibly over the covering; that is,
+The subcanonical condition is stated concretely through [Proposition 10](#prop10){: data-lid="dlw7n" data-relation="required" }: that $h_X$ is a sheaf means that, for each covering family $\{U_i \rightarrow U\}$, a morphism from $U$ to $X$ glues uniquely from morphisms given compatibly over the covering; that is,
 
 $$\Hom(U, X) \rightarrow \prod_i \Hom(U_i, X)\rightrightarrows \prod_{i, j}\Hom(U_i\times_U U_j, X)$$
 

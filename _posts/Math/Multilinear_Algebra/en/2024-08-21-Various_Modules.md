@@ -28,7 +28,7 @@ $$\ker \bigoplus u_i=\bigoplus \ker u_i,\qquad \coker \prod u_i=\prod \coker u_i
 
 as well.
 
-In a similar vein we revisit properties of the $\Hom$ and $\otimes$ functors, making use of the adjunction between them. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 6](/en/math/algebraic_structures/operations_of_modules#thm6){: data-lid="h0wor" data-relation="required" } and [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9){: data-lid="yc3xx" data-relation="weak" })
+In a similar vein we revisit properties of the $\Hom$ and $\otimes$ functors, making use of the adjunction between them. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 6](/en/math/algebraic_structures/operations_of_modules#thm6){: data-lid="h0wor" data-relation="required" } and [\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 9](/en/math/algebraic_structures/operations_of_modules#thm9){: data-lid="yc3xx" data-relation="required" })
 
 ## Direct Products and Direct Sums
 

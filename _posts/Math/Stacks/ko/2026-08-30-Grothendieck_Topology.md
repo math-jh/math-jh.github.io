@@ -15,11 +15,11 @@ weight: 1
 
 대수기하학에서 우리는 scheme을 정의하기 위해 우선 affine scheme이 무엇인지 정의하고, 이를 붙여 일반적인 scheme을 정의했다. 이는 [\[스킴\] §충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4){: data-lid="4ele4" data-relation="weak" }의 언어를 빌리자면 open embedding을 사용하여 정의된 *Zariski open cover*를 이용한 descent를 생각하는 것으로, 해당 글에서 살펴보았듯 descent는 이 <em-ko>붙이는</em-ko> 과정에서 필요한 것을 형식적인 언어로 풀어낸 것이다. 이 언어에서 가장 눈에 띄는 것은 descent datum이 그 입력으로 isomorphism $\Phi$를 요구한다는 것으로, scheme을 구성한 뒤에는 서로 isomorphic했던 두 overlap의 image가 실제로 같은 intersection이 되므로 이 gluing datum이 눈에 잘 보이지 않았던 것이다.
 
-이와 같이 local data를 정확하게 붙이려면, 먼저 어떤 morphism들의 family를 covering으로 인정하고 그 위의 compatible data가 언제 유일한 global data로 내려오는지를 분리해 적어야 한다. 전자는 우리가 [\[스킴\] §충실평탄하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8){: data-lid="ki0ng" data-relation="weak" }에서 살펴본 Grothendieck pretopology에서 이미 일반화했던 것이며, 후자는 sheaf condition을 통해 나타나는 것이다. 이 시리즈의 첫 글인 이번 글에서는 이 과정에 집중하여, 이후 stack을 정의하기 위한 언어를 마련한다.
+이와 같이 local data를 정확하게 붙이려면, 먼저 어떤 morphism들의 family를 covering으로 인정하고 그 위의 compatible data가 언제 유일한 global data로 내려오는지를 분리해 적어야 한다. 전자는 우리가 [\[스킴\] §충실평탄하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8){: data-lid="ki0ng" data-relation="required" }에서 살펴본 Grothendieck pretopology에서 이미 일반화했던 것이며, 후자는 sheaf condition을 통해 나타나는 것이다. 이 시리즈의 첫 글인 이번 글에서는 이 과정에 집중하여, 이후 stack을 정의하기 위한 언어를 마련한다.
 
 ## Sieve와 covering sieve
 
-[\[스킴\] §충실평탄하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8){: data-lid="hfdxu" data-relation="weak" }에서와 마찬가지로 우리는 $U$가 target인 morphism들의 모임을 $U$의 covering이라 선언할 것이다. 이와 같이 정의하기 위해서는 필연적으로 어떠한 covering이 다른 covering보다 finer하다는 것이 어떤 의미인지를 설명해야 한다. 즉 주어진 $V\rightarrow U$가 $U$ 위의 covering을 이루는 원소라 할 때, 어떤 $W\rightarrow U$가 이를 factor through하는 것이 어떤 것인지를 설명해야 한다. 
+[\[스킴\] §충실평탄하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8){: data-lid="hfdxu" data-relation="required" }에서와 마찬가지로 우리는 $U$가 target인 morphism들의 모임을 $U$의 covering이라 선언할 것이다. 이와 같이 정의하기 위해서는 필연적으로 어떠한 covering이 다른 covering보다 finer하다는 것이 어떤 의미인지를 설명해야 한다. 즉 주어진 $V\rightarrow U$가 $U$ 위의 covering을 이루는 원소라 할 때, 어떤 $W\rightarrow U$가 이를 factor through하는 것이 어떤 것인지를 설명해야 한다. 
 
 ::: 정의 1
 Category $\mathcal{C}$와 대상 $U\in \mathcal{C}$에 대하여, $U$ 위의 *sieve<sub>체</sub>*는 다음 조건을 만족하는 morphism들의 모임 $\mathcal{S}$이다. 
@@ -202,7 +202,7 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 이 성립한다. 나아가 $a$는 finite limit을 보존한다.
 :::
 
-이 정리의 증명은 다소 기술적이어서 plus construction의 표준 성질로 받아들이기로 한다. 핵심적인 것은  [정리 12](#thm12){: data-lid="qjaa4" data-relation="weak" } 덕분에 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5){: data-lid="3n5fn" data-relation="required" }에서 다룬 sheafification adjunction을 임의의 site로 확장할 수 있다는 것이다. Left adjoint $a$가 finite limit을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf category가 위상공간의 sheaf category와 같은 종류의 좋은 구조를 가짐이 따라온다.
+이 정리의 증명은 다소 기술적이어서 plus construction의 표준 성질로 받아들이기로 한다. 핵심적인 것은  [정리 12](#thm12){: data-lid="qjaa4" data-relation="required" } 덕분에 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5){: data-lid="3n5fn" data-relation="required" }에서 다룬 sheafification adjunction을 임의의 site로 확장할 수 있다는 것이다. Left adjoint $a$가 finite limit을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf category가 위상공간의 sheaf category와 같은 종류의 좋은 구조를 가짐이 따라온다.
 
 Site $(\mathcal{C}, \tau)$ 위의 sheaf category $\Sh(\mathcal{C}; \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 그러나 topos 이론은 그 자체로 방대한 주제이므로 우리는 이후 stack의 맥락에서 필요한 만큼만 다루기로 한다.
 
@@ -224,7 +224,7 @@ $$\Hom(U, X) \rightarrow \prod_i \Hom(U_i, X)\rightrightarrows \prod_{i, j}\Hom(
 $\Sch$ (혹은 $\Sch_{/S}$) 위의 fpqc 위상은 subcanonical이다. 즉 임의의 scheme $X$에 대하여 functor of points $h_X=\Hom_{\Sch}(-, X)$은 fpqc sheaf이다. 따라서 Zariski·étale·fppf 위상에서도 모든 representable presheaf는 sheaf이다.
 :::
 
-Scheme $X$의 functor of points $h_X:\Sch^\op \rightarrow \Set$은 representable presheaf이며, big Zariski site에서 $h_X$가 sheaf라는 것은 morphism을 open covering 위에서 붙이면 직접 확인할 수 있다. [정리 14](#thm14){: data-lid="suikx" data-relation="weak" }의 핵심은 같은 $h_X$가 더 일반적인 fpqc covering에서도 sheaf condition을 만족하여, 정합적으로 주어진 morphism들이 유일하게 내려온다는 것이다. 증명의 개요는 다음과 같다. Fpqc covering은 affine open 위에서 단일 faithfully flat affine covering $\Spec B\rightarrow\Spec A$로 refine할 수 있다. 만일 target $X=\Spec R$도 affine이면 [\[스킴\] §충실평탄하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3){: data-lid="8y405" data-relation="required" }의 Amitsur equalizer $A\rightarrow B\rightrightarrows B\otimes_A B$가 morphism $\Spec B\rightarrow X$을 유일한 morphism $\Spec A\rightarrow X$으로 내려보낸다. 일반적인 $X$에 대해서는 위의 faithfully flat affine morphism이 universally submersive라는 사실로 underlying continuous map을 내려보낸 뒤, $X$의 affine open들 위에서 같은 논증을 적용하여 얻은 local morphism들을 붙이면 된다.
+Scheme $X$의 functor of points $h_X:\Sch^\op \rightarrow \Set$은 representable presheaf이며, big Zariski site에서 $h_X$가 sheaf라는 것은 morphism을 open covering 위에서 붙이면 직접 확인할 수 있다. [정리 14](#thm14){: data-lid="suikx" data-relation="required" }의 핵심은 같은 $h_X$가 더 일반적인 fpqc covering에서도 sheaf condition을 만족하여, 정합적으로 주어진 morphism들이 유일하게 내려온다는 것이다. 증명의 개요는 다음과 같다. Fpqc covering은 affine open 위에서 단일 faithfully flat affine covering $\Spec B\rightarrow\Spec A$로 refine할 수 있다. 만일 target $X=\Spec R$도 affine이면 [\[스킴\] §충실평탄하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3){: data-lid="8y405" data-relation="required" }의 Amitsur equalizer $A\rightarrow B\rightrightarrows B\otimes_A B$가 morphism $\Spec B\rightarrow X$을 유일한 morphism $\Spec A\rightarrow X$으로 내려보낸다. 일반적인 $X$에 대해서는 위의 faithfully flat affine morphism이 universally submersive라는 사실로 underlying continuous map을 내려보낸 뒤, $X$의 affine open들 위에서 같은 논증을 적용하여 얻은 local morphism들을 붙이면 된다.
 
 위에서 문제를 affine case로 환원했으므로, $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$에 대한 계산을 구체적으로 확인해보자. [\[스킴\] §점함자, ⁋명제 1](/ko/math/scheme_theory/functor_of_points#prop1){: data-lid="8aut9" data-relation="required" }에서 우리는 이미 이에 대응되는 functor of points은 각 scheme $T$에 global section들의 additive group
 

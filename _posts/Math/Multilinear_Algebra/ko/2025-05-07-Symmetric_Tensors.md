@@ -276,7 +276,7 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 이에 대한 증명은 단순한 계산이다. 
 
-위에서의 [참고 8](#rmk8){: data-lid="dxro4" data-relation="weak" }에서 살펴본 바와 비슷한 이유로, 만일 $A$가 ($\mathbb{Z}$-algebra일 뿐만 아니라) $\mathbb{Q}$-algebra라면 $x\mapsto n!.x$가 bijection이고 따라서 위에서 정의한 $\bar{s}: \S(M) \rightarrow \Sym(M)$이 isomorphism이 되는 것을 확인할 수 있다. 
+위에서의 [참고 8](#rmk8){: data-lid="dxro4" data-relation="required" }에서 살펴본 바와 비슷한 이유로, 만일 $A$가 ($\mathbb{Z}$-algebra일 뿐만 아니라) $\mathbb{Q}$-algebra라면 $x\mapsto n!.x$가 bijection이고 따라서 위에서 정의한 $\bar{s}: \S(M) \rightarrow \Sym(M)$이 isomorphism이 되는 것을 확인할 수 있다. 
 
 ## 다항식 사상
 

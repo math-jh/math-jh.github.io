@@ -110,7 +110,7 @@ Intuitively, generalized eigenspaces include not only genuine eigenvectors but a
 
 ## Primary Decomposition Theorem
 
-Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="kim1o" data-relation="weak" }. To show the diagonalizability of $A$, for a fixed eigenvalue $\lambda$ we assumed that
+Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="kim1o" data-relation="required" }. To show the diagonalizability of $A$, for a fixed eigenvalue $\lambda$ we assumed that
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
@@ -128,7 +128,7 @@ we know that
 
 $$\ker L^k=\ker L^{2k}$$
 
-holds. In other words, for $L^k:V \rightarrow V$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-lid="acd14" data-relation="required" } is satisfied. Applying this to $L=A-\lambda I$, we obtain the first step of induction---that is, the direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="3ilra" data-relation="weak" }, let us write this as
+holds. In other words, for $L^k:V \rightarrow V$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11){: data-lid="acd14" data-relation="required" } is satisfied. Applying this to $L=A-\lambda I$, we obtain the first step of induction---that is, the direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="3ilra" data-relation="required" }, let us write this as
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
@@ -349,7 +349,7 @@ and defining $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$ with these coefficients, we
 For $J_k(\lambda)$, since $N=J_k(\lambda)-\lambda I$ is a nilpotent of index $k$, choosing $v$ with $N^{k-1}v\neq 0$, by [Lemma 8](#lem8){: data-lid="04k8g" data-relation="required" }, $\{v,Nv,\ldots,N^{k-1}v\}$ is a basis. Since $J_k(\lambda)=\lambda I+N$, $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$ also generates the same space, so $v$ is a cyclic vector, and since the minimal polynomial of $J_k(\lambda)$ is $(\x-\lambda)^k$, by the above result $J_k(\lambda)$ is similar to the companion matrix of $(\x-\lambda)^k$.
 :::
 
-The reason this does not actually become the same matrix is purely conventional: the companion matrix of [Definition 14](#def14){: data-lid="pjzpy" data-relation="weak" } orders the basis from lower degree to higher degree, whereas the Jordan block orders from higher degree to lower degree. However, both of these canonical forms are deeply rooted, and if we align one with the other, the standard breaks, so we replace this with the brief remark above. Then more generally we obtain the following.
+The reason this does not actually become the same matrix is purely conventional: the companion matrix of [Definition 14](#def14){: data-lid="pjzpy" data-relation="required" } orders the basis from lower degree to higher degree, whereas the Jordan block orders from higher degree to lower degree. However, both of these canonical forms are deeply rooted, and if we align one with the other, the standard breaks, so we replace this with the brief remark above. Then more generally we obtain the following.
 
 ::: Theorem 16 (Rational Canonical Form)
 For an arbitrary linear operator $A$ defined on a finite-dimensional vector space over an algebraically closed field, by choosing a suitable basis of $V$, the matrix representation of $A$ becomes a block diagonal of companion matrices

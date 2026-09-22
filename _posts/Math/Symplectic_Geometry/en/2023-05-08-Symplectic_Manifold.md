@@ -118,7 +118,7 @@ Item 1 of [Example 2](#ex2){: data-lid="h1d65" data-relation="weak" } is not mer
 
 ## Lagrangian Submanifolds
 
-Elevating the role played by Lagrangian subspaces in linear symplectic geometry ([§Symplectic Vector Spaces, ⁋Definition 3](/en/math/symplectic_geometry/linear_symplectic_geometry#def3){: data-lid="ivmt9" data-relation="weak" }) to the manifold level gives Lagrangian submanifolds. This is the most important class of submanifolds in symplectic geometry.
+Elevating the role played by Lagrangian subspaces in linear symplectic geometry ([§Symplectic Vector Spaces, ⁋Definition 3](/en/math/symplectic_geometry/linear_symplectic_geometry#def3){: data-lid="ivmt9" data-relation="required" }) to the manifold level gives Lagrangian submanifolds. This is the most important class of submanifolds in symplectic geometry.
 
 ::: Definition 9
 For a $2n$-dimensional symplectic manifold $(M,\omega)$, a submanifold $L\subseteq M$ is called a *Lagrangian submanifold* if for the inclusion map $\iota:L\hookrightarrow M$, $\iota^\ast\omega=0$ and $\dim L=n=(\dim M)/2$.

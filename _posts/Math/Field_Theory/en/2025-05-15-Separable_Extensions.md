@@ -97,7 +97,7 @@ $$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mat
 from which the two computations above follow.
 :::
 
-The case we wish to exclude is precisely when the minimal polynomial $f$ has a multiple root, that is, when $\dd{f}=0$; thus the notion of an étale algebra will be useful. We shall define a *separable extension* as a field extension in which every finite degree subextension is an étale $\mathbb{K}$-algebra. ([Definition 8](#def8){: data-lid="pa54n" data-relation="forward" }) Then, as we saw in [Example 4](#ex4){: data-lid="16bod" data-relation="weak" }, any algebraic extension of $\mathbb{Q}$ is a separable extension. Furthermore, we will show that any algebraic extension of a perfect field is separable. ([Proposition 9](#prop9){: data-lid="4j2un" data-relation="forward" }) Let us examine a few more properties of étale algebras that we will use in this process.
+The case we wish to exclude is precisely when the minimal polynomial $f$ has a multiple root, that is, when $\dd{f}=0$; thus the notion of an étale algebra will be useful. We shall define a *separable extension* as a field extension in which every finite degree subextension is an étale $\mathbb{K}$-algebra. ([Definition 8](#def8){: data-lid="pa54n" data-relation="forward" }) Then, as we saw in [Example 4](#ex4){: data-lid="16bod" data-relation="required" }, any algebraic extension of $\mathbb{Q}$ is a separable extension. Furthermore, we will show that any algebraic extension of a perfect field is separable. ([Proposition 9](#prop9){: data-lid="4j2un" data-relation="forward" }) Let us examine a few more properties of étale algebras that we will use in this process.
 
 ::: Proposition 5
 For any field $\mathbb{K}$, a finite degree commutative $\mathbb{K}$-algebra $A$ is reduced if and only if there exist finite degree field extensions $\mathbb{L}_1,\ldots, \mathbb{L}_n$ of $\mathbb{K}$ such that $A$ is isomorphic to $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$ as a $\mathbb{K}$-algebra.
@@ -242,7 +242,7 @@ In particular, if $\mathbb{L}/\mathbb{K}$ is a finite degree separable extension
 
 [Theorem 14](#thm14){: data-lid="62gg5" data-relation="weak" } always holds even when $\mathbb{K}$ is a finite field, but to prove this requires a somewhat more delicate counting argument than [Lemma 13](#lem13){: data-lid="nbabs" data-relation="weak" }, so we postpone it.
 
-On the other hand, separability is essentially (almost) an étale algebra, and since étale algebras behave well under base change ([§Étale Algebras, ⁋Corollary 14](/en/math/field_theory/etale_algebras#cor14){: data-lid="vwjxx" data-relation="weak" }), with slight modifications as in the proof of [Proposition 12](#prop12){: data-lid="vk83n" data-relation="weak" }, we can show that separability also behaves well under base change in the following two cases.
+On the other hand, separability is essentially (almost) an étale algebra, and since étale algebras behave well under base change ([§Étale Algebras, ⁋Corollary 14](/en/math/field_theory/etale_algebras#cor14){: data-lid="vwjxx" data-relation="required" }), with slight modifications as in the proof of [Proposition 12](#prop12){: data-lid="vk83n" data-relation="required" }, we can show that separability also behaves well under base change in the following two cases.
 
 ::: Proposition 15
 For an algebraic extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$, $\mathbb{M}/\mathbb{K}$ is separable if and only if both $\mathbb{M}/\mathbb{L}$ and $\mathbb{L}/\mathbb{K}$ are separable.

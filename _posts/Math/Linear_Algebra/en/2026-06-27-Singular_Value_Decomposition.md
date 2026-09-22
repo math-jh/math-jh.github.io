@@ -28,7 +28,7 @@ Since $(A^tA)^t=A^t(A^t)^t=A^tA$, the matrix $A^tA$ is symmetric, i.e., a self-a
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
-so $A^tA$ is positive semidefinite. ([§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8){: data-lid="ultrl" data-relation="weak" }) Therefore, by [§Spectral Theorem, ⁋Proposition 9](/en/math/linear_algebra/spectral_theorem#prop9){: data-lid="zkvp6" data-relation="required" }, all eigenvalues of $A^tA$ are non-negative.
+so $A^tA$ is positive semidefinite. ([§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8){: data-lid="ultrl" data-relation="required" }) Therefore, by [§Spectral Theorem, ⁋Proposition 9](/en/math/linear_algebra/spectral_theorem#prop9){: data-lid="zkvp6" data-relation="required" }, all eigenvalues of $A^tA$ are non-negative.
 :::
 
 Since all eigenvalues of the matrix $A^tA$ are non-negative, we can take their square roots.

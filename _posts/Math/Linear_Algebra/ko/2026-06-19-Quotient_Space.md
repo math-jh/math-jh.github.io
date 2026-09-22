@@ -184,7 +184,7 @@ $$\bar L(v+\ker L)=L(v)$$
 으로 정의된 linear map $\bar L:V/\ker L\rightarrow \im L$은 isomorphism이다. 즉 $V/\ker L\cong\im L$이다.
 :::
 ::: 증명
-$W=\ker L$로 두면 [명제 6](#prop6){: data-lid="hbvay" data-relation="required" }에 의하여 $\bar L(v+\ker L)=L(v)$으로 정의된 linear map $\bar L:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar L:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar L(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar L=\{0\}$이고 따라서 $\bar L$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" data-relation="required" }) 즉, $\bar L$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" data-relation="weak" })
+$W=\ker L$로 두면 [명제 6](#prop6){: data-lid="hbvay" data-relation="required" }에 의하여 $\bar L(v+\ker L)=L(v)$으로 정의된 linear map $\bar L:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar L:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar L(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar L=\{0\}$이고 따라서 $\bar L$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" data-relation="required" }) 즉, $\bar L$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" data-relation="required" })
 :::
 
 위의 [정리 7](#thm7){: data-lid="3upyz" data-relation="required" }과 [정리 5](#thm5){: data-lid="10mfu" data-relation="required" }를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $V$에 대하여 

@@ -54,7 +54,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0,$$
 
 whereas $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$, so surjectivity on the right cannot hold.
 
-The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9){: data-lid="j8feh" data-relation="weak" }). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
+The standard way to remedy this is to consider the right derived functor ([§Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9){: data-lid="j8feh" data-relation="required" }). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, since one can take products of skyscraper sheaves built from injective abelian groups stalkwise; thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from this we can define sheaf cohomology via
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots.$$
 
@@ -418,7 +418,7 @@ In an abelian category, a *Cartan-Eilenberg resolution* of a cochain complex $K^
 3. Likewise, for each $p$, the complexes $B^p(I^{\bullet,q})$ and $Z^p(I^{\bullet,q})$ arranged along $q$ form injective resolutions of $B^p(K^\bullet)$ and $Z^p(K^\bullet)$, respectively.
 :::
 
-The heart of this definition is that the intuition described above is not enough to produce a Cartan-Eilenberg resolution; in particular, the requirement that the cohomology of each row form a horizontal resolution of $H^p(K^\bullet)$ is a key ingredient in the existence proof. We do not prove the existence of Cartan-Eilenberg resolutions separately here, but it can be obtained essentially by repeatedly applying [\[Homological Algebra\] §Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7){: data-lid="bk3u3" data-relation="required" }.
+The heart of this definition is that the intuition described above is not enough to produce a Cartan-Eilenberg resolution; in particular, the requirement that the cohomology of each row form a horizontal resolution of $H^p(K^\bullet)$ is a key ingredient in the existence proof. We do not prove the existence of Cartan-Eilenberg resolutions separately here, but it can be obtained essentially by repeatedly applying [\[Homological Algebra\] §Resolutions, ⁋Lemma 7](/en/math/homological_algebra/resolutions#lem7){: data-lid="bk3u3" data-relation="weak" }.
 
 Meanwhile, the third condition ensures that the two short exact sequences of each row,
 

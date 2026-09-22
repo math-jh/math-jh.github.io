@@ -22,7 +22,7 @@ $$B=PAQ\tag{1}$$
 
 for suitable invertible matrices $P,Q$, we might want to regard these matrices $A,B$ as essentially the same. However, if we allow complete freedom in choosing bases of the two vector spaces $V,W$ on which these matrices $L_A, L_B: V\rightarrow W$ act, then we have seen that any two matrices of the same rank must be treated as identical. Therefore, in [§Fundamental Theorem of Linear Algebra, ⁋Definition 8](/en/math/linear_algebra/ftla#def8){: data-lid="tfpmi" data-relation="required" }, we had to define a finer equivalence relation. Roughly speaking, if the only information contained in the matrix $A$ in equation (1) is the rank of $A$, then the remaining information is contained in the matrices $P,Q$—that is, in the *linear operators* from $V$ to $V$ or from $W$ to $W$. If we fix a basis of $V$ (or $W$) to examine these, this equivalence relation is not so unnatural. Thus, for the time being, our discussion proceeds with a fixed vector space $V$ and basis $\mathcal{B}$. In other words, we examine $n\times n$ matrices. The powerful tool for this is the determinant, which we define in the next post.
 
-On the other hand, we proved that for an arbitrary matrix $A$ to be invertible, it must necessarily be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 6](/en/math/linear_algebra/matrices#def6){: data-lid="7uqd9" data-relation="weak" }). Now that we know matrices and linear maps are the same, this result is obvious by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-relation="required" }. However, we have not yet examined how to compute this inverse matrix. The method is simple, so we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices){: data-lid="gs9hn" data-relation="weak" }, but now that we have begun to examine $n\times n$ matrices in earnest, we briefly introduce this procedure.
+On the other hand, we proved that for an arbitrary matrix $A$ to be invertible, it must necessarily be a square matrix, using the trace of a matrix ([§Matrices, ⁋Definition 6](/en/math/linear_algebra/matrices#def6){: data-lid="7uqd9" data-relation="weak" }). Now that we know matrices and linear maps are the same, this result is obvious by [§Isomorphisms, ⁋Corollary 4](/en/math/linear_algebra/isomorphic_vector_spaces#cor4){: data-relation="required" }. However, we have not yet examined how to compute this inverse matrix. The method is simple, so we could have presented it right after [§Matrices](/en/math/linear_algebra/matrices){: data-lid="gs9hn" data-relation="required" }, but now that we have begun to examine $n\times n$ matrices in earnest, we briefly introduce this procedure.
 
 First, we show the following simple lemma.
 
@@ -188,7 +188,7 @@ Now, when an arbitrary system of linear equations is given, we can manipulate th
 The basic idea is that when performing Gaussian elimination, the columns do not mix with each other, which can also be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, since the right-hand side containing constants is subjected to the same operations as the left-hand side, we can add the components of the right-hand side to the matrix and compute them all at once.
 
 ::: Example 5
-Let us use the system of equations given in [Example 2](#ex2){: data-lid="cgq0t" data-relation="weak" }:
+Let us use the system of equations given in [Example 2](#ex2){: data-lid="cgq0t" data-relation="required" }:
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -196,7 +196,7 @@ From this system of equations, we consider the following *augmented matrix*:
 
 $$\begin{pmatrix} 1&2&4&3&2\\ 0&3&0&6&3\\ 0&0&1&5&1\end{pmatrix}$$
 
-The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2){: data-lid="ookai" data-relation="weak" } to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
+The rightmost column of this matrix corresponds to the right-hand side of the system of equations, and the rest corresponds to the coefficients in front of the variables of the system of equations. Now, let us apply the same operations as in [Example 2](#ex2){: data-lid="ookai" data-relation="required" } to this matrix. First, subtract 4 times the last row from the first row to obtain the following matrix:
 
 $$\begin{pmatrix}1&2&0&-17&-2\\ 0&3&0&6&3\\0&0&1&5&1\end{pmatrix}$$
 

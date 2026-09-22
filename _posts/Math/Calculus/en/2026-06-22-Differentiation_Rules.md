@@ -44,7 +44,7 @@ That the series on the right-hand side has radius of convergence $R$ itself foll
 
 Before examining differentiation rules in earnest, we derive the derivatives of various functions.
 
-First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3){: data-lid="00w8x" } by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1){: data-lid="z8pkw" data-relation="required" }, its derivative is the sum of term-by-term differentiations
+First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3){: data-lid="00w8x" data-relation="required" } by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1){: data-lid="z8pkw" data-relation="required" }, its derivative is the sum of term-by-term differentiations
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -175,7 +175,7 @@ Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a
 We close this post by examining how to apply the rules developed so far. First, although somewhat contrary to the reason we introduced power series, [Proposition 1](#prop1){: data-lid="ms3m5" data-relation="required" } can be used to evaluate series.
 
 ::: Example 8 (Sum of an infinite series)
-Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2){: data-lid="we10a" })
+Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2){: data-lid="we10a" data-relation="required" })
 
 $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 

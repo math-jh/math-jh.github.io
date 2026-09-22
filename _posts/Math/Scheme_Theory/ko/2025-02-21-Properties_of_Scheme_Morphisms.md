@@ -259,7 +259,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 Scheme morphism $\varphi: X \rightarrow Y$가 *quasi-finite<sub>준유한</sub>*인 것은 $\varphi$가 morphism of finite type이고 임의의 $y\in Y$에 대하여 집합 $\varphi^{-1}(y)$가 항상 유한집합인 것이다. 
 :::
 
-그럼 [예시 16](#ex16){: data-lid="38q0a" data-relation="weak" }에서의 finite morphism에 대한 기하학적 직관은 항상 참이다. 즉, 임의의 finite morphism은 항상 quasi-finite이다. 이는 지금 당장 증명하는 것도 가능하지만, fiber product를 정의하고 난 후로 미룬다. 
+그럼 [예시 16](#ex16){: data-lid="38q0a" data-relation="required" }에서의 finite morphism에 대한 기하학적 직관은 항상 참이다. 즉, 임의의 finite morphism은 항상 quasi-finite이다. 이는 지금 당장 증명하는 것도 가능하지만, fiber product를 정의하고 난 후로 미룬다. 
 
 마지막으로 다음을 정의한다. 
 

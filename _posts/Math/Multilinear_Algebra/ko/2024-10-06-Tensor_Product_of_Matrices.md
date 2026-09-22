@@ -104,7 +104,7 @@ $$(u\otimes u')(e_i\otimes e'_{i'})=u(e_i)\otimes u'(e'_{i'})=\sum_{(j,j')\in J\
 이다. [보조정리 3](#lem3){: data-lid="3qc38" data-relation="required" }에 의해 $(f_j\otimes f'_{j'})$들이 $L\otimes_AL'$의 basis이므로, $[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'}$의 $\bigl((j,j'),(i,i')\bigr)$ 성분은 $x_{ji}x'_{j'i'}$이고, 이는 정확히 $[u]_\mathcal{C}^\mathcal{B}\otimes[u']_{\mathcal{C}'}^{\mathcal{B}'}$의 해당 성분이다.
 :::
 
-즉 [정의 4](#def4){: data-lid="o6v6u" data-relation="weak" }는 [정의 1](#def1){: data-lid="3sy71" data-relation="weak" }이 만드는 linear map의 행렬표현이다. 
+즉 [정의 4](#def4){: data-lid="o6v6u" data-relation="required" }는 [정의 1](#def1){: data-lid="3sy71" data-relation="required" }이 만드는 linear map의 행렬표현이다. 
 
 ## 텐서곱의 성질
 

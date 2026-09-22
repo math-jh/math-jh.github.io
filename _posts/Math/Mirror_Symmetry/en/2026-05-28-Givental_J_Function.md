@@ -240,7 +240,7 @@ Let $X$ be a smooth projective toric Fano variety, $D_1, \ldots, D_m$ the toric 
 $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 :::
 
-Here the formally appearing infinite product to $-\infty$ precisely cancels between numerator and denominator, so it is actually a well-defined expression reducing to a finite product (or its inverse) depending on the sign of $D_i \cdot \beta$. The data determining this product is only the toric divisor $D_i$ and its intersection number $D_i \cdot \beta$, and the information contained in these two is the same as the information contained in the *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$ introduced in [§Overview of Mirror Symmetry, ⁋Definition 1](/en/math/mirror_symmetry/overview#def1){: data-lid="e3y4h" data-relation="required" }.
+Here the formally appearing infinite product to $-\infty$ precisely cancels between numerator and denominator, so it is actually a well-defined expression reducing to a finite product (or its inverse) depending on the sign of $D_i \cdot \beta$. The data determining this product is only the toric divisor $D_i$ and its intersection number $D_i \cdot \beta$, and the information contained in these two is the same as the information contained in the *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$ introduced in [§Overview of Mirror Symmetry, ⁋Definition 1](/en/math/mirror_symmetry/overview#def1){: data-lid="e3y4h" data-relation="weak" }.
 
 Let $X$ be a smooth projective toric variety. Then we have the following short exact sequence
 
@@ -346,7 +346,7 @@ Here $T_a/(z-\psi)$ is inserted at the first marked point (i.e., the pullback of
 
 The fact that the big $J$-function forms a horizontal section of the big QDE follows from the same argument as the small version in [Proposition 4](#prop4){: data-lid="ah3k7" data-relation="required" }. The small $J$-function is recovered as the specialization of the big $J$-function to $t = t_{(2)} \in H^2(X)$: applying the divisor equation (with descendant correction term) $n$ times to $H^2$ insertions, the $t_{(2)}$ insertions come out as the factor $(t_{(2)} \cdot \beta)^n$ with $\psi$-shift corrections, and these sum to $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$ while the $\psi$-shift corrections produce an additional $z^{-1}$ factor, so the small $J$-function form of [Definition 3](#def3){: data-lid="fm5qj" data-relation="required" } with a single marked point is directly recovered.
 
-The additional information contained in the big $J$-function is all descendant invariants determined by arbitrary cohomology classes. Based on this, [Conjecture 5](#conj5){: data-lid="6vh4q" data-relation="required" } is also elevated to the big version, becoming a stronger statement claiming the coincidence of the *full* $S$-matrix and the *full* period matrix, and $I = J$ ([Proposition 7](#prop7){: data-lid="7kav7" data-relation="weak" }) also has richer content in the big version where the mirror map $\tau(q)$ is generally non-trivial.
+The additional information contained in the big $J$-function is all descendant invariants determined by arbitrary cohomology classes. Based on this, [Conjecture 5](#conj5){: data-lid="6vh4q" data-relation="weak" } is also elevated to the big version, becoming a stronger statement claiming the coincidence of the *full* $S$-matrix and the *full* period matrix, and $I = J$ ([Proposition 7](#prop7){: data-lid="7kav7" data-relation="weak" }) also has richer content in the big version where the mirror map $\tau(q)$ is generally non-trivial.
 
 ---
 
@@ -357,4 +357,4 @@ The additional information contained in the big $J$-function is all descendant i
 
 ---
 
-[^1]: Its origin is examined in the proof of [Proposition 4](#prop4){: data-lid="os9n8" data-relation="required" }.
+[^1]: Its origin is examined in the proof of [Proposition 4](#prop4){: data-lid="os9n8" data-relation="weak" }.

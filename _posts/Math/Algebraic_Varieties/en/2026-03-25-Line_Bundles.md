@@ -348,7 +348,7 @@ A *rank $r$ vector bundle* $\mathcal{E}$ on a variety $X$ consists of the follow
 
 Comparing with the definition of a line bundle, the only differences are that the fiber is $\mathbb{A}^r$ instead of $\mathbb{A}^1$, and the transition functions take values in $\GL_r(\mathcal{O}_X(U_i \cap U_j))$ rather than in $\mathcal{O}_X(U_i \cap U_j)^\times = \GL_1(\mathcal{O}_X(U_i \cap U_j))$. Hence a line bundle is exactly a rank 1 vector bundle.
 
-The same cocycle condition as in [Proposition 2](#prop2){: data-lid="3i7uw" data-relation="weak" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
+The same cocycle condition as in [Proposition 2](#prop2){: data-lid="3i7uw" data-relation="required" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
 
 ::: Example 24
 The simplest example is the rank $r$ *trivial vector bundle* $\mathcal{O}_X^{\oplus r}$ obtained from the line bundle $\mathcal{O}_X$. This is constructed by taking the direct sum of the line bundle $\mathcal{O}_X$ with itself $r$ times.

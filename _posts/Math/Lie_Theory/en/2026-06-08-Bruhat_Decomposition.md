@@ -97,7 +97,7 @@ $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
 The orbits of this action are exactly the double cosets $BwB$, and the theorem says that these orbits are indexed by $W$.
 
-To examine the geometric meaning of this, let us look at the example $G=\GL_n(\mathbb{C})$. Fixing the reference flag $E_i=\span\{e_1,\ldots,e_i\}$, we saw that an arbitrary flag $V_\bullet$ corresponds to $gB$ via $V_i=\span\{ge_1,\ldots,ge_i\}$. ([§Borel Subgroups, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13){: data-lid="f3mex" data-relation="weak" }) In general, the relative position of the reference flag $E_\bullet$ and $V_\bullet$ is expressed by the intersection dimensions
+To examine the geometric meaning of this, let us look at the example $G=\GL_n(\mathbb{C})$. Fixing the reference flag $E_i=\span\{e_1,\ldots,e_i\}$, we saw that an arbitrary flag $V_\bullet$ corresponds to $gB$ via $V_i=\span\{ge_1,\ldots,ge_i\}$. ([§Borel Subgroups, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13){: data-lid="f3mex" data-relation="required" }) In general, the relative position of the reference flag $E_\bullet$ and $V_\bullet$ is expressed by the intersection dimensions
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
@@ -327,7 +327,7 @@ are called the *Schubert variety* and the *opposite Schubert variety* respective
 
 By definition $X_w^\circ\cong\mathbb{A}^{\ell(w)}$ and $X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$. In particular $X_{w_0^P}^\circ$ (where $w_0^P$ is the longest element of $W^P$) is the open dense cell with $\ell(w_0^P)=\dim(G/P)$, and $X_e^\circ=\{eP\}$ is a $B$-fixed point. Symmetrically, on the opposite side $X^e_\circ=B^-P/P$ is the open dense cell, and $X^{w_0^P}_\circ=\{w_0^PP\}$ becomes a $B^-$-fixed point. That is, the two cell structures interlock in a dimension-reversed form.
 
-The inclusion relations among Schubert varieties are governed by the *Bruhat order* on the Weyl group. The Bruhat order $\leq$ is the partial order defined by $v\leq w$ when some reduced expression of $v$ appears as a subword of some reduced expression of $w$, and geometrically it is revealed through the cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$ seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="a7crj" data-relation="weak" }.
+The inclusion relations among Schubert varieties are governed by the *Bruhat order* on the Weyl group. The Bruhat order $\leq$ is the partial order defined by $v\leq w$ when some reduced expression of $v$ appears as a subword of some reduced expression of $w$, and geometrically it is revealed through the cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$ seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="a7crj" data-relation="required" }.
 
 ::: Proposition 17
 For $x,w\in W^P$ the following holds:
@@ -363,7 +363,7 @@ The inclusion diagram is also captured by rank conditions. Among the conditions 
 
 $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 
-i.e. all $2$-planes meeting $E_2$. Among the six cells of [Example 15](#ex15){: data-lid="pn7km" data-relation="weak" }, only the big cell $3412$ which is transverse to $E_2$ violates this condition, so $X_{2413}$ exactly contains the remaining five cells.
+i.e. all $2$-planes meeting $E_2$. Among the six cells of [Example 15](#ex15){: data-lid="pn7km" data-relation="required" }, only the big cell $3412$ which is transverse to $E_2$ violates this condition, so $X_{2413}$ exactly contains the remaining five cells.
 :::
 
 Finally, we record one direct consequence of the Bruhat decomposition. The cell decomposition completely classifies the fixed points of the action of a maximal torus $T$ on $G/P$.

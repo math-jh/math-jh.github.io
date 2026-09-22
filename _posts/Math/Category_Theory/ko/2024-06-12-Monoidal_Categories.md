@@ -106,7 +106,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 - 특히 $R=k$인 경우 위의 예시는 $\Vect_k$가 symmetric monoidal category임을 보여주고, $R=\mathbb{Z}$인 경우 우리는 $\Ab$이 symmetric monoidal category임을 알 수 있다. 
 :::
 
-[예시 2](#ex2){: data-lid="nnn49" data-relation="requires-review" }의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
+[예시 2](#ex2){: data-lid="nnn49" data-relation="weak" reviewed="" }의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
 ::: 정의 3
 Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 

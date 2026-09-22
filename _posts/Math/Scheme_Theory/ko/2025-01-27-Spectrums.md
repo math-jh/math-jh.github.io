@@ -153,7 +153,7 @@ Ring $A$의 임의의 원소 $f\in A$에 대하여, $Z(f)$의 $\Spec A$에서의
 
 $$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $k\geq 0$}\iff S_f\cap \mathfrak{p}=\emptyset$$
 
-와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-lid="szh1x" data-relation="required" }에 의해 자명하다. 뿐만 아니라, $D(f)$가 $\Spec A_f$와 같은 위상구조를 갖는다는 것 또한 [명제 9](#prop9){: data-lid="fng2w" data-relation="weak" }의 첫 번째 결과로부터 얻어진다. 
+와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8){: data-lid="szh1x" data-relation="required" }에 의해 자명하다. 뿐만 아니라, $D(f)$가 $\Spec A_f$와 같은 위상구조를 갖는다는 것 또한 [명제 9](#prop9){: data-lid="fng2w" data-relation="required" }의 첫 번째 결과로부터 얻어진다. 
 
 ::: 보조정리 11
 Principal open set들의 모임은 $\Spec A$의 base를 이룬다. ([\[위상수학\] §위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1){: data-lid="308jw" data-relation="required" })

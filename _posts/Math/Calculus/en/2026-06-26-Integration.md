@@ -75,7 +75,7 @@ $$\tan^2 x = \sec^2 x - 1$$
 
 or splitting the fraction $(x^2+1)/x$ into $x + 1/x$ so that each term matches one of the formulas above.
 
-Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="vhmth" data-relation="required" reviewed="" } and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-lid="4c97f" data-relation="required" reviewed="" }.
+Especially useful are integration by substitution and integration by parts, which are respectively the reverses of [§Differentiation, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4){: data-lid="vhmth" data-relation="weak" reviewed="" } and [§Differentiation, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3){: data-lid="4c97f" data-relation="weak" reviewed="" }.
 
 ::: Theorem 4 (Integration by substitution)
 If $f$ has an antiderivative on an interval $I$, and $g$ is differentiable with $g(x) \in I$ for all $x$, then

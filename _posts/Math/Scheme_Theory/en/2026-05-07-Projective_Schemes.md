@@ -54,7 +54,7 @@ Explicitly, the above identification $U_i\cong P_i$ is expressed by the formula
 
 $$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
-On the other hand, the procedure of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="6zpqi" data-relation="weak" } proceeds in the reverse direction. That is, we are first given $n+1$ copies of $n$-dimensional planes $P_0,\ldots, P_n$ and we transport them via isomorphisms satisfying the cocycle condition. Then how the cocycle condition should be written is obtained by examining how a point of $\mathbb{P}^n$ is written in different $P_i$ and $P_j$. Let us look at this. First, an arbitrary point of $P_i$ and $P_j$ can be written in the form
+On the other hand, the procedure of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="6zpqi" data-relation="required" } proceeds in the reverse direction. That is, we are first given $n+1$ copies of $n$-dimensional planes $P_0,\ldots, P_n$ and we transport them via isomorphisms satisfying the cocycle condition. Then how the cocycle condition should be written is obtained by examining how a point of $\mathbb{P}^n$ is written in different $P_i$ and $P_j$. Let us look at this. First, an arbitrary point of $P_i$ and $P_j$ can be written in the form
 
 $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (x_{0/j},\ldots, x_{(j-1)/j}, 1, x_{(j+1)/j}, \ldots, x_{n/j})\in P_j$$
 
@@ -72,7 +72,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 Similarly, matching a point of $P_j$ to a point of $P_i$ would yield formulas like $x_{k/j}/x_{i/j}=x_{k/i}$, but this is not a new formula since it follows from $x_{i/j}=1/x_{j/i}$.
 
-Now let us generalize [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="4v3ha" data-relation="weak" } based on this computation. First consider $n+1$ copies of affine $n$-spaces
+Now let us generalize [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10){: data-lid="4v3ha" data-relation="required" } based on this computation. First consider $n+1$ copies of affine $n$-spaces
 
 $$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)=\Spec A^i$$
 
@@ -100,7 +100,7 @@ holds.
 
 That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci of *homogeneous* elements rather than arbitrary elements. Then, thinking of [\[Algebraic Structures\] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6){: data-lid="zjxhh" }, our interest should also be in *homogeneous* ideals.
 
-In the remainder of this post we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately with a finitely generated condition in [§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7){: data-lid="t8ouc" data-relation="weak" }. For this we fix some notation.
+In the remainder of this post we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately with a finitely generated condition in [§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7){: data-lid="t8ouc" data-relation="forward" }. For this we fix some notation.
 
 ::: remark Remark {#rmk}
 Unless stated otherwise, a graded ring is always assumed to be $\mathbb{N}_{\geq0}$-graded. That is, the ring of interest is always of the form
@@ -360,7 +360,7 @@ so the cocycle condition holds. Therefore by [§Schemes, ⁋Lemma 9](/en/math/sc
 Finally, let us verify that the underlying topological space of $X$ is $\Proj A_\bullet$. [Lemma 8](#lem8){: data-lid="01mup" data-relation="required" } gives homeomorphisms $\psi_f: D_+(f) \rightarrow \Spec A_{(f)}=X_f$, and as checked in the proof of [Lemma 9](#lem9){: data-lid="ylfff" data-relation="required" }, $\psi_f$ sends $D_+(fg)$ onto $X_{fg}=D(\theta_{f,g})$. Moreover, for any $\mathfrak{p}\in D_+(fg)$ the preimage of $\mathfrak{p}A_{fg}\cap A_{(fg)}$ under $\rho_{f,fg}$ is $\mathfrak{p}A_f\cap A_{(f)}$ ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8){: data-lid="ejm2i" }), so $\psi_f$ and $\psi_g$ are compatible with $\varphi_{fg}$. That is, $\psi_g=\varphi_{fg}\circ\psi_f$ holds on $D_+(fg)$. On the other hand, as observed above the $D_+(f)$ cover $\Proj A_\bullet$, so gluing the $\psi_f$ we obtain a homeomorphism between the underlying topological space of $X$ and $\Proj A_\bullet$. Through this $\Proj A_\bullet$ acquires a scheme structure, and by the uniqueness in [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9){: data-lid="uxl9g" data-relation="required" } this scheme structure is unique.
 :::
 
-In particular, since $\Proj A_\bullet$ is a locally ringed space, for any $\mathfrak{p}\in \Proj A_\bullet$ the stalk $\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$ is a local ring. But since $\mathfrak{p}$ can be put into a suitable affine open neighborhood anyway, we can show the following by essentially the same procedure as [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8){: data-lid="7a2ho" data-relation="weak" }.
+In particular, since $\Proj A_\bullet$ is a locally ringed space, for any $\mathfrak{p}\in \Proj A_\bullet$ the stalk $\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$ is a local ring. But since $\mathfrak{p}$ can be put into a suitable affine open neighborhood anyway, we can show the following by essentially the same procedure as [§Affine Scheme, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8){: data-lid="7a2ho" data-relation="required" }.
 
 ::: Lemma 11
 For a graded ring $A_\bullet$ and any $\mathfrak{p}\in \Proj A_\bullet$, there exists an isomorphism

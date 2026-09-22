@@ -44,7 +44,7 @@ $$\mathcal{J}': \qquad M=M_0'\supseteq M_1'\supseteq M_2'\supseteq\cdots$$
 If for each $M_i$ there exists some $M_j'$ with $M_j'\subseteq M_i$, and for each $M_i'$ there exists some $M_j$ with $M_j\subseteq M_i'$, then $\widehat{M}_\mathcal{J}\cong \widehat{M}_{\mathcal{J}'}$.
 :::
 
-Meanwhile, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10){: data-lid="nd217" data-relation="weak" }, taking completion is left exact. The following lemma shows that, under a suitable finiteness assumption, taking completion is also right exact.
+Meanwhile, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10){: data-lid="nd217" data-relation="required" }, taking completion is left exact. The following lemma shows that, under a suitable finiteness assumption, taking completion is also right exact.
 
 ::: Lemma 3
 Fix a Noetherian ring $A$ and an ideal $\mathfrak{a}$. Then for a short exact sequence of finitely generated $A$-modules

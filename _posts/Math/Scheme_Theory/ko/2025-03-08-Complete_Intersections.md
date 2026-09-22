@@ -78,7 +78,7 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
 	$$\mathbb{K}[\x_1,\ldots, \x_n]/(\x_{n-k+1},\ldots, \x_{n-k+i})\cong\mathbb{K}[\x_1,\ldots, \x_{n-k},\x_{n-k+i+1},\ldots, \x_n]$$
 
-	은 integral domain이므로 $\x_{n-k+i+1}$은 이 ring에서 non-zerodivisor이다. 즉 $(\x_{n-k+1},\ldots, \x_n)$은 regular sequence이고, $Z(\x_{n-k+1},\ldots, \x_n)$은 codimension $k$의 local complete intersection이다. [명제 2](#prop2){: data-lid="eugp5" data-relation="required" }와 부합하게 이 closed subscheme의 codimension은 정확히 $k$이다. 
+	은 integral domain이므로 $\x_{n-k+i+1}$은 이 ring에서 non-zerodivisor이다. 즉 $(\x_{n-k+1},\ldots, \x_n)$은 regular sequence이고, $Z(\x_{n-k+1},\ldots, \x_n)$은 codimension $k$의 local complete intersection이다. [명제 2](#prop2){: data-lid="eugp5" data-relation="weak" }와 부합하게 이 closed subscheme의 codimension은 정확히 $k$이다. 
 :::
 
 거꾸로 codimension이 $k$라고 하여 local complete intersection이 되는 것은 아니다. 가령 $\mathbb{A}^4_\mathbb{K}$ 안에서 원점에서만 만나는 두 평면의 합집합 $Z(\x_1,\x_2)\cup Z(\x_3,\x_4)$는 codimension $2$이지만 local complete intersection이 아니다. 두 평면 각각은 두 개의 방정식으로 잘리지만 이들이 만나는 원점 근방에서는 두 개로 부족하기 때문이며, 이는 [명제 5](#prop5){: data-lid="lfe53" data-relation="forward" } 이후의 논의에서 확인한다.
@@ -154,7 +154,7 @@ $$\mathfrak{a}=(\x_1,\x_2)\cap(\x_3,\x_4)=(\x_1\x_3, \x_1\x_4, \x_2\x_3, \x_2\x_
 [정의 1](#def1){: data-lid="xyf9o" data-relation="required" }이 요구하는 것은 local한 조건이지만, projective space 안에서 하나의 regular sequence를 이루는 homogeneous polynomial들이 global하게 잘라내는 경우에는 [명제 4](#prop4){: data-lid="r6v6p" data-relation="required" }의 local한 $\mathcal{O}_X$-module들의 resolution이 하나의 global한 resolution으로 붙게 된다. 이 절에서는 ambient가 언제나 projective space이므로 표기를 바꾸어, 앞 절까지 ambient를 가리키던 $X$를 여기에서는 $\mathbb{P}^n$의 closed subscheme을 가리키는 데 쓴다.
 
 ::: 명제 6
-Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n=\Proj S_\bullet$ ($S_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$)와 각각 degree $d_i>0$인 homogeneous polynomial들 $f_1,\ldots, f_k$가 주어지고, 이들이 $S_\bullet$-regular sequence를 이룬다 하자. $X=V_+(f_1,\ldots, f_k)$이고 $\iota:X\hookrightarrow \mathbb{P}^n$이 그 closed embedding일 때 ([§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1){: data-lid="4k8jb" data-relation="weak" }) 다음이 성립한다.
+Field $\mathbb{K}$ 위의 projective space $\mathbb{P}^n=\Proj S_\bullet$ ($S_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$)와 각각 degree $d_i>0$인 homogeneous polynomial들 $f_1,\ldots, f_k$가 주어지고, 이들이 $S_\bullet$-regular sequence를 이룬다 하자. $X=V_+(f_1,\ldots, f_k)$이고 $\iota:X\hookrightarrow \mathbb{P}^n$이 그 closed embedding일 때 ([§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1){: data-lid="4k8jb" data-relation="required" }) 다음이 성립한다.
 
 1. $\iota$는 codimension $k$의 local complete intersection이며, [정의 1](#def1){: data-lid="ouxt0" data-relation="required" }의 affine open cover로 표준 chart들 $\{D_+(\x_m)\}_{m=0}^n$을 택할 수 있다.
 2. $J\subseteq \{1,\ldots, k\}$에 대하여 $d_J=\sum_{i\in J}d_i$로 적으면, $\mathcal{O}_{\mathbb{P}^n}$-module들의 sequence

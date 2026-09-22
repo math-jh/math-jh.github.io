@@ -13,7 +13,7 @@ weight: 10
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6){: data-lid="bqaw2" data-relation="weak" })
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6){: data-lid="bqaw2" data-relation="required" })
 
 ## 텐서대수의 정의
 
@@ -242,7 +242,7 @@ $$\mathfrak{J}=\langle x\otimes x\mid x\in M\rangle$$
 을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
 :::
 
-$\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례이다. 한편 [정의 5](#def5){: data-lid="dq044" data-relation="weak" } 이후의 논의와 마찬가지로, $\mathfrak{J}$는 homogeneous ideal이고 canonical inclusion $\iota:M \hookrightarrow\bigwedge(M)$이 존재한다는 것이 자명하다. 또, [명제 6](#prop6){: data-lid="p2nhc" data-relation="weak" }과 마찬가지 이유에서 다음의 universal property가 성립한다.
+$\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례이다. 한편 [정의 5](#def5){: data-lid="dq044" data-relation="weak" } 이후의 논의와 마찬가지로, $\mathfrak{J}$는 homogeneous ideal이고 canonical inclusion $\iota:M \hookrightarrow\bigwedge(M)$이 존재한다는 것이 자명하다. 또, [명제 6](#prop6){: data-lid="p2nhc" data-relation="required" }과 마찬가지 이유에서 다음의 universal property가 성립한다.
 
 ::: 명제 11
 임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 다음 조건

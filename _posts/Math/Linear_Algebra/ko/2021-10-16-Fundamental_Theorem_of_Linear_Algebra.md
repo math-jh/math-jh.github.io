@@ -128,7 +128,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 
 으로 주어진다는 것을 확인할 수 있다.
 
-그럼 [정리 2](#thm2){: data-lid="ty7pq" data-relation="forward" }에 대한 일반적인 버전은 다음의 정리로 주어진다.
+그럼 [정리 2](#thm2){: data-lid="ty7pq" data-relation="required" }에 대한 일반적인 버전은 다음의 정리로 주어진다.
 
 ::: 정리 4
 $n$차원 $\mathbb{K}$-벡터공간 $V$와 $m$차원 $\mathbb{K}$-벡터공간 $W$에 대하여, $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
@@ -151,7 +151,7 @@ $$\begin{aligned}(L_1+L_2)(x_1)&=(\alpha_{1,1}+\beta_{1,1})y_1+(\alpha_{2,1}+\be
 일 것이고, 따라서 $L_1+L_2$의 행렬표현 $[L_1+L_2]^\mathcal{B}_\mathcal{C}$은 정확히 $[L_1]^\mathcal{B}_\mathcal{C}+[L_2]^\mathcal{B}_\mathcal{C}$이 된다. 이와 유사하게 스칼라곱에 대한 것도 성립한다.
 :::
 
-[정리 3](#thm3){: data-lid="y9mfy" data-relation="forward" } 또한 비슷한 일반화를 갖는다.
+[정리 3](#thm3){: data-lid="y9mfy" data-relation="required" } 또한 비슷한 일반화를 갖는다.
 
 ::: 정리 5
 세 개의 $\mathbb{K}$-벡터공간 $V_1,V_2,V_3$와 이들 각각의 basis $\mathcal{B}_1=\{x_1,\ldots,x_n\}$, $\mathcal{B}_2=\{y_1,\ldots, y_m\}$, $\mathcal{B}_3=\{z_1,\ldots, z_k\}$가 주어졌다 하자. 그럼 임의의 $L_1:V_1\rightarrow V_2$, $L_2:V_2\rightarrow V_3$에 대하여 항상
@@ -185,7 +185,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 [정리 5](#thm5){: data-lid="5kwom" data-relation="required" }를 $L^{-1}\circ L=\id_V$와 $L\circ L^{-1}=\id_W$에 적용하면 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}[L]^{\mathcal{B}}_{\mathcal{C}}=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=I$와 $[L]^{\mathcal{B}}_{\mathcal{C}}[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}=[\id_W]^{\mathcal{C}}_{\mathcal{C}}=I$를 얻는다.
 :::
 
-이와 같이 [§행렬](/ko/math/linear_algebra/matrices){: data-lid="9v4wc" data-relation="weak" }에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 쌍대공간을 살펴보면 그 의미를 알 수 있다. 
+이와 같이 [§행렬](/ko/math/linear_algebra/matrices){: data-lid="9v4wc" data-relation="required" }에서 정의한 대부분의 개념들을 $\Hom(V,W)$로 옮겨올 수 있다. 곧바로 옮겨올 수 없는 개념 중 하나는 전치행렬 $A^t$인데, 이는 나중에 쌍대공간을 살펴보면 그 의미를 알 수 있다. 
 
 ## 기저변환 행렬
 

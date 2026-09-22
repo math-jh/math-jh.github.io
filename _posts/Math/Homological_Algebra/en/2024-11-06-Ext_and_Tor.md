@@ -221,7 +221,7 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 That $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$ is a simple computation.
 :::
 
-More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5){: data-lid="gajz3" data-relation="weak" }, [Proposition 6](#prop6){: data-lid="jabk6" data-relation="forward" } can also be said to show the origin of the name $\Ext$ in this sense.
+More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5){: data-lid="gajz3" data-relation="weak" }, [Proposition 6](#prop6){: data-lid="jabk6" data-relation="weak" } can also be said to show the origin of the name $\Ext$ in this sense.
 
 Finally we define the following.
 

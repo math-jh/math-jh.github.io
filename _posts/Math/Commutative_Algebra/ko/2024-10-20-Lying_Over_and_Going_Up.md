@@ -41,7 +41,7 @@ $$1=\sum_{i=1}^n b_i a_i,\qquad a_i\in \mathfrak{p},\quad b_i\in B$$
 으로 쓰여질 수 있다. 이제 $b_i$들로 생성되는 $B$의 $A$-subalgebra를 $B'$라 하자. 그럼 $B'$의 모든 원소는 integral이며, $B'$는 $A$-algebra로서 유한하게 생성된다. 따라서 [§정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4){: data-lid="j0u0t" data-relation="required" reviewed="" }에 의하여 $B'$는 $A$-module로서 유한하게 생성된다. 이제 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="7t76d" data-relation="required" reviewed="" }을 적용하면 $B'=0$이므로 모순이다. 
 :::
 
-이 글의 중요한 부분은 [따름정리 4](#cor4){: data-lid="ushol" data-relation="forward" reviewed="" }를 증명하는 것으로, 대략적으로 [명제 1](#prop1){: data-lid="nuzf6" data-relation="requires-review" }을 통해 $A$의 prime ideal $\mathfrak{p}$ 위에 있는 $B$의 두 prime ideal $\mathfrak{q}_1, \mathfrak{q}_2$가 주어졌다면 이들은 서로를 포함하지 않는다는 것이다. 
+이 글의 중요한 부분은 [따름정리 4](#cor4){: data-lid="ushol" data-relation="forward" reviewed="" }를 증명하는 것으로, 대략적으로 [명제 1](#prop1){: data-lid="nuzf6" data-relation="weak" reviewed="" }을 통해 $A$의 prime ideal $\mathfrak{p}$ 위에 있는 $B$의 두 prime ideal $\mathfrak{q}_1, \mathfrak{q}_2$가 주어졌다면 이들은 서로를 포함하지 않는다는 것이다. 
 
 ::: 보조정리 2
 두 integral domain $A\subseteq B$에 대하여, 만일 $\Frac(A) \rightarrow \Frac(B)$가 algebraic extension이라면 $B$의 임의의 nonzero ideal은 $A$와 nontrivial하게 만난다.
@@ -58,7 +58,7 @@ $$a_nb^n+\cdots+a_1b+a_0=0,\qquad a_i\in \Frac(A)$$
 Integral extension $A\hookrightarrow B$가 주어졌다 하자. 그럼 $B$의 prime ideal $\mathfrak{q}$이 maximal ideal인 것과 $\mathfrak{q}\cap A$가 $A$의 maximal ideal인 것이 동치이다.
 :::
 ::: 증명
-이 또한 [명제 1](#prop1){: data-lid="i9e5l" data-relation="requires-review" }의 증명에서와 마찬가지로 $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면 되는데, $\mathfrak{q}$가 prime이므로 $B/\mathfrak{q}$는 domain이고 $A/(\mathfrak{q}\cap A)$는 그 subring이라 역시 domain이다. 따라서 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2){: data-lid="rlay2" data-relation="required" reviewed="" }에 의하여 $B$는 nonzero proper ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
+이 또한 [명제 1](#prop1){: data-lid="i9e5l" data-relation="weak" reviewed="" }의 증명에서와 마찬가지로 $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면 되는데, $\mathfrak{q}$가 prime이므로 $B/\mathfrak{q}$는 domain이고 $A/(\mathfrak{q}\cap A)$는 그 subring이라 역시 domain이다. 따라서 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2){: data-lid="rlay2" data-relation="required" reviewed="" }에 의하여 $B$는 nonzero proper ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
 
 따라서 $B$가 field임을 가정하고 $A$가 field임을 보이면 충분하다. $A$의 maximal ideal $\mathfrak{m}$이 주어졌다 하자. 그럼 [명제 1](#prop1){: data-lid="30gn7" data-relation="required" reviewed="" }에 의하여, 우리는 적당한 $B$의 prime ideal $\mathfrak{q}$가 존재하여 $\mathfrak{q}\cap A= \mathfrak{m}$이 성립하도록 할 수 있다. 그런데 $B$는 field이므로, $\mathfrak{q}=0$이고 따라서 $\mathfrak{m}=0$이다. 이로부터 원하는 결과를 얻는다. 
 :::

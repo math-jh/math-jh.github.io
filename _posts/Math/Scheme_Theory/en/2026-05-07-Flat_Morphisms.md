@@ -169,7 +169,7 @@ is the same. Setting $t=\x\y$, the coordinate ring is isomorphic to the integral
 In short, what flatness controls is not whether fibers become singular, but whether fibers continue with their size maintained.
 :::
 
-In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes){: data-lid="cwgzb" data-relation="forward" }) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
+In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes){: data-lid="cwgzb" data-relation="required" }) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
 
 ::: Example 8
 Consider the graded ring $A_\bullet=\mathbb{K}[t][\x,\y,\z]$ graded by the degree in $\x,\y,\z$. Here $t$ has degree $0$, so the base ring is $A_0=\mathbb{K}[t]$. Computing charts, $A_{(\x)}=\mathbb{K}[t][\y/\x,\z/\x]$ so $D_+(\x)$ is $\mathbb{A}^2_{\mathbb{K}[t]}$, and since $t$ has degree $0$ it survives localization. Patching the three charts, $\Proj A_\bullet$ becomes $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$, and since $A_0\subseteq A_{(f)}$ for all $f$, these patch together to give the structure morphism $\Proj A_\bullet \rightarrow \mathbb{A}^1_\mathbb{K}$.
@@ -209,7 +209,7 @@ That is, every point of the affine line except the origin, which is the target o
 That this is not flat is because $(0,1)\neq 0$ while $t\cdot (0,1)=0$, so $t$ is a zerodivisor in $B$. ([Proposition 5](#prop5){: data-lid="35ij5" data-relation="required" }) Since $X$ is reduced, we obtain the same conclusion from [Corollary 6](#cor6){: data-lid="k7pfj" data-relation="required" } as well, because the isolated point among the two components cannot dominate $\mathbb{A}^1_\mathbb{K}$.
 :::
 
-The last example is the case where what is trapped is an embedded point ([§Algebraic Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" data-relation="weak" }); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([\[Commutative Algebra\] §Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
+The last example is the case where what is trapped is an embedded point ([§Algebraic Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" data-relation="required" }); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([\[Commutative Algebra\] §Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
 
 ::: Example 10
 Consider the scheme morphism
@@ -399,7 +399,7 @@ For a locally Noetherian scheme $Y$ and a morphism $\varphi: X \rightarrow Y$ lo
 
 More generally, the above theorem holds even without any Noetherian condition on $Y$, as long as $\varphi$ is only locally of finite presentation. With some effort, the proof of this theorem could also be done to some extent within what we know, but we omit it for the overall length of this article.
 
-Now by [Theorem 20](#thm20){: data-lid="7kv1v" data-relation="required" }, verifying the vanishing of $\Tor$ at a point via [Proposition 19](#prop19){: data-lid="2gl4f" data-relation="required" } makes $\varphi\vert_U$ a flat morphism over an open neighborhood $U$ of that point, so results requiring flatness of the entire morphism such as [Proposition 3](#prop3){: data-lid="enpfc" data-relation="weak" } or [Proposition 18](#prop18){: data-lid="nojje" data-relation="weak" } can be applied. In other words, the points where flatness fails form a closed set, and are confined to special places where components collide or get trapped in fibers, like the origin in the example from the introduction.
+Now by [Theorem 20](#thm20){: data-lid="7kv1v" data-relation="required" }, verifying the vanishing of $\Tor$ at a point via [Proposition 19](#prop19){: data-lid="2gl4f" data-relation="required" } makes $\varphi\vert_U$ a flat morphism over an open neighborhood $U$ of that point, so results requiring flatness of the entire morphism such as [Proposition 3](#prop3){: data-lid="enpfc" data-relation="weak" } or [Proposition 18](#prop18){: data-lid="nojje" data-relation="required" } can be applied. In other words, the points where flatness fails form a closed set, and are confined to special places where components collide or get trapped in fibers, like the origin in the example from the introduction.
 
 ## Flatness and Semicontinuity
 

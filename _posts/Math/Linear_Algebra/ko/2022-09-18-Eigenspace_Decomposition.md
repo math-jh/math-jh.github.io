@@ -273,7 +273,7 @@ $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
 $$\rank L +\nullity L=\dim V$$
 
-이 성립하는 것을 보았다. ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="q7q8n" data-relation="weak" }) 여기서 $\rank L=\dim\im L$이고 $\nullity L=\dim\ker L$이다. 그러나 이것이 곧 $V$를 $\im L$과 $\ker L$의 direct sum으로 나타낼 수 있다는 뜻은 아니다. 가령, [명제 4](#prop4){: data-lid="lc5f4" data-relation="weak" } 이후에 대각화 불가능한 예시였던 행렬 $A$에 대하여,
+이 성립하는 것을 보았다. ([§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7){: data-lid="q7q8n" data-relation="required" }) 여기서 $\rank L=\dim\im L$이고 $\nullity L=\dim\ker L$이다. 그러나 이것이 곧 $V$를 $\im L$과 $\ker L$의 direct sum으로 나타낼 수 있다는 뜻은 아니다. 가령, [명제 4](#prop4){: data-lid="lc5f4" data-relation="required" } 이후에 대각화 불가능한 예시였던 행렬 $A$에 대하여,
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 

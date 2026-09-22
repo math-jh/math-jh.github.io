@@ -114,7 +114,7 @@ $$(A-\lambda I)^{k'}v =0$$
 
 ## 일차분해정리
 
-본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="kim1o" data-relation="forward" }의 증명을 간단히 요약해보자. $A$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $\lambda$에 대하여 다음 식
+본격적인 결과를 소개하기 전에 [§고유공간분해, ⁋명제 12](/ko/math/linear_algebra/eigenspace_decomposition#prop12){: data-lid="kim1o" data-relation="required" }의 증명을 간단히 요약해보자. $A$의 diagonalizability를 보이기 위해, 우리는 고정된 고유값 $\lambda$에 대하여 다음 식
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 

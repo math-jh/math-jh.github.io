@@ -54,7 +54,7 @@ Category $\mathcal{G}$가 *groupoid<sub>준군</sub>*라는 것은 $\mathcal{G}$
 3. 우리의 이야기 흐름에서 자명한 예시로, 임의의 functor $F:\mathcal{C}^\op \rightarrow \Set$은 각 $T$에 discrete groupoid $F(T)$을 주는 특수한 경우이다. 즉, $\Set$-valued functor는 $\Grpd$-valued functor의 특수한 예시이다.
 :::
 
-특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$은 locally trivial하다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11){: data-lid="3qlfa" data-relation="required" }에서 보았듯, covering 위의 local trivial line bundle들과 겹침 위에서 이들을 잇는 isomorphism들을 descent datum으로 주면 effective descent에 의하여 하나의 global line bundle이 얻어진다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15){: data-lid="z5w01" data-relation="weak" }의 $\mathbb{G}_m$-torsor를 붙이는 transition data가 바로 이러한 isomorphism들이다. 따라서 모두 locally trivial해 보이는 line bundle들을 구별하려면 이 isomorphism들을 잊지 않고 기록해야 한다.
+특히 첫째 예시가 우리가 주로 살펴볼 대상이다. 일반적으로 $\Pic(T)$에는 nontrivial line bundle $\mathcal{L}$이 있을 수 있지만, line bundle의 정의에 의하여 $\mathcal{L}$은 locally trivial하다. [\[스킴\] §충실평탄하강, ⁋정리 11](/ko/math/scheme_theory/faithfully_flat_descent#thm11){: data-lid="3qlfa" data-relation="required" }에서 보았듯, covering 위의 local trivial line bundle들과 겹침 위에서 이들을 잇는 isomorphism들을 descent datum으로 주면 effective descent에 의하여 하나의 global line bundle이 얻어진다. [\[스킴\] §군 스킴, ⁋예시 15](/ko/math/scheme_theory/group_schemes#ex15){: data-lid="z5w01" data-relation="required" }의 $\mathbb{G}_m$-torsor를 붙이는 transition data가 바로 이러한 isomorphism들이다. 따라서 모두 locally trivial해 보이는 line bundle들을 구별하려면 이 isomorphism들을 잊지 않고 기록해야 한다.
 
 ## 유사함자
 

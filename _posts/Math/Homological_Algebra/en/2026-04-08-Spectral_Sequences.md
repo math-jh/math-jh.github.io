@@ -35,7 +35,7 @@ Drawing on our experience, if we view a spectral sequence as arising from the to
 
 $$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p,q}$$
 
-We analyzed this, and our main goal was ultimately to compute the homology of this total complex. Toward this end, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="m6bwa" data-relation="required" } we defined a filtration using the horizontal and vertical degrees of the total complex $A^\bullet=\Tot(K)^\bullet$. Thus we need to introduce the notion of a *filtered complex* in greater generality.
+We analyzed this, and our main goal was ultimately to compute the homology of this total complex. Toward this end, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="m6bwa" data-relation="weak" } we defined a filtration using the horizontal and vertical degrees of the total complex $A^\bullet=\Tot(K)^\bullet$. Thus we need to introduce the notion of a *filtered complex* in greater generality.
 
 ## Filtrations
 
@@ -49,7 +49,7 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 A cochain complex equipped with a (decreasing) filtration is called a *filtered complex*, denoted $(A^\bullet, F)$.
 :::
 
-In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="zgtf7" data-relation="required" } above, we considered $F^pA^\bullet/F^{p+1}A^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
+In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3){: data-lid="zgtf7" data-relation="weak" } above, we considered $F^pA^\bullet/F^{p+1}A^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
 
 $$\gr^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 

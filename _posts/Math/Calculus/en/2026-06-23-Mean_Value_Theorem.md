@@ -57,7 +57,7 @@ $$g(x) = f(x) - \left[ f(a) + \frac{f(b)-f(a)}{b-a}(x - a) \right].$$
 Then $g$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $g(a) = g(b) = 0$. By [Theorem 3](#thm3){: data-lid="mzwsj" data-relation="required" } there exists $c \in (a,b)$ with $g'(c) = 0$, and since $g'(c) = f'(c) - (f(b)-f(a))/(b-a)$, the theorem follows.
 :::
 
-The claim of [Theorem 4](#thm4){: data-lid="6xez9" } is that somewhere on the interval the instantaneous rate of change equals the average rate of change, thereby connecting the endpoint data $f(a), f(b)$ with the interior derivative.
+The claim of [Theorem 4](#thm4){: data-lid="6xez9" data-relation="weak" } is that somewhere on the interval the instantaneous rate of change equals the average rate of change, thereby connecting the endpoint data $f(a), f(b)$ with the interior derivative.
 
 ## Applications of the Mean Value Theorem
 
@@ -101,7 +101,7 @@ $$f(x_2) - f(x_1) = f'(c)(x_2 - x_1), \qquad c \in (x_1, x_2).$$
 Since $x_2 - x_1 > 0$, the sign of the right-hand side matches that of $f'(c)$. Thus if $f' > 0$ everywhere, then $f(x_2) - f(x_1) > 0$, i.e. $f(x_1) < f(x_2)$, so $f$ is strictly increasing; if $f' < 0$, strictly decreasing in the same way; and if $f' \geq 0$, then $f(x_2) - f(x_1) \geq 0$, so $f$ is nondecreasing.
 :::
 
-This test is the most practical form of the fact that the derivative controls the function. One must be careful, however, that strict increase does not force $f' > 0$ at every point. For example, $f(x) = x^3$ is strictly increasing on $\mathbb{R}$ but $f'(0) = 0$. Thus the first part of [Proposition 7](#prop7){: data-lid="x8cfq" } is only a sufficient condition, not a necessary one.
+This test is the most practical form of the fact that the derivative controls the function. One must be careful, however, that strict increase does not force $f' > 0$ at every point. For example, $f(x) = x^3$ is strictly increasing on $\mathbb{R}$ but $f'(0) = 0$. Thus the first part of [Proposition 7](#prop7){: data-lid="x8cfq" data-relation="required" } is only a sufficient condition, not a necessary one.
 
 ::: Example 8
 As an application, let us show that $\ln(1 + x) < x$ for all $x > 0$. Set $f(x) = x - \ln(1+x)$; then $f(0) = 0$ and
@@ -160,7 +160,7 @@ $$f'(x) = 3x^2 + 1 > 0,$$
 so $f'$ has no roots. Taking $k = 0$ in [Proposition 10](#prop10){: data-lid="v03on" data-relation="required" }, $f$ has at most one root. Since there is at least one and at most one, there is exactly one real root.
 :::
 
-Recall from [Theorem 2](#thm2){: data-lid="nc9bw" } that extrema can only occur at critical points. Therefore, to find extrema we first locate critical points (which are relatively easy to find), and then determine which of them actually give extrema. The following proposition assists in this process.
+Recall from [Theorem 2](#thm2){: data-lid="nc9bw" data-relation="weak" } that extrema can only occur at critical points. Therefore, to find extrema we first locate critical points (which are relatively easy to find), and then determine which of them actually give extrema. The following proposition assists in this process.
 
 ::: Proposition 12
 Let $f$ be continuous in a neighborhood of $c$ and differentiable in that neighborhood except possibly at $c$. If $f' > 0$ to the left of $c$ and $f' < 0$ to the right of $c$, then $f$ has a local maximum at $c$. If the signs are reversed, a local minimum; if there is no sign change, not an extremum.

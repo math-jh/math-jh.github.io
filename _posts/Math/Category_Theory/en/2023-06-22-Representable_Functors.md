@@ -109,7 +109,7 @@ exists. In this case, the natural isomorphism is determined by the Yoneda lemma 
 In other words, the universal property of the tensor product consists of the object $V\otimes W$ and the universal element $V\times W\rightarrow V\otimes W$, and what the above natural isomorphism says is precisely that whenever a bilinear map $V\times W\rightarrow U$ is given (right-hand side), there exists a unique $k$-linear map $V\otimes W\rightarrow U$ (left-hand side).
 :::
 
-Through the above example, we can see that objects defined via universal properties in various fields are in fact of this form. However, from a purely category-theoretic point of view, the only reason to call these universal properties so far is that we named them that in [Definition 5](#def5){: data-lid="3ep3j" }.  
+Through the above example, we can see that objects defined via universal properties in various fields are in fact of this form. However, from a purely category-theoretic point of view, the only reason to call these universal properties so far is that we named them that in [Definition 5](#def5){: data-lid="3ep3j" data-relation="required" }.  
 To justify this, let us call an object $I$ of a category $\mathcal{A}$ an *initial object* of $\mathcal{A}$ if, for any object $A$, there is a unique morphism $I\rightarrow A$. Similarly we define a *terminal object*. Then [Proposition 8](#prop8){: data-lid="w26fy" data-relation="forward" } gives an appropriate answer to the question above. That is, all such objects can be regarded as initial (or terminal) objects in suitable categories. To explain this, the following definition is needed.
 
 ::: Definition 7

@@ -88,14 +88,14 @@ The irreducible decomposition above is a primary decomposition.
 For this it suffices to show that every irreducible submodule $P$ is a primary submodule, which amounts to showing that $M/P$ is a coprimary module. First, since $P$ is a proper submodule, $M/P\neq 0$, and by the first part of [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7){: data-lid="ff37b" data-relation="required" }, $\Ass(M/P)$ is nonempty. Toward a contradiction, suppose that $M/P$ has two distinct associated primes $\mathfrak{p},\mathfrak{q}$. Then $M/P$ has submodules isomorphic to $A/\mathfrak{p}$ and $A/\mathfrak{q}$, respectively. By definition, the annihilator of every nonzero element of $A/\mathfrak{p}$ is $\mathfrak{p}$, and the annihilator of every nonzero element of $A/\mathfrak{q}$ is $\mathfrak{q}$, so these two submodules have only $0$ as a common element. That is, the zero submodule $0$ of $M/P$ is a reducible submodule, from which it follows that $P$ is a reducible submodule of $M$ — a contradiction.
 :::
 
-Thus every proper submodule of $M$ admits a primary decomposition. It remains to prove the other parts of [Theorem 3](#thm3){: data-lid="wdw5i" }. As in the proof of the preceding lemma, it suffices to prove them for $M/M'$, so without loss of generality we may assume $M'=0$.
+Thus every proper submodule of $M$ admits a primary decomposition. It remains to prove the other parts of [Theorem 3](#thm3){: data-lid="wdw5i" data-relation="weak" }. As in the proof of the preceding lemma, it suffices to prove them for $M/M'$, so without loss of generality we may assume $M'=0$.
 
 ::: Proof (Theorem 3)
 First, to show the first part, suppose we are given a primary decomposition
 
 $$0=\bigcap_{k=1}^n M_k$$
 
-of the zero submodule $0$ of $M$. Then, generalizing the exact sequence of [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-lid="alqlt" }, we have
+of the zero submodule $0$ of $M$. Then, generalizing the exact sequence of [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-lid="alqlt" data-relation="weak" }, we have
 
 $$M\subseteq \bigoplus_{k=1}^n M/M_k,$$
 

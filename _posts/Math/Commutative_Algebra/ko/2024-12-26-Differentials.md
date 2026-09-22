@@ -278,7 +278,7 @@ $$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longr
 를 뜻한다. 여기서 $\mathfrak{I}/\mathfrak{I}^2$는 degree $1$, $\Omega_{R/A}\otimes_RE$는 degree $0$에 둔다.
 :::
 
-즉 $\operatorname{NL}(p)$는 두 개의 항만 $0$이 아닌 chain complex이고 ([\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology){: data-lid="aww3c" data-relation="weak" }), 그 homology는
+즉 $\operatorname{NL}(p)$는 두 개의 항만 $0$이 아닌 chain complex이고 ([\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology){: data-lid="aww3c" data-relation="required" }), 그 homology는
 
 $$H_0\bigl(\operatorname{NL}(p)\bigr)=\coker\bar{d},\qquad H_1\bigl(\operatorname{NL}(p)\bigr)=\ker\bar{d}$$
 
