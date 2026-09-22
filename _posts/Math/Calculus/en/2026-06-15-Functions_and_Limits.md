@@ -61,7 +61,7 @@ If $\lim_{x\rightarrow a} f(x) = L$ and $\lim_{x\rightarrow a} f(x) = L'$, then 
 :::
 
 ::: Proof
-Suppose for contradiction that $L \neq L'$. Then $\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$. Now, by [Definition 2](#def2){: data-lid="api8o" data-relation="required" reviewed="" }, there exist corresponding $\delta_1, \delta_2 > 0$ such that the following two conditions
+Suppose for contradiction that $L \neq L'$. Then $\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$. Now, by [Definition 2](#def2){: data-lid="api8o" data-relation="required" }, there exist corresponding $\delta_1, \delta_2 > 0$ such that the following two conditions
 
 $$0 < \lvert x-a\rvert < \delta_1\implies \lvert f(x) - L\rvert < \epsilon,\qquad 0 < \lvert x-a\rvert < \delta_2\implies\lvert f(x) - L'\rvert < \epsilon$$
 
@@ -99,7 +99,7 @@ hold.
     
     Intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ go to $0$, so if we can only guarantee that the accompanying factors $\lvert f(x)\rvert, \lvert g(x)\rvert$ are finite, we can make this smaller than $\epsilon$ through a calculation similar to 1 above.
     
-    The trick is to set $\epsilon=1$ and apply [Definition 2](#def2){: data-lid="gyq6x" data-relation="required" reviewed="" } to $f$ and $g$ respectively. Then there exist suitable $\delta_1, \delta_2$ such that
+    The trick is to set $\epsilon=1$ and apply [Definition 2](#def2){: data-lid="gyq6x" data-relation="required" } to $f$ and $g$ respectively. Then there exist suitable $\delta_1, \delta_2$ such that
         
     $$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
@@ -128,7 +128,7 @@ hold.
 :::
 
 ::: Proof
-1. Apply 3 of [Proposition 5](#prop5){: data-lid="l1jgq" data-relation="required" reviewed="" } and run induction on $k$.
+1. Apply 3 of [Proposition 5](#prop5){: data-lid="l1jgq" data-relation="required" } and run induction on $k$.
 2. First, since $L > 0$, taking $\delta_1 > 0$ corresponding to $\epsilon_1 = L/2$ gives 
     
     $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2,$$
@@ -166,11 +166,11 @@ Then for any polynomial function
 
 $$f(x)=c_nx^n+\cdots +c_1x+c_0,$$
 
-by separating the limit into each term using the sum and constant multiple laws from [Proposition 5](#prop5){: data-lid="bkyke" data-relation="required" reviewed="" } and applying [Corollary 6](#cor6){: data-lid="kc5tq" data-relation="required" reviewed="" } to the powers, we obtain
+by separating the limit into each term using the sum and constant multiple laws from [Proposition 5](#prop5){: data-lid="bkyke" data-relation="required" } and applying [Corollary 6](#cor6){: data-lid="kc5tq" data-relation="required" } to the powers, we obtain
 
 $$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0,$$
 
-and finally substituting [Example 7](#ex7){: data-lid="oefr5" data-relation="required" reviewed="" } yields $\lim_{x\rightarrow a}f(x)=f(a)$. Similarly, the limit of a rational function formed as a quotient of polynomial functions is obtained as the quotient of the limits of the numerator and denominator, provided the limit of the denominator is not $0$.
+and finally substituting [Example 7](#ex7){: data-lid="oefr5" data-relation="required" } yields $\lim_{x\rightarrow a}f(x)=f(a)$. Similarly, the limit of a rational function formed as a quotient of polynomial functions is obtained as the quotient of the limits of the numerator and denominator, provided the limit of the denominator is not $0$.
 
 ## Squeeze Theorem and Order Properties of Limits
 
@@ -221,7 +221,7 @@ so
 
 $$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2},$$
 
-and applying [Proposition 8](#prop8){: data-lid="cglpa" data-relation="required" reviewed="" } shows that $\cos x \rightarrow 1$. Now using this and applying [Proposition 8](#prop8){: data-lid="629s1" data-relation="required" reviewed="" } again to the earlier inequality shows that the limit of $(\sin x)/x$ is $1$.
+and applying [Proposition 8](#prop8){: data-lid="cglpa" data-relation="required" } shows that $\cos x \rightarrow 1$. Now using this and applying [Proposition 8](#prop8){: data-lid="629s1" data-relation="required" } again to the earlier inequality shows that the limit of $(\sin x)/x$ is $1$.
 :::
 
 The following example is also classical.
@@ -270,7 +270,7 @@ $$x < N\implies\lvert f(x) - L\rvert < \epsilon.$$
 
 For example, $\lim_{x\rightarrow\infty}1/x = 0$, and for rational functions the highest-degree term dominates the behavior, so $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$. When such a finite limit $L$ exists, the line $y = L$ becomes a *horizontal asymptote* of the graph.
 
-When direct substitution yields an indeterminate form of type $0/0$, algebraic manipulations such as factorization or rationalizing the numerator can be used to cancel the zero of the denominator, transforming the expression into a form where the limit laws apply. The $\lim(\sin x)/x = 1$ from [Example 10](#ex10){: data-lid="qvgeb" data-relation="weak" reviewed="" } is also used in combination with such algebraic techniques to handle indeterminate forms involving $\sin$.
+When direct substitution yields an indeterminate form of type $0/0$, algebraic manipulations such as factorization or rationalizing the numerator can be used to cancel the zero of the denominator, transforming the expression into a form where the limit laws apply. The $\lim(\sin x)/x = 1$ from [Example 10](#ex10){: data-lid="qvgeb" data-relation="weak" } is also used in combination with such algebraic techniques to handle indeterminate forms involving $\sin$.
 
 ---
 

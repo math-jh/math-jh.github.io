@@ -14,7 +14,7 @@ translated_at: 2026-08-19T11:15:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T11:15:04+00:00
 ---
-We now examine the integral of a vector function. The first step is the line integral, which accumulates the contributions of the vector field at each point as we travel along a curve in the space $\mathbb{R}^n$ where the field is defined. What is remarkable is that if the vector field is conservative, this integral becomes *independent* of the path and depends only on the endpoints. This can be regarded as a higher-dimensional version of [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus){: data-lid="rz832" data-relation="weak" reviewed="" }.
+We now examine the integral of a vector function. The first step is the line integral, which accumulates the contributions of the vector field at each point as we travel along a curve in the space $\mathbb{R}^n$ where the field is defined. What is remarkable is that if the vector field is conservative, this integral becomes *independent* of the path and depends only on the endpoints. This can be regarded as a higher-dimensional version of [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus){: data-lid="rz832" data-relation="weak" }.
 
 ## Line Integral
 
@@ -61,7 +61,7 @@ In particular, the line integral of a conservative field depends only on its two
 :::
 
 ::: Proof
-By [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6){: data-lid="vuire" data-relation="required" reviewed="" }, we have $\frac{d}{\dd{t}} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§The Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4){: data-lid="59ek9" data-relation="required" reviewed="" },
+By [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6){: data-lid="vuire" data-relation="required" }, we have $\frac{d}{\dd{t}} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§The Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4){: data-lid="59ek9" data-relation="required" },
 
 $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\dd{t} = \int_a^b \frac{d}{\dd{t}} f(\mathbf{r}(t))\dd{t} = f(\mathbf{r}(b)) - f(\mathbf{r}(a)).$$
 
@@ -78,7 +78,7 @@ Let $\mathbf{F}$ be continuous on a connected open region $D$. Then the followin
 :::
 
 ::: Proof
-$(1 \Rightarrow 3)$ is [Theorem 3](#thm3){: data-lid="pxo9x" data-relation="required" reviewed="" }. Here, since $\mathbf{F} = \nabla f$ is continuous, the potential $f$ is automatically $C^1$. $(3 \Leftrightarrow 2)$ follows from cutting a closed curve at a point into two paths, and noting that reversing one path yields a closed curve. The integral over this reversed path is the negative of the original integral by the change of variables $t \mapsto a + b - t$, so the integral over a closed curve being zero is equivalent to the integrals over the two paths being equal.
+$(1 \Rightarrow 3)$ is [Theorem 3](#thm3){: data-lid="pxo9x" data-relation="required" }. Here, since $\mathbf{F} = \nabla f$ is continuous, the potential $f$ is automatically $C^1$. $(3 \Leftrightarrow 2)$ follows from cutting a closed curve at a point into two paths, and noting that reversing one path yields a closed curve. The integral over this reversed path is the negative of the original integral by the change of variables $t \mapsto a + b - t$, so the integral over a closed curve being zero is equivalent to the integrals over the two paths being equal.
 
 Thus the key claim is $(3 \Rightarrow 1)$. For this, we must construct the potential directly. Fix a base point $\mathbf{x}_0 \in D$, and for any $\mathbf{x}\in D$, define $f(\mathbf{x})$ to be the line integral of $\mathbf{F}$ from $\mathbf{x}_0$ to $\mathbf{x}$. This would normally depend on the choice of curve $\mathbf{r}$ joining $\mathbf{x}_0$ and $\mathbf{x}$, but since we are assuming the third condition, this definition is well-defined. Now the average rate of change in the coordinate direction $\mathbf{e}_i$
 
@@ -112,7 +112,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\dd{t} = 1.$$
 
 :::
 
-Meanwhile, in [§Vector Fields, ⁋Proposition 6](/en/math/calculus/vector_fields#prop6){: data-lid="7o9p2" } we saw that a conservative field necessarily satisfies the irrotational condition. [Theorem 4](#thm4){: data-lid="oq6bx" data-relation="required" reviewed="" } reveals why this is not sufficient, in the language of path independence. Since being a conservative field is equivalent to the integral over every closed curve being zero, if there is even one closed curve whose integral is nonzero despite the field being irrotational, then the field is not conservative. Such examples actually arise when the domain has a hole, and the following example is precisely that.
+Meanwhile, in [§Vector Fields, ⁋Proposition 6](/en/math/calculus/vector_fields#prop6){: data-lid="7o9p2" } we saw that a conservative field necessarily satisfies the irrotational condition. [Theorem 4](#thm4){: data-lid="oq6bx" data-relation="required" } reveals why this is not sufficient, in the language of path independence. Since being a conservative field is equivalent to the integral over every closed curve being zero, if there is even one closed curve whose integral is nonzero despite the field being irrotational, then the field is not conservative. Such examples actually arise when the domain has a hole, and the following example is precisely that.
 
 ::: Example 6
 Consider the vector field on the plane with the origin removed, $\mathbb{R}^2 \setminus \{0\}$,
@@ -127,7 +127,7 @@ so this vector field is irrotational. However, traversing the unit circle $\math
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\dd{t} = 2\pi \neq 0.$$
 
-By [Theorem 4](#thm4){: data-lid="hqwyz" data-relation="required" reviewed="" }, $\mathbf{F}$ is not a conservative field on this region. The reason is that although this vector field can locally be expressed as the gradient of the polar angle $\theta = \arctan(y/x)$, the polar angle increases by $2\pi$ upon encircling the origin and thus cannot be defined as a single-valued function.
+By [Theorem 4](#thm4){: data-lid="hqwyz" data-relation="required" }, $\mathbf{F}$ is not a conservative field on this region. The reason is that although this vector field can locally be expressed as the gradient of the polar angle $\theta = \arctan(y/x)$, the polar angle increases by $2\pi$ upon encircling the origin and thus cannot be defined as a single-valued function.
 
 :::
 

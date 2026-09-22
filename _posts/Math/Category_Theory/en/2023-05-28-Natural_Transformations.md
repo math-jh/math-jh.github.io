@@ -36,7 +36,7 @@ Based on this, we can define the *functor category* $\Fun(\mathcal{A},\mathcal{B
 
 ## Equivalent Categories
 
-The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functor, ⁋Definition 9](/en/math/category_theory/functors#def9){: data-lid="234ka" data-relation="weak" reviewed="" }) This is because isomorphism between categories is too strong a condition: two categories that appear sufficiently similar may still be treated as different.
+The notion of being *equivalent*, which is frequently used between categories, is not given by isomorphism in $\Cat$. ([§Functor, ⁋Definition 9](/en/math/category_theory/functors#def9){: data-lid="234ka" data-relation="weak" }) This is because isomorphism between categories is too strong a condition: two categories that appear sufficiently similar may still be treated as different.
 
 ::: Definition 2
 A functor $F$ from a category $\mathcal{A}$ to a category $\mathcal{B}$ is called an *equivalence of categories* if there exists a functor $G:\mathcal{B}\rightarrow \mathcal{A}$ such that $\id_\mathcal{A}\simeq G\circ F$ and $\id_\mathcal{B}\simeq F\circ G$. If there exists an equivalence from $\mathcal{A}$ to $\mathcal{B}$, we say that these two categories are *equivalent* and write $\mathcal{A}\simeq\mathcal{B}$.
@@ -66,7 +66,7 @@ A functor $F:\mathcal{A}\rightarrow\mathcal{B}$ is an equivalence between catego
 > For every $B\in\obj(\mathcal{B})$, there exists some $A\in\obj(\mathcal{A})$ such that $F(A)\cong B$.
 :::
 
-Considering a skeleton of $\mathcal{A}$, the inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$ is fully faithful because it is the inclusion of a full subcategory, and the last condition of [Definition 4](#def4){: data-lid="a37tm" data-relation="required" reviewed="" } is precisely that this functor is essentially surjective. Thus, by [Theorem 5](#thm5){: data-lid="mrj0j" data-relation="required" reviewed="" }, this inclusion is an equivalence, and $\mathcal{A}\simeq\sk(\mathcal{A})$ holds. From this we obtain the following.
+Considering a skeleton of $\mathcal{A}$, the inclusion functor $\sk(\mathcal{A})\hookrightarrow\mathcal{A}$ is fully faithful because it is the inclusion of a full subcategory, and the last condition of [Definition 4](#def4){: data-lid="a37tm" data-relation="required" } is precisely that this functor is essentially surjective. Thus, by [Theorem 5](#thm5){: data-lid="mrj0j" data-relation="required" }, this inclusion is an equivalence, and $\mathcal{A}\simeq\sk(\mathcal{A})$ holds. From this we obtain the following.
 
 ::: Corollary 6
 Two small categories $\mathcal{A}$ and $\mathcal{B}$ are equivalent if and only if their skeletal subcategories $\sk(\mathcal{A})$ and $\sk(\mathcal{B})$ are isomorphic.

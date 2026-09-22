@@ -35,7 +35,7 @@ $$\iint_{\partial E} (0,0,R)\cdot d\mathbf{S} = \iiint_E \partial R/\partial z\d
 
 for the $z$-component, then $P$ and $Q$ are handled symmetrically, and adding the three contributions yields the theorem.
 
-Suppose $E$ is a solid simple in all three coordinate directions; in particular, in the $z$-direction it is $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$. The right-hand triple integral, integrating $z$ first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2){: data-lid="sybwn" data-relation="required" reviewed="" }, becomes
+Suppose $E$ is a solid simple in all three coordinate directions; in particular, in the $z$-direction it is $E = \{(x,y,z) \mid (x,y) \in D,\ u_1(x,y) \leq z \leq u_2(x,y)\}$. The right-hand triple integral, integrating $z$ first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2){: data-lid="sybwn" data-relation="required" }, becomes
 
 $$\iiint_E \frac{\partial R}{\partial z}\dd{V} = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_1)\bigr)\dd{A}.$$
 
@@ -45,7 +45,7 @@ On the other hand, $\partial E$ consists of the top face $z = u_2$, the bottom f
 The divergence theorem states that the amount flowing out through a closed surface equals the total amount produced inside by $\divergence \mathbf{F}$. Thus the intuition that divergence is "outflow per unit volume" is established as a theorem. It is also practical in that flux over a closed surface can be computed by a volume integral instead of integrating over the surface directly.
 
 ::: Example 2 (Reducing flux to a volume integral)
-In [§Surface Integrals and Flux, ⁋Example 6](/en/math/calculus/surface_integrals#ex6){: data-lid="1di1u" data-relation="weak" reviewed="" }, we directly computed the flux of $\mathbf{F} = (x,y,z)$ through a sphere of radius $R$ by a surface integral and obtained $4\pi R^3$. By the divergence theorem, since $\divergence \mathbf{F} = 3$,
+In [§Surface Integrals and Flux, ⁋Example 6](/en/math/calculus/surface_integrals#ex6){: data-lid="1di1u" data-relation="weak" }, we directly computed the flux of $\mathbf{F} = (x,y,z)$ through a sphere of radius $R$ by a surface integral and obtained $4\pi R^3$. By the divergence theorem, since $\divergence \mathbf{F} = 3$,
 
 $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3\dd{V} = 3\cdot\frac{4}{3}\pi R^3 = 4\pi R^3,$$
 
@@ -69,11 +69,11 @@ It suffices to prove the case where $S$ is the graph $z = g(x,y)$ of a $C^2$ fun
 
 $$\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r} = \oint_{\partial D} P\dd{x} + Q\dd{y} + R\dd{z} = \oint_{\partial D} (P + R g_x)\dd{x} + (Q + R g_y)\dd{y},$$
 
-and applying [§Green's Theorem, ⁋Theorem 1](/en/math/calculus/greens_theorem#thm1){: data-lid="yxboh" data-relation="required" reviewed="" } to the planar region $D$ gives
+and applying [§Green's Theorem, ⁋Theorem 1](/en/math/calculus/greens_theorem#thm1){: data-lid="yxboh" data-relation="required" } to the planar region $D$ gives
 
 $$\iint_D \bigl[\partial_x(Q + R g_y) - \partial_y(P + R g_x)\bigr]\dd{A}.$$
 
-Noting that $P, Q, R$ are evaluated at $(x, y, g(x,y))$ and differentiating by the chain rule, the terms $R g_{xy}$ and $R g_{yx}$ cancel by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-lid="f0u7b" data-relation="required" reviewed="" }, and simplifying yields the integrand
+Noting that $P, Q, R$ are evaluated at $(x, y, g(x,y))$ and differentiating by the chain rule, the terms $R g_{xy}$ and $R g_{yx}$ cancel by [§Functions of Several Variables and Partial Derivatives, ⁋Theorem 7](/en/math/calculus/partial_derivatives#thm7){: data-lid="f0u7b" data-relation="required" }, and simplifying yields the integrand
 
 $$(Q_x - P_y) + (Q_z - R_y)g_x + (R_x - P_z)g_y.$$
 
@@ -93,7 +93,7 @@ Since $D$ is simply connected, any closed curve $C$ in $D$ can be filled by a su
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S} = 0,$$
 
-and since the integral vanishes over every closed curve, $\mathbf{F}$ is conservative by [§Line Integrals, ⁋Theorem 4](/en/math/calculus/line_integrals#thm4){: data-lid="r4tpr" data-relation="required" reviewed="" }.
+and since the integral vanishes over every closed curve, $\mathbf{F}$ is conservative by [§Line Integrals, ⁋Theorem 4](/en/math/calculus/line_integrals#thm4){: data-lid="r4tpr" data-relation="required" }.
 :::
 
 ::: Example 5

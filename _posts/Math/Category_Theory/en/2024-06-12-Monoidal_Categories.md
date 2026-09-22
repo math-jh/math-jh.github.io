@@ -20,7 +20,7 @@ In this post and the next, we examine monoidal categories and monoid objects def
 
 ## Monoid
 
-We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-lid="lv0oq" data-relation="weak" reviewed="" }) Unpacking this, the statement that $M$ is a monoid means the following.
+We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-lid="lv0oq" data-relation="weak" }) Unpacking this, the statement that $M$ is a monoid means the following.
 
 > There exists a binary operation $\mu:M\times M \rightarrow M$ defined on $M$, and an element $e\in M$ of $M$, such that
 >
@@ -88,7 +88,7 @@ For a monoidal category $(\mathcal{A},\otimes,I)$ and a natural isomorphism $\ga
 
 $$\gamma_{A,B\otimes C}=\alpha_{B,C,A}\circ(\id_B\otimes\gamma_{A,C})\circ\alpha_{B,A,C}^{-1}\circ(\gamma_{A,B}\otimes\id_C)\circ\alpha_{A,B,C}$$
 
-holds, we call this data a *braided monoidal category*. The two hexagons are generally independent conditions, so one alone does not imply the other, but if the inverse law holds, one implies the other. This is why [Definition 1](#def1){: data-lid="9qded" data-relation="required" reviewed="" } only required one hexagon for a symmetric monoidal category, and therefore a symmetric monoidal category is a braided monoidal category satisfying the inverse law.
+holds, we call this data a *braided monoidal category*. The two hexagons are generally independent conditions, so one alone does not imply the other, but if the inverse law holds, one implies the other. This is why [Definition 1](#def1){: data-lid="9qded" data-relation="required" } only required one hexagon for a symmetric monoidal category, and therefore a symmetric monoidal category is a braided monoidal category satisfying the inverse law.
 
 The coherence conditions for the associator and unitors are used when proving Mac Lane's coherence theorem. Roughly speaking, this states that given a product $A_1\otimes\cdots\otimes A_n$ of $n$ objects, no matter which order we compute in or (in the case of a symmetric monoidal category) which order we rearrange them in, the results are naturally isomorphic, and this is uniquely expressed as a composition of associators, unitors, and (in the case of a symmetric monoidal category) symmetors. However, in a symmetric monoidal category, uniqueness only holds among compositions inducing the same permutation of the objects. For example, when $A_1=A_2=A$, both $\id_{A\otimes A}$ and $\gamma_{A,A}$ appear as compositions from $A\otimes A$ to itself.
 
@@ -97,7 +97,7 @@ Anyway, thanks to the coherence theorem, we know that the monoidal product does 
 ::: Example 2
 The following are all examples of monoidal categories.
 
-- Equipping $\Set$ with the usual product ([§Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-lid="5zxyg" data-relation="weak" reviewed="" }) and taking $I$ to be any singleton makes $\Set$ a symmetric monoidal category.
+- Equipping $\Set$ with the usual product ([§Limits, ⁋Example 6](/en/math/category_theory/limits#ex6){: data-lid="5zxyg" data-relation="weak" }) and taking $I$ to be any singleton makes $\Set$ a symmetric monoidal category.
 - Equipping $\Grp$ with the usual product and taking $I$ to be the trivial group $\{e\}$ makes $\Grp$ a symmetric monoidal category.
 - Giving $\Top$ the product structure as the product topology and taking $I$ to be any singleton makes $\Top$ a symmetric monoidal category.
 - For any commutative ring $R$, the category $\lMod{R}$ of $R$-modules is a symmetric monoidal category with respect to the tensor product $\otimes$.
