@@ -10664,6 +10664,13 @@ L:
   see:
   - label: Moore-Penrose pseudoinverse
     id: moore-penrose_pseudoinverse
+- id: least-squares_solution
+  en: least-squares solution
+  ko: 최소제곱해
+  primary: en
+  defs:
+  - label: '[선형대수학] §최소제곱법'
+    url: /ko/math/linear_algebra/least_squares_method
 - id: least_upper_bound
   en: least upper bound
   ko: 최소상계
@@ -12996,6 +13003,13 @@ N:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: normal_equation
+  en: normal equation
+  ko: 정규방정식
+  primary: en
+  defs:
+  - label: '[선형대수학] §최소제곱법'
+    url: /ko/math/linear_algebra/least_squares_method
 - id: normal_extension
   en: normal extension
   ko: 정규확대
