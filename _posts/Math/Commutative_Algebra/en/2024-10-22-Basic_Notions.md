@@ -176,7 +176,7 @@ For a Noetherian ring $A$ and an $A$-module $M$, the following are all equivalen
 3. $M$ is coherent.
 :::
 ::: Proof
-The equivalence of conditions 1 and 2 has already been examined. Also, by definition a coherent $A$-module is always finitely generated. Thus it suffices to assume that $M$ is finitely generated and show that $M$ is coherent. This follows by applying [Proposition 5](#prop5){: data-relation="required" } to the kernel of any given $A$-linear map $A^{\oplus n}\rightarrow M$, which is a submodule of $A^{\oplus n}$.
+The equivalence of conditions 1 and 2 has already been examined. Also, by definition a coherent $A$-module is always finitely generated. Thus it suffices to assume that $M$ is finitely generated and show that $M$ is coherent. This follows by applying [Proposition 5](#prop5){: data-relation="required" reviewed="" } to the kernel of any given $A$-linear map $A^{\oplus n}\rightarrow M$, which is a submodule of $A^{\oplus n}$.
 :::
 
 ## Prime Ideals
