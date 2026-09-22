@@ -129,7 +129,7 @@ Therefore, replacing every occurrence of $\mathbb{Z}$ in the above argument with
 
 $$\omega_M^A(U)=\prod_{x\in U}\Iso_A(H_m(M,M\setminus\{x\};A), \underline{A}_x)$$
 
-and the notion of a global $A$-orientation defined from it. The resulting $A$-orientation sheaf $\omega_M^A$ is nothing other than $\or_M\otimes A$.
+and the notion of a global $A$-orientation defined from it. The resulting $A$-orientation sheaf $\omega_M^A$ is nothing other than the subsheaf of $\or_M\otimes A$ collecting only the $A^\times$ of each stalk.
 
 To derive a result like [Proposition 6](#prop6){: data-lid="wv3lo" data-relation="weak" } from this definition, let us revisit [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11){: data-lid="v37uy" data-relation="required" }. For each covering space $p:E \rightarrow M$, we considered the $\pi_1(M,x)$-action on the fiber $p^{-1}(x)$ defined by the monodromy functor, which was the same as considering a group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$. Then, for the covering space $p:\Spe(\omega_M)\rightarrow M$, we must examine how the $\pi_1(M,x)$-action is defined; here, the fiber $p^{-1}(x)$ is defined from the automorphisms of the stalk $\mathbb{Z}$,
 
@@ -365,9 +365,9 @@ $$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^i\mathcal{L}_{\sigma_i}(a) (\sigma\vert_{
 
 Here $\mathcal{L}_{\sigma_i}$ is obtained by applying the functor $\Pi_1(M) \rightarrow \Ab$ to the path obtained by sending the edge joining the first vertex $\sigma(e_0)$ of the original simplex and the first vertex of the $i$-th face into $M$. In nice situations like ours, we know that even if we consider the chain complex obtained by constructing
 
-$$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(M)]} A$$
+$$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(M)]} L$$
 
-using the universal cover $\widetilde{M}$ of $M$, the monodromy action (i.e., Deck transformation) acting on it, and the monodromy representation $\pi_1(M)\rightarrow \Aut(A)$, this gives the same homology group as the one above.
+using the universal cover $\widetilde{M}$ of $M$, the monodromy action (i.e., Deck transformation) acting on it, and the monodromy representation $\pi_1(M)\rightarrow \Aut(L)$, this gives the same homology group as the one above.
 
 In a sense, this might be seen as a somewhat excessive generalization, because to describe the non-orientable version of Poincaré duality we will anyway set the local coefficient system $\mathcal{L}$ to be the constant sheaf $\underline{A}$. However, through this generalization we can also generalize the cohomology part, and this generalization makes Poincaré duality somewhat more transparent.
 
