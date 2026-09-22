@@ -175,7 +175,7 @@ $W'$를 $W$의 orthogonal complement로 잡으면, $W'$ 또한 $G$-invariant sub
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7){: data-lid="jp86p" data-relation="required" }이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §반단순가군, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" data-relation="required" }). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7){: data-lid="vrt42" data-relation="required" }에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11){: data-lid="fblol" data-relation="required" }에 의하여 simple algebra들의 곱으로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7){: data-lid="jp86p" data-relation="required" }이 주장하는 것은 임의의 유한차원 $G$-representation $V$는 항상 *semisimple* $\mathbb{C}[G]$-module이라는 것이다 ([\[환론\] §반단순가군, ⁋정의 2](/ko/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" data-relation="required" }). 따라서 $\mathbb{C}[G]$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7){: data-lid="vrt42" data-relation="required" }에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §아틴-웨더번 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11){: data-lid="fblol" data-relation="required" }에 의하여 simple algebra들의 곱으로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
