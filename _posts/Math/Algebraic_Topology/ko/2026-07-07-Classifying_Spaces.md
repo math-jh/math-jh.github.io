@@ -19,7 +19,7 @@ $$E(\gamma^k_\infty)\rightarrow \Gr(k, \mathbb{R}^\infty)$$
 
 이 그러한 역할을 하였으며 ([§슈티펠-휘트니 특성류, §§그라스만 다양체](/ko/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체){: data-lid="2d8w9" data-relation="weak" reviewed="" }) complex vector bundle에서도 비슷한 construction이 존재했다. ([§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8){: data-lid="7mwe2" data-relation="weak" reviewed="" }) 한편 vector bundle의 pullback은 오직 map의 homotopy class에만 의존하므로, 고정된 공간 $B$ 위의 rank $k$ vector bundle의 isomorphism class는 이들 공간으로의 함수들의 homotopy class들의 모임 $[B, \Gr(k, \mathbb{R}^\infty)]$ (혹은 $[B, \Gr(k, \mathbb{C}^\infty)]$)이 된다. 
 
-한편, vector bundle을 살펴보는 또 다른 관점은 이를 transition function들의 모임으로 생각하는 것이었다. 가령 임의의 vector bundle은 두 개의 trivializing open cover가 겹치는 곳에서
+한편, vector bundle을 살펴보는 또 다른 관점은 이를 transition function들의 모임으로 생각하는 것이었다. 가령 임의의 vector bundle은 trivializing open cover의 두 열린집합이 겹치는 곳에서
 
 $$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
 

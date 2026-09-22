@@ -87,7 +87,7 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 
 그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-lid="s427t" data-relation="required" reviewed="" }의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 한점공간이 아닌 한 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" reviewed="" })
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 해만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 한점공간이 아닌 한 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 두 점 이상을 갖는 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" reviewed="" })
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
@@ -263,7 +263,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 가 된다. 이를 염두에 두면 다음의 정의 또한 이해할 수 있다. 
 
 ::: 정의 14
-임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U=D(h)$ 위에서 $0$이 되지 않는 다항식이다. 
+임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $U=V\cap D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U=D(h)$ 위에서 $0$이 되지 않는 다항식이다. 
 :::
 
 그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. $\mathbb{K}$가 algebraically closed일 때 이 두 정의 [정의 11](#def11){: data-lid="mzasp" data-relation="required" reviewed="" }과 [정의 14](#def14){: data-lid="it7y1" data-relation="required" reviewed="" }이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14){: data-lid="abi7t" data-relation="required" reviewed="" }에서 [정의 11](#def11){: data-lid="qkry5" data-relation="required" reviewed="" }을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
@@ -334,5 +334,5 @@ $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
 **참고문헌**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[Ful]** W. Fulton, *Algebraic Curves*, 2008. (Available online)

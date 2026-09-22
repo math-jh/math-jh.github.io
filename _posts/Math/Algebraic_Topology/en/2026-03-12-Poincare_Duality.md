@@ -197,7 +197,7 @@ $$(\alpha_{C_1},-\alpha_{C_2})\in H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus
 
 in (3), this element belongs to the kernel of $H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)\rightarrow H_m(M, M\setminus (C_1\cap C_2);A)$, and therefore we can choose an element of $H_m(M,M\setminus (C_1\cup C_2);A)$; uniqueness follows from the injectivity of
 
-$$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C_2))\rightarrow H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
+$$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C_2);A)\rightarrow H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
 
 Now, for the base case of the induction, it suffices to consider the case where $M=\mathbb{R}^m$ and $C$ is a convex compact subset. This is because after covering a compact set of an arbitrary manifold $M$ by Euclidean charts and using compactness, it suffices to assume $M=\mathbb{R}^m$, and inside $\mathbb{R}^m$ it is enough to look only at sets containing $C$ that are finite unions $K$ of closed balls. For the maps given by the inclusion relation $\mathbb{R}^m\setminus K\subseteq\mathbb{R}^m\setminus C$,
 

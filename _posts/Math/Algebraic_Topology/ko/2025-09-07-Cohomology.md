@@ -351,7 +351,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 
 ## 아일렌베르크-질버 정리와 퀴네트 공식
 
-[보조정리 8](#lem8){: data-lid="k7evk" data-relation="weak" reviewed="" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
+[보조정리 8](#lem8){: data-lid="k7evk" data-relation="weak" reviewed="" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 chain complex $C_\bullet(X\times Y)$와, 두 chain complex의 tensor product $(C(X)\otimes C(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이들 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 
 ::: 정리 9 (Eilenberg-Zilber)
 두 위상공간 $X,Y$와 이들로부터 얻어지는 chain complex $C_\bullet(X),C_\bullet(Y)$, 그리고 $C_\bullet(X\times Y)$에 대하여, 두 chain complex $(C(X)\otimes C(Y))_\bullet$과 $C_\bullet(X\times Y)$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
@@ -408,4 +408,4 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 
 ---
 
-[^1]: 물론 우리는 이 pairing이 $H^k(X;A)$에서 $\Hom(H_k(X),A)$로의 homomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $\Ext$ 항이 나와야 한다는 것을 [명제 3](#prop3){: data-lid="7yee4" data-relation="weak" reviewed="" }로부터 알고 있다.
+[^1]: 물론 우리는 이 pairing이 $H^k(X;A)$에서 $\Hom(H_k(X),A)$로의 isomorphism을 주는 것을 바랄 것이나, 상황이 이처럼 단순하지는 않고 숨겨진 torsion을 담고 있는 $\Ext$ 항이 나와야 한다는 것을 [명제 3](#prop3){: data-lid="7yee4" data-relation="weak" reviewed="" }로부터 알고 있다.

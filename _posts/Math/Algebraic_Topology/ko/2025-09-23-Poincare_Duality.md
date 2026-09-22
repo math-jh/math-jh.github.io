@@ -129,7 +129,7 @@ $$H_m(M,M\setminus \{x\};A)\cong H_m(M,M\setminus\{x\})\otimes_\mathbb{Z}A\cong 
 
 $$\omega_M^A(U)=\prod_{x\in U}\Iso_A(H_m(M,M\setminus\{x\};A), \underline{A}_x)$$
 
-그리고 이로부터 정의되는 global $A$-orientation의 개념을 얻을 것이다. 이렇게 얻어지는 $A$-orientation sheaf $\omega_M^A$는 별다른 것이 아니라 $\or_M\otimes A$에 불과하다.
+그리고 이로부터 정의되는 global $A$-orientation의 개념을 얻을 것이다. 이렇게 얻어지는 $A$-orientation sheaf $\omega_M^A$는 별다른 것이 아니라 $\or_M\otimes A$에서, 각 stalk의 $A^\times$만 모은 subsheaf이다. 
 
 이 정의에서 [명제 6](#prop6){: data-lid="wv3lo" data-relation="weak" reviewed="" }과 같은 결과를 도출하기 위해 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11){: data-lid="v37uy" data-relation="required" reviewed="" }를 다시 살펴보자. 우리는 각각의 covering space $p:E \rightarrow M$에 대하여, fiber $p^{-1}(x)$ 위에 monodromy functor가 정의하는 $\pi_1(M,x)$-action을 생각하였고, 이는 곧 group homomorphism $\pi_1(M,x)\rightarrow \Aut(p^{-1}(x))$를 생각하는 것과 같았다. 그렇다면 covering space $p:\Spe(\omega_M)\rightarrow M$에 대하여 $\pi_1(M,x)$-action은 어떻게 정의되는지를 살펴보아야 하는데, 이 때 fiber $p^{-1}(x)$는 stalk $\mathbb{Z}$의 automorphism 
 
@@ -197,7 +197,7 @@ $$(\alpha_{C_1},-\alpha_{C_2})\in H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus
 
 를 생각하면 이 원소는 $H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)\rightarrow H_m(M, M\setminus (C_1\cap C_2);A)$의 kernel에 속하고, 따라서 $H_m(M,M\setminus (C_1\cup C_2);A)$의 원소를 택할 수 있고 유일성은
 
-$$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C_2))\rightarrow H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
+$$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C_2);A)\rightarrow H_m(M,M\setminus C_1;A)\oplus H_m(M,M\setminus C_2;A)$$
 
 의 injectivity로부터 나온다. 
 
@@ -367,9 +367,9 @@ $$C_k(M,\mathcal{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathcal{L}_{\sigma
 
 $$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^i\mathcal{L}_{\sigma_i}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
-로 정의된다. 여기서 $\mathcal{L}_{\sigma_i}$는 원래 simplex의 첫 번째 vertex $\sigma(e_0)$과, $i$번째 face의 첫 번째 vertex를 잇는 edge를 $M$으로 보내어 얻어진 path에 functor $\Pi_1(M) \rightarrow \Ab$를 적용하여 얻어진 것이다. 우리의 상황과 같이 좋은 경우, 우리는 $M$의 universal cover $\widetilde{M}$과 이 위에 작용하는 monodromy action (즉 Deck transformation), 그리고 monodromy representation $\pi_1(M)\rightarrow \Aut(A)$을 사용하여 다음의 chain complex
+로 정의된다. 여기서 $\mathcal{L}_{\sigma_i}$는 원래 simplex의 첫 번째 vertex $\sigma(e_0)$과, $i$번째 face의 첫 번째 vertex를 잇는 edge를 $M$으로 보내어 얻어진 path에 functor $\Pi_1(M) \rightarrow \Ab$를 적용하여 얻어진 것이다. 우리의 상황과 같이 좋은 경우, 우리는 $M$의 universal cover $\widetilde{M}$과 이 위에 작용하는 monodromy action (즉 Deck transformation), 그리고 monodromy representation $\pi_1(M)\rightarrow \Aut(L)$을 사용하여 다음의 chain complex
 
-$$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(M)]} A$$
+$$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(M)]} L$$
 
 를 구성하여 얻어지는 chain complex를 생각하여도 이것이 위의 homology group과 같은 homology group을 주는 것을 안다. 
 

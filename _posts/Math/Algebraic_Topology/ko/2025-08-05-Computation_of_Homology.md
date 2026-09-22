@@ -253,7 +253,7 @@ $$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(
 
 $$\cdots \rightarrow 0 \rightarrow H_{n+1}(V, U\cap V)\rightarrow H_{n+1}(X,U)\rightarrow 0 \rightarrow \cdots\tag{4}$$
 
-가 존재한다. 이 때 $\Cone(\alpha)$의 differential은 첫째 성분의 원소를 둘째 성분으로도 보내므로 두 성분이 그대로 분리되지는 않으나, isomorphism들 $i_V$가 정의하는 change of basis를 거치면 $\Cone(\alpha)$를 이 자명한 long exact sequence와 다음의 long exact sequence
+가 존재한다. 이 때 $\Cone(\alpha)$의 differential은 첫째 성분의 원소를 둘째 성분으로도 보내므로 두 성분이 그대로 분리되지는 않으나, excision에 의한 isomorphism들이 정의하는 change of basis를 거치면 $\Cone(\alpha)$를 이 자명한 long exact sequence와 다음의 long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarrow H_n(U\cap V)\rightarrow H_n(U)\oplus H_n(V)\rightarrow\cdots\tag{5}$$
 

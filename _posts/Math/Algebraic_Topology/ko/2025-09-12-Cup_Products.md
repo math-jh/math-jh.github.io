@@ -72,9 +72,9 @@ $$H_p(X;A)\otimes_A H_q(X;A)\rightarrow H_{p+q}(X\times X;A)$$
 
 까지는 만들 수 있을 것이나, diagonal map $\Delta:X\rightarrow X\times X$에 homology functor를 취하는 것은 covariant이므로 방향이 맞지 않을 것이기 때문이다.
 
-명시적으로, 임의의 $\alpha\in H^p(X;A)$, $\beta\in H^q(X;A)$에 대하여, $\alpha\smile\beta\in H^{p+q}(X;A)$는 임의의 singular simplex $\sigma:\Delta^{p+q}\rightarrow X$ 위에서 다음의 식
+명시적으로, 임의의 $\alpha\in H^p(X;A)$, $\beta\in H^q(X;A)$에 대하여, 이들의 representative들을 $\overline{\alpha}\in C^p(X;A)$, $\overline{\beta}\in C^q(X;A)$라 하면, $\alpha\smile\beta\in H^{p+q}(X;A)$는 임의의 singular simplex $\sigma:\Delta^{p+q}\rightarrow X$ 위에서 다음의 식
 
-$$(\alpha\smile\beta)(\sigma)=(\Delta^\ast\AW^\ast(\alpha\mathbin{\bar{\times}}\beta))(\sigma)=(\alpha\mathbin{\bar{\times}}\beta)(\AW(\Delta(\sigma)))=(-1)^{pq}\alpha(\text{front face of $\sigma$})\beta(\text{back face of $\sigma$})$$
+$$(\overline{\alpha}\smile\overline{\beta})(\sigma)=(\Delta^\ast\AW^\ast(\overline{\alpha}\times\overline{\beta}))(\sigma)=(\overline{\alpha}\times\overline{\beta})(\AW(\Delta(\sigma)))=(-1)^{pq}\overline{\alpha}(\text{front face of $\sigma$})\overline{\beta}(\text{back face of $\sigma$})$$
 
 으로 주어진다. 이 명시적인 계산에서 알 수 있듯, de Rham cohomology에서 cup product는 아주 익숙한 것으로, differential form들의 wedge product에 해당하는 것이다.
 

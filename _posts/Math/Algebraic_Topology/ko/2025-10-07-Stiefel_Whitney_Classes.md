@@ -309,11 +309,11 @@ $$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+n})$$
 
 을 *infinite Grassmannian*이라 부른다. 마찬가지 방식으로 total space들의 direct limit
 
-$$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
+$$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{n})$$
 
 이 정의되며 이것이 $\Gr(k,\mathbb{R}^\infty)$ 위의 rank $k$ vector bundle을 정의한다. 이들은 당연히 inclusion $\mathbb{R}^{k+n}\hookrightarrow \mathbb{R}^{k+n+1}$의 선택에 의존하지 않는다. 
 
-직관적으로 $\Gr(k,\mathbb{R}^\infty)$는 각각의 $\Gr(k,\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n+k})$들도 이 구조와 호환되도록 붙어있게 된다. 
+직관적으로 $\Gr(k,\mathbb{R}^\infty)$는 각각의 $\Gr(k,\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n})$들도 이 구조와 호환되도록 붙어있게 된다. 
 
 Finite Grassmannian의 Schubert cycle들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 우리의 convention에서 $\Omega_\lambda(F_\bullet)$은 codimension $\lvert\lambda\rvert$이므로 그 차원이 $n$과 함께 커지기 때문이다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert class들은 이 inclusion들에 대해 잘 행동한다. 즉 새 방향을 flag의 맨 아래에 붙여 $F'_1$을 그 방향으로, $F'_{j+1}=F'_1\oplus F_j$로 잡으면 $\Omega_\lambda(F'_\bullet)$을 정의하는 조건을 $\Gr(k,\mathbb{R}^{k+i})$의 원소에 대해 읽은 것이 $\Omega_\lambda(F_\bullet)$을 정의하는 조건과 같아지므로, inclusion $\iota:\Gr(k,\mathbb{R}^{k+i})\hookrightarrow \Gr(k,\mathbb{R}^{k+i+1})$에 대하여 $\iota^\ast\sigma_\lambda=\sigma_\lambda$이다. 이렇게 각각의 $\lambda$마다 $\Gr(k,\mathbb{R}^\infty)$의 cohomology class $\sigma_\lambda$가 결정된다. 
 
