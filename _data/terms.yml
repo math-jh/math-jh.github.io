@@ -5487,6 +5487,13 @@ E:
   - label: 특성다항식
     lang: ko
     id: characteristic_polynomial
+- id: eigenspace_decomposition
+  en: eigenspace decomposition
+  ko: 고유공간분해
+  primary: en
+  defs:
+  - label: '[선형대수학] §고유공간분해'
+    url: /ko/math/linear_algebra/eigenspace_decomposition
 - id: eigenvalue
   en: eigenvalue
   ko: 고윳값
@@ -9550,6 +9557,13 @@ I:
   defs:
   - label: '[호몰로지 대수학] §군 코호몰로지'
     url: /ko/math/homological_algebra/group_cohomology
+- id: invariant_subspace
+  en: invariant subspace
+  ko: 불변부분공간
+  primary: en
+  defs:
+  - label: '[선형대수학] §고유공간분해'
+    url: /ko/math/linear_algebra/eigenspace_decomposition
 - id: inverse
   en: inverse
   ko: 역
@@ -17155,6 +17169,13 @@ S:
   defs:
   - label: '[리 이론] §Borel subgroup'
     url: /ko/math/lie_theory/borel_subgroup
+- id: simultaneous_diagonalization
+  en: simultaneous diagonalization
+  ko: 동시대각화
+  primary: ko
+  defs:
+  - label: '[선형대수학] §고유공간분해'
+    url: /ko/math/linear_algebra/eigenspace_decomposition
 - id: simultaneous_generalized_eigenspace
   en: simultaneous generalized eigenspace
   ko: 동시 일반화고유공간
