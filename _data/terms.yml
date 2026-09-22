@@ -5531,6 +5531,13 @@ E:
     id: cohomology
   - label: Homology
     id: homology
+- id: elementary_matrix
+  en: elementary matrix
+  ko: 기본행렬
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: elementary_row_operation
   en: elementary row operation
   ko: 기본행연산
@@ -7284,6 +7291,13 @@ G:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+- id: gauss-jordan_elimination
+  en: Gauss-Jordan elimination
+  ko: 가우스-요르단 소거법
+  primary: en
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: gauss-manin_connection
   en: Gauss-Manin connection
   ko: 가우스-마닌 접속
