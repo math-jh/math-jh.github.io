@@ -177,6 +177,35 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .modal__box{background:var(--paper);border:1px solid var(--ink);margin:auto;width:min(940px,92vw);max-height:82vh;display:flex;flex-direction:column}
 .modal__head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--rule);font-family:var(--sans);font-size:.8rem}
 .modal__box pre{margin:0;padding:1rem;overflow:auto;font-family:var(--mono);font-size:.75rem;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.modal__rich{overflow:auto;padding:.4rem 1.2rem 1rem}
+.modal__rich[hidden]{display:none}
+
+/* KO 원문 지적 상세 (koReviewHtml) */
+.kr{list-style:none;margin:0;padding:0;counter-reset:kr}
+.kr__item{counter-increment:kr;padding:1rem 0 1.1rem;border-bottom:1px solid var(--rule)}
+.kr__item:last-child{border-bottom:0}
+.kr__head{display:flex;align-items:baseline;gap:.7rem;font-family:var(--mono);font-size:.74rem}
+.kr__head::before{content:counter(kr) ".";color:var(--muted)}
+.kr__loc{font-weight:700;color:var(--ink)}
+.kr__v{letter-spacing:.06em}
+.kr__v--valid{color:var(--bad)}
+.kr__v--unsure{color:var(--warn)}
+.kr__v--none,.kr__v--false{color:var(--muted)}
+.kr__kind,.kr__src{color:var(--muted)}
+.kr__src{margin-left:auto}
+.kr__quote{margin:.6rem 0 .7rem;padding:.1rem 0 .1rem .9rem;border-left:2px solid var(--brass);font-size:.92rem;line-height:1.75;word-break:break-word}
+.kr__rows{display:grid;grid-template-columns:3.6rem 1fr;gap:.35rem .8rem;margin:0;font-size:.86rem;line-height:1.7}
+.kr__rows dt{font-family:var(--sans);font-size:.72rem;font-weight:700;color:var(--muted);padding-top:.2rem}
+.kr__rows dd{margin:0;word-break:break-word}
+.kr__rows dd.kr__fix{color:var(--ok)}
+.kr__false{margin-top:.6rem;border-top:1px solid var(--ink);padding-top:.5rem}
+.kr__false summary{cursor:pointer;font-family:var(--sans);font-size:.74rem;color:var(--muted)}
+.kr__false .kr__item{opacity:.7}
+.kr__reject{margin-top:1rem;padding-top:.6rem;border-top:1px solid var(--ink);font-size:.84rem}
+.kr__reject b{font-family:var(--sans);font-size:.74rem;color:var(--bad)}
+.kr__reject p{margin:.3rem 0 0;white-space:pre-wrap}
+.kr__meta{margin:1.2rem 0 0;font-family:var(--sans);font-size:.7rem;color:var(--muted)}
+@media (max-width:600px){.kr__rows{grid-template-columns:1fr;gap:.1rem}.kr__rows dd{margin-bottom:.4rem}}
 
 /* ── 마스트헤드 — 블로그(_masthead.scss + skins)와 같은 고정색, 양쪽 모드 공통 ── */
 .mh{position:relative;z-index:20;background:#0a1120;border-bottom:1px solid var(--rule)}
@@ -320,3 +349,11 @@ html::-webkit-scrollbar-thumb,.tbl-scroll::-webkit-scrollbar-thumb,pre.log::-web
 .lp__err{font-family:var(--sans);font-size:.72rem;color:var(--bad)}
 .lp__why{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);border-top:1px solid var(--rule);padding-top:.5rem}
 .lp__line+.lp__line{margin-top:.3rem}
+.typo-note{display:block;margin-top:.3rem;color:var(--brass);font:600 .68rem/1.35 var(--sans)}
+.typo-note[hidden]{display:none}
+.kr__note{margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--ink)}
+.kr__note label{display:block;font-family:var(--sans);font-size:.74rem;font-weight:700;margin-bottom:.4rem}
+.kr__note textarea{display:block;box-sizing:border-box;width:100%;resize:vertical;padding:.5rem .6rem;border:1px solid var(--rule);border-radius:0;background:var(--code-bg);color:var(--ink);font:.86rem/1.6 var(--serif)}
+.kr__note textarea:focus{outline:none;border-color:var(--ink)}
+.kr__note-bar{display:flex;align-items:center;gap:.8rem;margin-top:.4rem;font-family:var(--sans);font-size:.72rem}
+.kr__note p{margin:.5rem 0 0;font-family:var(--sans);font-size:.7rem;color:var(--muted)}

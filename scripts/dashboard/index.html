@@ -9,6 +9,11 @@
      절대경로로 둔다: /dash/ 와 구 상세 경로가 같은 아이콘을 가리키게. -->
 <link rel="icon" type="image/svg+xml" href="/dash/favicon-gauge5.svg">
 <link rel="stylesheet" href="/dash/dashboard.css">
+<!-- KO 원문 지적 모달의 수식 렌더용 — 블로그(dev 서버)의 KaTeX·매크로를 그대로 쓴다 -->
+<link rel="stylesheet" href="/assets/katex/katex.min.css">
+<script defer src="/assets/js/katex-macros.js"></script>
+<script defer src="/assets/katex/katex.min.js"></script>
+<script defer src="/assets/katex/contrib/auto-render.min.js"></script>
 <script>
 /* pre-paint 테마 적용 — 블로그와 같은 MTHEME 쿠키(auto|light|dark)를 읽는다.
    로직 원본은 블로그의 _includes/js/theme-core.js. */
@@ -32,6 +37,7 @@
       <button id="modal-close" class="ghost-btn">닫기</button>
     </div>
     <pre id="modal-body"></pre>
+    <div id="modal-rich" class="modal__rich" hidden></div>
   </div>
 </div>
 

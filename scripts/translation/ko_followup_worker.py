@@ -6,6 +6,9 @@ present when a run starts is handled sequentially: Antigravity proposes the
 narrowly scoped EN replacement, then Codex sees only the original finding plus
 KO/EN unified diffs plus the final English text and decides whether both sides
 implement that finding.
+The author may attach a note to a request (dashboard, same request key); both
+models receive it as the author's message, and it is removed with the request
+once the follow-up passes.
 Each queue item is removed only after its own passing check and successful
 content commit; a waiting item does not block later requests in the same run.
 """
@@ -28,6 +31,10 @@ import translate_worker as tw
 
 
 REQUEST_STATE = Path.home() / ".local/state/blog_dashboard_kotypo.json"
+# 대시보드가 쓰는 요청별 메모 {request_key: {"note", "at"}}. 쓰기는 대시보드
+# server.py :: _kotypo_note 와 같은 flock 을 잡는다.
+NOTE_STATE = Path.home() / ".local/state/blog_dashboard_kotypo_notes.json"
+NOTE_LOCK = Path(f"{NOTE_STATE}.lock")
 LOG_PREFIX = "KO-FOLLOWUP"
 MAX_REPLACEMENTS = 12
 MAX_PROPOSAL_ATTEMPTS = 2
@@ -55,6 +62,37 @@ def _write_json(path: Path, value: dict) -> None:
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8")
     tmp.replace(path)
+
+
+def _author_note(request_key: str) -> str:
+    entry = _read_json(NOTE_STATE).get(request_key)
+    return str(entry.get("note") or "").strip() if isinstance(entry, dict) else ""
+
+
+def _drop_note(request_key: str) -> None:
+    with open(NOTE_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        notes = _read_json(NOTE_STATE)
+        if notes.pop(request_key, None) is not None:
+            _write_json(NOTE_STATE, notes)
+
+
+def _prune_notes(files: dict) -> None:
+    """지적이 해소됐거나 재감사로 키가 바뀐 메모를 지운다 (체크 여부와 무관)."""
+    with open(NOTE_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        notes = _read_json(NOTE_STATE)
+        live = {
+            f"{path}@{entry.get('ko_reviewed_at')}"
+            for path, entry in files.items()
+            if entry.get("ko_reviewed_at") and entry.get("verify_ko_typos_review")
+        }
+        orphan = [key for key in notes if key not in live]
+        if orphan:
+            for key in orphan:
+                notes.pop(key)
+            _write_json(NOTE_STATE, notes)
+            log(f"orphan note {len(orphan)}건 정리")
 
 
 def _repair_latex_controls(value):
@@ -169,6 +207,11 @@ only English changes required by the accepted KO changes. Preserve every unrelat
 byte, all LaTeX, Jekyll syntax, anchors, references, and translation provenance.
 Do not correct or enrich anything outside the original findings.
 
+AUTHOR NOTE is a message from the Korean author about this follow-up (for
+example, how a finding was resolved, why a finding was left unchanged, or how
+the English should read). Follow it for the English where it stays within the
+original findings and the corrected Korean.
+
 If REVIEW FEEDBACK is present, the previous proposal failed final review. Make a
 new replacement plan from CURRENT EN that directly resolves that feedback while
 remaining within the original findings.
@@ -186,6 +229,9 @@ ORIGINAL FINDINGS:
 KO DIFF (audit baseline -> current):
 @@KO_DIFF@@
 
+AUTHOR NOTE:
+@@AUTHOR_NOTE@@
+
 REVIEW FEEDBACK:
 @@REVIEW_FEEDBACK@@
 
@@ -198,11 +244,12 @@ CURRENT EN:
 
 def antigravity_candidate(
     current_en: str, findings: list[dict], ko_diff: str,
-    review_feedback: str = "",
+    review_feedback: str = "", author_note: str = "",
 ) -> str:
     prompt = (ANTIGRAVITY_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
+              .replace("@@AUTHOR_NOTE@@", author_note or "(none)")
               .replace("@@REVIEW_FEEDBACK@@", review_feedback or "(none; first proposal)")
               .replace("@@CURRENT_EN@@", current_en))
     payload = tw._parse_json_object(tw.call_translator(prompt, thinking=False))
@@ -237,6 +284,14 @@ correction. Do not fail harmless spelling, punctuation, or synonymous terminolog
 cleanup within the same edited sentence; fail only an unrelated semantic change or
 an English change unsupported by the corrected KO.
 
+AUTHOR NOTE, when present, is the Korean author's message to you about this
+follow-up. Read it as the author's account and weigh it; it is not an override.
+If the author says a finding needs no Korean change (for example, it is a false
+positive or an intended convention), pass that finding only when the note gives
+a mathematically sound reason that the post supports; otherwise fail and say
+what is still wrong. If the note explains how the KO diff resolves a finding,
+check that the diff actually does so. Address the note in "why", in Korean.
+
 Return JSON only:
 {"pass":true,"why":"short concrete reason"}
 
@@ -245,6 +300,9 @@ ORIGINAL FINDINGS:
 
 KO DIFF:
 @@KO_DIFF@@
+
+AUTHOR NOTE:
+@@AUTHOR_NOTE@@
 
 EN DIFF:
 @@EN_DIFF@@
@@ -258,10 +316,12 @@ FINAL EN:
 
 def codex_pass(
     findings: list[dict], ko_diff: str, en_diff: str, final_en: str,
+    author_note: str = "",
 ) -> tuple[bool, str]:
     prompt = (CODEX_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
+              .replace("@@AUTHOR_NOTE@@", author_note or "(none)")
               .replace("@@EN_DIFF@@", en_diff)
               .replace("@@FINAL_EN@@", final_en))
     with tempfile.TemporaryDirectory(prefix="codex-ko-followup-") as tmp:
@@ -287,7 +347,7 @@ def codex_pass(
 
 def reviewed_candidate(
     current_en: str, current_ko: str, baseline: str, findings: list[dict],
-    ko_diff: str, path: str, en_rel: str,
+    ko_diff: str, path: str, en_rel: str, author_note: str = "",
 ) -> tuple[str, bool, str]:
     """Propose EN from the original text, feeding one rejection back for repair."""
     old_lints = set(tw.lint_latex(current_en))
@@ -298,6 +358,7 @@ def reviewed_candidate(
     for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
         candidate = antigravity_candidate(
             current_en, findings, ko_diff, review_feedback=feedback,
+            author_note=author_note,
         )
         warnings: list[str] = []
         hard_error = tw.validate_translation(
@@ -310,7 +371,7 @@ def reviewed_candidate(
             detail = hard_error or next(iter(new_lints or new_struct))
             raise RuntimeError(f"deterministic gate: {detail}")
         en_diff = _diff(current_en, candidate, f"a/{en_rel}", f"b/{en_rel}")
-        passed, why = codex_pass(findings, ko_diff, en_diff, candidate)
+        passed, why = codex_pass(findings, ko_diff, en_diff, candidate, author_note)
         if passed:
             return candidate, True, why
         feedback = why
@@ -431,19 +492,24 @@ def _process_target_locked(target: tuple, state: dict) -> int:
 
     current_ko = ko_path.read_text(encoding="utf-8")
     current_en = en_path.read_text(encoding="utf-8")
-    full_ko_diff = _diff(baseline, current_ko, f"a/{path}", f"b/{path}")
-    if full_ko_diff == "(no changes)":
-        log(f"WAIT {path}: 체크 후 KO 변경이 없음")
-        return 0
+    # 메모가 있으면 KO 를 안 고친 요청도 판정으로 보낸다 — "이 지적은 의도된
+    # 표현"처럼 고치지 않는 이유를 메모로 전하는 경우다. Codex 가 그 근거를 판정한다.
+    author_note = _author_note(request_key)
     ko_diff = _scoped_ko_diff(baseline, current_ko, findings, path)
-    if ko_diff == "(no changes)":
-        log(f"WAIT {path}: 다른 변경은 있으나 지적 위치의 KO 변경이 없음")
+    if ko_diff == "(no changes)" and not author_note:
+        full_ko_diff = _diff(baseline, current_ko, f"a/{path}", f"b/{path}")
+        if full_ko_diff == "(no changes)":
+            log(f"WAIT {path}: 체크 후 KO 변경이 없음")
+        else:
+            log(f"WAIT {path}: 다른 변경은 있으나 지적 위치의 KO 변경이 없음")
         return 0
 
-    log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영")
+    log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영"
+        + (f" · 메모 {len(author_note)}자" if author_note else ""))
     try:
         candidate, passed, why = reviewed_candidate(
             current_en, current_ko, baseline, findings, ko_diff, path, en_rel,
+            author_note=author_note,
         )
     except Exception as exc:
         log(f"WAIT {path}: {tw._flat(exc)[:240]}")
@@ -475,6 +541,7 @@ def _process_target_locked(target: tuple, state: dict) -> int:
         os.close(fd)
 
     _clear_completed(entry)
+    _drop_note(request_key)
     entry["reason"] = "ko-followup"
     entry["ko_git_commit_ts"] = tw.git_last_commit_ts(ko_path)
     tw.save_state(state)
@@ -495,6 +562,7 @@ def run_all() -> int:
     if tw._migrated_keys:
         tw.save_state(state)
     files = state.get("files", {})
+    _prune_notes(files)
 
     targets = []
     stale = []

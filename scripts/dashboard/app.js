@@ -159,6 +159,102 @@ function copyText(text, node) {
 function openModal(title, body) {
   document.getElementById('modal-title').textContent = title;
   document.getElementById('modal-body').textContent = body;
+  document.getElementById('modal-body').hidden = false;
+  document.getElementById('modal-rich').hidden = true;
+  document.getElementById('modal').hidden = false;
+}
+/* KO 원문 지적 상세 — 항목마다 줄번호·판정, 인용, 문제, 수정. VALID 는 Codex가
+   확정한 이유만, UNSURE·미검토는 원 지적과 Codex 의견을 나란히 보인다. 기각(FALSE)은
+   맨 아래 접힌 칸으로 보낸다. 판정 필드가 없는 옛 항목은 주장 문자열 그대로 둔다. */
+/* 모델 서술에 $ 없이 섞인 LaTeX(\alpha\smile\beta, `\x`)를 $…$ 로 감싼다.
+   이미 $ 로 싸인 구간은 건드리지 않는다. 한 토막은 \명령 을 포함하는 ASCII 수식
+   문자 연속이고, 한글·끝의 구두점·공백에서 끊는다. 중괄호가 안 맞으면 그대로 둔다. */
+function wrapBareTex(s) {
+  if (!s || s.indexOf('\\') < 0) return s;
+  return s.split(/(\$\$[\s\S]*?\$\$|\$[^$]*\$)/).map(function (seg, i) {
+    if (i % 2) return seg;
+    seg = seg.replace(/`([^`]*\\[A-Za-z][^`]*)`/g, '$$$1$$');
+    return seg.split(/(\$[^$]*\$)/).map(function (part, j) {
+      if (j % 2) return part;
+      return part.replace(/[A-Za-z0-9^_{}()\[\]|+\-=<>*'\/]*\\[A-Za-z]+[A-Za-z0-9\\^_{}()\[\]|+\-=<>*'\/:,.;! ]*/g,
+        function (run) {
+          var m = run.match(/^([\s\S]*?)([\s,.;:!]*)$/);
+          var body = m[1], tail = m[2];
+          var depth = 0;
+          for (var c = 0; c < body.length; c++) {
+            if (body[c] === '{') depth++;
+            else if (body[c] === '}' && --depth < 0) return run;
+          }
+          return depth ? run : '$' + body + '$' + tail;
+        });
+    }).join('');
+  }).join('');
+}
+function koReviewHtml(det, k, rejected) {
+  var rank = { VALID: 0, UNSURE: 1, FALSE: 3 };
+  var items = det.slice().sort(function (a, b) {
+    var ra = a.verdict in rank ? rank[a.verdict] : 2, rb = b.verdict in rank ? rank[b.verdict] : 2;
+    return ra - rb || (a.line || 1e9) - (b.line || 1e9);
+  });
+  function field(label, text, cls) {
+    return text ? '<dt>' + label + '</dt><dd' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(wrapBareTex(text)) + '</dd>' : '';
+  }
+  function one(x) {
+    var v = x.verdict || '미검토';
+    var head = '<span class="kr__loc">' + (x.line ? 'L' + x.line : '위치 미상') + '</span>' +
+      '<span class="kr__v kr__v--' + (x.verdict || 'none').toLowerCase() + '">' + esc(v) + '</span>' +
+      (x.kind && x.kind !== 'ERROR' ? '<span class="kr__kind">' + esc(x.kind) + '</span>' : '') +
+      (x.source ? '<span class="kr__src">' + esc(x.source) + '</span>' : '');
+    var body = '';
+    if (x.quote) body += '<blockquote class="kr__quote">' + esc(x.quote) + '</blockquote>';
+    var rows = '';
+    if (x.verdict === 'VALID' && x.why) {
+      rows += field('문제', x.why);
+    } else {
+      rows += field('지적', x.issue || (x.quote ? '' : x.text));
+      rows += field('Codex', x.why);
+    }
+    rows += field('수정', x.fix || x.suggested, 'kr__fix');
+    if (rows) body += '<dl class="kr__rows">' + rows + '</dl>';
+    return '<li class="kr__item">' + '<div class="kr__head">' + head + '</div>' + body + '</li>';
+  }
+  var live = items.filter(function (x) { return x.verdict !== 'FALSE'; });
+  var dead = items.filter(function (x) { return x.verdict === 'FALSE'; });
+  var html = '<ol class="kr">' + live.map(one).join('') + '</ol>';
+  if (dead.length) {
+    html += '<details class="kr__false"><summary>Codex 기각 ' + dead.length + '건</summary>' +
+      '<ol class="kr">' + dead.map(one).join('') + '</ol></details>';
+  }
+  if (rejected) {
+    html += '<div class="kr__reject"><b>지난 후속 승인 거절' +
+      (k.followup_rejected_at ? ' · ' + esc(k.followup_rejected_at) : '') + '</b>' +
+      '<p>' + esc(rejected) + '</p></div>';
+  }
+  html += '<div class="kr__note"><label for="kr-note">후속 검증 모델에게 전할 말</label>' +
+    '<textarea id="kr-note" rows="4" maxlength="4000" placeholder="예: 2번은 이 글의 convention상 의도된 표현이라 고치지 않았다. / 3번은 정의 2를 고쳐서 해결했다.">' +
+    esc(k.note || '') + '</textarea>' +
+    '<div class="kr__note-bar"><button type="button" id="kr-note-save" class="ghost-btn">저장</button>' +
+    '<span id="kr-note-status" class="muted">' + (k.note_at ? '저장됨 · ' + esc(k.note_at) : '') + '</span></div>' +
+    '<p>수정 완료를 체크하면 EN 수정안을 만드는 모델과 판정하는 Codex가 이 메모를 함께 읽는다. ' +
+    '메모가 있으면 KO를 고치지 않은 지적도 판정에 넘어간다(오탐 해명 등). 승인되면 메모도 지워진다.</p></div>';
+  html += '<p class="kr__meta">검증 ' + esc(k.verified_at || '—') +
+    ' · 판정은 Codex 검토 결과다. 수정 완료를 체크하면 후속 워커가 KO/EN diff를 검증한다.</p>';
+  return html;
+}
+/* 구조가 있는 본문용 — html 은 호출부가 esc() 로 만든 것만 넘긴다. */
+function openModalHtml(title, html) {
+  document.getElementById('modal-title').textContent = title;
+  var rich = document.getElementById('modal-rich');
+  rich.innerHTML = html;
+  rich.scrollTop = 0;
+  if (window.renderMathInElement) {
+    window.renderMathInElement(rich, {
+      delimiters: window.KATEX_DELIMITERS, macros: window.KATEX_MACROS,
+      strict: false, throwOnError: false
+    });
+  }
+  rich.hidden = false;
+  document.getElementById('modal-body').hidden = true;
   document.getElementById('modal').hidden = false;
 }
 function wireModal() {
@@ -719,6 +815,7 @@ function secTranslation(d) {
         var nFalse = det.filter(function (x) { return x.verdict === 'FALSE'; }).length;
         var tr = row([
           { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' +
+              '<span class="typo-note"' + (k.note ? '' : ' hidden') + '>메모 있음</span>' +
               (rejected ? '<span class="typo-reject">승인 거절: ' + esc(rejected) + '</span>' : '') },
           { html: (k.live == null ? k.items.length : k.live)
               + (nFalse ? ' <span class="muted">(+오탐 ' + nFalse + ')</span>' : ''), cls: 'num' },
@@ -726,17 +823,25 @@ function secTranslation(d) {
           { html: '<input type="checkbox" class="typo-chk"' + (doneMap[key] ? ' checked' : '') + '>', cls: 'num' }
         ], 'clickable' + (doneMap[key] ? ' typo-pending' : ''));
         tr.onclick = function () {
-          openModal('KO 원문 검토 — ' + k.path,
-            det.map(function (x) {
-              return '[' + (x.verdict || '미검토') + ' / ' + (x.kind || 'ERROR') + '] ' + x.text
-                + (x.why ? '\n    → ' + x.why : '')
-                + (x.fix ? '\n    수정안: ' + x.fix : '');
-            }).join('\n') +
-            (rejected ? '\n\n[지난 후속 승인 거절' +
-              (k.followup_rejected_at ? ' · ' + k.followup_rejected_at : '') + ']\n' + rejected : '') +
-            '\n\n(검증 ' + (k.verified_at || '—') + ' · 판정은 Codex 검토 결과다. ' +
-            '수정 완료를 체크하면 후속 워커가 KO/EN diff를 검증한다)');
+          openModalHtml('KO 원문 검토 — ' + k.path.replace(/^_posts\//, ''),
+            koReviewHtml(det, k, rejected));
+          var box = document.getElementById('kr-note');
+          var stat = document.getElementById('kr-note-status');
+          document.getElementById('kr-note-save').onclick = function () {
+            stat.textContent = '저장 중…';
+            fetch(API + 'kotypo-note', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+              body: JSON.stringify({ key: key, note: box.value })
+            }).then(function (r) { return r.json(); }).then(function (res) {
+              if (!res.ok) throw new Error(res.error || 'error');
+              k.note = res.note; k.note_at = res.at;
+              stat.textContent = res.note ? '저장됨 · ' + res.at : '메모 지움';
+              noteTag.hidden = !res.note;
+            }).catch(function (e) { stat.textContent = '저장 실패: ' + e.message; });
+          };
         };
+        var noteTag = tr.querySelector('.typo-note');
         var chk = tr.querySelector('.typo-chk');
         chk.onclick = function (e) { e.stopPropagation(); };
         chk.onchange = function () {
@@ -752,7 +857,7 @@ function secTranslation(d) {
       stale.forEach(function (k) { delete doneMap[k]; });
       saveDone();
     }
-    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체가 열린다. 한글을 고친 뒤 수정 완료를 체크하면 02:15부터 4시간마다 후속 검증한다. Codex가 거절하면 체크가 자동 해제되고 사유가 행과 상세창에 남는다. KO·EN diff가 승인된 경우에만 목록에서 사라진다.'));
+    left.appendChild(el('p', 'hint', '행을 누르면 지적 내용 전체와 모델에게 전할 메모 칸이 열린다. 한글을 고친 뒤 수정 완료를 체크하면 02:15부터 4시간마다 후속 검증한다. Codex가 거절하면 체크가 자동 해제되고 사유가 행과 상세창에 남는다. KO·EN diff가 승인된 경우에만 목록에서 사라진다.'));
   } else {
     left.appendChild(el('p', 'hint', '검증된 한글 오류·설명 누락 없음.'));
   }

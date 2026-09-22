@@ -2396,7 +2396,10 @@ logical step, or clarification is genuinely needed; optional enrichment and
 style improvements are FALSE. Use UNSURE when the supplied post is insufficient.
 
 Return Korean reasoning and the smallest concrete Korean correction/addition.
-Do not silently expand the author's scope. Output JSON only:
+Do not silently expand the author's scope. Write every mathematical expression
+in "why" and "recommended_fix" inside $...$ exactly as the post does (e.g.
+$\\alpha\\smile\\beta$, never bare \\alpha\\smile\\beta or `\\alpha`); these
+fields are rendered with KaTeX. Output JSON only:
 {"reviews":[{"index":1,"verdict":"VALID or FALSE or UNSURE","why":"short reason","recommended_fix":"minimal Korean fix; empty unless VALID"}]}
 
 Korean source (@@KO_PATH@@):
@@ -2422,6 +2425,57 @@ def _finding_claim(finding: dict) -> str:
     locus = f'{line_prefix}"{quote}" — ' if quote else line_prefix
     tail = f" (제안: {suggestion})" if suggestion else ""
     return f"[{kind}] {locus}{issue}{tail}".strip()
+
+
+def _clip_quote(quote: str, limit: int = 160) -> str:
+    """긴 인용은 가운데를 줄인다 — 틀린 부분이 문장 끝에 있는 경우가 많다."""
+    quote = " ".join(quote.split())
+    if len(quote) <= limit:
+        return quote
+    head = limit // 3
+    return f"{quote[:head]} … {quote[-(limit - head):]}"
+
+
+def _format_ko_review_notice(ko_review: List[dict],
+                             actionable: List[dict]) -> List[str]:
+    """KO 원문 지적을 알림 본문 줄로 만든다.
+
+    항목마다 위치·판정 한 줄, 인용 한 줄, 문제 한 줄, 수정 한 줄. VALID 는
+    Codex 가 확정한 이유(why)를, 그 밖(UNSURE·미검토)은 원 지적과 Codex 의견을
+    나란히 보인다. 수정안은 Codex 안이 있으면 그것만 쓴다.
+    """
+    n_false = len(ko_review) - len(actionable)
+    head = f"KO 원문 지적 {len(actionable)}건"
+    if n_false:
+        head += f" (Codex 기각 {n_false}건 제외)"
+    lines = [head]
+    order = {"VALID": 0, "UNSURE": 1}
+    items = sorted(actionable, key=lambda o: (
+        order.get(o.get("verdict", ""), 2),
+        o.get("line") if isinstance(o.get("line"), int) else 1 << 30))
+    for n, o in enumerate(items, 1):
+        verdict = o.get("verdict") or "미검토"
+        line = o.get("line")
+        loc = f"L{line}" if isinstance(line, int) and line > 0 else "위치 미상"
+        kind = str(o.get("kind") or "ERROR").upper()
+        tag = verdict if kind == "ERROR" else f"{verdict} · {kind}"
+        lines += ["", f"{n}. {loc} · {tag}"]
+        quote = str(o.get("quote") or "").strip()
+        issue = str(o.get("issue") or "").strip()
+        why = str(o.get("why") or "").strip()
+        if quote:
+            lines.append(f"  「{_clip_quote(quote)}」")
+        if verdict == "VALID" and why:
+            lines.append(f"  문제: {why}")
+        else:
+            if issue:
+                lines.append(f"  지적: {issue}")
+            if why:
+                lines.append(f"  Codex: {why}")
+        fix = str(o.get("recommended_fix") or o.get("suggested_fix") or "").strip()
+        if fix:
+            lines.append(f"  수정: {fix}")
+    return lines
 
 
 def call_codex_ko_review(ko_path: Path, findings: List[dict]) -> dict:
@@ -3461,19 +3515,23 @@ def main() -> int:
             if verdict_safe and only_math:
                 log(f"VERIFY ({key}): safe verdict — telegram suppressed")
             else:
-                body_lines = [key, f"→ {en_path.relative_to(BLOG_ROOT)}", ""]
-                body_lines += [f"• {w}" for w in warnings]
-                body_lines += [f"• (게이트 잔여) {x}" for x in gate_only]
+                # KO 지적을 맨 앞에 둔다 — notify 가 3000자에서 뒤를 자르므로
+                # 잘려도 되는 것(경고·verdict 전문)이 뒤로 간다.
+                body_lines = [str(ko_path.relative_to(BLOG_ROOT / "_posts"))]
                 if ko_review:
-                    n_false = len(ko_review) - len(ko_actionable)
-                    body_lines += ["", f"KO 원문 검토 {len(ko_review)}건 "
-                                       f"(Codex FALSE {n_false}건 제외):"]
-                    for o in ko_actionable:
-                        body_lines.append(
-                            f"• [{o.get('verdict', 'UNSURE')}] {o['claim']}"
-                            + (f"\n    → {o['why']}" if o.get("why") else "")
-                            + (f"\n    수정안: {o['recommended_fix']}"
-                               if o.get("recommended_fix") else ""))
+                    body_lines += [""] + _format_ko_review_notice(
+                        ko_review, ko_actionable)
+                # safe verdict 의 수식 개수 차이는 단독으로는 알림을 안 보내는
+                # 잡음이다 — KO 지적에 얹혀 갈 때도 싣지 않는다.
+                shown_warnings = [
+                    w for w in warnings
+                    if not (verdict_safe
+                            and w.startswith("math block count mismatch"))
+                ]
+                if shown_warnings or gate_only:
+                    body_lines += ["", "경고"]
+                    body_lines += [f"• {w}" for w in shown_warnings]
+                    body_lines += [f"• (게이트 잔여) {x}" for x in gate_only]
                 if lossy_history:
                     final_lossy = bool(re.search(
                         r"^VERDICT:\s*lossy\b", verdict_text,
@@ -3484,10 +3542,12 @@ def main() -> int:
                         if final_lossy else
                         f"recovered after {len(lossy_history)} lossy attempt(s)"
                     )]
-                if verdict_text:
+                if verdict_text and not verdict_safe:
                     body_lines += ["", "--- claude verify (final) ---", verdict_text]
+                title = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", ko_path.stem)
+                title = title.replace("_", " ")
                 _notify(
-                    f"[translate-worker] {reason} warnings",
+                    f"[translate-worker] {reason}: {title}",
                     "\n".join(body_lines),
                 )
         stats = state.setdefault("stats", {})

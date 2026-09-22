@@ -10,6 +10,7 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET /api/log?name=<key> 워커 로그 tail (기본 200줄)
     GET /api/lint?path=<p>  단일 글에 md_lint.py CLI 실행 (발행 준비도)
     GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
+    POST /api/kotypo-note   후속 검증 모델에게 전할 메모 (요청 키 단위 병합 저장)
     GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
     POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (판정 버튼 또는 태그 확인)
@@ -17,7 +18,7 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
 
 보류 해소 시 확정된 링크 IAL에 `reviewed=""`를 추가한다. 그 외의 쓰기는
 세 상태 파일뿐이다:
-~/.local/state/blog_dashboard_kotypo.json · …_review.json ·
+~/.local/state/blog_dashboard_kotypo.json · …_kotypo_notes.json · …_review.json ·
 dependency-classifier-holds.json.
 """
 import fcntl
@@ -43,6 +44,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 STATE = os.path.expanduser("~/.local/state")
 KOTYPO_STATE = f"{STATE}/blog_dashboard_kotypo.json"
+# 후속 검증 요청에 붙는 사용자 메모. 키는 KOTYPO_STATE 와 같은 `<ko-path>@<ko_reviewed_at>`.
+# ko_followup_worker 가 읽어 프롬프트에 넣고 승인 시 지운다 — 쓰기는 양쪽 다 이 flock 으로.
+KOTYPO_NOTES = f"{STATE}/blog_dashboard_kotypo_notes.json"
+KOTYPO_NOTES_LOCK = f"{KOTYPO_NOTES}.lock"
 # 의존성 링크 분류기와 공유하는 보류 원장. 쓰기는 같은 flock 으로 직렬화한다 —
 # 워커가 새 보류를 붙이는 중에 통째로 덮으면 그 건은 에러 없이 사라진다.
 HOLDS_STATE = f"{STATE}/dependency-classifier-holds.json"
@@ -475,6 +480,13 @@ def sec_translation():
     recent = []
     ko_typos = []
     n_actionable = n_false = n_unreviewed = 0
+    try:
+        with open(KOTYPO_NOTES, encoding="utf-8") as f:
+            notes = json.load(f)
+        if not isinstance(notes, dict):
+            notes = {}
+    except (OSError, ValueError):
+        notes = {}
     for path, v in files.items():
         st = v.get("status", "?")
         by_status[st] = by_status.get(st, 0) + 1
@@ -498,10 +510,16 @@ def sec_translation():
         for t in typos:
             r = by_claim.get(t) or {}
             verdict = (r.get("verdict") or "").upper()
+            line = r.get("line")
             items.append(dict(text=t, verdict=verdict or None,
                               kind=r.get("kind") or "ERROR",
+                              line=line if isinstance(line, int) and line > 0 else None,
+                              quote=r.get("quote") or "",
+                              issue=r.get("issue") or "",
+                              source=r.get("source") or "",
                               why=r.get("why") or "",
-                              fix=r.get("recommended_fix") or ""))
+                              fix=r.get("recommended_fix") or "",
+                              suggested=r.get("suggested_fix") or ""))
             if verdict == "FALSE":
                 n_false += 1
             elif verdict:
@@ -514,12 +532,14 @@ def sec_translation():
         verified_at = v.get("ko_reviewed_at") or v.get("verified_at") or ""
         request_key = f"{path}@{verified_at}"
         rejected = v.get("ko_followup_rejected_request") == request_key
+        note = notes.get(request_key) if isinstance(notes.get(request_key), dict) else {}
         ko_typos.append(dict(
             path=path, items=[i["text"] for i in items], detail=items,
             live=len(live), verified_at=verified_at,
             followup_rejected_at=v.get("ko_followup_rejected_at") if rejected else "",
             followup_rejection=(v.get("ko_followup_rejection_reason") or "")
                                if rejected else "",
+            note=note.get("note") or "", note_at=note.get("at") or "",
         ))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
@@ -1337,7 +1357,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path not in ("/api/kotypo", "/api/cron/pause", "/api/cron/resume",
+        if path not in ("/api/kotypo", "/api/kotypo-note", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume", "/api/linkaudit/resolve",
                         "/api/linkaudit/commit",
                         "/api/review", "/api/compare/snapshot",
@@ -1360,6 +1380,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._snapshot_action(path)
         if path == "/api/review":
             return self._review()
+        if path == "/api/kotypo-note":
+            return self._kotypo_note()
         if path == "/api/linkaudit/resolve":
             return self._linkaudit_resolve()
         if path == "/api/linkaudit/commit":
@@ -1428,6 +1450,44 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
         return self._send(200, json.dumps({"ok": True, **st}, ensure_ascii=False))
+
+    def _kotypo_note(self):
+        """후속 검증 메모 한 건을 쓰거나(빈 문자열이면) 지운다. 요청 키 단위 병합."""
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 20_000:
+                raise ValueError
+            body = json.loads(self.rfile.read(n).decode("utf-8") or "{}")
+            key = body.get("key")
+            note = body.get("note")
+            if not isinstance(key, str) or "@" not in key or len(key) > 400 \
+                    or not key.startswith("_posts/") or not isinstance(note, str) \
+                    or len(note) > 4000:
+                raise ValueError
+        except Exception:
+            return self._send(400, json.dumps({"ok": False, "error": "bad body"}))
+        note = note.strip()
+        with open(KOTYPO_NOTES_LOCK, "w") as lk:
+            fcntl.flock(lk, fcntl.LOCK_EX)
+            try:
+                with open(KOTYPO_NOTES, encoding="utf-8") as f:
+                    notes = json.load(f)
+                if not isinstance(notes, dict):
+                    notes = {}
+            except (OSError, ValueError):
+                notes = {}
+            at = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+            if note:
+                notes[key] = {"note": note, "at": at}
+            else:
+                notes.pop(key, None)
+            tmp = f"{KOTYPO_NOTES}.tmp"
+            with open(tmp, "w", encoding="utf-8") as f:
+                json.dump(notes, f, ensure_ascii=False, indent=1)
+            os.replace(tmp, KOTYPO_NOTES)
+        _cache["ts"] = 0
+        return self._send(200, json.dumps({"ok": True, "note": note, "at": at if note else ""},
+                                          ensure_ascii=False))
 
     def _review(self):
         """검토 판정 — 항목 단위 **병합** 저장.
