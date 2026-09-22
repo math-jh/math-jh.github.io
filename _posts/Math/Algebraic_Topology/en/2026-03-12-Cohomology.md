@@ -333,7 +333,7 @@ is a split exact sequence, a section $B_{\bullet-1}(C)\rightarrow C_\bullet$ ind
 
 ## The Eilenberg-Zilber Theorem and the Künneth Formula
 
-Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="weak" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the homology $H_\bullet(X\times Y)$ of the product space $X\times Y$ and, for the two chain complexes $H_\bullet(X)$, $H_\bullet(Y)$, their tensor product $(H(X)\otimes H(Y))_\bullet$. The following theorem shows that these two algebraic objects are the same.
+Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="weak" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the chain complex $C_\bullet(X\times Y)$ of the product space $X\times Y$ and the tensor product $(C(X)\otimes C(Y))_\bullet$ of the two chain complexes$. The following theorem shows that these two algebraic objects are the same.
 
 ::: Theorem 9 (Eilenberg-Zilber)
 For two topological spaces $X,Y$ and the chain complexes $C_\bullet(X),C_\bullet(Y)$, and $C_\bullet(X\times Y)$ obtained from them, there exists a chain homotopy equivalence between the two chain complexes $(C(X)\otimes C(Y))_\bullet$ and $C_\bullet(X\times Y)$, and therefore 
@@ -386,4 +386,4 @@ Of course, using this result together with [Theorem 5](#thm5){: data-lid="w18l1"
 
 ---
 
-[^1]: Of course, we would hope that this pairing gives a homomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but the situation is not so simple, and we know from [Proposition 3](#prop3){: data-lid="7yee4" data-relation="weak" } that an $\Ext$ term containing hidden torsion must appear.
+[^1]: Of course, we would hope that this pairing gives an isomorphism from $H^k(X;A)$ to $\Hom(H_k(X),A)$, but the situation is not so simple, and we know from [Proposition 3](#prop3){: data-lid="7yee4" data-relation="weak" } that an $\Ext$ term containing hidden torsion must appear.
