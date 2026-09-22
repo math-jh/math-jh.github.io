@@ -32,7 +32,7 @@ For a ring $A$, the following are equivalent.
 3. The set of all non-units of $A$ forms an ideal.
 :::
 ::: Proof
-First assume (1), and let $a\in A$ be an arbitrary non-unit. Then $(a)$ is an ideal of $A$, so by [\[Algebraic Structures\] §Definition of Rings, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10){: data-lid="lt4t7" data-relation="required" } it is contained in some maximal ideal. But since $A$ has a unique maximal ideal $\mathfrak{m}$, we must have $(a)\subseteq \mathfrak{m}$, and hence $a\in \mathfrak{m}$.
+First assume (1), and let $a\in A$ be an arbitrary non-unit. Then $(a)$ is an ideal of $A$, so by [\[Algebraic Structures\] §Definition of Rings, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10){: data-lid="lt4t7" data-relation="required" reviewed="" } it is contained in some maximal ideal. But since $A$ has a unique maximal ideal $\mathfrak{m}$, we must have $(a)\subseteq \mathfrak{m}$, and hence $a\in \mathfrak{m}$.
 
 Now assume (2) and show (3). For this, it suffices to show that the set of non-units of $A$ is closed under addition. First, from $\mathfrak{m}\neq A$ we know that $\mathfrak{m}$ contains no unit of $A$. From this we see that the set of all non-units of $A$ must equal $\mathfrak{m}$.
 
@@ -95,11 +95,11 @@ The above argument also works in the reverse direction.
 
 ## Localization of Rings
 
-The simplest example of localization is the ring of fractions examined in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2){: data-lid="059uz" data-relation="weak" }. Here we take $M=A$. In particular, we also saw that if $A$ is an integral domain, then its ring of fractions $\Frac(A)$ is a field. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6){: data-lid="ls922" data-relation="weak" })
+The simplest example of localization is the ring of fractions examined in [\[Algebraic Structures\] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2){: data-lid="059uz" data-relation="weak" reviewed="" }. Here we take $M=A$. In particular, we also saw that if $A$ is an integral domain, then its ring of fractions $\Frac(A)$ is a field. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6){: data-lid="ls922" data-relation="weak" reviewed="" })
 
-As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4){: data-lid="xoitz" data-relation="required" } we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
+As another example, again taking $M=A$ and letting $S=A\setminus \mathfrak{p}$ for a prime ideal $\mathfrak{p}$ of $A$, we can consider $A_\mathfrak{p}=S^{-1}A$. Using [Definition 4](#def4){: data-lid="xoitz" data-relation="required" reviewed="" } we can apply this to any $A$-module $M$, and the resulting $A$-module is denoted $M_\mathfrak{p}$.
 
-Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4){: data-lid="h58hy" data-relation="required" }. Explicitly, this structure is given by
+Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $A$ defined in [Definition 4](#def4){: data-lid="h58hy" data-relation="required" reviewed="" }. Explicitly, this structure is given by
 
 $$\frac{x}{s}\frac{x'}{s'}=\frac{xx'}{ss'}$$
 
@@ -151,7 +151,7 @@ Therefore, there is an inclusion-preserving bijection between the prime ideals o
   
   $$\mathfrak{a}^e=S^{-1}A\iff 1/1\in \mathfrak{a}^e\iff 1\in \mathfrak{a}^{ec}\iff \text{there exists $s\in S$ s.t. $s1\in \mathfrak{a}$}\iff \mathfrak{a}\cap S\neq \emptyset$$
 
-Now from (2), given any $\mathfrak{b}\subseteq S^{-1}A$ we know that $\mathfrak{b}^c$ is a prime ideal of $A$ not meeting $S$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 10](/en/math/algebraic_structures/field_of_fractions#prop10){: data-lid="w4bhk" data-relation="required" }) Conversely, let $\mathfrak{a}\subseteq A$ be a prime ideal of $A$ not meeting $S$. Then $\mathfrak{a}^e$ is a prime ideal of $S^{-1}A$. Suppose $(b/t)(b'/t')\in \mathfrak{a}^e$ for arbitrary $b/t,b'/t'$. Then there exist $a\in \mathfrak{a}$ and $s\in S$ such that $(bb')/(tt')=a/s$, and hence there exists $u\in S$ such that $utt'a=usbb'\in \mathfrak{a}$. Since $\mathfrak{a}\cap S=\emptyset$ we know $us\not\in \mathfrak{a}$, and since $\mathfrak{a}$ is a prime ideal we have $bb'\in \mathfrak{a}$. Therefore $b\in \mathfrak{a}$ or $b'\in \mathfrak{a}$, and $\mathfrak{a}^e$ is a prime ideal. That these correspondences are mutual inverses follows naturally from the result of (2).
+Now from (2), given any $\mathfrak{b}\subseteq S^{-1}A$ we know that $\mathfrak{b}^c$ is a prime ideal of $A$ not meeting $S$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 10](/en/math/algebraic_structures/field_of_fractions#prop10){: data-lid="w4bhk" data-relation="required" reviewed="" }) Conversely, let $\mathfrak{a}\subseteq A$ be a prime ideal of $A$ not meeting $S$. Then $\mathfrak{a}^e$ is a prime ideal of $S^{-1}A$. Suppose $(b/t)(b'/t')\in \mathfrak{a}^e$ for arbitrary $b/t,b'/t'$. Then there exist $a\in \mathfrak{a}$ and $s\in S$ such that $(bb')/(tt')=a/s$, and hence there exists $u\in S$ such that $utt'a=usbb'\in \mathfrak{a}$. Since $\mathfrak{a}\cap S=\emptyset$ we know $us\not\in \mathfrak{a}$, and since $\mathfrak{a}$ is a prime ideal we have $bb'\in \mathfrak{a}$. Therefore $b\in \mathfrak{a}$ or $b'\in \mathfrak{a}$, and $\mathfrak{a}^e$ is a prime ideal. That these correspondences are mutual inverses follows naturally from the result of (2).
 :::
 
 The following is immediate from the above proposition.
@@ -173,7 +173,7 @@ which is an ascending chain of ideals in the Noetherian ring $A$, so there exist
 $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 :::
 
-Meanwhile, from [Proposition 8](#prop8){: data-lid="e4606" data-relation="required" }, for any prime ideal $\mathfrak{p}$ of $A$ it is immediate that $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$ is the unique *maximal* ideal of $A_\mathfrak{p}$. That is, $A_\mathfrak{p}$ is a local ring, and its quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ is well-defined.
+Meanwhile, from [Proposition 8](#prop8){: data-lid="e4606" data-relation="required" reviewed="" }, for any prime ideal $\mathfrak{p}$ of $A$ it is immediate that $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$ is the unique *maximal* ideal of $A_\mathfrak{p}$. That is, $A_\mathfrak{p}$ is a local ring, and its quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ is well-defined.
 
 ::: Definition 10
 For a ring $A$ and a prime ideal $\mathfrak{p}$, we call the field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ the *residue field* of $A$ at $\mathfrak{p}$ and denote it by $\kappa(\mathfrak{p})$.
