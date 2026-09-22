@@ -246,7 +246,7 @@ be denoted by $\Cone(\alpha)$. Then by the preceding consequence of the excision
 
 $$\cdots \rightarrow 0 \rightarrow H_{n+1}(V, U\cap V)\rightarrow H_{n+1}(X,U)\rightarrow 0 \rightarrow \cdots\tag{4}$$
 
-Here, the differential of $\Cone(\alpha)$ also sends elements of the first component to the second component, so the two components do not simply split apart; however, we know that after a change of basis defined by the isomorphisms $i_V$, $\Cone(\alpha)$ can be represented as the direct sum of this trivial long exact sequence and the following long exact sequence:
+Here, the differential of $\Cone(\alpha)$ also sends elements of the first component to the second component, so the two components do not simply split apart; however, we know that after a change of basis defined by the isomorphisms from excision, $\Cone(\alpha)$ can be represented as the direct sum of this trivial long exact sequence and the following long exact sequence:
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarrow H_n(U\cap V)\rightarrow H_n(U)\oplus H_n(V)\rightarrow\cdots\tag{5}$$
 
