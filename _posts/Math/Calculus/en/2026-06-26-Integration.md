@@ -44,7 +44,7 @@ Under the assumption that the interval is connected, the integration constant $C
 
 ## Properties and Examples of Indefinite Integrals
 
-Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="vu214" data-relation="requires-review" } we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
+Meanwhile, in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="vu214" data-relation="weak" } we examined the derivatives of various functions, and because indefinite integration is the reverse of differentiation, we can derive integration formulas from them. Before doing so, let us establish the linearity of indefinite integration.
 
 ::: Proposition 3 (Linearity of indefinite integration)
 If $f$ and $g$ have antiderivatives and $a, b$ are constants, then
@@ -263,7 +263,7 @@ Here
 
 $$\frac{1}{b-a}\int_a^b f(x)\dd{x}$$
 
-is called the *average value* of $f$ on $[a,b]$, and [Proposition 12](#prop12){: data-lid="t4k2u" data-relation="requires-review" } states that a continuous function actually attains its average value at least at one point.
+is called the *average value* of $f$ on $[a,b]$, and [Proposition 12](#prop12){: data-lid="t4k2u" data-relation="weak" } states that a continuous function actually attains its average value at least at one point.
 
 ## Area and Applications
 

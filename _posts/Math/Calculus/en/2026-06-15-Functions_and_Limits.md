@@ -72,7 +72,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 which is a contradiction. Therefore $L = L'$.
 :::
 
-Meanwhile, [Definition 2](#def2){: data-lid="u8ea3" data-relation="requires-review" } can in principle only be used when a candidate $L$ for the limit of a function is given and we want to show that the limit is indeed $L$. That is, it is not a tool that tells us what the limit of a function *is*. For this purpose, the following proposition is useful.
+Meanwhile, [Definition 2](#def2){: data-lid="u8ea3" data-relation="required" } can in principle only be used when a candidate $L$ for the limit of a function is given and we want to show that the limit is indeed $L$. That is, it is not a tool that tells us what the limit of a function *is*. For this purpose, the following proposition is useful.
 
 ::: Proposition 5 (Limit Laws)
 Suppose $\lim_{x\rightarrow a} f(x) = L$ and $\lim_{x\rightarrow a} g(x) = M$. Then

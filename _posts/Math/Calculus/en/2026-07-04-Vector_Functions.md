@@ -137,7 +137,7 @@ The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R
 $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \dd{t}.$$
 :::
 
-The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous, hence integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10){: data-lid="s9kqi" data-relation="requires-review" }). We call
+The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous, hence integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10){: data-lid="s9kqi" }). We call
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \dd{\tau}$$
 

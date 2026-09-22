@@ -122,7 +122,7 @@ $$H^k(X;A):=H_k(C^\vee)$$
 
 로 적고, 이를 $X$의 *$k$번째 cohomology*라 부른다. 여기서 $H$와 $C^\vee$에 위첨자를 이용하여 index를 표기해주는 이유는 homology와 반대로, long exact sequence가 index가 커지는 방향으로 만들어지기 때문이며, 앞으로는 혼동의 여지가 없다면 $(C^\vee)^\bullet(X)$를 $C^\bullet(X;A)$라 쓰기로 하자.
 
-그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1){: data-lid="p70te" data-relation="weak" reviewed="" }의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
+그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1){: data-lid="p70te" data-relation="required" reviewed="" }의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
 
 ::: 명제 3 (Universal coefficient theorem for cohomology)
 임의의 위상공간 $X$와 abelian group $A$에 대하여, 다음의 short exact sequence

@@ -46,7 +46,7 @@ $$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 In general, tensor products are right exact, but in this case the functor is exact.
 
 ::: Proposition 2
-$S^{-1}A$ is a flat $A$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7){: data-lid="4i7jv" data-relation="requires-review" })
+$S^{-1}A$ is a flat $A$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7){: data-lid="4i7jv" })
 :::
 ::: Proof
 Suppose an injective $A$-linear map $u:M \rightarrow M'$ is given; we must show that $S^{-1}A\otimes_A u$ is injective. By [Lemma 1](#lem1){: data-lid="pirbk" data-relation="required" reviewed="" }, it suffices to show that the induced linear map $S^{-1}M \rightarrow S^{-1}M'$ is injective. Take any $x/s\in S^{-1}M$ and suppose its image $u(x)/s$ in $S^{-1}M'$ is zero. Then from $u(x)/s=0/1$ there exists some $t\in S$ such that

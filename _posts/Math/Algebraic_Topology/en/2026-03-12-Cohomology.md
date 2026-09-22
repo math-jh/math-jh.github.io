@@ -333,7 +333,7 @@ is a split exact sequence, a section $B_{\bullet-1}(C)\rightarrow C_\bullet$ ind
 
 ## The Eilenberg-Zilber Theorem and the Künneth Formula
 
-Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="required" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the homology $H_\bullet(X\times Y)$ of the product space $X\times Y$ and, for the two chain complexes $H_\bullet(X)$, $H_\bullet(Y)$, their tensor product $(H(X)\otimes H(Y))_\bullet$. The following theorem shows that these two algebraic objects are the same.
+Bearing in mind the result of [Lemma 8](#lem8){: data-lid="k7evk" data-relation="weak" }, what we have to do is clear. Given two topological spaces $X,Y$ and their corresponding chain complexes $C_\bullet(X),C_\bullet(Y)$, it is to examine the relationship between the homology $H_\bullet(X\times Y)$ of the product space $X\times Y$ and, for the two chain complexes $H_\bullet(X)$, $H_\bullet(Y)$, their tensor product $(H(X)\otimes H(Y))_\bullet$. The following theorem shows that these two algebraic objects are the same.
 
 ::: Theorem 9 (Eilenberg-Zilber)
 For two topological spaces $X,Y$ and the chain complexes $C_\bullet(X),C_\bullet(Y)$, and $C_\bullet(X\times Y)$ obtained from them, there exists a chain homotopy equivalence between the two chain complexes $(C(X)\otimes C(Y))_\bullet$ and $C_\bullet(X\times Y)$, and therefore 
@@ -375,7 +375,7 @@ Moreover, this short exact sequence splits (non-canonically), and therefore ther
 $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 :::
 
-Of course, using this result together with [Theorem 5](#thm5){: data-lid="w18l1" data-relation="weak" }, one can obtain the cohomology version of the Künneth formula.
+Of course, using this result together with [Theorem 5](#thm5){: data-lid="w18l1" data-relation="required" }, one can obtain the cohomology version of the Künneth formula.
 
 --- 
 

@@ -75,7 +75,7 @@ Therefore, if we now compute the remainder term in the above theorem and show th
 Let us follow through these calculations in a few concrete examples.
 
 ::: Example 3
-Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="0zmhp" data-relation="requires-review" }, we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
+Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="0zmhp" data-relation="required" }, we have $f^{(k)}(0) = 1$ for every $k$. Hence the Taylor polynomial is
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}.$$
 
@@ -113,7 +113,7 @@ and differentiating this gives the infinite series identity
 
 $$\frac{1}{1+x}=\sum_{k=0}^\infty (-1)^{k}x^k \qquad (\lvert x\rvert < 1).$$
 
-([§Differentiation, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1){: data-lid="bvyms" data-relation="requires-review" }) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
+([§Differentiation, ⁋Proposition 1](/en/math/calculus/differentiation_rules#prop1){: data-lid="bvyms" data-relation="required" }) This is the case $\alpha = -1$ of the more general binomial series defined for real $\alpha$:
 
 $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!} \qquad (\lvert x\rvert < 1).$$
 

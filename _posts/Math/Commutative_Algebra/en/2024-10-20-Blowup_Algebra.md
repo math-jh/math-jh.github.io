@@ -59,7 +59,7 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 .
 :::
 
-In the above definition, $\gr_\mathcal{J}M$ carries a $\gr_\mathfrak{a}A$-module structure: for arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $x\in M_l/M_{l+1}$, one takes representatives $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$ and restricts $\tilde{a}\tilde{x}$ to $M_{k+l}/M_{k+l+1}$, and a computation similar to that of [Lemma 2](#lem2){: data-lid="xnj0s" data-relation="requires-review" } shows that this is well defined. In particular, when $M=A$ and the $M_i$ are ideals of $A$ satisfying $M_iM_j\subseteq M_{i+j}$ for all $i,j$, then just as in [Definition 1](#def1){: data-lid="va2wz" data-relation="requires-review" }, $\gr_\mathcal{J}A$ also carries a ring structure, and this is likewise called the associated graded ring with respect to the filtration $\mathcal{J}$.
+In the above definition, $\gr_\mathcal{J}M$ carries a $\gr_\mathfrak{a}A$-module structure: for arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $x\in M_l/M_{l+1}$, one takes representatives $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$ and restricts $\tilde{a}\tilde{x}$ to $M_{k+l}/M_{k+l+1}$, and a computation similar to that of [Lemma 2](#lem2){: data-lid="xnj0s" } shows that this is well defined. In particular, when $M=A$ and the $M_i$ are ideals of $A$ satisfying $M_iM_j\subseteq M_{i+j}$ for all $i,j$, then just as in [Definition 1](#def1){: data-lid="va2wz" }, $\gr_\mathcal{J}A$ also carries a ring structure, and this is likewise called the associated graded ring with respect to the filtration $\mathcal{J}$.
 
 The following now holds.
 

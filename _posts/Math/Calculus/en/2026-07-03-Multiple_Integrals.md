@@ -14,7 +14,7 @@ translated_at: 2026-08-19T10:15:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-08-19T10:15:05+00:00
 ---
-We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-lid="c1cbt" data-relation="requires-review" }. Now we turn to integration.
+We defined multivariable functions and examined their derivatives in [§Functions of Several Variables and Partial Derivatives](/en/math/calculus/partial_derivatives){: data-lid="c1cbt" }. Now we turn to integration.
 
 ## Multiple Integrals
 
@@ -102,7 +102,7 @@ Here $J_{\mathbf{T}}$ is the *Jacobi matrix* formed from the partial derivatives
 $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x_1/\partial u_n \\ \vdots & \ddots & \vdots \\ \partial x_n/\partial u_1 & \cdots & \partial x_n/\partial u_n\end{pmatrix}$$
 :::
 
-Again, since we have agreed to treat linear algebra as a black box, we defer the proof to analysis. In any case, what matters is the intuition: the Jacobian determinant $\lvert\det J_{\mathbf{T}}\rvert$ is the local scaling factor by which $\mathbf{T}$ expands volume. That is, a small box in $\mathbf{u}$-space is carried by $\mathbf{T}$ to a small parallelepiped in $\mathbf{x}$-space whose volume is the original box's volume multiplied by $\lvert\det J_{\mathbf{T}}\rvert$, so the volume element transforms as $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$. In dimension $n=2$ the parallelepiped becomes a parallelogram, and the area formed by the two edges $\mathbf{T}_u \Delta u$ and $\mathbf{T}_v \Delta v$ (where $\mathbf{T}_u, \mathbf{T}_v$ are the partial derivative vectors of $\mathbf{T}$) is exactly $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$. Substituting this into the Riemann sum and taking the limit yields [Theorem 4](#thm4){: data-lid="mx10j" data-relation="requires-review" }; the absolute value is needed because volume is always positive.
+Again, since we have agreed to treat linear algebra as a black box, we defer the proof to analysis. In any case, what matters is the intuition: the Jacobian determinant $\lvert\det J_{\mathbf{T}}\rvert$ is the local scaling factor by which $\mathbf{T}$ expands volume. That is, a small box in $\mathbf{u}$-space is carried by $\mathbf{T}$ to a small parallelepiped in $\mathbf{x}$-space whose volume is the original box's volume multiplied by $\lvert\det J_{\mathbf{T}}\rvert$, so the volume element transforms as $\dd{V} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \dd{V'}$. In dimension $n=2$ the parallelepiped becomes a parallelogram, and the area formed by the two edges $\mathbf{T}_u \Delta u$ and $\mathbf{T}_v \Delta v$ (where $\mathbf{T}_u, \mathbf{T}_v$ are the partial derivative vectors of $\mathbf{T}$) is exactly $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$. Substituting this into the Riemann sum and taking the limit yields [Theorem 4](#thm4){: data-lid="mx10j" }; the absolute value is needed because volume is always positive.
 
 The most common use of change of variables is to switch coordinate systems, and since we have only introduced determinants of $2\times 2$ and $3\times 3$ matrices, these will be the only examples we treat.
 

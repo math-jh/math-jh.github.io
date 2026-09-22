@@ -55,7 +55,7 @@ Every convergent sequence is bounded.
 If $a_n \rightarrow L$, then for $\epsilon = 1$ there is a corresponding $N$, and for $n > N$ we have $\lvert a_n\rvert \leq \lvert L\rvert + 1$. Taking $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_N\rvert, \lvert L\rvert + 1\}$ then gives $\lvert a_n\rvert \leq M$ for all $n$.
 :::
 
-By the same copy-and-translate method, the following is the sequence version of [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8){: data-lid="ocpzi" data-relation="requires-review" }.
+By the same copy-and-translate method, the following is the sequence version of [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8){: data-lid="ocpzi" data-relation="required" }.
 
 ::: Proposition 4 (Squeeze theorem)
 If $a_n \leq c_n \leq b_n$ for all sufficiently large $n$, and $a_n \rightarrow L$, $b_n \rightarrow L$, then $c_n \rightarrow L$.

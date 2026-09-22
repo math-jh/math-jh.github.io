@@ -44,7 +44,7 @@ That the series on the right-hand side has radius of convergence $R$ itself foll
 
 Before examining differentiation rules in earnest, we derive the derivatives of various functions.
 
-First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3){: data-lid="00w8x" data-relation="requires-review" } by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1){: data-lid="z8pkw" data-relation="required" reviewed="" }, its derivative is the sum of term-by-term differentiations
+First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3){: data-lid="00w8x" } by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1){: data-lid="z8pkw" data-relation="required" reviewed="" }, its derivative is the sum of term-by-term differentiations
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -168,14 +168,14 @@ $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 is differentiable at every point. For $x \neq 0$, the product rule and chain rule give $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$, so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely often between $[-1, 1]$ without approaching a limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but not of class $C^1$ (in the sense of [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-lid="gd3pp" data-relation="weak" reviewed="" }).
 :::
 
-Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a derivative is not continuous, it necessarily attains every intermediate value (*Darboux's theorem*), so it cannot have a jump discontinuity, and the discontinuity exhibited in [Example 7](#ex7){: data-lid="e0sir" data-relation="requires-review" } is due to oscillation rather than a jump.
+Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a derivative is not continuous, it necessarily attains every intermediate value (*Darboux's theorem*), so it cannot have a jump discontinuity, and the discontinuity exhibited in [Example 7](#ex7){: data-lid="e0sir" data-relation="weak" } is due to oscillation rather than a jump.
 
 ## Applications of Differentiation Rules
 
-We close this post by examining how to apply the rules developed so far. First, although somewhat contrary to the reason we introduced power series, [Proposition 1](#prop1){: data-lid="ms3m5" data-relation="requires-review" } can be used to evaluate series.
+We close this post by examining how to apply the rules developed so far. First, although somewhat contrary to the reason we introduced power series, [Proposition 1](#prop1){: data-lid="ms3m5" data-relation="required" } can be used to evaluate series.
 
 ::: Example 8 (Sum of an infinite series)
-Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2){: data-lid="we10a" data-relation="requires-review" })
+Differentiating both sides of the geometric series ([§Infinite Series, ⁋Example 2](/en/math/calculus/series#ex2){: data-lid="we10a" })
 
 $$\frac{1}{1-x} = \sum_{n=0}^\infty x^n \qquad (\lvert x\rvert < 1)$$
 

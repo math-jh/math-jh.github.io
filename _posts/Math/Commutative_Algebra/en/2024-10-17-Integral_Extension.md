@@ -59,7 +59,7 @@ Now, since a composition of ring homomorphisms is again a ring homomorphism, for
 
 $$A\overset{\phi}{\rightarrow}E\hookrightarrow E[\x]$$
 
-gives $E[\x]$ an $A$-algebra structure. Therefore, by [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="77068" data-relation="requires-review" }, a unique $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$ is defined; concretely, it is the map that takes an arbitrary polynomial
+gives $E[\x]$ an $A$-algebra structure. Therefore, by [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="77068" }, a unique $A$-algebra homomorphism $\phi[\x]:A[\x]\rightarrow E[\x]$ is defined; concretely, it is the map that takes an arbitrary polynomial
 
 $$p(\x)=a_n\x^n+\cdots+a_0\in A[\x]$$
 
@@ -94,7 +94,7 @@ Now, it is natural to expect a relationship between $E$ being integral over $A$ 
 Let $\phi: A \rightarrow E$ be a ring homomorphism and let $x$ be an element of $E$. Then $x$ is integral over $A$ if and only if there exist an $E$-module $N$ and an $A$-submodule $M$ of $N$, finitely generated as an $A$-module, such that $M$ is not annihilated by any nonzero element of $E$ and the inclusion $xM\subseteq M$ holds.
 :::
 ::: Proof
-First, suppose $x$ is integral over $A$. Then taking $N=E$, we know by [Proposition 2](#prop2){: data-lid="e77qo" data-relation="required" reviewed="" } that $M=A[x]$ is finitely generated. For the converse, as in the proof of [Proposition 2](#prop2){: data-lid="kpb02" data-relation="requires-review" }, regard multiplication by $x$ as an endomorphism of $M$ and apply [Theorem 1](#thm1){: data-lid="cplj4" data-relation="required" reviewed="" }.
+First, suppose $x$ is integral over $A$. Then taking $N=E$, we know by [Proposition 2](#prop2){: data-lid="e77qo" data-relation="required" reviewed="" } that $M=A[x]$ is finitely generated. For the converse, as in the proof of [Proposition 2](#prop2){: data-lid="kpb02" }, regard multiplication by $x$ as an endomorphism of $M$ and apply [Theorem 1](#thm1){: data-lid="cplj4" data-relation="required" reviewed="" }.
 :::
 
 The following theorem states exactly what one would expect, but proving it directly from the definition without [Lemma 5](#lem5){: data-lid="wu8lk" data-relation="required" reviewed="" } is nearly impossible.
