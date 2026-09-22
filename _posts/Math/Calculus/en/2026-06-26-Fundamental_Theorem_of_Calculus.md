@@ -29,7 +29,7 @@ If $f$ is continuous on $[a,b]$ and we define $F(x)=\int_a^x f(t)\dd{t}$, then $
 
 $$F'(x)=f(x).$$
 
-Here differentiability at the endpoints $a,b$ means the right-hand and left-hand derivatives of [§Differentiation and Derivatives, ⁋Definition 6](/en/math/calculus/derivatives#def6){: data-lid="jmcp1" data-relation="required" reviewed="" }.
+Here differentiability at the endpoints $a,b$ means the right-hand and left-hand derivatives of [§Differentiation and Derivatives, ⁋Definition 6](/en/math/calculus/derivatives#def6){: data-lid="jmcp1" data-relation="required" }.
 :::
 
 ::: Proof
@@ -134,7 +134,7 @@ and this series also has radius of convergence $R$.
 Then we can see in what form the function $e^{-x^2}$ examined in [Example 3](#ex3){: data-lid="054bj" data-relation="weak" } can be written.
 
 ::: Example 8
-Returning to the error function of [Example 3](#ex3){: data-lid="cya3g" data-relation="required" reviewed="" }. From the power series of the exponential function,
+Returning to the error function of [Example 3](#ex3){: data-lid="cya3g" data-relation="required" }. From the power series of the exponential function,
 
 $$e^{-t^2}=\sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n},$$
 

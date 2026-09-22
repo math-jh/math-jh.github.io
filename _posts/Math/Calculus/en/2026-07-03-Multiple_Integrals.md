@@ -125,7 +125,7 @@ Let us find the value of the integral $I = \int_{-\infty}^{\infty} e^{-x^2} \dd{
 
 $$\left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 = \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)\left(\int_{-t}^{t} e^{-y^2} \dd{y}\right) = \iint_{Q_t} e^{-(x^2+y^2)} \dd{A}$$
 
-Since both improper integrals converge, as $t \rightarrow \infty$ the integral $\int_{-t}^{t} e^{-x^2} \dd{x}$ approaches $I$, and therefore the left-hand side of the above equation goes to $I^2$. On the other hand, over the disk $B_s$ of radius $s$, the calculation of [Example 5](#ex5){: data-lid="gbvgg" data-relation="required" reviewed="" } repeats verbatim to give
+Since both improper integrals converge, as $t \rightarrow \infty$ the integral $\int_{-t}^{t} e^{-x^2} \dd{x}$ approaches $I$, and therefore the left-hand side of the above equation goes to $I^2$. On the other hand, over the disk $B_s$ of radius $s$, the calculation of [Example 5](#ex5){: data-lid="gbvgg" data-relation="required" } repeats verbatim to give
 
 $$\iint_{B_s} e^{-(x^2+y^2)} \dd{A} = \int_0^{2\pi} \int_0^s e^{-r^2} r \dd{r} \dd{\theta} = \pi(1 - e^{-s^2})$$
 

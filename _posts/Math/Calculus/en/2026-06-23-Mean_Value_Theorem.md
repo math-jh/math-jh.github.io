@@ -71,7 +71,7 @@ If $f$ is differentiable on an interval $I$ and $f'(x) = 0$ at every point, then
 For any two points $x_1 < x_2$ in $I$, applying [Theorem 4](#thm4){: data-lid="5mly6" data-relation="required" } to $[x_1, x_2]$ yields $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) = 0$ for some $c$. Hence $f(x_1) = f(x_2)$ and $f$ is constant. The second claim follows because the derivative of $f - g$ is zero.
 :::
 
-The next result generalizes [Theorem 4](#thm4){: data-lid="ynuvk" data-relation="weak" reviewed="" }: whereas [Theorem 4](#thm4){: data-lid="gygau" data-relation="weak" } compared the growth of $f(x)$ with that of $g(x) = x$, the following theorem extends this to a general $g(x)$.
+The next result generalizes [Theorem 4](#thm4){: data-lid="ynuvk" data-relation="weak" }: whereas [Theorem 4](#thm4){: data-lid="gygau" data-relation="weak" } compared the growth of $f(x)$ with that of $g(x) = x$, the following theorem extends this to a general $g(x)$.
 
 ::: Theorem 6 (Cauchy)
 If $f, g$ are continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists $c \in (a,b)$ such that
@@ -276,7 +276,7 @@ L'Hôpital's rule also holds in the following variants.
     
     $$\frac{f(x)-f(x_0)}{g(x)-g(x_0)}=\frac{f'(\xi)}{g'(\xi)}.$$
     
-    Taking $x_0$ close to $a$ forces the intermediate $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18){: data-lid="i7nes" data-relation="required" reviewed="" } the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by choosing $x_0$ sufficiently close to $a$ we can make the left-hand ratio as close to $L$ as desired. Then keeping this $x_0$ fixed and sending $x \rightarrow a$, since $f(x), g(x)\rightarrow\infty$ the contribution of the fixed terms $f(x_0), g(x_0)$ vanishes and the difference between the left-hand side and $f(x)/g(x)$ goes to $0$. Thus first trapping the left-hand side near $L$ by choosing $x_0$, and then sending $x$ sufficiently close to $a$, brings $f(x)/g(x)$ arbitrarily close to $L$, which means $\lim_{x\rightarrow a} f(x)/g(x)=L$.
+    Taking $x_0$ close to $a$ forces the intermediate $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18){: data-lid="i7nes" data-relation="required" } the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by choosing $x_0$ sufficiently close to $a$ we can make the left-hand ratio as close to $L$ as desired. Then keeping this $x_0$ fixed and sending $x \rightarrow a$, since $f(x), g(x)\rightarrow\infty$ the contribution of the fixed terms $f(x_0), g(x_0)$ vanishes and the difference between the left-hand side and $f(x)/g(x)$ goes to $0$. Thus first trapping the left-hand side near $L$ by choosing $x_0$, and then sending $x$ sufficiently close to $a$, brings $f(x)/g(x)$ arbitrarily close to $L$, which means $\lim_{x\rightarrow a} f(x)/g(x)=L$.
 :::
 
 ---
