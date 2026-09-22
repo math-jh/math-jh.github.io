@@ -25,7 +25,7 @@ Meanwhile, another perspective on vector bundles was to regard them as a collect
 
 $$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
 
-where two trivializing open covers overlap, and this perspective was powerful in that, for instance, replacing $\GL(k;\mathbb{R})$ with $\GL^+(k;\mathbb{R})$ could also account for *oriented* vector bundles.
+where two open sets of a trivializing open cover overlap, and this perspective was powerful in that, for instance, replacing $\GL(k;\mathbb{R})$ with $\GL^+(k;\mathbb{R})$ could also account for *oriented* vector bundles.
 
 The goal of this post is to connect these two perspectives. That is, more generally, we will define *principal $G$-bundles* that arise when the structure group is a (topological) group $G$, and we will define the *classifying space* $\B G$ that classifies these. Throughout this post, $G$ always denotes a topological group, and unless otherwise stated, the base space is assumed to be paracompact Hausdorff.
 
