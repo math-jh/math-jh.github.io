@@ -43,7 +43,7 @@ What is important is that this proposition provides a practical way to compute r
 For a variety $X$ and a nonempty open subset $U$, we have $K(U) = K(X)$.
 :::
 ::: Proof
-First, it is obvious that the inclusion $\iota: U \hookrightarrow X$ induces an embedding $\iota^\ast: K(X)\rightarrow K(U)$ of function fields. Since any nonzero field homomorphism is an inclusion, it suffices for us to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-lid="ap7my" data-relation="required" })
+First, it is obvious that the inclusion $\iota: U \hookrightarrow X$ induces an embedding $\iota^\ast: K(X)\rightarrow K(U)$ of function fields. Since any nonzero field homomorphism is injective, it suffices for us to show that $\iota^\ast$ is surjective. ([\[Field Theory\] §Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2){: data-lid="ap7my" data-relation="required" })
 
 However, for any $f \in K(U)$, $f$ is a regular function on some nonempty open subset of $U$, namely $V$, and since this $V$ is also an open subset of $X$, this pair $(V,f)$ belongs to $K(X)$. 
 :::
@@ -90,7 +90,7 @@ If an isomorphism of regular maps means that two varieties have completely the s
 A rational map $\varphi: X \dashrightarrow Y$ is called *dominant* if the image of $\varphi$ is dense in $Y$. That is, $\overline{\varphi(\dom(\varphi))} = Y$ holds.
 :::
 
-The condition of being dominant is needed because the composition of rational maps is not generally defined. For two rational maps $\varphi: X\dashrightarrow Y$ and $\psi: Y \dashrightarrow Z$, if the image of $\varphi$ does not meet $\dom(\psi)$, there is no way at all to define $\psi\circ \varphi$. However, if $\varphi$ is dominant, then $\varphi(\dom(\varphi))$ is dense in $Y$, so it necessarily meets the nonempty open set $\dom(\psi)$, and therefore $W=\varphi^{-1}(\dom(\psi))$ is a nonempty open subset of $\dom(\varphi)$ on which $\psi\circ\varphi$ is defined as a regular map. One can also check that $\psi\circ\varphi$ obtained in this way is again dominant. Since $X$ is irreducible, $W$ is dense in $\dom(\varphi)$, and since $\varphi^{-1}(\overline{\varphi(W)})$ is a closed subset of $\dom(\varphi)$ containing $W$, we have $\varphi(\dom(\varphi))\subseteq \overline{\varphi(W)}$, that is, $\overline{\varphi(W)}=Y$. Then $\varphi(W)$ is dense in $\dom(\psi)$ as well, so applying the same argument once more to $\psi$ and $\varphi(W)$ yields $\overline{\psi(\varphi(W))}=Z$. Henceforth, we consider compositions only for dominant rational maps.
+The condition of being dominant is needed because the composition of rational maps is not generally defined. For two rational maps $\varphi: X\dashrightarrow Y$ and $\psi: Y \dashrightarrow Z$, if the image of $\varphi$ does not meet $\dom(\psi)$, there is no way at all to define $\psi\circ \varphi$. However, if $\varphi$ is dominant, then $\varphi(\dom(\varphi))$ is dense in $Y$, so it necessarily meets the nonempty open set $\dom(\psi)$, and therefore $W=\varphi^{-1}(\dom(\psi))$ is a nonempty open subset of $\dom(\varphi)$ on which $\psi\circ\varphi$ is defined as a regular map. Moreover, if $\psi$ is also dominant, one can also check that $\psi\circ\varphi$ obtained in this way is again dominant. Since $X$ is irreducible, $W$ is dense in $\dom(\varphi)$, and since $\varphi^{-1}(\overline{\varphi(W)})$ is a closed subset of $\dom(\varphi)$ containing $W$, we have $\varphi(\dom(\varphi))\subseteq \overline{\varphi(W)}$, that is, $\overline{\varphi(W)}=Y$. Then $\varphi(W)$ is dense in $\dom(\psi)$ as well, so applying the same argument once more to $\psi$ and $\varphi(W)$ yields $\overline{\psi(\varphi(W))}=Z$. Henceforth, we consider compositions only for dominant rational maps.
 
 ::: Definition 9
 A dominant rational map $\varphi: X \dashrightarrow Y$ is called a *birational map* if there exists another dominant rational map $\psi: Y \dashrightarrow X$ such that $\psi \circ \varphi = \id_X$ and $\varphi \circ \psi = \id_Y$ hold (where defined). Two varieties $X, Y$ are called *birationally equivalent* if there exists a birational map between them.
@@ -148,7 +148,7 @@ Concretely, define the projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \
 
 Hence away from the origin the two varieties $\mathbb{A}^2$ and $\Bl_{(0,0)}\mathbb{A}^2$ are isomorphic, so $\pi_1$ is a birational map. 
 
-Now consider the rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$ mentioned earlier. It is undefined at the origin $(0, 0)$, but from the viewpoint of the blow-up $\Bl_{(0,0)} \mathbb{A}^2$ it is simply the projection to the $\mathbb{P}^1$ factor, $\pr_2$, which in particular is a regular map. In this way we can resolve base points where a birational map is undefined. 
+Now consider the rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$ mentioned earlier. It is undefined at the origin $(0, 0)$, but from the viewpoint of the blow-up $\Bl_{(0,0)} \mathbb{A}^2$ it is simply the projection to the $\mathbb{P}^1$ factor, $\pr_2$, which in particular is a regular map. In this way we can resolve base points where a rational map is undefined. 
 :::
 
 ---
