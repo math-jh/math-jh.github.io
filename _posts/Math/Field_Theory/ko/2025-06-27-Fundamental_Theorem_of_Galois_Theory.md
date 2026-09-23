@@ -79,9 +79,9 @@ $$\sigma(\omega)=\frac{\sigma(\omega\alpha)}{\sigma(\alpha)}=\frac{\omega^2\alph
 
 [정리 1](#thm1){: data-lid="q4jwg" data-relation="required" }의 주장은 이 네 subgroup이 $\mathbb{L}$의 자명하지 않은 subextension 전부와 대응한다는 것이다. 각각의 subgroup $H$에 대하여 $\mathbb{L}/k(H)$는 Galois extension이고 그 Galois group이 $H$이므로 ([보조정리 7](#lem7){: data-lid="myd7x" data-relation="required" }) [명제 2](#prop2){: data-lid="mun85" data-relation="required" }에 의하여 $[\mathbb{L}:k(H)]=\lvert H\rvert$이고, 따라서 $A_3$에는 degree $2$인 subextension이, 나머지 셋에는 degree $3$인 subextension이 대응한다.
 
-위에서 확인한 고정원소로부터 이들을 지목할 수 있다. $A_3$의 원소들이 $\omega$를 고정하므로 $k(A_3)$는 $\mathbb{Q}(\omega)$를 포함하는데, $\omega$의 minimal polynomial이 $\x^2+\x+1$이라 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이고 따라서 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\mathbb{Q}(\omega^i\alpha)$를 포함하며, $\omega^i\alpha$가 irreducible polynomial $\x^3-2$의 해이므로 양쪽 모두 degree $3$이 되어 이들도 같다.
+뿐만 아니라, 위에서 확인한 고정원소로부터 이들이 구체적으로 어떤 extension인지도 구할 수 있다. $A_3$의 원소들이 $\omega$를 고정하므로 $k(A_3)$는 $\mathbb{Q}(\omega)$를 포함하는데, $\omega$의 minimal polynomial이 $\x^2+\x+1$이라 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이고 따라서 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\mathbb{Q}(\omega^i\alpha)$를 포함하며, $\omega^i\alpha$가 irreducible polynomial $\x^3-2$의 해이므로 양쪽 모두 degree $3$이 되어 이들도 같다.
 
-한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$ 또는 $\omega^2$를, 따라서 어느 쪽이든 $\omega$를 포함하여 $\mathbb{L}$ 전체가 된다. 그럼 degree $3$인 위의 세 field는 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함하므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s82q0" data-relation="required" }의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니다. 그럼에도 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
+한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$, 혹은 $\omega^2$를 포함하며, 따라서 어느 쪽이든 $\omega$를 포함하게 되어 $\mathbb{L}$ 전체가 된다. 따라서 위에서 구한 degree $3$짜리 세 field $\mathbb{Q}(\omega^i\alpha)$들은 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함하므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s82q0" data-relation="required" }의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니다. 그럼에도 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
 :::
 
 이제 [정리 1](#thm1){: data-lid="tkhm2" data-relation="required" }의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
