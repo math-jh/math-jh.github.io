@@ -75,7 +75,7 @@ $$(Av)_i=A_{ik}v_k=w_iv_k^{-1}v_k=w_i$$
 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 6
-[명제 5](#prop5)의 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^\op$이다.
+[명제 5](#prop5){: data-lid="dx93u" }의 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^\op$이다.
 :::
 ::: 증명
 임의의 $d\in D$에 대하여, 열벡터의 각 성분에 오른쪽에서 $d$를 곱해주는 함수 $\rho_d(v)=vd$를 생각하면, 임의의 행렬 $A$에 대하여 
@@ -108,7 +108,7 @@ $$\varphi(v)=\sum_iA_i\varphi(e_1)=\sum_iA_i(e_1d)=vd=\rho_d(v)$$
 $\Phi:\End_A(A)\rightarrow A^\op$를 $\Phi(f)=f(1)$로 정의하면 이것이 $A^\op$로의 ring homomorphism인 것은 쉽게 보일 수 있다. 거꾸로, 임의의 $a\in A$에 대해 오른쪽 곱셈 $x\mapsto xa$는 left module endomorphism이고 이 대응이 $\Phi$의 역을 주므로 $\Phi$는 isomorphism이다.
 :::
 
-그럼 우리의 다음 관찰은 semisimple module 위의 linear operator에 대한 것으로, 직관적으로 이는 semisimple module들을 이루는 각 simple module들이 (같은 type이 아닌 한) 섞일 수 없다는 것이며, 이에 대한 증명은 당연히 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="weak" }을 사용한다.
+그럼 우리의 다음 관찰은 semisimple module 위의 linear operator에 대한 것으로, 직관적으로 이는 semisimple module들을 이루는 각 simple module들이 (같은 type이 아닌 한) 섞일 수 없다는 것이며, 이에 대한 증명은 당연히 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="rdgn9" data-relation="weak" }을 사용한다.
 
 ::: 보조정리 8
 $S_1,\ldots,S_k$가 서로 isomorphic하지 않은 simple module들이고 $n_1,\ldots,n_k\geq 1$일 때, $M=\bigoplus_{i=1}^kS_i^{n_i}$에 대하여
@@ -206,10 +206,10 @@ $A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 ::: 증명
 [명제 2](#prop2){: data-lid="c2mpv" data-relation="required" }에 의해 모든 $A$-module이 semisimple이므로, 이를 simple $A$-module들의 direct sum으로 나타낼 수 있고, [명제 5](#prop5){: data-lid="pg0b4" data-relation="required" }와 [명제 10](#prop10){: data-lid="zkbod" data-relation="required" }에 의해 각 $V_i$는 simple이다. 
 
-거꾸로 임의의 simple $A$-module $M$이 주어졌다 하면, $0\neq x\in M$에 대해 $M=Ax$이므로 surjection $A\rightarrow M$이 존재하고, [명제 5](#prop5)의 둘째 결과로 얻어지는 left module decomposition $A\cong\bigoplus_iV_i^{n_i}$을 생각하면 $A$의 어떤 summand $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }에 의해 $M\cong V_i$이다.
+거꾸로 임의의 simple $A$-module $M$이 주어졌다 하면, $0\neq x\in M$에 대해 $M=Ax$이므로 surjection $A\rightarrow M$이 존재하고, [명제 5](#prop5){: data-lid="npt9u" }의 둘째 결과로 얻어지는 left module decomposition $A\cong\bigoplus_iV_i^{n_i}$을 생각하면 $A$의 어떤 summand $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }에 의해 $M\cong V_i$이다.
 :::
 
-한편 [정의 1](#def1)은 left module 구조로 주어졌지만, right module로 정의하더라도 같은 ring들을 얻는다. Right $A$-module은 left $A^\op$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^\op$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 마찬가지로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
+한편 [정의 1](#def1){: data-lid="dw004" }은 left module 구조로 주어졌지만, right module로 정의하더라도 같은 ring들을 얻는다. Right $A$-module은 left $A^\op$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^\op$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 마찬가지로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
 
 ---
 
