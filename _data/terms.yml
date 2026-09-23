@@ -17289,6 +17289,13 @@ S:
   defs:
   - label: '[선형대수학] §특이값 분해'
     url: /ko/math/linear_algebra/singular_value_decomposition
+- id: singular_vector
+  en: singular vector
+  ko: 특이벡터
+  primary: en
+  defs:
+  - label: '[선형대수학] §특이값 분해'
+    url: /ko/math/linear_algebra/singular_value_decomposition
 - id: singularity
   en: singularity
   ko: 특이성
