@@ -16,7 +16,7 @@ translated_at: 2026-09-02T03:45:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-09-02T03:45:04+00:00
 ---
-In the previous post, we looked at several criteria for deciding when an $A$-module $M$ is flat; in this post, we examine a criterion for deciding flatness specifically over a Noetherian local ring $(A, \mathfrak{m})$. The following theorem shows that, for a finitely generated module over a local Noetherian $A$-algebra $(E, \mathfrak{n})$ satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$, it suffices to check the condition of [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="required" } for the maximal ideal alone.
+In the previous post, we looked at several criteria for deciding when an $A$-module $M$ is flat; in this post, we examine a criterion for deciding flatness specifically over a Noetherian local ring $(A, \mathfrak{m})$. The following theorem shows that, for a finitely generated module over a local Noetherian $A$-algebra $(E, \mathfrak{n})$ satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$, it suffices to check the condition of [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="weak" } for the maximal ideal alone.
 
 ::: Theorem 1
 Fix a Noetherian local ring $(A, \mathfrak{m})$, and suppose that $(E, \mathfrak{n})$ is a local Noetherian $A$-algebra satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$. Then for a finitely generated $E$-module $M$, $M$ is a flat $A$-module if and only if $\Tor_1^A(A/\mathfrak{m}, M)=0$.
@@ -97,7 +97,7 @@ Meanwhile, if $M$ is a flat $A$-module, then for any $A/(a)$-module $N$,
 
 $$(M/aM)\otimes_{A/(a)}N=(A/(a)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN,$$
 
-so $M/aM$ is a flat $A/(a)$-module without any additional hypotheses. In [Corollary 3](#cor3){: data-lid="ouck5" data-relation="forward" }, we prove the converse of this claim under the hypotheses of [Theorem 1](#thm1){: data-lid="a42b0" data-relation="required" }. For this, we first need the following lemma.
+so $M/aM$ is a flat $A/(a)$-module without any additional hypotheses. In [Corollary 3](#cor3){: data-lid="ouck5" data-relation="forward" }, we prove the converse of this claim under the hypotheses of [Theorem 1](#thm1){: data-lid="a42b0" data-relation="weak" }. For this, we first need the following lemma.
 
 ::: Lemma 2
 Let an $A$-module $M$ be given, and suppose $a\in A$ is a non-zerodivisor on both $A$ and $M$. Then for any $A/(a)$-module $N$,
@@ -159,7 +159,7 @@ Now apply the long exact sequence of $\Tor^A_\bullet(\kappa, -)$ to the exact se
 
 $$0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$$
 
-Since $M$ is flat, $\Tor_1^A(\kappa, M)=0$ ([§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="qhjtw" data-relation="weak" }), and hence
+Since $M$ is flat, $\Tor_1^A(\kappa, M)=0$ ([§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1){: data-lid="qhjtw" data-relation="required" }), and hence
 
 $$0 \rightarrow \Tor_1^A(\kappa, C) \rightarrow fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$$
 

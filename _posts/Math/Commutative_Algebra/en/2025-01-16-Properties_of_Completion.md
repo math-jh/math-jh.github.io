@@ -104,7 +104,7 @@ For the second claim, by [§Flatness, ⁋Proposition 1](/en/math/commutative_alg
 
 ## Hensel's Lemma
 
-A typical example of a complete ring is the ring of formal power series $A[[\x_i]]_{i\in I}$ discussed in [§Completion, ⁋Example 4](/en/math/commutative_algebra/completion#ex4){: data-lid="xqmvk" data-relation="weak" }. We also saw in [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="mln66" data-relation="required" } that the polynomial ring $A[\x_i]_{i\in I}$ plays the role of a free functor $\Set \rightarrow \cAlg{A}$; a similar universal property holds for $A[[\x_i]]_{i\in I}$ as well.
+A typical example of a complete ring is the ring of formal power series $A[[\x_i]]_{i\in I}$ discussed in [§Completion, ⁋Example 4](/en/math/commutative_algebra/completion#ex4){: data-lid="xqmvk" data-relation="required" }. We also saw in [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="mln66" data-relation="weak" } that the polynomial ring $A[\x_i]_{i\in I}$ plays the role of a free functor $\Set \rightarrow \cAlg{A}$; a similar universal property holds for $A[[\x_i]]_{i\in I}$ as well.
 
 ::: Theorem 5
 Fix a ring $A$ and an $A$-algebra $E$, and suppose that $E$ is complete with respect to some ideal $\mathfrak{a}\subseteq E$. Let $\alpha_1,\ldots,\alpha_n\in \mathfrak{a}$. Then the following hold.

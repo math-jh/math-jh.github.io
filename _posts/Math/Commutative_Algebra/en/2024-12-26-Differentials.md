@@ -63,7 +63,7 @@ giving an $E$-module denoted by $\Omega_{E/A}$. Here, defined by $f\mapsto \dd{f
 
 Then one can easily verify that $\Omega_{E/A}$ satisfies the universal property of [Lemma 2](#lem2){: data-lid="oapge" data-relation="required" }.
 
-Meanwhile, we have already constructed the same module in a different way. In [\[Multilinear Algebra\] §Differential Modules, ⁋Definition 9](/en/math/multilinear_algebra/differential_modules#def9){: data-lid="wuimn" data-relation="weak" }, starting with the multiplication map $m:E\otimes_AE \rightarrow E$, we took its kernel $\mathfrak{I}$ to define the $E$-module $\mathfrak{I}/\mathfrak{I}^2$ as the module of $A$-differentials, and showed that $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$ plays the role of the universal $A$-derivation. Although the starting point differs from [Definition 3](#def3){: data-lid="dck1c" data-relation="required" }, which is built directly from generators and relations, the two constructions canonically coincide.
+Meanwhile, we have already constructed the same module in a different way. In [\[Multilinear Algebra\] §Differential Modules, ⁋Definition 9](/en/math/multilinear_algebra/differential_modules#def9){: data-lid="wuimn" data-relation="required" }, starting with the multiplication map $m:E\otimes_AE \rightarrow E$, we took its kernel $\mathfrak{I}$ to define the $E$-module $\mathfrak{I}/\mathfrak{I}^2$ as the module of $A$-differentials, and showed that $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$ plays the role of the universal $A$-derivation. Although the starting point differs from [Definition 3](#def3){: data-lid="dck1c" data-relation="required" }, which is built directly from generators and relations, the two constructions canonically coincide.
 
 ::: Proposition 4
 For an $A$-algebra $E$, let the kernel of the multiplication map $m:E\otimes_AE \rightarrow E$ be $\mathfrak{I}$. Then, sending $(x\otimes1-1\otimes x)+\mathfrak{I}^2$ to $\dd{x}$, there exists a canonical isomorphism
@@ -117,7 +117,7 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 The most basic consequence of this functoriality is that the Kähler differential module is compatible with localization.
 
 ::: Proposition 7
-Suppose an $A$-algebra $E$ and, in $E$, a multiplicative subset $S$ are given ([§Localization, ⁋Definition 3](/en/math/commutative_algebra/localization#def3){: data-lid="1mgpv" data-relation="weak" }). Via the canonical homomorphism $\varphi:E \rightarrow S^{-1}E$, view $S^{-1}E$ as an $A$-algebra. Then the $S^{-1}E$-linear homomorphism given by [Proposition 6](#prop6){: data-lid="1bkj7" data-relation="required" }
+Suppose an $A$-algebra $E$ and, in $E$, a multiplicative subset $S$ are given ([§Localization, ⁋Definition 3](/en/math/commutative_algebra/localization#def3){: data-lid="1mgpv" data-relation="required" }). Via the canonical homomorphism $\varphi:E \rightarrow S^{-1}E$, view $S^{-1}E$ as an $A$-algebra. Then the $S^{-1}E$-linear homomorphism given by [Proposition 6](#prop6){: data-lid="1bkj7" data-relation="required" }
 
 $$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
 

@@ -155,7 +155,7 @@ $$\phi\otimes_A\id_{A/\mathfrak{p}_2}: A/\mathfrak{p}_2\cong A\otimes_A A/\mathf
 
 를 얻으며, $\phi$가 flat이라는 가정으로부터 이 또한 flat인 것을 안다. 따라서 $\mathfrak{p}_2=0$이고 $A$가 integral domain이라 가정해도 충분하다. 그럼 [§평탄성, ⁋따름정리 3](/ko/math/commutative_algebra/flatness#cor3){: data-lid="q4at1" data-relation="required" reviewed="" }에 의하여 $\phi$는 $A$의 non-zerodivisor를 $B$의 non-zerodivisor로 옮겨야 한다. 
 
-한편, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-lid="p8rhs" data-relation="requires-review" }에 의하여 우리는 $\mathfrak{q}_1$에 포함되는 minimal prime ideal $\mathfrak{q}_2$가 존재함을 안다. 그런데 $B$를 자기 자신 위에 정의된 module로 본다면 $\ann B=0$이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="v5n57" data-relation="required" reviewed="" }의 첫째 결과에 의하여 $\mathfrak{q}_2\in \Ass B$이고, 다시 해당 정리의 둘째 결과에 의하여 $\mathfrak{q}_2$는 zero-divisor로만 이루어져 있어야 한다. 따라서 위에서 살펴본 $\phi$의 성질에 의하여 $\phi^{-1}(\mathfrak{q}_2)=0$이어야 함을 안다. 
+한편, [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4){: data-lid="p8rhs" data-relation="required" reviewed="" }에 의하여 우리는 $\mathfrak{q}_1$에 포함되는 minimal prime ideal $\mathfrak{q}_2$가 존재함을 안다. 그런데 $B$를 자기 자신 위에 정의된 module로 본다면 $\ann B=0$이므로 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="v5n57" data-relation="required" reviewed="" }의 첫째 결과에 의하여 $\mathfrak{q}_2\in \Ass B$이고, 다시 해당 정리의 둘째 결과에 의하여 $\mathfrak{q}_2$는 zero-divisor로만 이루어져 있어야 한다. 따라서 위에서 살펴본 $\phi$의 성질에 의하여 $\phi^{-1}(\mathfrak{q}_2)=0$이어야 함을 안다. 
 :::
 
 위의 증명에서 $B/\mathfrak{p}_2B$를 그대로 살려주면, $\mathfrak{q}_2$를 택할 때, $\mathfrak{q}_1$에 속하고 $\mathfrak{p}_2 B$를 포함하는 prime ideal들 중 minimal한 것으로 택하면 된다는 것을 안다. 

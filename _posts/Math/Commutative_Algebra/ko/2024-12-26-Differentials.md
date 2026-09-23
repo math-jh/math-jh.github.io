@@ -63,7 +63,7 @@ $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,
 
 그럼 $\Omega_{E/A}$가 [보조정리 2](#lem2){: data-lid="oapge" data-relation="required" reviewed="" }의 universal property를 만족하는 것을 쉽게 확인할 수 있다.
 
-한편 우리는 같은 module을 이미 다른 방식으로 만든 적이 있다. [\[다중선형대수학\] §미분가군, ⁋정의 9](/ko/math/multilinear_algebra/differential_modules#def9){: data-lid="wuimn" data-relation="requires-review" }에서는 곱셈사상 $m:E\otimes_AE \rightarrow E$의 kernel $\mathfrak{I}$를 잡아 $E$-module $\mathfrak{I}/\mathfrak{I}^2$을 $A$-differential들의 module로 정의하고, $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$이 universal $A$-derivation의 역할을 한다는 것을 보였다. Generator와 relation을 직접 적어 만든 [정의 3](#def3){: data-lid="dck1c" data-relation="required" reviewed="" }과는 출발점이 다르지만, 두 구성은 canonical하게 일치한다.
+한편 우리는 같은 module을 이미 다른 방식으로 만든 적이 있다. [\[다중선형대수학\] §미분가군, ⁋정의 9](/ko/math/multilinear_algebra/differential_modules#def9){: data-lid="wuimn" data-relation="required" reviewed="" }에서는 곱셈사상 $m:E\otimes_AE \rightarrow E$의 kernel $\mathfrak{I}$를 잡아 $E$-module $\mathfrak{I}/\mathfrak{I}^2$을 $A$-differential들의 module로 정의하고, $x\mapsto (x\otimes1-1\otimes x)+\mathfrak{I}^2$이 universal $A$-derivation의 역할을 한다는 것을 보였다. Generator와 relation을 직접 적어 만든 [정의 3](#def3){: data-lid="dck1c" data-relation="required" reviewed="" }과는 출발점이 다르지만, 두 구성은 canonical하게 일치한다.
 
 ::: 명제 4
 $A$-algebra $E$에 대하여, 곱셈사상 $m:E\otimes_AE \rightarrow E$의 kernel을 $\mathfrak{I}$라 하자. 그럼 $(x\otimes1-1\otimes x)+\mathfrak{I}^2$을 $\dd{x}$로 보내는 canonical isomorphism
@@ -121,7 +121,7 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 이 functoriality가 주는 가장 기본적인 결과는 Kähler differential module이 localization과 맞아떨어진다는 것이다.
 
 ::: 명제 7
-$A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3){: data-lid="1mgpv" data-relation="requires-review" }), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 6](#prop6){: data-lid="1bkj7" data-relation="required" reviewed="" }가 주는 $S^{-1}E$-linear homomorphism
+$A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3){: data-lid="1mgpv" data-relation="required" reviewed="" }), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 6](#prop6){: data-lid="1bkj7" data-relation="required" reviewed="" }가 주는 $S^{-1}E$-linear homomorphism
 
 $$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
 

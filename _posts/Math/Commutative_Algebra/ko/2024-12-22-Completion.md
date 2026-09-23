@@ -25,7 +25,7 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 그리고 canonical morphism들 $\rho_i:\widehat{G}_{\mathcal{J}} \rightarrow G/ H_i$들이 주어지며, 이 때 $\rho_{ji}\circ\rho_j=\rho_i$가 모든 $j>i$에 대해 성립한다. 표기의 편의를 위해 $\mathcal{J}$가 문맥에 따라 명확할 경우 이를 간단히 $\widehat{G}$로 쓰기도 한다.
 
-그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5){: data-lid="jta4v" data-relation="requires-review" }에서 살펴본 것과 같이 categorical limit으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
+그럼 이들은 [\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5){: data-lid="jta4v" data-relation="weak" reviewed="" }에서 살펴본 것과 같이 categorical limit으로 생각할 수 있으며, 따라서 다음의 universal property 또한 만족한다.
 
 > $\rho_{ji}\circ\pi_j=\pi_i$를 만족하는 $K \rightarrow G/H_i$들이 주어질 때마다, 유일한 $\pi:K \rightarrow \widehat{G}$가 존재하여 다음의 diagram
 > 

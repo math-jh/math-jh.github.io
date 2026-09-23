@@ -21,7 +21,7 @@ $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
 ## 몫아이디얼
 
-우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들){: data-lid="76u4p" data-relation="requires-review" })
+우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들){: data-lid="76u4p" data-relation="required" reviewed="" })
 
 ::: 정의 1
 Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*를 다음의 식
@@ -39,7 +39,7 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 
 ## 동차아이디얼의 성질들
 
-우리는 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6){: data-lid="oapt0" data-relation="required" reviewed="" }에서 임의의 homogeneous ideal은 항상 homogeneous element들로 생성됨을 보였는데, 이를 이용하면 다음의 [보조정리 2](#lem2){: data-lid="96lxu" data-relation="requires-review" }를 보일 수 있다. 
+우리는 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6){: data-lid="oapt0" data-relation="required" reviewed="" }에서 임의의 homogeneous ideal은 항상 homogeneous element들로 생성됨을 보였는데, 이를 이용하면 다음의 [보조정리 2](#lem2){: data-lid="96lxu" data-relation="weak" reviewed="" }를 보일 수 있다. 
 
 ::: 보조정리 2
 Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다.

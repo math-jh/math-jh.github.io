@@ -57,7 +57,7 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 ## 차원의 계산
 
-일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7){: data-lid="6waej" data-relation="requires-review" }이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
+일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7){: data-lid="6waej" data-relation="forward" reviewed="" }이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
 
 우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="yu1m9" data-relation="required" reviewed="" }의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
 
@@ -138,7 +138,7 @@ Noetherian ring $A$와 임의의 $a_1,\ldots, a_c\in A$에 대하여, $\mathfrak
 
 즉, Noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 Noetherian ring이 존재한다. (**[Nag, Appendix, Example 1]**)
 
-한편 [정리 7](#thm7){: data-lid="etgwe" data-relation="requires-review" }은 다음과 같은 역 또한 존재한다.
+한편 [정리 7](#thm7){: data-lid="etgwe" data-relation="weak" reviewed="" }은 다음과 같은 역 또한 존재한다.
 
 ::: 따름정리 8
 Noetherian ring $A$에서, codimension $c$의 prime ideal $\mathfrak{p}$는 $c$개의 원소로 생성되는 어떠한 ideal을 포함하는 prime ideal들 중 minimal한 것이다. 
@@ -188,7 +188,7 @@ $$\mathfrak{p}^\ast = \langle x \in \mathfrak{p} \mid x \text{ homogeneous}\rang
 $x$를 homogeneous decomposition $x = \sum_{d} x_d$로 쓰자. $x_+ = \sum_{d > 0} x_d \in \mathfrak{m} \subseteq \mathfrak{p}$이므로, $x_0 = x - x_+ \in \mathfrak{p}$이다. 이제 $x' = x - x_0 = x_+ \in \mathfrak{p}$이고, 같은 방식으로 $x_1 \in \mathfrak{p}$임을 보일 수 있다. 귀납적으로 각 $x_d \in \mathfrak{p}$이고, 따라서 $x \in \mathfrak{p}^\ast$이다.
 :::
 
-[명제 10](#prop10){: data-lid="w51kh" data-relation="requires-review" }으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal에 homogeneous prime ideal을 대응시키는 조작을 살펴본다.
+[명제 10](#prop10){: data-lid="w51kh" data-relation="required" reviewed="" }으로부터 irrelevant ideal $\mathfrak{m}$을 포함하는 prime ideal은 homogeneous하다는 것을 알았다. 반대로 $\mathfrak{m}$을 포함하지 않는 homogeneous prime ideal들은 $\operatorname{Proj} R$의 점들에 해당한다. 이제 우리는 임의의 prime ideal에 homogeneous prime ideal을 대응시키는 조작을 살펴본다.
 
 ::: 명제 11
 Graded ring $R$의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}$에 속하는 homogeneous element들로 생성되는 ideal $\mathfrak{p}^\ast$는 $\mathfrak{p}$에 포함되는 가장 큰 homogeneous ideal이며, 또한 prime ideal이다.

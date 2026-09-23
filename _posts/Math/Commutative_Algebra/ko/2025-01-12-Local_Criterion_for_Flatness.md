@@ -15,7 +15,7 @@ toc: false
 
 ---
 
-앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 Noetherian local ring $(A, \mathfrak{m})$ 위에서 이를 판단하는 기준을 살펴본다. 다음 정리는 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra $(E, \mathfrak{n})$ 위의 finitely generated module에 대하여 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="requires-review" }을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
+앞선 글에서 우리는 $A$-module $M$이 언제 flat인지를 판단하는 몇 가지 기준들을 살펴보았는데, 이번 글에서는 특별히 Noetherian local ring $(A, \mathfrak{m})$ 위에서 이를 판단하는 기준을 살펴본다. 다음 정리는 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra $(E, \mathfrak{n})$ 위의 finitely generated module에 대하여 [§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-lid="u4swn" data-relation="weak" reviewed="" }을 maximal ideal에 대해서만 확인해도 충분하다는 것을 보여준다.
 
 ::: 정리 1
 Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 그럼 finitely generated $E$-module $M$에 대하여, $M$이 flat $A$-module인 것과 $\Tor_1^A(A/\mathfrak{m}, M)=0$인 것이 동치이다. 
@@ -96,7 +96,7 @@ $$\cdots \rightarrow\Tor_1^A(N', M) \rightarrow \Tor_1^A(N, M) \rightarrow \Tor_
 
 $$(M/aM)\otimes_{A/(a)}N=(A/(a)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN$$
 
-이므로 $M/aM$은 아무런 조건 없이도 flat $A/(a)$-module이다. 우리는 [따름정리 3](#cor3){: data-lid="ouck5" data-relation="forward" reviewed="" }에서 [정리 1](#thm1){: data-lid="a42b0" data-relation="requires-review" }의 조건을 가정하고 이 주장의 역을 보인다. 이를 위해서는 우선 다음 보조정리가 필요하다.
+이므로 $M/aM$은 아무런 조건 없이도 flat $A/(a)$-module이다. 우리는 [따름정리 3](#cor3){: data-lid="ouck5" data-relation="forward" reviewed="" }에서 [정리 1](#thm1){: data-lid="a42b0" data-relation="weak" reviewed="" }의 조건을 가정하고 이 주장의 역을 보인다. 이를 위해서는 우선 다음 보조정리가 필요하다.
 
 ::: 보조정리 2
 $A$-module $M$이 주어졌다 하고, $a\in A$가 $A$와 $M$ 모두에서 non-zerodivisor라 하자. 그럼 임의의 $A/(a)$-module $N$에 대하여, 
@@ -160,7 +160,7 @@ $$0 \rightarrow K \rightarrow M \rightarrow fM \rightarrow 0$$
 
 $$0 \rightarrow fM \rightarrow M \rightarrow C \rightarrow 0$$
 
-에 $\Tor^A_\bullet(\kappa, -)$의 long exact sequence를 적용한다. $M$이 flat이므로 $\Tor_1^A(\kappa, M)=0$이고 ([§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-lid="qhjtw" data-relation="requires-review" }), 따라서
+에 $\Tor^A_\bullet(\kappa, -)$의 long exact sequence를 적용한다. $M$이 flat이므로 $\Tor_1^A(\kappa, M)=0$이고 ([§평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1){: data-lid="qhjtw" data-relation="required" reviewed="" }), 따라서
 
 $$0 \rightarrow \Tor_1^A(\kappa, C) \rightarrow fM\otimes_A\kappa \rightarrow M\otimes_A\kappa$$
 
