@@ -81,7 +81,7 @@ $$\dd{(e_j\wedge \xi)}=x_j\xi-e_j\wedge \dd{\xi}$$
 
 따라서 각각의 $H_i(x;M)$은 $A/(x)$-module 구조를 가지며, 특히 만일 $(x)=A$라면 모든 $i$에 대하여 $H_i(x;M)=0$이다.
 
-이 절을 마치기 전에 Koszul complex의 두드러진 구조적 성질 하나를 더 살펴본다. 각각의 $i$에 대하여 $K^i(x;M)=\Hom_A(\bigwedge\nolimits^iF, M)$으로 두면, $\delta^i=\Hom_A(d_{i+1},M):K^i(x;M) \rightarrow K^{i+1}(x;M)$은 $\delta^{i+1}\circ\delta^i=\Hom_A(d_{i+1}\circ d_{i+2},M)=0$을 만족하므로 index가 증가하는 방향의 complex를 얻고, 그 cohomology를 $H^i(x;M)=\ker\delta^i/\im\delta^{i-1}$로 적는다. 가령 $H^0(x;M)$은 $\Hom_A(A,M)\cong M$ 안에서 $\delta^0$의 kernel인데, $m\in M$에 대응되는 $\Hom_A(A,M)$의 원소에 $\delta^0$를 취하면 $e_i\mapsto x_im$이므로 $H^0(x;M)=\{m\in M\mid x_1m=\cdots=x_nm=0\}$이다. 이것이 [명제 2](#prop2){: data-lid="5984c" data-relation="requires-review" }의 $H_n(x;M)$과 일치하는 것은 우연이 아니다.
+이 절을 마치기 전에 Koszul complex의 두드러진 구조적 성질 하나를 더 살펴본다. 각각의 $i$에 대하여 $K^i(x;M)=\Hom_A(\bigwedge\nolimits^iF, M)$으로 두면, $\delta^i=\Hom_A(d_{i+1},M):K^i(x;M) \rightarrow K^{i+1}(x;M)$은 $\delta^{i+1}\circ\delta^i=\Hom_A(d_{i+1}\circ d_{i+2},M)=0$을 만족하므로 index가 증가하는 방향의 complex를 얻고, 그 cohomology를 $H^i(x;M)=\ker\delta^i/\im\delta^{i-1}$로 적는다. 가령 $H^0(x;M)$은 $\Hom_A(A,M)\cong M$ 안에서 $\delta^0$의 kernel인데, $m\in M$에 대응되는 $\Hom_A(A,M)$의 원소에 $\delta^0$를 취하면 $e_i\mapsto x_im$이므로 $H^0(x;M)=\{m\in M\mid x_1m=\cdots=x_nm=0\}$이다. 이것이 [명제 2](#prop2){: data-lid="5984c" data-relation="required" reviewed="" }의 $H_n(x;M)$과 일치하는 것은 우연이 아니다.
 
 ::: 명제 4
 임의의 $i$에 대하여 $H^i(x;M)\cong H_{n-i}(x;M)$이 성립한다.
@@ -124,7 +124,7 @@ $$H_i(x;M)\cong H_i(D\otimes_AM)=\ker\delta^{n-i}/\im\delta^{n-i-1}=H^{n-i}(x;M)
 Ring $A$와 $A$-module $M$, 그리고 $A$의 원소들 $x_1,\ldots, x_n$이 주어졌다 하자. $x_1,\ldots, x_n$이 *$M$-regular sequence* 혹은 간단히 *$M$-sequence*라는 것은 $xM\neq M$이고, 각각의 $i=0,1,\ldots, n-1$에 대하여 곱하기 $x_{i+1}$이 $M/(x_1,\ldots,x_i)M$ 위에서 injective인 것이다.
 :::
 
-$i=0$의 조건은 곱하기 $x_1$이 $M$ 위에서 injective라는 것이고, $M=A$인 경우 이 정의는 [§정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2){: data-lid="vuqxw" data-relation="requires-review" }의 $A$-sequence와 일치한다. Ring의 경우와 마찬가지로 이 정의는 겉보기에 원소들의 순서에 민감하며, 실제로 순서를 바꾸면 $M$-sequence가 아니게 되는 예시를 [예시 11](#ex11){: data-lid="u0l91" data-relation="forward" reviewed="" }에서 살펴본다. 그럼에도 Noetherian local ring에서는 순서가 전혀 문제되지 않는다는 것이 이 글의 주된 결과이다.
+$i=0$의 조건은 곱하기 $x_1$이 $M$ 위에서 injective라는 것이고, $M=A$인 경우 이 정의는 [§정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2){: data-lid="vuqxw" data-relation="required" reviewed="" }의 $A$-sequence와 일치한다. Ring의 경우와 마찬가지로 이 정의는 겉보기에 원소들의 순서에 민감하며, 실제로 순서를 바꾸면 $M$-sequence가 아니게 되는 예시를 [예시 11](#ex11){: data-lid="u0l91" data-relation="forward" reviewed="" }에서 살펴본다. 그럼에도 Noetherian local ring에서는 순서가 전혀 문제되지 않는다는 것이 이 글의 주된 결과이다.
 
 이 결과로 가는 길은 Koszul complex의 귀납적 구조, 곧 마지막 원소를 떼어내면 나타나는 long exact sequence를 통한다.
 
@@ -188,7 +188,7 @@ $$\Tor_i^A(A/(x),N)\cong H_i(x;N),\qquad \Ext_A^i(A/(x),N)\cong H^i(x;N)$$
 이 성립한다.
 :::
 ::: 증명
-[정리 7](#thm7){: data-lid="3oz0j" data-relation="required" reviewed="" }을 $M=A$에 적용하면 모든 $i\geq 1$에서 $H_i(K(x))=0$이고, [명제 2](#prop2){: data-lid="y93x7" data-relation="required" reviewed="" }에 의하여 $H_0(K(x))=A/(x)$이므로 $K(x)$는 $A/(x)$의 left resolution이다. ([\[호몰로지 대수학\] §분해, ⁋정의 2](/ko/math/homological_algebra/resolutions#def2){: data-lid="f6idn" data-relation="requires-review" }) 각각의 $K_i$는 free이므로 자기 자신의 direct summand가 되어 projective이고 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-lid="jo7iu" data-relation="requires-review" }), 따라서 $K(x)$는 $A/(x)$의 projective resolution이다. 그럼 [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2){: data-lid="39lvh" data-relation="required" reviewed="" }에 의하여
+[정리 7](#thm7){: data-lid="3oz0j" data-relation="required" reviewed="" }을 $M=A$에 적용하면 모든 $i\geq 1$에서 $H_i(K(x))=0$이고, [명제 2](#prop2){: data-lid="y93x7" data-relation="required" reviewed="" }에 의하여 $H_0(K(x))=A/(x)$이므로 $K(x)$는 $A/(x)$의 left resolution이다. ([\[호몰로지 대수학\] §분해, ⁋정의 2](/ko/math/homological_algebra/resolutions#def2){: data-lid="f6idn" data-relation="required" reviewed="" }) 각각의 $K_i$는 free이므로 자기 자신의 direct summand가 되어 projective이고 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-lid="jo7iu" data-relation="required" reviewed="" }), 따라서 $K(x)$는 $A/(x)$의 projective resolution이다. 그럼 [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2){: data-lid="39lvh" data-relation="required" reviewed="" }에 의하여
 
 $$\Tor_i^A(A/(x),N)=H_i(K(x)\otimes_AN)=H_i(x;N)$$
 
@@ -207,7 +207,7 @@ $$\Ext_A^i(A/(x),N)\cong\Tor_{n-i}^A(A/(x),N)$$
 
 ## 국소환에서의 판정
 
-이제 [정리 7](#thm7){: data-lid="x118z" data-relation="required" reviewed="" }의 역을 살펴본다. 일반적으로는 Koszul homology가 모두 소멸하더라도 주어진 순서의 원소들이 $M$-regular sequence가 아닐 수 있다. ([예시 11](#ex11){: data-lid="lfwxs" data-relation="requires-review" }) 그러나 Noetherian local ring에서 원소들을 maximal ideal에서 뽑는다면 상황이 완전히 달라지는데, 이는 Nakayama lemma가 homology의 소멸을 한 단계씩 아래로 전파시켜 주기 때문이다.
+이제 [정리 7](#thm7){: data-lid="x118z" data-relation="required" reviewed="" }의 역을 살펴본다. 일반적으로는 Koszul homology가 모두 소멸하더라도 주어진 순서의 원소들이 $M$-regular sequence가 아닐 수 있다. ([예시 11](#ex11){: data-lid="lfwxs" data-relation="required" reviewed="" }) 그러나 Noetherian local ring에서 원소들을 maximal ideal에서 뽑는다면 상황이 완전히 달라지는데, 이는 Nakayama lemma가 homology의 소멸을 한 단계씩 아래로 전파시켜 주기 때문이다.
 
 ::: 정리 9
 Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 finitely generated $A$-module $M$, 그리고 원소들 $x_1,\ldots, x_n\in \mathfrak{m}$에 대하여 다음이 모두 동치이다.
@@ -227,7 +227,7 @@ $n=1$인 경우, [명제 2](#prop2){: data-lid="ho6mp" data-relation="required" 
 
 $$H_1(x';M)\overset{\partial_2}{\longrightarrow}H_1(x';M) \rightarrow H_1(x;M)=0$$
 
-을 생각하자. $\partial_2$는 곱하기 $-x_n$이므로 이 exact sequence는 $H_1(x';M)=x_nH_1(x';M)$을 말해준다. 한편 $A$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="rl89w" data-relation="requires-review" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="4aowj" data-relation="requires-review" }), 따라서 finite direct sum $K_i(x';M)\cong M^{\oplus\binom{n-1}{i}}$도 Noetherian이다. ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="dg3vj" data-relation="requires-review" }) 특히 그 submodule의 quotient인 $H_1(x';M)$은 finitely generated이다. ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3){: data-lid="7cnrg" data-relation="requires-review" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="fwene" data-relation="requires-review" }) 그럼 $x_n\in\mathfrak{m}$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="8dt1x" data-relation="required" reviewed="" }에 의하여 $H_1(x';M)=0$이고, 귀납적 가정에 의하여 $x_1,\ldots,x_{n-1}$은 $M$-regular sequence이다.
+을 생각하자. $\partial_2$는 곱하기 $-x_n$이므로 이 exact sequence는 $H_1(x';M)=x_nH_1(x';M)$을 말해준다. 한편 $A$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="rl89w" data-relation="required" reviewed="" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="4aowj" data-relation="required" reviewed="" }), 따라서 finite direct sum $K_i(x';M)\cong M^{\oplus\binom{n-1}{i}}$도 Noetherian이다. ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="dg3vj" data-relation="required" reviewed="" }) 특히 그 submodule의 quotient인 $H_1(x';M)$은 finitely generated이다. ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3){: data-lid="7cnrg" data-relation="required" reviewed="" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="fwene" data-relation="required" reviewed="" }) 그럼 $x_n\in\mathfrak{m}$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="8dt1x" data-relation="required" reviewed="" }에 의하여 $H_1(x';M)=0$이고, 귀납적 가정에 의하여 $x_1,\ldots,x_{n-1}$은 $M$-regular sequence이다.
 
 마지막으로 [보조정리 6](#lem6){: data-lid="zfjym" data-relation="required" reviewed="" }의 exact sequence
 

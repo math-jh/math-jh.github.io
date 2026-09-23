@@ -184,12 +184,12 @@ $$\pd_A M=\sup\{i\mid \Tor_i^A(M,\kappa)\neq 0\}$$
 이 성립한다.
 :::
 ::: 증명
-$M$의 minimal free resolution $F_\bullet$을 고정하고 $\ell=\sup\{i\mid F_i\neq 0\}$이라 하자. $F_i$는 local ring 위의 finitely generated free module이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="je0d3" data-relation="required" reviewed="" }에 의하여 $F_i\otimes_A\kappa=0$인 것은 $F_i=0$인 것과 동치이고, [명제 10](#prop10){: data-lid="jlcd0" data-relation="requires-review" }과 종합하면 $\Tor_i^A(M,\kappa)\neq 0$인 것이 $F_i\neq 0$인 것과 동치이다. 따라서 $\sup\{i\mid \Tor_i^A(M,\kappa)\neq 0\}=\ell$이다.
+$M$의 minimal free resolution $F_\bullet$을 고정하고 $\ell=\sup\{i\mid F_i\neq 0\}$이라 하자. $F_i$는 local ring 위의 finitely generated free module이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="je0d3" data-relation="required" reviewed="" }에 의하여 $F_i\otimes_A\kappa=0$인 것은 $F_i=0$인 것과 동치이고, [명제 10](#prop10){: data-lid="jlcd0" data-relation="weak" reviewed="" }과 종합하면 $\Tor_i^A(M,\kappa)\neq 0$인 것이 $F_i\neq 0$인 것과 동치이다. 따라서 $\sup\{i\mid \Tor_i^A(M,\kappa)\neq 0\}=\ell$이다.
 
 $\ell<\infty$인 경우 $0 \rightarrow F_\ell \rightarrow \cdots \rightarrow F_0 \rightarrow M \rightarrow 0$은 길이 $\ell$의 free resolution이므로 $\pd_A M\leq \ell$이다. 거꾸로 $\Tor_i^A(M,\kappa)\neq 0$이면 $\pd_A M\geq i$인데, 만일 $\pd_A M<i$라면 길이 $\pd_A M$의 projective resolution으로 $\Tor_i^A(M,\kappa)$을 계산하여 $0$을 얻어 모순이기 때문이다. 그러므로 $\pd_A M\geq \ell$이며, 두 부등식을 합하면 $\pd_A M=\ell$이다. $\ell=\infty$인 경우에도 임의의 $i$에 대하여 $\Tor_i^A(M,\kappa)\neq 0$인 $i$가 얼마든지 크게 존재하므로 $\pd_A M=\infty=\ell$이다.
 :::
 
-여기서 residue field $\kappa$의 역할이 두드러진다. [명제 11](#prop11){: data-lid="hfb5j" data-relation="requires-review" }은 임의의 finitely generated module의 projective dimension을 오직 $\kappa$와의 Tor만으로 통제하므로, global dimension이 $\kappa$ 하나로 결정된다는 것을 예고한다.
+여기서 residue field $\kappa$의 역할이 두드러진다. [명제 11](#prop11){: data-lid="hfb5j" data-relation="weak" reviewed="" }은 임의의 finitely generated module의 projective dimension을 오직 $\kappa$와의 Tor만으로 통제하므로, global dimension이 $\kappa$ 하나로 결정된다는 것을 예고한다.
 
 ::: 따름정리 12
 Noetherian local ring $(A,\mathfrak{m},\kappa)$에 대하여 $\operatorname{gldim}A=\pd_A\kappa$가 성립한다.
