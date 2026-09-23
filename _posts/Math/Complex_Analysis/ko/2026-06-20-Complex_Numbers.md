@@ -15,11 +15,11 @@ weight: 1
 published: false
 ---
 
-Complex analysis는 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4){: data-lid="64dku" data-relation="requires-review" }) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
+Complex analysis는 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(field)로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 field 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4){: data-lid="64dku" data-relation="required" reviewed="" }) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
 
 ## 체 ℂ와 그 위의 대수적 구조
 
-복소수 전체의 집합 $\mathbb{C}$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5){: data-lid="cyin6" data-relation="requires-review" }). 우리는 그 표준적 표현, 곧 $i^2 = -1$을 만족하는 *허수단위<sub>imaginary unit</sub>* $i$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
+복소수 전체의 집합 $\mathbb{C}$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5){: data-lid="cyin6" data-relation="required" reviewed="" }). 우리는 그 표준적 표현, 곧 $i^2 = -1$을 만족하는 *허수단위<sub>imaginary unit</sub>* $i$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
 
 ::: 정의 1
 *복소수<sub>complex number</sub>*는 실수 $a, b$에 대하여 $z = a + bi$ 꼴로 적히는 수이며, 여기서 $i$는 $i^2 = -1$을 만족하는 기호이다. 이때 $a$를 $z$의 *실수부<sub>real part</sub>*라 하여 $\Real z$로, $b$를 *허수부<sub>imaginary part</sub>*라 하여 $\Img z$로 적는다. 두 복소수의 덧셈과 곱셈은
@@ -183,7 +183,7 @@ $$d(z, w) = \lvert z - w\rvert$$
 로 정의한다.
 :::
 
-이 $d$가 [\[해석학\] §거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="6dniy" data-relation="requires-review" }의 거리공간 공리를 만족함은 명제 4에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 명제 4의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 명제 4의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
+이 $d$가 [\[해석학\] §거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="6dniy" data-relation="required" reviewed="" }의 거리공간 공리를 만족함은 명제 4에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 명제 4의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 명제 4의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
 
 ::: 명제 9
 $z = a + bi$를 $(a, b) \in \mathbb{R}^2$와 동일시하면, $\mathbb{C}$의 거리 $d(z, w) = \lvert z - w\rvert$는 $\mathbb{R}^2$의 유클리드 거리와 같다. 따라서 점열 $z_n = a_n + b_n i$가 $z = a + bi$로 수렴하는 것은 $a_n \rightarrow a$이고 $b_n \rightarrow b$인 것과 동치이다.
@@ -194,7 +194,7 @@ $z = a + bi$, $w = c + di$이면 $z - w = (a - c) + (b - d)i$이므로
 
 $$d(z, w) = \lvert z - w\rvert = \sqrt{(a - c)^2 + (b - d)^2}$$
 
-이고, 이것이 곧 $\mathbb{R}^2$에서 점 $(a, b)$와 $(c, d)$ 사이의 유클리드 거리이다 ([\[해석학\] §거리공간, ⁋예시 2](/ko/math/analysis/metric_spaces#ex2){: data-lid="ycj95" data-relation="requires-review" }). 수렴의 동치성은 좌표별 부등식
+이고, 이것이 곧 $\mathbb{R}^2$에서 점 $(a, b)$와 $(c, d)$ 사이의 유클리드 거리이다 ([\[해석학\] §거리공간, ⁋예시 2](/ko/math/analysis/metric_spaces#ex2){: data-lid="ycj95" data-relation="required" reviewed="" }). 수렴의 동치성은 좌표별 부등식
 
 $$\lvert a_n - a\rvert,\ \lvert b_n - b\rvert \;\leq\; \sqrt{(a_n - a)^2 + (b_n - b)^2} \;\leq\; \lvert a_n - a\rvert + \lvert b_n - b\rvert$$
 
@@ -230,7 +230,7 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
-이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8){: data-lid="g1tyz" data-relation="requires-review" }에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
+이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8){: data-lid="g1tyz" data-relation="required" reviewed="" }에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
 :::
 
 ## 확장복소평면과 Riemann 구면
