@@ -42,7 +42,7 @@ Field $\mathbb{K}$와, non-constant polynomial $f\in B=\mathbb{K}[\x_1,\ldots, \
 2. 만일 $\mathbb{K}$가 infinite field라면, 적당한 $a_i\in \mathbb{K}$들에 대해 $\x_i'=\x_i-a_i\x_r$로 택할 수 있다. 
 :::
 
-그럼 [정리 1](#thm1){: data-lid="ih7bv" data-relation="requires-review" }의 증명은 다음과 같다. 
+그럼 [정리 1](#thm1){: data-lid="ih7bv" data-relation="weak" reviewed="" }의 증명은 다음과 같다. 
 
 ::: 증명 (정리 1)
 우선 $A$가 finitely generated $\mathbb{K}$-algebra이므로 $A=\mathbb{K}[\y_1,\ldots, \y_r]/\mathfrak{a}$라 적을 수 있다. 그럼 주어진 조건을 만족하는 ideal들의 chain이 주어졌다 하면, 이들의 $\mathbb{K}[\y_1,\ldots, \y_r]$에서의 preimage들로 이루어진 chain
@@ -93,7 +93,7 @@ $$\dim A/\mathfrak{p}+\codim\mathfrak{p}=\dim A$$
 ::: 증명
 부등식 $\dim A/\mathfrak{p}+\codim\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2){: data-lid="lb02n" data-relation="required" reviewed="" }), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1){: data-lid="354ui" data-relation="required" reviewed="" }을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$는 integral extension이다. 여기서 $\mathfrak{p}$에서 시작하는 $A$의 prime ideal들의 chain을 $B$로 contract하면 [§정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4){: data-lid="aedjq" data-relation="required" reviewed="" }에 의하여 포함관계가 strict하게 유지되므로 $\codim_A\mathfrak{p}\leq\codim_B(\mathfrak{p}\cap B)$를 얻는다.
 
-우리에게 필요한 반대 방향은 $\mathfrak{p}\cap B$에서 시작하는 $B$의 chain을 $\mathfrak{p}$ 아래로 들어올리는 것으로 going-down에 해당하는데, $B$는 polynomial ring이라 UFD이고 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-lid="vbzu8" data-relation="requires-review" }) 따라서 normal domain이며 ([§정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9){: data-lid="bgduf" data-relation="requires-review" }) $A$는 가정에 의해 domain이므로, [§정수적 확장과 아이디얼, ⁋정리 6](/ko/math/commutative_algebra/lying_over_and_going_up#thm6){: data-lid="8qs9k" data-relation="required" reviewed="" }을 반복해서 적용하면 $\mathfrak{p}\cap B$ 아래의 chain이 주어질 때마다 그 위에 놓인 $\mathfrak{p}$ 아래의 chain을 얻는다. 이 chain의 원소들은 서로 다른 prime ideal로 contract되므로 다시 strict이며, 따라서 $\codim_A\mathfrak{p}=\codim_B(\mathfrak{p}\cap B)$이다.
+우리에게 필요한 반대 방향은 $\mathfrak{p}\cap B$에서 시작하는 $B$의 chain을 $\mathfrak{p}$ 아래로 들어올리는 것으로 going-down에 해당하는데, $B$는 polynomial ring이라 UFD이고 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-lid="vbzu8" data-relation="required" reviewed="" }) 따라서 normal domain이며 ([§정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9){: data-lid="bgduf" data-relation="required" reviewed="" }) $A$는 가정에 의해 domain이므로, [§정수적 확장과 아이디얼, ⁋정리 6](/ko/math/commutative_algebra/lying_over_and_going_up#thm6){: data-lid="8qs9k" data-relation="required" reviewed="" }을 반복해서 적용하면 $\mathfrak{p}\cap B$ 아래의 chain이 주어질 때마다 그 위에 놓인 $\mathfrak{p}$ 아래의 chain을 얻는다. 이 chain의 원소들은 서로 다른 prime ideal로 contract되므로 다시 strict이며, 따라서 $\codim_A\mathfrak{p}=\codim_B(\mathfrak{p}\cap B)$이다.
 
 이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. Chain
 
@@ -174,7 +174,7 @@ $$\dim\big((C/\mathfrak{p})\otimes_{A_{a_0}}K\big)<d$$
 Filtration에 등장하는 유한개의 $\mathfrak{p}$들에 대한 $a_\mathfrak{p}$와 $a_0$의 곱을 $a$로 두면 $B_a=(B_{a_0})_a$는 free $A_a$-module이다.
 :::
 
-증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1){: data-lid="s0kt0" data-relation="requires-review" }로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3){: data-lid="xjcn2" data-relation="requires-review" }의 차원 계산으로 transcendence degree를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 6](#thm6){: data-lid="w2sn0" data-relation="weak" reviewed="" }은 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type morphism이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type morphism의 image가 constructible이라는 Chevalley의 정리를 준다.
+증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1){: data-lid="s0kt0" data-relation="weak" reviewed="" }로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3){: data-lid="xjcn2" data-relation="weak" reviewed="" }의 차원 계산으로 transcendence degree를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 6](#thm6){: data-lid="w2sn0" data-relation="weak" reviewed="" }은 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type morphism이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type morphism의 image가 constructible이라는 Chevalley의 정리를 준다.
 
 ---
 

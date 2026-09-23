@@ -14,11 +14,11 @@ published: false
 
 ---
 
-[§Depth](/ko/math/commutative_algebra/depth){: data-lid="7fk4k" data-relation="required" reviewed="" }에서 우리는 Noetherian local ring 위의 finitely generated module에 대하여 항상 $\operatorname{depth}M\leq \dim M$이 성립함을 보았고 ([§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="hhaqn" data-relation="requires-review" }), 이 부등식에서 등호가 성립하는 대상을 Cohen--Macaulay라 이름 붙였다. 이 개념은 depth라는 대수적 불변량과 차원이라는 기하적 불변량이 정확히 맞아떨어지는, 다시 말해 module이 그 support의 모든 방향에서 균질하게 두꺼운 상황을 포착한다. 이 글에서는 Cohen--Macaulay module을 정식으로 정의하고, 이 조건이 system of parameters가 곧 regular sequence라는 사실과 동치임을 보인 뒤, 여기에서 따라오는 localization에 대한 안정성과 차원 공식, catenary 성질을 살펴본다. 마지막으로 이 이론이 중복도의 계산에서 어떻게 나타나는지를 다룬다.
+[§Depth](/ko/math/commutative_algebra/depth){: data-lid="7fk4k" data-relation="required" reviewed="" }에서 우리는 Noetherian local ring 위의 finitely generated module에 대하여 항상 $\operatorname{depth}M\leq \dim M$이 성립함을 보았고 ([§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="hhaqn" data-relation="weak" reviewed="" }), 이 부등식에서 등호가 성립하는 대상을 Cohen--Macaulay라 이름 붙였다. 이 개념은 depth라는 대수적 불변량과 차원이라는 기하적 불변량이 정확히 맞아떨어지는, 다시 말해 module이 그 support의 모든 방향에서 균질하게 두꺼운 상황을 포착한다. 이 글에서는 Cohen--Macaulay module을 정식으로 정의하고, 이 조건이 system of parameters가 곧 regular sequence라는 사실과 동치임을 보인 뒤, 여기에서 따라오는 localization에 대한 안정성과 차원 공식, catenary 성질을 살펴본다. 마지막으로 이 이론이 중복도의 계산에서 어떻게 나타나는지를 다룬다.
 
 ## Cohen-Macaulay module
 
-이 글 전체에서 $(A,\mathfrak{m})$은 Noetherian local ring이고, 특별한 언급이 없는 한 $M$은 $0$이 아닌 finitely generated $A$-module이다. [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="dks0r" data-relation="requires-review" }의 부등식에서 등호가 성립하는 경우를 다음과 같이 이름 붙인다.
+이 글 전체에서 $(A,\mathfrak{m})$은 Noetherian local ring이고, 특별한 언급이 없는 한 $M$은 $0$이 아닌 finitely generated $A$-module이다. [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="dks0r" data-relation="required" reviewed="" }의 부등식에서 등호가 성립하는 경우를 다음과 같이 이름 붙인다.
 
 ::: 정의 1
 Noetherian local ring $(A,\mathfrak{m})$ 위의 $0$이 아닌 finitely generated $A$-module $M$이 *Cohen--Macaulay module*이라는 것은
@@ -147,7 +147,7 @@ $$\dim A/\mathfrak{p}+(\codim \mathfrak{p}-1)=\dim A/xA=\dim A-1$$
 이므로 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$를 얻는다.
 :::
 
-[정리 9](#thm9){: data-lid="qgnc5" data-relation="requires-review" }의 둘째 결과가 주는 차원 공식 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$은 prime ideal들의 chain의 길이에 대한 강한 통제로 이어진다. 이를 정확히 서술하기 위해 다음을 정의한다.
+[정리 9](#thm9){: data-lid="qgnc5" data-relation="required" reviewed="" }의 둘째 결과가 주는 차원 공식 $\dim A/\mathfrak{p}+\codim \mathfrak{p}=\dim A$은 prime ideal들의 chain의 길이에 대한 강한 통제로 이어진다. 이를 정확히 서술하기 위해 다음을 정의한다.
 
 ::: 정의 10
 Ring $A$가 *catenary*라는 것은, $A$의 임의의 두 prime ideal $\mathfrak{p}\subseteq \mathfrak{q}$에 대하여 $\mathfrak{p}$와 $\mathfrak{q}$ 사이의 saturated chain, 곧 어느 두 항 사이에도 새로운 prime ideal을 끼워넣을 수 없는 chain들이 모두 같은 유한한 길이를 갖는 것이다.
@@ -174,7 +174,7 @@ $$\codim \mathfrak{q}-\codim \mathfrak{p}=\sum_{i=0}^{n-1}(\codim \mathfrak{p}_{
 
 ## 매개계 아이디얼의 중복도
 
-[§힐베르트-사무엘 함수](/ko/math/commutative_algebra/hilbert-samuel_function){: data-lid="k4n79" data-relation="requires-review" }에서 우리는 $M$의 ideal of definition $\mathfrak{a}$에 대한 Hilbert-Samuel function $\chi_{\mathfrak{a},M}(n)=\length(M/\mathfrak{a}^nM)$과 그 leading coefficient가 담고 있는 중복도 $e(\mathfrak{a};M)$을 정의하였고 ([§힐베르트-사무엘 함수, ⁋정의 7](/ko/math/commutative_algebra/hilbert-samuel_function#def7){: data-lid="l9dh8" data-relation="requires-review" }, [§힐베르트-사무엘 함수, ⁋정의 15](/ko/math/commutative_algebra/hilbert-samuel_function#def15){: data-lid="ahnwo" data-relation="required" reviewed="" }), regular local ring이 associated graded ring의 수준에서 polynomial ring과 일치함을 보았다. ([§힐베르트-사무엘 함수, ⁋명제 17](/ko/math/commutative_algebra/hilbert-samuel_function#prop17){: data-lid="k5f8f" data-relation="weak" reviewed="" }) Cohen--Macaulay local ring에서는 이 현상이 임의의 parameter ideal로 확장되어, associated graded ring이 다시 polynomial ring이 되고 중복도가 길이와 정확히 일치한다. 그 핵심은 regular sequence가 만들어내는 associated graded ring을 계산하는 다음 명제이다.
+[§힐베르트-사무엘 함수](/ko/math/commutative_algebra/hilbert-samuel_function){: data-lid="k4n79" data-relation="required" reviewed="" }에서 우리는 $M$의 ideal of definition $\mathfrak{a}$에 대한 Hilbert-Samuel function $\chi_{\mathfrak{a},M}(n)=\length(M/\mathfrak{a}^nM)$과 그 leading coefficient가 담고 있는 중복도 $e(\mathfrak{a};M)$을 정의하였고 ([§힐베르트-사무엘 함수, ⁋정의 7](/ko/math/commutative_algebra/hilbert-samuel_function#def7){: data-lid="l9dh8" data-relation="required" reviewed="" }, [§힐베르트-사무엘 함수, ⁋정의 15](/ko/math/commutative_algebra/hilbert-samuel_function#def15){: data-lid="ahnwo" data-relation="required" reviewed="" }), regular local ring이 associated graded ring의 수준에서 polynomial ring과 일치함을 보았다. ([§힐베르트-사무엘 함수, ⁋명제 17](/ko/math/commutative_algebra/hilbert-samuel_function#prop17){: data-lid="k5f8f" data-relation="weak" reviewed="" }) Cohen--Macaulay local ring에서는 이 현상이 임의의 parameter ideal로 확장되어, associated graded ring이 다시 polynomial ring이 되고 중복도가 길이와 정확히 일치한다. 그 핵심은 regular sequence가 만들어내는 associated graded ring을 계산하는 다음 명제이다.
 
 ::: 명제 12
 Noetherian local ring $(A,\mathfrak{m})$과 $A$-sequence $x_1,\ldots, x_d$가 주어졌다 하고 $\mathfrak{q}=(x_1,\ldots, x_d)$라 하자. 그럼 $x_i+\mathfrak{q}^2$로의 대응이 유도하는 graded $(A/\mathfrak{q})$-algebra homomorphism
@@ -231,11 +231,11 @@ $$\chi_{\mathfrak{q},A}(n)=\length(A/\mathfrak{q})\binom{n+d-1}{d}$$
 이 성립하며, 특히 $e(\mathfrak{q};A)=\length(A/\mathfrak{q})$이다.
 :::
 ::: 증명
-$\mathfrak{q}$는 $\dim A=d$개의 원소로 이루어진 system of parameters $x_1,\ldots, x_d$로 생성되며, [정리 4](#thm4){: data-lid="3bak2" data-relation="required" reviewed="" }에 의하여 이들은 $A$-sequence이다. 따라서 [명제 12](#prop12){: data-lid="zf94t" data-relation="required" reviewed="" }에 의하여 $\gr_\mathfrak{q}A\cong (A/\mathfrak{q})[X_1,\ldots, X_d]$이다. Degree $k$ 부분을 비교하면 $\mathfrak{q}^k/\mathfrak{q}^{k+1}$은 degree $k$ monomial들을 basis로 갖는 자유 $(A/\mathfrak{q})$-module이고, 그 monomial의 개수는 중복조합의 수 $\binom{k+d-1}{d-1}$이다. ([§힐베르트-사무엘 함수, ⁋예시 6](/ko/math/commutative_algebra/hilbert-samuel_function#ex6){: data-lid="8riro" data-relation="requires-review" }) 길이가 direct sum에 대해 additive하므로 ([§힐베르트-사무엘 함수, ⁋보조정리 3](/ko/math/commutative_algebra/hilbert-samuel_function#lem3){: data-lid="dhngh" data-relation="required" reviewed="" })
+$\mathfrak{q}$는 $\dim A=d$개의 원소로 이루어진 system of parameters $x_1,\ldots, x_d$로 생성되며, [정리 4](#thm4){: data-lid="3bak2" data-relation="required" reviewed="" }에 의하여 이들은 $A$-sequence이다. 따라서 [명제 12](#prop12){: data-lid="zf94t" data-relation="required" reviewed="" }에 의하여 $\gr_\mathfrak{q}A\cong (A/\mathfrak{q})[X_1,\ldots, X_d]$이다. Degree $k$ 부분을 비교하면 $\mathfrak{q}^k/\mathfrak{q}^{k+1}$은 degree $k$ monomial들을 basis로 갖는 자유 $(A/\mathfrak{q})$-module이고, 그 monomial의 개수는 중복조합의 수 $\binom{k+d-1}{d-1}$이다. ([§힐베르트-사무엘 함수, ⁋예시 6](/ko/math/commutative_algebra/hilbert-samuel_function#ex6){: data-lid="8riro" data-relation="required" reviewed="" }) 길이가 direct sum에 대해 additive하므로 ([§힐베르트-사무엘 함수, ⁋보조정리 3](/ko/math/commutative_algebra/hilbert-samuel_function#lem3){: data-lid="dhngh" data-relation="required" reviewed="" })
 
 $$\length(\mathfrak{q}^k/\mathfrak{q}^{k+1})=\binom{k+d-1}{d-1}\length(A/\mathfrak{q})$$
 
-이다. 이제 $\chi_{\mathfrak{q},A}(n)=\length(A/\mathfrak{q}^n)=\sum_{k=0}^{n-1}\length(\mathfrak{q}^k/\mathfrak{q}^{k+1})$이므로 ([§힐베르트-사무엘 함수, ⁋정의 7](/ko/math/commutative_algebra/hilbert-samuel_function#def7){: data-lid="dhorh" data-relation="requires-review" }), Pascal's rule을 반복하여 얻어지는 등식 $\sum_{k=0}^{n-1}\binom{k+d-1}{d-1}=\binom{n+d-1}{d}$과 종합하면
+이다. 이제 $\chi_{\mathfrak{q},A}(n)=\length(A/\mathfrak{q}^n)=\sum_{k=0}^{n-1}\length(\mathfrak{q}^k/\mathfrak{q}^{k+1})$이므로 ([§힐베르트-사무엘 함수, ⁋정의 7](/ko/math/commutative_algebra/hilbert-samuel_function#def7){: data-lid="dhorh" data-relation="required" reviewed="" }), Pascal's rule을 반복하여 얻어지는 등식 $\sum_{k=0}^{n-1}\binom{k+d-1}{d-1}=\binom{n+d-1}{d}$과 종합하면
 
 $$\chi_{\mathfrak{q},A}(n)=\length(A/\mathfrak{q})\binom{n+d-1}{d}$$
 
@@ -249,7 +249,7 @@ Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[t^2,t^3]]$을 $\mathbb{K}[[t]]$�
 
 이제 $\mathfrak{q}=(t^2)A$를 생각하자. $(t^3)^2=t^6=(t^2)^3$이므로 $t^3\in \sqrt{\mathfrak{q}}$이고 $t^2\in \mathfrak{q}$이므로 $\sqrt{\mathfrak{q}}=\mathfrak{m}$이 되어 $\mathfrak{q}$는 parameter ideal이다. $A$는 $\mathbb{K}$-벡터공간으로서 $\{t^a\mid a\in \{0,2,3,4,\ldots\}\}$을 basis로 가지며, $\mathfrak{q}=t^2A$는 $\{t^b\mid b\in \{2,4,5,6,\ldots\}\}$으로 span되므로, $A/\mathfrak{q}$는 $\{1,t^3\}$을 basis로 갖는다. 즉 $\length(A/\mathfrak{q})=2$이다. $A$가 Cohen--Macaulay이므로 [따름정리 13](#cor13){: data-lid="qqztt" data-relation="required" reviewed="" }에 의하여 $e(\mathfrak{q};A)=\length(A/\mathfrak{q})=2$이다.
 
-대조적으로 [예시 7](#ex7){: data-lid="9qy4g" data-relation="requires-review" }의 $B=\mathbb{K}[[\x,\y]]/(\x^2,\x\y)$를 보자. $B$는 $\dim B=1$이지만 $\operatorname{depth}B=0$이라 Cohen--Macaulay가 아니었다. Ideal $\mathfrak{q}=(\y)B$에 대하여 $B/\mathfrak{q}=\mathbb{K}[[\x,\y]]/(\x^2,\x\y,\y)\cong \mathbb{K}[[\x]]/(\x^2)$이 유한한 길이를 가지므로 $\mathfrak{q}$는 parameter ideal이고, $\length(B/\mathfrak{q})=\length(\mathbb{K}[[\x]]/(\x^2))=2$이다. 한편 $\mathfrak{q}^n=(\y^n)B$이고
+대조적으로 [예시 7](#ex7){: data-lid="9qy4g" data-relation="required" reviewed="" }의 $B=\mathbb{K}[[\x,\y]]/(\x^2,\x\y)$를 보자. $B$는 $\dim B=1$이지만 $\operatorname{depth}B=0$이라 Cohen--Macaulay가 아니었다. Ideal $\mathfrak{q}=(\y)B$에 대하여 $B/\mathfrak{q}=\mathbb{K}[[\x,\y]]/(\x^2,\x\y,\y)\cong \mathbb{K}[[\x]]/(\x^2)$이 유한한 길이를 가지므로 $\mathfrak{q}$는 parameter ideal이고, $\length(B/\mathfrak{q})=\length(\mathbb{K}[[\x]]/(\x^2))=2$이다. 한편 $\mathfrak{q}^n=(\y^n)B$이고
 
 $$B/\mathfrak{q}^n=\mathbb{K}[[\x,\y]]/(\x^2,\x\y,\y^n)$$
 

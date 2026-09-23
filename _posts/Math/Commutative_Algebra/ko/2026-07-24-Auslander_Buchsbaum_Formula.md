@@ -119,7 +119,7 @@ $$\pd_A M+\operatorname{depth}M=(\pd_A M'+1)+0=\operatorname{depth}A$$
 을 얻는다.
 :::
 
-공식은 $\pd_A M\geq 0$과 결합하여 $\operatorname{depth}M\leq\operatorname{depth}A$를 즉시 주며, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="5y5jx" data-relation="required" reviewed="" }의 $\operatorname{depth}A\leq\dim A$와 종합하면 finite projective dimension을 갖는 module은 언제나 $\operatorname{depth}M\leq\operatorname{depth}A\leq\dim A$를 만족한다. 한편 $\pd_A M<\infty$라는 가정은 공식이 성립하기 위한 필수 조건이며, 이를 떼어내면 [예시 7](#ex7){: data-lid="1dnhn" data-relation="requires-review" }에서 보듯 등식이 깨진다. 공식의 첫 응용으로 projective dimension의 크기와, depth가 $0$일 때의 경직성을 얻는다.
+공식은 $\pd_A M\geq 0$과 결합하여 $\operatorname{depth}M\leq\operatorname{depth}A$를 즉시 주며, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="5y5jx" data-relation="required" reviewed="" }의 $\operatorname{depth}A\leq\dim A$와 종합하면 finite projective dimension을 갖는 module은 언제나 $\operatorname{depth}M\leq\operatorname{depth}A\leq\dim A$를 만족한다. 한편 $\pd_A M<\infty$라는 가정은 공식이 성립하기 위한 필수 조건이며, 이를 떼어내면 [예시 7](#ex7){: data-lid="1dnhn" data-relation="forward" reviewed="" }에서 보듯 등식이 깨진다. 공식의 첫 응용으로 projective dimension의 크기와, depth가 $0$일 때의 경직성을 얻는다.
 
 ::: 따름정리 4
 Noetherian local ring $(A,\mathfrak{m})$에 대하여 다음이 성립한다.
@@ -165,7 +165,7 @@ $$\operatorname{depth}\mathfrak{m}=\operatorname{depth}A-\pd_A\mathfrak{m}=2-1=1
 다음 예시는 $\pd_A M<\infty$라는 가정을 떼면 공식이 실패한다는 것을, projective dimension이 infinite module로 보여준다.
 
 ::: 예시 7
-Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[\x,\y]]/(\x\y)$를 생각하자. 이는 [§Depth, ⁋예시 11](/ko/math/commutative_algebra/depth#ex11){: data-lid="grj1k" data-relation="requires-review" }에서 살펴본 것처럼 $\operatorname{depth}A=1=\dim A$인 Cohen--Macaulay local ring이다. $\x,\y$의 image를 각각 $\overline{\x},\overline{\y}$로 적고 $M=A/(\overline{\x})$를 생각하자.
+Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[\x,\y]]/(\x\y)$를 생각하자. 이는 [§Depth, ⁋예시 11](/ko/math/commutative_algebra/depth#ex11){: data-lid="grj1k" data-relation="required" reviewed="" }에서 살펴본 것처럼 $\operatorname{depth}A=1=\dim A$인 Cohen--Macaulay local ring이다. $\x,\y$의 image를 각각 $\overline{\x},\overline{\y}$로 적고 $M=A/(\overline{\x})$를 생각하자.
 
 $A$에서 곱하기 $\overline{\x}$의 kernel을 계산한다. $f\in\mathbb{K}[[\x,\y]]$에 대하여 $\x f\in(\x\y)$인 것은 $\x f=\x\y g$인 $g$가 존재하는 것, 곧 domain에서 $\x$를 소거하여 $f\in(\y)$인 것과 동치이다. 따라서 $\ker(\cdot\overline{\x})=(\overline{\y})$이고, 같은 계산으로 $\ker(\cdot\overline{\y})=(\overline{\x})$이다. $\epsilon:A\rightarrow M$의 kernel이 $\overline{\x}A=(\overline{\x})$이므로 이 kernel들의 계산을 이어 붙이면 주기 $2$의 free resolution
 
