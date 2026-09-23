@@ -32,7 +32,7 @@ Left $A$-module $A$의 submodule은 정확히 $A$의 left ideal이므로, 이 �
 Ring $A$에 대하여, $A$가 semisimple ring인 것은 모든 left $A$-module이 semisimple인 것과 동치이다.
 :::
 ::: 증명
-모든 left $A$-module이 semisimple이라면 특히 left $A$-module $A$가 semisimple이다. 거꾸로 $A$가 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $A^{(I)}$는 $A$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $A^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§반단순가군, ⁋정리 5](/ko/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" data-relation="required" }에 의해 $A^{(I)}$는 semisimple이다. 이제 임의의 left $A$-module $M$은 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-relation="required" }에 의해 어떤 free module의 quotient이므로, [§반단순가군, ⁋따름정리 6](/ko/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" data-relation="required" }에 의해 semisimple이다.
+모든 left $A$-module이 semisimple이라면 특히 left $A$-module $A$가 semisimple이다. 거꾸로 $A$가 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $A^{(I)}$는 $A$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $A^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§반단순가군, ⁋정리 5](/ko/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" data-relation="required" }에 의해 $A^{(I)}$는 semisimple이다. 이제 임의의 left $A$-module $M$은 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="451t5" data-relation="required" }에 의해 어떤 free module의 quotient이므로, [§반단순가군, ⁋따름정리 6](/ko/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" data-relation="required" }에 의해 semisimple이다.
 :::
 
 ::: 명제 3
