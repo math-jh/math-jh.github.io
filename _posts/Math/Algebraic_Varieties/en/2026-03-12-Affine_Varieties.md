@@ -89,7 +89,7 @@ First, the last result of the above proposition shows that for $Z(\mathfrak{a}\m
 
 More importantly, by the above proposition, if we declare the affine algebraic sets defined on $\mathbb{A}^n$ to be closed sets, then all the conditions of [\[Topology\] §Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-lid="s427t" data-relation="required" } are satisfied, and thus a topology on $\mathbb{A}^n$ is uniquely determined. We call this the *Zariski topology*. By definition, any affine variety $X$ is a closed subset of a suitable affine space $\mathbb{A}^n$, and via the subspace topology of the topology defined on $\mathbb{A}^n$, we can define the topology on $X$.
 
-As a special example, looking at the Zariski topology on $\mathbb{A}^1$, any element of $\mathbb{K}$ is the zero set of the linear polynomial $\x-x$, so any singleton is a closed set, and therefore any finite set is a closed set. However, any element of $\mathbb{K}[\x]$ other than $0$ has at most finitely many solutions, so in this topology (as long as $\mathbb{K}$ is not a finite set), the only closed set with infinitely many elements is $\mathbb{K}$ itself. That is, the Zariski topology on $\mathbb{A}^1$ is the cofinite topology, from which we can observe that the Zariski topology need not be Hausdorff. More generally, an irreducible space cannot be Hausdorff unless it is a one-point space, and since affine varieties are all irreducible by our definition, no affine variety is a Hausdorff space. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" })
+As a special example, looking at the Zariski topology on $\mathbb{A}^1$, any element of $\mathbb{K}$ is the zero set of the linear polynomial $\x-x$, so any singleton is a closed set, and therefore any finite set is a closed set. However, any element of $\mathbb{K}[\x]$ other than $0$ has at most finitely many solutions, so in this topology (as long as $\mathbb{K}$ is not a finite set), the only closed set with infinitely many elements is $\mathbb{K}$ itself. That is, the Zariski topology on $\mathbb{A}^1$ is the cofinite topology, from which we can observe that the Zariski topology need not be Hausdorff. More generally, an irreducible space cannot be Hausdorff unless it is a one-point space, and since affine varieties are all irreducible by our definition, no affine variety with at least two points is a Hausdorff space. ([\[Topology\] §Dimension, ⁋Proposition 7](/en/math/topology/dimension#prop7){: data-lid="0jud6" data-relation="weak" })
 
 Now let us examine the open sets of the Zariski topology.
 
@@ -261,7 +261,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 Keeping this in mind, the following definition can also be understood.
 
 ::: Definition 14
-For an arbitrary affine variety $V\subseteq \mathbb{A}^k$ and a function $f:V\rightarrow \mathbb{K}$ defined on it, we say that $f$ is *regular* at a point $p\in V$ if there exist a suitable open neighborhood $D(h)$ of $p$ and a polynomial $g$ such that on $U$, $f=g/h$ holds. Here, $h$ is a polynomial that on $U=D(h)$ does not become $0$.
+For an arbitrary affine variety $V\subseteq \mathbb{A}^k$ and a function $f:V\rightarrow \mathbb{K}$ defined on it, we say that $f$ is *regular* at a point $p\in V$ if there exist a suitable open neighborhood $U=V\cap D(h)$ of $p$ and a polynomial $g$ such that on $U$, $f=g/h$ holds. Here, $h$ is a polynomial that on $U$ does not become $0$.
 :::
 
 Then under this definition, it would be natural to call a function that is regular at every point a regular function. When $\mathbb{K}$ is algebraically closed, the proof that these two definitions [Definition 11](#def11){: data-lid="mzasp" data-relation="required" } and [Definition 14](#def14){: data-lid="it7y1" data-relation="required" } are equivalent can be somewhat tedious, but since the essential content is contained in the example examined above, we will omit the proof. The key to the proof is to obtain [Definition 11](#def11){: data-lid="qkry5" data-relation="required" } from [Definition 14](#def14){: data-lid="abi7t" data-relation="required" }, which is achieved by suitably gluing together, on each $D(h)$, the functions that appear in the form $g/h$.
@@ -334,5 +334,5 @@ we can consider $\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$. Write this as $\bar{g
 **References**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[Ful]** W. Fulton, *Algebraic Curves*, 2008. (Available online)
