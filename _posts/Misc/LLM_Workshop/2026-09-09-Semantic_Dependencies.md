@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-09
-last_modified_at: 2026-09-22
+last_modified_at: 2026-09-23
 weight: 50
 
 ---
@@ -118,3 +118,55 @@ return { nodes: ids, links: links, steps: steps };
 경로 밖에서 안으로 들어오는 required 선수 글("바깥 선수")은 그대로 두고 색만 옅은 악센트로 구분해, 경로 위의 관계와 헷갈리지 않게 했다. 선택 패널의 선수·후속 글 목록에서 항목을 누르면 그 글로 이동하는 대신 두 글 경로 모드로 들어가고, 실제 이동은 옆의 별도 링크 아이콘이 맡는다. 목록을 훑다가 실수로 페이지를 떠나는 일을 줄이려는 구분이다. 목록이 여덟 개를 넘으면 일곱 개만 두고 마지막 자리를 "더보기" 버튼이 차지한다.
 
 같은 커밋은 글로우 효과도 만졌다. 선형 보기는 SVG로 수백 개의 점을 그리므로 강조된 점에만 `drop-shadow`를 건다. 힘 기반 보기는 캔버스라 셰이더 비용이 다르게 붙는데, 처음엔 강조된 점에만 `shadowBlur`를 걸다가 사용자가 "원래 있던 글로우가 없어졌다"고 짚은 뒤 모든 점에 걸도록 되돌렸다. 렉의 원인은 글로우가 아니라 2-hop 그래프를 매 프레임 다시 그리는 쪽이었다.
+
+## 세 번째 백엔드와 사라진 응답 되찾기
+
+두 모델(Antigravity → Opus) 체인은 백로그가 늘어날수록 한쪽이 쿼터에 걸려 멈추는 일이 잦아졌다.
+
+> Pagefind는 하루 한 번으로 두자. 내가 검색 기능을 안 쓴다. 그리고 codex가 지금 작동하다 quota 걸려서 멈췄는데 마저 진행해줘. dependency 페이지 관련.
+
+Codex CLI(`codex-multi-auth-codex`)가 세 번째 백엔드로 들어왔다. 구조화 출력은 JSON Schema를 `--output-schema`로 넘기고 `--output-last-message`로 받는 방식이라 Antigravity·Opus의 프롬프트-파싱 방식과 다르지만, 반환값은 같은 `{"items": [...]}` 모양으로 맞췄다. 문제는 세 번째 모델을 붙이자 "일부만 빠뜨린 응답"이 새로 자주 보였다는 것이다. 기존 코드는 응답에 요청한 id가 하나라도 없으면 전체를 예외로 던졌는데, 그러면 이미 맞게 답한 9개까지 버리고 처음부터 다시 물어야 한다. `request_complete_results`는 맞은 것만 `accepted`에 쌓고 남은 id만 다음 백엔드로 넘긴다.
+
+```python
+for attempt_index, (model_name, caller) in enumerate(attempts):
+    expected = {str(item["id"]) for item in pending}
+    try:
+        payload = caller(pending)
+        accepted.update(valid_results(payload, expected, review=review))
+    except Exception as exc:
+        last_issue = f"{type(exc).__name__}: {str(exc)[:240]}"
+    pending = [item for item in pending if str(item["id"]) not in accepted]
+    if not pending:
+        return accepted
+```
+{: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
+
+동일 모델을 한 번 재시도한 뒤에야 다음 백엔드로 내려가는데, 타임아웃이나 malformed JSON은 그 모델이 그 순간 답을 못 준 것일 뿐 실격 사유는 아니어서다. 예외를 로그에 그대로 찍지 않는 이유도 코드에 적혀 있다. 대시보드가 실행 로그의 "error"·"failed" 문자열을 보고 실패로 판정하는데, 여기서 발생하는 예외는 재시도로 회복되는 정상 경로이기 때문이다.
+
+바로 다음 틱(9409f3a9)은 이 세 백엔드에 쿼터 인지 라우팅을 얹었다. `~/Projects/hud-display/state/`에 각 제공자가 쓰는 5시간·주간 사용률 스냅샷이 있는데, `provider_available`은 그 파일이 없거나 오래됐으면(45분 초과) "일단 열림"으로 fail-open 처리하고, 신선한 값이 임계치(5시간 70%, 주간 90%) 이상이면 그 백엔드를 이번 라운드에서 뺀다. Codex는 계정이 두 개라 하나라도 쓸 수 있으면 통과시킨다. 동시 호출 수 상한도 백엔드별로 나눴다. Codex는 8개 동시 프로브를 통과해 6개, Claude는 프로브 한 번에 이미 쿼터가 닫혀 있던 전례가 있어 기존 4개를 유지한다는 주석이 그대로 남아 있다.
+
+같은 시기 커밋(6c44d5e1)은 분류 범위를 `_posts/Math` 아래로 좁혔다. Gromov-Witten 스트림처럼 로컬에만 있고 git에 추적되지 않는 글도 커밋 없이 파일만 쓰는 `--no-commit` 경로가 생겼다. 그리고 대상 링크가 excerpt만으로 계속 ambiguous를 내면(263fd1d7), 다음 라운드부터는 발췌가 아니라 원문과 대상 글 전문을 그대로 넘긴다. ambiguous 사유가 거의 "주어진 발췌에 그 링크가 안 보인다"였기 때문이다. 최대 3라운드를 넘기면 그 유닛은 파일이 바뀌기 전까지 건드리지 않는다.
+
+## 검증기가 스스로를 의심하게 만들기
+
+백로그를 다 처리하고 나자 사용자는 이미 매긴 판정의 신뢰도를 의심하기 시작했다.
+
+> 백로그는 일단 끝났는데, 지금 신뢰성이 의심가는 것들이 좀 있다. 그래서 기존 결과를 안 주고, 재검토 시키는 걸 하고 싶은데 그렇게 짜자. […] 기존에 있던 그거를 떼고 IAL 태그를 떼고 새로 검토하게 해서 편향을 막아주고 앵커링을 막아주고 가능하면 이제 1차와는 다른 모델로 하되, 코덱스는 클로드가 검사하고, 클로드는 코덱스가 검사하는 식으로 하되, 안티그래비티는 기존 순서를 존중하는 식으로 요청.
+
+fad92484는 한 틱 한 유닛이라는 구조 위에 두 번째 패스를 얹었다. 1차가 새 링크를 분류하는 동안, 검증 패스는 이미 태그가 붙은 링크에서 `data-relation` 값을 지운 프롬프트를 다시 던져 처음 보는 링크처럼 판정하게 한다. 판정자는 원래 판정자와 다른 모델이어야 한다는 요청대로 `VERIFIER_CHAINS`에 Codex는 Opus가, Opus는 Codex가 검사하도록 못 박고, 결정한 모델을 기록하지 못한 예전 백로그나 Antigravity 판정은 기존 순서(Opus → Codex)를 그대로 쓴다. 단일 모델이 배정이므로 fallback이 없고, 그 모델이 쿼터로 닫혀 있으면 이 유닛은 다음 틱으로 미룰 뿐 다른 슬롯을 기다리지 않는다.
+
+검증 결과가 원래 판정과 다르면(또는 ambiguous면) 자동으로 덮어쓰지 않는다. 태그를 파일에서 아예 떼어내고 `dependency-classifier-holds.json`에 그 링크를 걸어 둔다. 1차 패스는 걸린 링크를 건너뛰므로 재분류 루프에 빠지지 않고, 대시보드의 "의존성 링크 보류" 패널이 파일·줄 번호·1차와 2차 판정·근거를 나열해 사람의 최종 판단을 기다린다. 글에 직접 `data-relation` 태그를 달고 체크박스를 누르면, 서버(`/api/linkaudit/resolve`)가 그 파일을 다시 읽어 실제로 태그가 붙었는지 확인한 뒤에만 목록에서 뺀다. 체크는 판정이 아니라 확인이라는 문구 그대로다. 한 번 사람이 확정한 링크는 `settled`로 옮겨 다음 검증에서 다시 걸리지 않는다.
+
+```js
+chk.onchange = function () {
+  if (!chk.checked) return;
+  fetch(API + 'linkaudit/resolve', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
+    body: JSON.stringify({ ident: k.ident })
+  }).then(function (r) { /* ... */ }).then(function () { load(true); });
+};
+```
+{: data-filename="scripts/dashboard/app.js"}
+
+불일치가 생기면 사용자에게 바로 알린다는 요청도 그대로 반영되어 있다. 알림에는 대시보드 감사 절의 앵커가 링크로 붙는데(43512a82), 처음엔 URL을 텍스트로만 적었다가 눌러서 바로 이동하게 고쳤다. 번역 워커 쪽도 짝을 맞췄다. `translate_worker`의 프롬프트에 `data-relation` IAL을 링크에 붙은 채로 그대로 복사하고 절대 추론·삭제·재분류하지 말라는 규칙이 추가되어, 번역 과정에서 판정이 조용히 사라지는 경로를 막았다. 그래프 화살촉의 알파 블렌딩도 이 무렵 배경색에 미리 합성하던 방식에서 링크와 같은 rgba 값을 그대로 쓰는 방식으로 바뀌어, weak 링크 뒤로 지나가는 밝은 선을 화살촉이 가려 먹던 문제가 없어졌다.
