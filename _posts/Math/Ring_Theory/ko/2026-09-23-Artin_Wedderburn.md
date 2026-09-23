@@ -58,43 +58,59 @@ Ring $A$에 대하여, $A$와 같은 abelian group 위에 곱셈을 $a\ast b=ba$
 $D$가 division ring이고 $n\geq 1$이라 하자. 열벡터들의 공간 $D^n$위에 행렬 곱셈으로 left $\Mat_n(D)$-module 구조를 부여하면 다음이 성립한다.
 
 1. $D^n$은 simple $\Mat_n(D)$-module이다.
-2. $k$번째 열 밖에서 $0$인 행렬들의 left ideal을 $C_k$라 하면 $\Mat_n(D)=\bigoplus_{k=1}^nC_k$이고, 각 $C_k$는 module로서 $D^n$과 isomorphic하다. 특히 $\Mat_n(D)$는 semisimple ring이다.
+2. $k$번째 열 밖에서 $0$인 행렬들의 left ideal
+    
+    $$C_k=\left\{\begin{pmatrix}0&\cdots&a_{1k}&\cdots&0\\\vdots&\ddots&\vdots&\ddots&\vdots\\0&\cdots&a_{nk}&\cdots&0\end{pmatrix}\middle\vert a_{1k},\ldots,a_{nk}\in D\right\}$$
+    
+    에 대하여, direct sum decomposition $\Mat_n(D)=\bigoplus_{k=1}^nC_k$가 존재하며, 이 때 각 $C_k$는 $\Mat_n(D)$-module로서 $D^n$과 isomorphic하다. 특히 $\Mat_n(D)$는 semisimple ring이다.
 :::
 ::: 증명
-우선 둘째 결과의 경우, 행렬을 열별로 나누면 $\Mat_n(D)=\bigoplus_kC_k$이고, $C_k$는 left ideal인 것은 단순계산으로 확인할 수 있다. 이제 행렬의 $k$번째 열을 읽는 대응 $C_k\rightarrow D^n$은 module isomorphism이다.
+우선 둘째 결과의 경우, 행렬을 열별로 나누면 $\Mat_n(D)=\bigoplus_kC_k$이고, $C_k$는 left ideal인 것은 단순계산으로 확인할 수 있으며 $C_k\rightarrow D^n$은 module isomorphism인 것도 자명하다.
 
-이제 첫째 결과를 보이자. 을 보이기 위해 $0\neq v\in D^n$과 임의의 $w\in D^n$을 택하자. $v_k\neq 0$인 성분 $k$를 고르고, 행렬 $A$를 $A_{ik}=w_iv_k^{-1}$, 나머지 성분은 $0$으로 정의하면
+이제 첫째 결과를 보이자. $0\neq v\in D^n$과 임의의 $w\in D^n$을 택하자. $v_k\neq 0$인 성분 $k$를 고르고, 행렬 $A$를 $A_{ik}=w_iv_k^{-1}$, 나머지 성분은 $0$으로 정의하면
 
 $$(Av)_i=A_{ik}v_k=w_iv_k^{-1}v_k=w_i$$
 
-이므로 $Av=w$이다. 즉 $0$이 아닌 임의의 원소가 $D^n$ 전체를 생성하므로 $D^n$은 simple이다. 그럼 2의 분해가 simple module들의 direct sum이므로 $\Mat_n(D)$는 semisimple ring이다.
+이므로 $Av=w$이다. 즉 $0$이 아닌 임의의 원소가 $D^n$ 전체를 생성하므로 $D^n$은 simple이다. 이제 둘째 결과로부터 $\Mat_n(D)$는 simple module들의 direct sum이므로 $\Mat_n(D)$는 semisimple ring이다.
 :::
+
+뿐만 아니라 다음이 성립한다.
 
 ::: 명제 6
-위 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^\op$이다.
+[명제 5](#prop5)의 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^\op$이다.
 :::
 ::: 증명
-$d\in D$에 대하여 성분별 오른쪽 곱셈 $\rho_d(v)=vd$를 생각하자. 임의의 행렬 $A$에 대하여 $(A(vd))_i=\sum_jA_{ij}(v_jd)=(Av)_id$이므로 $\rho_d$는 module endomorphism이다. 또 $\rho_d\circ\rho_{d'}(v)=vd'd=\rho_{d'd}(v)$이므로 $d\mapsto\rho_d$는 ring homomorphism $D^\op\rightarrow\End_{\Mat_n(D)}(D^n)$을 정의하고, $\rho_d$가 첫째 표준 열벡터 $e_1$을 $e_1d$로 보내므로 이는 단사이다.
+임의의 $d\in D$에 대하여, 열벡터의 각 성분에 오른쪽에서 $d$를 곱해주는 함수 $\rho_d(v)=vd$를 생각하면, 임의의 행렬 $A$에 대하여 
 
-전사임을 보이자. $\varphi$를 임의의 endomorphism이라 하고 $E_{ij}$를 matrix unit이라 하면, $E_{11}e_1=e_1$이므로 $E_{11}\varphi(e_1)=\varphi(e_1)$이고, 왼쪽 변은 $\varphi(e_1)$의 첫 성분만 남긴 벡터이므로 $\varphi(e_1)=e_1d$인 $d\in D$가 존재한다. 이제 임의의 $v\in D^n$에 대하여, $(i,1)$ 성분이 $v_i$이고 나머지가 $0$인 행렬을 $A_i$라 하면 $v=\sum_iA_ie_1$이므로
+$$(A(vd))_i=\sum_jA_{ij}(v_jd)=(Av)_id$$
+
+이므로 $\rho_d$는 module endomorphism이다. 뿐만 아니라 식 
+
+$$\rho_d\circ\rho_{d'}(v)=vd'd=\rho_{d'd}(v)$$
+
+으로부터 $d\mapsto\rho_d$는 ring homomorphism $D^\op\rightarrow\End_{\Mat_n(D)}(D^n)$을 정의하며, $\rho_d$가 첫째 표준 열벡터 $e_1$을 $e_1d$로 보내므로 이는 단사함수임이 자명하다. 
+
+남은 것은 이것이 전사임을 보이는 것이다. $\varphi$를 임의의 endomorphism이라 하고 $E_{ij}$를 matrix unit이라 하면, $E_{11}e_1=e_1$이므로 
+
+$$E_{11}\varphi(e_1)=\varphi(E_{11}e_1)=\varphi(e_1)$$
+
+이고, 이 때 좌변은 $\varphi(e_1)$의 첫 성분만 남긴 벡터이므로 $\varphi(e_1)=e_1d$인 $d\in D$가 존재한다. 이제 임의의 $v\in D^n$에 대하여, $(i,1)$ 성분이 $v_i$이고 나머지가 $0$인 행렬을 $A_i$라 하면 $v=\sum_iA_ie_1$이므로
 
 $$\varphi(v)=\sum_iA_i\varphi(e_1)=\sum_iA_i(e_1d)=vd=\rho_d(v)$$
 
 이다. 따라서 $\varphi=\rho_d$이고 대응은 전사이다.
 :::
 
-이 두 명제로 행렬환 쪽의 재료는 끝났다. 이제 semisimple ring을 행렬환으로 옮겨 줄 endomorphism ring 계산들을 준비한다.
+앞서 언급했듯, 우리 글의 목적은 임의의 semisimple ring이 matrix ring들 유한개의 곱으로 분해된다는 것이며, 위의 두 명제가 이를 위한 matrix ring들의 기본 성질들을 준다. 이제 우리는 ring과 그 endomorphism에 대한 성질을 살펴보아야 한다.
 
 ::: 보조정리 7
 임의의 ring $A$에 대하여 $\End_A(A)\cong A^\op$이다.
 :::
 ::: 증명
-$\Phi:\End_A(A)\rightarrow A^\op$를 $\Phi(f)=f(1)$로 정의하자. $f$가 $A$-linear이므로 $f(a)=f(a\cdot 1)=af(1)$, 즉 $f$는 $f(1)$의 오른쪽 곱셈이다. $\Phi$는 additive이고 $\Phi(\id)=1$이며,
-
-$$\Phi(f\circ g)=f(g(1))=g(1)f(1)=\Phi(f)\ast\Phi(g)$$
-
-이므로 $A^\op$로의 ring homomorphism이다. 거꾸로 $a\in A$에 대해 오른쪽 곱셈 $x\mapsto xa$는 left module endomorphism이고 이 대응이 $\Phi$의 역을 주므로 $\Phi$는 isomorphism이다.
+$\Phi:\End_A(A)\rightarrow A^\op$를 $\Phi(f)=f(1)$로 정의하면 이것이 $A^\op$로의 ring homomorphism인 것은 쉽게 보일 수 있다. 거꾸로, 임의의 $a\in A$에 대해 오른쪽 곱셈 $x\mapsto xa$는 left module endomorphism이고 이 대응이 $\Phi$의 역을 주므로 $\Phi$는 isomorphism이다.
 :::
+
+그럼 우리의 다음 관찰은 semisimple module 위의 linear operator에 대한 것으로, 직관적으로 이는 semisimple module들을 이루는 각 simple module들이 (같은 type이 아닌 한) 섞일 수 없다는 것이며, 이에 대한 증명은 당연히 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-relation="weak" }을 사용한다.
 
 ::: 보조정리 8
 $S_1,\ldots,S_k$가 서로 isomorphic하지 않은 simple module들이고 $n_1,\ldots,n_k\geq 1$일 때, $M=\bigoplus_{i=1}^kS_i^{n_i}$에 대하여
@@ -104,13 +120,13 @@ $$\End_A(M)\cong\prod_{i=1}^k\Mat_{n_i}\big(\End_A(S_i)\big)$$
 이다.
 :::
 ::: 증명
-Direct sum 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자 ($1\leq a\leq n_i$). Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="wccwq" data-relation="required" }에 의해 nonzero일 경우 isomorphism이 되어 가정에 모순이므로 $0$이다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$들의 자료와 같다.
+Direct sum 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자. Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="wccwq" data-relation="required" }에 의해 $0$이 되어야 한다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$들의 자료와 정확히 같다.
 
-이 대응이 ring isomorphism임을 확인하자. 합에 대해서는 자명하고, $\sum_{j,b}\iota_{j,b}\circ\pi_{j,b}=\id_M$이므로
+이 대응이 ring isomorphism임을 확인해야 한다. 즉, 이것이 덧셈과 곱셈을 보존함을 보여야 한다. 덧셈 부분은 자명하며, 곱셈에 대해서는 $\sum_{j,b}\iota_{j,b}\circ\pi_{j,b}=\id_M$이므로
 
 $$\pi_{i,a}\circ(\varphi\circ\psi)\circ\iota_{i,c}=\sum_{b}(\pi_{i,a}\circ\varphi\circ\iota_{i,b})\circ(\pi_{i,b}\circ\psi\circ\iota_{i,c})$$
 
-이고, 이는 정확히 행렬곱의 $(a,c)$ 성분이다. 역대응은 행렬 자료로부터 $\varphi=\sum\iota\circ\varphi_{ab}\circ\pi$를 조립하면 된다.
+이고, 이는 정확히 행렬곱의 $(a,c)$ 성분이다. 
 :::
 
 ::: 보조정리 9
