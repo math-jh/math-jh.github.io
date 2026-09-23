@@ -4910,6 +4910,13 @@ D:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: differential_graded_algebra
+  en: differential graded algebra
+  ko: 미분 등급 대수
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분형식'
+    url: /ko/math/manifolds/differential_forms
 - id: differential_ideal
   en: differential ideal
   ko: 미분 아이디얼
