@@ -49,7 +49,7 @@ $A=\bigoplus_{i\in I}\mathfrak{a}_i$를 simple left ideal들의 direct sum이라
 우선 우리는 다음을 정의한다. 
 
 ::: 정의 4
-Ring $A$에 대하여, $A$와 같은 abelian group 위에 곱셈을 $a\ast b=ba$로 정의한 ring을 $A$의 *opposite ring<sub>반대환</sub>*이라 부르고 $A^\op$로 적는다.
+Ring $A$에 대하여, $A$와 같은 abelian group 위에 곱셈을 $a\ast^\op b=ba$로 정의한 ring을 $A$의 *opposite ring<sub>반대환</sub>*이라 부르고 $A^\op$로 적는다.
 :::
 
 정의에서 바로 $(A^\op)^\op=A$이고, right $A$-module은 left $A^\op$-module과 같은 것이다. 또 $D$가 division ring이면 임의의 nonzero element의 역원이 $D^\op$에서도 그대로 역원의 역할을 하므로 $D^\op$ 또한 division ring이다.
@@ -129,17 +129,19 @@ $$\pi_{i,a}\circ(\varphi\circ\psi)\circ\iota_{i,c}=\sum_{b}(\pi_{i,a}\circ\varph
 이고, 이는 정확히 행렬곱의 $(a,c)$ 성분이다. 
 :::
 
+또, 다음이 성립한다.
+
 ::: 보조정리 9
-임의의 ring $\Delta$에 대하여 transpose는 isomorphism $\Mat_n(\Delta)^\op\cong\Mat_n(\Delta^\op)$을 준다.
+임의의 ring $A$에 대하여 transpose는 isomorphism $\Mat_n(A)^\op\cong\Mat_n(A^\op)$을 준다.
 :::
 ::: 증명
-$T(A)=A^{\mathsf{T}}$는 additive bijection이고 항등행렬을 보존한다. $\Mat_n(\Delta)^\op$의 곱 $A\ast B=BA$에 대하여
+$T(X)=X^t$는 additive bijection이고 항등행렬을 보존한다. $\Mat_n(A)^\op$의 곱 $X\ast^\op Y=YX$에 대하여
 
-$$T(A\ast B)_{ij}=(BA)_{ji}=\sum_kB_{jk}A_{ki}$$
+$$T(X\ast^\op Y)_{ij}=(YX)_{ji}=\sum_k Y_{jk}X_{ki}$$
 
-이고, $\Mat_n(\Delta^\op)$에서의 곱은
+이고, $\Mat_n(A^\op)$에서의 곱은
 
-$$\big(T(A)T(B)\big)_{ij}=\sum_k(A^{\mathsf{T}})_{ik}\ast(B^{\mathsf{T}})_{kj}=\sum_k(B^{\mathsf{T}})_{kj}(A^{\mathsf{T}})_{ik}=\sum_kB_{jk}A_{ki}$$
+$$\big(T(X)T(Y)\big)_{ij}=\sum_k(X^t)_{ik}\ast^\op(Y^t)_{kj}=\sum_k(Y^t)_{kj}(X^t)_{ik}=\sum_k Y_{jk}X_{ki}$$
 
 로 일치한다.
 :::
@@ -149,13 +151,17 @@ $$\big(T(A)T(B)\big)_{ij}=\sum_k(A^{\mathsf{T}})_{ik}\ast(B^{\mathsf{T}})_{kj}=\
 ::: 명제 10
 $A=A_1\times\cdots\times A_k$라 하고, $e_i\in A$를 $i$번째 성분만 $1$인 원소라 하자.
 
-1. $\{e_1,\ldots,e_k\}$는 central한 orthogonal idempotent의 complete set이고, 임의의 left $A$-module $M$은 $M=\bigoplus_ie_iM$으로 분해된다. 각 $e_iM$은 $A$가 $i$번째 성분을 통해 작용하는 $A_i$-module이며, 그 $A$-submodule은 $A_i$-submodule과 일치한다. 특히 simple left $A$-module은 정확히, 어떤 $i$에 대한 simple left $A_i$-module을 $i$번째 성분의 작용으로 $A$-module로 본 것들이다.
+1. $\{e_1,\ldots,e_k\}$가 complete set of central orthogonal idempotents이고, 임의의 left $A$-module $M$은 $M=\bigoplus_ie_iM$으로 분해된다. 각 $e_iM$은 $A$가 $i$번째 성분을 통해 작용하는 $A_i$-module이며, 그 $A$-submodule은 $A_i$-submodule과 일치한다. 특히 simple left $A$-module은 정확히, 어떤 $i$에 대한 simple left $A_i$-module을 $i$번째 성분의 작용으로 $A$-module로 본 것들이다.
 2. 각 $A_i$가 semisimple ring이면 $A$도 semisimple ring이다.
 :::
 ::: 증명
-$e_i$들이 central orthogonal idempotent의 complete set임은 성분별 계산으로 바로 확인되며, 이 상황은 [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" data-relation="required" }의 direct product decomposition에 대응하는 것이다. 임의의 $m\in M$은 $m=\sum_ie_im$으로 쓰이고, $x\in e_iM\cap\sum_{j\neq i}e_jM$이면 $e_jM$ 위에서 $e_i$가 $e_ie_j=0$으로 작용하므로 $x=e_ix=0$이다. 따라서 $M=\bigoplus_ie_iM$이다. $e_iM$ 위에서 $e_j$ ($j\neq i$) 성분은 $0$으로 작용하므로 $A$의 작용은 $i$번째 성분 $A_i$를 통해서만 이루어지고, 부분집합이 $A$-submodule인 것과 $A_i$-submodule인 것이 같아진다. Simple module의 분류는 이로부터 바로 따라온다. $M$이 simple이면 분해 $M=\bigoplus_ie_iM$의 인자 중 정확히 하나만 nonzero이고 그것이 simple $A_i$-module이며, 역도 마찬가지이다.
+1. $e_i$들이 complete set of central orthogonal idempotents임은 성분별 계산으로 바로 확인할 수 있다. ([§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" data-relation="required" }) 이 때, 식
+    
+    $$1=\sum e_i,\qquad e_ie_j=\delta_{ij}e_i$$
+    
+    로부터 $M=\bigoplus_i e_iM$임을 알고, centrality에 의해 $e_iM$에는 $i$번째 성분 $A_i$만 작용하고 나머지 성분은 $0$으로 작용하므로 $e_iM$의 $A$-submodule과 $A_i$-submodule은 서로 같은 것이다. 특히 $M$이 simple이면 이 분해의 인자 중 정확히 하나만 nonzero일 수 있으므로, $M$이 simple left $A$-module이라는 것은 $M$이 어떤 $i$에 대해 simple $A_i$-module이라는 것과 같다.
 
-2의 경우, left regular module의 분해 $A=\bigoplus_iAe_i$에서 $Ae_i$는 1에 의해 $A_i$의 regular module과 같은 submodule 구조를 가지므로, $A_i$가 semisimple ring이면 $Ae_i$는 simple $A$-submodule들의 direct sum이다. 따라서 $A$가 simple left ideal들의 direct sum이 되어 semisimple ring이다.
+2. 각 $A_i$가 semisimple ring이면 $A_i$는 simple left ideal들의 direct sum이므로, $A\cong\bigoplus_i A_i$ 또한 simple left ideal들의 direct sum이 되어 semisimple ring이다.
 :::
 
 ## 아틴-웨더번 정리
@@ -187,7 +193,7 @@ $$A\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)^\op\cong\prod_{i=1}^k\Mat_{n_i}(\Delta
 
 이고, $D_i=\Delta_i^\op$는 division ring이므로 원하는 분해를 얻는다.
 
-유일성을 보이자. $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $A$-module로 보자. [명제 5](#prop5){: data-lid="qlrxy" data-relation="required" }에 의해 각 $W_j$는 simple이고 $j$번째 인자의 regular module이 $W_j^{m_j}$와 isomorphic하므로, left module로서 $A\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10){: data-lid="yl0q8" data-relation="required" }의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§반단순가군, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" data-relation="required" }에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10){: data-lid="c9hgr" data-relation="required" }의 1에 의해 $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6){: data-lid="wlly1" data-relation="required" }에 의해 이는 $E_i^\op$와 isomorphic하므로
+유일성을 보이자. $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $A$-module로 보자. [명제 5](#prop5){: data-lid="qlrxy" data-relation="required" }에 의해 각 $W_j$는 simple이고 $j$번째 인자가 $W_j^{m_j}$와 isomorphic하므로, left module로서 $A\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10){: data-lid="yl0q8" data-relation="required" }의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§반단순가군, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" data-relation="required" }에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10){: data-lid="c9hgr" data-relation="required" }의 1에 의해 $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6){: data-lid="wlly1" data-relation="required" }에 의해 이는 $E_i^\op$와 isomorphic하므로
 
 $$E_i\cong\End_A(W_i)^\op\cong\End_A(S_i)^\op=\Delta_i^\op=D_i$$
 
@@ -203,17 +209,7 @@ $A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 [명제 2](#prop2){: data-lid="c2mpv" data-relation="required" }에 의해 모든 module이 semisimple이므로 simple들의 direct sum이고, [명제 5](#prop5){: data-lid="pg0b4" data-relation="required" }와 [명제 10](#prop10){: data-lid="zkbod" data-relation="required" }에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Ax$이므로 전사 $A\rightarrow M$이 존재하고, left module decomposition $A\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }에 의해 $M\cong V_i$이다.
 :::
 
-::: 참고 13
-정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 ring들을 얻는다. Right $A$-module은 left $A^\op$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^\op$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
-:::
-
-::: 참고 14
-Finite group $G$의 group algebra $\mathbb{C}[G]$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7){: data-lid="6mmx5" data-relation="weak" }에 의해 모든 유한차원 representation이 semisimple $\mathbb{C}[G]$-module이고, 특히 regular representation $\mathbb{C}[G]$ 자신이 그러하므로 $\mathbb{C}[G]$는 semisimple ring이다. [정리 11](#thm11){: data-lid="n8xw6" data-relation="required" }의 분해에 등장하는 division ring들은 simple module $V_i$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 representation에서는 $\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="ocojm" data-relation="weak" }) 모든 $D_i$가 $\mathbb{C}$가 된다. 따라서
-
-$$\mathbb{C}[G]\cong\prod_{i=1}^k\Mat_{d_i}(\mathbb{C})$$
-
-이고, 여기서 $d_i$는 irreducible representation들의 차원, $k$는 그 개수이다. 양변의 $\mathbb{C}$-차원을 비교하면 곧바로 $\lvert G\rvert=\sum_{i=1}^kd_i^2$를 얻는다.
-:::
+한편 [정의 1](#def1)은 left module 구조로 주어졌지만, right module로 정의하더라도 같은 ring들을 얻는다. Right $A$-module은 left $A^\op$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^\op$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 마찬가지로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
 
 ---
 

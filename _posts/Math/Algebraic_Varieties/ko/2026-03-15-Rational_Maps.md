@@ -42,7 +42,7 @@ Affine variety $X$에 대하여, $K(X)=\Frac\mathbb{K}[X]$이 성립한다.
 Variety $X$와 공집합이 아닌 열린집합 $U$에 대하여, $K(U) = K(X)$가 성립한다.
 :::
 ::: 증명
-우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: K(X)\rightarrow K(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 inclusion이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-lid="ap7my" data-relation="required" reviewed="" })
+우선 inclusion $\iota: U \hookrightarrow X$가 function field의 embedding $\iota^\ast: K(X)\rightarrow K(U)$를 유도하는 것은 자명하다. 임의의 nonzero field homomorphism은 injective이므로, 우리는 $\iota^\ast$가 surjective임을 보이면 충분하다. ([\[체론\] §체, ⁋명제 2](/ko/math/field_theory/fields#prop2){: data-lid="ap7my" data-relation="required" reviewed="" })
 
 그런데 임의의 $f \in K(U)$에 대하여, $f$는 $U$의 어떤 nonempty open subset $V$에서의 regular function이며, 그럼 이 $V$는 $X$의 열린집합이기도 하므로 이 pair $(V,f)$는 $K(X)$에 속한다. 
 :::
@@ -88,7 +88,7 @@ Regular map의 isomorphism이 두 variety가 완전히 같은 구조를 갖는�
 Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 $\varphi$의 image가 $Y$에서 dense한 것이다. 즉, $\overline{\varphi(\dom(\varphi))} = Y$이 성립한다.
 :::
 
-Dominant라는 조건이 필요한 이유는 rational map의 합성이 일반적으로 정의되지 않기 때문이다. 두 rational map $\varphi: X\dashrightarrow Y$와 $\psi: Y \dashrightarrow Z$에 대하여, $\varphi$의 image가 $\dom(\psi)$와 만나지 않으면 $\psi\circ \varphi$를 정의할 방법이 아예 없다. 그러나 $\varphi$가 dominant라면 $\varphi(\dom(\varphi))$가 $Y$에서 dense하므로 공집합이 아닌 열린집합 $\dom(\psi)$와 반드시 만나고, 따라서 $W=\varphi^{-1}(\dom(\psi))$는 $\dom(\varphi)$의 공집합이 아닌 열린집합이 되어 그 위에서 $\psi\circ\varphi$가 regular map으로 정의된다. 이렇게 얻어진 $\psi\circ\varphi$가 다시 dominant인 것도 확인할 수 있다. $X$가 irreducible이므로 $W$는 $\dom(\varphi)$에서 dense하고, $\varphi^{-1}(\overline{\varphi(W)})$는 $W$를 포함하는 $\dom(\varphi)$의 닫힌집합이므로 $\varphi(\dom(\varphi))\subseteq \overline{\varphi(W)}$, 곧 $\overline{\varphi(W)}=Y$이다. 그럼 $\varphi(W)$는 $\dom(\psi)$에서도 dense하므로, 같은 논증을 $\psi$와 $\varphi(W)$에 한 번 더 적용하면 $\overline{\psi(\varphi(W))}=Z$를 얻는다. 이후 우리는 dominant rational map들에 한하여 합성을 생각한다.
+Dominant라는 조건이 필요한 이유는 rational map의 합성이 일반적으로 정의되지 않기 때문이다. 두 rational map $\varphi: X\dashrightarrow Y$와 $\psi: Y \dashrightarrow Z$에 대하여, $\varphi$의 image가 $\dom(\psi)$와 만나지 않으면 $\psi\circ \varphi$를 정의할 방법이 아예 없다. 그러나 $\varphi$가 dominant라면 $\varphi(\dom(\varphi))$가 $Y$에서 dense하므로 공집합이 아닌 열린집합 $\dom(\psi)$와 반드시 만나고, 따라서 $W=\varphi^{-1}(\dom(\psi))$는 $\dom(\varphi)$의 공집합이 아닌 열린집합이 되어 그 위에서 $\psi\circ\varphi$가 regular map으로 정의된다. 또, 만일 $\psi$도 dominant라면 이렇게 얻어진 $\psi\circ\varphi$가 다시 dominant인 것도 확인할 수 있다. $X$가 irreducible이므로 $W$는 $\dom(\varphi)$에서 dense하고, $\varphi^{-1}(\overline{\varphi(W)})$는 $W$를 포함하는 $\dom(\varphi)$의 닫힌집합이므로 $\varphi(\dom(\varphi))\subseteq \overline{\varphi(W)}$, 곧 $\overline{\varphi(W)}=Y$이다. 그럼 $\varphi(W)$는 $\dom(\psi)$에서도 dense하므로, 같은 논증을 $\psi$와 $\varphi(W)$에 한 번 더 적용하면 $\overline{\psi(\varphi(W))}=Z$를 얻는다. 이후 우리는 dominant rational map들에 한하여 합성을 생각한다.
 
 ::: 정의 9
 Dominant rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 dominant rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \id_X$와 $\varphi \circ \psi = \id_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
@@ -146,7 +146,7 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 
 이로부터 원점을 제외한 평면의 나머지 부분에서는 두 variety $\mathbb{A}^2$와 $\Bl_{(0,0)}\mathbb{A}^2$가 isomorphic하므로 $\pi_1$은 birational map이다. 
 
-이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\Bl_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 birational map이 정의되지 않는 base point를 해소해줄 수 있다. 
+이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\Bl_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 rational map이 정의되지 않는 base point를 해소해줄 수 있다. 
 :::
 
 ---
