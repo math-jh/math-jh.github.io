@@ -157,7 +157,7 @@ $$\mathcal{D}_t=\left\{p\in M\mid t\in\bigl(a(p),b(p)\bigr)\right\}$$
 
 
 ::: 정의 7
-$X\in\mathfrak{X}(M)$이 *complete*라는 것은 모든 $t$에 대하여 $\mathcal{D}_t=M$이라는 것이다. 이 때, $\phi^t$들은 $\circ$에 대한 group을 이루는데, 이를 $X$의 *one-parameter group*이라 부른다. 
+$X\in\mathfrak{X}(M)$이 *complete<sub>완비</sub>*라는 것은 모든 $t$에 대하여 $\mathcal{D}_t=M$이라는 것이다. 이 때, $\phi^t$들은 $\circ$에 대한 group을 이루는데, 이를 $X$의 *one-parameter group*이라 부른다. 
 :::
 
 만일 $X$가 complete이 아니라면 위와 같이 $\phi^t$들의 정의역에 약간의 문제가 있어 이들을 group으로 생각하기가 힘들어진다. 더 미묘한 경우는 처음의 벡터장 $X$가 시간에 따라 변하는 경우인데, 이 경우는 아직은 우리의 관심사가 아니니 넘기기로 한다.

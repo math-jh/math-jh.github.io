@@ -7547,6 +7547,13 @@ G:
   defs:
   - label: '[가환대수학] §호몰로지 차원'
     url: /ko/math/commutative_algebra/homological_dimension
+- id: global_frame
+  en: global frame
+  ko: 대역 틀
+  primary: en
+  defs:
+  - label: '[미분다양체] §벡터장'
+    url: /ko/math/manifolds/vector_fields
 - id: global_orientation
   en: global orientation
   ko: 전역 방향
