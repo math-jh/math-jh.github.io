@@ -44,28 +44,26 @@ $A$가 semisimple ring이면 $A$는 유한개의 simple left ideal의 direct sum
 $A=\bigoplus_{i\in I}\mathfrak{a}_i$를 simple left ideal들의 direct sum이라 하자. 항등원 $1$을 이 direct sum decomposition의 원소로 보면, 항등원은 <em-ko>유한한</em-ko> index set $J\subseteq I$에서만 $0$이 아닐 수 있다. 이제 임의의 $a\in A$에 대하여 $a=a\cdot 1\in\sum_{i\in J}\mathfrak{a}_i$이므로 $A=\bigoplus_{i\in J}\mathfrak{a}_i$이다.
 :::
 
-따라서 semisimple ring은 left module로서 finite composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="3l9ro" data-relation="weak" }). Direct sum 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
-
 ## 나눗셈환 위의 행렬환
 
-구조 정리의 building block은 division ring 위의 행렬환이다. 이를 다루기 위해 먼저 곱셈의 순서를 뒤집은 ring을 정의한다.
+우선 우리는 다음을 정의한다. 
 
 ::: 정의 4
-Ring $A$에 대하여, $A$와 같은 abelian group 위에 곱셈을 $a\ast b=ba$로 정의한 ring을 $A$의 *opposite ring<sub>반대환</sub>*이라 부르고 $A^{\mathrm{op}}$로 적는다.
+Ring $A$에 대하여, $A$와 같은 abelian group 위에 곱셈을 $a\ast b=ba$로 정의한 ring을 $A$의 *opposite ring<sub>반대환</sub>*이라 부르고 $A^\op$로 적는다.
 :::
 
-정의에서 바로 $(A^{\mathrm{op}})^{\mathrm{op}}=A$이고, right $A$-module은 left $A^{\mathrm{op}}$-module과 같은 것이다. 또 $D$가 division ring이면 nonzero 원소의 역원이 그대로 역원이 되므로 $D^{\mathrm{op}}$ 또한 division ring이다.
+정의에서 바로 $(A^\op)^\op=A$이고, right $A$-module은 left $A^\op$-module과 같은 것이다. 또 $D$가 division ring이면 임의의 nonzero element의 역원이 $D^\op$에서도 그대로 역원의 역할을 하므로 $D^\op$ 또한 division ring이다.
 
 ::: 명제 5
-$D$가 division ring이고 $n\geq 1$이라 하자. 열벡터들의 공간 $D^n$을 행렬 곱셈으로 left $\Mat_n(D)$-module로 보면 다음이 성립한다.
+$D$가 division ring이고 $n\geq 1$이라 하자. 열벡터들의 공간 $D^n$위에 행렬 곱셈으로 left $\Mat_n(D)$-module 구조를 부여하면 다음이 성립한다.
 
-1. $D^n$은 simple module이다.
+1. $D^n$은 simple $\Mat_n(D)$-module이다.
 2. $k$번째 열 밖에서 $0$인 행렬들의 left ideal을 $C_k$라 하면 $\Mat_n(D)=\bigoplus_{k=1}^nC_k$이고, 각 $C_k$는 module로서 $D^n$과 isomorphic하다. 특히 $\Mat_n(D)$는 semisimple ring이다.
 :::
 ::: 증명
-2를 먼저 보자. 행렬을 열별로 나누면 $\Mat_n(D)=\bigoplus_kC_k$이고, 왼쪽에서 행렬을 곱하는 연산은 각 열에 독립적으로 작용하므로 $C_k$는 left ideal이며, $k$번째 열을 읽는 대응 $C_k\rightarrow D^n$은 module isomorphism이다.
+우선 둘째 결과의 경우, 행렬을 열별로 나누면 $\Mat_n(D)=\bigoplus_kC_k$이고, $C_k$는 left ideal인 것은 단순계산으로 확인할 수 있다. 이제 행렬의 $k$번째 열을 읽는 대응 $C_k\rightarrow D^n$은 module isomorphism이다.
 
-1을 보이기 위해 $0\neq v\in D^n$과 임의의 $w\in D^n$을 택하자. $v_k\neq 0$인 성분 $k$를 고르고, 행렬 $A$를 $A_{ik}=w_iv_k^{-1}$, 나머지 성분은 $0$으로 정의하면
+이제 첫째 결과를 보이자. 을 보이기 위해 $0\neq v\in D^n$과 임의의 $w\in D^n$을 택하자. $v_k\neq 0$인 성분 $k$를 고르고, 행렬 $A$를 $A_{ik}=w_iv_k^{-1}$, 나머지 성분은 $0$으로 정의하면
 
 $$(Av)_i=A_{ik}v_k=w_iv_k^{-1}v_k=w_i$$
 
@@ -73,10 +71,10 @@ $$(Av)_i=A_{ik}v_k=w_iv_k^{-1}v_k=w_i$$
 :::
 
 ::: 명제 6
-위 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^{\mathrm{op}}$이다.
+위 상황에서 $\End_{\Mat_n(D)}(D^n)\cong D^\op$이다.
 :::
 ::: 증명
-$d\in D$에 대하여 성분별 오른쪽 곱셈 $\rho_d(v)=vd$를 생각하자. 임의의 행렬 $A$에 대하여 $(A(vd))_i=\sum_jA_{ij}(v_jd)=(Av)_id$이므로 $\rho_d$는 module endomorphism이다. 또 $\rho_d\circ\rho_{d'}(v)=vd'd=\rho_{d'd}(v)$이므로 $d\mapsto\rho_d$는 ring homomorphism $D^{\mathrm{op}}\rightarrow\End_{\Mat_n(D)}(D^n)$을 정의하고, $\rho_d$가 첫째 표준 열벡터 $e_1$을 $e_1d$로 보내므로 이는 단사이다.
+$d\in D$에 대하여 성분별 오른쪽 곱셈 $\rho_d(v)=vd$를 생각하자. 임의의 행렬 $A$에 대하여 $(A(vd))_i=\sum_jA_{ij}(v_jd)=(Av)_id$이므로 $\rho_d$는 module endomorphism이다. 또 $\rho_d\circ\rho_{d'}(v)=vd'd=\rho_{d'd}(v)$이므로 $d\mapsto\rho_d$는 ring homomorphism $D^\op\rightarrow\End_{\Mat_n(D)}(D^n)$을 정의하고, $\rho_d$가 첫째 표준 열벡터 $e_1$을 $e_1d$로 보내므로 이는 단사이다.
 
 전사임을 보이자. $\varphi$를 임의의 endomorphism이라 하고 $E_{ij}$를 matrix unit이라 하면, $E_{11}e_1=e_1$이므로 $E_{11}\varphi(e_1)=\varphi(e_1)$이고, 왼쪽 변은 $\varphi(e_1)$의 첫 성분만 남긴 벡터이므로 $\varphi(e_1)=e_1d$인 $d\in D$가 존재한다. 이제 임의의 $v\in D^n$에 대하여, $(i,1)$ 성분이 $v_i$이고 나머지가 $0$인 행렬을 $A_i$라 하면 $v=\sum_iA_ie_1$이므로
 
@@ -88,14 +86,14 @@ $$\varphi(v)=\sum_iA_i\varphi(e_1)=\sum_iA_i(e_1d)=vd=\rho_d(v)$$
 이 두 명제로 행렬환 쪽의 재료는 끝났다. 이제 semisimple ring을 행렬환으로 옮겨 줄 endomorphism ring 계산들을 준비한다.
 
 ::: 보조정리 7
-임의의 ring $A$에 대하여 $\End_A(A)\cong A^{\mathrm{op}}$이다.
+임의의 ring $A$에 대하여 $\End_A(A)\cong A^\op$이다.
 :::
 ::: 증명
-$\Phi:\End_A(A)\rightarrow A^{\mathrm{op}}$를 $\Phi(f)=f(1)$로 정의하자. $f$가 $A$-linear이므로 $f(a)=f(a\cdot 1)=af(1)$, 즉 $f$는 $f(1)$의 오른쪽 곱셈이다. $\Phi$는 additive이고 $\Phi(\id)=1$이며,
+$\Phi:\End_A(A)\rightarrow A^\op$를 $\Phi(f)=f(1)$로 정의하자. $f$가 $A$-linear이므로 $f(a)=f(a\cdot 1)=af(1)$, 즉 $f$는 $f(1)$의 오른쪽 곱셈이다. $\Phi$는 additive이고 $\Phi(\id)=1$이며,
 
 $$\Phi(f\circ g)=f(g(1))=g(1)f(1)=\Phi(f)\ast\Phi(g)$$
 
-이므로 $A^{\mathrm{op}}$로의 ring homomorphism이다. 거꾸로 $a\in A$에 대해 오른쪽 곱셈 $x\mapsto xa$는 left module endomorphism이고 이 대응이 $\Phi$의 역을 주므로 $\Phi$는 isomorphism이다.
+이므로 $A^\op$로의 ring homomorphism이다. 거꾸로 $a\in A$에 대해 오른쪽 곱셈 $x\mapsto xa$는 left module endomorphism이고 이 대응이 $\Phi$의 역을 주므로 $\Phi$는 isomorphism이다.
 :::
 
 ::: 보조정리 8
@@ -116,14 +114,14 @@ $$\pi_{i,a}\circ(\varphi\circ\psi)\circ\iota_{i,c}=\sum_{b}(\pi_{i,a}\circ\varph
 :::
 
 ::: 보조정리 9
-임의의 ring $\Delta$에 대하여 transpose는 isomorphism $\Mat_n(\Delta)^{\mathrm{op}}\cong\Mat_n(\Delta^{\mathrm{op}})$을 준다.
+임의의 ring $\Delta$에 대하여 transpose는 isomorphism $\Mat_n(\Delta)^\op\cong\Mat_n(\Delta^\op)$을 준다.
 :::
 ::: 증명
-$T(A)=A^{\mathsf{T}}$는 additive bijection이고 항등행렬을 보존한다. $\Mat_n(\Delta)^{\mathrm{op}}$의 곱 $A\ast B=BA$에 대하여
+$T(A)=A^{\mathsf{T}}$는 additive bijection이고 항등행렬을 보존한다. $\Mat_n(\Delta)^\op$의 곱 $A\ast B=BA$에 대하여
 
 $$T(A\ast B)_{ij}=(BA)_{ji}=\sum_kB_{jk}A_{ki}$$
 
-이고, $\Mat_n(\Delta^{\mathrm{op}})$에서의 곱은
+이고, $\Mat_n(\Delta^\op)$에서의 곱은
 
 $$\big(T(A)T(B)\big)_{ij}=\sum_k(A^{\mathsf{T}})_{ik}\ast(B^{\mathsf{T}})_{kj}=\sum_k(B^{\mathsf{T}})_{kj}(A^{\mathsf{T}})_{ik}=\sum_kB_{jk}A_{ki}$$
 
@@ -165,17 +163,17 @@ $2\implies 1$은 [명제 5](#prop5){: data-lid="aw3ne" data-relation="required" 
 
 $1\implies 2$를 보자. [명제 3](#prop3){: data-lid="jyozf" data-relation="required" }에 의해 $A$는 유한개의 simple left ideal의 direct sum이고, isomorphism class별로 인자들을 모으면 서로 isomorphic하지 않은 simple module들 $S_1,\ldots,S_k$와 자연수 $n_i\geq 1$에 대하여 left module로서 $A\cong\bigoplus_iS_i^{n_i}$이다. $\Delta_i=\End_A(S_i)$로 두면 이는 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="uauah" data-relation="required" }에 의해 division ring이고, [보조정리 7](#lem7){: data-lid="reb59" data-relation="required" }과 [보조정리 8](#lem8){: data-lid="m01xr" data-relation="required" }에 의해
 
-$$A^{\mathrm{op}}\cong\End_A(A)\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)$$
+$$A^\op\cong\End_A(A)\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)$$
 
 이다. 양변의 opposite ring을 취하면, 곱환의 opposite은 opposite들의 곱이므로 [보조정리 9](#lem9){: data-lid="2hk1d" data-relation="required" }에 의해
 
-$$A\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)^{\mathrm{op}}\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i^{\mathrm{op}})$$
+$$A\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)^\op\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i^\op)$$
 
-이고, $D_i=\Delta_i^{\mathrm{op}}$는 division ring이므로 원하는 분해를 얻는다.
+이고, $D_i=\Delta_i^\op$는 division ring이므로 원하는 분해를 얻는다.
 
-유일성을 보이자. $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $A$-module로 보자. [명제 5](#prop5){: data-lid="qlrxy" data-relation="required" }에 의해 각 $W_j$는 simple이고 $j$번째 인자의 regular module이 $W_j^{m_j}$와 isomorphic하므로, left module로서 $A\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10){: data-lid="yl0q8" data-relation="required" }의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§반단순가군, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" data-relation="required" }에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10){: data-lid="c9hgr" data-relation="required" }의 1에 의해 $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6){: data-lid="wlly1" data-relation="required" }에 의해 이는 $E_i^{\mathrm{op}}$와 isomorphic하므로
+유일성을 보이자. $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$가 임의의 그러한 분해라 하고 $W_j=E_j^{m_j}$를 $j$번째 성분을 통한 left $A$-module로 보자. [명제 5](#prop5){: data-lid="qlrxy" data-relation="required" }에 의해 각 $W_j$는 simple이고 $j$번째 인자의 regular module이 $W_j^{m_j}$와 isomorphic하므로, left module로서 $A\cong\bigoplus_jW_j^{m_j}$이다. 또 [명제 10](#prop10){: data-lid="yl0q8" data-relation="required" }의 1에 의해 $W_j$들은 서로 다른 성분에 속하므로 pairwise non-isomorphic하다. 그럼 [§반단순가군, ⁋명제 10](/ko/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" data-relation="required" }에 의해 두 분해 $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$의 자료가 일치한다. 즉 $l=k$이고 재배열 후 $W_i\cong S_i$, $m_i=n_i$이다. 마지막으로 [명제 10](#prop10){: data-lid="c9hgr" data-relation="required" }의 1에 의해 $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$이고 [명제 6](#prop6){: data-lid="wlly1" data-relation="required" }에 의해 이는 $E_i^\op$와 isomorphic하므로
 
-$$E_i\cong\End_A(W_i)^{\mathrm{op}}\cong\End_A(S_i)^{\mathrm{op}}=\Delta_i^{\mathrm{op}}=D_i$$
+$$E_i\cong\End_A(W_i)^\op\cong\End_A(S_i)^\op=\Delta_i^\op=D_i$$
 
 이다. 따라서 division ring들도 isomorphism을 무시하면 유일하다.
 :::
@@ -190,7 +188,7 @@ $A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 :::
 
 ::: 참고 13
-정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 ring들을 얻는다. Right $A$-module은 left $A^{\mathrm{op}}$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^{\mathrm{op}}$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^{\mathrm{op}}\cong\prod_i\Mat_{n_i}(D_i^{\mathrm{op}})$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
+정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 ring들을 얻는다. Right $A$-module은 left $A^\op$-module과 같으므로, $A$가 right semisimple이라는 것은 $A^\op$가 semisimple ring이라는 것이다. 그런데 $A$가 semisimple ring이면 [정리 11](#thm11){: data-lid="gy0gw" data-relation="required" }의 분해에 [보조정리 9](#lem9){: data-lid="t2e0p" data-relation="required" }를 적용하여 $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
 :::
 
 ::: 참고 14
