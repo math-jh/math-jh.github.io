@@ -17439,6 +17439,13 @@ S:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+- id: smooth_map
+  en: smooth map
+  ko: 매끄러운 사상
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: smooth_point
   en: smooth point
   ko: 매끄러운 점
