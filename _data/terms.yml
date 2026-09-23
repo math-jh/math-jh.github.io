@@ -13777,6 +13777,13 @@ P:
   see:
   - label: Parallel transport
     id: parallel_transport
+- id: parallelizable_manifold
+  en: parallelizable manifold
+  ko: 평행화가능 다양체
+  primary: en
+  defs:
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
 - id: parallelogram_law
   en: parallelogram law
   ko: 평행사변형 법칙
