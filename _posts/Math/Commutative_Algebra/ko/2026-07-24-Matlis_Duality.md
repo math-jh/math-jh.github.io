@@ -115,7 +115,7 @@ $$0\rightarrow A/\mathfrak{p}_0\overset{x}{\longrightarrow}A/\mathfrak{p}_0\righ
 
 이제 위의 short exact sequence에 $\Hom_A(-,M)$을 취한 long exact sequence
 $$\cdots\rightarrow\Ext_A^j(A/(\mathfrak{p}_0+(x)),M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)\overset{x}{\longrightarrow}\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^{j+1}(A/(\mathfrak{p}_0+(x)),M)\rightarrow\cdots$$
-에서 가운데 map은 곱하기 $x$가 유도하는 것이므로 $\Ext_A^j(A/\mathfrak{p}_0,M)$ 위의 스칼라 곱 $x$이다. $j>n$이면 $j$와 $j+1$이 모두 $n$보다 크므로 양옆의 항이 $0$이고, 따라서 곱하기 $x:\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)$은 isomorphism, 특히 surjective이다. $A$가 Noetherian이므로 $A/\mathfrak{p}_0$은 finitely generated free module들의 resolution을 가지며, 따라서 $\Ext_A^j(A/\mathfrak{p}_0,M)$은 finitely generated $A$-module이다. ([§Depth, ⁋정리 7](/ko/math/commutative_algebra/depth#thm7){: data-lid="afo7l" data-relation="requires-review" }의 증명에서와 같은 논증이다.) $x\in\mathfrak{m}$이 이 module 위에 surjective하게 작용하므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="68uua" data-relation="required" reviewed="" }에 의하여 $j>n$에서 $\Ext_A^j(A/\mathfrak{p}_0,M)=0$이다. 이는 $\mathfrak{p}_0\in\mathcal{T}$에 모순이므로 $\mathcal{T}=\emptyset$이며, 위의 주장을 얻는다.
+에서 가운데 map은 곱하기 $x$가 유도하는 것이므로 $\Ext_A^j(A/\mathfrak{p}_0,M)$ 위의 스칼라 곱 $x$이다. $j>n$이면 $j$와 $j+1$이 모두 $n$보다 크므로 양옆의 항이 $0$이고, 따라서 곱하기 $x:\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)$은 isomorphism, 특히 surjective이다. $A$가 Noetherian이므로 $A/\mathfrak{p}_0$은 finitely generated free module들의 resolution을 가지며, 따라서 $\Ext_A^j(A/\mathfrak{p}_0,M)$은 finitely generated $A$-module이다. ([§Depth, ⁋정리 7](/ko/math/commutative_algebra/depth#thm7){: data-lid="afo7l" data-relation="required" reviewed="" }의 증명에서와 같은 논증이다.) $x\in\mathfrak{m}$이 이 module 위에 surjective하게 작용하므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="68uua" data-relation="required" reviewed="" }에 의하여 $j>n$에서 $\Ext_A^j(A/\mathfrak{p}_0,M)=0$이다. 이는 $\mathfrak{p}_0\in\mathcal{T}$에 모순이므로 $\mathcal{T}=\emptyset$이며, 위의 주장을 얻는다.
 
 마지막으로 임의의 ideal $I$에 대하여 $A/I$는 finitely generated $A$-module이므로 [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6){: data-lid="dse8t" data-relation="required" reviewed="" }에 의하여 subquotient가 $A/\mathfrak{p}_k$ 꼴인 filtration $0=N_0\subsetneq\cdots\subsetneq N_r=A/I$를 가지며, 위의 주장에 의하여 각 $\Ext_A^{n+1}(A/\mathfrak{p}_k,M)=0$이다. Filtration의 short exact sequence들과 $\Hom_A(-,M)$의 long exact sequence로부터 $k$에 대한 귀납법으로 $\Ext_A^{n+1}(A/I,M)=0$을 얻는다. 따라서 [§호몰로지 차원, ⁋따름정리 5](/ko/math/commutative_algebra/homological_dimension#cor5){: data-lid="tjaou" data-relation="required" reviewed="" }에 의하여 $\operatorname{injdim}_A M\leq n=s$이며, 앞서 보인 $s\leq\operatorname{injdim}_A M$과 종합하여 등식을 얻는다.
 :::
@@ -144,7 +144,7 @@ $\Hom_A(\kappa,E)=\Hom_A(A/\mathfrak{m},E)$은 $\mathfrak{m}$에 의하여 소�
 2. 자연스러운 evaluation map $M\rightarrow D(D(M))$은 isomorphism이다.
 :::
 ::: 증명
-$\length M$에 대한 귀납법으로 증명한다. $\length M=1$이면 $M$은 simple module이고, $A$가 local ring이므로 그 annihilator인 maximal ideal은 $\mathfrak{m}$이어서 $M\cong\kappa$이다. ([§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rcywl" data-relation="requires-review" }) 그럼 [보조정리 8](#lem8){: data-lid="eos5d" data-relation="required" reviewed="" }에 의하여 $\length D(\kappa)=\length\kappa=1$이다. 또, evaluation map $\kappa\rightarrow D(D(\kappa))$은 simple module 사이의 map인데, $0\neq x\in\kappa$에 대하여 inclusion $\kappa\hookrightarrow E$이 $D(\kappa)$의 원소로서 $x$에서 $0$이 아닌 값을 주므로 이 evaluation map은 $0$이 아니고, 따라서 injective이다. 양변이 길이 $1$이므로 이는 isomorphism이다.
+$\length M$에 대한 귀납법으로 증명한다. $\length M=1$이면 $M$은 simple module이고, $A$가 local ring이므로 그 annihilator인 maximal ideal은 $\mathfrak{m}$이어서 $M\cong\kappa$이다. ([§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rcywl" data-relation="required" reviewed="" }) 그럼 [보조정리 8](#lem8){: data-lid="eos5d" data-relation="required" reviewed="" }에 의하여 $\length D(\kappa)=\length\kappa=1$이다. 또, evaluation map $\kappa\rightarrow D(D(\kappa))$은 simple module 사이의 map인데, $0\neq x\in\kappa$에 대하여 inclusion $\kappa\hookrightarrow E$이 $D(\kappa)$의 원소로서 $x$에서 $0$이 아닌 값을 주므로 이 evaluation map은 $0$이 아니고, 따라서 injective이다. 양변이 길이 $1$이므로 이는 isomorphism이다.
 
 이제 $\length M=\ell\geq 2$이라 하고 주장이 길이 $\ell$ 미만의 module들에 대하여 성립한다고 가정하자. $M$의 simple submodule $S\cong\kappa$를 택하면 ([§조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="kaddl" data-relation="required" reviewed="" }) short exact sequence $0\rightarrow S\rightarrow M\rightarrow M/S\rightarrow 0$을 얻고, $\length(M/S)=\ell-1$이다. $D$가 exact이므로
 $$0\rightarrow D(M/S)\rightarrow D(M)\rightarrow D(S)\rightarrow 0$$
@@ -169,7 +169,7 @@ $0\neq x\in E$을 택하고 cyclic submodule $Ax\subseteq E$을 생각한다. [�
 ::: 정리 11
 Noetherian local ring $(A,\mathfrak{m},\kappa)$와 그 residue field의 injective hull $E=E(\kappa)$에 대하여
 $$\Hom_A(E,E)\cong\widehat{A}$$
-이 성립한다. 여기서 $\widehat{A}=\varprojlim_n A/\mathfrak{m}^n$은 $A$의 $\mathfrak{m}$진 completion이다. ([§완비화, ⁋정의 1](/ko/math/commutative_algebra/completion#def1){: data-lid="nnvqx" data-relation="requires-review" })
+이 성립한다. 여기서 $\widehat{A}=\varprojlim_n A/\mathfrak{m}^n$은 $A$의 $\mathfrak{m}$진 completion이다. ([§완비화, ⁋정의 1](/ko/math/commutative_algebra/completion#def1){: data-lid="nnvqx" data-relation="required" reviewed="" })
 :::
 ::: 증명
 $E_n=(0:_E\mathfrak{m}^n)$으로 두면 [보조정리 10](#lem10){: data-lid="co23h" data-relation="required" reviewed="" }에 의하여 $E=\bigcup_n E_n$이다. $\varphi\in\Hom_A(E,E)$이면 $x\in E_n$에 대하여 $\mathfrak{m}^n\varphi(x)=\varphi(\mathfrak{m}^nx)=0$이므로 $\varphi(E_n)\subseteq E_n$이다. $E$가 증가하는 $E_n$들의 합집합이므로, $\varphi$를 각 $E_n$으로 제한하는 것은 isomorphism
@@ -196,7 +196,7 @@ $$\Hom_A(E,E)\cong\widehat{A}=\varprojlim_n\mathbb{Z}/p^n=\mathbb{Z}_p$$
 :::
 
 ::: 예시 13
-Field $\mathbb{K}$ 위의 formal power series ring $A=\mathbb{K}[[\x]]$을 생각하자. 이는 maximal ideal $(\x)$와 residue field $\kappa\cong\mathbb{K}$를 갖는 complete DVR이며, 그 $0$이 아닌 ideal은 $(\x^n)$ 꼴이다. ([§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5){: data-lid="zkvcn" data-relation="requires-review" }) 우리는 Laurent series field $\mathbb{K}((\x))=\Frac(\mathbb{K}[[\x]])$의 quotient
+Field $\mathbb{K}$ 위의 formal power series ring $A=\mathbb{K}[[\x]]$을 생각하자. 이는 maximal ideal $(\x)$와 residue field $\kappa\cong\mathbb{K}$를 갖는 complete DVR이며, 그 $0$이 아닌 ideal은 $(\x^n)$ 꼴이다. ([§정칙국소환, ⁋명제 5](/ko/math/commutative_algebra/regular_local_rings#prop5){: data-lid="zkvcn" data-relation="required" reviewed="" }) 우리는 Laurent series field $\mathbb{K}((\x))=\Frac(\mathbb{K}[[\x]])$의 quotient
 $$E:=\mathbb{K}((\x))/\mathbb{K}[[\x]]$$
 이 $E(\kappa)$임을 보인다. $E$의 원소는 유한한 주부 $\sum_{i=1}^{m}a_i\x^{-i}$의 class로 표현되며, 각각은 $\x^m$에 의하여 소멸된다.
 
