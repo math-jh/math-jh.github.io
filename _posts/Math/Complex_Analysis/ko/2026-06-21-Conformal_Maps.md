@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-lid="ltbys" data-relation="required" reviewed="" }) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, complex analysis를 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-lid="ilhsq" data-relation="requires-review" }) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
+Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-lid="ltbys" data-relation="required" reviewed="" }) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, complex analysis를 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-lid="ilhsq" data-relation="required" reviewed="" }) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
 
 ## 등각성
 

@@ -99,7 +99,7 @@ $f$가 영역 $\Omega \subseteq \mathbb{C}$에서 holomorphic이면, $f$는 $\Om
 :::
 
 ::: 증명
-$z_0 \in \Omega$을 임의로 잡으면 $\Omega$가 열려 있어 $\overline{D(z_0, r)} \subseteq \Omega$인 $r > 0$이 있고, 정리 2가 $D(z_0, r)$에서 모든 차수의 도함수 $f^{(n)}$의 존재를 보장한다. $z_0$이 임의였으므로 $f$는 $\Omega$의 모든 점에서 모든 차수로 미분가능하다. 각 $n$에 대해 $f^{(n)}$은 $\Omega$의 모든 점에서 복소미분가능한 도함수 $f^{(n+1)}$을 가지므로, 정의에 의해 $\Omega$에서 holomorphic이다 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="beek0" data-relation="requires-review" }).
+$z_0 \in \Omega$을 임의로 잡으면 $\Omega$가 열려 있어 $\overline{D(z_0, r)} \subseteq \Omega$인 $r > 0$이 있고, 정리 2가 $D(z_0, r)$에서 모든 차수의 도함수 $f^{(n)}$의 존재를 보장한다. $z_0$이 임의였으므로 $f$는 $\Omega$의 모든 점에서 모든 차수로 미분가능하다. 각 $n$에 대해 $f^{(n)}$은 $\Omega$의 모든 점에서 복소미분가능한 도함수 $f^{(n+1)}$을 가지므로, 정의에 의해 $\Omega$에서 holomorphic이다 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="beek0" data-relation="required" reviewed="" }).
 :::
 
 따름정리 3은 복소해석과 실해석을 가르는 분수령이다. 실변수에서는 한 번 미분가능한 함수가 두 번 미분가능할 이유가 전혀 없지만 (가령 $x\lvert x\rvert$은 한 번만 미분가능하다), 복소변수에서는 한 점 근방에서 단 한 번 복소미분가능하다는 조건이 곧바로 그 근방에서의 무한미분가능성을 강제한다. 이 무한미분가능성은 곧 holomorphic function의 국소 멱급수 전개로 이어지는 발판이 된다.
@@ -139,7 +139,7 @@ $f$가 entire function이고 평면 전체에서 유계이면, 곧 어떤 상수
 :::
 
 ::: 증명
-$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="1dody" data-relation="requires-review" }) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 정리 4를 $n = 1$에 적용하면
+$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="1dody" data-relation="required" reviewed="" }) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 정리 4를 $n = 1$에 적용하면
 
 $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!M}{r} = \frac{M}{r}$$
 

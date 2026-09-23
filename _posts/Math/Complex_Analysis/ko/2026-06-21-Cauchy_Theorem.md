@@ -18,7 +18,7 @@ published: false
 
 ## Goursat 정리
 
-복소적분에서 closed 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 closed 경로인 삼각형의 boundary 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. [§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1){: data-lid="2z8hq" data-relation="required" reviewed="" }의 복소미분가능성이 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 closed 삼각형 영역을 가리키며, 그 boundary $\partial T$는 $a \rightarrow b \rightarrow c \rightarrow a$를 잇는 세 선분을 이어붙인 closed 곡선으로, [§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1){: data-lid="l446k" data-relation="requires-review" }의 piecewise $C^1$ 곡선이다.
+복소적분에서 closed 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 closed 경로인 삼각형의 boundary 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. [§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1){: data-lid="2z8hq" data-relation="required" reviewed="" }의 복소미분가능성이 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 closed 삼각형 영역을 가리키며, 그 boundary $\partial T$는 $a \rightarrow b \rightarrow c \rightarrow a$를 잇는 세 선분을 이어붙인 closed 곡선으로, [§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1){: data-lid="l446k" data-relation="required" reviewed="" }의 piecewise $C^1$ 곡선이다.
 
 ::: 정리 1 (Goursat)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 삼각형 $T$가 그 interior와 boundary를 모두 포함하여 $\Omega$에 들어 있으면, 그 boundary를 따른 적분은
@@ -200,7 +200,7 @@ $$n(\gamma, z_0) = \frac{1}{2\pi i}\oint_\gamma \frac{\dd{z}}{z - z_0}$$
 으로 정의한다.
 :::
 
-회전수는 closed 경로 $\gamma$가 점 $z_0$의 둘레를 반시계방향으로 몇 바퀴 도는지를 세는 정수이다. 적분 $\oint_\gamma \dd{z}/(z - z_0)$의 피적분함수 $1/(z - z_0)$은 $z_0$을 중심으로 한 편각의 미소 변화를 재므로, 경로를 한 바퀴 돌며 그 편각의 총 변화량을 모은 것이 적분이고, 이를 $2\pi i$로 나누면 회전 횟수가 된다. 가령 $z_0$을 중심으로 반시계방향으로 한 번 도는 원에 대해서는 [§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10){: data-lid="l3rjd" data-relation="requires-review" }의 계산에서 $n(\gamma, z_0) = 1$이고, 같은 원을 거꾸로 돌면 $-1$, $z_0$을 감지 않는 경로에 대해서는 $0$이다. 이 양이 항상 정수임을 보인다.
+회전수는 closed 경로 $\gamma$가 점 $z_0$의 둘레를 반시계방향으로 몇 바퀴 도는지를 세는 정수이다. 적분 $\oint_\gamma \dd{z}/(z - z_0)$의 피적분함수 $1/(z - z_0)$은 $z_0$을 중심으로 한 편각의 미소 변화를 재므로, 경로를 한 바퀴 돌며 그 편각의 총 변화량을 모은 것이 적분이고, 이를 $2\pi i$로 나누면 회전 횟수가 된다. 가령 $z_0$을 중심으로 반시계방향으로 한 번 도는 원에 대해서는 [§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10){: data-lid="l3rjd" data-relation="required" reviewed="" }의 계산에서 $n(\gamma, z_0) = 1$이고, 같은 원을 거꾸로 돌면 $-1$, $z_0$을 감지 않는 경로에 대해서는 $0$이다. 이 양이 항상 정수임을 보인다.
 
 ::: 명제 10
 정의 9의 가정 아래, 회전수 $n(\gamma, z_0)$은 정수이다.

@@ -131,7 +131,7 @@ $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 인데 $\lvert \rho(h)/h\rvert = \lvert\rho(h)\rvert/\lvert h\rvert \rightarrow 0$이므로 차분비가 $a + ib$로 수렴한다. 그러므로 $f$는 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib = u_x + i v_x$이다.
 :::
 
-정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 $a + ib \neq 0$일 때 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6){: data-lid="4ywbn" data-relation="requires-review" }) 이므로, $f'(z_0) \neq 0$인 점에서 복소미분가능한 함수의 미분은 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
+정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 $a + ib \neq 0$일 때 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6){: data-lid="4ywbn" data-relation="weak" reviewed="" }) 이므로, $f'(z_0) \neq 0$인 점에서 복소미분가능한 함수의 미분은 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
 
 한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4){: data-lid="bnu35" data-relation="required" reviewed="" }) 의 직접적 귀결이다.
 
