@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-23
 
 weight: 15
 
@@ -236,3 +236,46 @@ def dedup_key(s: str) -> str:
 {: data-filename="scripts/term-extraction/terms_common.py"}
 
 분류와 정렬은 벗긴 쪽을, 중복 판정은 남긴 쪽을 쓴다. 한 함수가 두 답을 내야 하는 자리였고, 기본값을 벗기는 쪽에 둔 것은 부르는 자리가 그쪽이 더 많아서다.
+
+## 같은 글이 두 번 등재한 표제어
+
+색인 2,400항목을 사용자가 훑자 같은 용어가 두 줄로 들어간 자리가 여럿 나왔다. `antisymmetry`와 `antisymmetric`처럼 품사만 다른 쌍, `Cauchy`와 `Cauchy sequence`, `ample`·`ample line bundle`·`ampleness` 셋, `GCD`와 `greatest common divisor`. 대부분 한 글이 같은 개념을 두 표기로 쓰고 추출기가 두 번 뽑은 결과였다. 사용자의 방향은 두 갈래였다. 이미 들어간 것은 정리하고, 추출기가 다시 만들지 못하게 하라는 것.
+
+> 내 생각에 추출기는 이것들이 안 생기게 해야 하는 게 맞고.
+
+정리 쪽은 `merge_duplicate_terms.py`(`32d76251`)다. 같은 정의 글을 공유하는 표제어 쌍마다 유사도를 재는데, 영어끼리와 한국어끼리를 **따로** 잰다. `GCD`와 `greatest common divisor`는 영어 유사도가 0.27이지만 한국어는 둘 다 '최대공약수'라 1.00이다. 한 문자열로 합쳐 재면 이런 쌍을 놓친다.
+
+```python
+def sim(a: str, b: str) -> float | None:
+    """한쪽이 비어 있으면 그 언어로는 판단하지 않는다 (0 이 아니라 '모름')."""
+    x, y = norm(a), norm(b)
+    if not x or not y:
+        return None
+    return difflib.SequenceMatcher(None, x, y).ratio()
+```
+{: data-filename="scripts/term-extraction/merge_duplicate_terms.py"}
+
+어느 한 언어라도 0.9를 넘으면 후보가 된다. 합친다는 것은 지우는 것이 아니다. 진 쪽의 영어형은 새 필드 `alias_en`으로, 한국어형은 기존 `alias`로 내려가서 색인 검색(`data-search`)과 md_lint의 이형 검사에 그대로 남는다. `defs`·`refs`·`see`는 합집합으로 옮긴다. 기계가 정하지 않는 쌍은 `--review` 목록으로 뺐다. 사용자가 짚은 `disjoint`와 `relatively prime`이 대표적이다.
+
+> Disjoint는 집합 같은 데에서 서로소인 집합이라고 얘기를 하긴 하지만. 그 집합 같은 데에서 Relative Prime을 서로소라고 하진 않잖아.
+
+한국어 라벨이 둘 다 '서로소'라서 문자열로는 굴절 변형과 구별되지 않는다. 정의 글이 여럿인 항목도 기계가 건드리지 않는다. `closed`는 `$\bar\partial$-closed`와 한 글을 공유하지만 다른 두 글에서도 정의되는 제 몫의 용어라, 합치면 그 두 정의가 사라진다. 스크립트는 `--dry-run`이 기본이고, 목록 판정은 사용자가 항목마다 내렸다(`coequalizer`는 한국어 라벨을 새로 찾고, `transpose`는 분리하되 `see`로 엮고, `affine n-space`류는 합치는 식이었다). 지금 `alias_en`을 가진 항목이 105개다.
+
+예방 쪽은 추출기 안의 게이트다(`83d12047`). 새 표제어를 넣기 전에 `near_duplicates()`가 두 곳을 본다. 같은 글이 이미 정의하는 항목, 그리고 한국어 라벨이 같은 항목이다. 비교 대상에는 표제어뿐 아니라 `alias`와 `alias_en`도 넣는다. 병합하면서 내려 둔 옛 이름이 바로 추출기가 다음에 다시 집어 올 이름이기 때문이다. 걸리면 모델에게 "이미 이게 있는데 새로 넣는 게 맞나"를 묻는다. 프롬프트에는 실제로 갈렸던 반례(`disjoint`/`relatively prime`, `Grothendieck topology`/`pretopology`, `cap product`/`cup product`)를 적어 두었다.
+
+판정을 못 받으면 넣지 않는다.
+
+```python
+    try:
+        out = llm_json(NEAR_DUP_PROMPT + "\n".join(lines))
+    except Exception as exc:  # noqa: BLE001
+        log(f"근접중복 판정 실패 — 폐기: {exc}")
+        return False
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+비대칭의 이유는 복구 비용이다. 잘못 들어간 항목은 색인에 남아 나중에 사람이 훑어 병합해야 하지만, 안 들어간 항목은 그 글이 다시 추출 대상이 될 때 같은 자리에서 다시 후보가 된다. 게이트가 생긴 뒤 로그에 남은 판정은 24건이고, 그중 21건이 폐기, 3건이 추가였다. 폐기 사유는 대부분 약어 병기(`elementary row operation, ero`)였고, 추가된 것은 `infinite-dimensional vector space`처럼 유한/무한 한 글자로 뜻이 갈리는 경우였다.
+
+같은 커밋에서 추출과 게이트 호출이 전부 Antigravity(`agy`)로 옮겨 갔다. `agy`는 프롬프트를 인자로 받고 결과를 JSON 봉투에 담아 돌려주므로 `claude -p`와 호출 모양이 다르다. 봉투의 `status`를 보지 않으면 실패한 호출의 빈 `response`가 "찾은 용어 없음"과 구별되지 않는다.
+
+재실행 규칙도 이때 바뀌었다(`83f6d1ec`). 예전에는 마지막 검사 뒤 14일이 지나고 그사이 바뀐 글을 다시 넣었는데, 이제는 그 글을 건드린 **무태그 내용 커밋**이 생겨야 새 "본문 세대"로 보고, 한 세대에서 추출과 1차 재시도를 합쳐 두 번을 마치면 멈춘다. `[lastmod-skip]`과 `[dev]` 커밋은 본문이 바뀐 신호로 치지 않는다. 기간이 지났다는 이유만으로 같은 본문에 같은 질문을 되풀이하던 일이 없어졌고, 매일 돌던 `terms.yml` 자체 감사도 수동 경로(`--audit-letter`)만 남았다.

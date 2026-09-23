@@ -170,3 +170,52 @@ chk.onchange = function () {
 {: data-filename="scripts/dashboard/app.js"}
 
 불일치가 생기면 사용자에게 바로 알린다는 요청도 그대로 반영되어 있다. 알림에는 대시보드 감사 절의 앵커가 링크로 붙는데(43512a82), 처음엔 URL을 텍스트로만 적었다가 눌러서 바로 이동하게 고쳤다. 번역 워커 쪽도 짝을 맞췄다. `translate_worker`의 프롬프트에 `data-relation` IAL을 링크에 붙은 채로 그대로 복사하고 절대 추론·삭제·재분류하지 말라는 규칙이 추가되어, 번역 과정에서 판정이 조용히 사라지는 경로를 막았다. 그래프 화살촉의 알파 블렌딩도 이 무렵 배경색에 미리 합성하던 방식에서 링크와 같은 rgba 값을 그대로 쓰는 방식으로 바뀌어, weak 링크 뒤로 지나가는 밝은 선을 화살촉이 가려 먹던 문제가 없어졌다.
+
+## 본류를 가운데로 모으는 배치
+
+선형 보기의 세로 배치에 대해서는 경로 탐색보다 먼저 나온 요청이 있었다.
+
+> 우선은 제일 흔히 나오는 경로를 중앙 쪽에 모으면 좋겠다. (메인 라인이도록). […] 우선 메인 라인을 중앙부근으로 모으면, 이 블로그가 조준하는 게 어디인지가 직관적으로 보일테니 그렇게 해 주고
+
+"흔히 나오는 경로"를 `aaeb97f2`는 **그 글을 지나는 required 경로의 수**로 쟀다. 진입점(선수 글이 없는 글)에서 그 글까지의 경로 수와, 그 글에서 종점까지의 경로 수를 곱한 값이다. 순환은 이미 Tarjan으로 묶여 있으므로 묶은 그래프는 DAG이고, 위상 순서로 한 번, 역순으로 한 번 훑으면 두 값이 다 나온다. 다만 경로 수는 깊이에 따라 지수로 커져서 배정도 실수를 넘긴다. 그래서 곱 대신 로그의 합으로, 합 대신 log-sum-exp로 센다.
+
+```js
+function logAdd(a, b) {
+  if (a === -Infinity) return b;
+  if (b === -Infinity) return a;
+  var hi = Math.max(a, b);
+  return hi + Math.log1p(Math.exp(Math.min(a, b) - hi));
+}
+topo.forEach(function (i) {
+  adj[i].forEach(function (v) { toHere[v] = logAdd(toHere[v], toHere[i]); });
+});
+topo.slice().reverse().forEach(function (i) {
+  if (!adj[i].length) fromHere[i] = 0;
+  adj[i].forEach(function (v) { fromHere[i] = logAdd(fromHere[i], fromHere[v]); });
+});
+var traffic = comps.map(function (_, i) { return toHere[i] + fromHere[i]; });
+```
+{: data-filename="assets/js/custom/Graph_page.js"}
+
+한 열 안에서는 `traffic`이 큰 글부터 놓되, 0번을 가운데 행에 두고 위아래로 번갈아 채운다(`Math.ceil(i / 2) * (i % 2 ? -1 : 1)`). 동률은 카테고리와 `weight`로 갈라 새로고침마다 배치가 흔들리지 않게 했다. 오프셋이 정수 칸이라 모든 열이 같은 격자를 쓰는 점도 의도한 것이다. 격자가 둘로 갈리면 한 열의 행 사이 골이 옆 열의 행 위에 떨어져, 가로로 지나가는 레인이 남의 노드를 관통한다.
+
+같은 커밋은 렌더 비용도 한 번 걷어냈다. force-graph는 곡률·색·폭 접근자를 매 프레임 링크마다 부르고, 포인터 판정용 shadow canvas가 같은 순회를 한 번 더 돈다. 접근자 안에서 "마주 보는 링크가 있는가"를 링크 목록 전체로 확인하면 그 한 번이 링크 수의 제곱이 된다. 이제 링크 id와 곡률(`__lid`, `__curve`)을 로드 때 한 번 계산해 링크 객체에 붙여 둔다.
+
+## hold를 풀어도 다시 검증하지 않는 해시
+
+재검토 패스는 유닛(글 짝)마다 본문 해시를 저장해 두고, 해시가 같으면 이미 검증한 것으로 보고 건너뛴다. 그런데 사용자가 보류 하나를 판정하면 그 링크에 태그가 다시 붙고, 본문 해시가 바뀐다. 그러면 같은 유닛의 나머지 링크가 전부 재검증 대상이 됐다. 판정 하나를 내렸을 뿐인데 그 글 전체를 다시 의심하는 셈이다.
+
+`4f5ee477`의 `verification_fingerprint()`는 해시를 뜨기 전에 **사람이 보류 중이거나 판정한 링크의 relation 태그만** 떼어 낸다.
+
+```python
+def verification_fingerprint(paths, texts, parked) -> str:
+    """Hash content while ignoring relation tags on human-parked links.
+
+    Resolving a hold restores exactly such a tag.  That known bookkeeping edit
+    must not invalidate the verification of every other link in the unit, while
+    prose edits and relation changes on non-parked links must still do so.
+    """
+```
+{: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
+
+본문이 바뀌거나 보류 밖 링크의 값이 바뀌면 해시는 여전히 바뀐다. 무시하는 것은 사람이 판정을 내리면서 생기는 그 한 가지 편집뿐이다. 옛 state에는 원문 해시(`verified_hash`)만 있으므로, 새 필드 `verified_content_hash`가 없으면 원문 해시를 대조하는 폴백을 두고, 처음 통과할 때 새 필드를 채운다.
