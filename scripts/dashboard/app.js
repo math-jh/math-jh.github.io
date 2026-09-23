@@ -906,9 +906,13 @@ function markPreview(frame) {
     a.classList.remove('dash-hl');
   });
   var root = doc.querySelector('.page__content') || doc.body;
+  /* 글 앞뒤의 선수지식·읽을만한 글 블록도 `.page__content` 안에 있고 같은 href 를
+     갖는다. 본문 출현이 아니므로 순번에서 뺀다. */
   var all = Array.prototype.filter.call(
     root.querySelectorAll('a[href]'),
-    function (a) { return a.getAttribute('href') === k.target; });
+    function (a) {
+      return a.getAttribute('href') === k.target && !a.closest('.semantic-reading');
+    });
   var hit = all[k.rank >= 0 ? k.rank : 0] || all[0];
   if (!hit) return;
   hit.classList.add('dash-hl');

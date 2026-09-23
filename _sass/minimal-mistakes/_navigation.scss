@@ -559,6 +559,11 @@
   width: 100%;
   list-style: none;
   font-size: $type-size-6;
+  // The glow's centre travels exactly from the rail's top to its bottom. Clip
+  // vertically to the rail so at either end only half the glow shows and its
+  // brightest point marks the line's start/end, instead of the faded tail
+  // overhanging the rail. Horizontal overflow stays open.
+  clip-path: inset(0 -100vw);
 
   // One neutral rail replaces the per-link borders, so scrolling never
   // changes only part of the line to the highlight colour.
