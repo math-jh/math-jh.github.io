@@ -277,5 +277,5 @@ $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 **참고문헌**
 
 **[Har]** J. Harris, *Algebraic Geometry: A First Course*, Springer, 1992.  
-**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Zarieties in Projective Space*, Springer, 2013.  
+**[Sha]** I. R. Shafarevich, *Basic Algebraic Geometry I: Varieties in Projective Space*, Springer, 2013.  
 **[Ful]** W. Fulton, *Algebraic Curves*, 2008.

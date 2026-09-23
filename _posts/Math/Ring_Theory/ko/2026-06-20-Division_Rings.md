@@ -42,7 +42,7 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 이다. 따라서 $a\neq 0$이면 $b=0$이고, 이는 $ab=0$에서 $a=0$ 또는 $b=0$임을 뜻한다. 따라서 $D$에는 nonzero zero divisor가 없다. $D$가 field이면 추가로 commutative하고 $0\neq 1$이므로 integral domain이다 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5){: data-lid="1x1pe" data-relation="weak" }).
 :::
 
-## Wedderburn의 소정리
+## 웨더번의 소정리
 
 위의 [명제 2](#prop2){: data-lid="86if1" data-relation="weak" }는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4){: data-lid="8aebo" data-relation="required" }로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
 
