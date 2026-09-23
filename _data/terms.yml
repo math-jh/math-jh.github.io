@@ -10354,6 +10354,13 @@ K:
   defs:
   - label: '[가환대수학] §코쥴 복합체'
     url: /ko/math/commutative_algebra/koszul_complex
+- id: kronecker_delta
+  en: Kronecker delta
+  ko: 크로네커 델타
+  primary: en
+  defs:
+  - label: '[미분다양체] §미분사상의 예시들'
+    url: /ko/math/manifolds/examples_of_differentials
 - id: kronecker_pairing
   en: Kronecker pairing
   ko: 크로네커 쌍
