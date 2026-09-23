@@ -22,13 +22,13 @@ Noetherian ring $A$ 위에서 finitely generated $A$-module은 언제나 finitel
 
 $$A^m\overset{\varphi}{\longrightarrow}A^n\longrightarrow M\longrightarrow 0$$
 
-을 presentation으로 가진다. 여기서 $A^n\to M$의 상은 $M$의 $n$개의 generator를 주고, $\varphi$의 상은 이 generator들 사이의 relation 전체를 이룬다. 우리는 $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 보고 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-lid="3thiw" data-relation="requires-review" }), 이 행렬의 minor를 다룬다.
+을 presentation으로 가진다. 여기서 $A^n\to M$의 상은 $M$의 $n$개의 generator를 주고, $\varphi$의 상은 이 generator들 사이의 relation 전체를 이룬다. 우리는 $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 보고 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-lid="3thiw" data-relation="weak" reviewed="" }), 이 행렬의 minor를 다룬다.
 
 ::: 정의 1
 Free module 사이의 $A$-linear map $\varphi:A^m\to A^n$과 정수 $r$에 대하여, $\varphi$의 *ideal of minors* $I_r(\varphi)$를 다음과 같이 정의한다. $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 볼 때, $1\le r\le\min(m,n)$이면 $I_r(\varphi)$는 $\varphi$의 모든 $r\times r$ minor로 생성되는 $A$의 ideal이고, $r\le 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$으로 둔다.
 :::
 
-여기서 $r\times r$ minor란 $\varphi$의 행렬에서 $r$개의 행과 $r$개의 열을 골라 만든 부분행렬의 행렬식을 뜻한다 ([\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4){: data-lid="xeaqv" data-relation="requires-review" }). 관례 $I_0(\varphi)=A$는 빈 부분행렬의 행렬식을 $1$로 본 것이고, 행이나 열의 수보다 큰 크기의 부분행렬은 존재하지 않으므로 $r>\min(m,n)$에서 $I_r(\varphi)=0$이다. 또한 각각의 $r$에 대하여
+여기서 $r\times r$ minor란 $\varphi$의 행렬에서 $r$개의 행과 $r$개의 열을 골라 만든 부분행렬의 행렬식을 뜻한다 ([\[다중선형대수학\] §행렬식, ⁋보조정리 4](/ko/math/multilinear_algebra/determinants#lem4){: data-lid="xeaqv" data-relation="weak" reviewed="" }). 관례 $I_0(\varphi)=A$는 빈 부분행렬의 행렬식을 $1$로 본 것이고, 행이나 열의 수보다 큰 크기의 부분행렬은 존재하지 않으므로 $r>\min(m,n)$에서 $I_r(\varphi)=0$이다. 또한 각각의 $r$에 대하여
 
 $$I_{r+1}(\varphi)\subseteq I_r(\varphi)$$
 
@@ -132,7 +132,7 @@ $$\ann(M)^n\subseteq\operatorname{Fitt}_0(M)\subseteq\ann(M)$$
 ::: 증명
 $M$의 presentation $A^m\overset{\varphi}{\to}A^n\to M\to0$을 generator $g_1,\ldots,g_n$과 함께 고정하자. $\operatorname{Fitt}_0(M)=I_n(\varphi)$는 $\varphi$의 $n$개의 열을 골라 만든 $n\times n$ 부분행렬 $\psi$들의 행렬식으로 생성된다.
 
-먼저 $\operatorname{Fitt}_0(M)\subseteq\ann(M)$을 보인다. 이러한 $\psi=(\psi_{il})$의 각 열은 $\varphi$의 열, 곧 relation이므로 각각의 $l$에서 $\sum_i\psi_{il}g_i=0$이다. 행벡터 $g=(g_1,\ldots,g_n)$으로 적으면 이는 $g\psi=0$을 뜻한다. Commutative ring 위의 정사각행렬 $\psi$에 대하여 $\psi\operatorname{adj}(\psi)=(\det\psi)I$를 만족하는 수반행렬<sub>adjugate</sub> $\operatorname{adj}(\psi)$이 존재하므로 ([\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9){: data-lid="1xtzt" data-relation="requires-review" }의 증명에서 이 항등식을 확인하였다), 오른쪽에 $\operatorname{adj}(\psi)$를 곱하면
+먼저 $\operatorname{Fitt}_0(M)\subseteq\ann(M)$을 보인다. 이러한 $\psi=(\psi_{il})$의 각 열은 $\varphi$의 열, 곧 relation이므로 각각의 $l$에서 $\sum_i\psi_{il}g_i=0$이다. 행벡터 $g=(g_1,\ldots,g_n)$으로 적으면 이는 $g\psi=0$을 뜻한다. Commutative ring 위의 정사각행렬 $\psi$에 대하여 $\psi\operatorname{adj}(\psi)=(\det\psi)I$를 만족하는 수반행렬<sub>adjugate</sub> $\operatorname{adj}(\psi)$이 존재하므로 ([\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9){: data-lid="1xtzt" data-relation="required" reviewed="" }의 증명에서 이 항등식을 확인하였다), 오른쪽에 $\operatorname{adj}(\psi)$를 곱하면
 
 $$0=g\psi\operatorname{adj}(\psi)=(\det\psi)g$$
 
@@ -161,7 +161,7 @@ $\mu=\mu(M)$이라 하자. [§정수적 확장, ⁋보조정리 8](/ko/math/comm
 
 $$A^s\overset{\varphi}{\longrightarrow}A^\mu\longrightarrow M\longrightarrow0$$
 
-을 얻는다. Minimal이라는 것은 $\varphi$의 상이 $\mathfrak{m}A^\mu$에 포함된다는 것이므로 ([§호몰로지 차원, ⁋정의 8](/ko/math/commutative_algebra/homological_dimension#def8){: data-lid="qne9b" data-relation="requires-review" }), $\varphi$의 모든 성분이 $\mathfrak{m}$에 속한다. 여기서 $n=\mu$이다.
+을 얻는다. Minimal이라는 것은 $\varphi$의 상이 $\mathfrak{m}A^\mu$에 포함된다는 것이므로 ([§호몰로지 차원, ⁋정의 8](/ko/math/commutative_algebra/homological_dimension#def8){: data-lid="qne9b" data-relation="required" reviewed="" }), $\varphi$의 모든 성분이 $\mathfrak{m}$에 속한다. 여기서 $n=\mu$이다.
 
 $i\ge\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\le0$이므로 $\operatorname{Fitt}_i(M)=A$이다. $i<\mu$이면 $\operatorname{Fitt}_i(M)=I_{\mu-i}(\varphi)$이고 $\mu-i\ge1$인데, $\varphi$의 성분이 모두 $\mathfrak{m}$에 속하므로 $(\mu-i)\times(\mu-i)$ minor는 $\mathfrak{m}$의 원소들의 곱의 합, 곧 $\mathfrak{m}$의 원소이다. 따라서 $\operatorname{Fitt}_i(M)\subseteq\mathfrak{m}\subsetneq A$이다. 종합하면 $\operatorname{Fitt}_i(M)=A$인 것은 $i\ge\mu$인 것과 동치이다.
 :::
@@ -188,10 +188,10 @@ $$\operatorname{Fitt}_{r-1}(M)=I_{r-(r-1)}(\varphi)=I_1(\varphi)=0$$
 
 일반적인 Noetherian ring $A$에 대해서도 [명제 5](#prop5){: data-lid="c8vqz" data-relation="required" reviewed="" }의 localization 형태와 [정리 8](#thm8){: data-lid="jmocm" data-relation="required" reviewed="" }을 결합하면 대역적인 판정을 얻는다. Finitely generated $M$에 대하여 $\operatorname{Fitt}_j(M)_\mathfrak{p}=\operatorname{Fitt}_j(M_\mathfrak{p})$이므로, $\operatorname{Fitt}_{r-1}(M)=0$은 모든 maximal ideal $\mathfrak{m}$에서 $\operatorname{Fitt}_{r-1}(M_\mathfrak{m})=0$인 것과 동치이고 ([§국소화의 성질들, ⁋보조정리 3](/ko/math/commutative_algebra/properties_of_localization#lem3){: data-lid="crko7" data-relation="required" reviewed="" }), $\operatorname{Fitt}_r(M)=A$는 모든 maximal ideal $\mathfrak{m}$에서 $\operatorname{Fitt}_r(M)\not\subseteq\mathfrak{m}$인 것, 곧 $\operatorname{Fitt}_r(M_\mathfrak{m})=A_\mathfrak{m}$인 것과 동치이다. 따라서 이 두 조건은 모든 maximal ideal $\mathfrak{m}$에서 $M_\mathfrak{m}$가 rank $r$의 free module인 것과 동치이며, $M$이 국소적으로 rank $r$의 free module임을 판정한다.
 
-$r=1$인 경우가 특히 중요하다. $\operatorname{Fitt}_0(M)=0$이고 $\operatorname{Fitt}_1(M)=A$인 finitely generated module $M$은 모든 maximal ideal에서 rank $1$의 free module, 곧 $M_\mathfrak{m}\cong A_\mathfrak{m}$을 만족하므로 [§분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1){: data-lid="pqox7" data-relation="requires-review" }의 invertible module이고, 거꾸로 invertible module은 이 두 조건을 만족한다. 이렇게 Fitting ideal은 invertible module을 국소적 자유성의 판정으로 곧바로 특징짓는다.
+$r=1$인 경우가 특히 중요하다. $\operatorname{Fitt}_0(M)=0$이고 $\operatorname{Fitt}_1(M)=A$인 finitely generated module $M$은 모든 maximal ideal에서 rank $1$의 free module, 곧 $M_\mathfrak{m}\cong A_\mathfrak{m}$을 만족하므로 [§분수아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fractional_ideals#def1){: data-lid="pqox7" data-relation="required" reviewed="" }의 invertible module이고, 거꾸로 invertible module은 이 두 조건을 만족한다. 이렇게 Fitting ideal은 invertible module을 국소적 자유성의 판정으로 곧바로 특징짓는다.
 
 ::: 예시 9
-1. $A=\mathbb{K}[[\x,\y]]$의 maximal ideal $\mathfrak{m}=(\x,\y)$를 $A$-module로 보자. [§Auslander-Buchsbaum 공식, ⁋예시 6](/ko/math/commutative_algebra/auslander_buchsbaum_formula#ex6){: data-lid="kesbi" data-relation="requires-review" }에서 살펴본 presentation
+1. $A=\mathbb{K}[[\x,\y]]$의 maximal ideal $\mathfrak{m}=(\x,\y)$를 $A$-module로 보자. [§Auslander-Buchsbaum 공식, ⁋예시 6](/ko/math/commutative_algebra/auslander_buchsbaum_formula#ex6){: data-lid="kesbi" data-relation="required" reviewed="" }에서 살펴본 presentation
 
     $$A\overset{\varphi}{\longrightarrow}A^2\longrightarrow\mathfrak{m}\longrightarrow0,\qquad\varphi(1)=(-\y,\x)$$
 
