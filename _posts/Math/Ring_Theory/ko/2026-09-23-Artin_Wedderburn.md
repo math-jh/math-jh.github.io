@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[§반단순가군](/ko/math/ring_theory/semisimple_modules){: data-lid="bkiu1" data-relation="required" }에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 가장 흥미로운 응용 중 하나는 ring $A$를 자기자신 위의 module로 보았을 때 semisimple module이 되는 *semisimple ring*으로, 이러한 ring은 matrix ring들 유한개의 곱으로 분해된다는 것이 이번 글의 핵심적인 결과이다. 
+[§반단순가군](/ko/math/ring_theory/semisimple_modules){: data-lid="bkiu1" data-relation="required" }에서 우리는 simple module들의 direct sum으로 분해되는 module을 다루었다. 가장 흥미로운 응용 중 하나는 ring $A$를 자기자신 위의 module로 보았을 때 semisimple module이 되는 *semisimple ring*으로, 이러한 ring은 matrix ring들 유한개의 곱으로 분해된다는 것이 이번 글의 핵심적인 결과이다. 
 
 이 글에서도 ring은 항등원을 갖는, ring이며 별도의 commutativity는 가정하지 않는다. 또, $A$-module은 언제나 left $A$-module을 의미하는 것으로 이해한다.
 
@@ -32,17 +32,19 @@ Left $A$-module $A$의 submodule은 정확히 $A$의 left ideal이므로, 이 �
 Ring $A$에 대하여, $A$가 semisimple ring인 것은 모든 left $A$-module이 semisimple인 것과 동치이다.
 :::
 ::: 증명
-모든 left $A$-module이 semisimple이라면 특히 left $A$-module $A$가 semisimple이다. 거꾸로 $A$가 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $A^{(I)}$는 $A$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $A^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§반단순가군, ⁋정리 5](/ko/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" data-relation="required" }에 의해 $A^{(I)}$는 semisimple이다. 이제 임의의 left $A$-module $M$은 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="451t5" data-relation="required" }에 의해 어떤 free module의 quotient이므로, [§반단순가군, ⁋따름정리 6](/ko/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" data-relation="required" }에 의해 semisimple이다.
+모든 left $A$-module이 semisimple이라면 특히 left $A$-module $A$가 semisimple이다. 따라서 반대방향만 보이면 충분하다. $A$가 semisimple ring이라 하면, 임의의 left $A$-module $M$은 어떤 free module $A^{(I)}$의 quotient이고 ([\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="451t5" data-relation="required" }), $A$가 semisimple이므로 [§반단순가군, ⁋정리 5](/ko/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" data-relation="required" }에 의해 $A^{(I)}$ 또한 semisimple $A$-module이 되어 그 quotient 또한 semisimple이다. ([§반단순가군, ⁋따름정리 6](/ko/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" data-relation="required" })
 :::
+
+또, 다음이 성립한다. 
 
 ::: 명제 3
-$A$가 semisimple ring이면 $A$는 유한개의 simple left ideal의 직합이다.
+$A$가 semisimple ring이면 $A$는 유한개의 simple left ideal의 direct sum이다.
 :::
 ::: 증명
-$A=\bigoplus_{i\in I}L_i$를 simple left ideal들의 직합이라 하자. 항등원을 이 분해에 따라 $1=\sum_{i\in F}x_i$로 쓰면 $F$는 유한집합이다. 그럼 임의의 $a\in A$에 대하여 $a=a\cdot 1\in\sum_{i\in F}L_i$이므로 $A=\bigoplus_{i\in F}L_i$이다.
+$A=\bigoplus_{i\in I}\mathfrak{a}_i$를 simple left ideal들의 direct sum이라 하자. 항등원 $1$을 이 direct sum decomposition의 원소로 보면, 항등원은 <em-ko>유한한</em-ko> index set $J\subseteq I$에서만 $0$이 아닐 수 있다. 이제 임의의 $a\in A$에 대하여 $a=a\cdot 1\in\sum_{i\in J}\mathfrak{a}_i$이므로 $A=\bigoplus_{i\in J}\mathfrak{a}_i$이다.
 :::
 
-따라서 semisimple ring은 left module로서 finite composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="3l9ro" data-relation="weak" }). 직합 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
+따라서 semisimple ring은 left module로서 finite composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="3l9ro" data-relation="weak" }). Direct sum 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
 
 ## 나눗셈환 위의 행렬환
 
@@ -67,7 +69,7 @@ $D$가 division ring이고 $n\geq 1$이라 하자. 열벡터들의 공간 $D^n$�
 
 $$(Av)_i=A_{ik}v_k=w_iv_k^{-1}v_k=w_i$$
 
-이므로 $Av=w$이다. 즉 $0$이 아닌 임의의 원소가 $D^n$ 전체를 생성하므로 $D^n$은 simple이다. 그럼 2의 분해가 simple module들의 직합이므로 $\Mat_n(D)$는 semisimple ring이다.
+이므로 $Av=w$이다. 즉 $0$이 아닌 임의의 원소가 $D^n$ 전체를 생성하므로 $D^n$은 simple이다. 그럼 2의 분해가 simple module들의 direct sum이므로 $\Mat_n(D)$는 semisimple ring이다.
 :::
 
 ::: 명제 6
@@ -104,7 +106,7 @@ $$\End_A(M)\cong\prod_{i=1}^k\Mat_{n_i}\big(\End_A(S_i)\big)$$
 이다.
 :::
 ::: 증명
-직합 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자 ($1\leq a\leq n_i$). Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="wccwq" data-relation="required" }에 의해 nonzero일 경우 isomorphism이 되어 가정에 모순이므로 $0$이다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$들의 자료와 같다.
+Direct sum 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자 ($1\leq a\leq n_i$). Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="wccwq" data-relation="required" }에 의해 nonzero일 경우 isomorphism이 되어 가정에 모순이므로 $0$이다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$들의 자료와 같다.
 
 이 대응이 ring isomorphism임을 확인하자. 합에 대해서는 자명하고, $\sum_{j,b}\iota_{j,b}\circ\pi_{j,b}=\id_M$이므로
 
@@ -139,7 +141,7 @@ $A=A_1\times\cdots\times A_k$라 하고, $e_i\in A$를 $i$번째 성분만 $1$�
 ::: 증명
 $e_i$들이 central orthogonal idempotent의 complete set임은 성분별 계산으로 바로 확인되며, 이 상황은 [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" data-relation="required" }의 direct product decomposition에 대응하는 것이다. 임의의 $m\in M$은 $m=\sum_ie_im$으로 쓰이고, $x\in e_iM\cap\sum_{j\neq i}e_jM$이면 $e_jM$ 위에서 $e_i$가 $e_ie_j=0$으로 작용하므로 $x=e_ix=0$이다. 따라서 $M=\bigoplus_ie_iM$이다. $e_iM$ 위에서 $e_j$ ($j\neq i$) 성분은 $0$으로 작용하므로 $A$의 작용은 $i$번째 성분 $A_i$를 통해서만 이루어지고, 부분집합이 $A$-submodule인 것과 $A_i$-submodule인 것이 같아진다. Simple module의 분류는 이로부터 바로 따라온다. $M$이 simple이면 분해 $M=\bigoplus_ie_iM$의 인자 중 정확히 하나만 nonzero이고 그것이 simple $A_i$-module이며, 역도 마찬가지이다.
 
-2의 경우, left regular module의 분해 $A=\bigoplus_iAe_i$에서 $Ae_i$는 1에 의해 $A_i$의 regular module과 같은 submodule 구조를 가지므로, $A_i$가 semisimple ring이면 $Ae_i$는 simple $A$-submodule들의 직합이다. 따라서 $A$가 simple left ideal들의 직합이 되어 semisimple ring이다.
+2의 경우, left regular module의 분해 $A=\bigoplus_iAe_i$에서 $Ae_i$는 1에 의해 $A_i$의 regular module과 같은 submodule 구조를 가지므로, $A_i$가 semisimple ring이면 $Ae_i$는 simple $A$-submodule들의 direct sum이다. 따라서 $A$가 simple left ideal들의 direct sum이 되어 semisimple ring이다.
 :::
 
 ## 아틴-웨더번 정리
@@ -161,7 +163,7 @@ $$A\cong\Mat_{n_1}(D_1)\times\cdots\times\Mat_{n_k}(D_k)$$
 ::: 증명
 $2\implies 1$은 [명제 5](#prop5){: data-lid="aw3ne" data-relation="required" }에 의해 각 인자가 semisimple ring이므로 [명제 10](#prop10){: data-lid="l9ws8" data-relation="required" }의 2에서 바로 얻어진다.
 
-$1\implies 2$를 보자. [명제 3](#prop3){: data-lid="jyozf" data-relation="required" }에 의해 $A$는 유한개의 simple left ideal의 직합이고, isomorphism class별로 인자들을 모으면 서로 isomorphic하지 않은 simple module들 $S_1,\ldots,S_k$와 자연수 $n_i\geq 1$에 대하여 left module로서 $A\cong\bigoplus_iS_i^{n_i}$이다. $\Delta_i=\End_A(S_i)$로 두면 이는 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="uauah" data-relation="required" }에 의해 division ring이고, [보조정리 7](#lem7){: data-lid="reb59" data-relation="required" }과 [보조정리 8](#lem8){: data-lid="m01xr" data-relation="required" }에 의해
+$1\implies 2$를 보자. [명제 3](#prop3){: data-lid="jyozf" data-relation="required" }에 의해 $A$는 유한개의 simple left ideal의 direct sum이고, isomorphism class별로 인자들을 모으면 서로 isomorphic하지 않은 simple module들 $S_1,\ldots,S_k$와 자연수 $n_i\geq 1$에 대하여 left module로서 $A\cong\bigoplus_iS_i^{n_i}$이다. $\Delta_i=\End_A(S_i)$로 두면 이는 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="uauah" data-relation="required" }에 의해 division ring이고, [보조정리 7](#lem7){: data-lid="reb59" data-relation="required" }과 [보조정리 8](#lem8){: data-lid="m01xr" data-relation="required" }에 의해
 
 $$A^{\mathrm{op}}\cong\End_A(A)\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)$$
 
@@ -178,13 +180,13 @@ $$E_i\cong\End_A(W_i)^{\mathrm{op}}\cong\End_A(S_i)^{\mathrm{op}}=\Delta_i^{\mat
 이다. 따라서 division ring들도 isomorphism을 무시하면 유일하다.
 :::
 
-증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $A_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $a\in A$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§반단순가군, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9){: data-lid="hwkom" data-relation="required" }에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $A=\bigoplus_iA_{S_i}$는 two-sided ideal들의 직합이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5){: data-lid="i4elc" data-relation="required" }에 의해 central idempotent의 complete set과 ring의 direct product decomposition이 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11){: data-lid="p9h4v" data-relation="required" }의 direct product decomposition에서 각 인자의 항등원이다.
+증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $A_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $a\in A$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§반단순가군, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9){: data-lid="hwkom" data-relation="required" }에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $A=\bigoplus_iA_{S_i}$는 two-sided ideal들의 direct sum이고, [§멱등원과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5){: data-lid="i4elc" data-relation="required" }에 의해 central idempotent의 complete set과 ring의 direct product decomposition이 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11){: data-lid="p9h4v" data-relation="required" }의 direct product decomposition에서 각 인자의 항등원이다.
 
 ::: 따름정리 12
-$A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $A$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $A$-module은 이들의 복사본들의 직합이다.
+$A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $A$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $A$-module은 이들의 복사본들의 direct sum이다.
 :::
 ::: 증명
-[명제 2](#prop2){: data-lid="c2mpv" data-relation="required" }에 의해 모든 module이 semisimple이므로 simple들의 직합이고, [명제 5](#prop5){: data-lid="pg0b4" data-relation="required" }와 [명제 10](#prop10){: data-lid="zkbod" data-relation="required" }에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Ax$이므로 전사 $A\rightarrow M$이 존재하고, left module decomposition $A\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }에 의해 $M\cong V_i$이다.
+[명제 2](#prop2){: data-lid="c2mpv" data-relation="required" }에 의해 모든 module이 semisimple이므로 simple들의 direct sum이고, [명제 5](#prop5){: data-lid="pg0b4" data-relation="required" }와 [명제 10](#prop10){: data-lid="zkbod" data-relation="required" }에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Ax$이므로 전사 $A\rightarrow M$이 존재하고, left module decomposition $A\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }에 의해 $M\cong V_i$이다.
 :::
 
 ::: 참고 13
