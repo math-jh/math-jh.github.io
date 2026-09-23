@@ -263,7 +263,7 @@ $$\mathbb{K}[X]=\mathbb{K}[\x,\y]/(\x\y-1)\cong \mathbb{K}[\x,1/\x]$$
 가 된다. 이를 염두에 두면 다음의 정의 또한 이해할 수 있다. 
 
 ::: 정의 14
-임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $U=V\cap D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U=D(h)$ 위에서 $0$이 되지 않는 다항식이다. 
+임의의 affine variety $V\subseteq \mathbb{A}^k$와 그 위에서 정의된 함수 $f:V\rightarrow \mathbb{K}$에 대하여, $f$가 점 $p\in V$에서 *regular*라는 것은 $p$의 적당한 열린근방 $U=V\cap D(h)$와 다항식 $g$가 존재하여, $U$ 위에서 $f=g/h$이 성립하는 것이다. 여기서 $h$는 $U$ 위에서 $0$이 되지 않는 다항식이다. 
 :::
 
 그럼 이 정의 하에서, 모든 점에서 regular인 함수를 regular function이라 부르는 것이 자연스러울 것이다. $\mathbb{K}$가 algebraically closed일 때 이 두 정의 [정의 11](#def11){: data-lid="mzasp" data-relation="required" reviewed="" }과 [정의 14](#def14){: data-lid="it7y1" data-relation="required" reviewed="" }이 동치라는 것에 대한 증명은 다소 귀찮을 수 있으나, 본질적인 내용은 위에서 살펴본 예시에 들어있으므로 그 증명은 하지 않기로 한다. 증명의 핵심은 [정의 14](#def14){: data-lid="abi7t" data-relation="required" reviewed="" }에서 [정의 11](#def11){: data-lid="qkry5" data-relation="required" reviewed="" }을 얻어내는 것인데, 이는 각각의 $D(h)$에서 $g/h$꼴로 나타나는 함수들을 잘 붙이는 것으로부터 얻어진다. 
