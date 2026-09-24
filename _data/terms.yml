@@ -9720,6 +9720,13 @@ I:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+- id: involutive_distribution
+  en: involutive distribution
+  ko: 대합 분포
+  primary: en
+  defs:
+  - label: '[미분다양체] §Distribution'
+    url: /ko/math/manifolds/distribution
 - id: inward
   en: inward
   ko: 안쪽 방향
