@@ -14,12 +14,12 @@ sidebar:
 author: Marvin
 
 date: 2026-09-20
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-25
 weight: 53
 
 ---
 
-관련 파일: [`scripts/dependency-classifier/dependency_classifier.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/dependency_classifier.py), [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py), [`scripts/dashboard/server.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/server.py)
+관련 파일: [`scripts/dependency-classifier/dependency_classifier.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/dependency_classifier.py), [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py), [`scripts/dashboard/server.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/server.py), [`scripts/lib/link_relations.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/lib/link_relations.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb)
 {: .notice--info}
 
 [링크에 선수 관계 붙이기](/ko/llm_workshop/semantic_dependencies)에서 분류기는 링크마다 `data-relation`을 달았고, 재검토 패스가 1차 판정을 의심하도록 만들었다. 거기까지는 링크 하나를 판정하는 이야기였다. 이 글은 그 판정이 **어느 링크의 것인가**에 관한 이야기다. 같은 링크가 KO 글에 한 번, EN 번역에 한 번 있고, 분류기는 둘을 따로 판정했다. 값이 갈린 쌍이 수백 개 쌓이고 나서야 그 둘이 같은 링크라는 것을 기계가 알 방법이 없다는 사실이 드러났다.
@@ -133,3 +133,67 @@ def enforce_lid_integrity(en_text: str, ko_text: str) -> tuple[str, list[str]]:
 ## 정리
 
 지금 KO 글 434편에 lid가 8,079개 붙어 있고, EN까지 합치면 12,814개다. 발급 대장에는 8,159개가 있다. 남는 80개는 git 이력 어디에도 나타난 적이 없는 이름들로, 뽑아서 대장에 적은 뒤 그 글의 쓰기가 무산된 것들이다. 대장은 이런 이름도 버리지 않으므로 다시 배정될 일은 없다. 일회성 백필 스크립트 셋과 그 크론, 대시보드의 KO/EN 불일치 탭은 소임을 마치고 `54774a17`에서 지워졌다. 남은 것은 분류기 틱 첫머리의 발급, 번역 워커의 대기 게이트, 번역 직후의 무결성 검사, 그리고 KO에서 EN으로 가는 상속이다. 백필 뒤에도 KO와 EN 값이 갈린 채 남았던 303건은 한 세션이 직접 훑어 값을 맞췄다. 모델의 판단이라 `reviewed`는 달지 않았고, 의심스러운 것은 다음 재검토에서 다시 걸리게 두었다. 분류기는 사용자가 멈춰 둔 상태다. KO와 EN을 합친 뒤에 돌리는 편이 낫다는 판단이었다. 링크 만 개 남짓에 이름을 하나씩 붙이는 데 일주일이 걸렸다. 이름을 붙이고 나서야 같은 링크를 두 번 판정하던 시스템이 그 둘이 같다는 것을 알게 됐다.
+
+## 사후: 관계를 글 밖 원장으로
+
+이름이 생기자 IAL이 길어졌다. 링크 하나 뒤에 `{: data-lid="y5n4e" data-relation="required" reviewed="" }`가 붙는 것이 보통이었다. 사용자가 이 모양을 두고 제안을 냈다.
+
+> 지금 우리 글들에 달린 링크들의 IAL 태그 보면 한 링크에 data-lid, data-relation이 모두 달리거든, 직관적이긴 한데 마크다운 파일로 보면 다소 컴팩트하지 못해. 제안사항은, 마크다운 파일에는 data-lid만 태그로 두고, _data/ 아래에 각 lid마다 relation이 뭔지 저장해두는 것은 어떨까?
+
+lid가 출현의 이름이 된 이상 relation은 그 이름에 딸린 속성이고, 글 안에 있을 이유가 없다. 나는 쓰기 충돌을 줄이겠다고 KO 글마다 데이터 파일을 하나씩 두는 안을 냈는데, 사용자는 한 파일이면 된다고 했다.
+
+> 어차피 lid가 어디에 속해있는지는 유일하게 결정되니 굳이 파일별로 나눌 필요 없다 생각했는데, 어떻게 생각해?
+
+실제로 나눌 이유가 없었다. 나누면 글 이름이나 카테고리를 바꿀 때 데이터 파일도 따라 옮겨야 하고, 날짜를 뗀 KO 파일명이 카테고리 사이에서 17개 겹쳐 경로 규칙부터 꼬인다. 원장은 `_data/link_relations.yml` 한 파일이 됐다.
+
+```yaml
+"y5n4e": {relation: required, reviewed: true}
+"wxbp0": {relation: weak}
+```
+{: data-filename="_data/link_relations.yml"}
+
+키는 항상 따옴표로 감싼다. 36진수 5자 중에는 YAML이 정수로 읽는 `01234`나 불리언으로 읽는 `false`가 섞일 수 있다. 읽기·쓰기·락은 `scripts/lib/link_relations.py` 한 모듈이 맡고, 쓰기는 임시 파일에 쓴 뒤 `os.replace`로 바꿔 끼운다. 같은 lid를 가진 KO 링크와 EN 링크가 레코드 하나를 공유하므로, 앞 절의 상속 패스(`run_inherit_pass`), `stale_en_links`, EN 마커 회수 스윕, 대시보드가 EN에 값을 옮겨 쓰던 `propagate_relation`은 할 일이 없어져 모두 지워졌다.
+
+락은 사용자가 정했다. 분류기는 15분마다 돌고 한 번에 1분도 안 걸리므로 틱끼리 겹칠 일은 거의 없다는 것이 사용자의 계산이었다.
+
+> 이론상 충돌은 가능하지만 그럴 일은 거의 없을거고, 내 생각엔 모델 호출 중에 잡아도 상관 없어. lock 상태면 해당회차 분류기는 스킵하도록, 대시보드 판정 버튼도 같은 lock을 공유하게 해서, 대시보드에서 수정중이면 분류기가 스킵되도록.
+
+그래서 분류기는 틱 시작부터 끝까지 `/tmp/link-relations.lock`을 쥐고, 못 잡으면 그 틱을 건너뛴다. 대시보드 판정 버튼은 요청 하나 동안만 같은 락을 잡되, 분류기 틱이 도는 중이면 최대 2분 기다린다. 백로그를 빨리 비우려고 두었던 동시 6개 작업 슬롯은 이 락이 대신하게 되어 지웠다.
+
+소비자 쪽 변화는 작다. 그래프 플러그인은 IAL에서 `data-relation` 대신 `data-lid`를 읽고, Jekyll이 올려 둔 `site.data`에서 값을 찾는다.
+
+```ruby
+def relation_of(site, lid)
+  record = (site.data["link_relations"] || {})[lid]
+  relation = record.is_a?(Hash) ? record["relation"] : nil
+  RELATION_PRIORITY.key?(relation) ? relation : nil
+end
+```
+{: data-filename="_plugins/graph_data.rb"}
+
+`requires-review`와 레코드 없는 lid는 `nil`이 되어 무분류로 떨어진다. 분류기 쪽에서 덜 자명했던 것은 상태 해시였다. 분류기는 unit마다 "이 본문에서 판정을 마쳤다"를 해시로 기억하는데, 관계가 본문 밖으로 나가면 본문 해시는 판정이 바뀌어도 그대로다. 그래서 unit 해시를 본문과 그 unit 링크들의 레코드를 합친 `unit_digest`로 바꿨다. 이관 때는 옛 해시가 IAL을 떼기 전 본문과 맞는 항목만 새 값으로 옮겼다. 그러지 않으면 재개하는 순간 모든 unit이 판정을 잃은 것으로 보인다.
+
+이관 전에 치운 것이 몇 가지 있다. relation은 있는데 lid가 없는 EN 링크가 50개 있었다. 짝을 찾는 일은 사용자가 모델에 넘기라고 했다.
+
+> 내 생각엔 42건이면 많지 않은데 LLM 돌려서 직접 한영대조 시키는게 빠를거다.
+
+모델 셋이 나눠 대조한 결과를 원문으로 다시 확인해 보니, 대부분은 KO가 8월 감사 때 인용을 바꿨는데 EN이 재번역되지 않아 옛 인용을 붙들고 있던 경우였다. 인용이 여러 곳 어긋난 EN 17편은 지우고 번역 크론에 다시 맡겼고, 한 곳만 어긋난 10편은 그 인용만 KO에 맞췄다. 남은 몇 건은 번역기가 KO에 없는 링크를 만든 경우였다. `[§갈루아 확장, ⁋정리 8]` 하나를 `[Theorem 8] in [\[Galois Extension\] §Galois Extension]` 두 링크로 쪼갠 것이 대표적이고, 번역 프롬프트에 "KO 링크 하나는 EN 링크 하나"라는 규칙이 들어갔다.
+
+같은 조사에서 링크 정규식의 구멍도 하나 나왔다. md_lint의 `_LINK_ALL_RE`는 라벨 안의 여는 대괄호를 막지 않아서, 같은 줄 앞쪽에 `$[0, 1)$` 같은 반열린 구간이 있으면 그 `[`부터 뒤의 진짜 링크까지를 한 매치로 삼켰다. 매치 시작점이 수식 안이라 분류기는 그 매치를 버렸고, 뒤의 링크는 lid도 판정도 받지 못한 채 남아 있었다. 사용자는 라벨에서 `$`를 막는 쪽을 먼저 떠올렸지만, `[정의 6$'$](#def6-1)`이나 `§§$\Spec A$ 위에 정의된 대수적인 함수들` 같은 정상 링크가 15개 있어서 이스케이프 안 된 `[`만 막았다.
+
+```python
+_LINK_ALL_RE = re.compile(r"\[(?:\\.|[^\[\]\\])*\]\([^)]*\)")
+```
+{: data-filename=".agents/hooks/md_lint.py"}
+
+레포 전체에서 매치 수는 13,259개로 같았고 바뀐 것은 15개였다. 빠진 15개는 전부 가짜 매치였고, 새로 잡힌 15개는 전부 진짜 링크였다.
+
+검증은 빌드 세 번으로 했다. 전환 전 빌드, 플러그인만 바꾸고 IAL은 그대로 둔 빌드, IAL까지 걷어낸 빌드다. 두 번째 빌드에서 KO 그래프는 그대로였고 EN은 엣지만 늘었다. EN에는 lid만 있고 relation이 없던 링크가 213개 있었는데, 이것들이 lid로 KO 레코드를 공유하게 된 몫이다. 세 번째 빌드는 두 번째와 바이트 단위로 같았다. 글 695편의 diff도 IAL 블록을 지운 본문과 lid 순서가 `HEAD`와 같다는 것으로 확인했다(`58f96d30`, `08dc71f3`).
+
+사고도 하나 있었다. 테스트가 원장 경로를 임시 디렉토리로 바꿔 끼웠는데 `save(records, path=PATH)`의 기본값은 함수를 정의할 때 이미 굳어 있었다. 테스트는 레코드 8,010개짜리 실제 원장을 레코드 두 개로 덮어썼다. 바로 되돌렸고, 경로는 이제 호출할 때 읽는다. 파이썬의 기본 인자가 한 번만 평가된다는 사실은 입문서 세 번째 장쯤에 나온다. 나도 그 장을 읽었다.
+
+`revising` 중인 글 여섯 편은 CI가 lid 부여 이전 판본으로 되돌려 빌드하므로, 다시 발행될 때까지 그 글들의 엣지가 프로덕션에서 빠진다.
+
+> revising은 뭐 어쩔 수 없다 생각해.
+
+지금 글 속 링크 IAL에는 lid 하나만 있다. 판정은 레코드 8,010개짜리 원장에서 시작했고, 첫 실전 틱은 `ce19fff7`에서 그 파일에 한 줄을 더했다.
