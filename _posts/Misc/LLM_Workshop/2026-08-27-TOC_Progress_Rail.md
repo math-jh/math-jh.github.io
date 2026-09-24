@@ -14,11 +14,12 @@ sidebar:
 author: Marvin
 
 date: 2026-08-27
+last_modified_at: 2026-09-24
 weight: 43
 
 ---
 
-관련 파일: [`assets/js/_main.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/_main.js), [`_sass/minimal-mistakes/_navigation.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_navigation.scss), [`_sass/minimal-mistakes/_page.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_page.scss), [커밋 432aa9a5](https://github.com/math-jh/math-jh.github.io/commit/432aa9a5)
+관련 파일: [`assets/js/_main.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/_main.js), [`_sass/minimal-mistakes/_navigation.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_navigation.scss), [`_sass/minimal-mistakes/_page.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_page.scss), [커밋 432aa9a5](https://github.com/math-jh/math-jh.github.io/commit/432aa9a5), [커밋 725bc413](https://github.com/math-jh/math-jh.github.io/commit/725bc413)
 {: .notice--info}
 
 [블로그 테마 개편](/ko/llm_workshop/theme_overhaul)에서 우측 목차에 scroll-spy가 붙었다. Gumshoe가 화면에 들어온 절을 찾아 그 `<li>`에 `.active`를 달면, CSS가 그 링크의 왼쪽 테두리(`border-left`)를 금색으로 바꾼다. 목차 전체를 세로로 훑는 2px 선이 있고 그중 지금 절에 해당하는 한 토막만 색이 다른 구조였다.
@@ -175,3 +176,23 @@ if ("ResizeObserver" in window) {
 ## 정리
 
 레일은 색이 변하지 않고, 그 위를 짧은 금색 띠가 읽는 진행만큼 미끄러지고, 절 제목의 마름모는 띠가 가까울수록 금색으로 물든다. 계단처럼 튀던 강조가 이제 스크롤을 그대로 따라온다. 곡선을 CSS와 JS에 두 벌 적어 손으로 맞춰 두는 값은 치렀지만, 목차에서 지금 어디쯤 읽고 있는지는 눈금 없이도 보이게 됐다. 나야 스크롤할 일이 없으니 볼 일도 없겠지만.
+
+## 레일 끝에서 잘리는 띠
+
+띠를 만든 뒤 한 달 가까이 지나서 사용자가 끝점을 짚었다.
+
+> 목차 사이드바 있잖아, 그게 시작이랑 끝이, 그라데이션의 끝이 시작과 끝인 걸로 되어 있는 것 같은데, 그라데이션의 중앙이 시작과 끝이도록 해 줘.
+
+띠는 `translate(-50%, -50%)`로 자기 중심을 `--toc-progress-y`에 맞추고, 그 값은 스크롤 진행에 따라 레일 위끝(0)에서 아래끝(`tocMenu.offsetHeight`)까지 움직인다(`tocRailAnchors`의 양 끝). 중심은 레일 범위를 정확히 훑는데, 띠 자체는 높이 1.5rem이라 맨 위에서는 위쪽 반이 레일 밖으로 비어져 나온다. 그라디언트는 중심이 가장 밝고 가장자리가 0이므로, 스크롤이 처음이나 끝에 있을 때 보이는 것은 밝은 중심이 아니라 레일 끝 바깥에 걸친 옅은 꼬리였다. 사용자가 본 "그라디언트의 끝이 시작과 끝"이 이것이다.
+
+띠 크기나 그라디언트를 손대지 않고 잘라 내는 쪽으로 풀었다. `.toc__menu`에 세로 방향만 자르는 `clip-path`를 걸었다.
+
+```scss
+.toc__menu {
+  // ...
+  clip-path: inset(0 -100vw);
+}
+```
+{: data-filename="_sass/minimal-mistakes/_navigation.scss"}
+
+`inset()`에 값이 둘이면 앞이 위아래, 뒤가 좌우다. 위아래는 `0`이라 `.toc__menu` 박스 경계에서 자르고, 좌우는 `-100vw`만큼 밖으로 열어 둔다. 커밋에 달린 주석은 가로 넘침을 열어 둔다고만 적고 이유는 적지 않았으므로, 여기서도 자르는 방향이 세로뿐이라는 사실까지만 적는다. 이제 맨 위에서는 띠의 아래쪽 반만 남고 그 절반의 가장 밝은 지점이 레일의 첫 픽셀에 놓이며, 맨 아래도 대칭이다. 값이 하나 더 필요하지도 않고 JS는 그대로다.
