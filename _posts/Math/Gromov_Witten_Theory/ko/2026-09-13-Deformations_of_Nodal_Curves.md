@@ -16,7 +16,7 @@ weight: 1
 
 Gromov--Witten theory에서 우리는 target space $X$로 들어오는 stable map들 $\mu: C\rightarrow X$를 다룬다. 이 때 $\mu$의 정의역 $C$는 nodal curve에, 특별한 점들을 추가로 선택해준 것이다. 이 때문에 이 카테고리는 이들 nodal curve를 다루는 글로 시작한다. 더 구체적으로, 우리는 이 nodal curve가 어떻게 변형되고, 어떤 automorphism을 갖는지 계산하게 된다. 
 
-Nodal curve의 대표적인, 그리고 본질적으로 유일한 예시는 $\x\y=0$이다. 이는 두 좌표축 $\{\x=0\}$과 $\{\y=0\}$의 합집합이며, 이들이 만나는 점, 즉 원점을 우리는 *node<sub>마디</sub>* 혹은 *nodal point<sub>마디점</sub>*이라 부른다. 핵심적인 성질 중 하나는 이들 node가 singular point라는 것이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="qnd3m" data-relation="weak" }) 이렇게 singular point가 존재하는 공간을 다룰 때 유효한 전략은 이를 central fiber로 갖고, 그 주변의 fiber는 모두 smooth인 deformation을 생각하는 것이다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="nwt79" data-relation="required" }에서 살펴보았듯, $\x\y=0$에 매개변수 $\t$를 넣어 $\x\y=\t$로 바꾸면 이러한 deformation을 얻을 수 있었다.
+Nodal curve의 대표적인, 그리고 본질적으로 유일한 예시는 $\x\y=0$이다. 이는 두 좌표축 $\{\x=0\}$과 $\{\y=0\}$의 합집합이며, 이들이 만나는 점, 즉 원점을 우리는 *node<sub>마디</sub>* 혹은 *nodal point<sub>마디점</sub>*이라 부른다. 핵심적인 성질 중 하나는 이들 node가 singular point라는 것이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="qnd3m" data-relation="requires-review" }) 이렇게 singular point가 존재하는 공간을 다룰 때 유효한 전략은 이를 central fiber로 갖고, 그 주변의 fiber는 모두 smooth인 deformation을 생각하는 것이다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="nwt79" data-relation="required" reviewed="" }에서 살펴보았듯, $\x\y=0$에 매개변수 $\t$를 넣어 $\x\y=\t$로 바꾸면 이러한 deformation을 얻을 수 있었다.
 
 더 일반적으로 우리는 curve $C$의 singular point가 오직 node 뿐일 경우, 즉 모든 singular point가 étale-local하게 $\x\y=0$의 꼴일 경우 이를 *nodal curve<sub>마디 곡선</sub>*라 부른다. 이러한 nodal curve들을 포함하여 이 글에서 등장하는 모든 scheme은 algebraically closed field $\mathbb{K}$ 위에서 separated이고 finite type인 것으로 생각한다. 직관적으로는 $\mathbb{K}=\mathbb{C}$로 두고, 대부분의 scheme은 (fat point가 필요한 경우를 제외하면) 모두 variety인 것으로 생각해도 대체로 무해하다.
 
@@ -30,7 +30,7 @@ Connected projective nodal curve $C$의 서로 다른 smooth point $p_1,\ldots,p
 
 즉 prestable curve란 nodal curve 위에, node와 겹치지 않도록 몇 개의 점을 추가로 선택한 것에 불과하다. 
 
-Nodal curve가 주어지면 이 node에서 붙은 두 branch를 떼어내는 방법이 존재한다. 이는 [\[스킴\] §차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5){: data-lid="o8zf6" data-relation="weak" } 직후의 논의에서 정의한 normalization을 nodal curve에 적용한 것으로, 이 구체적인 상황에서 $C$의 *normalization<sub>정규화</sub>*란, smooth projective curve $\widetilde{C}$와 finite morphism $\nu:\widetilde{C}\rightarrow C$로서, node의 바깥에서 isomorphism이고 각 node 위에 정확히 두 점이 놓이는 것을 뜻한다. 
+Nodal curve가 주어지면 이 node에서 붙은 두 branch를 떼어내는 방법이 존재한다. 이는 [\[스킴\] §차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5){: data-lid="o8zf6" data-relation="requires-review" } 직후의 논의에서 정의한 normalization을 nodal curve에 적용한 것으로, 이 구체적인 상황에서 $C$의 *normalization<sub>정규화</sub>*란, smooth projective curve $\widetilde{C}$와 finite morphism $\nu:\widetilde{C}\rightarrow C$로서, node의 바깥에서 isomorphism이고 각 node 위에 정확히 두 점이 놓이는 것을 뜻한다. 
 
 {% diagram Math/Gromov_Witten_Theory/Deformations_of_Nodal_Curves-1.svg width="7.37em" alt="normalization separates the two branches of a node" %}
 
@@ -52,7 +52,7 @@ $$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde C}\rightar
 
 를 얻는다.
 
-이제 $C$가 node를 $d$개, irreducible component를 $c$개 갖고, $\widetilde C$의 각 성분의 genus가 $g_1,\ldots,g_c$라고 하자. $\nu$가 affine morphism이므로 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" data-relation="required" }에 의하여 $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde C,\mathcal{G})$이다. 따라서 위 short exact sequence로부터, 다음의 식
+이제 $C$가 node를 $d$개, irreducible component를 $c$개 갖고, $\widetilde C$의 각 성분의 genus가 $g_1,\ldots,g_c$라고 하자. $\nu$가 affine morphism이므로 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" data-relation="required" reviewed="" }에 의하여 $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde C,\mathcal{G})$이다. 따라서 위 short exact sequence로부터, 다음의 식
 
 $$\rchi(C,\nu_\ast\mathcal{O}_{\widetilde C})=\rchi(C,\mathcal{O}_C)+\sum_{p\in\Sing C}\rchi(C,\kappa(p))$$
 
@@ -78,7 +78,7 @@ Nodal curve $C$의 각 node $p$에서 first-order local deformation들의 공간
 
 {% diagram Math/Gromov_Witten_Theory/Deformations_of_Nodal_Curves-2.svg width="51.68em" alt="the local fibers xy=t over the deformation space" %}
 
-한편 prestable curve는 nodal curve $C$의 smooth locus에 marked point $p_1,\ldots,p_n$을 둔 것이다. 따라서 위 그림에 marked point들을 더해주면, 이들은 curve가 deform됨에 따라 함께 움직이면서 각 $p_i$를 지나는 section을 정의한다. 그럼 marked point들이 서로 같아질 수 없으므로 이 section들은 disjoint하게 되며, 따라서 prestable curve의 first-order deformation은 underlying curve의 deformation과 이 marked section들을 함께 택한 자료로 주어진다. 이 때 각 자료 사이의 isomorphism은 $\Spec\mathbb{K}[\epsilon]$ 위의 family들의 isomorphism으로서, central fiber에서 identity이고, 각 marked section을 그에 대응하는 marked section으로 보내는 것이다. 이러한 isomorphism class들이 이루는 $\mathbb{K}$-vector space를 $T^1(C,p_\bullet)$로 적는다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="fqff9" data-relation="required" }의 $T^1$을 marked curve에 적용한 것으로, 같은 방식으로 모든 marked section을 보존하는 infinitesimal automorphism들의 $\mathbb{K}$-vector space를 $T^0(C,p_\bullet)$로 적는다. 
+한편 prestable curve는 nodal curve $C$의 smooth locus에 marked point $p_1,\ldots,p_n$을 둔 것이다. 따라서 위 그림에 marked point들을 더해주면, 이들은 curve가 deform됨에 따라 함께 움직이면서 각 $p_i$를 지나는 section을 정의한다. 그럼 marked point들이 서로 같아질 수 없으므로 이 section들은 disjoint하게 되며, 따라서 prestable curve의 first-order deformation은 underlying curve의 deformation과 이 marked section들을 함께 택한 자료로 주어진다. 이 때 각 자료 사이의 isomorphism은 $\Spec\mathbb{K}[\epsilon]$ 위의 family들의 isomorphism으로서, central fiber에서 identity이고, 각 marked section을 그에 대응하는 marked section으로 보내는 것이다. 이러한 isomorphism class들이 이루는 $\mathbb{K}$-vector space를 $T^1(C,p_\bullet)$로 적는다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="fqff9" data-relation="required" reviewed="" }의 $T^1$을 marked curve에 적용한 것으로, 같은 방식으로 모든 marked section을 보존하는 infinitesimal automorphism들의 $\mathbb{K}$-vector space를 $T^0(C,p_\bullet)$로 적는다. 
 
 이들 $T^0(C,p_\bullet)$과 $T^1(C,p_\bullet)$은 underlying nodal curve에 새로 추가된 marked point들이 추가로 부과하는 조건으로 정해지므로, 이 두 조건을 별도로 나누어 보는 것이 합리적이다. 우선 $T^1$의 경우, 우리는 이미 위에서 $T_p^1$은 오직 node에서만 생기는 것을 살펴보았으며, 정의에 의해 marked point들은 smooth point에만 찍히므로 여기에 영향을 미치지 않는다. 즉 node에서 계산한 $T_p^1$은 prestable curve에 대해서도 동일하게 유지된다. 
 
@@ -86,7 +86,7 @@ Nodal curve $C$의 각 node $p$에서 first-order local deformation들의 공간
 
 $$\Phi(f)=f+\epsilon v(f)$$
 
-의 꼴이어야 하며, 이것이 곱셈을 보존하기 위해서는 $v(fg)=fv(g)+gv(f)$이 성립해야 한다. 즉 $v$는 $\mathcal{O}_C$ 위의 $\mathbb{K}$-derivation이며, 역으로 이러한 derivation은 항상 위와 같은 식으로 automorphism을 정의한다. 이제 prestable curve가 nodal curve와 다른 infinitesimal automorphism을 갖는 부분은 위에서 언급한 것과 같이 marked section 근방이므로 각 marked point $p_i$ 근방에서 이를 살펴보자. $p_i$가 local하게 $\z=0$으로 쓰인다고 가정하자. [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" data-relation="required" }에 의하여 $\Omega_{C/\mathbb K}$는 이 근방에서 rank $1$의 locally free sheaf이고 $\dd{\z}$가 local basis가 되고, 따라서 differential의 universal property에 의하여 임의의 derivation은 $\dd{\z}$의 image $v(\z)$에 의해 결정된다. 이에 대응하는 automorphism은
+의 꼴이어야 하며, 이것이 곱셈을 보존하기 위해서는 $v(fg)=fv(g)+gv(f)$이 성립해야 한다. 즉 $v$는 $\mathcal{O}_C$ 위의 $\mathbb{K}$-derivation이며, 역으로 이러한 derivation은 항상 위와 같은 식으로 automorphism을 정의한다. 이제 prestable curve가 nodal curve와 다른 infinitesimal automorphism을 갖는 부분은 위에서 언급한 것과 같이 marked section 근방이므로 각 marked point $p_i$ 근방에서 이를 살펴보자. $p_i$가 local하게 $\z=0$으로 쓰인다고 가정하자. [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" data-relation="required" reviewed="" }에 의하여 $\Omega_{C/\mathbb K}$는 이 근방에서 rank $1$의 locally free sheaf이고 $\dd{\z}$가 local basis가 되고, 따라서 differential의 universal property에 의하여 임의의 derivation은 $\dd{\z}$의 image $v(\z)$에 의해 결정된다. 이에 대응하는 automorphism은
 
 $$\z\mapsto\z+\epsilon v(\z)$$
 
@@ -96,7 +96,7 @@ $$\sHom(\Omega_{C/\mathbb{K}},\mathcal{I}_\Sigma)=\mathcal{T}_{C/\mathbb{K}}\oti
 
 이고, 이것이 marked curve의 infinitesimal automorphism을 계산한다. 
 
-이제 남은 것은 $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$의 계산이다. 이를 위해 local model $R=\mathbb K[\x,\y]/(\x\y)$을 택하고 이 위의 derivation을 살펴보자. 임의의 derivation $v$는 generator에서의 값 $a=v(\x)$와 $b=v(\y)$로 결정되고, [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" data-relation="required" }의 계산과 같이 관계식 $\x\y=0$을 보존하려면
+이제 남은 것은 $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$의 계산이다. 이를 위해 local model $R=\mathbb K[\x,\y]/(\x\y)$을 택하고 이 위의 derivation을 살펴보자. 임의의 derivation $v$는 generator에서의 값 $a=v(\x)$와 $b=v(\y)$로 결정되고, [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" data-relation="required" reviewed="" }의 계산과 같이 관계식 $\x\y=0$을 보존하려면
 
 $$0=v(\x\y)=\y a+\x b$$
 
@@ -120,7 +120,7 @@ $$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal T_{\widetilde C/\mathbb K}(-
 
 이다. 여기서 마지막 등식은 pushforward의 정의에 따라 $H^0(C,\nu_\ast\mathcal F)=H^0(\widetilde C,\mathcal F)$이기 때문이다. 곧 infinitesimal automorphism은 normalization 위에서 node의 모든 preimage와 marked point에서 소멸하는 derivation으로 계산된다.
 
-표준적인 deformation theory 해석에 따라 이 계산은 nodal curve, 혹은 더 일반적으로 prestable curve의 automorphism group의 tangent space를 구한 것으로 해석할 수 있다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" data-relation="required" }) 이 automorphism group을 $G=\Aut(C,p_\bullet)$라 하고 그 항등원을 $e$라 하면, 항등원에서의 tangent space $T_eG$의 원소는 $\mathbb K[\epsilon]$-valued point $\Spec\mathbb K[\epsilon]\rightarrow G$ 중 closed point가 항등원으로 가는 것들의 모임이다. ([\[스킴\] §다양체에서 스킴으로, ⁋예시 4](/ko/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" data-relation="required" }) 즉 직관적으로 이는 central fiber로 제한했을 때 항등사상이 되는 automorphism들의 family로 생각할 수 있으며, 이로부터 다음의 identification 
+표준적인 deformation theory 해석에 따라 이 계산은 nodal curve, 혹은 더 일반적으로 prestable curve의 automorphism group의 tangent space를 구한 것으로 해석할 수 있다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" data-relation="required" reviewed="" }) 이 automorphism group을 $G=\Aut(C,p_\bullet)$라 하고 그 항등원을 $e$라 하면, 항등원에서의 tangent space $T_eG$의 원소는 $\mathbb K[\epsilon]$-valued point $\Spec\mathbb K[\epsilon]\rightarrow G$ 중 closed point가 항등원으로 가는 것들의 모임이다. ([\[스킴\] §다양체에서 스킴으로, ⁋예시 4](/ko/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" data-relation="required" reviewed="" }) 즉 직관적으로 이는 central fiber로 제한했을 때 항등사상이 되는 automorphism들의 family로 생각할 수 있으며, 이로부터 다음의 identification 
 
 $$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
 
@@ -140,11 +140,11 @@ $$0 \rightarrow H^1\bigl(C, \mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr) \rightarro
 이 성립하며, 또 $T^0(C, p_\bullet)=H^0(C, \mathcal{T}_{C/\mathbb{K}}(-\Sigma))$이다.
 :::
 ::: 증명
-앞에서 계산한 대로 marked point들은 automorphism sheaf에 twist $(-\Sigma)$를 더하지만, node의 local deformation space $T_p^1$은 바꾸지 않는다. 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="940xu" data-relation="required" }로부터
+앞에서 계산한 대로 marked point들은 automorphism sheaf에 twist $(-\Sigma)$를 더하지만, node의 local deformation space $T_p^1$은 바꾸지 않는다. 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="940xu" data-relation="required" reviewed="" }로부터
 
 $$0\rightarrow H^1\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)\rightarrow T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1\rightarrow H^2\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)$$
 
-를 얻으며, 이 때 위의 vanishing에 의하여 마지막 항이 $0$이다. 또, [명제 3](#prop3){: data-lid="8ouk8" data-relation="required" }에 의하여 $T_p^1\cong\mathbb K$이므로 이로부터 원하는 short exact sequence를 얻는다. 마지막 주장의 경우 이 long exact sequence의 degree $0$ 부분을 본 것이다.
+를 얻으며, 이 때 위의 vanishing에 의하여 마지막 항이 $0$이다. 또, [명제 3](#prop3){: data-lid="8ouk8" data-relation="required" reviewed="" }에 의하여 $T_p^1\cong\mathbb K$이므로 이로부터 원하는 short exact sequence를 얻는다. 마지막 주장의 경우 이 long exact sequence의 degree $0$ 부분을 본 것이다.
 :::
 
 직관적으로 이 exact sequence는 prestable curve의 deformation을 두 겹으로 갈라놓는다. 왼쪽 항은 모든 node의 local model을 유지하면서 normalization의 성분들과 그 위의 node preimage 및 marked point의 위치를 변형하는 자유도이고, 오른쪽 항은 어떤 node를 smoothing할지를 고르는 자유도이다. 그럼 우리의 핵심적인 주장은 다음과 같다. 
@@ -157,17 +157,17 @@ $$\dim T^1(C, p_\bullet)-\dim T^0(C, p_\bullet)=3g-3+n$$
 이 성립한다.
 :::
 ::: 증명
-표기의 편의상 $\mathcal{H}=\mathcal{T}_{C/\mathbb{K}}(-\Sigma)$로 적고, $C$의 node의 갯수를 $d$라 하면 [정리 5](#thm5){: data-lid="c3l1e" data-relation="required" }에 의하여 
+표기의 편의상 $\mathcal{H}=\mathcal{T}_{C/\mathbb{K}}(-\Sigma)$로 적고, $C$의 node의 갯수를 $d$라 하면 [정리 5](#thm5){: data-lid="c3l1e" data-relation="required" reviewed="" }에 의하여 
 
 $$\dim T^1=h^1(\mathcal{H})+d,\qquad \dim T^0=h^0(\mathcal{H})$$
 
-이므로 구하고자 하는 값은 $d-\rchi(C, \mathcal{H})$이다. 이제 [명제 4](#prop4){: data-lid="arwum" data-relation="required" }와 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="tpsgt" data-relation="required" }에 의하여
+이므로 구하고자 하는 값은 $d-\rchi(C, \mathcal{H})$이다. 이제 [명제 4](#prop4){: data-lid="arwum" data-relation="required" reviewed="" }와 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="tpsgt" data-relation="required" reviewed="" }에 의하여
 
 $$\rchi(C, \mathcal{H})=\rchi\bigl(\widetilde{C}, \mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)$$
 
 이다. 
 
-위 등식의 우변을 각 성분마다 계산하자. [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" data-relation="required" }을 genus $g_j$의 성분 $\widetilde C_j$의 canonical divisor $K_{\widetilde C_j}$에 적용하면 $\deg\omega_{\widetilde C_j}=2g_j-2$를 얻는다. 따라서 $\mathcal T_{\widetilde C_j/\mathbb K}\cong\omega_{\widetilde C_j}^\vee$는 차수 $2-2g_j$의 line bundle이다. 그 위에 놓인 $D+\widetilde\Sigma$의 점 개수를 $s_j$라 하면 twisted line bundle의 차수는 $2-2g_j-s_j$이고, 같은 명제에 의하여
+위 등식의 우변을 각 성분마다 계산하자. [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" data-relation="required" reviewed="" }을 genus $g_j$의 성분 $\widetilde C_j$의 canonical divisor $K_{\widetilde C_j}$에 적용하면 $\deg\omega_{\widetilde C_j}=2g_j-2$를 얻는다. 따라서 $\mathcal T_{\widetilde C_j/\mathbb K}\cong\omega_{\widetilde C_j}^\vee$는 차수 $2-2g_j$의 line bundle이다. 그 위에 놓인 $D+\widetilde\Sigma$의 점 개수를 $s_j$라 하면 twisted line bundle의 차수는 $2-2g_j-s_j$이고, 같은 명제에 의하여
 
 $$\rchi\bigl(\widetilde{C}_j, \mathcal{T}_{\widetilde{C}_j/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)=(2-2g_j-s_j)+1-g_j=3-3g_j-s_j$$
 
@@ -175,7 +175,7 @@ $$\rchi\bigl(\widetilde{C}_j, \mathcal{T}_{\widetilde{C}_j/\mathbb{K}}(-D-\widet
 
 $$\rchi(C, \mathcal{H})=\sum_{j=1}^c(3-3g_j-s_j)=3c-3\sum_jg_j-2d-n$$
 
-이다. 여기에 [명제 2](#prop2){: data-lid="b8s52" data-relation="required" }가 주는 $\sum_jg_j=g-d+c-1$을 넣으면
+이다. 여기에 [명제 2](#prop2){: data-lid="b8s52" data-relation="required" reviewed="" }가 주는 $\sum_jg_j=g-d+c-1$을 넣으면
 
 $$\rchi(C, \mathcal{H})=3c-3(g-d+c-1)-2d-n=-3g+d+3-n$$
 
