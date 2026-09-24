@@ -53,7 +53,7 @@ $$P_j(z) = \sum_{n=1}^{\infty} a_{-n}^{(j)}(z - z_j)^{-n}$$
 
 $$g(z) = f(z) - \sum_{j=1}^{k} P_j(z)$$
 
-을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 holomorphic이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 singular point를 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4){: data-lid="1c0au" data-relation="requires-review" }), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 holomorphic function으로 확장된다. $\Omega$가 단순연결이므로 [§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="ydhv1" data-relation="required" reviewed="" }에 의해
+을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 holomorphic이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 singular point를 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4){: data-lid="1c0au" data-relation="required" reviewed="" }), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 holomorphic function으로 확장된다. $\Omega$가 단순연결이므로 [§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="ydhv1" data-relation="required" reviewed="" }에 의해
 
 $$\oint_\gamma g(z)\dd{z} = 0, \qquad \text{곧}\qquad \oint_\gamma f(z)\dd{z} = \sum_{j=1}^{k}\oint_\gamma P_j(z)\dd{z}$$
 
@@ -215,7 +215,7 @@ $$\int_0^{2\pi} R(\cos\theta, \sin\theta)\dd{\theta} = \oint_{\lvert z\rvert = 1
 :::
 
 ::: 증명
-$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. [§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="iscwk" data-relation="requires-review" }의 Euler 공식에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = (e^{i\theta} + e^{-i\theta})/2 = (z + z^{-1})/2$, $\sin\theta = (e^{i\theta} - e^{-i\theta})/(2i) = (z - z^{-1})/(2i)$이다. 또 $\dd{z} = ie^{i\theta}\dd{\theta} = iz\dd{\theta}$이므로 $\dd{\theta} = \dd{z}/(iz)$이다.
+$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. [§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="iscwk" data-relation="required" reviewed="" }의 Euler 공식에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = (e^{i\theta} + e^{-i\theta})/2 = (z + z^{-1})/2$, $\sin\theta = (e^{i\theta} - e^{-i\theta})/(2i) = (z - z^{-1})/(2i)$이다. 또 $\dd{z} = ie^{i\theta}\dd{\theta} = iz\dd{\theta}$이므로 $\dd{\theta} = \dd{z}/(iz)$이다.
 
 이 치환을 적분에 대입하면 실수 적분이 단위원 $\lvert z\rvert = 1$을 따른 복소적분으로 바뀌고, 피적분함수 $F(z) = R(\cdots)/(iz)$은 $z$의 유리함수이다. 가정에서 $R$의 분모가 $[0, 2\pi]$의 $\theta$에 대해 사라지지 않으므로 $F$은 단위원 위 ($\lvert z\rvert = 1$) 에 극을 갖지 않고, 따라서 유한 개의 극이 단위원판 안팎에 흩어져 있다. 단위원이 안쪽 극을 각각 한 번 감으므로 [정리 2](#thm2){: data-lid="sqv0o" data-relation="required" reviewed="" }에 의해 적분이 $2\pi i$ 곱하기 단위원판 안 극들의 유수 합이다.
 :::

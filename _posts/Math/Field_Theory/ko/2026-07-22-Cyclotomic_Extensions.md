@@ -21,7 +21,7 @@ published: false
 
 ## 원분다항식
 
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여 $\mu_n\subseteq\overline{\mathbb{K}}^\times$은 order $n$의 cyclic group이고, primitive $n$-th root of unity란 그 generator를 뜻하였다. ([§거듭제곱근 가해성, ⁋정의 2](/ko/math/field_theory/solvability_by_radicals#def2){: data-lid="bjrtn" data-relation="requires-review" }) Order $n$의 cyclic group의 generator는 $n$과 서로소인 $m$에 대한 $\zeta^m$들이므로, generator를 하나 고정하면 나머지가 모두 결정된다. 그럼 이들 전체를 해로 갖는 다항식을 생각하는 것이 자연스럽다.
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여 $\mu_n\subseteq\overline{\mathbb{K}}^\times$은 order $n$의 cyclic group이고, primitive $n$-th root of unity란 그 generator를 뜻하였다. ([§거듭제곱근 가해성, ⁋정의 2](/ko/math/field_theory/solvability_by_radicals#def2){: data-lid="bjrtn" data-relation="required" reviewed="" }) Order $n$의 cyclic group의 generator는 $n$과 서로소인 $m$에 대한 $\zeta^m$들이므로, generator를 하나 고정하면 나머지가 모두 결정된다. 그럼 이들 전체를 해로 갖는 다항식을 생각하는 것이 자연스럽다.
 
 ::: 정의 1
 Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$ 안의 primitive $n$-th root of unity 전체를 해로 갖는 monic polynomial
@@ -100,7 +100,7 @@ Primitive $n$-th root of unity $\zeta$에 대하여 $\Phi_n$은 $\zeta$의 $\mat
 $\Phi_n$은 monic이고 [정리 4](#thm4){: data-lid="vcuc7" data-relation="required" reviewed="" }에 의해 irreducible이며 $\Phi_n(\zeta)=0$이므로, [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="l7j9e" data-relation="required" reviewed="" }에 의하여 $\Phi_n$은 $\zeta$의 minimal polynomial이고 $\mathbb{Q}[\zeta]=\mathbb{Q}(\zeta)$의 $\mathbb{Q}$ 위에서의 차원은 $\deg\Phi_n=\varphi(n)$이다.
 :::
 
-이 따름정리가 $\mathbb{Q}$가 아닌 field에서는 성립하지 않는다는 것을 강조해 둘 필요가 있다. 가령 $\mathbb{K}=\mathbb{Q}(i)$이고 $n=4$이면 $\Phi_4=\x^2+1$이 $\mathbb{K}[\x]$에서 $(\x-i)(\x+i)$로 쪼개지므로 $[\mathbb{K}(\zeta_4):\mathbb{K}]=1$이다. [정리 4](#thm4){: data-lid="01sue" data-relation="requires-review" }의 증명에서 $\mathbb{Q}$가 사용된 곳은 minimal polynomial의 계수가 정수라는 것을 얻는 [보조정리 3](#lem3){: data-lid="pg4it" data-relation="requires-review" }이며, 이것이 일반적인 $\mathbb{K}$에서는 쓸 수 없는 도구이다.
+이 따름정리가 $\mathbb{Q}$가 아닌 field에서는 성립하지 않는다는 것을 강조해 둘 필요가 있다. 가령 $\mathbb{K}=\mathbb{Q}(i)$이고 $n=4$이면 $\Phi_4=\x^2+1$이 $\mathbb{K}[\x]$에서 $(\x-i)(\x+i)$로 쪼개지므로 $[\mathbb{K}(\zeta_4):\mathbb{K}]=1$이다. [정리 4](#thm4){: data-lid="01sue" data-relation="weak" reviewed="" }의 증명에서 $\mathbb{Q}$가 사용된 곳은 minimal polynomial의 계수가 정수라는 것을 얻는 [보조정리 3](#lem3){: data-lid="pg4it" data-relation="weak" reviewed="" }이며, 이것이 일반적인 $\mathbb{K}$에서는 쓸 수 없는 도구이다.
 
 ## 원분확대의 갈루아 군
 

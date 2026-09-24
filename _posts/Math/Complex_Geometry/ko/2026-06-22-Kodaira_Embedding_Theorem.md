@@ -14,13 +14,13 @@ weight: 6
 published: false
 ---
 
-콤팩트 Kähler manifold는 복소·리만·사교의 세 구조를 한 몸에 갖춘 풍부한 대상이지만 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="5qoft" data-relation="requires-review" }), 그 자체로는 대수기하의 대상이 아니다. 모든 smooth한 projective variety가 Kähler manifold임은 보았으나 ([§Kähler manifold, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9){: data-lid="aanld" data-relation="weak" reviewed="" }), 그 역, 곧 어떤 콤팩트 complex manifold가 projective space $\mathbb{CP}^N$ 안으로 holomorphic 매장되어 projective variety가 되는가는 전혀 자명하지 않다. 복소토러스 가운데 일부만 사영적이고 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7){: data-lid="s899v" data-relation="weak" reviewed="" }) 나머지는 Kähler이면서도 projective space에 결코 들어가지 못한다는 사실이, 이 물음이 진짜 내용을 담고 있음을 말해 준다. 이 글의 주제는 그 판정을 완전히 해결하는 Kodaira의 정리이다. 답은 한 줄로 요약된다. 콤팩트 complex manifold가 사영적인 것은 그 위에 *양의 line bundle*이 존재하는 것과 동치이다.
+콤팩트 Kähler manifold는 복소·리만·사교의 세 구조를 한 몸에 갖춘 풍부한 대상이지만 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="5qoft" data-relation="weak" reviewed="" }), 그 자체로는 대수기하의 대상이 아니다. 모든 smooth한 projective variety가 Kähler manifold임은 보았으나 ([§Kähler manifold, ⁋명제 9](/ko/math/complex_geometry/kahler_manifolds#prop9){: data-lid="aanld" data-relation="weak" reviewed="" }), 그 역, 곧 어떤 콤팩트 complex manifold가 projective space $\mathbb{CP}^N$ 안으로 holomorphic 매장되어 projective variety가 되는가는 전혀 자명하지 않다. 복소토러스 가운데 일부만 사영적이고 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7){: data-lid="s899v" data-relation="weak" reviewed="" }) 나머지는 Kähler이면서도 projective space에 결코 들어가지 못한다는 사실이, 이 물음이 진짜 내용을 담고 있음을 말해 준다. 이 글의 주제는 그 판정을 완전히 해결하는 Kodaira의 정리이다. 답은 한 줄로 요약된다. 콤팩트 complex manifold가 사영적인 것은 그 위에 *양의 line bundle*이 존재하는 것과 동치이다.
 
 양의 line bundle이란 holomorphic line bundle 가운데 그 곡률이 Kähler 형식이 되는 것을 말한다. 곧 사영성이라는 대역적·대수적 성질이, line bundle에 얹은 계량의 곡률이라는 국소·미분기하적 양정치성으로 환원된다. 이 환원을 가능하게 하는 두 기둥이 있다. 하나는 양의 line bundle 위에서 고차 cohomology가 사라진다는 Kodaira 소멸정리이고, 다른 하나는 그 소멸을 충분히 큰 거듭제곱 $L^{\otimes k}$에 반복 적용하여 전역 section이 점을 분리하고 tangent vector를 분리하도록 만드는 embedding 논법이다. 우리는 먼저 line bundle 위의 Hermitian 계량과 Chern connection에서 곡률과 제1 Chern 류를 세우고, 양의 line bundle을 정의한 뒤, Kodaira 소멸정리와 매장정리를 차례로 서술하며, 마지막으로 정수 Kähler 류를 가진 manifold가 사영적이라는 따름정리와 그 예시들을 다룬다.
 
 ## Hermitian 선다발과 Chern connection
 
-Holomorphic line bundle은 그 자체로 미분기하적 양을 갖지 않으며, 곡률을 말하려면 먼저 fiber에 길이를 재는 계량을 얹어야 한다. Complex manifold $X$ 위의 holomorphic line bundle $L$이란 각 점의 fiber가 복소 1차원 벡터공간이고 transition function이 holomorphic인 복소 line bundle이다 ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1){: data-lid="d0fj2" data-relation="requires-review" }). 여기에 fiber마다 매끄럽게 변하는 Hermitian 내적을 주는 것이 출발점이다.
+Holomorphic line bundle은 그 자체로 미분기하적 양을 갖지 않으며, 곡률을 말하려면 먼저 fiber에 길이를 재는 계량을 얹어야 한다. Complex manifold $X$ 위의 holomorphic line bundle $L$이란 각 점의 fiber가 복소 1차원 벡터공간이고 transition function이 holomorphic인 복소 line bundle이다 ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1){: data-lid="d0fj2" data-relation="required" reviewed="" }). 여기에 fiber마다 매끄럽게 변하는 Hermitian 내적을 주는 것이 출발점이다.
 
 ::: 정의 1
 Complex manifold $X$ 위의 holomorphic line bundle $L$의 *Hermitian metric<sub>에르미트 계량</sub>* $h$란, 각 점 $x \in X$의 fiber $L_x$ 위에 Hermitian 내적 $h_x : L_x \times L_x \rightarrow \mathbb{C}$를 매끄럽게 주는 것이다. 곧 국소 holomorphic frame $e$ ($L\vert_U$의 영점 없는 holomorphic section) 에 대하여 양의 함수
@@ -91,7 +91,7 @@ $$
 c_1(L) = [c_1(L, h)] = \left[ \frac{i}{2\pi}\Theta \right] \in H^2(X, \mathbb{R})
 $$
 
-가 잘 정의된다. 이 류 $c_1(L)$이 line bundle $L$의 *제1 Chern 류*이며, 이는 대수기하·위상수학에서 정수계수로 정의되는 제1 Chern 류 ([\[대수다양체\] §천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1){: data-lid="q4nnh" data-relation="requires-review" }) 와 일치한다. 곧 $c_1(L)$은 $H^2(X, \mathbb{Z})$ ([\[대수적 위상수학\] §코호몰로지, ⁋정의 2](/ko/math/algebraic_topology/cohomology#def2){: data-lid="d1wj9" data-relation="weak" reviewed="" }) 의 image에 놓이는 정수류이며, 그 실수 대표를 곡률로 실현하는 것이 위 공식이다.
+가 잘 정의된다. 이 류 $c_1(L)$이 line bundle $L$의 *제1 Chern 류*이며, 이는 대수기하·위상수학에서 정수계수로 정의되는 제1 Chern 류 ([\[대수다양체\] §천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1){: data-lid="q4nnh" data-relation="required" reviewed="" }) 와 일치한다. 곧 $c_1(L)$은 $H^2(X, \mathbb{Z})$ ([\[대수적 위상수학\] §코호몰로지, ⁋정의 2](/ko/math/algebraic_topology/cohomology#def2){: data-lid="d1wj9" data-relation="weak" reviewed="" }) 의 image에 놓이는 정수류이며, 그 실수 대표를 곡률로 실현하는 것이 위 공식이다.
 
 ## 양의 선다발
 
@@ -126,7 +126,7 @@ $$
 이 명제가 양의 line bundle과 Kähler 기하를 잇는 다리이다. 양의 line bundle을 갖는 콤팩트 complex manifold는 자동으로 Kähler manifold이며, 그 Kähler 류는 $H^2(X, \mathbb{Z})$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 line bundle의 제1 Chern 류로 실현되고, 그 line bundle이 바로 사영매장을 만들어 내는 양의 line bundle이 된다. 가장 단순한 예는 complex projective space의 hyperplane bundle이다.
 
 ::: 예시 6 ($\mathbb{CP}^n$의 $\mathcal{O}(1)$)
-Complex projective space $\mathbb{CP}^n$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6){: data-lid="vvlg9" data-relation="requires-review" }) 위의 hyperplane bundle $\mathcal{O}(1)$을 ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-lid="jtfuh" data-relation="required" reviewed="" }) 생각하자. 그 쌍대인 tautological bundle $\mathcal{O}(-1)$에 표준 Hermitian 계량 $h([z])(v, v) = \lVert v \rVert^2$ ($v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $\mathcal{O}(1)$에 얹었을 때 곡률 형식이
+Complex projective space $\mathbb{CP}^n$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6){: data-lid="vvlg9" data-relation="required" reviewed="" }) 위의 hyperplane bundle $\mathcal{O}(1)$을 ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12){: data-lid="jtfuh" data-relation="required" reviewed="" }) 생각하자. 그 쌍대인 tautological bundle $\mathcal{O}(-1)$에 표준 Hermitian 계량 $h([z])(v, v) = \lVert v \rVert^2$ ($v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $\mathcal{O}(1)$에 얹었을 때 곡률 형식이
 
 $$
 \frac{i}{2\pi}\Theta(\mathcal{O}(1), h) = \omega_{\mathrm{FS}}
@@ -140,7 +140,7 @@ $$
 매장정리의 첫째 기둥은 양의 line bundle 위에서 고차 cohomology가 사라진다는 소멸정리이다. 이는 holomorphic line bundle의 전역 section을 충분히 확보하기 위한 도구이며, 그 해석적 증명은 곡률의 양정치성을 cohomology의 소멸로 바꾸는 Bochner 유형의 항등식에서 나온다.
 
 ::: 정리 7 (Kodaira 소멸정리)
-$X$를 복소차원 $n$의 콤팩트 complex manifold, $L$을 $X$ 위의 양의 line bundle이라 하자. $K_X = \Omega^n_X$를 canonical line bundle ([\[대수다양체\] §표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5){: data-lid="t5ecu" data-relation="requires-review" }) 이라 하면, 모든 $q > 0$에 대하여
+$X$를 복소차원 $n$의 콤팩트 complex manifold, $L$을 $X$ 위의 양의 line bundle이라 하자. $K_X = \Omega^n_X$를 canonical line bundle ([\[대수다양체\] §표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5){: data-lid="t5ecu" data-relation="required" reviewed="" }) 이라 하면, 모든 $q > 0$에 대하여
 
 $$
 H^q(X, K_X \otimes L) = 0
@@ -158,7 +158,7 @@ $$
 \Delta_{\bar\partial} = \Delta_\partial + [i\Theta(L, h), \Lambda]
 $$
 
-가 성립한다 (여기서 $\Lambda$는 Kähler 형식과의 wedge 곱 $L_\omega$의 수반작용소 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dab9l" data-relation="requires-review" })). $(n, q)$-형식 $\alpha$가 조화이면 $\Delta_{\bar\partial}\alpha = 0$이고, 위 항등식을 $\alpha$와의 $L^2$-내적에 적용하면
+가 성립한다 (여기서 $\Lambda$는 Kähler 형식과의 wedge 곱 $L_\omega$의 수반작용소 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dab9l" data-relation="required" reviewed="" })). $(n, q)$-형식 $\alpha$가 조화이면 $\Delta_{\bar\partial}\alpha = 0$이고, 위 항등식을 $\alpha$와의 $L^2$-내적에 적용하면
 
 $$
 0 = (\Delta_{\bar\partial}\alpha, \alpha) = \lVert \partial^\ast\alpha \rVert^2 + \lVert \partial\alpha \rVert^2 + \big( [i\Theta, \Lambda]\alpha, \alpha \big)
@@ -187,7 +187,7 @@ $$
 3. *separation of tangent vectors<sub>접벡터 분리</sub>*: 각 점 $x$에서 $\Phi_M$의 미분 $\dd{\Phi_M}\vert_x$가 단사이다.
 :::
 
-세 조건은 정확히 $\Phi_M$이 holomorphic injective immersion, 곧 콤팩트성과 함께 holomorphic embedding이 되기 위한 요구이다. (1)은 morphism이 어디서나 정의되게 하고, (2)는 단사성을, (3)은 몰입성을 보장한다. $X$가 콤팩트이므로 injective immersion은 곧 위상적 embedding이고, holomorphic injective immersion은 closed 복소 부분다양체로의 embedding이 된다. 따라서 $M$이 very ample이면 $X$는 $\Phi_M$을 통해 $\mathbb{CP}^N$의 smooth한 closed 부분다양체로 실현되어 projective variety ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="6fjbt" data-relation="requires-review" }) 가 된다. 세 분리 조건 각각을 section의 존재로 환원하면, 그 section의 존재가 다름 아닌 고차 cohomology의 소멸에서 나온다는 것이 매장정리 증명의 골자이다.
+세 조건은 정확히 $\Phi_M$이 holomorphic injective immersion, 곧 콤팩트성과 함께 holomorphic embedding이 되기 위한 요구이다. (1)은 morphism이 어디서나 정의되게 하고, (2)는 단사성을, (3)은 몰입성을 보장한다. $X$가 콤팩트이므로 injective immersion은 곧 위상적 embedding이고, holomorphic injective immersion은 closed 복소 부분다양체로의 embedding이 된다. 따라서 $M$이 very ample이면 $X$는 $\Phi_M$을 통해 $\mathbb{CP}^N$의 smooth한 closed 부분다양체로 실현되어 projective variety ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="6fjbt" data-relation="required" reviewed="" }) 가 된다. 세 분리 조건 각각을 section의 존재로 환원하면, 그 section의 존재가 다름 아닌 고차 cohomology의 소멸에서 나온다는 것이 매장정리 증명의 골자이다.
 
 ::: 정리 9 (Kodaira 매장정리)
 $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$이 존재하면, 충분히 큰 모든 $k$에 대하여 $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고, $X$는 projective variety이다. 역으로 projective variety는 양의 line bundle($\mathbb{CP}^N$의 $\mathcal{O}(1)$의 restriction)을 가진다. 곧 콤팩트 complex manifold $X$가 사영적인 것은 $X$ 위에 양의 line bundle이 존재하는 것과 동치이다.
@@ -246,7 +246,7 @@ Complex projective space $\mathbb{CP}^N$의 closed 복소 해석적 부분집합
 :::
 
 ::: 증명
-핵심만 서술한다. $Z \subseteq \mathbb{CP}^N$을 closed 복소 해석적 부분집합이라 하고, 그 affine cone $\widehat{Z} \subseteq \mathbb{C}^{N+1}$을 원점을 포함하는 원뿔로 잡으면 $\widehat{Z}$는 $\mathbb{C}^{N+1}$의 closed 해석적 부분집합이다. 원점에서 $\widehat{Z}$를 정의하는 holomorphic function들의 멱급수를 동차성분으로 전개하면, $\widehat{Z}$가 원뿔(스칼라곱에 닫힘)이라는 사실에서 각 동차성분이 다시 $\widehat{Z}$ 위에서 소멸함을 보일 수 있다. 곧 $\widehat{Z}$의 ideal이 homogeneous polynomial들로 생성된다. 더 정밀하게는, 콤팩트 complex manifold 위의 유리형 함수체가 초월차수 유한한 대수적 함수체라는 Siegel 정리, 또는 한 변수 holomorphic function의 영점 집적과 $\mathbb{CP}^N$의 콤팩트성을 결합한 고전적 논법으로, $Z$의 국소 정의함수들이 대역적 homogeneous polynomial로 대체됨을 얻는다. 따라서 $Z = Z(F_1, \ldots, F_r)$로 homogeneous polynomial의 공통 영점이 되어 $Z$가 사영대수적 집합 ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="164uv" data-relation="requires-review" }) 이다. $Z$가 smooth한 복소 부분다양체이면 그 대수적 실현도 smooth한 projective algebraic variety이다. 완전한 증명은 인용에 맡긴다.
+핵심만 서술한다. $Z \subseteq \mathbb{CP}^N$을 closed 복소 해석적 부분집합이라 하고, 그 affine cone $\widehat{Z} \subseteq \mathbb{C}^{N+1}$을 원점을 포함하는 원뿔로 잡으면 $\widehat{Z}$는 $\mathbb{C}^{N+1}$의 closed 해석적 부분집합이다. 원점에서 $\widehat{Z}$를 정의하는 holomorphic function들의 멱급수를 동차성분으로 전개하면, $\widehat{Z}$가 원뿔(스칼라곱에 닫힘)이라는 사실에서 각 동차성분이 다시 $\widehat{Z}$ 위에서 소멸함을 보일 수 있다. 곧 $\widehat{Z}$의 ideal이 homogeneous polynomial들로 생성된다. 더 정밀하게는, 콤팩트 complex manifold 위의 유리형 함수체가 초월차수 유한한 대수적 함수체라는 Siegel 정리, 또는 한 변수 holomorphic function의 영점 집적과 $\mathbb{CP}^N$의 콤팩트성을 결합한 고전적 논법으로, $Z$의 국소 정의함수들이 대역적 homogeneous polynomial로 대체됨을 얻는다. 따라서 $Z = Z(F_1, \ldots, F_r)$로 homogeneous polynomial의 공통 영점이 되어 $Z$가 사영대수적 집합 ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="164uv" data-relation="required" reviewed="" }) 이다. $Z$가 smooth한 복소 부분다양체이면 그 대수적 실현도 smooth한 projective algebraic variety이다. 완전한 증명은 인용에 맡긴다.
 :::
 
 Chow 정리와 매장정리를 합치면 결론이 깔끔해진다. Hodge manifold는 어떤 $\mathbb{CP}^N$에 holomorphic embedding되고, Chow 정리에 의해 그 image는 homogeneous polynomial로 정의되는 smooth projective algebraic variety이다. 곧 사영 complex manifold와 projective algebraic variety가 같은 대상이 되어, 복소해석적으로 정의된 Hodge manifold가 순수 대수기하의 대상으로 옮겨진다. 이것이 콤팩트 Kähler manifold와 projective algebraic variety 사이의 경계를 정확히 그어 주는 GAGA적 결론이다.

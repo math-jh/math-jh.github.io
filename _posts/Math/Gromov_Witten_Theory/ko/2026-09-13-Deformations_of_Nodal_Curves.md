@@ -16,7 +16,7 @@ weight: 1
 
 Gromov--Witten theory에서 우리는 target space $X$로 들어오는 stable map들 $\mu: C\rightarrow X$를 다룬다. 이 때 $\mu$의 정의역 $C$는 nodal curve에, 특별한 점들을 추가로 선택해준 것이다. 이 때문에 이 카테고리는 이들 nodal curve를 다루는 글로 시작한다. 더 구체적으로, 우리는 이 nodal curve가 어떻게 변형되고, 어떤 automorphism을 갖는지 계산하게 된다. 
 
-Nodal curve의 대표적인, 그리고 본질적으로 유일한 예시는 $\x\y=0$이다. 이는 두 좌표축 $\{\x=0\}$과 $\{\y=0\}$의 합집합이며, 이들이 만나는 점, 즉 원점을 우리는 *node<sub>마디</sub>* 혹은 *nodal point<sub>마디점</sub>*이라 부른다. 핵심적인 성질 중 하나는 이들 node가 singular point라는 것이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="qnd3m" data-relation="requires-review" }) 이렇게 singular point가 존재하는 공간을 다룰 때 유효한 전략은 이를 central fiber로 갖고, 그 주변의 fiber는 모두 smooth인 deformation을 생각하는 것이다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="nwt79" data-relation="required" reviewed="" }에서 살펴보았듯, $\x\y=0$에 매개변수 $\t$를 넣어 $\x\y=\t$로 바꾸면 이러한 deformation을 얻을 수 있었다.
+Nodal curve의 대표적인, 그리고 본질적으로 유일한 예시는 $\x\y=0$이다. 이는 두 좌표축 $\{\x=0\}$과 $\{\y=0\}$의 합집합이며, 이들이 만나는 점, 즉 원점을 우리는 *node<sub>마디</sub>* 혹은 *nodal point<sub>마디점</sub>*이라 부른다. 핵심적인 성질 중 하나는 이들 node가 singular point라는 것이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="qnd3m" data-relation="required" reviewed="" }) 이렇게 singular point가 존재하는 공간을 다룰 때 유효한 전략은 이를 central fiber로 갖고, 그 주변의 fiber는 모두 smooth인 deformation을 생각하는 것이다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="nwt79" data-relation="required" reviewed="" }에서 살펴보았듯, $\x\y=0$에 매개변수 $\t$를 넣어 $\x\y=\t$로 바꾸면 이러한 deformation을 얻을 수 있었다.
 
 더 일반적으로 우리는 curve $C$의 singular point가 오직 node 뿐일 경우, 즉 모든 singular point가 étale-local하게 $\x\y=0$의 꼴일 경우 이를 *nodal curve<sub>마디 곡선</sub>*라 부른다. 이러한 nodal curve들을 포함하여 이 글에서 등장하는 모든 scheme은 algebraically closed field $\mathbb{K}$ 위에서 separated이고 finite type인 것으로 생각한다. 직관적으로는 $\mathbb{K}=\mathbb{C}$로 두고, 대부분의 scheme은 (fat point가 필요한 경우를 제외하면) 모두 variety인 것으로 생각해도 대체로 무해하다.
 
@@ -30,7 +30,7 @@ Connected projective nodal curve $C$의 서로 다른 smooth point $p_1,\ldots,p
 
 즉 prestable curve란 nodal curve 위에, node와 겹치지 않도록 몇 개의 점을 추가로 선택한 것에 불과하다. 
 
-Nodal curve가 주어지면 이 node에서 붙은 두 branch를 떼어내는 방법이 존재한다. 이는 [\[스킴\] §차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5){: data-lid="o8zf6" data-relation="requires-review" } 직후의 논의에서 정의한 normalization을 nodal curve에 적용한 것으로, 이 구체적인 상황에서 $C$의 *normalization<sub>정규화</sub>*란, smooth projective curve $\widetilde{C}$와 finite morphism $\nu:\widetilde{C}\rightarrow C$로서, node의 바깥에서 isomorphism이고 각 node 위에 정확히 두 점이 놓이는 것을 뜻한다. 
+Nodal curve가 주어지면 이 node에서 붙은 두 branch를 떼어내는 방법이 존재한다. 이는 [\[스킴\] §차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5){: data-lid="o8zf6" data-relation="required" reviewed="" } 직후의 논의에서 정의한 normalization을 nodal curve에 적용한 것으로, 이 구체적인 상황에서 $C$의 *normalization<sub>정규화</sub>*란, smooth projective curve $\widetilde{C}$와 finite morphism $\nu:\widetilde{C}\rightarrow C$로서, node의 바깥에서 isomorphism이고 각 node 위에 정확히 두 점이 놓이는 것을 뜻한다. 
 
 {% diagram Math/Gromov_Witten_Theory/Deformations_of_Nodal_Curves-1.svg width="7.37em" alt="normalization separates the two branches of a node" %}
 

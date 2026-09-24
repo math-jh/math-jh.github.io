@@ -14,7 +14,7 @@ weight: 12
 published: false
 ---
 
-두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 complex analysis의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3){: data-lid="rba2w" data-relation="requires-review" }), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 injective holomorphic morphism 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
+두 영역 사이에 holomorphic bijection이 존재하는지, 곧 두 영역이 conformal equivalence인지를 묻는 문제는 complex analysis의 한 중심에 놓인다. Holomorphic bijection은 도함수가 어디서도 소멸하지 않아 conformal map이 되므로 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3){: data-lid="rba2w" data-relation="required" reviewed="" }), 한 영역 위의 holomorphic 함수론 전체가 conformal isomorphism을 통해 다른 영역으로 고스란히 옮겨진다. 그런데 등각동형의 후보가 될 수 있는 영역은 놀랍도록 적다. Riemann 사상정리는 $\mathbb{C}$ 전체가 아닌 단순연결 열린집합이라면, 그 모양이 아무리 복잡하더라도 예외 없이 단위원판과 등각동형임을 단언한다. 곧 위상적 조건인 단순연결성 하나만으로 등각형 분류가 끝나며, $\mathbb{C}$와 그 진부분집합이라는 단 두 개의 등각동형류만 남는다. 이 글은 그 증명을 전개한다. 핵심 도구는 국소적으로 bounded인 holomorphic function 족이 정규족을 이룬다는 Montel 정리이며, 이를 써서 단위원판으로 가는 injective holomorphic morphism 가운데 한 점에서 도함수의 절댓값을 최대화하는 극값사상을 추출하고, 그 극값성이 사상을 전사로 강제함을 보인다. 단사성은 Hurwitz 정리가 보장한다.
 
 ## 정규족과 Montel 정리
 

@@ -20,7 +20,7 @@ $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
 $$
 
-가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $\dd{\omega} = 0$이며 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="t1f8w" data-relation="requires-review" }), 거기서 따라오는 [§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="iuhtc" data-relation="required" reviewed="" }가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
+가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $\dd{\omega} = 0$이며 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="t1f8w" data-relation="required" reviewed="" }), 거기서 따라오는 [§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="iuhtc" data-relation="required" reviewed="" }가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
 
 핵심 발상은 cohomology class마다 표준 representative를 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + \dd{\beta}$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 representative를 고를 수 있다. 이 최소 representative가 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
 
@@ -211,7 +211,7 @@ $$
 로, 곧 $(p,q)$-degree의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
-[정리 7](#thm7){: data-lid="1wvcs" data-relation="required" reviewed="" }에 의해 $\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar\partial$-조화형식으로 실현되므로 ([정리 6](#thm6){: data-lid="2l2pn" data-relation="required" reviewed="" }의 $\bar\partial$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar\partial}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="9s4we" data-relation="required" reviewed="" }에서 온다. 이 동일시가 Hodge 수가 [§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="5e38f" data-relation="requires-review" }의 Hodge 수와 일치함을 보장한다.
+[정리 7](#thm7){: data-lid="1wvcs" data-relation="required" reviewed="" }에 의해 $\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar\partial$-조화형식으로 실현되므로 ([정리 6](#thm6){: data-lid="2l2pn" data-relation="required" reviewed="" }의 $\bar\partial$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar\partial}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="9s4we" data-relation="required" reviewed="" }에서 온다. 이 동일시가 Hodge 수가 [§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="5e38f" data-relation="required" reviewed="" }의 Hodge 수와 일치함을 보장한다.
 
 ::: 정리 9 (Hodge 분해와 Hodge 대칭)
 $X$를 콤팩트 Kähler manifold라 하자. 그러면 각 $k$에 대하여 direct sum decomposition
@@ -269,7 +269,7 @@ $$
 로 $2$의 배수이다. 곧 홀수 degree Betti 수는 짝수이다.
 :::
 
-가장 단순한 경우 $k = 1$에서 $b_1(X) = h^{1,0}(X) + h^{0,1}(X) = 2 h^{1,0}(X)$로, 첫 Betti 수가 holomorphic 1-form space 차원의 두 배가 된다. 이 짝수성은 콤팩트 complex manifold가 Kähler인지를 가르는 가장 손쉬운 장애이다. Hopf 곡면 $S^1 \times S^3$은 콤팩트 complex manifold이면서 $b_1 = 1$이 홀수이므로, 어떤 Hermitian 계량으로도 Kähler 구조를 가질 수 없다 ([§Kähler manifold, ⁋명제 11](/ko/math/complex_geometry/kahler_manifolds#prop11){: data-lid="qoqzz" data-relation="requires-review" }이 짝수 degree에 준 장애를 홀수 degree로 보완한다). 이로써 Kähler 조건은 짝수 Betti 수의 양성($b_{2k} \geq 1$)과 홀수 Betti 수의 짝수성이라는 두 위상적 제약을 동시에 부과한다.
+가장 단순한 경우 $k = 1$에서 $b_1(X) = h^{1,0}(X) + h^{0,1}(X) = 2 h^{1,0}(X)$로, 첫 Betti 수가 holomorphic 1-form space 차원의 두 배가 된다. 이 짝수성은 콤팩트 complex manifold가 Kähler인지를 가르는 가장 손쉬운 장애이다. Hopf 곡면 $S^1 \times S^3$은 콤팩트 complex manifold이면서 $b_1 = 1$이 홀수이므로, 어떤 Hermitian 계량으로도 Kähler 구조를 가질 수 없다 ([§Kähler manifold, ⁋명제 11](/ko/math/complex_geometry/kahler_manifolds#prop11){: data-lid="qoqzz" data-relation="required" reviewed="" }이 짝수 degree에 준 장애를 홀수 degree로 보완한다). 이로써 Kähler 조건은 짝수 Betti 수의 양성($b_{2k} \geq 1$)과 홀수 Betti 수의 짝수성이라는 두 위상적 제약을 동시에 부과한다.
 
 Hodge 수들을 degree에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler manifold의 cohomology 구조를 한눈에 담는다. $h^{p,q}$를 $(p,q)$ 위치에 두고 위에서 아래로 $k = p + q$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $n$의 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11){: data-lid="okc75" data-relation="required" reviewed="" }에서 오는 $h^{p,q} = h^{n-p, n-q}$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($n = 2$)의 Hodge 다이아몬드를 보여준다.
 
@@ -329,7 +329,7 @@ $$
 이 성립한다.
 :::
 
-이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 degree를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 representation을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="17ygx" data-relation="requires-review" }에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \rightarrow H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11){: data-lid="babhx" data-relation="weak" reviewed="" }), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
+이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 degree를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 representation을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="17ygx" data-relation="weak" reviewed="" }에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \rightarrow H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11){: data-lid="babhx" data-relation="weak" reviewed="" }), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
 
 ---
 

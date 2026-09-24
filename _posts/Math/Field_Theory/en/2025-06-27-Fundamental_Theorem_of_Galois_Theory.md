@@ -40,7 +40,7 @@ Our claim is that the set of automorphisms of $\mathbb{L}$ over $\mathbb{K}$ is 
 Therefore, $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert$ is the number of homomorphisms from $\mathbb{L}$ into $\overline{\mathbb{K}}$ over $\mathbb{K}$, which is the separable degree $[\mathbb{L}:\mathbb{K}]_s$ ([§Étale Algebras, ⁋Definition 10](/en/math/field_theory/etale_algebras#def10){: data-lid="yjvac" data-relation="required" }). Since $\mathbb{L}/\mathbb{K}$ is a finite degree separable extension, it is an étale algebra ([§Separable Extensions, ⁋Definition 8](/en/math/field_theory/separable_extensions#def8){: data-lid="yy5hh" data-relation="required" }), and thus by [§Étale Algebras, ⁋Proposition 13](/en/math/field_theory/etale_algebras#prop13){: data-lid="13txm" data-relation="required" }, this value equals $[\mathbb{L}:\mathbb{K}]$.
 :::
 
-We now examine concrete applications of [Theorem 1](#thm1){: data-lid="17xxd" data-relation="required" }. First, we consider the following simplest example.
+We now examine concrete applications of [Theorem 1](#thm1){: data-lid="17xxd" data-relation="weak" }. First, we consider the following simplest example.
 
 ::: Example 3
 Let $\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$. Since this is the splitting field of the polynomial $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$, it is quasi-Galois by the last condition of [§Galois Extensions, ⁋Proposition 5](/en/math/field_theory/galois_extension#prop5){: data-lid="s26b8" data-relation="required" }. On the other hand, since every algebraic extension of $\mathbb{Q}$ is separable by [§Fields, ⁋Proposition 18](/en/math/field_theory/fields#prop18){: data-lid="qmp2i" data-relation="required" } ([§Separable Extensions, ⁋Proposition 9](/en/math/field_theory/separable_extensions#prop9){: data-lid="9uh6x" data-relation="required" }), $\mathbb{L}/\mathbb{Q}$ is a Galois extension by the second condition of [§Galois Extensions, ⁋Theorem 8](/en/math/field_theory/galois_extension#thm8){: data-lid="jzhrk" data-relation="required" }.
@@ -78,7 +78,7 @@ We can identify these from the fixed elements determined above. Since the elemen
 On the other hand, a field containing two distinct roots of $\x^3-2$ contains their ratio, which is $\omega$ or $\omega^2$, and hence contains $\omega$ either way, becoming all of $\mathbb{L}$. Thus, the three fields above of degree $3$ are distinct and each contains only one root of $\x^3-2$; therefore, they do not satisfy the second condition of [§Galois Extensions, ⁋Proposition 5](/en/math/field_theory/galois_extension#prop5){: data-lid="s82q0" data-relation="required" } and are not quasi-Galois extensions of $\mathbb{Q}$. Nevertheless, they are mapped to one another by elements of $\Gal(\mathbb{L}/\mathbb{Q})$."
 :::
 
-Now, let us examine an example showing why the closed condition appearing in the statement of [Theorem 1](#thm1){: data-lid="tkhm2" data-relation="required" } is necessary. When the Galois group is infinite, not all subgroups, but only the closed ones among them, correspond to subextensions.
+Now, let us examine an example showing why the closed condition appearing in the statement of [Theorem 1](#thm1){: data-lid="tkhm2" data-relation="weak" } is necessary. When the Galois group is infinite, not all subgroups, but only the closed ones among them, correspond to subextensions.
 
 ::: Example 5
 Fix a prime $p$ and consider the algebraic closure $\overline{\mathbb{F}}_p$ of $\mathbb{F}_p$. Since $\mathbb{F}_p$ is a finite set, it is perfect ([§Fields, ⁋Proposition 18](/en/math/field_theory/fields#prop18){: data-lid="3hsyh" data-relation="required" }), and hence all its algebraic extensions are separable ([§Separable Extensions, ⁋Proposition 9](/en/math/field_theory/separable_extensions#prop9){: data-lid="c715h" data-relation="required" }). Meanwhile, $\overline{\mathbb{F}}_p$ is the splitting field of all non-constant polynomials in $\mathbb{F}_p[\x]$, so by the fifth condition of [§Galois Extensions, ⁋Proposition 5](/en/math/field_theory/galois_extension#prop5){: data-lid="treaq" data-relation="required" }, it is quasi-Galois; that is, $\overline{\mathbb{F}}_p/\mathbb{F}_p$ is a Galois extension. Let us denote its Galois group by $\Gamma$.
@@ -128,14 +128,14 @@ $$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
 
 holds, so $H$ is a normal subgroup. Here, $\sigma H\sigma^{-1}$ is closed because conjugation is a homeomorphism of a topological group.
 
-Finally, we verify the isomorphism. When $\mathbb{M}/\mathbb{K}$ is Galois, the restriction defined above is a group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$, and its kernel is the set of elements fixing $\mathbb{M}$, that is, $g(\mathbb{M})=g(k(H))=H$. Meanwhile, the fact that $\rho$ is surjective is as in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13){: data-lid="6q8iy" data-relation="weak" }. This is because any $\tau\in\Gal(\mathbb{M}/\mathbb{K})$ extends to an automorphism of $\overline{\mathbb{K}}$ over $\mathbb{K}$ by [§Galois Extensions, ⁋Proposition 1](/en/math/field_theory/galois_extension#prop1){: data-lid="pvj98" data-relation="required" }, and since $\mathbb{L}/\mathbb{K}$ is quasi-Galois, restricting this extension to $\mathbb{L}$ yields an extension of $\tau$ in $\Gal(\mathbb{L}/\mathbb{K})$. Therefore, by the first isomorphism theorem, $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$.
+Finally, we verify the isomorphism. When $\mathbb{M}/\mathbb{K}$ is Galois, the restriction defined above is a group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$, and its kernel is the set of elements fixing $\mathbb{M}$, that is, $g(\mathbb{M})=g(k(H))=H$. Meanwhile, the fact that $\rho$ is surjective is as in [§Galois Extensions, ⁋Proposition 13](/en/math/field_theory/galois_extension#prop13){: data-lid="6q8iy" data-relation="required" }. This is because any $\tau\in\Gal(\mathbb{M}/\mathbb{K})$ extends to an automorphism of $\overline{\mathbb{K}}$ over $\mathbb{K}$ by [§Galois Extensions, ⁋Proposition 1](/en/math/field_theory/galois_extension#prop1){: data-lid="pvj98" data-relation="required" }, and since $\mathbb{L}/\mathbb{K}$ is quasi-Galois, restricting this extension to $\mathbb{L}$ yields an extension of $\tau$ in $\Gal(\mathbb{L}/\mathbb{K})$. Therefore, by the first isomorphism theorem, $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$.
 :::
 
 The three subgroups of order $2$ in [Example 4](#ex4){: data-lid="veolq" data-relation="required" } are conjugate to each other and thus not normal, and indeed the corresponding subfields $\mathbb{Q}(\omega^i\alpha)$ were not Galois extensions of $\mathbb{Q}$. On the other hand, $A_3$ is a normal subgroup, and $\mathbb{Q}(\omega)$ is the splitting field of $\x^2+\x+1$ and hence a Galois extension of $\mathbb{Q}$; in this case, the isomorphism of [Corollary 6](#cor6){: data-lid="9v49d" data-relation="required" } is $S_3/A_3\cong\Gal(\mathbb{Q}(\omega)/\mathbb{Q})$.
 
 ## Proof of the Fundamental Theorem
 
-We prove [Theorem 1](#thm1){: data-lid="f394l" data-relation="required" } in two steps as follows.
+We prove [Theorem 1](#thm1){: data-lid="f394l" data-relation="weak" } in two steps as follows.
 
 ::: Lemma 7
 For any subextension $\mathbb{M}\in \Ext(\mathbb{L}/\mathbb{K})$, the extension $\mathbb{L}/\mathbb{M}$ is also a Galois extension. Viewing an $\mathbb{M}$-automorphism as a $\mathbb{K}$-automorphism so that we regard the Galois group $\Gal(\mathbb{L}/\mathbb{M})$ as a subgroup of $\Gal(\mathbb{L}/\mathbb{K})$, this is a *closed* subgroup of $\Gal(\mathbb{L}/\mathbb{K})$, and therefore $g$ is well-defined.
@@ -175,7 +175,7 @@ and as $i$ ranges from $1$ to $m$, the elements $\tau\sigma_i$ run through all o
 Then the equation corresponding to $\sigma_1=\id_\mathbb{N}$, namely $\sum_{j}x_jc_j=0$, becomes a non-trivial linear combination among $x_1,\ldots,x_{m+1}$ over $\mathbb{N}^H$, contradicting the assumption that they are linearly independent over $\mathbb{N}^H$.
 :::
 
-We can now prove [Theorem 1](#thm1){: data-lid="0iwkh" data-relation="required" }.
+We can now prove [Theorem 1](#thm1){: data-lid="0iwkh" data-relation="weak" }.
 
 ::: Proof (Theorem 1)
 By [Lemma 7](#lem7){: data-lid="6uu3v" data-relation="required" }, $g$ is well-defined, and for $k$, since every element of $G$ fixes $\mathbb{K}$, the field of invariants $k(G)$ contains $\mathbb{K}$ and is a subfield of $\mathbb{L}$, that is, an element of $\Ext(\mathbb{L}/\mathbb{K})$.

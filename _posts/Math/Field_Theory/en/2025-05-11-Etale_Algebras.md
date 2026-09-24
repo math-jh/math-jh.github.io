@@ -195,7 +195,7 @@ Similarly, letting $\mathfrak{a}_I$ be the $\mathbb{K}$-subspace spanned by $(e_
 
 ## Separable Degree
 
-Before looking further into the properties of étale algebras, let us introduce a useful concept. In the discussion so far the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ that first appeared in [Theorem 1](#thm1){: data-lid="p0owb" data-relation="required" } has played an important role. Now fix a commutative $\mathbb{K}$-algebra $A$ of finite degree, and for any extension $\mathbb{L}/\mathbb{K}$ define a natural number $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$. Then we know the inequality
+Before looking further into the properties of étale algebras, let us introduce a useful concept. In the discussion so far the set $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$ that first appeared in [Theorem 1](#thm1){: data-lid="p0owb" data-relation="weak" } has played an important role. Now fix a commutative $\mathbb{K}$-algebra $A$ of finite degree, and for any extension $\mathbb{L}/\mathbb{K}$ define a natural number $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$. Then we know the inequality
 
 $$h(\mathbb{L})\leq [A:\mathbb{K}]=n$$
 

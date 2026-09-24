@@ -73,7 +73,7 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13){: data-lid="649h0" data-relation="required" reviewed="" }) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
 :::
 
-앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="ys0cs" data-relation="requires-review" }에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3){: data-lid="jhwvn" data-relation="required" reviewed="" }을 살펴보자. 
+앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="ys0cs" data-relation="required" reviewed="" }에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3){: data-lid="jhwvn" data-relation="required" reviewed="" }을 살펴보자. 
 
 ::: 예시 4
 좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="ek8pv" data-relation="weak" reviewed="" }의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10){: data-lid="vk5z0" data-relation="required" reviewed="" }의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14){: data-lid="oenpk" data-relation="required" reviewed="" }로부터 다음의 exact sequence
@@ -86,7 +86,7 @@ $$0=\dd{(2)}=\dd{((\sqrt{2})^2)}=2\sqrt{2}\dd{(\sqrt{2})}$$
 
 와 $2\sqrt{2}$가 $\mathbb{Q}(\sqrt{2})$에서 invertible이라는 사실로부터 $\dd{(\sqrt{2})}=0$이어야 하고 따라서 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}=0$이어야 함을 안다. 
 
-반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="yw03k" data-relation="requires-review" }에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $\dd{(t^{1/p})}$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
+반면 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="yw03k" data-relation="required" reviewed="" }에서 살펴본 $\mathbb{K}=\mathbb{F}_p(t)$의 algebraic extension $\mathbb{K}(t^{1/p})=\mathbb{K}[\x]/(\x^p-t)$에서는 위의 계산이 틀어지게 되는데, 위의 계산과 마찬가지로 $\Omega_{\mathbb{K}(t^{1/p})/\mathbb{K}}$는 $\dd{(t^{1/p})}$로 생성되는 $\mathbb{K}(t^{1/p})$-module이지만, 다음의 계산
 
 $$0=\dd{(t)}=\dd{((t^{1/p})^p)}=p(t^{1/p})^{p-1}\dd{(t^{1/p})}$$
 
@@ -97,7 +97,7 @@ $$\Omega_{(\mathbb{K}[\x]/(f))/\mathbb{K}}\cong\frac{\Omega_{\mathbb{K}[\x]/\mat
 이므로 이로부터 위의 두 계산이 따라나온다. 
 :::
 
-우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $\dd{f}=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8){: data-lid="pa54n" data-relation="forward" reviewed="" }) 그럼 [예시 4](#ex4){: data-lid="16bod" data-relation="requires-review" }에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9){: data-lid="4j2un" data-relation="forward" reviewed="" }) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
+우리가 배제하고자 하는 경우는 정확히 minimal polynomial $f$가 중근을 갖는 경우, 즉 $\dd{f}=0$인 경우이므로 étale algebra의 개념을 유용하게 사용할 수 있을 것이다. 곧 우리는 *separable extension*을 임의의 finite degree subextension이 étale인 field extension으로 정의할 것이다. ([정의 8](#def8){: data-lid="pa54n" data-relation="forward" reviewed="" }) 그럼 [예시 4](#ex4){: data-lid="16bod" data-relation="weak" reviewed="" }에서 살펴봤듯 $\mathbb{Q}$의 임의의 algebraic extension은 separable extension이 된다. 더 나아가 우리는 perfect field의 임의의 algebraic extension은 separable인 것을 보일 것이다. ([명제 9](#prop9){: data-lid="4j2un" data-relation="forward" reviewed="" }) 이 과정에서 사용할 étale algebra의 성질들을 조금 더 살펴보자. 
 
 ::: 명제 5
 임의의 field $\mathbb{K}$에 대하여, finite degree, commutative $\mathbb{K}$-algebra $A$가 reduced인 것은 $\mathbb{K}$의 적당한 finite degree field extension $\mathbb{L}_1,\ldots, \mathbb{L}_n$이 존재하여 $A$가 $\mathbb{L}_1\times\cdots\times \mathbb{L}_n$과 $\mathbb{K}$-algebra로서 isomorphic한 것이 동치이다. 
@@ -203,7 +203,7 @@ $$\mathbb{M}\subseteq \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 
 뿐만 아니라, finite degree separable extension은 단 하나의 원소로 생성될 수 있다. 즉, 만일 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이라면, 적절한 $x\in \mathbb{L}$을 택하여 $\mathbb{L}=\mathbb{K}[x]$이도록 할 수 있다. 이러한 원소를 *primitive element*라 부른다. 
 
-[정리 14](#thm14){: data-lid="abfxf" data-relation="requires-review" }는 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
+[정리 14](#thm14){: data-lid="abfxf" data-relation="required" reviewed="" }는 finite degree separable extension에 대해서는 항상 primitive element를 찾을 수 있다는 것을 보여준다. 이를 위해서는 다음 보조정리가 필요하다.
 
 ::: 보조정리 13
 Infinite field $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$를 고정하자. 만일 $A$가 오직 유한히 많은 subalgebra만을 가지고, $V$가 $A$를 생성하는 부분 벡터공간이라 하면 적당한 $x\in V$가 존재하여 $A=\mathbb{K}[x]$이도록 할 수 있다. 
@@ -242,7 +242,7 @@ $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 
 [정리 14](#thm14){: data-lid="62gg5" data-relation="weak" reviewed="" }는 $\mathbb{K}$가 finite field여도 항상 성립하지만, 이를 증명하기 위해서는 [보조정리 13](#lem13){: data-lid="nbabs" data-relation="weak" reviewed="" }보다 조금 더 정교한 counting argument가 필요하므로 나중으로 미뤄둔다.
 
-한편 separability는 본질적으로는 (거의) étale algebra이고, étale algebra는 base change에 대해 잘 행동하므로 ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14){: data-lid="vwjxx" data-relation="required" reviewed="" }) [명제 12](#prop12){: data-lid="vk83n" data-relation="requires-review" }의 증명에서와 마찬가지로 약간의 수정을 가하면 다음의 두 경우에 separability도 base change에 대해 잘 행동한다는 것을 보일 수 있다. 
+한편 separability는 본질적으로는 (거의) étale algebra이고, étale algebra는 base change에 대해 잘 행동하므로 ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14){: data-lid="vwjxx" data-relation="required" reviewed="" }) [명제 12](#prop12){: data-lid="vk83n" data-relation="weak" reviewed="" }의 증명에서와 마찬가지로 약간의 수정을 가하면 다음의 두 경우에 separability도 base change에 대해 잘 행동한다는 것을 보일 수 있다. 
 
 ::: 명제 15
 Algebraic extension $\mathbb{M}/\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{M}/\mathbb{K}$가 separable인 것과 $\mathbb{M}/\mathbb{L}$, $\mathbb{L}/\mathbb{K}$가 모두 separable인 것이 동치이다. 

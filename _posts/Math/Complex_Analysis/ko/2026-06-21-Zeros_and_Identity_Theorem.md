@@ -18,7 +18,7 @@ Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치�
 
 ## 영점의 고립성
 
-영점의 order와 그에 따른 인수분해는 이미 멱급수 전개의 직접적 귀결로 확립되었다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-lid="fdqe2" data-relation="requires-review" }, [⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="ajki4" data-relation="required" reviewed="" }). 여기서는 그 인수분해가 함의하는 위상적 사실, 곧 영점이 서로 떨어져 고립되어 있다는 명제를 정식으로 적고 증명한다. 핵심은 인수분해 $f(z) = (z - z_0)^m g(z)$에서 남는 인수 $g$가 영점에서 $0$이 아니므로, 연속성에 의해 그 근방 전체에서 $0$에서 떨어져 있다는 데 있다.
+영점의 order와 그에 따른 인수분해는 이미 멱급수 전개의 직접적 귀결로 확립되었다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-lid="fdqe2" data-relation="weak" reviewed="" }, [⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="ajki4" data-relation="required" reviewed="" }). 여기서는 그 인수분해가 함의하는 위상적 사실, 곧 영점이 서로 떨어져 고립되어 있다는 명제를 정식으로 적고 증명한다. 핵심은 인수분해 $f(z) = (z - z_0)^m g(z)$에서 남는 인수 $g$가 영점에서 $0$이 아니므로, 연속성에 의해 그 근방 전체에서 $0$에서 떨어져 있다는 데 있다.
 
 ::: 정의 1 (isolated point)
 집합 $S \subseteq \mathbb{C}$의 점 $z_0 \in S$가 $S$의 *isolated point<sub>고립점</sub>*라는 것은, $z_0$의 어떤 근방 $D(z_0, \varepsilon)$ 안에서 $S$의 점이 $z_0$ 하나뿐인 것, 곧
@@ -42,7 +42,7 @@ $z_0$의 한 원판 $D(z_0, R)$에서 $f$가 holomorphic이므로 정리에 의�
 
 만일 모든 $n$에 대해 $a_n = 0$이면 Taylor 급수가 항등적으로 $0$이므로 $f$가 $D(z_0, R)$에서 항등적으로 $0$이 되어 경우 (1)이 성립한다.
 
-그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-lid="p5txa" data-relation="requires-review" }), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="3ekwf" data-relation="required" reviewed="" }) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
+그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-lid="p5txa" data-relation="required" reviewed="" }), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="3ekwf" data-relation="required" reviewed="" }) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
 
 $$f(z) = (z - z_0)^m\,g(z)$$
 

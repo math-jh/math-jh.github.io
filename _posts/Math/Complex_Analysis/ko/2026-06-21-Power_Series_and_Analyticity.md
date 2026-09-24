@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-lid="4c7d0" data-relation="required" reviewed="" }) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3){: data-lid="sym94" data-relation="requires-review" }) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-lid="4n1a1" data-relation="weak" reviewed="" } 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="l9tvu" data-relation="required" reviewed="" }), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
+Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-lid="4c7d0" data-relation="required" reviewed="" }) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3){: data-lid="sym94" data-relation="weak" reviewed="" }) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-lid="4n1a1" data-relation="weak" reviewed="" } 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="l9tvu" data-relation="required" reviewed="" }), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
 
 ## Holomorphic function의 Taylor 전개
 
@@ -76,7 +76,7 @@ $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $
 
 ## Holomorphicity와 해석성의 동치
 
-이제 holomorphic function이 해석적이라는 정리 1의 결론과, 멱급수의 합이 holomorphic이라는 역방향을 합쳐 두 개념의 동치를 정식으로 적는다. 함수가 한 점 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 그 점에서 해석적이라 하는데 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-lid="jnufn" data-relation="requires-review" }), 복소변수에서는 이 해석성이 holomorphicity와 완전히 같은 조건이 된다.
+이제 holomorphic function이 해석적이라는 정리 1의 결론과, 멱급수의 합이 holomorphic이라는 역방향을 합쳐 두 개념의 동치를 정식으로 적는다. 함수가 한 점 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 그 점에서 해석적이라 하는데 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4){: data-lid="jnufn" data-relation="required" reviewed="" }), 복소변수에서는 이 해석성이 holomorphicity와 완전히 같은 조건이 된다.
 
 ::: 정리 3 (holomorphic $\iff$ 해석적)
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f$에 대하여 다음 두 조건은 동치이다.
@@ -164,7 +164,7 @@ $$f(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{m+k}$$
 명제 6은 holomorphic function의 영점이 다항식의 해와 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g$가 연속이고 $g(z_0) \neq 0$이므로 $z_0$의 어떤 근방 전체에서 $g$가 $0$에서 떨어져 있고, 따라서 $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 order $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
 
 ::: 예시 7 (위수의 계산)
-함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="p6l4w" data-relation="requires-review" })
+함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="p6l4w" data-relation="required" reviewed="" })
 
 $$e^z - 1 = z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots = z\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \cdots\right)$$
 

@@ -187,7 +187,7 @@ Fubini–Study 계량의 normalization 상수 $1/2\pi$는 Kähler 류가 정수 
 복소사영공간이 Kähler라는 사실은 곧바로 그 부분다양체로 전파된다.
 
 ::: 명제 9
-Kähler manifold $(X, J, g)$의 복소 부분다양체 $Y \subseteq X$는 유도 계량에 대해 다시 Kähler manifold이다. 특히 smooth projective variety는 모두 Kähler manifold이다 ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="ywgs0" data-relation="requires-review" }).
+Kähler manifold $(X, J, g)$의 복소 부분다양체 $Y \subseteq X$는 유도 계량에 대해 다시 Kähler manifold이다. 특히 smooth projective variety는 모두 Kähler manifold이다 ([\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3){: data-lid="ywgs0" data-relation="required" reviewed="" }).
 :::
 
 ::: 증명

@@ -69,7 +69,7 @@ $k$ 위의 finitely generated polynomial ring들이 이루는 범주를 $\operat
 $\operatorname{Poly}_k$에서의 대상, 곧 $k[\x_1,\ldots,\x_n]$을 *free animated ring<sub>자유 애니메이트 환</sub>*이라 부른다. 일반적으로 집합 $S$에 대한 free animated ring은 $S$가 첨자하는 변수들의 polynomial ring $k[\x_s]_{s\in S}$이며, 이는 밑범주로의 forgetful functor의 왼쪽 수반이 주는 자유 대상이다 ([\[범주론\] §수반함자](/ko/math/category_theory/adjoints){: data-lid="n1145" data-relation="weak" reviewed="" }).
 :::
 
-이 정의의 요체는 "polynomial ring은 이미 완벽하므로 손대지 않고, 나머지 ring은 polynomial ring들의 정합적 colimit으로 재구성한다"는 *nonabelian derived functor<sub>비아벨 유도 함자</sub>*의 철학이다. 한 ordinary ring $B$를 이 $\infty$-범주 안에서 보려면, $B$를 free animated ring들의 simplicial diagram $P_\bullet$의 homotopy colimit으로 실현한다. Sifted colimit을 요구하는 이유는 정확히 이것인데, 유한곱과 정합적인 colimit인 sifted colimit만이 대수 구조 (곱셈)를 colimit 뒤에도 보존하기 때문이다 ([\[범주론\] §극한](/ko/math/category_theory/limits){: data-lid="09zw3" data-relation="requires-review" }의 colimit 개념). 실용적으로는 Dold–Kan 대응을 통해, animated $k$-algebra를 "각 항이 polynomial ring인 simplicial commutative ring $P_\bullet$"으로 다루어도 무방하다.
+이 정의의 요체는 "polynomial ring은 이미 완벽하므로 손대지 않고, 나머지 ring은 polynomial ring들의 정합적 colimit으로 재구성한다"는 *nonabelian derived functor<sub>비아벨 유도 함자</sub>*의 철학이다. 한 ordinary ring $B$를 이 $\infty$-범주 안에서 보려면, $B$를 free animated ring들의 simplicial diagram $P_\bullet$의 homotopy colimit으로 실현한다. Sifted colimit을 요구하는 이유는 정확히 이것인데, 유한곱과 정합적인 colimit인 sifted colimit만이 대수 구조 (곱셈)를 colimit 뒤에도 보존하기 때문이다 ([\[범주론\] §극한](/ko/math/category_theory/limits){: data-lid="09zw3" data-relation="required" reviewed="" }의 colimit 개념). 실용적으로는 Dold–Kan 대응을 통해, animated $k$-algebra를 "각 항이 polynomial ring인 simplicial commutative ring $P_\bullet$"으로 다루어도 무방하다.
 
 Animated ring $R$의 밑에 깔린 simplicial set (또는 Dold–Kan을 통한 connective 복합체)의 homotopy가 그 대상의 가장 기본적인 불변량이다.
 

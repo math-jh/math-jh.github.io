@@ -125,7 +125,7 @@ T_p^{1,0} M = \span_{\mathbb{C}}\left\{ \frac{\partial}{\partial z_1}, \ldots, \
 T_p^{0,1} M = \span_{\mathbb{C}}\left\{ \frac{\partial}{\partial \bar{z}_1}, \ldots, \frac{\partial}{\partial \bar{z}_n} \right\}
 $$
 
-이 되어, complex manifold에서 좌표로 도입했던 holomorphic·antiholomorphic tangent space ([§복소다양체, ⁋정의 10](/ko/math/complex_geometry/complex_manifolds#def10){: data-lid="rnv08" data-relation="requires-review" }) 과 일치한다. 거의 복소구조의 언어는 이 분해를 좌표 없이, 고유공간으로 규정한다.
+이 되어, complex manifold에서 좌표로 도입했던 holomorphic·antiholomorphic tangent space ([§복소다양체, ⁋정의 10](/ko/math/complex_geometry/complex_manifolds#def10){: data-lid="rnv08" data-relation="required" reviewed="" }) 과 일치한다. 거의 복소구조의 언어는 이 분해를 좌표 없이, 고유공간으로 규정한다.
 
 쌍대 쪽에서도 같은 분해가 일어난다. 복소화 cotangent space $T_p^{\ast\mathbb{C}} M = T_p^\ast M \otimes_{\mathbb{R}} \mathbb{C}$ 위에 $J_p$의 전치를 작용시키면, $+i$ 고유공간 $\Lambda^{1,0}_p$과 $-i$ 고유공간 $\Lambda^{0,1}_p$으로 갈라진다. $\Lambda^{1,0}_p$은 $T_p^{0,1} M$ 위에서 소멸하는 (1,0)-covector들, $\Lambda^{0,1}_p$은 $T_p^{1,0} M$ 위에서 소멸하는 (0,1)-covector들로 이루어진다. 표준 거의 복소구조에서는 $\Lambda^{1,0}_p = \span_{\mathbb{C}}\{\dd{z_j}\}$, $\Lambda^{0,1}_p = \span_{\mathbb{C}}\{\dd{\bar{z}_j}\}$이다.
 
@@ -170,7 +170,7 @@ $$
 \bigwedge\nolimits^k W = \bigoplus_{p+q=k} \left( \bigwedge\nolimits^p W' \right) \wedge \left( \bigwedge\nolimits^q W'' \right)
 $$
 
-으로 분해된다 (exterior algebra의 보편성에서 따라오는 표준 동형이다). $W = T_x^{\ast\mathbb{C}} M$, $W' = \Lambda^{1,0}_x$, $W'' = \Lambda^{0,1}_x$에 적용하면 우변의 $(p,q)$-항이 정확히 $\Lambda^{p,q}_x$이므로 점별 분해를 얻는다. 이 분해가 점에 대해 매끄럽게 변하므로 다발의 직합 분해가 되고 ([\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1){: data-lid="fitdu" data-relation="requires-review" }의 $\Omega^k$를 복소화한 것이다), 단면을 취하면 $\Omega^k(M)\otimes\mathbb{C}$의 분해가 된다.
+으로 분해된다 (exterior algebra의 보편성에서 따라오는 표준 동형이다). $W = T_x^{\ast\mathbb{C}} M$, $W' = \Lambda^{1,0}_x$, $W'' = \Lambda^{0,1}_x$에 적용하면 우변의 $(p,q)$-항이 정확히 $\Lambda^{p,q}_x$이므로 점별 분해를 얻는다. 이 분해가 점에 대해 매끄럽게 변하므로 다발의 직합 분해가 되고 ([\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1){: data-lid="fitdu" data-relation="weak" reviewed="" }의 $\Omega^k$를 복소화한 것이다), 단면을 취하면 $\Omega^k(M)\otimes\mathbb{C}$의 분해가 된다.
 :::
 
 이 분해 자체는 임의의 거의 복소구조에서 성립하므로, 거의 복소구조만 있으면 (p,q)-형식을 말할 수 있다. 그러나 exterior derivative $d$가 이 분해와 어떻게 어울리는가는 거의 복소구조가 적분가능한지에 달려 있다. 적분가능성이 바로 이 어긋남을 재는 척도이며, 다음 절에서 그 정밀한 동치들을 세운다.
@@ -304,7 +304,7 @@ $$
 콤팩트한 예로 가장 기본적인 것은 리만 구면이다.
 
 ::: 예시 14 ($S^2 \cong \mathbb{CP}^1$)
-$2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth manifold이며 ([§복소다양체, ⁋예시 9](/ko/math/complex_geometry/complex_manifolds#ex9){: data-lid="lodue" data-relation="requires-review" }), 그 표준 거의 복소구조는 적분가능하다. 더 일반적으로 [정리 12](#thm12){: data-lid="j2t7v" data-relation="required" reviewed="" } 직후의 관찰에 따라, $S^2$ 위의 임의의 거의 복소구조는 실차원 $2$이므로 $N_J = 0$을 자동으로 만족하여 적분가능하다. 따라서 $S^2$ 위의 모든 거의 복소구조는 어떤 Riemann surface 구조에서 온다.
+$2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth manifold이며 ([§복소다양체, ⁋예시 9](/ko/math/complex_geometry/complex_manifolds#ex9){: data-lid="lodue" data-relation="required" reviewed="" }), 그 표준 거의 복소구조는 적분가능하다. 더 일반적으로 [정리 12](#thm12){: data-lid="j2t7v" data-relation="required" reviewed="" } 직후의 관찰에 따라, $S^2$ 위의 임의의 거의 복소구조는 실차원 $2$이므로 $N_J = 0$을 자동으로 만족하여 적분가능하다. 따라서 $S^2$ 위의 모든 거의 복소구조는 어떤 Riemann surface 구조에서 온다.
 :::
 
 적분불가능성이 처음 본격적으로 나타나는 것은 $S^6$이다.

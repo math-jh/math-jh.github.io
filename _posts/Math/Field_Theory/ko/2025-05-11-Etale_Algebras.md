@@ -194,7 +194,7 @@ $\mathbb{K}^n$의 canonical basis를 $(e_1, \dots, e_n)$이라 하고, $\mathbb{
 
 ## 분리가능차수
 
-이제 étale algebra에 대한 성질을 더 살펴보기 전에 유용한 개념을 하나 만들자. 지금까지의 논의들에서 [정리 1](#thm1){: data-lid="p0owb" data-relation="requires-review" }에서 처음 등장한 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 중요한 역할을 해 왔다. 이제 finite degree의 commutative $\mathbb{K}$-algebra $A$를 고정하고, 임의의 extension $\mathbb{L}/\mathbb{K}$이 주어질 때마다 자연수 $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$으로 정의하자. 그럼 우리는 부등식
+이제 étale algebra에 대한 성질을 더 살펴보기 전에 유용한 개념을 하나 만들자. 지금까지의 논의들에서 [정리 1](#thm1){: data-lid="p0owb" data-relation="weak" reviewed="" }에서 처음 등장한 집합 $\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$가 중요한 역할을 해 왔다. 이제 finite degree의 commutative $\mathbb{K}$-algebra $A$를 고정하고, 임의의 extension $\mathbb{L}/\mathbb{K}$이 주어질 때마다 자연수 $h(\mathbb{L})=\lvert \Hom_{\Alg{\mathbb{K}}}(A,\mathbb{L})\rvert$으로 정의하자. 그럼 우리는 부등식
 
 $$h(\mathbb{L})\leq [A:\mathbb{K}]=n$$
 

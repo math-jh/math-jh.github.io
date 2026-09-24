@@ -59,7 +59,7 @@ $$
 :::
 
 ::: 증명
-$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12){: data-lid="tfila" data-relation="requires-review" }), 따라서 $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11){: data-lid="wirg3" data-relation="required" reviewed="" }의 동치조건 (3)). 켤레를 취하면 $\dd{(\Omega^{0,1})} \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
+$X$가 complex manifold이므로 그 표준 거의 복소구조는 적분가능하고 ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12){: data-lid="tfila" data-relation="weak" reviewed="" }), 따라서 $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0} \oplus \Omega^{1,1}$이 성립한다 ([§거의 복소구조, ⁋명제 11](/ko/math/complex_geometry/almost_complex_structures#prop11){: data-lid="wirg3" data-relation="required" reviewed="" }의 동치조건 (3)). 켤레를 취하면 $\dd{(\Omega^{0,1})} \subseteq \Omega^{1,1} \oplus \Omega^{0,2}$도 성립한다.
 
 이제 국소좌표에서 $\omega = \sum_{I,J} f_{IJ}\dd{z_I} \wedge \dd{\bar{z}_J}$를 미분하자. $d$는 antiderivation이고 $\dd{z_j}, \dd{\bar{z}_j}$가 닫혀 있으므로
 
@@ -134,7 +134,7 @@ $$
 H^{0,0}_{\bar\partial}(X) = \ker\left( \bar\partial : \Omega^{0,0}(X) \rightarrow \Omega^{0,1}(X) \right) = \mathcal{O}(X)
 $$
 
-로 전역 holomorphic function의 공간이 된다. $X$가 콤팩트 연결이면 이는 $\mathbb{C}$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14){: data-lid="2s9rg" data-relation="requires-review" }). 더 높은 $q$에서는 $\bar\partial$-방정식의 풀이가능성이 비자명한 정보가 되며, 이 정보가 정확히 holomorphic 형식 sheaf의 cohomology로 해석된다는 것이 이 글의 주된 결과이다. 그 다리를 놓는 국소 보조정리부터 세운다.
+로 전역 holomorphic function의 공간이 된다. $X$가 콤팩트 연결이면 이는 $\mathbb{C}$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14){: data-lid="2s9rg" data-relation="weak" reviewed="" }). 더 높은 $q$에서는 $\bar\partial$-방정식의 풀이가능성이 비자명한 정보가 되며, 이 정보가 정확히 holomorphic 형식 sheaf의 cohomology로 해석된다는 것이 이 글의 주된 결과이다. 그 다리를 놓는 국소 보조정리부터 세운다.
 
 ## $\bar\partial$-Poincaré 보조정리
 
@@ -263,7 +263,7 @@ $$
 ::: 증명
 완전성은 stalk 수준에서, 곧 각 점의 임의로 작은 근방에서 확인하면 충분하다. 각 점은 폴리디스크 근방을 가지므로 [보조정리 6](#lem6){: data-lid="y7ztl" data-relation="required" reviewed="" }을 그러한 근방에서 쓸 수 있다.
 
-먼저 $\Omega^p \rightarrow \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \rightarrow \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7){: data-lid="vrmeh" data-relation="requires-review" } 그 자체이다. $\Omega^p$로의 morphism은 inclusion이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \rightarrow \mathcal{A}^{p,0}$이 단사이고 그 image가 $\bar\partial$의 kernel과 같다).
+먼저 $\Omega^p \rightarrow \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \rightarrow \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7){: data-lid="vrmeh" data-relation="required" reviewed="" } 그 자체이다. $\Omega^p$로의 morphism은 inclusion이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \rightarrow \mathcal{A}^{p,0}$이 단사이고 그 image가 $\bar\partial$의 kernel과 같다).
 
 다음으로 $q \geq 1$에서 $\ker(\bar\partial : \mathcal{A}^{p,q} \rightarrow \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \rightarrow \mathcal{A}^{p,q})$임을 보인다. 포함 $\Img \subseteq \ker$은 [명제 3](#prop3){: data-lid="5bdi3" data-relation="required" reviewed="" }의 $\bar\partial^2 = 0$에서 따라온다. 반대 포함을 stalk에서 본다. $x \in X$와 $x$ 근방의 $\bar\partial$-closed $(p,q)$-형식 $\omega$의 stalk가 주어지면, $x$의 충분히 작은 폴리디스크 근방 $\Delta$를 잡아 $\omega$가 $\Delta$에서 정의된 $\bar\partial$-closed 형식이게 할 수 있다. [보조정리 6](#lem6){: data-lid="3cl9y" data-relation="required" reviewed="" }에 의해 $\Delta$에서 $\omega = \bar\partial\eta$인 $\eta \in \mathcal{A}^{p,q-1}(\Delta)$가 존재하므로, stalk 수준에서 $\omega$는 $\bar\partial$의 image에 든다. 따라서 $\ker \subseteq \Img$이고 이 위치에서도 완전하다.
 

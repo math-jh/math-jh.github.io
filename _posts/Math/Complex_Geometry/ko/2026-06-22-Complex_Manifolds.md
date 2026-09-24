@@ -14,7 +14,7 @@ weight: 1
 published: false
 ---
 
-미분다양체는 국소적으로 $\mathbb{R}^n$처럼 보이며 transition function이 smooth한 공간이었다 ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1){: data-lid="q0b4v" data-relation="requires-review" }). Complex manifold는 같은 도식을 한 단계 더 강화한 것으로, 국소 모형을 $\mathbb{C}^n$으로 바꾸고 transition function에 매끄러움 대신 *holomorphicity*를 요구한다. $\mathbb{C}^n$을 $\mathbb{R}^{2n}$과 동일시하면 모든 complex manifold는 자동으로 차원 $2n$의 실 미분다양체가 되지만, holomorphic transition function이라는 추가 조건은 smooth 구조만으로는 보이지 않는 강한 강성을 만들어낸다. 이 강성의 가장 단적인 표현이 이 글의 마지막 정리, 곧 콤팩트 connected complex manifold 위의 holomorphic function이 상수밖에 없다는 사실이다.
+미분다양체는 국소적으로 $\mathbb{R}^n$처럼 보이며 transition function이 smooth한 공간이었다 ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1){: data-lid="q0b4v" data-relation="weak" reviewed="" }). Complex manifold는 같은 도식을 한 단계 더 강화한 것으로, 국소 모형을 $\mathbb{C}^n$으로 바꾸고 transition function에 매끄러움 대신 *holomorphicity*를 요구한다. $\mathbb{C}^n$을 $\mathbb{R}^{2n}$과 동일시하면 모든 complex manifold는 자동으로 차원 $2n$의 실 미분다양체가 되지만, holomorphic transition function이라는 추가 조건은 smooth 구조만으로는 보이지 않는 강한 강성을 만들어낸다. 이 강성의 가장 단적인 표현이 이 글의 마지막 정리, 곧 콤팩트 connected complex manifold 위의 holomorphic function이 상수밖에 없다는 사실이다.
 
 이 글의 목표는 complex manifold의 정의를 세우고, 표준적인 예시들을 직접 구성하며, 점에서의 holomorphic tangent space를 도입하는 것이다. 한 변수 holomorphic function의 기초는 이미 다루었으므로 ([\[복소해석학\] §복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="rn0pa" data-relation="required" reviewed="" }) 여기서는 여러 변수로의 extension에서 출발한다.
 
@@ -48,7 +48,7 @@ $\mathbb{C}^n$ 사이의 morphism의 holomorphicity는 성분별로 정의한다
 
 Biholomorphism은 복소해석적 isomorphism에 해당한다. 두 열린집합이 biholomorphic하게 동치이면 그 위의 holomorphic 함수론은 완전히 같다. Complex manifold란 바로 이런 biholomorphic 동치를 풀로 삼아 $\mathbb{C}^n$의 조각들을 이어 붙인 공간이다.
 
-한 변수의 Wirtinger derivative ([\[복소해석학\] §복소정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7){: data-lid="igak4" data-relation="requires-review" }) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
+한 변수의 Wirtinger derivative ([\[복소해석학\] §복소정칙함수, ⁋정의 7](/ko/math/complex_analysis/holomorphic_functions#def7){: data-lid="igak4" data-relation="weak" reviewed="" }) 은 변수마다 그대로 복제된다. 좌표 $z_j = x_j + i y_j$에 대하여
 
 $$
 \frac{\partial}{\partial z_j} = \frac{1}{2}\left( \frac{\partial}{\partial x_j} - i \frac{\partial}{\partial y_j} \right), \qquad
@@ -91,7 +91,7 @@ $$
 이 [정의 2](#def2){: data-lid="qqoud" data-relation="required" reviewed="" }의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic morphism을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. Holomorphic bijection $f : M \rightarrow N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 morphism이 존재하면 $M, N$은 *biholomorphic<sub>쌍정칙</sub>*하다 한다.
 :::
 
-이 정의는 차트의 선택에 무관하다. 다른 차트를 잡으면 두 국소 표현은 holomorphic인 transition function을 좌우에서 합성한 것만큼 차이가 나고, holomorphic morphism의 합성은 다시 holomorphic이기 때문이다. Holomorphic function 전체 $\mathcal{O}(M)$은 점별 덧셈과 곱셈에 대해 $\mathbb{C}$-대수를 이룬다. 미분다양체에서 smooth 함수의 대수 $C^\infty(M)$이 풍부했던 것과 달리, 콤팩트 complex manifold에서는 $\mathcal{O}(M)$이 상수함수밖에 없을 만큼 빈약해진다. 이 사실은 [정리 14](#thm14){: data-lid="en5yq" data-relation="requires-review" }에서 증명한다.
+이 정의는 차트의 선택에 무관하다. 다른 차트를 잡으면 두 국소 표현은 holomorphic인 transition function을 좌우에서 합성한 것만큼 차이가 나고, holomorphic morphism의 합성은 다시 holomorphic이기 때문이다. Holomorphic function 전체 $\mathcal{O}(M)$은 점별 덧셈과 곱셈에 대해 $\mathbb{C}$-대수를 이룬다. 미분다양체에서 smooth 함수의 대수 $C^\infty(M)$이 풍부했던 것과 달리, 콤팩트 complex manifold에서는 $\mathcal{O}(M)$이 상수함수밖에 없을 만큼 빈약해진다. 이 사실은 [정리 14](#thm14){: data-lid="en5yq" data-relation="forward" reviewed="" }에서 증명한다.
 
 ## 예시
 
@@ -232,7 +232,7 @@ Holomorphic tangent space들이 점마다 매끄럽게 (실은 holomorphic하게
 Complex manifold $M$ 위의 *holomorphic tangent bundle<sub>정칙접다발</sub>* $T^{1,0} M$은 각 점 $p$에서의 fiber가 $T_p^{1,0} M$인 복소 vector bundle이다. 그 dual bundle을 *holomorphic cotangent bundle<sub>정칙여접다발</sub>* $(T^{1,0}M)^\ast$이라 하고, 그 holomorphic section 전체를 $\Omega^1_{\mathrm{hol}}(M)$으로 적어 *holomorphic 1-form<sub>정칙 1-형식</sub>*들의 공간이라 한다.
 :::
 
-Cotangent bundle의 구성은 smooth 경우의 추상적 다발 functor 구성을 ([\[미분다양체\] §접다발과 여접다발, ⁋정의 7](/ko/math/manifolds/tangent_and_cotangent_bundles#def7){: data-lid="qm99v" data-relation="requires-review" }) holomorphic 범주에서 반복한 것이다. 국소좌표에서 $\partial/\partial z_j$의 쌍대 기저가 $\dd{z_j}$이고 $\partial/\partial \bar{z}_j$의 쌍대 기저가 $\dd{\bar{z}_j}$이며,
+Cotangent bundle의 구성은 smooth 경우의 추상적 다발 functor 구성을 ([\[미분다양체\] §접다발과 여접다발, ⁋정의 7](/ko/math/manifolds/tangent_and_cotangent_bundles#def7){: data-lid="qm99v" data-relation="weak" reviewed="" }) holomorphic 범주에서 반복한 것이다. 국소좌표에서 $\partial/\partial z_j$의 쌍대 기저가 $\dd{z_j}$이고 $\partial/\partial \bar{z}_j$의 쌍대 기저가 $\dd{\bar{z}_j}$이며,
 
 $$
 \dd{z_j} = \dd{x_j} + i\dd{y_j}, \qquad \dd{\bar{z}_j} = \dd{x_j} - i\dd{y_j}

@@ -130,7 +130,7 @@ $$u\left(\mathbb{K}\left(\bigcup_i\mathbb{L}_i\right)\right)=\mathbb{K}\left(\bi
 
 특히 $\overline{\mathbb{K}}$의 임의의 원소들의 집합 $S$에 대하여, 이를 포함하는 quasi-Galois extension 중 가장 작은 것을 생각할 수 있다. 이는 정의에 의해, $S$의 각 원소들의 conjugate들을 모두 모은 후, 이들로 생성되는 $\mathbb{K}$의 extension이다. 이를 $S$에 의해 생성되는 quasi-Galois extension이라 부른다. 
 
-[정의 4](#def4){: data-lid="0v1we" data-relation="requires-review" }에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
+[정의 4](#def4){: data-lid="0v1we" data-relation="required" reviewed="" }에서 우리는 quasi-Galois extension을 정의할 때, irreducible polynomial $f$가 일차식들의 곱으로 쪼개질 것을 요구했지만 이들이 서로 다를 필요는 없었다. Galois extension은 여기에 separable 조건을 추가하여 얻어진다. 
 
 ::: 정리 8
 Algebraic extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 $\mathbb{K}$-automorphism들의 group $\Gamma$가 주어졌다 하자. 다음이 모두 동치이다. 
@@ -140,7 +140,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$와, $\mathbb{L}$의 $\mathbb{K}$-aut
 3. 임의의 $x\in \mathbb{L}$에 대하여, $x$의 minimal polynomial $f\in \mathbb{K}[\x]$는 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다. 
 :::
 ::: 증명
-둘째 조건과 셋째 조건의 동치는 [정의 4](#def4){: data-lid="teezh" data-relation="requires-review" }와 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12){: data-lid="tn7xi" data-relation="required" reviewed="" }로부터 나온다. $\mathbb{L}/\mathbb{K}$가 quasi-Galois라면 $x\in \mathbb{L}$의 minimal polynomial $f$는 $\mathbb{L}[\x]$에서 일차식들의 곱으로 쪼개지고, $\mathbb{L}/\mathbb{K}$가 separable이라면 같은 명제의 첫째 결과에 의해 $f$가 separable이므로 이 일차식들이 서로 다르다. 거꾸로 셋째 조건이 성립한다면 $\mathbb{L}$에서 해를 갖는 irreducible polynomial은 그 해의 minimal polynomial의 상수배이므로 $\mathbb{L}[\x]$에서 쪼개지고, $\mathbb{L}$의 모든 원소가 separable element이므로 같은 명제의 둘째 결과에 의해 $\mathbb{L}/\mathbb{K}$가 separable이다. 따라서 이들과 첫째 조건이 동치임만 보이면 충분하다. 
+둘째 조건과 셋째 조건의 동치는 [정의 4](#def4){: data-lid="teezh" data-relation="required" reviewed="" }와 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12){: data-lid="tn7xi" data-relation="required" reviewed="" }로부터 나온다. $\mathbb{L}/\mathbb{K}$가 quasi-Galois라면 $x\in \mathbb{L}$의 minimal polynomial $f$는 $\mathbb{L}[\x]$에서 일차식들의 곱으로 쪼개지고, $\mathbb{L}/\mathbb{K}$가 separable이라면 같은 명제의 첫째 결과에 의해 $f$가 separable이므로 이 일차식들이 서로 다르다. 거꾸로 셋째 조건이 성립한다면 $\mathbb{L}$에서 해를 갖는 irreducible polynomial은 그 해의 minimal polynomial의 상수배이므로 $\mathbb{L}[\x]$에서 쪼개지고, $\mathbb{L}$의 모든 원소가 separable element이므로 같은 명제의 둘째 결과에 의해 $\mathbb{L}/\mathbb{K}$가 separable이다. 따라서 이들과 첫째 조건이 동치임만 보이면 충분하다. 
 
 우선 첫째 조건을 가정하자. 임의의 $x\in \mathbb{L}$와 그 minimal polynomial $f\in \mathbb{K}[\x]$에 대하여 $f$가 $\mathbb{L}[\x]$에서 서로 다른 일차식들의 곱으로 쪼개진다는 것을 보여야 한다. 이를 위해 $f$의 $\mathbb{L}$에서의 모든 해들의 모임을 $S$라 하고, 새로운 다항식 
 

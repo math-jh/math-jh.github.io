@@ -137,7 +137,7 @@ $$\rho_{ij}:\Gal(\mathbb{L}_j/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_i/\mathbb{
 
 $$\varprojlim_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})=\left\{(\sigma_i)\in\prod_{i\in I}\Gal(\mathbb{L}_i/\mathbb{K})\mid\text{$\rho_{ij}(\sigma_j)=\sigma_i$ whenever $i\leq j$}\right\}$$
 
-과 canonical morphism들 $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$들이 존재한다. ([\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5){: data-lid="vherg" data-relation="requires-review" }) 
+과 canonical morphism들 $\rho_i:\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$들이 존재한다. ([\[범주론\] §극한, ⁋예시 5](/ko/math/category_theory/limits#ex5){: data-lid="vherg" data-relation="required" reviewed="" }) 
 
 한편 restriction map들
 

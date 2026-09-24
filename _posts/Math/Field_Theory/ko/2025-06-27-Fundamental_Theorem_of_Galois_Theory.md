@@ -40,7 +40,7 @@ Finite degree Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\lvert\Gal(
 따라서 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert$는 $\mathbb{L}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism의 개수, 곧 separable degree $[\mathbb{L}:\mathbb{K}]_s$이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="yjvac" data-relation="required" reviewed="" }) 그런데 $\mathbb{L}/\mathbb{K}$가 finite degree separable extension이므로 étale algebra이고 ([§분리가능확대체, ⁋정의 8](/ko/math/field_theory/separable_extensions#def8){: data-lid="yy5hh" data-relation="required" reviewed="" }), 따라서 [§에탈대수, ⁋명제 13](/ko/math/field_theory/etale_algebras#prop13){: data-lid="13txm" data-relation="required" reviewed="" }에 의하여 이 값은 $[\mathbb{L}:\mathbb{K}]$와 같다.
 :::
 
-이제 우리는 [정리 1](#thm1){: data-lid="17xxd" data-relation="requires-review" }의 구체적인 사용을 살펴본다. 우선 처음 살펴볼 것은 가장 단순한 다음의 예이다. 
+이제 우리는 [정리 1](#thm1){: data-lid="17xxd" data-relation="weak" reviewed="" }의 구체적인 사용을 살펴본다. 우선 처음 살펴볼 것은 가장 단순한 다음의 예이다. 
 
 ::: 예시 3
 $\mathbb{L}=\mathbb{Q}(\sqrt{2},\sqrt{3})$이라 하자. 이는 다항식 $(\x^2-2)(\x^2-3)\in\mathbb{Q}[\x]$의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s26b8" data-relation="required" reviewed="" }의 마지막 조건에 의해 quasi-Galois이다. 한편, [§체, ⁋명제 18](/ko/math/field_theory/fields#prop18){: data-lid="qmp2i" data-relation="required" reviewed="" }에 의하여 $\mathbb{Q}$의 algebraic extension은 모두 separable이므로 ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="9uh6x" data-relation="required" reviewed="" }), [§갈루아 확장, ⁋정리 8](/ko/math/field_theory/galois_extension#thm8){: data-lid="jzhrk" data-relation="required" reviewed="" }의 둘째 조건에 의하여 $\mathbb{L}/\mathbb{Q}$는 Galois extension이다.
@@ -84,7 +84,7 @@ $$\sigma(\omega)=\frac{\sigma(\omega\alpha)}{\sigma(\alpha)}=\frac{\omega^2\alph
 한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$, 혹은 $\omega^2$를 포함하며, 따라서 어느 쪽이든 $\omega$를 포함하게 되어 $\mathbb{L}$ 전체가 된다. 따라서 위에서 구한 degree $3$짜리 세 field $\mathbb{Q}(\omega^i\alpha)$들은 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함하므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s82q0" data-relation="required" reviewed="" }의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니다. 그럼에도 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
 :::
 
-이제 [정리 1](#thm1){: data-lid="tkhm2" data-relation="requires-review" }의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
+이제 [정리 1](#thm1){: data-lid="tkhm2" data-relation="weak" reviewed="" }의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
 
 ::: 예시 5
 소수 $p$를 고정하고 $\mathbb{F}_p$의 algebraic closure $\overline{\mathbb{F}}_p$를 생각하자. $\mathbb{F}_p$는 유한집합이므로 perfect이고 ([§체, ⁋명제 18](/ko/math/field_theory/fields#prop18){: data-lid="3hsyh" data-relation="required" reviewed="" }) 따라서 그 algebraic extension은 모두 separable이다. ([§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="c715h" data-relation="required" reviewed="" }) 한편 $\overline{\mathbb{F}}_p$는 $\mathbb{F}_p[\x]$의 non-constant polynomial 전체의 splitting field이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="treaq" data-relation="required" reviewed="" }의 다섯째 조건에 의해 quasi-Galois이고, 즉 $\overline{\mathbb{F}}_p/\mathbb{F}_p$는 Galois extension이다. 그 Galois group을 $\Gamma$라 적자.
@@ -136,14 +136,14 @@ $$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
 
 이므로 $H$는 normal subgroup이다. 여기서 $\sigma H\sigma^{-1}$이 closed인 것은 conjugation이 topological group의 homeomorphism이기 때문이다.
 
-마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $g(\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="6q8iy" data-relation="requires-review" }과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1){: data-lid="pvj98" data-relation="required" reviewed="" }에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
+마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $g(\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="6q8iy" data-relation="required" reviewed="" }과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1){: data-lid="pvj98" data-relation="required" reviewed="" }에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
 :::
 
 [예시 4](#ex4){: data-lid="veolq" data-relation="required" reviewed="" }의 order $2$인 세 subgroup은 서로 conjugate이므로 normal이 아니며, 실제로 이들에 대응하는 $\mathbb{Q}(\omega^i\alpha)$는 $\mathbb{Q}$의 Galois extension이 아니었다. 반면 $A_3$은 normal subgroup이고 $\mathbb{Q}(\omega)$는 $\x^2+\x+1$의 splitting field로서 $\mathbb{Q}$의 Galois extension이며, 이 경우 [따름정리 6](#cor6){: data-lid="9v49d" data-relation="required" reviewed="" }의 isomorphism은 $S_3/A_3\cong\Gal(\mathbb{Q}(\omega)/\mathbb{Q})$이다.
 
 ## 기본정리의 증명
 
-[정리 1](#thm1){: data-lid="f394l" data-relation="requires-review" }은 다음과 같이 두 단계로 나누어 증명한다. 
+[정리 1](#thm1){: data-lid="f394l" data-relation="weak" reviewed="" }은 다음과 같이 두 단계로 나누어 증명한다. 
 
 ::: 보조정리 7
 임의의 subextension $\mathbb{M}\in \Ext(\mathbb{L}/\mathbb{K})$에 대하여, $\mathbb{L}/\mathbb{M}$ 또한 Galois extension이다. 이 때, $\mathbb{M}$-automorphism을 $\mathbb{K}$-automorphism으로 보아 Galois group $\Gal(\mathbb{L}/\mathbb{M})$을 $\Gal(\mathbb{L}/\mathbb{K})$의 subgroup으로 보면, 이는 $\Gal(\mathbb{L}/\mathbb{K})$의 *closed* subgroup이며 따라서 $g$가 잘 정의된다. 
@@ -183,7 +183,7 @@ $$\sum_{j=1}^{m+1}(\tau\sigma_i)(x_j)\tau(c_j)=0,\qquad i=1,\ldots,m$$
 그럼 $\sigma_1=\id_\mathbb{N}$에 해당하는 방정식 $\sum_{j}x_jc_j=0$은 $x_1,\ldots,x_{m+1}$ 사이의 자명하지 않은 $\mathbb{N}^H$-일차결합이 되어, 이들이 $\mathbb{N}^H$ 위에서 일차독립이라는 가정에 모순이다.
 :::
 
-이제 [정리 1](#thm1){: data-lid="0iwkh" data-relation="requires-review" }을 증명할 수 있다.
+이제 [정리 1](#thm1){: data-lid="0iwkh" data-relation="weak" reviewed="" }을 증명할 수 있다.
 
 ::: 증명 (정리 1)
 [보조정리 7](#lem7){: data-lid="6uu3v" data-relation="required" reviewed="" }에 의하여 $g$가 잘 정의되고, $k$의 경우 $G$의 원소들이 모두 $\mathbb{K}$를 고정하므로 invariant들의 field $k(G)$는 $\mathbb{K}$를 포함하는 $\mathbb{L}$의 subfield, 곧 $\Ext(\mathbb{L}/\mathbb{K})$의 원소이다.

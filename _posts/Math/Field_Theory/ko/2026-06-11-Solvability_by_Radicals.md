@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="yg29v" data-relation="weak" reviewed="" }의 서두에서 우리는 다항식의 해들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" data-relation="requires-review" }로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 해를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
+[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="yg29v" data-relation="weak" reviewed="" }의 서두에서 우리는 다항식의 해들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" data-relation="weak" reviewed="" }로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 해를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
 
 ::: remark 참고 {#rmk}
 이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" data-relation="required" reviewed="" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. Characteristic $p$에서의 가해성 이론은 separability와 관련된 추가적인 논의를 필요로 하므로 여기서는 다루지 않는다.
@@ -206,7 +206,7 @@ $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 :::
 
 ::: 참고 11
-[정리 10](#thm10){: data-lid="vb0j9" data-relation="requires-review" }으로부터 5차 이상의 일반 방정식에 대한 근의 공식이 존재하지 않는다는 Abel–Ruffini 정리가 따라나온다. 실제로 $S_5$는 solvable이 아닌데, 만일 solvable이라면 [보조정리 8](#lem8){: data-lid="ufj9m" data-relation="requires-review" }에 의해 그 subgroup $A_5$도 solvable이어야 하지만, $A_5$는 abelian이 아닌 simple group이므로 ([\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="49suh" data-relation="requires-review" }) derived subgroup이 자명해질 수 없기 때문이다. 따라서 Galois group이 $S_5$가 되는 다항식, 가령 $\mathbb{Q}$ 위의 적당한 5차 다항식은 거듭제곱근으로 풀리지 않는다. 구체적인 다항식의 Galois group을 계산하는 일은 그 자체로 별도의 주제이므로 여기서 다루지는 않는다.
+[정리 10](#thm10){: data-lid="vb0j9" data-relation="weak" reviewed="" }으로부터 5차 이상의 일반 방정식에 대한 근의 공식이 존재하지 않는다는 Abel–Ruffini 정리가 따라나온다. 실제로 $S_5$는 solvable이 아닌데, 만일 solvable이라면 [보조정리 8](#lem8){: data-lid="ufj9m" data-relation="weak" reviewed="" }에 의해 그 subgroup $A_5$도 solvable이어야 하지만, $A_5$는 abelian이 아닌 simple group이므로 ([\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="49suh" data-relation="weak" reviewed="" }) derived subgroup이 자명해질 수 없기 때문이다. 따라서 Galois group이 $S_5$가 되는 다항식, 가령 $\mathbb{Q}$ 위의 적당한 5차 다항식은 거듭제곱근으로 풀리지 않는다. 구체적인 다항식의 Galois group을 계산하는 일은 그 자체로 별도의 주제이므로 여기서 다루지는 않는다.
 :::
 
 ---
