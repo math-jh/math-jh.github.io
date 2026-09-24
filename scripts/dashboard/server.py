@@ -15,6 +15,7 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
     POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (판정 버튼 또는 태그 확인)
     POST /api/linkaudit/commit   data-relation·reviewed 만 바뀐 글들을 한 커밋으로
+    POST /api/linkaudit/undo     커밋 전 버튼 판정 한 건을 되돌려 보류로 되살림
 
 보류 해소 시 확정된 링크 IAL에 `reviewed=""`를 추가한다. 그 외의 쓰기는
 세 상태 파일뿐이다:
@@ -569,6 +570,35 @@ def load_holds():
     return value
 
 
+def save_holds(holds):
+    """원장을 통째로 바꿔 쓴다. 호출자가 HOLDS_LOCK 을 쥐고 있어야 한다."""
+    tmp = f"{HOLDS_STATE}.tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(holds, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, HOLDS_STATE)
+
+
+def last_undoable(holds):
+    """되돌릴 수 있는 가장 최근 판정 — 되돌리기 기록이 있고 아직 커밋 안 된 것.
+
+    커밋된 기록은 대시보드 커밋 버튼이 지우므로, 다른 경로로 커밋된 것만 남는다.
+    그런 것을 넘어 계속 git 을 부르지 않게 최근 5건까지만 본다.
+    """
+    recs = sorted(((v.get("at", 0), k, v) for k, v in holds["settled"].items()
+                   if isinstance(v, dict) and v.get("undo")), reverse=True)
+    for _, ident, v in recs[:5]:
+        u = v["undo"]
+        if head_blob(u["item"]["path"]) != u["ko"]["head"]:
+            continue
+        if u.get("en") and head_blob(u["en"]["path"]) != u["en"]["head"]:
+            continue
+        flat = " ".join((u["item"].get("markup") or "").split())
+        return dict(ident=ident, relation=v.get("relation", ""),
+                    path=v.get("path", ""),
+                    brief=flat if len(flat) <= 60 else flat[:57] + "…")
+    return None
+
+
 def hold_verdict(item):
     """보류된 링크에 사람이 내린 판정. 아직 안 달았으면 None.
 
@@ -677,6 +707,8 @@ def write_relation(ident, item, relation, *, content_lock_held=False):
 
     markup 이 원장과 다르면 쓰지 않는다. 서수가 같아도 글이 그사이 바뀌었다면
     사용자가 화면에서 읽은 문장과 지금 파일의 그 자리가 다른 링크일 수 있다.
+    돌려주는 것은 (lid, 되돌리기 기록) — 기록은 그 자리의 옛 IAL 과 새 IAL 이다
+    (IAL 이 없던 링크면 옛 값은 빈 문자열).
     """
     full, text, link = hold_link(ident, item)
     if link.markup != (item.get("markup") or ""):
@@ -704,7 +736,7 @@ def write_relation(ident, item, relation, *, content_lock_held=False):
         if lease is not None:
             lease.release()
     found = _LID_ATTR.search(ial)
-    return found.group(1) if found else None
+    return (found.group(1) if found else None), {"old": text[start:end], "new": ial}
 
 
 _LID_ATTR = re.compile(r'\bdata-lid\s*=\s*"([^"]*)"')
@@ -729,32 +761,78 @@ def propagate_relation(full, lid, relation):
 
     `reviewed` 는 손대지 않는다. EN 에서 그 마커를 떼는 것은 분류기가 lid 로 완료를
     상속하게 된 뒤에 할 일이고, 먼저 떼면 그 글이 검증 대기로 되돌아간다.
+    돌려주는 것은 (알림 문구, 되돌리기 기록) — EN 을 고치지 않았으면 기록은 None.
     """
     twin = _en_twin(full)
     if twin is None:
-        return "EN 짝 글 없음"
+        return "EN 짝 글 없음", None
     text = twin.read_text(encoding="utf-8")
-    hit = re.search(r'\{:[^}\n]*\bdata-lid\s*=\s*"%s"[^}\n]*\}' % re.escape(lid), text)
+    hit = _en_lid_ial(text, lid)
     if hit is None:
-        return "EN 에 같은 lid 없음"
+        return "EN 에 같은 lid 없음", None
     ial = hit.group(0)
     attr = f'data-relation="{relation}"'
     if _depc.RELATION_ATTR_RE.search(ial):
         if _depc.RELATION_ATTR_RE.search(ial).group(0) == attr:
-            return "EN 이미 같은 값"
+            return "EN 이미 같은 값", None
         new_ial = _depc.RELATION_ATTR_RE.sub(attr, ial, count=1)
     else:
         new_ial = ial[:-1].rstrip() + f" {attr} }}"
     lease = try_acquire_file_locks([str(twin)])
     if lease is None:
-        return "EN 글이 잠겨 있다"
+        return "EN 글이 잠겨 있다", None
     try:
         source_mode = os.stat(twin).st_mode & 0o7777
         _atomic_write(str(twin), text[:hit.start()] + new_ial + text[hit.end():],
                       source_mode)
     finally:
         lease.release()
-    return f"EN 도 {relation} 로 기입"
+    return f"EN 도 {relation} 로 기입", {
+        "path": os.path.relpath(str(twin), ROOT), "lid": lid,
+        "old": ial, "new": new_ial}
+
+
+def _en_lid_ial(text, lid):
+    return re.search(r'\{:[^}\n]*\bdata-lid\s*=\s*"%s"[^}\n]*\}' % re.escape(lid), text)
+
+
+def head_blob(rel):
+    """HEAD 에 있는 그 글의 blob id. 판정 뒤 이 값이 바뀌었으면 판정이 커밋된 것이다."""
+    rc, out, _ = run(["/usr/bin/git", "-C", ROOT, "rev-parse", f"HEAD:{rel}"])
+    return out.strip() if rc == 0 else ""
+
+
+def undo_relation(ident, rec):
+    """버튼 판정 한 건을 되돌린다. 원장은 호출자가 고친다.
+
+    커밋 전 판정만 되돌린다 — KO·EN 의 HEAD blob 이 판정 때와 같아야 한다. 그리고
+    그 자리의 IAL 이 서버가 쓴 값 그대로여야 한다. 둘 중 하나라도 어긋나면 아무
+    파일도 건드리지 않고 ValueError 를 낸다.
+    """
+    item, ko, en = rec["item"], rec["ko"], rec.get("en")
+    if head_blob(item["path"]) != ko["head"] or (en and head_blob(en["path"]) != en["head"]):
+        raise ValueError("이미 커밋된 판정이다")
+    full, text, link = hold_link(ident, item)
+    if link.ial_start is None or text[link.ial_start:link.ial_end] != ko["new"]:
+        raise ValueError("그 링크가 판정 뒤에 바뀌었다")
+    plan = [(full, text, link.ial_start, link.ial_end, ko["old"])]
+    if en:
+        en_full = os.path.join(ROOT, en["path"])
+        en_text = _depc.Path(en_full).read_text(encoding="utf-8")
+        hit = _en_lid_ial(en_text, en["lid"])
+        if hit is None or hit.group(0) != en["new"]:
+            raise ValueError("EN 링크가 판정 뒤에 바뀌었다")
+        plan.append((en_full, en_text, hit.start(), hit.end(), en["old"]))
+    lease = try_acquire_file_locks([p[0] for p in plan[1:]]) if en else None
+    if en and lease is None:
+        raise RuntimeError("EN 글이 잠겨 있다")
+    try:
+        for path, body, start, end, old in plan:
+            _atomic_write(path, body[:start] + old + body[end:],
+                          os.stat(path).st_mode & 0o7777)
+    finally:
+        if lease is not None:
+            lease.release()
 
 
 def _atomic_write(full, text, mode):
@@ -894,7 +972,7 @@ def sec_link_audit():
         del x["_lang"]
     return dict(held=items, settled=len(holds["settled"]),
                 ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
-                uncommitted=link_only_changes())
+                uncommitted=link_only_changes(), undo=last_undoable(holds))
 
 
 def sec_comment_prs():
@@ -1359,7 +1437,7 @@ class Handler(BaseHTTPRequestHandler):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
         if path not in ("/api/kotypo", "/api/kotypo-note", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume", "/api/linkaudit/resolve",
-                        "/api/linkaudit/commit",
+                        "/api/linkaudit/commit", "/api/linkaudit/undo",
                         "/api/review", "/api/compare/snapshot",
                         "/api/compare/snapshot-delete", "/api/compare/prefs"):
             return self._send(404, "not found", "text/plain; charset=utf-8")
@@ -1386,6 +1464,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._linkaudit_resolve()
         if path == "/api/linkaudit/commit":
             return self._linkaudit_commit()
+        if path == "/api/linkaudit/undo":
+            return self._linkaudit_undo()
         if path != "/api/kotypo":
             return self._cron_action(path)
         # 클라이언트가 전체 map 을 보내 통째로 교체한다 (키 (path@verified_at) → 1).
@@ -1559,21 +1639,28 @@ class Handler(BaseHTTPRequestHandler):
                 if item is None:
                     return self._send(200, json.dumps(
                         {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
+                undo = None
                 if relation:
+                    ko_head = head_blob(rel)
                     try:
-                        lid = write_relation(ident, item, relation,
-                                             content_lock_held=True)
+                        lid, ko_undo = write_relation(ident, item, relation,
+                                                      content_lock_held=True)
                     except Exception as e:  # noqa: BLE001
                         return self._send(200, json.dumps(
                             {"ok": False, "error": str(e)}, ensure_ascii=False))
                     verdict = relation
+                    en_undo = None
                     if lid:
                         try:
-                            note = propagate_relation(full, lid, relation)
+                            note, en_undo = propagate_relation(full, lid, relation)
                         except Exception as e:  # noqa: BLE001
                             note = f"EN 기입 실패: {str(e)[:120]}"
                     else:
                         note = "lid 없음 — EN 은 따로 판정"
+                    if en_undo:
+                        en_undo["head"] = head_blob(en_undo["path"])
+                    undo = {"item": item, "ko": {**ko_undo, "head": ko_head},
+                            "en": en_undo}
                 else:
                     verdict = hold_verdict(item)
                     if verdict is None:
@@ -1592,15 +1679,71 @@ class Handler(BaseHTTPRequestHandler):
                     "path": item.get("path", ""), "target": item.get("target", ""),
                     "relation": verdict, "at": int(time.time()),
                 }
-                tmp = f"{HOLDS_STATE}.tmp"
-                with open(tmp, "w", encoding="utf-8") as f:
-                    json.dump(holds, f, ensure_ascii=False, indent=2)
-                os.replace(tmp, HOLDS_STATE)
+                if undo:
+                    holds["settled"][ident]["undo"] = undo
+                save_holds(holds)
         finally:
             content_lease.release()
         _cache["ts"] = 0
         return self._send(200, json.dumps({"ok": True, "relation": verdict,
                                            "note": note}, ensure_ascii=False))
+
+    def _linkaudit_undo(self):
+        """버튼 판정 한 건을 되돌려 보류로 되살린다 (커밋 전 판정만).
+
+        되돌릴 수 없으면(커밋됨·그 자리가 바뀜) 그 건의 되돌리기 기록을 지운다 —
+        그래야 다음 요청이 그 앞의 판정으로 넘어간다.
+        """
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 4096:
+                raise ValueError
+            ident = json.loads(self.rfile.read(n).decode("utf-8") or "{}").get("ident")
+            if not isinstance(ident, str) or not ident:
+                raise ValueError("bad ident")
+        except Exception as e:  # noqa: BLE001
+            return self._send(400, json.dumps({"ok": False, "error": str(e)},
+                                              ensure_ascii=False))
+        rec = (load_holds()["settled"].get(ident) or {}).get("undo")
+        if not rec:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "되돌릴 기록이 없다"}, ensure_ascii=False))
+        full = os.path.normpath(os.path.join(ROOT, rec["item"].get("path") or ""))
+        if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "bad path"}, ensure_ascii=False))
+        content_lease = try_acquire_file_locks([full])
+        if content_lease is None:
+            return self._send(200, json.dumps(
+                {"ok": False, "error": "다른 워커가 이 글을 수정 중이다"}, ensure_ascii=False))
+        try:
+            with open(HOLDS_LOCK, "w") as lock:
+                fcntl.flock(lock, fcntl.LOCK_EX)
+                holds = load_holds()
+                entry = holds["settled"].get(ident) or {}
+                rec = entry.get("undo")
+                if not rec:
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": "되돌릴 기록이 없다"}, ensure_ascii=False))
+                try:
+                    undo_relation(ident, rec)
+                except ValueError as e:
+                    del entry["undo"]
+                    save_holds(holds)
+                    _cache["ts"] = 0
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                except Exception as e:  # noqa: BLE001
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                holds["settled"].pop(ident)
+                holds["held"][ident] = rec["item"]
+                save_holds(holds)
+        finally:
+            content_lease.release()
+        _cache["ts"] = 0
+        return self._send(200, json.dumps({"ok": True, "ident": ident},
+                                          ensure_ascii=False))
 
     def _linkaudit_commit(self):
         """관계 태그만 바뀐 글들을 한 커밋으로 묶는다.
@@ -1626,6 +1769,17 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, json.dumps(
                 {"ok": False, "error": "autopush 가 락을 쥐고 있다 — 잠시 뒤 다시"},
                 ensure_ascii=False))
+        # 커밋된 판정은 되돌리기 대상이 아니다.
+        committed = set(paths)
+        with open(HOLDS_LOCK, "w") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            holds = load_holds()
+            for v in holds["settled"].values():
+                u = v.get("undo") if isinstance(v, dict) else None
+                if u and (u["item"].get("path") in committed
+                          or (u.get("en") and u["en"]["path"] in committed)):
+                    del v["undo"]
+            save_holds(holds)
         return self._send(200, json.dumps({"ok": True, "n": len(paths)},
                                           ensure_ascii=False))
 

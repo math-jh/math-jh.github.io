@@ -128,6 +128,7 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링�
 | `/api/compare/macros?v=<sha\|worktree>` | 그 판본의 `katex-macros.js` |
 | `/api/review` (POST) | 검토 판정·메모 — **항목 단위 병합** 저장 (kotypo 처럼 통째 교체하지 않는다). `kind`: `item`·`post`·`note`·`note-del`·`note-done` |
 | `/api/linkaudit/resolve` (POST) | 의존성 링크 보류 한 건(`ident`) 해소 — 아래 참고 |
+| `/api/linkaudit/undo` (POST) | 커밋 전 버튼 판정 한 건(`ident`)을 되돌려 보류로 되살림 — 아래 참고 |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
@@ -150,6 +151,15 @@ notify 한 통을 보낸다. 태그가 없으니 그 링크는 의존성 그래�
 
 원장은 분류기와 공유하므로 쓰기는 `/tmp/dependency-classifier-holds.lock` flock 아래에서만
 한다. 통째로 덮으면 그 사이 워커가 붙인 보류가 에러 없이 사라진다.
+
+키보드: `j`/`k` 이동, `1`/`2`/`3` 은 required/weak/forward 판정, `u` 는 되돌리기.
+
+**되돌리기.** 버튼 판정은 `settled[ident].undo` 에 되돌리기 기록을 남긴다 — 원래 `held`
+항목, KO IAL 의 옛 값·새 값, EN 에 옮겨 썼으면 EN 의 lid·옛 값·새 값, 그리고 판정 때 두
+글의 HEAD blob id. `/api/linkaudit/undo` 는 HEAD blob 이 그대로이고(커밋 전) 그 자리의
+IAL 이 서버가 쓴 값 그대로일 때만 옛 IAL 을 되돌리고 항목을 `held` 로 옮긴다. 어긋나면
+파일은 건드리지 않고 그 기록만 지운다. 대시보드 커밋 버튼도 커밋한 글의 기록을 지운다.
+'파일 태그 확인' 경로는 기록을 남기지 않아 되돌릴 수 없다.
 
 ## 손볼 때 알아야 할 것
 
