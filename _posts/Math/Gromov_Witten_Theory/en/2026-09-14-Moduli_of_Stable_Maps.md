@@ -13,7 +13,7 @@ weight: 2
 translated_at: 2026-09-18T11:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
 ---
-Although we have already seen the importance of the properness of moduli spaces in [\[Stacks\] §Proper Stacks](/en/math/stacks/proper_stacks){: data-lid="5ib31" }, we cannot expect such a property in general enumerative problems. Among problems of this kind, a classical one is counting curves in $\mathbb{P}^2$ passing through $3d-1$ general points that are degree $d$ rational curves; for example, when $d=2$, it is known that this value is $1$. That is, a curve in $\mathbb{P}^2$ passing through $5$ points must exist uniquely. On the other hand, if we consider the map
+Although we have already seen the importance of the properness of moduli spaces in [\[Stacks\] §Proper Stacks](/en/math/stacks/proper_stacks){: data-lid="5ib31" data-relation="weak" }, we cannot expect such a property in general enumerative problems. Among problems of this kind, a classical one is counting curves in $\mathbb{P}^2$ passing through $3d-1$ general points that are degree $d$ rational curves; for example, when $d=2$, it is known that this value is $1$. That is, a curve in $\mathbb{P}^2$ passing through $5$ points must exist uniquely. On the other hand, if we consider the map
 
 $$\mu_t:\mathbb{P}^1\longrightarrow\mathbb{P}^2,\qquad [\u:\v]\longmapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
 
