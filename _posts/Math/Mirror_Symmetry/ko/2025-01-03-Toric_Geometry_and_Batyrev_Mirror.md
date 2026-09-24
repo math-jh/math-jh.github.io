@@ -100,12 +100,6 @@ $\Delta$의 facets는 $u_1 = -1$, $u_2 = -1$, $u_1 + u_2 = 1$이며, 이들의 p
 
 $n=2$인 경우 anticanonical hypersurface $Y_\Delta \subseteq X_\Delta = \mathbb{P}^2$는 일반적으로 차원 $1$의 smooth genus-$1$ curve (elliptic curve)가 된다 (anticanonical class $-K_{\mathbb{P}^2} = \mathcal{O}(3)$의 generic section은 cubic curve이며 generic이면 smooth). Mirror 측 $Y_{\Delta^\circ}$도 적절한 crepant resolution 후 genus-$1$ curve가 된다. 1차원 Calabi-Yau에서 mirror symmetry는 $g(Y_\Delta) = g(Y_{\Delta^\circ}) = 1$로 trivial하게 표현되며, 본격적인 Batyrev mirror symmetry는 $n \ge 4$인 경우 (CY 3-fold 이상)에 들어가서야 nontrivial한 의미를 가진다. 명제 2의 lattice point 공식 또한 $n \ge 4$에서만 실제 Hodge number를 계산한다. 실제로 $n=2$에 그대로 대입하면 $\Delta^\circ$의 edge에는 interior lattice point가 없고 $\Delta$의 각 edge에는 두 개씩 있으므로 $h^{1,1}$ 쪽 식은 $4 - 1 - 2 - 0 + 3 \cdot 1 \cdot 2 = 7$을 주는데, 이는 elliptic curve의 $h^{1,1} = 1$과 어긋난다. 두 식이 $\Delta \leftrightarrow \Delta^\circ$ 아래에서 서로 swap된다는 형식적 항등식만은 차원과 무관하게 성립한다.
 
-## Grassmannian mirror symmetry로의 연결
-
-Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 duality를 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 이 construction은 ambient space가 toric variety라는 사실에 전적으로 의존하며, 더 일반적인 공간으로의 extension은 nontrivial한 문제이다. 특히 Grassmannian $\Gr(k, n)$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
-
-[§거울대칭 개요](/ko/math/mirror_symmetry/overview){: data-lid="zqr6b" data-relation="weak" }에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $(\check{X}, W)$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 isomorphic함을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 mirror symmetry의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, mirror symmetry가 Grassmannian을 넘어 그 안의 singular Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
-
 ---
 
 **참고문헌**
