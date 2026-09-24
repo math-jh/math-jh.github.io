@@ -13,7 +13,7 @@ weight: 2
 
 ---
 
-우리는 [\[스택\] §고유스택](/ko/math/stacks/proper_stacks){: data-lid="5ib31" data-relation="weak" }에서 moduli space의 properness가 갖는 중요성을 이미 살펴보았지만, 일반적인 enumerative problem에서는 이러한 성질을 기대할 수 없다. 이러한 종류의 문제 중 고전적인 것은 $\mathbb{P}^2$ 안의 $3d-1$개의 general point를 지나는 degree $d$ rational curve를 세는 문제로, 예를 들어 $d=2$일 때 그 값은 $1$인 것이 알려져 있다. 즉 $\mathbb{P}^2$ 안의 $5$개의 점을 지나는 곡선은 유일하게 존재하여야 한다. 반면 다음 map
+우리는 [\[스택\] §고유스택](/ko/math/stacks/proper_stacks){: data-lid="5ib31" data-relation="weak" reviewed="" }에서 moduli space의 properness가 갖는 중요성을 이미 살펴보았지만, 일반적인 enumerative problem에서는 이러한 성질을 기대할 수 없다. 이러한 종류의 문제 중 고전적인 것은 $\mathbb{P}^2$ 안의 $3d-1$개의 general point를 지나는 degree $d$ rational curve를 세는 문제로, 예를 들어 $d=2$일 때 그 값은 $1$인 것이 알려져 있다. 즉 $\mathbb{P}^2$ 안의 $5$개의 점을 지나는 곡선은 유일하게 존재하여야 한다. 반면 다음 map
 
 $$\mu_t:\mathbb{P}^1\longrightarrow\mathbb{P}^2,\qquad [\u:\v]\longmapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
 
@@ -35,7 +35,7 @@ $$q_1=[1:0:0],\qquad q_2=[0:1:0],\qquad q_3=[0:0:1],\qquad q_4=[1:1:1]$$
 
 앞선 계산에서 smooth conic의 limit은 두 line이 한 점에서 만나는 곡선이었으므로, 이를 map의 limit으로 보존하려면 domain도 갈라질 수 있어야 한다. 실제로, $\mathbb{P}^1$의 image는 irreducible이므로, domain을 $\mathbb{P}^1$로 고정한 morphism으로는 두 line을 모두 덮을 수 없다. 대신 두 $\mathbb{P}^1$을 한 점에서 붙이고 각각을 해당 line으로 보내면, 붙인 점에서 두 map의 값이 일치하여 전체 domain 위의 morphism을 얻는다. 따라서 이러한 limit을 포함하려면 smooth curve에서 nodal curve로 domain의 범위를 넓혀야 한다.
 
-Incidence condition도 map의 자료로 기록할 수 있다. 곡선이 주어진 점 $q_i\in X$를 지난다는 조건은 domain 위에 점 $p_i$를 지정하고 $\mu(p_i)=q_i$를 요구하면 되므로, 우리가 원하는 map의 domain은 정확히 prestable curve가 모두 담고 있다. ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="ovp6z" data-relation="required" }) 앞의 예에서는 limit의 각 $q_i$에 대응하는 점을 해당 component 위에 표시하면 될 것이며, 일반적인 incidence condition은 $\mu(p_i)$가 지정된 subvariety에 속하도록 부과한다.
+Incidence condition도 map의 자료로 기록할 수 있다. 곡선이 주어진 점 $q_i\in X$를 지난다는 조건은 domain 위에 점 $p_i$를 지정하고 $\mu(p_i)=q_i$를 요구하면 되므로, 우리가 원하는 map의 domain은 정확히 prestable curve가 모두 담고 있다. ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="ovp6z" data-relation="required" reviewed="" }) 앞의 예에서는 limit의 각 $q_i$에 대응하는 점을 해당 component 위에 표시하면 될 것이며, 일반적인 incidence condition은 $\mu(p_i)$가 지정된 subvariety에 속하도록 부과한다.
 
 이제 우리가 자료를 map에 담을 때 생기는 문제는 같은 곡선이 다른 parametrization을 통해서 바뀌면 이는 다른 map으로 보인다는 것이다. 따라서 우리는 marked point와 map을 보존하는 domain의 isomorphism으로 이들을 identify한다. 문제는 한 자료 안에서도 automorphism이 생길 수 있다는 것인데, 일반적으로 우리가 생각하는 automorphism은 map 자체의 대칭을 나타내는 정보이므로 이는 유의미한 정보이다. 그러나 nodal domain을 허용하면 이러한 유의미한 정보는 아무것도 보태지 않는 parametrization의 자유도가 생길 수 있는데, 예를 들어 한 점으로 보내지는 한 $\mathbb{P}^1$ 성분에 node가 하나 뿐이고, marked point가 아무것도 없으면 이 성분은 무한히 많은 automorphism을 가지지만, 이 성분을 무시해도 나머지 map과 marked point의 정보는 고스란히 남아있다. 이러한 성분을 배제하기 위해 우리는 automorphism group이 유한하다는 stability 조건을 부과하며, 이는 map의 유한한 대칭을 허용하면서 moduli가 Deligne–Mumford stack이 되게 하는 핵심 조건이다. 여기에 곡선의 class $\beta$를 고정하면 다음 정의를 얻는다.
 
@@ -56,13 +56,13 @@ $$(C,p_1,\ldots,p_n,\mu),\qquad \mu:C\rightarrow X$$
 
 이러한 automorphism을 고정하는 것은 marked point들과 node들이 그대로 남아있어야 한다는 조건으로, 우리는 이들 두 종류의 점들을 통틀어 *special points*라 부른다. Domain curve $C$의 irreducible component $C_i$의 normalization을 $\widetilde{C}_i$라 하고, $\widetilde{C}_i$의 special point의 개수를 $s_i$라 하자. 
 
-이제 $\widetilde{C}_i$의 genus 개수를 $h_i$라 하면 tangent bundle $\mathcal{T}_{\widetilde{C}_i}$의 degree는 $2-2h_i$이다. Special point들의 합을 divisor $D_i$로 적으면, [§마디 곡선의 변형, ⁋명제 4](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop4){: data-lid="paz7d" data-relation="required" }와 그 이후의 논증에 의하여 이 점들을 고정하는 infinitesimal automorphism은
+이제 $\widetilde{C}_i$의 genus 개수를 $h_i$라 하면 tangent bundle $\mathcal{T}_{\widetilde{C}_i}$의 degree는 $2-2h_i$이다. Special point들의 합을 divisor $D_i$로 적으면, [§마디 곡선의 변형, ⁋명제 4](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop4){: data-lid="paz7d" data-relation="required" reviewed="" }와 그 이후의 논증에 의하여 이 점들을 고정하는 infinitesimal automorphism은
 
 $$H^0\bigl(\widetilde{C}_i,\mathcal{T}_{\widetilde{C}_i}(-D_i)\bigr)$$
 
 로 계산된다. 이는 $\widetilde{C}_i$의 special point들을 각각 고정하는 automorphism group $G$의 항등원에서의 tangent space와 같았으므로, 만일 이 차원이 $0$이 된다면 $G$의 항등원에서의 차원, 더 나아가 임의의 점에서의 차원이 $0$차원이 된다. 일반적으로 smooth projective curve의 유한개의 점을 고정하는 automorphism group은 finite type임이 알려져 있으므로, 이 사실로부터 $G$가 유한하다는 사실을 얻을 수 있다. 
 
-이제 만일 $h_i\geq2$이면 $\deg\mathcal{T}_{\widetilde{C}_i}=2-2h_i<0$이므로 global vector field가 없다. ([\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="pq7bu" data-relation="required" }) 따라서 이 경우에는 special point가 없어도 automorphism group이 유한하다. 이는 낮은 genus에서는 일반적으로 성립하지 않는 논증으로, 여기에 special point들이 고정된다는 조건을 이용해 자유도를 줄여주어야 한다. 우선 $h_i=0$인 경우, $\widetilde{C}_i\cong\mathbb{P}^1$이고 $\mathcal{T}_{\mathbb{P}^1}(-D_i)\cong\mathcal{O}_{\mathbb{P}^1}(2-s_i)$이므로 위 공간의 dimension은 $\max\{3-s_i,0\}$이고, 따라서 $s_i$는 $3$ 이상이어야 한다. 직관적으로 이는 $\mathbb{P}^1$의 automorphism은 $(az+b)/(cz+d)$의 꼴이므로 $3$개의 자유도가 있는데, 이 자유도를 special point들이 하나씩 죽여주는 상황에 해당한다. $h_i=1$인 경우, tangent bundle은 trivial이 되어 global vector field의 공간은 dimension $1$이 되고, 이를 죽이기 위해서는 최소 하나의 special point가 필요하다. 
+이제 만일 $h_i\geq2$이면 $\deg\mathcal{T}_{\widetilde{C}_i}=2-2h_i<0$이므로 global vector field가 없다. ([\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="pq7bu" data-relation="required" reviewed="" }) 따라서 이 경우에는 special point가 없어도 automorphism group이 유한하다. 이는 낮은 genus에서는 일반적으로 성립하지 않는 논증으로, 여기에 special point들이 고정된다는 조건을 이용해 자유도를 줄여주어야 한다. 우선 $h_i=0$인 경우, $\widetilde{C}_i\cong\mathbb{P}^1$이고 $\mathcal{T}_{\mathbb{P}^1}(-D_i)\cong\mathcal{O}_{\mathbb{P}^1}(2-s_i)$이므로 위 공간의 dimension은 $\max\{3-s_i,0\}$이고, 따라서 $s_i$는 $3$ 이상이어야 한다. 직관적으로 이는 $\mathbb{P}^1$의 automorphism은 $(az+b)/(cz+d)$의 꼴이므로 $3$개의 자유도가 있는데, 이 자유도를 special point들이 하나씩 죽여주는 상황에 해당한다. $h_i=1$인 경우, tangent bundle은 trivial이 되어 global vector field의 공간은 dimension $1$이 되고, 이를 죽이기 위해서는 최소 하나의 special point가 필요하다. 
 
 정리하면 automorphism group의 유한성은, 위와 같은 상황에서 
 
@@ -71,7 +71,7 @@ $$2g(\widetilde{C}_i)-2+s_i>0$$
 이 성립하는 것과 같다. 즉 genus $0$에서는 special point가 적어도 $3$개, genus $1$에서는 적어도 $1$개가 필요하며, genus $2$ 이상에서는 추가조건이 없다. 이 조건은 오직 $\mu$가 constant로 죽이는 component $C_i$에만 해당되는 것으로, 만일 $\mu$가 $C_i$에서 nonconstant라면 이미 automorphism group이 $\mu$를 보존해야 한다는 사실로부터 유한성이 따라나온다. 
 
 ::: 예시 2
-우리는 이제 automorphism group이 (non-trivial하게) 유한하게 나오는 경우를 실제로 살펴본다. $C$가 irreducible nodal cubic이고 $\mu:C\rightarrow X$가 constant map이라고 하자. $C$의 arithmetic genus는 $1$이지만 normalization은 $\mathbb{P}^1$이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="0htg0" data-relation="weak" }) Node 위의 두 점을 $0,\infty$로 잡으면, marked point가 없을 때는 모든 $z\mapsto az$ ($a\in\mathbb{C}^{\times}$)가 이 두 점을 고정하고 $C$의 automorphism으로 내려간다. 따라서 이 map은 stable하지 않으며, 실제로 위의 부등식에 $h_i=0$, $s_i=2$를 대입해보아도 확인할 수 있다. 
+우리는 이제 automorphism group이 (non-trivial하게) 유한하게 나오는 경우를 실제로 살펴본다. $C$가 irreducible nodal cubic이고 $\mu:C\rightarrow X$가 constant map이라고 하자. $C$의 arithmetic genus는 $1$이지만 normalization은 $\mathbb{P}^1$이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="0htg0" data-relation="requires-review" }) Node 위의 두 점을 $0,\infty$로 잡으면, marked point가 없을 때는 모든 $z\mapsto az$ ($a\in\mathbb{C}^{\times}$)가 이 두 점을 고정하고 $C$의 automorphism으로 내려간다. 따라서 이 map은 stable하지 않으며, 실제로 위의 부등식에 $h_i=0$, $s_i=2$를 대입해보아도 확인할 수 있다. 
 
 이제 smooth locus에 marked point $p$ 하나를 고르고 그 preimage가 $1$이 되도록 좌표를 잡으면 $s_i=3$이 되어 이는 stability 조건을 만족한다. 단 여기서 주의할 것은 automorphism group이 trivial group이 아니라는 것이다. 즉 $0,1,\infty$를 각각 고정하는 automorphism은 항등사상 뿐이지만, 처음 normalization 단계에서 node의 두 branch를 서로 바꾸어줄 수 있는 자유도가 있으며, 실제로 $z\mapsto1/z$이 $0,\infty$를 맞바꾸고 $1$을 고정해주는 automorphism의 역할을 한다. 즉,
 
@@ -84,14 +84,14 @@ Stability는 이처럼 각 성분의 parametrization에 연속적인 자유도�
 
 ## 안정사상들의 모듈라이 공간
 
-[예시 2](#ex2){: data-lid="nr248" data-relation="required" }에서 보았듯, stable map은 비자명한 automorphism을 가질 수 있다. 따라서 stable map들을 모아둔 공간은 각 점이 나타내는 map의 automorphism까지 기억하는 stack으로 다룬다. Genus $g$, marked point의 개수 $n$, effective class $\beta$ (즉 $X$ 안의 irreducible curve들의 homology class를 음이 아닌 정수 계수로 합한 class)를 고정한 stable map들의 family와 그 사이의 isomorphism으로 이루어진 stack을
+[예시 2](#ex2){: data-lid="nr248" data-relation="required" reviewed="" }에서 보았듯, stable map은 비자명한 automorphism을 가질 수 있다. 따라서 stable map들을 모아둔 공간은 각 점이 나타내는 map의 automorphism까지 기억하는 stack으로 다룬다. Genus $g$, marked point의 개수 $n$, effective class $\beta$ (즉 $X$ 안의 irreducible curve들의 homology class를 음이 아닌 정수 계수로 합한 class)를 고정한 stable map들의 family와 그 사이의 isomorphism으로 이루어진 stack을
 
 $$\overline{\mathcal{M}}_{g,n}(X,\beta)$$
 
 로 적는다. 이 stack의 geometric point들의 isomorphism class는 stable map들의 isomorphism class에 대응하고, 각 점의 stabilizer는 해당 stable map의 automorphism group이 된다.
 
 ::: 명제 3
-$\beta$가 effective class이면 $\overline{\mathcal{M}}_{g,n}(X,\beta)$은 proper Deligne–Mumford stack이고 ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-lid="r3t1v" data-relation="required" }), 그 coarse moduli space는 projective scheme이다. ([\[스택\] §모듈라이 공간, ⁋정의 7](/ko/math/stacks/moduli_spaces#def7){: data-lid="d7w0d" data-relation="required" })
+$\beta$가 effective class이면 $\overline{\mathcal{M}}_{g,n}(X,\beta)$은 proper Deligne–Mumford stack이고 ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-lid="r3t1v" data-relation="required" reviewed="" }), 그 coarse moduli space는 projective scheme이다. ([\[스택\] §모듈라이 공간, ⁋정의 7](/ko/math/stacks/moduli_spaces#def7){: data-lid="d7w0d" data-relation="required" reviewed="" })
 :::
 
 도입부에서 properness가 필요했던 이유는 주어진 조건을 움직일 때 곡선의 limit이 moduli 안에 남아 있어야 했기 때문이며, 위 명제는 $\overline{\mathcal{M}}_{g,n}(X,\beta)$이 그러한 조건을 만족하는 moduli space임을 보여준다. 예를 들어 도입부의 conic 계산에서 image가 둘로 갈라진다면, 우리는 그 domain도 두 개의 성분으로 나누어줄 수 있으므로 이는 더 이상 문제가 되지 않는다. 한편, 문제의 소지가 있는 limit은 이러한 상황에서만 일어나는 것은 아닌데, 가령 두 marked point들이 하나의 점으로 충돌하는 경우에도 그 극한은 순진한 방식으로는 $\overline{\mathcal{M}}_{g,n}(X,\beta)$ 안에 머물지 않는다. 이 경우 우리는 이 충돌지점에 $\mathbb{P}^1$ component를 붙이고, 충돌한 두 marked point를 이 component 위에 붙이는 방식으로 원래의 모습을 기억한다. 이 때 새로 생긴 $\mathbb{P}^1$ component는 $\mu$를 통해 충돌지점의 image $\mu(p)$로 옮겨지며, 이 component에는 node 하나와 두 marked point가 있으므로 stability condition은 여전히 만족된다. 
@@ -108,7 +108,7 @@ $$\ev_i:\overline{\mathcal{M}}_{g,n}(X,\beta)\rightarrow X,\qquad (C,p_\bullet,\
 
 $$\pi:\overline{\mathcal{M}}_{g,n+1}(X,\beta)\rightarrow\overline{\mathcal{M}}_{g,n}(X,\beta)$$
 
-으로, $\beta\neq 0$ 혹은 $2g-2+n>0$인 경우 항상 정의된다. Marked point의 개수는 stability를 통제하는 변수이므로, 단순히 마지막 marked point를 잊기만 한다면 그 결과는 stable map이 되지 않을 수 있는데, $\pi$는 이렇게 unstable해진 component를 점으로 수축시키는 stabilization 과정까지 포함하여 그 결과물이 stable map이 되도록 만들어준 morphism이며, 이를 위해 앞선 조건 $\beta\neq 0$ 또는 $2g-2+n>0$이라는 가정이 필요하다. 이렇게 정의한 $\pi$는 $\overline{\mathcal{M}}_{g,n}(X,\beta)$ 위의 universal curve가 된다. ([\[스택\] §모듈라이 공간, §§모듈라이 함자](/ko/math/stacks/moduli_spaces#모듈라이-함자){: data-lid="r8e2o" data-relation="required" }) 실제로, 편의상 stable map 하나, 즉 $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 점 하나를 고정하고 이 위에서의 $\pi$의 fiber를 본다고 하면, 이 점에서 fiber로 가는 section을 정하는 것은 정확하게 마지막 marked point를 이 stable map의 어디에 찍는지와 같으며 따라서 이 점 위에서의 fiber가 그 stable map의 domain curve로 나오게 된다. 
+으로, $\beta\neq 0$ 혹은 $2g-2+n>0$인 경우 항상 정의된다. Marked point의 개수는 stability를 통제하는 변수이므로, 단순히 마지막 marked point를 잊기만 한다면 그 결과는 stable map이 되지 않을 수 있는데, $\pi$는 이렇게 unstable해진 component를 점으로 수축시키는 stabilization 과정까지 포함하여 그 결과물이 stable map이 되도록 만들어준 morphism이며, 이를 위해 앞선 조건 $\beta\neq 0$ 또는 $2g-2+n>0$이라는 가정이 필요하다. 이렇게 정의한 $\pi$는 $\overline{\mathcal{M}}_{g,n}(X,\beta)$ 위의 universal curve가 된다. ([\[스택\] §모듈라이 공간, §§모듈라이 함자](/ko/math/stacks/moduli_spaces#모듈라이-함자){: data-lid="r8e2o" data-relation="required" reviewed="" }) 실제로, 편의상 stable map 하나, 즉 $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 점 하나를 고정하고 이 위에서의 $\pi$의 fiber를 본다고 하면, 이 점에서 fiber로 가는 section을 정하는 것은 정확하게 마지막 marked point를 이 stable map의 어디에 찍는지와 같으며 따라서 이 점 위에서의 fiber가 그 stable map의 domain curve로 나오게 된다. 
 
 마지막으로 $2g-2+n>0$이면 map 없이도 stable한 pointed curve로 안정화할 수 있다. 이 경우 $X$로 가는 map을 잊은 뒤, pointed curve로서 unstable한 성분들을 수축하여
 
@@ -177,15 +177,15 @@ $$\vdim=\int_\beta c_1(T_X)+(\dim X-3)(1-g)+n$$
 
 $$\dim T^1-\dim T^2=\bigl(\dim A^1-\dim A^0\bigr)+\rchi(C,E)$$
 
-로 분리된다. 이 때 첫 괄호는 pointed domain의 deformation space와 infinitesimal automorphism space의 차원이므로, [§마디 곡선의 변형, ⁋따름정리 6](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#cor6){: data-lid="5ao1g" data-relation="required" }에 의하여 $3g-3+n$이다.
+로 분리된다. 이 때 첫 괄호는 pointed domain의 deformation space와 infinitesimal automorphism space의 차원이므로, [§마디 곡선의 변형, ⁋따름정리 6](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#cor6){: data-lid="5ao1g" data-relation="required" reviewed="" }에 의하여 $3g-3+n$이다.
 
-둘째 항의 경우, 우선 smooth projective curve $Y$ 위의 rank $r$ vector bundle $F$에 대하여, [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="ol72u" data-relation="required" }의 vector bundle 버전은
+둘째 항의 경우, 우선 smooth projective curve $Y$ 위의 rank $r$ vector bundle $F$에 대하여, [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="ol72u" data-relation="required" reviewed="" }의 vector bundle 버전은
 
 $$\rchi(Y,F)=\deg F+r(1-g(Y))$$
 
 을 준다. 
 
-우리의 domain $C$는 smooth curve는 아니지만, normalization $\nu:\widetilde C=\coprod_{j=1}^c\widetilde C_j\rightarrow C$을 통해 이 계산을 옮겨줄 수 있다. 각 $\widetilde C_j$의 genus를 $h_j$, node의 개수를 $d$, $E$의 rank를 $r$라 하자. Structure sheaf의 normalization exact sequence ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" data-relation="required" } 직후)에 locally free sheaf $E$를 tensor하면
+우리의 domain $C$는 smooth curve는 아니지만, normalization $\nu:\widetilde C=\coprod_{j=1}^c\widetilde C_j\rightarrow C$을 통해 이 계산을 옮겨줄 수 있다. 각 $\widetilde C_j$의 genus를 $h_j$, node의 개수를 $d$, $E$의 rank를 $r$라 하자. Structure sheaf의 normalization exact sequence ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" data-relation="required" reviewed="" } 직후)에 locally free sheaf $E$를 tensor하면
 
 $$0\rightarrow E\rightarrow\nu_\ast\nu^\ast E\rightarrow\bigoplus_{q\in\Sing C}E\otimes_{\mathcal O_C}\kappa(q)\rightarrow0$$
 
