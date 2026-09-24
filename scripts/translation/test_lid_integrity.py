@@ -19,36 +19,36 @@ SPEC.loader.exec_module(worker)
 class LidIntegrityTest(unittest.TestCase):
     def setUp(self) -> None:
         self.ko = (
-            '[가](/ko/math/a#def1){: data-lid="k7m2x" data-relation="required" }\n'
-            '[나](/ko/math/a#def1){: data-lid="q3z9b" data-relation="weak" }\n'
+            '[가](/ko/math/a#def1){: data-lid="k7m2x" }\n'
+            '[나](/ko/math/a#def1){: data-lid="q3z9b" }\n'
         )
 
     def test_known_lids_survive(self) -> None:
-        en = ('[A](/en/math/a#def1){: data-lid="k7m2x" data-relation="required" }\n'
-              '[B](/en/math/a#def1){: data-lid="q3z9b" data-relation="weak" }\n')
+        en = ('[A](/en/math/a#def1){: data-lid="k7m2x" }\n'
+              '[B](/en/math/a#def1){: data-lid="q3z9b" }\n')
         out, notes = worker.enforce_lid_integrity(en, self.ko)
         self.assertEqual(out, en)
         self.assertEqual(notes, [])
 
     def test_invented_lid_is_dropped(self) -> None:
-        en = '[A](/en/math/a#def1){: data-lid="zzzzz" data-relation="required" }\n'
+        en = '[A](/en/math/a#def1){: data-lid="zzzzz" }\n'
         out, notes = worker.enforce_lid_integrity(en, self.ko)
-        self.assertNotIn("data-lid", out)
-        self.assertIn('data-relation="required"', out)
+        self.assertEqual(out, "[A](/en/math/a#def1)\n")
         self.assertEqual(len(notes), 1)
         self.assertIn("zzzzz", notes[0])
 
     def test_duplicate_keeps_only_the_first(self) -> None:
-        en = ('[A](/en/math/a#def1){: data-lid="k7m2x" data-relation="required" }\n'
-              '[B](/en/math/a#def1){: data-lid="k7m2x" data-relation="weak" }\n')
+        en = ('[A](/en/math/a#def1){: data-lid="k7m2x" }\n'
+              '[B](/en/math/a#def1){: data-lid="k7m2x" }\n')
         out, notes = worker.enforce_lid_integrity(en, self.ko)
         self.assertEqual(out.count('data-lid="k7m2x"'), 1)
-        self.assertEqual(out.count("data-relation"), 2)
+        self.assertEqual(out, '[A](/en/math/a#def1){: data-lid="k7m2x" }\n'
+                              '[B](/en/math/a#def1)\n')
         self.assertEqual(len(notes), 1)
 
     def test_merged_link_leaves_the_other_lid_unused(self) -> None:
         """두 KO 링크가 한 EN 링크로 합쳐지면 남은 lid 하나만 실려 온다."""
-        en = '[A and B](/en/math/a#def1){: data-lid="q3z9b" data-relation="weak" }\n'
+        en = '[A and B](/en/math/a#def1){: data-lid="q3z9b" }\n'
         out, notes = worker.enforce_lid_integrity(en, self.ko)
         self.assertEqual(out, en)
         self.assertEqual(notes, [])

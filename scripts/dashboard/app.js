@@ -878,8 +878,9 @@ function secTranslation(d) {
 /* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 값을
    requires-review 로 바꿔 둔 상태라 그 링크는 의존성 그래프에서 빠져 있다.
    목록에서 한 건을 고르면 오른쪽에 구워진 글이 그대로 뜨고(그 링크를 강조한다),
-   판정 버튼이 그 링크 IAL 하나에 값과 reviewed="" 를 쓴 뒤 원장에서 뺀다.
-   글에서 직접 태그를 단 경우를 위해 '파일 태그 확인' 경로도 남아 있다. */
+   판정 버튼이 그 링크의 원장 레코드(_data/link_relations.yml)에 값과 reviewed 를
+   쓴 뒤 보류 원장에서 뺀다. 원장에 값을 직접 적은 경우를 위해 '원장 값 확인'
+   경로도 남아 있다. */
 function heldItems(d) {
   return ((d.link_audit || {}).held) || [];
 }
@@ -978,7 +979,7 @@ function renderHoldPreview(d) {
     acts.appendChild(b);
   });
   if (k.verdict) {
-    var c = el('button', 'ghost-btn', '파일 태그 확인 (' + k.verdict + ')');
+    var c = el('button', 'ghost-btn', '원장 값 확인 (' + k.verdict + ')');
     c.onclick = function () { resolveHold(k, '', acts, err); };
     acts.appendChild(c);
   }
@@ -1113,7 +1114,7 @@ function renderHoldList(d) {
   var commit = document.getElementById('holds-commit');
   if (!list) return;
   if (title) {
-    /* 방금 내린 판정이 EN 짝에도 갔는지는 화면에 남는 흔적이 없으므로 제목 옆에 붙인다. */
+    /* 방금 내린 판정이 쓴 lid 는 화면에 남는 흔적이 없으므로 제목 옆에 붙인다. */
     title.textContent = '의존성 링크 보류 — ' + a.held.length + '건'
       + (state.holdNote ? ' · ' + state.holdNote : '');
   }
@@ -1126,11 +1127,11 @@ function renderHoldList(d) {
   }
   var pend = (a.uncommitted || []).length;
   if (commit) {
-    commit.textContent = pend ? '링크 변경 커밋 (' + pend + '편)' : '커밋할 변경 없음';
+    commit.textContent = pend ? '링크 판정 커밋' : '커밋할 변경 없음';
     commit.disabled = !pend;
   }
   if (foot) {
-    foot.textContent = '태그를 단 것 ' + num(a.ready) + '건 · 지금까지 확정 ' +
+    foot.textContent = '원장에 값이 있는 것 ' + num(a.ready) + '건 · 지금까지 확정 ' +
       num(a.settled) + '건 · ' + ago(a.mtime) +
       ' 갱신. 확정한 링크는 검증기가 다시 걸지 않는다. 키보드: j/k 이동, 1/2/3 판정, u 되돌리기(커밋 전 판정만).';
   }
@@ -1145,7 +1146,7 @@ function renderHoldList(d) {
               '</span><span class="muted">:' + k.line + '</span>' +
               '<div class="holdrow__brief">' + esc(k.brief) + '</div>' },
       { html: esc(k.old || '—') + ' <span class="muted">→</span> ' + esc(k.new) +
-              (k.verdict ? ' <span class="muted">· 태그 ' + esc(k.verdict) + '</span>' : ''),
+              (k.verdict ? ' <span class="muted">· 원장 ' + esc(k.verdict) + '</span>' : ''),
         cls: 'sans' }
     ], 'clickable' + (k.ident === state.holdSel ? ' is-sel' : '') +
        (i && a.held[i - 1].pair !== k.pair ? ' pair-start' : ''));
@@ -1217,7 +1218,7 @@ function commitLinkChanges(btn, err) {
       });
     })
     .then(function (v) {
-      err.textContent = v.n + '편 커밋됨 (push 는 autopush)';
+      err.textContent = '커밋됨 (push 는 autopush)';
       return fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
         .then(function (fresh) { state.data = fresh; renderHoldList(state.data); });
     })

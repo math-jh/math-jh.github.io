@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Classify internal Markdown links as required, weak, or forward.
 
-One cron tick handles one logical KO/EN article pair.  Each language is judged
-independently and the pair is persisted together.  Tracked posts are committed;
-untracked posts under the explicitly local-only Gromov-Witten stream are updated
-in place.
+One cron tick handles one logical KO/EN article pair.  A link's relation lives
+in the ledger ``_data/link_relations.yml``, keyed by the ``data-lid`` in the link's
+IAL.  An EN link carrying the lid of a KO link is that link's translation and
+shares its record, so only KO links and EN links without a KO twin are judged.
+Each judgment rewrites the ledger and commits it.
 
 A unit passes through two stages, one per tick.
 
@@ -29,27 +30,29 @@ Codex review chain.  A single-provider assignment has no fallback, so a unit
 whose verifier is closed by the quota gate is left for a later tick instead of
 waiting on a provider slot.
 
-An empty ``reviewed=""`` IAL attribute is the durable completion marker.  Its
-presence means the semantic relation has already been reviewed, whether by the
-worker or by the author while writing the post.  It stays attached through link
-renames, moves, and proposition-number changes; removing it is the explicit way
-to request another verification pass.
+A record's ``reviewed: true`` is the durable completion marker.  Its presence
+means the semantic relation has already been reviewed, by the verification pass
+or by a human ruling.  It belongs to the lid, so it survives link renames, moves,
+and proposition-number changes; removing it is the explicit way to request
+another verification pass.
 
 Disagreement is not resolved automatically.  When the verifier returns a
 different relation, or ambiguous, the relation value is **replaced** with the
 marker ``requires-review`` and the link is held in
 ``dependency-classifier-holds.json``.  Graph consumers accept only
 required·weak·forward, so the marked link drops out of the graph as an untagged
-one would, while the literal marker stays searchable in the editor.  Neither
-stage picks up a marked link, so nothing reclassifies it, and the dashboard's
-link-audit panel lists it with its file and line for a human ruling.  Checking
-the item off there confirms the user's own tag and settles the link permanently.
+one would.  Neither stage picks up a marked link, so nothing reclassifies it, and
+the dashboard's link-audit panel lists it with its file and line for a human
+ruling, which the dashboard writes back to the ledger as a reviewed record.
 Every hold is announced through the notify shim as it is recorded.
 
-The inline representation is Kramdown IAL syntax::
+A post carries only the identifier; the relation is in the ledger::
 
-    [label](/ko/math/example){: data-relation="required" }
-    [label](/ko/math/example){: data-relation="requires-review" }
+    [label](/ko/math/example){: data-lid="k7m2x" }
+    "k7m2x": {relation: required, reviewed: true}
+
+A tick holds the ledger lock from start to finish and skips when the lock is
+taken, which is also how a dashboard ruling in progress defers the tick.
 
 State and logs live outside the repository under ~/.local/state.
 """
@@ -81,6 +84,7 @@ LOCAL_ONLY_POST_ROOTS = (ROOT / "_posts" / "Math" / "Gromov_Witten_Theory",)
 from common import by_permalink, en_counterpart, find_box, iter_posts, parse_labels, protected_spans  # noqa: E402
 import md_lint  # noqa: E402
 from blog_file_lock import FileLockSet, try_acquire_file_locks  # noqa: E402
+import link_relations as ledger  # noqa: E402
 from cron_commit import commit_outputs, dirty_paths  # noqa: E402
 
 STATE_DIR = Path.home() / ".local" / "state"
@@ -90,7 +94,6 @@ HOLDS_LOCK_PATH = Path("/tmp/dependency-classifier-holds.lock")
 COMPLETE_PATH = STATE_DIR / "dependency-classifier.complete"
 STATE_LOCK_PATH = Path("/tmp/dependency-classifier-state.lock")
 LEGACY_LOCK_PATH = Path("/tmp/dependency-classifier.lock")
-WORKER_SLOT_PATHS = tuple(Path(f"/tmp/dependency-classifier-slot-{i}.lock") for i in range(6))
 
 QUOTA_STATE_DIR = Path(os.environ.get(
     "DEPENDENCY_QUOTA_STATE_DIR", str(Path.home() / "Projects" / "hud-display" / "state")))
@@ -135,7 +138,7 @@ MAX_ROUNDS = 3
 FULL_CHUNK_SIZE = 4
 FULL_SOURCE_CAP = 30000
 FULL_TARGET_CAP = 30000
-RELATIONS = {"required", "weak", "forward"}
+RELATIONS = set(ledger.RELATIONS)
 # A link the verifier disagreed with waits for a human ruling.  The verdict of a
 # single model is never enough to overwrite the other model's tag, so the tag is
 # taken off and the link is parked here instead.
@@ -152,12 +155,13 @@ DASHBOARD_URL = os.environ.get(
     "DEPENDENCY_DASHBOARD_URL", "https://preview.math-jh.com/dash/#audit")
 
 IAL_RE = re.compile(r'^\{:\s*([^}]*)\}')
-RELATION_RE = re.compile(r'\bdata-relation\s*=\s*["\'](required|weak|forward)["\']')
-REVIEW_RELATION = "requires-review"
-REVIEW_RE = re.compile(r'\bdata-relation\s*=\s*["\']requires-review["\']')
-RELATION_ATTR_RE = re.compile(r'\bdata-relation\s*=\s*["\'][^"\']*["\']')
-REVIEWED_RE = re.compile(r'\breviewed\s*=\s*["\']["\']')
-REVIEWED_ATTR_RE = re.compile(r'\s*\breviewed\s*=\s*["\'][^"\']*["\']')
+LID_RE = re.compile(r'\bdata-lid\s*=\s*["\']([^"\']*)["\']')
+REVIEW_RELATION = ledger.REVIEW_RELATION
+
+# The ledger as this tick reads and writes it.  main() loads it after taking the
+# ledger lock; other importers (the dashboard) pass their own copy to
+# extract_links.
+RECORDS: dict[str, ledger.Record] = {}
 
 
 @dataclass
@@ -172,6 +176,7 @@ class Link:
     ial_start: int | None
     ial_end: int | None
     line: int = 0
+    lid: str | None = None
     relation: str | None = None
     reviewed: bool = False
 
@@ -312,18 +317,6 @@ def legacy_classifier_running() -> bool:
         lock_fh.close()
 
 
-def acquire_slot():
-    """Cap the one-off backlog at six concurrent article workers."""
-    for path in WORKER_SLOT_PATHS:
-        lock_fh = open(path, "w")
-        try:
-            fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            return lock_fh
-        except OSError:
-            lock_fh.close()
-    return None
-
-
 def acquire_provider_slot(provider: str):
     """Wait for a measured provider-specific model slot."""
     paths = PROVIDER_SLOT_PATHS[provider]
@@ -408,17 +401,21 @@ def internal_target(target: str) -> bool:
 
 def extract_links(
     path: Path, text: str, *, tagged: bool = False, review: bool = False,
+    records: dict[str, ledger.Record] | None = None,
 ) -> list[Link]:
     """Find post links outside code/raw/math/inline-code spans.
 
-    ``tagged`` selects which side of the relation tag is returned: the default
-    yields the links still waiting for a relation, and ``True`` yields the ones
-    that already carry one, with ``relation`` filled in.  ``review`` yields the
-    links marked ``requires-review`` instead; neither other side includes them,
-    so a marked link waits for a human however the holds ledger reads.  The
-    ordinal behind a link's ident counts every candidate in the file either way,
-    so an ident names the same link whatever its tag currently is.
+    A link's relation is the ledger record of its ``data-lid``; ``records``
+    defaults to the ledger this tick loaded.  ``tagged`` selects which side is
+    returned: the default yields the links still waiting for a relation (no lid,
+    or a lid without a record), and ``True`` yields the ones that have one, with
+    ``relation`` filled in.  ``review`` yields the links whose record is
+    ``requires-review`` instead; neither other side includes them, so a marked
+    link waits for a human however the holds ledger reads.  The ordinal behind a
+    link's ident counts every candidate in the file either way, so an ident
+    names the same link whatever its record currently says.
     """
+    book = RECORDS if records is None else records
     protected = protected_spans(text)
     result: list[Link] = []
     ordinal = 0
@@ -445,9 +442,12 @@ def extract_links(
         ial = IAL_RE.match(tail)
         ial_start = match.end() if ial else None
         ial_end = match.end() + ial.end() if ial else None
-        found = RELATION_RE.search(ial.group(1)) if ial else None
-        marked = bool(ial and REVIEW_RE.search(ial.group(1)))
-        reviewed = bool(ial and REVIEWED_RE.search(ial.group(1)))
+        lid_match = LID_RE.search(ial.group(1)) if ial else None
+        lid = lid_match.group(1) if lid_match else None
+        record = book.get(lid) if lid else None
+        found = record.relation if record and record.relation in RELATIONS else None
+        marked = bool(record and record.relation == REVIEW_RELATION)
+        reviewed = bool(record and record.reviewed)
         ordinal += 1
         side = "review" if marked else "tagged" if found else "open"
         if side != ("review" if review else "tagged" if tagged else "open"):
@@ -458,24 +458,14 @@ def extract_links(
             start=match.start(), end=match.end(), markup=markup, label=label,
             target=target, ial_start=ial_start, ial_end=ial_end,
             line=text.count("\n", 0, match.start()) + 1,
-            relation=found.group(1) if found else None,
-            reviewed=reviewed,
+            lid=lid, relation=found, reviewed=reviewed,
         ))
     return result
 
 
-_TEXT_OVERRIDE: dict[Path, str] = {}
-
-
-LID_RE = re.compile(r'\bdata-lid\s*=\s*["\']([^"\']*)["\']')
-
-
 def link_lid(text: str, link: Link) -> str | None:
     """이 링크 IAL 의 `data-lid` — 출현의 영속 식별자."""
-    if link.ial_start is None or link.ial_end is None:
-        return None
-    found = LID_RE.search(text[link.ial_start:link.ial_end])
-    return found.group(1) if found else None
+    return link.lid
 
 
 def ko_lids(paths: list[Path], texts: dict[Path, str]) -> set[str]:
@@ -513,95 +503,28 @@ def settled_for_human(link: Link, text: str, ko_all: set[str]) -> bool:
 
 
 def read_post(path: Path) -> str:
-    """Article text as the current pass should see it.
-
-    The verification pass registers a tag-stripped copy of the unit here so the
-    excerpts it hands the model carry no relation attribute to anchor on.
-    """
-    override = _TEXT_OVERRIDE.get(path)
-    return path.read_text(encoding="utf-8") if override is None else override
+    return path.read_text(encoding="utf-8")
 
 
-def strip_relations(text: str, links: list[Link]) -> str:
-    """Drop the data-relation attribute from the IAL of each given link."""
-    edits = []
+def record_decisions(links: list[Link], decisions: dict[str, str]) -> None:
+    """First-pass verdicts become fresh, unreviewed records."""
     for link in links:
-        if link.ial_start is None or link.ial_end is None:
-            continue
-        ial = text[link.ial_start:link.ial_end]
-        inner = RELATION_ATTR_RE.sub("", ial[2:-1]).strip()
-        edits.append((link.ial_start, link.ial_end, f"{{: {inner} }}" if inner else ""))
-    for start, end, replacement in sorted(edits, reverse=True):
-        text = text[:start] + replacement + text[end:]
-    return text
+        RECORDS[link.lid] = ledger.Record(decisions[link.ident])
 
 
-def mark_for_review(text: str, links: list[Link]) -> str:
-    """Replace the relation of each given tagged link with ``requires-review``."""
-    marker = f'data-relation="{REVIEW_RELATION}"'
-    edits = []
+def record_reviewed(links: list[Link]) -> None:
+    """Mark each link's record as reviewed, keeping its relation."""
     for link in links:
-        if link.ial_start is None or link.ial_end is None:
-            continue
-        ial = text[link.ial_start:link.ial_end]
-        ial = REVIEWED_ATTR_RE.sub("", ial)
-        edits.append((link.ial_start, link.ial_end,
-                      RELATION_ATTR_RE.sub(marker, ial, count=1)))
-    for start, end, replacement in sorted(edits, reverse=True):
-        text = text[:start] + replacement + text[end:]
-    return text
+        RECORDS[link.lid] = ledger.Record(RECORDS[link.lid].relation, True)
 
 
-def mark_reviewed(text: str, links: list[Link]) -> str:
-    """Add the durable empty review marker to relation-tagged links."""
-    edits = []
+def record_review_outcome(links: list[Link], disputed: set[str]) -> None:
+    """Stamp agreements and turn disagreements into unreviewed holds."""
     for link in links:
-        if link.reviewed or link.ial_start is None or link.ial_end is None:
-            continue
-        ial = text[link.ial_start:link.ial_end]
-        replacement = ial[:-1].rstrip() + ' reviewed="" }'
-        edits.append((link.ial_start, link.ial_end, replacement))
-    for start, end, replacement in sorted(edits, reverse=True):
-        text = text[:start] + replacement + text[end:]
-    return text
-
-
-def apply_review_outcome(
-    text: str, links: list[Link], disputed: set[str],
-) -> str:
-    """Stamp agreements and turn disagreements into unreviewed holds in one edit."""
-    marker = f'data-relation="{REVIEW_RELATION}"'
-    edits = []
-    for link in links:
-        if link.ial_start is None or link.ial_end is None:
-            continue
-        ial = text[link.ial_start:link.ial_end]
         if link.ident in disputed:
-            replacement = REVIEWED_ATTR_RE.sub("", ial)
-            replacement = RELATION_ATTR_RE.sub(marker, replacement, count=1)
-        elif link.reviewed:
-            continue
+            RECORDS[link.lid] = ledger.Record(REVIEW_RELATION)
         else:
-            replacement = ial[:-1].rstrip() + ' reviewed="" }'
-        edits.append((link.ial_start, link.ial_end, replacement))
-    for start, end, replacement in sorted(edits, reverse=True):
-        text = text[:start] + replacement + text[end:]
-    return text
-
-
-def stripped_view(
-    paths: list[Path], originals: dict[Path, str], links: list[Link],
-) -> tuple[dict[Path, str], list[Link]]:
-    """The unit as the verifier sees it: tags of ``links`` stripped, links re-read.
-
-    Offsets of ``links`` point into the tagged originals, and every stripped tag
-    before a link shifts it, so excerpts are cut from the links re-extracted from
-    the stripped text.  Idents are stable across the strip.
-    """
-    texts = {p: strip_relations(originals[p], [x for x in links if x.source == p])
-             for p in paths}
-    by_ident = {x.ident: x for p in paths for x in extract_links(p, texts[p])}
-    return texts, [by_ident[x.ident] for x in links]
+            RECORDS[link.lid] = ledger.Record(RECORDS[link.lid].relation, True)
 
 
 def paragraph_context(text: str, offset: int, radius: int) -> str:
@@ -992,24 +915,6 @@ def verify(links: list[Link], decided_by: dict[str, str]) -> dict[str, dict]:
     return verdicts
 
 
-def annotate(text: str, links: list[Link], decisions: dict[str, str]) -> str:
-    edits = []
-    for link in links:
-        relation = decisions[link.ident]
-        if link.ial_start is not None and link.ial_end is not None:
-            old = text[link.ial_start:link.ial_end]
-            attr = f'data-relation="{relation}"'
-            replacement = (RELATION_ATTR_RE.sub(attr, old, count=1)
-                           if RELATION_ATTR_RE.search(old)
-                           else old[:-1].rstrip() + f" {attr} }}")
-            edits.append((link.ial_start, link.ial_end, replacement))
-        else:
-            edits.append((link.end, link.end, f'{{: data-relation="{relation}" }}'))
-    for start, end, replacement in sorted(edits, reverse=True):
-        text = text[:start] + replacement + text[end:]
-    return text
-
-
 def hard_lint(path: Path, text: str) -> set[str]:
     return {p for p in md_lint.collect_problems(str(path), text, "", {})
             if not p.startswith(md_lint.SOFT)}
@@ -1019,25 +924,32 @@ def unit_key(paths: list[Path]) -> str:
     return "+".join(str(p.relative_to(ROOT)) for p in paths)
 
 
+def unit_digest(
+    paths: list[Path], texts: dict[Path, str], parked: set[str] = frozenset(),
+) -> str:
+    """Hash the unit's text together with the records of its links.
+
+    A relation lives in the ledger, not in the text, so the text alone no longer
+    changes when a verdict does.  Records of human-parked links are left out:
+    resolving a hold swaps a parked link's ``requires-review`` for a relation,
+    and that known bookkeeping edit must not invalidate the verification of every
+    other link in the unit, while prose edits and relation changes on non-parked
+    links must still do so.
+    """
+    rows = []
+    for path in paths:
+        for link in unit_links(path, texts[path]):
+            if link.lid and link.ident not in parked:
+                record = RECORDS.get(link.lid)
+                if record:
+                    rows.append(f"{link.lid}={record.relation}:{int(record.reviewed)}")
+    return sha("\0".join(texts[p] for p in paths) + "\0\0" + "\n".join(sorted(set(rows))))
+
+
 def verification_fingerprint(
     paths: list[Path], texts: dict[Path, str], parked: set[str],
 ) -> str:
-    """Hash content while ignoring relation tags on human-parked links.
-
-    Resolving a hold swaps a parked link's ``requires-review`` marker for a
-    relation.  That known bookkeeping edit must not invalidate the verification
-    of every other link in the unit, while prose edits and relation changes on
-    non-parked links must still do so.
-    """
-    normalized = []
-    for path in paths:
-        parked_links = [
-            link for link in (extract_links(path, texts[path], tagged=True)
-                              + extract_links(path, texts[path], review=True))
-            if link.ident in parked
-        ]
-        normalized.append(strip_relations(texts[path], parked_links))
-    return sha("\0".join(normalized))
+    return unit_digest(paths, texts, parked)
 
 
 def verified_at_content(entry: dict, raw_hash: str, content_hash: str) -> bool:
@@ -1091,9 +1003,11 @@ def select_unit(
 
     Classifying comes first: a unit is verified only once no link in it is
     waiting for a relation.  Links parked for a human ruling are invisible to
-    every stage.  Links carrying ``reviewed=""`` are permanently complete.
-    ``stamp`` migrates a legacy state-only verification to the inline marker
-    without spending another model call.
+    every stage, and so are EN links that share a lid with a KO link in the
+    unit: they are the KO link's translation and use its record.  A link
+    without a lid waits for the next tick's mint.  Records marked reviewed are
+    permanently complete.  ``stamp`` migrates a legacy state-only verification
+    to the reviewed mark without spending another model call.
     """
     now = time.time()
     parked = parked_idents()
@@ -1108,15 +1022,20 @@ def select_unit(
                 continue
             texts = {p: p.read_text(encoding="utf-8") for p in paths}
             key = unit_key(paths)
-            fingerprint = sha("\0".join(texts[p] for p in paths))
+            fingerprint = unit_digest(paths, texts)
             verify_fingerprint = verification_fingerprint(paths, texts, parked)
             entry = state.get("units", {}).get(key, {})
             at_judged_content = entry.get("hash") == fingerprint
             if at_judged_content and entry.get("retry_after", 0) > now:
                 lease.release()
                 continue
-            links = [link for p in paths for link in extract_links(p, texts[p])
-                     if link.ident not in parked]
+            ko_all = ko_lids(paths, texts)
+
+            def own(link: Link) -> bool:
+                return (link.ident not in parked and link.lid is not None
+                        and not awaits_ko(link, texts[link.source], ko_all))
+
+            links = [link for p in paths for link in extract_links(p, texts[p]) if own(link)]
             if links:
                 if at_judged_content and entry.get("status") == "exhausted":
                     # An exhausted unit spent all MAX_ROUNDS rounds without a
@@ -1125,30 +1044,9 @@ def select_unit(
                     # reopens it.
                     lease.release()
                     continue
-                # KO 에 짝이 있는 EN 링크는 모델에 넘기지 않는다(awaits_ko).
-                # 모델이 보는 것은 KO 링크와, KO 짝이 없는 EN 링크뿐이다.
-                ko_all = ko_lids(paths, texts)
-                deferred = [link for link in links
-                            if awaits_ko(link, texts[link.source], ko_all)]
-                ko_open = [link for link in links if link.source.parent.name == "ko"]
-                if ko_open:
-                    return "first", paths, texts, ko_open, lease
-                relations = ko_relations(paths, texts)
-                inheritable = [
-                    link for link in deferred
-                    if relations.get(link_lid(texts[link.source], link) or "")
-                ]
-                if inheritable:
-                    return "inherit", paths, texts, inheritable, lease
-                waiting = {link.ident for link in deferred}
-                orphans = [link for link in links if link.ident not in waiting]
-                if orphans:
-                    return "first", paths, texts, orphans, lease
-                # 남은 것은 KO 판정을 기다리는 EN 링크뿐이다. 이 unit 에서 지금 할
-                # 일은 없으므로 아래 검증 단계로 넘어간다.
-            tagged = [p_link for p in paths
-                      for p_link in extract_links(p, texts[p], tagged=True)
-                      if p_link.ident not in parked]
+                return "first", paths, texts, links, lease
+            tagged = [link for p in paths
+                      for link in extract_links(p, texts[p], tagged=True) if own(link)]
             if not tagged:
                 updates[key] = {
                     "status": "done", "hash": fingerprint,
@@ -1158,16 +1056,7 @@ def select_unit(
                 }
                 lease.release()
                 continue
-            # 사람이 확정한 KO 와 값이 어긋난 EN 링크는 KO 를 따라오게 한다.
-            # `inherit` 이 미태그 EN 만 채우면, KO 판정이 나중에 바뀔 때 EN 이 옛
-            # 값을 쥔 채 조용히 갈린다. 덮는 기준을 `reviewed` 로 둔 것은, 모델이
-            # 낸 미검토 KO 값이 EN 을 밀어내지 않게 하기 위해서다.
-            stale = stale_en_links(tagged, texts, ko_settled(paths, texts))
-            if stale:
-                return "inherit", paths, texts, stale, lease
-            ko_all = ko_lids(paths, texts)
-            pending_review = [link for link in tagged
-                              if not settled_for_human(link, texts[link.source], ko_all)]
+            pending_review = [link for link in tagged if not link.reviewed]
             if not pending_review:
                 updates[key] = {
                     **cleared(entry), "status": "done", "hash": fingerprint,
@@ -1205,10 +1094,10 @@ def exhausted_units() -> dict[str, dict]:
         if entry.get("status") != "exhausted":
             continue
         try:
-            texts = [p.read_text(encoding="utf-8") for p in paths]
+            texts = {p: p.read_text(encoding="utf-8") for p in paths}
         except OSError:
             continue
-        if entry.get("hash") == sha("\0".join(texts)):
+        if entry.get("hash") == unit_digest(paths, texts):
             out[unit_key(paths)] = entry
     return out
 
@@ -1226,13 +1115,13 @@ def backlog_complete() -> bool:
             texts = {p: p.read_text(encoding="utf-8") for p in paths}
         except OSError:
             return False
-        if any(link.ident not in parked
+        ko_all = ko_lids(paths, texts)
+        if any(link.ident not in parked and not awaits_ko(link, texts[p], ko_all)
                for p in paths for link in extract_links(p, texts[p])):
             return False
         entry = state.get("units", {}).get(key, {})
-        raw_hash = sha("\0".join(texts[p] for p in paths))
+        raw_hash = unit_digest(paths, texts)
         content_hash = verification_fingerprint(paths, texts, parked)
-        ko_all = ko_lids(paths, texts)
         pending_review = [
             link for p in paths for link in extract_links(p, texts[p], tagged=True)
             if link.ident not in parked
@@ -1267,11 +1156,31 @@ def guard_unchanged(paths: list[Path], originals: dict[Path, str]) -> None:
         raise RuntimeError("target changed while models were running")
 
 
+LEDGER_REL = str(ledger.PATH.relative_to(ROOT))
+
+
+def publish_records(paths: list[Path], *, detail: str, commit: bool) -> None:
+    """Write the ledger this tick changed, and own the result in Git or not at all."""
+    key = unit_key(paths)
+    before = ledger.PATH.read_text(encoding="utf-8") if ledger.PATH.exists() else None
+    ledger.save(RECORDS)
+    if not commit:
+        return log(f"saved without commit: {key}")
+    committed = commit_outputs(
+        "Link Dependencies Classifier", [LEDGER_REL], detail, log=log, repo=ROOT,
+    )
+    if not committed:
+        # Never leave unowned generated edits behind.
+        if before is not None:
+            ledger.PATH.write_text(before, encoding="utf-8")
+        raise RuntimeError("could not commit worker outputs; restored the ledger")
+
+
 def publish(
     paths: list[Path], originals: dict[Path, str], rendered: dict[Path, str],
     *, detail: str, commit: bool,
 ) -> None:
-    """Write the rewritten unit, and own the result in Git or not at all."""
+    """Write rewritten posts (lid minting), and own the result in Git or not at all."""
     key = unit_key(paths)
     for path in paths:
         introduced = hard_lint(path, rendered[path]) - hard_lint(path, originals[path])
@@ -1326,12 +1235,11 @@ def run_first_pass(
         )
         return 0
     guard_unchanged(paths, originals)
-    rendered = {p: annotate(originals[p], [x for x in links if x.source == p], decisions)
-                for p in paths}
-    publish(paths, originals, rendered, commit=commit,
-            detail=f"{paths[0].stem} 링크 {len(links)}건 분류")
+    record_decisions(links, decisions)
+    publish_records(paths, commit=commit,
+                    detail=f"{paths[0].stem} 링크 {len(links)}건 분류")
     merge_unit_states({key: {
-        "status": "done", "hash": sha("\0".join(rendered[p] for p in paths)),
+        "status": "done", "hash": unit_digest(paths, originals),
         "checked_at": int(time.time()), "links": len(links),
         "decided_by": {**entry.get("decided_by", {}), **decided_by},
     }})
@@ -1348,22 +1256,17 @@ def run_verify_pass(
 ) -> int:
     key = unit_key(paths)
     decided_by = entry.get("decided_by", {}) if entry.get("hash") == fingerprint else {}
-    stripped, view = stripped_view(paths, originals, links)
-    _TEXT_OVERRIDE.update(stripped)
-    try:
-        verdicts = verify(view, decided_by)
-    finally:
-        _TEXT_OVERRIDE.clear()
+    # The text carries no relation, so the verifier cannot anchor on the verdict.
+    verdicts = verify(links, decided_by)
     disputed = [(link, str(verdicts[link.ident]["relation"]).lower()) for link in links
                 if str(verdicts[link.ident]["relation"]).lower() != link.relation]
     if not disputed:
         guard_unchanged(paths, originals)
-        rendered = {p: apply_review_outcome(
-            originals[p], [x for x in links if x.source == p], set()) for p in paths}
-        publish(paths, originals, rendered, commit=commit,
-                detail=f"{paths[0].stem} 링크 {len(links)}건 검토 완료")
-        fingerprint = sha("\0".join(rendered[p] for p in paths))
-        content_hash = verification_fingerprint(paths, rendered, parked_idents())
+        record_review_outcome(links, set())
+        publish_records(paths, commit=commit,
+                        detail=f"{paths[0].stem} 링크 {len(links)}건 검토 완료")
+        fingerprint = unit_digest(paths, originals)
+        content_hash = verification_fingerprint(paths, originals, parked_idents())
         merge_unit_states({key: {
             **cleared(entry), "status": "done", "hash": fingerprint,
             "verified_hash": fingerprint,
@@ -1375,10 +1278,9 @@ def run_verify_pass(
         return 0
     guard_unchanged(paths, originals)
     disputed_ids = {link.ident for link, _ in disputed}
-    rendered = {p: apply_review_outcome(
-        originals[p], [x for x in links if x.source == p], disputed_ids) for p in paths}
-    publish(paths, originals, rendered, commit=commit,
-            detail=f"{paths[0].stem} 링크 {len(disputed)}건 재검토 보류")
+    record_review_outcome(links, disputed_ids)
+    publish_records(paths, commit=commit,
+                    detail=f"{paths[0].stem} 링크 {len(disputed)}건 재검토 보류")
     now = int(time.time())
     holds = {}
     lines = []
@@ -1387,6 +1289,7 @@ def run_verify_pass(
         verifier = row.get("provider", "")
         holds[link.ident] = {
             "path": str(link.source.relative_to(ROOT)), "line": link.line,
+            "lid": link.lid,
             "label": link.label, "target": link.target, "markup": link.markup,
             "old": link.relation, "new": relation,
             "reason": str(row.get("reason", ""))[:600],
@@ -1395,9 +1298,9 @@ def run_verify_pass(
         }
         lines.append(f"{link.where()} {link.relation}→{relation} [{verifier}] {link.brief()}")
     merge_holds(holds)
-    settled_hash = sha("\0".join(rendered[p] for p in paths))
+    settled_hash = unit_digest(paths, originals)
     content_hash = verification_fingerprint(
-        paths, rendered, parked_idents() | set(holds),
+        paths, originals, parked_idents() | set(holds),
     )
     merge_unit_states({key: {
         **cleared(entry), "hash": settled_hash, "verified_hash": settled_hash,
@@ -1417,20 +1320,6 @@ def run_verify_pass(
     return 0
 
 
-def ko_relations(paths: list[Path], texts: dict[Path, str]) -> dict[str, str]:
-    """이 unit 의 KO 쪽에서 판정이 끝난 링크들의 {lid: relation}."""
-    out: dict[str, str] = {}
-    for path in paths:
-        if path.parent.name != "ko":
-            continue
-        for link in extract_links(path, texts[path], tagged=True):
-            if link.relation in RELATIONS:
-                lid = link_lid(texts[path], link)
-                if lid:
-                    out[lid] = link.relation
-    return out
-
-
 LID_LEDGER = Path.home() / ".local" / "state" / "link-ids.txt"
 LID_ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz"
 LID_LENGTH = 5
@@ -1446,19 +1335,20 @@ def unit_links(path: Path, text: str) -> list[Link]:
 
 
 def mint_lids(*, commit: bool) -> None:
-    """KO 글의 lid 없는 링크에 식별자를 발급한다. 판정보다 **먼저** 돈다.
+    """lid 없는 링크에 식별자를 발급한다. 판정보다 **먼저** 돈다.
 
-    lid 가 없는 링크는 EN 이 상속할 근거를 갖지 못해 독립 판정으로 새고, 그렇게
-    생긴 값 차이는 아무 에러도 내지 않는다. 그래서 발급을 분류기 바깥의 일회성
-    작업으로 두지 않고 매 틱의 첫 단계로 둔다 — 같은 틱에서 새 링크가 판정되기
-    전에 식별자를 갖는 것이 보장된다.
+    관계는 lid 를 키로 원장에 적히므로 lid 없는 링크는 판정을 담을 곳이 없다.
+    KO 링크의 lid 는 번역을 타고 EN 으로 건너가 두 링크가 한 레코드를 공유하게
+    하고, EN 에만 있는 링크(번역이 KO 에 없는 링크를 만들었거나 lid 를 흘린 경우)도
+    자기 lid 를 받아 따로 판정된다. 발급을 매 틱의 첫 단계로 두어 같은 틱에서 새
+    링크가 판정되기 전에 식별자를 갖는 것을 보장한다.
 
     값은 36진수 5자 난수이고, `현재 코퍼스 ∪ 발급 대장` 과 대조해 다시 뽑으므로
     유일성은 확률이 아니라 검사로 보장된다. 지워진 링크의 id 가 풀려서 다른
     링크에 재배정되지 않도록 대장은 한 번 발급한 값을 계속 들고 있는다.
     """
     scope = ROOT / "_posts" / "Math"
-    targets = sorted(p for p in scope.rglob("*.md") if p.parent.name == "ko")
+    targets = sorted(p for p in scope.rglob("*.md") if p.parent.name in ("ko", "en"))
     texts, pending = {}, {}
     for path in targets:
         text = path.read_text(encoding="utf-8")
@@ -1508,105 +1398,34 @@ def mint_lids(*, commit: bool) -> None:
         LID_LEDGER.parent.mkdir(parents=True, exist_ok=True)
         with LID_LEDGER.open("a", encoding="utf-8") as handle:
             handle.write("".join(value + "\n" for value in minted))
-        publish(list(rendered), texts, rendered, commit=commit,
-                detail=f"링크 식별자 {len(minted)}건 발급")
+        # 추적되는 글과 로컬 전용(untracked GW) 글을 한 번에 넘기면 커밋 경로가 갈려
+        # 둘 다 실패한다 — 나눠서 게시한다.
+        local = [p for p in rendered if is_local_only_untracked_unit([p])]
+        for group in ([p for p in rendered if p not in local], local):
+            if group:
+                publish(group, texts, rendered, commit=commit,
+                        detail=f"링크 식별자 {len(minted)}건 발급")
     finally:
         lease.release()
     log(f"lid: {len(minted)} identifier(s) minted across {len(rendered)} post(s)")
-
-
-def ko_settled(paths: list[Path], texts: dict[Path, str]) -> dict[str, str]:
-    """사람이 검토를 마친 KO 링크들의 {lid: relation}."""
-    out: dict[str, str] = {}
-    for path in paths:
-        if path.parent.name != "ko":
-            continue
-        for link in extract_links(path, texts[path], tagged=True):
-            if link.reviewed and link.relation in RELATIONS:
-                lid = link_lid(texts[path], link)
-                if lid:
-                    out[lid] = link.relation
-    return out
-
-
-def retire_en_markers() -> None:
-    """KO 가 검토를 마친 EN 링크에서 `reviewed` 를 거둔다.
-
-    검토 표지는 KO 에만 둔다는 것이 계약이고, EN 은 같은 lid 의 KO 에서 완료를
-    상속한다. 회수할 거리가 생기는 시점이 곧 KO 가 검토되는 시점이므로 여기에
-    붙인다. 실패해도 판정에는 영향이 없으니 로그만 남기고 넘어간다.
-    """
-    script = Path(__file__).with_name("retire_en_reviewed.py")
-    try:
-        done = subprocess.run([sys.executable, str(script), "--apply", "--quiet"],
-                              cwd=str(ROOT), capture_output=True, text=True, timeout=600)
-    except Exception as exc:                           # noqa: BLE001
-        return log(f"marker retire: 실패 — {exc}")
-    for line in (done.stdout or "").splitlines():
-        log(f"marker retire: {line}")
-
-
-def stale_en_links(
-    tagged: list[Link], texts: dict[Path, str], settled: dict[str, str],
-) -> list[Link]:
-    """사람이 확정한 KO 와 값이 어긋난 EN 링크들."""
-    out = []
-    for link in tagged:
-        if link.source.parent.name != "en":
-            continue
-        lid = link_lid(texts[link.source], link)
-        want = settled.get(lid or "")
-        if want is not None and want != link.relation:
-            out.append(link)
-    return out
-
-
-def run_inherit_pass(
-    paths: list[Path], originals: dict[Path, str], links: list[Link],
-    entry: dict, *, commit: bool,
-) -> int:
-    """KO 에서 이미 내린 판정을 같은 lid 의 EN 링크에 옮긴다. 모델을 부르지 않는다.
-
-    EN 링크는 KO 링크의 번역이므로 같은 출현에 대해 두 번 판단할 이유가 없다.
-    두 번 판단한 결과가 갈린 것이 지금 남아 있는 불일치이고, 이 패스는 그
-    발생원을 막는다. 여기서 값이 붙은 링크는 사람 검토도 KO 에서 상속한다.
-    """
-    key = unit_key(paths)
-    relations = ko_relations(paths, originals)
-    decisions = {link.ident: relations[link_lid(originals[link.source], link)]
-                 for link in links}
-    guard_unchanged(paths, originals)
-    rendered = {p: annotate(originals[p], [x for x in links if x.source == p], decisions)
-                for p in paths}
-    publish(paths, originals, rendered, commit=commit,
-            detail=f"{paths[0].stem} EN 링크 {len(links)}건 KO 판정 상속")
-    merge_unit_states({key: {
-        **cleared(entry), "hash": sha("\0".join(rendered[p] for p in paths)),
-        "checked_at": int(time.time()),
-    }})
-    for link in links:
-        log(f"inherited {link.where()} {decisions[link.ident]} {link.brief()}")
-    log(f"inherited {key}: {len(links)} relation tag(s) from KO")
-    return 0
 
 
 def run_stamp_pass(
     paths: list[Path], originals: dict[Path, str], links: list[Link],
     entry: dict, *, commit: bool,
 ) -> int:
-    """Migrate a completed legacy verification from state into each link's IAL."""
+    """Migrate a completed legacy verification from state into each link's record."""
     key = unit_key(paths)
     guard_unchanged(paths, originals)
-    rendered = {p: mark_reviewed(
-        originals[p], [x for x in links if x.source == p]) for p in paths}
-    publish(paths, originals, rendered, commit=commit,
-            detail=f"{paths[0].stem} 기존 검토 링크 {len(links)}건 마커 이관")
-    fingerprint = sha("\0".join(rendered[p] for p in paths))
+    record_reviewed(links)
+    publish_records(paths, commit=commit,
+                    detail=f"{paths[0].stem} 기존 검토 링크 {len(links)}건 마커 이관")
+    fingerprint = unit_digest(paths, originals)
     merge_unit_states({key: {
         **cleared(entry), "status": "done", "hash": fingerprint,
         "verified_hash": fingerprint,
         "verified_content_hash": verification_fingerprint(
-            paths, rendered, parked_idents()),
+            paths, originals, parked_idents()),
         "reviewed_marker_version": 1,
     }})
     log(f"stamped {key}: {len(links)} legacy reviewed link(s)")
@@ -1616,7 +1435,6 @@ def run_stamp_pass(
 def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
     if not dry_run:
         mint_lids(commit=commit)
-        retire_en_markers()
     state = load_state()
     scan_updates: dict[str, dict] = {}
     selected = select_unit(state, scan_updates)
@@ -1636,14 +1454,14 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
         return 0
     stage, paths, originals, links, lease = selected
     key = unit_key(paths)
-    noun = "unclassified" if stage in ("first", "inherit") else "classified"
+    noun = "unclassified" if stage == "first" else "classified"
     try:
         log(f"selected {key} for {stage} pass: {len(links)} {noun} link(s)")
         if dry_run:
             for link in links:
                 log(f"dry-run {stage} {link.where()} {link.relation or '—'} {link.brief()}")
             return 0
-        fingerprint = sha("\0".join(originals[p] for p in paths))
+        fingerprint = unit_digest(paths, originals)
         entry = state.get("units", {}).get(key, {})
         runner = {
             "first": run_first_pass,
@@ -1652,8 +1470,6 @@ def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
         try:
             if stage == "stamp":
                 return run_stamp_pass(paths, originals, links, entry, commit=commit)
-            if stage == "inherit":
-                return run_inherit_pass(paths, originals, links, entry, commit=commit)
             assert runner is not None
             return runner(paths, originals, links, entry, fingerprint, commit=commit)
         except Exception as exc:
@@ -1707,14 +1523,16 @@ def main() -> int:
     if legacy_classifier_running():
         log("legacy dependency classifier is still running; skip this tick")
         return 0
-    slot_fh = acquire_slot()
-    if slot_fh is None:
-        log("six dependency classifiers are already running; skip this tick")
+    held = ledger.try_lock()
+    if held is None:
+        log("link relation ledger is locked (classifier or dashboard); skip this tick")
         return 0
     try:
+        RECORDS.clear()
+        RECORDS.update(ledger.load())
         return process_once(args.dry_run, commit=not args.no_commit)
     finally:
-        slot_fh.close()
+        held.release()
 
 
 if __name__ == "__main__":

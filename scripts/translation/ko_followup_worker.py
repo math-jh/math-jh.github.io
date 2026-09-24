@@ -275,7 +275,7 @@ English text after the proposed follow-up. Judge whether the KO diff resolves
 the original issue, and whether the final English faithfully reflects that resolved
 Korean meaning without invention, omission, or unrelated rewriting. The KO diff is
 deliberately scoped to the finding. Do not judge other edits in the post; in
-particular, another link's data-relation metadata belongs to a separate link-level
+particular, another link's data-lid metadata belongs to a separate link-level
 workflow. When
 the EN diff is empty, inspect FINAL EN rather than assuming the correction is
 missing: it is acceptable only when FINAL EN already expresses the corrected

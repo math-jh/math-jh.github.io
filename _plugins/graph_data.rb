@@ -9,8 +9,9 @@
 #   { "nodes": [{id,title,url,category,weight}],
 #     "links": [{source,target,weight,relation,relations}] }
 #
-#   node = 글,  edge = 분류(data-relation)된 인용. required·weak 은 선수 글 → 후속 글로
-#   방향을 뒤집고, forward 는 현재 글 → 나중 글이라는 원래 방향을 유지한다.
+#   node = 글,  edge = 분류된 인용. 링크 IAL 의 data-lid 로 _data/link_relations.yml
+#   에서 relation 을 찾는다. required·weak 은 선수 글 → 후속 글로 방향을 뒤집고,
+#   forward 는 현재 글 → 나중 글이라는 원래 방향을 유지한다.
 #
 # 렌더된 본문(doc.content, 레이아웃·사이드바 제외)만 스캔하므로 nav/사이드바의 글
 # 링크는 엣지로 잡히지 않는다. 전역 그래프(/dependencies)와 로컬 그래프(글별 2-hop)가 공유.
@@ -24,10 +25,10 @@ module GraphData
 
   # 분류가 끝난 링크만 그래프에 넣는다. 보통 post_write 시점의 d.content 는 raw
   # Markdown이지만 빌드 경로에 따라 렌더된 HTML일 수도 있으므로 두 표현을 모두 지원한다.
-  RAW_CLASSIFIED_LINK_RE = %r!\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)\{:[^}]*\bdata-relation=["'](required|weak|forward)["'][^}]*\}!.freeze
+  RAW_LID_LINK_RE = %r!\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)\{:[^}]*\bdata-lid=["']([^"']+)["'][^}]*\}!.freeze
   HTML_ANCHOR_RE = %r{<a\b[^>]*>}.freeze
   HTML_HREF_RE = %r{\bhref=["'](/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^"']*)?["']}.freeze
-  HTML_RELATION_RE = /\bdata-relation=["'](required|weak|forward)["']/.freeze
+  HTML_LID_RE = /\bdata-lid=["']([^"']+)["']/.freeze
 
 
   module_function
@@ -93,13 +94,25 @@ module GraphData
     h ? "hsl(#{h}, 55%, 60%)" : "#8a8f98" # hues 없는 카테고리(llm_workshop 등)는 회색
   end
 
-  def classified_links(text)
+  # lid → relation. requires-review 처럼 그래프가 받지 않는 값과 레코드 없는 lid 는
+  # 미분류로 본다.
+  def relation_of(site, lid)
+    record = (site.data["link_relations"] || {})[lid]
+    relation = record.is_a?(Hash) ? record["relation"] : nil
+    RELATION_PRIORITY.key?(relation) ? relation : nil
+  end
+
+  def classified_links(site, text)
     found = []
-    text.to_s.scan(RAW_CLASSIFIED_LINK_RE) { |url, relation| found << [url, relation] }
+    text.to_s.scan(RAW_LID_LINK_RE) do |url, lid|
+      relation = relation_of(site, lid)
+      found << [url, relation] if relation
+    end
     text.to_s.scan(HTML_ANCHOR_RE) do |anchor|
       href = anchor.match(HTML_HREF_RE)
-      relation = anchor.match(HTML_RELATION_RE)
-      found << [href[1], relation[1]] if href && relation
+      lid = anchor.match(HTML_LID_RE)
+      relation = lid && relation_of(site, lid[1])
+      found << [href[1], relation] if href && relation
     end
     found
   end
@@ -118,7 +131,7 @@ module GraphData
     cited_pairs = {}
     docs.each do |d|
       src = norm(d.url)
-      links = classified_links(d.content)
+      links = classified_links(site, d.content)
       classified_by_source[src] = true unless links.empty?
 
       links.each do |raw_target, relation|

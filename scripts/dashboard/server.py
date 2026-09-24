@@ -13,12 +13,12 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     POST /api/kotypo-note   후속 검증 모델에게 전할 메모 (요청 키 단위 병합 저장)
     GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
-    POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (판정 버튼 또는 태그 확인)
-    POST /api/linkaudit/commit   data-relation·reviewed 만 바뀐 글들을 한 커밋으로
+    POST /api/linkaudit/resolve  의존성 링크 보류 한 건 해소 (판정 버튼 또는 원장 값 확인)
+    POST /api/linkaudit/commit   링크 관계 원장(_data/link_relations.yml)의 판정을 커밋
     POST /api/linkaudit/undo     커밋 전 버튼 판정 한 건을 되돌려 보류로 되살림
 
-보류 해소 시 확정된 링크 IAL에 `reviewed=""`를 추가한다. 그 외의 쓰기는
-세 상태 파일뿐이다:
+보류 해소 시 확정된 링크의 레코드를 `_data/link_relations.yml` 에 쓴다 (분류기와
+같은 원장 락). 그 외의 쓰기는 상태 파일뿐이다:
 ~/.local/state/blog_dashboard_kotypo.json · …_kotypo_notes.json · …_review.json ·
 dependency-classifier-holds.json.
 """
@@ -28,7 +28,6 @@ import os
 import re
 import subprocess
 import sys
-import tempfile
 import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -66,8 +65,8 @@ except Exception:
     index_ranking = None
 
 sys.path.insert(0, f"{ROOT}/scripts/lib")
-from blog_file_lock import try_acquire_file_locks
 from cron_commit import commit_outputs
+import link_relations as _ledger
 
 # 링크 판정 버튼이 고칠 IAL 을 **분류기와 같은 파서**로 찾는다. 보류 항목의 ident 는
 # `경로:서수:target:label` 의 sha1 이라 같은 문구의 다른 출현과 구별되므로, 여기서
@@ -550,12 +549,6 @@ def sec_translation():
                 ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
 
 
-# 사람이 손으로 단 관계 태그. 링크 바로 뒤에 붙은 IAL 안에만 인정한다.
-_REL_IAL = re.compile(r'\{:[^}\n]*data-relation\s*=\s*["\'](required|weak|forward)["\']')
-_ANY_IAL = re.compile(r'^\{:[^}\n]*\}')
-_REVIEWED_ATTR = re.compile(r'\breviewed\s*=\s*["\']["\']')
-
-
 def load_holds():
     try:
         with open(HOLDS_STATE, encoding="utf-8") as f:
@@ -578,19 +571,30 @@ def save_holds(holds):
     os.replace(tmp, HOLDS_STATE)
 
 
+# 링크 관계는 글이 아니라 `_data/link_relations.yml` 에 lid 를 키로 적혀 있다.
+# 판정 버튼은 그 파일의 레코드 하나를 바꾼다. 같은 lid 를 가진 KO 링크와 EN 링크가
+# 레코드를 공유하므로 EN 에 옮겨 적을 것이 따로 없다.
+LEDGER_REL = os.path.relpath(str(_ledger.PATH), ROOT)
+# 분류기는 한 틱 내내 원장 락을 쥔다 (보통 1분 안). 판정 버튼은 그동안 기다린다.
+LEDGER_WAIT_SEC = 120
+
+
 def last_undoable(holds):
-    """되돌릴 수 있는 가장 최근 판정 — 되돌리기 기록이 있고 아직 커밋 안 된 것.
+    """되돌릴 수 있는 가장 최근 판정 — 되돌리기 기록이 있고 원장이 아직 커밋 안 된 것.
 
     커밋된 기록은 대시보드 커밋 버튼이 지우므로, 다른 경로로 커밋된 것만 남는다.
     그런 것을 넘어 계속 git 을 부르지 않게 최근 5건까지만 본다.
     """
     recs = sorted(((v.get("at", 0), k, v) for k, v in holds["settled"].items()
                    if isinstance(v, dict) and v.get("undo")), reverse=True)
+    head = None
     for _, ident, v in recs[:5]:
         u = v["undo"]
-        if head_blob(u["item"]["path"]) != u["ko"]["head"]:
+        if "lid" not in u:
             continue
-        if u.get("en") and head_blob(u["en"]["path"]) != u["en"]["head"]:
+        if head is None:
+            head = head_blob(LEDGER_REL)
+        if head != u.get("head"):
             continue
         flat = " ".join((u["item"].get("markup") or "").split())
         return dict(ident=ident, relation=v.get("relation", ""),
@@ -599,94 +603,12 @@ def last_undoable(holds):
     return None
 
 
-def hold_verdict(item):
-    """보류된 링크에 사람이 내린 판정. 아직 안 달았으면 None.
-
-    분류기가 값을 requires-review 로 바꿔 두었으므로(그 이전 보류는 태그가 없다),
-    같은 링크 문구가 전부 required·weak·forward 중 하나를 달고 있을 때만 해소로 본다.
-    링크 자체가 사라졌으면 'gone'.
-    """
-    rel = item.get("path") or ""
-    full = os.path.normpath(os.path.join(ROOT, rel))
-    if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
-        return None
-    try:
-        with open(full, encoding="utf-8") as f:
-            text = f.read()
-    except OSError:
-        return None
-    markup = item.get("markup") or ""
-    if not markup or markup not in text:
-        return "gone"
-    seen, pos = [], 0
-    while True:
-        at = text.find(markup, pos)
-        if at < 0:
-            break
-        m = _REL_IAL.match(text, at + len(markup))
-        if not m:
-            return None
-        seen.append(m.group(1))
-        pos = at + len(markup)
-    return seen[0]
-
-
-def mark_hold_reviewed(item, *, content_lock_held=False):
-    """Add ``reviewed=""`` to every matching resolved-link IAL atomically."""
-    rel = item.get("path") or ""
-    full = os.path.normpath(os.path.join(ROOT, rel))
-    if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
-        raise ValueError("bad path")
-    markup = item.get("markup") or ""
-    if not markup:
-        raise ValueError("missing link markup")
-    lease = None if content_lock_held else try_acquire_file_locks([full])
-    if not content_lock_held and lease is None:
-        raise RuntimeError("다른 워커가 이 글을 수정 중이다")
-    try:
-        with open(full, encoding="utf-8") as f:
-            text = f.read()
-        source_mode = os.stat(full).st_mode & 0o7777
-        edits, pos = [], 0
-        while True:
-            at = text.find(markup, pos)
-            if at < 0:
-                break
-            start = at + len(markup)
-            ial = _ANY_IAL.match(text[start:])
-            if ial is None:
-                raise ValueError("확정한 링크의 IAL을 찾지 못했다")
-            raw = ial.group(0)
-            if not _REVIEWED_ATTR.search(raw):
-                edits.append((start, start + len(raw), raw[:-1].rstrip() + ' reviewed="" }'))
-            pos = start + len(raw)
-        if not edits:
-            return
-        for start, end, replacement in reversed(edits):
-            text = text[:start] + replacement + text[end:]
-        fd, tmp = tempfile.mkstemp(prefix=".link-reviewed.", suffix=".tmp",
-                                   dir=os.path.dirname(full))
-        try:
-            with os.fdopen(fd, "w", encoding="utf-8") as f:
-                f.write(text)
-            os.chmod(tmp, source_mode)
-            os.replace(tmp, full)
-        finally:
-            try:
-                os.unlink(tmp)
-            except FileNotFoundError:
-                pass
-    finally:
-        if lease is not None:
-            lease.release()
-
-
-def hold_link(ident, item):
+def hold_link(ident, item, records):
     """보류 항목이 가리키는 **그 출현 하나**를 분류기 파서로 되찾는다.
 
     ident 는 `경로:서수:target:label` 의 sha1 이라 같은 문구가 한 글에 여러 번 나와도
-    출현끼리 구별된다. 서수는 태그가 붙은 링크·안 붙은 링크·requires-review 를 모두
-    세므로 세 갈래를 다 훑어야 그 ident 가 나온다.
+    출현끼리 구별된다. 서수는 판정된 링크·안 된 링크·requires-review 를 모두 세므로
+    세 갈래를 다 훑어야 그 ident 가 나온다.
     """
     if _depc is None:
         raise RuntimeError("dependency_classifier 를 불러오지 못했다")
@@ -696,209 +618,81 @@ def hold_link(ident, item):
     path = _depc.Path(full)
     text = path.read_text(encoding="utf-8")
     for kwargs in ({}, {"tagged": True}, {"review": True}):
-        for link in _depc.extract_links(path, text, **kwargs):
+        for link in _depc.extract_links(path, text, records=records, **kwargs):
             if link.ident == ident:
-                return full, text, link
+                return link
     raise ValueError("그 링크를 지금 글에서 찾지 못했다 — 새로고침")
 
 
-def write_relation(ident, item, relation, *, content_lock_held=False):
-    """버튼으로 내린 판정을 그 링크 IAL 하나에 쓴다 (`reviewed=""` 포함).
+def hold_verdict(ident, item, records=None):
+    """보류된 링크에 사람이 원장에 직접 적어 둔 판정. 아직 없으면 None.
 
-    markup 이 원장과 다르면 쓰지 않는다. 서수가 같아도 글이 그사이 바뀌었다면
-    사용자가 화면에서 읽은 문장과 지금 파일의 그 자리가 다른 링크일 수 있다.
-    돌려주는 것은 (lid, 되돌리기 기록) — 기록은 그 자리의 옛 IAL 과 새 IAL 이다
-    (IAL 이 없던 링크면 옛 값은 빈 문자열).
+    분류기가 레코드를 requires-review 로 바꿔 두었으므로, 그 레코드가
+    required·weak·forward 중 하나로 바뀌어 있을 때만 해소로 본다. 링크 자체가
+    사라졌으면 'gone'.
     """
-    full, text, link = hold_link(ident, item)
+    records = _ledger.load() if records is None else records
+    try:
+        link = hold_link(ident, item, records)
+    except ValueError:
+        return "gone"
+    except Exception:  # noqa: BLE001
+        return None
+    return link.relation
+
+
+def _record_dict(record):
+    return None if record is None else {"relation": record.relation,
+                                        "reviewed": record.reviewed}
+
+
+def write_relation(ident, item, relation, records):
+    """버튼으로 내린 판정을 그 링크의 원장 레코드에 쓴다 (reviewed 포함).
+
+    markup 이 보류 원장과 다르면 쓰지 않는다. 서수가 같아도 글이 그사이 바뀌었다면
+    사용자가 화면에서 읽은 문장과 지금 파일의 그 자리가 다른 링크일 수 있다.
+    원장은 호출자가 락을 쥔 채 저장한다. 돌려주는 것은 (lid, 되돌리기 기록).
+    """
+    link = hold_link(ident, item, records)
     if link.markup != (item.get("markup") or ""):
         raise ValueError("글이 바뀌었다 — 새로고침")
-    attr = f'data-relation="{relation}"'
-    if link.ial_start is None or link.ial_end is None:
-        start, end = link.end, link.end
-        ial = f'{{: {attr} reviewed="" }}'
-    else:
-        start, end = link.ial_start, link.ial_end
-        ial = text[start:end]
-        ial = _depc.REVIEWED_ATTR_RE.sub("", ial)
-        if _depc.RELATION_ATTR_RE.search(ial):
-            ial = _depc.RELATION_ATTR_RE.sub(attr, ial, count=1)
-        else:
-            ial = ial[:2] + f" {attr}" + ial[2:]
-        ial = ial[:-1].rstrip() + ' reviewed="" }'
-    lease = None if content_lock_held else try_acquire_file_locks([full])
-    if not content_lock_held and lease is None:
-        raise RuntimeError("다른 워커가 이 글을 수정 중이다")
-    try:
-        source_mode = os.stat(full).st_mode & 0o7777
-        _atomic_write(full, text[:start] + ial + text[end:], source_mode)
-    finally:
-        if lease is not None:
-            lease.release()
-    found = _LID_ATTR.search(ial)
-    return (found.group(1) if found else None), {"old": text[start:end], "new": ial}
-
-
-_LID_ATTR = re.compile(r'\bdata-lid\s*=\s*"([^"]*)"')
-
-
-def _en_twin(full):
-    """KO 글 파일의 EN 짝. 날짜 접두는 양쪽이 다르므로 Base 이름으로 찾는다."""
-    path = _depc.Path(full)
-    if path.parent.name != "ko":
-        return None
-    base = path.name.split("-", 3)[-1]
-    found = sorted((path.parent.parent / "en").glob(f"*-{base}"))
-    return found[0] if len(found) == 1 else None
-
-
-def propagate_relation(full, lid, relation):
-    """KO 에서 내린 판정을 같은 `data-lid` 를 가진 EN 링크에 옮긴다.
-
-    KO 가 정본이고 EN 은 그 번역이므로, 같은 출현을 가리키는 두 링크가 서로 다른
-    관계를 가질 이유가 없다. 여기서 옮기지 않으면 EN 은 분류기가 독립으로 판정해
-    양쪽이 갈린다 — 지금 남아 있는 66건이 그렇게 생겼다.
-
-    `reviewed` 는 손대지 않는다. EN 에서 그 마커를 떼는 것은 분류기가 lid 로 완료를
-    상속하게 된 뒤에 할 일이고, 먼저 떼면 그 글이 검증 대기로 되돌아간다.
-    돌려주는 것은 (알림 문구, 되돌리기 기록) — EN 을 고치지 않았으면 기록은 None.
-    """
-    twin = _en_twin(full)
-    if twin is None:
-        return "EN 짝 글 없음", None
-    text = twin.read_text(encoding="utf-8")
-    hit = _en_lid_ial(text, lid)
-    if hit is None:
-        return "EN 에 같은 lid 없음", None
-    ial = hit.group(0)
-    attr = f'data-relation="{relation}"'
-    if _depc.RELATION_ATTR_RE.search(ial):
-        if _depc.RELATION_ATTR_RE.search(ial).group(0) == attr:
-            return "EN 이미 같은 값", None
-        new_ial = _depc.RELATION_ATTR_RE.sub(attr, ial, count=1)
-    else:
-        new_ial = ial[:-1].rstrip() + f" {attr} }}"
-    lease = try_acquire_file_locks([str(twin)])
-    if lease is None:
-        return "EN 글이 잠겨 있다", None
-    try:
-        source_mode = os.stat(twin).st_mode & 0o7777
-        _atomic_write(str(twin), text[:hit.start()] + new_ial + text[hit.end():],
-                      source_mode)
-    finally:
-        lease.release()
-    return f"EN 도 {relation} 로 기입", {
-        "path": os.path.relpath(str(twin), ROOT), "lid": lid,
-        "old": ial, "new": new_ial}
-
-
-def _en_lid_ial(text, lid):
-    return re.search(r'\{:[^}\n]*\bdata-lid\s*=\s*"%s"[^}\n]*\}' % re.escape(lid), text)
+    if not link.lid:
+        raise ValueError("이 링크에 data-lid 가 없다 — 분류기 발급 후 다시")
+    old = records.get(link.lid)
+    new = _ledger.Record(relation, True)
+    records[link.lid] = new
+    return link.lid, {"lid": link.lid, "old": _record_dict(old), "new": _record_dict(new)}
 
 
 def head_blob(rel):
-    """HEAD 에 있는 그 글의 blob id. 판정 뒤 이 값이 바뀌었으면 판정이 커밋된 것이다."""
+    """HEAD 에 있는 파일의 blob id. 판정 뒤 이 값이 바뀌었으면 판정이 커밋된 것이다."""
     rc, out, _ = run(["/usr/bin/git", "-C", ROOT, "rev-parse", f"HEAD:{rel}"])
     return out.strip() if rc == 0 else ""
 
 
-def undo_relation(ident, rec):
-    """버튼 판정 한 건을 되돌린다. 원장은 호출자가 고친다.
+def undo_relation(rec, records):
+    """버튼 판정 한 건을 원장에서 되돌린다. 원장 저장과 보류 원장은 호출자가 한다.
 
-    커밋 전 판정만 되돌린다 — KO·EN 의 HEAD blob 이 판정 때와 같아야 한다. 그리고
-    그 자리의 IAL 이 서버가 쓴 값 그대로여야 한다. 둘 중 하나라도 어긋나면 아무
-    파일도 건드리지 않고 ValueError 를 낸다.
+    커밋 전 판정만 되돌린다 — 원장의 HEAD blob 이 판정 때와 같아야 하고, 그 lid 의
+    레코드가 서버가 쓴 값 그대로여야 한다. 어긋나면 아무것도 바꾸지 않고
+    ValueError 를 낸다.
     """
-    item, ko, en = rec["item"], rec["ko"], rec.get("en")
-    if head_blob(item["path"]) != ko["head"] or (en and head_blob(en["path"]) != en["head"]):
+    if head_blob(LEDGER_REL) != rec.get("head"):
         raise ValueError("이미 커밋된 판정이다")
-    full, text, link = hold_link(ident, item)
-    if link.ial_start is None or text[link.ial_start:link.ial_end] != ko["new"]:
-        raise ValueError("그 링크가 판정 뒤에 바뀌었다")
-    plan = [(full, text, link.ial_start, link.ial_end, ko["old"])]
-    if en:
-        en_full = os.path.join(ROOT, en["path"])
-        en_text = _depc.Path(en_full).read_text(encoding="utf-8")
-        hit = _en_lid_ial(en_text, en["lid"])
-        if hit is None or hit.group(0) != en["new"]:
-            raise ValueError("EN 링크가 판정 뒤에 바뀌었다")
-        plan.append((en_full, en_text, hit.start(), hit.end(), en["old"]))
-    lease = try_acquire_file_locks([p[0] for p in plan[1:]]) if en else None
-    if en and lease is None:
-        raise RuntimeError("EN 글이 잠겨 있다")
-    try:
-        for path, body, start, end, old in plan:
-            _atomic_write(path, body[:start] + old + body[end:],
-                          os.stat(path).st_mode & 0o7777)
-    finally:
-        if lease is not None:
-            lease.release()
+    lid = rec["lid"]
+    if _record_dict(records.get(lid)) != rec["new"]:
+        raise ValueError("그 링크의 판정이 뒤에 바뀌었다")
+    old = rec.get("old")
+    if old is None:
+        records.pop(lid, None)
+    else:
+        records[lid] = _ledger.Record(old["relation"], bool(old.get("reviewed")))
 
 
-def _atomic_write(full, text, mode):
-    fd, tmp = tempfile.mkstemp(prefix=".link-write.", suffix=".tmp",
-                               dir=os.path.dirname(full))
-    try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            f.write(text)
-        os.chmod(tmp, mode)
-        os.replace(tmp, full)
-    finally:
-        try:
-            os.unlink(tmp)
-        except FileNotFoundError:
-            pass
-
-
-# 링크 판정만 담긴 변경인지 가리는 정규화 — 두 속성을 걷어낸 본문이 HEAD 와 같으면
-# 그 글의 변경은 관계 태그뿐이다. 줄 단위 diff 로 판별하면 한 줄에 본문 수정과
-# 태그 변경이 같이 있는 경우를 구별하지 못한다.
-_REL_ATTR_ANY = re.compile(r'\s*\bdata-relation\s*=\s*["\'][^"\']*["\']')
-_REVIEWED_ANY = re.compile(r'\s*\breviewed\s*=\s*["\'][^"\']*["\']')
-
-
-def _without_relations(text):
-    return _REVIEWED_ANY.sub("", _REL_ATTR_ANY.sub("", text))
-
-
-_link_only_cache = {}
-
-
-def link_only_changes():
-    """워킹트리에서 data-relation·reviewed 만 바뀐 `_posts` 글들의 경로.
-
-    판정 한 건마다 다시 물으므로 글당 판정은 (경로, mtime) 로 기억한다 — 안 그러면
-    더러운 글 수만큼 `git show` 가 매번 돈다.
-    """
-    rc, out, _ = run(["/usr/bin/git", "-C", ROOT, "status", "--porcelain", "-z",
-                      "--", "_posts"])
-    if rc != 0:
-        return []
-    found = []
-    for rec in out.split("\0"):
-        if len(rec) <= 3 or rec[:2] != " M" or not rec.endswith(".md"):
-            continue
-        rel = rec[3:]
-        full = os.path.join(ROOT, rel)
-        try:
-            stamp = os.stat(full).st_mtime
-        except OSError:
-            continue
-        hit = _link_only_cache.get(rel)
-        if not hit or hit[0] != stamp:
-            rc2, head, _ = run(["/usr/bin/git", "-C", ROOT, "show", f"HEAD:{rel}"])
-            if rc2 != 0:
-                continue
-            try:
-                with open(full, encoding="utf-8") as f:
-                    cur = f.read()
-            except OSError:
-                continue
-            hit = _link_only_cache[rel] = (
-                stamp, _without_relations(head) == _without_relations(cur))
-        if hit[1]:
-            found.append(rel)
-    return found
+def ledger_dirty():
+    """원장에 커밋 안 된 변경이 있으면 [원장 경로], 없으면 []."""
+    rc, out, _ = run(["/usr/bin/git", "-C", ROOT, "status", "--porcelain", "--", LEDGER_REL])
+    return [LEDGER_REL] if rc == 0 and out.strip() else []
 
 
 _rank_cache = {}
@@ -939,6 +733,7 @@ def link_rank(ident, item):
 def sec_link_audit():
     """의존성 링크 분류의 1차 ↔ 2차 불일치로 판정 태그가 없는(requires-review) 링크."""
     holds = load_holds()
+    records = _ledger.load()
     by_path = posts_indexed()["by_path"]
     items = []
     for ident, item in holds["held"].items():
@@ -953,10 +748,9 @@ def sec_link_audit():
             old=item.get("old"), new=item.get("new"),
             reason=item.get("reason", ""), verifier=item.get("verifier", ""),
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
-            verdict=hold_verdict(item),
-            # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 렌더된 <a> 는
-            # data-relation 을 그대로 달고 나오므로, 같은 target 의 requires-review
-            # 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.
+            verdict=hold_verdict(ident, item, records),
+            # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 본문 링크는 소스 순서대로
+            # 렌더되므로 같은 target 의 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.
             permalink=post.get("permalink", ""), title=post.get("title", ""),
             rank=link_rank(ident, item),
         ))
@@ -972,7 +766,7 @@ def sec_link_audit():
         del x["_lang"]
     return dict(held=items, settled=len(holds["settled"]),
                 ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
-                uncommitted=link_only_changes(), undo=last_undoable(holds))
+                uncommitted=ledger_dirty(), undo=last_undoable(holds))
 
 
 def sec_comment_prs():
@@ -1599,10 +1393,12 @@ class Handler(BaseHTTPRequestHandler):
     def _linkaudit_resolve(self):
         """보류 한 건을 해소한다. 판정을 내리는 길이 둘이다.
 
-        `relation` 을 함께 받으면 그게 사용자의 판정이다 — 서버가 그 링크 IAL 하나에
-        값과 `reviewed=""` 를 쓰고 원장에서 뺀다. 값이 없으면 사용자가 글에 직접 써
-        넣은 태그를 파일에서 확인하는 예전 경로다. 어느 쪽이든 판정의 출처는 사람이고,
-        빠진 항목은 settled 로 옮긴다 — 검증기는 그 링크를 다시 걸지 않는다.
+        `relation` 을 함께 받으면 그게 사용자의 판정이다 — 서버가 그 링크의 원장
+        레코드에 값과 reviewed 를 쓰고 보류 원장에서 뺀다. 값이 없으면 사용자가
+        `_data/link_relations.yml` 에 직접 적은 값을 확인하는 경로다. 어느 쪽이든
+        판정의 출처는 사람이고, 빠진 항목은 settled 로 옮긴다 — 검증기는 그 링크를
+        다시 걸지 않는다. 원장 락은 분류기와 공유하므로 분류기 틱이 도는 동안은
+        기다렸다가 쓴다.
         """
         try:
             n = int(self.headers.get("Content-Length") or 0)
@@ -1613,24 +1409,19 @@ class Handler(BaseHTTPRequestHandler):
             relation = body.get("relation") or ""
             if not isinstance(ident, str) or not ident:
                 raise ValueError("bad ident")
-            if relation and relation not in ("required", "weak", "forward"):
+            if relation and relation not in _ledger.RELATIONS:
                 raise ValueError("bad relation")
         except Exception as e:  # noqa: BLE001
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
-        initial = load_holds()["held"].get(ident)
-        if initial is None:
+        if load_holds()["held"].get(ident) is None:
             return self._send(200, json.dumps(
                 {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
-        rel = initial.get("path") or ""
-        full = os.path.normpath(os.path.join(ROOT, rel))
-        if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+        ledger_lock = _ledger.lock(LEDGER_WAIT_SEC)
+        if ledger_lock is None:
             return self._send(200, json.dumps(
-                {"ok": False, "error": "bad path"}, ensure_ascii=False))
-        content_lease = try_acquire_file_locks([full])
-        if content_lease is None:
-            return self._send(200, json.dumps(
-                {"ok": False, "error": "다른 워커가 이 글을 수정 중이다"}, ensure_ascii=False))
+                {"ok": False, "error": "분류기가 원장을 쓰는 중이다 — 잠시 뒤 다시"},
+                ensure_ascii=False))
         try:
             with open(HOLDS_LOCK, "w") as lock:
                 fcntl.flock(lock, fcntl.LOCK_EX)
@@ -1639,59 +1430,43 @@ class Handler(BaseHTTPRequestHandler):
                 if item is None:
                     return self._send(200, json.dumps(
                         {"ok": False, "error": "이미 정리된 항목"}, ensure_ascii=False))
+                records = _ledger.load()
                 undo = None
-                if relation:
-                    ko_head = head_blob(rel)
-                    try:
-                        lid, ko_undo = write_relation(ident, item, relation,
-                                                      content_lock_held=True)
-                    except Exception as e:  # noqa: BLE001
-                        return self._send(200, json.dumps(
-                            {"ok": False, "error": str(e)}, ensure_ascii=False))
-                    verdict = relation
-                    en_undo = None
-                    if lid:
-                        try:
-                            note, en_undo = propagate_relation(full, lid, relation)
-                        except Exception as e:  # noqa: BLE001
-                            note = f"EN 기입 실패: {str(e)[:120]}"
+                try:
+                    if relation:
+                        lid, undo = write_relation(ident, item, relation, records)
+                        verdict = relation
                     else:
-                        note = "lid 없음 — EN 은 따로 판정"
-                    if en_undo:
-                        en_undo["head"] = head_blob(en_undo["path"])
-                    undo = {"item": item, "ko": {**ko_undo, "head": ko_head},
-                            "en": en_undo}
-                else:
-                    verdict = hold_verdict(item)
-                    if verdict is None:
-                        return self._send(200, json.dumps(
-                            {"ok": False,
-                             "error": "그 링크에 아직 required·weak·forward 태그가 없다"},
-                            ensure_ascii=False))
-                    try:
-                        mark_hold_reviewed(item, content_lock_held=True)
-                    except Exception as e:  # noqa: BLE001
-                        return self._send(200, json.dumps(
-                            {"ok": False, "error": str(e)}, ensure_ascii=False))
-                    note = ""
+                        link = hold_link(ident, item, records)
+                        if link.relation is None:
+                            raise ValueError("원장에 그 링크의 required·weak·forward 값이 아직 없다")
+                        lid, verdict = link.lid, link.relation
+                        records[lid] = _ledger.Record(verdict, True)
+                except Exception as e:  # noqa: BLE001
+                    return self._send(200, json.dumps(
+                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                _ledger.save(records)
+                if undo:
+                    undo = {**undo, "item": item, "head": head_blob(LEDGER_REL)}
                 holds["held"].pop(ident)
                 holds["settled"][ident] = {
                     "path": item.get("path", ""), "target": item.get("target", ""),
-                    "relation": verdict, "at": int(time.time()),
+                    "relation": verdict, "lid": lid, "at": int(time.time()),
                 }
                 if undo:
                     holds["settled"][ident]["undo"] = undo
                 save_holds(holds)
         finally:
-            content_lease.release()
+            ledger_lock.release()
         _cache["ts"] = 0
         return self._send(200, json.dumps({"ok": True, "relation": verdict,
-                                           "note": note}, ensure_ascii=False))
+                                           "note": f"lid {lid} (KO·EN 공유)"},
+                                          ensure_ascii=False))
 
     def _linkaudit_undo(self):
         """버튼 판정 한 건을 되돌려 보류로 되살린다 (커밋 전 판정만).
 
-        되돌릴 수 없으면(커밋됨·그 자리가 바뀜) 그 건의 되돌리기 기록을 지운다 —
+        되돌릴 수 없으면(커밋됨·그 레코드가 바뀜) 그 건의 되돌리기 기록을 지운다 —
         그래야 다음 요청이 그 앞의 판정으로 넘어간다.
         """
         try:
@@ -1704,63 +1479,55 @@ class Handler(BaseHTTPRequestHandler):
         except Exception as e:  # noqa: BLE001
             return self._send(400, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
-        rec = (load_holds()["settled"].get(ident) or {}).get("undo")
-        if not rec:
+        if not (load_holds()["settled"].get(ident) or {}).get("undo"):
             return self._send(200, json.dumps(
                 {"ok": False, "error": "되돌릴 기록이 없다"}, ensure_ascii=False))
-        full = os.path.normpath(os.path.join(ROOT, rec["item"].get("path") or ""))
-        if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
+        ledger_lock = _ledger.lock(LEDGER_WAIT_SEC)
+        if ledger_lock is None:
             return self._send(200, json.dumps(
-                {"ok": False, "error": "bad path"}, ensure_ascii=False))
-        content_lease = try_acquire_file_locks([full])
-        if content_lease is None:
-            return self._send(200, json.dumps(
-                {"ok": False, "error": "다른 워커가 이 글을 수정 중이다"}, ensure_ascii=False))
+                {"ok": False, "error": "분류기가 원장을 쓰는 중이다 — 잠시 뒤 다시"},
+                ensure_ascii=False))
         try:
             with open(HOLDS_LOCK, "w") as lock:
                 fcntl.flock(lock, fcntl.LOCK_EX)
                 holds = load_holds()
                 entry = holds["settled"].get(ident) or {}
                 rec = entry.get("undo")
-                if not rec:
+                if not rec or "lid" not in rec:
                     return self._send(200, json.dumps(
                         {"ok": False, "error": "되돌릴 기록이 없다"}, ensure_ascii=False))
+                records = _ledger.load()
                 try:
-                    undo_relation(ident, rec)
+                    undo_relation(rec, records)
                 except ValueError as e:
                     del entry["undo"]
                     save_holds(holds)
                     _cache["ts"] = 0
                     return self._send(200, json.dumps(
                         {"ok": False, "error": str(e)}, ensure_ascii=False))
-                except Exception as e:  # noqa: BLE001
-                    return self._send(200, json.dumps(
-                        {"ok": False, "error": str(e)}, ensure_ascii=False))
+                _ledger.save(records)
                 holds["settled"].pop(ident)
                 holds["held"][ident] = rec["item"]
                 save_holds(holds)
         finally:
-            content_lease.release()
+            ledger_lock.release()
         _cache["ts"] = 0
         return self._send(200, json.dumps({"ok": True, "ident": ident},
                                           ensure_ascii=False))
 
     def _linkaudit_commit(self):
-        """관계 태그만 바뀐 글들을 한 커밋으로 묶는다.
+        """원장의 판정 변경을 커밋한다.
 
-        대상은 기계적으로 고른다 — 두 속성을 걷어낸 본문이 HEAD 와 같은 글만 넣으므로,
-        같은 파일에 본문 수정이 섞여 있으면 그 글은 통째로 빠진다. 커밋은
-        `[lastmod-skip]` 을 달고 나간다: 관계 태그는 본문이 아니라서 글의 수정일을
-        움직이면 안 된다. push 는 autopush 소관이다.
+        커밋은 `[lastmod-skip]` 을 달고 나간다: 링크 관계는 본문이 아니라서 글의
+        수정일을 움직이면 안 된다. push 는 autopush 소관이다.
         """
-        paths = link_only_changes()
+        paths = ledger_dirty()
         if not paths:
             return self._send(200, json.dumps(
                 {"ok": False, "error": "커밋할 링크 변경이 없다"}, ensure_ascii=False))
-        detail = "\n".join(f"- {p}" for p in paths)
         try:
-            done = commit_outputs("Link Review", paths,
-                                  f"{len(paths)} post(s)\n\n{detail}", prefix="Dash")
+            done = commit_outputs("Link Review", paths, "링크 관계 원장 판정 반영",
+                                  prefix="Dash")
         except Exception as e:  # noqa: BLE001
             return self._send(200, json.dumps({"ok": False, "error": str(e)},
                                               ensure_ascii=False))
@@ -1770,14 +1537,11 @@ class Handler(BaseHTTPRequestHandler):
                 {"ok": False, "error": "autopush 가 락을 쥐고 있다 — 잠시 뒤 다시"},
                 ensure_ascii=False))
         # 커밋된 판정은 되돌리기 대상이 아니다.
-        committed = set(paths)
         with open(HOLDS_LOCK, "w") as lock:
             fcntl.flock(lock, fcntl.LOCK_EX)
             holds = load_holds()
             for v in holds["settled"].values():
-                u = v.get("undo") if isinstance(v, dict) else None
-                if u and (u["item"].get("path") in committed
-                          or (u.get("en") and u["en"]["path"] in committed)):
+                if isinstance(v, dict) and v.get("undo"):
                     del v["undo"]
             save_holds(holds)
         return self._send(200, json.dumps({"ok": True, "n": len(paths)},

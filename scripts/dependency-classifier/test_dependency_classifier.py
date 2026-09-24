@@ -273,50 +273,60 @@ class ParallelStateTest(unittest.TestCase):
         self.assertEqual(saved["units"]["ko-b+en-b"]["status"], "error")
 
 
+R = dc.ledger.Record
+
+
+def digest(*texts: str) -> str:
+    """unit_digest of a unit whose links have no records."""
+    return dc.sha("\0".join(texts) + "\0\0")
+
+
+def open_side(link, path):
+    """extract_links stand-in: ``link`` is the only open link, in ``path``."""
+    return lambda p, _t, tagged=False, review=False, records=None: (
+        [] if tagged or review else ([link] if p == path else []))
+
+
 class SelectionTest(unittest.TestCase):
-    def test_reviewed_attribute_is_the_durable_completion_marker(self) -> None:
+    def test_reviewed_record_is_the_durable_completion_marker(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             path = root / "_posts/Math/Test/ko/post.md"
             path.parent.mkdir(parents=True)
-            text = '[Done](#p){: data-relation="required" reviewed="" }\n'
+            text = '[Done](#p){: data-lid="aaaaa" }\n'
             path.write_text(text, encoding="utf-8")
             post = SimpleNamespace(lang="ko", published=True, path=path)
             updates: dict[str, dict] = {}
             with (
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+                patch.object(dc, "RECORDS", {"aaaaa": R("required", True)}),
                 patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
                 patch.object(dc, "dirty_paths", return_value=[]),
             ):
                 links = dc.extract_links(path, text, tagged=True)
                 selected = dc.select_unit({}, updates)
 
-            self.assertEqual(len(links), 1)
-            self.assertTrue(links[0].reviewed)
+            self.assertEqual([(x.lid, x.relation, x.reviewed) for x in links],
+                             [("aaaaa", "required", True)])
             self.assertIsNone(selected)
             self.assertEqual(next(iter(updates.values()))["reviewed_marker_version"], 1)
 
-    def test_review_outcome_stamps_agreement_and_clears_disagreement(self) -> None:
+    def test_review_outcome_stamps_agreement_and_marks_disagreement(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             path = root / "_posts/Math/Test/ko/post.md"
             path.parent.mkdir(parents=True)
-            text = (
-                '[A](#a){: data-relation="required" }\n'
-                '[B](#b){: data-relation="weak" reviewed="" }\n'
-            )
-            path.write_text(text, encoding="utf-8")
-            with patch.object(dc, "ROOT", root):
+            text = '[A](#a){: data-lid="aaaaa" }\n[B](#b){: data-lid="bbbbb" }\n'
+            records = {"aaaaa": R("required"), "bbbbb": R("weak", True)}
+            with patch.object(dc, "ROOT", root), patch.object(dc, "RECORDS", records):
                 links = dc.extract_links(path, text, tagged=True)
-                rendered = dc.apply_review_outcome(text, links, {links[1].ident})
+                dc.record_review_outcome(links, {links[1].ident})
 
-            self.assertIn('data-relation="required" reviewed=""', rendered)
-            self.assertIn('data-relation="requires-review"', rendered)
-            self.assertEqual(rendered.count('reviewed=""'), 1)
+            self.assertEqual(records["aaaaa"], R("required", True))
+            self.assertEqual(records["bbbbb"], R(dc.REVIEW_RELATION, False))
+            self.assertEqual(text, path.read_text(encoding="utf-8") if path.exists() else text)
 
     def test_unpublished_ko_and_en_pair_is_included(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -329,17 +339,15 @@ class SelectionTest(unittest.TestCase):
             en_path.write_text("en", encoding="utf-8")
             ko = SimpleNamespace(lang="ko", published=False, path=ko_path)
             en = SimpleNamespace(lang="en", published=False, path=en_path)
-            link = dc.Link("draft-link", ko_path, 0, 1, "", "", "#x", None, None)
+            link = dc.Link("draft-link", ko_path, 0, 1, "", "", "#x", None, None, lid="aaaaa")
             updates: dict[str, dict] = {}
             with (
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
                 patch.object(dc, "_POSTS", [ko, en]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
                 patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _text, tagged=False, review=False: [] if tagged or review else ([link] if p == ko_path else [])),
+                patch.object(dc, "extract_links", side_effect=open_side(link, ko_path)),
             ):
                 selected = dc.select_unit({}, updates)
 
@@ -352,6 +360,64 @@ class SelectionTest(unittest.TestCase):
             finally:
                 lease.release()
 
+    def unit(self, root: Path, ko_text: str, en_text: str):
+        ko_path = root / "_posts/Math/Test/ko/a.md"
+        en_path = root / "_posts/Math/Test/en/a.md"
+        for path, text in ((ko_path, ko_text), (en_path, en_text)):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
+        ko = SimpleNamespace(lang="ko", published=True, path=ko_path)
+        en = SimpleNamespace(lang="en", published=True, path=en_path)
+        return ko_path, en_path, [
+            patch.object(dc, "ROOT", root),
+            patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+            patch.object(dc, "_POSTS", [ko, en]),
+            patch.object(dc, "en_counterpart", side_effect=lambda p, _all: en if p is ko else None),
+            patch.object(dc, "dirty_paths", return_value=[]),
+            patch.object(dc, "provider_available", return_value=True),
+        ]
+
+    def test_english_twin_shares_the_korean_record(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ko_path, en_path, patches = self.unit(
+                Path(tmp), '[가](#a){: data-lid="aaaaa" }\n', '[A](#a){: data-lid="aaaaa" }\n')
+            with ExitStack() as stack:
+                for item in patches:
+                    stack.enter_context(item)
+                stack.enter_context(patch.object(dc, "RECORDS", {}))
+                first = dc.select_unit({}, {})
+                try:
+                    self.assertEqual(first[0], "first")
+                    self.assertEqual([x.source for x in first[3]], [ko_path])
+                finally:
+                    first[4].release()
+                stack.enter_context(patch.object(dc, "RECORDS", {"aaaaa": R("weak", True)}))
+                self.assertIsNone(dc.select_unit({}, {}))
+
+    def test_english_only_link_is_judged_on_its_own(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ko_path, en_path, patches = self.unit(
+                Path(tmp), '[가](#a){: data-lid="aaaaa" }\n',
+                '[A](#a){: data-lid="aaaaa" } [B](#b){: data-lid="zzzzz" }\n')
+            with ExitStack() as stack:
+                for item in patches:
+                    stack.enter_context(item)
+                stack.enter_context(patch.object(dc, "RECORDS", {"aaaaa": R("weak", True)}))
+                first = dc.select_unit({}, {})
+                try:
+                    self.assertEqual([(x.source, x.lid) for x in first[3]], [(en_path, "zzzzz")])
+                finally:
+                    first[4].release()
+
+    def test_link_without_lid_waits_for_the_mint(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            _ko, _en, patches = self.unit(Path(tmp), '[가](#a)\n', '[A](#a)\n')
+            with ExitStack() as stack:
+                for item in patches:
+                    stack.enter_context(item)
+                stack.enter_context(patch.object(dc, "RECORDS", {}))
+                self.assertIsNone(dc.select_unit({}, {}))
+
     def test_normalized_hidden_link_reopens_first_then_verifies_the_unit(self) -> None:
         """A completed unit must classify a newly visible link before re-verifying."""
         with tempfile.TemporaryDirectory() as tmp:
@@ -359,21 +425,21 @@ class SelectionTest(unittest.TestCase):
             path = root / "_posts/Math/Test/en/draft.md"
             path.parent.mkdir(parents=True)
             hidden = (
-                "[[Set Theory] §Functions](#new)\n"
-                '[Old](#old){: data-relation="weak" reviewed="" }\n'
+                '[[Set Theory] §Functions](#new){: data-lid="nnnnn" }\n'
+                '[Old](#old){: data-lid="ooooo" }\n'
             )
             normalized = (
-                "[\\[Set Theory\\] §Functions](#new)\n"
-                '[Old](#old){: data-relation="weak" reviewed="" }\n'
+                '[\\[Set Theory\\] §Functions](#new){: data-lid="nnnnn" }\n'
+                '[Old](#old){: data-lid="ooooo" }\n'
             )
             path.write_text(hidden, encoding="utf-8")
             post = SimpleNamespace(lang="en", published=True, path=path)
+            records = {"ooooo": R("weak", True)}
             with (
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+                patch.object(dc, "RECORDS", records),
                 patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "by_permalink", return_value=post),
                 patch.object(dc, "dirty_paths", return_value=[]),
                 patch.object(dc, "provider_available", return_value=True),
@@ -382,8 +448,8 @@ class SelectionTest(unittest.TestCase):
                 old_tagged = dc.extract_links(path, hidden, tagged=True)
                 old_state = {"units": {key: {
                     "status": "done",
-                    "hash": dc.sha(hidden),
-                    "verified_hash": dc.sha(hidden),
+                    "hash": dc.unit_digest([path], {path: hidden}),
+                    "verified_hash": dc.unit_digest([path], {path: hidden}),
                     "verified_content_hash": dc.verification_fingerprint(
                         [path], {path: hidden}, set()),
                     "decided_by": {old_tagged[0].ident: "Claude Opus"},
@@ -401,11 +467,10 @@ class SelectionTest(unittest.TestCase):
                 finally:
                     first[4].release()
 
-                rendered = dc.annotate(normalized, [new_link], {new_link.ident: "required"})
-                path.write_text(rendered, encoding="utf-8")
+                dc.record_decisions([new_link], {new_link.ident: "required"})
                 after_first = {"units": {key: {
                     "status": "done",
-                    "hash": dc.sha(rendered),
+                    "hash": dc.unit_digest([path], {path: normalized}),
                     "decided_by": {
                         **old_state["units"][key]["decided_by"],
                         new_link.ident: "Antigravity",
@@ -428,26 +493,32 @@ class RetryRoundTest(unittest.TestCase):
         path.parent.mkdir(parents=True)
         path.write_text("ko body", encoding="utf-8")
         post = SimpleNamespace(lang="ko", published=True, path=path)
-        link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None)
+        link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None, lid="aaaaa")
         return path, post, link
+
+    def base(self, root: Path, path: Path, post: object, link: dc.Link) -> list:
+        return [
+            patch.object(dc, "ROOT", root),
+            patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+            patch.object(dc, "RECORDS", {}),
+            patch.object(dc, "_POSTS", [post]),
+            patch.object(dc, "en_counterpart", return_value=None),
+            patch.object(dc, "dirty_paths", return_value=[]),
+            patch.object(dc, "extract_links", side_effect=open_side(link, path)),
+        ]
 
     def run_round(self, root: Path, state_path: Path, path: Path, post: object, link: dc.Link,
                   seen: list[int]) -> None:
-        with (
-            patch.object(dc, "ROOT", root),
-            patch.object(dc, "STATE_DIR", root),
-            patch.object(dc, "STATE_PATH", state_path),
-            patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
-            patch.object(dc, "HOLDS_PATH", root / "holds.json"),
-            patch.object(dc, "_POSTS", [post]),
-            patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-            patch.object(dc, "retire_en_markers"),
-            patch.object(dc, "en_counterpart", return_value=None),
-            patch.object(dc, "dirty_paths", return_value=[]),
-            patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
-            patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
-                seen.append(rnd), ({}, {}, [{"id": link.ident, "reason": "unclear"}]))[1]),
-        ):
+        with ExitStack() as stack:
+            for item in self.base(root, path, post, link) + [
+                patch.object(dc, "STATE_DIR", root),
+                patch.object(dc, "STATE_PATH", state_path),
+                patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
+                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
+                    seen.append(rnd), ({}, {}, [{"id": link.ident, "reason": "unclear"}]))[1]),
+            ]:
+                stack.enter_context(item)
             dc.process_once()
 
     def test_rounds_escalate_then_exhaust(self) -> None:
@@ -473,30 +544,16 @@ class RetryRoundTest(unittest.TestCase):
             self.assertNotIn("retry_after", entry)
 
             # Exhausted units stay out of the queue while their content is unchanged.
-            with (
-                patch.object(dc, "ROOT", root),
-                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
-                patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
-                patch.object(dc, "en_counterpart", return_value=None),
-                patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
-            ):
+            with ExitStack() as stack:
+                for item in self.base(root, path, post, link):
+                    stack.enter_context(item)
                 self.assertIsNone(dc.select_unit(saved, {}))
 
             # A new link changes the file, so the unit is picked up again.
             path.write_text("ko body + new link", encoding="utf-8")
-            with (
-                patch.object(dc, "ROOT", root),
-                patch.object(dc, "HOLDS_PATH", root / "holds.json"),
-                patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
-                patch.object(dc, "en_counterpart", return_value=None),
-                patch.object(dc, "dirty_paths", return_value=[]),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
-            ):
+            with ExitStack() as stack:
+                for item in self.base(root, path, post, link):
+                    stack.enter_context(item)
                 selected = dc.select_unit(saved, {})
             self.assertIsNotNone(selected)
             selected[4].release()
@@ -509,7 +566,7 @@ class RetryRoundTest(unittest.TestCase):
             with patch.object(dc, "ROOT", root):
                 key = dc.unit_key([path])
             state_path.write_text(json.dumps({"units": {key: {
-                "status": "ambiguous", "hash": dc.sha("ko body"), "items": [],
+                "status": "ambiguous", "hash": digest("ko body"), "items": [],
             }}}), encoding="utf-8")
             seen: list[int] = []
             self.run_round(root, state_path, path, post, link, seen)
@@ -528,8 +585,6 @@ class RetryRoundTest(unittest.TestCase):
             post = SimpleNamespace(lang="ko", published=True, path=target)
             with (
                 patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "by_permalink", return_value=post),
             ):
                 narrow = dc.target_context(link, True)
@@ -550,72 +605,38 @@ class BacklogCompletionTest(unittest.TestCase):
             path.parent.mkdir(parents=True)
             path.write_text("ko body", encoding="utf-8")
             post = SimpleNamespace(lang="ko", published=True, path=path)
-            link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None)
+            link = dc.Link("draft-link", path, 0, 1, "", "", "#x", None, None, lid="aaaaa")
             state_path = root / "state.json"
             with patch.object(dc, "ROOT", root):
                 key = dc.unit_key([path])
             state_path.write_text(json.dumps({"units": {key: {
-                "status": "exhausted", "hash": dc.sha("ko body"), "rounds": dc.MAX_ROUNDS,
+                "status": "exhausted", "hash": digest("ko body"), "rounds": dc.MAX_ROUNDS,
             }}}), encoding="utf-8")
             with (
                 patch.object(dc, "ROOT", root),
                 patch.object(dc, "STATE_PATH", state_path),
                 patch.object(dc, "HOLDS_PATH", root / "holds.json"),
+                patch.object(dc, "RECORDS", {}),
                 patch.object(dc, "_POSTS", [post]),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-                patch.object(dc, "retire_en_markers"),
                 patch.object(dc, "en_counterpart", return_value=None),
-                patch.object(dc, "extract_links", side_effect=lambda p, _t, tagged=False, review=False: [] if tagged or review else ([link] if p == path else [])),
+                patch.object(dc, "extract_links", side_effect=open_side(link, path)),
             ):
                 self.assertTrue(dc.backlog_complete())
                 path.write_text("ko body + new link", encoding="utf-8")
                 self.assertFalse(dc.backlog_complete())
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 BODY = (
     "---\ntitle: t\n---\n\n"
     "첫 문단.\n\n"
-    "본문에서 [가](/ko/math/a){: data-relation=\"required\" } 를 쓰고\n"
-    "[나](/ko/math/b){: .x data-relation=\"weak\" } 도 쓰고 [다](/ko/math/c) 는 아직이다.\n"
+    "본문에서 [가](/ko/math/a){: data-lid=\"aaaaa\" } 를 쓰고\n"
+    "[나](/ko/math/b){: .x data-lid=\"bbbbb\" } 도 쓰고 [다](/ko/math/c){: data-lid=\"ccccc\" } 는 아직이다.\n"
 )
+BODY_RECORDS = {"aaaaa": R("required"), "bbbbb": R("weak")}
 
 
-class RelationTagTest(unittest.TestCase):
-    """Both sides of the relation tag, and the ident that spans them."""
-
-    def links(self, path: Path, text: str, *, tagged: bool, review: bool = False) -> list:
-        post = SimpleNamespace(lang="ko", published=True, path=path)
-        with (
-            patch.object(dc, "ROOT", path.parents[4]),
-            patch.object(dc, "by_permalink", return_value=post),
-        ):
-            return dc.extract_links(path, text, tagged=tagged, review=review)
-
-    def test_review_marker_is_a_side_of_its_own(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        marked = dc.mark_for_review(BODY, tagged[:1])
-
-        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', marked)
-        self.assertIn('[나](/ko/math/b){: .x data-relation="weak" }', marked)
-        review = self.links(self.path, marked, tagged=False, review=True)
-        self.assertEqual([x.ident for x in review], [tagged[0].ident])
-        self.assertEqual([x.ident for x in self.links(self.path, marked, tagged=True)],
-                         [tagged[1].ident])
-        self.assertEqual([x.target for x in self.links(self.path, marked, tagged=False)],
-                         ["/ko/math/c"])
-
-    def test_annotate_replaces_an_existing_relation_value(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        marked = dc.mark_for_review(BODY, tagged[:1])
-        review = self.links(self.path, marked, tagged=False, review=True)
-        ruled = dc.annotate(marked, review, {review[0].ident: "weak"})
-
-        self.assertIn('[가](/ko/math/a){: data-relation="weak" } 를 쓰고', ruled)
-        self.assertNotIn("requires-review", ruled)
+class RelationSideTest(unittest.TestCase):
+    """The ledger record decides a link's side; the ident spans all of them."""
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -625,79 +646,66 @@ class RelationTagTest(unittest.TestCase):
         self.path.write_text(BODY, encoding="utf-8")
         self.addCleanup(self.tmp.cleanup)
 
-    def test_tagged_and_untagged_sides_are_complementary(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        untagged = self.links(self.path, BODY, tagged=False)
-
-        self.assertEqual([x.relation for x in tagged], ["required", "weak"])
-        self.assertEqual([x.target for x in untagged], ["/ko/math/c"])
-
-    def test_line_numbers_count_markdown_lines(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        lines = BODY.splitlines()
-
-        self.assertIn("[가]", lines[tagged[0].line - 1])
-        self.assertIn("[나]", lines[tagged[1].line - 1])
-
-    def test_ident_survives_stripping_the_tag(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        stripped = dc.strip_relations(BODY, tagged)
-        reread = self.links(self.path, stripped, tagged=False)
-
-        self.assertNotIn("data-relation", stripped)
-        self.assertEqual([x.ident for x in tagged], [x.ident for x in reread[:2]])
-
-    def test_stripping_keeps_other_attributes_and_drops_empty_ial(self) -> None:
-        stripped = dc.strip_relations(BODY, self.links(self.path, BODY, tagged=True))
-
-        self.assertIn("[가](/ko/math/a) 를 쓰고", stripped)
-        self.assertIn("[나](/ko/math/b){: .x }", stripped)
-
-    def test_verify_excerpts_carry_no_relation_to_anchor_on(self) -> None:
-        tagged = self.links(self.path, BODY, tagged=True)
-        post = SimpleNamespace(lang="ko", published=True, path=self.path)
-        dc._TEXT_OVERRIDE[self.path] = dc.strip_relations(BODY, tagged)
-        try:
-            with (
-                patch.object(dc, "ROOT", self.root),
-                patch.object(dc, "by_permalink", return_value=post),
-            ):
-                items = dc.prompt_items(tagged, True)
-        finally:
-            dc._TEXT_OVERRIDE.clear()
-
-        for item in items:
-            self.assertNotIn("data-relation", item["source_context"])
-            self.assertNotIn("data-relation", item["target_context"])
-
-    def test_verify_excerpts_contain_their_link_after_many_stripped_tags(self) -> None:
-        body = "---\ntitle: t\n---\n\n" + "".join(
-            f'문단 {i}: [링크 {i}](/ko/math/a){{: data-relation="required" }} 를 쓴다.\n\n'
-            for i in range(40)
-        )
-        self.path.write_text(body, encoding="utf-8")
+    def links(self, records: dict, *, tagged: bool = False, review: bool = False) -> list:
         post = SimpleNamespace(lang="ko", published=True, path=self.path)
         with (
             patch.object(dc, "ROOT", self.root),
             patch.object(dc, "by_permalink", return_value=post),
         ):
-            tagged = dc.extract_links(self.path, body, tagged=True)
-            stripped, view = dc.stripped_view([self.path], {self.path: body}, tagged)
-            dc._TEXT_OVERRIDE.update(stripped)
-            try:
-                items = dc.prompt_items(view, True)
-            finally:
-                dc._TEXT_OVERRIDE.clear()
+            return dc.extract_links(self.path, BODY, tagged=tagged, review=review,
+                                    records=records)
 
-        self.assertEqual([x["id"] for x in items], [x.ident for x in tagged])
-        for item in items:
-            self.assertIn(item["link"], item["source_context"])
+    def test_tagged_and_untagged_sides_are_complementary(self) -> None:
+        tagged = self.links(BODY_RECORDS, tagged=True)
+        untagged = self.links(BODY_RECORDS)
+
+        self.assertEqual([x.relation for x in tagged], ["required", "weak"])
+        self.assertEqual([x.target for x in untagged], ["/ko/math/c"])
+        self.assertEqual([x.lid for x in untagged], ["ccccc"])
+
+    def test_review_marker_is_a_side_of_its_own(self) -> None:
+        records = {**BODY_RECORDS, "aaaaa": R(dc.REVIEW_RELATION)}
+        review = self.links(records, review=True)
+
+        self.assertEqual([x.lid for x in review], ["aaaaa"])
+        self.assertEqual([x.lid for x in self.links(records, tagged=True)], ["bbbbb"])
+        self.assertEqual([x.lid for x in self.links(records)], ["ccccc"])
+
+    def test_ident_does_not_depend_on_the_record(self) -> None:
+        with_records = self.links(BODY_RECORDS, tagged=True) + self.links(BODY_RECORDS)
+        without = self.links({})
+
+        self.assertEqual(sorted(x.ident for x in with_records), sorted(x.ident for x in without))
+
+    def test_line_numbers_count_markdown_lines(self) -> None:
+        tagged = self.links(BODY_RECORDS, tagged=True)
+        lines = BODY.splitlines()
+
+        self.assertIn("[가]", lines[tagged[0].line - 1])
+        self.assertIn("[나]", lines[tagged[1].line - 1])
 
     def test_offset_between_paragraphs_takes_the_preceding_one(self) -> None:
         text = "---\ntitle: t\n---\n\n첫째.\n\n\n\n둘째.\n"
         gap = text.index("첫째.") + len("첫째.") + 2
 
         self.assertEqual(dc.paragraph_context(text, gap, 0), "첫째.")
+
+    def test_digest_follows_records_but_not_parked_ones(self) -> None:
+        with (
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "by_permalink", return_value=SimpleNamespace(path=self.path)),
+            patch.object(dc, "RECORDS", dict(BODY_RECORDS)),
+        ):
+            texts = {self.path: BODY}
+            parked = {self.links(BODY_RECORDS, tagged=True)[0].ident}
+            before = (dc.unit_digest([self.path], texts),
+                      dc.unit_digest([self.path], texts, parked))
+            dc.RECORDS["aaaaa"] = R("weak", True)
+            after = (dc.unit_digest([self.path], texts),
+                     dc.unit_digest([self.path], texts, parked))
+
+        self.assertNotEqual(before[0], after[0])
+        self.assertEqual(before[1], after[1])
 
 
 class VerifierRoutingTest(unittest.TestCase):
@@ -723,13 +731,13 @@ class VerifierRoutingTest(unittest.TestCase):
 TAGGED_BODY = (
     "---\ntitle: t\n---\n\n"
     "첫 문단.\n\n"
-    "본문에서 [가](/ko/math/a){: data-relation=\"required\" } 를 쓰고\n"
-    "[나](/ko/math/b){: data-relation=\"weak\" } 도 쓴다.\n"
+    "본문에서 [가](/ko/math/a){: data-lid=\"aaaaa\" } 를 쓰고\n"
+    "[나](/ko/math/b){: data-lid=\"bbbbb\" } 도 쓴다.\n"
 )
 
 
 class VerificationPassTest(unittest.TestCase):
-    """The second opinion either confirms the tag or marks it requires-review."""
+    """The second opinion either confirms the record or marks it requires-review."""
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -738,6 +746,9 @@ class VerificationPassTest(unittest.TestCase):
         self.path = self.root / "_posts/Math/Test/ko/draft.md"
         self.path.parent.mkdir(parents=True)
         self.path.write_text(TAGGED_BODY, encoding="utf-8")
+        self.ledger_path = self.root / "_data" / "link_relations.yml"
+        self.ledger_path.parent.mkdir(parents=True)
+        self.records = {"aaaaa": R("required"), "bbbbb": R("weak")}
         self.state_path = self.root / "state.json"
         self.holds_path = self.root / "holds.json"
         self.post = SimpleNamespace(lang="ko", published=True, path=self.path)
@@ -750,8 +761,16 @@ class VerificationPassTest(unittest.TestCase):
             patch.object(dc, "ROOT", self.root),
             patch.object(dc, "by_permalink", return_value=self.post),
         ):
-            return dc.extract_links(
-                self.path, self.path.read_text(encoding="utf-8"), tagged=True)
+            return dc.extract_links(self.path, self.path.read_text(encoding="utf-8"),
+                                    tagged=True, records=self.records)
+
+    def digest(self) -> str:
+        with (
+            patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "by_permalink", return_value=self.post),
+            patch.object(dc, "RECORDS", self.records),
+        ):
+            return dc.unit_digest([self.path], {self.path: self.path.read_text(encoding="utf-8")})
 
     def write_state(self, entry: dict) -> None:
         self.state_path.write_text(
@@ -764,6 +783,8 @@ class VerificationPassTest(unittest.TestCase):
 
         patches = [
             patch.object(dc, "ROOT", self.root),
+            patch.object(dc, "RECORDS", self.records),
+            patch.object(dc.ledger, "PATH", self.ledger_path),
             patch.object(dc, "STATE_DIR", self.root),
             patch.object(dc, "STATE_PATH", self.state_path),
             patch.object(dc, "STATE_LOCK_PATH", self.root / "state.lock"),
@@ -772,12 +793,9 @@ class VerificationPassTest(unittest.TestCase):
             patch.object(dc, "COMPLETE_PATH", self.root / "complete.json"),
             patch.object(dc, "_POSTS", [self.post]),
             patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
-            patch.object(dc, "retire_en_markers"),
             patch.object(dc, "by_permalink", return_value=self.post),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
-            patch.object(dc, "hard_lint", return_value=set()),
-            patch.object(dc, "is_local_only_untracked_unit", return_value=False),
             patch.object(dc, "commit_outputs", return_value=True),
             patch.object(dc, "provider_available", return_value=True),
         ]
@@ -803,21 +821,24 @@ class VerificationPassTest(unittest.TestCase):
     def holds(self) -> dict:
         return json.loads(self.holds_path.read_text(encoding="utf-8"))
 
+    def saved(self) -> dict:
+        return dc.ledger.load(self.ledger_path)
+
     def test_agreement_stamps_the_links_and_closes_the_unit(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+        self.write_state({"status": "done", "hash": self.digest(),
                           "decided_by": {self.idents[0]: "Codex",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
 
-        body = self.path.read_text(encoding="utf-8")
-        self.assertEqual(body.count('reviewed=""'), 2)
+        self.assertEqual(self.saved(), {"aaaaa": R("required", True), "bbbbb": R("weak", True)})
+        self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
         self.assertEqual(self.entry()["verify"], "agreed")
-        self.assertEqual(self.entry()["verified_hash"], dc.sha(body))
+        self.assertEqual(self.entry()["verified_hash"], self.digest())
         self.assertFalse(self.holds_path.exists())
         run.notify.assert_not_called()
 
     def test_each_link_goes_to_the_model_that_did_not_decide_it(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+        self.write_state({"status": "done", "hash": self.digest(),
                           "decided_by": {self.idents[0]: "Codex",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
@@ -827,31 +848,31 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual([item["id"] for item in run.codex.call_args[0][0]], [self.idents[1]])
 
     def test_disagreement_marks_the_link_holds_it_and_notifies(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+        self.write_state({"status": "done", "hash": self.digest(),
                           "decided_by": {self.idents[0]: "Codex",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
-        body = self.path.read_text(encoding="utf-8")
 
-        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', body)
-        self.assertIn('[나](/ko/math/b){: data-relation="weak" reviewed="" }', body)
+        self.assertEqual(self.saved(), {"aaaaa": R(dc.REVIEW_RELATION),
+                                        "bbbbb": R("weak", True)})
         held = self.holds()["held"][self.idents[0]]
         self.assertEqual(held["old"], "required")
         self.assertEqual(held["new"], "weak")
+        self.assertEqual(held["lid"], "aaaaa")
         self.assertEqual(held["path"], "_posts/Math/Test/ko/draft.md")
-        self.assertEqual(body.splitlines()[held["line"] - 1].count("[가]"), 1)
+        self.assertEqual(TAGGED_BODY.splitlines()[held["line"] - 1].count("[가]"), 1)
         run.notify.assert_called_once()
         self.assertEqual(self.entry()["verify"], "disputed")
 
     def test_ambiguous_is_held_the_same_way(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "ambiguous", self.idents[1]: "weak"})
 
         self.assertEqual(self.holds()["held"][self.idents[0]]["new"], "ambiguous")
         self.assertNotIn(self.idents[1], self.holds()["held"])
 
     def test_a_held_link_is_invisible_to_both_stages(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
 
@@ -860,27 +881,21 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(len(self.holds()["held"]), 1)
 
     def test_a_marked_link_is_not_reclassified_without_its_hold(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
         self.holds_path.write_text(json.dumps({"held": {}, "settled": {}}), encoding="utf-8")
 
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
 
         self.assertEqual(run.agy.call_count, 0)
-        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고',
-                      self.path.read_text(encoding="utf-8"))
+        self.assertEqual(self.saved()["aaaaa"], R(dc.REVIEW_RELATION))
 
     def test_settling_a_hold_does_not_reverify_the_remaining_links(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
 
-        body = self.path.read_text(encoding="utf-8")
-        self.assertIn('[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고', body)
-        body = body.replace(
-            '[가](/ko/math/a){: data-relation="requires-review" } 를 쓰고',
-            '[가](/ko/math/a){: data-relation="weak" } 를 쓰고',
-        )
-        self.path.write_text(body, encoding="utf-8")
+        self.assertEqual(self.records["aaaaa"], R(dc.REVIEW_RELATION))
+        self.records["aaaaa"] = R("weak", True)
         holds = self.holds()
         holds["settled"][self.idents[0]] = holds["held"].pop(self.idents[0])
         self.holds_path.write_text(json.dumps(holds), encoding="utf-8")
@@ -892,7 +907,7 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.agy.call_count, 0)
 
     def test_prose_edit_preserves_completed_link_reviews(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})
         self.path.write_text(
             self.path.read_text(encoding="utf-8").replace("첫 문단.", "바뀐 첫 문단."),
@@ -904,28 +919,23 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.opus.call_count + run.codex.call_count, 0)
 
     def test_relation_edit_preserves_explicit_review_marker(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY), "decided_by": {}})
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
-        self.path.write_text(
-            self.path.read_text(encoding="utf-8").replace(
-                'data-relation="weak"', 'data-relation="required"',
-            ),
-            encoding="utf-8",
-        )
+        self.records["bbbbb"] = R("required", True)
 
         run = self.tick({self.idents[0]: "required", self.idents[1]: "required"})
 
         self.assertEqual(run.opus.call_count + run.codex.call_count, 0)
 
     def test_a_closed_verifier_leaves_the_unit_for_a_later_tick(self) -> None:
-        self.write_state({"status": "done", "hash": dc.sha(TAGGED_BODY),
+        self.write_state({"status": "done", "hash": self.digest(),
                           "decided_by": {self.idents[0]: "Claude Opus",
                                          self.idents[1]: "Claude Opus"}})
         run = self.tick({self.idents[0]: "weak", self.idents[1]: "weak"},
                         also=(patch.object(dc, "provider_available",
                                            side_effect=lambda p: p != "Codex"),))
 
-        self.assertEqual(self.path.read_text(encoding="utf-8"), TAGGED_BODY)
+        self.assertFalse(self.ledger_path.exists())
         self.assertNotIn("verified_hash", self.entry())
         run.notify.assert_not_called()
 
@@ -934,12 +944,12 @@ LID_BODY = """---
 title: t
 ---
 
-본문에서 [가](#def1)를 쓰고 [나](#def2){: data-relation="weak" }도 쓴다.
+본문에서 [가](#def1)를 쓰고 [나](#def2){: data-lid="xxxxx" }도 쓴다.
 """
 
 
 class LidMintingTest(unittest.TestCase):
-    """새 링크의 식별자 발급 — EN 이 KO 를 상속할 수 있으려면 이게 먼저다."""
+    """lid 없는 링크의 식별자 발급 — 원장이 그 링크의 판정을 담으려면 이게 먼저다."""
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -971,16 +981,13 @@ class LidMintingTest(unittest.TestCase):
     def lids(self, path: Path) -> list[str]:
         return dc.LID_RE.findall(path.read_text(encoding="utf-8"))
 
-    def test_ko_links_get_identifiers_and_the_ledger_records_them(self) -> None:
+    def test_links_without_an_identifier_get_one_and_the_ledger_records_it(self) -> None:
         self.mint()
-        minted = self.lids(self.ko)
-        self.assertEqual(len(minted), 2)
-        self.assertEqual(len(set(minted)), 2)
-        self.assertEqual(sorted(self.ledger.read_text(encoding="utf-8").split()), sorted(minted))
-
-    def test_english_posts_are_left_alone(self) -> None:
-        self.mint()
-        self.assertEqual(self.lids(self.en), [])
+        ko, en = self.lids(self.ko), self.lids(self.en)
+        self.assertEqual(ko[1], "xxxxx")
+        self.assertEqual(len(set(ko + en)), 3)
+        self.assertEqual(sorted(self.ledger.read_text(encoding="utf-8").split()),
+                         sorted({ko[0], en[0]}))
 
     def test_existing_identifiers_are_never_reissued(self) -> None:
         self.mint()
@@ -993,56 +1000,51 @@ class LidMintingTest(unittest.TestCase):
         draws = iter("aaaaa" + "bbbbb" + "ccccc")
         with patch.object(dc.secrets, "choice", side_effect=lambda _seq: next(draws)):
             self.mint()
-        self.assertEqual(self.lids(self.ko), ["bbbbb", "ccccc"])
+        self.assertEqual(sorted(self.lids(self.ko)[:1] + self.lids(self.en)[:1]),
+                         ["bbbbb", "ccccc"])
 
     def test_a_post_with_uncommitted_edits_waits(self) -> None:
-        self.mint(dirty=["_posts/Math/Cat/ko/2025-01-01-A.md"])
-        self.assertEqual(self.lids(self.ko), [])
+        self.mint(dirty=["_posts/Math/Cat/ko/2025-01-01-A.md",
+                         "_posts/Math/Cat/en/2026-01-01-A.md"])
+        self.assertEqual(self.lids(self.ko), ["xxxxx"])
         self.assertFalse(self.ledger.exists())
 
 
-class StaleEnglishLinkTest(unittest.TestCase):
-    """KO 가 사람 검토를 마쳤는데 EN 값이 다르면 EN 을 끌어온다."""
+class LedgerFileTest(unittest.TestCase):
+    """_data/link_relations.yml 의 직렬화."""
 
-    def setUp(self) -> None:
-        self.tmp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.tmp.cleanup)
-        root = Path(self.tmp.name)
-        self.ko = root / "_posts" / "Math" / "Cat" / "ko" / "2025-01-01-A.md"
-        self.en = root / "_posts" / "Math" / "Cat" / "en" / "2026-01-01-A.md"
-        for path in (self.ko, self.en):
-            path.parent.mkdir(parents=True, exist_ok=True)
+    def test_round_trip_is_stable_and_keys_stay_strings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "link_relations.yml"
+            records = {"01234": R("required", True), "false": R("weak"),
+                       "zz9zz": R(dc.REVIEW_RELATION)}
+            dc.ledger.save(records, path)
+            text = path.read_text(encoding="utf-8")
 
-    def links(self, ko_ial: str, en_ial: str):
-        ko_text = f'---\ntitle: t\n---\n\n[가](#def1){ko_ial}\n'
-        en_text = f'---\ntitle: t\n---\n\n[A](#def1){en_ial}\n'
-        self.ko.write_text(ko_text, encoding="utf-8")
-        self.en.write_text(en_text, encoding="utf-8")
-        texts = {self.ko: ko_text, self.en: en_text}
-        paths = [self.ko, self.en]
-        with patch.object(dc, "ROOT", Path(self.tmp.name)):
-            tagged = [x for p in paths for x in dc.extract_links(p, texts[p], tagged=True)]
-            settled = dc.ko_settled(paths, texts)
-            return dc.stale_en_links(tagged, texts, settled), settled
+            self.assertEqual(dc.ledger.load(path), records)
+            dc.ledger.save(dc.ledger.load(path), path)
+            self.assertEqual(path.read_text(encoding="utf-8"), text)
+            self.assertIn('"01234": {relation: required, reviewed: true}', text)
+            self.assertIn('"false": {relation: weak}', text)
 
-    def test_reviewed_ko_pulls_a_differing_english_link(self) -> None:
-        stale, settled = self.links('{: data-lid="k7m2x" data-relation="required" reviewed="" }',
-                                    '{: data-lid="k7m2x" data-relation="weak" }')
-        self.assertEqual(settled, {"k7m2x": "required"})
-        self.assertEqual([x.source for x in stale], [self.en])
+    def test_a_bad_relation_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "link_relations.yml"
+            path.write_text('"aaaaa": {relation: sideways}\n', encoding="utf-8")
+            with self.assertRaises(ValueError):
+                dc.ledger.load(path)
 
-    def test_unreviewed_ko_leaves_english_alone(self) -> None:
-        stale, settled = self.links('{: data-lid="k7m2x" data-relation="required" }',
-                                    '{: data-lid="k7m2x" data-relation="weak" }')
-        self.assertEqual(settled, {})
-        self.assertEqual(stale, [])
+    def test_lock_is_exclusive(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch.object(dc.ledger, "LOCK_PATH", Path(tmp) / "lock"):
+                first = dc.ledger.try_lock()
+                self.assertIsNotNone(first)
+                self.assertIsNone(dc.ledger.try_lock())
+                first.release()
+                again = dc.ledger.try_lock()
+                self.assertIsNotNone(again)
+                again.release()
 
-    def test_matching_values_need_no_work(self) -> None:
-        stale, _ = self.links('{: data-lid="k7m2x" data-relation="weak" reviewed="" }',
-                              '{: data-lid="k7m2x" data-relation="weak" }')
-        self.assertEqual(stale, [])
 
-    def test_an_english_link_without_a_counterpart_is_its_own(self) -> None:
-        stale, _ = self.links('{: data-lid="k7m2x" data-relation="required" reviewed="" }',
-                              '{: data-lid="zzzzz" data-relation="weak" }')
-        self.assertEqual(stale, [])
+if __name__ == "__main__":
+    unittest.main()

@@ -17,11 +17,11 @@ class FollowupBatchTest(unittest.TestCase):
         baseline = (
             "결과적으로 이를 두 quotient가 같게 되는 것이다.\n"
             + "문맥입니다.\n" * 10
-            + '[다른 글](other){: data-relation="requires-review" }\n'
+            + '[다른 글](other){: data-lid="aaaaa" }\n'
         )
         current = baseline.replace(
             "이를 두 quotient가", "이들 두 quotient가",
-        ).replace('data-relation="requires-review"', 'data-relation="weak"')
+        ).replace('data-lid="aaaaa"', 'data-lid="bbbbb"')
 
         diff = worker._scoped_ko_diff(
             baseline, current,
@@ -31,18 +31,18 @@ class FollowupBatchTest(unittest.TestCase):
         )
 
         self.assertIn("이들 두 quotient가", diff)
-        self.assertNotIn('data-relation="weak"', diff)
+        self.assertNotIn('data-lid="bbbbb"', diff)
 
     def test_scoped_diff_keeps_the_finding_links_metadata(self) -> None:
-        baseline = '[대상](target){: data-relation="requires-review" }\n'
-        current = '[대상](target){: data-relation="required" }\n'
+        baseline = '[대상](target)\n'
+        current = '[대상](target){: data-lid="aaaaa" }\n'
 
         diff = worker._scoped_ko_diff(
             baseline, current, [{"quote": "[대상](target)", "line": 1}],
             "ko.md",
         )
 
-        self.assertIn('data-relation="required"', diff)
+        self.assertIn('data-lid="aaaaa"', diff)
 
     def test_persists_migrated_state_with_an_empty_request_queue(self) -> None:
         state = {"files": {"new.md": {"status": "done"}}}

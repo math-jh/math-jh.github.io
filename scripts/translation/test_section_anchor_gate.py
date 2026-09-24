@@ -21,7 +21,7 @@ class CitationBracketNormalizationTest(unittest.TestCase):
         source = (
             'See [[Set Theory] §Functions, ⁋Proposition 5]'
             '(/en/math/set_theory/functions#prop5)'
-            '{: data-relation="required" }.\n'
+            '{: data-lid="aaaaa" }.\n'
         )
 
         actual, repairs = gate.normalize_citation_brackets(source)
@@ -30,7 +30,7 @@ class CitationBracketNormalizationTest(unittest.TestCase):
             actual,
             'See [\\[Set Theory\\] §Functions, ⁋Proposition 5]'
             '(/en/math/set_theory/functions#prop5)'
-            '{: data-relation="required" }.\n',
+            '{: data-lid="aaaaa" }.\n',
         )
         self.assertEqual(repairs, [(1, "/en/math/set_theory/functions#prop5")])
 
@@ -70,7 +70,7 @@ class CitationBracketNormalizationTest(unittest.TestCase):
         source = (
             '[[Commutative Algebra] §Localization, ⁋Lemma 1]]'
             '(/en/math/commutative_algebra/localization#lem1)'
-            '{: data-relation="required" }\n'
+            '{: data-lid="aaaaa" }\n'
         )
 
         actual, repairs = gate.normalize_citation_brackets(source)
@@ -79,7 +79,7 @@ class CitationBracketNormalizationTest(unittest.TestCase):
             actual,
             '[\\[Commutative Algebra\\] §Localization, ⁋Lemma 1]'
             '(/en/math/commutative_algebra/localization#lem1)'
-            '{: data-relation="required" }\n',
+            '{: data-lid="aaaaa" }\n',
         )
         self.assertEqual(
             repairs, [(1, "/en/math/commutative_algebra/localization#lem1")],
