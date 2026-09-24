@@ -235,7 +235,7 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 . This isomorphism is obtained by assembling the degree-wise adjunctions $\Hom_\mathcal{B}(F(P^n), I^m) \cong \Hom_\mathcal{A}(P^n, G(I^m))$ to the complex level. Since $P_\bullet$ is $K$-projective and $I^\bullet$ is $K$-injective, the left-hand side reduces to $\Hom_{K(\mathcal{B})}(F(P_\bullet), I^\bullet) = \Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet)$, and the right-hand side reduces to $\Hom_{K(\mathcal{A})}(P_\bullet, G(I^\bullet)) = \Hom_{D(\mathcal{A})}(A^\bullet, R G(B^\bullet))$.
 :::
 
-The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [\[Multilinear Algebra\] §Hom and the Tensor Product](/en/math/multilinear_algebra/hom_and_tensor)
+The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [\[Multilinear Algebra\] §Hom and the Tensor Product](/en/math/multilinear_algebra/hom_and_tensor){: data-lid="6nfbb" }
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 

@@ -103,7 +103,7 @@ Earlier, in [Proposition 2](#prop2){: data-lid="qbslt" }, we saw that $\Spec$ ca
 If we equip the spectrum $\Spec A$ of a ring $A$ with the topological structure of [Definition 7](#def7){: data-lid="6nl20" }, then the functor $\Spec: \cRing^\op \rightarrow \Top$ of [Proposition 2](#prop2){: data-lid="n4r2u" } is a functor.
 :::
 ::: Proof
-What remains to be shown in addition to [Proposition 2](#prop2){: data-lid="52367" } is that for any ring homomorphism $\phi: A \rightarrow B$, the map $\Spec \phi: \Spec B \rightarrow \Spec A$ is a *continuous* function. Hence it suffices to show that for any closed set of $\Spec A$, its preimage under $\Spec\phi$ is also a closed set in $\Spec B$. ([\[Topology\] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2))
+What remains to be shown in addition to [Proposition 2](#prop2){: data-lid="52367" } is that for any ring homomorphism $\phi: A \rightarrow B$, the map $\Spec \phi: \Spec B \rightarrow \Spec A$ is a *continuous* function. Hence it suffices to show that for any closed set of $\Spec A$, its preimage under $\Spec\phi$ is also a closed set in $\Spec B$. ([\[Topology\] §Interior, Closure, Boundary of Sets, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-lid="fla38" })
 
 On the other hand, since every closed set of $\Spec A$ is of the form $Z(\mathfrak{a})$ and every closed set of $\Spec B$ is of the form $Z(\mathfrak{b})$, to show this it suffices to show that for any ideal $\mathfrak{a}$ of $A$, there exists an ideal $\mathfrak{b}$ of $B$ satisfying the formula
 

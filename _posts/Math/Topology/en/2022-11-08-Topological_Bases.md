@@ -58,7 +58,7 @@ Collecting all finite intersections of elements of $\mathcal{S}$, we obtain a ne
 [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-lid="11lvo" } shows that if we can describe the neighborhood filter $\mathcal{N}(x)$ centered at a point $x$ in a topological space $X$, then we can completely recover the topology of $X$. On the other hand, since $\mathcal{N}(x)$ satisfies the conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6){: data-lid="lengf" }, in particular the first condition, we do not need all of $\mathcal{N}(x)$ to describe it.
 
 ::: Definition 4
-Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at $A$ is a coinitial subset of $(\mathcal{N}(A),\subseteq)$ consisting of open sets. ([\[Set Theory\] §Elements of Ordered Sets](/en/math/set_theory/elements_in_ordered_set))
+Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at $A$ is a coinitial subset of $(\mathcal{N}(A),\subseteq)$ consisting of open sets. ([\[Set Theory\] §Elements of Ordered Sets](/en/math/set_theory/elements_in_ordered_set){: data-lid="6062r" })
 :::
 
 As in [§Open Sets, ⁋Definition 4](/en/math/topology/open_sets#def4){: data-lid="3m9t1" }, when $A$ is a singleton $\{x\}$, we call a local base at $A$ a local base at the point $x$. Then the following holds.

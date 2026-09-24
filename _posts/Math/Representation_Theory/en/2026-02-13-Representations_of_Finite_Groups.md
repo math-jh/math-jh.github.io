@@ -172,7 +172,7 @@ Earlier we examined the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-What [Corollary 7](#cor7){: data-lid="jp86p" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" }). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-lid="vrt42" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11) we know that a decomposition into simple modules
+What [Corollary 7](#cor7){: data-lid="jp86p" } asserts, then, is that any finite-dimensional $G$-representation $V$ is always a *semisimple* $\mathbb{C}[G]$-module ([\[Ring Theory\] §Semisimple module, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="5meml" }). Therefore, viewing $\mathbb{C}[G]$ itself as the regular representation, it is a semisimple module by [Corollary 7](#cor7){: data-lid="vrt42" }, hence an Artinian semisimple ring, and by [\[Ring Theory\] §Artin-Wedderburn Theorem, ⁋Theorem 11](/en/math/ring_theory/artin_wedderburn#thm11){: data-lid="uasta" } we know that a decomposition into simple modules
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 

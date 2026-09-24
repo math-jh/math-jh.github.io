@@ -212,7 +212,7 @@ Moreover, for any $f\in A$ with $\mathfrak{p}\in D(f)$, the following diagram
 commutes.
 :::
 ::: Proof
-By [\[Topology\] §Topological Bases, ⁋Proposition 2](/en/math/topology/topological_bases#prop2), the $D(f)$ form a base for $\Spec A$, so by [\[Topology\] §Topological Bases, ⁋Proposition 5](/en/math/topology/topological_bases#prop5){: data-lid="lcqaz" },
+By [\[Topology\] §Topological Bases, ⁋Proposition 2](/en/math/topology/topological_bases#prop2){: data-lid="f5stf" }, the $D(f)$ form a base for $\Spec A$, so by [\[Topology\] §Topological Bases, ⁋Proposition 5](/en/math/topology/topological_bases#prop5){: data-lid="lcqaz" },
 
 $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{O}_{\Spec A}(D(f))$$
 

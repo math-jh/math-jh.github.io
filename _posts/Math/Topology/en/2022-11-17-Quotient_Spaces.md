@@ -61,7 +61,7 @@ Let a topological space $X$, a quotient space $X/R$, and the canonical projectio
 Consider a topological space $X$ and two equivalence relations $R,S$ defined on $X$. If $S$ is a finer equivalence relation than $R$, then the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism for the equivalence relation $R/S$ defined on $X/S$.
 :::
 ::: Proof
-That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
+That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8){: data-lid="guisq" }. By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
 
 Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and this function is the composition of two continuous functions
 
@@ -70,7 +70,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 so it is continuous.
 :::
 
-Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations)) Then we may consider the canonical decomposition of $f$
+Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations){: data-lid="4lib6" }) Then we may consider the canonical decomposition of $f$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
