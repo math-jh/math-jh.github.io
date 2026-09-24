@@ -5989,6 +5989,13 @@ E:
   defs:
   - label: '[정수론] §오일러 정리와 phi function'
     url: /ko/math/number_theory/euler_theorem
+- id: euler_vector_field
+  en: Euler vector field
+  ko: 오일러 벡터장
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: evaluation
   en: evaluation
   ko: 대입
@@ -16052,6 +16059,13 @@ R:
     url: /ko/math/commutative_algebra/localization
   - label: '[스킴] §스킴'
     url: /ko/math/scheme_theory/schemes
+- id: residue_pairing
+  en: residue pairing
+  ko: 유수 짝지음
+  primary: en
+  defs:
+  - label: '[거울대칭] §프로베니우스 다양체'
+    url: /ko/math/mirror_symmetry/frobenius_manifold
 - id: residue_theorem
   en: residue theorem
   ko: 유수정리
