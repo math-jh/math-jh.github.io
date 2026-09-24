@@ -71,7 +71,7 @@ $$2g(\widetilde{C}_i)-2+s_i>0$$
 이 성립하는 것과 같다. 즉 genus $0$에서는 special point가 적어도 $3$개, genus $1$에서는 적어도 $1$개가 필요하며, genus $2$ 이상에서는 추가조건이 없다. 이 조건은 오직 $\mu$가 constant로 죽이는 component $C_i$에만 해당되는 것으로, 만일 $\mu$가 $C_i$에서 nonconstant라면 이미 automorphism group이 $\mu$를 보존해야 한다는 사실로부터 유한성이 따라나온다. 
 
 ::: 예시 2
-우리는 이제 automorphism group이 (non-trivial하게) 유한하게 나오는 경우를 실제로 살펴본다. $C$가 irreducible nodal cubic이고 $\mu:C\rightarrow X$가 constant map이라고 하자. $C$의 arithmetic genus는 $1$이지만 normalization은 $\mathbb{P}^1$이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="0htg0" data-relation="requires-review" }) Node 위의 두 점을 $0,\infty$로 잡으면, marked point가 없을 때는 모든 $z\mapsto az$ ($a\in\mathbb{C}^{\times}$)가 이 두 점을 고정하고 $C$의 automorphism으로 내려간다. 따라서 이 map은 stable하지 않으며, 실제로 위의 부등식에 $h_i=0$, $s_i=2$를 대입해보아도 확인할 수 있다. 
+우리는 이제 automorphism group이 (non-trivial하게) 유한하게 나오는 경우를 실제로 살펴본다. $C$가 irreducible nodal cubic이고 $\mu:C\rightarrow X$가 constant map이라고 하자. $C$의 arithmetic genus는 $1$이지만 normalization은 $\mathbb{P}^1$이다. ([\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7){: data-lid="0htg0" data-relation="required" reviewed="" }) Node 위의 두 점을 $0,\infty$로 잡으면, marked point가 없을 때는 모든 $z\mapsto az$ ($a\in\mathbb{C}^{\times}$)가 이 두 점을 고정하고 $C$의 automorphism으로 내려간다. 따라서 이 map은 stable하지 않으며, 실제로 위의 부등식에 $h_i=0$, $s_i=2$를 대입해보아도 확인할 수 있다. 
 
 이제 smooth locus에 marked point $p$ 하나를 고르고 그 preimage가 $1$이 되도록 좌표를 잡으면 $s_i=3$이 되어 이는 stability 조건을 만족한다. 단 여기서 주의할 것은 automorphism group이 trivial group이 아니라는 것이다. 즉 $0,1,\infty$를 각각 고정하는 automorphism은 항등사상 뿐이지만, 처음 normalization 단계에서 node의 두 branch를 서로 바꾸어줄 수 있는 자유도가 있으며, 실제로 $z\mapsto1/z$이 $0,\infty$를 맞바꾸고 $1$을 고정해주는 automorphism의 역할을 한다. 즉,
 

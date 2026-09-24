@@ -267,7 +267,7 @@ $$\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1^2d_2^2\binom{3d-4}{3d_1-2}N_{d_1
 이다. 이제 양변을 비교하면 주장한 식을 얻는다. 
 :::
 
-이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" data-relation="requires-review" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
+이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" data-relation="weak" reviewed="" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
 
 ---
 

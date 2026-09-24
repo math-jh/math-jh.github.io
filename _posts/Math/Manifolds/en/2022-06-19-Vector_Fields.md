@@ -61,7 +61,7 @@ $$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad \dd{x}^i\circ(X\vert_U)=X
 so they are all $C^\infty$.
 :::
 
-We write $\mathfrak{X}(M)$ for the set of $C^\infty$ vector fields on $M$, and henceforth assume all vector fields are $C^\infty$. Meanwhile, by a partition of unity, any vector field defined only on some open set $U$ of $M$ can be extended to all of $M$. ([§Tangent Space, footnote 1](/en/math/manifolds/tangent_space#fn:1){: data-relation="weak" })
+We write $\mathfrak{X}(M)$ for the set of $C^\infty$ vector fields on $M$, and henceforth assume all vector fields are $C^\infty$. Meanwhile, by a partition of unity, any vector field defined only on some open set $U$ of $M$ can be extended to all of $M$. ([§Tangent Space, footnote 1](/en/math/manifolds/tangent_space#fn:1){: data-lid="h3g4f" data-relation="weak" })
 
 ## Local Frame
 

@@ -92,7 +92,7 @@ $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\m
 That is, $\mathcal{N}(x)$ is the collection containing every element of $\mathcal{B}$ that contains the given $x\in X$, together with all elements of $\mathcal{P}(X)$ larger than it.
 
 - For any $V\in\mathcal{N}(x)$, suppose $V\subseteq V'$. By the definition of $\mathcal{N}(x)$, there exists $U\in\mathcal{B}(x)$ such that $U\subseteq V$, and for such $U$ we have $U\subseteq V'$, so $V'\in\mathcal{N}(x)$.
-- Suppose that elements $V_1,\ldots,V_n$ of $\mathcal{N}(x)$ are given. Then there exist $U_i\in\mathcal{B}(x)$ such that $U_i\subseteq V_i$. Using the second condition of [Proposition 2](#prop2){: data-relation="required" } inductively, we can find a suitable $U\in\mathcal{B}(x)$ such that $U\subseteq U_1\cap\cdots\cap U_n$. In particular, $U\subseteq V_1\cap\cdots\cap V_n$, so $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$.
+- Suppose that elements $V_1,\ldots,V_n$ of $\mathcal{N}(x)$ are given. Then there exist $U_i\in\mathcal{B}(x)$ such that $U_i\subseteq V_i$. Using the second hypothesis inductively, we can find a suitable $U\in\mathcal{B}(x)$ such that $U\subseteq U_1\cap\cdots\cap U_n$. In particular, $U\subseteq V_1\cap\cdots\cap V_n$, so $V_1\cap\cdots\cap V_n\in\mathcal{N}(x)$.
 - For any element $V$ of $\mathcal{N}(x)$, there exists $W\in\mathcal{B}(x)$ such that $W\subseteq V$, so $x\in V$.
 - For any element $V$ of $\mathcal{N}(x)$, pick $W\in\mathcal{B}(x)$ such that $W\subseteq V$. Then $W\in\mathcal{B}$, and therefore $W\in\mathcal{B}(y)$ for any $y\in W$. Since $W\subseteq V$, it follows that $V\in\mathcal{N}(y)$ for all $y$.
 

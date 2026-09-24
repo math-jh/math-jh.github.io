@@ -69,7 +69,7 @@ $$\int_{\mathbb{P}^2}e(E)=\int_{\mathbb{P}^2}c_1(\mathcal{O}(1))^2=1$$
 
 $$e(E)\cap[\mathbb{P}^2]=c_2(\mathcal{O}(1)^{\oplus2})\cap[\mathbb{P}^2]$$
 
-still yields a point class of degree $1$. ([\[Algebraic Varieties\] §Intersection Product, ⁋Example 11](/en/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" data-relation="weak" })
+still yields a point class of degree $1$. ([\[Algebraic Varieties\] §Intersection Product, ⁋Example 11](/en/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" data-relation="required" })
 :::
 
 To accommodate the deformation space $T^1$ and the obstruction space $T^2$, we have constructed such a smooth variety $X$ and vector bundle $E$, and our goal in this section is to make this precise. For a fixed $x\in X$, the vector space containing all directions perturbing it is the tangent space to $X$, denoted by $T_{X,x}$, and the fiber $E_x$ at each point becomes the obstruction space.
@@ -94,7 +94,7 @@ $$h^0((E^\bullet)^\vee)=\ker(\dd{s}),\qquad h^1((E^\bullet)^\vee)=\coker(T_X\ver
 
 give the actual tangent space and obstruction space.
 
-The crucial observation is that, even if the tangent space is inflated beyond expectation as in [Example 1](#ex1){: data-lid="fkmo8" data-relation="required" }, the obstruction also increases by the same amount, so their difference
+The crucial observation is that, even if the tangent space is inflated beyond expectation as in [Example 1](#ex1){: data-lid="fkmo8" data-relation="weak" }, the obstruction also increases by the same amount, so their difference
 
 $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
@@ -102,7 +102,7 @@ is always preserved as the virtual dimension $\vdim$. That is, however poorly th
 
 ## Perfect obstruction theory
 
-Now it is clear how the above discussion should be applied. That is, a general stack $M$ has a cotangent complex $\LL_M$, and we only need to consider the truncation $\tau_{\geq -1}\LL_M$ where deformations and obstructions are captured. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Obstructions to Deformation and Higher-Order Deformation Theory](/en/math/scheme_theory/deformation_theory#obstructions-to-deformation-and-higher-order-deformation-theory){: data-lid="0fpnl" data-relation="weak" }) Now, if étale-locally $M$ is represented as a closed subscheme of a smooth variety $X$ with ideal sheaf $\mathcal{I}$, this truncation takes the form
+Now it is clear how the above discussion should be applied. That is, a general stack $M$ has a cotangent complex $\LL_M$, and we only need to consider the truncation $\tau_{\geq -1}\LL_M$ where deformations and obstructions are captured. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Obstructions to Deformation and Higher-Order Deformation Theory](/en/math/scheme_theory/deformation_theory#obstructions-to-deformation-and-higher-order-deformation-theory){: data-lid="0fpnl" data-relation="required" }) Now, if étale-locally $M$ is represented as a closed subscheme of a smooth variety $X$ with ideal sheaf $\mathcal{I}$, this truncation takes the form
 
 $$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd\ }\at{0}{\Omega_X\vert_M}\Bigr]$$
 
@@ -180,7 +180,7 @@ $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\
 and the virtual class coincides with the usual fundamental class. The cases $X=\mathbb{P}^r$, Grassmannians, and general flag varieties $G/P$ all fall into this situation, where genus $0$ curve counting agrees with integration against the (genuine) fundamental class of the smooth moduli, justifying the computations in the previous post.
 :::
 
-In [§Gromov-Witten Invariants, ⁋Definition 1](/en/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-relation="required" reviewed="" }, we only gave the definition in the case where the fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$ exists, but by simply replacing this fundamental class with the virtual fundamental class, we can define for an arbitrary smooth projective target $X$ the genus $0$ Gromov-Witten invariants without the convexity assumption; that these two definitions coincide under the convexity assumption is immediate from [Example 5](#ex5){: data-relation="required" reviewed="" } above. Then, under this definition, we can verify that the virtual class behaves well under forgetful morphisms and gluing morphisms, so the string, divisor, and splitting axioms as well as the WDVV relations in [§Gromov-Witten Invariants, §§Axioms of Gromov–Witten Invariants](/en/math/gromov-witten_theory/gromov-witten_invariants#axioms-of-gromovwitten-invariants){: data-relation="requires-review" } also hold verbatim once the corresponding integrals are interpreted as integrals against the virtual class.
+In [§Gromov-Witten Invariants, ⁋Definition 1](/en/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-relation="required" reviewed="" }, we only gave the definition in the case where the fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$ exists, but by simply replacing this fundamental class with the virtual fundamental class, we can define for an arbitrary smooth projective target $X$ the genus $0$ Gromov-Witten invariants without the convexity assumption; that these two definitions coincide under the convexity assumption is immediate from [Example 5](#ex5){: data-relation="required" reviewed="" } above. Then, under this definition, we can verify that the virtual class behaves well under forgetful morphisms and gluing morphisms, so the string, divisor, and splitting axioms as well as the WDVV relations in [§Gromov-Witten Invariants, §§Axioms of Gromov–Witten Invariants](/en/math/gromov-witten_theory/gromov-witten_invariants#axioms-of-gromovwitten-invariants){: data-relation="weak" reviewed="" } also hold verbatim once the corresponding integrals are interpreted as integrals against the virtual class.
 
 ::: Example 6
 As the opposite extreme, we conclude by examining the moduli space of constant maps $\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$ discussed in the introduction. Since our claim in the introduction was that the obstruction survives in its entirety, let us now recompute this in rigorous language.
@@ -201,11 +201,11 @@ Indeed, at each point $((C,p_\bullet),x)$, the pullback by the constant map $\mu
 
 $$H^1(C,\mu^\ast T_X)\cong H^1(C,\mathcal{O}_C)\otimes T_x X$$
 
-Since $C$ is a genus $1$ curve, we have $\dim H^1(C,\mathcal{O}_C)=1$, and hence the rank of this bundle is $\dim X=d$, which coincides precisely with the difference between the actual dimension $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$ and the virtual dimension $\vdim=n$ of the moduli, namely the excess dimension $d$. Meanwhile, since the moduli stack of prestable curves $\mathfrak{M}_{1,n}$ is smooth, the (open) substack $\overline{\mathcal{M}}_{1,n}$ obtained by imposing the open condition of stability is also smooth; using in addition the smoothness of the target $X$, the entire moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ is smooth. Now, since the obstruction $h^1(((E')^\bullet)^\vee)$ defined on this stack is also a vector bundle, the local model with $s\equiv0$ from [Example 1](#ex1){: data-lid="1f2tf" data-relation="weak" } applies directly, so that
+Since $C$ is a genus $1$ curve, we have $\dim H^1(C,\mathcal{O}_C)=1$, and hence the rank of this bundle is $\dim X=d$, which coincides precisely with the difference between the actual dimension $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$ and the virtual dimension $\vdim=n$ of the moduli, namely the excess dimension $d$. Meanwhile, since the moduli stack of prestable curves $\mathfrak{M}_{1,n}$ is smooth, the (open) substack $\overline{\mathcal{M}}_{1,n}$ obtained by imposing the open condition of stability is also smooth; using in addition the smoothness of the target $X$, the entire moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ is smooth. Now, since the obstruction $h^1(((E')^\bullet)^\vee)$ defined on this stack is also a vector bundle, the local model with $s\equiv0$ from [Example 1](#ex1){: data-lid="1f2tf" data-relation="required" } applies directly, so that
 
 $$[\overline{\mathcal{M}}_{1,n}(X,0)]^\vir=e(p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X)\cap[\overline{\mathcal{M}}_{1,n}\times X]$$
 
-On the $(n+d)$-dimensional space, we recover a class of dimension $n$ via the cap product with the Euler class, effectively reenacting the situation of [Example 1](#ex1){: data-lid="m97nc" data-relation="weak" } where $s\equiv0$ in the moduli of stable maps.
+On the $(n+d)$-dimensional space, we recover a class of dimension $n$ via the cap product with the Euler class, effectively reenacting the situation of [Example 1](#ex1){: data-lid="m97nc" data-relation="required" } where $s\equiv0$ in the moduli of stable maps.
 :::
 
 ---

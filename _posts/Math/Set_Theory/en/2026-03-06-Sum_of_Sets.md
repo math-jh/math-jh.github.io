@@ -121,7 +121,7 @@ The *sum* of a given family of sets $(A_i)$ is a set $\sum A_i$ together with ma
 
 Of course, to use this as a definition we must show that at least one object satisfying the universal property exists. And [Theorem 8](#thm8){: data-lid="jqxjl" data-relation="required" } does exactly that. 
 
-We mentioned earlier that the set $\sum A_i$ is not well-defined in the strict sense. But even if such a set itself is not well-defined, if several such sets are given then there exists a bijection between them. This situation is called *unique up to bijection*. From [Definition 6$'$](#def6-1){: data-relation="required" } one can show that the sum of sets is unique up to bijection. 
+We mentioned earlier that the set $\sum A_i$ is not well-defined in the strict sense. But even if such a set itself is not well-defined, if several such sets are given then there exists a bijection between them. This situation is called *unique up to bijection*. From [Definition 6$'$](#def6-1){: data-lid="3tabr" data-relation="required" } one can show that the sum of sets is unique up to bijection. 
 
 ::: Corollary 9
 For a family of sets $(A_i)$, the sum $\sum A_i$ is unique up to bijection.

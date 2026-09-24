@@ -122,7 +122,7 @@ then $s$ is a section of $p$, and since it is contained in the centralizer of $N
 
 The proof of this is a straightforward computation.
 
-Now suppose the $N,H$ examined above are subgroups of a specific group $G$. If $N$ is a *normal* subgroup of $G$, then for each $h\in H$ the inner automorphism $\rho_h$ is an automorphism of $N$, and thus $\rho: H \rightarrow \Aut(N)$ is defined. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 10](/en/math/algebraic_structures/group_actions#def10){: data-lid="mg90k" data-relation="weak" }) Then from the above proposition we obtain the following.
+Now suppose the $N,H$ examined above are subgroups of a specific group $G$. If $N$ is a *normal* subgroup of $G$, then for each $h\in H$ the inner automorphism $\rho_h$ is an automorphism of $N$, and thus $\rho: H \rightarrow \Aut(N)$ is defined. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 10](/en/math/algebraic_structures/group_actions#def10){: data-lid="mg90k" data-relation="required" }) Then from the above proposition we obtain the following.
 
 ::: Corollary 8
 Let $G$ be a group, and let $N$ be a normal subgroup of $G$ and $H$ a subgroup of $G$. If $N\cap H=\{e_G\}$ and $NH=G$, then the group homomorphism defined by the formula

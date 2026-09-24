@@ -70,7 +70,7 @@ $$\int_{\mathbb{P}^2}e(E)=\int_{\mathbb{P}^2}c_1(\mathcal{O}(1))^2=1$$
 
 $$e(E)\cap[\mathbb{P}^2]=c_2(\mathcal{O}(1)^{\oplus2})\cap[\mathbb{P}^2]$$
 
-로 여전히 degree $1$의 point class를 준다. ([\[대수다양체\] §교차곱, ⁋예시 11](/ko/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" data-relation="requires-review" })
+로 여전히 degree $1$의 point class를 준다. ([\[대수다양체\] §교차곱, ⁋예시 11](/ko/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" data-relation="required" reviewed="" })
 :::
 
 우리는 deformation space $T^1$과 obstruction space $T^2$을 담기 위해 이와 같이 smooth variety $X$와 vector bundle $E$를 만들었으며, 이 섹션에서 우리 목표는 이를 엄밀하게 만드는 것이다. 고정된 $x\in X$에 대하여, 이를 흔드는 모든 방향이 담겨있는 벡터공간이 $X$의 tangent space $T_{X,x}$이며, 각 점의 fiber $E_x$가 obstruction space가 된다. 
@@ -95,7 +95,7 @@ $$h^0((E^\bullet)^\vee)=\ker(\dd{s}),\qquad h^1((E^\bullet)^\vee)=\coker(T_X\ver
 
 가 실제 tangent space와 obstruction space를 준다. 
 
-핵심적인 관찰은, 여기서 [예시 1](#ex1){: data-lid="fkmo8" data-relation="requires-review" }처럼 tangent space가 기대보다 부풀더라도 obstruction 역시 같은 크기로 늘어나므로, 둘의 차이
+핵심적인 관찰은, 여기서 [예시 1](#ex1){: data-lid="fkmo8" data-relation="weak" reviewed="" }처럼 tangent space가 기대보다 부풀더라도 obstruction 역시 같은 크기로 늘어나므로, 둘의 차이
 
 $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
@@ -103,7 +103,7 @@ $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
 ## Perfect obstruction theory
 
-이제 위의 논의를 어떻게 적용해야 하는지는 명확하다. 즉 일반적인 stack $M$은 cotangent complex $\LL_M$을 가지며, 우리는 이 중 deformation과 obstruction이 잡히는 truncation $\tau_{\geq -1}\LL_M$을 보면 된다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" data-relation="requires-review" }) 이제 만일 étale-local하게 $M$이 smooth variety $X$ 안의 closed subscheme으로 표현되고, 그 ideal sheaf가 $\mathcal{I}$라 하면 이 truncation은 다음의 꼴
+이제 위의 논의를 어떻게 적용해야 하는지는 명확하다. 즉 일반적인 stack $M$은 cotangent complex $\LL_M$을 가지며, 우리는 이 중 deformation과 obstruction이 잡히는 truncation $\tau_{\geq -1}\LL_M$을 보면 된다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" data-relation="required" reviewed="" }) 이제 만일 étale-local하게 $M$이 smooth variety $X$ 안의 closed subscheme으로 표현되고, 그 ideal sheaf가 $\mathcal{I}$라 하면 이 truncation은 다음의 꼴
 
 $$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd\ }\at{0}{\Omega_X\vert_M}\Bigr]$$
 
@@ -205,11 +205,11 @@ $$h^1(((E')^\bullet)^\vee)\cong R^1\pi_\ast\mu^\ast T_X\cong p_1^\ast(\pi_\ast\o
 
 $$H^1(C,\mu^\ast T_X)\cong H^1(C,\mathcal{O}_C)\otimes T_x X$$
 
-가 된다. $C$가 genus $1$ 곡선이므로 $\dim H^1(C,\mathcal{O}_C)=1$이고, 따라서 이 bundle의 rank는 $\dim X=d$가 되어 moduli의 실제 차원 $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$와 가상 차원 $\vdim=n$ 사이의 초과 차원 $d$와 정확히 일치한다. 한편 prestable curve들의 moduli stack $\mathfrak{M}_{1,n}$은 smooth이므로 open condition인 stability를 부과한 (open) substack $\overline{\mathcal{M}}_{1,n}$ 역시 smooth하며, 여기에 target $X$의 smoothness까지 사용하면 moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ 전체가 smooth가 된다. 이제 이 위에 정의된 obstruction $h^1(((E')^\bullet)^\vee)$ 또한 vector bundle이므로, [예시 1](#ex1){: data-lid="1f2tf" data-relation="requires-review" }의 $s\equiv0$인 local model이 그대로 적용되어
+가 된다. $C$가 genus $1$ 곡선이므로 $\dim H^1(C,\mathcal{O}_C)=1$이고, 따라서 이 bundle의 rank는 $\dim X=d$가 되어 moduli의 실제 차원 $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$와 가상 차원 $\vdim=n$ 사이의 초과 차원 $d$와 정확히 일치한다. 한편 prestable curve들의 moduli stack $\mathfrak{M}_{1,n}$은 smooth이므로 open condition인 stability를 부과한 (open) substack $\overline{\mathcal{M}}_{1,n}$ 역시 smooth하며, 여기에 target $X$의 smoothness까지 사용하면 moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ 전체가 smooth가 된다. 이제 이 위에 정의된 obstruction $h^1(((E')^\bullet)^\vee)$ 또한 vector bundle이므로, [예시 1](#ex1){: data-lid="1f2tf" data-relation="required" reviewed="" }의 $s\equiv0$인 local model이 그대로 적용되어
 
 $$[\overline{\mathcal{M}}_{1,n}(X,0)]^\vir=e(p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X)\cap[\overline{\mathcal{M}}_{1,n}\times X]$$
 
-가 된다. $(n+d)$차원 공간 위에서 Euler class와의 cap product로 차원 $n$의 class를 복원한 것으로, [예시 1](#ex1){: data-lid="m97nc" data-relation="requires-review" }의 $s\equiv0$인 상황을 stable map moduli에서 재연한 셈이다.
+가 된다. $(n+d)$차원 공간 위에서 Euler class와의 cap product로 차원 $n$의 class를 복원한 것으로, [예시 1](#ex1){: data-lid="m97nc" data-relation="required" reviewed="" }의 $s\equiv0$인 상황을 stable map moduli에서 재연한 셈이다.
 :::
 
 ---

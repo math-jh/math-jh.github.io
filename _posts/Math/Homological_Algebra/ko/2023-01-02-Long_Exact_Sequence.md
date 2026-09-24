@@ -27,7 +27,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 이 short exact sequence라는 것과 동치라는 것을 확인할 수 있다. 
 
-이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1){: data-lid="8gqgm" data-relation="weak" reviewed="" }이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 category가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing){: data-lid="2megj" data-relation="requires-review" }에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
+이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1){: data-lid="8gqgm" data-relation="weak" reviewed="" }이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 category가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing){: data-lid="2megj" data-relation="weak" reviewed="" }에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
 
 ::: 정리 1 (The long exact sequence)
 다음의 short exact sequence
@@ -166,7 +166,7 @@ $$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 ## Homotopy category
 
-[명제 6](#prop6){: data-lid="fh6iy" data-relation="requires-review" }에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는 자명하다.
+[명제 6](#prop6){: data-lid="fh6iy" data-relation="weak" reviewed="" }에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{A})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 보조정리는 자명하다.
 
 ::: 보조정리 7
 두 chain map 사이의 homotopy relation은 동치관계다.

@@ -126,7 +126,7 @@ $$\begin{aligned}
 
 $$(a_1\;a_2\;\cdots\;a_k)=(a_1\;a_2)(a_2\;a_3)\cdots(a_{k-1}\;a_k)$$
 
-이 성립하므로, $(1\;2)$과 $(1\;2\;\cdots\;n)$은 모든 cycle을 만들 수 있고, 따라서 $S_n$의 임의의 원소도 만들 수 있으므로 [명제 6](#prop6){: data-lid="w83dx" data-relation="requires-review" }이 성립한다.
+이 성립하므로, $(1\;2)$과 $(1\;2\;\cdots\;n)$은 모든 cycle을 만들 수 있고, 따라서 $S_n$의 임의의 원소도 만들 수 있으므로 [명제 6](#prop6){: data-lid="w83dx" data-relation="weak" reviewed="" }이 성립한다.
 
 ::: 정리 8 (Cayley)
 임의의 finite group $G$에 대하여, 적당한 자연수 $n$이 존재하여 $G$를 $S_n$의 어떤 subgroup과 isomorphic하도록 할 수 있다.

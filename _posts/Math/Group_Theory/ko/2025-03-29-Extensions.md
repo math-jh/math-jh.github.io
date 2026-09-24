@@ -125,7 +125,7 @@ $$s(y)=(e_N, y)$$
 
 이에 대한 증명은 단순한 계산이다. 
 
-이번에는 위에서 살펴본 $N,H$가 특정한 group $G$의 subgroup이었다 하자. 만일 $N$이 $G$의 *normal* subgroup이었다면 각각의 $h\in H$가 정의하는 inner automorphism $\rho_h$는 $N$의 automorphism이며 따라서 $\rho: H \rightarrow \Aut(N)$이 정의된다. ([\[대수적 구조\] §군의 작용, ⁋정의 10](/ko/math/algebraic_structures/group_actions#def10){: data-lid="mg90k" data-relation="requires-review" }) 그럼 위의 명제로부터 다음을 얻는다.
+이번에는 위에서 살펴본 $N,H$가 특정한 group $G$의 subgroup이었다 하자. 만일 $N$이 $G$의 *normal* subgroup이었다면 각각의 $h\in H$가 정의하는 inner automorphism $\rho_h$는 $N$의 automorphism이며 따라서 $\rho: H \rightarrow \Aut(N)$이 정의된다. ([\[대수적 구조\] §군의 작용, ⁋정의 10](/ko/math/algebraic_structures/group_actions#def10){: data-lid="mg90k" data-relation="required" reviewed="" }) 그럼 위의 명제로부터 다음을 얻는다.
 
 ::: 따름정리 8
 Group $G$와 $G$의 normal subgroup $N$, $G$의 subgroup $H$가 주어졌다 하자. 만일 $N\cap H=\{e_G\}$이고 $NH=G$가 성립한다면, 다음의 식

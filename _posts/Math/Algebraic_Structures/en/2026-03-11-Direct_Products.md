@@ -69,7 +69,7 @@ Similarly, for $y\in\prod H_i$, having $y\in\im f$ is equivalent to $y=f(x)$ for
 
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
-so $\im f\subseteq\prod\im f_i$ holds. Conversely, if $y\in\prod\im f_i$ is given, then for each $i\in I$ we can choose, satisfying $f_i(x_i)=\pr_i^H(y)$, an element $x_i\in G_i$ ([\[Set Theory\] §Axiom of Choice, ⁋The Axiom of Choice.](/en/math/set_theory/axiom_of_choice#axiom-choice){: data-relation="weak" }), and setting $x=(x_i)_{i\in I}$ gives $f(x)=y$, so $\im f=\prod\im f_i$ also holds.
+so $\im f\subseteq\prod\im f_i$ holds. Conversely, if $y\in\prod\im f_i$ is given, then for each $i\in I$ we can choose, satisfying $f_i(x_i)=\pr_i^H(y)$, an element $x_i\in G_i$ ([\[Set Theory\] §Axiom of Choice, ⁋The Axiom of Choice.](/en/math/set_theory/axiom_of_choice#axiom-choice){: data-lid="oglni" data-relation="weak" }), and setting $x=(x_i)_{i\in I}$ gives $f(x)=y$, so $\im f=\prod\im f_i$ also holds.
 :::
 
 ::: Corollary 4

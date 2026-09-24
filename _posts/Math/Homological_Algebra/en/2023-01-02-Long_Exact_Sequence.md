@@ -28,7 +28,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 is a short exact sequence for every $n$.
 
-The main theorem of this post is the following [Theorem 1](#thm1){: data-lid="8gqgm" data-relation="weak" }. The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly constructed connecting map. Thus, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing){: data-lid="2megj" data-relation="required" }, we make free use of the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
+The main theorem of this post is the following [Theorem 1](#thm1){: data-lid="8gqgm" data-relation="weak" }. The snake lemma plays a key role in its proof, and when the category is $\lMod{A}$, the proof is easily completed using the explicitly constructed connecting map. Thus, just as in [§Diagram chasing](/en/math/homological_algebra/diagram_chasing){: data-lid="2megj" data-relation="weak" }, we make free use of the Freyd–Mitchell embedding theorem and carry out the proof of the following theorem in $\lMod{A}$.
 
 ::: Theorem 1 (The long exact sequence)
 Suppose we are given the short exact sequence
@@ -167,7 +167,7 @@ If for some chain map $f:C\rightarrow D$ there exists a chain map $g:D\rightarro
 
 ## Homotopy category
 
-Thanks to [Proposition 6](#prop6){: data-lid="fh6iy" data-relation="required" }, we can define the *homotopy category* $\mathbf{K}(\mathcal{A})$ through the following procedure. First, the following lemma is immediate.
+Thanks to [Proposition 6](#prop6){: data-lid="fh6iy" data-relation="weak" }, we can define the *homotopy category* $\mathbf{K}(\mathcal{A})$ through the following procedure. First, the following lemma is immediate.
 
 ::: Lemma 7
 The homotopy relation between two chain maps is an equivalence relation.

@@ -28,7 +28,7 @@ $$x[h,h']x^{-1}=(xh^{-1}x^{-1})(xh'^{-1}x^{-1})(xhx^{-1})(xh'x^{-1})$$
 
 이고, 이 때 $H, H'$ 각각이 normal subgroup이라는 가정으로부터 $[H,H']$ 또한 $G$의 normal subgroup이 된다. 
 
-이러한 종류의 계산을 위한 결과를 [보조정리 1](#lem1){: data-lid="tuyko" data-relation="requires-review" }에서 정리한다. 그 전에 표기법을 간단히 하기 위해, inner automorphism $\rho_g: x\mapsto gxg^{-1}$에 대하여
+이러한 종류의 계산을 위한 결과를 [보조정리 1](#lem1){: data-lid="tuyko" data-relation="forward" reviewed="" }에서 정리한다. 그 전에 표기법을 간단히 하기 위해, inner automorphism $\rho_g: x\mapsto gxg^{-1}$에 대하여
 
 $$\rho_{g^{-1}}(x)=x^g$$
 

@@ -28,7 +28,7 @@ $$x[h,h']x^{-1} = (xh^{-1}x^{-1})(xh'^{-1}x^{-1})(xhx^{-1})(xh'x^{-1})$$
 
 and from the assumption that $H$ and $H'$ are each normal it follows that $[H, H']$ is also a normal subgroup of $G$.
 
-We summarize results of this kind for computations in [Lemma 1](#lem1){: data-lid="tuyko" data-relation="required" }. Before that, to simplify notation, for the inner automorphism $\rho_g: x \mapsto gxg^{-1}$ we write
+We summarize results of this kind for computations in [Lemma 1](#lem1){: data-lid="tuyko" data-relation="forward" }. Before that, to simplify notation, for the inner automorphism $\rho_g: x \mapsto gxg^{-1}$ we write
 
 $$\rho_{g^{-1}}(x) = x^g$$
 

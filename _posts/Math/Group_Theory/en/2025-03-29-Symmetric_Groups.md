@@ -127,7 +127,7 @@ thus $(a\;b)$ can be written as a product of cycles of the form $(i\;i+1)$. Ther
 
 $$(a_1\;a_2\;\cdots\;a_k)=(a_1\;a_2)(a_2\;a_3)\cdots(a_{k-1}\;a_k)$$
 
-holds, so $(1\;2)$ and $(1\;2\;\cdots\;n)$ can generate all cycles, and hence any element of $S_n$, so [Proposition 6](#prop6){: data-lid="w83dx" data-relation="required" } holds.
+holds, so $(1\;2)$ and $(1\;2\;\cdots\;n)$ can generate all cycles, and hence any element of $S_n$, so [Proposition 6](#prop6){: data-lid="w83dx" data-relation="weak" } holds.
 
 ::: Theorem 8 (Cayley)
 For any finite group $G$, there exists a natural number $n$ such that $G$ can be made isomorphic to some subgroup of $S_n$.

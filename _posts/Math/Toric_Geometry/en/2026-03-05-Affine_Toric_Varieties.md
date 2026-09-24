@@ -118,7 +118,7 @@ Although the definition may look somewhat abstract, in practice it is equivalent
 1. $\sigma$ is *simplicial*. That is, the number of rays equals the dimension.
 2. (When $\sigma$ is full-dimensional) the determinant of the matrix $[v_1 \mid \cdots \mid v_n] \in \mathrm{Mat}_n(\mathbb{Z})$ whose columns are the primitive ray generators is $\pm 1$.
 
-In particular, for a two-dimensional cone in $N = \mathbb{Z}^2$ it suffices to check that the $2 \times 2$ matrix formed by the two ray generators has determinant $\pm 1$, and indeed [Example 6](#ex6){: data-relation="weak" } and [Example 7](#ex7){: data-lid="cwte2" data-relation="weak" } satisfy this.
+In particular, for a two-dimensional cone in $N = \mathbb{Z}^2$ it suffices to check that the $2 \times 2$ matrix formed by the two ray generators has determinant $\pm 1$, and indeed [Example 7](#ex7){: data-lid="cwte2" data-relation="weak" } satisfies this.
 
 ::: Proposition 9
 The affine toric variety $U_\sigma$ is a smooth algebraic variety if and only if $\sigma$ is a smooth cone. More specifically, if $\sigma$ is smooth and $k = \dim \sigma$, then
