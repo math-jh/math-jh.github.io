@@ -15096,6 +15096,13 @@ Q:
   see:
   - label: Gromov-Witten invariant
     id: gromov-witten_invariant
+- id: quantum_differential_equation
+  en: quantum differential equation
+  ko: 양자 미분방정식
+  primary: en
+  defs:
+  - label: '[거울대칭] §두브로빈 접속'
+    url: /ko/math/mirror_symmetry/dubrovin_connection
 - id: quantum_product
   en: quantum product
   ko: 양자곱
