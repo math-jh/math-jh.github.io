@@ -13,7 +13,7 @@ weight: 2
 
 ---
 
-우리는 [\[스택\] §고유스택](/ko/math/stacks/proper_stacks){: data-lid="5ib31" }에서 moduli space의 properness가 갖는 중요성을 이미 살펴보았지만, 일반적인 enumerative problem에서는 이러한 성질을 기대할 수 없다. 이러한 종류의 문제 중 고전적인 것은 $\mathbb{P}^2$ 안의 $3d-1$개의 general point를 지나는 degree $d$ rational curve를 세는 문제로, 예를 들어 $d=2$일 때 그 값은 $1$인 것이 알려져 있다. 즉 $\mathbb{P}^2$ 안의 $5$개의 점을 지나는 곡선은 유일하게 존재하여야 한다. 반면 다음 map
+우리는 [\[스택\] §고유스택](/ko/math/stacks/proper_stacks){: data-lid="5ib31" data-relation="weak" }에서 moduli space의 properness가 갖는 중요성을 이미 살펴보았지만, 일반적인 enumerative problem에서는 이러한 성질을 기대할 수 없다. 이러한 종류의 문제 중 고전적인 것은 $\mathbb{P}^2$ 안의 $3d-1$개의 general point를 지나는 degree $d$ rational curve를 세는 문제로, 예를 들어 $d=2$일 때 그 값은 $1$인 것이 알려져 있다. 즉 $\mathbb{P}^2$ 안의 $5$개의 점을 지나는 곡선은 유일하게 존재하여야 한다. 반면 다음 map
 
 $$\mu_t:\mathbb{P}^1\longrightarrow\mathbb{P}^2,\qquad [\u:\v]\longmapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
 
