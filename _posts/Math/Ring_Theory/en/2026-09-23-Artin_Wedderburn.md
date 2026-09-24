@@ -14,7 +14,7 @@ weight: 8
 translated_at: 2026-09-23T15:15:06+00:00
 translation_source: antigravity-gemini-3.8-flash-high
 ---
-[§Semisimple Modules](/en/math/ring_theory/semisimple_modules){: data-lid="bkiu1" data-relation="required" } discussed modules that decompose into direct sums of simple modules. One of the most interesting applications is a *semisimple ring*, which is a ring $A$ that is a semisimple module when regarded as a module over itself; the key result of this post is that such a ring decomposes into a product of finitely many matrix rings.
+[§Semisimple Modules](/en/math/ring_theory/semisimple_modules){: data-lid="bkiu1" } discussed modules that decompose into direct sums of simple modules. One of the most interesting applications is a *semisimple ring*, which is a ring $A$ that is a semisimple module when regarded as a module over itself; the key result of this post is that such a ring decomposes into a product of finitely many matrix rings.
 
 In this post as well, a ring is assumed to have an identity, and commutativity is not assumed unless specified otherwise. Furthermore, an $A$-module is always understood to mean a left $A$-module.
 
@@ -24,13 +24,13 @@ In this post as well, a ring is assumed to have an identity, and commutativity i
 If a ring $A$ is semisimple as a left $A$-module over itself, then $A$ is called a *semisimple ring*.
 :::
 
-Since the submodules of the left $A$-module $A$ are precisely the left ideals of $A$, this definition is simply [§Semisimple Modules, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="apyw2" data-relation="weak" } applied to $M=A$. Meanwhile, the following holds.
+Since the submodules of the left $A$-module $A$ are precisely the left ideals of $A$, this definition is simply [§Semisimple Modules, ⁋Definition 2](/en/math/ring_theory/semisimple_modules#def2){: data-lid="apyw2" } applied to $M=A$. Meanwhile, the following holds.
 
 ::: Proposition 2
 For a ring $A$, $A$ is a semisimple ring if and only if every left $A$-module is semisimple.
 :::
 ::: Proof
-If every left $A$-module is semisimple, then in particular the left $A$-module $A$ is semisimple. Thus, it suffices to show the converse. Suppose $A$ is a semisimple ring. Any left $A$-module $M$ is a quotient of some free module $A^{(I)}$ ([\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="451t5" data-relation="required" }), and since $A$ is semisimple, $A^{(I)}$ is also a semisimple $A$-module by [§Semisimple Modules, ⁋Theorem 5](/en/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" data-relation="required" }, so its quotient is also semisimple ([§Semisimple Modules, ⁋Corollary 6](/en/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" data-relation="required" }).
+If every left $A$-module is semisimple, then in particular the left $A$-module $A$ is semisimple. Thus, it suffices to show the converse. Suppose $A$ is a semisimple ring. Any left $A$-module $M$ is a quotient of some free module $A^{(I)}$ ([\[Multilinear Algebra\] §Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2){: data-lid="451t5" }), and since $A$ is semisimple, $A^{(I)}$ is also a semisimple $A$-module by [§Semisimple Modules, ⁋Theorem 5](/en/math/ring_theory/semisimple_modules#thm5){: data-lid="sgjq3" }, so its quotient is also semisimple ([§Semisimple Modules, ⁋Corollary 6](/en/math/ring_theory/semisimple_modules#cor6){: data-lid="cx5wl" }).
 :::
 
 In addition, the following holds.
@@ -108,7 +108,7 @@ For any ring $A$, we have $\End_A(A)\cong A^\op$.
 If we define $\Phi:\End_A(A)\rightarrow A^\op$ by $\Phi(f)=f(1)$, it is easy to show that this is a ring homomorphism into $A^\op$. Conversely, for any $a\in A$, the right multiplication $x\mapsto xa$ is a left module endomorphism, and since this correspondence gives the inverse of $\Phi$, it follows that $\Phi$ is an isomorphism.
 :::
 
-Our next observation concerns linear operators on semisimple modules. Intuitively, this states that the simple modules comprising a semisimple module cannot mix (unless they are of the same type), and the proof naturally uses [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="rdgn9" data-relation="weak" }.
+Our next observation concerns linear operators on semisimple modules. Intuitively, this states that the simple modules comprising a semisimple module cannot mix (unless they are of the same type), and the proof naturally uses [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="rdgn9" }.
 
 ::: Lemma 8
 Let $S_1,\ldots,S_k$ be pairwise non-isomorphic simple modules and let $n_1,\ldots,n_k\geq 1$. For $M=\bigoplus_{i=1}^kS_i^{n_i}$,
@@ -118,7 +118,7 @@ $$\End_A(M)\cong\prod_{i=1}^k\Mat_{n_i}\big(\End_A(S_i)\big)$$
 holds.
 :::
 ::: Proof
-Let $\iota_{i,a}$ and $\pi_{i,a}$ denote the inclusion and projection for the direct sum summands, respectively. For an endomorphism $\varphi$, the component $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$ is a homomorphism from $S_j$ to $S_i$; if $i\neq j$, by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="wccwq" data-relation="required" } it must be $0$. Therefore, $\varphi$ is uniquely given, for each $i$, by the data of the matrices $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$.
+Let $\iota_{i,a}$ and $\pi_{i,a}$ denote the inclusion and projection for the direct sum summands, respectively. For an endomorphism $\varphi$, the component $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$ is a homomorphism from $S_j$ to $S_i$; if $i\neq j$, by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="wccwq" } it must be $0$. Therefore, $\varphi$ is uniquely given, for each $i$, by the data of the matrices $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_A(S_i))$.
 
 We must verify that this correspondence is a ring isomorphism; that is, we must show that it preserves addition and multiplication. The additive part is clear, and for multiplication, since $\sum_{j,b}\iota_{j,b}\circ\pi_{j,b}=\id_M$, we have
 
@@ -153,7 +153,7 @@ Let $A=A_1\times\cdots\times A_k$, and let $e_i\in A$ be the element whose $i$-t
 2. If each $A_i$ is a semisimple ring, then $A$ is also a semisimple ring.
 :::
 ::: Proof
-1. That the $e_i$ form a complete set of central orthogonal idempotents can be checked directly by componentwise calculation. ([§Central Idempotents and Ring Decomposition, ⁋Theorem 5](/en/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" data-relation="required" }) Then, from the equations
+1. That the $e_i$ form a complete set of central orthogonal idempotents can be checked directly by componentwise calculation. ([§Central Idempotents and Ring Decomposition, ⁋Theorem 5](/en/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" }) Then, from the equations
     
     $$1=\sum e_i,\qquad e_ie_j=\delta_{ij}e_i$$
     
@@ -179,19 +179,19 @@ For a ring $A$, the following are equivalent.
 Moreover, the data $k$ and $(n_i,D_i)$ constituting this decomposition of the semisimple ring are unique up to permutation and isomorphism.
 :::
 ::: Proof
-That the second condition implies the first follows from the fact that each factor is a semisimple ring by [Proposition 5](#prop5){: data-lid="aw3ne" data-relation="required" }, which immediately yields the claim from the second result of [Proposition 10](#prop10){: data-lid="l9ws8" data-relation="required" }.
+That the second condition implies the first follows from the fact that each factor is a semisimple ring by [Proposition 5](#prop5){: data-lid="aw3ne" }, which immediately yields the claim from the second result of [Proposition 10](#prop10){: data-lid="l9ws8" }.
 
-Now assume the first condition and show the second condition. First, by [Proposition 3](#prop3){: data-lid="jyozf" data-relation="required" }, $A$ is a direct sum of finitely many simple left ideals. Grouping the factors by isomorphism class, for pairwise non-isomorphic simple modules $S_1,\ldots,S_k$ and natural numbers $n_i\geq 1$, we have $A\cong\bigoplus_iS_i^{n_i}$ as left modules. Setting $C_i=\End_A(S_i)$, this is a division ring by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="uauah" data-relation="required" }, and by [Lemma 7](#lem7){: data-lid="reb59" data-relation="required" } and [Lemma 8](#lem8){: data-lid="m01xr" data-relation="required" },
+Now assume the first condition and show the second condition. First, by [Proposition 3](#prop3){: data-lid="jyozf" }, $A$ is a direct sum of finitely many simple left ideals. Grouping the factors by isomorphism class, for pairwise non-isomorphic simple modules $S_1,\ldots,S_k$ and natural numbers $n_i\geq 1$, we have $A\cong\bigoplus_iS_i^{n_i}$ as left modules. Setting $C_i=\End_A(S_i)$, this is a division ring by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="uauah" }, and by [Lemma 7](#lem7){: data-lid="reb59" } and [Lemma 8](#lem8){: data-lid="m01xr" },
 
 $$A^\op\cong\End_A(A)\cong\prod_{i=1}^k\Mat_{n_i}(C_i)$$
 
-holds. Taking $(-)^\op$ on both sides, by [Lemma 9](#lem9){: data-lid="2hk1d" data-relation="required" } we obtain
+holds. Taking $(-)^\op$ on both sides, by [Lemma 9](#lem9){: data-lid="2hk1d" } we obtain
 
 $$A\cong\prod_{i=1}^k\Mat_{n_i}(C_i)^\op\cong\prod_{i=1}^k\Mat_{n_i}(C_i^\op)$$
 
 and since $D_i=C_i^\op$ is a division ring, we obtain the desired decomposition.
 
-Now suppose that an arbitrary decomposition $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$ satisfying these properties is given, and let us show uniqueness. This essentially traces the above construction in reverse: first, on $W_j=E_j^{m_j}$, $A$ acts via matrix multiplication through the $j$-th component $\Mat_{m_j}(E_j)$ while the remaining components act as $0$, giving it the structure of a left $A$-module. Then by [Proposition 5](#prop5){: data-lid="qlrxy" data-relation="required" }, each $W_j$ is simple and the $j$-th factor is isomorphic to $W_j^{m_j}$, so $A\cong\bigoplus_jW_j^{m_j}$ as left modules, and by the first result of [Proposition 10](#prop10){: data-lid="yl0q8" data-relation="required" }, the $W_j$ belong to different components and are thus pairwise non-isomorphic. Then by [§Semisimple Modules, ⁋Proposition 10](/en/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" data-relation="required" }, one sees that the two decompositions $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$ give the same data, and finally, by the first result of [Proposition 10](#prop10){: data-lid="c9hgr" data-relation="required" } we have $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$, and by [Proposition 6](#prop6){: data-lid="wlly1" data-relation="required" } this is isomorphic to $E_i^\op$, so
+Now suppose that an arbitrary decomposition $A\cong\prod_{j=1}^l\Mat_{m_j}(E_j)$ satisfying these properties is given, and let us show uniqueness. This essentially traces the above construction in reverse: first, on $W_j=E_j^{m_j}$, $A$ acts via matrix multiplication through the $j$-th component $\Mat_{m_j}(E_j)$ while the remaining components act as $0$, giving it the structure of a left $A$-module. Then by [Proposition 5](#prop5){: data-lid="qlrxy" }, each $W_j$ is simple and the $j$-th factor is isomorphic to $W_j^{m_j}$, so $A\cong\bigoplus_jW_j^{m_j}$ as left modules, and by the first result of [Proposition 10](#prop10){: data-lid="yl0q8" }, the $W_j$ belong to different components and are thus pairwise non-isomorphic. Then by [§Semisimple Modules, ⁋Proposition 10](/en/math/ring_theory/semisimple_modules#prop10){: data-lid="wprdz" }, one sees that the two decompositions $\bigoplus_iS_i^{n_i}\cong\bigoplus_jW_j^{m_j}$ give the same data, and finally, by the first result of [Proposition 10](#prop10){: data-lid="c9hgr" } we have $\End_A(W_i)=\End_{\Mat_{m_i}(E_i)}(E_i^{m_i})$, and by [Proposition 6](#prop6){: data-lid="wlly1" } this is isomorphic to $E_i^\op$, so
 
 $$E_i\cong\End_A(W_i)^\op\cong\End_A(S_i)^\op=C_i^\op=D_i$$
 
@@ -204,12 +204,12 @@ Intuitively, this theorem can be understood as a kind of block diagonalization: 
 Let $A\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$ be a semisimple ring. Then, up to isomorphism, the simple left $A$-modules consist precisely of the $V_i=D_i^{n_i}$, and any left $A$-module is a direct sum of summands isomorphic to them.
 :::
 ::: Proof
-By [Proposition 2](#prop2){: data-lid="c2mpv" data-relation="required" }, every $A$-module is semisimple, so it can be expressed as a direct sum of simple $A$-modules, and by [Proposition 5](#prop5){: data-lid="pg0b4" data-relation="required" } and [Proposition 10](#prop10){: data-lid="zkbod" data-relation="required" }, each $V_i$ is simple. 
+By [Proposition 2](#prop2){: data-lid="c2mpv" }, every $A$-module is semisimple, so it can be expressed as a direct sum of simple $A$-modules, and by [Proposition 5](#prop5){: data-lid="pg0b4" } and [Proposition 10](#prop10){: data-lid="zkbod" }, each $V_i$ is simple. 
 
-Conversely, suppose an arbitrary simple $A$-module $M$ is given. For $0\neq x\in M$, since $M=Ax$, there exists a surjection $A\rightarrow M$, and considering the left module decomposition $A\cong\bigoplus_iV_i^{n_i}$ obtained from the second result of [Proposition 5](#prop5){: data-lid="npt9u" }, this surjection is nonzero on some direct summand of $A$, namely $V_i$. Then there exists a nonzero homomorphism $V_i\rightarrow M$ between simple modules, so by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="aib2j" data-relation="required" }, $M\cong V_i$.
+Conversely, suppose an arbitrary simple $A$-module $M$ is given. For $0\neq x\in M$, since $M=Ax$, there exists a surjection $A\rightarrow M$, and considering the left module decomposition $A\cong\bigoplus_iV_i^{n_i}$ obtained from the second result of [Proposition 5](#prop5){: data-lid="npt9u" }, this surjection is nonzero on some direct summand of $A$, namely $V_i$. Then there exists a nonzero homomorphism $V_i\rightarrow M$ between simple modules, so by [§Division Rings, ⁋Lemma 10](/en/math/ring_theory/division_rings#lem10){: data-lid="aib2j" }, $M\cong V_i$.
 :::
 
-Meanwhile, although [Definition 1](#def1){: data-lid="dw004" } was given in terms of left module structures, defining it via right modules yields the same rings. Since a right $A$-module is equivalent to a left $A^\op$-module, $A$ being right semisimple means that $A^\op$ is a semisimple ring. But if $A$ is a semisimple ring, applying [Lemma 9](#lem9){: data-lid="t2e0p" data-relation="required" } to the decomposition in [Theorem 11](#thm11){: data-lid="gy0gw" data-relation="required" } shows that $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ is also a product of matrix rings and thus a semisimple ring, and the converse holds similarly. Therefore, the notion of a semisimple ring is independent of the choice of handedness.
+Meanwhile, although [Definition 1](#def1){: data-lid="dw004" } was given in terms of left module structures, defining it via right modules yields the same rings. Since a right $A$-module is equivalent to a left $A^\op$-module, $A$ being right semisimple means that $A^\op$ is a semisimple ring. But if $A$ is a semisimple ring, applying [Lemma 9](#lem9){: data-lid="t2e0p" } to the decomposition in [Theorem 11](#thm11){: data-lid="gy0gw" } shows that $A^\op\cong\prod_i\Mat_{n_i}(D_i^\op)$ is also a product of matrix rings and thus a semisimple ring, and the converse holds similarly. Therefore, the notion of a semisimple ring is independent of the choice of handedness.
 
 ---
 

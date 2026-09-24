@@ -19,7 +19,7 @@ weight: 6
 
 ## 스택의 저우 군
 
-[\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-lid="846c5" data-relation="required" }에서 우리는 variety의 algebraic cycle들을 rational equivalence로 나누어 Chow group을 정의하였다. Deligne–Mumford stack에서도 같은 방식으로 cycle과 rational equivalence를 정의할 수 있다. $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들의 formal $\mathbb{Q}$-linear combination으로 이루어진 vector space를
+[\[대수다양체\] §저우 군, ⁋정의 5](/ko/math/algebraic_varieties/chow_groups#def5){: data-lid="846c5" }에서 우리는 variety의 algebraic cycle들을 rational equivalence로 나누어 Chow group을 정의하였다. Deligne–Mumford stack에서도 같은 방식으로 cycle과 rational equivalence를 정의할 수 있다. $k$차원 integral closed substack $\mathcal{V}\subseteq\mathcal{X}$들의 formal $\mathbb{Q}$-linear combination으로 이루어진 vector space를
 
 $$Z_k(\mathcal{X})_\mathbb{Q}$$
 
@@ -27,7 +27,7 @@ $$Z_k(\mathcal{X})_\mathbb{Q}$$
 
 $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mathbb{Q}$$
 
-로 정의한다. 이제 stack 위의 적분과 그 과정에서 나오는 $1/\lvert G\rvert$는 [\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-lid="au4l1" data-relation="required" }의 proper pushforward를 stack으로 확장한 다음의 정의로부터 자연스럽게 도출된다.
+로 정의한다. 이제 stack 위의 적분과 그 과정에서 나오는 $1/\lvert G\rvert$는 [\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-lid="au4l1" }의 proper pushforward를 stack으로 확장한 다음의 정의로부터 자연스럽게 도출된다.
 
 ::: 정의 1
 두 Deligne-Mumford stack $\mathcal{X}, \mathcal{Y}$와 이 사이의 proper morphism $f: \mathcal{X}\rightarrow \mathcal{Y}$가 주어졌다 하자. $\mathcal{X}$의 $k$차원 integral closed substack $\mathcal{V}$와, $f$에 의한 $\mathcal{V}$의 image의 closure $\mathcal{W}=\cl f(\mathcal{V})$에 대하여 다음과 같이 정의한다. 
@@ -42,7 +42,7 @@ $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mat
 이를 linear하게 확장한 것이 rational equivalence를 보존하므로 pushforward $f_\ast:A_k(\mathcal{X})_\mathbb{Q}\longrightarrow A_k(\mathcal{Y})_\mathbb{Q}$를 정의한다.
 :::
 
-[\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-lid="d66y4" data-relation="required" }에서는 같은 차원의 integral subvariety $V\rightarrow W$에 대한 pushforward가 단순히
+[\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-lid="d66y4" }에서는 같은 차원의 integral subvariety $V\rightarrow W$에 대한 pushforward가 단순히
 
 $$[V]\longmapsto [K(V):K(W)][W]$$
 
@@ -79,7 +79,7 @@ $$\deg[\mathcal{Z}]=\frac{1}{\lvert\Aut(x)\rvert}$$
 :::
 
 ::: 증명
-$\mathcal{Z}$는 $0$-dimensional integral proper stack이므로 그 coarse moduli space는 한 점 $\Spec\mathbb{C}$이고, $\mathcal{Z}\cong[\Spec\mathbb{C}/\Aut(x)]$이다. 따라서 구조사상 $p:\mathcal{Z}\rightarrow\Spec\mathbb{C}$에 [정의 1](#def1){: data-lid="7hydh" data-relation="required" }을 적용하면 coarse function field degree는 $1$, source의 generic stabilizer order는 $\lvert\Aut(x)\rvert$, target의 stabilizer order는 $1$이다. 그러므로
+$\mathcal{Z}$는 $0$-dimensional integral proper stack이므로 그 coarse moduli space는 한 점 $\Spec\mathbb{C}$이고, $\mathcal{Z}\cong[\Spec\mathbb{C}/\Aut(x)]$이다. 따라서 구조사상 $p:\mathcal{Z}\rightarrow\Spec\mathbb{C}$에 [정의 1](#def1){: data-lid="7hydh" }을 적용하면 coarse function field degree는 $1$, source의 generic stabilizer order는 $\lvert\Aut(x)\rvert$, target의 stabilizer order는 $1$이다. 그러므로
 
 $$p_\ast[\mathcal{Z}]=\frac{1}{\lvert\Aut(x)\rvert}[\Spec\mathbb{C}]$$
 
@@ -113,7 +113,7 @@ $$\int_{\mathcal{X}}\alpha=\frac{1}{\lvert G\rvert}\int_U p^\ast\alpha$$
 
 $$z=\alpha\cap[\mathcal{X}]=\sum_i m_i[\mathcal{Z}_i]$$
 
-라 하면, 각 $0$-dimensional integral closed substack $\mathcal{Z}_i$의 geometric point를 $x_i$라 하고 그 stabilizer를 $G_i=\Aut(x_i)$라 하면, [보조정리 3](#lem3){: data-lid="it1em" data-relation="required" }에 의하여 $\deg[\mathcal{Z}_i]=1/\lvert G_i\rvert$이 성립한다. 
+라 하면, 각 $0$-dimensional integral closed substack $\mathcal{Z}_i$의 geometric point를 $x_i$라 하고 그 stabilizer를 $G_i=\Aut(x_i)$라 하면, [보조정리 3](#lem3){: data-lid="it1em" }에 의하여 $\deg[\mathcal{Z}_i]=1/\lvert G_i\rvert$이 성립한다. 
 
 한편 $x_i$를 $U$의 한 점 $u_i$로 나타내면 $p$에 의한 $\mathcal{Z}_i$의 pullback은 $u_i$의 $G$-orbit에 대응한다. 이 때 orbit-stabilizer formula에 의하여 이 orbit은 $\lvert G\rvert/\lvert G_i\rvert$개의 서로 다른 점으로 이루어지며, 이 때 각 점들은 scheme $U$의 점이므로 각각 degree $1$을 가진다. 따라서
 
@@ -137,7 +137,7 @@ $\pi:\mathcal{X}\rightarrow X$를 coarse moduli morphism이라 하고, $\mathcal
 
 $$\pi_\ast[\mathcal{X}]=\frac{1}{e}[X]$$
 
-가 성립한다. 실제로 coarse moduli morphism $\pi$가 coarse space 사이에 유도하는 morphism은 $\mathrm{id}_X$이므로 function field degree는 $1$이다. 한편 source $\mathcal{X}$의 generic stabilizer order는 $e$이고 target $X$는 algebraic space (혹은 scheme)이므로 stabilizer가 trivial하다. 따라서 [정의 1](#def1){: data-lid="m2lwy" data-relation="required" }에 의해
+가 성립한다. 실제로 coarse moduli morphism $\pi$가 coarse space 사이에 유도하는 morphism은 $\mathrm{id}_X$이므로 function field degree는 $1$이다. 한편 source $\mathcal{X}$의 generic stabilizer order는 $e$이고 target $X$는 algebraic space (혹은 scheme)이므로 stabilizer가 trivial하다. 따라서 [정의 1](#def1){: data-lid="m2lwy" }에 의해
 
 $$\pi_\ast[\mathcal{X}]=1\cdot\frac{1}{e}[X]=\frac{1}{e}[X]$$
 
@@ -154,7 +154,7 @@ $$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\longrightarrow A^{k-r}(\mathcal{Y})_\mathbb
 
 $$(f_\ast\alpha)\cap[\mathcal{Y}]:=f_\ast(\alpha\cap[\mathcal{X}])$$
 
-로 정의한다. 그럼 다음의 projection formula가 성립한다. ([\[대수다양체\] §교차곱, ⁋명제 14](/ko/math/algebraic_varieties/intersection_product#prop14){: data-lid="ldjfi" data-relation="required" })
+로 정의한다. 그럼 다음의 projection formula가 성립한다. ([\[대수다양체\] §교차곱, ⁋명제 14](/ko/math/algebraic_varieties/intersection_product#prop14){: data-lid="ldjfi" })
 
 ::: 명제 7 (Projection formula)
 위와 같은 상황에서, 임의의 $\alpha\in A^\ast(\mathcal{X})_\mathbb{Q}$, $\beta\in A^\ast(\mathcal{Y})_\mathbb{Q}$에 대하여

@@ -100,7 +100,7 @@ For the fixed basis $e_1,\ldots,e_n$, since $\bigwedge^kV$ has, for $i_1<\cdots<
 
 $$v_1\wedge\cdots\wedge v_k=\sum_{i_1<\cdots<i_k}p_{i_1\cdots i_k}e_{i_1}\wedge\cdots\wedge e_{i_k}$$
 
-the coefficients $p_{i_1\cdots i_k}$ are called the *Plücker coordinates* of $W$. From the matrix representing $W$, which is of size $k\times n$, choosing the $i_1,\ldots,i_k$-th columns yields a $k\times k$ minor, and when the basis of $W$ is changed, as we saw in the proof of [Proposition 7](#prop7){: data-lid="xsm5g" data-relation="required" }, all of these are scaled by the same scalar, so they become homogeneous coordinates on $\mathbb{P}^{\binom{n}{k}-1}$. Henceforth, when indices are not given in increasing order, we understand $p$ as extended antisymmetrically in the indices, and if the same index is repeated, we set it to $0$.
+the coefficients $p_{i_1\cdots i_k}$ are called the *Plücker coordinates* of $W$. From the matrix representing $W$, which is of size $k\times n$, choosing the $i_1,\ldots,i_k$-th columns yields a $k\times k$ minor, and when the basis of $W$ is changed, as we saw in the proof of [Proposition 7](#prop7){: data-lid="xsm5g" }, all of these are scaled by the same scalar, so they become homogeneous coordinates on $\mathbb{P}^{\binom{n}{k}-1}$. Henceforth, when indices are not given in increasing order, we understand $p$ as extended antisymmetrically in the indices, and if the same index is repeated, we set it to $0$.
 
 Therefore, to claim that the image of $\iota$ is a closed subvariety, it suffices to define polynomials having these as their zero set, and this is obtained through the following *Plücker relations* from the properties of the wedge product:
 

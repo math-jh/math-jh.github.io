@@ -15,7 +15,7 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-23T03:15:06+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="f9iao" data-relation="required" } and [§Projective Varieties](/en/math/algebraic_varieties/projective_varieties){: data-lid="xx9id" data-relation="required" }, we examined geometric objects defined as subsets of affine space and projective space, respectively. However, the most natural objects in algebraic geometry belong to a larger category encompassing both. In this section, we define *quasi-projective varieties* and show that they include both affine and projective varieties. We also define morphisms between quasi-projective varieties and show that they agree with the existing notions.
+In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="f9iao" } and [§Projective Varieties](/en/math/algebraic_varieties/projective_varieties){: data-lid="xx9id" }, we examined geometric objects defined as subsets of affine space and projective space, respectively. However, the most natural objects in algebraic geometry belong to a larger category encompassing both. In this section, we define *quasi-projective varieties* and show that they include both affine and projective varieties. We also define morphisms between quasi-projective varieties and show that they agree with the existing notions.
 
 ## Definition of Quasi-projective Variety
 
@@ -35,7 +35,7 @@ Let an arbitrary affine variety $X\subseteq \mathbb{A}^n$ be given. We already k
 
 $$i:\mathbb{A}^n\rightarrow \mathbb{P}^n;\qquad (x_1,\ldots, x_n)\mapsto [1:x_1:\cdots:x_n]$$
 
-exists. ([§Projective Varieties, ⁋Proposition 9](/en/math/algebraic_varieties/projective_varieties#prop9){: data-lid="faji3" data-relation="required" }) Now consider the image $i(X)$ of $X$ in $\mathbb{P}^n$, and the closure $\overline{i(X)}$ of $i(X)$ in $\mathbb{P}^n$. Then $\overline{i(X)}$ is a projective variety, and within it, since $i(X)$ is expressed as
+exists. ([§Projective Varieties, ⁋Proposition 9](/en/math/algebraic_varieties/projective_varieties#prop9){: data-lid="faji3" }) Now consider the image $i(X)$ of $X$ in $\mathbb{P}^n$, and the closure $\overline{i(X)}$ of $i(X)$ in $\mathbb{P}^n$. Then $\overline{i(X)}$ is a projective variety, and within it, since $i(X)$ is expressed as
 
 $$i(X)=\overline{i(X)}\cap U_0$$
 
@@ -69,7 +69,7 @@ Henceforth, unless stated otherwise, by a variety we shall always mean a quasi-p
 For any variety $X$ and any $x\in X$, there exists an open covering of $X$ consisting of affine varieties.
 :::
 ::: Proof
-First, since $X$ is quasi-projective, there exists a projective variety $Y\subseteq \mathbb{P}^n$ such that $X$ is an open subset of $Y$. Now $X$ can be covered by the sets $X\cap U_i$ using standard affine charts, where each $X\cap U_i$ is an open subset of the affine variety $Y\cap U_i$. ([§Projective Varieties, ⁋Proposition 10](/en/math/algebraic_varieties/projective_varieties#prop10){: data-lid="kccmw" data-relation="required" }) Now, by [§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6){: data-lid="035xy" data-relation="required" }, any open subset of an affine variety can be covered by principal open sets, and these are affine by [§Affine Varieties, ⁋Proposition 7](/en/math/algebraic_varieties/affine_varieties#prop7){: data-lid="71pyk" data-relation="required" }, which completes the proof.
+First, since $X$ is quasi-projective, there exists a projective variety $Y\subseteq \mathbb{P}^n$ such that $X$ is an open subset of $Y$. Now $X$ can be covered by the sets $X\cap U_i$ using standard affine charts, where each $X\cap U_i$ is an open subset of the affine variety $Y\cap U_i$. ([§Projective Varieties, ⁋Proposition 10](/en/math/algebraic_varieties/projective_varieties#prop10){: data-lid="kccmw" }) Now, by [§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6){: data-lid="035xy" }, any open subset of an affine variety can be covered by principal open sets, and these are affine by [§Affine Varieties, ⁋Proposition 7](/en/math/algebraic_varieties/affine_varieties#prop7){: data-lid="71pyk" }, which completes the proof.
 :::
 
 Now by the above proposition, we can make the following definition.
@@ -79,7 +79,7 @@ For a quasi-projective variety $X$, a function $f: X \rightarrow \mathbb{K}$ is 
 
 $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
-is an element of the coordinate ring of the affine variety $U_i$, $\mathbb{K}[U_i]$. The sheaf of all regular functions on $X$ is denoted $\mathcal{O}_X$, or more simply $\mathcal{O}$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="wwznu" data-relation="weak" })
+is an element of the coordinate ring of the affine variety $U_i$, $\mathbb{K}[U_i]$. The sheaf of all regular functions on $X$ is denoted $\mathcal{O}_X$, or more simply $\mathcal{O}$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="wwznu" })
 :::
 
 Then the following are examples of regular functions.
@@ -87,7 +87,7 @@ Then the following are examples of regular functions.
 ::: Example 6
 Let us examine some examples of regular functions.
 
-1. On an affine variety $X$, we have $\mathcal{O}(X) = \mathbb{K}[X]$. In [Definition 5](#def5){: data-lid="7f7h7" data-relation="required" }, we can choose $X$ itself as an open affine cover, so $\mathbb{K}[X]\subseteq \mathcal{O}(X)$, and the reverse inclusion is the fact that a function written as a rational expression in a neighborhood of each point is again an element of the coordinate ring, that is, the equivalence of [§Affine Varieties, ⁋Definition 11](/en/math/algebraic_varieties/affine_varieties#def11){: data-lid="aypyx" data-relation="required" } and [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14){: data-lid="czvav" data-relation="required" }.
+1. On an affine variety $X$, we have $\mathcal{O}(X) = \mathbb{K}[X]$. In [Definition 5](#def5){: data-lid="7f7h7" }, we can choose $X$ itself as an open affine cover, so $\mathbb{K}[X]\subseteq \mathcal{O}(X)$, and the reverse inclusion is the fact that a function written as a rational expression in a neighborhood of each point is again an element of the coordinate ring, that is, the equivalence of [§Affine Varieties, ⁋Definition 11](/en/math/algebraic_varieties/affine_varieties#def11){: data-lid="aypyx" } and [§Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14){: data-lid="czvav" }.
 2. On $\mathbb{P}^n$, we have $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$. To verify this, consider the standard open cover $U_i = \{x_i \ne 0\}$. In particular, a regular function on $U_0$ is an element of $\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$, and a regular function on $U_1$ is an element of $\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$. Thus, if a function $f$ is regular on all of $\mathbb{P}^n$, then on $U_0$ this function is a polynomial in the $\mathrm{s}_i=\x_i/\x_0$, and on $U_1$ it is a polynomial in $\mathrm{t}_i=\x_i/\x_1$. However, on $U_0\cap U_1$, we know that these coordinate functions satisfy the equations
     
     $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}\quad (j=2,\ldots, n)$$
@@ -103,7 +103,7 @@ Let us examine some examples of regular functions.
     must hold. Now, for the expression on the right-hand side to be a polynomial, $q$ must be a constant function so that the $\mathrm{s}_1$ in the denominators disappear, and from this we know that $p$ and $q$ must be constant functions. Similarly, applying the same argument to all charts $U_i,U_j$ yields the desired result.
 :::
 
-Now we define morphisms between varieties, that is, regular maps. There are several ways to define this, but for now, given a variety we always assume a projective space containing it, and since morphisms between projective spaces have already been defined, we use this to define them as follows. ([§Projective Varieties, ⁋Definition 15](/en/math/algebraic_varieties/projective_varieties#def15){: data-lid="suj19" data-relation="weak" })
+Now we define morphisms between varieties, that is, regular maps. There are several ways to define this, but for now, given a variety we always assume a projective space containing it, and since morphisms between projective spaces have already been defined, we use this to define them as follows. ([§Projective Varieties, ⁋Definition 15](/en/math/algebraic_varieties/projective_varieties#def15){: data-lid="suj19" })
 
 ::: Definition 7
 A function $\varphi:X \rightarrow Y$ between two varieties $X \subseteq \mathbb{P}^n$ and $Y \subseteq \mathbb{P}^m$ is called a *morphism* (or *regular map*) if for every $x\in X$ there exist an open neighborhood $U \subseteq X$ of $x$ and homogeneous polynomials $F_0, \ldots, F_m$ of the same degree such that
@@ -125,7 +125,7 @@ The heart of the proof is that a morphism is locally expressed by homogeneous po
 Regular maps between affine varieties are exactly the regular maps when these are regarded as quasi-projective varieties.
 :::
 
-This is essentially a consequence of [§Affine Varieties, ⁋Definition 15](/en/math/algebraic_varieties/affine_varieties#def15){: data-lid="dgen6" data-relation="required" }.
+This is essentially a consequence of [§Affine Varieties, ⁋Definition 15](/en/math/algebraic_varieties/affine_varieties#def15){: data-lid="dgen6" }.
 
 ## Properties of Regular Maps
 
@@ -136,7 +136,7 @@ A regular map $\varphi: X \rightarrow Y$ is continuous.
 ::: Proof
 Let $C \subseteq Y$ be a closed set. Then there exist, in $\mathbb{K}[\x_0, \ldots, \x_m]$, homogeneous polynomials $G_1, \ldots, G_r$ such that $C = Y \cap Z(G_1, \ldots, G_r)$, and since the image of $\varphi$ is contained in $Y$, we have $\varphi^{-1}(C) = \varphi^{-1}(Z(G_1, \ldots, G_r))$.
 
-Now for any $x \in X$, choose an open neighborhood $U \subseteq X$ and homogeneous polynomials $F_0, \ldots, F_m$ of the same degree given by [Definition 7](#def7){: data-lid="f48kz" data-relation="required" }. Since on $U$ we have $\varphi = [F_0 : \cdots : F_m]$,
+Now for any $x \in X$, choose an open neighborhood $U \subseteq X$ and homogeneous polynomials $F_0, \ldots, F_m$ of the same degree given by [Definition 7](#def7){: data-lid="f48kz" }. Since on $U$ we have $\varphi = [F_0 : \cdots : F_m]$,
 
 $$\varphi^{-1}(C) \cap U = \{q \in U \mid G_1(F_0(q), \ldots, F_m(q)) = \cdots = G_r(F_0(q), \ldots, F_m(q)) = 0\}$$
 
@@ -164,7 +164,7 @@ The restriction of a regular map to a closed subset is a regular map. The restri
 :::
 
 ::: Proof
-Let $\varphi: X \rightarrow Y$ be a regular map and let $Z \subseteq Y$ be a closed subset. Consider $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$. Since $\varphi$ is continuous by [Proposition 10](#prop10){: data-lid="zxqcm" data-relation="required" }, $\psi$ is also continuous. Now if $f$ is a regular function on an open subset $V$ of $Z$, then $f$ extends to a regular function on an open subset of $Y$ in a neighborhood of each point of $V$. Specifically, choosing an affine open set $W$ of $Y$ containing a point of $V$, $W\cap Z$ is a closed subset of the affine variety $W$, so regular functions on it are restrictions of elements of $\mathbb{K}[W]$ ([Example 6](#ex6){: data-lid="n06eg" data-relation="required" }), and since $f$ is written in a neighborhood of that point as a quotient of such functions, it suffices to lift the numerator and denominator to $\mathbb{K}[W]$. Then $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$, and since whether a function is regular is determined locally, from the fact that $f \circ \varphi$ is regular on these neighborhoods we obtain that $f\circ\psi$ is also regular.
+Let $\varphi: X \rightarrow Y$ be a regular map and let $Z \subseteq Y$ be a closed subset. Consider $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$. Since $\varphi$ is continuous by [Proposition 10](#prop10){: data-lid="zxqcm" }, $\psi$ is also continuous. Now if $f$ is a regular function on an open subset $V$ of $Z$, then $f$ extends to a regular function on an open subset of $Y$ in a neighborhood of each point of $V$. Specifically, choosing an affine open set $W$ of $Y$ containing a point of $V$, $W\cap Z$ is a closed subset of the affine variety $W$, so regular functions on it are restrictions of elements of $\mathbb{K}[W]$ ([Example 6](#ex6){: data-lid="n06eg" }), and since $f$ is written in a neighborhood of that point as a quotient of such functions, it suffices to lift the numerator and denominator to $\mathbb{K}[W]$. Then $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$, and since whether a function is regular is determined locally, from the fact that $f \circ \varphi$ is regular on these neighborhoods we obtain that $f\circ\psi$ is also regular.
 
 The case of an open subset is simpler. If $U \subseteq Y$ is an open subset, then whenever $f$ is regular on $V \subseteq U$, $f \circ \varphi$ is regular on $\varphi^{-1}(V)$.
 :::

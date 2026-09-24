@@ -19,7 +19,7 @@ Earlier, when introducing cohomology, we stated that one of the greatest advanta
 
 ## The Cross Product in Cohomology
 
-Fix a commutative ring $A$, and suppose that chain complexes of $A$-modules $C_\bullet,D_\bullet$ are given. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" data-relation="required" }) For their dual sequences
+Fix a commutative ring $A$, and suppose that chain complexes of $A$-modules $C_\bullet,D_\bullet$ are given. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" }) For their dual sequences
 
 $$(C^\vee)^\bullet=\Hom_A(C_\bullet,A),\qquad (D^\vee)^\bullet=\Hom_A(D_\bullet,A)$$
 
@@ -43,7 +43,7 @@ Now suppose that for two topological spaces $X,Y$, the $A$-valued chains
 
 $$C_\bullet(X;A),\qquad C_\bullet(Y;A)$$
 
-are given. Setting $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$ and taking the above cochain map, we compose it with the map induced by the Alexander-Whitney map $\AW$ from [§Cohomology](/en/math/algebraic_topology/cohomology){: data-lid="aqy4b" data-relation="required" } to obtain the following cochain map
+are given. Setting $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$ and taking the above cochain map, we compose it with the map induced by the Alexander-Whitney map $\AW$ from [§Cohomology](/en/math/algebraic_topology/cohomology){: data-lid="aqy4b" } to obtain the following cochain map
 
 $$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\longrightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\longrightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
 
@@ -93,7 +93,7 @@ That is, for homogeneous classes $\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\in
 - (Associativity) $(\alpha\smile\beta)\smile\gamma=\alpha\smile(\beta\smile\gamma)$
 - (Grade-commutativity) $\alpha\smile\beta=(-1)^{pq}\beta\smile\alpha$
 
-To show this, one naturally applies [§Acyclic Models Theorem, ⁋Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3){: data-lid="vears" data-relation="required" } to the functors from $\Top^2$ (or $\Top^3$) to $\Ch_{\geq 0}(\lMod{A})$.
+To show this, one naturally applies [§Acyclic Models Theorem, ⁋Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3){: data-lid="vears" } to the functors from $\Top^2$ (or $\Top^3$) to $\Ch_{\geq 0}(\lMod{A})$.
 
 ## Functorial Properties of the Cup Product
 
@@ -119,7 +119,7 @@ where the left vertical arrow ${\smile}\otimes{\smile}$ denotes the multiplicati
 
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast (\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}(\alpha_1\smile\alpha_2)\times(\beta_1\smile\beta_2)$$
 
-holds. For the second equality, consider the homeomorphism $T:X\times X\times Y\times Y\rightarrow X\times Y\times X\times Y$ that swaps the two middle factors; since $\Delta_{X\times Y}=T\circ(\Delta_X\times\Delta_Y)$, the middle term equals $(\Delta_X\times\Delta_Y)^\ast T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)$. Then, for the homeomorphism $\tau:X\times Y\rightarrow Y\times X$ that swaps the two factors, applying the formula $\tau^\ast(\beta\times\alpha)=(-1)^{\lvert\alpha\rvert\lvert\beta\rvert}\alpha\times\beta$ given by the same acyclic models argument as [Proposition 2](#prop2){: data-lid="6ict5" data-relation="required" } to $T=\id_X\times\tau\times\id_Y$, we obtain
+holds. For the second equality, consider the homeomorphism $T:X\times X\times Y\times Y\rightarrow X\times Y\times X\times Y$ that swaps the two middle factors; since $\Delta_{X\times Y}=T\circ(\Delta_X\times\Delta_Y)$, the middle term equals $(\Delta_X\times\Delta_Y)^\ast T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)$. Then, for the homeomorphism $\tau:X\times Y\rightarrow Y\times X$ that swaps the two factors, applying the formula $\tau^\ast(\beta\times\alpha)=(-1)^{\lvert\alpha\rvert\lvert\beta\rvert}\alpha\times\beta$ given by the same acyclic models argument as [Proposition 2](#prop2){: data-lid="6ict5" } to $T=\id_X\times\tau\times\id_Y$, we obtain
 
 $$T^\ast(\alpha_1\times\beta_1\times\alpha_2\times\beta_2)=(-1)^{\lvert\beta_1\rvert\lvert\alpha_2\rvert}\alpha_1\times\alpha_2\times\beta_1\times\beta_2$$
 
@@ -146,7 +146,7 @@ commutes, so in addition to this, it suffices to apply the cohomology functor to
 
 ## Cap product
 
-Now in the remaining part, we prepare to treat the duality between homology and cohomology. Of course, we were able to observe this duality in a form such as [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="an0yw" data-relation="weak" }, but what we shall examine this time has a somewhat more subtle flavor.
+Now in the remaining part, we prepare to treat the duality between homology and cohomology. Of course, we were able to observe this duality in a form such as [§Cohomology, ⁋Proposition 3](/en/math/algebraic_topology/cohomology#prop3){: data-lid="an0yw" }, but what we shall examine this time has a somewhat more subtle flavor.
 
 What we will do from now on is to define an action of the graded ring $H^\bullet(X;A)$ on the homology module $H_\bullet(X;A)$. Writing this as
 
@@ -176,13 +176,13 @@ $${\frown}:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 is called the *cap product*.
 :::
 
-That is, $\frown$ is obtained by taking a homology chain of degree $p+q$ and a cohomology chain of degree $p$, evaluating the degree $p$ part of the homology chain and the cohomology chain via the Kronecker pairing, and then scalar-multiplying the remaining degree $q$ homology chain by this constant. This may appear to be a somewhat artificial definition, but by the uniqueness in [§Acyclic Models Theorem, ⁋Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3){: data-lid="5gix8" data-relation="weak" }, it can be said to be the only definition that makes sense. Moreover, from this expression we see that this is precisely the operation corresponding to the interior product.
+That is, $\frown$ is obtained by taking a homology chain of degree $p+q$ and a cohomology chain of degree $p$, evaluating the degree $p$ part of the homology chain and the cohomology chain via the Kronecker pairing, and then scalar-multiplying the remaining degree $q$ homology chain by this constant. This may appear to be a somewhat artificial definition, but by the uniqueness in [§Acyclic Models Theorem, ⁋Theorem 3](/en/math/algebraic_topology/acyclic_models_theorem#thm3){: data-lid="5gix8" }, it can be said to be the only definition that makes sense. Moreover, from this expression we see that this is precisely the operation corresponding to the interior product.
 
 On the other hand, since the Alexander-Whitney map sends chains of a subspace $X_0\subseteq X$ back to tensors of chains of $X_0$, the above construction works equally well for pairs. Indeed, if $\beta$ vanishes on $C_p(X_0)$, then for a chain $\sigma$ of $X_0$, the $\beta(\tau_i)$ are all $0$, so that $\beta\frown\sigma=0$; hence $\frown$ descends to relative chains. The *relative cap product* obtained in this way
 
 $${\frown}:H^p(X,X_0;A)\otimes H_{p+q}(X,X_0;A) \rightarrow H_q(X;A)$$
 
-will also be denoted by the same symbol in what follows, and the case $X_0=\emptyset$ is [Definition 5](#def5){: data-lid="pofnt" data-relation="weak" }. Then the following holds.
+will also be denoted by the same symbol in what follows, and the case $X_0=\emptyset$ is [Definition 5](#def5){: data-lid="pofnt" }. Then the following holds.
 
 ::: Proposition 6 (Projection formula)
 For a continuous map of pairs $f:(X,X_0) \rightarrow (Y,Y_0)$, $\beta\in H^q(Y,Y_0;A)$, and $\sigma\in H_{p+q}(X,X_0;A)$, the identity
@@ -192,7 +192,7 @@ $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 holds.
 :::
 ::: Proof
-Applying the Alexander-Whitney map to a relative cycle representing $\sigma$, let us write $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$. Then since $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$, from the explicit formula used to derive [Definition 5](#def5){: data-lid="pho4o" data-relation="required" }, we obtain
+Applying the Alexander-Whitney map to a relative cycle representing $\sigma$, let us write $\AW(\sigma)=\sum_i\sigma_i\otimes\tau_i$. Then since $(f^\ast\beta)(\tau_i)=\beta(C_\bullet(f)(\tau_i))$, from the explicit formula used to derive [Definition 5](#def5){: data-lid="pho4o" }, we obtain
 
 $$C_\bullet(f)(f^\ast\beta\frown\sigma)=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(C_\bullet(f)(\tau_i))C_\bullet(f)(\sigma_i)$$
 

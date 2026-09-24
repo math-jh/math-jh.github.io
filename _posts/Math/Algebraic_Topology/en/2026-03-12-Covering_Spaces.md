@@ -36,7 +36,7 @@ is the continuous function required by the third condition. Conversely, assuming
 :::
 
 ::: Definition 2
-If the equivalent conditions of [Lemma 1](#lem1){: data-lid="173qe" data-relation="required" } hold, we call a path-connected $X$ a *simply connected space*.
+If the equivalent conditions of [Lemma 1](#lem1){: data-lid="173qe" } hold, we call a path-connected $X$ a *simply connected space*.
 :::
 
 ## Covering Spaces
@@ -55,7 +55,7 @@ This depicts the covering map
 
 $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 
-and we know that it satisfies the condition of [Definition 3](#def3){: data-lid="k6hcl" data-relation="required" }. Meanwhile, in general, one can easily prove that covering maps behave well with respect to subspaces and products, as follows.
+and we know that it satisfies the condition of [Definition 3](#def3){: data-lid="k6hcl" }. Meanwhile, in general, one can easily prove that covering maps behave well with respect to subspaces and products, as follows.
 
 ::: Proposition 4
 The following hold.
@@ -111,21 +111,21 @@ As for uniqueness, since $[s_i,s_{i+1}]$ is connected and inductively the compon
 
 The proof may appear somewhat technical, but the key idea is that any path starting at $x_0\in B$ will, at least for a short time, be contained in an open neighborhood evenly covered by $p$ of $x_0$, namely $U$, and by definition $p^{-1}(U)$ is a union of disjoint open subsets homeomorphic to $U$ in $E$; thus, knowing only which of these the starting point belongs to determines (by connectedness) which component the path stays in during this short time. The Lebesgue number lemma was used only to show that this process is finite. 
 
-Let us look again at the groupoid homomorphism ($\ast$). By [Lemma 6](#lem6){: data-lid="dmqxr" data-relation="required" }, in a covering space $p:E \rightarrow B$, given any $x_0,x_1\in B$ and a path $\alpha$ having these as endpoints, a choice of $y_0\in p^{-1}(x_0)$ determines $y_1\in p^{-1}(x_1)$ and $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$. Then the natural question would be whether, for a path that is path-homotopic to $\alpha$, $\alpha'$, the same choice of $y_0$ gives the same $y_1$ and homotopy type. If $p$ is a covering map, the answer to this is also affirmative. 
+Let us look again at the groupoid homomorphism ($\ast$). By [Lemma 6](#lem6){: data-lid="dmqxr" }, in a covering space $p:E \rightarrow B$, given any $x_0,x_1\in B$ and a path $\alpha$ having these as endpoints, a choice of $y_0\in p^{-1}(x_0)$ determines $y_1\in p^{-1}(x_1)$ and $\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$. Then the natural question would be whether, for a path that is path-homotopic to $\alpha$, $\alpha'$, the same choice of $y_0$ gives the same $y_1$ and homotopy type. If $p$ is a covering map, the answer to this is also affirmative. 
 
 ::: Lemma 7
 Consider a covering map $p:E \rightarrow B$ and an arbitrary point of $E$, $y_0$, and let $p(y_0)=x_0$. Then whenever a continuous function satisfying $F(0,0)=x_0$, $F:I\times I \rightarrow B$, is given, there exists a unique lifting satisfying $\widetilde{F}(0,0)=y_0$, $\widetilde{F}:I\times I \rightarrow E$. Furthermore, if $F$ is a path homotopy, then $\widetilde{F}$ is also a path homotopy.  
 :::
 
-The proof of this is essentially no different from [Lemma 6](#lem6){: data-lid="n5mor" data-relation="required" }, so we omit it. What is important is that, by the path homotopy given by this lemma, given a covering space $p:E \rightarrow B$ and a path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, a choice of $y_0\in p^{-1}(x_0)$ uniquely determines a path class of $E$, $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$. 
+The proof of this is essentially no different from [Lemma 6](#lem6){: data-lid="n5mor" }, so we omit it. What is important is that, by the path homotopy given by this lemma, given a covering space $p:E \rightarrow B$ and a path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, a choice of $y_0\in p^{-1}(x_0)$ uniquely determines a path class of $E$, $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$. 
 
-Now consider the fundamental groupoid $\Pi_1(B)$ again and fix a covering map $p:E \rightarrow B$. Then, by the evenly covered condition, for each $x\in B$, $p^{-1}(x)$ is a discrete set. At this time, for any path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, if we choose $y_0\in p^{-1}(x_0)$, [Lemma 7](#lem7){: data-lid="sifjg" data-relation="required" } defines a unique path class $[\widetilde{\alpha}]$, and thus defines $y_1\in p^{-1}(x_1)$. That is, $[\alpha]$ defines a function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$.
+Now consider the fundamental groupoid $\Pi_1(B)$ again and fix a covering map $p:E \rightarrow B$. Then, by the evenly covered condition, for each $x\in B$, $p^{-1}(x)$ is a discrete set. At this time, for any path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$, if we choose $y_0\in p^{-1}(x_0)$, [Lemma 7](#lem7){: data-lid="sifjg" } defines a unique path class $[\widetilde{\alpha}]$, and thus defines $y_1\in p^{-1}(x_1)$. That is, $[\alpha]$ defines a function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$.
 
 ::: Definition 8
 In the situation above, we call the function $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ the *transport map* and denote it by $T_{[\alpha]}$. 
 :::
 
-The transport map is bijective. First, this is because, given any $y_1\in p^{-1}(x_1)$, we can use the path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$ to find a path starting at $y_1$ and ending in $p^{-1}(x_0)$ at some element $y_0$, and this process is unique by [Lemma 7](#lem7){: data-lid="il848" data-relation="required" }. Similarly, by the uniqueness of liftings, we know that this correspondence preserves path concatenation well. That is, the assignment sending $x\in \Pi_1(B)$ to $p^{-1}(x)$ and $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$ to $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ is functorial. 
+The transport map is bijective. First, this is because, given any $y_1\in p^{-1}(x_1)$, we can use the path class $[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$ to find a path starting at $y_1$ and ending in $p^{-1}(x_0)$ at some element $y_0$, and this process is unique by [Lemma 7](#lem7){: data-lid="il848" }. Similarly, by the uniqueness of liftings, we know that this correspondence preserves path concatenation well. That is, the assignment sending $x\in \Pi_1(B)$ to $p^{-1}(x)$ and $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$ to $T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$ is functorial. 
 
 ::: Definition 9
 We call the functor $\Pi_1(B) \rightarrow \Set$ defined above the *monodromy functor* defined by $p$, and denote it by $M_p$. 
@@ -180,7 +180,7 @@ Since this alone still does not make clear what a functor $\mathcal{G}\rightarro
 
 That is, as can be guessed from the notation, this information is precisely an action of the group $\mathcal{G}$, and $\Fun(\mathcal{G},\Set)$ is precisely the collection of $\mathcal{G}$-sets, and morphisms between them are $\mathcal{G}$-equivariant maps. For a general groupoid $\mathcal{G}$, it is simply that several groups act separately on several sets, but two isomorphic objects of $\mathcal{G}$, $G,H$, must act in the same way on their respective (isomorphic) sets $S_G$ and $S_H$.
 
-However, since the space $B$ is path-connected, the fundamental groupoid $\Pi_1(B)$ is a connected groupoid; therefore, $\Pi_1(B)$ is, for any $x\in B$, equivalent as a category to the group $\pi_1(B,x)$. That is, a groupoid action of $\Pi_1(B)$ is nothing more than replicating the group action of the group $\pi_1(B,x)$ along isomorphisms in the groupoid $\Pi_1(B)$. Therefore, the information contained in [Theorem 11](#thm11){: data-lid="1wvxb" data-relation="required" } above is essentially contained in the skeleton. Thus, let us consider
+However, since the space $B$ is path-connected, the fundamental groupoid $\Pi_1(B)$ is a connected groupoid; therefore, $\Pi_1(B)$ is, for any $x\in B$, equivalent as a category to the group $\pi_1(B,x)$. That is, a groupoid action of $\Pi_1(B)$ is nothing more than replicating the group action of the group $\pi_1(B,x)$ along isomorphisms in the groupoid $\Pi_1(B)$. Therefore, the information contained in [Theorem 11](#thm11){: data-lid="1wvxb" } above is essentially contained in the skeleton. Thus, let us consider
   
 $$\sk(M):\sk(\Cov(B))\rightarrow \sk(\Fun(\Pi_1(B), \ Set))$$
 
@@ -190,7 +190,7 @@ $$\sk(\Fun(\Pi_1(B),\Set))\simeq\Fun(\sk(\Pi_1(B)), \Set)$$
 
 using again here that $B$ is path-connected, we know that there exists a categorical equivalence that takes an isomorphism class of covering spaces and yields a $\pi_1(B,x)$-set.
 
-However, considering [\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="fvy1a" data-relation="required" } and its proof, given any $G$-set $E$, we can decompose $E$ into orbits of $G$, and then the $G$-action restricted to each of these orbits is transitive, and for a suitable subgroup of $G$, $H$, endowed with the canonical $G$-action, $G/H$ is isomorphic to each of these. Therefore, if we decide to consider only transitive group actions, by the definition of the monodromy functor this amounts to considering only *connected* covers on the target side. That is, there exists the following equivalence
+However, considering [\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="fvy1a" } and its proof, given any $G$-set $E$, we can decompose $E$ into orbits of $G$, and then the $G$-action restricted to each of these orbits is transitive, and for a suitable subgroup of $G$, $H$, endowed with the canonical $G$-action, $G/H$ is isomorphic to each of these. Therefore, if we decide to consider only transitive group actions, by the definition of the monodromy functor this amounts to considering only *connected* covers on the target side. That is, there exists the following equivalence
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
@@ -198,7 +198,7 @@ and considering again the skeleton category classifying transitive $\pi_1(B,x)$-
 
 $$\left\{\text{isomorphism classes of connected covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-Now, if we order each of these by the relation that there exists a morphism from one to the other, they are merely partially ordered sets ([\[Category Theory\] §Category, ⁋Example 3](/en/math/category_theory/categories#ex3){: data-lid="9pgag" data-relation="weak" }), and we know that this equivalence is an isomorphism between posets. That is, we obtain the following result.
+Now, if we order each of these by the relation that there exists a morphism from one to the other, they are merely partially ordered sets ([\[Category Theory\] §Category, ⁋Example 3](/en/math/category_theory/categories#ex3){: data-lid="9pgag" }), and we know that this equivalence is an isomorphism between posets. That is, we obtain the following result.
 
 ::: Corollary 12 (Fundamental theorem of covering spaces, classical version)
 For a path-connected, locally path-connected, semi-locally simply connected space $B$, there exists a Galois correspondence between the set of isomorphism classes of connected covering spaces and the conjugacy classes of subgroups of $\pi_1(B)$. 
@@ -220,11 +220,11 @@ Meanwhile, in the poset of subgroups (or their conjugacy classes) of $\pi_1(B,x)
 
 For nice spaces that we know, we can compute the fundamental group or homology from the definition, but in most cases computing this from the definition is excessively complicated or nearly impossible. Our idea is to express a large space in terms of smaller spaces to compute its fundamental group. 
 
-The simplest among these methods would be the case where a space $X$ is expressed as the union $X=U\cup V$ of two open sets. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="txq8n" data-relation="required" }, we know that the following diagram 
+The simplest among these methods would be the case where a space $X$ is expressed as the union $X=U\cup V$ of two open sets. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="txq8n" }, we know that the following diagram 
 
 {% diagram Math/Algebraic_Topology/Covering_Spaces-3.svg width="7.54em" alt="union_as_colimit" %}
 
-is a colimit diagram. In this case, our goal will be to apply the fundamental groupoid functor $\Pi_1$ to this diagram to express $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$. Meanwhile, by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="chsfk" data-relation="required" }, we know that for any open covering $(U_i)$, the following diagram 
+is a colimit diagram. In this case, our goal will be to apply the fundamental groupoid functor $\Pi_1$ to this diagram to express $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$. Meanwhile, by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1){: data-lid="chsfk" }, we know that for any open covering $(U_i)$, the following diagram 
   
 {% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="17.30em" alt="general_union_colimit" %}
 
@@ -237,7 +237,7 @@ For a topological space $X$, let an open cover $\mathcal{O}=(U_i)$ be given, and
 That is, it suffices to show that for any groupoid $\mathcal{G}\in\Grpd$ and any cocone $\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathcal{G}$, so that for each $U\in \mathcal{O}$, $\widetilde{\lambda}$ and $\lambda_U$ are equal, there exists a unique $\widetilde{\lambda}:\Pi_1(X)\rightarrow \mathcal{G}$. Naturally, for each $x\in X$, after finding that $x\in U$ for some $U$, since on $U$, $\lambda_U$ is defined, we can define $\widetilde{\lambda}(x)$ to be this value $\lambda_U(x)$. Meanwhile, we can make a similar definition for morphisms: for a path completely contained in some $U\in \mathcal{O}$, say $f$, this definition is well-defined for the same reason as above, and the only thing that remains to be shown is how it should be defined when the path does not belong to a single $U\in \mathcal{O}$. But in that case we can simply use concatenation of paths. We only need to show that this is always defined and well-defined. 
 :::
 
-Now, just as when we derived [Corollary 12](#cor12){: data-lid="owd7a" data-relation="weak" } above, we apply this theorem to a single object, thus replace $\Grpd$ by $\Grp$, and use the fact that pushouts in $\Grp$ are amalgamated free products to obtain the following result. 
+Now, just as when we derived [Corollary 12](#cor12){: data-lid="owd7a" } above, we apply this theorem to a single object, thus replace $\Grpd$ by $\Grp$, and use the fact that pushouts in $\Grp$ are amalgamated free products to obtain the following result. 
 
 ::: Corollary 14 (Seifert–van Kampen theorem, classical version)
 Suppose a topological space $X$ is expressed as the union of two path-connected open subsets $U,V$, and assume that $U\cap V$ is nonempty and path-connected. Then the following diagram

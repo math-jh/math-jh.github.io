@@ -16,13 +16,13 @@ translation_source: kimi-cli
 last_polished_at: 2026-09-24T07:15:05+00:00
 translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In the previous post we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises from the zeros/poles of some rational function. For instance, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11){: data-lid="2pye9" data-relation="weak" }), a general divisor $dH$ on $\mathbb{P}^n$ arises as the zero set of some homogeneous polynomial only when $d \ge 0$.
+In the previous post we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises from the zeros/poles of some rational function. For instance, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11){: data-lid="2pye9" }), a general divisor $dH$ on $\mathbb{P}^n$ arises as the zero set of some homogeneous polynomial only when $d \ge 0$.
 
 To overcome this restriction we introduce *line bundles*. A line bundle $\mathcal{L}$ is a geometric object that assigns a one-dimensional vector space to each point $p \in X$, and a section $s$ of $\mathcal{L}$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $D$ we can construct a line bundle $\mathcal{O}_X(D)$ whose sections correspond to divisors greater than or equal to $D$. In other words, line bundles allow us to treat divisors independently of the constraint that they be zeros or poles of a function.
 
 ## Definition of Line Bundle
 
-Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1){: data-lid="qrl56" data-relation="weak" } or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2){: data-lid="u3jt3" data-relation="weak" }, etc.)
+Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1){: data-lid="qrl56" } or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2){: data-lid="u3jt3" }, etc.)
 
 ::: Definition 1
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
@@ -61,13 +61,13 @@ Transition functions $\{g_{ij}\}$ satisfy the following *cocycle condition*.
 The *trivial line bundle* $X \times \mathbb{A}^1$ is the line bundle all of whose transition functions are $g_{ij} = 1$. This is the simplest line bundle, with no twist. 
 :::
 
-Thus the second condition in [Definition 1](#def1){: data-lid="pmurg" data-relation="required" } means that the line bundle $\mathcal{L}$ is isomorphic to the trivial line bundle when restricted to a suitable open set $U \subseteq X$.
+Thus the second condition in [Definition 1](#def1){: data-lid="pmurg" } means that the line bundle $\mathcal{L}$ is isomorphic to the trivial line bundle when restricted to a suitable open set $U \subseteq X$.
 
-[Proposition 2](#prop2){: data-lid="iwmvs" data-relation="weak" } is the familiar gluing condition, and by this condition a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="gyqrv" data-relation="weak" }) Concretely, given a line bundle $\mathcal{L}$, we define the sheaf of sections of this line bundle by
+[Proposition 2](#prop2){: data-lid="iwmvs" } is the familiar gluing condition, and by this condition a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="gyqrv" }) Concretely, given a line bundle $\mathcal{L}$, we define the sheaf of sections of this line bundle by
 
 $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
-That is, $\mathcal{O}_X(\mathcal{L})$ is the sheaf of sections of the surjection $\pi$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-lid="psa0m" data-relation="weak" })
+That is, $\mathcal{O}_X(\mathcal{L})$ is the sheaf of sections of the surjection $\pi$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9){: data-lid="psa0m" })
 
 Then by the local trivialization $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$ we have $\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$. This allows us to think of these sections locally on $U_i$ as ordinary $\mathbb{K}$-valued functions. 
 
@@ -104,7 +104,7 @@ For any line bundle $\mathcal{L}$, the dual bundle of $\mathcal{L}$, $\mathcal{L
 
 $$\mathcal{L}_x^\vee=\Hom_\mathbb{K}(\mathcal{L}_x, \mathbb{K})$$
 
-If we think of line bundles as (invertible) sheaves following [Proposition 5](#prop5){: data-lid="xaycw" data-relation="weak" }, then $\mathcal{L}^\vee$ is the line bundle corresponding to the sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$.
+If we think of line bundles as (invertible) sheaves following [Proposition 5](#prop5){: data-lid="xaycw" }, then $\mathcal{L}^\vee$ is the line bundle corresponding to the sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$.
 
 ::: Proposition 7
 For a line bundle $\mathcal{L}$, its *dual bundle* $\mathcal{L}^\vee$ is also a line bundle, and its transition functions are $\{g_{ij}^{-1}\}$.
@@ -128,26 +128,26 @@ As always, we can understand the structure of a line bundle by examining it over
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-is a map between affine varieties, and hence by [§Affine Varieties, ⁋Proposition 16](/en/math/algebraic_varieties/affine_varieties#prop16){: data-lid="pav90" data-relation="required" } induces a ring homomorphism between coordinate rings. This ring homomorphism makes the coordinate ring of $\pi^{-1}(U_i)$ into an algebra over the coordinate ring of $U_i$, $A$, and the module formed by the sections of $\pi$, the $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$, is identified via the trivialization $\phi_i$ with $A$, so it is a free module of rank $1$. Since on any open subset of $U_i$, $\mathcal{L}$ is trivial as well, we can verify that affine-locally, a line bundle becomes an invertible module over the coordinate ring. ([\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 1](/en/math/commutative_algebra/fractional_ideals#def1){: data-lid="o9gf5" data-relation="required" }) Then the operations $\otimes$ and $\vee$ defined on line bundles come from the operations of [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 3](/en/math/commutative_algebra/fractional_ideals#thm3){: data-lid="3dh2h" data-relation="weak" }, and therefore, following [\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 5](/en/math/commutative_algebra/fractional_ideals#def5){: data-lid="c8t5o" data-relation="weak" }, it is not unnatural to give the following name.
+is a map between affine varieties, and hence by [§Affine Varieties, ⁋Proposition 16](/en/math/algebraic_varieties/affine_varieties#prop16){: data-lid="pav90" } induces a ring homomorphism between coordinate rings. This ring homomorphism makes the coordinate ring of $\pi^{-1}(U_i)$ into an algebra over the coordinate ring of $U_i$, $A$, and the module formed by the sections of $\pi$, the $A$-module $\mathcal{O}_X(\mathcal{L})(U_i)$, is identified via the trivialization $\phi_i$ with $A$, so it is a free module of rank $1$. Since on any open subset of $U_i$, $\mathcal{L}$ is trivial as well, we can verify that affine-locally, a line bundle becomes an invertible module over the coordinate ring. ([\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 1](/en/math/commutative_algebra/fractional_ideals#def1){: data-lid="o9gf5" }) Then the operations $\otimes$ and $\vee$ defined on line bundles come from the operations of [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 3](/en/math/commutative_algebra/fractional_ideals#thm3){: data-lid="3dh2h" }, and therefore, following [\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 5](/en/math/commutative_algebra/fractional_ideals#def5){: data-lid="c8t5o" }, it is not unnatural to give the following name.
 
 ::: Definition 9
 For a variety $X$, the *Picard group* $\Pic(X)$ is the group obtained by taking the set of isomorphism classes of line bundles on $X$ with tensor product as the operation. The identity element is the trivial bundle $\mathcal{O}_X$, and the inverse of $\mathcal{L}$ is $\mathcal{L}^\vee$.
 :::
 
-Here, that the trivial bundle actually serves as the identity element is verified directly by [Example 3](#ex3){: data-lid="7fv56" data-relation="required" } and [Proposition 6](#prop6){: data-lid="qaum8" data-relation="required" }. Moreover, by the properties of tensor product, the following holds.
+Here, that the trivial bundle actually serves as the identity element is verified directly by [Example 3](#ex3){: data-lid="7fv56" } and [Proposition 6](#prop6){: data-lid="qaum8" }. Moreover, by the properties of tensor product, the following holds.
 
 ::: Proposition 10
 $\Pic(X)$ is an abelian group.
 :::
 
 ::: Proof
-By [Proposition 6](#prop6){: data-lid="y0mld" data-relation="required" }, the tensor product is a binary operation on line bundles, and by [Proposition 8](#prop8){: data-lid="nq5mg" data-relation="required" }, $\mathcal{O}_X$ is the identity element and $\mathcal{L}^\vee$ is the inverse of $\mathcal{L}$. The commutativity $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$ and associativity $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$ of the tensor product follow directly at the level of transition functions from $g_{ij}h_{ij} = h_{ij}g_{ij}$ and $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$.
+By [Proposition 6](#prop6){: data-lid="y0mld" }, the tensor product is a binary operation on line bundles, and by [Proposition 8](#prop8){: data-lid="nq5mg" }, $\mathcal{O}_X$ is the identity element and $\mathcal{L}^\vee$ is the inverse of $\mathcal{L}$. The commutativity $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$ and associativity $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$ of the tensor product follow directly at the level of transition functions from $g_{ij}h_{ij} = h_{ij}g_{ij}$ and $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$.
 :::
 
 As in the previous post, our toy examples are $\mathbb{A}^n$ and $\mathbb{P}^n$.
 
 ::: Example 11
-The coordinate ring of $\mathbb{A}^n$, $R = \mathbb{K}[\x_1, \ldots, \x_n]$, is a Noetherian UFD, and by the above discussion, line bundles on $\mathbb{A}^n$ correspond to invertible modules over $R$. By [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 4](/en/math/commutative_algebra/fractional_ideals#thm4){: data-lid="49qnz" data-relation="required" }, invertible modules over a Noetherian UFD are free, so $\Pic(\mathbb{A}^n) = 0$.
+The coordinate ring of $\mathbb{A}^n$, $R = \mathbb{K}[\x_1, \ldots, \x_n]$, is a Noetherian UFD, and by the above discussion, line bundles on $\mathbb{A}^n$ correspond to invertible modules over $R$. By [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 4](/en/math/commutative_algebra/fractional_ideals#thm4){: data-lid="49qnz" }, invertible modules over a Noetherian UFD are free, so $\Pic(\mathbb{A}^n) = 0$.
 :::
 
 ::: Example 12
@@ -175,14 +175,14 @@ Now we can define a group homomorphism
 
 $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$
 
-Our claim is that this is an isomorphism. First, for any line bundle $\mathcal{L}$, since $\mathcal{L}\vert_{U_i}$ is isomorphic to the trivial line bundle by [Example 11](#ex11){: data-lid="e7e82" data-relation="required" }, the transition functions $h_{ij}$ on each $U_i\cap U_j$ completely determine $\mathcal{L}$. But by definition $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$ on $U_i\cap U_j$, so $h_{ij}$ must necessarily be of the form $c_{ij}(\x_i/\x_j)^d$. Here, since a line bundle whose transition functions are constant multiples is trivial, we see from this that the above group homomorphism is surjective. Similarly, setting $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$ and comparing transition functions, we obtain
+Our claim is that this is an isomorphism. First, for any line bundle $\mathcal{L}$, since $\mathcal{L}\vert_{U_i}$ is isomorphic to the trivial line bundle by [Example 11](#ex11){: data-lid="e7e82" }, the transition functions $h_{ij}$ on each $U_i\cap U_j$ completely determine $\mathcal{L}$. But by definition $h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$ on $U_i\cap U_j$, so $h_{ij}$ must necessarily be of the form $c_{ij}(\x_i/\x_j)^d$. Here, since a line bundle whose transition functions are constant multiples is trivial, we see from this that the above group homomorphism is surjective. Similarly, setting $\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$ and comparing transition functions, we obtain
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
 Now setting $e:=d-d'$, the statement $\mathcal{O}_{\mathbb{P}^n}(e)\cong \mathcal{O}_{\mathbb{P}^n}$ means that there exist $u_i\in \mathcal{O}(U_i)^\ast$ satisfying $(\x_i/\x_j)^e=u_i/u_j$, but since $U_i\cong \mathbb{A}^n$, we have $\mathcal{O}(U_i)^\ast=\mathbb{K}^\ast$, and therefore $(\x_i/\x_j)^e$ must be a constant, i.e., $e=0$. Hence it is also injective.
 :::
 
-Intuitively, the integer $d$ in the line bundle $\mathcal{O}_{\mathbb{P}^n}(d)$ on $\mathbb{P}^n$ can be understood as an index measuring how many times the fiber twists as it moves along the base. When $d=0$, $\mathcal{O}(0)$ is a trivial bundle, so there is no twisting; if $d>0$, it twists $d$ times in one direction, and if $d<0$, it twists $\lvert d\rvert$ times in the opposite direction. This means that $d$ in the transition function $g_{ij}(x) = (x_i/x_j)^d(x)$ directly represents the degree of twisting. However, this intuition may be somewhat imprecise, so some additional explanation needs to be supplemented after [Example 16](#ex16){: data-lid="1vvn2" data-relation="forward" }.
+Intuitively, the integer $d$ in the line bundle $\mathcal{O}_{\mathbb{P}^n}(d)$ on $\mathbb{P}^n$ can be understood as an index measuring how many times the fiber twists as it moves along the base. When $d=0$, $\mathcal{O}(0)$ is a trivial bundle, so there is no twisting; if $d>0$, it twists $d$ times in one direction, and if $d<0$, it twists $\lvert d\rvert$ times in the opposite direction. This means that $d$ in the transition function $g_{ij}(x) = (x_i/x_j)^d(x)$ directly represents the degree of twisting. However, this intuition may be somewhat imprecise, so some additional explanation needs to be supplemented after [Example 16](#ex16){: data-lid="1vvn2" }.
 
 Meanwhile, on projective space $\mathbb{P}^n$, there exists a special line bundle naturally induced from its very definition. This *tautological bundle* is the bundle that associates to each point of $\mathbb{P}^n$ the line represented by that point, and it plays a fundamental role in understanding the geometry of projective space.
 
@@ -194,10 +194,10 @@ $$\mathcal{O}_{\mathbb{P}^n}(-1) = \{(x, v) \in \mathbb{P}^n \times \mathbb{A}^{
 Then the line bundle defined by the projection map from $\mathcal{O}_{\mathbb{P}^n}(-1)$ to $\mathbb{P}^n$, $\pi=\pr_1$, is called the *tautological line bundle* on $\mathbb{P}^n$.
 :::
 
-That is, in this definition each fiber $\mathcal{O}_{\mathbb{P}^n}(-1)_x$ is the very line represented by the point $x$. As the notation suggests, the following holds. For distinction, in the next proposition only, let us regard $\mathcal{O}_{\mathbb{P}^n}(-1)$ not as the bundle from [Example 12](#ex12){: data-lid="l2zmw" data-relation="required" }, but as the bundle from [Definition 13](#def13){: data-lid="lp5ww" data-relation="required" }.
+That is, in this definition each fiber $\mathcal{O}_{\mathbb{P}^n}(-1)_x$ is the very line represented by the point $x$. As the notation suggests, the following holds. For distinction, in the next proposition only, let us regard $\mathcal{O}_{\mathbb{P}^n}(-1)$ not as the bundle from [Example 12](#ex12){: data-lid="l2zmw" }, but as the bundle from [Definition 13](#def13){: data-lid="lp5ww" }.
 
 ::: Proposition 14
-The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathcal{O}_{\mathbb{P}^n}(1)$ defined in [Example 12](#ex12){: data-lid="cnyy2" data-relation="required" } above. That is, $\mathcal{O}_{\mathbb{P}^n}(-1) \cong \mathcal{O}_{\mathbb{P}^n}(1)^\vee$.
+The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathcal{O}_{\mathbb{P}^n}(1)$ defined in [Example 12](#ex12){: data-lid="cnyy2" } above. That is, $\mathcal{O}_{\mathbb{P}^n}(-1) \cong \mathcal{O}_{\mathbb{P}^n}(1)^\vee$.
 :::
 
 ::: Proof
@@ -210,14 +210,14 @@ In particular, in the case of $\mathbb{P}^1$, examining $\mathcal{O}(-1)$ makes 
 We denote the space of *global sections* of a line bundle $\mathcal{L}$ by $\Gamma(X, \mathcal{L})$. That is, $\Gamma(X, \mathcal{L})$ is the set of regular maps assigning to each point $x\in X$ an element in the fiber $\pi^{-1}(x)\subseteq \mathcal{L}$.
 :::
 
-Another popular notation for the global section space is $H^0(X, \mathcal{L})$. This notation will be justified in [§Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="49aji" data-relation="forward" }, but until then we shall use $\Gamma(X, \mathcal{L})$.
+Another popular notation for the global section space is $H^0(X, \mathcal{L})$. This notation will be justified in [§Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="49aji" }, but until then we shall use $\Gamma(X, \mathcal{L})$.
 
 ::: Example 16
 The only global section of $\mathcal{O}_{\mathbb{P}^n}(-1)$ is $0$. That is,
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)) = 0$$
 
-To verify this, by [Example 12](#ex12){: data-lid="tupwz" data-relation="required" } we have $\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$, and the trivialization is given by $\phi_i(s) = s \cdot \x_i$. Thus, the trivialized section satisfies $\phi_i(s) \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$, and on $U_i \cap U_j$ the cocycle condition requires
+To verify this, by [Example 12](#ex12){: data-lid="tupwz" } we have $\mathcal{O}(-1)(U_i) = \x_i^{-1} \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$, and the trivialization is given by $\phi_i(s) = s \cdot \x_i$. Thus, the trivialized section satisfies $\phi_i(s) \in \mathcal{O}(U_i) = \mathbb{K}[\x_0/\x_i, \ldots, \x_n/\x_i]$, and on $U_i \cap U_j$ the cocycle condition requires
 
 $$\phi_j(s) = (\x_j/\x_i)\phi_i(s)$$
 
@@ -226,9 +226,9 @@ However, since $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i},
 
 This proposition shows the *twist* of the tautological bundle from the viewpoint of sections. For instance, the fact that $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$ means in particular that there is not even a "constant function" assigning 1 in the fiber for every $x\in \mathbb{P}^1$. From the geometric viewpoint above, this is because after going around $\mathbb{P}^1$ once, it is not the original 1, but has become (for example) $-1$.
 
-Meanwhile, the computation in [Example 16](#ex16){: data-lid="hozyz" data-relation="required" } can be extended to arbitrary $d$; in particular, for any $d<0$ one can show by the same logic that $\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$, and for $d=0$, that is, for $\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$, the sections are homogeneous polynomials of degree $0$, i.e., constant functions, so the computation in [§Quasi-Projective Varieties, ⁋Example 6](/en/math/algebraic_varieties/quasi_projective_varieties#ex6){: data-lid="nh4ro" data-relation="weak" } is confirmed again.
+Meanwhile, the computation in [Example 16](#ex16){: data-lid="hozyz" } can be extended to arbitrary $d$; in particular, for any $d<0$ one can show by the same logic that $\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$, and for $d=0$, that is, for $\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$, the sections are homogeneous polynomials of degree $0$, i.e., constant functions, so the computation in [§Quasi-Projective Varieties, ⁋Example 6](/en/math/algebraic_varieties/quasi_projective_varieties#ex6){: data-lid="nh4ro" } is confirmed again.
 
-The case to pay attention to is $d>0$. In this case, by exactly the same computation as in [Example 16](#ex16){: data-lid="1kffz" data-relation="required" }, one can verify that the sections are homogeneous polynomials of degree $d$. In particular, $\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$, which can be regarded as a calculation showing that the intuition after [Example 12](#ex12){: data-lid="lijbn" data-relation="weak" } was somewhat overly simplified.
+The case to pay attention to is $d>0$. In this case, by exactly the same computation as in [Example 16](#ex16){: data-lid="1kffz" }, one can verify that the sections are homogeneous polynomials of degree $d$. In particular, $\Gamma(\mathbb{P}^n, \mathcal{O}(d))\neq 0$, which can be regarded as a calculation showing that the intuition after [Example 12](#ex12){: data-lid="lijbn" } was somewhat overly simplified.
 
 A more precise explanation of this phenomenon is as follows. For convenience, let us look at the example on $\mathbb{P}^1$. The sections of $\mathcal{O}(-1)$ are homogeneous of degree $-1$, so they have the form, for instance,
 
@@ -285,7 +285,7 @@ For any variety $X$, we have $\Pic(X) \cong \CaCl(X)$.
 :::
 
 ::: Proof
-First we verify that $D \mapsto \mathcal{O}_X(D)$ is a group homomorphism from $\CaDiv(X)$ to $\Pic(X)$. For a Cartier divisor $D = \{(U_i, f_i)\}$, the transition function of $\mathcal{O}_X(D)$ is $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$, so it defines a line bundle. Moreover, writing two Cartier divisors $D = \{(U_i, f_i)\}$ and $D' = \{(U_i, f_i')\}$ with the same cover on a common refinement, we have $D + D' = \{(U_i, f_i f_i')\}$ and its transition function is $(f_j f_j')/(f_i f_i') = g_{ij} g_{ij}'$, so by [Proposition 6](#prop6){: data-lid="u843x" data-relation="required" } we obtain $\mathcal{O}_X(D + D') \cong \mathcal{O}_X(D) \otimes \mathcal{O}_X(D')$. That is, $D \mapsto \mathcal{O}_X(D)$ is additive. A principal divisor $\divisor(h)$ corresponds to the trivial bundle since its transition function is $1$, and hence this induces a well-defined group homomorphism from $\CaCl(X) = \CaDiv(X)/\Prin(X)$ to $\Pic(X)$.
+First we verify that $D \mapsto \mathcal{O}_X(D)$ is a group homomorphism from $\CaDiv(X)$ to $\Pic(X)$. For a Cartier divisor $D = \{(U_i, f_i)\}$, the transition function of $\mathcal{O}_X(D)$ is $g_{ij} = f_j/f_i \in \mathcal{O}_X(U_i \cap U_j)^\times$, so it defines a line bundle. Moreover, writing two Cartier divisors $D = \{(U_i, f_i)\}$ and $D' = \{(U_i, f_i')\}$ with the same cover on a common refinement, we have $D + D' = \{(U_i, f_i f_i')\}$ and its transition function is $(f_j f_j')/(f_i f_i') = g_{ij} g_{ij}'$, so by [Proposition 6](#prop6){: data-lid="u843x" } we obtain $\mathcal{O}_X(D + D') \cong \mathcal{O}_X(D) \otimes \mathcal{O}_X(D')$. That is, $D \mapsto \mathcal{O}_X(D)$ is additive. A principal divisor $\divisor(h)$ corresponds to the trivial bundle since its transition function is $1$, and hence this induces a well-defined group homomorphism from $\CaCl(X) = \CaDiv(X)/\Prin(X)$ to $\Pic(X)$.
 
 To show that this is an isomorphism, let an arbitrary line bundle $\mathcal{L}$ be given. On a trivializing open $U \subseteq X$, since $\mathcal{L}\vert_U \cong \mathcal{O}_U$, we can choose, corresponding to the constant section of $\mathcal{O}_U$ given by $1$, a section $s \in \mathcal{L}(U)$, and this $s$ is a nonzero rational section. Now consider, for $\mathcal{L}$, a trivializing cover $\{U_i\}$. On each $U_i$, choose a trivialization $\psi_i\colon \mathcal{L}\vert_{U_i} \cong \mathcal{O}_{U_i}$, and define $f_i := \psi_i(s\vert_{U_i \cap U}) \in \mathcal{O}_X(U_i \cap U) \subseteq K(X)$. Then on $U_i \cap U_j \cap U$ we have $f_j = g_{ij} f_i$, and since $X$ is irreducible, $U_i \cap U_j \cap U$ is a dense open subset of $U_i \cap U_j$, so this relation holds on all of $U_i \cap U_j$. That is, $f_j/f_i = g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$, so $D = \{(U_i, f_i)\}$ is a Cartier divisor, and since the transition function of $\mathcal{O}_X(D)$ is $\{g_{ij}\}$, we have $\mathcal{O}_X(D) \cong \mathcal{L}$.
 
@@ -329,7 +329,7 @@ To verify this, let us look from the viewpoint of transition functions. Since th
 :::
 
 ::: Example 22
-For an embedding $i: C \hookrightarrow \mathbb{P}^n$, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general, $\mathcal{O}_C(1)$ is nontrivial; for example, when $\mathbb{P}^1$ is embedded as a line in $\mathbb{P}^n$, for $C = \mathbb{P}^1$, $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ is a nontrivial line bundle, as seen in [Example 12](#ex12){: data-lid="mza3m" data-relation="weak" }. The name "hyperplane bundle" was given in the sense that it is the bundle obtained by taking, from among the hypersurfaces of $\mathbb{P}^n$, the one of degree $1$ (that is, the hyperplane $H$) and pulling back the corresponding line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ to $C$.
+For an embedding $i: C \hookrightarrow \mathbb{P}^n$, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general, $\mathcal{O}_C(1)$ is nontrivial; for example, when $\mathbb{P}^1$ is embedded as a line in $\mathbb{P}^n$, for $C = \mathbb{P}^1$, $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ is a nontrivial line bundle, as seen in [Example 12](#ex12){: data-lid="mza3m" }. The name "hyperplane bundle" was given in the sense that it is the bundle obtained by taking, from among the hypersurfaces of $\mathbb{P}^n$, the one of degree $1$ (that is, the hyperplane $H$) and pulling back the corresponding line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ to $C$.
 :::
 
 ## Vector Bundle
@@ -349,7 +349,7 @@ On a variety $X$, a *rank $r$ vector bundle* $\mathcal{E}$ consists of the follo
 
 Comparing with the definition of a line bundle, the only difference is that instead of the fiber being $\mathbb{A}^1$, it is $\mathbb{A}^r$, and instead of taking values in $\mathcal{O}_X(U_i \cap U_j)^\times = \GL_1(\mathcal{O}_X(U_i \cap U_j))$, the transition functions take values in $\GL_r(\mathcal{O}_X(U_i \cap U_j))$. Therefore, a line bundle is precisely a rank 1 vector bundle.
 
-The same cocycle condition as in [Proposition 2](#prop2){: data-lid="3i7uw" data-relation="required" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
+The same cocycle condition as in [Proposition 2](#prop2){: data-lid="3i7uw" } holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
 
 ::: Example 24
 The simplest example is that arising from the line bundle $\mathcal{O}_X$, namely the rank $r$ *trivial vector bundle* $\mathcal{O}_X^{\oplus r}$. This is obtained by taking the direct sum of the line bundle $\mathcal{O}_X$ $r$ times.
@@ -386,7 +386,7 @@ On $\Gr(1, n+1) = \mathbb{P}^n$, the tautological bundle $S$ is isomorphic to $\
 :::
 
 ::: Proof
-Each point of $\Gr(1, n+1)$ is a one-dimensional subspace of $\mathbb{A}^{n+1}$, that is, a line through the origin. This corresponds exactly to a point of $\mathbb{P}^n$. Since each fiber of the tautological bundle $S$ is this line itself, it is identical to $\mathcal{O}_{\mathbb{P}^n}(-1)$ defined in [Definition 13](#def13){: data-lid="tb7w4" data-relation="required" }.
+Each point of $\Gr(1, n+1)$ is a one-dimensional subspace of $\mathbb{A}^{n+1}$, that is, a line through the origin. This corresponds exactly to a point of $\mathbb{P}^n$. Since each fiber of the tautological bundle $S$ is this line itself, it is identical to $\mathcal{O}_{\mathbb{P}^n}(-1)$ defined in [Definition 13](#def13){: data-lid="tb7w4" }.
 :::
 
 This proposition shows that the tautological bundle on a Grassmannian reduces to the familiar $\mathcal{O}(-1)$ on projective space. As for the quotient bundle $Q$, on $\Gr(1, n+1) = \mathbb{P}^n$ it has rank $n$, which is closely related to the tangent bundle $\mathcal{T}_{\mathbb{P}^n}$. Indeed, $\mathcal{T}_{\mathbb{P}^n} \cong \Hom(S, Q) \cong S^\vee \otimes Q$ holds.

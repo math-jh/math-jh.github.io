@@ -15,7 +15,7 @@ weight: 22
 
 ## 소박한 여접 복합체
 
-[§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="pnsu5" data-relation="required" }에 따르면, locally of finite presentation인 morphism of schemes $\varphi:X\rightarrow S$가 smooth한 것은 임의의 affine $S$-scheme $T=\Spec R$와, square-zero subscheme $T_0=\Spec R_0$마다, 임의의 $S$-morphism $\varrho_0:T_0\rightarrow X$를 $T$로 연장하는 lifting $\varrho:T\rightarrow X$가 항상 존재하는 것과 동치이다. 여기서 $T_0$이 $T$의 *square-zero subscheme*이라는 것은, $T_0\hookrightarrow T$가 square-zero ideal sheaf $\mathcal{I}\subseteq\mathcal{O}_T$로 정의된다는 의미이며, 이를 affine space에서의 세팅 
+[§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="pnsu5" }에 따르면, locally of finite presentation인 morphism of schemes $\varphi:X\rightarrow S$가 smooth한 것은 임의의 affine $S$-scheme $T=\Spec R$와, square-zero subscheme $T_0=\Spec R_0$마다, 임의의 $S$-morphism $\varrho_0:T_0\rightarrow X$를 $T$로 연장하는 lifting $\varrho:T\rightarrow X$가 항상 존재하는 것과 동치이다. 여기서 $T_0$이 $T$의 *square-zero subscheme*이라는 것은, $T_0\hookrightarrow T$가 square-zero ideal sheaf $\mathcal{I}\subseteq\mathcal{O}_T$로 정의된다는 의미이며, 이를 affine space에서의 세팅 
 
 $$S=\Spec A,\qquad X=\Spec C,\qquad\text{$C$ an $A$-algebra locally of finite presentation}$$
 
@@ -29,7 +29,7 @@ $$0\longrightarrow\mathfrak{b}\longrightarrow R\overset{q}{\longrightarrow} R_0\
 
 $$\overline{\rho}_0:B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
 
-을 생각하자. 그럼 $q$가 surjective이므로 각각의 변수 $\x_i$마다 $q(r_i)=\overline{\rho}_0(\x_i)$을 만족하는 $r_i\in R$들을 택할 수 있으며, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="7rl2f" data-relation="required" }에 의하여 대응 $\x_i\mapsto r_i$는 $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$을 유일하게 정의한다. 이는 $q\circ \widetilde{\rho}=\overline{\rho}_0$을 만족하며, 이 때 각 $r_i$의 선택에는 $\ker q=\mathfrak{b}$만큼의 자유도가 존재한다. 
+을 생각하자. 그럼 $q$가 surjective이므로 각각의 변수 $\x_i$마다 $q(r_i)=\overline{\rho}_0(\x_i)$을 만족하는 $r_i\in R$들을 택할 수 있으며, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="7rl2f" }에 의하여 대응 $\x_i\mapsto r_i$는 $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$을 유일하게 정의한다. 이는 $q\circ \widetilde{\rho}=\overline{\rho}_0$을 만족하며, 이 때 각 $r_i$의 선택에는 $\ker q=\mathfrak{b}$만큼의 자유도가 존재한다. 
 
 우리가 본래 찾고자 하는 것은 $C$로부터의 lifting $\rho:C\rightarrow R$이다. 만약 택한 $\widetilde{\rho}$가 $\widetilde{\rho}(\mathfrak{a})=0$을 만족한다면, $\widetilde{\rho}$는 곧바로 $C=B/\mathfrak{a}$를 거쳐 원하는 lifting $\rho$를 유도할 것이지만, 그것만이 전부는 아니다. 위에서 살펴본 것과 같이 $\widetilde{\rho}$의 정의는 각 변수의 lift만큼의 차이가 있으므로, 다른 $\widetilde{\rho}$의 선택이 $\widetilde{\rho}(\mathfrak{a})=0$을 줄 수도 있기 때문이다. 따라서 이 lifting의 실패를 확인하기 위해서는 $\widetilde{\rho}$의 선택에 의존하지 않는 양을 계산해야 한다.
 
@@ -65,7 +65,7 @@ $$D(fg)=f\cdot D(g)+g\cdot D(f)$$
 
 $$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
 
-로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="r4obf" data-relation="required" }의 conormal morphism이고 $\delta'-\delta$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
+로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="r4obf" }의 conormal morphism이고 $\delta'-\delta$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
 
 $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
@@ -75,7 +75,7 @@ $$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\ba
 
 $$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
-를 $\mathfrak{b}$로 dualize하여 얻는 complex $\Hom_C(\NL_{C/A}, \mathfrak{b})$의 첫째 cohomology이며, 따라서 이 $\mathfrak{b}$를 kernel로 가지는 square-zero extension ($\ast$)에 대한 lifting problem을 재는 obstruction space가 $H^1(\Hom_C(\NL_{C/A}, \mathfrak{b}))$이고, 만일 이것이 임의의 $\mathfrak{b}$에 대해 $0$이 된다면 $A\rightarrow C$가 smooth이게 된다. 이 형식화를 바탕으로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="6hgti" data-relation="weak" }의 증명을 다시 보면, 해당 증명에서 한 것은 conormal sequence가 split exact임을 보여 naive cotangent complex 단계에서 이를 해결해버린 것이다. 
+를 $\mathfrak{b}$로 dualize하여 얻는 complex $\Hom_C(\NL_{C/A}, \mathfrak{b})$의 첫째 cohomology이며, 따라서 이 $\mathfrak{b}$를 kernel로 가지는 square-zero extension ($\ast$)에 대한 lifting problem을 재는 obstruction space가 $H^1(\Hom_C(\NL_{C/A}, \mathfrak{b}))$이고, 만일 이것이 임의의 $\mathfrak{b}$에 대해 $0$이 된다면 $A\rightarrow C$가 smooth이게 된다. 이 형식화를 바탕으로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="6hgti" }의 증명을 다시 보면, 해당 증명에서 한 것은 conormal sequence가 split exact임을 보여 naive cotangent complex 단계에서 이를 해결해버린 것이다. 
 
 지금까지 등장한 대상들에 이름을 붙이면 다음과 같다.
 
@@ -99,7 +99,7 @@ $$T^0(C/A,M)=\ker\bar{d}^\ast,\qquad T^1(C/A,M)=\coker\bar{d}^\ast$$
 라 적는다.
 :::
 
-이 대상들은 우리가 이미 알고 있는 것들이다. 우선 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="2n5wj" data-relation="required" }의 conormal exact sequence를 degree $0$에서 읽으면
+이 대상들은 우리가 이미 알고 있는 것들이다. 우선 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="2n5wj" }의 conormal exact sequence를 degree $0$에서 읽으면
 
 $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
@@ -107,7 +107,7 @@ $$H_0(\NL_{C/A})\cong\Omega_{C/A}$$
 
 ## 소박한 여접 복합체와 매끄러움
 
-[§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="34xje" data-relation="required" }에서 smoothness는 conormal sequence의 splitting으로 나타났고, 이 글의 도입부에서는 lifting의 obstruction이 $T^1$에 놓인다는 것을 보았다. 이 두 설명은 다음과 같이 연결된다.
+[§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="34xje" }에서 smoothness는 conormal sequence의 splitting으로 나타났고, 이 글의 도입부에서는 lifting의 obstruction이 $T^1$에 놓인다는 것을 보았다. 이 두 설명은 다음과 같이 연결된다.
 
 ::: 명제 2
 Finitely presented $A$-algebra $C$가 $A$ 위에서 smooth한 것은
@@ -117,7 +117,7 @@ $$H_1(\NL_{C/A})=0,\qquad \Omega_{C/A}\text{ is a finitely generated projective 
 인 것과 동치이다. 또한 이는 모든 $C$-module $M$에 대하여 $T^1(C/A,M)=0$인 것과 동치이다.
 :::
 ::: 증명
-$C$가 smooth하면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="odapy" data-relation="required" }에 의하여 conormal sequence
+$C$가 smooth하면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="odapy" }에 의하여 conormal sequence
 
 $$0\longrightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
 
@@ -127,9 +127,9 @@ $$0\longrightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\
 
 $$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
 
-는 항상 right exact이며 ([§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="1fipr" data-relation="required" }) 여기에 조건 $H_1(\NL_{C/A})=\ker\bar{d}=0$이 주어졌으므로 왼쪽에 $0$을 붙여 short exact sequence를 얻을 수 있다. 또, $\Omega_{C/A}$가 projective이므로 surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$가 split한다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-lid="dqrmi" data-relation="required" }) 따라서 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="sj7py" data-relation="required" }에 의하여 $C$는 $A$ 위에서 smooth하다.
+는 항상 right exact이며 ([§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="1fipr" }) 여기에 조건 $H_1(\NL_{C/A})=\ker\bar{d}=0$이 주어졌으므로 왼쪽에 $0$을 붙여 short exact sequence를 얻을 수 있다. 또, $\Omega_{C/A}$가 projective이므로 surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$가 split한다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-lid="dqrmi" }) 따라서 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="sj7py" }에 의하여 $C$는 $A$ 위에서 smooth하다.
 
-마지막으로 smoothness와 모든 $C$-module $M$에 대한 $T^1(C/A,M)=0$인 것이 동치임을 보인다. 우선 $C$가 smooth라면 위에서 얻은 splitting에 의하여 $r\circ\bar{d}=\id$인 retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$가 존재한다. 이제 임의의 $C$-module $M$과 $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$에 대하여 $h=\delta\circ r$로 두면 $h\circ\bar{d}=\delta$이므로 $\bar{d}^\ast$가 surjective이고 $T^1(C/A,M)=0$이다. 거꾸로 모든 $M$에 대하여 $T^1(C/A,M)=0$이라 하자. 그럼 도입부의 임의의 lifting problem에서 $[\delta]\in T^1(C/A,\mathfrak{b})$가 $0$이므로 lifting이 존재한다. $C$가 finitely presented이므로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="71hn7" data-relation="required" }에 의하여 $C$는 $A$ 위에서 smooth하다.
+마지막으로 smoothness와 모든 $C$-module $M$에 대한 $T^1(C/A,M)=0$인 것이 동치임을 보인다. 우선 $C$가 smooth라면 위에서 얻은 splitting에 의하여 $r\circ\bar{d}=\id$인 retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$가 존재한다. 이제 임의의 $C$-module $M$과 $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$에 대하여 $h=\delta\circ r$로 두면 $h\circ\bar{d}=\delta$이므로 $\bar{d}^\ast$가 surjective이고 $T^1(C/A,M)=0$이다. 거꾸로 모든 $M$에 대하여 $T^1(C/A,M)=0$이라 하자. 그럼 도입부의 임의의 lifting problem에서 $[\delta]\in T^1(C/A,\mathfrak{b})$가 $0$이므로 lifting이 존재한다. $C$가 finitely presented이므로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="71hn7" }에 의하여 $C$는 $A$ 위에서 smooth하다.
 :::
 
 특히 $C$가 smooth라면, 위의 증명에서 얻은 splitting에 의하여 naive cotangent complex의 splitting
@@ -144,15 +144,15 @@ $$0\longrightarrow\ker p\longrightarrow\NL_{C/A}\overset{p}{\longrightarrow}[0\l
 
 $$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr]$$
 
-이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-lid="wwnua" data-relation="required" }을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obstruction space $T^1$은 항상 사라진다.
+이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-lid="wwnua" }을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obstruction space $T^1$은 항상 사라진다.
 
-그러나 일반적인 $C$에 대해서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부부터 살펴보아야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 본격적으로 필요하게 된다. 이 상황을 대표하는 것이 lci의 경우이다. ([§완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="cd9vj" data-relation="weak" }) 일반적인 non-lci 상황에서는 비슷한 계산을 수행하기 위해 cotangent complex 전체를 살펴보아야 할 수 있지만, lci에서는 naive cotangent complex가 cotangent complex 전체와 quasi-isomorphic하다. 이러한 관점에서 lci는 필요한 cotangent data를 naive cotangent complex에서 직접 읽을 수 있는 대표적인 경우로 생각할 수 있다.
+그러나 일반적인 $C$에 대해서는 conormal morphism의 kernel과 그 image가 direct summand인지 여부부터 살펴보아야 한다. $\Omega_{C/A}$는 이 morphism의 cokernel이므로, 이 두 조건을 직접 다루려면 그 앞의 항과 morphism까지 남긴 $\NL_{C/A}$가 본격적으로 필요하게 된다. 이 상황을 대표하는 것이 lci의 경우이다. ([§완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="cd9vj" }) 일반적인 non-lci 상황에서는 비슷한 계산을 수행하기 위해 cotangent complex 전체를 살펴보아야 할 수 있지만, lci에서는 naive cotangent complex가 cotangent complex 전체와 quasi-isomorphic하다. 이러한 관점에서 lci는 필요한 cotangent data를 naive cotangent complex에서 직접 읽을 수 있는 대표적인 경우로 생각할 수 있다.
 
 구체적인 상황을 보기 위하여 $B=A[\x_1,\ldots,\x_n]$, $C=B/\mathfrak{a}$로 놓고, $\mathfrak{a}=(f_1,\ldots,f_r)$가 $B$-regular sequence로 생성된다고 하자. 각 $f_j$의 class를 보내는 $C$-linear morphism
 
 $$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\bar{f}_j$$
 
-은 [§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5){: data-lid="6laqx" data-relation="required" }와 그 증명에 의하여 isomorphism이므로, 이 경우 naive cotangent complex는 Jacobian에 의해
+은 [§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5){: data-lid="6laqx" }와 그 증명에 의하여 isomorphism이므로, 이 경우 naive cotangent complex는 Jacobian에 의해
 
 $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
 
@@ -162,7 +162,7 @@ $$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar
 
 앞에서 우리는 naive cotangent complex가 smoothness의 infinitesimal lifting property를 어떻게 기록하는지 살펴보았다. 이 complex는 deformation theory에서도 중심적인 역할을 한다. 
 
-Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고, section $\t_0:\Spec A\rightarrow T$을 갖춘 pointed $A$-scheme $(T,\t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X\times_T\Spec A\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10){: data-lid="dohnh" data-relation="weak" }에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 $T$ 위에서 변하는 scheme들 가운데 section $\t_0$을 따라 얻는 fiber가 $X_0$으로 주어지는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms){: data-lid="bjqez" data-relation="weak" }) 이러한 가정 아래 이는 fiber들을 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
+Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고, section $\t_0:\Spec A\rightarrow T$을 갖춘 pointed $A$-scheme $(T,\t_0)$ 위의 family $\pi:X\rightarrow T$와 central fiber의 identification $X\times_T\Spec A\cong X_0$를 찾는 것이다. [§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10){: data-lid="dohnh" }에서와 같이 scheme morphism $\pi:X\rightarrow T$를 $T$로 매개화된 family로 보면, 이는 $T$ 위에서 변하는 scheme들 가운데 section $\t_0$을 따라 얻는 fiber가 $X_0$으로 주어지는 family를 보는 것이다. 이러한 관점을 위해 $\pi$가 flat일 것을 요구하는 것이 합리적이며 ([§평탄사상](/ko/math/scheme_theory/flat_morphisms){: data-lid="bjqez" }) 이러한 가정 아래 이는 fiber들을 하나의 대상 $X_0$가 변해 가는 모습으로 보고 비교하는 것이다.
 
 가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=\t$로 바꾸어 다음의 family
 
@@ -170,7 +170,7 @@ $$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
 
 를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이룬다. 또한 relation $\x\y=\t$에 의하여 모든 monomial은 $\t^n$, $\t^n\x^i$, $\t^n\y^j$ 가운데 하나로 유일하게 정리되므로, 이 coordinate ring은 $\{1\}\cup\{\x^i\mid i\geq1\}\cup\{\y^j\mid j\geq1\}$을 basis로 갖는 free $A[\t]$-module이다. 따라서 $\pi$는 flat하다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
 
-일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $\t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,\t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $\t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion){: data-lid="5bh3o" data-relation="required" }). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
+일반적인 scheme $X_0$의 deformation을 찾는 첫 단계는 base의 central section $\t_0$에서 infinitesimal direction들을 하나씩 살펴보는 것이다. $A[\epsilon]=A[\t]/(\t^2)$로 놓으면, $(T,\t_0)$의 $A$-상대 tangent direction은 $\t=0$에서 $\t_0$로 제한되는 $A$-morphism $\Spec A[\epsilon]\rightarrow T$으로 표현된다 ([§매끄러운 사상과 에탈 사상, §§Infinitesimal lifting criterion](/ko/math/scheme_theory/smooth_and_etale_morphisms#infinitesimal-lifting-criterion){: data-lid="5bh3o" }). 이를 따라 $\pi:X\rightarrow T$를 pullback하면 $\Spec A[\epsilon]$ 위의 family를 얻으며, 직관적으로 이는 그 tangent direction을 따라 $X_0$이 일차까지 변하는 모습을 기록한다.
 
 그러나 실제로는 이 parameter scheme $T$와 그 위의 family $\pi:X\rightarrow T$ 자체가 미리 주어져 있지 않으며, 이를 찾아내는 것부터가 문제의 시작이다. 우리에게 처음 주어진 것은 $X_0$가 $S$-scheme인 것으로부터 주어지는 structure morphism $X_0\rightarrow S$ 뿐이며, 이를 위해 우리가 택하는 전략은 base $S$를 <em-ko>가능한 모든 방향</em-ko>으로 넓혀서 parameter scheme을 정의하는 것이다. 이때 base를 infinitesimal thickening해 나가는 과정이 바로 square-zero extension들이며, 우리는 parameter space와 동시에, 이 과정으로 두꺼워진 base $S$ 위에 놓인 fiber까지 함께 정의한다. 
 
@@ -212,11 +212,11 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-3.svg width="18.74em" alt="morphism of extensions" %}
 
-을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3){: data-lid="mj4ii" data-relation="required" }에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
+을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3){: data-lid="mj4ii" }에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
 
 $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
 
-가 주어졌다 하고 $C$를 polynomial ring $B$에 의한 presentation $B/\mathfrak{a}$로 나타내어 lift $B\rightarrow E$를 택한다면 [정의 1](#def1){: data-lid="x4ncd" data-relation="required" } 직전의 lifting 계산과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응되며, 이는 우리가 택한 lift $B\rightarrow E$에 의존하지 않으므로 잘 정의된다.
+가 주어졌다 하고 $C$를 polynomial ring $B$에 의한 presentation $B/\mathfrak{a}$로 나타내어 lift $B\rightarrow E$를 택한다면 [정의 1](#def1){: data-lid="x4ncd" } 직전의 lifting 계산과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응되며, 이는 우리가 택한 lift $B\rightarrow E$에 의존하지 않으므로 잘 정의된다.
 
 뿐만 아니라 이 대응은 반대방향으로도 작동한다. 구체적으로, class $[\delta]\in T^1(C/A,M)$의 representative인 $C$-linear map $\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow M$이 주어졌을 때, trivial extension $B\oplus M$ 안에 ideal
 
@@ -295,7 +295,7 @@ $$f_j+\epsilon\sum_i\widetilde{\theta}(\x_i)\frac{\partial f_j}{\partial\x_i}=f_
 
 $$\Der_A(B,C)=\Hom_C(\Omega_{B/A}\otimes_BC,C)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$$
 
-의 image에 속하는 경우 얻어지며, 이는 [정의 1](#def1){: data-lid="peajb" data-relation="weak" } 직전의 계산에서 lift $\widetilde{\rho}$를 고르는 자유도가 $\Der_A(B,\mathfrak{b})$에 담겼던 것과 같은 현상이다. 
+의 image에 속하는 경우 얻어지며, 이는 [정의 1](#def1){: data-lid="peajb" } 직전의 계산에서 lift $\widetilde{\rho}$를 고르는 자유도가 $\Der_A(B,\mathfrak{b})$에 담겼던 것과 같은 현상이다. 
 
 이제 이 절에서 얻은 것을 하나의 분류 정리로 묶는다.
 
@@ -317,7 +317,7 @@ $$\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\big/\im\bar{d}^\ast=T^1(C/A,C)$$
 
 $$F=f+\epsilon g\in B[\epsilon],\qquad C'=B[\epsilon]/(F)$$
 
-로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X_0$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5){: data-lid="059xx" data-relation="required" }에서 이 선택이 주는 다음의 $C$-linear map
+로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X_0$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5){: data-lid="059xx" }에서 이 선택이 주는 다음의 $C$-linear map
 
 $$\varphi:\mathfrak{a}/\mathfrak{a}^2\longrightarrow C,\qquad \bar{f}\longmapsto\bar{g}$$
 
@@ -331,7 +331,7 @@ $$F=\x\y+\epsilon\x=\x(\y+\epsilon)$$
 
 {% diagram Math/Scheme_Theory/Deformation_Theory-4.svg width="12.56em" alt="trivial deformation of node" %}
 
-더 일반적으로, [정리 5](#thm5){: data-lid="l61ff" data-relation="required" }에 따르면 trivial deformation은 ambient space $B[\epsilon]$의 무한소 좌표변환에서 오는 경우, 곧 $\varphi\in\im\bar{d}^\ast$인 경우이다. [정리 5](#thm5){: data-lid="33mif" data-relation="required" } 직전에 살펴보았듯, 이러한 좌표변환은 derivation $\theta\in\Der_A(B,C)$이 결정하며, 구체적으로 각 방정식에 그 값 $\theta(f_j)$를 통해 deformation을 정의했다. 우리 예시에서 $B=A[\x,\y]$는 polynomial ring이므로, 임의의 derivation $\theta\in\Der_A(B,C)$는 두 변수의 값
+더 일반적으로, [정리 5](#thm5){: data-lid="l61ff" }에 따르면 trivial deformation은 ambient space $B[\epsilon]$의 무한소 좌표변환에서 오는 경우, 곧 $\varphi\in\im\bar{d}^\ast$인 경우이다. [정리 5](#thm5){: data-lid="33mif" } 직전에 살펴보았듯, 이러한 좌표변환은 derivation $\theta\in\Der_A(B,C)$이 결정하며, 구체적으로 각 방정식에 그 값 $\theta(f_j)$를 통해 deformation을 정의했다. 우리 예시에서 $B=A[\x,\y]$는 polynomial ring이므로, 임의의 derivation $\theta\in\Der_A(B,C)$는 두 변수의 값
 
 $$\theta(\x)=a,\qquad \theta(\y)=b\qquad(a,b\in C)$$
 
@@ -382,7 +382,7 @@ $$C^{(2)}=\bigl(B[\t]/(\t^3)\bigr)/(F_1^{(2)},\ldots,F_m^{(2)})$$
 
 가 $A[\t]/(\t^3)$ 위에서 flat하도록 $h_j$들을 골라야 한다는 것으로, 이 조건은 다음과 같이 계산할 수 있다. 
 
-[명제 4](#prop4){: data-lid="a75je" data-relation="required" }에서 flatness는 원래 방정식들 사이의 relation들을 함께 들어올리는 조건으로 나타났던 것을 기억하자. 구체적으로, $C$를 정의하던 방정식들 사이의 relation $\sum_j a_jf_j=0$이 주어졌다 하면, 이를
+[명제 4](#prop4){: data-lid="a75je" }에서 flatness는 원래 방정식들 사이의 relation들을 함께 들어올리는 조건으로 나타났던 것을 기억하자. 구체적으로, $C$를 정의하던 방정식들 사이의 relation $\sum_j a_jf_j=0$이 주어졌다 하면, 이를
 
 $$F_j=f_j+\epsilon g_j$$
 
@@ -392,7 +392,7 @@ $$\sum_j a_j(f_j+\epsilon g_j)=\epsilon\sum_j a_j g_j$$
 
 에서, $\sum_j a_jg_j$를 $f_j$들에 대한 식 $\sum_j a_jg_j=\sum_j c_jf_j$로 바꾸어줄 수 있으면 이 오차를 $a_j$들로 옮겨 $A_j=a_j-\epsilon c_j$로 정의하면 $\sum_j A_j F_j=0$이 성립하도록 할 수 있었다. 
 
-[명제 4](#prop4){: data-lid="5adhy" data-relation="required" }의 증명에서 $\epsilon$을 $\t$로 바꾸어 $B[\t]/(\t^{n+1})$에서 같은 ideal 계산을 반복하면, 각 단계의 flatness도 마찬가지로 relation들이 함께 들어올려지는 조건으로 나타난다. 따라서 이를 이차까지 연장하려면 적당한 $d_j\in B$를 택하여 relation의 계수들
+[명제 4](#prop4){: data-lid="5adhy" }의 증명에서 $\epsilon$을 $\t$로 바꾸어 $B[\t]/(\t^{n+1})$에서 같은 ideal 계산을 반복하면, 각 단계의 flatness도 마찬가지로 relation들이 함께 들어올려지는 조건으로 나타난다. 따라서 이를 이차까지 연장하려면 적당한 $d_j\in B$를 택하여 relation의 계수들
 
 $$A_j^{(2)}=a_j-\t c_j+\t^2d_j\in B[\t]/(\t^3)$$
 
@@ -435,7 +435,7 @@ $$T^i(C/A,M)=H^i\bigl(\Hom_C(\operatorname{LS}_{C/A},M)\bigr)$$
 를 $C$의 *Lichtenbaum–Schlessinger functor<sub>리히텐바움-슐레진저 함자</sub>*라 부른다.
 :::
 
-어렵지 않게 이 정의의 $T^0$과 $T^1$이 [정의 1](#def1){: data-lid="3ydkr" data-relation="required" }에서 정의한 것과 정확히 같은 것을 알 수 있으며, 우리 주장은 obstruction class가 $T^2$에 사는 class라는 것이다. First-order deformation $\xi$에 대하여, 앞선 계산에서와 같이 relation $(a_1,\ldots,a_m)\in\Rel$마다 $\sum_ja_jg_j=\sum_jc_jf_j$를 만족하는 $c_j\in B$를 택하면
+어렵지 않게 이 정의의 $T^0$과 $T^1$이 [정의 1](#def1){: data-lid="3ydkr" }에서 정의한 것과 정확히 같은 것을 알 수 있으며, 우리 주장은 obstruction class가 $T^2$에 사는 class라는 것이다. First-order deformation $\xi$에 대하여, 앞선 계산에서와 같이 relation $(a_1,\ldots,a_m)\in\Rel$마다 $\sum_ja_jg_j=\sum_jc_jf_j$를 만족하는 $c_j\in B$를 택하면
 
 $$\eta(a_1,\ldots, a_m)=\overline{\sum_jc_jg_j}\in C$$
 
@@ -451,7 +451,7 @@ $$\sum_jc_jg_j\equiv\sum_ja_jh_j\pmod{\mathfrak{a}}$$
 First-order deformation $\xi\in T^1(C/A,C)$가 $A[\t]/(\t^3)$ 위의 flat deformation으로의 extension이 존재하는 것은 $\ob(\xi)=0$인 것과 동치이다.
 :::
 
-일반적인 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$에 대해서도 $\t$의 거듭제곱 대신 $\mathfrak{b}$를 흔드는 방향으로 같은 계산을 반복하여 obstruction class를 얻으며, extension이 존재할 때 두 extension의 차이에 [정리 5](#thm5){: data-lid="mmtec" data-relation="required" }의 논증을 적용하면 그 isomorphism class들이 $T^1$ 위의 torsor를 이룬다.
+일반적인 square-zero extension $0\rightarrow \mathfrak{b}\rightarrow R'\rightarrow R\rightarrow0$에 대해서도 $\t$의 거듭제곱 대신 $\mathfrak{b}$를 흔드는 방향으로 같은 계산을 반복하여 obstruction class를 얻으며, extension이 존재할 때 두 extension의 차이에 [정리 5](#thm5){: data-lid="mmtec" }의 논증을 적용하면 그 isomorphism class들이 $T^1$ 위의 torsor를 이룬다.
 
 지금까지의 계산은 더 일반적인 full cotangent complex로 일반화된다. 이를 위해 우리는 $A$-algebra $C$를 한 번 polynomial algebra의 quotient로 나타내는 대신, 각 항이 polynomial $A$-algebra인 free simplicial resolution 
 
@@ -469,7 +469,7 @@ $$\tau_{\leq1}\LL_{C/A}\simeq\NL_{C/A},\qquad \tau_{\leq2}\LL_{C/A}\simeq\operat
 
 $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$$
 
-로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 extension이 존재할 때 그 선택들의 차이를 나타내며 ([정리 5](#thm5){: data-lid="5kmzi" data-relation="weak" }), $T^2$는 extension의 obstruction을 통제한다. ([정리 8](#thm8){: data-lid="gqa0w" data-relation="weak" }). 이제 [명제 2](#prop2){: data-lid="h13ib" data-relation="required" }의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
+로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 extension이 존재할 때 그 선택들의 차이를 나타내며 ([정리 5](#thm5){: data-lid="5kmzi" }), $T^2$는 extension의 obstruction을 통제한다. ([정리 8](#thm8){: data-lid="gqa0w" }). 이제 [명제 2](#prop2){: data-lid="h13ib" }의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
 
 ::: 명제 9
 $C$가 $A$ 위에서 smooth하면 모든 $C$-module $M$에 대하여
@@ -490,7 +490,7 @@ $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)=\Ext^i_C(\Omega_{C/A},M)=0$$
 
 ## 일반적인 변형이론
 
-지금까지 우리는 affine scheme의 deformation을 다뤘다. [정의 3](#def3){: data-lid="d6dgx" data-relation="required" } 직후의 계산에서 우리는 임의의 square-zero extension
+지금까지 우리는 affine scheme의 deformation을 다뤘다. [정의 3](#def3){: data-lid="d6dgx" } 직후의 계산에서 우리는 임의의 square-zero extension
 
 $$0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$$
 
@@ -504,7 +504,7 @@ $$0\rightarrow M_C\rightarrow C'\rightarrow C\rightarrow0$$
 
 $$\eta:\Rel/\TrivRel\rightarrow M_C$$
 
-를 얻을 수 있으며, 이 때 presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$가 잘 정의되었다. 이 class가 바로 obstruction class로, 우리는 $[\eta]=0$인 것이 이러한 square-zero extension $C'$의 존재성과 동치임을 안다. 이 관점에서 앞선 [정리 8](#thm8){: data-lid="orkga" data-relation="weak" }은 first-order deformation $\xi$를 second order로 lifting하는 특수한 경우의 결과였다. 그럼 obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
+를 얻을 수 있으며, 이 때 presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$가 잘 정의되었다. 이 class가 바로 obstruction class로, 우리는 $[\eta]=0$인 것이 이러한 square-zero extension $C'$의 존재성과 동치임을 안다. 이 관점에서 앞선 [정리 8](#thm8){: data-lid="orkga" }은 first-order deformation $\xi$를 second order로 lifting하는 특수한 경우의 결과였다. 그럼 obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
 
 이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 이를 위해서는 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 data와 obstruction이 나타나는지 밝히고 이들이 하나의 global $\Ext$로 조립되는 과정을 정리한다.
 
@@ -522,7 +522,7 @@ $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 의 쌍 $(X,\iota)$이다. 두 deformation $(X,\iota)$와 $(X',\iota')$이 *isomorphic*이라는 것은 $\iota'\circ(\psi\times_{S'}S)=\iota$를 만족하는 $S'$-isomorphism $\psi:X\rightarrow X'$이 존재하는 것이다. 특히 $S'=S[\epsilon]$인 경우의 deformation을 $X_0$의 $S$ 위 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3){: data-lid="jsfdd" data-relation="required" }을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3){: data-lid="x7z35" data-relation="required" }의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec C'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $C'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $C'$과 tensor하여 얻는 sequence
+이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3){: data-lid="jsfdd" }을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3){: data-lid="x7z35" }의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec C'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $C'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $C'$과 tensor하여 얻는 sequence
 
 $$0\longrightarrow I\otimes_{A'}C'\longrightarrow C'\longrightarrow C'/IC'\longrightarrow0$$
 
@@ -544,13 +544,13 @@ $$\varphi_{ij}:U_i'\vert_{U_{ij}}\xrightarrow{\sim}U_j'\vert_{U_{ij}}$$
 
 $$\widetilde{\LL_{C/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
-을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-lid="983qj" data-relation="required" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
+을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-lid="983qj" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
 
 그럼 이제 $\LL_{X_0/S}$는 derived category의 object이므로, $X_0$ 위의 quasi-coherent module $\mathcal{G}$를 계수로 하는 degree $i$ data는 다음의 식
 
 $$\Hom_{D(\mathcal{O}_{X_0})}(\LL_{X_0/S},\mathcal{G}[i])\cong H^i\bigl(R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
 
-으로 계산된다. 여기서 $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$라는 하나의 complex가 모든 degree의 coefficient data를 함께 담고 있고, shift $\mathcal{G}[i]$는 그중 $i$째 cohomology를 derived category의 morphism set로 읽는 표기이다. ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-lid="bz5fv" data-relation="required" }) 우리는 이를
+으로 계산된다. 여기서 $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$라는 하나의 complex가 모든 degree의 coefficient data를 함께 담고 있고, shift $\mathcal{G}[i]$는 그중 $i$째 cohomology를 derived category의 morphism set로 읽는 표기이다. ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-lid="bz5fv" }) 우리는 이를
 
 $$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qquad T^i(X_0/S)=T^i(X_0/S,\mathcal{O}_{X_0})$$
 
@@ -566,7 +566,7 @@ $$\ob(X_0/S')\in T^2(X_0/S,\mathcal{G})$$
 
 특히 $S'=S[\epsilon]$인 경우, first-order deformation들의 isomorphism class는 $T^1(X_0/S)$와 자연스럽게 일대일 대응하며 trivial deformation은 $0$에 대응한다.
 
-위의 [정리 11](#thm11){: data-lid="z7f7e" data-relation="required" }에서 얻은 불변량 $T^i(X_0/S)$는 cotangent complex의 global $\Ext$로 정의되므로, 각 affine 조각 위에서의 정보를 직접 읽어내기 위해서는 *sheaf Ext*
+위의 [정리 11](#thm11){: data-lid="z7f7e" }에서 얻은 불변량 $T^i(X_0/S)$는 cotangent complex의 global $\Ext$로 정의되므로, 각 affine 조각 위에서의 정보를 직접 읽어내기 위해서는 *sheaf Ext*
 
 $$\sExt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})$$
 
@@ -576,7 +576,7 @@ $$\mathcal{T}_{X_0/S}^q=\sExt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0
 
 는 affine open $U=\Spec C$ 위에서 $\mathcal{T}_{X_0/S}^q(U)\cong T^q(C/A,C)$가 되어, 앞선 절들에서 다루었던 $T^i$들을 그대로 복원한다.
 
-이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="dndnd" data-relation="required" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 homological degree $0,1,2$, 즉 cohomological degree $-2,-1,0$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative homological degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
+이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="dndnd" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 homological degree $0,1,2$, 즉 cohomological degree $-2,-1,0$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative homological degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
 
 $$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Longrightarrow T^{p+q}(X_0/S)$$
 
@@ -590,7 +590,7 @@ $$0\longrightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^1(X_0/S)\long
 가 성립한다.
 :::
 ::: 증명
-[\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-lid="e2vso" data-relation="required" }에 의하여 수렴이 주는 $T^1(X_0/S)$의 filtration은 short exact sequence $0\rightarrow E_\infty^{1,0}\rightarrow T^1(X_0/S)\rightarrow E_\infty^{0,1}\rightarrow0$을 준다. First quadrant 조건에 의하여 $E_\infty^{1,0}=E_2^{1,0}$이고 $E_\infty^{0,1}=\ker(d_2:E_2^{0,1}\rightarrow E_2^{2,0})$이다. 한편 total degree $2$에서는 $E_\infty^{2,0}=E_2^{2,0}/\im d_2$이고, 이는 수렴 filtration의 첫 항 $F^2T^2(X_0/S)\subseteq T^2(X_0/S)$와 isomorphic하다. 이들을 이어 붙이고 $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)$를 대입하면 주어진 exact sequence를 얻는다.
+[\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10){: data-lid="e2vso" }에 의하여 수렴이 주는 $T^1(X_0/S)$의 filtration은 short exact sequence $0\rightarrow E_\infty^{1,0}\rightarrow T^1(X_0/S)\rightarrow E_\infty^{0,1}\rightarrow0$을 준다. First quadrant 조건에 의하여 $E_\infty^{1,0}=E_2^{1,0}$이고 $E_\infty^{0,1}=\ker(d_2:E_2^{0,1}\rightarrow E_2^{2,0})$이다. 한편 total degree $2$에서는 $E_\infty^{2,0}=E_2^{2,0}/\im d_2$이고, 이는 수렴 filtration의 첫 항 $F^2T^2(X_0/S)\subseteq T^2(X_0/S)$와 isomorphic하다. 이들을 이어 붙이고 $E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)$를 대입하면 주어진 exact sequence를 얻는다.
 :::
 
 위의 five-term exact sequence의 각 항은 앞서 살펴본 세 가지 data와 정확하게 일대일 대응한다. 우선 가운데의 canonical morphism $T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 global deformation에서 gluing data를 잊고 각 affine 조각 위의 local deformation class들만 남기는 것이다. 따라서 그 codomain인 $H^0(X_0,\mathcal{T}_{X_0/S}^1)$은 각 조각 위의 local deformation class들 가운데 overlap 위에서 restriction이 서로 compatible한 모임이 된다.
@@ -607,7 +607,7 @@ $$T^i(X_0/S)\cong H^i(X_0,\mathcal{T}_{X_0/S})$$
 이다. 특히 first-order deformation들의 isomorphism class는 $H^1(X_0,\mathcal{T}_{X_0/S})$가 분류한다.
 :::
 ::: 증명
-Smooth한 경우 $\LL_{X_0/S}\simeq\Omega_{X_0/S}$이고 $\Omega_{X_0/S}$가 locally free이므로 $q>0$에서 $\mathcal{T}_{X_0/S}^q=0$이며 $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$이다. 따라서 [정리 12](#thm12){: data-lid="51og8" data-relation="required" }의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
+Smooth한 경우 $\LL_{X_0/S}\simeq\Omega_{X_0/S}$이고 $\Omega_{X_0/S}$가 locally free이므로 $q>0$에서 $\mathcal{T}_{X_0/S}^q=0$이며 $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$이다. 따라서 [정리 12](#thm12){: data-lid="51og8" }의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
 :::
 
 ---

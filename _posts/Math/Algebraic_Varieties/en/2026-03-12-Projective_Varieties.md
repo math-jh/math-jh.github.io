@@ -86,10 +86,10 @@ For homogeneous ideals $\mathfrak{a}, \mathfrak{b}, \mathfrak{a}_i \subseteq \ma
 :::
 
 ::: Proof
-The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4){: data-lid="31hka" data-relation="required" } is that the polynomials considered here are all homogeneous, but the logic of the proof itself is identical, so we omit the proof.
+The only difference from [§Affine Varieties, ⁋Proposition 4](/en/math/algebraic_varieties/affine_varieties#prop4){: data-lid="31hka" } is that the polynomials considered here are all homogeneous, but the logic of the proof itself is identical, so we omit the proof.
 :::
 
-As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are the projective algebraic sets, and using this, we can endow each projective variety with the subspace topology. Similarly, we call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="kry58" data-relation="weak" }.)
+As in the affine case, this shows that there exists a topology on projective space $\mathbb{P}^n$ whose closed sets are the projective algebraic sets, and using this, we can endow each projective variety with the subspace topology. Similarly, we call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties){: data-lid="kry58" }.)
 
 ## Projective Nullstellensatz
 
@@ -171,7 +171,7 @@ then by the homogeneity of $F_j$, for any point with $x_0 \ne 0$,
 
 $$F_j(x_0, x_1, \ldots, x_n) = x_0^{d_j} f_j\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-holds. Therefore, that $[x_0 : \cdots : x_n] \in U_0$ belongs to the zero set of all $F_j$ is equivalent to the condition that, under the homeomorphism $\varphi_0$ of [Proposition 9](#prop9){: data-lid="uu9l3" data-relation="required" }, the point in $\mathbb{A}^n$ corresponding to this point, $(x_1/x_0, \ldots, x_n/x_0)$, belongs to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
+holds. Therefore, that $[x_0 : \cdots : x_n] \in U_0$ belongs to the zero set of all $F_j$ is equivalent to the condition that, under the homeomorphism $\varphi_0$ of [Proposition 9](#prop9){: data-lid="uu9l3" }, the point in $\mathbb{A}^n$ corresponding to this point, $(x_1/x_0, \ldots, x_n/x_0)$, belongs to the zero set of all $f_j$, and from this we obtain $\varphi_0(X \cap U_0) = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$.
 
 It remains to show irreducibility. Since $U_0$ is an open set of $\mathbb{P}^n$, $X \cap U_0$ is an open subset of $X$, and it is nonempty by assumption. Since a nonempty open subset of an irreducible space is irreducible, $X \cap U_0$ is irreducible, and since a homeomorphism preserves irreducibility, $Z(f_1, \ldots, f_k)$ is also irreducible. That is, $X \cap U_0$ is an affine variety.
 :::
@@ -179,7 +179,7 @@ It remains to show irreducibility. Since $U_0$ is an open set of $\mathbb{P}^n$,
 ::: Example 11
 To interpret the above proposition geometrically, let $\mathbb{K}=\mathbb{R}$, and consider in $\mathbb{P}^2$ the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2)$.
 
-This conic is the cone in $\mathbb{A}^3$ given by $\x_0^2 + \x_1^2 = \x_2^2$, expressed in homogeneous coordinates. Then how $X$ looks in the standard open sets can be seen from [Proposition 10](#prop10){: data-lid="hkuap" data-relation="required" }. That is, to see in $U_i$ what $X$ looks like, we simply replace $\x_i$ with $1$ and regard the remaining $n$ variables as coordinates on $\mathbb{A}^n$. In particular, we then obtain the following:
+This conic is the cone in $\mathbb{A}^3$ given by $\x_0^2 + \x_1^2 = \x_2^2$, expressed in homogeneous coordinates. Then how $X$ looks in the standard open sets can be seen from [Proposition 10](#prop10){: data-lid="hkuap" }. That is, to see in $U_i$ what $X$ looks like, we simply replace $\x_i$ with $1$ and regard the remaining $n$ variables as coordinates on $\mathbb{A}^n$. In particular, we then obtain the following:
 
 1. In $U_0, U_1$, $X$ is the hyperbolas $1+y^2-z^2=0$ and $x^2+1-z^2=0$.
 2. In $U_2$, $X$ is the circle $x^2+y^2=1$.
@@ -208,7 +208,7 @@ That is, $C(X)$ is the union of the points that, when all points of $X$ are expr
 :::
 
 ::: Example 13
-For the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$ from [Example 11](#ex11){: data-lid="i3lvi" data-relation="weak" }, the affine cone $C(X)$ is the cone in $\mathbb{A}^3$ given by $\x_0^2 + \x_1^2 = \x_2^2$.
+For the conic $X = Z(\x_0^2 + \x_1^2 - \x_2^2) \subseteq \mathbb{P}^2$ from [Example 11](#ex11){: data-lid="i3lvi" }, the affine cone $C(X)$ is the cone in $\mathbb{A}^3$ given by $\x_0^2 + \x_1^2 = \x_2^2$.
 :::
 
 Then the following holds, and the proofs are not difficult either.
@@ -241,7 +241,7 @@ If $F_0, \ldots, F_m$ are all homogeneous polynomials of the same degree $d$, th
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 
-holds, showing that well-definedness is guaranteed. Meanwhile, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17){: data-lid="867p1" data-relation="weak" }, when, for a morphism $\varphi: X \rightarrow Y$, an inverse function $\psi: Y \rightarrow X$ exists and is also a morphism, we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic*. The following examples are representative morphisms.
+holds, showing that well-definedness is guaranteed. Meanwhile, as in [§Affine Varieties, ⁋Definition 17](/en/math/algebraic_varieties/affine_varieties#def17){: data-lid="867p1" }, when, for a morphism $\varphi: X \rightarrow Y$, an inverse function $\psi: Y \rightarrow X$ exists and is also a morphism, we call $\varphi$ an *isomorphism*, and two projective varieties for which such a $\varphi$ exists are said to be *isomorphic*. The following examples are representative morphisms.
 
 ::: Example 16
 First, if we define the *Veronese embedding* (of degree 2) from $\mathbb{P}^1$ to $\mathbb{P}^2$ by
@@ -264,7 +264,7 @@ is the common zero locus of the three quadratic polynomials
 
 $$\x_0 \x_2 - \x_1^2, \quad \x_0 \x_3 - \x_1 \x_2, \quad \x_1 \x_3 - \x_2^2$$
 
-and is isomorphic to $\mathbb{P}^1$. In fact, if we extend the concept of the Veronese embedding examined in [Example 16](#ex16){: data-lid="0e01t" data-relation="weak" } above to $d=3$, 
+and is isomorphic to $\mathbb{P}^1$. In fact, if we extend the concept of the Veronese embedding examined in [Example 16](#ex16){: data-lid="0e01t" } above to $d=3$, 
 
 $$[x:y]\mapsto [x^3: x^2y: xy^2: y^3]$$
 

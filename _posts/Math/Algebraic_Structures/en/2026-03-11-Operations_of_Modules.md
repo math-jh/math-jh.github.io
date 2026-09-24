@@ -43,7 +43,7 @@ That is, the following holds.
 $\lMod{A}$ is a bicomplete category; in particular, the product of a family $(M_i)$ of $A$-modules is their direct product, and the coproduct is their direct sum.
 :::
 
-Then the direct product preserves kernels, and the direct sum preserves cokernels. ([\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10){: data-lid="o8dw5" data-relation="required" }) In addition, they also satisfy the following proposition.
+Then the direct product preserves kernels, and the direct sum preserves cokernels. ([\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10){: data-lid="o8dw5" }) In addition, they also satisfy the following proposition.
 
 ::: Proposition 2
 Suppose that two families of $A$-modules $(M_i)_{i\in I},(N_i)_{i\in I}$ and linear maps $u_i: M_i \rightarrow N_i$ between them are given, and consider the functions $\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$ and $\prod u_i: \prod M_i \rightarrow \prod N_i$ induced by them. Then the following hold.
@@ -54,13 +54,13 @@ Suppose that two families of $A$-modules $(M_i)_{i\in I},(N_i)_{i\in I}$ and lin
 
 The proof of this is obtained by writing out $\prod u_i$ and $\bigoplus u_i$ directly coordinatewise. In particular, from this proposition we see that the direct product also preserves cokernels, and the direct sum also preserves kernels.
 
-Previously, we observed that for any $M,N\in\lMod{A}$, $\Hom_{\lMod{A}}(M,N)$ is an abelian group. It is easy to check that this addition behaves well with respect to composition, and that the category $\lMod{A}$ is an additive category with the zero module $0$ as a zero object. ([\[Category Theory\] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1){: data-lid="w9t5q" data-relation="weak" })
+Previously, we observed that for any $M,N\in\lMod{A}$, $\Hom_{\lMod{A}}(M,N)$ is an abelian group. It is easy to check that this addition behaves well with respect to composition, and that the category $\lMod{A}$ is an additive category with the zero module $0$ as a zero object. ([\[Category Theory\] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1){: data-lid="w9t5q" })
 
-Moreover, $\lMod{A}$ is an abelian category. ([\[Category Theory\] §Abelian Categories, ⁋Definition 3](/en/math/category_theory/abelian_categories#def3){: data-lid="4vrt6" data-relation="required" }) To verify this, one only needs to check that any monomorphism $u:M \rightarrow N$ is equal to the kernel of its cokernel $N \rightarrow N/M$, and any epimorphism $v:M \rightarrow N$ is equal to the cokernel of its kernel $\ker v$, namely $M \rightarrow M/\ker v$.
+Moreover, $\lMod{A}$ is an abelian category. ([\[Category Theory\] §Abelian Categories, ⁋Definition 3](/en/math/category_theory/abelian_categories#def3){: data-lid="4vrt6" }) To verify this, one only needs to check that any monomorphism $u:M \rightarrow N$ is equal to the kernel of its cokernel $N \rightarrow N/M$, and any epimorphism $v:M \rightarrow N$ is equal to the cokernel of its kernel $\ker v$, namely $M \rightarrow M/\ker v$.
 
 ## Free module
 
-In [§Modules, ⁋Example 5](/en/math/algebraic_structures/modules#ex5){: data-lid="8gr6i" data-relation="required" }, we observed that the ring $A$ has the structure of an $A$-module. Then any $A$-module homomorphism $u:A \rightarrow M$ is uniquely determined by $u(1)$. This is because for any $\alpha\in A$,
+In [§Modules, ⁋Example 5](/en/math/algebraic_structures/modules#ex5){: data-lid="8gr6i" }, we observed that the ring $A$ has the structure of an $A$-module. Then any $A$-module homomorphism $u:A \rightarrow M$ is uniquely determined by $u(1)$. This is because for any $\alpha\in A$,
 
 $$u(\alpha)=u(\alpha\cdot 1)=\alpha\cdot u(1)$$
 
@@ -135,7 +135,7 @@ and
 
 $$\Hom_{\lMod{A}}\left(M,\prod_{i\in I} N_i\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M, N_i),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong \prod_{i\in I}\Hom_{\lMod{A}}(M_i,N)\tag{2}$$
 
-In the special case where $A=\mathbb{Z}$, this recovers the contents of [§Abelian Groups, §§Tensor Product](/en/math/algebraic_structures/abelian_groups#tensor-product){: data-lid="u9eaz" data-relation="weak" }; the above isomorphisms are ones that were omitted in that article for reasons of length.
+In the special case where $A=\mathbb{Z}$, this recovers the contents of [§Abelian Groups, §§Tensor Product](/en/math/algebraic_structures/abelian_groups#tensor-product){: data-lid="u9eaz" }; the above isomorphisms are ones that were omitted in that article for reasons of length.
 
 ## Tensor Products of Modules over Commutative Rings
 
@@ -181,13 +181,13 @@ $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 The functor $\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$ is a representable functor, and its representation is the *$A$-module* $M\otimes_AN$ defined above.
 :::
 
-Since an $A$-bilinear map is in particular $A$-balanced, the correspondence of [Theorem 5](#thm5){: data-lid="kd8a3" data-relation="required" } applies directly, and under this correspondence $f$ being $A$-bilinear is equivalent to $\hat{f}$ being $A$-linear. Indeed,
+Since an $A$-bilinear map is in particular $A$-balanced, the correspondence of [Theorem 5](#thm5){: data-lid="kd8a3" } applies directly, and under this correspondence $f$ being $A$-bilinear is equivalent to $\hat{f}$ being $A$-linear. Indeed,
 
 $$\hat{f}(\alpha(x\otimes_Ay))=\hat{f}((\alpha x)\otimes_Ay)=f(\alpha x,y)=\alpha f(x,y)=\alpha\hat{f}(x\otimes_Ay)$$
 
 and since $M\otimes_AN$ is generated by elements of the form $x\otimes_Ay$, the converse also holds. That is, $\Bilin_A(M,N;L)\cong\Hom_A(M\otimes_AN,L)$.
 
-On the other hand, if $A$ is a general ring then $\Hom_{\lMod{A}}(M,M')$ did not have an $A$-module structure, but if $A$ is a commutative ring then an $A$-module structure also exists on $\Hom_{\lMod{A}}(M,M')$. That is, $\Hom_A$ is an internal $\Hom$, and therefore we can further refine the adjunction of [Theorem 6](#thm6){: data-lid="jq10a" data-relation="required" } to prove the following.
+On the other hand, if $A$ is a general ring then $\Hom_{\lMod{A}}(M,M')$ did not have an $A$-module structure, but if $A$ is a commutative ring then an $A$-module structure also exists on $\Hom_{\lMod{A}}(M,M')$. That is, $\Hom_A$ is an internal $\Hom$, and therefore we can further refine the adjunction of [Theorem 6](#thm6){: data-lid="jq10a" } to prove the following.
 
 ::: Theorem 9
 For a commutative ring $A$, the adjunction
