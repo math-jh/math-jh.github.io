@@ -19,7 +19,7 @@ weight: 4
 
 예를 들어, $\mathbb{A}^3$ 안에서 두 방정식 $\x\y=0$, $\x\z=0$으로 정의되는 공간 $X=Z(\x\y,\x\z)$를 생각하자. 이 방정식은 두 개의 방정식으로 정의되므로, 우리가 기대하는 차원은 $3-2=1$이지만, 이를 실제로 그려보면 $\x=0$을 만족하는 곳, 즉 $\y\z$-평면과, $\y,\z$가 동시에 $0$이 되는 곳, 즉 $\x$축의 합집합이 된다. 이 그림에서 $\x$축 부분은 세 미지수에서 두 방정식이 온전히 작동하여 차원을 깎아내리므로 $1$차원의 공간이 되지만, $\y\z$-평면에서는 이 방정식이 차원을 하나밖에 깎지 못해 실제 차원이 기대 차원보다 하나 부풀어오른다. 뿐만 아니라 이 두 성분이 만나는 원점에서는 방정식의 $1$차 도함수가 모두 $0$이 되므로, tangent space의 차원마저 $3$차원이 된다. 
 
-[§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="31q1v" }에서 우리가 계산한 virtual dimension은 바로 이런 직관을 담아내던, <em-ko>올바른</em-ko> 차원이었다. Stable map moduli에서 tangent space는 stable map이 움직이는 방향, 즉 stable map의 deformation space가 되며 $T^2$가 이를 잘라내는 방정식의 역할을 하게 된다는 것이 정의
+[§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="31q1v" data-relation="required" }에서 우리가 계산한 virtual dimension은 바로 이런 직관을 담아내던, <em-ko>올바른</em-ko> 차원이었다. Stable map moduli에서 tangent space는 stable map이 움직이는 방향, 즉 stable map의 deformation space가 되며 $T^2$가 이를 잘라내는 방정식의 역할을 하게 된다는 것이 정의
 
 $$\vdim=\dim T^1(C,p_\bullet,\mu)-\dim T^2(C,p_\bullet,\mu)$$
 
