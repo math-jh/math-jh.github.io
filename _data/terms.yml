@@ -2066,6 +2066,13 @@ C:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: cartan_s_formula
+  en: 'Cartan''s formula'
+  ko: 카르탕 공식
+  primary: en
+  defs:
+  - label: '[미분다양체] §리 미분'
+    url: /ko/math/manifolds/Lie_derivative
 - id: cartan_subalgebra
   en: Cartan subalgebra
   ko: 카르탕 부분대수
