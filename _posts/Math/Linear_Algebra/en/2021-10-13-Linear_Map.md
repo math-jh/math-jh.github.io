@@ -1,0 +1,271 @@
+---
+title: "Linear Maps"
+description: "We define linear maps as functions between vector spaces that preserve addition and scalar multiplication, and discuss their composition and basic properties."
+excerpt: "Definition and examples of linear maps"
+
+categories: [Math / Linear Algebra]
+permalink: /en/math/linear_algebra/linear_map
+sidebar: 
+    nav: "linear_algebra-en"
+
+
+date: 2021-10-13
+
+weight: 6
+translated_at: 2026-09-24T19:15:06+00:00
+translation_source: antigravity-gemini-3.8-flash-high
+---
+In this post, we define functions between vector spaces, namely *linear maps*.
+
+## Linear Maps
+
+Since vector spaces are fundamentally sets, functions between two vector spaces $V,W$ exist as functions between sets. However, unlike general sets, vector spaces are equipped with addition of elements and scalar multiplication by elements of $\mathbb{K}$, so among the functions between vector spaces (as sets), we are only interested in those that preserve these operations.
+
+::: Definition 1
+Let two $\mathbb{K}$-vector spaces $V,W$ be given. A function $L:V\rightarrow W$ is a *linear map* if both
+
+1. for any $\alpha\in\mathbb{K}$ and $v\in V$, $L(\alpha v)=\alpha L(v)$, and
+2. for any $v_1,v_2\in V$, $L(v_1+v_2)=L(v_1)+L(v_2)$
+
+hold.
+:::
+
+In particular, when $V=W$, we call them *linear operators*. The following propositions are almost immediate from the definition.
+
+::: Proposition 2
+For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
+
+1. $L(0)=0$.
+2. For any $v\in V$, $L(-v)=-L(v)$.
+3. For any $u,v\in V$, $L(u-v)=L(u)-L(v)$.
+:::
+::: Proof
+Since linear maps preserve scalar multiplication, the first and second assertions follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-lid="1y4gg" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-lid="a2sgz" }. Now, since linear maps preserve vector addition, and by the second assertion,
+
+$$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
+
+the third assertion also holds.
+:::
+
+::: Proposition 3
+For two $\mathbb{K}$-vector spaces $V,W$, a linear map $L:V\rightarrow W$, scalars $\alpha_1,\ldots,\alpha_n$, and vectors in $V$, $v_1,\ldots, v_n$,
+
+$$L\left(\sum_{i=1}^n\alpha_i v_i\right)=\sum_{i=1}^nL(\alpha_iv_i)$$
+
+holds.
+:::
+::: Proof
+The case $n=1$ is trivial, and assuming that the claim holds for $n-1$ vectors, since $L$ preserves addition, $L(\sum_{i=1}^n\alpha_iv_i)=L(\sum_{i=1}^{n-1}\alpha_iv_i)+L(\alpha_nv_n)=\sum_{i=1}^nL(\alpha_iv_i)$ holds, which completes the induction on $n$.
+:::
+
+Just as the composition of functions is a function, the composition of linear maps is also a linear map. Furthermore, as we will see later, if a linear map has an inverse function, the inverse function is automatically a linear map.
+
+::: Proposition 4
+For three $\mathbb{K}$-vector spaces $U,V,W$ and linear maps $L_1:U\rightarrow V$, $L_2:V\rightarrow W$, the map $L_2\circ L_1:U\rightarrow W$ is linear.
+:::
+::: Proof
+For any $\alpha\in\mathbb{K}$ and $u\in U$,
+
+$$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(u)))=\alpha(L_2\circ L_1)(u)$$
+
+Similarly, we can prove that $(L_2\circ L_1)(u_1+u_2)=(L_2\circ L_1)(u_1)+(L_2\circ L_1)(u_2)$ holds for the sum of vectors as well.
+:::
+
+## Kernel and Image of a Linear Map
+
+Now we define the following.
+
+::: Definition 5
+For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
+
+1. if $L(v_1)=L(v_2)$ implies $v_1=v_2$, then $L$ is called *injective*;
+2. if for any $w\in W$, $L(v)=w$ holds for some $v\in V$, then $L$ is called *surjective*.
+:::
+
+In general, when dealing with injective or surjective functions, the definition above is practically the only tool available, but when the objects under consideration are not merely sets but equipped with certain operations as in the present situation, algebraic tools can also be used.
+
+::: Definition 6
+For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$, the *kernel* of $L$, $\ker L$, is the set defined by the equation
+
+$$\ker L=\{v\in V\mid L(v)=0\}$$
+
+Also, the *image* of $L$, $\im L$, is the set defined by the equation
+
+$$\im L=\{w\in W\mid L(v)=w\text{ for some $v\in V$}\}$$
+:::
+
+It is not difficult to verify the following.
+
+::: Proposition 7
+For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$, $\ker L\leq V$ and $\im L\leq W$.
+:::
+::: Proof
+First, $\ker L$ is a subspace of $V$. This is because for any $\alpha\in\mathbb{K}$ and $v\in\ker L$,
+
+$$L(\alpha v)=\alpha L(v)=\alpha\cdot 0=0$$
+
+and similarly, for any $v_1$, $v_2\in \ker L$,
+
+$$L(v_1+v_2)=L(v_1)+L(v_2)=0+0=0$$
+
+so that $\alpha v\in\ker L$ and $v_1+v_2\in\ker L$ hold.
+
+Similarly, $\im L$ is a subspace of $W$. If we take any $w,w_1,w_2\in\im L$ and $\alpha\in\mathbb{K}$, by definition
+
+$$L(v)=w,\quad L(v_1)=w_1,\quad L(v_2)=w_2$$
+
+for some $v,v_1,v_2\in V$, and therefore
+
+$$\alpha w=\alpha L(v)=L(\alpha v)\in\im L$$
+
+and
+
+$$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
+
+as well.
+:::
+
+Now, using these $\ker L$ and $\im L$, we can determine whether $L$ is injective or surjective.
+
+::: Proposition 8
+For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$, 
+
+1. $L$ is injective if and only if $\ker L=\{0\}$, and
+2. $L$ is surjective if and only if $\im L=W$.
+:::
+::: Proof
+The second claim is a tautology.
+
+If $L$ is injective, then the element $v$ satisfying $L(v)=0$ must be unique, and since $0$ satisfies this equation by [Proposition 2](#prop2){: data-lid="86c0z" }, we must have $\ker L=\{0\}$. Therefore, for the first claim, it suffices to show only the proposition
+
+> $$\ker L=\{0\}\implies\text{$L$ injective}$$
+
+Suppose $L(v_1)=L(v_2)$ for $v_1,v_2\in V$. Then again by [Proposition 2](#prop2){: data-lid="nwwrp" },
+
+$$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
+
+so $v_1-v_2\in\ker L$. Since $\ker L=\{0\}$, we have $v_1-v_2=0$, and therefore $L$ is injective.
+:::
+
+Speaking less formally, the smaller $\ker L$ is, the closer $L$ is to being injective, and the larger $\im L$ is, the closer $L$ is to being surjective.
+
+::: Corollary 9
+Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be given.
+
+1. If $L$ is injective, then for any linearly independent subset $S\subseteq V$, $L(S)$ is also linearly independent in $W$.
+2. If $L$ is surjective, then for $S\subseteq V$ satisfying $\langle S\rangle=V$, $L(S)$ also satisfies $\langle L(S)\rangle=W$.
+:::
+::: Proof
+1. For elements of $L(S)$, say $L(x_1),\ldots, L(x_k)$, if
+
+    $$\sum_{i=1}^k\alpha_i L(x_i)=0$$
+
+    then by [Proposition 3](#prop3){: data-lid="js08x" },
+
+    $$0=L\left(\sum_{i=1}^k\alpha_ix_i\right)$$
+
+    so by [Proposition 8](#prop8){: data-lid="3qvcb" } we must have $\sum\alpha_ix_i=0$. Now, since $S$ is a linearly independent subset, $\alpha_i=0$ holds for all $i$.
+
+2. Let $w\in W$ be given. Since $\im L=W$, there exists $v\in V$ such that $L(v)=w$. On the other hand, since $\langle S\rangle=V$, we can express $v$ as a linear combination of elements of $S$:
+
+    $$v=\sum_{i=1}^n\alpha_ix_i$$
+    
+    Applying $L$ to both sides and using [Proposition 3](#prop3){: data-lid="kezui" },
+    
+    $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
+    
+    holds. That is, any $w\in W$ can be expressed as a linear combination of elements of $L(S)$.
+:::
+
+In fact, the converses of both claims in the corollary above also hold, and their proofs are not difficult, but we omit them since we will not need them.
+
+## Examples of Linear Maps
+
+::: Example 10
+For any $\mathbb{K}$-vector spaces $V$ and $W$, the formula
+
+$$L(v)=0\text{ for all $v\in V$}$$
+
+defines a linear map $L:V\rightarrow W$. In this case, $\im L=\{0\}$ and $\ker L=V$.
+:::
+
+The function defined in the example above is sometimes denoted by $0$. Although this notation may cause confusion with the additive identity $0$, this function is *actually* the identity element in an appropriate vector space. The proof of this is not difficult, but we postpone it for later.
+
+::: Example 11
+Let a $\mathbb{K}$-vector space $V$ and $W\leq V$ be given. The formula
+
+$$\iota(w)=w\text{ for all $w\in W$}$$
+
+defines a linear map $\iota:W\rightarrow V$. This time, $\im\iota=W$ and $\ker \iota=\{0\}$. That is, $\iota$ is injective.
+:::
+
+In the example above, in the special case where $W=V$, $\iota$ is equal to the identity function $\id_V$. ([\[Set Theory\] §Operations on Functions, ⁋Example 3](/en/math/set_theory/operation_of_functions#ex3){: data-lid="pi15u" }) 
+
+::: Example 12
+Consider arbitrary $\mathbb{K}$-vector spaces $V$, $W$ and their product $V\times W$. Then the formula
+
+$$\pr_1((v,w))=v$$
+
+defines a linear map $\pr_1:V\times W\rightarrow V$. It is easy to verify that $\im\pr_1=V$ and 
+
+$$\ker \pr_1=\{(0,w)\mid w\in W\}$$
+
+Of course, we can define $\pr_2:V\times W\rightarrow W$ similarly, and this can be extended to $n$-tuples as well. In particular, for the Euclidean space $\mathbb{K}^n$, 
+
+$$\pr_i((a_1,\ldots, a_n))=a_i$$
+
+also defines a linear map $\pr_i:\mathbb{K}^n\rightarrow \mathbb{K}$.
+:::
+
+$\pr$ stands for projection, and is often written simply as $p$ or $\pi$.
+
+::: Example 13
+On $\mathbb{K}[\x]$, let us define a function $D:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x]$ by
+
+$$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
+
+(where $(a_i)$ is finitely supported). Then $D$ is linear. Moreover, when $\operatorname{char}\mathbb{K}=0$, we have $\im D= \mathbb{K}[\x]$ and $\ker D$ is the collection of all constant polynomials.
+:::
+
+The last example is not merely an example, but can be thought of as a prototype of the isomorphisms we will explore in the next post.
+
+::: Example 14
+Let $V$ be an arbitrary $n$-dimensional $\mathbb{K}$-vector space, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ be a basis of $V$. That is, for any $v\in V$,
+
+$$v=\sum_{i=1}^n v_i x_i$$
+
+there always exist uniquely determined scalars $v_1,\ldots, v_n$ such that this holds. Therefore, we can define a map $L:V\rightarrow \mathbb{K}^n$ by $v\mapsto (v_1,v_2,\ldots, v_n)\in\mathbb{K}^n$.
+
+Then $L$ is linear. For any $v,w\in V$, if we write
+
+$$v=\sum_{i=1}^n v_i x_i,\quad w=\sum_{i=1}^n w_i x_i$$
+
+then for any $\alpha\in\mathbb{K}$,
+
+$$\alpha L(v)=\alpha(v_1,v_2,\ldots,v_n)=(\alpha v_1,\alpha v_2,\ldots,\alpha v_n)$$
+
+and since
+
+$$\alpha v=\alpha\sum_{i=1}^nv_i x_i=\sum_{i=1}^n\alpha v_i x_i$$
+
+the value of $L(\alpha v)$ is equal to $\alpha L(v)$. Similarly, comparing the values of $L(v)+L(w)$ and $L(v+w)$,
+
+$$L(v)+L(w)=(v_1+w_1,v_2+w_2,\ldots,v_n+w_n)=L(v+w)$$
+
+holds.
+
+Since $\mathcal{B}$ is linearly independent, $\ker L$ is $\{0\}$. On the other hand, for any $(\alpha_1,\ldots,\alpha_n)\in\mathbb{K}^n$, the linear combination
+
+$$\sum_{i=1}^n\alpha_i x_i$$
+
+clearly belongs to $V$, so $L$ is surjective.
+:::
+
+
+---
+
+**References**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
+
+---
