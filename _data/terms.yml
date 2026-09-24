@@ -4580,6 +4580,13 @@ D:
   defs:
   - label: '[가환대수학] §Depth'
     url: /ko/math/commutative_algebra/depth#def3
+- id: derivation
+  en: derivation
+  ko: 미분
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §미분'
+    url: /ko/math/multilinear_algebra/derivations
 - id: derivative
   en: derivative
   ko: 미분계수
