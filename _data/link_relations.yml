@@ -2728,7 +2728,7 @@
 "c4h5h": {relation: required, reviewed: true}
 "c4xkd": {relation: weak}
 "c56rc": {relation: required, reviewed: true}
-"c59fl": {relation: weak}
+"c59fl": {relation: requires-review}
 "c5l4d": {relation: weak}
 "c64ws": {relation: required}
 "c6aco": {relation: required}
