@@ -6337,6 +6337,13 @@ F:
   see:
   - label: Toric variety
     id: toric_variety
+- id: fano_index
+  en: Fano index
+  ko: 파노 지표
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: fano_variety
   en: Fano variety
   ko: 파노 다양체
@@ -12142,6 +12149,13 @@ M:
   defs:
   - label: '[가환대수학] §Fitting 아이디얼'
     url: /ko/math/commutative_algebra/fitting_ideals
+- id: mirror_map
+  en: mirror map
+  ko: 거울 사상
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: mirror_symmetry
   en: mirror symmetry
   ko: 거울 대칭
@@ -19558,6 +19572,13 @@ U:
   defs:
   - label: '[대수적 위상수학] §분류공간'
     url: /ko/math/algebraic_topology/classifying_spaces
+- id: universal_cotangent_line_bundle
+  en: universal cotangent line bundle
+  ko: 보편 여접선다발
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: universal_delta_-functor
   en: universal $\delta$-functor
   ko: 보편 $\delta$-함자
