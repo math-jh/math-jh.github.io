@@ -32,7 +32,7 @@ In a similar vein we revisit properties of the $\Hom$ and $\otimes$ functors, ma
 
 ## Direct Products and Direct Sums
 
-To see how the above adjunction is used, we begin with the most basic example. First, consider the relationship between $\Hom$, $\bigoplus$, and $\prod$. Fix left $A$-modules $M,N$ and families of left $A$-modules $(M_i)_{i\in I}$, $(N_j)_{j\in J}$. Since $\Hom$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-lid="p4a1u" data-relation="required" }) Hence, by [\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10){: data-relation="required" }, we obtain isomorphisms of abelian groups
+To see how the above adjunction is used, we begin with the most basic example. First, consider the relationship between $\Hom$, $\bigoplus$, and $\prod$. Fix left $A$-modules $M,N$ and families of left $A$-modules $(M_i)_{i\in I}$, $(N_j)_{j\in J}$. Since $\Hom$ is a right adjoint, it preserves limits. ([\[Category Theory\] §Adjoint Functors, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9){: data-lid="p4a1u" data-relation="required" }) Hence, by [\[Category Theory\] §Limits, ⁋Theorem 9](/en/math/category_theory/limits#thm9){: data-lid="ejjiz" data-relation="required" }, we obtain isomorphisms of abelian groups
 
 $$\Hom_{\lMod{A}}\left(M, \prod_{j\in J} N_j \right)\cong\prod_{j\in J} \Hom_{\lMod{A}}(M, N_j),\qquad \Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, N\right)\cong\prod_{i\in I}\Hom_{\lMod{A}}(M_i, N)$$
 

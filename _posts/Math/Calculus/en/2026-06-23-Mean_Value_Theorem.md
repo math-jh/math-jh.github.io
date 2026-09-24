@@ -114,7 +114,7 @@ $$\frac{x}{1+x} < \ln(1+x) < x \qquad (x > 0).$$
 
 :::
 
-Meanwhile, by slightly shifting our viewpoint on the equality $f(b) - f(a) = f'(c)(b-a)$ from [Theorem 4](#thm4), we obtain a more quantitative result: the minimum and maximum of $f'(x)$ on $[a,b]$ control the difference of function values.
+Meanwhile, by slightly shifting our viewpoint on the equality $f(b) - f(a) = f'(c)(b-a)$ from [Theorem 4](#thm4){: data-lid="0aups" }, we obtain a more quantitative result: the minimum and maximum of $f'(x)$ on $[a,b]$ control the difference of function values.
 
 ::: Proposition 9
 If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $m \leq f'(x) \leq M$ for all $x$, then

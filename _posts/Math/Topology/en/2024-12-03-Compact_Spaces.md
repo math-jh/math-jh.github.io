@@ -52,7 +52,7 @@ For a Hausdorff space, defined in the previous post, imposing the compact condit
 Let $X$ be a Hausdorff space, let $x$ be a point of $X$, and let $Y$ be a compact subspace of $X$ not containing $x$. Then the two sets $\{x\}$ and $Y$ can be separated by neighborhoods.
 :::
 ::: Proof
-Since $X$ is a Hausdorff space, for each $y\in Y$ there exist an open neighborhood $U_{xy}$ of $x$ and an open neighborhood $V_y$ of $y$ such that $U_{xy}\cap V_y=\emptyset$. Now by [Lemma 3](#lem3){: data-relation="required" } there exists a finite subcover $V_{y_1},\ldots,V_{y_n}$ of $(V_y)_{y\in Y}$ such that
+Since $X$ is a Hausdorff space, for each $y\in Y$ there exist an open neighborhood $U_{xy}$ of $x$ and an open neighborhood $V_y$ of $y$ such that $U_{xy}\cap V_y=\emptyset$. Now by [Proposition 2](#prop2){: data-lid="0vonz" data-relation="required" } there exists a finite subcover $V_{y_1},\ldots,V_{y_n}$ of $(V_y)_{y\in Y}$ such that
 
 $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 

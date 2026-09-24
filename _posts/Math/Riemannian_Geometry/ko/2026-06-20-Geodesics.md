@@ -134,7 +134,7 @@ $$\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = \int_a^b \varphi(t) \lVert 
 이 되어 가정에 모순이다. 따라서 $D_t \dot\gamma \equiv 0$, 즉 $\gamma$는 측지선이다.
 :::
 
-[따름정리 5](#cor5)는 측지선이 정확히 에너지 functional의 Euler-Lagrange 방정식을 푸는 곡선임을 말해 준다. [명제 2](#prop2){: data-lid="3keuw" data-relation="required" }와 결합하면, 측지선은 일정한 속력을 가지므로 (다음 명제) 동시에 길이의 임계 곡선이기도 하다. 다만 측지선이 항상 길이의 *최소화* 곡선인 것은 아니며, 충분히 짧은 구간에서만 그러함을 보일 수 있다.
+[따름정리 5](#cor5){: data-lid="bbvcy" }는 측지선이 정확히 에너지 functional의 Euler-Lagrange 방정식을 푸는 곡선임을 말해 준다. [명제 2](#prop2){: data-lid="3keuw" data-relation="required" }와 결합하면, 측지선은 일정한 속력을 가지므로 (다음 명제) 동시에 길이의 임계 곡선이기도 하다. 다만 측지선이 항상 길이의 *최소화* 곡선인 것은 아니며, 충분히 짧은 구간에서만 그러함을 보일 수 있다.
 
 측지선이 일정한 속력을 갖는다는 사실은 위에서 언급했듯 metric-compatibility의 직접적 귀결이다.
 

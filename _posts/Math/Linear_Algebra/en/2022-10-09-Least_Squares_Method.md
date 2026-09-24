@@ -132,7 +132,7 @@ This is exactly the situation treated by the projection theorem in [§Inner Prod
 For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im A$, among the solutions of the equation $Ax=y$ there exists a unique solution that minimizes the norm, and this is the unique solution belonging to $\im A^t$.
 :::
 ::: Proof
-Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-relation="required" },
+Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 8](/en/math/linear_algebra/bilinear_form#prop8){: data-lid="r4sj1" data-relation="required" },
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 

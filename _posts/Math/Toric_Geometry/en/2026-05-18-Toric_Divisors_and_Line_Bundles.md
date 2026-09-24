@@ -55,7 +55,7 @@ One of our ultimate goals is to compute $\Cl(X_\Sigma)$ explicitly from the comb
 
 By definition this kernel consists of those elements of $\Div_T(X_\Sigma)$ that become $0$ in $\Cl(X_\Sigma)$, i.e. divisors that are *simultaneously torus-invariant and principal*. Thus the problem reduces to asking which rational functions on a toric variety define a torus-invariant principal divisor.
 
-The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subseteq X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-relation="weak" }). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
+The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subseteq X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/affine_toric_varieties#prop11){: data-lid="sx5ti" data-relation="required" }). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 

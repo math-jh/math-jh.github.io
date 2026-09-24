@@ -73,7 +73,7 @@ Density는 한 번 더 쓰면 두 실수 사이에 유리수가 *무한히* 많�
 
 ## 상한의 계산과 활용
 
-상한 성질은 추상적인 존재 단언으로 그치지 않고, 구체적인 집합의 상한을 정의 (i), (ii) 의 두 조건으로 직접 확인하는 데 쓰인다. 어떤 후보 값 $\alpha$가 $\sup S$임을 보이려면, $\alpha$가 upper bound임을 보이고 (모든 $s \in S$에 대해 $s \leq \alpha$), 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$를 찾으면 된다. 이 두 조건은 상한이 집합의 원소가 아닐 수 있다는 점을 곧바로 드러낸다. 가령 $S = [0, 1)$은 $1$을 upper bound로 가지고, $0 < \varepsilon < 1$이면 $1 - \varepsilon/2 \in S$가 $1 - \varepsilon$을 넘으므로 $1$보다 작은 수는 upper bound가 될 수 없어 $\sup S = 1$이지만 $1 \notin S$이다. 같은 일이 수열로 주어진 $S = \{1 - 1/n \mid n \in \mathbb{N}\}$에서도 일어나는데, [정리 4](#thm4) 로 $1/n < \varepsilon$인 $n$을 잡으면 $1 - 1/n > 1 - \varepsilon$이 되어 $\sup S = 1$이지만 어느 항도 $1$에 도달하지 못한다.
+상한 성질은 추상적인 존재 단언으로 그치지 않고, 구체적인 집합의 상한을 정의 (i), (ii) 의 두 조건으로 직접 확인하는 데 쓰인다. 어떤 후보 값 $\alpha$가 $\sup S$임을 보이려면, $\alpha$가 upper bound임을 보이고 (모든 $s \in S$에 대해 $s \leq \alpha$), 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$를 찾으면 된다. 이 두 조건은 상한이 집합의 원소가 아닐 수 있다는 점을 곧바로 드러낸다. 가령 $S = [0, 1)$은 $1$을 upper bound로 가지고, $0 < \varepsilon < 1$이면 $1 - \varepsilon/2 \in S$가 $1 - \varepsilon$을 넘으므로 $1$보다 작은 수는 upper bound가 될 수 없어 $\sup S = 1$이지만 $1 \notin S$이다. 같은 일이 수열로 주어진 $S = \{1 - 1/n \mid n \in \mathbb{N}\}$에서도 일어나는데, [정리 4](#thm4){: data-lid="d8u3j" } 로 $1/n < \varepsilon$인 $n$을 잡으면 $1 - 1/n > 1 - \varepsilon$이 되어 $\sup S = 1$이지만 어느 항도 $1$에 도달하지 못한다.
 
 상한이 집합의 원소일 때 그것을 *최댓값<sub>maximum</sub>*이라 부른다. 위 두 집합처럼 $\sup S$가 항상 $S$의 원소인 것은 아니며, $\sup S \in S$인 경우에만 $\max S$가 존재한다. 예컨대 $[0,1)$을 closed 구간 $[0,1]$로 바꾸면 $\sup [0,1] = 1 \in [0,1]$이 되어 최댓값이 생기고, $\{1 - 1/n\}$에서는 상한 $1$이 빠져 $\max S$가 없는 반면 $\inf S = 0$은 $n = 1$ 항으로 집합에 속해 $\min S = 0$이 존재한다.
 

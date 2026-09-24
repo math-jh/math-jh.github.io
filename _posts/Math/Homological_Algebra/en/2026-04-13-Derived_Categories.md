@@ -161,7 +161,7 @@ Let us define $R\Hom(A, B)$ precisely. View $A$ as $A[0] \in D(\mathcal{A})$ and
 
 $$R\Hom(A, B) = \Hom(P_\bullet, B)$$
 
-is the definition. Here the right-hand side denotes the complex $\Hom(P_\bullet, B)$. Since $P_\bullet \rightarrow A$ is a projective resolution, the definition in [§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-relation="required" } gives $H^i(\Hom(P_\bullet, B)) = \Ext^i(A, B)$.
+is the definition. Here the right-hand side denotes the complex $\Hom(P_\bullet, B)$. Since $P_\bullet \rightarrow A$ is a projective resolution, the definition in [§Ext and Tor](/en/math/homological_algebra/ext_and_tor){: data-lid="vvyi6" data-relation="required" } gives $H^i(\Hom(P_\bullet, B)) = \Ext^i(A, B)$.
 :::
 
 Similarly, one can define the left derived functor of the tensor product as $L(A \otimes B) = A \otimes^L B$, and $\Tor_i(A, B) = H^{-i}(A \otimes^L B)$ holds.

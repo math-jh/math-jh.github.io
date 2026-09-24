@@ -413,7 +413,7 @@ The *Weyl group* of a root system $\Phi$ is the subgroup of $\Aut(\Phi)$ generat
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
-The Weyl group is a finite group. Indeed, $W$ is a subgroup of the orthogonal group of the Euclidean space containing $\Phi$, and since $\Phi$ is a finite set, $W$ is also finite. Also, as checked in [Proposition 12](#prop12){: data-relation="required" }, since the reflection $s_\alpha$ is the reflection in the hyperplane perpendicular to $\alpha$, $W$ has the structure of a Coxeter group.
+The Weyl group is a finite group. Indeed, $W$ is a subgroup of the orthogonal group of the Euclidean space containing $\Phi$, and since $\Phi$ is a finite set, $W$ is also finite. Also, by the third condition of [Definition 9](#def9){: data-lid="3bli7" data-relation="required" }, the reflection $s_\alpha$ is the reflection in the hyperplane perpendicular to $\alpha$, so $W$ has the structure of a Coxeter group.
 
 ::: Example 18
 For $\Phi(A_n)$ examined in [Example 13](#ex13){: data-lid="hy5hp" data-relation="required" }, the reflection $s_{ij}$ corresponds to the transposition swapping the $i$th and $j$th coordinates. Hence $W(\Phi(A_n))\cong S_{n+1}$. For $\Phi(D_n)$ of [Example 14](#ex14){: data-lid="aj3ir" data-relation="required" }, the reflections include both coordinate swaps and sign changes, so $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$.

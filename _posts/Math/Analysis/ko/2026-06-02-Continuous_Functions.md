@@ -33,7 +33,7 @@ $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 이다. 따라서 $(y_n)$이 $f(K)$ 안의 점으로 수렴하는 부분수열을 가지므로 $f(K)$는 점렬컴팩트이다.
 :::
 
-증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1){: data-lid="yk7ri" data-relation="required" reviewed="" }은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 compactness와 달리 닫힘이나 boundedness는 연속함수가 보존하지 않음을 유의해야 한다. 가령 $f(x) = \arctan x$는 닫힌집합 $\mathbb{R}$를 닫혀 있지 않은 열린구간 $(-\pi/2, \pi/2)$로 보내고, $g(x) = 1/x$는 bounded인 집합 $(0, 1]$을 bounded가 아닌 image $[1, \infty)$로 보낸다. Compactness가 닫힘과 bounded의 결합이라는 [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
+증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1){: data-lid="yk7ri" data-relation="required" reviewed="" }은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 compactness와 달리 닫힘이나 boundedness는 연속함수가 보존하지 않음을 유의해야 한다. 가령 $f(x) = \arctan x$는 닫힌집합 $\mathbb{R}$를 닫혀 있지 않은 열린구간 $(-\pi/2, \pi/2)$로 보내고, $g(x) = 1/x$는 bounded인 집합 $(0, 1]$을 bounded가 아닌 image $[1, \infty)$로 보낸다. Compactness가 닫힘과 bounded의 결합이라는 [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2){: data-lid="jkr78" }를 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
 
 ## 최대·최소 정리
 
