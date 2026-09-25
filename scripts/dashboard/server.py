@@ -54,7 +54,7 @@ HOLDS_STATE = f"{STATE}/dependency-classifier-holds.json"
 HOLDS_LOCK = "/tmp/dependency-classifier-holds.lock"
 QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
-CACHE_TTL = 45
+CACHE_TTL = 90    # 헬스체크(1분 주기)가 캐시 미스로 풀빌드를 유발하지 않게 주기보다 길게
 
 # 색인 요청 추천 순위는 index-monitor 와 **같은 모듈**을 쓴다. 규칙을 여기 복제하면
 # inspect_monitor 가 순위를 바꿀 때 대시보드만 조용히 옛 규칙으로 남는다.
@@ -730,9 +730,33 @@ def link_rank(ident, item):
     return hit[1].get(ident, -1)
 
 
+_linkaudit_cache = {"sig": None, "items": None}
+
+
+def _linkaudit_signature(holds):
+    """보류 원장·관계 원장·보류 항목이 가리키는 글들의 mtime. 하나라도 바뀌면 재계산."""
+    paths = [HOLDS_STATE, str(_ledger.PATH)]
+    paths += sorted({os.path.join(ROOT, it.get("path") or "") for it in holds["held"].values()})
+    return tuple(mtime(x) for x in paths)
+
+
 def sec_link_audit():
-    """의존성 링크 분류의 1차 ↔ 2차 불일치로 판정 태그가 없는(requires-review) 링크."""
+    """의존성 링크 분류의 1차 ↔ 2차 불일치로 판정 태그가 없는(requires-review) 링크.
+
+    항목 계산(원장 파싱·글 재파싱)은 요청당 수 초라 입력 파일 mtime 으로 캐시한다.
+    uncommitted·undo 는 싸고 git 상태에 달려 있어 매번 새로 본다.
+    """
     holds = load_holds()
+    sig = _linkaudit_signature(holds)
+    if _linkaudit_cache["items"] is None or _linkaudit_cache["sig"] != sig:
+        _linkaudit_cache.update(sig=sig, items=_linkaudit_items(holds))
+    items = _linkaudit_cache["items"]
+    return dict(held=items, settled=len(holds["settled"]),
+                ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
+                uncommitted=ledger_dirty(), undo=last_undoable(holds))
+
+
+def _linkaudit_items(holds):
     records = _ledger.load()
     by_path = posts_indexed()["by_path"]
     items = []
@@ -764,9 +788,7 @@ def sec_link_audit():
     items.sort(key=lambda x: (x["pair"] not in ready_pairs, x["pair"], x["_lang"], x["line"]))
     for x in items:
         del x["_lang"]
-    return dict(held=items, settled=len(holds["settled"]),
-                ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
-                uncommitted=ledger_dirty(), undo=last_undoable(holds))
+    return items
 
 
 def sec_comment_prs():
