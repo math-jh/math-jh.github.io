@@ -28,6 +28,7 @@ import os
 import re
 import subprocess
 import sys
+import threading
 import time
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -54,7 +55,7 @@ HOLDS_STATE = f"{STATE}/dependency-classifier-holds.json"
 HOLDS_LOCK = "/tmp/dependency-classifier-holds.lock"
 QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
-CACHE_TTL = 90    # 헬스체크(1분 주기)가 캐시 미스로 풀빌드를 유발하지 않게 주기보다 길게
+CACHE_TTL = 45    # 만료 후 첫 요청은 옛 값을 받고 갱신은 백그라운드 (summary_cached)
 
 # 색인 요청 추천 순위는 index-monitor 와 **같은 모듈**을 쓴다. 규칙을 여기 복제하면
 # inspect_monitor 가 순위를 바꿀 때 대시보드만 조용히 옛 규칙으로 남는다.
@@ -1031,11 +1032,33 @@ def build_summary():
     )
 
 
+_refresh_lock = threading.Lock()
+
+
+def _refresh_summary():
+    started = time.time()
+    try:
+        data = build_summary()
+    finally:
+        _refresh_lock.release()
+    # 도는 동안 버튼이 무효화(ts=0)했거나 동기 빌드가 더 새 값을 넣었으면 버린다.
+    if 0 < _cache["ts"] < started:
+        _cache.update(data=data, ts=started)
+
+
 def summary_cached():
+    """TTL 만료는 옛 값을 바로 주고 백그라운드에서 갱신한다 (stale-while-revalidate).
+
+    요약 계산은 원장이 바뀐 직후 수 초가 걸려, 1분마다 4초 타임아웃으로 찌르는
+    pi-health-monitor 가 그 계산을 떠안으면 거짓 "대시보드 중단"이 난다.
+    판정·커밋 버튼과 ?fresh 가 ts 를 0 으로 만든 경우만 기다렸다가 새 값을 준다.
+    """
     now = time.time()
-    if _cache["data"] is None or now - _cache["ts"] > CACHE_TTL:
+    if _cache["data"] is None or _cache["ts"] == 0:
         _cache["data"] = build_summary()
         _cache["ts"] = now
+    elif now - _cache["ts"] > CACHE_TTL and _refresh_lock.acquire(blocking=False):
+        threading.Thread(target=_refresh_summary, daemon=True).start()
     return _cache["data"]
 
 
