@@ -8510,6 +8510,13 @@ H:
   defs:
   - label: '[환론] §다항식환'
     url: /ko/math/ring_theory/polynomial_rings
+- id: homogeneous_polynomial_mapping
+  en: homogeneous polynomial mapping
+  ko: 동차다항식 사상
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §대칭텐서'
+    url: /ko/math/multilinear_algebra/symmetric_tensors
 - id: homogeneous_prime_ideal
   en: homogeneous prime ideal
   ko: 동차 소아이디얼
@@ -18458,6 +18465,13 @@ S:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
+- id: symmetrization
+  en: symmetrization
+  ko: 대칭화
+  primary: ko
+  defs:
+  - label: '[다중선형대수학] §대칭텐서'
+    url: /ko/math/multilinear_algebra/symmetric_tensors
 - id: symplectic
   en: symplectic
   ko: 싱플렉틱
@@ -20317,6 +20331,14 @@ W:
   defs:
   - label: '[미적분학] §선적분'
     url: /ko/math/calculus/line_integrals
+Y:
+- id: young_diagram
+  en: Young diagram
+  ko: 영 다이어그램
+  primary: en
+  defs:
+  - label: '[대수다양체] §그라스만 다양체'
+    url: /ko/math/algebraic_varieties/grassmannians
 Z:
 - id: zariski_tangent_space
   en: Zariski tangent space
