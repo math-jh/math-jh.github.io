@@ -2695,7 +2695,7 @@
 "c0a76": {relation: required, reviewed: true}
 "c0ejv": {relation: required}
 "c0fvb": {relation: required}
-"c0h8n": {relation: requires-review}
+"c0h8n": {relation: weak, reviewed: true}
 "c0rt6": {relation: required, reviewed: true}
 "c0wkx": {relation: required, reviewed: true}
 "c0xi4": {relation: required, reviewed: true}
@@ -5169,7 +5169,7 @@
 "n5mor": {relation: required, reviewed: true}
 "n5nm9": {relation: required}
 "n5oyz": {relation: required, reviewed: true}
-"n5zii": {relation: requires-review}
+"n5zii": {relation: required, reviewed: true}
 "n623r": {relation: required}
 "n68tr": {relation: required, reviewed: true}
 "n6odi": {relation: required}
