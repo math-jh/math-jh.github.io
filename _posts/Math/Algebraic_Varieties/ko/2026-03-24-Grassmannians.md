@@ -63,7 +63,7 @@ $$A = \begin{pmatrix} I_k & B \end{pmatrix}$$
 
 이 증명에서 보듯, $U_I$에서의 coordinate system은 $k(n-k)$개의 자유로운 parameter들이다. 이들은 $W$를 나타내는 행렬에서 "non-trivial한 부분"에 해당한다. 즉, $I$가 정의하는 $k \times k$ block이 identity로 고정된 후, 나머지 $k \times (n-k)$ block이 자유롭게 변할 수 있다. 
 
-그럼 임의의 $W\in \Gr(k,V)$에 대하여 $W$를 포함하는 affine open cover가 존재함은 자명하다. 뿐만 아니라 $U_I$에서 $U_J$로의 transition map 또한 regular map이라는 것이 자명하므로, 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어지며 각 $U_I$는 이 구조에서 열린집합이 된다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
+그럼 임의의 $W\in \Gr(k,V)$에 대하여 $W$를 포함하는 affine open set $U_I$가 존재함은 자명하며, 이들의 모임 $\{U_I\}$이 affine open cover를 이루는 것도 보일 수 있다. 뿐만 아니라 $U_I$에서 $U_J$로의 transition map 또한 regular map이라는 것이 자명하므로, 이를 통해 $\Gr(k,V)$ 위에 variety 구조가 주어지며 각 $U_I$는 이 구조에서 열린집합이 된다. 물론 이것이 quasi-projective임을 보이기 위해서는 명시적인 projective embedding이 필요하지만, 우선은 다음이 성립한다. 
 
 ::: 명제 5
 $\dim \Gr(k, V) = k(n - k)$이다.

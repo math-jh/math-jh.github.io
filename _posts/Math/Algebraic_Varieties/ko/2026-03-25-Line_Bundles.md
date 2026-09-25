@@ -17,7 +17,7 @@ weight: 10
 
 우리는 앞선 글에서 variety $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11){: data-lid="2pye9" }), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 homogeneous polynomial의 zero set으로 나온다.
 
-이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
+이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 nonzero section들이 $D$와 linearly equivalent한 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
 ## Line Bundle의 정의
 
@@ -42,7 +42,7 @@ $$\varphi_k \colon \mathcal{O}_{U_k} \rightarrow \mathcal{O}_{U_k}$$
 
 으로 표현될 수 있고, 이들 사이에
 
-$$g^{\mathcal{L}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{M}}_{kl}$$
+$$g^{\mathcal{M}}_{kl} \circ \varphi_k = \varphi_l \circ g^{\mathcal{L}}_{kl}$$
 
 이 성립한다. Line bundle의 fiber는 1차원이므로, 각 $\varphi_k$는 적당한 $h_k \in \mathcal{O}_X(U_k)$에 의한 곱셈 $s \mapsto h_k s$로 주어진다. $\varphi$가 각 fiber에서 bijective일 때, 이를 *isomorphism*이라 부르고 $\mathcal{L} \cong \mathcal{M}$으로 표기한다. Fiber가 1차원이므로 이는 각 점에서 nonzero scalar를 주는 것과 같으며, 즉 compatible하게 $h_k \in \mathcal{O}_X(U_k)^\ast$를 선택하는 것과 동치이다.
 
@@ -370,11 +370,11 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 ::: 정의 25
 Grassmannian $\Gr(k, n)$ 위에 다음 두 vector bundle을 정의한다.
 
-1. *Tautological bundle* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
+1. *Tautological bundle* $S$. 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
-2. *Quotient bundle<sub>몫다발</sub>* $Q$: 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
-   $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
+2. *Quotient bundle<sub>몫다발</sub>* $Q$. 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
+   $$Q = \{([V], [w]) \in (\Gr(k, n) \times \mathbb{A}^n) / S \mid [w] \in \mathbb{A}^n / V\}$$
 :::
 
 이들 사이에는 자연스러운 short exact sequence가 존재한다.

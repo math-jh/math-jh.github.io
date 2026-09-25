@@ -1,6 +1,6 @@
 ---
 title: "거듭제곱근 가해성"
-description: "1의 거듭제곱근과 순환확대의 구조를 살펴본 후, 다항식이 거듭제곱근으로 풀리는 것과 갈루아 군이 가해군인 것이 동치라는 갈루아의 정리를 증명한다."
+description: "Root of unity와 순환확대의 구조를 살펴본 후, 다항식이 거듭제곱근으로 풀리는 것과 갈루아 군이 가해군인 것이 동치라는 갈루아의 정리를 증명한다."
 excerpt: "Solvability by radicals와 solvable Galois group"
 
 categories: [Math / Field Theory]
@@ -15,15 +15,13 @@ published: false
 
 ---
 
-[§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="yg29v" }의 서두에서 우리는 다항식의 해들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" }로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 해를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
+갈루아 이론을 관통하는 철학은, algebraic extension에 필요한 다항식이 주어졌을 때, 이 해들을 서로 교환하는 action을 통해 group을 만들고, 이를 통해 extension들을 분류하겠다는 것이다. 이 철학은 [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" }에서 마침내 완성하였으므로, 우리는 이번 글에서 이 이론의 역사적인 출발점, 즉 $5$차방정식의 비가해성을 살펴본다. 
 
-::: remark 참고 {#rmk}
-이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. Characteristic $p$에서의 가해성 이론은 separability와 관련된 추가적인 논의를 필요로 하므로 여기서는 다루지 않는다.
-:::
+이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. 이 가정은 characteristic $p$에서 필요한 separability와 관련된 별도의 논의를 피하게 해 주어 우리 글의 목적을 더 선명하게 드러내준다. 
 
-## 1의 거듭제곱근
+## Root of unity
 
-거듭제곱근을 다루기 위한 첫 번째 재료는 1의 거듭제곱근들이다. 우선 다음의 일반적인 보조정리를 살펴보자.
+거듭제곱근을 다루기 위한 첫 번째 재료는 root of unity들이다. 우선 다음의 일반적인 보조정리를 살펴보자.
 
 ::: 보조정리 1
 Field $\mathbb{K}$의 multiplicative group $\mathbb{K}^\times$의 임의의 finite subgroup $G$는 cyclic group이다.
@@ -37,7 +35,7 @@ $\lcm(r,s)$를 소인수분해하여 각 소인수의 거듭제곱 $p^e$마다, 
 :::
 
 ::: 정의 2
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 해들의 모임을 $\mu_n$으로 적고 그 원소들을 *1의 $n$제곱근<sub>$n$-th root of unity</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 해들의 모임을 $\mu_n$으로 적고 그 원소들을 *$n$-th root of unity<sub>1의 $n$제곱근</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
 :::
 
 이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="cxa1d" }에 의해 $\x^n-1$은 중근을 갖지 않고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\lvert\mu_n\rvert=n$이다. 그럼 [보조정리 1](#lem1){: data-lid="yaj29" }에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
@@ -57,7 +55,7 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 
 ## 순환확대와 거듭제곱근
 
-거듭제곱근을 하나 추가하는 extension과 cyclic Galois group을 갖는 extension이, 1의 거듭제곱근이 충분히 있다면 같은 것임을 살펴본다. 이번 절에서 $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
+거듭제곱근을 하나 추가하는 extension과 cyclic Galois group을 갖는 extension이, root of unity가 충분히 있다면 같은 것임을 살펴본다. 이번 절에서 $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
 
 ::: 명제 4
 $a\in\mathbb{K}^\times$와, $\alpha^n=a$를 만족하는 $\alpha\in\overline{\mathbb{K}}$에 대하여 $\mathbb{K}(\alpha)/\mathbb{K}$는 finite degree Galois extension이고, 그 Galois group은 $n$을 나누는 order의 cyclic group이다.
@@ -104,25 +102,23 @@ Field들의 chain
 
 $$\mathbb{K}=\mathbb{K}_0\subseteq\mathbb{K}_1\subseteq\cdots\subseteq\mathbb{K}_r$$
 
-이 *거듭제곱근 탑<sub>radical tower</sub>*이라는 것은 각각의 $i$마다 적당한 $\alpha_i\in\mathbb{K}_{i+1}$와 자연수 $n_i\geq1$이 존재하여 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$이고 $\alpha_i^{n_i}\in\mathbb{K}_i$인 것이다. 다항식 $f\in\mathbb{K}[\x]$가 *거듭제곱근으로 풀린다<sub>solvable by radicals</sub>*는 것은 $f$의 splitting field $\mathbb{L}_f$가 어떤 거듭제곱근 탑의 가장 위의 field $\mathbb{K}_r$에 포함되는 것이다.
+이 *radical tower<sub>거듭제곱근 탑</sub>*이라는 것은 각각의 $i$마다 적당한 $\alpha_i\in\mathbb{K}_{i+1}$와 자연수 $n_i\geq1$이 존재하여 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$이고 $\alpha_i^{n_i}\in\mathbb{K}_i$인 것이다. 다항식 $f\in\mathbb{K}[\x]$가 *거듭제곱근으로 풀린다<sub>solvable by radicals</sub>*는 것은 $f$의 splitting field $\mathbb{L}_f$가 어떤 radical tower의 가장 위의 field $\mathbb{K}_r$에 포함되는 것이다.
 :::
 
 즉 $f$가 거듭제곱근으로 풀린다는 것은, $f$의 모든 해를 $\mathbb{K}$의 원소들로부터 시작하여 사칙연산과 거듭제곱근을 유한 번 취하는 것으로 표현할 수 있다는 것이다.
 
-::: 참고 7
 여기서의 radical tower는 [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="mkven" }의 $p$-radical extension과는 별개의 개념이다. 후자는 characteristic $p$에서 Frobenius와 관련된 inseparability를 다루는 개념이고, 전자는 임의의 거듭제곱근을 추가하는 조작이다. 영문 문헌에서 둘 모두 radical이라는 단어를 사용하므로 주의해야 한다.
-:::
 
 다음의 군론적 보조정리들을 준비하자. Solvable group의 정의와 기본 성질은 [\[군론\] §군의 열](/ko/math/group_theory/series_of_groups){: data-lid="qi97l" }에서 가져온다.
 
-::: 보조정리 8
+::: 보조정리 7
 Solvable group의 subgroup과 quotient group은 solvable이다.
 :::
 ::: 증명
 Derived series를 $D_n$으로 적자. $H\leq G$에 대하여 inclusion $H \hookrightarrow G$에 [\[군론\] §군의 열, ⁋명제 10](/ko/math/group_theory/series_of_groups#prop10){: data-lid="dy2sk" }을 적용하면 $D_n(H)\subseteq D_n(G)$이므로, $D_{n+1}(G)=\{e\}$라면 $D_{n+1}(H)=\{e\}$이다. 한편 surjection $\pi:G \rightarrow Q$에 대하여 같은 명제에 의해 $D_n(Q)=\pi(D_n(G))$이므로 $D_{n+1}(G)=\{e\}$라면 $D_{n+1}(Q)=\{e\}$이다. ([\[군론\] §군의 열, ⁋정의 11](/ko/math/group_theory/series_of_groups#def11){: data-lid="yibhz" })
 :::
 
-::: 보조정리 9
+::: 보조정리 8
 Finite solvable group $G$는 모든 quotient가 cyclic인 subnormal series
 
 $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
@@ -141,7 +137,7 @@ $$G=D_0(G)\supseteq D_1(G)\supseteq\cdots\supseteq D_{n+1}(G)=\{e\}$$
 
 이제 Galois의 정리를 증명할 준비가 되었다.
 
-::: 정리 10 (Galois)
+::: 정리 9 (Galois)
 Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그리고 $f$의 splitting field $\mathbb{L}_f$에 대하여, 다음이 동치이다.
 
 1. $f$가 거듭제곱근으로 풀린다.
@@ -152,9 +148,9 @@ Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그�
 
 **(2)$\implies$(1)** $G=\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert G\rvert$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
 
-우선 $H=\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in H$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $H \rightarrow G$가 잘 정의되며, $\sigma\in H$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $H$는 solvable group $G$의 subgroup과 isomorphic하므로 [보조정리 8](#lem8){: data-lid="9iftl" }에 의해 solvable이다.
+우선 $H=\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in H$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $H \rightarrow G$가 잘 정의되며, $\sigma\in H$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $H$는 solvable group $G$의 subgroup과 isomorphic하므로 [보조정리 7](#lem7){: data-lid="9iftl" }에 의해 solvable이다.
 
-이제 [보조정리 9](#lem9){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series $H=H_0\supseteq\cdots\supseteq H_r=\{e\}$가 존재한다. $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이다. 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }의 대응으로 fixed field들
+이제 [보조정리 8](#lem8){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series $H=H_0\supseteq\cdots\supseteq H_r=\{e\}$가 존재한다. $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이다. 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }의 대응으로 fixed field들
 
 $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}',\qquad \mathbb{F}_i=\mathbb{L}'^{H_i}$$
 
@@ -168,25 +164,25 @@ $$\Gal(\mathbb{F}_i/\mathbb{F}_{i-1})\cong H_{i-1}/H_i$$
 
 $$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}'$$
 
-은 거듭제곱근 탑이고, $\mathbb{L}_f\subseteq\mathbb{L}'$이므로 $f$는 거듭제곱근으로 풀린다.
+은 radical tower이고, $\mathbb{L}_f\subseteq\mathbb{L}'$이므로 $f$는 거듭제곱근으로 풀린다.
 
-**(1)$\implies$(2)** 거듭제곱근 탑 $\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 그 데이터를 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$라 하자. $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택하자.
+**(1)$\implies$(2)** Radical tower $\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 그 데이터를 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$라 하자. $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택하자.
 
 우선 탑을 키워 Galois extension으로 만든다. $E=\mathbb{K}_r(\zeta)$로 두면
 
 $$\mathbb{K}\subseteq\mathbb{K}(\zeta)\subseteq\mathbb{K}_1(\zeta)\subseteq\cdots\subseteq\mathbb{K}_r(\zeta)=E$$
 
-는 다시 거듭제곱근 탑이고 ($\zeta^n=1\in\mathbb{K}$, 그리고 각 단계는 $\alpha_i$를 추가하는 것), $E/\mathbb{K}$는 finite degree extension이다. $u_1=\id,u_2,\ldots,u_s$를 $E$에서 $\overline{\mathbb{K}}$로의 서로 다른 $\mathbb{K}$-homomorphism들 전부라 하자. 이들은 유한 개인데, 그 개수가 separable degree $[E:\mathbb{K}]_s$와 같기 때문이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="bnpwu" }) 이제
+는 다시 radical tower이고 ($\zeta^n=1\in\mathbb{K}$, 그리고 각 단계는 $\alpha_i$를 추가하는 것), $E/\mathbb{K}$는 finite degree extension이다. $u_1=\id,u_2,\ldots,u_s$를 $E$에서 $\overline{\mathbb{K}}$로의 서로 다른 $\mathbb{K}$-homomorphism들 전부라 하자. 이들은 유한 개인데, 그 개수가 separable degree $[E:\mathbb{K}]_s$와 같기 때문이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="bnpwu" }) 이제
 
 $$\mathbb{N}=\mathbb{K}\bigl(u_1(E)\cup\cdots\cup u_s(E)\bigr)$$
 
 으로 정의하자. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $v$에 대하여 $v\circ u_j$들도 $E$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism들이므로 $v$는 $u_j(E)$들을 permute하고, 따라서 $v(\mathbb{N})=\mathbb{N}$이다. 즉 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="v0jwu" }에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이고, characteristic $0$이므로 finite degree Galois extension이다.
 
-다음으로 $\mathbb{N}$도 거듭제곱근 탑을 갖는다는 것을 확인하자. 각각의 $u_j$에 대하여 $u_j(E)$는 $\mathbb{K}$ 위에서 원소들 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되는데, $u_j(\zeta)\in\mu_n$이고
+다음으로 $\mathbb{N}$도 radical tower를 갖는다는 것을 확인하자. 각각의 $u_j$에 대하여 $u_j(E)$는 $\mathbb{K}$ 위에서 원소들 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되는데, $u_j(\zeta)\in\mu_n$이고
 
 $$u_j(\alpha_i)^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)$$
 
-이다. 따라서 $\mathbb{K}(\zeta)$에서 시작하여 $u_1(E)$의 generator들, $u_2(E)$의 generator들, $\ldots$을 차례로 추가하면, 각 단계에서 추가되는 원소의 거듭제곱이 항상 그 이전까지 만들어진 field에 속하므로 ($u_j(\zeta)\in\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}(\zeta)$이고 위의 식), 이는 $\mathbb{K}$에서 $\mathbb{N}$까지의 거듭제곱근 탑
+이다. 따라서 $\mathbb{K}(\zeta)$에서 시작하여 $u_1(E)$의 generator들, $u_2(E)$의 generator들, $\ldots$을 차례로 추가하면, 각 단계에서 추가되는 원소의 거듭제곱이 항상 그 이전까지 만들어진 field에 속하므로 ($u_j(\zeta)\in\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}(\zeta)$이고 위의 식), 이는 $\mathbb{K}$에서 $\mathbb{N}$까지의 radical tower
 
 $$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{T}_1\subseteq\mathbb{T}_2\subseteq\cdots\subseteq\mathbb{T}_t=\mathbb{N}$$
 
@@ -202,12 +198,10 @@ $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 
 는 abelian이다. 따라서 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12){: data-lid="ril7l" }에 의하여 $\Gal(\mathbb{N}/\mathbb{K})$는 solvable group이다.
 
-마지막으로 $\mathbb{L}_f\subseteq E\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [보조정리 8](#lem8){: data-lid="56hfy" }에 의해 solvable이다.
+마지막으로 $\mathbb{L}_f\subseteq E\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [보조정리 7](#lem7){: data-lid="56hfy" }에 의해 solvable이다.
 :::
 
-::: 참고 11
-[정리 10](#thm10){: data-lid="vb0j9" }으로부터 5차 이상의 일반 방정식에 대한 근의 공식이 존재하지 않는다는 Abel–Ruffini 정리가 따라나온다. 실제로 $S_5$는 solvable이 아닌데, 만일 solvable이라면 [보조정리 8](#lem8){: data-lid="ufj9m" }에 의해 그 subgroup $A_5$도 solvable이어야 하지만, $A_5$는 abelian이 아닌 simple group이므로 ([\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="49suh" }) derived subgroup이 자명해질 수 없기 때문이다. 따라서 Galois group이 $S_5$가 되는 다항식, 가령 $\mathbb{Q}$ 위의 적당한 5차 다항식은 거듭제곱근으로 풀리지 않는다. 구체적인 다항식의 Galois group을 계산하는 일은 그 자체로 별도의 주제이므로 여기서 다루지는 않는다.
-:::
+[정리 9](#thm9){: data-lid="vb0j9" }으로부터 5차 이상의 일반 방정식에 대한 근의 공식이 존재하지 않는다는 Abel–Ruffini 정리가 따라나온다. 실제로 $S_5$는 solvable이 아닌데, 만일 solvable이라면 [보조정리 7](#lem7){: data-lid="ufj9m" }에 의해 그 subgroup $A_5$도 solvable이어야 하지만, $A_5$는 abelian이 아닌 simple group이므로 ([\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="49suh" }) derived subgroup이 자명해질 수 없기 때문이다. 따라서 Galois group이 $S_5$가 되는 다항식, 가령 $\mathbb{Q}$ 위의 적당한 5차 다항식은 거듭제곱근으로 풀리지 않는다. 구체적인 다항식의 Galois group을 계산하는 일은 그 자체로 별도의 주제이므로 여기서 다루지는 않는다.
 
 ---
 

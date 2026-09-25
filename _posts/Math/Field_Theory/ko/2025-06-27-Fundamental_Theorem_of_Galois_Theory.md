@@ -81,7 +81,7 @@ $$\sigma(\omega)=\frac{\sigma(\omega\alpha)}{\sigma(\alpha)}=\frac{\omega^2\alph
 
 뿐만 아니라, 위에서 확인한 고정원소로부터 이들이 구체적으로 어떤 extension인지도 구할 수 있다. $A_3$의 원소들이 $\omega$를 고정하므로 $k(A_3)$는 $\mathbb{Q}(\omega)$를 포함하는데, $\omega$의 minimal polynomial이 $\x^2+\x+1$이라 양쪽 모두 $\mathbb{Q}$ 위에서 degree $2$이고 따라서 이들은 같다. 마찬가지로 $\omega^i\alpha$를 고정하는 order $2$의 subgroup의 fixed field는 $\mathbb{Q}(\omega^i\alpha)$를 포함하며, $\omega^i\alpha$가 irreducible polynomial $\x^3-2$의 해이므로 양쪽 모두 degree $3$이 되어 이들도 같다.
 
-한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$, 혹은 $\omega^2$를 포함하며, 따라서 어느 쪽이든 $\omega$를 포함하게 되어 $\mathbb{L}$ 전체가 된다. 따라서 위에서 구한 degree $3$짜리 세 field $\mathbb{Q}(\omega^i\alpha)$들은 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함하므로, [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s82q0" }의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 quasi-Galois extension이 아니다. 그럼에도 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다.
+한편 $\x^3-2$의 서로 다른 두 해를 함께 포함하는 field는 그 비인 $\omega$, 혹은 $\omega^2$를 포함하며, 따라서 어느 쪽이든 $\omega$를 포함하게 되어 $\mathbb{L}$ 전체가 된다. 따라서 위에서 구한 degree $3$짜리 세 field $\mathbb{Q}(\omega^i\alpha)$들은 서로 다르며 각각 $\x^3-2$의 해를 하나씩만 포함한다.
 :::
 
 이제 [정리 1](#thm1){: data-lid="tkhm2" }의 서술에 등장하는 closed 조건이 왜 필요한지를 보여주는 예시를 살펴보자. Galois group이 무한할 때에는 subgroup 전체가 아니라 그중 closed인 것만이 subextension과 대응한다.
@@ -139,7 +139,7 @@ $$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
 마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $g(\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="6q8iy" }과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1){: data-lid="pvj98" }에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
 :::
 
-[예시 4](#ex4){: data-lid="veolq" }의 order $2$인 세 subgroup은 서로 conjugate이므로 normal이 아니며, 실제로 이들에 대응하는 $\mathbb{Q}(\omega^i\alpha)$는 $\mathbb{Q}$의 Galois extension이 아니었다. 반면 $A_3$은 normal subgroup이고 $\mathbb{Q}(\omega)$는 $\x^2+\x+1$의 splitting field로서 $\mathbb{Q}$의 Galois extension이며, 이 경우 [따름정리 6](#cor6){: data-lid="9v49d" }의 isomorphism은 $S_3/A_3\cong\Gal(\mathbb{Q}(\omega)/\mathbb{Q})$이다.
+[예시 4](#ex4){: data-lid="veolq" }의 order $2$인 세 subgroup은 서로 conjugate이므로 normal이 아니며, 실제로 이들에 대응하는 $\mathbb{Q}(\omega^i\alpha)$는 $\x^3-2$의 해를 하나씩만 포함하므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="s82q0" }의 둘째 조건을 만족하지 않아 $\mathbb{Q}$의 Galois extension이 아니다. 식 $(\ast)$에서 본 것과 같이 이들은 $\Gal(\mathbb{L}/\mathbb{Q})$의 원소에 의해 서로 옮겨진다. 반면 $A_3$은 normal subgroup이고 $\mathbb{Q}(\omega)$는 $\x^2+\x+1$의 splitting field로서 $\mathbb{Q}$의 Galois extension이며, 이 경우 [따름정리 6](#cor6){: data-lid="9v49d" }의 isomorphism은 $S_3/A_3\cong\Gal(\mathbb{Q}(\omega)/\mathbb{Q})$이다.
 
 ## 기본정리의 증명
 

@@ -164,7 +164,7 @@ Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 차원
 :::
 
 ::: 증명
-$\varphi$가 finite이면, coordinate ring level에서 $\mathbb{K}[X]$는 $\mathbb{K}[Y]$-module로서 finitely generated이다. 따라서 $K(X)$는 $K(Y)$의 finite degree extension이고, transcendence degree가 같다. 즉, $\dim X = \dim Y$이다.
+$Y$의 nonempty affine open subset $V$와 그 preimage $U=\varphi^{-1}(V)$에 대하여, $U$는 affine이며 $\mathbb{K}[U]$는 $\mathbb{K}[V]$-module로서 finitely generated이다. 따라서 $K(X)=\Frac \mathbb{K}[U]$는 $K(Y)=\Frac \mathbb{K}[V]$의 finite degree extension이고, transcendence degree가 같다. 즉, $\dim X = \dim Y$이다.
 :::
 
 ::: 예시 13
@@ -176,7 +176,7 @@ $\mathbb{A}^n$의 $k$차원 linear subspace $L$은 $\dim L = k$이다. 이는 $L
 
 $$\dim(X \cap Y) \ge \dim X + \dim Y - n$$
 
-이다. 이를 *dimension inequality*라 부른다. 이것이 부등식인 이유는 가령, $X=Y$와 같은 극단적인 상황에서는 원하는 식이 성립하지 않을 수 있기 때문이다. 등호가 성립하는 경우를 *proper intersection*이라 부른다. 
+이다. 이를 *dimension inequality*라 부른다. 이것이 부등식인 이유는 가령, $X=Y$와 같은 극단적인 상황에서는 원하는 등식이 성립하지 않을 수 있기 때문이다. 등호가 성립하는 경우를 *proper intersection*이라 부른다. 
 :::
 
 ---

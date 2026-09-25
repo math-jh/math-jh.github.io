@@ -170,7 +170,7 @@ Irreducible variety $X$의 *generic point<sub>일반점</sub>* $\eta$는 $X$의 
 Affine case $X = \Spec A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $K(X) = \Frac(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 ::: 명제 10
-Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
+Irreducible variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
 :::
 
 ::: 증명
@@ -180,11 +180,7 @@ $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
 이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다. [명제 3](#prop3){: data-lid="btlno" }과 [명제 4](#prop4){: data-lid="5z43n" }에 의하여 $X$의 임의의 점에서 $n - \rank(J_x) = \dim T_x X \ge d$, 즉 $\rank(J_x) \le n-d$가 자동으로 성립하므로, $X$ 위에서 rank가 정확히 $n-d$라는 조건은 rank가 $n-d$ 이상이라는 조건과 같다. 그런데 후자는 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 $0$이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 따라서 $X_\sm$은 $X$의 열린집합이다.
 
-$X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = K(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2){: data-lid="gezb6" }에 의해
-
-$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
-
-인데, [명제 4](#prop4){: data-lid="1p41l" }에 의해 반대 부등식도 성립하므로 $\dim T_\eta X = d$이다. 따라서 $\eta \in X_\sm$이다. 이제 임의의 공집합이 아닌 열린집합은 irreducibility에 의해 dense이다. 
+$X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 function field $K(X)$ 위에서 Jacobian matrix $J=(...)$의 rank가 $n-d$이므로 적당한 $(n-d)\times (n-d)$ minor가 $K(X)$에서 nonzero이며, 이 minor가 소멸하지 않는 (nonempty인) 열린집합이 $X_\sm$에 포함된다는 것이다. 따라서 $X_\sm$은 공집합이 아니며, 임의의 공집합이 아닌 열린집합은 irreducibility에 의해 dense이다. 
 :::
 
 그럼 다음을 정의한다.
