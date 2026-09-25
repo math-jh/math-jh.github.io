@@ -18,7 +18,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 In the previous post we defined divisors on a variety $X$ and saw that their linear equivalence classes form $\Cl(X)$. However, not every divisor arises from the zeros/poles of some rational function. For instance, since $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11){: data-lid="2pye9" }), a general divisor $dH$ on $\mathbb{P}^n$ arises as the zero set of some homogeneous polynomial only when $d \ge 0$.
 
-To overcome this restriction we introduce *line bundles*. A line bundle $\mathcal{L}$ is a geometric object that assigns a one-dimensional vector space to each point $p \in X$, and a section $s$ of $\mathcal{L}$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $D$ we can construct a line bundle $\mathcal{O}_X(D)$ whose sections correspond to divisors greater than or equal to $D$. In other words, line bundles allow us to treat divisors independently of the constraint that they be zeros or poles of a function.
+To overcome this restriction we introduce *line bundles*. A line bundle $\mathcal{L}$ is a geometric object that assigns a one-dimensional vector space to each point $p \in X$, and a section $s$ of $\mathcal{L}$ naturally defines a divisor $\divisor(s)$. From this viewpoint, for any divisor $D$ we can construct a line bundle $\mathcal{O}_X(D)$ whose nonzero sections correspond to effective divisors linearly equivalent to $D$. In other words, line bundles allow us to treat divisors independently of the constraint that they be zeros or poles of a function.
 
 ## Definition of Line Bundle
 
@@ -43,7 +43,7 @@ $$\varphi_k \colon \mathcal{O}_{U_k} \rightarrow \mathcal{O}_{U_k}$$
 
 and between these,
 
-$$g^{\mathcal{L}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{M}}_{kl}$$
+$$g^{\mathcal{M}}_{kl} \circ \varphi_k = \varphi_l \circ g^{\mathcal{L}}_{kl}$$
 
 holds. Since the fiber of a line bundle is one-dimensional, each $\varphi_k$ is given by multiplication $s \mapsto h_k s$ by some $h_k \in \mathcal{O}_X(U_k)$. When $\varphi$ is bijective on each fiber, we call it an *isomorphism* and write $\mathcal{L} \cong \mathcal{M}$. Because the fiber is one-dimensional, this is equivalent to giving a nonzero scalar at each point, that is, choosing $h_k \in \mathcal{O}_X(U_k)^\ast$ compatibly.
 
@@ -372,7 +372,7 @@ We define the following two vector bundles on the Grassmannian $\Gr(k, n)$.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
 2. *Quotient bundle* $Q$: a rank $n-k$ vector bundle that assigns to each point $[V]$ the quotient space $\mathbb{A}^n / V$ as its fiber.
-   $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
+   $$Q = \{([V], [w]) \in (\Gr(k, n) \times \mathbb{A}^n) / S \mid [w] \in \mathbb{A}^n / V\}$$
 :::
 
 There is a natural short exact sequence between them.
