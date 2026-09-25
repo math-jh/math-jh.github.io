@@ -17,7 +17,7 @@ weight: 10
 
 우리는 앞선 글에서 variety $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11){: data-lid="2pye9" }), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 homogeneous polynomial의 zero set으로 나온다.
 
-이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 nonzero section들이 $D$와 linearly equivalent한 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
+이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 nonzero section들이 $D$와 linearly equivalent한 effective divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
 ## Line Bundle의 정의
 
