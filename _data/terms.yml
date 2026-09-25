@@ -2834,6 +2834,13 @@ C:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: cofactor
+  en: cofactor
+  ko: 여인수
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §행렬식'
+    url: /ko/math/multilinear_algebra/determinants
 - id: cofactor_expansion
   en: cofactor expansion
   ko: 여인자전개
