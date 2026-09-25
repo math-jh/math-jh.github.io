@@ -9592,6 +9592,13 @@ I:
   defs:
   - label: '[리 이론] §Weyl 완전가약성 정리'
     url: /ko/math/lie_theory/weyl_complete_reducibility
+- id: invariant_basis_number
+  en: invariant basis number
+  ko: 불변기저수
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §기저'
+    url: /ko/math/multilinear_algebra/basis_of_free_modules
 - id: invariant_basis_number_property
   en: invariant basis number property
   ko: 불변 기저수 성질
