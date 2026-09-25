@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-09
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-25
 weight: 50
 
 ---
@@ -219,3 +219,56 @@ def verification_fingerprint(paths, texts, parked) -> str:
 {: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
 
 본문이 바뀌거나 보류 밖 링크의 값이 바뀌면 해시는 여전히 바뀐다. 무시하는 것은 사람이 판정을 내리면서 생기는 그 한 가지 편집뿐이다. 옛 state에는 원문 해시(`verified_hash`)만 있으므로, 새 필드 `verified_content_hash`가 없으면 원문 해시를 대조하는 폴백을 두고, 처음 통과할 때 새 필드를 채운다.
+
+## 키보드 판정과 커밋 전 되돌리기
+
+보류 목록이 길어지자 사용자는 마우스로 세 버튼 중 하나를 누르는 동선을 줄이고 싶어 했다.
+
+> 지금 링크 의존성 페이지 있잖아 대시보드에, 그거 혹시 키보드로 분류하게 할 수도 있나?
+
+`j`/`k`가 목록을 오르내리고 `1`/`2`/`3`이 `required`·`weak`·`forward`를 판정하며 `u`가 마지막 판정을 되돌린다. 버튼 라벨의 숫자와 키가 어긋나지 않도록 같은 `HOLD_KEYS` 배열을 버튼을 그리는 자리와 키 핸들러 두 곳에서 읽는다.
+
+```js
+var HOLD_KEYS = ['required', 'weak', 'forward'];
+function holdKey(e) {
+  if (route() !== 'audit' || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (!document.getElementById('modal').hidden) return;
+  var t = e.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  ...
+  var n = '123'.indexOf(e.key);
+  if (n < 0 || at < 0) return;
+  e.preventDefault();
+  if (state.holdBusy) return;
+  ...
+  resolveHold(list[at], HOLD_KEYS[n], acts, acts.querySelector('.lp__err'));
+}
+```
+{: data-filename="scripts/dashboard/app.js"}
+
+함정은 두 군데였다. 하나는 미리보기 `iframe`이다. 미리보기를 한 번 클릭하면 포커스가 프레임 안으로 들어가 부모 문서의 `keydown`이 오지 않는다. 그래서 프레임의 `onload`에서 `frame.contentDocument`에도 같은 핸들러를 달았고, 접근이 막히는 경우를 위해 `try`로 감쌌다. 다른 하나는 연타다. 판정 요청이 도는 동안 키를 한 번 더 누르면 화면이 넘어가기 전에 다음 건이 판정될 수 있다. `state.holdBusy`가 요청이 끝날 때까지 이동과 판정을 모두 막는다.
+
+되돌리기는 서버 쪽 일이 더 컸다. 버튼 판정은 `settled[ident].undo`에 되돌리기 기록을 남긴다. 이 기록은 처음([`90b3b211`](https://github.com/math-jh/math-jh.github.io/commit/90b3b211))에는 글의 링크 IAL의 옛 값과 새 값이었고, 관계가 [글 밖 원장](/ko/llm_workshop/link_identity)으로 옮겨 간 뒤에는 그 lid의 원장 레코드 옛 값과 새 값이 되었다. 지금 코드는 후자다.
+
+```python
+def undo_relation(rec, records):
+    if head_blob(LEDGER_REL) != rec.get("head"):
+        raise ValueError("이미 커밋된 판정이다")
+    lid = rec["lid"]
+    if _record_dict(records.get(lid)) != rec["new"]:
+        raise ValueError("그 링크의 판정이 뒤에 바뀌었다")
+    old = rec.get("old")
+    if old is None:
+        records.pop(lid, None)
+    else:
+        records[lid] = _ledger.Record(old["relation"], bool(old.get("reviewed")))
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+조건이 둘이다. 원장 파일의 HEAD blob id가 판정 때 적어 둔 값과 같아야 하고, 그 lid의 레코드가 서버가 쓴 값 그대로여야 한다. 앞의 조건은 "커밋 전"을 뜻한다. 판정 뒤에 원장을 건드린 커밋이 지나갔다면 HEAD의 blob이 달라져 되돌리기가 거부된다. 뒤의 조건은 그 사이에 분류기나 다른 판정이 같은 레코드를 고쳤을 때 그 결과를 덮어쓰지 않으려는 것이다. 어긋나면 원장은 건드리지 않고 되돌리기 기록만 지운다. 성공하면 원래의 `held` 항목이 보류 목록으로 돌아오고, 원장에 레코드가 없던 링크(`old`가 `None`)는 레코드가 지워진다.
+
+버튼에 "되돌리기: required · …"처럼 무엇을 되돌릴지 보이게 하는 `last_undoable`은 최근 판정 5건까지만 훑는다. 대시보드의 커밋 버튼이 커밋한 글의 기록을 지우므로 남아 있는 것은 다른 경로로 커밋된 것들인데, 그런 기록을 넘어 계속 `git rev-parse`를 부르지 않게 둔 상한이다. 사용자가 원한 깊이도 그 정도였다.
+
+> 전 판정까지만 하면 충분해.
+
+'파일 태그 확인' 경로, 곧 사용자가 값을 직접 적고 확인 버튼을 누르는 쪽은 서버가 쓴 값이 없으므로 되돌리기 기록도 남지 않는다. README는 그 경로의 판정을 되돌릴 수 없다고 적는다.
