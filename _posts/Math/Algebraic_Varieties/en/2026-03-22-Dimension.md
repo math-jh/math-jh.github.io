@@ -166,7 +166,7 @@ For two varieties $X, Y$ and a finite surjective map $\varphi: X \rightarrow Y$,
 :::
 
 ::: Proof
-If $\varphi$ is finite, at the coordinate ring level $\mathbb{K}[X]$ is finitely generated as a $\mathbb{K}[Y]$-module. Therefore, $K(X)$ is a finite degree extension of $K(Y)$, and their transcendence degrees are equal. That is, $\dim X = \dim Y$.
+For a nonempty affine open subset $V$ of $Y$ and its preimage $U=\varphi^{-1}(V)$, $U$ is affine and $\mathbb{K}[U]$ is finitely generated as a $\mathbb{K}[V]$-module. Therefore, $K(X)=\Frac \mathbb{K}[U]$ is a finite degree extension of $K(Y)=\Frac \mathbb{K}[V]$, and their transcendence degrees are equal. That is, $\dim X = \dim Y$.
 :::
 
 ::: Example 13
