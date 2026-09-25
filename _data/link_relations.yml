@@ -466,7 +466,7 @@
 "234yl": {relation: required, reviewed: true}
 "239as": {relation: required}
 "23kdt": {relation: required, reviewed: true}
-"23rv8": {relation: required}
+"23rv8": {relation: required, reviewed: true}
 "23s1r": {relation: required, reviewed: true}
 "247mz": {relation: required}
 "249om": {relation: required, reviewed: true}
@@ -673,7 +673,7 @@
 "332sc": {relation: required}
 "338m2": {relation: required, reviewed: true}
 "33fsy": {relation: requires-review}
-"33kwl": {relation: required}
+"33kwl": {relation: required, reviewed: true}
 "33l28": {relation: required, reviewed: true}
 "33mif": {relation: required}
 "33rhg": {relation: required}
@@ -3127,7 +3127,7 @@
 "dyxo8": {relation: required}
 "dzj23": {relation: required}
 "dzn7l": {relation: required}
-"dzs2y": {relation: required}
+"dzs2y": {relation: required, reviewed: true}
 "dzsxf": {relation: required}
 "e0214": {relation: required, reviewed: true}
 "e0428": {relation: required, reviewed: true}
@@ -3999,7 +3999,7 @@
 "i5aii": {relation: required}
 "i5fpc": {relation: required}
 "i5g02": {relation: forward}
-"i5jpn": {relation: required}
+"i5jpn": {relation: required, reviewed: true}
 "i5v2c": {relation: required}
 "i60yk": {relation: required, reviewed: true}
 "i61hr": {relation: required}
@@ -4982,7 +4982,7 @@
 "mf87q": {relation: weak}
 "mfer4": {relation: weak, reviewed: true}
 "mfsco": {relation: required}
-"mfsh1": {relation: required}
+"mfsh1": {relation: required, reviewed: true}
 "mg90k": {relation: required, reviewed: true}
 "mgfrl": {relation: required, reviewed: true}
 "mgns1": {relation: weak}
@@ -6189,7 +6189,7 @@
 "rsz7z": {relation: weak, reviewed: true}
 "rt8kq": {relation: weak}
 "rtgha": {relation: required, reviewed: true}
-"rtgt3": {relation: weak}
+"rtgt3": {relation: requires-review}
 "rtja6": {relation: required}
 "rty0j": {relation: required, reviewed: true}
 "ru4yp": {relation: required, reviewed: true}
@@ -7388,7 +7388,7 @@
 "x7lvw": {relation: required}
 "x7y6q": {relation: required}
 "x7z35": {relation: required}
-"x861r": {relation: required}
+"x861r": {relation: required, reviewed: true}
 "x8cfq": {relation: required, reviewed: true}
 "x8d0q": {relation: required}
 "x8ljq": {relation: weak}
