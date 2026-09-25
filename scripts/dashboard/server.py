@@ -603,28 +603,38 @@ def last_undoable(holds):
     return None
 
 
-def hold_link(ident, item, records):
+def hold_link(ident, item, records, memo=None):
     """보류 항목이 가리키는 **그 출현 하나**를 분류기 파서로 되찾는다.
 
     ident 는 `경로:서수:target:label` 의 sha1 이라 같은 문구가 한 글에 여러 번 나와도
     출현끼리 구별된다. 서수는 판정된 링크·안 된 링크·requires-review 를 모두 세므로
     세 갈래를 다 훑어야 그 ident 가 나온다.
+
+    memo(dict)를 주면 글마다 한 번만 파싱한다 — 보류 목록은 한 글에 여러 건이
+    몰려 있어서 건마다 다시 파싱하면 목록 계산이 수 초로 늘어난다.
     """
     if _depc is None:
         raise RuntimeError("dependency_classifier 를 불러오지 못했다")
     full = os.path.normpath(os.path.join(ROOT, item.get("path") or ""))
     if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
         raise ValueError("bad path")
-    path = _depc.Path(full)
-    text = path.read_text(encoding="utf-8")
-    for kwargs in ({}, {"tagged": True}, {"review": True}):
-        for link in _depc.extract_links(path, text, records=records, **kwargs):
-            if link.ident == ident:
-                return link
+    if memo is not None and full in memo:
+        links = memo[full]
+    else:
+        path = _depc.Path(full)
+        text = path.read_text(encoding="utf-8")
+        links = {}
+        for kwargs in ({}, {"tagged": True}, {"review": True}):
+            for link in _depc.extract_links(path, text, records=records, **kwargs):
+                links.setdefault(link.ident, link)
+        if memo is not None:
+            memo[full] = links
+    if ident in links:
+        return links[ident]
     raise ValueError("그 링크를 지금 글에서 찾지 못했다 — 새로고침")
 
 
-def hold_verdict(ident, item, records=None):
+def hold_verdict(ident, item, records=None, memo=None):
     """보류된 링크에 사람이 원장에 직접 적어 둔 판정. 아직 없으면 None.
 
     분류기가 레코드를 requires-review 로 바꿔 두었으므로, 그 레코드가
@@ -633,7 +643,7 @@ def hold_verdict(ident, item, records=None):
     """
     records = _ledger.load() if records is None else records
     try:
-        link = hold_link(ident, item, records)
+        link = hold_link(ident, item, records, memo)
     except ValueError:
         return "gone"
     except Exception:  # noqa: BLE001
@@ -759,6 +769,7 @@ def sec_link_audit():
 def _linkaudit_items(holds):
     records = _ledger.load()
     by_path = posts_indexed()["by_path"]
+    memo = {}
     items = []
     for ident, item in holds["held"].items():
         # 라벨은 한 줄이 아닐 수 있다 — 링크 정규식이 escape 된 `\[` 를 여는 괄호로
@@ -772,7 +783,7 @@ def _linkaudit_items(holds):
             old=item.get("old"), new=item.get("new"),
             reason=item.get("reason", ""), verifier=item.get("verifier", ""),
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
-            verdict=hold_verdict(ident, item, records),
+            verdict=hold_verdict(ident, item, records, memo),
             # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 본문 링크는 소스 순서대로
             # 렌더되므로 같은 target 의 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.
             permalink=post.get("permalink", ""), title=post.get("title", ""),

@@ -17,6 +17,7 @@
 # 링크는 엣지로 잡히지 않는다. 전역 그래프(/dependencies)와 로컬 그래프(글별 2-hop)가 공유.
 require "json"
 require "fileutils"
+require "digest"
 
 module GraphData
   LANGS = %w[ko en].freeze
@@ -364,6 +365,62 @@ module GraphData
   end
 end
 
+# incremental 빌드에서 semantic_navigation 이 바뀐 글만 다시 렌더한다.
+#
+# 관계는 _data/link_relations.yml 에 있고 Jekyll incremental 은 _data 를 의존성으로
+# 추적하지 않는다. 그래서 글별 semantic_navigation 의 지문을 캐시 디렉토리에 남겨 두고,
+# 다음 빌드에서 지문이 달라진 글에 regenerate 를 건다. 이 장치가 있어서
+# ~/.local/bin/jekyll-data-rebuild-guard.py 가 원장 변경을 clean start 사유에서 뺀다
+# (둘은 한 쌍이다 — 이걸 지우면 guard 의 INCREMENTAL_SAFE_DATA 에서도 원장을 빼야 한다).
+module GraphData
+  NAVIGATION_FINGERPRINTS = "semantic-navigation-fingerprints.json"
+
+  module_function
+
+  def navigation_fingerprints_path(site)
+    site.in_cache_dir(NAVIGATION_FINGERPRINTS)
+  end
+
+  def navigation_fingerprint(doc)
+    navigation = doc.data["semantic_navigation"]
+    navigation ? Digest::SHA256.hexdigest(JSON.generate(navigation)) : "-"
+  end
+
+  def load_navigation_fingerprints(site)
+    JSON.parse(File.read(navigation_fingerprints_path(site)))
+  rescue StandardError
+    nil
+  end
+
+  # 지문 기록이 없으면(첫 incremental 빌드) 어떤 글이 낡았는지 모르므로 전부 다시 그린다.
+  # 메타데이터가 없는 글은 Jekyll 이 어차피 렌더하므로 건드리지 않는다 — regenerate 로
+  # 강제하면 Jekyll 이 그 글의 메타데이터를 만들지 않아 다음 빌드에서 또 렌더된다.
+  def force_changed_navigation(site)
+    previous = load_navigation_fingerprints(site)
+    metadata = site.regenerator.metadata
+    forced = 0
+    site.posts.docs.each do |doc|
+      next unless metadata.key?(doc.path)
+
+      fingerprint = navigation_fingerprint(doc)
+      next if previous && previous[doc.relative_path] == fingerprint
+
+      doc.data["regenerate"] = true
+      forced += 1
+    end
+    Jekyll.logger.info "Semantic nav:", "#{forced} post(s) regenerated for changed navigation"
+  end
+
+  def save_navigation_fingerprints(site)
+    fingerprints = site.posts.docs.to_h { |doc| [doc.relative_path, navigation_fingerprint(doc)] }
+    path = navigation_fingerprints_path(site)
+    FileUtils.mkdir_p(File.dirname(path))
+    temporary = "#{path}.tmp-#{Process.pid}"
+    File.write(temporary, JSON.generate(fingerprints))
+    File.rename(temporary, path)
+  end
+end
+
 Jekyll::Hooks.register :site, :pre_render do |site|
   GraphData::LANGS.each do |lang|
     model = GraphData.dependency_model(site, lang)
@@ -375,6 +432,12 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       doc.data["semantic_navigation"] = navigation if navigation
     end
   end
+  GraphData.force_changed_navigation(site) if site.incremental?
+end
+
+# 쓰기가 끝난 빌드만 기록한다. 빌드가 중간에 죽으면 이전 지문이 남아 다음 빌드가 다시 잡는다.
+Jekyll::Hooks.register :site, :post_write do |site|
+  GraphData.save_navigation_fingerprints(site) if site.incremental?
 end
 
 Jekyll::Hooks.register :site, :post_write do |site|

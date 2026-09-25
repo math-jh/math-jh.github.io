@@ -54,7 +54,9 @@ class Record:
 def load(path: Path | None = None) -> dict[str, Record]:
     path = PATH if path is None else path
     try:
-        raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        # libyaml 로더가 있으면 쓴다 — 순수 파이썬 로더는 8천 줄 원장에 1초 넘게 걸린다.
+        loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+        raw = yaml.load(path.read_text(encoding="utf-8"), Loader=loader) or {}
     except FileNotFoundError:
         return {}
     records = {}
