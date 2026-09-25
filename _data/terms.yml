@@ -18828,6 +18828,8 @@ T:
     url: /ko/math/algebraic_structures/operations_of_algebras
   - label: '[다중선형대수학] §텐서대수'
     url: /ko/math/multilinear_algebra/tensor_algebras
+  - label: '[다중선형대수학] §행렬의 텐서곱'
+    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
 - id: term-by-term_differentiation
   en: term-by-term differentiation
   ko: 항별 미분
