@@ -881,7 +881,7 @@
 "3wquc": {relation: required, reviewed: true}
 "3xnxl": {relation: weak}
 "3xq7t": {relation: required, reviewed: true}
-"3xukk": {relation: required}
+"3xukk": {relation: required, reviewed: true}
 "3xwzd": {relation: forward, reviewed: true}
 "3xy48": {relation: required}
 "3y1cc": {relation: required}
@@ -3515,7 +3515,7 @@
 "fvnjf": {relation: required, reviewed: true}
 "fvpao": {relation: required}
 "fvy1a": {relation: required, reviewed: true}
-"fvymc": {relation: weak}
+"fvymc": {relation: weak, reviewed: true}
 "fwck4": {relation: required}
 "fwdup": {relation: weak, reviewed: true}
 "fwene": {relation: required, reviewed: true}
@@ -7912,7 +7912,7 @@
 "zi8sx": {relation: required, reviewed: true}
 "zi95m": {relation: weak}
 "zih9h": {relation: required, reviewed: true}
-"zij1p": {relation: required}
+"zij1p": {relation: required, reviewed: true}
 "zio3w": {relation: required, reviewed: true}
 "zirf4": {relation: required, reviewed: true}
 "zisnz": {relation: required, reviewed: true}
