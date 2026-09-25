@@ -163,7 +163,7 @@ For an irreducible variety $X$, the *generic point* $\eta$ is the unique point b
 In the affine case $X = \Spec A$, $\eta$ corresponds to the minimal prime ideal of $A$ (i.e., the $(0)$ ideal), and the local ring $\mathcal{O}_{X,\eta}$ is precisely the function field $K(X) = \Frac(A)$. Geometrically, the generic point can be thought of as the "most general point" of $X$, a point having no particular property of $X$. We can use this idea in the following proof.
 
 ::: Proposition 10
-For a variety $X$, the set $X_\sm$ of smooth points is a dense open subset of $X$. In particular, $X_\sm \ne \emptyset$.
+For an irreducible variety $X$, the set $X_\sm$ of smooth points is a dense open subset of $X$. In particular, $X_\sm \ne \emptyset$.
 :::
 
 ::: Proof
@@ -173,11 +173,7 @@ $$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
 holds. We now show that this set is a dense open subset. First, that $X_\sm$ is an open set is relatively clear. By [Proposition 3](#prop3){: data-lid="btlno" } and [Proposition 4](#prop4){: data-lid="5z43n" }, at any point of $X$, $n - \rank(J_x) = \dim T_x X \ge d$, that is, $\rank(J_x) \le n-d$ holds automatically, so on $X$ the condition that the rank is exactly $n-d$ is equivalent to the condition that the rank is at least $n-d$. But the latter is equivalent to the determinant of some $(n-d) \times (n-d)$ submatrix not being $0$, which is an open condition in the Zariski topology. Therefore, $X_\sm$ is an open subset of $X$.
 
-Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that since a general point should be a smooth point, for $X$ we consider the generic point $\eta$. Considering the localization at $\eta$, the local ring $\mathcal{O}_{X,\eta} = K(X)$ is a field, hence a regular local ring. However, by [\[Commutative Algebra\] §System of Parameters, ⁋Proposition 2](/en/math/commutative_algebra/system_of_parameters#prop2){: data-lid="gezb6" },
-
-$$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
-
-and by [Proposition 4](#prop4){: data-lid="1p41l" } the reverse inequality also holds, so $\dim T_\eta X = d$. Hence $\eta \in X_\sm$. Now any nonempty open subset is dense by irreducibility.
+Showing that $X_\sm$ is nonempty is somewhat technical; the idea is that since the rank of the Jacobian matrix $J=(...)$ over the function field $K(X)$ is $n-d$, a suitable $(n-d)\times (n-d)$ minor is nonzero in $K(X)$, and the (nonempty) open set where this minor does not vanish is contained in $X_\sm$. Therefore, $X_\sm$ is nonempty, and any nonempty open subset is dense by irreducibility.
 :::
 
 We then define the following.
