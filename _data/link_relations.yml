@@ -599,7 +599,7 @@
 "2r8ij": {relation: required, reviewed: true}
 "2rcxn": {relation: required, reviewed: true}
 "2re9g": {relation: required}
-"2rt11": {relation: required}
+"2rt11": {relation: required, reviewed: true}
 "2s13p": {relation: required, reviewed: true}
 "2s3o4": {relation: required, reviewed: true}
 "2s9rg": {relation: weak, reviewed: true}
@@ -1947,7 +1947,7 @@
 "8gqgm": {relation: weak, reviewed: true}
 "8gr6i": {relation: required, reviewed: true}
 "8h049": {relation: required, reviewed: true}
-"8h1fc": {relation: required}
+"8h1fc": {relation: required, reviewed: true}
 "8h3g9": {relation: required, reviewed: true}
 "8h96y": {relation: required, reviewed: true}
 "8hi4g": {relation: required, reviewed: true}
