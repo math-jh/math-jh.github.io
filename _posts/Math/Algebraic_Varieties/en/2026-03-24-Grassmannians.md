@@ -64,7 +64,7 @@ where $B$ is a $k \times (n-k)$ matrix. Then in $B$, the $k(n-k)$ entries comple
 
 As seen in this proof, the coordinate system on $U_I$ consists of $k(n-k)$ free parameters. These correspond to the "non-trivial part" of the matrix representing $W$. That is, once the block defined by $I$, of size $k \times k$, is fixed as the identity, the remaining $k \times (n-k)$ block can vary freely.
 
-Then for any $W\in \Gr(k,V)$, it is clear that there exists an affine open cover containing $W$. Moreover, since the transition map from $U_I$ to $U_J$ is also clearly a regular map, this endows $\Gr(k,V)$ with a variety structure, and each $U_I$ becomes an open set in this structure. Of course, to show that this is quasi-projective, an explicit projective embedding is needed, but for now the following holds.
+Then for any $W\in \Gr(k,V)$, it is clear that there exists an affine open set $U_I$ containing $W$, and it can also be shown that the collection $\{U_I\}$ forms an affine open cover. Moreover, since the transition map from $U_I$ to $U_J$ is also clearly a regular map, this endows $\Gr(k,V)$ with a variety structure, and each $U_I$ becomes an open set in this structure. Of course, to show that this is quasi-projective, an explicit projective embedding is needed, but for now the following holds.
 
 ::: Proposition 5
 $\dim \Gr(k, V) = k(n - k)$.
