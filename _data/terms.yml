@@ -12662,7 +12662,7 @@ N:
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
   ko: 1의 $n$제곱근
-  primary: ko
+  primary: en
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
@@ -15439,7 +15439,7 @@ R:
 - id: radical_tower
   en: radical tower
   ko: 거듭제곱근 탑
-  primary: ko
+  primary: en
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
@@ -17678,6 +17678,13 @@ S:
   defs:
   - label: '[다중선형대수학] §완전열'
     url: /ko/math/multilinear_algebra/exact_sequences
+- id: split_exact_sequence
+  en: split exact sequence
+  ko: 분할완전열
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §코호몰로지'
+    url: /ko/math/algebraic_topology/cohomology
 - id: split_monomorphism
   en: split monomorphism
   ko: 분할 단사사상
