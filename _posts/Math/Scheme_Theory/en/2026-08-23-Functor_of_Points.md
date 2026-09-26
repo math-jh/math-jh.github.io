@@ -236,7 +236,7 @@ $$\Gr(k,n)(T)\cong F_{k,n}(T)$$
 
 natural in every scheme $T$.
 
-When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar S\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" }, which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5){: data-lid="hdz1p" }.
+When $T=\Spec\mathbb{K}$, an element of $F_{k,n}(T)$ is a rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$. Since this is uniquely determined by its kernel, an $(n-k)$-dimensional subspace $\bar{S}\subseteq\mathbb{K}^n$, the set $\Gr(k,n)(\mathbb{K})$ coincides with the set of such subspaces. In the convention of [\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" }, which classifies subspaces directly, this set is denoted $\Gr(n-k,n)$. In particular, when $k=1$ it classifies rank $1$ quotients, so we recover the $\mathbb{P}^{n-1}$ of [Theorem 5](#thm5){: data-lid="hdz1p" }.
 
 :::
 

@@ -193,9 +193,9 @@ $$1=(1-e_i)+e_i\in\mathfrak{a}_i+\mathfrak{a}_j$$
 
 이제 둘째 조건을 가정하고 셋째 조건을 보이자. Pairwise comaximal 조건과 $\bigcap_i\mathfrak{a}_i=\ker\pi=0$으로부터 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6){: data-lid="l8z4r" }에 의해 $\pi$는 isomorphism이다. Product ring $\prod_i A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지가 $0$인 원소
 
-$$\bar e_i=(0,\ldots, 0,1,0,\ldots, 0)$$
+$$\bar{e}_i=(0,\ldots, 0,1,0,\ldots, 0)$$
 
-들을 생각하면, 성분별 계산으로 이들이 central한 orthogonal idempotent의 complete set을 이룸을 알 수 있으며 $\pi$가 ring isomorphism이므로 $e_i:=\pi^{-1}(\bar e_i)$ 또한 $A$의 central한 orthogonal idempotent의 complete set이다. 남은 것은 등식 $\mathfrak{a}_i=A(1-e_i)$으로, $\bar e_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, $\mathfrak{a}_i$가 ideal이므로 $A(1-e_i)\subseteq\mathfrak{a}_i$임은 자명하다. 거꾸로 $a\in\mathfrak{a}_i$라 하면 $\pi(a)$의 $i$번째 성분이 $0$이고 $\bar e_i$는 $i$번째 성분을 제외한 모든 성분이 $0$이므로 $\pi(ae_i)=\pi(a)\bar e_i=0$이며, $\pi$가 단사이므로 $ae_i=0$이다. 따라서
+들을 생각하면, 성분별 계산으로 이들이 central한 orthogonal idempotent의 complete set을 이룸을 알 수 있으며 $\pi$가 ring isomorphism이므로 $e_i:=\pi^{-1}(\bar{e}_i)$ 또한 $A$의 central한 orthogonal idempotent의 complete set이다. 남은 것은 등식 $\mathfrak{a}_i=A(1-e_i)$으로, $\bar{e}_i$의 $i$번째 성분이 $1+\mathfrak{a}_i$이므로 $1-e_i\in\mathfrak{a}_i$이고, $\mathfrak{a}_i$가 ideal이므로 $A(1-e_i)\subseteq\mathfrak{a}_i$임은 자명하다. 거꾸로 $a\in\mathfrak{a}_i$라 하면 $\pi(a)$의 $i$번째 성분이 $0$이고 $\bar{e}_i$는 $i$번째 성분을 제외한 모든 성분이 $0$이므로 $\pi(ae_i)=\pi(a)\bar{e}_i=0$이며, $\pi$가 단사이므로 $ae_i=0$이다. 따라서
 
 $$a=ae_i+a(1-e_i)=a(1-e_i)\in A(1-e_i)$$
 
@@ -217,7 +217,7 @@ $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
 와 함께, 이 분해에 대응하는 $\mathbb{Z}/n\mathbb{Z}$의 central한 orthogonal idempotent의 complete set을 얻는다.
 
-구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2){: data-lid="2w9ke" }에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
+구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar{e}_1=(1,0)$, $\bar{e}_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2){: data-lid="2w9ke" }에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
 
 한편 소수 $p$와 $a\geq 1$에 대하여 $\mathbb{Z}/p^a\mathbb{Z}$는 $0,1$ 외의 idempotent를 갖지 않는다. 이는 $x^2\equiv x\ (\mathrm{mod}\ p^a)$가 $x(x-1)\equiv 0\ (\mathrm{mod}\ p^a)$와 같고, $x$와 $x-1$이 서로소라 $p^a$이 둘 중 하나만을 나누어야 하기 때문이다. 따라서 위 분해의 각 인수는 [정리 5](#thm5){: data-lid="oe3vf" }의 의미에서 indecomposable하며, 소인수분해에 따른 direct product decomposition은 더 이상 쪼갤 수 없는 가장 미세한 분해이다. [예시 2](#ex2){: data-lid="srqzs" }에서 $\mathbb{Z}/4\mathbb{Z}$가 trivial idempotent만 가졌던 것이 그 특수한 경우이다.
 :::

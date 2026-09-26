@@ -157,7 +157,7 @@ Discrete space의 one-point compactification은 수렴하는 점열이라는 매
 
 이 공간은 실수 안의 익숙한 집합으로 실현된다. 함수
 
-$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
+$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac{1}{n}\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
 을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 isolated point이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 isolated point이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9){: data-lid="4jx6s" }에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 limit point를 지닌 수렴하는 점열과 homeomorphic이다.
 :::

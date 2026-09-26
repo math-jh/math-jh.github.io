@@ -235,7 +235,7 @@ $$\Gr(k,n)(T)\cong F_{k,n}(T)$$
 
 이 존재한다.
 
-$T=\Spec\mathbb{K}$인 경우 $F_{k,n}(T)$의 원소는 rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$이다. 이는 kernel인 $(n-k)$차원 부분공간 $\bar S\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되므로, $\Gr(k,n)(\mathbb{K})$는 이러한 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" }의 관례에서는 이 집합을 $\Gr(n-k,n)$으로 표기한다. 특히 $k=1$이면 rank $1$ quotient를 분류하므로 [정리 5](#thm5){: data-lid="hdz1p" }의 $\mathbb{P}^{n-1}$을 회복한다.
+$T=\Spec\mathbb{K}$인 경우 $F_{k,n}(T)$의 원소는 rank $k$ quotient space $\mathbb{K}^n\twoheadrightarrow Q$이다. 이는 kernel인 $(n-k)$차원 부분공간 $\bar{S}\subseteq\mathbb{K}^n$에 의하여 유일하게 결정되므로, $\Gr(k,n)(\mathbb{K})$는 이러한 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1){: data-lid="9ni8t" }의 관례에서는 이 집합을 $\Gr(n-k,n)$으로 표기한다. 특히 $k=1$이면 rank $1$ quotient를 분류하므로 [정리 5](#thm5){: data-lid="hdz1p" }의 $\mathbb{P}^{n-1}$을 회복한다.
 
 :::
 

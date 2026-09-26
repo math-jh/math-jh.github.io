@@ -143,7 +143,7 @@ As another example, since Taylor expansion retains not just the highest or lowes
 ::: Example 7 (Limit)
 Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3){: data-lid="l8bo0" }, $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
 
-$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12.$$
+$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac{1}{2} + \frac{x}{6} + \cdots \rightarrow \frac{1}{2}.$$
 
 This is a result that can also be checked by applying [§Mean Value Theorem, ⁋Theorem 18](/en/math/calculus/mean_value_theorem#thm18){: data-lid="o1adk" } twice. Taylor expansion succeeds because it retains information from higher-degree terms, so after canceling with the denominator and numerator, information still remains.
 :::

@@ -42,17 +42,17 @@ Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) sy
 ::: 증명
 $A$의 특성다항식은 실수를 계수로 갖는 $n$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8){: data-lid="ox2uu" }에 의하여, 이 다항식은 $\mathbb{C}$까지 포함하면 $n$개의 근 $\lambda$를 가진다. 
 
-이제 이에 해당하는 eigenvector $z\in\mathbb{C}^n$를 생각하고, $z$의 각 성분을 켤레복소수로 바꾼 벡터를 $\bar z$라 하고, 다음의 복소수
+이제 이에 해당하는 eigenvector $z\in\mathbb{C}^n$를 생각하고, $z$의 각 성분을 켤레복소수로 바꾼 벡터를 $\bar{z}$라 하고, 다음의 복소수
 
-$$s=\bar z^tAz$$
+$$s=\bar{z}^tAz$$
 
 를 생각하자. 우선 $Az=\lambda z$이므로 
 
-$$s=\bar z^t(\lambda z)=\lambda(\bar z^tz)=\lambda\sum_{i=1}^n\lvert z_i\rvert^2$$
+$$s=\bar{z}^t(\lambda z)=\lambda(\bar{z}^tz)=\lambda\sum_{i=1}^n\lvert z_i\rvert^2$$
 
-이다. 다른 한편으로, $s$는 $1\times 1$ 행렬이므로 자기 자신의 transpose와 같고, $A$가 실수 symmetric matrix이므로 $A=A^t=\bar A$임을 이용하면 그 켤레복소수는 
+이다. 다른 한편으로, $s$는 $1\times 1$ 행렬이므로 자기 자신의 transpose와 같고, $A$가 실수 symmetric matrix이므로 $A=A^t=\bar{A}$임을 이용하면 그 켤레복소수는 
 
-$$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^tA^tz=\bar z^tAz=s$$
+$$\bar{s}=\overline{\bar{z}^tAz}=z^t\bar{A}\bar{z}=z^tA\bar{z}=(z^tA\bar{z})^t=\bar{z}^tA^tz=\bar{z}^tAz=s$$
 
 이므로, $s$는 실수이다. 그런데 $\sum_i\lvert z_i\rvert^2$은 $z\neq 0$이므로 양의 실수이고, 따라서 $s=\lambda\sum_i\lvert z_i\rvert^2$이 실수이려면 $\lambda$ 또한 실수여야 한다.
 :::
@@ -149,7 +149,7 @@ Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하�
 Positive definite인 실수 대칭행렬 $A$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $L$이 유일하게 존재하여 $A=LL^t$이다.
 :::
 ::: 증명
-$A$의 크기 $n$에 대한 귀납법으로 존재성을 보인다. $n=1$이면 $A=(a)$에서 positive definiteness로 $a>0$이므로 $L=(\sqrt a)$로 두면 된다. $n\geq 2$라 하고 $A$를
+$A$의 크기 $n$에 대한 귀납법으로 존재성을 보인다. $n=1$이면 $A=(a)$에서 positive definiteness로 $a>0$이므로 $L=(\sqrt{a})$로 두면 된다. $n\geq 2$라 하고 $A$를
 
 $$A=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}$$
 
@@ -159,13 +159,13 @@ $$\begin{pmatrix}x&y^t\end{pmatrix}A\begin{pmatrix}x\\ y\end{pmatrix}=\alpha x^2
 
 이고 좌변이 $A$의 positive definiteness로 양수이기 때문이다. 귀납적 가정에 의하여 $A''=L'L'^t$인, 대각성분이 양수인 하삼각 $L'$이 존재하므로
 
-$$L=\begin{pmatrix}\sqrt\alpha&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
+$$L=\begin{pmatrix}\sqrt{\alpha}&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
 
 으로 두면
 
 $$LL^t=\begin{pmatrix}\alpha&b^t\\ b&\alpha^{-1}bb^t+L'L'^t\end{pmatrix}=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}=A$$
 
-이고 $L$의 대각성분은 모두 양수이다. 유일성은 첫 열이 $\sqrt\alpha$와 $\alpha^{-1/2}b$로 결정되고 $L'$이 귀납적으로 유일한 것으로부터 따라온다.
+이고 $L$의 대각성분은 모두 양수이다. 유일성은 첫 열이 $\sqrt{\alpha}$와 $\alpha^{-1/2}b$로 결정되고 $L'$이 귀납적으로 유일한 것으로부터 따라온다.
 :::
 
 

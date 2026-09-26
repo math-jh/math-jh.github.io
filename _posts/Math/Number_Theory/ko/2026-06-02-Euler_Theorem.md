@@ -29,7 +29,7 @@ published: false
 ::: 정리 2 (오일러 정리)
 $\gcd(a, n) = 1$이면
 
-$$a^{\varphi(n)} \equiv 1 \pmod n$$
+$$a^{\varphi(n)} \equiv 1 \pmod{n}$$
 
 이다.
 :::
@@ -37,9 +37,9 @@ $$a^{\varphi(n)} \equiv 1 \pmod n$$
 ::: 증명
 $r_1, r_2, \ldots, r_{\varphi(n)}$을 기약잉여계라 하자. $\gcd(a, n) = 1$이면 $a r_1, a r_2, \ldots, a r_{\varphi(n)}$ 역시 모두 $n$과 서로소이고, [§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6){: data-lid="rhmq2" }에 의해 법 $n$에 대해 서로 다르다. 따라서 이들은 기약잉여계 $\{r_1, \ldots, r_{\varphi(n)}\}$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
 
-$$a^{\varphi(n)} r_1 r_2 \cdots r_{\varphi(n)} \equiv r_1 r_2 \cdots r_{\varphi(n)} \pmod n$$
+$$a^{\varphi(n)} r_1 r_2 \cdots r_{\varphi(n)} \equiv r_1 r_2 \cdots r_{\varphi(n)} \pmod{n}$$
 
-이고, 우변의 곱 $r_1\cdots r_{\varphi(n)}$은 $n$과 서로소이므로 소거하면 $a^{\varphi(n)} \equiv 1 \pmod n$을 얻는다.
+이고, 우변의 곱 $r_1\cdots r_{\varphi(n)}$은 $n$과 서로소이므로 소거하면 $a^{\varphi(n)} \equiv 1 \pmod{n}$을 얻는다.
 :::
 
 $n = p$가 소수이면 $\varphi(p) = p - 1$이므로 오일러 정리는 페르마 소정리로 환원된다. 즉 오일러 정리는 페르마 소정리를 임의의 법으로 일반화한 것이다.
@@ -58,11 +58,11 @@ $\gcd(m, n) = 1$이면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
 
 소수 거듭제곱에서의 값은 직접 센다: $1$부터 $p^k$까지 중 $p$와 서로소가 *아닌* 수는 $p$의 배수 $p, 2p, \ldots, p^{k-1}p$의 $p^{k-1}$개이므로
 
-$$\varphi(p^k) = p^k - p^{k-1} = p^k\left(1 - \frac1p\right)$$
+$$\varphi(p^k) = p^k - p^{k-1} = p^k\left(1 - \frac{1}{p}\right)$$
 
 이다. 곱셈성과 결합하면, $n = p_1^{e_1}\cdots p_r^{e_r}$의 소인수분해로부터 ([§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3){: data-lid="zudv4" })
 
-$$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac1p\right)$$
+$$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac{1}{p}\right)$$
 
 을 얻는다.
 
@@ -70,8 +70,8 @@ $$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac1p\right)$$
 $\varphi(360)$을 구하자. $360 = 2^3\cdot 3^2\cdot 5$이므로 공식에 대입하면
 
 $$\begin{aligned}
-\varphi(360) &= 360\left(1 - \frac12\right)\left(1 - \frac13\right)\left(1 - \frac15\right) \\
-&= 360\cdot\frac12\cdot\frac23\cdot\frac45 \\
+\varphi(360) &= 360\left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{5}\right) \\
+&= 360\cdot\frac{1}{2}\cdot\frac{2}{3}\cdot\frac{4}{5} \\
 &= 96
 \end{aligned}$$
 
@@ -80,7 +80,7 @@ $$\begin{aligned}
 
 ## 응용: 거듭제곱과 역원
 
-오일러 정리의 실질적 위력은 합성수 법에서 큰 거듭제곱을 계산할 때 드러난다. $\gcd(a, n) = 1$이면 $a^{\varphi(n)} \equiv 1 \pmod n$이므로, 지수를 $\varphi(n)$으로 나눈 나머지만 보면 충분하다. 즉 지수에 대한 산술은 법 $\varphi(n)$에서 이루어진다. 페르마 소정리가 소수 법에서 지수를 $p - 1$로 줄여 주었듯, 오일러 정리는 임의의 법에서 지수를 $\varphi(n)$으로 줄여 준다.
+오일러 정리의 실질적 위력은 합성수 법에서 큰 거듭제곱을 계산할 때 드러난다. $\gcd(a, n) = 1$이면 $a^{\varphi(n)} \equiv 1 \pmod{n}$이므로, 지수를 $\varphi(n)$으로 나눈 나머지만 보면 충분하다. 즉 지수에 대한 산술은 법 $\varphi(n)$에서 이루어진다. 페르마 소정리가 소수 법에서 지수를 $p - 1$로 줄여 주었듯, 오일러 정리는 임의의 법에서 지수를 $\varphi(n)$으로 줄여 준다.
 
 ::: 예시 5 (합성수 법의 거듭제곱)
 $7^{222}$을 $10$으로 나눈 나머지를 구하자. $\gcd(7, 10) = 1$이고 $\varphi(10) = 4$이므로 오일러 정리에 의해 $7^4 \equiv 1 \pmod{10}$이다. 지수 $222$를 $4$로 나누면 $222 = 4\cdot 55 + 2$이므로
@@ -105,15 +105,15 @@ $$3^{100} = 3^{16\cdot 6 + 4} \equiv (3^{16})^6\cdot 3^4 \equiv 3^4 = 81 \equiv 
 ::: 명제 7 (거듭제곱에 의한 역원)
 $\gcd(a, n) = 1$이면 $a$의 법 $n$에 대한 곱셈 역원은 $a^{\varphi(n) - 1}$이다. 즉
 
-$$a^{-1} \equiv a^{\varphi(n) - 1} \pmod n$$
+$$a^{-1} \equiv a^{\varphi(n) - 1} \pmod{n}$$
 
 이다.
 :::
 
 ::: 증명
-오일러 정리 (정리 2) 에 의해 $a^{\varphi(n)} \equiv 1 \pmod n$이다. $\varphi(n) \geq 1$이므로 좌변을 $a\cdot a^{\varphi(n) - 1}$로 쪼개면
+오일러 정리 (정리 2) 에 의해 $a^{\varphi(n)} \equiv 1 \pmod{n}$이다. $\varphi(n) \geq 1$이므로 좌변을 $a\cdot a^{\varphi(n) - 1}$로 쪼개면
 
-$$a\cdot a^{\varphi(n) - 1} \equiv 1 \pmod n$$
+$$a\cdot a^{\varphi(n) - 1} \equiv 1 \pmod{n}$$
 
 이고, 이는 정확히 $a^{\varphi(n) - 1}$이 $a$의 곱셈 역원임을 뜻한다.
 :::

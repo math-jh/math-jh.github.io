@@ -35,26 +35,26 @@ $$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
 
 $$\{ r_j \mid r_j < p/2 \} \cup \{ p - r_j \mid r_j > p/2 \}$$
 
-이 정확히 $1, 2, \ldots, (p-1)/2$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $(p-1)/2$ 사이에 있고 그 개수가 $(p-1)/2$로 같으므로, 서로 다름만 보이면 된다. 만일 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod p$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod p$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
+이 정확히 $1, 2, \ldots, (p-1)/2$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $(p-1)/2$ 사이에 있고 그 개수가 $(p-1)/2$로 같으므로, 서로 다름만 보이면 된다. 만일 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod{p}$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod{p}$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
 
 $$\begin{aligned}
 \left(\frac{p-1}{2}\right)!
 &= \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (p - r_j) \\
-&\equiv \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (-r_j) \pmod p \\
+&\equiv \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (-r_j) \pmod{p} \\
 &\equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} r_j
 \equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} (ja) \\
-&\equiv (-1)^{\mu} a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod p
+&\equiv (-1)^{\mu} a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod{p}
 \end{aligned}$$
 
 이다. 부호 $(-1)^\mu$는 $r_j > p/2$인 $\mu$개의 항에서 $p - r_j$를 $-r_j$로 바꾼 데서 나온다. 양변에서 $\left((p-1)/2\right)!$은 $p$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4){: data-lid="v0ejb" }을 쓰면
 
-$$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod p$$
+$$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod{p}$$
 
 을 얻는다. 양변이 $\pm 1$이고 $p$가 홀수 소수라 $1 \not\equiv -1$이므로 합동은 등호가 되어 결론이 따른다.
 :::
 
 ::: 명제 2 (제2보충법칙)
-홀수 소수 $p$에 대하여 $\left(\frac{2}{p}\right) = (-1)^{(p^2-1)/8}$이다. 즉 $2$는 $p \equiv \pm 1 \pmod 8$일 때 이차 잉여, $p \equiv \pm 3 \pmod 8$일 때 비잉여이다.
+홀수 소수 $p$에 대하여 $\left(\frac{2}{p}\right) = (-1)^{(p^2-1)/8}$이다. 즉 $2$는 $p \equiv \pm 1 \pmod{8}$일 때 이차 잉여, $p \equiv \pm 3 \pmod{8}$일 때 비잉여이다.
 :::
 
 ::: 증명
@@ -71,7 +71,7 @@ r = 5:\quad &\mu = (4k+2) - (2k+1) = 2k+1, &&\text{홀수}, \\
 r = 7:\quad &\mu = (4k+3) - (2k+1) = 2k+2, &&\text{짝수}
 \end{aligned}$$
 
-이 되어, $p \equiv \pm 1 \pmod 8$이면 $\mu$가 짝수, $p \equiv \pm 3 \pmod 8$이면 홀수이다. 한편 $(-1)^{(p^2-1)/8}$도 같은 분류를 따르므로 ($p^2 - 1 = (p-1)(p+1)$이 $8$의 배수임은 항상 성립하고, 그 quotient의 홀짝이 위 네 경우와 일치한다), $(-1)^\mu = (-1)^{(p^2-1)/8}$이 확인된다.
+이 되어, $p \equiv \pm 1 \pmod{8}$이면 $\mu$가 짝수, $p \equiv \pm 3 \pmod{8}$이면 홀수이다. 한편 $(-1)^{(p^2-1)/8}$도 같은 분류를 따르므로 ($p^2 - 1 = (p-1)(p+1)$이 $8$의 배수임은 항상 성립하고, 그 quotient의 홀짝이 위 네 경우와 일치한다), $(-1)^\mu = (-1)^{(p^2-1)/8}$이 확인된다.
 :::
 
 ## 이차 상호법칙
@@ -97,7 +97,7 @@ $$\sum_{r_j < p/2} r_j + \sum_{r_j > p/2} (p - r_j) = \sum_{j=1}^{(p-1)/2} j$$
 
 이고, 따라서 $\sum_j r_j = \sum_j j - \mu p + 2\sum_{r_j > p/2} r_j$이다. 위 두 식을 빼고 $\bmod\ 2$로 환원하면, $q$가 홀수이고 $p$가 홀수임을 써서
 
-$$\sum_{j=1}^{(p-1)/2}\left\lfloor \frac{jq}{p}\right\rfloor \equiv \mu \pmod 2$$
+$$\sum_{j=1}^{(p-1)/2}\left\lfloor \frac{jq}{p}\right\rfloor \equiv \mu \pmod{2}$$
 
 이 따른다. 그러므로 $S = \sum_{j=1}^{(p-1)/2}\lfloor jq/p\rfloor$로 두면 가우스 보조정리는
 
@@ -121,7 +121,7 @@ $$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{S+T} = (-1)^{\frac{p-
 :::
 
 ::: 예시 4
-$\left(\frac{30}{53}\right)$을 구하자. $53$은 소수이고 $30 = 2\cdot 3\cdot 5$이므로 곱셈성으로 $\left(\frac{30}{53}\right) = \left(\frac{2}{53}\right)\left(\frac{3}{53}\right)\left(\frac{5}{53}\right)$이다. $53 \equiv 5 \pmod 8$이므로 $\left(\frac{2}{53}\right) = -1$이다. 상호법칙으로 $53 \equiv 1 \pmod 4$이니 $\left(\frac{3}{53}\right) = \left(\frac{53}{3}\right) = \left(\frac{2}{3}\right) = -1$, $\left(\frac{5}{53}\right) = \left(\frac{53}{5}\right) = \left(\frac{3}{5}\right) = -1$이다. 따라서 $\left(\frac{30}{53}\right) = (-1)(-1)(-1) = -1$로, $30$은 법 $53$의 비잉여이다.
+$\left(\frac{30}{53}\right)$을 구하자. $53$은 소수이고 $30 = 2\cdot 3\cdot 5$이므로 곱셈성으로 $\left(\frac{30}{53}\right) = \left(\frac{2}{53}\right)\left(\frac{3}{53}\right)\left(\frac{5}{53}\right)$이다. $53 \equiv 5 \pmod{8}$이므로 $\left(\frac{2}{53}\right) = -1$이다. 상호법칙으로 $53 \equiv 1 \pmod{4}$이니 $\left(\frac{3}{53}\right) = \left(\frac{53}{3}\right) = \left(\frac{2}{3}\right) = -1$, $\left(\frac{5}{53}\right) = \left(\frac{53}{5}\right) = \left(\frac{3}{5}\right) = -1$이다. 따라서 $\left(\frac{30}{53}\right) = (-1)(-1)(-1) = -1$로, $30$은 법 $53$의 비잉여이다.
 :::
 
 ## 르장드르 기호의 계산
@@ -133,7 +133,7 @@ $3$이 법 $p$의 이차 잉여인 소수 $p > 3$를 분류하자. 상호법칙�
 
 $$\left(\frac{3}{p}\right) = (-1)^{\frac{p-1}{2}\cdot 1}\left(\frac{p}{3}\right) = (-1)^{(p-1)/2}\left(\frac{p}{3}\right)$$
 
-이다. $\left(\frac{p}{3}\right)$은 $p \bmod 3$에만 의존하여 $p \equiv 1$이면 $+1$, $p \equiv 2$이면 $-1$이다. 또 $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod 4$이면 $+1$, $p \equiv 3 \pmod 4$이면 $-1$이다. 중국인의 나머지 정리로 두 조건을 합치면
+이다. $\left(\frac{p}{3}\right)$은 $p \bmod 3$에만 의존하여 $p \equiv 1$이면 $+1$, $p \equiv 2$이면 $-1$이다. 또 $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod{4}$이면 $+1$, $p \equiv 3 \pmod{4}$이면 $-1$이다. 중국인의 나머지 정리로 두 조건을 합치면
 
 $$\left(\frac{3}{p}\right) = +1 \iff p \equiv \pm 1 \pmod{12}$$
 
@@ -145,7 +145,7 @@ $\left(\frac{105}{317}\right)$을 구하자. $317$은 소수이고 $105 = 3\cdot
 
 $$\left(\frac{105}{317}\right) = \left(\frac{3}{317}\right)\left(\frac{5}{317}\right)\left(\frac{7}{317}\right)$$
 
-이다. $317 \equiv 1 \pmod 4$이므로 세 기호 모두 부호 변화 없이 뒤집힌다:
+이다. $317 \equiv 1 \pmod{4}$이므로 세 기호 모두 부호 변화 없이 뒤집힌다:
 
 $$\begin{aligned}
 \left(\frac{3}{317}\right) &= \left(\frac{317}{3}\right) = \left(\frac{2}{3}\right) = -1, \\
@@ -153,7 +153,7 @@ $$\begin{aligned}
 \left(\frac{7}{317}\right) &= \left(\frac{317}{7}\right) = \left(\frac{2}{7}\right) = +1
 \end{aligned}$$
 
-이다 (마지막에서 $7 \equiv -1 \pmod 8$이라 $\left(\frac{2}{7}\right) = +1$). 따라서 $\left(\frac{105}{317}\right) = (-1)(-1)(+1) = +1$로, $105$는 법 $317$의 이차 잉여이다.
+이다 (마지막에서 $7 \equiv -1 \pmod{8}$이라 $\left(\frac{2}{7}\right) = +1$). 따라서 $\left(\frac{105}{317}\right) = (-1)(-1)(+1) = +1$로, $105$는 법 $317$의 이차 잉여이다.
 :::
 
 소인수분해를 거치지 않고 곧장 호제법처럼 진행할 수도 있다. 이를 위해서는 르장드르 기호를 합성수 분모로 확장한 *야코비 기호<sub>Jacobi symbol</sub>*가 편리하다.
@@ -181,11 +181,11 @@ $m = \prod p_i$, $n = \prod q_j$로 소인수분해하면, 정의와 르장드�
 
 $$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = \prod_{i,j}\left(\frac{p_i}{q_j}\right)\left(\frac{q_j}{p_i}\right) = \prod_{i,j}(-1)^{\frac{p_i-1}{2}\cdot\frac{q_j-1}{2}} = (-1)^{\sum_{i,j}\frac{p_i-1}{2}\frac{q_j-1}{2}}$$
 
-이다. 지수의 합은 $\bigl(\sum_i \frac{p_i-1}{2}\bigr)\bigl(\sum_j \frac{q_j-1}{2}\bigr)$로 분리되므로, 두 홀수 $a, b$의 곱에 대해 $\frac{ab-1}{2} \equiv \frac{a-1}{2} + \frac{b-1}{2} \pmod 2$임을 반복 적용하면
+이다. 지수의 합은 $\bigl(\sum_i \frac{p_i-1}{2}\bigr)\bigl(\sum_j \frac{q_j-1}{2}\bigr)$로 분리되므로, 두 홀수 $a, b$의 곱에 대해 $\frac{ab-1}{2} \equiv \frac{a-1}{2} + \frac{b-1}{2} \pmod{2}$임을 반복 적용하면
 
-$$\sum_i \frac{p_i-1}{2} \equiv \frac{m-1}{2}, \qquad \sum_j \frac{q_j-1}{2} \equiv \frac{n-1}{2} \pmod 2$$
+$$\sum_i \frac{p_i-1}{2} \equiv \frac{m-1}{2}, \qquad \sum_j \frac{q_j-1}{2} \equiv \frac{n-1}{2} \pmod{2}$$
 
-이 되어 지수가 $\frac{m-1}{2}\cdot\frac{n-1}{2}$와 같은 홀짝을 가진다. 두 보충법칙도 같은 방식으로, $\frac{a^2b^2-1}{8} \equiv \frac{a^2-1}{8} + \frac{b^2-1}{8} \pmod 2$를 써서 인수별 르장드르 보충법칙의 곱으로부터 얻는다.
+이 되어 지수가 $\frac{m-1}{2}\cdot\frac{n-1}{2}$와 같은 홀짝을 가진다. 두 보충법칙도 같은 방식으로, $\frac{a^2b^2-1}{8} \equiv \frac{a^2-1}{8} + \frac{b^2-1}{8} \pmod{2}$를 써서 인수별 르장드르 보충법칙의 곱으로부터 얻는다.
 :::
 
 야코비 기호 덕분에 분모가 소수인지 일일이 확인하지 않고도 르장드르 기호를 계산할 수 있다. 다음 예시가 이 호제법형 절차를 보여 준다.
@@ -205,7 +205,7 @@ $$\begin{aligned}
 이렇게 분자를 항상 분모로 환원하고 완전제곱 인수를 떼어 내면, 도중에 분모의 소인수분해를 시도할 필요가 전혀 없다. 이것이 야코비 기호가 르장드르 기호 계산에 주는 실질적 이점이다.
 
 ::: 예시 10 ($x^2 \equiv 7 \pmod{11}$의 가해성)
-합동식 $x^2 \equiv 7 \pmod{11}$이 풀리는지 판정하자. $11 \equiv 3 \pmod 4$이고 $7 \equiv 3 \pmod 4$이므로 두 소수 모두 $4$로 나눠 $3$이 남아 상호법칙의 부호가 음이다:
+합동식 $x^2 \equiv 7 \pmod{11}$이 풀리는지 판정하자. $11 \equiv 3 \pmod{4}$이고 $7 \equiv 3 \pmod{4}$이므로 두 소수 모두 $4$로 나눠 $3$이 남아 상호법칙의 부호가 음이다:
 
 $$\left(\frac{7}{11}\right) = -\left(\frac{11}{7}\right) = -\left(\frac{4}{7}\right) = -\left(\frac{2^2}{7}\right) = -1$$
 
@@ -214,14 +214,14 @@ $$\left(\frac{7}{11}\right) = -\left(\frac{11}{7}\right) = -\left(\frac{4}{7}\ri
 
 ## 응용
 
-이차 상호법칙의 가장 직접적인 응용은 특정 소수의 coset을 분류해, 어떤 디오판토스 방정식이 해를 가질 수 없음을 보이는 것이다. 예를 들어 $x^2 + 1 \equiv 0 \pmod p$가 풀리려면 $-1$이 잉여여야 하므로 $p \equiv 1 \pmod 4$가 필요하고, 이는 $4k+3$ 꼴 소수가 두 제곱수의 합이 될 수 없다는 사실로 이어진다. 같은 방식으로 $x^2 - 2$, $x^2 + 2$, $x^2 - 3$ 등의 가해 소수를 보충법칙과 상호법칙으로 분류할 수 있다.
+이차 상호법칙의 가장 직접적인 응용은 특정 소수의 coset을 분류해, 어떤 디오판토스 방정식이 해를 가질 수 없음을 보이는 것이다. 예를 들어 $x^2 + 1 \equiv 0 \pmod{p}$가 풀리려면 $-1$이 잉여여야 하므로 $p \equiv 1 \pmod{4}$가 필요하고, 이는 $4k+3$ 꼴 소수가 두 제곱수의 합이 될 수 없다는 사실로 이어진다. 같은 방식으로 $x^2 - 2$, $x^2 + 2$, $x^2 - 3$ 등의 가해 소수를 보충법칙과 상호법칙으로 분류할 수 있다.
 
 ::: 예시 11 (제수의 coset)
-$n^2 + 1$의 홀수 소인수는 모두 $4k+1$ 꼴임을 보이자. $p \mid n^2 + 1$이면 $n^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차 잉여이고, 제1보충법칙
+$n^2 + 1$의 홀수 소인수는 모두 $4k+1$ 꼴임을 보이자. $p \mid n^2 + 1$이면 $n^2 \equiv -1 \pmod{p}$이므로 $-1$이 법 $p$의 이차 잉여이고, 제1보충법칙
 
 $$\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2}$$
 
-에서 $(-1)^{(p-1)/2} = +1$, 곧 $\frac{p-1}{2}$가 짝수여야 하므로 $p \equiv 1 \pmod 4$이다. 같은 논법으로 $n^2 + 2$의 홀수 소인수는 $\left(\frac{-2}{p}\right) = +1$, 즉 $p \equiv 1, 3 \pmod 8$을 만족함을 얻는다. 이는 특정 꼴의 소수가 무한히 많다는 디리클레형 결과의 초보적 사례를 제공한다.
+에서 $(-1)^{(p-1)/2} = +1$, 곧 $\frac{p-1}{2}$가 짝수여야 하므로 $p \equiv 1 \pmod{4}$이다. 같은 논법으로 $n^2 + 2$의 홀수 소인수는 $\left(\frac{-2}{p}\right) = +1$, 즉 $p \equiv 1, 3 \pmod{8}$을 만족함을 얻는다. 이는 특정 꼴의 소수가 무한히 많다는 디리클레형 결과의 초보적 사례를 제공한다.
 :::
 
 ---

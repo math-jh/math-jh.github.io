@@ -229,7 +229,7 @@ The following example is also classical.
 ::: Example 11
 $\lim_{x\rightarrow 0} x\sin(1/x) = 0$. This is because $\bigl\lvert x\sin(1/x)\bigr\rvert \leq \lvert x\rvert$, so
 
-$$-\lvert x\rvert \leq x\sin\frac1x \leq \lvert x\rvert,$$
+$$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert,$$
 
 and both ends go to $0$. On the other hand, $\sin(1/x)$ itself does not have a limit as $x \rightarrow 0$, because it oscillates infinitely between $-1$ and $1$ as $x$ approaches $0$. The factor $x$ pressing this oscillation down to $0$ is the contribution of the squeeze theorem.
 :::

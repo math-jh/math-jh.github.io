@@ -158,20 +158,20 @@ Natural projection의 가장 중요한 성질은 다음의 보편 성질이다. 
 ::: 명제 6
 $\mathbb{K}$-벡터공간 $V$와 부분공간 $W\leq V$, 그리고 또 다른 $\mathbb{K}$-벡터공간 $U$로의 linear map $L:V\rightarrow U$가 $W\subseteq\ker L$을 만족한다 하자. 그럼 다음의 식
 
-$$\bar L(v+W)=L(v)$$
+$$\bar{L}(v+W)=L(v)$$
 
-으로 정의된 linear map $\bar L:V/W\rightarrow U$가 유일하게 존재하여 $L=\bar L\circ p$를 만족한다.
+으로 정의된 linear map $\bar{L}:V/W\rightarrow U$가 유일하게 존재하여 $L=\bar{L}\circ p$를 만족한다.
 :::
 ::: 증명
-우선 $\bar L$이 잘 정의됨을 보인다. $v+W=v'+W$라 하면 $v-v'\in W\subseteq\ker L$이므로 
+우선 $\bar{L}$이 잘 정의됨을 보인다. $v+W=v'+W$라 하면 $v-v'\in W\subseteq\ker L$이므로 
 
 $$L(v)-L(v')=L(v-v')=0$$
 
-이고 따라서 $L(v)=L(v')$이다. 즉 $\bar L(v+W)$의 값은 대표원의 선택과 무관하다. $\bar L$이 linear인 것은 
+이고 따라서 $L(v)=L(v')$이다. 즉 $\bar{L}(v+W)$의 값은 대표원의 선택과 무관하다. $\bar{L}$이 linear인 것은 
 
-$$\bar L\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar L\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar L(v+W)+\bar L(v'+W)$$
+$$\bar{L}\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar{L}\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar{L}(v+W)+\bar{L}(v'+W)$$
 
-으로부터 따라온다. 또 임의의 $v\in V$에 대하여 $(\bar L\circ p)(v)=\bar L(v+W)=L(v)$이므로 $L=\bar L\circ p$이다. 마지막으로 $L=L'\circ p$를 만족하는 linear map $L':V/W\rightarrow U$가 주어졌다 하면, $p$가 전사이므로 임의의 $v+W\in V/W$에 대하여 $L'(v+W)=L'(p(v))=L(v)=\bar L(v+W)$이고 따라서 $L'=\bar L$이다.
+으로부터 따라온다. 또 임의의 $v\in V$에 대하여 $(\bar{L}\circ p)(v)=\bar{L}(v+W)=L(v)$이므로 $L=\bar{L}\circ p$이다. 마지막으로 $L=L'\circ p$를 만족하는 linear map $L':V/W\rightarrow U$가 주어졌다 하면, $p$가 전사이므로 임의의 $v+W\in V/W$에 대하여 $L'(v+W)=L'(p(v))=L(v)=\bar{L}(v+W)$이고 따라서 $L'=\bar{L}$이다.
 :::
 
 특히 위의 보편 성질을 $W=\ker L$인 경우에 적용하면, 벡터공간을 분류하는 데에 핵심적인 다음의 정리를 얻는다.
@@ -179,12 +179,12 @@ $$\bar L\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar L\bigl((\alpha v+v')+W\bigr)=L(\alph
 ::: 정리 7 (제1동형정리)
 두 $\mathbb{K}$-벡터공간 $V,U$와 linear map $L:V\rightarrow U$에 대하여, 다음의 식
 
-$$\bar L(v+\ker L)=L(v)$$
+$$\bar{L}(v+\ker L)=L(v)$$
 
-으로 정의된 linear map $\bar L:V/\ker L\rightarrow \im L$은 isomorphism이다. 즉 $V/\ker L\cong\im L$이다.
+으로 정의된 linear map $\bar{L}:V/\ker L\rightarrow \im L$은 isomorphism이다. 즉 $V/\ker L\cong\im L$이다.
 :::
 ::: 증명
-$W=\ker L$로 두면 [명제 6](#prop6){: data-lid="hbvay" }에 의하여 $\bar L(v+\ker L)=L(v)$으로 정의된 linear map $\bar L:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar L:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar L(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar L=\{0\}$이고 따라서 $\bar L$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" }) 즉, $\bar L$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" })
+$W=\ker L$로 두면 [명제 6](#prop6){: data-lid="hbvay" }에 의하여 $\bar{L}(v+\ker L)=L(v)$으로 정의된 linear map $\bar{L}:V/\ker L\rightarrow U$이 잘 정의되며, 그 image는 $\im L$과 같다. 따라서 공역을 $\im L$로 제한하면 $\bar{L}:V/\ker L\rightarrow\im L$은 전사이다. 한편 $\bar{L}(v+\ker L)=0$이라 하면 $L(v)=0$, 즉 $v\in\ker L$이므로 $v+\ker L=\ker L$이 $V/\ker L$의 영벡터이다. 따라서 $\ker\bar{L}=\{0\}$이고 따라서 $\bar{L}$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" }) 즉, $\bar{L}$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" })
 :::
 
 위의 [정리 7](#thm7){: data-lid="3upyz" }과 [정리 5](#thm5){: data-lid="10mfu" }를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $V$에 대하여 

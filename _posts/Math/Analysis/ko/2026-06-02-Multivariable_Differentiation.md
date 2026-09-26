@@ -148,7 +148,7 @@ $$f(x) = \begin{cases} x^2 \sin\frac{1}{x}, & x \neq 0, \\ 0, & x = 0 \end{cases
 
 로 두자. $x \neq 0$에서 곱·연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $x = 0$에서는
 
-$$f'(0) = \lim_{t\rightarrow 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\rightarrow 0} t\sin\frac1t = 0$$
+$$f'(0) = \lim_{t\rightarrow 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\rightarrow 0} t\sin\frac{1}{t} = 0$$
 
 이므로 $f$는 모든 점에서 미분가능하다. 그러나 $x \rightarrow 0$일 때 $f'(x)$의 $-\cos(1/x)$ 항이 진동하여 극한이 없으므로 $f'$는 $0$에서 불연속이다. 즉 미분가능성이 도함수의 연속성을 함의하지 않으며, [명제 4](#prop4){: data-lid="sb7i9" }의 역이 거짓임을 보인다.
 :::

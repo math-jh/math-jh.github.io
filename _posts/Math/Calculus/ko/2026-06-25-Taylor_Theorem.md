@@ -146,7 +146,7 @@ $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert
 ::: 예시 7 (극한)
 극한 $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$를 구하자. [예시 3](#ex3){: data-lid="l8bo0" }에서 $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$이므로
 
-$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12$$
+$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac{1}{2} + \frac{x}{6} + \cdots \rightarrow \frac{1}{2}$$
 
 이다. 이는 [§평균값 정리, ⁋정리 18](/ko/math/calculus/mean_value_theorem#thm18){: data-lid="o1adk" }을 두 번 적용하여도 확인할 수 있는 결과로, 테일러 전개가 고차식의 정보까지 기억하고 있으므로 이를 분모와 분자 양쪽에서 약분해도 여전히 정보가 남아있기 때문이다. 
 :::

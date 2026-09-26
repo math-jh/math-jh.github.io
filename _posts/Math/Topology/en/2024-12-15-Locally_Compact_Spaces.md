@@ -156,7 +156,7 @@ Endow the set of natural numbers $\mathbb{N}=\{1,2,3,\ldots\}$ with the discrete
 
 This space is realized by a familiar subset of the real numbers. Consider the function
 
-$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
+$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac{1}{n}\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
 Then $f$ is a bijection between $\mathbb{N}^+$ and $\{0\}\cup\{1/n\mid n\geq 1\}$. Each $n\in\mathbb{N}$ is an isolated point in $\mathbb{N}^+$ and its image $1/n$ is also an isolated point in $\{0\}\cup\{1/n\}$, and since the cofinite neighborhoods of $\infty$ map to neighborhoods of $0$, $f$ is continuous. Since the domain is compact and the codomain is Hausdorff, by [§Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9){: data-lid="4jx6s" } $f$ is a homeomorphism. That is, $\mathbb{N}^+$ is homeomorphic to a convergent sequence with one limit point.
 :::

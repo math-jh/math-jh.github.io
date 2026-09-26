@@ -175,15 +175,15 @@ However, in general the variety $X_\Delta$ constructed from a reflexive polytope
 1. If the codimension-$1$ subvariety $V$ meets the singular locus of $X_\Delta$, then $V$ itself becomes singular at those points. In our example $\mathbb{P}^2/(\mathbb{Z}/3)$, the singular locus consists of three isolated points, so a generic cubic curve $V$ can avoid them and remain smooth; but as the dimension grows, the singular locus can have positive dimension, forcing $V$ to intersect it. Therefore we cannot directly apply the conclusion of [Proposition 7](#prop7){: data-lid="cmlt1" } to a *singular* $V$.
 2. Thus, to obtain a genuine smooth Calabi-Yau from a singular $V$, an appropriate resolution $\pi: \widetilde{V} \rightarrow V$ is needed, but a general resolution does not preserve the canonical class. Specifically, it is known that an arbitrary resolution of a normal Gorenstein variety $V$ satisfies the following *discrepancy formula*:
 
-    $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i.$$
+    $$K_{\tilde{V}} = \pi^\ast K_V + \sum_i a_i E_i.$$
 
-    Here the $E_i$ are the exceptional divisors of $\pi$, and $a_i \in \mathbb{Q}$ are rational numbers called the *discrepancies*. This formula expresses that $\pi^\ast K_V$ does not exactly capture the vanishing/pole structure of differential forms on $\tilde V$, and the terms $a_i E_i$ correct for this; the sign and magnitude of $a_i$ become standard invariants classifying the type of singularities of $V$.
+    Here the $E_i$ are the exceptional divisors of $\pi$, and $a_i \in \mathbb{Q}$ are rational numbers called the *discrepancies*. This formula expresses that $\pi^\ast K_V$ does not exactly capture the vanishing/pole structure of differential forms on $\tilde{V}$, and the terms $a_i E_i$ correct for this; the sign and magnitude of $a_i$ become standard invariants classifying the type of singularities of $V$.
 
     Now even if $V$ satisfies $K_V \sim 0$ by adjunction, for an arbitrary resolution we have
 
-    $$K_{\tilde V} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
+    $$K_{\tilde{V}} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
 
-    and generically there exist terms with $a_i > 0$, so $K_{\tilde V} \not\sim 0$, i.e. $\tilde V$ loses the Calabi-Yau property.
+    and generically there exist terms with $a_i > 0$, so $K_{\tilde{V}} \not\sim 0$, i.e. $\tilde{V}$ loses the Calabi-Yau property.
 
 Therefore the only kind of resolution that *preserves* the Calabi-Yau property is one where all $a_i = 0$, and such a resolution is defined as follows.
 

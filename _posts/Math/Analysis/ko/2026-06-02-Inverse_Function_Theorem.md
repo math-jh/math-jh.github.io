@@ -47,21 +47,21 @@ DT_y(x) &= I - Df(x) \\
 
 이고, $Df$가 $a$에서 연속이므로 $a$를 중심으로 하는 충분히 작은 closed 공 $\overline{B} = \overline{B}(a, r)$ 위에서
 
-$$\lVert DT_y(x)\rVert = \lVert Df(a) - Df(x)\rVert \leq \frac12$$
+$$\lVert DT_y(x)\rVert = \lVert Df(a) - Df(x)\rVert \leq \frac{1}{2}$$
 
 로 만들 수 있다. 그러면 $\overline{B}$가 convex이므로 두 점 $x_1, x_2 \in \overline{B}$를 잇는 선분이 $\overline{B}$ 안에 있고, 단위벡터 $u$에 대해 실숫값 함수 $u \cdot T_y$에 [§다변수 미분, ⁋명제 6](/ko/math/analysis/multivariable_differentiation#prop6){: data-lid="807gm" }을 적용하면 그 선분 위의 어떤 점 $\xi$에서 $u \cdot \bigl(T_y(x_1) - T_y(x_2)\bigr) = u \cdot DT_y(\xi)(x_1 - x_2)$이다. 우변의 절댓값이 $\lVert DT_y(\xi)\rVert \lVert x_1 - x_2\rVert$ 이하이므로, $u$를 $T_y(x_1) - T_y(x_2)$ 방향의 단위벡터로 잡으면
 
-$$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac12 \lVert x_1 - x_2\rVert$$
+$$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac{1}{2} \lVert x_1 - x_2\rVert$$
 
 이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9){: data-lid="702ep" }에 의해 완비 거리공간이다. 한편 $T_y(a) - a = y - f(a)$이므로, $\lVert y - f(a)\rVert < r/2$이면 모든 $x \in \overline{B}$에서
 
-$$\lVert T_y(x) - a\rVert \leq \lVert T_y(x) - T_y(a)\rVert + \lVert T_y(a) - a\rVert \leq \frac12 \lVert x - a\rVert + \lVert y - f(a)\rVert < r$$
+$$\lVert T_y(x) - a\rVert \leq \lVert T_y(x) - T_y(a)\rVert + \lVert T_y(a) - a\rVert \leq \frac{1}{2} \lVert x - a\rVert + \lVert y - f(a)\rVert < r$$
 
 이 되어 $T_y$가 $\overline{B}$를 자기 자신으로 보낸다. 따라서 열린 공 $V = B(f(a), r/2)$로 두면 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2){: data-lid="c56rc" }에 의해 각 $y \in V$마다 $T_y$의 fixed point, 곧 $f(x) = y$인 점 $x$가 $\overline{B}$ 안에 유일하게 존재하며 위의 부등식에 의해 그 점은 열린 공 $B(a,r)$에 들어간다. $U = \{x \in B(a,r) \mid f(x) \in V\}$로 두면 $f$의 연속성에 의해 $U$가 열린집합이고, $\overline{B}$ 안에서의 유일성이 단사성을 주므로 $f : U \rightarrow V$는 일대일 대응이다.
 
 역함수의 미분가능성은 따로 확인해야 한다. 축약 부등식의 좌변 $T_y(x_1) - T_y(x_2) = (x_1 - x_2) - \bigl(f(x_1) - f(x_2)\bigr)$이 $y$에 무관하므로
 
-$$\lVert f(x_1) - f(x_2)\rVert \geq \lVert x_1 - x_2\rVert - \lVert T_y(x_1) - T_y(x_2)\rVert \geq \frac12 \lVert x_1 - x_2\rVert$$
+$$\lVert f(x_1) - f(x_2)\rVert \geq \lVert x_1 - x_2\rVert - \lVert T_y(x_1) - T_y(x_2)\rVert \geq \frac{1}{2} \lVert x_1 - x_2\rVert$$
 
 이고, 곧 $\lVert f^{-1}(y_1) - f^{-1}(y_2)\rVert \leq 2 \lVert y_1 - y_2\rVert$이다. 또 $x \in \overline{B}$에서 $Df(x)v = 0$이면 $v = \bigl(I - Df(x)\bigr)v$에서 $\lVert v\rVert \leq \lVert v\rVert/2$이므로 $v = 0$이고, 따라서 $Df(x)$가 가역이다. 이제 $y \in V$, $x = f^{-1}(y)$로 두고 $h = f^{-1}(y+k) - f^{-1}(y)$라 하면 $k = f(x+h) - f(x) = Df(x)h + \rho(h)$이며 $\rho(h) = o(\lVert h\rVert)$이므로
 

@@ -14,10 +14,10 @@ weight: 5
 published: false
 ---
 
-Complex manifold에서 exterior derivative가 $d = \partial + \bar\partial$로 갈라지고, 그로부터 regularity를 재는 Dolbeault cohomology $H^{p,q}_{\bar\partial}(X)$가 나옴을 보았다 ([§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="n49eq" }). 같은 글에서 우리는 de Rham cohomology의 $(p,q)$-분해
+Complex manifold에서 exterior derivative가 $d = \partial + \bar{\partial}$로 갈라지고, 그로부터 regularity를 재는 Dolbeault cohomology $H^{p,q}_{\bar{\partial}}(X)$가 나옴을 보았다 ([§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="n49eq" }). 같은 글에서 우리는 de Rham cohomology의 $(p,q)$-분해
 
 $$
-H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
+H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar{\partial}}(X)
 $$
 
 가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $\dd{\omega} = 0$이며 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="t1f8w" }), 거기서 따라오는 [§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="iuhtc" }가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
@@ -52,7 +52,7 @@ $$
 로 정의한다. 이는 smooth $k$-form space $\Omega^k(M)$ 위의 양의 정부호 내적이다.
 :::
 
-둘째 등식은 [정의 1](#def1){: data-lid="kjkwe" }에서 즉시 따라오며, $\langle \cdot, \cdot \rangle$이 각 점에서 양의 정부호이고 $M$이 콤팩트라 적분이 유한하므로 $(\cdot, \cdot)$은 양의 정부호 내적이 된다. 복소값 형식에 대해서는 둘째 변수에 복소켤레를 넣어 $(\alpha, \beta) = \int_M \alpha \wedge \ast\bar\beta$로 두면 Hermitian 내적이 된다. 이 $L^2$-내적이 있어야 exterior derivative $d$의 수반작용소를 말할 수 있다.
+둘째 등식은 [정의 1](#def1){: data-lid="kjkwe" }에서 즉시 따라오며, $\langle \cdot, \cdot \rangle$이 각 점에서 양의 정부호이고 $M$이 콤팩트라 적분이 유한하므로 $(\cdot, \cdot)$은 양의 정부호 내적이 된다. 복소값 형식에 대해서는 둘째 변수에 복소켤레를 넣어 $(\alpha, \beta) = \int_M \alpha \wedge \ast\bar{\beta}$로 두면 Hermitian 내적이 된다. 이 $L^2$-내적이 있어야 exterior derivative $d$의 수반작용소를 말할 수 있다.
 
 ::: 정의 3
 콤팩트 지향 Riemannian manifold $M$ 위에서 exterior derivative $d : \Omega^k(M) \rightarrow \Omega^{k+1}(M)$의 *형식 수반작용소<sub>formal adjoint</sub>* $d^\ast : \Omega^{k+1}(M) \rightarrow \Omega^k(M)$를, 모든 $\alpha \in \Omega^k$, $\beta \in \Omega^{k+1}$에 대하여
@@ -64,7 +64,7 @@ $$
 가 성립하는 작용소로 정의한다. 명시적으로, $p$-형식 위에서 $d^\ast = (-1)^{m(p+1)+1} \ast d\, \ast$이며, 이는 degree를 하나 내린다.
 :::
 
-수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M \dd{(\alpha \wedge \ast\beta)} = 0$이고, $\dd{(\alpha \wedge \ast\beta)} = \dd{\alpha} \wedge \ast\beta + (-1)^k \alpha \wedge \dd{(\ast\beta)}$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(\dd{\alpha}, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. Complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="b0qw2" }에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
+수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M \dd{(\alpha \wedge \ast\beta)} = 0$이고, $\dd{(\alpha \wedge \ast\beta)} = \dd{\alpha} \wedge \ast\beta + (-1)^k \alpha \wedge \dd{(\ast\beta)}$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(\dd{\alpha}, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. Complex manifold에서는 같은 방식으로 $\partial$과 $\bar{\partial}$의 수반작용소 $\partial^\ast$, $\bar{\partial}^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="b0qw2" }에서 이미 도입), $\partial^\ast = -\ast\bar{\partial}\ast$, $\bar{\partial}^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar{\partial}$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
 
 ## Laplace 작용소와 조화형식
 
@@ -145,57 +145,57 @@ $$
 이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + \dd{\eta} + d^\ast\zeta$로 쓰면, $\dd{\alpha} = 0$이고 $\dd{h} = 0$ (조화는 닫힘), $\dd{(\dd{\eta})} = 0$이므로 $\dd{(d^\ast\zeta)} = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + \dd{\eta}$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = \dd{\beta}$가 조화이자 완전형식인데, 조화형식이므로 [명제 5](#prop5){: data-lid="d9o1u" }에 의해 $d^\ast(\dd{\beta}) = 0$이고, 따라서 $(\dd{\beta}, \dd{\beta}) = (\beta, d^\ast \dd{\beta}) = 0$, 곧 $\dd{\beta} = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
 :::
 
-Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 infinite-dimensional affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. Complex manifold에서는 같은 논법이 $\bar\partial$에 대해서도 작동하여, $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$의 kernel $\mathcal{H}^{p,q}_{\bar\partial}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}_{\bar\partial}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar\partial}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
+Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 infinite-dimensional affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. Complex manifold에서는 같은 논법이 $\bar{\partial}$에 대해서도 작동하여, $\Delta_{\bar{\partial}} = \bar{\partial}\bar{\partial}^\ast + \bar{\partial}^\ast\bar{\partial}$의 kernel $\mathcal{H}^{p,q}_{\bar{\partial}}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar{\partial}}(X) \cong \mathcal{H}^{p,q}_{\bar{\partial}}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar{\partial}}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
 
 ## Kähler 조건과 Laplace 작용소
 
-콤팩트 Hermitian manifold에는 세 종류의 Laplace 작용소가 산다. Exterior derivative에서 온 $\Delta_d = d d^\ast + d^\ast d$, 그리고 $\partial$·$\bar\partial$에서 온
+콤팩트 Hermitian manifold에는 세 종류의 Laplace 작용소가 산다. Exterior derivative에서 온 $\Delta_d = d d^\ast + d^\ast d$, 그리고 $\partial$·$\bar{\partial}$에서 온
 
 $$
-\Delta_\partial = \partial\partial^\ast + \partial^\ast\partial, \qquad \Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial
+\Delta_\partial = \partial\partial^\ast + \partial^\ast\partial, \qquad \Delta_{\bar{\partial}} = \bar{\partial}\bar{\partial}^\ast + \bar{\partial}^\ast\bar{\partial}
 $$
 
-이다. 일반 Hermitian manifold에서는 이 셋이 서로 다른 작용소이며, 특히 $\Delta_d$가 차수보존인 반면 $\Delta_\partial$, $\Delta_{\bar\partial}$는 $(p,q)$-degree를 보존한다. Kähler 조건은 이 셋을 상수배로 묶어, $\Delta_d$의 조화형식이 자동으로 $(p,q)$-degree로 갈라지게 한다.
+이다. 일반 Hermitian manifold에서는 이 셋이 서로 다른 작용소이며, 특히 $\Delta_d$가 차수보존인 반면 $\Delta_\partial$, $\Delta_{\bar{\partial}}$는 $(p,q)$-degree를 보존한다. Kähler 조건은 이 셋을 상수배로 묶어, $\Delta_d$의 조화형식이 자동으로 $(p,q)$-degree로 갈라지게 한다.
 
 ::: 정리 7 (Kähler Laplace 항등식)
 $(X, J, g)$가 Kähler manifold이면
 
 $$
-\Delta_d = 2\,\Delta_\partial = 2\,\Delta_{\bar\partial}
+\Delta_d = 2\,\Delta_\partial = 2\,\Delta_{\bar{\partial}}
 $$
 
 이 성립한다. 특히 $\Delta_d$는 $(p,q)$-degree를 보존하며, 콤팩트 Kähler manifold에서 조화 $k$-형식 공간은
 
 $$
-\mathcal{H}^k_d(X) = \bigoplus_{p+q=k} \mathcal{H}^{p,q}_{\bar\partial}(X)
+\mathcal{H}^k_d(X) = \bigoplus_{p+q=k} \mathcal{H}^{p,q}_{\bar{\partial}}(X)
 $$
 
-로 direct sum 분해된다. 여기서 $\mathcal{H}^{p,q}_{\bar\partial}(X) = \{ \alpha \in \Omega^{p,q}(X) \mid \Delta_{\bar\partial}\alpha = 0 \}$이다.
+로 direct sum 분해된다. 여기서 $\mathcal{H}^{p,q}_{\bar{\partial}}(X) = \{ \alpha \in \Omega^{p,q}(X) \mid \Delta_{\bar{\partial}}\alpha = 0 \}$이다.
 :::
 
 ::: 증명
-Kähler 항등식 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dp2dh" }) $[\Lambda, \bar\partial] = -i\,\partial^\ast$, $[\Lambda, \partial] = i\,\bar\partial^\ast$에서 출발한다. 둘째 항등식을 수반으로 옮기면 $[\partial^\ast, L] = -i\bar\partial$ 류의 동반관계가 따라오나, 직접 계산에는 위 두 식과 $\partial^\ast = i[\Lambda, \bar\partial]$의 부호만 쓰면 충분하다.
+Kähler 항등식 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dp2dh" }) $[\Lambda, \bar{\partial}] = -i\,\partial^\ast$, $[\Lambda, \partial] = i\,\bar{\partial}^\ast$에서 출발한다. 둘째 항등식을 수반으로 옮기면 $[\partial^\ast, L] = -i\bar{\partial}$ 류의 동반관계가 따라오나, 직접 계산에는 위 두 식과 $\partial^\ast = i[\Lambda, \bar{\partial}]$의 부호만 쓰면 충분하다.
 
-먼저 $\Delta_\partial = \Delta_{\bar\partial}$를 본다. $\partial^\ast = i[\Lambda, \bar\partial] = i(\Lambda\bar\partial - \bar\partial\Lambda)$이므로
-
-$$
-\Delta_\partial = \partial\partial^\ast + \partial^\ast\partial = i\big( \partial(\Lambda\bar\partial - \bar\partial\Lambda) + (\Lambda\bar\partial - \bar\partial\Lambda)\partial \big)
-$$
-
-이다. 이를 전개하고 [§돌보 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3){: data-lid="a64j8" }의 $\partial\bar\partial = -\bar\partial\partial$를 써서 정리하면 $\Delta_\partial = \Delta_{\bar\partial}$가 따라온다. 마찬가지로 $\bar\partial^\ast = -i[\Lambda, \partial]$를 $\Delta_{\bar\partial}$에 대입해 같은 표현을 얻으면 두 작용소가 같음이 확인된다. 핵심은 $\partial$과 $\bar\partial$가 반가환하고, $L$·$\Lambda$와의 commutator가 위 항등식으로 주어진다는 데 있다.
-
-다음으로 $\Delta_d = \Delta_\partial + \Delta_{\bar\partial}$를 본다. $d = \partial + \bar\partial$, $d^\ast = \partial^\ast + \bar\partial^\ast$이므로
+먼저 $\Delta_\partial = \Delta_{\bar{\partial}}$를 본다. $\partial^\ast = i[\Lambda, \bar{\partial}] = i(\Lambda\bar{\partial} - \bar{\partial}\Lambda)$이므로
 
 $$
-\Delta_d = (\partial + \bar\partial)(\partial^\ast + \bar\partial^\ast) + (\partial^\ast + \bar\partial^\ast)(\partial + \bar\partial) = \Delta_\partial + \Delta_{\bar\partial} + (\partial\bar\partial^\ast + \bar\partial^\ast\partial) + (\bar\partial\partial^\ast + \partial^\ast\bar\partial)
+\Delta_\partial = \partial\partial^\ast + \partial^\ast\partial = i\big( \partial(\Lambda\bar{\partial} - \bar{\partial}\Lambda) + (\Lambda\bar{\partial} - \bar{\partial}\Lambda)\partial \big)
 $$
 
-이다. 마지막 두 괄호의 교차항이 Kähler 항등식 아래에서 소멸함을 보이면 된다. $\bar\partial^\ast = -i[\Lambda, \partial]$를 쓰면 $\partial\bar\partial^\ast + \bar\partial^\ast\partial = -i\big( \partial\Lambda\partial - \partial\partial\Lambda + \Lambda\partial\partial - \partial\Lambda\partial \big) = -i(-\partial^2\Lambda + \Lambda\partial^2) = 0$이다 ($\partial^2 = 0$). 켤레로 $\bar\partial\partial^\ast + \partial^\ast\bar\partial = 0$도 따라온다. 따라서 교차항이 모두 사라져 $\Delta_d = \Delta_\partial + \Delta_{\bar\partial} = 2\Delta_{\bar\partial}$이다 ($\Delta_\partial = \Delta_{\bar\partial}$이므로). 같은 이유로 $\Delta_d = 2\Delta_\partial$이다.
+이다. 이를 전개하고 [§돌보 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3){: data-lid="a64j8" }의 $\partial\bar{\partial} = -\bar{\partial}\partial$를 써서 정리하면 $\Delta_\partial = \Delta_{\bar{\partial}}$가 따라온다. 마찬가지로 $\bar{\partial}^\ast = -i[\Lambda, \partial]$를 $\Delta_{\bar{\partial}}$에 대입해 같은 표현을 얻으면 두 작용소가 같음이 확인된다. 핵심은 $\partial$과 $\bar{\partial}$가 반가환하고, $L$·$\Lambda$와의 commutator가 위 항등식으로 주어진다는 데 있다.
 
-마지막으로 차수분해를 본다. $\Delta_{\bar\partial}$가 $(p,q)$-degree를 보존하므로 $\Delta_d = 2\Delta_{\bar\partial}$도 degree를 보존한다. 따라서 $k$-형식 $\alpha = \sum_{p+q=k}\alpha^{p,q}$가 $\Delta_d\alpha = 0$인 것은 각 degree 성분이 $\Delta_d\alpha^{p,q} = 0$, 곧 $\Delta_{\bar\partial}\alpha^{p,q} = 0$인 것과 동치이다. 그러므로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar\partial}(X)$이다.
+다음으로 $\Delta_d = \Delta_\partial + \Delta_{\bar{\partial}}$를 본다. $d = \partial + \bar{\partial}$, $d^\ast = \partial^\ast + \bar{\partial}^\ast$이므로
+
+$$
+\Delta_d = (\partial + \bar{\partial})(\partial^\ast + \bar{\partial}^\ast) + (\partial^\ast + \bar{\partial}^\ast)(\partial + \bar{\partial}) = \Delta_\partial + \Delta_{\bar{\partial}} + (\partial\bar{\partial}^\ast + \bar{\partial}^\ast\partial) + (\bar{\partial}\partial^\ast + \partial^\ast\bar{\partial})
+$$
+
+이다. 마지막 두 괄호의 교차항이 Kähler 항등식 아래에서 소멸함을 보이면 된다. $\bar{\partial}^\ast = -i[\Lambda, \partial]$를 쓰면 $\partial\bar{\partial}^\ast + \bar{\partial}^\ast\partial = -i\big( \partial\Lambda\partial - \partial\partial\Lambda + \Lambda\partial\partial - \partial\Lambda\partial \big) = -i(-\partial^2\Lambda + \Lambda\partial^2) = 0$이다 ($\partial^2 = 0$). 켤레로 $\bar{\partial}\partial^\ast + \partial^\ast\bar{\partial} = 0$도 따라온다. 따라서 교차항이 모두 사라져 $\Delta_d = \Delta_\partial + \Delta_{\bar{\partial}} = 2\Delta_{\bar{\partial}}$이다 ($\Delta_\partial = \Delta_{\bar{\partial}}$이므로). 같은 이유로 $\Delta_d = 2\Delta_\partial$이다.
+
+마지막으로 차수분해를 본다. $\Delta_{\bar{\partial}}$가 $(p,q)$-degree를 보존하므로 $\Delta_d = 2\Delta_{\bar{\partial}}$도 degree를 보존한다. 따라서 $k$-형식 $\alpha = \sum_{p+q=k}\alpha^{p,q}$가 $\Delta_d\alpha = 0$인 것은 각 degree 성분이 $\Delta_d\alpha^{p,q} = 0$, 곧 $\Delta_{\bar{\partial}}\alpha^{p,q} = 0$인 것과 동치이다. 그러므로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar{\partial}}(X)$이다.
 :::
 
-이 정리가 Hodge 이론의 전환점이다. 등식 $\Delta_d = 2\Delta_{\bar\partial}$은 Kähler 조건에서만 성립하며, 일반 Hermitian manifold에서는 두 Laplace 작용소가 일치하지 않고 따라서 조화형식의 차수분해도 깨진다. 콤팩트 Kähler manifold에서는 [정리 6](#thm6){: data-lid="feosm" }의 조화 표현과 위 차수분해가 맞물려, de Rham cohomology가 차수별로 쪼개진다. 이 차수보존성이 다음 절의 Hodge 분해를 즉시 낳는다.
+이 정리가 Hodge 이론의 전환점이다. 등식 $\Delta_d = 2\Delta_{\bar{\partial}}$은 Kähler 조건에서만 성립하며, 일반 Hermitian manifold에서는 두 Laplace 작용소가 일치하지 않고 따라서 조화형식의 차수분해도 깨진다. 콤팩트 Kähler manifold에서는 [정리 6](#thm6){: data-lid="feosm" }의 조화 표현과 위 차수분해가 맞물려, de Rham cohomology가 차수별로 쪼개진다. 이 차수보존성이 다음 절의 Hodge 분해를 즉시 낳는다.
 
 ## Hodge 분해와 Hodge 대칭
 
@@ -205,13 +205,13 @@ $$
 콤팩트 Kähler manifold $X$에 대하여, $(p,q)$-degree의 *Hodge subspace<sub>호지 부분공간</sub>*을
 
 $$
-H^{p,q}(X) = \{ [\alpha] \in H^{p+q}_{\mathrm{dR}}(X, \mathbb{C}) \mid \alpha \in \mathcal{H}^{p,q}_{\bar\partial}(X) \}
+H^{p,q}(X) = \{ [\alpha] \in H^{p+q}_{\mathrm{dR}}(X, \mathbb{C}) \mid \alpha \in \mathcal{H}^{p,q}_{\bar{\partial}}(X) \}
 $$
 
 로, 곧 $(p,q)$-degree의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
-[정리 7](#thm7){: data-lid="1wvcs" }에 의해 $\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar\partial$-조화형식으로 실현되므로 ([정리 6](#thm6){: data-lid="2l2pn" }의 $\bar\partial$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar\partial}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="9s4we" }에서 온다. 이 동일시가 Hodge 수가 [§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="5e38f" }의 Hodge 수와 일치함을 보장한다.
+[정리 7](#thm7){: data-lid="1wvcs" }에 의해 $\mathcal{H}^{p,q}_{\bar{\partial}}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar{\partial}$-조화형식으로 실현되므로 ([정리 6](#thm6){: data-lid="2l2pn" }의 $\bar{\partial}$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar{\partial}}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar{\partial}}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="9s4we" }에서 온다. 이 동일시가 Hodge 수가 [§돌보 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4){: data-lid="5e38f" }의 Hodge 수와 일치함을 보장한다.
 
 ::: 정리 9 (Hodge 분해와 Hodge 대칭)
 $X$를 콤팩트 Kähler manifold라 하자. 그러면 각 $k$에 대하여 direct sum decomposition
@@ -230,18 +230,18 @@ $$
 :::
 
 ::: 증명
-분해부터 본다. [정리 6](#thm6){: data-lid="0hqqa" }으로 $H^k_{\mathrm{dR}}(X, \mathbb{C}) \cong \mathcal{H}^k_d(X)$이고, [정리 7](#thm7){: data-lid="2hieo" }로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar\partial}(X)$이다. 우변의 각 direct sum 성분 $\mathcal{H}^{p,q}_{\bar\partial}(X)$가 대표하는 cohomology class들이 정확히 [정의 8](#def8){: data-lid="6ys0n" }의 $H^{p,q}(X)$이므로, 이 동형들을 합치면
+분해부터 본다. [정리 6](#thm6){: data-lid="0hqqa" }으로 $H^k_{\mathrm{dR}}(X, \mathbb{C}) \cong \mathcal{H}^k_d(X)$이고, [정리 7](#thm7){: data-lid="2hieo" }로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar{\partial}}(X)$이다. 우변의 각 direct sum 성분 $\mathcal{H}^{p,q}_{\bar{\partial}}(X)$가 대표하는 cohomology class들이 정확히 [정의 8](#def8){: data-lid="6ys0n" }의 $H^{p,q}(X)$이므로, 이 동형들을 합치면
 
 $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}(X)
 $$
 
-이다. 둘째 동형 $H^{p,q}(X) \cong H^q(X, \Omega^p)$은 $\mathcal{H}^{p,q}_{\bar\partial}(X) \cong H^{p,q}_{\bar\partial}(X)$ ([정리 6](#thm6){: data-lid="zrtny" }의 $\bar\partial$-판)과 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="x0ny0" }를 잇대어 얻는다.
+이다. 둘째 동형 $H^{p,q}(X) \cong H^q(X, \Omega^p)$은 $\mathcal{H}^{p,q}_{\bar{\partial}}(X) \cong H^{p,q}_{\bar{\partial}}(X)$ ([정리 6](#thm6){: data-lid="zrtny" }의 $\bar{\partial}$-판)과 [§돌보 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9){: data-lid="x0ny0" }를 잇대어 얻는다.
 
-대칭을 본다. 계량 $g$가 실계량이고 $X$가 Kähler이므로 Laplace 작용소 $\Delta_d$는 실작용소이고 복소켤레와 교환한다. 곧 $\alpha$가 조화이면 $\bar\alpha$도 조화이다. 한편 복소켤레는 $(p,q)$-형식을 $(q,p)$-형식으로 보낸다 (좌표에서 $\overline{\dd{z_I} \wedge \dd{\bar{z}_J}} = \dd{\bar{z}_I} \wedge \dd{z_J}$이므로 holomorphic·antiholomorphic index가 맞바뀐다). 따라서 켤레사상 $\alpha \mapsto \bar\alpha$는 $\mathcal{H}^{p,q}_{\bar\partial}(X)$를 $\mathcal{H}^{q,p}_{\bar\partial}(X)$로 보내는 $\mathbb{R}$-선형 동형(반선형 $\mathbb{C}$-동형)이다. 이것이 cohomology 수준에서 $\overline{H^{p,q}(X)} = H^{q,p}(X)$를 준다. 반선형 동형은 복소차원을 보존하므로 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X) = \dim_{\mathbb{C}} H^{q,p}(X) = h^{q,p}(X)$이다.
+대칭을 본다. 계량 $g$가 실계량이고 $X$가 Kähler이므로 Laplace 작용소 $\Delta_d$는 실작용소이고 복소켤레와 교환한다. 곧 $\alpha$가 조화이면 $\bar{\alpha}$도 조화이다. 한편 복소켤레는 $(p,q)$-형식을 $(q,p)$-형식으로 보낸다 (좌표에서 $\overline{\dd{z_I} \wedge \dd{\bar{z}_J}} = \dd{\bar{z}_I} \wedge \dd{z_J}$이므로 holomorphic·antiholomorphic index가 맞바뀐다). 따라서 켤레사상 $\alpha \mapsto \bar{\alpha}$는 $\mathcal{H}^{p,q}_{\bar{\partial}}(X)$를 $\mathcal{H}^{q,p}_{\bar{\partial}}(X)$로 보내는 $\mathbb{R}$-선형 동형(반선형 $\mathbb{C}$-동형)이다. 이것이 cohomology 수준에서 $\overline{H^{p,q}(X)} = H^{q,p}(X)$를 준다. 반선형 동형은 복소차원을 보존하므로 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X) = \dim_{\mathbb{C}} H^{q,p}(X) = h^{q,p}(X)$이다.
 :::
 
-Hodge 분해는 [§돌보 코호몰로지](/ko/math/complex_geometry/dolbeault_cohomology){: data-lid="57gf7" }에서 예고한 등식 $H^k_{\mathrm{dR}}(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}$가 콤팩트 Kähler manifold에서 정확히 성립함을 확인해 준다. 결정적으로 이 분해는 Kähler 조건에 의존한다. 일반 콤팩트 complex manifold에서는 $\Delta_d \neq 2\Delta_{\bar\partial}$라 조화형식의 차수분해가 깨지고, 그 결과 위 direct sum이 성립하지 않는다. 예컨대 Hopf 곡면은 콤팩트 complex manifold이지만 $b_1 = 1$이 홀수라, 아래에서 보듯 Hodge 분해가 부과하는 짝수성 제약을 어겨 Kähler 계량을 가질 수 없다. Hodge 대칭은 holomorphic과 antiholomorphic을 맞바꾸는 복소켤레가 cohomology에 남기는 흔적으로, 이로부터 Hodge 수의 표가 대각선에 대해 대칭이 된다.
+Hodge 분해는 [§돌보 코호몰로지](/ko/math/complex_geometry/dolbeault_cohomology){: data-lid="57gf7" }에서 예고한 등식 $H^k_{\mathrm{dR}}(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}$가 콤팩트 Kähler manifold에서 정확히 성립함을 확인해 준다. 결정적으로 이 분해는 Kähler 조건에 의존한다. 일반 콤팩트 complex manifold에서는 $\Delta_d \neq 2\Delta_{\bar{\partial}}$라 조화형식의 차수분해가 깨지고, 그 결과 위 direct sum이 성립하지 않는다. 예컨대 Hopf 곡면은 콤팩트 complex manifold이지만 $b_1 = 1$이 홀수라, 아래에서 보듯 Hodge 분해가 부과하는 짝수성 제약을 어겨 Kähler 계량을 가질 수 없다. Hodge 대칭은 holomorphic과 antiholomorphic을 맞바꾸는 복소켤레가 cohomology에 남기는 흔적으로, 이로부터 Hodge 수의 표가 대각선에 대해 대칭이 된다.
 
 ## 위상적 귀결
 

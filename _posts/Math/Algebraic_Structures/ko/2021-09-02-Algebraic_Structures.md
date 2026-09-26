@@ -168,7 +168,7 @@ $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
 가 성립해야 한다. 이 식은
 
-$$x'\star y\equiv x\star y\pmod R$$
+$$x'\star y\equiv x\star y\pmod{R}$$
 
 로 바꾸어 쓸 수 있고, 앞선 정의를 따르자면 이는 정확히 $R$이 연산과 *right* compatible해야 한다는 의미다. 마찬가지 논리로, $[y]$의 representative의 선택에도 연산 $\mathbin{\tiny\char"2606}$의 값이 변하지 않아야 하므로 $R$은 연산과 *left* compatible이어야 한다.
 

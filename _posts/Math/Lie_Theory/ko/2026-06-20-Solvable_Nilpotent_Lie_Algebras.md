@@ -68,9 +68,9 @@ $$[x+\mathfrak{a},y+\mathfrak{a}]=[x,y]+\mathfrak{a}$$
 
 $$[x',y']=[x+a,y+b]=[x,y]+[x,b]+[a,y]+[a,b]$$
 
-이다. $\mathfrak{a}$가 ideal이므로 $[x,b],[a,y],[a,b]$는 모두 $\mathfrak{a}$에 속하고, 따라서 $[x',y']+\mathfrak{a}=[x,y]+\mathfrak{a}$이다. 즉 연산이 잘 정의된다. Bilinearity는 $\mathfrak{g}$의 bracket의 bilinearity에서 따라오고, anticommutativity와 Jacobi identity도 quotient map이 선형이므로 $\mathfrak{g}$의 해당 항등식에서 직접 내려온다. 가령 임의의 $\bar x,\bar y,\bar z\in\mathfrak{g}/\mathfrak{a}$에 대하여
+이다. $\mathfrak{a}$가 ideal이므로 $[x,b],[a,y],[a,b]$는 모두 $\mathfrak{a}$에 속하고, 따라서 $[x',y']+\mathfrak{a}=[x,y]+\mathfrak{a}$이다. 즉 연산이 잘 정의된다. Bilinearity는 $\mathfrak{g}$의 bracket의 bilinearity에서 따라오고, anticommutativity와 Jacobi identity도 quotient map이 선형이므로 $\mathfrak{g}$의 해당 항등식에서 직접 내려온다. 가령 임의의 $\bar{x},\bar{y},\bar{z}\in\mathfrak{g}/\mathfrak{a}$에 대하여
 
-$$[[\bar x,\bar y],\bar z]+[[\bar y,\bar z],\bar x]+[[\bar z,\bar x],\bar y]=\bigl([[x,y],z]+[[y,z],x]+[[z,x],y]\bigr)+\mathfrak{a}=0+\mathfrak{a}$$
+$$[[\bar{x},\bar{y}],\bar{z}]+[[\bar{y},\bar{z}],\bar{x}]+[[\bar{z},\bar{x}],\bar{y}]=\bigl([[x,y],z]+[[y,z],x]+[[z,x],y]\bigr)+\mathfrak{a}=0+\mathfrak{a}$$
 
 이다. $\pi$가 surjective homomorphism이고 $\ker\pi=\mathfrak{a}$임은 정의에서 즉각적이다.
 :::
@@ -214,7 +214,7 @@ $V$가 $0$이 아닌 유한차원 $k$-벡터공간이고 $\mathfrak{g}\subseteq\
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$이면 조건이 공허하게 성립하므로, $\dim\mathfrak{g}\geq 1$이고 차원이 더 작은 모든 경우에 대하여 결론이 성립한다고 가정한다.
 
-먼저 $\mathfrak{g}$가 codimension $1$인 ideal $\mathfrak{h}$를 가짐을 보인다. 이를 위해 $\mathfrak{g}$의 임의의 maximal proper subalgebra $\mathfrak{h}$를 택한다. $\mathfrak{h}$의 $\mathfrak{g}$ 위의 action을 adjoint로 보면 $\mathfrak{h}$는 $\mathfrak{g}$와 $\mathfrak{h}$ 둘 다에 작용하므로 quotient 벡터공간 $\mathfrak{g}/\mathfrak{h}$ 위에 작용한다. 곧 각 $x\in\mathfrak{h}$에 대하여 $\ad x$가 $\mathfrak{h}$를 보존하므로, $\overline{\ad}x:\mathfrak{g}/\mathfrak{h}\rightarrow\mathfrak{g}/\mathfrak{h}$가 유도된다. 이로써 $\mathfrak{h}$의 상은 $\mathfrak{gl}(\mathfrak{g}/\mathfrak{h})$의 subalgebra가 되는데, 임의의 $x\in\mathfrak{g}$에 대하여 $\ad x$는 nilpotent endomorphism이다. 이는 $x$가 $\mathfrak{gl}(V)$ 안의 nilpotent endomorphism일 때, 그 좌·우 곱사상의 차로 표현되는 $\ad x$ 역시 nilpotent이기 때문이다. 따라서 $\dim\mathfrak{h}<\dim\mathfrak{g}$인 $\mathfrak{h}$의 상에 귀납 가정을 적용하면, 어떤 $0\neq \bar y\in\mathfrak{g}/\mathfrak{h}$가 존재하여 모든 $x\in\mathfrak{h}$에 대하여 $\overline{\ad}x(\bar y)=0$, 곧 $[x,y]\in\mathfrak{h}$이다. 이 $y\notin\mathfrak{h}$에 대하여 $\mathfrak{h}+ky$는 subalgebra이고 $\mathfrak{h}$를 진부분으로 포함하므로, $\mathfrak{h}$의 maximality에서 $\mathfrak{h}+ky=\mathfrak{g}$이다. $[\mathfrak{h},y]\subseteq\mathfrak{h}$이고 $[\mathfrak{h},\mathfrak{h}]\subseteq\mathfrak{h}$이므로 $\mathfrak{h}$는 $\mathfrak{g}$의 ideal이며, $\dim(\mathfrak{g}/\mathfrak{h})=1$이다.
+먼저 $\mathfrak{g}$가 codimension $1$인 ideal $\mathfrak{h}$를 가짐을 보인다. 이를 위해 $\mathfrak{g}$의 임의의 maximal proper subalgebra $\mathfrak{h}$를 택한다. $\mathfrak{h}$의 $\mathfrak{g}$ 위의 action을 adjoint로 보면 $\mathfrak{h}$는 $\mathfrak{g}$와 $\mathfrak{h}$ 둘 다에 작용하므로 quotient 벡터공간 $\mathfrak{g}/\mathfrak{h}$ 위에 작용한다. 곧 각 $x\in\mathfrak{h}$에 대하여 $\ad x$가 $\mathfrak{h}$를 보존하므로, $\overline{\ad}x:\mathfrak{g}/\mathfrak{h}\rightarrow\mathfrak{g}/\mathfrak{h}$가 유도된다. 이로써 $\mathfrak{h}$의 상은 $\mathfrak{gl}(\mathfrak{g}/\mathfrak{h})$의 subalgebra가 되는데, 임의의 $x\in\mathfrak{g}$에 대하여 $\ad x$는 nilpotent endomorphism이다. 이는 $x$가 $\mathfrak{gl}(V)$ 안의 nilpotent endomorphism일 때, 그 좌·우 곱사상의 차로 표현되는 $\ad x$ 역시 nilpotent이기 때문이다. 따라서 $\dim\mathfrak{h}<\dim\mathfrak{g}$인 $\mathfrak{h}$의 상에 귀납 가정을 적용하면, 어떤 $0\neq \bar{y}\in\mathfrak{g}/\mathfrak{h}$가 존재하여 모든 $x\in\mathfrak{h}$에 대하여 $\overline{\ad}x(\bar{y})=0$, 곧 $[x,y]\in\mathfrak{h}$이다. 이 $y\notin\mathfrak{h}$에 대하여 $\mathfrak{h}+ky$는 subalgebra이고 $\mathfrak{h}$를 진부분으로 포함하므로, $\mathfrak{h}$의 maximality에서 $\mathfrak{h}+ky=\mathfrak{g}$이다. $[\mathfrak{h},y]\subseteq\mathfrak{h}$이고 $[\mathfrak{h},\mathfrak{h}]\subseteq\mathfrak{h}$이므로 $\mathfrak{h}$는 $\mathfrak{g}$의 ideal이며, $\dim(\mathfrak{g}/\mathfrak{h})=1$이다.
 
 이제 $\dim\mathfrak{h}<\dim\mathfrak{g}$이고 $\mathfrak{h}$의 모든 원소가 $V$ 위의 nilpotent endomorphism이므로, 귀납 가정에 의해 공통 kernel 공간
 
@@ -237,11 +237,11 @@ $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 이 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xV_i\subseteq V_{i-1}$이다.
 :::
 ::: 증명
-$\dim V=n$에 대한 귀납법으로 위 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [보조정리 16](#lem16){: data-lid="7u33y" }에 의해 $0\neq v_1\in V$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv_1=0$이다. $V_1=kv_1$로 두면 $\mathfrak{g}V_1=0\subseteq V_0$이다. Quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, $x$가 nilpotent endomorphism이므로 $\bar x$도 그러하다. 따라서 $\bar{\mathfrak{g}}=\{\bar x\mid x\in\mathfrak{g}\}\subseteq\mathfrak{gl}(\bar V)$는 nilpotent endomorphism들로 이루어진 subalgebra이고, $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
+$\dim V=n$에 대한 귀납법으로 위 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [보조정리 16](#lem16){: data-lid="7u33y" }에 의해 $0\neq v_1\in V$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv_1=0$이다. $V_1=kv_1$로 두면 $\mathfrak{g}V_1=0\subseteq V_0$이다. Quotient space $\bar{V}=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar{x}:\bar{V}\rightarrow\bar{V}$를 유도하며, $x$가 nilpotent endomorphism이므로 $\bar{x}$도 그러하다. 따라서 $\bar{\mathfrak{g}}=\{\bar{x}\mid x\in\mathfrak{g}\}\subseteq\mathfrak{gl}(\bar{V})$는 nilpotent endomorphism들로 이루어진 subalgebra이고, $\dim\bar{V}=n-1$이므로 귀납 가정에 의해 flag
 
-$$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
+$$0=\bar{V}_0\subsetneq\bar{V}_1\subsetneq\cdots\subsetneq\bar{V}_{n-1}=\bar{V}$$
 
-이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_{i-1}$이다. Quotient map $V\rightarrow\bar V$에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면, $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며, $xV_{i+1}\subseteq V_i$가 성립한다. 이 기저에서 $\mathfrak{g}$의 원소는 모두 strictly 상삼각행렬이다.
+이 존재하여 모든 $\bar{x}$에 대하여 $\bar{x}\bar{V}_i\subseteq\bar{V}_{i-1}$이다. Quotient map $V\rightarrow\bar{V}$에 의한 $\bar{V}_i$의 preimage를 $V_{i+1}$로 두면, $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며, $xV_{i+1}\subseteq V_i$가 성립한다. 이 기저에서 $\mathfrak{g}$의 원소는 모두 strictly 상삼각행렬이다.
 :::
 
 이제 추상적 형태의 Engel의 정리를 서술한다. 핵심은 $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$를 통해 위의 선형대수적 결과를 적용하는 것이다.
@@ -327,11 +327,11 @@ $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 이 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xV_i\subseteq V_i$이다.
 :::
 ::: 증명
-$\dim V=n$에 대한 귀납법으로 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [정리 20](#thm20){: data-lid="0bjld" }에 의해 $\mathfrak{g}$의 공통 eigenvector $0\neq v_1\in V$가 존재한다. $V_1=kv_1$로 두면 모든 $x\in\mathfrak{g}$에 대하여 $xV_1\subseteq V_1$이다. Quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, 대응 $x\mapsto\bar x$는 Lie algebra homomorphism이므로 그 상 $\bar{\mathfrak{g}}\subseteq\mathfrak{gl}(\bar V)$는 solvable Lie algebra $\mathfrak{g}$의 준동형상으로서 solvable이다. ([명제 14](#prop14){: data-lid="v2al1" }) $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
+$\dim V=n$에 대한 귀납법으로 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [정리 20](#thm20){: data-lid="0bjld" }에 의해 $\mathfrak{g}$의 공통 eigenvector $0\neq v_1\in V$가 존재한다. $V_1=kv_1$로 두면 모든 $x\in\mathfrak{g}$에 대하여 $xV_1\subseteq V_1$이다. Quotient space $\bar{V}=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar{x}:\bar{V}\rightarrow\bar{V}$를 유도하며, 대응 $x\mapsto\bar{x}$는 Lie algebra homomorphism이므로 그 상 $\bar{\mathfrak{g}}\subseteq\mathfrak{gl}(\bar{V})$는 solvable Lie algebra $\mathfrak{g}$의 준동형상으로서 solvable이다. ([명제 14](#prop14){: data-lid="v2al1" }) $\dim\bar{V}=n-1$이므로 귀납 가정에 의해 flag
 
-$$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
+$$0=\bar{V}_0\subsetneq\bar{V}_1\subsetneq\cdots\subsetneq\bar{V}_{n-1}=\bar{V}$$
 
-이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_i$이다. Quotient map에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면 $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며 $xV_{i+1}\subseteq V_{i+1}$이다. 이 flag에 맞춘 기저에서 $\mathfrak{g}$의 원소는 모두 상삼각행렬이다.
+이 존재하여 모든 $\bar{x}$에 대하여 $\bar{x}\bar{V}_i\subseteq\bar{V}_i$이다. Quotient map에 의한 $\bar{V}_i$의 preimage를 $V_{i+1}$로 두면 $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며 $xV_{i+1}\subseteq V_{i+1}$이다. 이 flag에 맞춘 기저에서 $\mathfrak{g}$의 원소는 모두 상삼각행렬이다.
 :::
 
 추상적 형태로 다시 쓰면, $k$가 대수적으로 닫힌 characteristic $0$의 체이고 $\mathfrak{g}$가 유한차원 solvable Lie algebra이면, [따름정리 21](#cor21){: data-lid="xgc2w" }를 adjoint representation $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$의 상에 적용하여 $\ad\mathfrak{g}$가 동시 상삼각화됨을 알 수 있다. 그 직접적인 귀결로 $[\mathfrak{g},\mathfrak{g}]$의 원소들은 모두 strictly 상삼각인 $\ad$로 작용하므로, $x\in[\mathfrak{g},\mathfrak{g}]$에 대하여 $\ad x$가 nilpotent endomorphism이 된다. 따라서 [정리 18](#thm18){: data-lid="lqmxt" }에 의해 $[\mathfrak{g},\mathfrak{g}]$는 nilpotent이다. 즉 characteristic $0$의 algebraically closed field 위에서 solvable Lie algebra의 derived algebra는 항상 nilpotent이며, 이는 Cartan의 판정법과 더불어 semisimple Lie algebra의 구조 이론으로 이어지는 출발점이 된다.

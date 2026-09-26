@@ -304,7 +304,7 @@ y &= 2\lambda x, \\
 x &= 2\lambda y.
 \end{aligned}$$
 
-Multiplying the two equations gives $xy = 4\lambda^2 xy$, so either $xy = 0$ or $\lambda^2 = 1/4$. If $xy = 0$ then the two equations force $x = y = 0$, which cannot satisfy the constraint, so this case is excluded. If $\lambda = \pm 1/2$ then $y = \pm x$, and from the constraint $2x^2 = 1$ we get $x = \pm 1/\sqrt2$, so $f = xy = \pm 1/2$. Therefore on the unit circle the maximum value of $f = xy$ is $1/2$ and the minimum value is $-1/2$.
+Multiplying the two equations gives $xy = 4\lambda^2 xy$, so either $xy = 0$ or $\lambda^2 = 1/4$. If $xy = 0$ then the two equations force $x = y = 0$, which cannot satisfy the constraint, so this case is excluded. If $\lambda = \pm 1/2$ then $y = \pm x$, and from the constraint $2x^2 = 1$ we get $x = \pm 1/\sqrt{2}$, so $f = xy = \pm 1/2$. Therefore on the unit circle the maximum value of $f = xy$ is $1/2$ and the minimum value is $-1/2$.
 :::
 
 ---

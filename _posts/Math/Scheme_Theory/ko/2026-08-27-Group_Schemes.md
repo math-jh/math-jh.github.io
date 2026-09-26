@@ -394,11 +394,11 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
 
     그럼 이는 $G$-torsor이다. 이를 위해 [정의 12](#def12){: data-lid="wu14g" }의 조건들을 확인해보면 우선  $\mathbb{C}$가 $\mathbb{R}$ 위의 rank $2$ free module이므로 $P \rightarrow S$는 faithfully flat이고 locally of finite presentation이다. 둘째 조건의 경우, $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$이고 $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$인데, $\varrho$에 대응하는 algebra homomorphism을 대수적으로 써 보면 이는
     
-    $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar z)$$
+    $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar{z})$$
     
     로 주어지는 것이다. 그럼 $(\varrho, \pr_2)$은 대수적으로
 
-   $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
+   $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar{z}w)$$
 
    이고, 이것이 $\mathbb{R}$-algebra isomorphism이므로 [정의 12](#def12){: data-lid="d85yd" }의 둘째 조건이 성립한다. 
    

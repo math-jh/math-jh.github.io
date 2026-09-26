@@ -56,14 +56,14 @@ $$\begin{aligned}
 ::: 증명
 구간가법성으로 $F(x_0 + h) - F(x_0) = \int_{x_0}^{x_0+h} f$이므로 difference quotient는
 
-$$\frac{F(x_0 + h) - F(x_0)}{h} = \frac1h\int_{x_0}^{x_0 + h} f$$
+$$\frac{F(x_0 + h) - F(x_0)}{h} = \frac{1}{h}\int_{x_0}^{x_0 + h} f$$
 
-이다. 핵심 착상은 상수 $f(x_0)$ 또한 $\frac1h\int_{x_0}^{x_0+h} f(x_0) \dd{t} = f(x_0)$로 적분 형태로 쓸 수 있다는 점이며, 이를 이용해 difference quotient와 목표값 $f(x_0)$의 차이를 하나의 적분으로 모은다. $f$가 $x_0$에서 연속이므로, 임의의 $\varepsilon > 0$에 대해 $\lvert t - x_0\rvert < \delta$이면 $\lvert f(t) - f(x_0)\rvert < \varepsilon$인 $\delta > 0$이 있다. $0 < \lvert h\rvert < \delta$이면 적분 구간의 모든 $t$가 $x_0$에서 $\delta$ 이내에 있으므로
+이다. 핵심 착상은 상수 $f(x_0)$ 또한 $\frac{1}{h}\int_{x_0}^{x_0+h} f(x_0) \dd{t} = f(x_0)$로 적분 형태로 쓸 수 있다는 점이며, 이를 이용해 difference quotient와 목표값 $f(x_0)$의 차이를 하나의 적분으로 모은다. $f$가 $x_0$에서 연속이므로, 임의의 $\varepsilon > 0$에 대해 $\lvert t - x_0\rvert < \delta$이면 $\lvert f(t) - f(x_0)\rvert < \varepsilon$인 $\delta > 0$이 있다. $0 < \lvert h\rvert < \delta$이면 적분 구간의 모든 $t$가 $x_0$에서 $\delta$ 이내에 있으므로
 
 $$\begin{aligned}
 \left\lvert \frac{F(x_0+h) - F(x_0)}{h} - f(x_0)\right\rvert
-&= \left\lvert \frac1h\int_{x_0}^{x_0+h} f(t) \dd{t} - \frac1h\int_{x_0}^{x_0+h} f(x_0) \dd{t}\right\rvert \\
-&= \left\lvert \frac1h\int_{x_0}^{x_0+h}\bigl(f(t) - f(x_0)\bigr) \dd{t}\right\rvert \\
+&= \left\lvert \frac{1}{h}\int_{x_0}^{x_0+h} f(t) \dd{t} - \frac{1}{h}\int_{x_0}^{x_0+h} f(x_0) \dd{t}\right\rvert \\
+&= \left\lvert \frac{1}{h}\int_{x_0}^{x_0+h}\bigl(f(t) - f(x_0)\bigr) \dd{t}\right\rvert \\
 &\leq \frac{1}{\lvert h\rvert}\left\lvert \int_{x_0}^{x_0+h}\lvert f(t) - f(x_0)\rvert \dd{t}\right\rvert \\
 &\leq \frac{1}{\lvert h\rvert}\cdot \varepsilon\lvert h\rvert \\
 &= \varepsilon

@@ -29,7 +29,7 @@ Quiver $Q$의 vertex $k\in Q_0$가 *sink<sub>들임 꼭짓점</sub>*이라는 �
 Vertex $k$가 sink이면 $k$로 들어오는 arrow들만 있고, source이면 $k$에서 나가는 arrow들만 있다. $Q$에 oriented cycle이 없으므로 적어도 하나의 sink와 하나의 source가 항상 존재한다. 임의의 vertex가 sink일 필요는 없으나, 반사 functor는 sink 또는 source인 vertex에서만 정의된다. 이제 그러한 vertex에서 인접한 arrow를 모두 뒤집는 조작을 정의한다.
 
 ::: 정의 2
-Quiver $Q$와 vertex $k\in Q_0$에 대하여, $k$에서의 *반사<sub>reflection</sub>* $\sigma_k Q$는 같은 vertex 집합 $Q_0$를 가지며, arrow 집합은 $k$에 인접하지 않은 arrow는 그대로 두고 $k$에 인접한 각 arrow $\alpha$의 방향만 뒤집어 얻는 quiver이다. 곧 $\alpha:i\rightarrow k$는 $\bar\alpha:k\rightarrow i$로, $\alpha:k\rightarrow j$는 $\bar\alpha:j\rightarrow k$로 바꾼다.
+Quiver $Q$와 vertex $k\in Q_0$에 대하여, $k$에서의 *반사<sub>reflection</sub>* $\sigma_k Q$는 같은 vertex 집합 $Q_0$를 가지며, arrow 집합은 $k$에 인접하지 않은 arrow는 그대로 두고 $k$에 인접한 각 arrow $\alpha$의 방향만 뒤집어 얻는 quiver이다. 곧 $\alpha:i\rightarrow k$는 $\bar{\alpha}:k\rightarrow i$로, $\alpha:k\rightarrow j$는 $\bar{\alpha}:j\rightarrow k$로 바꾼다.
 :::
 
 $k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오므로 반사 후에는 모두 $k$에서 나가게 되어 $k$는 $\sigma_k Q$에서 source가 된다. Symmetric으로 $k$가 $Q$에서 source이면 $\sigma_k Q$에서는 sink가 된다. $Q$에 oriented cycle이 없고 $k$가 sink 또는 source인 한, 한 vertex의 인접 arrow만 뒤집는 이 조작은 oriented cycle을 만들지 않으므로 $\sigma_k Q$도 다시 oriented cycle을 가지지 않는다.
@@ -47,23 +47,23 @@ $$V_{\mathrm{in}}=(V_\alpha)_\alpha:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha
 
 $$W_k=\ker\Bigl(V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k\Bigr),\qquad W_i=V_i\ (i\neq k)$$
 
-를 vertex 위의 공간으로 가진다. $k$에 인접하지 않은 arrow $\beta$에는 $W_\beta=V_\beta$를 두고, 뒤집힌 각 arrow $\bar\alpha:k\rightarrow s(\alpha)$에는 합성
+를 vertex 위의 공간으로 가진다. $k$에 인접하지 않은 arrow $\beta$에는 $W_\beta=V_\beta$를 두고, 뒤집힌 각 arrow $\bar{\alpha}:k\rightarrow s(\alpha)$에는 합성
 
-$$W_{\bar\alpha}:W_k\hookrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ \mathrm{pr}_\alpha\ }V_{s(\alpha)}$$
+$$W_{\bar{\alpha}}:W_k\hookrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ \mathrm{pr}_\alpha\ }V_{s(\alpha)}$$
 
 곧 $W_k$를 direct sum에 포함한 뒤 $\alpha$-성분으로 사영하는 morphism을 둔다. Morphism $f=(f_i):V\rightarrow V'$에 대해서는 $i\neq k$에서 $(S_k^+ f)_i=f_i$로 두고, vertex $k$에서는 $f$가 $V_{\mathrm{in}}$과 $V'_{\mathrm{in}}$을 교환시키므로 direct sum 위의 morphism $\bigoplus_\alpha f_{s(\alpha)}$가 kernel을 kernel로 보내는 것으로부터 유도되는 restriction morphism $(S_k^+ f)_k:W_k\rightarrow W'_k$를 둔다.
 :::
 
-$W_k$는 $\bigoplus_\alpha V_{s(\alpha)}$의 부분공간이고, 뒤집힌 arrow $\bar\alpha$의 action $W_{\bar\alpha}$는 이 부분공간을 $\alpha$-좌표로 읽어 낸 것이다. 따라서 $S_k^+ V$는 $\sigma_k Q$의 올바른 representation이다. $\sigma_k Q$에서 $k$는 source이므로, $k$에서 나가는 arrow $\bar\alpha:k\rightarrow s(\alpha)$들에 morphism을 배정하는 것이 마땅하며 위 정의가 바로 그것이다. Morphism에 대한 정의가 잘 됨은 다음을 보면 된다. $f:V\rightarrow V'$가 morphism이면 각 $\alpha:i\rightarrow k$에 대하여 $f_k\circ V_\alpha=V'_\alpha\circ f_{s(\alpha)}$이므로, direct sum 위의 morphism $F=\bigoplus_\alpha f_{s(\alpha)}$이 $V'_{\mathrm{in}}\circ F=f_k\circ V_{\mathrm{in}}$을 만족한다. 따라서 $F$는 $\ker V_{\mathrm{in}}$을 $\ker V'_{\mathrm{in}}$ 안으로 보내고, 그 restriction이 $(S_k^+ f)_k$이다.
+$W_k$는 $\bigoplus_\alpha V_{s(\alpha)}$의 부분공간이고, 뒤집힌 arrow $\bar{\alpha}$의 action $W_{\bar{\alpha}}$는 이 부분공간을 $\alpha$-좌표로 읽어 낸 것이다. 따라서 $S_k^+ V$는 $\sigma_k Q$의 올바른 representation이다. $\sigma_k Q$에서 $k$는 source이므로, $k$에서 나가는 arrow $\bar{\alpha}:k\rightarrow s(\alpha)$들에 morphism을 배정하는 것이 마땅하며 위 정의가 바로 그것이다. Morphism에 대한 정의가 잘 됨은 다음을 보면 된다. $f:V\rightarrow V'$가 morphism이면 각 $\alpha:i\rightarrow k$에 대하여 $f_k\circ V_\alpha=V'_\alpha\circ f_{s(\alpha)}$이므로, direct sum 위의 morphism $F=\bigoplus_\alpha f_{s(\alpha)}$이 $V'_{\mathrm{in}}\circ F=f_k\circ V_{\mathrm{in}}$을 만족한다. 따라서 $F$는 $\ker V_{\mathrm{in}}$을 $\ker V'_{\mathrm{in}}$ 안으로 보내고, 그 restriction이 $(S_k^+ f)_k$이다.
 
 $S_k^+$가 functor임은 kernel로의 restriction이 합성과 항등사상을 보존한다는 사실에서 곧바로 따라온다. 다음 예시는 가장 단순한 경우에서 이 functor가 무엇을 하는지를 보여 준다.
 
 ::: 예시 4
-선형 $A_2$ quiver $Q:1\xrightarrow{\ \alpha\ }2$를 생각하자. Vertex $2$는 sink이다. Representation $V$는 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나로 주어진다. 이때 $\sigma_2 Q$는 $1\xleftarrow{\ \bar\alpha\ }2$이고, $S_2^+ V$는
+선형 $A_2$ quiver $Q:1\xrightarrow{\ \alpha\ }2$를 생각하자. Vertex $2$는 sink이다. Representation $V$는 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나로 주어진다. 이때 $\sigma_2 Q$는 $1\xleftarrow{\ \bar{\alpha}\ }2$이고, $S_2^+ V$는
 
-$$W_2=\ker(V_\alpha:V_1\rightarrow V_2),\qquad W_1=V_1,\qquad W_{\bar\alpha}:W_2\hookrightarrow V_1$$
+$$W_2=\ker(V_\alpha:V_1\rightarrow V_2),\qquad W_1=V_1,\qquad W_{\bar{\alpha}}:W_2\hookrightarrow V_1$$
 
-로 주어진다. 가령 $V_\alpha=\id:k\rightarrow k$인 indecomposable $V=(k\xrightarrow{\id}k)$에 대해서는 $W_2=\ker\id=0$이므로 $S_2^+ V=(k\xleftarrow{}0)$, 곧 vertex $1$에만 $k$가 놓인 simple representation이다. 한편 simple representation $V=(k\xrightarrow{0}0)$, 곧 dimension vector $(1,0)$인 것에 대해서는 $W_2=\ker(0:k\rightarrow 0)=k$, $W_1=k$이고 $W_{\bar\alpha}:k\xrightarrow{\id}k$가 되어 $S_2^+ V=(k\xleftarrow{\id}k)$이다.
+로 주어진다. 가령 $V_\alpha=\id:k\rightarrow k$인 indecomposable $V=(k\xrightarrow{\id}k)$에 대해서는 $W_2=\ker\id=0$이므로 $S_2^+ V=(k\xleftarrow{}0)$, 곧 vertex $1$에만 $k$가 놓인 simple representation이다. 한편 simple representation $V=(k\xrightarrow{0}0)$, 곧 dimension vector $(1,0)$인 것에 대해서는 $W_2=\ker(0:k\rightarrow 0)=k$, $W_1=k$이고 $W_{\bar{\alpha}}:k\xrightarrow{\id}k$가 되어 $S_2^+ V=(k\xleftarrow{\id}k)$이다.
 :::
 
 예시 4의 마지막 경우에서 simple representation $(1,0)$이 $\sigma_2 Q$의 indecomposable $(1,1)$로 옮겨졌다. 이것이 dimension vector 위에서 simple reflection이 일으키는 전형적인 변화이며, 다음 절에서 이를 일반적으로 정식화한다. 한편 source에서의 functor는 위 구성을 완전히 쌍대화하여 얻는다.
@@ -77,20 +77,20 @@ $$V_{\mathrm{out}}=(V_\alpha)_\alpha:V_k\longrightarrow\bigoplus_{\alpha:k\right
 
 $$W_k=\coker\Bigl(V_{\mathrm{out}}:V_k\rightarrow\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}\Bigr),\qquad W_i=V_i\ (i\neq k)$$
 
-로 두고, $k$에 인접하지 않은 arrow에는 $V$의 morphism을, 뒤집힌 각 arrow $\bar\alpha:t(\alpha)\rightarrow k$에는 합성
+로 두고, $k$에 인접하지 않은 arrow에는 $V$의 morphism을, 뒤집힌 각 arrow $\bar{\alpha}:t(\alpha)\rightarrow k$에는 합성
 
-$$W_{\bar\alpha}:V_{t(\alpha)}\xrightarrow{\ \iota_\alpha\ }\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}\twoheadrightarrow W_k$$
+$$W_{\bar{\alpha}}:V_{t(\alpha)}\xrightarrow{\ \iota_\alpha\ }\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}\twoheadrightarrow W_k$$
 
 곧 $\alpha$-성분으로의 포함과 cokernel로의 projection의 합성을 둔다. Morphism에 대해서는 $S_k^+$와 symmetric으로 cokernel로 내려가는 유도사상을 둔다.
 :::
 
-$\sigma_k Q$에서 source였던 $k$는 sink가 되며, 이번에는 $k$로 들어오는 arrow들에 morphism을 배정해야 한다. 정의의 $W_{\bar\alpha}:V_{t(\alpha)}\rightarrow W_k$가 바로 그 morphism이다. $S_k^+$가 kernel을 취해 정보를 "되돌려 받았다"면, $S_k^-$는 cokernel을 취해 "내보내고 남은" 부분을 vertex $k$ 위에 둔다. 두 구성이 서로 쌍대이며, 다음 절에서 이들이 dimension vector 위에서 같은 reflection을 일으키고 서로 거의 역임을 본다.
+$\sigma_k Q$에서 source였던 $k$는 sink가 되며, 이번에는 $k$로 들어오는 arrow들에 morphism을 배정해야 한다. 정의의 $W_{\bar{\alpha}}:V_{t(\alpha)}\rightarrow W_k$가 바로 그 morphism이다. $S_k^+$가 kernel을 취해 정보를 "되돌려 받았다"면, $S_k^-$는 cokernel을 취해 "내보내고 남은" 부분을 vertex $k$ 위에 둔다. 두 구성이 서로 쌍대이며, 다음 절에서 이들이 dimension vector 위에서 같은 reflection을 일으키고 서로 거의 역임을 본다.
 
 ## Dimension vector와 simple reflection
 
 Quiver $Q$의 vertex 집합 $Q_0$를 $\{1,\ldots,n\}$으로 두면, representation $V$의 *dimension vector*
 
-$$\underline\dim V=(\dim_k V_1,\ldots,\dim_k V_n)\in\mathbb{Z}^{n}$$
+$$\underline{\dim} V=(\dim_k V_1,\ldots,\dim_k V_n)\in\mathbb{Z}^{n}$$
 
 은 $V$가 각 vertex에 얹은 공간의 차원을 기록한다. $\mathbb{Z}^n$을 vertex들을 simple root로 가지는 root lattice로 보면, 반사 functor가 dimension vector에 미치는 효과는 정확히 한 simple root에 대한 reflection으로 나타난다. 이를 정확히 적기 위해 $Q$의 *Euler form*과 그에 딸린 symmetric form을 도입한다.
 
@@ -111,9 +111,9 @@ $$s_k(d)=d-(d,e_k)e_k$$
 ::: 명제 7
 $k$가 $Q$의 sink이고 $V$가 $Q$의 indecomposable representation으로서 vertex $k$에 얹힌 simple representation $S_k$ (곧 dimension vector $e_k$인 것) 와 isomorphic하지 않다고 하자. 그럼 morphism $V_{\mathrm{in}}$이 전사이고,
 
-$$\underline\dim(S_k^+ V)=s_k(\underline\dim V)$$
+$$\underline{\dim}(S_k^+ V)=s_k(\underline{\dim} V)$$
 
-가 성립한다. Symmetric으로 $k$가 source이고 $V$가 simple representation $S_k$와 isomorphic하지 않은 indecomposable이면 $V_{\mathrm{out}}$이 단사이고 $\underline\dim(S_k^- V)=s_k(\underline\dim V)$이다.
+가 성립한다. Symmetric으로 $k$가 source이고 $V$가 simple representation $S_k$와 isomorphic하지 않은 indecomposable이면 $V_{\mathrm{out}}$이 단사이고 $\underline{\dim}(S_k^- V)=s_k(\underline{\dim} V)$이다.
 :::
 ::: 증명
 Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k$가 sink이므로 $V$에서 vertex $k$ 위의 공간 $V_k$로 들어오는 정보는 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$로 전부 모인다. 먼저 $V_{\mathrm{in}}$이 전사임을 보인다. $U=\im V_{\mathrm{in}}\subseteq V_k$라 하고, $V_k$의 부분공간 $U$의 한 보충공간 $C$를 택해 $V_k=U\oplus C$로 적자. 그럼 vertex $k$에만 $C$를 얹고 나머지 vertex에는 $0$을 얹은 representation $V'=(C\text{ at }k)$는 $V$의 subrepresentation이다. 실제로 $k$가 sink이므로 $k$에서 나가는 arrow가 없어 $C$가 arrow를 따라 옮겨질 곳이 없고, 따라서 부분공간 조건이 자명하게 성립한다 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11){: data-lid="oebr8" }). 더 나아가 $C$ 위의 공간은 다른 vertex로부터 들어오는 morphism의 image $U$와 direct sum을 이루므로, $V'$는 $V$의 direct summand이다. 곧 $V\cong V''\oplus V'$이고 $V'$는 vertex $k$ 위의 simple representation들의 direct sum, 곧 $S_k^{\oplus\dim C}$이다. $V$가 indecomposable이고 $S_k$와 isomorphic하지 않다고 가정하였으므로 $V'=0$, 곧 $C=0$이어야 한다. 따라서 $U=V_k$이고 $V_{\mathrm{in}}$은 전사이다.
@@ -126,11 +126,11 @@ $$0\longrightarrow W_k\longrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alph
 
 $$\dim_k W_k=\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$$
 
-이다. $i\neq k$에서는 $(S_k^+ V)_i=V_i$이므로 dimension vector는 $k$-좌표에서만 달라지며, 그 새 $k$-좌표가 위 식이다. 한편 $s_k(\underline\dim V)$도 $k$-좌표에서만 달라지고, $(\underline\dim V,e_k)$가 $k$에 인접한 arrow들로부터 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}$를, $(e_k,e_k)=2$로부터 $2\dim_k V_k$를 받아
+이다. $i\neq k$에서는 $(S_k^+ V)_i=V_i$이므로 dimension vector는 $k$-좌표에서만 달라지며, 그 새 $k$-좌표가 위 식이다. 한편 $s_k(\underline{\dim} V)$도 $k$-좌표에서만 달라지고, $(\underline{\dim} V,e_k)$가 $k$에 인접한 arrow들로부터 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}$를, $(e_k,e_k)=2$로부터 $2\dim_k V_k$를 받아
 
-$$s_k(\underline\dim V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}\Bigr)$$
+$$s_k(\underline{\dim} V)_k=\dim_k V_k-\Bigl(2\dim_k V_k-\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}\Bigr)$$
 
-이 되는데, 정리하면 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$로 위에서 구한 $\dim_k W_k$와 같다. 따라서 $\underline\dim(S_k^+ V)=s_k(\underline\dim V)$이다.
+이 되는데, 정리하면 $\sum_{\alpha:i\rightarrow k}\dim_k V_{s(\alpha)}-\dim_k V_k$로 위에서 구한 $\dim_k W_k$와 같다. 따라서 $\underline{\dim}(S_k^+ V)=s_k(\underline{\dim} V)$이다.
 :::
 
 명제 7에서 simple representation $S_k$를 제외해야 하는 이유는 분명하다. $V=S_k$이면 $V_{\mathrm{in}}$은 $0\rightarrow V_k$ (들어오는 arrow 쪽 공간이 모두 $0$) 이므로 전사가 아니고, 실제로 $S_k^+ S_k=0$이 되어 dimension vector가 보존되지 않는다. 반면 $s_k(e_k)=-e_k$는 음의 좌표를 가져 어떤 representation의 dimension vector도 될 수 없다. 이 한 예외를 제외하면 $S_k^+$는 indecomposable을 indecomposable로 보내며 dimension vector 위에서 정확히 $s_k$로 작용한다.
@@ -151,7 +151,7 @@ $k$가 sink인 경우를 보인다. $V$가 $S_k$를 direct summand로 가지지 
 
 $$0\longrightarrow W_k\xrightarrow{\ j\ }\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
 
-은 short exact sequence이며, 여기서 $W=S_k^+ V$이고 $j$는 포함이다. 이제 $\sigma_k Q$에서 $k$는 source이고 $W$에서 $k$로부터 나가는 morphism은 $W_{\bar\alpha}=\mathrm{pr}_\alpha\circ j:W_k\rightarrow V_{s(\alpha)}$이다. 이들을 모은 morphism이 정확히 $W_{\mathrm{out}}=j:W_k\rightarrow\bigoplus_\alpha V_{s(\alpha)}$인데, $j$가 단사이므로 그 cokernel은
+은 short exact sequence이며, 여기서 $W=S_k^+ V$이고 $j$는 포함이다. 이제 $\sigma_k Q$에서 $k$는 source이고 $W$에서 $k$로부터 나가는 morphism은 $W_{\bar{\alpha}}=\mathrm{pr}_\alpha\circ j:W_k\rightarrow V_{s(\alpha)}$이다. 이들을 모은 morphism이 정확히 $W_{\mathrm{out}}=j:W_k\rightarrow\bigoplus_\alpha V_{s(\alpha)}$인데, $j$가 단사이므로 그 cokernel은
 
 $$(S_k^- W)_k=\coker(W_{\mathrm{out}})=\coker(j)\cong V_k$$
 
@@ -179,7 +179,7 @@ $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 ::: 명제 10
 $(k_1,\ldots,k_n)$이 admissible sink sequence이고 $V$가 $Q$의 indecomposable representation이라 하자. $C^+ V\neq 0$이면
 
-$$\underline\dim(C^+ V)=c(\underline\dim V),\qquad c=s_{k_n}\cdots s_{k_1}$$
+$$\underline{\dim}(C^+ V)=c(\underline{\dim} V),\qquad c=s_{k_n}\cdots s_{k_1}$$
 
 이며 $C^+ V$는 다시 indecomposable이다.
 :::
@@ -188,11 +188,11 @@ $C^+=S_{k_n}^+\cdots S_{k_1}^+$의 각 단계를 차례로 살핀다. $r$번째 
 
 $V^{(r-1)}$이 indecomposable이고 $S_{k_r}$이 아니라고 하자. 그럼 명제 7에 의하여
 
-$$\underline\dim V^{(r)}=\underline\dim(S_{k_r}^+ V^{(r-1)})=s_{k_r}(\underline\dim V^{(r-1)})$$
+$$\underline{\dim} V^{(r)}=\underline{\dim}(S_{k_r}^+ V^{(r-1)})=s_{k_r}(\underline{\dim} V^{(r-1)})$$
 
 이고, 명제 8에 의하여 $S_{k_r}^+ V^{(r-1)}=V^{(r)}$ 또한 indecomposable이다. 만일 $V^{(r-1)}$이 어떤 단계에서 simple $S_{k_r}$과 같다면 $V^{(r)}=S_{k_r}^+ V^{(r-1)}=0$이 되어 $C^+ V=0$이라는 결론에 이르므로, $C^+ V\neq 0$이라는 가정 아래에서는 그런 단계가 없다. 따라서 모든 단계에서 dimension vector에 $s_{k_r}$가 차례로 작용하고 indecomposability가 보존되어,
 
-$$\underline\dim(C^+ V)=s_{k_n}\cdots s_{k_1}(\underline\dim V)=c(\underline\dim V)$$
+$$\underline{\dim}(C^+ V)=s_{k_n}\cdots s_{k_1}(\underline{\dim} V)=c(\underline{\dim} V)$$
 
 이며 $C^+ V$는 indecomposable이다.
 :::
@@ -220,19 +220,19 @@ $$(s_k(d),s_k(d))=(d,d)-2(d,e_k)(e_k,d)+(d,e_k)^2(e_k,e_k)=(d,d)-2(d,e_k)^2+2(d,
 이다. 따라서 $s_k$가 $(-,-)$을, 곧 $q$를 보존한다. Coxeter element $c=s_{k_n}\cdots s_{k_1}$은 이러한 reflection들의 합성이므로 역시 $q$를 보존한다.
 :::
 
-명제 12에 의하여 dimension vector $\underline\dim V$가 반사를 통해 움직여도 그 Tits form 값 $q(\underline\dim V)$는 변하지 않는다. Indecomposable representation의 dimension vector는 항상 $q(d)\leq 1$을 만족하며, 특히 $Q$가 Dynkin quiver, 곧 그 underlying graph가 type $A$, $D$, $E$인 경우 Tits form은 positive definite이어서 $q(d)=1$인 $d$들이 정확히 root system의 root에 대응한다. 이로부터 다음의 결과가 나오며, 그 완전한 증명은 반사 functor를 핵심 도구로 사용한다.
+명제 12에 의하여 dimension vector $\underline{\dim} V$가 반사를 통해 움직여도 그 Tits form 값 $q(\underline{\dim} V)$는 변하지 않는다. Indecomposable representation의 dimension vector는 항상 $q(d)\leq 1$을 만족하며, 특히 $Q$가 Dynkin quiver, 곧 그 underlying graph가 type $A$, $D$, $E$인 경우 Tits form은 positive definite이어서 $q(d)=1$인 $d$들이 정확히 root system의 root에 대응한다. 이로부터 다음의 결과가 나오며, 그 완전한 증명은 반사 functor를 핵심 도구로 사용한다.
 
 ::: 정리 13
 (Gabriel) $Q$를 oriented cycle이 없는 connected quiver라 하자. $Q$가 *representation-finite*, 곧 유한개의 indecomposable representation만을 (isomorphism을 무시하여) 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
 
-$$V\longmapsto\underline\dim V$$
+$$V\longmapsto\underline{\dim} V$$
 
 은 indecomposable representation의 isomorphism class들과 Tits form의 positive root들 사이의 전단사이다.
 :::
 ::: 증명
 완전한 증명은 길어 여기서 재구성하지 않으며, 그 골격만 적고 [ASS, Chapter VII]과 [Br, §5]의 논증을 따른다. 반사 functor가 증명의 두 방향 모두에서 중심 역할을 한다.
 
-$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6){: data-lid="z1tab" }) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 positive root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11){: data-lid="52xe7" }). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12){: data-lid="6wysr" }) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline\dim V$가 indecomposable에서 positive root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 positive root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-lid="nn4oj" }), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
+$Q$가 Dynkin이면 Tits form은 positive definite이므로 ([정의 6](#def6){: data-lid="z1tab" }) $q(d)=1$인 정수 vector는 유한개뿐이고, 이들이 type $A$, $D$, $E$ root system의 positive root들에 대응한다. Indecomposable의 dimension vector가 항상 root임은 다음과 같이 본다. Admissible sink sequence를 잡아 Coxeter functor $C^+$를 만들면, 임의의 indecomposable $V$에 대하여 $(C^+)^m V=0$이 되는 $m$이 존재하여 $V$는 preprojective이다 ([정의 11](#def11){: data-lid="52xe7" }). 곧 $V$는 어떤 indecomposable projective $P$에 대하여 $(C^-)^j P$의 꼴이며, projective의 dimension vector에 명제 10의 reflection들을 적용하여 얻어진다. Projective의 dimension vector는 root이고 reflection이 root를 root로, Tits form을 보존하므로 ([명제 12](#prop12){: data-lid="6wysr" }) $V$의 dimension vector도 root이다. 이로써 $V\mapsto\underline{\dim} V$가 indecomposable에서 positive root로 가는 morphism임을 안다. 이 morphism이 단사이고 전사임은, 각 positive root에 대하여 그것을 dimension vector로 가지는 indecomposable이 정확히 하나 존재함을 반사 functor로 추적하여 보인다. Root는 simple reflection들로 simple root $e_k$까지 줄일 수 있고 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-lid="nn4oj" }), $e_k$는 simple representation $S_k$의 dimension vector이므로, 이 reflection의 자취를 반사 functor로 들어 올리면 해당 indecomposable이 유일하게 복원된다. Root가 유한개이므로 indecomposable도 유한개이다.
 
 역으로 $Q$가 Dynkin이 아니면 그 underlying graph는 extended Dynkin diagram을 포함하고, 그 위에서 Tits form은 positive definite가 아니어서 $q(d)\leq 1$을 만족하는 dimension vector가 무한히 많은 indecomposable을 허용한다. 따라서 $Q$는 representation-finite가 아니다.
 :::

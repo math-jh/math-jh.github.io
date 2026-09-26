@@ -203,7 +203,7 @@ so $b_1-b\in\ker(g)=\im(f)$ holds. Now finding $a\in A$ such that $f(a)=b_1-b$, 
 
 $$f'(\alpha(a))=\beta(f(a))=\beta(b_1)-\beta(b)=f'(a_1'-a')$$
 
-and since $f'$ is injective, $\alpha(a)=a_1'-a'$ holds. That is, $a_1'\equiv a' \mod \im(\alpha)$, and $\delta$ is well-defined. It is not difficult to show that $\delta$ is a homomorphism of $A$-modules.
+and since $f'$ is injective, $\alpha(a)=a_1'-a'$ holds. That is, $a_1'\equiv a' \mod{\im}(\alpha)$, and $\delta$ is well-defined. It is not difficult to show that $\delta$ is a homomorphism of $A$-modules.
 
 We must show that this $\delta$ makes the following column
 

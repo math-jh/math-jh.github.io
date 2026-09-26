@@ -58,7 +58,7 @@ $$\oint_\gamma z\dd{z} = \int_0^{2\pi} e^{it}(i e^{it})\dd{t} = i\int_0^{2\pi} e
 $\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$가 $\gamma$의 자취를 포함하는 열린집합에서 연속이라 하자. 그러면 다음이 성립한다.
 
 1. (선형성) 임의의 복소수 $\alpha, \beta$에 대하여 $\int_\gamma (\alpha f + \beta g)\dd{z} = \alpha\int_\gamma f\dd{z} + \beta\int_\gamma g\dd{z}$이다.
-2. (재매개화 불변) $\varphi : [c, d] \rightarrow [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\int_{\tilde\gamma} f\dd{z} = \int_\gamma f\dd{z}$이다.
+2. (재매개화 불변) $\varphi : [c, d] \rightarrow [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\int_{\tilde{\gamma}} f\dd{z} = \int_\gamma f\dd{z}$이다.
 3. (역방향) $\gamma$를 거꾸로 지나는 곡선 $(-\gamma)(t) = \gamma(a + b - t)$ ($t \in [a, b]$) 에 대하여 $\int_{-\gamma} f\dd{z} = -\int_\gamma f\dd{z}$이다.
 4. (이어붙이기) piecewise $C^1$ curve $\gamma_1 : [a, b] \rightarrow \mathbb{C}$의 종점이 $\gamma_2 : [b, c] \rightarrow \mathbb{C}$의 시점과 같아 이어붙인 곡선 $\gamma_1 + \gamma_2$을 이루고 $f$가 두 자취의 합집합을 포함하는 열린집합에서 연속이면, $\int_{\gamma_1 + \gamma_2} f\dd{z} = \int_{\gamma_1} f\dd{z} + \int_{\gamma_2} f\dd{z}$이다.
 :::
@@ -66,9 +66,9 @@ $\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$�
 ::: 증명
 (1) 정의 2에서 피적분함수가 $(\alpha f + \beta g)(\gamma(t))\gamma'(t) = \alpha f(\gamma(t))\gamma'(t) + \beta g(\gamma(t))\gamma'(t)$로 갈라지고, 실변수 복소숫값 적분이 선형이므로 적분이 분배된다.
 
-(2) 치환적분으로 직접 계산한다. $\tilde\gamma'(s) = \gamma'(\varphi(s))\varphi'(s)$이므로
+(2) 치환적분으로 직접 계산한다. $\tilde{\gamma}'(s) = \gamma'(\varphi(s))\varphi'(s)$이므로
 
-$$\int_{\tilde\gamma} f\dd{z} = \int_c^d f(\gamma(\varphi(s)))\gamma'(\varphi(s))\varphi'(s)\dd{s}$$
+$$\int_{\tilde{\gamma}} f\dd{z} = \int_c^d f(\gamma(\varphi(s)))\gamma'(\varphi(s))\varphi'(s)\dd{s}$$
 
 이고, $t = \varphi(s)$로 치환하면 $\dd{t} = \varphi'(s)\dd{s}$이고 $\varphi$가 증가하여 적분 구간이 $s : c \rightarrow d$에서 $t : a \rightarrow b$로 바뀌므로, 우변이 $\int_a^b f(\gamma(t))\gamma'(t)\dd{t} = \int_\gamma f\dd{z}$가 된다.
 

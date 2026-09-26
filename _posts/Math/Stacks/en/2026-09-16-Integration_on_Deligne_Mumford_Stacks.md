@@ -44,9 +44,9 @@ Recall that in [\[Algebraic Varieties\] §Chow Groups, ⁋Proposition 6](/en/mat
 
 $$[V]\longmapsto [K(V):K(W)][W]$$
 
-The above definition is precisely the extension of this formula to Deligne–Mumford stacks, the difference being the addition of the ratio of generic stabilizers $e_{\mathcal W}/e_{\mathcal V}$. Fundamentally, as observed right after [§Proper Stacks, ⁋Proposition 4](/en/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" }, the degree seen scheme-theoretically on the coarse moduli and the automorphism data inherently possessed by the stack are seen separately; for this reason, the product
+The above definition is precisely the extension of this formula to Deligne–Mumford stacks, the difference being the addition of the ratio of generic stabilizers $e_{\mathcal{W}}/e_{\mathcal{V}}$. Fundamentally, as observed right after [§Proper Stacks, ⁋Proposition 4](/en/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" }, the degree seen scheme-theoretically on the coarse moduli and the automorphism data inherently possessed by the stack are seen separately; for this reason, the product
 
-$$[K(V):K(W)]\frac{e_{\mathcal W}}{e_{\mathcal V}}$$
+$$[K(V):K(W)]\frac{e_{\mathcal{W}}}{e_{\mathcal{V}}}$$
 
 can be thought of as the stack-theoretic generic degree of $f$. For this reason, rational coefficients appear naturally on stacks. A property of the pushforward defined in this way is the following functoriality.
 

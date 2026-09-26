@@ -395,11 +395,11 @@ Intuitively, [Proposition 14](#prop14){: data-lid="lkqwz" } shows that even if a
 
     Then this is a $G$-torsor. Checking the conditions of [Definition 12](#def12){: data-lid="wu14g" }, first, since $\mathbb{C}$ is a free module of rank $2$ over $\mathbb{R}$, the map $P \rightarrow S$ is faithfully flat and locally of finite presentation. For the second condition, we have $G\times_SP=\Spec(\mathbb{C}\times\mathbb{C})$ and $P\times_SP=\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$, and writing out algebraically the algebra homomorphism corresponding to $\varrho$, it is given by
 
-    $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar z)$$
+    $$\rho:\mathbb{C}\rightarrow\mathbb{C}\times\mathbb{C};\qquad z\mapsto(z,\bar{z})$$
 
     Then $(\varrho, \pr_2)$ is, algebraically,
 
-   $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar zw)$$
+   $$\mathbb{C}\otimes_\mathbb{R}\mathbb{C} \rightarrow \mathbb{C}\times\mathbb{C};\qquad z\otimes w\mapsto (zw, \bar{z}w)$$
 
    and since this is an $\mathbb{R}$-algebra isomorphism, the second condition of [Definition 12](#def12){: data-lid="d85yd" } holds.
 

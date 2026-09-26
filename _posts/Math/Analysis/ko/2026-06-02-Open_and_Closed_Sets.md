@@ -98,7 +98,7 @@ Closure는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정�
 
 Closure가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n \mid n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
 
-$$x_n = \frac1n \longrightarrow 0$$
+$$x_n = \frac{1}{n} \longrightarrow 0$$
 
 의 극한 $0$이 집합 밖에 있어 [명제 4](#prop4){: data-lid="ddvl6" }의 판정에 걸리기 때문이다. 이 한 점을 더한 $\{1/n \mid n \in \mathbb{N}\} \cup \{0\}$은 더 이상 빠져나갈 극한이 없어 닫히며, 그것이 곧 closure이다.
 

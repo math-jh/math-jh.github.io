@@ -140,7 +140,7 @@ $$\eta(\z^a, \z^b) = \sum_{k=0}^{2} \frac{(\omega^k q^{1/3})^{a+b}}{3 (\omega^k 
 
 and
 
-$$\sum_{k=0}^{2} \omega^{km} = 3\iff m \equiv 0 \pmod 3,$$
+$$\sum_{k=0}^{2} \omega^{km} = 3\iff m \equiv 0 \pmod{3},$$
 
 while in all other cases this sum is $0$. Thus for $0 \leq a, b \leq 2$ we have $\eta(\z^a, \z^b) = 1$ only when $a + b = 2$, and $0$ otherwise. Hence the matrix representation of $\eta$ in this basis is again the matrix
 

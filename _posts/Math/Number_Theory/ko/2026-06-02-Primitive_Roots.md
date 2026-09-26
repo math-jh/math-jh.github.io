@@ -19,17 +19,17 @@ published: false
 ## 위수
 
 ::: 정의 1
-$\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod n$을 만족하는 가장 작은 양의 정수 $k$를 $a$의 법 $n$에 대한 *order<sub>위수</sub>*라 하고 $\ord_n(a)$로 적는다.
+$\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod{n}$을 만족하는 가장 작은 양의 정수 $k$를 $a$의 법 $n$에 대한 *order<sub>위수</sub>*라 하고 $\ord_n(a)$로 적는다.
 :::
 
 오일러 정리에 의해 order는 항상 존재하며 $\varphi(n)$ 이하이다. Order는 다음의 나눗셈 성질로 통제된다.
 
 ::: 명제 2
-$\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod n$인 것은 $\ord_n(a) \mid k$인 것과 동치이다. 특히 $\ord_n(a) \mid \varphi(n)$이다.
+$\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod{n}$인 것은 $\ord_n(a) \mid k$인 것과 동치이다. 특히 $\ord_n(a) \mid \varphi(n)$이다.
 :::
 
 ::: 증명
-$d = \ord_n(a)$라 하고 $k = dq + r$ ($0 \leq r < d$) 로 나누면 $a^k = (a^d)^q a^r \equiv a^r \pmod n$이다. $a^k \equiv 1$이면 $a^r \equiv 1$인데 $r < d$이고 $d$가 최소이므로 $r = 0$, 즉 $d \mid k$이다. 역은 자명하다. 오일러 정리 $a^{\varphi(n)} \equiv 1$에 적용하면 $d \mid \varphi(n)$이다.
+$d = \ord_n(a)$라 하고 $k = dq + r$ ($0 \leq r < d$) 로 나누면 $a^k = (a^d)^q a^r \equiv a^r \pmod{n}$이다. $a^k \equiv 1$이면 $a^r \equiv 1$인데 $r < d$이고 $d$가 최소이므로 $r = 0$, 즉 $d \mid k$이다. 역은 자명하다. 오일러 정리 $a^{\varphi(n)} \equiv 1$에 적용하면 $d \mid \varphi(n)$이다.
 :::
 
 ## 원시근의 존재
@@ -45,7 +45,7 @@ $p$가 소수이면 법 $p$의 원시근이 존재한다. 즉 $\mathbb{Z}/p\math
 :::
 
 ::: 증명
-Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 [명제 6](#prop6){: data-lid="5mgkb" }에 의해 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7){: data-lid="ib4rq" }), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
+Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod{p}$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 [명제 6](#prop6){: data-lid="5mgkb" }에 의해 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7){: data-lid="ib4rq" }), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
 :::
 
 ::: 참고 5
@@ -65,7 +65,7 @@ $$\ord_n(a^k) = \frac{d}{\gcd(d, k)}$$
 :::
 
 ::: 증명
-$e = \ord_n(a^k)$라 하자. 명제 2에 의해 $(a^k)^m \equiv 1 \pmod n$인 것은 $d \mid km$인 것과 동치이다. $g = \gcd(d, k)$로 두고 $d = g d'$, $k = g k'$ ($\gcd(d', k') = 1$) 로 적으면
+$e = \ord_n(a^k)$라 하자. 명제 2에 의해 $(a^k)^m \equiv 1 \pmod{n}$인 것은 $d \mid km$인 것과 동치이다. $g = \gcd(d, k)$로 두고 $d = g d'$, $k = g k'$ ($\gcd(d', k') = 1$) 로 적으면
 
 $$\begin{aligned}
 d \mid km &\iff g d' \mid g k' m \\
@@ -96,14 +96,14 @@ d \mid km &\iff g d' \mid g k' m \\
 $\varphi(7) = 6$이므로 order는 $6$의 약수 $1, 2, 3, 6$ 중 하나이다. $a = 2$의 거듭제곱을 차례로 계산하면
 
 $$\begin{aligned}
-2^1 &\equiv 2, & 2^2 &\equiv 4, & 2^3 &\equiv 1 \pmod 7
+2^1 &\equiv 2, & 2^2 &\equiv 4, & 2^3 &\equiv 1 \pmod{7}
 \end{aligned}$$
 
 이므로 $\ord_7(2) = 3$이고 $2$는 원시근이 아니다. 다음으로 $a = 3$을 보면
 
 $$\begin{aligned}
 3^1 &\equiv 3, & 3^2 &\equiv 2, & 3^3 &\equiv 6, \\
-3^4 &\equiv 4, & 3^5 &\equiv 5, & 3^6 &\equiv 1 \pmod 7
+3^4 &\equiv 4, & 3^5 &\equiv 5, & 3^6 &\equiv 1 \pmod{7}
 \end{aligned}$$
 
 이어서 $3, 2, 6, 4, 5, 1$이 기약잉여계 $\{1, 2, 3, 4, 5, 6\}$ 전체를 훑는다. 따라서 $\ord_7(3) = 6$이고 $3$이 원시근이다.
@@ -119,25 +119,25 @@ $$\ord_7(3^2) = \frac{6}{\gcd(6,2)} = \frac{6}{2} = 3, \qquad \ord_7(3^3) = \fra
 이다. 즉 $3^2 \equiv 2$는 order $3$, $3^3 \equiv 6$은 order $2$이며, 이는 예시 8의 직접 계산과 일치한다. 한 원시근만 알면 가능한 모든 order의 원소를 이렇게 거듭제곱으로 뽑아낼 수 있다.
 :::
 
-원시근의 진가는 곱셈을 덧셈으로 바꾸는 데 있다. 원시근 $g$를 고정하면, 각 reduced residue class $a$에 대해 $a \equiv g^\ell \pmod n$인 지수 $\ell$ (법 $\varphi(n)$) 이 유일하게 정해지는데, 이를 $g$에 대한 $a$의 *지표<sub>index</sub>* 또는 이산로그라 하고 $\ind_g a$로 적는다. 로그의 성질 $\ind_g(ab) \equiv \ind_g a + \ind_g b \pmod{\varphi(n)}$이 성립하여, 곱셈 합동식이 덧셈 합동식으로 환원된다.
+원시근의 진가는 곱셈을 덧셈으로 바꾸는 데 있다. 원시근 $g$를 고정하면, 각 reduced residue class $a$에 대해 $a \equiv g^\ell \pmod{n}$인 지수 $\ell$ (법 $\varphi(n)$) 이 유일하게 정해지는데, 이를 $g$에 대한 $a$의 *지표<sub>index</sub>* 또는 이산로그라 하고 $\ind_g a$로 적는다. 로그의 성질 $\ind_g(ab) \equiv \ind_g a + \ind_g b \pmod{\varphi(n)}$이 성립하여, 곱셈 합동식이 덧셈 합동식으로 환원된다.
 
 ::: 예시 10 (지표를 이용한 거듭제곱 합동식)
-법 $7$에서 $x^4 \equiv 4 \pmod 7$을 풀자. 원시근 $g = 3$에 대한 지표표는 예시 8에서
+법 $7$에서 $x^4 \equiv 4 \pmod{7}$을 풀자. 원시근 $g = 3$에 대한 지표표는 예시 8에서
 
 $$\ind_3 1 = 6,\ \ind_3 2 = 2,\ \ind_3 3 = 1,\ \ind_3 4 = 4,\ \ind_3 5 = 5,\ \ind_3 6 = 3$$
 
 이다. $x \equiv 3^t$로 놓으면 $x^4 \equiv 3^{4t}$이고 $4 \equiv 3^4$이므로, 합동식은
 
-$$4t \equiv 4 \pmod 6$$
+$$4t \equiv 4 \pmod{6}$$
 
-으로 바뀐다. $\gcd(4, 6) = 2$이고 $2 \mid 4$이므로 해가 $2$개 있으며, 양변을 $2$로 나누면 $2t \equiv 2 \pmod 3$, 곧 $t \equiv 1 \pmod 3$이다. 따라서 $t \equiv 1, 4 \pmod 6$이고
+으로 바뀐다. $\gcd(4, 6) = 2$이고 $2 \mid 4$이므로 해가 $2$개 있으며, 양변을 $2$로 나누면 $2t \equiv 2 \pmod{3}$, 곧 $t \equiv 1 \pmod{3}$이다. 따라서 $t \equiv 1, 4 \pmod{6}$이고
 
-$$x \equiv 3^1 \equiv 3, \qquad x \equiv 3^4 \equiv 4 \pmod 7$$
+$$x \equiv 3^1 \equiv 3, \qquad x \equiv 3^4 \equiv 4 \pmod{7}$$
 
 이 두 해이다. 실제로 $3^4 \equiv 4$, $4^4 = 256 = 7\cdot 36 + 4 \equiv 4$로 확인된다.
 :::
 
-이 방법은 일반적으로 $x^k \equiv a \pmod p$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $k t \equiv \ind_g a \pmod{p-1}$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences){: data-lid="kpjf9" }). 따라서 해의 개수는 $\gcd(k, p-1)$이 $\ind_g a$를 나누면 $\gcd(k, p-1)$개, 그렇지 않으면 $0$개이다.
+이 방법은 일반적으로 $x^k \equiv a \pmod{p}$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $k t \equiv \ind_g a \pmod{p-1}$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences){: data-lid="kpjf9" }). 따라서 해의 개수는 $\gcd(k, p-1)$이 $\ind_g a$를 나누면 $\gcd(k, p-1)$개, 그렇지 않으면 $0$개이다.
 
 마지막으로 합성수 법에서 multiplicative group이 순환하지 않는 경우를 참고 5의 법 $8$에서 구체적으로 본다.
 
@@ -146,7 +146,7 @@ $\varphi(8) = 4$이므로 원시근이 있으려면 order $4$인 원소가 있�
 
 $$\begin{aligned}
 1^2 &\equiv 1, & 3^2 &= 9 \equiv 1, \\
-5^2 &= 25 \equiv 1, & 7^2 &= 49 \equiv 1 \pmod 8
+5^2 &= 25 \equiv 1, & 7^2 &= 49 \equiv 1 \pmod{8}
 \end{aligned}$$
 
 이어서 $1$을 뺀 세 원소가 모두 order $2$이다. Order $4$인 원소가 없으므로 원시근이 존재하지 않으며, multiplicative group은 cyclic group이 아니라 $\mathbb{Z}/2 \times \mathbb{Z}/2$ 구조를 가진다. 이는 참고 5의 예외 목록 $n = 1, 2, 4, p^k, 2p^k$에 $8$이 들지 않음과 부합한다.

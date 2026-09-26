@@ -35,7 +35,7 @@ $$\partial\mathbb{H}^m=\left\{x\in \mathbb{H}^m\mid x^m=0\right\},\qquad \interi
 부분집합 $A\subseteq\mathbb{R}^m$ 위에서 정의된 함수 $f:A \rightarrow \mathbb{R}^n$이 *$C^\infty$*라는 것은, 각각의 $p\in A$마다 $p$의 ($\mathbb{R}^m$에서의) 열린근방 $W$와 $C^\infty$ 함수 $\tilde{f}:W \rightarrow \mathbb{R}^n$이 존재하여 $\tilde{f}\vert_{W\cap A}=f\vert_{W\cap A}$이 성립하는 것이다.
 :::
 
-즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A$가 $\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 difference quotient의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
+즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A$가 $\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde{f}$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 difference quotient의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
 
 $$\frac{\partial f}{\partial x^m}(p)=\lim_{t\rightarrow0^+}\frac{f(p+te_m)-f(p)}{t}$$
 
@@ -62,11 +62,11 @@ Second countable Hausdorff space $M$이 *$m$차원의 경계가 있는 manifold<
 ::: 증명
 대우를 보이자. 즉 $\varphi(p)\in\interior\mathbb{H}^m$이라 가정하고 $\psi(p)\in\interior\mathbb{H}^m$임을 보인다. Transition $\tau=\psi\circ\varphi^{-1}$와 그 역함수 $\sigma=\varphi\circ\psi^{-1}$를 생각하자. [정의 1](#def1){: data-lid="gvtmk" }에 의하여 $\varphi(p)$와 $\psi(p)$의 적당한 열린근방 $W,W'\subseteq\mathbb{R}^m$과 $C^\infty$ 확장 $\tilde{\tau}:W \rightarrow \mathbb{R}^m$, $\tilde{\sigma}:W' \rightarrow \mathbb{R}^m$이 존재한다.
 
-$\varphi(p)\in\interior\mathbb{H}^m$이므로, $W$를 줄여 $W$가 $\varphi(U\cap V)\cap\interior\mathbb{H}^m$에 포함되는 $\mathbb{R}^m$의 열린집합이라 가정할 수 있고, 그럼 $\tilde\tau=\tau\vert_W$이다. 또, 연속성에 의해 $W$를 한 번 더 줄여 $\tau(W)\subseteq W'$이라 가정하자. 그럼 $W$ 위에서
+$\varphi(p)\in\interior\mathbb{H}^m$이므로, $W$를 줄여 $W$가 $\varphi(U\cap V)\cap\interior\mathbb{H}^m$에 포함되는 $\mathbb{R}^m$의 열린집합이라 가정할 수 있고, 그럼 $\tilde{\tau}=\tau\vert_W$이다. 또, 연속성에 의해 $W$를 한 번 더 줄여 $\tau(W)\subseteq W'$이라 가정하자. 그럼 $W$ 위에서
 
 $$\tilde{\sigma}\circ\tilde{\tau}=\sigma\circ\tau=\id_W$$
 
-가 성립하고, $W$는 $\mathbb{R}^m$의 열린집합이므로 chain rule에 의하여 $D\tilde\sigma(\tau(\varphi(p)))\circ D\tilde\tau(\varphi(p))=\id$이다. 특히 $D\tilde\tau(\varphi(p))$는 invertible이고, [§부분다양체와 역함수 정리, ⁋정리 4](/ko/math/manifolds/submanifolds#thm4){: data-lid="xmjf9" }에 의하여 $\tilde\tau$는 $\varphi(p)$의 적당한 열린근방을 $\psi(p)=\tau(\varphi(p))$를 포함하는 $\mathbb{R}^m$의 *열린집합*으로 보낸다. 이 열린집합은 $\tau$의 image, 즉 $\mathbb{H}^m$의 부분집합에 포함되므로, $\psi(p)$는 $\mathbb{H}^m$ 안에서 $\mathbb{R}^m$-열린근방을 갖는다. 그런데 $\partial\mathbb{H}^m$의 점의 임의의 $\mathbb{R}^m$-열린근방은 $x^m<0$인 점을 포함하므로, $\psi(p)\not\in\partial\mathbb{H}^m$이다.
+가 성립하고, $W$는 $\mathbb{R}^m$의 열린집합이므로 chain rule에 의하여 $D\tilde{\sigma}(\tau(\varphi(p)))\circ D\tilde{\tau}(\varphi(p))=\id$이다. 특히 $D\tilde{\tau}(\varphi(p))$는 invertible이고, [§부분다양체와 역함수 정리, ⁋정리 4](/ko/math/manifolds/submanifolds#thm4){: data-lid="xmjf9" }에 의하여 $\tilde{\tau}$는 $\varphi(p)$의 적당한 열린근방을 $\psi(p)=\tau(\varphi(p))$를 포함하는 $\mathbb{R}^m$의 *열린집합*으로 보낸다. 이 열린집합은 $\tau$의 image, 즉 $\mathbb{H}^m$의 부분집합에 포함되므로, $\psi(p)$는 $\mathbb{H}^m$ 안에서 $\mathbb{R}^m$-열린근방을 갖는다. 그런데 $\partial\mathbb{H}^m$의 점의 임의의 $\mathbb{R}^m$-열린근방은 $x^m<0$인 점을 포함하므로, $\psi(p)\not\in\partial\mathbb{H}^m$이다.
 :::
 
 따라서 $M$은 서로소인 두 집합 $\interior M$과 $\partial M$으로 나뉜다. 이들 각각은 다시 manifold가 된다.

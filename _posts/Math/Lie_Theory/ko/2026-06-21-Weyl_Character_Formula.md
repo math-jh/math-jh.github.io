@@ -129,7 +129,7 @@ $$\Delta=e^{\rho}\prod_{\alpha\in\Phi^+}\bigl(1-e^{-\alpha}\bigr)=\sum_{w\in W}(
 
 $$e^{\alpha/2}-e^{-\alpha/2}=e^{\alpha/2}\bigl(1-e^{-\alpha}\bigr)$$
 
-이고, 이를 모든 $\alpha\in\Phi^+$에 대해 곱하면 묶여 나온 인자들의 곱이 $\prod_{\alpha\in\Phi^+}e^{\alpha/2}=e^{\frac12\sum_{\alpha>0}\alpha}=e^\rho$이므로 따라온다. 이로써 $\mathrm{ch}\,M(\mu)=e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})=e^{\mu+\rho}/\Delta$도 [명제 5](#prop5){: data-lid="xlmqp" }에서 곧장 나온다.
+이고, 이를 모든 $\alpha\in\Phi^+$에 대해 곱하면 묶여 나온 인자들의 곱이 $\prod_{\alpha\in\Phi^+}e^{\alpha/2}=e^{\frac{1}{2}\sum_{\alpha>0}\alpha}=e^\rho$이므로 따라온다. 이로써 $\mathrm{ch}\,M(\mu)=e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})=e^{\mu+\rho}/\Delta$도 [명제 5](#prop5){: data-lid="xlmqp" }에서 곧장 나온다.
 
 둘째 등호를 본다. 먼저 $\Delta$가 Weyl group 작용에 대해 부호를 갖고 변함을 보인다. 곧 임의의 $w\in W$에 대하여 $w\Delta=(-1)^{\ell(w)}\Delta$이다. $W$가 simple reflection $s_i$들로 생성되고 $\ell(ws_i)=\ell(w)\pm 1$이어서 부호 $w\mapsto(-1)^{\ell(w)}$가 group homomorphism이므로 ([§Bruhat decomposition, ⁋정의 3](/ko/math/lie_theory/bruhat_decomposition#def3){: data-lid="dc2s5" } 이후의 논의) $w=s_i$인 경우만 보이면 충분하다. Simple reflection $s_i$는 positive root $\alpha_i$를 $-\alpha_i$로 보내고 나머지 positive root 전체를 자기들끼리 치환한다. 따라서 곱
 

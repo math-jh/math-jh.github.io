@@ -138,7 +138,7 @@ $D\in\Der_A(S^{-1}E, M)$와 $x\in E$, $s\in S$에 대하여 $x=s(x/s)$에 Leibni
 
 $$D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$$
 
-이고, 곧 $D$는 $E$ 위에서의 값으로 결정되어 $\varphi^\ast$는 단사이다. 전사성을 위해서는 $D\in\Der_A(E, M)$가 주어졌을 때 위의 식을 정의로 삼아 $\widetilde D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$로 두면 된다. 이것이 well-defined임을 보이기 위해 $x/s=y/t$라 하면 적당한 $u\in S$가 $u(tx-sy)=0$을 만족하므로 ([§국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4){: data-lid="572de" }), 여기에 $D$를 적용하여
+이고, 곧 $D$는 $E$ 위에서의 값으로 결정되어 $\varphi^\ast$는 단사이다. 전사성을 위해서는 $D\in\Der_A(E, M)$가 주어졌을 때 위의 식을 정의로 삼아 $\widetilde{D}(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$로 두면 된다. 이것이 well-defined임을 보이기 위해 $x/s=y/t$라 하면 적당한 $u\in S$가 $u(tx-sy)=0$을 만족하므로 ([§국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4){: data-lid="572de" }), 여기에 $D$를 적용하여
 
 $$utD(x)+uxD(t)+txD(u)=usD(y)+uyD(s)+syD(u)$$
 
@@ -150,20 +150,20 @@ $$tD(x)+xD(t)=sD(y)+yD(s)$$
 
 $$\bigl(D(x)-(x/s)D(s)\bigr)/s=\bigl(D(y)-(y/t)D(t)\bigr)/t$$
 
-와 같은 것이며, 따라서 $\widetilde D$는 well-defined이다. 이것이 $A$의 원소에 대한 스칼라곱을 보존하는 것은 $D$가 $A$-linear라는 것과 정의식에서 바로 따라나오고, 덧셈의 보존은 $x/s+y/t=(tx+sy)/(st)$에 정의식을 적용한
+와 같은 것이며, 따라서 $\widetilde{D}$는 well-defined이다. 이것이 $A$의 원소에 대한 스칼라곱을 보존하는 것은 $D$가 $A$-linear라는 것과 정의식에서 바로 따라나오고, 덧셈의 보존은 $x/s+y/t=(tx+sy)/(st)$에 정의식을 적용한
 
-$$\widetilde D\Bigl(\frac{tx+sy}{st}\Bigr)=\frac{tD(x)+xD(t)+sD(y)+yD(s)}{st}-\Bigl(\frac{x}{s}+\frac{y}{t}\Bigr)\Bigl(\frac{D(s)}{s}+\frac{D(t)}{t}\Bigr)$$
+$$\widetilde{D}\Bigl(\frac{tx+sy}{st}\Bigr)=\frac{tD(x)+xD(t)+sD(y)+yD(s)}{st}-\Bigl(\frac{x}{s}+\frac{y}{t}\Bigr)\Bigl(\frac{D(s)}{s}+\frac{D(t)}{t}\Bigr)$$
 
-에서 $xD(t)/(st)$와 $yD(s)/(st)$가 상쇄되어 $\widetilde D(x/s)+\widetilde D(y/t)$만 남는 것으로 확인된다. 남은 Leibniz 법칙은
+에서 $xD(t)/(st)$와 $yD(s)/(st)$가 상쇄되어 $\widetilde{D}(x/s)+\widetilde{D}(y/t)$만 남는 것으로 확인된다. 남은 Leibniz 법칙은
 
 $$\begin{aligned}
-\widetilde D\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
+\widetilde{D}\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
 &=\frac{xD(y)+yD(x)}{st}-\frac{xy}{(st)^2}\bigl(sD(t)+tD(s)\bigr)\\
 &=\frac{x}{s}\Bigl(\frac{D(y)}{t}-\frac{y}{t^2}D(t)\Bigr)+\frac{y}{t}\Bigl(\frac{D(x)}{s}-\frac{x}{s^2}D(s)\Bigr)\\
-&=\frac{x}{s}\widetilde D\Bigl(\frac{y}{t}\Bigr)+\frac{y}{t}\widetilde D\Bigl(\frac{x}{s}\Bigr)
+&=\frac{x}{s}\widetilde{D}\Bigl(\frac{y}{t}\Bigr)+\frac{y}{t}\widetilde{D}\Bigl(\frac{x}{s}\Bigr)
 \end{aligned}$$
 
-로 확인된다. 또 $D(1)=D(1\cdot 1)=2D(1)$에서 $D(1)=0$이므로 $\widetilde D(x/1)=D(x)$이고, 곧 $\varphi^\ast\widetilde D=D$이다.
+로 확인된다. 또 $D(1)=D(1\cdot 1)=2D(1)$에서 $D(1)=0$이므로 $\widetilde{D}(x/1)=D(x)$이고, 곧 $\varphi^\ast\widetilde{D}=D$이다.
 
 이제 $\varphi^\ast$가 $M$에 대하여 natural한 bijection이므로, 여기에 [보조정리 2](#lem2){: data-lid="8x7f2" }와 [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6){: data-lid="5ajv1" }의 adjunction을 결합하면 임의의 $S^{-1}E$-module $M$에 대하여
 

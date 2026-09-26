@@ -43,15 +43,15 @@ $$0 \rightarrow A \rightarrow \widetilde{A}\rightarrow \mathbb{K}\rightarrow 0$$
 
 exists. Sheafifying this, outside the nodes $\nu$ is an isomorphism, and the above calculation at $p$ shows that the cokernel is $\kappa(p)=\mathbb{K}$, so we obtain
 
-$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde C}\rightarrow\kappa(p)\rightarrow0$$
+$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde{C}}\rightarrow\kappa(p)\rightarrow0$$
 
 For a general nodal curve, the normalization carries out this process at all nodes simultaneously, and therefore in this case we obtain the following short exact sequence
 
-$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde C}\rightarrow\bigoplus_{p\in\Sing C}\kappa(p)\rightarrow0$$
+$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde{C}}\rightarrow\bigoplus_{p\in\Sing C}\kappa(p)\rightarrow0$$
 
-Now suppose that $C$ has $d$ nodes and $c$ irreducible components, and that the genus of each component of $\widetilde C$ is $g_1,\ldots,g_c$. Since $\nu$ is an affine morphism, by [\[Schemes\] §Sheaf Cohomology of Schemes, ⁋Corollary 4](/en/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" } we have $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde C,\mathcal{G})$. Therefore, from the short exact sequence above, we obtain
+Now suppose that $C$ has $d$ nodes and $c$ irreducible components, and that the genus of each component of $\widetilde{C}$ is $g_1,\ldots,g_c$. Since $\nu$ is an affine morphism, by [\[Schemes\] §Sheaf Cohomology of Schemes, ⁋Corollary 4](/en/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" } we have $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde{C},\mathcal{G})$. Therefore, from the short exact sequence above, we obtain
 
-$$\rchi(C,\nu_\ast\mathcal{O}_{\widetilde C})=\rchi(C,\mathcal{O}_C)+\sum_{p\in\Sing C}\rchi(C,\kappa(p))$$
+$$\rchi(C,\nu_\ast\mathcal{O}_{\widetilde{C}})=\rchi(C,\mathcal{O}_C)+\sum_{p\in\Sing C}\rchi(C,\kappa(p))$$
 
 and since each $\kappa(p)$ is a skyscraper sheaf with global sections $\mathbb{K}$ and vanishing higher cohomology, the last sum is $d$. Summarizing this yields the following proposition.
 
@@ -83,7 +83,7 @@ What the newly added marked points affect is $T^0$, where an infinitesimal autom
 
 $$\Phi(f)=f+\epsilon v(f)$$
 
-and for this to preserve multiplication, $v(fg)=fv(g)+gv(f)$ must hold. That is, $v$ is a derivation of $\mathcal{O}_C$ over $\mathbb{K}$, and conversely, such a derivation always defines an automorphism in the manner above. Now, the part where a prestable curve has different infinitesimal automorphisms from a nodal curve is in the neighborhood of the marked sections as mentioned above, so let us examine this near each marked point $p_i$. Suppose that $p_i$ is locally given by $\z=0$. By [\[Schemes\] §Smooth and Étale Morphisms, ⁋Theorem 7](/en/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" }, $\Omega_{C/\mathbb K}$ is a locally free sheaf of rank $1$ in this neighborhood with $\dd{\z}$ as a local basis; thus, by the universal property of differentials, any derivation is determined by the image of $\dd{\z}$, namely $v(\z)$. The corresponding automorphism is given by
+and for this to preserve multiplication, $v(fg)=fv(g)+gv(f)$ must hold. That is, $v$ is a derivation of $\mathcal{O}_C$ over $\mathbb{K}$, and conversely, such a derivation always defines an automorphism in the manner above. Now, the part where a prestable curve has different infinitesimal automorphisms from a nodal curve is in the neighborhood of the marked sections as mentioned above, so let us examine this near each marked point $p_i$. Suppose that $p_i$ is locally given by $\z=0$. By [\[Schemes\] §Smooth and Étale Morphisms, ⁋Theorem 7](/en/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" }, $\Omega_{C/\mathbb{K}}$ is a locally free sheaf of rank $1$ in this neighborhood with $\dd{\z}$ as a local basis; thus, by the universal property of differentials, any derivation is determined by the image of $\dd{\z}$, namely $v(\z)$. The corresponding automorphism is given by
 
 $$\z\mapsto\z+\epsilon v(\z)$$
 
@@ -93,15 +93,15 @@ $$\sHom(\Omega_{C/\mathbb{K}},\mathcal{I}_\Sigma)=\mathcal{T}_{C/\mathbb{K}}\oti
 
 and this computes the infinitesimal automorphisms of the marked curve.
 
-Now what remains is the calculation of $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$. For this, we choose the local model $R=\mathbb K[\x,\y]/(\x\y)$ and examine derivations on it. Any derivation $v$ is determined by its values on the generators, $a=v(\x)$ and $b=v(\y)$, and as in the computation of [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" }, in order to preserve the relation $\x\y=0$, we must have
+Now what remains is the calculation of $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$. For this, we choose the local model $R=\mathbb{K}[\x,\y]/(\x\y)$ and examine derivations on it. Any derivation $v$ is determined by its values on the generators, $a=v(\x)$ and $b=v(\y)$, and as in the computation of [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Example 6](/en/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" }, in order to preserve the relation $\x\y=0$, we must have
 
 $$0=v(\x\y)=\y a+\x b$$
 
-Here, $\y a=-\x b$ belongs simultaneously to $(\y)$ and $(\x)$, and in $R$, since $(\x)\cap(\y)=0$, we have $\y a=\x b=0$. Furthermore, because $\ann(\y)=(\x)$ and $\ann(\x)=(\y)$, we obtain $a\in\x\mathbb K[\x]$ and $b\in\y\mathbb K[\y]$.
+Here, $\y a=-\x b$ belongs simultaneously to $(\y)$ and $(\x)$, and in $R$, since $(\x)\cap(\y)=0$, we have $\y a=\x b=0$. Furthermore, because $\ann(\y)=(\x)$ and $\ann(\x)=(\y)$, we obtain $a\in\x\mathbb{K}[\x]$ and $b\in\y\mathbb{K}[\y]$.
 
-Geometrically, this reflects the situation where two branches are separated in the normalization of $R$. That is, if we write the normalization of $R$ as $\widetilde R=\mathbb K[\x]\oplus\mathbb K[\y]$, the above $a$ and $b$ become derivations on each branch of the normalization, and are functions that vanish at the respective origins.
+Geometrically, this reflects the situation where two branches are separated in the normalization of $R$. That is, if we write the normalization of $R$ as $\widetilde{R}=\mathbb{K}[\x]\oplus\mathbb{K}[\y]$, the above $a$ and $b$ become derivations on each branch of the normalization, and are functions that vanish at the respective origins.
 
-Now, looking at this on the entire nodal curve, in the normalization $\nu:\widetilde C\rightarrow C$, if we let the two preimages of a node $p$ be $p',p''$, these are derivations vanishing at $p'$ and $p''$ respectively, and since $\nu$ is an isomorphism outside the nodes, these local identifications glue canonically. Therefore, if we let $D$ be the divisor collecting the two preimages of all nodes, this computation is summarized as follows.
+Now, looking at this on the entire nodal curve, in the normalization $\nu:\widetilde{C}\rightarrow C$, if we let the two preimages of a node $p$ be $p',p''$, these are derivations vanishing at $p'$ and $p''$ respectively, and since $\nu$ is an isomorphism outside the nodes, these local identifications glue canonically. Therefore, if we let $D$ be the divisor collecting the two preimages of all nodes, this computation is summarized as follows.
 
 ::: Proposition 4
 For a nodal curve $C$, its normalization $\nu:\widetilde{C}\rightarrow C$, and on $\widetilde{C}$ the divisor $D$ consisting of the preimages of the nodes,
@@ -113,21 +113,21 @@ holds. Likewise, if $\widetilde{\Sigma}$ denotes the preimage of the marked poin
 
 In fact, the second isomorphism is obtained by adding the vanishing condition at the marked points to the first isomorphism. Therefore, taking global sections yields
 
-$$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)=H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
+$$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)=H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)$$
 
-where the last equality follows from $H^0(C,\nu_\ast\mathcal F)=H^0(\widetilde C,\mathcal F)$ by the definition of pushforward. That is, infinitesimal automorphisms are computed as derivations on the normalization that vanish at all preimages of the nodes and at the marked points.
+where the last equality follows from $H^0(C,\nu_\ast\mathcal{F})=H^0(\widetilde{C},\mathcal{F})$ by the definition of pushforward. That is, infinitesimal automorphisms are computed as derivations on the normalization that vanish at all preimages of the nodes and at the marked points.
 
-Under the standard deformation-theoretic interpretation, this calculation can be viewed as finding the tangent space to the automorphism group of a nodal curve, or more generally a prestable curve. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Theorem 5](/en/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" }) Letting this automorphism group be $G=\Aut(C,p_\bullet)$ and its identity element be $e$, the elements of the tangent space $T_eG$ at the identity are the $\mathbb K[\epsilon]$-valued points $\Spec\mathbb K[\epsilon]\rightarrow G$ whose closed point maps to the identity. ([\[Schemes\] §From Varieties to Schemes, ⁋Example 4](/en/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" }) Intuitively, this can be thought of as a family of automorphisms that restrict to the identity map on the central fiber, from which we obtain the identification 
+Under the standard deformation-theoretic interpretation, this calculation can be viewed as finding the tangent space to the automorphism group of a nodal curve, or more generally a prestable curve. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Theorem 5](/en/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" }) Letting this automorphism group be $G=\Aut(C,p_\bullet)$ and its identity element be $e$, the elements of the tangent space $T_eG$ at the identity are the $\mathbb{K}[\epsilon]$-valued points $\Spec\mathbb{K}[\epsilon]\rightarrow G$ whose closed point maps to the identity. ([\[Schemes\] §From Varieties to Schemes, ⁋Example 4](/en/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" }) Intuitively, this can be thought of as a family of automorphisms that restrict to the identity map on the central fiber, from which we obtain the identification 
 
-$$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
+$$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)$$
 
-From the calculation above, we know that any automorphism is locally written in the form $f\mapsto f+\epsilon v(f)$, and since the derivation $v$ represents a vector field on the smooth curve $\widetilde C$, this expression can be interpreted as saying that the directions in which automorphisms move infinitesimally from the identity appear as vector fields on the normalization.
+From the calculation above, we know that any automorphism is locally written in the form $f\mapsto f+\epsilon v(f)$, and since the derivation $v$ represents a vector field on the smooth curve $\widetilde{C}$, this expression can be interpreted as saying that the directions in which automorphisms move infinitesimally from the identity appear as vector fields on the normalization.
 
 ## Dimension Calculation
 
 Since the deformation space $T^1(C,p_\bullet)$ represents the directions of moving from the single point given by the marked prestable curve $(C,p_\bullet)$ to neighboring points, it plays the role of a tangent space when viewed in the space parameterizing these prestable curves. Here, the degrees of freedom of infinitesimal automorphisms $T^0(C,p_\bullet)$ representing the same point must be subtracted, and our goal is to compute this difference. 
 
-To this end, we need a cohomology vanishing result for prestable curves; for this, take a projective embedding $C\subseteq\mathbb P^N$, and disjoint from $C$, choose a codimension $2$ linear subspace $\Lambda=H_1\cap H_2$. Then $U_i=C\setminus H_i$ is affine and $U_1\cup U_2=C$, so computing the sheaf cohomology on $C$ of any quasi-coherent sheaf $\mathcal{F}$ via Čech cohomology shows that $H^i(C, \mathcal{F})=0$ holds in degree $2$ and above. Using this, we can show the following. 
+To this end, we need a cohomology vanishing result for prestable curves; for this, take a projective embedding $C\subseteq\mathbb{P}^N$, and disjoint from $C$, choose a codimension $2$ linear subspace $\Lambda=H_1\cap H_2$. Then $U_i=C\setminus H_i$ is affine and $U_1\cup U_2=C$, so computing the sheaf cohomology on $C$ of any quasi-coherent sheaf $\mathcal{F}$ via Čech cohomology shows that $H^i(C, \mathcal{F})=0$ holds in degree $2$ and above. Using this, we can show the following. 
 
 ::: Theorem 5
 For an $n$-pointed prestable curve $(C, p_\bullet)$, letting the set of nodes of $C$ be $\Sing C$, the exact sequence
@@ -141,7 +141,7 @@ As computed earlier, the marked points add the twist $(-\Sigma)$ to the automorp
 
 $$0\rightarrow H^1\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)\rightarrow T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1\rightarrow H^2\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)$$
 
-where the last term is $0$ by the vanishing above. In addition, since $T_p^1\cong\mathbb K$ by [Proposition 3](#prop3){: data-lid="8ouk8" }, we obtain the desired short exact sequence. The last assertion follows by looking at the degree $0$ part of this long exact sequence.
+where the last term is $0$ by the vanishing above. In addition, since $T_p^1\cong\mathbb{K}$ by [Proposition 3](#prop3){: data-lid="8ouk8" }, we obtain the desired short exact sequence. The last assertion follows by looking at the degree $0$ part of this long exact sequence.
 :::
 
 Intuitively, this exact sequence splits the deformations of a prestable curve into two layers. The left term corresponds to the degrees of freedom in deforming the components of the normalization and the positions of the node preimages and marked points on them while preserving the local models of all nodes, whereas the right term corresponds to the degrees of freedom in choosing which nodes to smooth. Then our key claim is as follows.
@@ -164,7 +164,7 @@ $$\rchi(C, \mathcal{H})=\rchi\bigl(\widetilde{C}, \mathcal{T}_{\widetilde{C}/\ma
 
 holds.
 
-Let us compute the right-hand side of the above equality component by component. Applying [\[Algebraic Varieties\] §The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" } to the canonical divisor $K_{\widetilde C_j}$ of the component $\widetilde C_j$ of genus $g_j$, we obtain $\deg\omega_{\widetilde C_j}=2g_j-2$. Therefore, $\mathcal T_{\widetilde C_j/\mathbb K}\cong\omega_{\widetilde C_j}^\vee$ is a line bundle of degree $2-2g_j$. If $s_j$ denotes the number of points of $D+\widetilde\Sigma$ lying on it, the degree of the twisted line bundle is $2-2g_j-s_j$, and by the same proposition,
+Let us compute the right-hand side of the above equality component by component. Applying [\[Algebraic Varieties\] §The Riemann–Roch Theorem for Curves, ⁋Proposition 3](/en/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" } to the canonical divisor $K_{\widetilde{C}_j}$ of the component $\widetilde{C}_j$ of genus $g_j$, we obtain $\deg\omega_{\widetilde{C}_j}=2g_j-2$. Therefore, $\mathcal{T}_{\widetilde{C}_j/\mathbb{K}}\cong\omega_{\widetilde{C}_j}^\vee$ is a line bundle of degree $2-2g_j$. If $s_j$ denotes the number of points of $D+\widetilde{\Sigma}$ lying on it, the degree of the twisted line bundle is $2-2g_j-s_j$, and by the same proposition,
 
 $$\rchi\bigl(\widetilde{C}_j, \mathcal{T}_{\widetilde{C}_j/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)=(2-2g_j-s_j)+1-g_j=3-3g_j-s_j$$
 

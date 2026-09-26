@@ -63,7 +63,7 @@ $$g(\x)=\prod_{\substack{d\mid n\\ d<n}}\Phi_d(\x)$$
 
 ## 유리수체 위의 기약성
 
-[정의 1](#def1){: data-lid="cfopr" }의 $\Phi_n$이 $\zeta$의 minimal polynomial인지를 묻는 것은 $\Phi_n$이 $\mathbb{Q}[\x]$에서 irreducible인지를 묻는 것과 같다. 이를 보이는 데에는 계수를 소수로 나눈 나머지로 옮기는 논법을 사용하므로, 소수 $p$에 대하여 field $\mathbb{Z}/p\mathbb{Z}$를 $\mathbb{F}_p$로 적고 계수를 $p$로 나눈 나머지로 보내는 ring homomorphism $\mathbb{Z}[\x]\rightarrow\mathbb{F}_p[\x]$에 의한 $u$의 image를 $\bar u$로 적기로 한다. 이 논법이 작동하려면 우선 다항식들이 $\mathbb{Z}[\x]$ 안에 머문다는 것을 확인해야 한다.
+[정의 1](#def1){: data-lid="cfopr" }의 $\Phi_n$이 $\zeta$의 minimal polynomial인지를 묻는 것은 $\Phi_n$이 $\mathbb{Q}[\x]$에서 irreducible인지를 묻는 것과 같다. 이를 보이는 데에는 계수를 소수로 나눈 나머지로 옮기는 논법을 사용하므로, 소수 $p$에 대하여 field $\mathbb{Z}/p\mathbb{Z}$를 $\mathbb{F}_p$로 적고 계수를 $p$로 나눈 나머지로 보내는 ring homomorphism $\mathbb{Z}[\x]\rightarrow\mathbb{F}_p[\x]$에 의한 $u$의 image를 $\bar{u}$로 적기로 한다. 이 논법이 작동하려면 우선 다항식들이 $\mathbb{Z}[\x]$ 안에 머문다는 것을 확인해야 한다.
 
 ::: 보조정리 3
 Monic polynomial $F\in\mathbb{Z}[\x]$가 $\mathbb{Q}[\x]$의 monic polynomial $f,g$에 대하여 $F=fg$로 쓰인다면 $f,g\in\mathbb{Z}[\x]$이다.
@@ -82,11 +82,11 @@ Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정�
 
 증명의 핵심은 $n$을 나누지 않는 임의의 소수 $p$와 $f$의 임의의 해 $\omega$에 대하여 $\omega^p$ 또한 $f$의 해라는 주장이다. 이를 보이기 위해 $f(\omega^p)\neq0$이라 가정하자. $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 해이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 해이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="dhkb9" }에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. $f$가 monic이므로 그 quotient 또한 $\mathbb{Z}[\x]$에 속한다. ([\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5){: data-lid="nz2qq" })
 
-이 관계를 $\mathbb{F}_p[\x]$로 보내자. $\mathbb{F}_p^\times$의 order가 $p-1$이므로 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="i0cy6" }에 의해 $\mathbb{F}_p$의 모든 원소 $c$가 $c^p=c$를 만족하고, Frobenius endomorphism이 ring homomorphism이므로 ([§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-lid="5d353" }) $\bar g(\x)=\sum c_i\x^i$에 대하여
+이 관계를 $\mathbb{F}_p[\x]$로 보내자. $\mathbb{F}_p^\times$의 order가 $p-1$이므로 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="i0cy6" }에 의해 $\mathbb{F}_p$의 모든 원소 $c$가 $c^p=c$를 만족하고, Frobenius endomorphism이 ring homomorphism이므로 ([§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-lid="5d353" }) $\bar{g}(\x)=\sum c_i\x^i$에 대하여
 
-$$\bar g(\x)^p=\sum c_i^p\x^{ip}=\sum c_i(\x^p)^i=\bar g(\x^p)$$
+$$\bar{g}(\x)^p=\sum c_i^p\x^{ip}=\sum c_i(\x^p)^i=\bar{g}(\x^p)$$
 
-가 성립한다. 따라서 $\bar f$는 $\bar g^p$를 나눈다. $\deg\bar f=\deg f\geq1$이므로 $\bar f$의 irreducible factor $h$를 하나 택하면 $h$는 $\bar g^p$를 나누는데, $\mathbb{F}_p[\x]$가 UFD이므로 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-lid="37wfm" }) [\[환론\] §정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17){: data-lid="eurm0" }에 의하여 $h$는 prime이고 따라서 $\bar g$를 나눈다. 그럼 $h^2$이 $\bar f\bar g=\x^n-1$을 나눈다.
+가 성립한다. 따라서 $\bar{f}$는 $\bar{g}^p$를 나눈다. $\deg\bar{f}=\deg f\geq1$이므로 $\bar{f}$의 irreducible factor $h$를 하나 택하면 $h$는 $\bar{g}^p$를 나누는데, $\mathbb{F}_p[\x]$가 UFD이므로 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-lid="37wfm" }) [\[환론\] §정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17){: data-lid="eurm0" }에 의하여 $h$는 prime이고 따라서 $\bar{g}$를 나눈다. 그럼 $h^2$이 $\bar{f}\bar{g}=\x^n-1$을 나눈다.
 
 그러나 $p\nmid n$이므로 $\mathbb{F}_p$에서 $n\neq0$이고, $\x^n-1$의 derivative $n\x^{n-1}$의 유일한 해인 $0$은 $\x^n-1$의 해가 아니다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="tebqy" }에 의해 $\x^n-1$은 $\overline{\mathbb{F}_p}$에서 중근을 갖지 않는다. 그런데 $h$의 해를 $\overline{\mathbb{F}_p}$에서 하나 택하면 $h^2\mid\x^n-1$로부터 그것이 $\x^n-1$의 중근이 되어 모순이다. 이로써 주장이 증명되었다.
 
@@ -130,11 +130,11 @@ $$\mathbb{Q}(\zeta_n)\cong\mathbb{Q}[\x]/(\Phi_n)\cong\mathbb{Q}(\zeta_n^a)$$
 특히 $\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})$는 order $\varphi(n)$의 abelian group이다. 그럼 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="dx5pd" }에 의해 $\mathbb{Q}(\zeta_n)$의 subextension들은 $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup들과 일대일로 대응하며, abelian group의 모든 subgroup이 normal이므로 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="2x6id" }에 의하여 그 subextension들은 모두 $\mathbb{Q}$의 Galois extension이다.
 
 ::: 예시 8
-$n=8$인 경우를 보자. $\varphi(8)=4$이고 $\x^8-1=(\x^4-1)(\x^4+1)$이며 $\Phi_1\Phi_2\Phi_4=\x^4-1$이므로 [명제 2](#prop2){: data-lid="9vdsu" }에 의해 $\Phi_8=\x^4+1$이다. $\zeta=\zeta_8=e^{2\pi i/8}$로 두면 $\zeta^4=-1$이고 $\zeta=(1+i)/\sqrt2$이므로
+$n=8$인 경우를 보자. $\varphi(8)=4$이고 $\x^8-1=(\x^4-1)(\x^4+1)$이며 $\Phi_1\Phi_2\Phi_4=\x^4-1$이므로 [명제 2](#prop2){: data-lid="9vdsu" }에 의해 $\Phi_8=\x^4+1$이다. $\zeta=\zeta_8=e^{2\pi i/8}$로 두면 $\zeta^4=-1$이고 $\zeta=(1+i)/\sqrt{2}$이므로
 
-$$\zeta^2=i,\qquad \zeta-\zeta^3=\zeta+\zeta^{-1}=\sqrt2,\qquad \zeta+\zeta^3=\zeta-\zeta^{-1}=i\sqrt2$$
+$$\zeta^2=i,\qquad \zeta-\zeta^3=\zeta+\zeta^{-1}=\sqrt{2},\qquad \zeta+\zeta^3=\zeta-\zeta^{-1}=i\sqrt{2}$$
 
-이며, 특히 $\mathbb{Q}(\zeta_8)=\mathbb{Q}(i,\sqrt2)$이다. 즉 $\mathbb{Q}$에 $1$의 $8$제곱근을 추가하는 것만으로 $\sqrt2$가 얻어진다.
+이며, 특히 $\mathbb{Q}(\zeta_8)=\mathbb{Q}(i,\sqrt{2})$이다. 즉 $\mathbb{Q}$에 $1$의 $8$제곱근을 추가하는 것만으로 $\sqrt{2}$가 얻어진다.
 
 한편 $(\mathbb{Z}/8\mathbb{Z})^\times=\{1,3,5,7\}$은 항등원이 아닌 모든 원소의 order가 $2$이므로 $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$와 isomorphic하고, 따라서 자명하지 않은 proper subgroup을 정확히 세 개 갖는다. [정리 7](#thm7){: data-lid="8ti8x" }에 의해 $\zeta\mapsto\zeta^a$로 주어지는 automorphism $\sigma_a$가 각각의 $a$마다 존재하며, [따름정리 5](#cor5){: data-lid="y87i6" }와 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="m4nh3" }에 의해 $1,\zeta,\zeta^2,\zeta^3$은 $\mathbb{Q}(\zeta_8)$의 $\mathbb{Q}$-basis이므로, $x=a+b\zeta+c\zeta^2+d\zeta^3$에 대하여 $\zeta^4=-1$을 사용하면
 
@@ -142,7 +142,7 @@ $$\sigma_5(x)=a-b\zeta+c\zeta^2-d\zeta^3,\qquad \sigma_7(x)=a-d\zeta-c\zeta^2-b\
 
 을 얻는다. 따라서 $\sigma_5(x)=x$인 것은 $b=d=0$인 것이고, $\sigma_7(x)=x$인 것은 $c=0$이고 $d=-b$인 것이며, $\sigma_3(x)=x$인 것은 $c=0$이고 $d=b$인 것이다. 위의 등식들을 사용하여 이를 다시 쓰면 세 subgroup $\langle\sigma_5\rangle$, $\langle\sigma_7\rangle$, $\langle\sigma_3\rangle$의 fixed field가 각각
 
-$$\mathbb{Q}+\mathbb{Q}\zeta^2=\mathbb{Q}(i),\qquad \mathbb{Q}+\mathbb{Q}(\zeta-\zeta^3)=\mathbb{Q}(\sqrt2),\qquad \mathbb{Q}+\mathbb{Q}(\zeta+\zeta^3)=\mathbb{Q}(\sqrt{-2})$$
+$$\mathbb{Q}+\mathbb{Q}\zeta^2=\mathbb{Q}(i),\qquad \mathbb{Q}+\mathbb{Q}(\zeta-\zeta^3)=\mathbb{Q}(\sqrt{2}),\qquad \mathbb{Q}+\mathbb{Q}(\zeta+\zeta^3)=\mathbb{Q}(\sqrt{-2})$$
 
 임을 안다. [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="9dgsm" }에 의하여 이들이 $\mathbb{Q}(\zeta_8)$의 자명하지 않은 subextension 전부이다.
 :::
@@ -154,28 +154,28 @@ $\mathbb{Q}(\zeta_n)$과 그 subextension들은 이렇게 $\mathbb{Q}$의 abelia
 $\Phi_n$이 정수 계수를 갖는다는 사실은 field 이론 바깥에서도 쓰인다. [\[환론\] §나눗셈환](/ko/math/ring_theory/division_rings){: data-lid="c6ia2" }에서 Wedderburn의 소정리를 증명할 때 $\Phi_n(q)$가 정수로서 $q^n-1$을 나눈다는 것이 결정적이었던 것이 그 예이다. 여기서는 같은 종류의 논법으로 Dirichlet 정리의 특수한 경우를 얻는다.
 
 ::: 보조정리 9
-자연수 $n\geq1$, 정수 $a$, 소수 $p$가 $p\mid\Phi_n(a)$와 $p\nmid n$을 만족한다 하자. 그럼 $\mathbb{F}_p^\times$에서 $\bar a$의 order는 $n$이며, 특히 $n\mid p-1$이다.
+자연수 $n\geq1$, 정수 $a$, 소수 $p$가 $p\mid\Phi_n(a)$와 $p\nmid n$을 만족한다 하자. 그럼 $\mathbb{F}_p^\times$에서 $\bar{a}$의 order는 $n$이며, 특히 $n\mid p-1$이다.
 :::
 ::: 증명
-[명제 2](#prop2){: data-lid="8bzfj" }의 등식은 $\mathbb{Z}[\x]$에서 성립하므로 $\mathbb{F}_p[\x]$로 보내도 성립한다. 특히 $\Phi_n$은 $\x^n-1$을 나누므로 $p\mid a^n-1$이고, 따라서 $\bar a\in\mathbb{F}_p^\times$이며 그 order $d$는 $n$을 나눈다.
+[명제 2](#prop2){: data-lid="8bzfj" }의 등식은 $\mathbb{Z}[\x]$에서 성립하므로 $\mathbb{F}_p[\x]$로 보내도 성립한다. 특히 $\Phi_n$은 $\x^n-1$을 나누므로 $p\mid a^n-1$이고, 따라서 $\bar{a}\in\mathbb{F}_p^\times$이며 그 order $d$는 $n$을 나눈다.
 
-$d<n$이라 가정하자. $\bar a^d=1$이므로 $\bar a$는 $\x^d-1$의 해이고, [명제 2](#prop2){: data-lid="6mdhf" }에 의해 어떤 $e\mid d$에 대하여 $\Phi_e(\bar a)=0$이다. 그런데 $e\mid d$이고 $d<n$이므로 $e\neq n$이며, 따라서 $\Phi_e$는 $\mathbb{F}_p[\x]$에서 $(\x^n-1)/\Phi_n$을 나눈다. 가정에서 $\Phi_n(\bar a)=0$이었으므로 $\bar a$는 $\Phi_n$과 $(\x^n-1)/\Phi_n$의 공통근이고, 그럼 $\bar a$는 $\x^n-1$의 중근이다. 이는 $p\nmid n$일 때 $\x^n-1$이 중근을 갖지 않는다는 [정리 4](#thm4){: data-lid="cuur6" }의 증명 속 관찰에 모순이므로 $d=n$이다.
+$d<n$이라 가정하자. $\bar{a}^d=1$이므로 $\bar{a}$는 $\x^d-1$의 해이고, [명제 2](#prop2){: data-lid="6mdhf" }에 의해 어떤 $e\mid d$에 대하여 $\Phi_e(\bar{a})=0$이다. 그런데 $e\mid d$이고 $d<n$이므로 $e\neq n$이며, 따라서 $\Phi_e$는 $\mathbb{F}_p[\x]$에서 $(\x^n-1)/\Phi_n$을 나눈다. 가정에서 $\Phi_n(\bar{a})=0$이었으므로 $\bar{a}$는 $\Phi_n$과 $(\x^n-1)/\Phi_n$의 공통근이고, 그럼 $\bar{a}$는 $\x^n-1$의 중근이다. 이는 $p\nmid n$일 때 $\x^n-1$이 중근을 갖지 않는다는 [정리 4](#thm4){: data-lid="cuur6" }의 증명 속 관찰에 모순이므로 $d=n$이다.
 
 마지막으로 $\mathbb{F}_p^\times$의 order가 $p-1$이므로 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="qu60u" }에 의하여 $n=d$는 $p-1$을 나눈다.
 :::
 
 ::: 정리 10
-임의의 자연수 $n\geq1$에 대하여, $p\equiv1\pmod n$인 소수 $p$는 무한히 많다.
+임의의 자연수 $n\geq1$에 대하여, $p\equiv1\pmod{n}$인 소수 $p$는 무한히 많다.
 :::
 ::: 증명
 먼저 $\Phi_1(0)=-1$이고 $n\geq2$이면 $\Phi_n(0)=1$임을 확인한다. [명제 2](#prop2){: data-lid="84zrk" }의 등식에 $\x=0$을 대입하면 $-1=\prod_{d\mid n}\Phi_d(0)$인데, $\Phi_1(0)=-1$이므로 $n\geq2$에 대하여 $n$의 $1$보다 큰 약수 $d$에 대한 $\Phi_d(0)$들의 곱이 $1$이다. $n$에 대한 강한 귀납법으로 $2\leq d<n$인 약수에 대해 $\Phi_d(0)=1$이라 하면 $\Phi_n(0)=1$을 얻는다.
 
-이제 $p\equiv1\pmod n$인 소수가 유한하다고 가정하고 이들을 $p_1,\ldots,p_r$이라 하자. $N=np_1\cdots p_r$로 두고 자연수 $t$에 대하여 $a=Nt$라 하자. $\Phi_n$이 monic이고 $\deg\Phi_n=\varphi(n)\geq1$이므로 $t$를 충분히 크게 잡으면 $\lvert\Phi_n(a)\rvert>1$이고, 그럼 소수 $p$가 존재하여 $p\mid\Phi_n(a)$이다.
+이제 $p\equiv1\pmod{n}$인 소수가 유한하다고 가정하고 이들을 $p_1,\ldots,p_r$이라 하자. $N=np_1\cdots p_r$로 두고 자연수 $t$에 대하여 $a=Nt$라 하자. $\Phi_n$이 monic이고 $\deg\Phi_n=\varphi(n)\geq1$이므로 $t$를 충분히 크게 잡으면 $\lvert\Phi_n(a)\rvert>1$이고, 그럼 소수 $p$가 존재하여 $p\mid\Phi_n(a)$이다.
 
-$\Phi_n\in\mathbb{Z}[\x]$이고 $N\mid a$이므로 $\Phi_n(a)\equiv\Phi_n(0)\pmod N$이며, 위에서 $\Phi_n(0)=\pm1$이므로 $\Phi_n(a)$와 $N$은 서로소이다. 특히 $p\nmid n$이고 $p$는 어떤 $p_i$와도 같지 않다. 그럼 [보조정리 9](#lem9){: data-lid="n2hg1" }에 의하여 $n\mid p-1$, 즉 $p\equiv1\pmod n$이므로 $p$가 $p_i$들 중 하나여야 하여 모순이다.
+$\Phi_n\in\mathbb{Z}[\x]$이고 $N\mid a$이므로 $\Phi_n(a)\equiv\Phi_n(0)\pmod{N}$이며, 위에서 $\Phi_n(0)=\pm1$이므로 $\Phi_n(a)$와 $N$은 서로소이다. 특히 $p\nmid n$이고 $p$는 어떤 $p_i$와도 같지 않다. 그럼 [보조정리 9](#lem9){: data-lid="n2hg1" }에 의하여 $n\mid p-1$, 즉 $p\equiv1\pmod{n}$이므로 $p$가 $p_i$들 중 하나여야 하여 모순이다.
 :::
 
-서로소인 $a,n$에 대하여 $p\equiv a\pmod n$인 소수가 무한히 많다는 Dirichlet의 정리는 해석적인 방법을 필요로 하며, 위의 논법은 $a=1$인 경우에만 작동한다. $\Phi_n$이 잡아내는 것이 order가 정확히 $n$인 원소이고, [보조정리 9](#lem9){: data-lid="mjo9k" }가 그로부터 곧바로 $n\mid p-1$을 주기 때문이다.
+서로소인 $a,n$에 대하여 $p\equiv a\pmod{n}$인 소수가 무한히 많다는 Dirichlet의 정리는 해석적인 방법을 필요로 하며, 위의 논법은 $a=1$인 경우에만 작동한다. $\Phi_n$이 잡아내는 것이 order가 정확히 $n$인 원소이고, [보조정리 9](#lem9){: data-lid="mjo9k" }가 그로부터 곧바로 $n\mid p-1$을 주기 때문이다.
 
 ---
 

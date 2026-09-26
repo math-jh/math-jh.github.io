@@ -181,13 +181,13 @@ For the second term, first, on a smooth projective curve $Y$, for a rank $r$ vec
 
 $$\rchi(Y,F)=\deg F+r(1-g(Y))$$
 
-Although our domain $C$ is not a smooth curve, we can transfer this calculation via the normalization $\nu:\widetilde C=\coprod_{j=1}^c\widetilde C_j\rightarrow C$. Let the genus of each $\widetilde C_j$ be $h_j$, the number of nodes be $d$, and the rank of $E$ be $r$. Tensoring the normalization exact sequence of the structure sheaf (immediately after [§Deformations of Nodal Curves, ⁋Definition 1](/en/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" }) with the locally free sheaf $E$, we obtain
+Although our domain $C$ is not a smooth curve, we can transfer this calculation via the normalization $\nu:\widetilde{C}=\coprod_{j=1}^c\widetilde{C}_j\rightarrow C$. Let the genus of each $\widetilde{C}_j$ be $h_j$, the number of nodes be $d$, and the rank of $E$ be $r$. Tensoring the normalization exact sequence of the structure sheaf (immediately after [§Deformations of Nodal Curves, ⁋Definition 1](/en/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" }) with the locally free sheaf $E$, we obtain
 
-$$0\rightarrow E\rightarrow\nu_\ast\nu^\ast E\rightarrow\bigoplus_{q\in\Sing C}E\otimes_{\mathcal O_C}\kappa(q)\rightarrow0$$
+$$0\rightarrow E\rightarrow\nu_\ast\nu^\ast E\rightarrow\bigoplus_{q\in\Sing C}E\otimes_{\mathcal{O}_C}\kappa(q)\rightarrow0$$
 
 Using this, we have
 
-$$\rchi(C,E)=\sum_{j=1}^c\rchi(\widetilde C_j,\nu^\ast E\vert_{\widetilde C_j})-rd=\sum_{j=1}^c\left(\deg(\nu^\ast E\vert_{\widetilde C_j})+r(1-h_j)\right)-rd=\deg E+r\left(c-\sum_{j=1}^c h_j-d\right)=\deg E+r(1-g)$$
+$$\rchi(C,E)=\sum_{j=1}^c\rchi(\widetilde{C}_j,\nu^\ast E\vert_{\widetilde{C}_j})-rd=\sum_{j=1}^c\left(\deg(\nu^\ast E\vert_{\widetilde{C}_j})+r(1-h_j)\right)-rd=\deg E+r\left(c-\sum_{j=1}^c h_j-d\right)=\deg E+r(1-g)$$
 
 and substituting $E=\mu^\ast T_X$ into this formula, since $\rank E=\dim X$ and $\mu_\ast[C]=\beta$, we obtain
 

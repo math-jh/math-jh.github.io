@@ -335,7 +335,7 @@ $$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\ma
 는 exact하다.
 :::
 ::: 증명
-문제가 local하고 quasi-compact 조건 덕분에 finite covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-module $M$을 택하면 pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15){: data-lid="o1q8g" }) 위 sequence는
+문제가 local하고 quasi-compact 조건 덕분에 finite covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde{M}$인 $A$-module $M$을 택하면 pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15){: data-lid="o1q8g" }) 위 sequence는
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
@@ -352,7 +352,7 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 Family $\{\psi_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\Phi_{ij}: \pr_2^\ast \mathcal{F}_j\cong \pr_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다.
 :::
 ::: 증명
-문제가 local하므로 $X=\Spec A$이고 covering이 단일한 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우만 보면 충분하다. 그럼 이 상황에서 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-module isomorphism $\Phi_N$의 cocycle 쌍, 즉 [정의 4](#def4){: data-lid="k73f1" }의 descent datum이다. 이 데이터는 $\Desc(B/A)$의 대상에 정확히 대응하므로 [정리 6](#thm6){: data-lid="1sigy" }에 의해 이는 유일한 $A$-module $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 이 correspondence는 morphism까지 보존한다.
+문제가 local하므로 $X=\Spec A$이고 covering이 단일한 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우만 보면 충분하다. 그럼 이 상황에서 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-module isomorphism $\Phi_N$의 cocycle 쌍, 즉 [정의 4](#def4){: data-lid="k73f1" }의 descent datum이다. 이 데이터는 $\Desc(B/A)$의 대상에 정확히 대응하므로 [정리 6](#thm6){: data-lid="1sigy" }에 의해 이는 유일한 $A$-module $M$, 즉 유일한 quasi-coherent sheaf $\widetilde{M}$으로부터 오며, 이 correspondence는 morphism까지 보존한다.
 
 일반적인 fpqc cover의 경우, quasi-compact 조건으로 finite subcover를 잡고 그 disjoint union을 단일한 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 gluing하면 된다. Gluing의 consistency는 [정리 10](#thm10){: data-lid="aem78" }의 sheaf 성질이 보장한다.
 :::

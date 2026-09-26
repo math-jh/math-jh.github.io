@@ -133,7 +133,7 @@ Now $B_t \subseteq Q_t \subseteq B_{\sqrt{2}t}$ and the integrand is positive, s
 
 $$\pi(1 - e^{-t^2}) \leq \left(\int_{-t}^{t} e^{-x^2} \dd{x}\right)^2 \leq \pi(1 - e^{-2t^2})$$
 
-and since both ends approach $\pi$ as $t \rightarrow \infty$, we obtain $I^2 = \pi$, i.e. $I = \sqrt\pi$.
+and since both ends approach $\pi$ as $t \rightarrow \infty$, we obtain $I^2 = \pi$, i.e. $I = \sqrt{\pi}$.
 :::
 
 The classical example in two dimensions is just polar coordinates, but in three dimensions there are two substitutions: spherical coordinates and cylindrical coordinates, and computing with them appropriately is helpful for evaluating many integrals.

@@ -64,29 +64,29 @@ $Q$의 Tits form $q$가 positive definite이라 하자. 그럼 $Q$의 임의의 
 ::: 증명
 귀류법으로 어떤 indecomposable $V$에 대하여 모든 $m\geq 0$에서 $(C^+)^m V\neq 0$이라 하자. 그럼 [§반사 함자, ⁋명제 10](/ko/math/representation_theory/reflection_functors#prop10){: data-lid="1dhpf" }에 의하여 각 $m$에서 $(C^+)^m V$는 다시 indecomposable이고, 그 차원벡터는
 
-$$d_m=\underline\dim\bigl((C^+)^m V\bigr)=c^m(\underline\dim V)$$
+$$d_m=\underline{\dim}\bigl((C^+)^m V\bigr)=c^m(\underline{\dim} V)$$
 
 로 주어진다. 여기서 $c=s_{k_n}\cdots s_{k_1}$은 admissible sink sequence가 정하는 Coxeter element이다. 각 $d_m$은 nonzero representation의 차원벡터이므로 음이 아닌 정수 좌표를 가지며, 특히 $d_m\neq 0$이다.
 
-이제 $q$가 positive definite임을 사용한다. Coxeter element $c$는 reflection들의 합성이므로 $q$를 보존하며 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="b2t2z" }), 따라서 모든 $m$에서 $q(d_m)=q(\underline\dim V)$로 일정하다. 한편 $q$가 positive definite이면 Coxeter element $c$는 유한위수(곧 어떤 $h\geq 1$에 대해 $c^h=\id$, 이 $h$가 Coxeter number이다)를 가지지만, $\mathbb{R}^n$ 위에서 $c$의 고윳값은 모두 $1$이 아닌 root of unity여서 $c$의 고정공간은 $\{0\}$이다. 곧 $c$는 어떤 nonzero 벡터도 고정하지 않는다. 핵심은 다음이다. $q$가 positive definite이면 $\{d\in\mathbb{Z}^n\mid q(d)=q(\underline\dim V)\}$은 유한집합인데 (positive definite lattice의 주어진 norm을 가지는 벡터는 유한개), 만일 모든 $d_m$이 음이 아닌 좌표를 가지면서 이 유한집합 안에 머문다면 비둘기집 원리로 $d_{m}=d_{m'}$인 $m<m'$이 존재하여 $c^{m'-m}$이 nonzero vector $d_m$을 고정하게 된다. 그러나 positive definite 공간 위의 Coxeter element는 nonzero 벡터를 고정하지 않으므로 ($c$의 고정공간은 $\{0\}$이다) 이는 모순이다. 따라서 어떤 $m$에서 $(C^+)^m V=0$이어야 하고, $V$는 preprojective이다.
+이제 $q$가 positive definite임을 사용한다. Coxeter element $c$는 reflection들의 합성이므로 $q$를 보존하며 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="b2t2z" }), 따라서 모든 $m$에서 $q(d_m)=q(\underline{\dim} V)$로 일정하다. 한편 $q$가 positive definite이면 Coxeter element $c$는 유한위수(곧 어떤 $h\geq 1$에 대해 $c^h=\id$, 이 $h$가 Coxeter number이다)를 가지지만, $\mathbb{R}^n$ 위에서 $c$의 고윳값은 모두 $1$이 아닌 root of unity여서 $c$의 고정공간은 $\{0\}$이다. 곧 $c$는 어떤 nonzero 벡터도 고정하지 않는다. 핵심은 다음이다. $q$가 positive definite이면 $\{d\in\mathbb{Z}^n\mid q(d)=q(\underline{\dim} V)\}$은 유한집합인데 (positive definite lattice의 주어진 norm을 가지는 벡터는 유한개), 만일 모든 $d_m$이 음이 아닌 좌표를 가지면서 이 유한집합 안에 머문다면 비둘기집 원리로 $d_{m}=d_{m'}$인 $m<m'$이 존재하여 $c^{m'-m}$이 nonzero vector $d_m$을 고정하게 된다. 그러나 positive definite 공간 위의 Coxeter element는 nonzero 벡터를 고정하지 않으므로 ($c$의 고정공간은 $\{0\}$이다) 이는 모순이다. 따라서 어떤 $m$에서 $(C^+)^m V=0$이어야 하고, $V$는 preprojective이다.
 :::
 
 명제 3은 ADE quiver의 representation 이론을 유한한 그림으로 가두는 결정적 단계이다. $q$가 positive definite이면 모든 indecomposable이 preprojective이므로, 모든 indecomposable은 어떤 indecomposable projective $P$로부터 $C^-$를 유한 번 적용하여 얻어진다 ([§반사 함자, ⁋정의 11](/ko/math/representation_theory/reflection_functors#def11){: data-lid="ionlz" } 직후의 논의). Indecomposable projective는 vertex의 개수 $n$만큼 있고, 각각의 $C^-$-orbit은 차원벡터 위에서 Coxeter element의 orbit으로 나타나므로, 이 모든 orbit을 합한 것이 indecomposable 전체이다. 다음 명제가 그 차원벡터들이 정확히 root임을 말한다.
 
 ::: 명제 4
-$Q$의 Tits form $q$가 positive definite이라 하자. 그럼 임의의 indecomposable representation $V$에 대하여 $q(\underline\dim V)=1$이다. 곧 $\underline\dim V$는 명제 2의 root system의 positive root이다.
+$Q$의 Tits form $q$가 positive definite이라 하자. 그럼 임의의 indecomposable representation $V$에 대하여 $q(\underline{\dim} V)=1$이다. 곧 $\underline{\dim} V$는 명제 2의 root system의 positive root이다.
 :::
 ::: 증명
-명제 3에 의하여 $V$는 preprojective이므로, 어떤 indecomposable projective $P$와 $j\geq 0$에 대하여 $V\cong (C^-)^j P$이고, 그 차원벡터는 reflection들의 합성을 projective의 차원벡터에 적용하여 얻어진다 ([§반사 함자, ⁋명제 10](/ko/math/representation_theory/reflection_functors#prop10){: data-lid="ms3wz" }). 먼저 indecomposable projective의 차원벡터가 $q$ 값 $1$을 가짐을 본다. Admissible sink sequence $(k_1,\ldots,k_n)$을 잡으면, 이 orientation에서 첫 vertex $k_1$에 대응하는 indecomposable projective는 simple $S_{k_1}$이며 그 차원벡터는 $e_{k_1}$로 $q(e_{k_1})=1$이다. 일반적으로 각 indecomposable projective $P_k$는 admissible sink sequence를 따라 simple로부터 reflection들로 도달되며, 그 차원벡터는 $e_k$에 일련의 simple reflection을 적용한 것이라 $q(\underline\dim P_k)=q(e_k)=1$이다. 실제로 simple reflection은 $q$를 보존하므로 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="zxvjf" }) standard basis vector에서 reflection으로 도달되는 모든 차원벡터는 $q$ 값 $1$을 가진다.
+명제 3에 의하여 $V$는 preprojective이므로, 어떤 indecomposable projective $P$와 $j\geq 0$에 대하여 $V\cong (C^-)^j P$이고, 그 차원벡터는 reflection들의 합성을 projective의 차원벡터에 적용하여 얻어진다 ([§반사 함자, ⁋명제 10](/ko/math/representation_theory/reflection_functors#prop10){: data-lid="ms3wz" }). 먼저 indecomposable projective의 차원벡터가 $q$ 값 $1$을 가짐을 본다. Admissible sink sequence $(k_1,\ldots,k_n)$을 잡으면, 이 orientation에서 첫 vertex $k_1$에 대응하는 indecomposable projective는 simple $S_{k_1}$이며 그 차원벡터는 $e_{k_1}$로 $q(e_{k_1})=1$이다. 일반적으로 각 indecomposable projective $P_k$는 admissible sink sequence를 따라 simple로부터 reflection들로 도달되며, 그 차원벡터는 $e_k$에 일련의 simple reflection을 적용한 것이라 $q(\underline{\dim} P_k)=q(e_k)=1$이다. 실제로 simple reflection은 $q$를 보존하므로 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="zxvjf" }) standard basis vector에서 reflection으로 도달되는 모든 차원벡터는 $q$ 값 $1$을 가진다.
 
 이제 $V\cong(C^-)^j P$이므로
 
-$$q(\underline\dim V)=q\bigl(c^{-j}(\underline\dim P)\bigr)=q(\underline\dim P)=1$$
+$$q(\underline{\dim} V)=q\bigl(c^{-j}(\underline{\dim} P)\bigr)=q(\underline{\dim} P)=1$$
 
-이다. 둘째 등호는 Coxeter element $c$ (따라서 그 역 $c^{-j}$) 가 $q$를 보존하기 때문이다 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="yj1of" }). 따라서 $q(\underline\dim V)=1$이다. $V$가 nonzero representation이므로 $\underline\dim V$는 음이 아닌 좌표를 가지며 $0$이 아니므로, 명제 2에 의하여 $\underline\dim V$는 root이고, 좌표가 음이 아니므로 positive root이다.
+이다. 둘째 등호는 Coxeter element $c$ (따라서 그 역 $c^{-j}$) 가 $q$를 보존하기 때문이다 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12){: data-lid="yj1of" }). 따라서 $q(\underline{\dim} V)=1$이다. $V$가 nonzero representation이므로 $\underline{\dim} V$는 음이 아닌 좌표를 가지며 $0$이 아니므로, 명제 2에 의하여 $\underline{\dim} V$는 root이고, 좌표가 음이 아니므로 positive root이다.
 :::
 
-명제 4는 대응 $V\mapsto\underline\dim V$가 indecomposable의 isomorphism class에서 positive root로 가는 잘 정의된 morphism임을 준다. 남은 것은 이 morphism이 전단사임을 보이는 것이다. 단사성, 곧 같은 차원벡터를 가지는 indecomposable이 isomorphism을 무시하여 유일하다는 사실과, 전사성, 곧 모든 positive root가 어떤 indecomposable의 차원벡터로 실현된다는 사실을 reflection functor로 추적하면 Gabriel 정리가 완성된다.
+명제 4는 대응 $V\mapsto\underline{\dim} V$가 indecomposable의 isomorphism class에서 positive root로 가는 잘 정의된 morphism임을 준다. 남은 것은 이 morphism이 전단사임을 보이는 것이다. 단사성, 곧 같은 차원벡터를 가지는 indecomposable이 isomorphism을 무시하여 유일하다는 사실과, 전사성, 곧 모든 positive root가 어떤 indecomposable의 차원벡터로 실현된다는 사실을 reflection functor로 추적하면 Gabriel 정리가 완성된다.
 
 ## Gabriel 정리
 
@@ -95,16 +95,16 @@ $$q(\underline\dim V)=q\bigl(c^{-j}(\underline\dim P)\bigr)=q(\underline\dim P)=
 ::: 정리 5
 (Gabriel) $Q$를 oriented cycle이 없는 connected quiver라 하자. $Q$가 *representation-finite<sub>유한표현형</sub>*, 곧 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
 
-$$V\longmapsto\underline\dim V$$
+$$V\longmapsto\underline{\dim} V$$
 
 는 indecomposable representation의 isomorphism class들과 Tits form $q$의 positive root들 사이의 전단사를 이루며, 특히 indecomposable의 개수는 positive root의 개수와 같다.
 :::
 ::: 증명
-먼저 $Q$의 underlying graph가 ADE Dynkin diagram인 경우, 곧 $q$가 positive definite인 경우를 본다 ([명제 2](#prop2){: data-lid="l1ujg" }). 명제 4에 의하여 $V\mapsto\underline\dim V$는 indecomposable의 isomorphism class에서 positive root로 가는 morphism이다. 이 morphism이 전단사임을 reflection functor로 보인다.
+먼저 $Q$의 underlying graph가 ADE Dynkin diagram인 경우, 곧 $q$가 positive definite인 경우를 본다 ([명제 2](#prop2){: data-lid="l1ujg" }). 명제 4에 의하여 $V\mapsto\underline{\dim} V$는 indecomposable의 isomorphism class에서 positive root로 가는 morphism이다. 이 morphism이 전단사임을 reflection functor로 보인다.
 
 *단사성.* 차원벡터가 같은 두 indecomposable $V,V'$이 isomorphic함을 보인다. Admissible sink sequence를 따라 Coxeter functor $C^+$를 거듭 적용하면, 명제 3에 의하여 유한 번 만에 둘 다 $0$이 된다. 매 단계에서 $C^+$의 한 조각인 sink reflection $S_k^+$는 차원벡터 위에서 $s_k$로 작용하고 ([§반사 함자, ⁋명제 7](/ko/math/representation_theory/reflection_functors#prop7){: data-lid="ixhjr" }) indecomposability를 보존하므로 ([§반사 함자, ⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8){: data-lid="nb05l" }), 두 representation은 같은 단계에서 같은 vertex의 simple $S_k$에 도달하여 소멸한다. 곧 어떤 합성 $T=S_{k_r}^+\cdots S_{k_1}^+$에 대하여 $TV\cong S_k\cong TV'$이 되는 단계가 처음으로 나타나며, 이 simple에 도달하기까지의 모든 $S_{k_i}^+$는 $S_{k_i}$ 이외의 indecomposable 위에서 quasi-inverse $S_{k_i}^-$를 가진다 ([§반사 함자, ⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8){: data-lid="m930v" }). 따라서 이 quasi-inverse들을 역순으로 적용하여 $S_k$로부터 $V$와 $V'$를 모두 유일하게 복원하면 $V\cong V'$이다.
 
-*전사성.* 임의의 positive root $d$에 대하여 $\underline\dim V=d$인 indecomposable $V$가 존재함을 보인다. Root $d$는 simple reflection들의 합성으로 어떤 simple root $e_k$까지 환원된다 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-lid="vy2uu" }). 곧 simple reflection의 열 $s_{k_1},\ldots,s_{k_r}$이 있어 $s_{k_r}\cdots s_{k_1}(d)=e_k$이며, 이 환원의 매 단계가 차원벡터를 음이 아닌 좌표로 유지하도록 잡을 수 있다. 각 단계의 simple reflection을 그에 대응하는 reflection functor로 들어 올린다. Simple root $e_k$는 simple representation $S_k$의 차원벡터이고, $S_k$는 indecomposable이므로, $S_k$에 위 reflection들의 quasi-inverse를 역순으로 적용하면 ([§반사 함자, ⁋명제 7](/ko/math/representation_theory/reflection_functors#prop7){: data-lid="oios4" }, [⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8){: data-lid="z9z2c" }) 차원벡터가 $d$인 indecomposable $V$를 얻는다. 매 단계에서 차원벡터가 음이 아닌 좌표를 유지하므로 reflection functor가 nonzero indecomposable을 주며, 따라서 환원 전체가 잘 들어 올려진다. 이로써 $V\mapsto\underline\dim V$는 전사이다.
+*전사성.* 임의의 positive root $d$에 대하여 $\underline{\dim} V=d$인 indecomposable $V$가 존재함을 보인다. Root $d$는 simple reflection들의 합성으로 어떤 simple root $e_k$까지 환원된다 ([\[리 이론\] §근계](/ko/math/lie_theory/root_systems){: data-lid="vy2uu" }). 곧 simple reflection의 열 $s_{k_1},\ldots,s_{k_r}$이 있어 $s_{k_r}\cdots s_{k_1}(d)=e_k$이며, 이 환원의 매 단계가 차원벡터를 음이 아닌 좌표로 유지하도록 잡을 수 있다. 각 단계의 simple reflection을 그에 대응하는 reflection functor로 들어 올린다. Simple root $e_k$는 simple representation $S_k$의 차원벡터이고, $S_k$는 indecomposable이므로, $S_k$에 위 reflection들의 quasi-inverse를 역순으로 적용하면 ([§반사 함자, ⁋명제 7](/ko/math/representation_theory/reflection_functors#prop7){: data-lid="oios4" }, [⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8){: data-lid="z9z2c" }) 차원벡터가 $d$인 indecomposable $V$를 얻는다. 매 단계에서 차원벡터가 음이 아닌 좌표를 유지하므로 reflection functor가 nonzero indecomposable을 주며, 따라서 환원 전체가 잘 들어 올려진다. 이로써 $V\mapsto\underline{\dim} V$는 전사이다.
 
 전단사가 확립되었으므로 indecomposable의 개수는 positive root의 개수와 같고, root system이 유한하므로 ([\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9){: data-lid="gcvtg" }) 유한이다. 따라서 ADE인 경우 $Q$는 representation-finite이다.
 
@@ -136,7 +136,7 @@ $$M_{[1,1]}=(1,0,0),\quad M_{[2,2]}=(0,1,0),\quad M_{[3,3]}=(0,0,1),$$
 
 $$M_{[1,2]}=(1,1,0),\quad M_{[2,3]}=(0,1,1),\quad M_{[1,3]}=(1,1,1)$$
 
-임을 보았다. 곧 각 $1\leq i\leq j\leq 3$에 대하여 vertex $i,\ldots,j$에 $k$를 얹고 그 사이 arrow에 $\id_k$를 둔 interval representation $M_{[i,j]}$이 유일한 indecomposable이며, 그 차원벡터는 위에서 구한 여섯 개의 positive root와 일대일로 대응한다. 이로써 정리 5의 전단사 $V\mapsto\underline\dim V$가 $A_3$에서 구체적으로 확인된다.
+임을 보았다. 곧 각 $1\leq i\leq j\leq 3$에 대하여 vertex $i,\ldots,j$에 $k$를 얹고 그 사이 arrow에 $\id_k$를 둔 interval representation $M_{[i,j]}$이 유일한 indecomposable이며, 그 차원벡터는 위에서 구한 여섯 개의 positive root와 일대일로 대응한다. 이로써 정리 5의 전단사 $V\mapsto\underline{\dim} V$가 $A_3$에서 구체적으로 확인된다.
 :::
 
 예시 6에서 차원벡터가 같은 indecomposable이 유일하다는 정리 5의 단사성은 interval representation $M_{[i,j]}$이 각 positive root마다 정확히 하나씩 있다는 사실로 나타나고, 전사성은 여섯 positive root가 모두 어떤 $M_{[i,j]}$로 실현된다는 사실로 나타난다. 또한 [§Auslander–Reiten 이론, ⁋예시 9](/ko/math/representation_theory/auslander_reiten#ex9){: data-lid="6mt5w" }에서 본 AR translate $\tau$의 action은 차원벡터 위에서 Coxeter element $c$의 action에 대응한다. 가령 $\tau M_{[1,1]}=M_{[2,2]}$은 차원벡터 $(1,0,0)$이 $(0,1,0)$으로 옮겨지는 것으로, 이것이 명제 3에서 본 Coxeter functor에 의한 preprojective orbit의 한 걸음이다. 이렇게 $A_3$의 작은 그림 안에서 Tits form, root system, reflection functor, AR 이론이 하나의 정합적인 구조로 묶인다.

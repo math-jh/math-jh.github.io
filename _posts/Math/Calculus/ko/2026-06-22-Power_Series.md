@@ -61,13 +61,13 @@ $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
 이에 대한 증명은 다음과 같다. 해당 극한의 극한값을 $L = \lim(1+1/n)^n$, 급수의 부분합을 $s_m = \sum 1/k!$이라 두면, 위의 [§수열의 극한, ⁋예시 8](/ko/math/calculus/sequences#ex8){: data-lid="2rcxn" }에서 이미 이항정리로
 
-$$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
+$$\left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 임을 보였고, 또 이 수열이 증가하여 그 극한 $L$이 항들의 상한임을 보였다.
 
 먼저 각 곱의 인수 $1 - j/n$이 $1$ 이하이므로 위 합은 $\sum_{k=0}^n 1/k! = s_n$ 이하이고, 부분합은 다시 그 극한 $s = \sum_{n=0}^\infty 1/n!$ 이하이므로, 모든 $n$에서 $(1 + 1/n)^n \leq s$이다. $L$이 항들의 상한이고 $s$가 그 상계이므로 $L \leq s$를 얻는다. 반대로 $m$을 고정하고 $n \geq m$인 $n$만 보면, 위 합에서 음이 아닌 뒤쪽 항들을 버려
 
-$$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
+$$\left(1 + \frac{1}{n}\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 을 얻는다. 좌변은 $L$ 이하이므로 우변 또한 $L$ 이하이고, $m$을 고정한 채 $n \rightarrow \infty$를 보내면 우변은 유한합이고 각 인수가 $1 - j/n \rightarrow 1$이므로 [§수열의 극한, ⁋명제 2](/ko/math/calculus/sequences#prop2){: data-lid="7fjeq" }에 의해 $s_m$으로 수렴한다. 수렴하는 수열의 모든 항이 $L$ 이하이면 그 극한도 $L$ 이하이므로 $s_m \leq L$이고, 다시 $m \rightarrow \infty$를 보내면 $s \leq L$이다. 두 부등식을 합쳐 $L = s$, 즉 두 글에서 정의한 $e$는 같은 수이다.
 :::

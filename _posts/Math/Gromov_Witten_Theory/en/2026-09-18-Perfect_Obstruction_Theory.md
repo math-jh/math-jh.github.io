@@ -104,7 +104,7 @@ is always preserved as the virtual dimension $\vdim$. That is, however poorly th
 
 Now it is clear how the above discussion should be applied. That is, a general stack $M$ has a cotangent complex $\LL_M$, and we only need to consider the truncation $\tau_{\geq -1}\LL_M$ where deformations and obstructions are captured. ([\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Obstructions to Deformation and Higher-Order Deformation Theory](/en/math/scheme_theory/deformation_theory#obstructions-to-deformation-and-higher-order-deformation-theory){: data-lid="0fpnl" }) Now, if étale-locally $M$ is represented as a closed subscheme of a smooth variety $X$ with ideal sheaf $\mathcal{I}$, this truncation takes the form
 
-$$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd\ }\at{0}{\Omega_X\vert_M}\Bigr]$$
+$$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{\ }}\at{0}{\Omega_X\vert_M}\Bigr]$$
 
 . The problem is that on a general $M$, the sheaf $\mathcal{I}/\mathcal{I}^2$ is not a vector bundle, so we cannot define a zero section or a Gysin map from $\tau_{\geq-1}\LL_M$ alone. For this reason, we must consider a two-term complex of actual vector bundles that can encode all this information, and this is precisely the following definition.
 

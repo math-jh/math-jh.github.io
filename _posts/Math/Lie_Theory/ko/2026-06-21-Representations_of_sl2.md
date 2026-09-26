@@ -152,7 +152,7 @@ $$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\frac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+\
 $0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 trivial representation이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
 :::
 ::: 증명
-$\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde U\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
+$\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde{U}/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde{U}\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde{U}$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
 따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 trivial representation이면 $V$는 $2$차원이고, $W$와 $V/W\cong\mathbb{C}$가 모두 trivial이므로 $\sl_2$의 각 원소는 $V$를 $W$ 안으로, $W$를 $0$으로 보낸다. 곧 $W$의 $0$이 아닌 벡터를 첫 기저벡터로 삼으면 $h,e,f$의 작용이 모두 strictly upper-triangular $2\times 2$ 행렬로 표시되는데, 이러한 행렬들은 서로 commute하므로 $h=[e,f]$의 작용이 $0$이고, 이어서 $2e=[h,e]$와 $-2f=[h,f]$의 작용도 $0$이다. 곧 $\sl_2$가 $V$ 위에서 $0$으로 작용하므로 $W$의 임의의 여공간이 subrepresentation이 되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 trivial representation $\mathbb{C}=V(0)$ 위에서 $0$으로, $W=V(n)$ 위에서 $n(n+2)/2\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
@@ -194,7 +194,7 @@ $V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$�
 
 이제 $m\geq n$이라 두어도 일반성을 잃지 않는다. 가능한 weight들은 $m+n$부터 $-(m+n)$까지 $2$씩 줄어드는 값들이며, multiplicity $d_\lambda$는 $\lambda=m+n$에서 $1$로 시작하여 $\lambda$가 $2$씩 줄어들 때마다 $1$씩 늘다가, $\lambda=m-n$에서 최댓값 $n+1$에 이른 뒤 $\lvert\lambda\rvert\leq m-n$인 구간에서 $n+1$로 일정하고, 다시 $\lambda<-(m-n)$에서 $1$씩 줄어 $\lambda=-(m+n)$에서 $1$이 된다. 곧 $d_\lambda$는 $\lambda$에 대해 우함수이며 정점이 평평한 사다리꼴 모양이다.
 
-한편 분해 $\bigoplus_r V(r)^{\oplus c_r}$에서 $V(r)$은 weight $r,r-2,\dots,-r$에 각각 $1$씩 기여하므로, weight $\lambda$의 총 multiplicity는 $d_\lambda=\sum_{r\geq\lvert\lambda\rvert,r\equiv\lambda\pmod 2}c_r$이다. 이로부터 $c_r=d_r-d_{r+2}$를 얻는다. 위에서 구한 $d_\lambda$를 대입하면, $r$이 $m+n,m+n-2,\dots,m-n$ 중 하나일 때 $d_r-d_{r+2}=1$이고 그 밖의 $r$에 대해서는 $0$이다. 따라서
+한편 분해 $\bigoplus_r V(r)^{\oplus c_r}$에서 $V(r)$은 weight $r,r-2,\dots,-r$에 각각 $1$씩 기여하므로, weight $\lambda$의 총 multiplicity는 $d_\lambda=\sum_{r\geq\lvert\lambda\rvert,r\equiv\lambda\pmod{2}}c_r$이다. 이로부터 $c_r=d_r-d_{r+2}$를 얻는다. 위에서 구한 $d_\lambda$를 대입하면, $r$이 $m+n,m+n-2,\dots,m-n$ 중 하나일 때 $d_r-d_{r+2}=1$이고 그 밖의 $r$에 대해서는 $0$이다. 따라서
 
 $$V(m)\otimes V(n)\cong\bigoplus_{r\in\{m-n,m-n+2,\dots,m+n\}}V(r)=\bigoplus_{k=0}^{n}V(m+n-2k)$$
 

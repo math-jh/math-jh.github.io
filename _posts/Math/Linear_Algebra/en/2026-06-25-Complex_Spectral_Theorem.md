@@ -86,7 +86,7 @@ The unitary diagonalization of a normal matrix is a direct consequence of [Theor
 A linear operator $L:V\rightarrow V$ on a complex inner product space $V$ is a normal operator if and only if there exists an orthonormal basis of $V$ consisting of eigenvectors of $L$.
 :::
 ::: Proof
-If $L$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4){: data-lid="sibgn" }, so the key is the converse. Suppose there exists an orthonormal basis $\{v_1,\ldots,v_n\}$ of $V$ consisting of eigenvectors of $L$ with $Lv_i=\lambda_i v_i$. Then by [§Complex Inner Product Spaces, ⁋Proposition 5](/en/math/linear_algebra/complex_inner_product_spaces#prop5){: data-lid="8mdl2" }, the matrix representation of $L^\ast$ with respect to this basis is $\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$. Now two diagonal matrices commute, so $LL^\ast=L^\ast L$, and hence $L$ is normal.
+If $L$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4){: data-lid="sibgn" }, so the key is the converse. Suppose there exists an orthonormal basis $\{v_1,\ldots,v_n\}$ of $V$ consisting of eigenvectors of $L$ with $Lv_i=\lambda_i v_i$. Then by [§Complex Inner Product Spaces, ⁋Proposition 5](/en/math/linear_algebra/complex_inner_product_spaces#prop5){: data-lid="8mdl2" }, the matrix representation of $L^\ast$ with respect to this basis is $\diag(\bar{\lambda}_1,\ldots,\bar{\lambda}_n)$. Now two diagonal matrices commute, so $LL^\ast=L^\ast L$, and hence $L$ is normal.
 :::
 
 In the language of matrices, this theorem says (as we saw in the proof) that a normal matrix admits a unitary diagonalization.
@@ -113,18 +113,18 @@ $$\langle v,Lv\rangle=\langle v,\lambda v\rangle=\lambda\lVert v\rVert^2.$$
 
 On the other hand, using conjugate-linearity in the first variable,
 
-$$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar\lambda\lVert v\rVert^2$$
+$$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar{\lambda}\lVert v\rVert^2$$
 
-so comparing the two expressions, $\lambda\lVert v\rVert^2=\bar\lambda\lVert v\rVert^2$ and since $\lVert v\rVert^2>0$ we get $\lambda=\bar\lambda$, i.e., $\lambda$ is real.
+so comparing the two expressions, $\lambda\lVert v\rVert^2=\bar{\lambda}\lVert v\rVert^2$ and since $\lVert v\rVert^2>0$ we get $\lambda=\bar{\lambda}$, i.e., $\lambda$ is real.
 
 To see the second result, let $L$ be unitary with $Lv=\lambda v$, $v\neq 0$. A unitary operator preserves the inner product, so
 
-$$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\lambda\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
+$$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar{\lambda}\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
 
 and since $\lVert v\rVert^2>0$ we get $\lvert\lambda\rvert^2=1$, i.e., $\lvert\lambda\rvert=1$.
 :::
 
-The complex spectral theorem includes the real version ([§Spectral Theorem, ⁋Theorem 5](/en/math/linear_algebra/spectral_theorem#thm5){: data-lid="x8ljq" }) as a special case. That is, a real symmetric matrix $A$ has real entries, so regarded as a complex matrix we have $A^\ast=\bar A^t=A^t=A$, making it self-adjoint over the complex numbers as well, and hence by [Proposition 7](#prop7){: data-lid="71nsi" } all its eigenvalues are real.
+The complex spectral theorem includes the real version ([§Spectral Theorem, ⁋Theorem 5](/en/math/linear_algebra/spectral_theorem#thm5){: data-lid="x8ljq" }) as a special case. That is, a real symmetric matrix $A$ has real entries, so regarded as a complex matrix we have $A^\ast=\bar{A}^t=A^t=A$, making it self-adjoint over the complex numbers as well, and hence by [Proposition 7](#prop7){: data-lid="71nsi" } all its eigenvalues are real.
 
 ---
 

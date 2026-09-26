@@ -25,15 +25,15 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 이 존재하여 $p(u)=0$을 만족한다.
 :::
 ::: 증명
-가정 $u(M)\subseteq \mathfrak{a}M$과 $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$로부터, 각각의 $i$에 대하여 $u(e_i)=\sum_j a_{ij}e_j$이도록 하는 $a_{ij}\in \mathfrak{a}$를 고를 수 있다. 이제 $A^n$의 standard basis를 $\epsilon_1,\ldots,\epsilon_n$이라 하고, $\epsilon_i\mapsto e_i$로 주어지는 surjection $\pi: A^n \rightarrow M$과 $\tilde u(\epsilon_i)=\sum_j a_{ij}\epsilon_j$로 주어지는 $\tilde u\in \End_\rMod{A}(A^n)$을 생각하면 $\pi\circ \tilde u=u\circ \pi$가 성립한다.
+가정 $u(M)\subseteq \mathfrak{a}M$과 $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$로부터, 각각의 $i$에 대하여 $u(e_i)=\sum_j a_{ij}e_j$이도록 하는 $a_{ij}\in \mathfrak{a}$를 고를 수 있다. 이제 $A^n$의 standard basis를 $\epsilon_1,\ldots,\epsilon_n$이라 하고, $\epsilon_i\mapsto e_i$로 주어지는 surjection $\pi: A^n \rightarrow M$과 $\tilde{u}(\epsilon_i)=\sum_j a_{ij}\epsilon_j$로 주어지는 $\tilde{u}\in \End_\rMod{A}(A^n)$을 생각하면 $\pi\circ \tilde{u}=u\circ \pi$가 성립한다.
 
-한편 $A^n$은 free module이므로 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9){: data-lid="g9pl4" }를 $\tilde u$에 적용할 수 있고, 따라서 $\tilde u$의 characteristic polynomial $p=\chi_{\tilde u}$는 $p(\tilde u)=0$을 만족하는 $n$차 monic polynomial이다. 그럼 위의 교환관계로부터 $p(u)\circ \pi=\pi\circ p(\tilde u)=0$이고, $\pi$가 surjective이므로 $p(u)=0$을 얻는다.
+한편 $A^n$은 free module이므로 [\[다중선형대수학\] §행렬식, ⁋명제 9](/ko/math/multilinear_algebra/determinants#prop9){: data-lid="g9pl4" }를 $\tilde{u}$에 적용할 수 있고, 따라서 $\tilde{u}$의 characteristic polynomial $p=\chi_{\tilde{u}}$는 $p(\tilde{u})=0$을 만족하는 $n$차 monic polynomial이다. 그럼 위의 교환관계로부터 $p(u)\circ \pi=\pi\circ p(\tilde{u})=0$이고, $\pi$가 surjective이므로 $p(u)=0$을 얻는다.
 
 남은 것은 $p$의 계수들에 대한 조건인데, 이는 characteristic polynomial의 계수들이 다음의 식
 
-$$p(\x)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\tilde u)\right)\x^{n-k}$$
+$$p(\x)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\tilde{u})\right)\x^{n-k}$$
 
-으로 주어지는 것에서 나온다. $\tilde u$의 행렬표현의 성분들이 모두 $a_{ij}$들이므로, ${\bigwedge}^k(\tilde u)$의 행렬표현의 대각성분들은 이 행렬의 $k\times k$ minor들이고, 이들은 각각 $\mathfrak{a}$의 원소 $k$개의 곱들의 합이다. 즉 $p_k=(-1)^k\tr({\bigwedge}^k(\tilde u))\in \mathfrak{a}^k$이다.
+으로 주어지는 것에서 나온다. $\tilde{u}$의 행렬표현의 성분들이 모두 $a_{ij}$들이므로, ${\bigwedge}^k(\tilde{u})$의 행렬표현의 대각성분들은 이 행렬의 $k\times k$ minor들이고, 이들은 각각 $\mathfrak{a}$의 원소 $k$개의 곱들의 합이다. 즉 $p_k=(-1)^k\tr({\bigwedge}^k(\tilde{u}))\in \mathfrak{a}^k$이다.
 :::
 
 그럼 다음이 성립한다.

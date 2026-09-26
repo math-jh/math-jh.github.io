@@ -161,7 +161,7 @@ $$\psi(z) = \frac{r}{2(\varphi(z) + w_0)}$$
 
 을 보면, 분모의 절댓값이 $r$ 이상이므로 $\lvert \psi(z)\rvert \leq r/(2r) = 1/2 < 1$이라 $\psi : \Omega \rightarrow \mathbb{D}$이다. 또 $\psi$은 단사인 $\varphi$에 [§등각사상과 Möbius 변환, ⁋정의 4](/ko/math/complex_analysis/conformal_maps#def4){: data-lid="2jrwa" }의 Möbius 변환을 합성한 것이라 단사이고 holomorphic이다.
 
-끝으로 $z_0$을 원점으로 옮기도록 보정한다. $b = \psi(z_0) \in \mathbb{D}$이라 두고, [§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11){: data-lid="udwq5" }의 단위원판 automorphism $\varphi_b(w) = (w - b)/(1 - \bar b w)$을 합성하여
+끝으로 $z_0$을 원점으로 옮기도록 보정한다. $b = \psi(z_0) \in \mathbb{D}$이라 두고, [§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11){: data-lid="udwq5" }의 단위원판 automorphism $\varphi_b(w) = (w - b)/(1 - \bar{b} w)$을 합성하여
 
 $$f = \varphi_b \circ \psi : \Omega \rightarrow \mathbb{D}$$
 
@@ -193,9 +193,9 @@ $$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert 
 
 $f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic morphism이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8){: data-lid="kddxu" }) 그 image가 열려 있어 boundary $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 supremum이 달성된다.
 
-이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 image에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. [§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11){: data-lid="i2dg0" }의 단위원판 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar\alpha w)$을 합성한 함수
+이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 image에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. [§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11){: data-lid="i2dg0" }의 단위원판 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar{\alpha} w)$을 합성한 함수
 
-$$F(z) = \varphi_\alpha(f^\ast(z)) = \frac{f^\ast(z) - \alpha}{1 - \bar\alpha f^\ast(z)}$$
+$$F(z) = \varphi_\alpha(f^\ast(z)) = \frac{f^\ast(z) - \alpha}{1 - \bar{\alpha} f^\ast(z)}$$
 
 을 본다. $F : \Omega \rightarrow \mathbb{D}$은 holomorphic 단사이고, $f^\ast$이 $\alpha$을 취하지 않으므로 $F$은 $\Omega$에서 영점을 갖지 않는다. $\Omega$이 단순연결이고 $F$가 영점을 갖지 않으므로, 단순연결 영역 위 영점 없는 holomorphic function이 holomorphic 제곱근을 가진다는 사실에 의해 영점 없는 $F$의 holomorphic 제곱근
 
@@ -205,7 +205,7 @@ $$G(z), \qquad G(z)^2 = F(z)$$
 
 이제 $z_0$을 원점으로 옮기도록 보정한다. $\beta = G(z_0) \in \mathbb{D}$이라 두고 $h = \varphi_\beta \circ G$, 곧
 
-$$h(z) = \frac{G(z) - \beta}{1 - \bar\beta G(z)}$$
+$$h(z) = \frac{G(z) - \beta}{1 - \bar{\beta} G(z)}$$
 
 을 정의하면 $h \in \mathcal{F}$이다 ($h$은 holomorphic 단사이고 $\mathbb{D}$로 가며 $h(z_0) = 0$). $h$의 도함수를 $z_0$에서 계산하기 위해 $f^\ast$을 $h$으로 되돌리는 사상을 구성한다. 제곱사상 $s(w) = w^2$과 위에서 쓴 automorphism들로
 

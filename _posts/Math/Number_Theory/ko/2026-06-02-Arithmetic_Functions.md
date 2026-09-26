@@ -88,7 +88,7 @@ $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1}
 
 이므로, $n = \prod_i p_i^{e_i}$에 대해
 
-$$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac1p\Bigr)$$
+$$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac{1}{p}\Bigr)$$
 
 이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi function](/ko/math/number_theory/euler_theorem){: data-lid="61x2r" }에서 직접 센 결과가 재생산되는 것이다.
 
@@ -150,7 +150,7 @@ $n = 360 = 2^3 \cdot 3^2 \cdot 5$에 대해 곱셈성을 이용하면
 $$\begin{aligned}
 \tau(360) &= (3+1)(2+1)(1+1) = 4\cdot 3\cdot 2 = 24, \\
 \sigma(360) &= \frac{2^4 - 1}{2-1}\cdot\frac{3^3 - 1}{3-1}\cdot\frac{5^2 - 1}{5-1} = 15\cdot 13\cdot 6 = 1170, \\
-\varphi(360) &= 360\Bigl(1 - \frac12\Bigr)\Bigl(1 - \frac13\Bigr)\Bigl(1 - \frac15\Bigr) = 360\cdot\frac12\cdot\frac23\cdot\frac45 = 96
+\varphi(360) &= 360\Bigl(1 - \frac{1}{2}\Bigr)\Bigl(1 - \frac{1}{3}\Bigr)\Bigl(1 - \frac{1}{5}\Bigr) = 360\cdot\frac{1}{2}\cdot\frac{2}{3}\cdot\frac{4}{5} = 96
 \end{aligned}$$
 
 이다. $360$이 어떤 소수의 제곱으로 나누어떨어지므로 $\mu(360) = 0$이고, 약수에 걸친 합 $\sum_{d \mid 360}\varphi(d) = 360$ ([예시 7](#ex7){: data-lid="vq71k" }) 역시 곱셈성으로 인수마다 $\sum_{j}\varphi(p^j) = p^e$임을 확인하면 즉시 따라온다.

@@ -170,7 +170,7 @@ $$[x\star y]=[x]\mathbin{\tiny\char"2606}[y]=[x'\star y]$$
 
 must hold. This equation can be rewritten as
 
-$$x'\star y\equiv x\star y\pmod R$$
+$$x'\star y\equiv x\star y\pmod{R}$$
 
 and according to the preceding definition, this means precisely that $R$ must be *right* compatible with the operation. By the same logic, since even under the choice of representative of $[y]$ the value of the operation $\mathbin{\tiny\char"2606}$ must not change, $R$ must be *left* compatible with the operation.
 

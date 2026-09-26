@@ -162,7 +162,7 @@ $$L(\lambda)=M(\lambda)/M^{\mathrm{rad}}(\lambda)$$
 을 highest weight $\lambda$의 *irreducible highest weight module<sub>기약 최고무게 가군</sub>*이라 부른다.
 :::
 
-$L(\lambda)$는 유일한 maximal submodule에 대한 quotient이므로 $0$이 아닌 proper submodule을 갖지 않아 irreducible이며, $v_\lambda^+$의 상 $\bar v_\lambda$가 highest weight $\lambda$의 highest weight vector로서 $L(\lambda)$를 생성한다. 다음 명제는 $L(\lambda)$가 highest weight $\lambda$를 갖는 유일한 irreducible module임을 보여, weight $\lambda$가 irreducible module을 동형을 무시하고 완전히 결정함을 확립한다.
+$L(\lambda)$는 유일한 maximal submodule에 대한 quotient이므로 $0$이 아닌 proper submodule을 갖지 않아 irreducible이며, $v_\lambda^+$의 상 $\bar{v}_\lambda$가 highest weight $\lambda$의 highest weight vector로서 $L(\lambda)$를 생성한다. 다음 명제는 $L(\lambda)$가 highest weight $\lambda$를 갖는 유일한 irreducible module임을 보여, weight $\lambda$가 irreducible module을 동형을 무시하고 완전히 결정함을 확립한다.
 
 ::: 명제 10
 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 highest weight $\lambda$를 갖는 irreducible module이다. 역으로 $V$가 highest weight vector로 생성되는 irreducible module이면, 그 highest weight $\lambda$는 유일하게 결정되고 $V\cong L(\lambda)$이다. 특히 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$이다.

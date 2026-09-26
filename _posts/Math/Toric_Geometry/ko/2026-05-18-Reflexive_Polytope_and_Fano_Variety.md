@@ -176,15 +176,15 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7){: data-lid="cmlt1" }의 결론을 *singular* $V$에 그대로 적용할 수 없다.
 2. 따라서, singular한 $V$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $\pi: \widetilde{V} \rightarrow V$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $V$의 임의의 resolution은 다음의 *discrepancy formula*
     
-    $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$
+    $$K_{\tilde{V}} = \pi^\ast K_V + \sum_i a_i E_i$$
     
-    를 만족한다는 것이 알려져 있다. 여기서 $E_i$는 $\pi$의 exceptional divisor이며, $a_i \in \mathbb{Q}$는 *discrepancy*라 부르는 유리수이다. 이 식은 $\pi^\ast K_V$가 $\tilde V$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $a_i E_i$로 보정한 것으로, $a_i$의 부호와 크기가 $V$의 singular point 종류를 분류해주는 표준적인 invariant가 된다.
+    를 만족한다는 것이 알려져 있다. 여기서 $E_i$는 $\pi$의 exceptional divisor이며, $a_i \in \mathbb{Q}$는 *discrepancy*라 부르는 유리수이다. 이 식은 $\pi^\ast K_V$가 $\tilde{V}$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $a_i E_i$로 보정한 것으로, $a_i$의 부호와 크기가 $V$의 singular point 종류를 분류해주는 표준적인 invariant가 된다.
     
     이제 $V$가 adjunction에 의해 $K_V \sim 0$를 만족한다 하더라도, 임의의 resolution에서
     
-    $$K_{\tilde V} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
+    $$K_{\tilde{V}} = \pi^\ast \cdot 0 + \sum_i a_i E_i = \sum_i a_i E_i$$
     
-    이고 generic하게는 $a_i > 0$인 항이 존재하여 $K_{\tilde V} \not\sim 0$, 즉 $\tilde V$가 Calabi-Yau 성질을 잃어버린다. 
+    이고 generic하게는 $a_i > 0$인 항이 존재하여 $K_{\tilde{V}} \not\sim 0$, 즉 $\tilde{V}$가 Calabi-Yau 성질을 잃어버린다. 
 
 따라서 Calabi-Yau 성질을 *보존하는* 유일한 종류의 resolution은 모든 $a_i = 0$인 것이며, 이러한 resolution을 다음과 같이 정의한다.
 

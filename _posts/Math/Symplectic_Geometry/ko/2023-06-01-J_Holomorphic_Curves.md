@@ -64,7 +64,7 @@ $$\omega(v, Jv) = g(JPv, Jv) = g(Pv, v) > 0, \qquad \omega(Jv, Jw) = g(AJv, Jw) 
 ::: 정의 4
 Almost complex manifold $(M, J)$와 Riemann surface $(\Sigma, j)$에 대해, smooth map $u: \Sigma \rightarrow M$이 *J-holomorphic<sub>$J$-정칙</sub>* (또는 *pseudoholomorphic<sub>유사정칙</sub>*) 이라 함은 nonlinear *Cauchy-Riemann equation<sub>코시-리만 방정식</sub>*
 
-$$\bar\partial_J u := \frac{1}{2}\big(\dd{u} + J \circ \dd{u} \circ j\big) = 0$$
+$$\bar{\partial}_J u := \frac{1}{2}\big(\dd{u} + J \circ \dd{u} \circ j\big) = 0$$
 
 을 만족함을 말한다. 등가적으로, $u$의 differential $\dd{u}: T\Sigma \rightarrow TM$이 $J$-linear, 즉 $\dd{u} \circ j = J \circ \dd{u}$를 만족함을 말한다.
 :::
@@ -125,7 +125,7 @@ $(M, \omega)$가 compact symplectic manifold이고 $J$가 $\omega$-compatible이
 ::: 증명
 핵심 단계는 다음과 같다. 우선 $g_J$에 대한 *mean value inequality*에 의해, J-holomorphic map은 작은 ball 위에서의 energy를 알면 image 직경을 ball 반지름의 함수로 통제할 수 있다. 즉 $E(u\vert_{B_r(z)}) < \varepsilon_0$이면 $\mathrm{diam}(u(B_{r/2}(z)))$는 $C\sqrt{E(u\vert_{B_r})}$ 이하이다. Finite energy 가정에 의해 $z\rightarrow 0$일 때 작은 annulus 위의 energy가 $0$으로 수렴하므로, 위 부등식으로부터 $u$가 $0$에서 어떤 점 $x_0\in M$으로 연속적으로 확장됨이 얻어진다.
 
-매끄러움은 elliptic regularity로부터 따른다. $M$ 위 $x_0$ 근방의 Darboux 좌표에서 J-holomorphic equation $\bar\partial_J u = 0$은 변형 Cauchy-Riemann equation이며, 그 leading symbol이 elliptic이므로 $u$의 $L^\infty$ boundedness와 weak J-holomorphic 조건으로부터 $C^\infty$ regularity가 점 $0$까지 확장된다. 자세한 estimate는 **[MS]** §4.5를 참조한다.
+매끄러움은 elliptic regularity로부터 따른다. $M$ 위 $x_0$ 근방의 Darboux 좌표에서 J-holomorphic equation $\bar{\partial}_J u = 0$은 변형 Cauchy-Riemann equation이며, 그 leading symbol이 elliptic이므로 $u$의 $L^\infty$ boundedness와 weak J-holomorphic 조건으로부터 $C^\infty$ regularity가 점 $0$까지 확장된다. 자세한 estimate는 **[MS]** §4.5를 참조한다.
 :::
 
 [명제 7](#prop7){: data-lid="dlj48" }은 J-holomorphic curve의 *bubble* 형성 시 중요한 역할을 한다. Sequence of J-holomorphic curves가 한 점으로 energy를 집중시키면, *rescaling*을 통해 $\mathbb{C} \rightarrow M$의 J-holomorphic map을 얻고, [명제 7](#prop7){: data-lid="h2mxk" }에 의해 이는 $\mathbb{P}^1 = \mathbb{C} \cup \{\infty\} \rightarrow M$의 J-holomorphic *sphere*로 확장된다. 이 sphere를 *bubble*이라 부른다.
@@ -138,7 +138,7 @@ J-holomorphic curve 이론의 중심 정리는 다음 *Gromov compactness theore
 $(M, \omega)$를 compact symplectic manifold, $J$를 $\omega$-compatible almost complex structure, $\beta \in H_2(M, \mathbb{Z})$를 고정하자. Sequence of J-holomorphic curves $u_\nu: \Sigma \rightarrow M$이 모두 homology class $\beta$를 represent하고, $\Sigma$가 fixed Riemann surface (genus $g$, $n$개의 marked points 부착)일 때, $\{ u_\nu \}$는 부분수열 추출 후 *stable map*으로 수렴한다.
 :::
 
-Stable map이란 nodal Riemann surface $\widehat\Sigma \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (automorphism group이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps){: data-lid="ws94q" }에서 다룬다.
+Stable map이란 nodal Riemann surface $\widehat{\Sigma} \rightarrow M$의 J-holomorphic map으로, 각 component가 $\mathbb{P}^1$ (또는 더 일반 genus) 의 $J$-holomorphic curve이고 *stability* 조건 (automorphism group이 유한) 을 만족하는 것이다. 정확한 정의와 그 moduli space의 구성은 [§Stable maps의 moduli space](/ko/math/symplectic_geometry/stable_maps){: data-lid="ws94q" }에서 다룬다.
 
 Gromov compactness의 의미: J-holomorphic curve들의 sequence가 limit을 가질 때, 그 limit은 *smooth* J-holomorphic curve가 아닐 수 있으며 *bubble*들이 떨어져 나가는 nodal 구조가 형성될 수 있다. 그러나 이 nodal 구조가 *유한히 많은* bubble만 가지며 *총 homology class는 보존*된다 ($\sum_i \beta_i = \beta$). 이 사실이 moduli space의 compactification(즉 *moduli space of stable maps* $\overline{\mathcal{M}}_{g, n}(M, \beta)$)을 가능하게 만든다.
 

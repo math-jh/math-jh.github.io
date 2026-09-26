@@ -39,7 +39,7 @@ $$(\mathfrak{g}_0)_{\mathbb{C}}=\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}\xri
 ::: 정의 2
 $\mathbb{C}$ 위의 Lie algebra $\mathfrak{g}$ 위에서 *conjugation<sub>켤레</sub>*은 다음을 만족하는 사상 $\tau:\mathfrak{g}\rightarrow\mathfrak{g}$이다.
 
-1. $\tau$는 $\mathbb{R}$-선형이고 $\tau(\lambda x)=\bar\lambda\,\tau(x)$ (곧 $\tau$는 conjugate-linear)이다.
+1. $\tau$는 $\mathbb{R}$-선형이고 $\tau(\lambda x)=\bar{\lambda}\,\tau(x)$ (곧 $\tau$는 conjugate-linear)이다.
 2. $\tau$는 involution, 곧 $\tau^2=\id$이다.
 3. $\tau$는 bracket을 보존한다. 곧 $\tau([x,y])=[\tau x,\tau y]$이다.
 :::
@@ -70,14 +70,14 @@ $\su(n)$은 trace가 $0$인 skew-Hermitian 복소행렬들의 실 Lie algebra, �
 
 $$\su(n)=\{X\in\Mat_n(\mathbb{C})\mid X^\ast=-X,\ \tr X=0\}$$
 
-이다 (여기에서 $X^\ast=\bar X^{\mathsf T}$는 conjugate transpose이다). 이는 $\mathbb{R}$ 위의 Lie algebra이며 $\su(n)$에 $i$를 곱하면 trace가 $0$인 Hermitian 행렬을 얻으므로, 실 벡터공간으로서
+이다 (여기에서 $X^\ast=\bar{X}^{\mathsf{T}}$는 conjugate transpose이다). 이는 $\mathbb{R}$ 위의 Lie algebra이며 $\su(n)$에 $i$를 곱하면 trace가 $0$인 Hermitian 행렬을 얻으므로, 실 벡터공간으로서
 
 $$\su(n)\oplus i\,\su(n)=\{X\in\Mat_n(\mathbb{C})\mid\tr X=0\}=\sl(n;\mathbb{C})$$
 
 이다. 따라서 $\su(n)$은 $\sl(n;\mathbb{C})$의 real form이다. $\su(n)$ 위의 Killing form은 $\kappa(X,Y)=2n\tr(XY)$로 계산되며, $X\in\su(n)$이 $0$이 아니면 $\tr(X^2)=-\tr(X^\ast X)=-\sum_{i,j}\lvert X_{ij}\rvert^2<0$이므로 $\kappa$가 음의 정부호이다. 곧 $\su(n)$은 $\sl(n;\mathbb{C})$의 compact real form이고, 대응하는 group $\SU(n)$은 compact이다.
 :::
 
-같은 방식으로 다른 고전적 compact group의 Lie algebra가 그 복소화의 compact real form이 된다. 실 skew-symmetric 행렬들의 대수 $\so(n)=\{X\in\Mat_n(\mathbb{R})\mid X^{\mathsf T}=-X\}$은 복소화하면 복소 skew-symmetric 행렬들의 대수 $\so(n;\mathbb{C})$가 되어 $\so(n)$이 그 real form이고, $\kappa(X,Y)=(n-2)\tr(XY)$ ($n\geq 3$)이 음의 정부호이므로 $\so(n)$은 compact real form이다. 사원수 위의 unitary group의 Lie algebra인 compact symplectic algebra $\sp(n)=\{X\in\Mat_n(\mathbb{H})\mid X^\ast=-X\}$ 역시 $\sp(2n;\mathbb{C})$의 compact real form이며, 대응하는 group $\mathrm{Sp}(n)$이 compact이다. 이들은 모두 어떤 양의 정부호 Hermitian (또는 그 실·사원수 판본) 형식을 보존하는 group의 Lie algebra이고, 그 보존 조건이 곧 $X^\ast=-X$로 나타나 Killing form의 음의 정부호성을 보장한다.
+같은 방식으로 다른 고전적 compact group의 Lie algebra가 그 복소화의 compact real form이 된다. 실 skew-symmetric 행렬들의 대수 $\so(n)=\{X\in\Mat_n(\mathbb{R})\mid X^{\mathsf{T}}=-X\}$은 복소화하면 복소 skew-symmetric 행렬들의 대수 $\so(n;\mathbb{C})$가 되어 $\so(n)$이 그 real form이고, $\kappa(X,Y)=(n-2)\tr(XY)$ ($n\geq 3$)이 음의 정부호이므로 $\so(n)$은 compact real form이다. 사원수 위의 unitary group의 Lie algebra인 compact symplectic algebra $\sp(n)=\{X\in\Mat_n(\mathbb{H})\mid X^\ast=-X\}$ 역시 $\sp(2n;\mathbb{C})$의 compact real form이며, 대응하는 group $\mathrm{Sp}(n)$이 compact이다. 이들은 모두 어떤 양의 정부호 Hermitian (또는 그 실·사원수 판본) 형식을 보존하는 group의 Lie algebra이고, 그 보존 조건이 곧 $X^\ast=-X$로 나타나 Killing form의 음의 정부호성을 보장한다.
 
 ## 존재성
 
@@ -216,9 +216,9 @@ $\mathfrak{g}$가 복소 semisimple Lie algebra이면 $\mathfrak{g}$의 모든 �
 ::: 증명
 $\rho:\mathfrak{g}\rightarrow\gl(V)$를 유한차원 복소 representation이라 하자. [정리 7](#thm7){: data-lid="utatx" }에 의해 $\mathfrak{g}$는 compact real form $\mathfrak{u}$를 가지며, $\mathfrak{g}=\mathfrak{u}\oplus i\mathfrak{u}$이다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="twnmo" }), $\mathfrak{u}$가 compact real form이라는 데에서 $U$는 compact이다 ([정의 4](#def4){: data-lid="7tm22" } 이후의 논의).
 
-$\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra representation $\rho\vert_{\mathfrak{u}}:\mathfrak{u}\rightarrow\gl(V)$를 얻고, $U$가 단순연결이므로 이는 group representation $\widetilde\rho:U\rightarrow\GL(V)$로 적분된다 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="fl67m" }의 1). $U$가 compact이므로 [명제 10](#prop10){: data-lid="ob93z" }에 의해 $\widetilde\rho$는 완전가약이고, $V=\bigoplus_j W_j$로 $U$-irreducible subrepresentation들의 direct sum으로 분해된다.
+$\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra representation $\rho\vert_{\mathfrak{u}}:\mathfrak{u}\rightarrow\gl(V)$를 얻고, $U$가 단순연결이므로 이는 group representation $\widetilde{\rho}:U\rightarrow\GL(V)$로 적분된다 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="fl67m" }의 1). $U$가 compact이므로 [명제 10](#prop10){: data-lid="ob93z" }에 의해 $\widetilde{\rho}$는 완전가약이고, $V=\bigoplus_j W_j$로 $U$-irreducible subrepresentation들의 direct sum으로 분해된다.
 
-이제 각 $W_j$가 $\mathfrak{g}$-subrepresentation임을 본다. $W_j$가 $U$-불변이므로 $\widetilde\rho$를 미분한 $\rho\vert_{\mathfrak{u}}$ 아래 $\mathfrak{u}$-불변, 곧 모든 $x\in\mathfrak{u}$에 대하여 $\rho(x)W_j\subseteq W_j$이다. 임의의 $z\in\mathfrak{g}$는 $z=x+iy$ ($x,y\in\mathfrak{u}$) 꼴이고 $\rho$가 $\mathbb{C}$-선형이므로 $\rho(z)=\rho(x)+i\rho(y)$가 $W_j$를 보존한다. 따라서 각 $W_j$는 $\mathfrak{g}$-subrepresentation이다.
+이제 각 $W_j$가 $\mathfrak{g}$-subrepresentation임을 본다. $W_j$가 $U$-불변이므로 $\widetilde{\rho}$를 미분한 $\rho\vert_{\mathfrak{u}}$ 아래 $\mathfrak{u}$-불변, 곧 모든 $x\in\mathfrak{u}$에 대하여 $\rho(x)W_j\subseteq W_j$이다. 임의의 $z\in\mathfrak{g}$는 $z=x+iy$ ($x,y\in\mathfrak{u}$) 꼴이고 $\rho$가 $\mathbb{C}$-선형이므로 $\rho(z)=\rho(x)+i\rho(y)$가 $W_j$를 보존한다. 따라서 각 $W_j$는 $\mathfrak{g}$-subrepresentation이다.
 
 마지막으로 각 $W_j$가 $\mathfrak{g}$-irreducible임을 본다. $W_j$가 $0$이 아닌 $\mathfrak{g}$-subrepresentation $W'\subsetneq W_j$를 가진다면, 위와 같은 이유로 $W'$는 $\mathfrak{u}$-불변이고 따라서 ($U$가 connected이므로) $U$-불변인 proper subrepresentation이 되어 $W_j$의 $U$-irreducibility에 모순이다. 그러므로 $V=\bigoplus_j W_j$는 $\mathfrak{g}$-irreducible subrepresentation들의 direct sum이고, $\rho$는 완전가약이다.
 :::

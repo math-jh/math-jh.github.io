@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="e17f9" }에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10){: data-lid="yo0w0" }에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 tangent space 위로 측지선의 자료를 모아 manifold의 국소 구조를 linearize하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 smooth 국소 diffeomorphism임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
+[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="e17f9" }에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot{\gamma}(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10){: data-lid="yo0w0" }에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 tangent space 위로 측지선의 자료를 모아 manifold의 국소 구조를 linearize하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 smooth 국소 diffeomorphism임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
 
 ## Exponential map의 정의
 
@@ -30,7 +30,7 @@ $$\mathcal{E}_p = \{v \in T_p M \mid \gamma_v \text{ is defined on an interval c
 
 $$\exp_p(v) = \gamma_v(1)$$
 
-로 정의한다. 여기서 $\gamma_v$는 [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="lhdag" }의 초기조건 $\gamma_v(0) = p$, $\dot\gamma_v(0) = v$를 만족하는 유일한 측지선이다.
+로 정의한다. 여기서 $\gamma_v$는 [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="lhdag" }의 초기조건 $\gamma_v(0) = p$, $\dot{\gamma}_v(0) = v$를 만족하는 유일한 측지선이다.
 :::
 
 $v = 0$에 대응하는 측지선은 상수곡선 $\gamma_0(t) \equiv p$이므로 $0 \in \mathcal{E}_p$이며 $\exp_p(0) = p$이다. Exponential map의 정의역 $\mathcal{E}_p$가 $0$의 한 근방을 포함한다는 사실과 그 위에서 $\exp_p$가 매끄럽다는 사실은 다음 절에서 측지선이 초기조건에 매끄럽게 의존한다는 성질로부터 보일 것이다. 정의에 앞서, exponential map이 어떻게 측지선 전체의 자료를 담는지를 보이는 동차성을 정리해 둔다.
@@ -46,11 +46,11 @@ $$\gamma_{sv}(t) = \gamma_v(st)$$
 :::
 
 ::: 증명
-곡선 $\sigma(t) := \gamma_v(st)$를 정의하자. 연쇄법칙에 의해 $\dot\sigma(t) = s \dot\gamma_v(st)$이고, 곡선을 따른 covariant derivative에 대해 다시 연쇄법칙을 적용하면
+곡선 $\sigma(t) := \gamma_v(st)$를 정의하자. 연쇄법칙에 의해 $\dot{\sigma}(t) = s \dot{\gamma}_v(st)$이고, 곡선을 따른 covariant derivative에 대해 다시 연쇄법칙을 적용하면
 
-$$D_t \dot\sigma(t) = D_t\bigl(s \dot\gamma_v(st)\bigr) = s^2 (D_t \dot\gamma_v)(st)$$
+$$D_t \dot{\sigma}(t) = D_t\bigl(s \dot{\gamma}_v(st)\bigr) = s^2 (D_t \dot{\gamma}_v)(st)$$
 
-이다. $\gamma_v$가 측지선이므로 $D_t \dot\gamma_v \equiv 0$이고, 따라서 $D_t \dot\sigma \equiv 0$이 되어 $\sigma$도 측지선이다. 또한 $\sigma(0) = \gamma_v(0) = p$이고 $\dot\sigma(0) = s \dot\gamma_v(0) = sv$이므로, $\sigma$는 초기조건 $\sigma(0) = p$, $\dot\sigma(0) = sv$를 만족하는 측지선이다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="cby68" }의 유일성에 의해 $\sigma = \gamma_{sv}$이고, 따라서 $\gamma_{sv}(t) = \gamma_v(st)$이다. 여기에 $t = 1$을 대입하면 $\exp_p(sv) = \gamma_{sv}(1) = \gamma_v(s)$를 얻는다.
+이다. $\gamma_v$가 측지선이므로 $D_t \dot{\gamma}_v \equiv 0$이고, 따라서 $D_t \dot{\sigma} \equiv 0$이 되어 $\sigma$도 측지선이다. 또한 $\sigma(0) = \gamma_v(0) = p$이고 $\dot{\sigma}(0) = s \dot{\gamma}_v(0) = sv$이므로, $\sigma$는 초기조건 $\sigma(0) = p$, $\dot{\sigma}(0) = sv$를 만족하는 측지선이다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="cby68" }의 유일성에 의해 $\sigma = \gamma_{sv}$이고, 따라서 $\gamma_{sv}(t) = \gamma_v(st)$이다. 여기에 $t = 1$을 대입하면 $\exp_p(sv) = \gamma_{sv}(1) = \gamma_v(s)$를 얻는다.
 :::
 
 [보조정리 2](#lem2){: data-lid="o9q4e" }는 한 vector $v$를 따르는 반직선 $s \mapsto sv$가 exponential map 아래에서 측지선 $s \mapsto \gamma_v(s)$로 보내짐을 말해 준다. 즉 exponential map은 $T_p M$의 원점을 지나는 직선들을 $p$를 지나는 측지선들로 옮기며, 이것이 exponential map이 $p$ 근방의 기하를 그 tangent space 위로 끌어올리는 방식이다.
@@ -64,7 +64,7 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 �
 :::
 
 ::: 증명
-측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="79gky" }의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 smooth 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
+측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7){: data-lid="79gky" }의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot{\gamma}(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 smooth 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
 
 이제 $\delta > 0$을 충분히 작게 잡아 집합 $\{w \in T_p M : \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되도록 하고
 
@@ -90,7 +90,7 @@ $$(d\exp_p)_0 = \id_{T_p M}$$
 ::: 증명
 임의의 $v \in T_p M \cong T_0(T_p M)$을 잡자. 동일시에 따라 $v$는 곡선 $\tau(t) := tv$ (값이 $T_p M$ 안에 있는 곡선)의 $t = 0$에서의 속도벡터로 표현된다. 미분의 정의에 의해, $(d\exp_p)_0(v)$는 합성곡선 $t \mapsto \exp_p(\tau(t)) = \exp_p(tv)$의 $t = 0$에서의 속도벡터이다. [보조정리 2](#lem2){: data-lid="7indw" }에 의해 $\exp_p(tv) = \gamma_v(t)$이므로, 이 합성곡선은 측지선 $\gamma_v$ 자신이고, 따라서
 
-$$(d\exp_p)_0(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \exp_p(tv) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(t) = \dot\gamma_v(0) = v$$
+$$(d\exp_p)_0(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \exp_p(tv) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(t) = \dot{\gamma}_v(0) = v$$
 
 를 얻는다. $v$가 임의였으므로 $(d\exp_p)_0 = \id_{T_p M}$이다.
 :::
@@ -136,11 +136,11 @@ $$g_{ij}(p) = g_p(\partial_i\vert_p, \partial_j\vert_p) = g_p(E_i, E_j) = \delta
 
 이다.
 
-(3) $v = \sum_i v^i E_i \in V$를 임의로 잡자. (1)에 의해 $\gamma_v(t)$의 좌표성분은 $\gamma_v^k(t) = t v^k$이므로 $\ddot\gamma_v^k(t) = 0$이다. [§측지선, ⁋정의 4](/ko/math/riemannian_geometry/geodesics#def4){: data-lid="qfsft" } 직후의 좌표 측지선 방정식
+(3) $v = \sum_i v^i E_i \in V$를 임의로 잡자. (1)에 의해 $\gamma_v(t)$의 좌표성분은 $\gamma_v^k(t) = t v^k$이므로 $\ddot{\gamma}_v^k(t) = 0$이다. [§측지선, ⁋정의 4](/ko/math/riemannian_geometry/geodesics#def4){: data-lid="qfsft" } 직후의 좌표 측지선 방정식
 
-$$\ddot\gamma_v^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma_v(t)) \dot\gamma_v^i(t) \dot\gamma_v^j(t) = 0$$
+$$\ddot{\gamma}_v^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma_v(t)) \dot{\gamma}_v^i(t) \dot{\gamma}_v^j(t) = 0$$
 
-에 이를 대입하면, $\dot\gamma_v^i(t) = v^i$이므로
+에 이를 대입하면, $\dot{\gamma}_v^i(t) = v^i$이므로
 
 $$\sum_{i, j} \Gamma_{ij}^k(\gamma_v(t)) v^i v^j = 0$$
 
@@ -172,11 +172,11 @@ $w$를 $v$에 평행한 성분과 수직인 성분으로 나누면 양변이 모
 
 먼저 $w = v$인 경우. [명제 4](#prop4){: data-lid="b5fwy" }의 증명과 같이 곡선 $t \mapsto v + tv = (1 + t)v$를 생각하면, [보조정리 2](#lem2){: data-lid="n43eg" }에 의해 $\exp_p((1 + t)v) = \gamma_v(1 + t)$이므로
 
-$$(d\exp_p)_v(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(1 + t) = \dot\gamma_v(1)$$
+$$(d\exp_p)_v(v) = \left.\frac{d}{\dd{t}}\right\vert_{t = 0} \gamma_v(1 + t) = \dot{\gamma}_v(1)$$
 
-이다. 측지선의 속력은 [§측지선, ⁋명제 6](/ko/math/riemannian_geometry/geodesics#prop6){: data-lid="2v9yv" }에 의해 상수이고 $\dot\gamma_v(0) = v$이므로, $\lVert \dot\gamma_v(1) \rVert = \lVert v \rVert$이다. 따라서
+이다. 측지선의 속력은 [§측지선, ⁋명제 6](/ko/math/riemannian_geometry/geodesics#prop6){: data-lid="2v9yv" }에 의해 상수이고 $\dot{\gamma}_v(0) = v$이므로, $\lVert \dot{\gamma}_v(1) \rVert = \lVert v \rVert$이다. 따라서
 
-$$\langle (d\exp_p)_v(v), (d\exp_p)_v(v) \rangle = \lVert \dot\gamma_v(1) \rVert^2 = \lVert v \rVert^2 = \langle v, v \rangle_p$$
+$$\langle (d\exp_p)_v(v), (d\exp_p)_v(v) \rangle = \lVert \dot{\gamma}_v(1) \rVert^2 = \lVert v \rVert^2 = \langle v, v \rangle_p$$
 
 가 되어 $w = v$인 경우가 성립한다.
 
@@ -188,35 +188,35 @@ $$\Gamma(s, t) := \exp_p\bigl(t v(s)\bigr)$$
 
 $$J(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) = (d\exp_p)_{tv}(t w)$$
 
-이고, 특히 $t = 1$에서 $J(1) = (d\exp_p)_v(w)$이다. 또한 $\partial_t \Gamma(0, t) = \dot\gamma_v(t)$이므로, 우리가 보이려는 것은 $\langle J(1), \dot\gamma_v(1) \rangle = 0$이다.
+이고, 특히 $t = 1$에서 $J(1) = (d\exp_p)_v(w)$이다. 또한 $\partial_t \Gamma(0, t) = \dot{\gamma}_v(t)$이므로, 우리가 보이려는 것은 $\langle J(1), \dot{\gamma}_v(1) \rangle = 0$이다.
 
-함수 $f(t) := \langle J(t), \dot\gamma_v(t) \rangle$를 생각하자. Metric-compatibility에 의해
+함수 $f(t) := \langle J(t), \dot{\gamma}_v(t) \rangle$를 생각하자. Metric-compatibility에 의해
 
-$$\frac{d}{\dd{t}} f(t) = \langle D_t J, \dot\gamma_v \rangle + \langle J, D_t \dot\gamma_v \rangle$$
+$$\frac{d}{\dd{t}} f(t) = \langle D_t J, \dot{\gamma}_v \rangle + \langle J, D_t \dot{\gamma}_v \rangle$$
 
 이고, $\gamma_v$가 측지선이므로 둘째 항은 $0$이다. 첫째 항을 위해 대칭 보조정리 $D_t \partial_s \Gamma = D_s \partial_t \Gamma$ ([§측지선, §§에너지의 제1변분](/ko/math/riemannian_geometry/geodesics#에너지의-제1변분){: data-lid="msecu" }에서 사용한 것) 를 적용하면 $D_t J = D_t \partial_s \Gamma\vert_{s=0} = D_s \partial_t \Gamma\vert_{s=0}$이고, 따라서
 
-$$\langle D_t J, \dot\gamma_v \rangle = \langle D_s \partial_t \Gamma, \partial_t \Gamma \rangle\big\vert_{s = 0} = \frac{1}{2} \left.\frac{\partial}{\partial s}\right\vert_{s = 0} \langle \partial_t \Gamma, \partial_t \Gamma \rangle$$
+$$\langle D_t J, \dot{\gamma}_v \rangle = \langle D_s \partial_t \Gamma, \partial_t \Gamma \rangle\big\vert_{s = 0} = \frac{1}{2} \left.\frac{\partial}{\partial s}\right\vert_{s = 0} \langle \partial_t \Gamma, \partial_t \Gamma \rangle$$
 
-이다. 그런데 각 $s$에 대해 $\partial_t \Gamma(s, t) = \dot\gamma_{v(s)}(t)$의 크기는 측지선의 속력이라 상수이고 그 값은 $\lVert \dot\gamma_{v(s)}(0) \rVert = \lVert v(s) \rVert = \lVert v \rVert$로 $s$에 무관하다. 즉 $\langle \partial_t \Gamma, \partial_t \Gamma \rangle \equiv \lVert v \rVert^2$은 $s$에 대해 상수이므로 그 $s$-미분이 $0$이고, 따라서 $\frac{d}{\dd{t}} f(t) = 0$이다.
+이다. 그런데 각 $s$에 대해 $\partial_t \Gamma(s, t) = \dot{\gamma}_{v(s)}(t)$의 크기는 측지선의 속력이라 상수이고 그 값은 $\lVert \dot{\gamma}_{v(s)}(0) \rVert = \lVert v(s) \rVert = \lVert v \rVert$로 $s$에 무관하다. 즉 $\langle \partial_t \Gamma, \partial_t \Gamma \rangle \equiv \lVert v \rVert^2$은 $s$에 대해 상수이므로 그 $s$-미분이 $0$이고, 따라서 $\frac{d}{\dd{t}} f(t) = 0$이다.
 
-이로써 $f$는 상수이다. 한편 $J(0) = (d\exp_p)_0(0) = 0$이므로 $f(0) = \langle J(0), \dot\gamma_v(0) \rangle = 0$이고, 따라서 $f \equiv 0$이다. 특히 $f(1) = \langle J(1), \dot\gamma_v(1) \rangle = \langle (d\exp_p)_v(w), (d\exp_p)_v(v) \rangle = 0 = \langle v, w \rangle_p$를 얻는다.
+이로써 $f$는 상수이다. 한편 $J(0) = (d\exp_p)_0(0) = 0$이므로 $f(0) = \langle J(0), \dot{\gamma}_v(0) \rangle = 0$이고, 따라서 $f \equiv 0$이다. 특히 $f(1) = \langle J(1), \dot{\gamma}_v(1) \rangle = \langle (d\exp_p)_v(w), (d\exp_p)_v(v) \rangle = 0 = \langle v, w \rangle_p$를 얻는다.
 :::
 
 [보조정리 8](#lem8){: data-lid="21vmo" }으로부터 Gauss lemma가 곧바로 따라 나온다.
 
 ::: 정리 9 (Gauss lemma)
-Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선은 자신이 만나는 측지구면과 직교한다. 즉 $v \in V \setminus \{0\}$이고 $q = \exp_p(v)$이며 $r = \lVert v \rVert_g$이면, $q$에서 측지선 $\gamma_v$의 속도벡터 $\dot\gamma_v(1)$는 측지구면 $\exp_p(S_r)$의 $q$에서의 tangent space에 수직이다.
+Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선은 자신이 만나는 측지구면과 직교한다. 즉 $v \in V \setminus \{0\}$이고 $q = \exp_p(v)$이며 $r = \lVert v \rVert_g$이면, $q$에서 측지선 $\gamma_v$의 속도벡터 $\dot{\gamma}_v(1)$는 측지구면 $\exp_p(S_r)$의 $q$에서의 tangent space에 수직이다.
 :::
 
 ::: 증명
 측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V : \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 tangent vector는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
 
-한편 [보조정리 8](#lem8){: data-lid="lvsu4" }의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 tangent vector $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8){: data-lid="xikpt" }에 의해
+한편 [보조정리 8](#lem8){: data-lid="lvsu4" }의 증명에서 $\dot{\gamma}_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 tangent vector $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8){: data-lid="xikpt" }에 의해
 
-$$\langle \dot\gamma_v(1), (d\exp_p)_v(w) \rangle_q = \langle (d\exp_p)_v(v), (d\exp_p)_v(w) \rangle_q = \langle v, w \rangle_p = 0$$
+$$\langle \dot{\gamma}_v(1), (d\exp_p)_v(w) \rangle_q = \langle (d\exp_p)_v(v), (d\exp_p)_v(w) \rangle_q = \langle v, w \rangle_p = 0$$
 
-이다. 즉 $\dot\gamma_v(1)$는 측지구면의 모든 tangent vector에 수직이다.
+이다. 즉 $\dot{\gamma}_v(1)$는 측지구면의 모든 tangent vector에 수직이다.
 :::
 
 Gauss lemma는 normal neighborhood 안에서 exponential map이 방사방향으로는 *등거리*임을 (방사 측지선의 arc length가 $T_p M$에서의 거리 $\lVert v \rVert$와 같음을) 함의하며, 이는 측지선이 충분히 짧은 구간에서 길이를 최소화함을 증명하는 출발점이 된다. 이 사실은 [§측지선, ⁋따름정리 5](/ko/math/riemannian_geometry/geodesics#cor5){: data-lid="15rgq" } 뒤에서 언급했던 "측지선이 충분히 짧은 구간에서 최단곡선"이라는 주장을 정당화한다.

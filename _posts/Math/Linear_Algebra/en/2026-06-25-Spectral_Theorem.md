@@ -42,17 +42,17 @@ All eigenvalues of a real symmetric matrix $A$ are real. That is, all roots of t
 ::: Proof
 The characteristic polynomial of $A$ is a polynomial of degree $n$ with real coefficients, and by [§Characteristic Polynomial, ⁋Theorem 8](/en/math/linear_algebra/characteristic_polynomial#thm8){: data-lid="ox2uu" }, this polynomial has $n$ roots $\lambda$ when extended to $\mathbb{C}$.
 
-Now consider an eigenvector $z\in\mathbb{C}^n$ corresponding to such a root, and let $\bar z$ be the vector obtained by taking the complex conjugate of each component of $z$. Consider the complex number
+Now consider an eigenvector $z\in\mathbb{C}^n$ corresponding to such a root, and let $\bar{z}$ be the vector obtained by taking the complex conjugate of each component of $z$. Consider the complex number
 
-$$s=\bar z^tAz$$
+$$s=\bar{z}^tAz$$
 
 First, since $Az=\lambda z$,
 
-$$s=\bar z^t(\lambda z)=\lambda(\bar z^tz)=\lambda\sum_{i=1}^n\lvert z_i\rvert^2$$
+$$s=\bar{z}^t(\lambda z)=\lambda(\bar{z}^tz)=\lambda\sum_{i=1}^n\lvert z_i\rvert^2$$
 
-On the other hand, since $s$ is a $1\times 1$ matrix, it equals its own transpose, and using that $A$ is a real symmetric matrix so that $A=A^t=\bar A$, its complex conjugate is
+On the other hand, since $s$ is a $1\times 1$ matrix, it equals its own transpose, and using that $A$ is a real symmetric matrix so that $A=A^t=\bar{A}$, its complex conjugate is
 
-$$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^tA^tz=\bar z^tAz=s$$
+$$\bar{s}=\overline{\bar{z}^tAz}=z^t\bar{A}\bar{z}=z^tA\bar{z}=(z^tA\bar{z})^t=\bar{z}^tA^tz=\bar{z}^tAz=s$$
 
 Thus, $s$ is real. However, since $z\neq 0$, the sum $\sum_i\lvert z_i\rvert^2$ is a positive real number, and therefore for $s=\lambda\sum_i\lvert z_i\rvert^2$ to be real, $\lambda$ must also be real.
 :::
@@ -149,7 +149,7 @@ The matrix of a positive definite operator also admits a concise decomposition v
 For a positive definite real symmetric matrix $A$, there exists a unique lower triangular matrix $L$ with all positive diagonal entries such that $A=LL^t$.
 :::
 ::: Proof
-We show existence by induction on the size $n$ of $A$. If $n=1$, then $A=(a)$ and by positive definiteness $a>0$, so we can take $L=(\sqrt a)$. Suppose $n\geq 2$ and split $A$ as
+We show existence by induction on the size $n$ of $A$. If $n=1$, then $A=(a)$ and by positive definiteness $a>0$, so we can take $L=(\sqrt{a})$. Suppose $n\geq 2$ and split $A$ as
 
 $$A=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}$$
 
@@ -159,13 +159,13 @@ $$\begin{pmatrix}x&y^t\end{pmatrix}A\begin{pmatrix}x\\ y\end{pmatrix}=\alpha x^2
 
 and the left-hand side is positive by the positive definiteness of $A$. By the inductive hypothesis, there exists a lower triangular $L'$ with positive diagonal entries such that $A''=L'L'^t$, so setting
 
-$$L=\begin{pmatrix}\sqrt\alpha&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
+$$L=\begin{pmatrix}\sqrt{\alpha}&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
 
 gives
 
 $$LL^t=\begin{pmatrix}\alpha&b^t\\ b&\alpha^{-1}bb^t+L'L'^t\end{pmatrix}=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}=A$$
 
-and all diagonal entries of $L$ are positive. Uniqueness follows from the first column being determined by $\sqrt\alpha$ and $\alpha^{-1/2}b$, and from $L'$ being unique inductively.
+and all diagonal entries of $L$ are positive. Uniqueness follows from the first column being determined by $\sqrt{\alpha}$ and $\alpha^{-1/2}b$, and from $L'$ being unique inductively.
 :::
 
 

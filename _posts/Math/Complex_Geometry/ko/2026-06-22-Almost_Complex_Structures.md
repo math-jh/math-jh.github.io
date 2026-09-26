@@ -233,13 +233,13 @@ $$
 :::
 
 ::: 증명
-(1) ⟺ (2)를 보인다. 임의의 실 벡터장 $X$에 대하여 $Z = X - i J X$로 두면 $J Z = J X + i X = i(X - iJX) = i Z$이므로 $Z \in T^{1,0} M$이고, 모든 (1,0)-벡터장은 이런 꼴이다 ($T^{1,0}$으로의 사영이 $X \mapsto \frac12(X - iJX)$이므로). 두 (1,0)-벡터장 $Z = X - iJX$, $W = Y - iJY$의 Lie bracket을 전개하면
+(1) ⟺ (2)를 보인다. 임의의 실 벡터장 $X$에 대하여 $Z = X - i J X$로 두면 $J Z = J X + i X = i(X - iJX) = i Z$이므로 $Z \in T^{1,0} M$이고, 모든 (1,0)-벡터장은 이런 꼴이다 ($T^{1,0}$으로의 사영이 $X \mapsto \frac{1}{2}(X - iJX)$이므로). 두 (1,0)-벡터장 $Z = X - iJX$, $W = Y - iJY$의 Lie bracket을 전개하면
 
 $$
 [Z, W] = [X, Y] - [JX, JY] - i\big( [JX, Y] + [X, JY] \big).
 $$
 
-$[Z,W]$가 다시 (1,0)이려면 $J[Z,W] = i[Z,W]$, 동치로 $[Z,W]$의 (0,1)-성분이 $0$이어야 한다. $[Z,W]$의 (0,1)-성분은 $\frac12([Z,W] + i J[Z,W])$이고, 직접 계산하면
+$[Z,W]$가 다시 (1,0)이려면 $J[Z,W] = i[Z,W]$, 동치로 $[Z,W]$의 (0,1)-성분이 $0$이어야 한다. $[Z,W]$의 (0,1)-성분은 $\frac{1}{2}([Z,W] + i J[Z,W])$이고, 직접 계산하면
 
 $$
 [Z,W] + iJ[Z,W] = N_J(X,Y) + i J\, N_J(X,Y)
@@ -259,7 +259,7 @@ $$
 \dd{\alpha}(\bar{Z}, \bar{W}) = -\alpha([\bar{Z}, \bar{W}]).
 $$
 
-$\dd{\alpha}$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와 모든 (0,1)-벡터장 쌍에 대해 좌변이 $0$이라는 것과 같고, 위 식에서 이는 $[\bar{Z}, \bar{W}]$에 (1,0)-성분이 없다는 것, 곧 $[\bar Z, \bar W]$가 다시 (0,1)이라는 것과 동치이다. 켤레를 취하면 이는 $T^{1,0}M$의 involutivity와 같다. 한편 $\dd{\alpha}$는 $2$-형식이므로 (2,0)+(1,1)+(0,2)로 분해되며, $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0}\oplus\Omega^{1,1}$은 정확히 (0,2)-성분의 소멸을 뜻한다. 따라서 (2) ⟺ (3)이다.
+$\dd{\alpha}$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와 모든 (0,1)-벡터장 쌍에 대해 좌변이 $0$이라는 것과 같고, 위 식에서 이는 $[\bar{Z}, \bar{W}]$에 (1,0)-성분이 없다는 것, 곧 $[\bar{Z}, \bar{W}]$가 다시 (0,1)이라는 것과 동치이다. 켤레를 취하면 이는 $T^{1,0}M$의 involutivity와 같다. 한편 $\dd{\alpha}$는 $2$-형식이므로 (2,0)+(1,1)+(0,2)로 분해되며, $\dd{(\Omega^{1,0})} \subseteq \Omega^{2,0}\oplus\Omega^{1,1}$은 정확히 (0,2)-성분의 소멸을 뜻한다. 따라서 (2) ⟺ (3)이다.
 :::
 
 이로써 적분가능성의 후보 판정량이 갖춰졌다. 조건 (2)는 적분가능성과 곧바로 이어진다. 만약 $J$가 복소구조에서 온다면 $T^{1,0} M$이 $\partial/\partial z_j$들로 생성되고 $[\partial/\partial z_j, \partial/\partial z_k] = 0$이므로 involutive하다. 곧 적분가능성은 $N_J = 0$을 함의한다. 진짜 깊이는 그 역, 곧 $N_J = 0$이 복소구조의 존재를 보장한다는 데 있으며, 이것이 Newlander–Nirenberg 정리이다.
@@ -279,9 +279,9 @@ $\dd{\alpha}$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha
 
 실해석적($C^\omega$) 경우에는 이것이 복소화 Frobenius 정리로 곧장 따라온다. 계수를 복소수로 확장한 holomorphic 영역에서 involutive 복소 분포는 integral manifold를 가지며, 이 integral manifold들의 횡단 좌표가 바라던 $z_j$를 준다. 이 논법은 Cauchy–Kovalevskaya 정리에 기대므로 해석성을 본질적으로 쓴다.
 
-Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar\partial$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar\partial z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $\dd{z_j}$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
+Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar{\partial}$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar{\partial} z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $\dd{z_j}$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
 
-유일성은 두 복소구조가 같은 $J$를 주면 두 좌표계의 transition function이 양쪽 모두에서 $\bar\partial$를 죽여 holomorphic이 되고, 따라서 두 복소구조가 양립가능하다는 데서 따라온다.
+유일성은 두 복소구조가 같은 $J$를 주면 두 좌표계의 transition function이 양쪽 모두에서 $\bar{\partial}$를 죽여 holomorphic이 되고, 따라서 두 복소구조가 양립가능하다는 데서 따라온다.
 :::
 
 이 정리는 거의 complex manifold의 미분기하와 complex manifold의 holomorphic 기하 사이를 잇는 다리이다. 적분가능성이라는 대역적·해석적 조건이 Nijenhuis 텐서라는 점별 텐서의 소멸로 환원되므로, 주어진 $J$가 복소구조에서 오는지를 국소 계산만으로 판정할 수 있다. 실차원 $2$에서는 $N_J$가 항상 $0$이 된다. 정의식에 $Y = JX$를 넣으면 $[JX, JX] = 0$과 $J(JX) = -X$에서 $N_J(X, JX) = [X, JX] + [JX, X] = 0$이고, 한편 $0 \neq v \in T_p M$에 대하여 $J_p v = a v$가 되는 실수 $a$는 $-v = a^2 v$를 낳아 존재할 수 없으므로 $\{v, J_p v\}$가 $T_p M$의 기저이기 때문이다. 반대칭인 $N_J$가 이 기저의 두 벡터에서 소멸하면 $p$에서 $N_J$ 전체가 소멸한다. 곧 모든 거의 복소구조가 적분가능하며, orientable surface 위의 거의 복소구조는 언제나 복소구조, 곧 Riemann surface 구조를 준다. 차원이 올라가면 $N_J \neq 0$인 거의 복소구조가 풍부하게 나타나, 적분가능성이 진정한 제약이 된다.
@@ -319,7 +319,7 @@ $6$차원 구면 $S^6$는 거의 복소구조를 가진다. 이를 octonion $\ma
 $4$차원 구면 $S^4$는 짝수차원이지만 거의 복소구조를 전혀 갖지 못한다. 거의 복소구조 $J$가 있으면 tangent bundle $TS^4$이 복소 vector bundle 구조를 가져 Chern class가 정의되고, 특히 실 Pontryagin·Euler class가 Chern class로 표현되어야 한다. 그러나 $S^4$의 cohomology ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology){: data-lid="xg44v" }) 는 degree $0$과 $4$에만 자명하지 않은 부분을 가지므로 중간 degree의 Chern class가 들어설 자리가 없고, Euler 수 $\chi(S^4) = 2$와 서명 $\sigma(S^4) = 0$이 거의 complex manifold가 만족해야 하는 관계식 $c_1^2 = 2\chi + 3\sigma$와 양립하지 못한다. $S^4$에서는 좌변이 $0$이어야 하는데 우변은 $4$이므로 모순이다. 따라서 $S^4$ 위에는 거의 복소구조가 없으며, 거의 복소구조의 존재는 순수한 위상적 장애를 동반한다.
 :::
 
-이 마지막 두 예는 거의 복소구조의 위계를 보여준다. $S^4$는 거의 복소구조조차 갖지 못하고, $S^6$는 거의 복소구조는 갖지만 그 표준적인 것이 적분가능하지 않으며 (복소구조의 존재 여부는 미결), $S^2$는 거의 복소구조가 언제나 적분가능하다. 거의 복소구조에서 복소구조로 가는 다리가 Newlander–Nirenberg 정리이고, 그 다리를 건널 수 있는지를 가르는 척도가 Nijenhuis 텐서이다. 적분가능한 거의 복소구조 위에서 exterior derivative가 (p,q)-분해와 맞물려 $\partial$와 $\bar\partial$로 갈라지는 정밀한 구조는 Dolbeault cohomology에서 본격적으로 다룬다.
+이 마지막 두 예는 거의 복소구조의 위계를 보여준다. $S^4$는 거의 복소구조조차 갖지 못하고, $S^6$는 거의 복소구조는 갖지만 그 표준적인 것이 적분가능하지 않으며 (복소구조의 존재 여부는 미결), $S^2$는 거의 복소구조가 언제나 적분가능하다. 거의 복소구조에서 복소구조로 가는 다리가 Newlander–Nirenberg 정리이고, 그 다리를 건널 수 있는지를 가르는 척도가 Nijenhuis 텐서이다. 적분가능한 거의 복소구조 위에서 exterior derivative가 (p,q)-분해와 맞물려 $\partial$와 $\bar{\partial}$로 갈라지는 정밀한 구조는 Dolbeault cohomology에서 본격적으로 다룬다.
 
 ---
 

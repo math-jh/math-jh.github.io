@@ -79,21 +79,21 @@ $$\begin{aligned}f(q)&=f(p)+\sum_{i=1}^m\frac{\partial (f\circ\varphi^{-1})}{\pa
 
 이다. 우변을 살펴보면, $\mathbf{f}\in\mathfrak{m}_p$으로부터 $f(p)=0$이고, 또 우변의 적분은 $q$에 대한 $C^\infty$ 함수이다. 이제 $x^i$들은 모두 $x^i(p)=0$을 만족하는 함수이므로, 위 식을 germ으로 바꾸면 우변의 이중합은 $\mathfrak{m}_p^2$의 원소가 된다. 이를 모두 정리하면
 
-$$\mathbf{f}=\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0\mathbf{x}^i\mod \mathfrak{m}_p^2$$
+$$\mathbf{f}=\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\vert_0\mathbf{x}^i\mod{\mathfrak{m}}_p^2$$
 
 이 성립한다. $\mathbf{f}$는 임의의 원소이므로, $\mathfrak{m}_p/\mathfrak{m}_p^2$이 $\mathbf{x}^i+\mathfrak{m}_p^2$들로 생성됨을 알 수 있다.
 
 증명을 마무리하기 위해서는 이들 $m$개의 원소들 $\mathbf{x}^i+\mathfrak{m}_p^2$들이 일차독립임을 보여야 한다. 
 
-$$\sum_{i=1}^m a_i\mathbf{x}^i=0\mod \mathfrak{m}_p^2$$
+$$\sum_{i=1}^m a_i\mathbf{x}^i=0\mod{\mathfrak{m}}_p^2$$
 
 이라 하자. 그럼 $U$ 위에서 위 식은
 
-$$\sum_{i=1}^m a_i (x^i\circ\varphi^{-1})=0\mod \mathfrak{m}_0^2$$
+$$\sum_{i=1}^m a_i (x^i\circ\varphi^{-1})=0\mod{\mathfrak{m}}_0^2$$
 
 이 되고 (단, $\mathfrak{m}_0$은 점 $0\in\varphi(U)$에 대응되는 maximal ideal이다), $x^i\circ\varphi^{-1}=r^i$이므로 
 
-$$\sum_{i=1}^m a_i\mathbf{r}^i=0\mod \mathfrak{m}^2_0$$
+$$\sum_{i=1}^m a_i\mathbf{r}^i=0\mod{\mathfrak{m}}^2_0$$
 
 가 된다. 
 

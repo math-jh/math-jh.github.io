@@ -24,19 +24,19 @@ Consider an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and the system o
 
 A typical example is finding an appropriate function that represents given data. Of course, using Lagrange interpolation we can choose a suitable basis and find an $n$-th degree function approximating the given $n+1$ data points, but if we try to find a linear function representing this data, we cannot find an exact solution unless all the given $n+1$ points lie on a single straight line.
 
-We project an arbitrary given vector $y$ onto $\im A$, and then solve the equation $Ax=\hat y$ for this vector $\hat y=\proj_{\im(A)}y$. However, from the previous post we know that $y-\hat y\in (\im A)^\perp$, so we know that
+We project an arbitrary given vector $y$ onto $\im A$, and then solve the equation $Ax=\hat{y}$ for this vector $\hat{y}=\proj_{\im(A)}y$. However, from the previous post we know that $y-\hat{y}\in (\im A)^\perp$, so we know that
 
-$$\langle y-\hat y, v\rangle=0\qquad\text{for all $v\in \im A$}$$
+$$\langle y-\hat{y}, v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
 holds. Therefore we obtain the following equation:
 
-$$\langle y-\hat y, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
+$$\langle y-\hat{y}, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
 
 Now moving $A$ to the left gives
 
-$$\langle A^t(y-\hat y), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
+$$\langle A^t(y-\hat{y}), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
 
-and since $\langle-,-\rangle$ is non-degenerate, we know that $A^t(y-\hat y)=0$. Now since $\hat y=Ax$, we obtain the equation
+and since $\langle-,-\rangle$ is non-degenerate, we know that $A^t(y-\hat{y})=0$. Now since $\hat{y}=Ax$, we obtain the equation
 
 $$A^tAx=A^ty$$
 
@@ -98,26 +98,26 @@ The determinant of this coefficient matrix is $34\cdot 4-10\cdot 10=36$, so it i
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-Looking back at the derivation of [Proposition 1](#prop1){: data-lid="afcib" }, the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat y=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat y$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by
+Looking back at the derivation of [Proposition 1](#prop1){: data-lid="afcib" }, the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat{y}=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat{y}$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by
 
-$$\hat y=A(A^tA)^{-1}A^ty$$
+$$\hat{y}=A(A^tA)^{-1}A^ty$$
 
 The matrix $P=A(A^tA)^{-1}A^t$ appearing here represents the orthogonal projection onto $\im A$.
 
 ::: Example 4
 Returning to [Example 2](#ex2){: data-lid="mlh8m" }, let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, we have
 
-$$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
+$$\hat{y}=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
 and therefore the error is
 
-$$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
+$$y-\hat{y}=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
 
 Taking the inner product of this error with each of the two columns $(0,1,2)$ and $(1,1,1)$ of $A$ gives
 
 $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\right)=0,\qquad -\frac{1}{6}+\frac{1}{3}-\frac{1}{6}=0$$
 
-so we can verify that the error is perpendicular to $\im A$. At this time, the error is $\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$, which quantitatively represents the degree to which the given three points fail to be collinear.
+so we can verify that the error is perpendicular to $\im A$. At this time, the error is $\lVert y-\hat{y}\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$, which quantitatively represents the degree to which the given three points fail to be collinear.
 :::
 
 ## Pseudoinverse

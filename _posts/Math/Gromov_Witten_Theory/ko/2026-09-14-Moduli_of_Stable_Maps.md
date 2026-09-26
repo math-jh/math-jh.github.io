@@ -185,13 +185,13 @@ $$\rchi(Y,F)=\deg F+r(1-g(Y))$$
 
 을 준다. 
 
-우리의 domain $C$는 smooth curve는 아니지만, normalization $\nu:\widetilde C=\coprod_{j=1}^c\widetilde C_j\rightarrow C$을 통해 이 계산을 옮겨줄 수 있다. 각 $\widetilde C_j$의 genus를 $h_j$, node의 개수를 $d$, $E$의 rank를 $r$라 하자. Structure sheaf의 normalization exact sequence ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" } 직후)에 locally free sheaf $E$를 tensor하면
+우리의 domain $C$는 smooth curve는 아니지만, normalization $\nu:\widetilde{C}=\coprod_{j=1}^c\widetilde{C}_j\rightarrow C$을 통해 이 계산을 옮겨줄 수 있다. 각 $\widetilde{C}_j$의 genus를 $h_j$, node의 개수를 $d$, $E$의 rank를 $r$라 하자. Structure sheaf의 normalization exact sequence ([§마디 곡선의 변형, ⁋정의 1](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def1){: data-lid="uihgw" } 직후)에 locally free sheaf $E$를 tensor하면
 
-$$0\rightarrow E\rightarrow\nu_\ast\nu^\ast E\rightarrow\bigoplus_{q\in\Sing C}E\otimes_{\mathcal O_C}\kappa(q)\rightarrow0$$
+$$0\rightarrow E\rightarrow\nu_\ast\nu^\ast E\rightarrow\bigoplus_{q\in\Sing C}E\otimes_{\mathcal{O}_C}\kappa(q)\rightarrow0$$
 
 을 얻는다. 이제 이를 사용하면
 
-$$\rchi(C,E)=\sum_{j=1}^c\rchi(\widetilde C_j,\nu^\ast E\vert_{\widetilde C_j})-rd=\sum_{j=1}^c\left(\deg(\nu^\ast E\vert_{\widetilde C_j})+r(1-h_j)\right)-rd=\deg E+r\left(c-\sum_{j=1}^c h_j-d\right)=\deg E+r(1-g)$$
+$$\rchi(C,E)=\sum_{j=1}^c\rchi(\widetilde{C}_j,\nu^\ast E\vert_{\widetilde{C}_j})-rd=\sum_{j=1}^c\left(\deg(\nu^\ast E\vert_{\widetilde{C}_j})+r(1-h_j)\right)-rd=\deg E+r\left(c-\sum_{j=1}^c h_j-d\right)=\deg E+r(1-g)$$
 
 이고, 이 식에 $E=\mu^\ast T_X$를 대입하면 $\rank E=\dim X$이고, $\mu_\ast[C]=\beta$이므로 
 

@@ -58,7 +58,7 @@ $$\begin{aligned}
 ::: 예시 3 (적분의 비교환)
 $[0,1]$에서 $g_n$을 밑변 $[0, 1/n]$, 높이 $n$인 삼각형꼴 함수 (나머지에서 $0$) 로 두면, 각 점에서 $g_n(x) \rightarrow 0$이므로 점별극한은 $0$이다. 그러나 모든 $n$에서 $\int_0^1 g_n = 1/2$이므로
 
-$$\lim_{n\rightarrow\infty}\int_0^1 g_n = \frac12 \neq 0 = \int_0^1 \lim_{n\rightarrow\infty} g_n$$
+$$\lim_{n\rightarrow\infty}\int_0^1 g_n = \frac{1}{2} \neq 0 = \int_0^1 \lim_{n\rightarrow\infty} g_n$$
 
 이다. 즉 극한과 적분을 바꿔 쓸 수 없다.
 :::
@@ -90,7 +90,7 @@ $$f_n'(x) = \sqrt{n} \cos(nx)$$
 :::
 
 ::: 증명
-각 주장은 고정된 점 $x$에서의 수열 극한에 관한 사실로 환원된다. 만약 $(f_n)$이 $f$와 $\tilde f$ 양쪽으로 점별수렴한다면, 각 $x$에서 수열 $(f_n(x))$이 두 수 $f(x)$와 $\tilde f(x)$로 동시에 수렴하므로 수열 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2){: data-lid="wtjo1" }에 의해 $f(x) = \tilde f(x)$이고, 모든 $x$에서 같으니 $f = \tilde f$이다. 선형성과 곱은 각 $x$에서
+각 주장은 고정된 점 $x$에서의 수열 극한에 관한 사실로 환원된다. 만약 $(f_n)$이 $f$와 $\tilde{f}$ 양쪽으로 점별수렴한다면, 각 $x$에서 수열 $(f_n(x))$이 두 수 $f(x)$와 $\tilde{f}(x)$로 동시에 수렴하므로 수열 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2){: data-lid="wtjo1" }에 의해 $f(x) = \tilde{f}(x)$이고, 모든 $x$에서 같으니 $f = \tilde{f}$이다. 선형성과 곱은 각 $x$에서
 
 $$\begin{aligned}
 \lim_{n\rightarrow\infty}\bigl(f_n(x) + c g_n(x)\bigr) &= \lim_{n\rightarrow\infty} f_n(x) + c\lim_{n\rightarrow\infty} g_n(x) = f(x) + c g(x),\\
@@ -150,7 +150,7 @@ f_n'(x) &= n (1-x^2)^{n-1}\bigl(1 - (2n+1)x^2\bigr) = 0 \implies x_n = \frac{1}{
 M_n = f_n(x_n) &= \frac{n}{\sqrt{2n+1}}\Bigl(1 - \frac{1}{2n+1}\Bigr)^n = \frac{n}{\sqrt{2n+1}}\Bigl(\frac{2n}{2n+1}\Bigr)^n
 \end{aligned}$$
 
-이고, $\bigl(2n/(2n+1)\bigr)^n \rightarrow e^{-1/2}$이며 $n/\sqrt{2n+1} \sim \sqrt{n}/\sqrt 2 \rightarrow \infty$이므로 $M_n \rightarrow \infty$이다. 극한함수가 연속임에도 최대 격차가 발산하니, 수렴은 결코 균등하지 않다.
+이고, $\bigl(2n/(2n+1)\bigr)^n \rightarrow e^{-1/2}$이며 $n/\sqrt{2n+1} \sim \sqrt{n}/\sqrt{2} \rightarrow \infty$이므로 $M_n \rightarrow \infty$이다. 극한함수가 연속임에도 최대 격차가 발산하니, 수렴은 결코 균등하지 않다.
 :::
 
 이 예시는 연속함수로의 점별수렴조차 "고른" 수렴과는 거리가 멀 수 있음을 보인다. 봉우리 $x_n = 1/\sqrt{2n+1}$이 원점으로 다가가며 그 높이가 무한히 커지므로, 어떤 고정된 점에서도 결국 $0$으로 가지만 함수열 전체로 보면 줄곧 큰 봉우리를 유지하는 것이다.

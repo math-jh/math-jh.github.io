@@ -156,35 +156,35 @@ holds. From this we see that any subspace can be realized as the kernel of a sui
 The most important property of the natural projection is the following universal property. It says that any linear map sending $W$ to $0$ factors uniquely through $V/W$.
 
 ::: Proposition 6
-Let $V$ be a $\mathbb{K}$-vector space, $W\leq V$ a subspace, and $L:V\rightarrow U$ a linear map to another $\mathbb{K}$-vector space $U$ satisfying $W\subseteq\ker L$. Then there exists a unique linear map $\bar L:V/W\rightarrow U$ defined by
+Let $V$ be a $\mathbb{K}$-vector space, $W\leq V$ a subspace, and $L:V\rightarrow U$ a linear map to another $\mathbb{K}$-vector space $U$ satisfying $W\subseteq\ker L$. Then there exists a unique linear map $\bar{L}:V/W\rightarrow U$ defined by
 
-$$\bar L(v+W)=L(v)$$
+$$\bar{L}(v+W)=L(v)$$
 
-such that $L=\bar L\circ p$.
+such that $L=\bar{L}\circ p$.
 :::
 ::: Proof
-First we show that $\bar L$ is well defined. If $v+W=v'+W$, then $v-v'\in W\subseteq\ker L$, so
+First we show that $\bar{L}$ is well defined. If $v+W=v'+W$, then $v-v'\in W\subseteq\ker L$, so
 
 $$L(v)-L(v')=L(v-v')=0$$
 
-and hence $L(v)=L(v')$. Thus the value of $\bar L(v+W)$ is independent of the choice of representative. That $\bar L$ is linear follows from
+and hence $L(v)=L(v')$. Thus the value of $\bar{L}(v+W)$ is independent of the choice of representative. That $\bar{L}$ is linear follows from
 
-$$\bar L\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar L\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar L(v+W)+\bar L(v'+W).$$
+$$\bar{L}\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar{L}\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar{L}(v+W)+\bar{L}(v'+W).$$
 
-Also, for any $v\in V$ we have $(\bar L\circ p)(v)=\bar L(v+W)=L(v)$, so $L=\bar L\circ p$. Finally, if a linear map $L':V/W\rightarrow U$ satisfies $L=L'\circ p$, then since $p$ is surjective, for any $v+W\in V/W$ we have $L'(v+W)=L'(p(v))=L(v)=\bar L(v+W)$, and therefore $L'=\bar L$.
+Also, for any $v\in V$ we have $(\bar{L}\circ p)(v)=\bar{L}(v+W)=L(v)$, so $L=\bar{L}\circ p$. Finally, if a linear map $L':V/W\rightarrow U$ satisfies $L=L'\circ p$, then since $p$ is surjective, for any $v+W\in V/W$ we have $L'(v+W)=L'(p(v))=L(v)=\bar{L}(v+W)$, and therefore $L'=\bar{L}$.
 :::
 
 Applying the above universal property to the case $W=\ker L$ yields the following theorem, which is central to classifying vector spaces.
 
 ::: Theorem 7 (First Isomorphism Theorem)
-For two $\mathbb{K}$-vector spaces $V,U$ and a linear map $L:V\rightarrow U$, the linear map $\bar L:V/\ker L\rightarrow \im L$ defined by
+For two $\mathbb{K}$-vector spaces $V,U$ and a linear map $L:V\rightarrow U$, the linear map $\bar{L}:V/\ker L\rightarrow \im L$ defined by
 
-$$\bar L(v+\ker L)=L(v)$$
+$$\bar{L}(v+\ker L)=L(v)$$
 
 is an isomorphism. That is, $V/\ker L\cong\im L$.
 :::
 ::: Proof
-Setting $W=\ker L$, [Proposition 6](#prop6){: data-lid="hbvay" } gives that the linear map $\bar L:V/\ker L\rightarrow U$ defined by $\bar L(v+\ker L)=L(v)$ is well defined, and its image equals $\im L$. Restricting the codomain to $\im L$, we obtain that $\bar L:V/\ker L\rightarrow\im L$ is surjective. On the other hand, if $\bar L(v+\ker L)=0$, then $L(v)=0$, i.e. $v\in\ker L$, so $v+\ker L=\ker L$ is the zero vector of $V/\ker L$. Hence $\ker\bar L=\{0\}$, and therefore $\bar L$ is injective. ([§Linear Maps, ⁋Proposition 8](/en/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" }) Thus $\bar L$ is a bijective linear map, hence an isomorphism. ([§Isomorphisms, ⁋Lemma 2](/en/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" })
+Setting $W=\ker L$, [Proposition 6](#prop6){: data-lid="hbvay" } gives that the linear map $\bar{L}:V/\ker L\rightarrow U$ defined by $\bar{L}(v+\ker L)=L(v)$ is well defined, and its image equals $\im L$. Restricting the codomain to $\im L$, we obtain that $\bar{L}:V/\ker L\rightarrow\im L$ is surjective. On the other hand, if $\bar{L}(v+\ker L)=0$, then $L(v)=0$, i.e. $v\in\ker L$, so $v+\ker L=\ker L$ is the zero vector of $V/\ker L$. Hence $\ker\bar{L}=\{0\}$, and therefore $\bar{L}$ is injective. ([§Linear Maps, ⁋Proposition 8](/en/math/linear_algebra/linear_map#prop8){: data-lid="o5uu6" }) Thus $\bar{L}$ is a bijective linear map, hence an isomorphism. ([§Isomorphisms, ⁋Lemma 2](/en/math/linear_algebra/isomorphic_vector_spaces#lem2){: data-lid="8qnn6" })
 :::
 
 Combining [Theorem 7](#thm7){: data-lid="3upyz" } and [Theorem 5](#thm5){: data-lid="10mfu" } above, we recover the rank-nullity theorem. Indeed, for finite-dimensional $V$,

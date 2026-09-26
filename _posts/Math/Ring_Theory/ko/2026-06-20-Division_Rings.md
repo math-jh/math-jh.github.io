@@ -155,7 +155,7 @@ $$i^2=j^2=k^2=-1,\qquad ij=k,\quad jk=i,\quad ki=j,\qquad ji=-k,\quad kj=-i,\qua
 
 관계식을 bilinear하게 확장했다는 것만으로는 이 곱셈이 결합적이라는 것이 따라오지 않으므로, 이는 따로 확인해야 한다. 가장 간단한 방법은 $\mathbb{H}$를 $2\times 2$ complex matrix들의 ring $\Mat_2(\mathbb{C})$ 안에서 실현하는 것이다. 주어진 quaternion $q=a+bi+cj+dk$에 대해 $z=a+bi$, $w=c+di$로 두고 $\mathbb{R}$-linear map $\varphi:\mathbb{H}\rightarrow\Mat_2(\mathbb{C})$를
 
-$$\varphi(q)=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
+$$\varphi(q)=\begin{pmatrix}z&w\\ -\bar{w}&\bar{z}\end{pmatrix}$$
 
 로 정의하면, 기저원소들의 상은
 
@@ -170,24 +170,24 @@ $$\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$$
 ::: 정의 8
 Quaternion $q=a+bi+cj+dk$에 대하여, 그 *conjugate<sub>켤레</sub>*를
 
-$$\bar q=a-bi-cj-dk$$
+$$\bar{q}=a-bi-cj-dk$$
 
 로, *norm<sub>노름</sub>*을
 
-$$N(q)=q\bar q$$
+$$N(q)=q\bar{q}$$
 
 로 정의한다.
 :::
 
-임의의 quaternion $q=a+bi+cj+dk$에 대해, conjugate $\bar q$를 곱하면 실제로 [정의 7](#def7){: data-lid="bq7yw" }의 관계식들에 의해 $i,j,k$ 항의 계수가 모두 상쇄되어
+임의의 quaternion $q=a+bi+cj+dk$에 대해, conjugate $\bar{q}$를 곱하면 실제로 [정의 7](#def7){: data-lid="bq7yw" }의 관계식들에 의해 $i,j,k$ 항의 계수가 모두 상쇄되어
 
-$$N(q)=q\bar q=a^2+b^2+c^2+d^2\in\mathbb{R}$$
+$$N(q)=q\bar{q}=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
-이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다. 또, $\bar q$의 conjugate가 다시 $q$이므로 $\bar qq=\bar q\bar{\bar q}=N(\bar q)=a^2+(-b)^2+(-c)^2+(-d)^2=N(q)$이며, 따라서 $q\bar q$와 $\bar qq$는 모두 $N(q)$와 같다. 
+이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다. 또, $\bar{q}$의 conjugate가 다시 $q$이므로 $\bar{q}q=\bar{q}\bar{\bar{q}}=N(\bar{q})=a^2+(-b)^2+(-c)^2+(-d)^2=N(q)$이며, 따라서 $q\bar{q}$와 $\bar{q}q$는 모두 $N(q)$와 같다. 
 
-Norm의 또 다른 성질 중 하나는 이것이 곱셈을 보존한다는 것이다. 실제로, conjugate가 $\overline{q_1q_2}=\bar q_2\bar q_1$을 만족하는 것은 쉽게 확인할 수 있고, 이를 이용하면
+Norm의 또 다른 성질 중 하나는 이것이 곱셈을 보존한다는 것이다. 실제로, conjugate가 $\overline{q_1q_2}=\bar{q}_2\bar{q}_1$을 만족하는 것은 쉽게 확인할 수 있고, 이를 이용하면
 
-$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar q_2\bar q_1=q_1N(q_2)\bar q_1=N(q_2)q_1\bar q_1=N(q_1)N(q_2)$$
+$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar{q}_2\bar{q}_1=q_1N(q_2)\bar{q}_1=N(q_2)q_1\bar{q}_1=N(q_1)N(q_2)$$
 
 이 성립한다. 이 곱셈성을 좌표로 풀어쓰면
 
@@ -203,13 +203,13 @@ $\mathbb{H}$가 $1\neq 0$인 ring임은 위에서 확인하였고, commutative�
 
 $q=a+bi+cj+dk\neq 0$이라 하면, 우리는 위에서 $N(q)=a^2+b^2+c^2+d^2$이 양의 실수임을 보았다. 그럼 이는 $\mathbb{H}$의 원소로 볼 수 있으며, 뿐만 아니라 $\mathbb{H}$의 모든 원소와 commute한다. 이는 $N(q)$의 역수 $N(q)^{-1}$ 또한 마찬가지이며, 따라서
 
-$$q\cdot\bigl(N(q)^{-1}\bar q\bigr)=N(q)^{-1}(q\bar q)=N(q)^{-1}N(q)=1$$
+$$q\cdot\bigl(N(q)^{-1}\bar{q}\bigr)=N(q)^{-1}(q\bar{q})=N(q)^{-1}N(q)=1$$
 
 이고, 같은 방식으로
 
-$$\bigl(N(q)^{-1}\bar q\bigr)\cdot q=N(q)^{-1}(\bar q q)=N(q)^{-1}N(q)=1$$
+$$\bigl(N(q)^{-1}\bar{q}\bigr)\cdot q=N(q)^{-1}(\bar{q} q)=N(q)^{-1}N(q)=1$$
 
-가 되는 것을 확인할 수 있다. 즉, $q^{-1}=N(q)^{-1}\bar q$가 $q$의 양쪽 역원이며 이로부터 원하는 주장을 얻는다. 
+가 되는 것을 확인할 수 있다. 즉, $q^{-1}=N(q)^{-1}\bar{q}$가 $q$의 양쪽 역원이며 이로부터 원하는 주장을 얻는다. 
 :::
 
 ## 단순 가군의 자기사상환
@@ -240,13 +240,13 @@ $$\rho_q(ux)=uxq=u\rho_q(x)\qquad(u\in\mathbb{C})$$
 
 $$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
-는 단사 ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7){: data-lid="76vnm" }의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar uj$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
+는 단사 ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7){: data-lid="76vnm" }의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar{u}j$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
 
-$$\rho_q(j)=jq=jz+jwj=\bar zj+\bar wj^2=-\bar w+\bar zj$$
+$$\rho_q(j)=jq=jz+jwj=\bar{z}j+\bar{w}j^2=-\bar{w}+\bar{z}j$$
 
 로부터
 
-$$M_q=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
+$$M_q=\begin{pmatrix}z&w\\ -\bar{w}&\bar{z}\end{pmatrix}$$
 
 를 얻는다. 이것이 앞서 적은 행렬표현이며, 그 determinant $\lvert z\rvert^2+\lvert w\rvert^2$는 곧 norm $N(q)$이므로, nonzero $q$에 대하여 $M_q$가 가역행렬이라는 사실은 [명제 9](#prop9){: data-lid="ab0ch" }가 보인 것과 같은 내용이다.
 

@@ -61,13 +61,13 @@ In particular, substituting $x = 1$ gives $e = \sum 1/n!$, and this number coinc
 
 The proof is as follows. Let $L = \lim(1+1/n)^n$ be the limit value and $s_m = \sum 1/k!$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8){: data-lid="2rcxn" } above, we already showed by the binomial theorem that
 
-$$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
+$$\left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 and also that this sequence is increasing so that its limit $L$ is the supremum of its terms.
 
 First, since each factor $1 - j/n$ in the product is at most $1$, the above sum is at most $\sum_{k=0}^n 1/k! = s_n$, and the partial sum is again at most its limit $s = \sum_{n=0}^\infty 1/n!$, so $(1 + 1/n)^n \leq s$ for all $n$. Since $L$ is the supremum of the terms and $s$ is an upper bound, we obtain $L \leq s$. Conversely, fixing $m$ and considering only $n \geq m$, we drop the nonnegative later terms in the above sum to obtain
 
-$$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
+$$\left(1 + \frac{1}{n}\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 The left-hand side is at most $L$, so the right-hand side is also at most $L$, and sending $n \rightarrow \infty$ with $m$ fixed, the right-hand side is a finite sum and each factor satisfies $1 - j/n \rightarrow 1$, so by [§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2){: data-lid="7fjeq" } it converges to $s_m$. If every term of a convergent sequence is at most $L$, then its limit is also at most $L$, so $s_m \leq L$, and sending $m \rightarrow \infty$ gives $s \leq L$. Combining the two inequalities yields $L = s$, that is, the $e$ defined in the two posts is the same number.
 :::

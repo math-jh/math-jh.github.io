@@ -53,32 +53,32 @@ $\Gamma(X, -)$는 left exact functor이고 $\Sh(X)$는 enough injective를 가�
 한편 우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology){: data-lid="5pgvu" }에서 Čech cohomology 또한 도입하였는데, 이는 사실 위상공간 수준의 정의이므로 scheme 위에서도 아무것도 바꿀 필요 없이 그대로 작동한다. 해당 글에서와 마찬가지로, sheaf cohomology의 정의는 [정의 1](#def1){: data-lid="rlbuq" }이 그 본질을 정확히 담고 있지만, 이를 실제로 사용하기 위해서는 Čech cohomology로 옮겨오는 것이 보통이다. 이를 가능하게 했던 결과는 [\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12){: data-lid="fjzpr" }로, affine variety 위에서 quasi-coherent sheaf의 higher cohomology가 소멸한다는 결과였다. 이 명제의 scheme 버전은 다음과 같다. 
 
 ::: 정리 3 (Serre)
-Noetherian ring $A$가 정의하는 affine scheme $X=\Spec A$와 그 위의 quasi-coherent sheaf $\mathcal{F}=\widetilde M$에 대하여,
+Noetherian ring $A$가 정의하는 affine scheme $X=\Spec A$와 그 위의 quasi-coherent sheaf $\mathcal{F}=\widetilde{M}$에 대하여,
 
 $$H^i(X, \mathcal{F})=0 \qquad (i>0)$$
 
 이 성립한다.
 :::
 ::: 증명
-[§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9){: data-lid="wzd4l" }에 의하여 $\QCoh(\Spec A)$는 $\rMod{A}$와 동치이므로, $\mathcal{F}=\widetilde M$인 $A$-module $M$이 존재한다. $\rMod{A}$는 enough injective를 가지므로 $M$의 injective resolution
+[§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9){: data-lid="wzd4l" }에 의하여 $\QCoh(\Spec A)$는 $\rMod{A}$와 동치이므로, $\mathcal{F}=\widetilde{M}$인 $A$-module $M$이 존재한다. $\rMod{A}$는 enough injective를 가지므로 $M$의 injective resolution
 
 $$0 \rightarrow M \rightarrow I^0 \rightarrow I^1 \rightarrow \cdots$$
 
 을 잡자. associated sheaf functor $\widetilde{(-)}$는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6){: data-lid="zglxv" }),
 
-$$0 \rightarrow \widetilde M \rightarrow \widetilde{I^0} \rightarrow \widetilde{I^1} \rightarrow \cdots$$
+$$0 \rightarrow \widetilde{M} \rightarrow \widetilde{I^0} \rightarrow \widetilde{I^1} \rightarrow \cdots$$
 
 은 $\Spec A$ 위의 sheaf의 resolution이다. 우리의 주장은 각각의 $\widetilde{I^k}$이 $\Gamma(\Spec A, -)$-acyclic이라는 것이며, 이것이 성립하면 [\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17){: data-lid="9uyp8" }에 의하여
 
-$$H^i(\Spec A, \widetilde M)\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet})\bigr)=H^i(I^\bullet)$$
+$$H^i(\Spec A, \widetilde{M})\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet})\bigr)=H^i(I^\bullet)$$
 
-을 얻는다. 여기에서 두 번째 등식은 associated sheaf의 global section이 원래의 module이라는 것에서 따라오며 ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4){: data-lid="n4vfi" }), $M \rightarrow I^\bullet$이 quasi-isomorphism이므로 우변의 cohomology는 $i>0$에서 모두 소멸한다. 따라서 $H^i(\Spec A, \widetilde M)=0$ ($i>0$)이다.
+을 얻는다. 여기에서 두 번째 등식은 associated sheaf의 global section이 원래의 module이라는 것에서 따라오며 ([§준연접층, ⁋정의 4](/ko/math/scheme_theory/quasicoherent_sheaves#def4){: data-lid="n4vfi" }), $M \rightarrow I^\bullet$이 quasi-isomorphism이므로 우변의 cohomology는 $i>0$에서 모두 소멸한다. 따라서 $H^i(\Spec A, \widetilde{M})=0$ ($i>0$)이다.
 
-남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보인다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16){: data-lid="togdz" }) $\Spec A$의 열린집합은 모두 $U=\Spec A\setminus Z(\mathfrak{a})$의 꼴이므로, 각각에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 보이면 된다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
+남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde{I}$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde{I}$이 flasque임을 보인다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16){: data-lid="togdz" }) $\Spec A$의 열린집합은 모두 $U=\Spec A\setminus Z(\mathfrak{a})$의 꼴이므로, 각각에 대하여 restriction $\widetilde{I}(\Spec A)=I\rightarrow\widetilde{I}(U)$이 surjective임을 보이면 된다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
 
-$$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
+$$I\longrightarrow\widetilde{I}(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
 
-이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde I(V)$이 $\widetilde I(U)$를 지나 인수분해되므로 $\widetilde I(U) \rightarrow \widetilde I(V)$ 또한 surjective이고, 곧 $\widetilde I$은 flasque이다.
+이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde{I}(V)$이 $\widetilde{I}(U)$를 지나 인수분해되므로 $\widetilde{I}(U) \rightarrow \widetilde{I}(V)$ 또한 surjective이고, 곧 $\widetilde{I}$은 flasque이다.
 :::
 
 [정리 3](#thm3){: data-lid="97nig" }에서 Noetherian 가정은 증명의 편의를 위한 것으로, 실은 그 결과는 임의의 ring $A$에 대하여 성립한다. 다만 이는 이 글의 범위를 벗어나므로 증명은 싣지 않고, 아래의 [따름정리 4](#cor4){: data-lid="purjn" }와 [따름정리 5](#cor5){: data-lid="qk3lk" }, 그리고 임의의 ring 위의 projective space를 다루는 [정리 7](#thm7){: data-lid="vrria" }에서만 이 일반적인 형태를 사용한다.
@@ -102,12 +102,12 @@ $$H^i(Y,f_\ast\mathcal{F})\cong H^i(X,\mathcal{F})$$
 $R^qf_\ast\mathcal{F}$는 presheaf $V\mapsto H^q(f^{-1}(V),\mathcal{F}\vert_{f^{-1}(V)})$의 sheafification이다. $V\subseteq Y$가 affine이면 $f$가 affine morphism이므로 $f^{-1}(V)$도 affine이고, $\mathcal{F}\vert_{f^{-1}(V)}$는 quasi-coherent sheaf이므로 [정리 3](#thm3){: data-lid="ndyjr" }에 의하여 $q>0$에서 이 cohomology가 소멸한다. Affine open subset들이 $Y$의 base를 이루므로 $R^qf_\ast\mathcal{F}=0$이다. 따라서 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19){: data-lid="ayoz9" }의 Leray spectral sequence는 $q=0$인 행만 남고, 두 번째 isomorphism을 준다.
 :::
 
-이로부터 곧바로 affine covering에 대한 Leray theorem을 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-lid="lun3p" }은 cover $\mathcal{U}$의 모든 유한 교집합 위에서 $\mathcal{F}$가 acyclic이면 $\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다. 여기서 더할 가정은 affine들의 교집합이 다시 affine이 되도록 하는 조건인 separatedness 뿐이다. ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3){: data-lid="v66wp" })
+이로부터 곧바로 affine covering에 대한 Leray theorem을 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11){: data-lid="lun3p" }은 cover $\mathcal{U}$의 모든 유한 교집합 위에서 $\mathcal{F}$가 acyclic이면 $\check{H}^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다. 여기서 더할 가정은 affine들의 교집합이 다시 affine이 되도록 하는 조건인 separatedness 뿐이다. ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3){: data-lid="v66wp" })
 
 ::: 따름정리 5
 Separated scheme $X$와 그 위의 quasi-coherent sheaf $\mathcal{F}$, 그리고 affine open cover $\mathcal{U}=\{U_i\}$에 대하여, 모든 $p$에 대해
 
-$$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
+$$\check{H}^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 
 이 성립한다.
 :::
@@ -444,7 +444,7 @@ $$\rchi(\mathcal{F}(d))=P_\mathcal{F}(d)$$
 
 먼저 $X=\mathbb{P}^n_\mathbb{K}$인 경우로 환원한다. Closed embedding $\iota:X\hookrightarrow\mathbb{P}^n_\mathbb{K}$에 대하여, [정리 9](#thm9){: data-lid="qoq9c" } 직전의 isomorphism $(\ast)$을 [정리 10](#thm10){: data-lid="qj82d" }의 증명에서 본 등식 $\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$과 결합하면 $H^i(X, \mathcal{F}(d))\cong H^i(\mathbb{P}^n, (\iota_\ast\mathcal{F})(d))$이고 $\supp\iota_\ast\mathcal{F}=\iota(\supp\mathcal{F})$이므로, [정리 9](#thm9){: data-lid="o8jy6" }의 증명에서 보았듯 coherent인 $\iota_\ast\mathcal{F}$로 $\mathcal{F}$를 바꾸어도 무방하다.
 
-뿐만 아니라, 우리는 field $\mathbb{K}$가 *infinite* field라 가정해도 된다. 정리의 결론이 cohomology의 차원들과 $\supp\mathcal{F}$의 차원만으로 진술되므로, 이를 보이기 위해서는 infinite field로의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$에 대하여 이 두 불변량들이 보존된다는 것을 보이면 된다. 우선 cohomology의 차원의 경우, standard affine cover에 대한 Čech complex는 계수만 바꿔준 $\check C^\bullet(\mathcal{U}, \mathcal{F})\otimes_\mathbb{K}\mathbb{L}$이고 $-\otimes_\mathbb{K}\mathbb{L}$은 exact이므로, [따름정리 5](#cor5){: data-lid="kum72" }에 의하여 $\dim_\mathbb{L}H^i(\mathbb{P}^n_\mathbb{L}, \mathcal{F}_\mathbb{L}(d))=\dim_\mathbb{K}H^i(\mathbb{P}^n_\mathbb{K}, \mathcal{F}(d))$이다. Support의 차원의 경우, 우리는 우선 support 자체가 field extension과 호환됨을 본다. 각각의 affine chart $\Spec A$ 위에서 $\mathcal{F}$에 대응하는 finitely generated module $M$의 generator $m_1,\ldots, m_r$를 잡으면, $\ann M$은 $a\mapsto(am_1,\ldots, am_r)$로 주어지는 $A \rightarrow M^{\oplus r}$의 kernel이다. ([\[가환대수학\] §기본 개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1){: data-lid="vv6fy" }) 그런데 $m_k\otimes1$들이 $M\otimes_\mathbb{K}\mathbb{L}$을 생성하고 $-\otimes_\mathbb{K}\mathbb{L}$이 kernel을 보존하므로 $\ann(M\otimes_\mathbb{K}\mathbb{L})=(\ann M)\otimes_\mathbb{K}\mathbb{L}$이고, 따라서 $\supp\mathcal{F}$가 chart마다 $\Spec(A/\ann M)$이면 $\supp\mathcal{F}_\mathbb{L}$은 chart마다 $\Spec\bigl((A/\ann M)\otimes_\mathbb{K}\mathbb{L}\bigr)$로 주어진다. 이제 finitely generated $\mathbb{K}$-algebra의 차원은 field extension에 의해 변하지 않으므로 ([\[가환대수학\] §뇌터 정규화, ⁋명제 5](/ko/math/commutative_algebra/noether_normalization#prop5){: data-lid="piea1" }) 이 두 불변량이 보존되고 따라서 처음부터 $\mathbb{K}$가 무한체라 두어도 된다.
+뿐만 아니라, 우리는 field $\mathbb{K}$가 *infinite* field라 가정해도 된다. 정리의 결론이 cohomology의 차원들과 $\supp\mathcal{F}$의 차원만으로 진술되므로, 이를 보이기 위해서는 infinite field로의 extension $\mathbb{K}\hookrightarrow \mathbb{L}$에 대하여 이 두 불변량들이 보존된다는 것을 보이면 된다. 우선 cohomology의 차원의 경우, standard affine cover에 대한 Čech complex는 계수만 바꿔준 $\check{C}^\bullet(\mathcal{U}, \mathcal{F})\otimes_\mathbb{K}\mathbb{L}$이고 $-\otimes_\mathbb{K}\mathbb{L}$은 exact이므로, [따름정리 5](#cor5){: data-lid="kum72" }에 의하여 $\dim_\mathbb{L}H^i(\mathbb{P}^n_\mathbb{L}, \mathcal{F}_\mathbb{L}(d))=\dim_\mathbb{K}H^i(\mathbb{P}^n_\mathbb{K}, \mathcal{F}(d))$이다. Support의 차원의 경우, 우리는 우선 support 자체가 field extension과 호환됨을 본다. 각각의 affine chart $\Spec A$ 위에서 $\mathcal{F}$에 대응하는 finitely generated module $M$의 generator $m_1,\ldots, m_r$를 잡으면, $\ann M$은 $a\mapsto(am_1,\ldots, am_r)$로 주어지는 $A \rightarrow M^{\oplus r}$의 kernel이다. ([\[가환대수학\] §기본 개념들, ⁋정의 1](/ko/math/commutative_algebra/basic_notions#def1){: data-lid="vv6fy" }) 그런데 $m_k\otimes1$들이 $M\otimes_\mathbb{K}\mathbb{L}$을 생성하고 $-\otimes_\mathbb{K}\mathbb{L}$이 kernel을 보존하므로 $\ann(M\otimes_\mathbb{K}\mathbb{L})=(\ann M)\otimes_\mathbb{K}\mathbb{L}$이고, 따라서 $\supp\mathcal{F}$가 chart마다 $\Spec(A/\ann M)$이면 $\supp\mathcal{F}_\mathbb{L}$은 chart마다 $\Spec\bigl((A/\ann M)\otimes_\mathbb{K}\mathbb{L}\bigr)$로 주어진다. 이제 finitely generated $\mathbb{K}$-algebra의 차원은 field extension에 의해 변하지 않으므로 ([\[가환대수학\] §뇌터 정규화, ⁋명제 5](/ko/math/commutative_algebra/noether_normalization#prop5){: data-lid="piea1" }) 이 두 불변량이 보존되고 따라서 처음부터 $\mathbb{K}$가 무한체라 두어도 된다.
 
 이제 증명의 전체 구도는 [정리 9](#thm9){: data-lid="w99ne" }과 [정리 10](#thm10){: data-lid="w2ayd" }의 증명에서 쓴 dévissage와 같아서, short exact sequence
 

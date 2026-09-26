@@ -18,32 +18,32 @@ published: false
 
 ## 길이 범함수와 에너지 범함수
 
-곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2){: data-lid="m55pi" } 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
+곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot{\gamma}(t)\rVert_g \dd{t}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot{\gamma}(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2){: data-lid="m55pi" } 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
 
 ::: 정의 1
 Riemannian manifold $(M, g)$ 위의 곡선 $\gamma : [a, b] \rightarrow M$의 *에너지<sub>energy</sub>* $E(\gamma)$는 다음의 식
 
-$$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot\gamma(t)\rVert_g^2 \dd{t} = \frac{1}{2}\int_a^b \langle \dot\gamma(t), \dot\gamma(t)\rangle_g \dd{t}$$
+$$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot{\gamma}(t)\rVert_g^2 \dd{t} = \frac{1}{2}\int_a^b \langle \dot{\gamma}(t), \dot{\gamma}(t)\rangle_g \dd{t}$$
 
 으로 정의된다.
 :::
 
-상수 $1/2$은 본질적인 것이 아니라 뒤의 제1변분 공식에서 인수 $2$를 상쇄하기 위한 관례적 선택이다. 길이와 달리 에너지의 피적분함수 $\langle \dot\gamma, \dot\gamma\rangle$는 $\dot\gamma$에 대해 매끄러우며, 또한 reparametrization에 의존한다. 다음 명제는 두 functional이 Cauchy-Schwarz 부등식으로 연결되며, 그 등호가 성립하는 경우가 정확히 *일정한 속력*으로 움직이는 parametrization임을 보여준다.
+상수 $1/2$은 본질적인 것이 아니라 뒤의 제1변분 공식에서 인수 $2$를 상쇄하기 위한 관례적 선택이다. 길이와 달리 에너지의 피적분함수 $\langle \dot{\gamma}, \dot{\gamma}\rangle$는 $\dot{\gamma}$에 대해 매끄러우며, 또한 reparametrization에 의존한다. 다음 명제는 두 functional이 Cauchy-Schwarz 부등식으로 연결되며, 그 등호가 성립하는 경우가 정확히 *일정한 속력*으로 움직이는 parametrization임을 보여준다.
 
 ::: 명제 2
 곡선 $\gamma : [a, b] \rightarrow M$에 대해 다음의 부등식
 
 $$\length(\gamma)^2 \le 2(b - a) E(\gamma)$$
 
-이 성립하며, 등호가 성립하는 것은 $\lVert \dot\gamma(t)\rVert_g$가 $[a, b]$ 위에서 상수인 것, 즉 $\gamma$가 일정한 속력을 갖는 것과 동치이다.
+이 성립하며, 등호가 성립하는 것은 $\lVert \dot{\gamma}(t)\rVert_g$가 $[a, b]$ 위에서 상수인 것, 즉 $\gamma$가 일정한 속력을 갖는 것과 동치이다.
 :::
 
 ::: 증명
-$L^2([a, b])$의 두 함수 $f(t) = \lVert \dot\gamma(t)\rVert_g$와 $h(t) \equiv 1$에 Cauchy-Schwarz 부등식 $\left(\int_a^b f h \dd{t}\right)^2 \le \int_a^b f^2 \dd{t} \int_a^b h^2 \dd{t}$을 적용하면
+$L^2([a, b])$의 두 함수 $f(t) = \lVert \dot{\gamma}(t)\rVert_g$와 $h(t) \equiv 1$에 Cauchy-Schwarz 부등식 $\left(\int_a^b f h \dd{t}\right)^2 \le \int_a^b f^2 \dd{t} \int_a^b h^2 \dd{t}$을 적용하면
 
-$$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \dd{t}\right)^2 \le \left(\int_a^b \lVert \dot\gamma(t)\rVert_g^2 \dd{t}\right)\left(\int_a^b 1 \dd{t}\right) = 2(b - a) E(\gamma)$$
+$$\length(\gamma)^2 = \left(\int_a^b \lVert \dot{\gamma}(t)\rVert_g \dd{t}\right)^2 \le \left(\int_a^b \lVert \dot{\gamma}(t)\rVert_g^2 \dd{t}\right)\left(\int_a^b 1 \dd{t}\right) = 2(b - a) E(\gamma)$$
 
-를 얻는다. Cauchy-Schwarz 부등식의 등호 조건은 $f$와 $h$가 일차종속, 즉 $f$가 상수배 $h$인 것이므로, 여기서는 $\lVert \dot\gamma(t)\rVert_g$가 상수인 것과 동치이다.
+를 얻는다. Cauchy-Schwarz 부등식의 등호 조건은 $f$와 $h$가 일차종속, 즉 $f$가 상수배 $h$인 것이므로, 여기서는 $\lVert \dot{\gamma}(t)\rVert_g$가 상수인 것과 동치이다.
 :::
 
 따라서 일정한 속력을 갖는 곡선들만 비교한다면 에너지를 최소화하는 것과 길이를 최소화하는 것이 일치한다. 임의의 곡선은 (속력이 $0$인 점이 없을 때) arc length로 reparametrize해 일정한 속력을 갖도록 만들 수 있으므로, 길이의 최소화 문제를 에너지의 최소화 문제로 옮겨 다루어도 일반성을 잃지 않는다. 이것이 우리가 다루기 쉬운 에너지를 통해 측지선을 정의하는 근거이다.
@@ -65,11 +65,11 @@ $$D_s \partial_t \Gamma = D_t \partial_s \Gamma$$
 ::: 정리 3 (에너지의 제1변분)
 곡선 $\gamma : [a, b] \rightarrow M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
 
-$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V(t), D_t \dot\gamma(t)\rangle \dd{t}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot{\gamma}(b)\rangle - \langle V(a), \dot{\gamma}(a)\rangle - \int_a^b \langle V(t), D_t \dot{\gamma}(t)\rangle \dd{t}$$
 
 이 성립한다. 특히 $\Gamma$가 고정변분이면 우변의 경계항이 소멸하여
 
-$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = -\int_a^b \langle V(t), D_t \dot\gamma(t)\rangle \dd{t}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = -\int_a^b \langle V(t), D_t \dot{\gamma}(t)\rangle \dd{t}$$
 
 이다.
 :::
@@ -91,14 +91,14 @@ $$\frac{d}{\dd{t}}\langle \partial_s \Gamma, \partial_t \Gamma\rangle = \langle 
 
 $$\frac{d}{\dd{s}} E(\gamma_s) = \int_a^b \frac{d}{\dd{t}}\langle \partial_s \Gamma, \partial_t \Gamma\rangle \dd{t} - \int_a^b \langle \partial_s \Gamma, D_t \partial_t \Gamma\rangle \dd{t} = \Bigl[\langle \partial_s \Gamma, \partial_t \Gamma\rangle\Bigr]_a^b - \int_a^b \langle \partial_s \Gamma, D_t \partial_t \Gamma\rangle \dd{t}$$
 
-가 된다. 이제 $s = 0$에서 평가하면 $\partial_s \Gamma\vert_{s = 0} = V$, $\partial_t \Gamma\vert_{s = 0} = \dot\gamma$, $D_t \partial_t \Gamma\vert_{s = 0} = D_t \dot\gamma$이므로
+가 된다. 이제 $s = 0$에서 평가하면 $\partial_s \Gamma\vert_{s = 0} = V$, $\partial_t \Gamma\vert_{s = 0} = \dot{\gamma}$, $D_t \partial_t \Gamma\vert_{s = 0} = D_t \dot{\gamma}$이므로
 
-$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V, D_t \dot\gamma\rangle \dd{t}$$
+$$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot{\gamma}(b)\rangle - \langle V(a), \dot{\gamma}(a)\rangle - \int_a^b \langle V, D_t \dot{\gamma}\rangle \dd{t}$$
 
 을 얻는다. 고정변분의 경우 $V(a) = V(b) = 0$이므로 경계항이 소멸한다.
 :::
 
-여기서 $D_t \dot\gamma$는 곡선 $\gamma$ 자신의 속도장 $\dot\gamma$를 $\gamma$를 따라 covariant하게 미분한 것으로, $\gamma$의 *가속도<sub>acceleration</sub>*에 해당한다. 이를 $\nabla_{\dot\gamma} \dot\gamma$로도 적는다. 제1변분 공식은 임의의 고정변분에 대한 에너지의 변화가 가속도 $D_t \dot\gamma$와 변분장 $V$의 내적의 적분으로 통제됨을 말해 준다. 따라서 $\gamma$가 에너지의 임계 곡선이려면 이 적분이 모든 $V$에 대해 소멸해야 하고, 이는 가속도 자체가 소멸함을 강제한다.
+여기서 $D_t \dot{\gamma}$는 곡선 $\gamma$ 자신의 속도장 $\dot{\gamma}$를 $\gamma$를 따라 covariant하게 미분한 것으로, $\gamma$의 *가속도<sub>acceleration</sub>*에 해당한다. 이를 $\nabla_{\dot{\gamma}} \dot{\gamma}$로도 적는다. 제1변분 공식은 임의의 고정변분에 대한 에너지의 변화가 가속도 $D_t \dot{\gamma}$와 변분장 $V$의 내적의 적분으로 통제됨을 말해 준다. 따라서 $\gamma$가 에너지의 임계 곡선이려면 이 적분이 모든 $V$에 대해 소멸해야 하고, 이는 가속도 자체가 소멸함을 강제한다.
 
 ## 측지선 방정식
 
@@ -107,14 +107,14 @@ $$\left.\frac{d}{\dd{s}}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gam
 ::: 정의 4
 Riemannian manifold $(M, g)$의 Levi-Civita connection $\nabla$에 대해, 곡선 $\gamma : I \rightarrow M$이 다음의 식
 
-$$\nabla_{\dot\gamma} \dot\gamma = D_t \dot\gamma = 0$$
+$$\nabla_{\dot{\gamma}} \dot{\gamma} = D_t \dot{\gamma} = 0$$
 
 을 모든 $t \in I$에서 만족할 때 $\gamma$를 *geodesic<sub>측지선</sub>*이라 부르고, 위의 식을 *측지선 방정식<sub>geodesic equation</sub>*이라 부른다.
 :::
 
-측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-lid="r97vd" }의 언어로 다시 읽으면, 속도장 $\dot\gamma$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot\gamma}\dot\gamma$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9){: data-lid="fzqrw" }의 증명에서와 같이 Christoffel 기호로 풀어 측지선 방정식은 다음의 식
+측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-lid="r97vd" }의 언어로 다시 읽으면, 속도장 $\dot{\gamma}$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot{\gamma}}\dot{\gamma}$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9){: data-lid="fzqrw" }의 증명에서와 같이 Christoffel 기호로 풀어 측지선 방정식은 다음의 식
 
-$$\ddot\gamma^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t)) \dot\gamma^i(t) \dot\gamma^j(t) = 0, \qquad k = 1, \ldots, n$$
+$$\ddot{\gamma}^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t)) \dot{\gamma}^i(t) \dot{\gamma}^j(t) = 0, \qquad k = 1, \ldots, n$$
 
 으로 표현된다. 이는 $\gamma^k$들에 대한 $n$개의 이계 비선형 상미분방정식 시스템이다.
 
@@ -125,13 +125,13 @@ $$\ddot\gamma^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t)) \dot\gamma^i(t) 
 :::
 
 ::: 증명
-$\gamma$가 측지선이면 $D_t \dot\gamma = 0$이므로 [정리 3](#thm3){: data-lid="60bad" }의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
+$\gamma$가 측지선이면 $D_t \dot{\gamma} = 0$이므로 [정리 3](#thm3){: data-lid="60bad" }의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
 
-역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3){: data-lid="2e5g5" }에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t) D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
+역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3){: data-lid="2e5g5" }에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot{\gamma}\rangle \dd{t} = 0$이다. $D_t \dot{\gamma}$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t) D_t \dot{\gamma}(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
 
-$$\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = \int_a^b \varphi(t) \lVert D_t \dot\gamma(t)\rVert_g^2 \dd{t} > 0$$
+$$\int_a^b \langle V, D_t \dot{\gamma}\rangle \dd{t} = \int_a^b \varphi(t) \lVert D_t \dot{\gamma}(t)\rVert_g^2 \dd{t} > 0$$
 
-이 되어 가정에 모순이다. 따라서 $D_t \dot\gamma \equiv 0$, 즉 $\gamma$는 측지선이다.
+이 되어 가정에 모순이다. 따라서 $D_t \dot{\gamma} \equiv 0$, 즉 $\gamma$는 측지선이다.
 :::
 
 [따름정리 5](#cor5){: data-lid="bbvcy" }는 측지선이 정확히 에너지 functional의 Euler-Lagrange 방정식을 푸는 곡선임을 말해 준다. [명제 2](#prop2){: data-lid="3keuw" }와 결합하면, 측지선은 일정한 속력을 가지므로 (다음 명제) 동시에 길이의 임계 곡선이기도 하다. 다만 측지선이 항상 길이의 *최소화* 곡선인 것은 아니며, 충분히 짧은 구간에서만 그러함을 보일 수 있다.
@@ -139,15 +139,15 @@ $$\int_a^b \langle V, D_t \dot\gamma\rangle \dd{t} = \int_a^b \varphi(t) \lVert 
 측지선이 일정한 속력을 갖는다는 사실은 위에서 언급했듯 metric-compatibility의 직접적 귀결이다.
 
 ::: 명제 6
-측지선 $\gamma : I \rightarrow M$의 속력 $\lVert \dot\gamma(t)\rVert_g$는 $I$ 위에서 상수이다.
+측지선 $\gamma : I \rightarrow M$의 속력 $\lVert \dot{\gamma}(t)\rVert_g$는 $I$ 위에서 상수이다.
 :::
 
 ::: 증명
-$f(t) := \langle \dot\gamma(t), \dot\gamma(t)\rangle$라 두자. Metric-compatibility로부터
+$f(t) := \langle \dot{\gamma}(t), \dot{\gamma}(t)\rangle$라 두자. Metric-compatibility로부터
 
-$$\frac{d}{\dd{t}} f(t) = \frac{d}{\dd{t}}\langle \dot\gamma, \dot\gamma\rangle = 2\langle D_t \dot\gamma, \dot\gamma\rangle$$
+$$\frac{d}{\dd{t}} f(t) = \frac{d}{\dd{t}}\langle \dot{\gamma}, \dot{\gamma}\rangle = 2\langle D_t \dot{\gamma}, \dot{\gamma}\rangle$$
 
-이고, $\gamma$가 측지선이므로 $D_t \dot\gamma = 0$이다. 따라서 $f$의 미분이 항등적으로 $0$이 되어 $\lVert \dot\gamma\rVert_g = \sqrt{f}$는 상수이다.
+이고, $\gamma$가 측지선이므로 $D_t \dot{\gamma} = 0$이다. 따라서 $f$의 미분이 항등적으로 $0$이 되어 $\lVert \dot{\gamma}\rVert_g = \sqrt{f}$는 상수이다.
 :::
 
 ## 국소적 존재성과 유일성
@@ -157,7 +157,7 @@ $$\frac{d}{\dd{t}} f(t) = \frac{d}{\dd{t}}\langle \dot\gamma, \dot\gamma\rangle 
 ::: 정리 7 (측지선의 국소적 존재성과 유일성)
 Riemannian manifold $(M, g)$의 점 $p \in M$과 vector $v \in T_p M$, 그리고 $t_0 \in \mathbb{R}$이 주어졌다 하자. 그럼 $t_0$의 어떤 열린구간 $I \ni t_0$ 위에서 정의된 측지선 $\gamma : I \rightarrow M$으로서 초기조건
 
-$$\gamma(t_0) = p, \qquad \dot\gamma(t_0) = v$$
+$$\gamma(t_0) = p, \qquad \dot{\gamma}(t_0) = v$$
 
 를 만족하는 것이 존재한다. 또한 이러한 두 측지선은 그 정의역의 공통부분에서 일치한다.
 :::
@@ -165,11 +165,11 @@ $$\gamma(t_0) = p, \qquad \dot\gamma(t_0) = v$$
 ::: 증명
 $p$ 근방의 local coordinate $(U, (x^i))$를 잡자. 이 coordinate system에서 측지선 방정식은 $\gamma^k$들에 대한 이계 상미분방정식 시스템
 
-$$\ddot\gamma^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) \dot\gamma^i \dot\gamma^j, \qquad k = 1, \ldots, n$$
+$$\ddot{\gamma}^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) \dot{\gamma}^i \dot{\gamma}^j, \qquad k = 1, \ldots, n$$
 
-이다. 새로운 변수 $w^k := \dot\gamma^k$를 도입하면 이를 일계 시스템
+이다. 새로운 변수 $w^k := \dot{\gamma}^k$를 도입하면 이를 일계 시스템
 
-$$\dot\gamma^k = w^k, \qquad \dot w^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) w^i w^j, \qquad k = 1, \ldots, n$$
+$$\dot{\gamma}^k = w^k, \qquad \dot{w}^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma) w^i w^j, \qquad k = 1, \ldots, n$$
 
 으로 환원할 수 있다. 우변은 $(\gamma^k, w^k)$에 대해 매끄러우며, [§레비-치비타 접속, ⁋명제 6](/ko/math/riemannian_geometry/Levi-Civita_connection#prop6){: data-lid="ll0zq" }에 의해 $\Gamma_{ij}^k$가 smooth 함수이므로 특히 국소적으로 Lipschitz이다. 따라서 상미분방정식의 Picard-Lindelöf 정리에 의해 초기조건 $\gamma^k(t_0) = p^k$, $w^k(t_0) = v^k$를 만족하는 해가 $t_0$의 어떤 열린구간 위에서 유일하게 존재한다. 이 해의 첫 성분 $\gamma = (\gamma^k)$가 원하는 측지선이며, Picard-Lindelöf 정리의 유일성으로부터 두 측지선은 정의역의 공통부분에서 일치한다.
 :::
@@ -183,7 +183,7 @@ $$\dot\gamma^k = w^k, \qquad \dot w^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma)
 ::: 예시 8
 유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주자. [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7){: data-lid="qqbx4" }에서 보았듯 모든 Christoffel 기호가 $0$이므로, 측지선 방정식은
 
-$$\ddot\gamma^k(t) = 0, \qquad k = 1, \ldots, n$$
+$$\ddot{\gamma}^k(t) = 0, \qquad k = 1, \ldots, n$$
 
 으로 환원된다. 따라서 측지선은 정확히 $\gamma(t) = p + t v$ 꼴의 (일정한 속력으로 매개화된) 직선들이다. 이는 유클리드 공간에서 두 점을 잇는 최단 곡선이 직선이라는 익숙한 사실과 일치한다.
 :::
@@ -195,9 +195,9 @@ $$\gamma(t) = (\cos t) p + (\sin t) v$$
 
 이며, 우리는 이것이 측지선임을 보인다. 직접 미분하면 $\mathbb{R}^3$에서의 가속도는
 
-$$\ddot\gamma(t) = -(\cos t) p - (\sin t) v = -\gamma(t)$$
+$$\ddot{\gamma}(t) = -(\cos t) p - (\sin t) v = -\gamma(t)$$
 
-이다. 한편 $S^2$의 점 $\gamma(t)$에서 unit normal vector는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot\gamma(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita connection에 대한 가속도 $D_t \dot\gamma$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot\gamma$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot\gamma = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7){: data-lid="npmy0" }의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
+이다. 한편 $S^2$의 점 $\gamma(t)$에서 unit normal vector는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot{\gamma}(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita connection에 대한 가속도 $D_t \dot{\gamma}$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot{\gamma}$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot{\gamma} = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7){: data-lid="npmy0" }의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
 :::
 
 [예시 9](#ex9){: data-lid="bajro" }에서 사용한 "주변 공간의 가속도를 tangent space로 정사영한 것이 곡선 위의 covariant derivative"라는 사실은 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle){: data-lid="szp2l" }에서 도입한 tangential-normal 분해를 곡선의 가속도에 적용한 것이다. 이 관찰은 일반적인 매장된 submanifold의 측지선을 다룰 때 핵심적인 도구가 된다.

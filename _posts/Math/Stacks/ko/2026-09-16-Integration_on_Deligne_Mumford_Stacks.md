@@ -46,9 +46,9 @@ $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mat
 
 $$[V]\longmapsto [K(V):K(W)][W]$$
 
-로 주어졌던 것을 기억하자. 위 정의는 바로 이 공식을 Deligne–Mumford stack으로 확장한 것으로, 차이는 generic stabilizer의 비율 $e_{\mathcal W}/e_{\mathcal V}$이 추가된다는 점이다. 이는 근본적으로 [§고유스택, ⁋명제 4](/ko/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" } 직후에 살펴보았듯 coarse moduli에서 scheme-theoretic하게 보이는 degree와, stack이 고유하게 가지고 있는 automorphism 정보가 분리해서 보이는 것으로, 이런 이유에서 곱
+로 주어졌던 것을 기억하자. 위 정의는 바로 이 공식을 Deligne–Mumford stack으로 확장한 것으로, 차이는 generic stabilizer의 비율 $e_{\mathcal{W}}/e_{\mathcal{V}}$이 추가된다는 점이다. 이는 근본적으로 [§고유스택, ⁋명제 4](/ko/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" } 직후에 살펴보았듯 coarse moduli에서 scheme-theoretic하게 보이는 degree와, stack이 고유하게 가지고 있는 automorphism 정보가 분리해서 보이는 것으로, 이런 이유에서 곱
 
-$$[K(V):K(W)]\frac{e_{\mathcal W}}{e_{\mathcal V}}$$
+$$[K(V):K(W)]\frac{e_{\mathcal{W}}}{e_{\mathcal{V}}}$$
 
 을 $f$의 stack-theoretic generic degree라고 생각할 수 있다. 이러한 이유로 stack에서는 rational coefficient가 자연스럽게 나타나게 되는 것이다. 그럼 이렇게 정의한 pushforward의 성질은 다음의 functoriality이다. 
 

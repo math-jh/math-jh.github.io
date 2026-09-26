@@ -325,7 +325,7 @@ $$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(1,1,0,\cdots,0),\qquad \lambda_k=(1
 
 $$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$
 
-를 얻는다. $\Gr(k,\mathbb{R}^n)$에서 $\lambda_i$가 부여하는 조건은 $\dim(V\cap F_{n-k+i-1})\geq i$ 하나로 축약되며, 이는 tautological bundle의 $k-i+1$개 section이 독립성을 잃는 곳이므로, 앞에서 $w_i$를 그러한 section을 고르는 데 대한 obstruction class로 읽은 것이 바로 이것임을 안다. 반면 한 행짜리 $(i,0,\cdots,0)$의 Schubert class는 $w(\gamma^k_\infty)$의 형식적 역원 $\bar w$의 degree $i$ 성분이어서, $\bar w_2=w_1^2+w_2$와 같이 $i\geq 2$부터는 $w_i$와 다르다. 
+를 얻는다. $\Gr(k,\mathbb{R}^n)$에서 $\lambda_i$가 부여하는 조건은 $\dim(V\cap F_{n-k+i-1})\geq i$ 하나로 축약되며, 이는 tautological bundle의 $k-i+1$개 section이 독립성을 잃는 곳이므로, 앞에서 $w_i$를 그러한 section을 고르는 데 대한 obstruction class로 읽은 것이 바로 이것임을 안다. 반면 한 행짜리 $(i,0,\cdots,0)$의 Schubert class는 $w(\gamma^k_\infty)$의 형식적 역원 $\bar{w}$의 degree $i$ 성분이어서, $\bar{w}_2=w_1^2+w_2$와 같이 $i\geq 2$부터는 $w_i$와 다르다. 
 
 그럼 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$는 <em-ko>polynomial algebra로서</em-ko> 이들 $w_i$에 의해 생성된다. 가령, monomial
 

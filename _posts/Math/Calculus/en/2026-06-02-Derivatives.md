@@ -38,7 +38,7 @@ $$\frac{\dd{f}}{\dd{x}},\qquad \frac{d}{\dd{x}}f$$
 
 and so on, but in calculus the $f'$ notation is often sufficient.
 
-Applying the definition directly, for instance, the average rate of change of $f(x) = x^2$ is $\frac{(a+h)^2 - a^2}{h} = 2a + h$, so $f'(a) = 2a$, and the derivative of a constant function is always $0$. In the same way, for $f(x) = 1/x$ ($x \neq 0$) we obtain $f'(a) = -1/a^2$ by simplifying the average rate of change, and for $f(x) = \sqrt x$ ($x > 0$) we obtain $f'(a) = 1/(2\sqrt a)$ by rationalizing the numerator.
+Applying the definition directly, for instance, the average rate of change of $f(x) = x^2$ is $\frac{(a+h)^2 - a^2}{h} = 2a + h$, so $f'(a) = 2a$, and the derivative of a constant function is always $0$. In the same way, for $f(x) = 1/x$ ($x \neq 0$) we obtain $f'(a) = -1/a^2$ by simplifying the average rate of change, and for $f(x) = \sqrt{x}$ ($x > 0$) we obtain $f'(a) = 1/(2\sqrt{a})$ by rationalizing the numerator.
 
 ## Differentiability and Continuity
 
@@ -128,7 +128,7 @@ The *right-hand derivative* and *left-hand derivative* of a function $f$ at a po
 $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}.$$
 :::
 
-Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="wtbpm" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt x$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
+Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and their common value is $f'(a)$. This is nothing more than applying the fact that a limit exists only when both one-sided limits agree to the average rate of change. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="wtbpm" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. A one-sided derivative is also used naturally when discussing differentiability at an endpoint of the domain; for instance, the differentiability of $f(x) = \sqrt{x}$ defined on $[0, \infty)$ at $0$ is meaningful only via the right-hand derivative.
 
 ---
 

@@ -139,7 +139,7 @@ $$\eta(\z^a, \z^b) = \sum_{k=0}^{2} \frac{(\omega^k q^{1/3})^{a+b}}{3 (\omega^k 
 
 이고, 
 
-$$\sum_{k=0}^{2} \omega^{km} = 3\iff m \equiv 0 \pmod 3$$
+$$\sum_{k=0}^{2} \omega^{km} = 3\iff m \equiv 0 \pmod{3}$$
 
 이며 그 외의 경우에는 이 값이 $0$이 된다. 즉, $0 \leq a, b \leq 2$에서는 $a + b = 2$일 때만 $\eta(\z^a, \z^b) = 1$이며 그 외의 경우에는 $0$이다. 즉 이 basis에 대한 $\eta$의 행렬표현은 이번 경우에도 $\mathbb{P}^2$의 classical Poincaré pairing과 일치하는 다음의 행렬
 

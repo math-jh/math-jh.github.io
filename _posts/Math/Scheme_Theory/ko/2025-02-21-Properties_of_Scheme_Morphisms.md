@@ -345,18 +345,18 @@ Isomorphism이 두 scheme이 완전히 같은 구조를 갖는다는 뜻이라�
 Integral scheme $X, Y$ 사이의 dominant rational map $\varphi: X \dashrightarrow Y$에 대하여 다음 두 조건이 동치이다.
 
 1. $\varphi$는 birational map이다. 
-2. $X$의 공집합이 아닌 열린집합 $\widetilde U$와 $Y$의 공집합이 아닌 열린집합 $\widetilde V$가 존재하여, isomorphism $\widetilde U \rightarrow \widetilde V$가 $\varphi$의 representative가 된다. 
+2. $X$의 공집합이 아닌 열린집합 $\widetilde{U}$와 $Y$의 공집합이 아닌 열린집합 $\widetilde{V}$가 존재하여, isomorphism $\widetilde{U} \rightarrow \widetilde{V}$가 $\varphi$의 representative가 된다. 
 :::
 ::: 증명
 우선 $\varphi$가 birational map이라 하고, $\varphi$의 representative $(U,\alpha)$와 그 역할을 하는 $\psi$의 representative $(V,\beta)$를 택하자. 그럼 $\psi\circ\varphi=\id_X$로부터 $X$의 공집합이 아닌 열린집합 $W_1\subseteq \alpha^{-1}(V)$가 존재하여 $(\beta\circ \alpha)\vert_{W_1}=\id_{W_1}$이고, $\varphi\circ\psi=\id_Y$로부터 $Y$의 공집합이 아닌 열린집합 $W_2\subseteq \beta^{-1}(U)$가 존재하여 $(\alpha\circ \beta)\vert_{W_2}=\id_{W_2}$이다. 이제
 
-$$\widetilde U=W_1\cap \alpha^{-1}(W_2),\qquad \widetilde V=W_2\cap \beta^{-1}(W_1)$$
+$$\widetilde{U}=W_1\cap \alpha^{-1}(W_2),\qquad \widetilde{V}=W_2\cap \beta^{-1}(W_1)$$
 
-으로 두자. $W_1$이 $U$에서 dense이고 $\varphi$가 dominant이므로 $\cl(\alpha(W_1))=\cl(\alpha(U))=Y$이고, 따라서 공집합이 아닌 열린집합 $W_2$는 $\alpha(W_1)$과 만나 $\widetilde U\neq\emptyset$이다. 
+으로 두자. $W_1$이 $U$에서 dense이고 $\varphi$가 dominant이므로 $\cl(\alpha(W_1))=\cl(\alpha(U))=Y$이고, 따라서 공집합이 아닌 열린집합 $W_2$는 $\alpha(W_1)$과 만나 $\widetilde{U}\neq\emptyset$이다. 
 
-$\widetilde U$의 점 $x$에 대하여 $\alpha(x)\in W_2$이고, $x\in W_1$이므로 $\beta(\alpha(x))=x\in W_1$, 곧 $\alpha(x)\in \beta^{-1}(W_1)$이다. 따라서 $\alpha(\widetilde U)\subseteq \widetilde V$이며, 같은 방식으로 $\widetilde V$의 점 $y$에 대하여 $\beta(y)\in W_1$이고 $\alpha(\beta(y))=y\in W_2$이므로 $\beta(\widetilde V)\subseteq \widetilde U$이다. 이렇게 얻어진 두 morphism $\alpha\vert_{\widetilde U}: \widetilde U \rightarrow \widetilde V$와 $\beta\vert_{\widetilde V}: \widetilde V \rightarrow \widetilde U$는 $\widetilde U\subseteq W_1$과 $\widetilde V\subseteq W_2$에 의하여 그 합성이 각각 항등사상이 되므로 $\alpha\vert_{\widetilde U}$는 isomorphism이고, $\widetilde U$가 $X$에서 dense이므로 $(\widetilde U, \alpha\vert_{\widetilde U})$는 $\varphi$의 representative이다. 
+$\widetilde{U}$의 점 $x$에 대하여 $\alpha(x)\in W_2$이고, $x\in W_1$이므로 $\beta(\alpha(x))=x\in W_1$, 곧 $\alpha(x)\in \beta^{-1}(W_1)$이다. 따라서 $\alpha(\widetilde{U})\subseteq \widetilde{V}$이며, 같은 방식으로 $\widetilde{V}$의 점 $y$에 대하여 $\beta(y)\in W_1$이고 $\alpha(\beta(y))=y\in W_2$이므로 $\beta(\widetilde{V})\subseteq \widetilde{U}$이다. 이렇게 얻어진 두 morphism $\alpha\vert_{\widetilde{U}}: \widetilde{U} \rightarrow \widetilde{V}$와 $\beta\vert_{\widetilde{V}}: \widetilde{V} \rightarrow \widetilde{U}$는 $\widetilde{U}\subseteq W_1$과 $\widetilde{V}\subseteq W_2$에 의하여 그 합성이 각각 항등사상이 되므로 $\alpha\vert_{\widetilde{U}}$는 isomorphism이고, $\widetilde{U}$가 $X$에서 dense이므로 $(\widetilde{U}, \alpha\vert_{\widetilde{U}})$는 $\varphi$의 representative이다. 
 
-거꾸로 isomorphism $\alpha: \widetilde U \rightarrow \widetilde V$가 $\varphi$의 representative라 하고 그 역사상을 $\beta: \widetilde V \rightarrow \widetilde U$라 하자. 그럼 $\widetilde V$가 $Y$에서 dense이므로 $\beta$와 open subset의 포함사상 $\widetilde U \hookrightarrow X$의 합성은 rational map $\psi: Y \dashrightarrow X$를 정의하며, $\beta$가 surjective이므로 $\psi$는 dominant이다. 또 $\psi\circ\varphi$는 $\widetilde U$ 위에서 $\beta\circ \alpha=\id_{\widetilde U}$이고 $\varphi\circ\psi$는 $\widetilde V$ 위에서 $\alpha\circ \beta=\id_{\widetilde V}$이므로, 이 둘은 각각 $\id_X$와 $\id_Y$가 정의하는 rational map과 같다. 
+거꾸로 isomorphism $\alpha: \widetilde{U} \rightarrow \widetilde{V}$가 $\varphi$의 representative라 하고 그 역사상을 $\beta: \widetilde{V} \rightarrow \widetilde{U}$라 하자. 그럼 $\widetilde{V}$가 $Y$에서 dense이므로 $\beta$와 open subset의 포함사상 $\widetilde{U} \hookrightarrow X$의 합성은 rational map $\psi: Y \dashrightarrow X$를 정의하며, $\beta$가 surjective이므로 $\psi$는 dominant이다. 또 $\psi\circ\varphi$는 $\widetilde{U}$ 위에서 $\beta\circ \alpha=\id_{\widetilde{U}}$이고 $\varphi\circ\psi$는 $\widetilde{V}$ 위에서 $\alpha\circ \beta=\id_{\widetilde{V}}$이므로, 이 둘은 각각 $\id_X$와 $\id_Y$가 정의하는 rational map과 같다. 
 :::
 
 Integral scheme $X$가 locally Noetherian이면 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12){: data-lid="4mrs1" }의 유리함수의 정의역은 정확히 $X$의 공집합이 아닌 열린집합이 된다. 실제로 $X$의 공집합이 아닌 affine open subset $\Spec A$에 대하여 $A$는 integral domain이므로 ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1){: data-lid="8a95s" }) $0$이 아닌 원소의 annihilator는 언제나 $(0)$이고, 따라서 $\Spec A$의 associated point는 $(0)$ 하나뿐이다. 곧 $X$의 associated point는 generic point $\eta$ 하나뿐이므로, 정의역이 모든 associated point를 담아야 한다는 조건은 정의역이 공집합이 아니라는 조건과 같아진다. 이렇게 얻어진 유리함수들의 모임 $K(X)$가 $\mathcal{O}_{X,\eta}\cong\Frac A$와 일치하여 field가 되는 것은 이미 확인하였으며 ([§스킴의 대수구조, §§유리함수](/ko/math/scheme_theory/algebra_of_schemes#유리함수){: data-lid="xindv" }), 이를 $X$의 *function field*라 부른다.
@@ -365,7 +365,7 @@ Integral scheme $X$가 locally Noetherian이면 [§스킴의 대수구조, ⁋�
 Birationally equivalent한 두 integral locally Noetherian scheme $X, Y$에 대하여 $K(X)\cong K(Y)$가 성립한다. 
 :::
 ::: 증명
-[명제 24](#prop24){: data-lid="uarkc" }에 의하여 isomorphism $\alpha: \widetilde U \rightarrow \widetilde V$를 representative로 갖는 birational map이 존재한다. $X$의 generic point $\eta_X$는 공집합이 아닌 열린집합 $\widetilde U$에 속하고 stalk은 open subscheme으로 제한하여도 변하지 않으므로 $K(X)=\mathcal{O}_{X,\eta_X}=\mathcal{O}_{\widetilde U, \eta_X}$이고, 같은 이유로 $K(Y)=\mathcal{O}_{\widetilde V, \eta_Y}$이다. 한편 $\widetilde V$가 $Y$의 공집합이 아닌 열린집합이므로 그 generic point는 $\eta_Y$이고, $\alpha$가 isomorphism이므로 $\alpha(\eta_X)=\eta_Y$이다. 따라서 $\alpha$가 유도하는 stalk 사이의 isomorphism이 $K(X)\cong K(Y)$를 준다. 
+[명제 24](#prop24){: data-lid="uarkc" }에 의하여 isomorphism $\alpha: \widetilde{U} \rightarrow \widetilde{V}$를 representative로 갖는 birational map이 존재한다. $X$의 generic point $\eta_X$는 공집합이 아닌 열린집합 $\widetilde{U}$에 속하고 stalk은 open subscheme으로 제한하여도 변하지 않으므로 $K(X)=\mathcal{O}_{X,\eta_X}=\mathcal{O}_{\widetilde{U}, \eta_X}$이고, 같은 이유로 $K(Y)=\mathcal{O}_{\widetilde{V}, \eta_Y}$이다. 한편 $\widetilde{V}$가 $Y$의 공집합이 아닌 열린집합이므로 그 generic point는 $\eta_Y$이고, $\alpha$가 isomorphism이므로 $\alpha(\eta_X)=\eta_Y$이다. 따라서 $\alpha$가 유도하는 stalk 사이의 isomorphism이 $K(X)\cong K(Y)$를 준다. 
 :::
 
 즉 birational equivalence는 function field를 보존한다. Variety의 경우에는 그 역 또한 성립하는 것을 [\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10){: data-lid="rn1qn" }에서 확인하였다. 

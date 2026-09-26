@@ -26,15 +26,15 @@ $$p(\x)=\x^n+p_1\x^{n-1}+\cdots+p_n,\qquad p_k\in \mathfrak{a}^k$$
 satisfying $p(u)=0$.
 :::
 ::: Proof
-From the assumption $u(M)\subseteq \mathfrak{a}M$ and the equality $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$, we can choose, for each $i$, elements $a_{ij}\in \mathfrak{a}$ such that $u(e_i)=\sum_j a_{ij}e_j$. Now let $\epsilon_1,\ldots,\epsilon_n$ be the standard basis of $A^n$, and consider the surjection $\pi: A^n \rightarrow M$ given by $\epsilon_i\mapsto e_i$ together with the endomorphism $\tilde u\in \End_\rMod{A}(A^n)$ given by $\tilde u(\epsilon_i)=\sum_j a_{ij}\epsilon_j$; then $\pi\circ \tilde u=u\circ \pi$.
+From the assumption $u(M)\subseteq \mathfrak{a}M$ and the equality $\mathfrak{a}M=\sum_j \mathfrak{a}e_j$, we can choose, for each $i$, elements $a_{ij}\in \mathfrak{a}$ such that $u(e_i)=\sum_j a_{ij}e_j$. Now let $\epsilon_1,\ldots,\epsilon_n$ be the standard basis of $A^n$, and consider the surjection $\pi: A^n \rightarrow M$ given by $\epsilon_i\mapsto e_i$ together with the endomorphism $\tilde{u}\in \End_\rMod{A}(A^n)$ given by $\tilde{u}(\epsilon_i)=\sum_j a_{ij}\epsilon_j$; then $\pi\circ \tilde{u}=u\circ \pi$.
 
-Since $A^n$ is a free module, we may apply [\[Multilinear Algebra\] §Determinants, ⁋Proposition 9](/en/math/multilinear_algebra/determinants#prop9){: data-lid="g9pl4" } to $\tilde u$; hence the characteristic polynomial $p=\chi_{\tilde u}$ of $\tilde u$ is a monic polynomial of degree $n$ satisfying $p(\tilde u)=0$. From the relation above we then have $p(u)\circ \pi=\pi\circ p(\tilde u)=0$, and since $\pi$ is surjective, we obtain $p(u)=0$.
+Since $A^n$ is a free module, we may apply [\[Multilinear Algebra\] §Determinants, ⁋Proposition 9](/en/math/multilinear_algebra/determinants#prop9){: data-lid="g9pl4" } to $\tilde{u}$; hence the characteristic polynomial $p=\chi_{\tilde{u}}$ of $\tilde{u}$ is a monic polynomial of degree $n$ satisfying $p(\tilde{u})=0$. From the relation above we then have $p(u)\circ \pi=\pi\circ p(\tilde{u})=0$, and since $\pi$ is surjective, we obtain $p(u)=0$.
 
 It remains to verify the condition on the coefficients of $p$. This follows from the fact that the coefficients of the characteristic polynomial are given by
 
-$$p(\x)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\tilde u)\right)\x^{n-k}$$
+$$p(\x)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(\tilde{u})\right)\x^{n-k}$$
 
-Since the entries of the matrix representation of $\tilde u$ are the $a_{ij}$'s, the diagonal entries of the matrix representation of ${\bigwedge}^k(\tilde u)$ are the $k\times k$ minors of this matrix, each of which is a sum of products of $k$ elements of $\mathfrak{a}$. In other words, $p_k=(-1)^k\tr({\bigwedge}^k(\tilde u))\in \mathfrak{a}^k$.
+Since the entries of the matrix representation of $\tilde{u}$ are the $a_{ij}$'s, the diagonal entries of the matrix representation of ${\bigwedge}^k(\tilde{u})$ are the $k\times k$ minors of this matrix, each of which is a sum of products of $k$ elements of $\mathfrak{a}$. In other words, $p_k=(-1)^k\tr({\bigwedge}^k(\tilde{u}))\in \mathfrak{a}^k$.
 :::
 
 The following then holds.

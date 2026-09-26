@@ -225,7 +225,7 @@ $\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원�
 ::: 예시 9 (삼각적분)
 $a > 1$일 때 $\int_0^{2\pi}\dd{\theta}/(a + \cos\theta)$를 구한다. $z = e^{i\theta}$로 치환하면 $\cos\theta = (z + z^{-1})/2$, $\dd{\theta} = \dd{z}/(iz)$이므로
 
-$$\int_0^{2\pi}\frac{\dd{\theta}}{a + \cos\theta} = \oint_{\lvert z\rvert = 1}\frac{1}{a + \frac12(z + z^{-1})}\frac{\dd{z}}{iz} = \oint_{\lvert z\rvert = 1}\frac{2}{i}\frac{\dd{z}}{z^2 + 2az + 1}$$
+$$\int_0^{2\pi}\frac{\dd{\theta}}{a + \cos\theta} = \oint_{\lvert z\rvert = 1}\frac{1}{a + \frac{1}{2}(z + z^{-1})}\frac{\dd{z}}{iz} = \oint_{\lvert z\rvert = 1}\frac{2}{i}\frac{\dd{z}}{z^2 + 2az + 1}$$
 
 이다. 분모 $z^2 + 2az + 1$의 해는 $z_\pm = -a \pm \sqrt{a^2 - 1}$이고, 두 해의 곱은 $z_+ z_- = 1$이다. $a > 1$이므로 $z_+ = -a + \sqrt{a^2 - 1}$은 $\lvert z_+\rvert < 1$로 단위원판 안에 있고 $z_- = -a - \sqrt{a^2 - 1}$은 밖에 있다. 따라서 $F(z) = 2/\bigl(i(z - z_+)(z - z_-)\bigr)$의 단위원판 안 극은 단순극 $z_+$ 하나뿐이고, 그 유수는
 
@@ -267,7 +267,7 @@ $$\frac{1}{2\pi i}\oint_{\Gamma_N} \pi\cot(\pi z)f(z)\dd{z} = \sum_{n = -N}^{N} 
 
 이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + 1/2$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="ui65a" }으로
 
-$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
+$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac{1}{2})^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
 
 이다. 따라서 $N \rightarrow \infty$에서 왼쪽이 $0$으로 가고, 오른쪽에서 $\sum_{n=-N}^{N} f(n) \rightarrow \sum_{n=-\infty}^{\infty} f(n)$ ($f$의 절대수렴성은 degree 조건에서 따름) 이므로
 

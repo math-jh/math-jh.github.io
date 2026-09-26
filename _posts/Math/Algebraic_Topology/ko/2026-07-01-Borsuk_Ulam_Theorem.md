@@ -81,17 +81,17 @@ $$p(F(\theta))=f(e^{2\pi i\theta})\qquad(\theta\in\mathbb{R})$$
 
 이제 $f$가 antipodal이라 하자. 그럼 $f(e^{2\pi i(\theta+1/2)})=-f(e^{2\pi i\theta})=e^{\pi i}f(e^{2\pi i\theta})$이므로
 
-$$p\bigl(F(\theta+1/2)\bigr)=p\bigl(F(\theta)+\frac12\bigr)$$
+$$p\bigl(F(\theta+1/2)\bigr)=p\bigl(F(\theta)+\frac{1}{2}\bigr)$$
 
 를 얻는다. 따라서 $F(\theta+1/2)-F(\theta)-1/2$은 정수값 연속함수이므로 상수이며, 그 값을 $q\in\mathbb{Z}$라 하면
 
-$$F(\theta+1/2)=F(\theta)+\frac12+q$$
+$$F(\theta+1/2)=F(\theta)+\frac{1}{2}+q$$
 
 이다. 이 식을 두 번 적용하면
 
 $$\begin{aligned}
-F(\theta+1)&=F\bigl((\theta+\frac12)+\frac12\bigr)=F(\theta+\frac12)+\frac12+q\\
-&=\Bigl(F(\theta)+\frac12+q\Bigr)+\frac12+q=F(\theta)+1+2q
+F(\theta+1)&=F\bigl((\theta+\frac{1}{2})+\frac{1}{2}\bigr)=F(\theta+\frac{1}{2})+\frac{1}{2}+q\\
+&=\Bigl(F(\theta)+\frac{1}{2}+q\Bigr)+\frac{1}{2}+q=F(\theta)+1+2q
 \end{aligned}$$
 
 가 되어 $\deg f=F(1)-F(0)=1+2q$이다. 이는 홀수이다.
@@ -105,15 +105,15 @@ $n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarro
 ::: 증명
 $n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조정리 4](#lem4){: data-lid="7jcjt" }에서 이미 확립하였다. 이제 $n\geq 2$라 하자. 이 경우의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
 
-첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
+첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar{f}:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar{f}\circ p$를 만족하며 잘 정의된다.
 
-둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-lid="fg10a" }의 lifting을 사용한다.)
+둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 generator는 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 image는 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar{f}$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6){: data-lid="fg10a" }의 lifting을 사용한다.)
 
 셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기에서 사용하는 것은 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin exact sequence
 
 $$\cdots\rightarrow H_i(S^n;\mathbb{Z}/2)\xrightarrow{p_\ast}H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\cap w}H_{i-1}(\RP^n;\mathbb{Z}/2)\rightarrow H_{i-1}(S^n;\mathbb{Z}/2)\rightarrow\cdots$$
 
-이며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 degree에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. 최고차 $i=n$에서도 마찬가지인데, $H_{n+1}(\RP^n;\mathbb{Z}/2)=0$이므로 exactness가 전달사상 $H_n(\RP^n;\mathbb{Z}/2)\rightarrow H_n(S^n;\mathbb{Z}/2)$의 단사성을, 따라서 두 group이 모두 $\mathbb{Z}/2$이라는 사실과 합쳐 그 전사성을 주고, 다시 exactness가 $p_\ast:H_n(S^n;\mathbb{Z}/2)\rightarrow H_n(\RP^n;\mathbb{Z}/2)$이 $0$임을 주어 $\cap w$가 단사이며, $H_{n-1}(S^n;\mathbb{Z}/2)=0$이라 전사이기 때문이다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위의 항등임을 이미 알고 있고, $H^1(\RP^n;\mathbb{Z}/2)\cong\Hom(H_1(\RP^n;\mathbb{Z}/2),\mathbb{Z}/2)$ 아래에서 $\bar f^\ast$는 그 dual이므로 $\bar f^\ast w=w$이고, 따라서 그 사다리는 $\cap w$와 가환한다. 그럼 이 $\cap w$-isomorphism들을 따라 degree를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
+이며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 degree에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. 최고차 $i=n$에서도 마찬가지인데, $H_{n+1}(\RP^n;\mathbb{Z}/2)=0$이므로 exactness가 전달사상 $H_n(\RP^n;\mathbb{Z}/2)\rightarrow H_n(S^n;\mathbb{Z}/2)$의 단사성을, 따라서 두 group이 모두 $\mathbb{Z}/2$이라는 사실과 합쳐 그 전사성을 주고, 다시 exactness가 $p_\ast:H_n(S^n;\mathbb{Z}/2)\rightarrow H_n(\RP^n;\mathbb{Z}/2)$이 $0$임을 주어 $\cap w$가 단사이며, $H_{n-1}(S^n;\mathbb{Z}/2)=0$이라 전사이기 때문이다. $\bar{f}$는 $p\circ f=\bar{f}\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도한다. 둘째 단계에서 $\bar{f}_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위의 항등임을 이미 알고 있고, $H^1(\RP^n;\mathbb{Z}/2)\cong\Hom(H_1(\RP^n;\mathbb{Z}/2),\mathbb{Z}/2)$ 아래에서 $\bar{f}^\ast$는 그 dual이므로 $\bar{f}^\ast w=w$이고, 따라서 그 사다리는 $\cap w$와 가환한다. 그럼 이 $\cap w$-isomorphism들을 따라 degree를 하나씩 올리면 $\bar{f}_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar{f}_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod{2}$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
 :::
 
 정리 5는 antipodal 자기사상이 degree $0$을 가질 수 없음을 함축하므로, 그러한 morphism은 결코 상수사상과 homotopic하지 않다. 이 결론은 앞선 글에서 얻은 antipodal morphism $a(x)=-x$의 degree 계산과도 정확히 부합한다. [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋따름정리 5](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#cor5){: data-lid="qwcw5" }에 의하여 $\deg a=(-1)^{n+1}$이므로 $n$의 홀짝과 무관하게 $\deg a=\pm 1$은 늘 홀수이며, 이는 antipodal morphism이 antipodal map의 원형이라는 사실과 잘 어울린다. 이제 이 degree의 홀짝성으로부터 antipodal map $S^n\rightarrow S^{n-1}$의 비존재를 이끌어낸다.
@@ -140,7 +140,7 @@ Borsuk–Ulam 정리의 첫 귀결은 측도들을 동시에 이등분하는 hyp
 ::: 정리 8 (Ham sandwich)
 $\mathbb{R}^n$ 위의 유한 Borel measure $\mu_1,\ldots,\mu_n$이 각각 모든 hyperplane에 측도 $0$을 준다고 하자. 그럼 하나의 affine hyperplane이 존재하여 이들 $n$개의 측도를 동시에 이등분한다. 곧 그 hyperplane이 결정하는 두 closed half-space $H,H'$에 대하여 모든 $i$에서
 
-$$\mu_i(H)=\mu_i(H')=\frac12\mu_i(\mathbb{R}^n)$$
+$$\mu_i(H)=\mu_i(H')=\frac{1}{2}\mu_i(\mathbb{R}^n)$$
 
 이 성립한다.
 :::
@@ -165,7 +165,7 @@ $$f:S^n\rightarrow\mathbb{R}^n;\qquad f(u)=\bigl(\mu_1(H_u),\ldots,\mu_n(H_u)\bi
 
 을 생각하자. 각 $\mu_i$이 유한하고 hyperplane에 측도 $0$을 준다는 조건에서, $u$를 조금 흔들 때 대칭차 $H_u\triangle H_{u'}$의 측도가 $0$으로 수렴하므로 $u\mapsto\mu_i(H_u)$은 연속이다. ([Mat]의 dominated convergence 논증을 따른다.) 따라서 $f$는 연속함수이며, [정리 2](#thm2){: data-lid="gr3gy" }의 (1)에 의하여 $f(u)=f(-u)$인 점 $u\in S^n$이 존재한다. 곧 모든 $i$에서 $\mu_i(H_u)=\mu_i(H_{-u})$이고, $(\ast)$과 결합하면
 
-$$\mu_i(H_u)=\mu_i(H_{-u})=\frac12\mu_i(\mathbb{R}^n)$$
+$$\mu_i(H_u)=\mu_i(H_{-u})=\frac{1}{2}\mu_i(\mathbb{R}^n)$$
 
 이다.
 

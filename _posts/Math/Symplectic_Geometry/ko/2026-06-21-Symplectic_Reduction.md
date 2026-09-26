@@ -80,9 +80,9 @@ $$\dim Z/G=\dim Z-\dim G=(\dim M-\dim G)-\dim G=\dim M-2\dim G$$
 
 이다.
 
-이제 symplectic form을 내린다. 점 $p\in Z$에서 $\dd{\pi_p}:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 kernel은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar u,\bar v\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
+이제 symplectic form을 내린다. 점 $p\in Z$에서 $\dd{\pi_p}:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 kernel은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar{u},\bar{v}\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
 
-$$(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v):=\omega_p(u,v)$$
+$$(\omega_{\mathrm{red}})_{\pi(p)}(\bar{u},\bar{v}):=\omega_p(u,v)$$
 
 으로 두면 된다. 이것이 잘 정의됨을 보이려면 (i) 들어 올림의 선택에 무관함과 (ii) 점 $p$를 같은 orbit 안에서 옮겨도 같은 값이 나옴을 확인해야 한다.
 
@@ -98,7 +98,7 @@ $$\omega_p(X_M(p),v)=\langle \dd{\mu_p}(v),X\rangle=0$$
 
 *Closedness.* $\pi^\ast(\dd{\omega_{\mathrm{red}}})=\dd{(\pi^\ast\omega_{\mathrm{red}})}=\dd{(\iota^\ast\omega)}=\iota^\ast(\dd{\omega})=0$이고, $\pi^\ast$이 injective이므로 $\dd{\omega_{\mathrm{red}}}=0$이다.
 
-*Nondegeneracy.* $\bar u\in T_{\pi(p)}(Z/G)$이 모든 $\bar v$에 대해 $(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v)=0$이라 하자. 들어 올림 $u\in T_pZ$을 택하면 모든 $v\in T_pZ$에 대해 $\omega_p(u,v)=0$이므로 $u\in(T_pZ)^{\omega}$이다. 그런데 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이므로 $(T_pZ)^{\omega}=\mathfrak{g}\cdot p$이고, 따라서 $u\in\mathfrak{g}\cdot p=\ker \dd{\pi_p}$이다. 즉 $\bar u=\dd{\pi_p}(u)=0$이므로 $\omega_{\mathrm{red}}$은 nondegenerate이다.
+*Nondegeneracy.* $\bar{u}\in T_{\pi(p)}(Z/G)$이 모든 $\bar{v}$에 대해 $(\omega_{\mathrm{red}})_{\pi(p)}(\bar{u},\bar{v})=0$이라 하자. 들어 올림 $u\in T_pZ$을 택하면 모든 $v\in T_pZ$에 대해 $\omega_p(u,v)=0$이므로 $u\in(T_pZ)^{\omega}$이다. 그런데 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이므로 $(T_pZ)^{\omega}=\mathfrak{g}\cdot p$이고, 따라서 $u\in\mathfrak{g}\cdot p=\ker \dd{\pi_p}$이다. 즉 $\bar{u}=\dd{\pi_p}(u)=0$이므로 $\omega_{\mathrm{red}}$은 nondegenerate이다.
 :::
 
 축약공간의 표기 $M /\!\!/ G$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $M/G$과 구별된다. 위 증명에서 symplectic form이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1){: data-lid="rqhea" }의 등식 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. 이 한 등식이 (i)에서는 $\iota^\ast\omega$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 quotient로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. Coisotropic 부분다양체를 그 null 방향으로 나누어 symplectic manifold를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.

@@ -24,7 +24,7 @@ Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 �
 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \rightarrow \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 smooth 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
 :::
 
-등각성은 각의 크기뿐 아니라 회전의 방향까지 보존할 것을 요구한다는 점이 핵심이다. 가령 켤레사상 $z \mapsto \bar z$는 모든 각의 크기를 보존하지만 방향을 뒤집으므로 (반사이므로) 위의 정의에서는 등각으로 치지 않는다. 이 방향성의 요구가 holomorphicity와 정확히 맞물리며, 다음 명제가 그 동치를 정식으로 적는다.
+등각성은 각의 크기뿐 아니라 회전의 방향까지 보존할 것을 요구한다는 점이 핵심이다. 가령 켤레사상 $z \mapsto \bar{z}$는 모든 각의 크기를 보존하지만 방향을 뒤집으므로 (반사이므로) 위의 정의에서는 등각으로 치지 않는다. 이 방향성의 요구가 holomorphicity와 정확히 맞물리며, 다음 명제가 그 동치를 정식으로 적는다.
 
 ::: 명제 2
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C}$가 $z_0$에서 복소미분가능하다고 하자. 그러면 $f$가 $z_0$에서 등각인 것은 $f'(z_0) \neq 0$인 것과 동치이다.
@@ -131,13 +131,13 @@ $$A\,\lvert z\rvert^2 + \overline{B}z + B\bar{z} + C = 0 \tag{$\ast$}$$
 
 명제 6에 의해 임의의 Möbius 변환이 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 $(\ast)$ 꼴 방정식을 다시 $(\ast)$ 꼴로 보냄을 보이면 충분하다. 평행이동 $z \mapsto z + \beta$와 확대·회전 $z \mapsto \alpha z$은 직선을 직선으로, 원을 원으로 보냄이 기하적으로 분명하고 방정식 차원에서도 $(\ast)$ 꼴이 보존된다. Inversion $w = 1/z$, 곧 $z = 1/w$를 $(\ast)$에 대입하면
 
-$$A\,\frac{1}{\lvert w\rvert^2} + \overline{B}\,\frac{1}{w} + B\,\frac{1}{\bar w} + C = 0$$
+$$A\,\frac{1}{\lvert w\rvert^2} + \overline{B}\,\frac{1}{w} + B\,\frac{1}{\bar{w}} + C = 0$$
 
-이고, 양변에 $\lvert w\rvert^2 = w\bar w$를 곱하면
+이고, 양변에 $\lvert w\rvert^2 = w\bar{w}$를 곱하면
 
-$$A + \overline{B}\,\bar w + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\quad C\,\lvert w\rvert^2 + B w + \overline{B}\,\bar w + A = 0$$
+$$A + \overline{B}\,\bar{w} + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\quad C\,\lvert w\rvert^2 + B w + \overline{B}\,\bar{w} + A = 0$$
 
-이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline B$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
+이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline{B}$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
 :::
 
 정리 7은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 $\lvert w\rvert^2$의 계수가 $C = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
@@ -189,7 +189,7 @@ $$S(z) = (z, z_2; z_1, z_3) = \frac{(z - z_1)(z_2 - z_3)}{(z - z_3)(z_2 - z_1)}$
 
 는 $z$에 대한 일차분수변환이고, $z_2 - z_3, z_2 - z_1$이 $0$이 아닌 상수이므로 nondegenerate하다. 대입하면 $S(z_1) = 0$, $S(z_2) = 1$, $S(z_3) = \infty$이다 ($z_3$에서 분모가 $0$이 된다). 마찬가지로 $w_1, w_2, w_3$을 $0, 1, \infty$로 보내는 $S'(w) = (w, w_2; w_1, w_3)$을 잡으면, 합성 $T = S'^{-1} \circ S$이 Möbius 변환이고 $T(z_i) = S'^{-1}(S(z_i)) = S'^{-1}(\{0, 1, \infty\}\text{의 해당 점}) = w_i$이다.
 
-유일성을 본다. $T, \widetilde T$가 모두 세 점을 같은 image로 보낸다고 하면, $U = \widetilde T^{-1} \circ T$은 Möbius 변환이고 $z_1, z_2, z_3$을 모두 고정한다. Möbius 변환이 서로 다른 세 fixed point를 가지면 항등사상임을 보이면 된다. $U(z) = (az + b)/(cz + d)$가 점 $z_0$을 고정하면 $az_0 + b = z_0(cz_0 + d)$, 곧 $cz_0^2 + (d - a)z_0 - b = 0$이다. 이 이차방정식 (만일 $c \neq 0$) 은 많아야 두 해를 가지므로, 유한한 fixed point가 셋 이상이려면 $c = 0$이어야 한다. 그러면 식은 $(d - a)z_0 = b$라는 일차식이 되어, $d \neq a$이면 fixed point가 하나뿐이고 ($\infty$ 포함 둘), $b \neq 0$이고 $d = a$이면 유한 fixed point가 없다. 서로 다른 유한 fixed point가 셋 (또는 둘 이상이면서 $\infty$도 고정) 이려면 $c = 0$, $d = a$, $b = 0$이어야 하고, 이는 $U(z) = z$, 곧 항등사상이다. 따라서 $\widetilde T^{-1} \circ T = \id$이고 $T = \widetilde T$이다.
+유일성을 본다. $T, \widetilde{T}$가 모두 세 점을 같은 image로 보낸다고 하면, $U = \widetilde{T}^{-1} \circ T$은 Möbius 변환이고 $z_1, z_2, z_3$을 모두 고정한다. Möbius 변환이 서로 다른 세 fixed point를 가지면 항등사상임을 보이면 된다. $U(z) = (az + b)/(cz + d)$가 점 $z_0$을 고정하면 $az_0 + b = z_0(cz_0 + d)$, 곧 $cz_0^2 + (d - a)z_0 - b = 0$이다. 이 이차방정식 (만일 $c \neq 0$) 은 많아야 두 해를 가지므로, 유한한 fixed point가 셋 이상이려면 $c = 0$이어야 한다. 그러면 식은 $(d - a)z_0 = b$라는 일차식이 되어, $d \neq a$이면 fixed point가 하나뿐이고 ($\infty$ 포함 둘), $b \neq 0$이고 $d = a$이면 유한 fixed point가 없다. 서로 다른 유한 fixed point가 셋 (또는 둘 이상이면서 $\infty$도 고정) 이려면 $c = 0$, $d = a$, $b = 0$이어야 하고, 이는 $U(z) = z$, 곧 항등사상이다. 따라서 $\widetilde{T}^{-1} \circ T = \id$이고 $T = \widetilde{T}$이다.
 :::
 
 정리 10은 Möbius 변환을 다루는 실용적 도구를 준다. 두 영역의 boundary 위 세 점의 대응을 지정하면 변환이 유일하게 정해지므로, boundary를 맞추는 등각사상을 명시적으로 구성할 수 있다. 증명에 등장한 사상 $z \mapsto (z, z_2; z_1, z_3)$은 $z_1, z_2, z_3$을 $0, 1, \infty$로 보내는 표준화 변환이며, 임의의 세 점을 다루는 문제를 이 표준 삼점으로 환원하는 데 거듭 쓰인다. 또 정리 7과 결합하면, 세 점이 한 원-직선 위에 있을 때 그 image 세 점이 결정하는 원-직선으로 전체가 옮겨진다는 사실을 얻어, 원-직선을 원하는 원-직선으로 포개는 변환을 세 점만으로 지정할 수 있다.
@@ -201,23 +201,23 @@ Möbius 변환 가운데 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$�
 ::: 명제 11
 $a \in \mathbb{D}$에 대하여 사상
 
-$$\varphi_a(z) = \frac{z - a}{1 - \bar a z}$$
+$$\varphi_a(z) = \frac{z - a}{1 - \bar{a} z}$$
 
 는 $\mathbb{D}$를 $\mathbb{D}$로 보내는 전단사 Möbius 변환이며, $\varphi_a(a) = 0$, $\varphi_a(0) = -a$이고 그 역사상은 $\varphi_{-a}$이다. 또 단위원 $\lvert z\rvert = 1$을 단위원으로 보낸다.
 :::
 
 ::: 증명
-$\varphi_a$는 분자·분모가 일차식이고 행렬식이 $1 \cdot 1 - (-a)(-\bar a) = 1 - \lvert a\rvert^2 \neq 0$ ($\lvert a\rvert < 1$이므로) 이라 비퇴화 Möbius 변환이다. 먼저 단위원 위에서의 절댓값을 본다. $\lvert z\rvert = 1$이면 $z\bar z = 1$이므로
+$\varphi_a$는 분자·분모가 일차식이고 행렬식이 $1 \cdot 1 - (-a)(-\bar{a}) = 1 - \lvert a\rvert^2 \neq 0$ ($\lvert a\rvert < 1$이므로) 이라 비퇴화 Möbius 변환이다. 먼저 단위원 위에서의 절댓값을 본다. $\lvert z\rvert = 1$이면 $z\bar{z} = 1$이므로
 
-$$\lvert 1 - \bar a z\rvert = \lvert \bar z\rvert\,\lvert 1 - \bar a z\rvert = \lvert \bar z(1 - \bar a z)\rvert = \lvert \bar z - \bar a\rvert = \lvert \overline{z - a}\rvert = \lvert z - a\rvert$$
+$$\lvert 1 - \bar{a} z\rvert = \lvert \bar{z}\rvert\,\lvert 1 - \bar{a} z\rvert = \lvert \bar{z}(1 - \bar{a} z)\rvert = \lvert \bar{z} - \bar{a}\rvert = \lvert \overline{z - a}\rvert = \lvert z - a\rvert$$
 
-이다 (첫째 등호에서 $\lvert \bar z\rvert = \lvert z\rvert = 1$을 썼다). 따라서 $\lvert z\rvert = 1$이면 $\lvert \varphi_a(z)\rvert = \lvert z - a\rvert / \lvert 1 - \bar a z\rvert = 1$이므로, $\varphi_a$은 단위원을 단위원으로 보낸다.
+이다 (첫째 등호에서 $\lvert \bar{z}\rvert = \lvert z\rvert = 1$을 썼다). 따라서 $\lvert z\rvert = 1$이면 $\lvert \varphi_a(z)\rvert = \lvert z - a\rvert / \lvert 1 - \bar{a} z\rvert = 1$이므로, $\varphi_a$은 단위원을 단위원으로 보낸다.
 
-이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. Boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, [§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6){: data-lid="6swf3" }에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
+이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar{a} z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar{a} z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. Boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, [§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6){: data-lid="6swf3" }에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
 
-끝으로 역사상을 계산한다. $\varphi_{-a}(z) = (z + a)/(1 + \bar a z)$인데, 직접 합성하면
+끝으로 역사상을 계산한다. $\varphi_{-a}(z) = (z + a)/(1 + \bar{a} z)$인데, 직접 합성하면
 
-$$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar a z} + a}{1 + \bar a \cdot \frac{z - a}{1 - \bar a z}} = \frac{(z - a) + a(1 - \bar a z)}{(1 - \bar a z) + \bar a(z - a)} = \frac{z(1 - \lvert a\rvert^2)}{1 - \lvert a\rvert^2} = z$$
+$$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar{a} z} + a}{1 + \bar{a} \cdot \frac{z - a}{1 - \bar{a} z}} = \frac{(z - a) + a(1 - \bar{a} z)}{(1 - \bar{a} z) + \bar{a}(z - a)} = \frac{z(1 - \lvert a\rvert^2)}{1 - \lvert a\rvert^2} = z$$
 
 이다. 따라서 $\varphi_{-a} = \varphi_a^{-1}$이고, 특히 $\varphi_a$은 $\mathbb{D}$ 위의 전단사이다 (그 역도 같은 논법으로 $\mathbb{D}$를 $\mathbb{D}$로 보낸다). $\varphi_a(0) = (0 - a)/(1 - 0) = -a$임은 대입으로 즉시 나온다.
 :::
@@ -227,7 +227,7 @@ $$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar a z} + a}{1 + \bar a 
 ::: 정리 12 (단위원판의 automorphism)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic 전단사이고 그 역사상도 holomorphic이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
 
-$$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z} = e^{i\theta}\,\varphi_a(z)$$
+$$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar{a} z} = e^{i\theta}\,\varphi_a(z)$$
 
 이다. 역으로 이 꼴의 모든 사상은 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
@@ -239,7 +239,7 @@ $$g(0) = f(\varphi_{-a}(0)) = f(a) = 0$$
 
 이다. 곧 $g$는 원점을 고정하는 $\mathbb{D}$의 holomorphic automorphism이다. 원점을 고정하는 단위원판의 automorphism이 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8){: data-lid="5x14i" }), 어떤 실수 $\theta$에 대해 $g(z) = e^{i\theta} z$이다. 따라서
 
-$$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z}$$
+$$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,\frac{z - a}{1 - \bar{a} z}$$
 
 이다.
 
@@ -251,7 +251,7 @@ $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,
 ::: 정리 13 (Schwarz–Pick)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
 
-$$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
+$$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar{w} z} \right\rvert$$
 
 이고, 또 모든 $z \in \mathbb{D}$에 대하여
 
@@ -271,13 +271,13 @@ $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
 이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic morphism이라, [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7){: data-lid="zsgw7" }에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
 
-이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar w z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
+이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar{w} z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
 
 $$F(\zeta) = \varphi_{f(w)}(f(z)) = \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)}$$
 
 이다. 부등식 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$을 이 두 표현으로 적으면 첫 부등식
 
-$$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
+$$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar{w} z} \right\rvert$$
 
 을 얻는다. 미분형은 이 부등식에서 $z \rightarrow w$의 극한을 취해 나온다. 좌변을 $\lvert z - w\rvert$로 나누고 $z \rightarrow w$로 보내면, 좌변의 분자 차분비는 $\lvert f'(w)\rvert$로, 분모는 $1 - \lvert f(w)\rvert^2$로 가고 (분모에서 $\overline{f(w)}f(z) \rightarrow \lvert f(w)\rvert^2$), 우변은 $1/(1 - \lvert w\rvert^2)$로 가므로
 
@@ -290,7 +290,7 @@ $$\frac{\lvert f'(w)\rvert}{1 - \lvert f(w)\rvert^2} \leq \frac{1}{1 - \lvert w\
 
 Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 매이지 않게 풀어낸 형태이다. 좌변의 양
 
-$$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
+$$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar{w} z} \right\rvert$$
 
 은 단위원판 위의 두 점 사이의 *pseudo-hyperbolic distance<sub>유사쌍곡거리</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic morphism $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic morphism이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환 가운데 방향을 보존하는 것들과 정확히 일치함을 시사한다.
 

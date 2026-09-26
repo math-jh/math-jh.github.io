@@ -99,7 +99,7 @@ $$\chi:A\xrightarrow{\ \pi\ } A/\mathfrak{m}\xrightarrow{\ \cong\ } k$$
 
 는 unital algebra homomorphism, 곧 character이며, $\ker\chi=\ker\pi=\mathfrak{m}$이다.
 
-다음으로 injectivity를 보이자. 두 character $\chi,\chi'$가 $\ker\chi=\ker\chi'=:\mathfrak{m}$을 만족한다 하자. 명제 4에 의하여 둘 다 isomorphism $A/\mathfrak{m}\cong k$를 유도하며, 이 두 isomorphism $\bar\chi,\bar\chi'$은 모두 $k$의 image $1+\mathfrak{m}$을 $1$로 보낸다. $A/\mathfrak{m}\cong k$가 $1+\mathfrak{m}$으로 $k$-벡터공간으로서 생성되므로 $k$-선형사상 $\bar\chi,\bar\chi'$은 일치하고, 따라서 $\chi=\bar\chi\circ\pi=\bar\chi'\circ\pi=\chi'$이다.
+다음으로 injectivity를 보이자. 두 character $\chi,\chi'$가 $\ker\chi=\ker\chi'=:\mathfrak{m}$을 만족한다 하자. 명제 4에 의하여 둘 다 isomorphism $A/\mathfrak{m}\cong k$를 유도하며, 이 두 isomorphism $\bar{\chi},\bar{\chi}'$은 모두 $k$의 image $1+\mathfrak{m}$을 $1$로 보낸다. $A/\mathfrak{m}\cong k$가 $1+\mathfrak{m}$으로 $k$-벡터공간으로서 생성되므로 $k$-선형사상 $\bar{\chi},\bar{\chi}'$은 일치하고, 따라서 $\chi=\bar{\chi}\circ\pi=\bar{\chi}'\circ\pi=\chi'$이다.
 :::
 
 명제 6에서 commutativity는 maximal ideal $\mathfrak{m}$에 대해 $A/\mathfrak{m}$이 commutative field가 되도록 하는 데 사용되었고, algebraically closed 가정은 그 extension이 $k$로 붕괴되도록 하는 데 사용되었다. 두 가정 중 하나라도 빠지면 maximal ideal이 반드시 character를 낳지는 않는다. 가령 $k=\mathbb{R}$ 위의 $A=\mathbb{C}$에서 $(0)$은 maximal ideal이지만 $A/(0)=\mathbb{C}$는 $\mathbb{R}$이 아니므로 character를 정의하지 않는다.
@@ -285,11 +285,11 @@ $$M_\sigma=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 
 으로 nilpotent이며 대각화 불가능하다. $\sigma$ 자체가 nonzero nilpotent이므로 $A$는 reduced가 아니다. 그러나 [정리 8](#thm8){: data-lid="esv0c" }에 따라 $M_\sigma$의 유일한 고유값은 여전히 $0=\chi(\sigma)$이다. 즉 character가 고유값 정보를 잃지 않으면서도, 대각화 가능성이라는 추가 정보는 nilpotent 두께 $\mathfrak{n}_\chi=k\sigma$에 담겨 있다.
 
-반면 $\operatorname{char}k\neq 2$인 $k$ 위에서 $c\neq 0$에 대해 $A=k[\sigma]/(\sigma^2-c)$를 생각하면, $\sigma^2-c=(\sigma-\sqrt c)(\sigma+\sqrt c)$이 서로 다른 두 root를 가지므로
+반면 $\operatorname{char}k\neq 2$인 $k$ 위에서 $c\neq 0$에 대해 $A=k[\sigma]/(\sigma^2-c)$를 생각하면, $\sigma^2-c=(\sigma-\sqrt{c})(\sigma+\sqrt{c})$이 서로 다른 두 root를 가지므로
 
 $$A\cong k\times k$$
 
-이고 character는 $\sigma\mapsto \sqrt c$와 $\sigma\mapsto -\sqrt c$ 둘이다. 이 경우 $A$는 reduced이고 $M_\sigma$는 고유값 $\pm\sqrt c$로 대각화된다.
+이고 character는 $\sigma\mapsto \sqrt{c}$와 $\sigma\mapsto -\sqrt{c}$ 둘이다. 이 경우 $A$는 reduced이고 $M_\sigma$는 고유값 $\pm\sqrt{c}$로 대각화된다.
 :::
 
 마지막으로 첫 두 글에서 다룬 유한군의 표현론과의 다리를 놓는 예시를 본다.

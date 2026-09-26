@@ -50,7 +50,7 @@ $$M = \sup f(K)$$
 
 가 존재한다 ([§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2){: data-lid="vvqne" }). 상한의 근사 성질로부터 각 $n$에 대해
 
-$$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
+$$M - \frac{1}{n} < y_n \leq M, \qquad y_n \in f(K)$$
 
 인 $y_n$을 고를 수 있고, 따라서 $y_n \rightarrow M$이다. $f(K)$가 닫혀 있으므로 그 극한 $M$도 $f(K)$의 원소이다. 즉 $M = f(x_{\max})$인 $x_{\max} \in K$가 있어 $M$이 최댓값이다. 하한 $m = \inf f(K)$에 대해서도 같은 논증을 적용하면 $m = f(x_{\min})$인 $x_{\min} \in K$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $[a,b]$가 닫혀 있고 bounded여서 점렬컴팩트이므로 곧바로 따른다.
 :::
@@ -82,7 +82,7 @@ $$\forall \varepsilon  \exists \delta  \forall x  \forall x' : \bigl(d_X(x, x') 
 ::: 증명
 $f$가 $K$에서 연속이지만 균등연속이 아니라 하자. 그러면 어떤 $\varepsilon > 0$에 대해, 모든 $\delta = 1/n$이 실패하여
 
-$$d_X(x_n, x_n') < \frac1n \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
+$$d_X(x_n, x_n') < \frac{1}{n} \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
 
 인 두 점열 $(x_n), (x_n')$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있고, 짝지어진 점 $x_{n_k}'$도
 
@@ -124,7 +124,7 @@ $$h(x) = \begin{cases} x, & 0 \leq x < 1, \\ 0, & x = 1 \end{cases}$$
 ::: 예시 6 (연속이지만 균등연속이 아닌 함수)
 $f : (0, 1] \rightarrow \mathbb{R}$, $f(x) = 1/x$를 보자. 점 $x_n = 1/n$과 $x_n' = 1/(n+1)$을 택하면
 
-$$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrightarrow 0$$
+$$\lvert x_n - x_n' \rvert = \frac{1}{n} - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrightarrow 0$$
 
 이지만
 
@@ -134,7 +134,7 @@ $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
 같은 현상은 $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \rightarrow 0$이지만
 
-$$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
+$$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac{1}{n}\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
 
 이어서 $\varepsilon = 2$가 좌절된다. 여기서는 정의역이 bounded가 아니어서 compactness가 깨진다.
 :::

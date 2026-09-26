@@ -197,7 +197,7 @@ $$\mathcal{T}_{X/S}=\sHom_{\mathcal{O}_X}(\Omega_{X/S}, \mathcal{O}_X)$$
 로 정의한다. ([§준연접층, ⁋정의 2](/ko/math/scheme_theory/quasicoherent_sheaves#def2){: data-lid="2fw63" })
 :::
 
-이 정의가 하는 일을 보기 위해 다시 affine case를 보자. $X=\Spec B$와 $S=\Spec A$에 대하여 [정의 4](#def4){: data-lid="nki81" }는 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$를 준다. 이것으로 만들어진 $\sHom$의 global section은 $\mathcal{O}_X$-module homomorphism들이므로, $\mathcal{T}_{X/S}$의 global section은 $\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{B/A}}, \widetilde B)\cong\Hom_B(\Omega_{B/A}, B)$이고 ([§준연접층, ⁋정리 7](/ko/math/scheme_theory/quasicoherent_sheaves#thm7){: data-lid="b6avz" }), 따라서 정의로부터
+이 정의가 하는 일을 보기 위해 다시 affine case를 보자. $X=\Spec B$와 $S=\Spec A$에 대하여 [정의 4](#def4){: data-lid="nki81" }는 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$를 준다. 이것으로 만들어진 $\sHom$의 global section은 $\mathcal{O}_X$-module homomorphism들이므로, $\mathcal{T}_{X/S}$의 global section은 $\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{B/A}}, \widetilde{B})\cong\Hom_B(\Omega_{B/A}, B)$이고 ([§준연접층, ⁋정리 7](/ko/math/scheme_theory/quasicoherent_sheaves#thm7){: data-lid="b6avz" }), 따라서 정의로부터
 
 $$\mathcal{T}_{X/S}(X)\cong \Der_A(B, B)$$
 
@@ -231,7 +231,7 @@ $$T_xX=\bigl(\Omega_{X/\mathbb{K}}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\H
 로 정의한다.
 :::
 
-이 정의는 variety 위에서 local ring의 maximal ideal로 주었던 묘사와 일치한다. ([\[대수다양체\] §접공간과 매끄러움, ⁋정의 1](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def1){: data-lid="knt08" }) $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring이라 하자. Conormal exact sequence를 stalk에서 분석하면 canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$가 전사임을 얻는데, 이 sequence는 왼쪽에서 exact일 이유가 없으므로 단사성은 다른 곳에서 와야 한다. 그것을 주는 것이 $\mathbb{K}$-rational이라는 가정으로, 이 경우 $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$가 $\mathbb{K}$-algebra homomorphism으로서 갈라지므로 $f\mapsto (f-\bar f)+\mathfrak{m}_x^2$가 $\mathbb{K}$-derivation이 되어 위 map의 역을 유도하고, 따라서 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 그럼 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, $\mathcal{O}_{X,x}$가 Noetherian이면 일반적으로 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
+이 정의는 variety 위에서 local ring의 maximal ideal로 주었던 묘사와 일치한다. ([\[대수다양체\] §접공간과 매끄러움, ⁋정의 1](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def1){: data-lid="knt08" }) $x$가 residue field $\kappa(x)=\mathbb{K}$를 가지는 점, 곧 $\mathbb{K}$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring이라 하자. Conormal exact sequence를 stalk에서 분석하면 canonical map $\mathfrak{m}_x/\mathfrak{m}_x^2 \rightarrow \Omega_{X/\mathbb{K}}\otimes\kappa(x)$가 전사임을 얻는데, 이 sequence는 왼쪽에서 exact일 이유가 없으므로 단사성은 다른 곳에서 와야 한다. 그것을 주는 것이 $\mathbb{K}$-rational이라는 가정으로, 이 경우 $\mathcal{O}_{X,x} \rightarrow \kappa(x)=\mathbb{K}$가 $\mathbb{K}$-algebra homomorphism으로서 갈라지므로 $f\mapsto (f-\bar{f})+\mathfrak{m}_x^2$가 $\mathbb{K}$-derivation이 되어 위 map의 역을 유도하고, 따라서 $\Omega_{X/\mathbb{K}}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 그럼 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, $\mathcal{O}_{X,x}$가 Noetherian이면 일반적으로 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
 ## 아핀공간과 사영공간의 미분층
 
@@ -343,13 +343,13 @@ $$\det\mathcal{E}\cong \det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}''$
 
 $$\lambda:\det\mathcal{E}'\otimes_{\mathcal{O}_X}\det\mathcal{E}'' \rightarrow \det\mathcal{E}$$
 
-를 구성한다. 열린집합 $V$ 위의 section $\alpha\in(\det\mathcal{E}')(V)$과 $\bar t_1\wedge\cdots\wedge\bar t_s\in(\det\mathcal{E}'')(V)$이 주어졌을 때, $V$를 충분히 줄여 각 $\bar t_i$를 $t_i\in\mathcal{E}(V)$로 들어올린 뒤
+를 구성한다. 열린집합 $V$ 위의 section $\alpha\in(\det\mathcal{E}')(V)$과 $\bar{t}_1\wedge\cdots\wedge\bar{t}_s\in(\det\mathcal{E}'')(V)$이 주어졌을 때, $V$를 충분히 줄여 각 $\bar{t}_i$를 $t_i\in\mathcal{E}(V)$로 들어올린 뒤
 
-$$\lambda\bigl(\alpha\otimes(\bar t_1\wedge\cdots\wedge\bar t_s)\bigr)=\alpha\wedge t_1\wedge\cdots\wedge t_s$$
+$$\lambda\bigl(\alpha\otimes(\bar{t}_1\wedge\cdots\wedge\bar{t}_s)\bigr)=\alpha\wedge t_1\wedge\cdots\wedge t_s$$
 
 로 정의한다. 여기에서 우변의 $\alpha$는 inclusion $\mathcal{E}'\hookrightarrow\mathcal{E}$가 유도하는 $\det\mathcal{E}' \rightarrow \bigwedge^r\mathcal{E}$를 통해 옮긴 section을 뜻한다. 이 값은 lift의 선택에 무관하다. 두 lift의 차가 $\mathcal{E}'$의 section이므로, $t_i$를 $t_i+a_i$ ($a_i\in\mathcal{E}'(V)$)로 바꿀 때 생기는 차이는 적어도 하나의 $a_i$를 인수로 가지는 항들의 합이다. 그런데 국소 splitting 위에서 $\alpha$는 $\mathcal{E}'\vert_V$의 기저 $f_1,\ldots, f_r$에 대한 $f_1\wedge\cdots\wedge f_r$의 배수이고 $a_i$는 $f_j$들의 $\mathcal{O}_V$-일차결합이므로, 그러한 항은 어떤 $f_j$를 두 번 포함하여 소멸한다. 그러므로 국소적으로 정의된 $\lambda$들은 겹치는 부분에서 일치하며 전역적인 morphism으로 붙는다.
 
-$\lambda$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의 $U$ 위에서 $\mathcal{E}'\vert_U$의 기저를 $f_1,\ldots, f_r$이라 하고 $\mathcal{E}''\vert_U$의 기저 $\bar g_1,\ldots, \bar g_s$의 lift를 $g_1,\ldots, g_s$라 하면, splitting에 의하여 $f_1,\ldots, f_r, g_1,\ldots, g_s$는 $\mathcal{E}\vert_U$의 기저이다. [\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13){: data-lid="cqafn" }에 의하여 $\det\mathcal{E}\vert_U$는 $f_1\wedge\cdots\wedge f_r\wedge g_1\wedge\cdots\wedge g_s$를 기저로 하는 rank $1$ free sheaf이고, 마찬가지로 $(\det\mathcal{E}'\otimes\det\mathcal{E}'')\vert_U$는 $(f_1\wedge\cdots\wedge f_r)\otimes(\bar g_1\wedge\cdots\wedge\bar g_s)$를 기저로 한다. $\lambda$는 후자의 기저를 전자의 기저로 보내므로 $U$ 위에서 isomorphism이며, 따라서 전역적으로도 isomorphism이다.
+$\lambda$가 isomorphism임은 국소적으로 확인하면 충분하다. 위의 $U$ 위에서 $\mathcal{E}'\vert_U$의 기저를 $f_1,\ldots, f_r$이라 하고 $\mathcal{E}''\vert_U$의 기저 $\bar{g}_1,\ldots, \bar{g}_s$의 lift를 $g_1,\ldots, g_s$라 하면, splitting에 의하여 $f_1,\ldots, f_r, g_1,\ldots, g_s$는 $\mathcal{E}\vert_U$의 기저이다. [\[다중선형대수학\] §텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13){: data-lid="cqafn" }에 의하여 $\det\mathcal{E}\vert_U$는 $f_1\wedge\cdots\wedge f_r\wedge g_1\wedge\cdots\wedge g_s$를 기저로 하는 rank $1$ free sheaf이고, 마찬가지로 $(\det\mathcal{E}'\otimes\det\mathcal{E}'')\vert_U$는 $(f_1\wedge\cdots\wedge f_r)\otimes(\bar{g}_1\wedge\cdots\wedge\bar{g}_s)$를 기저로 한다. $\lambda$는 후자의 기저를 전자의 기저로 보내므로 $U$ 위에서 isomorphism이며, 따라서 전역적으로도 isomorphism이다.
 :::
 
 이를 Euler exact sequence에 적용하면 projective space의 canonical sheaf가 곧바로 계산된다.

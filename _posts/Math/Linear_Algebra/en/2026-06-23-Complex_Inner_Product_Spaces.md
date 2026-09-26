@@ -18,7 +18,7 @@ last_polished_at: 2026-07-11T11:00:02+00:00
 ---
 ## Complex Inner Product and Norm
 
-In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-lid="d1ekl" }, we defined an inner product on an $\mathbb{R}$-vector space. The defining condition of an inner product is positive-definiteness, i.e., $\langle v,v\rangle\geq 0$, which requires an ordering on $\mathbb{K}$ and thus does not carry over directly to a general field. In particular, on $\mathbb{C}$, if we take $\langle v,w\rangle=\sum_i v_iw_i$ verbatim, then $\langle v,v\rangle=\sum_i v_i^2$ becomes a complex number and we cannot speak of its sign. The remedy is to take the complex conjugate of one variable. Since $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$ is always a non-negative real number, we modify the inner product so that it becomes conjugate-linear in one variable. We call such an inner product a *Hermitian inner product*, and in this post we examine how the theory of [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-lid="ueu5l" } carries over to $\mathbb{C}$-vector spaces equipped with one.
+In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-lid="d1ekl" }, we defined an inner product on an $\mathbb{R}$-vector space. The defining condition of an inner product is positive-definiteness, i.e., $\langle v,v\rangle\geq 0$, which requires an ordering on $\mathbb{K}$ and thus does not carry over directly to a general field. In particular, on $\mathbb{C}$, if we take $\langle v,w\rangle=\sum_i v_iw_i$ verbatim, then $\langle v,v\rangle=\sum_i v_i^2$ becomes a complex number and we cannot speak of its sign. The remedy is to take the complex conjugate of one variable. Since $\sum_i\bar{v}_iv_i=\sum_i\lvert v_i\rvert^2$ is always a non-negative real number, we modify the inner product so that it becomes conjugate-linear in one variable. We call such an inner product a *Hermitian inner product*, and in this post we examine how the theory of [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces){: data-lid="ueu5l" } carries over to $\mathbb{C}$-vector spaces equipped with one.
 
 ::: Definition 1
 A function $\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$ on a $\mathbb{C}$-vector space $V$ is called a *Hermitian inner product* if it satisfies the following:
@@ -32,15 +32,15 @@ A $V$ equipped with such a $\langle-,-\rangle$ is called a *complex inner produc
 
 Setting $v=w$ in condition 1 gives $\langle v,v\rangle=\overline{\langle v,v\rangle}$, so $\langle v,v\rangle$ is always real, and hence the inequality in the third condition is meaningful. As for the second condition, by definition this inner product is linear in the second variable but conjugate-linear in the first; indeed, combining conditions 1 and 2 yields
 
-$$\langle \alpha v,w\rangle=\overline{\langle w,\alpha v\rangle}=\overline{\alpha\langle w,v\rangle}=\bar\alpha\overline{\langle w,v\rangle}=\bar\alpha\langle v,w\rangle$$
+$$\langle \alpha v,w\rangle=\overline{\langle w,\alpha v\rangle}=\overline{\alpha\langle w,v\rangle}=\bar{\alpha}\overline{\langle w,v\rangle}=\bar{\alpha}\langle v,w\rangle$$
 
 so the scalar emerges with its conjugate in the first variable. A form that is linear in one variable and conjugate-linear in the other is called a *sesquilinear form*. The choice of which variable is linear is a matter of convention; in physics it is common to take the first variable to be linear.
 
 The most basic example is the *standard Hermitian inner product* on $\mathbb{C}^n$,
 
-$$\langle v,w\rangle=\sum_{i=1}^n\bar v_iw_i=\bar v^tw.$$
+$$\langle v,w\rangle=\sum_{i=1}^n\bar{v}_iw_i=\bar{v}^tw.$$
 
-Here conjugate-symmetry follows from $\overline{\bar v^tw}=v^t\bar w=\overline{w}^tv$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$ is positive whenever $v\neq 0$, so the product is positive-definite.
+Here conjugate-symmetry follows from $\overline{\bar{v}^tw}=v^t\bar{w}=\overline{w}^tv$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$ is positive whenever $v\neq 0$, so the product is positive-definite.
 
 Meanwhile, since $\langle v,v\rangle$ is a non-negative real number by the third condition, we can define the length of a vector in exactly the same way as in the real case.
 
@@ -70,11 +70,11 @@ $$\lambda=\frac{\langle w,v\rangle}{\langle w,w\rangle}.$$
 
 Then $\langle w,v-\lambda w\rangle=\langle w,v\rangle-\lambda\langle w,w\rangle=0$, so $v-\lambda w$ is orthogonal to $w$. Substituting $v=\lambda w+(v-\lambda w)$, we get
 
-$$0\leq\lVert v-\lambda w\rVert^2=\langle v-\lambda w,v-\lambda w\rangle=\lVert v\rVert^2-\bar\lambda\langle w,v\rangle=\lVert v\rVert^2-\frac{\lvert\langle v,w\rangle\rvert^2}{\lVert w\rVert^2}.$$
+$$0\leq\lVert v-\lambda w\rVert^2=\langle v-\lambda w,v-\lambda w\rangle=\lVert v\rVert^2-\bar{\lambda}\langle w,v\rangle=\lVert v\rVert^2-\frac{\lvert\langle v,w\rangle\rvert^2}{\lVert w\rVert^2}.$$
 
 The last equality follows from
 
-$$\bar\lambda\langle w,v\rangle=\frac{\overline{\langle w,v\rangle}\langle w,v\rangle}{\lVert w\rVert^2}=\frac{\lvert\langle w,v\rangle\rvert^2}{\lVert w\rVert^2}$$
+$$\bar{\lambda}\langle w,v\rangle=\frac{\overline{\langle w,v\rangle}\langle w,v\rangle}{\lVert w\rVert^2}=\frac{\lvert\langle w,v\rangle\rvert^2}{\lVert w\rVert^2}$$
 
 and $\lvert\langle w,v\rangle\rvert=\lvert\langle v,w\rangle\rvert$. Rearranging gives $\lvert\langle v,w\rangle\rvert^2\leq\lVert v\rVert^2\lVert w\rVert^2$, and equality holds exactly when $v-\lambda w=0$, i.e., when $v,w$ are linearly dependent.
 :::
@@ -83,15 +83,15 @@ From this, the triangle inequality follows. Applying $\Real\langle v,w\rangle\le
 
 $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\rVert^2=(\lVert v\rVert+\lVert w\rVert)^2$$
 
-and thus $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$. That $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$ follows immediately from $\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$, so $\lVert-\rVert$ is indeed a norm. ([§Inner Product Spaces, ⁋Definition 2](/en/math/linear_algebra/inner_product_spaces#def2){: data-lid="mkgoq" })
+and thus $\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$. That $\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$ follows immediately from $\langle\alpha v,\alpha v\rangle=\bar{\alpha}\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$, so $\lVert-\rVert$ is indeed a norm. ([§Inner Product Spaces, ⁋Definition 2](/en/math/linear_algebra/inner_product_spaces#def2){: data-lid="mkgoq" })
 
 ## Orthonormal basis
 
-Just as in the real case, in a complex inner product space we say two vectors $v,w$ are orthogonal when $\langle v,w\rangle=0$, and a basis whose vectors all have norm $1$ and are pairwise orthogonal is called an orthonormal basis. Here too, the Gram–Schmidt process works exactly as before: given a basis $\{x_1,\ldots,x_n\}$, set $\hat x_1=x_1$ and define
+Just as in the real case, in a complex inner product space we say two vectors $v,w$ are orthogonal when $\langle v,w\rangle=0$, and a basis whose vectors all have norm $1$ and are pairwise orthogonal is called an orthonormal basis. Here too, the Gram–Schmidt process works exactly as before: given a basis $\{x_1,\ldots,x_n\}$, set $\hat{x}_1=x_1$ and define
 
-$$\hat x_k=x_k-\sum_{i=1}^{k-1}\frac{\langle\hat x_i,x_k\rangle}{\langle\hat x_i,\hat x_i\rangle}\hat x_i;$$
+$$\hat{x}_k=x_k-\sum_{i=1}^{k-1}\frac{\langle\hat{x}_i,x_k\rangle}{\langle\hat{x}_i,\hat{x}_i\rangle}\hat{x}_i;$$
 
-then $\langle\hat x_j,\hat x_k\rangle=0$ ($j<k$) is verified inductively, so $\{\hat x_1,\ldots,\hat x_n\}$ becomes an orthogonal basis. One point requiring care is that the numerator is $\langle\hat x_i,x_k\rangle$, not $\langle x_k,\hat x_i\rangle$: for the projection to point in the correct direction, $\hat x_i$ must be placed in the first variable, the conjugate-linear side.
+then $\langle\hat{x}_j,\hat{x}_k\rangle=0$ ($j<k$) is verified inductively, so $\{\hat{x}_1,\ldots,\hat{x}_n\}$ becomes an orthogonal basis. One point requiring care is that the numerator is $\langle\hat{x}_i,x_k\rangle$, not $\langle x_k,\hat{x}_i\rangle$: for the projection to point in the correct direction, $\hat{x}_i$ must be placed in the first variable, the conjugate-linear side.
 
 If $\mathcal{B}=\{x_1,\ldots,x_n\}$ is an orthonormal basis, then for any $v=\sum_iv_ix_i$ the coefficients are obtained by applying $\langle x_i,-\rangle$:
 
@@ -127,14 +127,14 @@ $$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V$$
 just as in the real case. The nature of $L^\ast$ can be understood through its matrix representation with respect to an orthonormal basis.
 
 ::: Proposition 5
-Let $\mathcal{B}=\{e_1,\ldots,e_n\}$ be an orthonormal basis of a complex inner product space $V$ and let $A=[L]_\mathcal{B}^\mathcal{B}$. Then the matrix representation of $L^\ast$ is the *conjugate transpose* $A^\ast=\bar A^t$ of $A$.
+Let $\mathcal{B}=\{e_1,\ldots,e_n\}$ be an orthonormal basis of a complex inner product space $V$ and let $A=[L]_\mathcal{B}^\mathcal{B}$. Then the matrix representation of $L^\ast$ is the *conjugate transpose* $A^\ast=\bar{A}^t$ of $A$.
 :::
 ::: Proof
 Since $Le_i=\sum_kA_{ki}e_k$, we have $\langle e_j,Le_i\rangle=\sum_kA_{ki}\langle e_j,e_k\rangle=A_{ji}$. Then by the definition of the adjoint and conjugate-symmetry,
 
 $$[L^\ast]_{ij}=\langle e_i,L^\ast e_j\rangle=\langle Le_i,e_j\rangle=\overline{\langle e_j,Le_i\rangle}=\overline{A_{ji}}$$
 
-so the $(i,j)$-entry of the matrix representation of $L^\ast$ is $\overline{A_{ji}}$, i.e., $A^\ast=\bar A^t$.
+so the $(i,j)$-entry of the matrix representation of $L^\ast$ is $\overline{A_{ji}}$, i.e., $A^\ast=\bar{A}^t$.
 :::
 
 Thus, whereas the adjoint was given by the transpose in a real inner product space, in a complex inner product space it becomes the conjugate transpose.
@@ -165,15 +165,15 @@ Any invertible matrix $A\in\Mat_n(\mathbb{C})$ is uniquely decomposed as a produ
 $$A=QR$$
 :::
 ::: Proof
-Since $A$ is invertible, its columns $a_1,\ldots,a_n$ form a basis of $\mathbb{C}^n$. Applying the Gram–Schmidt process for the standard Hermitian inner product, we obtain an orthogonal basis $\hat a_1,\ldots,\hat a_n$, and normalize by setting $q_k=\hat a_k/\lVert\hat a_k\rVert$. Solving the Gram–Schmidt formula for $a_k$ gives
+Since $A$ is invertible, its columns $a_1,\ldots,a_n$ form a basis of $\mathbb{C}^n$. Applying the Gram–Schmidt process for the standard Hermitian inner product, we obtain an orthogonal basis $\hat{a}_1,\ldots,\hat{a}_n$, and normalize by setting $q_k=\hat{a}_k/\lVert\hat{a}_k\rVert$. Solving the Gram–Schmidt formula for $a_k$ gives
 
-$$a_k=\hat a_k+\sum_{i=1}^{k-1}\frac{\langle\hat a_i,a_k\rangle}{\langle\hat a_i,\hat a_i\rangle}\hat a_i=\lVert\hat a_k\rVert q_k+\sum_{i=1}^{k-1}\langle q_i,a_k\rangle q_i$$
+$$a_k=\hat{a}_k+\sum_{i=1}^{k-1}\frac{\langle\hat{a}_i,a_k\rangle}{\langle\hat{a}_i,\hat{a}_i\rangle}\hat{a}_i=\lVert\hat{a}_k\rVert q_k+\sum_{i=1}^{k-1}\langle q_i,a_k\rangle q_i$$
 
 Let $Q$ be the matrix with columns $q_1,\ldots,q_n$, and define the matrix $R$ by
 
-$$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qquad R_{ik}=0\quad(i>k)$$
+$$R_{kk}=\lVert\hat{a}_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qquad R_{ik}=0\quad(i>k)$$
 
-Then the above equation becomes exactly $A=QR$. Since the columns of $Q$ form an orthonormal basis, $(Q^\ast Q)_{ij}=\langle q_i,q_j\rangle$ equals $1$ when $i=j$ and $0$ otherwise, so $Q^\ast Q=I$; hence $Q$ is unitary, and $R$ is an upper triangular matrix with diagonal entries $\lVert\hat a_k\rVert>0$.
+Then the above equation becomes exactly $A=QR$. Since the columns of $Q$ form an orthonormal basis, $(Q^\ast Q)_{ij}=\langle q_i,q_j\rangle$ equals $1$ when $i=j$ and $0$ otherwise, so $Q^\ast Q=I$; hence $Q$ is unitary, and $R$ is an upper triangular matrix with diagonal entries $\lVert\hat{a}_k\rVert>0$.
 
 To show uniqueness, suppose $A=Q_1R_1=Q_2R_2$ are two decompositions satisfying the conditions, and set $T=Q_2^\ast Q_1=R_2R_1^{-1}$. First, an invertible upper triangular matrix is precisely an invertible matrix that sends the subspace $\span(e_1,\ldots,e_k)$ to itself for each $k=1,\ldots,n$; therefore the inverse and product of such matrices are again upper triangular. Moreover, the diagonal entries of a product of two triangular matrices are the products of the corresponding diagonal entries, so the diagonal entries of $R_1^{-1}$ are $(R_1)_{kk}^{-1}$, and the diagonal entries of $T=R_2R_1^{-1}$ are $(R_2)_{kk}/(R_1)_{kk}$, hence all positive real numbers. On the other hand, $T=Q_2^\ast Q_1$ is a product of unitary matrices, so it is unitary; thus $T^{-1}=T^\ast$, where the left-hand side is the inverse of an upper triangular matrix and hence upper triangular, while the right-hand side is the conjugate transpose of an upper triangular matrix and hence lower triangular. Therefore $T^{-1}$, and consequently $T$, is a diagonal matrix. The diagonal entries of a unitary diagonal matrix must have absolute value $1$, but the diagonal entries of $T$ are positive real numbers, so they are all $1$; hence $T=I$. This means $Q_1=Q_2$ and $R_1=R_2$.
 :::

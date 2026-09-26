@@ -134,7 +134,7 @@ For $D\in\Der_A(S^{-1}E, M)$, $x\in E$, and $s\in S$, applying the Leibniz rule 
 
 $$D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$$
 
-and thus $D$ is determined by its values on $E$, so $\varphi^\ast$ is injective. For surjectivity, given $D\in\Der_A(E, M)$, we may take the above formula as a definition and set $\widetilde D(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$. To show that this is well-defined, suppose $x/s=y/t$. Then some $u\in S$ satisfies $u(tx-sy)=0$ ([§Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4){: data-lid="572de" }), and applying $D$ to this yields
+and thus $D$ is determined by its values on $E$, so $\varphi^\ast$ is injective. For surjectivity, given $D\in\Der_A(E, M)$, we may take the above formula as a definition and set $\widetilde{D}(x/s)=\bigl(D(x)-(x/s)D(s)\bigr)/s$. To show that this is well-defined, suppose $x/s=y/t$. Then some $u\in S$ satisfies $u(tx-sy)=0$ ([§Localization, ⁋Definition 4](/en/math/commutative_algebra/localization#def4){: data-lid="572de" }), and applying $D$ to this yields
 
 $$utD(x)+uxD(t)+txD(u)=usD(y)+uyD(s)+syD(u)$$
 
@@ -146,20 +146,20 @@ Meanwhile, from $tx=sy$ we have $tx/s=y$ and $sy/t=x$, so dividing both sides of
 
 $$\bigl(D(x)-(x/s)D(s)\bigr)/s=\bigl(D(y)-(y/t)D(t)\bigr)/t$$
 
-which shows that $\widetilde D$ is well-defined. That this preserves scalar multiplication by elements of $A$ follows directly from the fact that $D$ is $A$-linear and the definition, and the preservation of addition is verified by applying the definition to $x/s+y/t=(tx+sy)/(st)$:
+which shows that $\widetilde{D}$ is well-defined. That this preserves scalar multiplication by elements of $A$ follows directly from the fact that $D$ is $A$-linear and the definition, and the preservation of addition is verified by applying the definition to $x/s+y/t=(tx+sy)/(st)$:
 
-$$\widetilde D\Bigl(\frac{tx+sy}{st}\Bigr)=\frac{tD(x)+xD(t)+sD(y)+yD(s)}{st}-\Bigl(\frac{x}{s}+\frac{y}{t}\Bigr)\Bigl(\frac{D(s)}{s}+\frac{D(t)}{t}\Bigr)$$
+$$\widetilde{D}\Bigl(\frac{tx+sy}{st}\Bigr)=\frac{tD(x)+xD(t)+sD(y)+yD(s)}{st}-\Bigl(\frac{x}{s}+\frac{y}{t}\Bigr)\Bigl(\frac{D(s)}{s}+\frac{D(t)}{t}\Bigr)$$
 
-where $xD(t)/(st)$ and $yD(s)/(st)$ cancel out, leaving only $\widetilde D(x/s)+\widetilde D(y/t)$. The remaining Leibniz rule is verified by
+where $xD(t)/(st)$ and $yD(s)/(st)$ cancel out, leaving only $\widetilde{D}(x/s)+\widetilde{D}(y/t)$. The remaining Leibniz rule is verified by
 
 $$\begin{aligned}
-\widetilde D\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
+\widetilde{D}\Bigl(\frac{xy}{st}\Bigr)&=\frac{D(xy)}{st}-\frac{xy}{(st)^2}D(st)\\
 &=\frac{xD(y)+yD(x)}{st}-\frac{xy}{(st)^2}\bigl(sD(t)+tD(s)\bigr)\\
 &=\frac{x}{s}\Bigl(\frac{D(y)}{t}-\frac{y}{t^2}D(t)\Bigr)+\frac{y}{t}\Bigl(\frac{D(x)}{s}-\frac{x}{s^2}D(s)\Bigr)\\
-&=\frac{x}{s}\widetilde D\Bigl(\frac{y}{t}\Bigr)+\frac{y}{t}\widetilde D\Bigl(\frac{x}{s}\Bigr)
+&=\frac{x}{s}\widetilde{D}\Bigl(\frac{y}{t}\Bigr)+\frac{y}{t}\widetilde{D}\Bigl(\frac{x}{s}\Bigr)
 \end{aligned}$$
 
-Also, since $D(1)=D(1\cdot 1)=2D(1)$ implies $D(1)=0$, we have $\widetilde D(x/1)=D(x)$, and so $\varphi^\ast\widetilde D=D$.
+Also, since $D(1)=D(1\cdot 1)=2D(1)$ implies $D(1)=0$, we have $\widetilde{D}(x/1)=D(x)$, and so $\varphi^\ast\widetilde{D}=D$.
 
 Now since $\varphi^\ast$ is a bijection natural in $M$, combining this with [Lemma 2](#lem2){: data-lid="8x7f2" } and the adjunction in [\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6){: data-lid="5ajv1" } gives, for any $S^{-1}E$-module $M$,
 

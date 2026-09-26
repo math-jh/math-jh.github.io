@@ -202,7 +202,7 @@ $$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
 $$f'(\alpha(a))=\beta(f(a))=\beta(b_1)-\beta(b)=f'(a_1'-a')$$
 
-이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod \im(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $A$-module들 사이의 homomorphism임을 보일 수 있다.
+이고, $f'$가 단사이므로 $\alpha(a)=a_1'-a'$가 성립한다. 즉, $a_1'\equiv a' \mod{\im}(\alpha)$이고, $\delta$가 잘 정의된다. 어렵지 않게 $\delta$가 $A$-module들 사이의 homomorphism임을 보일 수 있다.
 
 이렇게 만든 $\delta$가 다음의 열
 

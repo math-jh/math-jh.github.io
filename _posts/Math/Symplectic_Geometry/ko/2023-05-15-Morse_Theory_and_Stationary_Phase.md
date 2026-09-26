@@ -34,9 +34,9 @@ Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/m
 ::: 정의 2
 $f:M\rightarrow\mathbb{R}$의 critical point $p$에서의 *Hessian<sub>헤시안</sub>* $\operatorname{Hess}_p(f)$는 다음의 식
 
-$$\operatorname{Hess}_p(f)(X,Y) = X_p(\tilde Y f)$$
+$$\operatorname{Hess}_p(f)(X,Y) = X_p(\tilde{Y} f)$$
 
-으로 정의되는 대칭 bilinear form $T_pM\times T_pM\rightarrow\mathbb{R}$이다. 여기서 $\tilde Y$는 $Y$의 임의의 smooth extension이고, $p$가 critical point라는 사실에 의해 위 표현은 extension의 선택과 무관하다.
+으로 정의되는 대칭 bilinear form $T_pM\times T_pM\rightarrow\mathbb{R}$이다. 여기서 $\tilde{Y}$는 $Y$의 임의의 smooth extension이고, $p$가 critical point라는 사실에 의해 위 표현은 extension의 선택과 무관하다.
 :::
 
 좌표 $(x_1,\ldots,x_n)$에서는
@@ -166,21 +166,21 @@ $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i
 
 **2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6){: data-lid="puk9j" }을 $\phi$에 적용하면 $p$ 근방에서 좌표 $y=(y_1,\ldots,y_n)$이 존재하여
 
-$$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2 = \phi(p) + \frac12 Q(y)$$
+$$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2 = \phi(p) + \frac{1}{2} Q(y)$$
 
-이라 할 수 있다. 여기서 $Q(y)=\sum_i 2\epsilon_i y_i^2$이며 $\epsilon_i\in\{-1,+1\}$이다. 좌표변환의 Jacobian을 $J(y)$라 하고 $\tilde a(y)=a(y)J(y)$로 두면
+이라 할 수 있다. 여기서 $Q(y)=\sum_i 2\epsilon_i y_i^2$이며 $\epsilon_i\in\{-1,+1\}$이다. 좌표변환의 Jacobian을 $J(y)$라 하고 $\tilde{a}(y)=a(y)J(y)$로 두면
 
-$$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(y)\dd{y}$$
+$$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde{a}(y)\dd{y}$$
 
 로 환원된다 (extension은 0으로). 이제 문제는 *Gaussian 형태의 oscillating integral*
 
-$$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\dd{y}$$
+$$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde{a}(y)\dd{y}$$
 
 의 $\hbar\rightarrow 0$ 점근을 계산하는 것이다.
 
-**3단계 (Gaussian integral).** $\tilde a(y) = \tilde a(0) + \sum_i y_i \tilde a_i(y)$로 Taylor 전개하면, $y_i$항들은 부분적분 후 $O(\hbar)$의 보정만을 주므로 leading order는
+**3단계 (Gaussian integral).** $\tilde{a}(y) = \tilde{a}(0) + \sum_i y_i \tilde{a}_i(y)$로 Taylor 전개하면, $y_i$항들은 부분적분 후 $O(\hbar)$의 보정만을 주므로 leading order는
 
-$$J(\hbar) \sim \tilde a(0)\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i}$$
+$$J(\hbar) \sim \tilde{a}(0)\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i}$$
 
 으로 인수분해된다. 1차원 Fresnel 적분의 표준 결과
 
@@ -192,7 +192,7 @@ $$\prod_{i=1}^n \int_{-\infty}^\infty e^{i\epsilon_i y_i^2/\hbar}\dd{y_i} = (\pi
 
 이 된다. 여기서 마지막 등호는 $\sum_i\operatorname{sgn}(\epsilon_i)$이 정확히 $Q$, 즉 $\operatorname{Hess}_p(\phi)$의 signature $\sigma_p$라는 사실을 사용한다.
 
-한편 위에서 잡은 $J$는 $\det\operatorname{Hess}_p(\phi) = J(0)^{-2}\cdot\det[\operatorname{diag}(2\epsilon_i)]$를 만족하므로 (Morse lemma의 좌표가 Hessian을 $\operatorname{diag}(2\epsilon_i)$로 만들기 때문이다) $\tilde a(0) = a(p)\lvert\det\operatorname{Hess}_p(\phi)\rvert^{-1/2}\cdot 2^{n/2}$가 성립한다. 이를 위 식과 결합하고 $(\pi\hbar)^{n/2}\cdot 2^{n/2}=(2\pi\hbar)^{n/2}$임을 사용하면
+한편 위에서 잡은 $J$는 $\det\operatorname{Hess}_p(\phi) = J(0)^{-2}\cdot\det[\operatorname{diag}(2\epsilon_i)]$를 만족하므로 (Morse lemma의 좌표가 Hessian을 $\operatorname{diag}(2\epsilon_i)$로 만들기 때문이다) $\tilde{a}(0) = a(p)\lvert\det\operatorname{Hess}_p(\phi)\rvert^{-1/2}\cdot 2^{n/2}$가 성립한다. 이를 위 식과 결합하고 $(\pi\hbar)^{n/2}\cdot 2^{n/2}=(2\pi\hbar)^{n/2}$임을 사용하면
 
 $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\sqrt{\lvert\det\operatorname{Hess}_p(\phi)\rvert}}\,a(p) + O(\hbar^{n/2+1})$$
 
@@ -300,7 +300,7 @@ $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hba
 ::: 증명
 $p$ 근방에서 holomorphic Morse lemma (즉 [정리 6](#thm6){: data-lid="11nqh" }의 복소 버전)에 의해 holomorphic coordinate $z=(z_1,\ldots,z_n)$이 존재하여
 
-$$W(z) = W(p) + \frac12\sum_{i=1}^n z_i^2$$
+$$W(z) = W(p) + \frac{1}{2}\sum_{i=1}^n z_i^2$$
 
 이라 할 수 있다. 그럼 $\Gamma_p$는 이 좌표에서 $z_i = e^{i\theta_i}t_i$ ($t_i\in\mathbb{R}$)의 꼴로 적당한 위상 $\theta_i$들을 따라 잡은 실 $n$차원 submanifold가 되며, 위상 $\theta_i$는 정확히 적분이 수렴하도록 결정된다. 이 좌표에서 적분은 Gaussian integral
 

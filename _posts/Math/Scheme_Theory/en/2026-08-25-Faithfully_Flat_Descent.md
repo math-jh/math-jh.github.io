@@ -329,7 +329,7 @@ $$\Gamma(T, \psi^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, \psi_i^\ast\ma
 is exact.
 :::
 ::: Proof
-The problem is local, and thanks to the quasi-compactness condition it reduces to a finite covering, so it suffices to treat the case where $T=\Spec A$ is affine and the covering is a single faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$. In this case, choose an $A$-module $M$ with $\mathcal{F}=\widetilde M$; since pullback is given by base change ([§Quasi-coherent Sheaves, ⁋Proposition 15](/en/math/scheme_theory/quasicoherent_sheaves#prop15){: data-lid="o1q8g" }), the above sequence becomes
+The problem is local, and thanks to the quasi-compactness condition it reduces to a finite covering, so it suffices to treat the case where $T=\Spec A$ is affine and the covering is a single faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$. In this case, choose an $A$-module $M$ with $\mathcal{F}=\widetilde{M}$; since pullback is given by base change ([§Quasi-coherent Sheaves, ⁋Proposition 15](/en/math/scheme_theory/quasicoherent_sheaves#prop15){: data-lid="o1q8g" }), the above sequence becomes
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B.$$
 
@@ -346,7 +346,7 @@ obtained by generalizing [Lemma 3](#lem3){: data-lid="393qf" } with $M$ as coeff
 Let $\{\psi_i: U_i \rightarrow X\}$ be an fpqc cover. Then giving a quasi-coherent sheaf on $X$ is equivalent to giving the data of quasi-coherent sheaves $\mathcal{F}_i$ on each $U_i$, together with isomorphisms $\Phi_{ij}: \pr_2^\ast \mathcal{F}_j\cong \pr_1^\ast \mathcal{F}_i$ on $U_i\times_X U_j$ satisfying the cocycle condition.
 :::
 ::: Proof
-Since the problem is local, it suffices to consider the case where $X=\Spec A$ and the covering is a single faithfully flat morphism $\Spec B \rightarrow \Spec A$. In this situation, $U_i\times_X U_j$ is $\Spec(B\otimes_A B)$, and the given data is exactly a cocycle pair consisting of a $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$ and a $B\otimes_A B$-module isomorphism $\Phi_N$, i.e. a descent datum in the sense of [Definition 4](#def4){: data-lid="k73f1" }. Since this data corresponds exactly to an object of $\Desc(B/A)$, by [Theorem 6](#thm6){: data-lid="1sigy" } it comes from a unique $A$-module $M$, i.e. a unique quasi-coherent sheaf $\widetilde M$, and this correspondence preserves morphisms as well.
+Since the problem is local, it suffices to consider the case where $X=\Spec A$ and the covering is a single faithfully flat morphism $\Spec B \rightarrow \Spec A$. In this situation, $U_i\times_X U_j$ is $\Spec(B\otimes_A B)$, and the given data is exactly a cocycle pair consisting of a $B$-module $N=\Gamma(\Spec B, \mathcal{F}_1)$ and a $B\otimes_A B$-module isomorphism $\Phi_N$, i.e. a descent datum in the sense of [Definition 4](#def4){: data-lid="k73f1" }. Since this data corresponds exactly to an object of $\Desc(B/A)$, by [Theorem 6](#thm6){: data-lid="1sigy" } it comes from a unique $A$-module $M$, i.e. a unique quasi-coherent sheaf $\widetilde{M}$, and this correspondence preserves morphisms as well.
 
 For a general fpqc cover, use the quasi-compactness condition to extract a finite subcover, form its disjoint union into a single affine faithfully flat morphism, apply the affine case above, and then glue the results over the affine opens of $X$. The consistency of the gluing is guaranteed by the sheaf property of [Theorem 10](#thm10){: data-lid="aem78" }.
 :::

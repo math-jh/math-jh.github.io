@@ -58,7 +58,7 @@ Every proper submodule $M'$ of $M$ is an intersection of primary submodules. Tha
     is a minimal primary decomposition of $S^{-1}M'$ over $S^{-1}A$.
 :::
 
-In particular, when $M=A$ and $M'=\mathfrak a$ is an ideal of $A$, the prime ideals containing $\mathfrak a$ that are minimal with respect to inclusion, as in the third part of [Theorem 3](#thm3){: data-lid="m1mg4" }, are called the *minimal prime ideals* of $\mathfrak a$; when $\mathfrak a=(0)$, we simply call them the minimal prime ideals of $A$.
+In particular, when $M=A$ and $M'=\mathfrak{a}$ is an ideal of $A$, the prime ideals containing $\mathfrak{a}$ that are minimal with respect to inclusion, as in the third part of [Theorem 3](#thm3){: data-lid="m1mg4" }, are called the *minimal prime ideals* of $\mathfrak{a}$; when $\mathfrak{a}=(0)$, we simply call them the minimal prime ideals of $A$.
 
 To prove this, we first define the irreducible decomposition of a module.
 

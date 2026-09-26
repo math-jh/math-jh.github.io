@@ -41,7 +41,7 @@ $\mathbb{Z}[i]$는 Euclidean domain이다. 즉 임의의 $\alpha, \beta \in \mat
 ::: 증명
 복소수 $\alpha/\beta = u + vi$ ($u, v \in \mathbb{Q}$) 에 대해 가장 가까운 정수 $m, n$ ($\lvert u - m\rvert \leq 1/2$, $\lvert v - n\rvert \leq 1/2$) 을 잡고 $\kappa = m + ni$로 두자. $\rho = \alpha - \beta\kappa$로 두면
 
-$$N(\rho) = N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\frac14 + \frac14\right) = \frac12 N(\beta) < N(\beta)$$
+$$N(\rho) = N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\frac{1}{4} + \frac{1}{4}\right) = \frac{1}{2} N(\beta) < N(\beta)$$
 
 이다. 유클리드 나눗셈이 성립하면 $\mathbb{Z}$에서와 똑같은 논증으로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm){: data-lid="nz39g" }, [§소수와 산술의 기본정리](/ko/math/number_theory/primes){: data-lid="dkhkt" }) 최대공약수·Bézout·unique factorization이 모두 따라온다.
 :::
@@ -51,13 +51,13 @@ $$N(\rho) = N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl(
 이제 소수 $p$를 $\mathbb{Z}[i]$에서 보면, $p = x^2 + y^2$은 $p = (x+yi)(x-yi)$로 $p$가 $\mathbb{Z}[i]$에서 쪼개진다는 뜻이다. 언제 그러한지는 이차 잉여가 결정한다.
 
 ::: 정리 4 (페르마의 두 제곱수 정리)
-홀수 소수 $p$가 두 제곱수의 합으로 쓰이는 것은 $p \equiv 1 \pmod 4$인 것과 동치이다.
+홀수 소수 $p$가 두 제곱수의 합으로 쓰이는 것은 $p \equiv 1 \pmod{4}$인 것과 동치이다.
 :::
 
 ::: 증명
-$p \equiv 3 \pmod 4$이면, $x^2 + y^2 \equiv 0 \pmod p$에서 $p \nmid x$라면 $(xy^{-1})^2 \equiv -1 \pmod p$가 되어 $-1$이 이차 잉여여야 하는데, $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="7y8x3" }) 따라서 $p \mid x, p\mid y$이고 $x^2 + y^2$은 $p^2$의 배수가 되어 $p$와 같을 수 없다.
+$p \equiv 3 \pmod{4}$이면, $x^2 + y^2 \equiv 0 \pmod{p}$에서 $p \nmid x$라면 $(xy^{-1})^2 \equiv -1 \pmod{p}$가 되어 $-1$이 이차 잉여여야 하는데, $\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="7y8x3" }) 따라서 $p \mid x, p\mid y$이고 $x^2 + y^2$은 $p^2$의 배수가 되어 $p$와 같을 수 없다.
 
-$p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod p$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $(m\pm i)/p = m/p \pm i/p \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 두 비단원의 곱 $p = \alpha\beta$로 분해되고, norm을 취하면 $p^2 = N(\alpha)N(\beta)$인데 $N(\alpha), N(\beta) > 1$이므로 $N(\alpha) = N(\beta) = p$, 곧 $\alpha = x + yi$에 대해 $p = x^2 + y^2$이다. 이때 $p = N(\alpha) = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이기도 하다.
+$p \equiv 1 \pmod{4}$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv -1 \pmod{p}$인 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m+i)(m-i)$이지만, $p$는 $(m\pm i)/p = m/p \pm i/p \notin \mathbb{Z}[i]$이므로 $m + i$도 $m - i$도 나누지 못한다. 즉 $p$는 $\mathbb{Z}[i]$에서 소수가 아니어서 두 비단원의 곱 $p = \alpha\beta$로 분해되고, norm을 취하면 $p^2 = N(\alpha)N(\beta)$인데 $N(\alpha), N(\beta) > 1$이므로 $N(\alpha) = N(\beta) = p$, 곧 $\alpha = x + yi$에 대해 $p = x^2 + y^2$이다. 이때 $p = N(\alpha) = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이기도 하다.
 :::
 
 여기서 $p = 2 = 1^2 + 1^2$은 특별하다. $2 = -i(1+i)^2$이므로 $2$의 norm $N(1+i) = 2$인 인수 $1+i$가 단원을 곱한 차이로 자기 켤레와 같아지는, 이른바 *분기<sub>ramification</sub>*가 일어나는 유일한 소수이다. 이제 이러한 분해 방식을 모든 소수에 대해 분류하여 $\mathbb{Z}[i]$의 소수(가우스 소수)가 무엇인지 완전히 기술하자.
@@ -70,8 +70,8 @@ $p \equiv 1 \pmod 4$이면 $\left(\frac{-1}{p}\right) = 1$이므로 $m^2 \equiv 
 단원을 무시하면 $\mathbb{Z}[i]$의 소수는 정확히 다음 셋으로 나뉜다.
 
 1. $1 + i$ (norm $2$). 여기서 $2 = -i(1+i)^2$이다.
-2. 유리소수 $p \equiv 3 \pmod 4$ (norm $p^2$). 이들은 $\mathbb{Z}[i]$에서도 소수로 남는다.
-3. $p \equiv 1 \pmod 4$인 각 $p$에 대해 $p = \pi\overline{\pi}$로 나타나는 켤레쌍 $\pi, \overline{\pi}$ (norm $p$). 서로 단원배가 아니다.
+2. 유리소수 $p \equiv 3 \pmod{4}$ (norm $p^2$). 이들은 $\mathbb{Z}[i]$에서도 소수로 남는다.
+3. $p \equiv 1 \pmod{4}$인 각 $p$에 대해 $p = \pi\overline{\pi}$로 나타나는 켤레쌍 $\pi, \overline{\pi}$ (norm $p$). 서로 단원배가 아니다.
 :::
 
 ::: 증명
@@ -81,7 +81,7 @@ $$\pi \mid \pi\overline{\pi} = N(\pi) = p_1 \cdots p_r$$
 
 이고 $\pi$가 소수이므로 $\pi$는 어떤 $p_j$를 나눈다 (만약 $\pi$가 서로 다른 두 유리소수 $p, q$를 모두 나누면 $\gcd(p,q)=1$의 Bézout 표현으로 $\pi \mid 1$이 되어 모순이므로, 그러한 $p$는 유일하다). 따라서 모든 가우스 소수는 정확히 하나의 유리소수를 나누며, 각 유리소수가 $\mathbb{Z}[i]$에서 어떻게 쪼개지는지를 보면 충분하다.
 
-$p = 2$이면 $2 = (1+i)(1-i) = -i(1+i)^2$이고 $N(1+i) = 2$는 소수이므로 $1+i$는 가우스 소수이며, $1 - i = -i(1+i)$는 그 단원배이다. $p \equiv 3 \pmod 4$이면 정리 4에서 보았듯 $p$는 두 제곱수의 합이 아니어서 $N(\pi) = p$인 $\pi$가 없고, 만약 $p = \alpha\beta$가 비단원 분해라면 $p^2 = N(\alpha)N(\beta)$에서 $N(\alpha) = p$가 강제되어 모순이므로 $p$ 자체가 가우스 소수이다 (norm $p^2$). $p \equiv 1 \pmod 4$이면 정리 4에서 $p = \pi\overline{\pi}$, $N(\pi) = p$이고, $N(\pi)$가 소수이므로 $\pi$는 가우스 소수이다. 끝으로 $\pi$와 $\overline{\pi}$가 단원배가 아님을 본다. $\pi = a + bi$ ($a^2 + b^2 = p$) 라 두고 $\overline{\pi} = u\pi$인 단원 $u \in \{1, -1, i, -i\}$가 있다고 가정하자. $u = \pm 1$이면 $a - bi = \pm(a + bi)$에서 $b = 0$ 또는 $a = 0$이 되어 $p = a^2$ 또는 $p = b^2$이 완전제곱수가 되고, $u = \pm i$이면 $a = \mp b$가 되어 $p = a^2 + b^2 = 2a^2$이 짝수가 된다. 어느 경우도 홀수 소수 $p$에 대해서는 성립할 수 없으므로, 둘은 단원배가 아니다.
+$p = 2$이면 $2 = (1+i)(1-i) = -i(1+i)^2$이고 $N(1+i) = 2$는 소수이므로 $1+i$는 가우스 소수이며, $1 - i = -i(1+i)$는 그 단원배이다. $p \equiv 3 \pmod{4}$이면 정리 4에서 보았듯 $p$는 두 제곱수의 합이 아니어서 $N(\pi) = p$인 $\pi$가 없고, 만약 $p = \alpha\beta$가 비단원 분해라면 $p^2 = N(\alpha)N(\beta)$에서 $N(\alpha) = p$가 강제되어 모순이므로 $p$ 자체가 가우스 소수이다 (norm $p^2$). $p \equiv 1 \pmod{4}$이면 정리 4에서 $p = \pi\overline{\pi}$, $N(\pi) = p$이고, $N(\pi)$가 소수이므로 $\pi$는 가우스 소수이다. 끝으로 $\pi$와 $\overline{\pi}$가 단원배가 아님을 본다. $\pi = a + bi$ ($a^2 + b^2 = p$) 라 두고 $\overline{\pi} = u\pi$인 단원 $u \in \{1, -1, i, -i\}$가 있다고 가정하자. $u = \pm 1$이면 $a - bi = \pm(a + bi)$에서 $b = 0$ 또는 $a = 0$이 되어 $p = a^2$ 또는 $p = b^2$이 완전제곱수가 되고, $u = \pm i$이면 $a = \mp b$가 되어 $p = a^2 + b^2 = 2a^2$이 짝수가 된다. 어느 경우도 홀수 소수 $p$에 대해서는 성립할 수 없으므로, 둘은 단원배가 아니다.
 :::
 
 이 분류로 임의의 가우스 정수의 소인수분해를 norm을 단서 삼아 실제로 계산할 수 있다. Norm이 multiplicative이므로, $\alpha$를 인수분해하려면 먼저 정수 $N(\alpha)$를 인수분해하고 각 유리소인수에 대응하는 가우스 소수를 골라내면 된다.
@@ -119,7 +119,7 @@ $$\rho = \alpha - \beta\kappa = (11 + 7i) - 4(3 + 2i) = -1 - i$$
 정리 4는 소수에 관한 것이지만, norm의 곱셈성과 가우스 소수의 분류를 결합하면 임의의 양의 정수에 대한 완전한 판정이 따라 나온다.
 
 ::: 정리 8 (두 제곱수의 합 판정법)
-양의 정수 $n$이 두 제곱수의 합인 것은, $n$의 소인수분해에서 $p \equiv 3 \pmod 4$인 모든 소수 $p$가 짝수 번 나타나는 것과 동치이다.
+양의 정수 $n$이 두 제곱수의 합인 것은, $n$의 소인수분해에서 $p \equiv 3 \pmod{4}$인 모든 소수 $p$가 짝수 번 나타나는 것과 동치이다.
 :::
 
 ::: 증명
@@ -133,7 +133,7 @@ n = N(\alpha) &= 2^{a}\prod_{p \equiv 1} p^{b_p} \prod_{p \equiv 3} (p^2)^{c_p}
 :::
 
 ::: 예시 9 (판정법의 적용)
-$45 = 3^2 \cdot 5$에서 $3 \equiv 3 \pmod 4$는 짝수 번 나타나므로 $45$는 두 제곱수의 합이다. 실제로
+$45 = 3^2 \cdot 5$에서 $3 \equiv 3 \pmod{4}$는 짝수 번 나타나므로 $45$는 두 제곱수의 합이다. 실제로
 
 $$45 = 6^2 + 3^2 = 36 + 9$$
 
@@ -144,7 +144,7 @@ $$50 = 5^2 + 5^2 = 1^2 + 7^2$$
 처럼 본질적으로 다른 표현을 둘 가질 수 있다. 이는 $50$이 norm $5$인 켤레쌍 $2 \pm i$를 거듭 가지기 때문이다.
 :::
 
-표현의 개수까지도 가우스 소인수분해가 설명한다. $p \equiv 1 \pmod 4$인 서로 다른 소수들의 곱 $n = p_1 \cdots p_k$는 각 $p_j = \pi_j\overline{\pi_j}$에서 켤레를 고르는 자유로 인해, 단원과 순서를 무시하면 $2^{k-1}$가지의 본질적으로 다른 두 제곱수 표현을 갖는다.
+표현의 개수까지도 가우스 소인수분해가 설명한다. $p \equiv 1 \pmod{4}$인 서로 다른 소수들의 곱 $n = p_1 \cdots p_k$는 각 $p_j = \pi_j\overline{\pi_j}$에서 켤레를 고르는 자유로 인해, 단원과 순서를 무시하면 $2^{k-1}$가지의 본질적으로 다른 두 제곱수 표현을 갖는다.
 
 ::: 예시 10 (켤레 선택과 다중 표현)
 $65 = 5 \cdot 13$을 보자. $5 = (2+i)(2-i)$, $13 = (3+2i)(3-2i)$이다. 한 쪽 켤레 선택은
@@ -158,7 +158,7 @@ $$(2+i)(3-2i) = 6 - 4i + 3i + 2 = 8 - i, \qquad N = 8^2 + 1^2 = 65$$
 이다. 따라서 $65 = 4^2 + 7^2 = 1^2 + 8^2$로 두 가지 표현을 얻으며, 이는 $2^{2-1} = 2$라는 셈과 일치한다.
 :::
 
-가우스 정수는 정수환을 확장하여 산술 문제를 푸는 대수적 정수론의 첫걸음이다. 같은 방식으로 $\mathbb{Z}[\omega]$ ($\omega = e^{2\pi i/3}$, 아이젠슈타인 정수) 는 $x^2 + xy + y^2$ 꼴과 $p \equiv 1 \pmod 3$의 표현을 다루고, 더 일반의 quadratic field $\mathbb{Q}(\sqrt{d})$의 정수환에서는 unique factorization이 깨지기도 하여 ideal이 등장한다. 또 다른 확장 방향으로, 무리수를 정수의 비의 극한으로 다루어 $\sqrt{d}$ 꼴의 무리수와 이차 방정식의 정수해에 접근하는 연분수와 펠 방정식이 있다.
+가우스 정수는 정수환을 확장하여 산술 문제를 푸는 대수적 정수론의 첫걸음이다. 같은 방식으로 $\mathbb{Z}[\omega]$ ($\omega = e^{2\pi i/3}$, 아이젠슈타인 정수) 는 $x^2 + xy + y^2$ 꼴과 $p \equiv 1 \pmod{3}$의 표현을 다루고, 더 일반의 quadratic field $\mathbb{Q}(\sqrt{d})$의 정수환에서는 unique factorization이 깨지기도 하여 ideal이 등장한다. 또 다른 확장 방향으로, 무리수를 정수의 비의 극한으로 다루어 $\sqrt{d}$ 꼴의 무리수와 이차 방정식의 정수해에 접근하는 연분수와 펠 방정식이 있다.
 
 ---
 

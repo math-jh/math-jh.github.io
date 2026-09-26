@@ -25,19 +25,19 @@ weight: 23
 
 대표적인 예시는 다양한 데이터가 주어졌을 때, 이를 표현하는 적당한 함수를 찾는 것이다. 물론 라그랑주 보간법을 이용하면 적절한 basis를 잡아 주어진 $n+1$개의 데이터를 근사하는 $n$차 함수를 찾을 수 있지만, 가령 이 데이터를 표현하는 일차함수를 찾으려 한다면 주어진 $n+1$개의 점이 모두 일직선 상에 존재하지 않는 한 정확한 해를 찾을 수는 없을 것이다.
 
-우리는 임의의 주어진 벡터 $y$를 $\im A$로 사영한 후, 이 벡터 $\hat y=\proj_{\im(A)}y$에 대해 방정식 $Ax=\hat y$를 풀 것이다. 그런데 앞선 글에서 우리는 $y-\hat y\in (\im A)^\perp$임을 알고 있으므로
+우리는 임의의 주어진 벡터 $y$를 $\im A$로 사영한 후, 이 벡터 $\hat{y}=\proj_{\im(A)}y$에 대해 방정식 $Ax=\hat{y}$를 풀 것이다. 그런데 앞선 글에서 우리는 $y-\hat{y}\in (\im A)^\perp$임을 알고 있으므로
 
-$$\langle y-\hat y, v\rangle=0\qquad\text{for all $v\in \im A$}$$
+$$\langle y-\hat{y}, v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
 임을 안다. 따라서 다음의 식
 
-$$\langle y-\hat y, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
+$$\langle y-\hat{y}, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
 
 을 얻는다. 이제 $A$를 왼쪽으로 넘겨주면
 
-$$\langle A^t(y-\hat y), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
+$$\langle A^t(y-\hat{y}), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
 
-이고, $\langle-,-\rangle$이 non-degenerate인 것으로부터 $A^t(y-\hat y)=0$임을 안다. 이제 $\hat y=Ax$이므로, 우리는 방정식
+이고, $\langle-,-\rangle$이 non-degenerate인 것으로부터 $A^t(y-\hat{y})=0$임을 안다. 이제 $\hat{y}=Ax$이므로, 우리는 방정식
 
 $$A^tAx=A^ty$$
 
@@ -101,26 +101,26 @@ $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\beg
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-[명제 1](#prop1){: data-lid="afcib" }의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
+[명제 1](#prop1){: data-lid="afcib" }의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat{y}=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat{y}$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 
 
-$$\hat y=A(A^tA)^{-1}A^ty$$
+$$\hat{y}=A(A^tA)^{-1}A^ty$$
 
 로 주어진다. 여기서 등장한 행렬 $P=A(A^tA)^{-1}A^t$은 $\im A$로의 정사영을 나타낸다. 
 
 ::: 예시 4
 [예시 2](#ex2){: data-lid="mlh8m" }로 돌아가 근사함수와의 오차를 직접 구해보자. $x=(3/2,7/6)$이었으므로 
 
-$$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
+$$\hat{y}=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
 이고, 따라서 오차는 
 
-$$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
+$$y-\hat{y}=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
 
 이다. 이 오차를 $A$의 두 열 $(0,1,2)$와 $(1,1,1)$ 각각과 내적하면 
 
 $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\right)=0,\qquad -\frac{1}{6}+\frac{1}{3}-\frac{1}{6}=0$$
 
-이 되어 오차가 $\im A$에 수직임을 확인할 수 있다. 이 때, 오차는 $\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
+이 되어 오차가 $\im A$에 수직임을 확인할 수 있다. 이 때, 오차는 $\lVert y-\hat{y}\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
 :::
 
 ## 유사역행렬

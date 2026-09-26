@@ -87,7 +87,7 @@ Normal matrix의 unitary diagonalization은 [정리 3](#thm3){: data-lid="kot0j"
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 normal operator인 것은, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재하는 것과 동치이다.
 :::
 ::: 증명
-우선 $L$이 normal이라면 [따름정리 4](#cor4){: data-lid="sibgn" }에 의하여 $L$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $L$의 고유벡터들로 이루어진 orthonormal basis $\{v_1,\ldots,v_n\}$이 존재하여 $Lv_i=\lambda_i v_i$라 하자. 그럼 [§복소내적공간, ⁋명제 5](/ko/math/linear_algebra/complex_inner_product_spaces#prop5){: data-lid="8mdl2" }에 의해, 이 기저에 대한 $L^\ast$의 행렬표현은 $\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$이다. 이제 두 diagonal matrix는 가환이므로 $LL^\ast=L^\ast L$이고, 따라서 $L$은 normal operator이다.
+우선 $L$이 normal이라면 [따름정리 4](#cor4){: data-lid="sibgn" }에 의하여 $L$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $L$의 고유벡터들로 이루어진 orthonormal basis $\{v_1,\ldots,v_n\}$이 존재하여 $Lv_i=\lambda_i v_i$라 하자. 그럼 [§복소내적공간, ⁋명제 5](/ko/math/linear_algebra/complex_inner_product_spaces#prop5){: data-lid="8mdl2" }에 의해, 이 기저에 대한 $L^\ast$의 행렬표현은 $\diag(\bar{\lambda}_1,\ldots,\bar{\lambda}_n)$이다. 이제 두 diagonal matrix는 가환이므로 $LL^\ast=L^\ast L$이고, 따라서 $L$은 normal operator이다.
 :::
 
 행렬의 언어로 옮기면, 이 정리는 (증명에서 보았듯) normal matrix의 unitary diagonalization에 대한 이야기이다.
@@ -114,18 +114,18 @@ $$\langle v,Lv\rangle=\langle v,\lambda v\rangle=\lambda\lVert v\rVert^2$$
 
 이다. 한편 첫째 변수의 conjugate-linearity를 사용하면
 
-$$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar\lambda\lVert v\rVert^2$$
+$$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar{\lambda}\lVert v\rVert^2$$
 
-이므로, 두 식을 비교하면 $\lambda\lVert v\rVert^2=\bar\lambda\lVert v\rVert^2$이고 $\lVert v\rVert^2>0$이므로 $\lambda=\bar\lambda$, 즉 $\lambda$는 실수이다.
+이므로, 두 식을 비교하면 $\lambda\lVert v\rVert^2=\bar{\lambda}\lVert v\rVert^2$이고 $\lVert v\rVert^2>0$이므로 $\lambda=\bar{\lambda}$, 즉 $\lambda$는 실수이다.
 
 둘째 결과를 살펴보기 위해 $L$이 unitary이고 $Lv=\lambda v$, $v\neq 0$이라 하자. Unitary operator는 내적을 보존하므로
 
-$$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\lambda\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
+$$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar{\lambda}\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
 
 이고, $\lVert v\rVert^2>0$이므로 $\lvert\lambda\rvert^2=1$, 즉 $\lvert\lambda\rvert=1$이다.
 :::
 
-복소 스펙트럼 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-lid="x8ljq" }를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7){: data-lid="71nsi" }에 의하여 그 고윳값은 모두 실수이기 때문이다. 고윳값 $\lambda$가 실수이면 $A-\lambda I$가 실수행렬이므로 그 kernel도 실수 위에서 같은 차원을 가지고, 따라서 고유벡터를 실수 범위에서 택해 orthonormal basis를 만들 수 있다.  
+복소 스펙트럼 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-lid="x8ljq" }를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar{A}^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7){: data-lid="71nsi" }에 의하여 그 고윳값은 모두 실수이기 때문이다. 고윳값 $\lambda$가 실수이면 $A-\lambda I$가 실수행렬이므로 그 kernel도 실수 위에서 같은 차원을 가지고, 따라서 고유벡터를 실수 범위에서 택해 orthonormal basis를 만들 수 있다.  
 
 ---
 

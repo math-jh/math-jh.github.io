@@ -155,7 +155,7 @@ on the basis elements.
 
 That this multiplication is associative does not follow merely from extending the relations bilinearly, so this must be checked separately. The simplest method is to realize $\mathbb{H}$ inside the ring of $2\times 2$ complex matrices $\Mat_2(\mathbb{C})$. For a given quaternion $q=a+bi+cj+dk$, set $z=a+bi$, $w=c+di$ and define the $\mathbb{R}$-linear map $\varphi:\mathbb{H}\rightarrow\Mat_2(\mathbb{C})$ by
 
-$$\varphi(q)=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
+$$\varphi(q)=\begin{pmatrix}z&w\\ -\bar{w}&\bar{z}\end{pmatrix}$$
 
 Then the images of the basis elements are
 
@@ -170,22 +170,22 @@ defines the norm of the quaternion.
 ::: Definition 8
 For a quaternion $q=a+bi+cj+dk$, its *conjugate* is defined by
 
-$$\bar q=a-bi-cj-dk$$
+$$\bar{q}=a-bi-cj-dk$$
 
 and its *norm* is defined by
 
-$$N(q)=q\bar q$$
+$$N(q)=q\bar{q}$$
 :::
 
-For any quaternion $q=a+bi+cj+dk$, multiplying by the conjugate $\bar q$ indeed yields, by the relations of [Definition 7](#def7){: data-lid="bq7yw" }, cancellation of all coefficients of the $i,j,k$ terms, giving
+For any quaternion $q=a+bi+cj+dk$, multiplying by the conjugate $\bar{q}$ indeed yields, by the relations of [Definition 7](#def7){: data-lid="bq7yw" }, cancellation of all coefficients of the $i,j,k$ terms, giving
 
-$$N(q)=q\bar q=a^2+b^2+c^2+d^2\in\mathbb{R}$$
+$$N(q)=q\bar{q}=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
 In particular, $N(q)=0$ is equivalent to $a=b=c=d=0$, i.e. $q=0$.
 
-Another property of the norm is that it preserves multiplication. Indeed, it is easily verified that the conjugate satisfies $\overline{q_1q_2}=\bar q_2\bar q_1$, and using this we obtain
+Another property of the norm is that it preserves multiplication. Indeed, it is easily verified that the conjugate satisfies $\overline{q_1q_2}=\bar{q}_2\bar{q}_1$, and using this we obtain
 
-$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar q_2\bar q_1=q_1N(q_2)\bar q_1=N(q_2)q_1\bar q_1=N(q_1)N(q_2)$$
+$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar{q}_2\bar{q}_1=q_1N(q_2)\bar{q}_1=N(q_2)q_1\bar{q}_1=N(q_1)N(q_2)$$
 
 Writing this multiplicativity in coordinates gives
 
@@ -201,13 +201,13 @@ That $\mathbb{H}$ is a ring with $1\neq 0$ was verified above, and its noncommut
 
 Let $q=a+bi+cj+dk\neq 0$. We have seen above that $N(q)=a^2+b^2+c^2+d^2$ is a positive real number. This can be viewed as an element of $\mathbb{H}$, and moreover it commutes with every element of $\mathbb{H}$. The same holds for the inverse $N(q)^{-1}$ of $N(q)$, and therefore
 
-$$q\cdot\bigl(N(q)^{-1}\bar q\bigr)=N(q)^{-1}(q\bar q)=N(q)^{-1}N(q)=1$$
+$$q\cdot\bigl(N(q)^{-1}\bar{q}\bigr)=N(q)^{-1}(q\bar{q})=N(q)^{-1}N(q)=1$$
 
 and similarly
 
-$$\bigl(N(q)^{-1}\bar q\bigr)\cdot q=N(q)^{-1}(\bar q q)=N(q)^{-1}N(q)=1$$
+$$\bigl(N(q)^{-1}\bar{q}\bigr)\cdot q=N(q)^{-1}(\bar{q} q)=N(q)^{-1}N(q)=1$$
 
-can be verified. That is, $q^{-1}=N(q)^{-1}\bar q$ is a two-sided inverse of $q$, yielding the desired claim.
+can be verified. That is, $q^{-1}=N(q)^{-1}\bar{q}$ is a two-sided inverse of $q$, yielding the desired claim.
 :::
 
 ## Endomorphism Rings of Simple Modules
@@ -238,13 +238,13 @@ so $\rho_q$ is a $\mathbb{C}$-linear map, i.e. an element of $\End_{\mathbb{C}}(
 
 $$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
-is an injective ring homomorphism. Here the two rows of $M_q$ are the coordinates of $\rho_q(1)$ and $\rho_q(j)$, and using from the relations of [Definition 7](#def7){: data-lid="76vnm" } that $ji=-ij$, so that $ju=\bar uj$ holds for any $u\in\mathbb{C}$, we obtain from $\rho_q(1)=q=z+wj$ and
+is an injective ring homomorphism. Here the two rows of $M_q$ are the coordinates of $\rho_q(1)$ and $\rho_q(j)$, and using from the relations of [Definition 7](#def7){: data-lid="76vnm" } that $ji=-ij$, so that $ju=\bar{u}j$ holds for any $u\in\mathbb{C}$, we obtain from $\rho_q(1)=q=z+wj$ and
 
-$$\rho_q(j)=jq=jz+jwj=\bar zj+\bar wj^2=-\bar w+\bar zj$$
+$$\rho_q(j)=jq=jz+jwj=\bar{z}j+\bar{w}j^2=-\bar{w}+\bar{z}j$$
 
 that
 
-$$M_q=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
+$$M_q=\begin{pmatrix}z&w\\ -\bar{w}&\bar{z}\end{pmatrix}$$
 
 This is the matrix representation written above, and its determinant $|z|^2+|w|^2$ is precisely the norm $N(q)$, so the fact that $M_q$ is invertible for nonzero $q$ is the same content as what [Proposition 9](#prop9){: data-lid="ab0ch" } showed.
 

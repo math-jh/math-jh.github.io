@@ -114,7 +114,7 @@ $$\frac{1}{2\pi}\int_0^{2\pi}\bigl(\lvert f(z_0)\rvert - \lvert f(z_0 + re^{i\th
 
 이다. 피적분함수는 연속이고 음이 아니므로, 그 적분이 $0$이려면 항등적으로 $0$이어야 한다. 곧 모든 $\theta$에서 $\lvert f(z_0 + re^{i\theta})\rvert = \lvert f(z_0)\rvert$이다. $r \in (0, \delta)$이 임의였으므로 $\lvert f\rvert$는 $D(z_0, \delta)$ 전체에서 상수 $\lvert f(z_0)\rvert$이다.
 
-이제 holomorphic function의 절댓값이 한 열린집합에서 상수이면 그 함수 자체가 상수임을 본다. $c = \lvert f(z_0)\rvert$이라 하자. $c = 0$이면 $D(z_0, \delta)$에서 $f \equiv 0$이다. $c > 0$이면 $D(z_0, \delta)$에서 $\lvert f\rvert^2 = f\bar f = c^2$이 상수이다. $f = u + iv$로 적으면 $u^2 + v^2 = c^2$을 $x, y$로 편미분하여 $u u_x + v v_x = 0$, $u u_y + v v_y = 0$을 얻고, Cauchy–Riemann 방정식 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-lid="hrgsb" }) $u_x = v_y$, $u_y = -v_x$을 대입하면 이 둘은
+이제 holomorphic function의 절댓값이 한 열린집합에서 상수이면 그 함수 자체가 상수임을 본다. $c = \lvert f(z_0)\rvert$이라 하자. $c = 0$이면 $D(z_0, \delta)$에서 $f \equiv 0$이다. $c > 0$이면 $D(z_0, \delta)$에서 $\lvert f\rvert^2 = f\bar{f} = c^2$이 상수이다. $f = u + iv$로 적으면 $u^2 + v^2 = c^2$을 $x, y$로 편미분하여 $u u_x + v v_x = 0$, $u u_y + v v_y = 0$을 얻고, Cauchy–Riemann 방정식 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5){: data-lid="hrgsb" }) $u_x = v_y$, $u_y = -v_x$을 대입하면 이 둘은
 
 $$u\,u_x - v\,u_y = 0, \qquad u\,u_y + v\,u_x = 0$$
 

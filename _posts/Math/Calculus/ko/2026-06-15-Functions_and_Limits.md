@@ -231,7 +231,7 @@ $$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2}$$
 ::: 예시 11
 $\lim_{x\rightarrow 0} x\sin(1/x) = 0$이다. 이는 $\bigl\lvert x\sin(1/x)\bigr\rvert \leq \lvert x\rvert$이므로 
 
-$$-\lvert x\rvert \leq x\sin\frac1x \leq \lvert x\rvert$$
+$$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert$$
 
 이고, 양 끝이 $0$으로 가기 때문이다. 반면 $\sin(1/x)$ 자체는 $x \rightarrow 0$에서 극한을 갖지 않는데, $x$가 $0$에 다가가는 동안 $-1$과 $1$ 사이를 무한히 진동하기 때문이다. 인자 $x$가 이 진동을 $0$으로 눌러 주는 것이 조임정리의 기여이다.
 :::

@@ -32,7 +32,7 @@ $$
 가 정해지고, 두 section $s = f e$, $t = g e$의 내적이 $h(s, t) = f \bar{g} e^{-\varphi}$로 주어지는 것이다. 이러한 $h$를 갖춘 $(L, h)$를 *Hermitian line bundle<sub>에르미트 선다발</sub>*이라 한다.
 :::
 
-국소 holomorphic frame $e$를 바꾸면 $e' = u e$ ($u$는 영점 없는 holomorphic function) 이고, $h(e', e') = \lvert u \rvert^2 h(e, e)$이므로 potential은 $\varphi' = \varphi - \log\lvert u \rvert^2$로 변한다. 따라서 $\varphi$ 자체는 대역적으로 정의되지 않지만, 그 변환이 holomorphic·antiholomorphic 함수의 합 $\log\lvert u\rvert^2 = \log u + \log\bar{u}$만큼이라는 점이 결정적이다. 이 변환항은 $\partial\bar\partial$ 아래에서 소멸하므로, $\partial\bar\partial\varphi$가 frame의 선택과 무관한 대역적 $(1,1)$-형식을 정의하게 된다. 모든 complex manifold 위의 모든 holomorphic line bundle은 partition of unity로 국소 계량을 이어붙여 Hermitian 계량을 가지므로, $h$의 존재 자체는 제약이 아니다. 제약은 그로부터 나오는 곡률의 양정치성에 있다.
+국소 holomorphic frame $e$를 바꾸면 $e' = u e$ ($u$는 영점 없는 holomorphic function) 이고, $h(e', e') = \lvert u \rvert^2 h(e, e)$이므로 potential은 $\varphi' = \varphi - \log\lvert u \rvert^2$로 변한다. 따라서 $\varphi$ 자체는 대역적으로 정의되지 않지만, 그 변환이 holomorphic·antiholomorphic 함수의 합 $\log\lvert u\rvert^2 = \log u + \log\bar{u}$만큼이라는 점이 결정적이다. 이 변환항은 $\partial\bar{\partial}$ 아래에서 소멸하므로, $\partial\bar{\partial}\varphi$가 frame의 선택과 무관한 대역적 $(1,1)$-형식을 정의하게 된다. 모든 complex manifold 위의 모든 holomorphic line bundle은 partition of unity로 국소 계량을 이어붙여 Hermitian 계량을 가지므로, $h$의 존재 자체는 제약이 아니다. 제약은 그로부터 나오는 곡률의 양정치성에 있다.
 
 Hermitian 계량은 section을 미분하는 표준적인 방법, 곧 계량과 holomorphic 구조에 모두 어울리는 connection을 유일하게 결정한다.
 
@@ -40,22 +40,22 @@ Hermitian 계량은 section을 미분하는 표준적인 방법, 곧 계량과 h
 Hermitian line bundle $(L, h)$ 위에 다음 두 조건을 만족하는 connection $\nabla$가 유일하게 존재한다.
 
 1. $\nabla$는 $h$와 호환된다. 곧 임의의 section $s, t$에 대하여 $\dd{h(s, t)} = h(\nabla s, t) + h(s, \nabla t)$이다.
-2. $\nabla$의 $(0,1)$-성분은 holomorphic 구조의 $\bar\partial$ 작용소와 일치한다. 곧 $\nabla^{0,1} = \bar\partial$이다.
+2. $\nabla$의 $(0,1)$-성분은 holomorphic 구조의 $\bar{\partial}$ 작용소와 일치한다. 곧 $\nabla^{0,1} = \bar{\partial}$이다.
 
 이 $\nabla$를 $(L, h)$의 *Chern connection<sub>Chern connection</sub>*이라 한다. 국소 holomorphic frame $e$에서 $h(e,e) = e^{-\varphi}$일 때 그 connection 형식은 $\theta = \partial\log h(e, e) = -\partial\varphi$로 주어진다.
 :::
 
 ::: 증명
-국소 holomorphic frame $e$를 고정하고 connection을 $\nabla e = \theta \otimes e$로 적으면, $\theta$는 $U$ 위의 복소값 $1$-형식이며 $\nabla$를 결정한다. 조건 (2)는 $\nabla e$의 $(0,1)$-성분이 $\bar\partial e = 0$ ($e$가 holomorphic이므로) 임을 요구하므로, $\theta$는 $(1,0)$-형식이어야 한다. 조건 (1)을 $s = t = e$에 적용하면
+국소 holomorphic frame $e$를 고정하고 connection을 $\nabla e = \theta \otimes e$로 적으면, $\theta$는 $U$ 위의 복소값 $1$-형식이며 $\nabla$를 결정한다. 조건 (2)는 $\nabla e$의 $(0,1)$-성분이 $\bar{\partial} e = 0$ ($e$가 holomorphic이므로) 임을 요구하므로, $\theta$는 $(1,0)$-형식이어야 한다. 조건 (1)을 $s = t = e$에 적용하면
 
 $$
-\dd{h(e, e)} = h(\nabla e, e) + h(e, \nabla e) = \theta h(e,e) + \bar\theta h(e,e)
+\dd{h(e, e)} = h(\nabla e, e) + h(e, \nabla e) = \theta h(e,e) + \bar{\theta} h(e,e)
 $$
 
-이다. 좌변 $\dd{h(e,e)} = (\partial + \bar\partial) h(e,e)$를 $(1,0)$-성분과 $(0,1)$-성분으로 갈라 비교하면, $\theta$가 $(1,0)$-형식이고 $\bar\theta$가 $(0,1)$-형식이므로
+이다. 좌변 $\dd{h(e,e)} = (\partial + \bar{\partial}) h(e,e)$를 $(1,0)$-성분과 $(0,1)$-성분으로 갈라 비교하면, $\theta$가 $(1,0)$-형식이고 $\bar{\theta}$가 $(0,1)$-형식이므로
 
 $$
-\partial h(e,e) = \theta h(e,e), \qquad \bar\partial h(e,e) = \bar\theta h(e,e)
+\partial h(e,e) = \theta h(e,e), \qquad \bar{\partial} h(e,e) = \bar{\theta} h(e,e)
 $$
 
 가 따라온다. 첫 식에서 $\theta = \partial h(e,e)/h(e,e) = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. Frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
@@ -64,19 +64,19 @@ $$
 Chern connection의 곡률은 connection 형식의 exterior derivative로 주어지며, line bundle이므로 그 값은 행렬이 아니라 스칼라값 $2$-형식이 된다. 곡률 $\Theta = \dd{\theta}$를 계산하면, $\theta = -\partial\varphi$이므로
 
 $$
-\Theta = \dd{(-\partial\varphi)} = -(\partial + \bar\partial)\partial\varphi = -\bar\partial\partial\varphi = \partial\bar\partial\varphi
+\Theta = \dd{(-\partial\varphi)} = -(\partial + \bar{\partial})\partial\varphi = -\bar{\partial}\partial\varphi = \partial\bar{\partial}\varphi
 $$
 
-이다 ($\partial^2 = 0$, $\bar\partial\partial = -\partial\bar\partial$를 사용). 곧 곡률은 potential의 $\partial\bar\partial$로, 정확히 앞서 관찰한 틀-불변 형식이다. 다음 정의에서 이를 대역적 곡률 형식으로 정식화한다.
+이다 ($\partial^2 = 0$, $\bar{\partial}\partial = -\partial\bar{\partial}$를 사용). 곧 곡률은 potential의 $\partial\bar{\partial}$로, 정확히 앞서 관찰한 틀-불변 형식이다. 다음 정의에서 이를 대역적 곡률 형식으로 정식화한다.
 
 ::: 정의 3
 Hermitian line bundle $(L, h)$의 Chern connection의 *curvature form<sub>곡률 형식</sub>* $\Theta = \Theta(L, h)$를, 국소 holomorphic frame $e$에서 $h(e,e) = e^{-\varphi}$일 때
 
 $$
-\Theta = \partial\bar\partial\varphi = -\partial\bar\partial\log h(e, e)
+\Theta = \partial\bar{\partial}\varphi = -\partial\bar{\partial}\log h(e, e)
 $$
 
-로 정의되는 대역적 $2$-형식이라 한다. 이는 순허수 $(1,1)$-형식이며 (실함수 $\varphi$에 대해 $\overline{\partial\bar\partial\varphi} = -\partial\bar\partial\varphi$이므로), 여기에 $\frac{i}{2\pi}$를 곱해 real form으로 normalize한 $L$의 *first Chern form<sub>제1 Chern 형식</sub>*을
+로 정의되는 대역적 $2$-형식이라 한다. 이는 순허수 $(1,1)$-형식이며 (실함수 $\varphi$에 대해 $\overline{\partial\bar{\partial}\varphi} = -\partial\bar{\partial}\varphi$이므로), 여기에 $\frac{i}{2\pi}$를 곱해 real form으로 normalize한 $L$의 *first Chern form<sub>제1 Chern 형식</sub>*을
 
 $$
 c_1(L, h) = \frac{i}{2\pi}\Theta
@@ -85,7 +85,7 @@ $$
 로 정의한다.
 :::
 
-곡률 $\Theta$가 frame의 선택과 무관함은 potential 변환항 $\log\lvert u\rvert^2$가 $\partial\bar\partial$로 소멸하기 때문이고, $\Theta$가 closed $(1,1)$-형식임은 그 정의 $\Theta = \partial\bar\partial\varphi$에서 직접 따라온다 ($\dd{\Theta} = (\partial + \bar\partial)\partial\bar\partial\varphi = 0$). $\Theta$ 자체는 $\overline{\partial\bar\partial\varphi} = \bar\partial\partial\bar\varphi = -\partial\bar\partial\varphi$로 순허수이지만, $\frac{i}{2\pi}$ normalization을 거친 $c_1(L,h)$는 closed 실 $(1,1)$-형식이 된다. 결정적으로, 제1 Chern 형식의 de Rham 류는 계량 $h$의 선택과 무관하다. 두 계량 $h$, $h'$의 비 $h'/h = e^{-\psi}$는 대역적 양함수 $e^{-\psi}$로 주어지므로 두 곡률의 차가 $\Theta' - \Theta = \partial\bar\partial\psi = \dd{(\bar\partial\psi)}$로 완전형식이 되어, cohomology class
+곡률 $\Theta$가 frame의 선택과 무관함은 potential 변환항 $\log\lvert u\rvert^2$가 $\partial\bar{\partial}$로 소멸하기 때문이고, $\Theta$가 closed $(1,1)$-형식임은 그 정의 $\Theta = \partial\bar{\partial}\varphi$에서 직접 따라온다 ($\dd{\Theta} = (\partial + \bar{\partial})\partial\bar{\partial}\varphi = 0$). $\Theta$ 자체는 $\overline{\partial\bar{\partial}\varphi} = \bar{\partial}\partial\bar{\varphi} = -\partial\bar{\partial}\varphi$로 순허수이지만, $\frac{i}{2\pi}$ normalization을 거친 $c_1(L,h)$는 closed 실 $(1,1)$-형식이 된다. 결정적으로, 제1 Chern 형식의 de Rham 류는 계량 $h$의 선택과 무관하다. 두 계량 $h$, $h'$의 비 $h'/h = e^{-\psi}$는 대역적 양함수 $e^{-\psi}$로 주어지므로 두 곡률의 차가 $\Theta' - \Theta = \partial\bar{\partial}\psi = \dd{(\bar{\partial}\psi)}$로 완전형식이 되어, cohomology class
 
 $$
 c_1(L) = [c_1(L, h)] = \left[ \frac{i}{2\pi}\Theta \right] \in H^2(X, \mathbb{R})
@@ -104,10 +104,10 @@ $$
 \omega_L = \frac{i}{2\pi}\Theta(L, h)
 $$
 
-가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar\partial\varphi = \sum_{j,k} \varphi_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때, 각 점에서 Hermitian matrix $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
+가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar{\partial}\varphi = \sum_{j,k} \varphi_{j\bar{k}}\dd{z_j} \wedge \dd{\bar{z}_k}$로 쓸 때, 각 점에서 Hermitian matrix $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
 :::
 
-양의 line bundle의 정의는 곧 곡률 형식이 Kähler 형식이라는 조건이다. $\omega_L = \frac{i}{2\pi}\Theta$는 closed 실 $(1,1)$-형식이고, 양정치성은 그것이 비퇴화일 뿐 아니라 양의 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$를 정의함을 뜻한다. 따라서 $L$이 양의 line bundle이면 $\omega_L$은 $X$ 위의 Kähler 형식이 되고, 그 Kähler 류 $[\omega_L] = c_1(L)$은 positive class이자 정수류이다. 역으로 어떤 Kähler 형식 $\omega$가 $c_1(L)$을 대표하면, $\partial\bar\partial$-보조정리로 그 류 안에서 곡률 형식과 일치하는 대표를 골라 양의 계량을 구성할 수 있다. 곧 양의 line bundle의 존재는 다음 세 조건의 동치로 정리된다.
+양의 line bundle의 정의는 곧 곡률 형식이 Kähler 형식이라는 조건이다. $\omega_L = \frac{i}{2\pi}\Theta$는 closed 실 $(1,1)$-형식이고, 양정치성은 그것이 비퇴화일 뿐 아니라 양의 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$를 정의함을 뜻한다. 따라서 $L$이 양의 line bundle이면 $\omega_L$은 $X$ 위의 Kähler 형식이 되고, 그 Kähler 류 $[\omega_L] = c_1(L)$은 positive class이자 정수류이다. 역으로 어떤 Kähler 형식 $\omega$가 $c_1(L)$을 대표하면, $\partial\bar{\partial}$-보조정리로 그 류 안에서 곡률 형식과 일치하는 대표를 골라 양의 계량을 구성할 수 있다. 곧 양의 line bundle의 존재는 다음 세 조건의 동치로 정리된다.
 
 ::: 명제 5
 콤팩트 complex manifold $X$ 위의 holomorphic line bundle $L$에 대하여 다음이 동치이다.
@@ -120,7 +120,7 @@ $$
 ::: 증명
 (1) ⟺ (2)는 정의의 재진술이다. [정의 4](#def4){: data-lid="t8lew" }에서 $L$이 양이라는 것은 어떤 $h$의 곡률로 만든 $\omega_L = \frac{i}{2\pi}\Theta(L,h)$가 양정치인 것이고, 이 $\omega_L$이 [정의 3](#def3){: data-lid="g9aec" }의 $c_1(L)$을 대표하므로 곧 (2)이다.
 
-(2) ⟺ (3)을 본다. $\omega = \frac{i}{2\pi}\Theta(L, h)$는 [정의 3](#def3){: data-lid="3lyz7" } 직후에 본 바와 같이 closed 실 $(1,1)$-형식이다 ($\Theta = \partial\bar\partial\varphi$이므로 $\dd{\omega} = 0$). 따라서 $\omega$가 양정치라는 조건은, closed 실 $(1,1)$-형식이 양정치라는 것, 곧 그것이 정의하는 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$가 Riemannian metric이고 그 기본형식이 $\omega$인 것과 같다. 닫힘과 양정치를 모두 갖춘 실 $(1,1)$-형식은 정확히 Kähler 형식이므로 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="0yw3b" }), (2)와 (3)은 동치이다. 곧 $L$이 양이라는 것은 그 곡률을 Kähler 형식으로 만드는 계량이 존재한다는 것과 같다.
+(2) ⟺ (3)을 본다. $\omega = \frac{i}{2\pi}\Theta(L, h)$는 [정의 3](#def3){: data-lid="3lyz7" } 직후에 본 바와 같이 closed 실 $(1,1)$-형식이다 ($\Theta = \partial\bar{\partial}\varphi$이므로 $\dd{\omega} = 0$). 따라서 $\omega$가 양정치라는 조건은, closed 실 $(1,1)$-형식이 양정치라는 것, 곧 그것이 정의하는 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$가 Riemannian metric이고 그 기본형식이 $\omega$인 것과 같다. 닫힘과 양정치를 모두 갖춘 실 $(1,1)$-형식은 정확히 Kähler 형식이므로 ([§Kähler manifold, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3){: data-lid="0yw3b" }), (2)와 (3)은 동치이다. 곧 $L$이 양이라는 것은 그 곡률을 Kähler 형식으로 만드는 계량이 존재한다는 것과 같다.
 :::
 
 이 명제가 양의 line bundle과 Kähler 기하를 잇는 다리이다. 양의 line bundle을 갖는 콤팩트 complex manifold는 자동으로 Kähler manifold이며, 그 Kähler 류는 $H^2(X, \mathbb{Z})$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 line bundle의 제1 Chern 류로 실현되고, 그 line bundle이 바로 사영매장을 만들어 내는 양의 line bundle이 된다. 가장 단순한 예는 complex projective space의 hyperplane bundle이다.
@@ -150,18 +150,18 @@ $$
 :::
 
 ::: 증명
-증명의 해석적 핵심만 서술하고 타원작용소 이론의 표준 결과는 인용한다. $L$이 양이므로 [명제 5](#prop5){: data-lid="hnm4t" }에 의해 $X$는 곡률 형식 $\omega = \frac{i}{2\pi}\Theta(L, h)$를 Kähler 형식으로 갖는다. $K_X \otimes L$의 값을 갖는 $(0, q)$-형식 공간 위에서 $\bar\partial$-Laplace 작용소 $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$를 생각하면, Hodge 정리의 line bundle 판본 ([§Hodge 이론, ⁋정리 6](/ko/math/complex_geometry/hodge_theory#thm6){: data-lid="feplh" } 직후에 서술한 $\bar\partial$-Hodge 정리를 line bundle 계수로 일반화한 것) 에 의해 $H^q(X, K_X \otimes L) \cong \mathcal{H}^{n,q}(X, L)$로 조화형식 공간과 isomorphic하다. 따라서 $q > 0$에서 $(n, q)$-차 조화형식이 $0$임을 보이면 된다.
+증명의 해석적 핵심만 서술하고 타원작용소 이론의 표준 결과는 인용한다. $L$이 양이므로 [명제 5](#prop5){: data-lid="hnm4t" }에 의해 $X$는 곡률 형식 $\omega = \frac{i}{2\pi}\Theta(L, h)$를 Kähler 형식으로 갖는다. $K_X \otimes L$의 값을 갖는 $(0, q)$-형식 공간 위에서 $\bar{\partial}$-Laplace 작용소 $\Delta_{\bar{\partial}} = \bar{\partial}\bar{\partial}^\ast + \bar{\partial}^\ast\bar{\partial}$를 생각하면, Hodge 정리의 line bundle 판본 ([§Hodge 이론, ⁋정리 6](/ko/math/complex_geometry/hodge_theory#thm6){: data-lid="feplh" } 직후에 서술한 $\bar{\partial}$-Hodge 정리를 line bundle 계수로 일반화한 것) 에 의해 $H^q(X, K_X \otimes L) \cong \mathcal{H}^{n,q}(X, L)$로 조화형식 공간과 isomorphic하다. 따라서 $q > 0$에서 $(n, q)$-차 조화형식이 $0$임을 보이면 된다.
 
-여기서 결정적 입력은 *Bochner–Kodaira–Nakano 항등식*이다. 두 Laplace 작용소 $\Delta_{\bar\partial}$와 $\Delta_\partial$의 차가 곡률 작용소로 표현되어,
-
-$$
-\Delta_{\bar\partial} = \Delta_\partial + [i\Theta(L, h), \Lambda]
-$$
-
-가 성립한다 (여기서 $\Lambda$는 Kähler 형식과의 wedge 곱 $L_\omega$의 수반작용소 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dab9l" })). $(n, q)$-형식 $\alpha$가 조화이면 $\Delta_{\bar\partial}\alpha = 0$이고, 위 항등식을 $\alpha$와의 $L^2$-내적에 적용하면
+여기서 결정적 입력은 *Bochner–Kodaira–Nakano 항등식*이다. 두 Laplace 작용소 $\Delta_{\bar{\partial}}$와 $\Delta_\partial$의 차가 곡률 작용소로 표현되어,
 
 $$
-0 = (\Delta_{\bar\partial}\alpha, \alpha) = \lVert \partial^\ast\alpha \rVert^2 + \lVert \partial\alpha \rVert^2 + \big( [i\Theta, \Lambda]\alpha, \alpha \big)
+\Delta_{\bar{\partial}} = \Delta_\partial + [i\Theta(L, h), \Lambda]
+$$
+
+가 성립한다 (여기서 $\Lambda$는 Kähler 형식과의 wedge 곱 $L_\omega$의 수반작용소 ([§Kähler manifold, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12){: data-lid="dab9l" })). $(n, q)$-형식 $\alpha$가 조화이면 $\Delta_{\bar{\partial}}\alpha = 0$이고, 위 항등식을 $\alpha$와의 $L^2$-내적에 적용하면
+
+$$
+0 = (\Delta_{\bar{\partial}}\alpha, \alpha) = \lVert \partial^\ast\alpha \rVert^2 + \lVert \partial\alpha \rVert^2 + \big( [i\Theta, \Lambda]\alpha, \alpha \big)
 $$
 
 를 얻는다. 마지막 곡률항은 $L$이 양의 line bundle이라 $i\Theta = 2\pi\omega_L$이 양정치 $(1,1)$-형식이므로, $(n, q)$-형식($q > 0$) 위에서 양의 작용소가 된다. 곧 점별로 $([i\Theta, \Lambda]\alpha, \alpha) \geq c q \lvert \alpha \rvert^2$ ($c > 0$은 곡률의 최소 고윳값에서 오는 상수) 라는 Nakano 양정치 부등식이 성립한다. 그러면 위 등식의 우변은 음이 아닌 세 항의 합인데 그 합이 $0$이므로, 특히 곡률항이 $0$이고 따라서 $\alpha = 0$이다. $q > 0$인 모든 조화 $(n, q)$-형식이 $0$이므로 $H^q(X, K_X \otimes L) = 0$이다.
@@ -236,7 +236,7 @@ $$
 ::: 증명
 $X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하자. 콤팩트 Kähler manifold에서 Hodge decomposition ([§Hodge 이론, ⁋정리 9](/ko/math/complex_geometry/hodge_theory#thm9){: data-lid="c2eby" }) 에 의해 $H^2(X, \mathbb{C}) = H^{2,0} \oplus H^{1,1} \oplus H^{0,2}$이고, Kähler 형식 $\omega$는 실 $(1,1)$-형식이므로 그 류는 $H^{1,1}(X) \cap H^2(X, \mathbb{Z})$에 놓인다. Lefschetz의 $(1,1)$-류 정리에 의해 이러한 정수 $(1,1)$-류는 모두 어떤 holomorphic line bundle $L$의 제1 Chern 류 $c_1(L)$로 실현된다 (지수열 $0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \rightarrow \mathcal{O}_X^\ast \rightarrow 0$의 연결사상 $H^1(X, \mathcal{O}_X^\ast) = \Pic(X) \rightarrow H^2(X, \mathbb{Z})$의 image가 정확히 $H^{1,1} \cap H^2(X, \mathbb{Z})$이다). 곧 $c_1(L) = [\omega]$인 $L$이 존재한다.
 
-이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, $\partial\bar\partial$-보조정리로 $L$의 계량 $h$를 골라 $\omega = \frac{i}{2\pi}\Theta(L, h)$가 되게 할 수 있고, 따라서 [명제 5](#prop5){: data-lid="teuyf" }에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9){: data-lid="y30sl" }를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 restriction으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
+이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, $\partial\bar{\partial}$-보조정리로 $L$의 계량 $h$를 골라 $\omega = \frac{i}{2\pi}\Theta(L, h)$가 되게 할 수 있고, 따라서 [명제 5](#prop5){: data-lid="teuyf" }에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9){: data-lid="y30sl" }를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 restriction으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
 :::
 
 이 따름정리가 Kodaira 정리의 가장 쓰기 좋은 형태이다. 콤팩트 complex manifold가 사영적인지를 묻는 대신, 그 위에 정수 Kähler 류가 있는지만 확인하면 된다. 그런데 사영적이라는 결론에는 아직 미세한 간격이 있다. Embedding $X \hookrightarrow \mathbb{CP}^N$이 주는 것은 $X$가 $\mathbb{CP}^N$의 closed 복소 *해석적* 부분다양체라는 것이지, 곧바로 다항식으로 정의되는 대수적 부분다양체라는 것은 아니다. 이 간격을 메우는 것이 Chow의 정리이다.

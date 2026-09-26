@@ -16,7 +16,7 @@ published: false
 
 곡면 $M \subseteq \mathbb{R}^3$의 Gauss curvature은 본래 외재적인 양으로 정의된다. 각 점에서 곡면이 주변 공간 안에서 법선 방향으로 얼마나 휘는지를 재는 shape operator의 행렬식이 곧 Gauss curvature이며, 이는 곡면이 $\mathbb{R}^3$ 안에 어떻게 놓여 있는지에 의존하는 듯 보인다. 그런데 Gauss가 1827년에 발견한 *Theorema Egregium<sub>놀라운 정리</sub>*은 이 양이 실제로는 곡면 위의 거리, 즉 제1기본형식만으로 결정되는 *내재적* 불변량이라고 말한다. 따라서 Gauss curvature은 곡면을 휘거나 구부려도 길이를 보존하는 한 변하지 않는다. 이 글에서는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6){: data-lid="2ich0" }에서 일반 submanifold에 대해 증명한 Gauss 방정식을 곡면의 경우에 적용하여 이 사실을 증명한다.
 
-이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar g$는 표준 Euclid metric $\bar g$의 restriction이며, $\nabla, \bar\nabla$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita connection이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \rightarrow T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4){: data-lid="o5eh0" }) 단순히 $S$로 적는다.
+이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar{g}$는 표준 Euclid metric $\bar{g}$의 restriction이며, $\nabla, \bar{\nabla}$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita connection이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \rightarrow T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4){: data-lid="o5eh0" }) 단순히 $S$로 적는다.
 
 ## 곡면의 가우스 곡률
 
@@ -62,7 +62,7 @@ $$K = \det S = \det([S]) = \det(\mathrm{I}^{-1} \mathrm{II}) = \frac{\det \mathr
 
 ## Theorema Egregium
 
-Gauss curvature이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6){: data-lid="63zav" }이다. 그 식은 곡면의 내재적 곡률 텐서 $R$과 주변 곡률 $\bar R$, 그리고 제2기본형식의 이차식을 잇는다. 주변 공간이 평탄한 $\mathbb{R}^3$이면 $\bar R = 0$이므로 제2기본형식의 이차식이 통째로 내재적 곡률 $R$로 표현되고, 그로부터 $\det \mathrm{II}$가 내재적 자료가 된다.
+Gauss curvature이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6){: data-lid="63zav" }이다. 그 식은 곡면의 내재적 곡률 텐서 $R$과 주변 곡률 $\bar{R}$, 그리고 제2기본형식의 이차식을 잇는다. 주변 공간이 평탄한 $\mathbb{R}^3$이면 $\bar{R} = 0$이므로 제2기본형식의 이차식이 통째로 내재적 곡률 $R$로 표현되고, 그로부터 $\det \mathrm{II}$가 내재적 자료가 된다.
 
 ::: 정리 3 (Theorema Egregium)
 곡면 $M \subseteq \mathbb{R}^3$의 Gauss curvature $K$는 점 $p$에서 orthonormal basis $\{e_1, e_2\}$를 잡을 때
@@ -73,7 +73,7 @@ $$K = \langle R(e_1, e_2) e_2, e_1\rangle$$
 :::
 
 ::: 증명
-$\bar M = \mathbb{R}^3$이 평탄하여 $\bar R = 0$이므로, [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6){: data-lid="787na" }은 정규직교 vector $e_1, e_2 \in T_p M$에 대해
+$\bar{M} = \mathbb{R}^3$이 평탄하여 $\bar{R} = 0$이므로, [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6){: data-lid="787na" }은 정규직교 vector $e_1, e_2 \in T_p M$에 대해
 
 $$0 = \langle R(e_1, e_2) e_2, e_1\rangle + \langle \mathrm{II}(e_1, e_2), \mathrm{II}(e_2, e_1)\rangle - \langle \mathrm{II}(e_2, e_2), \mathrm{II}(e_1, e_1)\rangle$$
 
@@ -99,7 +99,7 @@ $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 ::: 참고 4
 [정리 3](#thm3){: data-lid="naofs" }의 우변이 제1기본형식만으로 적힌다는 사실은 좌표 공식으로도 명시할 수 있다. Christoffel 기호는 제1기본형식 $E, F, G$와 그 1계 편미분으로 이루어지고 곡률 텐서 $R$의 성분은 다시 Christoffel 기호와 그 1계 편미분으로 표현되므로, Gauss curvature은 $E, F, G$와 그 2계까지의 편미분만의 함수가 된다. 이를 명시적으로 적은 것이 *Brioschi 공식<sub>Brioschi formula</sub>*
 
-$$K = \frac{\det \begin{pmatrix} -\frac12 E_{vv} + F_{uv} - \frac12 G_{uu} & \frac12 E_u & F_u - \frac12 E_v \\ F_v - \frac12 G_u & E & F \\ \frac12 G_v & F & G \end{pmatrix} - \det \begin{pmatrix} 0 & \frac12 E_v & \frac12 G_u \\ \frac12 E_v & E & F \\ \frac12 G_u & F & G \end{pmatrix}}{(EG - F^2)^2}$$
+$$K = \frac{\det \begin{pmatrix} -\frac{1}{2} E_{vv} + F_{uv} - \frac{1}{2} G_{uu} & \frac{1}{2} E_u & F_u - \frac{1}{2} E_v \\ F_v - \frac{1}{2} G_u & E & F \\ \frac{1}{2} G_v & F & G \end{pmatrix} - \det \begin{pmatrix} 0 & \frac{1}{2} E_v & \frac{1}{2} G_u \\ \frac{1}{2} E_v & E & F \\ \frac{1}{2} G_u & F & G \end{pmatrix}}{(EG - F^2)^2}$$
 
 이다. 우변에 제2기본형식 $L, M, N$이 전혀 나타나지 않는다는 점이 Theorema Egregium을 좌표 차원에서 다시 확인해 준다. 직교 매개화 ($F = 0$)에서는 이 식이 훨씬 간단해져
 

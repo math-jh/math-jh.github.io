@@ -133,7 +133,7 @@ $$x_n \rightarrow x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일�
 ::: 예시 8 (개구간의 비완비성)
 표준 거리를 준 개구간 $X = (0, 1)$을 생각하자. 점열 $x_n = 1/n$ ($n \geq 2$)은 $X$ 안에 있고, $\mathbb{R}$의 점 $0$으로 다가가므로
 
-$$d(x_m, x_n) = \left\lvert \frac1m - \frac1n \right\rvert \leq \frac1m + \frac1n \rightarrow 0$$
+$$d(x_m, x_n) = \left\lvert \frac{1}{m} - \frac{1}{n} \right\rvert \leq \frac{1}{m} + \frac{1}{n} \rightarrow 0$$
 
 이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \rightarrow L \in (0,1)$이라면 $\mathbb{R}$에서 [명제 6](#prop6){: data-lid="mz4ts" }의 극한 유일성에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다. 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
 :::

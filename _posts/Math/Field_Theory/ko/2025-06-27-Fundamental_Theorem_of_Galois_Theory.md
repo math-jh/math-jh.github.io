@@ -107,7 +107,7 @@ $$\Gamma\cong\varprojlim_n\Gal(\mathbb{F}_{p^n}/\mathbb{F}_p)\cong\varprojlim_n\
 
 이 topological group들의 isomorphism이다. 여기서 오른쪽의 inverse limit은 $m\mid n$일 때의 reduction map들에 대한 것이고, $\varphi^k$는 각 성분에서 $k$의 residue class로 주어지는 원소에 대응한다.
 
-이제 자연수 $n$을 $n=2^am$ ($m$은 홀수)으로 쓰고, $c_n\in\mathbb{Z}/n\mathbb{Z}$을 $c_n\equiv0\pmod{2^a}$이고 $c_n\equiv1\pmod m$인 유일한 residue class라 하자. 만일 $n'\mid n$이라면 $n'=2^{a'}m'$의 $a'$과 $m'$이 각각 $a'\leq a$와 $m'\mid m$을 만족하므로 $c_n$을 $n'$으로 나눈 나머지가 $c_{n'}$이고, 따라서 $(c_n)_n$은 위의 inverse limit의 원소이다. 만일 이것이 어떤 $\varphi^k$에 대응한다면 $n=2^a$인 성분들로부터 모든 $a$에 대하여 $2^a\mid k$가 되어 $k=0$이어야 하는데, $n=3$인 성분은 $k\equiv1\pmod 3$을 요구하므로 이는 불가능하다. 즉 $(c_n)_n$은 $H$에 속하지 않는 $\Gamma$의 원소이다.
+이제 자연수 $n$을 $n=2^am$ ($m$은 홀수)으로 쓰고, $c_n\in\mathbb{Z}/n\mathbb{Z}$을 $c_n\equiv0\pmod{2^a}$이고 $c_n\equiv1\pmod{m}$인 유일한 residue class라 하자. 만일 $n'\mid n$이라면 $n'=2^{a'}m'$의 $a'$과 $m'$이 각각 $a'\leq a$와 $m'\mid m$을 만족하므로 $c_n$을 $n'$으로 나눈 나머지가 $c_{n'}$이고, 따라서 $(c_n)_n$은 위의 inverse limit의 원소이다. 만일 이것이 어떤 $\varphi^k$에 대응한다면 $n=2^a$인 성분들로부터 모든 $a$에 대하여 $2^a\mid k$가 되어 $k=0$이어야 하는데, $n=3$인 성분은 $k\equiv1\pmod{3}$을 요구하므로 이는 불가능하다. 즉 $(c_n)_n$은 $H$에 속하지 않는 $\Gamma$의 원소이다.
 
 한편 $H$의 closure $\overline{H}$는 다시 subgroup이고, $H\subseteq\overline{H}\subseteq\Gamma$로부터 $k(\overline{H})$가 $k(\Gamma)=\mathbb{F}_p$와 $k(H)=\mathbb{F}_p$ 사이에 놓이므로 $k(\overline{H})=\mathbb{F}_p$이다. 그럼 [정리 1](#thm1){: data-lid="i2vxf" }을 closed subgroup $\overline{H}$에 적용하여 $\overline{H}=g(\mathbb{F}_p)=\Gamma$를 얻는다. 즉 $H$는 $\Gamma$에서 dense하지만 closed가 아닌 subgroup이다.
 :::

@@ -81,11 +81,11 @@ More generally, when infinitely many elements $(v_i)_{i\in I}$ of $V$ are given,
 
 $$\sum_{i\in I}\alpha_iv_i\qquad\text{$\alpha_i=0$ for all but finitely many $i$}$$
 
-. For example, if we regard $\mathbb{R}$ as a $\mathbb{Q}$-vector space as in [§Vector Spaces, ⁋Example 4](/en/math/linear_algebra/vector_spaces#ex4){: data-lid="z6tsd" }, then $\sqrt2-1=0.4142\ldots$ is *not* a linear combination of the vectors
+. For example, if we regard $\mathbb{R}$ as a $\mathbb{Q}$-vector space as in [§Vector Spaces, ⁋Example 4](/en/math/linear_algebra/vector_spaces#ex4){: data-lid="z6tsd" }, then $\sqrt{2}-1=0.4142\ldots$ is *not* a linear combination of the vectors
 
 $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
-. Following the decimal expansion, we can write $\sqrt2-1=4\cdot0.1+1\cdot0.01+4\cdot0.001+\cdots$ as an infinite sum, but since this infinite sum has infinitely many nonzero coefficients, it is not a linear combination in the sense defined above. Moreover, since all the listed vectors are rational, any finite linear combination of them is always rational, and the irrational number $\sqrt2-1$ cannot be expressed as a linear combination of them in any way. In a similar vein, let us look at the following example.
+. Following the decimal expansion, we can write $\sqrt{2}-1=4\cdot0.1+1\cdot0.01+4\cdot0.001+\cdots$ as an infinite sum, but since this infinite sum has infinitely many nonzero coefficients, it is not a linear combination in the sense defined above. Moreover, since all the listed vectors are rational, any finite linear combination of them is always rational, and the irrational number $\sqrt{2}-1$ cannot be expressed as a linear combination of them in any way. In a similar vein, let us look at the following example.
 
 ::: Example 5
 Define the set $\mathbb{K}[\x]$ as

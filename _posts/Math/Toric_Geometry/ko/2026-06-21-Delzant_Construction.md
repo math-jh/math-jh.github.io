@@ -79,7 +79,7 @@ $$0\longrightarrow\mathfrak{n}_\mathbb{R}\longrightarrow\mathbb{R}^d\overset{\be
 
 을 주고, 이를 quotient torus로 지수화하면 short exact sequence
 
-$$0\longrightarrow N\longrightarrow\mathbb{T}^d\overset{\bar\beta}{\longrightarrow}\mathbb{T}^n\longrightarrow0$$
+$$0\longrightarrow N\longrightarrow\mathbb{T}^d\overset{\bar{\beta}}{\longrightarrow}\mathbb{T}^n\longrightarrow0$$
 
 을 얻는다. 여기서 $\mathbb{T}^k=\mathbb{R}^k/\mathbb{Z}^k$이고 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 차원 $d-n$의 부분 torus이다.
 :::
@@ -127,7 +127,7 @@ $$\pi\lvert z_k\rvert^2-\pi\lambda_k=\pi\langle x,u_k\rangle,\qquad\text{즉}\qq
 
 이 성립한다. 마지막 부등식은 정확히 $x\in\Delta$임을 말한다. 이 $x=\mu_\Delta(z)$이 곧 잔여 운동량 사상의 값이 되며, 따라서 $\phi_N^{-1}(c)$의 점은 다면체의 점 $x\in\Delta$로 사영된다. $z_k=0$인 첨자는 정확히 $x$이 facet $F_k$ 위에 놓이는, 즉 $\langle x,u_k\rangle+\lambda_k=0$인 첨자이므로 $I(z)=\{k\mid x\in F_k\}$이다.
 
-$x$이 $\Delta$의 점일 때 그것이 놓이는 facet들의 집합 $I(z)=\{k\mid x\in F_k\}$을 보면, simple 조건에 의해 그 개수는 많아야 $n$이고 해당 법선 $\{u_k\mid k\in I(z)\}$은 일차독립이다. Smooth 조건에 의해 이들은 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis의 일부로 확장되므로, $\beta$은 $\mathbb{Z}^{I(z)}$을 $\mathbb{Z}^n$의 direct sum 인자 위로 단사로 보낸다. 그럼 유도된 morphism $\mathbb{T}^{I(z)}\rightarrow\mathbb{T}^n$도 단사이고, [보조정리 5](#lem5){: data-lid="gcz8q" }에서 $N=\ker\bar\beta$이므로 $N\cap\mathbb{T}^{I(z)}=\ker(\bar\beta\rvert_{\mathbb{T}^{I(z)}})=\{1\}$이다. 따라서 위 판정에 의해 $N$은 $\phi_N^{-1}(c)$의 모든 점에서 자유롭게 작용한다. 자유로운 action은 $N$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1){: data-lid="65wkz" }에 의해 stabilizer의 Lie algebra가 영이라는 것은 $c$이 $\phi_N$의 regular value임과 동치이다.
+$x$이 $\Delta$의 점일 때 그것이 놓이는 facet들의 집합 $I(z)=\{k\mid x\in F_k\}$을 보면, simple 조건에 의해 그 개수는 많아야 $n$이고 해당 법선 $\{u_k\mid k\in I(z)\}$은 일차독립이다. Smooth 조건에 의해 이들은 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis의 일부로 확장되므로, $\beta$은 $\mathbb{Z}^{I(z)}$을 $\mathbb{Z}^n$의 direct sum 인자 위로 단사로 보낸다. 그럼 유도된 morphism $\mathbb{T}^{I(z)}\rightarrow\mathbb{T}^n$도 단사이고, [보조정리 5](#lem5){: data-lid="gcz8q" }에서 $N=\ker\bar{\beta}$이므로 $N\cap\mathbb{T}^{I(z)}=\ker(\bar{\beta}\rvert_{\mathbb{T}^{I(z)}})=\{1\}$이다. 따라서 위 판정에 의해 $N$은 $\phi_N^{-1}(c)$의 모든 점에서 자유롭게 작용한다. 자유로운 action은 $N$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1){: data-lid="65wkz" }에 의해 stabilizer의 Lie algebra가 영이라는 것은 $c$이 $\phi_N$의 regular value임과 동치이다.
 
 이제 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2){: data-lid="nynvs" }의 모든 가정이 충족되었다. $N$은 compact torus이고 $c$은 regular value이며 action은 자유롭고 proper하므로, 축약공간 $M_\Delta=\phi_N^{-1}(c)/N$은 smooth variety이고 유일한 symplectic form $\omega_\Delta$을 가지며 그 차원은
 

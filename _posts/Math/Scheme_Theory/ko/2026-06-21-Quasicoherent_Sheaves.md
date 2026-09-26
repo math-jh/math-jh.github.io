@@ -55,7 +55,7 @@ $$U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$$
 ::: 보조정리 3
 $A$-module $M$에 대하여, $\Spec A$의 base $\{D(f)\}_{f\in A}$ 위에서
 
-$$\widetilde M(D(f))=M_f$$
+$$\widetilde{M}(D(f))=M_f$$
 
 으로 정의하고, $D(f)\subseteq D(g)$에 대한 restriction map을 canonical localization map $M_g \rightarrow M_f$로 정의하자. 그럼 이 데이터는 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8){: data-lid="qyb4e" }의 두 조건을 만족하여 $\Spec A$ 위의 sheaf로 유일하게 확장되며, 이는 $\mathcal{O}_{\Spec A}$-module이다.
 :::
@@ -68,54 +68,54 @@ $$s=\Bigl(\sum_i a_if_i^{m_i}\Bigr)s=\sum_i a_i(f_i^{m_i}s)=0$$
 
 이다. 접합성의 경우, 각 $D(f_i)$ 위에서 주어진 section들 $s_i=a_i/f_i^{m_i}\in M_{f_i}$가 겹치는 부분에서 일치하면, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6){: data-lid="la9qc" }의 증명에서와 동일하게 $1=\sum b_i a_i f_i^{Nm_i+m_i}$ 꼴의 partition of unity를 사용하여 $s=\sum b_i a_i f_i^{Nm_i}\in M$이 모든 $D(f_i)$ 위에서 $s_i$로 제한됨을 확인한다. 이 논증에서 $A$의 곱셈을 $M$ 위로의 scalar action으로 바꾼 것을 제외하면 모든 계산이 동일하다.
 
-마지막으로 각 $\widetilde M(D(f))=M_f$는 $\mathcal{O}_{\Spec A}(D(f))=A_f$ 위의 module이고, restriction map이 scalar action과 호환되므로 $\widetilde M$은 $\mathcal{O}_{\Spec A}$-module이다.
+마지막으로 각 $\widetilde{M}(D(f))=M_f$는 $\mathcal{O}_{\Spec A}(D(f))=A_f$ 위의 module이고, restriction map이 scalar action과 호환되므로 $\widetilde{M}$은 $\mathcal{O}_{\Spec A}$-module이다.
 :::
 
 ::: 정의 4
-$A$-module $M$에 대하여, [보조정리 3](#lem3){: data-lid="n0xdu" }으로 정의되는 $\Spec A$ 위의 $\mathcal{O}_{\Spec A}$-module $\widetilde M$을 $M$의 *associated sheaf<sub>연관층</sub>*라 부른다.
+$A$-module $M$에 대하여, [보조정리 3](#lem3){: data-lid="n0xdu" }으로 정의되는 $\Spec A$ 위의 $\mathcal{O}_{\Spec A}$-module $\widetilde{M}$을 $M$의 *associated sheaf<sub>연관층</sub>*라 부른다.
 :::
 
-정의에 의하여 $\widetilde A=\mathcal{O}_{\Spec A}$이며, $\widetilde M$의 global section은 $\widetilde M(\Spec A)=\widetilde M(D(1))=M_1=M$이다. 다음 명제는 associated sheaf가 structure sheaf와 같은 국소적 성질을 가짐을 보여주며, 이는 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8){: data-lid="dczg1" }의 module 버전이다.
+정의에 의하여 $\widetilde{A}=\mathcal{O}_{\Spec A}$이며, $\widetilde{M}$의 global section은 $\widetilde{M}(\Spec A)=\widetilde{M}(D(1))=M_1=M$이다. 다음 명제는 associated sheaf가 structure sheaf와 같은 국소적 성질을 가짐을 보여주며, 이는 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8){: data-lid="dczg1" }의 module 버전이다.
 
 ::: 명제 5
 $A$-module $M$에 대하여, 다음이 성립한다.
 
-1. 임의의 $\mathfrak{p}\in \Spec A$에 대하여 stalk $\widetilde M_\mathfrak{p}\cong M_\mathfrak{p}$이다.
-2. 임의의 $f\in A$에 대하여 $\widetilde M\vert_{D(f)}\cong \widetilde{M_f}$이다. 여기에서 우변은 $\Spec A_f\cong D(f)$ 위의 $A_f$-module $M_f$의 associated sheaf이다.
+1. 임의의 $\mathfrak{p}\in \Spec A$에 대하여 stalk $\widetilde{M}_\mathfrak{p}\cong M_\mathfrak{p}$이다.
+2. 임의의 $f\in A$에 대하여 $\widetilde{M}\vert_{D(f)}\cong \widetilde{M_f}$이다. 여기에서 우변은 $\Spec A_f\cong D(f)$ 위의 $A_f$-module $M_f$의 associated sheaf이다.
 :::
 ::: 증명
 첫째 결과의 경우, $D(f)$들이 $\Spec A$의 base이므로 ([\[위상수학\] §위상공간의 기저, ⁋명제 5](/ko/math/topology/topological_bases#prop5){: data-lid="mkl1s" })
 
-$$\widetilde M_\mathfrak{p}=\varinjlim_{D(f)\ni \mathfrak{p}}\widetilde M(D(f))=\varinjlim_{f\not\in \mathfrak{p}}M_f$$
+$$\widetilde{M}_\mathfrak{p}=\varinjlim_{D(f)\ni \mathfrak{p}}\widetilde{M}(D(f))=\varinjlim_{f\not\in \mathfrak{p}}M_f$$
 
 이다. 한편 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8){: data-lid="z3yy1" }의 증명에서 $\varinjlim_{f\not\in \mathfrak{p}}A_f\cong A_\mathfrak{p}$를 보인 것과 동일하게, localization과 direct limit의 universal property로부터 $\varinjlim_{f\not\in \mathfrak{p}}M_f\cong M_\mathfrak{p}$를 얻는다.
 
 둘째 결과의 경우, [§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2){: data-lid="s54uk" }에 의하여 $D(f)\cong \Spec A_f$이고, 이 isomorphism 아래에서 $\Spec A_f$의 principal open set은 $g\in A$에 대한 $D(fg)$의 꼴이다. 그럼
 
-$$\widetilde M\vert_{D(f)}(D(fg))=\widetilde M(D(fg))=M_{fg}\cong (M_f)_g=\widetilde{M_f}(D(g))$$
+$$\widetilde{M}\vert_{D(f)}(D(fg))=\widetilde{M}(D(fg))=M_{fg}\cong (M_f)_g=\widetilde{M_f}(D(g))$$
 
-이고, 이 isomorphism들이 restriction map과 호환되므로 base 위에서 두 sheaf가 일치하며 따라서 $\widetilde M\vert_{D(f)}\cong \widetilde{M_f}$이다.
+이고, 이 isomorphism들이 restriction map과 호환되므로 base 위에서 두 sheaf가 일치하며 따라서 $\widetilde{M}\vert_{D(f)}\cong \widetilde{M_f}$이다.
 :::
 
-특히 첫째 결과로부터 $\widetilde M$의 stalk은 모두 $M$의 localization으로 주어지므로, $\widetilde M$은 $M$의 국소적인 정보를 전부 담고 있다. 
+특히 첫째 결과로부터 $\widetilde{M}$의 stalk은 모두 $M$의 localization으로 주어지므로, $\widetilde{M}$은 $M$의 국소적인 정보를 전부 담고 있다. 
 
 ## Categorical equivalence
 
 이제 우리는 affine scheme 위에서 module의 associated sheaf를 취하는 대응이 module의 범주와 적절한 sheaf 범주 사이의 동치를 준다는 것을 보인다. 우선 이 대응이 exact functor임을 확인한다.
 
 ::: 명제 6
-대응 $M\mapsto \widetilde M$은 functor $\widetilde{(-)}:\rMod{A} \rightarrow \rMod{\mathcal{O}_{\Spec A}}$를 정의하며, 이는 exact이다. 즉 $A$-module의 short exact sequence
+대응 $M\mapsto \widetilde{M}$은 functor $\widetilde{(-)}:\rMod{A} \rightarrow \rMod{\mathcal{O}_{\Spec A}}$를 정의하며, 이는 exact이다. 즉 $A$-module의 short exact sequence
 
 $$0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$$
 
 는 $\mathcal{O}_{\Spec A}$-module의 short exact sequence
 
-$$0 \rightarrow \widetilde{M'} \rightarrow \widetilde M \rightarrow \widetilde{M''} \rightarrow 0$$
+$$0 \rightarrow \widetilde{M'} \rightarrow \widetilde{M} \rightarrow \widetilde{M''} \rightarrow 0$$
 
 를 유도한다.
 :::
 ::: 증명
-$A$-module homomorphism $\phi:M \rightarrow N$이 주어지면, 각각의 $f\in A$마다 localization $\phi_f:M_f \rightarrow N_f$가 유도되고, 이들은 restriction map과 호환되므로 sheaf 사이의 morphism $\widetilde\phi:\widetilde M \rightarrow \widetilde N$을 정의한다. 이 대응이 합성과 항등사상을 보존함은 localization의 functoriality로부터 자명하므로 $\widetilde{(-)}$는 functor이다.
+$A$-module homomorphism $\phi:M \rightarrow N$이 주어지면, 각각의 $f\in A$마다 localization $\phi_f:M_f \rightarrow N_f$가 유도되고, 이들은 restriction map과 호환되므로 sheaf 사이의 morphism $\widetilde{\phi}:\widetilde{M} \rightarrow \widetilde{N}$을 정의한다. 이 대응이 합성과 항등사상을 보존함은 localization의 functoriality로부터 자명하므로 $\widetilde{(-)}$는 functor이다.
 
 Exactness를 보이기 위해, sheaf 사이의 sequence가 exact인 것은 모든 stalk에서 exact인 것과 동치임을 사용한다. [명제 5](#prop5){: data-lid="c6vkm" }에 의하여 임의의 $\mathfrak{p}$에서 stalk를 취하면 주어진 sequence는
 
@@ -124,39 +124,39 @@ $$0 \rightarrow M'_\mathfrak{p} \rightarrow M_\mathfrak{p} \rightarrow M''_\math
 가 되며, localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2){: data-lid="esryv" }) 이 sequence는 exact이다. 따라서 stalk 수준에서 exact이고, 이로부터 sheaf 수준에서도 exact이다.
 :::
 
-Associated sheaf functor는 tensor product 및 localization과도 호환된다. 즉 $\widetilde{M\otimes_A N}\cong \widetilde M\otimes_{\mathcal{O}_{\Spec A}}\widetilde N$이고, 임의의 $f$에 대하여 [명제 5](#prop5){: data-lid="ysaqm" }에서 본 $\widetilde M\vert_{D(f)}\cong \widetilde{M_f}$가 성립한다. 첫째 호환성은 양변의 stalk이 모두 $(M\otimes_A N)_\mathfrak{p}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}N_\mathfrak{p}$로 일치함으로부터 따라온다.
+Associated sheaf functor는 tensor product 및 localization과도 호환된다. 즉 $\widetilde{M\otimes_A N}\cong \widetilde{M}\otimes_{\mathcal{O}_{\Spec A}}\widetilde{N}$이고, 임의의 $f$에 대하여 [명제 5](#prop5){: data-lid="ysaqm" }에서 본 $\widetilde{M}\vert_{D(f)}\cong \widetilde{M_f}$가 성립한다. 첫째 호환성은 양변의 stalk이 모두 $(M\otimes_A N)_\mathfrak{p}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}N_\mathfrak{p}$로 일치함으로부터 따라온다.
 
 이제 이번 절의 결과인 categorical equivalence의 한 방향을 위해 우리는 임의의 $\mathcal{O}_{\Spec A}$-module이 어떻게 module로부터 복원되는지를 알아야 한다. 다음 정리가 핵심이다.
 
 ::: 정리 7
 Affine scheme $\Spec A$ 위에서, 다음의 자연스러운 isomorphism
 
-$$\Hom_{\mathcal{O}_{\Spec A}}(\widetilde M, \widetilde N)\cong \Hom_A(M, N)$$
+$$\Hom_{\mathcal{O}_{\Spec A}}(\widetilde{M}, \widetilde{N})\cong \Hom_A(M, N)$$
 
 이 임의의 $A$-module $M, N$에 대하여 성립한다. 즉 functor $\widetilde{(-)}:\rMod{A} \rightarrow \rMod{\mathcal{O}_{\Spec A}}$는 fully faithful이다.
 :::
 ::: 증명
-대응 $\phi\mapsto \widetilde\phi$는 [명제 6](#prop6){: data-lid="j1xjy" }에 의하여 $\Hom_A(M, N) \rightarrow \Hom_{\mathcal{O}_{\Spec A}}(\widetilde M, \widetilde N)$를 준다. 거꾸로 morphism $\psi:\widetilde M \rightarrow \widetilde N$이 주어지면, global section 위에서
+대응 $\phi\mapsto \widetilde{\phi}$는 [명제 6](#prop6){: data-lid="j1xjy" }에 의하여 $\Hom_A(M, N) \rightarrow \Hom_{\mathcal{O}_{\Spec A}}(\widetilde{M}, \widetilde{N})$를 준다. 거꾸로 morphism $\psi:\widetilde{M} \rightarrow \widetilde{N}$이 주어지면, global section 위에서
 
-$$\psi(\Spec A):\widetilde M(\Spec A)=M \rightarrow N=\widetilde N(\Spec A)$$
+$$\psi(\Spec A):\widetilde{M}(\Spec A)=M \rightarrow N=\widetilde{N}(\Spec A)$$
 
 를 취하여 $A$-module homomorphism $\phi=\psi(\Spec A)$를 얻는다. 이 두 대응이 서로 역임을 보이면 충분하다.
 
-우선 $\phi\in \Hom_A(M, N)$에서 출발하면 $\widetilde\phi$의 global section은 정의에 의해 다시 $\phi$이므로 한 방향은 자명하다. 거꾸로 $\psi:\widetilde M \rightarrow \widetilde N$이 주어졌다 하고 $\phi=\psi(\Spec A)$라 하자. 우리는 $\widetilde \phi=\psi$임을 보여야 하며, 두 morphism이 일치하는 것은 base $\{D(f)\}$ 위에서 일치하는 것으로 충분하다. 임의의 $f\in A$에 대하여, $\psi$가 sheaf morphism이므로 다음 diagram
+우선 $\phi\in \Hom_A(M, N)$에서 출발하면 $\widetilde{\phi}$의 global section은 정의에 의해 다시 $\phi$이므로 한 방향은 자명하다. 거꾸로 $\psi:\widetilde{M} \rightarrow \widetilde{N}$이 주어졌다 하고 $\phi=\psi(\Spec A)$라 하자. 우리는 $\widetilde{\phi}=\psi$임을 보여야 하며, 두 morphism이 일치하는 것은 base $\{D(f)\}$ 위에서 일치하는 것으로 충분하다. 임의의 $f\in A$에 대하여, $\psi$가 sheaf morphism이므로 다음 diagram
 
 {% diagram Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg width="6.60em" alt="localization square" %}
 
 이 commute하며, 여기에서 세로 morphism은 localization map이다. 한편 $\psi(D(f))$는 $A_f$-module homomorphism이므로 윗줄의 $\phi$와 commute한다는 조건과 $A_f$-선형성에 의해 임의의 $m/f^n\in M_f$에 대하여
 
-$$\psi(D(f))\Bigl(\frac{m}{f^n}\Bigr)=\frac{1}{f^n}\psi(D(f))\Bigl(\frac{m}{1}\Bigr)=\frac{1}{f^n}\frac{\phi(m)}{1}=\frac{\phi(m)}{f^n}=\widetilde\phi(D(f))\Bigl(\frac{m}{f^n}\Bigr)$$
+$$\psi(D(f))\Bigl(\frac{m}{f^n}\Bigr)=\frac{1}{f^n}\psi(D(f))\Bigl(\frac{m}{1}\Bigr)=\frac{1}{f^n}\frac{\phi(m)}{1}=\frac{\phi(m)}{f^n}=\widetilde{\phi}(D(f))\Bigl(\frac{m}{f^n}\Bigr)$$
 
-으로 완전히 결정된다. 따라서 $\psi(D(f))=\widetilde\phi(D(f))$가 모든 $f$에 대해 성립하고, 이로부터 $\psi=\widetilde\phi$이다.
+으로 완전히 결정된다. 따라서 $\psi(D(f))=\widetilde{\phi}(D(f))$가 모든 $f$에 대해 성립하고, 이로부터 $\psi=\widetilde{\phi}$이다.
 :::
 
 [정리 7](#thm7){: data-lid="c8sis" }은 associated sheaf functor가 fully faithful임을 보여준다. 그러나 모든 $\mathcal{O}_{\Spec A}$-module이 associated sheaf의 꼴은 아니므로, 올바른 종류의 categorical equivalence를 얻기 위해서는 sheaf들의 category 쪽에서 적당한 제한이 필요하다. 
 
 ::: 정의 8
-Scheme $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, 임의의 $x\in X$에 대하여 $x$의 affine open neighborhood $U\cong \Spec A$가 존재하여 적당한 $A$-module $M$에 대해 $\mathcal{F}\vert_U\cong \widetilde M$이도록 할 수 있는 것이다.
+Scheme $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, 임의의 $x\in X$에 대하여 $x$의 affine open neighborhood $U\cong \Spec A$가 존재하여 적당한 $A$-module $M$에 대해 $\mathcal{F}\vert_U\cong \widetilde{M}$이도록 할 수 있는 것이다.
 :::
 
 즉 정의에 의해 quasi-coherent sheaf는 국소적으로 associated sheaf로 나타나는 것들이다. $X$ 위의 quasi-coherent sheaf들과 그 사이의 morphism들은 $\rMod{\mathcal{O}_X}$의 full subcategory를 이루며, 이를 $\QCoh(X)$로 적는다. 이로부터 [정리 7](#thm7){: data-lid="t64n7" }을 affine 위의 동치로 끌어올릴 수 있다.
@@ -171,17 +171,17 @@ $$\widetilde{(-)}:\rMod{A} \rightarrow \QCoh(\Spec A)$$
 ::: 증명
 [정리 7](#thm7){: data-lid="192fa" }에 의하여 $\widetilde{(-)}$는 fully faithful이므로, ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5){: data-lid="n18am" }) essentially surjective임을 보이면 충분하다. 즉 임의의 quasi-coherent sheaf $\mathcal{F}\in \QCoh(\Spec A)$가 적당한 $A$-module의 associated sheaf와 isomorphic함을 보여야 한다.
 
-$M=\mathcal{F}(\Spec A)$라 하고, 우리는 $\mathcal{F}\cong \widetilde M$임을 주장한다. Restriction map들로부터 각각의 $f\in A$마다 $M=\mathcal{F}(\Spec A) \rightarrow \mathcal{F}(D(f))$가 유도되고, 이 image가 $f$의 action에 대해 invertible하므로 $A_f$의 universal property에 의해 $A_f$-module homomorphism
+$M=\mathcal{F}(\Spec A)$라 하고, 우리는 $\mathcal{F}\cong \widetilde{M}$임을 주장한다. Restriction map들로부터 각각의 $f\in A$마다 $M=\mathcal{F}(\Spec A) \rightarrow \mathcal{F}(D(f))$가 유도되고, 이 image가 $f$의 action에 대해 invertible하므로 $A_f$의 universal property에 의해 $A_f$-module homomorphism
 
 $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
-가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde M \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 isomorphic함을 보이면 된다.
+가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde{M} \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 isomorphic함을 보이면 된다.
 
-이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-module $N$이 존재한다. 이 때 [정의 8](#def8){: data-lid="eb3h3" }에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은, [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3){: data-lid="d6690" }의 증명에서와 같이 그 neighborhood 안에서 $\Spec A$의 principal open set이면서 동시에 그 neighborhood 자신의 principal open set이기도 한 근방을 잡을 수 있고, 그 위에서 [명제 5](#prop5){: data-lid="lawwh" }의 둘째 결과에 의하여 다시 associated sheaf가 되기 때문이다. 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5){: data-lid="17pto" }에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7){: data-lid="r1yy1" }에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
+이를 위해 $\mathcal{F}$의 quasi-coherence를 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde{N}$인 적당한 $g$와 $A_g$-module $N$이 존재한다. 이 때 [정의 8](#def8){: data-lid="eb3h3" }에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은, [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3){: data-lid="d6690" }의 증명에서와 같이 그 neighborhood 안에서 $\Spec A$의 principal open set이면서 동시에 그 neighborhood 자신의 principal open set이기도 한 근방을 잡을 수 있고, 그 위에서 [명제 5](#prop5){: data-lid="lawwh" }의 둘째 결과에 의하여 다시 associated sheaf가 되기 때문이다. 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5){: data-lid="17pto" }에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde{N}$의 꼴이다. 두 associated sheaf 사이의 morphism은 [정리 7](#thm7){: data-lid="r1yy1" }에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 isomorphic함을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 associated sheaf가 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 
-을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 finite covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
+을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 associated sheaf이라 그 section은 $A$-module이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 finite covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde{M} \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
 :::
 
 [정리 9](#thm9){: data-lid="xcwb6" }는 affine scheme 위에서 quasi-coherent sheaf를 다루는 것이 곧 module을 다루는 것과 같음을 말해준다. 즉 $\Spec A$ 위의 모든 quasi-coherent sheaf는 그 global section module $M=\Gamma(\Spec A, \mathcal{F})$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6){: data-lid="8uy2a" }의 exactness와 위에서 언급한 tensor product와의 호환성을 통해 module의 대수와 sheaf의 대수를 일치시킨다.
@@ -199,9 +199,9 @@ Scheme $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$에 대하여 다음이 �
 ::: 증명
 둘째 조건이 첫째 조건을 함의하는 것은 [정의 8](#def8){: data-lid="menzp" }로부터 자명하므로 그 역을 보인다. $\mathcal{F}$가 quasi-coherent sheaf라 하고, 임의의 affine open subset $U=\Spec A$를 고정하자. 우리는 $\mathcal{F}\vert_U$가 $\Spec A$ 위의 quasi-coherent sheaf임을 보이면 [정리 9](#thm9){: data-lid="h700n" }에 의해 $\mathcal{F}\vert_U\cong \widetilde{M_U}$ (단, $M_U=\mathcal{F}(U)$)가 따라온다.
 
-$\mathcal{F}$의 quasi-coherence에 의하여 $U$의 각 점 $x$마다 ($X$에서의) affine open neighborhood $V\cong \Spec B$와 $B$-module $N$이 존재하여 $\mathcal{F}\vert_V\cong \widetilde N$이다. [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3){: data-lid="3ttob" }의 증명에서와 같이, $U\cap V$는 $U$ 안에서 principal open set들 $D(f)$ ($f\in A$)로 덮이며, 또 $V$ 안에서도 principal open set $D(g)$ ($g\in B$)로 덮인다. 이 둘을 동시에 만족하도록 충분히 작게 잡으면, $x$를 포함하고 $U$와 $V$ 양쪽의 principal open set이 되는 affine open $W=\Spec A_f=\Spec B_g$를 얻는다.
+$\mathcal{F}$의 quasi-coherence에 의하여 $U$의 각 점 $x$마다 ($X$에서의) affine open neighborhood $V\cong \Spec B$와 $B$-module $N$이 존재하여 $\mathcal{F}\vert_V\cong \widetilde{N}$이다. [§스킴, ⁋보조정리 3](/ko/math/scheme_theory/schemes#lem3){: data-lid="3ttob" }의 증명에서와 같이, $U\cap V$는 $U$ 안에서 principal open set들 $D(f)$ ($f\in A$)로 덮이며, 또 $V$ 안에서도 principal open set $D(g)$ ($g\in B$)로 덮인다. 이 둘을 동시에 만족하도록 충분히 작게 잡으면, $x$를 포함하고 $U$와 $V$ 양쪽의 principal open set이 되는 affine open $W=\Spec A_f=\Spec B_g$를 얻는다.
 
-이제 $\mathcal{F}\vert_V\cong \widetilde N$이므로 [명제 5](#prop5){: data-lid="t41yn" }에 의하여 $\mathcal{F}\vert_W\cong \widetilde N\vert_{D(g)}\cong \widetilde{N_g}$이고, $W=\Spec A_f$로 보면 이는 $A_f$-module $N_g$의 associated sheaf이다. 따라서 $U=\Spec A$의 각 점은 $\mathcal{F}\vert_U$가 associated sheaf가 되는 principal open neighborhood를 가지며, 이로부터 $\mathcal{F}\vert_U$는 $\Spec A$ 위의 quasi-coherent sheaf이다.
+이제 $\mathcal{F}\vert_V\cong \widetilde{N}$이므로 [명제 5](#prop5){: data-lid="t41yn" }에 의하여 $\mathcal{F}\vert_W\cong \widetilde{N}\vert_{D(g)}\cong \widetilde{N_g}$이고, $W=\Spec A_f$로 보면 이는 $A_f$-module $N_g$의 associated sheaf이다. 따라서 $U=\Spec A$의 각 점은 $\mathcal{F}\vert_U$가 associated sheaf가 되는 principal open neighborhood를 가지며, 이로부터 $\mathcal{F}\vert_U$는 $\Spec A$ 위의 quasi-coherent sheaf이다.
 :::
 
 따라서 어떤 한 affine cover 위에서 associated sheaf임을 확인하는 것만으로 quasi-coherence가 보장되며, 그 결과 모든 affine open subset 위에서 자동으로 associated sheaf가 된다. 이 affine-locality 덕분에 quasi-coherent sheaf에 대한 많은 명제들은 associated sheaf에 대한 명제로 환원하여 증명할 수 있다.
@@ -209,12 +209,12 @@ $\mathcal{F}$의 quasi-coherence에 의하여 $U$의 각 점 $x$마다 ($X$에�
 Quasi-coherent sheaf 가운데 특히 affine 위에서 finitely generated module 또는 finitely presented module에 대응하는 것들을 따로 구별한다. 이는 Noetherian 가정 아래에서 가장 잘 작동한다.
 
 ::: 정의 11
-Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 각 점이 이러한 affine open neighborhood를 가지며 이들 각각에서 $M$을 finitely presented $A$-module로 잡을 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
+Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde{M}$이고 $M$이 finitely generated $A$-module인 것이다. 만일 추가로 각 점이 이러한 affine open neighborhood를 가지며 이들 각각에서 $M$을 finitely presented $A$-module로 잡을 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
 :::
 
-Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde A$이고 $A$는 자기 자신 위의 free module이므로 coherent sheaf이다.
+Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde{A}$이고 $A$는 자기 자신 위의 free module이므로 coherent sheaf이다.
 
-Finite type 조건은 한 점에서의 생성을 그 근방으로 퍼뜨린다. $\mathcal{F}$가 finite type이고 [정의 11](#def11){: data-lid="60ha4" }이 주는 affine open neighborhood $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde M$이라 하자. 점 $x\in U$에 대응하는 prime을 $\mathfrak{p}$라 할 때 $m_1,\ldots, m_r\in M$의 image가 stalk $M_\mathfrak{p}$를 생성한다 하면, $N=M/\sum_iAm_i$는 finitely generated이면서 $N_\mathfrak{p}=0$이므로 $N$의 각 generator를 소멸시키는 $\mathfrak{p}$ 밖의 원소가 존재하고, $\mathfrak{p}$가 prime이라 이들의 곱 $f$ 또한 $\mathfrak{p}$에 속하지 않아 $fN=0$에서 $N_f=0$이다. 곧 stalk을 생성하는 section들은 언제나 그 점의 근방 $D(f)$ 위에서 $\mathcal{F}$ 전체를 생성한다.
+Finite type 조건은 한 점에서의 생성을 그 근방으로 퍼뜨린다. $\mathcal{F}$가 finite type이고 [정의 11](#def11){: data-lid="60ha4" }이 주는 affine open neighborhood $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong\widetilde{M}$이라 하자. 점 $x\in U$에 대응하는 prime을 $\mathfrak{p}$라 할 때 $m_1,\ldots, m_r\in M$의 image가 stalk $M_\mathfrak{p}$를 생성한다 하면, $N=M/\sum_iAm_i$는 finitely generated이면서 $N_\mathfrak{p}=0$이므로 $N$의 각 generator를 소멸시키는 $\mathfrak{p}$ 밖의 원소가 존재하고, $\mathfrak{p}$가 prime이라 이들의 곱 $f$ 또한 $\mathfrak{p}$에 속하지 않아 $fN=0$에서 $N_f=0$이다. 곧 stalk을 생성하는 section들은 언제나 그 점의 근방 $D(f)$ 위에서 $\mathcal{F}$ 전체를 생성한다.
 
 ## Locally free sheaf와 invertible sheaf
 
@@ -251,7 +251,7 @@ $$(\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee)\vert_U\cong \mathcal{O}_U
 
 따라서 invertible sheaf들은 tensor product를 연산으로 하여 group을 이루며, 항등원은 $\mathcal{O}_X$, $\mathcal{L}$의 역원은 $\mathcal{L}^\vee$이다. 이는 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_varieties/line_bundles#def9){: data-lid="ca1ku" }에서 정의한 Picard group $\Pic(X)$의 scheme 버전이다.
 
-Invertible sheaf를 얻는 가장 중요한 방법 중 하나는 locally free sheaf에 exterior power를 취하는 것이다. 우선 exterior power는 base change와 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14){: data-lid="65da7" }) $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이고, 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong \widetilde M$이면 local model들이 restriction과 호환되어
+Invertible sheaf를 얻는 가장 중요한 방법 중 하나는 locally free sheaf에 exterior power를 취하는 것이다. 우선 exterior power는 base change와 commute하므로 ([\[다중선형대수학\] §텐서대수, ⁋명제 14](/ko/math/multilinear_algebra/tensor_algebras#prop14){: data-lid="65da7" }) $A$-module $M$과 $g\in A$에 대하여 $\bigl(\bigwedge^rM\bigr)_g\cong \bigwedge^r(M_g)$이고, 따라서 $U=\Spec A$ 위에서 $\mathcal{F}\vert_U\cong \widetilde{M}$이면 local model들이 restriction과 호환되어
 
 $$\bigl(\bigwedge\nolimits^r\mathcal{F}\bigr)\big\vert_U\cong \widetilde{\bigwedge\nolimits^rM}$$
 
@@ -286,17 +286,17 @@ $$\mathcal{O}^{(J)} \rightarrow \mathcal{O}^{(I)} \rightarrow \mathcal{F} \right
 Scheme morphism $\varphi:X \rightarrow Y$와 $Y$ 위의 quasi-coherent sheaf $\mathcal{G}$에 대하여, pullback $\varphi^\ast \mathcal{G}$는 $X$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
-quasi-coherence가 affine-local property이므로 ([정리 10](#thm10){: data-lid="ydqrf" }), $X=\Spec B$, $Y=\Spec A$인 경우에 대해 보이면 충분하다. 이 때 $\varphi$는 ring homomorphism $\phi:A \rightarrow B$로부터 오며 ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11){: data-lid="w5r4j" }), $\mathcal{G}=\widetilde M$인 $A$-module $M$이 존재한다. ([정리 9](#thm9){: data-lid="s9cxf" })
+quasi-coherence가 affine-local property이므로 ([정리 10](#thm10){: data-lid="ydqrf" }), $X=\Spec B$, $Y=\Spec A$인 경우에 대해 보이면 충분하다. 이 때 $\varphi$는 ring homomorphism $\phi:A \rightarrow B$로부터 오며 ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11){: data-lid="w5r4j" }), $\mathcal{G}=\widetilde{M}$인 $A$-module $M$이 존재한다. ([정리 9](#thm9){: data-lid="s9cxf" })
 
-우리는 $\varphi^\ast \widetilde M\cong \widetilde{M\otimes_A B}$임을 주장한다. 이를 보이기 위해 stalk을 비교한다. 임의의 $\mathfrak{q}\in \Spec B$와 $\mathfrak{p}=\phi^{-1}(\mathfrak{q})$에 대하여, inverse image와 tensor product가 stalk과 호환되므로
+우리는 $\varphi^\ast \widetilde{M}\cong \widetilde{M\otimes_A B}$임을 주장한다. 이를 보이기 위해 stalk을 비교한다. 임의의 $\mathfrak{q}\in \Spec B$와 $\mathfrak{p}=\phi^{-1}(\mathfrak{q})$에 대하여, inverse image와 tensor product가 stalk과 호환되므로
 
-$$(\varphi^\ast \widetilde M)_\mathfrak{q}=(\varphi^{-1}\widetilde M)_\mathfrak{q}\otimes_{(\varphi^{-1}\mathcal{O}_{\Spec A})_\mathfrak{q}}\mathcal{O}_{\Spec B,\mathfrak{q}}\cong \widetilde M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
+$$(\varphi^\ast \widetilde{M})_\mathfrak{q}=(\varphi^{-1}\widetilde{M})_\mathfrak{q}\otimes_{(\varphi^{-1}\mathcal{O}_{\Spec A})_\mathfrak{q}}\mathcal{O}_{\Spec B,\mathfrak{q}}\cong \widetilde{M}_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
 
 이고, ([명제 5](#prop5){: data-lid="pwm55" }) 한편 base change module의 stalk은
 
 $$(\widetilde{M\otimes_A B})_\mathfrak{q}=(M\otimes_A B)_\mathfrak{q}\cong M\otimes_A B_\mathfrak{q}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
 
-이다. 이 isomorphism들이 자연스러우므로 sheaf의 isomorphism $\varphi^\ast \widetilde M\cong \widetilde{M\otimes_A B}$를 얻고, 따라서 $\varphi^\ast \mathcal{G}$는 associated sheaf이며 quasi-coherent sheaf이다.
+이다. 이 isomorphism들이 자연스러우므로 sheaf의 isomorphism $\varphi^\ast \widetilde{M}\cong \widetilde{M\otimes_A B}$를 얻고, 따라서 $\varphi^\ast \mathcal{G}$는 associated sheaf이며 quasi-coherent sheaf이다.
 :::
 
 Pushforward의 경우 quasi-coherence가 보존되려면 morphism이 quasi-compact이고 quasi-separated여야 한다. 이는 $\varphi_\ast \mathcal{F}(V)=\mathcal{F}(\varphi^{-1}(V))$를 affine 위에서 계산할 때, $\varphi^{-1}(V)$를 유한히 많은 affine으로 덮고 그 교집합 또한 통제할 수 있어야 localization과 호환되는 module 구조를 얻기 때문이다.
@@ -307,7 +307,7 @@ Quasi-compact이고 quasi-separated인 scheme morphism $\varphi:X \rightarrow Y$
 ::: 증명
 Quasi-coherence가 affine-local property이므로 ([정리 10](#thm10){: data-lid="udo8u" }) $Y=\Spec A$인 경우만 보이면 충분하다. 이 때 $\varphi$가 quasi-compact이므로 $X$는 유한히 많은 affine open subset $U_i=\Spec B_i$ ($i=1,\ldots, n$)으로 덮인다. 또 $\varphi$가 quasi-separated이므로 각 $U_i\cap U_j$ 또한 유한히 많은 affine open $U_{ijk}=\Spec C_{ijk}$로 덮인다.
 
-이제 $M=\Gamma(X, \mathcal{F})=\varphi_\ast \mathcal{F}(\Spec A)$라 하고 $\varphi_\ast \mathcal{F}\cong \widetilde M$임을 보이자. 그러려면 각 $D(g)\subseteq \Spec A$에 대하여 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$임을 확인하면 된다. 정의에 의하여 $\varphi_\ast \mathcal{F}(D(g))=\mathcal{F}(\varphi^{-1}(D(g)))$이며, sheaf 조건 ([§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6){: data-lid="jyrem" } 이후 일반 sheaf의 sheaf axiom)으로부터 다음 equalizer
+이제 $M=\Gamma(X, \mathcal{F})=\varphi_\ast \mathcal{F}(\Spec A)$라 하고 $\varphi_\ast \mathcal{F}\cong \widetilde{M}$임을 보이자. 그러려면 각 $D(g)\subseteq \Spec A$에 대하여 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$임을 확인하면 된다. 정의에 의하여 $\varphi_\ast \mathcal{F}(D(g))=\mathcal{F}(\varphi^{-1}(D(g)))$이며, sheaf 조건 ([§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6){: data-lid="jyrem" } 이후 일반 sheaf의 sheaf axiom)으로부터 다음 equalizer
 
 $$\mathcal{F}(\varphi^{-1}(D(g)))=\ker\Bigl(\prod_i \mathcal{F}(U_i\cap \varphi^{-1}(D(g))) \rightrightarrows \prod_{i,j,k}\mathcal{F}(U_{ijk}\cap \varphi^{-1}(D(g)))\Bigr)$$
 
@@ -319,7 +319,7 @@ $$\mathcal{F}(U_i\cap \varphi^{-1}(D(g)))=(N_i)_g\cong \mathcal{F}(U_i)\otimes_A
 
 $$\mathcal{F}(\varphi^{-1}(D(g)))\cong \ker\Bigl(\prod_i N_i \rightrightarrows \prod_{i,j,k}\mathcal{F}(U_{ijk})\Bigr)\otimes_A A_g=M\otimes_A A_g=M_g$$
 
-를 얻는다. 여기에서 유한성은 곱과 localization이 commute하는 데 본질적으로 사용되었으며, 이것이 quasi-compactness와 quasi-separatedness가 필요한 이유이다. 따라서 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$가 모든 $g$에 대해 성립하므로 $\varphi_\ast \mathcal{F}\cong \widetilde M$이고, 이는 quasi-coherent sheaf이다.
+를 얻는다. 여기에서 유한성은 곱과 localization이 commute하는 데 본질적으로 사용되었으며, 이것이 quasi-compactness와 quasi-separatedness가 필요한 이유이다. 따라서 $\varphi_\ast \mathcal{F}(D(g))\cong M_g$가 모든 $g$에 대해 성립하므로 $\varphi_\ast \mathcal{F}\cong \widetilde{M}$이고, 이는 quasi-coherent sheaf이다.
 :::
 
 [정리 16](#thm16){: data-lid="kpbr7" }의 quasi-compact, quasi-separated 조건은 본질적이다. 가령 무한히 많은 affine을 붙여야 하는 morphism에서는 $\varphi^{-1}(D(g))$ 위의 section을 계산할 때 무한 곱이 등장하여 localization과 commute하지 않을 수 있다. 다만 Noetherian scheme들 사이의 morphism이나, 특히 affine scheme들 사이의 morphism은 항상 이 조건을 만족하므로, 실용적으로 자주 마주치는 상황에서는 pushforward가 quasi-coherence를 보존한다.
@@ -351,21 +351,21 @@ $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta$$
 
 ## Ideal sheaf와 closed subscheme
 
-Pushforward가 quasi-coherence를 보존한다는 사실의 가장 중요한 응용은 closed subscheme이 결정하는 ideal sheaf이다. Affine scheme $\Spec A$의 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-module이므로 associated sheaf $\widetilde{\mathfrak{a}}$를 정의하고, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 subsheaf이다. 일반적인 scheme $X$의 closed embedding $\iota:Z \rightarrow X$가 정의하는 ideal sheaf $\mathcal{I}_{Z/X}=\ker\iota^\sharp$ 또한 각각의 affine open subset 위에서 ideal을 주지만 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5){: data-lid="muxab" }), 이 ideal들이 localization과 호환되어 하나의 associated sheaf로 붙는지는 별개의 문제이다. [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6){: data-lid="wj861" }이 gluing을 위해 요구한 localization 조건이 바로 quasi-coherence이므로, 확인해야 할 것은 $\mathcal{I}_{Z/X}$가 quasi-coherent sheaf라는 것이다. 이는 [정리 16](#thm16){: data-lid="jwl92" }의 응용으로 얻어진다.
+Pushforward가 quasi-coherence를 보존한다는 사실의 가장 중요한 응용은 closed subscheme이 결정하는 ideal sheaf이다. Affine scheme $\Spec A$의 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-module이므로 associated sheaf $\widetilde{\mathfrak{a}}$를 정의하고, 이는 $\mathcal{O}_{\Spec A}=\widetilde{A}$의 subsheaf이다. 일반적인 scheme $X$의 closed embedding $\iota:Z \rightarrow X$가 정의하는 ideal sheaf $\mathcal{I}_{Z/X}=\ker\iota^\sharp$ 또한 각각의 affine open subset 위에서 ideal을 주지만 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5){: data-lid="muxab" }), 이 ideal들이 localization과 호환되어 하나의 associated sheaf로 붙는지는 별개의 문제이다. [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6){: data-lid="wj861" }이 gluing을 위해 요구한 localization 조건이 바로 quasi-coherence이므로, 확인해야 할 것은 $\mathcal{I}_{Z/X}$가 quasi-coherent sheaf라는 것이다. 이는 [정리 16](#thm16){: data-lid="jwl92" }의 응용으로 얻어진다.
 
 ::: 명제 18
 Closed embedding $\iota:Z \rightarrow X$에 대하여 ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2){: data-lid="5d28s" }), $\iota_\ast \mathcal{O}_Z$와 ideal sheaf $\mathcal{I}_{Z/X}$는 모두 $X$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
-[정리 16](#thm16){: data-lid="kwy6g" }의 세 가설 가운데 $\mathcal{O}_Z$가 $Z$ 위의 quasi-coherent sheaf라는 것은, 각 affine open subset $\Spec B\subseteq Z$ 위에서 $\mathcal{O}_Z\vert_{\Spec B}=\widetilde B$인 데에서 곧바로 따라온다. 따라서 $\iota$가 quasi-compact이고 quasi-separated임만 확인하면 된다. $X$의 affine open subset $U\cong \Spec A$를 고정하고 $W=\iota^{-1}(U)$라 하자. $\iota$는 연속함수로서 $Z$와 $X$의 닫힌집합 사이의 homeomorphism이므로, $W$는 $U$의 닫힌 부분집합 $C=\iota(Z)\cap U$와 homeomorphic하다. 그런데 affine scheme은 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="hmaku" }) quasi-compact space의 닫힌 부분집합은 quasi-compact이므로 $W$ 또한 quasi-compact이다. 즉 $\iota$는 quasi-compact morphism이다. ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2){: data-lid="j0qpp" })
+[정리 16](#thm16){: data-lid="kwy6g" }의 세 가설 가운데 $\mathcal{O}_Z$가 $Z$ 위의 quasi-coherent sheaf라는 것은, 각 affine open subset $\Spec B\subseteq Z$ 위에서 $\mathcal{O}_Z\vert_{\Spec B}=\widetilde{B}$인 데에서 곧바로 따라온다. 따라서 $\iota$가 quasi-compact이고 quasi-separated임만 확인하면 된다. $X$의 affine open subset $U\cong \Spec A$를 고정하고 $W=\iota^{-1}(U)$라 하자. $\iota$는 연속함수로서 $Z$와 $X$의 닫힌집합 사이의 homeomorphism이므로, $W$는 $U$의 닫힌 부분집합 $C=\iota(Z)\cap U$와 homeomorphic하다. 그런데 affine scheme은 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12){: data-lid="hmaku" }) quasi-compact space의 닫힌 부분집합은 quasi-compact이므로 $W$ 또한 quasi-compact이다. 즉 $\iota$는 quasi-compact morphism이다. ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2){: data-lid="j0qpp" })
 
 Quasi-separatedness도 $C$의 위상만으로 확인된다. $\{D(f)\}_{f\in A}$가 $U$의 base이므로 $C$의 임의의 열린집합은 $C\cap D(f)$들의 합집합이고, 각각의 $C\cap D(f)$는 quasi-compact space $D(f)\cong \Spec A_f$의 닫힌 부분집합이라 quasi-compact이다. 따라서 $C$의 quasi-compact 열린집합은 유한히 많은 $C\cap D(f)$의 합집합으로 쓸 수 있으며, 그러한 두 집합의 교집합은 $C\cap D(f)\cap D(g)=C\cap D(fg)$ 꼴들의 유한 합집합이 되어 다시 quasi-compact이다. 즉 $W$는 quasi-separated scheme이고, $U$가 임의의 affine open subset이었으므로 $\iota$는 quasi-separated morphism이다. ([§스킴 사상의 성질들, ⁋정의 5](/ko/math/scheme_theory/properties_of_scheme_morphisms#def5){: data-lid="xbp2q" }) 이제 [정리 16](#thm16){: data-lid="0tn51" }에 의하여 $\iota_\ast \mathcal{O}_Z$는 $X$ 위의 quasi-coherent sheaf이다.
 
-남은 것은 $\mathcal{I}_{Z/X}=\ker\iota^\sharp$이다. quasi-coherence가 affine-local이므로 ([정리 10](#thm10){: data-lid="p2dwv" }) 위에서 고정한 $U=\Spec A$ 위에서 보이면 충분하다. $N=(\iota_\ast \mathcal{O}_Z)(U)$라 하면 [정리 10](#thm10){: data-lid="6x9os" }에 의하여 $(\iota_\ast \mathcal{O}_Z)\vert_U\cong \widetilde N$이고, 따라서 $\iota^\sharp$을 $U$로 제한한 것은 $\widetilde A \rightarrow \widetilde N$ 꼴의 morphism이므로 [정리 7](#thm7){: data-lid="iifd4" }에 의하여 적당한 $A$-module homomorphism $\phi:A \rightarrow N$의 associated sheaf $\widetilde\phi$이다. 그럼 두 short exact sequence
+남은 것은 $\mathcal{I}_{Z/X}=\ker\iota^\sharp$이다. quasi-coherence가 affine-local이므로 ([정리 10](#thm10){: data-lid="p2dwv" }) 위에서 고정한 $U=\Spec A$ 위에서 보이면 충분하다. $N=(\iota_\ast \mathcal{O}_Z)(U)$라 하면 [정리 10](#thm10){: data-lid="6x9os" }에 의하여 $(\iota_\ast \mathcal{O}_Z)\vert_U\cong \widetilde{N}$이고, 따라서 $\iota^\sharp$을 $U$로 제한한 것은 $\widetilde{A} \rightarrow \widetilde{N}$ 꼴의 morphism이므로 [정리 7](#thm7){: data-lid="iifd4" }에 의하여 적당한 $A$-module homomorphism $\phi:A \rightarrow N$의 associated sheaf $\widetilde{\phi}$이다. 그럼 두 short exact sequence
 
 $$0 \rightarrow \ker\phi \rightarrow A \rightarrow \im\phi \rightarrow 0,\qquad 0 \rightarrow \im\phi \rightarrow N \rightarrow N/\im\phi \rightarrow 0$$
 
-에 [명제 6](#prop6){: data-lid="3c4dz" }을 적용하면 $\widetilde{\im\phi} \rightarrow \widetilde N$이 injective이고 $\widetilde{\ker\phi}=\ker(\widetilde A \rightarrow \widetilde{\im\phi})$이므로, 결국 $\ker\widetilde\phi=\widetilde{\ker\phi}$를 얻는다. 즉 $\mathcal{I}_{Z/X}\vert_U\cong \widetilde{\ker\phi}$는 associated sheaf이고, 이로부터 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이다.
+에 [명제 6](#prop6){: data-lid="3c4dz" }을 적용하면 $\widetilde{\im\phi} \rightarrow \widetilde{N}$이 injective이고 $\widetilde{\ker\phi}=\ker(\widetilde{A} \rightarrow \widetilde{\im\phi})$이므로, 결국 $\ker\widetilde{\phi}=\widetilde{\ker\phi}$를 얻는다. 즉 $\mathcal{I}_{Z/X}\vert_U\cong \widetilde{\ker\phi}$는 associated sheaf이고, 이로부터 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이다.
 :::
 
 이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-module과 정확히 대응한다. 한 방향은 [명제 18](#prop18){: data-lid="24v29" }이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10){: data-lid="kiu0l" }과 [보조정리 3](#lem3){: data-lid="gwkzp" }에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6){: data-lid="748jt" }에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 18](#prop18){: data-lid="2cmre" }은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3){: data-lid="sacst" }의 증명에서 증명 없이 사용한 사실이기도 하다. 

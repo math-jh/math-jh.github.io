@@ -105,7 +105,7 @@ $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
 이제 위의 논의를 어떻게 적용해야 하는지는 명확하다. 즉 일반적인 stack $M$은 cotangent complex $\LL_M$을 가지며, 우리는 이 중 deformation과 obstruction이 잡히는 truncation $\tau_{\geq -1}\LL_M$을 보면 된다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" }) 이제 만일 étale-local하게 $M$이 smooth variety $X$ 안의 closed subscheme으로 표현되고, 그 ideal sheaf가 $\mathcal{I}$라 하면 이 truncation은 다음의 꼴
 
-$$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd\ }\at{0}{\Omega_X\vert_M}\Bigr]$$
+$$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{\ }}\at{0}{\Omega_X\vert_M}\Bigr]$$
 
 이 된다. 문제는 일반적인 $M$에서 $\mathcal{I}/\mathcal{I}^2$은 vector bundle이 아니라는 것으로, $\tau_{\geq-1}\LL_M$ 자체만으로는 zero section이나 Gysin map을 정의할 수 없다. 때문에 우리는 이 정보를 모두 담을 수 있는 실제 vector bundle들의 two-term complex를 생각해야 하며, 이것이 바로 다음의 정의이다. 
 

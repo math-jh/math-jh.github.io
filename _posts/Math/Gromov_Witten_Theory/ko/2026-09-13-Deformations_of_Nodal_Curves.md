@@ -44,17 +44,17 @@ $$0 \rightarrow A \rightarrow \widetilde{A}\rightarrow \mathbb{K}\rightarrow 0$$
 
 이 존재한다. 이를 sheafify하면, node 바깥에서 $\nu$는 isomorphism이고, $p$에서의 위 계산은 cokernel이 $\kappa(p)=\mathbb{K}$임을 보여주므로
 
-$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde C}\rightarrow\kappa(p)\rightarrow0$$
+$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde{C}}\rightarrow\kappa(p)\rightarrow0$$
 
 를 얻는다. 일반적인 nodal curve에서, normalization은 이 과정을 모든 node에서 동시에 수행하는 것이며, 따라서 이 경우에는 다음의 short exact sequence
 
-$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde C}\rightarrow\bigoplus_{p\in\Sing C}\kappa(p)\rightarrow0$$
+$$0\rightarrow\mathcal{O}_C\rightarrow\nu_\ast\mathcal{O}_{\widetilde{C}}\rightarrow\bigoplus_{p\in\Sing C}\kappa(p)\rightarrow0$$
 
 를 얻는다.
 
-이제 $C$가 node를 $d$개, irreducible component를 $c$개 갖고, $\widetilde C$의 각 성분의 genus가 $g_1,\ldots,g_c$라고 하자. $\nu$가 affine morphism이므로 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" }에 의하여 $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde C,\mathcal{G})$이다. 따라서 위 short exact sequence로부터, 다음의 식
+이제 $C$가 node를 $d$개, irreducible component를 $c$개 갖고, $\widetilde{C}$의 각 성분의 genus가 $g_1,\ldots,g_c$라고 하자. $\nu$가 affine morphism이므로 [\[스킴\] §스킴의 층 코호몰로지, ⁋따름정리 4](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#cor4){: data-lid="prlmv" }에 의하여 $H^i(C,\nu_\ast\mathcal{G})=H^i(\widetilde{C},\mathcal{G})$이다. 따라서 위 short exact sequence로부터, 다음의 식
 
-$$\rchi(C,\nu_\ast\mathcal{O}_{\widetilde C})=\rchi(C,\mathcal{O}_C)+\sum_{p\in\Sing C}\rchi(C,\kappa(p))$$
+$$\rchi(C,\nu_\ast\mathcal{O}_{\widetilde{C}})=\rchi(C,\mathcal{O}_C)+\sum_{p\in\Sing C}\rchi(C,\kappa(p))$$
 
 을 얻으며, 이 때 각 $\kappa(p)$는 global section이 $\mathbb{K}$이고 higher cohomology가 소멸하는 skyscraper sheaf이므로 마지막 합은 $d$이다. 이를 정리하면 다음의 명제를 얻는다.
 
@@ -86,7 +86,7 @@ Nodal curve $C$의 각 node $p$에서 first-order local deformation들의 공간
 
 $$\Phi(f)=f+\epsilon v(f)$$
 
-의 꼴이어야 하며, 이것이 곱셈을 보존하기 위해서는 $v(fg)=fv(g)+gv(f)$이 성립해야 한다. 즉 $v$는 $\mathcal{O}_C$ 위의 $\mathbb{K}$-derivation이며, 역으로 이러한 derivation은 항상 위와 같은 식으로 automorphism을 정의한다. 이제 prestable curve가 nodal curve와 다른 infinitesimal automorphism을 갖는 부분은 위에서 언급한 것과 같이 marked section 근방이므로 각 marked point $p_i$ 근방에서 이를 살펴보자. $p_i$가 local하게 $\z=0$으로 쓰인다고 가정하자. [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" }에 의하여 $\Omega_{C/\mathbb K}$는 이 근방에서 rank $1$의 locally free sheaf이고 $\dd{\z}$가 local basis가 되고, 따라서 differential의 universal property에 의하여 임의의 derivation은 $\dd{\z}$의 image $v(\z)$에 의해 결정된다. 이에 대응하는 automorphism은
+의 꼴이어야 하며, 이것이 곱셈을 보존하기 위해서는 $v(fg)=fv(g)+gv(f)$이 성립해야 한다. 즉 $v$는 $\mathcal{O}_C$ 위의 $\mathbb{K}$-derivation이며, 역으로 이러한 derivation은 항상 위와 같은 식으로 automorphism을 정의한다. 이제 prestable curve가 nodal curve와 다른 infinitesimal automorphism을 갖는 부분은 위에서 언급한 것과 같이 marked section 근방이므로 각 marked point $p_i$ 근방에서 이를 살펴보자. $p_i$가 local하게 $\z=0$으로 쓰인다고 가정하자. [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 7](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm7){: data-lid="x011e" }에 의하여 $\Omega_{C/\mathbb{K}}$는 이 근방에서 rank $1$의 locally free sheaf이고 $\dd{\z}$가 local basis가 되고, 따라서 differential의 universal property에 의하여 임의의 derivation은 $\dd{\z}$의 image $v(\z)$에 의해 결정된다. 이에 대응하는 automorphism은
 
 $$\z\mapsto\z+\epsilon v(\z)$$
 
@@ -96,15 +96,15 @@ $$\sHom(\Omega_{C/\mathbb{K}},\mathcal{I}_\Sigma)=\mathcal{T}_{C/\mathbb{K}}\oti
 
 이고, 이것이 marked curve의 infinitesimal automorphism을 계산한다. 
 
-이제 남은 것은 $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$의 계산이다. 이를 위해 local model $R=\mathbb K[\x,\y]/(\x\y)$을 택하고 이 위의 derivation을 살펴보자. 임의의 derivation $v$는 generator에서의 값 $a=v(\x)$와 $b=v(\y)$로 결정되고, [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" }의 계산과 같이 관계식 $\x\y=0$을 보존하려면
+이제 남은 것은 $\mathcal{T}_{C/\mathbb{K}}=\sHom(\Omega_{C/\mathbb{K}}, \mathcal{O}_C)$의 계산이다. 이를 위해 local model $R=\mathbb{K}[\x,\y]/(\x\y)$을 택하고 이 위의 derivation을 살펴보자. 임의의 derivation $v$는 generator에서의 값 $a=v(\x)$와 $b=v(\y)$로 결정되고, [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="7kwur" }의 계산과 같이 관계식 $\x\y=0$을 보존하려면
 
 $$0=v(\x\y)=\y a+\x b$$
 
-이어야 한다. 여기서 $\y a=-\x b$는 $(\y)$와 $(\x)$에 동시에 속하고, $R$에서는 $(\x)\cap(\y)=0$이므로 $\y a=\x b=0$이다. 또한 $\ann(\y)=(\x)$이고 $\ann(\x)=(\y)$이므로 $a\in\x\mathbb K[\x]$이고 $b\in\y\mathbb K[\y]$이다. 
+이어야 한다. 여기서 $\y a=-\x b$는 $(\y)$와 $(\x)$에 동시에 속하고, $R$에서는 $(\x)\cap(\y)=0$이므로 $\y a=\x b=0$이다. 또한 $\ann(\y)=(\x)$이고 $\ann(\x)=(\y)$이므로 $a\in\x\mathbb{K}[\x]$이고 $b\in\y\mathbb{K}[\y]$이다. 
 
-기하적으로 이는 $R$의 normalization에서 두 branch가 나누어진 상황을 반영한다. 즉 $R$의 normalization을 $\widetilde R=\mathbb K[\x]\oplus\mathbb K[\y]$이라 쓴다면, 위의 $a$와 $b$는 normalization의 각 branch 위의 derivation이 되며, 각각의 원점에서 소멸하는 함수들이다. 
+기하적으로 이는 $R$의 normalization에서 두 branch가 나누어진 상황을 반영한다. 즉 $R$의 normalization을 $\widetilde{R}=\mathbb{K}[\x]\oplus\mathbb{K}[\y]$이라 쓴다면, 위의 $a$와 $b$는 normalization의 각 branch 위의 derivation이 되며, 각각의 원점에서 소멸하는 함수들이다. 
 
-이제 이를 전체 nodal curve에서 보면, normalization $\nu:\widetilde C\rightarrow C$에서 node $p$의 두 preimage를 $p',p''$이라 하면, 이들은 각각 $p'$과 $p''$에서 소멸하는 derivation이며, node 바깥에서는 $\nu$가 isomorphism이므로 이 local identification들은 canonical하게 붙는다. 따라서 모든 node의 두 preimage를 모은 divisor를 $D$라 하면 이 계산은 다음과 같이 요약된다.
+이제 이를 전체 nodal curve에서 보면, normalization $\nu:\widetilde{C}\rightarrow C$에서 node $p$의 두 preimage를 $p',p''$이라 하면, 이들은 각각 $p'$과 $p''$에서 소멸하는 derivation이며, node 바깥에서는 $\nu$가 isomorphism이므로 이 local identification들은 canonical하게 붙는다. 따라서 모든 node의 두 preimage를 모은 divisor를 $D$라 하면 이 계산은 다음과 같이 요약된다.
 
 ::: 명제 4
 Nodal curve $C$의 normalization $\nu:\widetilde{C}\rightarrow C$와 node들의 preimage로 이루어진 $\widetilde{C}$의 divisor $D$에 대하여
@@ -116,21 +116,21 @@ $$\mathcal{T}_{C/\mathbb{K}}\cong\nu_\ast\bigl(\mathcal{T}_{\widetilde{C}/\mathb
 
 실제로 두 번째 isomorphism은 marked point에서 얻은 소멸 조건을 첫 번째 isomorphism에 더한 것이다. 따라서 global section을 취하면
 
-$$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)=H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
+$$T^0(C,p_\bullet)\cong H^0\bigl(C,\nu_\ast\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)=H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)$$
 
-이다. 여기서 마지막 등식은 pushforward의 정의에 따라 $H^0(C,\nu_\ast\mathcal F)=H^0(\widetilde C,\mathcal F)$이기 때문이다. 곧 infinitesimal automorphism은 normalization 위에서 node의 모든 preimage와 marked point에서 소멸하는 derivation으로 계산된다.
+이다. 여기서 마지막 등식은 pushforward의 정의에 따라 $H^0(C,\nu_\ast\mathcal{F})=H^0(\widetilde{C},\mathcal{F})$이기 때문이다. 곧 infinitesimal automorphism은 normalization 위에서 node의 모든 preimage와 marked point에서 소멸하는 derivation으로 계산된다.
 
-표준적인 deformation theory 해석에 따라 이 계산은 nodal curve, 혹은 더 일반적으로 prestable curve의 automorphism group의 tangent space를 구한 것으로 해석할 수 있다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" }) 이 automorphism group을 $G=\Aut(C,p_\bullet)$라 하고 그 항등원을 $e$라 하면, 항등원에서의 tangent space $T_eG$의 원소는 $\mathbb K[\epsilon]$-valued point $\Spec\mathbb K[\epsilon]\rightarrow G$ 중 closed point가 항등원으로 가는 것들의 모임이다. ([\[스킴\] §다양체에서 스킴으로, ⁋예시 4](/ko/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" }) 즉 직관적으로 이는 central fiber로 제한했을 때 항등사상이 되는 automorphism들의 family로 생각할 수 있으며, 이로부터 다음의 identification 
+표준적인 deformation theory 해석에 따라 이 계산은 nodal curve, 혹은 더 일반적으로 prestable curve의 automorphism group의 tangent space를 구한 것으로 해석할 수 있다. ([\[스킴\] §변형이론과 여접 복합체, ⁋정리 5](/ko/math/scheme_theory/deformation_theory#thm5){: data-lid="u7v2l" }) 이 automorphism group을 $G=\Aut(C,p_\bullet)$라 하고 그 항등원을 $e$라 하면, 항등원에서의 tangent space $T_eG$의 원소는 $\mathbb{K}[\epsilon]$-valued point $\Spec\mathbb{K}[\epsilon]\rightarrow G$ 중 closed point가 항등원으로 가는 것들의 모임이다. ([\[스킴\] §다양체에서 스킴으로, ⁋예시 4](/ko/math/scheme_theory/from_varieties_to_schemes#ex4){: data-lid="jhbqv" }) 즉 직관적으로 이는 central fiber로 제한했을 때 항등사상이 되는 automorphism들의 family로 생각할 수 있으며, 이로부터 다음의 identification 
 
-$$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde C,\mathcal T_{\widetilde C/\mathbb K}(-D-\widetilde\Sigma)\bigr)$$
+$$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde{C}/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)$$
 
-을 얻는다. 위의 계산에서 우리는 임의의 automorphism은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴로 쓰이는 것을 알고 있으며, 이때 derivation $v$는 smooth curve $\widetilde C$ 위에서 vector field를 의미하므로 이 식은 automorphism을 항등원에서 infinitesimal하게 움직이는 방향이 normalization 위의 vector field로 나타난다는 것으로 해석할 수 있다.
+을 얻는다. 위의 계산에서 우리는 임의의 automorphism은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴로 쓰이는 것을 알고 있으며, 이때 derivation $v$는 smooth curve $\widetilde{C}$ 위에서 vector field를 의미하므로 이 식은 automorphism을 항등원에서 infinitesimal하게 움직이는 방향이 normalization 위의 vector field로 나타난다는 것으로 해석할 수 있다.
 
 ## 차원 계산
 
 Deformation space $T^1(C,p_\bullet)$은 marked prestable curve $(C,p_\bullet)$라는 한 점에서 이웃한 점으로 움직이는 방향을 나타내므로, 이들 prestable curve들을 모아둔 공간에서 보면 tangent space 역할을 한다. 여기서 같은 점을 나타내는 infinitesimal automorphism의 자유도 $T^0(C,p_\bullet)$는 빼줘야 하며, 우리 목표는 이 차이를 계산하는 것이다. 
 
-이를 위해 prestable curve에 대한 cohomology vanishing이 필요한데, 이를 위해 projective embedding $C\subseteq\mathbb P^N$을 잡고 $C$와 만나지 않는 codimension $2$의 linear subspace $\Lambda=H_1\cap H_2$를 택하자. 그럼 $U_i=C\setminus H_i$는 affine이고 $U_1\cup U_2=C$이므로, $C$ 위의 임의의 quasi-coherent sheaf $\mathcal{F}$의 sheaf cohomology를 Čech cohomology로 계산하면 degree $2$ 이상에서는 $H^i(C, \mathcal{F})=0$이 성립하는 것을 안다. 이를 사용하면 다음을 보일 수 있다. 
+이를 위해 prestable curve에 대한 cohomology vanishing이 필요한데, 이를 위해 projective embedding $C\subseteq\mathbb{P}^N$을 잡고 $C$와 만나지 않는 codimension $2$의 linear subspace $\Lambda=H_1\cap H_2$를 택하자. 그럼 $U_i=C\setminus H_i$는 affine이고 $U_1\cup U_2=C$이므로, $C$ 위의 임의의 quasi-coherent sheaf $\mathcal{F}$의 sheaf cohomology를 Čech cohomology로 계산하면 degree $2$ 이상에서는 $H^i(C, \mathcal{F})=0$이 성립하는 것을 안다. 이를 사용하면 다음을 보일 수 있다. 
 
 ::: 정리 5
 $n$개의 marked point를 갖는 prestable curve $(C, p_\bullet)$에 대하여, $C$의 node 집합을 $\Sing C$라 하면 exact sequence
@@ -144,7 +144,7 @@ $$0 \rightarrow H^1\bigl(C, \mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr) \rightarro
 
 $$0\rightarrow H^1\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)\rightarrow T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1\rightarrow H^2\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)$$
 
-를 얻으며, 이 때 위의 vanishing에 의하여 마지막 항이 $0$이다. 또, [명제 3](#prop3){: data-lid="8ouk8" }에 의하여 $T_p^1\cong\mathbb K$이므로 이로부터 원하는 short exact sequence를 얻는다. 마지막 주장의 경우 이 long exact sequence의 degree $0$ 부분을 본 것이다.
+를 얻으며, 이 때 위의 vanishing에 의하여 마지막 항이 $0$이다. 또, [명제 3](#prop3){: data-lid="8ouk8" }에 의하여 $T_p^1\cong\mathbb{K}$이므로 이로부터 원하는 short exact sequence를 얻는다. 마지막 주장의 경우 이 long exact sequence의 degree $0$ 부분을 본 것이다.
 :::
 
 직관적으로 이 exact sequence는 prestable curve의 deformation을 두 겹으로 갈라놓는다. 왼쪽 항은 모든 node의 local model을 유지하면서 normalization의 성분들과 그 위의 node preimage 및 marked point의 위치를 변형하는 자유도이고, 오른쪽 항은 어떤 node를 smoothing할지를 고르는 자유도이다. 그럼 우리의 핵심적인 주장은 다음과 같다. 
@@ -167,7 +167,7 @@ $$\rchi(C, \mathcal{H})=\rchi\bigl(\widetilde{C}, \mathcal{T}_{\widetilde{C}/\ma
 
 이다. 
 
-위 등식의 우변을 각 성분마다 계산하자. [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" }을 genus $g_j$의 성분 $\widetilde C_j$의 canonical divisor $K_{\widetilde C_j}$에 적용하면 $\deg\omega_{\widetilde C_j}=2g_j-2$를 얻는다. 따라서 $\mathcal T_{\widetilde C_j/\mathbb K}\cong\omega_{\widetilde C_j}^\vee$는 차수 $2-2g_j$의 line bundle이다. 그 위에 놓인 $D+\widetilde\Sigma$의 점 개수를 $s_j$라 하면 twisted line bundle의 차수는 $2-2g_j-s_j$이고, 같은 명제에 의하여
+위 등식의 우변을 각 성분마다 계산하자. [\[대수다양체\] §곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3){: data-lid="khrzv" }을 genus $g_j$의 성분 $\widetilde{C}_j$의 canonical divisor $K_{\widetilde{C}_j}$에 적용하면 $\deg\omega_{\widetilde{C}_j}=2g_j-2$를 얻는다. 따라서 $\mathcal{T}_{\widetilde{C}_j/\mathbb{K}}\cong\omega_{\widetilde{C}_j}^\vee$는 차수 $2-2g_j$의 line bundle이다. 그 위에 놓인 $D+\widetilde{\Sigma}$의 점 개수를 $s_j$라 하면 twisted line bundle의 차수는 $2-2g_j-s_j$이고, 같은 명제에 의하여
 
 $$\rchi\bigl(\widetilde{C}_j, \mathcal{T}_{\widetilde{C}_j/\mathbb{K}}(-D-\widetilde{\Sigma})\bigr)=(2-2g_j-s_j)+1-g_j=3-3g_j-s_j$$
 

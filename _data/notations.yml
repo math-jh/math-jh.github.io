@@ -267,7 +267,7 @@
     defs:
     - label: §행렬
       url: /ko/math/linear_algebra/matrices
-  - symbol: A^\ast=\bar A^t
+  - symbol: A^\ast=\bar{A}^t
     meaning: 켤레전치
     defs:
     - label: §복소내적공간
