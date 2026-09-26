@@ -225,7 +225,7 @@
 "11lvo": {relation: required}
 "11nqh": {relation: required}
 "11qus": {relation: required}
-"11tj5": {relation: required}
+"11tj5": {relation: required, reviewed: true}
 "1248e": {relation: required}
 "126pm": {relation: required, reviewed: true}
 "12bwt": {relation: required, reviewed: true}
@@ -3416,7 +3416,7 @@
 "fcxc9": {relation: required}
 "fcxjy": {relation: required, reviewed: true}
 "fdqe2": {relation: weak, reviewed: true}
-"fdzhb": {relation: required}
+"fdzhb": {relation: required, reviewed: true}
 "fe8c8": {relation: required, reviewed: true}
 "fe9qn": {relation: required, reviewed: true}
 "feosm": {relation: required, reviewed: true}
@@ -4470,7 +4470,7 @@
 "k7k4q": {relation: weak, reviewed: true}
 "k7pfj": {relation: required}
 "k7w39": {relation: required, reviewed: true}
-"k7wfh": {relation: required}
+"k7wfh": {relation: required, reviewed: true}
 "k8377": {relation: required}
 "k8eaf": {relation: required, reviewed: true}
 "k8nal": {relation: required, reviewed: true}
@@ -4691,7 +4691,7 @@
 "l61ff": {relation: required}
 "l69xc": {relation: required, reviewed: true}
 "l6bqh": {relation: required, reviewed: true}
-"l6j8o": {relation: weak}
+"l6j8o": {relation: weak, reviewed: true}
 "l6mp8": {relation: required}
 "l6n5r": {relation: required, reviewed: true}
 "l6ryk": {relation: required}
@@ -5281,7 +5281,7 @@
 "npe18": {relation: required, reviewed: true}
 "npmy0": {relation: required}
 "npq5g": {relation: required, reviewed: true}
-"npslr": {relation: required}
+"npslr": {relation: required, reviewed: true}
 "nq39i": {relation: required, reviewed: true}
 "nq5mg": {relation: required, reviewed: true}
 "nqbaq": {relation: required, reviewed: true}
@@ -7925,7 +7925,7 @@
 "zjlut": {relation: required, reviewed: true}
 "zjxhh": {relation: required}
 "zk46j": {relation: required, reviewed: true}
-"zk4zz": {relation: required}
+"zk4zz": {relation: required, reviewed: true}
 "zk5vs": {relation: weak, reviewed: true}
 "zkbod": {relation: required}
 "zkjsm": {relation: required, reviewed: true}
