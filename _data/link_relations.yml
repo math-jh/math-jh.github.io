@@ -141,7 +141,7 @@
 "0mpix": {relation: required, reviewed: true}
 "0n43s": {relation: required}
 "0nuau": {relation: required, reviewed: true}
-"0num7": {relation: required}
+"0num7": {relation: required, reviewed: true}
 "0nylx": {relation: required, reviewed: true}
 "0o7xn": {relation: required}
 "0oxed": {relation: weak}
@@ -314,7 +314,7 @@
 "1f6oq": {relation: required}
 "1f79q": {relation: required, reviewed: true}
 "1fcpo": {relation: forward, reviewed: true}
-"1ffj4": {relation: required}
+"1ffj4": {relation: required, reviewed: true}
 "1fipr": {relation: required}
 "1flwg": {relation: required}
 "1fvtd": {relation: required, reviewed: true}
@@ -1630,7 +1630,7 @@
 "73s9b": {relation: forward}
 "73s9i": {relation: required, reviewed: true}
 "73zwj": {relation: weak, reviewed: true}
-"740xa": {relation: required}
+"740xa": {relation: required, reviewed: true}
 "742gw": {relation: required}
 "748jt": {relation: required}
 "7494p": {relation: weak}
@@ -2193,7 +2193,7 @@
 "9ozqh": {relation: required, reviewed: true}
 "9pb94": {relation: required}
 "9pgag": {relation: weak, reviewed: true}
-"9prqv": {relation: required}
+"9prqv": {relation: required, reviewed: true}
 "9pwmz": {relation: required, reviewed: true}
 "9pxst": {relation: forward, reviewed: true}
 "9q0g3": {relation: weak}
@@ -3291,7 +3291,7 @@
 "epsko": {relation: required, reviewed: true}
 "eq2qc": {relation: required, reviewed: true}
 "eq7sv": {relation: required, reviewed: true}
-"eq9gr": {relation: required}
+"eq9gr": {relation: required, reviewed: true}
 "eqdco": {relation: required, reviewed: true}
 "eqhc0": {relation: required, reviewed: true}
 "eqlba": {relation: weak}
@@ -3981,7 +3981,7 @@
 "i2ceh": {relation: required, reviewed: true}
 "i2cqo": {relation: required}
 "i2dg0": {relation: required, reviewed: true}
-"i2k3r": {relation: weak}
+"i2k3r": {relation: weak, reviewed: true}
 "i2vxf": {relation: required, reviewed: true}
 "i30zd": {relation: weak, reviewed: true}
 "i33oa": {relation: required}
@@ -4597,7 +4597,7 @@
 "kr8al": {relation: forward}
 "krf98": {relation: required}
 "krlma": {relation: required, reviewed: true}
-"krlzt": {relation: weak}
+"krlzt": {relation: requires-review}
 "kry58": {relation: weak, reviewed: true}
 "ks0f0": {relation: required, reviewed: true}
 "ks0od": {relation: required, reviewed: true}
