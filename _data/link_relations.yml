@@ -4218,7 +4218,7 @@
 "j4712": {relation: weak}
 "j49xe": {relation: required, reviewed: true}
 "j4dhj": {relation: weak, reviewed: true}
-"j4hgu": {relation: required}
+"j4hgu": {relation: required, reviewed: true}
 "j4i8e": {relation: weak}
 "j4k6t": {relation: required, reviewed: true}
 "j4t82": {relation: required, reviewed: true}
@@ -4637,7 +4637,7 @@
 "kxxf7": {relation: weak, reviewed: true}
 "ky7tv": {relation: required}
 "ky9vk": {relation: required, reviewed: true}
-"kygrz": {relation: required}
+"kygrz": {relation: required, reviewed: true}
 "kyj3x": {relation: required, reviewed: true}
 "kytaa": {relation: weak}
 "kyv69": {relation: required}
