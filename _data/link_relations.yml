@@ -563,7 +563,7 @@
 "2lkla": {relation: required, reviewed: true}
 "2lpi0": {relation: required}
 "2lt05": {relation: required, reviewed: true}
-"2lu0x": {relation: weak}
+"2lu0x": {relation: requires-review}
 "2luny": {relation: required, reviewed: true}
 "2m78g": {relation: weak, reviewed: true}
 "2megj": {relation: weak, reviewed: true}
@@ -1391,7 +1391,7 @@
 "61k1u": {relation: required, reviewed: true}
 "61sgl": {relation: required, reviewed: true}
 "61st4": {relation: required}
-"61x2r": {relation: weak}
+"61x2r": {relation: weak, reviewed: true}
 "622f1": {relation: required, reviewed: true}
 "628ph": {relation: required, reviewed: true}
 "629s1": {relation: required, reviewed: true}
@@ -1401,7 +1401,7 @@
 "62zux": {relation: required, reviewed: true}
 "630iw": {relation: required, reviewed: true}
 "6353w": {relation: required}
-"63slq": {relation: required}
+"63slq": {relation: required, reviewed: true}
 "63wcp": {relation: required}
 "63yth": {relation: weak, reviewed: true}
 "63zav": {relation: required}
@@ -3391,7 +3391,7 @@
 "f8rlz": {relation: required, reviewed: true}
 "f8xwb": {relation: required, reviewed: true}
 "f8yf7": {relation: required, reviewed: true}
-"f9330": {relation: required}
+"f9330": {relation: required, reviewed: true}
 "f93ro": {relation: weak, reviewed: true}
 "f9iao": {relation: required, reviewed: true}
 "f9pqu": {relation: required, reviewed: true}
@@ -5966,7 +5966,7 @@
 "qr0d3": {relation: weak, reviewed: true}
 "qr14d": {relation: required}
 "qr2cu": {relation: required}
-"qra3x": {relation: forward}
+"qra3x": {relation: requires-review}
 "qrjjp": {relation: weak, reviewed: true}
 "qrjui": {relation: required, reviewed: true}
 "qrl56": {relation: weak, reviewed: true}
@@ -7061,7 +7061,7 @@
 "vpa9k": {relation: required, reviewed: true}
 "vptxt": {relation: weak}
 "vpu77": {relation: required}
-"vq71k": {relation: weak}
+"vq71k": {relation: requires-review}
 "vq7ry": {relation: required, reviewed: true}
 "vqd5h": {relation: required}
 "vqnal": {relation: required}
@@ -7526,7 +7526,7 @@
 "xrt8n": {relation: required, reviewed: true}
 "xrz0x": {relation: required}
 "xs2ia": {relation: required}
-"xs6lt": {relation: weak}
+"xs6lt": {relation: weak, reviewed: true}
 "xsd1y": {relation: required}
 "xseen": {relation: required, reviewed: true}
 "xsm5g": {relation: required, reviewed: true}
