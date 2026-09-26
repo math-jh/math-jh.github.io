@@ -1545,7 +1545,7 @@
 "6qqgx": {relation: required, reviewed: true}
 "6qqkg": {relation: required}
 "6qtkl": {relation: required, reviewed: true}
-"6qzn8": {relation: required}
+"6qzn8": {relation: required, reviewed: true}
 "6r0bl": {relation: required, reviewed: true}
 "6r2mx": {relation: required}
 "6rdoy": {relation: required}
@@ -3774,7 +3774,7 @@
 "h2ph8": {relation: required, reviewed: true}
 "h2w86": {relation: weak}
 "h32sx": {relation: required, reviewed: true}
-"h3g4f": {relation: weak}
+"h3g4f": {relation: requires-review}
 "h3lvg": {relation: required, reviewed: true}
 "h3mv2": {relation: required}
 "h434k": {relation: required, reviewed: true}
