@@ -350,7 +350,7 @@
 "1kffz": {relation: required, reviewed: true}
 "1kgu4": {relation: required, reviewed: true}
 "1khga": {relation: required, reviewed: true}
-"1knle": {relation: required}
+"1knle": {relation: required, reviewed: true}
 "1kr19": {relation: required, reviewed: true}
 "1ku5z": {relation: required, reviewed: true}
 "1kuh9": {relation: required}
@@ -1369,7 +1369,7 @@
 "5yi44": {relation: required}
 "5yrs3": {relation: required}
 "5yuey": {relation: required}
-"5ywiv": {relation: required}
+"5ywiv": {relation: required, reviewed: true}
 "5z2i2": {relation: required, reviewed: true}
 "5z43n": {relation: required, reviewed: true}
 "5z9kj": {relation: required, reviewed: true}
@@ -1444,7 +1444,7 @@
 "69hcj": {relation: required}
 "69ht2": {relation: required, reviewed: true}
 "69k4e": {relation: required}
-"69qwd": {relation: required}
+"69qwd": {relation: required, reviewed: true}
 "69vuw": {relation: required, reviewed: true}
 "6a5ru": {relation: weak, reviewed: true}
 "6azl9": {relation: required, reviewed: true}
@@ -1650,7 +1650,7 @@
 "772c0": {relation: required}
 "7757y": {relation: required}
 "777jz": {relation: required}
-"77ij8": {relation: required}
+"77ij8": {relation: required, reviewed: true}
 "77xvi": {relation: weak, reviewed: true}
 "783wh": {relation: required, reviewed: true}
 "784sh": {relation: required, reviewed: true}
@@ -3916,7 +3916,7 @@
 "hqwyz": {relation: required, reviewed: true}
 "hr17k": {relation: weak}
 "hr22m": {relation: required, reviewed: true}
-"hrbko": {relation: required}
+"hrbko": {relation: required, reviewed: true}
 "hrgsb": {relation: required, reviewed: true}
 "hrkmo": {relation: forward}
 "hrm5m": {relation: required, reviewed: true}
@@ -5058,7 +5058,7 @@
 "mph6k": {relation: required, reviewed: true}
 "mpmkc": {relation: required, reviewed: true}
 "mpmxy": {relation: required}
-"mpnrb": {relation: required}
+"mpnrb": {relation: required, reviewed: true}
 "mpph0": {relation: required, reviewed: true}
 "mpsf6": {relation: required}
 "mpu9m": {relation: required}
