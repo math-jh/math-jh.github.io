@@ -449,7 +449,7 @@
 "20em3": {relation: required}
 "216zh": {relation: forward, reviewed: true}
 "21aht": {relation: required, reviewed: true}
-"21nb7": {relation: weak}
+"21nb7": {relation: weak, reviewed: true}
 "21to7": {relation: required, reviewed: true}
 "21vmo": {relation: required}
 "223d2": {relation: required, reviewed: true}
@@ -744,7 +744,7 @@
 "3akqh": {relation: required, reviewed: true}
 "3al8p": {relation: required, reviewed: true}
 "3b7ns": {relation: required}
-"3b8cl": {relation: required}
+"3b8cl": {relation: required, reviewed: true}
 "3bak2": {relation: required, reviewed: true}
 "3bli7": {relation: required, reviewed: true}
 "3brn0": {relation: required, reviewed: true}
@@ -1340,7 +1340,7 @@
 "5tuk3": {relation: required, reviewed: true}
 "5tvyy": {relation: required}
 "5u6sl": {relation: required, reviewed: true}
-"5u97v": {relation: weak}
+"5u97v": {relation: weak, reviewed: true}
 "5uepj": {relation: required, reviewed: true}
 "5um80": {relation: required, reviewed: true}
 "5uoxl": {relation: weak, reviewed: true}
@@ -2973,7 +2973,7 @@
 "d85yd": {relation: required}
 "d8dob": {relation: required}
 "d8hvt": {relation: required, reviewed: true}
-"d8nlt": {relation: required}
+"d8nlt": {relation: required, reviewed: true}
 "d8u3j": {relation: required, reviewed: true}
 "d8ww3": {relation: required, reviewed: true}
 "d94te": {relation: required, reviewed: true}
@@ -3140,7 +3140,7 @@
 "e0sir": {relation: weak, reviewed: true}
 "e0tjj": {relation: weak}
 "e0x2l": {relation: required}
-"e123n": {relation: required}
+"e123n": {relation: required, reviewed: true}
 "e12vg": {relation: required}
 "e17f9": {relation: required}
 "e17km": {relation: required, reviewed: true}
@@ -5432,7 +5432,7 @@
 "od9xu": {relation: required, reviewed: true}
 "odapy": {relation: required}
 "odb87": {relation: required, reviewed: true}
-"odc8j": {relation: required}
+"odc8j": {relation: required, reviewed: true}
 "odcjk": {relation: required}
 "oddji": {relation: required, reviewed: true}
 "odgwr": {relation: required, reviewed: true}
@@ -7620,7 +7620,7 @@
 "y7vov": {relation: weak}
 "y7ztl": {relation: required, reviewed: true}
 "y87i6": {relation: required, reviewed: true}
-"y8nzd": {relation: required}
+"y8nzd": {relation: required, reviewed: true}
 "y8v8g": {relation: required}
 "y92n1": {relation: required, reviewed: true}
 "y93x7": {relation: required, reviewed: true}
