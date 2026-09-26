@@ -6518,7 +6518,7 @@
 "t7gfv": {relation: required, reviewed: true}
 "t7i1z": {relation: weak}
 "t7m3a": {relation: required, reviewed: true}
-"t7mnl": {relation: required}
+"t7mnl": {relation: required, reviewed: true}
 "t892i": {relation: required, reviewed: true}
 "t8gbn": {relation: weak}
 "t8lew": {relation: required, reviewed: true}
