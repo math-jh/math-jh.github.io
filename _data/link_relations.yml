@@ -4777,7 +4777,7 @@
 "lkxfx": {relation: required}
 "ll0zq": {relation: required}
 "llhbq": {relation: required}
-"llidf": {relation: required}
+"llidf": {relation: required, reviewed: true}
 "lln8e": {relation: required, reviewed: true}
 "lloen": {relation: required, reviewed: true}
 "llrmu": {relation: required, reviewed: true}
@@ -6771,7 +6771,7 @@
 "udwon": {relation: weak}
 "udwq5": {relation: required, reviewed: true}
 "udxxv": {relation: required}
-"ue10x": {relation: required}
+"ue10x": {relation: required, reviewed: true}
 "ue559": {relation: weak}
 "ueoyf": {relation: required, reviewed: true}
 "uert1": {relation: weak}
