@@ -1,0 +1,331 @@
+---
+title: "Integral Domains"
+description: "This post covers the norm definition and division algorithm in Euclidean domains, using integer and polynomial division to show that every ideal is principal."
+excerpt: "Definitions and inclusions of Euclidean domains, PIDs, and UFDs"
+
+categories: [Math / Ring Theory]
+permalink: /en/math/ring_theory/integral_domains
+sidebar: 
+    nav: "ring_theory-en"
+
+date: 2025-04-01
+weight: 2
+translated_at: 2026-09-26T03:15:06+00:00
+translation_source: antigravity-gemini-3.8-flash-high
+---
+In the posts of this category, we examine the properties of rings in a little more detail. The first to be discussed is an integral domain. ([\[Algebraic Structures\] §Field of Fractions, ⁋Definition 5](/en/math/algebraic_structures/field_of_fractions#def5){: data-lid="roimg" }) 
+
+## Euclidean Domains
+
+::: Definition 1
+Fix an integral domain $A$. If a function $N : A \rightarrow \mathbb{Z}_{\geq 0}$ satisfies the condition $N(0) = 0$, it is called a *norm* on $A$. If $N(a) > 0$ holds for all $a \neq 0$, this norm is called a *positive norm*. 
+:::
+
+The condition for a norm is very weak; for instance, given the same integral domain, there are very many ways to define a norm on it. 
+
+::: Definition 2
+An integral domain $A$ is a *Euclidean domain* if on $A$ there exists a norm $N$ such that for any $a, b \in A$ (with $b \neq 0$), there exist in $A$ elements $q, r$ satisfying
+
+$$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
+
+Here, $q$ is called the *quotient* and $r$ the *remainder*.
+:::
+
+If we replace $A$ with the integers $\mathbb{Z}$ and view $N$ as the absolute value function $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$, this is obtained from the familiar division algorithm for integers, namely [\[Number Theory\] §Division and Greatest Common Divisor, ⁋Theorem 3](/en/math/number_theory/divisibility#thm3){: data-lid="y9bnu" }. As another example, if on the polynomial ring $\mathbb{K}[\x]$ we define $N$ as the function giving the degree of a polynomial (setting $N(0)=0$), we obtain the division algorithm for polynomials. Finally, any field $\mathbb{K}$ is a Euclidean domain, which is obtained by sending every $x\in\mathbb{K}$ to $0$ via the function $N$. The reason this satisfies the condition above is that every (nonzero) element of a field always divides any other element. 
+
+::: Proposition 3
+Every ideal of a Euclidean domain is principal. More precisely, for a Euclidean domain $A$ and any nonzero ideal $\mathfrak{a}$, if we let an element with minimal norm among the nonzero elements of $\mathfrak{a}$ be $a$, then $\mathfrak{a}=(a)$. 
+:::
+::: Proof
+If $\mathfrak{a}$ is the zero ideal, there is nothing to prove, so assume $\mathfrak{a}\neq 0$. 
+
+Looking at the image of $\mathfrak{a}\setminus \{0\}$ under $N$, since $\mathbb{Z}_{\geq 0}$ is a well-ordered set, we can choose from $\mathfrak{a}$ a nonzero element $a$ with minimal norm. 
+
+Since $(a)\subseteq \mathfrak{a}$ is trivial, to show that $(a)=\mathfrak{a}$ it suffices to show only the reverse inclusion. For any element of $\mathfrak{a}$, say $x$, applying the division algorithm gives
+
+$$x=qa+r,\qquad\text{with $r = 0$ or $N(r) < N(a)$}$$
+
+Then $r = x - qa$, and since both $x$ and $qa$ belong to $\mathfrak{a}$, $r$ also belongs to $\mathfrak{a}$. Now from the assumption that the norm of $a$ is minimal, $N(r) < N(a)$ is impossible, so $r$ must be $0$. That is, $x=qa$, and from this we see that $\mathfrak{a} = (a)$.
+:::
+
+We now make the following definition.
+
+::: Definition 4
+For a commutative ring $A$ and elements $a, b \in A$ ($b \neq 0$) in it, we define the following.
+
+1. We say that $a$ is a *multiple* of $b$ if there exists $x \in A$ such that $a = bx$. In this case, we say that $b$ *divides* $a$, written symbolically as $b \mid a$. 
+2. A *greatest common divisor* of $a$ and $b$ refers to a nonzero element $d$ satisfying the following conditions:
+   - $d \mid a$ and $d \mid b$, and
+   - whenever $d'$ satisfies $d' \mid a$ and $d' \mid b$, always $d' \mid d$.
+
+The greatest common divisor of $a$ and $b$ is written as $\gcd(a, b)$ or simply $(a, b)$.
+:::
+
+By definition, $b \mid a$ holding in the ring $A$ is equivalent to $(a) \subseteq (b)$. In particular, if $d$ is any common divisor of $a$ and $b$, then $(d)$ must contain $(a, b)$. Therefore, the two conditions above can be translated into the language of ideals as follows:
+
+- $(a, b) \subseteq (d)$
+- $(d) \subseteq (d')$ for any principal ideal $(d')$ such that $a, b \in (d')$
+
+That is, the greatest common divisor of $a$ and $b$ is (if it exists) a generator of the smallest principal ideal containing $a$ and $b$. An integral domain where this is possible is called a *GCD domain*, but this definition will not appear separately in our discussion. 
+
+From the above discussion, the following holds. 
+
+::: Proposition 5
+In a commutative ring $A$, suppose that $a, b \in A$ are not $0$. If the ideal generated by $a$ and $b$, $(a, b)$, is that generated by some element $d \in A$, namely the principal ideal $(d)$, then $d$ is a greatest common divisor of $a$ and $b$.
+:::
+
+Then the greatest common divisor is uniquely determined. Some care is needed when speaking of this uniqueness, however, because for example in the integers $(2)$ and $(-2)$ are the same ideal.
+
+::: Proposition 6
+Let $A$ be an integral domain. Suppose two elements $d, d' \in A$ generate the same principal ideal, that is, $(d) = (d')$. Then $d' = ud$ for some unit $u \in A$. ([§Units and Zero Divisors, ⁋Definition 1](/en/math/ring_theory/units_and_zero_divisors#def1){: data-lid="1vdn1" })
+:::
+
+::: Proof
+Since it is trivial if $d = 0$ or $d' = 0$, suppose that $d, d'$ are both not $0$. That is, since $(d) = (d')$, there exist $x, y \in A$ such that
+
+$$d = xd',\qquad d' = yd$$
+
+holds. Then from $d = xyd$, we have $(1-xy)d=0$. Now from the assumption that $A$ is an integral domain and $d \neq 0$, we know that $xy = 1$, and therefore $x, y$ are units that are inverses of each other. 
+:::
+
+In the case of integers, [\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3){: data-lid="lmju4" } corresponds to Bézout's lemma, and the following Bézout's identity also holds for Euclidean domains. 
+
+::: Theorem 7
+Let $A$ be a Euclidean domain. Suppose $a, b \in A$ are elements that are not $0$, and let $r_n$ be the last nonzero remainder when repeating the process of [Definition 2](#def2){: data-lid="xxwsw" } for $a, b$ until no further step is possible. Then the following hold:
+
+1. $r_n$ is a greatest common divisor of $a, b$. 
+2. $(r_n)$ is the same ideal as $(a, b)$. In particular, $r_n$ can be written, in terms of $a, b$, as an $A$-linear combination; that is, there exist $x, y \in A$ such that $r_n=ax+by$.
+:::
+
+::: Proof
+We show that $r_n$ divides $a$ and $b$. The last step of the Euclidean algorithm must have been given by the equation
+    
+$$r_{n-1} = q_{n+1} r_n$$
+
+and in general takes the form
+
+$$r_{k-2}=q_{k}r_{k-1}+r_{k}$$.
+
+Here we set $r_{-2}=a$, $r_{-1}=b$. Our claim is that all remainders $r_k$ are divisible by $r_n$. For this, let us use induction by tracing the equations above backward.
+
+First, $r_n\mid r_{n-1}$ is trivial. Thus, assuming $r_n \mid r_k$ and $r_n \mid r_{k-1}$, we see from the equation above that $r_n$ also divides $r_{k-2}$, and from this we know by induction that $r_n$ divides each of $a$ and $b$. That is, since $(a), (b)\subseteq (r_n)$, we know from this that $(a,b)\subseteq (r_n)$. On the other hand, for $r_n$ to be a greatest common divisor of $a$ and $b$, we must have $(a,b)=(r_n)$, which is likewise clear because $r_n$ can be represented, in terms of $a$ and $b$, as an $A$-linear combination through the equations above. 
+:::
+
+
+## Principal Ideal Domains
+
+Now we define the following. 
+
+::: Definition 8
+A ring $A$ is a *principal ideal domain* if it is an integral domain where every ideal is principal.
+:::
+
+Then from [Proposition 3](#prop3){: data-lid="gtruv" }, we know that any Euclidean domain is always a PID. However, the converse does not hold. While the division algorithm gives an explicit method for obtaining a greatest common divisor when two elements $a,b$ are given, by [Proposition 5](#prop5){: data-lid="38oyh" } the following holds. 
+
+::: Corollary 9
+Let $A$ be a Principal Ideal Domain, and let $a, b \in A$ be elements that are not $0$. For the principal ideal generated by $a, b$, denoted by $(a, b)$, let $d$ be a generator. Then the following hold:
+
+1. $d$ is a greatest common divisor of $a$ and $b$.
+2. $d$ can be written, in terms of $a$ and $b$, as an $A$-linear combination. That is, there exist $x, y \in A$ such that
+
+   $$d = ax + by$$
+
+   holds.
+3. $d$ is unique in the sense of [Proposition 6](#prop6){: data-lid="5e97c" }. 
+:::
+::: Proof
+This is a consequence of [Proposition 5](#prop5){: data-lid="94ea3" } and [Proposition 6](#prop6){: data-lid="bebbz" }, and the second statement is clear from the assumption that $(a,b)=(d)$. 
+:::
+
+One of the useful properties of a principal ideal domain is that every prime ideal is always maximal. 
+
+::: Proposition 10
+In a Principal Ideal Domain $A$, every prime ideal that is not $0$ is a maximal ideal.
+:::
+
+::: Proof
+Suppose to the contrary that in $A$, for a nonzero prime ideal $\mathfrak{p} = (p)$, there is an ideal satisfying $\mathfrak{p} \subsetneq \mathfrak{m} = (m) \subsetneq A$, denoted by $\mathfrak{m}$. Then first, since $p \in \mathfrak{m} = (m)$, for some $r\in A$ we have $p = rm$, and from the assumption that $\mathfrak{p}$ is a prime ideal, we have $r\in \mathfrak{p}$ or $m\in\mathfrak{p}$, and from the assumption $\mathfrak{p} \subsetneq \mathfrak{m}$ we must have $m\not\in \mathfrak{p}$. However, if $r \in \mathfrak{p} = (p)$, then for some $s\in A$ we have $r = ps$, and thus from $p = rm = psm$ we have $1 = sm$. That is, $m$ is a unit, which contradicts the assumption $\mathfrak{m} \subsetneq A$.
+:::
+
+## Unique Factorization Domains
+
+Now we finally define unique factorization domains. To this end, let us first establish some terminology.
+
+::: Definition 11
+Let $A$ be an integral domain. 
+
+1. Fix a nonzero, non-unit $r\in A$. If whenever $r = ab$ for some $a,b$, at least one of $a$ or $b$ is necessarily a unit, then $r$ is called *irreducible*. Otherwise, $r$ is called *reducible*.
+2. Fix a nonzero, non-unit $p \in A$. If whenever $p \mid ab$ for some $a,b$, we always have $p \mid a$ or $p \mid b$, then $p$ is called *prime*. 
+3. For two elements $a,b$, if in $A$ there exists a unit $u$ such that $a=ub$, they are called *associate in $A$*. 
+:::
+
+Consider $\mathbb{Z}$, for example. Given any nonzero, non-unit element of $\mathbb{Z}$, say $10$, we would like to claim that it factors uniquely into the form $2\times 5$. However, because of the unit of $\mathbb{Z}$ other than $1$, namely $-1$, by a product of the form
+
+$$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
+
+one can also represent $10$, and we want to treat such expressions as not being different. For this reason, in the definition above, two elements that differ by a unit are regarded as (essentially) the same. 
+
+Meanwhile, the distinction between irreducible and prime elements is somewhat subtle, and to properly define a unique factorization domain, we must clearly distinguish between them. First, the following proposition is straightforward. 
+
+::: Proposition 12
+In an integral domain $A$, every prime element is always irreducible.
+:::
+
+::: Proof
+Suppose that an element $p \in A$ is a prime element, and for some $a,b$, let $p = ab$. Then $p\mid a$ or $p\mid b$, so without loss of generality assume that $p\mid a$. That is, there exists $r\in A$ such that $a=pr$. Now from $p=ab=prb$, we have $p(1-rb)=0$, and since $A$ is an integral domain and $p$ is nonzero, $1-rb=0$. That is, $b$ is a unit. 
+:::
+
+However, the converse does not always hold. 
+
+::: Example 13
+First, if we define on $A=\mathbb{Z}[\sqrt{-5}]$ the norm
+
+$$N(a + b\sqrt{-5}) := a^2 + 5b^2$$
+
+we know that the identity
+
+$$N(xy) = N(x)N(y)$$
+
+holds for all $x,y\in A$. From this, we see that if $x$ is a unit of $A$, then necessarily $N(x)=1$, and the converse also holds. 
+
+Now consider in $A$ the element $3$. Then, for $xy=3$ with both $x$ and $y$ being non-units, we know from
+
+$$N(x) N(y)=N(3) = 9$$
+
+that we must have $N(x)=N(y)=3$. However, from the definition of $N$, no element satisfies this, so $3$ is irreducible.
+
+Yet $3$ is not prime. This is because
+
+$$3 \mid (2 + \sqrt{-5})(2 - \sqrt{-5}) = 4 + 5 = 9$$
+
+holds, but $3$ divides neither $2 + \sqrt{-5}$ nor $2 - \sqrt{-5}$. 
+:::
+
+However, in a PID, this always holds. 
+
+::: Proposition 14
+In a PID $A$, a nonzero element is irreducible if and only if it is prime. 
+:::
+::: Proof
+In $A$, fix an irreducible element $p \in A$. What we need to show is that $p$ is prime, that is, $(p)$ is a prime ideal. Since $A$ is a P.I.D., any ideal is written in the form $(m)$. Now if $(p) \subseteq (m)$, then $p = rm$ for some $r \in A$. However, since $p$ is irreducible, one of $r$ or $m$ must be a unit.
+
+- If $r$ is a unit, then $p$ and $m$ are associates, and $(p) = (m)$.
+- If $m$ is a unit, then $(m) = A$.
+
+Therefore, the only ideals containing $(p)$ are $(p)$ itself or $A$, so $(p)$ is maximal, and since in a P.I.D. a maximal ideal is always prime, $(p)$ is a prime ideal. Therefore, $p$ is a prime element.
+:::
+
+Therefore, $A=\mathbb{Z}[\sqrt{-5}]$ in [Example 13](#ex13){: data-lid="buacp" } is not a PID.
+
+::: Example 15
+Using the definition, let us show that $A=\mathbb{Z}[\sqrt{-5}]$ is indeed not a PID. Our claim is that the ideal
+
+$$\mathfrak{a}=(3, 1+\sqrt{-5})$$
+
+is non-principal. Let us continue to use the norm defined earlier in [Example 13](#ex13){: data-lid="41j9f" }. Then since
+
+$$N(3)=9,\qquad N(1+\sqrt{-5})=6$$
+
+if there exists $x\in A$ such that $\mathfrak{a}=(x)$, then $N(x)$ must be a divisor of $3$. However, as seen in [Example 13](#ex13){: data-lid="96g3u" }, since $N(x)=3$ is satisfied by no $x\in A$, the only possibility is $N(x)=1$, and hence $(3, 1+\sqrt{-5})$ is the unit ideal. 
+
+However, $2\not\in \mathfrak{a}$. To show this, suppose that for some $x,y\in A$,
+
+$$2=3x+(1+\sqrt{-5})y$$
+
+Let $x = a_1 + a_2\sqrt{-5}$ and $y = b_1 + b_2\sqrt{-5}$. Expanding the right-hand side gives
+
+$$3x + (1+\sqrt{-5})y = (3a_1 + b_1 - 5b_2) + (3a_2 + b_1 + b_2)\sqrt{-5}$$
+
+so for this to be $2$, the system of equations
+
+$$\begin{cases}3a_1 + b_1 - 5b_2 = 2 \\3a_2 + b_1 + b_2 = 0\end{cases}$$
+
+must hold. But substituting $b_1 = -3a_2 - b_2$ from the second equation into the first equation, we obtain
+
+$$3a_1 - 3a_2 - 6b_2 = 2$$
+
+which is a contradiction because the left-hand side is a multiple of $3$ while the right-hand side is not. That is, $(3, 1+\sqrt{-5}) \neq (1)$.
+:::
+
+Now we define the following.
+
+::: Definition 16
+An integral domain $A$ is a *unique factorization domain* if for every nonzero, non-unit $a\in A$, the following two conditions hold: 
+
+1. $a$ can be expressed as a finite product of irreducible elements of $A$. That is, there exist irreducibles $p_1, \dots, p_n \in A$ such that
+    
+    $$a = p_1 p_2 \cdots p_n$$
+
+   can be written.
+2. The above expression is unique up to *associate* relations. That is, if $a = q_1 q_2 \cdots q_m$ is another expression, then $m = n$, and after an appropriate rearrangement, each $p_i$ and $q_i$ can be made associates of each other. 
+:::
+
+Then the following holds.
+
+::: Proposition 17
+In a UFD $A$, a nonzero element is irreducible if and only if it is prime. 
+:::
+
+::: Proof
+It suffices to show that an irreducible element is always prime.
+
+Choose an irreducible element $p \in A$, and suppose that $p \mid ab$ for some $a, b \in A$. Then we must show that $p \mid a$ or $p \mid b$. First, since $A$ is a UFD, we can write $a$, $b$, and $ab$ as products of irreducibles. Using this, if we let
+
+$$a = p_1 \cdots p_k,\quad b = q_1 \cdots q_l$$
+
+then $ab = p_1 \cdots p_k q_1 \cdots q_l$. Here, $p \mid ab$ means that there exists some $c \in A$ such that $ab = pc$. Now, since $p$ is also irreducible and $ab$ is expressed as a product of irreducibles, by the definition of a UFD, $p$ is associate to one of the factors $p_i$ or $q_j$ of $ab$, and accordingly $p$ divides $a$ or divides $b$. 
+:::
+
+By definition, a UFD is an integral domain in which every element can be factored. The nice thing about factoring two integers into primes is that their greatest common divisor can be obtained immediately from it. 
+
+::: Proposition 18
+Let $A$ be a Unique Factorization Domain. Suppose that $a, b \in A$ are non-zero elements having the following prime factorizations:
+
+$$a = u \cdot p_1^{e_1} p_2^{e_2} \cdots p_n^{e_n}, \qquad b = v \cdot p_1^{f_1} p_2^{f_2} \cdots p_n^{f_n}$$
+
+where $u, v \in A^\times$ are units, $p_1, \dots, p_n$ are distinct irreducibles (or primes), and $e_i, f_i \geq 0$. Then the element defined by
+
+$$d = p_1^{\min(e_1, f_1)} p_2^{\min(e_2, f_2)} \cdots p_n^{\min(e_n, f_n)}$$
+
+is a greatest common divisor of $a$ and $b$. (Provided that if all exponents are $0$, then $d = 1$.)
+:::
+
+::: Proof
+First, in $d$, for each prime factor $p_i$, the exponent $\min(e_i, f_i)$ is the minimum number of times that, in both $a$ and $b$, the factor $p_i$ appears in their factorizations, so it is clear that $d \mid a$ and $d \mid b$. That is, $d$ is a common divisor.
+
+Now let $c$ be any common divisor of $a$ and $b$. Then the prime factorization of $c$ is as follows:
+
+$$c = q_1^{g_1} \cdots q_m^{g_m}$$
+
+However, since $c \mid a, b$, each $q_j$ must be associate to some prime factor of $a$ or $b$. That is, $\{q_1, \dots, q_m\} \subseteq \{p_1, \dots, p_n\}$.
+
+Furthermore, each exponent $g_j$ cannot exceed, in $a$ and $b$, the exponent of $q_j$, so $g_j \leq \min(e_j, f_j)$. Therefore, $c \mid d$, and $d$ is a greatest common divisor of $a$ and $b$.
+:::
+
+Then the following theorem ties together the three definitions we have discussed so far. 
+
+::: Theorem 19
+Every Euclidean domain is a Principal Ideal Domain, and every Principal Ideal Domain is a Unique Factorization Domain. In particular, every Euclidean domain is a Unique Factorization Domain.
+:::
+
+::: Proof
+The only thing we need to show is the fact that any PID is a UFD. Fix a PID $A$, and fix a non-zero, non-unit $r\in A$. First, we will inductively construct a chain of ideals
+
+$$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
+
+If $r$ is irreducible, we terminate the process here; otherwise, there exist non-units $r_1, r_2$ such that we can write $r = r_1 r_2$. If both of these are again irreducible, we terminate the process here; otherwise, by repeating this process, we can obtain the chain of ideals above. 
+
+Now let $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$. Then it is clear that $\mathfrak{a}$ is an ideal, and from the assumption that $A$ is a PID, we have $\mathfrak{a}=(a)$ for some $a\in A$. Then for some $n$, we must have $a\in (r_n)$, and from this $n$ onward, $(r_n)$ always contains $a$, contradicting $(r_n)\subsetneq (r_{n+1})$. 
+
+For uniqueness, suppose that two expressions are given as
+
+$$r = p_1 \cdots p_m = q_1 \cdots q_n$$
+
+and by [Proposition 14](#prop14){: data-lid="fj52q" }, each $p_i$ is prime, so starting in order from $p_1$, we can match each $q_j$ that is associate to it. 
+:::
+
+---
+
+**References**
+
+**[DF]** D. S. Dummit and R. M. Foote, *Abstract algebra*, 3rd ed., Wiley, 2004.
