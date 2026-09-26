@@ -362,7 +362,7 @@ This agrees with the computation on varieties using the transition functions of 
 The reason the canonical sheaf occupies a special place among other invertible sheaves is that it mediates duality in cohomology. Just as the fundamental class in topology gives Poincaré duality, on a projective scheme $\omega_X$ plays that role.
 
 ::: Theorem 14 (Serre duality)
-Let $\Omega_{X/\mathbb{K}}$ be a locally free sheaf of rank $n$ for an $n$-dimensional integral projective scheme $X$ over an algebraically closed field $\mathbb{K}$ ([§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7){: data-lid="89iie" }, [§Algebraic Structure of Schemes, §§Reduced and Integral Schemes](/en/math/scheme_theory/algebra_of_schemes#reduced-and-integral-schemes){: data-lid="93wcr" }). Then for any locally free sheaf $\mathcal{E}$ on $X$ and any $0\leq i\leq n$, there exists an isomorphism
+Let $\Omega_{X/\mathbb{K}}$ be a locally free sheaf of rank $n$ for an $n$-dimensional integral projective scheme $X$ over an algebraically closed field $\mathbb{K}$ ([§Closed Subschemes of Projective Space, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7){: data-lid="89iie" }, [§Algebraic Structure of Schemes, §§Reduced Schemes and Integral Schemes](/en/math/scheme_theory/algebra_of_schemes#reduced-schemes-and-integral-schemes){: data-lid="93wcr" }). Then for any locally free sheaf $\mathcal{E}$ on $X$ and any $0\leq i\leq n$, there exists an isomorphism
 
 $$H^i(X, \mathcal{E})\cong H^{n-i}\bigl(X, \omega_X\otimes_{\mathcal{O}_X}\mathcal{E}^\vee\bigr)^\ast$$
 
