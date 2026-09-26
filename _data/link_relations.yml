@@ -669,7 +669,7 @@
 "32t2a": {relation: weak, reviewed: true}
 "32z1w": {relation: required}
 "3303o": {relation: required, reviewed: true}
-"33231": {relation: required}
+"33231": {relation: required, reviewed: true}
 "332sc": {relation: required}
 "338m2": {relation: required, reviewed: true}
 "33fsy": {relation: required, reviewed: true}
@@ -3110,7 +3110,7 @@
 "dvshf": {relation: required, reviewed: true}
 "dvtce": {relation: required, reviewed: true}
 "dvvn9": {relation: required}
-"dwve6": {relation: required}
+"dwve6": {relation: required, reviewed: true}
 "dx2qe": {relation: required}
 "dx4rz": {relation: required, reviewed: true}
 "dx5pd": {relation: required, reviewed: true}
@@ -3466,7 +3466,7 @@
 "fm5qj": {relation: required}
 "fm9d2": {relation: weak, reviewed: true}
 "fmqxm": {relation: required, reviewed: true}
-"fmsff": {relation: required}
+"fmsff": {relation: required, reviewed: true}
 "fmtre": {relation: required}
 "fmw1e": {relation: required}
 "fn4nn": {relation: required, reviewed: true}
@@ -5256,7 +5256,7 @@
 "nluh4": {relation: required}
 "nmn2c": {relation: required}
 "nmopn": {relation: required, reviewed: true}
-"nmpu0": {relation: required}
+"nmpu0": {relation: required, reviewed: true}
 "nn0fw": {relation: required, reviewed: true}
 "nn0lo": {relation: required, reviewed: true}
 "nn4oj": {relation: required}
@@ -7887,7 +7887,7 @@
 "zehug": {relation: required, reviewed: true}
 "zejo3": {relation: weak}
 "zeqj2": {relation: required}
-"zeyal": {relation: required}
+"zeyal": {relation: required, reviewed: true}
 "zf2kp": {relation: required}
 "zf33y": {relation: required, reviewed: true}
 "zf803": {relation: required, reviewed: true}
