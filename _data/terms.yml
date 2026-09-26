@@ -19271,6 +19271,13 @@ T:
   defs:
   - label: '[표현론] §Quiver와 경로대수'
     url: /ko/math/representation_theory/path_algebras
+- id: trivial_representation
+  en: trivial representation
+  ko: 자명한 표현
+  primary: en
+  defs:
+  - label: '[표현론] §유한군의 표현론'
+    url: /ko/math/representation_theory/representations_of_finite_groups
 - id: trivial_topology
   en: trivial topology
   ko: 자명한 위상
