@@ -4134,7 +4134,7 @@
 "irafs": {relation: required}
 "irc4h": {relation: required, reviewed: true}
 "irjhy": {relation: required, reviewed: true}
-"irych": {relation: requires-review}
+"irych": {relation: required, reviewed: true}
 "is6vm": {relation: required, reviewed: true}
 "is9e5": {relation: required, reviewed: true}
 "iscwk": {relation: required, reviewed: true}
@@ -5087,7 +5087,7 @@
 "mtkav": {relation: weak}
 "mtngu": {relation: weak, reviewed: true}
 "mtsai": {relation: required, reviewed: true}
-"mtvjx": {relation: requires-review}
+"mtvjx": {relation: required, reviewed: true}
 "mtzeu": {relation: required, reviewed: true}
 "mu11o": {relation: required}
 "mu1mx": {relation: required, reviewed: true}
@@ -6666,7 +6666,7 @@
 "tw4ac": {relation: required, reviewed: true}
 "tw4l2": {relation: required, reviewed: true}
 "tw9wl": {relation: required, reviewed: true}
-"tweq8": {relation: requires-review}
+"tweq8": {relation: forward, reviewed: true}
 "twg84": {relation: required}
 "twnmo": {relation: required, reviewed: true}
 "twr9x": {relation: forward}
