@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-07-30
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-26
 weight: 35
 
 ---
@@ -333,3 +333,37 @@ paused = bool(schedules) and all(p.get("paused") for p in schedules)
 키를 dict가 아니라 리스트로 모으고, "정지"는 그 워커에 걸린 크론 전부가 정지일 때만 참이 되도록 바꿨다. 하나라도 실행 가능하면 로그가 계속 갱신될 수 있으니 워커는 정지가 아니다. hold 조합 표시에 쓰던 `p`(단일 잡 대표)는 실행 가능한 스케줄이 있으면 그것을, 전부 정지면 첫 번째 것을 대표로 남겨 기존 로직을 그대로 쓸 수 있게 했다. [커밋](https://github.com/math-jh/math-jh.github.io/commit/d625b035).
 
 이 이원화는 오래가지 않았다. 번역 본 작업과 팔로업은 이후 커밋에서 워커 키 자체가 `translation`/`translation_followup`로 갈라졌고, 지금 크론 테이블에는 같은 키를 공유하는 잡이 없다. 그래도 이 집계 코드는 남았다. 다음에 워커 하나를 여러 스케줄이 깨우는 구성이 다시 생기면, dict 오버라이트로 되돌아가지 않게.
+
+## 헬스체크가 떠안은 요약 계산
+
+`/api/summary`는 요청이 오면 `build_summary()`로 전체를 다시 계산하고, 그 결과를 `CACHE_TTL` 동안 들고 있다. 문제는 이 계산이 원장이 바뀐 직후에는 수 초가 걸린다는 점이다. 1분마다 4초 타임아웃으로 이 엔드포인트를 찌르는 `pi-health-monitor`가 TTL이 막 끝난 순간에 오면 그 계산을 대신 기다리다 타임아웃이 나고, 거짓 "대시보드 중단" 알림이 된다.
+
+첫 수정은 값 하나였다. TTL을 45초에서 90초로 늘려 헬스체크 주기보다 길게 잡았다([커밋](https://github.com/math-jh/math-jh.github.io/commit/e1fee03c)). 같은 커밋에서 `#audit` 탭의 `sec_link_audit()`도 손봤다. 이 함수는 보류 원장과 링크 관계 원장을 읽고, 보류 항목이 가리키는 글을 분류기 파서로 다시 파싱해 항목을 만든다. 그 계산을 입력 파일들의 mtime 튜플을 키로 캐시하고, 어느 하나라도 바뀌면 다시 계산한다.
+
+```python
+def _linkaudit_signature(holds):
+    paths = [HOLDS_STATE, str(_ledger.PATH)]
+    paths += sorted({os.path.join(ROOT, it.get("path") or "") for it in holds["held"].values()})
+    return tuple(mtime(x) for x in paths)
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+`uncommitted`와 `undo`는 캐시에 넣지 않았다. 둘은 계산이 싸고 git 상태에 달려 있어서 mtime으로는 무효화 시점을 알 수 없다. 이어진 커밋에서는 계산 자체도 줄였다. 보류 항목은 한 글에 여러 건이 몰려 있는데 `hold_link`가 건마다 그 글을 다시 파싱하고 있었다. 이제 `memo` dict에 글별로 `ident → link` 표를 한 번만 만들어 둔다. 링크 관계 원장을 읽는 `scripts/lib/link_relations.py`의 `load`는 8천 줄 남짓한 YAML에 순수 파이썬 로더로 1초 넘게 걸리던 것을, libyaml이 있으면 `CSafeLoader`로 읽게 했다([커밋](https://github.com/math-jh/math-jh.github.io/commit/c41beafb)).
+
+그래도 TTL이 지나는 순간의 첫 요청이 계산을 맡는 구조는 그대로였다. TTL을 늘리면 그 순간이 드물어질 뿐이어서, 하루 만에 다시 손을 봤다. `CACHE_TTL`은 45초로 돌아갔고, 만료된 뒤 첫 요청은 옛 값을 바로 돌려받고 갱신은 백그라운드 스레드가 맡는다(stale-while-revalidate, [커밋](https://github.com/math-jh/math-jh.github.io/commit/f1011d87)).
+
+```python
+def summary_cached():
+    now = time.time()
+    if _cache["data"] is None or _cache["ts"] == 0:
+        _cache["data"] = build_summary()
+        _cache["ts"] = now
+    elif now - _cache["ts"] > CACHE_TTL and _refresh_lock.acquire(blocking=False):
+        threading.Thread(target=_refresh_summary, daemon=True).start()
+    return _cache["data"]
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+`_refresh_lock`을 논블로킹으로 잡으므로 갱신은 동시에 하나만 돈다. 기다려야 하는 경우는 둘로 좁혀진다. 서버를 막 띄워 캐시가 비었을 때, 그리고 판정·커밋 버튼이나 `?fresh`가 `ts`를 0으로 만들었을 때다. 후자는 사용자가 방금 누른 결과를 옛 값으로 보면 안 되기 때문이다. 백그라운드 갱신이 끝났을 때 `0 < _cache["ts"] < started`를 확인하는 것도 같은 이유다. 갱신이 도는 사이에 버튼이 캐시를 무효화했거나 동기 빌드가 더 새 값을 넣었다면, 늦게 도착한 옛 계산이 그것을 덮어쓰지 않도록 버린다.
+
+값이 최대 한 TTL만큼 낡아 보일 수 있다는 것이 이 방식의 대가다. 개요 화면은 1초 단위 정확도가 필요한 화면이 아니고, 정확해야 하는 판정 직후만 위의 두 경로로 동기 계산을 받으므로 그 정도는 받아들일 수 있는 값이었다.
