@@ -15207,6 +15207,13 @@ Q:
   see:
   - label: Compact
     id: compactness
+- id: quasi-compact_space
+  en: quasi-compact space
+  ko: 준옹골 공간
+  primary: en
+  defs:
+  - label: '[스킴] §스펙트럼'
+    url: /ko/math/scheme_theory/spectrums
 - id: quasi-finite
   en: quasi-finite
   ko: 준유한
