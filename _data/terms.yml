@@ -4076,6 +4076,13 @@ C:
   defs:
   - label: '[미분다양체] §미분사상의 예시들'
     url: /ko/math/manifolds/examples_of_differentials
+- id: covector_field
+  en: covector field
+  ko: 공변벡터장
+  primary: en
+  defs:
+  - label: '[리만기하학] §리만 계량'
+    url: /ko/math/riemannian_geometry/Riemannian_metric
 - id: covering
   en: covering
   ko: 덮개
