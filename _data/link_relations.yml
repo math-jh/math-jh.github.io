@@ -1067,7 +1067,7 @@
 "4rx1z": {relation: required, reviewed: true}
 "4s5zq": {relation: forward, reviewed: true}
 "4s6ud": {relation: required, reviewed: true}
-"4sjt1": {relation: required}
+"4sjt1": {relation: required, reviewed: true}
 "4smxa": {relation: required, reviewed: true}
 "4snz8": {relation: required, reviewed: true}
 "4srwq": {relation: required, reviewed: true}
