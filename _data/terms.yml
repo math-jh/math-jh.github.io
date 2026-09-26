@@ -13702,6 +13702,13 @@ O:
     url: /ko/math/linear_algebra/dual_space
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+- id: orthogonal_idempotents
+  en: orthogonal idempotents
+  ko: 직교 멱등원
+  primary: en
+  defs:
+  - label: '[환론] §멱등원과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: orthogonal_matrix
   en: orthogonal matrix
   ko: 직교행렬
