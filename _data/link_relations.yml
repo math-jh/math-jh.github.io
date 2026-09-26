@@ -883,7 +883,7 @@
 "3xq7t": {relation: required, reviewed: true}
 "3xukk": {relation: required, reviewed: true}
 "3xwzd": {relation: forward, reviewed: true}
-"3xy48": {relation: required}
+"3xy48": {relation: required, reviewed: true}
 "3y1cc": {relation: required}
 "3ydkr": {relation: required}
 "3yqkg": {relation: required, reviewed: true}
@@ -1264,7 +1264,7 @@
 "5igtm": {relation: required, reviewed: true}
 "5ih46": {relation: required}
 "5ipto": {relation: required, reviewed: true}
-"5iw2p": {relation: required}
+"5iw2p": {relation: required, reviewed: true}
 "5iy57": {relation: weak}
 "5j2lb": {relation: weak}
 "5j8xp": {relation: required, reviewed: true}
@@ -2889,7 +2889,7 @@
 "cuvxr": {relation: required, reviewed: true}
 "cviq7": {relation: required, reviewed: true}
 "cvttk": {relation: required, reviewed: true}
-"cvy3u": {relation: required}
+"cvy3u": {relation: required, reviewed: true}
 "cwgzb": {relation: required}
 "cwte2": {relation: weak}
 "cww19": {relation: required}
