@@ -172,7 +172,7 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 
 위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4){: data-lid="5nsku" }에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 계산하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
 
-대수적으로 $\mathfrak{a}/\mathfrak{a}^2$가 $1$차 미분을 기록하듯, 더 높은 power로 만든 quotient $(B\otimes_AB)/\mathfrak{a}^{m+1}$은 $m$차까지의 Taylor 전개를 기록하고, 그 연속한 차이 $\mathfrak{a}^m/\mathfrak{a}^{m+1}$이 $m$차 항을 담는다. 이는 manifold에서 $\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$로 cotangent space와 고차 항을 읽던 것과 같다. ([\[미분다양체\] §여접공간](/ko/math/manifolds/cotangent_space)) 이를 기하적으로 옮기면 diagonal의 $m$차 근방 $\mathcal{O}_{X\times_SX}/\mathcal{I}^{m+1}$을 쓰게 된다. 두 projection을 $p_1,p_2:X\times_SX\rightarrow X$라 하고
+대수적으로 $\mathfrak{a}/\mathfrak{a}^2$가 $1$차 미분을 기록하듯, 더 높은 power로 만든 quotient $(B\otimes_AB)/\mathfrak{a}^{m+1}$은 $m$차까지의 Taylor 전개를 기록하고, 그 연속한 차이 $\mathfrak{a}^m/\mathfrak{a}^{m+1}$이 $m$차 항을 담는다. 이는 manifold에서 $\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$로 cotangent space와 고차 항을 읽던 것과 같다. ([\[미분다양체\] §여접공간](/ko/math/manifolds/cotangent_space){: data-lid="dfc8r" }) 이를 기하적으로 옮기면 diagonal의 $m$차 근방 $\mathcal{O}_{X\times_SX}/\mathcal{I}^{m+1}$을 쓰게 된다. 두 projection을 $p_1,p_2:X\times_SX\rightarrow X$라 하고
 
 $$\mathcal{P}^m_{X/S}=p_{1\ast}\bigl(\mathcal{O}_{X\times_SX}/\mathcal{I}^{m+1}\bigr)$$
 
