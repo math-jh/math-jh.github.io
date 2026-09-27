@@ -4191,7 +4191,7 @@
 "j0jce": {relation: weak}
 "j0mec": {relation: required}
 "j0qpp": {relation: required}
-"j0trt": {relation: required}
+"j0trt": {relation: required, reviewed: true}
 "j0u0t": {relation: required, reviewed: true}
 "j10ob": {relation: weak}
 "j17z6": {relation: required}
@@ -6913,7 +6913,7 @@
 "v02wk": {relation: required, reviewed: true}
 "v03on": {relation: required, reviewed: true}
 "v04xd": {relation: weak, reviewed: true}
-"v0ejb": {relation: required}
+"v0ejb": {relation: required, reviewed: true}
 "v0g57": {relation: required}
 "v0jwu": {relation: required, reviewed: true}
 "v0qc5": {relation: required, reviewed: true}
