@@ -12905,6 +12905,13 @@ N:
     url: /ko/math/linear_algebra/Jordan_canonical_form
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+- id: nilpotent_element
+  en: nilpotent element
+  ko: 멱영원
+  primary: en
+  defs:
+  - label: '[대수적 구조] §분수체'
+    url: /ko/math/algebraic_structures/field_of_fractions
 - id: nilpotent_group
   en: nilpotent group
   ko: 멱영군
