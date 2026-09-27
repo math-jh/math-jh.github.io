@@ -7,7 +7,7 @@
 "004ns": {relation: required}
 "00619": {relation: required, reviewed: true}
 "006dr": {relation: required, reviewed: true}
-"007ig": {relation: required}
+"007ig": {relation: required, reviewed: true}
 "00w8x": {relation: required, reviewed: true}
 "00zio": {relation: required}
 "018pe": {relation: required}
@@ -3575,7 +3575,7 @@
 "g4erp": {relation: required, reviewed: true}
 "g4h06": {relation: required, reviewed: true}
 "g4h1w": {relation: required, reviewed: true}
-"g4o63": {relation: required}
+"g4o63": {relation: required, reviewed: true}
 "g4rf3": {relation: weak, reviewed: true}
 "g4t4f": {relation: required, reviewed: true}
 "g4z02": {relation: required}
@@ -6685,7 +6685,7 @@
 "tyd1d": {relation: required}
 "tyj3u": {relation: required}
 "tytud": {relation: required}
-"tyyzg": {relation: required}
+"tyyzg": {relation: required, reviewed: true}
 "tz1r9": {relation: weak}
 "tz2ch": {relation: required}
 "tzhwq": {relation: required}
