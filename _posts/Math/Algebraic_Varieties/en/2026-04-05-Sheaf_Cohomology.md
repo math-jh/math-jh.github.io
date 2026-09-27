@@ -589,4 +589,4 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 ---
 
-[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves){: data-lid="efvi0" }, the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.
+[^1]: More generally, as seen in [\[Topology\] §Sheaves, §§Abelian Category of Sheaves](/en/math/topology/sheaves#abelian-category-of-sheaves){: data-lid="efvi0" }, the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ is an abelian category.
