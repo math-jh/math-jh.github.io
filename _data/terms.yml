@@ -15242,6 +15242,13 @@ Q:
   see:
   - label: Compact
     id: compactness
+- id: quasi-compact_morphism
+  en: quasi-compact morphism
+  ko: 준옹골사상
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
 - id: quasi-compact_space
   en: quasi-compact space
   ko: 준옹골 공간
@@ -15256,6 +15263,13 @@ Q:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: quasi-finite_morphism
+  en: quasi-finite morphism
+  ko: 준유한사상
+  primary: en
+  defs:
+  - label: '[스킴] §올곱'
+    url: /ko/math/scheme_theory/fiber_products
 - id: quasi-galois_extension
   en: quasi-Galois extension
   ko: 준갈루아확대
@@ -15307,6 +15321,13 @@ Q:
 - id: quasi-separated
   en: quasi-separated
   ko: 준분리
+  primary: en
+  defs:
+  - label: '[스킴] §스킴 사상의 성질들'
+    url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: quasi-separated_morphism
+  en: quasi-separated morphism
+  ko: 준분리사상
   primary: en
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
