@@ -2127,7 +2127,7 @@
 "9cs0r": {relation: weak, reviewed: true}
 "9cvwt": {relation: required, reviewed: true}
 "9d28y": {relation: required, reviewed: true}
-"9d4hk": {relation: required}
+"9d4hk": {relation: requires-review}
 "9d7bm": {relation: required, reviewed: true}
 "9d7ii": {relation: required, reviewed: true}
 "9df1b": {relation: required, reviewed: true}
@@ -2472,7 +2472,7 @@
 "aypnu": {relation: weak, reviewed: true}
 "aypyx": {relation: required, reviewed: true}
 "ayv4v": {relation: required, reviewed: true}
-"az2qa": {relation: required}
+"az2qa": {relation: required, reviewed: true}
 "az4g7": {relation: required, reviewed: true}
 "azhkf": {relation: required, reviewed: true}
 "aznt1": {relation: weak, reviewed: true}
@@ -3432,7 +3432,7 @@
 "ffz9a": {relation: required}
 "ffzdv": {relation: required, reviewed: true}
 "fg10a": {relation: required}
-"fg4oj": {relation: required}
+"fg4oj": {relation: required, reviewed: true}
 "fgai7": {relation: required}
 "fgdns": {relation: required}
 "fgneo": {relation: required}
@@ -3997,7 +3997,7 @@
 "i4zgh": {relation: required, reviewed: true}
 "i58cr": {relation: required}
 "i5aii": {relation: required}
-"i5fpc": {relation: required}
+"i5fpc": {relation: required, reviewed: true}
 "i5g02": {relation: forward}
 "i5jpn": {relation: required, reviewed: true}
 "i5v2c": {relation: required, reviewed: true}
@@ -6187,7 +6187,7 @@
 "rsngm": {relation: required, reviewed: true}
 "rsree": {relation: required, reviewed: true}
 "rsz7z": {relation: weak, reviewed: true}
-"rt8kq": {relation: weak}
+"rt8kq": {relation: weak, reviewed: true}
 "rtgha": {relation: required, reviewed: true}
 "rtgt3": {relation: weak, reviewed: true}
 "rtja6": {relation: required}
@@ -7498,7 +7498,7 @@
 "xo82q": {relation: required}
 "xoitz": {relation: required, reviewed: true}
 "xoj3o": {relation: required, reviewed: true}
-"xom4v": {relation: weak}
+"xom4v": {relation: weak, reviewed: true}
 "xosv0": {relation: required}
 "xp449": {relation: required}
 "xp5jk": {relation: required, reviewed: true}
