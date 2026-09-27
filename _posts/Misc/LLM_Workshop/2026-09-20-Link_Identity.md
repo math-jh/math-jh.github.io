@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-20
-last_modified_at: 2026-09-25
+last_modified_at: 2026-09-27
 weight: 53
 
 ---
@@ -197,3 +197,36 @@ _LINK_ALL_RE = re.compile(r"\[(?:\\.|[^\[\]\\])*\]\([^)]*\)")
 > revising은 뭐 어쩔 수 없다 생각해.
 
 지금 글 속 링크 IAL에는 lid 하나만 있다. 판정은 레코드 8,010개짜리 원장에서 시작했고, 첫 실전 틱은 `ce19fff7`에서 그 파일에 한 줄을 더했다.
+
+## 사후: 원장 변경을 dev 서버가 놓치던 자리
+
+관계가 글 밖으로 나가자 dev 서버에서 새 문제가 생겼다. Jekyll의 `--incremental`은 `_data/`를 의존성으로 추적하지 않는다. 원장에서 관계를 고쳐도 글 파일은 그대로이니 그 글은 다시 렌더되지 않고, 글 앞뒤의 선수지식 박스는 다음 클린 빌드 전까지 낡은 채로 남는다. 사용자는 이 불편을 처음부터 알고 있었고, 마이그레이션 때 dev 서버 반영은 일부 포기하겠다고 했다.
+
+> 깨질 수 있는 곳의 경우, dev 서버 반영은 일부 포기할게, 어차피 프로덕션에서는 문제 없을거고, 지금도 그래프가 full_rebuild 전에 안 바뀌는 건 똑같아.
+
+포기한 부분은 같은 날 저녁 `c41beafb`에서 상당 부분 되돌아왔다. `_plugins/graph_data.rb`가 글마다 `semantic_navigation`의 SHA-256 지문을 캐시 디렉토리에 남겨 두고, incremental 빌드의 `pre_render`에서 지문이 달라진 글에만 `regenerate`를 건다.
+
+```ruby
+def force_changed_navigation(site)
+  previous = load_navigation_fingerprints(site)
+  metadata = site.regenerator.metadata
+  forced = 0
+  site.posts.docs.each do |doc|
+    next unless metadata.key?(doc.path)
+
+    fingerprint = navigation_fingerprint(doc)
+    next if previous && previous[doc.relative_path] == fingerprint
+
+    doc.data["regenerate"] = true
+    forced += 1
+  end
+  Jekyll.logger.info "Semantic nav:", "#{forced} post(s) regenerated for changed navigation"
+end
+```
+{: data-filename="_plugins/graph_data.rb"}
+
+`metadata.key?` 검사가 눈에 띈다. 메타데이터가 아직 없는 글은 Jekyll이 어차피 렌더하므로 건드리지 않는다. 그런 글에 `regenerate`를 강제하면 Jekyll이 메타데이터를 만들지 않아 다음 빌드에서 또 렌더된다. 지문 기록은 `post_write` 훅에서, 임시 파일에 쓴 뒤 `File.rename`으로 바꿔치는 방식으로 남긴다. 빌드가 중간에 죽으면 지문이 갱신되지 않으므로 다음 빌드가 같은 글을 다시 잡는다. 기록이 아예 없는 첫 incremental 빌드에서는 어느 글이 낡았는지 알 수 없어 전부 다시 그린다.
+
+이 장치는 `~/.local/bin/jekyll-data-rebuild-guard.py`와 한 쌍이다. 가드는 `_data`가 바뀌면 incremental 메타데이터를 지우고 클린 빌드를 강제하는데, `INCREMENTAL_SAFE_DATA`에 든 파일은 그 판정에서 뺀다. 원장 `link_relations.yml`이 그 목록에 들어 있어서, 원장 변경은 더 이상 풀빌드를 부르지 않고 바뀐 글만 다시 렌더한다. 지문 장치를 지우면 이 항목도 같이 빼야 하는데, 어긋나도 에러 없이 낡은 화면만 남는다. 그래서 두 파일의 주석에 서로를 적어 두었다.
+
+같은 커밋은 원장을 읽는 쪽도 손봤다. `load()`가 8천 줄 남짓한 YAML을 순수 파이썬 로더로 읽는 데 1초가 넘게 걸렸고, 이제 libyaml이 있으면 `CSafeLoader`를 쓴다. 대시보드 보류 목록의 글별 파싱 캐시와 함께 [Dashboard](/ko/llm_workshop/dashboard) 글에 적혀 있다. 프로덕션은 CI가 항상 클린 빌드라 이 변경과 무관하다([커밋](https://github.com/math-jh/math-jh.github.io/commit/c41beafb)).
