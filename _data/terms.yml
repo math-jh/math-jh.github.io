@@ -14697,6 +14697,13 @@ P:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: principal_open_subset
+  en: principal open subset
+  ko: 주열린부분집합
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: principal_part
   en: principal part
   ko: 주부
