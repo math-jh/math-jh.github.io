@@ -2432,6 +2432,13 @@ C:
     url: /ko/math/lie_theory/serre_relations
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
+- id: chevalley_s_theorem
+  en: 'Chevalley''s theorem'
+  ko: Chevalley의 정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §뇌터 정규화'
+    url: /ko/math/commutative_algebra/noether_normalization
 - id: chevalley_serre_presentation
   en: Chevalley–Serre presentation
   ko: 슈발레-세르 표시
@@ -6779,6 +6786,13 @@ F:
   defs:
   - label: '[리만기하학] §리만 곡률'
     url: /ko/math/riemannian_geometry/curvature
+- id: flat_family
+  en: flat family
+  ko: 평탄 족
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: flat_module
   en: flat module
   ko: 평탄가군
@@ -7434,6 +7448,13 @@ G:
   defs:
   - label: '[스킴] §올곱'
     url: /ko/math/scheme_theory/fiber_products
+- id: generic_flatness
+  en: generic flatness
+  ko: 일반적 평탄성
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: generic_point
   en: generic point
   ko: 일반점
