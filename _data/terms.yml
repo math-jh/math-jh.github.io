@@ -19438,6 +19438,13 @@ T:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: tuple
+  en: tuple
+  ko: 튜플
+  primary: en
+  defs:
+  - label: '[집합론] §집합의 곱'
+    url: /ko/math/set_theory/product_of_sets
 - id: twisted_inverse_image
   en: twisted inverse image
   ko: 비틀린 역상
