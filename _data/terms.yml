@@ -8769,6 +8769,13 @@ I:
   see:
   - label: Quotient ring
     id: quotient_ring
+- id: ideal_sheaf
+  en: ideal sheaf
+  ko: 아이디얼 층
+  primary: en
+  defs:
+  - label: '[스킴] §닫힌 부분스킴'
+    url: /ko/math/scheme_theory/closed_subschemes
 - id: idempotent
   en: idempotent
   ko: 멱등원
@@ -15758,6 +15765,13 @@ R:
   defs:
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+- id: reduced_scheme_structure
+  en: reduced scheme structure
+  ko: 축소 스킴 구조
+  primary: en
+  defs:
+  - label: '[스킴] §닫힌 부분스킴'
+    url: /ko/math/scheme_theory/closed_subschemes
 - id: reduced_space
   en: reduced space
   ko: 축약공간
