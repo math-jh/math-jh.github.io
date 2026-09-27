@@ -96,7 +96,7 @@ $$\mathfrak{a}A_+^N\subseteq \mathfrak{a}$$
 거꾸로 읽으면, degree $d$의 homogeneous element $f$가 $\mathfrak{a}$에 속하지 않더라도 어떤 $N$에 대하여 $\x_i^Nf\in \mathfrak{a}$이기만 하면 $f/\x_i^d=\x_i^Nf/\x_i^{N+d}$는 이미 $\mathfrak{a}_{(\x_i)}$에 속한다. 이러한 $f$는 chart 위에서 $\mathfrak{a}$가 이미 담고 있는 정보이므로, 모든 $i$에 대하여 그러한 $f$들을 전부 모아 ideal을 키워도 각각의 $\mathfrak{a}_{(\x_i)}$는 그대로이고 따라서 closed subscheme도 그대로이다. 
 
 ::: 정의 4
-Homogeneous ideal $\mathfrak{a}\subseteq A_\bullet$에 대하여, 각 $i$마다 $\x_i^Nf\in \mathfrak{a}$인 $N\geq 0$이 존재하는 $f\in A_\bullet$들의 모임을 $\mathfrak{a}$의 *saturation*이라 부르고 $\mathfrak{a}^\sat$으로 적는다. $\mathfrak{a}=\mathfrak{a}^\sat$인 homogeneous ideal은 *saturated*라 부른다.
+Homogeneous ideal $\mathfrak{a}\subseteq A_\bullet$에 대하여, 각 $i$마다 $\x_i^Nf\in \mathfrak{a}$인 $N\geq 0$이 존재하는 $f\in A_\bullet$들의 모임을 $\mathfrak{a}$의 *saturation*이라 부르고 $\mathfrak{a}^\sat$으로 적는다. $\mathfrak{a}=\mathfrak{a}^\sat$인 homogeneous ideal은 *saturated<sub>포화된</sub>*라 부른다.
 :::
 
 그럼 정의에 의해 $\mathfrak{a}^\sat$이 $\mathfrak{a}$를 포함하는 ideal인 것은 자명하다. 또 $\mathfrak{a}$가 homogeneous이므로 $\x_i^Nf\in \mathfrak{a}$는 $f$의 각 homogeneous component에 대해서도 성립하며, 따라서 $\mathfrak{a}^\sat$ 또한 homogeneous ideal이다.
