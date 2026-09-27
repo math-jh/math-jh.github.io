@@ -19797,6 +19797,13 @@ U:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+- id: universal_set
+  en: universal set
+  ko: 전체집합
+  primary: ko
+  defs:
+  - label: '[집합론] §ZFC 공리계'
+    url: /ko/math/set_theory/zfc_axioms
 - id: universally_closed
   en: universally closed
   ko: 보편닫힌사상
