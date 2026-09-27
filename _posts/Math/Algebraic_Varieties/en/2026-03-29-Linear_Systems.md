@@ -97,7 +97,7 @@ sends a homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$ to a sec
 
 $$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
 
-essentially the same computations as in $\mathbb{P}^n$ are possible. In fact, it is known that this surjectivity holds when $d$ is sufficiently large. In particular, since $F - G \in I(X)$ defines the same intersection, the parameter space becomes $\mathbb{P}(V/(V \cap I(X)))$.
+essentially the same computations as in $\mathbb{P}^n$ are possible. In fact, it is known that for a projective variety $X$, this surjectivity holds when $d$ is sufficiently large. In particular, since $F - G \in I(X)$ defines the same intersection, the parameter space becomes $\mathbb{P}(V/(V \cap I(X)))$.
 
 ## Base Locus
 
