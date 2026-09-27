@@ -95,7 +95,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mat
 
 $$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
 
-로서 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 실제로 $d$가 충분히 크면 이 surjectivity가 성립한다는 것이 알려져 있다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
+로서 $\mathbb{P}^n$에서와 본질적으로 동일한 계산이 가능하다. 실제로 projective variety $X$에 대해서는 $d$가 충분히 크면 이 surjectivity가 성립한다는 것이 알려져 있다. 특히 $F - G \in I(X)$일 때 같은 교차를 정의하므로, parameter space는 $\mathbb{P}(V/(V \cap I(X)))$가 된다.
 
 ## Base Locus
 
