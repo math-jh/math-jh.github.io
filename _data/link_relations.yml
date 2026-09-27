@@ -1853,7 +1853,7 @@
 "83lfi": {relation: required}
 "83o2l": {relation: weak}
 "83oiz": {relation: required, reviewed: true}
-"83ove": {relation: required}
+"83ove": {relation: required, reviewed: true}
 "83ren": {relation: required, reviewed: true}
 "83vpj": {relation: required, reviewed: true}
 "8400g": {relation: required, reviewed: true}
@@ -3824,7 +3824,7 @@
 "hbkd4": {relation: required, reviewed: true}
 "hbvay": {relation: required, reviewed: true}
 "hc8vx": {relation: required}
-"hcd2y": {relation: required}
+"hcd2y": {relation: required, reviewed: true}
 "hcgtd": {relation: required, reviewed: true}
 "hcown": {relation: required}
 "hcskw": {relation: required, reviewed: true}
@@ -3998,7 +3998,7 @@
 "i58cr": {relation: required}
 "i5aii": {relation: required}
 "i5fpc": {relation: required, reviewed: true}
-"i5g02": {relation: forward}
+"i5g02": {relation: forward, reviewed: true}
 "i5jpn": {relation: required, reviewed: true}
 "i5v2c": {relation: required, reviewed: true}
 "i60yk": {relation: required, reviewed: true}
@@ -4534,7 +4534,7 @@
 "kgoj2": {relation: weak, reviewed: true}
 "kh3jc": {relation: required, reviewed: true}
 "khen1": {relation: required, reviewed: true}
-"khi28": {relation: forward}
+"khi28": {relation: requires-review}
 "khncr": {relation: weak, reviewed: true}
 "khrzv": {relation: required, reviewed: true}
 "khs2y": {relation: required, reviewed: true}
@@ -6754,7 +6754,7 @@
 "ubcz9": {relation: required, reviewed: true}
 "ubmb1": {relation: required, reviewed: true}
 "ubu4y": {relation: required}
-"uc3yh": {relation: required}
+"uc3yh": {relation: required, reviewed: true}
 "uc68z": {relation: required, reviewed: true}
 "ucdke": {relation: required, reviewed: true}
 "ucgpa": {relation: weak}
