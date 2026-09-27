@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-21
 weight: 19
+revising: true
 
 ---
 
@@ -170,6 +171,12 @@ $$\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a
 :::
 
 위의 증명에서 보듯이 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로서, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것으로, 실제 계산을 할 때 우리는 [정의 4](#def4){: data-lid="5nsku" }에 따라 affine open 위에서 $\widetilde{\Omega_{B/A}}$로 계산하겠지만 위의 명제가 이 sheaf의 좌표에 의존하지 않는 묘사를 준다. 
+
+대수적으로 $\mathfrak{a}/\mathfrak{a}^2$가 $1$차 미분을 기록하듯, 더 높은 power로 만든 quotient $(B\otimes_AB)/\mathfrak{a}^{m+1}$은 $m$차까지의 Taylor 전개를 기록하고, 그 연속한 차이 $\mathfrak{a}^m/\mathfrak{a}^{m+1}$이 $m$차 항을 담는다. 이는 manifold에서 $\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$로 cotangent space와 고차 항을 읽던 것과 같다. ([\[미분다양체\] §여접공간](/ko/math/manifolds/cotangent_space)) 이를 기하적으로 옮기면 diagonal의 $m$차 근방 $\mathcal{O}_{X\times_SX}/\mathcal{I}^{m+1}$을 쓰게 된다. 두 projection을 $p_1,p_2:X\times_SX\rightarrow X$라 하고
+
+$$\mathcal{P}^m_{X/S}=p_{1\ast}\bigl(\mathcal{O}_{X\times_SX}/\mathcal{I}^{m+1}\bigr)$$
+
+로 두면, $X$ 위의 함수 $g$는 $p_2^\ast g$의 image로서 $\mathcal{P}^m_{X/S}$의 section $j^m(g)$를 주며 이를 $g$의 *$m$-jet*이라 부른다. Local coordinate $t$로 한 점 근처에서 $g=a_0+a_1t+a_2t^2+\cdots$라 쓰면 $j^m(g)$는 $a_0,\ldots,a_m$을 기록하므로, $j^{m-1}(g)$가 그 점에서 사라진다는 것은 $g$의 vanishing order가 $m$ 이상이라는 것이다.
 
 앞 절의 두 exact sequence도 associated sheaf functor의 exactness를 통해 sheaf 수준으로 곧바로 옮겨진다. ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6){: data-lid="xcgw0" }) Scheme morphism들의 합성 $X \rightarrow S' \rightarrow S$와 그 첫 morphism $\psi: X \rightarrow S'$에 대하여, 각 affine open 위에서 [명제 1](#prop1){: data-lid="noiqa" }을 associated sheaf로 옮기면 $\mathcal{O}_X$-module들의 exact sequence
 
