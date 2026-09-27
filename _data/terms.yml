@@ -1206,6 +1206,13 @@ A:
   see:
   - label: ZFC system
     id: ZFC_system
+- id: axiomatic_set_theory
+  en: axiomatic set theory
+  ko: 공리적 집합론
+  primary: en
+  defs:
+  - label: '[집합론] §ZFC 공리계'
+    url: /ko/math/set_theory/zfc_axioms
 - id: axiomatic_system
   en: axiomatic system
   ko: 공리계
@@ -12723,6 +12730,13 @@ N:
     id: relative_cotangent_complex
   - label: Kähler differential
     id: kähler_differential
+- id: naive_set_theory
+  en: naive set theory
+  ko: 소박한 집합론
+  primary: en
+  defs:
+  - label: '[집합론] §ZFC 공리계'
+    url: /ko/math/set_theory/zfc_axioms
 - id: nakayama_lemma
   en: Nakayama lemma
   ko: 나카야마 보조정리
