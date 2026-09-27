@@ -806,7 +806,7 @@
 "3keuw": {relation: required}
 "3kf0n": {relation: required}
 "3kjbs": {relation: required}
-"3ksmb": {relation: required}
+"3ksmb": {relation: required, reviewed: true}
 "3kuvr": {relation: required}
 "3l40r": {relation: required}
 "3l9mi": {relation: required, reviewed: true}
@@ -1000,7 +1000,7 @@
 "4gpoh": {relation: required, reviewed: true}
 "4gqzj": {relation: required}
 "4gvw6": {relation: required, reviewed: true}
-"4gytx": {relation: required}
+"4gytx": {relation: required, reviewed: true}
 "4hf0m": {relation: required, reviewed: true}
 "4hf9f": {relation: required, reviewed: true}
 "4hi9u": {relation: weak}
@@ -1135,7 +1135,7 @@
 "529au": {relation: required, reviewed: true}
 "52pus": {relation: required}
 "52rsb": {relation: weak, reviewed: true}
-"52xe7": {relation: required}
+"52xe7": {relation: required, reviewed: true}
 "52yf9": {relation: weak, reviewed: true}
 "537ba": {relation: required}
 "53fkz": {relation: required, reviewed: true}
@@ -1572,7 +1572,7 @@
 "6waej": {relation: forward, reviewed: true}
 "6wc9t": {relation: required, reviewed: true}
 "6wctb": {relation: required, reviewed: true}
-"6wysr": {relation: required}
+"6wysr": {relation: required, reviewed: true}
 "6x0us": {relation: required, reviewed: true}
 "6x8ro": {relation: required}
 "6x921": {relation: required}
@@ -2049,7 +2049,7 @@
 "8xcpk": {relation: required, reviewed: true}
 "8xmp8": {relation: required, reviewed: true}
 "8xxpv": {relation: required, reviewed: true}
-"8y2jl": {relation: required}
+"8y2jl": {relation: required, reviewed: true}
 "8y405": {relation: required}
 "8yaqr": {relation: required, reviewed: true}
 "8yatl": {relation: weak, reviewed: true}
@@ -3245,7 +3245,7 @@
 "efvi0": {relation: weak, reviewed: true}
 "eg97f": {relation: required}
 "egd0p": {relation: required, reviewed: true}
-"egf2o": {relation: required}
+"egf2o": {relation: requires-review}
 "egmzc": {relation: weak}
 "egvx8": {relation: required, reviewed: true}
 "egwxw": {relation: required, reviewed: true}
@@ -3880,7 +3880,7 @@
 "hl7h6": {relation: forward}
 "hlc93": {relation: required, reviewed: true}
 "hld30": {relation: forward, reviewed: true}
-"hls5i": {relation: required}
+"hls5i": {relation: required, reviewed: true}
 "hm0bv": {relation: required, reviewed: true}
 "hm2e5": {relation: required}
 "hm3mp": {relation: required, reviewed: true}
@@ -3894,7 +3894,7 @@
 "hnbow": {relation: required, reviewed: true}
 "hng0g": {relation: weak, reviewed: true}
 "hnm4t": {relation: required, reviewed: true}
-"hnt01": {relation: required}
+"hnt01": {relation: requires-review}
 "hnwpo": {relation: required}
 "hnya7": {relation: forward}
 "hnzgf": {relation: required, reviewed: true}
@@ -4288,7 +4288,7 @@
 "jety3": {relation: required, reviewed: true}
 "jexxp": {relation: required}
 "jf61k": {relation: required, reviewed: true}
-"jfc9o": {relation: required}
+"jfc9o": {relation: required, reviewed: true}
 "jfod3": {relation: required}
 "jfsw8": {relation: weak, reviewed: true}
 "jfybw": {relation: required, reviewed: true}
@@ -5259,7 +5259,7 @@
 "nmpu0": {relation: required, reviewed: true}
 "nn0fw": {relation: required, reviewed: true}
 "nn0lo": {relation: required, reviewed: true}
-"nn4oj": {relation: required}
+"nn4oj": {relation: required, reviewed: true}
 "nnb9d": {relation: weak}
 "nnhdr": {relation: required, reviewed: true}
 "nniht": {relation: required, reviewed: true}
@@ -5444,7 +5444,7 @@
 "oe5ym": {relation: required, reviewed: true}
 "oea59": {relation: weak, reviewed: true}
 "oeakt": {relation: required}
-"oebr8": {relation: required}
+"oebr8": {relation: required, reviewed: true}
 "oefr5": {relation: required, reviewed: true}
 "oek70": {relation: required, reviewed: true}
 "oekvy": {relation: required}
@@ -7811,7 +7811,7 @@
 "z0js2": {relation: required, reviewed: true}
 "z1p7n": {relation: required}
 "z1sia": {relation: required}
-"z1tab": {relation: required}
+"z1tab": {relation: required, reviewed: true}
 "z1y4k": {relation: required, reviewed: true}
 "z26zg": {relation: required, reviewed: true}
 "z28av": {relation: required, reviewed: true}
