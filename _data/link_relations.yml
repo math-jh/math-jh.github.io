@@ -6747,6 +6747,7 @@
 "uamkl": {relation: required, reviewed: true}
 "uan1s": {relation: weak, reviewed: true}
 "uarkc": {relation: required}
+"uasta": {relation: required}
 "uauah": {relation: required}
 "uav98": {relation: required, reviewed: true}
 "uaxjr": {relation: required, reviewed: true}
