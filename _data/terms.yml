@@ -9720,6 +9720,13 @@ I:
     url: /ko/math/linear_algebra/matrices
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: inverse_relation
+  en: inverse relation
+  ko: 역관계
+  primary: en
+  defs:
+  - label: '[집합론] §이항관계들 사이의 연산'
+    url: /ko/math/set_theory/operation_of_binary_relations
 - id: inverse_system
   en: inverse system
   ko: 역향체계
