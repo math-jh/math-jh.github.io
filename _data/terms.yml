@@ -13674,6 +13674,13 @@ O:
   defs:
   - label: '[집합론] §정렬집합의 성질들'
     url: /ko/math/set_theory/well_ordering
+- id: ordinal_number
+  en: ordinal number
+  ko: 순서수
+  primary: en
+  defs:
+  - label: '[집합론] §서수들 사이의 순서관계'
+    url: /ko/math/set_theory/order_relations_between_ordinals
 - id: orientable
   en: orientable
   ko: 가향

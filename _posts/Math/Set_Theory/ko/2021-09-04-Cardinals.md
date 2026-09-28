@@ -67,7 +67,7 @@ $A,B$가 두 well-ordered set들이라 하자. 그럼 적어도 다음 중 하�
 엄밀한 해결책은 아니지만, 지금부터는 이 문제가 해결되었다고 가정하고 이야기를 전개한다. (참고: [Wikipedia, Class](https://en.wikipedia.org/wiki/Class_(set_theory)))
 
 ::: 정의 2
-집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal*이라 부르고, $\card A$로 적는다.
+집합 $A$의 equivalence class의 한 representative를 $A$의 *cardinal<sub>기수</sub>*이라 부르고, $\card A$로 적는다.
 :::
 
 공집합은 유일하므로, $\card\emptyset$은 정확히 $\emptyset$이다. Cardinal을 다룰 때는 이 집합을 $\mathbf{0}$으로 적는다. 원소 하나짜리 집합들, 예컨대 $\{a\}$와 $\{b\}$들은 모두 서로 equipotent하다. $\{(a,b)\}$가 $\{a\}$에서 $\{b\}$로의 전단사함수이기 때문이다. 이를 $\mathbf{1}$로 적자. 아직 이들이 자연수가 되는 것은 아니지만, 우리는 곧 cardinal들에 연산들을 주어 자연수처럼 볼 것이다.
