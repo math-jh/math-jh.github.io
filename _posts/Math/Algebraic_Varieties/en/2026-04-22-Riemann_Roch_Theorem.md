@@ -177,7 +177,7 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 
 and from this we can recover the computation $\deg(K_C)=2g-2$ in [§Canonical Line Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10){: data-lid="ici1z" }. In that example, the degree-genus formula was mentioned as a well-known formula and $\deg(K_C)$ was obtained from it (and this is more plausible in a historical context), but in a moment we will see in [Proposition 7](#prop7){: data-lid="em01e" } that the degree-genus formula is a special case of the Riemann–Roch theorem.
 
-In any case, summarizing the computations so far, one can think of $\ell(D)$ as the dimension of the complete linear system of $D$, and $\ell(K_C - D)$ as a correction term that $K_C$ imposes on $D$, which vanishes for large degree and reflects the geometric information of $K_C$ for small degree.
+In any case, summarizing the computations so far, one can think of $\ell(D)-1$ as the dimension of the complete linear system of $D$, and $\ell(K_C - D)$ as a correction term that $K_C$ imposes on $D$, which vanishes for large degree and reflects the geometric information of $K_C$ for small degree.
 
 ::: Example 4
 **$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Line Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8){: data-lid="37laf" }). On the other hand, we showed in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16){: data-lid="85tmq" } that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so we know that
