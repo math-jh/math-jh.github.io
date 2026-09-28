@@ -2393,6 +2393,7 @@
 "akrwl": {relation: required, reviewed: true}
 "aktvb": {relation: required, reviewed: true}
 "al1b1": {relation: required, reviewed: true}
+"al3lh": {relation: weak}
 "alj0h": {relation: required, reviewed: true}
 "alkct": {relation: required, reviewed: true}
 "alqlt": {relation: weak, reviewed: true}
