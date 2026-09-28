@@ -176,7 +176,7 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 
 이고 이로부터 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10){: data-lid="ici1z" }에서의 계산 $\deg(K_C)=2g-2$를 복원할 수 있다. 해당 예시에서는 degree-genus formula를 잘 알려진 공식으로 언급하고 이로부터 $\deg(K_C)$를 얻어냈지만 (그리고 이것이 역사적인 맥락에서는 더 타당하지만) 우리는 잠시 후 [명제 7](#prop7){: data-lid="em01e" }에서 degree-genus formula가 Riemann-Roch theorem의 특수한 경우임을 살펴볼 것이다. 
 
-어쨌든 지금까지의 계산을 정리하면 $\ell(D)$는 $D$의 complete linear system의 차원, $\ell(K_C - D)$는 $K_C$가 $D$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $K_C$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
+어쨌든 지금까지의 계산을 정리하면 $\ell(D)-1$은 $D$의 complete linear system의 차원, $\ell(K_C - D)$는 $K_C$가 $D$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $K_C$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 ::: 예시 4
 **$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8){: data-lid="37laf" }). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16){: data-lid="85tmq" }에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,

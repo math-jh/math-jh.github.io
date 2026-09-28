@@ -401,7 +401,7 @@ Projective variety $X$ 위에 정의된 ample line bundle $\mathcal{L}$과 임�
 :::
 
 ::: 증명
-우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편 [명제 7](#prop7){: data-lid="66yi1" }에 의해 적당한 $k_0$가 존재하여 모든 $k \geq k_0$와 $i > 0$에 대해 $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$이 성립한다. 이제 $k = k_0 + m\dim X$로 두면 $1 \leq i \leq \dim X$에 대해 $k - mi \geq k_0$이므로
+우선 $\mathcal{L}$이 ample이므로 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이다. 한편 [명제 7](#prop7){: data-lid="66yi1" }에 의해 적당한 $k_0$가 존재하여 모든 $k \geq k_0$와 $i > 0$에 대해 $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$이 성립한다. 이제 $k \geq k_0 + m\dim X$인 임의의 $k$를 택하면 $1 \leq i \leq \dim X$에 대해 $k - mi \geq k_0$이므로
 
 $$H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k} \otimes (\mathcal{L}^{\otimes m})^{\otimes -i}) = H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k-mi}) = 0$$
 
