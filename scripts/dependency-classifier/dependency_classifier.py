@@ -534,7 +534,7 @@ def paragraph_context(text: str, offset: int, radius: int) -> str:
         if end >= 0:
             body_start = end + 5
     chunks = []
-    for m in re.finditer(r"\S(?:.*?\S)?(?=\n\s*\n|\Z)", text[body_start:], re.DOTALL):
+    for m in re.finditer(r"\S(?:.*?\S)?(?=\n\s*\n|\s*\Z)", text[body_start:], re.DOTALL):
         chunks.append((body_start + m.start(), body_start + m.end(), m.group(0)))
     idx = next((i for i, (a, b, _) in enumerate(chunks) if a <= offset <= b), None)
     if idx is None:
@@ -573,8 +573,50 @@ def target_context(link: Link, wide: bool, full: bool = False) -> tuple[str, str
         # The target introduction is often enough to distinguish a prerequisite
         # from a mere analogy; the reviewer gets a larger slice.
         context = text[:9000 if wide else 4500]
-    src = paragraph_context(source_text, link.start, 2 if wide else 1)
+    src = source_context(source_text, link.start, 2 if wide else 1)
     return src, context[:12000 if wide else 6500]
+
+
+FOOTNOTE_DEF_RE = re.compile(r"(?m)^\[\^([^\]\s]+)\]:")
+FOOTNOTE_REF_RE = re.compile(r"\[\^([^\]\s]+)\](?!:)")
+
+
+def _footnote_defs(text: str) -> dict[str, tuple[int, int]]:
+    """각주 정의 `[^id]: …` 의 (시작, 끝) — 끝은 다음 정의나 들여쓰지 않은 새 문단."""
+    starts = [(m.group(1), m.start()) for m in FOOTNOTE_DEF_RE.finditer(text)]
+    spans = {}
+    for i, (fid, start) in enumerate(starts):
+        limit = starts[i + 1][1] if i + 1 < len(starts) else len(text)
+        brk = re.search(r"\n\s*\n(?=\S)", text[start:limit])
+        spans[fid] = (start, start + brk.start() if brk else limit)
+    return spans
+
+
+def source_context(text: str, offset: int, radius: int) -> str:
+    """링크 주변 문단에 각주의 짝을 붙인다.
+
+    각주 정의는 글 끝에 모여 있어서 문단 단위로 자르면 짝이 떨어진다. 링크가
+    각주 안에 있으면 그 각주를 다는 본문 문단을, 본문 문단에 각주 표지가 있으면
+    그 각주 내용을 덧붙인다.
+    """
+    src = paragraph_context(text, offset, radius)
+    defs = _footnote_defs(text)
+    home = next((fid for fid, (a, b) in defs.items() if a <= offset < b), None)
+    extra = []
+    if home:
+        for m in FOOTNOTE_REF_RE.finditer(text):
+            if m.group(1) == home and not any(a <= m.start() < b for a, b in defs.values()):
+                extra.append(f"[Footnote [^{home}] is attached to this passage]\n\n"
+                             + paragraph_context(text, m.start(), radius))
+                break
+    else:
+        for fid in dict.fromkeys(FOOTNOTE_REF_RE.findall(src)):
+            if fid in defs:
+                a, b = defs[fid]
+                note = text[a:b].strip()
+                if note not in src:
+                    extra.append(note)
+    return "\n\n".join([src, *extra])
 
 
 def prompt_items(links: list[Link], wide: bool, full: bool = False) -> list[dict]:

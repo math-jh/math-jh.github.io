@@ -1244,13 +1244,69 @@ def build_polish_prompt(ko_body: str, en_body: str) -> str:
     )
 
 
+# KO 원문 지적의 범위. Antigravity 1차 후보·Codex 2차 판정·Claude verify 의
+# KO-TYPOS 가 같은 문장을 쓴다. 용어·병기·표기는 저자의 편집 결정이고 md_lint 와
+# terms.yml 이 따로 관할하므로, 이 경로는 수학적 오류만 올린다.
+KO_FINDING_SCOPE = (
+    "Scope: a finding must be about the MATHEMATICS, i.e. whether a statement, "
+    "formula, proof step, or hypothesis is true and adequately supported. "
+    "Out of scope and never a finding: terminology choice, which language a term "
+    "is written in, the order or form of a bilingual gloss (`*term<sub>gloss</sub>*` "
+    "in either direction), inconsistency of such presentation between terms, "
+    "notation conventions and use of the blog's macros, typography, wording, and "
+    "style. Those are the author's editorial decisions."
+)
+
+# 블로그 하우스 규약: 편집 지침의 수식 표기·용어 절과 KaTeX 커스텀 매크로 목록.
+# 매 호출 때 정본 파일을 읽어 붙이므로 지침·매크로가 바뀌면 다음 틱에 반영된다.
+HOUSE_GUIDELINE = BLOG_ROOT / ".claude/guidelines/GUIDELINE-Edit.md"
+HOUSE_GUIDELINE_SECTIONS = ("수식 표기", "용어 사용")
+KATEX_MACROS_JS = BLOG_ROOT / "assets/js/katex-macros.js"
+_MACRO_KEY_RE = re.compile(r'^\s*"(\\\\[A-Za-z]+)"\s*:', re.MULTILINE)
+
+
+def house_conventions() -> str:
+    """KO 감사·판정 프롬프트에 싣는 하우스 규약 블록.
+
+    GUIDELINE-Edit.md 에서 `## N. <제목>` 절을 제목으로 골라 싣고, 하나라도 못
+    찾으면 지침 전문을 싣는다 (절 번호·순서가 바뀌어도 규약이 빠지지 않게).
+    """
+    guide = HOUSE_GUIDELINE.read_text(encoding="utf-8")
+    sections = re.split(r"(?m)^(?=## )", guide)
+    picked = [re.sub(r"\n-{3,}\Z", "", s.strip()) for s in sections
+              if s.startswith("## ")
+              and any(t in s.split("\n", 1)[0] for t in HOUSE_GUIDELINE_SECTIONS)]
+    if len(picked) != len(HOUSE_GUIDELINE_SECTIONS):
+        log(f"HOUSE-CONVENTIONS: {HOUSE_GUIDELINE.name} 에서 절 "
+            f"{HOUSE_GUIDELINE_SECTIONS} 을 다 찾지 못해 전문을 싣는다")
+        picked = [guide.strip()]
+    macros = [m.replace("\\\\", "\\") for m in
+              _MACRO_KEY_RE.findall(KATEX_MACROS_JS.read_text(encoding="utf-8"))]
+    return (
+        "HOUSE CONVENTIONS. The blog's own editing guideline and KaTeX macros. "
+        "Korean written according to these is correct by definition; never "
+        "report it.\n\n"
+        "Custom KaTeX macros defined site-wide (a macro in this list is neither "
+        "undefined nor malformed; e.g. `\\x`, `\\y`, `\\z` are the blog's "
+        "polynomial variables):\n"
+        + " ".join(macros) + "\n\n"
+        f"--- BEGIN {HOUSE_GUIDELINE.name} (excerpt) ---\n"
+        + "\n\n".join(picked) + "\n"
+        f"--- END {HOUSE_GUIDELINE.name} ---"
+    )
+
+
 KO_SOURCE_AUDIT_INSTRUCTIONS = """Read the complete Korean mathematics post below during this polishing run. This is a read-only triage task: never rewrite the post and never discuss the English translation.
 
 Return only high-confidence candidates in either category:
-- ERROR: a likely factual or mathematical error, wrong index/operator/direction, missing prime or hypothesis, malformed LaTeX symbol, evident typo, or contradiction between a formula and its surrounding prose.
+- ERROR: a likely factual or mathematical error, wrong index/operator/direction, missing prime or hypothesis, broken LaTeX that cannot render, a typo that garbles the mathematical meaning, or contradiction between a formula and its surrounding prose.
 - EXPLANATION: a specific place where a necessary definition, hypothesis, logical step, or clarification is missing enough to make the argument genuinely unclear or unsupported.
 
+@@SCOPE@@
+
 Do not report style preferences, optional enrichment, mere brevity, alternative conventions, or speculative concerns. Quote the exact Korean locus. Suggest the smallest concrete Korean fix, but do not apply it.
+
+@@HOUSE@@
 
 Output JSON only, with this exact shape:
 {"findings":[{"kind":"ERROR or EXPLANATION","quote":"exact Korean quote","issue":"short reason","suggested_fix":"minimal Korean correction or addition"}]}
@@ -2140,12 +2196,14 @@ Only mark a pair LOSSY when you are CONFIDENT that a mathematical statement, hyp
 Set the overall VERDICT to lossy if ANY pair is LOSSY, otherwise safe.
 
 Separately: whenever the English differs from the Korean BECAUSE THE KOREAN IS WRONG
-— a wrong index or subscript, a swapped operator, a missing prime, a misspelling, a
-garbled symbol, an equation that says something the surrounding prose contradicts —
+— a wrong index or subscript, a swapped operator, a missing prime, a garbled symbol,
+an equation that says something the surrounding prose contradicts —
 report it under KO-TYPOS, quoting the Korean as written and the correct form. Do this
 even though the pair is SAFE: the English needs no fix, but the Korean does. Report
-ONLY things you are confident are errors in the Korean; omit the section if there are
-none. Never invent one to fill the section.
+ONLY things you are confident are mathematical errors in the Korean; omit the section
+if there are none. Never invent one to fill the section. Never report what the house
+conventions at the end of this prompt make correct (the blog's custom macros, its
+terminology and gloss choices).
 
 Output (terse, no preamble, no closing remarks):
 
@@ -2382,6 +2440,12 @@ valid convention. For EXPLANATION, verify that a definition, hypothesis,
 logical step, or clarification is genuinely needed; optional enrichment and
 style improvements are FALSE. Use UNSURE when the supplied post is insufficient.
 
+@@SCOPE@@ A candidate outside this scope is FALSE, and so is any candidate
+whose quoted Korean follows the house conventions below, even if the
+triage model called it an error or an inconsistency.
+
+@@HOUSE@@
+
 Return Korean reasoning and the smallest concrete Korean correction/addition.
 Do not silently expand the author's scope. Write every mathematical expression
 in "why" and "recommended_fix" inside $...$ exactly as the post does (e.g.
@@ -2469,6 +2533,8 @@ def call_codex_ko_review(ko_path: Path, findings: List[dict]) -> dict:
     """Codex exec를 read-only·ephemeral로 돌려 KO 후보만 2차 판정한다."""
     body = _body_after_frontmatter(ko_path.read_text(encoding="utf-8")).strip()
     prompt = (_KO_REVIEW_PROMPT
+              .replace("@@SCOPE@@", KO_FINDING_SCOPE)
+              .replace("@@HOUSE@@", house_conventions())
               .replace("@@KO_PATH@@", str(ko_path.relative_to(BLOG_ROOT)))
               .replace("@@KO_BODY@@", body[:KO_REVIEW_BODY_MAX])
               .replace("@@FINDINGS@@", json.dumps(
@@ -2655,6 +2721,7 @@ def verify_math_mismatch(
         prompt += f"\n=== PAIR {i} [{rid}] ===\n[KOREAN]\n{kr}\n[ENGLISH]\n{er}\n"
     if omitted:
         prompt += f"\n(Note: {omitted} further suspect region(s) omitted for length.)\n"
+    prompt += "\n" + house_conventions() + "\n"
 
     MAX_ATTEMPTS = 2
     for attempt in range(1, MAX_ATTEMPTS + 1):
@@ -3038,8 +3105,10 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
     """
     ko_text = ko_path.read_text(encoding="utf-8")
     before = hashlib.sha256(ko_text.encode("utf-8")).hexdigest()
-    prompt = KO_SOURCE_AUDIT_INSTRUCTIONS.replace(
-        "@@KO_POST@@", ko_text)
+    prompt = (KO_SOURCE_AUDIT_INSTRUCTIONS
+              .replace("@@SCOPE@@", KO_FINDING_SCOPE)
+              .replace("@@HOUSE@@", house_conventions())
+              .replace("@@KO_POST@@", ko_text))
     out = call_translator(prompt, thinking=False)
     after = hashlib.sha256(ko_path.read_bytes()).hexdigest()
     if before != after:

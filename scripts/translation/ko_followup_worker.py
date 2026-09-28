@@ -285,12 +285,18 @@ cleanup within the same edited sentence; fail only an unrelated semantic change 
 an English change unsupported by the corrected KO.
 
 AUTHOR NOTE, when present, is the Korean author's message to you about this
-follow-up. Read it as the author's account and weigh it; it is not an override.
-If the author says a finding needs no Korean change (for example, it is a false
-positive or an intended convention), pass that finding only when the note gives
-a mathematically sound reason that the post supports; otherwise fail and say
-what is still wrong. If the note explains how the KO diff resolves a finding,
-check that the diff actually does so. Address the note in "why", in Korean.
+follow-up. What the author decides is final for everything except mathematical
+truth. When the note says a finding needs no Korean change, or will be resolved
+only partially, accept that for any finding that is not a mathematical falsehood
+in the Korean: terminology, the language or gloss form of a term, notation and
+the blog's macros, style, and how much explanation or detail the post gives are
+the author's editorial decisions, and such a finding passes on the author's word
+alone. Only when the finding says the Korean states something mathematically
+false may you weigh the note's reasoning, and fail it if the note gives no sound
+reason the post supports. If the note explains how the KO diff resolves a
+finding, check that the diff actually does so. The English must still follow
+the Korean as it now stands: fail English that adds content the Korean does not
+have. Address the note in "why", in Korean.
 
 Return JSON only:
 {"pass":true,"why":"short concrete reason"}

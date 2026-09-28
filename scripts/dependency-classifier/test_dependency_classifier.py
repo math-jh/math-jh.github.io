@@ -690,6 +690,24 @@ class RelationSideTest(unittest.TestCase):
 
         self.assertEqual(dc.paragraph_context(text, gap, 0), "첫째.")
 
+    def test_link_in_footnote_gets_the_passage_it_annotates(self) -> None:
+        text = ("---\ntitle: t\n---\n\n이 \"집합\"을 생각한다.[^1]\n\n무관한 문단.\n\n"
+                "다른 문단.\n\n다른 문단 둘.\n\n"
+                "[^1]: 집합이 아니다. ([예시 4](/ko/x#ex4))\n[^2]: 다른 각주.\n")
+        src = dc.source_context(text, text.index("[예시 4]"), 0)
+
+        self.assertIn("[^1]: 집합이 아니다.", src)
+        self.assertIn("이 \"집합\"을 생각한다.[^1]", src)
+
+    def test_body_paragraph_gets_its_footnote_text(self) -> None:
+        text = ("---\ntitle: t\n---\n\n[정리 3](/ko/x#thm3)으로부터 얻는다.[^a]\n\n"
+                "다른 문단.\n\n다른 문단 둘.\n\n"
+                "[^a]: 여기서 compactness 가정을 쓴다.\n    이어지는 줄.\n\n끝 문단.\n")
+        src = dc.source_context(text, text.index("[정리 3]"), 0)
+
+        self.assertIn("[^a]: 여기서 compactness 가정을 쓴다.\n    이어지는 줄.", src)
+        self.assertNotIn("끝 문단.", src)
+
     def test_digest_follows_records_but_not_parked_ones(self) -> None:
         with (
             patch.object(dc, "ROOT", self.root),
