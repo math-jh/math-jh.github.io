@@ -19191,6 +19191,13 @@ T:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: total_order
+  en: total order
+  ko: 전순서
+  primary: en
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: total_space
   en: total space
   ko: 전체공간
