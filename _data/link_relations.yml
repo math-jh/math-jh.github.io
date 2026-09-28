@@ -143,7 +143,7 @@
 "0nuau": {relation: required, reviewed: true}
 "0num7": {relation: required, reviewed: true}
 "0nylx": {relation: required, reviewed: true}
-"0o7xn": {relation: required}
+"0o7xn": {relation: requires-review}
 "0oxed": {relation: required, reviewed: true}
 "0p4re": {relation: required, reviewed: true}
 "0p6ve": {relation: required}
@@ -5219,7 +5219,7 @@
 "n6odi": {relation: required, reviewed: true}
 "n6oo8": {relation: required, reviewed: true}
 "n6sjh": {relation: weak, reviewed: true}
-"n6tdz": {relation: weak}
+"n6tdz": {relation: requires-review}
 "n6vt9": {relation: weak, reviewed: true}
 "n70o8": {relation: weak, reviewed: true}
 "n724d": {relation: required, reviewed: true}
