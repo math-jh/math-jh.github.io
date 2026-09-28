@@ -1,7 +1,7 @@
 ---
 title: "Limits of Functions"
-description: "This post defines the limit of a function using the epsilon-delta language, which is the starting point of calculus. It also covers the limit laws for arithmetic operations, powers, roots, the squeeze theorem, one-sided limits, and limits at infinity with examples."
-excerpt: "Defining limits of functions via ε-δ and proving limit laws and the squeeze theorem"
+description: "The limit of a function, the starting point of calculus, is defined in the language of epsilon-delta. Limit laws for arithmetic operations, limits of powers and roots, the squeeze theorem, one-sided limits, and limits at infinity are covered with examples."
+excerpt: "Defining function limits via epsilon-delta and proving limit laws and squeeze theorem"
 
 categories: [Math / Calculus]
 permalink: /en/math/calculus/functions_and_limits
@@ -12,49 +12,50 @@ date: 2026-06-15
 weight: 1
 translated_at: 2026-08-19T04:15:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-19T04:15:04+00:00
+last_polished_at: 2026-09-28T19:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Definition of Limits
 
-To define differentiation and integration of functions, we need the concept of limits, just as we learned in high school. What makes the limits we now treat more advanced than those from that time is that we now actually *define* them.
+To define differentiation and integration of functions, we need the concept of limits, just as we learned in high school. Compared to back then, what is more advanced about the limits we treat now is that we now *define* limits.
 
 ::: Definition 1
-Any open interval $(c,d)$ containing a real number $a$ ($c<a<d$) is called a *neighborhood* of the point $a$.
+An open interval $(c,d)$ containing a real number $a$ ($c<a<d$) is called a *neighborhood* of the point $a$.
 :::
 
-For now, this level of definition for a neighborhood of $a$ is sufficient. For convenience, we call the set obtained by removing $a$ itself from a neighborhood of $a$ a *deleted neighborhood*.
+For now, this level of definition for a neighborhood of the point $a$ is sufficient. In particular, for convenience, the set obtained by removing $a$ itself from a neighborhood of the point $a$ is called a *deleted neighborhood*.
 
 ::: Definition 2
-Consider a function $f$ defined on some deleted neighborhood of a point $a$. Then a real number $L$ is called the *limit* of $f$ as $x \rightarrow a$ if, for every $\epsilon > 0$, there exists some $\delta > 0$ such that
+Consider a function $f$ defined on some deleted neighborhood of a point $a$. Then, saying that a real number $L$ is the *limit* of $f$ as $x \rightarrow a$ means that for every $\epsilon > 0$, there exists some $\delta > 0$ such that
 
 $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
 holds. In this case, we write
 
-$$\lim_{x \rightarrow a} f(x) = L.$$
+$$\lim_{x \rightarrow a} f(x) = L$$
 :::
 
-An intuitive explanation for this is as follows. When we discussed the concept of limits in high school by saying that $f(x)$ gets *infinitely close* to $L$, this could not serve as a rigorous mathematical definition because the notion of *closeness* is not mathematical. It is analogous to the fact that, mathematically, the collection of numbers near $L$ does not define a set.
+An intuitive explanation for this is as follows. The reason that discussing the concept of limits in high school by saying that $f(x)$ gets *infinitely close* to $L$ cannot be a rigorous mathematical definition is that the notion of *being close* is not mathematical. For instance, this is the same principle as the collection of numbers close to $L$ not defining a set mathematically.
 
-Intuitively, the above $\epsilon$-$\delta$ definition can be understood more easily if we think of it as a process of reaching an agreement that applies to everyone, in order to resolve this issue. That is, no matter how close we require $f(x)$ to be to $L$ (that is, no matter what $\epsilon>0$ is given), as long as we make $x$ sufficiently close to $a$ ($0 < \lvert x - a\rvert < \delta$), we can meet that requirement $\lvert f(x) - L\rvert < \epsilon$. Let us examine this in the following example.
+Intuitively, to resolve this, the above $\epsilon$-$\delta$ definition is easier to understand if we think of it as a process of reaching an agreement among everyone. That is, no matter *how* close we require $f(x)$ to be to $L$ (that is, whatever $\epsilon>0$ is given), as long as we make $x$ sufficiently close to $a$ ($0 < \lvert x - a\rvert < \delta$), we can satisfy that requirement $\lvert f(x) - L\rvert < \epsilon$. Let us examine this in the following example.
 
 ::: Example 3
-When proving limits directly from the definition, if $\lvert f(x) - L\rvert$ is a constant multiple of $\lvert x - a\rvert$ as in a linear function, we can read off $\delta$ immediately; but for functions whose rate of change is not constant, one adjustment is needed. Consider $g(x) = x^2$ and let us show that the limit as $x \rightarrow 2$ is $4$. First, we compute
+When proving limits directly from the definition, if $\lvert f(x) - L\rvert$ is a constant multiple of $\lvert x - a\rvert$ as in a linear function, we can read off $\delta$ immediately; but for functions whose rate of change is not constant, an adjustment is needed. Consider $g(x) = x^2$ and let us show that the limit value as $x \rightarrow 2$ is $4$. First, we compute
 
-$$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert.$$
+$$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert$$
 
-The key point is that $\lvert x-2\rvert$ is small near $2$, but if the accompanying factor $\lvert x+2\rvert$ is not controlled, it can enlarge the product. So we first restrict to $\delta\leq 1$ to secure $\lvert x+2\rvert<5$ (regions with $\delta>1$ are not of interest to begin with), and then set $\delta=\min(1,\epsilon/5)$, so that
+The key point is that $\lvert x-2\rvert$ is small near $2$, but the factor $\lvert x+2\rvert$ attached in front of it can enlarge the product if not controlled. Therefore, we first restrict to $\delta\leq 1$ to secure $\lvert x+2\rvert<5$ (regions where $\delta>1$ are not of interest to begin with), and on top of that, setting $\delta=\min(1,\epsilon/5)$,
 
 $$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$
 
 holds.
 :::
 
-As above, the essence of this definition is that we can choose $\delta$ to be determined by $\epsilon$. Continuing the intuition from above, no matter what $\epsilon>0$ is brought forth, the *rule* of finding a $\delta>0$ that satisfies this condition is precisely what we do when proving the limit of a function.
+As above, the essence of this definition is that we can essentially set $\delta$ to be determined by $\epsilon$; continuing the intuition from above, no matter what $\epsilon>0$ is given, finding a *rule* for a $\delta>0$ that satisfies this condition is precisely what we do when proving the limit of a function.
 
 ## Properties of Limits
 
-Now let us examine the properties of limits based on this. The first property is that if a limit exists, it is unique.
+Now let us examine the properties of limits based on this. First of all, the first property is that if a limit exists, it is unique.
 
 ::: Proposition 4 (Uniqueness of Limits)
 If $\lim_{x\rightarrow a} f(x) = L$ and $\lim_{x\rightarrow a} f(x) = L'$, then $L = L'$.
@@ -65,9 +66,9 @@ Suppose for contradiction that $L \neq L'$. Then $\epsilon = \frac{1}{2}\lvert L
 
 $$0 < \lvert x-a\rvert < \delta_1\implies \lvert f(x) - L\rvert < \epsilon,\qquad 0 < \lvert x-a\rvert < \delta_2\implies\lvert f(x) - L'\rvert < \epsilon$$
 
-are satisfied. Now set $\delta = \min(\delta_1, \delta_2)$. Then for $x$ with $0 < \lvert x-a\rvert < \delta$, the triangle inequality gives
+are satisfied. Now set $\delta = \min(\delta_1, \delta_2)$. Then whenever $0 < \lvert x-a\rvert < \delta$, for such $x$, by the triangle inequality
 
-$$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \epsilon + \epsilon = \lvert L - L'\rvert,$$
+$$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \epsilon + \epsilon = \lvert L - L'\rvert$$
 
 which is a contradiction. Therefore $L = L'$.
 :::
@@ -86,16 +87,16 @@ hold.
 :::
 
 ::: Proof
-1. Given $\epsilon > 0$, from the definition of the limit for $f$ and $g$ we can obtain $\delta_1, \delta_2 > 0$ corresponding to $\epsilon/2$. Then setting $\delta = \min(\delta_1,\delta_2)$, when $0 < \lvert x-a\rvert < \delta$,
+1. Given $\epsilon > 0$, corresponding to $\epsilon/2$ we can obtain $\delta_1, \delta_2 > 0$ from the definition of the limit for $f, g$, respectively. Then setting $\delta = \min(\delta_1,\delta_2)$, when $0 < \lvert x-a\rvert < \delta$,
     
     $$\lvert (f(x)+g(x)) - (L+M)\rvert \leq \lvert f(x)-L\rvert + \lvert g(x)-M\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$
     
     holds.
-2. If $c=0$, any $\delta$ works, so it is trivial. If $c \neq 0$, we take $\delta$ corresponding to $\epsilon/\lvert c\rvert$.
+2. If $c=0$, any $\delta$ works, so it is trivial. If $c \neq 0$, corresponding to $\epsilon/\lvert c\rvert$, it suffices to choose $\delta$.
 
 3. We use the following inequality:
     
-    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert.$$
+    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert$$
     
     Intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ go to $0$, so if we can only guarantee that the accompanying factors $\lvert f(x)\rvert, \lvert g(x)\rvert$ are finite, we can make this smaller than $\epsilon$ through a calculation similar to 1 above.
     
@@ -103,15 +104,15 @@ hold.
         
     $$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
-    holds, and similarly we can choose $\delta$ so that $\lvert g(x)\rvert <\lvert M\rvert+1$. Now we choose $\delta$ so that all of these two conditions and the following two conditions
+    can be achieved, and similarly, so that $\lvert g(x)\rvert <\lvert M\rvert+1$, we can also choose $\delta$. Now it suffices to choose $\delta$ so that both these two conditions and the following two conditions
     
     $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
     
-    hold simultaneously.
+    all hold simultaneously.
 
-4. It suffices to show $1/g(x) \rightarrow 1/M$ and then apply 3. Since $M \neq 0$, we have $\lvert g(x)\rvert > \lvert M\rvert/2$ in a neighborhood of $a$, and
+4. It suffices to show $1/g(x) \rightarrow 1/M$ and then apply 3. Since $M \neq 0$, in a neighborhood of $a$ we have $\lvert g(x)\rvert > \lvert M\rvert/2$, and
 
-$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert,$$
+$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
 so it suffices to make $\lvert g(x)-M\rvert$ sufficiently small.
 :::
@@ -128,10 +129,10 @@ hold.
 :::
 
 ::: Proof
-1. Apply 3 of [Proposition 5](#prop5){: data-lid="l1jgq" } and run induction on $k$.
+1. Apply part 3 of [Proposition 5](#prop5){: data-lid="l1jgq" } and proceed by induction on $k$.
 2. First, since $L > 0$, taking $\delta_1 > 0$ corresponding to $\epsilon_1 = L/2$ gives 
     
-    $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2,$$
+    $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2$$
     
     so $f(x) > L/2 > 0$. On the other hand, for any positive real numbers $u,v$, considering the expansion
     
@@ -143,32 +144,32 @@ hold.
     
     holds. Therefore, if $0 < \lvert x-a\rvert < \delta_1$, then $0<L/2 < \min(f(x), L)$, so substituting $f(x)=u$ and $L=v$ gives
     
-    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k (L/2)^{(k-1)/k}}.$$
+    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k (L/2)^{(k-1)/k}}$$
     
     Now, for any $\epsilon > 0$, choose $\delta_2 > 0$ corresponding to $k (L/2)^{(k-1)/k} \epsilon$ and set $\delta = \min(\delta_1,\delta_2)$. Then when $0 < \lvert x-a\rvert < \delta$, the right-hand side becomes smaller than $\epsilon$.
 :::
 
-By combining these laws, the limit of a polynomial function can be computed by separating it into the limits of each term. The key is the following example.
+By combining these laws, the limit of a polynomial function can be computed by separating it into the limits of each term. The key is the following example. 
 
 ::: Example 7
-For any real number $a$,
+For any real number $a$, 
 
-$$\lim_{x\rightarrow a}x=a.$$
+$$\lim_{x\rightarrow a}x=a$$
 
-This is obtained by taking $\delta=\epsilon$. Also, for any real number $c$,
+This is obtained by taking $\delta=\epsilon$. Also, for any real number $c$, 
 
-$$\lim_{x\rightarrow a}c=c.$$
+$$\lim_{x\rightarrow a}c=c$$
 
-This holds no matter what $\delta$ we choose.
+This holds no matter what $\delta$ we choose. 
 :::
 
-Then for any polynomial function
+Then for any polynomial function 
 
-$$f(x)=c_nx^n+\cdots +c_1x+c_0,$$
+$$f(x)=c_nx^n+\cdots +c_1x+c_0$$
 
-by separating the limit into each term using the sum and constant multiple laws from [Proposition 5](#prop5){: data-lid="bkyke" } and applying [Corollary 6](#cor6){: data-lid="kc5tq" } to the powers, we obtain
+separating the limit into each term using the sum and constant multiple laws from [Proposition 5](#prop5){: data-lid="bkyke" } and applying [Corollary 6](#cor6){: data-lid="kc5tq" } to the powers gives
 
-$$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0,$$
+$$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
 
 and finally substituting [Example 7](#ex7){: data-lid="oefr5" } yields $\lim_{x\rightarrow a}f(x)=f(a)$. Similarly, the limit of a rational function formed as a quotient of polynomial functions is obtained as the quotient of the limits of the numerator and denominator, provided the limit of the denominator is not $0$.
 
@@ -201,7 +202,7 @@ The most famous application of the squeeze theorem is the following trigonometri
 ::: Example 10
 $\lim_{x\rightarrow 0}(\sin x)/x = 1$. For $0 < x < \pi/2$, comparing areas in the unit circle gives the inequality
 
-$$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x,$$
+$$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
 
 that is, $\sin x \leq x \leq \tan x$.
 
@@ -209,17 +210,17 @@ that is, $\sin x \leq x \leq \tan x$.
 
 Now dividing both sides of the above inequality by $\sin x > 0$ and taking reciprocals, we find
 
-$$\cos x \leq \frac{\sin x}{x} \leq 1.$$
+$$\cos x \leq \frac{\sin x}{x} \leq 1$$
 
-This inequality was obtained for $0 < x < \pi/2$, but since $\cos(-x) = \cos x$ and $\sin(-x)/(-x) = (\sin x)/x$, it also holds for $-\pi/2 < x < 0$, and hence over the entire range $0 < \lvert x\rvert < \pi/2$. Moreover, the $\sin x \leq x$ obtained above is also extended to the inequality $\lvert \sin t\rvert \leq \lvert t\rvert$ for all $t$ with $0 < \lvert t\rvert < \pi/2$, since $\sin(-t) = -\sin t$.
+This inequality was obtained for $0 < x < \pi/2$, but since $\cos(-x) = \cos x$ and $\sin(-x)/(-x) = (\sin x)/x$, it also holds for $-\pi/2 < x < 0$, and hence over the entire range $0 < \lvert x\rvert < \pi/2$. Meanwhile, $\sin x \leq x$ obtained above also extends to the inequality $\lvert \sin t\rvert \leq \lvert t\rvert$ for all $t$ with $0 < \lvert t\rvert < \pi/2$, since $\sin(-t) = -\sin t$.
 
 Our claim is that $\cos x \rightarrow 1$. For this, using the half-angle formula for trigonometric functions and the $\lvert \sin(x/2)\rvert \leq \lvert x/2\rvert$ obtained above, we have
 
-$$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2 = \frac{x^2}{2},$$
+$$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2 = \frac{x^2}{2}$$
 
 so
 
-$$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2},$$
+$$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2}$$
 
 and applying [Proposition 8](#prop8){: data-lid="cglpa" } shows that $\cos x \rightarrow 1$. Now using this and applying [Proposition 8](#prop8){: data-lid="629s1" } again to the earlier inequality shows that the limit of $(\sin x)/x$ is $1$.
 :::
@@ -229,7 +230,7 @@ The following example is also classical.
 ::: Example 11
 $\lim_{x\rightarrow 0} x\sin(1/x) = 0$. This is because $\bigl\lvert x\sin(1/x)\bigr\rvert \leq \lvert x\rvert$, so
 
-$$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert,$$
+$$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert$$
 
 and both ends go to $0$. On the other hand, $\sin(1/x)$ itself does not have a limit as $x \rightarrow 0$, because it oscillates infinitely between $-1$ and $1$ as $x$ approaches $0$. The factor $x$ pressing this oscillation down to $0$ is the contribution of the squeeze theorem.
 :::
@@ -239,7 +240,7 @@ and both ends go to $0$. On the other hand, $\sin(1/x)$ itself does not have a l
 The limits discussed so far were cases where $x$ approaches $a$ from both sides. By restricting the direction of approach to one side, or by extending the definition to cases where $x$ or $f(x)$ becomes infinitely large, we can describe the shape of functions in finer detail.
 
 ::: Definition 12
-For a real number $a$ and a function $f$, suppose $f$ is defined on $(a, a+c)$ for some suitable $c > 0$. A real number $L$ is called the *right limit* of $f$ as $x \rightarrow a^+$ if, for every $\epsilon > 0$, there exists some $\delta > 0$ such that
+For a real number $a$ and a function $f$, suppose that for some $c > 0$, $f$ is defined on $(a, a+c)$. A real number $L$ is called the *right limit* as $x \rightarrow a^+$ of $f$ if, for every $\epsilon > 0$, there exists some $\delta > 0$ such that
 
 $$a < x < a+\delta \implies \lvert f(x) - L\rvert < \epsilon$$
 
@@ -250,22 +251,24 @@ $$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
 and we write $\lim_{x\rightarrow a^-} f(x) = L$.
 :::
 
-The existence of the limit $\lim_{x\rightarrow a} f(x)$ is equivalent to both one-sided limits existing and being equal to each other. For example, $f(x) = \lvert x\rvert/x$ has different one-sided limits, $1$ as $x \rightarrow 0^+$ and $-1$ as $x \rightarrow 0^-$, so the limit as $x \rightarrow 0$ does not exist. A point where the two one-sided limits are finite but different from each other is called a jump discontinuity of the function.
+The existence of the limit $\lim_{x\rightarrow a} f(x)$ is equivalent to both one-sided limits existing and being equal to each other. For example, for $f(x) = \lvert x\rvert/x$, the limit as $x \rightarrow 0^+$ is $1$ and as $x \rightarrow 0^-$ is $-1$; since the two one-sided limits are different, the limit as $x \rightarrow 0$ does not exist. A point where the two one-sided limits are finite but different from each other is called a jump discontinuity of the function.
 
 ::: Definition 13
-For a function $f$ defined on a deleted neighborhood of a real number $a$, $\lim_{x\rightarrow a} f(x) = \infty$ means that for every $M > 0$, there exists some $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) > M$. Similarly, $\lim_{x\rightarrow a} f(x) = -\infty$ means that for every $M > 0$, there exists some $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) < -M$.
+For a real number $a$ and a function $f$ defined on its deleted neighborhood, $\lim_{x\rightarrow a} f(x) = \infty$ means that for every $M > 0$, there exists some $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) > M$. Similarly, $\lim_{x\rightarrow a} f(x) = -\infty$ means that for every $M > 0$, there exists some $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) < -M$.
 :::
 
 For example, $\lim_{x\rightarrow 0}1/x^2 = \infty$, and in this case the line $x = 0$ is called a *vertical asymptote* of the graph.
 
 ::: Definition 14
-For a function $f$ defined for $x$ greater than some real number $N_0$, $\lim_{x\rightarrow\infty} f(x) = L$ means that for every $\epsilon > 0$, there exists some $N > N_0$ such that
+For some real number $N_0$, and for $x$ greater than this number, given a function $f$ defined there, $\lim_{x\rightarrow\infty} f(x) = L$ means that for every $\epsilon > 0$, there exists some $N > N_0$ such that
 
-$$x > N\implies\lvert f(x) - L\rvert < \epsilon.$$
+$$x > N\implies\lvert f(x) - L\rvert < \epsilon$$
 
-Similarly, for a function defined for $x$ less than some $N_0$, $\lim_{x\rightarrow-\infty} f(x) = L$ means that there exists $N < N_0$ such that
+holds. Similarly, for some $N_0$, and for $x$ less than this number, given a function defined there, $\lim_{x\rightarrow-\infty} f(x) = L$ means that
 
-$$x < N\implies\lvert f(x) - L\rvert < \epsilon.$$
+$$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
+
+holds for some $N < N_0$.
 :::
 
 For example, $\lim_{x\rightarrow\infty}1/x = 0$, and for rational functions the highest-degree term dominates the behavior, so $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$. When such a finite limit $L$ exists, the line $y = L$ becomes a *horizontal asymptote* of the graph.
