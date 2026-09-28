@@ -172,7 +172,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
-$\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-lid="upowc" }을 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 적용하면 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라진다. 따라서 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 모두 만족하고, [명제 5](#prop5){: data-lid="7k0ct" }에 의해 $\mathcal{L}^{\otimes m}$은 very ample이다. 즉 ample line bundle에 대해서는 충분히 큰 <em-ko>모든</em-ko> $m$에서 $\mathcal{L}^{\otimes m}$이 very ample이다.
+$\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간의 코호몰로지, ⁋명제 7](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-lid="upowc" }을 $\mathcal{F} = \mathcal{I}_Z$와 $\mathcal{F} = \mathcal{I}_p^2$에 적용하면 충분히 큰 $m$에 대해 위의 두 $H^1$이 모두 사라진다. 따라서 $\mathcal{L}^{\otimes m}$의 section들이 두 separation 조건을 모두 만족하고, [명제 5](#prop5){: data-lid="7k0ct" }에 의해 $\mathcal{L}^{\otimes m}$은 very ample이다. 추가적으로 relative 버전의 Serre vanishing theorem을 적용하면 이러한 $m$이 $Z$와 $p$의 선택에 무관하게 정해진다는 것을 보일 수 있으므로, ample line bundle에 대해서는 충분히 큰 <em-ko>모든</em-ko> $m$에서 $\mathcal{L}^{\otimes m}$이 very ample이다.
 
 한편 Kodaira vanishing은 [명제 6](#prop6){: data-lid="hld30" }의 고전적인 증명에 다른 방식으로 들어온다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1){: data-lid="467qy" }의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
