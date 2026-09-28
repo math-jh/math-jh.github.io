@@ -2343,7 +2343,7 @@
 "abh4x": {relation: required, reviewed: true}
 "abi7t": {relation: required, reviewed: true}
 "abj47": {relation: required, reviewed: true}
-"abjs7": {relation: weak}
+"abjs7": {relation: requires-review}
 "ac62n": {relation: required}
 "acd14": {relation: required, reviewed: true}
 "achrs": {relation: forward, reviewed: true}
@@ -4223,7 +4223,7 @@
 "j3yl9": {relation: required, reviewed: true}
 "j3yyl": {relation: required, reviewed: true}
 "j455g": {relation: required, reviewed: true}
-"j4712": {relation: weak}
+"j4712": {relation: requires-review}
 "j49xe": {relation: required, reviewed: true}
 "j4dhj": {relation: weak, reviewed: true}
 "j4hgu": {relation: required, reviewed: true}
@@ -4395,7 +4395,7 @@
 "jtz7v": {relation: required, reviewed: true}
 "ju8cy": {relation: required, reviewed: true}
 "jur1t": {relation: required, reviewed: true}
-"juu2n": {relation: weak}
+"juu2n": {relation: requires-review}
 "juvwf": {relation: required, reviewed: true}
 "jv8y8": {relation: required, reviewed: true}
 "jvkku": {relation: required, reviewed: true}
@@ -4908,7 +4908,7 @@
 "m3bj4": {relation: weak, reviewed: true}
 "m3c2a": {relation: required, reviewed: true}
 "m3igm": {relation: required, reviewed: true}
-"m3mus": {relation: weak}
+"m3mus": {relation: requires-review}
 "m3pxp": {relation: required}
 "m3zgs": {relation: required}
 "m41f8": {relation: required}
@@ -7674,7 +7674,7 @@
 "yebuh": {relation: weak, reviewed: true}
 "yee0j": {relation: weak}
 "yef1w": {relation: required, reviewed: true}
-"yexdg": {relation: required}
+"yexdg": {relation: required, reviewed: true}
 "yezue": {relation: weak, reviewed: true}
 "yf0r0": {relation: weak}
 "yf1am": {relation: required}
@@ -7972,7 +7972,7 @@
 "zp566": {relation: required, reviewed: true}
 "zp5cz": {relation: required, reviewed: true}
 "zq4kh": {relation: required, reviewed: true}
-"zqad1": {relation: weak}
+"zqad1": {relation: weak, reviewed: true}
 "zqd90": {relation: required, reviewed: true}
 "zqiq8": {relation: required, reviewed: true}
 "zqr2y": {relation: required, reviewed: true}
