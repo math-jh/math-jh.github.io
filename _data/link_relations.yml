@@ -3508,7 +3508,7 @@
 "fomxn": {relation: weak}
 "foz9f": {relation: weak, reviewed: true}
 "fp35m": {relation: forward, reviewed: true}
-"fp9tu": {relation: required}
+"fp9tu": {relation: required, reviewed: true}
 "fpf6h": {relation: weak}
 "fpt4h": {relation: required, reviewed: true}
 "fpx48": {relation: required, reviewed: true}
@@ -3551,7 +3551,7 @@
 "fwdup": {relation: weak, reviewed: true}
 "fwene": {relation: required, reviewed: true}
 "fwp17": {relation: required, reviewed: true}
-"fwqv2": {relation: required}
+"fwqv2": {relation: required, reviewed: true}
 "fwxqr": {relation: required}
 "fxasp": {relation: required, reviewed: true}
 "fxgp2": {relation: required, reviewed: true}
@@ -6892,7 +6892,7 @@
 "unsxg": {relation: required, reviewed: true}
 "uo0vd": {relation: required, reviewed: true}
 "uo5kt": {relation: weak, reviewed: true}
-"uo8tg": {relation: required}
+"uo8tg": {relation: required, reviewed: true}
 "uo8v8": {relation: required, reviewed: true}
 "uo96i": {relation: required, reviewed: true}
 "uo9r3": {relation: required, reviewed: true}
