@@ -259,7 +259,7 @@
 "177y9": {relation: required, reviewed: true}
 "17b54": {relation: required, reviewed: true}
 "17hfi": {relation: required}
-"17l8f": {relation: required}
+"17l8f": {relation: required, reviewed: true}
 "17pto": {relation: required}
 "17r16": {relation: weak}
 "17xxd": {relation: weak, reviewed: true}
@@ -303,7 +303,7 @@
 "1dnhn": {relation: forward, reviewed: true}
 "1dody": {relation: required, reviewed: true}
 "1dojb": {relation: weak, reviewed: true}
-"1e1y0": {relation: required}
+"1e1y0": {relation: required, reviewed: true}
 "1e5fl": {relation: required, reviewed: true}
 "1e8du": {relation: required, reviewed: true}
 "1e9xe": {relation: required}
@@ -366,7 +366,7 @@
 "1nig3": {relation: required, reviewed: true}
 "1nj2r": {relation: weak}
 "1nm6o": {relation: required, reviewed: true}
-"1nq1f": {relation: required}
+"1nq1f": {relation: required, reviewed: true}
 "1oltp": {relation: required, reviewed: true}
 "1p0bt": {relation: required, reviewed: true}
 "1p41l": {relation: required, reviewed: true}
@@ -438,7 +438,7 @@
 "1z4wd": {relation: required, reviewed: true}
 "1zd0u": {relation: required, reviewed: true}
 "1zmnz": {relation: required}
-"1zq0j": {relation: required}
+"1zq0j": {relation: required, reviewed: true}
 "1zr12": {relation: required}
 "1zrzq": {relation: required, reviewed: true}
 "1zubz": {relation: required, reviewed: true}
@@ -616,7 +616,7 @@
 "2umts": {relation: required, reviewed: true}
 "2uxb0": {relation: weak}
 "2v9yv": {relation: required, reviewed: true}
-"2vf31": {relation: required}
+"2vf31": {relation: required, reviewed: true}
 "2vj2s": {relation: required}
 "2vsww": {relation: required, reviewed: true}
 "2vuvt": {relation: required, reviewed: true}
@@ -642,7 +642,7 @@
 "2zrcv": {relation: required, reviewed: true}
 "30277": {relation: required, reviewed: true}
 "308jw": {relation: required, reviewed: true}
-"30e79": {relation: weak}
+"30e79": {relation: weak, reviewed: true}
 "30g6y": {relation: required, reviewed: true}
 "30gn7": {relation: required, reviewed: true}
 "30hg0": {relation: required, reviewed: true}
@@ -1156,7 +1156,7 @@
 "5558a": {relation: weak, reviewed: true}
 "55bfj": {relation: required, reviewed: true}
 "55frh": {relation: required}
-"55k7v": {relation: required}
+"55k7v": {relation: required, reviewed: true}
 "55ksa": {relation: required, reviewed: true}
 "55ndo": {relation: required, reviewed: true}
 "55nuf": {relation: required, reviewed: true}
@@ -1300,7 +1300,7 @@
 "5o46g": {relation: weak, reviewed: true}
 "5o6yw": {relation: required}
 "5oi67": {relation: required, reviewed: true}
-"5om77": {relation: required}
+"5om77": {relation: required, reviewed: true}
 "5omgf": {relation: required, reviewed: true}
 "5ommd": {relation: required, reviewed: true}
 "5oqw5": {relation: required, reviewed: true}
@@ -1672,7 +1672,7 @@
 "7ar8h": {relation: required, reviewed: true}
 "7arcn": {relation: required, reviewed: true}
 "7awyn": {relation: required}
-"7b57a": {relation: weak}
+"7b57a": {relation: weak, reviewed: true}
 "7b7t3": {relation: required, reviewed: true}
 "7bb6w": {relation: required}
 "7bjkq": {relation: required, reviewed: true}
@@ -1705,7 +1705,7 @@
 "7fv56": {relation: required, reviewed: true}
 "7fwon": {relation: required, reviewed: true}
 "7g4fh": {relation: weak, reviewed: true}
-"7gm6b": {relation: required}
+"7gm6b": {relation: required, reviewed: true}
 "7gqke": {relation: required, reviewed: true}
 "7gsdk": {relation: weak}
 "7hc13": {relation: required, reviewed: true}
@@ -1754,7 +1754,7 @@
 "7ngej": {relation: required, reviewed: true}
 "7nh4b": {relation: required, reviewed: true}
 "7o9p2": {relation: weak, reviewed: true}
-"7oosl": {relation: required}
+"7oosl": {relation: required, reviewed: true}
 "7orjn": {relation: weak, reviewed: true}
 "7p4x3": {relation: required, reviewed: true}
 "7p5f3": {relation: required, reviewed: true}
@@ -1820,7 +1820,7 @@
 "7yb08": {relation: required, reviewed: true}
 "7ydgg": {relation: required, reviewed: true}
 "7yee4": {relation: weak, reviewed: true}
-"7yezt": {relation: required}
+"7yezt": {relation: required, reviewed: true}
 "7yny0": {relation: weak, reviewed: true}
 "7ysmo": {relation: required, reviewed: true}
 "7yy9s": {relation: required, reviewed: true}
@@ -1943,7 +1943,7 @@
 "8g6xk": {relation: required, reviewed: true}
 "8gc5a": {relation: weak}
 "8gcnm": {relation: weak, reviewed: true}
-"8gdic": {relation: required}
+"8gdic": {relation: required, reviewed: true}
 "8gfsb": {relation: required, reviewed: true}
 "8gqgm": {relation: weak, reviewed: true}
 "8gr6i": {relation: required, reviewed: true}
@@ -2055,7 +2055,7 @@
 "8yaqr": {relation: required, reviewed: true}
 "8yatl": {relation: weak, reviewed: true}
 "8yg92": {relation: required, reviewed: true}
-"8yjcz": {relation: required}
+"8yjcz": {relation: required, reviewed: true}
 "8ylnu": {relation: requires-review}
 "8yt7b": {relation: required}
 "8ywui": {relation: required, reviewed: true}
@@ -2201,7 +2201,7 @@
 "9q4i6": {relation: required, reviewed: true}
 "9qayx": {relation: required, reviewed: true}
 "9qded": {relation: required, reviewed: true}
-"9qiuu": {relation: required}
+"9qiuu": {relation: required, reviewed: true}
 "9qlvl": {relation: required, reviewed: true}
 "9qy4g": {relation: required, reviewed: true}
 "9r4t8": {relation: required, reviewed: true}
@@ -2453,7 +2453,7 @@
 "avhph": {relation: required}
 "avlrf": {relation: required, reviewed: true}
 "avy5a": {relation: weak, reviewed: true}
-"avziv": {relation: required}
+"avziv": {relation: required, reviewed: true}
 "aw0du": {relation: weak, reviewed: true}
 "aw0ol": {relation: required}
 "aw3ne": {relation: required, reviewed: true}
@@ -2871,7 +2871,7 @@
 "cr5f0": {relation: weak, reviewed: true}
 "crjto": {relation: required, reviewed: true}
 "crko7": {relation: required, reviewed: true}
-"crwa5": {relation: required}
+"crwa5": {relation: required, reviewed: true}
 "cs0x4": {relation: required, reviewed: true}
 "cs2gd": {relation: required, reviewed: true}
 "cs38j": {relation: required}
@@ -3131,7 +3131,7 @@
 "dyn9e": {relation: required, reviewed: true}
 "dyxo8": {relation: required}
 "dzj23": {relation: required, reviewed: true}
-"dzn7l": {relation: required}
+"dzn7l": {relation: required, reviewed: true}
 "dzs2y": {relation: required, reviewed: true}
 "dzsxf": {relation: required}
 "e0214": {relation: required, reviewed: true}
@@ -3151,7 +3151,7 @@
 "e17km": {relation: required, reviewed: true}
 "e1eg0": {relation: required, reviewed: true}
 "e1gvn": {relation: required, reviewed: true}
-"e1gzt": {relation: required}
+"e1gzt": {relation: required, reviewed: true}
 "e1jz2": {relation: required}
 "e1oh4": {relation: weak, reviewed: true}
 "e1xis": {relation: weak}
@@ -3216,7 +3216,7 @@
 "e9wis": {relation: required, reviewed: true}
 "e9xpd": {relation: required, reviewed: true}
 "ea08r": {relation: required, reviewed: true}
-"eabnf": {relation: required}
+"eabnf": {relation: required, reviewed: true}
 "eaggw": {relation: weak, reviewed: true}
 "ear6m": {relation: required, reviewed: true}
 "eatek": {relation: required, reviewed: true}
@@ -3363,7 +3363,7 @@
 "f394l": {relation: weak, reviewed: true}
 "f3arr": {relation: required, reviewed: true}
 "f3ivp": {relation: required, reviewed: true}
-"f3kga": {relation: required}
+"f3kga": {relation: required, reviewed: true}
 "f3mex": {relation: required, reviewed: true}
 "f3z8g": {relation: required, reviewed: true}
 "f44rx": {relation: required, reviewed: true}
@@ -3455,7 +3455,7 @@
 "fix6z": {relation: weak, reviewed: true}
 "fiz6d": {relation: required, reviewed: true}
 "fj52q": {relation: required, reviewed: true}
-"fj5jp": {relation: required}
+"fj5jp": {relation: required, reviewed: true}
 "fj9r7": {relation: required}
 "fjorx": {relation: weak, reviewed: true}
 "fjzpr": {relation: weak}
@@ -3594,7 +3594,7 @@
 "g60rs": {relation: required, reviewed: true}
 "g634v": {relation: required, reviewed: true}
 "g64p2": {relation: required, reviewed: true}
-"g66ia": {relation: required}
+"g66ia": {relation: required, reviewed: true}
 "g687d": {relation: required, reviewed: true}
 "g68m8": {relation: weak, reviewed: true}
 "g6h91": {relation: required, reviewed: true}
@@ -3830,7 +3830,7 @@
 "hbaz7": {relation: required, reviewed: true}
 "hbkd4": {relation: required, reviewed: true}
 "hbvay": {relation: required, reviewed: true}
-"hc8vx": {relation: required}
+"hc8vx": {relation: required, reviewed: true}
 "hcd2y": {relation: required, reviewed: true}
 "hcgtd": {relation: required, reviewed: true}
 "hcown": {relation: required}
@@ -3983,7 +3983,7 @@
 "i1ubv": {relation: required, reviewed: true}
 "i1yoq": {relation: required, reviewed: true}
 "i2406": {relation: required, reviewed: true}
-"i27fa": {relation: weak}
+"i27fa": {relation: weak, reviewed: true}
 "i27ki": {relation: required}
 "i2ceh": {relation: required, reviewed: true}
 "i2cqo": {relation: required, reviewed: true}
@@ -4036,7 +4036,7 @@
 "i9fpp": {relation: required}
 "i9m4s": {relation: required, reviewed: true}
 "i9x0p": {relation: weak}
-"ia3dt": {relation: weak}
+"ia3dt": {relation: weak, reviewed: true}
 "iabyi": {relation: required, reviewed: true}
 "ib43s": {relation: required, reviewed: true}
 "ib4rq": {relation: required, reviewed: true}
@@ -4072,11 +4072,11 @@
 "igak4": {relation: weak, reviewed: true}
 "igc3p": {relation: required, reviewed: true}
 "igqsg": {relation: required, reviewed: true}
-"ih6ij": {relation: required}
+"ih6ij": {relation: required, reviewed: true}
 "ih7bv": {relation: weak, reviewed: true}
 "ihhsw": {relation: required, reviewed: true}
 "ihnd7": {relation: required}
-"ihx1v": {relation: required}
+"ihx1v": {relation: required, reviewed: true}
 "ii10h": {relation: required, reviewed: true}
 "ii8st": {relation: required}
 "iiawn": {relation: weak, reviewed: true}
@@ -4643,7 +4643,7 @@
 "kxh1k": {relation: required}
 "kxx7c": {relation: required, reviewed: true}
 "kxxf7": {relation: weak, reviewed: true}
-"ky7tv": {relation: required}
+"ky7tv": {relation: required, reviewed: true}
 "ky9vk": {relation: required, reviewed: true}
 "kygrz": {relation: required, reviewed: true}
 "kyj3x": {relation: required, reviewed: true}
@@ -4855,7 +4855,7 @@
 "lvf2x": {relation: required, reviewed: true}
 "lviva": {relation: required, reviewed: true}
 "lvsu4": {relation: required, reviewed: true}
-"lvxz7": {relation: forward}
+"lvxz7": {relation: forward, reviewed: true}
 "lw166": {relation: required}
 "lwhg4": {relation: required}
 "lx6qk": {relation: required, reviewed: true}
@@ -4901,7 +4901,7 @@
 "m2ycp": {relation: required, reviewed: true}
 "m31d7": {relation: required}
 "m34qi": {relation: required, reviewed: true}
-"m36sx": {relation: required}
+"m36sx": {relation: required, reviewed: true}
 "m37cs": {relation: required, reviewed: true}
 "m38ya": {relation: required, reviewed: true}
 "m391m": {relation: required, reviewed: true}
@@ -4913,7 +4913,7 @@
 "m3zgs": {relation: required}
 "m41f8": {relation: required}
 "m4d2s": {relation: required}
-"m4dv9": {relation: required}
+"m4dv9": {relation: required, reviewed: true}
 "m4ivn": {relation: weak, reviewed: true}
 "m4nh3": {relation: required, reviewed: true}
 "m4ozz": {relation: required, reviewed: true}
@@ -5087,7 +5087,7 @@
 "ms995": {relation: required, reviewed: true}
 "msaw1": {relation: required, reviewed: true}
 "msecu": {relation: required, reviewed: true}
-"msjgq": {relation: required}
+"msjgq": {relation: required, reviewed: true}
 "msmlm": {relation: required}
 "msukq": {relation: required, reviewed: true}
 "mt2zn": {relation: required, reviewed: true}
@@ -5108,7 +5108,7 @@
 "muxab": {relation: weak}
 "mv60k": {relation: required, reviewed: true}
 "mvd8r": {relation: required, reviewed: true}
-"mvmye": {relation: required}
+"mvmye": {relation: required, reviewed: true}
 "mvpod": {relation: weak}
 "mvtak": {relation: required, reviewed: true}
 "mw11e": {relation: required, reviewed: true}
@@ -5231,7 +5231,7 @@
 "nfav5": {relation: required, reviewed: true}
 "nfbnz": {relation: required}
 "nfbwj": {relation: required, reviewed: true}
-"nfdk0": {relation: required}
+"nfdk0": {relation: required, reviewed: true}
 "nfu0e": {relation: required, reviewed: true}
 "nfvf9": {relation: required, reviewed: true}
 "nfvqs": {relation: required}
@@ -5351,7 +5351,7 @@
 "nywiz": {relation: required, reviewed: true}
 "nyx72": {relation: requires-review}
 "nz2qq": {relation: required, reviewed: true}
-"nz2tv": {relation: required}
+"nz2tv": {relation: required, reviewed: true}
 "nz39g": {relation: required, reviewed: true}
 "nzdsk": {relation: required, reviewed: true}
 "nzg0p": {relation: required, reviewed: true}
@@ -5477,7 +5477,7 @@
 "oh6w7": {relation: required}
 "ohbh3": {relation: required, reviewed: true}
 "ohmya": {relation: required}
-"oi087": {relation: required}
+"oi087": {relation: required, reviewed: true}
 "oi1yb": {relation: required, reviewed: true}
 "oi5ma": {relation: weak, reviewed: true}
 "oi6nl": {relation: required, reviewed: true}
@@ -5520,11 +5520,11 @@
 "onmyc": {relation: required, reviewed: true}
 "onvaj": {relation: required, reviewed: true}
 "onwq6": {relation: weak}
-"oo009": {relation: required}
+"oo009": {relation: required, reviewed: true}
 "oo7ne": {relation: weak, reviewed: true}
 "ookai": {relation: required, reviewed: true}
 "ope03": {relation: weak, reviewed: true}
-"ophvg": {relation: required}
+"ophvg": {relation: required, reviewed: true}
 "opm3m": {relation: required, reviewed: true}
 "oppw1": {relation: required}
 "opt9e": {relation: weak}
@@ -5873,7 +5873,7 @@
 "qc1qa": {relation: required, reviewed: true}
 "qcd9n": {relation: required}
 "qcj9q": {relation: required, reviewed: true}
-"qctzu": {relation: required}
+"qctzu": {relation: required, reviewed: true}
 "qcxid": {relation: required, reviewed: true}
 "qcy8y": {relation: required, reviewed: true}
 "qcz34": {relation: required, reviewed: true}
@@ -5920,7 +5920,7 @@
 "qj82d": {relation: required}
 "qj8gk": {relation: required}
 "qjaa4": {relation: required}
-"qjfbm": {relation: required}
+"qjfbm": {relation: required, reviewed: true}
 "qjh60": {relation: required}
 "qjsvp": {relation: required, reviewed: true}
 "qk164": {relation: required, reviewed: true}
@@ -5957,7 +5957,7 @@
 "qoq9c": {relation: required}
 "qoqzz": {relation: required, reviewed: true}
 "qorg6": {relation: required, reviewed: true}
-"qorha": {relation: required}
+"qorha": {relation: required, reviewed: true}
 "qozsj": {relation: required, reviewed: true}
 "qp23c": {relation: required, reviewed: true}
 "qpbjt": {relation: required}
@@ -6093,13 +6093,13 @@
 "raedx": {relation: required, reviewed: true}
 "rakza": {relation: weak, reviewed: true}
 "ramli": {relation: required, reviewed: true}
-"rb3cb": {relation: required}
+"rb3cb": {relation: required, reviewed: true}
 "rb8jh": {relation: weak, reviewed: true}
 "rba2w": {relation: required, reviewed: true}
 "rbadb": {relation: required, reviewed: true}
 "rbdgg": {relation: required, reviewed: true}
 "rbr3o": {relation: required, reviewed: true}
-"rc4jf": {relation: required}
+"rc4jf": {relation: required, reviewed: true}
 "rcxtg": {relation: required, reviewed: true}
 "rcywl": {relation: required, reviewed: true}
 "rden8": {relation: required, reviewed: true}
@@ -6153,11 +6153,11 @@
 "rlmvg": {relation: required}
 "rlunk": {relation: weak, reviewed: true}
 "rmequ": {relation: required, reviewed: true}
-"rmh2e": {relation: required}
+"rmh2e": {relation: required, reviewed: true}
 "rn0pa": {relation: required, reviewed: true}
 "rn1qn": {relation: weak, reviewed: true}
 "rnha6": {relation: required, reviewed: true}
-"rnkqe": {relation: required}
+"rnkqe": {relation: required, reviewed: true}
 "rnobz": {relation: weak, reviewed: true}
 "rnv08": {relation: required, reviewed: true}
 "ro98s": {relation: weak, reviewed: true}
@@ -6187,7 +6187,7 @@
 "rraqx": {relation: weak}
 "rrfod": {relation: weak, reviewed: true}
 "rrprq": {relation: required}
-"rrznl": {relation: weak}
+"rrznl": {relation: requires-review}
 "rs087": {relation: required, reviewed: true}
 "rs41o": {relation: required}
 "rs8ki": {relation: weak, reviewed: true}
@@ -6200,11 +6200,11 @@
 "rt8kq": {relation: weak, reviewed: true}
 "rtgha": {relation: required, reviewed: true}
 "rtgt3": {relation: weak, reviewed: true}
-"rtja6": {relation: required}
+"rtja6": {relation: required, reviewed: true}
 "rty0j": {relation: required, reviewed: true}
 "ru4yp": {relation: required, reviewed: true}
 "ru8lp": {relation: weak, reviewed: true}
-"rue4s": {relation: required}
+"rue4s": {relation: required, reviewed: true}
 "ruesl": {relation: weak, reviewed: true}
 "rurfa": {relation: required, reviewed: true}
 "ruv1c": {relation: weak, reviewed: true}
@@ -6278,7 +6278,7 @@
 "s62c1": {relation: required, reviewed: true}
 "s666x": {relation: required, reviewed: true}
 "s6cko": {relation: required}
-"s6w4b": {relation: required}
+"s6w4b": {relation: required, reviewed: true}
 "s6xx9": {relation: required, reviewed: true}
 "s76y3": {relation: required, reviewed: true}
 "s7bev": {relation: required}
@@ -6316,7 +6316,7 @@
 "sbr1j": {relation: required, reviewed: true}
 "sbrkc": {relation: required, reviewed: true}
 "sbxff": {relation: required, reviewed: true}
-"sc18m": {relation: required}
+"sc18m": {relation: required, reviewed: true}
 "sc1wv": {relation: required, reviewed: true}
 "sc2jp": {relation: required, reviewed: true}
 "scc8a": {relation: required, reviewed: true}
@@ -6364,7 +6364,7 @@
 "siumx": {relation: required}
 "sj54x": {relation: weak}
 "sj7py": {relation: required}
-"sje3o": {relation: required}
+"sje3o": {relation: required, reviewed: true}
 "sjled": {relation: required}
 "sjvhv": {relation: required, reviewed: true}
 "sjvhy": {relation: required, reviewed: true}
@@ -6663,7 +6663,7 @@
 "tt88o": {relation: required, reviewed: true}
 "ttw3q": {relation: required, reviewed: true}
 "ttxvf": {relation: required, reviewed: true}
-"tuefi": {relation: weak}
+"tuefi": {relation: requires-review}
 "tug1a": {relation: required, reviewed: true}
 "tupwz": {relation: required, reviewed: true}
 "tuwru": {relation: required, reviewed: true}
@@ -6699,7 +6699,7 @@
 "tz1r9": {relation: weak}
 "tz2ch": {relation: required}
 "tzhwq": {relation: required}
-"tzmqi": {relation: required}
+"tzmqi": {relation: required, reviewed: true}
 "tzupu": {relation: required, reviewed: true}
 "u0l91": {relation: forward, reviewed: true}
 "u11oa": {relation: requires-review}
@@ -6790,7 +6790,7 @@
 "uf9ok": {relation: required, reviewed: true}
 "uf9ox": {relation: weak}
 "ufg3k": {relation: required, reviewed: true}
-"ufis7": {relation: required}
+"ufis7": {relation: required, reviewed: true}
 "ufj2q": {relation: required, reviewed: true}
 "ufj9m": {relation: weak, reviewed: true}
 "ufjbe": {relation: required, reviewed: true}
@@ -6861,7 +6861,7 @@
 "uq1ta": {relation: required, reviewed: true}
 "uq21a": {relation: required, reviewed: true}
 "uq5md": {relation: required, reviewed: true}
-"uqgno": {relation: required}
+"uqgno": {relation: required, reviewed: true}
 "uqive": {relation: required, reviewed: true}
 "uqjnf": {relation: required, reviewed: true}
 "uqlr5": {relation: required, reviewed: true}
@@ -6945,7 +6945,7 @@
 "v3ama": {relation: weak}
 "v3htj": {relation: required, reviewed: true}
 "v3t8c": {relation: forward, reviewed: true}
-"v3wbe": {relation: required}
+"v3wbe": {relation: required, reviewed: true}
 "v44ef": {relation: required, reviewed: true}
 "v4h8x": {relation: required, reviewed: true}
 "v4oeg": {relation: weak, reviewed: true}
@@ -7056,7 +7056,7 @@
 "vmp2g": {relation: required}
 "vmqof": {relation: required}
 "vmta9": {relation: required, reviewed: true}
-"vmve1": {relation: required}
+"vmve1": {relation: required, reviewed: true}
 "vmx8b": {relation: weak, reviewed: true}
 "vmzkl": {relation: weak, reviewed: true}
 "vn0u0": {relation: weak, reviewed: true}
@@ -7077,7 +7077,7 @@
 "vqd5h": {relation: required}
 "vqnal": {relation: required}
 "vquwv": {relation: required, reviewed: true}
-"vqwf6": {relation: required}
+"vqwf6": {relation: required, reviewed: true}
 "vr02n": {relation: required, reviewed: true}
 "vr0o9": {relation: required}
 "vr6uq": {relation: required, reviewed: true}
@@ -7088,7 +7088,7 @@
 "vrq63": {relation: required, reviewed: true}
 "vrria": {relation: forward}
 "vrt42": {relation: required, reviewed: true}
-"vryc4": {relation: required}
+"vryc4": {relation: required, reviewed: true}
 "vs7rw": {relation: required, reviewed: true}
 "vse57": {relation: required, reviewed: true}
 "vsg9b": {relation: required, reviewed: true}
@@ -7479,7 +7479,7 @@
 "xjr2z": {relation: weak, reviewed: true}
 "xjz82": {relation: weak}
 "xk5iw": {relation: required, reviewed: true}
-"xkfkk": {relation: required}
+"xkfkk": {relation: required, reviewed: true}
 "xkn9i": {relation: required, reviewed: true}
 "xknfm": {relation: weak, reviewed: true}
 "xkrij": {relation: required, reviewed: true}
@@ -7585,7 +7585,7 @@
 "xz9ev": {relation: required}
 "xznw9": {relation: required, reviewed: true}
 "xzt8b": {relation: required, reviewed: true}
-"xzuvg": {relation: required}
+"xzuvg": {relation: required, reviewed: true}
 "y07dz": {relation: required, reviewed: true}
 "y08dj": {relation: required, reviewed: true}
 "y0f09": {relation: required, reviewed: true}
@@ -7638,7 +7638,7 @@
 "y9bnu": {relation: requires-review}
 "y9lj1": {relation: required, reviewed: true}
 "y9mfy": {relation: weak, reviewed: true}
-"y9wc9": {relation: required}
+"y9wc9": {relation: required, reviewed: true}
 "y9x26": {relation: required}
 "y9yup": {relation: required}
 "ya09o": {relation: required, reviewed: true}
@@ -7884,7 +7884,7 @@
 "zba36": {relation: weak, reviewed: true}
 "zbjrh": {relation: weak, reviewed: true}
 "zbozm": {relation: required}
-"zbsru": {relation: required}
+"zbsru": {relation: required, reviewed: true}
 "zbt9l": {relation: required, reviewed: true}
 "zbwkp": {relation: required, reviewed: true}
 "zbxye": {relation: required, reviewed: true}
