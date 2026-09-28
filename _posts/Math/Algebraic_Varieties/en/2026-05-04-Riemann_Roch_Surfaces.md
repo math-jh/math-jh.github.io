@@ -1,6 +1,6 @@
 ---
 title: "The Riemann-Roch Theorem on Surfaces"
-description: "In the process of generalizing the Riemann-Roch theorem from curves to surfaces, we define intersection numbers, prove the Hodge index theorem and an inequality for multiple generators, and examine the geometric meaning of the intersection form."
+description: "In the process of generalizing the Riemann-Roch theorem from curves to surfaces, we define intersection numbers, prove the Hodge index theorem, and examine the geometric meaning of the intersection form."
 excerpt: "Intersection theory on surfaces and its applications"
 
 categories: [Math / Algebraic Varieties]
