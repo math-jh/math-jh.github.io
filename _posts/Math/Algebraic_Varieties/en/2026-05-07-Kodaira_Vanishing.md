@@ -172,7 +172,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m}
 
 shows that if $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$, then separation of tangent vectors holds.
 
-Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-lid="upowc" } to $\mathcal{F} = \mathcal{I}_Z$ and $\mathcal{F} = \mathcal{I}_p^2$, for sufficiently large $m$, the two $H^1$ above both vanish. Therefore, the sections of $\mathcal{L}^{\otimes m}$ satisfy both separation conditions, and by [Proposition 5](#prop5){: data-lid="7k0ct" }, $\mathcal{L}^{\otimes m}$ is very ample. That is, for an ample line bundle, for *all* sufficiently large $m$, $\mathcal{L}^{\otimes m}$ is very ample.
+Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Cohomology of Projective Space, ⁋Proposition 7](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop7){: data-lid="upowc" } to $\mathcal{F} = \mathcal{I}_Z$ and $\mathcal{F} = \mathcal{I}_p^2$, for sufficiently large $m$, the two $H^1$ above both vanish. Therefore, the sections of $\mathcal{L}^{\otimes m}$ satisfy both separation conditions, and by [Proposition 5](#prop5){: data-lid="7k0ct" }, $\mathcal{L}^{\otimes m}$ is very ample. Additionally, applying the relative version of the Serre vanishing theorem shows that such an $m$ is determined independently of the choice of $Z$ and $p$, so for an ample line bundle, for *all* sufficiently large $m$, $\mathcal{L}^{\otimes m}$ is very ample.
 
 Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6){: data-lid="hld30" } in a different way. In that proof, on the blow-up of $p$ and $q$, $\pi: \widetilde{X} \rightarrow X$, one applies vanishing to a line bundle with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1){: data-lid="467qy" }. Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
 
@@ -196,5 +196,3 @@ That is, using this proposition one can show that a Kähler manifold is a projec
 **References**
 
 **[Hart]** R. Hartshorne, *Algebraic Geometry*, Graduate Texts in Mathematics, Springer, 1977.  
-**[Laz]** R. Lazarsfeld, *Positivity in Algebraic Geometry I & II*, Ergebnisse der Mathematik, Springer, 2004.  
-**[Kod]** K. Kodaira, *On a differential-geometric method in the theory of analytic stacks*, Proceedings of the National Academy of Sciences, 1953.
