@@ -9052,6 +9052,13 @@ I:
     url: '/ko/math/calculus/functions_and_limits'
   - label: '[집합론] §선택공리'
     url: '/ko/math/set_theory/axiom_of_choice'
+- id: inductive_set
+  en: inductive set
+  ko: 귀납적 집합
+  primary: en
+  defs:
+  - label: '[집합론] §선택공리'
+    url: /ko/math/set_theory/axiom_of_choice
 - id: infimum
   en: infimum (greatest lower bound)
   ko: 하한 (최대하계)
