@@ -395,7 +395,7 @@ For an ample line bundle $\mathcal{L}$ and an arbitrary line bundle $\mathcal{M}
 :::
 
 ::: Proof
-First, since $\mathcal{L}$ is ample, $\mathcal{L}^{\otimes m}$ is very ample for some $m>0$. On the other hand, by [Proposition 7](#prop7){: data-lid="66yi1" } there exists $k_0$ such that $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$ for all $k \geq k_0$ and $i > 0$. Now set $k = k_0 + m\dim X$; then for $1 \leq i \leq \dim X$ we have $k - mi \geq k_0$, so
+First, since $\mathcal{L}$ is ample, $\mathcal{L}^{\otimes m}$ is very ample for some $m>0$. On the other hand, by [Proposition 7](#prop7){: data-lid="66yi1" } there exists $k_0$ such that $H^i(X, \mathcal{M} \otimes \mathcal{L}^{\otimes k}) = 0$ for all $k \geq k_0$ and $i > 0$. Now choose any $k \geq k_0 + m\dim X$; then for $1 \leq i \leq \dim X$ we have $k - mi \geq k_0$, so
 
 $$H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k} \otimes (\mathcal{L}^{\otimes m})^{\otimes -i}) = H^i(\mathcal{M} \otimes \mathcal{L}^{\otimes k-mi}) = 0$$
 
