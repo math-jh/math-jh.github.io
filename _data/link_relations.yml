@@ -101,7 +101,7 @@
 "0fpnl": {relation: required, reviewed: true}
 "0g6y4": {relation: required, reviewed: true}
 "0geno": {relation: required}
-"0gfvz": {relation: required}
+"0gfvz": {relation: required, reviewed: true}
 "0gknq": {relation: required, reviewed: true}
 "0gqg3": {relation: weak, reviewed: true}
 "0gvw9": {relation: required, reviewed: true}
@@ -6819,7 +6819,7 @@
 "ud5nx": {relation: required, reviewed: true}
 "ud65t": {relation: required, reviewed: true}
 "ud7kg": {relation: required, reviewed: true}
-"uda3l": {relation: weak}
+"uda3l": {relation: requires-review}
 "udlv0": {relation: required, reviewed: true}
 "udo8u": {relation: required, reviewed: true}
 "udwon": {relation: required, reviewed: true}
@@ -7942,7 +7942,7 @@
 "zccfr": {relation: weak, reviewed: true}
 "zcqst": {relation: required, reviewed: true}
 "zcri0": {relation: required, reviewed: true}
-"zd4js": {relation: required}
+"zd4js": {relation: required, reviewed: true}
 "zdi6a": {relation: required, reviewed: true}
 "zeflq": {relation: weak, reviewed: true}
 "zehug": {relation: required, reviewed: true}
