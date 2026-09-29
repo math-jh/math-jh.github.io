@@ -260,8 +260,8 @@ def load_holds() -> dict:
 
     ``held`` is what the dashboard's link-audit panel lists; the first pass skips
     those idents so nothing reclassifies a link the user has yet to decide.
-    ``settled`` is the user's own verdict: the verifier leaves those links alone,
-    so a hand-written tag cannot be disputed back into the queue.
+    ``settled`` is the dashboard's record of past rulings and their undo data.
+    The stages do not read it; the ruling itself is the ledger record.
     """
     try:
         value = json.loads(HOLDS_PATH.read_text(encoding="utf-8"))
@@ -300,8 +300,13 @@ def merge_holds(new_holds: dict[str, dict]) -> None:
 
 
 def parked_idents() -> set[str]:
-    holds = load_holds()
-    return set(holds["held"]) | set(holds["settled"])
+    """Links still waiting for a human ruling.
+
+    ``settled`` is not consulted: a ruling is complete through its ledger record's
+    ``reviewed: true``, and that record is the only completion marker the stages
+    read.
+    """
+    return set(load_holds()["held"])
 
 
 def legacy_classifier_running() -> bool:

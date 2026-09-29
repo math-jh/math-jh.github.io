@@ -149,8 +149,9 @@ notify 한 통을 보낸다. 그래프는 required·weak·forward 만 받으므�
 
 판정 버튼(`1`/`2`/`3`)은 그 링크의 레코드를 `{relation: …, reviewed: true}` 로 쓰고 항목을
 `settled` 로 옮긴다. 원장에 값을 손으로 적어 둔 경우는 '원장 값 확인' 버튼이 그 값이
-required·weak·forward 인지 확인한 뒤 reviewed 를 붙여 같은 처리를 한다. `settled` 에 오른
-링크는 검증기가 다시 걸지 않는다 — 사람 판정을 모델이 뒤집지 못하게 하는 자리다.
+required·weak·forward 인지 확인한 뒤 reviewed 를 붙여 같은 처리를 한다. 사람 판정을
+모델이 뒤집지 못하게 하는 것은 레코드의 `reviewed: true` 다 — 분류기는 `settled` 를 읽지
+않으므로, `settled` 는 판정 이력과 되돌리기 기록만 든다.
 '링크 판정 커밋' 버튼이 원장을 `[Dash] Link Review [lastmod-skip]` 로 커밋하고, push 는
 autopush 소관이다.
 

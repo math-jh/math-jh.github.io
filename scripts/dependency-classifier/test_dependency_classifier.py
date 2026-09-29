@@ -924,6 +924,17 @@ class VerificationPassTest(unittest.TestCase):
         self.assertEqual(run.codex.call_count, 0)
         self.assertEqual(run.agy.call_count, 0)
 
+    def test_a_settled_entry_without_a_reviewed_record_is_verified(self) -> None:
+        self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
+        self.holds_path.write_text(json.dumps({"held": {}, "settled": {
+            self.idents[0]: {"path": "", "target": "", "relation": "weak", "at": 0},
+        }}), encoding="utf-8")
+
+        run = self.tick({self.idents[0]: "required", self.idents[1]: "weak"})
+
+        self.assertIn(self.idents[0], [item["id"] for item in run.opus.call_args[0][0]])
+        self.assertEqual(self.saved(), {"aaaaa": R("required", True), "bbbbb": R("weak", True)})
+
     def test_prose_edit_preserves_completed_link_reviews(self) -> None:
         self.write_state({"status": "done", "hash": self.digest(), "decided_by": {}})
         self.tick({self.idents[0]: "weak", self.idents[1]: "weak"})

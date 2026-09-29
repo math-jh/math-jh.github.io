@@ -1452,9 +1452,9 @@ class Handler(BaseHTTPRequestHandler):
         `relation` 을 함께 받으면 그게 사용자의 판정이다 — 서버가 그 링크의 원장
         레코드에 값과 reviewed 를 쓰고 보류 원장에서 뺀다. 값이 없으면 사용자가
         `_data/link_relations.yml` 에 직접 적은 값을 확인하는 경로다. 어느 쪽이든
-        판정의 출처는 사람이고, 빠진 항목은 settled 로 옮긴다 — 검증기는 그 링크를
-        다시 걸지 않는다. 원장 락은 분류기와 공유하므로 분류기 틱이 도는 동안은
-        기다렸다가 쓴다.
+        판정의 출처는 사람이고, 검증기가 그 링크를 다시 걸지 않는 근거는 원장 레코드의
+        reviewed 하나다. 빠진 항목은 이력과 되돌리기 기록으로 settled 에 남긴다. 원장
+        락은 분류기와 공유하므로 분류기 틱이 도는 동안은 기다렸다가 쓴다.
         """
         try:
             n = int(self.headers.get("Content-Length") or 0)
