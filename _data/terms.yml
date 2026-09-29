@@ -16708,6 +16708,13 @@ S:
   see:
   - label: Critical point
     id: critical_point
+- id: saturated_subset
+  en: saturated subset
+  ko: 포화부분집합
+  primary: en
+  defs:
+  - label: '[집합론] §동치관계의 예시들'
+    url: /ko/math/set_theory/examples_of_equivalence
 - id: saturation
   en: saturation
   ko: 포화
