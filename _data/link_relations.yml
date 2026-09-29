@@ -2130,7 +2130,7 @@
 "9apg5": {relation: required, reviewed: true}
 "9ar8k": {relation: required}
 "9axqr": {relation: required, reviewed: true}
-"9b85j": {relation: weak}
+"9b85j": {relation: requires-review}
 "9b8dg": {relation: required, reviewed: true}
 "9bjih": {relation: required, reviewed: true}
 "9bycy": {relation: weak, reviewed: true}
@@ -2518,7 +2518,7 @@
 "b2t2z": {relation: required, reviewed: true}
 "b2w12": {relation: required, reviewed: true}
 "b33uf": {relation: required, reviewed: true}
-"b35w2": {relation: weak}
+"b35w2": {relation: weak, reviewed: true}
 "b39sb": {relation: required, reviewed: true}
 "b3gmq": {relation: required, reviewed: true}
 "b3hip": {relation: required, reviewed: true}
@@ -4905,7 +4905,7 @@
 "lyjc0": {relation: required, reviewed: true}
 "lypgv": {relation: required, reviewed: true}
 "lyupd": {relation: required, reviewed: true}
-"lz312": {relation: required}
+"lz312": {relation: required, reviewed: true}
 "lzfj4": {relation: weak, reviewed: true}
 "lzg9a": {relation: required, reviewed: true}
 "lznt8": {relation: required, reviewed: true}
@@ -5013,7 +5013,7 @@
 "md6h3": {relation: required}
 "mdfvw": {relation: required}
 "mdix7": {relation: weak, reviewed: true}
-"mdpjf": {relation: weak}
+"mdpjf": {relation: requires-review}
 "mdqyr": {relation: required, reviewed: true}
 "me31z": {relation: required, reviewed: true}
 "mei9x": {relation: weak, reviewed: true}
@@ -6161,7 +6161,7 @@
 "rfq5k": {relation: weak, reviewed: true}
 "rg4zr": {relation: required, reviewed: true}
 "rg5e6": {relation: required, reviewed: true}
-"rgctz": {relation: required}
+"rgctz": {relation: required, reviewed: true}
 "rgpb4": {relation: required, reviewed: true}
 "rgtwr": {relation: required, reviewed: true}
 "rgvva": {relation: required, reviewed: true}
@@ -7857,7 +7857,7 @@
 "yyfvg": {relation: required}
 "yyhys": {relation: required, reviewed: true}
 "yyn3c": {relation: required, reviewed: true}
-"yynpx": {relation: required}
+"yynpx": {relation: required, reviewed: true}
 "yyps0": {relation: required, reviewed: true}
 "yyqjp": {relation: required, reviewed: true}
 "yyqns": {relation: required, reviewed: true}
