@@ -5195,7 +5195,7 @@
 "n1145": {relation: weak, reviewed: true}
 "n12rx": {relation: required, reviewed: true}
 "n1578": {relation: required, reviewed: true}
-"n169f": {relation: required}
+"n169f": {relation: requires-review}
 "n18am": {relation: required, reviewed: true}
 "n18u7": {relation: required, reviewed: true}
 "n1mqc": {relation: required, reviewed: true}
