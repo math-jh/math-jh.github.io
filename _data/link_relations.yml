@@ -2076,7 +2076,7 @@
 "8yt7b": {relation: required}
 "8ywui": {relation: required, reviewed: true}
 "8ywyj": {relation: required, reviewed: true}
-"8z4v8": {relation: weak}
+"8z4v8": {relation: requires-review}
 "8z7ln": {relation: required, reviewed: true}
 "8zh7f": {relation: weak, reviewed: true}
 "8zrje": {relation: required, reviewed: true}
