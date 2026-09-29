@@ -2838,6 +2838,13 @@ C:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: cofinal
+  en: cofinal
+  ko: 공종
+  primary: en
+  defs:
+  - label: '[집합론] §유향집합'
+    url: /ko/math/set_theory/directed_set
 - id: cohen-macaulay
   en: Cohen-Macaulay
   ko: 코언-맥컬레이
