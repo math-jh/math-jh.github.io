@@ -12460,6 +12460,13 @@ M:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: monotone_galois_connection
+  en: monotone Galois connection
+  ko: 갈루아 연결
+  primary: en
+  defs:
+  - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
+    url: /ko/math/set_theory/filter_and_ideal
 - id: monotone_sequence
   en: monotone sequence
   ko: 단조수열
