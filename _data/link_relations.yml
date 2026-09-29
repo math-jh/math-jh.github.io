@@ -2481,7 +2481,7 @@
 "aww3c": {relation: required, reviewed: true}
 "awz6r": {relation: required, reviewed: true}
 "axa3b": {relation: weak, reviewed: true}
-"axe33": {relation: required}
+"axe33": {relation: required, reviewed: true}
 "axlf3": {relation: required, reviewed: true}
 "axpl6": {relation: required, reviewed: true}
 "ay08k": {relation: required, reviewed: true}
