@@ -6700,7 +6700,7 @@
 "tpgoh": {relation: required}
 "tposv": {relation: required, reviewed: true}
 "tpsgt": {relation: required, reviewed: true}
-"tpsxb": {relation: required}
+"tpsxb": {relation: required, reviewed: true}
 "tpvtf": {relation: required, reviewed: true}
 "tpw0n": {relation: required}
 "tpyi6": {relation: required, reviewed: true}
