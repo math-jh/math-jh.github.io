@@ -3560,7 +3560,7 @@
 "fwene": {relation: required, reviewed: true}
 "fwp17": {relation: required, reviewed: true}
 "fwqv2": {relation: required, reviewed: true}
-"fwxqr": {relation: required}
+"fwxqr": {relation: requires-review}
 "fxasp": {relation: required, reviewed: true}
 "fxgp2": {relation: required, reviewed: true}
 "fxj4j": {relation: weak, reviewed: true}
@@ -6799,7 +6799,7 @@
 "u716l": {relation: required, reviewed: true}
 "u77dt": {relation: required, reviewed: true}
 "u77h7": {relation: required, reviewed: true}
-"u7ml2": {relation: required}
+"u7ml2": {relation: requires-review}
 "u7r9p": {relation: required, reviewed: true}
 "u7v2l": {relation: required, reviewed: true}
 "u7vnh": {relation: required, reviewed: true}
