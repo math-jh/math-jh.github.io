@@ -1504,7 +1504,7 @@
 "6hl7p": {relation: weak, reviewed: true}
 "6ho2r": {relation: required, reviewed: true}
 "6ict5": {relation: required, reviewed: true}
-"6im7c": {relation: weak}
+"6im7c": {relation: requires-review}
 "6irrk": {relation: required, reviewed: true}
 "6ism9": {relation: required, reviewed: true}
 "6j8s9": {relation: required, reviewed: true}
