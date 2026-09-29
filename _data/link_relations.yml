@@ -6260,7 +6260,7 @@
 "ruv1c": {relation: weak, reviewed: true}
 "rv0el": {relation: required, reviewed: true}
 "rvulr": {relation: required, reviewed: true}
-"rw9ec": {relation: required}
+"rw9ec": {relation: required, reviewed: true}
 "rwd4y": {relation: required, reviewed: true}
 "rwjml": {relation: required, reviewed: true}
 "rwjtd": {relation: required, reviewed: true}
@@ -7050,7 +7050,7 @@
 "vdavx": {relation: forward, reviewed: true}
 "vdbsw": {relation: required, reviewed: true}
 "vdgdx": {relation: required, reviewed: true}
-"vdh3g": {relation: weak}
+"vdh3g": {relation: weak, reviewed: true}
 "vdhiv": {relation: weak, reviewed: true}
 "vdj2l": {relation: weak, reviewed: true}
 "vdxug": {relation: required, reviewed: true}
