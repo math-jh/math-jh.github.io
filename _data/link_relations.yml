@@ -3977,7 +3977,7 @@
 "htxpf": {relation: required, reviewed: true}
 "hujiy": {relation: required, reviewed: true}
 "huny1": {relation: required, reviewed: true}
-"huqbc": {relation: required}
+"huqbc": {relation: requires-review}
 "huyie": {relation: required, reviewed: true}
 "hvjds": {relation: required, reviewed: true}
 "hvju7": {relation: required, reviewed: true}
