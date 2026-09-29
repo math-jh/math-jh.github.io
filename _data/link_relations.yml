@@ -97,7 +97,7 @@
 "0fc3w": {relation: required, reviewed: true}
 "0ffma": {relation: weak}
 "0ffpl": {relation: required, reviewed: true}
-"0fiq0": {relation: weak}
+"0fiq0": {relation: requires-review}
 "0fpnl": {relation: required, reviewed: true}
 "0g6y4": {relation: required, reviewed: true}
 "0geno": {relation: required}
@@ -1910,7 +1910,7 @@
 "89v4f": {relation: weak, reviewed: true}
 "8a95s": {relation: required, reviewed: true}
 "8aebo": {relation: weak, reviewed: true}
-"8aehr": {relation: required}
+"8aehr": {relation: required, reviewed: true}
 "8af1a": {relation: weak, reviewed: true}
 "8alcj": {relation: required, reviewed: true}
 "8apjy": {relation: required, reviewed: true}
@@ -2093,7 +2093,7 @@
 "93fvo": {relation: required, reviewed: true}
 "93nko": {relation: required}
 "93qka": {relation: required, reviewed: true}
-"93sml": {relation: weak}
+"93sml": {relation: weak, reviewed: true}
 "93wcr": {relation: required, reviewed: true}
 "940xu": {relation: required, reviewed: true}
 "94ea3": {relation: required, reviewed: true}
@@ -3562,7 +3562,7 @@
 "fxs17": {relation: required, reviewed: true}
 "fxxqp": {relation: required, reviewed: true}
 "fy0xo": {relation: required, reviewed: true}
-"fy2i4": {relation: weak}
+"fy2i4": {relation: requires-review}
 "fya78": {relation: required, reviewed: true}
 "fyb5w": {relation: required, reviewed: true}
 "fyf2p": {relation: weak, reviewed: true}
@@ -7533,7 +7533,7 @@
 "xl2zv": {relation: weak, reviewed: true}
 "xl96v": {relation: required, reviewed: true}
 "xlawg": {relation: required, reviewed: true}
-"xlgon": {relation: weak}
+"xlgon": {relation: requires-review}
 "xlgts": {relation: required, reviewed: true}
 "xljmn": {relation: required}
 "xlmqp": {relation: required, reviewed: true}
@@ -7838,7 +7838,7 @@
 "yw1c8": {relation: required, reviewed: true}
 "ywgfe": {relation: required}
 "ywgs0": {relation: required, reviewed: true}
-"ywgxl": {relation: weak}
+"ywgxl": {relation: weak, reviewed: true}
 "ywi2i": {relation: required}
 "ywqn7": {relation: required, reviewed: true}
 "ywupy": {relation: required, reviewed: true}
