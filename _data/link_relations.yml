@@ -1256,7 +1256,7 @@
 "5goam": {relation: weak, reviewed: true}
 "5gvee": {relation: required}
 "5gx97": {relation: weak}
-"5gxlc": {relation: weak}
+"5gxlc": {relation: requires-review}
 "5h0nt": {relation: required}
 "5h9gb": {relation: required, reviewed: true}
 "5he7w": {relation: weak, reviewed: true}
@@ -2018,7 +2018,7 @@
 "8s64p": {relation: required, reviewed: true}
 "8s6tr": {relation: required, reviewed: true}
 "8s9o4": {relation: required, reviewed: true}
-"8sah0": {relation: required}
+"8sah0": {relation: required, reviewed: true}
 "8sdql": {relation: required, reviewed: true}
 "8she4": {relation: required, reviewed: true}
 "8shl6": {relation: required, reviewed: true}
@@ -2245,7 +2245,7 @@
 "9tm4t": {relation: required, reviewed: true}
 "9ts2c": {relation: weak}
 "9tuky": {relation: required, reviewed: true}
-"9twyb": {relation: required}
+"9twyb": {relation: required, reviewed: true}
 "9tzoq": {relation: required, reviewed: true}
 "9uh6x": {relation: required, reviewed: true}
 "9uo7i": {relation: required, reviewed: true}
@@ -3469,7 +3469,7 @@
 "fflw6": {relation: weak, reviewed: true}
 "ffz9a": {relation: required}
 "ffzdv": {relation: required, reviewed: true}
-"fg10a": {relation: required}
+"fg10a": {relation: required, reviewed: true}
 "fg4oj": {relation: required, reviewed: true}
 "fgai7": {relation: required, reviewed: true}
 "fgdns": {relation: required, reviewed: true}
