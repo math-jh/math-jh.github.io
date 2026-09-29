@@ -564,7 +564,7 @@
 "2l18y": {relation: required, reviewed: true}
 "2l1xr": {relation: required, reviewed: true}
 "2l2pn": {relation: required, reviewed: true}
-"2ldtg": {relation: weak}
+"2ldtg": {relation: requires-review}
 "2lkla": {relation: required, reviewed: true}
 "2lpi0": {relation: required}
 "2lt05": {relation: required, reviewed: true}
