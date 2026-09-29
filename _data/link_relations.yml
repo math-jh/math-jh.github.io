@@ -747,7 +747,7 @@
 "3ahg6": {relation: required, reviewed: true}
 "3akqh": {relation: required, reviewed: true}
 "3al8p": {relation: required, reviewed: true}
-"3b7ns": {relation: required}
+"3b7ns": {relation: required, reviewed: true}
 "3b8cl": {relation: required, reviewed: true}
 "3bak2": {relation: required, reviewed: true}
 "3bli7": {relation: required, reviewed: true}
@@ -1150,7 +1150,7 @@
 "53m7x": {relation: required, reviewed: true}
 "53onp": {relation: required, reviewed: true}
 "53tlz": {relation: required, reviewed: true}
-"545p8": {relation: weak}
+"545p8": {relation: weak, reviewed: true}
 "548k5": {relation: required, reviewed: true}
 "54fkr": {relation: required}
 "54gkl": {relation: required, reviewed: true}
@@ -3571,7 +3571,7 @@
 "fyb5w": {relation: required, reviewed: true}
 "fyf2p": {relation: weak, reviewed: true}
 "fypbe": {relation: required, reviewed: true}
-"fyrn5": {relation: required}
+"fyrn5": {relation: required, reviewed: true}
 "fysbg": {relation: required}
 "fyyhe": {relation: required, reviewed: true}
 "fznhe": {relation: required, reviewed: true}
@@ -3925,7 +3925,7 @@
 "hm6ro": {relation: required, reviewed: true}
 "hmaku": {relation: required, reviewed: true}
 "hme2l": {relation: required, reviewed: true}
-"hmj9a": {relation: required}
+"hmj9a": {relation: required, reviewed: true}
 "hmkyl": {relation: required, reviewed: true}
 "hn2bn": {relation: weak, reviewed: true}
 "hn8tz": {relation: forward}
