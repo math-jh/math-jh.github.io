@@ -31,7 +31,7 @@
 "04k8g": {relation: required, reviewed: true}
 "04o1i": {relation: required}
 "04omd": {relation: required, reviewed: true}
-"04sw7": {relation: weak}
+"04sw7": {relation: weak, reviewed: true}
 "04zq8": {relation: required, reviewed: true}
 "054bj": {relation: weak, reviewed: true}
 "0573z": {relation: required, reviewed: true}
@@ -3239,7 +3239,7 @@
 "e99h2": {relation: required}
 "e9fi8": {relation: required, reviewed: true}
 "e9pao": {relation: required, reviewed: true}
-"e9tag": {relation: weak}
+"e9tag": {relation: requires-review}
 "e9usz": {relation: weak, reviewed: true}
 "e9uy4": {relation: required, reviewed: true}
 "e9wis": {relation: required, reviewed: true}
