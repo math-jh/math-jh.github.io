@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-29
 
 weight: 49
 
@@ -255,3 +255,54 @@ for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
 모달 아래에 메모 칸이 생겼다. 메모는 체크 파일과 따로 `~/.local/state/blog_dashboard_kotypo_notes.json`에 요청 키(`<ko-path>@<ko_reviewed_at>`) 단위로 병합 저장된다. 체크 map은 클라이언트가 통째로 교체하는 방식이라, 거기 섞으면 다른 탭이 메모를 날린다. 후속 워커는 메모를 제안 프롬프트와 판정 프롬프트 양쪽에 `AUTHOR NOTE`로 넣는다. 판정 쪽에는 이것이 작성자의 설명이지 명령이 아니라고 적었다. 작성자가 "이 지적은 오탐이라 고치지 않았다"고 하면 그 근거가 수학적으로 타당하고 글이 뒷받침할 때만 통과시키고, 판정 이유에서 메모에 답하게 했다.
 
 메모가 있으면 지적 위치의 KO가 바뀌지 않았어도 요청이 판정으로 넘어간다. 원래 이런 요청은 "지적 위치의 KO 변경이 없음"으로 영영 대기에 머물렀다. 오탐을 해명할 길이 체크 해제 말고는 없었던 셈이다. 승인되면 메모도 지워지고, 거절되면 남아서 고쳐 쓸 수 있다. 재감사로 키가 바뀌었거나 지적이 사라진 메모는 매 실행 첫머리에 정리한다. 이제 사용자와 판정자 사이에 대화 비슷한 것이 생겼다. 한 턴에 4시간이 걸리는 대화이긴 하다.
+
+## 수학이 아닌 지적은 올리지 않는다
+
+이 감사는 한동안 저자의 편집 결정을 오류로 올렸다. 사용자가 대시보드 대기열을 보다가 짚은 것은 세 가지였고, 그중 둘이 이 워커의 문제였다([96a9fbea](https://github.com/math-jh/math-jh.github.io/commit/96a9fbea)).
+
+> 지금 번역 크론이 돌면서 원문 지적을 하는데, 공통적으로 (1) \x,\y 등은 이 블로그에서 사용하는 표준적인 매크로인데 계속 지적을 한다. 프롬프트 수정이 필요하다. 이런 식으로 매크로 몇개 넣기보다는, 프롬프트에 GUIDELINE-Translate 혹은 GUIDELINE-Edit 등을 보게 하면 될 것 같다. (2) 지금 대기중인 Derivatives 글 같은 경우에는 애초에 얘가 지적할 사안이 아니다. 수학적인 내용이 아니고, 애초에 이건 우리가 terms.yml에서 derivatives를 등재할 때, primary:en으로 썼지만, calculus 카테고리는 교양수학인 걸 고려해서 한글로 쓰기로 합의 본 사안이다.
+
+(1)은 모델이 블로그 매크로를 모른다는 문제다. 매크로 몇 개를 프롬프트에 적어 넣는 대신, 사용자 말대로 편집 지침을 읽게 했다. `house_conventions()`는 호출할 때마다 `GUIDELINE-Edit.md`에서 `## N. <제목>` 절을 제목으로 골라 싣는다.
+
+```python
+HOUSE_GUIDELINE_SECTIONS = ("수식 표기", "용어 사용")
+...
+    if len(picked) != len(HOUSE_GUIDELINE_SECTIONS):
+        log(f"HOUSE-CONVENTIONS: {HOUSE_GUIDELINE.name} 에서 절 "
+            f"{HOUSE_GUIDELINE_SECTIONS} 을 다 찾지 못해 전문을 싣는다")
+        picked = [guide.strip()]
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+절 번호가 아니라 제목으로 고르는 것은 지침의 절 순서가 바뀌어도 규약이 빠지지 않게 하려는 것이다. 하나라도 못 찾으면 지침 전문으로 물러선다. 지침 옆에는 `assets/js/katex-macros.js`의 키를 정규식으로 뽑은 매크로 목록이 붙는다. 정본 파일을 매번 읽으므로 매크로가 늘어도 다음 틱부터 반영된다.
+
+(2)는 프롬프트에 규약을 더한다고 풀리지 않는다. Derivatives 글의 한글 병기는 오류가 아니라 저자가 정한 표기인데, 후속 워커는 저자가 메모로 그렇게 적은 뒤에도 거절했다. 그래서 감사가 무엇을 지적할 수 있는지를 한 문장으로 잘라 세 프롬프트에 같은 문구로 실었다. 1차 후보를 뽑는 Antigravity, 2차를 판정하는 Codex, 원문과 번역을 대조하는 verify의 `KO-TYPOS`다.
+
+```python
+KO_FINDING_SCOPE = (
+    "Scope: a finding must be about the MATHEMATICS, i.e. whether a statement, "
+    "formula, proof step, or hypothesis is true and adequately supported. "
+    "Out of scope and never a finding: terminology choice, which language a term "
+    "is written in, the order or form of a bilingual gloss ..., "
+    "notation conventions and use of the blog's macros, typography, wording, and "
+    "style. Those are the author's editorial decisions."
+)
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+기존 ERROR 정의에 있던 `malformed LaTeX symbol`, `evident typo`도 손봤다. 각각 `broken LaTeX that cannot render`, `a typo that garbles the mathematical meaning`으로 좁혔다. 이 표현이 남아 있으면 범위 문장을 실어도 모델이 표기 지적을 "오타"로 되살린다. Codex 판정 프롬프트에는 범위 밖 후보와, 인용한 한글이 하우스 규약을 따르는 후보를 둘 다 FALSE로 두라는 문장을 넣었다. 용어와 병기는 `md_lint`와 `terms.yml`이 따로 지키므로, 이 경로가 같은 것을 두 번 세지 않게 하는 것이 목적이다.
+
+후속 워커의 판정 기준도 같은 방향으로 바뀌었다. 이전에는 메모를 "저자의 설명이지 명령이 아니다"로 읽고, 오탐이라는 주장에 수학적 근거를 요구했다. 지금은 수학적 참·거짓을 뺀 모든 것이 저자의 최종 결정이다.
+
+```
+What the author decides is final for everything except mathematical
+truth. ... terminology, the language or gloss form of a term, notation and
+the blog's macros, style, and how much explanation or detail the post gives are
+the author's editorial decisions, and such a finding passes on the author's word
+alone. Only when the finding says the Korean states something mathematically
+false may you weigh the note's reasoning ...
+```
+
+한글 원문이 수학적으로 거짓이라는 지적만 메모의 논거를 따져 보고, 나머지는 메모 한 줄로 통과한다. 반대편 조건도 하나 남겼다. EN은 지금의 한글을 따라야 하므로, 한글에 없는 내용을 덧붙인 영문은 여전히 거절한다.
+
+세 번째 지적은 의존성 분류기가 각주 안의 링크를 판정할 때 맥락이 빠진다는 것이었다. 같은 커밋이 그쪽도 고쳤지만, 분류기의 이야기라 여기에는 적지 않는다.
