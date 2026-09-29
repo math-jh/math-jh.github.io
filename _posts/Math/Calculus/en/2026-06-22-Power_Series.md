@@ -91,7 +91,7 @@ The Cauchy product is the extension to infinite degree of multiplying two polyno
 If a function $f$ coincides in a neighborhood of a point $a$ with a power series centered there, we say $f$ is *analytic* at $a$. If $f$ is analytic at every point of its domain, we call $f$ an *analytic function*.
 :::
 
-An analytic function coincides with its Taylor series. However, the converse is false. The function $f(x) = e^{-1/x^2}$ ($f(0) = 0$) is smooth on all of $\mathbb{R}$, but at $0$ all of its derivatives are $0$, so its Taylor series is identically $0$, and thus in no neighborhood of $0$ does it coincide with $f$; hence $f$ is not analytic at $0$. That is, smoothness does not guarantee analyticity, and whether the Taylor series converges to the function can be determined via the remainder term in Taylor's theorem after learning differentiation.
+An analytic function is a function that coincides with its Taylor series, and we can verify that it is an infinitely differentiable function, that is, a smooth function, but the converse is false. The function $f(x) = e^{-1/x^2}$ ($f(0) = 0$) is smooth on all of $\mathbb{R}$, but at $0$ all of its derivatives are $0$, so its Taylor series is identically $0$, and thus in no neighborhood of $0$ does it coincide with $f$; hence $f$ is not analytic at $0$. That is, smoothness does not guarantee analyticity, and whether the Taylor series converges to the function can be determined via the remainder term in Taylor's theorem after learning differentiation.
 
 ---
 
