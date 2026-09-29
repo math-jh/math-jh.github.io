@@ -5017,7 +5017,7 @@
 "mcyrs": {relation: required, reviewed: true}
 "mczqe": {relation: required}
 "md0p4": {relation: required, reviewed: true}
-"md6h3": {relation: required}
+"md6h3": {relation: required, reviewed: true}
 "mdfvw": {relation: required}
 "mdix7": {relation: weak, reviewed: true}
 "mdpjf": {relation: required, reviewed: true}
@@ -7844,7 +7844,7 @@
 "yvxpx": {relation: required}
 "yw03k": {relation: required, reviewed: true}
 "yw1c8": {relation: required, reviewed: true}
-"ywgfe": {relation: required}
+"ywgfe": {relation: required, reviewed: true}
 "ywgs0": {relation: required, reviewed: true}
 "ywgxl": {relation: weak, reviewed: true}
 "ywi2i": {relation: required}
