@@ -487,7 +487,7 @@
 "2767h": {relation: required, reviewed: true}
 "277hc": {relation: required, reviewed: true}
 "27ctq": {relation: required, reviewed: true}
-"27g9d": {relation: weak}
+"27g9d": {relation: weak, reviewed: true}
 "27kkl": {relation: weak, reviewed: true}
 "27rz2": {relation: required, reviewed: true}
 "283r5": {relation: required, reviewed: true}
@@ -1629,7 +1629,7 @@
 "71hpo": {relation: required, reviewed: true}
 "71lir": {relation: required, reviewed: true}
 "71nsi": {relation: required, reviewed: true}
-"71pwm": {relation: weak}
+"71pwm": {relation: weak, reviewed: true}
 "71pyk": {relation: required, reviewed: true}
 "71rhu": {relation: required, reviewed: true}
 "71sjc": {relation: required, reviewed: true}
@@ -6349,7 +6349,7 @@
 "s8plh": {relation: weak, reviewed: true}
 "s8vip": {relation: required, reviewed: true}
 "s8x58": {relation: required, reviewed: true}
-"s96ds": {relation: weak}
+"s96ds": {relation: requires-review}
 "s99sb": {relation: required, reviewed: true}
 "s9agy": {relation: required, reviewed: true}
 "s9cxf": {relation: required, reviewed: true}
