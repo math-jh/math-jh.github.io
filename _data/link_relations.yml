@@ -5519,7 +5519,7 @@
 "ofs8n": {relation: required}
 "og5oh": {relation: required, reviewed: true}
 "ogd67": {relation: weak, reviewed: true}
-"oglni": {relation: weak}
+"oglni": {relation: requires-review}
 "ogpuq": {relation: required, reviewed: true}
 "oh144": {relation: required, reviewed: true}
 "oh2pg": {relation: required, reviewed: true}
@@ -7388,7 +7388,7 @@
 "wsmg0": {relation: required, reviewed: true}
 "wsu09": {relation: required, reviewed: true}
 "wt54t": {relation: required, reviewed: true}
-"wta98": {relation: required}
+"wta98": {relation: required, reviewed: true}
 "wtbpm": {relation: weak, reviewed: true}
 "wtjo1": {relation: required, reviewed: true}
 "wtp0z": {relation: weak, reviewed: true}
