@@ -3479,6 +3479,13 @@ C:
     url: /ko/math/set_theory/operation_of_binary_relations
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: composition_of_functions
+  en: composition of functions
+  ko: 함수의 합성
+  primary: ko
+  defs:
+  - label: '[집합론] §함수들 사이의 연산'
+    url: /ko/math/set_theory/operation_of_functions
 - id: composition_series
   en: composition series
   ko: 합성열
@@ -7063,6 +7070,13 @@ F:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+- id: function_of_two_variables
+  en: function of two variables
+  ko: 이변수함수
+  primary: en
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: function_sequence
   en: function sequence
   ko: 함수열
@@ -14855,6 +14869,13 @@ P:
   defs:
   - label: '[대수적 위상수학] §위상다양체'
     url: /ko/math/algebraic_topology/topological_manifolds
+- id: product_of_functions
+  en: product of functions
+  ko: 함수의 곱
+  primary: ko
+  defs:
+  - label: '[집합론] §함수들 사이의 연산'
+    url: /ko/math/set_theory/operation_of_functions
 - id: product_rule
   en: product rule
   ko: 곱의 미분법
