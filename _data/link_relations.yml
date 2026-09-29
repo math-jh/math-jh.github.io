@@ -88,7 +88,7 @@
 "0dm9h": {relation: required, reviewed: true}
 "0e01t": {relation: weak, reviewed: true}
 "0eb9z": {relation: required, reviewed: true}
-"0ektm": {relation: required}
+"0ektm": {relation: required, reviewed: true}
 "0ep9e": {relation: required, reviewed: true}
 "0eq9y": {relation: required, reviewed: true}
 "0es5w": {relation: required, reviewed: true}
