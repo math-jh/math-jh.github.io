@@ -6394,7 +6394,7 @@
 "sdtjh": {relation: weak, reviewed: true}
 "sdypz": {relation: weak, reviewed: true}
 "sdzx1": {relation: required, reviewed: true}
-"se8ah": {relation: weak}
+"se8ah": {relation: requires-review}
 "seour": {relation: weak, reviewed: true}
 "sexci": {relation: weak, reviewed: true}
 "seyr7": {relation: required, reviewed: true}
