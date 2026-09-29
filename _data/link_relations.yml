@@ -4817,7 +4817,7 @@
 "lia9q": {relation: required, reviewed: true}
 "lijbn": {relation: weak, reviewed: true}
 "lil5u": {relation: required, reviewed: true}
-"litlx": {relation: required}
+"litlx": {relation: requires-review}
 "livj4": {relation: required, reviewed: true}
 "lix45": {relation: required, reviewed: true}
 "lix6u": {relation: required, reviewed: true}
