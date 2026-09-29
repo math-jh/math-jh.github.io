@@ -18668,6 +18668,13 @@ S:
   defs:
   - label: '[사교기하학] §고전역학'
     url: /ko/math/symplectic_geometry/classical_mechanics
+- id: symplectic_basis
+  en: symplectic basis
+  ko: 사교기저
+  primary: en
+  defs:
+  - label: '[사교기하학] §사교벡터공간'
+    url: /ko/math/symplectic_geometry/linear_symplectic_geometry
 - id: symplectic_complement
   en: symplectic complement
   ko: 사교 여공간
@@ -18689,6 +18696,13 @@ S:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+- id: symplectic_quotient
+  en: symplectic quotient
+  ko: 사교 몫
+  primary: en
+  defs:
+  - label: '[사교기하학] §사교 축약'
+    url: /ko/math/symplectic_geometry/symplectic_reduction
 - id: symplectic_reduction
   en: symplectic reduction
   ko: 사교 축약
