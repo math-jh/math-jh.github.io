@@ -3399,7 +3399,7 @@
 "f44rx": {relation: required, reviewed: true}
 "f48kz": {relation: required, reviewed: true}
 "f4h5d": {relation: required, reviewed: true}
-"f4nkc": {relation: weak}
+"f4nkc": {relation: weak, reviewed: true}
 "f57r3": {relation: required, reviewed: true}
 "f5act": {relation: required, reviewed: true}
 "f5l21": {relation: weak, reviewed: true}
