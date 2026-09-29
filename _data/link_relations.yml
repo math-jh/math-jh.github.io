@@ -15,7 +15,7 @@
 "01lgv": {relation: required}
 "01mup": {relation: required, reviewed: true}
 "01sue": {relation: weak, reviewed: true}
-"01vqd": {relation: required}
+"01vqd": {relation: required, reviewed: true}
 "02c8d": {relation: required}
 "02ip9": {relation: required, reviewed: true}
 "035xy": {relation: required, reviewed: true}
@@ -285,7 +285,7 @@
 "1axcj": {relation: required, reviewed: true}
 "1azsh": {relation: required}
 "1b669": {relation: required}
-"1bf64": {relation: required}
+"1bf64": {relation: required, reviewed: true}
 "1bkj7": {relation: required, reviewed: true}
 "1bwzi": {relation: required, reviewed: true}
 "1c0au": {relation: required, reviewed: true}
@@ -6198,7 +6198,7 @@
 "rl89w": {relation: required, reviewed: true}
 "rlay2": {relation: required, reviewed: true}
 "rlbuq": {relation: weak, reviewed: true}
-"rldhh": {relation: required}
+"rldhh": {relation: required, reviewed: true}
 "rlgxq": {relation: required, reviewed: true}
 "rlmvg": {relation: required, reviewed: true}
 "rlunk": {relation: weak, reviewed: true}
@@ -7392,7 +7392,7 @@
 "wvmxj": {relation: weak, reviewed: true}
 "wvr3n": {relation: required, reviewed: true}
 "wvskh": {relation: required, reviewed: true}
-"wvue3": {relation: weak}
+"wvue3": {relation: weak, reviewed: true}
 "wvvyf": {relation: required, reviewed: true}
 "ww51i": {relation: required}
 "ww8b2": {relation: required, reviewed: true}
@@ -7664,7 +7664,7 @@
 "y4iu0": {relation: required, reviewed: true}
 "y51eu": {relation: weak, reviewed: true}
 "y52r9": {relation: required}
-"y55gn": {relation: required}
+"y55gn": {relation: required, reviewed: true}
 "y57l5": {relation: required, reviewed: true}
 "y59z8": {relation: weak, reviewed: true}
 "y5ayz": {relation: required}
@@ -7740,7 +7740,7 @@
 "yfq31": {relation: required}
 "yfsab": {relation: required, reviewed: true}
 "yfv3r": {relation: required, reviewed: true}
-"yfzlc": {relation: required}
+"yfzlc": {relation: required, reviewed: true}
 "yg29v": {relation: weak, reviewed: true}
 "yg2nh": {relation: weak, reviewed: true}
 "yg6uq": {relation: weak, reviewed: true}
