@@ -3060,7 +3060,7 @@
 "dgauc": {relation: required, reviewed: true}
 "dgavj": {relation: required, reviewed: true}
 "dgen6": {relation: required, reviewed: true}
-"dhhcs": {relation: required}
+"dhhcs": {relation: required, reviewed: true}
 "dhkb9": {relation: required, reviewed: true}
 "dhlwy": {relation: required, reviewed: true}
 "dhngh": {relation: required, reviewed: true}
