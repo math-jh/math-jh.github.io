@@ -1308,20 +1308,6 @@ B:
     id: ample_line_bundle
   - label: Basepoint-free
     id: basepoint-free
-- id: basic
-  en: basic
-  ko: 기본
-  primary: ko
-  defs:
-  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
-    url: /ko/math/gromov-witten_theory/log_stable_maps
-- id: basic_monoid
-  en: basic monoid
-  ko: 기본 모노이드
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
-    url: /ko/math/gromov-witten_theory/log_stable_maps
 - id: basis
   en: basis
   ko: 기저 (선형대수학)
@@ -2388,13 +2374,6 @@ C:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
-- id: chart
-  en: chart
-  ko: 차트
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
 - id: chern_character
   en: Chern character
   ko: 천 지표
@@ -3729,13 +3708,6 @@ C:
   defs:
   - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
-- id: contact_order
-  en: contact order
-  ko: 접촉 차수
-  primary: ko
-  defs:
-  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
-    url: /ko/math/gromov-witten_theory/log_stable_maps
 - id: continued_fraction
   en: continued fraction
   ko: 연분수
@@ -5502,13 +5474,6 @@ E:
   see:
   - label: Cartier divisor
     id: cartier_divisor
-- id: effective_class
-  en: effective class
-  ko: 효과적 류
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
-    url: /ko/math/gromov-witten_theory/intro_reading_note
 - id: effective_divisor
   en: effective divisor
   ko: 유효 인자
@@ -7600,13 +7565,6 @@ G:
   defs:
   - label: '[위상수학] §준층'
     url: /ko/math/topology/presheaves
-- id: ghost_sheaf
-  en: ghost sheaf
-  ko: 고스트 층
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
 - id: git_quotient
   en: GIT quotient
   ko: GIT 몫
@@ -11689,48 +11647,6 @@ L:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
-- id: log_scheme
-  en: log scheme
-  ko: 로그 스킴
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
-- id: log_smooth
-  en: log smooth
-  ko: 로그 매끄러운
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
-- id: log_smooth_curve
-  en: log smooth curve
-  ko: 로그 매끄러운 곡선
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
-- id: log_stable_map
-  en: log stable map
-  ko: 로그 안정사상
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
-    url: /ko/math/gromov-witten_theory/log_stable_maps
-- id: log_structure
-  en: log structure
-  ko: 로그 구조
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
-- id: log_tangent_bundle
-  en: log tangent bundle
-  ko: 로그 접다발
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
 - id: logarithmic_cotangent_sheaf
   en: logarithmic cotangent sheaf
   ko: 로그 코탄젠트 층
@@ -13402,13 +13318,6 @@ O:
   defs:
   - label: '[스킴] §변형이론과 여접 복합체'
     url: /ko/math/scheme_theory/deformation_theory
-- id: obstruction_theory
-  en: obstruction theory
-  ko: 장애이론
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Family 위에서 정의된 그로모프-위튼 불변량'
-    url: /ko/math/gromov-witten_theory/family_gw_invariants
 - id: odd_map
   en: odd map
   ko: 기함수형 사상
@@ -16174,13 +16083,6 @@ R:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
-- id: relative_virtual_cycle
-  en: relative virtual cycle
-  ko: 상대 가상류
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Very ample hypersurface의 그로모프-위튼 불변량'
-    url: /ko/math/gromov-witten_theory/gathmann_relative_gw
 - id: relatively_algebraically_closed_field
   en: relatively algebraically closed field
   ko: 상대적으로 대수적으로 닫힌 체
@@ -18001,8 +17903,6 @@ S:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
-  - label: '[그로모프-위튼 이론] §인트로: 박사 문제까지의 사다리'
-    url: /ko/math/gromov-witten_theory/intro_reading_note
 - id: stack
   en: stack
   ko: 스택
@@ -18045,13 +17945,6 @@ S:
   defs:
   - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
-- id: standard_log_point
-  en: standard log point
-  ko: 표준 로그 점
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
-    url: /ko/math/gromov-witten_theory/log_structures
 - id: standard_representation
   en: standard representation
   ko: 표준표현
@@ -18984,13 +18877,6 @@ T:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
-- id: tautological_subbundle
-  en: tautological subbundle
-  ko: 항등 부분다발
-  primary: en
-  defs:
-  - label: '[그로모프-위튼 이론] §Family GW 불변량과 fiberwise quantum cohomology: BDOP 독서 노트'
-    url: /ko/math/gromov-witten_theory/bdop_reading_note
 - id: taylor_polynomial
   en: Taylor polynomial
   ko: $n$차 테일러 다항식
