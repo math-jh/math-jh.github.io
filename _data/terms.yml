@@ -6909,6 +6909,13 @@ F:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: fréchet_filter
+  en: Fréchet filter
+  ko: 프레셰 필터
+  primary: en
+  defs:
+  - label: '[위상수학] §위상공간의 다른 정의들'
+    url: /ko/math/topology/equivalent_formulations_of_topology
 - id: fréchet_space
   en: fréchet space
   ko: 프레셰 공간
