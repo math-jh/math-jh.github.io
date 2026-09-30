@@ -1273,7 +1273,7 @@
 "5ih46": {relation: required, reviewed: true}
 "5ipto": {relation: required, reviewed: true}
 "5iw2p": {relation: required, reviewed: true}
-"5iy57": {relation: weak}
+"5iy57": {relation: weak, reviewed: true}
 "5j2lb": {relation: weak}
 "5j8xp": {relation: required, reviewed: true}
 "5jb59": {relation: required, reviewed: true}
@@ -5084,7 +5084,7 @@
 "mlmun": {relation: required, reviewed: true}
 "mln66": {relation: weak, reviewed: true}
 "mlnlz": {relation: required, reviewed: true}
-"mlqdv": {relation: weak}
+"mlqdv": {relation: weak, reviewed: true}
 "mm0qw": {relation: weak, reviewed: true}
 "mm53x": {relation: required, reviewed: true}
 "mmbxe": {relation: required, reviewed: true}
