@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-09
-last_modified_at: 2026-09-25
+last_modified_at: 2026-09-30
 weight: 50
 
 ---
@@ -155,7 +155,7 @@ for attempt_index, (model_name, caller) in enumerate(attempts):
 
 fad92484는 한 틱 한 유닛이라는 구조 위에 두 번째 패스를 얹었다. 1차가 새 링크를 분류하는 동안, 검증 패스는 이미 태그가 붙은 링크에서 `data-relation` 값을 지운 프롬프트를 다시 던져 처음 보는 링크처럼 판정하게 한다. 판정자는 원래 판정자와 다른 모델이어야 한다는 요청대로 `VERIFIER_CHAINS`에 Codex는 Opus가, Opus는 Codex가 검사하도록 못 박고, 결정한 모델을 기록하지 못한 예전 백로그나 Antigravity 판정은 기존 순서(Opus → Codex)를 그대로 쓴다. 단일 모델이 배정이므로 fallback이 없고, 그 모델이 쿼터로 닫혀 있으면 이 유닛은 다음 틱으로 미룰 뿐 다른 슬롯을 기다리지 않는다.
 
-검증 결과가 원래 판정과 다르면(또는 ambiguous면) 자동으로 덮어쓰지 않는다. 태그를 파일에서 아예 떼어내고 `dependency-classifier-holds.json`에 그 링크를 걸어 둔다. 1차 패스는 걸린 링크를 건너뛰므로 재분류 루프에 빠지지 않고, 대시보드의 "의존성 링크 보류" 패널이 파일·줄 번호·1차와 2차 판정·근거를 나열해 사람의 최종 판단을 기다린다. 글에 직접 `data-relation` 태그를 달고 체크박스를 누르면, 서버(`/api/linkaudit/resolve`)가 그 파일을 다시 읽어 실제로 태그가 붙었는지 확인한 뒤에만 목록에서 뺀다. 체크는 판정이 아니라 확인이라는 문구 그대로다. 한 번 사람이 확정한 링크는 `settled`로 옮겨 다음 검증에서 다시 걸리지 않는다.
+검증 결과가 원래 판정과 다르면(또는 ambiguous면) 자동으로 덮어쓰지 않는다. 태그를 파일에서 아예 떼어내고 `dependency-classifier-holds.json`에 그 링크를 걸어 둔다. 1차 패스는 걸린 링크를 건너뛰므로 재분류 루프에 빠지지 않고, 대시보드의 "의존성 링크 보류" 패널이 파일·줄 번호·1차와 2차 판정·근거를 나열해 사람의 최종 판단을 기다린다. 글에 직접 `data-relation` 태그를 달고 체크박스를 누르면, 서버(`/api/linkaudit/resolve`)가 그 파일을 다시 읽어 실제로 태그가 붙었는지 확인한 뒤에만 목록에서 뺀다. 체크는 판정이 아니라 확인이라는 문구 그대로다. 한 번 사람이 확정한 링크는 `settled`로 옮기고, 다음 검증에서 다시 걸리지 않게 하는 것은 원장 레코드의 `reviewed`다. 이 부분은 [뒤의 절](#판정의-완료-표시는-하나만)에서 고쳐 쓴다.
 
 ```js
 chk.onchange = function () {
@@ -272,3 +272,27 @@ def undo_relation(rec, records):
 > 전 판정까지만 하면 충분해.
 
 '파일 태그 확인' 경로, 곧 사용자가 값을 직접 적고 확인 버튼을 누르는 쪽은 서버가 쓴 값이 없으므로 되돌리기 기록도 남지 않는다. README는 그 경로의 판정을 되돌릴 수 없다고 적는다.
+
+## 판정의 완료 표시는 하나만
+
+사람이 판정한 링크를 검증기가 다시 걸지 않게 하는 표시가 두 군데 있었다. 원장 레코드의 `reviewed: true`와 보류 파일의 `settled` 항목이다. 사용자는 `reviewed`가 붙은 링크의 수를 세어 보다가 `settled`와 어긋난 건이 있는 것을 확인하고 이렇게 지시했다.
+
+> 그럼 settled에서 지워서 그 글들에 의존성이 돌게 만들어줘. 4건도 원장에서 reviewed: true를 지우고. 그리고 지금 원장이랑 settled가 계속 어긋날 수도 있을 것 같은데 이것도 SoT를 합치는 편이 낫지 않나?
+
+어긋난 항목을 되돌린 뒤 남은 일은 두 표시 중 하나를 코드에서 빼는 것이었다([`7852836c`](https://github.com/math-jh/math-jh.github.io/commit/7852836c)). 분류기의 각 단계가 건너뛸 링크를 모으는 `parked_idents`가 `held`와 `settled`의 합집합에서 `held`만으로 줄었다.
+
+```python
+def parked_idents() -> set[str]:
+    """Links still waiting for a human ruling.
+
+    ``settled`` is not consulted: a ruling is complete through its ledger record's
+    ``reviewed: true``, and that record is the only completion marker the stages
+    read.
+    """
+    return set(load_holds()["held"])
+```
+{: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
+
+`settled`는 파일에 남아 있지만 이제 대시보드의 되돌리기 기록(`settled[ident].undo`)과 판정 이력만 든다. 두 번째 표시를 지우지 않은 것은 되돌리기가 그 항목에 기대기 때문이다. 대신 `reviewed`가 없는 `settled` 항목은 검증 대상이 된다는 테스트가 붙었다. 레코드 없이 `settled`에만 올라 있는 링크를 시험 삼아 넣고, 그 링크가 검증기(opus)의 입력에 실려 가는지 확인한다.
+
+이 변경으로 두 표시가 어긋날 여지는 없어졌다. 분류기가 읽는 것이 하나뿐이기 때문이다.
