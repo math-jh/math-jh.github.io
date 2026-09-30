@@ -7455,6 +7455,13 @@ G:
     url: /ko/math/algebraic_structures/modules
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+- id: generated_topology
+  en: generated topology
+  ko: 생성된 위상
+  primary: en
+  defs:
+  - label: '[위상수학] §위상공간의 기저'
+    url: /ko/math/topology/topological_bases
 - id: generating_set
   en: generating set
   ko: 생성집합
