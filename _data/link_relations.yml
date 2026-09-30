@@ -5790,7 +5790,7 @@
 "plcik": {relation: required, reviewed: true}
 "plezh": {relation: required, reviewed: true}
 "plfq0": {relation: required, reviewed: true}
-"pljqx": {relation: weak}
+"pljqx": {relation: weak, reviewed: true}
 "pljwz": {relation: required, reviewed: true}
 "pm5t4": {relation: required, reviewed: true}
 "pmj8g": {relation: required, reviewed: true}
