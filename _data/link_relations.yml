@@ -232,7 +232,7 @@
 "12bwt": {relation: required, reviewed: true}
 "12v03": {relation: required, reviewed: true}
 "132af": {relation: required, reviewed: true}
-"13aj5": {relation: required}
+"13aj5": {relation: required, reviewed: true}
 "13man": {relation: weak, reviewed: true}
 "13rhz": {relation: weak, reviewed: true}
 "13tfg": {relation: required, reviewed: true}
@@ -1443,7 +1443,7 @@
 "67u4y": {relation: required, reviewed: true}
 "67w3z": {relation: required, reviewed: true}
 "68411": {relation: required, reviewed: true}
-"68860": {relation: required}
+"68860": {relation: required, reviewed: true}
 "688bf": {relation: weak, reviewed: true}
 "68img": {relation: required, reviewed: true}
 "68l54": {relation: required}
@@ -2561,7 +2561,7 @@
 "b8zuu": {relation: weak, reviewed: true}
 "b96o0": {relation: required, reviewed: true}
 "b97p8": {relation: weak}
-"b9dg1": {relation: required}
+"b9dg1": {relation: required, reviewed: true}
 "b9dmh": {relation: required, reviewed: true}
 "b9pqs": {relation: required, reviewed: true}
 "b9q7x": {relation: required, reviewed: true}
@@ -5829,7 +5829,7 @@
 "pr3fk": {relation: required, reviewed: true}
 "prffw": {relation: required, reviewed: true}
 "prlmv": {relation: required, reviewed: true}
-"prp0u": {relation: required}
+"prp0u": {relation: required, reviewed: true}
 "ps53n": {relation: required, reviewed: true}
 "psa0m": {relation: weak, reviewed: true}
 "psha7": {relation: required, reviewed: true}
@@ -6598,7 +6598,7 @@
 "t892i": {relation: required, reviewed: true}
 "t8gbn": {relation: weak}
 "t8lew": {relation: required, reviewed: true}
-"t8mbi": {relation: required}
+"t8mbi": {relation: required, reviewed: true}
 "t8naq": {relation: required, reviewed: true}
 "t8ojs": {relation: required, reviewed: true}
 "t8on0": {relation: required, reviewed: true}
@@ -7268,7 +7268,7 @@
 "w82de": {relation: required}
 "w83dx": {relation: weak, reviewed: true}
 "w854z": {relation: required, reviewed: true}
-"w8bka": {relation: required}
+"w8bka": {relation: required, reviewed: true}
 "w8gzj": {relation: weak}
 "w8jxe": {relation: required, reviewed: true}
 "w8k31": {relation: required, reviewed: true}
