@@ -1629,7 +1629,7 @@
 "7095p": {relation: weak, reviewed: true}
 "70jyz": {relation: required, reviewed: true}
 "70k2z": {relation: required, reviewed: true}
-"70m05": {relation: required}
+"70m05": {relation: required, reviewed: true}
 "70nq9": {relation: required, reviewed: true}
 "70p2x": {relation: required, reviewed: true}
 "70q0l": {relation: required, reviewed: true}
@@ -2314,7 +2314,7 @@
 "a3jn5": {relation: required, reviewed: true}
 "a3qxb": {relation: required, reviewed: true}
 "a42b0": {relation: weak, reviewed: true}
-"a4c7o": {relation: weak}
+"a4c7o": {relation: requires-review}
 "a4l6b": {relation: required, reviewed: true}
 "a4no9": {relation: required, reviewed: true}
 "a4om8": {relation: required, reviewed: true}
@@ -4700,7 +4700,7 @@
 "kui9i": {relation: required, reviewed: true}
 "kuiaq": {relation: required, reviewed: true}
 "kum72": {relation: required, reviewed: true}
-"kunuo": {relation: required}
+"kunuo": {relation: required, reviewed: true}
 "kuoq3": {relation: required}
 "kuwqb": {relation: required, reviewed: true}
 "kuwvc": {relation: required, reviewed: true}
@@ -5849,7 +5849,7 @@
 "poxcb": {relation: weak, reviewed: true}
 "poxje": {relation: required, reviewed: true}
 "pp22p": {relation: weak, reviewed: true}
-"pp42c": {relation: required}
+"pp42c": {relation: required, reviewed: true}
 "ppaco": {relation: required, reviewed: true}
 "ppfgm": {relation: required, reviewed: true}
 "ppiqr": {relation: required}
@@ -7074,7 +7074,7 @@
 "v5ru4": {relation: required, reviewed: true}
 "v5u5j": {relation: required, reviewed: true}
 "v5x0c": {relation: required}
-"v63xr": {relation: required}
+"v63xr": {relation: required, reviewed: true}
 "v64ai": {relation: required, reviewed: true}
 "v66wp": {relation: required, reviewed: true}
 "v6ebi": {relation: required, reviewed: true}
