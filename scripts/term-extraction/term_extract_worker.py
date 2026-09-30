@@ -11,7 +11,8 @@ semantic_checks 비악화)를 통과해야만 원자적으로 쓴다. 실패는 
 
 틱마다 (cron 홀수 시각 :15) 글 하나:
   선정 (스크립트만, LLM 무관 — 매칭 없어도 로그 한 줄은 남긴다):
-    0. 한 번도 안 돌린 글 (path 순)          — published:false 포함
+    0. 한 번도 안 돌린 글 (path 순)          — published:false 포함,
+       gitignore 된 글은 대상에서 뺀다
     1. 같은 본문 세대의 1차 재시도 (path 순)
     2. 마지막 검사 후 그 글을 건드린 무태그 내용 커밋
        (`[lastmod-skip]`·`[dev]` 모두 없음)이 생기면 새 세대로 보고
@@ -145,10 +146,32 @@ def save_state(state: dict) -> None:
 # 글 선정 (LLM 무관)
 # ---------------------------------------------------------------------------
 
+def gitignored_posts() -> set[str] | None:
+    """_posts/Math 아래 .gitignore 로 무시되는 파일 (rel). git 실패 시 None."""
+    p = subprocess.run(
+        ["git", "ls-files", "-z", "--others", "--ignored", "--exclude-standard",
+         "--", "_posts/Math"],
+        cwd=str(BLOG_ROOT), capture_output=True, text=True)
+    if p.returncode != 0:
+        return None
+    return {rel for rel in p.stdout.split("\x00") if rel}
+
+
 def all_ko_posts() -> list[str]:
+    """추출 대상 KO 글. published:false 는 포함, gitignore 된 글은 뺀다.
+
+    무시 목록을 못 얻으면 빈 목록을 돌려 틱을 쉰다 — 무시된 글이
+    terms.yml 의 defs 로 새어 나가는 것보다 한 틱 쉬는 편이 낫다.
+    """
+    ignored = gitignored_posts()
+    if ignored is None:
+        log("경고: git ls-files 실패 — gitignore 판정 불가, 이번 틱 쉼")
+        return []
     out = []
     for p in sorted(BLOG_ROOT.glob("_posts/Math/**/ko/*.md")):
-        out.append(str(p.relative_to(BLOG_ROOT)))
+        rel = str(p.relative_to(BLOG_ROOT))
+        if rel not in ignored:
+            out.append(rel)
     return out
 
 

@@ -628,10 +628,13 @@ def prompt_items(links: list[Link], wide: bool, full: bool = False) -> list[dict
     items = []
     for link in links:
         src, dst = target_context(link, wide, full)
+        # 같은 markup 이 한 글에 여러 번 나오므로 출현은 IAL 의 data-lid 로 가리킨다.
+        occurrence = read_post(link.source)[link.start:link.ial_end or link.end]
         items.append({
             "id": link.ident,
             "language": "en" if "/en/" in str(link.source) else "ko",
-            "link": link.markup,
+            "lid": link.lid,
+            "link": occurrence,
             "target": link.target,
             "context_scope": "full-article" if full else "excerpt",
             "source_context": src,
@@ -678,7 +681,13 @@ Choose ambiguous only when the excerpts leave the link's role genuinely undecida
 ITEMS:
 """)
 
-PROMPTS = {"first": FIRST_PROMPT, "review": REVIEW_PROMPT, "verify": VERIFY_PROMPT}
+ITEM_LOCATOR = """Each item is one occurrence of a link. The same link text can appear several times in an article, so the item names its occurrence by "lid": judge the occurrence in source_context whose attribute list carries data-lid="<lid>" (the "link" field shows it verbatim), and no other.
+
+"""
+
+PROMPTS = {mode: prompt.replace("\nITEMS:\n", "\n" + ITEM_LOCATOR + "ITEMS:\n")
+           for mode, prompt in (("first", FIRST_PROMPT), ("review", REVIEW_PROMPT),
+                                ("verify", VERIFY_PROMPT))}
 
 
 def allows_ambiguous(mode: str) -> bool:
