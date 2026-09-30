@@ -192,7 +192,7 @@ Let the function $f(x) = x e^{-x}$ be given on $\mathbb{R}$. Its first and secon
 
 $$f'(x) = (1 - x)e^{-x}, \qquad f''(x) = (x - 2)e^{-x}$$
 
-Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and that of $f''$ by $x - 2$. Hence by [Proposition 7](#prop7){: data-lid="ixqid" }, the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Also, by [Proposition 12](#prop12){: data-lid="n7l3e" }, from the change in sign of $f'$ at $x = 1$, it has the local maximum $f(1) = e^{-1}$. Finally, since $\lim_{x\rightarrow\infty} x e^{-x} = 0$ and $\lim_{x\rightarrow -\infty} x e^{-x} = -\infty$, the graph descends to negative infinity on the left, reaches at $x = 1$ the highest point $e^{-1}$, and then descends, asymptotically approaching the $x$-axis.
+Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and that of $f''$ by $x - 2$. Hence by [Proposition 7](#prop7){: data-lid="ixqid" }, the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Also, by [Proposition 12](#prop12){: data-lid="n7l3e" }, from the change in sign of $f'$ at $x = 1$, it has the local maximum $f(1) = e^{-1}$. Finally, since $\lim_{x\rightarrow\infty} x e^{-x} = 0$ and $\lim_{x\rightarrow -\infty} x e^{-x} = -\infty$, the graph rises from negative infinity on the left, reaches at $x = 1$ the highest point $e^{-1}$, and then descends, asymptotically approaching the $x$-axis.
 :::
 
 ## Extrema and Convexity Tests
