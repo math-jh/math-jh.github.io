@@ -1337,7 +1337,7 @@
 "5swb6": {relation: required}
 "5sweu": {relation: required, reviewed: true}
 "5sze5": {relation: weak, reviewed: true}
-"5t6u4": {relation: required}
+"5t6u4": {relation: required, reviewed: true}
 "5t9k7": {relation: required, reviewed: true}
 "5tj19": {relation: weak, reviewed: true}
 "5tkxe": {relation: required}
@@ -2388,7 +2388,7 @@
 "ah3k7": {relation: required, reviewed: true}
 "ah91t": {relation: required, reviewed: true}
 "ah953": {relation: required, reviewed: true}
-"ahhe6": {relation: required}
+"ahhe6": {relation: required, reviewed: true}
 "ahnlu": {relation: required, reviewed: true}
 "ahnwo": {relation: required, reviewed: true}
 "ahx9a": {relation: weak, reviewed: true}
@@ -4000,7 +4000,7 @@
 "hysmm": {relation: required, reviewed: true}
 "hyvoz": {relation: required, reviewed: true}
 "hz3rf": {relation: required, reviewed: true}
-"hz792": {relation: required}
+"hz792": {relation: required, reviewed: true}
 "hz9uj": {relation: weak, reviewed: true}
 "hzen5": {relation: required}
 "hzft9": {relation: required, reviewed: true}
@@ -7166,7 +7166,7 @@
 "vtoc4": {relation: required}
 "vu214": {relation: weak, reviewed: true}
 "vu2p8": {relation: weak, reviewed: true}
-"vu5x3": {relation: required}
+"vu5x3": {relation: required, reviewed: true}
 "vuf1h": {relation: required, reviewed: true}
 "vuhuz": {relation: required, reviewed: true}
 "vuire": {relation: required, reviewed: true}
