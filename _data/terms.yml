@@ -6140,6 +6140,13 @@ E:
   defs:
   - label: '[선형대수학] §선형사상들의 공간'
     url: /ko/math/linear_algebra/space_of_linear_maps
+- id: extension_by_zero
+  en: extension by zero
+  ko: 영연장
+  primary: en
+  defs:
+  - label: '[위상수학] §층'
+    url: /ko/math/topology/sheaves
 - id: extension_degree
   en: extension degree
   ko: 확대 차수
@@ -17562,6 +17569,13 @@ S:
   defs:
   - label: '[선형대수학] §복소 스펙트럼 정리'
     url: /ko/math/linear_algebra/complex_spectral_theorem
+- id: skyscraper_sheaf
+  en: skyscraper sheaf
+  ko: 마천루 층
+  primary: en
+  defs:
+  - label: '[위상수학] §층'
+    url: /ko/math/topology/sheaves
 - id: slice
   en: slice
   ko: 조각
