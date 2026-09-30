@@ -884,7 +884,7 @@
 "3uzpa": {relation: required, reviewed: true}
 "3vhd8": {relation: weak, reviewed: true}
 "3vs27": {relation: required, reviewed: true}
-"3vwcj": {relation: required}
+"3vwcj": {relation: required, reviewed: true}
 "3vwxg": {relation: required, reviewed: true}
 "3w66x": {relation: required, reviewed: true}
 "3wdou": {relation: required, reviewed: true}
@@ -1556,7 +1556,7 @@
 "6nl20": {relation: required, reviewed: true}
 "6nmdd": {relation: weak, reviewed: true}
 "6nn2i": {relation: required, reviewed: true}
-"6nsa2": {relation: required}
+"6nsa2": {relation: required, reviewed: true}
 "6o5z8": {relation: required, reviewed: true}
 "6oc2h": {relation: required, reviewed: true}
 "6p4pa": {relation: required, reviewed: true}
@@ -2601,7 +2601,7 @@
 "bdj2r": {relation: weak, reviewed: true}
 "bdox3": {relation: required, reviewed: true}
 "be31p": {relation: required, reviewed: true}
-"be80x": {relation: required}
+"be80x": {relation: required, reviewed: true}
 "be9pk": {relation: required, reviewed: true}
 "bebbz": {relation: required, reviewed: true}
 "beek0": {relation: required, reviewed: true}
@@ -7176,7 +7176,7 @@
 "vmbf5": {relation: required, reviewed: true}
 "vmh1u": {relation: required, reviewed: true}
 "vmp2g": {relation: required}
-"vmqof": {relation: required}
+"vmqof": {relation: required, reviewed: true}
 "vmta9": {relation: required, reviewed: true}
 "vmve1": {relation: required, reviewed: true}
 "vmx8b": {relation: weak, reviewed: true}
@@ -7681,7 +7681,7 @@
 "xtbc7": {relation: required, reviewed: true}
 "xtcze": {relation: weak, reviewed: true}
 "xtl48": {relation: required, reviewed: true}
-"xttgj": {relation: required}
+"xttgj": {relation: required, reviewed: true}
 "xu3ec": {relation: required, reviewed: true}
 "xu8xk": {relation: required, reviewed: true}
 "xua3h": {relation: required, reviewed: true}
@@ -7883,7 +7883,7 @@
 "ynyr4": {relation: required, reviewed: true}
 "yo0w0": {relation: weak, reviewed: true}
 "yo2is": {relation: required, reviewed: true}
-"yo56n": {relation: required}
+"yo56n": {relation: required, reviewed: true}
 "yo9y5": {relation: required, reviewed: true}
 "yoa91": {relation: required, reviewed: true}
 "yoe6c": {relation: weak}
