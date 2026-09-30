@@ -611,7 +611,7 @@
 "2s9rg": {relation: weak, reviewed: true}
 "2sif3": {relation: required, reviewed: true}
 "2sksi": {relation: required, reviewed: true}
-"2sppp": {relation: required}
+"2sppp": {relation: required, reviewed: true}
 "2tfxp": {relation: required, reviewed: true}
 "2tgfs": {relation: required, reviewed: true}
 "2trm8": {relation: weak, reviewed: true}
