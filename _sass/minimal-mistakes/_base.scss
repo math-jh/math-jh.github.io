@@ -111,6 +111,12 @@ summary {
     padding-bottom: 0.2em;
 }
 
+/* 수식 가로 스크롤바: 좌측 사이드바 스크롤바의 수평판 (직각·트랙 없음).
+   thumb 색은 모드별로 스킨이 정한다. */
+.katex-display::-webkit-scrollbar { height: 4px; }
+.katex-display::-webkit-scrollbar-track { display: none; }
+.katex-display::-webkit-scrollbar-thumb { border-radius: 0; }
+
 em-ko {
   font-family: "MyEmphFont";
   font-size: 1.14em;
