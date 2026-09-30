@@ -6619,6 +6619,13 @@ F:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: finite_subcover
+  en: finite subcover
+  ko: 유한부분덮개
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골공간'
+    url: /ko/math/topology/compact_spaces
 - id: finite_support
   en: finite support
   ko: 유한지지
