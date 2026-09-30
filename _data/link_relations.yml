@@ -857,7 +857,7 @@
 "3qvcb": {relation: required, reviewed: true}
 "3qwy3": {relation: required, reviewed: true}
 "3r6te": {relation: forward, reviewed: true}
-"3rbox": {relation: required}
+"3rbox": {relation: requires-review}
 "3rcwi": {relation: required, reviewed: true}
 "3rjq3": {relation: weak, reviewed: true}
 "3rk0z": {relation: required, reviewed: true}
@@ -1612,7 +1612,7 @@
 "6y6rs": {relation: weak, reviewed: true}
 "6yl4p": {relation: required, reviewed: true}
 "6ys0n": {relation: required, reviewed: true}
-"6ytny": {relation: required}
+"6ytny": {relation: required, reviewed: true}
 "6z0y4": {relation: required, reviewed: true}
 "6z38n": {relation: required, reviewed: true}
 "6z99i": {relation: required, reviewed: true}
@@ -3106,7 +3106,7 @@
 "dks0r": {relation: required, reviewed: true}
 "dlck1": {relation: required}
 "dle42": {relation: required, reviewed: true}
-"dlj48": {relation: required}
+"dlj48": {relation: requires-review}
 "dlnuy": {relation: required, reviewed: true}
 "dlpnk": {relation: weak, reviewed: true}
 "dlrn0": {relation: required, reviewed: true}
@@ -3843,7 +3843,7 @@
 "h23ac": {relation: required, reviewed: true}
 "h27pu": {relation: required, reviewed: true}
 "h2dm3": {relation: required, reviewed: true}
-"h2mxk": {relation: required}
+"h2mxk": {relation: required, reviewed: true}
 "h2ph8": {relation: required, reviewed: true}
 "h2w86": {relation: required, reviewed: true}
 "h32sx": {relation: required, reviewed: true}
@@ -7445,7 +7445,7 @@
 "wroia": {relation: required, reviewed: true}
 "wroxh": {relation: required, reviewed: true}
 "wrxu6": {relation: required, reviewed: true}
-"ws94q": {relation: forward}
+"ws94q": {relation: forward, reviewed: true}
 "wsb8k": {relation: required, reviewed: true}
 "wslig": {relation: weak, reviewed: true}
 "wsmg0": {relation: required, reviewed: true}
@@ -7674,7 +7674,7 @@
 "xsd1y": {relation: weak, reviewed: true}
 "xseen": {relation: required, reviewed: true}
 "xsm5g": {relation: required, reviewed: true}
-"xsmp2": {relation: required}
+"xsmp2": {relation: required, reviewed: true}
 "xsugg": {relation: required, reviewed: true}
 "xsxoo": {relation: required, reviewed: true}
 "xt2ts": {relation: required, reviewed: true}
@@ -7792,7 +7792,7 @@
 "yc22c": {relation: required, reviewed: true}
 "yc3xx": {relation: required, reviewed: true}
 "yc9bz": {relation: required, reviewed: true}
-"yci29": {relation: forward}
+"yci29": {relation: forward, reviewed: true}
 "ycj95": {relation: required, reviewed: true}
 "ycok5": {relation: required, reviewed: true}
 "ycpd2": {relation: required, reviewed: true}
