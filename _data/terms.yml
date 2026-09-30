@@ -5874,6 +5874,13 @@ E:
   defs:
   - label: '[체론] §에탈대수'
     url: /ko/math/field_theory/etale_algebras
+- id: étalé_space
+  en: 'étalé space'
+  ko: 에탈 공간
+  primary: en
+  defs:
+  - label: '[위상수학] §준층'
+    url: /ko/math/topology/presheaves
 - id: euclidean_algorithm
   en: Euclidean algorithm
   ko: 유클리드 호제법
