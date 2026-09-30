@@ -2468,7 +2468,7 @@
 "ausxq": {relation: required, reviewed: true}
 "autqs": {relation: required, reviewed: true}
 "av26d": {relation: required, reviewed: true}
-"avdib": {relation: required}
+"avdib": {relation: required, reviewed: true}
 "avgf9": {relation: required}
 "avhph": {relation: required}
 "avlrf": {relation: required, reviewed: true}
@@ -3725,7 +3725,7 @@
 "gohv0": {relation: weak, reviewed: true}
 "gorzx": {relation: weak, reviewed: true}
 "gp0p7": {relation: required, reviewed: true}
-"gpisb": {relation: weak}
+"gpisb": {relation: requires-review}
 "gpq06": {relation: weak, reviewed: true}
 "gpt6n": {relation: required, reviewed: true}
 "gpxh3": {relation: required, reviewed: true}
@@ -4116,7 +4116,7 @@
 "ihnd7": {relation: required, reviewed: true}
 "ihx1v": {relation: required, reviewed: true}
 "ii10h": {relation: required, reviewed: true}
-"ii8st": {relation: required}
+"ii8st": {relation: required, reviewed: true}
 "iiawn": {relation: weak, reviewed: true}
 "iicbe": {relation: required}
 "iifd4": {relation: required, reviewed: true}
@@ -7624,7 +7624,7 @@
 "xua3h": {relation: required, reviewed: true}
 "xualb": {relation: required, reviewed: true}
 "xuehf": {relation: required}
-"xv0f2": {relation: required}
+"xv0f2": {relation: required, reviewed: true}
 "xv390": {relation: required, reviewed: true}
 "xv4yz": {relation: required, reviewed: true}
 "xv5lb": {relation: required, reviewed: true}
