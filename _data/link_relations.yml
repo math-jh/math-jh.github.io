@@ -5541,7 +5541,7 @@
 "oddji": {relation: required, reviewed: true}
 "odgwr": {relation: required, reviewed: true}
 "odoaa": {relation: required, reviewed: true}
-"odwrt": {relation: required}
+"odwrt": {relation: required, reviewed: true}
 "oe147": {relation: weak, reviewed: true}
 "oe3vf": {relation: required, reviewed: true}
 "oe4s1": {relation: weak, reviewed: true}
@@ -7553,7 +7553,7 @@
 "xbeyk": {relation: weak, reviewed: true}
 "xboq3": {relation: required, reviewed: true}
 "xbp2q": {relation: required, reviewed: true}
-"xc8ct": {relation: forward}
+"xc8ct": {relation: forward, reviewed: true}
 "xc9qv": {relation: required, reviewed: true}
 "xcg60": {relation: required, reviewed: true}
 "xcgw0": {relation: required, reviewed: true}
@@ -7698,7 +7698,7 @@
 "xwfq2": {relation: required, reviewed: true}
 "xwl8y": {relation: required, reviewed: true}
 "xwpq1": {relation: required, reviewed: true}
-"xwyeb": {relation: required}
+"xwyeb": {relation: requires-review}
 "xx51f": {relation: required, reviewed: true}
 "xx9id": {relation: required, reviewed: true}
 "xxhqa": {relation: required, reviewed: true}
