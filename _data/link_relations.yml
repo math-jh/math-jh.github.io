@@ -1044,6 +1044,7 @@
 "4l0s1": {relation: required, reviewed: true}
 "4l1um": {relation: required, reviewed: true}
 "4l38f": {relation: required, reviewed: true}
+"4lib6": {relation: required}
 "4lk3x": {relation: required, reviewed: true}
 "4m2q3": {relation: required, reviewed: true}
 "4mf8o": {relation: weak, reviewed: true}
@@ -3789,6 +3790,7 @@
 "gtruv": {relation: required, reviewed: true}
 "gtu6d": {relation: required, reviewed: true}
 "gu2l6": {relation: required, reviewed: true}
+"guisq": {relation: required}
 "gumyu": {relation: weak, reviewed: true}
 "guqi6": {relation: required, reviewed: true}
 "gvapc": {relation: required, reviewed: true}
