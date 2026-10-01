@@ -1573,7 +1573,7 @@
 "6qzn8": {relation: required, reviewed: true}
 "6r0bl": {relation: required, reviewed: true}
 "6r2mx": {relation: required}
-"6rdoy": {relation: required}
+"6rdoy": {relation: required, reviewed: true}
 "6rdz6": {relation: required, reviewed: true}
 "6rmyd": {relation: required, reviewed: true}
 "6s4c9": {relation: weak, reviewed: true}
@@ -1759,7 +1759,7 @@
 "7k2uu": {relation: required, reviewed: true}
 "7k4ew": {relation: required, reviewed: true}
 "7k4iu": {relation: required, reviewed: true}
-"7k4j9": {relation: weak}
+"7k4j9": {relation: requires-review}
 "7k6tv": {relation: required, reviewed: true}
 "7kav7": {relation: weak, reviewed: true}
 "7kv1v": {relation: required, reviewed: true}
@@ -3366,7 +3366,7 @@
 "ervm0": {relation: required}
 "erwnx": {relation: required, reviewed: true}
 "es3r3": {relation: required, reviewed: true}
-"es421": {relation: required}
+"es421": {relation: required, reviewed: true}
 "es4wd": {relation: required, reviewed: true}
 "esa3p": {relation: weak, reviewed: true}
 "esb2n": {relation: weak, reviewed: true}
@@ -3972,7 +3972,7 @@
 "hnjbl": {relation: required, reviewed: true}
 "hnm4t": {relation: required, reviewed: true}
 "hnt01": {relation: weak, reviewed: true}
-"hnwpo": {relation: required}
+"hnwpo": {relation: required, reviewed: true}
 "hnya7": {relation: forward, reviewed: true}
 "hnzgf": {relation: required, reviewed: true}
 "ho6mp": {relation: required, reviewed: true}
@@ -5837,7 +5837,7 @@
 "pmurg": {relation: required, reviewed: true}
 "pn3t6": {relation: required, reviewed: true}
 "pn7km": {relation: required, reviewed: true}
-"pn9lb": {relation: required}
+"pn9lb": {relation: required, reviewed: true}
 "pndn6": {relation: required, reviewed: true}
 "pnsu5": {relation: required, reviewed: true}
 "pnwtw": {relation: required, reviewed: true}
@@ -6287,7 +6287,7 @@
 "rqh92": {relation: required, reviewed: true}
 "rqhea": {relation: requires-review}
 "rqjf0": {relation: required, reviewed: true}
-"rqkh0": {relation: weak}
+"rqkh0": {relation: weak, reviewed: true}
 "rqmjl": {relation: required}
 "rqo0p": {relation: required, reviewed: true}
 "rqpr9": {relation: required, reviewed: true}
@@ -6915,7 +6915,7 @@
 "ufj9m": {relation: weak, reviewed: true}
 "ufjbe": {relation: required, reviewed: true}
 "ufk8y": {relation: required, reviewed: true}
-"ufndh": {relation: weak}
+"ufndh": {relation: weak, reviewed: true}
 "ufnrt": {relation: required, reviewed: true}
 "ufpyx": {relation: required, reviewed: true}
 "ug3hj": {relation: required, reviewed: true}
