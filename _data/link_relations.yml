@@ -3152,7 +3152,7 @@
 "dse8t": {relation: required, reviewed: true}
 "dsjy3": {relation: required, reviewed: true}
 "dsu0p": {relation: required, reviewed: true}
-"dt0j8": {relation: required}
+"dt0j8": {relation: required, reviewed: true}
 "dt9co": {relation: required, reviewed: true}
 "dtbso": {relation: required, reviewed: true}
 "dtfnb": {relation: required}
@@ -4544,7 +4544,7 @@
 "k5z2g": {relation: required, reviewed: true}
 "k64zd": {relation: required, reviewed: true}
 "k67s8": {relation: required, reviewed: true}
-"k6cox": {relation: required}
+"k6cox": {relation: required, reviewed: true}
 "k6ef9": {relation: required, reviewed: true}
 "k6fvm": {relation: weak, reviewed: true}
 "k6hcl": {relation: required, reviewed: true}
@@ -4772,7 +4772,7 @@
 "l40qb": {relation: required, reviewed: true}
 "l446k": {relation: required, reviewed: true}
 "l47i3": {relation: required, reviewed: true}
-"l47zu": {relation: required}
+"l47zu": {relation: required, reviewed: true}
 "l4bbo": {relation: required, reviewed: true}
 "l4dsp": {relation: weak, reviewed: true}
 "l4ux7": {relation: forward, reviewed: true}
@@ -5502,7 +5502,7 @@
 "o8dw5": {relation: required, reviewed: true}
 "o8j1c": {relation: required, reviewed: true}
 "o8jy6": {relation: required, reviewed: true}
-"o8n4l": {relation: required}
+"o8n4l": {relation: required, reviewed: true}
 "o8npe": {relation: required, reviewed: true}
 "o8yhs": {relation: weak, reviewed: true}
 "o8zf6": {relation: required, reviewed: true}
@@ -7435,7 +7435,7 @@
 "wqcr0": {relation: required, reviewed: true}
 "wqgvs": {relation: required, reviewed: true}
 "wqh7c": {relation: required, reviewed: true}
-"wqi0e": {relation: required}
+"wqi0e": {relation: required, reviewed: true}
 "wqk22": {relation: required, reviewed: true}
 "wqkn1": {relation: required, reviewed: true}
 "wqnzk": {relation: required, reviewed: true}
@@ -7858,7 +7858,7 @@
 "yl0q8": {relation: required, reviewed: true}
 "yl7mg": {relation: required, reviewed: true}
 "yle5s": {relation: required, reviewed: true}
-"yleva": {relation: required}
+"yleva": {relation: required, reviewed: true}
 "ylfff": {relation: required, reviewed: true}
 "ylmcb": {relation: required, reviewed: true}
 "ylq2n": {relation: required, reviewed: true}
@@ -8101,7 +8101,7 @@
 "zmwt8": {relation: required}
 "zn57a": {relation: required, reviewed: true}
 "zn6ch": {relation: required}
-"zn8cs": {relation: required}
+"zn8cs": {relation: required, reviewed: true}
 "zns7j": {relation: required, reviewed: true}
 "zo1sz": {relation: required, reviewed: true}
 "zo3g0": {relation: required, reviewed: true}
