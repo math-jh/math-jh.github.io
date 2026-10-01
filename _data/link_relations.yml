@@ -293,7 +293,7 @@
 "1c0au": {relation: required, reviewed: true}
 "1cjr1": {relation: required, reviewed: true}
 "1cmzw": {relation: required, reviewed: true}
-"1cr1z": {relation: required}
+"1cr1z": {relation: required, reviewed: true}
 "1cw4w": {relation: required, reviewed: true}
 "1d27h": {relation: required, reviewed: true}
 "1daba": {relation: required, reviewed: true}
@@ -2008,7 +2008,7 @@
 "8mdl2": {relation: required, reviewed: true}
 "8n16b": {relation: required, reviewed: true}
 "8n4ir": {relation: required, reviewed: true}
-"8n9ux": {relation: required}
+"8n9ux": {relation: required, reviewed: true}
 "8ndjx": {relation: required, reviewed: true}
 "8nkzj": {relation: required, reviewed: true}
 "8nm0r": {relation: weak, reviewed: true}
@@ -3729,7 +3729,7 @@
 "gk593": {relation: required, reviewed: true}
 "gkahj": {relation: weak, reviewed: true}
 "gkg68": {relation: required, reviewed: true}
-"gko4r": {relation: required}
+"gko4r": {relation: required, reviewed: true}
 "gku3b": {relation: required, reviewed: true}
 "gkugi": {relation: required, reviewed: true}
 "gkw50": {relation: weak, reviewed: true}
@@ -4134,7 +4134,7 @@
 "ier4b": {relation: required, reviewed: true}
 "iewxu": {relation: required, reviewed: true}
 "ifhee": {relation: required}
-"ifvfg": {relation: required}
+"ifvfg": {relation: required, reviewed: true}
 "ifwab": {relation: required, reviewed: true}
 "ifwiw": {relation: weak, reviewed: true}
 "ifzsy": {relation: required, reviewed: true}
@@ -4605,7 +4605,7 @@
 "kebq3": {relation: required, reviewed: true}
 "kefyp": {relation: required, reviewed: true}
 "kek14": {relation: required, reviewed: true}
-"kek67": {relation: required}
+"kek67": {relation: required, reviewed: true}
 "kelfx": {relation: required, reviewed: true}
 "keow5": {relation: required, reviewed: true}
 "kesbi": {relation: required, reviewed: true}
@@ -4702,7 +4702,7 @@
 "kuiaq": {relation: required, reviewed: true}
 "kum72": {relation: required, reviewed: true}
 "kunuo": {relation: required, reviewed: true}
-"kuoq3": {relation: required}
+"kuoq3": {relation: required, reviewed: true}
 "kuwqb": {relation: required, reviewed: true}
 "kuwvc": {relation: required, reviewed: true}
 "kuzjj": {relation: weak, reviewed: true}
@@ -8062,7 +8062,7 @@
 "zi0kr": {relation: required, reviewed: true}
 "zi4ez": {relation: required, reviewed: true}
 "zi8sx": {relation: required, reviewed: true}
-"zi95m": {relation: weak}
+"zi95m": {relation: requires-review}
 "zih9h": {relation: required, reviewed: true}
 "zij1p": {relation: required, reviewed: true}
 "zio3w": {relation: required, reviewed: true}
