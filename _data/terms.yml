@@ -3169,6 +3169,13 @@ C:
   defs:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
+- id: complete
+  en: complete
+  ko: 완전
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토릭 다양체의 정의'
+    url: /ko/math/toric_geometry/toric_varieties
 - id: complete_category
   en: complete category
   ko: 완비범주
@@ -15000,6 +15007,13 @@ P:
   defs:
   - label: '[집합론] §극한'
     url: /ko/math/set_theory/limits
+- id: projective_toric_variety
+  en: projective toric variety
+  ko: 사영 토릭 다양체
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토러스 인자와 선다발'
+    url: /ko/math/toric_geometry/toric_divisors
 - id: projective_variety
   en: projective variety
   ko: 사영다양체
@@ -16262,6 +16276,13 @@ R:
   defs:
   - label: '[대수적 위상수학] §코호몰로지'
     url: /ko/math/algebraic_topology/cohomology
+- id: resolution_of_singularities
+  en: resolution of singularities
+  ko: 특이점 분해
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토릭 다양체의 정의'
+    url: /ko/math/toric_geometry/toric_varieties
 - id: restricted_sum
   en: restricted sum
   ko: 제한합
