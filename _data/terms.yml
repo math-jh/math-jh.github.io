@@ -14640,6 +14640,13 @@ P:
     url: '/ko/math/number_theory/primes'
   - label: '[해석학] §실수의 완비성'
     url: '/ko/math/analysis/completeness_of_reals'
+- id: prime_divisor
+  en: prime divisor
+  ko: 소인자
+  primary: en
+  defs:
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
 - id: prime_element
   en: prime element
   ko: 소원
