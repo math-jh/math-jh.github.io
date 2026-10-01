@@ -4589,6 +4589,7 @@
 "karg6": {relation: weak, reviewed: true}
 "karqj": {relation: required, reviewed: true}
 "kauiy": {relation: forward, reviewed: true}
+"kb5tn": {relation: required}
 "kb94f": {relation: required, reviewed: true}
 "kbb05": {relation: required, reviewed: true}
 "kbe7h": {relation: weak, reviewed: true}
