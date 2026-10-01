@@ -1659,7 +1659,7 @@
 "740xa": {relation: required, reviewed: true}
 "742gw": {relation: required}
 "748jt": {relation: required, reviewed: true}
-"7494p": {relation: weak}
+"7494p": {relation: weak, reviewed: true}
 "74bv7": {relation: weak, reviewed: true}
 "74fca": {relation: required, reviewed: true}
 "74zd9": {relation: required, reviewed: true}
@@ -3104,7 +3104,7 @@
 "djw3z": {relation: required, reviewed: true}
 "dkhkt": {relation: required, reviewed: true}
 "dks0r": {relation: required, reviewed: true}
-"dlck1": {relation: required}
+"dlck1": {relation: required, reviewed: true}
 "dle42": {relation: required, reviewed: true}
 "dlj48": {relation: requires-review}
 "dlnuy": {relation: required, reviewed: true}
@@ -3639,7 +3639,7 @@
 "g3hqn": {relation: required, reviewed: true}
 "g3w28": {relation: weak}
 "g3w95": {relation: required, reviewed: true}
-"g4ab4": {relation: weak}
+"g4ab4": {relation: weak, reviewed: true}
 "g4eay": {relation: required, reviewed: true}
 "g4erp": {relation: required, reviewed: true}
 "g4h06": {relation: required, reviewed: true}
@@ -4281,7 +4281,7 @@
 "j1xc3": {relation: required, reviewed: true}
 "j1xjy": {relation: required, reviewed: true}
 "j2049": {relation: required}
-"j25lo": {relation: required}
+"j25lo": {relation: required, reviewed: true}
 "j25m6": {relation: required, reviewed: true}
 "j27o5": {relation: required, reviewed: true}
 "j29sj": {relation: required, reviewed: true}
@@ -4923,7 +4923,7 @@
 "lu1xn": {relation: required, reviewed: true}
 "lucig": {relation: required, reviewed: true}
 "luezn": {relation: required, reviewed: true}
-"lufpt": {relation: required}
+"lufpt": {relation: required, reviewed: true}
 "lugls": {relation: required, reviewed: true}
 "lumof": {relation: required, reviewed: true}
 "lun3p": {relation: required, reviewed: true}
@@ -5757,7 +5757,7 @@
 "pa9p6": {relation: required, reviewed: true}
 "padbe": {relation: required, reviewed: true}
 "panmq": {relation: required, reviewed: true}
-"pauex": {relation: required}
+"pauex": {relation: required, reviewed: true}
 "pav90": {relation: required, reviewed: true}
 "pavgm": {relation: required}
 "paz7d": {relation: required, reviewed: true}
