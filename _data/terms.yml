@@ -17663,6 +17663,13 @@ S:
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+- id: smooth_cone
+  en: smooth cone
+  ko: 매끄러운 뿔
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §아핀 토릭 다양체'
+    url: /ko/math/toric_geometry/affine_toric_varieties
 - id: smooth_differentiable_manifold
   en: smooth differentiable manifold
   ko: 매끄러운 미분다양체
