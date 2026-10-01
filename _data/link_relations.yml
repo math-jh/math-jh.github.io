@@ -2630,7 +2630,7 @@
 "bjgbo": {relation: required, reviewed: true}
 "bjnuo": {relation: requires-review}
 "bjqez": {relation: weak, reviewed: true}
-"bjrg2": {relation: required}
+"bjrg2": {relation: required, reviewed: true}
 "bjrtn": {relation: required, reviewed: true}
 "bk3u3": {relation: weak, reviewed: true}
 "bkbb9": {relation: required, reviewed: true}
@@ -2873,7 +2873,7 @@
 "ckge3": {relation: required, reviewed: true}
 "ckhze": {relation: required, reviewed: true}
 "ckraj": {relation: required, reviewed: true}
-"ckunt": {relation: required}
+"ckunt": {relation: required, reviewed: true}
 "cl3v9": {relation: weak, reviewed: true}
 "clc16": {relation: weak, reviewed: true}
 "clcrd": {relation: weak, reviewed: true}
@@ -3116,7 +3116,7 @@
 "dlwn9": {relation: required, reviewed: true}
 "dm7bt": {relation: required, reviewed: true}
 "dm91v": {relation: required, reviewed: true}
-"dmcjo": {relation: required}
+"dmcjo": {relation: required, reviewed: true}
 "dmo9n": {relation: required, reviewed: true}
 "dmqxr": {relation: required, reviewed: true}
 "dmzua": {relation: required, reviewed: true}
@@ -4373,7 +4373,7 @@
 "jemiv": {relation: forward, reviewed: true}
 "jeqiu": {relation: required}
 "jety3": {relation: required, reviewed: true}
-"jexxp": {relation: required}
+"jexxp": {relation: required, reviewed: true}
 "jf61k": {relation: required, reviewed: true}
 "jfc9o": {relation: required, reviewed: true}
 "jfod3": {relation: required, reviewed: true}
@@ -5673,7 +5673,7 @@
 "ovp6z": {relation: required, reviewed: true}
 "ovrqb": {relation: required}
 "ovwee": {relation: required, reviewed: true}
-"ow5ei": {relation: required}
+"ow5ei": {relation: required, reviewed: true}
 "ow68l": {relation: required}
 "owd7a": {relation: weak, reviewed: true}
 "owfph": {relation: required, reviewed: true}
@@ -7481,7 +7481,7 @@
 "wwznu": {relation: weak, reviewed: true}
 "wx55i": {relation: required, reviewed: true}
 "wxbp0": {relation: weak}
-"wxoyx": {relation: required}
+"wxoyx": {relation: required, reviewed: true}
 "wxurq": {relation: required, reviewed: true}
 "wys3l": {relation: required, reviewed: true}
 "wyw5c": {relation: required, reviewed: true}
@@ -7635,7 +7635,7 @@
 "xmu2q": {relation: weak, reviewed: true}
 "xn7ku": {relation: weak, reviewed: true}
 "xn985": {relation: required, reviewed: true}
-"xnb41": {relation: weak}
+"xnb41": {relation: weak, reviewed: true}
 "xnfdu": {relation: required, reviewed: true}
 "xnfi5": {relation: required}
 "xniuo": {relation: required, reviewed: true}
