@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-01
 
 weight: 15
 
@@ -279,3 +279,38 @@ def sim(a: str, b: str) -> float | None:
 같은 커밋에서 추출과 게이트 호출이 전부 Antigravity(`agy`)로 옮겨 갔다. `agy`는 프롬프트를 인자로 받고 결과를 JSON 봉투에 담아 돌려주므로 `claude -p`와 호출 모양이 다르다. 봉투의 `status`를 보지 않으면 실패한 호출의 빈 `response`가 "찾은 용어 없음"과 구별되지 않는다.
 
 재실행 규칙도 이때 바뀌었다(`83f6d1ec`). 예전에는 마지막 검사 뒤 14일이 지나고 그사이 바뀐 글을 다시 넣었는데, 이제는 그 글을 건드린 **무태그 내용 커밋**이 생겨야 새 "본문 세대"로 보고, 한 세대에서 추출과 1차 재시도를 합쳐 두 번을 마치면 멈춘다. `[lastmod-skip]`과 `[dev]` 커밋은 본문이 바뀐 신호로 치지 않는다. 기간이 지났다는 이유만으로 같은 본문에 같은 질문을 되풀이하던 일이 없어졌고, 매일 돌던 `terms.yml` 자체 감사도 수동 경로(`--audit-letter`)만 남았다.
+
+## gitignore된 글은 추출하지 않는다
+
+선정 0단계는 "한 번도 안 돌린 글"이고, `published: false`인 글도 여기에 든다. 초안 단계에서 정의를 미리 색인해 두는 것은 의도한 동작이다. 문제는 같은 0단계가 `.gitignore`로 저장소 밖에 둔 글까지 집는다는 점이었다. 그런 글은 GitHub에 올라가지 않는데, 거기서 뽑은 정의가 `_data/terms.yml`의 `defs`로 들어가면 공개되는 찾아보기가 올라가지 않은 글의 위치를 가리킨다. 사용자는 두 경우를 이렇게 갈랐다.
+
+> publish 상태가 false인 글에 도는 건 상관 없는데, gitignore에서 무시하고 있는 파일들에 대해서는 돌지 않았으면 좋겠어. 크론을 그렇게 수정하고, terms.yml에 이미 등재된 것들은 삭제해줘.
+
+`c5c3483e`는 글 목록을 만드는 `all_ko_posts()` 앞에 무시 목록 조회를 하나 둔다.
+
+```python
+def gitignored_posts() -> set[str] | None:
+    """_posts/Math 아래 .gitignore 로 무시되는 파일 (rel). git 실패 시 None."""
+    p = subprocess.run(
+        ["git", "ls-files", "-z", "--others", "--ignored", "--exclude-standard",
+         "--", "_posts/Math"],
+        cwd=str(BLOG_ROOT), capture_output=True, text=True)
+    if p.returncode != 0:
+        return None
+    return {rel for rel in p.stdout.split("\x00") if rel}
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+`.gitignore` 패턴을 직접 해석하지 않고 git에 묻는다. `--others --ignored`는 추적되지 않으면서 무시 규칙에 걸린 파일만 내므로, 무시 패턴이 넓게 잡혀 있어도 화이트리스트로 추적에 올린 글은 목록에 오르지 않는다. 경로 구분자는 NUL(`-z`)로 받는다. 한글 파일명을 git이 따옴표와 8진수 이스케이프로 내보내는 일을 피하려는 것이다.
+
+조회가 실패했을 때 무엇을 돌려줄지가 이 변경에서 갈릴 수 있던 자리다. 실패하면 `None`을 돌려주고, 호출하는 쪽은 빈 목록을 반환해 그 틱을 쉰다.
+
+```python
+    ignored = gitignored_posts()
+    if ignored is None:
+        log("경고: git ls-files 실패 — gitignore 판정 불가, 이번 틱 쉼")
+        return []
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+실패를 "무시 목록 없음"으로 읽고 전부 추출하는 쪽이 코드는 한 줄 더 짧다. 그러나 그러면 git이 잠깐 막힌 틱 하나가 올라가지 않은 글의 정의를 `terms.yml`에 흘리고, 한 번 들어간 항목은 사람이 찾아 지우는 수밖에 없다. 쉬는 틱은 다음 홀수 시각 :15에 다시 돌면 되므로 두 쪽의 비용이 같지 않다. 이미 등재돼 있던 항목은 사용자가 말한 대로 따로 지웠고, 워커는 새로 들어오는 것만 막는다.
