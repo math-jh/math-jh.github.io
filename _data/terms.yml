@@ -11576,6 +11576,13 @@ L:
   see:
   - label: Connected space
     id: connected_space
+- id: locally_connected_space
+  en: locally connected space
+  ko: 국소연결공간
+  primary: en
+  defs:
+  - label: '[위상수학] §연결공간'
+    url: /ko/math/topology/connected_spaces
 - id: locally_euclidean
   en: locally Euclidean
   ko: 국소 유클리드
@@ -14083,6 +14090,13 @@ P:
   see:
   - label: Connected
     id: connected
+- id: path-connected_space
+  en: path-connected space
+  ko: 경로연결공간
+  primary: en
+  defs:
+  - label: '[위상수학] §연결공간'
+    url: /ko/math/topology/connected_spaces
 - id: path_homotopy
   en: path homotopy
   ko: 경로 호모토피
