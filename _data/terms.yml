@@ -7028,6 +7028,13 @@ F:
   defs:
   - label: '[호몰로지 대수학] §Ext와 Tor'
     url: /ko/math/homological_algebra/ext_and_tor
+- id: free_ring
+  en: free ring
+  ko: 자유환
+  primary: en
+  defs:
+  - label: '[대수적 구조] §환의 정의'
+    url: /ko/math/algebraic_structures/rings
 - id: freyd-mitchell_embedding_theorem
   en: Freyd-Mitchell embedding theorem
   ko: 프라이드-미첼 매장 정리
