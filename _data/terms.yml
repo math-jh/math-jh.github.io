@@ -9960,6 +9960,13 @@ I:
     url: /ko/math/representation_theory/representations_of_finite_groups
   - label: '[리 이론] §sl₂의 표현론'
     url: /ko/math/lie_theory/representations_of_sl2
+- id: irreducible_space
+  en: irreducible space
+  ko: 기약 공간
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: irregularity
   en: irregularity
   ko: 불규칙성
@@ -13062,6 +13069,13 @@ N:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: noetherian_induction
+  en: Noetherian induction
+  ko: 뇌터 귀납법
+  primary: en
+  defs:
+  - label: '[위상수학] §차원'
+    url: /ko/math/topology/dimension
 - id: noetherian_local_ring
   en: Noetherian local ring
   ko: 뇌터 국소환
