@@ -5895,6 +5895,13 @@ E:
   defs:
   - label: '[체론] §에탈대수'
     url: /ko/math/field_theory/etale_algebras
+- id: étale_morphism
+  en: 'étale morphism'
+  ko: 에탈 사상
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: étalé_space
   en: 'étalé space'
   ko: 에탈 공간
@@ -7569,6 +7576,13 @@ G:
   defs:
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+- id: geometric_fiber
+  en: geometric fiber
+  ko: 기하적 올
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: geometric_genus
   en: geometric genus
   ko: 기하적 종수
@@ -9157,6 +9171,13 @@ I:
   defs:
   - label: '[스킴] §변형이론과 여접 복합체'
     url: /ko/math/scheme_theory/deformation_theory
+- id: infinitesimal_lifting_criterion
+  en: infinitesimal lifting criterion
+  ko: 무한소 들어올림 판정법
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: inflection_point
   en: inflection point
   ko: 변곡점
@@ -10170,6 +10191,13 @@ J:
   defs:
   - label: '[미분다양체] §미분사상'
     url: /ko/math/manifolds/differentials
+- id: jacobian_criterion
+  en: Jacobian criterion
+  ko: 야코비 판정법
+  primary: en
+  defs:
+  - label: '[대수다양체] §접공간과 매끄러움'
+    url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
 - id: jacobian_determinant
   en: Jacobian determinant
   ko: 야코비 행렬식
@@ -17782,6 +17810,13 @@ S:
   defs:
   - label: '[스킴] §매끄러운 사상과 에탈 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
+- id: smooth_morphism
+  en: smooth morphism
+  ko: 매끄러운 사상
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: smooth_point
   en: smooth point
   ko: 매끄러운 점
@@ -19967,6 +20002,13 @@ U:
   see:
   - label: 'Étale'
     id: étale
+- id: unramified_morphism
+  en: unramified morphism
+  ko: 비분기 사상
+  primary: en
+  defs:
+  - label: '[스킴] §매끄러운 사상과 에탈 사상'
+    url: /ko/math/scheme_theory/smooth_and_etale_morphisms
 - id: upper_adjoint
   en: upper adjoint
   ko: 위 수반
