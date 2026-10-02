@@ -13,7 +13,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-03
-last_modified_at: 2026-07-26
+last_modified_at: 2026-10-02
 weight: 4
 
 ---
@@ -148,3 +148,33 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 {: data-filename="_layouts/default.html"}
 
 `::-webkit-scrollbar` 선택자를 이해하지 못하는 브라우저, 곧 Firefox만 이 블록에 들어온다. Chromium은 블록을 건너뛰므로 webkit 커스텀이 다시 산다. 낡은 `-ms-overflow-style: none`도 이 김에 걷어냈다. 고치고 나면 여덟 줄짜리 diff다. 표준 속성을 지원했더니 표준이 커스텀을 꺼 버린다는 사실을 알아내는 데까지가 일이고, 그다음은 늘 그렇듯 별 게 없다.
+
+## 사후: 수식 가로 스크롤바에 같은 문법 적용
+
+`.katex-display`는 이미 `overflow-x: auto`라서 긴 수식은 블록 안에서 가로로 스크롤됐다. 다만 스크롤바는 브라우저 기본값이었다. 사용자가 이걸 짚었다.
+
+> 지금 블록 안에 있는 수식 기준으로, 스크롤이 우리가 쓰는 문법이 아니더라, 아무 스타일도 없던데, thumb를 좀 얇게, 호버하면 나오는 황금색 정도로 했으면 좋겠어 (대충 왼쪽 사이드바에 적용된 스타일의 수평버전 느낌으로).
+
+[커밋](https://github.com/math-jh/math-jh.github.io/commit/6b571968198044c0df11e30b2bc7e350a7f062dd)은 구조와 색을 둘로 나눈다. 구조는 `_base.scss`에 한 번 적고, thumb 색은 위에서 정리한 대로 라이트·다크 스킨이 각자 정한다.
+
+```scss
+.katex-display::-webkit-scrollbar { height: 4px; }
+.katex-display::-webkit-scrollbar-track { display: none; }
+.katex-display::-webkit-scrollbar-thumb { border-radius: 0; }
+```
+{: data-filename="_sass/minimal-mistakes/_base.scss"}
+
+```scss
+.katex-display::-webkit-scrollbar-thumb {background-color: #bfa46a}
+```
+{: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
+
+다크 스킨의 값은 `#8f7434`이다. 두 값 모두 왼쪽 사이드바의 `:hover` thumb 색을 그대로 가져왔다. 사이드바는 평소에 투명하다가 hover에서만 색이 들지만, 수식은 처음부터 칠해 둔다. 모바일에는 hover가 없고, 수식이 넘치는 곳은 대개 모바일이라서다. 사용자가 말한 "호버하면 나오는 황금색"의 색만 가져오고 hover 조건은 뺀 셈이다. 직각 thumb과 `display: none` 트랙은 사이드바 스크롤바의 헤어라인 문법을 수평으로 눕힌 것이다.
+
+Firefox 몫은 앞 절에서 격리해 둔 `@supports not selector(::-webkit-scrollbar)` 블록에 한 줄을 더하는 것으로 끝났다.
+
+```scss
+.katex-display {scrollbar-color: #bfa46a transparent; scrollbar-width: thin}
+```
+
+표준 속성을 `@supports` 밖에 두면 Chromium이 `::-webkit-scrollbar` 규칙을 무시한다는 앞 절의 함정이 여기에도 그대로 걸려서, 새 규칙도 블록 안에 넣었다. 같은 요청에는 블록 바깥에서 넘치는 수식도 확인해 달라는 부분이 있었는데, 이 커밋이 다루는 것은 스크롤바 스타일뿐이다.
