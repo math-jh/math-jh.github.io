@@ -4298,6 +4298,13 @@ D:
     id: symplectic_manifold
   - label: Symplectic form
     id: symplectic_form
+- id: darboux_s_theorem
+  en: 'Darboux''s theorem'
+  ko: Darboux 정리
+  primary: ko
+  defs:
+  - label: '[사교기하학] §Darboux 정리'
+    url: /ko/math/symplectic_geometry/darboux_theorem
 - id: darboux_sum
   en: Darboux sum
   ko: 다르부 합
