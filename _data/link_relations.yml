@@ -2650,6 +2650,7 @@
 "blwr3": {relation: weak, reviewed: true}
 "bm9fg": {relation: forward, reviewed: true}
 "bmgik": {relation: required, reviewed: true}
+"bmvng": {relation: required}
 "bmxhy": {relation: required, reviewed: true}
 "bn1an": {relation: required, reviewed: true}
 "bn4dl": {relation: required, reviewed: true}
@@ -5735,6 +5736,7 @@
 "p4a1u": {relation: required, reviewed: true}
 "p4cp2": {relation: weak, reviewed: true}
 "p4e1s": {relation: required, reviewed: true}
+"p4h5r": {relation: required}
 "p4njm": {relation: required, reviewed: true}
 "p4v19": {relation: weak, reviewed: true}
 "p5471": {relation: required, reviewed: true}
