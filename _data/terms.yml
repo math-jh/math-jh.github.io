@@ -19266,6 +19266,13 @@ T:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: total_quotient_ring
+  en: total quotient ring
+  ko: 전분수환
+  primary: en
+  defs:
+  - label: '[스킴] §인자와 선형계'
+    url: /ko/math/scheme_theory/divisors_and_linear_systems
 - id: total_space
   en: total space
   ko: 전체공간
