@@ -13020,6 +13020,13 @@ N:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: noether_normalization_lemma
+  en: Noether normalization lemma
+  ko: 뇌터 정규화 보조정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §뇌터 정규화'
+    url: /ko/math/commutative_algebra/noether_normalization
 - id: noetherian_local_ring
   en: Noetherian local ring
   ko: 뇌터 국소환
@@ -14795,6 +14802,13 @@ P:
   see:
   - label: Unique factorization domain
     id: unique_factorization_domain
+- id: principal_ideal_theorem
+  en: principal ideal theorem
+  ko: 주아이디얼 정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §차원'
+    url: /ko/math/commutative_algebra/Krull_dimension
 - id: principal_open_set
   en: principal open set
   ko: 주열린집합
