@@ -3667,6 +3667,13 @@ C:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: conormal_sequence
+  en: conormal sequence
+  ko: 공법열
+  primary: en
+  defs:
+  - label: '[가환대수학] §미분'
+    url: /ko/math/commutative_algebra/differentials
 - id: conservative_field
   en: conservative field
   ko: 보존장
@@ -4005,6 +4012,13 @@ C:
   defs:
   - label: '[사교기하학] §Stable maps의 moduli space'
     url: /ko/math/symplectic_geometry/stable_maps
+- id: cotangent_sequence
+  en: cotangent sequence
+  ko: 공접열
+  primary: en
+  defs:
+  - label: '[가환대수학] §미분'
+    url: /ko/math/commutative_algebra/differentials
 - id: cotangent_sheaf
   en: cotangent sheaf
   ko: 여접층
