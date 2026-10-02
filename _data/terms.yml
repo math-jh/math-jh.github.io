@@ -14930,6 +14930,13 @@ P:
     url: /ko/math/set_theory/ordered_pair
   - label: '[집합론] §집합의 곱'
     url: /ko/math/set_theory/product_of_sets
+- id: projection_formula
+  en: projection formula
+  ko: 사영 공식
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §합곱'
+    url: /ko/math/algebraic_topology/cup_products
 - id: projection_function
   en: projection function
   ko: 성분함수
@@ -16160,6 +16167,13 @@ R:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+- id: relative_spectrum
+  en: relative spectrum
+  ko: 상대 스펙트럼
+  primary: en
+  defs:
+  - label: '[스킴] §준연접층'
+    url: /ko/math/scheme_theory/quasicoherent_sheaves
 - id: relative_tangent_bundle
   en: relative tangent bundle
   ko: 상대접다발

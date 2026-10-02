@@ -5418,3 +5418,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Gromov_Witten_Theory/ko/2026-09-21-Gathmann_Relative_GW.md: 병기 필요 'Relative stable map moduli' — 위키 ko 문서 '데이비드 멈퍼드' — 병기형 도출 필요
 - _posts/Math/Gromov_Witten_Theory/ko/2026-09-21-Gathmann_Relative_GW.md: 병기 필요 'comb 보정 공간' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-10-02 17:17
+
+- _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'quasi-coherent                -algebra' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+- _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'relative spectrum' — 위키 ko 문서 '환의 스펙트럼' — 병기형 도출 필요
