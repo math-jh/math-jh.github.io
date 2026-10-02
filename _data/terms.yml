@@ -1376,6 +1376,13 @@ B:
   see:
   - label: Intersection theory
     id: intersection_theory
+- id: bicomplete_category
+  en: bicomplete category
+  ko: 양완비 범주
+  primary: en
+  defs:
+  - label: '[대수적 구조] §제한합'
+    url: /ko/math/algebraic_structures/restricted_sums
 - id: biduality
   en: biduality
   ko: 이중쌍대성
