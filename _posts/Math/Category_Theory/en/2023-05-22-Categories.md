@@ -1,6 +1,6 @@
 ---
 title: "Category"
-description: "We introduce the definition of a category in terms of objects, morphisms, and composition, and examine the associativity and identity conditions. Through concrete examples such as the category of sets, we show how various mathematical structures are described in the language of categories."
+description: "We introduce the definition of a category consisting of objects, morphisms, and composition, and examine the conditions of associativity and identity morphisms. Through concrete examples including the category of sets, we show that various mathematical structures are described in the language of categories."
 excerpt: "Definition and basic concepts of categories"
 
 categories: [Math / Category Theory]
@@ -12,9 +12,10 @@ date: 2023-05-22
 weight: 1
 translated_at: 2026-08-19T13:45:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-19T13:45:05+00:00
+last_polished_at: 2026-10-02T03:15:05+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-Basically, any field that is a branch of mathematics has certain concepts that it naturally possesses. The *objects* we wish to study and the *morphisms* between these objects are such examples. Category theory is the study of such structures in the abstract, so specific theorems from each field can serve as examples in category theory. However, this does not mean that we must study all these fields in order to study category theory; our goal is to study category theory as dryly as possible, and to study most examples separately when we study the corresponding fields.
+Basically, any field that is a branch of mathematics naturally possesses certain concepts. The *objects* we wish to study and the *morphisms* between these objects are cases in point. Since category theory is the study of such structures in the abstract, specific theorems from each field can serve as examples in category theory. However, this does not mean that we must study all these fields in order to study category theory; our goal is to study category theory as dryly as possible, and to study most examples separately when studying the corresponding fields.
 
 ## Definition and Examples of Categories
 
@@ -22,19 +23,19 @@ Basically, any field that is a branch of mathematics has certain concepts that i
 A *category* $\mathcal{A}$ consists of the following data.
 
 - A collection $\obj(\mathcal{A})$ of *objects*,
-- For each pair of objects $A_1,A_2\in\obj(\mathcal{A})$, a collection $\Hom_\mathcal{A}(A_1,A_2)$ of *morphisms* from *domain* $A_1$ to *codomain* $A_2$,
+- A collection of *morphisms* from a *domain* $A_1\in\obj(\mathcal{A})$ to a *codomain* $A_2\in\obj(\mathcal{A})$, $\Hom_\mathcal{A}(A_1,A_2)$,
 - The *composition* of two morphisms $f\in\Hom_\mathcal{A}(A_1,A_2)$, $g\in\Hom_\mathcal{A}(A_2,A_3)$
 
   $$\circ:\Hom_\mathcal{A}(A_1,A_2)\times\Hom_\mathcal{A}(A_2,A_3)\rightarrow\Hom_\mathcal{A}(A_1,A_3);\qquad (f,g)\mapsto g\circ f$$
 
 Additionally, these satisfy the following conditions.
 
-- Composition of morphisms is associative. That is, $(f\circ g)\circ h=f\circ(g\circ h)$ holds.
+- The composition of morphisms is associative. That is, $(f\circ g)\circ h=f\circ(g\circ h)$ holds.
 - For each $A\in\obj(\mathcal{A})$, there exists $\id_A\in\Hom_\mathcal{A}(A,A)$ such that for all $f\in\Hom_\mathcal{A}(A,A_1)$ and all $g\in\Hom_\mathcal{A}(A_2,A)$,
-
+  
   $$f\circ{\id_A}=f,\qquad {\id_A}\circ g=g$$
 
-  hold.
+  holds.
 :::
 
 Many things we have known so far can be written in this language. For example, the category $\Set$ of sets consists of the following data.
@@ -42,9 +43,9 @@ Many things we have known so far can be written in this language. For example, t
 - The objects of $\Set$ are sets.
 - For two objects $A_1,A_2\in\obj(\Set)$, a morphism from $A_1$ to $A_2$ is a function from the set $A_1$ to $A_2$. ([\[Set Theory\] §Functions, ⁋Definition 1](/en/math/set_theory/functions#def1){: data-lid="j3ihb" })
 - The composition of two morphisms is defined as the composition of functions. ([\[Set Theory\] §Operations on Functions, ⁋Proposition 1](/en/math/set_theory/operation_of_functions#prop1){: data-lid="9d7ii" }) That this composition is associative was examined in [\[Set Theory\] §Operations on Binary Relations, ⁋Proposition 5](/en/math/set_theory/operation_of_binary_relations#prop5){: data-lid="d00qf" }.
-- For any object $A\in\obj(\Set)$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([\[Set Theory\] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2){: data-lid="n6oo8" }) That the identity function satisfies the two conditions of [Definition 1](#def1){: data-lid="p6r8k" } was examined after [\[Set Theory\] §Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9){: data-lid="ckraj" }.
+- For any object $A\in\obj(\Set)$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([\[Set Theory\] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2){: data-lid="n6oo8" }) That the identity function satisfies the two conditions of [Definition 1](#def1){: data-lid="p6r8k" } above was examined after [\[Set Theory\] §Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9){: data-lid="ckraj" }.
 
-One point to be careful about is that the definition of a function quoted above requires the domain to be non-empty. As it stands, for any set $B$, $\Hom_\Set(\emptyset,B)$ would be empty, and $\id_\emptyset$ would not exist. Henceforth, we agree that for any $B$, the triple $(\emptyset,\emptyset,B)$ is also a function from $\emptyset$ to $B$; then this becomes the unique function from $\emptyset$ to $B$, and we obtain $\id_\emptyset$.
+One point to note is that the definition of a function quoted above requires the domain to be non-empty. As it stands, for any set $B$, $\Hom_\Set(\emptyset,B)$ would be empty, and $\id_\emptyset$ would not exist. Henceforth, we agree that for any $B$, the triple $(\emptyset,\emptyset,B)$ is also a function from $\emptyset$ to $B$; then this becomes the unique function from $\emptyset$ to $B$, and we obtain $\id_\emptyset$.
 
 In a similar manner, we can see that the following are all examples of categories.
 
@@ -78,14 +79,14 @@ Any preordered set $(S,\preceq)$ can be regarded as a category through the follo
 - $\obj(S)=S$.
 - For any $x,y\in S$, if $x\preceq y$ then there exists a unique morphism $x \rightarrow y$, and otherwise $\Hom_S(x,y)$ is empty.
 
-The composition of two morphisms $x \rightarrow y$ and $y \rightarrow z$ is given by the morphism $x \rightarrow z$. The existence of this morphism $x \rightarrow z$ comes from the transitivity of $\preceq$. Then associativity follows from
+The composition of two morphisms $x \rightarrow y$ and $y \rightarrow z$ is given by the morphism $x \rightarrow z$. Here, the existence of this morphism $x \rightarrow z$ comes from the transitivity of $\preceq$. Then, from
 
-$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow w=x \rightarrow (y \rightarrow (z \rightarrow w)).$$
+$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow w=x \rightarrow (y \rightarrow (z \rightarrow w))$$
 
-Also, by the reflexivity of $\preceq$, for any $x\in S$, $\Hom_S(x,x)$ has a unique morphism $x \rightarrow x$, and one can check that this plays the role of $\id_x$.
+associativity follows. Also, by the reflexivity of $\preceq$, for any $x\in S$, $\Hom_S(x,x)$ has a unique morphism $x \rightarrow x$, and one can check that this plays the role of $\id_x$.
 :::
 
-The reason we called $\obj(\mathcal{A})$ a *collection* of objects rather than a *set* in the previous definition is that this collection may not actually be a set. Usually, we call such objects a *class*. Every set is a class, but among classes there exist ones that are not sets.
+The reason we called $\obj(\mathcal{A})$ a *collection* of objects rather than a *set* in the previous definition is that this collection may not actually be a set. Usually, such entities are called a *class*. Every set is a class, but among classes there exist ones that are not sets.
 
 ::: Definition 4
 Let a category $\mathcal{A}$ be given.
@@ -107,18 +108,18 @@ For a category $\mathcal{C}$, a *subcategory* of $\mathcal{C}$ is data consistin
 Generally, after we learn about mathematical objects, we concern ourselves with when these objects can be regarded as the same.
 
 ::: Definition 6
-Let an arbitrary category $\mathcal{A}$ be given, and let $A_1,A_2\in\obj(\mathcal{A})$. We say that $A_1$ and $A_2$ are *isomorphic* if there exist $f\in\Hom_\mathcal{A}(A_1,A_2)$, $g\in\Hom_\mathcal{A}(A_2,A_1)$ satisfying the two conditions
+Let an arbitrary category $\mathcal{A}$ be given, and let $A_1,A_2\in\obj(\mathcal{A})$. We say that $A_1$ and $A_2$ are *isomorphic* if there exist $f\in\Hom_\mathcal{A}(A_1,A_2)$ and $g\in\Hom_\mathcal{A}(A_2,A_1)$ such that the two conditions
 
-$$f\circ g=\id_{A_2},\qquad g\circ f=\id_{A_1}.$$
+$$f\circ g=\id_{A_2},\qquad g\circ f=\id_{A_1}$$
 
-In this case, we call $f$ and $g$ *isomorphisms* and call each of them the *inverse* of the other.
+hold. In this case, we call $f$ and $g$ *isomorphisms* and call each of them the *inverse* of the other.
 :::
 
-In the situation of the above definition, suppose there exists another $g'\in\Hom_\mathcal{A}(A_2,A_1)$ satisfying the two conditions
+In the situation of the above definition, suppose there exists another $g'\in\Hom_\mathcal{A}(A_2,A_1)$ such that the two conditions
 
-$$f\circ g'=\id_{A_2},\qquad g'\circ f=\id_{A_1}.$$
+$$f\circ g'=\id_{A_2},\qquad g'\circ f=\id_{A_1}$$
 
-Then from
+hold. Then from
 
 $$g=g\circ\id_{A_2}=g\circ(f\circ g')=(g\circ f)\circ g'=\id_{A_1}\circ g'=g'$$
 
@@ -129,9 +130,9 @@ In many examples, an isomorphism is the same as a bijective morphism, but this i
 ::: Definition 7
 Consider a category $\mathcal{A}$ and a morphism $f:A_1\rightarrow A_2$.
 
-- $f$ is called a *monomorphism* if for any two morphisms $g_1,g_2:A_0\rightarrow A_1$, $f\circ g_1=f\circ g_2$ implies $g_1=g_2$.
-- $f$ is called an *epimorphism* if for any two morphisms $h_1,h_2:A_2\rightarrow A_3$, $h_1\circ f=h_2\circ f$ implies $h_1=h_2$.
-- $f$ is called a *bimorphism* if $f$ is both a monomorphism and an epimorphism.
+- $f$ is a *monomorphism* if for any two morphisms $g_1,g_2:A_0\rightarrow A_1$, $f\circ g_1=f\circ g_2$ implies $g_1=g_2$.
+- $f$ is an *epimorphism* if for any two morphisms $h_1,h_2:A_2\rightarrow A_3$, $h_1\circ f=h_2\circ f$ implies $h_1=h_2$.
+- $f$ is a *bimorphism* if $f$ is both a monomorphism and an epimorphism.
 :::
 
 ::: Proposition 8
@@ -147,7 +148,7 @@ we know that $f$ is a monomorphism. By the same argument, $f$ is also an epimorp
 
 ## $\End(A)$ and $\Aut(A)$
 
-Let an arbitrary category $\mathcal{A}$ be given. For two morphisms $f\in\Hom_\mathcal{A}(A_1,A_2)$, $g\in\Hom_\mathcal{A}(A_3,A_4)$, the composition $g\circ f$ is well-defined only if $A_2=A_3$. That is, not every two morphisms in a category $\mathcal{A}$ are always composable.
+Let an arbitrary category $\mathcal{A}$ be given. For two morphisms $f\in\Hom_\mathcal{A}(A_1,A_2)$ and $g\in\Hom_\mathcal{A}(A_3,A_4)$, the composition $g\circ f$ is well-defined only if $A_2=A_3$. That is, two arbitrary morphisms in a category $\mathcal{A}$ are not always composable.
 
 On the other hand, for a fixed $A\in\obj(\mathcal{A})$, the elements of $\Hom_\mathcal{A}(A,A)$ all have domain and codomain equal to $A$, so they can be composed as much as desired. We call such elements *endomorphisms*, and in particular, an endomorphism that is an isomorphism is called an *automorphism*. As explained above, $\Hom_\mathcal{A}(A,A)$ can be thought of not merely as a set, but as an algebraic structure with a specific operation $\circ$.
 
@@ -155,10 +156,10 @@ On the other hand, for a fixed $A\in\obj(\mathcal{A})$, the elements of $\Hom_\m
 Fix an arbitrary category $\mathcal{A}$ and an object $A\in\obj(\mathcal{A})$.
 
 - The *endomorphism monoid* of $A$ is the data consisting of the set $\End_\mathcal{A}(A)=\Hom_\mathcal{A}(A,A)$ and the composition $\circ$.
-- The *automorphism group* of $A$ is the data consisting of the set $\Aut_\mathcal{A}(A)$, which collects only the isomorphisms among the elements of $\End_\mathcal{A}(A)$, and the composition $\circ$.
+- The *automorphism group* of $A$ is the data consisting of the set of only the isomorphisms among the elements of $\End_\mathcal{A}(A)$, $\Aut_\mathcal{A}(A)$, and the composition $\circ$.
 :::
 
-It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-lid="rxsjf" } and [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="31qa5" }) In category theory, monoid and group can be defined as follows.
+It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3){: data-lid="rxsjf" } and [§Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11){: data-lid="31qa5" }) In category theory, a monoid and a group can be defined as follows.
 
 ::: Definition 10
 A category with only one object is called a *monoid*. A monoid in which every morphism is an isomorphism is called a *group*.
@@ -179,21 +180,21 @@ We now examine methods of constructing new categories from existing ones.
 ::: Example 12
 Let two categories $\mathcal{A},\mathcal{B}$ be given. Their *product category* $\mathcal{A}\times \mathcal{B}$ consists of the following data.
 
-- The objects of $\obj(\mathcal{A}\times \mathcal{B})$ are pairs $(A,B)$ for $A\in\obj(\mathcal{A}),B\in\obj(\mathcal{B})$.
-- For any $(A_1,B_1),(A_2,B_2)\in\obj(\mathcal{A}\times \mathcal{B})$, $\Hom_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))$ consists of pairs $(f,g)$ for $f\in\Hom_\mathcal{A}(A_1,A_2),g\in\Hom_\mathcal{B}(B_1,B_2)$.
+- The objects of $\obj(\mathcal{A}\times \mathcal{B})$ are, for $A\in\obj(\mathcal{A}),B\in\obj(\mathcal{B})$, pairs of the form $(A,B)$.
+- For any $(A_1,B_1),(A_2,B_2)\in\obj(\mathcal{A}\times \mathcal{B})$, $\Hom_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))$ is, for $f\in\Hom_\mathcal{A}(A_1,A_2),g\in\Hom_\mathcal{B}(B_1,B_2)$, of the form $(f,g)$.
 - For any $(A,B)\in\obj(\mathcal{A}\times \mathcal{B})$, the identity at $(A,B)$ is given by $(\id_A,\id_B)$.
-- For any $(f_1,g_1):(A_1,B_1)\rightarrow(A_2,B_2)$, $(f_2,g_2):(A_2,B_2)\rightarrow(A_3,B_3)$, their composition is given by $(f_2\circ f_1,g_2\circ g_1)\in\Hom((A_1,B_1),(A_3,B_3))$.
+- For any $(f_1,g_1):(A_1,B_1)\rightarrow(A_2,B_2)$ and $(f_2,g_2):(A_2,B_2)\rightarrow(A_3,B_3)$, their composition is given by $(f_2\circ f_1,g_2\circ g_1)\in\Hom((A_1,B_1),(A_3,B_3))$.
 :::
 
 ::: Example 13
 Let a category $\mathcal{A}$ be given, and fix $A\in\obj(\mathcal{A})$.
 
-- The *slice category over $A$* $\mathcal{A}_{/A}$ of $\mathcal{A}$ is given by the following data.
-  - The objects of $\mathcal{A}_{/A}$ are morphisms $f:A_1\rightarrow A$ in $\mathcal{A}$.
-  - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a $g:A_1\rightarrow A_2$ such that $f_1=f_2\circ g$ holds.
-- The *slice category under $A$* ${}_{A/}\mathcal{A}$ of $\mathcal{A}$ is given by the following data.
-  - The objects of ${}_{A/}\mathcal{A}$ are morphisms $f:A\rightarrow A_1$ in $\mathcal{A}$.
-  - For any $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$ and $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$, a morphism from $f_1$ to $f_2$ is a $g:A_1\rightarrow A_2$ such that $f_2=g\circ f_1$ holds.
+- For $\mathcal{A}$, the *slice category over $A$*, $\mathcal{A}_{/A}$, is given by the following data.
+  - The objects of $\mathcal{A}_{/A}$ are morphisms in $\mathcal{A}$, $f:A_1\rightarrow A$.
+  - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_1=f_2\circ g$, given by $g:A_1\rightarrow A_2$.
+- For $\mathcal{A}$, the *slice category under $A$*, ${}_{A/}\mathcal{A}$, is given by the following data.
+  - The objects of ${}_{A/}\mathcal{A}$ are morphisms in $\mathcal{A}$, $f:A\rightarrow A_1$.
+  - For any $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$ and $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_2=g\circ f_1$, given by $g:A_1\rightarrow A_2$.
 :::
 
 ---
