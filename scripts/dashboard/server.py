@@ -643,43 +643,119 @@ def last_undoable(holds):
     return None
 
 
-def hold_link(ident, item, records, memo=None):
-    """보류 항목이 가리키는 **그 출현 하나**를 분류기 파서로 되찾는다.
+def post_links(rel, records, memo=None):
+    """글 하나의 링크 전부를 {ident: Link} 로. 판정된 것·안 된 것·requires-review 셋 다.
 
     ident 는 `경로:서수:target:label` 의 sha1 이라 같은 문구가 한 글에 여러 번 나와도
-    출현끼리 구별된다. 서수는 판정된 링크·안 된 링크·requires-review 를 모두 세므로
-    세 갈래를 다 훑어야 그 ident 가 나온다.
+    출현끼리 구별된다. 서수는 세 갈래를 모두 세므로 세 갈래를 다 훑어야 그 ident 가
+    나온다. 글이 없으면 OSError, _posts 밖이면 ValueError.
 
     memo(dict)를 주면 글마다 한 번만 파싱한다 — 보류 목록은 한 글에 여러 건이
     몰려 있어서 건마다 다시 파싱하면 목록 계산이 수 초로 늘어난다.
     """
     if _depc is None:
         raise RuntimeError("dependency_classifier 를 불러오지 못했다")
-    full = os.path.normpath(os.path.join(ROOT, item.get("path") or ""))
+    full = os.path.normpath(os.path.join(ROOT, rel or ""))
     if not full.startswith(f"{ROOT}/_posts/") or not full.endswith(".md"):
         raise ValueError("bad path")
     if memo is not None and full in memo:
-        links = memo[full]
-    else:
-        path = _depc.Path(full)
-        text = path.read_text(encoding="utf-8")
-        links = {}
-        for kwargs in ({}, {"tagged": True}, {"review": True}):
-            for link in _depc.extract_links(path, text, records=records, **kwargs):
-                links.setdefault(link.ident, link)
-        if memo is not None:
-            memo[full] = links
+        return memo[full]
+    path = _depc.Path(full)
+    text = path.read_text(encoding="utf-8")
+    links = {}
+    for kwargs in ({}, {"tagged": True}, {"review": True}):
+        for link in _depc.extract_links(path, text, records=records, **kwargs):
+            links.setdefault(link.ident, link)
+    if memo is not None:
+        memo[full] = links
+    return links
+
+
+def hold_link(ident, item, records, memo=None):
+    """보류 항목이 가리키는 **그 출현 하나**를 분류기 파서로 되찾는다."""
+    links = post_links(item.get("path"), records, memo)
     if ident in links:
         return links[ident]
     raise ValueError("그 링크를 지금 글에서 찾지 못했다 — 새로고침")
+
+
+def _lid_home(lid, lang):
+    """data-lid 가 lid 인 링크가 있는 글(_posts 기준 상대경로). 같은 언어 판을 먼저."""
+    needle = f'data-lid="{lid}"'
+    found = []
+    for full in glob.glob(f"{ROOT}/_posts/**/*.md", recursive=True):
+        try:
+            with open(full, encoding="utf-8") as f:
+                if needle in f.read():
+                    found.append(os.path.relpath(full, ROOT))
+        except OSError:
+            continue
+    found.sort(key=lambda rel: f"/{lang}/" not in rel)
+    return found[0] if found else None
+
+
+def reconcile_holds():
+    """보류 항목을 지금 글에 다시 붙인다. 보류 원장을 고쳤으면 True.
+
+    보류 키(ident)는 그 링크가 글에서 몇 번째인지를 담고 있어서, 앞쪽에 링크를 넣거나
+    빼면 링크가 그대로 있어도 키로는 못 찾는다. 출현의 영속 이름은 lid 이므로 키로 못
+    찾으면 lid 로 찾아(글 이름이 바뀌었으면 다른 글에서도) 새 키·경로·줄·markup 으로
+    옮겨 단다. lid 로도 없으면 링크를 지운 것이다 — 판정할 대상이 없으므로 보류에서
+    빼고 settled 에 gone 으로 남긴다.
+
+    링크가 남아 있는데 보류만 빼면 안 된다. requires-review 레코드는 분류기의 어느
+    단계도 다시 집지 않으므로, 그 링크는 판정받을 길 없이 그래프 밖에 남는다.
+    """
+    if _depc is None:
+        return False
+    with open(HOLDS_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        holds = load_holds()
+        records = _ledger.load()
+        memo = {}
+        changed = False
+        for ident, item in list(holds["held"].items()):
+            rel, lid = item.get("path", ""), item.get("lid")
+            try:
+                links = post_links(rel, records, memo)
+            except OSError:
+                links = {}
+            except Exception:  # noqa: BLE001 — 판단할 수 없으면 그대로 둔다
+                continue
+            if ident in links:
+                continue
+            hit = next((x for x in links.values() if lid and x.lid == lid), None)
+            if hit is None and lid:
+                m = re.search(r"/(ko|en)/", rel)
+                home = _lid_home(lid, m.group(1) if m else "ko")
+                if home and home != rel:
+                    try:
+                        hit = next((x for x in post_links(home, records, memo).values()
+                                    if x.lid == lid), None)
+                    except Exception:  # noqa: BLE001
+                        hit = None
+            holds["held"].pop(ident)
+            changed = True
+            if hit is not None:
+                holds["held"].setdefault(hit.ident, {
+                    **item, "path": os.path.relpath(str(hit.source), ROOT),
+                    "line": hit.line, "markup": hit.markup,
+                    "label": hit.label, "target": hit.target,
+                })
+            else:
+                holds["settled"][ident] = {"path": rel, "target": item.get("target", ""),
+                                           "lid": lid, "gone": True, "at": int(time.time())}
+        if changed:
+            save_holds(holds)
+        return changed
 
 
 def hold_verdict(ident, item, records=None, memo=None):
     """보류된 링크에 사람이 원장에 직접 적어 둔 판정. 아직 없으면 None.
 
     분류기가 레코드를 requires-review 로 바꿔 두었으므로, 그 레코드가
-    required·weak·forward 중 하나로 바뀌어 있을 때만 해소로 본다. 링크 자체가
-    사라졌으면 'gone'.
+    required·weak·forward 중 하나로 바뀌어 있을 때만 해소로 본다. 그 출현을 지금
+    글에서 못 찾으면 'gone' — reconcile_holds 가 다음 계산에서 다시 붙이거나 뺀다.
     """
     records = _ledger.load() if records is None else records
     try:
@@ -799,9 +875,16 @@ def sec_link_audit():
     holds = load_holds()
     sig = _linkaudit_signature(holds)
     if _linkaudit_cache["items"] is None or _linkaudit_cache["sig"] != sig:
+        # 글·원장이 바뀌었으면 보류 항목을 먼저 지금 글에 다시 붙인다 (보류 원장을
+        # 고쳐 쓰면 그 mtime 이 서명에 들어가므로 서명도 다시 잡는다).
+        if reconcile_holds():
+            holds = load_holds()
+            sig = _linkaudit_signature(holds)
         _linkaudit_cache.update(sig=sig, items=_linkaudit_items(holds))
     items = _linkaudit_cache["items"]
-    return dict(held=items, settled=len(holds["settled"]),
+    settled = sum(1 for v in holds["settled"].values()
+                  if not (isinstance(v, dict) and v.get("gone")))
+    return dict(held=items, settled=settled,
                 ready=sum(1 for x in items if x["verdict"]), mtime=mtime(HOLDS_STATE),
                 uncommitted=ledger_dirty(), undo=last_undoable(holds))
 
@@ -812,6 +895,9 @@ def _linkaudit_items(holds):
     memo = {}
     items = []
     for ident, item in holds["held"].items():
+        verdict = hold_verdict(ident, item, records, memo)
+        if verdict == "gone":
+            continue      # 다시 붙이기 직후에 글이 또 바뀐 경우 — 다음 계산에서 정리된다
         # 라벨은 한 줄이 아닐 수 있다 — 링크 정규식이 escape 된 `\[` 를 여는 괄호로
         # 읽어 다음 링크까지의 본문을 통째로 삼킨 경우다. 표시는 잘라서 한다.
         flat = " ".join((item.get("markup") or "").split())
@@ -823,7 +909,7 @@ def _linkaudit_items(holds):
             old=item.get("old"), new=item.get("new"),
             reason=item.get("reason", ""), verifier=item.get("verifier", ""),
             decided_by=item.get("decided_by", ""), at=item.get("at", 0),
-            verdict=hold_verdict(ident, item, records, memo),
+            verdict=verdict,
             # 미리보기가 구워진 글에서 이 링크를 집어낼 좌표. 본문 링크는 소스 순서대로
             # 렌더되므로 같은 target 의 링크 중 몇 번째인지만 알면 그 하나를 짚을 수 있다.
             permalink=post.get("permalink", ""), title=post.get("title", ""),

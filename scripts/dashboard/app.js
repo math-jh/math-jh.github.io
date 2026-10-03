@@ -784,9 +784,9 @@ function renderWeights(d) {
 var TQ_ROWS = [
   { k: 'pending', l: '신규 번역 대기', d: 'EN 이 없는 발행 글' },
   { k: 'drift', l: '재번역 대기', d: 'drift_needed 표시가 있는 발행 글' },
-  { k: 'polish', l: '폴리싱 대기', d: 'EN 이 현재 폴리싱 태그 이전 판본' },
-  { k: 'verify', l: '검증 대기', d: '폴리싱을 마치고 의미 검증 전' },
-  { k: 'done', l: '완료', d: '의미 검증까지 끝남' },
+  { k: 'polish', l: '폴리싱 대기', d: 'EN 이 현재 폴리싱 태그 이전 판본 (폴리싱이 검증까지 한다)' },
+  { k: 'verify', l: '검증 대기', d: '폴리싱 때 검증을 못 마친 글', opt: true },
+  { k: 'done', l: '완료', d: '현재 태그로 폴리싱·검증까지 끝남' },
   { k: 'draft', l: '건너뜀 · 초안', d: 'published: false' },
   { k: 'revising', l: '건너뜀 · 개정 중', d: 'revising: true' },
   { k: 'stub', l: '건너뜀 · 스텁', d: '본문 300자 미만', opt: true },

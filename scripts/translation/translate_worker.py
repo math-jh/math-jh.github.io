@@ -998,11 +998,12 @@ def find_next_target(
         return ko, existing_en, "polish"
 
     # --- Phase 4: verify (read-only, one-time; current-polished only) -----
-    # Runs only after the current contrastive polish tag is present. It lints
-    # and semantically checks the polished EN against KO. KO-source errors stay
-    # on the separate KO-TYPOS notification path; the worker never edits KO.
-    # The EN file is never modified. One-time: a recorded `verified_at` retires
-    # the post.
+    # The polish pass runs the same check (check_en) on its final EN and records
+    # `verified_at` itself, so this phase only catches posts whose inline check
+    # did not complete. It lints and semantically checks the polished EN against
+    # KO. KO-source errors stay on the separate KO-TYPOS notification path; the
+    # worker never edits KO. The EN file is never modified. One-time: a recorded
+    # `verified_at` retires the post.
     for ko in ko_files:
         if ko in excluded:
             continue
@@ -3208,26 +3209,50 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
     return findings[:KO_REVIEW_MAX_FINDINGS]
 
 
+def check_en(ko_text: str, en_text: str, verdict_text: str = "") -> dict:
+    """EN 검증 한 벌. run_verify(Phase 4)와 폴리싱 패스가 같이 쓴다.
+
+    결정론 검사 둘(lint_latex·lint_structure)을 돌리고, 수식 프로필이 어긋나는데
+    `verdict_text` 가 비어 있을 때만 verify_math_mismatch 를 부른다. 폴리싱 패스는
+    그 패스의 재시도 루프가 이미 받은 판정을 넘기므로 같은 질문을 두 번 하지 않는다.
+    돌려주는 `fields` 는 state 항목에 그대로 얹는 검증 기록이고, `verified_at` 이
+    찍히면 그 글은 Phase 4 를 떠난다.
+    """
+    # (디스플레이, 인라인) 프로필로 비교한다 — 총 개수만 보면 디스플레이가 인라인으로
+    # 바뀐 것(합계 불변)을 놓친다. gap 계산·로그는 총합을 쓴다.
+    ko_p = math_profile(_SUB_STRIP_RE.sub("", ko_text))
+    en_p = math_profile(_SUB_STRIP_RE.sub("", en_text))
+    lints = lint_latex(en_text)
+    struct = lint_structure(ko_text, en_text)
+    if ko_p != en_p and not verdict_text:
+        verdict_text = verify_math_mismatch(ko_text, en_text, sum(ko_p), sum(en_p))
+    return {
+        "ko_p": ko_p, "en_p": en_p, "lints": lints, "struct": struct,
+        "verdict": verdict_text,
+        "fields": {
+            "verified_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "verify_math_counts": [list(ko_p), list(en_p)],
+            "verify_lints": lints[:20] or None,
+            "verify_structure": struct[:20] or None,
+        },
+    }
+
+
 def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     """Read-only verification of an existing EN translation against KO.
 
     Deterministic LaTeX-corruption lints + the math-block semantic check (Claude
     only when block counts genuinely diverge). Records the outcome in state and
     notifies on problems. NEVER modifies the EN file. Marks `verified_at` so the
-    post is checked at most once.
+    post is checked at most once. 폴리싱 패스가 같은 검사(check_en)로 verified_at 을
+    찍으므로, 여기 오는 것은 그 패스에서 검증을 못 마친 글뿐이다.
     """
     ko_text = ko_path.read_text(encoding="utf-8")
     en_text = en_path.read_text(encoding="utf-8")
-    # (디스플레이, 인라인) 프로필로 비교한다 — 총 개수만 보면 디스플레이가 인라인으로
-    # 바뀐 것(합계 불변)을 놓친다. gap 계산·로그는 총합을 쓴다.
-    ko_p = math_profile(_SUB_STRIP_RE.sub("", ko_text))
-    en_p = math_profile(_SUB_STRIP_RE.sub("", en_text))
+    check = check_en(ko_text, en_text)
+    ko_p, en_p = check["ko_p"], check["en_p"]
     ko_n, en_n = sum(ko_p), sum(en_p)
-    lints = lint_latex(en_text)
-    struct = lint_structure(ko_text, en_text)
-    verdict_text = ""
-    if ko_p != en_p:
-        verdict_text = verify_math_mismatch(ko_text, en_text, ko_n, en_n)
+    lints, struct, verdict_text = check["lints"], check["struct"], check["verdict"]
     verdict_safe = bool(re.search(r"^VERDICT:\s*safe\b", verdict_text, re.M | re.I))
     ko_typos = extract_ko_typos(verdict_text)
     # `clean` is about the EN: a KO typo means the KO needs fixing, not the EN, so
@@ -3236,10 +3261,7 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     clean = (not lints) and (not struct) and (ko_p == en_p or verdict_safe)
 
     entry = state["files"].get(key, {})
-    entry["verified_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    entry["verify_math_counts"] = [list(ko_p), list(en_p)]
-    entry["verify_lints"] = lints[:20] or None
-    entry["verify_structure"] = struct[:20] or None
+    entry.update(check["fields"])
     entry["verify_ko_typos"] = ko_typos[:20] or None
     if verdict_text:
         entry["verify_verdict"] = verdict_text[:4000]
@@ -3543,6 +3565,26 @@ def main() -> int:
         )
         hangul_warns = [w for w in warnings if "Hangul" in w]
 
+        # 폴리싱 패스가 곧 검증이다. Phase 4(run_verify)의 검사를 최종 EN 에 돌려
+        # verified_at 을 함께 찍는다. 수식 판정은 위 재시도 루프의 것을 넘기므로,
+        # 게이트가 수식을 바꿔 새로 어긋난 경우에만 다시 묻는다. 결정론 검사에 걸린
+        # 것은 경고로 올려 아래 알림에 싣는다 (run_verify 와 같은 정책). 검사 자체가
+        # 실패하면 기록을 남기지 않는다 — 그 글은 Phase 4 가 다시 본다.
+        check = None
+        if reason == "polish":
+            try:
+                check = check_en(ko_path.read_text(encoding="utf-8"),
+                                 en_path.read_text(encoding="utf-8"), verdict_text)
+            except Exception as e:
+                log(f"VERIFY ({key}): inline check failed, left to Phase 4 — {_flat(e)[:180]}")
+            else:
+                verdict_text = check["verdict"]
+                warnings += [f"latex-lint: {x}" for x in check["lints"]]
+                warnings += [f"structure: {x}" for x in check["struct"]]
+                log(f"VERIFY ({key}): checked with polish — "
+                    f"{len(check['lints'])} latex-lint, {len(check['struct'])} structure, "
+                    f"math ko={sum(check['ko_p'])} en={sum(check['en_p'])}")
+
         # 폴리싱 때마다 Antigravity가 KO 자체의 오류/설명 누락 후보를 별도로
         # 읽기 전용 생성한다. 기존 Claude 의미 검증이 낸 KO-TYPOS도 ERROR
         # 후보로 합친 뒤 Codex가 진위와 최소 수정안을 독립 판정한다.
@@ -3580,6 +3622,8 @@ def main() -> int:
             state["files"][key]["polished_at"] = final_meta.get(
                 "last_polished_at", translated_at
             )
+            if check is not None:
+                state["files"][key].update(check["fields"])
             state["files"][key]["polish_source"] = final_meta.get(
                 "translation_polish_source", TRANSLATION_POLISH_SOURCE_TAG
             )
