@@ -110,7 +110,7 @@ Even calculating directly without using Stokes' theorem,
 
 $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\sin t, \cos t, 0) = 1$$
 
-so the value of the integral agrees at $\oint_C = \int_0^{2\pi} \dd{t} = 2\pi$, and one can also verify that choosing another surface sharing the boundary, say a hemisphere, does not change the value of the integral.
+so the value of the integral agrees at $\oint_C\mathbf{F}\cdot \dd{r} = \int_0^{2\pi} \dd{t} = 2\pi$, and one can also verify that choosing another surface sharing the boundary, say a hemisphere, does not change the value of the integral.
 :::
 
 ---
