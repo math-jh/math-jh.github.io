@@ -1,6 +1,6 @@
 ---
 title: "Abelian Categories"
-description: "This post covers the definitions of additive and Abelian categories. It introduces additive functors, zero maps, kernels, and cokernels to lay the groundwork for chain complexes and exact sequences."
+description: "It covers the definitions of additive and abelian categories. Through the concepts of additive functors, zero maps, kernels, and cokernels, it defines the foundations of chain complexes and exact sequences."
 excerpt: "Abelian categories"
 
 categories: [Math / Category Theory]
@@ -12,7 +12,8 @@ date: 2024-08-29
 weight: 9
 translated_at: 2026-08-19T17:45:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-19T17:45:04+00:00
+last_polished_at: 2026-10-03T16:29:53+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 In this post we define the notions of an abelian category, a chain complex, and an exact sequence.
 
@@ -21,31 +22,31 @@ In this post we define the notions of an abelian category, a chain complex, and 
 To define an abelian category, we must first define an additive category.
 
 ::: Definition 1
-A category $\mathcal{A}$ is called an *$\Ab$-category* if each $\Hom_\mathcal{A}(A,B)$ is equipped with the structure of an abelian group and $(\Hom_\mathcal{A}(A,B),+)$ satisfies the distributive law with respect to composition. That is, for any $g_1,g_2\in\Hom_\mathcal{A}(B,C)$ and any $f:A\rightarrow B$ or $h:C\rightarrow D$,
+A category $\mathcal{A}$ is called an *$\Ab$-category* if each $\Hom_\mathcal{A}(A,B)$ has the structure of an abelian group and $(\Hom_\mathcal{A}(A,B),+)$ satisfies the distributive law with respect to composition. That is, for any $g_1,g_2\in\Hom_\mathcal{A}(B,C)$ and any $f:A\rightarrow B$ or $h:C\rightarrow D$,
 
 $$(g_1+g_2)\circ f=g_1\circ f+g_2\circ f,\qquad h\circ(g_1+g_2)=h\circ g_1+h\circ g_2$$
 
-both hold. An $\Ab$-category that possesses a zero object $0$ and has a product for any two objects is called an *additive category*.
+both hold. Having a zero object $0$ and products for any two objects, an $\Ab$-category is called an *additive category*.
 :::
 
-A functor $F:\mathcal{A}\rightarrow\mathcal{B}$ between two additive categories $\mathcal{A},\mathcal{B}$ is called an *additive functor* if $F$ induces a group homomorphism from the abelian group $\Hom_\mathcal{A}(A,B)$ to $\Hom_\mathcal{B}(F(A),F(B))$.
+Between two additive categories $\mathcal{A},\mathcal{B}$, a functor $F:\mathcal{A}\rightarrow\mathcal{B}$ is called an *additive functor* if $F$ induces a group homomorphism from the abelian group $\Hom_\mathcal{A}(A,B)$ to $\Hom_\mathcal{B}(F(A),F(B))$.
 
-In an additive category, for any $A,B\in\obj(\mathcal{A})$, the *zero map* $0_{AB}:A\rightarrow B$ is defined as the composite $A\rightarrow 0\rightarrow B$. This zero map is, of course, the identity element for addition in the abelian group $\Hom_\mathcal{A}(A,B)$.
+In an additive category, for any $A,B\in\obj(\mathcal{A})$, the *zero map* $0_{AB}:A\rightarrow B$ is defined as $A\rightarrow 0\rightarrow B$. This zero map is, of course, the identity element for addition in the abelian group $\Hom_\mathcal{A}(A,B)$.
 
 ::: Proposition 2
 For any additive category $\mathcal{A}$ and any two objects $A,B\in\obj(\mathcal{A})$, the zero map $0_{AB}$ defined above is the identity element for addition in $\Hom_\mathcal{A}(A,B)$.
 :::
 ::: Proof
-There is a unique morphism $0_{0B}$ from the zero object $0$ to $B$. Hence $0_{0B}+0_{0B}=0_{0B}$ holds. The given proposition now follows from the identity
+From the zero object $0$ to $B$, there is a unique morphism $0_{0B}$. Hence $0_{0B}+0_{0B}=0_{0B}$ holds. The given proposition now follows from the equation
 
 $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$$
 
-Indeed, adding $-0_{AB}$ to both sides of the above equation in the abelian group $\Hom_\mathcal{A}(A,B)$ yields that $0_{AB}$ is the identity element for addition.
+Indeed, in the abelian group $\Hom_\mathcal{A}(A,B)$, adding $-0_{AB}$ to both sides of the above equation yields that $0_{AB}$ is the identity element for addition.
 :::
 
 ## Abelian category
 
-For any morphism $f:A \rightarrow B$ in an additive category $\mathcal{A}$, the kernel of $f$ is defined as the equalizer $\Eq(f,0)$ with $0:A \rightarrow B$, and similarly the cokernel of $f$ is defined as the coequalizer $\CoEq(f,0)$ with $0$.
+In an additive category $\mathcal{A}$, the kernel of any morphism $f:A \rightarrow B$ is defined as the equalizer with $0:A \rightarrow B$, $\Eq(f,0)$, and similarly the cokernel of $f$ is defined as the coequalizer with $0$, $\CoEq(f,0)$.
 
 We can now define an abelian category.
 
@@ -57,15 +58,15 @@ An additive category $\mathcal{A}$ is called an *abelian category* if the follow
 3. Every epimorphism $f$ is the cokernel of $\ker f$.
 :::
 
-In particular, in this situation, when an exact sequence
+In particular, in this situation, when the following exact sequence to be defined in [Definition 5](#def5){: data-lid="j2a7z" }
 
 $$0 \rightarrow A \rightarrow B \rightarrow C$$
 
-as defined in [Definition 5](#def5){: data-lid="j2a7z" } is given, we may identify $A$ with the kernel of $B \rightarrow C$, and when the exact sequence
+is given, we may identify $A$ with the kernel of $B \rightarrow C$, and when the following exact sequence
 
 $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
-is given, we may identify $C$ with the cokernel of $A \rightarrow B$. In an abelian category, for any morphism $f:A\rightarrow B$, the kernel $i:\ker f\rightarrow A$ and the cokernel $p:B\rightarrow \coker f$ of $f$ exist.
+is given, we may identify $C$ with the cokernel of $A \rightarrow B$. In an abelian category, for any morphism $f:A\rightarrow B$, the kernel of $f$, $i:\ker f\rightarrow A$, and the cokernel $p:B\rightarrow \coker f$ exist.
 
 In any abelian category $\mathcal{A}$, the *image* of $f$ is defined as the morphism
 
@@ -88,7 +89,7 @@ Consider the following data defined in an additive category $\mathcal{A}$.
 If these data satisfy the condition $d_n\circ d_{n+1}=0$, we call this a *chain complex* and write it as $A_\bullet$.
 :::
 
-A morphism between chain complexes $A_\bullet$ and $B_\bullet$ is called a *chain map*; it is given by a collection of morphisms $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$ satisfying the condition $d_n^B\circ f_n=f_{n-1}\circ d_n^A$. This allows us to define the category of chain complexes $\Ch(\mathcal{A})$.
+Meanwhile, a morphism between chain complexes $A_\bullet$ and $B_\bullet$ is called a *chain map*; subject to the condition $d_n^B\circ f_n=f_{n-1}\circ d_n^A$, it is given by a collection of morphisms $(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$. Through this, we can define the category $\Ch(\mathcal{A})$ of chain complexes.
 
 If $\mathcal{A}$ is an abelian category, we can examine this in more detail. Let us fix the names and notation commonly used when dealing with chain complexes in this situation. First, each $d_n$ is called a *differential* or a *boundary map*, depending on context.
 
@@ -96,11 +97,11 @@ We denote their kernels and images by
 
 $$Z_n=\ker(d_n),\qquad B_n=\im(d_{n+1})$$
 
-respectively, and their elements are called *$n$-cycles* and *$n$-boundaries*. An element of $A_n$ is called an *$n$-chain*. It is not difficult to verify that the following monomorphisms exist:
+respectively, and call their elements *$n$-cycles* and *$n$-boundaries*, respectively. An element of $A_n$ is called an *$n$-chain*. It is not difficult to verify that the following monomorphisms
 
 $$B_n \hookrightarrow Z_n \hookrightarrow A_n$$
 
-and in this case we call the cokernel $Z_n/B_n$ the *$n$-th homology* of $A_\bullet$ and write it as $H_n(A_\bullet)$ or simply $H_n(A)$.
+exist, and in this case we call the cokernel $Z_n/B_n$ the *$n$-th homology* of $A_\bullet$ and write it as $H_n(A_\bullet)$ or simply $H_n(A)$.
 
 A chain complex in $\mathcal{A}^\op$ is called a *cochain complex*.
 
@@ -109,27 +110,27 @@ Let an arbitrary chain complex $A_\bullet$ be given. Then
 
 $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
 
-is said to be *exact* at $A_n$ if the monomorphism $B_n \rightarrow Z_n$ above is an isomorphism. A chain complex that is exact everywhere is called an *exact sequence*.
+is said to be *exact* at $A_n$ if the above monomorphism $B_n \rightarrow Z_n$ is an isomorphism. A chain complex that is exact everywhere is called an *exact sequence*.
 :::
 
 ::: Example 6
-The exact sequence
+The following exact sequence
 
 $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0 \rightarrow 0 \rightarrow \cdots$$
 
-is called a *short exact sequence*, and it is written simply as
+is called a *short exact sequence*, and is written simply as
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 :::
 
-Let an additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given. Then for any chain complex $A_\bullet$ defined in $\mathcal{A}$, one easily checks that the data
+Let an additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given. Then for any chain complex $A_\bullet$ defined in $\mathcal{A}$, one can easily verify that the following data
 
 $$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \overset{F(d_n)}{\longrightarrow} F(A_{n-1})\rightarrow\cdots$$
 
 form a chain complex. That is, the additive functor $F$ induces a functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$. However, for a general additive functor, the fact that the original chain complex $A_\bullet$ is exact does not guarantee that the new complex $F(A_\bullet)$ obtained as above is exact.
 
 ::: Definition 7
-An additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$ is called *left exact* if for any short exact sequence
+An additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$ is *left exact* if for any short exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
@@ -137,24 +138,24 @@ the sequence
 
 $$0 \rightarrow F(A) \rightarrow F(B) \rightarrow F(C)$$
 
-is exact. Similarly, $F$ is called *right exact* if for any short exact sequence as above, the sequence
+is exact. Similarly, $F$ is *right exact* if, given any short exact sequence as above, the sequence
 
 $$F(A) \rightarrow F(B) \rightarrow F(C) \rightarrow 0$$
 
 is exact. A functor that is both left exact and right exact is called an *exact functor*.
 :::
 
-That is, an additive functor preserving kernels is called a left exact functor, and a functor preserving cokernels is called a right exact functor. Then one can verify in particular that a left adjoint functor is right exact and a right adjoint functor is left exact.
+That is, an additive functor preserving kernels is called a left exact functor, and a functor preserving cokernels is called a right exact functor. Then, in particular, one can verify that a left adjoint functor is right exact and a right adjoint functor is left exact.
 
-Even if $F$ is contravariant, left exactness and right exactness can be defined in the same way as above.
+Even if $F$ is contravariant, left exactness and right exactness can be defined in the same way as in the definition above.
 
 ## Freyd-Mitchell embedding theorem
 
-Meanwhile, as we have seen, kernels, cokernels, images, and quotients are all defined in an abelian category. From this, theorems in $\lMod{A}$ can be transferred to an arbitrary abelian category. For example, restating the first isomorphism theorem in the language of an arbitrary abelian category, we can write:
+Meanwhile, as seen earlier, kernels, cokernels, images, quotients, etc., are all defined in an abelian category. From this, theorems in $\lMod{A}$ can be transferred to an arbitrary abelian category. For example, if we rewrite the first isomorphism theorem in the language of an arbitrary abelian category, we can write:
 
 > Let a morphism $f:A\rightarrow B$ in an arbitrary abelian category $\mathcal{A}$ be given. Then $A/\ker f\cong \im f$ holds.
 
-where the left-hand side becomes the quotient object obtained from $i:\ker f\rightarrow A$. Theorems of this kind can all be lifted to an abelian category, and their proofs can be carried out using only the universal properties of kernels and cokernels, though the proofs are somewhat complicated.
+where the left-hand side is the quotient object obtained from $i:\ker f\rightarrow A$. Theorems of this kind can all be lifted to an abelian category, and their proofs can also be carried out using only the universal properties of kernels and cokernels, etc., though the proofs are somewhat complicated.
 
 Therefore, instead of proving such theorems one by one, one generally uses the following theorem.
 
@@ -162,7 +163,7 @@ Therefore, instead of proving such theorems one by one, one generally uses the f
 For any small abelian category $\mathcal{A}$, there exist a suitable ring $A$ and a fully faithful, exact functor $F:\mathcal{A}\rightarrow\lMod{A}$.
 :::
 
-Hence, we may regard the objects of an arbitrary small abelian category as $A$-modules and their morphisms as $A$-linear maps, and perform calculations without issue.
+Therefore, one may regard the objects of an arbitrary small abelian category as $A$-modules and their morphisms as $A$-linear maps, and perform calculations without issue.
 
 ---
 
