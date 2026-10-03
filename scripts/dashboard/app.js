@@ -30,7 +30,7 @@ var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 
 var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어' };
 var PAGE_DESC = {
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
-  translation: '번역 상태 집계·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
+  translation: '지금 큐·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
   index: 'GSC 색인 분포와 조치 대상', activity: '커밋·대기 댓글 PR·시스템 상태',
   cron: '블로그 크론 워커 일시정지·재개'
 };
@@ -778,17 +778,57 @@ function renderWeights(d) {
 }
 
 /* ── 번역 ─────────────────────────────────────────────────────────────── */
+/* 지금 큐 — 글마다 워커가 어느 단계에서 집을지 (translate_worker.py --queue 가
+   find_next_target 과 같은 조건으로 판정). 순서가 곧 워커의 선택 순서다.
+   opt 행은 0편이면 숨긴다. */
+var TQ_ROWS = [
+  { k: 'pending', l: '신규 번역 대기', d: 'EN 이 없는 발행 글' },
+  { k: 'drift', l: '재번역 대기', d: 'drift_needed 표시가 있는 발행 글' },
+  { k: 'polish', l: '폴리싱 대기', d: 'EN 이 현재 폴리싱 태그 이전 판본' },
+  { k: 'verify', l: '검증 대기', d: '폴리싱을 마치고 의미 검증 전' },
+  { k: 'done', l: '완료', d: '의미 검증까지 끝남' },
+  { k: 'draft', l: '건너뜀 · 초안', d: 'published: false' },
+  { k: 'revising', l: '건너뜀 · 개정 중', d: 'revising: true' },
+  { k: 'stub', l: '건너뜀 · 스텁', d: '본문 300자 미만', opt: true },
+  { k: 'await_lid', l: '보류 · 링크 식별자 대기', d: 'data-lid 없는 내부 링크가 있음', opt: true },
+  { k: 'backoff', l: '보류 · 실패 백오프', d: '실패 뒤 24시간 대기', opt: true },
+  { k: 'manual', l: '제외 · 수동 번역', d: 'EN 이 워커 번역이 아님', opt: true }
+];
 function secTranslation(d) {
   var t = d.translation;
   var s = secNode('번역 큐', t ? num((t.stats || {}).total_done) + '편 누적' : null);
   if (!t) { s.appendChild(el('p', 'hint', 'translation_state.json 을 읽지 못했다.')); return s; }
   var c = el('div', 'cols2'), left = el('div'), right = el('div');
-  left.appendChild(el('h3', null, '상태 집계'));
-  var rows = Object.keys(t.by_status).sort().map(function (k) {
-    return row([{ text: k, cls: 'mono' }, { text: num(t.by_status[k]), cls: 'num' }]);
-  });
-  rows.push(row([{ text: '재번역 대기 (drift_needed)', cls: 'mono' }, { text: num(d.stats.drift), cls: 'num' }]));
-  left.appendChild(table(['status', { label: '건수', num: true }], rows));
+  left.appendChild(el('h3', null, '지금 큐'));
+  var q = t.queue;
+  if (q) {
+    var held = {};
+    (q.held_drift || []).forEach(function (p) { held[p] = true; });
+    left.appendChild(table(['단계', '조건', { label: '편', num: true }],
+      TQ_ROWS.filter(function (r) { return !r.opt || (q.buckets[r.k] || []).length; }).map(function (r) {
+        var paths = q.buckets[r.k] || [];
+        var nHeld = paths.filter(function (p) { return held[p]; }).length;
+        var tr = row([
+          { text: r.l },
+          { text: r.d, cls: 'muted sans' },
+          { html: num(paths.length) + (nHeld ? ' <span class="muted">(drift 표시 ' + nHeld + ')</span>' : ''), cls: 'num' }
+        ], paths.length ? 'clickable' : null);
+        if (paths.length) {
+          tr.onclick = function () {
+            openModal(r.l + ' — ' + num(paths.length) + '편', paths.map(function (p) {
+              return p.replace(/^_posts\//, '') + (held[p] ? '   · drift_needed 표시' : '');
+            }).join('\n'));
+          };
+        }
+        return tr;
+      })));
+    left.appendChild(el('p', 'hint', '워커가 위에서부터 차례로 집는다. 초안·개정 중인 글은 drift_needed 표시가 있어도 ' +
+      '건너뛰고, 발행되거나 revising 이 빠지면 그때 해당 단계로 들어간다. 현재 폴리싱 태그 ' +
+      (q.polish_tag || '—') + ' · 행을 누르면 글 목록.'));
+  } else {
+    left.appendChild(el('p', 'hint', t.queue_error ? '큐 집계 실패: ' + t.queue_error
+      : '큐를 집계하는 중이다 (몇 초). 잠시 뒤 새로고침.'));
+  }
   var st = t.stats || {};
   left.appendChild(el('p', 'hint', '누적 ' + num(st.total_done) + '편 · 입력 ' + kchars(st.total_in_chars) +
     '자 → 출력 ' + kchars(st.total_out_chars) + '자' +
@@ -1262,6 +1302,37 @@ function linkAuditBlock(d) {
 }
 
 /* ── 감사 ─────────────────────────────────────────────────────────────── */
+/* 주간 감사(scripts/audit/check_links.py)의 지적 종류 — 무엇을 보고 어떻게 읽는지. */
+var AUDIT_KIND = {
+  internal_link_broken: { l: '깨진 내부 링크',
+    d: '본문의 [표시](/ko/…) 링크가 배포본에서 열리지 않는다. 대상이 초안(published: false)이면 ' +
+       '발행 글에서 404 가 나고, EN 링크는 대상의 EN 판이 아직 없을 때 걸린다. 초안끼리의 링크는 ' +
+       '세지 않는다. 앵커(#thm8)가 대상 글에 실제로 있는지는 보지 않는다.' },
+  fixme_marker: { l: 'FIXME·TODO 표시',
+    d: '본문(코드·수식 밖)에 FIXME·TODO·XXX 가 남은 줄. 대개 <!-- TODO: 서지 확인 --> 같은 작성 ' +
+       '메모다. HTML 주석이라 화면에는 안 보이지만 손이 덜 간 자리라는 표시다.' },
+  permalink_convention: { l: 'permalink 규약 위반',
+    d: 'permalink 가 /{언어}/{카테고리}/… 로 시작하지 않는다. 카테고리 구간은 폴더 경로나 ' +
+       'frontmatter categories 의 과목 슬러그(하이픈 보존, 예: gromov-witten_theory) 중 하나와 맞으면 된다.' },
+  permalink_missing: { l: 'permalink 없음', d: 'frontmatter 에 permalink 가 없는 글.' },
+  image_missing: { l: '없는 이미지', d: '본문 ![…](경로) 가 가리키는 파일이 디스크에 없다.' },
+  empty_link: { l: '빈 링크', d: '[…]() 처럼 대상이 빈 링크.' },
+  placeholder_ref: { l: '##ref 자리표시', d: '작성 중 남긴 ##ref 참조 자리표시.' },
+  placeholder_img: { l: 'img 자리표시', d: '![img](img) 같은 이미지 자리표시.' }
+};
+/* "경로[ (초안)] — 상세" 줄들을 글별로 묶는다. */
+function auditGrouped(items) {
+  var order = [], by = {};
+  items.forEach(function (x) {
+    var i = x.indexOf(' — ');
+    var path = (i < 0 ? x : x.slice(0, i)).replace(/^_posts\//, ''), rest = i < 0 ? '' : x.slice(i + 3);
+    if (!by[path]) { by[path] = []; order.push(path); }
+    if (rest) by[path].push(rest);
+  });
+  return order.map(function (p) {
+    return p + by[p].map(function (r) { return '\n  ' + r; }).join('');
+  }).join('\n\n');
+}
 function secAudit(d) {
   var a = d.audit;
   var s = secNode('감사', a ? ago(a.mtime) + ' 갱신' : null);
@@ -1271,15 +1342,15 @@ function secAudit(d) {
     var det = a.details || {};
     left.appendChild(table(['종류', { label: '건수', num: true }],
       Object.keys(a.counts).sort(function (x, y) { return a.counts[y] - a.counts[x]; }).map(function (k) {
-        var items = det[k] || [];
+        var items = det[k] || [], info = AUDIT_KIND[k] || { l: k, d: '' };
         var tr = row([
-          { text: k, cls: 'mono' },
+          { html: esc(info.l) + ' <span class="mono muted">' + esc(k) + '</span>' },
           { text: num(a.counts[k]), cls: 'num' }
         ], items.length ? 'clickable' : null);
         if (items.length) {
           tr.onclick = function () {
-            openModal(k + ' — ' + num(a.counts[k]) + '건',
-              items.map(function (x) { return '- ' + x; }).join('\n'));
+            openModal(info.l + ' — ' + num(a.counts[k]) + '건',
+              (info.d ? info.d + '\n\n' : '') + auditGrouped(items));
           };
         }
         return tr;

@@ -71,6 +71,11 @@ ASSETS_DIR = SITE_ROOT / "assets"
 DATA_DIR = SITE_ROOT / "_data"
 SUBJECT_PAGE_PLUGIN = SITE_ROOT / "_plugins" / "hide_empty_subject_pages.rb"
 
+# 수식 스팬 정규식의 단일 출처는 .agents/hooks/md_lint.py — translate_worker·mech_sweep
+# 와 같은 관례로 import 한다.
+sys.path.insert(0, str(SITE_ROOT / ".agents" / "hooks"))
+from md_lint import _MATH_SPAN_RE  # noqa: E402
+
 # Filename "2024-08-18-Weighted_Categories.md" -> ("2024-08-18", "Weighted_Categories")
 POST_NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
 
@@ -112,6 +117,7 @@ class PostAudit:
     lang: str
     slug: str
     permalink: Optional[str] = None
+    draft: bool = False                  # published: false
     issues: List[Issue] = field(default_factory=list)
     external_count: int = 0
 
@@ -207,9 +213,18 @@ def parse_frontmatter(text: str) -> Tuple[Dict[str, Any], str]:
 # ---------------------------------------------------------------------------
 
 
-def collect_post_permalinks() -> Dict[str, Path]:
-    """Map every post permalink (normalised, no trailing slash) to its path."""
+def _is_draft(fm: Dict[str, Any]) -> bool:
+    return str(fm.get("published", "true")).strip().lower() == "false"
+
+
+def collect_post_permalinks() -> Tuple[Dict[str, Path], set]:
+    """Map every post permalink (normalised, no trailing slash) to its path.
+
+    두 번째 값은 그중 ``published: false`` 초안의 permalink 다. 초안은 프로덕션에
+    빌드되지 않으므로, 발행 글이 초안을 가리키면 그 링크는 배포본에서 404 다.
+    """
     mapping: Dict[str, Path] = {}
+    drafts: set = set()
     for md in POSTS_DIR.rglob("*.md"):
         try:
             text = md.read_text(encoding="utf-8")
@@ -219,7 +234,9 @@ def collect_post_permalinks() -> Dict[str, Path]:
         pl = fm.get("permalink")
         if isinstance(pl, str):
             mapping[pl.rstrip("/")] = md
-    return mapping
+            if _is_draft(fm):
+                drafts.add(pl.rstrip("/"))
+    return mapping, drafts
 
 
 def collect_page_permalinks() -> Dict[str, Path]:
@@ -357,24 +374,38 @@ def check_image_exists(image_ref: str) -> bool:
     return candidate.is_file()
 
 
-def check_internal_link(
+def internal_link_problem(
     target: str,
     post_permalinks: Dict[str, Path],
+    draft_permalinks: set,
     page_permalinks: Dict[str, Path],
-) -> bool:
-    """Return True iff ``target`` resolves to a known post, page or file."""
+    source_is_draft: bool,
+) -> Optional[str]:
+    """``target`` 이 배포본에서 열리지 않는 이유 한 줄. 열리면 None.
+
+    앵커(``#thm8``)가 대상 글에 실제로 있는지는 보지 않는다. 초안끼리의 링크는
+    둘이 함께 발행될 것이므로 문제 삼지 않는다.
+    """
     target = target.split("#", 1)[0].split("?", 1)[0]
     if not target:
-        return True  # Pure ``#anchor`` link to self — accept.
+        return None  # Pure ``#anchor`` link to self — accept.
     norm = target.rstrip("/")
-    if norm in post_permalinks or norm in page_permalinks:
-        return True
+    if norm in page_permalinks:
+        return None
+    if norm in post_permalinks:
+        if norm in draft_permalinks and not source_is_draft:
+            return "대상이 초안(published: false)이라 배포본에서 404"
+        return None
     # File-on-disk fallback (CSS, images, assets/...).
-    if target.startswith("/"):
-        candidate = SITE_ROOT / target.lstrip("/")
-        if candidate.exists():
-            return True
-    return False
+    if target.startswith("/") and (SITE_ROOT / target.lstrip("/")).exists():
+        return None
+    if norm.startswith("/en/"):
+        ko = "/ko/" + norm[len("/en/"):]
+        if ko in draft_permalinks:
+            return None if source_is_draft else "EN 판 없음 (KO 원본이 초안)"
+        if ko in post_permalinks:
+            return "EN 판 없음 (KO 원본은 발행됨, 번역 전)"
+    return "이 permalink 를 가진 글·페이지가 없음"
 
 
 # ---------------------------------------------------------------------------
@@ -382,7 +413,9 @@ def check_internal_link(
 # ---------------------------------------------------------------------------
 
 
-def _expected_permalink_prefix(category_path: str, lang: str) -> List[str]:
+def _expected_permalink_prefix(
+    category_path: str, lang: str, category_names: Iterable[str] = (),
+) -> List[str]:
     """Return acceptable permalink prefixes for a given category/lang.
 
     The site convention is ``/{lang}/{category_path_lower}``, but a few
@@ -392,13 +425,24 @@ def _expected_permalink_prefix(category_path: str, lang: str) -> List[str]:
     ``/{lang}/...`` form and, when ``lang`` is empty, the ``/ko/...`` and
     ``/en/...`` variants so the post is accepted as long as it uses some
     language prefix consistently.
+
+    카테고리 구간은 폴더 경로에서도, frontmatter ``categories`` 의 이름에서도
+    만든다. 이름 쪽은 과목홈 슬러그(``_subject_slug``)와 같은 규칙이라 하이픈을
+    보존한다 — 폴더 ``Gromov_Witten_Theory`` 의 글은 카테고리 "Math / Gromov-Witten
+    Theory" 를 따라 ``/ko/math/gromov-witten_theory/…`` 를 쓴다.
     """
-    parts = [p.lower() for p in category_path.split("/") if p]
-    bases = ["/".join(parts)]
-    # Misc 하위 카테고리는 permalink에서 선행 "misc" 세그먼트를 생략할 수 있다
-    # (예: Misc/LLM_Workshop -> /ko/llm_workshop/... — 해당 CLAUDE.md 규약).
-    if len(parts) > 1 and parts[0] == "misc":
-        bases.append("/".join(parts[1:]))
+    variants = [[p.lower() for p in category_path.split("/") if p]]
+    for name in category_names:
+        variants.append([seg.strip().lower().replace(" ", "_")
+                         for seg in name.split(" / ") if seg.strip()])
+    bases = []
+    for parts in variants:
+        bases.append("/".join(parts))
+        # Misc 하위 카테고리는 permalink에서 선행 "misc" 세그먼트를 생략할 수 있다
+        # (예: Misc/LLM_Workshop -> /ko/llm_workshop/... — 해당 CLAUDE.md 규약).
+        if len(parts) > 1 and parts[0] == "misc":
+            bases.append("/".join(parts[1:]))
+    bases = list(dict.fromkeys(bases))
     if lang:
         return ["/" + lang + "/" + b for b in bases]
     out: List[str] = []
@@ -409,7 +453,7 @@ def _expected_permalink_prefix(category_path: str, lang: str) -> List[str]:
 
 def audit_frontmatter(audit: PostAudit, fm: Dict[str, Any]) -> None:
     expected_prefixes = _expected_permalink_prefix(
-        audit.category.replace("\\", "/"), audit.lang
+        audit.category.replace("\\", "/"), audit.lang, _category_names(fm)
     )
 
     permalink = fm.get("permalink")
@@ -439,38 +483,64 @@ def _external_head_ok(url: str, timeout: float = 5.0) -> bool:
         return False
 
 
+def _blank(m: "re.Match") -> str:
+    return re.sub(r"[^\n]", " ", m.group(0))
+
+
+def _mask_body(body: str) -> str:
+    """코드 펜스·인라인 코드·수식을 같은 길이의 공백으로 가린다 (줄바꿈은 그대로).
+
+    검사 정규식은 가린 본문에 돌리고, 보고서에 싣는 발췌는 같은 위치의 원문에서
+    자른다. 가리지 않으면 수식 `$[U/G](T)$`·`$(\\phi[\\x](p))(x)$` 가 링크로, 코드
+    예시 `` `[표시명](/url#anchor)` `` 가 깨진 링크로 잡힌다. 순서는 md_lint 와 같다
+    (코드 먼저, 그다음 수식).
+    """
+    lines = body.split("\n")
+    in_code = False
+    for i, line in enumerate(lines):
+        stripped = line.lstrip()
+        fence = stripped.startswith("```") or stripped.startswith("~~~")
+        if fence or in_code:
+            lines[i] = " " * len(line)
+            if fence:
+                in_code = not in_code
+    masked = re.sub(r"`[^`\n]*`", _blank, "\n".join(lines))
+    return _MATH_SPAN_RE.sub(_blank, masked)
+
+
+def _excerpt(raw: str, start: int, end: int) -> str:
+    """raw[start:end] 를 담은 발췌. HTML 주석 안이면 주석 전체를 보인다."""
+    open_at = raw.rfind("<!--", 0, start)
+    if open_at >= 0 and raw.find("-->", open_at, start) < 0:
+        close_at = raw.find("-->", end)
+        start, end = open_at, (close_at + 3 if close_at >= 0 else len(raw))
+    lo, hi = max(0, start - 40), min(len(raw), max(end, start + 120))
+    return (("…" if lo else "") + raw[lo:hi].strip()
+            + ("…" if hi < len(raw) else ""))
+
+
+def _link_markup(raw: str, m: "re.Match") -> str:
+    text = raw[m.start("text"):m.end("text")]
+    if len(text) > 60:
+        text = text[:60] + "…"
+    return f"[{text}]({m.group('target')})"
+
+
 def audit_body(
     audit: PostAudit,
     body: str,
     post_permalinks: Dict[str, Path],
+    draft_permalinks: set,
     page_permalinks: Dict[str, Path],
     check_external: bool = False,
+    line_offset: int = 0,
 ) -> None:
+    """``line_offset`` 은 본문 앞 frontmatter 의 줄 수 — 보고하는 줄번호는 파일 기준이다."""
     external_count = 0
-    in_code = False
-    in_math = False
-    # Iterate line-by-line so we can also detect placeholder / FIXME markers
-    # with helpful line numbers. Fenced code blocks and $$…$$ math spans are
-    # skipped/masked — `[X/G](T)` 같은 수식이 링크로 오탐되는 것을 막는다.
-    for lineno, raw_line in enumerate(body.splitlines(), start=1):
-        stripped = raw_line.lstrip()
-        if stripped.startswith("```") or stripped.startswith("~~~"):
-            in_code = not in_code
-            continue
-        if in_code:
-            continue
-
-        # Mask paired inline $$…$$ first, then track multi-line display blocks.
-        line = re.sub(r"\$\$.*?\$\$", lambda m: " " * len(m.group(0)), raw_line)
-        if in_math:
-            if line.count("$$") % 2 == 1:
-                in_math = False
-                line = " " * len(line.rsplit("$$", 1)[0]) + line.rsplit("$$", 1)[1]
-            else:
-                continue
-        elif line.count("$$") % 2 == 1:
-            line = line.split("$$", 1)[0]
-            in_math = True
+    raw_lines = body.split("\n")
+    for idx, line in enumerate(_mask_body(body).split("\n")):
+        raw_line = raw_lines[idx]
+        lineno = line_offset + idx + 1
 
         if PLACEHOLDER_IMG_RE.search(line):
             audit.issues.append(
@@ -484,9 +554,11 @@ def audit_body(
             audit.issues.append(
                 Issue("empty_link", f"line {lineno}: link with empty target")
             )
-        if FIXME_RE.search(line):
+        marker = FIXME_RE.search(line)
+        if marker:
             audit.issues.append(
-                Issue("fixme_marker", f"line {lineno}: {line.strip()[:120]}")
+                Issue("fixme_marker", f"line {lineno}: "
+                      f"{_excerpt(raw_line, marker.start(), marker.end())}")
             )
 
         # Images first; record matched spans so we don't also flag them as links.
@@ -523,9 +595,12 @@ def audit_body(
                 continue
             if target.startswith("#"):
                 continue  # Anchor on same page; out of scope.
-            if not check_internal_link(target, post_permalinks, page_permalinks):
+            problem = internal_link_problem(target, post_permalinks, draft_permalinks,
+                                            page_permalinks, audit.draft)
+            if problem:
                 audit.issues.append(
-                    Issue("internal_link_broken", f"line {lineno}: {target}")
+                    Issue("internal_link_broken",
+                          f"line {lineno}: {_link_markup(raw_line, m)} — {problem}")
                 )
 
     audit.external_count = external_count
@@ -540,8 +615,10 @@ def iter_posts(category_filter: Optional[str]) -> Iterable[Path]:
     if not POSTS_DIR.exists():
         return []
     for md in sorted(POSTS_DIR.rglob("*.md")):
-        if md.name == "CLAUDE.md":
-            continue  # 작업 지침 파일 — 포스트가 아님
+        if not POST_NAME_RE.match(md.name):
+            # Jekyll 도 날짜 접두사 없는 파일은 글로 보지 않는다. _posts 안의 그런
+            # 파일은 작업 지침(CLAUDE.md 와 그 심링크 AGENTS.md)뿐이다.
+            continue
         if category_filter:
             rel = md.relative_to(POSTS_DIR)
             if category_filter not in rel.parts:
@@ -552,6 +629,7 @@ def iter_posts(category_filter: Optional[str]) -> Iterable[Path]:
 def audit_post(
     path: Path,
     post_permalinks: Dict[str, Path],
+    draft_permalinks: set,
     page_permalinks: Dict[str, Path],
     check_external: bool,
 ) -> PostAudit:
@@ -567,8 +645,12 @@ def audit_post(
     except Exception as exc:
         audit.issues.append(Issue("yaml_error", f"malformed frontmatter: {exc!r}"))
         fm, body = {}, text
+    audit.draft = _is_draft(fm)
     audit_frontmatter(audit, fm)
-    audit_body(audit, body, post_permalinks, page_permalinks, check_external)
+    # parse_frontmatter 의 body 는 text 의 꼬리다 — 앞부분의 줄 수가 frontmatter 몫이다.
+    line_offset = text[:len(text) - len(body)].count("\n")
+    audit_body(audit, body, post_permalinks, draft_permalinks, page_permalinks,
+               check_external, line_offset)
     return audit
 
 
@@ -610,8 +692,9 @@ def render_report(audits: List[PostAudit]) -> str:
     actionables: Dict[str, List[str]] = defaultdict(list)
     for a in with_issues:
         rel = a.path.relative_to(SITE_ROOT)
+        tag = " (초안)" if a.draft else ""
         for issue in a.issues:
-            actionables[issue.kind].append(f"{rel} — {issue.detail}")
+            actionables[issue.kind].append(f"{rel}{tag} — {issue.detail}")
 
     headline_kinds = [
         ("permalink_missing", "Posts without a `permalink`"),
@@ -649,7 +732,7 @@ def render_report(audits: List[PostAudit]) -> str:
         lines.append("")
         for post in bad_posts:
             rel = post.path.relative_to(SITE_ROOT)
-            lines.append(f"**`{rel}`**")
+            lines.append(f"**`{rel}`**" + (" (초안)" if post.draft else ""))
             if post.permalink:
                 lines.append(f"- permalink: `{post.permalink}`")
             for issue in post.issues:
@@ -700,14 +783,15 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"error: _posts directory not found at {POSTS_DIR}", file=sys.stderr)
         return 2
 
-    post_permalinks = collect_post_permalinks()
+    post_permalinks, draft_permalinks = collect_post_permalinks()
     page_permalinks = collect_page_permalinks()
     page_permalinks.update(collect_subject_home_permalinks())
 
     audits: List[PostAudit] = []
     for md in iter_posts(args.category):
         audits.append(
-            audit_post(md, post_permalinks, page_permalinks, args.check_external)
+            audit_post(md, post_permalinks, draft_permalinks, page_permalinks,
+                       args.check_external)
         )
 
     report = render_report(audits)

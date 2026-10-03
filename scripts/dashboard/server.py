@@ -23,6 +23,7 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
 dependency-classifier-holds.json.
 """
 import fcntl
+import glob
 import json
 import os
 import re
@@ -312,7 +313,6 @@ def sec_posts(posts):
         # 되살린 직전 판본이 떠 있다. 개요는 이 수를 미발행 칸에 덧붙여 낸다.
         revising=sum(1 for p in ko if p["revising"]),
         categories=len(cats),
-        drift=sum(1 for p in ko if p["drift"]),
         # 신규 판정은 frontmatter date 기준 — 자동 커밋이 파일을 상시 건드려
         # mtime 은 "최근 추가"의 신호가 되지 못한다.
         new30d=sum(1 for p in ko if p["date"] >= cutoff30),
@@ -470,6 +470,46 @@ def sec_workers():
     return out
 
 
+# 번역 큐에서 각 글이 지금 어느 단계에 있는가. state 의 status 는 마지막으로 기록된
+# 사건이라 (초안일 때 박힌 draft_skip 이 발행된 뒤에도 남는다) 이 질문에 답하지 못한다.
+# 판정은 워커의 `translate_worker.py --queue` (find_next_target 과 같은 단계 조건) 에
+# 맡기고 여기서 다시 구현하지 않는다. 한 번에 4~5초 걸리므로 요약 계산을 붙잡지 않게
+# 백그라운드에서 돌리고, 글·state·_config.yml 이 바뀌었을 때만 다시 돈다. 첫 계산이
+# 끝나기 전에는 None 이다.
+TQUEUE_CMD = ["/usr/bin/python3", f"{ROOT}/scripts/translation/translate_worker.py", "--queue"]
+_tqueue = {"sig": None, "data": None, "error": None, "running": False}
+_tqueue_lock = threading.Lock()
+
+
+def _tqueue_signature():
+    paths = sorted(glob.glob(f"{ROOT}/_posts/Math/*/*/*.md"))
+    return (hash(tuple(paths)), max((mtime(p) or 0 for p in paths), default=0),
+            mtime(f"{ROOT}/scripts/translation/translation_state.json"),
+            mtime(f"{ROOT}/_config.yml"))
+
+
+def _tqueue_run(sig):
+    rc, out, err = run(TQUEUE_CMD, timeout=60)
+    try:
+        data, error = (json.loads(out), None) if rc == 0 else (None, err.strip()[-300:])
+    except ValueError as e:
+        data, error = None, f"JSON: {e}"
+    with _tqueue_lock:
+        # 실패해도 sig 를 기록한다 — 안 그러면 요약 갱신마다 다시 돈다. 직전 집계는 남긴다.
+        _tqueue.update(sig=sig, error=error, running=False)
+        if data is not None:
+            _tqueue["data"] = data
+
+
+def translation_queue():
+    sig = _tqueue_signature()
+    with _tqueue_lock:
+        if sig != _tqueue["sig"] and not _tqueue["running"]:
+            _tqueue["running"] = True
+            threading.Thread(target=_tqueue_run, args=(sig,), daemon=True).start()
+        return _tqueue["data"], _tqueue["error"]
+
+
 def sec_translation():
     p = f"{ROOT}/scripts/translation/translation_state.json"
     try:
@@ -477,7 +517,6 @@ def sec_translation():
     except Exception:
         return None
     files = d.get("files", {})
-    by_status = {}
     recent = []
     ko_typos = []
     n_actionable = n_false = n_unreviewed = 0
@@ -490,7 +529,6 @@ def sec_translation():
         notes = {}
     for path, v in files.items():
         st = v.get("status", "?")
-        by_status[st] = by_status.get(st, 0) + 1
         ts = v.get("last_attempt_ts") or 0
         recent.append(dict(path=path, status=st, ts=ts,
                            retries=v.get("retries") or v.get("retry") or 0,
@@ -544,7 +582,8 @@ def sec_translation():
         ))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
-    return dict(stats=d.get("stats", {}), by_status=by_status,
+    queue, queue_error = translation_queue()
+    return dict(stats=d.get("stats", {}), queue=queue, queue_error=queue_error,
                 recent=recent[:15], ko_typos=ko_typos,
                 ko_typo_actionable=n_actionable, ko_typo_false=n_false,
                 ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
@@ -1014,6 +1053,11 @@ def sec_cron():
 def build_summary():
     posts = scan_posts()
     stats, categories, orphan_en, unpublished = sec_posts(posts)
+    translation = sec_translation()
+    # 재번역 대기는 워커가 지금 drift 단계에서 집을 글만 센다. drift_needed 표시가
+    # 있어도 초안·개정 중인 글은 건너뜀 칸에, EN 이 아직 없는 글은 신규 번역 칸에 있다.
+    queue = (translation or {}).get("queue")
+    stats["drift"] = len(queue["buckets"]["drift"]) if queue else None
     return dict(
         ts=time.time(),
         stats=stats,
@@ -1021,7 +1065,7 @@ def build_summary():
         orphan_en=orphan_en,
         unpublished=unpublished,
         workers=sec_workers(),
-        translation=sec_translation(),
+        translation=translation,
         comment_prs=sec_comment_prs(),
         audit=sec_audit(),
         link_audit=sec_link_audit(),

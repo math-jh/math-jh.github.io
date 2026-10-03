@@ -1023,6 +1023,65 @@ def find_next_target(
     return None
 
 
+# 지금 각 글이 큐의 어디에 있는가. state 의 status 는 마지막으로 기록된 사건이라
+# (초안일 때 박힌 draft_skip 은 발행된 뒤에도 그대로 남는다) 이 질문에 답하지 못한다.
+# 판정은 find_next_target 의 단계 조건을 글 하나에 그대로 적용한 것이다 — 단계 조건을
+# 바꾸면 둘을 같이 고칠 것. 대시보드(scripts/dashboard/server.py :: sec_translation)가
+# `--queue` 출력으로 읽는다.
+QUEUE_BUCKETS = ("pending", "drift", "polish", "verify", "done",
+                 "draft", "revising", "stub", "await_lid", "backoff", "manual")
+
+
+def queue_bucket(ko: Path, state: dict, now: float) -> str:
+    """find_next_target 이 이 글을 어느 단계에서 집을지 (또는 왜 안 집는지)."""
+    if awaiting_link_ids(ko):
+        return "await_lid"
+    entry = state["files"].get(str(ko.relative_to(BLOG_ROOT)), {})
+    fm = _read_frontmatter(ko)
+    if _published_false_in_fm(fm):
+        return "draft"
+    if _REVISING_RE.search(fm):
+        return "revising"
+    en = find_en_counterpart(ko)
+    if en is None:
+        phase = "stub" if _ko_body_length(ko) < MIN_KO_BODY_CHARS else "pending"
+    elif not is_our_translation(en):
+        return "manual"
+    elif ko_wants_drift(ko):
+        phase = "drift"
+    elif en_translation_meta(en).get("translation_polish_source") \
+            != TRANSLATION_POLISH_SOURCE_TAG:
+        phase = "polish"
+    elif not entry.get("verified_at"):
+        phase = "verify"
+    else:
+        return "done"
+    # 실패 백오프는 Phase 1–3 만 지킨다 (Phase 4 는 백오프를 보지 않는다).
+    if phase in ("pending", "drift", "polish") and entry.get("status") == "failed" \
+            and now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
+        return "backoff"
+    return phase
+
+
+def queue_snapshot(state: dict) -> dict:
+    """단계별 KO 경로 목록. 목록 순서는 find_next_target 의 스캔 순서와 같다.
+
+    `held_drift` 는 drift_needed 표시가 있지만 지금 drift 단계에 있지 않은 글이다
+    (초안·개정 중이라 막혀 있거나, EN 이 아직 없어 신규 번역을 기다리는 글).
+    """
+    now = time.time()
+    buckets: dict[str, list[str]] = {b: [] for b in QUEUE_BUCKETS}
+    held_drift = []
+    for ko in sorted(POSTS_ROOT.glob("*/ko/*.md")):
+        key = str(ko.relative_to(BLOG_ROOT))
+        bucket = queue_bucket(ko, state, now)
+        buckets[bucket].append(key)
+        if bucket != "drift" and ko_wants_drift(ko):
+            held_drift.append(key)
+    return {"buckets": buckets, "held_drift": held_drift,
+            "polish_tag": TRANSLATION_POLISH_SOURCE_TAG}
+
+
 # ---------------------------------------------------------------------------
 # Prompt
 # ---------------------------------------------------------------------------
@@ -3285,10 +3344,15 @@ def main() -> int:
     ap.add_argument("--lint-structure", action="store_true",
                     help="compare ko/en theorem-box structure for every pair and exit "
                          "(deterministic, no model, no state)")
+    ap.add_argument("--queue", action="store_true",
+                    help="print the current per-phase queue as JSON and exit (read-only)")
     args = ap.parse_args()
 
     if args.lint_structure:
         return cmd_lint_structure()
+    if args.queue:
+        json.dump(queue_snapshot(load_state()), sys.stdout, ensure_ascii=False)
+        return 0
 
     translator_bin = {
         "antigravity": AGY_BIN,
