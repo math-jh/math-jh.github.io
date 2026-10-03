@@ -3033,6 +3033,13 @@ C:
     url: /ko/math/algebraic_structures/abelian_groups
   - label: '[리 이론] §보편 포락 대수'
     url: /ko/math/lie_theory/universal_enveloping_algebra
+- id: commutator_subgroup
+  en: commutator subgroup
+  ko: 교환자부분군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §가환군'
+    url: /ko/math/algebraic_structures/abelian_groups
 - id: commute
   en: commute
   ko: 교환
