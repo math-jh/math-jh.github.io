@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -60,6 +61,70 @@ class CommitMarkerTest(unittest.TestCase):
                 worker.ko_content_commits()["_posts/Math/Test/ko/post.md"],
                 ("old", 100.0),
             )
+
+
+TERMS_WITH_DEL_OPERATOR = """# test
+D:
+- id: dolbeault_complex
+  en: Dolbeault complex
+  ko: Dolbeault 복합체
+  primary: en
+  defs:
+  - label: '[테스트] §글'
+    url: /ko/math/test/post
+P:
+- id: del_operator
+  en: $\\partial$-operator
+  ko: $\\partial$-연산자
+  primary: ko
+  defs:
+  - label: '[테스트] §글'
+    url: /ko/math/test/post
+"""
+
+
+class ExistingEntryTest(unittest.TestCase):
+    def setUp(self) -> None:
+        from terms_common import split_file
+        _, self.groups = split_file(TERMS_WITH_DEL_OPERATOR)
+        self.idx = worker.entry_index(self.groups)
+        self.ids = worker.id_index(self.groups)
+
+    def test_new_entry_id_finds_entry_filed_under_another_letter(self) -> None:
+        self.assertEqual(
+            worker.find_entry(self.idx, self.ids, "deloperator", "del operator"),
+            ("P", 0),
+        )
+
+    def test_unrelated_term_is_not_matched(self) -> None:
+        self.assertIsNone(
+            worker.find_entry(self.idx, self.ids, "deltafunction", "delta function"))
+        self.assertIsNone(worker.find_entry(self.idx, self.ids, "", ""))
+
+    def test_marker_for_existing_entry_is_not_added_again(self) -> None:
+        rel = "_posts/Math/Test/ko/post.md"
+        body = ("::: 정의 1\n"
+                "*del 연산자<sub>del operator</sub>* $\\partial$를 정의한다.\n"
+                ":::\n\n" + "본문 문장이다. " * 60)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            post = root / rel
+            post.parent.mkdir(parents=True)
+            post.write_text("---\ntitle: 글\n---\n" + body, encoding="utf-8")
+            terms = root / "terms.yml"
+            terms.write_text(TERMS_WITH_DEL_OPERATOR, encoding="utf-8")
+            with (
+                patch.dict(worker.os.environ, {"GLOSS_STAGE": "0"}),
+                patch.object(worker, "BLOG_ROOT", root),
+                patch.object(worker, "TERMS_PATH", terms),
+                patch.object(worker, "post_meta",
+                             return_value=("글", "/ko/math/test/post", "[테스트] §글")),
+                patch.object(worker, "review_note"),
+                patch.object(worker, "llm_json",
+                             side_effect=AssertionError("LLM 호출 없음이어야 한다")),
+            ):
+                self.assertEqual(worker.process_post(rel, "first", dry=True), [])
+            self.assertEqual(terms.read_text(encoding="utf-8"), TERMS_WITH_DEL_OPERATOR)
 
 
 if __name__ == "__main__":

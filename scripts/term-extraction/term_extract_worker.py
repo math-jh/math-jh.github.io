@@ -400,6 +400,34 @@ def entry_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
     return idx
 
 
+def id_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
+    """항목 id → (letter, chunk 위치). 절을 가로질러 건다 — 항목은 en 의 첫
+    라틴 글자 절에 놓이므로 같은 id 라도 표기에 따라 다른 절에 있다."""
+    idx = {}
+    for letter, chunks in groups.items():
+        for i, c in enumerate(chunks):
+            cid = chunk_id(c)
+            if cid:
+                idx.setdefault(cid, (letter, i))
+    return idx
+
+
+def new_entry_id(en: str) -> str:
+    """build_entry 가 이 en 으로 만들 항목 id."""
+    return slugify_id(normalize_proper_case(en))
+
+
+def find_entry(idx: dict[str, tuple[str, int]], ids: dict[str, tuple[str, int]],
+               key: str, en: str) -> tuple[str, int] | None:
+    """이미 색인에 있는 항목의 위치. dedup 키가 같거나, 이 en 으로 새 항목을
+    만들면 생길 id 가 이미 있으면 같은 용어다. 후자는 표기만 다른 기존 항목
+    (`del operator` ↔ `$\\partial$-operator`)이라 dedup 키로는 안 잡힌다."""
+    if key and key in idx:
+        return idx[key]
+    eid = new_entry_id(en) if en else ""
+    return ids.get(eid) if eid else None
+
+
 def _defs_cats(chunk: str) -> set[str]:
     """entry 청크의 defs 대상 카테고리 슬러그 집합 (refs/see는 제외)."""
     blk = _defs_block(chunk)
@@ -557,6 +585,7 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
     terms_text = TERMS_PATH.read_text(encoding="utf-8")
     header, groups = split_file(terms_text)
     idx = entry_index(groups)
+    ids = id_index(groups)
 
     changes: list[str] = []
     review: list[str] = []
@@ -568,8 +597,9 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
     new_markers, known_markers = [], []
     for d in definite:
         k = dedup_key(d["english"]) or dedup_key(d["korean"])
-        if k in idx:
-            known_markers.append((d, idx[k]))
+        at = find_entry(idx, ids, k, d["english"])
+        if at:
+            known_markers.append((d, at))
         else:
             new_markers.append(d)
 
@@ -604,11 +634,12 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
             gk = dedup_key(gterm)
             if not gk or gterm.lower() in _skips or gterm.lower() in _pend:
                 continue
-            if gk in idx:
+            gat = find_entry(idx, ids, gk, gterm)
+            if gat:
                 # 색인 기존 용어의 무병기 이탤릭 = 의도적 재사용 → 불간섭.
                 # 예외(교양 룰링): defs가 전부 교양수학이고 이 글이 전공 글이면
                 # 정식 거처 — entry의 확립된 ko로 병기하고 defs에 추가한다.
-                _lt, _pos = idx[gk]
+                _lt, _pos = gat
                 _chunk = groups[_lt][_pos]
                 _eko = ko_primary(chunk_field(_chunk, "ko"))
                 if _gen_ed_promotion(_chunk, _my_cat) and _eko:
@@ -731,7 +762,8 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
             if not isinstance(t, dict):
                 continue
             en, ko = (t.get("en") or "").strip(), (t.get("ko") or "").strip()
-            if not en or dedup_key(en) in idx or (ko and dedup_key(ko) in idx):
+            if not en or find_entry(idx, ids, dedup_key(en), en) \
+                    or (ko and dedup_key(ko) in idx):
                 continue
             if count_term(en) + count_term(ko) < 2:
                 continue  # 코퍼스에 사실상 없음 — 환각 가능성
@@ -799,7 +831,7 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
     n_added = 0
     for lt, entry in adds:
         eid = chunk_id(entry)
-        if eid in seen_new or any(chunk_id(c) == eid for c in groups.get(lt, [])):
+        if eid in seen_new or eid in ids:
             continue
         near = near_duplicates(entry, groups, permalink)
         if near and not llm_allows_new_term(entry, near):
