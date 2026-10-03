@@ -11,7 +11,6 @@ sidebar:
 date: 2026-05-24
 weight: 5
 
-published: false
 ---
 
 이번 글에서 우리는 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4){: data-lid="qcy8y" }에서 주장한 $D$-module isomorphism을 구체적으로 살펴본다. 이를 위해서는 A-side와 B-side 모두를 보아야 한다. A-side의 경우는 이미 [\[사교기하학\] §양자 코호몰로지, ⁋정의 7](/ko/math/symplectic_geometry/quantum_cohomology#def7){: data-lid="9rb24" }에서 어느정도 다룬 것이므로, 우리는 우선 B-side, 즉 oscillating integral과 Gauss-Manin system에 대해 살펴본다. 
