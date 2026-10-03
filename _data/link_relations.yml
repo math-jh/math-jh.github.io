@@ -7068,7 +7068,7 @@
 "ushol": {relation: forward, reviewed: true}
 "usqcn": {relation: required, reviewed: true}
 "usqyv": {relation: required, reviewed: true}
-"ustyz": {relation: required}
+"ustyz": {relation: required, reviewed: true}
 "ut76w": {relation: weak, reviewed: true}
 "ut9ml": {relation: weak, reviewed: true}
 "utatx": {relation: required, reviewed: true}
