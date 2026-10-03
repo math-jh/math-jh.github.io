@@ -111,7 +111,7 @@ $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S
 
 $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\sin t, \cos t, 0) = 1$$
 
-이므로 적분값이 $\oint_C = \int_0^{2\pi} \dd{t} = 2\pi$로 일치하며, 경계를 공유하는 다른 곡면, 가령 반구를 택하여 계산해도 적분값은 변하지 않는다는 것을 확인할 수 있다.
+이므로 적분값이 $\oint_C\mathbf{F}\cdot \dd{r} = \int_0^{2\pi} \dd{t} = 2\pi$로 일치하며, 경계를 공유하는 다른 곡면, 가령 반구를 택하여 계산해도 적분값은 변하지 않는다는 것을 확인할 수 있다.
 :::
 
 ---

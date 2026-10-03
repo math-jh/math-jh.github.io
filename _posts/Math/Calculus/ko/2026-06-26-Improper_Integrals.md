@@ -93,7 +93,7 @@ $$\lim_{t\rightarrow 0^+}\left(\int_{-1}^{-t} \frac{\dd{x}}{x}+\int_t^1\frac{\dd
 많은 이상적분은 원시함수를 명시적으로 구할 수 없어 그 값을 직접 계산하기 어렵다. 그러나 수렴 여부만이라면 더 다루기 쉬운 함수와 비교하여 판정할 수 있다. 피적분함수가 음이 아니면 적분값이 적분구간에 대해 단조증가하므로, 급수에서와 같은 비교판정이 성립한다.
 
 ::: 명제 3 (비교판정)
-$x \geq a$에서 $0 \leq f(x) \leq g(x)$라 하자. $\int_a^\infty g(x) \dd{x}$가 수렴하면 $\int_a^\infty f(x) \dd{x}$도 수렴하고, $\int_a^\infty f(x) \dd{x}$가 발산하면 $\int_a^\infty g(x) \dd{x}$도 발산한다.
+$f$가 모든 $t>a$에 대해 구간 $[a,t]$에서 적분가능한 함수이고, $x \geq a$에서 $0 \leq f(x) \leq g(x)$라 하자. $\int_a^\infty g(x) \dd{x}$가 수렴하면 $\int_a^\infty f(x) \dd{x}$도 수렴하고, $\int_a^\infty f(x) \dd{x}$가 발산하면 $\int_a^\infty g(x) \dd{x}$도 발산한다.
 :::
 
 ::: 증명
