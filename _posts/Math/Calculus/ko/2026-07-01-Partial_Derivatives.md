@@ -180,7 +180,7 @@ $$\frac{d}{\dd{t}} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(
 
 $$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0$$
 
-이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
+이다. 이제 함숫값의 차이 $f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))$를 $\Delta t$로 나누면 이는은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
 :::
 
 [정리 6](#thm6){: data-lid="nsihh" }는 한 변수가 여러 변수에 의존할 때 편미분이 사슬처럼 연결됨을 말하며, 좌표변환에서 주로 쓰인다. 가령 $z = f(x,y)$에서 극좌표 $x = r\cos\theta$, $y = r\sin\theta$로 바꾸면 $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$가 곧바로 나온다.
