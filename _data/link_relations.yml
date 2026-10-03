@@ -115,7 +115,7 @@
 "0i8as": {relation: required, reviewed: true}
 "0ic7a": {relation: weak, reviewed: true}
 "0ifnf": {relation: required, reviewed: true}
-"0ilr6": {relation: required}
+"0ilr6": {relation: required, reviewed: true}
 "0iqbt": {relation: required, reviewed: true}
 "0iwkh": {relation: weak, reviewed: true}
 "0jisl": {relation: weak, reviewed: true}
