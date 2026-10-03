@@ -15488,6 +15488,13 @@ Q:
     id: chain_complex
   - label: Quasi-isomorphic
     id: quasi-isomorphic
+- id: quasi-isomorphism
+  en: quasi-isomorphism
+  ko: 유사동형사상
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §긴 완전열'
+    url: /ko/math/homological_algebra/long_exact_sequence
 - id: quasi-projective
   en: quasi-projective
   ko: 준사영사상
