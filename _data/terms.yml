@@ -6951,6 +6951,13 @@ F:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: fréchet_urysohn_space
+  en: Fréchet–Urysohn space
+  ko: 프레셰-우리손 공간
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골성과 필터의 수렴'
+    url: /ko/math/topology/filter_convergence
 - id: free_abelian_group
   en: free abelian group
   ko: 자유아벨군
@@ -17272,6 +17279,20 @@ S:
   defs:
   - label: '[해석학] §컴팩트성'
     url: /ko/math/analysis/compactness
+- id: sequentially_compact
+  en: sequentially compact
+  ko: 점렬콤팩트(인)
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골성과 필터의 수렴'
+    url: /ko/math/topology/filter_convergence#def4
+- id: sequentially_compact_space
+  en: sequentially compact space
+  ko: 점렬콤팩트 공간
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골성과 필터의 수렴'
+    url: /ko/math/topology/filter_convergence
 - id: series
   en: series
   ko: 급수

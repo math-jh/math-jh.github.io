@@ -37,7 +37,7 @@ Trivial topology가 주어진 two-point space $X$와, discrete topology가 주�
 또 다음을 정의한다.
 
 ::: 정의 4
-위상공간 $X$가 *sequentially compact*라는 것은 $X$의 임의의 점열이 수렴하는 부분점열을 갖는 것이다.
+위상공간 $X$가 *sequentially compact<sub>점렬콤팩트(인)</sub>*라는 것은 $X$의 임의의 점열이 수렴하는 부분점열을 갖는 것이다.
 :::
 
 ::: 명제 5
