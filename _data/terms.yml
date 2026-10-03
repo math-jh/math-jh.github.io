@@ -19053,6 +19053,13 @@ T:
   see:
   - label: Tangent space
     id: tangent_space
+- id: tangent_plane
+  en: tangent plane
+  ko: 접평면
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: tangent_sheaf
   en: tangent sheaf
   ko: 접층
