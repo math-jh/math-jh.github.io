@@ -19936,6 +19936,13 @@ U:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: unital_subalgebra
+  en: unital subalgebra
+  ko: 단위 부분대수
+  primary: en
+  defs:
+  - label: '[대수적 구조] §대수'
+    url: /ko/math/algebraic_structures/algebras
 - id: unitary_diagonalization
   en: unitary diagonalization
   ko: 유니터리 대각화

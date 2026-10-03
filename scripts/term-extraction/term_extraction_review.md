@@ -5423,3 +5423,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'quasi-coherent                -algebra' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
 - _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'relative spectrum' — 위키 ko 문서 '환의 스펙트럼' — 병기형 도출 필요
+
+## term_extract_worker 2026-10-03 23:15
+
+- _posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md: 병기 필요 'unital    -algebra homomorphism' — 위키 ko 문서 '단순 가군' — 병기형 도출 필요
