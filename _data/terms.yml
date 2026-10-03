@@ -3688,6 +3688,13 @@ C:
   defs:
   - label: '[가환대수학] §미분'
     url: /ko/math/commutative_algebra/differentials
+- id: conormal_sheaf
+  en: conormal sheaf
+  ko: 여법층
+  primary: en
+  defs:
+  - label: '[스킴] §미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: conservative_field
   en: conservative field
   ko: 보존장
@@ -19695,6 +19702,13 @@ T:
   defs:
   - label: '[집합론] §집합의 곱'
     url: /ko/math/set_theory/product_of_sets
+- id: twisted_cubic
+  en: twisted cubic
+  ko: 뒤틀린 3차 곡선
+  primary: en
+  defs:
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: twisted_inverse_image
   en: twisted inverse image
   ko: 비틀린 역상
