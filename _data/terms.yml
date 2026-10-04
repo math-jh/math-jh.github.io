@@ -5317,6 +5317,13 @@ D:
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
+- id: divisor_axiom
+  en: divisor axiom
+  ko: 인자 공리
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
 - id: divisor_class_group
   en: divisor class group
   ko: 인자류군
@@ -18112,6 +18119,13 @@ S:
   defs:
   - label: '[표현론] §Krull–Schmidt 정리'
     url: /ko/math/representation_theory/krull_schmidt
+- id: splitting_axiom
+  en: splitting axiom
+  ko: 분할 공리
+  primary: en
+  defs:
+  - label: '[사교기하학] §Gromov-Witten 불변량'
+    url: /ko/math/symplectic_geometry/gromov_witten
 - id: splitting_exact_sequence
   en: splitting exact sequence
   ko: 분해완전열
@@ -18381,6 +18395,13 @@ S:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: string_axiom
+  en: string axiom
+  ko: 스트링 공리
+  primary: en
+  defs:
+  - label: '[사교기하학] §Gromov-Witten 불변량'
+    url: /ko/math/symplectic_geometry/gromov_witten
 - id: stringy_hodge_number
   en: stringy Hodge number
   ko: 끈 호지 수
