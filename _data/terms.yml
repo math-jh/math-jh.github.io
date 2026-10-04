@@ -7970,6 +7970,13 @@ G:
   defs:
   - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
+- id: grothendieck_spectral_sequence
+  en: Grothendieck spectral sequence
+  ko: Grothendieck 스펙트럼 열
+  primary: en
+  defs:
+  - label: '[층론] §층의 유도 범주와 유도 functor'
+    url: /ko/math/sheaf_theory/derived_category_of_sheaves
 - id: grothendieck_topology
   en: Grothendieck topology
   ko: 그로텐디크 위상
@@ -11154,6 +11161,13 @@ L:
   defs:
   - label: '[리 이론] §Bruhat decomposition'
     url: /ko/math/lie_theory/bruhat_decomposition
+- id: leray_spectral_sequence
+  en: Leray spectral sequence
+  ko: Leray 스펙트럼 열
+  primary: en
+  defs:
+  - label: '[대수다양체] §층 코호몰로지'
+    url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리
