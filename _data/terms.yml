@@ -4556,6 +4556,13 @@ D:
     url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+- id: degree_map
+  en: degree map
+  ko: 차수 사상
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -6473,6 +6480,13 @@ F:
     id: fiber
   - label: Vector bundle
     id: vector_bundle
+- id: fiber_integration
+  en: fiber integration
+  ko: 올 적분
+  primary: en
+  defs:
+  - label: '[스택] §Deligne–Mumford 스택 위의 적분'
+    url: /ko/math/stacks/integration_on_deligne_mumford_stacks
 - id: fiber_product
   en: fiber product
   ko: 섬유곱
@@ -7212,6 +7226,13 @@ F:
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: fundamental_cycle
+  en: fundamental cycle
+  ko: 기본 순환
+  primary: en
+  defs:
+  - label: '[스택] §Deligne–Mumford 스택 위의 적분'
+    url: /ko/math/stacks/integration_on_deligne_mumford_stacks
 - id: fundamental_form
   en: fundamental form
   ko: 기본형식
