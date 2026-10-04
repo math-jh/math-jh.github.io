@@ -20262,6 +20262,13 @@ V:
     id: discrete_valuation_ring
   - label: Local ring
     id: local_ring
+- id: valuative_criterion
+  en: valuative criterion
+  ko: 값매김 판정법
+  primary: en
+  defs:
+  - label: '[스택] §고유스택'
+    url: /ko/math/stacks/proper_stacks
 - id: vanishing_cycle
   en: vanishing cycle
   ko: 소멸 순환
