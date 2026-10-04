@@ -4271,6 +4271,13 @@ C:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+- id: cyclic_submodule
+  en: cyclic submodule
+  ko: 순환 부분가군
+  primary: en
+  defs:
+  - label: '[환론] §반단순가군'
+    url: /ko/math/ring_theory/semisimple_modules
 - id: cyclic_subspace
   en: cyclic subspace
   ko: 순환 부분공간
