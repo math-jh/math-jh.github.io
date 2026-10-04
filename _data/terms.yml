@@ -4430,6 +4430,13 @@ D:
   - label: 유리수
     lang: ko
     id: rational_number
+- id: deck_transformation
+  en: Deck transformation
+  ko: 덱 변환
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §피복공간'
+    url: /ko/math/algebraic_topology/covering_spaces
 - id: decreasing
   en: decreasing
   ko: 감소
@@ -20104,6 +20111,13 @@ U:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+- id: universal_cover
+  en: universal cover
+  ko: 보편피복
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §피복공간'
+    url: /ko/math/algebraic_topology/covering_spaces
 - id: universal_delta_-functor
   en: universal $\delta$-functor
   ko: 보편 $\delta$-함자
