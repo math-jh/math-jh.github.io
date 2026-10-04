@@ -1,0 +1,22 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG contraction between the two families of curves over the moduli space (Descendant_Invariants-1.svg)
+\begin{tikzcd}[column sep=large, row sep=huge]
+	{\mathcal{C}'} & {\widetilde{\mathcal{C}}} \\
+	{\overline{\mathcal{M}}_{0,n+1}(X,\beta)} & {\overline{\mathcal{M}}_{0,n+1}(X,\beta)}
+	\arrow["\kappa", from=1-1, to=1-2]
+	\arrow["{\pi'}", from=1-1, to=2-1]
+	\arrow["{\tilde{\pi}}"', from=1-2, to=2-2]
+	\arrow["{\sigma'_i}", bend left=50, from=2-1, to=1-1]
+	\arrow["{\tilde{\sigma}_i}"', bend right=50, from=2-2, to=1-2]
+	\arrow[equals, from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
