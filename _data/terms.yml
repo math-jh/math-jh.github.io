@@ -4534,6 +4534,13 @@ D:
   defs:
   - label: '[스킴] §변형이론과 여접 복합체'
     url: /ko/math/scheme_theory/deformation_theory
+- id: deformation_to_normal_cone
+  en: deformation to normal cone
+  ko: 법뿔로의 변형
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: degeneracy_map
   en: degeneracy map
   ko: 퇴화 사상
@@ -15241,6 +15248,13 @@ P:
   defs:
   - label: '[층론] §고유 받음과 여섯 함자'
     url: /ko/math/sheaf_theory/six_functors
+- id: proper_intersection
+  en: proper intersection
+  ko: 적절한 교차
+  primary: en
+  defs:
+  - label: '[대수다양체] §차원'
+    url: /ko/math/algebraic_varieties/dimension
 - id: proper_map
   en: proper map
   ko: 고유함수
@@ -19654,6 +19668,13 @@ T:
   defs:
   - label: '[군론] §대칭군'
     url: /ko/math/group_theory/symmetric_groups
+- id: transversal_intersection
+  en: transversal intersection
+  ko: 횡단 교차
+  primary: en
+  defs:
+  - label: '[대수다양체] §교차곱'
+    url: /ko/math/algebraic_varieties/intersection_product
 - id: triangle_inequality
   en: triangle inequality
   ko: 삼각부등식
