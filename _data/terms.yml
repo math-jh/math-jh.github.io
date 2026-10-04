@@ -9213,6 +9213,13 @@ I:
   - label: 절대수렴
     lang: ko
     id: absolute_convergence
+- id: infinitesimal_automorphism
+  en: infinitesimal automorphism
+  ko: 미소 자기동형사상
+  primary: en
+  defs:
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
 - id: infinitesimal_deformation
   en: infinitesimal deformation
   ko: 무한소 변형
@@ -13090,6 +13097,13 @@ N:
   defs:
   - label: '[대수다양체] §접공간과 매끄러움'
     url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+- id: nodal_point
+  en: nodal point
+  ko: 마디점
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §마디 곡선의 변형'
+    url: /ko/math/gromov-witten_theory/deformations_of_nodal_curves
 - id: node
   en: node
   ko: 마디
