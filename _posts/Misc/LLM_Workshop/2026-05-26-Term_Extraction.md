@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
-last_modified_at: 2026-10-01
+last_modified_at: 2026-10-04
 
 weight: 15
 
@@ -314,3 +314,38 @@ def gitignored_posts() -> set[str] | None:
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
 실패를 "무시 목록 없음"으로 읽고 전부 추출하는 쪽이 코드는 한 줄 더 짧다. 그러나 그러면 git이 잠깐 막힌 틱 하나가 올라가지 않은 글의 정의를 `terms.yml`에 흘리고, 한 번 들어간 항목은 사람이 찾아 지우는 수밖에 없다. 쉬는 틱은 다음 홀수 시각 :15에 다시 돌면 되므로 두 쪽의 비용이 같지 않다. 이미 등재돼 있던 항목은 사용자가 말한 대로 따로 지웠고, 워커는 새로 들어오는 것만 막는다.
+
+## 절 글자를 가로지르는 id 대조
+
+근접중복 게이트와 dedup 키를 지나고도 같은 용어가 두 줄로 들어가는 길이 하나 남아 있었다. 항목은 `en`의 첫 라틴 글자 절에 놓인다. `$\partial$-operator`는 장식 매크로를 벗기면 `partial`이라 P 절에 있지만, 추출기가 어떤 글에서 `del operator`를 뽑으면 새 항목은 D 절 후보가 된다. 기존 항목의 id는 `del_operator`이고 새 항목이 만들 id도 `del_operator`인데, 두 항목은 서로 다른 절에 있다. 마지막 등재 직전의 중복 검사가 그 후보 절 안에서만 id를 찾고 있었다.
+
+```python
+# 변경 전
+if eid in seen_new or any(chunk_id(c) == eid for c in groups.get(lt, [])):
+    continue
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+dedup 키(`entry_index`)는 `fold(..., strip_decor=False)` 뒤 영숫자만 남기므로 `$\partial$-operator`는 `partialoperator`, `del operator`는 `deloperator`가 되어 서로 만나지 않는다. 그래서 [28187e63](https://github.com/math-jh/math-jh.github.io/commit/28187e63)은 id로 걸리는 색인을 따로 두었다. 절을 가리지 않고 모든 항목의 id를 훑는다.
+
+```python
+def id_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
+    idx = {}
+    for letter, chunks in groups.items():
+        for i, c in enumerate(chunks):
+            cid = chunk_id(c)
+            if cid:
+                idx.setdefault(cid, (letter, i))
+    return idx
+
+def find_entry(idx, ids, key, en):
+    if key and key in idx:
+        return idx[key]
+    eid = new_entry_id(en) if en else ""
+    return ids.get(eid) if eid else None
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+`find_entry`는 dedup 키를 먼저 보고, 없으면 이 `en`으로 `build_entry`를 불렀을 때 생길 id(`slugify_id(normalize_proper_case(en))`)를 `ids`에서 찾는다. 새 id를 계산하는 `new_entry_id`는 `build_entry`가 id를 만드는 식과 같은 두 함수를 같은 순서로 부른다. 호출 자리는 세 곳이다. 본문에 표시된 정의 마커가 이미 색인에 있는 용어인지 가르는 자리, 표시 없는 이탤릭을 병기 대상으로 볼지 정하는 자리, LLM이 낸 새 후보를 거르는 자리. 마지막 등재 검사는 `eid in ids`로 바뀌어 절을 묻지 않는다. 이전에는 이 셋이 dedup 키만 보았으므로 표기가 다른 기존 항목은 "없는 용어"로 분류되어 새 항목 후보가 되었다.
+
+테스트(`ExistingEntryTest`)는 위 사례를 그대로 쓴다. D 절의 `Dolbeault complex`와 P 절의 `del_operator`가 든 작은 `terms.yml`을 임시 디렉터리에 만들고, `del operator`를 정의하는 글을 `process_post`에 넣는다. LLM 호출이 일어나면 `AssertionError`를 내도록 막아 두었고, 결과가 변경 없음이며 `terms.yml`이 한 글자도 안 바뀌어야 통과한다. 이미 있는 용어라면 모델에게 물어볼 것도 없다는 것을 호출 자체를 금지하는 방식으로 검증한다.
