@@ -15370,6 +15370,13 @@ P:
   see:
   - label: Pushforward
     id: pushforward
+- id: pullback_bundle
+  en: pullback bundle
+  ko: 끌어당김 다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
+    url: /ko/math/algebraic_topology/stiefel_whitney_classes
 - id: pullback_sieve
   en: pullback sieve
   ko: 당김 체
@@ -17062,6 +17069,13 @@ S:
   see:
   - label: Schubert variety
     id: schubert_variety
+- id: schubert_cycle
+  en: Schubert cycle
+  ko: 슈베르트 순환
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
+    url: /ko/math/algebraic_topology/stiefel_whitney_classes
 - id: schubert_variety
   en: Schubert variety
   ko: 슈베르트 다양체
