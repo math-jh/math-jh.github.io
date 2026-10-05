@@ -7021,6 +7021,13 @@ F:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: frame_bundle
+  en: frame bundle
+  ko: 틀다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §분류공간'
+    url: /ko/math/algebraic_topology/classifying_spaces
 - id: fréchet_filter
   en: Fréchet filter
   ko: 프레셰 필터
@@ -18379,6 +18386,13 @@ S:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: stiefel_manifold
+  en: Stiefel manifold
+  ko: 슈티펠 다양체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §분류공간'
+    url: /ko/math/algebraic_topology/classifying_spaces
 - id: stiefel-whitney_class
   en: Stiefel-Whitney class
   ko: 슈티펠-휘트니 특성류
