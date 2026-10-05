@@ -2897,6 +2897,13 @@ C:
   see:
   - label: Homology
     id: homology
+- id: cohomology_ring
+  en: cohomology ring
+  ko: 코호몰로지 환
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §합곱'
+    url: /ko/math/algebraic_topology/cup_products
 - id: coisotropic
   en: coisotropic
   ko: 여등방적
