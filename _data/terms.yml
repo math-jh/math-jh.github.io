@@ -13542,6 +13542,13 @@ N:
   defs:
   - label: '[선형대수학] §동형사상'
     url: /ko/math/linear_algebra/isomorphic_vector_spaces
+- id: nullstellensatz
+  en: Nullstellensatz
+  ko: 영점정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §영점정리'
+    url: /ko/math/commutative_algebra/nullstellensatz
 - id: numerical_polynomial
   en: numerical polynomial
   ko: 수치 다항식
