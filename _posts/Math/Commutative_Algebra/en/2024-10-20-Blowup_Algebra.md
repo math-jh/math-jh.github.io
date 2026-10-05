@@ -12,9 +12,10 @@ date: 2024-10-20
 weight: 11
 translated_at: 2026-08-27T20:15:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-08-27T20:15:05+00:00
+last_polished_at: 2026-10-05T19:15:05+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In this post, we fix an ideal $\mathfrak{a}$ of a ring $A$ and define two graded $A$-algebras built from it.
+In this post, for a ring $A$, we fix an ideal $\mathfrak{a}$ and define two graded $A$-algebras built from it.
 
 ## Associated graded module
 
@@ -26,13 +27,13 @@ $$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdot
 .
 :::
 
-In the above definition, the multiplication on $\gr_\mathfrak{a}A$ is given as follows: given arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$, their product $ab$ is obtained by first computing the product $\tilde{a}\tilde{b}$ of representatives $\tilde{a}\in \mathfrak{a}^k, \tilde{b}\in \mathfrak{a}^l$ of $a$ and $b$, and then restricting it to $\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$.
+In the above definition, the multiplication on $\gr_\mathfrak{a}A$ is given as follows: given arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$, their product $ab$ is obtained by first taking, for $a,b$ respectively, representatives $\tilde{a}\in \mathfrak{a}^k, \tilde{b}\in \mathfrak{a}^l$, computing their product $\tilde{a}\tilde{b}$, and then restricting it to $\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$.
 
 ::: Lemma 2
 The multiplication on $\gr_\mathfrak{a}A$ defined above is well defined.
 :::
 ::: Proof
-Suppose we chose different representatives $\tilde{a}',\tilde{b}'$, and write $\tilde{a}'=\tilde{a}+x,\tilde{b}'=\tilde{b}+y$ for some $x\in \mathfrak{a}^{k+1}$ and $y\in \mathfrak{a}^{l+1}$. Then
+Suppose we chose different representatives $\tilde{a}',\tilde{b}'$, and for some $x\in \mathfrak{a}^{k+1}$ and $y\in \mathfrak{a}^{l+1}$, let $\tilde{a}'=\tilde{a}+x,\tilde{b}'=\tilde{b}+y$. Then
 
 $$\tilde{a}'\tilde{b}'=\tilde{a}\tilde{b}+y\tilde{a}+x\tilde{b}+xy$$
 
@@ -42,11 +43,11 @@ and since $x\tilde{b},y\tilde{a}\in \mathfrak{a}^{k+l+1}$ and $xy\in \mathfrak{a
 To generalize this to $A$-modules, we define the following.
 
 ::: Definition 3
-For a ring $A$, an arbitrary ideal $\mathfrak{a}$ of $A$, and an $A$-module $M$, a filtration
+For a ring $A$, an arbitrary ideal of $A$, $\mathfrak{a}$, and an $A$-module $M$, a filtration
 
 $$M=M_0\supseteq M_1\supseteq\cdots$$
 
-is called an *$\mathfrak{a}$-filtration* if $\mathfrak{a}M_k\subseteq M_{k+1}$ holds for every $k$. Furthermore, if there exists some $n$ such that $\mathfrak{a}M_k=M_{k+1}$ holds whenever $k>n$, the filtration is said to be *$\mathfrak{a}$-stable*.
+is called an *$\mathfrak{a}$-filtration* if for every $k$, $\mathfrak{a}M_k\subseteq M_{k+1}$ holds. Furthermore, if there exists some $n$ such that whenever $k>n$, $\mathfrak{a}M_k=M_{k+1}$ holds, the filtration is said to be *$\mathfrak{a}$-stable*.
 
 Now, for an arbitrary $\mathfrak{a}$-filtration
 
@@ -59,122 +60,120 @@ $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 .
 :::
 
-In the above definition, $\gr_\mathcal{J}M$ carries a $\gr_\mathfrak{a}A$-module structure: for arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $x\in M_l/M_{l+1}$, one takes representatives $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$ and restricts $\tilde{a}\tilde{x}$ to $M_{k+l}/M_{k+l+1}$, and a computation similar to that of [Lemma 2](#lem2){: data-lid="xnj0s" } shows that this is well defined. In particular, when $M=A$ and the $M_i$ are ideals of $A$ satisfying $M_iM_j\subseteq M_{i+j}$ for all $i,j$, then just as in [Definition 1](#def1){: data-lid="va2wz" }, $\gr_\mathcal{J}A$ also carries a ring structure, and this is likewise called the associated graded ring with respect to the filtration $\mathcal{J}$.
+In the above definition, $\gr_\mathcal{J}M$ carries a $\gr_\mathfrak{a}A$-module structure: for arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $x\in M_l/M_{l+1}$, one takes representatives $\tilde{a}\in \mathfrak{a}^k$, $\tilde{x}\in M_l$ and restricts $\tilde{a}\tilde{x}$ to $M_{k+l}/M_{k+l+1}$, and a computation similar to that of [Lemma 2](#lem2){: data-lid="xnj0s" } shows that this is well defined. In particular, when $M=A$ and the $M_i$ satisfy, for all $i,j$, $M_iM_j\subseteq M_{i+j}$ as ideals of $A$, then just as in [Definition 1](#def1){: data-lid="va2wz" }, $\gr_\mathcal{J}A$ also carries a ring structure, and this is likewise called the associated graded ring with respect to the filtration $\mathcal{J}$.
 
 The following now holds.
 
 ::: Proposition 4
-Let $M$ be a finitely generated module equipped with an $\mathfrak{a}$-stable filtration $\mathcal{J}$, and suppose that every term $M_k$ of $\mathcal{J}$ is a finitely generated submodule of $M$. Then $\gr_\mathcal{J}M$ is a finitely generated $\gr_\mathfrak{a}A$-module.
+Let $M$ be a finitely generated module equipped with an $\mathfrak{a}$-stable filtration $\mathcal{J}$, and suppose that for $\mathcal{J}$, every term $M_k$ is a finitely generated submodule of $M$. Then $\gr_\mathcal{J}M$ is a finitely generated $\gr_\mathfrak{a}A$-module.
 :::
 ::: Proof
-Since $\mathcal{J}$ is an $\mathfrak{a}$-stable filtration, there exists some $n$ such that $\mathfrak{a}M_k=M_{k+1}$ holds for all $k>n$. Hence, for such $k$, we have $(\mathfrak{a}/\mathfrak{a}^2)(M_k/M_{k+1})=M_{k+1}/M_{k+2}$. Therefore, if we collect generators of the components
+Since $\mathcal{J}$ is an $\mathfrak{a}$-stable filtration, there exists some $n$ such that $\mathfrak{a}M_k=M_{k+1}$ holds for all $k>n$. Hence, for such $k$, we have $(\mathfrak{a}/\mathfrak{a}^2)(M_k/M_{k+1})=M_{k+1}/M_{k+2}$. Therefore, among the components of $\gr_\mathcal{J}M$, if we collect elements generating
 
 $$M_0/M_1, M_1/M_2,\ldots, M_{n+1}/M_{n+2}$$
 
-of $\gr_\mathcal{J}M$, these generate all of $\gr_\mathcal{J}M$. The desired claim now follows from the assumption that each $M_i$ is finitely generated.
+these generate all of $\gr_\mathcal{J}M$. The desired claim now follows from the assumption that each $M_i$ is finitely generated.
 :::
 
 ## Blowup algebras
 
 ::: Definition 5
-For a ring $A$ and an ideal $\mathfrak{a}$, the *blowup algebra* of $\mathfrak{a}$ over $A$ is the graded $A$-algebra
+For a ring $A$ and an ideal $\mathfrak{a}$, the *blowup algebra* of $\mathfrak{a}$ in $A$ refers to the following graded $A$-algebra:
 
 $$\Bl_\mathfrak{a}A=A\oplus \mathfrak{a}\oplus \mathfrak{a}^2\oplus\cdots\cong A[t \mathfrak{a}]\subseteq A[t]$$
-
-.
 :::
 
-Then $\mathfrak{a}\Bl_\mathfrak{a}A=\bigoplus_{n\geq 0}\mathfrak{a}^{n+1}$, so $\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$. More generally, for an arbitrary $A$-module $M$ and an $\mathfrak{a}$-filtration $\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$, the $\Bl_\mathcal{J}M$ defined by
+Then $\mathfrak{a}\Bl_\mathfrak{a}A=\bigoplus_{n\geq 0}\mathfrak{a}^{n+1}$, so $\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$. On the other hand, more generally, for any $A$-module $M$ and $\mathfrak{a}$-filtration $\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$, with the following expression
 
 $$\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$$
 
-becomes a graded $\Bl_\mathfrak{a}A$-module thanks to $\mathfrak{a}^kM_l\subseteq M_{k+l}$. The following now holds.
+defining it, $\Bl_\mathcal{J}M$ becomes, from $\mathfrak{a}^kM_l\subseteq M_{k+l}$, a graded $\Bl_\mathfrak{a}A$-module. Now the following holds.
 
 ::: Proposition 6
-For a Noetherian ring $A$ and a finitely generated $A$-module $M$, an $\mathfrak{a}$-filtration $\mathcal{J}$ of $M$ is $\mathfrak{a}$-stable if and only if $\Bl_\mathcal{J}M$ is finitely generated as a $\Bl_\mathfrak{a}A$-module.
+For a Noetherian ring $A$ and a finitely generated $A$-module $M$, $M$'s $\mathfrak{a}$-filtration $\mathcal{J}$ is $\mathfrak{a}$-stable if and only if $\Bl_\mathcal{J}M$ is finitely generated as a $\Bl_\mathfrak{a}A$-module.
 :::
 ::: Proof
-First, if $\Bl_\mathcal{J}M$ is finitely generated, there exists some $n$ such that these generators are contained in the first $n$ terms of $\Bl_\mathcal{J}M$. Rewriting each of them as a sum of homogeneous elements, we see that $\Bl_\mathcal{J}M$ is generated by these homogeneous elements. From this we conclude that $\mathcal{J}$ is $\mathfrak{a}$-stable. The same argument also works in the opposite direction.
+First, if $\Bl_\mathcal{J}M$ is finitely generated, there exists some $n$ such that these generators can be chosen to be contained in $\Bl_\mathcal{J}M$'s first $n$ terms. Now, rewriting each of them as a sum of homogeneous elements, $\Bl_\mathcal{J}M$ is generated by these homogeneous elements. From this, we see that $\mathcal{J}$ is $\mathfrak{a}$-stable. This argument also works in the opposite direction.
 :::
 
-## The Artin–Rees lemma
+## Artin-Rees Lemma
 
-We now prove the following useful Artin–Rees lemma.
+We now prove the following useful Artin-Rees lemma.
 
 ::: Lemma 7 (Artin-Rees)
-Fix a Noetherian ring $A$ and an ideal $\mathfrak{a}\subseteq A$, and fix a finitely generated $A$-module $M$ and a submodule $M'$ of $M$. If
+Fix a Noetherian ring $A$ and an ideal $\mathfrak{a}\subseteq A$, and fix a finitely generated $A$-module $M$ and its submodule $M'$. If
 
 $$\mathcal{J}:\quad M=M_0\supseteq M_1\supseteq\cdots$$
 
-is an $\mathfrak{a}$-stable filtration, then the induced filtration
+is an $\mathfrak{a}$-stable filtration, then the following filtration induced from this
 
 $$\mathcal{J}':\quad M'\supseteq M'\cap M_1\supseteq M'\cap M_2\supseteq\cdots$$
 
 is also $\mathfrak{a}$-stable.
 :::
 ::: Proof
-Since $\mathcal{J}$ is $\mathfrak{a}$-stable, $\Bl_\mathcal{J}M$ is finitely generated as a $\Bl_\mathfrak{a}A$-module. On the other hand, $\Bl_\mathfrak{a}A$ is a finitely generated $A$-algebra, and since $A$ is Noetherian, [§Basic Notions, ⁋Corollary 13](/en/math/commutative_algebra/basic_notions#cor13){: data-lid="6z38n" } implies that $\Bl_\mathfrak{a}A$ is also Noetherian. Therefore, the submodule $\Bl_{\mathcal{J}'}M'$ of $\Bl_\mathcal{J}M$ is also finitely generated, and applying [Proposition 6](#prop6){: data-lid="eqdco" } again yields the desired result.
+Since $\mathcal{J}$ is $\mathfrak{a}$-stable, $\Bl_\mathcal{J}M$ is finitely generated as a $\Bl_\mathfrak{a}A$-module. On the other hand, $\Bl_\mathfrak{a}A$ is a finitely generated $A$-algebra and $A$ is Noetherian, so by [§Basic Notions, ⁋Corollary 13](/en/math/commutative_algebra/basic_notions#cor13){: data-lid="6z38n" }, $\Bl_\mathfrak{a}A$ is also Noetherian. Therefore, as a submodule of $\Bl_\mathcal{J}M$, $\Bl_{\mathcal{J}'}M'$ is also finitely generated, and applying [Proposition 6](#prop6){: data-lid="eqdco" } again yields the desired result.
 :::
 
 ::: Corollary 8 (Krull intersection theorem)
 Fix a Noetherian ring $A$, an ideal $\mathfrak{a}$ of $A$, and a finitely generated $A$-module $M$. Then the following hold.
 
-1. There exists $a\in \mathfrak{a}$ such that $(1-a)\left(\bigcap_1^\infty \mathfrak{a}^i M\right)=0$.
+1. $(1-a)\left(\bigcap_1^\infty \mathfrak{a}^i M\right)=0$ holds for some $a\in \mathfrak{a}$.
 2. If $\mathfrak{a}$ is a proper ideal and $A$ is a domain or a local ring, then $\bigcap \mathfrak{a}^i=0$ holds.
 :::
 ::: Proof
-Consider the $\mathfrak{a}$-stable filtration
+For $M$, consider the $\mathfrak{a}$-stable filtration
 
 $$M\supseteq \mathfrak{a}M \supseteq \mathfrak{a}^2 M\supseteq\cdots$$
 
-of $M$. Then, by [Lemma 7](#lem7){: data-lid="yb442" }, the filtration
+Then, by [Lemma 7](#lem7){: data-lid="yb442" }, the following filtration
 
 $$\left(\bigcap \mathfrak{a}^iM\right) \cap M\supseteq \left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}M \supseteq \left(\bigcap \mathfrak{a}^iM\right) \cap \mathfrak{a}^2 M\supseteq\cdots$$
 
-is also $\mathfrak{a}$-stable. In other words, there exists some $n$ such that for every $p>n$,
+is also $\mathfrak{a}$-stable. That is, there exists some $n$ such that for all $p>n$,
 
 $$\mathfrak{a}\left(\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^p M\right)=\left(\bigcap \mathfrak{a}^iM\right)\cap \mathfrak{a}^{p+1} M$$
 
-. Now, simplifying each side of the above identity yields
+holds. Now, simplifying the left- and right-hand sides of the above equation respectively, we obtain
 
 $$\mathfrak{a}\left(\bigcap \mathfrak{a}^iM\right)=\left(\bigcap \mathfrak{a}^iM\right)$$
 
-. Since $A$ is Noetherian and $M$ is finitely generated, $\bigcap \mathfrak{a}^iM$ is also finitely generated, so applying [§Integral Extensions, ⁋Lemma 7](/en/math/commutative_algebra/integral_extension#lem7){: data-lid="yt9m7" } gives the first result.
+Now, since $A$ is Noetherian and $M$ is finitely generated, $\bigcap \mathfrak{a}^iM$ is also finitely generated, and hence applying [§Integral Extensions, ⁋Lemma 7](/en/math/commutative_algebra/integral_extension#lem7){: data-lid="yt9m7" } yields the first result.
 
-For the second result, set $M=A$. For the element $a$ obtained from the first result, it suffices to show that $1-a$ is not a zerodivisor. First, since $\mathfrak{a}$ is a proper ideal of $A$, we have $1-a\neq 0$, so if $A$ is a domain there is nothing more to prove. If $A$ is a local ring, then $\mathfrak{a}$ is contained in the (unique) maximal ideal $\mathfrak{m}$ of $A$, so $a\in \mathfrak{m}$, and hence $1-a$ must be a unit.
+To prove the second result, set $M=A$. For the element $a$ obtained in the first result, it suffices to show that $1-a$ is not a zerodivisor. First, since $\mathfrak{a}$ is a proper ideal of $A$, we have $1-a\neq 0$, from which there is nothing more to prove when $A$ is a domain. If $A$ is a local ring, then $\mathfrak{a}$ is contained in the (unique) maximal ideal $\mathfrak{m}$ of $A$, so $a\in \mathfrak{m}$, and from this $1-a$ must be a unit.
 :::
 
 Finally, we define the following.
 
 ::: Definition 9
-Let $M$ be an $A$-module equipped with an $\mathfrak{a}$-filtration
+Suppose we are given an $\mathfrak{a}$-filtration
 
 $$\mathcal{J}:\qquad M=M_0\supseteq M_1\supseteq\cdots$$
 
-and associated graded module $\gr_\mathcal{J}M$. Then for an arbitrary $x\in M$, the *initial form* $\initial(x)$ of $x$ is defined by
+on an $A$-module $M$, and its associated graded module $\gr_\mathcal{J}M$. Then for any $x\in M$, the *initial form* of $x$, $\initial(x)$, is defined by the formula
 
 $$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the greatest integer satisfying $x\in M_k$}$$
 
-. If $x\in\bigcap_k M_k$, such a $k$ does not exist, and in this case we define $\initial(x)=0$.
+Here, if $x\in\bigcap_k M_k$, such a $k$ does not exist, and in this case we define $\initial(x)=0$.
 :::
 
-In this situation, suppose an arbitrary $A$-submodule $M'\subseteq M$ is given. Then, viewing $\gr_\mathcal{J}M$ as a $\gr_\mathfrak{a}A$-module, we can define $\initial(M')$ to be the $\gr_\mathfrak{a}A$-submodule of $\gr_\mathcal{J}M$ generated by the $\initial(x)$ for $x\in M'$.
+In the above situation, suppose an arbitrary $A$-submodule $M'\subseteq M$ is given. Then, viewing $\gr_\mathcal{J}M$ as a $\gr_\mathfrak{a}A$-module, we can define $\initial(M')$ to be the submodule generated, for $x\in M'$, by $\initial(x)$ in $\gr_\mathcal{J}M$ as a $\gr_\mathfrak{a}A$-submodule.
 
 ::: Example 10
-Let $A=\mathbb{K}[\x,\y]$ and $\mathfrak{a}=(\x,\y)$. Then $\gr_\mathfrak{a}A$ is a graded ring whose grading is determined by the degree of polynomials. Now set $M=A$ and consider the $A$-submodule (i.e., ideal of $A$) $\mathfrak{b}=(\x^2, \y^2)$ of $M$. Since every element of $\mathfrak{b}$ is of the form
+Let $A=\mathbb{K}[\x,\y]$ and $\mathfrak{a}=(\x,\y)$. Then $\gr_\mathfrak{a}A$ is a graded ring whose grading is determined by the degree of polynomials. Now set $M=A$, and consider in $M$ the $A$-submodule (i.e., ideal of $A$) $\mathfrak{b}=(\x^2, \y^2)$. Then any element of $\mathfrak{b}$ is of the form
 
 $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 
-, $\initial(\mathfrak{b})$ is the homogeneous ideal of $\gr_\mathfrak{a}A$ generated by $\x^2, \y^2$.
+and therefore $\initial(\mathfrak{b})$ is the homogeneous ideal generated by $\x^2, \y^2$ in $\gr_\mathfrak{a}A$.
 :::
 
-In general, however, $\initial(M')$ is not generated by the initial forms of generators of $M'$. For instance, with $A$ and $\mathfrak{a}$ as above, consider $\mathfrak{c}=(\x^2-\y^3, \x\y)$; the initial forms of the two generators are $\x^2$ and $\x\y$, respectively. Since $\x(\x\y)-\y(\x^2-\y^3)=\y^4$, we have $\y^4\in \mathfrak{c}$, and hence $\initial(\y^4)=\y^4$ belongs to $\initial(\mathfrak{c})$; but every element of $(\x^2,\x\y)$ is divisible by $\x$, so $\y^4$ does not belong to it.
+In general, however, $\initial(M')$ is not generated by the initial forms of the generators of $M'$. For instance, with $A$ and $\mathfrak{a}$ as above, consider $\mathfrak{c}=(\x^2-\y^3, \x\y)$; the initial forms of the two generators are $\x^2$ and $\x\y$, respectively. Then, since $\x(\x\y)-\y(\x^2-\y^3)=\y^4$, we have $\y^4\in \mathfrak{c}$, and therefore $\initial(\y^4)=\y^4$ belongs to $\initial(\mathfrak{c})$; but every element of $(\x^2,\x\y)$ is divisible by $\x$, so $\y^4$ does not belong to it.
 
 ::: Corollary 11
-Let $A$ be a Noetherian local ring and $\mathfrak{a}$ a proper ideal of $A$. If $\gr_\mathfrak{a}A$ is a domain, then so is $A$.
+For a Noetherian local ring $A$ and a proper ideal of $A$, $\mathfrak{a}$, if $\gr_\mathfrak{a}A$ is a domain, then so is $A$.
 :::
 ::: Proof
-Assume $ab=0$ in $A$; it suffices to show that $a=0$ or $b=0$. Now, in $\gr_\mathfrak{a}A$ we must have $\initial(a)\initial(b)=0$, so $\initial(a)$ or $\initial(b)$ must be $0$. Since $\bigcap \mathfrak{a}^n=0$ by [Corollary 8](#cor8){: data-lid="n7v5o" }, we must have $a=0$ or $b=0$.
+In $A$, assume $ab=0$; it suffices to show that $a=0$ or $b=0$. Now, in $\gr_\mathfrak{a}A$ we must have $\initial(a)\initial(b)=0$, and therefore $\initial(a)$ or $\initial(b)$ must be $0$. Now, since $\bigcap \mathfrak{a}^n=0$ by [Corollary 8](#cor8){: data-lid="n7v5o" }, we must have $a=0$ or $b=0$.
 :::
 
 ---
