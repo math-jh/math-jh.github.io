@@ -63,7 +63,7 @@ Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 �
 
     $$(xy)_{d_k+e_l}=\sum_{d_i+e_j=d_k+e_l}x_{d_i}y_{e_j}$$
 
-    의 꼴로 쓰여질 수 있으며, 이 때 위의 식의 우변에서 $x_{d_k}y_{e_l}$ 이외의 모든 항은 $d_i>d_k$ 혹은 $e_j>e_l$을 반드시 만족해야 한다. $d_k$와 $e_l$의 정의에 의하여, 이러한 항들은 모두 $\mathfrak{a}$의 원소이다. 그런데 $xy\in \mathfrak{a}$이고 $\mathfrak{a}$는 homogeneous ideal이므로, $(xy)_{d_k+e_l}$ 또한 $\mathfrak{a}$의 원소이고 이로부터 모순을 얻는다. 
+    의 꼴로 쓰여질 수 있으며, 이 때 위의 식의 우변에서 $x_{d_k}y_{e_l}$ 이외의 모든 항은 $d_i>d_k$ 혹은 $e_j>e_l$을 반드시 만족해야 한다. $d_k$와 $e_l$의 정의에 의하여, 이러한 항들은 모두 $\mathfrak{a}$의 원소이다. 그런데 $xy\in \mathfrak{a}$이고 $\mathfrak{a}$는 homogeneous ideal이므로, $(xy)_{d_k+e_l}$ 또한 $\mathfrak{a}$의 원소이고 가정에 의해 $x_{d_k}\in \mathfrak{a}$ 또는 $y_{e_l}\in \mathfrak{a}$이므로 모순을 얻는다. 
 :::
 
 특히 임의의 ring의 prime ideal에서의 localization이 중요한 예시였던 것과 같이, $A$가 graded ring일 경우에도 *homogeneous* prime ideal $\mathfrak{p}$에서의 localization은 중요한 예시가 된다. 따라서 위 보조정리의 세 번째 결과는 특히 기억할만하다. 

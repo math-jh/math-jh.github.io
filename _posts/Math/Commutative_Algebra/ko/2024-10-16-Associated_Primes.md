@@ -163,7 +163,7 @@ Reduced Noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$�
 
 또, 만일 $A$가 reduced ring이라면, 이들의 합집합이 정확히 $A$의 모든 zerodivisor들의 모임과 같다. 이를 확인하기 위해 우선 $A$가 reduced라는 가정으로부터,
 
-$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}\supseteq \bigcap_{i=1}^k \mathfrak{p}_i$$
+$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}= \bigcap_{i=1}^k \mathfrak{p}_i$$
 
 임을 관찰하자. 그럼 임의의 zerodivisor $a\neq 0$과, $ab=0$이도록 하는 $b\neq 0$에 대하여, $b\not\in \mathfrak{p}_i$이도록 하는 $\mathfrak{p}_i$가 존재해야만 하고, 이 때 $ab=0\in \mathfrak{p}_i$이므로 $a\in \mathfrak{p}_i$여야만 한다.
 

@@ -19,7 +19,7 @@ weight: 10
 
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
-이 성립하는 것을 살펴보았다. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8){: data-lid="k67s8" }) 특히, 만일 $\mathfrak{a}$가 prime ideal이라면 $\mathfrak{p}=\sqrt{\mathfrak{p}}$가 성립해야 하는 것이 당연하다. 더 일반적으로 다음을 정의한다.
+이 성립하는 것을 살펴보았다. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8){: data-lid="k67s8" }) 특히, 만일 $\mathfrak{p}$가 prime ideal이라면 $\mathfrak{p}=\sqrt{\mathfrak{p}}$가 성립해야 하는 것이 당연하다. 더 일반적으로 다음을 정의한다.
 
 ::: 정의 1
 Ring $A$의 임의의 ideal $\mathfrak{a}$가 *radical ideal<sub>근기아이디얼</sub>*이라는 것은 $\mathfrak{a}=\sqrt{\mathfrak{a}}$가 성립하는 것이다. 
