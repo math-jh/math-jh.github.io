@@ -2,7 +2,7 @@
 /*
  * KaTeX parse-error audit for all Math posts.
  *
- * Renders every $$...$$ block (and single-$ math inside <cap>/<phrase>/<em-ko>
+ * Renders every $$...$$ block (and single-$ math inside <cap>/<em-ko>
  * tags) with the blog's OWN macros (assets/js/katex-macros.js) and the same
  * options as _includes/scripts.html (macros + strict:false) — but with
  * throwOnError:true, so it CATCHES anything that would otherwise render as a red

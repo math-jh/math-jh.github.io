@@ -17,7 +17,6 @@ $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
 $border-color: #20242d !default;                                 //  desaturated hairline (less blue)
 $highlight-color: #d2a24e;                                       //  brass accent
 $notice-background-mix: 0%;
-$highlight-background-mix: 20%;
 
 /* Code highlighting (dark) — Tokyo Night Storm: navy-purple block, one step
    lighter than the page so it lifts off it. Consumed by _syntax.scss (base16). */

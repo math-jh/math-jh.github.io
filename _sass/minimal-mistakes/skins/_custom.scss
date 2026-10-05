@@ -17,7 +17,6 @@ $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
 $border-color: #d7d2c5 !default;                                 //  warm hairline
 $highlight-color: #ad7a2e;                                       //  brass accent
 $notice-background-mix: 0%;
-$highlight-background-mix: 8%;
 
 /* Code highlighting (light) — GitHub Light: white block (with a warm filename
    bar + border via _syntax.scss) so it clearly lifts off the paper. base16. */
