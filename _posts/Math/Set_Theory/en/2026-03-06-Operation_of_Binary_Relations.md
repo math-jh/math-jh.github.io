@@ -61,10 +61,10 @@ Let $R_1$ and $R_2$ be binary relations. The *composition* $R_2\circ R_1$ of the
 It is natural to ask what relationship this composition of binary relations bears to the inverse defined above.
 
 ::: Proposition 4
-Let $R_1$, $R_2$ be binary relations. Then the inverse of $R_2\circ R_1$ is $R_2^{-1}\circ R_1^{-1}$.
+Let $R_1$, $R_2$ be binary relations. Then the inverse of $R_2\circ R_1$ is $R_1^{-1}\circ R_2^{-1}$.
 :::
 ::: Proof
-$(z,x)\in (R_2\circ R_1)^{-1}$ is equivalent to $(x,z)\in R_2\circ R_1$. This in turn is equivalent to the existence of some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$. Any $y$ satisfying this condition also satisfies <phrase>$(y,x)\in R_1^{-1}$ and $(z,y)\in R_2^{-1}$</phrase>, so by the definition of composition we have $(z,x)\in R_2^{-1}\circ R_1^{-1}$. The reverse direction can be shown in the same way.
+$(z,x)\in (R_2\circ R_1)^{-1}$ is equivalent to $(x,z)\in R_2\circ R_1$. This in turn is equivalent to the existence of some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$. Any $y$ satisfying this condition also satisfies the condition that $(y,x)\in R_1^{-1}$ and $(z,y)\in R_2^{-1}$, so by the definition of composition we have $(z,x)\in R_1^{-1}\circ R_2^{-1}$. The reverse direction can be shown in the same way.
 :::
 
 Moreover, composition of binary relations satisfies the associative law.
@@ -79,7 +79,7 @@ holds.
 ::: Proof
 It suffices to show that for any $(x,w)$, being an element of $(R_3\circ R_2)\circ R_1$ is equivalent to being an element of $R_3\circ(R_2\circ R_1)$.  
 
-First, $(x,w)\in (R_3\circ R_2)\circ R_1$ is equivalent to <phrase>the existence of some $y$ such that $(x,y)\in R_1$ and $(y,w)\in R_3\circ R_2$</phrase>. But the latter condition is again equivalent to <phrase>the existence of some $z$ such that $(y,z)\in R_2$ and $(z,w)\in R_3$</phrase>, so this condition is equivalent to <phrase>$(x,z)\in R_2\circ R_1$ and $(z,w)\in R_3$</phrase>. Therefore this is equivalent to $(x,w)\in R_3\circ(R_2\circ R_1)$.
+First, $(x,w)\in (R_3\circ R_2)\circ R_1$ is equivalent to the existence of some $y$ such that $(x,y)\in R_1$ and $(y,w)\in R_3\circ R_2$. But the latter condition is again equivalent to the existence of some $z$ such that $(y,z)\in R_2$ and $(z,w)\in R_3$, so this condition is equivalent to the condition that $(x,z)\in R_2\circ R_1$ and $(z,w)\in R_3$. Therefore this is equivalent to $(x,w)\in R_3\circ(R_2\circ R_1)$.
 :::
 
 Thus we may write this common result $(R_3\circ R_2)\circ R_1=R_3\circ(R_2\circ R_1)$ without parentheses as $R_3\circ R_2\circ R_1$, with no ambiguity. 
@@ -96,7 +96,7 @@ holds.
 ::: Proof
 We proceed as in the preceding proposition. 
 
-For any $z$, the statement $z\in (R_2\circ R_1)(A)$ is equivalent to the existence of some $x\in X$ such that $(x,z)\in R_2\circ R_1$. But this is again equivalent to the existence of some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$. Since $y\in R_1(A)$, we have $z\in R_2(R_1(A))$. Reversing this logic yields the reverse inclusion.
+For any $z$, the statement $z\in (R_2\circ R_1)(A)$ is equivalent to the existence of some $x\in A$ such that $(x,z)\in R_2\circ R_1$. But this is again equivalent to the existence of some $y$ such that $(x,y)\in R_1$ and $(y,z)\in R_2$. Since $y\in R_1(A)$, we have $z\in R_2(R_1(A))$. Reversing this logic yields the reverse inclusion.
 :::
 
 ::: Proposition 7
