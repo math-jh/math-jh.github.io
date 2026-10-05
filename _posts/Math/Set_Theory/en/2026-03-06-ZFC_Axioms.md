@@ -79,7 +79,7 @@ and thus $B=B'$. It is appropriate to denote such a set by $\{x\in A\mid P(x)\}$
 ::: Example 3
 What created the contradiction in naive set theory was the following assumption:
 
-> Let $P$ be a proposition about $x$. Then there exists a set $B$ such that <phrase>$x\in B$</phrase> and <phrase>$P(x)$</phrase> are equivalent.
+> Let $P$ be a proposition about $x$. Then there exists a set $B$ such that $x\in B$ and $P(x)$ are equivalent.
 
 Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1){: data-lid="n6tdz" }, we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; we can only define
 
@@ -133,10 +133,10 @@ we obtain $\{\emptyset, \emptyset\}=\{\emptyset\}$. Also, since $\emptyset\not\i
 For any set $\mathcal{S}$, there exists a set $U$ such that <phrase>$x\in U$</phrase> and <phrase>$x\in A$ for some $A\in\mathcal{S}$</phrase> are equivalent.
 :::
 
-For example, if $\mathcal{S}=\{A,B\}$, then we can verify that $U$ becomes the set of <phrase>elements satisfying $x\in A$ or $x\in B$</phrase>, that is, $A\cup B$. This is sometimes written as $\bigcup\mathcal{S}$.
+For example, if $\mathcal{S}=\{A,B\}$, then we can verify that $U$ becomes the set of elements satisfying $x\in A$ or $x\in B$, that is, $A\cup B$. This is sometimes written as $\bigcup\mathcal{S}$.
 
 ::: misc The Axiom of Power Set. {#axiom-powerset}
-For any set $S$, there exists a set $\mathcal{P}$ such that <phrase>$X\in \mathcal{P}$</phrase> and <phrase>$X\subseteq S$</phrase> are equivalent.
+For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ and $X\subseteq S$ are equivalent.
 :::
 
 This set is called the *power set* of $S$ and is denoted $\mathcal{P}(S)$. 

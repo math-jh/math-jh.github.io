@@ -33,7 +33,7 @@ A binary relation $(R,A,A)$ is called an *order relation* if $R$ is reflexive, t
 In this case, we say that $A$ is *ordered by* $R$, and we often call $A$ an *ordered set*. Also, as with equivalence relations, we write $x\mathrel{R}y$ as $x\leq_{\tiny R}y$.
 
 ::: Example 3
-The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2){: data-lid="xlgon" } and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3){: data-lid="fy2i4" })
+The binary relation $x=y$ is an order relation. The relation $x\subseteq y$ is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2){: data-lid="xlgon" } and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3){: data-lid="fy2i4" })
 :::
 
 Since an ordered set is a set equipped with an additional relation $\leq$, when we consider functions between such sets we usually focus on those that also preserve $\leq$. In particular, we define the following.

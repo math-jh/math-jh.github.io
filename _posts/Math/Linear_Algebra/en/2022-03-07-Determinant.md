@@ -110,7 +110,7 @@ Therefore, if we specify only how area changes under the deformations in rules 1
 
 To lend geometric intuition to the determinant, in this section we take $\mathbb{K}=\mathbb{R}$. Apart from the fact that $D$ may take a negative sign, we may view $D$ as an area function. In this setting, the sign of $D$ represents *orientation*.
 
-First, the initial condition that $D$ must satisfy—namely, <phrase>the area of the unit square is 1</phrase>—is immediate from the definition $D(e_1,\ldots, e_n)=1$.
+First, the initial condition that $D$ must satisfy—namely, the area of the unit square is 1—is immediate from the definition $D(e_1,\ldots, e_n)=1$.
 
 In the usual notion of area, multiplying the length of one side of a parallelogram by $-1$ still yields a positive area. However, if we regard the resulting figure as having the opposite orientation from the original, we may view the area as negative; then one verifies that $D$ preserves arbitrary scalar multiplication of the length of one side, and considering shear transformations, $D$ also preserves the sum of two vectors corresponding to one side, as illustrated below.
 

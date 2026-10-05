@@ -25,7 +25,7 @@ Suppose every set in a family $(A_i)_{i\in I}$ is a subset of some set $A$. Then
 In [§ZFC Axioms](/en/math/set_theory/zfc_axioms){: data-lid="lumof" } we accepted as an axiom that unions exist. The following notation is used somewhat more frequently than the notation we employed when introducing that axiom.
 
 ::: Definition 1
-Let $(A_i)_{i\in I}$ be a family of sets. Then the set of all $x$ that <phrase>belong to at least one $A_i$</phrase> is called the *union* of this family, and is written $\bigcup_{i\in I}A_i$.
+Let $(A_i)_{i\in I}$ be a family of sets. Then the set of all $x$ that belong to at least one $A_i$ is called the *union* of this family, and is written $\bigcup_{i\in I}A_i$.
 :::
 
 Thus the union is the set of all $x$ satisfying the logical formula
@@ -35,7 +35,7 @@ $$\exists i(i\in I\wedge x\in A_i)$$
 Hence if $I=\emptyset$, then $\bigcup_{i\in I} A_i=\emptyset$. It is not difficult to verify that the union does not depend on the target $\mathcal{S}$ of $(A_i)_{i\in I}$.
 
 ::: Definition 2
-Let $(A_i)_{i\in I}$ be a family of sets, and suppose $I$ is not empty. Then the set of all $x$ that <phrase>belong to every $A_i$</phrase> is called the *intersection* of this family, and is written $\bigcap_{i\in I}A_i$.
+Let $(A_i)_{i\in I}$ be a family of sets, and suppose $I$ is not empty. Then the set of all $x$ that belong to every $A_i$ is called the *intersection* of this family, and is written $\bigcap_{i\in I}A_i$.
 :::
 
 The intersection is the collection of all $x$ satisfying the logical formula
@@ -45,7 +45,7 @@ $$\forall i(i\in I\implies x\in A_i)$$
 If $I=\emptyset$, then $i\in I$ is false, so the entire statement is true regardless of $x$, and $\bigcap_{i\in\emptyset} A_i$ would have to be the universal set, which is a contradiction. ([§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-lid="qcd9n" }) If we specify the target $\mathcal{S}$ of $(A_i)_{i\in I}$ appropriately, we can define the intersection while avoiding this contradiction.
 
 ::: Definition 3
-Let $(A_i)_{i\in I}$ be a family of subsets of a set $A$. Then the set of all $x$ that <phrase>are elements of $A$ and simultaneously belong to every $A_i$</phrase> is called the *intersection* of this family, and is written $\bigcap_{i\in I}A_i$.
+Let $(A_i)_{i\in I}$ be a family of subsets of a set $A$. Then the set of all $x$ that are elements of $A$ and simultaneously belong to every $A_i$ is called the *intersection* of this family, and is written $\bigcap_{i\in I}A_i$.
 :::
 
 This time, even if $I=\emptyset$, the condition becomes

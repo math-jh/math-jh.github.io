@@ -65,7 +65,7 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 [§열린집합, ⁋정의 4](/ko/math/topology/open_sets#def4){: data-lid="3m9t1" }와 마찬가지로, $A$가 한점집합 $\{x\}$일 경우, $A$의 local base를 점 $x$에서의 local base라 부른다. 그럼 다음이 성립한다.
 
 ::: 명제 5
-위상공간 $(X,\mathcal{T})$가 주어졌다 하자. 그럼 $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $\mathcal{T}$의 base인 것은 각각의 $x\in X$에 대하여 <phrase>$x$를 포함하는 $\mathcal{B}$의 원소들</phrase>이 $x$에서의 local base를 정의하는 것과 동치이다.
+위상공간 $(X,\mathcal{T})$가 주어졌다 하자. 그럼 $\mathcal{T}$의 부분집합 $\mathcal{B}$가 $\mathcal{T}$의 base인 것은 각각의 $x\in X$에 대하여 $x$를 포함하는 $\mathcal{B}$의 원소들이 $x$에서의 local base를 정의하는 것과 동치이다.
 :::
 ::: 증명
 편의상 $\mathcal{B}$의 원소들 중 $x$를 포함하는 것들을 모두 모아 이들을 $\mathcal{B}(x)$라 적자. 
@@ -86,7 +86,7 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 그럼 $X$ 위에 정의된 유일한 위상 $\mathcal{T}$가 존재하여, $\mathcal{B}$가 이 위상 $\mathcal{T}$의 base이도록 할 수 있다.
 :::
 ::: 증명
-$\mathcal{B}(x)$를 앞선 명제의 증명에서와 같이 <phrase>$\mathcal{B}$의 원소들 중 $x$를 포함하는 것들의 모임</phrase>으로 정의하자. 또,
+$\mathcal{B}(x)$를 앞선 명제의 증명에서와 같이 $\mathcal{B}$의 원소들 중 $x$를 포함하는 것들의 모임으로 정의하자. 또,
 
 $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\mathop{\uparrow}B$$
 

@@ -64,7 +64,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 를 얻는다. 따라서 $A$와 $B$의 특성다항식은 서로 같다. 이로부터 다음의 따름정리들을 얻는다.
 
 ::: 따름정리 4
-임의의 유한차원 벡터공간 $V$와 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
+임의의 유한차원 벡터공간 $V$와 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식으로 정의한 것이 잘 정의된다.
 :::
 ::: 증명
 즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [\[다중선형대수학\] §기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5){: data-lid="3xukk" } 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.

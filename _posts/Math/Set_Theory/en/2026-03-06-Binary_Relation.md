@@ -76,7 +76,7 @@ so the Cartesian product $A\times B$ can be said to be the largest binary relati
 ## Domain and Image of a Binary Relation
 
 ::: Definition 4
-Consider a binary relation $(R,A,B)$ and a subset $A'\subseteq A$. Then the set of <phrase>all elements related by $R$ to elements of $A'$</phrase> is called the *image* of $A'$ under $R$, and is denoted $R(A')$.
+Consider a binary relation $(R,A,B)$ and a subset $A'\subseteq A$. Then the set of all elements related by $R$ to elements of $A'$ is called the *image* of $A'$ under $R$, and is denoted $R(A')$.
 :::
 
 Writing out the above definition as a formula, we have

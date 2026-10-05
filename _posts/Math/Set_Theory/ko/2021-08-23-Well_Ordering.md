@@ -58,7 +58,7 @@ $(A_i)_{i\in I}$가 well-ordered set들의 family이고, 어떠한 $i,j\in I$에
 원하는 order relation의 존재성과 유일성을 직접 보이는 대신, 이 조건보다 더 약화된 조건 하에서 더 일반적인 결과를 보이자.
 
 ::: 보조정리 5
-Ordered set들의 family $(A_i)_{i\in I}$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 <phrase>$A_j$의 order relation을 $A_i$로 제한한 관계</phrase>가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
+Ordered set들의 family $(A_i)_{i\in I}$가 포함관계에 대하여 right directed이고, $A_i\subseteq A_j$일 때마다 $A_j$의 order relation을 $A_i$로 제한한 관계가 $A_i$에 주어진 order relation과 동일하다고 하자. 그럼 각각의 order relation 모두를 확장하는 $A=\bigcup_{i\in I} A_i$ 위의 order relation이 유일하게 존재한다.
 :::
 ::: 증명
 각각의 $A_i$에 대하여, $R_i$가 order relation이라 하자. 만약 각각의 order relation을 확장하는 $A$ 위의 ordering $R$이 존재한다면, $R_i\subseteq R$이다. 반대로 만일 $(x,y)\in R$라면 $x$와 $y$를 포함하는 $A_i,A_j$가 존재하므로, 어떤 $A_k$가 존재하여 $x$와 $y$를 동시에 포함한다. 한편 $(x,y)\in R_k$이므로 $(x,y)\in\bigcup_{i\in I}R_i$이다. 따라서 만일 그러한 관계가 존재한다면 이는 유일하며 반드시 $\bigcup_{i\in I}R_i$가 되어야 한다.

@@ -166,8 +166,8 @@ Finally, suppose two equivalence relations $(R,A,A)$, $(R',A',A')$ are given, an
 Let $u=(x,x'),v=(y,y'),w=(z,z')$ be elements of $A\times A'$. Then
 
 - That $u\sim_{\tiny S}u$ always holds is obvious, since $x\sim_{\tiny R}x$ and $x'\sim_{\tiny R'}x'$.
-- If $u\sim_{\tiny S}v$, then <phrase>$x\sim_{\tiny R}y$ and $x'\sim_{\tiny R'}y'$</phrase>, so <phrase>$y\sim_{\tiny R}x$ and $y'\sim_{\tiny R'}x'$</phrase>, and therefore $v\sim_{\tiny S}u$.
-- Suppose $u\sim_{\tiny S}v$ and $v\sim_{\tiny S}w$. Then <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase> each hold. Now from $x\sim_{\tiny R}y$ and $y\sim_{\tiny R}z$ we get $x\sim_{\tiny R}z$, and from $x'\sim_{\tiny R'}y'$ and $y'\sim_{\tiny R'}z'$ we get $x'\sim_{\tiny R'}z'$. That is, $u\sim_{\tiny S}w$ holds.
+- If $u\sim_{\tiny S}v$, then $x\sim_{\tiny R}y$ and $x'\sim_{\tiny R'}y'$, so $y\sim_{\tiny R}x$ and $y'\sim_{\tiny R'}x'$, and therefore $v\sim_{\tiny S}u$.
+- Suppose $u\sim_{\tiny S}v$ and $v\sim_{\tiny S}w$. Then $x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$ each hold. Now from $x\sim_{\tiny R}y$ and $y\sim_{\tiny R}z$ we get $x\sim_{\tiny R}z$, and from $x'\sim_{\tiny R'}y'$ and $y'\sim_{\tiny R'}z'$ we get $x'\sim_{\tiny R'}z'$. That is, $u\sim_{\tiny S}w$ holds.
 
 Therefore $S$ is an equivalence relation. We call this equivalence relation the *product* of $R$ and $R'$, and denote it by $R\times R'$.
 

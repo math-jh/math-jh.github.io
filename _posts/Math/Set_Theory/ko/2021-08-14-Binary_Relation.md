@@ -41,8 +41,8 @@ $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 $R$이 이항관계라 하자. 그럼 유일한 두 개의 집합 $A$, $B$가 존재하여,  
 
 <ul>
-<li> <phrase>$x\in A$인 것</phrase>과 <phrase>어떤 $y$가 존재하여 $(x,y)\in R$인 것</phrase>이 동치이고,</li>
-<li> <phrase>$y\in B$인 것</phrase>과 <phrase>어떤 $x$가 존재하여 $(x,y)\in R$인 것</phrase>이 동치이다.</li>
+<li> $x\in A$인 것과 어떤 $y$가 존재하여 $(x,y)\in R$인 것이 동치이고,</li>
+<li> $y\in B$인 것과 어떤 $x$가 존재하여 $(x,y)\in R$인 것이 동치이다.</li>
 </ul>
 :::
 ::: 증명
@@ -76,7 +76,7 @@ $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 ## 이항관계의 정의역과 상
 
 ::: 정의 4
-이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 <phrase>$R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합</phrase>을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고, $R(A')$로 표기한다.
+이항관계 $(R,A,B)$와 부분집합 $A'\subseteq A$를 생각하자. 그럼 $R$에 의해 $A'$의 원소와 관계되는 모든 원소들의 집합을 $R$에 의한 $A'$의 *image<sub>상</sub>*이라 부르고, $R(A')$로 표기한다.
 :::
 
 위의 정의를 식으로 풀어쓰면

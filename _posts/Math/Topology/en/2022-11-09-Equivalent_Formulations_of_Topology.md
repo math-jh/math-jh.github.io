@@ -54,7 +54,7 @@ Conversely, suppose a closure operator $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}
 From this we obtain the following theorem.
 
 ::: Theorem 2
-Suppose a function $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfying all the conditions of [Definition 1](#def1){: data-lid="es421" } is given. Define $\mathcal{C}$ to be <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>. Then $\mathcal{C}$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-lid="hnwpo" }, and therefore defines a unique topological structure.
+Suppose a function $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfying all the conditions of [Definition 1](#def1){: data-lid="es421" } is given. Define $\mathcal{C}$ to be the collection of all $C$ satisfying $\cl(C)=C$. Then $\mathcal{C}$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2){: data-lid="hnwpo" }, and therefore defines a unique topological structure.
 :::
 
 Of course, one can just as easily define a topological structure using the interior of a set. In this case, the axioms that the interior operator $\interior$ must satisfy are as follows.

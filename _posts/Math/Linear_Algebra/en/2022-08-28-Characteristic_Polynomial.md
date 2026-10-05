@@ -61,7 +61,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 Hence $A$ and $B$ have the same characteristic polynomial. From this we obtain the following corollaries.
 
 ::: Corollary 4
-For any linear map $L:V\rightarrow V$, defining the characteristic polynomial of $L$ as <phrase>the characteristic polynomial of the matrix $[L]_\mathcal{B}^\mathcal{B}$</phrase> is well-defined.
+For any linear map $L:V\rightarrow V$, defining the characteristic polynomial of $L$ as the characteristic polynomial of the matrix $[L]_\mathcal{B}^\mathcal{B}$ is well-defined.
 :::
 ::: Proof
 That is, we must show that the characteristic polynomial of $L$ does not change if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the formula after [§Change of Basis, ⁋Proposition 5](/en/math/multilinear_algebra/change_of_basis#prop5){: data-lid="3xukk" } that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.

@@ -43,7 +43,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 Similarly, $L^{-1}(w_1+w_2)=L^{-1}(w_1)+L^{-1}(w_2)$ can also be shown.
 :::
 
-The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1){: data-lid="n8s8x" }. Namely, it is uncertain whether <phrase>the collection of all $\mathbb{K}$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
+The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1){: data-lid="n8s8x" }. Namely, it is uncertain whether the collection of all $\mathbb{K}$-vector spaces is actually a set, but we will pass over this without further comment.
 
 ::: Proposition 3
 The relation $\cong$ of [Definition 1](#def1){: data-lid="k8v3a" } is an equivalence relation.

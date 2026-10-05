@@ -68,7 +68,7 @@ Lattice $A$가 주어졌다 하고, $I$와 $F$가 각각 $A$의 proper ideal과 
 두 연산 $\vee$와 $\wedge$ 사이의 분배법칙이 성립하는 lattice $A$가 주어졌다 하자. 그럼 임의의 maximal ideal은 prime ideal이고 임의의 maximal filter는 prime filter이다.
 :::
 ::: 증명
-Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,y\not\in I$라 하고, 새로운 집합 $J$를 <phrase>$x\wedge z\in I$이도록 하는 모든 $z$들의 집합</phrase>이라 하자. 
+Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,y\not\in I$라 하고, 새로운 집합 $J$를 $x\wedge z\in I$이도록 하는 모든 $z$들의 집합이라 하자. 
 
 1. 만일 $z_1,z_2\in J$라면 $x\wedge (z_1\vee z_2)=(x\wedge z_1)\vee(x\wedge z_2)\in I$가 성립하므로, $z_1\vee z_2\in J$이다. 
 2. 만일 $z\in J$이고 $z'\leq z$라면 $z'\in J$이다. $(x\wedge z')\vee (x\wedge z)=x\wedge (z'\vee z)=x\wedge z$이므로 $x\wedge z'\leq x\wedge z$인데, $x\wedge z\in I$이므로 $x\wedge z'$ 또한 $I$의 원소여야 하기 때문이다.

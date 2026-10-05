@@ -23,7 +23,7 @@ weight: 1
 그러나 수학자들은 이러한 접근이 다양한 모순을 이끌어낸다는 것을 알게 된다. 
 
 ::: 예시 1 (러셀의 역설)
-집합 $\mathcal{S}$를 <phrase>$x\not\in x$를 만족하는 모든 $x$들의 모임</phrase>으로 정의하자. 그럼 $\mathcal{S}$는 자기 자신의 원소이거나, 자기 자신의 원소가 아니다.
+집합 $\mathcal{S}$를 $x\not\in x$를 만족하는 모든 $x$들의 모임으로 정의하자. 그럼 $\mathcal{S}$는 자기 자신의 원소이거나, 자기 자신의 원소가 아니다.
 
 - $\mathcal{S}$가 자기 자신의 원소라 가정하자. 그럼 $\mathcal{S}$의 정의 ($x\not\in x$)를 $\mathcal{S}$도 만족해야 하므로, $\mathcal{S}\not\in\mathcal{S}$이다. 이는 $\mathcal{S}$가 자기 자신의 원소라는 가정에 모순이므로, $\mathcal{S}$는 자기 자신의 원소가 될 수 없다.
 - 그러므로 $\mathcal{S}$는 자기 자신의 원소가 아니어야 한다. 즉 $\mathcal{S}\not\in\mathcal{S}$여야 한다. 그런데 이 또한 모순이다. $\mathcal{S}$는 $x\not\in x$를 만족하는 모든 원소들의 모임이므로, 이를 만족하는 $\mathcal{S}$도 $\mathcal{S}$에 속해있어야 하기 때문이다.
@@ -65,7 +65,7 @@ Axiom of existence로부터 위와 같은 집합이 적어도 하나 존재한�
 다음 공리는 특히 [예시 1](#ex1){: data-lid="0o7xn" }을 방지해준다는 점에서 기억할 만하다.
 
 ::: misc The Axiom schema of Comprehension.<sub>분류 공리꼴</sub> {#axiom-comprehension}
-임의의 집합 $A$와 명제 $P$가 주어졌다 하자. 그럼 <phrase>$x\in B$인 것</phrase>과 <phrase>$x\in A$이고 $P(x)$인 것</phrase>이 동치이도록 하는 집합 $B$가 존재한다.
+임의의 집합 $A$와 명제 $P$가 주어졌다 하자. 그럼 $x\in B$인 것과 $x\in A$이고 $P(x)$인 것이 동치이도록 하는 집합 $B$가 존재한다.
 :::
 
 형식적으로 보았을 때, 위의 공리는 모든 명제 $P$에 대해서 어떤 성질이 만족된다는 주장을 하고 있다. 이를 1차 형식논리에서 표현하는 것은 불가능하기 때문에, 이를 하나의 단일한 공리 대신 공리들의 모임이라 생각하고 axiom *schema* of comprehension이라 부른다.
@@ -79,7 +79,7 @@ $$x\in B'\iff ((x\in A)\wedge P(x))\iff x\in B$$
 ::: 예시 3
 소박한 집합론에서 모순을 만들었던 것은 다음의 가정이다.
 
-> $P$가 $x$에 대한 명제라 하자. 그럼 <phrase>$x\in B$인 것</phrase>과 <phrase>$P(x)$인 것</phrase>이 동치이도록 하는 집합 $B$가 존재한다.
+> $P$가 $x$에 대한 명제라 하자. 그럼 $x\in B$인 것과 $P(x)$인 것이 동치이도록 하는 집합 $B$가 존재한다.
 
 이제 새로 도입한 comprehension schema에 따르면, [예시 1](#ex1){: data-lid="n6tdz" }과는 달리 $\mathcal{S}=\{x\mid x\not\in x\}$를 바로 정의할 수는 없고, 이미 존재하는 집합 $A$에 대해 
 
@@ -120,7 +120,7 @@ $$\{x\in A\mid Q(x)\}$$
 공집합 이외의 다른 집합이 존재한다는 것이 보장되지 않는다면 위의 두 예시들은 별 쓸모가 없다. 다음 공리들은 공집합이 아닌 집합들을 만드는 방법을 보여준다.
 
 ::: misc The Axiom of Pair.<sub>짝 공리</sub> {#axiom-pair}
-임의의 집합 $A$, $B$에 대하여, <phrase>$x\in C$인 것</phrase>과 <phrase>$x=A$이거나 $x=B$인 것</phrase>이 동치이도록 하는 집합 $C$가 존재한다.
+임의의 집합 $A$, $B$에 대하여, $x\in C$인 것과 $x=A$이거나 $x=B$인 것이 동치이도록 하는 집합 $C$가 존재한다.
 :::
 
 역시 이 집합은 extensionality에 의해 유일하며, 이를 $\{A,B\}$로 표기한다. 이제 $A=B=\emptyset$으로 두면, 
@@ -130,13 +130,13 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\vee(x=\emptyset)\iff x\in
 로부터 $\{\emptyset, \emptyset\}=\{\emptyset\}$임을 안다. 또 $\emptyset\not\in \emptyset$이므로 $\emptyset\neq\{\emptyset\}$이다. 
 
 ::: misc The Axiom of Union.<sub>합집합 공리</sub> {#axiom-union}
-임의의 집합 $\mathcal{S}$에 대하여, <phrase>$x\in U$인 것</phrase>과 <phrase>어떤 $A\in\mathcal{S}$에 대하여 $x\in A$인 것</phrase>이 동치이도록 하는 집합 $U$가 존재한다.
+임의의 집합 $\mathcal{S}$에 대하여, $x\in U$인 것과 어떤 $A\in\mathcal{S}$에 대하여 $x\in A$인 것이 동치이도록 하는 집합 $U$가 존재한다.
 :::
 
-예를 들어, 만일 $\mathcal{S}=\{A,B\}$였다면 $U$는 <phrase>$x\in A$이거나 $x\in B$인 원소들의 집합</phrase>, 즉 $A\cup B$가 된다는 것을 확인할 수 있다. 이를 표기상 $\bigcup\mathcal{S}$와 같이 쓰기도 한다.
+예를 들어, 만일 $\mathcal{S}=\{A,B\}$였다면 $U$는 $x\in A$이거나 $x\in B$인 원소들의 집합, 즉 $A\cup B$가 된다는 것을 확인할 수 있다. 이를 표기상 $\bigcup\mathcal{S}$와 같이 쓰기도 한다.
 
 ::: misc The Axiom of Power set.<sub>멱집합 공리</sub> {#axiom-powerset}
-임의의 집합 $S$에 대하여, <phrase>$X\in \mathcal{P}$인 것</phrase>과 <phrase>$X\subseteq S$인 것</phrase>이 동치이도록 하는 집합 $\mathcal{P}$가 존재한다.
+임의의 집합 $S$에 대하여, $X\in \mathcal{P}$인 것과 $X\subseteq S$인 것이 동치이도록 하는 집합 $\mathcal{P}$가 존재한다.
 :::
 
 이 집합을 $S$의 *멱집합*, 즉 *power set*이라 부르고 $\mathcal{P}(S)$와 같이 표현한다. 

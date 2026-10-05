@@ -62,7 +62,7 @@ is a neighborhood of $x$ and is a subset of $A^c$. From this we see that $A^c$ i
 
 ## Interior and Closure of a Set
 
-Let a topological space $(X,\mathcal{T})$ be given. For any subset $A$ of $X$, there always exist <phrase>a closed set containing $A$</phrase> and <phrase>an open set contained in $A$</phrase>. ($X$ and $\emptyset$). On the other hand, since an arbitrary intersection of closed sets is closed and an arbitrary union of open sets is open, there exist both <phrase>the smallest closed set containing $A$</phrase> and <phrase>the largest open set contained in $A$</phrase>. We define them as follows.
+Let a topological space $(X,\mathcal{T})$ be given. For any subset $A$ of $X$, there always exist a closed set containing $A$ and an open set contained in $A$. ($X$ and $\emptyset$). On the other hand, since an arbitrary intersection of closed sets is closed and an arbitrary union of open sets is open, there exist both the smallest closed set containing $A$ and the largest open set contained in $A$. We define them as follows.
 
 ::: Definition 5
 For any subset $A$ of a topological space $X$, we call the smallest closed set containing $A$ the *closure* of $A$, and the largest open set contained in $A$ the *interior* of $A$, and denote them by $\cl(A)$ and $\interior(A)$, respectively.

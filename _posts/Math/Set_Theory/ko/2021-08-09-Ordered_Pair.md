@@ -73,7 +73,7 @@ $$F=\{(x_1,f(x_1)), (x_2,f(x_2)),\cdots\}$$
 순서쌍 $(x,y)$는 잘 정의된다는 것을 확인했지만, 이렇게 정의된 순서쌍이 일반적인 $x,y$에 대하여 $(x,y)\neq (y,x)$를 만족하는지는 확인해봐야 한다.
 
 ::: 명제 6
-두 순서쌍 $(x,y)$, $(x',y')$에 대하여, <phrase>$(x,y)=(x',y')$인 것</phrase>과 <phrase>$x=x'$이고 $y=y'$인 것</phrase>이 서로 동치이다.
+두 순서쌍 $(x,y)$, $(x',y')$에 대하여, $(x,y)=(x',y')$인 것과 $x=x'$이고 $y=y'$인 것이 서로 동치이다.
 :::
 ::: 증명
 $x=x'$이고 $y=y'$라면 $(x,y)=(x', y')$인 것은 자명하다. $\{x\}=\{x'\}$이고 $\{x,y\}=\{x', y'\}$이기 때문이다.  
@@ -130,7 +130,7 @@ $$\{z\mid(z=(x,y))\wedge (x\in A)\wedge(y\in B)\}$$
 두 곱집합 $A\times B$와 $A'\times B'$가 동일해질 조건을 알기 위해서는 하나의 곱집합이 다른 곱집합에 언제 <em-ko>포함되는지</em-ko>만 확실하게 결정해주면 된다. 
 
 ::: 명제 9
-네 집합 $A$, $B$, $A'$, $B'$에 대하여 $A'$와 $B'$가 공집합이 아니라 하면, <phrase>$A'\times B'\subseteq A\times B$인 것</phrase>과 <phrase>$A'\subseteq A$이고 $B'\subseteq B$인 것</phrase>이 동치이다.
+네 집합 $A$, $B$, $A'$, $B'$에 대하여 $A'$와 $B'$가 공집합이 아니라 하면, $A'\times B'\subseteq A\times B$인 것과 $A'\subseteq A$이고 $B'\subseteq B$인 것이 동치이다.
 :::
 ::: 증명
 먼저, $A'\times B'\subseteq A\times B$라 가정하자. $A'\subseteq A$를 보여야 하므로, 임의의 $a'\in A'$가 주어졌다 하고 $a'\in A$임을 보이자.  
@@ -143,7 +143,7 @@ $z'=(a',b')$이라 하자. 즉 $a'\in A'$, $b'\in B'$인데, 가정에 의해 $a
 $A,B$ 둘 중 하나가 공집합일 때는 다음 명제를 적용할 수 있다.
 
 ::: 명제 10
-두 집합 $A$, $B$에 대하여, <phrase>$A\times B=\emptyset$인 것</phrase>과 <phrase>$A=\emptyset$이거나 $B=\emptyset$인 것</phrase>이 동치이다.
+두 집합 $A$, $B$에 대하여, $A\times B=\emptyset$인 것과 $A=\emptyset$이거나 $B=\emptyset$인 것이 동치이다.
 :::
 ::: 증명
 우선 $A\times B=\emptyset$이라 하자. 만일 $A$, $B$가 모두 공집합이 아니라 하면, 우리는 어떤 $a\in A$와 $b\in B$를 뽑아올 수 있으므로 $(a,b)\in A\times B$가 되어 모순이다. 

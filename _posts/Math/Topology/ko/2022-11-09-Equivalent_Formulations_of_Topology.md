@@ -53,7 +53,7 @@ $$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 이로부터 다음의 정리가 얻어진다.
 
 ::: 정리 2
-[정의 1](#def1){: data-lid="es421" }의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 <phrase>$\cl(C)=C$를 만족하는 모든 $C$들의 모임</phrase>으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-lid="hnwpo" }의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
+[정의 1](#def1){: data-lid="es421" }의 조건을 모두 만족하는 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 주어졌다 하자. $\mathcal{C}$를 $\cl(C)=C$를 만족하는 모든 $C$들의 모임으로 정의하면, $\mathcal{C}$는 [§집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2){: data-lid="hnwpo" }의 조건을 모두 만족하며 따라서 유일한 위상구조를 정의한다.
 :::
 
 물론 집합의 interior를 이용하여도 어렵지 않게 위상구조를 하나 정의할 수 있다. 이 경우, interior operator $\interior$가 만족해야 할 공리들은 다음과 같다.

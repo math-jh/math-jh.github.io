@@ -33,7 +33,7 @@ weight: 14
 이 경우, 우리는 $A$가 <em-ko>$R$에 의해 순서가 부여되었다</em-ko>고 하고, 종종 $A$를 *ordered set<sub>순서집합</sub>*이라고 부른다. 또, 동치관계 때와 비슷하게 $x\mathrel{R}y$를 $x\leq_{\tiny R}y$로 적는다. 
 
 ::: 예시 3
-이항관계 <phrase>$x=y$</phrase>는 order relation이다. 관계 <phrase>$x\subseteq y$</phrase> 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2){: data-lid="xlgon" }와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3){: data-lid="fy2i4" }, 그리고 antisymmetry는 [§ZFC 공리계, ⁋The Axiom of Extensionality.](/ko/math/set_theory/zfc_axioms#axiom-extensionality){: data-lid="0fiq0" })
+이항관계 $x=y$는 order relation이다. 관계 $x\subseteq y$ 또한 order relation이다. ([§순서쌍, ⁋명제 2](/ko/math/set_theory/ordered_pair#prop2){: data-lid="xlgon" }와 [§순서쌍, ⁋명제 3](/ko/math/set_theory/ordered_pair#prop3){: data-lid="fy2i4" }, 그리고 antisymmetry는 [§ZFC 공리계, ⁋The Axiom of Extensionality.](/ko/math/set_theory/zfc_axioms#axiom-extensionality){: data-lid="0fiq0" })
 :::
 
 Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로, 이들 사이의 함수를 생각할 때는 $\leq$ 또한 보존하는 함수를 주로 생각하게 된다. 특별히 다음을 정의한다.

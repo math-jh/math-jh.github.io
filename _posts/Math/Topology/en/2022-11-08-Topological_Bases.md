@@ -64,10 +64,10 @@ Let $X$ be a topological space and let $A$ be a subset of $X$. A *local base* at
 As in [§Open Sets, ⁋Definition 4](/en/math/topology/open_sets#def4){: data-lid="3m9t1" }, when $A$ is a singleton $\{x\}$, we call a local base at $A$ a local base at the point $x$. Then the following holds.
 
 ::: Proposition 5
-Let $(X,\mathcal{T})$ be a topological space. Then a subset $\mathcal{B}$ of $\mathcal{T}$ is a base for $X$ if and only if for each $x\in X$, the <phrase>elements of $\mathcal{B}$ containing $x$</phrase> form a local base at $x$.
+Let $(X,\mathcal{T})$ be a topological space. Then a subset $\mathcal{B}$ of $\mathcal{T}$ is a base for $X$ if and only if for each $x\in X$, the elements of $\mathcal{B}$ containing $x$ form a local base at $x$.
 :::
 ::: Proof
-For convenience, let us denote by $\mathcal{B}(x)$ the <phrase>collection of elements of $\mathcal{B}$ containing $x$</phrase>.
+For convenience, let us denote by $\mathcal{B}(x)$ the collection of elements of $\mathcal{B}$ containing $x$.
 
 First, suppose that $\mathcal{B}$ is a base for $X$, and pick an arbitrary point $x\in X$ and a neighborhood $V$. Then there exists an open set $U$ such that $x\in U\subseteq V$. Since $\mathcal{B}$ is a base for $X$, there exist $U_i\in\mathcal{B}$ such that $U=\bigcup U_i$. Since $x\in U$, we have $x\in U_i$ for some $i$, and therefore $U_i\in\mathcal{B}(x)$.
 
@@ -85,7 +85,7 @@ Let $X$ be a set, and let $\mathcal{B}$ be a subset of $\mathcal{P}(X)$ satisfyi
 Then there exists a unique topology $\mathcal{T}$ on $X$ such that $\mathcal{B}$ is a base for this topology $\mathcal{T}$.
 :::
 ::: Proof
-Define $\mathcal{B}(x)$ to be the <phrase>collection of elements of $\mathcal{B}$ containing $x$</phrase>, just as in the proof of the previous proposition. Also define
+Define $\mathcal{B}(x)$ to be the collection of elements of $\mathcal{B}$ containing $x$, just as in the proof of the previous proposition. Also define
 
 $$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\mathop{\uparrow}B$$
 
