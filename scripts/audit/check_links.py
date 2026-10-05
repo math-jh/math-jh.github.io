@@ -83,7 +83,9 @@ POST_NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
 # multiple links on the same line.  The image regex is matched FIRST and
 # any matched span is removed from the line before scanning for plain links.
 IMG_RE = re.compile(r"!\[(?P<alt>[^\]]*)\]\((?P<target>[^)\s]+)(?:\s+\"[^\"]*\")?\)")
-LINK_RE = re.compile(r"\[(?P<text>[^\]]+)\]\((?P<target>[^)\s]+)(?:\s+\"[^\"]*\")?\)")
+# 라벨은 이스케이프된 문자(`\[정수론\]` 같은 카테고리 접두)를 한 덩어리로 받고, 이스케이프
+# 안 된 `[`·`]` 는 받지 않는다. md_lint `_LINK_ALL_RE` 와 같은 규칙이다.
+LINK_RE = re.compile(r"\[(?P<text>(?:\\.|[^\[\]\\])+)\]\((?P<target>[^)\s]+)(?:\s+\"[^\"]*\")?\)")
 
 # Detect literal "img" placeholders such as ![img](img) or src=img.
 PLACEHOLDER_IMG_RE = re.compile(r"!\[\s*img\s*\]\(\s*img\s*\)|src=[\"']?img[\"']?", re.I)

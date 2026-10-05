@@ -687,8 +687,10 @@ _POLISH_FM_FIELDS_PROMPT = """Contrast the current English Jekyll frontmatter va
 
 The Korean values are the sole authority for meaning. Repair any mistranslation, omission, or unsupported detail in the current English. Do not add mathematical facts, qualifications, examples, or interpretations that are absent from the Korean. If the Korean appears mathematically wrong, inconsistent, or awkward, preserve what it says in faithful English; a separate read-only checker handles Korean-source errors.
 
+Title: if a current English title is given, return it VERBATIM unless it misstates what the Korean title names (a different concept, or a missing or extra qualifier that changes the subject). Other posts cite the title verbatim, so a cosmetic change breaks those citations. Do not restyle it: keep its articles, singular/plural, word order, phrasing ("Computing X" stays "Computing X", not "Computation of X"), prepositions, capitalization, and dashes, even where a more literal rendering of the Korean would differ.
+
 Style:
-- title: a concise English noun phrase using canonical mathematical terminology.
+- title: a concise English noun phrase using canonical mathematical terminology (only when there is no current title, or it must be corrected as above).
 - excerpt: a short phrase (at most 12 words) describing only the Korean topic.
 - description: 1–2 natural English sentences containing only claims supported by the Korean.
 - No Korean characters, math notation, escape characters, or surrounding quotes inside values.
@@ -700,6 +702,19 @@ Current English values (JSON):
 {en_json}
 
 Required output keys: {keys}"""
+
+
+def _title_key(title: str) -> str:
+    """제목 비교 키: 대소문자·선행 관사 The·대시 종류·단어 끝 복수 s 를 지운다."""
+    t = re.sub(r"[‐-―]", "-", title.casefold()).strip()
+    t = re.sub(r"^the\s+", "", t)
+    def singular(w: str) -> str:
+        if len(w) > 4 and w.endswith("ies"):
+            return w[:-3] + "y"
+        if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
+            return w[:-1]
+        return w
+    return " ".join(singular(w) for w in re.findall(r"\w+", t))
 
 
 def _polish_fm_fields(ko_fields: dict, en_fields: dict) -> dict:
@@ -718,7 +733,14 @@ def _polish_fm_fields(ko_fields: dict, en_fields: dict) -> dict:
         raise RuntimeError(
             f"frontmatter-fields polish: invalid JSON output ({e}): {out[:200]!r}"
         )
-    return {k: str(data.get(k, "")).strip() for k in ko_fields}
+    polished = {k: str(data.get(k, "")).strip() for k in ko_fields}
+    # 제목은 다른 글이 그대로 인용하므로, 관사·단복수·대소문자·대시만 다른 변경은
+    # 프롬프트 준수와 무관하게 기존 제목으로 되돌린다.
+    current_title = en_fields.get("title")
+    if current_title and polished.get("title") \
+            and _title_key(polished["title"]) == _title_key(current_title):
+        polished["title"] = current_title
+    return polished
 
 
 def _compose_en_frontmatter(
@@ -3732,6 +3754,23 @@ def main() -> int:
                 log(f"SWEEP ({key}): {ln}")
         except Exception as e:
             log(f"SWEEP exception (non-fatal): {_flat(e)[:160]}")
+
+        # 폴리싱이 EN 제목을 바꿨으면 이 글을 인용하는 다른 EN 글의 `§옛 제목`을
+        # 새 제목으로 맞춘다. 형제 파일은 위 sweep 과 같이 워킹트리에 남긴다.
+        if reason == "polish" and en_old_snapshot:
+            old_title = _extract_fm_scalar(_split_fm_block(en_old_snapshot)[0], "title")
+            new_title = _extract_fm_scalar(
+                _split_fm_block(en_path.read_text(encoding="utf-8"))[0], "title")
+            if old_title and new_title and old_title != new_title:
+                try:
+                    from section_anchor_gate import sweep_title
+                    tres = sweep_title(en_path, old_title, new_title, apply=True)
+                    log(f"RETITLE ({key}): {old_title} → {new_title}, "
+                        f"인용 {len(tres.repairs)}편 갱신")
+                    for ln in tres.log_lines:
+                        log(f"RETITLE ({key}): {ln}")
+                except Exception as e:
+                    log(f"RETITLE exception (non-fatal): {_flat(e)[:160]}")
         return 0
     finally:
         if file_lease is not None:

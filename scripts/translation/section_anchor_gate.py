@@ -36,6 +36,8 @@ CLI:
   section_anchor_gate.py check  <en-file>... [--mdlint]
   section_anchor_gate.py repair <en-file>... [--apply]
   section_anchor_gate.py sweep  <en-file>    [--apply]   # 이 글을 가리키는 링크 해소
+  section_anchor_gate.py retitle <en-file> --old "옛 제목" [--apply]
+                                          # 이 글을 인용하는 §옛 제목 → 현재 title
   section_anchor_gate.py audit  [--apply]                # 전 EN 코퍼스
 """
 
@@ -467,6 +469,74 @@ def sweep_target(en_path: Path, apply: bool = True) -> GateResult:
     return agg
 
 
+# 제목 cascade 용 링크: 앵커는 있어도 없어도 된다. 라벨은 `\[범주\]` 접두를 포함한
+# 이스케이프 문자만 받는다 (bare 대괄호 형태는 normalize_citation_brackets 가 먼저 고친다).
+TITLE_LINK_RE = re.compile(
+    r"\[(?P<text>(?:\\.|[^\[\]\\\n])*)\]"
+    r"\((?P<path>/en/[^)\s#]*)(?:#[^)\s]*)?\)"
+)
+
+
+def retitle_text(text: str, target_pl: str, old: str, new: str) -> tuple[str, int]:
+    """target_pl 을 가리키는 링크 라벨의 `§old` 를 `§new` 로 바꾼다.
+
+    `§old` 는 라벨 맨 앞이나 공백(범주 접두) 뒤에서 시작해 `,` 나 라벨 끝에서 끝나야
+    한다 — `§§섹션명` 과 제목이 old 로 시작하는 다른 글의 인용은 건드리지 않는다.
+    보호구간(수식·코드·fenced-div 여는 줄) 안의 링크는 건너뛴다."""
+    pat = re.compile(r"(?<!\S)§" + re.escape(old) + r"(?=,|$)")
+    protected = _normalization_protected_spans(text)
+    out, last, n = [], 0, 0
+    for m in TITLE_LINK_RE.finditer(text):
+        if m.group("path").rstrip("/") != target_pl:
+            continue
+        if any(a <= m.start() < b for a, b in protected):
+            continue
+        label, k = pat.subn("§" + new.replace("\\", "\\\\"), m.group("text"), count=1)
+        if not k:
+            continue
+        out.append(text[last:m.start("text")])
+        out.append(label)
+        last = m.end("text")
+        n += 1
+    out.append(text[last:])
+    return "".join(out), n
+
+
+def sweep_title(en_path: Path, old: str, new: str, apply: bool = True) -> GateResult:
+    """en_path 글의 EN 제목이 old → new 로 바뀐 직후: 이 글을 인용하는 다른 EN 글의
+    `§old` 표시명을 new 로 맞춘다. 폴리싱이 제목을 다듬으면 인용 쪽이 옛 제목으로
+    남아 md_lint 와 링크 정규화 로그에 쌓이기 때문이다. sweep_target 과 같이 고친
+    형제 파일은 커밋하지 않고 워킹트리에 남긴다 — autopush 가 라벨 치환을 mechanical
+    로 분류해 그 글들의 수정일을 건드리지 않는다."""
+    agg = GateResult()
+    me = _post_of(en_path)
+    if me is None or not me.permalink or not old or not new or old == new:
+        return agg
+    target_pl = me.permalink.rstrip("/")
+    needle = f"§{old}"
+    for p in _posts():
+        if p.lang != "en" or p.path == me.path:
+            continue
+        if needle not in p.path.read_text(encoding="utf-8"):
+            continue
+        lease = acquire_file_locks([p.path], wait_sec=900)
+        if lease is None:
+            agg.defers.append(f"content lock timeout: {p.path.relative_to(ROOT)}")
+            continue
+        try:
+            text = p.path.read_text(encoding="utf-8")
+            updated, n = retitle_text(text, target_pl, old, new)
+            if not n:
+                continue
+            if apply:
+                p.path.write_text(updated, encoding="utf-8")
+            agg.repairs.append(f"{p.path.relative_to(ROOT)}: §{old} → §{new} ({n}곳)")
+            agg.changed = True
+        finally:
+            lease.release()
+    return agg
+
+
 # ── CLI ────────────────────────────────────────────────────────────────────
 
 def _report(res: GateResult, applied: bool) -> None:
@@ -488,6 +558,10 @@ def main() -> int:
     s = sub.add_parser("sweep")
     s.add_argument("files", nargs=1)
     s.add_argument("--apply", action="store_true")
+    s = sub.add_parser("retitle")
+    s.add_argument("files", nargs=1)
+    s.add_argument("--old", required=True)
+    s.add_argument("--apply", action="store_true")
     s = sub.add_parser("audit")
     s.add_argument("--apply", action="store_true")
     args = ap.parse_args()
@@ -500,6 +574,9 @@ def main() -> int:
 
     if args.cmd == "sweep":
         agg = sweep_target(targets[0], apply=args.apply)
+    elif args.cmd == "retitle":
+        me = _post_of(targets[0])
+        agg = sweep_title(targets[0], args.old, me.title if me else "", apply=args.apply)
     else:
         apply = args.cmd != "check" and args.apply
         for f in targets:

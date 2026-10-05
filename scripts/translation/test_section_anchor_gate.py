@@ -143,5 +143,34 @@ class CitationBracketNormalizationTest(unittest.TestCase):
             self.assertIn("[\\[Set Theory\\] §Functions]", path.read_text())
 
 
+class RetitleTest(unittest.TestCase):
+    TARGET = "/en/math/commutative_algebra/basic_notions"
+
+    def test_renames_only_matching_citations_of_the_target(self) -> None:
+        source = (
+            'By [\\[Commutative Algebra\\] §Basic Notions, ⁋Theorem 3]'
+            '(/en/math/commutative_algebra/basic_notions#thm3){: data-lid="aaaaa" } '
+            'and [§Basic Notions](/en/math/commutative_algebra/basic_notions), '
+            'see [§Basic Notions, §§Rings](/en/math/commutative_algebra/basic_notions#rings).\n'
+            'Other: [§Basic Notions of Rings](/en/math/commutative_algebra/basic_notions) '
+            '[§Basic Notions](/en/math/ring_theory/basic_notions).\n'
+            '`[§Basic Notions](/en/math/commutative_algebra/basic_notions)`\n'
+        )
+
+        actual, n = gate.retitle_text(source, self.TARGET, "Basic Notions", "Basic Concepts")
+
+        self.assertEqual(n, 3)
+        self.assertEqual(
+            actual,
+            'By [\\[Commutative Algebra\\] §Basic Concepts, ⁋Theorem 3]'
+            '(/en/math/commutative_algebra/basic_notions#thm3){: data-lid="aaaaa" } '
+            'and [§Basic Concepts](/en/math/commutative_algebra/basic_notions), '
+            'see [§Basic Concepts, §§Rings](/en/math/commutative_algebra/basic_notions#rings).\n'
+            'Other: [§Basic Notions of Rings](/en/math/commutative_algebra/basic_notions) '
+            '[§Basic Notions](/en/math/ring_theory/basic_notions).\n'
+            '`[§Basic Notions](/en/math/commutative_algebra/basic_notions)`\n',
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
