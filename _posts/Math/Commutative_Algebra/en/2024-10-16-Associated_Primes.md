@@ -165,7 +165,7 @@ First, setting $M=A$, we have $\ann A=\{0\}$. Therefore, the minimal prime ideal
 
 Moreover, if $A$ is a reduced ring, their union is precisely the collection of all zero-divisors of $A$. To verify this, first observe that from the assumption that $A$ is reduced,
 
-$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}\supseteq \bigcap_{i=1}^k \mathfrak{p}_i$$
+$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime}\mathfrak{p}= \bigcap_{i=1}^k \mathfrak{p}_i$$
 
 holds. Then for any zero-divisor $a\neq 0$ and any element with $ab=0$ satisfying $b\neq 0$, we must have $b\not\in \mathfrak{p}_i$ for some $\mathfrak{p}_i$, and then since $ab=0\in \mathfrak{p}_i$, we must have $a\in \mathfrak{p}_i$.
 
