@@ -3541,6 +3541,7 @@
 "fgdns": {relation: required, reviewed: true}
 "fgneo": {relation: weak, reviewed: true}
 "fgqkc": {relation: required, reviewed: true}
+"fgugn": {relation: required}
 "fh6iy": {relation: weak, reviewed: true}
 "fherk": {relation: required, reviewed: true}
 "fhfti": {relation: required, reviewed: true}
