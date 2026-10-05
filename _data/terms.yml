@@ -1278,6 +1278,13 @@ B:
   see:
   - label: Base
     id: base
+- id: base_point
+  en: base point
+  ko: 기저점
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피'
+    url: /ko/math/algebraic_topology/homotopy
 - id: base_space
   en: base space
   ko: 기저공간
@@ -5410,6 +5417,13 @@ D:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: dominant_rational_map
+  en: dominant rational map
+  ko: 우세 유리사상
+  primary: en
+  defs:
+  - label: '[대수다양체] §유리사상'
+    url: /ko/math/algebraic_varieties/rational_maps
 - id: double_complex
   en: double complex
   ko: 이중사슬복합체
@@ -6173,6 +6187,13 @@ E:
     id: short_exact_sequence
   - label: Long exact sequence
     id: long_exact_sequence
+- id: exceptional_divisor
+  en: exceptional divisor
+  ko: 예외 인자
+  primary: en
+  defs:
+  - label: '[대수다양체] §유리사상'
+    url: /ko/math/algebraic_varieties/rational_maps
 - id: exceptional_inverse_image
   en: exceptional inverse image
   ko: 예외 역상
