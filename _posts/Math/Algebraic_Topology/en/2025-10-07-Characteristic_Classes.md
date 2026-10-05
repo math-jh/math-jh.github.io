@@ -144,7 +144,7 @@ becomes a fiber bundle with fiber $S^{n-1}$. This is called the *sphere bundle* 
 
 $$D(E)=\{v\in E:\lvert v\rvert\leq 1\}$$
 
-with fiber the disk $D^n$ is called the *disk bundle*. For convenience we used a metric, but this is not essential; what matters is that for the space $E_0=E\setminus 0(B)$ with the zero section removed, this pair $(D(E), S(E))$ is homotopy equivalent to $(E, E_0)$. To see this, one first excises the exterior of $D(E)$ using [§Computation of Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="orq20" } to obtain
+with fiber the disk $D^n$ is called the *disk bundle*. For convenience we used a metric, but this is not essential; what matters is that for the space $E_0=E\setminus 0(B)$ with the zero section removed, this pair $(D(E), S(E))$ is homotopy equivalent to $(E, E_0)$. To see this, one first excises the exterior of $D(E)$ using [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="orq20" } to obtain
 
 $$H^\ast(E, E_0)\cong H^\ast\bigl(D(E), D(E)\setminus 0(B)\bigr)$$
 

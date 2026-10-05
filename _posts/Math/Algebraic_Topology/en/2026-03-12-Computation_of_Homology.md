@@ -1,5 +1,5 @@
 ---
-title: "Computation of Homology"
+title: "Computing Homology"
 description: "Practical tools for computing homology are covered, with homology analyzed using adjoint functors and colimit-preserving properties from category theory, and computation techniques examined through the definition of relative homology and long exact sequences. Concrete computation processes utilizing abelianization and colimit preservation are addressed."
 excerpt: "Practical computation of homology via relative homology and Mayer-Vietoris"
 

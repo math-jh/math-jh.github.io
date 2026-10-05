@@ -23,7 +23,7 @@ naturally has the structure of a graded $A$-module.
 
 ## Ideal Quotient
 
-First, recall the definition of the ideal quotient for an arbitrary ring $A$ and two ideals $\mathfrak{a}, \mathfrak{b}$ of $A$. ([§Basic Concepts, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-lid="76u4p" })
+First, recall the definition of the ideal quotient for an arbitrary ring $A$ and two ideals $\mathfrak{a}, \mathfrak{b}$ of $A$. ([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-lid="76u4p" })
 
 ::: Definition 1
 For a ring $A$ and two ideals $\mathfrak{a}, \mathfrak{b}$ of $A$, we define the *ideal quotient* by the formula

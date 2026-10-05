@@ -30,7 +30,7 @@ Next, we prove that
 
 As seen in [§Ordinals and Well-Ordered Sets, ⁋Example 3](/en/math/set_theory/ordinals#ex3){: data-lid="yg6uq" }, many ordered sets are not well-ordered sets, so the condition of the above proposition might seem very restrictive; however, using the Axiom of Choice properly, we can prove the following theorem.
 
-::: Theorem 1. (Zermelo)
+::: Theorem 1 (Zermelo)
 Every set $A$ can be endowed with a well-ordering.
 :::
 

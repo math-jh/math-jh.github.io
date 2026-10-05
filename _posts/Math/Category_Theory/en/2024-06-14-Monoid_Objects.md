@@ -1,5 +1,5 @@
 ---
-title: "Monoid Object"
+title: "Monoid Objects"
 description: "A monoid object is an object in a monoidal category defined by multiplication and unit morphisms. It categorically unifies diverse algebraic structures ranging from ordinary monoids to topological monoids, associative algebras, and differential graded algebras."
 excerpt: "Monoid objects in a monoidal category and their examples"
 

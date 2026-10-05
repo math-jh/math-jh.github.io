@@ -31,7 +31,7 @@ weight: 21
 
 는 것을 증명한다. [§서수와 정렬집합, ⁋예시 3](/ko/math/set_theory/ordinals#ex3){: data-lid="yg6uq" }에서 보았듯 많은 ordered set은 well-ordered set이 아니므로 위의 명제의 조건이 매우 까다로운 것처럼 보이지만, 사실 선택공리를 잘 사용하면 다음의 정리를 보일 수 있다.
 
-::: 정리 1. (Zermelo)
+::: 정리 1 (Zermelo)
 임의의 집합 $A$에 well-ordering을 줄 수 있다.
 :::
 

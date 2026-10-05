@@ -35,7 +35,7 @@ $$H^p(X, \Omega^q\otimes \mathcal{L})=0$$
 holds. 
 :::
 
-The first statement is obtained from the second by setting $q=n$, and we have already seen it in [§The Riemann-Roch Theorem on Surfaces, ⁋Proposition 7](/en/math/algebraic_varieties/riemann_roch_surfaces#prop7){: data-lid="cptbb" }. The second statement extends this to an arbitrary form degree $q$ and is called Akizuki–Nakano vanishing. The proof of this proposition is quite technical, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
+The first statement is obtained from the second by setting $q=n$, and we have already seen it in [§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 7](/en/math/algebraic_varieties/riemann_roch_surfaces#prop7){: data-lid="cptbb" }. The second statement extends this to an arbitrary form degree $q$ and is called Akizuki–Nakano vanishing. The proof of this proposition is quite technical, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
 
 As can be seen from the statement of the proposition, Kodaira vanishing eliminates higher cohomology after twisting by the canonical bundle. Using Serre duality, this can be rewritten as the following equivalent statement.
 
@@ -87,7 +87,7 @@ Now, as previewed earlier, we examine applications of the Kodaira vanishing theo
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-is given. ([§The Riemann-Roch Theorem on Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4){: data-lid="wvvyf" }) The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the values of the higher cohomologies separately, so the Riemann–Roch formula alone does not give a direct answer.
+is given. ([§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4){: data-lid="wvvyf" }) The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the values of the higher cohomologies separately, so the Riemann–Roch formula alone does not give a direct answer.
 
 In this situation, to use the Kodaira vanishing theorem, if we suppose that $\mathcal{L}\cong \mathcal{O}_S(L)$ is an ample line bundle, we know that
 
@@ -99,11 +99,11 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$
 
 and therefore we can obtain $h^0(S, \omega_S \otimes \mathcal{L})$ directly just by computing the right-hand side of the Riemann–Roch formula.
 
-Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$ and is a birational invariant of surfaces. ([§The Riemann-Roch Theorem on Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12){: data-lid="xcg60" }) Kodaira vanishing can be used directly to compute these invariants.
+Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$ and is a birational invariant of surfaces. ([§The Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12){: data-lid="xcg60" }) Kodaira vanishing can be used directly to compute these invariants.
 
 For example, in the case of a curve $C$, we know that its plurigenera are determined by the genus, and in fact $P_m(g)$ is given as a function of $g$ (and $m$). That is, essentially for a curve $C$, the plurigenus is not an interesting invariant. The case where this is interesting is in higher dimensions such as surfaces, where birational invariants are not determined by a single number and all plurigenera become genuinely necessary.
 
-As seen in [§The Riemann-Roch Theorem on Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces){: data-lid="tbmti" }, for a surface $S$ and a divisor $D$ on it, the Riemann–Roch formula is given by
+As seen in [§The Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces){: data-lid="tbmti" }, for a surface $S$ and a divisor $D$ on it, the Riemann–Roch formula is given by
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 

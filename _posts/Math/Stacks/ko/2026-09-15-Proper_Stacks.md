@@ -46,7 +46,7 @@ Scheme theory에서 다룬 많은 성질들이 그러하듯, properness 또한 s
 
 ## Valuative criterion
 
-Scheme에서 separatedness와 universally closedness를 직접 확인하는 대신 valuation ring을 이용해 판정했던 것처럼 ([\[스킴\] §값매김환, ⁋정리 6](/ko/math/scheme_theory/valuative_criteria#thm6){: data-lid="0ahsc" }, [⁋정리 11](/ko/math/scheme_theory/valuative_criteria#thm11){: data-lid="j8m6v" }), stack에서도 대상의 properness를 판별하는 핵심 도구는 discrete valuation ring을 통한 valuative criterion이다. 
+Scheme에서 separatedness와 universally closedness를 직접 확인하는 대신 valuation ring을 이용해 판정했던 것처럼 ([\[스킴\] §값매김환, ⁋정리 6](/ko/math/scheme_theory/valuative_criteria#thm6){: data-lid="0ahsc" }, [\[스킴\] §값매김환, ⁋정리 11](/ko/math/scheme_theory/valuative_criteria#thm11){: data-lid="j8m6v" }), stack에서도 대상의 properness를 판별하는 핵심 도구는 discrete valuation ring을 통한 valuative criterion이다. 
 
 Complete discrete valuation ring $A$의 fraction field를 $K$라 하고, generic point inclusion을 $j:\Spec K\rightarrow\Spec A$로 쓰자. $\mathcal{X}$의 $K$-object $\xi_K$는 morphism $\Spec K\rightarrow\mathcal{X}$과 같은 자료이다. Scheme에서 이를 $A$ 위로 연장한다는 것은 $j^\ast\xi_A=\xi_K$가 되는 $A$-point를 찾는 것이었으나, stack에서는 다이어그램이 strictly commute하는 대신 $2$-categorical sense에서 isomorphism들을 올바르게 bookkeeping해야 한다. 즉 이를 $A$ 위로 연장한다는 것은 $\xi_A\in\mathcal{X}(A)$와 함께 지정된 isomorphism
 

@@ -21,7 +21,7 @@ In fact, cohomology provides a more refined invariant than homology: for instanc
 
 ## The Universal Coefficient Theorem for Homology
 
-Before beginning the discussion in earnest, we first look at homology with coefficients, which was treated after [§Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="071az" }. We have seen that when defining simplicial homology or singular homology, instead of the chain groups $C_\bullet(X)$ or $C_\bullet^\Delta(X)$, by taking the tensor product with an abelian group $A$ we obtain the chain complexes
+Before beginning the discussion in earnest, we first look at homology with coefficients, which was treated after [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="071az" }. We have seen that when defining simplicial homology or singular homology, instead of the chain groups $C_\bullet(X)$ or $C_\bullet^\Delta(X)$, by taking the tensor product with an abelian group $A$ we obtain the chain complexes
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
@@ -80,7 +80,7 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 
 ## Definition of Cohomology and the Universal Coefficient Theorem
 
-Just as in [§Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="5a8ej" }, we can define the Eilenberg-Steenrod axioms for cohomology, and call a contravariant functor and connecting morphisms satisfying them cohomology. Written explicitly, this is as follows.
+Just as in [§Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="5a8ej" }, we can define the Eilenberg-Steenrod axioms for cohomology, and call a contravariant functor and connecting morphisms satisfying them cohomology. Written explicitly, this is as follows.
 
 ::: Definition 2 (Eilenberg-Steenrod axioms)
 For contravariant functors $H^k$ from the category of pairs of topological spaces to the category of abelian groups, and natural transformations between them
@@ -90,7 +90,7 @@ $$\delta: H^k(A) \rightarrow H^{k+1}(X,A)$$
 the *Eilenberg-Steenrod axioms* refer to the following axioms:
 
 - (Homotopy) If two homotopic maps $(X,A) \rightarrow (Y,B)$ are given, the two homomorphisms $H^k(Y,B) \rightarrow H^k(X,A)$ they induce are also identical.
-- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computation of Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="opm3m" }, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$ induces an isomorphism.
+- (Excision) For $(X,A,Z)$ satisfying the conditions of [§Computing Homology, ⁋Theorem 2](/en/math/algebraic_topology/computation_of_homology#thm2){: data-lid="opm3m" }, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$ induces an isomorphism.
 - (Dimension) For a one-point space $\ast$, $H^k(\ast)=0$ holds for all $k>0$.
 - (Additivity) If $X=\coprod X_\alpha$, then $H^k(X)\cong\prod H^k(X_\alpha)$.
 - (Exactness) Each pair $(X,A)$ and the two inclusions $(A,\emptyset) \hookrightarrow (X,\emptyset)$ and $(X,\emptyset)\hookrightarrow (X,A)$ fit into the following long exact sequence:
@@ -244,7 +244,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## The Mayer-Vietoris Sequence
 
-Meanwhile, among the axioms of [Definition 2](#def2){: data-lid="k1d4c" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="8kgac" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="dvoei" } to [\[Algebraic Topology\] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="jl7od" }, starting from [Definition 2](#def2){: data-lid="bw236" }.
+Meanwhile, among the axioms of [Definition 2](#def2){: data-lid="k1d4c" }, the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="8kgac" }, and its proof is obtained by repeating the passage from [\[Algebraic Topology\] §Computing Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6){: data-lid="dvoei" } to [\[Algebraic Topology\] §Computing Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7){: data-lid="jl7od" }, starting from [Definition 2](#def2){: data-lid="bw236" }.
 
 ::: Proposition 6 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union $X=U\cup V$ of two open sets, and consider a cohomology theory $H$ defined on it. Then there exists a long exact sequence

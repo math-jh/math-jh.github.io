@@ -1,5 +1,5 @@
 ---
-title: "Jordan-Hölder Theorem"
+title: "The Jordan-Hölder Theorem"
 description: "The Jordan-Hölder theorem, which shows that a module with a finite composition series is both Artinian and Noetherian, is treated from the perspective of module theory."
 excerpt: "Uniqueness of composition series and well-definedness of length"
 
@@ -94,7 +94,7 @@ First, assume the first condition and show the second condition. Suppose for con
 
 $$0\longrightarrow A/(\mathfrak{a}:(a))\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
 
-([§Basic Concepts, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-lid="8g52i" }). Now, since $\mathfrak{a}+(a)$ is an ideal strictly containing $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ must have finite length. On the other hand, from the definition we have $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$, and if $b\not\in \mathfrak{a}$, then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so likewise by the definition of $\mathfrak{a}$, $A/(\mathfrak{a}:(a))$ must have finite length. Therefore, through these composition series we obtain a composition series for $A/\mathfrak{a}$, and since this contradicts the assumption that $A/\mathfrak{a}$ does not have finite length, we have $b\in \mathfrak{a}$. That is, $\mathfrak{a}$ is a prime ideal. Now, by the assumption of condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length; thus we obtain the desired result.
+([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-lid="8g52i" }). Now, since $\mathfrak{a}+(a)$ is an ideal strictly containing $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ must have finite length. On the other hand, from the definition we have $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$, and if $b\not\in \mathfrak{a}$, then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so likewise by the definition of $\mathfrak{a}$, $A/(\mathfrak{a}:(a))$ must have finite length. Therefore, through these composition series we obtain a composition series for $A/\mathfrak{a}$, and since this contradicts the assumption that $A/\mathfrak{a}$ does not have finite length, we have $b\in \mathfrak{a}$. That is, $\mathfrak{a}$ is a prime ideal. Now, by the assumption of condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length; thus we obtain the desired result.
 
 Now, assuming the second condition, the third condition is immediate from [Theorem 3](#thm3){: data-lid="jo80n" }. Therefore, it suffices to assume the third condition and show the first condition. To this end, consider the collection of ideals obtained as products of maximal ideals of $A$. Then, since $A$ is Artinian, there exists a minimal ideal $\mathfrak{a}$ in this collection. Then $\mathfrak{a}=0$, and therefore the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
 

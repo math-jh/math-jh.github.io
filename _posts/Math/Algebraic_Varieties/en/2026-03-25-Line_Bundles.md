@@ -22,7 +22,7 @@ To overcome this restriction we introduce *line bundles*. A line bundle $\mathca
 
 ## Definition of Line Bundle
 
-Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1){: data-lid="qrl56" } or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2){: data-lid="u3jt3" }, etc.)
+Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in differential geometry and other fields. ([\[Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1){: data-lid="qrl56" } or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2){: data-lid="u3jt3" }, etc.)
 
 ::: Definition 1
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.

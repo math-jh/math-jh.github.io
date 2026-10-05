@@ -209,7 +209,7 @@ That is, every point of the affine line except the origin, which is the target o
 That this is not flat is because $(0,1)\neq 0$ while $t\cdot (0,1)=0$, so $t$ is a zerodivisor in $B$. ([Proposition 5](#prop5){: data-lid="35ij5" }) Since $X$ is reduced, we obtain the same conclusion from [Corollary 6](#cor6){: data-lid="k7pfj" } as well, because the isolated point among the two components cannot dominate $\mathbb{A}^1_\mathbb{K}$.
 :::
 
-The last example is the case where what is trapped is an embedded point ([§Algebraic Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" }); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([\[Commutative Algebra\] §Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
+The last example is the case where what is trapped is an embedded point ([§Algebraic Structure of Schemes, ⁋Definition 9](/en/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" }); this time neither the dimension nor the number of points changes, but the length of the fiber differs. ([\[Commutative Algebra\] §The Jordan-Hölder Theorem, ⁋Definition 2](/en/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
 
 ::: Example 10
 Consider the scheme morphism

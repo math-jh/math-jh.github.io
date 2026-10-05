@@ -22,11 +22,11 @@ Recall from [§System of Parameters, ⁋Proposition–Definition 3](/en/math/com
 A regular local ring is an integral domain.
 :::
 ::: Proof
-We proceed by induction on the dimension of $(A, \mathfrak{m})$. When $d=0$, $A$ is a field, so there is nothing to prove. Assume the claim holds whenever $\dim A=d$; we prove it for $\dim A=d+1$. Then $\mathfrak{m}\neq 0$, so [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-lid="lh3ee" } gives $\mathfrak{m}\neq \mathfrak{m}^2$. On the other hand, [§Associated Primes of Ideals, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7){: data-lid="39731" } tells us that $A$ has only finitely many minimal prime ideals; denote them by $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$. If
+We proceed by induction on the dimension of $(A, \mathfrak{m})$. When $d=0$, $A$ is a field, so there is nothing to prove. Assume the claim holds whenever $\dim A=d$; we prove it for $\dim A=d+1$. Then $\mathfrak{m}\neq 0$, so [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8){: data-lid="lh3ee" } gives $\mathfrak{m}\neq \mathfrak{m}^2$. On the other hand, [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7){: data-lid="39731" } tells us that $A$ has only finitely many minimal prime ideals; denote them by $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$. If
 
 $$\mathfrak{m}\subseteq \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k,$$
 
-then by [§Associated Primes of Ideals, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2){: data-lid="od8ng" } and the computation $\mathfrak{m}\neq \mathfrak{m}^2$ above, we would have $\mathfrak{m}=\mathfrak{p}_i$ for some $i$, which gives
+then by [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2){: data-lid="od8ng" } and the computation $\mathfrak{m}\neq \mathfrak{m}^2$ above, we would have $\mathfrak{m}=\mathfrak{p}_i$ for some $i$, which gives
 
 $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0,$$
 
@@ -114,7 +114,7 @@ By [Proposition 4](#prop4){: data-lid="im1uv" }, then, if two complete discrete 
 
 ## Serre's Normality Criterion
 
-First, for convenience, given a non-zerodivisor $u$ of a ring $A$, we will say that an associated prime ideal $\mathfrak{p}$ of $A/(u)$ is *associated to a non-zerodivisor $u$*. This is the same kind of exception as in [§Associated Primes of Ideals, ⁋Definition 1](/en/math/commutative_algebra/associated_primes#def1){: data-lid="lxmo0" }.
+First, for convenience, given a non-zerodivisor $u$ of a ring $A$, we will say that an associated prime ideal $\mathfrak{p}$ of $A/(u)$ is *associated to a non-zerodivisor $u$*. This is the same kind of exception as in [§Associated Primes, ⁋Definition 1](/en/math/commutative_algebra/associated_primes#def1){: data-lid="lxmo0" }.
 
 ::: Proposition 7
 Let $A$ be a reduced Noetherian ring and let $K$ be the total ring of fractions of $A$. Then an element $x\in K$ belongs to $A$ if and only if, for every prime ideal $\mathfrak{p}$ associated to a non-zerodivisor, the image of $x$ in $K_\mathfrak{p}$ belongs to $A_\mathfrak{p}$.
@@ -124,11 +124,11 @@ By definition, an element of $K$ is of the form $a/u$ for some $a\in A$ and a no
 
 $$\frac{a}{u}\in A\iff a\in (u)\iff a=0\mod{(u)}\iff \epsilon_\mathfrak{p}(a)= 0\text{ in $(A/(u))_\mathfrak{p}=A_\mathfrak{p}/(u)A_\mathfrak{p}$ for all $\mathfrak{p}$ associated prime of $A/(u)$}$$
 
-holds. Here $\epsilon_\mathfrak{p}: A \rightarrow A_\mathfrak{p}$ is the canonical morphism, and the last equivalence is due to [§Associated Primes of Ideals, ⁋Corollary 4](/en/math/commutative_algebra/associated_primes#cor4){: data-lid="fhk86" }. Then for every prime ideal $\mathfrak{p}$ associated to a non-zerodivisor,
+holds. Here $\epsilon_\mathfrak{p}: A \rightarrow A_\mathfrak{p}$ is the canonical morphism, and the last equivalence is due to [§Associated Primes, ⁋Corollary 4](/en/math/commutative_algebra/associated_primes#cor4){: data-lid="fhk86" }. Then for every prime ideal $\mathfrak{p}$ associated to a non-zerodivisor,
 
 $$\epsilon_\mathfrak{p}(a)\in(u)A_\mathfrak{p}.$$
 
-Meanwhile, since $A$ is reduced, $K$ is a finite direct product of fields ([§Associated Primes of Ideals, ⁋Corollary 8](/en/math/commutative_algebra/associated_primes#cor8){: data-lid="i7vk2" }), and since localization commutes with finite direct products, we can identify the total ring of fractions of $A_\mathfrak{p}$ with $K_\mathfrak{p}$. Reinterpreting the above inclusion through this identification yields the desired result.
+Meanwhile, since $A$ is reduced, $K$ is a finite direct product of fields ([§Associated Primes, ⁋Corollary 8](/en/math/commutative_algebra/associated_primes#cor8){: data-lid="i7vk2" }), and since localization commutes with finite direct products, we can identify the total ring of fractions of $A_\mathfrak{p}$ with $K_\mathfrak{p}$. Reinterpreting the above inclusion through this identification yields the desired result.
 :::
 
 From this we obtain the following.
@@ -200,7 +200,7 @@ is a minimal primary decomposition of $0$, then the $\mathfrak{p}_i$ appearing h
 
 Now we can apply [Proposition 7](#prop7){: data-lid="qujhb" }. By condition S2, every prime ideal $\mathfrak{p}$ associated to a non-zerodivisor has codimension $1$, and by condition R1, $A_\mathfrak{p}$ is a discrete valuation ring. If an element $x$ of the total ring of fractions $K$ of $A$ is integral over $A$, then the image of $x$ in $K_\mathfrak{p}$ is integral over $A_\mathfrak{p}$, and since a discrete valuation ring is a normal domain, it belongs to $A_\mathfrak{p}$. Therefore, by [Proposition 7](#prop7){: data-lid="6nn2i" }, $x\in A$, that is, $A$ is integrally closed in $K$.
 
-Meanwhile, since $A$ is reduced, $K$ is a finite direct product $K_1\times\cdots\times K_n$ of fields ([§Associated Primes of Ideals, ⁋Corollary 8](/en/math/commutative_algebra/associated_primes#cor8){: data-lid="oj2mo" }), and the idempotent $e_i\in K$ corresponding to each factor is a root of the monic polynomial $\x^2-\x$, hence integral over $A$, and therefore $e_i\in A$. Then, for any maximal ideal $\mathfrak{m}$ of $A$, since $A_\mathfrak{m}$ is a local ring its only idempotents are $0$ and $1$, and since $\sum_i e_i=1$, exactly one of the images of the $e_i$ is $1$ and the rest are $0$; it follows that $A_\mathfrak{m}$, being a localization of the subring $Ae_i$ of the field $K_i$, is a domain. Now, by [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5){: data-lid="4gcly" }, $A$ is a finite direct product of domains, and since $K$ is the product of the total rings of fractions of the factors, the fact that $A$ is integrally closed in $K$ means that each factor is integrally closed in its own total ring of fractions. That is, $A$ is a finite direct product of normal domains.
+Meanwhile, since $A$ is reduced, $K$ is a finite direct product $K_1\times\cdots\times K_n$ of fields ([§Associated Primes, ⁋Corollary 8](/en/math/commutative_algebra/associated_primes#cor8){: data-lid="oj2mo" }), and the idempotent $e_i\in K$ corresponding to each factor is a root of the monic polynomial $\x^2-\x$, hence integral over $A$, and therefore $e_i\in A$. Then, for any maximal ideal $\mathfrak{m}$ of $A$, since $A_\mathfrak{m}$ is a local ring its only idempotents are $0$ and $1$, and since $\sum_i e_i=1$, exactly one of the images of the $e_i$ is $1$ and the rest are $0$; it follows that $A_\mathfrak{m}$, being a localization of the subring $Ae_i$ of the field $K_i$, is a domain. Now, by [§The Jordan-Hölder Theorem, ⁋Theorem 5](/en/math/commutative_algebra/Jordan-Holder_theorem#thm5){: data-lid="4gcly" }, $A$ is a finite direct product of domains, and since $K$ is the product of the total rings of fractions of the factors, the fact that $A$ is integrally closed in $K$ means that each factor is integrally closed in its own total ring of fractions. That is, $A$ is a finite direct product of normal domains.
 :::
 
 ---

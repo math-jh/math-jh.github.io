@@ -25,7 +25,7 @@ Let $(A, \mathfrak{m})$ be a Noetherian local ring. Then $\dim A$ is, among thos
 holds, the smallest such $d$.
 :::
 ::: Proof
-First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" }, $\mathfrak{m}$ is minimal among the prime ideals containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jtvir" }, we have $\codim \mathfrak{m}\leq d$. 
+First, assume that $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$. Then by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" }, $\mathfrak{m}$ is minimal among the prime ideals containing $(a_1,\ldots, a_d)$. Therefore, by [§Dimension, ⁋Theorem 7](/en/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jtvir" }, we have $\codim \mathfrak{m}\leq d$. 
 
 Conversely, suppose that $(A,\mathfrak{m})$ satisfies $\dim A=d$. Then by definition, the supremum of lengths, $d$, comes from a chain of prime ideals starting at $\mathfrak{m}$, so it is precisely equal to $\codim \mathfrak{m}$. Therefore, using [§Dimension, ⁋Corollary 8](/en/math/commutative_algebra/Krull_dimension#cor8){: data-lid="97tva" }, we can ensure that $\mathfrak{m}$ is a minimal prime containing the ideal $(a_1,\ldots, a_d)$. Then $\mathfrak{m}$ is the unique prime ideal in $A/(a_1,\ldots, a_d)$, so this must be precisely the nilradical of $A/(a_1,\ldots, a_d)$ ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="l97sy" }), which yields the desired result. 
 :::
@@ -112,7 +112,7 @@ For a Noetherian local ring $(A,\mathfrak{m})$, its ideal $\mathfrak{a}$, and a 
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
     so we know that for sufficiently large $n$, $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$ must hold.  
-    Now suppose the second condition holds. Then, for sufficiently large $n$, the product of maximal ideals $\mathfrak{m}^n$ annihilates the $A$-module $A/(\mathfrak{a}+\ann(M))$, so by the equivalence of the first and second conditions of [§Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="1ecwu" }, $A/(\mathfrak{a}+\ann(M))$ has finite length.  
+    Now suppose the second condition holds. Then, for sufficiently large $n$, the product of maximal ideals $\mathfrak{m}^n$ annihilates the $A$-module $A/(\mathfrak{a}+\ann(M))$, so by the equivalence of the first and second conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 6](/en/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="1ecwu" }, $A/(\mathfrak{a}+\ann(M))$ has finite length.  
     As for the last equivalence, it is clear from the following inclusion:
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$

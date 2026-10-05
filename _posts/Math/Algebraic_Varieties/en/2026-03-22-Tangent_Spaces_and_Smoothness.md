@@ -27,7 +27,7 @@ is a maximal ideal. We then proved that the tangent space can be viewed as
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-([\[Differentiable Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1){: data-lid="e8oou" }). This process is usually not covered much in differential geometry, but it is of great help in generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions defined on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5){: data-lid="sw2pg" }), and we also know that in this case, the collection of all functions vanishing at $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ corresponding to this point. Therefore, we define this as
+([\[Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1){: data-lid="e8oou" }). This process is usually not covered much in differential geometry, but it is of great help in generalizing to algebraic varieties. Namely, (fixing the affine case for convenience) we already know what functions defined on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5){: data-lid="sw2pg" }), and we also know that in this case, the collection of all functions vanishing at $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ corresponding to this point. Therefore, we define this as
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 

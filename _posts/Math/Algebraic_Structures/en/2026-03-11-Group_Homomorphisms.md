@@ -17,7 +17,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 For now, we investigate the properties of groups. Therefore, a group homomorphism between groups will simply be called a homomorphism.
 
-From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-lid="8yaqr" }, a (group) isomorphism can also be defined, and from this definition and [\[Set Theory\] §Operations Between Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5){: data-lid="831ij" }, it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
+From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6){: data-lid="8yaqr" }, a (group) isomorphism can also be defined, and from this definition and [\[Set Theory\] §Operations on Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5){: data-lid="831ij" }, it is obvious that any isomorphism must be a bijection. In many cases, the converse also holds.
 
 ::: Proposition 1
 A magma homomorphism $f:A\rightarrow A'$ is an isomorphism if and only if $f$ is bijective. 

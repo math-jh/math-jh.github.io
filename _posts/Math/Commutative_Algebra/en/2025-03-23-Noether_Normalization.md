@@ -135,7 +135,7 @@ Let a Noetherian integral domain $A$, a finite type $A$-algebra $B$, and a finit
 ::: Proof
 Since $B$ is a finite type algebra over the Noetherian integral domain $A$, it is a Noetherian ring by [§Basic Notions, ⁋Theorem 12](/en/math/commutative_algebra/basic_notions#thm12){: data-lid="vfm72" }.
 
-First, we reduce the problem by dévissage applying [§Associated Primes of Ideals, ⁋Lemma 6](/en/math/commutative_algebra/associated_primes#lem6){: data-lid="0ucis" } to $B$ and $M$. Applying this gives a filtration
+First, we reduce the problem by dévissage applying [§Associated Primes, ⁋Lemma 6](/en/math/commutative_algebra/associated_primes#lem6){: data-lid="0ucis" } to $B$ and $M$. Applying this gives a filtration
 
 $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad M_i/M_{i-1}\cong B/\mathfrak{q}_i$$
 

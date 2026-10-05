@@ -1,5 +1,5 @@
 ---
-title: "Basic Concepts"
+title: "Basic Notions"
 description: "This post introduces the basic theory of commutative rings and modules over them. It examines definitions of annihilators and ideal quotients and the structure of related exact sequences, and also covers finiteness conditions for modules."
 excerpt: "Basic conventions and definitions of rings and algebras used in commutative algebra"
 

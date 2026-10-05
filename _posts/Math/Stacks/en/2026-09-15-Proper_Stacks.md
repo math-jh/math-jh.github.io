@@ -46,7 +46,7 @@ Recall that for a general stack, given a geometric point $x:\Spec\mathbb{K}\righ
 
 ## Valuative criterion
 
-Just as we checked separatedness and universally closedness for schemes using valuation rings rather than verifying them directly ([\[Schemes\] §Valuation Rings, ⁋Theorem 6](/en/math/scheme_theory/valuative_criteria#thm6){: data-lid="0ahsc" }, [⁋Theorem 11](/en/math/scheme_theory/valuative_criteria#thm11){: data-lid="j8m6v" }), the key tool for determining the properness of an object in stacks is the valuative criterion via discrete valuation rings. 
+Just as we checked separatedness and universally closedness for schemes using valuation rings rather than verifying them directly ([\[Schemes\] §Valuation Rings, ⁋Theorem 6](/en/math/scheme_theory/valuative_criteria#thm6){: data-lid="0ahsc" }, [\[Scheme Theory\] §Valuation Rings, ⁋Theorem 11](/en/math/scheme_theory/valuative_criteria#thm11){: data-lid="j8m6v" }), the key tool for determining the properness of an object in stacks is the valuative criterion via discrete valuation rings. 
 
 Let $A$ be a complete discrete valuation ring with fraction field $K$, and write the generic point inclusion as $j:\Spec K\rightarrow\Spec A$. For $\mathcal{X}$, a $K$-object $\xi_K$ is the same data as a morphism $\Spec K\rightarrow\mathcal{X}$. In schemes, extending this over $A$ meant having $j^\ast\xi_A=\xi_K$ hold for some $A$-point, but for stacks, instead of diagrams commuting strictly, one must properly keep track of isomorphisms in the $2$-categorical sense. That is, extending this over $A$ means providing $\xi_A\in\mathcal{X}(A)$ together with a specified isomorphism
 
