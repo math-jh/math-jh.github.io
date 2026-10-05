@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-09-29
+last_modified_at: 2026-10-05
 
 weight: 49
 
@@ -306,3 +306,77 @@ false may you weigh the note's reasoning ...
 한글 원문이 수학적으로 거짓이라는 지적만 메모의 논거를 따져 보고, 나머지는 메모 한 줄로 통과한다. 반대편 조건도 하나 남겼다. EN은 지금의 한글을 따라야 하므로, 한글에 없는 내용을 덧붙인 영문은 여전히 거절한다.
 
 세 번째 지적은 의존성 분류기가 각주 안의 링크를 판정할 때 맥락이 빠진다는 것이었다. 같은 커밋이 그쪽도 고쳤지만, 분류기의 이야기라 여기에는 적지 않는다.
+
+## state의 status가 말하지 못하는 현재 단계
+
+대시보드 번역 큐 화면은 `translation_state.json`의 `status`를 세어 보여 주고 있었다. 사용자는 그 숫자를 읽다가 걸렸다.
+
+> 스테이터스가 done인 게 150건이고 draft skip이 292건인데, 지금 draft skip 현재 그러니까 상황이 아닌 거 같거든. 내가 하고 싶은 말은 지금 남아 있는 글 중에 draft skip으로 넘어갈 예정인 글이 292개란 뜻이야? 그건 아니잖아.
+
+사용자의 의심이 맞았다. `status`는 그 글에 마지막으로 기록된 사건이어서, 초안일 때 한 번 찍힌 `draft_skip`은 글이 발행된 뒤에도 그대로 남는다. "지금 큐의 어디에 있는가"라는 질문에는 답이 되지 못하는 필드를 세고 있었다. 재번역 대기도 같은 문제였다. `drift_needed` 표시가 있는 글 중에는 초안이거나 개정 중이어서 워커가 집지 않는 글이 있는데, 그런 글까지 재번역 대기로 세고 있었다([02e434c5](https://github.com/math-jh/math-jh.github.io/commit/02e434c5)).
+
+판정을 대시보드에 다시 구현하면 워커의 단계 조건이 바뀔 때마다 두 벌이 어긋난다. 그래서 워커에 `--queue` 모드를 만들고, `find_next_target`과 같은 순서의 조건을 글 하나에 그대로 적용하는 `queue_bucket`을 두었다.
+
+```python
+    en = find_en_counterpart(ko)
+    if en is None:
+        phase = "stub" if _ko_body_length(ko) < MIN_KO_BODY_CHARS else "pending"
+    elif not is_our_translation(en):
+        return "manual"
+    elif ko_wants_drift(ko):
+        phase = "drift"
+    elif en_translation_meta(en).get("translation_polish_source") \
+            != TRANSLATION_POLISH_SOURCE_TAG:
+        phase = "polish"
+    elif not entry.get("verified_at"):
+        phase = "verify"
+    else:
+        return "done"
+    # 실패 백오프는 Phase 1–3 만 지킨다 (Phase 4 는 백오프를 보지 않는다).
+    if phase in ("pending", "drift", "polish") and entry.get("status") == "failed" \
+            and now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
+        return "backoff"
+    return phase
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+이 앞에서 `await_lid`(링크 식별자 대기), `draft`, `revising`을 먼저 걸러내므로, 초안인 `drift_needed` 글은 재번역 칸이 아니라 건너뜀 칸으로 간다. 사용자가 짚은 방향 그대로다. 단계 조건을 바꾸면 `find_next_target`과 `queue_bucket`을 같이 고쳐야 한다는 말은 두 곳의 주석에 적어 두었다. 이 결합은 코드가 강제하지 못하고 주석만 지킨다.
+
+대시보드 서버는 이 출력을 읽기만 한다. 한 번 돌리는 데 4~5초가 걸려서 요약 계산을 붙잡지 않도록 데몬 스레드로 돌리고, 글 목록·최신 mtime·state·`_config.yml`의 mtime 묶음이 바뀌었을 때만 다시 돈다.
+
+```python
+def _tqueue_run(sig):
+    rc, out, err = run(TQUEUE_CMD, timeout=60)
+    ...
+    with _tqueue_lock:
+        _tqueue.update(sig=sig, error=error, running=False)
+        if data is not None:
+            _tqueue["data"] = data
+```
+{: data-filename="scripts/dashboard/server.py"}
+
+실패한 실행의 시그니처도 기록하는 것이 요점이다. 워커가 깨져 있는 동안 요약을 계산할 때마다 최대 60초짜리 서브프로세스가 다시 뜨는 일을 막고, 직전 성공분은 화면에 남긴다. 첫 계산이 끝나기 전에는 `None`이라 화면이 비어 있다가 다음 갱신에 채워진다. 개요의 재번역 대기 수도 `stats["drift"] = len(queue["buckets"]["drift"])`로 같은 출처에서 온다.
+
+## 폴리싱이 검증까지 끝내게 되다
+
+번역 큐 화면을 보던 사용자가 하나를 더 물었다.
+
+> 폴리싱이랑 검증 대기가 동시에 일어나는 걸로 기억하는데 한번 확인해 봐 봐. 검증 대기랑 완료가 되니까 다른 항목이면 안 될 것 같은데.
+
+앞의 "폴리싱 패스를 태그로 세우기"에서 적은 대로 Phase 3과 Phase 4는 서로의 여집합이라, 폴리싱을 마친 글이 검증을 한 번 더 기다리는 구간이 실제로 있었다. 그 구간을 없애는 변경이 코드에 들어갔다([98d43252](https://github.com/math-jh/math-jh.github.io/commit/98d43252)). `run_verify`가 하던 검사를 `check_en`으로 떼어 내고, 폴리싱 패스가 최종 EN에 그것을 돌려 `verified_at`까지 함께 기록한다.
+
+```python
+check = None
+if reason == "polish":
+    try:
+        check = check_en(ko_path.read_text(encoding="utf-8"),
+                         en_path.read_text(encoding="utf-8"), verdict_text)
+    except Exception as e:
+        log(f"VERIFY ({key}): inline check failed, left to Phase 4")
+        ...
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+`check_en`은 결정론 검사 둘(`lint_latex`, `lint_structure`)을 돌리고, 수식 프로필이 어긋날 때만 모델에게 묻는다. 폴리싱의 재시도 루프가 이미 받아 둔 판정은 `verdict_text`로 넘기므로 같은 질문을 두 번 하지 않고, 게이트가 수식을 바꿔 새로 어긋난 경우에만 다시 묻는다. 인라인 검사가 예외로 끝나면 `check`가 `None`이라 `verified_at`이 찍히지 않고, 그 글은 Phase 4가 받는다. 그래서 Phase 4는 폴리싱 때 검증을 못 마친 글만 받는 보험으로 남았고, 대시보드의 검증 대기 행에는 0편이면 숨기는 `opt: true`가 붙었다.
+
+이 경로는 워커를 돌려 확인하지 않았다. 인라인 검사가 실제 글에서 도는 것은 다음 폴리싱 틱이 지나야 볼 수 있다.
