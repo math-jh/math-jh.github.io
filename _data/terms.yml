@@ -6342,6 +6342,13 @@ E:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: extreme_value_theorem
+  en: extreme value theorem
+  ko: 최대·최소 정리
+  primary: ko
+  defs:
+  - label: '[해석학] §연속함수의 성질'
+    url: /ko/math/analysis/continuous_functions
 - id: extremum
   en: extremum
   ko: 전역 극값
