@@ -132,7 +132,7 @@
 "0kuk5": {relation: required, reviewed: true}
 "0kw4f": {relation: required, reviewed: true}
 "0kwyq": {relation: required, reviewed: true}
-"0lfb6": {relation: requires-review}
+"0lfb6": {relation: weak, reviewed: true}
 "0lpsf": {relation: required, reviewed: true}
 "0lwgt": {relation: forward, reviewed: true}
 "0ly4e": {relation: required, reviewed: true}
@@ -256,7 +256,7 @@
 "164uv": {relation: required, reviewed: true}
 "16615": {relation: required, reviewed: true}
 "16bod": {relation: weak, reviewed: true}
-"16drh": {relation: requires-review}
+"16drh": {relation: required, reviewed: true}
 "16gyc": {relation: required, reviewed: true}
 "16qha": {relation: required, reviewed: true}
 "171vn": {relation: weak, reviewed: true}
@@ -1564,7 +1564,7 @@
 "6m5x0": {relation: required, reviewed: true}
 "6m9im": {relation: required, reviewed: true}
 "6m9ua": {relation: required, reviewed: true}
-"6mbyc": {relation: requires-review}
+"6mbyc": {relation: weak, reviewed: true}
 "6mdhf": {relation: required, reviewed: true}
 "6mt5w": {relation: weak, reviewed: true}
 "6mwp5": {relation: required, reviewed: true}
@@ -3583,7 +3583,7 @@
 "fnjx1": {relation: required, reviewed: true}
 "fny7q": {relation: required, reviewed: true}
 "fo9ma": {relation: required, reviewed: true}
-"foh0o": {relation: requires-review}
+"foh0o": {relation: required, reviewed: true}
 "fomxn": {relation: required, reviewed: true}
 "foxl3": {relation: required, reviewed: true}
 "foz9f": {relation: weak, reviewed: true}
@@ -4419,7 +4419,7 @@
 "jdu4n": {relation: required, reviewed: true}
 "jdxfn": {relation: required, reviewed: true}
 "je0d3": {relation: required, reviewed: true}
-"jecz5": {relation: requires-review}
+"jecz5": {relation: required, reviewed: true}
 "jedl9": {relation: required, reviewed: true}
 "jemiv": {relation: forward, reviewed: true}
 "jeqiu": {relation: weak, reviewed: true}
@@ -4521,7 +4521,7 @@
 "jthiz": {relation: weak, reviewed: true}
 "jtk2u": {relation: required, reviewed: true}
 "jtkqz": {relation: required, reviewed: true}
-"jtlo8": {relation: required}
+"jtlo8": {relation: required, reviewed: true}
 "jtoy5": {relation: required, reviewed: true}
 "jtvir": {relation: required, reviewed: true}
 "jtvxt": {relation: required, reviewed: true}
