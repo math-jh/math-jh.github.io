@@ -21,7 +21,7 @@ We have seen that for a ring $A$ and an arbitrary ideal $\mathfrak{a}$, the form
 
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
-holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="k67s8" }) In particular, if $\mathfrak{a}$ is a prime ideal, then $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should naturally hold. More generally, we define the following.
+holds. ([§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8){: data-lid="k67s8" }) In particular, if $\mathfrak{p}$ is a prime ideal, then $\mathfrak{p}=\sqrt{\mathfrak{p}}$ should naturally hold. More generally, we define the following.
 
 ::: Definition 1
 For a ring $A$, an arbitrary ideal $\mathfrak{a}$ is called a *radical ideal* if $\mathfrak{a}=\sqrt{\mathfrak{a}}$ holds.
