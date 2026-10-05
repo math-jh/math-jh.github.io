@@ -4257,6 +4257,13 @@ C:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: cw_complex
+  en: CW complex
+  ko: CW 복체
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지의 계산'
+    url: /ko/math/algebraic_topology/computation_of_homology
 - id: cycle
   en: cycle
   ko: 사이클
