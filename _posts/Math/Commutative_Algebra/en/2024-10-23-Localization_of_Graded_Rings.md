@@ -63,7 +63,7 @@ For a graded ring $A$ and homogeneous ideals of $A$, $\mathfrak{a},\mathfrak{b}$
 
     $$(xy)_{d_k+e_l}=\sum_{d_i+e_j=d_k+e_l}x_{d_i}y_{e_j}$$
 
-    and here, every term on the right-hand side of the above equation other than $x_{d_k}y_{e_l}$ must satisfy either $d_i>d_k$ or $e_j>e_l$. By the definition of $d_k$ and $e_l$, all such terms are elements of $\mathfrak{a}$. However, since $xy\in \mathfrak{a}$ and $\mathfrak{a}$ is a homogeneous ideal, $(xy)_{d_k+e_l}$ is also an element of $\mathfrak{a}$, from which we obtain a contradiction. 
+    and here, every term on the right-hand side of the above equation other than $x_{d_k}y_{e_l}$ must satisfy either $d_i>d_k$ or $e_j>e_l$. By the definition of $d_k$ and $e_l$, all such terms are elements of $\mathfrak{a}$. However, since $xy\in \mathfrak{a}$ and $\mathfrak{a}$ is a homogeneous ideal, $(xy)_{d_k+e_l}$ is also an element of \mathfrak{a}$, and by assumption $x_{d_k}\in \mathfrak{a}$ or $y_{e_l}\in \mathfrak{a}$, from which we obtain a contradiction. 
 :::
 
 In particular, just as localization at a prime ideal of an arbitrary ring was an important example, even when $A$ is a graded ring, localization at a *homogeneous* prime ideal $\mathfrak{p}$ is an important example. Therefore, the third result of the above lemma is especially worth remembering. 
