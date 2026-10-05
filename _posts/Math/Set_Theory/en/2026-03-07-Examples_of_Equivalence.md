@@ -21,7 +21,7 @@ In this post, we examine examples of equivalence relations that appear in variou
 In the previous post, we saw that from an equivalence relation $(R,A,A)$, the canonical function $p:A\rightarrow A/R$ is well defined; the converse also holds. That is, given any function, we can use it to construct an equivalence relation.
 
 ::: Proposition 1
-Let a set $A$ and a function $f$ with domain $A$ be given. Then the relation between $x$ and $y$ defined by <phrase>$x,y\in A$ and $f(x)=f(y)$</phrase> is an equivalence relation on $A$.
+Let a set $A$ and a function $f$ with domain $A$ be given. Then the relation between $x$ and $y$ defined by $x,y\in A$ and $f(x)=f(y)$ is an equivalence relation on $A$.
 :::
 
 ::: Proof
@@ -51,7 +51,7 @@ is compatible with the equivalence relation
 From the viewpoint of equivalence classes, the above definition can be rewritten as follows.
 
 ::: Proposition 4
-Let $R$ be an equivalence relation on a set $A$, and let $P$ be a unary relation compatible with $R$. Then the statement <phrase>$t\in A/R$ and there exists some $x\in t$ such that $P(x)$</phrase> and the statement <phrase>$t\in A/R$ and $P(x)$ holds for all $x\in t$</phrase> are equivalent.
+Let $R$ be an equivalence relation on a set $A$, and let $P$ be a unary relation compatible with $R$. Then the statement that $t\in A/R$ and there exists some $x\in t$ such that $P(x)$ and the statement that $t\in A/R$ and $P(x)$ holds for all $x\in t$ are equivalent.
 :::
 
 ::: Proof
@@ -74,7 +74,7 @@ Let $R$ be an equivalence relation on $A$ and let $X$ be a subset of $A$. We say
 
 <cap>A saturated subset (left) and a non-saturated subset (right) in a given quotient set (above)</cap>
 
-According to the above definition, for a set $X$ to be $R$-saturated, <phrase>if $x\in X$ then $R(x)\subseteq X$</phrase> must necessarily hold. Therefore, an $R$-saturated subset $X$ is a set that can be expressed as $\bigcup_{x\in B}R(x)$ for some subset $B\subseteq A$. From this, the following two results can be easily verified.
+According to the above definition, for a set $X$ to be $R$-saturated, the condition that if $x\in X$ then $R(x)\subseteq X$ must necessarily hold. Therefore, an $R$-saturated subset $X$ is a set that can be expressed as $\bigcup_{x\in B}R(x)$ for some subset $B\subseteq A$. From this, the following two results can be easily verified.
 
 1. If $(A_i)_{i\in I}$ is a family of $R$-saturated subsets, then $\bigcup_{i\in I} A_i$ and $\bigcap_{i\in I} A_i$ are also $R$-saturated.
 2. If $X\subseteq A$ is $R$-saturated, then $A\setminus X$ is also $R$-saturated.

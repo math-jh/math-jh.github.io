@@ -90,7 +90,7 @@ For a topological space $X$ and a subset $A$, the following two conditions are e
 
 :::
 ::: Proof
-It is convenient to prove the contrapositive. Suppose $x\not\in\cl A$. Then $(\cl A)^c=\ext A$ contains $x$, is an open set disjoint from $\cl A$, and hence also disjoint from $A$. That is, the statement <phrase>there exists a neighborhood of $x$ that does not meet $A$</phrase> is true.
+It is convenient to prove the contrapositive. Suppose $x\not\in\cl A$. Then $(\cl A)^c=\ext A$ contains $x$, is an open set disjoint from $\cl A$, and hence also disjoint from $A$. That is, the statement that there exists a neighborhood of $x$ that does not meet $A$ is true.
 
 Conversely, suppose there exists a neighborhood of $x$ that does not meet $A$. Then there is an open neighborhood $U$ of $x$ contained in this neighborhood such that $U$ does not meet $A$, so $U\cap A=\emptyset$. Now $U^c\cap A=A$, so $U^c$ is a closed set containing $A$, and by the minimality of the closure, $U^c$ also contains $\cl A$. Hence, if $x\not\in U^c$ then $x\not\in\cl A$, and therefore the reverse direction also holds.  
 :::

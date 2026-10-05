@@ -73,7 +73,7 @@ For uniqueness, $\{x\}=\{x,x\}$ and $\{x,y\}$ are first determined uniquely, and
 We have checked that the ordered pair $(x,y)$ is well-defined, but we must verify that this ordered pair satisfies $(x,y)\neq (y,x)$ for general $x,y$.
 
 ::: Proposition 6
-For two ordered pairs $(x,y)$, $(x',y')$, the statement <phrase>$(x,y)=(x',y')$</phrase> and the statement <phrase>$x=x'$ and $y=y'$</phrase> are equivalent.
+For two ordered pairs $(x,y)$, $(x',y')$, the statement $(x,y)=(x',y')$ is equivalent to the statement that $x=x'$ and $y=y'$.
 :::
 ::: Proof
 If $x=x'$ and $y=y'$, then $(x,y)=(x',y')$ is obvious, because $\{x\}=\{x'\}$ and $\{x,y\}=\{x',y'\}$.
@@ -128,7 +128,7 @@ Also, similarly to [Definition 7](#def7){: data-lid="1888f" }, we call the sets 
 To know when two product sets $A\times B$ and $A'\times B'$ are equal, it suffices to determine precisely when one product set is contained in the other.
 
 ::: Proposition 9
-For two nonempty sets $A'$, $B'$, the statement <phrase>$A'\times B'\subseteq A\times B$</phrase> and the statement <phrase>$A'\subseteq A$ and $B'\subseteq B$</phrase> are equivalent.
+For two nonempty sets $A'$, $B'$, the statement $A'\times B'\subseteq A\times B$ is equivalent to the statement that $A'\subseteq A$ and $B'\subseteq B$.
 :::
 ::: Proof
 First, assume $A'\times B'\subseteq A\times B$. To show $A'\subseteq A$, let an arbitrary $a'\in A'$ be given and show $a'\in A$.
@@ -141,7 +141,7 @@ Let $z'=(a',b')$. That is, $a'\in A'$, $b'\in B'$, but by hypothesis $a'$ and $b
 When one of $A,B$ is empty, the following proposition applies.
 
 ::: Proposition 10
-For two sets $A$, $B$, the statement <phrase>$A\times B=\emptyset$</phrase> and the statement <phrase>$A=\emptyset$ or $B=\emptyset$</phrase> are equivalent.
+For two sets $A$, $B$, the statement $A\times B=\emptyset$ is equivalent to the statement that $A=\emptyset$ or $B=\emptyset$.
 :::
 ::: Proof
 First suppose $A\times B=\emptyset$. If both $A$ and $B$ are nonempty, then we can pick some $a\in A$ and $b\in B$, so $(a,b)\in A\times B$, which is a contradiction.

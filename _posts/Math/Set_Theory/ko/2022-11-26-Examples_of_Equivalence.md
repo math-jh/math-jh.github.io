@@ -21,7 +21,7 @@ weight: 13
 앞선 글에서 동치관계 $(R,A,A)$에서부터 canonical한 함수 $p:A\rightarrow A/R$이 잘 정의된다는 것을 보았는데, 그 역 또한 성립한다. 즉, 임의의 함수가 주어졌을 때, 이 함수를 사용하여 동치관계를 만들 수 있다.
 
 ::: 명제 1
-집합 $A$와 이를 정의역으로 갖는 함수 $f$가 주어졌다 하자. 그럼 $x$, $y$ 사이의 관계 <phrase>$x,y\in A$이고 $f(x)=f(y)$</phrase>는 $A$ 위에서의 동치관계다.
+집합 $A$와 이를 정의역으로 갖는 함수 $f$가 주어졌다 하자. 그럼 $x$, $y$ 사이의 관계 ‘$x,y\in A$이고 $f(x)=f(y)$’는 $A$ 위에서의 동치관계다.
 :::
 
 ::: 증명
@@ -74,7 +74,7 @@ $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하�
 
 <cap>주어진 quotient set (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
 
-위의 정의에 따르면, 어떤 집합 $X$가 $R$-saturated이기 위해서는 <phrase>$x\in X$라면 $R(x)\subseteq X$</phrase>가 반드시 성립해야 한다. 따라서 $R$-saturated인 부분집합 $X$는 어떠한 부분집합 $B\subseteq A$에 대하여 $\bigcup_{x\in B}R(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
+위의 정의에 따르면, 어떤 집합 $X$가 $R$-saturated이기 위해서는 $x\in X$라면 $R(x)\subseteq X$라는 조건이 반드시 성립해야 한다. 따라서 $R$-saturated인 부분집합 $X$는 어떠한 부분집합 $B\subseteq A$에 대하여 $\bigcup_{x\in B}R(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 
 1. 만일 $(A_i)_{i\in I}$가 $R$-saturated인 부분집합들의 family라면, $\bigcup_{i\in I} A_i$와 $\bigcap_{i\in I} A_i$도 마찬가지다.
 2. $X\subseteq A$가 $R$-saturated라면 $A\setminus X$도 그러하다.

@@ -91,7 +91,7 @@ Regarding the ordered set $(\mathcal{P}(X),\subseteq)$, the above definition coi
 Thus, among the four conditions that $\mathcal{N}(x)$ must satisfy, the first three can be summarized as the requirement that $\mathcal{N}(x)$ be a filter for every $x$. The fourth condition has its own name.
 
 ::: misc Neighborhood Axiom. {#neighborhood-axiom}
-For an arbitrary $z\in X$, suppose a filter $\mathcal{N}(z)$ on $X$ is given whose elements each contain $z$. Then for every $S\in\mathcal{N}(z)$, there exists a suitable $S'\in\mathcal{N}(z)$ such that <phrase>for every $x\in S'$, $S\in\mathcal{N}(x)$</phrase>.
+For an arbitrary $z\in X$, suppose a filter $\mathcal{N}(z)$ on $X$ is given whose elements each contain $z$. Then for every $S\in\mathcal{N}(z)$, there exists a suitable $S'\in\mathcal{N}(z)$ such that for every $x\in S'$, $S\in\mathcal{N}(x)$.
 :::
 
 Moreover, regarding $\mathcal{N}(x)$ as playing a role similar to a local base, we showed that a topological space can also be defined via a base $\mathcal{B}$. ([§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6){: data-lid="7k4j9" })

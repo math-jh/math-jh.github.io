@@ -113,7 +113,7 @@ From the structure of $G/H$ examined above and the size of each element of $G/H$
 For a group $G$ and a subgroup $H$, $\lvert G\rvert=[G:H]\lvert H\rvert$ holds.
 :::
 
-This proposition holds even when $G$ or $H$ is an infinite set, but especially when they are finite, we obtain the result that <phrase>for a group $G$ and any subgroup $H$, $\lvert H\rvert$ is a divisor of $\lvert G\rvert$</phrase>.
+This proposition holds even when $G$ or $H$ is an infinite set, but especially when they are finite, we obtain the result that for a group $G$ and any subgroup $H$, $\lvert H\rvert$ is a divisor of $\lvert G\rvert$.
 
 ---
 

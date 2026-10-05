@@ -78,7 +78,7 @@ $R$이 preorder relation이라면 이를 $\preceq_{\tiny R}$과 같이 적기도
 Preorder relation의 성질을 알기 위해 우리는 order relation의 성질이지만 preorder의 성질은 아닌 antisymmetry를 좀 더 살펴봐야 한다. 만일 관계 $R$이 order relation이었다면, antisymmetry는 $(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$를 뜻한다. Preorder에 대해서는 이것이 성립하지 않는다는 것을 살펴보았지만, 이 경우는 다음 명제에 의해 <em-ko>일반화된 등호</em-ko>, 즉 동치관계가 똑같은 성질을 준다. 
 
 ::: 명제 8
- $R$이 preorder relation이라 하자. 그럼 관계 <phrase>$x\leq_{\tiny R}y$이고 $y\leq_{\tiny R}x$</phrase>은 동치관계다.
+ $R$이 preorder relation이라 하자. 그럼 관계 ‘$x\leq_{\tiny R}y$이고 $y\leq_{\tiny R}x$’은 동치관계다.
 :::
 ::: 증명
 위의 관계를 $S$라 하자. 우리는 $S$가 reflexive, symmetric, transitive함을 보여야 한다. 우선 이 관계가 reflexive함은 자명하다. $R$이 preorder이므로, 임의의 $x$에 대해 $x\mathrel{R}x$가 항상 성립하기 때문이다. 한편, 임의의 $x$, $y$에 대하여 $x\mathrel{S}y$라 하자. 그럼 
@@ -100,7 +100,7 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 
 ## Strict order
 
-주어진 order relation $\leq$에 대하여, $<$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $<$는 reflexive하지 않으므로 order relation도, preorder도 될 수 없다. 대신 다음을 정의하자.
+주어진 order relation $\leq$에 대하여, $<$을 조건 ‘$x\leq y$이고 $x\neq y$’로 정의된 관계라 하자. 이 때 $<$는 reflexive하지 않으므로 order relation도, preorder도 될 수 없다. 대신 다음을 정의하자.
 
 ::: 정의 9
 관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not{\mathrel{R}}x$인 것이다. Asymmetric, transitive relation을 *strict order<sub>순순서</sub>*라 부른다.
@@ -109,13 +109,13 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 Strict order를 표현하기 위해서 우리는 $<_{\tiny S}$를 사용한다. 그럼 다음이 성립한다.
 
 ::: 명제 10
- $R$이 order relation이라 하자. 그럼 새로운 관계 <phrase>$x\leq_{\tiny R}y$이고 $x\neq y$</phrase>는 strict order이다.  
+ $R$이 order relation이라 하자. 그럼 새로운 관계 ‘$x\leq_{\tiny R}y$이고 $x\neq y$’는 strict order이다.  
 
-반대로 $S$가 strict order라 하자. 그럼 새로운 관계 <phrase>$x<_{\tiny S}y$이거나 $x=y$</phrase>는 order relation이다.
+반대로 $S$가 strict order라 하자. 그럼 새로운 관계 ‘$x<_{\tiny S}y$이거나 $x=y$’는 order relation이다.
 :::
 
 ::: 증명
-우선 $R$이 order relation이라 하고, 새로운 relation $S$를 <phrase>$x\leq_{\tiny R}y$이고 $x\neq y$</phrase>으로 정의하자. Asymmetry를 보이기 위해 우리는 $x\mathrel{S}y$와 $y\mathrel{S}x$가 동시에 성립할 수 없음을 보여야 한다. $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$를 풀어 쓰면 다음과 같다.
+우선 $R$이 order relation이라 하고, 새로운 relation $S$를 $x\leq_{\tiny R}y$이고 $x\neq y$라는 조건으로 정의하자. Asymmetry를 보이기 위해 우리는 $x\mathrel{S}y$와 $y\mathrel{S}x$가 동시에 성립할 수 없음을 보여야 한다. $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$를 풀어 쓰면 다음과 같다.
   
 $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
 
@@ -125,7 +125,7 @@ $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
 이는 $R$의 antisymmetry에 의하여 $(x=y)\wedge(x\neq y)$이고, 이는 항상 거짓이므로 $x\mathrel{S} y$이면 $y\not{\mathrel{S}}x$이다. Transitivity를 보이기 위해 $x\mathrel{S}y$이고 $y\mathrel{S}z$라 하면, $\leq_{\tiny R}$의 transitivity에 의하여 $x\leq_{\tiny R}z$이고, 또 $x=z$라면 $x\leq_{\tiny R}y$와 $y\leq_{\tiny R}x$가 동시에 성립하여 $R$의 antisymmetry에 의해 $x=y$가 되어 $x\neq y$에 모순이므로 $x\neq z$이며, 따라서 $x\mathrel{S}z$이다.
 
-반대로 $S$가 strict order라 하고, 새로운 relation $R$을 <phrase>$x<_{\tiny S}y$이거나 $x=y$</phrase>로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
+반대로 $S$가 strict order라 하고, 새로운 relation $R$을 $x<_{\tiny S}y$이거나 $x=y$라는 조건으로 정의하자. 우선 $x=x$이므로, 뒤쪽 조건에 걸려 $x\mathrel{R}x$이다. Antisymmetry를 보이기 위해, $x\mathrel{R}y$와 $y\mathrel{R}x$가 성립한다고 가정하자. 그럼 
 
 $$\begin{aligned}  
 (x\mathrel{R}y)\wedge(y\mathrel{R}x)&\iff((x<_{\tiny S}y)\vee(x=y))\wedge((y<_{\tiny S}x)\vee(y=x))\\

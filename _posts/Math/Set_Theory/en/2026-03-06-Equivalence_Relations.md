@@ -29,7 +29,7 @@ holds, we call it *transitive*. Finally, if $x\mathrel{R}x$ for all $x$, we say 
 If $R$ is an equivalence relation, we will use the notation $x\sim_{\tiny R}y$. When there is no risk of confusion, we also write $x\sim y$ or $x\equiv y$.
 
 ::: Example 2
-On a given set $A$, the relation $x=y$ is an equivalence relation on $A$, and in this case $R$ equals the set $\Delta_A$. On the other hand, one can easily check that the relation <phrase>$x\in A$ and $y\in A$</phrase> is also an equivalence relation on $A$. The set representing this relation is exactly $A\times A$.
+On a given set $A$, the relation $x=y$ is an equivalence relation on $A$, and in this case $R$ equals the set $\Delta_A$. On the other hand, one can easily check that the relation given by $x\in A$ and $y\in A$ is also an equivalence relation on $A$. The set representing this relation is exactly $A\times A$.
 
 Consider an arbitrary equivalence relation $R$ on a set $A$. Since $R$ is reflexive, $\Delta_A\subseteq R$, and the inclusion $R\subseteq A\times A$ is obvious. Thus, among the two examples above, the first is the smallest equivalence relation that can be defined on $A$, and the second is the largest.
 :::
@@ -73,7 +73,7 @@ By definition, $R(x)$ is the set of elements that are regarded as equivalent to 
 <cap>The set $A$ (left), the equivalence relation $R$ defined on it (center), and the quotient set $A/R$ (right). Each element of $A/R$ is the equivalence class $[x]_R$ in the middle diagram.</cap>
 
 ::: Example 5
-We have already seen that $x=y$ is an equivalence relation on a set $A$. In this relation, the equivalence class of $x$ is the set $\{x\}$. In the same example, <phrase>$x\in A$ and $y\in A$</phrase> was also an equivalence relation, and in this case the equivalence class of $x$ becomes the whole set $A$.
+We have already seen that $x=y$ is an equivalence relation on a set $A$. In this relation, the equivalence class of $x$ is the set $\{x\}$. In the same example, the relation given by $x\in A$ and $y\in A$ was also an equivalence relation, and in this case the equivalence class of $x$ becomes the whole set $A$.
 
 In the preceding [Example 2](#ex2){: data-lid="9b85j" } we said that $\Delta_A$ is the *smallest* and $A\times A$ is the *largest*; however, rather than comparing them by set inclusion, it is more common to say that $\Delta_A$ is the *finest* equivalence relation and $A\times A$ is the *coarsest* equivalence relation from the above point of view. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1){: data-lid="b35w2" })
 :::

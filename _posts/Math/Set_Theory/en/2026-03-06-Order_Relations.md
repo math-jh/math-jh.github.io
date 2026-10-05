@@ -78,7 +78,7 @@ If $R$ is a preorder relation we sometimes write it as $\preceq_{\tiny R}$, but 
 To understand the properties of preorder relations, we must examine more closely the property of antisymmetry: it holds for order relations but fails for preorders. If a relation $R$ were an order relation, antisymmetry would mean $(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$. We have seen that this fails for preorders, but the following proposition shows that a *generalized equality*—namely, an equivalence relation—plays the same role instead.
 
 ::: Proposition 8
-Let $R$ be a preorder relation. Then the relation <phrase>$x\leq_{\tiny R}y$ and $y\leq_{\tiny R}x$</phrase> is an equivalence relation.
+Let $R$ be a preorder relation. Then the relation given by $x\leq_{\tiny R}y$ and $y\leq_{\tiny R}x$ is an equivalence relation.
 :::
 ::: Proof
 Let the above relation be $S$. We must show that $S$ is reflexive, symmetric, and transitive. First, reflexivity is obvious: since $R$ is a preorder, $x\mathrel{R}x$ holds for every $x$. Next, for arbitrary $x$, $y$, suppose $x\mathrel{S}y$. Then
@@ -100,7 +100,7 @@ so $S$ is transitive, and therefore $S$ is an equivalence relation.
 
 ## Strict Orders
 
-Given an order relation $\leq$, let $<$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. Then $<$ cannot be an order relation because it is not antisymmetric, nor can it be a preorder because it is not reflexive. Instead, we define the following.
+Given an order relation $\leq$, let $<$ be the relation defined by the condition that $x\leq y$ and $x\neq y$. Then $<$ cannot be an order relation because it is not antisymmetric, nor can it be a preorder because it is not reflexive. Instead, we define the following.
 
 ::: Definition 9
 A relation $R$ is said to be *asymmetric* if $x\mathrel{R}y$ implies $y\not{\mathrel{R}}x$. An asymmetric, transitive relation is called a *strict order*.
@@ -109,13 +109,13 @@ A relation $R$ is said to be *asymmetric* if $x\mathrel{R}y$ implies $y\not{\mat
 To denote a strict order we use $<_{\tiny S}$. Then the following holds.
 
 ::: Proposition 10
-Let $R$ be an order relation. Then the new relation <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase> is a strict order.
+Let $R$ be an order relation. Then the new relation given by $x\leq_{\tiny R}y$ and $x\neq y$ is a strict order.
 
-Conversely, let $S$ be a strict order. Then the new relation <phrase>$x<_{\tiny S}y$ or $x=y$</phrase> is an order relation.
+Conversely, let $S$ be a strict order. Then the new relation given by $x<_{\tiny S}y$ or $x=y$ is an order relation.
 :::
 
 ::: Proof
-First, let $R$ be an order relation and define a new relation $S$ by <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase>. To show asymmetry, we must demonstrate that $x\mathrel{S}y$ and $y\mathrel{S}x$ cannot hold simultaneously. Expanding $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$ gives the following.
+First, let $R$ be an order relation and define a new relation $S$ by the condition that $x\leq_{\tiny R}y$ and $x\neq y$. To show asymmetry, we must demonstrate that $x\mathrel{S}y$ and $y\mathrel{S}x$ cannot hold simultaneously. Expanding $(x\mathrel{S}y)\wedge(y\mathrel{S}x)$ gives the following.
   
 $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
 
@@ -125,7 +125,7 @@ $$((x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x))\wedge(x\neq y)$$
 
 By the antisymmetry of $R$ this becomes $(x=y)\wedge(x\neq y)$, which is always false; hence if $x\mathrel{S}y$ then $y\not{\mathrel{S}}x$.
 
-Conversely, let $S$ be a strict order and define a new relation $R$ by <phrase>$x<_{\tiny S}y$ or $x=y$</phrase>. First, since $x=x$, the latter condition gives $x\mathrel{R}x$. To show antisymmetry, assume that $x\mathrel{R}y$ and $y\mathrel{R}x$ hold. Then
+Conversely, let $S$ be a strict order and define a new relation $R$ by the condition that $x<_{\tiny S}y$ or $x=y$. First, since $x=x$, the latter condition gives $x\mathrel{R}x$. To show antisymmetry, assume that $x\mathrel{R}y$ and $y\mathrel{R}x$ hold. Then
 
 $$\begin{aligned}  
 (x\mathrel{R}y)\wedge(y\mathrel{R}x)&\iff((x<_{\tiny S}y)\vee(x=y))\wedge((y<_{\tiny S}x)\vee(y=x))\\

@@ -57,7 +57,7 @@ Lattice $A$의 임의의 <em-ko>비어있지 않은 유한한</em-ko> 부분집�
 ## Totally ordered set
 
 ::: 정의 5
-Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 명제 <phrase>$x\leq y$ 혹은 $y\leq x$</phrase>이 성립하는 것이다. 만약 ordered set $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
+Preordered set $A$에서의 두 원소 $x$, $y$가 *comparable<sub>비교가능</sub>*하다는 것은 $x\leq y$ 혹은 $y\leq x$라는 명제가 성립하는 것이다. 만약 ordered set $A$의 임의의 두 원소가 comparable하다면, 이를 *totally ordered set<sub>전순서집합</sub>*이라 부른다.
 :::
 
 만약 $A$가 totally ordered set이라면, trichotomy가 성립한다. 즉, 임의의 $x, y\in A$에 대하여,  

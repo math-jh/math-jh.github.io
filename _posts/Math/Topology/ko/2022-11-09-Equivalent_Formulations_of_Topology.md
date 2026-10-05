@@ -90,7 +90,7 @@ Ordered set $(\mathcal{P}(X),\subseteq)$를 생각하면, 위 정의는 [\[집�
 그럼 $\mathcal{N}(x)$가 만족해야 할 네 가지 조건 중 앞의 세 가지는 모든 $x$에 대하여 $\mathcal{N}(x)$가 각 원소마다 $x$를 포함하는 filter라는 것으로 축약할 수 있다. 네 번째 조건은 별도로 이름을 갖는다.
 
 ::: misc Neighborhood axiom. {#neighborhood-axiom}
-임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, <phrase>임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$</phrase>가 성립하도록 할 수 있다.
+임의의 $z\in X$와, 각각의 원소가 $z$를 포함하는 $X$의 filter $\mathcal{N}(z)$가 주어졌다 하자. 그럼 임의의 $S\in\mathcal{N}(z)$마다 적당한 $S'\in\mathcal{N}(z)$가 존재하여, 임의의 $x\in S'$마다 $S\in\mathcal{N}(x)$가 성립하도록 할 수 있다.
 :::
 
 뿐만 아니라, $\mathcal{N}(x)$를 local base와 같은 역할을 한다고 생각하면, 이를 통해 위상공간이 base $\mathcal{B}$를 통해서도 정의됨을 보일 수 있었다. ([§위상공간의 기저, ⁋따름정리 6](/ko/math/topology/topological_bases#cor6){: data-lid="7k4j9" })

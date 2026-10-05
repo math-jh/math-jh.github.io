@@ -65,7 +65,7 @@ Since the axiom of existence tells us that at least one such set exists, both th
 The following axiom is worth remembering in particular because it prevents [Example 1](#ex1){: data-lid="0o7xn" }.
 
 ::: misc The Axiom Schema of Comprehension. {#axiom-comprehension}
-Given any set $A$ and any proposition $P$, there exists a set $B$ such that <phrase>$x\in B$</phrase> and <phrase>$x\in A$ and $P(x)$</phrase> are equivalent.
+Given any set $A$ and any proposition $P$, there exists a set $B$ such that $x\in B$ if and only if $x\in A$ and $P(x)$.
 :::
 
 From a formal standpoint, the above axiom asserts that a certain property holds for every proposition $P$. Since expressing this in first-order logic as a single statement is impossible, we regard it as a collection of axioms rather than a single axiom, and call it the axiom *schema* of comprehension.
@@ -79,7 +79,7 @@ and thus $B=B'$. It is appropriate to denote such a set by $\{x\in A\mid P(x)\}$
 ::: Example 3
 What created the contradiction in naive set theory was the following assumption:
 
-> Let $P$ be a proposition about $x$. Then there exists a set $B$ such that $x\in B$ and $P(x)$ are equivalent.
+> Let $P$ be a proposition about $x$. Then there exists a set $B$ such that $x\in B$ if and only if $P(x)$.
 
 Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1){: data-lid="n6tdz" }, we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; we can only define
 
@@ -120,7 +120,7 @@ Alternatively, $A\setminus B$ is also called the *complement* of $B$ relative to
 If the existence of sets other than the empty set is not guaranteed, the above two examples are of little use. The following axioms provide methods for constructing non-empty sets.
 
 ::: misc The Axiom of Pair. {#axiom-pair}
-For any sets $A$ and $B$, there exists a set $C$ such that <phrase>$x\in C$</phrase> and <phrase>$x=A$ or $x=B$</phrase> are equivalent.
+For any sets $A$ and $B$, there exists a set $C$ such that $x\in C$ if and only if $x=A$ or $x=B$.
 :::
 
 Again, this set is unique by extensionality and is denoted $\{A,B\}$. Now taking $A=B=\emptyset$, from
@@ -130,13 +130,13 @@ $$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\
 we obtain $\{\emptyset, \emptyset\}=\{\emptyset\}$. Also, since $\emptyset\not\in \emptyset$, we have $\emptyset\neq\{\emptyset\}$. 
 
 ::: misc The Axiom of Union. {#axiom-union}
-For any set $\mathcal{S}$, there exists a set $U$ such that <phrase>$x\in U$</phrase> and <phrase>$x\in A$ for some $A\in\mathcal{S}$</phrase> are equivalent.
+For any set $\mathcal{S}$, there exists a set $U$ such that $x\in U$ if and only if $x\in A$ for some $A\in\mathcal{S}$.
 :::
 
 For example, if $\mathcal{S}=\{A,B\}$, then we can verify that $U$ becomes the set of elements satisfying $x\in A$ or $x\in B$, that is, $A\cup B$. This is sometimes written as $\bigcup\mathcal{S}$.
 
 ::: misc The Axiom of Power Set. {#axiom-powerset}
-For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ and $X\subseteq S$ are equivalent.
+For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ if and only if $X\subseteq S$.
 :::
 
 This set is called the *power set* of $S$ and is denoted $\mathcal{P}(S)$. 

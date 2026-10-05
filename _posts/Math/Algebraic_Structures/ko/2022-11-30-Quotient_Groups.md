@@ -110,7 +110,7 @@ Group $G$와 subgroup $H$에 대하여, $H$의 *index* $[G:H]$를 $\lvert G/H\rv
 Group $G$와 subgroup $H$에 대하여 $\lvert G\rvert=[G:H]\lvert H\rvert$이 성립한다.
 :::
 
-이 명제는 $G$ 혹은 $H$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, <phrase>Group $G$의 임의의 subgroup $H$에 대하여, $\lvert H\rvert$는 $\lvert G\rvert$의 약수</phrase>라는 결과를 얻는다.
+이 명제는 $G$ 혹은 $H$가 무한집합일 때에도 성립하지만, 특별히 이들이 유한일 경우, Group $G$의 임의의 subgroup $H$에 대하여 $\lvert H\rvert$는 $\lvert G\rvert$의 약수라는 결과를 얻는다.
 
 
 
