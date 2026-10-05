@@ -514,7 +514,7 @@ class RetryRoundTest(unittest.TestCase):
                 patch.object(dc, "STATE_DIR", root),
                 patch.object(dc, "STATE_PATH", state_path),
                 patch.object(dc, "STATE_LOCK_PATH", root / "state.lock"),
-                patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+                patch.object(dc, "mint_lids", return_value=False),  # 식별자 발급은 전용 테스트에서 본다
                 patch.object(dc, "classify", side_effect=lambda links, rnd=1: (
                     seen.append(rnd), ({}, {}, [{"id": link.ident, "reason": "unclear"}]))[1]),
             ]:
@@ -810,7 +810,7 @@ class VerificationPassTest(unittest.TestCase):
             patch.object(dc, "HOLDS_LOCK_PATH", self.root / "holds.lock"),
             patch.object(dc, "COMPLETE_PATH", self.root / "complete.json"),
             patch.object(dc, "_POSTS", [self.post]),
-            patch.object(dc, "mint_lids"),  # 식별자 발급은 전용 테스트에서 본다
+            patch.object(dc, "mint_lids", return_value=False),  # 식별자 발급은 전용 테스트에서 본다
             patch.object(dc, "by_permalink", return_value=self.post),
             patch.object(dc, "en_counterpart", return_value=None),
             patch.object(dc, "dirty_paths", return_value=[]),
@@ -977,25 +977,39 @@ title: t
 """
 
 
-class LidMintingTest(unittest.TestCase):
-    """lid 없는 링크의 식별자 발급 — 원장이 그 링크의 판정을 담으려면 이게 먼저다."""
+KO_REL = "_posts/Math/Cat/ko/2025-01-01-A.md"
+EN_REL = "_posts/Math/Cat/en/2026-01-01-A.md"
+
+
+class LidFixture(unittest.TestCase):
+    """KO/EN 한 쌍을 임시 루트에 두고 mint_lids 를 돌리는 바탕."""
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
-        self.ko = self.root / "_posts" / "Math" / "Cat" / "ko" / "2025-01-01-A.md"
-        self.en = self.root / "_posts" / "Math" / "Cat" / "en" / "2026-01-01-A.md"
-        for path in (self.ko, self.en):
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(LID_BODY, encoding="utf-8")
+        self.ko = self.root / KO_REL
+        self.en = self.root / EN_REL
+        self.write(LID_BODY, LID_BODY)
         self.ledger = self.root / "link-ids.txt"
+        self.pairing = self.root / "pairing.json"
 
-    def mint(self, *, dirty: list[str] | None = None, also=()) -> None:
+    def write(self, ko: str | None, en: str) -> None:
+        for path, body in ((self.ko, ko), (self.en, en)):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            if body is None:
+                path.unlink(missing_ok=True)
+            else:
+                path.write_text(body, encoding="utf-8")
+
+    def mint(self, *, dirty: list[str] | None = None, also=()) -> bool:
+        dirty = dirty or []
         patches = [
             patch.object(dc, "ROOT", self.root),
             patch.object(dc, "LID_LEDGER", self.ledger),
-            patch.object(dc, "dirty_paths", return_value=dirty or []),
+            patch.object(dc, "PAIRING_STATE_PATH", self.pairing),
+            patch.object(dc, "dirty_paths",
+                         side_effect=lambda rels, _root: [r for r in rels if r in dirty]),
             patch.object(dc, "hard_lint", return_value=set()),
             patch.object(dc, "is_local_only_untracked_unit", return_value=False),
             patch.object(dc, "commit_outputs", return_value=True),
@@ -1005,38 +1019,153 @@ class LidMintingTest(unittest.TestCase):
                 stack.enter_context(item)
             for item in also:
                 stack.enter_context(item)
-            dc.mint_lids(commit=True)
+            return dc.mint_lids(commit=True)
 
     def lids(self, path: Path) -> list[str]:
         return dc.LID_RE.findall(path.read_text(encoding="utf-8"))
 
-    def test_links_without_an_identifier_get_one_and_the_ledger_records_it(self) -> None:
-        self.mint()
+    def minted(self) -> list[str]:
+        if not self.ledger.exists():
+            return []
+        return sorted(self.ledger.read_text(encoding="utf-8").split())
+
+
+class LidMintingTest(LidFixture):
+    """lid 없는 링크의 식별자 발급 — 원장이 그 링크의 판정을 담으려면 이게 먼저다."""
+
+    def test_ko_links_get_identifiers_and_their_en_translations_inherit_them(self) -> None:
+        self.assertFalse(self.mint())
         ko, en = self.lids(self.ko), self.lids(self.en)
         self.assertEqual(ko[1], "xxxxx")
-        self.assertEqual(len(set(ko + en)), 3)
-        self.assertEqual(sorted(self.ledger.read_text(encoding="utf-8").split()),
-                         sorted({ko[0], en[0]}))
+        self.assertEqual(en, ko)
+        self.assertEqual(self.minted(), [ko[0]])
 
     def test_existing_identifiers_are_never_reissued(self) -> None:
         self.mint()
-        before = self.ko.read_text(encoding="utf-8")
+        before = self.ko.read_text(encoding="utf-8"), self.en.read_text(encoding="utf-8")
         self.mint()
-        self.assertEqual(self.ko.read_text(encoding="utf-8"), before)
+        self.assertEqual((self.ko.read_text(encoding="utf-8"),
+                          self.en.read_text(encoding="utf-8")), before)
 
     def test_a_value_already_in_use_is_drawn_again(self) -> None:
         self.ledger.write_text("aaaaa\n", encoding="utf-8")
-        draws = iter("aaaaa" + "bbbbb" + "ccccc")
+        draws = iter("aaaaa" + "bbbbb")
         with patch.object(dc.secrets, "choice", side_effect=lambda _seq: next(draws)):
             self.mint()
-        self.assertEqual(sorted(self.lids(self.ko)[:1] + self.lids(self.en)[:1]),
-                         ["bbbbb", "ccccc"])
+        self.assertEqual(self.lids(self.ko)[0], "bbbbb")
+        self.assertEqual(self.lids(self.en)[0], "bbbbb")
 
     def test_a_post_with_uncommitted_edits_waits(self) -> None:
-        self.mint(dirty=["_posts/Math/Cat/ko/2025-01-01-A.md",
-                         "_posts/Math/Cat/en/2026-01-01-A.md"])
+        self.mint(dirty=[KO_REL, EN_REL])
         self.assertEqual(self.lids(self.ko), ["xxxxx"])
         self.assertFalse(self.ledger.exists())
+
+    def test_en_waits_while_its_ko_twin_still_lacks_an_identifier(self) -> None:
+        # KO 가 이번에 발급을 못 받으면 EN 은 후보를 볼 수 없다. 그때 새 값을 주면
+        # 같은 출현이 KO 와 갈린다.
+        self.mint(dirty=[KO_REL])
+        self.assertEqual(self.lids(self.ko), ["xxxxx"])
+        self.assertEqual(self.lids(self.en), ["xxxxx"])
+
+    def test_an_en_link_with_no_ko_occurrence_gets_its_own(self) -> None:
+        self.write(LID_BODY, LID_BODY.replace("도 쓴다.", "도 쓰고 [다](#def3)도 쓴다."))
+        self.mint()
+        ko, en = self.lids(self.ko), self.lids(self.en)
+        self.assertEqual(en[:2], ko)
+        self.assertNotIn(en[2], ko)
+        self.assertEqual(self.minted(), sorted([ko[0], en[2]]))
+
+    def test_an_en_post_without_a_ko_twin_mints_its_own(self) -> None:
+        self.write(None, LID_BODY)
+        self.mint()
+        self.assertEqual(self.lids(self.en)[1], "xxxxx")
+        self.assertEqual(self.minted(), [self.lids(self.en)[0]])
+
+
+KO_TWICE = """---
+title: t
+---
+
+[가](#def1){: data-lid="aaaa1" }는 A이고 [가](#def1){: data-lid="aaaa2" }는 B이다.
+"""
+
+EN_TWICE = """---
+title: t
+---
+
+B is [ga](#def1) and A is [ga](#def1).
+"""
+
+
+class LidPairingTest(LidFixture):
+    """같은 대상이 여러 번 나와 순서로만 갈리는 EN 링크 — 모델이 문장을 읽고 짝을 정한다."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.write(KO_TWICE, EN_TWICE)
+
+    def ask(self, answer=None, *, error=None, open_quota=True):
+        model = patch.object(dc, "ask_antigravity", return_value=answer,
+                             side_effect=error)
+        notify = patch.object(dc, "notify")
+        extra = (patch.object(dc, "provider_available", return_value=open_quota),
+                 patch.object(dc, "acquire_provider_slot"))
+        with model as m, notify as n:
+            called = self.mint(also=extra)
+        return SimpleNamespace(called=called, model=m, notify=n)
+
+    def state(self) -> dict:
+        return json.loads(self.pairing.read_text(encoding="utf-8")).get(EN_REL, {})
+
+    def test_the_model_decides_occurrences_split_only_by_order(self) -> None:
+        run = self.ask({"assignments": [{"en": "e1", "lid": "aaaa2"},
+                                        {"en": "[e2]", "lid": "aaaa1"}]})
+        self.assertTrue(run.called)
+        prompt = run.model.call_args.args[0]
+        self.assertIn("⟦e1⟧[ga](#def1)", prompt)
+        self.assertIn('⟦aaaa2⟧[가](#def1){: data-lid="aaaa2" }', prompt)
+        self.assertEqual(self.lids(self.en), ["aaaa2", "aaaa1"])
+        self.assertFalse(self.ledger.exists())
+        self.assertEqual(self.state(), {})
+
+    def test_only_an_unmatched_verdict_mints_and_undecided_waits(self) -> None:
+        run = self.ask({"unmatched": [{"en": "e1", "why": "번역이 덧붙임"}],
+                        "undecided": [{"en": "e2", "why": "모름"}]})
+        en = self.lids(self.en)
+        self.assertEqual(len(en), 1)
+        self.assertNotIn(en[0], {"aaaa1", "aaaa2"})
+        self.assertEqual(self.minted(), en)
+        self.assertEqual(self.state()["attempts"], 1)
+        run.notify.assert_not_called()
+
+    def test_answers_breaking_the_rules_are_dropped(self) -> None:
+        self.ask({"assignments": [{"en": "e1", "lid": "zzzzz"},
+                                  {"en": "e2", "lid": "aaaa1"},
+                                  {"en": "e9", "lid": "aaaa2"}]})
+        self.assertEqual(self.en.read_text(encoding="utf-8").count("data-lid"), 1)
+        self.assertIn('[ga](#def1){: data-lid="aaaa1" }.', self.en.read_text(encoding="utf-8"))
+        # 남은 링크는 후보도 하나뿐이라 다음 발급에서 모델 없이 풀린다
+        run = self.ask({"assignments": []})
+        run.model.assert_not_called()
+        self.assertEqual(self.lids(self.en), ["aaaa2", "aaaa1"])
+
+    def test_a_failed_call_or_closed_quota_writes_nothing(self) -> None:
+        run = self.ask(error=RuntimeError("boom"))
+        self.assertTrue(run.called)
+        self.assertEqual(self.lids(self.en), [])
+        self.assertEqual(self.state()["attempts"], 1)
+        run = self.ask({"assignments": []}, open_quota=False)
+        self.assertFalse(run.called)
+        run.model.assert_not_called()
+
+    def test_repeated_failure_notifies_once_and_rests_a_day(self) -> None:
+        for _ in range(dc.PAIRING_MAX_ATTEMPTS):
+            run = self.ask(error=RuntimeError("boom"))
+        run.notify.assert_called_once()
+        self.assertGreater(self.state()["retry_after"], time.time())
+        run = self.ask(error=RuntimeError("boom"))
+        self.assertFalse(run.called)
+        run.model.assert_not_called()
 
 
 class LedgerFileTest(unittest.TestCase):

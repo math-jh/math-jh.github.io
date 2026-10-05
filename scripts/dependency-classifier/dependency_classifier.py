@@ -61,6 +61,7 @@ from __future__ import annotations
 import argparse
 import fcntl
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -712,7 +713,10 @@ def parse_json_value(raw: str) -> dict:
 
 
 def call_antigravity(items: list[dict], *, mode: str) -> dict:
-    prompt = PROMPTS[mode] + json.dumps(items, ensure_ascii=False)
+    return ask_antigravity(PROMPTS[mode] + json.dumps(items, ensure_ascii=False))
+
+
+def ask_antigravity(prompt: str) -> dict:
     proc = subprocess.run(
         [AGY_BIN, "--print", prompt, "--model", AGY_MODEL,
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "15m"],
@@ -1379,6 +1383,11 @@ def run_verify_pass(
 LID_LEDGER = Path.home() / ".local" / "state" / "link-ids.txt"
 LID_ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz"
 LID_LENGTH = 5
+PAIRING_STATE_PATH = STATE_DIR / "link-lid-pairing.json"
+PAIRING_MAX_ATTEMPTS = 3
+PAIRING_WINDOW = (700, 400)     # 모델에게 보여 줄 링크 앞·뒤 글자 수
+SECTION_ANCHOR_GATE = Path(__file__).resolve().parents[2] / "scripts" / "translation" / "section_anchor_gate.py"
+IAL_ANY_RE = re.compile(r"\{:[^}\n]*\}")
 
 
 def unit_links(path: Path, text: str) -> list[Link]:
@@ -1390,30 +1399,136 @@ def unit_links(path: Path, text: str) -> list[Link]:
     return [seen[k] for k in sorted(seen)]
 
 
-def mint_lids(*, commit: bool) -> None:
-    """lid 없는 링크에 식별자를 발급한다. 판정보다 **먼저** 돈다.
+def loose_links(path: Path, text: str) -> list[Link]:
+    """lid 가 없는 링크 — 원장에 판정을 담을 자리가 아직 없다."""
+    return [link for link in unit_links(path, text) if link.lid is None]
 
-    관계는 lid 를 키로 원장에 적히므로 lid 없는 링크는 판정을 담을 곳이 없다.
-    KO 링크의 lid 는 번역을 타고 EN 으로 건너가 두 링크가 한 레코드를 공유하게
-    하고, EN 에만 있는 링크(번역이 KO 에 없는 링크를 만들었거나 lid 를 흘린 경우)도
-    자기 lid 를 받아 따로 판정된다. 발급을 매 틱의 첫 단계로 두어 같은 틱에서 새
-    링크가 판정되기 전에 식별자를 갖는 것을 보장한다.
 
-    값은 36진수 5자 난수이고, `현재 코퍼스 ∪ 발급 대장` 과 대조해 다시 뽑으므로
-    유일성은 확률이 아니라 검사로 보장된다. 지워진 링크의 id 가 풀려서 다른
-    링크에 재배정되지 않도록 대장은 한 번 발급한 값을 계속 들고 있는다.
+def twin_path(path: Path) -> Path | None:
+    """KO 글이면 EN 짝, EN 글이면 KO 짝. 날짜 접두사는 언어마다 다를 수 있다."""
+    m = re.match(r"\d{4}-\d{2}-\d{2}-(.+\.md)$", path.name)
+    if not m or path.parent.name not in ("ko", "en"):
+        return None
+    other = path.parent.parent / ("en" if path.parent.name == "ko" else "ko")
+    found = sorted(other.glob(f"????-??-??-{m.group(1)}"))
+    return found[0] if found else None
+
+
+_anchor_gate_module = None
+
+
+def anchor_gate():
+    """번역 파이프라인의 섹션 앵커 대응(section_anchor_gate). 쓸 때 처음 불러온다."""
+    global _anchor_gate_module
+    if _anchor_gate_module is None:
+        spec = importlib.util.spec_from_file_location("section_anchor_gate", SECTION_ANCHOR_GATE)
+        assert spec and spec.loader
+        module = importlib.util.module_from_spec(spec)
+        sys.modules.setdefault("section_anchor_gate", module)
+        spec.loader.exec_module(module)
+        _anchor_gate_module = module
+    return _anchor_gate_module
+
+
+def h2_slugs(path: Path) -> list[str]:
+    gate = anchor_gate()
+    return [h.slug for h in gate.extract_headings(path.read_text(encoding="utf-8"))
+            if h.level == 2]
+
+
+def pair_key(target: str, home: Path) -> tuple[str, str | None]:
+    """링크 target 의 언어 중립 키 `(경로, 앵커)`. 앵커를 환원하지 못하면 앵커가 None.
+
+    라벨 앵커(`#prop7`)는 언어 불변이라 그대로 쓴다. 섹션 앵커는 번역되므로
+    (`#텐서곱` ↔ `#tensor-product`) 대상 글의 H2 목록에서의 위치로 바꾼다. 대상 글의
+    KO/EN H2 개수가 다르거나 앵커가 목록에 없으면 위치가 대응을 보장하지 못한다.
+    같은 글 안 앵커의 대상 글은 링크가 있는 글 자신이다.
     """
-    scope = ROOT / "_posts" / "Math"
-    targets = sorted(p for p in scope.rglob("*.md") if p.parent.name in ("ko", "en"))
-    texts, pending = {}, {}
-    for path in targets:
-        text = path.read_text(encoding="utf-8")
-        missing = [x for x in unit_links(path, text) if link_lid(text, x) is None]
-        if missing:
-            texts[path], pending[path] = text, missing
-    if not pending:
-        return
+    path, _, frag = target.partition("#")
+    path = path.split("?", 1)[0].rstrip("/")
+    if path:
+        post = by_permalink(path, _POSTS)
+        dest = post.path if post else None
+        key_path = re.sub(r"^/(?:ko|en)(?=/)", "", path)
+    else:
+        dest, key_path = home, "@self"
+    if not frag or anchor_gate().LABEL_ANCHOR_RE.match(frag):
+        return key_path, frag
+    other = twin_path(dest) if dest else None
+    if other is None:
+        return key_path, None
+    try:
+        mine, theirs = h2_slugs(dest), h2_slugs(other)
+    except OSError:
+        return key_path, None
+    if len(mine) != len(theirs) or frag not in mine:
+        return key_path, None
+    return key_path, f"§{mine.index(frag)}"
 
+
+def plan_en_lids(
+    en_path: Path, en_text: str, ko_path: Path, ko_text: str,
+) -> tuple[list[tuple[Link, str]], list[Link], list[tuple[Link, list[Link]]]]:
+    """EN 의 lid 없는 링크를 (KO lid 를 이어받을 것, 새로 받을 것, 모델에 물을 것)으로.
+
+    후보는 KO 출현 중 lid 가 EN 어디에도 없는 것, 그중 같은 대상(경로가 같고 앵커가
+    같거나 어느 한쪽이 환원 불가)으로 가는 것이다.
+      - 후보가 없으면 그 EN 링크는 KO 의 어느 출현의 번역도 아니다 → 새 lid.
+      - EN 링크와 KO 후보가 서로에게 유일한 후보이고 키까지 같으면 그 lid 를 옮긴다.
+        문장을 읽지 않고 짝을 짓는 곳은 여기뿐이라 1:1 로 묶어 둔다.
+      - 나머지는 같은 대상이 여러 번 나와 순서로만 갈리는 경우다. 번역은 순서를
+        바꿀 수 있으므로 위치로 정하지 않고 모델이 문장을 읽어 정한다.
+    """
+    en_lids = set(LID_RE.findall(en_text))
+    loose = loose_links(en_path, en_text)
+    open_ko = [k for k in unit_links(ko_path, ko_text) if k.lid and k.lid not in en_lids]
+    en_key = {e.start: pair_key(e.target, en_path) for e in loose}
+    ko_key = {k.start: pair_key(k.target, ko_path) for k in open_ko}
+
+    def fits(a: tuple[str, str | None], b: tuple[str, str | None]) -> bool:
+        return a[0] == b[0] and (a[1] is None or b[1] is None or a[1] == b[1])
+
+    found = {e.start: [k for k in open_ko if fits(en_key[e.start], ko_key[k.start])]
+             for e in loose}
+    inherit, fresh, ask = [], [], []
+    for e in loose:
+        mine = found[e.start]
+        if not mine:
+            fresh.append(e)
+            continue
+        if len(mine) == 1:
+            k = mine[0]
+            rivals = [x.start for x in loose if any(c.start == k.start for c in found[x.start])]
+            if (en_key[e.start][1] is not None and en_key[e.start] == ko_key[k.start]
+                    and rivals == [e.start]):
+                inherit.append((e, k.lid))
+                continue
+        ask.append((e, mine))
+    return inherit, fresh, ask
+
+
+def with_lids(text: str, assign: list[tuple[Link, str]]) -> str:
+    """각 링크의 IAL 에 lid 를 단다 (IAL 이 없으면 붙인다). 링크는 이 text 에서 뽑은 것."""
+    edits = []
+    for link, value in assign:
+        if link.ial_start is None:
+            edits.append((link.end, link.end, f'{{: data-lid="{value}" }}'))
+        else:
+            ial = text[link.ial_start:link.ial_end]
+            edits.append((link.ial_start, link.ial_end,
+                          ial[:2] + f' data-lid="{value}"' + ial[2:]))
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    return text
+
+
+def duplicate_lids(text: str) -> set[str]:
+    values = LID_RE.findall(text)
+    return {v for v in values if values.count(v) > 1}
+
+
+def lid_drawer() -> Callable[[], str]:
+    """새 lid 를 뽑는 함수. `현재 코퍼스 ∪ 발급 대장` 과 대조해 겹치면 다시 뽑는다."""
     used = set()
     if LID_LEDGER.exists():
         used |= {ln.strip() for ln in LID_LEDGER.read_text(encoding="utf-8").splitlines() if ln.strip()}
@@ -1427,43 +1542,281 @@ def mint_lids(*, commit: bool) -> None:
                 used.add(value)
                 return value
 
-    rendered, minted = {}, []
-    for path, links in pending.items():
-        if dirty_paths([str(path.relative_to(ROOT))], ROOT):
-            continue
-        text, edits = texts[path], []
-        for link in links:
-            value = draw()
-            minted.append(value)
-            if link.ial_start is None:
-                edits.append((link.end, link.end, f'{{: data-lid="{value}" }}'))
-            else:
-                ial = text[link.ial_start:link.ial_end]
-                edits.append((link.ial_start, link.ial_end,
-                              ial[:2] + f' data-lid="{value}"' + ial[2:]))
-        for start, end, replacement in sorted(edits, reverse=True):
-            text = text[:start] + replacement + text[end:]
-        rendered[path] = text
-    if not rendered:
-        return
+    return draw
 
-    lease = try_acquire_file_locks(list(rendered))
-    if lease is None:
-        return log("lid: 대상 글이 잠겨 있다 — 다음 틱에")
+
+def record_minted(values: list[str]) -> None:
+    if not values:
+        return
+    LID_LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    with LID_LEDGER.open("a", encoding="utf-8") as handle:
+        handle.write("".join(value + "\n" for value in values))
+
+
+def mint_lids(*, commit: bool) -> bool:
+    """lid 없는 링크에 식별자를 준다. 판정보다 **먼저** 돈다. 모델을 불렀으면 True.
+
+    관계는 lid 를 키로 원장에 적히므로 lid 없는 링크는 판정을 담을 곳이 없다.
+    KO 링크는 새 값을 받는다. EN 링크가 KO 출현의 번역이면 그 lid 를 이어받아야
+    두 링크가 한 레코드를 공유한다. 새 값을 주면 같은 출현이 따로 판정되고, 그 값
+    차이는 에러를 내지 않는다. 번역이 lid 를 옮기지 못한 EN 링크(번역 당시 대상 글이
+    없어 링크로 잡히지 않았다가 대상 글이 번역된 경우, 번역이 lid 를 흘린 경우)가
+    여기로 온다. `plan_en_lids` 가 나눈 대로 이어받거나 새로 받고, 순서로만 갈리는
+    것은 `pair_with_model` 이 모델에게 물어 정한다(틱당 한 글). 답이 나오기 전까지
+    그 링크는 lid 없이 기다린다.
+
+    KO 를 먼저 발급하고 EN 후보는 그 결과로 계산한다. KO 짝에 lid 없는 링크가
+    남아 있으면(dirty·잠김으로 이번에 못 받았으면) 그 EN 글은 다음 틱으로 미룬다.
+    후보를 못 본 채 새 값을 주면 같은 출현이 갈린다.
+
+    값은 36진수 5자 난수이고, `현재 코퍼스 ∪ 발급 대장` 과 대조해 다시 뽑으므로
+    유일성은 확률이 아니라 검사로 보장된다. 지워진 링크의 id 가 풀려서 다른
+    링크에 재배정되지 않도록 대장은 한 번 발급한 값을 계속 들고 있는다.
+    """
+    scope = ROOT / "_posts" / "Math"
+    targets = sorted(p for p in scope.rglob("*.md") if p.parent.name in ("ko", "en"))
+    texts = {p: p.read_text(encoding="utf-8") for p in targets}
+    loose = {p: loose_links(p, texts[p]) for p in targets}
+    if not any(loose.values()):
+        return False
+
+    def clean(path: Path) -> bool:
+        return not dirty_paths([str(path.relative_to(ROOT))], ROOT)
+
+    draw, minted, inherited = lid_drawer(), [], 0
+
+    def fresh_lid() -> str:
+        minted.append(draw())
+        return minted[-1]
+
+    rendered: dict[Path, str] = {}
+    for path in targets:
+        if path.parent.name == "ko" and loose[path] and clean(path):
+            rendered[path] = with_lids(texts[path], [(x, fresh_lid()) for x in loose[path]])
+    waiting = []
+    for path in targets:
+        if path.parent.name != "en" or not loose[path] or not clean(path):
+            continue
+        ko = twin_path(path)
+        if ko is None:
+            assign = [(x, fresh_lid()) for x in loose[path]]
+        else:
+            ko_text = rendered.get(ko) or texts.get(ko) or ko.read_text(encoding="utf-8")
+            if loose_links(ko, ko_text):
+                continue
+            inherit, fresh, ask = plan_en_lids(path, texts[path], ko, ko_text)
+            if ask:
+                waiting.append(path)
+            assign = inherit + [(x, fresh_lid()) for x in fresh]
+            inherited += len(inherit)
+        if not assign:
+            continue
+        text = with_lids(texts[path], assign)
+        if duplicate_lids(text):
+            log(f"lid: {path.relative_to(ROOT)} — 이어받은 lid 가 겹친다, 쓰지 않음")
+            continue
+        rendered[path] = text
+
+    if rendered:
+        lease = try_acquire_file_locks(list(rendered))
+        if lease is None:
+            log("lid: 대상 글이 잠겨 있다 — 다음 틱에")
+            return False
+        try:
+            written = [v for v in minted if any(f'"{v}"' in rendered[p] for p in rendered)]
+            record_minted(written)
+            detail = f"링크 식별자 {len(written)}건 발급"
+            if inherited:
+                detail += f", KO 짝 lid {inherited}건 이어받음"
+            # 추적되는 글과 로컬 전용(untracked GW) 글을 한 번에 넘기면 커밋 경로가 갈려
+            # 둘 다 실패한다 — 나눠서 게시한다.
+            local = [p for p in rendered if is_local_only_untracked_unit([p])]
+            for group in ([p for p in rendered if p not in local], local):
+                if group:
+                    publish(group, texts, rendered, commit=commit, detail=detail)
+        finally:
+            lease.release()
+        log(f"lid: {len(written)} minted, {inherited} inherited from KO "
+            f"across {len(rendered)} post(s)")
+    return pair_with_model(waiting, draw, commit=commit)
+
+
+PAIRING_PROMPT = """You are matching internal links between a Korean mathematics article and its English translation.
+
+Every link occurrence in the Korean article carries a permanent identifier: the `data-lid="xxxxx"` in the attribute list right after the link. The English translation should carry the same identifier on the link that renders that occurrence. The English links listed below have none. For each one, decide from the sentences which Korean occurrence it renders. The same target is often linked several times in one article, translation may reorder sentences, and a translation may also contain a link the Korean article does not have.
+
+In each excerpt the link in question is the one immediately after its tag: ⟦e3⟧ for an English link, ⟦<lid>⟧ for a Korean candidate.
+
+{groups}
+
+Answer with one JSON object and nothing else:
+{"assignments": [{"en": "e1", "lid": "abcde"}], "unmatched": [{"en": "e2", "why": "..."}], "undecided": [{"en": "e3", "why": "..."}]}
+
+- assignments: the English link renders that Korean occurrence. Use only a lid listed for that English link, and each lid at most once. If the English link merges several Korean occurrences, give the one whose sentence it renders.
+- unmatched: none of the listed Korean occurrences is rendered by this English link; the translation added it.
+- undecided: you cannot tell. A wrong match is worse than an undecided one, which is asked again later.
+Put every listed English link in exactly one of the three lists. Write each "why" in Korean."""
+
+
+def link_window(text: str, link: Link, tag: str) -> str:
+    """링크 앞뒤 몇백 자를 잘라, 묻는 링크 바로 앞에 태그를 넣는다."""
+    end = link.ial_end or link.end
+    a = max(0, link.start - PAIRING_WINDOW[0])
+    b = min(len(text), end + PAIRING_WINDOW[1])
+    return (("…" if a else "") + text[a:link.start] + f"⟦{tag}⟧" + text[link.start:b]
+            + ("…" if b < len(text) else ""))
+
+
+def pairing_prompt(en_text: str, ko_text: str, ask: list[tuple[Link, list[Link]]]) -> str:
+    blocks, shown = [], {}
+    for i, (link, found) in enumerate(ask, 1):
+        blocks.append(f"English link e{i}: {link.markup}\n"
+                      f"Korean candidates for e{i}: {', '.join(k.lid for k in found)}\n"
+                      f"Excerpt:\n{link_window(en_text, link, f'e{i}')}")
+        for k in found:
+            shown.setdefault(k.lid, k)
+    for lid, k in shown.items():
+        blocks.append(f"Korean candidate {lid}\nExcerpt:\n{link_window(ko_text, k, lid)}")
+    return PAIRING_PROMPT.replace("{groups}", "\n\n".join(blocks))
+
+
+def check_pairing(
+    answer: dict, ask: list[tuple[Link, list[Link]]],
+) -> tuple[list[tuple[Link, str]], list[Link], list[str]]:
+    """모델의 답에서 규칙을 지킨 것만 (이어받을 것, 새로 받을 것, 버린 사유)로."""
+    asked = {f"e{i}": (link, {k.lid for k in found}) for i, (link, found) in enumerate(ask, 1)}
+    inherit, fresh, notes = [], [], []
+    answered, used = set(), set()
+
+    def tag_of(item: object) -> str:
+        raw = item.get("en") if isinstance(item, dict) else None
+        return str(raw or "").strip().strip("[]⟦⟧ ")
+
+    for item in answer.get("assignments") or []:
+        tag, lid = tag_of(item), str(item.get("lid") or "").strip()
+        if tag not in asked or tag in answered:
+            notes.append(f"{tag}: 묻지 않았거나 두 번 답한 링크")
+        elif lid not in asked[tag][1]:
+            notes.append(f"{tag}: 후보 밖의 lid {lid}")
+        elif lid in used:
+            notes.append(f"{tag}: lid {lid} 를 두 번 씀")
+        else:
+            answered.add(tag)
+            used.add(lid)
+            inherit.append((asked[tag][0], lid))
+    for item in answer.get("unmatched") or []:
+        tag = tag_of(item)
+        if tag not in asked or tag in answered:
+            notes.append(f"{tag}: 묻지 않았거나 두 번 답한 링크")
+        else:
+            answered.add(tag)
+            fresh.append(asked[tag][0])
+            notes.append(f"{tag}: KO 짝 없음 — {str(item.get('why') or '')[:120]}")
+    for item in answer.get("undecided") or []:
+        notes.append(f"{tag_of(item)}: 미정 — {str(item.get('why') or '')[:120]}")
+    return inherit, fresh, notes
+
+
+def load_pairing_state() -> dict:
     try:
-        LID_LEDGER.parent.mkdir(parents=True, exist_ok=True)
-        with LID_LEDGER.open("a", encoding="utf-8") as handle:
-            handle.write("".join(value + "\n" for value in minted))
-        # 추적되는 글과 로컬 전용(untracked GW) 글을 한 번에 넘기면 커밋 경로가 갈려
-        # 둘 다 실패한다 — 나눠서 게시한다.
-        local = [p for p in rendered if is_local_only_untracked_unit([p])]
-        for group in ([p for p in rendered if p not in local], local):
-            if group:
-                publish(group, texts, rendered, commit=commit,
-                        detail=f"링크 식별자 {len(minted)}건 발급")
-    finally:
-        lease.release()
-    log(f"lid: {len(minted)} identifier(s) minted across {len(rendered)} post(s)")
+        value = json.loads(PAIRING_STATE_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return value if isinstance(value, dict) else {}
+
+
+def save_pairing_state(state: dict) -> None:
+    PAIRING_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = PAIRING_STATE_PATH.with_suffix(".tmp")
+    tmp.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    os.replace(tmp, PAIRING_STATE_PATH)
+
+
+def pair_with_model(queue: list[Path], draw: Callable[[], str], *, commit: bool) -> bool:
+    """순서로만 갈리는 EN 링크의 KO 짝을 모델에게 묻는다. 한 틱에 한 글. 불렀으면 True.
+
+    모델은 판단만 하고 파일은 여기서 쓴다. 후보는 같은 대상으로 가는 짝 없는 KO
+    출현으로만 제시하고, 답의 lid 는 그 링크의 후보 안이어야 하며 한 번씩만 쓸 수 있다.
+    새 lid 는 모델이 "이 링크의 KO 출현이 없다"(unmatched)고 답한 링크만 받는다.
+    미정·규칙 위반·호출 실패·쿼터는 아무것도 쓰지 않고 그 링크를 lid 없이 남긴다.
+    lid 없는 EN 링크는 판정을 기다릴 뿐 막는 것이 없지만, 잘못 지은 짝이나 성급한
+    새 값은 KO 와 다른 판정을 조용히 만든다.
+
+    같은 내용(IAL 을 뺀 KO+EN)에 PAIRING_MAX_ATTEMPTS 번 물어도 남으면 알리고 하루
+    쉰다. 내용이 바뀌면 횟수는 처음부터 센다.
+    """
+    if not queue:
+        return False
+    state = load_pairing_state()
+    now = time.time()
+    for en_path in queue:
+        ko_path = twin_path(en_path)
+        if ko_path is None:
+            continue
+        key = str(en_path.relative_to(ROOT))
+        lease = try_acquire_file_locks([ko_path, en_path])
+        if lease is None:
+            continue
+        try:
+            if dirty_paths([str(p.relative_to(ROOT)) for p in (ko_path, en_path)], ROOT):
+                continue
+            ko_text = ko_path.read_text(encoding="utf-8")
+            en_text = en_path.read_text(encoding="utf-8")
+            digest = sha(IAL_ANY_RE.sub("", ko_text) + "\0" + IAL_ANY_RE.sub("", en_text))
+            entry = state.get(key, {})
+            if entry.get("digest") != digest:
+                entry = {"digest": digest}
+            if entry.get("retry_after", 0) > now or loose_links(ko_path, ko_text):
+                continue
+            _inherit, _fresh, ask = plan_en_lids(en_path, en_text, ko_path, ko_text)
+            if not ask:
+                continue
+            if not provider_available("Antigravity"):
+                log("lid pairing: Antigravity quota closed — next tick")
+                return False
+            log(f"lid pairing: {key} — asking the model for {len(ask)} KO twin(s)")
+            slot = acquire_provider_slot("Antigravity")
+            try:
+                answer = ask_antigravity(pairing_prompt(en_text, ko_text, ask))
+                inherit, fresh, notes = check_pairing(answer, ask)
+            except Exception as exc:  # noqa: BLE001 — 실패는 이 글을 미룰 뿐이다
+                inherit, fresh, notes = [], [], [f"호출 실패: {str(exc)[:300]}"]
+            finally:
+                slot.close()
+            values = [draw() for _ in fresh]
+            assign = inherit + list(zip(fresh, values))
+            if assign:
+                text = with_lids(en_text, assign)
+                try:
+                    if duplicate_lids(text):
+                        raise RuntimeError(f"lid 중복 {sorted(duplicate_lids(text))}")
+                    record_minted(values)
+                    publish([en_path], {en_path: en_text}, {en_path: text}, commit=commit,
+                            detail=f"링크 식별자: KO 짝 lid {len(inherit)}건 이어받음(모델 판단)"
+                                   + (f", EN 전용 {len(fresh)}건 발급" if fresh else ""))
+                except RuntimeError as exc:
+                    notes.append(f"쓰기 거절: {exc}")
+                    inherit, fresh, assign = [], [], []
+            for note in notes:
+                log(f"lid pairing: {key} — {note}")
+            left = len(ask) - len(assign)
+            if left:
+                entry["attempts"] = entry.get("attempts", 0) + 1
+                if entry["attempts"] >= PAIRING_MAX_ATTEMPTS:
+                    entry.update(attempts=0, retry_after=int(now + BLOCK_SEC))
+                    notify("링크 lid 짝 미정",
+                           f"{key}\nEN 링크 {left}개의 KO 짝을 {PAIRING_MAX_ATTEMPTS}번 물어도 "
+                           "정하지 못했다. 하루 뒤 다시 묻는다.\n" + "\n".join(notes[:5]),
+                           url="")
+                state[key] = entry
+            else:
+                state.pop(key, None)
+            save_pairing_state(state)
+            log(f"lid pairing: {key} — inherited {len(inherit)}, EN-only {len(fresh)}, left {left}")
+            return True
+        finally:
+            lease.release()
+    return False
 
 
 def run_stamp_pass(
@@ -1489,8 +1842,8 @@ def run_stamp_pass(
 
 
 def process_once(dry_run: bool = False, *, commit: bool = True) -> int:
-    if not dry_run:
-        mint_lids(commit=commit)
+    if not dry_run and mint_lids(commit=commit):
+        return 0      # 모델에게 짝을 물은 틱은 그것으로 끝낸다 — 틱 길이를 묶어 둔다
     state = load_state()
     scan_updates: dict[str, dict] = {}
     selected = select_unit(state, scan_updates)
