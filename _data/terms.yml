@@ -7813,6 +7813,13 @@ G:
   defs:
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points
+- id: godement_resolution
+  en: Godement resolution
+  ko: 고드망 분해
+  primary: en
+  defs:
+  - label: '[대수다양체] §층 코호몰로지'
+    url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: godement_sheaf
   en: Godement sheaf
   ko: 고드망 층
