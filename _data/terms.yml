@@ -4612,6 +4612,13 @@ D:
     url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+- id: degree-genus_formula
+  en: degree-genus formula
+  ko: 차수-종수 공식
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: degree_map
   en: degree map
   ko: 차수 사상
