@@ -5427,3 +5427,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-10-03 23:15
 
 - _posts/Math/Algebraic_Structures/ko/2024-08-30-Algebras.md: 병기 필요 'unital    -algebra homomorphism' — 위키 ko 문서 '단순 가군' — 병기형 도출 필요
+
+## term_extract_worker 2026-10-06 13:15
+
+- _posts/Math/Algebraic_Varieties/ko/2026-03-25-Divisors.md: 병기 필요 'linearly equivalent' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
