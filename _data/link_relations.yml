@@ -6223,7 +6223,7 @@
 "r1ur7": {relation: weak, reviewed: true}
 "r1ury": {relation: required, reviewed: true}
 "r1yy1": {relation: required, reviewed: true}
-"r2218": {relation: required}
+"r2218": {relation: required, reviewed: true}
 "r284j": {relation: required, reviewed: true}
 "r2lsl": {relation: required, reviewed: true}
 "r2x74": {relation: required, reviewed: true}
