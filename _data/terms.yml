@@ -3709,6 +3709,13 @@ C:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: conormal_exact_sequence
+  en: conormal exact sequence
+  ko: 여법 완전열
+  primary: en
+  defs:
+  - label: '[스킴] §미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: conormal_sequence
   en: conormal sequence
   ko: 공법열
