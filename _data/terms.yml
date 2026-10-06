@@ -673,6 +673,13 @@ A:
   defs:
   - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
+- id: ample
+  en: ample
+  ko: 풍부한
+  primary: en
+  defs:
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
 - id: ample_line_bundle
   en: ample line bundle
   ko: 풍부한 선다발
@@ -14426,6 +14433,13 @@ P:
   defs:
   - label: '[정수론] §펠 방정식'
     url: /ko/math/number_theory/pell_equation
+- id: pencil
+  en: pencil
+  ko: 연필
+  primary: en
+  defs:
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
 - id: perfect_closure
   en: perfect closure
   ko: 완전 폐포
@@ -20678,6 +20692,13 @@ V:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: veronese_embedding
+  en: Veronese embedding
+  ko: 베로네세 매장
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: vertex
   en: vertex
   ko: 정점
