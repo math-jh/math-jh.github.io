@@ -10714,6 +10714,13 @@ K:
   defs:
   - label: '[대수다양체] §고다이라 소멸정리'
     url: /ko/math/algebraic_varieties/kodaira_vanishing
+- id: kodaira_embedding_theorem
+  en: Kodaira embedding theorem
+  ko: 고다이라 매장정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §고다이라 소멸정리'
+    url: /ko/math/algebraic_varieties/kodaira_vanishing
 - id: kodaira_vanishing_theorem
   en: Kodaira vanishing theorem
   ko: 고다이라 소멸정리
