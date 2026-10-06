@@ -4749,6 +4749,7 @@
 "kt7cy": {relation: required, reviewed: true}
 "kt82g": {relation: weak, reviewed: true}
 "ktidb": {relation: required, reviewed: true}
+"ku29x": {relation: required}
 "kughb": {relation: required, reviewed: true}
 "kuh5t": {relation: weak, reviewed: true}
 "kui9i": {relation: required, reviewed: true}
@@ -5185,6 +5186,7 @@
 "mlqdv": {relation: weak, reviewed: true}
 "mm0qw": {relation: weak, reviewed: true}
 "mm53x": {relation: required, reviewed: true}
+"mm605": {relation: required}
 "mmbxe": {relation: required, reviewed: true}
 "mmdq8": {relation: required, reviewed: true}
 "mmkq9": {relation: required, reviewed: true}
