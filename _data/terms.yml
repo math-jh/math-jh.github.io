@@ -17568,6 +17568,13 @@ S:
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+- id: serre_vanishing_theorem
+  en: Serre vanishing theorem
+  ko: 세르 소멸 정리
+  primary: en
+  defs:
+  - label: '[대수다양체] §고다이라 소멸정리'
+    url: /ko/math/algebraic_varieties/kodaira_vanishing
 - id: set
   en: set
   ko: 집합
@@ -20734,6 +20741,13 @@ V:
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: very_ample_line_bundle
+  en: very ample line bundle
+  ko: 매우 풍부한 선다발
+  primary: en
+  defs:
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
 - id: virtual_class
   en: virtual class
   ko: 가상 클래스
