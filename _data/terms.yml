@@ -14542,6 +14542,13 @@ P:
   defs:
   - label: '[토릭 기하학] §토러스 인자와 선다발'
     url: /ko/math/toric_geometry/toric_divisors
+- id: plücker_coordinates
+  en: Plücker coordinates
+  ko: 플뤼커 좌표
+  primary: en
+  defs:
+  - label: '[대수다양체] §그라스만 다양체'
+    url: /ko/math/algebraic_varieties/grassmannians
 - id: plücker_embedding
   en: Plücker embedding
   ko: 플뤼커 매장
