@@ -14,13 +14,13 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-07
 
 weight: 49
 
 ---
 
-관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/ko_followup_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/ko_followup_worker.py), [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [4d2ebc7c](https://github.com/math-jh/math-jh.github.io/commit/4d2ebc7c), [20cc224b](https://github.com/math-jh/math-jh.github.io/commit/20cc224b)
+관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/ko_followup_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/ko_followup_worker.py), [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [4d2ebc7c](https://github.com/math-jh/math-jh.github.io/commit/4d2ebc7c), [20cc224b](https://github.com/math-jh/math-jh.github.io/commit/20cc224b), [8ae10c43](https://github.com/math-jh/math-jh.github.io/commit/8ae10c43), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py)
 {: .notice--info}
 
 EN 코퍼스는 전부 Kimi K3가 번역한 것이다. 그 번역을 다시 훑는 패스를 붙이기로 하면서, 사용자는 같은 엔진으로 자기 결과를 검토시키는 구도를 피했다.
@@ -380,3 +380,51 @@ if reason == "polish":
 `check_en`은 결정론 검사 둘(`lint_latex`, `lint_structure`)을 돌리고, 수식 프로필이 어긋날 때만 모델에게 묻는다. 폴리싱의 재시도 루프가 이미 받아 둔 판정은 `verdict_text`로 넘기므로 같은 질문을 두 번 하지 않고, 게이트가 수식을 바꿔 새로 어긋난 경우에만 다시 묻는다. 인라인 검사가 예외로 끝나면 `check`가 `None`이라 `verified_at`이 찍히지 않고, 그 글은 Phase 4가 받는다. 그래서 Phase 4는 폴리싱 때 검증을 못 마친 글만 받는 보험으로 남았고, 대시보드의 검증 대기 행에는 0편이면 숨기는 `opt: true`가 붙었다.
 
 이 경로는 워커를 돌려 확인하지 않았다. 인라인 검사가 실제 글에서 도는 것은 다음 폴리싱 틱이 지나야 볼 수 있다.
+
+## 폴리싱이 고친 제목을 인용하는 쪽이 따라오지 못할 때
+
+폴리싱은 frontmatter의 `title`도 다시 쓴다. EN 제목은 다른 EN 글이 `[§Basic Notions]` 꼴의 표시명으로 그대로 인용하므로, 제목이 바뀌면 인용 쪽은 옛 제목으로 남는다. 사용자는 폴리싱을 마친 EN 글들에서 고칠 것이 남았는지 보다가 이 경로를 만났다.
+
+> 폴리싱이 En 제목도 바꾼다고?
+
+처음에는 제목을 바꾸는 쪽이 잘못이 아니라 따라가지 못하는 쪽이 문제로 보였다. 그런데 바뀐 제목들을 나란히 놓고 보니 뜻이 틀려서 고친 것보다 문체만 다듬은 것이 많았다. 사용자의 말은 이랬다.
+
+> 1번으로 해줘. 근데 지금 바뀐 것들만 놓고 보면, 이전 제목들이 나은게 많아보이는데, 네 생각은 어때?
+
+나는 같은 생각이라고 답했고, 변경은 두 겹으로 들어갔다. 먼저 제목 프롬프트다. 현재 EN 제목이 주어지면 한글 제목이 가리키는 대상이 달라졌을 때만 바꾸게 하고, 관사·단복수·어순·전치사·대시를 건드리지 못하게 한다.
+
+```python
+Title: if a current English title is given, return it VERBATIM unless it misstates what the Korean title names (a different concept, or a missing or extra qualifier that changes the subject). Other posts cite the title verbatim, so a cosmetic change breaks those citations. Do not restyle it: keep its articles, singular/plural, word order, phrasing ("Computing X" stays "Computing X", not "Computation of X"), prepositions, capitalization, and dashes, even where a more literal rendering of the Korean would differ.
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+프롬프트만으로는 모델이 따른다는 보장이 없어서 결정론 가드가 뒤에 붙는다. `_title_key`가 대소문자, 선행 `The`, 대시 종류, 단어 끝의 복수 `s`를 지운 비교 키를 만들고, 폴리싱 결과의 키가 현재 제목의 키와 같으면 현재 제목으로 되돌린다.
+
+```python
+def _title_key(title: str) -> str:
+    t = re.sub(r"[‐-―]", "-", title.casefold()).strip()
+    t = re.sub(r"^the\s+", "", t)
+    def singular(w: str) -> str:
+        if len(w) > 4 and w.endswith("ies"):
+            return w[:-3] + "y"
+        if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
+            return w[:-1]
+        return w
+    return " ".join(singular(w) for w in re.findall(r"\w+", t))
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+이 키가 잡는 것은 표면 변형뿐이다. 어순이 바뀌거나 단어가 바뀐 제목은 키가 달라 통과하고, 그 경우는 뜻이 달라진 것일 수 있으니 바뀐 대로 둔다. 바뀐 제목이 정말로 필요한 수정일 때를 위해 두 번째 겹이 있다. 폴리싱이 끝난 뒤 옛 제목과 새 제목이 다르면 `sweep_title`이 이 글을 인용하는 다른 EN 글을 찾아 `§옛 제목`을 새 제목으로 바꾼다.
+
+```python
+pat = re.compile(r"(?<!\S)§" + re.escape(old) + r"(?=,|$)")
+```
+{: data-filename="scripts/translation/section_anchor_gate.py"}
+
+치환 패턴이 좁은 것이 이 함수의 요점이다. `§`는 라벨 맨 앞이나 공백 뒤에서만 시작할 수 있고, 라벨 끝이나 `,`에서 끝나야 한다. 그래서 `§§Rings`처럼 절 인용의 `§§`나, 제목이 옛 제목으로 시작하는 다른 글(`§Basic Notions of Rings`)은 건드리지 않는다. 링크의 경로가 대상 글의 permalink와 같을 때만 고치고, 수식·코드·fenced-div 여는 줄 안의 링크는 건너뛴다. 이 경계들은 테스트가 한 문서에 몰아 넣어 확인한다. 같은 제목의 다른 글(`/en/math/ring_theory/basic_notions`)을 가리키는 링크와 백틱 안의 예시까지 한 입력에 섞여 있고, 기대 출력에서 바뀌는 곳은 세 곳뿐이다.
+
+고친 형제 파일은 `sweep_target`과 마찬가지로 커밋하지 않고 워킹트리에 남긴다. 파일 단위 잠금(`acquire_file_locks`)을 잡고 쓰는 것도 같다. autopush가 라벨 치환을 기계적 변경으로 분류하므로 그 글들의 수정일이 움직이지 않는다. 수동 호출용으로 `section_anchor_gate.py retitle <en-file> --old "옛 제목" [--apply]`도 열어 두었다.
+
+같은 변경에서 링크 감사의 정규식도 고쳤다. `check_links.py`의 `LINK_RE`는 라벨을 `[^\]]+`로 읽었는데, 다른 카테고리를 가리키는 인용은 라벨이 `[\[정수론\] §…](…)`처럼 이스케이프된 `\]`를 품는다. 첫 `]`에서 라벨이 끊기고 그 뒤에 `(`가 없으니 매칭이 통째로 실패했다. 커밋 메시지는 이렇게 검사 밖에 있던 인용을 2,550개로 센다. 이제 라벨은 이스케이프된 문자를 한 덩어리로 받고 이스케이프 안 된 대괄호는 받지 않으며, md_lint의 `_LINK_ALL_RE`와 같은 규칙이다. `sweep_title`의 `TITLE_LINK_RE`도 같은 모양의 라벨만 받는다.
+
+이 경로가 실제 폴리싱 틱에서 도는 것은 아직 보지 못했다. 단위 테스트(`RetitleTest`)는 통과하지만, 워커가 `RETITLE` 로그를 남기는 것은 다음에 EN 제목이 정말로 바뀌는 글이 나와야 확인된다.
