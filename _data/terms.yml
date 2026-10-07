@@ -4583,6 +4583,13 @@ D:
   defs:
   - label: '[대수다양체] §교차곱'
     url: /ko/math/algebraic_varieties/intersection_product
+- id: deformation_to_the_normal_cone
+  en: deformation to the normal cone
+  ko: 법원뿔로의 변형
+  primary: en
+  defs:
+  - label: '[대수다양체] §Hirzebruch-Riemann-Roch'
+    url: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
 - id: degeneracy_map
   en: degeneracy map
   ko: 퇴화 사상
@@ -6236,6 +6243,13 @@ E:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: excess_bundle
+  en: excess bundle
+  ko: 초과다발
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: excess_intersection
   en: excess intersection
   ko: 초과 교차
