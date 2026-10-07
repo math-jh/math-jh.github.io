@@ -560,6 +560,13 @@ A:
   defs:
   - label: '[스택] §대수적 스택'
     url: /ko/math/stacks/algebraic_stacks
+- id: algebraic_structure
+  en: algebraic structure
+  ko: 대수적 구조
+  primary: ko
+  defs:
+  - label: '[대수적 구조] §대수적 구조'
+    url: /ko/math/algebraic_structures/algebraic_structures
 - id: algebraic_surface
   en: algebraic surface
   ko: 대수곡면
