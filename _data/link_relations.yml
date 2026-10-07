@@ -3005,10 +3005,10 @@
 "cvaw2": {relation: required, reviewed: true}
 "cviq7": {relation: required, reviewed: true}
 "cvttk": {relation: required, reviewed: true}
-"cvx01": {relation: weak}
-"cvx02": {relation: forward}
-"cvx03": {relation: forward}
-"cvx04": {relation: required}
+"cvx01": {relation: weak, reviewed: true}
+"cvx02": {relation: requires-review}
+"cvx03": {relation: requires-review}
+"cvx04": {relation: required, reviewed: true}
 "cvy3u": {relation: required, reviewed: true}
 "cw1tn": {relation: required, reviewed: true}
 "cwgzb": {relation: required, reviewed: true}
@@ -6679,7 +6679,7 @@
 "stetb": {relation: required, reviewed: true}
 "sth56": {relation: required, reviewed: true}
 "stoo3": {relation: required, reviewed: true}
-"strat1": {relation: required}
+"strat1": {relation: required, reviewed: true}
 "su25g": {relation: required, reviewed: true}
 "su2ku": {relation: required, reviewed: true}
 "su37k": {relation: required, reviewed: true}
