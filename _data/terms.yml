@@ -11474,6 +11474,13 @@ L:
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: limit_comparison_test
+  en: limit comparison test
+  ko: 극한비교판정
+  primary: en
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: limit_function
   en: limit function
   ko: 극한함수
@@ -17941,6 +17948,13 @@ S:
   defs:
   - label: '[대수적 위상수학] §호몰로지'
     url: /ko/math/algebraic_topology/homology
+- id: singular_integral
+  en: singular integral
+  ko: 특이적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §이상적분'
+    url: /ko/math/calculus/improper_integrals
 - id: singular_k_-simplex
   en: singular $k$-simplex
   ko: 특이 $k$-심플렉스
