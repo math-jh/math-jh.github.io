@@ -7203,6 +7203,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: free_presentation
+  en: free presentation
+  ko: 자유 표시
+  primary: en
+  defs:
+  - label: '[가환대수학] §국소화의 성질들'
+    url: /ko/math/commutative_algebra/properties_of_localization
 - id: free_product
   en: free product
   ko: 자유곱
