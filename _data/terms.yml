@@ -20418,6 +20418,13 @@ U:
   defs:
   - label: '[스택] §모듈라이 공간'
     url: /ko/math/stacks/moduli_spaces
+- id: universal_mapping_problem
+  en: universal mapping problem
+  ko: 보편 사상 문제
+  primary: en
+  defs:
+  - label: '[대수적 구조] §Grothendieck 군'
+    url: /ko/math/algebraic_structures/Grothendieck_groups
 - id: universal_property
   en: universal property
   ko: 보편성질
