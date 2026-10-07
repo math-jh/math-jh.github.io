@@ -2177,6 +2177,13 @@ C:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+- id: cauchy_s_mean_value_theorem
+  en: 'Cauchy''s Mean Value Theorem'
+  ko: 코시 평균값 정리
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: cauchy-schwarz
   en: Cauchy-Schwarz
   ko: 코시-슈바르츠
