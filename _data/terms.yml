@@ -14990,6 +14990,13 @@ P:
     url: '/ko/math/number_theory/primes'
   - label: '[해석학] §실수의 완비성'
     url: '/ko/math/analysis/completeness_of_reals'
+- id: prime_avoidance_lemma
+  en: prime avoidance lemma
+  ko: 소아이디얼 피하기 보조정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §동반소아이디얼'
+    url: /ko/math/commutative_algebra/associated_primes
 - id: prime_divisor
   en: prime divisor
   ko: 소인자
@@ -16237,6 +16244,13 @@ R:
   see:
   - label: Reduced residue class
     id: reduced_residue_class
+- id: reduced_ring
+  en: reduced ring
+  ko: 축소환
+  primary: en
+  defs:
+  - label: '[대수적 구조] §분수체'
+    url: /ko/math/algebraic_structures/field_of_fractions
 - id: reduced_row_echelon_form
   en: reduced row echelon form
   ko: 기약행사다리꼴
