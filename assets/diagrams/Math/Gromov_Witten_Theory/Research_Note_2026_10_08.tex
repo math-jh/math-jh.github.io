@@ -1,0 +1,16 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG comb space as a fiber product over the diagonal (Research_Note_2026_10_08-1.svg)
+\begin{tikzcd}[column sep=large, row sep=large]
+  {D_k(\mathbb{P}^N,A,B,M)} \arrow[r] \arrow[d] & {\overline{\mathcal{M}}_{0,\lvert I_0\rvert+r}(H,d_0)\times\prod_{j=1}^r\overline{\mathcal{M}}^{H}_{\alpha^{(j)}\cup(m_j)}(\mathbb{P}^N,d_j)} \arrow[d, "\mathrm{ev}"] \\
+  {H^r} \arrow[r, "\Delta"'] & {H^r\times H^r}
+\end{tikzcd}
+
+\end{document}
