@@ -13951,6 +13951,13 @@ O:
   defs:
   - label: '[토릭 기하학] §토릭 다양체의 교차 이론'
     url: /ko/math/toric_geometry/toric_intersection_theory
+- id: orbit-stabilizer_theorem
+  en: orbit-stabilizer theorem
+  ko: 궤도-안정자 정리
+  primary: en
+  defs:
+  - label: '[대수적 구조] §군의 작용'
+    url: /ko/math/algebraic_structures/group_actions
 - id: order
   en: order
   ko: 위수
