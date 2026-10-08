@@ -17022,6 +17022,13 @@ R:
   see:
   - label: Locally ringed space
     id: locally_ringed_space
+- id: rng
+  en: rng
+  ko: 의사환
+  primary: en
+  defs:
+  - label: '[대수적 구조] §환의 정의'
+    url: /ko/math/algebraic_structures/rings
 - id: rolle_s_theorem
   en: 'Rolle''s theorem'
   ko: 롤의 정리
