@@ -10305,6 +10305,13 @@ I:
   defs:
   - label: '[대수적 위상수학] §피복공간'
     url: /ko/math/algebraic_topology/covering_spaces
+- id: isomorphism_theorem
+  en: isomorphism theorem
+  ko: 동형정리
+  primary: en
+  defs:
+  - label: '[대수적 구조] §군 동형사상'
+    url: /ko/math/algebraic_structures/isomorphism_theorems
 - id: isotrivial
   en: isotrivial
   ko: 등질
