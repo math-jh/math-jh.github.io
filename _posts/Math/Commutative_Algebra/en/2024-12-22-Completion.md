@@ -129,11 +129,11 @@ Then a short computation shows that, with the $\widehat{H}_i$ as a coinitial sub
 
 Let us now examine the basic properties of completion. By [Definition 3](#def3){: data-lid="fvm7k" } examined above, an arbitrary element of $\widehat{A}$ can be thought of as a Cauchy sequence in $A$ with respect to the $\mathfrak{a}$-adic topology. Then, for elements satisfying $b_j\in \mathfrak{a}^j$, if for these $b_j$ we write
 
-$$a_i=\sum_{j=1}^i b_j\tag{3}$$
+$$a_i=\sum_{j=0}^i b_j\tag{3}$$
 
 then $(a_i)$ is a Cauchy sequence in $\widehat{A}$, and therefore the limit of this sequence
 
-$$\sum_{j=1}^\infty b_j$$
+$$\sum_{j=0}^\infty b_j$$
 
 defines an element of $\widehat{A}$. Conversely, given an arbitrary element of $\widehat{A}$, $(a_n')$, one can use the local base (2) of $0$ to find a Cauchy sequence equivalent to this element and having the form (3).
 
@@ -211,7 +211,7 @@ Now let us examine equation (4) again under this assumption. Setting $\degree(\i
 
 $$a-\sum_{k=1}^n b_ka_k$$
 
-belongs to $\mathfrak{a}_{e-d+1}$. Repeating this, so that
+belongs to $\mathfrak{a}_{e+1}$. Repeating this, so that
 
 $$a-\sum_{k=1}^n\sum_{l=0}^j b_k^{(l)}a_k\in \mathfrak{a}_{e+j+1}$$
 
