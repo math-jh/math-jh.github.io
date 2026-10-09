@@ -9,7 +9,7 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-weight: 4
+weight: 3
 
 
 published: false
@@ -125,10 +125,10 @@ $$\begin{aligned}
 
 ## 응용
 
-[정리 4](#thm4){: data-lid="narmx" }의 위력은 극한값을 미리 알지 못한 채 존재만으로 결론을 끌어내는 데 있다. 그 전형적 사례가 앞서 본 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="37j1l" }의 완성이며, 다음 예시는 그 논증을 한 줄기로 정리한다.
+[정리 4](#thm4){: data-lid="narmx" }의 위력은 극한값을 미리 알지 못한 채 존재만으로 결론을 끌어내는 데 있다. 그 전형적 사례가 다음 글에서 다룰 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="37j1l" }이며, 다음 예시는 그 증명의 골격을 미리 보인다.
 
 ::: 예시 8 (Cauchy 판정법의 골격)
-$(a_n)$이 Cauchy 수열이라 하자. Cauchy 수열은 bounded이므로 [정리 4](#thm4){: data-lid="8wt02" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 임의의 $\varepsilon > 0$에 대해 Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡으면, 모든 $n \geq N$에서
+$(a_n)$이 Cauchy 수열, 곧 임의의 $\varepsilon > 0$에 대해 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon$이게 하는 $N$이 존재하는 수열이라 하자. $\varepsilon = 1$에 대응하는 $N$을 잡으면 $n \geq N$에서 $\lvert a_n\rvert < \lvert a_N\rvert + 1$이므로 $(a_n)$은 bounded이고, [정리 4](#thm4){: data-lid="8wt02" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 임의의 $\varepsilon > 0$에 대해 Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡으면, 모든 $n \geq N$에서
 
 $$\begin{aligned}
 \lvert a_n - L\rvert
