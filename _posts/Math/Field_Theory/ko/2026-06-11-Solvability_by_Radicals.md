@@ -19,7 +19,7 @@ published: false
 
 이번 글에서 모든 field는 characteristic $0$을 갖는 것으로 가정한다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. 이 가정은 characteristic $p$에서 필요한 separability와 관련된 별도의 논의를 피하게 해 주어 우리 글의 목적을 더 선명하게 드러내준다. 
 
-## Root of unity
+## 단위거듭제곱근
 
 거듭제곱근을 다루기 위한 첫 번째 재료는 root of unity들이다. 우선 다음의 일반적인 보조정리를 살펴보자.
 
@@ -38,23 +38,19 @@ $$x^k=y^{-k}\in \langle x\rangle \cap \langle y\rangle$$
 이로부터 $G$의 모든 원소는 $x^n=1$을 만족해야 하므로 다항식 $\x^n-1$의 해이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 해를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9){: data-lid="9ta6g" }) $\lvert G\rvert\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 이로부터 원하는 주장을 얻는다. 
 :::
 
-이렇게 정의한 $G$의 order $n$은 일반적으로 소수일 필요가 없으므로, $G$의 모든 $1$이 아닌 원소들이 $G$를 generate하는 것은 아니다. 
-
 ::: 정의 2
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 해들의 모임을 $\mu_n$으로 적고 그 원소들을 *$n$-th root of unity<sub>1의 $n$제곱근</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 해들의 모임을 $\mu_n$으로 적고 그 원소들을 *$n$-th root of unity<sub>단위거듭제곱근</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>원시 단위거듭제곱근</sub>*이라 부른다.
 :::
 
-그럼 $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하며, $\x^n-1$의 derivative는 $n\x^{n-1}$이며, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="cxa1d" }에 의해 $\x^n-1$은 중근을 갖지 않고, 따라서 $\lvert \mu_n\rvert=n$이다. 만일 $\mu_n$의 한 generator $\zeta$를 고정한다면, 
-
- $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\lvert\mu_n\rvert=n$이다. 그럼 [보조정리 1](#lem1){: data-lid="yaj29" }에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
+그럼 $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하며, $\x^n-1$의 derivative는 $n\x^{n-1}$이며, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="cxa1d" }에 의해 $\x^n-1$은 중근을 갖지 않고, 따라서 [보조정리 1](#lem1){: data-lid="yaj29" }에 의하여 이는 크기가 $n$인 cyclic group을 이룬다. 만일 $\mu_n$의 한 generator $\zeta$를 고정한다면, primitive root들은 $\gcd(a,n)=1$을 만족하는 $\zeta^a$ 꼴로 쓰여지는 원소들이다.
 
 ::: 명제 3
 Primitive $n$-th root of unity $\zeta$에 대하여, $\mathbb{K}(\zeta)/\mathbb{K}$는 finite degree Galois extension이고 그 Galois group은 abelian group $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup과 isomorphic하다.
 :::
 ::: 증명
-$\mu_n=\langle\zeta\rangle$이므로 $\mathbb{K}(\zeta)$는 $\x^n-1$의 모든 해를 포함하고, 따라서 $\x^n-1$의 splitting field이다. 그럼 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="gw8c8" }에 의해 $\mathbb{K}(\zeta)/\mathbb{K}$는 quasi-Galois이고, characteristic $0$ 가정에 의해 Galois이며, 하나의 algebraic element로 생성되므로 finite degree이다.
+$\mu_n=\langle\zeta\rangle$이므로 $\mathbb{K}(\zeta)$는 $\x^n-1$의 모든 해를 포함하고, 따라서 $\x^n-1$의 splitting field이다. 그럼 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="gw8c8" }에 의해 $\mathbb{K}(\zeta)/\mathbb{K}$는 quasi-Galois이며, 따라서 characteristic $0$ 가정 하에서 이는 Galois이다. 또, 이는 하나의 algebraic element로 생성되므로 finite degree extension인 것도 자명하다.
 
-이제 임의의 $\sigma\in\Gal(\mathbb{K}(\zeta)/\mathbb{K})$에 대하여, $\sigma$는 $\mu_n$의 원소를 $\mu_n$의 원소로 보내고 group 연산을 보존하므로 cyclic group $\mu_n$의 automorphism을 유도한다. 그럼 $\sigma(\zeta)$도 $\mu_n$의 generator여야 하므로 $n$과 서로소인 $a_\sigma$에 대하여 $\sigma(\zeta)=\zeta^{a_\sigma}$로 쓸 수 있다. 대응 $\sigma\mapsto a_\sigma$가 group homomorphism
+이제 임의의 $\sigma\in\Gal(\mathbb{K}(\zeta)/\mathbb{K})$에 대하여, $\sigma$는 $\mu_n$의 원소를 $\mu_n$의 원소로 보낸다. 따라서 $\sigma\vert_{\mu_n}$은 $\mu_n$ 위의 automorphism이 되며, 이 때 $\sigma(\zeta)$도 $\mu_n$의 generator, 즉 primitive root가 되어야 하므로 $n$과 서로소인 정수 $a_\sigma$에 대하여 $\sigma(\zeta)=\zeta^{a_\sigma}$로 쓸 수 있다. 이제 이 대응 $\sigma\mapsto a_\sigma$이 group homomorphism
 
 $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times$$
 
@@ -63,10 +59,12 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 
 ## 순환확대와 거듭제곱근
 
-거듭제곱근을 하나 추가하는 extension과 cyclic Galois group을 갖는 extension이, root of unity가 충분히 있다면 같은 것임을 살펴본다. 이번 절에서 $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
+위에서 살펴본 $K(\zeta)/\mathbb{Q}$는 Galois group이 cyclic group인 finite degree Galois extension으로, 이러한 extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 그러나 위의 경우와는 달리, 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4)에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
+
+그러나 우리는 이러한 실패가 오직 root of unity 때문인 것을 증명할 수 있다. 즉, 만일 base field가 충분한 primitive root of unity를 이미 가지고 있다면 거듭제곱근을 추가하는 것과 cyclic extension은 서로 같은 것이 된다. 이번 절에서 $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
 
 ::: 명제 4
-$a\in\mathbb{K}^\times$와, $\alpha^n=a$를 만족하는 $\alpha\in\overline{\mathbb{K}}$에 대하여 $\mathbb{K}(\alpha)/\mathbb{K}$는 finite degree Galois extension이고, 그 Galois group은 $n$을 나누는 order의 cyclic group이다.
+임의의 원소 $a\in\mathbb{K}^\times$와, $\alpha^n=a$를 만족하는 $\alpha\in\overline{\mathbb{K}}$에 대하여 $\mathbb{K}(\alpha)/\mathbb{K}$는 finite degree Galois extension이고, 그 Galois group은 $n$을 나누는 order의 cyclic group이다.
 :::
 ::: 증명
 다항식 $\x^n-a$의 해들은 정확히 $\zeta^i\alpha$ ($i=0,\ldots,n-1$)들이고 ($n$개의 서로 다른 원소들이 모두 해이며 해는 많아야 $n$개이므로), $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3){: data-lid="4q873" }의 증명에서와 같이 finite degree Galois extension이다.
