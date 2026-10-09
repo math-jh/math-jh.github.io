@@ -29,7 +29,7 @@ $$x \equiv a \pmod{m}, \qquad x \equiv b \pmod{n}$$
 ::: 증명
 *존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-lid="npslr" }으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod{m}$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod{m}$이고, symmetric으로 $mu \equiv 1 \pmod{n}$이므로 $x_0 \equiv b \pmod{n}$이다. 따라서 $x_0$이 해이다.
 
-*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $x_0 - x_1 = ms$로 쓰면 $n \mid ms$이고 $\gcd(n, m) = 1$이므로 [§나눗셈과 최대공약수, ⁋명제 9](/ko/math/number_theory/divisibility#prop9){: data-lid="fdzhb" }로 $n \mid s$이다. 따라서 $mn \mid (x_0 - x_1)$이고 $x_0 \equiv x_1 \pmod{mn}$이다.
+*유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $x_0 - x_1 = ms$로 쓰면 $n \mid ms$이고 $\gcd(n, m) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11){: data-lid="fdzhb" }로 $n \mid s$이다. 따라서 $mn \mid (x_0 - x_1)$이고 $x_0 \equiv x_1 \pmod{mn}$이다.
 :::
 
 ::: 예시 2

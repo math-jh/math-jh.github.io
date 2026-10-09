@@ -11100,8 +11100,8 @@ L:
   alias_en: [LCM]
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
   see:
   - label: 최대공약수
     lang: ko
