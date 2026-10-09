@@ -16531,6 +16531,13 @@ R:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: regular_system_of_parameters
+  en: regular system of parameters
+  ko: 정칙매개계
+  primary: en
+  defs:
+  - label: '[가환대수학] §정칙국소환'
+    url: /ko/math/commutative_algebra/regular_local_rings
 - id: regular_value
   en: regular value
   ko: 정규값
@@ -20209,6 +20216,13 @@ U:
     id: uniformizer
   - label: Uniformizer
     id: uniformizer
+- id: uniformizing_parameter
+  en: uniformizing parameter
+  ko: 균등화 매개변수
+  primary: en
+  defs:
+  - label: '[가환대수학] §정칙국소환'
+    url: /ko/math/commutative_algebra/regular_local_rings
 - id: uniformly_bounded
   en: uniformly bounded
   ko: 균등유계
