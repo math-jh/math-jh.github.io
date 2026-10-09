@@ -59,7 +59,7 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 
 ## 순환확대와 거듭제곱근
 
-위에서 살펴본 $K(\zeta)/\mathbb{Q}$는 Galois group이 cyclic group인 finite degree Galois extension으로, 이러한 extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 그러나 위의 경우와는 달리, 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4)에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
+위에서 살펴본 $K(\zeta)/\mathbb{Q}$는 Galois group이 cyclic group인 finite degree Galois extension으로, 이러한 extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 그러나 위의 경우와는 달리, 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4){: data-lid="2e2al" }에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
 
 그러나 우리는 이러한 실패가 오직 root of unity 때문인 것을 증명할 수 있다. 즉, 만일 base field가 충분한 primitive root of unity를 이미 가지고 있다면 거듭제곱근을 추가하는 것과 cyclic extension은 서로 같은 것이 된다. 이번 절에서 우리는 자연수 $n$을 고정하고, $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
 
