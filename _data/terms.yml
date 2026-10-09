@@ -13050,7 +13050,8 @@ N:
     id: reduced_homology
 - id: n_-th_root_of_unity
   en: $n$-th root of unity
-  ko: 1의 $n$제곱근
+  ko: 단위거듭제곱근
+  alias_ko: [단위 $n$제곱근, 1의 $n$제곱근]
   primary: en
   defs:
   - label: '[체론] §거듭제곱근 가해성'
@@ -15099,7 +15100,8 @@ P:
     url: /ko/math/field_theory/separable_extensions
 - id: primitive_n_-th_root_of_unity
   en: primitive $n$-th root of unity
-  ko: 1의 원시 $n$제곱근
+  ko: 원시 단위거듭제곱근
+  alias_ko: [원시 단위 $n$제곱근, 1의 원시 $n$제곱근]
   primary: en
   defs:
   - label: '[체론] §거듭제곱근 가해성'
@@ -15111,6 +15113,13 @@ P:
   defs:
   - label: '[정수론] §원시근'
     url: /ko/math/number_theory/primitive_roots
+- id: primitive_root_of_unity
+  en: primitive root of unity
+  ko: 원시 단위거듭제곱근
+  primary: en
+  see:
+  - label: Primitive $n$-th root of unity
+    id: primitive_n_-th_root_of_unity
 - id: principal_bundle
   en: principal bundle
   ko: 주다발
@@ -17067,7 +17076,8 @@ R:
     url: /ko/math/lie_theory/root_systems
 - id: root_of_unity
   en: root of unity
-  ko: 단위근
+  ko: 단위거듭제곱근
+  alias_ko: [단위근]
   primary: en
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
