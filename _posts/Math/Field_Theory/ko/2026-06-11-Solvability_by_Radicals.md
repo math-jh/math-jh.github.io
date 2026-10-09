@@ -15,9 +15,9 @@ published: false
 
 ---
 
-갈루아 이론을 관통하는 철학은, algebraic extension에 필요한 다항식이 주어졌을 때, 이 해들을 서로 교환하는 action을 통해 group을 만들고, 이를 통해 extension들을 분류하겠다는 것이다. 이 철학은 [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" }에서 마침내 완성하였으므로, 우리는 이번 글에서 이 이론의 역사적인 출발점, 즉 $5$차방정식의 비가해성을 살펴본다. 
+갈루아 이론을 관통하는 철학은, algebraic extension에 필요한 다항식이 주어졌을 때 이 다항식의 해들을 서로 교환하는 action을 통해 group을 만들고, 이를 통해 extension들을 분류하겠다는 것이며, 이 철학이 실제로 어떻게 작동하는지는 [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" }에서 마침내 완성하였다. 이제 우리는 이번 글에서 이 이론의 역사적인 출발점, 즉 $5$차방정식의 비가해성을 살펴본다. 
 
-이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. 이 가정은 characteristic $p$에서 필요한 separability와 관련된 별도의 논의를 피하게 해 주어 우리 글의 목적을 더 선명하게 드러내준다. 
+이번 글에서 모든 field는 characteristic $0$을 갖는 것으로 가정한다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9){: data-lid="36i5d" }에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. 이 가정은 characteristic $p$에서 필요한 separability와 관련된 별도의 논의를 피하게 해 주어 우리 글의 목적을 더 선명하게 드러내준다. 
 
 ## Root of unity
 
@@ -27,18 +27,26 @@ published: false
 Field $\mathbb{K}$의 multiplicative group $\mathbb{K}^\times$의 임의의 finite subgroup $G$는 cyclic group이다.
 :::
 ::: 증명
-$G$의 원소들의 order들의 최소공배수를 $n$이라 하자. 우선 order가 $n$인 원소가 존재함을 보인다. 이를 위해 order가 각각 $r,s$인 $x,y\in G$에 대하여 order가 $\lcm(r,s)$인 원소가 존재함을 보이면, 이를 반복하여 원하는 원소를 얻는다.
+우선 우리는 $G$의 원소들의 order들의 최소공배수를 order로 갖는 원소가 존재함을 보인다. 이를 위해서는 order가 각각 $r,s$인 $x,y\in G$에 대하여 order가 $n=\lcm(r,s)$인 원소가 존재함을 보인 후, 이를 모든 원소에 대하여 반복하면 충분하다. 
 
-$\lcm(r,s)$를 소인수분해하여 각 소인수의 거듭제곱 $p^e$마다, $p^e$가 $r$ 혹은 $s$를 나누므로 $x^{r/p^e}$ 혹은 $y^{s/p^e}$가 order $p^e$의 원소가 된다. 따라서 order가 서로소인 두 원소 $u,v$의 곱이 order $\ord(u)\ord(v)$를 갖는 것만 보이면 충분하다. $G$가 abelian이므로 $(uv)^{\ord(u)\ord(v)}=e$이고, 거꾸로 $(uv)^k=e$라면 $u^k=v^{-k}\in\langle u\rangle\cap\langle v\rangle$인데 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="7jjc3" }에 의해 서로소인 $\ord(u)$와 $\ord(v)$를 모두 나누므로 $1$이다. 즉 $u^k=v^k=e$이고 $\ord(u),\ord(v)$가 모두 $k$를 나누므로 $\ord(u)\ord(v)\mid k$이다.
+우선 $n$을 소인수분해하여 등장하는 소인수의 거듭제곱 $p^e$를 생각하자. 그럼 $p^e$는 $r$을 나누거나 $s$를 나눈다. 즉, $x^{r/p^e}$ 혹은 $y^{s/p^e}$ 중 하나가 잘 정의되며, 이러한 원소는 order $p^e$의 원소가 된다. 따라서 우리는 $r,s$가 서로소라 $n=rs$인 경우에만 order $n$을 갖는 원소가 존재다는 것을 보이면 충분하고, 우리의 주장은 이들 두 원소의 곱 $xy$가 그러한 원소라는 것이다. 이는 $G$가 abelian이므로 $xy$의 order가 $rs$를 나누는 것은 자명하며, 거꾸로 $(xy)^k=e$를 만족하는 임의의 $k$에 대하여
 
-이제 $G$의 모든 원소는 $x^n=1$, 즉 다항식 $\x^n-1$의 해이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 해를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9){: data-lid="9ta6g" }) $\lvert G\rvert\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 즉 $G$는 cyclic이다.
+$$x^k=y^{-k}\in \langle x\rangle \cap \langle y\rangle$$
+
+이며 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="7jjc3" }에 의해 서로소인 $r$과 $s$를 모두 나누므로 $1$이다. 즉 $u^k=v^k=e$이고 $r,s$가 모두 $k$를 나누므로 $n=rs$가 $k$를 나누고, 따라서 $n=k$이다.
+
+이로부터 $G$의 모든 원소는 $x^n=1$을 만족해야 하므로 다항식 $\x^n-1$의 해이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 해를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9){: data-lid="9ta6g" }) $\lvert G\rvert\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 이로부터 원하는 주장을 얻는다. 
 :::
+
+이렇게 정의한 $G$의 order $n$은 일반적으로 소수일 필요가 없으므로, $G$의 모든 $1$이 아닌 원소들이 $G$를 generate하는 것은 아니다. 
 
 ::: 정의 2
 Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 해들의 모임을 $\mu_n$으로 적고 그 원소들을 *$n$-th root of unity<sub>1의 $n$제곱근</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
 :::
 
-이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="cxa1d" }에 의해 $\x^n-1$은 중근을 갖지 않고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\lvert\mu_n\rvert=n$이다. 그럼 [보조정리 1](#lem1){: data-lid="yaj29" }에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
+그럼 $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하며, $\x^n-1$의 derivative는 $n\x^{n-1}$이며, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11){: data-lid="cxa1d" }에 의해 $\x^n-1$은 중근을 갖지 않고, 따라서 $\lvert \mu_n\rvert=n$이다. 만일 $\mu_n$의 한 generator $\zeta$를 고정한다면, 
+
+ $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\lvert\mu_n\rvert=n$이다. 그럼 [보조정리 1](#lem1){: data-lid="yaj29" }에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
 
 ::: 명제 3
 Primitive $n$-th root of unity $\zeta$에 대하여, $\mathbb{K}(\zeta)/\mathbb{K}$는 finite degree Galois extension이고 그 Galois group은 abelian group $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup과 isomorphic하다.

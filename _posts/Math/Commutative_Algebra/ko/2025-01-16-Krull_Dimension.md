@@ -148,7 +148,7 @@ Noetherian ring $A$에서, codimension $c$의 prime ideal $\mathfrak{p}$는 $c$�
 
 이제 $(x_1,\ldots, x_r)$을 포함하는 minimal prime ideal들이 $\mathfrak{q}_1,\ldots, \mathfrak{q}_s$라 하자. [정리 7](#thm7){: data-lid="v73fq" }에 의하여 각 $\mathfrak{q}_i$의 codimension은 $\leq r$이고, $r< c$이므로 이들의 codimension은 모두 $< c$이다. 따라서 $\mathfrak{p}$는 이들 중 어느 것과도 같을 수 없고, 특히 $\mathfrak{p}\not\subseteq \bigcup_{i=1}^s \mathfrak{q}_i$이다. 그러므로 우리는 $x_{r+1}\in \mathfrak{p}\setminus \bigcup_{i=1}^s \mathfrak{q}_i$를 택할 수 있다.
 
-이제 귀납적으로 $\mathfrak{p}$에 속하는 $c$개의 원소 $x_1,\ldots, x_c$를 얻는다. 그럼 ideal $(x_1,\ldots, x_c)$를 포함하는 minimal prime ideal $\mathfrak{q}$를 택하면, [정리 7](#thm7){: data-lid="uypzt" }에 의하여 $\codim \mathfrak{q}\leq c$이다. 한편 $\mathfrak{q}\subseteq \mathfrak{p}$이고 $\codim \mathfrak{p}=c$이므로, 반드시 $\mathfrak{q}=\mathfrak{p}$이어야 한다.
+이제 귀납적으로 $\mathfrak{p}$에 속하는 $c$개의 원소 $x_1,\ldots, x_c$를 얻는다. 그럼 ideal $(x_1,\ldots, x_c)$를 포함하고 $\mathfrak{p}$에 포함되는 minimal prime ideal $\mathfrak{q}$를 택하면, [정리 7](#thm7){: data-lid="uypzt" }에 의하여 $\codim \mathfrak{q}\leq c$이다. 한편 $\mathfrak{q}\subseteq \mathfrak{p}$이고 $\codim \mathfrak{p}=c$이므로, 반드시 $\mathfrak{q}=\mathfrak{p}$이어야 한다.
 :::
 
 만일 위의 따름정리에서 $\codim \mathfrak{p}=0$이라면, $\mathfrak{p}$는 $0$개의 원소로 생성되는 ideal, 즉 zero ideal을 포함하는 minimal prime이다. 이제 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="bdox3" }에 의하여 이러한 prime ideal은 zerodivisor로만 이루어져 있다. 이를 [정리 6](#thm6){: data-lid="u8770" }과 종합하면, 만일 $\mathfrak{p}$가 *non-zerodivisor* $a$를 포함하는 minimal prime ideal이라면 $\codim \mathfrak{p}=1$이어야 함을 안다. 

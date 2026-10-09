@@ -44,7 +44,7 @@ $$\mathcal{J}': \qquad M=M_0'\supseteq M_1'\supseteq M_2'\supseteq\cdots$$
 가 주어졌다 하자. 만일 각각의 $M_i$마다 적당한 $M_j'$가 존재하여 $M_j'\subseteq M_i$이고, 각각의 $M_i'$마다 적당한 $M_j$가 존재하여 $M_j\subseteq M_i'$라면 $\widehat{M}_\mathcal{J}\cong \widehat{M}_{\mathcal{J}'}$가 성립한다.
 :::
 
-한편 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-lid="nd217" }에 의하여, completion을 취하는 것은 left exact이다. 다음 보조정리는 적절한 종류의 유한성이 가정된다면, completion을 취하는 것은 right exact이기도 하다는 것을 보여준다.
+한편 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-lid="nd217" }에 의하여, inverse limit을 취하는 것은 left exact이다. 다음 보조정리는 적절한 종류의 유한성이 가정된다면, completion을 취하는 것은 right exact이기도 하다는 것을 보여준다.
 
 ::: 보조정리 3
 Noetherian ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 finitely generated $A$-module들의 short exact sequence

@@ -127,11 +127,11 @@ $$\widehat{U}=\{[(x_n)]\in \widehat{G}\mid\text{for any $(y_n)\in [(x_n)]$, $y_n
 
 이제 completion의 기본적인 성질들에 대해 살펴보자. 앞서 살펴본 [정의 3](#def3){: data-lid="fvm7k" }에 의하여 $\widehat{A}$의 임의의 원소는 $A$의 $\mathfrak{a}$-adic topology에서의 Cauchy sequence로 생각할 수 있다. 그럼 $b_j\in \mathfrak{a}^j$를 만족하는 $b_j$들에 대하여,
 
-$$a_i=\sum_{j=1}^i b_j\tag{3}$$
+$$a_i=\sum_{j=0}^i b_j\tag{3}$$
 
 으로 적으면 $(a_i)$는 $\widehat{A}$에서의 Cauchy sequence이고 따라서 이 수열의 극한
 
-$$\sum_{j=1}^\infty b_j$$
+$$\sum_{j=0}^\infty b_j$$
 
 은 $\widehat{A}$의 원소를 하나 정의한다. 거꾸로, 임의의 $\widehat{A}$의 원소 $(a_n')$이 주어졌다하면 $0$의 local base (2)를 이용하여 이 원소와 equivalent하고 (3)과 같은 형태를 갖는 Cauchy sequence를 찾을 수 있다. 
 
@@ -209,7 +209,7 @@ $$a-\underbrace{\left(\sum_k b_k a_k+\cdots\right)}_{=a'} \in \mathfrak{a}_{d+1}
 
 $$a-\sum_{k=1}^n b_ka_k$$
 
-는 $\mathfrak{a}_{e-d+1}$에 속한다는 것을 안다. 이를 반복하면
+는 $\mathfrak{a}_{e+1}$에 속한다는 것을 안다. 이를 반복하면
 
 $$a-\sum_{k=1}^n\sum_{l=0}^j b_k^{(l)}a_k\in \mathfrak{a}_{e+j+1}$$
 

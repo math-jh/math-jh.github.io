@@ -61,7 +61,7 @@ $$\mathbb{K}(\mathbb{L}^p)=\mathbb{K}(\mathbb{K}(S)^p)=\mathbb{K}(\mathbb{K}^p(S
 
 $$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]\subseteq \mathbb{K}[\mathbb{L}^p]$$
 
-이 성립하고, $\mathbb{K}[\mathbb{L}^p]$는 $\mathbb{L}'/\mathbb{K}$들의 union으로 원하는 등식을 얻는다. 임의의 $n$에 대한 등식은 단순한 귀납법이다. 
+이 성립하고, $\mathbb{K}[\mathbb{L}^p]$는 $\mathbb{L}'/\mathbb{K}$들의 union이므로 원하는 등식을 얻는다. 임의의 $n$에 대한 등식은 단순한 귀납법이다. 
 :::
 
 이로부터 다음 두 따름정리를 얻는다. 

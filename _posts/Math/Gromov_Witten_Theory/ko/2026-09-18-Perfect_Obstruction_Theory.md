@@ -11,7 +11,8 @@ sidebar:
 date: 2026-09-18
 
 weight: 4
-
+revising: true
+drift_needed: true
 
 ---
 
@@ -176,6 +177,12 @@ $$q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow (E')^\bullet\rightarrow E^\bullet\ri
 
 을 만드는 것이다. 이 때 base의 smoothness는 $q^\ast\LL_{\mathfrak{M}_{g,n}}$에 음의 degree 항이 없게 하고, $M$이 Deligne–Mumford stack이라는 것은 curve의 무한소 automorphism이 담긴 degree $1$ 항을 죽이므로, 둘이 함께 $(E')^\bullet$의 amplitude를 $[-1,0]$으로 지켜주어 이를 perfect obstruction theory로 만들게 된다. 
 
+이 triangle은 relative obstruction과 absolute obstruction의 관계도 알려준다. Triangle을 dualize하여 점 $z=[(C,p_\bullet,\mu)]$에서의 derived fiber의 cohomology를 취하면, $M$이 Deligne–Mumford stack이고 $\mathfrak{M}_{g,n}$이 smooth하므로 양 끝이 $0$인 exact sequence
+
+$$\begin{aligned}0&\rightarrow h^{-1}(q^\ast\LL_{\mathfrak{M}_{g,n}}^\vee\vert_z)\rightarrow h^0((E^\bullet)^\vee\vert_z)\rightarrow h^0(((E')^\bullet)^\vee\vert_z)\\&\rightarrow h^0(q^\ast\LL_{\mathfrak{M}_{g,n}}^\vee\vert_z)\rightarrow h^1((E^\bullet)^\vee\vert_z)\rightarrow h^1(((E')^\bullet)^\vee\vert_z)\rightarrow0\end{aligned}$$
+
+을 얻는다. 각 항은 차례로 marked curve의 무한소 automorphism, $H^0(C,\mu^\ast T_X)$, $T^1$, marked curve의 deformation, $H^1(C,\mu^\ast T_X)$, $T^2$이고, 이는 [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)의 exact sequence이다. 특히 relative obstruction $H^1(C,\mu^\ast T_X)$는 absolute obstruction $T^2$로 surjective하게 가고, 그 kernel은 curve의 deformation, 가령 node를 펴는 방향의 image이다. 따라서 relative하게 unobstructed인 점은 absolute하게도 unobstructed이다. 반대로 $H^1(C,\mu^\ast T_X)\neq0$이더라도 그 전체가 curve의 deformation의 image이면 $T^2=0$이므로, relative하게는 obstructed이지만 absolute하게는 unobstructed인 점이 있을 수 있다.
+
 ::: 예시 5
 $X$가 convex인 경우 모든 genus $0$ stable map에서 $H^1(C,\mu^\ast T_X)=0$이므로 ([§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-lid="c4h5h" }) obstruction space가 $h^1((E^\bullet)^\vee)=R^1\pi_\ast\mu^\ast T_X=0$이다. 이제 위에서 살펴본 것과 마찬가지 이유로, $\mathfrak{M}_{0,n}$의 smoothness에 의해 absolute obstruction 또한 $h^1(((E')^\bullet)^\vee)=0$이 되므로, [명제 3](#prop3){: data-lid="vrq63" }의 (3)에 의해
 
@@ -187,7 +194,7 @@ $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\
 [§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-lid="gt4df" }에서 우리는 fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$가 존재하는 경우에 대해서만 정의하였으나, 이 fundamental class만 virtual fundamental class로 바꿔주면 convex 가정 없이도 임의의 smooth projective target $X$에 대한 genus $0$ Gromov-Witten invariant를 정의할 수 있으며, convex 가정 하에서 이 두 정의가 같은 것은 위의 [예시 5](#ex5){: data-lid="bt6x3" }에 의해 자명하다. 그럼 이 정의 하에서, virtual class가 forgetful morphism 및 gluing morphism에 대해 잘 행동하는 것을 확인할 수 있으므로 [§그로모프-위튼 불변량, §§그로모프-위튼 불변량의 공리들](/ko/math/gromov-witten_theory/gromov-witten_invariants#그로모프-위튼-불변량의-공리들){: data-lid="huqbc" }의 string·divisor·splitting 공리와 WDVV 관계도 해당 적분들을 virtual class에 대한 적분으로 해석하면 그대로 성립한다.
 
 ::: 예시 6
-반대편 극단으로 도입에서 본 constant map의 moduli $\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$을 살펴보며 글을 마친다. 여기서는 obstruction이 통째로 살아있다는 것이 우리의 도입부의 주장이었으므로, 이제 엄밀한 언어로 이를 다시 계산하자. 
+반대편 극단으로 도입에서 본 constant map의 moduli $\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$을 살펴보자. 여기서는 obstruction이 통째로 살아있다는 것이 우리의 도입부의 주장이었으므로, 이제 엄밀한 언어로 이를 다시 계산하자. 
 
 두 projection을 각각 $p_1:\overline{\mathcal{M}}_{1,n}\times X\rightarrow\overline{\mathcal{M}}_{1,n}$, $p_2:\overline{\mathcal{M}}_{1,n}\times X\rightarrow X$라 하자. Constant map에서는 곡선 위의 모든 점이 $X$의 같은 점으로 대응되므로, universal evaluation map $\mu:\mathcal{C}\rightarrow X$는 projection $p_2$와 universal curve $\pi:\mathcal{C}\rightarrow M$의 합성
 
@@ -210,6 +217,62 @@ $$H^1(C,\mu^\ast T_X)\cong H^1(C,\mathcal{O}_C)\otimes T_x X$$
 $$[\overline{\mathcal{M}}_{1,n}(X,0)]^\vir=e(p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X)\cap[\overline{\mathcal{M}}_{1,n}\times X]$$
 
 가 된다. $(n+d)$차원 공간 위에서 Euler class와의 cap product로 차원 $n$의 class를 복원한 것으로, [예시 1](#ex1){: data-lid="m97nc" }의 $s\equiv0$인 상황을 stable map moduli에서 재연한 셈이다.
+:::
+
+## Zero locus의 가상 기본류
+
+[§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 국소 모형에서 ambient는 smooth variety였다. 그러나 이 모형이 실제로 쓰이는 상황에서는 ambient 자신이 obstruction을 갖는 moduli인 경우가 많다. 가령 smooth projective variety $P$ 안의 smooth subvariety $Y$가 vector bundle $V$의 section $s$의 zero locus로 주어지면, $Y$로 가는 stable map은 $P$로 가는 stable map $f$ 가운데 $f^\ast s=0$인 것이다. 모든 genus $0$ stable map에 대해 $H^1(C,f^\ast V)=0$이면 $\pi_\ast\mu^\ast V$는 $P$의 genus $0$ moduli 위의 vector bundle이고, $Y$의 moduli는 그 section $f\mapsto f^\ast s$의 zero locus가 된다. 두 moduli는 모두 [명제 4](#prop4)의 virtual class를 가지므로, 자연스러운 질문은 [예시 1](#ex1)에서처럼 둘이 Euler class로 이어지는지의 여부일 것이다. Stable map의 moduli는 $\mathfrak{M}_{g,n}$에 상대적인 perfect obstruction theory를 가지므로 처음부터 상대적인 형태로 적는다.
+
+::: 명제 7 (Kim–Kresch–Pantev)
+$\mathfrak{M}$을 locally finite type이고 pure dimensional인 smooth Artin stack, $q:M\rightarrow\mathfrak{M}$을 finite type Deligne–Mumford stack $M$에서의 morphism, $\phi:E^\bullet\rightarrow\LL_{M/\mathfrak{M}}$을 relative perfect obstruction theory라 하자. $M$ 위의 rank $r$ vector bundle $V$와 section $s$에 대하여 $i:Z=Z(s)\hookrightarrow M$을 그 zero locus라 하고, $Z$ 위의 relative perfect obstruction theory $\phi_Z:E_Z^\bullet\rightarrow\LL_{Z/\mathfrak{M}}$이 distinguished triangle
+
+$$i^\ast E^\bullet\longrightarrow E_Z^\bullet\longrightarrow V^\vee\vert_Z[1]\longrightarrow i^\ast E^\bullet[1]$$
+
+에 들어가며, 이 triangle이 cotangent complex의 triangle $i^\ast\LL_{M/\mathfrak{M}}\rightarrow\LL_{Z/\mathfrak{M}}\rightarrow\LL_{Z/M}\rightarrow i^\ast\LL_{M/\mathfrak{M}}[1]$과 $\phi$, $\phi_Z$, 그리고 $s$가 주는 $V^\vee\vert_Z[1]\rightarrow\LL_{Z/M}$으로 compatible하다고 하자. 그럼
+
+$$[Z]^\vir=0^!_{V,s}[M]^\vir,\qquad i_\ast[Z]^\vir=c_r(V)\cap[M]^\vir$$
+
+이다. 여기서 $0^!_{V,s}$는 zero section의 refined Gysin map을 section $s$를 따라 적용한 것, 곧 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 localized Euler class를 만든 연산이다.
+:::
+
+이는 [KKP, Theorem 1]을 zero section $0_V:M\rightarrow V$에 적용한 것이다. 이 정리는 relative perfect obstruction theory를 갖는 두 stack이 local complete intersection morphism $v$를 따라 cartesian하게 놓이고 두 obstruction theory가 cotangent complex의 triangle과 compatible하면, $v$의 refined Gysin map이 한쪽의 virtual class를 다른 쪽의 virtual class로 보낸다는 것이다. 지금의 경우 cartesian square는 $s$와 $0_V$의 fiber product $Z=M\times_VM$이고, $0_V$의 cotangent complex를 $Z$로 당긴 것이 $V^\vee\vert_Z[1]$이므로 위의 triangle이 정확히 그 compatibility 조건이 된다. [BF, Proposition 7.5]는 global resolution을 가정하고 $v$가 smooth하거나 $v$의 source와 target이 모두 base 위에서 smooth한 경우에 같은 등식을 주는데, zero section에 대해 뒤의 조건은 $M$이 $\mathfrak{M}$ 위에서 smooth하다는 것이다. [KKP, Theorem 1]은 이러한 가정 없이 base의 pure dimensionality와 $v$가 local complete intersection morphism이라는 것만을 요구하며, [KKP]는 이를 [BF, Proposition 7.5]를 강화한 것으로 소개한다. Base의 smoothness는 $\mathfrak{M}$ 상대 perfect obstruction theory로 정의한 virtual class가 [명제 4](#prop4)에서처럼 유도한 absolute perfect obstruction theory의 virtual class와 같다는 데에 쓰인다. ([KKP, Proposition 3]) 둘째 등식은 refined Gysin map에 대한 공식 $i_\ast0^!_{V,s}\gamma=c_r(V)\cap\gamma$를 $\gamma=[M]^\vir$에 적용한 것이고, 이 공식은 [§가상류의 교차이론, ⁋정의 3](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#def3) 뒤에서 다룬다.
+
+명제는 $E_Z^\bullet$을 가정으로 둔다. 일반적인 $(M,E^\bullet)$에서 이러한 $E_Z^\bullet$을 만들려면 $s$가 주는 $V^\vee\vert_Z[1]\rightarrow\LL_{Z/M}$과 cotangent complex의 triangle의 connecting map을 합성한 $V^\vee\vert_Z\rightarrow i^\ast\LL_{M/\mathfrak{M}}$을 $\phi$를 따라 $i^\ast E^\bullet$으로 들어 올려야 하는데, 그 obstruction은 $\phi$의 cone의 hypercohomology에 있어서 local하게만 사라지고 global하게는 자동이 아니다. 그래서 $E_Z^\bullet$은 경우마다 구성하며, 아래 [예시 8](#ex8)에서는 universal curve 위의 vector bundle의 short exact sequence에 $R\pi_\ast$를 취해 이를 얻는다. 가장 간단한 경우는 $q$가 smooth한 경우이다. 이때는 $E^\bullet=\Omega_{M/\mathfrak{M}}$으로 둘 수 있고,
+
+$$E_Z^\bullet=\Bigl[\at{-1}{V^\vee\vert_Z}\xrightarrow{\ (\dd{s})^\vee\ }\at{0}{\Omega_{M/\mathfrak{M}}\vert_Z}\Bigr]$$
+
+이 $Z$의 relative perfect obstruction theory이다. $\tau_{\geq-1}\LL_{Z/\mathfrak{M}}=[\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_{M/\mathfrak{M}}\vert_Z]$이고 $V^\vee\vert_Z\rightarrow\mathcal{I}/\mathcal{I}^2$이 surjective이므로, $h^0$에서는 isomorphism이고 $h^{-1}$에서는 surjective이다. 위의 triangle은 이 two-term complex의 stupid truncation이 주는 것이다. 이는 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 구성을 $\mathfrak{M}$ 위에서 상대적으로 한 것이다.
+
+[명제 7](#prop7)의 triangle은 각 점에서 $Z$와 $M$의 tangent space와 obstruction space를 이어 준다. 점 $z\in Z$에서의 derived fiber를 $(\cdot)\vert_z$로 적으면, 위 triangle의 dual $V\vert_Z[-1]\rightarrow(E_Z^\bullet)^\vee\rightarrow i^\ast(E^\bullet)^\vee\rightarrow V\vert_Z$의 derived fiber의 cohomology에서 long exact sequence
+
+$$0\rightarrow h^0((E_Z^\bullet)^\vee\vert_z)\rightarrow h^0((E^\bullet)^\vee\vert_z)\xrightarrow{\dd{s}}V_z\rightarrow h^1((E_Z^\bullet)^\vee\vert_z)\rightarrow h^1((E^\bullet)^\vee\vert_z)\rightarrow0$$
+
+을 얻는다. $(E_Z^\bullet)^\vee\vert_z$와 $(E^\bullet)^\vee\vert_z$의 $h^0$과 $h^1$은 각각 $z$에서 $Z$와 $M$의 relative tangent space와 obstruction space이고, 가운데 map은 relative tangent 방향에 대한 $s$의 미분이다. [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 $\ker(\dd{s})$와 $\coker(\dd{s})$로 적은 것에 ambient의 obstruction $h^1((E^\bullet)^\vee\vert_z)$이 더해진 꼴이다. 따라서 $M$이 $z$에서 $\mathfrak{M}$ 상대로 unobstructed이고 $\dd{s}$가 $z$에서 surjective이면 $Z$도 $z$에서 $\mathfrak{M}$ 상대로 unobstructed이다. 이때 $h^1((E_Z^\bullet)^\vee)$은 amplitude $[0,1]$인 perfect complex의 top cohomology이므로 Nakayama lemma에 의해 $z$의 근방에서 $0$이고, 그 근방에서 $Z\rightarrow\mathfrak{M}$은 smooth하다. ([BF, Proposition 7.3]) 같은 논증으로 $M$도 $z$ 근방에서 $\mathfrak{M}$ 위에서 smooth하고, $\dd{s}$가 surjective이므로 $Z$는 그 근방에서 $M$의 codimension $r$ smooth substack이다. 반대로 $\dd{s}$가 surjective가 아니면 그 cokernel이 그대로 $Z$의 obstruction으로 남는다.
+
+같은 논증을 뒤집으면, $Z$가 smooth하지 않은 점에서는 obstruction이 $0$일 수 없다. 만일 점 $z$에서 relative obstruction이 $0$이라면 위와 같이 그 근방에서 $Z\rightarrow\mathfrak{M}$이 smooth하고, $\mathfrak{M}$이 smooth하므로 $Z$도 smooth해야 하기 때문이다. Absolute perfect obstruction theory에 대해서도 같다. 이는 perfect obstruction theory의 선택과도 무관하다. 어떤 absolute perfect obstruction theory의 obstruction space도 intrinsic obstruction space $\Ext^1(\LL_Z\vert_z,\mathbb{C})$를 포함하고 ([KKP, §3]), 이 공간은 $Z$가 $z$에서 smooth하지 않으면 $0$이 아니기 때문이다. 특히 $Z$가 어떤 irreducible component $D$의 generic point에서 non-reduced이면, smooth locus는 open이고 smooth한 곳은 reduced이므로 $Z$는 $D$의 어느 점에서도 smooth하지 않고, 따라서 $D$의 모든 점에서 relative하게도 absolute하게도 obstructed이다. 이때 obstructed인 것은 scheme으로서의 $Z$이고, reduced structure를 준 $D$ 자체는 generic point에서 smooth하다.
+
+::: 예시 8
+$Y\subset\mathbb{P}^4$를 smooth quintic threefold, 곧 $\mathcal{O}(5)$의 section $s$의 zero locus라 하고 $Y$ 위의 직선을 세자. $\mathcal{O}(5)$는 globally generated이므로 genus $0$ stable map $f:C\rightarrow\mathbb{P}^4$로 당긴 line bundle은 모든 component에서 음이 아닌 degree를 갖고, 따라서 $H^1(C,f^\ast\mathcal{O}(5))=0$이다. 그럼 cohomology와 base change에 의해 $\mathcal{V}_d=\pi_\ast\mu^\ast\mathcal{O}(5)$는 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,d)$ 위의 rank $5d+1$ vector bundle이고, $s$는 그 section $\widetilde{s}([f])=f^\ast s$를 준다. Stable map이 $Y$로 들어간다는 것은 $f^\ast s=0$이라는 것이므로 $Z(\widetilde{s})$는 $Y$로 가는 stable map들의 moduli이고, Lefschetz hyperplane theorem에 의해 $H_2(Y)\rightarrow H_2(\mathbb{P}^4)$가 isomorphism이므로 이는 $\overline{\mathcal{M}}_{0,0}(Y,d)$ 하나이다.
+
+[명제 7](#prop7)의 compatibility는 normal bundle sequence $0\rightarrow T_Y\rightarrow T_{\mathbb{P}^4}\vert_Y\rightarrow\mathcal{O}(5)\vert_Y\rightarrow0$에서 온다. 이를 universal map으로 당기고 $R\pi_\ast$를 취한 뒤 dual을 취하면 $\overline{\mathcal{M}}_{0,0}(Y,d)$ 위의 triangle
+
+$$i^\ast(R\pi_\ast\mu^\ast T_{\mathbb{P}^4})^\vee\longrightarrow(R\pi_\ast\mu^\ast T_Y)^\vee\longrightarrow i^\ast\mathcal{V}_d^\vee[1]\longrightarrow i^\ast(R\pi_\ast\mu^\ast T_{\mathbb{P}^4})^\vee[1]$$
+
+을 얻고, 처음 두 항은 [명제 4](#prop4)의 relative perfect obstruction theory들이다. [KKP]는 이 triangle이 cotangent complex의 triangle과 compatible하다고 적고 여기에 [명제 7](#prop7)을 적용한다. $\mathbb{P}^4$는 convex이므로 [예시 5](#ex5)에 의해 ambient의 virtual class는 fundamental class이고, 따라서
+
+$$i_\ast[\overline{\mathcal{M}}_{0,0}(Y,d)]^\vir=c_{5d+1}(\mathcal{V}_d)\cap[\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,d)]$$
+
+이다. 차원은 $\dim\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,d)-(5d+1)=(5d+1)-(5d+1)=0$으로 맞고, 이는 $c_1(T_Y)=0$이어서 $\vdim\overline{\mathcal{M}}_{0,0}(Y,d)=0$인 것과 같다.
+
+$d=1$이면 이 적분을 직접 계산할 수 있다. Degree $1$의 stable map은 직선으로의 isomorphism이므로 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,1)$은 $\mathbb{P}^4$ 안의 직선들의 Grassmannian $\Gr(2,5)$이고, 직선 $L=\mathbb{P}(W)$에서 $\mathcal{V}_1$의 fiber는 $H^0(L,\mathcal{O}(5))=\Sym^5W^\vee$이다. 즉 tautological subbundle을 $S$라 하면 $\mathcal{V}_1=\Sym^5S^\vee$이다. $S^\vee$의 Chern root를 $a,b$라 하면 $\Sym^5S^\vee$의 Chern root는 $ia+(5-i)b$ ($0\leq i\leq5$)이므로, $\sigma_1=a+b$, $\sigma_{11}=ab$로 적으면
+
+$$\begin{aligned}c_6(\Sym^5S^\vee)&=\prod_{i=0}^5\bigl(ia+(5-i)b\bigr)=25\sigma_{11}(4\sigma_1^2+9\sigma_{11})(6\sigma_1^2+\sigma_{11})\\&=25\bigl(24\sigma_1^4\sigma_{11}+58\sigma_1^2\sigma_{11}^2+9\sigma_{11}^3\bigr)\end{aligned}$$
+
+이다. Pieri 공식으로부터 $\int\sigma_1^4\sigma_{11}=2$, $\int\sigma_1^2\sigma_{11}^2=1$, $\int\sigma_{11}^3=1$이므로
+
+$$\int_{[\overline{\mathcal{M}}_{0,0}(Y,1)]^\vir}1=25(48+58+9)=2875$$
+
+이다. 일반적인 quintic threefold 위의 직선은 정확히 $2875$개이지만, 위의 계산은 그러한 일반성 가정 없이 virtual class의 degree로서 성립한다. $d\geq2$에서는 $Y$ 위의 직선 하나의 $d$-fold cover들만으로도 $\dim\overline{\mathcal{M}}_{0,0}(\mathbb{P}^1,d)=2d-2>0$차원의 family를 이루므로, 어떤 smooth quintic에서도 $\overline{\mathcal{M}}_{0,0}(Y,d)$는 기대 차원보다 크고 그 virtual class는 fundamental class로 주어지지 않는다. 이때 위의 등식이 virtual class의 degree를 계산하는 수단이 된다.
 :::
 
 ---

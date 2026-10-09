@@ -1,0 +1,38 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG a relative stable morphism to the expanded target X[2] (Li_Relative_GW-1.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% the three pieces X, P, P glued along copies of Y
+  \draw[line width=.8pt] (0,0) rectangle (4,3.2);
+  \draw[line width=.8pt] (4,0) rectangle (6.4,3.2);
+  \draw[line width=.8pt] (6.4,0) rectangle (8.8,3.2);
+  \draw[accent1, line width=1.2pt] (8.8,0)--(8.8,3.2);
+  \node at (2,-.45) {$X$};
+  \node at (5.2,-.45) {$P$};
+  \node at (7.6,-.45) {$P$};
+  \node[accent1, right] at (8.8,.7) {$Y_\infty$};
+  \node[below] at (4,0) {$Y$};
+  \node[below] at (6.4,0) {$Y$};
+
+  %% component in X, tangent to the seam at a (contact order 2)
+  \draw[line width=.9pt] (.6,.5) .. controls (2.4,.7) and (4,1.2) .. (4,2.2);
+  %% component in the first bubble, also tangent to the seam at a, meeting the next seam transversally at b
+  \draw[line width=.9pt] (4,2.2) .. controls (4,1.2) and (5.2,.9) .. (6.4,.9);
+  \fill (4,2.2) circle[radius=1.6pt];
+  \node[left] at (4,2.45) {$2$};
+  %% component in the second bubble, through b, meeting Y_infty at the marked point q
+  \draw[line width=.9pt] (6.4,.9) .. controls (7.5,.9) and (7.9,2.3) .. (8.8,2.3);
+  \fill (6.4,.9) circle[radius=1.6pt];
+  \node[below right] at (6.4,.95) {$1$};
+  \fill[accent1] (8.8,2.3) circle[radius=1.8pt];
+  \node[accent1, right] at (8.8,2.5) {$q$};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG blowing up a point separates the lines through it (Point_and_Diagonal_Blowups-1.svg)
+\begin{tikzpicture}[line cap=round]
+  %% the plane: four lines through p
+  \foreach \ang in {15,60,105,150}{
+    \draw[line width=.8pt] ({-1.6*cos(\ang)},{-1.6*sin(\ang)})--({1.6*cos(\ang)},{1.6*sin(\ang)});
+  }
+  \fill[accent1] (0,0) circle[radius=2pt];
+  \node[below right=1pt] at (0,0) {$p$};
+  \node at (0,-2.15) {$\mathbb{P}^2$};
+
+  %% the blowup: E horizontal, strict transforms are the vertical fibers
+  \begin{scope}[shift={(6,0)}]
+    \draw[accent1, line width=1pt] (-2,0)--(2,0);
+    \node[accent1, right] at (2,0) {$E$};
+    \foreach \x in {-1.35,-.45,.45,1.35}{
+      \draw[line width=.8pt] (\x,-1.4)--(\x,1.4);
+      \fill (\x,0) circle[radius=1.3pt];
+    }
+    \node at (0,-2.15) {$\mathrm{Bl}_p\mathbb{P}^2$};
+  \end{scope}
+
+  \draw[->, black!50, line width=.8pt] (3.4,0)--(2.1,0) node[midway, above] {$\sigma$};
+\end{tikzpicture}
+
+%%FIG strict transforms of a nodal and a cuspidal cubic (Point_and_Diagonal_Blowups-2.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% downstairs: the nodal cubic y^2 = x^2(x+1) and the cuspidal cubic y^2 = x^3
+  \draw[line width=.9pt] plot[domain=-1.55:1.55, variable=\t, samples=120]
+    ({\t*\t-1},{.75*\t*(\t*\t-1)});
+  \fill[accent1] (0,0) circle[radius=2pt];
+  \node[below left=1pt] at (0,0) {$p$};
+
+  \begin{scope}[shift={(5.2,0)}]
+    \draw[line width=.9pt] plot[domain=-1.35:1.35, variable=\t, samples=120]
+      ({\t*\t},{.75*\t*\t*\t});
+    \fill[accent1] (0,0) circle[radius=2pt];
+    \node[left=2pt] at (0,0) {$p$};
+  \end{scope}
+
+  %% upstairs, in the chart (x,v) with y = xv: E = {x = 0} is vertical
+  \begin{scope}[shift={(0,4.6)}]
+    \draw[accent1, line width=1pt] (0,-1.75)--(0,1.75);
+    \node[accent1, above] at (0,1.75) {$E$};
+    \draw[line width=.9pt] plot[domain=-1.55:1.55, variable=\t, samples=120]
+      ({\t*\t-1},{\t});
+    \fill (0,1) circle[radius=1.6pt];
+    \fill (0,-1) circle[radius=1.6pt];
+  \end{scope}
+
+  \begin{scope}[shift={(5.2,4.6)}]
+    \draw[accent1, line width=1pt] (0,-1.75)--(0,1.75);
+    \node[accent1, above] at (0,1.75) {$E$};
+    \draw[line width=.9pt] plot[domain=-1.35:1.35, variable=\t, samples=120]
+      ({\t*\t},{\t});
+    \fill (0,0) circle[radius=1.6pt];
+  \end{scope}
+
+  \draw[->, black!50, line width=.8pt] (.2,2.55)--(.2,1.65);
+  \draw[->, black!50, line width=.8pt] (5.4,2.55)--(5.4,1.65);
+\end{tikzpicture}
+
+%%FIG the line through q and p tends to the tangent line as q approaches p (Point_and_Diagonal_Blowups-3.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% a curve through p, parametrized as (t, .35 t^2 - .08 t^3)
+  \draw[line width=.9pt] plot[domain=-1.9:2.4, variable=\t, samples=120]
+    ({\t},{.35*\t*\t-.08*\t*\t*\t});
+  %% secant lines through p and q_i, and the limiting tangent line
+  \foreach \s/\lab in {2/{q_1},1.1/{q_2}}{
+    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
+    \draw[black!50, line width=.7pt] (-2.2,{-2.2*\m})--(2.7,{2.7*\m});
+    \fill ({\s},{\s*\m}) circle[radius=1.6pt];
+    \node[above left=1pt] at ({\s},{\s*\m}) {$\lab$};
+  }
+  \draw[accent1, line width=1pt] (-2.2,0)--(2.7,0);
+  \node[accent1, right] at (2.7,0) {$\ell_0$};
+  \fill[accent1] (0,0) circle[radius=2pt];
+  \node[below=2pt] at (0,0) {$p$};
+\end{tikzpicture}
+
+\end{document}

@@ -44,8 +44,10 @@ $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 이 따름정리는 앞으로도 자주 사용하게 되므로, 다음과 같이 새로운 정의를 내린다.
 
 ::: 정의 2
-Ring $A$의 원소들 $a_1,\ldots, a_d$가 *$A$-regular sequence* 혹은 간단히 *$A$-sequence*라는 것은 $(a_1,\ldots, a_d)$가 proper이고, 각각의 $i$에 대하여 $a_{i+1}$의 image가 $A/(a_1,\ldots, a_i)$에서 non-zerodivisor인 것이다. 
+Ring $A$의 원소들 $a_1,\ldots, a_d$가 *$A$-regular sequence* 혹은 간단히 *$A$-sequence*라는 것은 $(a_1,\ldots, a_d)$가 proper이고, 각각의 $i=0,\ldots, d-1$에 대하여 $a_{i+1}$의 image가 $A/(a_1,\ldots, a_i)$에서 non-zerodivisor인 것이다. 
 :::
+
+관례상 $(a_1,\ldots, a_0)=0$으로 둔다. 그럼 $i=0$인 경우 위의 정의가 요구하는 것은 $a_1$이 $A$에서 non-zerodivisor인 것이다. 
 
 ::: 따름정리 3
 Regular local Noetherian ring $A$의 regular system of parameters는 $A$-sequence를 이룬다.
