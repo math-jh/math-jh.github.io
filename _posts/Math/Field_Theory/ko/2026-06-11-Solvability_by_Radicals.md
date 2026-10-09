@@ -61,28 +61,32 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 
 위에서 살펴본 $K(\zeta)/\mathbb{Q}$는 Galois group이 cyclic group인 finite degree Galois extension으로, 이러한 extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 그러나 위의 경우와는 달리, 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4)에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
 
-그러나 우리는 이러한 실패가 오직 root of unity 때문인 것을 증명할 수 있다. 즉, 만일 base field가 충분한 primitive root of unity를 이미 가지고 있다면 거듭제곱근을 추가하는 것과 cyclic extension은 서로 같은 것이 된다. 이번 절에서 $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
+그러나 우리는 이러한 실패가 오직 root of unity 때문인 것을 증명할 수 있다. 즉, 만일 base field가 충분한 primitive root of unity를 이미 가지고 있다면 거듭제곱근을 추가하는 것과 cyclic extension은 서로 같은 것이 된다. 이번 절에서 우리는 자연수 $n$을 고정하고, $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
 
 ::: 명제 4
 임의의 원소 $a\in\mathbb{K}^\times$와, $\alpha^n=a$를 만족하는 $\alpha\in\overline{\mathbb{K}}$에 대하여 $\mathbb{K}(\alpha)/\mathbb{K}$는 finite degree Galois extension이고, 그 Galois group은 $n$을 나누는 order의 cyclic group이다.
 :::
 ::: 증명
-다항식 $\x^n-a$의 해들은 정확히 $\zeta^i\alpha$ ($i=0,\ldots,n-1$)들이고 ($n$개의 서로 다른 원소들이 모두 해이며 해는 많아야 $n$개이므로), $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3){: data-lid="4q873" }의 증명에서와 같이 finite degree Galois extension이다.
+우선 우리는 다음의 원소들
+
+$$\alpha, \cdots\zeta\alpha,\quad,\cdots \zeta^{n-1}\alpha$$
+
+이 다항식 $\x^n-a$의 해들임을 직접 대입하여 확인할 수 있으며, 이들은 모두 서로 다르므로 이들이 정확히 이 다항식의 모든 해들이다. 또, 가정에 의해 $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3){: data-lid="4q873" }의 증명에서와 같이 finite degree Galois extension이다.
 
 이제 임의의 $\sigma\in\Gal(\mathbb{K}(\alpha)/\mathbb{K})$에 대하여 $\sigma(\alpha)$도 $\x^n-a$의 해이므로 $\sigma(\alpha)/\alpha\in\mu_n$이다. 대응 $\sigma\mapsto\sigma(\alpha)/\alpha$를 생각하면, $\mu_n\subseteq\mathbb{K}$가 $\sigma$들에 의해 고정되므로
 
 $$(\sigma\tau)(\alpha)/\alpha=\sigma\bigl(\tau(\alpha)/\alpha\bigr)\cdot\sigma(\alpha)/\alpha=\bigl(\tau(\alpha)/\alpha\bigr)\bigl(\sigma(\alpha)/\alpha\bigr)$$
 
-이 되어 이는 group homomorphism $\Gal(\mathbb{K}(\alpha)/\mathbb{K}) \rightarrow \mu_n$이고, $\sigma$가 $\sigma(\alpha)$로 결정되므로 injective이다. 따라서 Galois group은 cyclic group $\mu_n$의 subgroup과 isomorphic하고, [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="8wqa7" }에 의해 그 order는 $n$을 나눈다.
+이 되어 이는 group homomorphism $\Gal(\mathbb{K}(\alpha)/\mathbb{K}) \rightarrow \mu_n$을 정의하며, $\sigma$가 $\sigma(\alpha)$로 결정되므로 injective이다. 따라서 Galois group은 cyclic group $\mu_n$의 어떤 subgroup과 isomorphic하고, [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="8wqa7" }에 의해 그 order는 $n$을 나눈다.
 :::
 
-핵심은 다음의 역방향으로, 그 증명에 사용되는 $\alpha$를 *Lagrange resolvent*라 부른다.
+거꾸로 임의의 cyclic extension은 반드시 이렇게 적당한 거듭제곱근에 의해 생성된다. 여기서도 마찬가지로 $n$을 고정하고, primitive $n$th root of unity $\zeta$에 대해 $\zeta\in \mathbb{K}$인 것으로 가정한다. 
 
 ::: 명제 5
-$\mathbb{L}/\mathbb{K}$가 degree $n$의 Galois extension이고 $\Gal(\mathbb{L}/\mathbb{K})$가 cyclic group이라 하자. 그럼 ($\zeta\in\mathbb{K}$ 가정 하에) 적당한 $\alpha\in\mathbb{L}$가 존재하여 $\mathbb{L}=\mathbb{K}(\alpha)$이고 $\alpha^n\in\mathbb{K}$이다.
+Degree $n$의 cyclic extension $\mathbb{L}/\mathbb{K}$에 대하여, 적당한 $\alpha\in\mathbb{L}$가 존재하여 $\mathbb{L}=\mathbb{K}(\alpha)$이고 $\alpha^n\in\mathbb{K}$이도록 할 수 있다.
 :::
 ::: 증명
-$\Gal(\mathbb{L}/\mathbb{K})$의 generator를 $\sigma$라 하자. [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2){: data-lid="b81g3" }에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3){: data-lid="x94nv" }에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
+$\Gal(\mathbb{L}/\mathbb{K})$이 cyclic group이므로 그 generator $\sigma$가 존재한다. 한편 [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2){: data-lid="b81g3" }에 의하여 $\lvert\Gal(\mathbb{L}/\mathbb{K})\rvert=[\mathbb{L}:\mathbb{K}]=n$이고, 따라서 $\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$은 $\mathbb{L}$에서 $\mathbb{L}$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3){: data-lid="x94nv" }에 의하여 이들은 $\mathbb{L}$-벡터공간 안에서 일차독립이므로, 일차결합
 
 $$\id+\zeta\sigma+\zeta^2\sigma^2+\cdots+\zeta^{n-1}\sigma^{n-1}$$
 
