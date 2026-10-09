@@ -6334,7 +6334,7 @@
 "r3ow6": {relation: required, reviewed: true}
 "r3t1v": {relation: required, reviewed: true}
 "r401d": {relation: weak, reviewed: true}
-"r4c9z": {relation: required}
+"r4c9z": {relation: required, reviewed: true}
 "r4hrn": {relation: required, reviewed: true}
 "r4i46": {relation: required, reviewed: true}
 "r4lfs": {relation: weak, reviewed: true}
