@@ -14756,6 +14756,13 @@ P:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: polydisc
+  en: polydisc
+  ko: 폴리디스크
+  primary: ko
+  defs:
+  - label: '[복소기하학] §돌보 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: polynomial
   en: polynomial
   ko: 다항식
