@@ -45,8 +45,10 @@ Now, for any $x\in \mathfrak{p}_i$, choose $\alpha\in A$ such that $x=\alpha a$.
 Since this corollary will be used frequently in what follows, we make the following new definition.
 
 ::: Definition 2
-Elements $a_1,\ldots, a_d$ of a ring $A$ are said to be an *$A$-regular sequence*, or simply an *$A$-sequence*, if $(a_1,\ldots, a_d)$ is proper and, for each $i$, the image of $a_{i+1}$ is a non-zerodivisor in $A/(a_1,\ldots, a_i)$.
+Elements $a_1,\ldots, a_d$ of a ring $A$ are said to be an *$A$-regular sequence*, or simply an *$A$-sequence*, if $(a_1,\ldots, a_d)$ is proper and, for each $i=0,\ldots, d-1$, the image of $a_{i+1}$ is a non-zerodivisor in $A/(a_1,\ldots, a_i)$.
 :::
+
+By convention, we set $(a_1,\ldots, a_0)=0$. Then in the case $i=0$, what the above definition requires is that $a_1$ is a non-zerodivisor in $A$.
 
 ::: Corollary 3
 A regular system of parameters of a regular local Noetherian ring $A$ forms an $A$-sequence.
