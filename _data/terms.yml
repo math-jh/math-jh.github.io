@@ -11608,6 +11608,13 @@ L:
   see:
   - label: Linearly independent
     id: linearly_independent
+- id: linear_diophantine_equation
+  en: linear Diophantine equation
+  ko: 일차 디오판토스 방정식
+  primary: en
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: linear_equivalence
   en: linear equivalence
   ko: 선형동치
