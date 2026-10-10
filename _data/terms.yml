@@ -12803,6 +12803,13 @@ M:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: monotone_subsequence
+  en: monotone subsequence
+  ko: 단조 부분수열
+  primary: ko
+  defs:
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: monotonicity
   en: monotonicity
   ko: 단조성
