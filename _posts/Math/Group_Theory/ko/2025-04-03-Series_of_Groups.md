@@ -219,7 +219,7 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
 Solvable group의 subgroup과 quotient group은 solvable이다.
 :::
 ::: 증명
-$G$가 solvable이어서 $D_n(G)=\{e\}$라 하자. Subgroup $H\subseteq G$에 대하여 inclusion $H \hookrightarrow G$에 [명제 10](#prop10)을 적용하면 $D_n(H)\subseteq D_n(G)=\{e\}$이다. 한편 surjection $\pi:G \rightarrow Q$에 대하여 같은 명제에 의해 $D_n(Q)=\pi(D_n(G))=\{e\}$이다. ([정의 11](#def11))
+$G$가 solvable이어서 $D_n(G)=\{e\}$라 하자. Subgroup $H\subseteq G$에 대하여 inclusion $H \hookrightarrow G$에 [명제 10](#prop10){: data-lid="iaubx" }을 적용하면 $D_n(H)\subseteq D_n(G)=\{e\}$이다. 한편 surjection $\pi:G \rightarrow Q$에 대하여 같은 명제에 의해 $D_n(Q)=\pi(D_n(G))=\{e\}$이다. ([정의 11](#def11){: data-lid="mgcic" })
 :::
 
 ::: 명제 14
@@ -332,7 +332,7 @@ Solvability가 subgroup으로 유전된다는 사실과 결합하면, symmetric 
 $n\geq 5$이면 symmetric group $S_n$은 solvable group이 아니다.
 :::
 ::: 증명
-$n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 [명제 13](#prop13)에 의해 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 20](#prop20){: data-lid="nqgvi" }에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
+$n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 [명제 13](#prop13){: data-lid="xkjje" }에 의해 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 20](#prop20){: data-lid="nqgvi" }에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
 :::
 
 이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals){: data-lid="sz40a" }).
