@@ -63,7 +63,7 @@ Since $\alpha$ is injective, regarding $M'$ as a submodule of $M$, since $\mathf
 
 $$0 \rightarrow M'/(M'\cap \mathfrak{a}^iM) \rightarrow M/\mathfrak{a}^iM \rightarrow M''/\mathfrak{a}^iM'' \rightarrow 0$$
 
-Applying the left exactness of completion discussed earlier to this, we see that $\varprojlim M'/(M'\cap \mathfrak{a}^iM) \rightarrow \varprojlim M/\mathfrak{a}^iM$ is injective and that its image equals the kernel of $\varprojlim M/\mathfrak{a}^iM \rightarrow \varprojlim M''/\mathfrak{a}^iM''$. Meanwhile, since $\{\mathfrak{a}^iM\}$ is an $\mathfrak{a}$-stable filtration, by [§Blowup Algebras, ⁋Lemma 7](/en/math/commutative_algebra/blowup_algebra#lem7){: data-lid="gzd1n" }, $\{M'\cap \mathfrak{a}^iM\}$ is also $\mathfrak{a}$-stable, so there exists some $l$ such that $M'\cap \mathfrak{a}^iM=\mathfrak{a}^{i-l}(M'\cap \mathfrak{a}^lM)$ for all $i\geq l$. From this we obtain
+Applying the left exactness of inverse limits discussed earlier to this, we see that $\varprojlim M'/(M'\cap \mathfrak{a}^iM) \rightarrow \varprojlim M/\mathfrak{a}^iM$ is injective and that its image equals the kernel of $\varprojlim M/\mathfrak{a}^iM \rightarrow \varprojlim M''/\mathfrak{a}^iM''$. Meanwhile, since $\{\mathfrak{a}^iM\}$ is an $\mathfrak{a}$-stable filtration, by [§Blowup Algebras, ⁋Lemma 7](/en/math/commutative_algebra/blowup_algebra#lem7){: data-lid="gzd1n" }, $\{M'\cap \mathfrak{a}^iM\}$ is also $\mathfrak{a}$-stable, so there exists some $l$ such that $M'\cap \mathfrak{a}^iM=\mathfrak{a}^{i-l}(M'\cap \mathfrak{a}^lM)$ for all $i\geq l$. From this we obtain
 
 $$\mathfrak{a}^iM'\subseteq M'\cap \mathfrak{a}^iM,\qquad M'\cap \mathfrak{a}^{i+l}M\subseteq \mathfrak{a}^iM'$$
 

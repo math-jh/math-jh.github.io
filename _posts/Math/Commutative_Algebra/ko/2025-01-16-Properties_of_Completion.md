@@ -44,7 +44,7 @@ $$\mathcal{J}': \qquad M=M_0'\supseteq M_1'\supseteq M_2'\supseteq\cdots$$
 가 주어졌다 하자. 만일 각각의 $M_i$마다 적당한 $M_j'$가 존재하여 $M_j'\subseteq M_i$이고, 각각의 $M_i'$마다 적당한 $M_j$가 존재하여 $M_j\subseteq M_i'$라면 $\widehat{M}_\mathcal{J}\cong \widehat{M}_{\mathcal{J}'}$가 성립한다.
 :::
 
-한편 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-lid="nd217" }에 의하여, inverse limit을 취하는 것은 left exact이다. 다음 보조정리는 적절한 종류의 유한성이 가정된다면, completion을 취하는 것은 right exact이기도 하다는 것을 보여준다.
+한편 [\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10){: data-lid="nd217" }에 의하여, inverse limit을 취하는 것은 left exact이다. 다음 보조정리는 적절한 종류의 유한성이 가정된다면, completion을 취하는 것이 exact라는 것을 보여준다.
 
 ::: 보조정리 3
 Noetherian ring $A$와 ideal $\mathfrak{a}$를 고정하자. 그럼 finitely generated $A$-module들의 short exact sequence
@@ -62,7 +62,7 @@ $\alpha$가 injective이므로 $M'$을 $M$의 submodule로 보면, $\mathfrak{a}
 
 $$0 \rightarrow M'/(M'\cap \mathfrak{a}^iM) \rightarrow M/\mathfrak{a}^iM \rightarrow M''/\mathfrak{a}^iM'' \rightarrow 0$$
 
-를 얻는다. 여기에 앞서 살펴본 completion의 left exactness를 적용하면 $\varprojlim M'/(M'\cap \mathfrak{a}^iM) \rightarrow \varprojlim M/\mathfrak{a}^iM$이 injective이고 그 image가 $\varprojlim M/\mathfrak{a}^iM \rightarrow \varprojlim M''/\mathfrak{a}^iM''$의 kernel과 같다는 것을 안다. 한편 $\{\mathfrak{a}^iM\}$이 $\mathfrak{a}$-stable filtration이므로 [§부풀림 대수, ⁋보조정리 7](/ko/math/commutative_algebra/blowup_algebra#lem7){: data-lid="gzd1n" }에 의하여 $\{M'\cap \mathfrak{a}^iM\}$ 또한 $\mathfrak{a}$-stable이고, 따라서 적당한 $l$이 존재하여 $i\geq l$마다 $M'\cap \mathfrak{a}^iM=\mathfrak{a}^{i-l}(M'\cap \mathfrak{a}^lM)$이 성립한다. 이로부터
+를 얻는다. 여기에 앞서 살펴본 inverse limit의 left exactness를 적용하면 $\varprojlim M'/(M'\cap \mathfrak{a}^iM) \rightarrow \varprojlim M/\mathfrak{a}^iM$이 injective이고 그 image가 $\varprojlim M/\mathfrak{a}^iM \rightarrow \varprojlim M''/\mathfrak{a}^iM''$의 kernel과 같다는 것을 안다. 한편 $\{\mathfrak{a}^iM\}$이 $\mathfrak{a}$-stable filtration이므로 [§부풀림 대수, ⁋보조정리 7](/ko/math/commutative_algebra/blowup_algebra#lem7){: data-lid="gzd1n" }에 의하여 $\{M'\cap \mathfrak{a}^iM\}$ 또한 $\mathfrak{a}$-stable이고, 따라서 적당한 $l$이 존재하여 $i\geq l$마다 $M'\cap \mathfrak{a}^iM=\mathfrak{a}^{i-l}(M'\cap \mathfrak{a}^lM)$이 성립한다. 이로부터
 
 $$\mathfrak{a}^iM'\subseteq M'\cap \mathfrak{a}^iM,\qquad M'\cap \mathfrak{a}^{i+l}M\subseteq \mathfrak{a}^iM'$$
 
