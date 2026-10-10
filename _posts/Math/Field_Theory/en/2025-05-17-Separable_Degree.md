@@ -62,7 +62,7 @@ so $\mathbb{K}(S^p)=\mathbb{K}(\mathbb{L}^p)=\mathbb{K}[\mathbb{L}^p]$ holds. Fi
 
 $$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]\subseteq \mathbb{K}[\mathbb{L}^p]$$
 
-holds, and since $\mathbb{K}[\mathbb{L}^p]$ is the union of the $\mathbb{L}'/\mathbb{K}$, we obtain the desired equality. The equality for arbitrary $n$ follows by a simple induction.
+holds, and since $\mathbb{L}$ is the union of the $\mathbb{L}'/\mathbb{K}$, we obtain the desired equality. The equality for arbitrary $n$ follows by a simple induction.
 :::
 
 From this we obtain the following two corollaries.
@@ -186,7 +186,11 @@ Fix an extension $\Omega/\mathbb{K}$, and consider two finite degree subextensio
     hold, and equality holds when $\mathbb{L},\mathbb{M}$ are linearly disjoint.
 :::
 
-The proofs of these are almost tautological; for example, the first result follows from [§Algebraic Extensions, ⁋Proposition 2](/en/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" } and [§Étale Algebras, ⁋Proposition 12](/en/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }. As for the remaining results, since analogous results hold respectively for the extension degree and the separable degree, they hold naturally for the inseparable degree as well.
+The proofs of these are almost tautological; for example, the first result follows from [§Algebraic Extensions, ⁋Proposition 2](/en/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" } and [§Étale Algebras, ⁋Proposition 12](/en/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }. As for the remaining results, analogous results also hold respectively for the extension degree and the separable degree, and the equality condition for the inseparable degree is obtained by dividing the two equalities. The inequality for the inseparable degree in the second result is obtained from
+
+$$[\mathbb{K}'(\mathbb{L}):\mathbb{K}']_i=[\mathbb{K}'(\mathbb{L}_s)(\mathbb{L}):\mathbb{K}'(\mathbb{L}_s)]\leq [\mathbb{L}:\mathbb{L}_s]=[\mathbb{L}:\mathbb{K}]_i$$
+
+by applying the inequality of [§Algebraic Extensions, ⁋Proposition 10](/en/math/field_theory/algebraic_extensions#prop10){: data-lid="ujsic" } to the finite degree extension $\mathbb{L}/\mathbb{L}_s$ and the $\mathbb{L}_s$-extension $\mathbb{K}'(\mathbb{L}_s)$, together with the fact that, as seen earlier, $\mathbb{K}'(\mathbb{L}_s)$ is the relative separable closure of $\mathbb{K}'$ in $\mathbb{K}'(\mathbb{L})$. The third result follows by applying the second result to $\mathbb{K}'=\mathbb{M}$ and then using the first result.
 
 ---
 
