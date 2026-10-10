@@ -5384,6 +5384,13 @@ D:
   defs:
   - label: '[정수론] §나눗셈과 최대공약수'
     url: /ko/math/number_theory/divisibility
+- id: division_algorithm
+  en: division algorithm
+  ko: 나눗셈 정리
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: division_ring
   en: division ring
   ko: 나눗셈환
