@@ -11870,6 +11870,13 @@ L:
   defs:
   - label: '[토릭 기하학] §Atiyah–Bott localization 정리'
     url: /ko/math/toric_geometry/atiyah_bott_localization
+- id: localized_euler_class
+  en: localized Euler class
+  ko: 국소화된 Euler류
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: locally_bounded
   en: locally bounded
   ko: 국소유계
