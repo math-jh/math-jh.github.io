@@ -94,7 +94,7 @@ $$\mathbb{K}(M \cup N) = \mathbb{K}(M)(N) = \mathbb{K}(N)(M)$$
 
 {% diagram Math/Field_Theory/Algebraic_Extensions-2.svg width="10.57em" alt="composite_field" %}
 
-을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $\mathbb{L}_1 \rightarrow \mathbb{M}$과 $\mathbb{L}_2 \rightarrow \mathbb{M}$이 존재하며, 이러한 성질을 만족하는 것들 중 universal한 것이다. 
+을 commute하도록 하는 $\mathbb{K}$-algebra homomorphism $u_1:\mathbb{L}_1 \rightarrow \mathbb{M}$과 $u_2:\mathbb{L}_2 \rightarrow \mathbb{M}$이 존재하며, $\mathbb{M}=\mathbb{K}(u_1(\mathbb{L}_1)\cup u_2(\mathbb{L}_2))$가 성립하는 것이다. 
 :::
 
 이는 구체적으로 다음과 같이 쓸 수 있다. 

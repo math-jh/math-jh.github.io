@@ -61,7 +61,7 @@ $$\mathbb{K}(\mathbb{L}^p)=\mathbb{K}(\mathbb{K}(S)^p)=\mathbb{K}(\mathbb{K}^p(S
 
 $$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]\subseteq \mathbb{K}[\mathbb{L}^p]$$
 
-이 성립하고, $\mathbb{K}[\mathbb{L}^p]$는 $\mathbb{L}'/\mathbb{K}$들의 union이므로 원하는 등식을 얻는다. 임의의 $n$에 대한 등식은 단순한 귀납법이다. 
+이 성립하고, $\mathbb{L}$은 $\mathbb{L}'/\mathbb{K}$들의 union이므로 원하는 등식을 얻는다. 임의의 $n$에 대한 등식은 단순한 귀납법이다. 
 :::
 
 이로부터 다음 두 따름정리를 얻는다. 
@@ -185,7 +185,11 @@ $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\m
     이 성립하며, 등식은 $\mathbb{L},\mathbb{M}$이 linearly disjoint일 때 성립한다. 
 :::
 
-이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" }와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하므로 inseparable degree에 대해서도 당연하게 성립하게 된다. 
+이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" }와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하며, inseparable degree에 대한 등식 조건은 두 등식을 나누어 얻어진다. 둘째 결과의 inseparable degree에 대한 부등식은 앞서 살펴본 것처럼 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'(\mathbb{L})$에서의 $\mathbb{K}'$의 relative separable closure라는 것에, finite degree extension $\mathbb{L}/\mathbb{L}_s$와 $\mathbb{L}_s$-extension $\mathbb{K}'(\mathbb{L}_s)$에 대해 [§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)의 부등식을 적용하면
+
+$$[\mathbb{K}'(\mathbb{L}):\mathbb{K}']_i=[\mathbb{K}'(\mathbb{L}_s)(\mathbb{L}):\mathbb{K}'(\mathbb{L}_s)]\leq [\mathbb{L}:\mathbb{L}_s]=[\mathbb{L}:\mathbb{K}]_i$$
+
+로부터 얻어진다. 셋째 결과는 둘째 결과를 $\mathbb{K}'=\mathbb{M}$에 적용한 뒤 첫째 결과를 사용하면 된다. 
 
 ---
 

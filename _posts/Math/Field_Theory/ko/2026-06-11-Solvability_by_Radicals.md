@@ -128,11 +128,11 @@ Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그�
 ::: 증명
 우선 $f$의 splitting field $\mathbb{L}_f$는 $f$의 유한 개의 해로 생성되므로 finite degree extension이다. 또 $\mathbb{L}_f/\mathbb{K}$는 splitting field로서 quasi-Galois이고 ([§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="lm39p" }), characteristic $0$ 가정에 의해 separable이므로 Galois extension이다.
 
-**(2)$\implies$(1)** $G=\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert G\rvert$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
+둘째 조건을 가정하고 첫째 조건을 보이자. $\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert\Gal(\mathbb{L}_f/\mathbb{K})\rvert$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
 
-우선 $H=\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in H$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $H \rightarrow G$가 잘 정의되며, $\sigma\in H$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $H$는 solvable group $G$의 subgroup과 isomorphic하므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="9iftl" }에 의해 solvable이다.
+우선 $\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $\Gal(\mathbb{L}'/\mathbb{K}') \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$가 잘 정의되며, $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $\Gal(\mathbb{L}'/\mathbb{K}')$는 solvable group $\Gal(\mathbb{L}_f/\mathbb{K})$의 subgroup과 isomorphic하므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="9iftl" }에 의해 solvable이다.
 
-이제 [\[군론\] §군의 열, ⁋명제 14](/ko/math/group_theory/series_of_groups#prop14){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series $H=H_0\supseteq\cdots\supseteq H_r=\{e\}$가 존재한다. $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이다. 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }의 대응으로 fixed field들
+이제 [\[군론\] §군의 열, ⁋명제 14](/ko/math/group_theory/series_of_groups#prop14){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series $\Gal(\mathbb{L}'/\mathbb{K}')=H_0\supseteq\cdots\supseteq H_r=\{e\}$가 존재한다. $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이다. 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }의 대응으로 fixed field들
 
 $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}',\qquad \mathbb{F}_i=\mathbb{L}'^{H_i}$$
 
@@ -140,7 +140,7 @@ $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F
 
 $$\Gal(\mathbb{F}_i/\mathbb{F}_{i-1})\cong H_{i-1}/H_i$$
 
-는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="30g6y" }에 의해 $d_i$는 $\lvert H\rvert$를 나누고, 다시 $\lvert H\rvert$는 $n$을 나눈다. 따라서 $\zeta^{n/d_i}$는 primitive $d_i$-th root of unity이고 $\mathbb{K}'\subseteq\mathbb{F}_{i-1}$에 속하므로, [명제 5](#prop5){: data-lid="i7qfu" }에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다.
+는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="30g6y" }에 의해 $d_i$는 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$를 나누고, 다시 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$는 $n$을 나눈다. 따라서 $\zeta^{n/d_i}$는 primitive $d_i$-th root of unity이고 $\mathbb{K}'\subseteq\mathbb{F}_{i-1}$에 속하므로, [명제 5](#prop5){: data-lid="i7qfu" }에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다.
 
 종합하면 $\zeta^n=1\in\mathbb{K}$이므로
 
@@ -148,7 +148,7 @@ $$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{F}_0\subseteq\mathbb{F}_1\subsete
 
 은 radical tower이고, $\mathbb{L}_f\subseteq\mathbb{L}'$이므로 $f$는 거듭제곱근으로 풀린다.
 
-**(1)$\implies$(2)** Radical tower $\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 그 데이터를 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$라 하자. $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택하자.
+이제 첫째 조건을 가정하고 둘째 조건을 보이자. Radical tower $\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 그 데이터를 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$라 하자. $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택하자.
 
 우선 탑을 키워 Galois extension으로 만든다. $E=\mathbb{K}_r(\zeta)$로 두면
 
@@ -183,7 +183,12 @@ $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 마지막으로 $\mathbb{L}_f\subseteq E\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="56hfy" }에 의해 solvable이다.
 :::
 
-[정리 7](#thm7){: data-lid="vb0j9" }로부터 5차 이상의 일반 방정식에 대한 근의 공식이 존재하지 않는다는 Abel–Ruffini 정리가 따라나온다. 실제로 $S_5$는 solvable이 아닌데, 만일 solvable이라면 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="ufj9m" }에 의해 그 subgroup $A_5$도 solvable이어야 하지만, $A_5$는 abelian이 아닌 simple group이므로 ([\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="49suh" }) derived subgroup이 자명해질 수 없기 때문이다. 따라서 Galois group이 $S_5$가 되는 다항식, 가령 $\mathbb{Q}$ 위의 적당한 5차 다항식은 거듭제곱근으로 풀리지 않는다. 구체적인 다항식의 Galois group을 계산하는 일은 그 자체로 별도의 주제이므로 여기서 다루지는 않는다.
+::: 따름정리 8 (Abel–Ruffini)
+$5$차 이상의 일반 다항식에 대하여, 거듭제곱근으로 표현되는 근의 공식은 존재하지 않는다.
+:::
+::: 증명
+[\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)
+:::
 
 ---
 

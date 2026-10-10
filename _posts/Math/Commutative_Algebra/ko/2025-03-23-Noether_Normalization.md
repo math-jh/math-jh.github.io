@@ -66,9 +66,9 @@ $$\mathfrak{a}\subseteq \tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\s
 
 $$\mathfrak{a}_i\cap \mathbb{K}[\x_1',\ldots, \x_e']\neq 0$$
 
-이다. 만일 이 교집합이 $0$이라 가정하면, 둘째 조건에 의해 
+이다. 만일 이 교집합이 $0$이라 가정하면, $B_e$의 임의의 원소 $g$를 $g_0\in \mathbb{K}[\x_1',\ldots, \x_e']$와 $h\in (\x_{e+1},\ldots, \x_d)$의 합 $g=g_0+h$로 쓸 때 둘째 조건에 의해 $h\in \mathfrak{a}_i$이므로, $g\in \mathfrak{a}_i$이면 $g_0\in \mathfrak{a}_i\cap \mathbb{K}[\x_1',\ldots, \x_e']=0$이다. 따라서 
 
-$$\mathfrak{a}_i\cap B_e\supseteq (\x_{e+1},\ldots, \x_d)$$
+$$\mathfrak{a}_i\cap B_e= (\x_{e+1},\ldots, \x_d)$$
 
 이 성립하는데, 좌변의 ideal은 $d_i$-차원이고, 우변의 ideal의 차원은 $e$가 되어 모순이기 때문이다. 이제 $\x_e$를 위의 교집합에 속하는 아무 nonzero polynomial로 잡자. $\mathfrak{a}_i$가 proper ideal이므로 $\x_e$는 상수가 아니다. 여기서 $A$가 $B_e$ 위에서 finite이므로 [§차원, ⁋명제 4](/ko/math/commutative_algebra/Krull_dimension#prop4){: data-lid="8wzj8" }에 의하여 $\dim B_e=\dim A=d$이고, $B_e$는 $d$개의 원소로 생성되는 $\mathbb{K}$-algebra이므로 $d$변수 polynomial ring의 quotient인데, $0$이 아닌 proper ideal로 quotient를 취하면 차원이 떨어진다는 앞의 논증에 의하여 이 quotient map의 kernel은 $0$이어야 한다. 즉 $\x_1',\ldots, \x_e',\x_{e+1},\ldots, \x_d$는 algebraically independent하고, 특히 $\mathbb{K}[\x_1',\ldots, \x_e']$가 polynomial ring이므로 여기에 $f=\x_e$로 두어 [보조정리 2](#lem2){: data-lid="8ywyj" }를 적용할 수 있다. 그럼 새로운 원소들 $\x_1',\ldots, \x_{e-1}'$을 얻어 $\mathbb{K}[\x_1',\ldots, \x_e']$가 $\mathbb{K}[\x_1',\ldots, \x_{e-1}', \x_e]$ 위에서 finite이도록 할 수 있다.
 
