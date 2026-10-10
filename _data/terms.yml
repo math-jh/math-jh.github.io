@@ -6859,6 +6859,13 @@ F:
     url: /ko/math/lie_theory/serre_relations
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
+- id: finite_type_algebra
+  en: finite type algebra
+  ko: 유한형 대수
+  primary: en
+  defs:
+  - label: '[가환대수학] §뇌터 정규화'
+    url: /ko/math/commutative_algebra/noether_normalization
 - id: finite_type_homomorphism
   en: finite type homomorphism
   ko: 유한형 준동형사상
@@ -7742,6 +7749,13 @@ G:
   defs:
   - label: '[스킴] §평탄사상'
     url: /ko/math/scheme_theory/flat_morphisms
+- id: generic_freeness
+  en: generic freeness
+  ko: 제네릭 자유성
+  primary: en
+  defs:
+  - label: '[가환대수학] §뇌터 정규화'
+    url: /ko/math/commutative_algebra/noether_normalization
 - id: generic_point
   en: generic point
   ko: 일반점
@@ -13378,6 +13392,13 @@ N:
   defs:
   - label: '[가환대수학] §뇌터 정규화'
     url: /ko/math/commutative_algebra/noether_normalization
+- id: noetherian_domain
+  en: Noetherian domain
+  ko: 뇌터 정역
+  primary: en
+  defs:
+  - label: '[가환대수학] §으뜸분해'
+    url: /ko/math/commutative_algebra/primary_decomposition
 - id: noetherian_induction
   en: Noetherian induction
   ko: 뇌터 귀납법
