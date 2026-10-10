@@ -98,7 +98,7 @@ $$\alpha=x+\zeta\sigma(x)+\zeta^2\sigma^2(x)+\cdots+\zeta^{n-1}\sigma^{n-1}(x)\n
 
 $$\sigma(\alpha)=\sigma(x)+\zeta\sigma^2(x)+\cdots+\zeta^{n-1}x=\zeta^{-1}\bigl(\zeta\sigma(x)+\zeta^2\sigma^2(x)+\cdots+\zeta^{n-1}\sigma^{n-1}(x)+x\bigr)=\zeta^{-1}\alpha$$
 
-를 얻는다. 따라서 $\sigma(\alpha^n)=\zeta^{-n}\alpha^n=\alpha^n$이고, $\alpha^n$은 $\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$ 전체에 의해 고정되므로 $\mathbb{L}/\mathbb{K}$가 Galois라는 것으로부터 $\alpha^n\in\mathbb{K}$이다. ([§갈루아 확장, ⁋정의 9](/ko/math/field_theory/galois_extension#def9))
+를 얻는다. 따라서 $\sigma(\alpha^n)=\zeta^{-n}\alpha^n=\alpha^n$이고, $\alpha^n$은 $\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$ 전체에 의해 고정되므로 $\mathbb{L}/\mathbb{K}$가 Galois라는 것으로부터 $\alpha^n\in\mathbb{K}$이다. ([§갈루아 확장, ⁋정의 9](/ko/math/field_theory/galois_extension#def9){: data-lid="jp7ty" })
 
 마지막으로 $\sigma^i(\alpha)=\zeta^{-i}\alpha$들은 서로 다른 $n$개의 원소들이므로, $\alpha$는 $\mathbb{K}$ 위에서 적어도 $n$개의 conjugate을 갖고 따라서 $[\mathbb{K}(\alpha):\mathbb{K}]\geq n$이다. $\mathbb{K}(\alpha)\subseteq\mathbb{L}$이고 $[\mathbb{L}:\mathbb{K}]=n$이므로 $\mathbb{L}=\mathbb{K}(\alpha)$이다.
 :::
@@ -123,7 +123,7 @@ $$\mathbb{K}=\mathbb{K}_0\subseteq\mathbb{K}_1\subseteq\cdots\subseteq\mathbb{K}
 Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그리고 $f$의 splitting field $\mathbb{L}_f$에 대하여, 다음이 동치이다.
 
 1. $f$가 거듭제곱근으로 풀린다.
-2. $\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable group이다. ([\[군론\] §군의 열, ⁋정의 11](/ko/math/group_theory/series_of_groups#def11))
+2. $\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable group이다. ([\[군론\] §군의 열, ⁋정의 11](/ko/math/group_theory/series_of_groups#def11){: data-lid="e4s3k" })
 :::
 ::: 증명
 우선 $f$의 splitting field $\mathbb{L}_f$는 $f$의 유한 개의 해로 생성되므로 finite degree extension이다. 또 $\mathbb{L}_f/\mathbb{K}$는 splitting field로서 quasi-Galois이고 ([§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="lm39p" }), characteristic $0$ 가정에 의해 separable이므로 Galois extension이다.
@@ -187,7 +187,7 @@ $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 $5$차 이상의 일반 다항식에 대하여, 거듭제곱근으로 표현되는 근의 공식은 존재하지 않는다.
 :::
 ::: 증명
-[\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)
+[\[군론\] §대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="r3hh4" }
 :::
 
 ---

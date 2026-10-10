@@ -185,7 +185,7 @@ $$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{L}_s][\mathbb{L}_s:\mathbb{K}]=[\m
     이 성립하며, 등식은 $\mathbb{L},\mathbb{M}$이 linearly disjoint일 때 성립한다. 
 :::
 
-이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" }와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하며, inseparable degree에 대한 등식 조건은 두 등식을 나누어 얻어진다. 둘째 결과의 inseparable degree에 대한 부등식은 앞서 살펴본 것처럼 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'(\mathbb{L})$에서의 $\mathbb{K}'$의 relative separable closure라는 것에, finite degree extension $\mathbb{L}/\mathbb{L}_s$와 $\mathbb{L}_s$-extension $\mathbb{K}'(\mathbb{L}_s)$에 대해 [§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10)의 부등식을 적용하면
+이에 대한 증명들은 거의 동어반복으로, 가령 첫째 결과의 경우 [§대수적 확장, ⁋명제 2](/ko/math/field_theory/algebraic_extensions#prop2){: data-lid="u4rqg" }와 [§에탈대수, ⁋명제 12](/ko/math/field_theory/etale_algebras#prop12){: data-lid="41nc1" }로부터 얻어진다. 나머지 결과 또한 비슷한 결과가 extension degree와 separable degree에 대해 각각 성립하며, inseparable degree에 대한 등식 조건은 두 등식을 나누어 얻어진다. 둘째 결과의 inseparable degree에 대한 부등식은 앞서 살펴본 것처럼 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'(\mathbb{L})$에서의 $\mathbb{K}'$의 relative separable closure라는 것에, finite degree extension $\mathbb{L}/\mathbb{L}_s$와 $\mathbb{L}_s$-extension $\mathbb{K}'(\mathbb{L}_s)$에 대해 [§대수적 확장, ⁋명제 10](/ko/math/field_theory/algebraic_extensions#prop10){: data-lid="ujsic" }의 부등식을 적용하면
 
 $$[\mathbb{K}'(\mathbb{L}):\mathbb{K}']_i=[\mathbb{K}'(\mathbb{L}_s)(\mathbb{L}):\mathbb{K}'(\mathbb{L}_s)]\leq [\mathbb{L}:\mathbb{L}_s]=[\mathbb{L}:\mathbb{K}]_i$$
 
