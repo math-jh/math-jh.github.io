@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-04-03
 weight: 3
+revising: true
+drift_needed: true
 
 ---
 
@@ -213,11 +215,35 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
 
 따라서, 직관적으로 solvable group of solvability class $\leq n$은 trivial group $\{e\}$를 $n$개의 abelian group들로 extend하여 얻어지는 것으로 생각할 수 있다. 
 
+::: 명제 13
+Solvable group의 subgroup과 quotient group은 solvable이다.
+:::
+::: 증명
+$G$가 solvable이어서 $D_n(G)=\{e\}$라 하자. Subgroup $H\subseteq G$에 대하여 inclusion $H \hookrightarrow G$에 [명제 10](#prop10)을 적용하면 $D_n(H)\subseteq D_n(G)=\{e\}$이다. 한편 surjection $\pi:G \rightarrow Q$에 대하여 같은 명제에 의해 $D_n(Q)=\pi(D_n(G))=\{e\}$이다. ([정의 11](#def11))
+:::
+
+::: 명제 14
+Finite solvable group $G$에 대하여, 적당한 subgroup들의 sequence
+
+$$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
+
+가 존재하여 각각의 $H_{i+1}$이 $H_i$의 normal subgroup이고 $H_i/H_{i+1}$이 cyclic group이도록 할 수 있다.
+:::
+::: 증명
+우선 finite abelian group $A$가 이러한 series를 갖는 것을 $\lvert A\rvert$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
+
+이제 일반적인 finite solvable group $G$에 대하여, derived series
+
+$$G=D_0(G)\supseteq D_1(G)\supseteq\cdots\supseteq D_n(G)=\{e\}$$
+
+를 생각하면 각 quotient $D_k(G)/D_{k+1}(G)$는 abelian이다. 각각의 단계를 위에서 살펴본 abelian group의 series로 refine하자. 즉 $D_k(G)/D_{k+1}(G)$의 cyclic quotient들을 갖는 series를 correspondence로 끌어올려 $D_k(G)$와 $D_{k+1}(G)$ 사이의 중간 subgroup들로 바꾸면, 이들 중간 subgroup들은 abelian quotient $D_k(G)/D_{k+1}(G)$의 subgroup들에 대응되므로 각각이 바로 앞의 것의 normal subgroup이고, 연이은 quotient들이 cyclic이다. 이렇게 모든 단계를 refine하면 원하는 series를 얻는다.
+:::
+
 ## 합성열과 조르단-횔더 정리
 
 우리는 앞에서 nilpotent group들은 central extension을 반복하여 얻어지는 group이고, solvable group은 abelian extension을 반복하여 얻어지는 group인 것을 확인하였다. 이제 우리는 가장 일반적인 경우를 다룬다.
 
-::: 정의 13
+::: 정의 15
 Group $G$의 subgroup들의 sequence
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\}$$
@@ -231,9 +257,9 @@ $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\}$$
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset\cdots\supset H_m=\{e\}$$
 
-에 대하여, $m=n$이고, $G_k/G_{k+1}\cong H_{\sigma(k)}/H_{\sigma(k)+1}$이 모든 $k=0,\ldots, n-1$에 대해 성립하도록 하는 $\sigma\in S_n$이 존재한다면 $G_\bullet$과 $H_\bullet$이 *equivalent<sub>동등</sub>*한 subnormal series라 부른다. 이 절의 가장 큰 정리는 [정리 16](#thm16){: data-lid="0lwgt" }으로, group $G$의 두 composition series가 존재한다면 이들은 equivalent하다는 것이다. 이를 증명하기 위해 다음 보조정리부터 시작하자.
+에 대하여, $m=n$이고, $G_k/G_{k+1}\cong H_{\sigma(k)}/H_{\sigma(k)+1}$이 모든 $k=0,\ldots, n-1$에 대해 성립하도록 하는 $\sigma\in S_n$이 존재한다면 $G_\bullet$과 $H_\bullet$이 *equivalent<sub>동등</sub>*한 subnormal series라 부른다. 이 절의 가장 큰 정리는 [정리 18](#thm18){: data-lid="0lwgt" }로, group $G$의 두 composition series가 존재한다면 이들은 equivalent하다는 것이다. 이를 증명하기 위해 다음 보조정리부터 시작하자.
 
-::: 보조정리 14 (Zassenhaus)
+::: 보조정리 16 (Zassenhaus)
 Group $G$의 두 subgroup $H,K$가 주어졌다 하고, 이들 각각의 normal subgroup $H',K'$가 주어졌다 하자. 그럼 $H'(H\cap K')$는 $H'(H\cap K)$의 normal subgroup이고, $K'(K\cap H')$는 $K'(K\cap H)$의 normal subgroup이며 다음의 isomorphism
 
 $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{K'(K\cap H)}{K'(K\cap H')}$$
@@ -260,7 +286,7 @@ $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{H\cap K}{(H'\cap K)(K'\cap H)}$$
 
 그럼 다음이 성립한다.
 
-::: 명제 15 (Schreier)
+::: 명제 17 (Schreier)
 임의의 두 subnormal series 
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset\cdots\supset H_m=\{e\}$$
@@ -268,16 +294,16 @@ $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset
 에 대하여, 이들 각각의 refinement $G_\bullet', H_\bullet'$가 존재하여 이들 둘이 equivalent하도록 할 수 있다. 
 :::
 ::: 증명
-$G_i$와 $G_{i+1}$ 사이에 $G_{i+1}(G_i\cap H_j)$를 $j$를 움직여 가며 넣고 $H_j$와 $H_{j+1}$ 사이에 $H_{j+1}(H_j\cap G_i)$를 $i$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 14](#lem14){: data-lid="roxna" }를 통해 보일 수 있다. 
+$G_i$와 $G_{i+1}$ 사이에 $G_{i+1}(G_i\cap H_j)$를 $j$를 움직여 가며 넣고 $H_j$와 $H_{j+1}$ 사이에 $H_{j+1}(H_j\cap G_i)$를 $i$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 16](#lem16){: data-lid="roxna" }을 통해 보일 수 있다. 
 :::
 
 따라서 다음이 성립한다.
 
-::: 정리 16 (Jordan-Hölder)
+::: 정리 18 (Jordan-Hölder)
 임의의 두 composition series는 equivalent하다. 
 :::
 
-::: 정의 17
+::: 정의 19
 Group $G$의 *length<sub>길이</sub>*는 strictly descending subnormal series의 길이의 supremum으로 정의한다. 
 :::
 
@@ -285,13 +311,13 @@ Group $G$의 *length<sub>길이</sub>*는 strictly descending subnormal series�
 
 $$\length(G)=\length(G/N)+\length(N)$$
 
-은 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="rp4oa" }과 [정리 16](#thm16){: data-lid="5wsiu" }의 결과이다. 
+은 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="rp4oa" }과 [정리 18](#thm18){: data-lid="5wsiu" }의 결과이다. 
 
 ## 대칭군의 가해성
 
 Solvability의 가장 고전적인 응용은 symmetric group이 언제부터 solvable이 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="67ixv" }).
 
-::: 명제 18
+::: 명제 20
 $A_5$는 solvable group이 아니다.
 :::
 ::: 증명
@@ -302,13 +328,11 @@ $A_5$는 solvable group이 아니다.
 
 Solvability가 subgroup으로 유전된다는 사실과 결합하면, symmetric group의 solvability에 대한 결론이 곧바로 따라온다.
 
-::: 따름정리 19
+::: 따름정리 21
 $n\geq 5$이면 symmetric group $S_n$은 solvable group이 아니다.
 :::
 ::: 증명
-먼저 solvable group의 subgroup이 다시 solvable임을 본다. Subgroup $H\subseteq G$의 포함사상 $\iota:H\hookrightarrow G$에 [명제 10](#prop10){: data-lid="7pr8r" }을 적용하면 $D_n(H)\subseteq D_n(G)$이므로, $G$가 solvable이어서 어떤 $n$에 $D_n(G)=\{e\}$이면 $D_n(H)=\{e\}$가 되어 $H$도 solvable이다.
-
-이제 $n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 18](#prop18){: data-lid="nqgvi" }에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
+$n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 [명제 13](#prop13)에 의해 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 20](#prop20){: data-lid="nqgvi" }에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
 :::
 
 이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals){: data-lid="sz40a" }).
