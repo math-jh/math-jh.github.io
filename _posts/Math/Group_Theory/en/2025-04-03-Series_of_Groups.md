@@ -211,7 +211,7 @@ Thus, intuitively, a solvable group of solvability class $\leq n$ can be thought
 
 We have verified above that nilpotent groups are those obtained by repeated central extensions, and solvable groups are those obtained by repeated abelian extensions. We now treat the most general case.
 
-::: Definition 13
+::: Definition 15
 A sequence of subgroups of a group $G$
 
 $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}$$
@@ -225,9 +225,9 @@ If for two subnormal series
 
 $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}, \qquad G = H_0 \supset H_1 \supset \cdots \supset H_m = \{e\}$$
 
-we have $m = n$ and there exists $\sigma \in S_n$ such that $G_k/G_{k+1} \cong H_{\sigma(k)}/H_{\sigma(k)+1}$ for all $k = 0, \ldots, n-1$, then $G_\bullet$ and $H_\bullet$ are called *equivalent* subnormal series. The main theorem of this section is [Theorem 16](#thm16){: data-lid="0lwgt" }, which states that if two composition series of a group $G$ exist then they are equivalent. To prove this we begin with the following lemma.
+we have $m = n$ and there exists $\sigma \in S_n$ such that $G_k/G_{k+1} \cong H_{\sigma(k)}/H_{\sigma(k)+1}$ for all $k = 0, \ldots, n-1$, then $G_\bullet$ and $H_\bullet$ are called *equivalent* subnormal series. The main theorem of this section is [Theorem 18](#thm18){: data-lid="0lwgt" }, which states that if two composition series of a group $G$ exist then they are equivalent. To prove this we begin with the following lemma.
 
-::: Lemma 14 (Zassenhaus)
+::: Lemma 16 (Zassenhaus)
 Let $H, K$ be two subgroups of a group $G$, and let $H', K'$ be normal subgroups of $H$ and $K$ respectively. Then $H'(H \cap K')$ is a normal subgroup of $H'(H \cap K)$, and $K'(K \cap H')$ is a normal subgroup of $K'(K \cap H)$, and the following isomorphism
 
 $$\frac{H'(H \cap K)}{H'(H \cap K')} \cong \frac{K'(K \cap H)}{K'(K \cap H')}$$
@@ -252,7 +252,7 @@ exists.
 
 Then the following holds.
 
-::: Proposition 15 (Schreier)
+::: Proposition 17 (Schreier)
 For any two subnormal series
 
 $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}, \qquad G = H_0 \supset H_1 \supset \cdots \supset H_m = \{e\}$$
@@ -260,16 +260,16 @@ $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}, \qquad G = H_0 \supset
 there exist refinements $G_\bullet', H_\bullet'$ of these that are equivalent.
 :::
 ::: Proof
-Insert $G_i \cap H_j$ between $G_i$ and $G_{i+1}$ varying $j$, and insert $G_i \cap H_j$ between $H_j$ and $H_{j+1}$ varying $i$; then the refinements so constructed can be shown to be equivalent to each other via [Lemma 14](#lem14){: data-lid="roxna" }.
+Insert $G_i \cap H_j$ between $G_i$ and $G_{i+1}$ varying $j$, and insert $G_i \cap H_j$ between $H_j$ and $H_{j+1}$ varying $i$; then the refinements so constructed can be shown to be equivalent to each other via [Lemma 16](#lem16){: data-lid="roxna" }.
 :::
 
 Therefore the following holds.
 
-::: Theorem 16 (Jordan-Hölder)
+::: Theorem 18 (Jordan-Hölder)
 Any two composition series are equivalent.
 :::
 
-::: Definition 17
+::: Definition 19
 The *length* of a group $G$ is defined as the upper bound of the lengths of strictly descending subnormal series.
 :::
 
@@ -277,13 +277,13 @@ Then if $G$ has a composition series, we know that the length of its composition
 
 $$\length(G) = \length(G/N) + \length(N)$$
 
-is a consequence of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="rp4oa" } and [Theorem 16](#thm16){: data-lid="5wsiu" }.
+is a consequence of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="rp4oa" } and [Theorem 18](#thm18){: data-lid="5wsiu" }.
 
 ## Solvability of Symmetric Groups
 
 The most classical application of solvability is determining from what point symmetric groups cease to be solvable, and the branching point lies in the simplicity of $A_5$ ([§Symmetric Groups, ⁋Example 13](/en/math/group_theory/symmetric_groups#ex13){: data-lid="67ixv" }).
 
-::: Proposition 18
+::: Proposition 20
 $A_5$ is not solvable.
 :::
 ::: Proof
@@ -294,13 +294,13 @@ Now consider the derived series ([Definition 9](#def9){: data-lid="v9kqs" }). Th
 
 Combining this with the fact that solvability is inherited by subgroups, the conclusion about solvability of symmetric groups follows immediately.
 
-::: Corollary 19
+::: Corollary 21
 If $n \geq 5$ then the symmetric group $S_n$ is not solvable.
 :::
 ::: Proof
 First we observe that a subgroup of a solvable group is again solvable. Applying [Proposition 10](#prop10){: data-lid="7pr8r" } to the inclusion $\iota: H \hookrightarrow G$ of a subgroup $H \subseteq G$ gives $D_n(H) \subseteq D_n(G)$, so if $G$ is solvable and $D_n(G) = \{e\}$ for some $n$ then $D_n(H) = \{e\}$ and $H$ is also solvable.
 
-Now if $n \geq 5$, the permutations fixing the elements $\{6, \ldots, n\}$ form a copy of $S_5$, so $A_5 \subseteq S_5 \subseteq S_n$. If $S_n$ were solvable then its subgroup $A_5$ would also have to be solvable, which contradicts [Proposition 18](#prop18){: data-lid="nqgvi" }. Therefore $S_n$ is not solvable.
+Now if $n \geq 5$, the permutations fixing the elements $\{6, \ldots, n\}$ form a copy of $S_5$, so $A_5 \subseteq S_5 \subseteq S_n$. If $S_n$ were solvable then its subgroup $A_5$ would also have to be solvable, which contradicts [Proposition 20](#prop20){: data-lid="nqgvi" }. Therefore $S_n$ is not solvable.
 :::
 
 Although this corollary is a purely group-theoretic fact, its most famous consequence lies in field theory. The fact that the Galois group of a general polynomial of degree $n \geq 5$ is $S_n$ and that this $S_n$ is not solvable forms the group-theoretic core of the theorem that general equations of degree $5$ or higher cannot be solved by radicals ([\[Field Theory\] §Solvability by Radicals](/en/math/field_theory/solvability_by_radicals)).

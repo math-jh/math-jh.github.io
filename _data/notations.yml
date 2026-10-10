@@ -1844,12 +1844,12 @@
     meaning: subnormal series
     defs:
     - label: §군의 열
-      url: /ko/math/group_theory/series_of_groups#def13
+      url: /ko/math/group_theory/series_of_groups#def15
   - symbol: \length(G)
     meaning: 군의 길이
     defs:
     - label: §군의 열
-      url: /ko/math/group_theory/series_of_groups#def17
+      url: /ko/math/group_theory/series_of_groups#def19
   - symbol: '[n]'
     meaning: $\{1,\ldots,n\}$
     defs:
