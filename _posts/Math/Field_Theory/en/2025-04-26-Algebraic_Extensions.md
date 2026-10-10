@@ -95,7 +95,7 @@ For two $\mathbb{K}$-extensions $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb
 
 {% diagram Math/Field_Theory/Algebraic_Extensions-2.svg width="10.57em" alt="composite_field" %}
 
-there exist $\mathbb{K}$-algebra homomorphisms $\mathbb{L}_1 \rightarrow \mathbb{M}$ and $\mathbb{L}_2 \rightarrow \mathbb{M}$ making it commute.
+there exist $\mathbb{K}$-algebra homomorphisms $u_1:\mathbb{L}_1 \rightarrow \mathbb{M}$ and $u_2:\mathbb{L}_2 \rightarrow \mathbb{M}$ making it commute, and $\mathbb{M}=\mathbb{K}(u_1(\mathbb{L}_1)\cup u_2(\mathbb{L}_2))$ holds.
 :::
 
 Concretely, this can be written as follows.
