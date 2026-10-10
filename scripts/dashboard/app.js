@@ -192,7 +192,7 @@ function wrapBareTex(s) {
     }).join('');
   }).join('');
 }
-function koReviewHtml(det, k, rejected) {
+function koReviewHtml(det, k, rejected, stuck) {
   var rank = { VALID: 0, UNSURE: 1, FALSE: 3 };
   var items = det.slice().sort(function (a, b) {
     var ra = a.verdict in rank ? rank[a.verdict] : 2, rb = b.verdict in rank ? rank[b.verdict] : 2;
@@ -226,6 +226,11 @@ function koReviewHtml(det, k, rejected) {
   if (dead.length) {
     html += '<details class="kr__false"><summary>Codex 기각 ' + dead.length + '건</summary>' +
       '<ol class="kr">' + dead.map(one).join('') + '</ol></details>';
+  }
+  if (stuck) {
+    html += '<div class="kr__reject kr__stuck"><b>후속 처리 막힘 · ' + stuck.count + '회 연속 대기' +
+      (stuck.at ? ' · 마지막 ' + esc(agoIso(stuck.at)) : '') + '</b>' +
+      '<p>' + esc(stuck.reason) + '</p></div>';
   }
   if (rejected) {
     html += '<div class="kr__reject"><b>지난 후속 승인 거절' +
@@ -853,12 +858,15 @@ function secTranslation(d) {
         var key = k.path + '@' + (k.verified_at || '');
         liveKeys[key] = true;
         var rejected = k.followup_rejection || '';
+        var stuck = k.followup_stuck;
         var det = k.detail || k.items.map(function (x) { return { text: x }; });
         var nFalse = det.filter(function (x) { return x.verdict === 'FALSE'; }).length;
         var tr = row([
           { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) + '</span>' +
               '<span class="typo-note"' + (k.note ? '' : ' hidden') + '>메모 있음</span>' +
-              (rejected ? '<span class="typo-reject">승인 거절: ' + esc(rejected) + '</span>' : '') },
+              (rejected ? '<span class="typo-reject">승인 거절: ' + esc(rejected) + '</span>' : '') +
+              (stuck ? '<span class="typo-stuck"' + (doneMap[key] ? '' : ' hidden') + '>후속 처리 막힘 ' +
+                stuck.count + '회: ' + esc(stuck.reason) + '</span>' : '') },
           { html: (k.live == null ? k.items.length : k.live)
               + (nFalse ? ' <span class="muted">(+오탐 ' + nFalse + ')</span>' : ''), cls: 'num' },
           { text: agoIso(k.verified_at), cls: 'num muted' },
@@ -866,7 +874,7 @@ function secTranslation(d) {
         ], 'clickable' + (doneMap[key] ? ' typo-pending' : ''));
         tr.onclick = function () {
           openModalHtml('KO 원문 검토 — ' + k.path.replace(/^_posts\//, ''),
-            koReviewHtml(det, k, rejected));
+            koReviewHtml(det, k, rejected, doneMap[key] ? stuck : null));
           var box = document.getElementById('kr-note');
           var stat = document.getElementById('kr-note-status');
           document.getElementById('kr-note-save').onclick = function () {
@@ -884,11 +892,13 @@ function secTranslation(d) {
           };
         };
         var noteTag = tr.querySelector('.typo-note');
+        var stuckTag = tr.querySelector('.typo-stuck');
         var chk = tr.querySelector('.typo-chk');
         chk.onclick = function (e) { e.stopPropagation(); };
         chk.onchange = function () {
           if (chk.checked) doneMap[key] = 1; else delete doneMap[key];
           tr.classList.toggle('typo-pending', chk.checked);
+          if (stuckTag) stuckTag.hidden = !chk.checked;
           saveDone();
         };
         return tr;

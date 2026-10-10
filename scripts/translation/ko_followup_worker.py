@@ -257,15 +257,40 @@ def antigravity_candidate(
     if not isinstance(replacements, list) or len(replacements) > MAX_REPLACEMENTS:
         raise RuntimeError("Antigravity returned an invalid replacement list")
     candidate = current_en
-    for item in replacements:
+    for idx, item in enumerate(replacements, 1):
         if not isinstance(item, dict):
             raise RuntimeError("Antigravity replacement is not an object")
         old = str(item.get("old") or "")
         new = str(item.get("new") or "")
-        if not old or candidate.count(old) != 1:
-            raise RuntimeError("Antigravity replacement source is not unique")
+        if not old:
+            raise RuntimeError(f"Antigravity replacement {idx}/{len(replacements)}: old 가 비었음")
+        if candidate.count(old) != 1:
+            raise RuntimeError(_replacement_miss(candidate, old, idx, len(replacements)))
         candidate = candidate.replace(old, new, 1)
     return candidate
+
+
+def _replacement_miss(text: str, old: str, idx: int, total: int) -> str:
+    """Say why `old` cannot be applied: duplicated, or where it stops matching.
+
+    For a miss, the longest prefix of `old` present in `text` locates the first
+    differing character; repr() keeps a literal backslash-n distinct from a
+    newline, which is the usual way a JSON-decoded LaTeX string drifts.
+    """
+    head = f"Antigravity replacement {idx}/{total}:"
+    hits = text.count(old)
+    if hits:
+        return f"{head} old 가 EN 에 {hits}곳 일치 {old[:100]!r}"
+    lo, hi = 0, len(old)
+    while lo < hi:
+        mid = (lo + hi + 1) // 2
+        if old[:mid] in text:
+            lo = mid
+        else:
+            hi = mid - 1
+    at = text.find(old[:lo]) + lo
+    return (f"{head} old 가 EN 에 없음 — 앞 {lo}/{len(old)}자 일치, "
+            f"이어서 old {old[lo:lo + 30]!r} · EN {text[at:at + 30]!r}")
 
 
 CODEX_PROMPT = """Review one completed Korean-source correction and its English follow-up.
@@ -439,7 +464,7 @@ def _clear_completed(entry: dict) -> None:
         "verify_ko_typos", "verify_ko_typos_review", "ko_reviewed_at",
         "ko_review_base_content", "ko_review_base_sha256",
         "ko_followup_rejected_at", "ko_followup_rejection_reason",
-        "ko_followup_rejected_request",
+        "ko_followup_rejected_request", "ko_followup_wait",
     ):
         entry.pop(key, None)
     entry["ko_followup_completed_at"] = datetime.now(timezone.utc).isoformat(
@@ -457,11 +482,34 @@ def _record_rejection(
     )
     entry["ko_followup_rejection_reason"] = reason
     entry["ko_followup_rejected_request"] = request_key
+    entry.pop("ko_followup_wait", None)
     tw.save_state(state)
     latest = _read_json(REQUEST_STATE)
     latest.pop(request_key, None)
     _write_json(REQUEST_STATE, latest)
     log(f"REJECT {path}: 체크 해제·수정 후 재요청 — {reason}")
+
+
+def _record_wait(
+    request_key: str, path: str, entry: dict, state: dict, reason: str,
+) -> None:
+    """Keep the request checked and count consecutive WAITs for the dashboard.
+
+    `ko_followup_wait` = {request, count, at, reason}. The count continues only
+    while the request key is the same; a pass or rejection removes the record,
+    and run_all drops it once the request is unchecked.
+    """
+    reason = tw._flat(reason)[:240]
+    prev = entry.get("ko_followup_wait")
+    count = 1
+    if isinstance(prev, dict) and prev.get("request") == request_key:
+        count = int(prev.get("count") or 0) + 1
+    entry["ko_followup_wait"] = dict(
+        request=request_key, count=count, reason=reason,
+        at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    )
+    tw.save_state(state)
+    log(f"WAIT {path}: {reason}")
 
 
 def _process_target(target: tuple, state: dict) -> int:
@@ -484,16 +532,16 @@ def _process_target_locked(target: tuple, state: dict) -> int:
     en_rel = entry.get("en_path") or ""
     en_path = tw.BLOG_ROOT / en_rel
     if not ko_path.is_file() or not en_path.is_file():
-        log(f"WAIT {path}: KO/EN 파일을 찾지 못함")
+        _record_wait(request_key, path, entry, state, "KO/EN 파일을 찾지 못함")
         return 1
 
     baseline = entry.get("ko_review_base_content") or _fallback_ko_base(path, reviewed_at)
     if baseline is None:
-        log(f"WAIT {path}: KO 감사 기준 판본을 복원하지 못함")
+        _record_wait(request_key, path, entry, state, "KO 감사 기준 판본을 복원하지 못함")
         return 1
     findings = _actionable_findings(entry, baseline)
     if not findings:
-        log(f"WAIT {path}: 검증할 유효 지적이 없음")
+        _record_wait(request_key, path, entry, state, "검증할 유효 지적이 없음")
         return 1
 
     current_ko = ko_path.read_text(encoding="utf-8")
@@ -505,9 +553,9 @@ def _process_target_locked(target: tuple, state: dict) -> int:
     if ko_diff == "(no changes)" and not author_note:
         full_ko_diff = _diff(baseline, current_ko, f"a/{path}", f"b/{path}")
         if full_ko_diff == "(no changes)":
-            log(f"WAIT {path}: 체크 후 KO 변경이 없음")
+            _record_wait(request_key, path, entry, state, "체크 후 KO 변경이 없음")
         else:
-            log(f"WAIT {path}: 다른 변경은 있으나 지적 위치의 KO 변경이 없음")
+            _record_wait(request_key, path, entry, state, "다른 변경은 있으나 지적 위치의 KO 변경이 없음")
         return 0
 
     log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영"
@@ -518,7 +566,7 @@ def _process_target_locked(target: tuple, state: dict) -> int:
             author_note=author_note,
         )
     except Exception as exc:
-        log(f"WAIT {path}: {tw._flat(exc)[:240]}")
+        _record_wait(request_key, path, entry, state, str(exc))
         return 1
     if not passed:
         _record_rejection(request_key, path, entry, state, why)
@@ -526,12 +574,12 @@ def _process_target_locked(target: tuple, state: dict) -> int:
 
     fd = _acquire_autopush_lock()
     if fd is None:
-        log(f"WAIT {path}: autopush 락을 얻지 못함")
+        _record_wait(request_key, path, entry, state, "autopush 락을 얻지 못함")
         return 1
     try:
         if _sha(ko_path.read_text(encoding="utf-8")) != _sha(current_ko) \
                 or _sha(en_path.read_text(encoding="utf-8")) != _sha(current_en):
-            log(f"WAIT {path}: 검증 중 KO/EN 파일이 다시 바뀜")
+            _record_wait(request_key, path, entry, state, "검증 중 KO/EN 파일이 다시 바뀜")
             return 1
         en_path.write_text(candidate, encoding="utf-8")
         committed, detail = _commit_pair(ko_path, en_path)
@@ -541,7 +589,7 @@ def _process_target_locked(target: tuple, state: dict) -> int:
                 ["git", "reset", "-q", "--", str(en_path.relative_to(tw.BLOG_ROOT))],
                 cwd=tw.BLOG_ROOT,
             )
-            log(f"WAIT {path}: 커밋 실패 — {detail}")
+            _record_wait(request_key, path, entry, state, f"커밋 실패 — {detail}")
             return 1
     finally:
         os.close(fd)
@@ -569,6 +617,14 @@ def run_all() -> int:
         tw.save_state(state)
     files = state.get("files", {})
     _prune_notes(files)
+    # 체크가 풀린 요청의 WAIT 기록은 대시보드 표시 근거가 사라졌으니 지운다.
+    unchecked = [entry for entry in files.values()
+                 if isinstance(entry.get("ko_followup_wait"), dict)
+                 and entry["ko_followup_wait"].get("request") not in requests]
+    for entry in unchecked:
+        entry.pop("ko_followup_wait")
+    if unchecked:
+        tw.save_state(state)
 
     targets = []
     stale = []
@@ -598,7 +654,8 @@ def run_all() -> int:
             # An unexpected per-item problem must not strand unrelated checked
             # requests until the next four-hour tick.
             rc = 1
-            log(f"WAIT {target[1]}: unexpected {tw._flat(exc)[:220]}")
+            request_key, path, _reviewed_at, entry = target
+            _record_wait(request_key, path, entry, state, f"unexpected {exc}")
     remaining = _read_json(REQUEST_STATE)
     removed = [(key, entry) for key, _path, _reviewed, entry in targets
                if key not in remaining]

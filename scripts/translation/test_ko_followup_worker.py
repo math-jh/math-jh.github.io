@@ -13,6 +13,18 @@ import ko_followup_worker as worker
 
 
 class FollowupBatchTest(unittest.TestCase):
+    def setUp(self) -> None:
+        # run_all() prunes notes against the given state; never let a test
+        # reach the dashboard's real note file.
+        tmp = tempfile.TemporaryDirectory(prefix="ko-followup-notes-")
+        self.addCleanup(tmp.cleanup)
+        notes = Path(tmp.name) / "notes.json"
+        for target, value in (("NOTE_STATE", notes),
+                              ("NOTE_LOCK", Path(f"{notes}.lock"))):
+            patcher = patch.object(worker, target, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
     def test_scoped_diff_ignores_another_links_metadata(self) -> None:
         baseline = (
             "결과적으로 이를 두 quotient가 같게 되는 것이다.\n"
@@ -68,6 +80,7 @@ class FollowupBatchTest(unittest.TestCase):
             with (
                 patch.object(worker, "REQUEST_STATE", request_state),
                 patch.object(worker.tw, "load_state", return_value={"files": files}),
+                patch.object(worker.tw, "save_state"),
                 patch.object(worker, "_process_target", side_effect=process) as mocked,
                 patch.object(worker, "log"),
             ):
@@ -139,6 +152,93 @@ class FollowupBatchTest(unittest.TestCase):
             )
             self.assertEqual(entry["ko_followup_rejected_request"], "a.md@t1")
             save_state.assert_called_once_with(state)
+
+    def test_one_item_exception_is_recorded_as_a_wait(self) -> None:
+        requests = {"a.md@t1": 1}
+        files = {"a.md": {"ko_reviewed_at": "t1"}}
+
+        def process(target, state):
+            raise RuntimeError("first item broke")
+
+        self._run_with(requests, files, process)
+
+        wait = files["a.md"]["ko_followup_wait"]
+        self.assertEqual(wait["request"], "a.md@t1")
+        self.assertEqual(wait["count"], 1)
+        self.assertIn("first item broke", wait["reason"])
+
+    def test_consecutive_waits_count_per_request(self) -> None:
+        entry = {}
+        state = {"files": {"a.md": entry}}
+        with (
+            patch.object(worker.tw, "save_state") as save_state,
+            patch.object(worker, "log") as log,
+        ):
+            worker._record_wait("a.md@t1", "a.md", entry, state, "first")
+            worker._record_wait("a.md@t1", "a.md", entry, state, "second\nline")
+            self.assertEqual(entry["ko_followup_wait"]["count"], 2)
+            self.assertEqual(entry["ko_followup_wait"]["reason"], "second line")
+            worker._record_wait("a.md@t2", "a.md", entry, state, "re-audited")
+            self.assertEqual(entry["ko_followup_wait"]["count"], 1)
+
+        self.assertEqual(save_state.call_count, 3)
+        log.assert_called_with("WAIT a.md: re-audited")
+
+    def test_unchecked_request_drops_its_wait_record(self) -> None:
+        files = {
+            "a.md": {"ko_reviewed_at": "t1",
+                     "ko_followup_wait": {"request": "a.md@t1", "count": 3}},
+            "b.md": {"ko_reviewed_at": "t2",
+                     "ko_followup_wait": {"request": "b.md@t2", "count": 2}},
+        }
+        seen = []
+
+        def process(target, state):
+            seen.append(target[1])
+            return 1
+
+        self._run_with({"b.md@t2": 1}, files, process)
+
+        self.assertNotIn("ko_followup_wait", files["a.md"])
+        self.assertEqual(files["b.md"]["ko_followup_wait"]["count"], 2)
+        self.assertEqual(seen, ["b.md"])
+
+    def test_rejection_clears_the_wait_record(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="ko-followup-test-") as tmp:
+            request_state = Path(tmp) / "requests.json"
+            request_state.write_text(json.dumps({"a.md@t1": 1}), encoding="utf-8")
+            entry = {"ko_reviewed_at": "t1",
+                     "ko_followup_wait": {"request": "a.md@t1", "count": 2}}
+            with (
+                patch.object(worker, "REQUEST_STATE", request_state),
+                patch.object(worker.tw, "save_state"),
+                patch.object(worker, "log"),
+            ):
+                worker._record_rejection(
+                    "a.md@t1", "a.md", entry, {"files": {"a.md": entry}}, "no",
+                )
+
+        self.assertNotIn("ko_followup_wait", entry)
+
+    def test_missing_replacement_reports_where_it_stops_matching(self) -> None:
+        en = "Let $$\n\\mathfrak{p}\n$$ be prime.\n"
+        old = "Let $$\\n\\mathfrak{p}"   # literal backslash-n instead of a newline
+        with patch.object(
+            worker.tw, "call_translator",
+            return_value=json.dumps({"replacements": [{"old": old, "new": "x"}]}),
+        ):
+            with self.assertRaises(RuntimeError) as caught:
+                worker.antigravity_candidate(en, [], "")
+
+        message = str(caught.exception)
+        self.assertIn("replacement 1/1: old 가 EN 에 없음", message)
+        self.assertIn("앞 6/", message)
+        self.assertIn(repr("\\n\\mathfrak{p}"), message)
+        self.assertIn(repr("\n\\mathfrak{p}\n$$ be prime.\n"), message)
+
+    def test_duplicated_replacement_reports_the_count(self) -> None:
+        message = worker._replacement_miss("ab ab", "ab", 2, 3)
+        self.assertEqual(message, "Antigravity replacement 2/3: old 가 EN 에 2곳 일치 'ab'")
 
     def test_codex_can_inspect_existing_english_when_diff_is_empty(self) -> None:
         captured = {}

@@ -50,6 +50,9 @@ KOTYPO_STATE = f"{STATE}/blog_dashboard_kotypo.json"
 # ko_followup_worker 가 읽어 프롬프트에 넣고 승인 시 지운다 — 쓰기는 양쪽 다 이 flock 으로.
 KOTYPO_NOTES = f"{STATE}/blog_dashboard_kotypo_notes.json"
 KOTYPO_NOTES_LOCK = f"{KOTYPO_NOTES}.lock"
+# ko_followup_worker 가 같은 요청을 이 횟수 이상 연속 WAIT 로 넘기면 행에 '후속 처리 막힘'을
+# 띄운다. 근거는 translation_state 의 `ko_followup_wait` = {request, count, at, reason}.
+FOLLOWUP_STUCK_AFTER = 2
 # 의존성 링크 분류기와 공유하는 보류 원장. 쓰기는 같은 flock 으로 직렬화한다 —
 # 워커가 새 보류를 붙이는 중에 통째로 덮으면 그 건은 에러 없이 사라진다.
 HOLDS_STATE = f"{STATE}/dependency-classifier-holds.json"
@@ -572,6 +575,12 @@ def sec_translation():
         request_key = f"{path}@{verified_at}"
         rejected = v.get("ko_followup_rejected_request") == request_key
         note = notes.get(request_key) if isinstance(notes.get(request_key), dict) else {}
+        wait = v.get("ko_followup_wait")
+        stuck = None
+        if isinstance(wait, dict) and wait.get("request") == request_key \
+                and int(wait.get("count") or 0) >= FOLLOWUP_STUCK_AFTER:
+            stuck = dict(count=int(wait["count"]), at=wait.get("at") or "",
+                         reason=wait.get("reason") or "")
         ko_typos.append(dict(
             path=path, items=[i["text"] for i in items], detail=items,
             live=len(live), verified_at=verified_at,
@@ -579,6 +588,7 @@ def sec_translation():
             followup_rejection=(v.get("ko_followup_rejection_reason") or "")
                                if rejected else "",
             note=note.get("note") or "", note_at=note.get("at") or "",
+            followup_stuck=stuck,
         ))
     recent.sort(key=lambda r: r["ts"], reverse=True)
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
