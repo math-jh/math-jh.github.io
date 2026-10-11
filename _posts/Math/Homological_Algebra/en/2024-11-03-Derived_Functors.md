@@ -1,7 +1,7 @@
 ---
 title: "Derived Functors"
 description: "This post covers the basic concepts of derived functors in homological algebra. It explains the definitions of homology and cohomology delta-functors, long exact sequences, and naturality conditions, and examines the properties of morphisms between functors."
-excerpt: "Definition of right/left derived functors via δ-functors"
+excerpt: "Definition of right/left derived functors via delta-functors"
 
 categories: [Math / Homological Algebra]
 permalink: /en/math/homological_algebra/derived_functors
@@ -12,7 +12,8 @@ date: 2024-11-03
 weight: 5
 translated_at: 2026-05-31T14:00:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-31T14:00:05+00:00
+last_polished_at: 2026-10-11T07:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## $\delta$-functor
 
@@ -24,22 +25,22 @@ we can construct the long exact sequence
 
 $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1}(A)\rightarrow \cdots$$
 
-The most essential part of this proof was the definition of the connecting map $\delta$, and we generalize this process as follows.
+The most essential part of this proof was defining the connecting map $\delta$, and we generalize this process to define the following.
 
 ::: Definition 1
-Let two abelian categories $\mathcal{A},\mathcal{B}$ be given. Then a *homological $\delta$-functor* from $\mathcal{A}$ to $\mathcal{B}$ consists of a collection of additive functors $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), together with morphisms $\delta_n:T_n(C)\rightarrow T_{n-1}(A)$ defined for every short exact sequence
+Let two abelian categories $\mathcal{A},\mathcal{B}$ be given. Then a *homological $\delta$-functor* from $\mathcal{A}$ to $\mathcal{B}$ refers to additive functors $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), together with morphisms $\delta_n:T_n(C)\rightarrow T_{n-1}(A)$ defined for each short exact sequence
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
-For $n<0$, we regard all $T_n$ as zero. These satisfy the following conditions.
+For $n<0$, we regard all $T_n$ as $0$. These satisfy the following conditions.
 
 1. (Long exact sequence) The sequence
-
+    
     $$\cdots\longrightarrow T_{n+1}(C)\overset{\delta}{\longrightarrow}T_n(A)\longrightarrow T_n(B)\longrightarrow T_n(C)\overset{\delta}{\longrightarrow}T_{n-1}(A)\longrightarrow \cdots$$
 
     is exact.
 2. (Naturality) Given a homomorphism between short exact sequences
-
+    
     {% diagram frozen/c3130510/Math/Homological_Algebra/Derived_Functors-1.svg width="19.34em" alt="morphism_of_short_exact_sequence" %}
 
     the following diagram
@@ -49,33 +50,35 @@ For $n<0$, we regard all $T_n$ as zero. These satisfy the following conditions.
     commutes.
 :::
 
-Rewriting the above definition with $T^n$ and $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$, we obtain the definition of a *cohomological $\delta$-functor*. Since we have agreed to regard both $T_n$ and $T^n$ as zero when $n<0$, the first condition for a homological $\delta$-functor means in particular that
+Rewriting the above definition with $T^n$ and $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$, we obtain the definition of a *cohomological $\delta$-functor*. Since we agreed that for $n<0$, both $T_n$ and $T^n$ are $0$, the first condition for a homological $\delta$-functor means in particular that
 
 $$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longrightarrow0\longrightarrow 0\longrightarrow\cdots, $$
 
 that is, $T_0$ is a right exact functor. Similarly, the first condition for a cohomological $\delta$-functor makes $T^0$ a left exact functor.
 
-Also, the second condition of a $\delta$-functor, naturality, means that when we regard $T_i(C)$ and $T_{i-1}(A)$ as functors from the category of short exact sequences $\mathbf{S}(\mathcal{A})$ to $\mathcal{A}$, each $\delta_i$ is a natural transformation between them.
+Also, the second condition of a $\delta$-functor, naturality, means that when we consider the two functors from the collection of short exact sequences $\mathbf{S}(\mathcal{A})$ to $\mathcal{B}$, $T_i(C)$ and $T_{i-1}(A)$, $\delta_i$ is a natural transformation between them.
 
-As always, the cohomological case can be easily derived from the homological one, so we shall consider only homological $\delta$-functors from now on.
+As always, since the case of a cohomological $\delta$-functor can be easily derived from a homological $\delta$-functor, we will consider only homological $\delta$-functors from now on.
 
 ::: Definition 2
-Let two $\delta$-functors $S,T$ be given. Then a *morphism* $S\rightarrow T$ is a collection of natural transformations from $S_n$ to $T_n$ that commute with $\delta$.
+Let two $\delta$-functors $S,T$ be given. Then a *morphism* from $S$ to $T$, $S\rightarrow T$, refers to a collection of natural transformations from $S_n$ to $T_n$ that commute with $\delta$.
 :::
 
-In other words, it is a collection of natural transformations $\alpha_n:S_n\Rightarrow T_n$ making the following diagram commute for every short exact sequence
+That is, for every short exact sequence
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+
+it is a collection of $\alpha_n:S_n\Rightarrow T_n$ making the following diagram commute.
 
 {% diagram frozen/c3130510/Math/Homological_Algebra/Derived_Functors-3.svg width="41.13em" alt="morphism_of_delta_functor" %}
 
 ::: Definition 3
-A $\delta$-functor $T$ is called a *universal $\delta$-functor* if, whenever a $\delta$-functor $S$ and a natural transformation $\alpha_0:S_0\rightarrow T_0$ are given, there exists a unique morphism $(\alpha_n:S_n\Rightarrow T_n)$ of $\delta$-functors extending it.
+A $\delta$-functor $T$ is called a *universal $\delta$-functor* if, whenever a $\delta$-functor $S$ and a natural transformation $\alpha_0:S_0\rightarrow T_0$ are given, there exists a unique morphism of $\delta$-functors $(\alpha_n:S_n\Rightarrow T_n)$ extending it.
 :::
 
 ## Derived Functors
 
-Consider a right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$ between two abelian categories $\mathcal{A}$ and $\mathcal{B}$. Then $F$ does not preserve left exactness. For example, if $F$ is covariant, then even when the short exact sequence
+Between two abelian categories $\mathcal{A},\mathcal{B}$, consider a right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$. Then $F$ does not preserve left exactness. For example, if $F$ is a covariant functor, then even when the short exact sequence
 
 $$0 \rightarrow A_1 \rightarrow A_2 \rightarrow A_3 \rightarrow 0$$
 
@@ -85,10 +88,10 @@ $$F(A_1) \rightarrow F(A_2) \rightarrow F(A_3)\rightarrow 0$$
 
 is preserved. Likewise, a left exact functor does not preserve right exactness.
 
-The philosophy of derived functors is to recover the information lost on one side by introducing infinitely many additional terms. Thus, for a right exact functor $F$, our goal is to find a homological $\delta$-functor with $T_0=F$, and similarly for a left exact functor, our goal is to find a cohomological $\delta$-functor.
+The philosophy of derived functors is to compensate for the information lost on the left or the right in this way by using infinitely many terms. That is, for a right exact functor $F$, our goal is to find, with $T_0=F$, homological $\delta$-functors, and similarly for a left exact functor, our goal is to find cohomological $\delta$-functors.
 
 ::: Definition 4
-Let a right exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given, and suppose $\mathcal{A}$ has enough projectives. Then the *left derived functors* $L_iF$ of $F$ are defined by the formula
+Suppose that a right exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$ is given, and that $\mathcal{A}$ has enough projectives. Then, for $F$, the *left derived functors* $L_iF$ are defined by the formula
 
 $$(L_iF)(A)=H_i(F(P_\bullet)),\qquad\text{$P_\bullet$ a projective resolution of $A$}$$
 :::
@@ -102,13 +105,13 @@ $L_iF(A)$ does not depend on the choice of $P_\bullet$ above.
 Take two projective resolutions and apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="ah953" } to the identity map.
 :::
 
-Now let us examine left derived functors in more detail. First, since $F$ is right exact, we know that the sequence
+Now let us examine left derived functors in a little more detail. First, from the fact that $F$ is right exact, we know that the sequence
 
 $$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longrightarrow} F(A) \longrightarrow 0$$
 
 is exact. Therefore, we obtain
 
-$$L_0F(A)=H_0(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
+$$L_0F(A)=H_0(F(P_\bullet))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
 
 To show that the $L_\bullet F$ form a homological $\delta$-functor, we must first show that they are additive functors, and then construct the connecting maps $\delta$. We divide this into two steps.
 
@@ -116,7 +119,7 @@ To show that the $L_\bullet F$ form a homological $\delta$-functor, we must firs
 The $L_iF$ are additive functors.
 :::
 ::: Proof
-First, given any $f: A' \rightarrow A$ and projective resolutions of $A'$ and $A$ respectively, we can apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="i37s0" } to obtain $L_nF(f)$. That this satisfies functoriality and additivity is obvious from the universal property.
+First, given any $f: A' \rightarrow A$ and projective resolutions of $A'$ and $A$ respectively, we can apply [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="i37s0" } to obtain $L_nF(f)$. Since two lifts of $f$ are chain homotopic and the additive functor $F$ preserves chain homotopy, $L_nF(f)$ does not depend on the choice of lift and satisfies functoriality, and from the fact that for two morphisms $f,g:A'\rightarrow A$ and their lifts $f_\bullet,g_\bullet$, $f_\bullet+g_\bullet$ is a lift of $f+g$, we obtain additivity.
 :::
 
 ::: Lemma 7
@@ -137,7 +140,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1){: data-lid="hbaz7" }), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
 
-$$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
+$$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
 
 That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-lid="7kyzg" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="zwx4w" }.
 :::
@@ -153,7 +156,7 @@ Just as in the discussion above, we can also define right derived functors for a
 ::: Definition 9
 Let a left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given, and suppose $\mathcal{A}$ has enough injectives. Then the *right derived functors* $R^i F$ of $F$ are defined by the formula
 
-$$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
+$$(R^iF)(A)=H^i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
 :::
 
 Then one can also show that these are universal cohomological $\delta$-functors. The reason we use superscripts, unlike in [Definition 4](#def4){: data-lid="jy33o" }, is that these are literally *cohomological* $\delta$-functors, and they arise mainly when dealing with matters related to cohomology.
