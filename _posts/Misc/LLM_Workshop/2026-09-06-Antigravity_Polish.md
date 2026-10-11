@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-11
 
 weight: 49
 
@@ -428,3 +428,74 @@ pat = re.compile(r"(?<!\S)§" + re.escape(old) + r"(?=,|$)")
 같은 변경에서 링크 감사의 정규식도 고쳤다. `check_links.py`의 `LINK_RE`는 라벨을 `[^\]]+`로 읽었는데, 다른 카테고리를 가리키는 인용은 라벨이 `[\[정수론\] §…](…)`처럼 이스케이프된 `\]`를 품는다. 첫 `]`에서 라벨이 끊기고 그 뒤에 `(`가 없으니 매칭이 통째로 실패했다. 커밋 메시지는 이렇게 검사 밖에 있던 인용을 2,550개로 센다. 이제 라벨은 이스케이프된 문자를 한 덩어리로 받고 이스케이프 안 된 대괄호는 받지 않으며, md_lint의 `_LINK_ALL_RE`와 같은 규칙이다. `sweep_title`의 `TITLE_LINK_RE`도 같은 모양의 라벨만 받는다.
 
 이 경로가 실제 폴리싱 틱에서 도는 것은 아직 보지 못했다. 단위 테스트(`RetitleTest`)는 통과하지만, 워커가 `RETITLE` 로그를 남기는 것은 다음에 EN 제목이 정말로 바뀌는 글이 나와야 확인된다.
+
+## 체크된 채 말이 없던 후속 요청
+
+후속 워커는 요청을 처리하지 못하면 `WAIT`을 로그에 한 줄 남기고 다음 틱을 기다린다. 요청은 체크된 채 큐에 남는다. 앞 절에서 "한 항목이 대기로 남아도 뒤의 요청은 막히지 않는다"고 적은 것이 이 상태다. 로그에만 남는다는 점이 문제였다. 대시보드는 체크된 행을 흐리게 칠할 뿐 그 요청이 왜 안 넘어가는지를 알려 주지 않았다.
+
+> 대시보드에 보면 승인 거절 아닌 원문 지적이 남아있늤겐 있는데 그것들은 정체가 뭐야?
+
+> 워커 그 두 가지 고쳐주고, 그와 별개로 지금 승인 거절 목록들 최소수정으로 고쳐줘.
+
+뒤쪽의 목록 정리는 데이터를 손으로 고치는 일이라 이 커밋에 흔적이 없다. 워커 쪽 두 가지는 [ec112d24](https://github.com/math-jh/math-jh.github.io/commit/ec112d24)에 들어갔고, 하나는 WAIT를 상태로 남기는 것, 다른 하나는 WAIT의 사유를 읽을 수 있게 만드는 것이다.
+
+WAIT는 이제 `translation_state.json`의 해당 글 항목에 `ko_followup_wait` = {request, count, at, reason}으로 기록된다.
+
+```python
+reason = tw._flat(reason)[:240]
+prev = entry.get("ko_followup_wait")
+count = 1
+if isinstance(prev, dict) and prev.get("request") == request_key:
+    count = int(prev.get("count") or 0) + 1
+entry["ko_followup_wait"] = dict(
+    request=request_key, count=count, reason=reason,
+    at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+)
+```
+{: data-filename="scripts/translation/ko_followup_worker.py"}
+
+카운터는 요청 키(`<ko-path>@<ko_reviewed_at>`)가 같은 동안만 이어진다. 재감사로 키가 바뀌면 1부터 다시 센다. 기록이 지워지는 길은 셋이다. 통과해서 `_clear_completed`가 처리 완료 필드와 함께 지우거나, 거절 처리(`_record_rejection`)가 지우거나, `run_all`이 첫머리에서 체크가 풀린 요청의 기록을 정리한다. 마지막 것이 없으면 체크를 풀고 다시 올린 요청에 옛 횟수가 붙어 나온다. 한 항목의 예기치 못한 예외도 이전에는 로그 한 줄로 끝났는데, 이제 같은 경로로 `unexpected ...` 사유의 WAIT로 기록된다.
+
+대시보드 서버는 이 횟수를 `FOLLOWUP_STUCK_AFTER = 2`와 비교한다. 한 번의 WAIT는 정상이다. 폴리싱이 막 올린 지적을 사용자가 체크하고 KO를 고치기 전에 워커가 먼저 도는 순서가 흔하기 때문이다. 두 틱 연속으로 같은 요청이 넘어가지 못할 때부터 행에 `후속 처리 막힘 N회: 사유`가 붙고 모달에도 같은 문장이 실린다. 색은 거절의 `--bad`와 구분해 `--warn`을 썼다. 거절은 사람이 체크를 풀고 고쳐야 하는 상태이고, 막힘은 사람이 아니라 조건(KO 변경, 파일, 락)이 풀려야 하는 상태라서다.
+
+표시 쪽에 하나 더 있다. 막힘 표시는 서버가 상태에서 계산해 내려 주지만, 체크 상태는 클라이언트가 들고 있다. 사용자가 체크를 풀면 워커가 다음 틱에 기록을 지울 때까지는 서버 응답이 막힘을 계속 내보낸다. 그래서 태그를 항상 렌더하고 체크 여부로 `hidden`만 토글한다.
+
+```js
+(stuck ? '<span class="typo-stuck"' + (doneMap[key] ? '' : ' hidden') + '>후속 처리 막힘 ' +
+  stuck.count + '회: ' + esc(stuck.reason) + '</span>' : '')
+...
+if (stuckTag) stuckTag.hidden = !chk.checked;
+```
+{: data-filename="scripts/dashboard/app.js"}
+
+체크를 풀면 막힘 문구가 즉시 사라지고, 다시 체크하면 서버가 아직 들고 있는 기록이 다시 보인다. 같은 키의 요청이 재체크로 살아나는 경우에는 그 기록이 그대로 유효하므로 이쪽이 맞다.
+
+사유 쪽의 문제는 Antigravity가 돌려준 치환 목록을 적용하는 자리에 있었다. 후보 EN을 만들 때 모델은 `{old, new}` 쌍의 목록을 내고, 워커는 `old`가 EN에 정확히 한 번 나올 때만 치환한다. 실패 메시지는 두 경우를 한 문장으로 뭉갰다.
+
+```python
+if not old or candidate.count(old) != 1:
+    raise RuntimeError("Antigravity replacement source is not unique")
+```
+
+`old`가 여러 곳에 있는 경우만 "unique하지 않다"가 맞는 말이고, 한 곳도 없는 경우는 다른 병이다. 후자가 흔한 이유는 모델이 JSON으로 내보내는 LaTeX 문자열이다. EN 원본의 줄바꿈이 `old`에는 리터럴 백슬래시와 `n` 두 글자로 들어오면 눈으로는 같아 보이는데 일치하지 않는다. 대시보드에 "source is not unique"가 뜨면 어느 치환의 어느 글자에서 어긋났는지를 알 방법이 없다. `_replacement_miss`는 이 구분을 메시지에 담는다.
+
+```python
+hits = text.count(old)
+if hits:
+    return f"{head} old 가 EN 에 {hits}곳 일치 {old[:100]!r}"
+lo, hi = 0, len(old)
+while lo < hi:
+    mid = (lo + hi + 1) // 2
+    if old[:mid] in text:
+        lo = mid
+    else:
+        hi = mid - 1
+at = text.find(old[:lo]) + lo
+# 메시지: 앞 lo/len(old)자 일치, 이어서 old 의 30자 · EN 의 30자
+return f"{head} old 가 EN 에 없음 ... {old[lo:lo + 30]!r} ... {text[at:at + 30]!r}"
+```
+{: data-filename="scripts/translation/ko_followup_worker.py"}
+
+(위 스니펫의 마지막 반환 문자열은 줄여 적었다.) 없는 경우에는 `old`의 접두사 중 EN에 들어 있는 가장 긴 것을 이분 탐색으로 찾는다. 접두사가 있다는 성질은 길이에 대해 단조라서 이분 탐색이 성립한다. 그 길이가 곧 처음 어긋나는 글자의 위치이고, 메시지에는 그 지점에서 `old`가 이어 가려던 30자와 EN에 실제로 있는 30자를 나란히 `repr`로 싣는다. `repr`을 쓰는 것이 요점이다. 리터럴 `\n`과 개행이 따옴표 안에서 다르게 찍혀서, 위의 JSON 이스케이프 병이 한 눈에 보인다. 테스트는 정확히 그 입력, 곧 `Let $$\n\mathfrak{p}`를 EN의 `Let $$` 개행 `\mathfrak{p}`에 대 보고 "앞 6/" 자가 일치하고 두 조각이 위 형태로 찍히는지를 확인한다.
+
+테스트 쪽에는 부수 수정이 하나 있다. `run_all`이 메모를 정리하려고 대시보드의 실제 메모 파일을 읽으므로, 새 테스트가 늘면서 테스트가 운영 상태 파일에 닿을 길도 늘었다. `setUp`이 `NOTE_STATE`와 `NOTE_LOCK`을 임시 디렉터리로 돌리고, `save_state`는 목으로 막는다. 이 변경이 실제 틱에서 도는 것은 아직 보지 못했고, 막힘 표시는 같은 요청이 두 번 연속 WAIT로 넘어가는 틱이 나와야 화면에서 확인된다.
