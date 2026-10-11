@@ -8016,6 +8016,13 @@ G:
   defs:
   - label: '[다중선형대수학] §텐서대수'
     url: /ko/math/multilinear_algebra/tensor_algebras
+- id: graded-commutative
+  en: graded-commutative
+  ko: 차수 가환
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §합곱'
+    url: /ko/math/algebraic_topology/cup_products
 - id: graded_homomorphism
   en: graded homomorphism
   ko: 등급준동형사상
