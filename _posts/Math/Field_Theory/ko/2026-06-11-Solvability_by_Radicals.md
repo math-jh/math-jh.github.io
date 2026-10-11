@@ -156,7 +156,7 @@ $$\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$$
 
 이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 이들이 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$로 주어지는 것이라 하자. 그럼 $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택할 수 있다.
 
-이를 둘째 조건으로 옮기기 위해서는 이 sequence를 Galois group의 subgroup들의 sequence로 옮겨야 한다. 이를 위해 우리는 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)과 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12)를 사용하지만, 현재 상태로는 $\mathbb{K}_r$도 $\mathbb{K}$의 Galois extension일 필요가 없으며, 각 단계 $\mathbb{K}_{i+1}/\mathbb{K}$의 Galois group 또한 abelian일 필요가 없으므로 현 상태 그대로는 이를 적용할 수 없다.
+이를 둘째 조건으로 옮기기 위해서는 이 sequence를 Galois group의 subgroup들의 sequence로 옮겨야 한다. 이를 위해 우리는 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)과 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12)를 사용하지만, 현재 상태로는 $\mathbb{K}_r$도 $\mathbb{K}$의 Galois extension일 필요가 없으며, 각 단계 $\mathbb{K}_{i+1}/\mathbb{K}_i$ 또한 Galois일 필요가 없으며, 설령 Galois라 하더라도 그 Galois group이 abelian일 필요가 없으므로 현 상태 그대로는 이를 적용할 수 없다.
 
 이를 해소하기 위해 우선 $\mathbb{E}=\mathbb{K}_r(\zeta)$라 하자. $\mathbb{E}/\mathbb{K}$는 finite degree extension이므로 $\mathbb{E}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism은 separable degree $[\mathbb{E}:\mathbb{K}]_s$만큼 존재하며, 특히 유한히 많다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="bnpwu" }) 이들을 $u_1=\id,u_2,\ldots,u_s$라 하고
 
