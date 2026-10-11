@@ -102,7 +102,7 @@ $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 
 는 항상 virtual dimension $\vdim$으로 보존된다는 것이다. 즉, 실제 moduli space가 얼마나 나쁘게 행동하든, 위에서 정의한 Gysin map은 항상 정확히 $\dim X-\rank E$ 차원, 즉 올바른 차원의 virtual class를 뽑아주게 된다. 
 
-그러나 이 차원 세기만으로는 localized Euler class가 $Z(s)$ 위의 <em-ko>어디에</em-ko> 놓이는지 알 수 없다. $e(E,s)$를 실제로 정하는 것은 section $s$ 자체가 아니라 $E\vert_{Z(s)}$ 안의 closed subcone $C_{Z(s)/X}$이며, $Z(s)$가 여러 성분을 가지면 normal cone의 각 성분이 저마다의 몫을 기여한다. [예시 1](#ex1)에서 normal cone은 $s\equiv0$일 때 zero section이었고 $s$가 transversal할 때 vector bundle 전체였는데, 다음은 normal cone이 그 어느 쪽도 아니며 subbundle조차 아닌 예이다.
+그러나 이 차원 세기만으로는 localized Euler class가 $Z(s)$ 위의 <em-ko>어디에</em-ko> 놓이는지 알 수 없다. $e(E,s)$를 실제로 정하는 것은 section $s$ 자체가 아니라 $E\vert_{Z(s)}$ 안의 closed subcone $C_{Z(s)/X}$이며, $Z(s)$가 여러 성분을 가지면 normal cone의 각 성분이 저마다의 몫을 기여한다. [예시 1](#ex1){: data-lid="tis96" }에서 normal cone은 $s\equiv0$일 때 zero section이었고 $s$가 transversal할 때 vector bundle 전체였는데, 다음은 normal cone이 그 어느 쪽도 아니며 subbundle조차 아닌 예이다.
 
 ::: 예시 2
 $X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 이는 도입부의 $Z(\x\y,\x\z)\subset\mathbb{A}^3$을 사영화한 것으로, $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, $X$로 보낸 class는
@@ -121,7 +121,7 @@ $C_L$은 vector bundle $E\vert_L$ 자신이므로 zero section으로 자르면 $
 
 $$\Lambda=\pi^\ast\mathcal{O}_P(1)\otimes\mathcal{O}_{\widetilde{P}}(e)\hookrightarrow\pi^\ast E\vert_P$$
 
-를 거친다. $\Lambda$의 total space는 $C_P$로 proper하고 birational하게 가므로, zero section의 Gysin map이 proper pushforward와 호환된다는 것과 subbundle을 zero section으로 자르면 quotient의 top Chern class가 남는다는 것 ([§가상류의 교차이론, ⁋명제 5](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop5))에 의하여 <!-- 생략 L1(c)(d) -->
+를 거친다. $\Lambda$의 total space는 $C_P$로 proper하고 birational하게 가므로, zero section의 Gysin map이 proper pushforward와 호환된다는 것과 subbundle을 zero section으로 자르면 quotient의 top Chern class가 남는다는 것 ([§가상류의 교차이론, ⁋명제 5](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop5){: data-lid="eu2kh" })에 의하여 <!-- 생략 L1(c)(d) -->
 
 $$0^![C_P]=\pi_\ast\bigl(c_1(\pi^\ast E\vert_P/\Lambda)\cap[\widetilde{P}]\bigr)=\pi_\ast\bigl((3\pi^\ast H-e)\cap[\widetilde{P}]\bigr)=3H\cap[P]$$
 
@@ -133,7 +133,7 @@ $$e(E,s)=3[\ell]+[L]\in A_1(Z)$$
 
 이 값은 section을 흔들어서도 얻을 수 있다. 일반적인 이차식 $f,g$에 대해 $s_t=(\x_0\x_1+tf,\x_0\x_2+tg)$로 두면, 일반적인 $t\neq0$에서 $Z(s_t)$는 두 이차곡면의 smooth complete intersection, 곧 degree $4$의 곡선이고 $e(E,s_t)=[Z(s_t)]$이다. $t\rightarrow0$에서 이 곡선이 어디로 가는지 보자. $P$ 근방에서 $\x_0=tu$로 두면 두 방정식은 $u\x_1+f=0$, $u\x_2+g=0$이 되고 $u$를 소거하면 $\x_1g-\x_2f=0$이므로, 극한은 평면 cubic $C_3=\{\x_0=\x_1g-\x_2f=0\}$을 포함한다. 반면 $P$에서 떨어진 곳에서는 $\x_0$이 $0$으로 가지 않으므로 $\x_1,\x_2\rightarrow0$이 되어 극한이 $L$에 놓인다. 극한 cycle의 총 degree가 $4$이고 $C_3$, $L$의 degree가 각각 $3$, $1$이므로 둘 다 multiplicity $1$로 나타나며, 극한은 $[C_3]+[L]$이다. $A_1(P)$에서 $[C_3]=3[\ell]$이므로 이는 위의 계산과 정확히 일치한다.
 
-극한 cycle이 $e(E,s)$와 같은 것은, $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이다. ([§가상류의 교차이론, ⁋명제 7](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop7)) 이때 $X\times\mathbb{A}^1$ 안의 전체 zero locus는 극한 곡선들을 포함하는 성분 외에 $P\times\{0\}$이라는 $2$차원 성분을 갖지만, 이 성분은 $t=0$의 fiber 안에 통째로 들어 있어서 Gysin pullback에서 trivial line bundle의 Euler class가 곱해지므로 기여가 $0$이다. <!-- 생략 L1(e) -->
+극한 cycle이 $e(E,s)$와 같은 것은, $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이다. ([§가상류의 교차이론, ⁋명제 7](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop7){: data-lid="zh469" }) 이때 $X\times\mathbb{A}^1$ 안의 전체 zero locus는 극한 곡선들을 포함하는 성분 외에 $P\times\{0\}$이라는 $2$차원 성분을 갖지만, 이 성분은 $t=0$의 fiber 안에 통째로 들어 있어서 Gysin pullback에서 trivial line bundle의 Euler class가 곱해지므로 기여가 $0$이다. <!-- 생략 L1(e) -->
 :::
 
 기대 차원의 성분 $L$은 자기 자신 $[L]$만을 기여하고, 나머지 $3$은 기대보다 한 차원 큰 평면 $P$가 기여한다. 평면의 기여는 대략 excess bundle $E\vert_P/N_{P/X}$의 $c_1$, 곧 $4H-H$이고, $N_{P/X}\rightarrow E\vert_P$가 subbundle이 되지 못하는 점 $p$에서의 보정은 blowup으로 계산된다. 이 경우에는 그 보정이 pushforward에서 사라진다. 특히 $c_2(E)\cap[\mathbb{P}^3]$은 총합 $4$만을 알지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 기억한다. 이 예시에서는 $A_1(Z)$가 성분별로 갈라지므로 이 분해가 class 자체의 정보이지만, 일반적으로는 normal cone의 성분별 기여가 $A_\ast(Z(s))$의 canonical한 분해를 주지는 않는다. <!-- 생략 L2 --> 어느 경우든 위의 계산에 쓰인 것은 처음부터 끝까지 $E\vert_Z$ 안의 normal cone $C_{Z/X}$ 하나였다.
@@ -154,7 +154,7 @@ $$\phi:E^\bullet\longrightarrow\tau_{\geq-1}\LL_M$$
 의 쌍으로서, $h^0(\phi)$가 isomorphism이고 $h^{-1}(\phi)$가 surjection인 것을 말한다.
 :::
 
-이 정의에서, 우선 $h^0(\phi)$가 isomorphism이라는 것은 $E^\bullet$의 $0$차 항이 $M$의 deformation을 정확히 재현한다는 뜻이다. 수정이 필요했던 부분은 원래 $\mathcal{I}/\mathcal{I}^2$ 쪽이 들어있던 $-1$항으로, 여기에서 $h^{-1}(\phi)$가 surjection이라는 것은 $E^\bullet$의 $-1$차 항이 $M$의 obstruction을 <em-ko>빠짐없이</em-ko> 지배한다는 뜻이다. 즉, $E^\bullet$ 쪽에 실제보다 많은 obstruction이 있는 것은 허용되지만 하나라도 빠뜨리는 것은 허용되지 않는다. 두 조건이 함께 성립한다는 것은 $M$의 normal sheaf, 곧 가능한 모든 obstruction 방향이 $E^\bullet$이 정하는 vector bundle stack 안에 closed하게 들어간다는 것과 동치이며, 이는 [정리 9](#thm9)에서 정확히 보인다.
+이 정의에서, 우선 $h^0(\phi)$가 isomorphism이라는 것은 $E^\bullet$의 $0$차 항이 $M$의 deformation을 정확히 재현한다는 뜻이다. 수정이 필요했던 부분은 원래 $\mathcal{I}/\mathcal{I}^2$ 쪽이 들어있던 $-1$항으로, 여기에서 $h^{-1}(\phi)$가 surjection이라는 것은 $E^\bullet$의 $-1$차 항이 $M$의 obstruction을 <em-ko>빠짐없이</em-ko> 지배한다는 뜻이다. 즉, $E^\bullet$ 쪽에 실제보다 많은 obstruction이 있는 것은 허용되지만 하나라도 빠뜨리는 것은 허용되지 않는다. 두 조건이 함께 성립한다는 것은 $M$의 normal sheaf, 곧 가능한 모든 obstruction 방향이 $E^\bullet$이 정하는 vector bundle stack 안에 closed하게 들어간다는 것과 동치이며, 이는 [정리 9](#thm9){: data-lid="4u3le" }에서 정확히 보인다.
 
 위에서 살펴본 $Z(s)\hookrightarrow X$에 의해 만들어진 complex
 
@@ -186,11 +186,11 @@ $$N_{L/\mathbb{P}^2}\xrightarrow{(1,0)}\mathcal{O}_L(1)\oplus\mathcal{O}_L(2)$$
 이다. 둘 다 subbundle이므로 zero section으로 자르면 quotient line bundle의 $c_1$이 남고, 그 degree는 각각 $\deg\mathcal{O}_L(1)=1$과 $\deg\mathcal{O}_L(2)=2$이다. <!-- 생략 L3 --> 이는 $c_2(E)=H^2$, $c_2(E')=2H^2$과도 맞는다.
 :::
 
-즉 같은 scheme $L$이 같은 차원의 서로 다른 두 class를 갖는다. [예시 1](#ex1)도 같은 현상을 보여 준다. Smooth한 $\mathbb{P}^2$에는 $\Omega_{\mathbb{P}^2}$ 자신이라는 perfect obstruction theory가 있어 $[\mathbb{P}^2]$를 주지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다. 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다. Stable map의 경우 이 선택은 [명제 12](#prop12)의 $(R\pi_\ast\mu^\ast T_X)^\vee$로 고정되며, 서로 다른 moduli의 virtual class를 비교하려면 [명제 15](#prop15)처럼 두 perfect obstruction theory의 compatibility를 따로 확인해야 하는 이유가 여기에 있다.
+즉 같은 scheme $L$이 같은 차원의 서로 다른 두 class를 갖는다. [예시 1](#ex1){: data-lid="42vb0" }도 같은 현상을 보여 준다. Smooth한 $\mathbb{P}^2$에는 $\Omega_{\mathbb{P}^2}$ 자신이라는 perfect obstruction theory가 있어 $[\mathbb{P}^2]$를 주지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다. 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다. Stable map의 경우 이 선택은 [명제 12](#prop12){: data-lid="ilo5d" }의 $(R\pi_\ast\mu^\ast T_X)^\vee$로 고정되며, 서로 다른 moduli의 virtual class를 비교하려면 [명제 15](#prop15){: data-lid="5f8c5" }처럼 두 perfect obstruction theory의 compatibility를 따로 확인해야 하는 이유가 여기에 있다.
 
 ## Intrinsic normal cone
 
-[예시 2](#ex2)의 계산에 쓰인 것은 $E\vert_Z$ 안의 normal cone $C_{Z/X}$ 하나였다. 그러나 일반적인 moduli $M$은 하나의 smooth variety 안의 zero locus로 전역적으로 표현되지 않고, étale-local하게만 그러한 표현을 가지며, 그 국소 표현들은 서로 다른 ambient를 갖는다. 문제는 normal cone이 ambient에 의존한다는 것이다. 가령 $Z=Z(s)\subset X$를 $X\times\mathbb{A}^1$ 안의 $Z\times\{0\}$으로 보면, 이는 $\mathbb{A}^1$의 coordinate $t$에 대하여 $\pr_1^\ast E\oplus\mathcal{O}$의 section $(s,t)$의 zero locus이고, 그 normal cone은 $C_{Z/X}\times\mathbb{A}^1\subset E\vert_Z\oplus\mathcal{O}_Z$로 한 차원 커진다. 그럼에도 zero section으로 자른 class는 바뀌지 않는데, 늘어난 $\mathbb{A}^1$ 방향이 cone과 bundle 양쪽에 똑같이 더해져 Gysin map에서 그대로 상쇄되기 때문이다. 이 늘어난 방향은 정확히 ambient의 늘어난 tangent 방향 $T_{\mathbb{A}^1}$이며, 이는 cone 자체가 아니라 cone을 ambient의 tangent 방향으로 나눈 것만이 의미를 갖는다는 것을 시사한다. 이 절에서는 이를 엄밀하게 만든다.
+[예시 2](#ex2){: data-lid="3o76h" }의 계산에 쓰인 것은 $E\vert_Z$ 안의 normal cone $C_{Z/X}$ 하나였다. 그러나 일반적인 moduli $M$은 하나의 smooth variety 안의 zero locus로 전역적으로 표현되지 않고, étale-local하게만 그러한 표현을 가지며, 그 국소 표현들은 서로 다른 ambient를 갖는다. 문제는 normal cone이 ambient에 의존한다는 것이다. 가령 $Z=Z(s)\subset X$를 $X\times\mathbb{A}^1$ 안의 $Z\times\{0\}$으로 보면, 이는 $\mathbb{A}^1$의 coordinate $t$에 대하여 $\pr_1^\ast E\oplus\mathcal{O}$의 section $(s,t)$의 zero locus이고, 그 normal cone은 $C_{Z/X}\times\mathbb{A}^1\subset E\vert_Z\oplus\mathcal{O}_Z$로 한 차원 커진다. 그럼에도 zero section으로 자른 class는 바뀌지 않는데, 늘어난 $\mathbb{A}^1$ 방향이 cone과 bundle 양쪽에 똑같이 더해져 Gysin map에서 그대로 상쇄되기 때문이다. 이 늘어난 방향은 정확히 ambient의 늘어난 tangent 방향 $T_{\mathbb{A}^1}$이며, 이는 cone 자체가 아니라 cone을 ambient의 tangent 방향으로 나눈 것만이 의미를 갖는다는 것을 시사한다. 이 절에서는 이를 엄밀하게 만든다.
 
 ::: 명제 5
 Scheme $Z$와 두 closed immersion $i:Z\hookrightarrow Y$, $i':Z\hookrightarrow Y'$, 그리고 smooth morphism $f:Y'\rightarrow Y$가 $f\circ i'=i$를 만족한다 하자. 그럼 normal cone들의 sequence
@@ -215,12 +215,12 @@ Smooth scheme $W$의 closed subscheme $U$에 대하여, normal cone $C_{U/W}\sub
 :::
 
 ::: 증명
-$U$를 대각선을 거쳐 $W\times W$ 안에 넣고 두 projection $p_1,p_2:W\times W\rightarrow W$를 생각하자. 둘 다 smooth이므로 [명제 5](#prop5)를 각각에 적용할 수 있으며, normal sheaf에 대해서도 같은 exact sequence가 성립한다. 먼저 $p_1$에 대한 [명제 5](#prop5)로 $N_{U/W\times W}\cong T_W\vert_U\times N_{U/W}$, $C_{U/W\times W}\cong T_W\vert_U\times C_{U/W}$로 동일시하자. 대각선 $W\rightarrow W\times W$가 주는 $N_{U/W}\rightarrow N_{U/W\times W}$는 $p_1$과 $p_2$가 유도하는 두 map 모두의 section이고, 이로부터 위의 동일시 아래에서 $p_2$가 유도하는 $N_{U/W\times W}\rightarrow N_{U/W}$가 $(v,n)\mapsto v+n$, 곧 $T_W\vert_U$의 작용임을 확인할 수 있다. <!-- 생략 L5 --> 한편 $p_2$에 대한 [명제 5](#prop5)에서 $C_{U/W\times W}$의 image는 $C_{U/W}$이므로, $T_W\vert_U\times C_{U/W}$의 작용 아래 image는 $C_{U/W}$ 안에 있다.
+$U$를 대각선을 거쳐 $W\times W$ 안에 넣고 두 projection $p_1,p_2:W\times W\rightarrow W$를 생각하자. 둘 다 smooth이므로 [명제 5](#prop5){: data-lid="tnoek" }를 각각에 적용할 수 있으며, normal sheaf에 대해서도 같은 exact sequence가 성립한다. 먼저 $p_1$에 대한 [명제 5](#prop5){: data-lid="h13fg" }로 $N_{U/W\times W}\cong T_W\vert_U\times N_{U/W}$, $C_{U/W\times W}\cong T_W\vert_U\times C_{U/W}$로 동일시하자. 대각선 $W\rightarrow W\times W$가 주는 $N_{U/W}\rightarrow N_{U/W\times W}$는 $p_1$과 $p_2$가 유도하는 두 map 모두의 section이고, 이로부터 위의 동일시 아래에서 $p_2$가 유도하는 $N_{U/W\times W}\rightarrow N_{U/W}$가 $(v,n)\mapsto v+n$, 곧 $T_W\vert_U$의 작용임을 확인할 수 있다. <!-- 생략 L5 --> 한편 $p_2$에 대한 [명제 5](#prop5){: data-lid="2bynq" }에서 $C_{U/W\times W}$의 image는 $C_{U/W}$이므로, $T_W\vert_U\times C_{U/W}$의 작용 아래 image는 $C_{U/W}$ 안에 있다.
 :::
 
-[예시 2](#ex2)에서 확인해 보면, 국소 모형에서 $T_X\vert_Z$는 $\dd{s}$를 통해 $E\vert_Z$에 작용한다. $P\setminus\{p\}$ 위에서 $s=\x_0(\x_1,\x_2)$의 미분의 image는 $(\x_1,\x_2)$가 생성하는 line, 곧 $C_P$의 fiber이므로 $C_P$는 이 평행이동으로 보존되고, $L$ 위에서는 $C_L$이 $E\vert_L$ 전체이므로 자명하다.
+[예시 2](#ex2){: data-lid="jsjlc" }에서 확인해 보면, 국소 모형에서 $T_X\vert_Z$는 $\dd{s}$를 통해 $E\vert_Z$에 작용한다. $P\setminus\{p\}$ 위에서 $s=\x_0(\x_1,\x_2)$의 미분의 image는 $(\x_1,\x_2)$가 생성하는 line, 곧 $C_P$의 fiber이므로 $C_P$는 이 평행이동으로 보존되고, $L$ 위에서는 $C_L$이 $E\vert_L$ 전체이므로 자명하다.
 
-이제 vector bundle $F$가 cone $C$에 평행이동으로 작용할 때 그 quotient stack을 $[C/F]$로 적자. Deligne–Mumford stack $M$의 *local embedding*이란 affine scheme $U$에서의 étale morphism $U\rightarrow M$과 smooth affine scheme $W$로의 closed immersion $U\hookrightarrow W$의 쌍을 말한다. 두 local embedding $U\hookrightarrow W$, $U\hookrightarrow W'$이 주어지면 $U\hookrightarrow W\times W'$이 둘을 함께 지배하고 두 projection이 smooth이므로, [명제 5](#prop5)와 [명제 6](#prop6)에 의하여 $T_{W\times W'/W}$ 방향을 먼저 나누어
+이제 vector bundle $F$가 cone $C$에 평행이동으로 작용할 때 그 quotient stack을 $[C/F]$로 적자. Deligne–Mumford stack $M$의 *local embedding*이란 affine scheme $U$에서의 étale morphism $U\rightarrow M$과 smooth affine scheme $W$로의 closed immersion $U\hookrightarrow W$의 쌍을 말한다. 두 local embedding $U\hookrightarrow W$, $U\hookrightarrow W'$이 주어지면 $U\hookrightarrow W\times W'$이 둘을 함께 지배하고 두 projection이 smooth이므로, [명제 5](#prop5){: data-lid="s6lja" }와 [명제 6](#prop6){: data-lid="zle0a" }에 의하여 $T_{W\times W'/W}$ 방향을 먼저 나누어
 
 $$[C_{U/W\times W'}/T_{W\times W'}\vert_U]\cong[C_{U/W}/T_W\vert_U]$$
 
@@ -234,14 +234,14 @@ $$\mathfrak{N}_M\vert_U=[N_{U/W}/T_W\vert_U],\qquad\mathfrak{c}_M\vert_U=[C_{U/W
 가 되도록 붙여서 얻은 stack이다.
 :::
 
-Intrinsic normal sheaf는 cotangent complex만으로도 적을 수 있다. Degree $0,1$에 놓인 abelian cone들의 complex $[G^0\rightarrow G^1]$에 대해 quotient stack $[G^1/G^0]$을 $h^1/h^0$으로 적으면, 이 stack은 complex의 quasi-isomorphism class에만 의존한다. $\tau_{\geq-1}\LL_M\vert_U\cong[\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_W\vert_U]$의 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸면 그 dual은 $[T_W\vert_U\rightarrow N_{U/W}]$이므로, 이 의미의 dual을 $(-)^\vee$로 적으면 $\mathfrak{N}_M=h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$이다. 아래 [정리 9](#thm9) 앞에서 perfect obstruction theory $E^\bullet$에 대해 정의할 vector bundle stack $\mathfrak{E}=h^1/h^0((E^\bullet)^\vee)$도 같은 구성이다. $M$이 smooth이면 $W=M$으로 잡을 수 있으므로 $\mathfrak{c}_M=\mathfrak{N}_M=[0/T_M]=BT_M$이다. 더 일반적으로 $M$이 local complete intersection이면 normal cone이 normal bundle과 같으므로 $\mathfrak{c}_M=\mathfrak{N}_M$은 vector bundle stack이고, 역도 성립한다. 즉 $\mathfrak{c}_M$과 $\mathfrak{N}_M$의 차이는 $M$이 local complete intersection에서 벗어난 정도를 잰다.
+Intrinsic normal sheaf는 cotangent complex만으로도 적을 수 있다. Degree $0,1$에 놓인 abelian cone들의 complex $[G^0\rightarrow G^1]$에 대해 quotient stack $[G^1/G^0]$을 $h^1/h^0$으로 적으면, 이 stack은 complex의 quasi-isomorphism class에만 의존한다. $\tau_{\geq-1}\LL_M\vert_U\cong[\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_W\vert_U]$의 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸면 그 dual은 $[T_W\vert_U\rightarrow N_{U/W}]$이므로, 이 의미의 dual을 $(-)^\vee$로 적으면 $\mathfrak{N}_M=h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$이다. 아래 [정리 9](#thm9){: data-lid="t92oa" } 앞에서 perfect obstruction theory $E^\bullet$에 대해 정의할 vector bundle stack $\mathfrak{E}=h^1/h^0((E^\bullet)^\vee)$도 같은 구성이다. $M$이 smooth이면 $W=M$으로 잡을 수 있으므로 $\mathfrak{c}_M=\mathfrak{N}_M=[0/T_M]=BT_M$이다. 더 일반적으로 $M$이 local complete intersection이면 normal cone이 normal bundle과 같으므로 $\mathfrak{c}_M=\mathfrak{N}_M$은 vector bundle stack이고, 역도 성립한다. 즉 $\mathfrak{c}_M$과 $\mathfrak{N}_M$의 차이는 $M$이 local complete intersection에서 벗어난 정도를 잰다.
 
 ::: 명제 8
 Intrinsic normal cone $\mathfrak{c}_M$은 pure dimension $0$이다.
 :::
 
 ::: 증명
-Local embedding $U\hookrightarrow W$에서 $W$가 pure dimension이라 하자. Normal cone $C_{U/W}$는 pure dimension $\dim W$이고 ([§가상류의 교차이론, ⁋명제 2](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop2)), quotient map $C_{U/W}\rightarrow[C_{U/W}/T_W\vert_U]$는 $T_W\vert_U$-torsor이므로 relative dimension $\dim W$의 smooth surjection이다. 따라서 $\mathfrak{c}_M\vert_U$의 차원은 $\dim W-\dim W=0$이다. <!-- 생략 L6 (전방 참조) -->
+Local embedding $U\hookrightarrow W$에서 $W$가 pure dimension이라 하자. Normal cone $C_{U/W}$는 pure dimension $\dim W$이고 ([§가상류의 교차이론, ⁋명제 2](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop2){: data-lid="xc2g2" }), quotient map $C_{U/W}\rightarrow[C_{U/W}/T_W\vert_U]$는 $T_W\vert_U$-torsor이므로 relative dimension $\dim W$의 smooth surjection이다. 따라서 $\mathfrak{c}_M\vert_U$의 차원은 $\dim W-\dim W=0$이다. <!-- 생략 L6 (전방 참조) -->
 :::
 
 $M$이 smooth인 경우를 보면 이 $0$은 $BT_M$의 차원 $\dim M-\dim M$이다. 즉 차원 $0$이라는 것은 $\mathfrak{c}_M$이 normal 방향을 tangent 방향만큼 나눈 것이라는 데에서 오며, 이 수가 아래에서 virtual dimension을 고정한다.
@@ -271,11 +271,11 @@ $$N_{U/W}=\Spec_U\Sym(\mathcal{I}/\mathcal{I}^2)\longrightarrow\Spec_U\Sym(E^{-1
 이 closed immersion이라는 것과 동치이다. 이 map은 양쪽에 작용하는 같은 vector bundle $E_0=T_W\vert_U$의 작용과 호환되므로, quotient로 내려 $\mathfrak{N}_M\vert_U\rightarrow\mathfrak{E}\vert_U$가 closed immersion이라는 것과 동치이다.
 :::
 
-이로부터 [정의 3](#def3)의 두 조건이 하는 일을 정확히 말할 수 있다. $h^0(\phi)$의 전사는 $\phi^\vee$가 representable이라는 것과 동치이며, 국소적으로는 $\mathfrak{E}$를 나누는 $E_0$를 $\mathfrak{N}_M$을 나누는 ambient의 tangent 방향 $T_W\vert_U$로 맞춘 정규형을 가능하게 한다. 이 정규형에서 $h^0(\phi)$의 단사와 $h^{-1}(\phi)$의 전사는 함께 $\phi^{-1}:E^{-1}\rightarrow\mathcal{I}/\mathcal{I}^2$의 전사와 동치이고, 이것이 normal sheaf, 곧 가능한 obstruction 방향 전체를 $E_1$ 안에 closed하게 넣는다. 즉 $h^0(\phi)$의 동형은 $E^\bullet$이 $M$의 tangent를 정확히 재현한다는 조건이고, 그 위에서 $h^{-1}(\phi)$의 전사가 obstruction을 빠짐없이 받아낸다. 그 결과 pure dimension $0$의 closed substack
+이로부터 [정의 3](#def3){: data-lid="3zi1b" }의 두 조건이 하는 일을 정확히 말할 수 있다. $h^0(\phi)$의 전사는 $\phi^\vee$가 representable이라는 것과 동치이며, 국소적으로는 $\mathfrak{E}$를 나누는 $E_0$를 $\mathfrak{N}_M$을 나누는 ambient의 tangent 방향 $T_W\vert_U$로 맞춘 정규형을 가능하게 한다. 이 정규형에서 $h^0(\phi)$의 단사와 $h^{-1}(\phi)$의 전사는 함께 $\phi^{-1}:E^{-1}\rightarrow\mathcal{I}/\mathcal{I}^2$의 전사와 동치이고, 이것이 normal sheaf, 곧 가능한 obstruction 방향 전체를 $E_1$ 안에 closed하게 넣는다. 즉 $h^0(\phi)$의 동형은 $E^\bullet$이 $M$의 tangent를 정확히 재현한다는 조건이고, 그 위에서 $h^{-1}(\phi)$의 전사가 obstruction을 빠짐없이 받아낸다. 그 결과 pure dimension $0$의 closed substack
 
 $$\mathfrak{c}_M\subset\mathfrak{N}_M\hookrightarrow\mathfrak{E}$$
 
-를 얻으며, [BF]는 $\mathfrak{E}$ 안의 이 substack을 $\phi$의 *obstruction cone*이라 부른다. [예시 4](#ex4)의 두 perfect obstruction theory는 같은 $\mathfrak{c}_L$을 서로 다른 $\mathfrak{E}$ 안에 넣은 것이다. Virtual class는 obstruction cone을 $\mathfrak{E}$의 zero section으로 자른 것이다.
+를 얻으며, [BF]는 $\mathfrak{E}$ 안의 이 substack을 $\phi$의 *obstruction cone*이라 부른다. [예시 4](#ex4){: data-lid="bztwe" }의 두 perfect obstruction theory는 같은 $\mathfrak{c}_L$을 서로 다른 $\mathfrak{E}$ 안에 넣은 것이다. Virtual class는 obstruction cone을 $\mathfrak{E}$의 zero section으로 자른 것이다.
 
 다만 $\mathfrak{E}$는 Artin stack이므로 그 zero section으로 Gysin map을 정의하려면 Artin stack의 Chow group이 필요하다. 이를 피하기 위해 [BF]는 $E^\bullet$이 *global resolution*, 곧 vector bundle들의 complex $F^\bullet=[F^{-1}\rightarrow F^0]$과의 isomorphism $F^\bullet\cong E^\bullet$을 갖는다고 가정한다. 이 때 $F_i=(F^{-i})^\vee$로 두면 $\mathfrak{E}=[F_1/F_0]$이고, $F_1$은 $\mathfrak{E}$를 덮는 실제 vector bundle이 된다.
 
@@ -291,19 +291,19 @@ $$[M]^\vir=0^!_{F_1}[C(F^\bullet)]$$
 로 정의한다. 이를 $0^!_{E^\bullet}[\mathfrak{c}_M]$으로도 적는다.
 :::
 
-[§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 국소 모형에서는 $F_0=T_X\vert_Z$, $F_1=E\vert_Z$이고 $C(F^\bullet)$은 $\mathfrak{c}_Z=[C_{Z/X}/T_X\vert_Z]$를 $E\vert_Z$로 끌어올린 것, 곧 $C_{Z/X}$ 자신이므로, [정의 10](#def10)은 localized Euler class $e(E,s)$를 그대로 돌려준다. [예시 2](#ex2)의 계산이 정확히 이 정의의 계산이었다.
+[§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="70ezs" }의 국소 모형에서는 $F_0=T_X\vert_Z$, $F_1=E\vert_Z$이고 $C(F^\bullet)$은 $\mathfrak{c}_Z=[C_{Z/X}/T_X\vert_Z]$를 $E\vert_Z$로 끌어올린 것, 곧 $C_{Z/X}$ 자신이므로, [정의 10](#def10){: data-lid="o4y0p" }은 localized Euler class $e(E,s)$를 그대로 돌려준다. [예시 2](#ex2){: data-lid="nhbvj" }의 계산이 정확히 이 정의의 계산이었다.
 
-차원은 다음과 같이 맞는다. $F_1\rightarrow\mathfrak{E}=[F_1/F_0]$은 $F_0$-torsor이므로 이를 당긴 $C(F^\bullet)\rightarrow\mathfrak{c}_M$도 relative dimension $\rank F_0$의 smooth surjection이고, [명제 8](#prop8)에 의해 $C(F^\bullet)$은 pure dimension $\rank F_0$이다. 이를 rank $\rank F_1$의 vector bundle의 zero section으로 자르면 차원이 $\rank F_1$만큼 떨어지므로
+차원은 다음과 같이 맞는다. $F_1\rightarrow\mathfrak{E}=[F_1/F_0]$은 $F_0$-torsor이므로 이를 당긴 $C(F^\bullet)\rightarrow\mathfrak{c}_M$도 relative dimension $\rank F_0$의 smooth surjection이고, [명제 8](#prop8){: data-lid="w91yv" }에 의해 $C(F^\bullet)$은 pure dimension $\rank F_0$이다. 이를 rank $\rank F_1$의 vector bundle의 zero section으로 자르면 차원이 $\rank F_1$만큼 떨어지므로
 
 $$\dim[M]^\vir=\rank F_0-\rank F_1=\rank E^\bullet=\vdim$$
 
-이다. 즉 virtual dimension은 차원 $0$의 cone을 relative dimension $-\vdim$의 vector bundle stack 안에서 zero section과 교차시킨 결과이며, 그 차원을 고정하는 것은 [명제 8](#prop8)의 purity이다.
+이다. 즉 virtual dimension은 차원 $0$의 cone을 relative dimension $-\vdim$의 vector bundle stack 안에서 zero section과 교차시킨 결과이며, 그 차원을 고정하는 것은 [명제 8](#prop8){: data-lid="o80lg" }의 purity이다.
 
 Global resolution의 선택은 결과에 영향을 주지 않는다. ([BF, Proposition 5.3]) 두 resolution $F^\bullet$, $H^\bullet$이 주어지면 둘을 모두 받는 resolution $K^\bullet$을 만들 수 있고, 이때 $K_1\rightarrow F_1$은 vector bundle의 surjection이므로 smooth이며 $C(K^\bullet)$은 $C(F^\bullet)$의 preimage가 된다. Zero section의 Gysin map은 이러한 smooth pullback과 호환되므로 $0^!_{K_1}[C(K^\bullet)]=0^!_{F_1}[C(F^\bullet)]$이고, $H^\bullet$에 대해서도 같다. <!-- 생략 L9 -->
 
-국소적으로 보면 $M$은 étale-local하게 어떤 smooth $W$ 위의 vector bundle의 section의 zero locus로 표현되고, 그곳에서 $[M]^\vir$은 그 section의 localized Euler class이다. 이러한 국소 표현의 section들은 서로 붙지 않지만, cone을 tangent 방향으로 나눈 $[C_{U/W}/T_W\vert_U]$는 [명제 5](#prop5)와 [명제 6](#prop6)에 의해 $\mathfrak{c}_M$으로 붙고, 그것이 정규형에서 $[E_1/T_W\vert_U]\cong\mathfrak{E}\vert_U$ 안에 놓이는 방식은 전역적으로 주어진 $\phi$가 정한다. Virtual fundamental class를 국소적인 localized Euler class들을 붙인 것이라고 할 때 그 정확한 뜻이 이것이다.
+국소적으로 보면 $M$은 étale-local하게 어떤 smooth $W$ 위의 vector bundle의 section의 zero locus로 표현되고, 그곳에서 $[M]^\vir$은 그 section의 localized Euler class이다. 이러한 국소 표현의 section들은 서로 붙지 않지만, cone을 tangent 방향으로 나눈 $[C_{U/W}/T_W\vert_U]$는 [명제 5](#prop5){: data-lid="vpmbx" }와 [명제 6](#prop6){: data-lid="4opte" }에 의해 $\mathfrak{c}_M$으로 붙고, 그것이 정규형에서 $[E_1/T_W\vert_U]\cong\mathfrak{E}\vert_U$ 안에 놓이는 방식은 전역적으로 주어진 $\phi$가 정한다. Virtual fundamental class를 국소적인 localized Euler class들을 붙인 것이라고 할 때 그 정확한 뜻이 이것이다.
 
-[예시 4](#ex4)의 관찰을 극단까지 밀면 다음과 같다. Perfect obstruction theory $E^\bullet$에 $\mathcal{O}_M[1]$을 직합하고 $\phi$를 그 성분에서 $0$으로 연장해도 [정의 3](#def3)의 두 조건은 그대로 유지되므로 다시 perfect obstruction theory를 얻는다. 이 때 $F_1$에 trivial line bundle이 더해지지만 cone은 그 방향으로 전혀 뻗지 않아 $C(F^\bullet)\times\{0\}$이 되고, 그 virtual class는 $c_1(\mathcal{O})\cap[M]^\vir=0$이다. <!-- 생략 L10 --> 같은 $M$과 같은 $\mathfrak{c}_M$에서 class가 사라진 것이다.
+[예시 4](#ex4){: data-lid="sjvy4" }의 관찰을 극단까지 밀면 다음과 같다. Perfect obstruction theory $E^\bullet$에 $\mathcal{O}_M[1]$을 직합하고 $\phi$를 그 성분에서 $0$으로 연장해도 [정의 3](#def3){: data-lid="rtwgi" }의 두 조건은 그대로 유지되므로 다시 perfect obstruction theory를 얻는다. 이 때 $F_1$에 trivial line bundle이 더해지지만 cone은 그 방향으로 전혀 뻗지 않아 $C(F^\bullet)\times\{0\}$이 되고, 그 virtual class는 $c_1(\mathcal{O})\cap[M]^\vir=0$이다. <!-- 생략 L10 --> 같은 $M$과 같은 $\mathfrak{c}_M$에서 class가 사라진 것이다.
 
 ::: 명제 11
 Deligne–Mumford stack $M$ 위의 perfect obstruction theory $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$에 대하여, virtual class $[M]^\vir=0^!_{E^\bullet}[\mathfrak{c}_M]$은 다음을 만족한다.
@@ -314,7 +314,7 @@ Deligne–Mumford stack $M$ 위의 perfect obstruction theory $\phi:E^\bullet\ri
 4. $M$이 smooth하고 $h^1((E^\bullet)^\vee)$가 rank $r$의 vector bundle이면 $[M]^\vir=c_r(h^1((E^\bullet)^\vee))\cap[M]$이다.
 :::
 
-(1)은 위의 차원 세기이다. <!-- 생략 L11: (2) --> (3)과 (4)에서는 cone이 무엇인지 직접 볼 수 있다. $M$이 smooth이면 $\mathfrak{c}_M=BT_M$이므로 $C(F^\bullet)$은 $F_1$의 zero section의 $F_0$-orbit, 곧 $F_0\rightarrow F_1$의 image이다. (3)에서는 이 map이 surjective이므로 $C(F^\bullet)=F_1$이고, zero section으로 자르면 $[M]$이 남는다. <!-- 생략 L12 --> (4)에서는 그 image가 cokernel $h^1((E^\bullet)^\vee)$가 vector bundle인 subbundle이므로, zero section으로 자르면 quotient의 top Chern class가 남는다. ([BF, Proposition 5.6], [§가상류의 교차이론, ⁋명제 5](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop5)) 두 경우 모두 cone은 $F_1$의 subbundle이었고, [예시 2](#ex2)는 cone이 subbundle이 아닌 경우였다.
+(1)은 위의 차원 세기이다. <!-- 생략 L11: (2) --> (3)과 (4)에서는 cone이 무엇인지 직접 볼 수 있다. $M$이 smooth이면 $\mathfrak{c}_M=BT_M$이므로 $C(F^\bullet)$은 $F_1$의 zero section의 $F_0$-orbit, 곧 $F_0\rightarrow F_1$의 image이다. (3)에서는 이 map이 surjective이므로 $C(F^\bullet)=F_1$이고, zero section으로 자르면 $[M]$이 남는다. <!-- 생략 L12 --> (4)에서는 그 image가 cokernel $h^1((E^\bullet)^\vee)$가 vector bundle인 subbundle이므로, zero section으로 자르면 quotient의 top Chern class가 남는다. ([BF, Proposition 5.6], [§가상류의 교차이론, ⁋명제 5](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#prop5){: data-lid="0pk7d" }) 두 경우 모두 cone은 $F_1$의 subbundle이었고, [예시 2](#ex2){: data-lid="kqv83" }는 cone이 subbundle이 아닌 경우였다.
 
 ## 안정사상들의 가상 기본류
 

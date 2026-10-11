@@ -234,7 +234,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 
 $$A/\langle a\rangle=Q_0\supseteq Q_1\supseteq\cdots\supseteq Q_s=\{e\}$$
 
-가 존재하여 각각의 $Q_i/Q_{i+1}$이 cyclic이다. [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7)에 의하여 각각의 $Q_i$는 $\langle a\rangle$을 포함하는 $A$의 subgroup $H_i$에 대해 $Q_i=H_i/\langle a\rangle$의 꼴로 유일하게 쓸 수 있고, 이 대응은 inclusion을 보존하므로 $A=H_0\supseteq H_1\supseteq\cdots\supseteq H_s=\langle a\rangle$이다. $A$가 abelian이므로 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이며, [\[대수적 구조\] §군 동형사상, ⁋정리 6](/ko/math/algebraic_structures/isomorphism_theorems#thm6)에 의하여
+가 존재하여 각각의 $Q_i/Q_{i+1}$이 cyclic이다. [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="fuwru" }에 의하여 각각의 $Q_i$는 $\langle a\rangle$을 포함하는 $A$의 subgroup $H_i$에 대해 $Q_i=H_i/\langle a\rangle$의 꼴로 유일하게 쓸 수 있고, 이 대응은 inclusion을 보존하므로 $A=H_0\supseteq H_1\supseteq\cdots\supseteq H_s=\langle a\rangle$이다. $A$가 abelian이므로 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이며, [\[대수적 구조\] §군 동형사상, ⁋정리 6](/ko/math/algebraic_structures/isomorphism_theorems#thm6){: data-lid="rp2lb" }에 의하여
 
 $$H_i/H_{i+1}\cong(H_i/\langle a\rangle)/(H_{i+1}/\langle a\rangle)=Q_i/Q_{i+1}$$
 
@@ -248,7 +248,7 @@ $$G=D_0(G)\supseteq D_1(G)\supseteq\cdots\supseteq D_n(G)=\{e\}$$
 
 $$D_k(G)=K_0\supseteq K_1\supseteq\cdots\supseteq K_t=D_{k+1}(G)$$
 
-를 얻는다. 이때 각각의 $K_{j+1}$이 $K_j$의 normal subgroup인 것은 $D_k(G)/D_{k+1}(G)$가 abelian이라는 사실과 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7)의 bijection이 normality를 보존한다는 사실로부터 따라 나오고, $K_j/K_{j+1}$은 cyclic이다. 이 sequence들을 derived series의 각 단계 사이에 끼워넣으면 원하는 series를 얻는다.
+를 얻는다. 이때 각각의 $K_{j+1}$이 $K_j$의 normal subgroup인 것은 $D_k(G)/D_{k+1}(G)$가 abelian이라는 사실과 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="e9r9b" }의 bijection이 normality를 보존한다는 사실로부터 따라 나오고, $K_j/K_{j+1}$은 cyclic이다. 이 sequence들을 derived series의 각 단계 사이에 끼워넣으면 원하는 series를 얻는다.
 :::
 
 ## 합성열과 조르단-횔더 정리
