@@ -303,8 +303,6 @@ First we observe that a subgroup of a solvable group is again solvable. Applying
 Now if $n \geq 5$, the permutations fixing the elements $\{6, \ldots, n\}$ form a copy of $S_5$, so $A_5 \subseteq S_5 \subseteq S_n$. If $S_n$ were solvable then its subgroup $A_5$ would also have to be solvable, which contradicts [Proposition 20](#prop20){: data-lid="nqgvi" }. Therefore $S_n$ is not solvable.
 :::
 
-Although this corollary is a purely group-theoretic fact, its most famous consequence lies in field theory. The fact that the Galois group of a general polynomial of degree $n \geq 5$ is $S_n$ and that this $S_n$ is not solvable forms the group-theoretic core of the theorem that general equations of degree $5$ or higher cannot be solved by radicals ([\[Field Theory\] §Solvability by Radicals](/en/math/field_theory/solvability_by_radicals)).
-
 ---
 
 **References**

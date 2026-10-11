@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-04-03
 weight: 3
-revising: true
+
 drift_needed: true
 
 ---
@@ -230,13 +230,25 @@ $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 가 존재하여 각각의 $H_{i+1}$이 $H_i$의 normal subgroup이고 $H_i/H_{i+1}$이 cyclic group이도록 할 수 있다.
 :::
 ::: 증명
-우선 finite abelian group $A$가 이러한 series를 갖는 것을 $\lvert A\rvert$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
+우선 finite abelian group $A$가 이러한 series를 갖는 것을 $A$의 크기에 대한 귀납법으로 보인다. $A$가 trivial이라면 이는 자명하다. 만일 $A$가 nontrivial이라면 $A$의 항등원이 아닌 원소 $a\in A$를 택하자. Quotient group $A/\langle a\rangle$의 크기는 $A$보다 작으므로, 귀납적 가정에 의해 series
+
+$$A/\langle a\rangle=Q_0\supseteq Q_1\supseteq\cdots\supseteq Q_s=\{e\}$$
+
+가 존재하여 각각의 $Q_i/Q_{i+1}$이 cyclic이다. [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7)에 의하여 각각의 $Q_i$는 $\langle a\rangle$을 포함하는 $A$의 subgroup $H_i$에 대해 $Q_i=H_i/\langle a\rangle$의 꼴로 유일하게 쓸 수 있고, 이 대응은 inclusion을 보존하므로 $A=H_0\supseteq H_1\supseteq\cdots\supseteq H_s=\langle a\rangle$이다. $A$가 abelian이므로 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이며, [\[대수적 구조\] §군 동형사상, ⁋정리 6](/ko/math/algebraic_structures/isomorphism_theorems#thm6)에 의하여
+
+$$H_i/H_{i+1}\cong(H_i/\langle a\rangle)/(H_{i+1}/\langle a\rangle)=Q_i/Q_{i+1}$$
+
+이 cyclic이다. 이 series의 끝에 $\langle a\rangle\supseteq\{e\}$를 붙이면 마지막 quotient $\langle a\rangle$ 또한 cyclic이므로 $A$가 원하는 series를 갖는다.
 
 이제 일반적인 finite solvable group $G$에 대하여, derived series
 
 $$G=D_0(G)\supseteq D_1(G)\supseteq\cdots\supseteq D_n(G)=\{e\}$$
 
-를 생각하면 각 quotient $D_k(G)/D_{k+1}(G)$는 abelian이다. 각각의 단계를 위에서 살펴본 abelian group의 series로 refine하자. 즉 $D_k(G)/D_{k+1}(G)$의 cyclic quotient들을 갖는 series를 correspondence로 끌어올려 $D_k(G)$와 $D_{k+1}(G)$ 사이의 중간 subgroup들로 바꾸면, 이들 중간 subgroup들은 abelian quotient $D_k(G)/D_{k+1}(G)$의 subgroup들에 대응되므로 각각이 바로 앞의 것의 normal subgroup이고, 연이은 quotient들이 cyclic이다. 이렇게 모든 단계를 refine하면 원하는 series를 얻는다.
+를 생각하면 각각의 $D_{k+1}(G)=[D_k(G),D_k(G)]$는 $D_k(G)$의 normal subgroup이고 quotient $D_k(G)/D_{k+1}(G)$는 finite abelian group이다. 따라서 앞서 보인 것에 의해 $D_k(G)/D_{k+1}(G)$는 연이은 quotient들이 cyclic인 series를 갖고, 앞 문단에서 $A/\langle a\rangle$의 series를 $A$로 끌어올린 것과 같은 논리로 subgroup들의 sequence
+
+$$D_k(G)=K_0\supseteq K_1\supseteq\cdots\supseteq K_t=D_{k+1}(G)$$
+
+를 얻는다. 이때 각각의 $K_{j+1}$이 $K_j$의 normal subgroup인 것은 $D_k(G)/D_{k+1}(G)$가 abelian이라는 사실과 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7)의 bijection이 normality를 보존한다는 사실로부터 따라 나오고, $K_j/K_{j+1}$은 cyclic이다. 이 sequence들을 derived series의 각 단계 사이에 끼워넣으면 원하는 series를 얻는다.
 :::
 
 ## 합성열과 조르단-횔더 정리
@@ -315,7 +327,7 @@ $$\length(G)=\length(G/N)+\length(N)$$
 
 ## 대칭군의 가해성
 
-Solvability의 가장 고전적인 응용은 symmetric group이 언제부터 solvable이 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="67ixv" }).
+Solvability의 가장 고전적인 응용은 symmetric group이 언제부터 solvable이 아닌지를 가르는 것으로, 그 분기점은 $A_5$가 simple이라는 사실에 있다. ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13){: data-lid="67ixv" })
 
 ::: 명제 20
 $A_5$는 solvable group이 아니다.
@@ -334,8 +346,6 @@ $n\geq 5$이면 symmetric group $S_n$은 solvable group이 아니다.
 ::: 증명
 $n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 [명제 13](#prop13){: data-lid="xkjje" }에 의해 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 20](#prop20){: data-lid="nqgvi" }에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
 :::
-
-이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals){: data-lid="sz40a" }).
 
 ---
 

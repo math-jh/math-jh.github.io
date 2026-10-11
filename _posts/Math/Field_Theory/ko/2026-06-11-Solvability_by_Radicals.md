@@ -128,59 +128,67 @@ Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그�
 ::: 증명
 우선 $f$의 splitting field $\mathbb{L}_f$는 $f$의 유한 개의 해로 생성되므로 finite degree extension이다. 또 $\mathbb{L}_f/\mathbb{K}$는 splitting field로서 quasi-Galois이고 ([§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="lm39p" }), characteristic $0$ 가정에 의해 separable이므로 Galois extension이다.
 
-둘째 조건을 가정하고 첫째 조건을 보이자. $\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert\Gal(\mathbb{L}_f/\mathbb{K})\rvert$로 두자. Primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$라 하자. $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
+우선 둘째 조건을 가정하고 첫째 조건을 보인다. $\Gal(\mathbb{L}_f/\mathbb{K})$가 solvable이라 하고 $n=\lvert\Gal(\mathbb{L}_f/\mathbb{K})\rvert$에 대하여, primitive $n$-th root of unity $\zeta$를 택하고 $\mathbb{K}'=\mathbb{K}(\zeta)$, $\mathbb{L}'=\mathbb{L}_f(\zeta)$로 두자. 그럼 $\mathbb{L}'$은 $\mathbb{K}'$ 위에서의 $f$의 splitting field이므로 $\mathbb{L}'/\mathbb{K}'$도 finite degree Galois extension이다.
 
-우선 $\Gal(\mathbb{L}'/\mathbb{K}')$가 solvable임을 보이자. 임의의 $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism $\Gal(\mathbb{L}'/\mathbb{K}') \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$가 잘 정의되며, $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 이 restriction은 injective이고, $\Gal(\mathbb{L}'/\mathbb{K}')$는 solvable group $\Gal(\mathbb{L}_f/\mathbb{K})$의 subgroup과 isomorphic하므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="9iftl" }에 의해 solvable이다.
+우리 주장은 $\Gal(\mathbb{L}'/\mathbb{K}')$ 또한 solvable이라는 것이다. 임의의 $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$에 대하여 $\sigma$는 $\mathbb{K}$를 고정하고, $\mathbb{L}_f/\mathbb{K}$가 quasi-Galois이므로 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="1vm97" }의 넷째 조건에 의해 $\sigma(\mathbb{L}_f)=\mathbb{L}_f$이다. 따라서 restriction homomorphism 
 
-이제 [\[군론\] §군의 열, ⁋명제 14](/ko/math/group_theory/series_of_groups#prop14){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series $\Gal(\mathbb{L}'/\mathbb{K}')=H_0\supseteq\cdots\supseteq H_r=\{e\}$가 존재한다. $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이다. 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }의 대응으로 fixed field들
+$$\Gal(\mathbb{L}'/\mathbb{K}') \rightarrow \Gal(\mathbb{L}_f/\mathbb{K});\qquad \sigma\mapsto \sigma\vert_{\mathbb{L}_f}$$
+
+가 잘 정의된다. 한편, 만일 $\sigma\in\Gal(\mathbb{L}'/\mathbb{K}')$가 $\mathbb{L}_f$를 고정한다면 $\zeta\in\mathbb{K}'$도 고정하므로 $\mathbb{L}'=\mathbb{K}'(\mathbb{L}_f)$ 전체를 고정한다. 즉 위의 restriction은 injective이고 따라서 $\Gal(\mathbb{L}'/\mathbb{K}')$는 solvable group $\Gal(\mathbb{L}_f/\mathbb{K})$의 subgroup과 isomorphic하므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="9iftl" }에 의해 solvable이다.
+
+이제 [\[군론\] §군의 열, ⁋명제 14](/ko/math/group_theory/series_of_groups#prop14){: data-lid="dvshf" }에 의하여 모든 quotient가 cyclic인 series 
+
+$$\Gal(\mathbb{L}'/\mathbb{K}')=H_0\supseteq\cdots\supseteq H_r=\{e\}$$
+
+가 존재한다. 여기서 $\mathbb{L}'/\mathbb{K}'$가 finite degree Galois이므로 $\Gal(\mathbb{L}'/\mathbb{K}')$는 discrete group이고 모든 subgroup이 closed이고, 따라서 [§갈루아 이론의 기본정리, ⁋정리 1](/ko/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="m85w7" }에 의해 이들이 주는 fixed field들의 chain
 
 $$\mathbb{K}'=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}',\qquad \mathbb{F}_i=\mathbb{L}'^{H_i}$$
 
-을 얻는다. 각각의 $i$에 대하여 [§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="3caot" }에 의해 $\mathbb{L}'/\mathbb{F}_{i-1}$은 Galois extension이고 그 Galois group은 $H_{i-1}$이며, $H_i$가 $H_{i-1}$의 normal subgroup이므로 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="no8c3" }에 의하여 $\mathbb{F}_i/\mathbb{F}_{i-1}$은 Galois extension이고
+이 존재한다. 각각의 $i$에 대하여 [§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="3caot" }에 의해 $\mathbb{L}'/\mathbb{F}_{i-1}$은 Galois extension이고 그 Galois group은 $H_{i-1}$이며, $H_i$가 $H_{i-1}$의 normal subgroup이므로 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="no8c3" }에 의하여 $\mathbb{F}_i/\mathbb{F}_{i-1}$은 Galois extension이고
 
 $$\Gal(\mathbb{F}_i/\mathbb{F}_{i-1})\cong H_{i-1}/H_i$$
 
-는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="30g6y" }에 의해 $d_i$는 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$를 나누고, 다시 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$는 $n$을 나눈다. 따라서 $\zeta^{n/d_i}$는 primitive $d_i$-th root of unity이고 $\mathbb{K}'\subseteq\mathbb{F}_{i-1}$에 속하므로, [명제 5](#prop5){: data-lid="i7qfu" }에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다.
+는 cyclic group이다. 그 order를 $d_i$라 하면 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="30g6y" }에 의해 $d_i$는 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$를 나누고, 다시 $\lvert\Gal(\mathbb{L}'/\mathbb{K}')\rvert$는 $n$을 나눈다. 그럼 $x^{d_i}=1$인 $x$는 $x^n=1$도 만족하므로 $\mu_{d_i}\subseteq\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}'\subseteq\mathbb{F}_{i-1}$이고, 특히 $\mu_{d_i}$의 generator, 즉 primitive $d_i$-th root of unity가 $\mathbb{F}_{i-1}$에 속한다. 따라서 [명제 5](#prop5){: data-lid="i7qfu" }에 의하여 $\mathbb{F}_i=\mathbb{F}_{i-1}(\alpha_i)$, $\alpha_i^{d_i}\in\mathbb{F}_{i-1}$이도록 하는 $\alpha_i$가 존재한다. 또 $\mathbb{F}_0=\mathbb{K}(\zeta)$이고 $\zeta^n=1\in\mathbb{K}$이므로, $\mathbb{L}_f\subseteq\mathbb{L}'$을 만족하는 radical tower $\mathbb{K}\subseteq\mathbb{F}_0\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}'$을 얻는다.
 
-종합하면 $\zeta^n=1\in\mathbb{K}$이므로
+거꾸로 첫째 조건을 가정하고 둘째 조건을 보이자. Radical tower 
 
-$$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{F}_0\subseteq\mathbb{F}_1\subseteq\cdots\subseteq\mathbb{F}_r=\mathbb{L}'$$
+$$\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$$
 
-은 radical tower이고, $\mathbb{L}_f\subseteq\mathbb{L}'$이므로 $f$는 거듭제곱근으로 풀린다.
+이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 이들이 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$로 주어지는 것이라 하자. 그럼 $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택할 수 있다.
 
-이제 첫째 조건을 가정하고 둘째 조건을 보이자. Radical tower $\mathbb{K}=\mathbb{K}_0\subseteq\cdots\subseteq\mathbb{K}_r$이 $\mathbb{L}_f\subseteq\mathbb{K}_r$을 만족한다 하고, 그 데이터를 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$, $\alpha_i^{n_i}\in\mathbb{K}_i$라 하자. $n=n_0n_1\cdots n_{r-1}$로 두고 primitive $n$-th root of unity $\zeta$를 택하자.
+이를 둘째 조건으로 옮기기 위해서는 이 sequence를 Galois group의 subgroup들의 sequence로 옮겨야 한다. 이를 위해 우리는 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6)과 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12)를 사용하지만, 현재 상태로는 $\mathbb{K}_r$도 $\mathbb{K}$의 Galois extension일 필요가 없으며, 각 단계 $\mathbb{K}_{i+1}/\mathbb{K}$의 Galois group 또한 abelian일 필요가 없으므로 현 상태 그대로는 이를 적용할 수 없다.
 
-우선 탑을 키워 Galois extension으로 만든다. $E=\mathbb{K}_r(\zeta)$로 두면
+이를 해소하기 위해 우선 $\mathbb{E}=\mathbb{K}_r(\zeta)$라 하자. $\mathbb{E}/\mathbb{K}$는 finite degree extension이므로 $\mathbb{E}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism은 separable degree $[\mathbb{E}:\mathbb{K}]_s$만큼 존재하며, 특히 유한히 많다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="bnpwu" }) 이들을 $u_1=\id,u_2,\ldots,u_s$라 하고
 
-$$\mathbb{K}\subseteq\mathbb{K}(\zeta)\subseteq\mathbb{K}_1(\zeta)\subseteq\cdots\subseteq\mathbb{K}_r(\zeta)=E$$
+$$\mathbb{N}=\mathbb{K}\bigl(u_1(\mathbb{E})\cup\cdots\cup u_s(\mathbb{E})\bigr)$$
 
-는 다시 radical tower이고 ($\zeta^n=1\in\mathbb{K}$, 그리고 각 단계는 $\alpha_i$를 추가하는 것), $E/\mathbb{K}$는 finite degree extension이다. $u_1=\id,u_2,\ldots,u_s$를 $E$에서 $\overline{\mathbb{K}}$로의 서로 다른 $\mathbb{K}$-homomorphism들 전부라 하자. 이들은 유한 개인데, 그 개수가 separable degree $[E:\mathbb{K}]_s$와 같기 때문이다. ([§에탈대수, ⁋정의 10](/ko/math/field_theory/etale_algebras#def10){: data-lid="bnpwu" }) 이제
+으로 정의하자. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $v$에 대하여 $v\circ u_j$들도 $\mathbb{E}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism이므로 $v$는 $u_j(\mathbb{E})$들을 permute하고, 따라서 $v(\mathbb{N})=\mathbb{N}$이다. 즉 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="v0jwu" }에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이고, characteristic $0$이므로 finite degree Galois extension이다.
 
-$$\mathbb{N}=\mathbb{K}\bigl(u_1(E)\cup\cdots\cup u_s(E)\bigr)$$
+이제 $\mathbb{K}$에서 $\mathbb{N}$까지의 탑을 만든다. 각 $u_j(\mathbb{E})$는 $\mathbb{K}$ 위에서 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되고, $u_j(\zeta)^n=u_j(\zeta^n)=1$이므로 $u_j(\zeta)\in\mu_n=\langle\zeta\rangle$이다. 따라서 $\mathbb{N}$은 $\mathbb{K}(\zeta)$에 원소들 $u_j(\alpha_i)$를 모두 추가하여 얻어진다. 이들을
 
-으로 정의하자. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $v$에 대하여 $v\circ u_j$들도 $E$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism들이므로 $v$는 $u_j(E)$들을 permute하고, 따라서 $v(\mathbb{N})=\mathbb{N}$이다. 즉 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="v0jwu" }에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이고, characteristic $0$이므로 finite degree Galois extension이다.
+$$u_1(\alpha_0),\ldots,u_1(\alpha_{r-1}),\quad u_2(\alpha_0),\ldots,u_2(\alpha_{r-1}),\quad\ldots,\quad u_s(\alpha_0),\ldots,u_s(\alpha_{r-1})$$
 
-다음으로 $\mathbb{N}$도 radical tower를 갖는다는 것을 확인하자. 각각의 $u_j$에 대하여 $u_j(E)$는 $\mathbb{K}$ 위에서 원소들 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되는데, $u_j(\zeta)\in\mu_n$이고
+의 순서로 $\beta_1,\ldots,\beta_{rs}$라 하고, $\mathbb{T}_0=\mathbb{K}$, $\mathbb{T}_1=\mathbb{K}(\zeta)$, $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$로 두면 $t=rs+1$에 대하여 tower
 
-$$u_j(\alpha_i)^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)$$
+$$\mathbb{K}=\mathbb{T}_0\subseteq\mathbb{T}_1\subseteq\cdots\subseteq\mathbb{T}_t=\mathbb{N}$$
 
-이다. 따라서 $\mathbb{K}(\zeta)$에서 시작하여 $u_1(E)$의 generator들, $u_2(E)$의 generator들, $\ldots$을 차례로 추가하면, 각 단계에서 추가되는 원소의 거듭제곱이 항상 그 이전까지 만들어진 field에 속하므로 ($u_j(\zeta)\in\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}(\zeta)$이고 위의 식), 이는 $\mathbb{K}$에서 $\mathbb{N}$까지의 radical tower
+을 얻는다. 이 탑의 각 단계에서 추가되는 원소는 거듭제곱근이다. 첫 단계에서는 $\zeta^n=1\in\mathbb{K}$이다. $k\geq1$에 대하여 $\beta_k=u_j(\alpha_i)$라 하면, $u_j(\zeta)\in\mathbb{T}_1$이고 $u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})$은 $\beta_k$보다 먼저 추가되었으므로
 
-$$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{T}_1\subseteq\mathbb{T}_2\subseteq\cdots\subseteq\mathbb{T}_t=\mathbb{N}$$
+$$\beta_k^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)\subseteq\mathbb{T}_k$$
 
-이 된다. 여기서 각 단계 $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$에서 $\beta_k^{d_k}\in\mathbb{T}_k$이고 $d_k$는 어떤 $n_i$이므로 $n$을 나눈다.
+이다.
 
-이제 $\Gal(\mathbb{N}/\mathbb{K})$가 solvable임을 보이자. Subgroup들 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$를 생각하면 ([§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="0tkg8" }) 다음의 decreasing sequence
+이제 $\mathbb{N}/\mathbb{K}$가 Galois이므로 각 $k$에 대하여 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$가 정의되고 ([§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="0tkg8" }), decreasing sequence
 
 $$\Gal(\mathbb{N}/\mathbb{K})=G_0\supseteq G_1\supseteq\cdots\supseteq G_t=\{e\}$$
 
-를 얻는다. 첫 단계 $\mathbb{T}_1=\mathbb{K}(\zeta)$는 [명제 3](#prop3){: data-lid="39zr0" }에 의해 $\mathbb{K}$의 Galois extension이고 그 Galois group이 abelian이며, $k\geq1$인 단계 $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$는 $\zeta^{n/d_k}\in\mathbb{T}_1\subseteq\mathbb{T}_k$가 primitive $d_k$-th root of unity이므로 [명제 4](#prop4){: data-lid="gfsnj" }에 의해 $\mathbb{T}_k$의 Galois extension이고 그 Galois group이 cyclic이다. 그럼 각각의 $k$에 대하여 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="jn7cx" }을 Galois extension $\mathbb{N}/\mathbb{T}_k$에 적용하면, $G_{k+1}$은 $G_k$의 normal subgroup이고
+를 얻는다. 각 단계 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 abelian Galois group을 갖는 Galois extension이다. 첫 단계 $\mathbb{K}(\zeta)/\mathbb{K}$는 [명제 3](#prop3){: data-lid="39zr0" }에 의해 그러하다. $k\geq1$이고 $\beta_k=u_j(\alpha_i)$이면, $n_i$가 $n$을 나누므로 $\mu_{n_i}\subseteq\mu_n\subseteq\mathbb{T}_1\subseteq\mathbb{T}_k$이어서 $\mathbb{T}_k$는 primitive $n_i$-th root of unity를 포함하고, 따라서 [명제 4](#prop4){: data-lid="gfsnj" }에 의해 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 cyclic extension이다. 그럼 Galois extension $\mathbb{N}/\mathbb{T}_k$에 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="jn7cx" }을 적용하면 $G_{k+1}$은 $G_k$의 normal subgroup이고
 
 $$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
 
 는 abelian이다. 따라서 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12){: data-lid="ril7l" }에 의하여 $\Gal(\mathbb{N}/\mathbb{K})$는 solvable group이다.
 
-마지막으로 $\mathbb{L}_f\subseteq E\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="56hfy" }에 의해 solvable이다.
+마지막으로 $\mathbb{L}_f\subseteq\mathbb{K}_r\subseteq\mathbb{E}=u_1(\mathbb{E})\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="56hfy" }에 의해 solvable이다.
 :::
 
 ::: 따름정리 8 (Abel–Ruffini)
