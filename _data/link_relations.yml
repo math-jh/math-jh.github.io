@@ -4698,7 +4698,7 @@
 "k0mv5": {relation: required, reviewed: true}
 "k0t1q": {relation: required, reviewed: true}
 "k15rn": {relation: required, reviewed: true}
-"k19ue": {relation: required}
+"k19ue": {relation: required, reviewed: true}
 "k1ahb": {relation: weak, reviewed: true}
 "k1d4c": {relation: required, reviewed: true}
 "k1i8i": {relation: required, reviewed: true}
@@ -8140,7 +8140,7 @@
 "yezue": {relation: weak, reviewed: true}
 "yf0r0": {relation: weak, reviewed: true}
 "yf1am": {relation: required, reviewed: true}
-"yf1pq": {relation: required}
+"yf1pq": {relation: required, reviewed: true}
 "yf5xz": {relation: required, reviewed: true}
 "yf6jy": {relation: required, reviewed: true}
 "yfnp0": {relation: required, reviewed: true}
