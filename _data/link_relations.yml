@@ -3407,7 +3407,7 @@
 "e99h2": {relation: required, reviewed: true}
 "e9fi8": {relation: required, reviewed: true}
 "e9pao": {relation: required, reviewed: true}
-"e9r9b": {relation: required}
+"e9r9b": {relation: required, reviewed: true}
 "e9tag": {relation: required, reviewed: true}
 "e9usz": {relation: weak, reviewed: true}
 "e9uy4": {relation: required, reviewed: true}
@@ -3732,7 +3732,7 @@
 "fu116": {relation: required, reviewed: true}
 "fu4uw": {relation: required, reviewed: true}
 "fuvo0": {relation: required, reviewed: true}
-"fuwru": {relation: required}
+"fuwru": {relation: required, reviewed: true}
 "fv0uf": {relation: required, reviewed: true}
 "fv2hc": {relation: weak, reviewed: true}
 "fv3fc": {relation: required, reviewed: true}
@@ -6534,7 +6534,7 @@
 "ropw7": {relation: required, reviewed: true}
 "rotdz": {relation: weak, reviewed: true}
 "roxna": {relation: required, reviewed: true}
-"rp2lb": {relation: required}
+"rp2lb": {relation: required, reviewed: true}
 "rp4oa": {relation: required, reviewed: true}
 "rp6a1": {relation: required, reviewed: true}
 "rpi4i": {relation: required, reviewed: true}
