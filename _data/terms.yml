@@ -1686,6 +1686,13 @@ B:
   see:
   - label: Interior
     id: interior
+- id: boundary_map
+  en: boundary map
+  ko: 경계 사상
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: boundary_point
   en: boundary point
   ko: 경계점
@@ -12629,6 +12636,13 @@ M:
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
     url: /ko/math/number_theory/arithmetic_functions
+- id: möbius_strip
+  en: Möbius strip
+  ko: 뫼비우스 띠
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: möbius_transformation
   en: Möbius transformation
   ko: 뫼비우스 변환
