@@ -14,7 +14,7 @@ weight: 5
 
 ---
 
-Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다. ([§Perfect obstruction theory, ⁋명제 3](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop3){: data-lid="4munh" })
+Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다. ([§Perfect obstruction theory, ⁋명제 11](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop11){: data-lid="4munh" })
 
 [\[대수다양체\] §교차곱](/ko/math/algebraic_varieties/intersection_product){: data-lid="8i3l7" }에서 우리는 두 class의 intersection product를 하는 법을 살펴보았으나, 우리 경우에는 대부분의 공간이 smooth가 아니므로 이것이 잘 정의되지 않는다. 만일 $S$가 smooth하고 두 map이 proper라면 우리는 그 대안으로 두 class를 $S$로 pushforward한 후 교차시킬 수 있겠지만, 그 결과는 $S$의 class이므로 우리가 원하는 결과가 아니다. 때문에 우리는 [\[스택\] §Deligne–Mumford 스택 위의 적분, §§곱공간과 대각선 교차](/ko/math/stacks/integration_on_deligne_mumford_stacks#곱공간과-대각선-교차){: data-lid="qj2hs" }에서 증명 없이 받아들인 refined Gysin pullback을 엄밀하게 정의해야 한다. 
 
