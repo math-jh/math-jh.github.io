@@ -73,7 +73,7 @@ $$\sum_{\beta\in\Delta,\beta\neq\alpha}\langle\alpha,\beta\rangle\langle\beta,\a
 이다.
 :::
 ::: 증명
-$\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하자. 만일 서로 다른 $\beta_i$, $\beta_j$가 edge로 연결되어 있다면 $\alpha,\beta_i,\beta_j$가 cycle을 이루므로, [명제 4](#prop4)에 의하여 $\beta_i$들은 서로 orthogonal이다. 
+$\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하자. 만일 서로 다른 $\beta_i$, $\beta_j$가 edge로 연결되어 있다면 $\alpha,\beta_i,\beta_j$가 cycle을 이루므로, [명제 4](#prop4){: data-lid="yziho" }에 의하여 $\beta_i$들은 서로 orthogonal이다. 
 
 이제 $e_0=\alpha/\lvert\alpha\rvert$, $e_i=\beta_i/\lvert\beta_i\rvert$라 하면 $e_1,\ldots,e_m$은 orthonormal이고, simple root들의 linear independence에 의해 $e_0$는 이들의 span에 속하지 않으므로 Bessel inequality에 의해 $\sum_{i=1}^m(e_0,e_i)^2<(e_0,e_0)=1$이다. 그런데 $\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle=4(e_0,e_i)^2$이므로 총합은 $4$보다 작다.
 :::

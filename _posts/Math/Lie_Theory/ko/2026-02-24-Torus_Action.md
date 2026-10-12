@@ -264,7 +264,7 @@ Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한�
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-을 [정의 12](#def12)에서 정의할 regular element들로 제한하면 $\lvert W\rvert$-to-1 covering이 된다는 사실이다. 즉 $T$의 regular element들의 집합을 $T_{\text{reg}}$, 그 conjugate들의 합집합을 $G_{\text{reg}}$라 하면 $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$는 $\lvert W\rvert$-to-1 covering이다. 이로부터 $G_{\text{reg}}$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
+을 [정의 12](#def12){: data-lid="b1vee" }에서 정의할 regular element들로 제한하면 $\lvert W\rvert$-to-1 covering이 된다는 사실이다. 즉 $T$의 regular element들의 집합을 $T_{\text{reg}}$, 그 conjugate들의 합집합을 $G_{\text{reg}}$라 하면 $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$는 $\lvert W\rvert$-to-1 covering이다. 이로부터 $G_{\text{reg}}$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
 
 구체적으로, $G/T\times T$ 위에 다음의 $W$-action을 정의하자.
 

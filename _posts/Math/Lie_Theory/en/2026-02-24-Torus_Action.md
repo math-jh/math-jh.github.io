@@ -264,7 +264,7 @@ The Cartan decomposition tells us that each element of $G$ belongs to some maxim
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-becomes a $\lvert W\rvert$-to-1 covering when restricted to the regular elements to be defined in [Definition 12](#def12). That is, if we denote the set of regular elements of $T$ by $T_{\text{reg}}$ and the union of their conjugates by $G_{\text{reg}}$, then $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$ is a $\lvert W\rvert$-to-1 covering. From this, each element of $G_{\text{reg}}$ has $\lvert W\rvert$ preimages, and the relations among them are precisely described by the Weyl group.
+becomes a $\lvert W\rvert$-to-1 covering when restricted to the regular elements to be defined in [Definition 12](#def12){: data-lid="b1vee" }. That is, if we denote the set of regular elements of $T$ by $T_{\text{reg}}$ and the union of their conjugates by $G_{\text{reg}}$, then $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$ is a $\lvert W\rvert$-to-1 covering. From this, each element of $G_{\text{reg}}$ has $\lvert W\rvert$ preimages, and the relations among them are precisely described by the Weyl group.
 
 Specifically, on $G/T\times T$, define the following $W$-action:
 

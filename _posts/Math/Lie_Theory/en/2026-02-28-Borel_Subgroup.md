@@ -73,7 +73,7 @@ In a Dynkin diagram, the total number of edges emanating from a single vertex is
 $$\sum_{\beta\in\Delta,\beta\neq\alpha}\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle<4$$
 :::
 ::: Proof
-Consider the simple roots $\beta_1,\ldots,\beta_m$ adjacent to $\alpha$. If distinct $\beta_i$ and $\beta_j$ were connected by an edge, then $\alpha,\beta_i,\beta_j$ would form a cycle, so by [Proposition 4](#prop4), the $\beta_i$ are mutually orthogonal.
+Consider the simple roots $\beta_1,\ldots,\beta_m$ adjacent to $\alpha$. If distinct $\beta_i$ and $\beta_j$ were connected by an edge, then $\alpha,\beta_i,\beta_j$ would form a cycle, so by [Proposition 4](#prop4){: data-lid="yziho" }, the $\beta_i$ are mutually orthogonal.
 
 Now let $e_0=\alpha/\lvert\alpha\rvert$ and $e_i=\beta_i/\lvert\beta_i\rvert$. Then $e_1,\ldots,e_m$ are orthonormal, and by the linear independence of the simple roots, $e_0$ does not belong to their span, so by Bessel's inequality we have $\sum_{i=1}^m(e_0,e_i)^2<(e_0,e_0)=1$. However, since $\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle=4(e_0,e_i)^2$, the total sum is strictly less than $4$.
 :::
