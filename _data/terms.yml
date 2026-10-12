@@ -1667,6 +1667,13 @@ B:
   defs:
   - label: '[리 이론] §Borel subgroup'
     url: /ko/math/lie_theory/borel_subgroup
+- id: borsuk_ulam_theorem
+  en: Borsuk–Ulam theorem
+  ko: Borsuk–Ulam 정리
+  primary: ko
+  defs:
+  - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
+    url: /ko/math/algebraic_topology/borsuk_ulam_theorem
 - id: Bott's_formula
   en: Bott's formula
   ko: 보트 공식
