@@ -198,7 +198,7 @@ That is, $\beta(b)\in\ker(g')=\im(f')$. Hence there exists a unique $a'$ such th
 
 For the function $\delta$ to be well-defined, the above value must not depend on the choice of $b$. Pick another $b_1\in B$ satisfying $g(b_1)=c$, and in the same way pick $a_1'\in A'$ satisfying $f'(a_1')=\beta(b_1)$. Then 
 
-$$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
+$$g(b_1-b)=g(b_1)-g(b)=c-c=0$$
 
 so $b_1-b\in\ker(g)=\im(f)$ holds. Now if we find $a\in A$ such that $f(a)=b_1-b$, then
 

@@ -196,7 +196,7 @@ $$0=\gamma(c)=\gamma(g(b))=(\gamma\circ g)(b)=(g'\circ\beta)(b)=g'(\beta(b))$$
 
 함수 $\delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
 
-$$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
+$$g(b_1-b)=g(b_1)-g(b)=c-c=0$$
 
 이므로 $b_1-b\in\ker(g)=\im(f)$이 성립한다. 이제 $f(a)=b_1-b$이도록 하는 $a\in A$를 찾으면, 
 
