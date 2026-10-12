@@ -10446,6 +10446,13 @@ I:
   defs:
   - label: '[리 이론] §Kazhdan–Lusztig polynomial'
     url: /ko/math/lie_theory/kazhdan_lusztig
+- id: iwasawa_decomposition
+  en: Iwasawa decomposition
+  ko: 이와사와 분해
+  primary: en
+  defs:
+  - label: '[리 이론] §Borel subgroup'
+    url: /ko/math/lie_theory/borel_subgroup
 J:
 - id: j-holomorphic
   en: J-holomorphic
