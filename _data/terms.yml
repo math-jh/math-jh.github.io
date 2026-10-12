@@ -12151,6 +12151,13 @@ L:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+- id: loop_space
+  en: loop space
+  ko: 고리 공간
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: lower_adjoint
   en: lower adjoint
   ko: 아래 수반
@@ -17795,6 +17802,13 @@ S:
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
+- id: serre_spectral_sequence
+  en: Serre spectral sequence
+  ko: 세르 스펙트럼 열
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: serre_vanishing_theorem
   en: Serre vanishing theorem
   ko: 세르 소멸 정리
