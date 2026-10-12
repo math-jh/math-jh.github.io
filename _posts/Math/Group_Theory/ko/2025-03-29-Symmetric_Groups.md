@@ -218,7 +218,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 
 이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
 
-한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7){: data-lid="au756" }을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7){: data-lid="au756" }을 사용하면 $S_5$에서 같은 꼴의 permutation들은 서로 conjugate임을 알 수 있다. 이 때 $(1\;2\;3)$은 odd permutation $(4\;5)$와, $(1\;2)(3\;4)$는 odd permutation $(1\;2)$와 commute하므로 conjugate를 취하는 원소의 parity를 조절할 수 있고, 따라서 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 $A_5$에서도 각각 conjugacy class들이 된다. 반면 $5$-cycle과 commute하는 $S_5$의 원소는 그 $5$-cycle이 생성하는 크기 $5$의 subgroup의 원소뿐이므로 $A_5$에서의 conjugacy class의 크기는 $60/5=12$이고, 따라서 $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 $A_5$ 전체는 아닌 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 :::
 
 ---
