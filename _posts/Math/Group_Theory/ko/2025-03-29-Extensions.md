@@ -120,7 +120,7 @@ $$\mathcal{E}_\tau: N \overset{i}{\rightarrow} N\rtimes_\tau H\overset{p}{\right
 
 $$s(y)=(e_N, y)$$
 
-으로 정의하면 $s$는 $p$의 section이며, 이것이 $N\rtimes_\tau H$의 centralizer에 포함되므로 [명제 4](#prop4){: data-lid="2fna4" }에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
+으로 정의하면 $s$는 $p$의 section이다. 특히 $\tau$가 trivial homomorphism이라면 $s(H)$가 $i(N)$의 centralizer에 포함되므로 [명제 4](#prop4){: data-lid="2fna4" }에 의하여 $\mathcal{E}_\tau$는 trivial extension이다.
 :::
 
 이에 대한 증명은 단순한 계산이다. 
@@ -135,7 +135,7 @@ $$N\rtimes_\rho H \rightarrow G;\qquad (x,y)\mapsto xy$$
 으로 정의된 group homomorphism은 isomorphism이다. 
 :::
 ::: 증명
-역함수를 만들어주면 충분하다. 이를 위해서는 조건 $NH=G$를 이용하여 $G$의 임의의 원소 $g$에 대해 $g=xy$를 만족하는 적당한 $x\in N$, $y\in H$를 찾아야 하는데, 이는 일반적으로는 불가능하지만 $N$이 $G$의 *normal* subgroup이므로 가능하다. 나머지는 단순한 계산이다.
+역함수를 만들어주면 충분하다. 이를 위해서는 $G$의 임의의 원소 $g$에 대해 $g=xy$를 만족하는 $x\in N$, $y\in H$를 찾아야 하는데, 조건 $NH=G$에 의해 이러한 $x,y$가 존재하고 조건 $N\cap H=\{e_G\}$에 의해 이들은 유일하다. 나머지는 단순한 계산이다.
 :::
 
 이 경우 $G$가 $N$과 $H$의 (internal) semi-direct product라고 말한다. External semi-direct product와 internal semi-direct product의 차이는 단순히 처음 시작을 어디서 했느냐일 뿐이며 중요한 것은 아니다. 

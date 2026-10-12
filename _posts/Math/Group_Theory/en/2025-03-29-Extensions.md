@@ -118,7 +118,7 @@ obtained from them is an extension of $H$ by $N$. Moreover, if we define a map $
 
 $$s(y)=(e_N, y)$$
 
-then $s$ is a section of $p$, and since it is contained in the centralizer of $N\rtimes_\tau H$, by [Proposition 4](#prop4){: data-lid="2fna4" }, $\mathcal{E}_\tau$ is a trivial extension.
+then $s$ is a section of $p$. In particular, if $\tau$ is a trivial homomorphism, then since $s(H)$ is contained in the centralizer of $i(N)$, by [Proposition 4](#prop4){: data-lid="2fna4" }, $\mathcal{E}_\tau$ is a trivial extension.
 :::
 
 The proof of this is a straightforward computation.
@@ -133,7 +133,7 @@ $$N\rtimes_\rho H \rightarrow G;\qquad (x,y)\mapsto xy$$
 is an isomorphism.
 :::
 ::: Proof
-It suffices to construct an inverse. To do this, using the condition $NH=G$, for an arbitrary element of $G$, $g$, we must find, satisfying $g=xy$, suitable $x\in N$ and $y\in H$; this is generally impossible, but is possible because $N$ is a *normal* subgroup of $G$. The rest is a straightforward computation.
+It suffices to construct an inverse. To do this, for an arbitrary element $g$ of $G$, we must find $x\in N$ and $y\in H$ satisfying $g=xy$; such $x, y$ exist by the condition $NH=G$, and they are unique by the condition $N\cap H=\{e_G\}. The rest is a straightforward computation.
 :::
 
 In this case we say that $G$ is the (internal) semi-direct product of $N$ and $H$. The difference between the external semi-direct product and the internal semi-direct product is merely where we started from, and is not important.
