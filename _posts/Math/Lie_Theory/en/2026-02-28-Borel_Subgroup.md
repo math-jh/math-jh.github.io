@@ -1,6 +1,6 @@
 ---
 title: "Borel Subgroups"
-description: "Semisimple Lie algebras are classified by Dynkin diagrams through the structure of root systems, and this classification naturally leads to the geometric properties of flag varieties."
+description: "Semisimple Lie algebras are classified by Dynkin diagrams through the structure of root systems, and the geometric properties of flag varieties that naturally arise in this classification are discussed."
 excerpt: "Dynkin diagrams, ADE classification, and flag varieties"
 
 categories: [Math / Lie Theory]
@@ -12,11 +12,12 @@ date: 2026-02-28
 weight: 6
 translated_at: 2026-05-31T17:30:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-31T17:30:04+00:00
+last_polished_at: 2026-10-12T15:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="xb591" } we defined the root system $\Phi$ of a semisimple Lie algebra $\mathfrak{g}$ and verified that its symmetries are captured by the Weyl group. In [§Torus Actions](/en/math/lie_theory/torus_action){: data-lid="c6stl" } we also examined the relationship between a maximal torus $T$ of a compact Lie group $G$ and the Weyl group $W=N(T)/T$. In this post we classify Lie algebras via the structure of root systems, and introduce the geometric object that arises naturally from this: the flag variety.
+In [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="xb591" }, for a semisimple Lie algebra $\mathfrak{g}$, we defined the root system $\Phi$ and verified that its symmetries are captured by the Weyl group. In [§Torus Actions](/en/math/lie_theory/torus_action){: data-lid="c6stl" }, we also examined, for a compact Lie group $G$, the relationship between its maximal torus $T$ and the Weyl group $W=N(T)/T$. In this post we classify Lie algebras via the structure of root systems, and introduce the geometric object that arises naturally from this: the flag variety.
 
-## Dynkin Diagram
+## Dynkin diagram
 
 The structure of a root system $\Phi$ is completely determined by the relations among its simple roots. The Cartan matrix defined in [§Root Systems, ⁋Definition 16](/en/math/lie_theory/root_systems#def16){: data-lid="kpxp1" } encodes these relations in matrix form, but the structure of a root system can be grasped more intuitively through visualization.
 
@@ -24,18 +25,18 @@ The structure of a root system $\Phi$ is completely determined by the relations 
 For a root system $\Phi$ and a set of simple roots $\Delta=\{\alpha_1,\ldots,\alpha_l\}$, the *Dynkin diagram* of $\Phi$ is the graph defined as follows.
 
 1. Place one vertex for each simple root $\alpha_i$.
-2. Place $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$ edges between the two vertices $\alpha_i$ and $\alpha_j$ ($i\neq j$).
-3. If $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$, add an arrow on the edge pointing toward the longer root.
+2. Between two vertices $\alpha_i$ and $\alpha_j$ ($i\neq j$), place $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$ edges.
+3. If $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$, add an arrow on the edge pointing toward the shorter root.
 :::
 
-Since $a_{ij}=\langle\alpha_i,\alpha_j\rangle$ in the Cartan matrix $A=(a_{ij})$, one may regard the Dynkin diagram as a graphical encoding of the Cartan matrix. As we saw in [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="afsuo" }, $a_{ij}\leq 0$, and $a_{ij}=0$ is equivalent to $a_{ji}=0$; hence the number of edges is determined symmetrically. Moreover, since $a_{ij}\in\{0,-1,-2,-3\}$, there are at most three edges between any two vertices.
+In the Cartan matrix $A=(a_{ij})$, since $a_{ij}=\langle\alpha_i,\alpha_j\rangle$, one may regard the Dynkin diagram as representing the information of the Cartan matrix as a graph. As we saw in [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="afsuo" }, $a_{ij}\leq 0$, and $a_{ij}=0$ is equivalent to $a_{ji}=0$; hence the number of edges is determined symmetrically. Moreover, since $a_{ij}\in\{0,-1,-2,-3\}$, there are at most three edges between any two vertices.
 
 ::: Example 2
-Consider $\Phi(A_n)$ from [§Root Systems, ⁋Example 13](/en/math/lie_theory/root_systems#ex13){: data-lid="pq5pt" }. We may choose simple roots $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$). Computing their inner products gives
+Consider $\Phi(A_n)$ from [§Root Systems, ⁋Example 13](/en/math/lie_theory/root_systems#ex13){: data-lid="pq5pt" }. The simple roots can be chosen as $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$). Computing their inner products gives
 
 $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text{otherwise}\end{cases}$$
 
-Thus $\langle\alpha_i,\alpha_j\rangle$ equals $2$ when $i=j$, $-1$ when $\lvert i-j\rvert=1$, and $0$ otherwise. Hence the Dynkin diagram consists of $n$ vertices connected in a chain, and since all roots have the same length there are no arrows.
+Thus $\langle\alpha_i,\alpha_j\rangle$ is, for $i=j$, $2$; for $\lvert i-j\rvert=1$, $-1$; and $0$ otherwise. Hence the Dynkin diagram consists of $n$ vertices connected in a chain, and since all roots have the same length there are no arrows.
 :::
 
 The key properties of Dynkin diagrams are as follows.
@@ -44,65 +45,65 @@ The key properties of Dynkin diagrams are as follows.
 A Dynkin diagram is either connected or a disjoint union of connected components. Each connected component corresponds to an irreducible root system.
 :::
 ::: Proof
-The connected components of a Dynkin diagram define a partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$ of the simple roots. Let $\Phi_i$ be the root subsystem generated by each $\Delta_i$. By [Definition 1](#def1){: data-lid="e4jzo" }, roots belonging to distinct $\Delta_i$ are orthogonal. Thus $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$, and each $\Phi_i$ is irreducible.
+The connected components of a Dynkin diagram define a partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$ of the simple roots. If we consider, for each $\Delta_i$, the root subsystem $\Phi_i$ generated by it, then by [Definition 1](#def1){: data-lid="e4jzo" }, roots belonging to distinct $\Delta_i$ are orthogonal. Thus $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$, and each $\Phi_i$ is irreducible.
 
 Conversely, if the Dynkin diagram of an irreducible root system were not connected, the preceding argument would make it reducible, a contradiction.
 :::
 
 ::: Proposition 4
-A Dynkin diagram contains no cycles; equivalently, every Dynkin diagram is a tree or a forest.
+A Dynkin diagram contains no cycles. That is, a Dynkin diagram is always a tree or a forest.
 :::
 ::: Proof
-Suppose for contradiction that a cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$ exists. Let $k$ be the number of edges in the cycle. For each edge we have $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$, and therefore $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$.
+Suppose for contradiction that there exists a cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$. The number of edges in the cycle is $k-1$, and for each edge, $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$, and therefore $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$.
 
-Now set $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$. Then
+Now consider $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$. Then
 
-$$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell}).$$
+$$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell})$$
 
-Since the vertices form a cycle, each $\alpha_{i_j}$ is adjacent to exactly two neighbors, and thus
+Since it is a cycle, each $\alpha_{i_j}$ is connected to exactly two neighbors, and therefore
 
-$$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0.$$
+$$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
 
 This contradicts the positive-definiteness of the inner product.
 :::
 
 ::: Proposition 5
-In a Dynkin diagram, the total number of edges incident to any single vertex does not exceed $4$. That is, for any simple root $\alpha$,
+In a Dynkin diagram, the total number of edges emanating from a single vertex does not exceed $4$. That is, for any simple root $\alpha$,
 
-$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4.$$
+$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4$$
 :::
 ::: Proof
-Let $H_\alpha$ be the hyperplane orthogonal to the simple root $\alpha$, and let $\beta_1,\ldots,\beta_m$ be the simple roots adjacent to $\alpha$. Each $\beta_i$ makes a distinct angle with $H_\alpha$.
+Let $H_\alpha$ be the hyperplane orthogonal to the simple root $\alpha$. If we consider the simple roots $\beta_1,\ldots,\beta_m$ adjacent to $\alpha$, each $\beta_i$ forms a distinct angle with $H_\alpha$.
 
-Linear independence of the projections of the $\beta_i$ onto $H_\alpha$ implies $m\leq 3$. Moreover, $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$ for each $\beta_i$, so the total sum does not exceed $4$.
+From the linear independence of the vectors obtained by orthogonally projecting the $\beta_i$ onto $H_\alpha$, one can show that $m\leq 3$. Moreover, since $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$ for each $\beta_i$, the total sum does not exceed $4$.
 :::
 
 ## ADE Classification
 
-Let us now examine the classification of irreducible root systems. The preceding propositions severely restrict the possible shapes of Dynkin diagrams.
+Let us now examine the classification of irreducible root systems. From the preceding propositions, the possible shapes of Dynkin diagrams are significantly restricted.
 
 ::: Theorem 6
 The Dynkin diagram of an irreducible root system is one of the following types.
 
 1. **Classical types:**
    - $A_n$ ($n\geq 1$): $n$ vertices connected in a chain
-   - $B_n$ ($n\geq 2$): a double edge and arrow attached to one end of $A_n$
-   - $C_n$ ($n\geq 2$): a double edge and arrow in the opposite direction attached to one end of $A_n$
-   - $D_n$ ($n\geq 4$): a branch at one end of $A_{n-1}$
+   - $B_n$ ($n\geq 2$): one vertex attached to one end of $A_{n-1}$ with a double edge, and an arrow added
+   - $C_n$ ($n\geq 3$): one vertex attached to one end of $A_{n-1}$ with a double edge, and an arrow added in the opposite direction
+   - $D_n$ ($n\geq 4$): branching at one end of $A_{n-1}$
 
 2. **Exceptional types:**
-   - $E_6, E_7, E_8$: special forms with 6, 7, and 8 vertices respectively
-   - $F_4$: 4 vertices with a double edge in the middle
-   - $G_2$: 2 vertices joined by a triple edge
+   - $E_6, E_7, E_8$: special forms having 6, 7, and 8 vertices, respectively
+   - $F_4$: 4 vertices, with a double edge in the middle
+   - $G_2$: 2 vertices, triple edge
 :::
 
-The proof of this classification proceeds by systematically analyzing the conditions that a Dynkin diagram must satisfy. The key ideas are as follows.
+The proof of this classification consists of systematically analyzing the conditions that a Dynkin diagram must satisfy. The key ideas are as follows.
 
-1. **Absence of cycles** forces the diagram to be a tree.
-2. **Restricted branching** limits the possible forms.
-3. **Constraints on the number of edges** determine where double and triple edges may occur.
+1. **Since there are no cycles,** it must be in the form of a tree.
+2. **Since branching is restricted,** the possible forms are limited.
+3. **From constraints on the number of edges,** the positions of double edges and triple edges are determined.
 
-We omit the detailed proof; what matters for understanding the theorem is knowing the distinctive features of each type.
+We omit the detailed proof, but what is important for understanding the content of the theorem is knowing what features each type has.
 
 ::: Example 7
 The classical Lie algebras corresponding to each type are as follows.
@@ -114,85 +115,85 @@ The classical Lie algebras corresponding to each type are as follows.
 | $C_n$ | $\mathfrak{sp}(2n,\mathbb{C})$ | $n(2n+1)$ |
 | $D_n$ | $\mathfrak{so}(2n,\mathbb{C})$ | $n(2n-1)$ |
 
-The Lie algebras corresponding to the exceptional types $E_6, E_7, E_8, F_4, G_2$ cannot be realized as classical matrix algebras. Their dimensions are $78, 133, 248, 52, 14$, respectively.
+The Lie algebras corresponding to the exceptional types $E_6, E_7, E_8, F_4, G_2$ are not realized as classical matrix algebras. Their dimensions are $78, 133, 248, 52, 14$, respectively.
 :::
 
-### Simply-Laced Root Systems
+### Simply-laced root system
 
-A root system in which all roots have the same length is called *simply-laced*. Such root systems enjoy special properties.
+A root system in which all roots have the same length is called *simply-laced*. They have special properties.
 
 ::: Definition 8
-A root system $\Phi$ is *simply-laced* if $\lvert\alpha\rvert=\lvert\beta\rvert$ for all $\alpha,\beta\in\Phi$. Equivalently, its Dynkin diagram contains no double or triple edges.
+A root system $\Phi$ is *simply-laced* if $\lvert\alpha\rvert=\lvert\beta\rvert$ for all $\alpha,\beta\in\Phi$. When $\Phi$ is irreducible, this is equivalent to the Dynkin diagram having no double edge or triple edge.
 :::
 
-The simply-laced root systems are exactly those of type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$; these are collectively called *ADE type*. ADE types appear in a wide variety of mathematical contexts: for instance, the classification of du Val singularities, the symmetry groups of Platonic solids, and two-dimensional conformal field theory all exhibit ADE patterns.
+The simply-laced root systems are precisely types $A_n$, $D_n$, $E_6$, $E_7$, and $E_8$, and these are collectively called *ADE type*. The ADE type appears in various mathematical contexts: for example, ADE patterns appear in the classification of du Val singularities, the symmetry groups of Platonic solids, and two-dimensional conformal field theory.
 
-Their Dynkin diagrams are as follows. All of them consist of single edges only, with $A_n$ a chain, $D_n$ a fork branching at one end, and $E_6,E_7,E_8$ having three branches meeting at a single vertex.
+Their Dynkin diagrams are as follows. All of them consist of single edges only, with $A_n$ being a chain, $D_n$ a fork branching at one end, and $E_6,E_7,E_8$ having three branches meeting at a single vertex.
 
 {% diagram Math/Lie_Theory/Borel_Subgroup-1.svg width="25.06em" alt="ADE type Dynkin diagram" %}
 
 ## Borel Subalgebra
 
-We now turn to subalgebras of a Lie algebra that are defined naturally from a root system. In [§Root Systems, ⁋Definition 15](/en/math/lie_theory/root_systems#def15){: data-lid="eokne" } we defined the set $\Phi^+$ of positive roots. Choosing $\Phi^+$ amounts to selecting a Weyl chamber, and from this choice we can define a distinguished subalgebra.
+Now let us examine subalgebras of a Lie algebra that are naturally defined from a root system. In [§Root Systems, ⁋Definition 15](/en/math/lie_theory/root_systems#def15){: data-lid="eokne" }, we defined the collection $\Phi^+$ of positive roots. This is equivalent to choosing a Weyl chamber, and from this we can define a special subalgebra of the Lie algebra.
 
 ::: Definition 9
-For a semisimple Lie algebra $\mathfrak{g}$, a Cartan subalgebra $\mathfrak{h}$, and a set of positive roots $\Phi^+$, the *Borel subalgebra* is the subalgebra
+For a semisimple Lie algebra $\mathfrak{g}$, a Cartan subalgebra $\mathfrak{h}$, and a collection of positive roots $\Phi^+$, the *Borel subalgebra* is the following subalgebra.
 
-$$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha.$$
+$$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha$$
 
-Here $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$ is called the *nilradical* of $\mathfrak{b}$.
+In this case, $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$ is called the *nilradical* of $\mathfrak{b}$.
 :::
 
-A Borel subalgebra contains all root spaces corresponding to positive roots, and may be regarded as the largest "upper triangular" subalgebra containing the Cartan subalgebra.
+A Borel subalgebra contains all root spaces corresponding to positive roots, and can be thought of as the largest "upper triangular" subalgebra containing the Cartan subalgebra.
 
 ::: Proposition 10
 For a Borel subalgebra $\mathfrak{b}$, the following hold.
 
 1. $\mathfrak{b}$ is solvable.
 2. $\mathfrak{b}$ is a maximal solvable subalgebra of $\mathfrak{g}$.
-3. Every conjugate of $\mathfrak{b}$ is again a Borel subalgebra. That is, for any $g\in G$, $\Ad(g)\mathfrak{b}$ is the Borel subalgebra associated to some positive system $\Phi'^+$.
+3. Every conjugate of $\mathfrak{b}$ is a Borel subalgebra. That is, for any $g\in G$, $\Ad(g)\mathfrak{b}$ is a Borel subalgebra for some positive system $\Phi'^+$.
 :::
 ::: Proof
 (1) Consider the derived series of $\mathfrak{b}$. We have $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$, and since $\mathfrak{n}$ is nilpotent, $\mathfrak{b}$ is solvable. Concretely, $\mathfrak{n}$ has a structure analogous to the algebra of strictly upper triangular matrices.
 
-(2) Suppose $\mathfrak{s}$ is a solvable subalgebra containing $\mathfrak{b}$. By the root decomposition it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ omits some positive root then $\mathfrak{s}\subseteq\mathfrak{b}$; if $S$ contains a negative root then $\mathfrak{s}$ is no longer solvable. Hence $\mathfrak{s}=\mathfrak{b}$.
+(2) Suppose $\mathfrak{b}$ is contained in a solvable subalgebra $\mathfrak{s}$. By the root decomposition, it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ does not contain any positive root, then $\mathfrak{s}\subseteq\mathfrak{b}$, and if $S$ contains a negative root $-\alpha$, then $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$ forms, inside $\mathfrak{s}$, a copy of $\mathfrak{sl}_2$, and since $\mathfrak{sl}_2$ is simple, $\mathfrak{s}$ is no longer solvable. Therefore $\mathfrak{s}=\mathfrak{b}$.
 
-(3) Since $\Ad(g)\mathfrak{b}$ is again a maximal solvable subalgebra, by (2) it is the Borel subalgebra for some positive system.
+(3) Since $\Ad(g)\mathfrak{b}$ is again a maximal solvable subalgebra, by (2) above it is a Borel subalgebra for some positive system.
 :::
 
 ## Borel Subgroup and Flag Variety
 
-We now adopt the Lie group perspective. For a complex semisimple Lie group $G_\mathbb{C}$, we may consider the Lie subgroup corresponding to a Borel subalgebra $\mathfrak{b}$.
+Now let us turn to the Lie group perspective. For a complex semisimple Lie group $G_\mathbb{C}$, we can consider the Lie subgroup corresponding to the Borel subalgebra $\mathfrak{b}$.
 
 ::: Definition 11
-The *Borel subgroup* $B$ of a complex semisimple Lie group $G_\mathbb{C}$ is the connected Lie subgroup corresponding to a Borel subalgebra $\mathfrak{b}$.
+For a complex semisimple Lie group $G_\mathbb{C}$, the *Borel subgroup* $B$ is the connected Lie subgroup corresponding to the Borel subalgebra $\mathfrak{b}$.
 
 $$\mathfrak{b}=\Lie(B)$$
 :::
 
-A Borel subgroup $B$ is a maximal connected solvable subgroup of $G_\mathbb{C}$. We now define the associated quotient space.
+A Borel subgroup $B$ is a maximal connected solvable subgroup of $G_\mathbb{C}$. Now let us define the quotient space.
 
 ::: Definition 12
-For a complex semisimple Lie group $G_\mathbb{C}$ and a Borel subgroup $B$, the *flag variety* is the homogeneous space
+For a complex semisimple Lie group $G_\mathbb{C}$ and its Borel subgroup $B$, the *flag variety* is the following homogeneous space.
 
-$$\mathcal{F}=G_\mathbb{C}/B.$$
+$$\mathcal{F}=G_\mathbb{C}/B$$
 :::
 
-The term *flag variety* arises because for $\GL(n;\mathbb{C})$, the space $\mathcal{F}$ coincides with the space of complete flags in $\mathbb{C}^n$. In general the flag variety is a projective variety, and it is deeply connected to the representation theory of $G_\mathbb{C}$.
+The name flag variety was given because in the case of $\GL(n;\mathbb{C})$, $\mathcal{F}$ coincides with the space of complete flags in $\mathbb{C}^n$. In general, the flag variety is a projective variety, and this has a deep connection with the representation theory of $G_\mathbb{C}$.
 
 ::: Example 13
-Consider the case $G_\mathbb{C}=\GL(n;\mathbb{C})$. The Borel subgroup $B$ is the group of upper triangular matrices, and the flag variety $\GL(n;\mathbb{C})/B$ is in bijection with the space of complete flags in $\mathbb{C}^n$,
+Consider the case $G_\mathbb{C}=\GL(n;\mathbb{C})$. The Borel subgroup $B$ is the collection of upper triangular matrices, and the flag variety $\GL(n;\mathbb{C})/B$ is in bijection with the space of complete flags in $\mathbb{C}^n$,
 
-$$0=V_0\subseteq V_1\subseteq V_2\subseteq\cdots\subseteq V_n=\mathbb{C}^n,\qquad \dim V_i=i.$$
+$$0=V_0\subseteq V_1\subseteq V_2\subseteq\cdots\subseteq V_n=\mathbb{C}^n,\qquad \dim V_i=i$$
 
-Specifically, the coset $gB\in\GL(n;\mathbb{C})/B$ corresponds to the flag $V_i=\span\{ge_1,\ldots,ge_i\}$. This space is realized as a projective variety via the embedding
+Specifically, $gB\in\GL(n;\mathbb{C})/B$ corresponds to the flag $V_i=\span\{ge_1,\ldots,ge_i\}$. This space is realized as a projective variety via the embedding
 
-$$\GL(n;\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n).$$
+$$\GL(n;\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n)$$
 :::
 
 ## Connection with the Compact Form
 
-We now examine the relationship between a compact Lie group $G$ and its complexification $G_\mathbb{C}$. This connection furnishes a bridge between the two perspectives: $G/T$ for compact groups and $G_\mathbb{C}/B$ for complex groups.
+We now examine the relationship between a compact Lie group $G$ and its complexification $G_\mathbb{C}$. This connection provides a bridge between the two perspectives ($G/T$ for a compact group and $G_\mathbb{C}/B$ for a complex group).
 
 ::: Definition 14
 A *compact form* of a complex Lie group $G_\mathbb{C}$ is a compact Lie group $G$ satisfying the following conditions.
@@ -202,65 +203,65 @@ A *compact form* of a complex Lie group $G_\mathbb{C}$ is a compact Lie group $G
 3. The Killing form is negative definite on $\mathfrak{g}_0$.
 :::
 
-Every complex semisimple Lie group admits a compact form. For example, the compact form of $\SL(n;\mathbb{C})$ is $\SU(n)$, that of $\SO(n;\mathbb{C})$ is $\SO(n)$, and that of $\Sp(2n;\mathbb{C})$ is $\Sp(n)=\Sp(2n;\mathbb{C})\cap\Umat(2n)$.
+Every complex semisimple Lie group has a compact form. For example, the compact form of $\SL(n;\mathbb{C})$ is $\SU(n)$, that of $\SO(n;\mathbb{C})$ is $\SO(n)$, and that of $\Sp(2n;\mathbb{C})$ is $\Sp(n)=\Sp(2n;\mathbb{C})\cap\Umat(2n)$.
 
-We now state the central result.
+We now state the key result.
 
 ::: Proposition 15
-Let $G$ be a compact connected Lie group, $G_\mathbb{C}$ its complexification, $T\subseteq G$ a maximal torus, and $B\subseteq G_\mathbb{C}$ the corresponding Borel subgroup. Then the inclusion
+For a compact connected semisimple Lie group $G$, its complexification $G_\mathbb{C}$, a maximal torus $T\subseteq G$, and the corresponding Borel subgroup $B\subseteq G_\mathbb{C}$, the inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
 is a homotopy equivalence. In particular, $G/T$ and $G_\mathbb{C}/B$ have the same cohomology.
 :::
 ::: Proof
-Consider the Iwasawa decomposition $G_\mathbb{C}=G\cdot A\cdot N$, where
+Consider the Iwasawa decomposition of $G_\mathbb{C}$, $G_\mathbb{C}=G\cdot A\cdot N$, where
 
-- $A=\exp(i\mathfrak{t})$ is the abelian subgroup corresponding to the split real form of $T$, and
+- $A=\exp(i\mathfrak{t})$ is the abelian subgroup corresponding to the split real form of $T$.
 - $N=\exp(\mathfrak{n})$ is the unipotent subgroup corresponding to $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$.
 
-The Iwasawa decomposition implies $G\cap (A\cdot N)=\{e\}$ (the decomposition of each element is unique). The Borel subgroup $B$ contains the complex maximal torus $T_\mathbb{C}=T\cdot A$ and decomposes as $B=T\cdot A\cdot N$, so $G\cap B = T\cdot(G\cap A\cdot N)=T$. Now consider the chain
+The Iwasawa decomposition implies $G\cap (A\cdot N)=\{e\}$ (the decomposition of each element is unique). Because the Borel subgroup $B$ contains the complex maximal torus $T_\mathbb{C}=T\cdot A$ and decomposes as $B=T\cdot A\cdot N$, we have $G\cap B = T\cdot(G\cap A\cdot N)=T$. Now consider the following chain:
 
-$$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(G\cap T\cdot A\cdot N)=G/T.$$
+$$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(G\cap T\cdot A\cdot N)=G/T$$
 
 The first inclusion is induced by $G\hookrightarrow G_\mathbb{C}$; since the composition is the identity map on $G/T$, this inclusion is a homotopy equivalence.
 
-More precisely, because $A\cdot N\cong\mathbb{R}^n$ is contractible (being Euclidean space), the projection $G_\mathbb{C}/B\rightarrow G/T$ induces a deformation retraction.
+More precisely, since $A\cdot N\cong\mathbb{R}^n$ (contractible as a Euclidean space), $G_\mathbb{C}/B\rightarrow G/T$ induces a deformation retraction.
 :::
 
-This result means that $G/T$, from the compact Lie group viewpoint, and the flag variety $G_\mathbb{C}/B$, from the complex Lie group viewpoint, are essentially the same object. In particular, one may study the topological properties of $G/T$—its cohomology, homotopy groups, and so on—by exploiting the algebro-geometric properties of the flag variety.
+This result means that $G/T$ from the viewpoint of compact Lie groups and the flag variety $G_\mathbb{C}/B$ from the viewpoint of complex Lie groups are essentially the same object. In particular, one can exploit the algebro-geometric properties of the flag variety to study the topological properties of $G/T$ (cohomology, homotopy groups, etc.).
 
 ## Bruhat Decomposition
 
-Finally, we introduce an important decomposition of $G_\mathbb{C}$. This decomposition is essential for understanding the cell structure of the flag variety.
+Finally, we introduce an important decomposition of $G_\mathbb{C}$. This decomposition is crucial for understanding the cell structure of the flag variety.
 
 ::: Proposition 16
-Let $G_\mathbb{C}$ be a complex semisimple Lie group, $B$ a Borel subgroup, and $W$ the Weyl group. Then the following decomposition holds:
+For a complex semisimple Lie group $G_\mathbb{C}$, a Borel subgroup $B$, and the Weyl group $W$, the following decomposition holds:
 
-$$G_\mathbb{C}=\bigsqcup_{w\in W}BwB.$$
+$$G_\mathbb{C}=\bigsqcup_{w\in W}BwB$$
 
-This is called the *Bruhat decomposition*. A more detailed discussion, together with its generalization to parabolic subgroups, is given in [§Bruhat Decomposition, ⁋Theorem 5](/en/math/lie_theory/bruhat_decomposition#thm5){: data-lid="osavw" }. Each double coset $BwB$ is a locally closed subset of $G_\mathbb{C}$, and its closure is given by
+This is called the *Bruhat decomposition*. A more detailed discussion of this and its generalization to parabolic subgroups are treated in [§Bruhat Decomposition, ⁋Theorem 5](/en/math/lie_theory/bruhat_decomposition#thm5){: data-lid="osavw" }. Each double coset $BwB$ is a locally closed subset of $G_\mathbb{C}$, and its closure is given as follows:
 
-$$\overline{BwB}=\bigcup_{v\leq w}BvB,$$
+$$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 
-where $\leq$ denotes the Bruhat order on the Weyl group.
+Here $\leq$ is the Bruhat order on the Weyl group.
 :::
 ::: Proof
-First we show that $G_\mathbb{C}=\bigcup_{w\in W}BwB$. For any $g\in G_\mathbb{C}$, one checks that $g^{-1}B\cap T\neq\emptyset$, and then uses elements of the Weyl group to move $g$ into the appropriate double coset.
+First, let us show that $G_\mathbb{C}=\bigcup_{w\in W}BwB$. For any $g\in G_\mathbb{C}$, after checking whether $g^{-1}B\cap T\neq\emptyset$, one can send $g$ to an appropriate double coset using an element of the Weyl group.
 
-For disjointness, suppose $BwB=BvB$. Then $wBw^{-1}=vBv^{-1}$, whence $w^{-1}v\in N(T)$ and $w^{-1}v$ normalizes $B$. But since $B\cap N(T)=T$, we have $w^{-1}v\in T$, and therefore $w=v$ in $W$.
+To see disjointness, suppose $BwB=BvB$. Then $wBw^{-1}=vBv^{-1}$, from which $w^{-1}v\in N(T)$ and $w^{-1}v$ normalizes $B$. But since $B\cap N(T)=T$, we have $w^{-1}v\in T$, and therefore $w=v$ in $W$.
 
-The statement concerning closures follows from the definition of the Bruhat order.
+The statement concerning the closure follows from the definition of the Bruhat order.
 :::
 
-The Bruhat decomposition provides a cell decomposition of the flag variety $G_\mathbb{C}/B$. For each $w\in W$, the Schubert cell $X_w=BwB/B$ is isomorphic to an affine space of dimension $\ell(w)$, and these cells together cover all of $G_\mathbb{C}/B$. Here $\ell(w)$ is the *length* of $w$, i.e. the minimal number of simple reflections needed to express $w$.
+The Bruhat decomposition provides a cell decomposition of the flag variety $G_\mathbb{C}/B$. For each $w\in W$, $X_w^\circ=BwB/B$ is isomorphic to an affine space of dimension $\ell(w)$, and collecting these covers all of $G_\mathbb{C}/B$. Here $\ell(w)$ is the *length* of $w$, that is, the minimum number needed when expressing $w$ as a product of simple reflections.
 
 ::: Example 17
-When $G_\mathbb{C}=\GL(n;\mathbb{C})$, the Weyl group is $W\cong S_n$, and for each permutation $\sigma\in S_n$ the length $\ell(\sigma)$ equals the number of inversions. The concrete form of this decomposition and its relation to Gaussian elimination are discussed in [§Bruhat Decomposition, ⁋Example 7](/en/math/lie_theory/bruhat_decomposition#ex7){: data-lid="0qvvl" }.
+In the case where $G_\mathbb{C}=\GL(n;\mathbb{C})$, the Weyl group is $W\cong S_n$, and for each permutation $\sigma\in S_n$, $\ell(\sigma)$ is the number of inversions. The concrete form of this decomposition and its relation to Gauss elimination are discussed in [§Bruhat Decomposition, ⁋Example 7](/en/math/lie_theory/bruhat_decomposition#ex7){: data-lid="0qvvl" }.
 
-Specifically, an inversion of $\sigma$ is a pair $(i,j)$ with $i<j$ and $\sigma(i)>\sigma(j)$. By the Bruhat decomposition, $\GL(n;\mathbb{C})/B$ admits a cell decomposition ranging from a $0$-dimensional cell (the identity permutation, with $0$ inversions) up to an $n(n-1)/2$-dimensional cell (the reverse permutation, with the maximum number of inversions).
+Specifically, an inversion of $\sigma$ is, with $i<j$ and $\sigma(i)>\sigma(j)$, the number of pairs $(i,j)$. By the Bruhat decomposition, $\GL(n;\mathbb{C})/B$ has a cell decomposition ranging from a $0$-dimensional cell (identity permutation, $0$ inversions) to an $n(n-1)/2$-dimensional cell (reverse permutation, maximum inversions).
 
-From this cell decomposition one can compute the cohomology of $\GL(n;\mathbb{C})/B$; its Betti numbers are determined by the Bruhat order on the Weyl group.
+From this cell decomposition one can compute the cohomology of $\GL(n;\mathbb{C})/B$, and its Betti numbers are determined by the Bruhat order on the Weyl group.
 :::
 
 ---
