@@ -9015,6 +9015,13 @@ H:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects
+- id: hopf_trace_formula
+  en: Hopf trace formula
+  ko: 호프 대각합 공식
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
+    url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
 - id: hori-vafa_mirror
   en: Hori-Vafa mirror
   ko: 호리-바파 거울
