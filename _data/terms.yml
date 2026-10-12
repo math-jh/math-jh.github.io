@@ -20119,6 +20119,13 @@ T:
   defs:
   - label: '[환론] §멱등원과 곱분해'
     url: /ko/math/ring_theory/idempotents
+- id: trivial_bundle
+  en: trivial bundle
+  ko: 자명한 다발
+  primary: en
+  defs:
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
 - id: trivial_extension
   en: trivial extension
   ko: 자명한 확장
