@@ -296,7 +296,7 @@ $$[e_\alpha,f_\alpha]=h_\alpha,\quad [h_\alpha,e_\alpha]=2e_\alpha,\quad [h_\alp
 
 $$[h_\alpha, x]=\beta(h_\alpha)x\qquad\text{for all $x\in \mathfrak{g}_\beta$}$$
 
-이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 또 $\sl_2$ representation의 임의의 weight subspace는 $1$차원이므로 각각의 $\mathfrak{g}_\beta$들도 $1$차원이다. 
+이므로 $\mathfrak{g}_\beta$는 이 action에 대한 weight $\beta(h_\alpha)$의 weight space이다. 그런데 앞서 살펴봤듯 $\sl_2$-representation의 weight은 항상 정수이므로, 이 값 $\beta(h_\alpha)=\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}$은 반드시 정수여야 함을 안다. 또, $\mathfrak{h}$와 $\mathfrak{g}_{c\alpha}$ ($c\in\mathbb{C}^\times$)들의 합 $M$은 $\sl_{2,\alpha}$-subrepresentation이고, 그 weight $0$ subspace는 $\mathfrak{h}=\ker\alpha\oplus\mathbb{C}h_\alpha$이다. 여기서 $\ker\alpha$에는 $\sl_{2,\alpha}$가 자명하게 작용하고 $h_\alpha$는 subrepresentation $\sl_{2,\alpha}$에 속하므로, $M$의 irreducible component 중 even weight를 갖는 것은 $\ker\alpha$의 trivial representation들과 $\sl_{2,\alpha}$뿐이다. 따라서 weight $2$의 weight space인 $\mathfrak{g}_\alpha$는 $\mathbb{C}e_\alpha$와 같고, $\alpha$는 임의의 root였으므로 각각의 $\mathfrak{g}_\beta$들도 $1$차원이다. 
 
 한편, 앞서 우리는 $\mathfrak{h}$이 $H_\alpha$들에 의해 생성되는 것을 보았으므로, 그 상수배인 $h_\alpha$들도 $\mathfrak{h}$를 생성한다. 앞서 말했듯 우리는 여기에 root system 구조를 주기 위해 $h_\alpha$들로 생성되는 *real* vector space
 
@@ -430,7 +430,7 @@ Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space
 
 지금까지 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 포착하는 Weyl group을 reflection들 $s_\alpha$로 생성되는 유한군으로 정의하였다. 한편 [§원환면의 작용, §§극대 원환면](/ko/math/lie_theory/torus_action#극대-원환면){: data-lid="ncqba" }에서 우리는 compact Lie group $G$의 Weyl group을 $W=N(T)/T$로 정의하였다. 이 절에서는 두 정의가 자연스럽게 일치함을 보인다.
 
-우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$가 $\mathfrak{g}$의 Cartan subalgebra가 된다.
+우선 $\mathfrak{g}$가 compact connected Lie group $G$의 Lie algebra라고 하자. $\mathfrak{g}$가 semisimple인 것은 $G$의 universal cover가 $\mathbb{R}^n$을 factor로 갖지 않는 것과 동치이다. 이 경우 $G$의 maximal torus $T$의 Lie algebra $\mathfrak{t}$의 complexification $\mathfrak{t}_\mathbb{C}$가 $\mathfrak{g}_\mathbb{C}=\mathfrak{g}\otimes_\mathbb{R}\mathbb{C}$의 Cartan subalgebra가 된다. 이하의 root와 root space는 이 complexification에서 생각하며, $\Ad$도 $\mathfrak{g}_\mathbb{C}$ 위로 확장하여 생각한다.
 
 이제 $N(T)$가 $\mathfrak{t}^\ast$ 위에 작용하는 방식을 살펴보자. 임의의 $n\in N(T)$에 대하여, adjoint representation $\Ad(n)$은 $\mathfrak{g}$ 위의 automorphism이고 $nTn^{-1}=T$이므로 $\mathfrak{t}$를 보존한다. 따라서 $\Ad(n)\vert_\mathfrak{t}$는 $\mathfrak{t}$의 automorphism이고, 이를 dual로 옮기면 $\mathfrak{t}^\ast$ 위의 linear action을 얻는다.
 
@@ -444,13 +444,13 @@ $$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
 
 인데, $\Ad(n)^{-1}H\in\mathfrak{t}$이고 $X\in\mathfrak{g}_\alpha$이므로
 
-$$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
+$$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n\cdot\alpha)(H)\cdot X$$
 
 이다. 따라서
 
-$$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
+$$[H,\Ad(n)X]=(n\cdot\alpha)(H)\cdot\Ad(n)X$$
 
-이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n^{-1}\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
+이고, 이는 $\Ad(n)X\in\mathfrak{g}_{n\cdot\alpha}$임을 의미한다. 즉 $\Ad(n)$은 $\mathfrak{g}_\alpha$를 $\mathfrak{g}_{n\cdot\alpha}$로 보내고, 이로부터 $n\cdot\alpha\in\Phi$임을 안다.
 :::
 
 따라서 우리는 $W=N(T)/T$가 $\mathfrak{t}^\ast$ 위에, 특히 root system $\Phi$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
@@ -459,7 +459,7 @@ $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 각각의 root $\alpha\in\Phi$에 대하여, $\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$를 만족하는 $n_\alpha\in N(T)$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $W=N(T)/T$와 root system의 Weyl group은 isomorphic하다.
 :::
 ::: 증명
-임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\sl(2;\mathbb{C})$와 isomorphic한 $\mathfrak{g}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
+임의의 root $\alpha\in\Phi$에 대하여, 앞서 살펴본 것과 같이 $\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$는 $\sl(2;\mathbb{C})$와 isomorphic한 $\mathfrak{g}_\mathbb{C}$의 subalgebra이다. 이에 대응하는 $G$의 Lie subgroup $G_\alpha$는 $\SU(2)$ 혹은 $\SO(3)$와 locally isomorphic하다.
 
 $G_\alpha$는 $T$와 교집합을 취했을 때 1차원 torus $T_\alpha=T\cap G_\alpha$를 이룬다. 이제 $N(T)$의 원소 중 $\Ad$-action이 $\mathfrak{t}$ 위에서 reflection $s_\alpha$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
 
