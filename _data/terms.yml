@@ -8302,6 +8302,13 @@ G:
   see:
   - label: Group
     id: group
+- id: gysin_exact_sequence
+  en: Gysin exact sequence
+  ko: 기진 완전열
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: gysin_homomorphism
   en: Gysin map
   ko: 귀진 사상
