@@ -38,7 +38,7 @@ $$\lvert E^G\rvert\equiv\lvert E\rvert\pmod{p}$$
 즉, 집합 $E\setminus E^G$의 크기가 $p$의 배수임을 보여야 한다. 그런데 $E\setminus E^G$는 그 크기가 $1$보다 큰 (disjoint한) $G$-orbit들의 합집합이고, 이들 각각의 orbit은 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14){: data-lid="8cb30" }에 의하여 그 크기가 $p$의 거듭제곱이므로 이것이 성립한다. 
 :::
 
-특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2){: data-lid="q5psv" }에 의하여 $p$-group $G$의 center $Z(G)$는 trivial group이 아님을 알 수 있다. 
+특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2){: data-lid="q5psv" }에 의하여 trivial group이 아닌 $p$-group $G$의 center $Z(G)$는 trivial group이 아님을 알 수 있다. 
 
 ::: 정리 3
 크기 $p^r$의 $p$-group $G$에 대하여, $G$의 subgroup들의 series 

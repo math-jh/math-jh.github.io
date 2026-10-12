@@ -40,7 +40,7 @@ holds.
 That is, we must show that the size of the set $E\setminus E^G$ is a multiple of $p$. But $E\setminus E^G$ is the union of (disjoint) orbits of size greater than $1$ under $G$, and the size of each such orbit is a power of $p$ by [\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="8cb30" }, so this holds.
 :::
 
-In particular, considering the case where $E=G$ and $G$ acts by inner automorphisms, $E^G$ is precisely the center of $G$, so by [Lemma 2](#lem2){: data-lid="q5psv" } we see that for a $p$-group $G$, the center $Z(G)$ is not the trivial group.
+In particular, considering the case where $E=G$ and $G$ acts by inner automorphisms, $E^G$ is precisely the center of $G$, so by [Lemma 2](#lem2){: data-lid="q5psv" } we see that for a nontrivial $p$-group $G$, the center $Z(G)$ is not the trivial group.
 
 ::: Theorem 3
 For an order-$p^r$ $p$-group $G$, there exists a series of subgroups of $G$
