@@ -78,11 +78,11 @@ Abelian category $\mathcal{A}$가 enough projective를 갖는다면, $\mathcal{A
 
 $$\cdots \overset{d_3}{\longrightarrow} P_2 \overset{d_2}{\longrightarrow} P_1 \overset{d_1}{\longrightarrow} P_0 \overset{\epsilon_0}{\longrightarrow} M \longrightarrow 0$$
 
-을 보면, 다음의 식
+을 보면, $n\geq 2$일 때 다음의 식
 
 $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})=\ker(\iota_{n-2}\circ\epsilon_{n-1})=\ker(d_{n-1})$$
 
-을 얻는다. 여기서 식 $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$는 $\epsilon_n$이 surjective라는 것을, 식 $\ker(\epsilon_{n-1})=\ker(d_{n-1})$은 $\iota_{n-2}$이 injective라는 것을 각각 이용하였다. 따라서 $P_\bullet$은 $M$의 projective resolution이다.
+을 얻고, $n=1$일 때도 $\im(d_1)=\im(\iota_0\circ\epsilon_1)=\im(\iota_0)=\ker(\epsilon_0)$이다. 여기서 식 $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$는 $\epsilon_n$이 surjective라는 것을, 식 $\ker(\epsilon_{n-1})=\ker(d_{n-1})$은 $\iota_{n-2}$이 injective라는 것을 각각 이용하였다. 따라서 $P_\bullet$은 $M$의 projective resolution이다.
 :::
 
 이번 글에서 우리의 목표 중 하나는 임의의 $A$-module은 항상 projective resolution과 injective resolution을 갖는다는 것을 증명하는 것이다. [명제 3](#prop3){: data-lid="f3ivp" }을 사용하면 이는 $\lMod{A}$가 enough projective와 enough injective를 갖는다는 것을 증명하면 충분하다. $\lMod{A}$가 enough projective를 갖는다는 것은 자명하다.
@@ -100,7 +100,7 @@ Category $\lMod{A}$는 enough projective를 갖는다.
 Category $\lMod{A}$는 enough injective를 갖는다.
 :::
 ::: 증명
-어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7){: data-lid="r62ex" }) 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
+어렵지 않게 exact한 left adjoint를 갖는 functor는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 exact functor인 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7){: data-lid="r62ex" }) 또, 임의의 $A$-module $M$을 abelian group으로 보아 $\Ab$의 injective object $I$로의 injection $j:M\rightarrow I$를 잡으면, adjunction으로 얻어지는 $A$-module homomorphism $M\rightarrow\Hom_\mathbb{Z}(A,I)$는 $m\mapsto(a\mapsto j(am))$으로 주어지고, 이를 $a=1$에서 계산하면 $j$가 되므로 이 또한 injection이다. 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $G\in\Ab$에 대하여,
 
 $$I(G)=\prod_{f\in\Hom_\Ab(G, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 

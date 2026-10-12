@@ -79,11 +79,11 @@ Then looking at
 
 $$\cdots \overset{d_3}{\longrightarrow} P_2 \overset{d_2}{\longrightarrow} P_1 \overset{d_1}{\longrightarrow} P_0 \overset{\epsilon_0}{\longrightarrow} M \longrightarrow 0$$
 
-obtained in the middle, we obtain the following equation
+obtained in the middle, for $n\geq 2$ we obtain the following equation
 
 $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})=\ker(\iota_{n-2}\circ\epsilon_{n-1})=\ker(d_{n-1})$$
 
-Here, the equation $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$ uses the fact that $\epsilon_n$ is surjective, and the equation $\ker(\epsilon_{n-1})=\ker(d_{n-1})$ uses the fact that $\iota_{n-2}$ is injective, respectively. Therefore $P_\bullet$ is a projective resolution of $M$.
+and for $n=1$ we also have $\im(d_1)=\im(\iota_0\circ\epsilon_1)=\im(\iota_0)=\ker(\epsilon_0)$. Here, the equation $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$ uses the fact that $\epsilon_n$ is surjective, and the equation $\ker(\epsilon_{n-1})=\ker(d_{n-1})$ uses the fact that $\iota_{n-2}$ is injective, respectively. Therefore $P_\bullet$ is a projective resolution of $M$.
 :::
 
 One of our goals in this post is to prove that every $A$-module always has a projective resolution and an injective resolution. Using [Proposition 3](#prop3){: data-lid="f3ivp" }, it suffices to prove that $\lMod{A}$ has enough projectives and enough injectives. That $\lMod{A}$ has enough projectives is trivial.
@@ -101,7 +101,7 @@ However, since we know nothing about $\lMod{A}^\op$, it does not follow from the
 The category $\lMod{A}$ has enough injectives.
 :::
 ::: Proof
-One can easily show that a functor with an exact left adjoint preserves injective objects. Then, from the ring homomorphism $\mathbb{Z}\rightarrow A$, the resulting coextension of scalars $\Ab \rightarrow \lMod{A}$ is a right adjoint of restriction of scalars, which is an exact functor, so an injective object of $\Ab$ becomes an injective object when sent to $\lMod{A}$. ([\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7){: data-lid="r62ex" }) Therefore, for the desired proof, it suffices to prove that $\Ab$ has enough injectives. This is done by defining, for any $G\in\Ab$,
+One can easily show that a functor with an exact left adjoint preserves injective objects. Then, from the ring homomorphism $\mathbb{Z}\rightarrow A$, the resulting coextension of scalars $\Ab \rightarrow \lMod{A}$ is a right adjoint of restriction of scalars, which is an exact functor, so an injective object of $\Ab$ becomes an injective object when sent to $\lMod{A}$. ([\[Algebraic Structures\] §Change of Scalars, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7){: data-lid="r62ex" }) Also, if we view any $A$-module $M$ as an abelian group and choose an injection $j:M\rightarrow I$ into an injective object $I$ of $\Ab$, the $A$-module homomorphism $M\rightarrow\Hom_\mathbb{Z}(A,I)$ obtained by adjunction is given by $m\mapsto(a\mapsto j(am))$, and evaluating this at $a=1$ yields $j$, so this is also an injection. Therefore, for the desired proof, it suffices to prove that $\Ab$ has enough injectives. This is done by defining, for any $G\in\Ab$,
 
 $$I(G)=\prod_{f\in\Hom_\Ab(G, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
