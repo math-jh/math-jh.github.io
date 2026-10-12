@@ -167,7 +167,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 으로 작용한다. 그런데 $\Aut(T)$는 torus $T=\mathbb{R}^k/\mathbb{Z}^k$의 lattice가 어디로 옮겨지는지에 의해 결정되고, 이는 $\GL(k;\mathbb{Z})$에 $\Ad(n)$을 통해 담겨있다. 즉 이 action은 $N$에서 $\GL(k;\mathbb{Z})$로의 연속함수로 생각할 수 있다. 그런데 $\GL(k;\mathbb{Z})$는 discrete이므로 $N$의 identity component $N_0$을 생각하면 $N_0$은 모두 항등행렬로 옮겨져야 한다. 즉, $N_0$은 $T$ 위에 자명하게 작용한다. 
 
-이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})\cdot T=T$가 성립해야 하고, 이로부터 $\alpha(\mathbb{R})\subseteq T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-lid="ddgfb" }에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
+이제 임의의 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$에 대하여, $\alpha(\mathbb{R})$의 원소들은 $T$의 모든 원소와 commute하므로 $\alpha(\mathbb{R})T$의 closure는 $T$를 포함하는 connected compact abelian subgroup, 즉 torus이다. 따라서 $T$의 maximality로부터 $\alpha(\mathbb{R})\subseteq T$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-lid="ddgfb" }에 의하여 이들은 $N_0$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $N_0$을 생성한다. 즉 $N_0=T$이다.
 
 따라서 $N/T$는 정확하게 $N$의 connected component의 개수이며, $N$은 compact Lie group $G$의 closed subspace로서 마찬가지로 compact이므로 이것이 무한할 수 없다.
 :::
@@ -188,9 +188,9 @@ Mapping degree를 계산하기 위해서는 regular value 하나를 선택한 �
 
 $$\overline{\langle s\rangle}=g^{-1}\overline{\langle t\rangle}g=g^{-1}Tg$$
 
-인데, $s\in T$이므로 $g^{-1}Tg\subseteq T$이다. 그런데 conjugation을 취하는 것은 homeomorphism이므로 $g^{-1}Tg$는 $T$와 isomorphic한 torus이고, 이로부터 $g^{-1}Tg=T$이며 $g\in N=N_G(T)$인 것을 안다. 또한 $s=g^{-1}tg=(gT)\cdot t$이므로,
+인데, $s\in T$이므로 $g^{-1}Tg\subseteq T$이다. 그런데 conjugation을 취하는 것은 homeomorphism이므로 $g^{-1}Tg$는 $T$와 isomorphic한 torus이고, 이로부터 $g^{-1}Tg=T$이며 $g\in N=N_G(T)$인 것을 안다. 또한 $s=g^{-1}tg=(gT)^{-1}\cdot t$이므로,
 
-$$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
+$$q^{-1}(t)=\{(gT, (gT)^{-1}\cdot t)\mid gT\in W\}$$
 
 이다. 여기서 $W$가 $N/T$로 정의된 Weyl group이며, 우리는 $q^{-1}(t)$가 $W$와 일대일 대응됨을 안다.
 
@@ -208,15 +208,11 @@ $$\dd{q_{(eT,t)}}(X,0)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(eT, t\exp
 
 $$\dd{q_{(eT,t)}}(0,Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}q(\exp(\epsilon Y)T, t)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)$$
 
-이다. 이제 $t=\exp(H)$ ($H\in\mathfrak{t}$)로 쓰면,
+이다. 이를 곱의 미분으로 계산하면
 
-$$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\exp(\Ad_{\exp(\epsilon Y)}(H))=\exp(e^{\epsilon\ad_Y}H)$$
+$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=Yt-tY=t\cdot(\Ad_t^{-1}(Y)-Y)$$
 
-이고, 따라서
-
-$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
-
-이다. 여기서 $\mathfrak{t}$가 abelian이므로 $[Y,H]\in\mathfrak{f}$이고, $\exp(H)=t$이므로 이는 $t\cdot(\Ad_t^{-1}(Y)-Y)$로 쓸 수 있다. 정리하면, 적절한 identification 하에서
+이다. 여기서 $t\in T$이므로 $\Ad_t$는 $\mathfrak{t}$를 고정하고 그 orthogonal complement $\mathfrak{f}$를 보존하며, 따라서 $\Ad_t^{-1}(Y)-Y\in\mathfrak{f}$이다. 정리하면, 적절한 identification 하에서
 
 $$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
@@ -268,7 +264,7 @@ Cartan decomposition은 $G$의 각 원소가 어떠한 maximal torus에 속한�
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-이 $\lvert W\rvert$-to-1 covering이라는 사실이다. 이로부터 $G$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
+을 [정의 12](#def12)에서 정의할 regular element들로 제한하면 $\lvert W\rvert$-to-1 covering이 된다는 사실이다. 즉 $T$의 regular element들의 집합을 $T_{\text{reg}}$, 그 conjugate들의 합집합을 $G_{\text{reg}}$라 하면 $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$는 $\lvert W\rvert$-to-1 covering이다. 이로부터 $G_{\text{reg}}$의 각 원소는 $\lvert W\rvert$개의 preimage를 가지며, 이들 간의 관계를 Weyl group이 정확히 기술해준다.
 
 구체적으로, $G/T\times T$ 위에 다음의 $W$-action을 정의하자.
 
@@ -282,7 +278,7 @@ $$q(w\cdot(gT,t))=q(gw^{-1}T, wtw^{-1})=gw^{-1}(wtw^{-1})wg^{-1}=gtg^{-1}=q(gT,t
 
 $$(G/T\times T)/W\rightarrow G$$
 
-을 유도한다. [보조정리 7](#lem7){: data-lid="tszxp" }은 이 함수가 bijection임을 증명한다.
+을 유도한다. [보조정리 7](#lem7){: data-lid="tszxp" }의 증명과 같은 논증으로, 이 함수를 regular element 위로 제한한 $(G/T\times T_{\text{reg}})/W\rightarrow G_{\text{reg}}$는 bijection임을 알 수 있다.
 
 한편, $G$의 conjugacy class들의 공간을 $\Conj(G)$라 하자. 그럼 각 conjugacy class 
 

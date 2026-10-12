@@ -167,7 +167,7 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 
 However, $\Aut(T)$ is determined by where the lattice of the torus $T=\mathbb{R}^k/\mathbb{Z}^k$ is sent, and this is embedded in $\GL(k;\mathbb{Z})$ via $\Ad(n)$. That is, this action can be thought of as a continuous map from $N$ to $\GL(k;\mathbb{Z})$. But since $\GL(k;\mathbb{Z})$ is discrete, considering the identity component $N_0$ of $N$, all of $N_0$ must be sent to the identity matrix. That is, $N_0$ acts trivially on $T$.
 
-Now for an arbitrary 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$, we must have $\alpha(\mathbb{R})\cdot T=T$, and from this we know that $\alpha(\mathbb{R})\subseteq T$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-lid="ddgfb" }, these cover some open neighborhood of the identity in $N_0$, and therefore generate $N_0$. That is, $N_0=T$.
+Now for an arbitrary 1-parameter subgroup $\alpha:\mathbb{R}\rightarrow N_0$, since the elements of $\alpha(\mathbb{R})$ commute with all elements of $T$, the closure of $\alpha(\mathbb{R})T$ is a connected compact abelian subgroup containing $T$, that is, a torus. Therefore, from the maximality of $T$, we know that $\alpha(\mathbb{R})\subseteq T$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-lid="ddgfb" }, these cover some open neighborhood of the identity in $N_0$, and therefore generate $N_0$. That is, $N_0=T$.
 
 Therefore $N/T$ is exactly the number of connected components of $N$, and since $N$ is a closed subspace of the compact Lie group $G$, it is likewise compact, so this cannot be infinite.
 :::
@@ -188,9 +188,9 @@ To this end, first choose from $T$ a generator $t$ and consider its preimage $q^
 
 $$\overline{\langle s\rangle}=g^{-1}\overline{\langle t\rangle}g=g^{-1}Tg$$
 
-but since $s\in T$, we have $g^{-1}Tg\subseteq T$. However, since conjugation is a homeomorphism, $g^{-1}Tg$ is a torus isomorphic to $T$, and from this we know that $g^{-1}Tg=T$ and $g\in N=N_G(T)$. Also, since $s=g^{-1}tg=(gT)\cdot t$,
+but since $s\in T$, we have $g^{-1}Tg\subseteq T$. However, since conjugation is a homeomorphism, $g^{-1}Tg$ is a torus isomorphic to $T$, and from this we know that $g^{-1}Tg=T$ and $g\in N=N_G(T)$. Also, since $s=g^{-1}tg=(gT)^{-1}\cdot t$,
 
-$$q^{-1}(t)=\{(gT, (gT)\cdot t)\mid gT\in W\}$$
+$$q^{-1}(t)=\{(gT, (gT)^{-1}\cdot t)\mid gT\in W\}$$
 
 holds. Here $W$ is the Weyl group defined as $N/T$, and we see that $q^{-1}(t)$ is in one-to-one correspondence with $W$.
 
@@ -212,11 +212,7 @@ holds. Now writing $t=\exp(H)$ ($H\in\mathfrak{t}$),
 
 $$\exp(\epsilon Y)t\exp(-\epsilon Y)=\exp(\epsilon Y)\exp(H)\exp(-\epsilon Y)=\exp(\Ad_{\exp(\epsilon Y)}(H))=\exp(e^{\epsilon\ad_Y}H)$$
 
-and therefore
-
-$$\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(\epsilon Y)t\exp(-\epsilon Y)=\frac{d}{\dd{\epsilon}}\bigg\vert_{\epsilon=0}\exp(H+\epsilon[Y,H])=\exp(H)\cdot [Y,H]$$
-
-holds. Here since $\mathfrak{t}$ is abelian, $[Y,H]\in\mathfrak{f}$, and since $\exp(H)=t$, this can be written as $t\cdot(\Ad_t^{-1}(Y)-Y)$. In summary, under an appropriate identification,
+holds. Here since $t\in T$, $\Ad_t$ fixes $\mathfrak{t}$ and preserves its orthogonal complement $\mathfrak{f}$, and therefore $\Ad_t^{-1}(Y)-Y\in\mathfrak{f}$. In summary, under an appropriate identification,
 
 $$\dd{q_{(eT,t)}}=\begin{pmatrix} I & 0 \\ 0 & \Ad_t^{-1}\vert_\mathfrak{f}-I \end{pmatrix}$$
 
@@ -268,7 +264,7 @@ The Cartan decomposition tells us that each element of $G$ belongs to some maxim
 
 $$q:G/T\times T\rightarrow G;\qquad (gT,t)\mapsto gtg^{-1}$$
 
-is a $\lvert W\rvert$-to-1 covering. From this, each element of $G$ has $\lvert W\rvert$ preimages, and the relations among them are precisely described by the Weyl group.
+becomes a $\lvert W\rvert$-to-1 covering when restricted to the regular elements to be defined in [Definition 12](#def12). That is, if we denote the set of regular elements of $T$ by $T_{\text{reg}}$ and the union of their conjugates by $G_{\text{reg}}$, then $q:G/T\times T_{\text{reg}}\rightarrow G_{\text{reg}}$ is a $\lvert W\rvert$-to-1 covering. From this, each element of $G_{\text{reg}}$ has $\lvert W\rvert$ preimages, and the relations among them are precisely described by the Weyl group.
 
 Specifically, on $G/T\times T$, define the following $W$-action:
 
@@ -282,7 +278,7 @@ $q$ is $W$-invariant, and thus it induces a function from the orbit space $(G/T\
 
 $$(G/T\times T)/W\rightarrow G$$
 
-[Lemma 7](#lem7){: data-lid="tszxp" } proves that this function is a bijection.
+By the same argument as in the proof of [Lemma 7](#lem7){: data-lid="tszxp" }, we see that this function restricted to regular elements, $(G/T\times T_{\text{reg}})/W\rightarrow G_{\text{reg}}$, is a bijection.
 
 Meanwhile, let the space of conjugacy classes of $G$ be $\Conj(G)$. Then each conjugacy class
 
