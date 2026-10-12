@@ -23,7 +23,7 @@ Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결
 Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram<sub>딘킨 도표</sub>*은 다음과 같이 정의되는 그래프이다.
 
 1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
-2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
+2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\langle\alpha_i,\alpha_j\rangle\langle\alpha_j,\alpha_i\rangle$개의 edge를 둔다.
 3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 짧은 root를 향하는 arrow를 edge에 추가한다.
 :::
 
@@ -54,28 +54,28 @@ Dynkin diagram에 cycle이 존재하지 않는다. 즉, Dynkin diagram은 항상
 ::: 증명
 귀류법으로 cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$이 존재한다 하자. Cycle 내의 edge 개수는 $k-1$이며, 각 edge에 대해 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$이고 따라서 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$이다.
 
-이제 $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$를 생각하자. 그럼
+이제 각 $j$에 대하여 $e_j=\alpha_{i_j}/\lvert\alpha_{i_j}\rvert$라 하고 $e=\sum_{j=1}^{k-1}e_j$를 생각하자. 그럼
 
-$$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell})$$
+$$(e,e)=\sum_{j=1}^{k-1}(e_j,e_j)+2\sum_{j<\ell}(e_j,e_\ell)$$
 
-이다. Cycle이므로 각 $\alpha_{i_j}$는 정확히 두 개의 이웃과 연결되어 있고, 따라서
+이다. 여기서 $(e_j,e_j)=1$이고, edge로 연결된 $e_j,e_\ell$에 대해서는 $(e_j,e_\ell)<0$이고 $4(e_j,e_\ell)^2=\langle\alpha_{i_j},\alpha_{i_\ell}\rangle\langle\alpha_{i_\ell},\alpha_{i_j}\rangle\geq 1$이므로 $2(e_j,e_\ell)\leq -1$이다. Cycle이므로 각 $\alpha_{i_j}$는 정확히 두 개의 이웃과 연결되어 있고, 따라서
 
-$$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
+$$(e,e)\leq (k-1)-(k-1)=0$$
 
 이다. 이는 inner product의 positive-definiteness에 모순이다.
 :::
 
 ::: 명제 5
-Dynkin diagram에서 한 vertex에서 나가는 edge의 총 개수는 $4$를 넘지 않는다. 즉, 임의의 simple root $\alpha$에 대하여
+Dynkin diagram에서 한 vertex에서 나가는 edge의 총 개수는 $4$보다 작다. 즉, 임의의 simple root $\alpha$에 대하여
 
-$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4$$
+$$\sum_{\beta\in\Delta,\beta\neq\alpha}\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle<4$$
 
 이다.
 :::
 ::: 증명
-Simple root $\alpha$에 수직인 hyperplane을 $H_\alpha$라 하자. $\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하면, 각 $\beta_i$는 $H_\alpha$와 다른 각도를 이룬다. 
+$\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하자. 만일 서로 다른 $\beta_i$, $\beta_j$가 edge로 연결되어 있다면 $\alpha,\beta_i,\beta_j$가 cycle을 이루므로, [명제 4](#prop4)에 의하여 $\beta_i$들은 서로 orthogonal이다. 
 
-$\beta_i$를 $H_\alpha$에 정사영한 벡터들의 linear independence로부터 $m\leq 3$임을 보일 수 있다. 또한 각 $\beta_i$에 대해 $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$이므로 총합은 $4$를 넘지 않는다.
+이제 $e_0=\alpha/\lvert\alpha\rvert$, $e_i=\beta_i/\lvert\beta_i\rvert$라 하면 $e_1,\ldots,e_m$은 orthonormal이고, simple root들의 linear independence에 의해 $e_0$는 이들의 span에 속하지 않으므로 Bessel inequality에 의해 $\sum_{i=1}^m(e_0,e_i)^2<(e_0,e_0)=1$이다. 그런데 $\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle=4(e_0,e_i)^2$이므로 총합은 $4$보다 작다.
 :::
 
 ## ADE 분류
@@ -156,7 +156,7 @@ Borel subalgebra $\mathfrak{b}$에 대하여 다음이 성립한다.
 ::: 증명
 (1) $\mathfrak{b}$의 derived series를 생각하자. $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$이고, $\mathfrak{n}$은 nilpotent이므로 $\mathfrak{b}$는 solvable이다. 구체적으로 $\mathfrak{n}$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
 
-(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root $-\alpha$를 포함한다면 $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$가 $\mathfrak{s}$ 안에서 $\mathfrak{sl}_2$의 사본을 이루고, $\mathfrak{sl}_2$는 simple이므로 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
+(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 negative root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root $-\alpha$를 포함한다면 $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$가 $\mathfrak{s}$ 안에서 $\mathfrak{sl}_2$의 사본을 이루고, $\mathfrak{sl}_2$는 simple이므로 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
 
 (3) $\Ad(g)\mathfrak{b}$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
 :::
@@ -249,9 +249,9 @@ $$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 여기서 $\leq$는 Weyl group 위의 Bruhat order이다.
 :::
 ::: 증명
-우선 $G_\mathbb{C}=\bigcup_{w\in W}BwB$임을 보이자. 임의의 $g\in G_\mathbb{C}$에 대하여, $g^{-1}B\cap T\neq\emptyset$인지 확인한 후, Weyl group의 원소를 이용하여 $g$를 적절한 double coset으로 보낼 수 있다.
+우선 $G_\mathbb{C}=\bigcup_{w\in W}BwB$임을 보이자. 임의의 $g\in G_\mathbb{C}$에 대하여, 두 Borel subgroup $B$와 $gBg^{-1}$은 공통의 maximal torus를 포함하고, 이를 $B$ 안에서 conjugate하여 $T$로 옮기면 적당한 $b\in B$에 대해 $bgBg^{-1}b^{-1}$이 $T$를 포함한다. $T$를 포함하는 Borel subgroup은 $wBw^{-1}$ ($w\in W$)의 꼴이므로 $bgBg^{-1}b^{-1}=wBw^{-1}$이고, $B$의 normalizer는 $B$ 자신이므로 $w^{-1}bg\in B$, 즉 $g\in BwB$이다.
 
-Disjointness를 보기 위해, $BwB=BvB$라 하자. 그럼 $wBw^{-1}=vBv^{-1}$이고, 이로부터 $w^{-1}v\in N(T)$이며 $w^{-1}v$는 $B$를 normalize한다. 그런데 $B\cap N(T)=T$이므로 $w^{-1}v\in T$이고, 따라서 $w=v$ in $W$이다.
+Disjointness를 보기 위해, $BwB=BvB$라 하자. 그럼 $v=b_1wb_2$ ($b_1,b_2\in B$)로 쓸 수 있으므로 $vBv^{-1}=b_1(wBw^{-1})b_1^{-1}$이다. 이제 $T$와 $b_1^{-1}Tb_1$은 모두 solvable group $B\cap wBw^{-1}$에 포함된 maximal torus이므로 적당한 $c\in B\cap wBw^{-1}$에 대해 $cb_1^{-1}Tb_1c^{-1}=T$이고, 그럼 $b_1c^{-1}\in B\cap N(T)=T$이므로 $b_1\in wBw^{-1}$이다. 따라서 $wBw^{-1}=vBv^{-1}$이고, 이로부터 $w^{-1}v\in N(T)$이며 $w^{-1}v$는 $B$를 normalize한다. 그런데 $B\cap N(T)=T$이므로 $w^{-1}v\in T$이고, 따라서 $w=v$ in $W$이다.
 
 Closure에 대한 진술은 Bruhat order의 정의로부터 따라나온다.
 :::

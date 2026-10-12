@@ -25,7 +25,7 @@ The structure of a root system $\Phi$ is completely determined by the relations 
 For a root system $\Phi$ and a set of simple roots $\Delta=\{\alpha_1,\ldots,\alpha_l\}$, the *Dynkin diagram* of $\Phi$ is the graph defined as follows.
 
 1. Place one vertex for each simple root $\alpha_i$.
-2. Between two vertices $\alpha_i$ and $\alpha_j$ ($i\neq j$), place $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$ edges.
+2. Between two vertices $\alpha_i$ and $\alpha_j$ ($i\neq j$), place $\langle\alpha_i,\alpha_j\rangle\langle\alpha_j,\alpha_i\rangle$ edges.
 3. If $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$, add an arrow on the edge pointing toward the shorter root.
 :::
 
@@ -56,26 +56,26 @@ A Dynkin diagram contains no cycles. That is, a Dynkin diagram is always a tree 
 ::: Proof
 Suppose for contradiction that there exists a cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$. The number of edges in the cycle is $k-1$, and for each edge, $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$, and therefore $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$.
 
-Now consider $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$. Then
+Now for each $j$, let $e_j=\alpha_{i_j}/\lvert\alpha_{i_j}\rvert$ and consider $e=\sum_{j=1}^{k-1}e_j$. Then
 
-$$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell})$$
+$$(e,e)=\sum_{j=1}^{k-1}(e_j,e_j)+2\sum_{j<\ell}(e_j,e_\ell)$$
 
-Since it is a cycle, each $\alpha_{i_j}$ is connected to exactly two neighbors, and therefore
+Here $(e_j,e_j)=1$, and for $e_j,e_\ell$ connected by an edge, $(e_j,e_\ell)<0$ and $4(e_j,e_\ell)^2=\langle\alpha_{i_j},\alpha_{i_\ell}\rangle\langle\alpha_{i_\ell},\alpha_{i_j}\rangle\geq 1$, so $2(e_j,e_\ell)\leq -1$. Since it is a cycle, each $\alpha_{i_j}$ is connected to exactly two neighbors, and therefore
 
-$$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
+$$(e,e)\leq (k-1)-(k-1)=0$$
 
 This contradicts the positive-definiteness of the inner product.
 :::
 
 ::: Proposition 5
-In a Dynkin diagram, the total number of edges emanating from a single vertex does not exceed $4$. That is, for any simple root $\alpha$,
+In a Dynkin diagram, the total number of edges emanating from a single vertex is strictly less than $4$. That is, for any simple root $\alpha$,
 
-$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4$$
+$$\sum_{\beta\in\Delta,\beta\neq\alpha}\langle\alpha,\beta\rangle\langle\beta,\alpha\rangle<4$$
 :::
 ::: Proof
-Let $H_\alpha$ be the hyperplane orthogonal to the simple root $\alpha$. If we consider the simple roots $\beta_1,\ldots,\beta_m$ adjacent to $\alpha$, each $\beta_i$ forms a distinct angle with $H_\alpha$.
+Consider the simple roots $\beta_1,\ldots,\beta_m$ adjacent to $\alpha$. If distinct $\beta_i$ and $\beta_j$ were connected by an edge, then $\alpha,\beta_i,\beta_j$ would form a cycle, so by [Proposition 4](#prop4), the $\beta_i$ are mutually orthogonal.
 
-From the linear independence of the vectors obtained by orthogonally projecting the $\beta_i$ onto $H_\alpha$, one can show that $m\leq 3$. Moreover, since $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$ for each $\beta_i$, the total sum does not exceed $4$.
+Now let $e_0=\alpha/\lvert\alpha\rvert$ and $e_i=\beta_i/\lvert\beta_i\rvert$. Then $e_1,\ldots,e_m$ are orthonormal, and by the linear independence of the simple roots, $e_0$ does not belong to their span, so by Bessel's inequality we have $\sum_{i=1}^m(e_0,e_i)^2<(e_0,e_0)=1$. However, since $\langle\alpha,\beta_i\rangle\langle\beta_i,\alpha\rangle=4(e_0,e_i)^2$, the total sum is strictly less than $4$.
 :::
 
 ## ADE Classification
@@ -156,7 +156,7 @@ For a Borel subalgebra $\mathfrak{b}$, the following hold.
 ::: Proof
 (1) Consider the derived series of $\mathfrak{b}$. We have $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$, and since $\mathfrak{n}$ is nilpotent, $\mathfrak{b}$ is solvable. Concretely, $\mathfrak{n}$ has a structure analogous to the algebra of strictly upper triangular matrices.
 
-(2) Suppose $\mathfrak{b}$ is contained in a solvable subalgebra $\mathfrak{s}$. By the root decomposition, it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ does not contain any positive root, then $\mathfrak{s}\subseteq\mathfrak{b}$, and if $S$ contains a negative root $-\alpha$, then $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$ forms, inside $\mathfrak{s}$, a copy of $\mathfrak{sl}_2$, and since $\mathfrak{sl}_2$ is simple, $\mathfrak{s}$ is no longer solvable. Therefore $\mathfrak{s}=\mathfrak{b}$.
+(2) Suppose $\mathfrak{b}$ is contained in a solvable subalgebra $\mathfrak{s}$. By the root decomposition, it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ does not contain any negative root, then $\mathfrak{s}\subseteq\mathfrak{b}$, and if $S$ contains a negative root $-\alpha$, then $\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha},[\mathfrak{g}_\alpha,\mathfrak{g}_{-\alpha}]$ forms, inside $\mathfrak{s}$, a copy of $\mathfrak{sl}_2$, and since $\mathfrak{sl}_2$ is simple, $\mathfrak{s}$ is no longer solvable. Therefore $\mathfrak{s}=\mathfrak{b}$.
 
 (3) Since $\Ad(g)\mathfrak{b}$ is again a maximal solvable subalgebra, by (2) above it is a Borel subalgebra for some positive system.
 :::
@@ -247,9 +247,9 @@ $$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 Here $\leq$ is the Bruhat order on the Weyl group.
 :::
 ::: Proof
-First, let us show that $G_\mathbb{C}=\bigcup_{w\in W}BwB$. For any $g\in G_\mathbb{C}$, after checking whether $g^{-1}B\cap T\neq\emptyset$, one can send $g$ to an appropriate double coset using an element of the Weyl group.
+First, let us show that $G_\mathbb{C}=\bigcup_{w\in W}BwB$. For any $g\in G_\mathbb{C}$, the two Borel subgroups $B$ and $gBg^{-1}$ contain a common maximal torus, and conjugating it to $T$ inside $B$, there is some $b\in B$ such that $bgBg^{-1}b^{-1}$ contains $T$. Since a Borel subgroup containing $T$ is of the form $wBw^{-1}$ ($w\in W$), we have $bgBg^{-1}b^{-1}=wBw^{-1}$, and since the normalizer of $B$ is $B$ itself, $w^{-1}bg\in B$, that is, $g\in BwB$.
 
-To see disjointness, suppose $BwB=BvB$. Then $wBw^{-1}=vBv^{-1}$, from which $w^{-1}v\in N(T)$ and $w^{-1}v$ normalizes $B$. But since $B\cap N(T)=T$, we have $w^{-1}v\in T$, and therefore $w=v$ in $W$.
+To see disjointness, suppose $BwB=BvB$. Then we can write $v=b_1wb_2$ ($b_1,b_2\in B$), so $vBv^{-1}=b_1(wBw^{-1})b_1^{-1}$. Now $T$ and $b_1^{-1}Tb_1$ are both maximal tori contained in the solvable group $B\cap wBw^{-1}$, so for some $c\in B\cap wBw^{-1}$ we have $cb_1^{-1}Tb_1c^{-1}=T$, and then $b_1c^{-1}\in B\cap N(T)=T$, which implies $b_1\in wBw^{-1}$. Therefore $wBw^{-1}=vBv^{-1}$, from which $w^{-1}v\in N(T)$ and $w^{-1}v$ normalizes $B$. But since $B\cap N(T)=T$, we have $w^{-1}v\in T$, and therefore $w=v$ in $W$.
 
 The statement concerning the closure follows from the definition of the Bruhat order.
 :::
