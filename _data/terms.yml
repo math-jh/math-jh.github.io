@@ -52,8 +52,8 @@ A:
   ko: $a$가 $b$를 나눈다
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
   see:
   - label: 최대공약수
     lang: ko
@@ -75,13 +75,6 @@ A:
     id: associated_graded_ring
   - label: Associated graded module
     id: associated_graded_module
-- id: a_priori_error_estimate
-  en: a priori error estimate
-  ko: 선험적 오차 평가
-  primary: ko
-  defs:
-  - label: '[해석학] §미분방정식의 존재성과 유일성'
-    url: /ko/math/analysis/existence_uniqueness_ode
 - id: mathfrak_a_-stable
   en: $\mathfrak{a}$-stable
   ko: $\mathfrak{a}$-안정적 여과
@@ -712,13 +705,6 @@ A:
   defs:
   - label: '[복소해석학] §멱급수와 해석성'
     url: /ko/math/complex_analysis/power_series_and_analyticity
-- id: analytic_number_theory
-  en: analytic number theory
-  ko: 해석적 정수론
-  primary: en
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
 - id: animated_commutative_ring
   en: animated commutative ring
   ko: 애니메이트 가환환
@@ -1046,13 +1032,6 @@ A:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
-- id: asymptotic_expansion
-  en: asymptotic expansion
-  ko: 점근전개
-  primary: ko
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
 - id: atlas
   en: atlas
   ko: 좌표첩
@@ -1344,21 +1323,6 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
-- id: bernoulli_inequality
-  en: Bernoulli inequality
-  ko: 베르누이 부등식
-  primary: en
-  defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
-- id: bertrand_postulate
-  en: Bertrand postulate
-  ko: 베르트랑 가설
-  alias_en: ['Bertrand''s postulate']
-  primary: ko
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
 - id: best_approximation
   en: best approximation
   ko: 최선 근사
@@ -1381,7 +1345,7 @@ B:
   ko: 베주 항등식
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
   see:
   - label: 최대공약수
@@ -1559,17 +1523,6 @@ B:
     id: equivalence_relation
   - label: Order relation
     id: order_relation
-- id: binomial_coefficient
-  en: binomial coefficient
-  ko: 이항계수
-  primary: ko
-  defs:
-  - label: '[정수론] §페르마 소정리'
-    url: /ko/math/number_theory/fermat_little_theorem
-  see:
-  - label: 이항정리
-    lang: ko
-    id: binomial_theorem
 - id: binomial_theorem
   en: binomial theorem
   ko: 이항정리
@@ -1740,22 +1693,22 @@ B:
   ko: 유계함수
   primary: en
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
 - id: bounded_sequence
   en: bounded sequence
   ko: 유계수열
   primary: en
   defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: boundedness
   en: boundedness
   ko: 유계성
   primary: en
   defs:
-  - label: '[해석학] §수열의 수렴'
-    url: /ko/math/analysis/convergence_of_sequences
+  - label: '[해석학] §무한급수와 수렴판정법'
+    url: /ko/math/analysis/series
 - id: bracket
   en: bracket
   ko: 괄호
@@ -2054,8 +2007,8 @@ C:
   ko: 카마이클 수
   primary: ko
   defs:
-  - label: '[정수론] §페르마 소정리'
-    url: /ko/math/number_theory/fermat_little_theorem
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: cartan_decomposition
   en: Cartan decomposition
   ko: 카르탕 분해
@@ -2486,7 +2439,7 @@ C:
   ko: 중국인의 나머지 정리
   primary: ko
   defs:
-  - label: '[정수론] §중국인의 나머지 정리'
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
     url: /ko/math/number_theory/chinese_remainder_theorem
 - id: choice_function
   en: choice function
@@ -2590,8 +2543,8 @@ C:
   ko: 열린닫힌집합
   primary: en
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: closed
   en: closed
   ko: 닫힌
@@ -2658,8 +2611,8 @@ C:
   ko: 닫힌집합
   primary: ko
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
 - id: closed_subgroup
@@ -2676,13 +2629,6 @@ C:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
-- id: closed_subspace
-  en: closed subspace
-  ko: 닫힌 부분공간
-  primary: en
-  defs:
-  - label: '[해석학] §거리공간'
-    url: /ko/math/analysis/metric_spaces
 - id: closed_symmetric_monoidal_category
   en: closed symmetric monoidal category
   ko: 닫힌 대칭 모노이드 범주
@@ -3010,8 +2956,8 @@ C:
   ko: 공약수
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: commutation_factor
   en: commutation factor
   ko: 교환 인자
@@ -3577,7 +3523,7 @@ C:
   alias_en: [conditionally convergent]
   primary: ko
   defs:
-  - label: '[해석학] §무한급수'
+  - label: '[해석학] §무한급수와 수렴판정법'
     url: /ko/math/analysis/series
 - id: cone
   en: cone
@@ -3619,8 +3565,8 @@ C:
   ko: 합동식
   primary: ko
   defs:
-  - label: '[정수론] §합동식'
-    url: /ko/math/number_theory/congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: congruent
   en: congruent
   ko: 합동
@@ -3633,8 +3579,8 @@ C:
   ko: $a$와 $b$가 법 $n$에 대해 합동
   primary: ko
   defs:
-  - label: '[정수론] §합동식'
-    url: /ko/math/number_theory/congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: conic
   en: conic
   ko: 원뿔곡선
@@ -3851,8 +3797,8 @@ C:
   ko: 연속미분가능
   primary: ko
   defs:
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
+  - label: '[해석학] §미적분의 기본정리'
+    url: /ko/math/analysis/fundamental_theorem_of_calculus
 - id: continuum_hypothesis
   en: continuum hypothesis
   ko: 연속체가설
@@ -3879,8 +3825,8 @@ C:
   ko: 축약사상
   primary: en
   defs:
-  - label: '[해석학] §거리공간'
-    url: /ko/math/analysis/metric_spaces
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
 - id: contraction_constant
@@ -4415,7 +4361,7 @@ D:
   ko: 다르부 합
   primary: en
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
   see:
   - label: 리만 합
@@ -4429,8 +4375,8 @@ D:
   ko: 다르부 정리
   primary: en
   defs:
-  - label: '[해석학] §평균값 정리와 테일러 정리'
-    url: /ko/math/analysis/mean_value_theorem
+  - label: '[해석학] §미분'
+    url: /ko/math/analysis/differentiation#thm6
 - id: de_moivre_s_formula
   en: 'de Moivre''s formula'
   ko: 드무아브르 공식
@@ -4501,8 +4447,8 @@ D:
   ko: 십진 전개
   primary: en
   defs:
-  - label: '[해석학] §실수의 완비성'
-    url: /ko/math/analysis/completeness_of_reals
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
   see:
   - label: 유리수
     lang: ko
@@ -5154,7 +5100,7 @@ D:
   ko: 디오판토스 방정식
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
 - id: direct_limit
   en: direct limit (injective limit)
@@ -5273,8 +5219,8 @@ D:
   ko: 이산거리
   primary: ko
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: discrete_set
   en: discrete set
   ko: 이산집합
@@ -5403,15 +5349,15 @@ D:
   ko: 나누어떨어짐
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: division_algorithm
   en: division algorithm
   ko: 나눗셈 정리
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: division_ring
   en: division ring
   ko: 나눗셈환
@@ -5427,8 +5373,8 @@ D:
   ko: 약수
   primary: en
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: divisor_axiom
   en: divisor axiom
   ko: 인자 공리
@@ -5990,8 +5936,8 @@ E:
   ko: 동치인 거리
   primary: ko
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: equivariant_chern_class
   en: equivariant Chern class
   ko: 동변 천 특성류
@@ -6034,13 +5980,6 @@ E:
   defs:
   - label: '[미적분학] §미적분의 기본정리'
     url: /ko/math/calculus/fundamental_theorem_of_calculus
-- id: escape_of_mass
-  en: escape of mass
-  ko: 질량의 탈출
-  primary: ko
-  defs:
-  - label: '[해석학] §함수열과 점별수렴'
-    url: /ko/math/analysis/sequences_of_functions
 - id: essential_discontinuity
   en: essential discontinuity
   ko: 본질적 불연속
@@ -6103,7 +6042,7 @@ E:
   ko: 유클리드 호제법
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
 - id: euclidean_division
   en: Euclidean division
@@ -6178,8 +6117,8 @@ E:
   ko: 오일러 곱
   primary: en
   defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: euler_s_formula
   en: 'Euler''s formula'
   ko: 오일러 공식
@@ -6194,14 +6133,14 @@ E:
   ko: 오일러 정리
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi function'
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
     url: /ko/math/number_theory/euler_theorem
 - id: euler_s_totient
   en: 'Euler''s totient'
   ko: 오일러 파이 함수
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi function'
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
     url: /ko/math/number_theory/euler_theorem
 - id: euler_vector_field
   en: Euler vector field
@@ -6346,7 +6285,7 @@ E:
   ko: 확장 유클리드 호제법
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
 - id: extended_rees_algebra
   en: extended Rees algebra
@@ -6603,8 +6542,8 @@ F:
   ko: 페르마 소정리
   primary: ko
   defs:
-  - label: '[정수론] §페르마 소정리'
-    url: /ko/math/number_theory/fermat_little_theorem
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
   see:
   - label: 소수
     lang: ko
@@ -6674,13 +6613,6 @@ F:
   defs:
   - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
-- id: fibonacci_number
-  en: Fibonacci number
-  ko: 피보나치 수
-  primary: ko
-  defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
-    url: /ko/math/number_theory/euclidean_algorithm
 - id: fibration
   en: fibration
   ko: 올뭉치
@@ -7294,13 +7226,6 @@ F:
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
-- id: frobenius_endomorphism
-  en: Frobenius endomorphism
-  ko: 프로베니우스 자기준동형
-  primary: en
-  defs:
-  - label: '[정수론] §페르마 소정리'
-    url: /ko/math/number_theory/fermat_little_theorem
 - id: frobenius_manifold
   en: Frobenius manifold
   ko: 프로베니우스 다양체
@@ -8157,8 +8082,8 @@ G:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: greatest_element
   en: greatest element
   ko: 최대원소
@@ -8448,7 +8373,7 @@ H:
   ko: 조화급수
   primary: ko
   defs:
-  - label: '[해석학] §무한급수'
+  - label: '[해석학] §무한급수와 수렴판정법'
     url: /ko/math/analysis/series
 - id: hartogs_number
   en: Hartogs number
@@ -8605,8 +8530,8 @@ H:
   ko: 고계도함수
   primary: en
   defs:
-  - label: '[해석학] §평균값 정리와 테일러 정리'
-    url: /ko/math/analysis/mean_value_theorem
+  - label: '[해석학] §고계 편도함수와 극값'
+    url: /ko/math/analysis/higher_derivatives_and_extrema
   see:
   - label: $n$차 테일러 다항식
     lang: ko
@@ -9287,8 +9212,8 @@ I:
   ko: 음함수 정리
   primary: ko
   defs:
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
+  - label: '[해석학] §역함수 정리와 음함수 정리'
+    url: /ko/math/analysis/inverse_function_theorem#thm5
 - id: improper_integral
   en: improper integral
   ko: 이상적분
@@ -9470,7 +9395,7 @@ I:
   ko: 무한급수
   primary: ko
   defs:
-  - label: '[해석학] §무한급수'
+  - label: '[해석학] §무한급수와 수렴판정법'
     url: /ko/math/analysis/series
   see:
   - label: 점근분수
@@ -9724,7 +9649,7 @@ I:
   ko: 적분가능성
   primary: ko
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
 - id: integrable
   en: integrable
@@ -10101,8 +10026,8 @@ I:
   ko: 역함수 정리
   primary: ko
   defs:
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
+  - label: '[해석학] §역함수 정리와 음함수 정리'
+    url: /ko/math/analysis/inverse_function_theorem#thm1
 - id: inverse_image_sheaf
   en: inverse image sheaf
   ko: 역상층
@@ -11002,8 +10927,8 @@ L:
   ko: 라그랑주 보간
   primary: en
   defs:
-  - label: '[정수론] §중국인의 나머지 정리'
-    url: /ko/math/number_theory/chinese_remainder_theorem
+  - label: '[정수론] §원시근'
+    url: /ko/math/number_theory/primitive_roots#thm5
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -11191,7 +11116,7 @@ L:
   alias_en: [LCM]
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
   see:
   - label: 최대공약수
@@ -11677,15 +11602,8 @@ L:
   ko: 일차 합동식
   primary: ko
   defs:
-  - label: '[정수론] §일차 합동식'
-    url: /ko/math/number_theory/linear_congruences
-- id: linear_convergence
-  en: linear convergence
-  ko: 선형 수렴
-  primary: ko
-  defs:
-  - label: '[해석학] §미분방정식의 존재성과 유일성'
-    url: /ko/math/analysis/existence_uniqueness_ode
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: linear_dependence
   en: linear dependence
   ko: 일차종속
@@ -11704,7 +11622,7 @@ L:
   ko: 일차 디오판토스 방정식
   primary: en
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
 - id: linear_equivalence
   en: linear equivalence
@@ -12151,13 +12069,6 @@ L:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
-- id: logarithmic_integral
-  en: logarithmic integral
-  ko: 로그적분
-  primary: ko
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
 - id: long_exact_sequence
   en: long exact sequence
   ko: 긴 완전열
@@ -12221,7 +12132,7 @@ L:
   ko: 하합
   primary: ko
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
 - id: lower_triangular_matrix
   en: lower triangular matrix
@@ -12540,20 +12451,6 @@ M:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
-- id: mertens_constant
-  en: Mertens constant
-  ko: 메르텐스 상수
-  primary: ko
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
-- id: mertens_function
-  en: Mertens function
-  ko: 메르텐스 함수
-  primary: ko
-  defs:
-  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
-    url: /ko/math/number_theory/arithmetic_functions
 - id: mesh
   en: mesh
   ko: 너비
@@ -12566,7 +12463,7 @@ M:
   ko: 거리함수
   primary: ko
   defs:
-  - label: '[해석학] §거리공간'
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
     url: /ko/math/analysis/metric_spaces
 - id: metric_connection
   en: metric connection
@@ -12580,7 +12477,7 @@ M:
   ko: 거리공간
   primary: ko
   defs:
-  - label: '[해석학] §거리공간'
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
     url: /ko/math/analysis/metric_spaces
 - id: minimal
   en: minimal
@@ -12732,8 +12629,8 @@ M:
   ko: 모듈러 역원
   primary: ko
   defs:
-  - label: '[정수론] §일차 합동식'
-    url: /ko/math/number_theory/linear_congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: module
   en: module
   ko: 가군
@@ -12781,8 +12678,8 @@ M:
   ko: 절댓값
   primary: ko
   defs:
-  - label: '[정수론] §합동식'
-    url: /ko/math/number_theory/congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
 - id: moment_map
@@ -13030,8 +12927,8 @@ M:
   ko: 배수
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: multiple_integral
   en: multiple integral
   ko: 다중적분
@@ -13079,7 +12976,7 @@ M:
   ko: 곱셈 역원
   primary: ko
   defs:
-  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
     url: /ko/math/number_theory/euclidean_algorithm
 - id: multiplicative_set
   en: multiplicative set
@@ -13127,8 +13024,8 @@ M:
   ko: 다변수 미분
   primary: en
   defs:
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
+  - label: '[해석학] §고계 편도함수와 극값'
+    url: /ko/math/analysis/higher_derivatives_and_extrema
 - id: musical_isomorphism
   en: musical isomorphism
   ko: 음악 동형사상
@@ -13364,8 +13261,8 @@ N:
   ko: 중첩구간정리
   primary: en
   defs:
-  - label: '[해석학] §실수의 완비성'
-    url: /ko/math/analysis/completeness_of_reals
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass#lem5
   see:
   - label: Nested interval property
     id: nested_interval_property
@@ -13579,13 +13476,6 @@ N:
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures#def4
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
     url: /ko/math/symplectic_geometry/morse_stationary_phase
-- id: nonexpansive_map
-  en: nonexpansive map
-  ko: 비확장사상
-  primary: ko
-  defs:
-  - label: '[해석학] §미분방정식의 존재성과 유일성'
-    url: /ko/math/analysis/existence_uniqueness_ode
 - id: nonsingular
   en: nonsingular
   ko: 비특이
@@ -13919,7 +13809,7 @@ O:
   ko: 열린공
   primary: ko
   defs:
-  - label: '[해석학] §거리공간'
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
     url: /ko/math/analysis/metric_spaces
   see:
   - label: 거리공간
@@ -14029,8 +13919,8 @@ O:
   ko: 열린집합
   primary: ko
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
   - label: '[위상수학] §열린집합'
     url: /ko/math/topology/open_sets
   see:
@@ -14548,7 +14438,7 @@ P:
   ko: 부분합
   primary: ko
   defs:
-  - label: '[해석학] §무한급수'
+  - label: '[해석학] §무한급수와 수렴판정법'
     url: /ko/math/analysis/series
 - id: partition
   en: partition
@@ -15222,8 +15112,8 @@ P:
   ko: 소수 정리
   primary: ko
   defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: primitive_cohomology
   en: primitive cohomology
   ko: ''
@@ -15739,8 +15629,8 @@ Q:
   ko: 이차체
   primary: en
   defs:
-  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
-    url: /ko/math/number_theory/gaussian_integers
+  - label: '[체론] §원분확대'
+    url: /ko/math/field_theory/cyclotomic_extensions
   see:
   - label: Field extension
     id: field_extension
@@ -16029,8 +15919,8 @@ Q:
     url: /ko/math/set_theory/examples_of_equivalence
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: quotient_algebra
   en: quotient algebra
   ko: 몫대수
@@ -16217,18 +16107,6 @@ R:
   - label: 근판정
     lang: ko
     id: root_test
-- id: ramification
-  en: ramification
-  ko: 분기
-  primary: ko
-  defs:
-  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
-    url: /ko/math/number_theory/gaussian_integers
-  see:
-  - label: Algebraic extension
-    id: algebraic_extension
-  - label: Field extension
-    id: field_extension
 - id: rank
   en: rank
   ko: 랭크
@@ -16423,7 +16301,7 @@ R:
   ko: 기약잉여계
   primary: ko
   defs:
-  - label: '[정수론] §오일러 정리와 phi function'
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
     url: /ko/math/number_theory/euler_theorem
   see:
   - label: Reduced residue class
@@ -16514,7 +16392,7 @@ R:
   ko: 세분화
   primary: en
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
   - label: '[위상수학] §파라콤팩트 공간과 단위분할'
     url: /ko/math/topology/paracompact_spaces
@@ -16757,8 +16635,8 @@ R:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: removable_discontinuity
   en: removable discontinuity
   ko: 제거가능 불연속
@@ -16834,8 +16712,8 @@ R:
   ko: 대표원
   primary: en
   defs:
-  - label: '[정수론] §합동식'
-    url: /ko/math/number_theory/congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: representing_object
   en: representing object
   ko: 표현 대상
@@ -16855,8 +16733,8 @@ R:
   ko: 잉여류
   primary: en
   defs:
-  - label: '[정수론] §합동식'
-    url: /ko/math/number_theory/congruences
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: residue_field
   en: residue field
   ko: 잉여류체
@@ -16943,13 +16821,6 @@ R:
   see:
   - label: Section
     id: section
-- id: reverse_triangle_inequality
-  en: reverse triangle inequality
-  ko: 역삼각부등식
-  primary: ko
-  defs:
-  - label: '[해석학] §거리공간'
-    url: /ko/math/analysis/metric_spaces
 - id: ricci_curvature
   en: Ricci curvature
   ko: 리치 곡률
@@ -16983,7 +16854,7 @@ R:
   ko: 리만적분
   primary: en
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
 - id: riemann_roch_dimension
   en: Riemann-Roch dimension
@@ -17022,13 +16893,6 @@ R:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
-- id: riemann_zeta_function
-  en: Riemann zeta function
-  ko: 리만 제타 함수
-  primary: en
-  defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
 - id: riemannian_manifold
   en: Riemannian manifold
   ko: 리만다양체
@@ -17959,8 +17823,8 @@ S:
   ko: 에라토스테네스의 체
   primary: ko
   defs:
-  - label: '[정수론] §소수의 무한성과 분포'
-    url: /ko/math/number_theory/distribution_of_primes
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: sifted_colimit_completion
   en: sifted colimit completion
   ko: ''
@@ -19047,13 +18911,6 @@ S:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
-- id: subsequential_limit
-  en: subsequential limit
-  ko: 부분수열극한
-  primary: ko
-  defs:
-  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
-    url: /ko/math/analysis/bolzano_weierstrass
 - id: subset
   en: subset
   ko: 부분집합
@@ -19141,13 +18998,6 @@ S:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
-- id: supplementary_law
-  en: supplementary law
-  ko: 보충법칙
-  primary: ko
-  defs:
-  - label: '[정수론] §이차 상호법칙'
-    url: /ko/math/number_theory/quadratic_reciprocity
 - id: supplementary_submodule
   en: supplementary submodule
   ko: 보조부분가군
@@ -19698,8 +19548,8 @@ T:
   ko: 망원급수
   primary: ko
   defs:
-  - label: '[해석학] §무한급수'
-    url: /ko/math/analysis/series
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: tensor
   en: tensor
   ko: 텐서
@@ -19753,8 +19603,8 @@ T:
   ko: 항별 미분
   primary: ko
   defs:
-  - label: '[해석학] §함수열과 점별수렴'
-    url: /ko/math/analysis/sequences_of_functions
+  - label: '[해석학] §멱급수와 해석함수'
+    url: /ko/math/analysis/power_series
 - id: terminal_object
   en: terminal object
   ko: 끝 대상
@@ -20067,8 +19917,6 @@ T:
   defs:
   - label: '[집합론] §동치관계'
     url: /ko/math/set_theory/equivalence_relations
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: /ko/math/number_theory/divisibility
   see:
   - label: Binary relation
     id: binary_relation
@@ -20135,13 +19983,6 @@ T:
     url: /ko/math/linear_algebra/Gaussian_elimination
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
-- id: triangular_number
-  en: triangular number
-  ko: 삼각수
-  primary: ko
-  defs:
-  - label: '[정수론] §펠 방정식'
-    url: /ko/math/number_theory/pell_equation
 - id: triangulated_category
   en: triangulated category
   ko: 삼각 분할 범주
@@ -20396,8 +20237,8 @@ U:
   ko: 균등유계
   primary: en
   defs:
-  - label: '[해석학] §함수열과 점별수렴'
-    url: /ko/math/analysis/sequences_of_functions
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli#def1
   see:
   - label: Bounded
     id: bounded
@@ -20497,8 +20338,8 @@ U:
   ko: 단위원판
   primary: ko
   defs:
-  - label: '[해석학] §열린집합과 닫힌집합'
-    url: /ko/math/analysis/open_and_closed_sets
+  - label: '[해석학] §Stone–Weierstrass 정리'
+    url: /ko/math/analysis/stone_weierstrass
 - id: unit_group
   en: unit group
   ko: 가역원군
@@ -20720,8 +20561,8 @@ U:
   ko: 상반평면
   primary: ko
   defs:
-  - label: '[복소해석학] §유수정리'
-    url: /ko/math/complex_analysis/residue_theorem
+  - label: '[복소해석학] §유수를 이용한 실적분 계산'
+    url: /ko/math/complex_analysis/residue_integrals
 - id: upper_set
   en: upper set
   ko: 상집합
@@ -20737,7 +20578,7 @@ U:
   ko: 상합
   primary: ko
   defs:
-  - label: '[해석학] §Riemann integral'
+  - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
   see:
   - label: 하합
