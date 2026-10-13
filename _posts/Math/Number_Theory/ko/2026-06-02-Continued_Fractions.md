@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§나눗셈과 유클리드 호제법, ⁋정리 6](/ko/math/number_theory/euclidean_algorithm#thm6)에서 $a$를 $b$로 나눈 몫과 나머지를 반복해서 구하면 $\gcd(a,b)$가 얻어졌다. 이때 나오는 몫들만 모아 $a/b$를 $a_0+1/(a_1+1/(a_2+\cdots))$ 꼴로 적은 것이 연분수이다. 유리수에서는 이 과정이 유한 단계에서 끝나고, 무리수에서는 끝나지 않는 대신 각 단계의 중간값이 원래 수를 매우 효율적으로 근사한다. 이 글에서는 연분수의 기본 성질을 정리한 뒤, 근사의 최적성과 이차무리수의 연분수가 순환한다는 Lagrange의 정리, 그리고 $\sqrt{d}$의 전개를 증명한다.
+[§나눗셈과 유클리드 호제법, ⁋정리 6](/ko/math/number_theory/euclidean_algorithm#thm6){: data-lid="v7l98" }에서 $a$를 $b$로 나눈 몫과 나머지를 반복해서 구하면 $\gcd(a,b)$가 얻어졌다. 이때 나오는 몫들만 모아 $a/b$를 $a_0+1/(a_1+1/(a_2+\cdots))$ 꼴로 적은 것이 연분수이다. 유리수에서는 이 과정이 유한 단계에서 끝나고, 무리수에서는 끝나지 않는 대신 각 단계의 중간값이 원래 수를 매우 효율적으로 근사한다. 이 글에서는 연분수의 기본 성질을 정리한 뒤, 근사의 최적성과 이차무리수의 연분수가 순환한다는 Lagrange의 정리, 그리고 $\sqrt{d}$의 전개를 증명한다.
 
 ## 유한 연분수와 유클리드 호제법
 
@@ -112,7 +112,7 @@ p_kq_{k-2}-p_{k-2}q_k&=(a_kp_{k-1}+p_{k-2})q_{k-2}-p_{k-2}(a_kq_{k-1}+q_{k-2})\\
 (마) $k=0$이면 양변이 $\begin{pmatrix}a_0&1\\1&0\end{pmatrix}$이다. 좌변에 오른쪽에서 $\begin{pmatrix}a_{k+1}&1\\1&0\end{pmatrix}$를 곱하면 첫 열은 $(a_{k+1}p_k+p_{k-1},\ a_{k+1}q_k+q_{k-1})^T=(p_{k+1},q_{k+1})^T$이고 둘째 열은 $(p_k,q_k)^T$이다.
 :::
 
-(나)를 유리수 $a/b=[a_0;\ldots,a_n]$에 적용하면 [§나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8)의 Bézout 계수가 유클리드 호제법에서 나온다. $\gcd(p_n,q_n)=1$이고 $a/b=p_n/q_n$이므로 $a=gp_n$, $b=gq_n$ ($g=\gcd(a,b)$)이고, 따라서 $aq_{n-1}-bp_{n-1}=g(p_nq_{n-1}-p_{n-1}q_n)=(-1)^{n-1}g$이다. $67/29=[2;3,4,2]$에서는 $p_2/q_2=30/13$이고 $67\cdot13-29\cdot30=1$이다.
+(나)를 유리수 $a/b=[a_0;\ldots,a_n]$에 적용하면 [§나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="qmyh3" }의 Bézout 계수가 유클리드 호제법에서 나온다. $\gcd(p_n,q_n)=1$이고 $a/b=p_n/q_n$이므로 $a=gp_n$, $b=gq_n$ ($g=\gcd(a,b)$)이고, 따라서 $aq_{n-1}-bp_{n-1}=g(p_nq_{n-1}-p_{n-1}q_n)=(-1)^{n-1}g$이다. $67/29=[2;3,4,2]$에서는 $p_2/q_2=30/13$이고 $67\cdot13-29\cdot30=1$이다.
 
 ## 무한 연분수의 수렴
 
@@ -121,7 +121,7 @@ $a_0\in\mathbb{Z}$이고 $a_1,a_2,\ldots$가 양의 정수일 때 점근분수 $
 :::
 
 ::: 증명
-[명제 3](#prop3)의 (다)에서 $c_{2j+2}-c_{2j}>0$, $c_{2j+1}-c_{2j-1}<0$이므로 짝수 번째 점근분수는 증가하고 홀수 번째는 감소한다. 또 $c_{2j+1}-c_{2j}=1/(q_{2j+1}q_{2j})>0$이다. 임의의 $j,m$에 대하여 $N=\max(j,m)$으로 두면 $c_{2j}\le c_{2N}<c_{2N+1}\le c_{2m+1}$이므로 짝수 번째 수열은 위로, 홀수 번째 수열은 아래로 유계이다. 따라서 두 수열은 수렴하고, $\lvert c_{k}-c_{k-1}\rvert=1/(q_kq_{k-1})\to0$이므로($q_k\ge k$) 극한 $\alpha$가 같다. 단조성에서 $\alpha$는 인접한 두 점근분수 사이에 엄밀하게 놓이므로 $\lvert\alpha-c_k\rvert<\lvert c_{k+1}-c_k\rvert=1/(q_kq_{k+1})$이다.
+[명제 3](#prop3){: data-lid="tvgoe" }의 (다)에서 $c_{2j+2}-c_{2j}>0$, $c_{2j+1}-c_{2j-1}<0$이므로 짝수 번째 점근분수는 증가하고 홀수 번째는 감소한다. 또 $c_{2j+1}-c_{2j}=1/(q_{2j+1}q_{2j})>0$이다. 임의의 $j,m$에 대하여 $N=\max(j,m)$으로 두면 $c_{2j}\le c_{2N}<c_{2N+1}\le c_{2m+1}$이므로 짝수 번째 수열은 위로, 홀수 번째 수열은 아래로 유계이다. 따라서 두 수열은 수렴하고, $\lvert c_{k}-c_{k-1}\rvert=1/(q_kq_{k-1})\to0$이므로($q_k\ge k$) 극한 $\alpha$가 같다. 단조성에서 $\alpha$는 인접한 두 점근분수 사이에 엄밀하게 놓이므로 $\lvert\alpha-c_k\rvert<\lvert c_{k+1}-c_k\rvert=1/(q_kq_{k+1})$이다.
 
 $\alpha=r/s$ ($s\ge1$)이라 하자. $\alpha\ne c_k$이므로 정수 $rq_k-sp_k$는 $0$이 아니고, $\lvert\alpha-c_k\rvert=\lvert rq_k-sp_k\rvert/(sq_k)\ge1/(sq_k)$이다. 앞의 부등식과 합치면 모든 $k$에 대하여 $q_{k+1}<s$가 되어 $q_k\to\infty$에 모순이다.
 :::
@@ -137,7 +137,7 @@ $$\alpha-c_k=\frac{(-1)^k}{q_k(x_{k+1}q_k+q_{k-1})}$$
 :::
 
 ::: 증명
-$x_k$가 무리수이면 $x_k-a_k\in(0,1)$은 무리수이고 $x_{k+1}>1$도 무리수이다. 정의에서 $x_k=a_k+1/x_{k+1}$이므로 $\alpha=[a_0;\ldots,a_k,x_{k+1}]$이고, [명제 3](#prop3)의 (가)에서 $\alpha=(x_{k+1}p_k+p_{k-1})/(x_{k+1}q_k+q_{k-1})$이다. 따라서
+$x_k$가 무리수이면 $x_k-a_k\in(0,1)$은 무리수이고 $x_{k+1}>1$도 무리수이다. 정의에서 $x_k=a_k+1/x_{k+1}$이므로 $\alpha=[a_0;\ldots,a_k,x_{k+1}]$이고, [명제 3](#prop3){: data-lid="ia9k6" }의 (가)에서 $\alpha=(x_{k+1}p_k+p_{k-1})/(x_{k+1}q_k+q_{k-1})$이다. 따라서
 
 $$\alpha-\frac{p_k}{q_k}=\frac{p_{k-1}q_k-p_kq_{k-1}}{q_k(x_{k+1}q_k+q_{k-1})}=\frac{(-1)^k}{q_k(x_{k+1}q_k+q_{k-1})}$$
 
@@ -148,22 +148,22 @@ $$\alpha-\frac{p_k}{q_k}=\frac{p_{k-1}q_k-p_kq_{k-1}}{q_k(x_{k+1}q_k+q_{k-1})}=\
 
 ## 최량근사
 
-[명제 5](#prop5)의 오차 공식에서 $x_{k+1}>a_{k+1}$이므로 분모는 $q_k(x_{k+1}q_k+q_{k-1})>q_kq_{k+1}$이다. 이는 [명제 4](#prop4)의 부등식 $\lvert\alpha-p_k/q_k\rvert<1/(q_kq_{k+1})\le1/q_k^2$이고, 무리수에 대하여 $\lvert\alpha-p/q\rvert<1/q^2$을 만족하는 기약분수가 무한히 많다는 것을 보인다. 점근분수는 여기에 더해 다음의 최적성을 갖는다.
+[명제 5](#prop5){: data-lid="9yf62" }의 오차 공식에서 $x_{k+1}>a_{k+1}$이므로 분모는 $q_k(x_{k+1}q_k+q_{k-1})>q_kq_{k+1}$이다. 이는 [명제 4](#prop4){: data-lid="soh6h" }의 부등식 $\lvert\alpha-p_k/q_k\rvert<1/(q_kq_{k+1})\le1/q_k^2$이고, 무리수에 대하여 $\lvert\alpha-p/q\rvert<1/q^2$을 만족하는 기약분수가 무한히 많다는 것을 보인다. 점근분수는 여기에 더해 다음의 최적성을 갖는다.
 
 ::: 정리 6 (최량근사)
 $\alpha$가 무리수이고 $k\ge0$, 정수 $p,q$가 $1\le q<q_{k+1}$을 만족하면 $\lvert q\alpha-p\rvert\ge\lvert q_k\alpha-p_k\rvert$이고, 등호는 $(p,q)=(p_k,q_k)$일 때에만 성립한다. 또 $k\ge1$이면 $q\le q_k$인 모든 유리수 $p/q\ne p_k/q_k$에 대하여 $\lvert\alpha-p/q\rvert>\lvert\alpha-p_k/q_k\rvert$이다.
 :::
 
 ::: 증명
-[명제 3](#prop3)의 (나)에 의하여 $p_kq_{k+1}-p_{k+1}q_k=\pm1$이므로 연립방정식 $p=up_k+vp_{k+1}$, $q=uq_k+vq_{k+1}$은 Cramer 공식으로 정수해 $(u,v)$를 갖는다.
+[명제 3](#prop3){: data-lid="re4cz" }의 (나)에 의하여 $p_kq_{k+1}-p_{k+1}q_k=\pm1$이므로 연립방정식 $p=up_k+vp_{k+1}$, $q=uq_k+vq_{k+1}$은 Cramer 공식으로 정수해 $(u,v)$를 갖는다.
 
-$v=0$이면 $(p,q)=u(p_k,q_k)$이고 $q>0$이므로 $u\ge1$이다. 이때 $\lvert q\alpha-p\rvert=u\lvert q_k\alpha-p_k\rvert$이고 $u=1$일 때에만 등호이다. $u=0$이면 $q=vq_{k+1}$이므로 $q\ge q_{k+1}$이 되어 가정에 모순이다. 이제 $u,v\ne0$이라 하자. $u,v$가 둘 다 양수이면 $q\ge q_k+q_{k+1}>q_{k+1}$이고, 둘 다 음수이면 $q<0$이므로 둘은 부호가 반대이다. 한편 [명제 4](#prop4)에서 $\alpha-c_k$의 부호는 $(-1)^k$이고 $\alpha-c_{k+1}$의 부호는 $(-1)^{k+1}$이므로 $q_k\alpha-p_k$와 $q_{k+1}\alpha-p_{k+1}$도 부호가 반대이다. 따라서 $u(q_k\alpha-p_k)$와 $v(q_{k+1}\alpha-p_{k+1})$은 부호가 같고
+$v=0$이면 $(p,q)=u(p_k,q_k)$이고 $q>0$이므로 $u\ge1$이다. 이때 $\lvert q\alpha-p\rvert=u\lvert q_k\alpha-p_k\rvert$이고 $u=1$일 때에만 등호이다. $u=0$이면 $q=vq_{k+1}$이므로 $q\ge q_{k+1}$이 되어 가정에 모순이다. 이제 $u,v\ne0$이라 하자. $u,v$가 둘 다 양수이면 $q\ge q_k+q_{k+1}>q_{k+1}$이고, 둘 다 음수이면 $q<0$이므로 둘은 부호가 반대이다. 한편 [명제 4](#prop4){: data-lid="lt118" }에서 $\alpha-c_k$의 부호는 $(-1)^k$이고 $\alpha-c_{k+1}$의 부호는 $(-1)^{k+1}$이므로 $q_k\alpha-p_k$와 $q_{k+1}\alpha-p_{k+1}$도 부호가 반대이다. 따라서 $u(q_k\alpha-p_k)$와 $v(q_{k+1}\alpha-p_{k+1})$은 부호가 같고
 
 $$\lvert q\alpha-p\rvert=\lvert u\rvert\lvert q_k\alpha-p_k\rvert+\lvert v\rvert\lvert q_{k+1}\alpha-p_{k+1}\rvert>\lvert q_k\alpha-p_k\rvert$$
 
 이다 ($\lvert u\rvert\ge1$이고 $q_{k+1}\alpha-p_{k+1}\ne0$).
 
-둘째 주장. $k\ge1$이면 [명제 3](#prop3)의 (라)에서 $q_k<q_{k+1}$이므로 $q\le q_k$이면 첫 주장이 적용된다. $p/q\ne p_k/q_k$이면 $(p,q)\ne(p_k,q_k)$이므로 $\lvert q\alpha-p\rvert>\lvert q_k\alpha-p_k\rvert$이고,
+둘째 주장. $k\ge1$이면 [명제 3](#prop3){: data-lid="u1paz" }의 (라)에서 $q_k<q_{k+1}$이므로 $q\le q_k$이면 첫 주장이 적용된다. $p/q\ne p_k/q_k$이면 $(p,q)\ne(p_k,q_k)$이므로 $\lvert q\alpha-p\rvert>\lvert q_k\alpha-p_k\rvert$이고,
 
 $$\lvert\alpha-p/q\rvert=\frac{\lvert q\alpha-p\rvert}{q}>\frac{\lvert q_k\alpha-p_k\rvert}{q}\ge\frac{\lvert q_k\alpha-p_k\rvert}{q_k}=\lvert\alpha-p_k/q_k\rvert$$
 
@@ -183,7 +183,7 @@ $\alpha$가 무리수이고 정수 $p,q$ ($q\ge1$)가 $\lvert\alpha-p/q\rvert<1/
 :::
 
 ::: 증명
-$p/q$를 기약분수로 바꾸면 $q$는 작아지고 부등식은 더 강해지므로 $\gcd(p,q)=1$이라 가정한다. $q_0=1\le q$이고 $q_k\to\infty$이므로 $q_k\le q<q_{k+1}$인 $k$가 있다. [정리 6](#thm6)에 의하여 $\lvert q_k\alpha-p_k\rvert\le\lvert q\alpha-p\rvert<1/(2q)$이고, 따라서 $\lvert\alpha-p_k/q_k\rvert<1/(2qq_k)$이다.
+$p/q$를 기약분수로 바꾸면 $q$는 작아지고 부등식은 더 강해지므로 $\gcd(p,q)=1$이라 가정한다. $q_0=1\le q$이고 $q_k\to\infty$이므로 $q_k\le q<q_{k+1}$인 $k$가 있다. [정리 6](#thm6){: data-lid="mpwyl" }에 의하여 $\lvert q_k\alpha-p_k\rvert\le\lvert q\alpha-p\rvert<1/(2q)$이고, 따라서 $\lvert\alpha-p_k/q_k\rvert<1/(2qq_k)$이다.
 
 $p/q\ne p_k/q_k$라 가정하면 $pq_k-p_kq$가 $0$이 아닌 정수이므로 $\lvert p/q-p_k/q_k\rvert\ge1/(qq_k)$이다. 한편 삼각부등식에서
 
@@ -198,7 +198,7 @@ $$\frac{1}{qq_k}\le\left\lvert\frac pq-\alpha\right\rvert+\left\lvert\alpha-\fra
 $\sqrt2=[1;\overline{2}]$의 점근분수는 $1, 3/2, 7/5, 17/12,\ldots$이다. 분수 $4/3$은 점근분수가 아니지만 $4/3<\sqrt2<17/12=(4/3+3/2)/2$이므로 $3/2$보다 $\sqrt2$에 가깝고, $\sqrt2<13/9=4/3+1/9$이므로 $\lvert\sqrt2-4/3\rvert<1/3^2$이다. 이 값은 $1/(2\cdot3^2)$보다는 크다($\sqrt2>25/18$이 아니라 $\sqrt2<25/18$이므로 $\lvert\sqrt2-4/3\rvert>1/18$).
 :::
 
-따라서 [정리 6](#thm6)은 점근분수가 분모가 작은 쪽의 모든 유리수보다 가깝다는 것을 말할 뿐, 그런 성질을 갖는 분수가 점근분수뿐이라는 것은 아니다. 점근분수와 점근분수 사이에 끼는 분수 $(p_{k-1}+jp_k)/(q_{k-1}+jq_k)$ ($1\le j<a_{k+1}$)도 이 성질을 가질 수 있고, [예시 9](#ex9)의 $4/3=(p_0+p_1)/(q_0+q_1)$이 그 경우이다.
+따라서 [정리 6](#thm6){: data-lid="2jdv4" }은 점근분수가 분모가 작은 쪽의 모든 유리수보다 가깝다는 것을 말할 뿐, 그런 성질을 갖는 분수가 점근분수뿐이라는 것은 아니다. 점근분수와 점근분수 사이에 끼는 분수 $(p_{k-1}+jp_k)/(q_{k-1}+jq_k)$ ($1\le j<a_{k+1}$)도 이 성질을 가질 수 있고, [예시 9](#ex9){: data-lid="r6iup" }의 $4/3=(p_0+p_1)/(q_0+q_1)$이 그 경우이다.
 
 ## 순환연분수와 이차무리수
 
@@ -209,11 +209,11 @@ $\sqrt2=[1;\overline{2}]$의 점근분수는 $1, 3/2, 7/5, 17/12,\ldots$이다. 
 :::
 
 ::: 증명
-$x=[a_0;\ldots,a_{m-1},\overline{b_0,\ldots,b_{l-1}}]$이라 하고 $y=[\overline{b_0;b_1,\ldots,b_{l-1}}]$로 둔다. [명제 5](#prop5)의 꼬리 표현에서 $y=[b_0;\ldots,b_{l-1},y]$이다. $b$의 점근분수 분자·분모를 $P_k,Q_k$로 쓰면 [명제 3](#prop3)의 (가)에 의하여 $y=(yP_{l-1}+P_{l-2})/(yQ_{l-1}+Q_{l-2})$이고, 정리하면
+$x=[a_0;\ldots,a_{m-1},\overline{b_0,\ldots,b_{l-1}}]$이라 하고 $y=[\overline{b_0;b_1,\ldots,b_{l-1}}]$로 둔다. [명제 5](#prop5){: data-lid="ft2nl" }의 꼬리 표현에서 $y=[b_0;\ldots,b_{l-1},y]$이다. $b$의 점근분수 분자·분모를 $P_k,Q_k$로 쓰면 [명제 3](#prop3){: data-lid="tzlvt" }의 (가)에 의하여 $y=(yP_{l-1}+P_{l-2})/(yQ_{l-1}+Q_{l-2})$이고, 정리하면
 
 $$Q_{l-1}y^2+(Q_{l-2}-P_{l-1})y-P_{l-2}=0$$
 
-이다. $Q_{l-1}\ge1$이고 $y$는 [명제 4](#prop4)에서 무리수이므로 $y$는 이차무리수이다. $m=0$이면 $x=y$이다. $m\ge1$이면 $x=[a_0;\ldots,a_{m-1},y]=(yp_{m-1}+p_{m-2})/(yq_{m-1}+q_{m-2})$이므로 $x\in\mathbb{Q}(y)$이다. $\mathbb{Q}(y)$는 $\mathbb{Q}$ 위의 2차 확대이고 $x$는 무리수이므로 $x$의 차수는 2이다.
+이다. $Q_{l-1}\ge1$이고 $y$는 [명제 4](#prop4){: data-lid="kmapg" }에서 무리수이므로 $y$는 이차무리수이다. $m=0$이면 $x=y$이다. $m\ge1$이면 $x=[a_0;\ldots,a_{m-1},y]=(yp_{m-1}+p_{m-2})/(yq_{m-1}+q_{m-2})$이므로 $x\in\mathbb{Q}(y)$이다. $\mathbb{Q}(y)$는 $\mathbb{Q}$ 위의 2차 확대이고 $x$는 무리수이므로 $x$의 차수는 2이다.
 :::
 
 이 정리의 대우로, 이차무리수가 아닌 무리수의 연분수는 순환하지 않는다. $e=[2;1,2,1,1,4,1,1,6,\ldots]$이 그 예이다.
@@ -223,7 +223,7 @@ $$Q_{l-1}y^2+(Q_{l-2}-P_{l-1})y-P_{l-2}=0$$
 :::
 
 ::: 증명
-$\alpha$가 $f(X)=aX^2+bX+c$ ($a,b,c\in\mathbb{Z}$, $a\ne0$)의 근이라 하자. $\alpha$가 무리수이므로 $f$는 유리근이 없고 $D=b^2-4ac>0$이다. $F(X,Y)=aX^2+bXY+cY^2$으로 두고, $k\ge1$에 대하여 [명제 5](#prop5)의 $\alpha=(x_{k+1}p_k+p_{k-1})/(x_{k+1}q_k+q_{k-1})$을 $f(\alpha)=0$에 대입하여 $(x_{k+1}q_k+q_{k-1})^2$을 곱하면 $F(x_{k+1}p_k+p_{k-1},x_{k+1}q_k+q_{k-1})=0$이다. 이를 전개해
+$\alpha$가 $f(X)=aX^2+bX+c$ ($a,b,c\in\mathbb{Z}$, $a\ne0$)의 근이라 하자. $\alpha$가 무리수이므로 $f$는 유리근이 없고 $D=b^2-4ac>0$이다. $F(X,Y)=aX^2+bXY+cY^2$으로 두고, $k\ge1$에 대하여 [명제 5](#prop5){: data-lid="l669l" }의 $\alpha=(x_{k+1}p_k+p_{k-1})/(x_{k+1}q_k+q_{k-1})$을 $f(\alpha)=0$에 대입하여 $(x_{k+1}q_k+q_{k-1})^2$을 곱하면 $F(x_{k+1}p_k+p_{k-1},x_{k+1}q_k+q_{k-1})=0$이다. 이를 전개해
 
 $$A_kx_{k+1}^2+B_kx_{k+1}+C_k=0,\quad A_k=F(p_k,q_k),\quad C_k=F(p_{k-1},q_{k-1})=A_{k-1}$$
 
@@ -231,20 +231,20 @@ $$A_kx_{k+1}^2+B_kx_{k+1}+C_k=0,\quad A_k=F(p_k,q_k),\quad C_k=F(p_{k-1},q_{k-1}
 
 첫째, $A_k=q_k^2f(p_k/q_k)\ne0$이다. $f$에 유리근이 없기 때문이다.
 
-둘째, $A_k$는 유계이다. $f(\alpha)=0$이므로 $f(p_k/q_k)=f(p_k/q_k)-f(\alpha)=(p_k/q_k-\alpha)\bigl(a(p_k/q_k+\alpha)+b\bigr)$이고, [명제 4](#prop4)에서 $\lvert p_k/q_k-\alpha\rvert<1/q_k^2$이므로 $\lvert p_k/q_k+\alpha\rvert<2\lvert\alpha\rvert+1$이다. 따라서
+둘째, $A_k$는 유계이다. $f(\alpha)=0$이므로 $f(p_k/q_k)=f(p_k/q_k)-f(\alpha)=(p_k/q_k-\alpha)\bigl(a(p_k/q_k+\alpha)+b\bigr)$이고, [명제 4](#prop4){: data-lid="uxq3p" }에서 $\lvert p_k/q_k-\alpha\rvert<1/q_k^2$이므로 $\lvert p_k/q_k+\alpha\rvert<2\lvert\alpha\rvert+1$이다. 따라서
 
 $$\lvert A_k\rvert<\lvert a\rvert(2\lvert\alpha\rvert+1)+\lvert b\rvert=:M$$
 
 이고 $\lvert C_k\rvert=\lvert A_{k-1}\rvert<M$이다.
 
-셋째, 판별식이 보존된다. $F(X,Y)$의 Gram 행렬을 $S=\begin{pmatrix}a&b/2\\b/2&c\end{pmatrix}$, $N=\begin{pmatrix}p_k&p_{k-1}\\q_k&q_{k-1}\end{pmatrix}$으로 두면 $x$에 대한 이차식의 Gram 행렬은 $N^{T}SN=\begin{pmatrix}A_k&B_k/2\\B_k/2&C_k\end{pmatrix}$이다. 양변의 행렬식을 취하면 $A_kC_k-B_k^2/4=(\det N)^2(ac-b^2/4)$이고 [명제 3](#prop3)의 (나)에서 $\det N=\pm1$이므로 $B_k^2-4A_kC_k=D$이다. 따라서 $B_k^2<D+4M^2$이다.
+셋째, 판별식이 보존된다. $F(X,Y)$의 Gram 행렬을 $S=\begin{pmatrix}a&b/2\\b/2&c\end{pmatrix}$, $N=\begin{pmatrix}p_k&p_{k-1}\\q_k&q_{k-1}\end{pmatrix}$으로 두면 $x$에 대한 이차식의 Gram 행렬은 $N^{T}SN=\begin{pmatrix}A_k&B_k/2\\B_k/2&C_k\end{pmatrix}$이다. 양변의 행렬식을 취하면 $A_kC_k-B_k^2/4=(\det N)^2(ac-b^2/4)$이고 [명제 3](#prop3){: data-lid="esjak" }의 (나)에서 $\det N=\pm1$이므로 $B_k^2-4A_kC_k=D$이다. 따라서 $B_k^2<D+4M^2$이다.
 
 결국 $(A_k,B_k,C_k)$는 유한 개의 값만 가질 수 있고, 각 삼중쌍에 대하여 $A_k\ne0$이므로 $x_{k+1}$이 될 수 있는 값은 많아야 둘이다. 따라서 $x_j=x_l$인 $1<j<l$이 있다. $a_k=\lfloor x_k\rfloor$이고 $x_{k+1}=1/(x_k-a_k)$이므로 $x_{j+i}=x_{l+i}$ ($i\ge0$)이고, 연분수가 $j$번째 항부터 주기 $l-j$로 순환한다.
 :::
 
 ## 제곱근의 연분수 전개
 
-$d$가 제곱수가 아닌 양의 정수이면 $\sqrt d$는 이차무리수이므로 [정리 11](#thm11)에 의하여 순환한다. 이 경우 순환의 모양이 더 구체적으로 결정된다.
+$d$가 제곱수가 아닌 양의 정수이면 $\sqrt d$는 이차무리수이므로 [정리 11](#thm11){: data-lid="ygjda" }에 의하여 순환한다. 이 경우 순환의 모양이 더 구체적으로 결정된다.
 
 ::: 명제 12
 $d$가 제곱수가 아닌 양의 정수이고 $a_0=\lfloor\sqrt d\rfloor$이면 $\sqrt d=[a_0;\overline{a_1,\ldots,a_{l-1},2a_0}]$이고, $a_i=a_{l-i}$ ($1\le i\le l-1$)이다.
@@ -255,7 +255,7 @@ $\omega=a_0+\sqrt d$로 두고 $\mathbb{Q}(\sqrt d)$의 켤레를 $z\mapsto z'$�
 
 (1) $x_0=\omega$의 완전 몫 $x_k$는 모두 reduced이다. $x_k$가 reduced이면 $a_k=\lfloor x_k\rfloor\ge1$이고 $x_{k+1}=1/(x_k-a_k)>1$이다. 켤레는 덧셈과 곱셈을 보존하므로 $x_{k+1}'=1/(x_k'-a_k)$이고 $x_k'-a_k<-1$이므로 $x_{k+1}'\in(-1,0)$이다.
 
-(2) $\omega$는 순수 순환이다. [정리 11](#thm11)에 의하여 $x_j=x_l$인 $0\le j<l$이 있고, $j\ge1$이면 $x_{j-1}=x_{l-1}$임을 보이면 귀납적으로 $x_0=x_{l-j}$를 얻는다. $x_{j-1}=a_{j-1}+1/x_j$이고 (1)에서 $x_{j-1}'=a_{j-1}+1/x_j'\in(-1,0)$이다. 길이가 1인 열린 구간은 정수를 많아야 하나 포함하므로 $a_{j-1}$은 $x_j$만으로 결정되고, $x_{l-1}$에 대해서도 같다. 따라서 $x_{j-1}=x_{l-1}$이다.
+(2) $\omega$는 순수 순환이다. [정리 11](#thm11){: data-lid="8qh69" }에 의하여 $x_j=x_l$인 $0\le j<l$이 있고, $j\ge1$이면 $x_{j-1}=x_{l-1}$임을 보이면 귀납적으로 $x_0=x_{l-j}$를 얻는다. $x_{j-1}=a_{j-1}+1/x_j$이고 (1)에서 $x_{j-1}'=a_{j-1}+1/x_j'\in(-1,0)$이다. 길이가 1인 열린 구간은 정수를 많아야 하나 포함하므로 $a_{j-1}$은 $x_j$만으로 결정되고, $x_{l-1}$에 대해서도 같다. 따라서 $x_{j-1}=x_{l-1}$이다.
 
 (3) 전개의 형태. $\lfloor\omega\rfloor=2a_0$이고 $x_1(\omega)=1/(\omega-2a_0)=1/(\sqrt d-a_0)=x_1(\sqrt d)$이므로 $\omega$의 전개는 $[2a_0;a_1,a_2,\ldots]$이다. (2)에서 $\omega=[\overline{b_0;b_1,\ldots,b_{l-1}}]$ ($b_0=2a_0$, $b_i=a_i$)이고, $\sqrt d=\omega-a_0$이므로 $\sqrt d=[a_0;\overline{a_1,\ldots,a_{l-1},2a_0}]$이다.
 
@@ -267,13 +267,13 @@ $$q\omega^2+(q'-p)\omega-p'=0\qquad(\mathrm{E}_1)$$
 
 $$p'z^2+(q'-p)z-q=0\qquad(\mathrm{E}_2)$$
 
-의 근이다. 한편 [명제 3](#prop3)의 (마)에서 순서를 뒤집은 수열 $b_{l-1},\ldots,b_0$의 행렬곱은 각 인자가 symmetric matrix이므로 $N^T=\begin{pmatrix}p&q\\p'&q'\end{pmatrix}$이다. 따라서 $\rho=[\overline{b_{l-1};\ldots,b_0}]$는 $\rho=(p\rho+q)/(p'\rho+q')$, 곧 $\mathrm{E}_2$를 만족한다. $b_0\ge2$이므로 $p'\ge1$이고 $\mathrm{E}_2$의 두 근의 곱은 $-q/p'<0$이다. 즉 positive root는 하나뿐이고, $z>1$과 $\rho>1$이 모두 positive root이므로 $z=\rho$이다.
+의 근이다. 한편 [명제 3](#prop3){: data-lid="33me1" }의 (마)에서 순서를 뒤집은 수열 $b_{l-1},\ldots,b_0$의 행렬곱은 각 인자가 symmetric matrix이므로 $N^T=\begin{pmatrix}p&q\\p'&q'\end{pmatrix}$이다. 따라서 $\rho=[\overline{b_{l-1};\ldots,b_0}]$는 $\rho=(p\rho+q)/(p'\rho+q')$, 곧 $\mathrm{E}_2$를 만족한다. $b_0\ge2$이므로 $p'\ge1$이고 $\mathrm{E}_2$의 두 근의 곱은 $-q/p'<0$이다. 즉 positive root는 하나뿐이고, $z>1$과 $\rho>1$이 모두 positive root이므로 $z=\rho$이다.
 
 이제 $z=-1/\omega'=1/(\sqrt d-a_0)=x_1(\sqrt d)$이므로
 
 $$[a_1;a_2,\ldots,a_{l-1},2a_0,a_1,\ldots]=[a_{l-1};a_{l-2},\ldots,a_1,2a_0,a_{l-1},\ldots]$$
 
-이다. [명제 5](#prop5)의 유일성에 의하여 항이 일치하므로 $a_i=a_{l-i}$ ($1\le i\le l-1$)이다.
+이다. [명제 5](#prop5){: data-lid="l6dod" }의 유일성에 의하여 항이 일치하므로 $a_i=a_{l-i}$ ($1\le i\le l-1$)이다.
 :::
 
 실제 전개는 $\mathbb{Q}(\sqrt d)$의 수를 매번 정리하지 않고 정수만으로 계산할 수 있다. $x_k=(P_k+\sqrt d)/Q_k$ ($P_0=0$, $Q_0=1$)로 쓰면 $a_k=\lfloor x_k\rfloor$이고

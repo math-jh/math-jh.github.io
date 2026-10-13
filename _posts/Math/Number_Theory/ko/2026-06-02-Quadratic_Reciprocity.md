@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)에서 우리는 Legendre 기호가 multiplicative이고 $-1$이 이차 잉여인 소수가 $p \equiv 1 \pmod4$임을, [§이차 잉여, ⁋정리 9](/ko/math/number_theory/quadratic_residues#thm9)에서 $2$가 이차 잉여인 소수가 $p \equiv \pm 1 \pmod8$임을 보았다. 곱셈성에 의하여 $(a/p)$의 계산은 $-1$, $2$, 홀수 소수 $q$에서의 값 $(q/p)$로 환원되므로, 남은 문제는 홀수 소수 $q$가 어떤 소수 $p$에 대하여 이차 잉여인지이다.
+[§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="h8m6u" }에서 우리는 Legendre 기호가 multiplicative이고 $-1$이 이차 잉여인 소수가 $p \equiv 1 \pmod4$임을, [§이차 잉여, ⁋정리 9](/ko/math/number_theory/quadratic_residues#thm9){: data-lid="7nqos" }에서 $2$가 이차 잉여인 소수가 $p \equiv \pm 1 \pmod8$임을 보았다. 곱셈성에 의하여 $(a/p)$의 계산은 $-1$, $2$, 홀수 소수 $q$에서의 값 $(q/p)$로 환원되므로, 남은 문제는 홀수 소수 $q$가 어떤 소수 $p$에 대하여 이차 잉여인지이다.
 
 $q = 3$으로 직접 확인해 보자. $3$은 법 $11$에서 $5^2 = 25 \equiv 3$, 법 $13$에서 $4^2 = 16 \equiv 3$, 법 $37$에서 $15^2 = 225 \equiv 3$이므로 이차 잉여이다. 반면 법 $5, 7, 17, 19$에서는 이차 비잉여이다. 잉여인 소수 $11, 13, 37$은 $12$로 나눈 나머지가 $\pm 1$이고, 비잉여인 소수 $5, 7, 17, 19$는 나머지가 $\pm 5$이다. $(3/p)$는 $p$의 크기가 아니라 $p$를 $12 = 4 \cdot 3$으로 나눈 나머지에만 의존하는 것처럼 보인다. 이 의존성은 $(q/p)$가 $(p/q)$와 단순한 부호로 연결된다는 사실에서 나오며, 이것이 이차 상호법칙이다.
 
@@ -31,7 +31,7 @@ $$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\fr
 
 지수 $\frac{p-1}{2}\cdot\frac{q-1}{2}$가 홀수인 것은 두 인수가 모두 홀수인 것, 곧 $p \equiv q \equiv 3 \pmod{4}$인 것과 동치이므로 정리의 둘째 문장이 따른다. 부호가 바뀌는 경우는 이 한 가지뿐이다.
 
-$q^\ast = (-1)^{(q-1)/2}q$로 두면, 곧 $q^\ast$는 $q \equiv 1 \pmod{4}$이면 $q$, $q \equiv 3 \pmod{4}$이면 $-q$이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)의 $(-1/p) = (-1)^{(p-1)/2}$와 곱셈성에 의하여 $(q^\ast/p) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}(q/p)$이고, [정리 1](#thm1)을 쓰면
+$q^\ast = (-1)^{(q-1)/2}q$로 두면, 곧 $q^\ast$는 $q \equiv 1 \pmod{4}$이면 $q$, $q \equiv 3 \pmod{4}$이면 $-q$이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="0nh1q" }의 $(-1/p) = (-1)^{(p-1)/2}$와 곱셈성에 의하여 $(q^\ast/p) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}(q/p)$이고, [정리 1](#thm1){: data-lid="bxinb" }을 쓰면
 
 $$\left(\frac{q^\ast}{p}\right) = \left(\frac{p}{q}\right)$$
 
@@ -39,7 +39,7 @@ $$\left(\frac{q^\ast}{p}\right) = \left(\frac{p}{q}\right)$$
 
 ## Lattice point 세기에 의한 증명
 
-증명은 Eisenstein의 방법을 따른다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)은 $(a/p)$를 $as$ ($s = 1, \ldots, (p-1)/2$)의 나머지 중 $p/2$를 넘는 것의 개수 $\mu$의 홀짝으로 표현한다. 이 $\mu$를 직접 세는 대신 quotient $\lfloor as/p\rfloor$의 합의 홀짝으로 바꾸면, 그 합은 좌표평면의 lattice point 개수로 읽힌다.
+증명은 Eisenstein의 방법을 따른다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7){: data-lid="7cvn6" }은 $(a/p)$를 $as$ ($s = 1, \ldots, (p-1)/2$)의 나머지 중 $p/2$를 넘는 것의 개수 $\mu$의 홀짝으로 표현한다. 이 $\mu$를 직접 세는 대신 quotient $\lfloor as/p\rfloor$의 합의 홀짝으로 바꾸면, 그 합은 좌표평면의 lattice point 개수로 읽힌다.
 
 ::: 보조정리 2
 $p$가 홀수 소수이고 $a$가 $p \nmid a$인 홀수 정수이면
@@ -54,7 +54,7 @@ $S = \{1, \ldots, (p-1)/2\}$로 두고, $s \in S$에 대하여 $as$의 법 $p$ �
 
 $$a\sum_{s \in S} s = pM + \sum_{s \in S}\rho_s$$
 
-이다. 이제 $\sum \rho_s$의 홀짝을 구한다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)의 증명에서와 같이, 각 $s \in S$에 대하여 $as \equiv \varepsilon_s r_s \pmod{p}$를 만족하는 $\varepsilon_s \in \{1, -1\}$과 $r_s \in S$를 택하면 $s \mapsto r_s$는 $S$ 위의 전단사이다. $\varepsilon_s = 1$이면 $\rho_s = r_s$이고 $\varepsilon_s = -1$이면 $\rho_s = p - r_s$이며, $\varepsilon_s = -1$인 $s$의 개수가 보조정리의 $\mu$이다. 그러므로
+이다. 이제 $\sum \rho_s$의 홀짝을 구한다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7){: data-lid="0o3r5" }의 증명에서와 같이, 각 $s \in S$에 대하여 $as \equiv \varepsilon_s r_s \pmod{p}$를 만족하는 $\varepsilon_s \in \{1, -1\}$과 $r_s \in S$를 택하면 $s \mapsto r_s$는 $S$ 위의 전단사이다. $\varepsilon_s = 1$이면 $\rho_s = r_s$이고 $\varepsilon_s = -1$이면 $\rho_s = p - r_s$이며, $\varepsilon_s = -1$인 $s$의 개수가 보조정리의 $\mu$이다. 그러므로
 
 $$\sum_{s \in S}\rho_s = \sum_{s \in S} r_s - 2\sum_{\varepsilon_s = -1} r_s + \mu p \equiv \sum_{s \in S} s + \mu \pmod{2}$$
 
@@ -62,21 +62,21 @@ $$\sum_{s \in S}\rho_s = \sum_{s \in S} r_s - 2\sum_{\varepsilon_s = -1} r_s + \
 
 $$\sum_{s \in S} s \equiv M + \sum_{s \in S} s + \mu$$
 
-이므로 $M \equiv \mu \pmod{2}$이다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)에 의하여 $(a/p) = (-1)^\mu = (-1)^M$이다.
+이므로 $M \equiv \mu \pmod{2}$이다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7){: data-lid="t178g" }에 의하여 $(a/p) = (-1)^\mu = (-1)^M$이다.
 :::
 
-[보조정리 2](#lem2)는 $a$가 홀수일 때만 성립한다. $a$가 짝수이면 $a\sum s$의 홀짝이 $\sum s$와 달라져 위의 소거가 일어나지 않는다. 상호법칙에서는 $a$로 홀수 소수가 들어가므로 문제가 없다.
+[보조정리 2](#lem2){: data-lid="lf5qy" }는 $a$가 홀수일 때만 성립한다. $a$가 짝수이면 $a\sum s$의 홀짝이 $\sum s$와 달라져 위의 소거가 일어나지 않는다. 상호법칙에서는 $a$로 홀수 소수가 들어가므로 문제가 없다.
 
 ::: 증명 (정리 1)
-$p, q$가 서로 다른 홀수 소수이므로 [보조정리 2](#lem2)를 $(a, p) = (q, p)$와 $(a, p) = (p, q)$에 적용할 수 있다. 곧
+$p, q$가 서로 다른 홀수 소수이므로 [보조정리 2](#lem2){: data-lid="t9sez" }를 $(a, p) = (q, p)$와 $(a, p) = (p, q)$에 적용할 수 있다. 곧
 
 $$\left(\frac{q}{p}\right) = (-1)^{M_1}, \quad M_1 = \sum_{x=1}^{(p-1)/2}\left\lfloor \frac{qx}{p}\right\rfloor, \qquad \left(\frac{p}{q}\right) = (-1)^{M_2}, \quad M_2 = \sum_{y=1}^{(q-1)/2}\left\lfloor \frac{py}{q}\right\rfloor$$
 
 이다. 따라서 $M_1 + M_2 = \frac{p-1}{2}\cdot\frac{q-1}{2}$임을 보이면 충분하다.
 
-직사각형 안의 lattice point 집합 $R = \{(x, y) \in \mathbb{Z}^2 : 1 \le x \le (p-1)/2,\ 1 \le y \le (q-1)/2\}$를 생각하면 $R$의 원소 수는 $\frac{p-1}{2}\cdot\frac{q-1}{2}$이다. $R$의 점 $(x, y)$에 대하여 $qx = py$일 수 없다. 그렇다면 $p \mid qx$이고 $p \ne q$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의하여 $p \mid x$인데, $1 \le x < p$이기 때문이다. 따라서 $R$은 $qx > py$인 점들의 집합 $R_1$과 $qx < py$인 점들의 집합 $R_2$의 서로소 합집합이다.
+직사각형 안의 lattice point 집합 $R = \{(x, y) \in \mathbb{Z}^2 : 1 \le x \le (p-1)/2,\ 1 \le y \le (q-1)/2\}$를 생각하면 $R$의 원소 수는 $\frac{p-1}{2}\cdot\frac{q-1}{2}$이다. $R$의 점 $(x, y)$에 대하여 $qx = py$일 수 없다. 그렇다면 $p \mid qx$이고 $p \ne q$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-lid="0g1lx" }에 의하여 $p \mid x$인데, $1 \le x < p$이기 때문이다. 따라서 $R$은 $qx > py$인 점들의 집합 $R_1$과 $qx < py$인 점들의 집합 $R_2$의 서로소 합집합이다.
 
-$M_1 = \lvert R_1\rvert$임을 보이자. 고정된 $x$에 대하여 $1 \le y < qx/p$인 정수 $y$는 $\lfloor qx/p\rfloor$개이다. 이 $y$들은 모두 $R$ 안에 있다. 실제로 $y < qx/p \le q(p-1)/(2p) < q/2$이고 $y$가 정수이므로 $y \le (q-1)/2$이기 때문이다. 이것이 $x$와 $y$의 범위를 모두 절반 $\{1, \ldots, (p-1)/2\}$, $\{1, \ldots, (q-1)/2\}$로 잡는 이유이다. 가우스 보조정리의 $S$와 같은 구간이어서 [보조정리 2](#lem2)를 쓸 수 있고, 동시에 quotient $\lfloor qx/p\rfloor$가 $y$의 상한을 넘지 않아 quotient의 합이 $R$ 안의 점 개수와 정확히 일치한다. 따라서 $x = 1, \ldots, (p-1)/2$에 대하여 더하면 $M_1 = \lvert R_1\rvert$이다. $p$와 $q$의 역할을 바꾸어 같은 논증을 적용하면 $M_2$는 $1 \le x < py/q$, 곧 $qx < py$인 $R$의 점의 개수 $\lvert R_2\rvert$이다. 그러므로
+$M_1 = \lvert R_1\rvert$임을 보이자. 고정된 $x$에 대하여 $1 \le y < qx/p$인 정수 $y$는 $\lfloor qx/p\rfloor$개이다. 이 $y$들은 모두 $R$ 안에 있다. 실제로 $y < qx/p \le q(p-1)/(2p) < q/2$이고 $y$가 정수이므로 $y \le (q-1)/2$이기 때문이다. 이것이 $x$와 $y$의 범위를 모두 절반 $\{1, \ldots, (p-1)/2\}$, $\{1, \ldots, (q-1)/2\}$로 잡는 이유이다. 가우스 보조정리의 $S$와 같은 구간이어서 [보조정리 2](#lem2){: data-lid="h2e0s" }를 쓸 수 있고, 동시에 quotient $\lfloor qx/p\rfloor$가 $y$의 상한을 넘지 않아 quotient의 합이 $R$ 안의 점 개수와 정확히 일치한다. 따라서 $x = 1, \ldots, (p-1)/2$에 대하여 더하면 $M_1 = \lvert R_1\rvert$이다. $p$와 $q$의 역할을 바꾸어 같은 논증을 적용하면 $M_2$는 $1 \le x < py/q$, 곧 $qx < py$인 $R$의 점의 개수 $\lvert R_2\rvert$이다. 그러므로
 
 $$M_1 + M_2 = \lvert R_1\rvert + \lvert R_2\rvert = \lvert R\rvert = \frac{p-1}{2}\cdot\frac{q-1}{2}$$
 
@@ -108,39 +108,39 @@ $m, n$이 홀수인 양의 정수이면 다음이 성립한다.
 ::: 증명
 홀수 양의 정수 $a$에 대하여 $e(a) = (a-1)/2$, $f(a) = (a^2-1)/8$로 둔다. 홀수 $a, b$에 대하여 $e(ab) = e(a) + e(b) + 2e(a)e(b)$이고 $f(ab) = f(a) + f(b) + 8f(a)f(b)$인 것은 전개로 확인된다. 따라서 $e$와 $f$는 법 $2$에서 곱을 합으로 보낸다. ($f(a)$가 정수인 것은 $a$가 홀수일 때 $a^2 \equiv 1 \pmod{8}$이기 때문이다.)
 
-$n = p_1 \cdots p_k$로 쓴다. 정의와 [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)의 소수 분모에 대한 결과에 의하여
+$n = p_1 \cdots p_k$로 쓴다. 정의와 [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="45t2r" }의 소수 분모에 대한 결과에 의하여
 
 $$\left(\frac{-1}{n}\right) = \prod_{i}(-1)^{e(p_i)} = (-1)^{\sum e(p_i)} = (-1)^{e(n)}$$
 
 이고, 같은 방식으로 $(2/n) = \prod_i (-1)^{f(p_i)} = (-1)^{f(n)}$이다. 이것이 1, 2이다.
 
-3을 보이자. $m = p_1 \cdots p_k$, $n = q_1 \cdots q_l$로 소인수분해하면 $\gcd(m, n) = 1$이므로 모든 $p_i$와 $q_j$는 서로 다른 홀수 소수이다. 정의에 의하여 $(m/n) = \prod_{i,j}(p_i/q_j)$, $(n/m) = \prod_{i,j}(q_j/p_i)$이므로 [정리 1](#thm1)에 의하여
+3을 보이자. $m = p_1 \cdots p_k$, $n = q_1 \cdots q_l$로 소인수분해하면 $\gcd(m, n) = 1$이므로 모든 $p_i$와 $q_j$는 서로 다른 홀수 소수이다. 정의에 의하여 $(m/n) = \prod_{i,j}(p_i/q_j)$, $(n/m) = \prod_{i,j}(q_j/p_i)$이므로 [정리 1](#thm1){: data-lid="0dwn4" }에 의하여
 
 $$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = \prod_{i,j}(-1)^{e(p_i)e(q_j)} = (-1)^{\left(\sum_i e(p_i)\right)\left(\sum_j e(q_j)\right)} = (-1)^{e(m)e(n)}$$
 
 이다. 마지막 등호는 $\sum_i e(p_i) \equiv e(m)$, $\sum_j e(q_j) \equiv e(n) \pmod{2}$에서 나온다.
 :::
 
-[명제 4](#prop4)의 3에서 $\gcd(m, n) > 1$이면 두 기호가 모두 $0$이어서 등식은 $0 = 0$으로 의미가 없다. 그러나 계산에서는 이 경우가 자연스럽게 걸러진다. 아래 알고리즘은 공약수가 있으면 분자가 $0$이 되는 데서 끝나고, 이때 기호의 값은 $0$이다.
+[명제 4](#prop4){: data-lid="ykatp" }의 3에서 $\gcd(m, n) > 1$이면 두 기호가 모두 $0$이어서 등식은 $0 = 0$으로 의미가 없다. 그러나 계산에서는 이 경우가 자연스럽게 걸러진다. 아래 알고리즘은 공약수가 있으면 분자가 $0$이 되는 데서 끝나고, 이때 기호의 값은 $0$이다.
 
 ### Jacobi 기호가 1인데 이차 잉여가 아닌 경우
 
 Jacobi 기호를 Legendre 기호처럼 읽으면 틀린다. $n$이 합성수이면 $(a/n) = 1$이 $a$가 법 $n$의 이차 잉여임을 뜻하지 않는다. 한쪽 방향만 성립한다. $\gcd(a, n) = 1$이고 $x^2 \equiv a \pmod{n}$이 해를 가지면 각 소인수 $p_i$에 대하여 $x^2 \equiv a \pmod{p_i}$이므로 $(a/p_i) = 1$이고 따라서 $(a/n) = 1$이다. 대우로 $(a/n) = -1$이면 $a$는 법 $n$의 이차 비잉여이다. 역은 성립하지 않는다.
 
 ::: 예시 5 ($n = 15$)
-$n = 15 = 3 \cdot 5$에서 $(2/15) = (2/3)(2/5) = (-1)(-1) = 1$이다. 그런데 법 $15$에서 reduced residue class $1, 2, 4, 7, 8, 11, 13, 14$의 제곱은 차례로 $1, 4, 1, 4, 4, 1, 4, 1$이므로 이차 잉여는 $1, 4$뿐이고 $2$는 이차 잉여가 아니다. 법 $15$에서 $x^2 \equiv 2$는 이미 법 $3$에서 $x^2 \equiv 2$로 환원되어 해가 없다. $(a/15) = 1$인 $a$는 $1, 2, 4, 8$인데, $a$가 두 소인수에서 모두 비잉여이면 두 $-1$이 곱해져 기호가 $1$이 되고 이차 잉여성은 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8)에 의하여 소인수별로 따로 판정되기 때문이다.
+$n = 15 = 3 \cdot 5$에서 $(2/15) = (2/3)(2/5) = (-1)(-1) = 1$이다. 그런데 법 $15$에서 reduced residue class $1, 2, 4, 7, 8, 11, 13, 14$의 제곱은 차례로 $1, 4, 1, 4, 4, 1, 4, 1$이므로 이차 잉여는 $1, 4$뿐이고 $2$는 이차 잉여가 아니다. 법 $15$에서 $x^2 \equiv 2$는 이미 법 $3$에서 $x^2 \equiv 2$로 환원되어 해가 없다. $(a/15) = 1$인 $a$는 $1, 2, 4, 8$인데, $a$가 두 소인수에서 모두 비잉여이면 두 $-1$이 곱해져 기호가 $1$이 되고 이차 잉여성은 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8){: data-lid="wvlgp" }에 의하여 소인수별로 따로 판정되기 때문이다.
 :::
 
 일반적으로 $(a/n) = 1$인 $a$는 이차 비잉여인 소인수 성분이 짝수 개 있다는 것만 알려 준다. 이차 잉여성 자체를 판정하려면 $n$의 소인수 각각에서 $(a/p_i) = 1$인지 보아야 한다. 분모가 소수일 때만 $(a/n) = 1$이 이차 잉여성과 동치이다.
 
 ## 호제법형 계산
 
-[명제 4](#prop4)의 세 성질과 $a \bmod n$에의 의존성으로 $(a/n)$을 [§나눗셈과 유클리드 호제법, ⁋정리 6](/ko/math/number_theory/euclidean_algorithm#thm6)과 같은 모양으로 계산할 수 있다. $n$이 홀수인 양의 정수일 때 다음을 반복한다. 먼저 $a$를 $n$으로 나눈 나머지로 바꾼다. 음수인 $a$는 이 단계에서 양수가 되므로 $(-1/n)$을 따로 다룰 필요가 없다. 나머지가 $0$이면 $n = 1$일 때 값은 $1$이고, 그렇지 않으면 $0$이다. 다음으로 $a = 2^k a'$ ($a'$는 홀수)로 쓰고 $(2/n)^k$을 [명제 4](#prop4)의 2로 처리한다. $a' = 1$이면 끝난다. $a' > 1$이면 [명제 4](#prop4)의 3으로 $(a'/n) = \pm(n/a')$로 뒤집는다. 부호는 $a' \equiv n \equiv 3 \pmod{4}$일 때만 $-$이다. 뒤집은 뒤에는 분모가 $a'$로 줄어 있으므로 처음으로 돌아간다.
+[명제 4](#prop4){: data-lid="4xxdj" }의 세 성질과 $a \bmod n$에의 의존성으로 $(a/n)$을 [§나눗셈과 유클리드 호제법, ⁋정리 6](/ko/math/number_theory/euclidean_algorithm#thm6){: data-lid="tgoez" }과 같은 모양으로 계산할 수 있다. $n$이 홀수인 양의 정수일 때 다음을 반복한다. 먼저 $a$를 $n$으로 나눈 나머지로 바꾼다. 음수인 $a$는 이 단계에서 양수가 되므로 $(-1/n)$을 따로 다룰 필요가 없다. 나머지가 $0$이면 $n = 1$일 때 값은 $1$이고, 그렇지 않으면 $0$이다. 다음으로 $a = 2^k a'$ ($a'$는 홀수)로 쓰고 $(2/n)^k$을 [명제 4](#prop4){: data-lid="nfocq" }의 2로 처리한다. $a' = 1$이면 끝난다. $a' > 1$이면 [명제 4](#prop4){: data-lid="ksrrf" }의 3으로 $(a'/n) = \pm(n/a')$로 뒤집는다. 부호는 $a' \equiv n \equiv 3 \pmod{4}$일 때만 $-$이다. 뒤집은 뒤에는 분모가 $a'$로 줄어 있으므로 처음으로 돌아간다.
 
 분자를 소인수분해하는 단계는 $2$의 거듭제곱을 떼는 것뿐이고, 홀수 부분은 어떤 소수의 곱인지 알 필요가 없다. 단계 수는 분모의 로그에 비례한다. 분모가 $n_0 > n_1 > n_2 > \cdots$로 줄 때 $n_2 \le n_0 \bmod n_1 < n_0/2$이기 때문이다. 뒤의 부등식은 임의의 $x \ge y$에 대하여 $x \bmod y < x/2$라는 호제법의 표준적 사실이다.
 
 ::: 예시 6 ($(3141/7919)$)
-$7919$는 소수이므로 $(3141/7919)$는 $3141$이 법 $7919$의 이차 잉여인지를 알려 준다. $3141 \equiv 1$, $7919 \equiv 3 \pmod{4}$이므로 [명제 4](#prop4)의 3에 의하여 뒤집을 때 부호가 바뀌지 않는다.
+$7919$는 소수이므로 $(3141/7919)$는 $3141$이 법 $7919$의 이차 잉여인지를 알려 준다. $3141 \equiv 1$, $7919 \equiv 3 \pmod{4}$이므로 [명제 4](#prop4){: data-lid="9jxti" }의 3에 의하여 뒤집을 때 부호가 바뀌지 않는다.
 
 $$\begin{aligned}
 \left(\frac{3141}{7919}\right) &= \left(\frac{7919}{3141}\right) = \left(\frac{1637}{3141}\right) = \left(\frac{3141}{1637}\right) = \left(\frac{1504}{1637}\right) \\
@@ -157,14 +157,14 @@ $$\begin{aligned}
 
 ## 이차 잉여인 소수의 분류
 
-서두에서 관찰한 $q = 3$의 경우를 증명하자. 이 계산은 [정리 1](#thm1)의 부호 규칙이 실제로 어떻게 작동하는지를 보여 준다.
+서두에서 관찰한 $q = 3$의 경우를 증명하자. 이 계산은 [정리 1](#thm1){: data-lid="fdgb1" }의 부호 규칙이 실제로 어떻게 작동하는지를 보여 준다.
 
 ::: 예시 7 ($3$과 $5$가 이차 잉여인 소수)
-$p > 3$인 소수에 대하여 [정리 1](#thm1)에 의하여 $(3/p) = (-1)^{\frac{p-1}{2}}(p/3)$이다. $(p/3)$은 $p \equiv 1 \pmod{3}$이면 $1$, $p \equiv 2 \pmod{3}$이면 $-1$이고, $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod{4}$이면 $1$, $p \equiv 3 \pmod{4}$이면 $-1$이다. $p$를 $12$로 나눈 나머지 $1, 5, 7, 11$에 대하여 두 값을 표로 만들면 $(3/p)$는 차례로 $1 \cdot 1 = 1$, $1 \cdot (-1) = -1$, $(-1) \cdot 1 = -1$, $(-1)(-1) = 1$이다. 따라서
+$p > 3$인 소수에 대하여 [정리 1](#thm1){: data-lid="sskdd" }에 의하여 $(3/p) = (-1)^{\frac{p-1}{2}}(p/3)$이다. $(p/3)$은 $p \equiv 1 \pmod{3}$이면 $1$, $p \equiv 2 \pmod{3}$이면 $-1$이고, $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod{4}$이면 $1$, $p \equiv 3 \pmod{4}$이면 $-1$이다. $p$를 $12$로 나눈 나머지 $1, 5, 7, 11$에 대하여 두 값을 표로 만들면 $(3/p)$는 차례로 $1 \cdot 1 = 1$, $1 \cdot (-1) = -1$, $(-1) \cdot 1 = -1$, $(-1)(-1) = 1$이다. 따라서
 
 $$\left(\frac{3}{p}\right) = 1 \iff p \equiv \pm 1 \pmod{12}$$
 
-이다. $5 \equiv 1 \pmod{4}$이므로 [정리 1](#thm1)에 의하여 $(5/p) = (p/5)$이고, 법 $5$의 이차 잉여가 $1, 4$이므로
+이다. $5 \equiv 1 \pmod{4}$이므로 [정리 1](#thm1){: data-lid="esvya" }에 의하여 $(5/p) = (p/5)$이고, 법 $5$의 이차 잉여가 $1, 4$이므로
 
 $$\left(\frac{5}{p}\right) = 1 \iff p \equiv \pm 1 \pmod{5}$$
 

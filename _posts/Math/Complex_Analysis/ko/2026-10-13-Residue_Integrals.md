@@ -15,13 +15,13 @@ published: false
 
 ---
 
-[§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)는 닫힌 경로를 따른 적분을 경로 안의 극에서의 residue 계산으로 바꾸어 준다. 이를 실변수 적분에 쓰려면 적분 구간을 닫힌 경로의 일부로 만들어야 한다. 실축 위의 구간에 복소평면 안의 호나 선분을 이어 붙여 경로를 닫고, 닫힌 경로 전체의 적분을 residue로 계산한 다음, 우리가 원하지 않는 부분의 적분이 극한에서 $0$이 됨을 보이면 실축 위의 적분만 남는다. 이 글의 모든 계산은 이 세 단계를 따르며, 경로마다 달라지는 것은 어떤 호를 붙이는가와 그 호 위의 적분이 왜 소멸하는가이다. 소멸의 근거는 매번 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6), 곧 경로 위의 적분의 절댓값이 경로의 길이와 피적분함수의 최댓값의 곱 이하라는 부등식이다.
+[§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="izqx4" }는 닫힌 경로를 따른 적분을 경로 안의 극에서의 residue 계산으로 바꾸어 준다. 이를 실변수 적분에 쓰려면 적분 구간을 닫힌 경로의 일부로 만들어야 한다. 실축 위의 구간에 복소평면 안의 호나 선분을 이어 붙여 경로를 닫고, 닫힌 경로 전체의 적분을 residue로 계산한 다음, 우리가 원하지 않는 부분의 적분이 극한에서 $0$이 됨을 보이면 실축 위의 적분만 남는다. 이 글의 모든 계산은 이 세 단계를 따르며, 경로마다 달라지는 것은 어떤 호를 붙이는가와 그 호 위의 적분이 왜 소멸하는가이다. 소멸의 근거는 매번 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="eo0ok" }, 곧 경로 위의 적분의 절댓값이 경로의 길이와 피적분함수의 최댓값의 곱 이하라는 부등식이다.
 
 이 글에서 쓰는 유수정리는 다음 형태이다. $f$가 닫힌 경로 $\gamma$와 그 내부에서 유한 개의 극을 제외하고 holomorphic이고 극이 $\gamma$ 위에 놓이지 않으면, $\gamma$가 내부의 각 극을 한 번씩 반시계방향으로 도는 경우
 
 $$\oint_\gamma f(z)\dd{z} = 2\pi i\sum_j \operatorname{Res}_{z=z_j} f$$
 
-이다. 극이 단순극이면 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 $\operatorname{Res}_{z=z_0}f = \lim_{z\to z_0}(z-z_0)f(z)$이고, $f=g/h$에서 $h(z_0)=0$, $h'(z_0)\neq0$, $g(z_0)\neq0$이면 $\operatorname{Res}_{z=z_0}f = g(z_0)/h'(z_0)$이다. 이상적분은 [\[미적분학\] §이상적분, ⁋정의 1](/ko/math/calculus/improper_integrals#def1)로 정의하고, 수렴은 [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)에 의하여 판정한다. 특히 양쪽이 무한대인 이상적분은 두 극한을 독립적으로 보내어 정의하므로, $\int_{-R}^{R}$에서 $R\to\infty$로 보낸 극한과 일반적으로는 다르다. 이 차이가 아래 여러 곳에서 실제로 문제가 된다.
+이다. 극이 단순극이면 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="zzobd" }에 의하여 $\operatorname{Res}_{z=z_0}f = \lim_{z\to z_0}(z-z_0)f(z)$이고, $f=g/h$에서 $h(z_0)=0$, $h'(z_0)\neq0$, $g(z_0)\neq0$이면 $\operatorname{Res}_{z=z_0}f = g(z_0)/h'(z_0)$이다. 이상적분은 [\[미적분학\] §이상적분, ⁋정의 1](/ko/math/calculus/improper_integrals#def1){: data-lid="0z8wk" }로 정의하고, 수렴은 [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="rwtzk" }에 의하여 판정한다. 특히 양쪽이 무한대인 이상적분은 두 극한을 독립적으로 보내어 정의하므로, $\int_{-R}^{R}$에서 $R\to\infty$로 보낸 극한과 일반적으로는 다르다. 이 차이가 아래 여러 곳에서 실제로 문제가 된다.
 
 ## 유리함수의 무한적분
 
@@ -40,9 +40,9 @@ $m=\deg P$, $n=\deg Q$라 하고 $P,Q$의 최고차 계수를 $p_m,q_n$이라 �
 
 $$\lvert f(z)\rvert\le\frac{M}{\lvert z\rvert^{n-m}}\le\frac{M}{\lvert z\rvert^{2}}\qquad(\lvert z\rvert\ge R_0)$$
 
-이다. $f$는 실축에서 연속이고 $\lvert x\rvert\ge R_0$에서 $M/x^2$로 눌리므로, [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)과 [\[미적분학\] §이상적분, ⁋명제 4](/ko/math/calculus/improper_integrals#prop4)에 의하여 $\int_{-\infty}^{\infty}f(x)\dd{x}$가 수렴한다. 수렴하는 이상적분은 $\int_{-R}^{R}$의 극한과 같으므로 $\lim_{R\to\infty}\int_{-R}^{R}f(x)\dd{x}$를 계산하면 된다.
+이다. $f$는 실축에서 연속이고 $\lvert x\rvert\ge R_0$에서 $M/x^2$로 눌리므로, [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="dzl02" }과 [\[미적분학\] §이상적분, ⁋명제 4](/ko/math/calculus/improper_integrals#prop4){: data-lid="9o9mu" }에 의하여 $\int_{-\infty}^{\infty}f(x)\dd{x}$가 수렴한다. 수렴하는 이상적분은 $\int_{-R}^{R}$의 극한과 같으므로 $\lim_{R\to\infty}\int_{-R}^{R}f(x)\dd{x}$를 계산하면 된다.
 
-$R>R_0$이고 $R$이 $Q$의 모든 영점의 절댓값보다 크다고 하자. 선분 $[-R,R]$과 $C_R$을 이은 경로는 상반평면의 극을 각각 한 번씩 반시계방향으로 돌므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)에 의하여
+$R>R_0$이고 $R$이 $Q$의 모든 영점의 절댓값보다 크다고 하자. 선분 $[-R,R]$과 $C_R$을 이은 경로는 상반평면의 극을 각각 한 번씩 반시계방향으로 돌므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="kyvwz" }에 의하여
 
 $$\int_{-R}^{R}f(x)\dd{x}+\int_{C_R}f(z)\dd{z}=2\pi i\sum_{\Img z_j>0}\operatorname{Res}_{z=z_j}f$$
 
@@ -55,14 +55,14 @@ $$\left\lvert\int_{C_R}f(z)\dd{z}\right\rvert\le\frac{M}{R^2}\cdot\pi R=\frac{\p
 
 가령 $\int_{-\infty}^{\infty}\dd{x}/(x^4+1)$에서 $Q=z^4+1$의 영점은 $e^{i\pi/4},e^{3i\pi/4},e^{5i\pi/4},e^{7i\pi/4}$이고 상반평면에는 앞의 둘이 있다. $z^4=-1$이므로 $z_0$에서의 residue는 $1/(4z_0^3)=z_0/(4z_0^4)=-z_0/4$이고, 둘의 합은 $-(e^{i\pi/4}+e^{3i\pi/4})/4=-i\sqrt2/4$이다. 따라서 적분은 $2\pi i\cdot(-i\sqrt2/4)=\pi/\sqrt2$이다.
 
-차수 조건 $\deg Q\ge\deg P+2$는 반원호 적분을 죽이는 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)에서 나온 것이며, 차이가 $1$이면 공식이 성립하지 않는다.
+차수 조건 $\deg Q\ge\deg P+2$는 반원호 적분을 죽이는 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="c6ycy" }에서 나온 것이며, 차이가 $1$이면 공식이 성립하지 않는다.
 
 ::: 예시 2 (차수 차이가 1인 경우)
 $f(x)=x/(x^2+1)$이면 $\deg Q-\deg P=1$이다. 이때 $f$는 기함수이므로 모든 $R$에 대해 $\int_{-R}^{R}f\dd{x}=0$이다. 그러나 $\int_0^R f\dd{x}=(1/2)\ln(1+R^2)$은 $R\to\infty$에서 발산하므로 $\int_{-\infty}^{\infty}f\dd{x}$는 수렴하지 않는다. 반원호 위에서는 $z/(z^2+1)=1/z+O(1/z^3)$이고 $\int_{C_R}\dd{z}/z=i\pi$이므로
 
 $$\int_{C_R}\frac{z}{z^2+1}\dd{z}\longrightarrow i\pi\neq0$$
 
-이다. 실제로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)는 $0+i\pi=2\pi i\operatorname{Res}_{z=i}f=2\pi i\cdot(1/2)$로 성립하며, 반원호의 기여가 살아남아 실축 적분만을 뽑아낼 수 없다.
+이다. 실제로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="91r3i" }는 $0+i\pi=2\pi i\operatorname{Res}_{z=i}f=2\pi i\cdot(1/2)$로 성립하며, 반원호의 기여가 살아남아 실축 적분만을 뽑아낼 수 없다.
 :::
 
 ## Jordan 보조정리와 Fourier 적분
@@ -93,7 +93,7 @@ $$\left\lvert\int_{C_R}f(z)e^{iaz}\dd{z}\right\rvert\le M(R)R\cdot2\cdot\frac{\p
 이다.
 :::
 
-[§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)을 그대로 쓰면 $\lvert e^{iaz}\rvert\le1$이므로 $M(R)\cdot\pi R$만 얻는데, [보조정리 3](#lem3)은 $e^{-aR\sin\theta}$를 적분하여 $R$ 인자를 $1/R$로 상쇄한다. 이 때문에 $f$가 $1/R^2$만큼 빠르게 줄어들 필요가 없고 $0$으로 가기만 하면 된다. 또 $a>0$일 때 상반평면에서 닫아야 하는 이유도 여기에 있다. 하반평면에서는 $\lvert e^{iaz}\rvert=e^{aR\lvert\sin\theta\rvert}$가 지수적으로 커져서 반원호 적분이 소멸하지 않는다. $\cos$은 우함수이고 $\sin$은 기함수이므로 $a>0$인 경우만 다루면 충분하다.
+[§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="75xfi" }을 그대로 쓰면 $\lvert e^{iaz}\rvert\le1$이므로 $M(R)\cdot\pi R$만 얻는데, [보조정리 3](#lem3){: data-lid="9yei0" }은 $e^{-aR\sin\theta}$를 적분하여 $R$ 인자를 $1/R$로 상쇄한다. 이 때문에 $f$가 $1/R^2$만큼 빠르게 줄어들 필요가 없고 $0$으로 가기만 하면 된다. 또 $a>0$일 때 상반평면에서 닫아야 하는 이유도 여기에 있다. 하반평면에서는 $\lvert e^{iaz}\rvert=e^{aR\lvert\sin\theta\rvert}$가 지수적으로 커져서 반원호 적분이 소멸하지 않는다. $\cos$은 우함수이고 $\sin$은 기함수이므로 $a>0$인 경우만 다루면 충분하다.
 
 ::: 명제 4 (Fourier 적분)
 $P,Q$가 polynomial이고 $Q$가 실축 위에서 영점을 갖지 않으며 $\deg Q\ge\deg P+1$이라 하자. $f=P/Q$이고 $a>0$이면 $\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}$는 수렴하고
@@ -104,7 +104,7 @@ $$\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j>0}\operatorname{
 :::
 
 ::: 증명
-[명제 1](#prop1)의 증명에서와 같이 $\lvert z\rvert\ge R_0$에서 $\lvert f(z)\rvert\le M/\lvert z\rvert$이므로 $M(R)\le M/R\to0$이고, [보조정리 3](#lem3)에 의해 반원호 적분이 소멸한다. [명제 1](#prop1)과 같은 닫힌 경로에 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)를 쓰고 $R\to\infty$로 보내면
+[명제 1](#prop1){: data-lid="mi2pw" }의 증명에서와 같이 $\lvert z\rvert\ge R_0$에서 $\lvert f(z)\rvert\le M/\lvert z\rvert$이므로 $M(R)\le M/R\to0$이고, [보조정리 3](#lem3){: data-lid="r7fmu" }에 의해 반원호 적분이 소멸한다. [명제 1](#prop1){: data-lid="0guxg" }과 같은 닫힌 경로에 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="gg8uh" }를 쓰고 $R\to\infty$로 보내면
 
 $$\lim_{R\to\infty}\int_{-R}^{R}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j>0}\operatorname{Res}_{z=z_j}\bigl(f(z)e^{iaz}\bigr)$$
 
@@ -112,15 +112,15 @@ $$\lim_{R\to\infty}\int_{-R}^{R}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j>0}\operat
 
 $$\int_{R_0}^{t}f(x)e^{iax}\dd{x}=\left[\frac{f(x)e^{iax}}{ia}\right]_{R_0}^{t}-\frac{1}{ia}\int_{R_0}^{t}f'(x)e^{iax}\dd{x}$$
 
-이다. 첫째 항은 $f(t)\to0$이므로 $t\to\infty$에서 수렴한다. $f'=(P'Q-PQ')/Q^2$에서 분자의 차수는 $\deg P+\deg Q-1$ 이하이고 분모의 차수는 $2\deg Q$이므로 $\deg Q-\deg(\text{분자})\ge2$이고, 따라서 $\lvert f'(x)\rvert\le M'/x^2$이다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)과 [\[미적분학\] §이상적분, ⁋명제 4](/ko/math/calculus/improper_integrals#prop4)에 의하여 둘째 항의 적분도 수렴한다. $t\to-\infty$ 쪽도 같으므로 두 극한이 독립적으로 존재하고, 그 합은 대칭 극한과 같다.
+이다. 첫째 항은 $f(t)\to0$이므로 $t\to\infty$에서 수렴한다. $f'=(P'Q-PQ')/Q^2$에서 분자의 차수는 $\deg P+\deg Q-1$ 이하이고 분모의 차수는 $2\deg Q$이므로 $\deg Q-\deg(\text{분자})\ge2$이고, 따라서 $\lvert f'(x)\rvert\le M'/x^2$이다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="jiv6v" }과 [\[미적분학\] §이상적분, ⁋명제 4](/ko/math/calculus/improper_integrals#prop4){: data-lid="zclhy" }에 의하여 둘째 항의 적분도 수렴한다. $t\to-\infty$ 쪽도 같으므로 두 극한이 독립적으로 존재하고, 그 합은 대칭 극한과 같다.
 :::
 
 ::: 예시 5 (차수 차이가 1인 Fourier 적분)
-$a>0$일 때 $\int_{-\infty}^{\infty}x\sin(ax)/(x^2+1)\dd{x}=\pi e^{-a}$이다. $f(z)=z/(z^2+1)$은 $\deg Q-\deg P=1$이므로 [명제 1](#prop1)이 아닌 [명제 4](#prop4)를 쓴다. $f(z)e^{iaz}$의 상반평면 극은 $z=i$ 하나이고 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여
+$a>0$일 때 $\int_{-\infty}^{\infty}x\sin(ax)/(x^2+1)\dd{x}=\pi e^{-a}$이다. $f(z)=z/(z^2+1)$은 $\deg Q-\deg P=1$이므로 [명제 1](#prop1){: data-lid="fup4j" }이 아닌 [명제 4](#prop4){: data-lid="3pxe3" }를 쓴다. $f(z)e^{iaz}$의 상반평면 극은 $z=i$ 하나이고 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="78dm2" }에 의하여
 
 $$\operatorname{Res}_{z=i}\frac{ze^{iaz}}{z^2+1}=\frac{ze^{iaz}}{2z}\bigg\rvert_{z=i}=\frac{e^{-a}}{2}$$
 
-이므로 $\int_{-\infty}^{\infty}xe^{iax}/(x^2+1)\dd{x}=2\pi i\cdot e^{-a}/2=i\pi e^{-a}$이다. 실수부는 $\int x\cos(ax)/(x^2+1)\dd{x}=0$으로 피적분함수가 기함수임과 일치하고, 허수부가 구하는 값 $\pi e^{-a}$이다. 이 적분은 $x\sin(ax)/(x^2+1)\sim\sin(ax)/x$라 절대수렴하지 않으며, [예시 2](#ex2)에서 보았듯 [보조정리 3](#lem3) 없이 ML 부등식만으로는 반원호 적분이 소멸함을 보일 수 없다.
+이므로 $\int_{-\infty}^{\infty}xe^{iax}/(x^2+1)\dd{x}=2\pi i\cdot e^{-a}/2=i\pi e^{-a}$이다. 실수부는 $\int x\cos(ax)/(x^2+1)\dd{x}=0$으로 피적분함수가 기함수임과 일치하고, 허수부가 구하는 값 $\pi e^{-a}$이다. 이 적분은 $x\sin(ax)/(x^2+1)\sim\sin(ax)/x$라 절대수렴하지 않으며, [예시 2](#ex2){: data-lid="g95xv" }에서 보았듯 [보조정리 3](#lem3){: data-lid="pomng" } 없이 ML 부등식만으로는 반원호 적분이 소멸함을 보일 수 없다.
 :::
 
 ## 단위원 치환에 의한 삼각적분
@@ -144,16 +144,16 @@ $z=e^{i\theta}$이면 $\cos\theta=(z+z^{-1})/2$, $\sin\theta=(z-z^{-1})/(2i)$이
 
 $$\oint_{\lvert z\rvert=1}F(z)\dd{z}=\int_0^{2\pi}F(e^{i\theta})ie^{i\theta}\dd{\theta}=\int_0^{2\pi}R(\cos\theta,\sin\theta)\dd{\theta}$$
 
-이다. $F(e^{i\theta})$의 분모는 $R(\cos\theta,\sin\theta)$의 분모에서 오므로 단위원 위에서 $0$이 되지 않고, 따라서 $F$는 단위원 위에 극이 없다. 단위원은 내부의 각 극을 한 번씩 반시계방향으로 돌므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)에 의하여 결론을 얻는다.
+이다. $F(e^{i\theta})$의 분모는 $R(\cos\theta,\sin\theta)$의 분모에서 오므로 단위원 위에서 $0$이 되지 않고, 따라서 $F$는 단위원 위에 극이 없다. 단위원은 내부의 각 극을 한 번씩 반시계방향으로 돌므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="ienqq" }에 의하여 결론을 얻는다.
 :::
 
-주의할 점은 $F$의 극에 원점이 포함될 수 있다는 것이다. $1/(iz)$ 인자와, $\cos n\theta$ 같은 항에서 나오는 $z^{-n}$ 때문에 원점은 보통 극이 되며, 이 경우 residue는 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)의 단순극 공식이 아니라 Laurent 전개나 고차극 공식으로 구해야 한다.
+주의할 점은 $F$의 극에 원점이 포함될 수 있다는 것이다. $1/(iz)$ 인자와, $\cos n\theta$ 같은 항에서 나오는 $z^{-n}$ 때문에 원점은 보통 극이 되며, 이 경우 residue는 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="x5a50" }의 단순극 공식이 아니라 Laurent 전개나 고차극 공식으로 구해야 한다.
 
 표준적인 경우로 $a>1$일 때 $\int_0^{2\pi}\dd{\theta}/(a+\cos\theta)$를 보자. 치환하면 피적분함수가
 
 $$F(z)=\frac{1}{iz}\cdot\frac{1}{a+\frac12(z+z^{-1})}=\frac{2}{i}\cdot\frac{1}{z^2+2az+1}$$
 
-이 되고, 분모의 두 근 $z_\pm=-a\pm\sqrt{a^2-1}$은 $z_+z_-=1$을 만족한다. $a>1$이면 $\lvert z_+\rvert<1<\lvert z_-\rvert$이므로 단위원판 안의 극은 $z_+$ 하나이고, [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 그 residue는 $2/\bigl(i(z_+-z_-)\bigr)=1/\bigl(i\sqrt{a^2-1}\bigr)$이다. 따라서 적분은 $2\pi/\sqrt{a^2-1}$이다. 가정이 빠지는 경우는 $\lvert a\rvert<1$이다. 이때 $z_\pm$가 모두 단위원 위에 놓이고, 원래 적분에서는 $a+\cos\theta_0=0$인 $\theta_0$에서 $-\sin\theta_0\neq0$이어서 피적분함수가 $1/(\theta-\theta_0)$처럼 발산하므로 적분이 수렴하지 않는다.
+이 되고, 분모의 두 근 $z_\pm=-a\pm\sqrt{a^2-1}$은 $z_+z_-=1$을 만족한다. $a>1$이면 $\lvert z_+\rvert<1<\lvert z_-\rvert$이므로 단위원판 안의 극은 $z_+$ 하나이고, [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="4yatq" }에 의하여 그 residue는 $2/\bigl(i(z_+-z_-)\bigr)=1/\bigl(i\sqrt{a^2-1}\bigr)$이다. 따라서 적분은 $2\pi/\sqrt{a^2-1}$이다. 가정이 빠지는 경우는 $\lvert a\rvert<1$이다. 이때 $z_\pm$가 모두 단위원 위에 놓이고, 원래 적분에서는 $a+\cos\theta_0=0$인 $\theta_0$에서 $-\sin\theta_0\neq0$이어서 피적분함수가 $1/(\theta-\theta_0)$처럼 발산하므로 적분이 수렴하지 않는다.
 
 ::: 예시 7 (고차극이 원점에 있는 경우)
 $\int_0^{2\pi}\cos2\theta/(5-4\cos\theta)\dd{\theta}=\pi/6$이다. $\cos2\theta=(z^2+z^{-2})/2=(z^4+1)/(2z^2)$이고 $5-4\cos\theta=5-2z-2z^{-1}=-(2z-1)(z-2)/z$이므로
@@ -164,7 +164,7 @@ $$F(z)=-\frac{z^4+1}{2iz^2(2z-1)(z-2)}$$
 
 $$\operatorname{Res}_{z=1/2}F=-\frac{z^4+1}{2iz^2\cdot2(z-2)}\bigg\rvert_{z=1/2}=\frac{17}{24i}$$
 
-이다. 원점에서는 $g(z)=-(z^4+1)/\bigl(2i(2z-1)(z-2)\bigr)$로 두고 $F=g/z^2$이므로 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 $\operatorname{Res}_{z=0}F=g'(0)$이다. $h(z)=(2z-1)(z-2)=2z^2-5z+2$에서 $h(0)=2$, $h'(0)=-5$이므로
+이다. 원점에서는 $g(z)=-(z^4+1)/\bigl(2i(2z-1)(z-2)\bigr)$로 두고 $F=g/z^2$이므로 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="34j2q" }에 의하여 $\operatorname{Res}_{z=0}F=g'(0)$이다. $h(z)=(2z-1)(z-2)=2z^2-5z+2$에서 $h(0)=2$, $h'(0)=-5$이므로
 
 $$g'(0)=-\frac{1}{2i}\cdot\frac{4z^3h-(z^4+1)h'}{h^2}\bigg\rvert_{z=0}=-\frac{1}{2i}\cdot\frac{5}{4}=-\frac{5}{8i}$$
 
@@ -194,7 +194,7 @@ $$\lim_{\varepsilon\to0^+}\int_{\gamma_\varepsilon}f(z)\dd{z}=i(\theta_2-\theta_
 
 $$\int_{\gamma_\varepsilon}\frac{r}{z-c}\dd{z}=r\int_{\theta_1}^{\theta_2}\frac{i\varepsilon e^{i\theta}}{\varepsilon e^{i\theta}}\dd{\theta}=i(\theta_2-\theta_1)r$$
 
-이고, 둘째 항은 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)으로 $\bigl\lvert\int_{\gamma_\varepsilon}g\dd{z}\bigr\rvert\le K\cdot\varepsilon(\theta_2-\theta_1)\to0$이다.
+이고, 둘째 항은 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="uagqb" }으로 $\bigl\lvert\int_{\gamma_\varepsilon}g\dd{z}\bigr\rvert\le K\cdot\varepsilon(\theta_2-\theta_1)\to0$이다.
 :::
 
 단순극이라는 가정은 본질적이다. 이차극 $1/z^2$의 경우 $\theta=\pi$에서 $0$까지의 반원 위 적분은 $[-1/z]_{-\varepsilon}^{\varepsilon}=-2/\varepsilon$이어서 $\varepsilon\to0$에서 발산한다.
@@ -208,21 +208,21 @@ $$\operatorname{PV}\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j
 :::
 
 ::: 증명
-$R$을 크게, $\varepsilon$을 작게 잡아 $Q$의 상반평면 영점이 모두 $\lvert z\rvert<R$ 안에 있고 $c_l$ 둘레의 반지름 $\varepsilon$인 닫힌 반원판들이 서로 만나지 않으며 다른 극을 포함하지 않게 한다. 경로 $\Gamma_{\varepsilon,R}$를 다음과 같이 만든다. 실축 위에서 $-R$부터 $R$까지 각 $c_l$ 근방 $(c_l-\varepsilon,c_l+\varepsilon)$를 건너뛰며 가고, 건너뛴 곳에서는 상반평면 쪽 반원 $c_l+\varepsilon e^{i\theta}$를 $\theta=\pi$에서 $0$으로 시계방향으로 돈 다음, 마지막에 $C_R$을 따라 $R$에서 $-R$로 돌아온다. 이 경로의 내부에는 $f e^{iaz}$의 실축 위 극이 없고 상반평면의 극이 각각 회전수 $1$로 들어 있으므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)에 의하여
+$R$을 크게, $\varepsilon$을 작게 잡아 $Q$의 상반평면 영점이 모두 $\lvert z\rvert<R$ 안에 있고 $c_l$ 둘레의 반지름 $\varepsilon$인 닫힌 반원판들이 서로 만나지 않으며 다른 극을 포함하지 않게 한다. 경로 $\Gamma_{\varepsilon,R}$를 다음과 같이 만든다. 실축 위에서 $-R$부터 $R$까지 각 $c_l$ 근방 $(c_l-\varepsilon,c_l+\varepsilon)$를 건너뛰며 가고, 건너뛴 곳에서는 상반평면 쪽 반원 $c_l+\varepsilon e^{i\theta}$를 $\theta=\pi$에서 $0$으로 시계방향으로 돈 다음, 마지막에 $C_R$을 따라 $R$에서 $-R$로 돌아온다. 이 경로의 내부에는 $f e^{iaz}$의 실축 위 극이 없고 상반평면의 극이 각각 회전수 $1$로 들어 있으므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="wmcaw" }에 의하여
 
 $$\int_{[-R,R]\setminus\bigcup(c_l-\varepsilon,c_l+\varepsilon)}f(x)e^{iax}\dd{x}+\sum_l\int_{\gamma_{l,\varepsilon}}fe^{iaz}\dd{z}+\int_{C_R}fe^{iaz}\dd{z}=2\pi i\sum_{\Img z_j>0}\operatorname{Res}\bigl(fe^{iaz}\bigr)$$
 
-이다. $fe^{iaz}$는 $c_l$에서 단순극 또는 removable singularity이므로(분자가 $0$이면 residue가 $0$이다) [보조정리 8](#lem8)에서 $\theta_1=\pi$, $\theta_2=0$으로 놓으면 각 작은 반원 적분은 $-i\pi\operatorname{Res}_{z=c_l}(fe^{iaz})$로 수렴한다. $C_R$ 위의 적분은 [명제 4](#prop4)의 증명처럼 [보조정리 3](#lem3)으로 $0$으로 간다. 이항하면 주장을 얻는다.
+이다. $fe^{iaz}$는 $c_l$에서 단순극 또는 removable singularity이므로(분자가 $0$이면 residue가 $0$이다) [보조정리 8](#lem8){: data-lid="bmxud" }에서 $\theta_1=\pi$, $\theta_2=0$으로 놓으면 각 작은 반원 적분은 $-i\pi\operatorname{Res}_{z=c_l}(fe^{iaz})$로 수렴한다. $C_R$ 위의 적분은 [명제 4](#prop4){: data-lid="vbl4v" }의 증명처럼 [보조정리 3](#lem3){: data-lid="jt2w0" }으로 $0$으로 간다. 이항하면 주장을 얻는다.
 :::
 
 작은 반원이 시계방향이어서 $-\pi i\operatorname{Res}$가 좌변에 나타나고, 이를 우변으로 넘겨 $+\pi i\operatorname{Res}$가 된다. 이 부호가 실수하기 쉬운 곳이다.
 
 ::: 예시 10 (Dirichlet 적분)
-$\int_0^{\infty}\sin x/x\dd{x}=\pi/2$이다. $f(z)=1/z$로 놓으면 $\deg Q-\deg P=1$이고 실영점 $0$은 단순영점이며 상반평면에는 극이 없다. $\operatorname{Res}_{z=0}e^{iz}/z=1$이므로 [명제 9](#prop9)에서
+$\int_0^{\infty}\sin x/x\dd{x}=\pi/2$이다. $f(z)=1/z$로 놓으면 $\deg Q-\deg P=1$이고 실영점 $0$은 단순영점이며 상반평면에는 극이 없다. $\operatorname{Res}_{z=0}e^{iz}/z=1$이므로 [명제 9](#prop9){: data-lid="phkvc" }에서
 
 $$\operatorname{PV}\int_{-\infty}^{\infty}\frac{e^{ix}}{x}\dd{x}=\pi i$$
 
-이다. 실수부 $\operatorname{PV}\int\cos x/x\dd{x}$는 기함수라 $0$이다. 허수부에서 $\sin x/x$는 $x=0$에서 $1$로 연속 확장되므로 원점을 도려내는 것과 무관하게 $\int_{-\infty}^{\infty}\sin x/x\dd{x}=\pi$이다. 수렴은 [명제 4](#prop4)의 증명과 같은 부분적분으로 확인되고, 피적분함수가 우함수이므로 $\int_0^\infty=\pi/2$이다. 작은 반원의 기여 $-i\pi$를 빠뜨리면 허수부가 $0$이 되어 틀린 값을 얻는다.
+이다. 실수부 $\operatorname{PV}\int\cos x/x\dd{x}$는 기함수라 $0$이다. 허수부에서 $\sin x/x$는 $x=0$에서 $1$로 연속 확장되므로 원점을 도려내는 것과 무관하게 $\int_{-\infty}^{\infty}\sin x/x\dd{x}=\pi$이다. 수렴은 [명제 4](#prop4){: data-lid="yv5iz" }의 증명과 같은 부분적분으로 확인되고, 피적분함수가 우함수이므로 $\int_0^\infty=\pi/2$이다. 작은 반원의 기여 $-i\pi$를 빠뜨리면 허수부가 $0$이 되어 틀린 값을 얻는다.
 :::
 
 ## 분지절단과 열쇠구멍 경로
@@ -238,15 +238,15 @@ $$\int_0^{\infty}\frac{x^{a-1}}{1+x}\dd{x}=\frac{\pi}{\sin\pi a}$$
 :::
 
 ::: 증명
-수렴부터 확인한다. $0<x\le1$에서 $x^{a-1}/(1+x)\le x^{a-1}$이고 $\int_0^1x^{a-1}\dd{x}$는 $a>0$에서 수렴한다. $x\ge1$에서 $x^{a-1}/(1+x)\le x^{a-2}$이고 $\int_1^\infty x^{a-2}\dd{x}$는 $a<1$에서 수렴한다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)에 의하여 구하는 적분은 수렴한다.
+수렴부터 확인한다. $0<x\le1$에서 $x^{a-1}/(1+x)\le x^{a-1}$이고 $\int_0^1x^{a-1}\dd{x}$는 $a>0$에서 수렴한다. $x\ge1$에서 $x^{a-1}/(1+x)\le x^{a-2}$이고 $\int_1^\infty x^{a-2}\dd{x}$는 $a<1$에서 수렴한다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="1kvm9" }에 의하여 구하는 적분은 수렴한다.
 
 $\log z=\ln\lvert z\rvert+i\arg z$ ($0<\arg z<2\pi$)로 $z^{a-1}=e^{(a-1)\log z}$를 정의하면 $f(z)=z^{a-1}/(1+z)$는 $\mathbb{C}\setminus[0,\infty)$에서 $z=-1$을 제외하고 holomorphic이다. $0<\varepsilon<1<R$에 대해 경로 $\Gamma$를 네 조각으로 만든다. 위 둑 $\Gamma_1$은 $\varepsilon$에서 $R$까지, 큰 원 $C_R$은 반지름 $R$인 원을 반시계방향으로, 아래 둑 $\Gamma_2$는 $R$에서 $\varepsilon$까지, 작은 원 $c_\varepsilon$은 반지름 $\varepsilon$인 원을 시계방향으로 돈다. 경로는 절단에서 각 $\delta$만큼 띄워 잡고 $\delta\to0$으로 보내며, $f$가 각 둑까지 연속으로 확장되므로 극한은 둑 위의 적분이다.
 
-경로 안의 극은 $z=-1=e^{i\pi}$ 하나이고 $(-1)^{a-1}=e^{(a-1)i\pi}=-e^{i\pi a}$이므로 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 $\operatorname{Res}_{z=-1}f=-e^{i\pi a}$이다. 둑 위의 적분은, 위 둑에서 $z=x$이고 아래 둑에서 $z=xe^{2\pi i}$라 $z^{a-1}=x^{a-1}e^{2\pi i(a-1)}=x^{a-1}e^{2\pi ia}$이므로
+경로 안의 극은 $z=-1=e^{i\pi}$ 하나이고 $(-1)^{a-1}=e^{(a-1)i\pi}=-e^{i\pi a}$이므로 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="i428j" }에 의하여 $\operatorname{Res}_{z=-1}f=-e^{i\pi a}$이다. 둑 위의 적분은, 위 둑에서 $z=x$이고 아래 둑에서 $z=xe^{2\pi i}$라 $z^{a-1}=x^{a-1}e^{2\pi i(a-1)}=x^{a-1}e^{2\pi ia}$이므로
 
 $$\int_{\Gamma_1}f\dd{z}+\int_{\Gamma_2}f\dd{z}=\int_\varepsilon^R\frac{x^{a-1}}{1+x}\dd{x}-e^{2\pi ia}\int_\varepsilon^R\frac{x^{a-1}}{1+x}\dd{x}$$
 
-이다. 큰 원 위에서 $\lvert z^{a-1}\rvert=R^{a-1}$이고 $\lvert1+z\rvert\ge R-1$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)에서
+이다. 큰 원 위에서 $\lvert z^{a-1}\rvert=R^{a-1}$이고 $\lvert1+z\rvert\ge R-1$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="8vbfx" }에서
 
 $$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{R^{a-1}}{R-1}\cdot2\pi R=\frac{2\pi R^{a}}{R-1}\longrightarrow0\qquad(R\to\infty)$$
 
@@ -254,7 +254,7 @@ $$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{R^{a-1}}{R-1}\cdot2\pi R=\fra
 
 $$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\varepsilon^{a-1}}{1-\varepsilon}\cdot2\pi\varepsilon=\frac{2\pi\varepsilon^{a}}{1-\varepsilon}\longrightarrow0\qquad(\varepsilon\to0^+)$$
 
-이며, 이는 $a>0$일 때이다. 따라서 $\varepsilon\to0$, $R\to\infty$에서 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)는
+이며, 이는 $a>0$일 때이다. 따라서 $\varepsilon\to0$, $R\to\infty$에서 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="fe5yj" }는
 
 $$\bigl(1-e^{2\pi ia}\bigr)\int_0^\infty\frac{x^{a-1}}{1+x}\dd{x}=2\pi i\cdot\bigl(-e^{i\pi a}\bigr)$$
 
@@ -272,9 +272,9 @@ $0<a<1$이라는 조건은 증명에서 세 번 쓰였다. 적분의 $0$ 근방 
 피적분함수에 $\log$가 들어 있는 $\int_0^\infty\ln x/(1+x^2)\dd{x}$는 열쇠구멍 경로로 같은 피적분함수 $\operatorname{Log}z/(1+z^2)$를 적분해서는 풀리지 않는다. 위 둑과 아래 둑의 $\ln x$ 항이 서로 소거되어 구하려는 적분이 식에서 사라지기 때문이다. 대신 상반평면 반원 경로에 원점을 작은 반원으로 우회시킨다. 이 경로에서는 음의 실축 위의 $\operatorname{Log}z$가 $\ln\lvert x\rvert+i\pi$가 되어 $\int\ln x/(1+x^2)$가 두 번 나타난다.
 
 ::: 예시 12 (로그가 있는 적분)
-$\int_0^\infty\ln x/(1+x^2)\dd{x}=0$이다. 먼저 수렴을 확인한다. $x\ge1$에서 $\ln x\le2\sqrt x$이므로 $\ln x/(1+x^2)\le2x^{-3/2}$이고, $0<x\le1$에서 $\sqrt x\lvert\ln x\rvert\le2/e$이므로 $\lvert\ln x\rvert/(1+x^2)\le(2/e)x^{-1/2}$이다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3)에 의하여 $\int_0^\infty$는 수렴한다. 이를 $J$라 하자.
+$\int_0^\infty\ln x/(1+x^2)\dd{x}=0$이다. 먼저 수렴을 확인한다. $x\ge1$에서 $\ln x\le2\sqrt x$이므로 $\ln x/(1+x^2)\le2x^{-3/2}$이고, $0<x\le1$에서 $\sqrt x\lvert\ln x\rvert\le2/e$이므로 $\lvert\ln x\rvert/(1+x^2)\le(2/e)x^{-1/2}$이다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="8jrhj" }에 의하여 $\int_0^\infty$는 수렴한다. 이를 $J$라 하자.
 
-$\operatorname{Log}z=\ln\lvert z\rvert+i\arg z$ ($-\pi/2<\arg z<3\pi/2$)로 두면 $f(z)=\operatorname{Log}z/(1+z^2)$은 상반평면의 닫힌 영역에서 원점과 $z=i$를 제외하고 holomorphic이다. $0<\varepsilon<1<R$에 대해 경로는 $[\varepsilon,R]$, 반원호 $C_R$($\theta:0\to\pi$), $[-R,-\varepsilon]$, 원점을 도는 작은 반원 $c_\varepsilon$($\theta:\pi\to0$, 시계방향)을 차례로 잇는다. 경로 안의 극은 $z=i$ 하나이고 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 $\operatorname{Res}_{z=i}f=\operatorname{Log}i/(2i)=(i\pi/2)/(2i)=\pi/4$이므로 경로 적분은 $2\pi i\cdot\pi/4=i\pi^2/2$이다.
+$\operatorname{Log}z=\ln\lvert z\rvert+i\arg z$ ($-\pi/2<\arg z<3\pi/2$)로 두면 $f(z)=\operatorname{Log}z/(1+z^2)$은 상반평면의 닫힌 영역에서 원점과 $z=i$를 제외하고 holomorphic이다. $0<\varepsilon<1<R$에 대해 경로는 $[\varepsilon,R]$, 반원호 $C_R$($\theta:0\to\pi$), $[-R,-\varepsilon]$, 원점을 도는 작은 반원 $c_\varepsilon$($\theta:\pi\to0$, 시계방향)을 차례로 잇는다. 경로 안의 극은 $z=i$ 하나이고 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="m2why" }에 의하여 $\operatorname{Res}_{z=i}f=\operatorname{Log}i/(2i)=(i\pi/2)/(2i)=\pi/4$이므로 경로 적분은 $2\pi i\cdot\pi/4=i\pi^2/2$이다.
 
 $[\varepsilon,R]$ 위에서의 적분은 $\int_\varepsilon^R\ln x/(1+x^2)\dd{x}$이다. $[-R,-\varepsilon]$에서는 $z=-x$로 놓으면 $\operatorname{Log}z=\ln x+i\pi$이고 $\dd{z}=-\dd{x}$, $x$는 $R$에서 $\varepsilon$까지이므로
 
@@ -293,7 +293,7 @@ $$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\lvert\ln\varepsilo
 
 ## cotangent를 이용한 급수의 합
 
-[§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)는 무한급수의 합에도 쓰인다. 함수 $\pi\cot\pi z=\pi\cos\pi z/\sin\pi z$는 분모 $\sin\pi z$가 정확히 정수에서 단순영점을 가지므로 모든 정수에서 단순극을 갖고, [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3)에 의하여 $z=n$에서의 residue는
+[§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="bb95j" }는 무한급수의 합에도 쓰인다. 함수 $\pi\cot\pi z=\pi\cos\pi z/\sin\pi z$는 분모 $\sin\pi z$가 정확히 정수에서 단순영점을 가지므로 모든 정수에서 단순극을 갖고, [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="h51zc" }에 의하여 $z=n$에서의 residue는
 
 $$\operatorname{Res}_{z=n}\frac{\pi\cos\pi z}{\sin\pi z}=\frac{\pi\cos\pi n}{(\sin\pi z)'\vert_{z=n}}=\frac{\pi\cos\pi n}{\pi\cos\pi n}=1$$
 
@@ -314,11 +314,11 @@ $$\lvert\cot\pi z\rvert^2=\frac{\cos^2\pi x+s}{\sin^2\pi x+s}\le\frac{1+s}{s}=\c
 
 이다. 부등호는 $u=\sin^2\pi x$로 두고 $(1-u+s)s\le(u+s)(1+s)$를 전개하면 $-us\le u+us$가 되어 성립한다. $\lvert y\rvert=N+1/2\ge1/2$이므로 $\lvert\cot\pi z\rvert\le\coth(\pi/2)=:C$이고, 수직변에서도 $1\le C$이므로 $\Gamma_N$ 전체에서 $\lvert\cot\pi z\rvert\le C$이다.
 
-$\deg Q\ge\deg P+2$이므로 [명제 1](#prop1)의 증명과 같이 $\lvert z\rvert\ge R_0$에서 $\lvert f(z)\rvert\le A/\lvert z\rvert^2$이다. $N$을 $N+1/2>R_0$이고 $f$의 모든 극이 $\Gamma_N$ 안쪽에 놓일 만큼 크게 잡으면 $\Gamma_N$ 위에서 $\lvert z\rvert\ge N+1/2$이다. $\Gamma_N$의 둘레가 $8(N+1/2)$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)에서
+$\deg Q\ge\deg P+2$이므로 [명제 1](#prop1){: data-lid="h06ls" }의 증명과 같이 $\lvert z\rvert\ge R_0$에서 $\lvert f(z)\rvert\le A/\lvert z\rvert^2$이다. $N$을 $N+1/2>R_0$이고 $f$의 모든 극이 $\Gamma_N$ 안쪽에 놓일 만큼 크게 잡으면 $\Gamma_N$ 위에서 $\lvert z\rvert\ge N+1/2$이다. $\Gamma_N$의 둘레가 $8(N+1/2)$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="xu722" }에서
 
 $$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert\le\pi C\cdot\frac{A}{(N+\frac12)^2}\cdot8\Bigl(N+\frac12\Bigr)=\frac{8\pi CA}{N+\frac12}\longrightarrow0$$
 
-이다. 한편 $\Gamma_N$ 안의 극은 정수 $-N,\dots,N$과 $f$의 극들이므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2)로
+이다. 한편 $\Gamma_N$ 안의 극은 정수 $-N,\dots,N$과 $f$의 극들이므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="dox5j" }로
 
 $$\frac{1}{2\pi i}\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}=\sum_{n=-N}^{N}f(n)+\sum_j\operatorname{Res}_{z=z_j}\bigl[\pi\cot(\pi z)f(z)\bigr]$$
 
@@ -328,11 +328,11 @@ $$\frac{1}{2\pi i}\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}=\sum_{n=-N}^{N}f(n)+\
 차수 조건이 $\deg Q\ge\deg P+2$인 이유는 두 가지이다. 급수 $\sum f(n)$이 절대수렴해야 하고, 둘레가 $N$에 비례하는 $\Gamma_N$ 위에서 ML 부등식이 $N\to\infty$에서 $0$을 주어야 한다. 가령 $f(z)=1/z$이면 둘째 조건이 깨져서 위 어림이 상수를 줄 뿐이다.
 
 ::: 예시 14 (Basel 문제)
-$a>0$일 때 $f(z)=1/(z^2+a^2)$는 [명제 13](#prop13)의 조건을 만족하고 극은 $\pm ia$이다. $\cot(i\pi a)=\cos(i\pi a)/\sin(i\pi a)=\cosh(\pi a)/(i\sinh\pi a)=-i\coth\pi a$이므로
+$a>0$일 때 $f(z)=1/(z^2+a^2)$는 [명제 13](#prop13){: data-lid="idek8" }의 조건을 만족하고 극은 $\pm ia$이다. $\cot(i\pi a)=\cos(i\pi a)/\sin(i\pi a)=\cosh(\pi a)/(i\sinh\pi a)=-i\coth\pi a$이므로
 
 $$\operatorname{Res}_{z=ia}\frac{\pi\cot\pi z}{z^2+a^2}=\frac{\pi\cot(i\pi a)}{2ia}=-\frac{\pi\coth\pi a}{2a}$$
 
-이고, $\cot$이 기함수이므로 $z=-ia$에서도 같은 값이다. [명제 13](#prop13)에서
+이고, $\cot$이 기함수이므로 $z=-ia$에서도 같은 값이다. [명제 13](#prop13){: data-lid="zpgqn" }에서
 
 $$\sum_{n=-\infty}^{\infty}\frac{1}{n^2+a^2}=\frac{\pi\coth\pi a}{a}$$
 

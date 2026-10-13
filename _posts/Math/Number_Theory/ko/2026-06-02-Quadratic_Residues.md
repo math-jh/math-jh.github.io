@@ -15,7 +15,7 @@ published: false
 
 ---
 
-합동식 $x^2 \equiv a \pmod{m}$이 해를 갖는지는 일차 합동식과 달리 $a$와 $m$의 관계만으로는 바로 읽히지 않는다. 법이 합성수이면 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8)에 의하여 소수 거듭제곱 법의 문제로 나뉘므로, 핵심은 법이 홀수 소수인 경우이다. 이 글에서 $p$는 항상 홀수 소수이다.
+합동식 $x^2 \equiv a \pmod{m}$이 해를 갖는지는 일차 합동식과 달리 $a$와 $m$의 관계만으로는 바로 읽히지 않는다. 법이 합성수이면 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8){: data-lid="k8uyl" }에 의하여 소수 거듭제곱 법의 문제로 나뉘므로, 핵심은 법이 홀수 소수인 경우이다. 이 글에서 $p$는 항상 홀수 소수이다.
 
 ## 이차 잉여와 Legendre 기호
 
@@ -30,7 +30,7 @@ $p \nmid a$인 정수 $a$에 대하여 합동식 $x^2 \equiv a \pmod{p}$가 해�
 :::
 
 ::: 증명
-$x, y \in \{1, \ldots, p-1\}$에 대하여 $x^2 \equiv y^2 \pmod{p}$이면 $p \mid (x-y)(x+y)$이다. $p$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의하여 $p \mid x-y$ 또는 $p \mid x+y$이고, 곧 $y \equiv x$ 또는 $y \equiv -x \pmod{p}$이다. 역으로 이 두 경우에는 $y^2 \equiv x^2$이다.
+$x, y \in \{1, \ldots, p-1\}$에 대하여 $x^2 \equiv y^2 \pmod{p}$이면 $p \mid (x-y)(x+y)$이다. $p$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-lid="kz5t9" }에 의하여 $p \mid x-y$ 또는 $p \mid x+y$이고, 곧 $y \equiv x$ 또는 $y \equiv -x \pmod{p}$이다. 역으로 이 두 경우에는 $y^2 \equiv x^2$이다.
 
 한편 $p$가 홀수이고 $p \nmid x$이므로 $2x \not\equiv 0$, 곧 $x \not\equiv -x \pmod{p}$이다. 그러므로 $\{1, \ldots, p-1\}$의 각 원소 $x$에 대하여 $x^2$과 같은 제곱을 갖는 원소는 $x$와 $p-x$ 두 개뿐이고, 두 원소는 서로 다르다. 따라서 $p-1$개의 원소가 두 개씩 짝지어 같은 제곱값을 주며, 서로 다른 제곱값은 $(p-1)/2$개이다. 이 제곱값들이 이차 잉여이다. 나머지 $p-1-(p-1)/2 = (p-1)/2$개는 이차 비잉여이다.
 :::
@@ -58,20 +58,20 @@ $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \pmod{p}$$
 :::
 
 ::: 증명
-$p \mid a$이면 양변이 모두 $0$과 합동이므로 $p \nmid a$라 하자. [§페르마 소정리와 오일러 정리, ⁋따름정리 4](/ko/math/number_theory/euler_theorem#cor4)에 의하여 $a^{p-1} \equiv 1 \pmod{p}$이므로
+$p \mid a$이면 양변이 모두 $0$과 합동이므로 $p \nmid a$라 하자. [§페르마 소정리와 오일러 정리, ⁋따름정리 4](/ko/math/number_theory/euler_theorem#cor4){: data-lid="pcv91" }에 의하여 $a^{p-1} \equiv 1 \pmod{p}$이므로
 
 $$\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod{p}$$
 
 이고, $p$가 소수이므로 $a^{(p-1)/2} \equiv 1$ 또는 $a^{(p-1)/2} \equiv -1$이다. 따라서 $a$가 이차 잉여인 것과 $a^{(p-1)/2} \equiv 1$인 것이 동치임을 보이면 충분하다.
 
-[§원시근, ⁋정리 6](/ko/math/number_theory/primitive_roots#thm6)에 의하여 법 $p$의 원시근 $g$가 있고, $g$의 order는 $p-1$이다. $p \nmid a$이므로 [§원시근, ⁋명제 8](/ko/math/number_theory/primitive_roots#prop8)에 의하여 $a \equiv g^j$인 $j \in \{0, 1, \ldots, p-2\}$가 있다.
+[§원시근, ⁋정리 6](/ko/math/number_theory/primitive_roots#thm6){: data-lid="bgd7k" }에 의하여 법 $p$의 원시근 $g$가 있고, $g$의 order는 $p-1$이다. $p \nmid a$이므로 [§원시근, ⁋명제 8](/ko/math/number_theory/primitive_roots#prop8){: data-lid="jovln" }에 의하여 $a \equiv g^j$인 $j \in \{0, 1, \ldots, p-2\}$가 있다.
 
-$j$가 짝수이면 $a \equiv (g^{j/2})^2$이므로 $a$는 이차 잉여이다. 역으로 $a \equiv x^2$이고 $x \equiv g^k$라 하면 $g^j \equiv g^{2k}$이고, [§원시근, ⁋명제 2](/ko/math/number_theory/primitive_roots#prop2)에 의하여 $g$의 order가 $p-1$이므로 $j \equiv 2k \pmod{p-1}$이다. $p-1$이 짝수이므로 $j$도 짝수이다. 따라서 $a$가 이차 잉여인 것은 $j$가 짝수인 것과 동치이다.
+$j$가 짝수이면 $a \equiv (g^{j/2})^2$이므로 $a$는 이차 잉여이다. 역으로 $a \equiv x^2$이고 $x \equiv g^k$라 하면 $g^j \equiv g^{2k}$이고, [§원시근, ⁋명제 2](/ko/math/number_theory/primitive_roots#prop2){: data-lid="t6e29" }에 의하여 $g$의 order가 $p-1$이므로 $j \equiv 2k \pmod{p-1}$이다. $p-1$이 짝수이므로 $j$도 짝수이다. 따라서 $a$가 이차 잉여인 것은 $j$가 짝수인 것과 동치이다.
 
-한편 $a^{(p-1)/2} \equiv g^{j(p-1)/2}$이고, 이것이 $1$과 합동인 것은 [§원시근, ⁋명제 2](/ko/math/number_theory/primitive_roots#prop2)에 의하여 $g$의 order $p-1$이 $j(p-1)/2$를 나누는 것과 동치이다. 이는 $j(p-1)/2 = (p-1)\cdot (j/2)$가 정수 $j/2$로 쓰이는 것, 곧 $j$가 짝수인 것과 같다. 그러므로 $a^{(p-1)/2} \equiv 1$인 것과 $j$가 짝수인 것이 동치이고, 앞의 결과와 합치면 증명이 끝난다.
+한편 $a^{(p-1)/2} \equiv g^{j(p-1)/2}$이고, 이것이 $1$과 합동인 것은 [§원시근, ⁋명제 2](/ko/math/number_theory/primitive_roots#prop2){: data-lid="4fbhq" }에 의하여 $g$의 order $p-1$이 $j(p-1)/2$를 나누는 것과 동치이다. 이는 $j(p-1)/2 = (p-1)\cdot (j/2)$가 정수 $j/2$로 쓰이는 것, 곧 $j$가 짝수인 것과 같다. 그러므로 $a^{(p-1)/2} \equiv 1$인 것과 $j$가 짝수인 것이 동치이고, 앞의 결과와 합치면 증명이 끝난다.
 :::
 
-[정리 4](#thm4)로 $(3/13)$을 구하면 $3^3 = 27 \equiv 1$이므로 $3^6 \equiv 1 \pmod{13}$이고 $(3/13) = 1$이다. 실제로 $4^2 = 16 \equiv 3 \pmod{13}$이다. 반대로 $5^2 = 25 \equiv -1$이므로 $5^6 \equiv (-1)^3 = -1$이고 $(5/13) = -1$이다.
+[정리 4](#thm4){: data-lid="f04g1" }로 $(3/13)$을 구하면 $3^3 = 27 \equiv 1$이므로 $3^6 \equiv 1 \pmod{13}$이고 $(3/13) = 1$이다. 실제로 $4^2 = 16 \equiv 3 \pmod{13}$이다. 반대로 $5^2 = 25 \equiv -1$이므로 $5^6 \equiv (-1)^3 = -1$이고 $(5/13) = -1$이다.
 
 ::: 따름정리 5
 홀수 소수 $p$와 정수 $a, b$에 대하여
@@ -82,10 +82,10 @@ $$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right), 
 :::
 
 ::: 증명
-[정리 4](#thm4)에 의하여 $(ab/p) \equiv (ab)^{(p-1)/2} = a^{(p-1)/2}b^{(p-1)/2} \equiv (a/p)(b/p) \pmod{p}$이다. 양변은 $-1, 0, 1$ 중의 값이고 $p \ge 3$이므로, 이 세 수는 법 $p$에서 서로 합동이 아니다. 따라서 합동은 등호이다. $a = -1$에도 [정리 4](#thm4)를 그대로 적용하면 $(-1/p) \equiv (-1)^{(p-1)/2}$이고, 양변이 $\pm 1$이므로 등호가 성립한다. $(-1)^{(p-1)/2} = 1$인 것은 $(p-1)/2$가 짝수인 것, 곧 $4 \mid p-1$인 것과 동치이다.
+[정리 4](#thm4){: data-lid="b89l4" }에 의하여 $(ab/p) \equiv (ab)^{(p-1)/2} = a^{(p-1)/2}b^{(p-1)/2} \equiv (a/p)(b/p) \pmod{p}$이다. 양변은 $-1, 0, 1$ 중의 값이고 $p \ge 3$이므로, 이 세 수는 법 $p$에서 서로 합동이 아니다. 따라서 합동은 등호이다. $a = -1$에도 [정리 4](#thm4){: data-lid="yghhj" }를 그대로 적용하면 $(-1/p) \equiv (-1)^{(p-1)/2}$이고, 양변이 $\pm 1$이므로 등호가 성립한다. $(-1)^{(p-1)/2} = 1$인 것은 $(p-1)/2$가 짝수인 것, 곧 $4 \mid p-1$인 것과 동치이다.
 :::
 
-[따름정리 5](#cor5)의 곱셈성에 의하여 두 이차 잉여의 곱과 두 이차 비잉여의 곱은 이차 잉여이고, 이차 잉여와 이차 비잉여의 곱은 이차 비잉여이다. 가령 법 $13$에서 $5$와 $7$은 모두 비잉여이고 $5 \cdot 7 = 35 \equiv 9 = 3^2$이다.
+[따름정리 5](#cor5){: data-lid="02otg" }의 곱셈성에 의하여 두 이차 잉여의 곱과 두 이차 비잉여의 곱은 이차 잉여이고, 이차 잉여와 이차 비잉여의 곱은 이차 비잉여이다. 가령 법 $13$에서 $5$와 $7$은 모두 비잉여이고 $5 \cdot 7 = 35 \equiv 9 = 3^2$이다.
 
 Euler 판정법은 법이 소수라는 가정에 의존한다. 법 $n$이 합성수인 경우에 $(n-1)/2$ 거듭제곱이 $1$이라는 사실은 이차 잉여임을 보장하지 않는다.
 
@@ -110,13 +110,13 @@ $$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
 ::: 증명
 각 $s \in S$에 대하여 $as \equiv \varepsilon_s r_s \pmod{p}$인 $\varepsilon_s \in \{1, -1\}$과 $r_s \in S$를 택한다. $as$의 최소 양의 나머지가 $(p-1)/2$보다 크면 $\varepsilon_s = -1$이고 그렇지 않으면 $\varepsilon_s = 1$이므로, $\varepsilon_s = -1$인 $s$의 개수가 $\mu$이다.
 
-먼저 $s \mapsto r_s$가 $S$에서 $S$로의 단사임을 보인다. $s, t \in S$에 대하여 $r_s = r_t$라 하자. 그러면 $as \equiv \pm at \pmod{p}$이고, $p \nmid a$이므로 [§합동식과 중국인의 나머지 정리, ⁋명제 3](/ko/math/number_theory/chinese_remainder_theorem#prop3)에 의하여 $a$로 약분하여 $s \equiv \pm t \pmod{p}$를 얻는다. $s \equiv -t$이면 $p \mid s+t$인데 $2 \le s+t \le p-1$이므로 불가능하다. 따라서 $s \equiv t \pmod{p}$이고, $1 \le s, t \le (p-1)/2$이므로 $s = t$이다. $S$가 유한집합이므로 $s \mapsto r_s$는 전단사이다.
+먼저 $s \mapsto r_s$가 $S$에서 $S$로의 단사임을 보인다. $s, t \in S$에 대하여 $r_s = r_t$라 하자. 그러면 $as \equiv \pm at \pmod{p}$이고, $p \nmid a$이므로 [§합동식과 중국인의 나머지 정리, ⁋명제 3](/ko/math/number_theory/chinese_remainder_theorem#prop3){: data-lid="9kmtm" }에 의하여 $a$로 약분하여 $s \equiv \pm t \pmod{p}$를 얻는다. $s \equiv -t$이면 $p \mid s+t$인데 $2 \le s+t \le p-1$이므로 불가능하다. 따라서 $s \equiv t \pmod{p}$이고, $1 \le s, t \le (p-1)/2$이므로 $s = t$이다. $S$가 유한집합이므로 $s \mapsto r_s$는 전단사이다.
 
 그러므로 $\prod_{s \in S} r_s = \prod_{s \in S} s = ((p-1)/2)!$이다. $as \equiv \varepsilon_s r_s$를 모든 $s \in S$에 대하여 곱하면
 
 $$a^{(p-1)/2}\left(\frac{p-1}{2}\right)! \equiv (-1)^{\mu}\left(\frac{p-1}{2}\right)! \pmod{p}$$
 
-이다. $((p-1)/2)!$은 $p$보다 작은 양의 정수들의 곱이므로 $p$와 서로소이므로 [§합동식과 중국인의 나머지 정리, ⁋명제 3](/ko/math/number_theory/chinese_remainder_theorem#prop3)에 의하여 약분하면 $a^{(p-1)/2} \equiv (-1)^\mu \pmod{p}$이다. [정리 4](#thm4)에 의하여 $(a/p) \equiv (-1)^\mu$이고, 양변이 $\pm 1$이므로 등호가 성립한다.
+이다. $((p-1)/2)!$은 $p$보다 작은 양의 정수들의 곱이므로 $p$와 서로소이므로 [§합동식과 중국인의 나머지 정리, ⁋명제 3](/ko/math/number_theory/chinese_remainder_theorem#prop3){: data-lid="y1xf1" }에 의하여 약분하면 $a^{(p-1)/2} \equiv (-1)^\mu \pmod{p}$이다. [정리 4](#thm4){: data-lid="i9yuv" }에 의하여 $(a/p) \equiv (-1)^\mu$이고, 양변이 $\pm 1$이므로 등호가 성립한다.
 :::
 
 ::: 예시 8 (가우스 보조정리의 계산)
@@ -124,12 +124,12 @@ $p = 13$, $a = 5$로 두자. $S = \{1, \ldots, 6\}$이고 $5s$의 최소 양의 
 
 $$5, \quad 10, \quad 2, \quad 7, \quad 12, \quad 4$$
 
-이다. $6$보다 큰 것은 $10, 7, 12$의 세 개이므로 $\mu = 3$이다. 이 세 경우의 $r_s$는 $13-10 = 3$, $13-7 = 6$, $13-12 = 1$이고, 나머지 세 경우의 $r_s$는 $5, 2, 4$이다. $r_s$ 전체는 $\{5, 3, 2, 6, 1, 4\} = S$로 [보조정리 7](#lem7)의 증명에서 말한 전단사를 이룬다. 따라서 $(5/13) = (-1)^3 = -1$이며, 이는 앞에서 [정리 4](#thm4)로 얻은 값과 같다.
+이다. $6$보다 큰 것은 $10, 7, 12$의 세 개이므로 $\mu = 3$이다. 이 세 경우의 $r_s$는 $13-10 = 3$, $13-7 = 6$, $13-12 = 1$이고, 나머지 세 경우의 $r_s$는 $5, 2, 4$이다. $r_s$ 전체는 $\{5, 3, 2, 6, 1, 4\} = S$로 [보조정리 7](#lem7){: data-lid="35rs3" }의 증명에서 말한 전단사를 이룬다. 따라서 $(5/13) = (-1)^3 = -1$이며, 이는 앞에서 [정리 4](#thm4){: data-lid="ifeln" }로 얻은 값과 같다.
 :::
 
 ## $2$의 이차 잉여성
 
-[보조정리 7](#lem7)에서 $a = 2$로 두면 $2s$ ($s \in S$)는 $2$ 이상 $p-1$ 이하이므로 나머지를 취할 필요가 없고, $\mu$는 $2s > (p-1)/2$인 $s \in S$의 개수가 된다.
+[보조정리 7](#lem7){: data-lid="ovf8u" }에서 $a = 2$로 두면 $2s$ ($s \in S$)는 $2$ 이상 $p-1$ 이하이므로 나머지를 취할 필요가 없고, $\mu$는 $2s > (p-1)/2$인 $s \in S$의 개수가 된다.
 
 ::: 정리 9
 홀수 소수 $p$에 대하여
@@ -149,14 +149,14 @@ p = 8k+5: \quad & \mu = (4k+2) - (2k+1) = 2k+1, \\
 p = 8k+7: \quad & \mu = (4k+3) - (2k+1) = 2k+2.
 \end{aligned}$$
 
-따라서 $\mu$는 $p \equiv \pm 1 \pmod{8}$일 때 짝수, $p \equiv \pm 3 \pmod{8}$일 때 홀수이고, [보조정리 7](#lem7)에 의하여 $(2/p)$가 위와 같이 결정된다. 지수 형태는 $p = 8k \pm 1$이면 $(p^2-1)/8 = 8k^2 \pm 2k$가 짝수이고 $p = 8k \pm 3$이면 $(p^2-1)/8 = 8k^2 \pm 6k + 1$이 홀수라는 데서 나온다.
+따라서 $\mu$는 $p \equiv \pm 1 \pmod{8}$일 때 짝수, $p \equiv \pm 3 \pmod{8}$일 때 홀수이고, [보조정리 7](#lem7){: data-lid="p8wpb" }에 의하여 $(2/p)$가 위와 같이 결정된다. 지수 형태는 $p = 8k \pm 1$이면 $(p^2-1)/8 = 8k^2 \pm 2k$가 짝수이고 $p = 8k \pm 3$이면 $(p^2-1)/8 = 8k^2 \pm 6k + 1$이 홀수라는 데서 나온다.
 :::
 
-가령 $p = 17 \equiv 1 \pmod{8}$이므로 $2$는 이차 잉여이고 $6^2 = 36 \equiv 2 \pmod{17}$이다. $p = 11 \equiv 3 \pmod{8}$에서는 $2$가 비잉여이다. 이를 [따름정리 5](#cor5)의 곱셈성과 합치면 $2^e m$ ($m$은 홀수) 꼴 수의 르장드르 기호는 $(2/p)^e$와 $(m/p)$의 곱으로 환원된다.
+가령 $p = 17 \equiv 1 \pmod{8}$이므로 $2$는 이차 잉여이고 $6^2 = 36 \equiv 2 \pmod{17}$이다. $p = 11 \equiv 3 \pmod{8}$에서는 $2$가 비잉여이다. 이를 [따름정리 5](#cor5){: data-lid="p3kt8" }의 곱셈성과 합치면 $2^e m$ ($m$은 홀수) 꼴 수의 르장드르 기호는 $(2/p)^e$와 $(m/p)$의 곱으로 환원된다.
 
 ## $4k+1$꼴 소수의 무한성
 
-[따름정리 5](#cor5)에서 $-1$이 이차 잉여인 소수는 $4k+1$꼴이다. 이를 이용하면 다음을 얻는다.
+[따름정리 5](#cor5){: data-lid="8msel" }에서 $-1$이 이차 잉여인 소수는 $4k+1$꼴이다. 이를 이용하면 다음을 얻는다.
 
 ::: 명제 10
 $4k+1$ 꼴의 소수는 무수히 많다.
@@ -165,10 +165,10 @@ $4k+1$ 꼴의 소수는 무수히 많다.
 ::: 증명
 $4k+1$꼴의 소수가 유한개이고 그것이 $p_1, \ldots, p_r$ ($r \ge 0$)이라 하자. $P = 2p_1 \cdots p_r$로 두고 $N = P^2 + 1$을 생각한다. $P$가 짝수이므로 $N$은 홀수이고 $N > 1$이다. 따라서 $N$은 홀수 소인수 $q$를 갖는다.
 
-$q \mid P^2 + 1$이므로 $P^2 \equiv -1 \pmod{q}$이고, $-1$은 법 $q$의 이차 잉여이다. [따름정리 5](#cor5)에 의하여 $q \equiv 1 \pmod{4}$이다. 그런데 $q$가 어떤 $p_i$와 같다면 $q \mid P$이고 $q \mid P^2 + 1$이므로 $q \mid 1$이 되어 모순이다. 그러므로 $q$는 $p_1, \ldots, p_r$ 중 어느 것과도 다른 $4k+1$꼴 소수이고, 이는 가정에 모순이다.
+$q \mid P^2 + 1$이므로 $P^2 \equiv -1 \pmod{q}$이고, $-1$은 법 $q$의 이차 잉여이다. [따름정리 5](#cor5){: data-lid="30ps5" }에 의하여 $q \equiv 1 \pmod{4}$이다. 그런데 $q$가 어떤 $p_i$와 같다면 $q \mid P$이고 $q \mid P^2 + 1$이므로 $q \mid 1$이 되어 모순이다. 그러므로 $q$는 $p_1, \ldots, p_r$ 중 어느 것과도 다른 $4k+1$꼴 소수이고, 이는 가정에 모순이다.
 :::
 
-$N$을 $P^2 + 1$로 잡을 때 $P$를 짝수가 되게 $2$를 곱해 둔 것은 $N$이 홀수가 되어 $q = 2$를 배제하기 위해서이다. $2$는 $-1 \equiv 1 \pmod{2}$이므로 $x^2 \equiv -1$의 해를 갖지만 $4k+1$꼴이 아니고, [따름정리 5](#cor5)는 홀수 소수에 대한 진술이다.
+$N$을 $P^2 + 1$로 잡을 때 $P$를 짝수가 되게 $2$를 곱해 둔 것은 $N$이 홀수가 되어 $q = 2$를 배제하기 위해서이다. $2$는 $-1 \equiv 1 \pmod{2}$이므로 $x^2 \equiv -1$의 해를 갖지만 $4k+1$꼴이 아니고, [따름정리 5](#cor5){: data-lid="32qbc" }는 홀수 소수에 대한 진술이다.
 
 두 홀수 소수 $p, q$에 대하여 $(p/q)$와 $(q/p)$ 사이의 관계는 다음 글에서 다룬다.
 

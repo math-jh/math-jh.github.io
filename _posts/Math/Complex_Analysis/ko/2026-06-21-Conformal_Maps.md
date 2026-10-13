@@ -48,17 +48,17 @@ $$\arg (f \circ \gamma_2)'(t_0) - \arg (f \circ \gamma_1)'(t_0) = \arg \gamma_2'
 역으로 $f'(z_0) = 0$이라 하자. 그러면 위의 tangent vector 공식에서 모든 smooth 곡선에 대해 $(f \circ \gamma)'(t_0) = f'(z_0)\gamma'(t_0) = 0$이 되어, 상곡선의 일차 tangent vector가 소멸한다. 이때 상곡선이 $f(z_0)$에서 향하는 방향은 일차항이 아니라 처음으로 살아남는 고차항으로 결정되는데, 가령 $f(z) = z^m$ ($m \geq 2$) 을 $z_0 = 0$에서 보면 $\arg f(z) = m \arg z$이므로 원점에서 만나는 두 방향이 이루는 각이 $f$에 의해 $m$배로 늘어난다. 따라서 각이 보존되지 않아 $f$는 $z_0$에서 등각이 아니다.
 :::
 
-[명제 2](#prop2)는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *critical point<sub>임계점</sub>*라 부르며, 그 점에서는 order에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. Holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
+[명제 2](#prop2){: data-lid="61m84" }는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *critical point<sub>임계점</sub>*라 부르며, 그 점에서는 order에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. Holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
 
 ::: 명제 3
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C}$가 holomorphic인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
 :::
 
 ::: 증명
-어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 order $m$은 $m \geq 2$이다 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="82wvy" }의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function은 order $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동하므로 ([§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7){: data-lid="a9r46" }), $w_0$에 충분히 가깝고 $w_0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, [명제 2](#prop2)에 의해 $f$는 등각사상이다.
+어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 order $m$은 $m \geq 2$이다 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="82wvy" }의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function은 order $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동하므로 ([§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7){: data-lid="a9r46" }), $w_0$에 충분히 가깝고 $w_0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, [명제 2](#prop2){: data-lid="hgylf" }에 의해 $f$는 등각사상이다.
 :::
 
-[명제 3](#prop3)은 order $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 [§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7)을 이용한다. 이 사실 자체는 영점의 order와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 [§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)과 같은 뿌리를 가진다. [명제 3](#prop3)이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 complex analysis의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
+[명제 3](#prop3){: data-lid="ofaak" }은 order $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 [§편각원리와 Rouché 정리, ⁋정리 7](/ko/math/complex_analysis/argument_principle#thm7){: data-lid="6pcby" }을 이용한다. 이 사실 자체는 영점의 order와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 [§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8){: data-lid="iju4m" }과 같은 뿌리를 가진다. [명제 3](#prop3){: data-lid="nh0g1" }이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 complex analysis의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
 
 ## Möbius 변환
 
@@ -76,7 +76,7 @@ $$T(z) = \frac{az + b}{cz + d}$$
 
 $$T'(z) = \frac{a(cz + d) - c(az + b)}{(cz + d)^2} = \frac{ad - bc}{(cz + d)^2}$$
 
-이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 [명제 2](#prop2)에 의해 등각사상이다. $\infty$에서의 대응까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 group을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
+이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 [명제 2](#prop2){: data-lid="2us1i" }에 의해 등각사상이다. $\infty$에서의 대응까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 group을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
 
 ::: 명제 5
 Möbius 변환 전체의 모임은 사상의 합성에 대하여 group을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 group의 homomorphism이며, 그 kernel은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
@@ -97,10 +97,10 @@ $$AA' = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmat
 
 의 성분이다. 따라서 $T_A \circ T_{A'} = T_{AA'}$이고, 이는 행렬곱이 사상합성과 어울림을 뜻한다 (이 계산은 $\infty$를 포함한 점들에서도 극한으로 정합적이다). 특히 합성이 다시 Möbius 변환이고, $\det(AA') = \det A \det A' \neq 0$으로 비퇴화 조건이 보존된다. 항등행렬 $I$는 항등사상 $T_I(z) = z$를 주고, $A$의 역행렬 $A^{-1}$이 $T_A$의 역사상을 주므로 ($T_A \circ T_{A^{-1}} = T_I$) Möbius 변환 전체가 group을 이룬다.
 
-대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이고, [\[대수적 구조\] §군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2)에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
+대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이고, [\[대수적 구조\] §군 동형사상, ⁋정리 2](/ko/math/algebraic_structures/isomorphism_theorems#thm2){: data-lid="ia70h" }에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
 :::
 
-[명제 5](#prop5)는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대 근방의 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
+[명제 5](#prop5){: data-lid="r7hpo" }는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대 근방의 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
 
 ::: 명제 6
 임의의 Möbius 변환은 평행이동 $z \mapsto z + \beta$, 확대·회전 $z \mapsto \alpha z$ ($\alpha \neq 0$), inversion $z \mapsto 1/z$의 합성으로 표현된다.
@@ -129,7 +129,7 @@ $$A\,\lvert z\rvert^2 + \overline{B}z + B\bar{z} + C = 0 \tag{$\ast$}$$
 
 으로 한꺼번에 적힌다. 실제로 $z = x + iy$로 풀어 쓰면 이는 $A(x^2 + y^2) + 2\Real(\overline{B}z) + C = 0$ 꼴의 실방정식이고, $A \neq 0$이면 (완전제곱으로 정리하여) 원을, $A = 0$이면 직선을 나타낸다. 조건 $\lvert B\rvert^2 > AC$은 그 자취가 공집합이나 한 점이 아니라 진짜 원 또는 직선이 되도록 보장한다.
 
-[명제 6](#prop6)에 의해 임의의 Möbius 변환이 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 $(\ast)$ 꼴 방정식을 다시 $(\ast)$ 꼴로 보냄을 보이면 충분하다. 평행이동 $z \mapsto z + \beta$와 확대·회전 $z \mapsto \alpha z$은 직선을 직선으로, 원을 원으로 보냄이 기하적으로 분명하고 방정식 차원에서도 $(\ast)$ 꼴이 보존된다. Inversion $w = 1/z$, 곧 $z = 1/w$를 $(\ast)$에 대입하면
+[명제 6](#prop6){: data-lid="rl38u" }에 의해 임의의 Möbius 변환이 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 $(\ast)$ 꼴 방정식을 다시 $(\ast)$ 꼴로 보냄을 보이면 충분하다. 평행이동 $z \mapsto z + \beta$와 확대·회전 $z \mapsto \alpha z$은 직선을 직선으로, 원을 원으로 보냄이 기하적으로 분명하고 방정식 차원에서도 $(\ast)$ 꼴이 보존된다. Inversion $w = 1/z$, 곧 $z = 1/w$를 $(\ast)$에 대입하면
 
 $$A\,\frac{1}{\lvert w\rvert^2} + \overline{B}\,\frac{1}{w} + B\,\frac{1}{\bar{w}} + C = 0$$
 
@@ -140,7 +140,7 @@ $$A + \overline{B}\,\bar{w} + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\
 이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline{B}$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
 :::
 
-[정리 7](#thm7)은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 $\lvert w\rvert^2$의 계수가 $C = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
+[정리 7](#thm7){: data-lid="qudxd" }은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 $\lvert w\rvert^2$의 계수가 $C = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
 
 ## 교차비와 세 점 결정
 
@@ -165,7 +165,7 @@ $$(Tz_1, Tz_2; Tz_3, Tz_4) = (z_1, z_2; z_3, z_4)$$
 :::
 
 ::: 증명
-[명제 6](#prop6)에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차가 어떻게 바뀌는지 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 [정의 8](#def8)의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. Inversion $T(z) = 1/z$에 대해서는
+[명제 6](#prop6){: data-lid="h2wvb" }에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차가 어떻게 바뀌는지 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 [정의 8](#def8){: data-lid="kggpa" }의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. Inversion $T(z) = 1/z$에 대해서는
 
 $$Tz_i - Tz_j = \frac{1}{z_i} - \frac{1}{z_j} = \frac{z_j - z_i}{z_i z_j}$$
 
@@ -173,10 +173,10 @@ $$Tz_i - Tz_j = \frac{1}{z_i} - \frac{1}{z_j} = \frac{z_j - z_i}{z_i z_j}$$
 
 $$\frac{(Tz_1 - Tz_3)(Tz_2 - Tz_4)}{(Tz_1 - Tz_4)(Tz_2 - Tz_3)} = \frac{\frac{(z_3 - z_1)(z_4 - z_2)}{z_1 z_3 z_2 z_4}}{\frac{(z_4 - z_1)(z_3 - z_2)}{z_1 z_4 z_2 z_3}} = \frac{(z_3 - z_1)(z_4 - z_2)}{(z_4 - z_1)(z_3 - z_2)} = (z_1, z_2; z_3, z_4)$$
 
-이다. 분모의 좌표 곱 $z_1 z_2 z_3 z_4$이 분자·분모에서 똑같이 나타나 상쇄되고, 각 차의 부호 반전 $z_j - z_i = -(z_i - z_j)$이 분자와 분모에서 두 번씩 일어나 상쇄되었다. $\infty$가 끼는 경우는 [정의 8](#def8)의 극한 약속과 양립하도록 같은 계산이 극한으로 이어진다. 세 기본 변환이 모두 교차비를 보존하므로 그 합성인 $T$도 보존한다.
+이다. 분모의 좌표 곱 $z_1 z_2 z_3 z_4$이 분자·분모에서 똑같이 나타나 상쇄되고, 각 차의 부호 반전 $z_j - z_i = -(z_i - z_j)$이 분자와 분모에서 두 번씩 일어나 상쇄되었다. $\infty$가 끼는 경우는 [정의 8](#def8){: data-lid="u72mh" }의 극한 약속과 양립하도록 같은 계산이 극한으로 이어진다. 세 기본 변환이 모두 교차비를 보존하므로 그 합성인 $T$도 보존한다.
 :::
 
-[명제 9](#prop9)의 invariance는 Möbius 변환이 세 점으로 결정된다는 다음 정리로 곧장 이어진다. 서로 다른 세 점을 서로 다른 세 점으로 보내는 변환이 정확히 하나라는 이 사실은, 교차비를 매개로 그 변환을 명시적으로 적게까지 해 준다.
+[명제 9](#prop9){: data-lid="2yq6m" }의 invariance는 Möbius 변환이 세 점으로 결정된다는 다음 정리로 곧장 이어진다. 서로 다른 세 점을 서로 다른 세 점으로 보내는 변환이 정확히 하나라는 이 사실은, 교차비를 매개로 그 변환을 명시적으로 적게까지 해 준다.
 
 ::: 정리 10 (세 점 결정)
 $\widehat{\mathbb{C}}$의 서로 다른 세 점 $z_1, z_2, z_3$과 서로 다른 세 점 $w_1, w_2, w_3$이 주어지면, $T(z_i) = w_i$ ($i = 1, 2, 3$) 인 Möbius 변환 $T$가 유일하게 존재한다.
@@ -192,7 +192,7 @@ $$S(z) = (z, z_2; z_1, z_3) = \frac{(z - z_1)(z_2 - z_3)}{(z - z_3)(z_2 - z_1)}$
 유일성을 본다. $T, \widetilde{T}$가 모두 세 점을 같은 image로 보낸다고 하면, $U = \widetilde{T}^{-1} \circ T$은 Möbius 변환이고 $z_1, z_2, z_3$을 모두 고정한다. Möbius 변환이 서로 다른 세 fixed point를 가지면 항등사상임을 보이면 된다. $U(z) = (az + b)/(cz + d)$가 점 $z_0$을 고정하면 $az_0 + b = z_0(cz_0 + d)$, 곧 $cz_0^2 + (d - a)z_0 - b = 0$이다. 이 이차방정식 (만일 $c \neq 0$) 은 많아야 두 해를 가지므로, 유한한 fixed point가 셋 이상이려면 $c = 0$이어야 한다. 그러면 식은 $(d - a)z_0 = b$라는 일차식이 되어, $d \neq a$이면 fixed point가 하나뿐이고 ($\infty$ 포함 둘), $b \neq 0$이고 $d = a$이면 유한 fixed point가 없다. 서로 다른 유한 fixed point가 셋 (또는 둘 이상이면서 $\infty$도 고정) 이려면 $c = 0$, $d = a$, $b = 0$이어야 하고, 이는 $U(z) = z$, 곧 항등사상이다. 따라서 $\widetilde{T}^{-1} \circ T = \id$이고 $T = \widetilde{T}$이다.
 :::
 
-[정리 10](#thm10)은 Möbius 변환을 다루는 실용적 도구를 준다. 두 영역의 boundary 위 세 점의 대응을 지정하면 변환이 유일하게 정해지므로, boundary를 맞추는 등각사상을 명시적으로 구성할 수 있다. 증명에 등장한 사상 $z \mapsto (z, z_2; z_1, z_3)$은 $z_1, z_2, z_3$을 $0, 1, \infty$로 보내는 표준화 변환이며, 임의의 세 점을 다루는 문제를 이 표준 삼점으로 환원하는 데 거듭 쓰인다. 또 [정리 7](#thm7)과 결합하면, 세 점이 한 원-직선 위에 있을 때 그 image 세 점이 결정하는 원-직선으로 전체가 옮겨진다는 사실을 얻어, 원-직선을 원하는 원-직선으로 포개는 변환을 세 점만으로 지정할 수 있다.
+[정리 10](#thm10){: data-lid="69zlf" }은 Möbius 변환을 다루는 실용적 도구를 준다. 두 영역의 boundary 위 세 점의 대응을 지정하면 변환이 유일하게 정해지므로, boundary를 맞추는 등각사상을 명시적으로 구성할 수 있다. 증명에 등장한 사상 $z \mapsto (z, z_2; z_1, z_3)$은 $z_1, z_2, z_3$을 $0, 1, \infty$로 보내는 표준화 변환이며, 임의의 세 점을 다루는 문제를 이 표준 삼점으로 환원하는 데 거듭 쓰인다. 또 [정리 7](#thm7){: data-lid="jk08s" }과 결합하면, 세 점이 한 원-직선 위에 있을 때 그 image 세 점이 결정하는 원-직선으로 전체가 옮겨진다는 사실을 얻어, 원-직선을 원하는 원-직선으로 포개는 변환을 세 점만으로 지정할 수 있다.
 
 ## 단위원판의 자기동형사상
 
@@ -233,7 +233,7 @@ $$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar{a} z} = e^{i\theta}\,\varphi_a(z)$$
 :::
 
 ::: 증명
-$f$가 $\mathbb{D}$의 holomorphic automorphism이라 하자. $a = f^{-1}(0) \in \mathbb{D}$이라 두고 $g = f \circ \varphi_a^{-1} = f \circ \varphi_{-a}$를 생각한다. [명제 11](#prop11)에 의해 $\varphi_{-a}$이 $\mathbb{D}$의 automorphism이므로 $g$도 $\mathbb{D}$의 holomorphic automorphism이고, $\varphi_{-a}(0) = a$이므로
+$f$가 $\mathbb{D}$의 holomorphic automorphism이라 하자. $a = f^{-1}(0) \in \mathbb{D}$이라 두고 $g = f \circ \varphi_a^{-1} = f \circ \varphi_{-a}$를 생각한다. [명제 11](#prop11){: data-lid="1lmp9" }에 의해 $\varphi_{-a}$이 $\mathbb{D}$의 automorphism이므로 $g$도 $\mathbb{D}$의 holomorphic automorphism이고, $\varphi_{-a}(0) = a$이므로
 
 $$g(0) = f(\varphi_{-a}(0)) = f(a) = 0$$
 
@@ -246,7 +246,7 @@ $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,
 역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 automorphism이고 ([명제 11](#prop11){: data-lid="v8are" }) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
 
-[정리 12](#thm12)는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic morphism이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
+[정리 12](#thm12){: data-lid="5vh8r" }는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic morphism이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
 
 ::: 정리 13 (Schwarz–Pick)
 $f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
@@ -265,7 +265,7 @@ $w \in \mathbb{D}$를 고정하고 보조사상
 
 $$F = \varphi_{f(w)} \circ f \circ \varphi_{-w} = \varphi_{f(w)} \circ f \circ \varphi_w^{-1}$$
 
-을 생각한다. [명제 11](#prop11)에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이다. 또 $\varphi_{-w}(0) = w$이므로
+을 생각한다. [명제 11](#prop11){: data-lid="kya60" }에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이다. 또 $\varphi_{-w}(0) = w$이므로
 
 $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
@@ -288,11 +288,11 @@ $$\frac{\lvert f'(w)\rvert}{1 - \lvert f(w)\rvert^2} \leq \frac{1}{1 - \lvert w\
 등호의 경우를 본다. 첫 부등식이 어떤 $z_0 \neq w$에서 등호이면 $\lvert F(\zeta_0)\rvert = \lvert \zeta_0\rvert$ ($\zeta_0 = \varphi_w(z_0) \neq 0$) 이고, 둘째 부등식이 어떤 점에서 등호이면 그 점에 대응하는 $w$에서 $\lvert F'(0)\rvert = 1$이다. 어느 경우든 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7){: data-lid="a0zde" }의 등호조건에 의해 어떤 $\lambda$ ($\lvert \lambda\rvert = 1$) 가 있어 $F(\zeta) = \lambda \zeta$이다. 그러면 $F$가 $\mathbb{D}$의 automorphism이고, $f = \varphi_{f(w)}^{-1} \circ F \circ \varphi_w$도 automorphism들의 합성이라 automorphism이다. 이때 위의 두 부등식은 $\lvert F(\zeta)\rvert = \lvert \zeta\rvert$, $\lvert F'(0)\rvert = 1$로부터 모든 점에서 등호가 된다.
 :::
 
-Schwarz–Pick 정리는 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)을 원점이라는 특정 점에 매이지 않게 풀어낸 형태이다. 좌변의 양
+Schwarz–Pick 정리는 [§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7){: data-lid="zsl0m" }을 원점이라는 특정 점에 매이지 않게 풀어낸 형태이다. 좌변의 양
 
 $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar{w} z} \right\rvert$$
 
-은 단위원판 위의 두 점 사이의 *pseudo-hyperbolic distance<sub>유사쌍곡거리</sub>*라 불리며, [정리 13](#thm13)의 첫 부등식은 임의의 holomorphic morphism $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic morphism이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환 가운데 방향을 보존하는 것들과 정확히 일치함을 시사한다.
+은 단위원판 위의 두 점 사이의 *pseudo-hyperbolic distance<sub>유사쌍곡거리</sub>*라 불리며, [정리 13](#thm13){: data-lid="24aqw" }의 첫 부등식은 임의의 holomorphic morphism $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $\dd{s} = \lvert \dd{z}\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic morphism이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환 가운데 방향을 보존하는 것들과 정확히 일치함을 시사한다.
 
 ## 상반평면과 Cayley 변환
 
@@ -324,7 +324,7 @@ $$z = \frac{-i(1 + w)}{w - 1} = \frac{i(1 + w)}{1 - w} = i\,\frac{1 + w}{1 - w}$
 이다. 이것이 $C^{-1}$이며 다시 Möbius 변환이다. $C$가 $\mathbb{H}$를 $\mathbb{D}$ 안으로 보내고 $C^{-1}$이 그 역을 주므로 ($C^{-1}(C(z)) = z$), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 전단사이고, $C^{-1}(\mathbb{D}) \subseteq \mathbb{H}$임도 같은 거리 논법으로 ($\lvert w\rvert < 1$이 $\Img C^{-1}(w) > 0$과 동치임을 확인하여) 따라 나온다. Möbius 변환은 그 holomorphic한 영역에서 등각이므로 ([명제 2](#prop2){: data-lid="wz6to" }), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 conformal isomorphism이다.
 :::
 
-Cayley 변환은 상반평면 위의 문제를 단위원판 위의 문제로, 또는 그 역으로 옮기는 사전 역할을 한다. 가령 [정리 12](#thm12)의 단위원판 automorphism 분류를 $C$로 옮기면, 상반평면의 holomorphic automorphism이 정확히 실계수 Möbius 변환
+Cayley 변환은 상반평면 위의 문제를 단위원판 위의 문제로, 또는 그 역으로 옮기는 사전 역할을 한다. 가령 [정리 12](#thm12){: data-lid="1uzd9" }의 단위원판 automorphism 분류를 $C$로 옮기면, 상반평면의 holomorphic automorphism이 정확히 실계수 Möbius 변환
 
 $$z \mapsto \frac{\alpha z + \beta}{\gamma z + \delta}, \qquad \alpha, \beta, \gamma, \delta \in \mathbb{R},\ \alpha\delta - \beta\gamma > 0$$
 

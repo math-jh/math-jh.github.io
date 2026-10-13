@@ -45,7 +45,7 @@ $$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \geq \frac{1}{4^n}I$
 
 $$\mathrm{length}(\partial T^{(n)}) = \frac{L}{2^n}, \qquad \operatorname{diam}(T^{(n)}) = \frac{d}{2^n}$$
 
-이다. 삼각형들은 콤팩트이고 직경이 $0$으로 줄어드는 감소열이므로, [\[해석학\] §컴팩트성, ⁋정리 10](/ko/math/analysis/compactness#thm10)에 의해 그 교집합은 단 한 점으로 이루어져 $\bigcap_n T^{(n)} = \{z_0\}$이며 $z_0 \in T \subseteq \Omega$이다.
+이다. 삼각형들은 콤팩트이고 직경이 $0$으로 줄어드는 감소열이므로, [\[해석학\] §컴팩트성, ⁋정리 10](/ko/math/analysis/compactness#thm10){: data-lid="mo8y8" }에 의해 그 교집합은 단 한 점으로 이루어져 $\bigcap_n T^{(n)} = \{z_0\}$이며 $z_0 \in T \subseteq \Omega$이다.
 
 **$z_0$에서의 일차 근사.** $f$가 $z_0$에서 복소미분가능하므로, 임의의 $\varepsilon > 0$에 대해 $\delta > 0$이 있어 $\lvert z - z_0\rvert < \delta$이면
 
@@ -64,11 +64,11 @@ $$\left\lvert \oint_{\partial T^{(n)}} f\dd{z} \right\rvert \leq \varepsilon\fra
 **결론.** 두 어림을 합치면 $I/4^n \leq \varepsilon dL/4^n$, 곧 $I \leq \varepsilon dL$이다. $\varepsilon > 0$이 임의였고 $d, L$은 고정된 상수이므로 $I = 0$, 곧 $\oint_{\partial T} f\dd{z} = 0$이다.
 :::
 
-[정리 1](#thm1)의 증명은 holomorphicity를 오직 한 점 $z_0$에서의 일차 근사로만 사용한다는 점에서 인상적이다. 적분을 잘게 쪼개면 각 조각 위에서 $f$가 거의 일차함수처럼 보이고, 일차함수는 원시함수를 가지므로 그 조각의 기여가 무시할 만큼 작아진다. 둘레와 직경이 각각 $2^{-n}$로 줄어 그 곱이 $4^{-n}$로 줄고, 이것이 적분값의 하한 $4^{-n}I$와 정확히 같은 비율로 상쇄되어 $I = 0$을 강제한다. 이 정리에서 삼각형을 직사각형이나 다른 다각형으로 바꿔도 같은 증명이 통하며, 실제로 다각형 영역을 삼각형으로 분할하면 임의의 다각형 boundary로 즉시 확장된다.
+[정리 1](#thm1){: data-lid="2dh96" }의 증명은 holomorphicity를 오직 한 점 $z_0$에서의 일차 근사로만 사용한다는 점에서 인상적이다. 적분을 잘게 쪼개면 각 조각 위에서 $f$가 거의 일차함수처럼 보이고, 일차함수는 원시함수를 가지므로 그 조각의 기여가 무시할 만큼 작아진다. 둘레와 직경이 각각 $2^{-n}$로 줄어 그 곱이 $4^{-n}$로 줄고, 이것이 적분값의 하한 $4^{-n}I$와 정확히 같은 비율로 상쇄되어 $I = 0$을 강제한다. 이 정리에서 삼각형을 직사각형이나 다른 다각형으로 바꿔도 같은 증명이 통하며, 실제로 다각형 영역을 삼각형으로 분할하면 임의의 다각형 boundary로 즉시 확장된다.
 
 ## 볼록 영역에서의 원시함수와 Cauchy 정리
 
-Goursat 정리는 삼각형이라는 특정 경로에 대한 진술이지만, 영역이 적당히 좋으면 이로부터 그 영역 위 holomorphic function이 원시함수를 가짐을 끌어낼 수 있다. 핵심 발상은 고정된 한 점에서 $z$까지 선분을 따라 적분하여 원시함수 후보 $F(z)$를 만들고, 그 차분비를 작은 삼각형 위의 적분으로 표현한 뒤 [정리 1](#thm1)을 쓰는 것이다. 이 구성이 작동하려면 영역 안의 임의의 점을 기준점과 선분으로 이을 수 있어야 하며, 그 선분이 만드는 삼각형도 영역에 들어 있어야 한다. 이를 보장하는 가장 단순한 조건이 star-shapedness이다.
+Goursat 정리는 삼각형이라는 특정 경로에 대한 진술이지만, 영역이 적당히 좋으면 이로부터 그 영역 위 holomorphic function이 원시함수를 가짐을 끌어낼 수 있다. 핵심 발상은 고정된 한 점에서 $z$까지 선분을 따라 적분하여 원시함수 후보 $F(z)$를 만들고, 그 차분비를 작은 삼각형 위의 적분으로 표현한 뒤 [정리 1](#thm1){: data-lid="jojmy" }을 쓰는 것이다. 이 구성이 작동하려면 영역 안의 임의의 점을 기준점과 선분으로 이을 수 있어야 하며, 그 선분이 만드는 삼각형도 영역에 들어 있어야 한다. 이를 보장하는 가장 단순한 조건이 star-shapedness이다.
 
 ::: 정의 2
 영역 $\Omega \subseteq \mathbb{C}$가 *star-shaped<sub>별모양</sub>*라는 것은, 어떤 점 $z_\ast \in \Omega$이 있어 임의의 $z \in \Omega$에 대하여 $z_\ast$와 $z$를 잇는 선분 $[z_\ast, z] = \{(1-t)z_\ast + tz \mid t \in [0, 1]\}$이 통째로 $\Omega$에 들어 있는 것이다. 이러한 $z_\ast$를 $\Omega$의 *star center<sub>별중심</sub>*라 한다.
@@ -106,7 +106,7 @@ $$\frac{1}{\lvert h\rvert}\cdot \varepsilon \cdot \mathrm{length}([z, z+h]) = \f
 이하이다. 따라서 $h \rightarrow 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이다. $z$가 임의였으므로 $F$는 $\Omega$에서 $f$의 원시함수이다.
 :::
 
-[정리 3](#thm3)은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 [정리 1](#thm1)이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9){: data-lid="81hdu" }에 의해 closed 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
+[정리 3](#thm3){: data-lid="y51hu" }은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 [정리 1](#thm1){: data-lid="gjvmi" }이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9){: data-lid="81hdu" }에 의해 closed 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
 
 ::: 따름정리 4 (Cauchy 정리, star-shaped 형태)
 $\Omega \subseteq \mathbb{C}$가 star-shaped 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여
@@ -117,14 +117,14 @@ $$\oint_\gamma f(z)\dd{z} = 0$$
 :::
 
 ::: 증명
-[정리 3](#thm3)에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed curve $\gamma$에 대해, [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9){: data-lid="bvf1h" }의 closed 경로 적분 소멸을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
+[정리 3](#thm3){: data-lid="byl52" }에 의해 $f$는 $\Omega$에서 원시함수 $F$를 가진다. 자취가 $\Omega$에 들어 있는 closed curve $\gamma$에 대해, [§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9){: data-lid="bvf1h" }의 closed 경로 적분 소멸을 적용하면 $\oint_\gamma f\dd{z} = 0$이다.
 :::
 
-[따름정리 4](#cor4)는 closed 곡선의 모양에 아무런 제약을 두지 않는다. 영역이 star-shaped이기만 하면, 그 안의 어떤 복잡한 closed 경로를 따라 holomorphic function을 적분해도 결과가 $0$이다. 가령 열린 원판 위에서 holomorphic인 함수는 그 원판 안의 어떤 closed 경로에서도 적분이 소멸한다. 다만 이 결론은 영역의 star-shapedness에 결정적으로 기댄다. $1/z$은 $\mathbb{C}\setminus\{0\}$에서 holomorphic이지만 이 영역이 star-shaped가 아니므로 정리가 적용되지 않고, 실제로 원점을 감는 원에서의 적분이 $2\pi i \neq 0$이다. 영역의 어떤 위상적 성질이 star-shapedness를 대신할 수 있는가가 다음 절의 물음이다.
+[따름정리 4](#cor4){: data-lid="al4iu" }는 closed 곡선의 모양에 아무런 제약을 두지 않는다. 영역이 star-shaped이기만 하면, 그 안의 어떤 복잡한 closed 경로를 따라 holomorphic function을 적분해도 결과가 $0$이다. 가령 열린 원판 위에서 holomorphic인 함수는 그 원판 안의 어떤 closed 경로에서도 적분이 소멸한다. 다만 이 결론은 영역의 star-shapedness에 결정적으로 기댄다. $1/z$은 $\mathbb{C}\setminus\{0\}$에서 holomorphic이지만 이 영역이 star-shaped가 아니므로 정리가 적용되지 않고, 실제로 원점을 감는 원에서의 적분이 $2\pi i \neq 0$이다. 영역의 어떤 위상적 성질이 star-shapedness를 대신할 수 있는가가 다음 절의 물음이다.
 
 ## Homotopy invariance
 
-[따름정리 4](#cor4)의 star-shaped 조건은 영역의 *모양*에 대한 구체적 요구라 다루기 번거롭다. 더 본질적인 조건은 위상적인 것으로, 두 경로가 영역 안에서 서로 연속적으로 변형될 수 있는가, 그리고 closed 경로가 영역 안에서 한 점으로 수축될 수 있는가이다. 이 변형 가능성을 homotopy로 정식화하면, holomorphic function의 적분이 경로의 연속적 변형에 무관함을 보일 수 있다. 먼저 같은 끝점을 갖는 두 경로 사이의 homotopy를 정의한다.
+[따름정리 4](#cor4){: data-lid="0qp4a" }의 star-shaped 조건은 영역의 *모양*에 대한 구체적 요구라 다루기 번거롭다. 더 본질적인 조건은 위상적인 것으로, 두 경로가 영역 안에서 서로 연속적으로 변형될 수 있는가, 그리고 closed 경로가 영역 안에서 한 점으로 수축될 수 있는가이다. 이 변형 가능성을 homotopy로 정식화하면, holomorphic function의 적분이 경로의 연속적 변형에 무관함을 보일 수 있다. 먼저 같은 끝점을 갖는 두 경로 사이의 homotopy를 정의한다.
 
 ::: 정의 5
 $\Omega \subseteq \mathbb{C}$가 영역이고 $\gamma_0, \gamma_1 : [a, b] \rightarrow \Omega$가 같은 시점 $p = \gamma_0(a) = \gamma_1(a)$와 같은 종점 $q = \gamma_0(b) = \gamma_1(b)$을 갖는 두 곡선이라 하자. 두 곡선이 $\Omega$ 안에서 *끝점을 고정하여 homotopic<sub>호모토픽</sub>*하다는 것은, 연속사상
@@ -149,13 +149,13 @@ $$\int_{\gamma_0} f(z)\dd{z} = \int_{\gamma_1} f(z)\dd{z}$$
 :::
 
 ::: 증명
-$H : [a, b] \times [0, 1] \rightarrow \Omega$를 $\gamma_0$에서 $\gamma_1$로 가는 homotopy라 하자. 상 $K = H([a,b]\times[0,1])$은 [\[해석학\] §연속함수의 성질, ⁋정리 1](/ko/math/analysis/continuous_functions#thm1)에 의해 콤팩트이고 $\Omega$에 들어 있다. 콤팩트집합 $K$와 닫힌집합 $\mathbb{C}\setminus\Omega$ 사이의 거리는 양수이므로, $3r < \operatorname{dist}(K, \mathbb{C}\setminus\Omega)$인 $r > 0$을 잡으면 $K$의 각 점을 중심으로 한 반지름 $2r$인 원판이 통째로 $\Omega$에 들어간다.
+$H : [a, b] \times [0, 1] \rightarrow \Omega$를 $\gamma_0$에서 $\gamma_1$로 가는 homotopy라 하자. 상 $K = H([a,b]\times[0,1])$은 [\[해석학\] §연속함수의 성질, ⁋정리 1](/ko/math/analysis/continuous_functions#thm1){: data-lid="3snvr" }에 의해 콤팩트이고 $\Omega$에 들어 있다. 콤팩트집합 $K$와 닫힌집합 $\mathbb{C}\setminus\Omega$ 사이의 거리는 양수이므로, $3r < \operatorname{dist}(K, \mathbb{C}\setminus\Omega)$인 $r > 0$을 잡으면 $K$의 각 점을 중심으로 한 반지름 $2r$인 원판이 통째로 $\Omega$에 들어간다.
 
-$H$가 콤팩트집합 위에서 [\[해석학\] §연속함수의 성질, ⁋정리 6](/ko/math/analysis/continuous_functions#thm6)에 의해 균등연속이므로, 분할을 충분히 잘게 잡아 $a = t_0 < t_1 < \cdots < t_n = b$와 $0 = s_0 < s_1 < \cdots < s_m = 1$을 택하면, 각 작은 직사각형 $[t_{i-1}, t_i]\times[s_{j-1}, s_j]$의 $H$-상이 지름 $r$인 원판 안에 들어가도록 할 수 있다. 분할이 이루는 각 점 $(t_i, s_j)$의 상을 $w_{i,j} = H(t_i, s_j)$라 하자.
+$H$가 콤팩트집합 위에서 [\[해석학\] §연속함수의 성질, ⁋정리 6](/ko/math/analysis/continuous_functions#thm6){: data-lid="7pcjx" }에 의해 균등연속이므로, 분할을 충분히 잘게 잡아 $a = t_0 < t_1 < \cdots < t_n = b$와 $0 = s_0 < s_1 < \cdots < s_m = 1$을 택하면, 각 작은 직사각형 $[t_{i-1}, t_i]\times[s_{j-1}, s_j]$의 $H$-상이 지름 $r$인 원판 안에 들어가도록 할 수 있다. 분할이 이루는 각 점 $(t_i, s_j)$의 상을 $w_{i,j} = H(t_i, s_j)$라 하자.
 
 각 $s_j$에 대해 점 $w_{0,j}, w_{1,j}, \ldots, w_{n,j}$을 차례로 잇는 선분들로 이루어진 다각선 $\Gamma_j$를 생각한다. 이웃한 두 다각선의 적분이 서로 같고, 또 양 끝의 다각선 $\Gamma_0, \Gamma_m$의 적분이 각각 $\gamma_0, \gamma_1$의 적분과 같음을 보이면 된다 (중간의 곡선 $\gamma_{s_j}$은 연속일 뿐 piecewise $C^1$이라는 보장이 없어 그 적분을 쓰지 않는다).
 
-이웃한 두 다각선 $\Gamma_{j-1}$과 $\Gamma_j$을 비교한다. 각 $i$에 대해 네 점 $w_{i-1,j-1}, w_{i,j-1}, w_{i,j}, w_{i-1,j}$은 모두 위 작은 직사각형들의 상에 속해 한 점에서 반지름 $2r$인 공통 원판 $D_i \subseteq \Omega$ 안에 들어간다. 원판은 볼록하여 star-shaped이므로, 이 네 점을 꼭짓점으로 하는 closed 다각형 경로를 따른 $f$의 적분이 [따름정리 4](#cor4)에 의해 $0$이다. 이러한 사각형 적분들을 $i = 1, \ldots, n$에 대해 모두 더하면 인접한 사각형이 공유하는 세로변 $[w_{i,j-1}, w_{i,j}]$에서의 적분이 방향이 반대라 상쇄되고, 양 끝의 세로변은 homotopy가 끝점을 고정하므로 $w_{0,j-1} = w_{0,j} = p$, $w_{n,j-1} = w_{n,j} = q$이 되어 길이 $0$의 선분이라 기여가 없다. 남는 것은 위·아래 가로변뿐이므로
+이웃한 두 다각선 $\Gamma_{j-1}$과 $\Gamma_j$을 비교한다. 각 $i$에 대해 네 점 $w_{i-1,j-1}, w_{i,j-1}, w_{i,j}, w_{i-1,j}$은 모두 위 작은 직사각형들의 상에 속해 한 점에서 반지름 $2r$인 공통 원판 $D_i \subseteq \Omega$ 안에 들어간다. 원판은 볼록하여 star-shaped이므로, 이 네 점을 꼭짓점으로 하는 closed 다각형 경로를 따른 $f$의 적분이 [따름정리 4](#cor4){: data-lid="hyywb" }에 의해 $0$이다. 이러한 사각형 적분들을 $i = 1, \ldots, n$에 대해 모두 더하면 인접한 사각형이 공유하는 세로변 $[w_{i,j-1}, w_{i,j}]$에서의 적분이 방향이 반대라 상쇄되고, 양 끝의 세로변은 homotopy가 끝점을 고정하므로 $w_{0,j-1} = w_{0,j} = p$, $w_{n,j-1} = w_{n,j} = q$이 되어 길이 $0$의 선분이라 기여가 없다. 남는 것은 위·아래 가로변뿐이므로
 
 $$\int_{\Gamma_{j-1}} f\dd{z} = \int_{\Gamma_j} f\dd{z}$$
 
@@ -166,13 +166,13 @@ $$\int_{\Gamma_{j-1}} f\dd{z} = \int_{\Gamma_j} f\dd{z}$$
 Null-homotopic한 closed 곡선의 경우, closed 곡선에 대한 homotopy를 같은 방식으로 다루면 ($H(a,s) = H(b,s)$이라 $w_{0,j} = w_{n,j}$이고, 양 끝 세로변이 길이 $0$인 대신 같은 선분을 서로 반대 방향으로 지나 상쇄됨) 그 적분이 상수 곡선의 적분과 같고, 상수 곡선의 적분은 $0$이다.
 :::
 
-[정리 6](#thm6)은 holomorphic function의 적분이 경로 자체가 아니라 경로의 homotopy류에만 의존함을 말한다. 같은 두 끝점을 잇되 영역 안에서 서로 끌어당겨 포갤 수 있는 두 경로는 같은 적분값을 주고, 영역 안에서 한 점으로 오므릴 수 있는 closed 경로는 적분이 $0$이다. Star-shaped 영역에서는 임의의 closed 곡선이 별중심으로 직선을 따라 수축되어 null-homotopic하므로, [따름정리 4](#cor4)가 이 정리의 특수한 경우로 회복된다. 한편 $\mathbb{C}\setminus\{0\}$에서 원점을 감는 원은 원점이라는 구멍에 걸려 한 점으로 수축되지 못하므로 null-homotopic하지 않고, [정리 6](#thm6)은 그 적분이 $0$이라고 주장하지 않는다. 적분이 $0$이 됨을 보장하는 영역은 모든 closed 곡선이 수축되는 영역이며, 이것이 다음 정의이다.
+[정리 6](#thm6){: data-lid="bho1y" }은 holomorphic function의 적분이 경로 자체가 아니라 경로의 homotopy류에만 의존함을 말한다. 같은 두 끝점을 잇되 영역 안에서 서로 끌어당겨 포갤 수 있는 두 경로는 같은 적분값을 주고, 영역 안에서 한 점으로 오므릴 수 있는 closed 경로는 적분이 $0$이다. Star-shaped 영역에서는 임의의 closed 곡선이 별중심으로 직선을 따라 수축되어 null-homotopic하므로, [따름정리 4](#cor4){: data-lid="ki98i" }가 이 정리의 특수한 경우로 회복된다. 한편 $\mathbb{C}\setminus\{0\}$에서 원점을 감는 원은 원점이라는 구멍에 걸려 한 점으로 수축되지 못하므로 null-homotopic하지 않고, [정리 6](#thm6){: data-lid="wrmyo" }은 그 적분이 $0$이라고 주장하지 않는다. 적분이 $0$이 됨을 보장하는 영역은 모든 closed 곡선이 수축되는 영역이며, 이것이 다음 정의이다.
 
 ::: 정의 7
 영역 $\Omega \subseteq \mathbb{C}$가 *simply connected<sub>단순연결</sub>*라는 것은, $\Omega$ 안의 임의의 closed 곡선이 $\Omega$ 안에서 null-homotopic한 것이다. 곧 어떤 closed 곡선도 $\Omega$ 안에 머물면서 한 점으로 연속적으로 수축될 수 있는 것이다.
 :::
 
-단순연결 영역은 직관적으로 "구멍이 없는" 영역으로, 그 안의 어떤 고리도 영역을 벗어나지 않고 졸라매어 점으로 만들 수 있다. Star-shaped 영역은 모두 단순연결이며, 따라서 열린 원판이나 평면 전체, 반평면이 단순연결의 예이다. 반면 원점을 뺀 평면이나 환형 영역(annulus)은 구멍을 감는 고리가 수축되지 못하므로 단순연결이 아니다. [정리 6](#thm6)을 이 정의에 적용하면 Cauchy 정리의 가장 표준적인 형태가 나온다.
+단순연결 영역은 직관적으로 "구멍이 없는" 영역으로, 그 안의 어떤 고리도 영역을 벗어나지 않고 졸라매어 점으로 만들 수 있다. Star-shaped 영역은 모두 단순연결이며, 따라서 열린 원판이나 평면 전체, 반평면이 단순연결의 예이다. 반면 원점을 뺀 평면이나 환형 영역(annulus)은 구멍을 감는 고리가 수축되지 못하므로 단순연결이 아니다. [정리 6](#thm6){: data-lid="lj98q" }을 이 정의에 적용하면 Cauchy 정리의 가장 표준적인 형태가 나온다.
 
 ::: 따름정리 8 (Cauchy 정리, 단순연결 형태)
 $\Omega \subseteq \mathbb{C}$가 단순연결 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. 그러면 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여
@@ -183,10 +183,10 @@ $$\oint_\gamma f(z)\dd{z} = 0$$
 :::
 
 ::: 증명
-$\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 closed curve $\gamma$는 $\Omega$ 안에서 null-homotopic하고, [정리 6](#thm6)에 의해 $\oint_\gamma f\dd{z} = 0$이다. 모든 closed 경로에서 적분이 소멸하므로 적분이 경로에 무관하며, 기준점 $z_0 \in \Omega$를 하나 고정하고 $z_0$에서 $z$까지 자취가 $\Omega$에 든 임의의 곡선을 따라 $F(z) = \int f\dd{\zeta}$로 정의하면 (영역은 연결되어 있어 경로가 존재하고, 경로 독립성으로 값이 잘 정의된다) [정리 3](#thm3)의 증명과 같은 국소 논증으로 $F' = f$임이 따라 나와 $F$가 원시함수이다.
+$\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 closed curve $\gamma$는 $\Omega$ 안에서 null-homotopic하고, [정리 6](#thm6){: data-lid="uw4ut" }에 의해 $\oint_\gamma f\dd{z} = 0$이다. 모든 closed 경로에서 적분이 소멸하므로 적분이 경로에 무관하며, 기준점 $z_0 \in \Omega$를 하나 고정하고 $z_0$에서 $z$까지 자취가 $\Omega$에 든 임의의 곡선을 따라 $F(z) = \int f\dd{\zeta}$로 정의하면 (영역은 연결되어 있어 경로가 존재하고, 경로 독립성으로 값이 잘 정의된다) [정리 3](#thm3){: data-lid="5ghk7" }의 증명과 같은 국소 논증으로 $F' = f$임이 따라 나와 $F$가 원시함수이다.
 :::
 
-[따름정리 8](#cor8)은 영역의 위상만으로 holomorphic function의 적분이 경로에 의존하는지를 완전히 결정한다. 단순연결이라는 전역적 조건과 holomorphicity라는 국소적 조건이 만나면, 경로의 형태와 무관하게 닫힌 적분이 소멸하고 원시함수가 전역적으로 존재한다. 이는 [정리 3](#thm3)의 star-shaped 가정을 위상적으로 가장 약화한 형태이며, 가령 단순연결 영역에서는 $0$이 아닌 holomorphic function이 로그와 거듭제곱근을 단일하게 정의받는 등 여러 전역적 구성을 가능하게 한다. 단순연결이 아닌 영역에서 적분이 얼마나 어긋나는지는 closed 경로가 구멍을 감는 횟수로 측정되며, 이를 재는 양이 회전수이다.
+[따름정리 8](#cor8){: data-lid="hzmey" }은 영역의 위상만으로 holomorphic function의 적분이 경로에 의존하는지를 완전히 결정한다. 단순연결이라는 전역적 조건과 holomorphicity라는 국소적 조건이 만나면, 경로의 형태와 무관하게 닫힌 적분이 소멸하고 원시함수가 전역적으로 존재한다. 이는 [정리 3](#thm3){: data-lid="eldxg" }의 star-shaped 가정을 위상적으로 가장 약화한 형태이며, 가령 단순연결 영역에서는 $0$이 아닌 holomorphic function이 로그와 거듭제곱근을 단일하게 정의받는 등 여러 전역적 구성을 가능하게 한다. 단순연결이 아닌 영역에서 적분이 얼마나 어긋나는지는 closed 경로가 구멍을 감는 횟수로 측정되며, 이를 재는 양이 회전수이다.
 
 ## 회전수
 
@@ -203,7 +203,7 @@ $$n(\gamma, z_0) = \frac{1}{2\pi i}\oint_\gamma \frac{\dd{z}}{z - z_0}$$
 회전수는 closed 경로 $\gamma$가 점 $z_0$의 둘레를 반시계방향으로 몇 바퀴 도는지를 세는 정수이다. 적분 $\oint_\gamma \dd{z}/(z - z_0)$의 피적분함수 $1/(z - z_0)$은 $z_0$을 중심으로 한 편각의 미소 변화를 재므로, 경로를 한 바퀴 돌며 그 편각의 총 변화량을 모은 것이 적분이고, 이를 $2\pi i$로 나누면 회전 횟수가 된다. 가령 $z_0$을 중심으로 반시계방향으로 한 번 도는 원에 대해서는 [§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10){: data-lid="l3rjd" }의 계산에서 $n(\gamma, z_0) = 1$이고, 같은 원을 거꾸로 돌면 $-1$, $z_0$을 감지 않는 경로에 대해서는 $0$이다. 이 양이 항상 정수임을 보인다.
 
 ::: 명제 10
-[정의 9](#def9)의 가정 아래, 회전수 $n(\gamma, z_0)$은 정수이다.
+[정의 9](#def9){: data-lid="57ixj" }의 가정 아래, 회전수 $n(\gamma, z_0)$은 정수이다.
 :::
 
 ::: 증명
@@ -215,7 +215,7 @@ $$g(t) = \int_a^t \frac{\gamma'(\tau)}{\gamma(\tau)}\dd{\tau}$$
 
 $$\frac{d}{\dd{t}}\bigl( e^{-g(t)}\gamma(t) \bigr) = e^{-g(t)}\bigl( -g'(t)\gamma(t) + \gamma'(t) \bigr) = e^{-g(t)}\bigl( -\gamma'(t) + \gamma'(t) \bigr) = 0$$
 
-이다. 이 함수는 연속이고 도함수가 유한 개의 점을 빼고 $0$이므로, 분할점 사이의 각 구간에서 [\[해석학\] §평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4)의 (1)에 의해 (실수부와 허수부에 각각 적용) 상수이고, 연속이므로 $[a, b]$ 전체에서 상수이다. 따라서 모든 $t$에 대해 $e^{-g(t)}\gamma(t) = e^{-g(a)}\gamma(a) = \gamma(a)$ ($g(a) = 0$이므로) 이고, 곧 $\gamma(t) = \gamma(a)e^{g(t)}$이다.
+이다. 이 함수는 연속이고 도함수가 유한 개의 점을 빼고 $0$이므로, 분할점 사이의 각 구간에서 [\[해석학\] §평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4){: data-lid="y81ku" }의 (1)에 의해 (실수부와 허수부에 각각 적용) 상수이고, 연속이므로 $[a, b]$ 전체에서 상수이다. 따라서 모든 $t$에 대해 $e^{-g(t)}\gamma(t) = e^{-g(a)}\gamma(a) = \gamma(a)$ ($g(a) = 0$이므로) 이고, 곧 $\gamma(t) = \gamma(a)e^{g(t)}$이다.
 
 $\gamma$가 닫혀 있어 $\gamma(b) = \gamma(a) \neq 0$이므로 $e^{g(b)} = \gamma(b)/\gamma(a) = 1$이다. 복소지수가 $1$이 되는 것은 그 지수가 $2\pi i$의 정수배일 때 ([§지수함수, 로그, 거듭제곱, ⁋명제 2](/ko/math/complex_analysis/elementary_functions#prop2){: data-lid="0uwdc" }에 의해 $e^{w} = 1 \iff w \in 2\pi i\mathbb{Z}$) 이므로, $g(b) = 2\pi i k$인 정수 $k$가 있다. 그런데 정의에 의해
 
@@ -224,7 +224,7 @@ $$g(b) = \int_a^b \frac{\gamma'(\tau)}{\gamma(\tau)}\dd{\tau} = \oint_\gamma \fr
 이므로 $n(\gamma, 0) = g(b)/(2\pi i) = k$는 정수이다.
 :::
 
-[명제 10](#prop10)의 증명은 회전수의 정수성이 곧 복소지수의 주기성 $e^w = 1 \iff w \in 2\pi i\mathbb{Z}$에서 비롯함을 드러낸다. 적분 $g(b)$는 경로를 따라 누적된 $\log\gamma$의 변화량이고, 경로가 닫혀 출발점으로 돌아오면 $\gamma$의 절댓값은 제자리이되 편각만 $2\pi$의 정수배만큼 어긋날 수 있는데, 그 정수가 바로 회전수이다. 이로써 회전수는 closed 경로가 한 점을 감는 위상적 횟수를 적분으로 포착하며, 단순연결이 아닌 영역에서 Cauchy 정리가 어긋나는 정도를 정량화하는 도구가 된다. 가령 $f$가 $z_0$을 뺀 영역에서 holomorphic일 때 closed 경로 적분이 $n(\gamma, z_0)$에 비례하여 결정되는 현상이 적분공식과 잔여정리에서 본격적으로 전개된다.
+[명제 10](#prop10){: data-lid="m3474" }의 증명은 회전수의 정수성이 곧 복소지수의 주기성 $e^w = 1 \iff w \in 2\pi i\mathbb{Z}$에서 비롯함을 드러낸다. 적분 $g(b)$는 경로를 따라 누적된 $\log\gamma$의 변화량이고, 경로가 닫혀 출발점으로 돌아오면 $\gamma$의 절댓값은 제자리이되 편각만 $2\pi$의 정수배만큼 어긋날 수 있는데, 그 정수가 바로 회전수이다. 이로써 회전수는 closed 경로가 한 점을 감는 위상적 횟수를 적분으로 포착하며, 단순연결이 아닌 영역에서 Cauchy 정리가 어긋나는 정도를 정량화하는 도구가 된다. 가령 $f$가 $z_0$을 뺀 영역에서 holomorphic일 때 closed 경로 적분이 $n(\gamma, z_0)$에 비례하여 결정되는 현상이 적분공식과 잔여정리에서 본격적으로 전개된다.
 
 ---
 

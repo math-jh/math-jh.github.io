@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)에서 다변수함수의 미분을 일차근사로 정의하고 [§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5)에서 편도함수가 연속이면 미분가능함을 보았다. 일변수에서 $f'(a)=0$인 점의 성격을 $f''(a)$의 부호가 결정하듯, 다변수에서 극값을 판정하려면 이계 편도함수가 필요하다. 이 글에서는 고계 편도함수를 정의하고, 이계 편도함수들이 이루는 Hessian 행렬이 $f$의 이차 근사를 주도록 테일러 정리를 확장한 뒤, 이를 극값 판정에 적용한다. 그 과정에서 편미분을 취하는 순서가 결과에 영향을 주는지가 먼저 문제가 된다.
+[§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="2dara" }에서 다변수함수의 미분을 일차근사로 정의하고 [§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="c891e" }에서 편도함수가 연속이면 미분가능함을 보았다. 일변수에서 $f'(a)=0$인 점의 성격을 $f''(a)$의 부호가 결정하듯, 다변수에서 극값을 판정하려면 이계 편도함수가 필요하다. 이 글에서는 고계 편도함수를 정의하고, 이계 편도함수들이 이루는 Hessian 행렬이 $f$의 이차 근사를 주도록 테일러 정리를 확장한 뒤, 이를 극값 판정에 적용한다. 그 과정에서 편미분을 취하는 순서가 결과에 영향을 주는지가 먼저 문제가 된다.
 
 ## 고계 편도함수
 
@@ -52,12 +52,12 @@ $$\partial_y\partial_x f(0,0)=\frac{d}{\dd{y}}\bigl(\partial_x f(0,y)\bigr)\Big\
 
 $$\partial_x\partial_y f(x,y)=\partial_y\partial_x f(x,y)=\frac{(x^2-y^2)(x^4+10x^2y^2+y^4)}{(x^2+y^2)^3}$$
 
-인데, 이 식은 $x$축 위($y=0$)에서 $1$, $y$축 위($x=0$)에서 $-1$이므로 원점에서 연속이 아니다. 아래 [정리 3](#thm3)의 가정이 깨지는 곳이 바로 이 불연속이다.
+인데, 이 식은 $x$축 위($y=0$)에서 $1$, $y$축 위($x=0$)에서 $-1$이므로 원점에서 연속이 아니다. 아래 [정리 3](#thm3){: data-lid="i5d4v" }의 가정이 깨지는 곳이 바로 이 불연속이다.
 :::
 
 ## 편미분의 순서교환
 
-혼합 편도함수가 연속이라는 가정이 있으면 [예시 2](#ex2)와 같은 일이 일어나지 않는다. 아래 정리는 연속성을 한 혼합 편도함수에 대해서만, 그것도 한 점에서만 요구하는 형태로 적는다.
+혼합 편도함수가 연속이라는 가정이 있으면 [예시 2](#ex2){: data-lid="mrzu6" }와 같은 일이 일어나지 않는다. 아래 정리는 연속성을 한 혼합 편도함수에 대해서만, 그것도 한 점에서만 요구하는 형태로 적는다.
 
 ::: 정리 3 (Schwarz 정리)
 $U\subseteq\mathbb{R}^n$이 열린집합이고 $i\neq j$라 하자. $f:U\rightarrow\mathbb{R}$에 대하여 $\partial_i f$, $\partial_j f$, $\partial_j\partial_i f$가 $U$ 위에서 존재하고 $\partial_j\partial_i f$가 $a\in U$에서 연속이면, $\partial_i\partial_j f(a)$가 존재하고
@@ -76,11 +76,11 @@ $$\lvert \partial_y\partial_x f(x,y)-\partial_y\partial_x f(a)\rvert<\varepsilon
 
 $$\Delta(h,k)=f(a_1+h,a_2+k)-f(a_1+h,a_2)-f(a_1,a_2+k)+f(a_1,a_2)$$
 
-를 두 방식으로 계산한다. 먼저 $u(t)=f(t,a_2+k)-f(t,a_2)$라 하면 $\Delta(h,k)=u(a_1+h)-u(a_1)$이고, $\partial_x f$가 존재하므로 $u$는 미분가능하며 $u'(t)=\partial_x f(t,a_2+k)-\partial_x f(t,a_2)$이다. [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)을 적용하면 $a_1$과 $a_1+h$ 사이의 어떤 $\xi$에 대하여
+를 두 방식으로 계산한다. 먼저 $u(t)=f(t,a_2+k)-f(t,a_2)$라 하면 $\Delta(h,k)=u(a_1+h)-u(a_1)$이고, $\partial_x f$가 존재하므로 $u$는 미분가능하며 $u'(t)=\partial_x f(t,a_2+k)-\partial_x f(t,a_2)$이다. [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="5bmwn" }을 적용하면 $a_1$과 $a_1+h$ 사이의 어떤 $\xi$에 대하여
 
 $$\Delta(h,k)=h\bigl(\partial_x f(\xi,a_2+k)-\partial_x f(\xi,a_2)\bigr)$$
 
-이다. 이제 $s\mapsto\partial_x f(\xi,s)$는 $\partial_y\partial_x f$가 존재하므로 미분가능하고, 도함수는 $\partial_y\partial_x f(\xi,s)$이다. [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)을 한 번 더 적용하면 $a_2$와 $a_2+k$ 사이의 어떤 $\eta$에 대하여
+이다. 이제 $s\mapsto\partial_x f(\xi,s)$는 $\partial_y\partial_x f$가 존재하므로 미분가능하고, 도함수는 $\partial_y\partial_x f(\xi,s)$이다. [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="ej20i" }을 한 번 더 적용하면 $a_2$와 $a_2+k$ 사이의 어떤 $\eta$에 대하여
 
 $$\frac{\Delta(h,k)}{hk}=\partial_y\partial_x f(\xi,\eta)$$
 
@@ -99,19 +99,19 @@ $$\left\lvert\frac{\partial_y f(a_1+h,a_2)-\partial_y f(a_1,a_2)}{h}-\partial_y\
 을 얻는다. $\varepsilon$은 임의였으므로 좌변의 차분비는 $h\rightarrow 0$일 때 $\partial_y\partial_x f(a)$로 수렴한다. 이 극한이 정의상 $\partial_x\partial_y f(a)$이므로 증명이 끝난다.
 :::
 
-[예시 2](#ex2)에서는 $\partial_y\partial_x f$가 원점에서 불연속이어서 이 정리를 쓸 수 없고, 실제로 결론도 성립하지 않았다. 반대로 $f$가 $C^2$이면 모든 $i\neq j$에 대해 두 혼합 편도함수가 모두 연속이므로 [정리 3](#thm3)이 적용되어 Hessian 행렬 $H_f(a)$는 symmetric matrix가 된다. 더 높은 계수에서도 같은 결론이 성립한다.
+[예시 2](#ex2){: data-lid="ou2ne" }에서는 $\partial_y\partial_x f$가 원점에서 불연속이어서 이 정리를 쓸 수 없고, 실제로 결론도 성립하지 않았다. 반대로 $f$가 $C^2$이면 모든 $i\neq j$에 대해 두 혼합 편도함수가 모두 연속이므로 [정리 3](#thm3){: data-lid="zqtsq" }이 적용되어 Hessian 행렬 $H_f(a)$는 symmetric matrix가 된다. 더 높은 계수에서도 같은 결론이 성립한다.
 
 ::: 따름정리 4
 $f$가 $U$ 위의 $C^k$ 함수이면, $k$계 이하의 편도함수는 미분하는 변수의 순서에 의존하지 않는다. 즉 $\{1,\dots,k\}$의 임의의 순열 $\sigma$에 대하여 $\partial_{i_1}\cdots\partial_{i_k}f=\partial_{i_{\sigma(1)}}\cdots\partial_{i_{\sigma(k)}}f$이다.
 :::
 
 ::: 증명
-임의의 순열은 이웃한 두 자리의 교환의 합성이다. 이웃한 두 미분 $\partial_{i_m}\partial_{i_{m+1}}$을 교환하는 것은, 그 안쪽의 $k-m-1$번 미분을 한 함수 $g=\partial_{i_{m+2}}\cdots\partial_{i_k}f$가 $C^2$이므로 [정리 3](#thm3)에 의해 $\partial_{i_m}\partial_{i_{m+1}}g=\partial_{i_{m+1}}\partial_{i_m}g$로 허용되고, 바깥쪽 미분은 양변에 똑같이 적용된다.
+임의의 순열은 이웃한 두 자리의 교환의 합성이다. 이웃한 두 미분 $\partial_{i_m}\partial_{i_{m+1}}$을 교환하는 것은, 그 안쪽의 $k-m-1$번 미분을 한 함수 $g=\partial_{i_{m+2}}\cdots\partial_{i_k}f$가 $C^2$이므로 [정리 3](#thm3){: data-lid="j46ph" }에 의해 $\partial_{i_m}\partial_{i_{m+1}}g=\partial_{i_{m+1}}\partial_{i_m}g$로 허용되고, 바깥쪽 미분은 양변에 똑같이 적용된다.
 :::
 
 ## 2차 테일러 정리
 
-[§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9)를 선분 위로 제한한 함수에 적용하면 다변수 테일러 정리를 얻는다. 이때 이계 편도함수의 대칭성이 쓰여 식이 이차형식 꼴로 정리된다.
+[§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9){: data-lid="g0apn" }를 선분 위로 제한한 함수에 적용하면 다변수 테일러 정리를 얻는다. 이때 이계 편도함수의 대칭성이 쓰여 식이 이차형식 꼴로 정리된다.
 
 ::: 정리 5 (2차 테일러 정리)
 $f$가 열린집합 $U\subseteq\mathbb{R}^n$ 위의 $C^2$ 함수이고, 선분 $\{a+th: 0\le t\le 1\}$이 $U$에 포함된다고 하자. 그러면 어떤 $\theta\in(0,1)$이 있어
@@ -126,11 +126,11 @@ $$f(a+h)=f(a)+\sum_{i=1}^n\partial_i f(a)h_i+\frac12\sum_{i,j=1}^n\partial_i\par
 :::
 
 ::: 증명
-$\varphi(t)=f(a+th)$라 하자. $C^1$ 함수는 미분가능하므로([§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5)) [§다변수 미분, ⁋정리 7](/ko/math/analysis/multivariable_differentiation#thm7)에 의하여 $\varphi'(t)=\sum_i\partial_i f(a+th)h_i$이다. 각 $\partial_i f$도 $C^1$이므로 연쇄법칙을 다시 적용하면
+$\varphi(t)=f(a+th)$라 하자. $C^1$ 함수는 미분가능하므로([§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="2e98p" }) [§다변수 미분, ⁋정리 7](/ko/math/analysis/multivariable_differentiation#thm7){: data-lid="w1y0b" }에 의하여 $\varphi'(t)=\sum_i\partial_i f(a+th)h_i$이다. 각 $\partial_i f$도 $C^1$이므로 연쇄법칙을 다시 적용하면
 
 $$\varphi''(t)=\sum_{i,j=1}^n\partial_j\partial_i f(a+th)h_ih_j$$
 
-이고, 이는 $f$가 $C^2$이므로 연속이다. 일변수 [§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9)의 Lagrange 나머지 꼴에 의하여 $\varphi(1)=\varphi(0)+\varphi'(0)+\varphi''(\theta)/2$인 $\theta\in(0,1)$이 존재한다. 이를 풀어 쓰면 첫째 식이다. 이때 $\partial_j\partial_i f=\partial_i\partial_j f$는 [정리 3](#thm3)에 의한 것이다.
+이고, 이는 $f$가 $C^2$이므로 연속이다. 일변수 [§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9){: data-lid="qkuqi" }의 Lagrange 나머지 꼴에 의하여 $\varphi(1)=\varphi(0)+\varphi'(0)+\varphi''(\theta)/2$인 $\theta\in(0,1)$이 존재한다. 이를 풀어 쓰면 첫째 식이다. 이때 $\partial_j\partial_i f=\partial_i\partial_j f$는 [정리 3](#thm3){: data-lid="i2akb" }에 의한 것이다.
 
 둘째 식은 첫째 식에서 얻는다. $\varepsilon>0$이 주어졌을 때 이계 편도함수들이 $a$에서 연속이므로 $\lVert h\rVert<\delta$이면 모든 $i,j$에 대하여 $\lvert\partial_i\partial_j f(a+\theta h)-\partial_i\partial_j f(a)\rvert<\varepsilon$이 되는 $\delta>0$이 있다. $\lvert h_i\rvert\le\lVert h\rVert$이므로 첫째 식과 둘째 식의 차는
 
@@ -145,7 +145,7 @@ $$\left\lvert\frac12\sum_{i,j}\bigl(\partial_i\partial_j f(a+\theta h)-\partial_
 
 symmetric matrix $A$와 그 이차형식 $Q(h)=\sum_{i,j}A_{ij}h_ih_j$가 *positive definite*라는 것은 모든 $h\neq 0$에 대하여 $Q(h)>0$인 것이고, *negative definite*라는 것은 모든 $h\neq 0$에 대하여 $Q(h)<0$인 것이며, *indefinite*라는 것은 $Q$가 양의 값과 음의 값을 모두 갖는 것이다. 어느 경우도 아닌 것은 $Q\ge 0$ 또는 $Q\le 0$이면서 $Q(h)=0$인 $h\neq 0$이 있는 경우이다.
 
-일반적인 $n$에 대한 판정은 선형대수학의 결과이다. 실수 symmetric matrix는 [\[선형대수학\] §스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)에 의하여 orthogonal basis로 대각화되므로 $Q$는 고윳값 $\lambda_1,\dots,\lambda_n$에 대해 $\sum\lambda_ia_i^2$ 꼴이 되고, 따라서 positive definite인 것은 모든 고윳값이 양수인 것, negative definite인 것은 모든 고윳값이 음수인 것, indefinite인 것은 양의 고윳값과 음의 고윳값이 모두 있는 것과 동치이다. 부호를 이루는 양·음·영의 개수가 기저의 선택에 의존하지 않는다는 것이 [\[선형대수학\] §이차형식과 실베스터 관성법칙, ⁋정리 3](/ko/math/linear_algebra/quadratic_forms#thm3)의 내용이며, 그래서 이 판정은 어떤 좌표에서 계산해도 같은 결과를 준다. 고윳값을 구하지 않고 leading principal minor만으로도 판정할 수 있다. $A$의 왼쪽 위 $k\times k$ 부분행렬의 행렬식을 $\Delta_k$라 하면, $A$가 positive definite인 것은 $\Delta_1,\dots,\Delta_n$이 모두 양수인 것과 동치이고, negative definite인 것은 모든 $k$에 대해 $(-1)^k\Delta_k>0$인 것과 동치이다 (Sylvester 판정법).
+일반적인 $n$에 대한 판정은 선형대수학의 결과이다. 실수 symmetric matrix는 [\[선형대수학\] §스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5){: data-lid="qb1px" }에 의하여 orthogonal basis로 대각화되므로 $Q$는 고윳값 $\lambda_1,\dots,\lambda_n$에 대해 $\sum\lambda_ia_i^2$ 꼴이 되고, 따라서 positive definite인 것은 모든 고윳값이 양수인 것, negative definite인 것은 모든 고윳값이 음수인 것, indefinite인 것은 양의 고윳값과 음의 고윳값이 모두 있는 것과 동치이다. 부호를 이루는 양·음·영의 개수가 기저의 선택에 의존하지 않는다는 것이 [\[선형대수학\] §이차형식과 실베스터 관성법칙, ⁋정리 3](/ko/math/linear_algebra/quadratic_forms#thm3){: data-lid="ea31o" }의 내용이며, 그래서 이 판정은 어떤 좌표에서 계산해도 같은 결과를 준다. 고윳값을 구하지 않고 leading principal minor만으로도 판정할 수 있다. $A$의 왼쪽 위 $k\times k$ 부분행렬의 행렬식을 $\Delta_k$라 하면, $A$가 positive definite인 것은 $\Delta_1,\dots,\Delta_n$이 모두 양수인 것과 동치이고, negative definite인 것은 모든 $k$에 대해 $(-1)^k\Delta_k>0$인 것과 동치이다 (Sylvester 판정법).
 
 실제 문제는 대부분 $n=2$이므로 이 경우를 직접 확인해 둔다.
 
@@ -167,7 +167,7 @@ $$Q(h)=ah_1^2+2bh_1h_2+ch_2^2=a\left(h_1+\frac ba h_2\right)^2+\frac{\Delta}{a}h
 
 ## 극값의 판정
 
-$f$가 $a$에서 *극솟값<sub>local minimum</sub>*을 가진다는 것은 $a$ 근방의 모든 $x$에 대하여 $f(x)\ge f(a)$인 것이고, 엄격한 부등호가 $x\neq a$에서 성립하면 *strict*하다고 한다. 극댓값도 같고 이 둘을 극값이라 부른다. $a$가 극값이고 $f$의 편도함수가 존재하면 각 좌표축 방향으로 제한한 일변수함수 $t\mapsto f(a+te_i)$가 $t=0$에서 극값을 가지므로 [§미분, ⁋명제 5](/ko/math/analysis/differentiation#prop5)에 의해 그 도함수 $\partial_i f(a)$는 $0$이다. 따라서 $\nabla f(a)=0$이며, 이 조건을 만족하는 점을 *critical point*라 한다. 극값은 critical point 중에서만 찾으면 되지만, 그 역은 성립하지 않는다. $f(x,y)=x^2-y^2$의 원점이 그 예이다. 아래 정리는 이차 항으로 둘을 구분한다.
+$f$가 $a$에서 *극솟값<sub>local minimum</sub>*을 가진다는 것은 $a$ 근방의 모든 $x$에 대하여 $f(x)\ge f(a)$인 것이고, 엄격한 부등호가 $x\neq a$에서 성립하면 *strict*하다고 한다. 극댓값도 같고 이 둘을 극값이라 부른다. $a$가 극값이고 $f$의 편도함수가 존재하면 각 좌표축 방향으로 제한한 일변수함수 $t\mapsto f(a+te_i)$가 $t=0$에서 극값을 가지므로 [§미분, ⁋명제 5](/ko/math/analysis/differentiation#prop5){: data-lid="txwg8" }에 의해 그 도함수 $\partial_i f(a)$는 $0$이다. 따라서 $\nabla f(a)=0$이며, 이 조건을 만족하는 점을 *critical point*라 한다. 극값은 critical point 중에서만 찾으면 되지만, 그 역은 성립하지 않는다. $f(x,y)=x^2-y^2$의 원점이 그 예이다. 아래 정리는 이차 항으로 둘을 구분한다.
 
 ::: 정리 7 (이계 도함수 판정법)
 $f$가 열린집합 $U\subseteq\mathbb{R}^n$ 위의 $C^2$ 함수이고 $a\in U$가 critical point라 하자.
@@ -178,20 +178,20 @@ $f$가 열린집합 $U\subseteq\mathbb{R}^n$ 위의 $C^2$ 함수이고 $a\in U$�
 :::
 
 ::: 증명
-$\nabla f(a)=0$이므로 [정리 5](#thm5)의 둘째 식은 $f(a+h)-f(a)=Q_a(h)/2+r(h)$, $r(h)=o(\lVert h\rVert^2)$가 된다.
+$\nabla f(a)=0$이므로 [정리 5](#thm5){: data-lid="fbwig" }의 둘째 식은 $f(a+h)-f(a)=Q_a(h)/2+r(h)$, $r(h)=o(\lVert h\rVert^2)$가 된다.
 
-1. 단위구면 $S=\{\lVert u\rVert=1\}$는 컴팩트하고 $Q_a$는 연속이므로 ([§컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7), [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)) $S$ 위에서 최솟값 $m$을 갖고, positive definite이므로 $m>0$이다. $Q_a$는 이차 동차이므로 모든 $h$에 대해 $Q_a(h)\ge m\lVert h\rVert^2$이다. $\varepsilon=m/4$로 잡으면, $\lVert h\rVert<\delta$일 때 $\lvert r(h)\rvert\le\varepsilon\lVert h\rVert^2$인 $\delta>0$이 있고, 이때 $h\neq 0$이면 $f(a+h)-f(a)\ge(m/2-m/4)\lVert h\rVert^2>0$이다. negative definite인 경우는 $-f$에 적용하면 된다. 여기서 $\varepsilon$을 $m$의 절반보다 작게 잡는 것이 핵심이다. $Q_a$가 주는 이득 $m/2$를 나머지의 상한이 넘지 못해야 하기 때문이다.
+1. 단위구면 $S=\{\lVert u\rVert=1\}$는 컴팩트하고 $Q_a$는 연속이므로 ([§컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7){: data-lid="afk64" }, [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-lid="o3qbc" }) $S$ 위에서 최솟값 $m$을 갖고, positive definite이므로 $m>0$이다. $Q_a$는 이차 동차이므로 모든 $h$에 대해 $Q_a(h)\ge m\lVert h\rVert^2$이다. $\varepsilon=m/4$로 잡으면, $\lVert h\rVert<\delta$일 때 $\lvert r(h)\rvert\le\varepsilon\lVert h\rVert^2$인 $\delta>0$이 있고, 이때 $h\neq 0$이면 $f(a+h)-f(a)\ge(m/2-m/4)\lVert h\rVert^2>0$이다. negative definite인 경우는 $-f$에 적용하면 된다. 여기서 $\varepsilon$을 $m$의 절반보다 작게 잡는 것이 핵심이다. $Q_a$가 주는 이득 $m/2$를 나머지의 상한이 넘지 못해야 하기 때문이다.
 2. $Q_a(u)>0$, $Q_a(v)<0$인 $u,v$를 잡는다. $f(a+tu)-f(a)=t^2\bigl(Q_a(u)/2+r(tu)/t^2\bigr)$에서 $r(tu)/t^2\rightarrow 0$이므로 $\lvert t\rvert$가 충분히 작고 $t\neq 0$이면 괄호 안은 양수이다. $v$에 대해서는 음수이다. 따라서 $a$의 임의 근방에 $f(x)>f(a)$인 점과 $f(x)<f(a)$인 점이 모두 있다.
 3. 어떤 $u$에 대해 $Q_a(u)<0$이면 2와 같은 계산으로 작은 $t\neq 0$에서 $f(a+tu)<f(a)$가 되어 극솟값이라는 가정에 모순이다. 극댓값은 $-f$에 적용한다.
 :::
 
-$n=2$이고 $\nabla f(a)=0$이면 [명제 6](#prop6)을 이용하여 판정을 $D=\partial_x^2 f\cdot\partial_y^2 f-(\partial_x\partial_y f)^2$ (Hessian의 행렬식)으로 쓸 수 있다. $D>0$이고 $\partial_x^2 f(a)>0$이면 극솟값, $D>0$이고 $\partial_x^2 f(a)<0$이면 극댓값, $D<0$이면 saddle point이다. $D>0$이면 $\partial_x^2 f$와 $\partial_y^2 f$의 부호가 같으므로 둘 중 하나로 확인해도 된다.
+$n=2$이고 $\nabla f(a)=0$이면 [명제 6](#prop6){: data-lid="4bra1" }을 이용하여 판정을 $D=\partial_x^2 f\cdot\partial_y^2 f-(\partial_x\partial_y f)^2$ (Hessian의 행렬식)으로 쓸 수 있다. $D>0$이고 $\partial_x^2 f(a)>0$이면 극솟값, $D>0$이고 $\partial_x^2 f(a)<0$이면 극댓값, $D<0$이면 saddle point이다. $D>0$이면 $\partial_x^2 f$와 $\partial_y^2 f$의 부호가 같으므로 둘 중 하나로 확인해도 된다.
 
 가령 $f(x,y)=x^3-3xy+y^3$에서 $\partial_xf=3x^2-3y$, $\partial_yf=3y^2-3x$이므로 critical point는 $y=x^2$, $x=y^2$에서 $x^4=x$를 풀어 $(0,0)$과 $(1,1)$이다. Hessian은 $\begin{pmatrix}6x&-3\\-3&6y\end{pmatrix}$이므로 $(0,0)$에서 $D=-9<0$이어서 saddle point이고, $(1,1)$에서는 $D=27>0$, $\partial_x^2f=6>0$이어서 극솟값 $f(1,1)=-1$을 가진다. 이 극솟값은 최솟값이 아니다. $f(x,x)=2x^3-3x^2$이 $x\rightarrow-\infty$에서 $-\infty$로 가기 때문이다. 이 판정법이 알려주는 것은 critical point 근방의 거동뿐이다.
 
 ## 판정이 되지 않는 경우
 
-[정리 7](#thm7)의 1과 2는 충분조건이고, 3은 필요조건이다. 따라서 $H_f(a)$가 definite도 indefinite도 아닌 경우, 즉 $Q_a\ge 0$이면서 $Q_a(h)=0$인 $h\neq 0$이 있는 경우에는 이 판정법만으로 결론을 낼 수 없다. 이차 항이 사라지는 방향에서는 삼차 이상의 항이 거동을 결정하기 때문이다.
+[정리 7](#thm7){: data-lid="86sr6" }의 1과 2는 충분조건이고, 3은 필요조건이다. 따라서 $H_f(a)$가 definite도 indefinite도 아닌 경우, 즉 $Q_a\ge 0$이면서 $Q_a(h)=0$인 $h\neq 0$이 있는 경우에는 이 판정법만으로 결론을 낼 수 없다. 이차 항이 사라지는 방향에서는 삼차 이상의 항이 거동을 결정하기 때문이다.
 
 ::: 예시 8 (같은 Hessian, 다른 결과)
 $f(x,y)=x^4+y^4$, $g(x,y)=-x^4-y^4$, $h(x,y)=x^2+y^3$의 원점은 모두 critical point이다. $H_f(0)=H_g(0)=0$이고 $H_h(0)=\begin{pmatrix}2&0\\0&0\end{pmatrix}$로 모두 definite가 아닌 semidefinite이지만, 결과는 서로 다르다. $f$는 원점 밖에서 $f>0=f(0)$이므로 strict 극솟값을 가지고, $g$는 마찬가지로 strict 극댓값을 가진다. $h$는 $h(0,y)=y^3$이 $y>0$에서 양수, $y<0$에서 음수이므로 극값이 아니다. 같은 Hessian $\diag(2,0)$을 갖는 $x^2+y^4$는 극솟값을 갖는다는 점에서 $h$와 대비된다.

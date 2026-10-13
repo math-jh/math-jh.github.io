@@ -25,7 +25,7 @@ $E$ 위의 함수열 $(f_n)$이 함수 $f: E \to \mathbb{R}$로 *점별수렴<su
 
 정의에서 $N$은 $x$와 $\varepsilon$ 둘 모두에 의존할 수 있다. 점별수렴은 점마다 따로 일어나는 수열의 수렴을 모아 놓은 것일 뿐이어서, 한 점에서의 수렴 속도에 관한 정보는 이웃한 점으로 전달되지 않는다. 이 글의 반례들은 모두 여기서 나온다.
 
-각 점에서의 극한은 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에서 보았듯 유일하므로 점별극한 $f$는 있으면 하나뿐이고, $f = \lim_{n\to\infty} f_n$으로 적는다. 또 $f_n \to f$, $g_n \to g$가 점별로 성립하면 각 점에서 수열의 극한법칙을 적용하여 $f_n + c g_n \to f + c g$와 $f_n g_n \to fg$가 점별로 성립함을 얻는다. 점별극한이 잃어버리는 것은 이런 대수적 구조가 아니라 연속성·적분·미분 같은 해석적 성질이다.
+각 점에서의 극한은 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2){: data-lid="6ssaw" }에서 보았듯 유일하므로 점별극한 $f$는 있으면 하나뿐이고, $f = \lim_{n\to\infty} f_n$으로 적는다. 또 $f_n \to f$, $g_n \to g$가 점별로 성립하면 각 점에서 수열의 극한법칙을 적용하여 $f_n + c g_n \to f + c g$와 $f_n g_n \to fg$가 점별로 성립함을 얻는다. 점별극한이 잃어버리는 것은 이런 대수적 구조가 아니라 연속성·적분·미분 같은 해석적 성질이다.
 
 점별수렴하는 점들의 집합도 문제가 된다. $f_n(x) = x^n$을 $\mathbb{R}$ 전체에서 보면, $\lvert x\rvert < 1$이면 $x^n \to 0$이고 $x = 1$이면 $x^n = 1$이며, $x = -1$이면 $(-1)^n$이 진동하고 $\lvert x\rvert > 1$이면 발산한다. 따라서 $(x^n)$은 $(-1, 1]$에서만 점별수렴하고, 극한함수는 이 집합 위에서만 정의된다. 이하에서는 수렴하는 점들의 집합을 $E$로 잡고 이야기한다.
 
@@ -85,15 +85,15 @@ $$f_n'(x) = \sqrt{n}\cos(nx)$$
 
 $$\lim_{n\to\infty}\Bigl(\lim_{x\to a} f_n(x)\Bigr) = f(a), \qquad \lim_{x\to a}\Bigl(\lim_{n\to\infty} f_n(x)\Bigr) = \lim_{x\to a} f(x)$$
 
-이다. 따라서 $f$가 $a$에서 연속인 것은 이 두 반복극한이 같은 것과 동치이다. [예시 2](#ex2)에서 $a = 1$이면 첫째 값은 $1$이고, 둘째 값은 $\lim_{x\to 1^-} 0 = 0$이다.
+이다. 따라서 $f$가 $a$에서 연속인 것은 이 두 반복극한이 같은 것과 동치이다. [예시 2](#ex2){: data-lid="e7tag" }에서 $a = 1$이면 첫째 값은 $1$이고, 둘째 값은 $\lim_{x\to 1^-} 0 = 0$이다.
 
-적분은 Riemann 합의 극한이다. 구간 $[a,b]$의 표본점 달린 분할 $P$에 대한 Riemann 합을 $S(P, g)$라 하면, [\[미적분학\] §적분, ⁋정의 9](/ko/math/calculus/integration#def9)에서 보았듯 $\int_a^b g = \lim_{\lVert P\rVert \to 0} S(P, g)$이다. 합은 유한합이므로 고정된 $P$에서 $S(P, f_n) \to S(P, f)$이고, 따라서 $f_n$과 $f$가 모두 적분가능할 때
+적분은 Riemann 합의 극한이다. 구간 $[a,b]$의 표본점 달린 분할 $P$에 대한 Riemann 합을 $S(P, g)$라 하면, [\[미적분학\] §적분, ⁋정의 9](/ko/math/calculus/integration#def9){: data-lid="8m219" }에서 보았듯 $\int_a^b g = \lim_{\lVert P\rVert \to 0} S(P, g)$이다. 합은 유한합이므로 고정된 $P$에서 $S(P, f_n) \to S(P, f)$이고, 따라서 $f_n$과 $f$가 모두 적분가능할 때
 
 $$\int_a^b f = \lim_{\lVert P\rVert \to 0}\Bigl(\lim_{n\to\infty} S(P, f_n)\Bigr), \qquad \lim_{n\to\infty}\int_a^b f_n = \lim_{n\to\infty}\Bigl(\lim_{\lVert P\rVert \to 0} S(P, f_n)\Bigr)$$
 
 이다. 극한과 적분을 바꿀 수 있다는 것은 이 두 반복극한이 같다는 것이다.
 
-미분도 같은 모양이다. $a$를 포함하는 구간에서 $t \neq a$에 대해 $D_n(t) = (f_n(t) - f_n(a))/(t - a)$로 두면 $D_n(t) \to D(t) = (f(t) - f(a))/(t-a)$이고, [§미분, ⁋정의 1](/ko/math/analysis/differentiation#def1)의 도함수 정의로부터
+미분도 같은 모양이다. $a$를 포함하는 구간에서 $t \neq a$에 대해 $D_n(t) = (f_n(t) - f_n(a))/(t - a)$로 두면 $D_n(t) \to D(t) = (f(t) - f(a))/(t-a)$이고, [§미분, ⁋정의 1](/ko/math/analysis/differentiation#def1){: data-lid="qnucg" }의 도함수 정의로부터
 
 $$f'(a) = \lim_{t\to a}\Bigl(\lim_{n\to\infty} D_n(t)\Bigr), \qquad \lim_{n\to\infty} f_n'(a) = \lim_{n\to\infty}\Bigl(\lim_{t\to a} D_n(t)\Bigr)$$
 
@@ -109,7 +109,7 @@ $$\lim_{m\to\infty}\Bigl(\lim_{n\to\infty} a_{m,n}\Bigr) = 0 \neq 1 = \lim_{n\to
 이다.
 :::
 
-[예시 2](#ex2)도 이 모양이다. $a_{m,n} = (1 - 1/m)^n$으로 두면 $n \to \infty$에서 $0$, $m \to \infty$에서 $1$로 가서 같은 불일치가 생긴다. 반복극한의 순서를 바꾸는 일이 정당화되려면 두 극한이 서로 독립적으로 일어난다는 보장이 필요하다. 점별수렴은 한 극한 안에서 $N$이 다른 변수에 의존하는 것을 허용하므로 이 보장을 주지 못한다.
+[예시 2](#ex2){: data-lid="nrc70" }도 이 모양이다. $a_{m,n} = (1 - 1/m)^n$으로 두면 $n \to \infty$에서 $0$, $m \to \infty$에서 $1$로 가서 같은 불일치가 생긴다. 반복극한의 순서를 바꾸는 일이 정당화되려면 두 극한이 서로 독립적으로 일어난다는 보장이 필요하다. 점별수렴은 한 극한 안에서 $N$이 다른 변수에 의존하는 것을 허용하므로 이 보장을 주지 못한다.
 
 반복극한을 거듭하면 연속함수에서 출발해도 연속성·적분가능성을 완전히 잃은 함수까지 닿을 수 있다.
 
@@ -118,7 +118,7 @@ $\mathbb{R}$에서 $g_{m}(x) = \lim_{n\to\infty}\cos^{2n}(m!\pi x)$를 정의하
 
 $$g_m(x) = \begin{cases} 1, & m!x \in \mathbb{Z},\\ 0, & m!x \notin \mathbb{Z} \end{cases}$$
 
-이다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m!x$가 정수이므로 $g_m(x) = 1$이고, 따라서 $d(x) = 1$이다. $x$가 무리수이면 어떤 $m$에 대해서도 $m!x$가 정수가 아니므로 $g_m(x) = 0$이고 $d(x) = 0$이다. 결국 $d$는 유리수에서 $1$, 무리수에서 $0$인 Dirichlet 함수이며([§Riemann 적분, ⁋예시 9](/ko/math/analysis/riemann_integral#ex9)), 이는 모든 점에서 불연속이고 어떤 구간에서도 Riemann 적분가능하지 않다.
+이다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m!x$가 정수이므로 $g_m(x) = 1$이고, 따라서 $d(x) = 1$이다. $x$가 무리수이면 어떤 $m$에 대해서도 $m!x$가 정수가 아니므로 $g_m(x) = 0$이고 $d(x) = 0$이다. 결국 $d$는 유리수에서 $1$, 무리수에서 $0$인 Dirichlet 함수이며([§Riemann 적분, ⁋예시 9](/ko/math/analysis/riemann_integral#ex9){: data-lid="l72n4" }), 이는 모든 점에서 불연속이고 어떤 구간에서도 Riemann 적분가능하지 않다.
 :::
 
 연속함수 $\cos^{2n}(m!\pi x)$의 열을 한 번 극한 취한 $g_m$은 값이 $1$인 점이 $\frac{1}{m!}\mathbb{Z}$뿐이고 나머지에서는 $0$인, 비교적 순한 함수이지만, 이를 한 번 더 극한 취하면 이처럼 병적인 함수가 된다. 점별극한을 취할 때마다 정규성이 한 단계씩 깨질 수 있다.

@@ -15,7 +15,7 @@ published: false
 
 ---
 
-수열 $(a_n)$이 $L$로 수렴한다는 [§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1)는 극한 $L$을 미리 알고 있어야 쓸 수 있다. 극한을 모르고 수렴을 확정하는 방법은 [§수열의 수렴, ⁋정리 8](/ko/math/analysis/convergence_of_sequences#thm8) 하나뿐이었다. 점화식이나 급수로 정의된 수열은 대개 단조하지 않고, 극한값은 수렴을 알고 난 뒤에야 구할 수 있다. 이 글의 목표는 항들 서로 사이의 거리만으로 수렴을 판정하는 조건, 곧 Cauchy 조건이 실수에서는 수렴과 동치임을 보이는 것이다. 이 동치는 $\mathbb{Q}$에서는 성립하지 않으며, 그 차이가 실수의 완비성이 하는 일을 드러낸다.
+수열 $(a_n)$이 $L$로 수렴한다는 [§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1){: data-lid="51qjt" }는 극한 $L$을 미리 알고 있어야 쓸 수 있다. 극한을 모르고 수렴을 확정하는 방법은 [§수열의 수렴, ⁋정리 8](/ko/math/analysis/convergence_of_sequences#thm8){: data-lid="svth4" } 하나뿐이었다. 점화식이나 급수로 정의된 수열은 대개 단조하지 않고, 극한값은 수렴을 알고 난 뒤에야 구할 수 있다. 이 글의 목표는 항들 서로 사이의 거리만으로 수렴을 판정하는 조건, 곧 Cauchy 조건이 실수에서는 수렴과 동치임을 보이는 것이다. 이 동치는 $\mathbb{Q}$에서는 성립하지 않으며, 그 차이가 실수의 완비성이 하는 일을 드러낸다.
 
 ## Cauchy 수열
 
@@ -53,14 +53,14 @@ $$M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert a_N\rvert + 1
 
 ## Cauchy 판정법
 
-이제 역방향을 보인다. 증명의 구조는 다음과 같다. Cauchy 수열은 [명제 3](#prop3)에 의해 bounded이므로 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴 부분수열을 가진다. 그 극한을 $L$이라 하면, 부분수열의 항들이 $L$에 가깝고 수열의 항들이 서로 가까우므로 전체 수열의 항도 $L$에 가깝다.
+이제 역방향을 보인다. 증명의 구조는 다음과 같다. Cauchy 수열은 [명제 3](#prop3){: data-lid="37aed" }에 의해 bounded이므로 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="h42zw" }에 의해 수렴 부분수열을 가진다. 그 극한을 $L$이라 하면, 부분수열의 항들이 $L$에 가깝고 수열의 항들이 서로 가까우므로 전체 수열의 항도 $L$에 가깝다.
 
 ::: 정리 4 (Cauchy 판정법)
 실수열 $(a_n)$이 수렴하는 것은 $(a_n)$이 Cauchy 수열인 것과 동치이다.
 :::
 
 ::: 증명
-수렴하면 Cauchy라는 것은 [명제 2](#prop2)이다. 역으로 $(a_n)$이 Cauchy 수열이라 하자. [명제 3](#prop3)에 의해 $(a_n)$은 bounded이므로, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다.
+수렴하면 Cauchy라는 것은 [명제 2](#prop2){: data-lid="24rt7" }이다. 역으로 $(a_n)$이 Cauchy 수열이라 하자. [명제 3](#prop3){: data-lid="4ohfn" }에 의해 $(a_n)$은 bounded이므로, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="kn7zr" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다.
 
 $a_n \rightarrow L$을 보인다. $\varepsilon > 0$을 임의로 잡는다. $\lvert a_n - L\rvert$를 $\lvert a_n - a_{n_k}\rvert$와 $\lvert a_{n_k} - L\rvert$의 합으로 쪼갤 것이므로, 각각을 $\varepsilon/2$ 미만으로 만든다. Cauchy 조건에 의해 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$인 $N$이 존재한다. 부분수열의 수렴에 의해 $K$가 존재하여 $k \geq K$이면 $\lvert a_{n_k} - L\rvert < \varepsilon/2$이다. 이제 $k \geq \max\{K, N\}$을 하나 고르면 $n_k \geq k \geq N$이므로 $a_{n_k}$는 두 조건을 모두 만족한다. 따라서 모든 $n \geq N$에 대하여
 
@@ -69,7 +69,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 이고, $a_n \rightarrow L$이다.
 :::
 
-이 증명에서 실수의 성질이 쓰인 곳은 Bolzano–Weierstrass 정리뿐이며, 이는 [§실수의 완비성, ⁋정의 3](/ko/math/analysis/completeness_of_reals#def3)에서 나온다. 같은 논증이 다른 공간에서 어떻게 깨지는지를 다음 예시가 보여 준다.
+이 증명에서 실수의 성질이 쓰인 곳은 Bolzano–Weierstrass 정리뿐이며, 이는 [§실수의 완비성, ⁋정의 3](/ko/math/analysis/completeness_of_reals#def3){: data-lid="hd64w" }에서 나온다. 같은 논증이 다른 공간에서 어떻게 깨지는지를 다음 예시가 보여 준다.
 
 ## 유리수에서의 반례
 
@@ -82,7 +82,7 @@ $$\lvert a_m - a_n\rvert < 10^{-N}$$
 
 이다. 임의의 $\varepsilon > 0$에 대해 $10^{-N} < \varepsilon$이 되도록 $N$을 잡으면 $(a_n)$은 Cauchy이다. 이 검증에는 극한이 등장하지 않는다.
 
-그러나 $(a_n)$은 $\mathbb{Q}$ 안에서 수렴하지 않는다. $a_n \rightarrow q$인 유리수 $q$가 있다면, 이 수렴은 $\mathbb{R}$에서도 성립한다. 그런데 $0 \leq \sqrt{2} - a_n < 10^{-n}$이므로 $\mathbb{R}$에서 $a_n \rightarrow \sqrt{2}$이고, [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에 의해 $q = \sqrt{2}$가 된다. $\sqrt{2}$가 무리수이므로 모순이다.
+그러나 $(a_n)$은 $\mathbb{Q}$ 안에서 수렴하지 않는다. $a_n \rightarrow q$인 유리수 $q$가 있다면, 이 수렴은 $\mathbb{R}$에서도 성립한다. 그런데 $0 \leq \sqrt{2} - a_n < 10^{-n}$이므로 $\mathbb{R}$에서 $a_n \rightarrow \sqrt{2}$이고, [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2){: data-lid="gxrap" }에 의해 $q = \sqrt{2}$가 된다. $\sqrt{2}$가 무리수이므로 모순이다.
 :::
 
 $\mathbb{R}$에서는 같은 수열이 $\sqrt{2}$로 수렴한다. 완비성은 이처럼 Cauchy 수열이 모이는 점이 빠져 있는 일이 없다는 뜻이다. 거리공간으로 일반화되면 이것이 *완비 거리공간*의 정의가 된다.
@@ -99,9 +99,9 @@ s_{2N} - s_N &= \sum_{k=N+1}^{2N} \frac{1}{k} \\
 &\geq N \cdot \frac{1}{2N} = \frac{1}{2}
 \end{aligned}$$
 
-이다. 따라서 $\varepsilon = 1/2$에 대하여 어떤 $N$을 잡아도 Cauchy 조건이 성립하지 않는다. [정리 4](#thm4)에 의해 $(s_n)$은 수렴하지 않는다.
+이다. 따라서 $\varepsilon = 1/2$에 대하여 어떤 $N$을 잡아도 Cauchy 조건이 성립하지 않는다. [정리 4](#thm4){: data-lid="wybm6" }에 의해 $(s_n)$은 수렴하지 않는다.
 
-$a_n = \log n$도 마찬가지이다. 평균값 정리에 의해 $\log(n+1) - \log n \leq 1/n \rightarrow 0$이지만, $\log(2N) - \log N = \log 2$이므로 $\varepsilon = \log 2$에 대하여 Cauchy 조건이 성립하지 않는다. 사실 이 수열은 bounded가 아니므로 [명제 3](#prop3)의 대우로도 Cauchy가 아님이 바로 나온다.
+$a_n = \log n$도 마찬가지이다. 평균값 정리에 의해 $\log(n+1) - \log n \leq 1/n \rightarrow 0$이지만, $\log(2N) - \log N = \log 2$이므로 $\varepsilon = \log 2$에 대하여 Cauchy 조건이 성립하지 않는다. 사실 이 수열은 bounded가 아니므로 [명제 3](#prop3){: data-lid="8veru" }의 대우로도 Cauchy가 아님이 바로 나온다.
 :::
 
 이 예시에서 위반된 것은 Cauchy 조건에서 $m$과 $n$이 서로 멀리 떨어질 수 있다는 점이다. $N$ 이상의 인접하지 않은 첨자 쌍을 함께 통제해야 한다는 것이 Cauchy 조건의 요점이며, 인접 차만으로는 수렴을 보장하지 못한다. 이를 보장하려면 인접 차가 합쳐서 유한할 정도로 빠르게 줄어든다는 추가 조건이 필요하다. 다음 명제는 그러한 조건의 표준적인 형태이다.
@@ -125,7 +125,7 @@ $$\begin{aligned}
 &\leq d_1 \cdot \frac{c^{n-1}}{1-c}
 \end{aligned}$$
 
-이다. $0 < c < 1$이므로 $c^{n-1} \rightarrow 0$이다. 따라서 $\varepsilon > 0$이 주어지면 $d_1 c^{N-1}/(1-c) < \varepsilon$인 $N$을 잡을 수 있고, $m > n \geq N$에서 $\lvert a_m - a_n\rvert \leq d_1 c^{n-1}/(1-c) \leq d_1 c^{N-1}/(1-c) < \varepsilon$이다. $m = n$인 경우는 자명하고 $m < n$인 경우는 $m$과 $n$을 바꾸면 된다. 따라서 $(a_n)$은 Cauchy이고, [정리 4](#thm4)에 의해 수렴한다.
+이다. $0 < c < 1$이므로 $c^{n-1} \rightarrow 0$이다. 따라서 $\varepsilon > 0$이 주어지면 $d_1 c^{N-1}/(1-c) < \varepsilon$인 $N$을 잡을 수 있고, $m > n \geq N$에서 $\lvert a_m - a_n\rvert \leq d_1 c^{n-1}/(1-c) \leq d_1 c^{N-1}/(1-c) < \varepsilon$이다. $m = n$인 경우는 자명하고 $m < n$인 경우는 $m$과 $n$을 바꾸면 된다. 따라서 $(a_n)$은 Cauchy이고, [정리 4](#thm4){: data-lid="jxws4" }에 의해 수렴한다.
 :::
 
 이 명제는 극한값에 대한 정보를 주지 않는다. 수렴이 확보된 뒤에는 점화식의 양변에 극한을 취해 극한값을 구한다.
@@ -135,7 +135,7 @@ $a_1 = 1$, $a_{n+1} = 1 + 1/a_n$으로 정의된 수열은 수렴한다. 귀납�
 
 $$a_{n+1} - a_n = \frac{1}{a_n} - \frac{1}{a_{n-1}} = \frac{a_{n-1} - a_n}{a_n a_{n-1}}$$
 
-이므로 $n \geq 2$에서 $\lvert a_{n+1} - a_n\rvert \leq \frac{1}{2}\lvert a_n - a_{n-1}\rvert$이다. 첫 항부터 수축 조건이 성립하는 것은 아니므로, 수열 $b_n = a_{n+1}$에 [명제 7](#prop7)을 적용한다. $(b_n)$이 수렴하므로 $(a_n)$도 수렴하고, 극한 $L$은 $L \geq 1$이며 $L = 1 + 1/L$을 만족한다. 즉 $L^2 - L - 1 = 0$이고 $L = (1 + \sqrt{5})/2$이다.
+이므로 $n \geq 2$에서 $\lvert a_{n+1} - a_n\rvert \leq \frac{1}{2}\lvert a_n - a_{n-1}\rvert$이다. 첫 항부터 수축 조건이 성립하는 것은 아니므로, 수열 $b_n = a_{n+1}$에 [명제 7](#prop7){: data-lid="f349t" }을 적용한다. $(b_n)$이 수렴하므로 $(a_n)$도 수렴하고, 극한 $L$은 $L \geq 1$이며 $L = 1 + 1/L$을 만족한다. 즉 $L^2 - L - 1 = 0$이고 $L = (1 + \sqrt{5})/2$이다.
 :::
 
 ---

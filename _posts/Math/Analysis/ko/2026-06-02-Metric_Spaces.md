@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1)에서 $a_n \to L$을 정의할 때 쓴 것은 실수의 사칙연산이 아니라 두 점 사이의 거리 $\lvert a_n - L\rvert$뿐이었다. 따라서 거리가 몇 가지 성질을 만족하는 집합이라면 어디서든 같은 정의가 의미를 가지고, 수렴을 다루는 논증도 거의 그대로 옮겨 간다. 이 글에서는 그 성질을 공리로 적은 거리공간을 정의하고, 거리에서 열린집합과 닫힌집합, closure가 어떻게 나오는지를 정리한다. 이후 연속성과 compactness는 모두 이 언어로 서술된다.
+[§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1){: data-lid="w6s0k" }에서 $a_n \to L$을 정의할 때 쓴 것은 실수의 사칙연산이 아니라 두 점 사이의 거리 $\lvert a_n - L\rvert$뿐이었다. 따라서 거리가 몇 가지 성질을 만족하는 집합이라면 어디서든 같은 정의가 의미를 가지고, 수렴을 다루는 논증도 거의 그대로 옮겨 간다. 이 글에서는 그 성질을 공리로 적은 거리공간을 정의하고, 거리에서 열린집합과 닫힌집합, closure가 어떻게 나오는지를 정리한다. 이후 연속성과 compactness는 모두 이 언어로 서술된다.
 
 ## 거리공간
 
@@ -75,7 +75,7 @@ $$\lVert u + v\rVert_2^2 = \lVert u\rVert_2^2 + 2\sum_{i=1}^n u_i v_i + \lVert v
 
 $$d(f, g) = \max_{x \in [a,b]} \lvert f(x) - g(x)\rvert$$
 
-로 정한다. 연속함수 $\lvert f - g\rvert$는 [\[미적분학\] §연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)에 의하여 닫힌구간에서 최댓값을 가지므로 $d(f,g)$는 유한한 실수이다. $d(f,g) = 0$이면 모든 $x$에서 $f(x) = g(x)$이고, 대칭성은 자명하다. 삼각부등식은 각 $x \in [a,b]$에서
+로 정한다. 연속함수 $\lvert f - g\rvert$는 [\[미적분학\] §연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4){: data-lid="yj6uu" }에 의하여 닫힌구간에서 최댓값을 가지므로 $d(f,g)$는 유한한 실수이다. $d(f,g) = 0$이면 모든 $x$에서 $f(x) = g(x)$이고, 대칭성은 자명하다. 삼각부등식은 각 $x \in [a,b]$에서
 
 $$\lvert f(x) - h(x)\rvert \leq \lvert f(x) - g(x)\rvert + \lvert g(x) - h(x)\rvert \leq d(f, g) + d(g, h)$$
 
@@ -109,7 +109,7 @@ $\mathbb{R}$의 표준 거리에서 $B(x, r) = (x - r, x + r)$이고, $(\mathbb{
 거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \to 0$인 것이다. 곧 임의의 $\varepsilon > 0$에 대하여 $N$이 존재하여 $n \geq N$이면 $x_n \in B(x, \varepsilon)$이다.
 :::
 
-정의에서 $\varepsilon$은 임의로 주어지고 $N$이 그에 맞추어 고른다는 점이 [§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1)과 같다. 달라진 것은 $\lvert x_n - x\rvert < \varepsilon$이 $x_n \in B(x, \varepsilon)$으로 바뀐 것뿐이다.
+정의에서 $\varepsilon$은 임의로 주어지고 $N$이 그에 맞추어 고른다는 점이 [§수열의 수렴, ⁋정의 1](/ko/math/analysis/convergence_of_sequences#def1){: data-lid="2rvwy" }과 같다. 달라진 것은 $\lvert x_n - x\rvert < \varepsilon$이 $x_n \in B(x, \varepsilon)$으로 바뀐 것뿐이다.
 
 ::: 명제 7
 거리공간에서 점열의 극한은 존재하면 유일하다.
@@ -119,7 +119,7 @@ $\mathbb{R}$의 표준 거리에서 $B(x, r) = (x - r, x + r)$이고, $(\mathbb{
 $x_n \to x$이고 $x_n \to x'$라 하자. 임의의 $\varepsilon > 0$에 대하여 $d(x_n, x) < \varepsilon/2$이고 $d(x_n, x') < \varepsilon/2$인 $n$이 있다. 삼각부등식과 대칭성에 의해 $d(x, x') \leq d(x, x_n) + d(x_n, x') < \varepsilon$이다. $\varepsilon$이 임의의 양수이므로 $d(x, x') = 0$이고, 첫째 공리에 의해 $x = x'$이다. 여기서 $\varepsilon/2$를 택한 이유는 두 항의 합이 $\varepsilon$을 넘지 않게 하기 위해서이다.
 :::
 
-몇 가지 거리에서 수렴이 어떤 모양인지 살펴본다. 이산거리에서 $\varepsilon = 1/2$로 두면 $d(x_n, x) < 1/2$은 $x_n = x$와 같으므로, 수렴하는 점열은 어떤 번호부터 상수열이 되는 점열뿐이다. $(\mathbb{R}^n, d_\infty)$에서는 $d_\infty(x^{(k)}, x) < \varepsilon$이 모든 좌표에서 $\lvert x_i^{(k)} - x_i\rvert < \varepsilon$인 것과 같고, [명제 3](#prop3)의 부등식 때문에 $d_1$, $d_2$에서의 수렴과 같은 점열이 수렴한다. 따라서 $\mathbb{R}^n$에서의 수렴은 각 좌표의 수렴과 같다. $C[a,b]$의 상한노름 거리에서 $f_n \to f$는 $\max_x \lvert f_n(x) - f(x)\rvert \to 0$, 곧 구간 전체에서 동시에 $f_n(x)$가 $f(x)$에 가까워진다는 뜻이다. 각 점에서만 $f_n(x) \to f(x)$인 것은 이보다 약한 조건이며 이 거리의 수렴이 아니다.
+몇 가지 거리에서 수렴이 어떤 모양인지 살펴본다. 이산거리에서 $\varepsilon = 1/2$로 두면 $d(x_n, x) < 1/2$은 $x_n = x$와 같으므로, 수렴하는 점열은 어떤 번호부터 상수열이 되는 점열뿐이다. $(\mathbb{R}^n, d_\infty)$에서는 $d_\infty(x^{(k)}, x) < \varepsilon$이 모든 좌표에서 $\lvert x_i^{(k)} - x_i\rvert < \varepsilon$인 것과 같고, [명제 3](#prop3){: data-lid="uej60" }의 부등식 때문에 $d_1$, $d_2$에서의 수렴과 같은 점열이 수렴한다. 따라서 $\mathbb{R}^n$에서의 수렴은 각 좌표의 수렴과 같다. $C[a,b]$의 상한노름 거리에서 $f_n \to f$는 $\max_x \lvert f_n(x) - f(x)\rvert \to 0$, 곧 구간 전체에서 동시에 $f_n(x)$가 $f(x)$에 가까워진다는 뜻이다. 각 점에서만 $f_n(x) \to f(x)$인 것은 이보다 약한 조건이며 이 거리의 수렴이 아니다.
 
 ## 열린집합과 닫힌집합
 
@@ -151,7 +151,7 @@ $y \in B(x, r)$이면 $s = r - d(x, y) > 0$이다. $z \in B(y, s)$이면 $d(x, z
 
 (3)에서 유한이라는 조건은 빠질 수 없다. $\mathbb{R}$에서 $\bigcap_{n \geq 1} (-1/n, 1/n) = \{0\}$이고, $\{0\}$은 어떤 $B(0, r) = (-r, r)$도 담지 못하므로 열린집합이 아니다. 각 $(-1/n, 1/n)$에서 허용되는 반지름이 $1/n$으로 줄어들어 $0$으로 가기 때문이다.
 
-집합 $A$의 interior point 전체를 $A$의 *interior* $A^\circ$로 적는다. $A^\circ$는 $A$에 포함된 열린집합 가운데 가장 큰 것이다. 우선 $x \in A^\circ$이면 $B(x, r) \subseteq A$인 $r$이 있고, [명제 9](#prop9)에 의해 $B(x,r)$의 모든 점 $y$가 $B(y, s) \subseteq B(x, r) \subseteq A$인 $s$를 가지므로 $B(x, r) \subseteq A^\circ$이다. 따라서 $A^\circ$는 열린집합이다. 또 $A$에 포함된 열린집합 $U$의 모든 점은 정의에 의해 $A$의 interior point이므로 $U \subseteq A^\circ$이다. 열린집합은 $A = A^\circ$인 집합으로 말해도 같다.
+집합 $A$의 interior point 전체를 $A$의 *interior* $A^\circ$로 적는다. $A^\circ$는 $A$에 포함된 열린집합 가운데 가장 큰 것이다. 우선 $x \in A^\circ$이면 $B(x, r) \subseteq A$인 $r$이 있고, [명제 9](#prop9){: data-lid="hq6na" }에 의해 $B(x,r)$의 모든 점 $y$가 $B(y, s) \subseteq B(x, r) \subseteq A$인 $s$를 가지므로 $B(x, r) \subseteq A^\circ$이다. 따라서 $A^\circ$는 열린집합이다. 또 $A$에 포함된 열린집합 $U$의 모든 점은 정의에 의해 $A$의 interior point이므로 $U \subseteq A^\circ$이다. 열린집합은 $A = A^\circ$인 집합으로 말해도 같다.
 
 ### 극한점과 닫힌집합
 
@@ -179,7 +179,7 @@ Limit point는 $A$ 바깥에 있을 수도 있고 $A$ 안에 있을 수도 있�
 (3) $\Rightarrow$ (1). $X \setminus F$가 열려 있지 않다고 하고 모순을 이끈다. 그럼 어떤 $x \in X \setminus F$가 있어 모든 $r > 0$에서 $B(x, r) \not\subseteq X \setminus F$, 곧 $B(x, r) \cap F \neq \emptyset$이다. $r = 1/n$으로 두어 각 $n$마다 $x_n \in B(x, 1/n) \cap F$를 하나씩 택하면, $d(x_n, x) < 1/n$이므로 $x_n \to x$이다. (3)에 의해 $x \in F$인데 이는 $x \in X \setminus F$에 모순이다. 반지름을 $1/n$으로 고른 것은 점열이 $x$로 수렴하도록 하기 위해서이다.
 :::
 
-여집합과 드모르간 법칙 $X \setminus \bigcap_\alpha F_\alpha = \bigcup_\alpha (X \setminus F_\alpha)$, $X \setminus \bigcup_{i=1}^n F_i = \bigcap_{i=1}^n (X \setminus F_i)$를 [명제 10](#prop10)에 적용하면, $\emptyset$과 $X$는 닫혀 있고 닫힌집합의 임의의 교집합과 유한 합집합은 닫혀 있다. 열린집합과 마찬가지로 개수의 조건은 필요하다. $\bigcup_{n \geq 2} [1/n, 1] = (0, 1]$은 닫힌구간들의 합집합이지만 $\mathbb{R}$에서 닫혀 있지 않다. $1/n \in (0,1]$이 $0 \notin (0,1]$로 수렴하기 때문이다.
+여집합과 드모르간 법칙 $X \setminus \bigcap_\alpha F_\alpha = \bigcup_\alpha (X \setminus F_\alpha)$, $X \setminus \bigcup_{i=1}^n F_i = \bigcap_{i=1}^n (X \setminus F_i)$를 [명제 10](#prop10){: data-lid="sbr1y" }에 적용하면, $\emptyset$과 $X$는 닫혀 있고 닫힌집합의 임의의 교집합과 유한 합집합은 닫혀 있다. 열린집합과 마찬가지로 개수의 조건은 필요하다. $\bigcup_{n \geq 2} [1/n, 1] = (0, 1]$은 닫힌구간들의 합집합이지만 $\mathbb{R}$에서 닫혀 있지 않다. $1/n \in (0,1]$이 $0 \notin (0,1]$로 수렴하기 때문이다.
 
 열린집합과 닫힌집합은 서로의 부정이 아니다. $[a, b)$는 $a$에서 왼쪽으로 새어 나가므로 열려 있지 않고, $b - 1/n$이 $b \notin [a, b)$로 수렴하므로 닫혀 있지도 않다. 반대로 $\emptyset$과 $X$는 둘 다이며, 이처럼 열리면서 닫힌 집합을 *clopen set<sub>열린닫힌집합</sub>*이라 한다. 이산거리 공간에서는 모든 subset이 clopen set이다. $r \leq 1$인 열린공이 한 점이므로 모든 singleton이 열려 있고, 임의의 집합은 singleton들의 합집합이라 열려 있으며, 여집합도 같은 이유로 열려 있기 때문이다. 또 열림과 닫힘은 집합 자체의 성질이 아니라 집합이 놓인 거리공간에 대한 성질이다. $(0, 1)$은 $\mathbb{R}$에서 열린집합이지만 닫혀 있지 않고, 거리공간 $(0, 1)$ 자신 안에서는 clopen이다. 이 내용은 아래 부분공간 절에서 정확히 다룬다.
 
@@ -207,12 +207,12 @@ $A \subseteq X$에 대하여 다음 네 집합은 모두 같다.
 
 (2) $=$ (3). $x \in E$이면 각 $n$마다 $x_n \in B(x, 1/n) \cap A$를 택할 수 있고 $x_n \to x$이다. 거꾸로 $A$의 점열 $x_n \to x$이면, 임의의 $r$에 대하여 큰 $n$에서 $x_n \in B(x,r) \cap A$이므로 $x \in E$이다.
 
-(1) $=$ (2). 먼저 $E$가 닫힌집합임을 보인다. $x \notin E$이면 $B(x, r) \cap A = \emptyset$인 $r$이 있고, [명제 9](#prop9)의 증명에서처럼 $y \in B(x, r)$이면 $B(y, s) \subseteq B(x, r)$인 $s$가 있어 $B(y, s) \cap A = \emptyset$이다. 곧 $B(x, r) \subseteq X \setminus E$이므로 $X \setminus E$는 열려 있다. $A \subseteq E$는 분명하므로 $\overline{A} \subseteq E$이다. 반대로 $x \in E$이고 $A$를 포함하는 닫힌집합 $F$에 대하여 $x \notin F$라 하면, $X \setminus F$가 열려 있으므로 $B(x, r) \subseteq X \setminus F \subseteq X \setminus A$인 $r$이 있어 $B(x,r) \cap A = \emptyset$이 되고 $x \in E$에 모순이다. 따라서 $x$는 $A$를 포함하는 모든 닫힌집합에 속하고 $E \subseteq \overline{A}$이다.
+(1) $=$ (2). 먼저 $E$가 닫힌집합임을 보인다. $x \notin E$이면 $B(x, r) \cap A = \emptyset$인 $r$이 있고, [명제 9](#prop9){: data-lid="sfqob" }의 증명에서처럼 $y \in B(x, r)$이면 $B(y, s) \subseteq B(x, r)$인 $s$가 있어 $B(y, s) \cap A = \emptyset$이다. 곧 $B(x, r) \subseteq X \setminus E$이므로 $X \setminus E$는 열려 있다. $A \subseteq E$는 분명하므로 $\overline{A} \subseteq E$이다. 반대로 $x \in E$이고 $A$를 포함하는 닫힌집합 $F$에 대하여 $x \notin F$라 하면, $X \setminus F$가 열려 있으므로 $B(x, r) \subseteq X \setminus F \subseteq X \setminus A$인 $r$이 있어 $B(x,r) \cap A = \emptyset$이 되고 $x \in E$에 모순이다. 따라서 $x$는 $A$를 포함하는 모든 닫힌집합에 속하고 $E \subseteq \overline{A}$이다.
 :::
 
-따라서 $A$가 닫힌집합인 것은 $\overline{A} = A$인 것과 같고, 이는 [명제 12](#prop12)의 (2)이다. Closure는 limit point만이 아니라 $A$ 자신도 포함한다. $A = [0, 1) \cup \{2\}$에서 $\overline{A} = [0, 1] \cup \{2\}$이며, $2$는 limit point가 아니지만 $A$의 점이므로 closure에 들어간다.
+따라서 $A$가 닫힌집합인 것은 $\overline{A} = A$인 것과 같고, 이는 [명제 12](#prop12){: data-lid="sg4lj" }의 (2)이다. Closure는 limit point만이 아니라 $A$ 자신도 포함한다. $A = [0, 1) \cup \{2\}$에서 $\overline{A} = [0, 1] \cup \{2\}$이며, $2$는 limit point가 아니지만 $A$의 점이므로 closure에 들어간다.
 
-몇 가지를 계산해 두자. $\overline{(a, b)} = [a, b]$인 것은 $a + 1/n$, $b - 1/n$이 $(a,b)$ 안의 점열이기 때문이고, $\overline{\{1/n \mid n \geq 1\}} = \{1/n \mid n \geq 1\} \cup \{0\}$이다. $\overline{\mathbb{Q}} = \mathbb{R}$인 것은 [§실수의 완비성, ⁋정리 8](/ko/math/analysis/completeness_of_reals#thm8)에 의하여 임의의 두 실수 사이에 유리수가 있어서 모든 열린구간이 $\mathbb{Q}$의 점을 포함하기 때문이다.
+몇 가지를 계산해 두자. $\overline{(a, b)} = [a, b]$인 것은 $a + 1/n$, $b - 1/n$이 $(a,b)$ 안의 점열이기 때문이고, $\overline{\{1/n \mid n \geq 1\}} = \{1/n \mid n \geq 1\} \cup \{0\}$이다. $\overline{\mathbb{Q}} = \mathbb{R}$인 것은 [§실수의 완비성, ⁋정리 8](/ko/math/analysis/completeness_of_reals#thm8){: data-lid="ms1va" }에 의하여 임의의 두 실수 사이에 유리수가 있어서 모든 열린구간이 $\mathbb{Q}$의 점을 포함하기 때문이다.
 
 열린공의 closure에 관해 흔한 오해가 하나 있다. $B(x, r)$의 closure는 *닫힌 공* $\{y \mid d(x, y) \leq r\}$과 같을 것이라 생각하기 쉽지만, 일반적으로는 전자가 후자의 subset일 뿐이다. 닫힌 공은 닫힌집합이라 $\overline{B(x,r)}$을 포함하기 때문이다. 등호가 깨지는 것은 이산거리에서 볼 수 있다.
 
@@ -238,12 +238,12 @@ $d, d'$를 $X$ 위의 거리라 하자.
 ::: 증명
 (1) $B_d$, $B_{d'}$로 각 거리의 열린공을 구분하자. $d'(x, y) < c r$이면 $d(x, y) \leq d'(x,y)/c < r$이므로 $B_{d'}(x, cr) \subseteq B_d(x, r)$이고, $d(x, y) < r/C$이면 $d'(x,y) < r$이므로 $B_d(x, r/C) \subseteq B_{d'}(x, r)$이다. $U$가 $d$에 대하여 열려 있고 $x \in U$이면 $B_d(x, r) \subseteq U$인 $r$에 대하여 $B_{d'}(x, cr) \subseteq U$이므로 $U$는 $d'$에 대해서도 열려 있다. 반대 방향도 두 번째 포함으로 같다.
 
-(2) 열린공은 열린집합이고 ([명제 9](#prop9)) 열린집합 $U \ni x$는 $x$를 중심으로 하는 열린공을 포함하므로, $x_n \to x$는 "$x$를 포함하는 모든 열린집합이 $x_n$을 결국 포함한다"와 동치이다. 이 조건은 열린집합들의 모임에만 의존한다. 닫힌집합은 열린집합의 여집합이고 closure는 닫힌집합들의 교집합이므로 역시 열린집합들의 모임에만 의존한다.
+(2) 열린공은 열린집합이고 ([명제 9](#prop9){: data-lid="ya4qq" }) 열린집합 $U \ni x$는 $x$를 중심으로 하는 열린공을 포함하므로, $x_n \to x$는 "$x$를 포함하는 모든 열린집합이 $x_n$을 결국 포함한다"와 동치이다. 이 조건은 열린집합들의 모임에만 의존한다. 닫힌집합은 열린집합의 여집합이고 closure는 닫힌집합들의 교집합이므로 역시 열린집합들의 모임에만 의존한다.
 :::
 
-[명제 3](#prop3)의 부등식 사슬에서 $c = 1/n$, $C = 1$ 등을 취하면 $d_1, d_2, d_\infty$는 서로 동치이다. 따라서 $\mathbb{R}^n$에서는 어느 거리로 수렴과 열림을 말해도 같다.
+[명제 3](#prop3){: data-lid="pb4yb" }의 부등식 사슬에서 $c = 1/n$, $C = 1$ 등을 취하면 $d_1, d_2, d_\infty$는 서로 동치이다. 따라서 $\mathbb{R}^n$에서는 어느 거리로 수렴과 열림을 말해도 같다.
 
-[명제 17](#prop17)의 (1)의 조건은 충분조건일 뿐이다. 거리를 상수배로 서로 누를 수 없어도 동치일 수 있다.
+[명제 17](#prop17){: data-lid="hz6wv" }의 (1)의 조건은 충분조건일 뿐이다. 거리를 상수배로 서로 누를 수 없어도 동치일 수 있다.
 
 ::: 예시 18 (동치인 거리의 두 경우)
 1. $\mathbb{R}$의 표준 거리 $d$에 대하여 $d'(x, y) = \min\{d(x,y), 1\}$은 거리이다. 삼각부등식은 $d(x,y)$ 또는 $d(y,z)$ 가운데 하나라도 $1$ 이상이면 우변이 $1$ 이상이어서 자명하고, 둘 다 $1$ 미만이면 $d'$이 $d$와 같아서 $d$의 삼각부등식에서 나온다. $d$와 $d'$는 동치이다. $r \leq 1$이면 $B_{d'}(x, r) = B_d(x, r)$이고 열림은 작은 반지름만으로 확인되기 때문이다. 그러나 $d'(0, n) = 1$, $d(0, n) = n$이므로 $c d \leq d'$인 양수 $c$는 없다.
@@ -259,15 +259,15 @@ $Y$가 $X$의 부분공간이라 하자. $U \subseteq Y$가 $Y$에서 열린집�
 :::
 
 ::: 증명
-$U$가 $Y$에서 열려 있다고 하자. 각 $y \in U$에 대하여 $B_Y(y, r_y) \subseteq U$인 $r_y > 0$이 있다. $V = \bigcup_{y \in U} B_X(y, r_y)$로 두면 $V$는 [명제 9](#prop9)와 [명제 10](#prop10)에 의해 $X$에서 열려 있고, $V \cap Y = \bigcup_y B_Y(y, r_y) = U$이다. 거꾸로 $U = V \cap Y$, $V$가 $X$에서 열려 있다고 하자. $y \in U$이면 $B_X(y, r) \subseteq V$인 $r$이 있고, 그럼 $B_Y(y, r) = B_X(y, r) \cap Y \subseteq V \cap Y = U$이다.
+$U$가 $Y$에서 열려 있다고 하자. 각 $y \in U$에 대하여 $B_Y(y, r_y) \subseteq U$인 $r_y > 0$이 있다. $V = \bigcup_{y \in U} B_X(y, r_y)$로 두면 $V$는 [명제 9](#prop9){: data-lid="miu8j" }와 [명제 10](#prop10){: data-lid="gtvms" }에 의해 $X$에서 열려 있고, $V \cap Y = \bigcup_y B_Y(y, r_y) = U$이다. 거꾸로 $U = V \cap Y$, $V$가 $X$에서 열려 있다고 하자. $y \in U$이면 $B_X(y, r) \subseteq V$인 $r$이 있고, 그럼 $B_Y(y, r) = B_X(y, r) \cap Y \subseteq V \cap Y = U$이다.
 
 닫힌집합의 경우 $F$가 $Y$에서 닫혀 있다는 것은 $Y \setminus F$가 $Y$에서 열려 있다는 것이므로, 위에 의해 $Y \setminus F = V \cap Y$인 $X$의 열린집합 $V$가 있다. $K = X \setminus V$로 두면 $K$는 닫혀 있고 $K \cap Y = Y \setminus (V \cap Y) = F$이다. 거꾸로도 같은 계산이다.
 :::
 
-[명제 19](#prop19)에서 $Y$ 자신은 항상 $Y$에서 clopen이다. $\emptyset$과 $Y$ 이외의 clopen set이 있는 경우는 $X$의 열린집합과 닫힌집합이 $Y$ 위에서 만나는 방식에서 나온다.
+[명제 19](#prop19){: data-lid="rr7k8" }에서 $Y$ 자신은 항상 $Y$에서 clopen이다. $\emptyset$과 $Y$ 이외의 clopen set이 있는 경우는 $X$의 열린집합과 닫힌집합이 $Y$ 위에서 만나는 방식에서 나온다.
 
 ::: 예시 20 (유리수의 clopen subset)
-$Y = \mathbb{Q}$에서 $A = \{q \in \mathbb{Q} \mid q^2 < 2\}$를 보자. [§실수의 완비성, ⁋예시 5](/ko/math/analysis/completeness_of_reals#ex5)에 의하여 $\sqrt{2}$가 무리수이므로 $A = \mathbb{Q} \cap (-\sqrt{2}, \sqrt{2}) = \mathbb{Q} \cap [-\sqrt{2}, \sqrt{2}]$이다. 첫째 표현은 $\mathbb{R}$의 열린집합과의 교집합이고 둘째는 닫힌집합과의 교집합이므로, [명제 19](#prop19)에 의해 $A$는 $\mathbb{Q}$에서 열려 있으면서 닫혀 있다. $\mathbb{R}$에서는 어떤 열린구간이나 닫힌구간도 이런 일을 하지 못하지만, $\mathbb{Q}$는 구멍이 있어서 $\emptyset$, $\mathbb{Q}$ 이외의 clopen subset을 가진다.
+$Y = \mathbb{Q}$에서 $A = \{q \in \mathbb{Q} \mid q^2 < 2\}$를 보자. [§실수의 완비성, ⁋예시 5](/ko/math/analysis/completeness_of_reals#ex5){: data-lid="5dhy2" }에 의하여 $\sqrt{2}$가 무리수이므로 $A = \mathbb{Q} \cap (-\sqrt{2}, \sqrt{2}) = \mathbb{Q} \cap [-\sqrt{2}, \sqrt{2}]$이다. 첫째 표현은 $\mathbb{R}$의 열린집합과의 교집합이고 둘째는 닫힌집합과의 교집합이므로, [명제 19](#prop19){: data-lid="ymg7b" }에 의해 $A$는 $\mathbb{Q}$에서 열려 있으면서 닫혀 있다. $\mathbb{R}$에서는 어떤 열린구간이나 닫힌구간도 이런 일을 하지 못하지만, $\mathbb{Q}$는 구멍이 있어서 $\emptyset$, $\mathbb{Q}$ 이외의 clopen subset을 가진다.
 :::
 
 ## Dense subset
@@ -276,17 +276,17 @@ $Y = \mathbb{Q}$에서 $A = \{q \in \mathbb{Q} \mid q^2 < 2\}$를 보자. [§실
 $A \subseteq X$가 $\overline{A} = X$를 만족하면 $A$를 $X$의 *dense subset*이라 한다.
 :::
 
-[명제 14](#prop14)의 (2)로 읽으면 $A$가 dense라는 것은 모든 점 $x$와 모든 $r > 0$에 대하여 $B(x, r) \cap A \neq \emptyset$이라는 것이다. 열린공이 열린집합이고 비어 있지 않은 열린집합은 열린공을 포함하므로, 이는 다음과 같이 다시 쓸 수 있다.
+[명제 14](#prop14){: data-lid="16dzv" }의 (2)로 읽으면 $A$가 dense라는 것은 모든 점 $x$와 모든 $r > 0$에 대하여 $B(x, r) \cap A \neq \emptyset$이라는 것이다. 열린공이 열린집합이고 비어 있지 않은 열린집합은 열린공을 포함하므로, 이는 다음과 같이 다시 쓸 수 있다.
 
 ::: 명제 22
 $A \subseteq X$가 dense인 것은 $X$의 비어 있지 않은 모든 열린집합이 $A$의 점을 포함하는 것과 동치이다.
 :::
 
 ::: 증명
-$A$가 dense이고 $U$가 비어 있지 않은 열린집합이면 $x \in U$와 $B(x, r) \subseteq U$인 $r$이 있고, [명제 14](#prop14)의 (2)에 의해 $B(x, r) \cap A \neq \emptyset$이므로 $U \cap A \neq \emptyset$이다. 거꾸로 모든 열린공 $B(x, r)$이 열린집합이므로 $A$의 점을 포함하고, 다시 (2)에 의해 $\overline{A} = X$이다.
+$A$가 dense이고 $U$가 비어 있지 않은 열린집합이면 $x \in U$와 $B(x, r) \subseteq U$인 $r$이 있고, [명제 14](#prop14){: data-lid="yzh2m" }의 (2)에 의해 $B(x, r) \cap A \neq \emptyset$이므로 $U \cap A \neq \emptyset$이다. 거꾸로 모든 열린공 $B(x, r)$이 열린집합이므로 $A$의 점을 포함하고, 다시 (2)에 의해 $\overline{A} = X$이다.
 :::
 
-가령 $\mathbb{Q}$는 $\mathbb{R}$에서 dense이다. [§실수의 완비성, ⁋정리 8](/ko/math/analysis/completeness_of_reals#thm8)에 의하여 임의의 두 실수 사이에 유리수가 있기 때문이다. 같은 이유로 무리수 집합도 dense이다. $\mathbb{Q}^n$은 $\mathbb{R}^n$에서 dense인데, $d_\infty$에서 $B(x, r)$은 $\prod_i (x_i - r, x_i + r)$이고 이는 각 좌표를 유리수로 고른 점을 포함하며, $d_\infty$로 dense인 것은 [명제 17](#prop17)에 의해 $d_2$로도 dense이기 때문이다. 이산거리 공간에서는 모든 집합이 닫혀 있으므로 dense subset은 $X$ 자신뿐이다.
+가령 $\mathbb{Q}$는 $\mathbb{R}$에서 dense이다. [§실수의 완비성, ⁋정리 8](/ko/math/analysis/completeness_of_reals#thm8){: data-lid="a2ehe" }에 의하여 임의의 두 실수 사이에 유리수가 있기 때문이다. 같은 이유로 무리수 집합도 dense이다. $\mathbb{Q}^n$은 $\mathbb{R}^n$에서 dense인데, $d_\infty$에서 $B(x, r)$은 $\prod_i (x_i - r, x_i + r)$이고 이는 각 좌표를 유리수로 고른 점을 포함하며, $d_\infty$로 dense인 것은 [명제 17](#prop17){: data-lid="hfp0v" }에 의해 $d_2$로도 dense이기 때문이다. 이산거리 공간에서는 모든 집합이 닫혀 있으므로 dense subset은 $X$ 자신뿐이다.
 
 Dense라는 것은 내부가 크다는 뜻이 아니다. $\mathbb{Q}$는 $\mathbb{R}$에서 dense이지만 어떤 열린구간도 $\mathbb{Q}$에 포함되지 않으므로 $\mathbb{Q}^\circ = \emptyset$이다. 반대로 closure의 내부가 비어 있는 집합, 곧 $(\overline{A})^\circ = \emptyset$인 집합은 어디서도 dense하지 않은 집합이며 *nowhere dense*라 한다. $\mathbb{Z} \subseteq \mathbb{R}$이 그런 예이다. 다음 절의 Cantor 집합은 닫혀 있고 내부가 비었으면서 훨씬 큰 집합이다.
 

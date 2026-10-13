@@ -67,7 +67,7 @@ $z = a + bi$, $w = c + di$로 둔다.
     이므로 $\bar{z}/\lvert z\rvert^2$가 $z$의 곱셈에 대한 역원이다. 역원의 유일성 ([\[선형대수학\] §가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2){: data-lid="8942a" }) 에 의해 이것이 $z^{-1}$이다.
 :::
 
-[명제 3](#prop3)의 셋째 항은 복소수 나눗셈을 실질적으로 계산하는 방법을 준다. 분모와 분자에 분모의 켤레를 곱하면 분모가 실수가 되어, 가령 $\dfrac{1}{1+i} = \dfrac{1-i}{(1+i)(1-i)} = \dfrac{1-i}{2}$와 같이 표준형 $a + bi$로 정리된다. 이어서 절댓값이 곱셈과 어떻게 어울리는지를 보면, 절댓값은 곱셈을 정확히 보존하며 덧셈에 대해서는 삼각부등식을 만족한다.
+[명제 3](#prop3){: data-lid="04707" }의 셋째 항은 복소수 나눗셈을 실질적으로 계산하는 방법을 준다. 분모와 분자에 분모의 켤레를 곱하면 분모가 실수가 되어, 가령 $\dfrac{1}{1+i} = \dfrac{1-i}{(1+i)(1-i)} = \dfrac{1-i}{2}$와 같이 표준형 $a + bi$로 정리된다. 이어서 절댓값이 곱셈과 어떻게 어울리는지를 보면, 절댓값은 곱셈을 정확히 보존하며 덧셈에 대해서는 삼각부등식을 만족한다.
 
 ::: 명제 4
 임의의 복소수 $z, w$에 대하여 다음이 성립한다.
@@ -145,7 +145,7 @@ $$zw = (re^{i\theta})(se^{i\varphi}) = rs\, e^{i\theta}e^{i\varphi} = rs\, e^{i(
 이다. $rs > 0$이고 $e^{i(\theta+\varphi)}$가 단위원 위의 점이므로 이것이 $zw$의 극형식이며, 절댓값은 $rs = \lvert z\rvert\,\lvert w\rvert$, 편각은 $\theta + \varphi$이다.
 :::
 
-[명제 6](#prop6)은 복소수 $z$를 곱하는 변환 $w \mapsto zw$가 평면 위에서 *절댓값 $\lvert z\rvert$만큼의 확대와 각도 $\arg z$만큼의 회전*을 합성한 것임을 말한다. 특히 절댓값이 $1$인 복소수 $e^{i\theta}$를 곱하는 것은 원점을 중심으로 한 각도 $\theta$의 회전이고, $i = e^{i\pi/2}$를 곱하는 것은 반시계방향 $90^\circ$ 회전이다. 이로써 곱셈이라는 대수적 연산이 평면의 닮음변환이라는 기하적 대상과 정확히 대응함을 본다. 같은 사실을 반복 적용하면 거듭제곱과 거듭제곱근의 공식이 따라 나온다.
+[명제 6](#prop6){: data-lid="d2bgb" }은 복소수 $z$를 곱하는 변환 $w \mapsto zw$가 평면 위에서 *절댓값 $\lvert z\rvert$만큼의 확대와 각도 $\arg z$만큼의 회전*을 합성한 것임을 말한다. 특히 절댓값이 $1$인 복소수 $e^{i\theta}$를 곱하는 것은 원점을 중심으로 한 각도 $\theta$의 회전이고, $i = e^{i\pi/2}$를 곱하는 것은 반시계방향 $90^\circ$ 회전이다. 이로써 곱셈이라는 대수적 연산이 평면의 닮음변환이라는 기하적 대상과 정확히 대응함을 본다. 같은 사실을 반복 적용하면 거듭제곱과 거듭제곱근의 공식이 따라 나온다.
 
 ::: 명제 7 (de Moivre 공식)
 임의의 정수 $n$과 실수 $\theta$에 대하여
@@ -160,7 +160,7 @@ $$z_k = r^{1/n}\exp\!\left(i\,\frac{\theta + 2\pi k}{n}\right) \qquad (k = 0, 1,
 :::
 
 ::: 증명
-먼저 $n \geq 0$에 대한 de Moivre 공식을 귀납법으로 보인다. $n = 0$이면 양변이 $1$로 자명하다. $n$에서 성립한다고 가정하면 [명제 6](#prop6)에 의해
+먼저 $n \geq 0$에 대한 de Moivre 공식을 귀납법으로 보인다. $n = 0$이면 양변이 $1$로 자명하다. $n$에서 성립한다고 가정하면 [명제 6](#prop6){: data-lid="7kjax" }에 의해
 
 $$(\cos\theta + i\sin\theta)^{n+1} = (\cos\theta + i\sin\theta)^n(\cos\theta + i\sin\theta) = (\cos n\theta + i\sin n\theta)(\cos\theta + i\sin\theta) = \cos((n+1)\theta) + i\sin((n+1)\theta)$$
 
@@ -183,7 +183,7 @@ $$d(z, w) = \lvert z - w\rvert$$
 로 정의한다.
 :::
 
-이 $d$가 [\[해석학\] §거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="6dniy" }의 거리공간 공리를 만족함은 [명제 4](#prop4)에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 [명제 4](#prop4)의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 [명제 4](#prop4)의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
+이 $d$가 [\[해석학\] §거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="6dniy" }의 거리공간 공리를 만족함은 [명제 4](#prop4){: data-lid="hzb0b" }에서 곧바로 나온다. 비음성과 $d(z,w)=0 \Leftrightarrow z=w$는 [명제 4](#prop4){: data-lid="4h4l3" }의 첫째 항이고, 대칭성 $\lvert z - w\rvert = \lvert w - z\rvert$는 $\lvert -u\rvert = \lvert u\rvert$로부터, 삼각부등식 $\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$는 $z - w = (z - v) + (v - w)$에 [명제 4](#prop4){: data-lid="r4zjp" }의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $\mathbb{R}^2$의 유클리드 거리와 글자 그대로 일치한다.
 
 ::: 명제 9
 $z = a + bi$를 $(a, b) \in \mathbb{R}^2$와 동일시하면, $\mathbb{C}$의 거리 $d(z, w) = \lvert z - w\rvert$는 $\mathbb{R}^2$의 유클리드 거리와 같다. 따라서 점열 $z_n = a_n + b_n i$가 $z = a + bi$로 수렴하는 것은 $a_n \rightarrow a$이고 $b_n \rightarrow b$인 것과 동치이다.
@@ -201,14 +201,14 @@ $$\lvert a_n - a\rvert,\ \lvert b_n - b\rvert \;\leq\; \sqrt{(a_n - a)^2 + (b_n 
 에서 따라 나온다. 가운데 항이 $d(z_n, z)$이므로, 이것이 $0$으로 가는 것은 양 끝의 두 실수열 $\lvert a_n - a\rvert$, $\lvert b_n - b\rvert$이 모두 $0$으로 가는 것, 곧 $a_n \rightarrow a$이고 $b_n \rightarrow b$인 것과 동치이다.
 :::
 
-[명제 9](#prop9)는 복소수의 수렴이 실수부와 허수부의 동시 수렴으로 환원됨을 말하며, 이로써 $\mathbb{C}$ 위의 해석학을 $\mathbb{R}^2$ 위의 해석학으로 번역할 수 있게 된다. 가장 먼저 옮겨 오는 것은 완비성이다.
+[명제 9](#prop9){: data-lid="q1hcv" }는 복소수의 수렴이 실수부와 허수부의 동시 수렴으로 환원됨을 말하며, 이로써 $\mathbb{C}$ 위의 해석학을 $\mathbb{R}^2$ 위의 해석학으로 번역할 수 있게 된다. 가장 먼저 옮겨 오는 것은 완비성이다.
 
 ::: 정리 10
 $(\mathbb{C}, d)$는 완비 거리공간이다. 곧 $\mathbb{C}$의 모든 Cauchy 점열은 $\mathbb{C}$의 한 점으로 수렴한다.
 :::
 
 ::: 증명
-$z_n = a_n + b_n i$가 $\mathbb{C}$에서 Cauchy라 하자. 좌표별 부등식 $\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$과 $\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$에 의해 두 실수열 $(a_n)$, $(b_n)$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="f711q" }에 의해 $a_n \rightarrow a$, $b_n \rightarrow b$인 실수 $a, b$가 존재한다. 그러면 [명제 9](#prop9)에 의해 $z_n \rightarrow a + bi \in \mathbb{C}$이다. 따라서 임의의 Cauchy 점열이 $\mathbb{C}$ 안에서 수렴하므로 $(\mathbb{C}, d)$는 완비이다.
+$z_n = a_n + b_n i$가 $\mathbb{C}$에서 Cauchy라 하자. 좌표별 부등식 $\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$과 $\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$에 의해 두 실수열 $(a_n)$, $(b_n)$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="f711q" }에 의해 $a_n \rightarrow a$, $b_n \rightarrow b$인 실수 $a, b$가 존재한다. 그러면 [명제 9](#prop9){: data-lid="4vop0" }에 의해 $z_n \rightarrow a + bi \in \mathbb{C}$이다. 따라서 임의의 Cauchy 점열이 $\mathbb{C}$ 안에서 수렴하므로 $(\mathbb{C}, d)$는 완비이다.
 :::
 
 이는 $\mathbb{R}^2$가 완비라는 사실 ([\[해석학\] §거리공간과 열린집합·닫힌집합](/ko/math/analysis/metric_spaces){: data-lid="e3im8" }에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 complex analysis의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
@@ -218,19 +218,19 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 :::
 
 ::: 증명
-[명제 9](#prop9)에 의해 $(\mathbb{C}, d)$는 거리공간으로서 $(\mathbb{R}^2, d_{\text{euc}})$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $\mathbb{R}^2$에 대한 [\[해석학\] §컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7){: data-lid="e6wcs" }를 그대로 옮기면 결론을 얻는다.
+[명제 9](#prop9){: data-lid="msjv5" }에 의해 $(\mathbb{C}, d)$는 거리공간으로서 $(\mathbb{R}^2, d_{\text{euc}})$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $\mathbb{R}^2$에 대한 [\[해석학\] §컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7){: data-lid="e6wcs" }를 그대로 옮기면 결론을 얻는다.
 
-뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="xqq4v" }를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 [명제 9](#prop9)에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
+뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="xqq4v" }를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 [명제 9](#prop9){: data-lid="y0ac9" }에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
 :::
 
 따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 complex analysis의 정리들이 서는 발판이 된다.
 
 ::: 예시 12 (등비점열의 수렴과 발산)
-복소수 $z$에 대해 점열 $(z^n)$은 절댓값 $\lvert z\rvert$에 따라 셋으로 갈린다. [명제 4](#prop4)에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면
+복소수 $z$에 대해 점열 $(z^n)$은 절댓값 $\lvert z\rvert$에 따라 셋으로 갈린다. [명제 4](#prop4){: data-lid="cf2oi" }에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
-이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §무한급수와 수렴판정법](/ko/math/analysis/series){: data-lid="g1tyz" }에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 [정리 11](#thm11)이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
+이어서 $z^n \rightarrow 0$이다 ([\[해석학\] §무한급수와 수렴판정법](/ko/math/analysis/series){: data-lid="g1tyz" }에서 본 실수열 $\lvert z\rvert^n$의 수렴). 반대로 $\lvert z\rvert > 1$이면 $\lvert z^n\rvert \rightarrow \infty$이므로 $(z^n)$은 bounded가 아니어서 수렴하지 않는다. $\lvert z\rvert = 1$인 경계의 경우는 더 섬세하다. $z = 1$이면 $z^n = 1$로 일정하지만, 가령 $z = i$이면 $z^n$이 $i, -1, -i, 1$을 주기적으로 순환하여 ($\lvert z^n\rvert = 1$로 bounded이지만) 수렴하지 않는다. 후자는 [정리 11](#thm11){: data-lid="1sk0j" }이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $(i^n)$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $i, -1, -i, 1$로 수렴한다.
 :::
 
 ## 확장복소평면과 Riemann 구면
@@ -275,7 +275,7 @@ $$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z
 이다. 따라서 두 거리는 $\mathbb{C}$ 위에서 같은 수렴을 정의하며, 같은 위상을 준다.
 :::
 
-[명제 15](#prop15)는 $\widehat{\mathbb{C}}$가 $\mathbb{C}$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $\widehat{\mathbb{C}}$는 구면 $S^2$와 등거리동형이고 $S^2$는 $\mathbb{R}^3$의 closed bounded set이므로, [\[해석학\] §컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7)에 의해 $(\widehat{\mathbb{C}}, \chi)$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $\mathbb{C}$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 모습을 유한한 점에서의 모습과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $\widehat{\mathbb{C}}$ 사이의 morphism으로 보는 관점이 여기서 출발한다.
+[명제 15](#prop15){: data-lid="q3mdq" }는 $\widehat{\mathbb{C}}$가 $\mathbb{C}$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $\widehat{\mathbb{C}}$는 구면 $S^2$와 등거리동형이고 $S^2$는 $\mathbb{R}^3$의 closed bounded set이므로, [\[해석학\] §컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7){: data-lid="y7w8x" }에 의해 $(\widehat{\mathbb{C}}, \chi)$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $\mathbb{C}$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 모습을 유한한 점에서의 모습과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $\widehat{\mathbb{C}}$ 사이의 morphism으로 보는 관점이 여기서 출발한다.
 
 ---
 

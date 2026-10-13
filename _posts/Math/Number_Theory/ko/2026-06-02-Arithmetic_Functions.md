@@ -23,7 +23,7 @@ published: false
 양의 정수 전체에서 정의된 복소수값 함수를 *산술적 함수<sub>arithmetic function</sub>*라 한다. 산술적 함수 $f$가 항등적으로 $0$이 아니고, $\gcd(m,n)=1$인 모든 양의 정수 $m,n$에 대하여 $f(mn)=f(m)f(n)$을 만족하면 *multiplicative function<sub>곱셈적 함수</sub>*라 한다.
 :::
 
-$f$가 multiplicative이면 $f(1)=1$이다. $f(n)\neq 0$인 $n$을 하나 잡고 $f(n)=f(n\cdot 1)=f(n)f(1)$을 쓰면 된다. 항등적으로 $0$인 함수를 제외하는 이유가 이것이다. 또 $n=p_1^{e_1}\cdots p_r^{e_r}$의 소인수분해에서 $p_i^{e_i}$들은 서로 소이므로, 귀납법으로 $f(n)=f(p_1^{e_1})\cdots f(p_r^{e_r})$을 얻는다. 따라서 multiplicative function은 소수의 거듭제곱에서의 값으로 완전히 결정되고, 소수 거듭제곱에서의 값을 임의로 주어도 이 곱으로 정의한 함수는 multiplicative이다. 이 정의가 잘 정의됨은 [§소수와 산술의 기본정리, ⁋정리 4](/ko/math/number_theory/primes#thm4)의 소인수분해의 유일성이 보장한다.
+$f$가 multiplicative이면 $f(1)=1$이다. $f(n)\neq 0$인 $n$을 하나 잡고 $f(n)=f(n\cdot 1)=f(n)f(1)$을 쓰면 된다. 항등적으로 $0$인 함수를 제외하는 이유가 이것이다. 또 $n=p_1^{e_1}\cdots p_r^{e_r}$의 소인수분해에서 $p_i^{e_i}$들은 서로 소이므로, 귀납법으로 $f(n)=f(p_1^{e_1})\cdots f(p_r^{e_r})$을 얻는다. 따라서 multiplicative function은 소수의 거듭제곱에서의 값으로 완전히 결정되고, 소수 거듭제곱에서의 값을 임의로 주어도 이 곱으로 정의한 함수는 multiplicative이다. 이 정의가 잘 정의됨은 [§소수와 산술의 기본정리, ⁋정리 4](/ko/math/number_theory/primes#thm4){: data-lid="np3na" }의 소인수분해의 유일성이 보장한다.
 
 정의에서 $\gcd(m,n)=1$이라는 가정은 빠질 수 없다. 서로소가 아닌 경우에 곱셈 공식이 성립하는 함수는 *completely multiplicative*라 부르는데, 뒤에서 다룰 함수들은 대부분 여기에 해당하지 않는다.
 
@@ -52,9 +52,9 @@ $\gcd(m,n)=1$이면 $(a,b)\mapsto ab$는 $\{a: a\mid m\}\times\{b:b\mid n\}$에�
 ::: 증명
 $a\mid m$, $b\mid n$이면 $ab\mid mn$이므로 사상이 정의된다. $\gcd(a,b)$는 $m$과 $n$의 공약수이므로 $1$이고, 같은 이유로 $\gcd(m/a,n/b)=1$이다.
 
-단사성을 보인다. $ab=a'b'$이고 $a,a'\mid m$, $b,b'\mid n$이라 하자. $a\mid a'b'$이고 $\gcd(a,b')=1$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11)(서로소인 수가 곱을 나누면 나머지 인수를 나눈다)에 의하여 $a\mid a'$이다. 같은 논증을 $a,a'$의 역할을 바꾸어 적용하면 $a'\mid a$이므로 $a=a'$이고, 따라서 $b=b'$이다.
+단사성을 보인다. $ab=a'b'$이고 $a,a'\mid m$, $b,b'\mid n$이라 하자. $a\mid a'b'$이고 $\gcd(a,b')=1$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11){: data-lid="dykzv" }(서로소인 수가 곱을 나누면 나머지 인수를 나눈다)에 의하여 $a\mid a'$이다. 같은 논증을 $a,a'$의 역할을 바꾸어 적용하면 $a'\mid a$이므로 $a=a'$이고, 따라서 $b=b'$이다.
 
-전사성을 보인다. $d\mid mn$이라 하고 $a=\gcd(d,m)$, $b=\gcd(d,n)$이라 하자. $a\mid m$, $b\mid n$이므로 $\gcd(a,b)=1$이고, $a\mid d$, $b\mid d$이므로 $ab\mid d$이다. 반대로 $d/a$와 $m/a$는 서로소이고 $d/a\mid (m/a) n$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11)에 의하여 $d/a\mid n$이다. $d/a$는 $d$의 약수이기도 하므로 $d/a\mid\gcd(d,n)=b$이다. 즉 $d\mid ab$이다. 두 방향을 합치면 $d=ab$이다.
+전사성을 보인다. $d\mid mn$이라 하고 $a=\gcd(d,m)$, $b=\gcd(d,n)$이라 하자. $a\mid m$, $b\mid n$이므로 $\gcd(a,b)=1$이고, $a\mid d$, $b\mid d$이므로 $ab\mid d$이다. 반대로 $d/a$와 $m/a$는 서로소이고 $d/a\mid (m/a) n$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11){: data-lid="j5e2e" }에 의하여 $d/a\mid n$이다. $d/a$는 $d$의 약수이기도 하므로 $d/a\mid\gcd(d,n)=b$이다. 즉 $d\mid ab$이다. 두 방향을 합치면 $d=ab$이다.
 :::
 
 ::: 명제 5
@@ -62,7 +62,7 @@ $f,g$가 multiplicative function이면 $f\ast g$도 multiplicative function이�
 :::
 
 ::: 증명
-$\gcd(m,n)=1$이라 하자. [보조정리 4](#lem4)에 의하여 $mn$의 약수는 $d=ab$ ($a\mid m$, $b\mid n$)로 유일하게 적히고, $\gcd(a,b)=1$, $\gcd(m/a,n/b)=1$이므로 $f$와 $g$의 곱셈성을 각각 적용할 수 있다.
+$\gcd(m,n)=1$이라 하자. [보조정리 4](#lem4){: data-lid="qjvpo" }에 의하여 $mn$의 약수는 $d=ab$ ($a\mid m$, $b\mid n$)로 유일하게 적히고, $\gcd(a,b)=1$, $\gcd(m/a,n/b)=1$이므로 $f$와 $g$의 곱셈성을 각각 적용할 수 있다.
 
 $$\begin{aligned}
 (f\ast g)(mn)&=\sum_{a\mid m}\sum_{b\mid n}f(ab) g\left(\frac{m}{a}\cdot\frac{n}{b}\right)\\
@@ -84,7 +84,7 @@ $$\tau(n)=\prod_{i=1}^r(e_i+1),\quad \sigma(n)=\prod_{i=1}^r\frac{p_i^{e_i+1}-1}
 :::
 
 ::: 증명
-곱셈성은 [명제 5](#prop5)에서 나온다. 소수 $p$의 거듭제곱 $p^e$의 약수는 $1,p,\dots,p^e$이므로 $\tau(p^e)=e+1$이고 $\sigma(p^e)=1+p+\cdots+p^e=(p^{e+1}-1)/(p-1)$이다. 소수 거듭제곱에서의 값으로 곱을 취하면 된다.
+곱셈성은 [명제 5](#prop5){: data-lid="o6qga" }에서 나온다. 소수 $p$의 거듭제곱 $p^e$의 약수는 $1,p,\dots,p^e$이므로 $\tau(p^e)=e+1$이고 $\sigma(p^e)=1+p+\cdots+p^e=(p^{e+1}-1)/(p-1)$이다. 소수 거듭제곱에서의 값으로 곱을 취하면 된다.
 :::
 
 가령 $360=2^3\cdot 3^2\cdot 5$이면 $\tau(360)=4\cdot3\cdot2=24$이고 $\sigma(360)=15\cdot13\cdot6=1170$이다.
@@ -116,14 +116,14 @@ $(f\ast g)(1)=f(1)g(1)$이므로 $f\ast g=\varepsilon$이면 $f(1)\neq 0$이다.
 
 $$f(1) g(n)+\sum_{d\mid n,\ d>1}f(d) g(n/d)=0$$
 
-을 뜻한다. 두 번째 합에는 $n$보다 작은 인수 $n/d$에서의 $g$ 값만 나타나므로, 이 식은 $g(n)$을 $g(1),\dots,g(n-1)$로 표현한다. 따라서 $g$가 귀납적으로 존재한다. 유일성은 [명제 7](#prop7)의 결합법칙에서 나온다. $g,g'$이 모두 역원이면 $g=g\ast(f\ast g')=(g\ast f)\ast g'=g'$이다.
+을 뜻한다. 두 번째 합에는 $n$보다 작은 인수 $n/d$에서의 $g$ 값만 나타나므로, 이 식은 $g(n)$을 $g(1),\dots,g(n-1)$로 표현한다. 따라서 $g$가 귀납적으로 존재한다. 유일성은 [명제 7](#prop7){: data-lid="30spf" }의 결합법칙에서 나온다. $g,g'$이 모두 역원이면 $g=g\ast(f\ast g')=(g\ast f)\ast g'=g'$이다.
 
-$f$가 multiplicative이고 $g=f^{-1}$이라 하자. 소수 거듭제곱에서의 값 $g(p^e)$를 따라 정해지는 multiplicative function을 $h$라 하자. [명제 5](#prop5)에 의하여 $f\ast h$는 multiplicative이고, $p^e$의 약수가 $p^i$ ($0\le i\le e$)뿐이므로 $(f\ast h)(p^e)=\sum_i f(p^i)h(p^{e-i})=\sum_i f(p^i)g(p^{e-i})=(f\ast g)(p^e)=\varepsilon(p^e)$이다. Multiplicative function은 소수 거듭제곱에서의 값으로 결정되므로 $f\ast h=\varepsilon$이고, 유일성에 의하여 $h=g$이다.
+$f$가 multiplicative이고 $g=f^{-1}$이라 하자. 소수 거듭제곱에서의 값 $g(p^e)$를 따라 정해지는 multiplicative function을 $h$라 하자. [명제 5](#prop5){: data-lid="a5bzs" }에 의하여 $f\ast h$는 multiplicative이고, $p^e$의 약수가 $p^i$ ($0\le i\le e$)뿐이므로 $(f\ast h)(p^e)=\sum_i f(p^i)h(p^{e-i})=\sum_i f(p^i)g(p^{e-i})=(f\ast g)(p^e)=\varepsilon(p^e)$이다. Multiplicative function은 소수 거듭제곱에서의 값으로 결정되므로 $f\ast h=\varepsilon$이고, 유일성에 의하여 $h=g$이다.
 :::
 
 ## 뫼비우스 함수와 반전 공식
 
-함수 $\mathbf 1$은 $\mathbf 1(1)=1$이므로 [명제 8](#prop8)에 의하여 역원을 가진다. 그 역원을 명시적으로 쓰는 것이 다음 정의이다.
+함수 $\mathbf 1$은 $\mathbf 1(1)=1$이므로 [명제 8](#prop8){: data-lid="5d778" }에 의하여 역원을 가진다. 그 역원을 명시적으로 쓰는 것이 다음 정의이다.
 
 ::: 정의 9
 *뫼비우스 함수<sub>Möbius function</sub>* $\mu$를 $\mu(1)=1$, $n$이 어떤 소수의 제곱으로 나누어떨어지면 $\mu(n)=0$, $n$이 서로 다른 $k$개의 소수의 곱이면 $\mu(n)=(-1)^k$로 정의한다.
@@ -136,7 +136,7 @@ $\mathbf 1\ast\mu=\varepsilon$이다. 즉 $n>1$이면 $\sum_{d\mid n}\mu(d)=0$�
 :::
 
 ::: 증명
-[명제 5](#prop5)에 의하여 $\mathbf 1\ast\mu$는 multiplicative function이므로 소수 거듭제곱에서만 확인하면 된다. $e\ge 1$에 대하여 $(\mathbf 1\ast\mu)(p^e)=\mu(1)+\mu(p)+\mu(p^2)+\cdots+\mu(p^e)=1-1+0+\cdots+0=0$이다.
+[명제 5](#prop5){: data-lid="ccfru" }에 의하여 $\mathbf 1\ast\mu$는 multiplicative function이므로 소수 거듭제곱에서만 확인하면 된다. $e\ge 1$에 대하여 $(\mathbf 1\ast\mu)(p^e)=\mu(1)+\mu(p)+\mu(p^2)+\cdots+\mu(p^e)=1-1+0+\cdots+0=0$이다.
 :::
 
 ::: 정리 11 (뫼비우스 반전 공식)
@@ -146,7 +146,7 @@ $$g(n)=\sum_{d\mid n}f(d)\quad(\forall n)\quad\Longleftrightarrow\quad f(n)=\sum
 :::
 
 ::: 증명
-첫째 조건은 $g=\mathbf 1\ast f$이고 둘째 조건은 $f=\mu\ast g$이다. 첫째 조건이 성립하면 [명제 7](#prop7)과 [명제 10](#prop10)에 의하여 $\mu\ast g=\mu\ast(\mathbf 1\ast f)=(\mu\ast\mathbf 1)\ast f=\varepsilon\ast f=f$이다. 둘째 조건이 성립하면 같은 계산으로 $\mathbf 1\ast f=\mathbf 1\ast\mu\ast g=g$이다.
+첫째 조건은 $g=\mathbf 1\ast f$이고 둘째 조건은 $f=\mu\ast g$이다. 첫째 조건이 성립하면 [명제 7](#prop7){: data-lid="ionpd" }과 [명제 10](#prop10){: data-lid="78by9" }에 의하여 $\mu\ast g=\mu\ast(\mathbf 1\ast f)=(\mu\ast\mathbf 1)\ast f=\varepsilon\ast f=f$이다. 둘째 조건이 성립하면 같은 계산으로 $\mathbf 1\ast f=\mathbf 1\ast\mu\ast g=g$이다.
 :::
 
 반전 공식의 합은 $\sum_{d\mid n}\mu(n/d)g(d)$로 적어도 같다. 교환법칙 때문이다. 한편 $f$는 임의의 산술적 함수이고 multiplicative일 필요가 없다는 점에 주의한다. multiplicative인 경우에는 다음이 추가로 성립한다.
@@ -156,7 +156,7 @@ $$g(n)=\sum_{d\mid n}f(d)\quad(\forall n)\quad\Longleftrightarrow\quad f(n)=\sum
 :::
 
 ::: 증명
-($\Rightarrow$)은 [명제 5](#prop5)이다. ($\Leftarrow$)에서는 $g=\mathbf 1\ast f$가 multiplicative라 하자. $\mu$는 multiplicative이므로 [정리 11](#thm11)에 의한 $f=\mu\ast g$가 [명제 5](#prop5)에 의하여 multiplicative이다.
+($\Rightarrow$)은 [명제 5](#prop5){: data-lid="fqa61" }이다. ($\Leftarrow$)에서는 $g=\mathbf 1\ast f$가 multiplicative라 하자. $\mu$는 multiplicative이므로 [정리 11](#thm11){: data-lid="s9ain" }에 의한 $f=\mu\ast g$가 [명제 5](#prop5){: data-lid="c8tv5" }에 의하여 multiplicative이다.
 :::
 
 ## φ와 약수에 대한 합
@@ -171,7 +171,7 @@ $\varphi(n)$은 $1\le k\le n$ 중 $n$과 서로소인 $k$의 개수이다.
 $\{1,\dots,n\}$의 각 원소 $k$를 $\gcd(k,n)$의 값에 따라 분류한다. $n$의 약수 $d$에 대하여 $\gcd(k,n)=n/d$인 $k$는 $k=(n/d)j$ ($1\le j\le d$)로 적히고, 이때 $\gcd(k,n)=(n/d)\gcd(j,d)$이므로 조건은 $\gcd(j,d)=1$과 같다. 따라서 이러한 $k$는 정확히 $\varphi(d)$개이다. 분류된 개수를 모두 더하면 $n=\sum_{d\mid n}\varphi(d)$이다.
 :::
 
-이는 $\mathbf 1\ast\varphi=\id$를 말한다. [정리 11](#thm11)을 적용하면 $\varphi=\mu\ast\id$를 얻는다. $\mu$와 $\id$가 multiplicative이므로 [명제 5](#prop5)에 의하여 $\varphi$는 multiplicative function이다. 소수 거듭제곱에서는 $p^e$ 이하의 정수 중 $p$와 서로소가 아닌 것이 $p$의 배수 $p^{e-1}$개이므로 $\varphi(p^e)=p^e-p^{e-1}$이다. ($\mu\ast\id$로 계산해도 $\mu(1)p^e+\mu(p)p^{e-1}=p^e-p^{e-1}$로 같다.) 이를 정리하면 다음이 된다.
+이는 $\mathbf 1\ast\varphi=\id$를 말한다. [정리 11](#thm11){: data-lid="tlh5o" }을 적용하면 $\varphi=\mu\ast\id$를 얻는다. $\mu$와 $\id$가 multiplicative이므로 [명제 5](#prop5){: data-lid="xjp30" }에 의하여 $\varphi$는 multiplicative function이다. 소수 거듭제곱에서는 $p^e$ 이하의 정수 중 $p$와 서로소가 아닌 것이 $p$의 배수 $p^{e-1}$개이므로 $\varphi(p^e)=p^e-p^{e-1}$이다. ($\mu\ast\id$로 계산해도 $\mu(1)p^e+\mu(p)p^{e-1}=p^e-p^{e-1}$로 같다.) 이를 정리하면 다음이 된다.
 
 ::: 따름정리 14
 $\varphi$는 multiplicative function이고, $n=p_1^{e_1}\cdots p_r^{e_r}$이면
@@ -183,10 +183,10 @@ $$\varphi(n)=\prod_{i=1}^rp_i^{e_i-1}(p_i-1)=n\prod_{p\mid n}\left(1-\frac1p\rig
 
 $\varphi(360)=\varphi(8)\varphi(9)\varphi(5)=4\cdot6\cdot4=96$이다. 또한 $\varphi=\mu\ast\id$로부터 $\varphi(n)=\sum_{d\mid n}\mu(d) n/d$를 얻고, 가령 $n=12$에서 $12-6-4+2=4$로 $\varphi(12)=4$와 일치한다. ($\mu(4)=\mu(12)=0$이다.)
 
-반전 공식은 $\mu$가 약수에 대한 합을 걸러내는 역할을 한다는 점에서 다른 계수 문제에도 쓰인다. 다음 예시는 [명제 10](#prop10)을 약수가 아닌 공약수에 직접 적용한다.
+반전 공식은 $\mu$가 약수에 대한 합을 걸러내는 역할을 한다는 점에서 다른 계수 문제에도 쓰인다. 다음 예시는 [명제 10](#prop10){: data-lid="qlru9" }을 약수가 아닌 공약수에 직접 적용한다.
 
 ::: 예시 15
-$N(n)$을 $1\le a,b\le n$이면서 $\gcd(a,b)=1$인 순서쌍 $(a,b)$의 개수라 하자. [명제 10](#prop10)에 의하여 $\sum_{d\mid\gcd(a,b)}\mu(d)$는 $\gcd(a,b)=1$이면 $1$이고 아니면 $0$이므로
+$N(n)$을 $1\le a,b\le n$이면서 $\gcd(a,b)=1$인 순서쌍 $(a,b)$의 개수라 하자. [명제 10](#prop10){: data-lid="ac42h" }에 의하여 $\sum_{d\mid\gcd(a,b)}\mu(d)$는 $\gcd(a,b)=1$이면 $1$이고 아니면 $0$이므로
 
 $$N(n)=\sum_{a,b\le n}\sum_{d\mid\gcd(a,b)}\mu(d)=\sum_{d=1}^n\mu(d)\#\{(a,b):d\mid a,\ d\mid b\}=\sum_{d=1}^n\mu(d)\lfloor n/d\rfloor^2$$
 
@@ -202,13 +202,13 @@ $$N(n)=\sum_{a,b\le n}\sum_{d\mid\gcd(a,b)}\mu(d)=\sum_{d=1}^n\mu(d)\#\{(a,b):d\
 :::
 
 ::: 증명
-($\Leftarrow$) $q=2^p-1$이 소수라 하자. $q$는 홀수이므로 $\gcd(2^{p-1},q)=1$이고, [명제 6](#prop6)과 곱셈성에 의하여 $\sigma(n)=\sigma(2^{p-1})\sigma(q)=(2^p-1)(q+1)=(2^p-1)2^p=2n$이다.
+($\Leftarrow$) $q=2^p-1$이 소수라 하자. $q$는 홀수이므로 $\gcd(2^{p-1},q)=1$이고, [명제 6](#prop6){: data-lid="sctfd" }과 곱셈성에 의하여 $\sigma(n)=\sigma(2^{p-1})\sigma(q)=(2^p-1)(q+1)=(2^p-1)2^p=2n$이다.
 
-($\Rightarrow$) $n$이 짝수 완전수라 하고 $n=2^km$ ($k\ge1$, $m$은 홀수)이라 하자. $\sigma$의 곱셈성과 [명제 6](#prop6)에 의하여
+($\Rightarrow$) $n$이 짝수 완전수라 하고 $n=2^km$ ($k\ge1$, $m$은 홀수)이라 하자. $\sigma$의 곱셈성과 [명제 6](#prop6){: data-lid="nlvcu" }에 의하여
 
 $$(2^{k+1}-1) \sigma(m)=\sigma(n)=2n=2^{k+1}m$$
 
-이다. $2^{k+1}-1$과 $2^{k+1}$의 공약수는 두 수의 차 $1$을 나누므로 서로소이고, [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11)에 의하여 $2^{k+1}-1\mid m$이다. $m=(2^{k+1}-1)t$라 쓰면 위 식에서 $\sigma(m)=2^{k+1}t$이다. $k\ge1$이므로 $2^{k+1}-1\ge3$이고, 따라서 $t<m$이다. $m$의 서로 다른 약수 $m$과 $t$가 있으므로 $\sigma(m)\ge m+t=2^{k+1}t$이고, 위에서 등호가 성립하므로 $m$의 약수는 $m$과 $t$뿐이다. $1$도 $m$의 약수이므로 $t=1$이어야 하고, 약수가 $1$과 $m$뿐이므로 $m=2^{k+1}-1$은 소수이다. $p=k+1$로 두면 $n=2^{p-1}(2^p-1)$이다.
+이다. $2^{k+1}-1$과 $2^{k+1}$의 공약수는 두 수의 차 $1$을 나누므로 서로소이고, [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11){: data-lid="fg8wr" }에 의하여 $2^{k+1}-1\mid m$이다. $m=(2^{k+1}-1)t$라 쓰면 위 식에서 $\sigma(m)=2^{k+1}t$이다. $k\ge1$이므로 $2^{k+1}-1\ge3$이고, 따라서 $t<m$이다. $m$의 서로 다른 약수 $m$과 $t$가 있으므로 $\sigma(m)\ge m+t=2^{k+1}t$이고, 위에서 등호가 성립하므로 $m$의 약수는 $m$과 $t$뿐이다. $1$도 $m$의 약수이므로 $t=1$이어야 하고, 약수가 $1$과 $m$뿐이므로 $m=2^{k+1}-1$은 소수이다. $p=k+1$로 두면 $n=2^{p-1}(2^p-1)$이다.
 :::
 
 $2^p-1$이 소수이려면 $p$ 자신이 소수여야 한다. $p=ab$ ($a,b>1$)이면 $2^a-1$이 $2^{ab}-1$을 나누기 때문이다. $p=2,3,5,7$에서 $2^p-1=3,7,31,127$이 모두 소수이므로 $6,28,496,8128$이 완전수이다. $p=11$에서는 $2^{11}-1=23\cdot89$이 합성수이다. 이 형태의 소수 $2^p-1$을 *Mersenne prime*이라 부른다.

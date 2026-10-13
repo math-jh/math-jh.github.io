@@ -19,7 +19,7 @@ published: false
 
 ## 기약잉여계와 phi 함수
 
-법 $n$에서 곱셈 역원을 갖는 나머지가 어느 것인지부터 정리한다. 정수 $a$에 대하여 $\gcd(a,n)=1$일 필요충분조건은 $au\equiv 1 \pmod{n}$인 정수 $u$가 존재하는 것이다. $\gcd(a,n)=1$이면 [§나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8)에 의하여 $au+nv=1$인 정수 $u,v$가 있고, 이 $u$가 역원이다. 거꾸로 $au\equiv1$이면 $au-1=nk$이므로 $a$와 $n$의 공약수는 $1=au-nk$를 나누어 $\gcd(a,n)=1$이다. 또 $\gcd(a+kn,n)=\gcd(a,n)$이므로 $n$과 서로소인지 여부는 $a$의 법 $n$ 나머지만으로 결정된다.
+법 $n$에서 곱셈 역원을 갖는 나머지가 어느 것인지부터 정리한다. 정수 $a$에 대하여 $\gcd(a,n)=1$일 필요충분조건은 $au\equiv 1 \pmod{n}$인 정수 $u$가 존재하는 것이다. $\gcd(a,n)=1$이면 [§나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="6stm5" }에 의하여 $au+nv=1$인 정수 $u,v$가 있고, 이 $u$가 역원이다. 거꾸로 $au\equiv1$이면 $au-1=nk$이므로 $a$와 $n$의 공약수는 $1=au-nk$를 나누어 $\gcd(a,n)=1$이다. 또 $\gcd(a+kn,n)=\gcd(a,n)$이므로 $n$과 서로소인지 여부는 $a$의 법 $n$ 나머지만으로 결정된다.
 
 ::: 정의 1
 양의 정수 $n$에 대하여 $1\le a\le n$이면서 $\gcd(a,n)=1$인 정수 $a$의 개수를 *Euler phi 함수<sub>Euler's totient function</sub>* $\varphi(n)$이라 한다. 이 $\varphi(n)$개의 정수를 법 $n$의 *기약잉여계<sub>reduced residue system</sub>*라 한다.
@@ -36,9 +36,9 @@ $\gcd(a,n)=1$이고 $r_1,\ldots,r_{\varphi(n)}$이 법 $n$의 기약잉여계이
 :::
 
 ::: 증명
-먼저 각 $ar_i$가 $n$과 서로소임을 보인다. $n$과 $ar_i$가 공통 소인수 $q$를 가지면, $q$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의하여 $q\mid a$ 또는 $q\mid r_i$이고, 어느 쪽이든 $q$가 $n$과 $a$의 공약수이거나 $n$과 $r_i$의 공약수가 되어 가정에 모순이다.
+먼저 각 $ar_i$가 $n$과 서로소임을 보인다. $n$과 $ar_i$가 공통 소인수 $q$를 가지면, $q$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-lid="xppf4" }에 의하여 $q\mid a$ 또는 $q\mid r_i$이고, 어느 쪽이든 $q$가 $n$과 $a$의 공약수이거나 $n$과 $r_i$의 공약수가 되어 가정에 모순이다.
 
-다음으로 $ar_1,\ldots,ar_{\varphi(n)}$이 법 $n$에서 서로 다름을 보인다. $ar_i\equiv ar_j \pmod{n}$이면 $n\mid a(r_i-r_j)$이고 $\gcd(a,n)=1$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11)에 의하여 $n\mid r_i-r_j$이다. $r_i,r_j$는 모두 $1$과 $n$ 사이에 있으므로 $\lvert r_i-r_j\rvert<n$이고, 따라서 $r_i=r_j$이다.
+다음으로 $ar_1,\ldots,ar_{\varphi(n)}$이 법 $n$에서 서로 다름을 보인다. $ar_i\equiv ar_j \pmod{n}$이면 $n\mid a(r_i-r_j)$이고 $\gcd(a,n)=1$이므로 [§나눗셈과 유클리드 호제법, ⁋명제 11](/ko/math/number_theory/euclidean_algorithm#prop11){: data-lid="gpco2" }에 의하여 $n\mid r_i-r_j$이다. $r_i,r_j$는 모두 $1$과 $n$ 사이에 있으므로 $\lvert r_i-r_j\rvert<n$이고, 따라서 $r_i=r_j$이다.
 
 결국 $ar_i$들은 법 $n$에서 서로 다르면서 $n$과 서로소인 $\varphi(n)$개의 나머지를 준다. 법 $n$의 나머지 중 $n$과 서로소인 것은 정확히 $\varphi(n)$개이므로 $ar_i$들은 그 전부를 한 번씩 지난다.
 :::
@@ -52,7 +52,7 @@ $$a^{\varphi(n)}\equiv 1 \pmod{n}$$
 :::
 
 ::: 증명
-$P=r_1r_2\cdots r_{\varphi(n)}$이라 하자. [보조정리 2](#lem2)에 의하여 $ar_1,\ldots,ar_{\varphi(n)}$을 모두 곱한 것은 법 $n$에서 $P$와 합동이다. 곧
+$P=r_1r_2\cdots r_{\varphi(n)}$이라 하자. [보조정리 2](#lem2){: data-lid="ekdps" }에 의하여 $ar_1,\ldots,ar_{\varphi(n)}$을 모두 곱한 것은 법 $n$에서 $P$와 합동이다. 곧
 
 $$a^{\varphi(n)}P\equiv P \pmod{n}$$
 
@@ -66,7 +66,7 @@ $p$가 소수이고 $p\nmid a$이면 $a^{p-1}\equiv1\pmod p$이다. 따라서 �
 :::
 
 ::: 증명
-앞 문장은 [정리 3](#thm3)에서 $n=p$인 경우이다. $p\nmid a$이면 양변에 $a$를 곱하면 $a^p\equiv a$이고, $p\mid a$이면 양변이 모두 $0$과 합동이다.
+앞 문장은 [정리 3](#thm3){: data-lid="vmap6" }에서 $n=p$인 경우이다. $p\nmid a$이면 양변에 $a$를 곱하면 $a^p\equiv a$이고, $p\mid a$이면 양변이 모두 $0$과 합동이다.
 :::
 
 $a^{p-1}\equiv1$은 $p\nmid a$를 요구하고 $a^p\equiv a$는 요구하지 않으므로, 후자는 $a$가 $p$의 배수일 가능성을 따로 가르지 않고 쓸 때 편리하다. 소수 법에서의 계산 예로 $2^{100}\bmod 13$을 보자. $2^{12}\equiv1$이고 $100=12\cdot8+4$이므로 $2^{100}\equiv2^4=16\equiv3 \pmod{13}$이다.
@@ -84,14 +84,14 @@ $\gcd(m,n)=1$이면 $\varphi(mn)=\varphi(m)\varphi(n)$이다.
 :::
 
 ::: 증명
-[§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8)에 의하여 $\gcd(m,n)=1$일 때 대응 $x\mapsto(x\bmod m,\ x\bmod n)$은 법 $mn$의 나머지 $\{0,\ldots,mn-1\}$과 쌍 $\{0,\ldots,m-1\}\times\{0,\ldots,n-1\}$ 사이의 일대일대응이다. 한편 $\gcd(x,mn)=1$일 필요충분조건은 $\gcd(x,m)=1$이고 $\gcd(x,n)=1$인 것이다. 앞 절에서 보았듯 $n$과 서로소인지 여부는 법 $n$ 나머지에만 의존하므로, 이 대응은 $mn$과 서로소인 나머지를 ($m$과 서로소인 나머지)$\times$($n$과 서로소인 나머지)로 일대일로 보낸다. 개수를 세면 $\varphi(mn)=\varphi(m)\varphi(n)$이다.
+[§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8){: data-lid="bukq8" }에 의하여 $\gcd(m,n)=1$일 때 대응 $x\mapsto(x\bmod m,\ x\bmod n)$은 법 $mn$의 나머지 $\{0,\ldots,mn-1\}$과 쌍 $\{0,\ldots,m-1\}\times\{0,\ldots,n-1\}$ 사이의 일대일대응이다. 한편 $\gcd(x,mn)=1$일 필요충분조건은 $\gcd(x,m)=1$이고 $\gcd(x,n)=1$인 것이다. 앞 절에서 보았듯 $n$과 서로소인지 여부는 법 $n$ 나머지에만 의존하므로, 이 대응은 $mn$과 서로소인 나머지를 ($m$과 서로소인 나머지)$\times$($n$과 서로소인 나머지)로 일대일로 보낸다. 개수를 세면 $\varphi(mn)=\varphi(m)\varphi(n)$이다.
 :::
 
 소수 거듭제곱 $p^k$ ($k\ge1$)에서는 $1\le a\le p^k$ 중 $p^k$와 서로소가 아닌 것이 $p$의 배수이므로 $p,2p,\ldots,p^{k-1}\cdot p$의 $p^{k-1}$개이다. 따라서
 
 $$\varphi(p^k)=p^k-p^{k-1}=p^k\Bigl(1-\frac1p\Bigr)$$
 
-이다. $n=p_1^{e_1}\cdots p_r^{e_r}$이면 서로 다른 소수의 거듭제곱들은 쌍마다 서로소이므로 [명제 5](#prop5)를 반복 적용하여
+이다. $n=p_1^{e_1}\cdots p_r^{e_r}$이면 서로 다른 소수의 거듭제곱들은 쌍마다 서로소이므로 [명제 5](#prop5){: data-lid="tr4oh" }를 반복 적용하여
 
 $$\varphi(n)=\prod_{i=1}^{r}p_i^{e_i-1}(p_i-1)=n\prod_{p\mid n}\Bigl(1-\frac1p\Bigr)$$
 
@@ -106,7 +106,7 @@ $n\ge2$인 정수 $n$에 대하여 $n$이 소수일 필요충분조건은 $(n-1)
 :::
 
 ::: 증명
-$n=p$가 소수라 하자. $p=2$이면 $1!=1\equiv-1\pmod 2$이므로 $p$가 홀수라 하자. $2\le a\le p-2$인 각 $a$에 대하여 $aa'\equiv1\pmod p$인 $a'\in\{1,\ldots,p-1\}$이 유일하게 존재한다. $a'\ne1,\ p-1$이다. 실제로 $a'=1$이면 $a\equiv1$이고, $a'=p-1\equiv-1$이면 $a\equiv-1$이어서 $2\le a\le p-2$에 모순이다. 따라서 $a'\in\{2,\ldots,p-2\}$이다. 또 $a'=a$이면 $a^2\equiv1$, 곧 $p\mid(a-1)(a+1)$이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의하여 $a\equiv\pm1$이어서 역시 모순이다. 그러므로 $a\mapsto a'$은 $\{2,\ldots,p-2\}$를 서로 다른 두 원소의 쌍 $\{a,a'\}$으로 나누고, 각 쌍의 곱은 $1$과 합동이다. 따라서 $2\cdot3\cdots(p-2)\equiv1$이고
+$n=p$가 소수라 하자. $p=2$이면 $1!=1\equiv-1\pmod 2$이므로 $p$가 홀수라 하자. $2\le a\le p-2$인 각 $a$에 대하여 $aa'\equiv1\pmod p$인 $a'\in\{1,\ldots,p-1\}$이 유일하게 존재한다. $a'\ne1,\ p-1$이다. 실제로 $a'=1$이면 $a\equiv1$이고, $a'=p-1\equiv-1$이면 $a\equiv-1$이어서 $2\le a\le p-2$에 모순이다. 따라서 $a'\in\{2,\ldots,p-2\}$이다. 또 $a'=a$이면 $a^2\equiv1$, 곧 $p\mid(a-1)(a+1)$이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-lid="htwnx" }에 의하여 $a\equiv\pm1$이어서 역시 모순이다. 그러므로 $a\mapsto a'$은 $\{2,\ldots,p-2\}$를 서로 다른 두 원소의 쌍 $\{a,a'\}$으로 나누고, 각 쌍의 곱은 $1$과 합동이다. 따라서 $2\cdot3\cdots(p-2)\equiv1$이고
 
 $$(p-1)!=1\cdot\bigl(2\cdots(p-2)\bigr)\cdot(p-1)\equiv p-1\equiv-1\pmod p$$
 
@@ -119,7 +119,7 @@ $p=7$이면 $6!=720=7\cdot103-1$이다. 윌슨 정리는 소수의 완전한 특
 
 ## 페르마 소정리의 역
 
-[따름정리 4](#cor4)의 대우는 합성수 판정을 준다. 어떤 $a$에 대하여 $a^{n-1}\not\equiv1\pmod n$이면 $n$은 소수가 아니다. 그러나 역은 성립하지 않아서, $a^{n-1}\equiv1\pmod n$이 성립해도 $n$은 합성수일 수 있다.
+[따름정리 4](#cor4){: data-lid="bmi8e" }의 대우는 합성수 판정을 준다. 어떤 $a$에 대하여 $a^{n-1}\not\equiv1\pmod n$이면 $n$은 소수가 아니다. 그러나 역은 성립하지 않아서, $a^{n-1}\equiv1\pmod n$이 성립해도 $n$은 합성수일 수 있다.
 
 ::: 예시 7
 $n=341=11\cdot31$은 합성수이지만 $2^{340}\equiv1\pmod{341}$이다. 실제로 $2^{10}=1024=3\cdot341+1$이므로 $2^{10}\equiv1\pmod{341}$이고, $2^{340}=(2^{10})^{34}\equiv1$이다. 밑을 바꾸면 합성수성이 드러난다. $3^{10}=59049=173\cdot341+56$이므로 $3^{10}\equiv56\pmod{341}$이다. 한편 법 $31$에서 $3^{30}\equiv1$이고 $340=30\cdot11+10$이므로
@@ -132,19 +132,19 @@ $$3^{340}\equiv3^{10}=59049\equiv25\not\equiv1\pmod{31}$$
 밑을 하나만 쓰면 놓치지만 다른 밑으로 잡히는 경우였다. 더 나쁜 경우는 $n$과 서로소인 모든 밑에서 $a^{n-1}\equiv1$이 성립하는 합성수이며, 이를 *카마이클 수<sub>Carmichael number</sub>*라 한다.
 
 ::: 예시 8
-$561=3\cdot11\cdot17$은 카마이클 수이다. $\gcd(a,561)=1$이라 하자. $3,11,17$은 소수이고 $a$와 서로소이므로 [따름정리 4](#cor4)에서 $a^2\equiv1\pmod3$, $a^{10}\equiv1\pmod{11}$, $a^{16}\equiv1\pmod{17}$이다. $560=2\cdot280=10\cdot56=16\cdot35$이므로 $a^{560}$은 법 $3,11,17$에서 모두 $1$과 합동이다. $3,11,17$이 쌍마다 서로소이므로 $a^{560}-1$은 세 수의 곱 $561$로 나누어떨어지고, $a^{560}\equiv1\pmod{561}$이다.
+$561=3\cdot11\cdot17$은 카마이클 수이다. $\gcd(a,561)=1$이라 하자. $3,11,17$은 소수이고 $a$와 서로소이므로 [따름정리 4](#cor4){: data-lid="v18vb" }에서 $a^2\equiv1\pmod3$, $a^{10}\equiv1\pmod{11}$, $a^{16}\equiv1\pmod{17}$이다. $560=2\cdot280=10\cdot56=16\cdot35$이므로 $a^{560}$은 법 $3,11,17$에서 모두 $1$과 합동이다. $3,11,17$이 쌍마다 서로소이므로 $a^{560}-1$은 세 수의 곱 $561$로 나누어떨어지고, $a^{560}\equiv1\pmod{561}$이다.
 :::
 
 따라서 $561$은 $561$과 서로소인 어떤 밑으로도 합성수임이 드러나지 않는다. $561$과 서로소가 아닌 밑이면 $a^{560}$이 $a$와 $561$의 공약수의 배수이므로 $1$이 될 수 없지만, 이는 $\gcd(a,561)>1$이라는 사실에서 이미 $561$의 인수가 드러난 경우일 뿐이다. 카마이클 수는 무한히 많다는 것이 Alford–Granville–Pomerance가 1994년에 증명한 결과이다. 그래서 페르마 판정은 단독으로는 소수성의 증명이 되지 못하며, 실용적인 소수 판정은 이를 보강한 방식을 쓴다.
 
 ## 큰 거듭제곱의 나머지
 
-$\gcd(a,n)=1$이면 [정리 3](#thm3)에 의하여 $a^{\varphi(n)}\equiv1$이므로, $a^k\bmod n$을 구할 때 지수 $k$를 $\varphi(n)$으로 나눈 나머지로 바꿀 수 있다. $k=\varphi(n)q+s$이면 $a^k=(a^{\varphi(n)})^q a^s\equiv a^s$이다. 지수는 법 $n$이 아니라 법 $\varphi(n)$으로 줄인다는 점에 주의한다. 가령 $7^{222}\bmod 10$에서 $\varphi(10)=4$이고 $222=4\cdot55+2$이므로 $7^{222}\equiv7^2=49\equiv9\pmod{10}$이다.
+$\gcd(a,n)=1$이면 [정리 3](#thm3){: data-lid="ifzew" }에 의하여 $a^{\varphi(n)}\equiv1$이므로, $a^k\bmod n$을 구할 때 지수 $k$를 $\varphi(n)$으로 나눈 나머지로 바꿀 수 있다. $k=\varphi(n)q+s$이면 $a^k=(a^{\varphi(n)})^q a^s\equiv a^s$이다. 지수는 법 $n$이 아니라 법 $\varphi(n)$으로 줄인다는 점에 주의한다. 가령 $7^{222}\bmod 10$에서 $\varphi(10)=4$이고 $222=4\cdot55+2$이므로 $7^{222}\equiv7^2=49\equiv9\pmod{10}$이다.
 
 지수가 다시 거듭제곱으로 주어지면 이 환원을 안쪽으로 반복한다.
 
 ::: 예시 9
-$3^{3^{100}}$을 $100$으로 나눈 나머지를 구하자. $\gcd(3,100)=1$이고 $\varphi(100)=100\cdot\frac12\cdot\frac45=40$이므로 [정리 3](#thm3)에 의하여 $3^{40}\equiv1\pmod{100}$이고, 지수 $3^{100}$을 법 $40$으로 줄이면 된다. $\gcd(3,40)=1$이고 $\varphi(40)=16$이지만, 직접 $3^4=81\equiv1\pmod{40}$임을 쓰는 편이 짧다. $100=4\cdot25$이므로
+$3^{3^{100}}$을 $100$으로 나눈 나머지를 구하자. $\gcd(3,100)=1$이고 $\varphi(100)=100\cdot\frac12\cdot\frac45=40$이므로 [정리 3](#thm3){: data-lid="k7lvr" }에 의하여 $3^{40}\equiv1\pmod{100}$이고, 지수 $3^{100}$을 법 $40$으로 줄이면 된다. $\gcd(3,40)=1$이고 $\varphi(40)=16$이지만, 직접 $3^4=81\equiv1\pmod{40}$임을 쓰는 편이 짧다. $100=4\cdot25$이므로
 
 $$3^{100}=(3^4)^{25}\equiv1\pmod{40}$$
 
@@ -154,28 +154,28 @@ $$3^{100}=(3^4)^{25}\equiv1\pmod{40}$$
 $\gcd(a,n)>1$이면 지수를 $\varphi(n)$으로 줄일 수 없으므로 $n$을 서로소인 인수들로 쪼개어 각각 계산한 뒤 합친다.
 
 ::: 예시 10
-$2^{1000}$을 $12$로 나눈 나머지를 구하자. $\gcd(2,12)=2$이므로 [정리 3](#thm3)을 직접 쓸 수 없다. $12=4\cdot3$으로 쪼갠다. 법 $4$에서는 $2^{1000}$이 $4$의 배수이므로 $0$이다. 법 $3$에서는 $2^2\equiv1$이고 $1000$이 짝수이므로 $2^{1000}\equiv1$이다. $x\equiv0\pmod4$, $x\equiv1\pmod3$인 $x$는 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8)에 의하여 법 $12$에서 유일하며 $x=4$이다. 따라서 $2^{1000}\equiv4\pmod{12}$이다.
+$2^{1000}$을 $12$로 나눈 나머지를 구하자. $\gcd(2,12)=2$이므로 [정리 3](#thm3){: data-lid="muefs" }을 직접 쓸 수 없다. $12=4\cdot3$으로 쪼갠다. 법 $4$에서는 $2^{1000}$이 $4$의 배수이므로 $0$이다. 법 $3$에서는 $2^2\equiv1$이고 $1000$이 짝수이므로 $2^{1000}\equiv1$이다. $x\equiv0\pmod4$, $x\equiv1\pmod3$인 $x$는 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8){: data-lid="tfm1y" }에 의하여 법 $12$에서 유일하며 $x=4$이다. 따라서 $2^{1000}\equiv4\pmod{12}$이다.
 :::
 
 같은 원리로 $a^{\varphi(n)-1}$은 $a$의 법 $n$ 역원이다. 법 $n$에서 $a\cdot a^{\varphi(n)-1}=a^{\varphi(n)}\equiv1$이기 때문이다. 가령 법 $10$에서 $3$의 역원은 $3^{3}=27\equiv7$이고 실제로 $3\cdot7=21\equiv1$이다. 소수 법에서는 이것이 $a^{p-2}$이다.
 
 ## RSA 암호
 
-RSA 암호는 [정리 3](#thm3)에서 나온 지수 산술 위에 세워져 있다. 서로 다른 큰 소수 $p,q$를 잡고 $n=pq$라 하면, [명제 5](#prop5)에서 $\varphi(n)=(p-1)(q-1)$이다. $\gcd(e,\varphi(n))=1$인 $e$를 골라 $ed\equiv1\pmod{\varphi(n)}$인 $d$를 구한다. 이런 $d$는 [§합동식과 중국인의 나머지 정리, ⁋따름정리 6](/ko/math/number_theory/chinese_remainder_theorem#cor6)에 의하여 $e$의 법 $\varphi(n)$ 역원으로서 존재하며 확장 유클리드 알고리즘으로 구해진다. 공개하는 값은 $(n,e)$이고 $p,q,d$는 비밀로 둔다. $0\le m<n$인 메시지 $m$은 $c\equiv m^e\pmod n$으로 암호화하고, $c^d\bmod n$으로 복호화한다. 복호화가 성립하는 이유는 다음과 같다.
+RSA 암호는 [정리 3](#thm3){: data-lid="teokw" }에서 나온 지수 산술 위에 세워져 있다. 서로 다른 큰 소수 $p,q$를 잡고 $n=pq$라 하면, [명제 5](#prop5){: data-lid="s6prl" }에서 $\varphi(n)=(p-1)(q-1)$이다. $\gcd(e,\varphi(n))=1$인 $e$를 골라 $ed\equiv1\pmod{\varphi(n)}$인 $d$를 구한다. 이런 $d$는 [§합동식과 중국인의 나머지 정리, ⁋따름정리 6](/ko/math/number_theory/chinese_remainder_theorem#cor6){: data-lid="xose1" }에 의하여 $e$의 법 $\varphi(n)$ 역원으로서 존재하며 확장 유클리드 알고리즘으로 구해진다. 공개하는 값은 $(n,e)$이고 $p,q,d$는 비밀로 둔다. $0\le m<n$인 메시지 $m$은 $c\equiv m^e\pmod n$으로 암호화하고, $c^d\bmod n$으로 복호화한다. 복호화가 성립하는 이유는 다음과 같다.
 
 ::: 명제 11
 $n=pq$ ($p\ne q$ 소수), $ed\equiv1\pmod{\varphi(n)}$이면 모든 정수 $m$에 대하여 $m^{ed}\equiv m\pmod n$이다.
 :::
 
 ::: 증명
-$ed=1+k\varphi(n)=1+k(p-1)(q-1)$이고, $ed\ge1$, $\varphi(n)>0$이므로 $k\ge0$이다. 법 $p$에서 $p\nmid m$이면 [따름정리 4](#cor4)에서 $m^{p-1}\equiv1$이므로
+$ed=1+k\varphi(n)=1+k(p-1)(q-1)$이고, $ed\ge1$, $\varphi(n)>0$이므로 $k\ge0$이다. 법 $p$에서 $p\nmid m$이면 [따름정리 4](#cor4){: data-lid="l0nca" }에서 $m^{p-1}\equiv1$이므로
 
 $$m^{ed}=m\cdot\bigl(m^{p-1}\bigr)^{k(q-1)}\equiv m\pmod p$$
 
 이다. $p\mid m$이면 $m^{ed}$와 $m$이 모두 $0$과 합동이므로 역시 $m^{ed}\equiv m\pmod p$이다. 같은 논증으로 $m^{ed}\equiv m\pmod q$이다. $p,q$가 서로 다른 소수이므로 $m^{ed}-m$은 $p$와 $q$로 모두 나누어떨어지고 따라서 $pq=n$으로 나누어떨어진다.
 :::
 
-$m$이 $p$나 $q$의 배수인 경우를 [정리 3](#thm3)만으로는 다룰 수 없으므로 증명이 법 $p$와 법 $q$로 나누어 진행된다. $c^d\equiv m^{ed}\equiv m\pmod n$이고 $0\le m<n$이므로 복호화는 $m$을 정확히 복원한다.
+$m$이 $p$나 $q$의 배수인 경우를 [정리 3](#thm3){: data-lid="rkj2f" }만으로는 다룰 수 없으므로 증명이 법 $p$와 법 $q$로 나누어 진행된다. $c^d\equiv m^{ed}\equiv m\pmod n$이고 $0\le m<n$이므로 복호화는 $m$을 정확히 복원한다.
 
 ::: 예시 12
 $p=5$, $q=11$이면 $n=55$, $\varphi(n)=40$이다. $e=3$을 고르면 $3\cdot27=81\equiv1\pmod{40}$이므로 $d=27$이다. $m=7$을 암호화하면 $c=7^3=343=6\cdot55+13$이므로 $c=13$이다. 복호화 $13^{27}\bmod55$를 법 $5$와 법 $11$로 나누어 계산한다. 법 $5$에서 $13\equiv3$이고 $3^4\equiv1$, $27=4\cdot6+3$이므로 $13^{27}\equiv3^3=27\equiv2$이다. 법 $11$에서 $13\equiv2$이고 $2^{10}\equiv1$, $27=10\cdot2+7$이므로 $13^{27}\equiv2^7=128\equiv7$이다. $x\equiv2\pmod5$, $x\equiv7\pmod{11}$인 $0\le x<55$는 $x=7$이므로 $m=7$이 복원된다.

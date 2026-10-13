@@ -37,7 +37,7 @@ $N(zw) = zw\overline{zw} = z\overline{z}w\overline{w}$이므로 곱셈성이 성
 
 ## 나눗셈 정리와 unique factorization
 
-[§나눗셈과 유클리드 호제법, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)에서 나머지의 크기를 절댓값으로 쟀듯이, $\mathbb{Z}[i]$에서는 노름으로 잰다.
+[§나눗셈과 유클리드 호제법, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-lid="6afx7" }에서 나머지의 크기를 절댓값으로 쟀듯이, $\mathbb{Z}[i]$에서는 노름으로 잰다.
 
 ::: 정리 3
 $\alpha, \beta \in \mathbb{Z}[i]$이고 $\beta \neq 0$이면, $\alpha = \beta\kappa + \rho$이고 $N(\rho) < N(\beta)$인 $\kappa, \rho \in \mathbb{Z}[i]$가 존재한다.
@@ -57,23 +57,23 @@ N(\rho) &= N(\beta)N\left(\frac{\alpha}{\beta} - \kappa\right) \\
 
 증명에서 $1/2$라는 수는 임의의 실수에서 가장 가까운 정수까지의 거리가 $1/2$을 넘지 않는다는 사실에서 나온다. 필요한 것은 두 좌표의 제곱합이 $1$보다 작은 것뿐이고, 여기서는 $1/2$로 충분히 여유가 있다. 한편 이 $\kappa, \rho$는 유일하지 않을 수 있다. $u$나 $v$가 $1/2$의 홀수 배이면 가장 가까운 정수가 둘이기 때문이고, 가령 $\alpha = 1$, $\beta = 2$이면 $\kappa \in \{0, 1\}$ 어느 쪽을 택해도 $N(\rho) = 1 < 4$이다. 나눗셈 정리가 나머지의 유일성을 주지 않는다는 점은 $\mathbb{Z}$에서와 다르다. 이는 소인수분해의 유일성에는 영향을 주지 않는다.
 
-[정리 3](#thm3)이 성립하는 정역을 *Euclidean domain*이라 한다. $\mathbb{Z}$에서 [§소수와 산술의 기본정리, ⁋정리 4](/ko/math/number_theory/primes#thm4)를 얻을 때와 같은 경로로 $\mathbb{Z}[i]$에서도 소인수분해의 유일성이 따라온다. 이를 위해 두 개념을 구별해 둔다. 0도 단원도 아닌 $\pi \in \mathbb{Z}[i]$가 $\pi = \alpha\beta$일 때 $\alpha, \beta$ 중 하나가 반드시 단원이면 $\pi$를 *irreducible*이라 하고, $\pi \mid \alpha\beta$이면 $\pi \mid \alpha$ 또는 $\pi \mid \beta$일 때 *Gaussian prime<sub>가우스 소수</sub>*라 한다. 일반의 정역에서는 prime이면 irreducible이지만 역은 성립하지 않을 수 있다. $\mathbb{Z}[i]$에서는 두 개념이 일치한다.
+[정리 3](#thm3){: data-lid="20ktc" }이 성립하는 정역을 *Euclidean domain*이라 한다. $\mathbb{Z}$에서 [§소수와 산술의 기본정리, ⁋정리 4](/ko/math/number_theory/primes#thm4){: data-lid="c3ccv" }를 얻을 때와 같은 경로로 $\mathbb{Z}[i]$에서도 소인수분해의 유일성이 따라온다. 이를 위해 두 개념을 구별해 둔다. 0도 단원도 아닌 $\pi \in \mathbb{Z}[i]$가 $\pi = \alpha\beta$일 때 $\alpha, \beta$ 중 하나가 반드시 단원이면 $\pi$를 *irreducible*이라 하고, $\pi \mid \alpha\beta$이면 $\pi \mid \alpha$ 또는 $\pi \mid \beta$일 때 *Gaussian prime<sub>가우스 소수</sub>*라 한다. 일반의 정역에서는 prime이면 irreducible이지만 역은 성립하지 않을 수 있다. $\mathbb{Z}[i]$에서는 두 개념이 일치한다.
 
 ::: 정리 4
 $\mathbb{Z}[i]$에서 irreducible인 원소는 Gaussian prime이고, 0이 아닌 모든 비단원은 유한 개의 Gaussian prime의 곱으로 쓰인다. 이 표현은 순서와 단원 곱을 무시하면 유일하다.
 :::
 
 ::: 증명
-먼저 $\mathbb{Z}[i]$의 영이 아닌 ideal $I$는 한 원소로 생성됨을 보인다. $I$의 영이 아닌 원소 중 노름이 가장 작은 것을 $\delta$라 하자. 임의의 $\alpha \in I$에 대해 [정리 3](#thm3)으로 $\alpha = \delta\kappa + \rho$, $N(\rho) < N(\delta)$를 잡으면 $\rho = \alpha - \delta\kappa \in I$이다. $\delta$의 선택에 의해 $\rho = 0$이어야 하므로 $I = (\delta)$이다.
+먼저 $\mathbb{Z}[i]$의 영이 아닌 ideal $I$는 한 원소로 생성됨을 보인다. $I$의 영이 아닌 원소 중 노름이 가장 작은 것을 $\delta$라 하자. 임의의 $\alpha \in I$에 대해 [정리 3](#thm3){: data-lid="mmvdk" }으로 $\alpha = \delta\kappa + \rho$, $N(\rho) < N(\delta)$를 잡으면 $\rho = \alpha - \delta\kappa \in I$이다. $\delta$의 선택에 의해 $\rho = 0$이어야 하므로 $I = (\delta)$이다.
 
 $\pi$가 irreducible이고 $\pi \mid \alpha\beta$, $\pi \nmid \alpha$라 하자. ideal $(\pi, \alpha)$를 $(\delta)$로 쓰면 $\delta \mid \pi$이므로 $\delta$는 단원이거나 $\pi$의 associate이다. 후자이면 $\pi \mid \delta \mid \alpha$가 되어 가정에 모순이므로 $\delta$는 단원이고, $1 = \pi x + \alpha y$인 $x, y \in \mathbb{Z}[i]$가 있다. 양변에 $\beta$를 곱하면 $\beta = \pi\beta x + \alpha\beta y$이고 우변은 $\pi$로 나누어떨어지므로 $\pi \mid \beta$이다. 따라서 $\pi$는 Gaussian prime이다.
 
-분해의 존재는 노름에 대한 귀납법으로 보인다. $N(\alpha) > 1$인 $\alpha$가 irreducible이 아니면 $\alpha = \beta\gamma$로 쓰이는 비단원 $\beta, \gamma$가 있고, [명제 2](#prop2)에 의해 $N(\beta), N(\gamma) > 1$이므로 $N(\beta), N(\gamma) < N(\alpha)$이다. 귀납 가정에 의해 $\beta, \gamma$가 각각 irreducible의 곱이므로 $\alpha$도 그렇다.
+분해의 존재는 노름에 대한 귀납법으로 보인다. $N(\alpha) > 1$인 $\alpha$가 irreducible이 아니면 $\alpha = \beta\gamma$로 쓰이는 비단원 $\beta, \gamma$가 있고, [명제 2](#prop2){: data-lid="g5yba" }에 의해 $N(\beta), N(\gamma) > 1$이므로 $N(\beta), N(\gamma) < N(\alpha)$이다. 귀납 가정에 의해 $\beta, \gamma$가 각각 irreducible의 곱이므로 $\alpha$도 그렇다.
 
 유일성은 $\pi_1 \cdots \pi_r = \rho_1 \cdots \rho_s$ ($\pi_i, \rho_j$는 irreducible)에서 $r$에 대한 귀납법으로 보인다. $\pi_1$은 Gaussian prime이므로 어떤 $\rho_j$를 나누고, $\rho_j$가 irreducible이므로 $\rho_j = u\pi_1$인 단원 $u$가 있다. $\mathbb{Z}[i]$가 정역이므로 $\pi_1$을 약분하면 같은 형태의 등식이 더 짧은 길이로 남고, 귀납 가정을 적용하면 된다.
 :::
 
-이 논증이 $\mathbb{Z}[i]$에서 통하는 것은 [정리 3](#thm3)이 있기 때문이고, 노름이 비슷하게 정의되는 다른 환에서는 이 단계가 무너질 수 있다.
+이 논증이 $\mathbb{Z}[i]$에서 통하는 것은 [정리 3](#thm3){: data-lid="iltg7" }이 있기 때문이고, 노름이 비슷하게 정의되는 다른 환에서는 이 단계가 무너질 수 있다.
 
 ::: 예시 5 ($\mathbb{Z}[\sqrt{-5}]$에서의 반례)
 환 $\mathbb{Z}[\sqrt{-5}] = \{a + b\sqrt{-5} : a, b \in \mathbb{Z}\}$에서 노름 $N(a + b\sqrt{-5}) = a^2 + 5b^2$도 multiplicative이고 단원은 $\pm 1$뿐이다. 이 환에서
@@ -82,12 +82,12 @@ $$6 = 2 \cdot 3 = (1 + \sqrt{-5})(1 - \sqrt{-5})$$
 
 이다. $a^2 + 5b^2 = 2$와 $a^2 + 5b^2 = 3$은 정수해가 없으므로 노름이 $2$ 또는 $3$인 원소가 없다. 따라서 노름이 $4, 9, 6, 6$인 $2, 3, 1 \pm \sqrt{-5}$는 비단원으로 분해될 수 없어 모두 irreducible이다. 이 네 원소는 단원 $\pm 1$을 곱해서 서로 옮겨지지 않으므로 위의 두 분해는 다른 분해이고, unique factorization이 성립하지 않는다.
 
-[정리 3](#thm3)의 증명이 여기서 실패하는 지점은 $1/4 + 1/4$이 있던 곳이다. 이 환에서 같은 방법으로 나눗셈을 하면 $(u - m)^2 + 5(v - n)^2$의 상한은 $1/4 + 5/4 = 3/2$이어서 $1$보다 작다는 결론을 얻지 못한다. 실제로 이 환은 Euclidean domain이 아니다.
+[정리 3](#thm3){: data-lid="xwc1u" }의 증명이 여기서 실패하는 지점은 $1/4 + 1/4$이 있던 곳이다. 이 환에서 같은 방법으로 나눗셈을 하면 $(u - m)^2 + 5(v - n)^2$의 상한은 $1/4 + 5/4 = 3/2$이어서 $1$보다 작다는 결론을 얻지 못한다. 실제로 이 환은 Euclidean domain이 아니다.
 :::
 
 ## 가우스 소수의 분류
 
-[정리 4](#thm4)에 의하여 $\mathbb{Z}[i]$의 구조는 Gaussian prime의 목록으로 결정된다. 목록은 유리소수 $p$가 $\mathbb{Z}[i]$에서 어떻게 분해되는지로 읽힌다. 모든 Gaussian prime $\pi$는 $\pi \mid \pi\overline{\pi} = N(\pi)$이므로 $N(\pi)$의 어떤 소인수 $p$를 나누고, 따라서 $\mathbb{Z}$의 소수 $p$ 각각을 $\mathbb{Z}[i]$에서 분해하면 모든 Gaussian prime이 나온다.
+[정리 4](#thm4){: data-lid="5lcz5" }에 의하여 $\mathbb{Z}[i]$의 구조는 Gaussian prime의 목록으로 결정된다. 목록은 유리소수 $p$가 $\mathbb{Z}[i]$에서 어떻게 분해되는지로 읽힌다. 모든 Gaussian prime $\pi$는 $\pi \mid \pi\overline{\pi} = N(\pi)$이므로 $N(\pi)$의 어떤 소인수 $p$를 나누고, 따라서 $\mathbb{Z}$의 소수 $p$ 각각을 $\mathbb{Z}[i]$에서 분해하면 모든 Gaussian prime이 나온다.
 
 ::: 정리 6 (가우스 소수의 분류)
 단원 곱을 무시하면 $\mathbb{Z}[i]$의 Gaussian prime은 다음 셋뿐이다.
@@ -98,16 +98,16 @@ $$6 = 2 \cdot 3 = (1 + \sqrt{-5})(1 - \sqrt{-5})$$
 :::
 
 ::: 증명
-$2 = -i(1 + i)^2$은 직접 전개하여 확인된다. $N(1 + i) = 2$이고 노름이 소수인 원소는 항상 irreducible이므로 ($\alpha\beta$로 분해되면 $N(\alpha)N(\beta)$가 소수이므로 한쪽 노름이 $1$이다) $1 + i$는 [정리 4](#thm4)에 의해 Gaussian prime이다.
+$2 = -i(1 + i)^2$은 직접 전개하여 확인된다. $N(1 + i) = 2$이고 노름이 소수인 원소는 항상 irreducible이므로 ($\alpha\beta$로 분해되면 $N(\alpha)N(\beta)$가 소수이므로 한쪽 노름이 $1$이다) $1 + i$는 [정리 4](#thm4){: data-lid="r6tw0" }에 의해 Gaussian prime이다.
 
-$q \equiv 3 \pmod{4}$라 하자. $q = \alpha\beta$가 비단원 분해이면 $N(\alpha)N(\beta) = q^2$이고 둘 다 $1$보다 크므로 $N(\alpha) = q$이다. $\alpha = a + bi$이면 $q = a^2 + b^2$인데 제곱수는 $4$로 나눈 나머지가 $0$ 또는 $1$이므로 $a^2 + b^2 \equiv 3 \pmod{4}$는 불가능하다. 따라서 $q$는 irreducible이고, [정리 4](#thm4)에 의해 Gaussian prime이다.
+$q \equiv 3 \pmod{4}$라 하자. $q = \alpha\beta$가 비단원 분해이면 $N(\alpha)N(\beta) = q^2$이고 둘 다 $1$보다 크므로 $N(\alpha) = q$이다. $\alpha = a + bi$이면 $q = a^2 + b^2$인데 제곱수는 $4$로 나눈 나머지가 $0$ 또는 $1$이므로 $a^2 + b^2 \equiv 3 \pmod{4}$는 불가능하다. 따라서 $q$는 irreducible이고, [정리 4](#thm4){: data-lid="fkavb" }에 의해 Gaussian prime이다.
 
-$p \equiv 1 \pmod{4}$라 하자. 이 경우 $-1$이 $\bmod\ p$의 제곱수이므로 ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)) $m^2 \equiv -1 \pmod{p}$인 정수 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m + i)(m - i)$이다. 그런데 $(m \pm i)/p = m/p \pm i/p$의 허수부 $\pm 1/p$는 정수가 아니므로 $p$는 $m + i$도 $m - i$도 나누지 못한다. 따라서 $p$는 Gaussian prime이 아니고, [정리 4](#thm4)에 의해 irreducible도 아니다. $p = \alpha\beta$를 비단원 분해라 하면 $N(\alpha)N(\beta) = p^2$에서 $N(\alpha) = N(\beta) = p$이다. 노름이 소수이므로 $\alpha$는 Gaussian prime이고, $p = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이며 $\overline{\alpha}$도 노름이 $p$인 Gaussian prime이다. $\alpha = \pi$로 두자. $\overline{\pi}$가 $\pi$의 associate라고 가정하고 $\pi = a + bi$로 쓰면, $\overline{\pi} = u\pi$ ($u \in \{\pm 1, \pm i\}$)에서 $u = 1$이면 $b = 0$, $u = -1$이면 $a = 0$, $u = \pm i$이면 $a = \mp b$이다. 앞의 두 경우 $p = a^2 + b^2$은 완전제곱수이고 뒤의 경우 $p = 2a^2$이므로 홀수 소수 $p$에 모순이다.
+$p \equiv 1 \pmod{4}$라 하자. 이 경우 $-1$이 $\bmod\ p$의 제곱수이므로 ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5){: data-lid="b2se8" }) $m^2 \equiv -1 \pmod{p}$인 정수 $m$이 있다. 그러면 $p \mid m^2 + 1 = (m + i)(m - i)$이다. 그런데 $(m \pm i)/p = m/p \pm i/p$의 허수부 $\pm 1/p$는 정수가 아니므로 $p$는 $m + i$도 $m - i$도 나누지 못한다. 따라서 $p$는 Gaussian prime이 아니고, [정리 4](#thm4){: data-lid="ggmzf" }에 의해 irreducible도 아니다. $p = \alpha\beta$를 비단원 분해라 하면 $N(\alpha)N(\beta) = p^2$에서 $N(\alpha) = N(\beta) = p$이다. 노름이 소수이므로 $\alpha$는 Gaussian prime이고, $p = \alpha\overline{\alpha}$이므로 $\beta = \overline{\alpha}$이며 $\overline{\alpha}$도 노름이 $p$인 Gaussian prime이다. $\alpha = \pi$로 두자. $\overline{\pi}$가 $\pi$의 associate라고 가정하고 $\pi = a + bi$로 쓰면, $\overline{\pi} = u\pi$ ($u \in \{\pm 1, \pm i\}$)에서 $u = 1$이면 $b = 0$, $u = -1$이면 $a = 0$, $u = \pm i$이면 $a = \mp b$이다. 앞의 두 경우 $p = a^2 + b^2$은 완전제곱수이고 뒤의 경우 $p = 2a^2$이므로 홀수 소수 $p$에 모순이다.
 
 이제 위 목록이 전부임을 보이자. $\pi'$가 임의의 Gaussian prime이면 어떤 유리소수 $p$를 나눈다. $p = 2$이면 $\pi' \mid -i(1 + i)^2$에서 $\pi' \mid 1 + i$이고, $1 + i$가 irreducible이므로 $\pi'$는 $1 + i$의 associate이다. $p \equiv 3 \pmod{4}$이면 $p = \pi'\gamma$에서 $p$가 irreducible이므로 $\gamma$가 단원이다. $p \equiv 1 \pmod{4}$이면 $\pi' \mid \pi\overline{\pi}$이므로 $\pi' \mid \pi$ 또는 $\pi' \mid \overline{\pi}$이고, 둘 다 irreducible이므로 $\pi'$는 $\pi$ 또는 $\overline{\pi}$의 associate이다.
 :::
 
-[정리 6](#thm6)은 $\mathbb{Z}[i]$에서의 소수 개념이 $\mathbb{Z}$에서와 어긋나는 지점을 정확히 알려준다. $2$는 소수가 아니고 단원 곱을 제외하고 $(1 + i)^2$이다. $5 = (2 + i)(2 - i)$, $13 = (3 + 2i)(3 - 2i)$처럼 $4k + 1$ 꼴의 소수는 서로 다른 두 Gaussian prime으로 쪼개진다. 반면 $3, 7, 11$ 같은 $4k + 3$ 꼴의 소수는 그대로 Gaussian prime으로 남는다. 노름이 소수인 원소는 항상 Gaussian prime이지만 역은 성립하지 않는다는 점도 보인다. $3$은 Gaussian prime이지만 노름이 $9$이다.
+[정리 6](#thm6){: data-lid="68uwv" }은 $\mathbb{Z}[i]$에서의 소수 개념이 $\mathbb{Z}$에서와 어긋나는 지점을 정확히 알려준다. $2$는 소수가 아니고 단원 곱을 제외하고 $(1 + i)^2$이다. $5 = (2 + i)(2 - i)$, $13 = (3 + 2i)(3 - 2i)$처럼 $4k + 1$ 꼴의 소수는 서로 다른 두 Gaussian prime으로 쪼개진다. 반면 $3, 7, 11$ 같은 $4k + 3$ 꼴의 소수는 그대로 Gaussian prime으로 남는다. 노름이 소수인 원소는 항상 Gaussian prime이지만 역은 성립하지 않는다는 점도 보인다. $3$은 Gaussian prime이지만 노름이 $9$이다.
 
 가우스 정수의 소인수분해는 이 분류를 따라 노름을 길잡이로 삼아 계산한다.
 
@@ -119,14 +119,14 @@ $$7 + i = -i(1 + i)(2 + i)^2$$
 이다. 같은 노름의 $2 - i$는 약수가 아니다. $(7 + i)/(2 - i) = (7 + i)(2 + i)/5 = (13 + 9i)/5$가 가우스 정수가 아니기 때문이다. 노름 $5$의 소인수가 있다는 사실만으로는 $2 + i$와 $2 - i$를 구별할 수 없다는 점이 이 계산에서 틀리기 쉬운 부분이다.
 :::
 
-[정리 6](#thm6)에서 곧바로 Fermat의 정리가 나온다. $2 = 1^2 + 1^2$이므로 홀수 소수만 다루면 된다.
+[정리 6](#thm6){: data-lid="qq9pq" }에서 곧바로 Fermat의 정리가 나온다. $2 = 1^2 + 1^2$이므로 홀수 소수만 다루면 된다.
 
 ::: 따름정리 8 (Fermat의 두 제곱수 정리)
 소수 $p$가 두 제곱수의 합 $p = x^2 + y^2$으로 쓰이는 것은 $p = 2$이거나 $p \equiv 1 \pmod{4}$인 것과 동치이다. $p \equiv 1 \pmod{4}$이면 이 표현은 $x, y$의 순서와 부호를 무시하고 유일하다.
 :::
 
 ::: 증명
-$p \equiv 3 \pmod{4}$이면 제곱수의 합이 $4$로 나눈 나머지 $3$을 가질 수 없다. $p = 2$는 $1^2 + 1^2$이다. $p \equiv 1 \pmod{4}$이면 [정리 6](#thm6)의 3에서 $p = \pi\overline{\pi}$, $N(\pi) = p$이므로 $\pi = x + yi$에 대해 $p = x^2 + y^2$이다.
+$p \equiv 3 \pmod{4}$이면 제곱수의 합이 $4$로 나눈 나머지 $3$을 가질 수 없다. $p = 2$는 $1^2 + 1^2$이다. $p \equiv 1 \pmod{4}$이면 [정리 6](#thm6){: data-lid="2nfs9" }의 3에서 $p = \pi\overline{\pi}$, $N(\pi) = p$이므로 $\pi = x + yi$에 대해 $p = x^2 + y^2$이다.
 
 유일성을 보이자. $p = x^2 + y^2$이면 $N(x + yi) = p$이므로 $x + yi$는 노름이 소수인 Gaussian prime이고 $p \mid N(x + yi)$이므로 $x + yi \mid p = \pi\overline{\pi}$에서 $x + yi$는 $\pi$ 또는 $\overline{\pi}$의 associate이다. 따라서 $x + yi \in \{\pm\pi, \pm i\pi, \pm\overline{\pi}, \pm i\overline{\pi}\}$이다. $\pi = a + bi$이면 이 여덟 원소의 실수부와 허수부는 $(\pm a, \pm b)$ 또는 $(\pm b, \pm a)$이고, $\{\lvert x\rvert, \lvert y\rvert\} = \{a, b\}$가 결정된다.
 :::
@@ -140,9 +140,9 @@ $p \equiv 3 \pmod{4}$이면 제곱수의 합이 $4$로 나눈 나머지 $3$을 �
 :::
 
 ::: 증명
-$q \equiv 3 \pmod{4}$인 모든 소수의 지수가 짝수라 하고 $n = 2^a\prod p_j^{b_j}\prod q_k^{2c_k}$로 쓰자 ($p_j \equiv 1$, $q_k \equiv 3 \pmod{4}$). $2 = N(1 + i)$이고 $p_j = N(\pi_j)$ ([정리 6](#thm6)), $q_k^2 = N(q_k)$이므로 각 인수가 가우스 정수의 노름이다. 노름은 multiplicative이므로 그 곱인 $n$도 노름, 곧 두 제곱수의 합이다.
+$q \equiv 3 \pmod{4}$인 모든 소수의 지수가 짝수라 하고 $n = 2^a\prod p_j^{b_j}\prod q_k^{2c_k}$로 쓰자 ($p_j \equiv 1$, $q_k \equiv 3 \pmod{4}$). $2 = N(1 + i)$이고 $p_j = N(\pi_j)$ ([정리 6](#thm6){: data-lid="fi6hl" }), $q_k^2 = N(q_k)$이므로 각 인수가 가우스 정수의 노름이다. 노름은 multiplicative이므로 그 곱인 $n$도 노름, 곧 두 제곱수의 합이다.
 
-역으로 $n = x^2 + y^2 = N(\alpha)$ ($\alpha = x + yi$)이고 $q \equiv 3 \pmod{4}$인 소수 $q$가 있다고 하자. [정리 6](#thm6)에 의하여 $q$는 Gaussian prime이다. [정리 4](#thm4)에 의하여 $\alpha$를 소인수분해했을 때 $q$의 associate가 나타나는 횟수를 $e$라 하자. 복소켤레는 환의 automorphism이고 $q$를 고정하므로 $\overline{\alpha}$의 소인수분해에서도 $q$의 associate가 정확히 $e$번 나타난다. $n = \alpha\overline{\alpha}$이므로 $n$의 소인수분해에서 $q$의 지수는 $2e$이다. 여기서 $\mathbb{Z}$의 소인수분해와 $\mathbb{Z}[i]$의 소인수분해를 비교할 때는 $q$ 외의 Gaussian prime이 $q$의 associate가 아니라는 사실을 쓴다. 이는 [정리 4](#thm4)의 유일성에서 나온다.
+역으로 $n = x^2 + y^2 = N(\alpha)$ ($\alpha = x + yi$)이고 $q \equiv 3 \pmod{4}$인 소수 $q$가 있다고 하자. [정리 6](#thm6){: data-lid="quhzz" }에 의하여 $q$는 Gaussian prime이다. [정리 4](#thm4){: data-lid="9fboo" }에 의하여 $\alpha$를 소인수분해했을 때 $q$의 associate가 나타나는 횟수를 $e$라 하자. 복소켤레는 환의 automorphism이고 $q$를 고정하므로 $\overline{\alpha}$의 소인수분해에서도 $q$의 associate가 정확히 $e$번 나타난다. $n = \alpha\overline{\alpha}$이므로 $n$의 소인수분해에서 $q$의 지수는 $2e$이다. 여기서 $\mathbb{Z}$의 소인수분해와 $\mathbb{Z}[i]$의 소인수분해를 비교할 때는 $q$ 외의 Gaussian prime이 $q$의 associate가 아니라는 사실을 쓴다. 이는 [정리 4](#thm4){: data-lid="g71qs" }의 유일성에서 나온다.
 :::
 
 $21 = 3 \cdot 7$은 $3$과 $7$이 모두 $4k + 3$ 꼴이고 지수가 $1$이므로 두 제곱수의 합이 아니다. $4$로 나눈 나머지가 $1$인 것만으로 충분하지 않다는 처음의 관찰이 이렇게 설명된다. 반면 $45 = 3^2 \cdot 5$는 $3$의 지수가 짝수이고 $45 = 6^2 + 3^2$이다. 이 경우 표현이 $3 \cdot (2 + i)$의 노름에서 나온다.
@@ -166,7 +166,7 @@ $$\begin{aligned}
 모든 음이 아닌 정수는 네 개의 정수의 제곱의 합으로 쓰인다.
 :::
 
-[정리 9](#thm9)에 의해 $3$이나 $21$은 두 제곱수의 합이 아니고, $7 = 4 + 1 + 1 + 1$은 세 제곱수의 합으로도 쓰이지 않으므로 네 개라는 개수는 줄일 수 없다.
+[정리 9](#thm9){: data-lid="395oz" }에 의해 $3$이나 $21$은 두 제곱수의 합이 아니고, $7 = 4 + 1 + 1 + 1$은 세 제곱수의 합으로도 쓰이지 않으므로 네 개라는 개수는 줄일 수 없다.
 
 ---
 
