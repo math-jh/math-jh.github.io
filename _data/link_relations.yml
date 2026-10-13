@@ -951,7 +951,7 @@
 "3xwzd": {relation: forward, reviewed: true}
 "3xy48": {relation: required, reviewed: true}
 "3y1cc": {relation: required, reviewed: true}
-"3y2vh": {relation: weak}
+"3y2vh": {relation: requires-review}
 "3ydkr": {relation: required, reviewed: true}
 "3yqkg": {relation: required, reviewed: true}
 "3yvpf": {relation: required, reviewed: true}
@@ -1113,7 +1113,7 @@
 "4l0s1": {relation: required, reviewed: true}
 "4l1um": {relation: required, reviewed: true}
 "4l38f": {relation: required, reviewed: true}
-"4la7b": {relation: required}
+"4la7b": {relation: required, reviewed: true}
 "4lib6": {relation: required, reviewed: true}
 "4lk3x": {relation: required, reviewed: true}
 "4lnqi": {relation: required, reviewed: true}
@@ -1788,7 +1788,7 @@
 "79hkg": {relation: required, reviewed: true}
 "79ktp": {relation: required, reviewed: true}
 "79z5l": {relation: required, reviewed: true}
-"7a16n": {relation: required}
+"7a16n": {relation: required, reviewed: true}
 "7a2ho": {relation: weak, reviewed: true}
 "7aevr": {relation: required, reviewed: true}
 "7ajt4": {relation: required, reviewed: true}
@@ -5148,7 +5148,7 @@
 "lohah": {relation: required, reviewed: true}
 "loi4o": {relation: required, reviewed: true}
 "loirx": {relation: forward, reviewed: true}
-"lorj6": {relation: required}
+"lorj6": {relation: required, reviewed: true}
 "lov3q": {relation: required, reviewed: true}
 "loxku": {relation: required, reviewed: true}
 "lp3la": {relation: required, reviewed: true}
@@ -5328,7 +5328,7 @@
 "mdqyr": {relation: required, reviewed: true}
 "me31z": {relation: required, reviewed: true}
 "mei9x": {relation: weak, reviewed: true}
-"mej67": {relation: required}
+"mej67": {relation: required, reviewed: true}
 "memtv": {relation: required, reviewed: true}
 "menzp": {relation: required, reviewed: true}
 "meuup": {relation: required, reviewed: true}
@@ -7023,7 +7023,7 @@
 "tc4hf": {relation: required, reviewed: true}
 "tcekl": {relation: required, reviewed: true}
 "tckrz": {relation: required, reviewed: true}
-"tckwj": {relation: required}
+"tckwj": {relation: required, reviewed: true}
 "tcnbh": {relation: required, reviewed: true}
 "tcnxb": {relation: required, reviewed: true}
 "tcx41": {relation: required, reviewed: true}
