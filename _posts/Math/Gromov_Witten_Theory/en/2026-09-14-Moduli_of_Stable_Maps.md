@@ -211,7 +211,7 @@ $$\int_\beta c_1(T_X)+\dim X-3+n$$
 
 Although convexity is a condition on a smooth $\mathbb{P}^1$, one can show that for a nodal genus $0$ curve we also have $H^1(C,\mu^\ast T_X)=0$. Therefore, by [Proposition 4](#prop4){: data-lid="qh7wb" }, we see that $T^2=0$. A representative example of such a convex target is a homogeneous space $G/P$; in this case, convexity holds because $T_{G/P}$ is globally generated.
 
-::: Example 6
+::: Example 7
 Let $X=\mathbb{P}^r$, $g=0$, $n=0$, and $\beta=[\text{line}]$. A degree $1$ stable map sends $\mathbb{P}^1$ isomorphically to a line in $\mathbb{P}^r$, and the freedom of parametrization is absorbed by $\Aut(\mathbb{P}^1)$. Therefore, the remaining data is the line itself, and we have
 
 $$\overline{\mathcal{M}}_{0,0}(\mathbb{P}^r,1)\cong\Gr(2,r+1)$$
