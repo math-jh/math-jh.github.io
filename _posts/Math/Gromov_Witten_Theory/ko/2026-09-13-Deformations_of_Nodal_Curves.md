@@ -68,7 +68,7 @@ $$g=\sum_{j=1}^c g_j+d-c+1$$
 이다.
 :::
 
-Projective nodal curve $C$는 étale-local하게 hypersurface이므로 Cohen-Macaulay이고, 따라서 dualizing sheaf $\omega_C$를 갖는다. ([\[대수다양체\] §세르 쌍대성, §§세르 쌍대성의 일반화](/ko/math/algebraic_varieties/serre_duality#세르-쌍대성의-일반화)) 이는 node 바깥에서는 $\Omega_C$와 isomorphic한 것이므로, 우리는 각 node를 포함하는 열린집합 $U\subseteq C$에 대하여 section $\omega_C(U)$를 기술하면 충분하다. 
+Projective nodal curve $C$는 étale-local하게 hypersurface이므로 Cohen-Macaulay이고, 따라서 dualizing sheaf $\omega_C$를 갖는다. ([\[대수다양체\] §세르 쌍대성, §§세르 쌍대성의 일반화](/ko/math/algebraic_varieties/serre_duality#세르-쌍대성의-일반화){: data-lid="jenro" }) 이는 node 바깥에서는 $\Omega_C$와 isomorphic한 것이므로, 우리는 각 node를 포함하는 열린집합 $U\subseteq C$에 대하여 section $\omega_C(U)$를 기술하면 충분하다. 
 
 이를 위해 $C$의 normalization $\nu:\widetilde{C}\rightarrow C$를 생각한 후, node $p$의 normalization에 의한 두 preimage를 $p_1,p_2$라 하자. Node의 étale-local model $A=\mathbb{K}[\x,\y]/(\x\y)$에서 $\omega_C$의 section은 두 branch 위의 rational 1-form의 pair $(\eta_1,\eta_2)$ 가운데 적당한 $a\in\mathbb{K}$와 $f_1\in\mathbb{K}[\x]$, $f_2\in\mathbb{K}[\y]$에 대하여
 
@@ -84,7 +84,7 @@ $$\nu^\ast\omega_C\cong\omega_{\widetilde{C}}(D)$$
 
 $$\deg\omega_{\widetilde{C}_j}(D_j)=\deg\omega_{\widetilde{C}_j}+\deg D_j=2g_j-2+m_j$$
 
-이다. 각 node는 normalization에서 두 preimage를 가지므로 $\sum_{j=1}^c m_j=2d$이고, 따라서 이 degree들의 합은 [명제 2](#prop2)에 의하여
+이다. 각 node는 normalization에서 두 preimage를 가지므로 $\sum_{j=1}^c m_j=2d$이고, 따라서 이 degree들의 합은 [명제 2](#prop2){: data-lid="lhuop" }에 의하여
 
 $$\sum_{j=1}^c(2g_j-2)+2d=2(g-d+c-1)-2c+2d=2g-2$$
 
@@ -150,7 +150,7 @@ $$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde
 
 을 얻는다. 위의 계산에서 우리는 임의의 automorphism은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴로 쓰이는 것을 알고 있으며, 이때 derivation $v$는 smooth curve $\widetilde{C}$ 위에서 vector field를 의미하므로 이 식은 automorphism을 항등원에서 infinitesimal하게 움직이는 방향이 normalization 위의 vector field로 나타난다는 것으로 해석할 수 있다.
 
-지금까지의 계산을 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11)의 언어로 다시 정리해 두자. 이를 통해 우리는 앞선 명제들에서 수행한 local한 계산을 곡선 전체의 deformation으로 이어 붙이고, 고차 deformation의 obstruction이 놓이는 $T^2$까지 계산할 수 있다. 표기의 편의를 위해 $\LL_C=\LL_{C/\mathbb{K}}$, $\Omega_C=\Omega_{C/\mathbb{K}}$라 하면, marked point가 없는 경우, 이 정리가 주는 공간
+지금까지의 계산을 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="6chlh" }의 언어로 다시 정리해 두자. 이를 통해 우리는 앞선 명제들에서 수행한 local한 계산을 곡선 전체의 deformation으로 이어 붙이고, 고차 deformation의 obstruction이 놓이는 $T^2$까지 계산할 수 있다. 표기의 편의를 위해 $\LL_C=\LL_{C/\mathbb{K}}$, $\Omega_C=\Omega_{C/\mathbb{K}}$라 하면, marked point가 없는 경우, 이 정리가 주는 공간
 
 $$T^i(C)=\Ext^i_C(\LL_C,\mathcal{O}_C)$$
 
@@ -160,9 +160,9 @@ $$T^i(C)=\Ext^i_C(\LL_C,\mathcal{O}_C)$$
 - $T^0(C)$는 trivial deformation의 automorphism 가운데 central fiber에서 identity인 것들, 곧 $C$의 infinitesimal automorphism을 잰다. 앞에서 본 것과 같이 이들은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴이므로 $T^0(C)$는 $C$ 위의 global vector field들의 공간이며, $\Aut(C)$의 항등원에서의 tangent space이다.
 - $T^2(C)$는 이러한 deformation을 고차의 deformation으로 연장할 때의 obstruction을 통제한다.
 
-일반적으로 $\LL_C$는 degree $0$ 이상에서 항을 갖는 complex로, 일반적인 singular scheme에서는 이 complex가 담고 있는 정보를 $\Omega_C$로 옮기는 방법이 존재하지 않는다. 그러나 우리의 경우인 nodal curve에서는 $\LL_C$는 degree $0$에 놓인 $\Omega_C$와 quasi-isomorphic하며, 아래에서 보듯 이는 node의 local model이 hypersurface이고 reduced라는 데서 온다. 이를 확인하기 위해 우선 $\LL_C\rightarrow H_0(\LL_C)$를 정의하자. 이는 오직 degree $0$에서만 quotient map $(\LL_C)_0\rightarrow H_0(\LL_C)$로, 나머지 degree에서는 $0$으로 정의되는 map이다. 이 map은 $\LL_C$를 나타내는 complex의 선택에 의존하지 않고 잘 정의되는 것을 확인할 수 있다. 또 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9) 직전에서 본 것과 같이 $H_0(\LL_C)=\Omega_C$이므로 이 map은 morphism $\LL_C\rightarrow\Omega_C$이고, 정의에 의하여 $H_0$에서 isomorphism이다.
+일반적으로 $\LL_C$는 degree $0$ 이상에서 항을 갖는 complex로, 일반적인 singular scheme에서는 이 complex가 담고 있는 정보를 $\Omega_C$로 옮기는 방법이 존재하지 않는다. 그러나 우리의 경우인 nodal curve에서는 $\LL_C$는 degree $0$에 놓인 $\Omega_C$와 quasi-isomorphic하며, 아래에서 보듯 이는 node의 local model이 hypersurface이고 reduced라는 데서 온다. 이를 확인하기 위해 우선 $\LL_C\rightarrow H_0(\LL_C)$를 정의하자. 이는 오직 degree $0$에서만 quotient map $(\LL_C)_0\rightarrow H_0(\LL_C)$로, 나머지 degree에서는 $0$으로 정의되는 map이다. 이 map은 $\LL_C$를 나타내는 complex의 선택에 의존하지 않고 잘 정의되는 것을 확인할 수 있다. 또 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="cj6r9" } 직전에서 본 것과 같이 $H_0(\LL_C)=\Omega_C$이므로 이 map은 morphism $\LL_C\rightarrow\Omega_C$이고, 정의에 의하여 $H_0$에서 isomorphism이다.
 
-우리 주장은 이것이 모든 $i\geq1$에 대하여도 $H_i(\LL_C)=0$을 만족한다는 것이며, 이는 국소적인 조건이므로 각 점의 근방에서 확인하면 된다. 우선 $C$의 smooth point 근방에서는 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9)의 증명에서와 같이 cotangent complex가 locally free sheaf $\Omega_C$ 하나와 quasi-isomorphic하므로 더 보일 것이 없다. 문제가 될 수 있는 것은 node 근방으로, $C$는 étale-local하게 local model $R=\mathbb{K}[\x,\y]/(\x\y)$로 주어지고, cotangent complex는 étale morphism에 의한 pullback과 compatible하므로 $R$에서 확인하면 충분하다. 이는 $\mathbb{K}[\x,\y]$를 nonzerodivisor 하나로 자른 것이므로 local complete intersection이고 ([\[스킴\] §완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1)), 따라서 [\[스킴\] §변형이론과 여접 복합체, §§소박한 여접 복합체와 매끄러움](/ko/math/scheme_theory/deformation_theory#소박한-여접-복합체와-매끄러움)에서 보았듯 $\LL_R$은 presentation $\mathbb{K}[\x,\y]\rightarrow R$에 대한 naive cotangent complex $\NL_R$과 quasi-isomorphic하다. 이 presentation의 conormal module $(\x\y)/(\x\y)^2$는 $\x\y$의 class 하나를 basis로 갖는 free $R$-module이므로, 해당 링크에서의 Jacobian 계산에 $f=\x\y$를 대입하면
+우리 주장은 이것이 모든 $i\geq1$에 대하여도 $H_i(\LL_C)=0$을 만족한다는 것이며, 이는 국소적인 조건이므로 각 점의 근방에서 확인하면 된다. 우선 $C$의 smooth point 근방에서는 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="xoabf" }의 증명에서와 같이 cotangent complex가 locally free sheaf $\Omega_C$ 하나와 quasi-isomorphic하므로 더 보일 것이 없다. 문제가 될 수 있는 것은 node 근방으로, $C$는 étale-local하게 local model $R=\mathbb{K}[\x,\y]/(\x\y)$로 주어지고, cotangent complex는 étale morphism에 의한 pullback과 compatible하므로 $R$에서 확인하면 충분하다. 이는 $\mathbb{K}[\x,\y]$를 nonzerodivisor 하나로 자른 것이므로 local complete intersection이고 ([\[스킴\] §완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="9arnl" }), 따라서 [\[스킴\] §변형이론과 여접 복합체, §§소박한 여접 복합체와 매끄러움](/ko/math/scheme_theory/deformation_theory#소박한-여접-복합체와-매끄러움){: data-lid="mc2dh" }에서 보았듯 $\LL_R$은 presentation $\mathbb{K}[\x,\y]\rightarrow R$에 대한 naive cotangent complex $\NL_R$과 quasi-isomorphic하다. 이 presentation의 conormal module $(\x\y)/(\x\y)^2$는 $\x\y$의 class 하나를 basis로 갖는 free $R$-module이므로, 해당 링크에서의 Jacobian 계산에 $f=\x\y$를 대입하면
 
 $$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\longrightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
 
@@ -178,7 +178,7 @@ $$\ann(\y)=(\x),\qquad \ann(\x)=(\y)$$
 
 $$T^i(C)=\Ext^i_C(\Omega_C,\mathcal{O}_C),\qquad\mathcal{T}^q_{C/\mathbb{K}}=\sExt^q(\Omega_C,\mathcal{O}_C)$$
 
-이 성립한다. 여기서 $\mathcal{T}^q_{C/\mathbb{K}}$는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12)의 국소 자료이며, 특히 $\mathcal{T}^0_{C/\mathbb{K}}$는 앞에서 계산한 $\mathcal{T}_{C/\mathbb{K}}$이다.
+이 성립한다. 여기서 $\mathcal{T}^q_{C/\mathbb{K}}$는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="6d3kc" }의 국소 자료이며, 특히 $\mathcal{T}^0_{C/\mathbb{K}}$는 앞에서 계산한 $\mathcal{T}_{C/\mathbb{K}}$이다.
 
 그럼 우선 marked point들은 smooth locus에 놓여 있으므로 $\mathcal{O}_C(\Sigma)$는 line bundle이며, 우리는 $\Omega_C$를 이것으로 twist한 $\Omega_C(\Sigma)=\Omega_C\otimes\mathcal{O}_C(\Sigma)$의 sheaf Ext를 계산한다. 우리가 보일 것은 다음의 식들
 
@@ -196,7 +196,7 @@ $$\at{0}{\Hom_R(R\dd{\x}\oplus R\dd{\y},R)}\overset{\bar{d}^\ast}{\longrightarro
 
 $$R^2\rightarrow R,\qquad(a,b)\mapsto a\y+b\x$$
 
-로 쓸 수 있다. 이 명시적인 함수를 통해 cohomology를 직접 계산하면, degree $0$의 cohomology $\ker\bar{d}^\ast$는 $a\y+b\x=0$을 만족하는 $(a,b)$들의 모임인데, 이는 [명제 4](#prop4) 앞에서 derivation $v$에 대해 얻은 조건 $v(\x\y)=\y a+\x b=0$과 같으므로 $\Hom_R(\Omega_R,R)=\Der_\mathbb{K}(R,R)$이며, 이 근방의 infinitesimal automorphism들의 sheaf $\mathcal{T}_{C/\mathbb{K}}$를 다시 얻는다. Degree $1$의 cohomology는 $\coker\bar{d}^\ast$이고, $\bar{d}^\ast$의 image가 $\x$와 $\y$로 생성되는 ideal이므로 이는 $R/(\x,\y)=\mathbb{K}$가 되며, 이들은 node 하나에 놓인 $1$차원 공간을 주므로 identification $\mathcal{T}^1_{C/\mathbb{K}}=\sExt^1(\Omega_C,\mathcal{O}_C)$에 의해 이것이 곧 node의 deformation space $T_p^1$임을 안다. 즉 앞에서 marked point의 영향을 $T^0$과 $T^1$으로 나누어 살펴본 것은 $\Omega_C(\Sigma)$의 sheaf Ext를 계산한 것이다.
+로 쓸 수 있다. 이 명시적인 함수를 통해 cohomology를 직접 계산하면, degree $0$의 cohomology $\ker\bar{d}^\ast$는 $a\y+b\x=0$을 만족하는 $(a,b)$들의 모임인데, 이는 [명제 4](#prop4){: data-lid="4akca" } 앞에서 derivation $v$에 대해 얻은 조건 $v(\x\y)=\y a+\x b=0$과 같으므로 $\Hom_R(\Omega_R,R)=\Der_\mathbb{K}(R,R)$이며, 이 근방의 infinitesimal automorphism들의 sheaf $\mathcal{T}_{C/\mathbb{K}}$를 다시 얻는다. Degree $1$의 cohomology는 $\coker\bar{d}^\ast$이고, $\bar{d}^\ast$의 image가 $\x$와 $\y$로 생성되는 ideal이므로 이는 $R/(\x,\y)=\mathbb{K}$가 되며, 이들은 node 하나에 놓인 $1$차원 공간을 주므로 identification $\mathcal{T}^1_{C/\mathbb{K}}=\sExt^1(\Omega_C,\mathcal{O}_C)$에 의해 이것이 곧 node의 deformation space $T_p^1$임을 안다. 즉 앞에서 marked point의 영향을 $T^0$과 $T^1$으로 나누어 살펴본 것은 $\Omega_C(\Sigma)$의 sheaf Ext를 계산한 것이다.
 
 실제로 $\Omega_C(\Sigma)$는 marked point가 있을 때의 deformation을 재는 대상이다. 이를 확인하기 위해 우선 다음의 short exact sequence
 
@@ -290,11 +290,11 @@ $$\mathcal{C}_{A'}\times_{\Spec A'}\Spec A\cong\mathcal{C}_A$$
 
 $$A'=A'/\mathfrak{m}^NJ\longrightarrow\cdots\longrightarrow A'/\mathfrak{m}J\longrightarrow A'/J=A$$
 
-로 분해된다. 각 단계의 kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$는 source ring의 maximal ideal에 의해 소멸하므로, $\mathfrak{m}_{A'}I=0$인 kernel $I$를 갖는 surjection $A'\rightarrow A$에 대해서만 연장을 보이면 충분하다. 이 경우 $I^2=0$이므로 $A'\rightarrow A$는 square-zero extension이 되며, 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11)을 적용할 수 있게 된다. 그럼 coefficient sheaf가 central fiber 위의 $\mathcal{O}_C\otimes_\mathbb{K}I$이므로, flat base change와 $L_C\simeq\Omega_C$를 사용하면 이 obstruction은
+로 분해된다. 각 단계의 kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$는 source ring의 maximal ideal에 의해 소멸하므로, $\mathfrak{m}_{A'}I=0$인 kernel $I$를 갖는 surjection $A'\rightarrow A$에 대해서만 연장을 보이면 충분하다. 이 경우 $I^2=0$이므로 $A'\rightarrow A$는 square-zero extension이 되며, 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="cmkkl" }을 적용할 수 있게 된다. 그럼 coefficient sheaf가 central fiber 위의 $\mathcal{O}_C\otimes_\mathbb{K}I$이므로, flat base change와 $L_C\simeq\Omega_C$를 사용하면 이 obstruction은
 
 $$\ob(\mathcal{C}_A/A')\in\Ext^2_C(\Omega_C,\mathcal{O}_C\otimes_\mathbb{K}I)\cong T^2(C)\otimes_\mathbb{K}I$$
 
-에 놓이며, 이것이 $0$인 것은 연장이 존재하는 것과 동치이다. 곡선을 연장한 뒤 marked section은 $p_j$ 근방의 smoothness에 의해 항상 extend되므로, 보여야 할 것은 $T^2(C)\cong\Ext^2_C(\Omega_C(\Sigma),\mathcal{O}_C)$가 $0$이라는 것이다. 이를 확인하기 위해 [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11)이 주는 spectral sequence
+에 놓이며, 이것이 $0$인 것은 연장이 존재하는 것과 동치이다. 곡선을 연장한 뒤 marked section은 $p_j$ 근방의 smoothness에 의해 항상 extend되므로, 보여야 할 것은 $T^2(C)\cong\Ext^2_C(\Omega_C(\Sigma),\mathcal{O}_C)$가 $0$이라는 것이다. 이를 확인하기 위해 [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="r5mnh" }이 주는 spectral sequence
 
 $$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Longrightarrow\Ext^{p+q}_C(\Omega_C(\Sigma),\mathcal{O}_C)$$
 
@@ -304,7 +304,7 @@ $$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Longrightar
 $n$개의 marked point를 갖는 prestable curve $(C,p_\bullet)$에 대하여 $\Ext^2_C(\Omega_C(\Sigma),\mathcal{O}_C)=0$이다. 따라서 $(C,p_\bullet)$의 deformation은 *unobstructed*이다. 
 :::
 ::: 증명
-[정리 5](#thm5) 앞에서 본 것과 같이 $C$ 위의 quasi-coherent sheaf의 cohomology는 degree $2$ 이상에서 소멸하므로 
+[정리 5](#thm5){: data-lid="suizo" } 앞에서 본 것과 같이 $C$ 위의 quasi-coherent sheaf의 cohomology는 degree $2$ 이상에서 소멸하므로 
 
 $$E_2^{2,0}=H^2\bigl(C,\sExt^0(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)=H^2(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma))=0$$
 
@@ -319,27 +319,27 @@ $$E_2^{1,1}=H^1\bigl(C,\sExt^1(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)=0$$
 
 이제 residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $R$을 고정하자. 그럼 이 위에 정의된 formal deformation $\mathcal{X}$가 *versal*이라는 것은 임의의 formal deformation이 주어졌을 때 이것이 $\mathcal{X}$의 pullback으로 결정되는 것이다. 더 정확하게 말하자면, residue field가 $\mathbb{K}$인 임의의 complete local $\mathbb{K}$-algebra $S$ 위의 임의의 formal deformation이 주어졌을 때, 어떠한 local homomorphism $R\rightarrow S$를 따라 $\mathcal{X}$를 당겨 이 formal deformation을 얻을 수 있는 것이며, 우리는 추가로 $S=\mathbb{K}[\epsilon]$인 경우 이러한 local homomorphism이 <em-ko>유일하게</em-ko> 결정될 것 또한 요구한다. 직관적으로 local homomorphism $R\rightarrow\mathbb{K}[\epsilon]$은 곧 $R$의 tangent vector이며, $\mathbb{K}[\epsilon]$ 위의 deformation들은 $T^1(C, p_\bullet)$을 이루므로 이 조건은 $R$의 tangent space와 $T^1(C, p_\bullet)$을 identify하는 것이다. 
 
-그럼 $(C,p_\bullet)$은 versal formal deformation을 가진다는 것이 알려져 있다. 직관적으로 이는 $N=\dim T^1(C,p_\bullet)$에 대하여 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate $\s_1,\ldots,\s_N$을 잡고, $\mathbb{K}[[\s_1,\ldots,\s_N]]/(\s_1,\ldots,\s_N)^2$ 위의 first-order deformation에서 출발하여 이를 한 차수씩 연장해 나가는 것이다. 각 단계의 연장에 대한 obstruction은 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11)에 의하여 $T^2(C)$로 통제되므로, 이 obstruction이 사라지도록 $\s_1,\ldots,\s_N$ 사이에 관계식을 넣어야만 연장이 된다. 이렇게 얻어진 결과는 이 관계식들이 생성하는 ideal $J$에 대하여
+그럼 $(C,p_\bullet)$은 versal formal deformation을 가진다는 것이 알려져 있다. 직관적으로 이는 $N=\dim T^1(C,p_\bullet)$에 대하여 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate $\s_1,\ldots,\s_N$을 잡고, $\mathbb{K}[[\s_1,\ldots,\s_N]]/(\s_1,\ldots,\s_N)^2$ 위의 first-order deformation에서 출발하여 이를 한 차수씩 연장해 나가는 것이다. 각 단계의 연장에 대한 obstruction은 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="lqfm6" }에 의하여 $T^2(C)$로 통제되므로, 이 obstruction이 사라지도록 $\s_1,\ldots,\s_N$ 사이에 관계식을 넣어야만 연장이 된다. 이렇게 얻어진 결과는 이 관계식들이 생성하는 ideal $J$에 대하여
 
 $$R\cong\mathbb{K}[[\s_1,\ldots,\s_N]]/J\tag{$\ast$}$$
 
-이며, 이 때 필요한 관계식의 개수는 $\dim T^2(C)$ 이하이다. 그런데 우리 경우에는 [명제 7](#prop7)에 의하여 $T^2(C)=0$이므로 $J=0$이고, 따라서 $R\cong\mathbb{K}[[\s_1,\ldots,\s_N]]$이다. 이는 점 $[(C,p_\bullet)]$의 formal neighborhood가 smooth하다는 뜻이다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4), [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1)) 이 $R$을 $(C,p_\bullet)$의 *versal base*라 부른다. 특히 $T^0(C,p_\bullet)=0$이면 위의 local homomorphism이 $S=\mathbb{K}[\epsilon]$뿐만 아니라 모든 $S$에 대하여 유일하며, 이 경우 versal formal deformation을 *universal*이라 부른다. 
+이며, 이 때 필요한 관계식의 개수는 $\dim T^2(C)$ 이하이다. 그런데 우리 경우에는 [명제 7](#prop7){: data-lid="ctbij" }에 의하여 $T^2(C)=0$이므로 $J=0$이고, 따라서 $R\cong\mathbb{K}[[\s_1,\ldots,\s_N]]$이다. 이는 점 $[(C,p_\bullet)]$의 formal neighborhood가 smooth하다는 뜻이다. ([\[가환대수학\] §정칙국소환, ⁋명제 4](/ko/math/commutative_algebra/regular_local_rings#prop4){: data-lid="v5ayc" }, [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1){: data-lid="fzprr" }) 이 $R$을 $(C,p_\bullet)$의 *versal base*라 부른다. 특히 $T^0(C,p_\bullet)=0$이면 위의 local homomorphism이 $S=\mathbb{K}[\epsilon]$뿐만 아니라 모든 $S$에 대하여 유일하며, 이 경우 versal formal deformation을 *universal*이라 부른다. 
 
 ## 준안정 곡선의 모듈라이 스택
 
-지금까지의 계산은 한 곡선 $(C,p_\bullet)$의 근방, 곧 그 versal base 위에서 이루어졌다. 그러나 이 논의는 임의의 prestable curve $(C,p_\bullet)$에 대하여 성립하므로, prestable curve들을 모은 moduli는 모든 점에서 smooth할 것이다. 이 moduli space를 정의하기 위해서는 임의의 scheme $T$ 위에 정의된 family를 명시해주면 된다 ([\[스택\] §모듈라이 공간, ⁋정의 1](/ko/math/stacks/moduli_spaces#def1))
+지금까지의 계산은 한 곡선 $(C,p_\bullet)$의 근방, 곧 그 versal base 위에서 이루어졌다. 그러나 이 논의는 임의의 prestable curve $(C,p_\bullet)$에 대하여 성립하므로, prestable curve들을 모은 moduli는 모든 점에서 smooth할 것이다. 이 moduli space를 정의하기 위해서는 임의의 scheme $T$ 위에 정의된 family를 명시해주면 된다 ([\[스택\] §모듈라이 공간, ⁋정의 1](/ko/math/stacks/moduli_spaces#def1){: data-lid="lvrdq" })
 
 ::: 정의 8
 Scheme $T$ 위의 genus $g$, $n$개의 marked point를 갖는 *prestable curve*란 flat proper morphism $\pi:\mathcal{C}\rightarrow T$와 section $\sigma_1,\ldots,\sigma_n:T\rightarrow\mathcal{C}$들의 짝으로서, $T$의 각 geometric point $\bar{t}$ 위의 fiber $(\mathcal{C}_{\bar{t}},\sigma_1(\bar{t}),\ldots,\sigma_n(\bar{t}))$가 $n$개의 marked point를 갖는 genus $g$의 prestable curve인 것이다. 각 scheme $T$에 이들과, 그 사이의 $T$-isomorphism 가운데 section을 보존하는 것들이 이루는 groupoid를 대응시키는 moduli functor를 $\mathfrak{M}_{g,n}$으로 적는다.
 :::
 
-이 moduli functor가 locally of finite type인 algebraic stack, 곧 [\[스택\] §모듈라이 공간, ⁋정의 6](/ko/math/stacks/moduli_spaces#def6)의 moduli stack이 된다는 것은 잘 알려져 있다. $\mathfrak{M}_{g,n}$의 $\Spec\mathbb{K}$ 위의 object는 [정의 1](#def1)의 prestable curve이고, 그 stabilizer는 automorphism group $\Aut(C,p_\bullet)$이며, 앞에서 본 것과 같이 그 tangent space가 $T^0(C,p_\bullet)$이다. 또 $(C,p_\bullet)$의 $A$ 위의 deformation은 central fiber를 $(C,p_\bullet)$로 identify하는 자료와 함께 택한 morphism $\Spec A\rightarrow\mathfrak{M}_{g,n}$이다. Algebraic stack이 한 점에서 smooth하다는 것은 그 점의 versal base가 power series ring이라는 것과 같고, 앞 절에서 각 점 $[(C,p_\bullet)]$의 versal base가 power series ring임을 보였으므로 $\mathfrak{M}_{g,n}$은 smooth하다. 따라서 다음이 성립한다.
+이 moduli functor가 locally of finite type인 algebraic stack, 곧 [\[스택\] §모듈라이 공간, ⁋정의 6](/ko/math/stacks/moduli_spaces#def6){: data-lid="fvex6" }의 moduli stack이 된다는 것은 잘 알려져 있다. $\mathfrak{M}_{g,n}$의 $\Spec\mathbb{K}$ 위의 object는 [정의 1](#def1){: data-lid="9o4n7" }의 prestable curve이고, 그 stabilizer는 automorphism group $\Aut(C,p_\bullet)$이며, 앞에서 본 것과 같이 그 tangent space가 $T^0(C,p_\bullet)$이다. 또 $(C,p_\bullet)$의 $A$ 위의 deformation은 central fiber를 $(C,p_\bullet)$로 identify하는 자료와 함께 택한 morphism $\Spec A\rightarrow\mathfrak{M}_{g,n}$이다. Algebraic stack이 한 점에서 smooth하다는 것은 그 점의 versal base가 power series ring이라는 것과 같고, 앞 절에서 각 점 $[(C,p_\bullet)]$의 versal base가 power series ring임을 보였으므로 $\mathfrak{M}_{g,n}$은 smooth하다. 따라서 다음이 성립한다.
 
 ::: 정리 9
 $\mathfrak{M}_{g,n}$은 차원 $3g-3+n$의 smooth algebraic stack이다.
 :::
 ::: 증명
-앞에서 본 것과 같이 $\mathfrak{M}_{g,n}$은 locally of finite type인 smooth algebraic stack이므로, 차원에 대한 주장만 보이면 충분하다. $(C,p_\bullet)$을 나타내는 점 근방의 smooth atlas $W\rightarrow\mathfrak{M}_{g,n}$과 그 점 위의 closed point $w\in W$를 택하자. 이 점에서의 차원은 $w$에서 $W\rightarrow\mathfrak{M}_{g,n}$의 relative dimension $r$에 대하여 $\dim_wW-r$로 주어진다. ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 그럼 $(C,p_\bullet)$을 나타내는 점 $\Spec\mathbb{K}\rightarrow\mathfrak{M}_{g,n}$ 위의 fiber $W_0=W\times_{\mathfrak{M}_{g,n}}\Spec\mathbb{K}$는 차원 $r$의 smooth scheme이고, $w$에 대응하는 점에서 tangent space 사이의 exact sequence
+앞에서 본 것과 같이 $\mathfrak{M}_{g,n}$은 locally of finite type인 smooth algebraic stack이므로, 차원에 대한 주장만 보이면 충분하다. $(C,p_\bullet)$을 나타내는 점 근방의 smooth atlas $W\rightarrow\mathfrak{M}_{g,n}$과 그 점 위의 closed point $w\in W$를 택하자. 이 점에서의 차원은 $w$에서 $W\rightarrow\mathfrak{M}_{g,n}$의 relative dimension $r$에 대하여 $\dim_wW-r$로 주어진다. ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-lid="5ac8a" }) 그럼 $(C,p_\bullet)$을 나타내는 점 $\Spec\mathbb{K}\rightarrow\mathfrak{M}_{g,n}$ 위의 fiber $W_0=W\times_{\mathfrak{M}_{g,n}}\Spec\mathbb{K}$는 차원 $r$의 smooth scheme이고, $w$에 대응하는 점에서 tangent space 사이의 exact sequence
 
 $$0\rightarrow T^0(C,p_\bullet)\rightarrow T_wW_0\rightarrow T_wW\rightarrow T^1(C,p_\bullet)\rightarrow0$$
 
@@ -347,32 +347,32 @@ $$0\rightarrow T^0(C,p_\bullet)\rightarrow T_wW_0\rightarrow T_wW\rightarrow T^1
 
 $$\dim_wW-r=\dim T_wW-\dim T_wW_0=\dim T^1(C,p_\bullet)-\dim T^0(C,p_\bullet)=3g-3+n$$
 
-을 얻으며, 여기서 마지막 등식은 [따름정리 6](#cor6)에 의한 것이다.
+을 얻으며, 여기서 마지막 등식은 [따름정리 6](#cor6){: data-lid="a0i84" }에 의한 것이다.
 :::
 
-위의 증명에서 $T^0(C,p_\bullet)$은 identification을 바꾸는 infinitesimal automorphism, 곧 점 $[(C,p_\bullet)]$의 stabilizer의 tangent space로 나타났으므로, $T^0(C,p_\bullet)\neq0$인 점에서는 stabilizer가 unramified하지 않고 따라서 $\mathfrak{M}_{g,n}$은 일반적으로 Deligne–Mumford stack이 아니다. ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6))
+위의 증명에서 $T^0(C,p_\bullet)$은 identification을 바꾸는 infinitesimal automorphism, 곧 점 $[(C,p_\bullet)]$의 stabilizer의 tangent space로 나타났으므로, $T^0(C,p_\bullet)\neq0$인 점에서는 stabilizer가 unramified하지 않고 따라서 $\mathfrak{M}_{g,n}$은 일반적으로 Deligne–Mumford stack이 아니다. ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-lid="z8p7i" })
 
 ## Smoothing parameter
 
-우리는 앞에서 [명제 7](#prop7)을 적용하면 versal base가 ($\ast$)와 같이
+우리는 앞에서 [명제 7](#prop7){: data-lid="wetkp" }을 적용하면 versal base가 ($\ast$)와 같이
 
 $$R\cong\mathbb{K}[[\s_1,\ldots,\s_N]]$$
 
 으로 쓰여질 수 있음을 보았다. 정의에 의해 $R$의 각 coordinate는 prestable curve를 deform하는 방향을 나타내지만, 이렇게 적은 $\s_1,\ldots, \s_N$은 $T^1(C,p_\bullet)$의 basis에 대응하도록 잡은 것일 뿐 기하적인 의미는 없었다. 
 
-이번 절에서 우리는 이 방향들을 조금 더 자세히 살펴본다. 구체적으로, 우리는 각각의 node $p$에서 [§§준안정 곡선의 변형](#준안정-곡선의-변형)에서와 같이 node를 펴 주는 정도를 나타내는 smoothing parameter $\t_p$를 정의하고, 이들이 $R$에서 서로 독립적이며 따라서 위의 coordinate $\s_1,\ldots, \s_N$ 가운데 일부를 이들로 택할 수 있음을 보인다. 
+이번 절에서 우리는 이 방향들을 조금 더 자세히 살펴본다. 구체적으로, 우리는 각각의 node $p$에서 [§§준안정 곡선의 변형](#준안정-곡선의-변형){: data-lid="9wb6j" }에서와 같이 node를 펴 주는 정도를 나타내는 smoothing parameter $\t_p$를 정의하고, 이들이 $R$에서 서로 독립적이며 따라서 위의 coordinate $\s_1,\ldots, \s_N$ 가운데 일부를 이들로 택할 수 있음을 보인다. 
 
-이를 위해 먼저 versal formal deformation을 node 하나의 근방에서 생각하자. Node $p$에서 $C$의 complete local ring은 $p'$ 쪽 branch의 coordinate $\u$와 $p''$ 쪽 branch의 coordinate $\v$에 대하여 $\widehat{\mathcal{O}}_{C,p}\cong\mathbb{K}[[\u,\v]]/(\u\v)$이고, 그 deformation도 위와 같이 정의된다. 이 경우 first-order deformation들의 공간은 [명제 3](#prop3)의 $1$차원 공간 $T_p^1$이고, $\mathbb{K}[[\u,\v]]/(\u\v)$는 hypersurface이므로 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9) 직후에서와 같이 obstruction이 없다. 따라서 그 versal formal deformation의 base는 변수 하나의 power series ring이며, 실제로 $\mathbb{K}[[\t]]$ 위의 family
+이를 위해 먼저 versal formal deformation을 node 하나의 근방에서 생각하자. Node $p$에서 $C$의 complete local ring은 $p'$ 쪽 branch의 coordinate $\u$와 $p''$ 쪽 branch의 coordinate $\v$에 대하여 $\widehat{\mathcal{O}}_{C,p}\cong\mathbb{K}[[\u,\v]]/(\u\v)$이고, 그 deformation도 위와 같이 정의된다. 이 경우 first-order deformation들의 공간은 [명제 3](#prop3){: data-lid="p1den" }의 $1$차원 공간 $T_p^1$이고, $\mathbb{K}[[\u,\v]]/(\u\v)$는 hypersurface이므로 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="65k6a" } 직후에서와 같이 obstruction이 없다. 따라서 그 versal formal deformation의 base는 변수 하나의 power series ring이며, 실제로 $\mathbb{K}[[\t]]$ 위의 family
 
 $$\mathbb{K}[[\u,\v,\t]]/(\u\v-\t)$$
 
-가 versal formal deformation이다. 이 family는 $\mathbb{K}[[\t]]$ 위에서 flat하고, $\t$를 $\epsilon$으로 보내 얻는 first-order deformation $\u\v=\epsilon$은 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6)에서 계산한 $T_p^1$의 generator이다. 이 generator는 coordinate에 의존하지만, $\u$, $\v$를 각각 $\lambda\u$, $\mu\v$로 바꾸면 first-order deformation $\u\v=c\epsilon$이 $(\lambda\u)(\mu\v)=\lambda\mu c\epsilon$으로 적히므로 이 deformation에 $c(\partial_{\u}\otimes\partial_{\v})$를 대응시키는 것은 coordinate에 의존하지 않고, 따라서 $T_p^1$은 두 branch의 tangent line의 tensor product $T_{p'}\widetilde{C}\otimes T_{p''}\widetilde{C}$와 canonical하게 isomorphic하다. 일반적인 coordinate 변환에서도 같다. $p'$, $p''$에서의 다른 coordinate는 $\alpha(0)=\lambda$, $\beta(0)=\mu$가 $0$이 아닌 power series $\alpha$, $\beta$에 대하여 $\u'=\u\alpha(\u)$, $\v'=\v\beta(\v)$의 꼴이고, 이들로 적으면 $\u\v=c\epsilon$은 $\u'\v'=c\epsilon\alpha(\u)\beta(\v)$가 된다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6)의 계산에 의하여 first-order deformation $\u'\v'=\epsilon h$는 $h$의 상수항 $h(0)$만으로 결정되므로 이는 $\u'\v'=\lambda\mu c\epsilon$과 같은 deformation이고, $p'$, $p''$에서 $\partial_{\u}\otimes\partial_{\v}=\lambda\mu(\partial_{\u'}\otimes\partial_{\v'})$이므로 위의 대응은 이 경우에도 같은 원소를 준다.
+가 versal formal deformation이다. 이 family는 $\mathbb{K}[[\t]]$ 위에서 flat하고, $\t$를 $\epsilon$으로 보내 얻는 first-order deformation $\u\v=\epsilon$은 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="lh3nb" }에서 계산한 $T_p^1$의 generator이다. 이 generator는 coordinate에 의존하지만, $\u$, $\v$를 각각 $\lambda\u$, $\mu\v$로 바꾸면 first-order deformation $\u\v=c\epsilon$이 $(\lambda\u)(\mu\v)=\lambda\mu c\epsilon$으로 적히므로 이 deformation에 $c(\partial_{\u}\otimes\partial_{\v})$를 대응시키는 것은 coordinate에 의존하지 않고, 따라서 $T_p^1$은 두 branch의 tangent line의 tensor product $T_{p'}\widetilde{C}\otimes T_{p''}\widetilde{C}$와 canonical하게 isomorphic하다. 일반적인 coordinate 변환에서도 같다. $p'$, $p''$에서의 다른 coordinate는 $\alpha(0)=\lambda$, $\beta(0)=\mu$가 $0$이 아닌 power series $\alpha$, $\beta$에 대하여 $\u'=\u\alpha(\u)$, $\v'=\v\beta(\v)$의 꼴이고, 이들로 적으면 $\u\v=c\epsilon$은 $\u'\v'=c\epsilon\alpha(\u)\beta(\v)$가 된다. [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="p7ivl" }의 계산에 의하여 first-order deformation $\u'\v'=\epsilon h$는 $h$의 상수항 $h(0)$만으로 결정되므로 이는 $\u'\v'=\lambda\mu c\epsilon$과 같은 deformation이고, $p'$, $p''$에서 $\partial_{\u}\otimes\partial_{\v}=\lambda\mu(\partial_{\u'}\otimes\partial_{\v'})$이므로 위의 대응은 이 경우에도 같은 원소를 준다.
 
 이제 $(C,p_\bullet)$의 versal formal deformation을 node $p$의 근방으로 제한하면 $\widehat{\mathcal{O}}_{C,p}$의 $R$ 위 formal deformation을 얻고, 위의 versality에 의하여 이는 node의 versal family를 어떤 local homomorphism $\mathbb{K}[[\t]]\rightarrow R$로 당긴 것이다. 이 homomorphism이 $\t$를 보내는 원소를 $\t_p\in\mathfrak{m}_R$로 적자. 그럼 tangent space 사이의 map
 
 $$T^1(C,p_\bullet)\longrightarrow\bigoplus_{p\in\Sing C}T_p^1$$
 
-은 deformation을 각 node 근방의 local deformation으로 제한하는 것이므로 [정리 5](#thm5)의 오른쪽 map과 같고, 따라서 surjective이다. 이 일차 정보가 versal base 전체로 연장된다는 것이 다음 명제이다.
+은 deformation을 각 node 근방의 local deformation으로 제한하는 것이므로 [정리 5](#thm5){: data-lid="zx1zj" }의 오른쪽 map과 같고, 따라서 surjective이다. 이 일차 정보가 versal base 전체로 연장된다는 것이 다음 명제이다.
 
 ::: 명제 10
 $n$개의 marked point와 $d$개의 node를 갖는 prestable curve $(C,p_\bullet)$의 versal base를 $R$이라 하고 $N=\dim T^1(C,p_\bullet)$이라 하자. 그럼 위의 원소 $\t_p$ ($p\in\Sing C$)와 적당한 $\s_1,\ldots,\s_{N-d}\in\mathfrak{m}_R$에 대하여
@@ -382,29 +382,29 @@ $$R=\mathbb{K}[[\{\t_p\}_{p\in\Sing C},\s_1,\ldots,\s_{N-d}]]$$
 이다. 즉 node마다의 smoothing parameter $\t_p$들을 versal base의 coordinate의 일부로 택할 수 있으며, 이 coordinate에서 versal family의 node $p$ 근방의 complete local ring은 $R[[\u_p,\v_p]]/(\u_p\v_p-\t_p)$이다.
 :::
 ::: 증명
-Tangent space 사이의 map $T^1(C,p_\bullet)\rightarrow\bigoplus_pT_p^1$은 cotangent space 사이의 map, 곧 각 $\t_p$를 $\mathfrak{m}_R/\mathfrak{m}_R^2$에서의 class로 보내는 map의 dual이다. 따라서 [정리 5](#thm5)에 의하여 이 map이 surjective라는 것은 $\t_p$들의 class가 $\mathfrak{m}_R/\mathfrak{m}_R^2$에서 linearly independent하다는 것과 같다. 이들을 basis로 확장하도록 $\s_1,\ldots,\s_{N-d}\in\mathfrak{m}_R$을 택하자. $R$은 $N$변수 power series ring이므로, class들이 $\mathfrak{m}_R/\mathfrak{m}_R^2$의 basis를 이루는 $N$개의 원소는 $R$의 변수로 택할 수 있다. 마지막 주장은 node $p$ 근방의 restriction이 local versal family $\mathbb{K}[[\u,\v,\t]]/(\u\v-\t)$를 $\t\mapsto\t_p$로 당긴 것이라는 $\t_p$의 정의에서 나온다.
+Tangent space 사이의 map $T^1(C,p_\bullet)\rightarrow\bigoplus_pT_p^1$은 cotangent space 사이의 map, 곧 각 $\t_p$를 $\mathfrak{m}_R/\mathfrak{m}_R^2$에서의 class로 보내는 map의 dual이다. 따라서 [정리 5](#thm5){: data-lid="38w02" }에 의하여 이 map이 surjective라는 것은 $\t_p$들의 class가 $\mathfrak{m}_R/\mathfrak{m}_R^2$에서 linearly independent하다는 것과 같다. 이들을 basis로 확장하도록 $\s_1,\ldots,\s_{N-d}\in\mathfrak{m}_R$을 택하자. $R$은 $N$변수 power series ring이므로, class들이 $\mathfrak{m}_R/\mathfrak{m}_R^2$의 basis를 이루는 $N$개의 원소는 $R$의 변수로 택할 수 있다. 마지막 주장은 node $p$ 근방의 restriction이 local versal family $\mathbb{K}[[\u,\v,\t]]/(\u\v-\t)$를 $\t\mapsto\t_p$로 당긴 것이라는 $\t_p$의 정의에서 나온다.
 :::
 
-[명제 10](#prop10)은 node들의 smoothing이 서로 독립적임을 말한다. 각 node $p$ 근방에서 versal family는 $\u_p\v_p=\t_p$의 꼴이고 node 바깥에서는 $C$와 같이 smooth하므로, versal base에서 $\t_p=0$으로 정의되는 locus는 node $p$가 node로 남는 곳이고 $\t_p\neq0$인 곳에서는 $p$ 근방이 smooth해진다. 따라서 곡선이 node를 하나 이상 갖는 locus는
+[명제 10](#prop10){: data-lid="s6m44" }은 node들의 smoothing이 서로 독립적임을 말한다. 각 node $p$ 근방에서 versal family는 $\u_p\v_p=\t_p$의 꼴이고 node 바깥에서는 $C$와 같이 smooth하므로, versal base에서 $\t_p=0$으로 정의되는 locus는 node $p$가 node로 남는 곳이고 $\t_p\neq0$인 곳에서는 $p$ 근방이 smooth해진다. 따라서 곡선이 node를 하나 이상 갖는 locus는
 
 $$\prod_{p\in\Sing C}\t_p=0$$
 
-으로 주어진다. 이는 서로 다른 coordinate hyperplane들의 합집합, 곧 normal crossings divisor이며 그 성분은 $C$의 node와 일대일로 대응한다. 더 일반적으로 node들의 subset $S\subseteq\Sing C$에 대하여 $S$의 node가 모두 남는 locus는 $\t_p=0$ ($p\in S$)으로 정의되는 codimension $\lvert S\rvert$의 smooth locus이고, 특히 $C$의 $d$개 node를 모두 유지하는 locus는 codimension $d$이다. 이 마지막 locus의 tangent space는 [정리 5](#thm5)의 오른쪽 map의 kernel, 곧 $H^1(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma))$이며, 이는 [정리 5](#thm5) 뒤에서 이 항을 모든 node의 local model을 유지하는 변형으로 읽은 것과 맞는다.
+으로 주어진다. 이는 서로 다른 coordinate hyperplane들의 합집합, 곧 normal crossings divisor이며 그 성분은 $C$의 node와 일대일로 대응한다. 더 일반적으로 node들의 subset $S\subseteq\Sing C$에 대하여 $S$의 node가 모두 남는 locus는 $\t_p=0$ ($p\in S$)으로 정의되는 codimension $\lvert S\rvert$의 smooth locus이고, 특히 $C$의 $d$개 node를 모두 유지하는 locus는 codimension $d$이다. 이 마지막 locus의 tangent space는 [정리 5](#thm5){: data-lid="7y4l8" }의 오른쪽 map의 kernel, 곧 $H^1(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma))$이며, 이는 [정리 5](#thm5){: data-lid="i6j6b" } 뒤에서 이 항을 모든 node의 local model을 유지하는 변형으로 읽은 것과 맞는다.
 
-[정리 9](#thm9)의 증명에서 $W$ 위의 family는 versality에 의하여 어떤 local homomorphism $R\rightarrow\widehat{\mathcal{O}}_{W,w}$를 따라 versal formal deformation을 당긴 것이고, 위의 exact sequence에서 $T_wW\rightarrow T^1(C,p_\bullet)$가 surjective이므로 [명제 10](#prop10)의 증명과 같은 논법으로 $R$의 변수들이 $\widehat{\mathcal{O}}_{W,w}$의 변수의 일부가 된다. 따라서 smoothing parameter $\t_p$들은 smooth atlas 위에서도 local coordinate의 일부이고, $\mathfrak{M}_{g,n}$ 안에서 node를 갖는 곡선들의 locus는 normal crossings divisor이며, 정확히 $k$개의 node를 갖는 곡선들의 locus는 codimension $k$이다.
+[정리 9](#thm9){: data-lid="iq442" }의 증명에서 $W$ 위의 family는 versality에 의하여 어떤 local homomorphism $R\rightarrow\widehat{\mathcal{O}}_{W,w}$를 따라 versal formal deformation을 당긴 것이고, 위의 exact sequence에서 $T_wW\rightarrow T^1(C,p_\bullet)$가 surjective이므로 [명제 10](#prop10){: data-lid="ds93e" }의 증명과 같은 논법으로 $R$의 변수들이 $\widehat{\mathcal{O}}_{W,w}$의 변수의 일부가 된다. 따라서 smoothing parameter $\t_p$들은 smooth atlas 위에서도 local coordinate의 일부이고, $\mathfrak{M}_{g,n}$ 안에서 node를 갖는 곡선들의 locus는 normal crossings divisor이며, 정확히 $k$개의 node를 갖는 곡선들의 locus는 codimension $k$이다.
 
-[명제 10](#prop10)의 국소식은 versal base 밖의 family로도 옮겨진다. Residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $S$ 위의 $(C,p_\bullet)$의 formal deformation은 versality에 의하여 어떤 local homomorphism $\phi:R\rightarrow S$를 따라 versal formal deformation을 당긴 것이므로, 그 node $p$에서의 complete local ring은 $S[[\u,\v]]/(\u\v-\phi(\t_p))$이다. Scheme $T$ 위의 prestable curve가 closed point $t$ 위의 fiber로 $(C,p_\bullet)$을 가지면 이를 $t$에서 completion한 것은 $\widehat{\mathcal{O}}_{T,t}$ 위의 formal deformation이므로, 임의의 family는 node에서 completion하면 $\u\v=f$의 꼴이고 $f\in\widehat{\mathcal{O}}_{T,t}$는 smoothing parameter $\t_p$를 당긴 것이다. 또 $\t_p$는 node의 versal base $\mathbb{K}[[\t]]$의 coordinate를 당긴 것이므로, versal base의 성분 $\{\t_p=0\}$의 normal 방향은 $T^1(C,p_\bullet)\rightarrow T_p^1$에 의하여 $T_p^1$과 identify된다. 따라서 node $p$를 펴는 방향은 canonical하게 $T_{p'}\widetilde{C}\otimes T_{p''}\widetilde{C}$이다. 이 identification은 앞에서 본 것과 같이 coordinate의 선택에 의존하지 않으므로, $\mathfrak{M}_{g,n}$ 안에서 한 node가 남는 곡선들의 locus, 곧 국소적으로 $\{\t_p=0\}$으로 주어지는 boundary의 각 branch 위에서 점마다 서로 붙는다. 남아 있는 node의 두 branch를 순서대로 구별할 수 있는 곳에서는 두 branch의 tangent line들이 각각 line bundle을 이루고, 이 branch의 normal line bundle은 그 두 line bundle의 tensor product와 canonical하게 isomorphic하다. 두 branch를 맞바꾸어도 $\u\v=\t_p$의 $\t_p$는 바뀌지 않으므로 이 identification은 두 branch의 순서에 의존하지 않는다.
+[명제 10](#prop10){: data-lid="fsvob" }의 국소식은 versal base 밖의 family로도 옮겨진다. Residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $S$ 위의 $(C,p_\bullet)$의 formal deformation은 versality에 의하여 어떤 local homomorphism $\phi:R\rightarrow S$를 따라 versal formal deformation을 당긴 것이므로, 그 node $p$에서의 complete local ring은 $S[[\u,\v]]/(\u\v-\phi(\t_p))$이다. Scheme $T$ 위의 prestable curve가 closed point $t$ 위의 fiber로 $(C,p_\bullet)$을 가지면 이를 $t$에서 completion한 것은 $\widehat{\mathcal{O}}_{T,t}$ 위의 formal deformation이므로, 임의의 family는 node에서 completion하면 $\u\v=f$의 꼴이고 $f\in\widehat{\mathcal{O}}_{T,t}$는 smoothing parameter $\t_p$를 당긴 것이다. 또 $\t_p$는 node의 versal base $\mathbb{K}[[\t]]$의 coordinate를 당긴 것이므로, versal base의 성분 $\{\t_p=0\}$의 normal 방향은 $T^1(C,p_\bullet)\rightarrow T_p^1$에 의하여 $T_p^1$과 identify된다. 따라서 node $p$를 펴는 방향은 canonical하게 $T_{p'}\widetilde{C}\otimes T_{p''}\widetilde{C}$이다. 이 identification은 앞에서 본 것과 같이 coordinate의 선택에 의존하지 않으므로, $\mathfrak{M}_{g,n}$ 안에서 한 node가 남는 곡선들의 locus, 곧 국소적으로 $\{\t_p=0\}$으로 주어지는 boundary의 각 branch 위에서 점마다 서로 붙는다. 남아 있는 node의 두 branch를 순서대로 구별할 수 있는 곳에서는 두 branch의 tangent line들이 각각 line bundle을 이루고, 이 branch의 normal line bundle은 그 두 line bundle의 tensor product와 canonical하게 isomorphic하다. 두 branch를 맞바꾸어도 $\u\v=\t_p$의 $\t_p$는 바뀌지 않으므로 이 identification은 두 branch의 순서에 의존하지 않는다.
 
-마지막으로 [정리 5](#thm5)의 두 항이 모두 $0$이 아니고 automorphism이 $T^1$에 비자명하게 작용하는 곡선을 하나 계산한다. 이를 위해 action을 먼저 정해 두자. $(C,p_\bullet)$의 automorphism $\sigma$는 first-order deformation $(X,\iota)$를 $(X,\sigma\circ\iota)$로 보내는 것으로 $T^1(C,p_\bullet)$에 작용한다. 두 deformation $(X,\iota)$와 $(X,\sigma\circ\iota)$는 central fiber의 identification을 잊으면 같은 family이고, 이들이 deformation으로서도 isomorphic한 것은 $\sigma$가 $X$의 automorphism으로 연장되는 것과 동치이다. 즉 $\sigma$가 $T^1$의 한 원소를 고정하는 것은 그 원소가 나타내는 deformation으로 $\sigma$가 연장되는 것과 같다.
+마지막으로 [정리 5](#thm5){: data-lid="6k7tu" }의 두 항이 모두 $0$이 아니고 automorphism이 $T^1$에 비자명하게 작용하는 곡선을 하나 계산한다. 이를 위해 action을 먼저 정해 두자. $(C,p_\bullet)$의 automorphism $\sigma$는 first-order deformation $(X,\iota)$를 $(X,\sigma\circ\iota)$로 보내는 것으로 $T^1(C,p_\bullet)$에 작용한다. 두 deformation $(X,\iota)$와 $(X,\sigma\circ\iota)$는 central fiber의 identification을 잊으면 같은 family이고, 이들이 deformation으로서도 isomorphic한 것은 $\sigma$가 $X$의 automorphism으로 연장되는 것과 동치이다. 즉 $\sigma$가 $T^1$의 한 원소를 고정하는 것은 그 원소가 나타내는 deformation으로 $\sigma$가 연장되는 것과 같다.
 
 ::: 예시 11
-두 elliptic curve $E_1$, $E_2$의 원점 $p'\in E_1$, $p''\in E_2$를 하나의 node $p$로 붙여 얻은 nodal curve $C$를 생각하자. Marked point는 없고, 아래에서 order $2$인 automorphism의 eigenspace로 $T^1(C)$를 나누므로 $\mathbb{K}$의 characteristic은 $2$가 아니라 하자. [명제 2](#prop2)에 의하여 $g=1+1+1-2+1=2$이다.
+두 elliptic curve $E_1$, $E_2$의 원점 $p'\in E_1$, $p''\in E_2$를 하나의 node $p$로 붙여 얻은 nodal curve $C$를 생각하자. Marked point는 없고, 아래에서 order $2$인 automorphism의 eigenspace로 $T^1(C)$를 나누므로 $\mathbb{K}$의 characteristic은 $2$가 아니라 하자. [명제 2](#prop2){: data-lid="vdyl3" }에 의하여 $g=1+1+1-2+1=2$이다.
 
-Elliptic curve $E$의 canonical sheaf $\omega_E$는 degree $0$이고 $0$이 아닌 global section을 가지므로 trivial하고, 따라서 tangent sheaf도 trivial하다. 그러므로 [명제 4](#prop4)에 의하여 $\mathcal{T}_{C/\mathbb{K}}$는 $\mathcal{O}_{E_1}(-p')$와 $\mathcal{O}_{E_2}(-p'')$의 pushforward의 direct sum이다. 이들은 genus $1$ 곡선 위의 degree $-1$인 line bundle이므로 global section이 없고, Riemann–Roch에 의하여 $h^1=-\rchi=-(-1+1-1)=1$이다. 따라서 [정리 5](#thm5)는
+Elliptic curve $E$의 canonical sheaf $\omega_E$는 degree $0$이고 $0$이 아닌 global section을 가지므로 trivial하고, 따라서 tangent sheaf도 trivial하다. 그러므로 [명제 4](#prop4){: data-lid="6wm2c" }에 의하여 $\mathcal{T}_{C/\mathbb{K}}$는 $\mathcal{O}_{E_1}(-p')$와 $\mathcal{O}_{E_2}(-p'')$의 pushforward의 direct sum이다. 이들은 genus $1$ 곡선 위의 degree $-1$인 line bundle이므로 global section이 없고, Riemann–Roch에 의하여 $h^1=-\rchi=-(-1+1-1)=1$이다. 따라서 [정리 5](#thm5){: data-lid="qqbud" }는
 
 $$T^0(C)=0,\qquad 0\rightarrow H^1(E_1,\mathcal{O}_{E_1}(-p'))\oplus H^1(E_2,\mathcal{O}_{E_2}(-p''))\rightarrow T^1(C)\rightarrow T_p^1\rightarrow0$$
 
-을 주고, $\dim T^1(C)=2+1=3=3g-3$이다. [정리 5](#thm5) 뒤에서 읽은 것과 같이 왼쪽의 두 방향은 node를 유지한 채 pointed curve $(E_1,p')$와 $(E_2,p'')$를 각각 변형하는 것이고, 오른쪽의 한 방향은 node를 smoothing하는 것이다.
+을 주고, $\dim T^1(C)=2+1=3=3g-3$이다. [정리 5](#thm5){: data-lid="4oaof" } 뒤에서 읽은 것과 같이 왼쪽의 두 방향은 node를 유지한 채 pointed curve $(E_1,p')$와 $(E_2,p'')$를 각각 변형하는 것이고, 오른쪽의 한 방향은 node를 smoothing하는 것이다.
 
 이제 $E_1$의 inversion $[-1]$과 $E_2$의 항등사상을 붙인 automorphism을 $\sigma_1$, 반대로 $E_1$의 항등사상과 $E_2$의 inversion을 붙인 것을 $\sigma_2$라 하자. 둘 다 node를 고정하므로 $C$의 automorphism이다. $\sigma_1$의 action을 두 항에서 따로 보자.
 
@@ -414,9 +414,9 @@ $$T^0(C)=0,\qquad 0\rightarrow H^1(E_1,\mathcal{O}_{E_1}(-p'))\oplus H^1(E_2,\ma
 $\sigma_1$은 order $2$이므로 $T^1(C)$는 $\sigma_1$의 eigenspace로 갈라지며, 위의 두 계산에 의하여 $+1$-eigenspace는 $2$차원의 왼쪽 항이고 $-1$-eigenspace는 $T_p^1$로 isomorphic하게 가는 $1$차원 공간이다. 즉 이에 맞춘 basis에서 $\sigma_1=\operatorname{diag}(1,1,-1)$이다. $\sigma_2$는 $\sigma_1$과 commute하므로 이 두 eigenspace를 보존하고, 같은 계산으로 왼쪽 항에는 trivial하게, $T_p^1$에는 $-1$로 작용하므로 같은 basis에서 $\sigma_2=\operatorname{diag}(1,1,-1)$이다. 따라서 $\sigma_1\sigma_2$는 $T^1(C)$에 trivial하게 작용하며, 이는 $\sigma_1\sigma_2$가 $C$의 모든 first-order deformation으로 연장된다는 것이다.
 :::
 
-이 예시는 [정리 5](#thm5)의 두 항이 함께 나타날 때 차원 $3=2+1$이 어떻게 나뉘는지와, $T^0(C)=0$인 곡선도 nontrivial automorphism을 가질 수 있으며 그 action이 smoothing 방향에서 드러난다는 것을 보여 준다. 실제로 node를 $\epsilon$만큼 펴는 first-order deformation과 $-\epsilon$만큼 펴는 first-order deformation은 central fiber의 identification을 잊으면 같은 family이고, 따라서 versal base의 서로 다른 방향이 같은 곡선을 준다. [정리 9](#thm9)의 $\mathfrak{M}_{2,0}$은 곡선 사이의 isomorphism까지 기억하므로 이 중복을 $C$의 stabilizer $\Aut(C)$로 담으며, versal base에서 [명제 10](#prop10)의 boundary $\t_p=0$의 tangent space는 $\sigma_1$의 $+1$-eigenspace이다.
+이 예시는 [정리 5](#thm5){: data-lid="a77c0" }의 두 항이 함께 나타날 때 차원 $3=2+1$이 어떻게 나뉘는지와, $T^0(C)=0$인 곡선도 nontrivial automorphism을 가질 수 있으며 그 action이 smoothing 방향에서 드러난다는 것을 보여 준다. 실제로 node를 $\epsilon$만큼 펴는 first-order deformation과 $-\epsilon$만큼 펴는 first-order deformation은 central fiber의 identification을 잊으면 같은 family이고, 따라서 versal base의 서로 다른 방향이 같은 곡선을 준다. [정리 9](#thm9){: data-lid="o3ctj" }의 $\mathfrak{M}_{2,0}$은 곡선 사이의 isomorphism까지 기억하므로 이 중복을 $C$의 stabilizer $\Aut(C)$로 담으며, versal base에서 [명제 10](#prop10){: data-lid="uw46i" }의 boundary $\t_p=0$의 tangent space는 $\sigma_1$의 $+1$-eigenspace이다.
 
-[따름정리 6](#cor6)의 결과는 다음 글에서 stable map moduli의 차원을 계산할 때 중요한 역할을 한다.
+[따름정리 6](#cor6){: data-lid="fkn9a" }의 결과는 다음 글에서 stable map moduli의 차원을 계산할 때 중요한 역할을 한다.
 
 ---
 

@@ -152,7 +152,7 @@ $$\int_C\mu^\ast D=\int_{\mu_\ast[C]}D=\int_\beta D$$
 
 그럼 이렇게 얻어진 $D(A, B; \beta_1, \beta_2)$가 전체 moduli space의 codimension $1$ locus, 즉 divisor가 된다. 두 조각에는 이름이 없으므로 $D(A,B;\beta_1,\beta_2)$와 $D(B,A;\beta_2,\beta_1)$은 같은 divisor이며, 전체 moduli space의 boundary는 이러한 divisor들의 합집합이고 이들이 stack 위에서 étale-local하게 normal crossing을 이룬다는 것이 알려져 있다. 
 
-Convex target에서 이 사실은 [§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시)에서 확인하였다. 그곳에서 본 것과 같이 $H^1(C,\mu^\ast T_X)=0$이므로 node마다의 smoothing parameter를 $\overline{\mathcal{M}}_{0,n}(X,\beta)$의 coordinate의 일부로 택할 수 있고, boundary는 이 parameter들의 곱이 정의하는 normal crossings divisor이다. 특히 node가 하나뿐인 점 근방에서 $D(A,B;\beta_1,\beta_2)$는 그 node의 smoothing parameter를 reduced local equation으로 갖는다.
+Convex target에서 이 사실은 [§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시){: data-lid="73wli" }에서 확인하였다. 그곳에서 본 것과 같이 $H^1(C,\mu^\ast T_X)=0$이므로 node마다의 smoothing parameter를 $\overline{\mathcal{M}}_{0,n}(X,\beta)$의 coordinate의 일부로 택할 수 있고, boundary는 이 parameter들의 곱이 정의하는 normal crossings divisor이다. 특히 node가 하나뿐인 점 근방에서 $D(A,B;\beta_1,\beta_2)$는 그 node의 smoothing parameter를 reduced local equation으로 갖는다.
 
 이제 $A$와 $B$가 모두 공집합이 아닐 때 각 성분은 [§안정사상들의 모듈라이 공간, §§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps#안정사상들의-모듈라이-공간){: data-lid="qcz34" }의 gluing morphism
 
@@ -160,7 +160,7 @@ $$\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)\times_X\overline{\mathc
 
 의 image이고, 두 조각을 구별할 수 있으므로 이 morphism은 image로의 isomorphism이다. 즉 두 조각이 node에서 붙어 있다는 조건은 위 fiber product에 따르면 $(\ev_\bullet,\ev_\bullet)$이 diagonal $\Delta_X\subseteq X\times X$로 간다는 조건으로 해석할 수 있다.
 
-[§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시)에서 본 것과 같이 convex target에서는 $\mu^\ast T_X$가 global section들로 생성되어 $\ev_\bullet$이 smooth morphism이다. 따라서 $(\ev_\bullet,\ev_\bullet)$은 diagonal $\Delta_X$와 transversal하게 만나고, 이 fiber product는 차원 $\dim\overline{\mathcal{M}}_{0,n}(X,\beta)-1$의 smooth stack이다. 이 차원은 $D(A,B;\beta_1,\beta_2)$가 divisor라는 것과 맞는다.
+[§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시){: data-lid="t2rl2" }에서 본 것과 같이 convex target에서는 $\mu^\ast T_X$가 global section들로 생성되어 $\ev_\bullet$이 smooth morphism이다. 따라서 $(\ev_\bullet,\ev_\bullet)$은 diagonal $\Delta_X$와 transversal하게 만나고, 이 fiber product는 차원 $\dim\overline{\mathcal{M}}_{0,n}(X,\beta)-1$의 smooth stack이다. 이 차원은 $D(A,B;\beta_1,\beta_2)$가 divisor라는 것과 맞는다.
 
 한편 우리는 이미 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 9](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop9){: data-lid="9wmoh" }에서, 이러한 상황에서의 refined class를 계산하는 방법을 살펴보았다. 두 조각의 moduli를 $M_A=\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)$, $M_B=\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)$로 적으면, convex target에서는 이 교차에 여분의 성분이 생기지 않으므로 $D(A,B;\beta_1,\beta_2)$ 위에서 $\prod_i\ev_i^\ast\gamma_i$를 적분하는 것은 refined fundamental class에 대한 적분
 
@@ -214,7 +214,7 @@ $$\sum_{\substack{A\ni1,2, B\ni3,4\\ \beta_1+\beta_2=\beta}}D(A,B;\beta_1,\beta_
 이다. 이제 양변에 $\prod_i\ev_i^\ast\gamma_i$를 곱해 적분하면 두 값이 같고, 각 항에서 $A,B$는 모두 marked point를 둘 이상 포함하므로 [명제 5](#prop5){: data-lid="0m7u6" }를 적용하면 주장의 양변을 얻는다.
 :::
 
-[명제 6](#prop6)의 증명에서 preimage가 multiplicity $1$로 나타나는 것은 다음과 같이 확인할 수 있다. $A\ni1,2$, $B\ni3,4$인 $D(A,B;\beta_1,\beta_2)$의 일반적인 점에서 domain은 두 성분이 node $x$ 하나에서 만난 것이고, 한 성분에는 marked point $1,2$가, 다른 성분에는 $3,4$가 놓인다. 따라서 $X$로 가는 map과 나머지 marked point를 잊어도 각 성분에는 marked point 둘과 node가 남아 수축되지 않으므로, 이 점 근방에서 $\phi$는 node $x$를 그대로 남긴다. 그런데 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10)에 의하여 $\overline{\mathcal{M}}_{0,4}$의 boundary point $\{1,2\}\sqcup\{3,4\}$ 근방의 국소좌표는 그 점이 나타내는 곡선의 node의 smoothing parameter이므로, $\phi$는 이를 $x$의 smoothing parameter와 unit의 곱으로 당긴다. 앞에서 본 것과 같이 이는 $D(A,B;\beta_1,\beta_2)$의 reduced local equation이므로 multiplicity는 $1$이다.
+[명제 6](#prop6){: data-lid="6bxrr" }의 증명에서 preimage가 multiplicity $1$로 나타나는 것은 다음과 같이 확인할 수 있다. $A\ni1,2$, $B\ni3,4$인 $D(A,B;\beta_1,\beta_2)$의 일반적인 점에서 domain은 두 성분이 node $x$ 하나에서 만난 것이고, 한 성분에는 marked point $1,2$가, 다른 성분에는 $3,4$가 놓인다. 따라서 $X$로 가는 map과 나머지 marked point를 잊어도 각 성분에는 marked point 둘과 node가 남아 수축되지 않으므로, 이 점 근방에서 $\phi$는 node $x$를 그대로 남긴다. 그런데 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10){: data-lid="h1ezo" }에 의하여 $\overline{\mathcal{M}}_{0,4}$의 boundary point $\{1,2\}\sqcup\{3,4\}$ 근방의 국소좌표는 그 점이 나타내는 곡선의 node의 smoothing parameter이므로, $\phi$는 이를 $x$의 smoothing parameter와 unit의 곱으로 당긴다. 앞에서 본 것과 같이 이는 $D(A,B;\beta_1,\beta_2)$의 reduced local equation이므로 multiplicity는 $1$이다.
 
 ## Kontsevich 공식
 
@@ -277,7 +277,7 @@ $$\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1^2d_2^2\binom{3d-4}{3d_1-2}N_{d_1
 이다. 이제 양변을 비교하면 주장한 식을 얻는다. 
 :::
 
-[정리 7](#thm7)은 $d\geq2$에서 $N_d$를 더 낮은 degree의 값들로 나타내므로, general한 두 점을 지나는 직선은 하나뿐이라는 $N_1=1$에서 출발하여 모든 $N_d$가 결정된다. 나아가 $\mathbb{P}^2$의 genus $0$ Gromov-Witten invariant는 모두 이 수들과 $\mathbb{P}^2$의 cup product로 계산된다. Degree가 $0$이고 $n\geq3$인 경우는 [명제 2](#prop2)가 주고, $n\leq2$이면 stable map이 없어 moduli가 공집합이므로 불변량은 $0$이다. $d\geq1$이면 multilinearity에 의하여 각 insertion을 $T_0,T_1,T_2$ 가운데 하나로 두어도 충분한데, $T_0=1$이 하나라도 있으면 [명제 3](#prop3)에 의하여 불변량은 $0$이고, $T_1=h$는 [명제 4](#prop4)에 의하여 하나마다 $d$를 곱하고 지울 수 있다. 그럼 남는 것은 insertion이 모두 $h^2$인 불변량이며, 이는 앞서 본 차원 조건에 의하여 insertion이 $3d-1$개일 때만 $0$이 아니고 그 값은 $N_d$이다.
+[정리 7](#thm7){: data-lid="up1oq" }은 $d\geq2$에서 $N_d$를 더 낮은 degree의 값들로 나타내므로, general한 두 점을 지나는 직선은 하나뿐이라는 $N_1=1$에서 출발하여 모든 $N_d$가 결정된다. 나아가 $\mathbb{P}^2$의 genus $0$ Gromov-Witten invariant는 모두 이 수들과 $\mathbb{P}^2$의 cup product로 계산된다. Degree가 $0$이고 $n\geq3$인 경우는 [명제 2](#prop2){: data-lid="7nrkx" }가 주고, $n\leq2$이면 stable map이 없어 moduli가 공집합이므로 불변량은 $0$이다. $d\geq1$이면 multilinearity에 의하여 각 insertion을 $T_0,T_1,T_2$ 가운데 하나로 두어도 충분한데, $T_0=1$이 하나라도 있으면 [명제 3](#prop3){: data-lid="pavjw" }에 의하여 불변량은 $0$이고, $T_1=h$는 [명제 4](#prop4){: data-lid="3k9iv" }에 의하여 하나마다 $d$를 곱하고 지울 수 있다. 그럼 남는 것은 insertion이 모두 $h^2$인 불변량이며, 이는 앞서 본 차원 조건에 의하여 insertion이 $3d-1$개일 때만 $0$이 아니고 그 값은 $N_d$이다.
 
 이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
 

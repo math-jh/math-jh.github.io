@@ -94,7 +94,7 @@ $$\overline{\mathcal{M}}_{g,n}(X,\beta)$$
 
 로 적는다. 이 stack의 geometric point들의 isomorphism class는 stable map들의 isomorphism class에 대응하고, 각 점의 stabilizer는 해당 stable map의 automorphism group이 된다.
 
-여기서 scheme $T$ 위의 stable map의 family는 [§마디 곡선의 변형, ⁋정의 8](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def8)의 $T$ 위의 genus $g$, $n$개의 marked point를 갖는 prestable curve $(\pi:\mathcal{C}\rightarrow T,\sigma_1,\ldots,\sigma_n)$와 morphism $\mu:\mathcal{C}\rightarrow X$의 짝으로서, $T$의 각 geometric point $\bar{t}$ 위의 fiber $(\mathcal{C}_{\bar{t}},\sigma_1(\bar{t}),\ldots,\sigma_n(\bar{t}),\mu\vert_{\mathcal{C}_{\bar{t}}})$가 class $\beta$의 stable map인 것이다. 두 family $(\mathcal{C},\sigma_\bullet,\mu)$와 $(\mathcal{C}',\sigma'_\bullet,\mu')$ 사이의 isomorphism은 $\varphi\circ\sigma_i=\sigma'_i$, $\mu'\circ\varphi=\mu$를 만족하는 $T$-isomorphism $\varphi:\mathcal{C}\rightarrow\mathcal{C}'$이다.
+여기서 scheme $T$ 위의 stable map의 family는 [§마디 곡선의 변형, ⁋정의 8](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def8){: data-lid="q3x42" }의 $T$ 위의 genus $g$, $n$개의 marked point를 갖는 prestable curve $(\pi:\mathcal{C}\rightarrow T,\sigma_1,\ldots,\sigma_n)$와 morphism $\mu:\mathcal{C}\rightarrow X$의 짝으로서, $T$의 각 geometric point $\bar{t}$ 위의 fiber $(\mathcal{C}_{\bar{t}},\sigma_1(\bar{t}),\ldots,\sigma_n(\bar{t}),\mu\vert_{\mathcal{C}_{\bar{t}}})$가 class $\beta$의 stable map인 것이다. 두 family $(\mathcal{C},\sigma_\bullet,\mu)$와 $(\mathcal{C}',\sigma'_\bullet,\mu')$ 사이의 isomorphism은 $\varphi\circ\sigma_i=\sigma'_i$, $\mu'\circ\varphi=\mu$를 만족하는 $T$-isomorphism $\varphi:\mathcal{C}\rightarrow\mathcal{C}'$이다.
 
 ::: 명제 3
 $\beta$가 effective class이면 $\overline{\mathcal{M}}_{g,n}(X,\beta)$은 proper Deligne–Mumford stack이고 ([\[스택\] §대수적 스택, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6){: data-lid="r3t1v" }), 그 coarse moduli space는 projective scheme이다. ([\[스택\] §모듈라이 공간, ⁋정의 7](/ko/math/stacks/moduli_spaces#def7){: data-lid="d7w0d" })
@@ -143,7 +143,7 @@ $$\overline{\mathcal{M}}_{g-1,n+2}(X,\beta)\times_{X\times X}X\rightarrow\overli
 
 $\overline{\mathcal{M}}_{g,n}(X,\beta)$은 일반적으로 매끄럽지 않으며, $g,n,\beta$를 고정해도 여러 irreducible component를 가질 수 있다. 뿐만 아니라 이러한 component들은 서로 만날 수도 있고, 각각의 차원도 다를 수 있다.
 
-반면 stable map $(C,p_\bullet,\mu)$의 infinitesimal deformation space를 $T^1$, obstruction space를 $T^2$라 하면(이들은 map $\mu$까지 함께 움직이는 공간으로, domain만의 공간인 [§마디 곡선의 변형](/ko/math/gromov-witten_theory/deformations_of_nodal_curves)의 $T^0(C,p_\bullet)$, $T^1(C,p_\bullet)$과는 다르다), 이 deformation–obstruction theory는 *virtual dimension*
+반면 stable map $(C,p_\bullet,\mu)$의 infinitesimal deformation space를 $T^1$, obstruction space를 $T^2$라 하면(이들은 map $\mu$까지 함께 움직이는 공간으로, domain만의 공간인 [§마디 곡선의 변형](/ko/math/gromov-witten_theory/deformations_of_nodal_curves){: data-lid="d37yd" }의 $T^0(C,p_\bullet)$, $T^1(C,p_\bullet)$과는 다르다), 이 deformation–obstruction theory는 *virtual dimension*
 
 $$\vdim=\dim T^1-\dim T^2$$
 
@@ -180,12 +180,12 @@ $$\vdim=\int_\beta c_1(T_X)+(\dim X-3)(1-g)+n$$
 
 이 때, 첫 번째 $\Ext^0$은 pointed domain의 infinitesimal automorphism, $H^0(C,\mu^\ast T_X)$은 domain을 고정한 map의 deformation이다. 다음 $\Ext^1$은 pointed domain의 deformation이고, $H^1(C,\mu^\ast T_X)$에서 map의 local deformation들을 붙일 때 생기는 obstruction을 읽는다.
 
-이 가운데 pointed domain의 deformation을 $H^1(C,\mu^\ast T_X)$로 보내는 map은 다음과 같이 읽는다. Pointed domain의 first-order deformation $C_\epsilon$이 주어졌다 하고, $C$를 affine open $U_\alpha$들로 덮자. 각 $U_\alpha$는 $C_\epsilon$ 안의 affine open $U_{\alpha,\epsilon}$의 square-zero closed subscheme이고 $X$는 smooth하므로, [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15)에 의하여 $\mu\vert_{U_\alpha}$를 $U_{\alpha,\epsilon}\rightarrow X$로 연장할 수 있다. 이는 node를 펴는 deformation처럼 $C_\epsilon$이 국소적으로도 trivial하지 않은 경우에도 성립한다. 두 연장은 $U_\alpha\cap U_\beta$ 위에서 같은 map $\mu$의 연장이므로 그 차는 $U_\alpha\cap U_\beta$ 위의 $\mu^\ast T_X$의 section이고, 이들은 Čech $1$-cocycle을 이루어 $H^1(C,\mu^\ast T_X)$의 원소를 준다. 연장을 바꾸면 이 cocycle은 coboundary만큼 바뀌며, 이 원소가 $0$인 것은 국소적인 연장들을 고쳐 $C_\epsilon$ 전체 위의 map으로 붙일 수 있다는 것과 같다. 즉 이 원소는 domain의 deformation을 따라 map을 연장하는 것에 대한 obstruction이며, $T^2$는 $H^1(C,\mu^\ast T_X)$를 이러한 원소들로 나눈 quotient이다.
+이 가운데 pointed domain의 deformation을 $H^1(C,\mu^\ast T_X)$로 보내는 map은 다음과 같이 읽는다. Pointed domain의 first-order deformation $C_\epsilon$이 주어졌다 하고, $C$를 affine open $U_\alpha$들로 덮자. 각 $U_\alpha$는 $C_\epsilon$ 안의 affine open $U_{\alpha,\epsilon}$의 square-zero closed subscheme이고 $X$는 smooth하므로, [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="l5en5" }에 의하여 $\mu\vert_{U_\alpha}$를 $U_{\alpha,\epsilon}\rightarrow X$로 연장할 수 있다. 이는 node를 펴는 deformation처럼 $C_\epsilon$이 국소적으로도 trivial하지 않은 경우에도 성립한다. 두 연장은 $U_\alpha\cap U_\beta$ 위에서 같은 map $\mu$의 연장이므로 그 차는 $U_\alpha\cap U_\beta$ 위의 $\mu^\ast T_X$의 section이고, 이들은 Čech $1$-cocycle을 이루어 $H^1(C,\mu^\ast T_X)$의 원소를 준다. 연장을 바꾸면 이 cocycle은 coboundary만큼 바뀌며, 이 원소가 $0$인 것은 국소적인 연장들을 고쳐 $C_\epsilon$ 전체 위의 map으로 붙일 수 있다는 것과 같다. 즉 이 원소는 domain의 deformation을 따라 map을 연장하는 것에 대한 obstruction이며, $T^2$는 $H^1(C,\mu^\ast T_X)$를 이러한 원소들로 나눈 quotient이다.
 
 ::: 증명
 위에서 정의한 $\LL_\mu$에 $R\Hom_C(-,\mathcal{O}_C)$를 적용하면 위 exact sequence가 나온다. 첫 morphism의 kernel은 pointed domain의 infinitesimal automorphism 중 map까지 보존하는 것들로, stability에 의해 이 kernel이 $0$이므로 sequence의 왼쪽에 $0$이 붙는다.
 
-또 [§마디 곡선의 변형, §§준안정 곡선의 변형](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#준안정-곡선의-변형)에서 본 것처럼 $\Ext^i_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$는 pointed domain의 $T^i(C,p_\bullet)$이다. 위의 long exact sequence는 $T^2$ 다음에 $\Ext^2_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$로 이어지는데, [§마디 곡선의 변형, ⁋명제 7](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop7)에 의하여 이 공간은 $0$이므로 sequence의 오른쪽 끝에도 $0$이 붙는다. 즉 pointed domain의 deformation에는 obstruction이 없고, stable map의 obstruction은 모두 $H^1(C,\mu^\ast T_X)$에서 온다.
+또 [§마디 곡선의 변형, §§준안정 곡선의 변형](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#준안정-곡선의-변형){: data-lid="qitvx" }에서 본 것처럼 $\Ext^i_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$는 pointed domain의 $T^i(C,p_\bullet)$이다. 위의 long exact sequence는 $T^2$ 다음에 $\Ext^2_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$로 이어지는데, [§마디 곡선의 변형, ⁋명제 7](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop7){: data-lid="zlpds" }에 의하여 이 공간은 $0$이므로 sequence의 오른쪽 끝에도 $0$이 붙는다. 즉 pointed domain의 deformation에는 obstruction이 없고, stable map의 obstruction은 모두 $H^1(C,\mu^\ast T_X)$에서 온다.
 
 이제 $E=\mu^\ast T_X$, $A^i=\Ext_C^i(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$로 적자. 위 exact sequence에서 차원의 교대합은 $0$이므로
 
@@ -220,7 +220,7 @@ $$\dim T^1-\dim T^2=(3g-3+n)+\int_\beta c_1(T_X)+\dim X(1-g)=\int_\beta c_1(T_X)
 을 얻는다.
 :::
 
-[명제 4](#prop4)의 $T^1$과 $T^2$는 virtual dimension을 정의할 때 본 국소적인 그림을 다음과 같이 정확한 진술로 만든다. $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 étale atlas $W$ 위의 점 $w$가 stable map $(C,p_\bullet,\mu)$를 나타낸다 하자. [명제 4](#prop4)의 증명에서 본 것처럼 stable map에는 infinitesimal automorphism이 없으므로 $w$에서 $W$의 Zariski tangent space는 $T^1$이고, $N=\dim T^1$이라 하면 $w$에서의 complete local ring은
+[명제 4](#prop4){: data-lid="yrgmr" }의 $T^1$과 $T^2$는 virtual dimension을 정의할 때 본 국소적인 그림을 다음과 같이 정확한 진술로 만든다. $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 étale atlas $W$ 위의 점 $w$가 stable map $(C,p_\bullet,\mu)$를 나타낸다 하자. [명제 4](#prop4){: data-lid="rad08" }의 증명에서 본 것처럼 stable map에는 infinitesimal automorphism이 없으므로 $w$에서 $W$의 Zariski tangent space는 $T^1$이고, $N=\dim T^1$이라 하면 $w$에서의 complete local ring은
 
 $$\widehat{\mathcal{O}}_{W,w}\cong\mathbb{C}[[\x_1,\ldots,\x_N]]/(f_1,\ldots,f_m),\qquad m\leq\dim T^2$$
 
@@ -241,9 +241,9 @@ $$\int_\beta c_1(T_X)+\dim X-3+n$$
 Convexity는 smooth $\mathbb{P}^1$ 위의 조건이지만 nodal genus $0$ curve에서도 $H^1(C,\mu^\ast T_X)=0$임을 보일 수 있다. 따라서 [명제 4](#prop4){: data-lid="qh7wb" }에 의해 $T^2=0$이 성립함을 알 수 있다. 이러한 convex target의 대표적인 예시는 homogeneous space $G/P$로, 이 경우 $T_{G/P}$가 globally generated이므로 convexity가 성립한다.
 
 ::: 증명 (명제 5)
-[명제 3](#prop3)에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 proper Deligne–Mumford stack이라는 것은 이미 알고 있으므로, 각 점 $(C,p_\bullet,\mu)$에서 $H^1(C,\mu^\ast T_X)=0$임을 보이면 된다.
+[명제 3](#prop3){: data-lid="ytyi8" }에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 proper Deligne–Mumford stack이라는 것은 이미 알고 있으므로, 각 점 $(C,p_\bullet,\mu)$에서 $H^1(C,\mu^\ast T_X)=0$임을 보이면 된다.
 
-우선 genus $0$ prestable curve $C$의 모양을 보자. $C$의 irreducible component의 개수를 $c$, node의 개수를 $d$, normalization의 각 성분의 genus를 $h_1,\ldots,h_c$라 하면 [§마디 곡선의 변형, ⁋명제 2](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop2)에 의하여
+우선 genus $0$ prestable curve $C$의 모양을 보자. $C$의 irreducible component의 개수를 $c$, node의 개수를 $d$, normalization의 각 성분의 genus를 $h_1,\ldots,h_c$라 하면 [§마디 곡선의 변형, ⁋명제 2](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop2){: data-lid="76c0a" }에 의하여
 
 $$0=\sum_{j=1}^ch_j+(d-c+1)$$
 
@@ -275,10 +275,10 @@ $$0\rightarrow\mu^\ast T_X\vert_{C'}\otimes\mathcal{O}_{C'}(-p'_1-\cdots-p'_k)\r
 
 이다. 왼쪽 항의 $H^1$은 각 $C'_j$와 그 smooth point $p'_j$에 ($\ast$)를 적용하면 $0$이고, 오른쪽 항의 $H^1$은 $\bigoplus_iH^1(\mathbb{P}^1,\mathcal{O}(a_i))=0$이므로 $H^1(C,\mu^\ast T_X)=0$이다.
 
-따라서 [명제 4](#prop4)의 exact sequence에서 $H^1(C,\mu^\ast T_X)$의 quotient인 $T^2$도 $0$이다. 그럼 virtual dimension을 정의할 때 본 국소적인 그림에서 $T^1$의 좌표 위에 부과되는 방정식이 하나도 없으므로, 각 점 근방에서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 dimension $\dim T^1$의 smooth stack이고 [명제 4](#prop4)에 의하여 $\dim T^1=\vdim$이다.
+따라서 [명제 4](#prop4){: data-lid="okl51" }의 exact sequence에서 $H^1(C,\mu^\ast T_X)$의 quotient인 $T^2$도 $0$이다. 그럼 virtual dimension을 정의할 때 본 국소적인 그림에서 $T^1$의 좌표 위에 부과되는 방정식이 하나도 없으므로, 각 점 근방에서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 dimension $\dim T^1$의 smooth stack이고 [명제 4](#prop4){: data-lid="21e38" }에 의하여 $\dim T^1=\vdim$이다.
 :::
 
-[명제 5](#prop5)의 증명에서 $a_i\geq0$을 얻을 때 $\mu\vert_{C_0}$ 대신 double cover를 합성한 map에 convexity를 적용한 것은 꼭 필요한 걸음이다. 다음 예시의 target에서는 tangent bundle을 pullback했을 때의 음의 degree가 degree $1$의 map에서는 $H^1$에 나타나지 않다가 double cover에서 드러나며, 그 결과 obstruction space가 모든 점에서 사라지지 않아 actual dimension이 virtual dimension보다 커진다.
+[명제 5](#prop5){: data-lid="pit6k" }의 증명에서 $a_i\geq0$을 얻을 때 $\mu\vert_{C_0}$ 대신 double cover를 합성한 map에 convexity를 적용한 것은 꼭 필요한 걸음이다. 다음 예시의 target에서는 tangent bundle을 pullback했을 때의 음의 degree가 degree $1$의 map에서는 $H^1$에 나타나지 않다가 double cover에서 드러나며, 그 결과 obstruction space가 모든 점에서 사라지지 않아 actual dimension이 virtual dimension보다 커진다.
 
 ::: 예시 6
 $S\subset\mathbb{P}^3$를 smooth cubic surface, $L\subset S$를 그 위의 line이라 하자. Adjunction에 의하여 canonical bundle은 $\omega_S\cong\mathcal{O}_S(-1)$이므로 $K_S\cdot L=-1$, $c_1(T_S)\cdot L=1$이고, $L\cong\mathbb{P}^1$에 다시 adjunction을 적용하면 $-2=L^2+K_S\cdot L$에서 $L^2=-1$이다. 따라서 $N_{L/S}\cong\mathcal{O}_L(-1)$이고, exact sequence $0\rightarrow T_L\rightarrow T_S\vert_L\rightarrow N_{L/S}\rightarrow0$은 $\Ext^1_L(\mathcal{O}_L(-1),\mathcal{O}_L(2))\cong H^1(L,\mathcal{O}_L(3))=0$이므로 split하여
@@ -287,26 +287,26 @@ $$T_S\vert_L\cong\mathcal{O}_L(2)\oplus\mathcal{O}_L(-1)$$
 
 이다. 그러므로 isomorphism $\mu:\mathbb{P}^1\rightarrow L$에 대해서는 $H^1(\mathbb{P}^1,\mu^\ast T_S)=0$이지만, degree $2$의 map $\mu:\mathbb{P}^1\rightarrow L$에 대해서는 $\mu^\ast T_S\cong\mathcal{O}(4)\oplus\mathcal{O}(-2)$이므로 $H^1(\mathbb{P}^1,\mu^\ast T_S)$는 $1$차원이다. 즉 $S$는 convex가 아니고, 이는 degree $1$의 map만 보아서는 드러나지 않는다.
 
-이제 $g=0$, $n=0$, $\beta=2[L]$로 두면 [명제 4](#prop4)에 의하여
+이제 $g=0$, $n=0$, $\beta=2[L]$로 두면 [명제 4](#prop4){: data-lid="51krk" }에 의하여
 
 $$\vdim=\int_{2[L]}c_1(T_S)+(2-3)=2-1=1$$
 
 이다. 한편 stable map $(C,\mu)$에 대하여 $Z=\mu_\ast[C]$는 class $2[L]$을 갖는 effective cycle이고 $Z\cdot L=2L^2=-2<0$이므로 $L$을 성분으로 갖는다. $Z=aL+Z'$ ($a\geq1$이고 $Z'$은 $L$을 성분으로 갖지 않는 effective cycle)로 쓰면 $0\leq Z'\cdot L=-2+a$에서 $a\geq2$이고, hyperplane class $H$와의 intersection number를 비교한 $2=H\cdot Z=a+H\cdot Z'$에서 $a=2$, $Z'=0$이다. 따라서 $\mu$의 image는 $L$이고, $C$가 reduced이므로 $\mu$는 $L$을 거쳐 간다. 또 $n=0$이므로 contracted component는 node를 셋 이상 가져야 하는데, dual graph가 tree이므로 그 node들에서 갈라지는 가지들 각각의 끝에는 node가 하나뿐인 component, 즉 contracted가 아닌 component가 있어야 하고 그러면 degree가 $3$ 이상이 된다. 그러므로 $C$는 $\mathbb{P}^1$ 하나가 $L$을 degree $2$로 덮는 것이거나, 두 $\mathbb{P}^1$이 한 점에서 만나고 각각이 $L$로 isomorphic하게 가는 것이다.
 
-이들은 정확히 $\overline{\mathcal{M}}_{0,0}(L,2)\cong\overline{\mathcal{M}}_{0,0}(\mathbb{P}^1,2)$의 점들이다. $T_{\mathbb{P}^1}=\mathcal{O}(2)$를 degree $e$의 map으로 pullback하면 $\mathcal{O}(2e)$이므로 $\mathbb{P}^1$은 convex이고, [명제 5](#prop5)에 의하여 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^1,2)$는 dimension $4+1-3=2$의 smooth stack이다. 따라서 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 $L$을 거쳐 가는 map들의 closed substack $\overline{\mathcal{M}}_{0,0}(L,2)$와 같은 점들을 가지므로 모든 점에서 dimension이 $2$이다.
+이들은 정확히 $\overline{\mathcal{M}}_{0,0}(L,2)\cong\overline{\mathcal{M}}_{0,0}(\mathbb{P}^1,2)$의 점들이다. $T_{\mathbb{P}^1}=\mathcal{O}(2)$를 degree $e$의 map으로 pullback하면 $\mathcal{O}(2e)$이므로 $\mathbb{P}^1$은 convex이고, [명제 5](#prop5){: data-lid="myulu" }에 의하여 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^1,2)$는 dimension $4+1-3=2$의 smooth stack이다. 따라서 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 $L$을 거쳐 가는 map들의 closed substack $\overline{\mathcal{M}}_{0,0}(L,2)$와 같은 점들을 가지므로 모든 점에서 dimension이 $2$이다.
 
 이 $2$차원은 map들을 직접 매개화하여 볼 수도 있다. Degree $2$의 map $\mathbb{P}^1\rightarrow L$은 서로 다른 두 점에서 branch하며, branch point가 같은 두 degree $2$ map은 domain의 isomorphism으로 서로 옮겨지므로 이러한 map은 isomorphism을 법으로 branch divisor로 정해진다. 두 branch point가 한 점 $x\in L$로 모이면 domain이 두 $\mathbb{P}^1$으로 갈라져, 각 성분이 $L$로 isomorphic하게 가고 node가 $x$로 가는 위의 둘째 경우의 map이 극한으로 나타난다. 따라서 $\overline{\mathcal{M}}_{0,0}(L,2)$의 점들은 $L$ 위의 degree $2$ effective divisor들, 곧 $\Sym^2L\cong\mathbb{P}^2$의 점들과 일대일로 대응하며, 대각선 위의 점들이 nodal domain에 해당한다. 또 모든 점이 order $2$의 automorphism을 갖는다. 첫째 경우에는 두 sheet를 맞바꾸는 deck involution이, 둘째 경우에는 두 성분을 맞바꾸는 involution이 map을 보존한다. 그러므로 이 map들의 image는 모두 같은 cycle $2L$이지만 $\overline{\mathcal{M}}_{0,0}(L,2)$에서는 $2$차원에 걸친 서로 다른 점들이고, 각 점의 stabilizer는 $\mathbb{Z}/2$이다. Stack으로도 같은 매개화를 쓸 수 있다. $L$의 homogeneous coordinate $[\u:\v]$에 대한 $0$이 아닌 quadratic form $q$마다 line bundle $\mathcal{O}_L(1)$의 total space 안의 곡선 $\w^2=q(\u,\v)$와 $L$로의 projection이 degree $2$의 stable map을 주고, $q$가 double root를 가져 $q=\ell^2$이면 이 곡선은 두 section $\w=\pm\ell(\u,\v)$가 한 점에서 만나는 nodal curve이다. $\w$를 $\lambda\w$로 바꾸면 $q$가 $\lambda^2q$로 바뀌므로, $\overline{\mathcal{M}}_{0,0}(L,2)$는 $0$이 아닌 quadratic form들의 공간 $\mathbb{C}^3\setminus\{0\}$을 weight $2$로 작용하는 $\mathbb{G}_m$으로 나눈 quotient stack, 곧 weighted projective stack $\mathbb{P}(2,2,2)$이며, 위의 stabilizer $\mathbb{Z}/2$는 $\lambda^2=1$인 $\lambda$들이다.
 
-이제 각 점에서 $T^1$과 $T^2$를 계산하자. $\mu$가 $L$을 거쳐 가므로 $L$ 위의 exact sequence $0\rightarrow T_L\rightarrow T_S\vert_L\rightarrow N_{L/S}\rightarrow0$을 $\mu$로 pullback할 수 있고, $L\cong\mathbb{P}^1$은 convex이므로 [명제 5](#prop5)의 증명에 의하여 $H^1(C,\mu^\ast T_L)=0$이다. 따라서 cohomology long exact sequence에서 $H^1(C,\mu^\ast T_S)\cong H^1(C,\mu^\ast N_{L/S})$이다. 위의 두 경우 모두 line bundle $\mu^\ast N_{L/S}$는 $C$의 각 component 위에서 음의 degree를 가지므로 global section이 없고, [명제 4](#prop4)의 증명에서 얻은 식에 의하여 $\rchi(C,\mu^\ast N_{L/S})=\deg\mu^\ast N_{L/S}+1=-1$이다. 즉 $H^1(C,\mu^\ast T_S)$는 모든 점에서 $1$차원이다.
+이제 각 점에서 $T^1$과 $T^2$를 계산하자. $\mu$가 $L$을 거쳐 가므로 $L$ 위의 exact sequence $0\rightarrow T_L\rightarrow T_S\vert_L\rightarrow N_{L/S}\rightarrow0$을 $\mu$로 pullback할 수 있고, $L\cong\mathbb{P}^1$은 convex이므로 [명제 5](#prop5){: data-lid="dj5mk" }의 증명에 의하여 $H^1(C,\mu^\ast T_L)=0$이다. 따라서 cohomology long exact sequence에서 $H^1(C,\mu^\ast T_S)\cong H^1(C,\mu^\ast N_{L/S})$이다. 위의 두 경우 모두 line bundle $\mu^\ast N_{L/S}$는 $C$의 각 component 위에서 음의 degree를 가지므로 global section이 없고, [명제 4](#prop4){: data-lid="38ui0" }의 증명에서 얻은 식에 의하여 $\rchi(C,\mu^\ast N_{L/S})=\deg\mu^\ast N_{L/S}+1=-1$이다. 즉 $H^1(C,\mu^\ast T_S)$는 모든 점에서 $1$차원이다.
 
-[명제 4](#prop4)의 exact sequence에서 $T^2$는 이 공간의 quotient이므로 $\dim T^2\leq1$이다. 한편 $T^1$은 이 점에서의 tangent space이므로 그 dimension은 이 점에서의 dimension $2$ 이상이고, $\dim T^1-\dim T^2=\vdim=1$이므로 $\dim T^1=2$, $\dim T^2=1$일 수밖에 없다. 그러므로 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 모든 점에서 tangent space의 dimension이 실제 dimension과 같아 dimension $2$의 smooth stack이고, 따라서 $\overline{\mathcal{M}}_{0,0}(L,2)$와 같다. 또 obstruction space $T^2\cong H^1(C,\mu^\ast N_{L/S})$들은 universal curve $\pi:\overline{\mathcal{M}}_{0,1}(L,2)\rightarrow\overline{\mathcal{M}}_{0,0}(L,2)$와 $\ev_1:\overline{\mathcal{M}}_{0,1}(L,2)\rightarrow L$에 대하여 rank $1$의 vector bundle
+[명제 4](#prop4){: data-lid="44m01" }의 exact sequence에서 $T^2$는 이 공간의 quotient이므로 $\dim T^2\leq1$이다. 한편 $T^1$은 이 점에서의 tangent space이므로 그 dimension은 이 점에서의 dimension $2$ 이상이고, $\dim T^1-\dim T^2=\vdim=1$이므로 $\dim T^1=2$, $\dim T^2=1$일 수밖에 없다. 그러므로 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 모든 점에서 tangent space의 dimension이 실제 dimension과 같아 dimension $2$의 smooth stack이고, 따라서 $\overline{\mathcal{M}}_{0,0}(L,2)$와 같다. 또 obstruction space $T^2\cong H^1(C,\mu^\ast N_{L/S})$들은 universal curve $\pi:\overline{\mathcal{M}}_{0,1}(L,2)\rightarrow\overline{\mathcal{M}}_{0,0}(L,2)$와 $\ev_1:\overline{\mathcal{M}}_{0,1}(L,2)\rightarrow L$에 대하여 rank $1$의 vector bundle
 
 $$R^1\pi_\ast\ev_1^\ast N_{L/S}$$
 
 을 이룬다.
 :::
 
-이 예시에서 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 smooth하지만 그 dimension $2$는 virtual dimension $1$보다 크고, 그 차이는 모든 점에서 $1$차원인 obstruction space의 dimension과 같다. Virtual dimension을 정의할 때의 그림으로 말하면, 각 점에서 $2$차원의 $T^1$ 위에 $T^2$에 값을 갖는 방정식 하나가 부과되지만 이 방정식이 항등적으로 $0$이어서 dimension을 전혀 낮추지 못한 것이다. 반면 convex target의 genus $0$ stable map에서는 [명제 5](#prop5)에 의하여 이러한 일이 일어나지 않으며, 다음은 그 가장 간단한 경우이다.
+이 예시에서 $\overline{\mathcal{M}}_{0,0}(S,2[L])$는 smooth하지만 그 dimension $2$는 virtual dimension $1$보다 크고, 그 차이는 모든 점에서 $1$차원인 obstruction space의 dimension과 같다. Virtual dimension을 정의할 때의 그림으로 말하면, 각 점에서 $2$차원의 $T^1$ 위에 $T^2$에 값을 갖는 방정식 하나가 부과되지만 이 방정식이 항등적으로 $0$이어서 dimension을 전혀 낮추지 못한 것이다. 반면 convex target의 genus $0$ stable map에서는 [명제 5](#prop5){: data-lid="rkqqz" }에 의하여 이러한 일이 일어나지 않으며, 다음은 그 가장 간단한 경우이다.
 
 ::: 예시 7
 $X=\mathbb{P}^r$, $g=0$, $n=0$, $\beta=[\text{line}]$이라 하자. Degree $1$ stable map은 $\mathbb{P}^1$을 $\mathbb{P}^r$ 안의 직선으로 isomorphic하게 보내며, parametrization의 자유도는 $\Aut(\mathbb{P}^1)$이 흡수한다. 따라서 남는 자료는 직선 자체이고
@@ -326,7 +326,7 @@ $$\vdim=\int_{2[\text{line}]}c_1(T_{\mathbb{P}^2})+(2-3)=6-1=5$$
 
 이다. $\mathbb{P}^2$은 convex이므로 이 값은 actual dimension과 일치한다.
 
-끝으로 convex target으로 가는 genus $0$ stable map들의 moduli에서 boundary의 모양을 보자. 우선 $\mu^\ast T_X$는 $C$ 위에서 global section들로 생성된다. 실제로 $C$의 각 component $C_0$에 대하여 restriction $H^0(C,\mu^\ast T_X)\rightarrow H^0(C_0,\mu^\ast T_X\vert_{C_0})$는 surjective이다. Component가 하나뿐이면 당연하고, 둘 이상이면 [명제 5](#prop5)의 증명의 마지막 short exact sequence에서 왼쪽 항의 $H^1$이 $0$이기 때문이다. 한편 [명제 5](#prop5)의 증명에서 본 것처럼 $a_i\geq0$이므로 $\mu^\ast T_X\vert_{C_0}\cong\bigoplus_i\mathcal{O}(a_i)$는 global section들로 생성되고, $C$의 모든 점은 어떤 component 위에 있다. 특히 marked point $p_i$에서 값을 취하는 map $H^0(C,\mu^\ast T_X)\rightarrow T_{\mu(p_i)}X$는 surjective이다. 이 map은 domain을 고정하고 map만 움직이는 deformation이 $\ev_i$의 값에 주는 일차적인 변화이므로 $\ev_i$의 differential은 모든 점에서 surjective이고, [명제 5](#prop5)에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$가 smooth하므로 $\ev_i$는 smooth morphism이다. 따라서 gluing morphism의 source
+끝으로 convex target으로 가는 genus $0$ stable map들의 moduli에서 boundary의 모양을 보자. 우선 $\mu^\ast T_X$는 $C$ 위에서 global section들로 생성된다. 실제로 $C$의 각 component $C_0$에 대하여 restriction $H^0(C,\mu^\ast T_X)\rightarrow H^0(C_0,\mu^\ast T_X\vert_{C_0})$는 surjective이다. Component가 하나뿐이면 당연하고, 둘 이상이면 [명제 5](#prop5){: data-lid="u79og" }의 증명의 마지막 short exact sequence에서 왼쪽 항의 $H^1$이 $0$이기 때문이다. 한편 [명제 5](#prop5){: data-lid="4w2te" }의 증명에서 본 것처럼 $a_i\geq0$이므로 $\mu^\ast T_X\vert_{C_0}\cong\bigoplus_i\mathcal{O}(a_i)$는 global section들로 생성되고, $C$의 모든 점은 어떤 component 위에 있다. 특히 marked point $p_i$에서 값을 취하는 map $H^0(C,\mu^\ast T_X)\rightarrow T_{\mu(p_i)}X$는 surjective이다. 이 map은 domain을 고정하고 map만 움직이는 deformation이 $\ev_i$의 값에 주는 일차적인 변화이므로 $\ev_i$의 differential은 모든 점에서 surjective이고, [명제 5](#prop5){: data-lid="bxw07" }에 의하여 $\overline{\mathcal{M}}_{0,n}(X,\beta)$가 smooth하므로 $\ev_i$는 smooth morphism이다. 따라서 gluing morphism의 source
 
 $$\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)\times_X\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)$$
 
@@ -336,11 +336,11 @@ $$\vdim\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)+\vdim\overline{\ma
 
 의 smooth stack이다.
 
-또 [명제 4](#prop4)의 exact sequence에서 $H^1(C,\mu^\ast T_X)=0$이므로, stable map의 deformation을 pointed domain의 deformation으로 보내는 $T^1\rightarrow T^1(C,p_\bullet)$은 surjective이다. 이를 [§마디 곡선의 변형, ⁋정리 5](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#thm5)의 오른쪽 map, 곧 각 node 근방의 local deformation으로의 restriction과 합성한
+또 [명제 4](#prop4){: data-lid="w3px3" }의 exact sequence에서 $H^1(C,\mu^\ast T_X)=0$이므로, stable map의 deformation을 pointed domain의 deformation으로 보내는 $T^1\rightarrow T^1(C,p_\bullet)$은 surjective이다. 이를 [§마디 곡선의 변형, ⁋정리 5](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#thm5){: data-lid="u4t65" }의 오른쪽 map, 곧 각 node 근방의 local deformation으로의 restriction과 합성한
 
 $$T^1\longrightarrow\bigoplus_{q\in\Sing C}T_q^1$$
 
-도 surjective이다. 즉 stable map을 일차적으로 움직여 domain의 node들을 서로 독립적으로 펼 수 있다. 이를 앞에서 본 complete local ring으로 옮기자. $(C,p_\bullet,\mu)$를 나타내는 점 $w\in W$에서 $W$ 위의 universal curve는 $(C,p_\bullet)$의 versal base $R$ 위의 versal family를 어떤 local homomorphism $R\rightarrow\widehat{\mathcal{O}}_{W,w}$로 당긴 것이다. 이 homomorphism이 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10)의 smoothing parameter $\t_q$를 보내는 원소를 다시 $\t_q$로 적으면, node $q$에서 이 family의 complete local ring은 $\widehat{\mathcal{O}}_{W,w}[[\u_q,\v_q]]/(\u_q\v_q-\t_q)$이므로 node $q$가 node로 남는 locus는 $\t_q=0$이다. 위의 surjectivity는 이 $\t_q$들의 class가 $\widehat{\mathcal{O}}_{W,w}$의 cotangent space에서 linearly independent하다는 것과 같으므로, 앞의 꼴 $\mathbb{C}[[\x_1,\ldots,\x_N]]/(f_1,\ldots,f_m)$에서 $\t_q$들을 변수의 일부로 택할 수 있다. 이 걸음은 surjectivity만 쓰므로, convex가 아닌 target에서도 node들의 집합 $S\subseteq\Sing C$에 대하여 $T^1\rightarrow\bigoplus_{q\in S}T_q^1$가 surjective이면 $\t_q$ ($q\in S$)들을 변수의 일부로 택할 수 있다. 지금은 $T^2=0$이므로 $\widehat{\mathcal{O}}_{W,w}$는 power series ring이고, 따라서 $w$에서 nodal domain을 갖는 stable map들의 locus, 곧 boundary는
+도 surjective이다. 즉 stable map을 일차적으로 움직여 domain의 node들을 서로 독립적으로 펼 수 있다. 이를 앞에서 본 complete local ring으로 옮기자. $(C,p_\bullet,\mu)$를 나타내는 점 $w\in W$에서 $W$ 위의 universal curve는 $(C,p_\bullet)$의 versal base $R$ 위의 versal family를 어떤 local homomorphism $R\rightarrow\widehat{\mathcal{O}}_{W,w}$로 당긴 것이다. 이 homomorphism이 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10){: data-lid="qg02e" }의 smoothing parameter $\t_q$를 보내는 원소를 다시 $\t_q$로 적으면, node $q$에서 이 family의 complete local ring은 $\widehat{\mathcal{O}}_{W,w}[[\u_q,\v_q]]/(\u_q\v_q-\t_q)$이므로 node $q$가 node로 남는 locus는 $\t_q=0$이다. 위의 surjectivity는 이 $\t_q$들의 class가 $\widehat{\mathcal{O}}_{W,w}$의 cotangent space에서 linearly independent하다는 것과 같으므로, 앞의 꼴 $\mathbb{C}[[\x_1,\ldots,\x_N]]/(f_1,\ldots,f_m)$에서 $\t_q$들을 변수의 일부로 택할 수 있다. 이 걸음은 surjectivity만 쓰므로, convex가 아닌 target에서도 node들의 집합 $S\subseteq\Sing C$에 대하여 $T^1\rightarrow\bigoplus_{q\in S}T_q^1$가 surjective이면 $\t_q$ ($q\in S$)들을 변수의 일부로 택할 수 있다. 지금은 $T^2=0$이므로 $\widehat{\mathcal{O}}_{W,w}$는 power series ring이고, 따라서 $w$에서 nodal domain을 갖는 stable map들의 locus, 곧 boundary는
 
 $$\prod_{q\in\Sing C}\t_q=0$$
 

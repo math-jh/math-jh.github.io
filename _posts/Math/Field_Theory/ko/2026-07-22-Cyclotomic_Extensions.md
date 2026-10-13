@@ -75,7 +75,7 @@ $$\x^n-1=qg+r,\qquad \deg r<\deg g$$
 
 ## 유리수체 위의 기약성
 
-[명제 2](#prop2)에 의하여 $\Phi_n(\x)\in\mathbb{Z}[\x]$이므로, $\Phi_n$은 $\mathbb{Z}$를 포함하는 가장 작은 field, 즉 $\mathbb{Q}$ 위의 polynomial ring $\mathbb{Q}[\x]$의 원소로 볼 수 있으며, $\mathbb{Q}$는 characteristic $0$의 prime field로서 모든 characteristic zero field $\mathbb{K}$에 포함되므로 이렇게 보는 것에 아무런 문제가 없다. 우리는 이 경우에 한하여, $\Phi_n$이 $\zeta$의 minimal polynomial이 된다는 것을 우선 보인다. 이를 위해서는 $\Phi_n$이 $\mathbb{Q}[\x]$에서 irreducible인 것을 보이면 충분하다. ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15))
+[명제 2](#prop2){: data-lid="o4mhh" }에 의하여 $\Phi_n(\x)\in\mathbb{Z}[\x]$이므로, $\Phi_n$은 $\mathbb{Z}$를 포함하는 가장 작은 field, 즉 $\mathbb{Q}$ 위의 polynomial ring $\mathbb{Q}[\x]$의 원소로 볼 수 있으며, $\mathbb{Q}$는 characteristic $0$의 prime field로서 모든 characteristic zero field $\mathbb{K}$에 포함되므로 이렇게 보는 것에 아무런 문제가 없다. 우리는 이 경우에 한하여, $\Phi_n$이 $\zeta$의 minimal polynomial이 된다는 것을 우선 보인다. 이를 위해서는 $\Phi_n$이 $\mathbb{Q}[\x]$에서 irreducible인 것을 보이면 충분하다. ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="4y8s3" })
 
 ::: 보조정리 3
 Monic polynomial $f\in\mathbb{Z}[\x]$가 $\mathbb{Q}[\x]$의 monic polynomial $g,h$에 대하여 $f=gh$로 쓰인다면 $g,h\in\mathbb{Z}[\x]$이다.
@@ -98,7 +98,7 @@ $$0=\overline{ag}\cdot \overline{bh}$$
 ::: 증명
 Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정하자. 그럼 $\zeta$의 minimal polynomial $f\in \mathbb{Q}[\x]$는 $\Phi_n$과 $\x^n-1$을 모두 나누어야 하며, ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="gqhj5" }) 이로부터 $\x^n-1=fg$이라 하면 $f,g$가 모두 monic이므로 [보조정리 3](#lem3){: data-lid="pmj8g" }에 의해 $f,g\in\mathbb{Z}[\x]$임을 안다.
 
-증명의 핵심은 $f$의 임의의 해 $\omega$와, $n$을 나누지 않는 임의의 소수 $p$가 주어졌을 때, $\omega^p$ 또한 $f$의 해가 된다는 것이다. 결론에 반하여 $f(\omega^p)\neq0$이라 하자. 우선 정의에 의해 $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 해이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 해이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="dhkb9" }에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. 이 때, $f$가 monic이므로 [명제 2](#prop2)에서의 증명과 마찬가지로 $g(\x^p)$를 $f$로 나눈 몫 또한 $\mathbb{Z}[\x]$에 속한다.
+증명의 핵심은 $f$의 임의의 해 $\omega$와, $n$을 나누지 않는 임의의 소수 $p$가 주어졌을 때, $\omega^p$ 또한 $f$의 해가 된다는 것이다. 결론에 반하여 $f(\omega^p)\neq0$이라 하자. 우선 정의에 의해 $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 해이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 해이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15){: data-lid="dhkb9" }에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. 이 때, $f$가 monic이므로 [명제 2](#prop2){: data-lid="qzauz" }에서의 증명과 마찬가지로 $g(\x^p)$를 $f$로 나눈 몫 또한 $\mathbb{Z}[\x]$에 속한다.
 
 이제 이 관계를 $\mathbb{F}_p[\x]$로 보내자. $\mathbb{F}_p$의 모든 원소 $c$는 $c^p=c$를 만족하고, Frobenius endomorphism이 ring homomorphism이므로 ([§체, ⁋정리 10](/ko/math/field_theory/fields#thm10){: data-lid="5d353" }) $g$의 상을 $\bar{g}(\x)=\sum c_i\x^i\in \mathbb{F}_p[\x]$로 쓰면 
 
@@ -144,7 +144,7 @@ $$\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})\rightarrow(\mathbb{Z}/n\mathbb{Z})^\times
 은 isomorphism이다.
 :::
 ::: 증명
-$\mathbb{Q}(\zeta_n)/\mathbb{Q}$가 finite degree Galois extension이고 주어진 homomorphism이 injective인 것은 [§거듭제곱근 가해성, ⁋명제 3](/ko/math/field_theory/solvability_by_radicals#prop3){: data-lid="bwvv2" }이다. 한편 $\mathbb{Q}(\zeta_n)/\mathbb{Q}$가 Galois extension이므로 [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2)와 [따름정리 5](#cor5){: data-lid="yyps0" }에 의해
+$\mathbb{Q}(\zeta_n)/\mathbb{Q}$가 finite degree Galois extension이고 주어진 homomorphism이 injective인 것은 [§거듭제곱근 가해성, ⁋명제 3](/ko/math/field_theory/solvability_by_radicals#prop3){: data-lid="bwvv2" }이다. 한편 $\mathbb{Q}(\zeta_n)/\mathbb{Q}$가 Galois extension이므로 [§갈루아 이론의 기본정리, ⁋명제 2](/ko/math/field_theory/fundamental_theorem_of_galois_theory#prop2){: data-lid="hqamp" }와 [따름정리 5](#cor5){: data-lid="yyps0" }에 의해
 
 $$\lvert\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})\rvert = [\mathbb{Q}(\zeta_n):\mathbb{Q}] = \varphi(n) = \lvert(\mathbb{Z}/n\mathbb{Z})^\times\rvert$$
 
