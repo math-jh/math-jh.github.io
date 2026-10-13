@@ -1,6 +1,6 @@
 ---
 title: "Cyclotomic Extensions"
-description: "After defining cyclotomic polynomials whose roots are the primitive nth roots of unity and showing their coefficients are integers, we prove their irreducibility over the rational numbers using Dedekind's argument. From this, we show that the Galois group of a cyclotomic field is isomorphic to the group of units modulo n."
+description: "After defining cyclotomic polynomials whose roots are the primitive nth roots of unity and showing that their coefficients are integers, we prove their irreducibility over the rational numbers using Dedekind's argument. From this, we obtain that the Galois group of a cyclotomic field is isomorphic to the group of units modulo n."
 excerpt: "Irreducibility of cyclotomic polynomials and Galois groups of cyclotomic fields"
 
 categories: [Math / Field Theory]
@@ -12,30 +12,32 @@ date: 2026-07-22
 weight: 12
 translated_at: 2026-10-13T15:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-13T23:15:05+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-[§Solvability by Radicals, ⁋Definition 2](/en/math/field_theory/solvability_by_radicals#def2){: data-lid="wcpld" }, we introduced roots of unity and primitive roots of unity. By definition, an $n$-th root of unity $\zeta$ is a solution to $\x^n-1=0$, but if it is not a primitive root, then for a divisor of $n$, say $d$, it is also a solution to $\x^d-1=0$. For example, over $\mathbb{R}$, when adjoining solutions to the equation $\x^4-1=0$,
+In [§Solvability by Radicals, ⁋Definition 2](/en/math/field_theory/solvability_by_radicals#def2){: data-lid="wcpld" }, we introduced roots of unity and primitive roots of unity. By definition, an $n$-th root of unity $\zeta$ is a solution to $\x^n-1=0$, but if it is not a primitive root, then for a divisor of $n$, say $d$, it is also a solution to $\x^d-1=0$. For example, over $\mathbb{R}$, when adjoining solutions to the equation $\x^4-1=0$,
 
 $$\x^4-1=(\x-1)(\x+1)(\x^2+1)$$
 
-and among these, since the solutions of $\x-1$ and $\x+1$ are not primitive roots of unity, the only equation that actually yields primitive roots is $\x^2+1$. In this post, we will examine polynomials whose roots are precisely such primitive $n$-th roots of unity, and as a result, show that these polynomials are irreducible polynomials with integer coefficients, and in particular, that when $\mathbb{K}=\mathbb{Q}$, the Galois group of $\mathbb{Q}(\zeta)/\mathbb{Q}$ is *precisely* $(\mathbb{Z}/n\mathbb{Z})^\times$. As in the previous post, all fields appearing in this post are assumed to have characteristic $0$ unless specified otherwise.
+and among these, since the solutions of $\x-1$ and $\x+1$ are not primitive roots of unity, the only equation that actually yields primitive roots is $\x^2+1$. In this post, we will examine polynomials whose roots are only such primitive $n$-th roots of unity, and as a result, show that these polynomials are irreducible polynomials with integer coefficients, and in particular, that when $\mathbb{K}=\mathbb{Q}$, the Galois group of $\mathbb{Q}(\zeta)/\mathbb{Q}$ is *precisely* $(\mathbb{Z}/n\mathbb{Z})^\times$. As in the previous post, all fields appearing in this post are assumed to have characteristic $0$ unless specified otherwise.
 
 ## Cyclotomic Polynomials
 
 A rigorous definition of the polynomial discussed above is as follows.
 
 ::: Definition 1
-For a field $\mathbb{K}$ and a natural number $n\geq1$, the monic polynomial whose roots in $\overline{\mathbb{K}}$ are all primitive $n$-th roots of unity,
+For a field $\mathbb{K}$ and a natural number $n\geq1$, the monic polynomial whose roots in $\overline{\mathbb{K}}$ are all the primitive $n$-th roots of unity,
 
 $$\Phi_n(\x)=\prod_{\zeta}(\x-\zeta)\in\overline{\mathbb{K}}[\x]$$
 
 is called the $n$-th *cyclotomic polynomial*. Here, the product is taken over all generators of $\mu_n$, denoted $\zeta$.
 :::
 
-Fix a generator of $\mu_n$, denoted by $\zeta$. Then, since we have already verified that the generators of $\mu_n$ are precisely those with $\gcd(m,n)=1$, namely $\zeta^m$, denoting the number of $1\leq m\leq n$ coprime to $n$ by $\varphi(n)$, we know that
+Fix a generator of $\mu_n$, denoted by $\zeta$. Then, since we have already verified that the generators of $\mu_n$ are precisely those with $\gcd(m,n)=1$, namely $\zeta^m$, if we denote the number of $1\leq m\leq n$ coprime to $n$ by $\varphi(n)$, we know that
 
 $$\Phi_n(\x)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}(\x-\zeta^m),\qquad \deg\Phi_n=\varphi(n)$$
 
-holds. For instance, since $\mu_1=\{1\}$ and $\mu_2=\{\pm1\}$, we have $\Phi_1=\x-1$ and $\Phi_2=\x+1$; and from the fact that the generators of $\mu_4$ are $\pm i$, we have $\Phi_4=\x^2+1$. For a prime $p$, every element except $1$ in $\mu_p$ is a generator, so
+holds. For instance, since $\mu_1=\{1\}$ and $\mu_2=\{\pm1\}$, we have $\Phi_1=\x-1$ and $\Phi_2=\x+1$; and from the fact that the generators of $\mu_4$ are $\pm i$, we have $\Phi_4=\x^2+1$. For a prime $p$, since every element except $1$ in $\mu_p$ is a generator,
 
 $$\Phi_p(\x)=\frac{\x^p-1}{\x-1}=\x^{p-1}+\x^{p-2}+\cdots+\x+1$$
 
@@ -50,17 +52,17 @@ For a natural number $n\geq1$, the following hold:
 2. $\Phi_n(\x)\in\mathbb{Z}[\x]$. In particular, $\Phi_n$ does not depend on the choice of $\mathbb{K}$.
 :::
 ::: Proof
-First, we show the first result. Considering an element in $\mu_n$ of order $d$, $\omega$, the subgroup generated by $\omega$, namely $\langle\omega\rangle$, is a cyclic group of order $d$ and satisfies $\omega^d=1$. That is, $\omega$ is a primitive $d$-th root of unity. Conversely, given any divisor of $n$, say $d$, a primitive $d$-th root of unity is an element of $\mu_d\subseteq\mu_n$ and has order $d$; thus $\mu_n$ is partitioned, over the divisors of $n$, denoted $d$, into the sets of primitive $d$-th roots of unity. Then the first result is simply obtained by grouping
+First, let us show the first result. If we consider an element of $\mu_n$ of order $d$, $\omega$, the subgroup generated by $\omega$, $\langle\omega\rangle$, is a cyclic group of order $d$ and satisfies $\omega^d=1$. That is, $\omega$ is a primitive $d$-th root of unity. Conversely, given any divisor of $n$, $d$, a primitive $d$-th root of unity, as an element of $\mu_d\subseteq\mu_n$, has order $d$; thus $\mu_n$ is partitioned, over the divisors of $n$, $d$, into the sets of primitive $d$-th roots of unity. Then the first result is nothing more than grouping
 
 $$\x^n-1=\prod_{\omega\in\mu_n}(\x-\omega)$$
 
 according to this partition.
 
-Now we show the second result. First, if $n=1$, this is trivial since $\Phi_1=\x-1\in\mathbb{Z}[\x]$. Assume $n>1$, and suppose that the cyclotomic polynomials have integer coefficients for all natural numbers less than $n$. Now, setting
+Now let us show the second result. First, if $n=1$, this is trivial since $\Phi_1=\x-1\in\mathbb{Z}[\x]$. Assume $n>1$, and suppose that the cyclotomic polynomials have integer coefficients for all natural numbers less than $n$. Now, if we set
 
 $$g(\x)=\prod_{\substack{d\mid n\\ d<n}}\Phi_d(\x)$$
 
-then $g$ is monic and belongs to $\mathbb{Z}[\x]$ by the induction hypothesis, and from the first result,
+then $g$ is monic, belongs to $\mathbb{Z}[\x]$ by the induction hypothesis, and from the first result,
 
 $$\x^n-1=\Phi_n(\x) g(\x)$$
 
@@ -68,20 +70,20 @@ holds. Meanwhile, since $g$ is monic, by [\[Ring Theory\] §Polynomial Rings, �
 
 $$\x^n-1=qg+r,\qquad \deg r<\deg g$$
 
-is uniquely satisfied by $q,r\in\mathbb{Z}[\x]$, so this $q$ *must* be $\Phi_n$, and thus $\Phi_n$ also becomes a polynomial with integer coefficients.
+is uniquely satisfied by $q,r\in\mathbb{Z}[\x]$, so this $q$ *must* be $\Phi_n$, and thus $\Phi_n$ is also a polynomial with integer coefficients.
 :::
 
 It should be noted that the coefficients of $\Phi_n(\x)$ need not all be $0$ or $\pm 1$; the smallest counterexample is $\Phi_{105}$. ([Wikipedia, Cyclotomic Polynomial](https://en.wikipedia.org/wiki/Cyclotomic_polynomial))
 
 ## Irreducibility over the Rational Field
 
-By [Proposition 2](#prop2){: data-lid="o4mhh" }, we have $\Phi_n(\x)\in\mathbb{Z}[\x]$, so $\Phi_n$ can be viewed, over the smallest field containing $\mathbb{Z}$, namely $\mathbb{Q}$, as an element of the polynomial ring $\mathbb{Q}[\x]$; since $\mathbb{Q}$ is the prime field of characteristic $0$ and is contained in every field $\mathbb{K}$ of characteristic zero, there is no issue with doing so. In this case specifically, we first show that $\Phi_n$ is the minimal polynomial of $\zeta$. For this, it suffices to show that $\Phi_n$ is irreducible in $\mathbb{Q}[\x]$. ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15){: data-lid="4y8s3" })
+By [Proposition 2](#prop2){: data-lid="o4mhh" }, we have $\Phi_n(\x)\in\mathbb{Z}[\x]$, so $\Phi_n$ can be viewed, over the smallest field containing $\mathbb{Z}$, namely $\mathbb{Q}$, as an element of the polynomial ring $\mathbb{Q}[\x]$; since $\mathbb{Q}$ is the prime field of characteristic $0$ and is contained in every field $\mathbb{K}$ of characteristic zero, there is no issue with doing so. For this case only, we first show that $\Phi_n$ is the minimal polynomial of $\zeta$. For this, it suffices to show that $\Phi_n$ is irreducible in $\mathbb{Q}[\x]$. ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15){: data-lid="4y8s3" })
 
 ::: Lemma 3
 If a monic polynomial $f\in\mathbb{Z}[\x]$ is written, for monic polynomials in $\mathbb{Q}[\x]$, $g,h$, as $f=gh$, then $g,h\in\mathbb{Z}[\x]$.
 :::
 ::: Proof
-Since the two monic polynomials $g,h$ are elements of $\mathbb{Q}[\x]$, we can ensure that the scalar multiples $ag$ and $bh$ belong to $\mathbb{Z}[\x]$ by choosing minimal positive integers $a,b$. Then by the minimality of $a$ and $b$, the greatest common divisors of the coefficients of $ag$ and $bh$ must both be $1$.
+Since the two monic polynomials $g,h$ are elements of $\mathbb{Q}[\x]$, for their scalar multiples $ag$ and $bh$ to belong to $\mathbb{Z}[\x]$, there exist minimal positive integers $a,b$. Then by the minimality of $a$ and $b$, the greatest common divisors of the coefficients of $ag$ and $bh$, respectively, must both be $1$.
 
 Now $abf=(ag)(bh)$, and our claim is that $ab=1$. Suppose for contradiction that $ab>1$, and let a prime divisor of $ab$, say $p$, be given. Then since in $\mathbb{F}_p[\x]$ we have $ab=0$, this equality becomes
 
@@ -100,7 +102,7 @@ Fix a primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$. Then the m
 
 The core of the proof is that given any root of $f$, say $\omega$, and any prime not dividing $n$, say $p$, $\omega^p$ is also a root of $f$. Suppose for contradiction that $f(\omega^p)\neq0$. First, by definition $\omega^n=1$, so $\omega^p$ is a root of $\x^n-1$, and therefore $g(\omega^p)=0$. That is, $\omega$ is a root of $g(\x^p)\in\mathbb{Z}[\x]$. Meanwhile, since $f$ is a minimal polynomial, it is monic and irreducible, and because $f(\omega)=0$, by [§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15){: data-lid="dhkb9" }, $f$ is the minimal polynomial of $\omega$, and thus $f$ divides $g(\x^p)$. Here, since $f$ is monic, just as in the proof of [Proposition 2](#prop2){: data-lid="qzauz" }, the quotient of $g(\x^p)$ divided by $f$ also belongs to $\mathbb{Z}[\x]$.
 
-Now let us reduce this relation to $\mathbb{F}_p[\x]$. In $\mathbb{F}_p$, every element $c$ satisfies $c^p=c$, and since the Frobenius endomorphism is a ring homomorphism ([§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-lid="5d353" }), writing the image of $g$ as $\bar{g}(\x)=\sum c_i\x^i\in \mathbb{F}_p[\x]$, we have
+Now let us reduce this relation to $\mathbb{F}_p[\x]$. In $\mathbb{F}_p$, every element $c$ satisfies $c^p=c$, and since the Frobenius endomorphism is a ring homomorphism ([§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10){: data-lid="5d353" }), if we write the image of $g$ as $\bar{g}(\x)=\sum c_i\x^i\in \mathbb{F}_p[\x]$, then
 
 $$\bar{g}(\x)^p=\sum c_i^p\x^{ip}=\sum c_i(\x^p)^i=\bar{g}(\x^p)$$
 
@@ -134,30 +136,30 @@ For a field $\mathbb{K}$ and a primitive $n$-th root of unity $\zeta$, the exten
 
 For two generators $\zeta,\zeta'$, since $\zeta'\in\langle\zeta\rangle$ and $\zeta\in\langle\zeta'\rangle$, we have $\mathbb{K}(\zeta)=\mathbb{K}(\zeta')$. That is, a cyclotomic extension does not depend on the choice of generator, and $\mathbb{K}(\zeta)=\mathbb{K}(\mu_n)$ holds.
 
-For an arbitrary field $\mathbb{K}$, it is not easy to say anything specific about $\mathbb{K}(\zeta)/\mathbb{K}$. For example, if we consider $\Phi_4$ over $\mathbb{C}$, since the solutions $\x=\pm i$ of $\x^4-1=0$ are already contained in $\mathbb{C}$, we have $[\mathbb{K}(\zeta):\mathbb{K}]=1$. However, the following theorem shows that in the minimal case where $\mathbb{K}=\mathbb{Q}$, they behave just as we would expect.
+For an arbitrary field $\mathbb{K}$, it is not easy to say anything specific about $\mathbb{K}(\zeta)/\mathbb{K}$. For example, if we consider $\Phi_4$ over $\mathbb{C}$, since the solutions to $\x^4-1=0$, namely $\x=\pm i$, are already contained in $\mathbb{C}$, we have $[\mathbb{K}(\zeta):\mathbb{K}]=1$. However, the following theorem shows that in the minimal case where $\mathbb{K}=\mathbb{Q}$, they behave just as we would expect.
 
 ::: Theorem 7
-$\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a finite degree Galois extension, and the injective homomorphism
+$\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a finite degree Galois extension, and the injective homomorphism of [§Solvability by Radicals, ⁋Proposition 3](/en/math/field_theory/solvability_by_radicals#prop3){: data-lid="u5541" },
 
 $$\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})\rightarrow(\mathbb{Z}/n\mathbb{Z})^\times$$
 
-of [§Solvability by Radicals, ⁋Proposition 3](/en/math/field_theory/solvability_by_radicals#prop3){: data-lid="u5541" } is an isomorphism.
+is an isomorphism.
 :::
 ::: Proof
-That $\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a finite degree Galois extension and the given homomorphism is injective is [§Solvability by Radicals, ⁋Proposition 3](/en/math/field_theory/solvability_by_radicals#prop3){: data-lid="bwvv2" }. Meanwhile, since $\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a Galois extension, by [§Fundamental Theorem of Galois Theory, ⁋Proposition 2](/en/math/field_theory/fundamental_theorem_of_galois_theory#prop2){: data-lid="hqamp" } and [Corollary 5](#cor5){: data-lid="yyps0" }, we have
+That $\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a finite degree Galois extension and the given homomorphism is injective is [§Solvability by Radicals, ⁋Proposition 3](/en/math/field_theory/solvability_by_radicals#prop3){: data-lid="bwvv2" }. Meanwhile, since $\mathbb{Q}(\zeta_n)/\mathbb{Q}$ is a Galois extension, by [§Fundamental Theorem of Galois Theory, ⁋Proposition 2](/en/math/field_theory/fundamental_theorem_of_galois_theory#prop2){: data-lid="hqamp" } and [Corollary 5](#cor5){: data-lid="yyps0" },
 
 $$\lvert\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})\rvert = [\mathbb{Q}(\zeta_n):\mathbb{Q}] = \varphi(n) = \lvert(\mathbb{Z}/n\mathbb{Z})^\times\rvert$$
 
-Since an injective map between two finite sets of the same size is surjective, the given injective homomorphism is an isomorphism.
+holds. Since an injective map between two finite sets of the same size is surjective, the given injective homomorphism is an isomorphism.
 :::
 
 In particular, $\Gal(\mathbb{Q}(\zeta_n)/\mathbb{Q})$ is an abelian group of order $\varphi(n)$. Then, by [§Fundamental Theorem of Galois Theory, ⁋Theorem 1](/en/math/field_theory/fundamental_theorem_of_galois_theory#thm1){: data-lid="dx5pd" }, the subextensions of $\mathbb{Q}(\zeta_n)$ correspond bijectively to the subgroups of $(\mathbb{Z}/n\mathbb{Z})^\times$, and since every subgroup of an abelian group is normal, by [§Fundamental Theorem of Galois Theory, ⁋Corollary 6](/en/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="2x6id" }, all these subextensions are Galois extensions of $\mathbb{Q}$.
 
-For example, when $n=8$, we have $(\mathbb{Z}/8\mathbb{Z})^\times\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$, so there exist exactly three non-trivial proper subextensions. Indeed, for $\zeta=\zeta_8=(1+i)/\sqrt{2}$, since
+For example, when $n=8$, since $(\mathbb{Z}/8\mathbb{Z})^\times\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$, there exist exactly three non-trivial proper subextensions. Indeed, for $\zeta=\zeta_8=(1+i)/\sqrt{2}$, since
 
 $$\zeta^2=i,\qquad \zeta+\zeta^{-1}=\sqrt{2},\qquad \zeta-\zeta^{-1}=i\sqrt{2}=\sqrt{-2}$$
 
-$\mathbb{Q}(\zeta_8)$ contains three distinct quadratic fields $\mathbb{Q}(i), \mathbb{Q}(\sqrt{2}), \mathbb{Q}(\sqrt{-2})$, and by the Galois correspondence, these are all the non-trivial subextensions of $\mathbb{Q}(\zeta_8)$. That is, we can see that simply by adjoining an $8$-th root of $1$ to $\mathbb{Q}$, irrational numbers such as $\sqrt{2}$ are also naturally obtained.
+$\mathbb{Q}(\zeta_8)$ contains three distinct quadratic fields $\mathbb{Q}(i), \mathbb{Q}(\sqrt{2}), \mathbb{Q}(\sqrt{-2})$, and by the Galois correspondence, these are all the non-trivial subextensions of $\mathbb{Q}(\zeta_8)$. That is, we can see that simply by adjoining to $\mathbb{Q}$ a root of $1$ of degree $8$, irrational numbers such as $\sqrt{2}$ are also naturally obtained.
 
 ---
 
