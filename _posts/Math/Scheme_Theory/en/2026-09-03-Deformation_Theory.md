@@ -363,6 +363,18 @@ and thus does not factor through the ideal $\x\y-\epsilon$ of $A[\epsilon,\x,\y]
 
 So far, we have constructed first-order deformations of an $A$-algebra $C$ and classified their isomorphism classes by $T^1(C/A,C)$. Now our interest is in lifting a given first-order deformation to a deformation of higher order. If a one-parameter flat family were already given, we would simply truncate it at the $\t^2, \t^3, \ldots$ terms and examine each order successively; however, as seen in the introduction to the previous section, our goal is to construct such a family, so the situation is not so simple. 
 
+The role of higher-order terms can be understood by moving a point within a space. On the circle $\x^2+\y^2=1$ over the real numbers, motion from $(1,0)$ with velocity $(0,1)$ is given to first order by $\x=1$, $\y=\t$. Substitution leaves the error $\x^2+\y^2-1=\t^2$, so the equation holds in $\mathbb{R}[\t]/(\t^2)$ but no longer holds in $\mathbb{R}[\t]/(\t^3)$. To remain on the circle, the path must bend to the left while preserving its initial velocity. Indeed, correcting it to $\x=1-\t^2/2$, $\y=\t$ gives
+
+$$\left(1-\frac{\t^2}{2}\right)^2+\t^2-1=\frac{\t^4}{4}$$
+
+so the equation holds through second order. This correction specifies the acceleration without changing the initial velocity, and the Taylor expansion of $\x=\sqrt{1-\t^2}$, $\y=\t$ at $\t=0$ provides corrections satisfying the equation to every order.
+
+In contrast, motion from the origin of $\x\y=0$ with velocity $(1,1)$, given by $\x=\t$, $\y=\t$, is allowed to first order, but for any $a,b\in\mathbb{R}$ we have
+
+$$(\t+a\t^2)(\t+b\t^2)\equiv\t^2\neq0\pmod{\t^3}$$
+
+so it cannot be extended to second order. Thus specifying a tangent vector and constructing, order by order, a path that starts with that velocity and remains in the space are separate problems. In our setting, the initial velocity corresponds to the given first-order deformation, while higher-order corrections to the path correspond to adding higher-order terms to the equations so as to satisfy flatness while keeping the first-order terms fixed. Higher-order deformation theory examines whether such corrections allow the deformation to be extended further at each order.
+
 To examine this intuitively, let us return to the presentation fixed earlier:
 
 $$C=B/\mathfrak{a},\qquad B=A[\x_1,\ldots,\x_n],\qquad \mathfrak{a}=(f_1,\ldots,f_m)$$
