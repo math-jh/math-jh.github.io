@@ -1,7 +1,7 @@
 ---
 title: "Bruhat Decomposition"
 description: "We define the Bruhat decomposition of a connected reductive algebraic group and extend it to parabolic subgroups to obtain the cell decomposition of partial flag varieties. We then examine the concrete correspondence for Grassmannians and the structure of Schubert cells and Schubert varieties."
-excerpt: "Cell decomposition of homogeneous spaces, parabolic subgroups, and Schubert varieties on Grassmannians"
+excerpt: "Bruhat decomposition, homogeneous space cell decomposition, parabolic subgroups, and Grassmannian Schubert varieties"
 
 categories: [Math / Lie Theory]
 permalink: /en/math/lie_theory/bruhat_decomposition
@@ -12,81 +12,82 @@ date: 2026-06-08
 weight: 7
 translated_at: 2026-06-26T18:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-26T18:30:02+00:00
+last_polished_at: 2026-10-13T07:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In general, when a geometric object is given, we decompose it into smaller pieces in order to understand its structure. For instance, the most manageable topological spaces are CW complexes, and decomposing them into cell structures allows us to perform concrete computations. Since a Lie group is simultaneously an algebraic and a geometric object, we can try this approach, and the Bruhat decomposition introduced in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="0jr0r" } does exactly this.
+In general, when a geometric object is given, we decompose it into smaller pieces in order to understand its structure. For instance, the most manageable topological spaces are CW complexes, and decomposing them into a cell structure allows concrete computations. Since a Lie group is simultaneously an algebraic and a geometric object, we can try this approach, and the Bruhat decomposition introduced in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="0jr0r" } plays precisely this role. 
 
-In this post we examine the Bruhat decomposition in more detail, then generalize to larger parabolic subgroups $P\supseteq B$ containing the Borel subgroup $B$, and study the cell decomposition of the partial flag variety $G/P$.
+In this post, after examining the Bruhat decomposition in a bit more detail, we generalize from the Borel subgroup $B$ to a larger parabolic subgroup $P\supseteq B$ containing it, and examine the cell decomposition of the partial flag variety $G/P$. 
 
 ## Coxeter group and length function
 
-What distinguishes the Bruhat decomposition from an ordinary cell decomposition is that the cells do not arise arbitrarily, but naturally as orbits for the action of the Borel subgroup $B$ on $G/B$. More importantly, the set of these orbits $B\backslash G/B$ is indexed precisely by the Weyl group $W$ ([§Root Systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17){: data-lid="kui9i" }). Hence the geometry of each cell is completely reduced to the combinatorics of $W$, and it is here that the root system reappears.
+What distinguishes the Bruhat decomposition from an ordinary cell decomposition is that the cells do not arise arbitrarily, but naturally as orbits of the action on $G/B$ of the Borel subgroup $B$. More importantly, the set of these orbits $B\backslash G/B$ is indexed precisely by the Weyl group $W$ of [§Root Systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17){: data-lid="kui9i" }. Therefore, the geometry of each cell is completely reduced to the combinatorics of $W$, and it is precisely here that the root system reappears. 
 
-To this end we first define the Coxeter group.
+To this end, we first define a Coxeter group. 
 
 ::: Definition 1
-A pair $(W,S)$ of a group $W$ and generators $S=\{s_1,\ldots,s_r\}$ is called a *Coxeter system* if $W$ has the following presentation:
+For a group $W$ and its generators $S=\{s_1,\ldots,s_r\}$, the pair $(W,S)$ is called a *Coxeter system* if $W$ has the following presentation:
 
 $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$$
 
-Here $m_{ii}=1$, and for $i\neq j$ we have $m_{ij}=m_{ji}\in\{2,3,\ldots,\infty\}$. The group $W$ itself is then called a *Coxeter group*.
+Here $m_{ii}=1$, and for $i\neq j$, $m_{ij}=m_{ji}\in\{2,3,\ldots,\infty\}$. In this case, the group $W$ itself is called a *Coxeter group*.
 :::
 
-The condition $m_{ii}=1$ means that each generator is an involution satisfying $s_i^2=e$, and the relation $(s_is_j)^{m_{ij}}=e$ for $i\neq j$ is called the *braid relation*. For example, if $m_{ij}=2$ then $s_is_j=s_js_i$, i.e. the two generators commute, and if $m_{ij}=3$ then $s_is_js_i=s_js_is_j$. The case $m_{ij}=\infty$ means that no relation is imposed between $s_i$ and $s_j$.
+The condition $m_{ii}=1$ means that each generator is an involution satisfying $s_i^2=e$, and for $i\neq j$, the relation $(s_is_j)^{m_{ij}}=e$ is called the *braid relation*. For example, if $m_{ij}=2$, then $s_is_j=s_js_i$, that is, the two generators commute, and if $m_{ij}=3$, then $s_is_js_i=s_js_is_j$. The case $m_{ij}=\infty$ means that no relation is imposed between $s_i$ and $s_j$. 
 
-The smallest nontrivial case is that of two generators. If $S=\{s_1,s_2\}$ and $m_{12}=m$, then $(W,S)$ is exactly the dihedral group of order $2m$ ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Example 16](/en/math/algebraic_structures/groups#ex16){: data-lid="9nkr2" }), and the two generators are realized as reflections in adjacent axes of symmetry of a regular $m$-gon, with their product $s_1s_2$ being a rotation of order $m$. A general Coxeter group can be understood as such dihedral pieces glued together along shared generators. Indeed, for any two generators $s_i,s_j$ the subgroup $\langle s_i,s_j\rangle$ is always the dihedral group of order $2m_{ij}$, and the essence of the presentation in [Definition 1](#def1){: data-lid="nkdb8" } is that there are no new relations involving three or more generators beyond these pairwise ones.
+The smallest nontrivial case is that of two generators. If $S=\{s_1,s_2\}$ and $m_{12}=m$, then $(W,S)$ is precisely the dihedral group of order $2m$ ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Example 16](/en/math/algebraic_structures/groups#ex16){: data-lid="9nkr2" }), and the two generators are realized as reflections across two adjacent axes of symmetry of a regular $m$-gon, with their product $s_1s_2$ being a rotation of order $m$. A general Coxeter group can be understood as such dihedral pieces glued together along shared generators. Indeed, for any two generators $s_i,s_j$, the subgroup $\langle s_i,s_j\rangle$ they generate is always the dihedral group of order $2m_{ij}$, and the essence of the presentation in [Definition 1](#def1){: data-lid="nkdb8" } is that there are no new relations involving three or more generators beyond these pairwise ones.
 
-The symmetric matrix formed by these integers $m_{ij}$ encodes all information of the Coxeter system, and finite reflection groups are characterized precisely as finite Coxeter groups.
+The symmetric matrix formed by these integers $m_{ij}$ encodes all the information of the Coxeter system, and finite reflection groups are characterized precisely as finite Coxeter groups.
 
 ::: Proposition 2
-The Weyl group $W$ is generated by the set of simple reflections $S=\{s_1,\ldots,s_r\}$, and $(W,S)$ forms a Coxeter system. Moreover each $m_{ij}$ ($i\neq j$) is one of $2,3,4,6$.
+The Weyl group $W$ is generated by the set of simple reflections $S=\{s_1,\ldots,s_r\}$, and $(W,S)$ forms a Coxeter system. Moreover, each $m_{ij}$ ($i\neq j$) is one of $2,3,4,6$.
 :::
 ::: Proof
-That $W$ is generated by reflections is the definition in [§Root Systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17){: data-lid="ers3m" }. The product $s_is_j$ of two simple reflections is a rotation on the 2-dimensional plane spanned by $\alpha_i$ and $\alpha_j$, and its angle of rotation is twice the angle formed by the two simple roots. As we checked in [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="p0fb9" }, the possible angles between two distinct simple roots are $90^\circ,120^\circ,135^\circ,150^\circ$, so the order $m_{ij}$ of $s_is_j$ is $2,3,4,6$ respectively. The most nontrivial part is that these braid relations alone completely determine $W$, which is precisely the content of Coxeter's theorem.
+That $W$ is generated by reflections is the definition in [§Root Systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17){: data-lid="ers3m" }. For two simple reflections $s_i,s_j$, their product $s_is_j$ is a rotation on the 2-dimensional plane spanned by $\alpha_i$ and $\alpha_j$, and the angle of rotation is twice the angle formed by the two simple roots. As checked in [§Root Systems](/en/math/lie_theory/root_systems){: data-lid="p0fb9" }, the angle that two distinct simple roots can form is one of $90^\circ,120^\circ,135^\circ,150^\circ$, so for $s_is_j$, the order $m_{ij}$ is $2,3,4,6$, respectively. That $W$ is completely determined by these braid relations alone is the most nontrivial part, which is precisely the content of Coxeter's theorem.
 :::
 
-In our case these integers $m_{ij}$ are read directly from the Dynkin diagram in [§Borel Subgroups, ⁋Definition 1](/en/math/lie_theory/borel_subgroup#def1){: data-lid="vbgfi" }. If two vertices are not connected then $m_{ij}=2$, a single edge means $3$, a double edge means $4$, and a triple edge means $6$. For instance, in the picture of [§Borel Subgroups, ⁋Definition 8](/en/math/lie_theory/borel_subgroup#def8){: data-lid="pvkg3" } for type $A_{n-1}$ the Weyl group is $W=S_n$ and adjacent simple reflections have $m=3$, satisfying the familiar braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$.
+In our case, these integers $m_{ij}$ are read directly from the Dynkin diagram in [§Borel Subgroups, ⁋Definition 1](/en/math/lie_theory/borel_subgroup#def1){: data-lid="vbgfi" }. If two vertices are not connected, then $m_{ij}=2$; a single edge gives $3$, a double edge $4$, and a triple edge $6$. For instance, in the diagram of [§Borel Subgroups, ⁋Definition 8](/en/math/lie_theory/borel_subgroup#def8){: data-lid="pvkg3" }, for type $A_{n-1}$, adjacent simple reflections in the Weyl group $W=S_n$ have $m=3$, and thus satisfy the familiar braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$.
 
 Given a Coxeter system $(W,S)$, we can measure the "cost" of expressing each element as a product of generators.
 
 ::: Definition 3
-For an element $w$ of a Coxeter system $(W,S)$, the *length* $\ell(w)$ of $w$ is the smallest $k$ for which $w$ can be written as a product of simple reflections $w=s_{i_1}\cdots s_{i_k}$. An expression of length $\ell(w)$ is called a *reduced expression* of $w$.
+In a Coxeter system $(W,S)$, for an element $w$, the *length* of $w$, $\ell(w)$, is, when writing $w$ as a product of simple reflections $w=s_{i_1}\cdots s_{i_k}$, the smallest $k$ required. An expression of length $\ell(w)$ is called a *reduced expression* of $w$.
 :::
 
-By definition $\ell(e)=0$ and $\ell(s_i)=1$, and $\ell(w^{-1})=\ell(w)$. The meaning of the length function is most transparently revealed through the root system, starting from the fact that a simple reflection affects the positive roots in an extremely limited way.
+By definition, $\ell(e)=0$, $\ell(s_i)=1$, and $\ell(w^{-1})=\ell(w)$. The meaning of the length function is most transparently revealed through the root system, and its starting point is the fact that the effect of a simple reflection on the entire set of positive roots is extremely limited.
 
-By the reflection formula in [§Root Systems, ⁋Definition 9](/en/math/lie_theory/root_systems#def9){: data-lid="994go" }, a simple reflection $s_i$ sends $\alpha_i$ to $-\alpha_i$. For the remaining positive roots $\beta\in\Phi^+$, $\beta\neq\alpha_i$, if we write $\beta$ as a positive linear combination of simple roots, then some coefficient other than that of $\alpha_i$ is positive, and using the Cartan integer $\langle\beta,\alpha_i\rangle$ from that definition we can write
+According to the reflection formula in [§Root Systems, ⁋Definition 9](/en/math/lie_theory/root_systems#def9){: data-lid="994go" }, the simple reflection $s_i$ sends $\alpha_i$ to $-\alpha_i$. For the remaining positive roots $\beta\in\Phi^+$, $\beta\neq\alpha_i$, if we think of writing $\beta$ as a positive linear combination of simple roots, at least one coefficient other than that of $\alpha_i$ is positive; since using the Cartan integer $\langle\beta,\alpha_i\rangle$ from that definition allows us to write
 
 $$s_i(\beta)=\beta-\langle\beta,\alpha_i\rangle\alpha_i$$
 
-so the only coefficient that changes in $s_i(\beta)$ is that of $\alpha_i$, and the positive coefficient mentioned above remains positive. Hence, when $s_i$ acts, the only positive root that becomes a negative root is $\alpha_i$ itself, and therefore for any Weyl group element $w$, multiplying by a simple reflection changes the number of positive roots sent to negative roots by exactly $1$.
+the only coefficient altered in $s_i(\beta)$ is that of $\alpha_i$, and therefore the positive coefficient mentioned above still remains positive. That is, when $s_i$ acts, the only root that was a positive root and turns into a negative root is $\alpha_i$ alone, and therefore, each time an arbitrary Weyl group element $w$ is multiplied by a simple reflection, the number of positive roots that $w$ sends to negative roots increases or decreases by exactly $1$.
 
-Thus, tracing this from the identity along a reduced expression, we see that the change in length when passing from $w$ to $ws_i$,
+Therefore, tracing this from the identity along a reduced expression, we see that the change in length when passing from $w$ to $ws_i$,
 
-$$\ell(ws_i)=\ell(w)+1$$
+$$\ell(ws_i)=\ell(w)\pm1$$
 
-precisely reflects this. That is, for any $w\in W$ we have
+precisely reflects this in its increase or decrease. That is, for any $w\in W$,
 
 $$\ell(w)=\lvert\Phi^+\cap w^{-1}\Phi^-\rvert$$
 
-The set $\Phi^+\cap w^{-1}\Phi^-=\{\alpha\in\Phi^+\mid w\alpha\in\Phi^-\}$ on the right is called the inversion set of $w$, and its size exactly matches the dimension of the Bruhat cell corresponding to $w$.
+holds. The set $\Phi^+\cap w^{-1}\Phi^-=\{\alpha\in\Phi^+\mid w\alpha\in\Phi^-\}$ on the right-hand side is called the inversion set of $w$, and its size coincides exactly with the dimension of the Bruhat cell corresponding to $w$.
 
 ::: Example 4
-As a brief example, consider the Weyl group of type $A_{n-1}$. In this case $W=S_n$ and each $s_i$ is the transposition $(i\;i+1)$. Here the positive roots are $\Phi^+=\{e_i-e_j\mid i<j\}$, and an arbitrary Weyl group element $w\in W$ sends $e_i-e_j$ to $e_{w(i)}-e_{w(j)}$.
+As a brief example, consider the case of the Weyl group of type $A_{n-1}$. In this case $W=S_n$, and each $s_i$ is $(i\;i+1)$. Here, the positive roots are $\Phi^+=\{e_i-e_j\mid i<j\}$, and an arbitrary Weyl group element $w\in W$ sends $e_i-e_j$ to $e_{w(i)}-e_{w(j)}$.
 
-This becomes negative precisely when $w(i)>w(j)$, and therefore
+Now, this being negative is equivalent to $w(i)>w(j)$, and therefore
 
 $$\ell(w)=\lvert\{(i,j)\mid i<j,\ w(i)>w(j)\}\rvert=\operatorname{inv}(w)$$
 
-equals the number of *inversions* of $w$.
+is equal to the number of *inversions* of $w$.
 :::
 
 ## Bruhat decomposition
 
-Now we use the results reviewed above to consider the Bruhat decomposition. The following theorem restates the result already seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="id9nw" }, repeated here for convenience.
+Now we consider the Bruhat decomposition using the results reviewed above. The following theorem is the result already seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="id9nw" }, restated here for convenience. 
 
 ::: Theorem 5 (Bruhat decomposition)
-For a connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subseteq B$, and Weyl group $W=N_G(T)/T$, the following disjoint union holds:
+For a connected reductive algebraic group $G$, a Borel subgroup $B$, a maximal torus $T\subseteq B$, and the Weyl group $W=N_G(T)/T$, the following disjoint union holds:
 
 $$G=\bigsqcup_{w\in W}BwB$$
 :::
@@ -95,19 +96,19 @@ The simplest and most intuitive way to view this decomposition is to consider th
 
 $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
-The orbits of this action are exactly the double cosets $BwB$, and the theorem says that these orbits are indexed by $W$.
+The orbits of this action are precisely the double cosets $BwB$, and the theorem above means that these orbits are indexed by $W$. 
 
-To examine the geometric meaning of this, let us look at the example $G=\GL_n(\mathbb{C})$. Fixing the reference flag $E_i=\span\{e_1,\ldots,e_i\}$, we saw that an arbitrary flag $V_\bullet$ corresponds to $gB$ via $V_i=\span\{ge_1,\ldots,ge_i\}$. ([§Borel Subgroups, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13){: data-lid="f3mex" }) In general, the relative position of the reference flag $E_\bullet$ and $V_\bullet$ is expressed by the intersection dimensions
+To examine the geometric meaning this carries, let us look at the example of $G=\GL_n(\mathbb{C})$. Here, fixing the reference flag $E_i=\span\{e_1,\ldots,e_i\}$, we saw that an arbitrary flag $V_\bullet$ is $V_i=\span\{ge_1,\ldots,ge_i\}$ corresponding to $gB$. ([§Borel Subgroups, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13){: data-lid="f3mex" }) In general, the relative position formed by the reference flag $E_\bullet$ and $V_\bullet$ is represented by information about the intersection dimensions
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
-Then the $B$-action on $G$ corresponds to organizing the coordinates on the flag variety by upper triangular matrices, so two flags in the same $B$-orbit share these intersection dimensions, and conversely. Now what the Bruhat decomposition says is that for an arbitrary flag $V_\bullet$, its intersection dimensions $d_{ij}$ satisfy
+Then, since the $B$-action on $G$ organizes the coordinates on the flag variety by upper triangular matrices, two flags in the same $B$-orbit share these intersection dimensions, and conversely. Now what the Bruhat decomposition says is that for an arbitrary flag $V_\bullet$, the intersection dimensions $d_{ij}$ satisfy
 
 $$d_{ij}=\dim(V_i\cap E_j)=\#\{k\leq i\mid w(k)\leq j\}$$
 
-for exactly one $w\in S_n$. That is, the relative position of $V_\bullet$ is in one-to-one correspondence with an element of $W$ in this way, and $BwB$ is the set of all $g$ whose relative position is $w$. Each piece $BwB$ is called a *Bruhat cell*.
+for exactly one $w\in S_n$. That is, the relative position of $V_\bullet$ is in one-to-one correspondence with an element of $W$ in this way, and $BwB$ is the collection of all $g$ whose relative position is $w$. Here, each piece $BwB$ is called a *Bruhat cell*. 
 
-This, as its name suggests, forms an open cell. Concretely, $B$ decomposes as the semidirect product of a maximal torus $T$ and the unipotent radical, $B=U\rtimes T$, and this unipotent radical $U$ is the product of the positive root subgroups $U=\prod_{\alpha\in\Phi^+}U_\alpha$ (each $U_\alpha\cong\mathbb{G}_a$). Denoting the unipotent radical of the opposite Borel subgroup $B^-$ by $U^-$, for each $w\in W$ we define
+This, as its name suggests, forms an open cell. Concretely, $B$ decomposes as the semidirect product of a maximal torus $T$ and the unipotent radical, $B=U\rtimes T$, and this unipotent radical $U$ is the product of the positive root subgroups $U=\prod_{\alpha\in\Phi^+}U_\alpha$ (each $U_\alpha\cong\mathbb{G}_a$). Letting $U^-$ be the unipotent radical of the opposite Borel subgroup $B^-$, for each $w\in W$ let us define
 
 $$U_w=U\cap wU^-w^{-1}$$
 
@@ -115,57 +116,59 @@ Then $U_w$ is given as the product of root subgroups $U_\gamma$ for positive roo
 
 $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 
-The number of roots appearing in the product is $\ell(w)$, so $U_w$ is isomorphic to the affine space $\mathbb{A}^{\ell(w)}$. That is, $U_w$ is the unipotent subgroup consisting of only those positive roots that $w^{-1}$ sends to negative roots, and its dimension is exactly the length ($\ell(w^{-1})=\ell(w)$).
+Since the number of roots appearing in the product is $\ell(w)$, $U_w$ is isomorphic to the affine space $\mathbb{A}^{\ell(w)}$. That is, $U_w$ is the unipotent subgroup collecting only the "positive roots that $w^{-1}$ sends to negative roots", and its dimension is precisely the length ($\ell(w^{-1})=\ell(w)$).
 
-In what follows, when we treat $w\in W$ directly as a matrix in expressions like $BwB$ or the product $uwb$, we view it as a chosen representative in $N_G(T)$. Different representatives differ only by $T\subseteq B$, so the double coset $BwB$ and its coset $BwB/B$ are independent of the choice of representative.
+In what follows, when we treat $w\in W$ directly as a matrix, as in $BwB$ or the product $uwb$, we view it as choosing a representative in $N_G(T)$. Since different representatives differ only by $T\subseteq B$, the double coset $BwB$ and its coset $BwB/B$ are independent of the choice of representative.
 
 ::: Proposition 6
 For each $w\in W$, the product map
 
 $$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto uwb$$
 
-is an isomorphism of varieties. Hence the Bruhat cell is $BwB\cong\mathbb{A}^{\ell(w)}\times B$, and projecting to the flag variety we have
+is an isomorphism of varieties. Hence the Bruhat cell is $BwB\cong\mathbb{A}^{\ell(w)}\times B$, and projecting to the flag variety,
 
 $$X_w^\circ:=BwB/B\cong\mathbb{A}^{\ell(w)}\subseteq G/B$$
+
+holds.
 :::
 ::: Proof
-$B=U\rtimes T$ and $U$ decomposes into a product of root subgroups. Writing $U$ as the product of $U_w$ and $U_w'=U\cap wUw^{-1}$, we have $U=U_wU_w'$ and $U_w\cap U_w'=\{e\}$. Since $U_w'$ consists of roots sent to positive roots by $w^{-1}$, we have $w^{-1}U_w'w\subseteq U$, and therefore
+$B=U\rtimes T$ and $U$ decomposes into a product of root subgroups. Writing $U$ as the product of $U_w$ and $U_w'=U\cap wUw^{-1}$, we have $U=U_wU_w'$ and $U_w\cap U_w'=\{e\}$. Since $U_w'$ corresponds to the roots sent from positive roots to positive roots by $w^{-1}$, we have $w^{-1}U_w'w\subseteq U$, and therefore
 
-$$BwB=UwB=U_w(wU_w'w^{-1})wB=U_wwB$$
+$$BwB=UwB=U_wU_w'wB=U_ww(w^{-1}U_w'w)B=U_wwB$$
 
-Now if $u_1wb_1=u_2wb_2$ ($u_i\in U_w$, $b_i\in B$), then $w^{-1}u_2^{-1}u_1w=b_2b_1^{-1}\in B$. On the other hand $u_2^{-1}u_1\in U_w$, so $w^{-1}u_2^{-1}u_1w\in U^-$, and thus $w^{-1}u_2^{-1}u_1w\in B\cap U^-=\{e\}$. From this $u_1=u_2$ and $b_1=b_2$, so the map is bijective, and in fact an isomorphism of varieties. Finally, $U_w$ is a product of $\ell(w)$ root subgroups and each root subgroup is isomorphic to $\mathbb{G}_a$, so $U_w\cong\mathbb{A}^{\ell(w)}$.
+Now if $u_1wb_1=u_2wb_2$ ($u_i\in U_w$, $b_i\in B$), then $w^{-1}u_2^{-1}u_1w=b_2b_1^{-1}\in B$. On the other hand, since $u_2^{-1}u_1\in U_w$, we have $w^{-1}u_2^{-1}u_1w\in U^-$, and thus $w^{-1}u_2^{-1}u_1w\in B\cap U^-=\{e\}$. From this, $u_1=u_2$ and $b_1=b_2$, so the map is bijective, and in fact an isomorphism of varieties. Finally, $U_w$ is a product of $\ell(w)$ root subgroups and each root subgroup is isomorphic to $\mathbb{G}_a$, so $U_w\cong\mathbb{A}^{\ell(w)}$.
 :::
 
-The true meaning of this proposition is that each $B$-orbit $X_w^\circ=BwB/B$ is not merely a locally closed subset, but the *affine space* $\mathbb{A}^{\ell(w)}$ itself, and moreover these cover all of $G/B$ without overlap:
+The true meaning of this proposition is that each $B$-orbit $X_w^\circ=BwB/B$ is not merely a locally closed subset, but the *affine space* $\mathbb{A}^{\ell(w)}$ itself, and moreover that these cover all of $G/B$ without overlap:
 
 $$G/B=\bigsqcup_{w\in W}X_w^\circ,\qquad X_w^\circ\cong\mathbb{A}^{\ell(w)}$$
 
-Since the closure of each cell is a union of cells of lower dimension ([§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="3h6cp" }), this decomposition forms an *affine paving* of $G/B$, and the classes $[X_w]$ defined by cell closures form a basis of the Chow ring $A^\ast(G/B)$ (and further of cohomology $H^\ast(G/B)$). The cell of largest dimension is the *big cell* $X_{w_0}^\circ$ corresponding to the longest element $w_0$, which is open dense in $G/B$ with $\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$. Conversely, the smallest cell is the single point $X_e^\circ=\{eB\}$, which is a $B$-fixed point. In this way the Bruhat decomposition reduces the geometry of the flag variety to the combinatorics of $(W,S,\ell)$. Let us examine this in the concrete example $\GL_n$ discussed above.
+Since the closure of each cell is a union of cells of lower dimension ([§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="3h6cp" }), this decomposition forms an *affine paving* of $G/B$, and the classes $[X_w]$ defined by cell closures define a basis of the Chow ring $A^\ast(G/B)$ (and further of cohomology $H^\ast(G/B)$). The cell of largest dimension is the *big cell* $X_{w_0}^\circ$ corresponding to the longest element $w_0$, which is open dense in $G/B$ with $\dim X_{w_0}^\circ=\ell(w_0)=\lvert\Phi^+\rvert=\dim G/B$. Conversely, the smallest cell is the single point $X_e^\circ=\{eB\}$, which is a $B$-fixed point. In this way the Bruhat decomposition reduces the geometry of the flag variety to the combinatorics of $(W,S,\ell)$. Let us examine this in the concrete example $\GL_n$ discussed above.
 
 ::: Example 7
-Let us follow through the case $G=\GL_n(\mathbb{C})$ to the end. Here $B$ is the group of invertible upper triangular matrices, $T$ is the group of invertible diagonal matrices, and the Weyl group is $W=N_G(T)/T\cong S_n$, where $w\in S_n$ is identified with the permutation matrix acting by $we_k=e_{w(k)}$. Under this notation the Bruhat decomposition $\GL_n=\bigsqcup_{w\in S_n}BwB$ can be thought of as a coordinate-free version of *Gauss elimination*. For an invertible matrix $g$, by multiplying on the left by an upper unipotent matrix and on the right by an upper triangular matrix, what remains at the end is a single permutation matrix $w$ having exactly one $1$ in each row and column. The fact that this $w$ is uniquely determined is exactly the disjointness of [Theorem 5](#thm5){: data-lid="l7du9" }, and this $w$ determines the Bruhat cell $BwB$ containing $g$.
+Let us follow through the case $G=\GL_n(\mathbb{C})$ to the end. Here $B$ is the group of invertible upper triangular matrices, $T$ is the group of invertible diagonal matrices, and the Weyl group is $W=N_G(T)/T\cong S_n$, where $w\in S_n$ is identified with the permutation matrix acting by $we_k=e_{w(k)}$. Under this notation, the Bruhat decomposition $\GL_n=\bigsqcup_{w\in S_n}BwB$ can be thought of as a coordinate-invariant version of *Gauss elimination*. This is because if we reduce an invertible matrix $g$ only by multiplying on the left by an upper unipotent matrix and on the right by an upper triangular matrix, what remains at the end, with exactly one $1$ in each row and column, is only a single permutation matrix $w$. The fact that this $w$ is uniquely determined is precisely the disjointness of [Theorem 5](#thm5){: data-lid="l7du9" }, and that $w$ distinguishes $g$'s Bruhat cell $BwB$.
 
-Let us look explicitly at the case $n=2$. Then an arbitrary element of $G$ has the form
+Let us look explicitly at the case $n=2$. Then an arbitrary element of $G$ is of the form
 
 $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\GL_2(\mathbb{C})$$
 
-and if $c=0$ then $g$ is already upper triangular, so $g\in B=BeB$, i.e. $g$ lies in the cell corresponding to the identity. Consider the other elements. If $c\neq 0$ then
+and here if $c=0$, then $g$ is already upper triangular, so $g\in B=BeB$, that is, $g$ lies in the cell corresponding to the identity. Let us examine the other elements. If $c\neq 0$, then
 
 $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}c&d\\0&\frac{bc-ad}{c}\end{pmatrix}\in BsB$$
 
 and therefore the cells of $\GL_2(\mathbb{C})$ are divided into upper triangular matrices and the rest.
 
-Now let us project these to $\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$ following [Proposition 6](#prop6){: data-lid="ypm19" }. As seen above, the part with $c=0$ corresponds to $B$ itself, so these collapse to a single point, which corresponds to the $\ell(w)=0$ part of the proposition. On the other hand, for the part with $c\neq 0$, as examined above, we obtain a point $[a:c]\in \mathbb{P}^1$ parameterized by a single coordinate $a/c$. That is, the point of the flag variety corresponding to $c=0$ is $[1:0]$, and the rest attaches to it in the form of $\mathbb{A}^1$.
+Now let us project these to $\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$ following [Proposition 6](#prop6){: data-lid="ypm19" }. As seen above, since the part corresponding to $c=0$ is $B$ itself, these collapse to a single point, which corresponds to the $\ell(w)=0$ part of the proposition. On the other hand, in the part where $c\neq 0$, as examined above, with a single coordinate $a/c$ parametrizing it, we obtain a point of $\mathbb{P}^1$, $[a:c]\in \mathbb{P}^1$. That is, the point of the flag variety corresponding to $c=0$ is $[1:0]$, and the rest is attached to it in the form of $\mathbb{A}^1$.
 :::
 
-In the Bruhat decomposition for $\GL_n(\mathbb{C})$ above, we were able to examine it in the language of linear algebra by exploiting the fact that the Borel subgroup $B$ consists of upper triangular matrices. On the other hand, the opposite Bruhat cell is the set of lower triangular matrices, so we can obtain a similar decomposition using these, and moreover we can consider the following mixed decomposition.
+In the Bruhat decomposition of $\GL_n(\mathbb{C})$ above, we were able to examine it in the language of linear algebra by exploiting the fact that the Borel subgroup $B$ consists of upper triangular matrices. On the other hand, since the opposite Bruhat cell is the collection of lower triangular matrices, we can obtain a similar decomposition using them as well, and moreover we can consider the following mixed decomposition.
 
 ::: Theorem 8 (Birkhoff decomposition)
 Let $B^-$ be the opposite Borel subgroup corresponding to $B$. Then the following holds:
 
 $$G=\bigsqcup_{w\in W}B^-wB^-$$
 
-More generally, for two opposite Borel subgroups $B^+$, $B^-$ the following *mixed* decomposition holds:
+More generally, for two opposite Borel subgroups $B^+$, $B^-$, the following *mixed* decomposition holds:
 
 $$G=\bigsqcup_{w\in W}B^+wB^-$$
 :::
@@ -174,60 +177,60 @@ Since $B^-=w_0Bw_0^{-1}$ and $w_0=w_0^{-1}$, conjugating both sides of Theorem 5
 
 $$G=w_0Gw_0^{-1}=\bigsqcup_{w\in W}(w_0Bw_0^{-1})(w_0ww_0^{-1})(w_0Bw_0^{-1})=\bigsqcup_{w\in W}B^-(w_0ww_0)B^-$$
 
-Since $w\mapsto w_0ww_0$ is an automorphism of $W$, the first decomposition follows. For the mixed decomposition, substituting $B^+=B$ and $B^-=w_0Bw_0^{-1}$ and writing $BwB^-=Bww_0Bw_0^{-1}$, then reindexing by $w\mapsto ww_0$ reduces it to Theorem 5.
+Since $w\mapsto w_0ww_0$ is an automorphism of $W$, the first decomposition holds. The mixed decomposition reduces to Theorem 5 by substituting $B^+=B$ and $B^-=w_0Bw_0^{-1}$, writing $BwB^-=Bww_0Bw_0^{-1}$, and reindexing by $w\mapsto ww_0$.
 :::
 
-In $\GL_n(\mathbb{C})$ this has a clear meaning: the identity cell $B^-B$ is the set of matrices expressible as a product of a lower triangular matrix and an upper triangular matrix, i.e. matrices having an *LU decomposition*. As is well known in linear algebra, this coincides exactly with matrices all of whose leading principal minors are nonzero, and such matrices are open dense in $\GL_n$.
+In $\GL_n(\mathbb{C})$, this has a clear meaning: the identity cell $B^-B$ is the collection of matrices expressible as a product of a lower triangular matrix and an upper triangular matrix, that is, matrices having an *LU decomposition*. As is well known in linear algebra, this coincides exactly with matrices all of whose leading principal minors are not $0$, and such matrices are open dense in $\GL_n$.
 
-Thinking back to the $n=2$ situation of [Example 7](#ex7){: data-lid="phnpg" }, the leading principal minors of a $2\times2$ matrix are the first entry $g_{11}$ and the full determinant $\det g$. But in $\GL_2(\mathbb{C})$, $\det g\neq0$ is automatic, so the LU condition reduces to the single condition $g_{11}\neq0$; thus the elements of $B^-B$ are exactly matrices whose $(1,1)$-entry is nonzero, which is precisely the set of elements for which the first pivot is alive so that Gauss elimination proceeds without row exchanges. In general, the leading principal minors correspond to the pivots in Gauss elimination, and when a minor becomes zero at some stage, the pivot there disappears and a row exchange becomes unavoidable. The permutation $w$ records the pattern of these row exchanges, and what Birkhoff showed is that any $g$ can be written in the form
+Thinking back to the $n=2$ situation of [Example 7](#ex7){: data-lid="phnpg" } earlier, the leading principal minors of a $2\times2$ matrix are two: the first entry $g_{11}$ and the full determinant $\det g$. However, in $\GL_2(\mathbb{C})$, since $\det g\neq0$ is automatic, the LU condition reduces to the single condition $g_{11}\neq0$; thus the elements of $B^-B$ are precisely matrices whose $(1,1)$-entry is not $0$, and these are precisely the elements for which the first pivot survives so that Gauss elimination proceeds without row exchanges. Likewise, in general, the leading principal minors correspond to the pivots in Gauss elimination, and if a minor becomes $0$ at some stage, the pivot at that position disappears and a row exchange becomes unavoidable. The permutation $w$ records the pattern of these row exchanges, and what Birkhoff showed is that any $g$ can be written in the form
 
 $$g=LwU\qquad(L\in B^-,\ U\in B,\ w\in W)$$
 
-and that this $w$ is uniquely determined. This is exactly the Bruhat decomposition for the pair $(B^-,B)$, namely $G=\bigsqcup_w B^-wB$, and $w$ measures how far $g$ deviates from LU decomposition.
+and that this $w$ is uniquely determined. This is precisely the Bruhat decomposition for the pair $(B^-,B)$, namely $G=\bigsqcup_w B^-wB$, and $w$ measures how far $g$ deviates from the LU decomposition.
 
-Geometrically, the Bruhat decomposition showed incidence conditions by increasing the size of the reference flag. Then in the case of the mixed cell above, we impose incidence conditions considering both the direction in which the reference flag grows and the direction from which it descends from the whole space (opposite Bruhat cell). When doing intersection theory inside the flag variety, we need to choose reference flags in general position, so this decomposition is used in earnest.
+Geometrically, the Bruhat decomposition showed the corresponding incidence conditions by increasing the size of the reference flag. Then, in the case of the mixed cell above, incidence conditions are imposed taking into account also the direction in which the reference flag descends from the total space (opposite Bruhat cell). In order to do intersection theory inside the flag variety, one must choose reference flags in general position when considering Schubert varieties, so this decomposition becomes genuinely useful.
 
 ## Parabolic subgroup and generalized Bruhat decomposition
 
-The cell decomposition so far was for the complete flag variety $G/B$. Extending this to larger subgroups containing $B$, namely *parabolic subgroups*, yields the cell decomposition of partial flag varieties $G/P$ including the Grassmannian. Intuitively, $P$ corresponds to remembering only some stages of the flag, and accordingly the index by $W$ becomes coarser by the subgroup $W_I$.
+The cell decomposition so far was for the complete flag variety $G/B$. Extending this to a larger subgroup containing $B$, namely a *parabolic subgroup*, yields the cell decomposition of partial flag varieties $G/P$, including the Grassmannian. Intuitively, $P$ corresponds to remembering only some stages of the flag, and correspondingly, the indexing by $W$ also becomes coarser by the subgroup $W_I$.
 
 ::: Definition 9
-A closed subgroup $P$ of $G$ is called a *parabolic subgroup* if the quotient $G/P$ is a projective variety. Equivalently, $P$ is a connected closed subgroup containing some Borel subgroup.
+In $G$, a closed subgroup $P$ is called a *parabolic subgroup* if the quotient $G/P$ is a projective variety. Equivalently, $P$ is a connected closed subgroup containing some Borel subgroup.
 :::
 
-The *standard* parabolic subgroups containing $B$ are in one-to-one correspondence with subsets $I\subseteq\Delta$ of the simple root system $\Delta$. The parabolic subgroup corresponding to $I$ is defined by
+The *standard* parabolic subgroups containing $B$ are in one-to-one correspondence with subsets of the simple root system $\Delta$, $I\subseteq\Delta$. Here, the parabolic subgroup corresponding to $I$ is defined by
 
 $$P_I=BW_IB=\bigsqcup_{w\in W_I}BwB$$
 
-where $W_I=\langle s_i\mid\alpha_i\in I\rangle$ is the parabolic subgroup of $W$ generated by the simple reflections in $I$. The two extremes are $I=\emptyset$ giving $P_I=B$ and $I=\Delta$ giving $P_I=G$, and the standard parabolics in between define flag varieties lying between the complete flag variety and the 0-step variety.
+where $W_I=\langle s_i\mid\alpha_i\in I\rangle$ is the subgroup generated by the simple reflections in $I$, forming a parabolic subgroup of $W$. The two extremes are: if $I=\emptyset$, then $P_I=B$, and if $I=\Delta$, then $P_I=G$; the standard parabolics in between define flag varieties lying between the complete flag variety and the 0-step variety.
 
 ::: Proposition 10
-$P_I=BW_IB$ is a connected closed subgroup of $G$ and has a Levi decomposition $P_I=L_I\ltimes U_I$. Here the Levi factor $L_I$ is the reductive group generated by $T$ and the root spaces of roots in $I$, and the unipotent radical $U_I$ is generated by the root spaces of positive roots not in $I$.
+$P_I=BW_IB$ is a connected closed subgroup of $G$ and has a Levi decomposition $P_I=L_I\ltimes U_I$. Here, the Levi factor $L_I$ is the reductive group generated by $T$ and the root spaces of roots in $I$, and the unipotent radical $U_I$ is generated by the root spaces of positive roots not in $I$.
 :::
 ::: Proof
-Since $B=U\rtimes T$ and $W_I\subseteq W$, $P_I$ is the subgroup generated by $B$ and representatives of $W_I$. For each element $w$ of $W_I$, $BwB$ is locally closed, and by the disjointness of Theorem 5 their union $P_I$ is a well-defined subgroup and a closed subset. From the root space dimension viewpoint, $\mathfrak{p}_I$ is $\mathfrak{b}$ plus the root spaces of negative roots generated by $I$; splitting this into the reductive part $\mathfrak{l}_I$ (the part where positive and negative roots are paired) and the nilpotent part $\mathfrak{u}_I$ (the remaining positive roots) gives the above Levi decomposition. Hence $P_I$ is a connected closed subgroup.
+Since $B=U\rtimes T$ and $W_I\subseteq W$, $P_I$ is the subgroup generated by $B$ and representatives of $W_I$. In $W_I$, for each element $w$, $BwB$ is locally closed, and by the disjointness in Theorem 5 their union $P_I$ is a well-defined subgroup and a closed subset. At the level of root spaces, $\mathfrak{p}_I$ is $\mathfrak{b}$ plus the root spaces of negative roots generated by $I$; splitting this into the reductive part $\mathfrak{l}_I$ (the part where positive and negative roots are paired) and the nilpotent part $\mathfrak{u}_I$ (the remaining positive roots) gives the above Levi decomposition. Therefore, $P_I$ is a connected closed subgroup.
 :::
 
-The Levi decomposition of [Proposition 10](#prop10){: data-lid="s7sli" } naturally appears as a step up from the decomposition $B=U\rtimes T$ of the Borel subgroup. That is, just as $B$ consisted of the torus $T$ and the upper unipotent $U$, $P_I$ is the semidirect product of the larger reductive part $L_I$ and the unipotent $U_I$ above it. The roots in $I$ survive as pairs of positive and negative roots to form the reductive group $L_I$ (with $T$ as maximal torus), while the positive roots outside $I$ have no partners and form the nilpotent radical $U_I$. In particular, the Weyl group of $L_I$ is exactly $W_I$, which is the subgroup by which we will quotient $W$ below.
+It is natural to view the Levi decomposition of [Proposition 10](#prop10){: data-lid="s7sli" } as a step up from the decomposition $B=U\rtimes T$ of the Borel subgroup. That is, just as $B$ consists of the two pieces of information (the torus $T$ and the upper unipotent $U$), $P_I$ is the semidirect product of the larger reductive part $L_I$ and the unipotent $U_I$ above it. The roots in $I$ survive as pairs of positive and negative roots to form, with $T$ as maximal torus, the reductive group $L_I$, while the positive roots outside $I$ have no partners and form the nilpotent radical $U_I$. In particular, the Weyl group of $L_I$ is precisely $W_I$, the very subgroup by which we will quotient $W$ right below.
 
-In $G=\GL_n(\mathbb{C})$ this decomposition is immediately visible as block matrices. For each simple root $\alpha_k$ missing from $I$, the connection between $k$ and $k+1$ is broken and $\{1,\ldots,n\}$ is partitioned into blocks; $P_I$ is then the set of block upper triangular matrices having these blocks as diagonal blocks. Here the diagonal blocks form the reductive Levi $L_I\cong\GL_{k_1}\times\cdots\times\GL_{k_r}$, and the blocks above the diagonal form the unipotent radical $U_I$. To obtain the cell decomposition of $G/P$ for a parabolic subgroup $P=P_I$, we need to quotient the Weyl group $W$ by $W_I$. The standard way to represent each coset is to choose the minimal length element.
+In $G=\GL_n(\mathbb{C})$, this decomposition appears immediately as block matrices. For each simple root missing from $I$, $\alpha_k$, the connection between $k$ and $k+1$ is broken and $\{1,\ldots,n\}$ is partitioned into blocks; $P_I$ is then the collection of block upper triangular matrices having these blocks as diagonal blocks. Here, the diagonal blocks form the reductive Levi $L_I\cong\GL_{k_1}\times\cdots\times\GL_{k_r}$, and the blocks above the diagonal form the unipotent radical $U_I$. Now, for the parabolic subgroup $P=P_I$, to obtain the cell decomposition of $G/P$, one must quotient the Weyl group $W$ by $W_I$. At this point, the standard way to represent each coset is to choose the minimal length element.
 
 ::: Definition 11
-For a parabolic subgroup $W_I\subseteq W$, the set of *minimal length coset representatives* $W^I$ is defined as follows:
+For a parabolic subgroup $W_I\subseteq W$, the collection of *minimal length coset representatives*, $W^I$, is defined as follows:
 
 $$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
 
-The condition $\ell(ws_i)>\ell(w)$ means that multiplying $w$ on the right by generators of $W_I$ can no longer reduce the length, so $W^I$ collects the elements of minimal length in each left coset $wW_I$. Just as the length of a Weyl group element gives the dimension of a Bruhat cell, these will become the dimensions of the cells when we decompose the partial flag variety. To see this we need the following bridge.
+The condition $\ell(ws_i)>\ell(w)$ means that multiplying $w$ on the right by a generator of $W_I$ can no longer reduce the length, and therefore $W^I$ is the collection of elements of minimal length in each left coset $wW_I$. Just as the length of a Weyl group element previously gave the dimension of a Bruhat cell, these will soon become the dimension of each cell when decomposing the partial flag variety. For this, the following bridge is needed.
 
 ::: Proposition 12
-Each $w\in W$ decomposes uniquely as $w=w^I w_I$ ($w^I\in W^I$, $w_I\in W_I$), and then $\ell(w)=\ell(w^I)+\ell(w_I)$. In particular each coset $wW_I$ has exactly one minimal length element, so the projection $W^I\rightarrow W/W_I$ is a bijection.
+Each $w\in W$ decomposes uniquely as $w=w^I w_I$ ($w^I\in W^I$, $w_I\in W_I$), where $\ell(w)=\ell(w^I)+\ell(w_I)$. In particular, each coset $wW_I$ has exactly one minimal length element, so the projection $W^I\rightarrow W/W_I$ is a bijection.
 :::
 ::: Proof
-Since $W_I$ is finite, there exists an element $w^I$ of minimal length in the coset $wW_I$. For any $\alpha_i\in I$, $w^Is_i$ also lies in the same coset, so $\ell(w^Is_i)\geq\ell(w^I)$, and since $\ell(w^Is_i)=\ell(w^I)\pm1$ in a Coxeter group, we have $\ell(w^Is_i)=\ell(w^I)+1$, i.e. $w^I\in W^I$. The uniqueness of the decomposition and the additivity of length $\ell(w)=\ell(w^I)+\ell(w_I)$ are the parabolic factorization theorem for Coxeter groups. (See [BB]) From this, each element of $W^I$ represents a different coset, so $W^I\rightarrow W/W_I$ is a bijection.
+Since $W_I$ is a finite group, there exists an element $w^I$ of minimal length in the coset $wW_I$. For any $\alpha_i\in I$, $w^Is_i$ also belongs to the same coset, so $\ell(w^Is_i)\geq\ell(w^I)$, and since $\ell(w^Is_i)=\ell(w^I)\pm1$ in a Coxeter group, we have $\ell(w^Is_i)=\ell(w^I)+1$, that is, $w^I\in W^I$. The uniqueness of the decomposition and the additivity of length $\ell(w)=\ell(w^I)+\ell(w_I)$ are the parabolic factorization theorem for Coxeter groups. (See \[BB\]) From this, since each element of $W^I$ represents a distinct coset, $W^I\rightarrow W/W_I$ is a bijection.
 :::
 
-Now we obtain the cell decomposition of $G/P_I$ using minimal length representatives. The key point is that under the projection $G/B\rightarrow G/P_I$, Bruhat cells belonging to the same $W_I$-coset merge into one, and the representative surviving from each coset is exactly the element of $W^I$.
+Now we obtain the cell decomposition of $G/P_I$ using minimal length representatives. The key point is that under the projection $G/B\rightarrow G/P_I$, Bruhat cells belonging to the same $W_I$-coset merge into one, and the representative surviving from each coset is precisely an element of $W^I$.
 
 ::: Theorem 13 (Generalized Bruhat decomposition)
 Let $P=P_I$ be a standard parabolic subgroup. Then the following holds:
@@ -239,12 +242,12 @@ Hence the partial flag variety $G/P$ decomposes into affine cells:
 $$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 :::
 ::: Proof
-From Theorem 5 we have $G=\bigsqcup_{w\in W}BwB$ and $P=\bigsqcup_{v\in W_I}BvB$, so $G=\bigcup_{w\in W}BwP$, and by the decomposition $w=w^Iw_I$ of Proposition 12 we have $BwP=Bw^IP$, hence $G=\bigcup_{w\in W^I}BwP$. To show disjointness, suppose for $w_1,w_2\in W^I$ that $Bw_1P=Bw_2P$. Then $w_1\in Bw_2P$, and since $P=\bigsqcup_{v\in W_I}BvB$ we have $Bw_2P=\bigsqcup_{v\in W_I}Bw_2vB$. (Here for $w_2\in W^I$ and $v\in W_I$, since $\ell(w_2v)=\ell(w_2)+\ell(v)$, we have $Bw_2BvB=Bw_2vB$ merging into a single cell.) Thus for some $v\in W_I$ we have $w_1\in Bw_2vB$, and by the disjointness of Theorem 5, $w_1=w_2v$. That is, $w_1$ and $w_2$ belong to the same coset $w_2W_I$, and since each coset has a unique minimal length element, $w_1=w_2$. Finally, for $w\in W^I$ we have $\ell(w)=\ell(w^I)$ giving the cell dimension, and by the same argument as in Proposition 6 we obtain $BwP/P\cong\mathbb{A}^{\ell(w)}$.
+From $G=\bigsqcup_{w\in W}BwB$ and $P=\bigsqcup_{v\in W_I}BvB$ of Theorem 5, we have $G=\bigcup_{w\in W}BwP$, and by the decomposition $w=w^Iw_I$ of Proposition 12, $BwP=Bw^IP$, so $G=\bigcup_{w\in W^I}BwP$. To show disjointness, suppose $Bw_1P=Bw_2P$ for $w_1,w_2\in W^I$. Then $w_1\in Bw_2P$, and since $P=\bigsqcup_{v\in W_I}BvB$, we have $Bw_2P=\bigsqcup_{v\in W_I}Bw_2vB$. (Here, since $\ell(w_2v)=\ell(w_2)+\ell(v)$ for $w_2\in W^I$ and $v\in W_I$, $Bw_2BvB=Bw_2vB$ merges into a single cell.) Thus for some $v\in W_I$, $w_1\in Bw_2vB$, so from the disjointness of Theorem 5, $w_1=w_2v$. That is, $w_1$ and $w_2$ belong to the same coset $w_2W_I$, and since each coset has a unique minimal length element, $w_1=w_2$. Finally, if $w\in W^I$, then $\ell(w)=\ell(w^I)$ gives the cell dimension, and by the same argument as in Proposition 6 we obtain $BwP/P\cong\mathbb{A}^{\ell(w)}$.
 :::
 
 ## Grassmannian
 
-The most representative example of the generalized Bruhat decomposition is the Grassmannian $\Gr(k,n)$. ([\[Algebraic Varieties\] §Grassmannians, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="rmequ" }) By its definition this can be thought of as a 1-step partial flag variety. To see this, we choose the subset $I=\Delta\setminus\{\alpha_k\}$ obtained by removing a single simple root $\alpha_k$ from the simple root system $\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$, and denote the corresponding maximal parabolic subgroup by $P_k$. $P_k$ is the set of block upper triangular matrices
+The most representative example of the generalized Bruhat decomposition is the Grassmannian $\Gr(k,n)$. ([\[Algebraic Varieties\] §Grassmann Varieties, ⁋Definition 1](/en/math/algebraic_varieties/grassmannians#def1){: data-lid="rmequ" }) By its definition, this can be thought of as a 1-step partial flag variety. To this end, we choose the subset $I=\Delta\setminus\{\alpha_k\}$ obtained by removing only $\alpha_k$ from the simple root system $\Delta=\{\alpha_1,\ldots,\alpha_{n-1}\}$, and let $P_k$ be the corresponding maximal parabolic subgroup. $P_k$ is the collection of block upper triangular matrices
 
 $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle\vert\;A\in \GL_k(\mathbb{C}),\;D\in \GL_{n-k}(\mathbb{C})\right\}$$
 
@@ -252,19 +255,19 @@ This subgroup fixes the standard $k$-plane $E_k=\span\{e_1,\ldots,e_k\}$, so the
 
 $$\Gr(k,n)\cong \GL_n(\mathbb{C})/P_k$$
 
-On the other hand, via $V\mapsto\mathbb{C}^n/V$ or $V\mapsto V^\perp$ under a suitable inner product, there is a canonical isomorphism between $\Gr(k,n)$ and $\Gr(n-k,n)$, so for the same $P_k$ we can also view $\Gr(n-k,n)\cong \GL_n(\mathbb{C})/P_k$.
+On the other hand, since there is a canonical isomorphism between $\Gr(k,n)$ and $\Gr(n-k,n)$ via $V\mapsto\mathbb{C}^n/V$ or $V\mapsto V^\perp$ under a suitable inner product, we can also view $\Gr(n-k,n)\cong \GL_n(\mathbb{C})/P_k$ for the same $P_k$.
 
 ::: Proposition 14
-In the case $\GL_n(\mathbb{C})/P_k\cong \Gr(k,n)$, the parabolic subgroup $W_{P_k}$ of the Weyl group $W=S_n$ is isomorphic to $S_k\times S_{n-k}$, and the minimal length coset representatives $W^{P_k}$ are as follows:
+In the case where $\GL_n(\mathbb{C})/P_k\cong \Gr(k,n)$, the parabolic subgroup $W_{P_k}$ of the Weyl group $W=S_n$ is isomorphic to $S_k\times S_{n-k}$, and the minimal length coset representatives $W^{P_k}$ are as follows:
 
 $$W^{P_k}=\{w\in S_n\mid w(1)<\cdots<w(k),\ w(k+1)<\cdots<w(n)\}$$
 
-These are called *$(k,n-k)$-shuffles* and there are exactly $\binom{n}{k}$ of them.
+These are called *$(k,n-k)$-shuffles* and there are $\binom{n}{k}$ of them in total.
 :::
 
-This ultimately means that since the Grassmannian is a 1-step partial flag variety, among the whole space $\GL_n(\mathbb{C})$ and the full $S_n$ acting on it, the broken part $S_k\times S_{n-k}$ can be thought of as the same thing.
+This ultimately means that since the Grassmannian is a 1-step partial flag variety, out of the whole space $\GL_n(\mathbb{C})$ and the full $S_n$ acting on it, $S_k\times S_{n-k}$ with one *disconnected* can be thought of as the same thing.
 
-Since the Grassmannian is the simplest and most powerful among concrete examples, let us organize the notation for this case. First, we write the elements of an arbitrary $w\in S_n$ as
+Since the Grassmannian is the simplest and most powerful among concrete examples, let us organize the notation for this case. First, let us write the elements of an arbitrary $w\in S_n$ as
 
 $$w=w(1)w(2)\ldots w(n)$$
 
@@ -272,44 +275,44 @@ For example, the element $2413$ of $S_4$ is the element satisfying
 
 $$w(1)=2, \quad w(2)=4, \quad w(3)=1,\quad w(4)=3$$
 
-Then we can check that this element is exactly a $(2,2)$-shuffle, and for example $1342$ is a $(3,1)$-shuffle. That is, in this notation the blocks are distinguished by the rule that a new block starts at the position where the numbers decrease.
+Then we can check that this element is precisely a $(2,2)$-shuffle, and for example $1342$ is a $(3,1)$-shuffle. That is, in this notation, the blocks are distinguished by the rule that a new block starts at the position where the numbers decrease.
 
-On the other hand, we recall that fundamentally the Grassmannian (or more generally the partial flag variety) arises from incidence conditions with respect to a reference flag. Consider the flag variety $\Fl(d_1, d_2, \ldots, d_m; n)$. The elements of this variety are the flags
+Meanwhile, we recall that fundamentally the Grassmannian (or more generally the partial flag variety) arises from an incidence condition with respect to a reference flag. Consider the flag variety $\Fl(d_1, d_2, \ldots, d_m; n)$. The elements of this variety consist of the flags
 
 $$0\subseteq V_1\subseteq \cdots \subseteq V_m\subseteq \mathbb{C}^n,\qquad \dim V_k=d_k$$
 
-and the position of this flag is determined by the intersection dimensions $\dim(V_i\cap E_j)$ with the reference flag, and the objects sharing this information were exactly the Bruhat cells.
+and the position of this flag is completely determined by the intersection dimensions $\dim(V_i\cap E_j)$ with the reference flag, and the objects sharing this information were precisely the Bruhat cells.
 
-To link these two pieces of information, let us write the jump data with respect to the reference flag as a word $u_1\cdots u_n$ of length $n$. Then for each $j$, $u_j$ is the number (starting from $0$) of the position where the new direction appearing when going from $E_{j-1}$ to $E_j$ is first absorbed. For example, consider the Grassmannian $\Gr(2,4)$. Fixing the reference flag as the standard flag $E_j=\span\{e_1,\ldots,e_j\}$ and reading the position of a point $V=\span\{e_1,e_2+e_3\}$ by the above method gives the following.
+To link these two pieces of information, let us write the jump data with respect to the reference flag as a word $u_1\cdots u_n$ of length $n$. Then for each $j$, $u_j$ is the index, assigned starting from $0$, of the position where the new direction arising when going from $E_{j-1}$ to $E_j$ is first absorbed. For example, consider the case of the Grassmannian $\Gr(2,4)$. Fixing the reference flag as the standard flag $E_j=\span\{e_1,\ldots,e_j\}$, reading the position of a point $V=\span\{e_1,e_2+e_3\}$ in the preceding manner gives the following.
 
-- When going from $E_0$ to $E_1$, the new direction is the $e_1$ direction, and this direction is in $V$ from the start. So $u_1=0$.
-- When going from $E_1$ to $E_2$, the new direction is the $ae_1+be_2$ ($b\neq 0$) direction, and this direction is not in $V$. So $u_2=1$. 
-- When going from $E_2$ to $E_3$, the new direction is of the form $ae_1+be_2+ce_3$ ($c\neq0$) with an alive $e_3$ component, but this time the vector $e_2+e_3$ of $V$ is exactly such a direction, so $\dim(V\cap E_3)$ jumps by one dimension. That is, since this direction is absorbed into $V$, $u_3=0$.
-- When going from $E_3$ to $E_4$, the new direction is the $e_4$ direction, but since $V\subseteq E_3$ already, there is no new vector of $V$ to be absorbed. So $u_4=1$.
+- When going up from $E_0$ to $E_1$, the arising direction is the $e_1$ direction, and this direction is in $V$ from the start. That is, $u_1=0$.
+- When going up from $E_1$ to $E_2$, the arising direction is in the $ae_1+be_2$ ($b\neq 0$) direction, and this direction does not belong to $V$. That is, $u_2=1$.
+- When going up from $E_2$ to $E_3$, the arising direction is of the form $ae_1+be_2+ce_3$ ($c\neq0$) where the $e_3$ component is present, but this time the vector $e_2+e_3$ of $V$ is precisely such a direction, so $\dim(V\cap E_3)$ increases by one dimension. That is, since this direction is absorbed into $V$, $u_3=0$.
+- When going up from $E_3$ to $E_4$, the arising direction is the $e_4$ direction, but since $V\subseteq E_3$ already, there is no vector of $V$ to be newly absorbed. That is, $u_4=1$.
 
-Collecting the four components, the $u$ word we construct is $u=0101$. Conversely, recovering the jump data from such a word is also immediate; for example in this case the dimensions jump at the first and third positions where $0$ appears. For a more general flag variety, the numbers making up $u$ are not just $0$ and $1$ but other numbers appear as well, and these numbers tell us which component of the flag we are looking at, while their positions tell us where this component jumps.
+Collecting the four components, the $u$ word we construct is $u=0101$. Conversely, recovering the jump data when such a word is given is also immediate; for example, in this example, the places where the dimension jumps are the first and third positions where $0$ is located. For more general flag varieties, the numbers making up $u$ include not only $0$ and $1$ but other numbers appearing as well, and these numbers tell us which component of the flag we are looking at, while their positions tell us where this component jumps.
 
-Hence we can establish the relationship between $01$-words (more generally $012$-words etc.) and jumping positions. But this simultaneously encodes the $(k, n-k)$-shuffle as well. That is, since the positions of $0$ are the first and third, this corresponds to the shuffle $1324$, and for example the $012$-word $1022101$ corresponds to $2615734$.
+Hence, from this we can establish the relationship between $01$-words (more generally, $012$-words, etc.) and jumping positions. However, this also simultaneously encodes the $(k, n-k)$-shuffle as well. That is, since the positions of $0$ are at the $1, 3$-th positions, this corresponds to the shuffle $1324$, and for example, in a case such as the $012$-word $1022101$, $2615734$ is recovered.
 
 ::: Example 15
-Now let us push this example through to the end in $\Gr(2,4)$. In this case $W=S_4$, $W_{P_2}=S_2\times S_2$, and the minimal length representatives are the $(2,2)$-shuffles, namely
+Now let us push this example through to the end in $\Gr(2,4)$. In this case $W=S_4$, $W_{P_2}=S_2\times S_2$, and the minimal length representatives are the six $(2,2)$-shuffles, namely
 
 $$W^{P_2}=\{1234,\,1324,\,1423,\,2314,\,2413,\,3412\}$$
 
-six of them. The length of each representative can be checked by counting inversions as in [Example 4](#ex4){: data-lid="uhtwl" }:
+The length of each representative can be verified by counting inversions as in [Example 4](#ex4){: data-lid="uhtwl" }:
 
 $$\ell(1234)=0,\quad\ell(1324)=1,\quad\ell(1423)=\ell(2314)=2,\quad\ell(2413)=3,\quad\ell(3412)=4$$
 
-Hence these form six Schubert cells of dimensions $0,1,2,2,3,4$ respectively. Now let us write these more explicitly. To do this, we write a $2$-plane $V$ as a $2\times4$ matrix, taking the pivot of each row to be the rightmost nonzero component, i.e. the position where $\dim(V\cap E_j)$ jumps, then the pivots lie exactly in columns $\{w(1),w(2)\}$ and only the non-pivot columns to their left remain as free coordinates $\ast$. In the order $W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$:
+Therefore, these form six Schubert cells of dimensions $0,1,2,2,3,4$, respectively. Now let us write these down more explicitly. To do this, if we represent a $2$-plane $V$ as a $2\times4$ matrix and set the pivot of each row to be the rightmost nonzero entry, namely the position where $\dim(V\cap E_j)$ jumps, then the pivots lie precisely in columns $\{w(1),w(2)\}$, and only the non-pivot column positions to their left remain as free coordinates $\ast$. In the order $W^{P_2}=\{1234,1324,1423,2314,2413,3412\}$, these are
 
 $$\begin{pmatrix}1&0&0&0\\0&1&0&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&1&0\end{pmatrix},\quad\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},$$
 
 $$\begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix},\quad\begin{pmatrix}\ast&1&0&0\\\ast&0&\ast&1\end{pmatrix},\quad\begin{pmatrix}\ast&\ast&1&0\\\ast&\ast&0&1\end{pmatrix}$$
 
-The numbers of free coordinates $\ast$, namely $0,1,2,2,3,4$, are exactly the $\ell(w)$ counted above, and this is the explicit coordinate system of $BwP/P\cong\mathbb{A}^{\ell(w)}$.
+The number of free coordinates $\ast$, namely $0,1,2,2,3,4$, is precisely the $\ell(w)$ counted above, and this is the explicit coordinate system of $BwP/P\cong\mathbb{A}^{\ell(w)}$.
 :::
 
-## Schubert cell and Schubert variety
+## Schubert Cells and Schubert Varieties
 
 Now let us name and organize the cells on the partial flag variety $X=G/P$ and their closures. Fixing $B$ and its opposite Borel $B^-$, we obtain cell structures in both directions simultaneously.
 
@@ -318,32 +321,32 @@ For $w\in W^P$, we define the *Schubert cell* $X_w^\circ$ and the *opposite Schu
 
 $$X_w^\circ=BwP/P\subseteq G/P,\qquad X^w_\circ=B^-wP/P\subseteq G/P$$
 
-and their closures
+and call their closures
 
 $$X_w=\overline{X_w^\circ},\qquad X^w=\overline{X^w_\circ}$$
 
-are called the *Schubert variety* and the *opposite Schubert variety* respectively.
+the *Schubert variety* and the *opposite Schubert variety*, respectively.
 :::
 
-By definition $X_w^\circ\cong\mathbb{A}^{\ell(w)}$ and $X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$. In particular $X_{w_0^P}^\circ$ (where $w_0^P$ is the longest element of $W^P$) is the open dense cell with $\ell(w_0^P)=\dim(G/P)$, and $X_e^\circ=\{eP\}$ is a $B$-fixed point. Symmetrically, on the opposite side $X^e_\circ=B^-P/P$ is the open dense cell, and $X^{w_0^P}_\circ=\{w_0^PP\}$ becomes a $B^-$-fixed point. That is, the two cell structures interlock in a dimension-reversed form.
+By definition, $X_w^\circ\cong\mathbb{A}^{\ell(w)}$ and $X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$. In particular, $X_{w_0^P}^\circ$ (where $w_0^P$ is the longest element of $W^P$) is the open dense cell with $\ell(w_0^P)=\dim(G/P)$, and $X_e^\circ=\{eP\}$ is a $B$-fixed point. Symmetrically, on the opposite side, $X^e_\circ=B^-P/P$ is the open dense cell, and $X^{w_0^P}_\circ=\{w_0^PP\}$ is a $B^-$-fixed point. That is, the two cell structures interlock in a dimension-reversed form.
 
-The inclusion relations among Schubert varieties are governed by the *Bruhat order* on the Weyl group. The Bruhat order $\leq$ is the partial order defined by $v\leq w$ when some reduced expression of $v$ appears as a subword of some reduced expression of $w$, and geometrically it is revealed through the cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$ seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="a7crj" }.
+The inclusion relations among Schubert varieties are governed by the *Bruhat order* on the Weyl group. The Bruhat order $\leq$ is the order defined by $v\leq w$ when some reduced expression of $v$ appears as a subword of some reduced expression of $w$, and geometrically it is revealed through the cell closure $\overline{BwB}=\bigsqcup_{v\leq w}BvB$ seen in [§Borel Subgroups, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16){: data-lid="a7crj" }.
 
 ::: Proposition 17
-For $x,w\in W^P$ the following holds:
+For $x,w\in W^P$, the following holds:
 
 $$X_x\subseteq X_w\iff x\leq w\text{ in Bruhat order}$$
 
-In particular
+In particular,
 
 $$X_w=\bigsqcup_{\substack{x\leq w\\ x\in W^P}}X_x^\circ$$
 :::
 ::: Proof
-Since $X_w=\overline{BwP/P}$ and $B$ is a connected solvable group, the closure of a $B$-orbit is a union of $B$-orbits of lower dimension. That $\overline{BwB/B}=\bigsqcup_{v\leq w}BvB/B$ holds in the complete flag variety $G/B$ follows from the cell closures recalled above, and projecting down via $G/B\rightarrow G/P$, the differences inside a $W_P$-coset collapse, so for $x,w\in W^P$ we have $X_x^\circ\subseteq X_w$ exactly when $x\leq w$.
+Since $X_w=\overline{BwP/P}$ and $B$ is a connected solvable group, the closure of a $B$-orbit is a union of $B$-orbits of lower dimension. That $\overline{BwB/B}=\bigsqcup_{v\leq w}BvB/B$ holds in the complete flag variety $G/B$ follows from the cell closure recalled above, and under the projection $G/B\rightarrow G/P$, the differences inside $W_P$-cosets collapse, so for $x,w\in W^P$, $X_x^\circ\subseteq X_w$ holds precisely when $x\leq w$.
 :::
 
 ::: Example 18
-For $G/P=\Gr(2,4)$, the Bruhat order on $W^{P_2}$ is drawn as two maximal chains
+For $G/P=\Gr(2,4)$, the Bruhat order on $W^{P_2}$ is drawn as two maximal chains:
 
 $$1234\leq 1324\leq 1423\leq 2413\leq 3412$$
 
@@ -351,33 +354,33 @@ $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
 {% diagram Math/Lie_Theory/Bruhat_Decomposition-1.svg width="14.89em" alt="Hasse diagram of Bruhat order for Gr(2,4)" %}
 
-That is, below $1324$ there is only $1234$, and the two elements $1423$ and $2314$ of the same length are incomparable, both lying above $1324$ and below $2413$. This Hasse diagram has a diamond shape branching into two and then rejoining, directly showing the inclusion relations among the Schubert classes of $\Gr(2,4)$. For example, the Schubert variety $X_{2413}$ is a dimension $3$ subvariety containing $X_{1423}^\circ$, $X_{2314}^\circ$, $X_{1324}^\circ$, and $X_{1234}^\circ$.
+That is, below $1324$ there is only $1234$, and $1423$ and $2314$, which have the same length, are incomparable with each other, both lying above $1324$ and below $2413$. This Hasse diagram has a diamond shape branching into two and then rejoining, directly showing the inclusion relations among the Schubert classes of $\Gr(2,4)$. For example, the Schubert variety $X_{2413}$ is a subvariety of dimension $3$ containing all of $X_{1423}^\circ$, $X_{2314}^\circ$, $X_{1324}^\circ$, and $X_{1234}^\circ$.
 
-This order is immediately read from the jump set of [Example 15](#ex15){: data-lid="e1xmy" }. Viewing $w$ by its jump set $\{w(1)<w(2)\}$, the Bruhat order is the componentwise order, i.e. $v\le w\iff v(1)\le w(1)$ and $v(2)\le w(2)$. Hence the two maximal chains are $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$ and $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$, and $1423\leftrightarrow\{1,4\}$ and $2314\leftrightarrow\{2,3\}$ are incomparable because $4\not\le3$ while $2\not\le1$. Geometrically, as we examined in [Example 15](#ex15){: data-lid="hhxb0" }, the matrices determined by these two elements are
+This order is read directly from the jump sets in [Example 15](#ex15){: data-lid="e1xmy" }. Viewing $w$ as its jump set $\{w(1)<w(2)\}$, the Bruhat order is the componentwise order, i.e., $v\le w\iff v(1)\le w(1)$ and $v(2)\le w(2)$. Thus the two maximal chains are $\{1,2\}\le\{1,3\}\le\{1,4\}\le\{2,4\}\le\{3,4\}$ and $\{1,2\}\le\{1,3\}\le\{2,3\}\le\{2,4\}\le\{3,4\}$, and $1423\leftrightarrow\{1,4\}$ and $2314\leftrightarrow\{2,3\}$ are incomparable because $4\not\le3$ and $2\not\le1$. Geometrically, as we saw in [Example 15](#ex15){: data-lid="hhxb0" }, this can also be confirmed from the fact that the matrices determined by these two elements are
 
 $$\begin{pmatrix}1&0&0&0\\0&\ast&\ast&1\end{pmatrix},\quad \begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix}$$
 
-which can also be checked directly. Points of the left cell always contain $e_1$ ($\dim(V\cap E_1)=1$) but because of the last entry $1$ in the second row they are not in $E_3$ ($\dim(V\cap E_3)=1$), while points of the right cell are always in $E_3$ since the last column is entirely $0$, but no linear combination of the two rows is a multiple of $e_1$ so they meet $E_1$ only trivially ($\dim(V\cap E_1)=0$). Thus the left cell violates the rank condition $\dim(V\cap E_3)\geq2$ of $X_{2314}$, and the right cell violates the rank condition $\dim(V\cap E_1)\geq1$ of $X_{1423}$, so by [Proposition 17](#prop17){: data-lid="mmy3m" } neither Schubert variety contains the other.
+Points of the left cell always contain $e_1$ ($\dim(V\cap E_1)=1$), but because of the last entry $1$ in the second row they are not in $E_3$ ($\dim(V\cap E_3)=1$), while points of the right cell are always in $E_3$ since the last column is entirely $0$, but because no linear combination of the two rows is a multiple of $e_1$, they meet $E_1$ only trivially ($\dim(V\cap E_1)=0$). Thus the left cell violates the rank condition $\dim(V\cap E_3)\geq2$ of $X_{2314}$ and the right cell violates the rank condition $\dim(V\cap E_1)\geq1$ of $X_{1423}$, so by [Proposition 17](#prop17){: data-lid="mmy3m" } neither Schubert variety contains the other.
 
-The inclusion diagram is also captured by rank conditions. Among the conditions for $X_{2413}$, namely $\dim(V\cap E_2)\ge1$ and $\dim(V\cap E_4)\ge2$, the latter is automatic since $E_4=\mathbb{C}^4$, so
+The inclusion relations can also be grasped through rank conditions. Of the conditions $\dim(V\cap E_2)\ge1$ and $\dim(V\cap E_4)\ge2$ for $X_{2413}$, the latter is automatic since $E_4=\mathbb{C}^4$, so
 
 $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 
-i.e. all $2$-planes meeting $E_2$. Among the six cells of [Example 15](#ex15){: data-lid="pn7km" }, only the big cell $3412$ which is transverse to $E_2$ violates this condition, so $X_{2413}$ exactly contains the remaining five cells.
+that is, all $2$-planes meeting $E_2$. Among the six cells of [Example 15](#ex15){: data-lid="pn7km" }, only the big cell $3412$ transverse to $E_2$ violates this condition, so $X_{2413}$ exactly contains the remaining five cells.
 :::
 
 Finally, we record one direct consequence of the Bruhat decomposition. The cell decomposition completely classifies the fixed points of the action of a maximal torus $T$ on $G/P$.
 
 ::: Proposition 19
-For the action of a maximal torus $T\subseteq B$ on $G/P$, the fixed points are exactly the coordinate points $wP$ ($w\in W^P$), with exactly one in each Bruhat cell $X_w^\circ$.
+For the action of a maximal torus $T\subseteq B$ on $G/P$, the fixed points are precisely the coordinate points $wP$ ($w\in W^P$), with one contained in each Bruhat cell $X_w^\circ$.
 :::
 ::: Proof
-First, each coordinate point is a fixed point. For a representative $\dot{w}\in N_G(T)$ of $w$, we have $\dot{w}^{-1}t\dot{w}\in T\subseteq P$, so $t\cdot\dot{w}P=\dot{w}(\dot{w}^{-1}t\dot{w})P=\dot{w}P$. Conversely, let $x$ be a fixed point. By the Bruhat decomposition, $x$ belongs to some cell $X_w^\circ=BwP/P$, and since $T\subseteq B$ each cell is $T$-stable. However, in the coordinate chart $X_w^\circ\cong\mathbb{A}^{\ell(w)}$ of the cell, $T$ scales each coordinate by a nontrivial character. In type $A$ this can be seen directly in the matrix coordinates of [Example 15](#ex15){: data-lid="z6wwg" }: $t=\diag(t_1,\ldots,t_n)$ scales the free entry (in column $b$) of a row whose pivot is in column $p$ by $t_bt_p^{-1}$ (scale each row by $t$ and then renormalize the pivot to $1$). In general, the cell is coordinatized as a product of root subgroups $\prod_\alpha U_\alpha$ and $T$-conjugation acts on each $U_\alpha\cong\mathbb{G}_a$ by the root $\alpha$ (see [Spr]). In either case all characters are nontrivial, so the only fixed point of the cell is the origin where all coordinates are $0$, namely $wP$.
+First, each coordinate point is a fixed point. This is because for a representative $\dot{w}\in N_G(T)$ of $w$, we have $\dot{w}^{-1}t\dot{w}\in T\subseteq P$, so $t\cdot\dot{w}P=\dot{w}(\dot{w}^{-1}t\dot{w})P=\dot{w}P$. Conversely, let $x$ be a fixed point. By the Bruhat decomposition, $x$ belongs to some cell $X_w^\circ=BwP/P$, and since $T\subseteq B$, each cell is $T$-stable. However, in the coordinatization $X_w^\circ\cong\mathbb{A}^{\ell(w)}$ of the cell, $T$ scales each coordinate by a nontrivial character. In Type $A$, this can be seen directly in the matrix coordinates of [Example 15](#ex15){: data-lid="z6wwg" }: $t=\diag(t_1,\ldots,t_n)$ multiplies the free entry (in column $b$) of a row whose pivot is in column $p$ by $t_bt_p^{-1}$ (it suffices to move each row by $t$ and then normalize the pivot back to $1$). In the general case, the cell is coordinatized as a product of root subgroups $\prod_\alpha U_\alpha$ and $T$-conjugation acts on each $U_\alpha\cong\mathbb{G}_a$ by the root $\alpha$ (see [Spr]). In either case, all characters are nontrivial, so the only fixed point of the cell is the origin where all coordinates are $0$, namely $wP$.
 :::
 
-In particular, the number of fixed points is finite, equal to $\lvert W^P\rvert$. In $\Gr(2,4)$ these are the six coordinate flags of [Example 15](#ex15){: data-lid="d5qh2" }, and in the complete flag variety $\Fl_n$ they are the $n!$ coordinate flags $E^w_\bullet$ ($w\in S_n$).
+In particular, the number of fixed points is finite, equal to $\lvert W^P\rvert$. In $\Gr(2,4)$, the six coordinate flags of [Example 15](#ex15){: data-lid="d5qh2" } are all of them, and in the complete flag variety $\Fl_n$, the coordinate flags $E^w_\bullet$ ($w\in S_n$), numbering $n!$, are all of them.
 
-Schubert varieties $X_w\subseteq G/P$ are generally singular, and their singular loci are also expressed as unions of smaller Schubert varieties. On the other hand, the cohomology classes $[X_w]\in H^\ast(G/P)$ form an additive basis of $H^\ast(G/P)$ as discussed after Proposition 6, and from this the classical *Schubert calculus* of intersection theory develops. In particular, for the Grassmannian Schubert varieties are indexed by Young diagrams, and their intersection numbers are given by Littlewood–Richardson coefficients.
+A Schubert variety $X_w\subseteq G/P$ is generally singular, and its singular locus is also expressed as a union of smaller Schubert varieties. On the other hand, the cohomology classes $[X_w]\in H^\ast(G/P)$ form an additive basis of $H^\ast(G/P)$ as discussed after Proposition 6, and from this develops the intersection theory called classical *Schubert calculus*. In particular, for the Grassmannian, Schubert varieties are indexed by Young diagrams, and their intersection numbers are given by Littlewood–Richardson coefficients.
 
 ---
 
