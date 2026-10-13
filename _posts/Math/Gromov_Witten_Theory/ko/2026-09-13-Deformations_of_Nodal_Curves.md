@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-09-13
 weight: 1
-revising: true
 drift_needed: true
 
 
@@ -366,7 +365,7 @@ Node $p$에서 $C$의 complete local ring은 앞에서 본 node의 국소 모형
 
 $$\widehat{\mathcal{O}}_{C,p}\cong\mathbb{K}[[\u,\v]]/(\u\v)$$
 
-으로 주어진다. 여기서 $\u$와 $\v$는 각각 normalization에서 node의 두 preimage가 속한 branch의 coordinate들이다. 그럼 앞서 논의한 deformation의 정의와 마찬가지로, local Artin $\mathbb{K}$-algebra $A$ 위의 $\widehat{\mathcal{O}}_{C,p}$의 deformation은 flat $A$-algebra $B$와, 각 fiber의 identification $B\otimes_A\mathbb{K}\cong\widehat{\mathcal{O}}_{C,p}$의 짝으로 주어진다. 이 때, 우리는 [명제 3](#prop3){: data-lid="p1den" }에 의하여 first-order deformation들의 공간 $T_p^1$은 $1$차원인 것을 알고, 해당 명제 직후에 그 원소들은 $\u\v=c\epsilon$의 꼴로 쓰일 수 있음을 보았다. 
+으로 주어진다. 여기서 $\u$와 $\v$는 각각 normalization에서 node의 두 preimage가 속한 branch의 coordinate들이다. 그럼 앞서 논의한 deformation의 정의와 마찬가지로, local Artin $\mathbb{K}$-algebra $A$ 위의 $\widehat{\mathcal{O}}_{C,p}$의 deformation은 flat $A$-algebra $B$와, 각 fiber의 identification $B\otimes_A\mathbb{K}\cong\widehat{\mathcal{O}}_{C,p}$의 짝으로 주어진다. 이 때, 우리는 [명제 3](#prop3){: data-lid="p1den" }에 의하여 first-order deformation들의 공간 $T_p^1$은 $1$차원인 것을 알고, 해당 명제 직전에 그 원소들은 $\u\v=c\epsilon$의 꼴로 쓰일 수 있음을 보았다. 
 
 이제 node의 versal formal deformation은 $\mathbb{K}[[\t]]$ 위의 family
 
