@@ -371,7 +371,7 @@ $$\widehat{\mathcal{O}}_{C,p}\cong\mathbb{K}[[\u,\v]]/(\u\v)$$
 
 $$\mathbb{K}[[\u,\v,\t]]/(\u\v-\t)$$
 
-로 주어진다. 실제로 residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $S$ 위의 $\widehat{\mathcal{O}}_{C,p}$의 formal deformation은 coordinate를 적당히 잡으면 어떤 $f\in\mathfrak{m}_S$에 대하여 $S[[\u,\v]]/(\u\v-f)$의 꼴로 주어진다. 이러한 deformation은 $\u\v$를 들어 올린 방정식 하나로 잘리는데, 이 방정식을 $\mathfrak{m}_S$의 차수별로 정리하면 각 차수에서 오차항 가운데 $\u a+\v b$ 꼴의 부분은 coordinate를 $\u+b$, $\v+a$로 바꾸어 흡수되므로 상수항만 남기 때문이다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6)에서 first-order deformation $\u\v=\epsilon h$가 $h(0)$만으로 결정되던 계산을 각 차수에서 반복한 것이다. 즉, 임의의 formal deformation은 위의 family를 local homomorphism $\t\mapsto f$를 따라 당긴 것이고, $S=\mathbb{K}[\epsilon]$이면 이 homomorphism $\t\mapsto c\epsilon$은 $T_p^1$의 원소 $\u\v=c\epsilon$에 의하여 유일하게 결정된다.
+로 주어진다. 실제로 residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $S$ 위의 $\widehat{\mathcal{O}}_{C,p}$의 formal deformation은 coordinate를 적당히 잡으면 어떤 $f\in\mathfrak{m}_S$에 대하여 $S[[\u,\v]]/(\u\v-f)$의 꼴로 주어진다. 이러한 deformation은 $\u\v$를 들어 올린 방정식 하나로 잘리는데, 이 방정식을 $\mathfrak{m}_S$의 차수별로 정리하면 각 차수에서 오차항 가운데 $\u a+\v b$ 꼴의 부분은 coordinate를 $\u+b$, $\v+a$로 바꾸어 흡수되므로 상수항만 남기 때문이다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="orqq8" }에서 first-order deformation $\u\v=\epsilon h$가 $h(0)$만으로 결정되던 계산을 각 차수에서 반복한 것이다. 즉, 임의의 formal deformation은 위의 family를 local homomorphism $\t\mapsto f$를 따라 당긴 것이고, $S=\mathbb{K}[\epsilon]$이면 이 homomorphism $\t\mapsto c\epsilon$은 $T_p^1$의 원소 $\u\v=c\epsilon$에 의하여 유일하게 결정된다.
 
 이제 $(C,p_\bullet)$의 versal formal deformation을 node $p$의 근방으로 제한하면 $\widehat{\mathcal{O}}_{C,p}$의 $R$ 위 formal deformation을 얻고, 위의 versality에 의하여 이는 node의 versal family를 어떤 local homomorphism $\mathbb{K}[[\t]]\rightarrow R$로 당긴 것이다. 이 homomorphism이 $\t$를 보내는 원소를 $\t_p\in\mathfrak{m}_R$로 적자. 그럼 tangent space 사이의 map
 
@@ -404,7 +404,7 @@ $$\prod_{p\in\Sing C}\t_p=0$$
 
 $$T_p^1\cong T_{p'}\widetilde{C}\otimes T_{p''}\widetilde{C}$$
 
-를 얻는다. 일반적인 coordinate $\u'=\u\alpha(\u)$, $\v'=\v\beta(\v)$에서도 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6)에 의하여 first-order deformation은 상수항만으로 결정되므로 $\lambda=\alpha(0)$, $\mu=\beta(0)$만 남아 마찬가지이다. 즉 node를 펴는 크기는 두 branch의 tangent vector의 tensor product로 잴 수 있다. 이 isomorphism은 canonical하므로 boundary의 점마다 얻은 것들이 서로 붙어 boundary 성분 $\{\t_p=0\}$의 normal line bundle을 주며, 두 branch를 맞바꾸어도 $\u\v=\t_p$의 $\t_p$는 바뀌지 않으므로 이는 두 branch의 순서에도 의존하지 않는다.
+를 얻는다. 일반적인 coordinate $\u'=\u\alpha(\u)$, $\v'=\v\beta(\v)$에서도 [\[스킴\] §변형이론과 여접 복합체, ⁋예시 6](/ko/math/scheme_theory/deformation_theory#ex6){: data-lid="j127z" }에 의하여 first-order deformation은 상수항만으로 결정되므로 $\lambda=\alpha(0)$, $\mu=\beta(0)$만 남아 마찬가지이다. 즉 node를 펴는 크기는 두 branch의 tangent vector의 tensor product로 잴 수 있다. 이 isomorphism은 canonical하므로 boundary의 점마다 얻은 것들이 서로 붙어 boundary 성분 $\{\t_p=0\}$의 normal line bundle을 주며, 두 branch를 맞바꾸어도 $\u\v=\t_p$의 $\t_p$는 바뀌지 않으므로 이는 두 branch의 순서에도 의존하지 않는다.
 
 마지막으로 automorphism이 smoothing 방향에 작용하는 예를 하나 보자. $(C,p_\bullet)$의 automorphism $\sigma$는 first-order deformation $(X,\iota)$를 $(X,\sigma\circ\iota)$로 보내는 것으로 $T^1(C,p_\bullet)$에 작용하며, $\sigma$가 $T^1$의 한 원소를 고정하는 것은 그 원소가 나타내는 deformation으로 $\sigma$가 연장되는 것과 같다.
 
