@@ -60,8 +60,9 @@ Bot`으로 커밋하고, 그 밖의 LLM Workshop 경로 변경은 autopush가 `[
    다시 올라온다. 이 성질은 10번을 정확히 지킬 때만 성립한다.
 
    `scripts/blogdev-bot/state.json`도 읽는다. 여기서 쓰는 필드는
-   `covered_topics`(이미 다룬 slug 목록) **하나뿐이다.** 커밋 원장은
-   `written.log`가 갖고, `weight`는 실제 글들이 정본이다 (8번 참고).
+   `covered_topics`(이미 다룬 slug 목록)와 `retired_topics`(사용자가 글을 지운
+   주제, 2번 참고) **둘뿐이다.** 커밋 원장은 `written.log`가 갖고, `weight`는
+   실제 글들이 정본이다 (8번 참고).
 
 2. **후보 클러스터링**: 검토 범위의 커밋들을 *주제별로* 묶는다. 기준은 *주제의
    동일성*이지 *시간의 인접성*이 아니다.
@@ -83,10 +84,20 @@ Bot`으로 커밋하고, 그 밖의 LLM Workshop 경로 변경은 autopush가 `[
 
      `dismiss`는 "영원히 주제가 아니다"이고, 5번의 `skip`은 "지금은 얇지만
      쌓이면 다룬다"이다. 헷갈리면 `skip`을 써라 — 되돌릴 수 있다.
+   - **`retired_topics`의 주제는 쓰지 않는다.** 사용자가 그 주제의 글을 지운
+     것이다 (`post`가 지운 글, `reason`이 이유). 그 주제에 속한 커밋은 신규로도
+     보완으로도 다루지 말고 다른 글에 절로 붙이지도 말고, 위 `dismiss`로 범위에서
+     뺀다 (`--detail "retired_topics: <slug>"`). 한 커밋이 다른 주제의 파일도
+     건드렸으면 그 커밋은 빼지 말고 다른 주제의 클러스터에 넣는다. 주제의 경계가
+     헷갈리면 지운 글을 git에서 열어 본다:
+     `git show $(git log -1 --diff-filter=A --format=%h -- <post>):<post>`.
+     이렇게 빼고 나서 선정 후보가 남지 않으면 글을 쓰지 않고 종료한다. 그 주제를
+     다시 다룰지는 사용자가 목록에서 빼는 것으로 정한다.
 
 3. **후보를 두 종류로 나눠 하나의 목록에 넣는다.** 이게 이 설계의 핵심이다 —
    신규 글감과 보완 대상을 *같은 목록에서* 경쟁시킨다.
-   - **신규(new)**: `covered_topics`에 없는 주제. 새 글을 쓴다.
+   - **신규(new)**: `covered_topics`에도 `retired_topics`에도 없는 주제. 새 글을
+     쓴다.
    - **보완(augment)**: 이미 글이 있는 주제인데 그 뒤로 실질 변경이 쌓인 것.
      `covered_topics`에 slug가 있고 재고 목록에 대응 글이 있으면 이쪽이다.
      예: `diagram_svg` 글이 이미 있는데 `scripts/diagrams/build.sh`가 그 후로
@@ -245,6 +256,8 @@ Bot`으로 커밋하고, 그 밖의 LLM Workshop 경로 변경은 autopush가 `[
     그리고 `scripts/blogdev-bot/state.json`:
     - 신규면 `covered_topics`에 slug 추가. 그게 전부다 (갱신할 카운터는 없다).
     - 보완이면 slug가 이미 있으므로 손댈 것이 없다.
+    - `retired_topics`는 고치지 않는다. 글을 지울 때 사용자 쪽 세션이 채운다
+      (`_posts/Misc/LLM_Workshop/CLAUDE.md`의 글 삭제 절).
 
 11. **git은 건드리지 마라.** 네 턴이 끝나면 드라이버가 `commit_posts.py`로 네 글만
     커밋한다(author=Marvin). push는 blog-autopush 몫이다.
