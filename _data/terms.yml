@@ -203,7 +203,7 @@ A:
   defs:
   - label: '[미적분학] §무한급수'
     url: '/ko/math/calculus/series'
-  - label: '[해석학] §무한급수'
+  - label: '[해석학] §무한급수와 수렴판정법'
     url: '/ko/math/analysis/series'
 - id: absolute_value
   en: absolute value
@@ -2176,7 +2176,7 @@ C:
     url: '/ko/math/commutative_algebra/completion'
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: '/ko/math/analysis/cauchy_sequences'
-  - label: '[해석학] §거리공간'
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
     url: '/ko/math/analysis/metric_spaces'
 - id: cayley-hamilton_theorem
   en: Cayley-Hamilton theorem
@@ -3328,8 +3328,8 @@ C:
     url: '/ko/math/analysis/completeness_of_reals'
   - label: '[집합론] §유향집합'
     url: '/ko/math/set_theory/directed_set'
-  - label: '[해석학] §거리공간'
-    url: '/ko/math/analysis/metric_spaces'
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
   - label: '[미분다양체] §벡터장'
     url: '/ko/math/manifolds/vector_fields'
   - label: '[토릭 기하학] §토릭 다양체의 정의'
@@ -3983,8 +3983,8 @@ C:
   alias_en: [relatively prime]
   primary: ko
   defs:
-  - label: '[정수론] §나눗셈과 최대공약수'
-    url: '/ko/math/number_theory/divisibility'
+  - label: '[정수론] §나눗셈과 유클리드 호제법'
+    url: /ko/math/number_theory/euclidean_algorithm
   - label: '[군론] §대칭군'
     url: '/ko/math/group_theory/symmetric_groups'
 - id: coproduct
@@ -6112,13 +6112,6 @@ E:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
-- id: euler_product
-  en: Euler product
-  ko: 오일러 곱
-  primary: en
-  defs:
-  - label: '[정수론] §페르마 소정리와 오일러 정리'
-    url: /ko/math/number_theory/euler_theorem
 - id: euler_s_formula
   en: 'Euler''s formula'
   ko: 오일러 공식
@@ -10922,13 +10915,6 @@ L:
     id: indeterminate_form
   - label: Derivative
     id: derivative
-- id: lagrange_interpolation
-  en: Lagrange interpolation
-  ko: 라그랑주 보간
-  primary: en
-  defs:
-  - label: '[정수론] §원시근'
-    url: /ko/math/number_theory/primitive_roots#thm5
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -15054,8 +15040,6 @@ P:
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
     url: '/ko/math/number_theory/primes'
-  - label: '[해석학] §실수의 완비성'
-    url: '/ko/math/analysis/completeness_of_reals'
 - id: prime_avoidance_lemma
   en: prime avoidance lemma
   ko: 소아이디얼 피하기 보조정리
@@ -15624,24 +15608,6 @@ Q:
     id: orthogonal_matrix
   - label: Orthonormal basis
     id: orthonormal_basis
-- id: quadratic_field
-  en: quadratic field
-  ko: 이차체
-  primary: en
-  defs:
-  - label: '[체론] §원분확대'
-    url: /ko/math/field_theory/cyclotomic_extensions
-  see:
-  - label: Field extension
-    id: field_extension
-  - label: Algebraic extension
-    id: algebraic_extension
-  - label: 이차무리수
-    lang: ko
-    id: quadratic_irrational
-  - label: 이차형식
-    lang: ko
-    id: quadratic_form
 - id: quadratic_form
   en: quadratic form
   ko: 이차형식
@@ -15664,8 +15630,6 @@ Q:
   - label: '[정수론] §연분수'
     url: /ko/math/number_theory/continued_fractions
   see:
-  - label: Quadratic field
-    id: quadratic_field
   - label: Algebraic element
     id: algebraic_element
   - label: 연분수

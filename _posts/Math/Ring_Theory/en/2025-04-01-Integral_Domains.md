@@ -31,7 +31,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 Here, $q$ is called the *quotient* and $r$ the *remainder*.
 :::
 
-If we replace $A$ with the integers $\mathbb{Z}$ and view $N$ as the absolute value function $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$, this is obtained from the familiar division algorithm for integers, namely [\[Number Theory\] §Division and Greatest Common Divisor, ⁋Theorem 3](/en/math/number_theory/divisibility#thm3){: data-lid="y9bnu" }. As another example, if on the polynomial ring $\mathbb{K}[\x]$ we define $N$ as the function giving the degree of a polynomial (setting $N(0)=0$), we obtain the division algorithm for polynomials. Finally, any field $\mathbb{K}$ is a Euclidean domain, which is obtained by sending every $x\in\mathbb{K}$ to $0$ via the function $N$. The reason this satisfies the condition above is that every (nonzero) element of a field always divides any other element. 
+If we replace $A$ with the integers $\mathbb{Z}$ and view $N$ as the absolute value function $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$, this is obtained from the familiar division algorithm for integers, namely [\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3){: data-lid="y9bnu" }. As another example, if on the polynomial ring $\mathbb{K}[\x]$ we define $N$ as the function giving the degree of a polynomial (setting $N(0)=0$), we obtain the division algorithm for polynomials. Finally, any field $\mathbb{K}$ is a Euclidean domain, which is obtained by sending every $x\in\mathbb{K}$ to $0$ via the function $N$. The reason this satisfies the condition above is that every (nonzero) element of a field always divides any other element. 
 
 ::: Proposition 3
 Every ideal of a Euclidean domain is principal. More precisely, for a Euclidean domain $A$ and any nonzero ideal $\mathfrak{a}$, if we let an element with minimal norm among the nonzero elements of $\mathfrak{a}$ be $a$, then $\mathfrak{a}=(a)$. 
@@ -88,7 +88,7 @@ $$d = xd',\qquad d' = yd$$
 holds. Then from $d = xyd$, we have $(1-xy)d=0$. Now from the assumption that $A$ is an integral domain and $d \neq 0$, we know that $xy = 1$, and therefore $x, y$ are units that are inverses of each other. 
 :::
 
-In the case of integers, [\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3){: data-lid="lmju4" } corresponds to Bézout's lemma, and the following Bézout's identity also holds for Euclidean domains. 
+In the case of integers, [\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Theorem 8](/en/math/number_theory/euclidean_algorithm#thm8){: data-lid="lmju4" } corresponds to Bézout's lemma, and the following Bézout's identity also holds for Euclidean domains. 
 
 ::: Theorem 7
 Let $A$ be a Euclidean domain. Suppose $a, b \in A$ are elements that are not $0$, and let $r_n$ be the last nonzero remainder when repeating the process of [Definition 2](#def2){: data-lid="xxwsw" } for $a, b$ until no further step is possible. Then the following hold:

@@ -31,7 +31,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 를 만족하는 것이다. 여기서 $q$를 *quotient<sub>몫</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
 :::
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3){: data-lid="y9bnu" }으로부터 얻어진다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 (단, $N(0)=0$으로 둔다) 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-lid="y9bnu" }으로부터 얻어진다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 (단, $N(0)=0$으로 둔다) 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 ::: 명제 3
 Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 영이 아닌 원소들 중 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=(a)$이다. 
@@ -89,7 +89,7 @@ $$d = xd',\qquad d' = yd$$
 를 만족한다. 그러면 $d = xyd$로부터 $(1-xy)d=0$이다. 이제 $A$가 integral domain이라는 가정과 $d \neq 0$으로부터 $xy = 1$이라는 것을 알고, 따라서 $x, y$는 각각이 서로의 역원이 되는 unit이다. 
 :::
 
-정수의 경우 [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-lid="lmju4" }이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
+정수의 경우 [\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="lmju4" }이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
 
 ::: 정리 7
 $A$를 Euclidean domain이라 하자. $a, b \in A$가 $0$이 아닌 원소들이고, $r_n$을 $a, b$에 대하여 [정의 2](#def2){: data-lid="xxwsw" }의 과정을 반복하였을 때 더 진행이 불가능한 마지막 nonzero remainder라 하자. 그러면 다음이 성립한다:

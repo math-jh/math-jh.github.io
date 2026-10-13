@@ -107,11 +107,11 @@ For $n\geq 1$, consider the ring $\mathbb{Z}/n\mathbb{Z}$. For an element $a+n\m
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-holds. That is, for some integers $x,k$, the equation $ax-kn=1$ holds. By [\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Proposition 5](/en/math/number_theory/euclidean_algorithm#prop5){: data-lid="svu88" }, the existence of such $x,k$ is equivalent to $\gcd(a,n)=1$, that is, $a$ being coprime to $n$, so
+holds. That is, for some integers $x,k$, the equation $ax-kn=1$ holds. By [\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Corollary 9](/en/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }, the existence of such $x,k$ is equivalent to $\gcd(a,n)=1$, that is, $a$ being coprime to $n$, so
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
-and the order of this group is the number of integers coprime to $n$ between $1$ and $n$, which is $\varphi(n)$ ([\[Number Theory\] §Euler's Theorem and the Phi Function, ⁋Definition 1](/en/math/number_theory/euler_theorem#def1){: data-lid="g583e" }).
+and the order of this group is the number of integers coprime to $n$ between $1$ and $n$, which is $\varphi(n)$ ([\[Number Theory\] §Fermat's Little Theorem and Euler's Theorem, ⁋Definition 1](/en/math/number_theory/euler_theorem#def1){: data-lid="g583e" }).
 
 On the other hand, if $\gcd(a,n)=d>1$ and $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$, then $a+n\mathbb{Z}$ is a zero divisor. This is because $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$ and
 

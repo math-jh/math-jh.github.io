@@ -107,11 +107,11 @@ $n\geq 1$에 대해 정의된 ring $\mathbb{Z}/n\mathbb{Z}$를 보자. 이 ring�
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋명제 5](/ko/math/number_theory/euclidean_algorithm#prop5){: data-lid="svu88" }에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
+인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §나눗셈과 유클리드 호제법, ⁋따름정리 9](/ko/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
-이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §오일러 정리와 phi 함수, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }).
+이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }).
 
 반면 $\gcd(a,n)=d>1$이고 $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$이면 $a+n\mathbb{Z}$는 zero divisor이다. 이는 $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$이고,
 

@@ -18,7 +18,7 @@ weight: 3
 
 $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z},\qquad \text{$m,n$ coprime}$$
 
-이다. ([\[정수론\] §중국인의 나머지 정리, ⁋정리 1](/ko/math/number_theory/chinese_remainder_theorem#thm1){: data-lid="08w8w" }) 즉, 어떤 정수를 $mn$으로 나눈 나머지는 $m$으로 나눈 나머지와 $n$으로 나눈 나머지 각각을 알면 완벽하게 구할 수 있다는 뜻이며, 이를 임의의 ring $A$로 확장하는 것이 이 글의 목표이다. 
+이다. ([\[정수론\] §합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8){: data-lid="08w8w" }) 즉, 어떤 정수를 $mn$으로 나눈 나머지는 $m$으로 나눈 나머지와 $n$으로 나눈 나머지 각각을 알면 완벽하게 구할 수 있다는 뜻이며, 이를 임의의 ring $A$로 확장하는 것이 이 글의 목표이다. 
 
 간략하게 이야기해서, 이 일반화는 우선 $m\mathbb{Z}$와 $n\mathbb{Z}$를 ring $A$의 ideal로 일반화하고, $mn\mathbb{Z}$를 이 두 ideal의 교집합으로 이해하여 얻어진다. 다만 이 일반화가 임의의 ideal에 대해 되는 것은 아니며, 위 $m,n$이 서로소라는 조건에 해당하는 조건 또한 필요하다. 이에 해당하는 ideal의 조건은 *comaximal*로, 그럼 ring theory에서 일반화된 정리는 pairwise comaximal ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
 
@@ -81,7 +81,7 @@ Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\ma
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3){: data-lid="fxjk4" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
+꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="fxjk4" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
 
 한편, 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
 
