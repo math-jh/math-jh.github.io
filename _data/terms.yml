@@ -11842,6 +11842,8 @@ L:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+  - label: '[해석학] §고계 편도함수와 극값'
+    url: /ko/math/analysis/higher_derivatives_and_extrema
 - id: local_orientation
   en: local orientation
   ko: 국소 방향
@@ -17340,6 +17342,13 @@ S:
   see:
   - label: Shape operator
     id: shape_operator
+- id: second-order_partial_derivative
+  en: second-order partial derivative
+  ko: 이계 편도함수
+  primary: ko
+  defs:
+  - label: '[해석학] §고계 편도함수와 극값'
+    url: /ko/math/analysis/higher_derivatives_and_extrema
 - id: section
   en: section
   ko: 단면, 절단
