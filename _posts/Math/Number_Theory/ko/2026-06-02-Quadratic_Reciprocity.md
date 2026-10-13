@@ -1,7 +1,7 @@
 ---
 title: "이차 상호법칙"
-description: "가우스 보조정리를 증명하여 2가 언제 이차 잉여인지를 결정하고, 두 홀수 소수의 르장드르 기호를 맞바꾸는 이차 상호법칙을 lattice point 계산으로 증명한다. 이를 이용해 르장드르 기호를 효율적으로 계산한다."
-excerpt: "가우스 보조정리, 제2보충법칙, 이차 상호법칙"
+description: "서로 다른 두 홀수 소수 p, q에 대하여 (p/q)와 (q/p)가 어떻게 연결되는지를 말하는 이차 상호법칙을 가우스 보조정리와 lattice point 세기로 증명한다. 이를 합성수 분모로 확장한 Jacobi 기호와 호제법형 계산 절차, Jacobi 기호가 1이어도 이차 잉여가 아닌 반례, 그리고 3과 5가 이차 잉여인 소수의 분류까지 다룬다."
+excerpt: "이차 상호법칙의 lattice point 증명, Jacobi 기호와 Legendre 기호의 계산"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/quadratic_reciprocity
@@ -9,220 +9,169 @@ sidebar:
     nav: "number_theory-ko"
 
 date: 2026-06-02
-weight: 13
+weight: 9
 
 published: false
+
 ---
 
-[§이차 잉여](/ko/math/number_theory/quadratic_residues){: data-lid="j0trt" }에서 르장드르 기호가 multiplicative임을 보았고, 그 계산이 소수와 $-1$에서의 값으로 환원됨을 알았다. $-1$의 경우는 이미 해결했으니, 남은 것은 두 홀수 소수의 르장드르 기호 사이의 관계, 곧 가우스가 "황금 정리"라 부른 이차 상호법칙이다.
+[§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)에서 우리는 Legendre 기호가 multiplicative이고 $-1$이 이차 잉여인 소수가 $p \equiv 1 \pmod4$임을, [§이차 잉여, ⁋정리 9](/ko/math/number_theory/quadratic_residues#thm9)에서 $2$가 이차 잉여인 소수가 $p \equiv \pm 1 \pmod8$임을 보았다. 곱셈성에 의하여 $(a/p)$의 계산은 $-1$, $2$, 홀수 소수 $q$에서의 값 $(q/p)$로 환원되므로, 남은 문제는 홀수 소수 $q$가 어떤 소수 $p$에 대하여 이차 잉여인지이다.
 
-이 관계가 왜 놀라운지를 먼저 짚어 두자. 르장드르 기호 $\left(\frac{q}{p}\right)$는 "$q$가 법 $p$의 이차 잉여인가"라는, $p$를 법으로 한 산술에 관한 물음이다. 반대로 $\left(\frac{p}{q}\right)$는 법 $q$의 산술에 관한 물음으로, 표면적으로는 전혀 다른 세계의 정보이다. 이차 상호법칙은 이 두 물음의 답이 $p, q$를 $4$로 나눈 나머지라는 사소한 정보만으로 서로 결정됨을 말한다. 즉 한쪽의 어려운 계산을 다른 쪽의 같은 종류 계산으로 뒤집을 수 있고, 분모를 줄여 가며 유클리드 호제법처럼 답에 도달할 수 있다. 가우스 스스로 평생에 걸쳐 여덟 가지의 증명을 남긴 것도 이 대칭의 깊이를 반영한다.
+$q = 3$으로 직접 확인해 보자. $3$은 법 $11$에서 $5^2 = 25 \equiv 3$, 법 $13$에서 $4^2 = 16 \equiv 3$, 법 $37$에서 $15^2 = 225 \equiv 3$이므로 이차 잉여이다. 반면 법 $5, 7, 17, 19$에서는 이차 비잉여이다. 잉여인 소수 $11, 13, 37$은 $12$로 나눈 나머지가 $\pm 1$이고, 비잉여인 소수 $5, 7, 17, 19$는 나머지가 $\pm 5$이다. $(3/p)$는 $p$의 크기가 아니라 $p$를 $12 = 4 \cdot 3$으로 나눈 나머지에만 의존하는 것처럼 보인다. 이 의존성은 $(q/p)$가 $(p/q)$와 단순한 부호로 연결된다는 사실에서 나오며, 이것이 이차 상호법칙이다.
 
-## 가우스 보조정리
+## 이차 상호법칙의 진술
 
-상호법칙의 증명과 $2$의 처리에 공통으로 쓰이는 도구는 르장드르 기호를 lattice point 세기로 번역하는 가우스 보조정리이다. 핵심 발상은 오일러 판정법이 $\left(\frac{a}{p}\right)$를 거듭제곱 $a^{(p-1)/2}$로 환원해 주었으니, 이 거듭제곱을 $a, 2a, \ldots, \frac{p-1}{2}a$의 곱으로 풀어쓴 뒤 그 나머지들의 부호를 추적하는 것이다.
+::: 정리 1 (이차 상호법칙)
+서로 다른 두 홀수 소수 $p, q$에 대하여
 
-::: 보조정리 1 (가우스 보조정리)
-홀수 소수 $p$와 $p \nmid a$에 대하여, $a, 2a, \ldots, \frac{p-1}{2}a$를 법 $p$로 환원한 최소 양의 나머지 중 $p/2$보다 큰 것의 개수를 $\mu$라 하면
+$$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$$
 
-$$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
+이다. 곧 $p, q$ 중 적어도 하나가 $4$로 나누어 $1$이 남으면 $(p/q) = (q/p)$이고, 둘 다 $4$로 나누어 $3$이 남으면 $(p/q) = -(q/p)$이다.
+:::
+
+지수 $\frac{p-1}{2}\cdot\frac{q-1}{2}$가 홀수인 것은 두 인수가 모두 홀수인 것, 곧 $p \equiv q \equiv 3 \pmod{4}$인 것과 동치이므로 정리의 둘째 문장이 따른다. 부호가 바뀌는 경우는 이 한 가지뿐이다.
+
+$q^\ast = (-1)^{(q-1)/2}q$로 두면, 곧 $q^\ast$는 $q \equiv 1 \pmod{4}$이면 $q$, $q \equiv 3 \pmod{4}$이면 $-q$이다. [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)의 $(-1/p) = (-1)^{(p-1)/2}$와 곱셈성에 의하여 $(q^\ast/p) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}(q/p)$이고, [정리 1](#thm1)을 쓰면
+
+$$\left(\frac{q^\ast}{p}\right) = \left(\frac{p}{q}\right)$$
+
+을 얻는다. 우변 $(p/q)$는 $p \bmod q$에만 의존하므로, $(q/p) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}(p/q)$는 $p \bmod 4$와 $p \bmod q$에만 의존한다. 따라서 홀수 소수 $q$가 이차 잉여인 소수 $p$의 집합은 $4q$를 법으로 하는 합동류들의 합집합이다. 위에서 본 $q = 3$의 경우가 법 $12$였던 이유가 이것이다.
+
+## Lattice point 세기에 의한 증명
+
+증명은 Eisenstein의 방법을 따른다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)은 $(a/p)$를 $as$ ($s = 1, \ldots, (p-1)/2$)의 나머지 중 $p/2$를 넘는 것의 개수 $\mu$의 홀짝으로 표현한다. 이 $\mu$를 직접 세는 대신 quotient $\lfloor as/p\rfloor$의 합의 홀짝으로 바꾸면, 그 합은 좌표평면의 lattice point 개수로 읽힌다.
+
+::: 보조정리 2
+$p$가 홀수 소수이고 $a$가 $p \nmid a$인 홀수 정수이면
+
+$$\left(\frac{a}{p}\right) = (-1)^{M}, \qquad M = \sum_{s=1}^{(p-1)/2}\left\lfloor \frac{as}{p}\right\rfloor$$
 
 이다.
 :::
 
 ::: 증명
-각 $ja$ ($1 \leq j \leq (p-1)/2$) 의 최소 양의 나머지를 $r_j$라 하자. $r_j > p/2$인 것들은 $p - r_j < p/2$로 바꾸어 두면, 얻어진 수들
+$S = \{1, \ldots, (p-1)/2\}$로 두고, $s \in S$에 대하여 $as$의 법 $p$ 최소 양의 나머지를 $\rho_s$라 하자. $p \nmid as$이므로 $\rho_s \ne 0$이고, $as = p\lfloor as/p\rfloor + \rho_s$이다. 이를 $s \in S$에 대하여 모두 더하면
 
-$$\{ r_j \mid r_j < p/2 \} \cup \{ p - r_j \mid r_j > p/2 \}$$
+$$a\sum_{s \in S} s = pM + \sum_{s \in S}\rho_s$$
 
-이 정확히 $1, 2, \ldots, (p-1)/2$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $(p-1)/2$ 사이에 있고 그 개수가 $(p-1)/2$로 같으므로, 서로 다름만 보이면 된다. 만일 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod{p}$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod{p}$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
+이다. 이제 $\sum \rho_s$의 홀짝을 구한다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)의 증명에서와 같이, 각 $s \in S$에 대하여 $as \equiv \varepsilon_s r_s \pmod{p}$를 만족하는 $\varepsilon_s \in \{1, -1\}$과 $r_s \in S$를 택하면 $s \mapsto r_s$는 $S$ 위의 전단사이다. $\varepsilon_s = 1$이면 $\rho_s = r_s$이고 $\varepsilon_s = -1$이면 $\rho_s = p - r_s$이며, $\varepsilon_s = -1$인 $s$의 개수가 보조정리의 $\mu$이다. 그러므로
 
-$$\begin{aligned}
-\left(\frac{p-1}{2}\right)!
-&= \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (p - r_j) \\
-&\equiv \prod_{r_j < p/2} r_j \cdot \prod_{r_j > p/2} (-r_j) \pmod{p} \\
-&\equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} r_j
-\equiv (-1)^{\mu} \prod_{j=1}^{(p-1)/2} (ja) \\
-&\equiv (-1)^{\mu} a^{(p-1)/2} \left(\frac{p-1}{2}\right)! \pmod{p}
-\end{aligned}$$
+$$\sum_{s \in S}\rho_s = \sum_{s \in S} r_s - 2\sum_{\varepsilon_s = -1} r_s + \mu p \equiv \sum_{s \in S} s + \mu \pmod{2}$$
 
-이다. 부호 $(-1)^\mu$는 $r_j > p/2$인 $\mu$개의 항에서 $p - r_j$를 $-r_j$로 바꾼 데서 나온다. 양변에서 $\left((p-1)/2\right)!$은 $p$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4){: data-lid="v0ejb" }을 쓰면
+이다. 마지막 합동에서 $\sum r_s = \sum s$와 $p$가 홀수라는 사실을 썼다. 위의 두 식을 합치고 $a, p$가 홀수임을 쓰면 법 $2$에서
 
-$$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod{p}$$
+$$\sum_{s \in S} s \equiv M + \sum_{s \in S} s + \mu$$
 
-을 얻는다. 양변이 $\pm 1$이고 $p$가 홀수 소수라 $1 \not\equiv -1$이므로 합동은 등호가 되어 결론이 따른다.
+이므로 $M \equiv \mu \pmod{2}$이다. [§이차 잉여, ⁋보조정리 7](/ko/math/number_theory/quadratic_residues#lem7)에 의하여 $(a/p) = (-1)^\mu = (-1)^M$이다.
 :::
 
-::: 명제 2 (제2보충법칙)
-홀수 소수 $p$에 대하여 $\left(\frac{2}{p}\right) = (-1)^{(p^2-1)/8}$이다. 즉 $2$는 $p \equiv \pm 1 \pmod{8}$일 때 이차 잉여, $p \equiv \pm 3 \pmod{8}$일 때 비잉여이다.
+[보조정리 2](#lem2)는 $a$가 홀수일 때만 성립한다. $a$가 짝수이면 $a\sum s$의 홀짝이 $\sum s$와 달라져 위의 소거가 일어나지 않는다. 상호법칙에서는 $a$로 홀수 소수가 들어가므로 문제가 없다.
+
+::: 증명 (정리 1)
+$p, q$가 서로 다른 홀수 소수이므로 [보조정리 2](#lem2)를 $(a, p) = (q, p)$와 $(a, p) = (p, q)$에 적용할 수 있다. 곧
+
+$$\left(\frac{q}{p}\right) = (-1)^{M_1}, \quad M_1 = \sum_{x=1}^{(p-1)/2}\left\lfloor \frac{qx}{p}\right\rfloor, \qquad \left(\frac{p}{q}\right) = (-1)^{M_2}, \quad M_2 = \sum_{y=1}^{(q-1)/2}\left\lfloor \frac{py}{q}\right\rfloor$$
+
+이다. 따라서 $M_1 + M_2 = \frac{p-1}{2}\cdot\frac{q-1}{2}$임을 보이면 충분하다.
+
+직사각형 안의 lattice point 집합 $R = \{(x, y) \in \mathbb{Z}^2 : 1 \le x \le (p-1)/2,\ 1 \le y \le (q-1)/2\}$를 생각하면 $R$의 원소 수는 $\frac{p-1}{2}\cdot\frac{q-1}{2}$이다. $R$의 점 $(x, y)$에 대하여 $qx = py$일 수 없다. 그렇다면 $p \mid qx$이고 $p \ne q$가 소수이므로 [§소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2)에 의하여 $p \mid x$인데, $1 \le x < p$이기 때문이다. 따라서 $R$은 $qx > py$인 점들의 집합 $R_1$과 $qx < py$인 점들의 집합 $R_2$의 서로소 합집합이다.
+
+$M_1 = \lvert R_1\rvert$임을 보이자. 고정된 $x$에 대하여 $1 \le y < qx/p$인 정수 $y$는 $\lfloor qx/p\rfloor$개이다. 이 $y$들은 모두 $R$ 안에 있다. 실제로 $y < qx/p \le q(p-1)/(2p) < q/2$이고 $y$가 정수이므로 $y \le (q-1)/2$이기 때문이다. 이것이 $x$와 $y$의 범위를 모두 절반 $\{1, \ldots, (p-1)/2\}$, $\{1, \ldots, (q-1)/2\}$로 잡는 이유이다. 가우스 보조정리의 $S$와 같은 구간이어서 [보조정리 2](#lem2)를 쓸 수 있고, 동시에 quotient $\lfloor qx/p\rfloor$가 $y$의 상한을 넘지 않아 quotient의 합이 $R$ 안의 점 개수와 정확히 일치한다. 따라서 $x = 1, \ldots, (p-1)/2$에 대하여 더하면 $M_1 = \lvert R_1\rvert$이다. $p$와 $q$의 역할을 바꾸어 같은 논증을 적용하면 $M_2$는 $1 \le x < py/q$, 곧 $qx < py$인 $R$의 점의 개수 $\lvert R_2\rvert$이다. 그러므로
+
+$$M_1 + M_2 = \lvert R_1\rvert + \lvert R_2\rvert = \lvert R\rvert = \frac{p-1}{2}\cdot\frac{q-1}{2}$$
+
+이고, $(p/q)(q/p) = (-1)^{M_1 + M_2}$로부터 정리가 따른다.
 :::
 
-::: 증명
-가우스 보조정리를 $a = 2$에 적용한다. 우리가 곱하는 수는 $2, 4, \ldots, p-1$이고, 이 가운데 $p/2$를 넘는 것은 모두 변환되어 $\mu$에 기여한다. $2j \leq p/2$, 곧 $j \leq p/4$인 $j$의 개수는 $\lfloor p/4 \rfloor$이므로
+## Jacobi 기호
 
-$$\mu = \frac{p-1}{2} - \left\lfloor \frac{p}{4} \right\rfloor$$
+상호법칙을 계산에 쓰려면 매 단계에서 분자를 소인수분해해야 한다. 분자가 크면 이것이 병목이 된다. 분모를 합성수로 확장한 Jacobi 기호를 쓰면 분자를 소인수분해하지 않고도 상호법칙을 적용할 수 있다.
 
-이다. 이제 $p$를 $8$로 나눈 나머지에 따라 $\mu$를 직접 계산한다. $p = 8k + r$로 쓰면
-
-$$\begin{aligned}
-r = 1:\quad &\mu = (4k) - (2k) = 2k, &&\text{짝수}, \\
-r = 3:\quad &\mu = (4k+1) - (2k) = 2k+1, &&\text{홀수}, \\
-r = 5:\quad &\mu = (4k+2) - (2k+1) = 2k+1, &&\text{홀수}, \\
-r = 7:\quad &\mu = (4k+3) - (2k+1) = 2k+2, &&\text{짝수}
-\end{aligned}$$
-
-이 되어, $p \equiv \pm 1 \pmod{8}$이면 $\mu$가 짝수, $p \equiv \pm 3 \pmod{8}$이면 홀수이다. 한편 $(-1)^{(p^2-1)/8}$도 같은 분류를 따르므로 ($p^2 - 1 = (p-1)(p+1)$이 $8$의 배수임은 항상 성립하고, 그 quotient의 홀짝이 위 네 경우와 일치한다), $(-1)^\mu = (-1)^{(p^2-1)/8}$이 확인된다.
-:::
-
-## 이차 상호법칙
-
-이제 두 홀수 소수의 르장드르 기호를 맞바꾸는 황금 정리를 lattice point 계산으로 증명한다. 핵심은 가우스 보조정리의 부호 $\mu$를 직접 세는 대신, 나머지 $r_j$가 $p/2$를 넘는지를 quotient $\lfloor jq/p \rfloor$의 홀짝으로 바꾸어 표현하고, 그 합을 좌표평면의 직사각형 안 lattice point 수로 해석하는 데 있다. 그럼 $p$와 $q$의 역할을 맞바꾼 두 합이 대각선을 사이에 두고 직사각형을 정확히 양분하게 되어, 둘의 합이 직사각형 전체의 lattice point 수가 된다.
-
-::: 정리 3 (이차 상호법칙)
-서로 다른 두 홀수 소수 $p, q$에 대하여
-
-$$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$$
-
-이다. 즉 $p$와 $q$ 중 적어도 하나가 $4$로 나누어 $1$이 남으면 $\left(\frac{p}{q}\right) = \left(\frac{q}{p}\right)$이고, 둘 다 $3$이 남으면 부호가 반대이다.
-:::
-
-::: 증명
-먼저 가우스 보조정리의 부호를 quotient의 합으로 바꾼다. $1 \leq j \leq (p-1)/2$에 대해 $jq = p\lfloor jq/p\rfloor + r_j$ ($0 < r_j < p$) 로 나눗셈을 하면, 이 식들을 모두 더해
-
-$$q\sum_{j=1}^{(p-1)/2} j = p\sum_{j=1}^{(p-1)/2}\left\lfloor \frac{jq}{p}\right\rfloor + \sum_{j=1}^{(p-1)/2} r_j$$
-
-를 얻는다. 가우스 보조정리의 증명에서 보았듯 $r_j > p/2$인 $\mu$개를 $p - r_j$로 바꾼 수들이 $1, \ldots, (p-1)/2$의 재배열이므로
-
-$$\sum_{r_j < p/2} r_j + \sum_{r_j > p/2} (p - r_j) = \sum_{j=1}^{(p-1)/2} j$$
-
-이고, 따라서 $\sum_j r_j = \sum_j j - \mu p + 2\sum_{r_j > p/2} r_j$이다. 위 두 식을 빼고 $\bmod\ 2$로 환원하면, $q$가 홀수이고 $p$가 홀수임을 써서
-
-$$\sum_{j=1}^{(p-1)/2}\left\lfloor \frac{jq}{p}\right\rfloor \equiv \mu \pmod{2}$$
-
-이 따른다. 그러므로 $S = \sum_{j=1}^{(p-1)/2}\lfloor jq/p\rfloor$로 두면 가우스 보조정리는
-
-$$\left(\frac{q}{p}\right) = (-1)^{\mu} = (-1)^{S}$$
-
-가 된다.
-
-이제 $S$를 lattice point 수로 읽는다. $\lfloor jq/p\rfloor$는 $x = j$에서 직선 $py = qx$ 아래에 있는 양의 정수 $y$의 개수와 같으므로, $S$는 직사각형 $0 < x < p/2$, $0 < y < q/2$ 안의 lattice point 가운데 직선 $py = qx$의 *아래쪽*($py < qx$)에 있는 것의 개수이다. 같은 논법을 $p, q$를 맞바꾸어 적용하면
-
-$$\left(\frac{p}{q}\right) = (-1)^{T}, \qquad T = \sum_{i=1}^{(q-1)/2}\left\lfloor \frac{ip}{q}\right\rfloor$$
-
-이고 $T$는 같은 직사각형에서 직선의 *위쪽*($py > qx$)에 있는 lattice point 수이다. 직선 $py = qx$ 위에 lattice point가 있으려면 $p \mid x$여야 하는데 $0 < x < p/2$에는 그런 $x$가 없으므로, 직선 위에는 lattice point가 없다. 따라서 직사각형 안의 모든 lattice point는 위·아래 중 한쪽에 속하고
-
-$$S + T = \left(\frac{p-1}{2}\right)\left(\frac{q-1}{2}\right)$$
-
-이다. 양변을 $-1$의 지수로 올리면
-
-$$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{S+T} = (-1)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$$
-
-를 얻는다.
-:::
-
-::: 예시 4
-$\left(\frac{30}{53}\right)$을 구하자. $53$은 소수이고 $30 = 2\cdot 3\cdot 5$이므로 곱셈성으로 $\left(\frac{30}{53}\right) = \left(\frac{2}{53}\right)\left(\frac{3}{53}\right)\left(\frac{5}{53}\right)$이다. $53 \equiv 5 \pmod{8}$이므로 $\left(\frac{2}{53}\right) = -1$이다. 상호법칙으로 $53 \equiv 1 \pmod{4}$이니 $\left(\frac{3}{53}\right) = \left(\frac{53}{3}\right) = \left(\frac{2}{3}\right) = -1$, $\left(\frac{5}{53}\right) = \left(\frac{53}{5}\right) = \left(\frac{3}{5}\right) = -1$이다. 따라서 $\left(\frac{30}{53}\right) = (-1)(-1)(-1) = -1$로, $30$은 법 $53$의 비잉여이다.
-:::
-
-## 르장드르 기호의 계산
-
-이차 상호법칙은 르장드르 기호의 계산을 유클리드 호제법처럼 분모와 분자를 번갈아 줄여 가는 효율적 절차로 바꾼다. 분자를 분모보다 작은 양수로 환원하고($\bmod p$), 소인수분해로 $2$와 홀수 소수의 기호로 쪼갠 뒤, 상호법칙으로 각 홀수 소수 기호의 분자·분모를 맞바꾸어 분모를 줄인다. 이 세 단계를 반복하면 분모가 단조 감소하여 유한 번에 끝난다. 다음 예시들에서 이 절차를 직접 따라가 본다.
-
-::: 예시 5 ($3$의 잉여성)
-$3$이 법 $p$의 이차 잉여인 소수 $p > 3$를 분류하자. 상호법칙에서 $\frac{3-1}{2} = 1$이므로
-
-$$\left(\frac{3}{p}\right) = (-1)^{\frac{p-1}{2}\cdot 1}\left(\frac{p}{3}\right) = (-1)^{(p-1)/2}\left(\frac{p}{3}\right)$$
-
-이다. $\left(\frac{p}{3}\right)$은 $p \bmod 3$에만 의존하여 $p \equiv 1$이면 $+1$, $p \equiv 2$이면 $-1$이다. 또 $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod{4}$이면 $+1$, $p \equiv 3 \pmod{4}$이면 $-1$이다. 중국인의 나머지 정리로 두 조건을 합치면
-
-$$\left(\frac{3}{p}\right) = +1 \iff p \equiv \pm 1 \pmod{12}$$
-
-임이 따른다. 가령 $p = 11 \equiv -1$이면 $3$은 잉여이고 ($5^2 = 25 \equiv 3$), $p = 7 \equiv 7$이면 비잉여이다.
-:::
-
-::: 예시 6 (큰 분자의 환원)
-$\left(\frac{105}{317}\right)$을 구하자. $317$은 소수이고 $105 = 3\cdot 5\cdot 7$이므로
-
-$$\left(\frac{105}{317}\right) = \left(\frac{3}{317}\right)\left(\frac{5}{317}\right)\left(\frac{7}{317}\right)$$
-
-이다. $317 \equiv 1 \pmod{4}$이므로 세 기호 모두 부호 변화 없이 뒤집힌다:
-
-$$\begin{aligned}
-\left(\frac{3}{317}\right) &= \left(\frac{317}{3}\right) = \left(\frac{2}{3}\right) = -1, \\
-\left(\frac{5}{317}\right) &= \left(\frac{317}{5}\right) = \left(\frac{2}{5}\right) = -1, \\
-\left(\frac{7}{317}\right) &= \left(\frac{317}{7}\right) = \left(\frac{2}{7}\right) = +1
-\end{aligned}$$
-
-이다 (마지막에서 $7 \equiv -1 \pmod{8}$이라 $\left(\frac{2}{7}\right) = +1$). 따라서 $\left(\frac{105}{317}\right) = (-1)(-1)(+1) = +1$로, $105$는 법 $317$의 이차 잉여이다.
-:::
-
-소인수분해를 거치지 않고 곧장 호제법처럼 진행할 수도 있다. 이를 위해서는 르장드르 기호를 합성수 분모로 확장한 *야코비 기호<sub>Jacobi symbol</sub>*가 편리하다.
-
-::: 정의 7
-홀수인 양의 정수 $n = p_1 p_2 \cdots p_k$ (소수의 곱, 중복 허용) 와 $\gcd(a, n) = 1$인 정수 $a$에 대하여 *야코비 기호<sub>Jacobi symbol</sub>*를
+::: 정의 3
+홀수인 양의 정수 $n = p_1 p_2 \cdots p_k$ ($p_i$는 소수, 중복 허용)와 정수 $a$에 대하여 *Jacobi 기호<sub>Jacobi symbol</sub>* $(a/n)$을 Legendre 기호의 곱
 
 $$\left(\frac{a}{n}\right) = \prod_{i=1}^{k}\left(\frac{a}{p_i}\right)$$
 
-로 정의한다. 각 인수는 르장드르 기호이다.
+으로 정의한다. $n = 1$이면 빈 곱으로 $(a/1) = 1$이다.
 :::
 
-야코비 기호는 르장드르 기호의 곱셈성을 분모로도 확장한 것으로, $\left(\frac{a}{n}\right) = +1$이라고 해서 $a$가 법 $n$의 이차 잉여라는 보장은 없음에 주의한다. 가령 $\left(\frac{2}{15}\right) = \left(\frac{2}{3}\right)\left(\frac{2}{5}\right) = (-1)(-1) = +1$이지만 $2$는 법 $15$의 이차 잉여가 아니다. 그러나 야코비 기호는 상호법칙과 두 보충법칙을 그대로 만족한다.
+$n$이 소수이면 Legendre 기호와 일치한다. 정의에서 곧바로 $(a/n)$이 $a \bmod n$에만 의존하고 $a$와 $n$ 각각에 대하여 multiplicative임을 알 수 있다. 또 $\gcd(a, n) > 1$이면 어떤 $p_i$가 $a$를 나누어 $(a/n) = 0$이고, $\gcd(a, n) = 1$이면 $(a/n) = \pm 1$이다.
 
-::: 명제 8 (야코비 기호의 상호법칙)
-서로소인 두 홀수 양의 정수 $m, n$에 대하여
+::: 명제 4
+$m, n$이 홀수인 양의 정수이면 다음이 성립한다.
 
-$$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}$$
-
-이고, 또 $\left(\frac{-1}{n}\right) = (-1)^{(n-1)/2}$, $\left(\frac{2}{n}\right) = (-1)^{(n^2-1)/8}$이다.
+1. $\left(\frac{-1}{n}\right) = (-1)^{(n-1)/2}$.
+2. $\left(\frac{2}{n}\right) = (-1)^{(n^2-1)/8}$.
+3. $\gcd(m, n) = 1$이면 $\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = (-1)^{\frac{m-1}{2}\cdot\frac{n-1}{2}}$.
 :::
 
 ::: 증명
-$m = \prod p_i$, $n = \prod q_j$로 소인수분해하면, 정의와 르장드르 기호의 상호법칙(정리 3)으로
+홀수 양의 정수 $a$에 대하여 $e(a) = (a-1)/2$, $f(a) = (a^2-1)/8$로 둔다. 홀수 $a, b$에 대하여 $e(ab) = e(a) + e(b) + 2e(a)e(b)$이고 $f(ab) = f(a) + f(b) + 8f(a)f(b)$인 것은 전개로 확인된다. 따라서 $e$와 $f$는 법 $2$에서 곱을 합으로 보낸다. ($f(a)$가 정수인 것은 $a$가 홀수일 때 $a^2 \equiv 1 \pmod{8}$이기 때문이다.)
 
-$$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = \prod_{i,j}\left(\frac{p_i}{q_j}\right)\left(\frac{q_j}{p_i}\right) = \prod_{i,j}(-1)^{\frac{p_i-1}{2}\cdot\frac{q_j-1}{2}} = (-1)^{\sum_{i,j}\frac{p_i-1}{2}\frac{q_j-1}{2}}$$
+$n = p_1 \cdots p_k$로 쓴다. 정의와 [§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)의 소수 분모에 대한 결과에 의하여
 
-이다. 지수의 합은 $\bigl(\sum_i \frac{p_i-1}{2}\bigr)\bigl(\sum_j \frac{q_j-1}{2}\bigr)$로 분리되므로, 두 홀수 $a, b$의 곱에 대해 $\frac{ab-1}{2} \equiv \frac{a-1}{2} + \frac{b-1}{2} \pmod{2}$임을 반복 적용하면
+$$\left(\frac{-1}{n}\right) = \prod_{i}(-1)^{e(p_i)} = (-1)^{\sum e(p_i)} = (-1)^{e(n)}$$
 
-$$\sum_i \frac{p_i-1}{2} \equiv \frac{m-1}{2}, \qquad \sum_j \frac{q_j-1}{2} \equiv \frac{n-1}{2} \pmod{2}$$
+이고, 같은 방식으로 $(2/n) = \prod_i (-1)^{f(p_i)} = (-1)^{f(n)}$이다. 이것이 1, 2이다.
 
-이 되어 지수가 $\frac{m-1}{2}\cdot\frac{n-1}{2}$와 같은 홀짝을 가진다. 두 보충법칙도 같은 방식으로, $\frac{a^2b^2-1}{8} \equiv \frac{a^2-1}{8} + \frac{b^2-1}{8} \pmod{2}$를 써서 인수별 르장드르 보충법칙의 곱으로부터 얻는다.
+3을 보이자. $m = p_1 \cdots p_k$, $n = q_1 \cdots q_l$로 소인수분해하면 $\gcd(m, n) = 1$이므로 모든 $p_i$와 $q_j$는 서로 다른 홀수 소수이다. 정의에 의하여 $(m/n) = \prod_{i,j}(p_i/q_j)$, $(n/m) = \prod_{i,j}(q_j/p_i)$이므로 [정리 1](#thm1)에 의하여
+
+$$\left(\frac{m}{n}\right)\left(\frac{n}{m}\right) = \prod_{i,j}(-1)^{e(p_i)e(q_j)} = (-1)^{\left(\sum_i e(p_i)\right)\left(\sum_j e(q_j)\right)} = (-1)^{e(m)e(n)}$$
+
+이다. 마지막 등호는 $\sum_i e(p_i) \equiv e(m)$, $\sum_j e(q_j) \equiv e(n) \pmod{2}$에서 나온다.
 :::
 
-야코비 기호 덕분에 분모가 소수인지 일일이 확인하지 않고도 르장드르 기호를 계산할 수 있다. 다음 예시가 이 호제법형 절차를 보여 준다.
+[명제 4](#prop4)의 3에서 $\gcd(m, n) > 1$이면 두 기호가 모두 $0$이어서 등식은 $0 = 0$으로 의미가 없다. 그러나 계산에서는 이 경우가 자연스럽게 걸러진다. 아래 알고리즘은 공약수가 있으면 분자가 $0$이 되는 데서 끝나고, 이때 기호의 값은 $0$이다.
 
-::: 예시 9 (호제법형 계산)
-$\left(\frac{1009}{2307}\right)$을 구하자. 분모의 소인수분해 $2307 = 3\cdot 769$를 안다면 르장드르 기호의 곱 $\left(\frac{1009}{3}\right)\left(\frac{1009}{769}\right)$으로 계산할 수 있지만, 야코비 기호로 보면 소인수분해 없이도 진행된다:
+### Jacobi 기호가 1인데 이차 잉여가 아닌 경우
+
+Jacobi 기호를 Legendre 기호처럼 읽으면 틀린다. $n$이 합성수이면 $(a/n) = 1$이 $a$가 법 $n$의 이차 잉여임을 뜻하지 않는다. 한쪽 방향만 성립한다. $\gcd(a, n) = 1$이고 $x^2 \equiv a \pmod{n}$이 해를 가지면 각 소인수 $p_i$에 대하여 $x^2 \equiv a \pmod{p_i}$이므로 $(a/p_i) = 1$이고 따라서 $(a/n) = 1$이다. 대우로 $(a/n) = -1$이면 $a$는 법 $n$의 이차 비잉여이다. 역은 성립하지 않는다.
+
+::: 예시 5 ($n = 15$)
+$n = 15 = 3 \cdot 5$에서 $(2/15) = (2/3)(2/5) = (-1)(-1) = 1$이다. 그런데 법 $15$에서 reduced residue class $1, 2, 4, 7, 8, 11, 13, 14$의 제곱은 차례로 $1, 4, 1, 4, 4, 1, 4, 1$이므로 이차 잉여는 $1, 4$뿐이고 $2$는 이차 잉여가 아니다. 법 $15$에서 $x^2 \equiv 2$는 이미 법 $3$에서 $x^2 \equiv 2$로 환원되어 해가 없다. $(a/15) = 1$인 $a$는 $1, 2, 4, 8$인데, $a$가 두 소인수에서 모두 비잉여이면 두 $-1$이 곱해져 기호가 $1$이 되고 이차 잉여성은 [§합동식과 중국인의 나머지 정리, ⁋정리 8](/ko/math/number_theory/chinese_remainder_theorem#thm8)에 의하여 소인수별로 따로 판정되기 때문이다.
+:::
+
+일반적으로 $(a/n) = 1$인 $a$는 이차 비잉여인 소인수 성분이 짝수 개 있다는 것만 알려 준다. 이차 잉여성 자체를 판정하려면 $n$의 소인수 각각에서 $(a/p_i) = 1$인지 보아야 한다. 분모가 소수일 때만 $(a/n) = 1$이 이차 잉여성과 동치이다.
+
+## 호제법형 계산
+
+[명제 4](#prop4)의 세 성질과 $a \bmod n$에의 의존성으로 $(a/n)$을 [§나눗셈과 유클리드 호제법, ⁋정리 6](/ko/math/number_theory/euclidean_algorithm#thm6)과 같은 모양으로 계산할 수 있다. $n$이 홀수인 양의 정수일 때 다음을 반복한다. 먼저 $a$를 $n$으로 나눈 나머지로 바꾼다. 음수인 $a$는 이 단계에서 양수가 되므로 $(-1/n)$을 따로 다룰 필요가 없다. 나머지가 $0$이면 $n = 1$일 때 값은 $1$이고, 그렇지 않으면 $0$이다. 다음으로 $a = 2^k a'$ ($a'$는 홀수)로 쓰고 $(2/n)^k$을 [명제 4](#prop4)의 2로 처리한다. $a' = 1$이면 끝난다. $a' > 1$이면 [명제 4](#prop4)의 3으로 $(a'/n) = \pm(n/a')$로 뒤집는다. 부호는 $a' \equiv n \equiv 3 \pmod{4}$일 때만 $-$이다. 뒤집은 뒤에는 분모가 $a'$로 줄어 있으므로 처음으로 돌아간다.
+
+분자를 소인수분해하는 단계는 $2$의 거듭제곱을 떼는 것뿐이고, 홀수 부분은 어떤 소수의 곱인지 알 필요가 없다. 단계 수는 분모의 로그에 비례한다. 분모가 $n_0 > n_1 > n_2 > \cdots$로 줄 때 $n_2 \le n_0 \bmod n_1 < n_0/2$이기 때문이다. 뒤의 부등식은 임의의 $x \ge y$에 대하여 $x \bmod y < x/2$라는 호제법의 표준적 사실이다.
+
+::: 예시 6 ($(3141/7919)$)
+$7919$는 소수이므로 $(3141/7919)$는 $3141$이 법 $7919$의 이차 잉여인지를 알려 준다. $3141 \equiv 1$, $7919 \equiv 3 \pmod{4}$이므로 [명제 4](#prop4)의 3에 의하여 뒤집을 때 부호가 바뀌지 않는다.
 
 $$\begin{aligned}
-\left(\frac{1009}{2307}\right)
-&= (-1)^{\frac{1008}{2}\cdot\frac{2306}{2}}\left(\frac{2307}{1009}\right) = \left(\frac{2307}{1009}\right) \\
-&= \left(\frac{289}{1009}\right) = \left(\frac{17^2}{1009}\right) = +1
+\left(\frac{3141}{7919}\right) &= \left(\frac{7919}{3141}\right) = \left(\frac{1637}{3141}\right) = \left(\frac{3141}{1637}\right) = \left(\frac{1504}{1637}\right) \\
+&= \left(\frac{2}{1637}\right)^5\left(\frac{47}{1637}\right) = -\left(\frac{47}{1637}\right) = -\left(\frac{1637}{47}\right) = -\left(\frac{39}{47}\right) \\
+&= \left(\frac{47}{39}\right) = \left(\frac{8}{39}\right) = \left(\frac{2}{39}\right)^3 = 1
 \end{aligned}$$
 
-이다. 첫 줄에서 $\frac{1008}{2} = 504$가 짝수라 부호가 $+1$이고 $2307 \equiv 289 \pmod{1009}$이며, 마지막에서 $289 = 17^2$이 완전제곱이라 기호가 $+1$이다. 따라서 $\left(\frac{1009}{2307}\right) = +1$이다.
+이다. 둘째 등호는 $7919 - 2 \cdot 3141 = 1637$, 넷째 등호는 $3141 - 1637 = 1504 = 2^5 \cdot 47$, 여섯째 등호의 부호는 $1637 \equiv 5 \pmod{8}$에서 $(2/1637) = -1$, 일곱째 등호는 $1637 \equiv 1 \pmod{4}$와 $1637 - 34 \cdot 47 = 39$에서 나온다. 아홉째 등호에서 $39 \equiv 47 \equiv 3 \pmod{4}$이므로 부호가 한 번 바뀌고, 마지막은 $39 \equiv 7 \pmod{8}$이라 $(2/39) = 1$이다. 따라서 $3141$은 법 $7919$의 이차 잉여이다. 실제로 $3047^2 \equiv 3141 \pmod{7919}$이다.
+
+이 계산에서 소인수분해한 것은 $1504$에서 뗀 $2^5$뿐이다. 중간에 나온 $3141 = 3^2 \cdot 349$ 같은 수의 소인수를 구할 필요는 없었다.
 :::
 
-이렇게 분자를 항상 분모로 환원하고 완전제곱 인수를 떼어 내면, 도중에 분모의 소인수분해를 시도할 필요가 전혀 없다. 이것이 야코비 기호가 르장드르 기호 계산에 주는 실질적 이점이다.
+호제법형 계산이 알려 주는 것은 $(a/p)$의 값이지 제곱근이 아니다. $x^2 \equiv 3141 \pmod{7919}$의 해 $x = 3047$은 이 계산에서 얻어지지 않으며, 그것을 구하는 일은 별개의 문제이다.
 
-::: 예시 10 ($x^2 \equiv 7 \pmod{11}$의 가해성)
-합동식 $x^2 \equiv 7 \pmod{11}$이 풀리는지 판정하자. $11 \equiv 3 \pmod{4}$이고 $7 \equiv 3 \pmod{4}$이므로 두 소수 모두 $4$로 나눠 $3$이 남아 상호법칙의 부호가 음이다:
+## 이차 잉여인 소수의 분류
 
-$$\left(\frac{7}{11}\right) = -\left(\frac{11}{7}\right) = -\left(\frac{4}{7}\right) = -\left(\frac{2^2}{7}\right) = -1$$
+서두에서 관찰한 $q = 3$의 경우를 증명하자. 이 계산은 [정리 1](#thm1)의 부호 규칙이 실제로 어떻게 작동하는지를 보여 준다.
 
-이다. 따라서 $7$은 법 $11$의 비잉여이고 합동식은 해를 갖지 않는다. 실제로 $1^2, \ldots, 5^2$을 법 $11$로 환원한 잉여 $\{1, 4, 9, 5, 3\}$에 $7$이 없음으로 확인된다.
+::: 예시 7 ($3$과 $5$가 이차 잉여인 소수)
+$p > 3$인 소수에 대하여 [정리 1](#thm1)에 의하여 $(3/p) = (-1)^{\frac{p-1}{2}}(p/3)$이다. $(p/3)$은 $p \equiv 1 \pmod{3}$이면 $1$, $p \equiv 2 \pmod{3}$이면 $-1$이고, $(-1)^{(p-1)/2}$은 $p \equiv 1 \pmod{4}$이면 $1$, $p \equiv 3 \pmod{4}$이면 $-1$이다. $p$를 $12$로 나눈 나머지 $1, 5, 7, 11$에 대하여 두 값을 표로 만들면 $(3/p)$는 차례로 $1 \cdot 1 = 1$, $1 \cdot (-1) = -1$, $(-1) \cdot 1 = -1$, $(-1)(-1) = 1$이다. 따라서
+
+$$\left(\frac{3}{p}\right) = 1 \iff p \equiv \pm 1 \pmod{12}$$
+
+이다. $5 \equiv 1 \pmod{4}$이므로 [정리 1](#thm1)에 의하여 $(5/p) = (p/5)$이고, 법 $5$의 이차 잉여가 $1, 4$이므로
+
+$$\left(\frac{5}{p}\right) = 1 \iff p \equiv \pm 1 \pmod{5}$$
+
+이다. 가령 $p = 29 \equiv -1 \pmod{5}$에서 $11^2 = 121 \equiv 5$이고, $p = 13 \equiv 3 \pmod{5}$에서 $5$는 이차 비잉여이다.
 :::
 
-## 응용
-
-이차 상호법칙의 가장 직접적인 응용은 특정 소수의 coset을 분류해, 어떤 디오판토스 방정식이 해를 가질 수 없음을 보이는 것이다. 예를 들어 $x^2 + 1 \equiv 0 \pmod{p}$가 풀리려면 $-1$이 잉여여야 하므로 $p \equiv 1 \pmod{4}$가 필요하고, 이는 $4k+3$ 꼴 소수가 두 제곱수의 합이 될 수 없다는 사실로 이어진다. 같은 방식으로 $x^2 - 2$, $x^2 + 2$, $x^2 - 3$ 등의 가해 소수를 보충법칙과 상호법칙으로 분류할 수 있다.
-
-::: 예시 11 (제수의 coset)
-$n^2 + 1$의 홀수 소인수는 모두 $4k+1$ 꼴임을 보이자. $p \mid n^2 + 1$이면 $n^2 \equiv -1 \pmod{p}$이므로 $-1$이 법 $p$의 이차 잉여이고, 제1보충법칙
-
-$$\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2}$$
-
-에서 $(-1)^{(p-1)/2} = +1$, 곧 $\frac{p-1}{2}$가 짝수여야 하므로 $p \equiv 1 \pmod{4}$이다. 같은 논법으로 $n^2 + 2$의 홀수 소인수는 $\left(\frac{-2}{p}\right) = +1$, 즉 $p \equiv 1, 3 \pmod{8}$을 만족함을 얻는다. 이는 특정 꼴의 소수가 무한히 많다는 디리클레형 결과의 초보적 사례를 제공한다.
-:::
+같은 방식으로 임의의 홀수 소수 $q$에 대하여 $(q/p) = 1$인 소수 $p$는 $4q$를 법으로 하는 합동류로 기술되며, 계산은 $(p/q)$를 법 $q$의 이차 잉여표에서 읽고 $p \bmod 4$로 부호를 결정하는 것으로 끝난다.
 
 ---
 

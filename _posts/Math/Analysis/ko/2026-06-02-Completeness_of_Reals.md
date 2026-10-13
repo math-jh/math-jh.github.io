@@ -1,7 +1,7 @@
 ---
 title: "실수의 완비성"
-description: "실수를 순서체로 보고, 해석학 전체를 떠받치는 완비성 공리(상한 성질)를 도입한다. 이로부터 아르키메데스 성질과 유리수의 조밀성을 유도하고, 완비성이 유리수와 실수를 가르는 본질적 차이임을 본다."
-excerpt: "순서체와 상한 공리, 아르키메데스 성질, 유리수의 조밀성"
+description: "실수를 순서체로 두고 상한 성질(최소상계 성질)을 공리로 받아들인다. 상한의 ε-특성화를 증명하고, 유리수 집합에서 이 성질이 어떻게 깨지는지 계산한 뒤, 상한 성질로부터 아르키메데스 성질, 유리수의 조밀성, 양의 제곱근의 존재를 유도한다."
+excerpt: "순서체, 상한 성질, 상한의 ε-특성화, 아르키메데스 성질, 유리수의 조밀성, 제곱근의 존재"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/completeness_of_reals
@@ -11,173 +11,158 @@ sidebar:
 date: 2026-06-02
 weight: 1
 
-
 published: false
+
 ---
 
-[\[미적분학\] §함수의 극한](/ko/math/calculus/functions_and_limits){: data-lid="6cp81" }에서 우리는 극한을 다루며 실수의 "빈틈 없음"을 직관적으로 사용하였다. 완비성이 없는 유리수 위에서는 [§연결성과 중간값 정리, ⁋따름정리 6](/ko/math/analysis/connectedness#cor6){: data-lid="ot1aq" }가 성립하지 않는다. 해석학은 이 직관적 성질을 하나의 공리로 명확히 못박는 데서 출발한다. 그것이 *완비성*이며, 극한과 최댓값과 적분의 존재를 비롯한 미적분학의 모든 존재 정리가 궁극적으로 여기에 기댄다.
+유리수 $\mathbb{Q}$는 사칙연산과 대소관계를 모두 갖추고 있으므로 대수적으로나 순서의 측면에서나 부족한 것이 없어 보인다. 그러나 $x^2=2$를 만족하는 유리수는 없고, 이는 $\mathbb{Q}$ 안에서 $x^2<2$인 수들을 아무리 위로 밀어 올려도 도달할 점이 $\mathbb{Q}$ 안에 없다는 뜻이다. 해석학에서 극한, 최댓값, 중간값, 적분의 존재를 보장하는 모든 정리는 실수에는 이런 빈틈이 없다는 사실에 기댄다. 이 글에서는 그 사실을 상한 성질이라는 공리로 적고, 공리가 실제로 무엇을 보장하는지 증명으로 확인한다.
 
-## 순서체로서의 실수
-
-실수 $\mathbb{R}$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $\mathbb{R}$은 체이면서 전순서 $\leq$를 가지고 ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations){: data-lid="ch6oj" }), 그 순서가 연산과 다음과 같이 호환된다: $a \leq b$이면 $a + c \leq b + c$이고, $a \leq b$이고 $0 \leq c$이면 $ac \leq bc$이다. 유리수 $\mathbb{Q}$ 역시 순서체이므로, 이 성질만으로는 $\mathbb{R}$과 $\mathbb{Q}$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
-
-먼저 순서로부터 정해지는 upper bound와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set){: data-lid="s9wxk" }).
+## 순서체
 
 ::: 정의 1
-$S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. Symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
+체 $F$ 위의 total order $\leq$가 다음 두 조건을 만족하면 $(F,\leq)$를 *순서체*라 한다.
+
+1. $a\leq b$이면 모든 $c\in F$에 대해 $a+c\leq b+c$이다.
+2. $0\leq a$이고 $0\leq b$이면 $0\leq ab$이다.
 :::
 
-상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 upper bound이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 upper bound이다. 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 upper bound가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
+$\mathbb{Q}$와 $\mathbb{R}$은 모두 순서체이다. 이 정의에서 $1>0$, 모든 $a$에 대해 $a^2\geq 0$, $0<a<b$이면 $a^2<b^2$, $c>0$이면 $a<b$에서 $ac<bc$ 같은 통상의 부등식 규칙이 따르고, 아래에서는 이 규칙들을 따로 언급하지 않고 쓴다. 순서체의 공리만으로는 $\mathbb{Q}$와 $\mathbb{R}$을 구별할 수 없다. 둘을 가르는 것은 다음 절의 공리 하나이다.
 
-## 완비성 공리
+## 상한과 상한 성질
 
-::: 정의 2 (완비성 공리)
-순서체 $\mathbb{R}$은 *완비<sub>complete</sub>*하다. 즉 bounded above인 공집합이 아닌 모든 부분집합 $S \subseteq \mathbb{R}$은 상한 $\sup S \in \mathbb{R}$를 갖는다. 이를 *상한 성질<sub>least upper bound property</sub>*이라 부른다.
+::: 정의 2
+순서체 $F$의 subset $S$와 원소 $M\in F$에 대하여, 모든 $s\in S$에 대해 $s\leq M$이면 $M$을 $S$의 *upper bound<sub>상계</sub>*라 하고, upper bound가 존재하면 $S$는 위로 유계라 한다. $S$의 upper bound 가운데 가장 작은 것이 존재하면 이를 $S$의 *supremum<sub>상한</sub>* 또는 *least upper bound<sub>최소상계</sub>*라 하고 $\sup S$로 적는다. Lower bound와 *infimum* $\inf S$는 부등호를 반대로 하여 같은 방식으로 정의한다.
 :::
 
-이것이 실수를 정의하는 마지막 공리이며, $\mathbb{Q}$에서는 성립하지 않는다. 예를 들어 $S = \{x \in \mathbb{Q} \mid x^2 < 2\}$는 $\mathbb{Q}$ 안에서 bounded above이지만, 그 상한은 $\sqrt{2}$여야 하는데 이것이 유리수가 아니므로 $\mathbb{Q}$ 안에는 상한이 없다. 완비성은 바로 이런 "빈틈"이 $\mathbb{R}$에는 없음을 단언한다.
+$\sup S$가 존재하더라도 $S$의 원소일 필요는 없다. $S=[0,1)$의 upper bound는 $1$ 이상의 수 전체이므로 $\sup S=1$이지만 $1\notin S$이고, $S$에는 최댓값이 없다. $\sup S\in S$일 때에만 $\sup S$가 $S$의 최댓값 $\max S$가 된다. 또 $S=\emptyset$이면 모든 수가 upper bound이므로 가장 작은 것이 없고, 위로 유계가 아닌 집합은 upper bound 자체가 없다. 그래서 아래의 공리는 공집합이 아니고 위로 유계인 집합에 대해서만 말한다.
 
-하한에 대한 대응 명제는 공리로 따로 둘 필요가 없다.
-
-::: 명제 3
-Bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $\inf S$를 갖는다.
+::: 정의 3 (상한 성질)
+순서체 $F$가 다음을 만족하면 $F$는 *상한 성질<sub>least upper bound property</sub>*을 갖는다고 하고 *완비*라 한다. 공집합이 아니고 위로 유계인 모든 $S\subseteq F$는 $F$ 안에 $\sup S$를 갖는다.
 :::
 
-::: 증명
-$-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 $-m$은 $-S$의 upper bound이므로 $-S$는 bounded above이고, [정의 2](#def2){: data-lid="xvq4u" }에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
-:::
+실수체 $\mathbb{R}$은 상한 성질을 갖는 순서체로 정의한다. 이 글의 모든 결과는 $\mathbb{R}$이 이 공리를 만족한다는 사실만 사용한다.
 
-## Archimedean property와 density
+하한에 대한 대응 성질은 따로 공리로 둘 필요가 없다. $S$가 공집합이 아니고 아래로 유계이면 $-S=\{-s\mid s\in S\}$는 위로 유계이다. $S$의 lower bound $m$에 대해 $-m$이 $-S$의 upper bound이기 때문이다. 그러면 $\alpha=\sup(-S)$가 존재하고, $m$이 $S$의 lower bound인 것과 $-m$이 $-S$의 upper bound인 것이 동치이므로 $-\alpha$가 $S$의 가장 큰 lower bound, 곧 $\inf S$이다.
 
-완비성의 첫 수확은 "자연수가 한없이 커진다"는 당연해 보이는 사실인데, 놀랍게도 이는 완비성 없이는 보장되지 않는다.
+## 상한의 ε-특성화
 
-::: 정리 4 (Archimedean property)
-임의의 실수 $x$에 대하여, $n > x$인 자연수 $n$이 존재한다.
-:::
+[정의 2](#def2)는 "가장 작은 upper bound"라는 최소성 조건을 담고 있어 직접 쓰기 불편하다. 실제 증명에서는 다음 형태로 바꾸어 쓴다.
 
-::: 증명
-자연수 집합 $\mathbb{N}$이 bounded above라 가정하고 모순을 이끌자. 그러면 완비성에 의해 $\alpha = \sup \mathbb{N}$가 존재한다. $\alpha$가 가장 작은 upper bound이므로 $\alpha - 1$은 upper bound가 아니고, 따라서 $n > \alpha - 1$인 자연수 $n$이 있다. 그러면 $n + 1 > \alpha$인데 $n + 1$도 자연수이므로 $\alpha$가 upper bound라는 데 모순이다. 따라서 $\mathbb{N}$은 bounded above가 아니고, 임의의 $x$에 대해 $n > x$인 $n$이 존재한다.
-:::
+::: 명제 4 (상한의 ε-특성화)
+$S\subseteq\mathbb{R}$이 공집합이 아니라 하고 $\alpha\in\mathbb{R}$이라 하자. $\alpha=\sup S$인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
 
-Archimedean property의 동치 형태로, 임의의 $\varepsilon > 0$에 대해 $1/n < \varepsilon$인 자연수 $n$이 존재한다 ($n > 1/\varepsilon$을 잡으면 된다). 이로부터 유리수가 실수 안에 촘촘히 들어차 있음을 얻는다.
-
-::: 정리 5 (유리수의 density)
-임의의 두 실수 $a < b$ 사이에는 유리수 $q$가 존재한다. 즉 $a < q < b$인 $q \in \mathbb{Q}$가 있다.
+1. 모든 $s\in S$에 대해 $s\leq\alpha$이다.
+2. 모든 $\varepsilon>0$에 대해 $s>\alpha-\varepsilon$인 $s\in S$가 존재한다.
 :::
 
 ::: 증명
-$b - a > 0$이므로 [정리 4](#thm4){: data-lid="xgead" }에 의해 $1/n < b - a$, 즉 $nb - na > 1$인 자연수 $n$이 있다. 두 실수의 차가 $1$보다 크므로 그 사이에 정수가 존재한다. 구체적으로 $m = \lfloor na\rfloor + 1$로 두면 $na < m \leq na + 1 < nb$이고, 양변을 $n$으로 나누면 $a < m/n < b$이어서 $q = m/n$이 원하는 유리수이다.
+$\alpha=\sup S$라 하자. 조건 1은 $\alpha$가 upper bound라는 것 자체이다. $\varepsilon>0$이 주어졌다고 하자. $\alpha-\varepsilon<\alpha$이고 $\alpha$가 가장 작은 upper bound이므로 $\alpha-\varepsilon$은 upper bound가 아니다. 즉 $s\leq\alpha-\varepsilon$가 성립하지 않는 $s\in S$가 있고, 이는 $s>\alpha-\varepsilon$이라는 뜻이다.
+
+역으로 두 조건이 성립한다고 하자. 조건 1에 의해 $\alpha$는 upper bound이다. $\beta<\alpha$인 $\beta$가 upper bound라고 가정하고 $\varepsilon=\alpha-\beta>0$으로 잡으면, 조건 2에 의해 $s>\alpha-\varepsilon=\beta$인 $s\in S$가 존재하여 $\beta$가 upper bound라는 가정에 모순이다. 따라서 모든 upper bound는 $\alpha$ 이상이고 $\alpha=\sup S$이다.
 :::
 
-Density는 한 번 더 쓰면 두 실수 사이에 유리수가 *무한히* 많이 있음을 준다. 실제로 $a < q_1 < b$인 유리수 $q_1$을 잡고, 다시 [정리 5](#thm5){: data-lid="n2b19" }를 구간 $(q_1, b)$에 적용하면 $q_1 < q_2 < b$인 $q_2$를 얻으며, 이를 되풀이하면 서로 다른 유리수 $q_1 < q_2 < q_3 < \cdots$가 모두 $(a, b)$ 안에 놓인다. 같은 방식으로 무리수도 조밀하다: $a < b$이면 $a - \sqrt{2} < b - \sqrt{2}$이므로 그 사이에 유리수 $q$가 있고, 그러면 $q + \sqrt{2}$는 $(a, b)$에 속하는 무리수이다 (유리수에 무리수를 더하면 무리수이므로). 따라서 유리수와 무리수는 실직선 위에 서로 뒤섞여 촘촘히 깔려 있다.
+조건 2에서 $\varepsilon$이 임의의 양수라는 점이 핵심이다. 임의의 $\varepsilon>0$에 대해 $\alpha-\varepsilon$이 upper bound가 아니라는 것은 $\alpha$보다 작은 수는 모두 upper bound가 아니라는 말과 같다. 한 번 지나가는 $\varepsilon$에 대해서만 성립하는 주장으로는 이 동치가 얻어지지 않는다. 이 명제는 이후의 모든 글에서 수열의 극한과 상한을 연결할 때 쓰인다.
 
-## 상한의 계산과 활용
+## 유리수의 불완비성
 
-상한 성질은 추상적인 존재 단언으로 그치지 않고, 구체적인 집합의 상한을 정의 (i), (ii) 의 두 조건으로 직접 확인하는 데 쓰인다. 어떤 후보 값 $\alpha$가 $\sup S$임을 보이려면, $\alpha$가 upper bound임을 보이고 (모든 $s \in S$에 대해 $s \leq \alpha$), 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$를 찾으면 된다. 이 두 조건은 상한이 집합의 원소가 아닐 수 있다는 점을 곧바로 드러낸다. 가령 $S = [0, 1)$은 $1$을 upper bound로 가지고, $0 < \varepsilon < 1$이면 $1 - \varepsilon/2 \in S$가 $1 - \varepsilon$을 넘으므로 $1$보다 작은 수는 upper bound가 될 수 없어 $\sup S = 1$이지만 $1 \notin S$이다. 같은 일이 수열로 주어진 $S = \{1 - 1/n \mid n \in \mathbb{N}\}$에서도 일어나는데, [정리 4](#thm4){: data-lid="d8u3j" } 로 $1/n < \varepsilon$인 $n$을 잡으면 $1 - 1/n > 1 - \varepsilon$이 되어 $\sup S = 1$이지만 어느 항도 $1$에 도달하지 못한다.
+상한 성질은 $\mathbb{Q}$에서 성립하지 않는다. 다음 계산은 그 실패가 어떤 구조로 일어나는지를 보여 준다.
 
-상한이 집합의 원소일 때 그것을 *최댓값<sub>maximum</sub>*이라 부른다. 위 두 집합처럼 $\sup S$가 항상 $S$의 원소인 것은 아니며, $\sup S \in S$인 경우에만 $\max S$가 존재한다. 예컨대 $[0,1)$을 closed 구간 $[0,1]$로 바꾸면 $\sup [0,1] = 1 \in [0,1]$이 되어 최댓값이 생기고, $\{1 - 1/n\}$에서는 상한 $1$이 빠져 $\max S$가 없는 반면 $\inf S = 0$은 $n = 1$ 항으로 집합에 속해 $\min S = 0$이 존재한다.
+::: 예시 5 ($\mathbb{Q}$에서 상한을 갖지 않는 집합)
+$S=\{x\in\mathbb{Q}\mid x^2<2\}$는 공집합이 아니고($1\in S$) 위로 유계이지만($2$가 upper bound이다) $\mathbb{Q}$ 안에 상한을 갖지 않는다.
 
-상한 연산은 집합의 평행이동·스칼라배와 잘 호환된다. 이 단순한 규칙들은 이후 극한 계산에서 거듭 쓰이므로 명제로 정리해 둔다.
+먼저 $q^2=2$인 $q\in\mathbb{Q}$가 없음을 보인다. $q=p/r$이 기약분수(자연수 $p,r$)이고 $p^2=2r^2$이라 하자. 그러면 $p^2$이 짝수이므로 $p$가 짝수이다. $p=2t$를 대입하면 $r^2=2t^2$이어서 $r$도 짝수가 되고, 이는 기약분수라는 가정에 모순이다. 이로부터 $\mathbb{Q}$의 양수 $q$는 $q^2<2$이거나 $q^2>2$이다.
 
-::: 명제 6 (상한의 평행이동과 양의 스칼라배)
-Bounded above인 공집합이 아닌 $S \subseteq \mathbb{R}$와 실수 $c$, $\lambda > 0$에 대하여, $c + S = \{c + s \mid s \in S\}$와 $\lambda S = \{\lambda s \mid s \in S\}$ 역시 bounded above이고
+이제 양의 유리수 $q$에 대해
 
-$$\sup(c + S) = c + \sup S, \qquad \sup(\lambda S) = \lambda \sup S$$
+$$q'=q-\frac{q^2-2}{q+2}=\frac{2q+2}{q+2}$$
 
-이다.
-:::
-
-::: 증명
-$\alpha = \sup S$로 두자. 평행이동의 경우, 모든 $s \in S$에 대해 $s \leq \alpha$이므로 $c + s \leq c + \alpha$이고, 따라서 $c + \alpha$는 $c + S$의 upper bound이다. 또 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$가 있으므로
+로 정의하자. 이 식은 $q'$이 $q$보다 $(q^2-2)/(q+2)$만큼 작아지도록 잡은 것이고, 분모 $q+2$는 $q'^2-2$를 계산했을 때 $q^2-2$의 배수가 되도록 고른 것이다. 실제로 계산하면
 
 $$\begin{aligned}
-c + s &> c + \alpha - \varepsilon
+q'^2-2 &= \frac{(2q+2)^2-2(q+2)^2}{(q+2)^2} \\
+&= \frac{2q^2-4}{(q+2)^2} = \frac{2(q^2-2)}{(q+2)^2}
 \end{aligned}$$
 
-이고 $c + s \in c + S$이다. 따라서 $c + \alpha - \varepsilon$은 upper bound가 아니어서 $c + \alpha$가 가장 작은 upper bound, 곧 $\sup(c + S) = c + \alpha$이다.
+이다. 따라서 $q'$은 양의 유리수이고, $q^2<2$이면 $q'>q$이면서 $q'^2<2$이며, $q^2>2$이면 $q'<q$이면서 $q'^2>2$이다.
 
-스칼라배의 경우도 같다. $\lambda > 0$이므로 $s \leq \alpha$에서 $\lambda s \leq \lambda \alpha$를 얻어 $\lambda \alpha$가 $\lambda S$의 upper bound이고, 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \frac{\varepsilon}{\lambda}$인 $s$를 잡으면
-
-$$\begin{aligned}
-\lambda s &> \lambda\left(\alpha - \frac{\varepsilon}{\lambda}\right) = \lambda\alpha - \varepsilon
-\end{aligned}$$
-
-이므로 $\lambda\alpha - \varepsilon$ 또한 upper bound가 아니다. 따라서 $\sup(\lambda S) = \lambda\alpha$이다.
+$S$가 $\mathbb{Q}$ 안에 상한 $\beta$를 가졌다고 하자. $1\in S$이므로 $\beta\geq 1>0$이고, 위에서 $\beta^2\neq 2$이다. $\beta^2<2$이면 $\beta'>\beta$이면서 $\beta'^2<2$이므로 $\beta'\in S$가 되어 $\beta$가 upper bound라는 데 모순이다. $\beta^2>2$이면 $\beta'<\beta$이고 $\beta'^2>2$이다. 이때 $\beta'$은 $S$의 upper bound이다. 실제로 $x\in S$가 양수이면 $x^2<2<\beta'^2$에서 $x<\beta'$이고, $x\leq 0$이면 $x<\beta'$은 자명하다. 이는 $\beta$가 가장 작은 upper bound라는 데 모순이다.
 :::
 
-위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3){: data-lid="126pm" }의 증명과 같은 논증으로 $\inf(-S) = -\sup S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
+같은 집합 $S$를 $\mathbb{R}$ 안에서 보면 상한을 가지며, 그 값이 아래에서 구성하는 $\sqrt{2}$이다. $\mathbb{Q}$에서 $S$의 upper bound 전체는 $\sqrt{2}$보다 큰 유리수들의 집합이고, 이 집합에는 가장 작은 원소가 없다. 완비성은 이 "있어야 할 최솟값이 빠져 있는" 상황이 $\mathbb{R}$에서는 일어나지 않는다는 공리이다.
 
-## Nested interval theorem
+## 아르키메데스 성질
 
-완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 closed 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
+자연수가 한없이 커진다는 사실은 당연해 보이지만 순서체의 공리에서 나오지 않는다. 이것을 증명하는 데 상한 성질이 필요하다.
 
-::: 정리 7 (nested interval theorem)
-Closed 구간들의 중첩하는 사슬 $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$, $I_n = [a_n, b_n]$ ($a_n \leq b_n$) 에 대하여 교집합 $\bigcap_{n=1}^\infty I_n$은 공집합이 아니다.
+::: 정리 6 (Archimedean property)
+임의의 실수 $x$에 대하여 $n>x$인 자연수 $n$이 존재한다. 따라서 임의의 $\varepsilon>0$에 대해 $1/n<\varepsilon$인 자연수 $n$이 존재한다.
 :::
 
 ::: 증명
-중첩 조건 $I_{n+1} \subseteq I_n$은 좌끝점이 비감소, 우끝점이 비증가임을 뜻한다:
-
-$$\begin{aligned}
-a_1 \leq a_2 \leq a_3 \leq \cdots, \qquad \cdots \leq b_3 \leq b_2 \leq b_1.
-\end{aligned}$$
-
-게다가 임의의 $m, n$에 대해 $a_m \leq b_n$이다. 실제로 $k = \max(m, n)$으로 두면 $a_m \leq a_k \leq b_k \leq b_n$이기 때문이다. 따라서 집합 $A = \{a_n \mid n \in \mathbb{N}\}$은 bounded above이고 (예컨대 $b_1$이 upper bound), 완비성에 의해
-
-$$\alpha = \sup A$$
-
-가 존재한다. $\alpha$가 $A$의 upper bound이므로 모든 $n$에 대해 $a_n \leq \alpha$이고, 한편 모든 $b_n$이 $A$의 upper bound이므로 가장 작은 upper bound인 $\alpha$는 $\alpha \leq b_n$을 만족한다. 두 부등식을 합치면
-
-$$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in \bigcap_{n=1}^\infty I_n$$
-
-이므로 교집합은 비어 있지 않다.
+$\mathbb{N}$이 위로 유계라고 가정하자. $\mathbb{N}$은 공집합이 아니므로 $\alpha=\sup\mathbb{N}$이 존재한다. $\alpha-1<\alpha$이므로 $\alpha-1$은 upper bound가 아니고, $n>\alpha-1$인 자연수 $n$이 있다. 그러면 자연수 $n+1$이 $n+1>\alpha$를 만족하여 $\alpha$가 upper bound라는 데 모순이다. 따라서 $\mathbb{N}$은 위로 유계가 아니고, 임의의 $x$는 $\mathbb{N}$의 upper bound가 될 수 없으므로 $n>x$인 $n\in\mathbb{N}$이 있다. 둘째 주장은 $x=1/\varepsilon$에 적용하면 $n>1/\varepsilon$, 곧 $1/n<\varepsilon$을 얻는다.
 :::
 
-Closed 구간이라는 조건은 없앨 수 없다. 반열린 구간 $I_n = \left(0, \frac{1}{n}\right]$을 보면 모두 중첩하지만 임의의 $x > 0$은 Archimedean property로 $\frac{1}{n} < x$가 되는 순간 빠져나가므로 $\bigcap_n I_n = \emptyset$이다. 구간의 길이 $b_n - a_n$이 $0$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $a_n$의 상한이자 모든 $b_n$의 하한이다.
+이 증명에서 $\alpha-1$을 쓴 것은 $\mathbb{N}$이 $1$씩 커지는 집합이어서 $\alpha-1$ 바로 위에 원소가 있으면 $\alpha$를 넘는 원소가 만들어지기 때문이다. [정리 6](#thm6)의 둘째 형태는 $\varepsilon$-논증에서 "$\varepsilon$보다 작은 $1/n$을 잡는다"는 단계에 그대로 쓰인다.
 
-::: 예시 8 (길이가 줄어드는 구간과 decimal expansion)
-실수 $x$의 decimal expansion은 nested interval theorem의 전형적 사례이다. $x = 0. d_1 d_2 d_3 \cdots$ ($d_k \in \{0, 1, \dots, 9\}$) 에 대해
+다음 예시는 상한 성질을 빼면 [정리 6](#thm6)이 실제로 무너짐을 보인다.
 
-$$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
-
-로 두면 $I_1 \supseteq I_2 \supseteq \cdots$이고 길이는 $10^{-n} \rightarrow 0$이다. [정리 7](#thm7){: data-lid="afwdu" }에 의해 교집합은 비어 있지 않고, 길이가 $0$으로 가므로 교집합은 한 점뿐이다. 그 점이 바로 무한소수가 나타내는 실수 $x$이다. 완비성이 없다면 이 교집합이 빌 수도 있어, 무한소수가 수렴할 대상이 보장되지 않는다.
+::: 예시 7 (Archimedean property가 없는 순서체)
+$\mathbb{R}$ 위의 rational function field $\mathbb{R}(x)$에서 $f=p/q$ ($p,q$는 polynomial, $q\neq 0$)를 $p$와 $q$의 최고차 계수의 부호가 같을 때 양수로 정의하면 $\mathbb{R}(x)$는 순서체가 된다. 이 순서에서 모든 자연수 $n$에 대해 $x-n$의 최고차 계수는 $1>0$이므로 $x>n$이다. 즉 $\mathbb{N}$은 $x$를 upper bound로 가지며 위로 유계이다. 그러나 $\mathbb{N}$은 상한을 갖지 않는다. $\beta$가 upper bound이면 모든 $n$에 대해 $n+1\leq\beta$이므로 $\beta-1$도 upper bound이고, $\beta-1<\beta$이어서 가장 작은 upper bound가 없기 때문이다.
 :::
+
+따라서 Archimedean property는 순서체 일반의 성질이 아니라 완비성의 귀결이다. 역은 성립하지 않는다. $\mathbb{Q}$는 Archimedean property를 갖지만 완비가 아니다.
+
+## 유리수의 조밀성
+
+::: 정리 8 (유리수의 density)
+실수 $a<b$에 대하여 $a<q<b$인 유리수 $q$가 존재한다.
+:::
+
+::: 증명
+$b-a>0$이므로 [정리 6](#thm6)에 의하여 $1/n<b-a$인 자연수 $n$을 잡을 수 있다. 이는 $nb-na>1$이라는 뜻이다. 이제 $na$ 바로 위의 정수를 찾는다. [정리 6](#thm6)에서 $n'>-na$인 자연수 $n'$이 있고, 정수 집합 $\{k\in\mathbb{Z}\mid k>na\}$은 $-n'$을 하계로 갖는 공집합이 아닌 집합이므로 최솟값 $m$을 갖는다. $m$이 최소이므로 $m-1\leq na$이고, 따라서
+
+$$na<m\leq na+1<nb$$
+
+이다. 각 변을 $n$으로 나누면 $a<m/n<b$이다.
+:::
+
+$n$을 $1/n<b-a$로 고르는 이유는, 간격이 $1/n$인 점 $m/n$ 가운데 길이가 $b-a$인 구간에 반드시 하나가 들어가려면 그 간격이 구간 길이보다 작아야 하기 때문이다. [정리 8](#thm8)을 $(a,q)$와 같은 구간에 되풀이하여 적용하면 $(a,b)$ 안에 유리수가 무한히 많음을 얻는다. 무리수에 대해서도 같은 결론이 성립한다. 아래 절에서 $\sqrt{2}$가 무리수임을 확인하고 나면, $a<b$에 대해 $a-\sqrt{2}<q<b-\sqrt{2}$인 유리수 $q$를 잡아 $q+\sqrt{2}\in(a,b)$가 무리수임을 얻는다. 유리수와 무리수 모두 $\mathbb{R}$ 안에서 *dense*하다.
 
 ## 제곱근의 존재
 
-완비성이 "빈틈"을 메운다는 말을 가장 또렷이 보여 주는 것은, $\mathbb{Q}$에는 없던 $\sqrt{2}$ 같은 수가 $\mathbb{R}$ 안에 실제로 존재함을 증명하는 일이다. 이는 도입부에서 예고한 집합 $\{x \mid x^2 < 2\}$의 상한이 정말로 제곱하면 $2$가 됨을 확인하는 작업이다.
+[예시 5](#ex5)에서 $\mathbb{Q}$에는 없던 $\sqrt{2}$가 $\mathbb{R}$에는 존재한다. 같은 집합의 상한을 취하는 것이 증명의 구조이다.
 
 ::: 정리 9 (양의 제곱근의 존재)
-임의의 실수 $c > 0$에 대하여 $\alpha^2 = c$인 유일한 양의 실수 $\alpha$가 존재한다. 이를 $\sqrt{c}$로 적는다.
+임의의 실수 $c>0$에 대하여 $\alpha^2=c$인 양의 실수 $\alpha$가 유일하게 존재한다. 이를 $\sqrt{c}$로 적는다.
 :::
 
 ::: 증명
-$S = \{x > 0 \mid x^2 < c\}$로 두자. $S$는 공집합이 아니고 (작은 $x$에 대해 $x^2 < c$), $1 + c$가 upper bound이므로 (만약 $x > 1 + c$이면 $x^2 > x > c$) bounded above이다. 완비성에 의해 $\alpha = \sup S > 0$이 존재한다. 우리는 $\alpha^2 = c$임을 두 부등식을 배제하여 보인다.
+$S=\{x>0\mid x^2<c\}$라 하자. $x_0=c/(1+c)$는 $0<x_0<1$이고 $x_0<c$이므로 $x_0^2<x_0<c$이어서 $x_0\in S$이다. 또 $x\geq 1+c$이면 $x\geq 1$에서 $x^2\geq x\geq 1+c>c$이므로 $x\notin S$이다. 즉 $1+c$는 $S$의 upper bound이다. [정의 3](#def3)에 의해 $\alpha=\sup S$가 존재하고, $x_0\in S$이므로 $\alpha>0$이다. $\alpha^2<c$와 $\alpha^2>c$를 각각 배제한다.
 
-먼저 $\alpha^2 < c$라 가정하자. 작은 $h \in (0, 1)$에 대해
-
-$$\begin{aligned}
-(\alpha + h)^2 &= \alpha^2 + 2\alpha h + h^2 \\
-&\leq \alpha^2 + 2\alpha h + h = \alpha^2 + (2\alpha + 1)h
-\end{aligned}$$
-
-이고, $c - \alpha^2 > 0$이므로 $h < (c - \alpha^2)/(2\alpha + 1)$이면서 $h < 1$인 $h$를 잡으면 $(\alpha + h)^2 < c$가 되어 $\alpha + h \in S$이다. 이는 $\alpha$가 upper bound라는 데 모순이다.
-
-다음으로 $\alpha^2 > c$라 가정하자. $k = (\alpha^2 - c)/(2\alpha) > 0$로 두면 $0 < k < \alpha$이고
+$\alpha^2<c$라 하자. $0<h<1$인 $h$에 대하여 $h^2<h$이므로
 
 $$\begin{aligned}
-(\alpha - k)^2 &= \alpha^2 - 2\alpha k + k^2 \\
-&> \alpha^2 - 2\alpha k = \alpha^2 - (\alpha^2 - c) = c
+(\alpha+h)^2 &= \alpha^2+2\alpha h+h^2 \\
+&< \alpha^2+(2\alpha+1)h
 \end{aligned}$$
 
-이다. 그러면 임의의 $x \geq \alpha - k$인 양수는 $x^2 \geq (\alpha - k)^2 > c$이어서 $S$에 속하지 않으므로, $\alpha - k$가 $S$의 upper bound가 된다. 이는 $\alpha$가 가장 작은 upper bound라는 데 모순이다.
+이다. 우변이 $c$ 이하가 되도록 $h=\min\{1/2,(c-\alpha^2)/(2\alpha+1)\}$로 잡으면 $(2\alpha+1)h\leq c-\alpha^2$이어서 $(\alpha+h)^2<c$이다. 따라서 $\alpha+h\in S$이고 $\alpha+h>\alpha$이므로 $\alpha$가 upper bound라는 데 모순이다. ($h$에 $1/2$ 같은 상한을 둔 것은 $h^2<h$를 쓰기 위해 $h<1$이 필요하기 때문이다.)
 
-두 부등식이 모두 모순이므로 $\alpha^2 = c$이다. 유일성은 $0 < \alpha < \beta$이면 $\alpha^2 < \beta^2$이라는 단조성에서 즉시 따른다.
+$\alpha^2>c$라 하자. $k=(\alpha^2-c)/(2\alpha)$로 두면 $k>0$이고 $k<\alpha^2/(2\alpha)=\alpha/2$이므로 $\alpha-k>0$이다. $k^2>0$이므로
+
+$$\begin{aligned}
+(\alpha-k)^2 &= \alpha^2-2\alpha k+k^2 \\
+&> \alpha^2-2\alpha k = c
+\end{aligned}$$
+
+이다. $x\in S$이면 $x^2<c<(\alpha-k)^2$이고 $x,\alpha-k$가 모두 양수이므로 $x<\alpha-k$이다. 따라서 $\alpha-k$는 $\alpha$보다 작은 upper bound가 되어 $\alpha$가 가장 작은 upper bound라는 데 모순이다. $k$는 $2\alpha k=\alpha^2-c$가 되도록, 곧 $(\alpha-k)^2$의 일차 근사가 정확히 $c$가 되도록 고른 값이다.
+
+두 경우가 모두 불가능하므로 $\alpha^2=c$이다. $0<\alpha<\beta$이면 $\alpha^2<\beta^2$이므로 $\alpha^2=\beta^2=c$인 서로 다른 양수는 없고, 유일성이 성립한다.
 :::
 
-특히 $c = 2$를 넣으면 $\alpha^2 = 2$인 양의 실수가 존재하며, 이것이 곧 $\sqrt{2}$이다. 이 수가 유리수가 아님은 고전적 논증으로 확인된다: $\sqrt{2} = p/q$ ($p, q$는 서로소인 자연수) 라면 $p^2 = 2q^2$에서 $p$가 짝수, $p = 2r$로부터 $q^2 = 2r^2$이어서 $q$도 짝수가 되어 서로소 가정에 모순이다. 결정적인 점은 이 무리수가 *존재한다*는 사실 자체가 완비성에서 나온다는 것이다. $\mathbb{Q}$ 안에서는 $\{x \mid x^2 < 2\}$가 상한을 갖지 않아 제곱근이 아예 없지만, $\mathbb{R}$의 상한 성질이 그 빈자리를 정확히 채운다. 같은 논증을 $n$제곱근으로 일반화하면 모든 양수가 임의의 자연수 degree의 양의 실근을 가짐을 얻는다.
+$c=2$인 경우가 $\sqrt{2}$의 존재이다. [예시 5](#ex5)에서 $\mathbb{Q}$에는 $\alpha^2=2$인 수가 없음을 보였으므로 $\sqrt{2}$는 무리수이다. 이 정리는 $\sqrt{2}$의 존재가 체의 공리나 순서의 공리가 아니라 상한 성질에서 나온다는 것을 보여 준다. 같은 방식으로 $n$제곱근의 존재도 증명할 수 있으나 $h$와 $k$를 고르는 계산이 길어진다.
 
-이처럼 완비성 하나로부터 실수의 핵심 성질들이 줄줄이 따라 나온다.
+다음 글에서는 이 글의 [명제 4](#prop4)와 [정리 6](#thm6)을 이용하여 수열의 수렴을 정의하고 다룬다.
 
 ---
 

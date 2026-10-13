@@ -1,7 +1,7 @@
 ---
 title: "역함수 정리와 음함수 정리"
-description: "연속미분가능 사상의 미분이 한 점에서 가역이면 그 점 근방에서 함수가 국소적으로 가역임을 보이는 역함수 정리를, 축약사상 원리를 이용해 증명한다. 그 따름정리로 음함수 정리를 끌어낸다."
-excerpt: "역함수 정리, 축약사상, 음함수 정리"
+description: "연속미분가능한 사상의 미분이 한 점에서 가역이면 그 점 근방에서 사상이 가역임을 축소사상 정리로 증명한다. 이로부터 음함수 정리, 등위집합의 tangent space, Lagrange 승수법을 유도하고, 가정이 빠지면 결론이 무너지는 반례를 함께 다룬다."
+excerpt: "역함수 정리, 음함수 정리, Lagrange 승수법"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/inverse_function_theorem
@@ -9,138 +9,193 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-weight: 20
-
+weight: 27
 
 published: false
+
 ---
 
-[§다변수 미분](/ko/math/analysis/multivariable_differentiation){: data-lid="ns6tn" }에서 미분을 선형사상 $Df(a)$로 보았다. 선형사상이 가역이면 그것이 근사하는 함수도 국소적으로 가역이리라 기대할 수 있다. 이 직관을 엄밀하게 만든 것이 역함수 정리이며, 다변수 미적분의 가장 깊은 정리 중 하나이다.
+[§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)에서 사상 $f$의 미분 $Df(a)$는 $a$ 근방에서 $f$를 가장 잘 근사하는 선형사상이었다. 선형사상이 가역이면 그것이 근사하는 사상도 $a$ 근방에서 가역이리라 기대할 수 있고, 역함수 정리는 이 기대가 $C^1$ 가정 아래 참임을 말해 준다.
 
-한 변수 함수에서는 이 직관이 매우 투명하다. $f : \mathbb{R} \rightarrow \mathbb{R}$이 $C^1$이고 $f'(a) \neq 0$이면, 연속성에 의해 $a$의 어떤 근방에서 $f'$이 부호를 유지하므로 $f$가 그 근방에서 순증가 또는 순감소하고, 따라서 일대일이며 역함수를 가진다. 역함수의 미분은
-
-$$(f^{-1})'(f(a)) = \frac{1}{f'(a)}$$
-
-으로 주어진다. 역함수 정리는 이 한 변수 사실을, 나눗셈 $1/f'(a)$을 선형사상의 역 $\bigl(Df(a)\bigr)^{-1}$로 바꾸어 여러 변수로 끌어올린 것이다. 다만 여러 변수에서는 "$f'$이 부호를 유지한다"는 단조성 논법이 통하지 않으므로, 증명의 골격이 완전히 달라져 contraction 원리라는 완비성에 기반한 도구가 필요해진다.
+한 변수에서는 이 사실에 별도의 증명이 필요하지 않다. $f$가 $C^1$이고 $f'(a)\neq 0$이면 $f'$의 연속성에 의해 $a$ 근방에서 $f'$의 부호가 유지되고, 따라서 [§평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4)에 의해 $f$는 그 근방에서 순단조이다. 여러 변수에서는 단조성이라는 도구가 없으므로, 방정식 $f(x)=y$의 해의 존재와 유일성을 [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5)로 직접 확보하는 것이 증명의 골격이 된다. 이 글에서는 사상의 정의역을 $\mathbb{R}^n$의 열린집합으로 두고, $\mathbb{R}^n$에는 Euclid 노름을, 선형사상에는 연산자 노름 $\lVert T\rVert=\sup_{\lVert v\rVert=1}\lVert Tv\rVert$을 쓴다. 따라서 $\lVert Tv\rVert\leq\lVert T\rVert\lVert v\rVert$이다.
 
 ## 역함수 정리
 
 ::: 정리 1 (역함수 정리)
-$f : \mathbb{R}^n \rightarrow \mathbb{R}^n$이 점 $a$ 근방에서 $C^1$이고 $Df(a)$가 가역이면, $a$의 열린 근방 $U$와 $f(a)$의 열린 근방 $V$가 존재하여 $f : U \rightarrow V$가 일대일 대응이며, 그 역함수 $f^{-1} : V \rightarrow U$도 $C^1$이고
+$\Omega\subseteq\mathbb{R}^n$이 열린집합이고 $f:\Omega\to\mathbb{R}^n$이 $C^1$ 사상이며 $a\in\Omega$에서 $Df(a)$가 가역이라 하자. 그럼 $a$의 열린 근방 $U\subseteq\Omega$와 $f(a)$의 열린 근방 $V$가 존재하여 $f:U\to V$가 전단사이고, 역사상 $g=f^{-1}:V\to U$는 $C^1$이며 모든 $x\in U$에 대해
 
-$$D f^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$$
+$$Dg(f(x))=\bigl(Df(x)\bigr)^{-1}$$
 
 이다.
 :::
 
-::: 증명
-$Df(a) = A$를 합성으로 보정하여 $A = I$로 두어도 좋다. 구체적으로 $f$ 대신 $A^{-1}\circ f$를 다루면 그 미분이 $a$에서 $A^{-1}A = I$가 되고, $f$의 가역성과 $A^{-1}\circ f$의 가역성은 동치이므로 일반성을 잃지 않는다. $y$를 고정하고 $f(x) = y$를 푸는 것은 사상
+증명에서는 $\Omega$ 안의 볼록집합에서 미분의 크기를 통제해 사상의 변화량을 억제하는 부등식이 필요하다.
 
-$$T_y(x) = x - \bigl(f(x) - y\bigr)$$
-
-의 fixed point를 찾는 것과 같다. 실제로 $T_y(x) = x$는 $f(x) - y = 0$과 동치이기 때문이다. 이 사상의 미분을 계산하면
-
-$$\begin{aligned}
-DT_y(x) &= I - Df(x) \\
-&= Df(a) - Df(x) \qquad (Df(a) = I) 
-\end{aligned}$$
-
-이고, $Df$가 $a$에서 연속이므로 $a$를 중심으로 하는 충분히 작은 closed 공 $\overline{B} = \overline{B}(a, r)$ 위에서
-
-$$\lVert DT_y(x)\rVert = \lVert Df(a) - Df(x)\rVert \leq \frac{1}{2}$$
-
-로 만들 수 있다. 그러면 $\overline{B}$가 convex이므로 두 점 $x_1, x_2 \in \overline{B}$를 잇는 선분이 $\overline{B}$ 안에 있고, 단위벡터 $u$에 대해 실숫값 함수 $u \cdot T_y$에 [§다변수 미분, ⁋명제 6](/ko/math/analysis/multivariable_differentiation#prop6){: data-lid="807gm" }을 적용하면 그 선분 위의 어떤 점 $\xi$에서 $u \cdot \bigl(T_y(x_1) - T_y(x_2)\bigr) = u \cdot DT_y(\xi)(x_1 - x_2)$이다. 우변의 절댓값이 $\lVert DT_y(\xi)\rVert \lVert x_1 - x_2\rVert$ 이하이므로, $u$를 $T_y(x_1) - T_y(x_2)$ 방향의 단위벡터로 잡으면
-
-$$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac{1}{2} \lVert x_1 - x_2\rVert$$
-
-이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9){: data-lid="702ep" }에 의해 완비 거리공간이다. 한편 $T_y(a) - a = y - f(a)$이므로, $\lVert y - f(a)\rVert < r/2$이면 모든 $x \in \overline{B}$에서
-
-$$\lVert T_y(x) - a\rVert \leq \lVert T_y(x) - T_y(a)\rVert + \lVert T_y(a) - a\rVert \leq \frac{1}{2} \lVert x - a\rVert + \lVert y - f(a)\rVert < r$$
-
-이 되어 $T_y$가 $\overline{B}$를 자기 자신으로 보낸다. 따라서 열린 공 $V = B(f(a), r/2)$로 두면 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2){: data-lid="c56rc" }에 의해 각 $y \in V$마다 $T_y$의 fixed point, 곧 $f(x) = y$인 점 $x$가 $\overline{B}$ 안에 유일하게 존재하며 위의 부등식에 의해 그 점은 열린 공 $B(a,r)$에 들어간다. $U = \{x \in B(a,r) \mid f(x) \in V\}$로 두면 $f$의 연속성에 의해 $U$가 열린집합이고, $\overline{B}$ 안에서의 유일성이 단사성을 주므로 $f : U \rightarrow V$는 일대일 대응이다.
-
-역함수의 미분가능성은 따로 확인해야 한다. 축약 부등식의 좌변 $T_y(x_1) - T_y(x_2) = (x_1 - x_2) - \bigl(f(x_1) - f(x_2)\bigr)$이 $y$에 무관하므로
-
-$$\lVert f(x_1) - f(x_2)\rVert \geq \lVert x_1 - x_2\rVert - \lVert T_y(x_1) - T_y(x_2)\rVert \geq \frac{1}{2} \lVert x_1 - x_2\rVert$$
-
-이고, 곧 $\lVert f^{-1}(y_1) - f^{-1}(y_2)\rVert \leq 2 \lVert y_1 - y_2\rVert$이다. 또 $x \in \overline{B}$에서 $Df(x)v = 0$이면 $v = \bigl(I - Df(x)\bigr)v$에서 $\lVert v\rVert \leq \lVert v\rVert/2$이므로 $v = 0$이고, 따라서 $Df(x)$가 가역이다. 이제 $y \in V$, $x = f^{-1}(y)$로 두고 $h = f^{-1}(y+k) - f^{-1}(y)$라 하면 $k = f(x+h) - f(x) = Df(x)h + \rho(h)$이며 $\rho(h) = o(\lVert h\rVert)$이므로
-
-$$f^{-1}(y+k) - f^{-1}(y) - \bigl(Df(x)\bigr)^{-1}k = -\bigl(Df(x)\bigr)^{-1}\rho(h)$$
-
-인데, $\lVert h\rVert \leq 2\lVert k\rVert$이므로 우변은 $o(\lVert k\rVert)$이다. 따라서 $f^{-1}$은 $V$의 각 점에서 미분가능하고 $Df^{-1}(y) = \bigl(Df(f^{-1}(y))\bigr)^{-1}$이며, 특히 $y = f(a)$에서 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$이다.
+::: 보조정리 2 (평균값 부등식)
+$\Omega\subseteq\mathbb{R}^n$이 열린집합, $\varphi:\Omega\to\mathbb{R}^m$이 미분가능하고, $S\subseteq\Omega$가 볼록집합이며 모든 $\xi\in S$에서 $\lVert D\varphi(\xi)\rVert\leq M$이라 하자. 그럼 모든 $x,y\in S$에 대해 $\lVert\varphi(x)-\varphi(y)\rVert\leq M\lVert x-y\rVert$이다.
 :::
 
-증명의 핵심은 방정식 $f(x) = y$를 푸는 일을 fixed point 문제로 바꾸어, 완비성과 축약성만으로 해의 존재·유일성을 동시에 확보한 데 있다. $C^1$ 가정은 두 곳에서 본질적으로 쓰인다. 첫째, $Df$의 연속성 덕분에 $a$ 근방에서 $\lVert I - Df(x)\rVert$을 작게 만들어 축약상수 $1/2$을 확보할 수 있다. 둘째, 같은 연속성이 역함수 $f^{-1}$의 미분이 다시 연속임을, 곧 $f^{-1}$이 $C^1$임을 보장한다. 실제로 $Df^{-1}(y) = \bigl(Df(f^{-1}(y))\bigr)^{-1}$인데, 행렬을 역행렬로 보내는 사상이 연속이고 $f^{-1}$과 $Df$가 연속이므로 그 합성도 연속이다.
+::: 증명
+$\varphi(x)=\varphi(y)$이면 자명하므로 $\varphi(x)\neq\varphi(y)$라 하고, $u=\bigl(\varphi(x)-\varphi(y)\bigr)/\lVert\varphi(x)-\varphi(y)\rVert$로 둔다. 실숫값 함수 $\psi(t)=u\cdot\varphi\bigl(y+t(x-y)\bigr)$는 $[0,1]$을 포함하는 열린 구간에서 미분가능하다. $\Omega$가 열린집합이므로 $t$가 $[0,1]$ 바깥으로 조금 나가도 점 $y+t(x-y)$는 $\Omega$ 안에 있기 때문이다. [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)을 $\psi$에 적용하면 어떤 $\tau\in(0,1)$이 존재하여, $\xi=y+\tau(x-y)\in S$에 대해
 
-가역성은 국소적임에 유의한다. $Df(a)$가 모든 점에서 가역이어도 $f$가 전역적으로 일대일일 필요는 없다. 예컨대 복소평면을 $\mathbb{R}^2$로 본 $f(x,y) = (e^x\cos y, e^x\sin y)$는 모든 점에서 미분이 가역이지만 $y$에 대해 $2\pi$ 주기로 같은 값을 갖는다.
+$$\lVert\varphi(x)-\varphi(y)\rVert=\psi(1)-\psi(0)=\psi'(\tau)=u\cdot D\varphi(\xi)(x-y)\leq\lVert D\varphi(\xi)\rVert\lVert x-y\rVert\leq M\lVert x-y\rVert$$
+
+이다. 첫 등호는 $u$의 정의에서, 첫 부등호는 [\[선형대수학\] §내적공간, ⁋명제 3](/ko/math/linear_algebra/inner_product_spaces#prop3)에서 나온다.
+:::
+
+::: 증명 (정리 1)
+$A=Df(a)$, $c=\lVert A^{-1}\rVert$로 둔다. $Df$가 $a$에서 연속이므로 $a$를 중심으로 하는 닫힌 공 $\overline{B}=\overline{B}(a,r)\subseteq\Omega$를 충분히 작게 잡아 모든 $x\in\overline{B}$에서
+
+$$\lVert Df(x)-A\rVert\leq\frac{1}{2c}$$
+
+이 되게 할 수 있다. 여기서 $C^1$ 가정이 쓰인다. 각 $y\in\mathbb{R}^n$에 대해 사상 $\varphi_y:\Omega\to\mathbb{R}^n$을
+
+$$\varphi_y(x)=x+A^{-1}\bigl(y-f(x)\bigr)$$
+
+로 정의한다. $\varphi_y(x)=x$는 $A^{-1}\bigl(y-f(x)\bigr)=0$, 곧 $f(x)=y$와 동치이므로, 방정식 $f(x)=y$를 푸는 일은 $\varphi_y$의 fixed point를 찾는 일이다. $D\varphi_y(x)=I-A^{-1}Df(x)=A^{-1}\bigl(A-Df(x)\bigr)$이고 $y$에 무관하므로, $\overline{B}$ 위에서
+
+$$\lVert D\varphi_y(x)\rVert\leq c\cdot\frac{1}{2c}=\frac{1}{2}$$
+
+이다. $\overline{B}$가 볼록이므로 [보조정리 2](#lem2)에 의해 모든 $x_1,x_2\in\overline{B}$에서
+
+$$\lVert\varphi_y(x_1)-\varphi_y(x_2)\rVert\leq\frac{1}{2}\lVert x_1-x_2\rVert\tag{$\ast$}$$
+
+이다. 상수 $1/2$은 $1$보다 작기만 하면 되는 값이고, $c$를 곱해 $1/2$로 맞춘 것이 위의 $\overline{B}$ 선택이다.
+
+먼저 $f$가 $\overline{B}$ 위에서 단사임을 보인다. $\varphi_y(x_1)-\varphi_y(x_2)=(x_1-x_2)-A^{-1}\bigl(f(x_1)-f(x_2)\bigr)$이므로 삼각부등식과 $(\ast)$로부터
+
+$$\lVert x_1-x_2\rVert-c\lVert f(x_1)-f(x_2)\rVert\leq\frac{1}{2}\lVert x_1-x_2\rVert$$
+
+이고, 따라서
+
+$$\lVert x_1-x_2\rVert\leq 2c\lVert f(x_1)-f(x_2)\rVert\tag{$\ast\ast$}$$
+
+이다. $f(x_1)=f(x_2)$이면 $x_1=x_2$이다.
+
+다음으로 $f(\overline{B})$가 $f(a)$의 근방을 포함함을 보인다. $\rho=r/(2c)$로 두고 $V=B\bigl(f(a),\rho\bigr)$로 놓자. $y\in V$이면 $\varphi_y(a)-a=A^{-1}\bigl(y-f(a)\bigr)$의 크기가 $c\rho=r/2$보다 작으므로, $x\in\overline{B}$에 대해
+
+$$\lVert\varphi_y(x)-a\rVert\leq\lVert\varphi_y(x)-\varphi_y(a)\rVert+\lVert\varphi_y(a)-a\rVert<\frac{1}{2}r+\frac{1}{2}r=r$$
+
+이 되어 $\varphi_y$는 $\overline{B}$를 열린 공 $B(a,r)$ 안으로 보낸다. $\rho$를 $r/(2c)$로 고른 이유가 이것이다. 이 값이어야 $\varphi_y$가 $\overline{B}$를 자기 자신으로 보내고, 축소사상 정리의 가정이 완성된다. $\overline{B}$는 $\mathbb{R}^n$의 닫힌집합이므로 [§완비 거리공간과 축소사상 정리, ⁋명제 2](/ko/math/analysis/contraction_mapping#prop2)에 의해 완비 거리공간이고, $\varphi_y$는 $(\ast)$에 의해 축소상수 $1/2$의 축소사상이다. [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5)에 의해 $\varphi_y$는 $\overline{B}$ 안에 fixed point $x$를 하나 갖는다. 위의 계산에서 $x=\varphi_y(x)\in B(a,r)$이고 $f(x)=y$이다.
+
+이제 $U=B(a,r)\cap f^{-1}(V)$로 둔다. $f$가 연속이므로 $U$는 열린집합이고 $a\in U$이다. 위에서 각 $y\in V$에 대해 $f(x)=y$인 $x\in\overline{B}$가 존재하고 $B(a,r)$에 속하므로 $x\in U$이며, $\overline{B}$ 위의 단사성에 의해 유일하다. 따라서 $f:U\to V$는 전단사이다. $(\ast\ast)$를 $g=f^{-1}$에 쓰면 $\lVert g(y_1)-g(y_2)\rVert\leq 2c\lVert y_1-y_2\rVert$이고, 특히 $g$는 연속이다.
+
+$Df(x)$가 $x\in\overline{B}$에서 가역임을 확인한다. $Df(x)v=0$이면 $D\varphi_y(x)v=v-A^{-1}Df(x)v=v$이고, $\lVert D\varphi_y(x)v\rVert\leq\frac{1}{2}\lVert v\rVert$이므로 $\lVert v\rVert\leq\frac{1}{2}\lVert v\rVert$, 곧 $v=0$이다. 정방행렬의 핵이 자명하므로 [\[선형대수학\] §동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의해 $Df(x)$는 가역이다.
+
+$g$의 미분가능성을 보인다. $y\in V$, $x=g(y)$로 두고 $y+k\in V$에 대해 $h=g(y+k)-g(y)$라 하자. $k\neq 0$이면 $g$의 단사성에 의해 $h\neq 0$이고, $f$가 $x$에서 미분가능하므로 $\rho(h)=f(x+h)-f(x)-Df(x)h$는 [§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)에 의해 $\lVert\rho(h)\rVert/\lVert h\rVert\to 0$ ($h\to 0$)을 만족한다. $f(x+h)-f(x)=k$이므로
+
+$$g(y+k)-g(y)-\bigl(Df(x)\bigr)^{-1}k=h-\bigl(Df(x)\bigr)^{-1}\bigl(Df(x)h+\rho(h)\bigr)=-\bigl(Df(x)\bigr)^{-1}\rho(h)$$
+
+이다. 한편 $\lVert h\rVert\leq 2c\lVert k\rVert$이고 $k\to 0$이면 $h\to 0$이므로, 우변의 크기를 $\lVert k\rVert$로 나눈 값은
+
+$$\frac{\lVert\bigl(Df(x)\bigr)^{-1}\rho(h)\rVert}{\lVert k\rVert}\leq\lVert\bigl(Df(x)\bigr)^{-1}\rVert\cdot 2c\cdot\frac{\lVert\rho(h)\rVert}{\lVert h\rVert}\to 0$$
+
+이다. 따라서 $g$는 $y$에서 미분가능하고 $Dg(y)=\bigl(Df(g(y))\bigr)^{-1}$이다.
+
+마지막으로 $Dg$의 연속성을 보인다. $Dg$는 $y\mapsto Df(g(y))$와 가역행렬을 그 역행렬로 보내는 사상의 합성이다. 앞의 것은 $g$와 $Df$가 연속이므로 연속이고, 뒤의 것은 역행렬의 성분이 수반행렬을 행렬식으로 나눈 값이라 원래 성분의 유리함수이므로 연속이다. 따라서 $g$는 $C^1$이다.
+:::
+
+위의 증명에서 $C^1$ 가정은 두 번 쓰였다. 하나는 $a$ 근방에서 $\lVert Df(x)-A\rVert$를 작게 만들어 축소상수를 확보하는 데 쓰였고, 다른 하나는 $Dg$의 연속성에 쓰였다. 둘째 용법에서 더 나아가, $f$가 $C^k$이면 $g$도 $C^k$이다. $Dg=\operatorname{inv}\circ Df\circ g$이고 $\operatorname{inv}$는 $C^\infty$이므로, $g$가 $C^j$ ($j<k$)이면 우변이 $C^j$여서 $g$가 $C^{j+1}$이 되고, $j=1$에서 귀납하면 된다.
+
+또 [정리 1](#thm1)은 열린집합 $\Omega$ 위의 $C^1$ 사상 $f$가 모든 점에서 $Df$가 가역이고 전체에서 단사이면 $f(\Omega)$가 열린집합이고 $f^{-1}:f(\Omega)\to\Omega$가 $C^1$임을 준다. 각 점의 근방에서 [정리 1](#thm1)의 역사상이 $f^{-1}$과 일치하기 때문이다.
+
+## 국소성과 $C^1$ 가정
+
+[정리 1](#thm1)이 주는 가역성은 국소적일 뿐이다. 모든 점에서 $Df$가 가역이어도 $f$가 전체에서 단사일 필요는 없다.
+
+::: 예시 3 (국소 가역이나 전역 단사가 아닌 사상)
+$f(x,y)=(e^x\cos y, e^x\sin y)$는 복소지수함수 $z\mapsto e^z$를 $\mathbb{R}^2=\mathbb{C}$ 위에서 쓴 것이다. 야코비 행렬은
+
+$$Df(x,y)=e^x\begin{pmatrix}\cos y&-\sin y\\ \sin y&\cos y\end{pmatrix},\qquad\det Df(x,y)=e^{2x}>0$$
+
+이므로 모든 점에서 가역이다. [정리 1](#thm1)에 의해 모든 점이 $f$가 단사인 근방을 갖는다. 그러나 $f(x,y+2\pi)=f(x,y)$이므로 $f$는 $\mathbb{R}^2$ 전체에서 단사가 아니다. 점 $(x_0,y_0)$ 근방의 역사상은 $\mathbb{R}\times(y_0-\pi,y_0+\pi)$ 위에서 극좌표의 각을 $(y_0-\pi,y_0+\pi)$에서 고른 것에 해당하며, 근방을 $y$ 방향으로 $2\pi$ 이상 늘리면 역사상이 존재하지 않는다.
+:::
+
+다음은 $C^1$ 가정을 미분가능성으로 약화할 수 없음을 보이는 한 변수 반례이다. $f'(a)\neq 0$이라는 조건만으로는 부족하고, $f'$이 $a$에서 연속이어야 한다.
+
+::: 예시 4 ($C^1$이 아닌 경우의 반례)
+$f(x)=x+2x^2\sin(1/x)$ ($x\neq 0$), $f(0)=0$으로 정의한다. $h\neq 0$에서 $f(h)/h=1+2h\sin(1/h)\to 1$이므로 $f$는 $0$에서 미분가능하고 $f'(0)=1$이다. $x\neq 0$에서는
+
+$$f'(x)=1+4x\sin\frac{1}{x}-2\cos\frac{1}{x}$$
+
+이므로 $f$는 $\mathbb{R}$ 전체에서 미분가능하다. 그러나 $x_k=1/(2\pi k)$에서 $\sin(1/x_k)=0$, $\cos(1/x_k)=1$이어서 $f'(x_k)=-1$이고 $x_k\to 0$이므로, $f'$은 $0$에서 연속이 아니다.
+
+$0$의 어떤 근방에서도 $f$는 단사가 아니다. $0$을 포함하는 열린 구간 $I$ 위에서 $f$가 단사라 하자. $f$는 연속이므로 [§연결성과 중간값 정리, ⁋따름정리 4](/ko/math/analysis/connectedness#cor4)에 의해 $I$ 위에서 순단조이다. $f'(0)=1>0$이므로 순증가이고, 따라서 $I$ 위에서 $f'\geq 0$이다. 그런데 $k$가 충분히 크면 $x_k\in I$이고 $f'(x_k)=-1$이어서 모순이다. 여기서 $f'(0)\neq 0$이고 $f$가 어디서나 미분가능하지만 역함수 정리의 결론은 성립하지 않는다.
+:::
+
+한 변수의 증명 구조와 비교하면 이유가 분명하다. $f'$이 연속이면 $f'(a)>0$이 $a$ 근방에서 유지되어 단조성이 따라 나오지만, 위의 $f$는 $0$ 바로 옆에서 $f'$이 $-1$까지 내려가 단조성이 깨진다. [정리 1](#thm1)의 증명에서는 같은 일이 $\lVert Df(x)-A\rVert\leq 1/(2c)$를 만족하는 근방이 존재하지 않는 형태로 나타난다.
 
 ## 음함수 정리
 
-역함수 정리의 직접적 귀결로, 방정식 $F(x, y) = 0$이 언제 $y$를 $x$의 함수로 국소적으로 푸는지를 알 수 있다.
+방정식 $F(x,y)=0$이 주어졌을 때, 점 $(a,b)$ 근방에서 $y$를 $x$의 함수로 풀 수 있는 조건을 역함수 정리로부터 얻는다. $\mathbb{R}^{n+m}=\mathbb{R}^n\times\mathbb{R}^m$의 점을 $(x,y)$로 적고, $F$의 미분 $DF(a,b)$를 $x$ 방향 블록 $D_xF(a,b)$($m\times n$ 행렬)와 $y$ 방향 블록 $D_yF(a,b)$($m\times m$ 행렬)로 나눈다.
 
-::: 정리 2 (음함수 정리)
-$F : \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^m$이 $C^1$이고 $F(a, b) = 0$이며, $y$에 대한 편미분 행렬 $D_y F(a,b)$가 가역이면, $a$의 근방에서 정의된 $C^1$ 함수 $g$가 유일하게 존재하여 $g(a) = b$이고 그 근방에서 $F(x, g(x)) = 0$이다.
+::: 정리 5 (음함수 정리)
+$\Omega\subseteq\mathbb{R}^n\times\mathbb{R}^m$이 열린집합, $F:\Omega\to\mathbb{R}^m$이 $C^1$ 사상이고 $F(a,b)=0$이며 $D_yF(a,b)$가 가역이라 하자. 그럼 $a$의 열린 근방 $W\subseteq\mathbb{R}^n$, $b$의 열린 근방 $W'\subseteq\mathbb{R}^m$, 그리고 $C^1$ 사상 $g:W\to W'$이 존재하여 $g(a)=b$이고, $(x,y)\in W\times W'$에 대해
+
+$$F(x,y)=0\iff y=g(x)$$
+
+이다. 또 $Dg(x)=-\bigl(D_yF(x,g(x))\bigr)^{-1}D_xF(x,g(x))$이다.
 :::
 
 ::: 증명
-사상 $\Phi : \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^n \times \mathbb{R}^m$을 $\Phi(x, y) = (x, F(x, y))$로 정의한다. 이 사상의 미분은 블록 형태로
+$\Phi(x,y)=\bigl(x,F(x,y)\bigr)$로 정의된 $C^1$ 사상 $\Phi:\Omega\to\mathbb{R}^n\times\mathbb{R}^m$을 생각한다. 이 사상의 미분은
 
-$$D\Phi(a,b) = \begin{pmatrix} I_n & 0 \\ D_x F(a,b) & D_y F(a,b) \end{pmatrix}$$
+$$D\Phi(a,b)=\begin{pmatrix}I_n&0\\ D_xF(a,b)&D_yF(a,b)\end{pmatrix}$$
 
-이며, 블록 하삼각 행렬이므로 그 행렬식이 대각 블록의 행렬식의 곱
+이고 블록 하삼각행렬이므로 [\[선형대수학\] §행렬식의 존재성과 유일성, ⁋따름정리 10](/ko/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10)에 의해 $\det D\Phi(a,b)=\det D_yF(a,b)\neq 0$이다. [정리 1](#thm1)을 $\Phi$에 적용하면 $(a,b)$의 열린 근방 $\mathcal{U}$와 $\Phi(a,b)=(a,0)$의 열린 근방 $\mathcal{V}$가 있어 $\Phi:\mathcal{U}\to\mathcal{V}$가 전단사이고 역사상 $\Psi$가 $C^1$이다. $\Phi$는 첫 성분을 바꾸지 않으므로 $\Psi(x,z)=\bigl(x,h(x,z)\bigr)$ 꼴이다. $(x,0)\in\mathcal{V}$인 $x$에 대해 $g(x)=h(x,0)$으로 두면 $g$는 $C^1$이고 $\Phi\bigl(x,g(x)\bigr)=(x,0)$, 곧 $F(x,g(x))=0$이다.
 
-$$\det D\Phi(a,b) = \det I_n \cdot \det D_y F(a,b) = \det D_y F(a,b) \neq 0$$
+$\mathcal{U}$는 열린집합이므로 $W_0\times W'\subseteq\mathcal{U}$인 열린 근방 $W_0\ni a$, $W'\ni b$를 잡을 수 있다. $g$의 정의역은 열린집합이고 $g$가 연속이며 $g(a)=b$이므로, $W=\{x\in W_0\mid(x,0)\in\mathcal{V}, g(x)\in W'\}$는 $a$를 포함하는 열린집합이다. $x\in W$, $y\in W'$이고 $F(x,y)=0$이라 하면 $(x,y)$와 $(x,g(x))$가 모두 $\mathcal{U}$에 속하고 $\Phi$에 의한 상이 $(x,0)$으로 같다. $\Phi$가 $\mathcal{U}$ 위에서 단사이므로 $y=g(x)$이다.
 
-이다. 따라서 $D\Phi(a,b)$가 가역이고, 역함수 정리를 $\Phi$에 적용하면 $(a,b)$ 근방에서 $C^1$ 역사상 $\Psi = \Phi^{-1}$이 존재한다. $\Phi$의 첫 성분이 항등이므로 $\Psi$도 첫 성분이 항등인 형태 $\Psi(x, z) = (x, h(x, z))$를 가지고, $z = 0$으로 두면 $g(x) := h(x, 0)$이 원하는 함수이다. 실제로 $\Phi(x, g(x)) = (x, 0)$이 둘째 성분에서 $F(x, g(x)) = 0$을 주고, $g$의 유일성과 $C^1$성은 $\Psi$의 그것에서 따른다.
+미분 공식은 $F(x,g(x))=0$의 양변에 [§다변수 미분, ⁋정리 7](/ko/math/analysis/multivariable_differentiation#thm7)을 적용해 미분한 $D_xF+D_yF\cdot Dg=0$을 $D_yF$가 가역임을 써서 풀면 된다. $W$를 더 줄이면 모든 $x\in W$에서 $D_yF(x,g(x))$가 가역이다. 이는 $\det D_yF$가 연속이고 $(a,b)$에서 $0$이 아니기 때문이다.
 :::
 
-음함수 정리에서 $g$의 미분도 명시적으로 구할 수 있다. $F(x, g(x)) = 0$의 양변을 $x$로 미분하면 [§다변수 미분, ⁋정리 3](/ko/math/analysis/multivariable_differentiation#thm3){: data-lid="603fn" }에 의해
+미분 공식은 한 변수에서 친숙한 음함수 미분 $\dd{y}/\dd{x}=-F_x/F_y$의 다변수 꼴이다. 방정식을 명시적으로 풀지 않고도 $g$의 미분을 얻는다는 점이 이 정리의 실용성이다.
 
-$$D_x F(x, g(x)) + D_y F(x, g(x)) \cdot Dg(x) = 0$$
+단위원 $F(x,y)=x^2+y^2-1$에서 $D_yF=2y$이다. $b\neq 0$인 점 $(a,b)$ 근방에서 원은 $y=g(x)$의 그래프이고 $g'(x)=-x/g(x)$이다. $b=0$인 점 $(\pm 1,0)$에서는 가정이 깨지고 실제로 원이 수직 접선을 가져, 어떤 근방에서도 $y$를 $x$의 함수로 쓸 수 없다. 그런데 이 점에서 $D_xF=2x\neq 0$이므로 역할을 바꾼 [정리 5](#thm5)에 의해 $x$를 $y$의 함수로 쓸 수 있다.
 
-이고, $D_y F$가 가역이므로 이를 풀어
+가정 $D_yF(a,b)$의 가역성은 충분조건이지 필요조건이 아니다. $F(x,y)=y^3-x$는 $(0,0)$에서 $D_yF=0$이지만 $y=x^{1/3}$으로 풀린다. 다만 이 해는 $0$에서 미분가능하지 않으므로, [정리 5](#thm5)가 보장하는 $C^1$ 해는 가정이 성립할 때에 한한다.
 
-$$Dg(x) = -\bigl(D_y F(x, g(x))\bigr)^{-1} D_x F(x, g(x))$$
+### 등위집합의 tangent space
 
-을 얻는다. 한 변수에서 친숙한 음함수 미분 공식 $\dd{y}/\dd{x} = -F_x/F_y$의 다변수 일반화이다. 예컨대 단위원 $x^2 + y^2 - 1 = 0$에서는 $\partial F/\partial y = 2y$이므로 $y \neq 0$인 점 근방에서 $y = g(x)$로 풀리고 $g'(x) = -x/y$이지만, $y = 0$인 점 $(\pm 1, 0)$에서는 가설이 깨지고 그곳에서 원이 수직 접선을 가져 $y$를 $x$의 함수로 쓸 수 없다. 명시적 풀이를 적지 않고도 편미분을 얻을 수 있다는 것이 음함수 정리의 실용적 위력이다.
+[정리 5](#thm5)는 방정식의 해집합이 국소적으로 그래프임을 말하며, 따라서 해집합의 tangent space를 미분으로 기술할 수 있다. $G:\Omega\to\mathbb{R}^m$이 $\Omega\subseteq\mathbb{R}^N$ 위의 $C^1$ 사상이고 $M=\{G=0\}$, $p\in M$에서 $DG(p)$의 rank가 $m$이라 하자. $M$ 안의 $p$를 지나는 $C^1$ 곡선 $\gamma$의 속도 $\gamma'(0)$들을 모은 집합을 $p$에서의 *tangent space*라 부른다.
 
-## 가역성의 국소성과 가설
-
-가역성이 국소적이라는 점은 좌표변환에서 전형적으로 나타난다. 극좌표 사상 $f(r,\theta) = (r\cos\theta, r\sin\theta)$는 $\det Df(r,\theta) = r$이므로 $r \neq 0$인 모든 점에서 국소적으로 가역이지만, $\theta$에 대해 $2\pi$ 주기를 가지므로 전역적으로는 일대일이 아니다. 야코비 행렬식이 $0$이 되는 점은 가역성이 깨질 수 있는 후보일 뿐, 반드시 국소적으로 비가역인 것은 아니다. 역함수 정리는 충분조건이지 필요조건이 아니기 때문이며, 다음 예시가 이 점을 분명히 한다.
-
-::: 예시 3 (가설이 깨져도 가역인 경우)
-한 변수 함수 $f(x) = x^3$은 $f'(0) = 0$이어서 $0$에서 역함수 정리의 가설이 성립하지 않는다. 그럼에도 $f$는 $\mathbb{R}$ 전체에서 순증가하므로 전역적으로 가역이며, 역함수는 $f^{-1}(y) = y^{1/3}$이다. 다만 이 역함수는 $y = 0$에서 미분가능하지 않은데,
-
-$$(f^{-1})'(y) = \frac{1}{3} y^{-2/3} \xrightarrow{ y\rightarrow 0 } \infty$$
-
-이기 때문이다. 즉 가설이 깨지면 가역성 자체는 살아남을 수 있어도 역함수의 매끄러움은 잃을 수 있고, 역함수 정리가 보장하는 "$C^1$ 역함수"라는 결론은 그만큼 강한 것이다.
-:::
-
-마지막으로 역함수 정리가 한 변수 미분 공식의 정확한 다변수 일반화임을 따름정리로 정리한다.
-
-::: 따름정리 4
-[정리 1](#thm1){: data-lid="mcecg" }의 가정 아래, $y = f(x)$가 $f(a)$ 근방에서 가역이고 그 역함수의 야코비 행렬은
-
-$$Df^{-1}(y) = \bigl(Df(f^{-1}(y))\bigr)^{-1}$$
-
-으로 주어진다. 특히 두 야코비 행렬식은 서로 역수 관계
-
-$$\det Df^{-1}(y) \cdot \det Df(f^{-1}(y)) = 1$$
-
-에 있다.
+::: 명제 6 (등위집합의 tangent space)
+위의 설정에서 $p$에서의 tangent space는 $\ker DG(p)$이고, 차원은 $N-m$이다.
 :::
 
 ::: 증명
-[정리 1](#thm1){: data-lid="2umts" }이 $f^{-1}$의 $C^1$성과 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$을 보장한다. 같은 등식이 근방의 모든 점 $y = f(x)$에서 성립하므로 첫 식을 얻는다. 둘째 식은 첫 식의 양변에 행렬식을 취하고, 곱의 행렬식이 행렬식의 곱이며 $\det A^{-1} = (\det A)^{-1}$임을 쓰면
-
-$$\det Df^{-1}(y) = \det\bigl(Df(f^{-1}(y))\bigr)^{-1} = \frac{1}{\det Df(f^{-1}(y))}$$
-
-이 되어 양변에 $\det Df(f^{-1}(y))$을 곱하면 따라 나온다.
+$M$ 안의 곡선 $\gamma$에 대해 $G(\gamma(t))=0$에 [§다변수 미분, ⁋정리 7](/ko/math/analysis/multivariable_differentiation#thm7)을 적용해 $t=0$에서 미분하면 $DG(p)\gamma'(0)=0$이므로, tangent space는 $\ker DG(p)$에 포함된다. 반대 방향을 보이기 위해 좌표를 재배열해 $D_yG(p)$가 가역이 되도록 한다. rank가 $m$이므로 일차독립인 열 $m$개를 $y$ 좌표로 잡을 수 있다. $p=(a,b)$로 쓰고 [정리 5](#thm5)의 $g$를 취하면, $p$ 근방에서 $M$은 $g$의 그래프이다. $v=(v_x,v_y)\in\ker DG(p)$이면 $D_xG v_x+D_yG v_y=0$이므로 $v_y=-D_yG^{-1}D_xG v_x=Dg(a)v_x$이다. 곡선 $\gamma(t)=\bigl(a+tv_x, g(a+tv_x)\bigr)$는 $\lvert t\rvert$가 작을 때 $M$ 안에 있고 $\gamma'(0)=(v_x,Dg(a)v_x)=v$이다. $DG(p)$의 rank가 $m$이므로 [\[선형대수학\] §동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의해 $\dim\ker DG(p)=N-m$이다.
 :::
 
-이 따름정리는 한 변수의 $(f^{-1})'(y) = 1/f'(f^{-1}(y))$를 행렬식 차원에서 그대로 복원한다. 야코비 행렬식이 곱셈 아래에서 역수로 행동한다는 사실은 중적분의 변수변환 공식에서 야코비 행렬식이 부피의 국소적 늘임 비율로 등장하는 것과도 자연스럽게 맞물린다.
+원 $x^2+y^2=1$의 점 $p=(a,b)$에서 $DG(p)=(2a,2b)\neq 0$이므로 tangent space는 $\ker DG(p)=\{(v_1,v_2)\mid av_1+bv_2=0\}$이고, $p$를 지나는 접선은 $a(x-a)+b(y-b)=0$, 곧 $ax+by=1$이다. 구 $x^2+y^2+z^2=1$의 점 $p=(a,b,c)$에서도 같은 계산으로 접평면 $ax+by+cz=1$을 얻는다. 일반적으로 $m=1$이면 tangent space는 기울기 벡터 $\nabla G(p)$에 수직인 초평면이다.
 
-역함수 정리의 증명에 쓰인 contraction 원리는 해석학에서 존재·유일성을 보이는 가장 강력한 도구이다.
+## Lagrange 승수법
+
+제약조건 아래의 극값 문제에 [명제 6](#prop6)의 tangent space 기술이 쓰인다. $G:\Omega\to\mathbb{R}^m$이 $\Omega\subseteq\mathbb{R}^N$ 위의 $C^1$ 사상, $m<N$이고 $M=\{G=0\}$일 때, $C^1$ 함수 $f:\Omega\to\mathbb{R}$가 $p\in M$에서 $M$ 위의 *극값*을 갖는다는 것은 $p$의 어떤 근방 $N_p$에서 모든 $q\in M\cap N_p$에 대해 $f(q)\leq f(p)$ 또는 모든 $q\in M\cap N_p$에 대해 $f(q)\geq f(p)$임을 뜻한다.
+
+::: 정리 7 (Lagrange 승수법)
+$f$가 $p\in M$에서 $M$ 위의 극값을 갖고 $DG(p)$의 rank가 $m$이면, $\lambda_1,\dots,\lambda_m\in\mathbb{R}$이 존재하여
+
+$$Df(p)=\sum_{i=1}^m\lambda_i DG_i(p)$$
+
+이다. 곧 $\nabla f(p)$는 $\nabla G_1(p),\dots,\nabla G_m(p)$의 일차결합이다.
+:::
+
+::: 증명
+좌표를 재배열해 $\mathbb{R}^N=\mathbb{R}^n\times\mathbb{R}^m$, $p=(a,b)$, $D_yG(p)$가 가역이 되도록 한다. [정리 5](#thm5)에 의해 $a$의 근방 $W$ 위의 $C^1$ 사상 $g$가 있어 $p$ 근방에서 $M$은 $g$의 그래프이다. $h(x)=f(x,g(x))$로 두면 $h$는 $C^1$이고, $g$의 연속성에 의해 $x$가 $a$에 충분히 가까울 때 점 $(x,g(x))\in M$이 $p$의 극값 근방 $N_p$ 안에 들어오므로 $h$는 $a$에서 극값을 갖는다. 각 좌표 방향으로 $t\mapsto h(a+te_i)$가 $t=0$에서 한 변수 함수의 극값을 가지므로 [§미분, ⁋명제 5](/ko/math/analysis/differentiation#prop5)에 의해 $Dh(a)=0$이다. [§다변수 미분, ⁋정리 7](/ko/math/analysis/multivariable_differentiation#thm7)에 의해
+
+$$D_xf(p)+D_yf(p) Dg(a)=0,\qquad Dg(a)=-D_yG(p)^{-1}D_xG(p)$$
+
+이다. 행벡터 $\lambda=D_yf(p) D_yG(p)^{-1}\in\mathbb{R}^m$을 잡으면 $D_yf(p)=\lambda D_yG(p)$이고, 위의 식으로부터 $D_xf(p)=D_yf(p) D_yG(p)^{-1}D_xG(p)=\lambda D_xG(p)$이다. 따라서 $Df(p)=\lambda DG(p)$이다.
+:::
+
+[정리 7](#thm7)은 필요조건이다. 제약조건 집합이 컴팩트이면 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에 의해 $f$가 최댓값과 최솟값을 가지므로, [정리 7](#thm7)의 조건과 $DG$의 rank 조건이 깨지는 점을 모두 후보로 모아 $f$ 값을 비교해 극값을 결정한다. 예를 들어 단위원 위에서 $f(x,y)=x+y$의 극값은 $(1,1)=\lambda(2x,2y)$와 $x^2+y^2=1$에서 $x=y=\pm 1/\sqrt{2}$로 후보가 둘 남고, 최댓값 $\sqrt{2}$와 최솟값 $-\sqrt{2}$를 갖는다.
+
+rank 조건은 생략할 수 없다.
+
+::: 예시 8 (rank 조건이 깨진 경우)
+$G(x,y)=y^2-x^3$, $f(x,y)=x$로 둔다. $M=\{y^2=x^3\}$ 위에서 $x\geq 0$이므로 $f$는 $(0,0)$에서 $M$ 위의 최솟값 $0$을 갖는다. 그런데 $DG(x,y)=(-3x^2, 2y)$이므로 $DG(0,0)=(0,0)$이어서 rank가 $0$이고, $Df(0,0)=(1,0)$은 $DG(0,0)$의 어떤 배수도 아니다. [정리 7](#thm7)의 결론이 성립하지 않는 이유는 $M$이 원점에서 뾰족점(cusp)을 가져 [명제 6](#prop6)의 그래프 구조가 없기 때문이다.
+:::
 
 ---
 

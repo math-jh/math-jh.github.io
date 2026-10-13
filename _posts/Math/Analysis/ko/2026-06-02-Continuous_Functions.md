@@ -1,7 +1,7 @@
 ---
 title: "연속함수의 성질"
-description: "연속함수가 컴팩트집합을 컴팩트집합으로 보냄을 보이고, 그로부터 최대·최소 정리를 증명한다. 컴팩트집합 위의 연속함수가 균등연속이라는 하이네–칸토어 정리도 다룬다."
-excerpt: "컴팩트성의 보존, 최대·최소 정리, 균등연속성"
+description: "연속함수가 컴팩트 집합을 컴팩트 집합으로 보냄을 보이고, 이로부터 최대·최소 정리와 Heine–Cantor 정리를 증명한다. 균등연속의 정의에서 한정사의 순서를 분석하고, 균등연속이 아닌 함수와 Lipschitz 함수, 연속 전단사의 역함수가 불연속인 예를 다룬다."
+excerpt: "컴팩트 집합의 연속상, 최대·최소 정리, 균등연속과 Heine–Cantor 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/continuous_functions
@@ -9,170 +9,172 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-weight: 10
-
+weight: 12
 
 published: false
+
 ---
 
-[\[미적분학\] §연속함수](/ko/math/calculus/continuity){: data-lid="2cjkf" }에서 우리는 최대·최소 정리를 증명 없이 도구로 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness){: data-lid="nya2k" }을 갖추었으므로 이를 증명할 수 있다. 핵심은 연속함수가 compactness를 보존한다는 단 하나의 사실이다.
+연속함수는 점에서 정의되지만, 정의역 전체의 성질은 점별 정보만으로는 얻어지지 않는다. 열린구간 $(0,1)$ 위의 $x$는 연속이지만 최댓값이 없고, $(0,1]$ 위의 $1/x$는 연속이지만 bounded가 아니다. 정의역이 컴팩트이면 이런 현상이 사라진다는 것이 이 글의 주제이다. 우리는 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5)에서 얻은 결과를 사용하여, 연속함수가 컴팩트 집합을 컴팩트 집합으로 보낸다는 사실에서 최대·최소 정리를 얻고, 같은 방법으로 균등연속성을 다룬다. 연속의 점열 특징화는 [§함수의 극한과 연속, ⁋정리 4](/ko/math/analysis/limits_and_continuity#thm4)의 것을 쓴다.
 
-연속성은 정의역의 위상적 성질이 image로 옮겨 가는지를 묻는 관점에서 보면 가장 잘 이해된다. 연속함수가 열린집합의 preimage를 열린집합으로 보낸다는 ([§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3){: data-lid="j8rbt" }) 위상적 특징화는, 정의역의 구조가 아니라 정의역 위에서 측정되는 양들의 변화를 통제한다. 그러나 compactness·연결성과 같은 "전역적" 성질은 preimage가 아니라 image의 방향으로 보존되며, 바로 이 보존이 해석학의 존재 정리들(최댓값의 존재, 중간값의 존재)을 떠받친다. 이 글에서 우리는 그중 compactness의 보존을 출발점으로 삼아, 거기서 최대·최소 정리와 균등연속성을 차례로 끌어낸다.
+거리공간에서는 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5)에 의하여 컴팩트인 것과 모든 점열이 집합 안의 점으로 수렴하는 부분수열을 갖는 것이 같으므로, 이 글에서 컴팩트 집합은 후자의 성질로 사용한다. 정의역과 공역은 거리공간이고, 함수 $f : X \rightarrow Y$의 거리는 각각 $d_X$, $d_Y$로 적는다.
 
-## 컴팩트성의 보존
+## 컴팩트 집합의 연속상
 
 ::: 정리 1
-$f : X \rightarrow Y$가 연속이고 $K \subseteq X$가 점렬컴팩트이면, image $f(K)$도 점렬컴팩트이다.
+$f : X \rightarrow Y$가 연속이고 $K \subseteq X$가 컴팩트이면 $f(K)$는 컴팩트이다.
 :::
 
 ::: 증명
-$f(K)$의 점열 $(y_n)$을 택하면 $y_n = f(x_n)$인 $x_n \in K$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있고, $f$의 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2){: data-lid="meuup" }에 의해
-
-$$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
-
-이다. 따라서 $(y_n)$이 $f(K)$ 안의 점으로 수렴하는 부분수열을 가지므로 $f(K)$는 점렬컴팩트이다.
+$f(K)$의 점열 $(y_n)$을 임의로 택하자. 각 $y_n$에 대해 $y_n = f(x_n)$인 $x_n \in K$를 하나씩 고른다. $K$가 컴팩트이므로 어떤 부분수열 $x_{n_k}$와 $x \in K$가 있어 $x_{n_k} \rightarrow x$이다. $f$가 $x$에서 연속이므로 [§함수의 극한과 연속, ⁋정리 4](/ko/math/analysis/limits_and_continuity#thm4)의 (b)에 의하여 $f(x_{n_k}) \rightarrow f(x)$, 즉 $y_{n_k} \rightarrow f(x)$이고, $f(x) \in f(K)$이다. 따라서 $f(K)$의 모든 점열은 $f(K)$의 점으로 수렴하는 부분수열을 갖는다.
 :::
 
-증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1){: data-lid="yk7ri" }은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 compactness와 달리 닫힘이나 boundedness는 연속함수가 보존하지 않음을 유의해야 한다. 가령 $f(x) = \arctan x$는 닫힌집합 $\mathbb{R}$를 닫혀 있지 않은 열린구간 $(-\pi/2, \pi/2)$로 보내고, $g(x) = 1/x$는 bounded인 집합 $(0, 1]$을 bounded가 아닌 image $[1, \infty)$로 보낸다. Compactness가 닫힘과 bounded의 결합이라는 [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2){: data-lid="jkr78" }를 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
+정리의 내용은 compactness가 닫힘과 bounded의 결합이라는 데 있다. 두 성질은 각각으로는 연속함수에 의해 보존되지 않는다. $\arctan$은 닫힌집합 $\mathbb{R}$를 닫혀 있지 않은 $(-\pi/2, \pi/2)$로 보내고, $1/x$는 bounded인 $(0,1]$을 bounded가 아닌 $[1,\infty)$로 보낸다. 반면 컴팩트 집합의 상은 닫히고 bounded이다. 또 정리의 역방향, 곧 상이 컴팩트이면 정의역이 컴팩트라는 주장은 성립하지 않는다. 상수함수는 아무 정의역에서나 상이 한 점이다.
 
 ## 최대·최소 정리
 
-실숫값 연속함수에 [정리 1](#thm1){: data-lid="zhm41" }을 적용하면 최댓값과 최솟값의 존재가 곧바로 따른다. 핵심 관찰은 $\mathbb{R}$의 점렬컴팩트 부분집합이 자신의 상한과 하한을 원소로 포함한다는 것이다. 닫혀 있고 bounded인 집합은 상·하한이 존재하며, 닫힘 때문에 그 극한값이 집합 안에 들어오기 때문이다. 따라서 $f$의 image $f(K)$가 점렬컴팩트라는 [정리 1](#thm1){: data-lid="om0zx" }의 결론만으로 최댓값·최솟값이 실현된다.
-
 ::: 따름정리 2 (최대·최소 정리)
-$K$가 공집합이 아닌 점렬컴팩트집합이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 가진다. 특히 닫힌구간 $[a,b]$에서 연속인 함수는 최댓값과 최솟값을 가진다.
+$K$가 공집합이 아닌 컴팩트 집합이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 갖는다. 특히 닫힌구간 $[a,b]$ 위의 연속함수는 최댓값과 최솟값을 갖는다.
 :::
 
 ::: 증명
-[정리 1](#thm1){: data-lid="k2s5l" }에 의해 $f(K) \subseteq \mathbb{R}$는 점렬컴팩트이고, [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2){: data-lid="kc8y4" }에 의해 닫혀 있고 bounded이다. Bounded이므로
+[정리 1](#thm1)에 의하여 $f(K)$는 $\mathbb{R}$의 공집합이 아닌 컴팩트 집합이고, 따라서 [§컴팩트성, ⁋명제 6](/ko/math/analysis/compactness#prop6)에 의하여 닫혀 있고 bounded이다. Bounded이므로 $M = \sup f(K)$가 존재한다. 상한에 대한 [§실수의 완비성, ⁋명제 4](/ko/math/analysis/completeness_of_reals#prop4)에 의하여 각 $n$에 대해
 
-$$M = \sup f(K)$$
+$$M - \frac{1}{n} < y_n \leq M$$
 
-가 존재한다 ([§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2){: data-lid="vvqne" }). 상한의 근사 성질로부터 각 $n$에 대해
-
-$$M - \frac{1}{n} < y_n \leq M, \qquad y_n \in f(K)$$
-
-인 $y_n$을 고를 수 있고, 따라서 $y_n \rightarrow M$이다. $f(K)$가 닫혀 있으므로 그 극한 $M$도 $f(K)$의 원소이다. 즉 $M = f(x_{\max})$인 $x_{\max} \in K$가 있어 $M$이 최댓값이다. 하한 $m = \inf f(K)$에 대해서도 같은 논증을 적용하면 $m = f(x_{\min})$인 $x_{\min} \in K$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $[a,b]$가 닫혀 있고 bounded여서 점렬컴팩트이므로 곧바로 따른다.
+인 $y_n \in f(K)$가 있고, 이 점열은 $M$으로 수렴한다. $f(K)$가 닫혀 있으므로 [§거리공간과 열린집합·닫힌집합, ⁋명제 12](/ko/math/analysis/metric_spaces#prop12)에 의하여 극한 $M$은 $f(K)$에 속한다. 즉 $M = f(x_0)$인 $x_0 \in K$가 있고, $f(x_0)$가 최댓값이다. 최솟값은 $\inf f(K)$에 대해 같은 논증을 하면 얻는다. 마지막 주장은 $[a,b]$가 닫히고 bounded여서 [§컴팩트성, ⁋정리 7](/ko/math/analysis/compactness#thm7)에 의하여 컴팩트라는 사실에서 따른다.
 :::
 
-이로써 [\[미적분학\] §연속함수](/ko/math/calculus/continuity){: data-lid="dn79h" }에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 [\[미적분학\] §평균값 정리, ⁋정리 3](/ko/math/calculus/mean_value_theorem#thm3){: data-lid="c2p7v" }도 정당화된다.
+증명에서 상한이 $f(K)$에 속한다는 점이 닫힘에서 나오고, 상한이 존재한다는 점이 bounded에서 나온다. 따라서 정의역이 컴팩트가 아니거나 $f$가 연속이 아니면 각각 결론이 깨진다.
 
-## 균등연속성
+::: 예시 3 (최대·최소 정리의 가정)
+정의역의 compactness가 빠진 경우로, $f(x) = x$를 $(0,1)$ 위에서 보면 $\sup f = 1$, $\inf f = 0$이지만 어느 값도 취해지지 않는다. 이 경우 $f$는 bounded이므로 문제는 정의역이 닫혀 있지 않다는 데 있다. 반대로 $\mathbb{R}$ 위의 $x$는 닫힌 정의역에서 연속이지만 bounded가 아니어서 최댓값이 없다. $(0,1]$ 위의 $1/x$는 최솟값 $1$은 갖지만 bounded가 아니어서 최댓값이 없다.
 
-보통의 연속에서는 주어진 $\varepsilon$에 대해 고르는 $\delta$가 점 $a$마다 달라질 수 있다. 함수가 가파른 곳에서는 작은 $\delta$가, 완만한 곳에서는 큰 $\delta$가 필요하기 때문이다. 만일 어떤 곳에서는 $\delta$가 한없이 작아져야 한다면, 모든 점에 공통으로 통하는 양의 $\delta$를 잡을 수 없다. 균등연속은 바로 그런 공통의 $\delta$를 잡을 수 있다는 한층 강한 조건이며, compactness는 정의역이 "유한히 통제"되도록 만들어 이 강화를 가능하게 한다.
-
-::: 정의 3
-$f : X \rightarrow Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여 ($x$에 무관하게) 모든 $x, x'$에 대해 $d_X(x, x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
-:::
-
-[§함수의 극한과 연속, ⁋정의 1](/ko/math/analysis/limits_and_continuity#def1){: data-lid="8763g" }의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
-
-$$\forall \varepsilon  \forall a  \exists \delta  \forall x : \bigl(d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
-
-인 데 비해, 균등연속은 $\delta$를 $a$보다 앞으로 끌어내어
-
-$$\forall \varepsilon  \exists \delta  \forall x  \forall x' : \bigl(d_X(x, x') < \delta \implies d_Y(f(x), f(x')) < \varepsilon\bigr)$$
-
-이다. $\exists \delta$가 $\forall a$보다 안쪽에 있는지 바깥쪽에 있는지가 두 개념을 가른다. 균등연속이면 분명히 연속이지만, 그 역은 일반적으로 성립하지 않는다.
-
-::: 정리 4 (하이네–칸토어)
-점렬컴팩트집합 위에서 연속인 함수는 균등연속이다.
-:::
-
-::: 증명
-$f$가 $K$에서 연속이지만 균등연속이 아니라 하자. 그러면 어떤 $\varepsilon > 0$에 대해, 모든 $\delta = 1/n$이 실패하여
-
-$$d_X(x_n, x_n') < \frac{1}{n} \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
-
-인 두 점열 $(x_n), (x_n')$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있고, 짝지어진 점 $x_{n_k}'$도
-
-$$d_X(x_{n_k}', x) \leq d_X(x_{n_k}', x_{n_k}) + d_X(x_{n_k}, x) < \frac{1}{n_k} + d_X(x_{n_k}, x) \longrightarrow 0$$
-
-이므로 같은 $x$로 수렴한다. 그런데 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2){: data-lid="5x47u" }에 의해
-
-$$\begin{aligned}
-d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr)
-&\leq d_Y\bigl(f(x_{n_k}), f(x)\bigr) + d_Y\bigl(f(x), f(x_{n_k}')\bigr) \\
-&\longrightarrow 0 + 0 = 0
-\end{aligned}$$
-
-이어서 두 image의 거리가 $0$으로 가야 한다. 이는 그 거리가 모든 $k$에서 $\varepsilon$ 이상이라는 데 모순이다. 따라서 $f$는 균등연속이다.
-:::
-
-증명은 compactness를 $(x_n)$의 수렴 부분수열을 뽑는 데 한 번 사용했을 뿐, 함수의 구체적 형태에는 의존하지 않는다. 짝지어진 점열 $(x_n')$이 같은 극한으로 가는 것은 삼각부등식에서 따라온다. Compactness가 빠지면 결론이 무너진다는 것을 다음 절의 예시들에서 직접 확인한다.
-
-## 예시와 계산
-
-먼저 최대·최소 정리의 두 가정인 정의역의 compactness와 함수의 연속성이 각각 필수임을 본다.
-
-::: 예시 5 (최대·최소 정리의 가정)
-정의역이 컴팩트가 아니면 최댓값·최솟값이 사라질 수 있다. 열린구간 $(0, 1)$ 위의 항등함수 $f(x) = x$는 연속이지만
-
-$$\sup_{x \in (0,1)} x = 1, \qquad \inf_{x \in (0,1)} x = 0$$
-
-이 모두 함숫값으로 도달되지 않아 최댓값도 최솟값도 없다. 닫혀 있으나 bounded가 아닌 정의역에서도 마찬가지로, $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x$는 최댓값이 없다.
-
-함수가 연속이 아니어도 결론이 깨진다. 컴팩트한 정의역 $[0, 1]$ 위에서
+연속성이 빠진 경우로, $[0,1]$ 위에서
 
 $$h(x) = \begin{cases} x, & 0 \leq x < 1, \\ 0, & x = 1 \end{cases}$$
 
-로 두면 $h$의 상한은 $1$이지만 $x = 1$에서의 불연속 때문에 어떤 점에서도 값 $1$을 취하지 않아 최댓값이 없다. 두 가정이 함께 있어야만 [따름정리 2](#cor2){: data-lid="dgauc" }가 성립함이 드러난다.
+로 두면 $h$는 bounded이고 $\sup h = 1$이지만 $h(x) = 1$인 점이 없다. 정의역이 컴팩트인데도 $x = 1$에서의 불연속 때문에 최댓값이 사라진다.
 :::
 
-다음으로 정의역이 컴팩트가 아닐 때 연속이지만 균등연속이 아닌 함수가 어떻게 나타나는지를 본다.
+## 균등연속
 
-::: 예시 6 (연속이지만 균등연속이 아닌 함수)
-$f : (0, 1] \rightarrow \mathbb{R}$, $f(x) = 1/x$를 보자. 점 $x_n = 1/n$과 $x_n' = 1/(n+1)$을 택하면
+연속이라는 것은 각 점 $a$와 $\varepsilon > 0$에 대하여 $\delta > 0$이 있다는 뜻이고, 이때 $\delta$는 $\varepsilon$뿐 아니라 $a$에도 의존할 수 있다. 함수가 가파른 곳에서는 작은 $\delta$가, 완만한 곳에서는 큰 $\delta$가 필요하기 때문이다. 정의역 전체에 공통으로 통하는 $\delta$가 있는지는 별개의 질문이며, 이것이 균등연속이다.
 
-$$\lvert x_n - x_n' \rvert = \frac{1}{n} - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrightarrow 0$$
-
-이지만
-
-$$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
-
-이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아, 따라서 컴팩트가 아니어서 [정리 4](#thm4){: data-lid="bwa32" }의 가정이 충족되지 않는 것과 정확히 맞물린다.
-
-같은 현상은 $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \rightarrow 0$이지만
-
-$$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac{1}{n}\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
-
-이어서 $\varepsilon = 2$가 좌절된다. 여기서는 정의역이 bounded가 아니어서 compactness가 깨진다.
+::: 정의 4
+$f : X \rightarrow Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 모든 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여, 모든 $x, x' \in X$에 대해 $d_X(x,x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
 :::
 
-반대로 정의역을 컴팩트하게 제한하면 [정리 4](#thm4){: data-lid="iz25w" }가 균등연속을 보장한다. 같은 $x^2$이라도 닫힌구간 $[0, R]$ 위에서는 $x, x' \in [0, R]$에 대해
+연속의 정의를 한정사로 적으면
 
-$$\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \leq 2R \cdot \lvert x - x' \rvert$$
+$$\forall \varepsilon > 0\ \ \forall a \in X\ \ \exists \delta > 0\ \ \forall x \in X\ \ \bigl(d_X(x,a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
 
-이어서, $\delta = \varepsilon/(2R)$로 두면 $\lvert x - x'\rvert < \delta$가 모든 점에 공통으로 $\lvert x^2 - x'^2\rvert < \varepsilon$을 강제한다. 인수 $\lvert x + x'\rvert$가 컴팩트 정의역에서 $2R$로 bounded라는 점이 결정적이다. 이 부등식 $\lvert f(x) - f(x')\rvert \leq 2R \lvert x - x'\rvert$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태로, 균등연속을 자동으로 함의하는 유용한 충분조건을 이룬다.
+이고, 균등연속은
 
-::: 정의 7
-$f : X \rightarrow Y$가 *립시츠<sub>Lipschitz</sub> 연속*이라는 것은, 어떤 상수 $L \geq 0$이 존재하여 모든 $x, x' \in X$에 대해
+$$\forall \varepsilon > 0\ \ \exists \delta > 0\ \ \forall a \in X\ \ \forall x \in X\ \ \bigl(d_X(x,a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
 
-$$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x')$$
+이다. 두 조건의 차이는 $\exists \delta$와 $\forall a$의 순서뿐이다. 균등연속이면 연속임은 곧바로 알 수 있고, 역은 [예시 7](#ex7)에서 보듯 성립하지 않는다. 균등연속은 함수 하나의 성질이 아니라 함수와 정의역의 쌍의 성질이다. $x^2$은 $\mathbb{R}$에서는 균등연속이 아니지만 $[0,R]$에서는 균등연속이다.
 
-이 성립하는 것이다. 이때 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 한다.
-:::
+균등연속이 아님을 보이려면 정의를 부정해야 한다. 부정은 어떤 $\varepsilon > 0$이 있어서 모든 $\delta > 0$에 대해 $d_X(x,x') < \delta$이면서 $d_Y(f(x), f(x')) \geq \varepsilon$인 두 점 $x, x'$이 존재한다는 것이다. $\delta$를 $1/n$로 두면 다음의 점열 판정이 된다.
 
-::: 명제 8
-립시츠 연속인 함수는 균등연속이다.
+::: 명제 5
+$f : X \rightarrow Y$가 균등연속이 아닌 것은, 어떤 $\varepsilon > 0$과 $X$의 점열 $(x_n), (x_n')$이 있어서 $d_X(x_n, x_n') \rightarrow 0$이고 모든 $n$에 대해 $d_Y(f(x_n), f(x_n')) \geq \varepsilon$인 것과 동치이다.
 :::
 
 ::: 증명
-$L = 0$이면 $f$는 상수함수여서 자명하므로 $L > 0$이라 하자. 주어진 $\varepsilon > 0$에 대해 $\delta = \varepsilon/L$로 두면, $d_X(x, x') < \delta$일 때
+($\Rightarrow$) 균등연속이 아니면 위에서 본 부정에 의해 어떤 $\varepsilon > 0$이 있고, 각 $n$에 대해 $\delta = 1/n$을 적용하면 $d_X(x_n, x_n') < 1/n$이고 $d_Y(f(x_n), f(x_n')) \geq \varepsilon$인 $x_n, x_n'$이 있다. 여기서 $\varepsilon$은 $n$에 무관하게 하나로 고정되어 있다.
 
-$$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x') < L \cdot \frac{\varepsilon}{L} = \varepsilon$$
-
-이다. 이 $\delta$는 $x$에 무관하게 선택되었으므로 $f$는 균등연속이다.
+($\Leftarrow$) 이 $\varepsilon$에 대해 어떤 $\delta > 0$이 통한다고 하자. $d_X(x_n, x_n') < \delta$인 $n$을 택하면 $d_Y(f(x_n), f(x_n')) < \varepsilon$이어야 하는데, 이는 가정에 모순이다.
 :::
 
-위에서 본 $f(x) = x^2$는 $[0, R]$ 위에서 립시츠 상수 $2R$로 립시츠 연속이며, [명제 8](#prop8){: data-lid="08ib9" }이 곧바로 그 균등연속을 준다. 그러나 립시츠 연속은 균등연속보다 진정으로 강한 조건이다. $[0, 1]$ 위의 $f(x) = \sqrt{x}$는 [정리 4](#thm4){: data-lid="tl4xe" }에 의해 균등연속이지만, 원점 근처에서
+점열 판정에서 흔한 실수는 $\varepsilon$을 $n$마다 다르게 잡는 것이다. 예를 들어 $d_Y(f(x_n), f(x_n')) \rightarrow 0$이 아니라는 사실만으로는 충분하지 않고, 모든 $n$에서 같은 $\varepsilon$ 이상이라는 하한이 필요하다.
 
-$$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty$$
+::: 정리 6 (Heine–Cantor)
+$K$가 컴팩트이고 $f : K \rightarrow Y$가 연속이면 $f$는 균등연속이다.
+:::
 
-이어서 어떤 유한한 립시츠 상수로도 묶이지 않는다. 즉 립시츠 연속, 균등연속, 단순 연속은 갈수록 약해지는 세 단계의 조건이며, 컴팩트 정의역 위에서는 가운데 조건이 연속과 합쳐진다.
+::: 증명
+$f$가 균등연속이 아니라 하자. [명제 5](#prop5)에 의하여 어떤 $\varepsilon > 0$과 점열 $(x_n), (x_n')$이 있어 $d_K(x_n, x_n') \rightarrow 0$이고 모든 $n$에 대해 $d_Y(f(x_n), f(x_n')) \geq \varepsilon$이다. $K$가 컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있다. 그러면
 
----
+$$d_K(x_{n_k}', x) \leq d_K(x_{n_k}', x_{n_k}) + d_K(x_{n_k}, x) \longrightarrow 0$$
 
-**참고문헌**
+이므로 $x_{n_k}' \rightarrow x$이다. $f$가 $x$에서 연속이므로 [§함수의 극한과 연속, ⁋정리 4](/ko/math/analysis/limits_and_continuity#thm4)의 (b)에 의하여 $f(x_{n_k}) \rightarrow f(x)$이고 $f(x_{n_k}') \rightarrow f(x)$이며,
 
-**[Rud]** W. Rudin, *Principles of mathematical analysis*, 3rd ed., McGraw-Hill, 1976.
+$$d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr) \leq d_Y\bigl(f(x_{n_k}), f(x)\bigr) + d_Y\bigl(f(x), f(x_{n_k}')\bigr) \longrightarrow 0$$
+
+이다. 이는 모든 $k$에서 이 거리가 $\varepsilon$ 이상이라는 데 모순이다.
+:::
+
+증명에서 연속성은 한 점 $x$에서만 쓰였고, 두 점열을 같은 점으로 모으는 일을 compactness가 맡았다. 이 때문에 $\delta$는 $x$의 위치에 의존하지 않게 된다.
+
+## 균등연속이 아닌 함수
+
+Heine–Cantor 정리의 가정 중 어느 하나라도 빠지면 균등연속이 깨질 수 있다. 정의역이 bounded가 아닌 경우, 닫혀 있지 않은 경우, 그리고 함수가 bounded여도 정의역이 컴팩트가 아닌 경우를 [명제 5](#prop5)로 확인한다.
+
+::: 예시 7 (연속이지만 균등연속이 아닌 함수)
+1. $f(x) = x^2$, 정의역 $\mathbb{R}$. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n' \rvert = 1/n \rightarrow 0$이지만 $\lvert f(x_n) - f(x_n') \rvert = (n + 1/n)^2 - n^2 = 2 + 1/n^2 \geq 2$이다. 따라서 $\varepsilon = 2$에 대해 균등연속이 아니다. 정의역이 bounded가 아니어서 기울기 $2x$가 한없이 커진다.
+
+2. $f(x) = 1/x$, 정의역 $(0,1)$. $x_n = 1/n$, $x_n' = 1/(n+1)$ ($n \geq 2$)이면 $\lvert x_n - x_n' \rvert = 1/(n(n+1)) \rightarrow 0$이지만 $\lvert f(x_n) - f(x_n') \rvert = 1$이다. 정의역은 bounded이지만 닫혀 있지 않고, 함수는 $0$ 근처에서 bounded가 아니다.
+
+3. $f(x) = \sin(1/x)$, 정의역 $(0,1)$. 이 함수는 bounded이므로 앞의 두 예와 이유가 다르다. $x_n = 1/(2\pi n)$, $x_n' = 1/(2\pi n + \pi/2)$로 두면 $\lvert x_n - x_n' \rvert = (\pi/2)/(2\pi n(2\pi n + \pi/2)) \rightarrow 0$이지만 $f(x_n) = 0$, $f(x_n') = 1$이므로 $\lvert f(x_n) - f(x_n') \rvert = 1$이다. $0$ 근처에서 함수가 $-1$과 $1$ 사이를 무한히 빠르게 진동하기 때문에 공통의 $\delta$가 없다.
+:::
+
+세 예에서 보듯 균등연속이 되기 위해서는 정의역이 bounded인 것도, 함수가 bounded인 것도 충분하지 않다. 컴팩트 정의역에서는 [정리 6](#thm6)이 이를 모두 해결한다.
+
+## Lipschitz 조건
+
+균등연속이 되는 가장 간단한 충분조건은 함숫값의 변화가 변수의 변화의 상수배로 묶이는 것이다. 어떤 $L \geq 0$이 있어 모든 $x, x' \in X$에 대해
+
+$$d_Y\bigl(f(x), f(x')\bigr) \leq L d_X(x, x')$$
+
+이면 $f$를 *Lipschitz 연속<sub>Lipschitz continuous</sub>*이라 하고, 이 $L$을 *Lipschitz 상수*라 부른다.
+
+::: 명제 8
+Lipschitz 연속인 함수는 균등연속이다.
+:::
+
+::: 증명
+Lipschitz 상수를 $L$이라 하고 $\varepsilon > 0$이 주어졌다고 하자. $\delta = \varepsilon/(L+1)$로 택한다. $L = 0$인 경우에도 $\delta$가 정의되도록 분모에 $1$을 더한 것이다. $d_X(x,x') < \delta$이면
+
+$$d_Y\bigl(f(x), f(x')\bigr) \leq L d_X(x,x') \leq \frac{L}{L+1} \varepsilon < \varepsilon$$
+
+이다. $\delta$는 $x, x'$에 무관하게 정해졌다.
+:::
+
+$x^2$은 $[0,R]$ 위에서 $\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \lvert x - x' \rvert \leq 2R \lvert x - x' \rvert$이므로 상수 $2R$로 Lipschitz이다. 반면 $\mathbb{R}$ 위에서는 [예시 7](#ex7)에서 균등연속이 아니므로 어떤 상수로도 Lipschitz일 수 없다. 이 대조에서 $x + x'$의 크기를 묶어 주는 것이 정의역의 bounded임을 볼 수 있다.
+
+[명제 8](#prop8)의 역은 성립하지 않는다.
+
+::: 예시 9 (균등연속이지만 Lipschitz가 아닌 함수)
+$f(x) = \sqrt{x}$를 $[0,\infty)$ 위에서 보자. $x \geq x' \geq 0$이면
+$$x = x' + (x - x') \leq x' + 2\sqrt{x'}\sqrt{x - x'} + (x - x') = \bigl(\sqrt{x'} + \sqrt{x - x'}\bigr)^2$$
+이므로 $\sqrt{x} \leq \sqrt{x'} + \sqrt{x - x'}$이고, 따라서 $\lvert \sqrt{x} - \sqrt{x'} \rvert \leq \sqrt{\lvert x - x' \rvert}$이다. $\delta = \varepsilon^2$으로 두면 $\lvert x - x' \rvert < \delta$일 때 $\lvert \sqrt{x} - \sqrt{x'} \rvert < \varepsilon$이므로 $f$는 균등연속이다. 이 결론은 정의역이 컴팩트가 아닌 $[0,\infty)$에서도 성립한다. $[0,1]$로 제한하면 [정리 6](#thm6)으로도 얻어진다.
+
+그러나 $x' = 0$으로 두면
+$$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0 \rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty \quad (x \rightarrow 0^+)$$
+이므로 어떤 $L$로도 묶이지 않아, $f$는 $[0,1]$에서도 Lipschitz가 아니다.
+:::
+
+이로써 Lipschitz 연속, 균등연속, 연속은 이 순서로 약해지는 조건이고, 어느 방향의 역도 일반적으로는 성립하지 않는다.
+
+## 연속 전단사의 역함수
+
+연속인 전단사 $f : X \rightarrow Y$의 역함수는 연속일 것처럼 보이지만 일반적으로는 그렇지 않다.
+
+::: 예시 10 (역함수가 불연속인 연속 전단사)
+$S^1 = \{(u,v) \in \mathbb{R}^2 : u^2 + v^2 = 1\}$이라 하고
+
+$$f : [0, 2\pi) \longrightarrow S^1, \qquad f(t) = (\cos t, \sin t)$$
+
+로 두자. $f$는 연속이고 전단사이다. 그러나 역함수 $g = f^{-1}$은 점 $f(0) = (1,0)$에서 연속이 아니다. 점열 $p_n = f(2\pi - 1/n) = (\cos(1/n), -\sin(1/n))$은 $(1,0)$으로 수렴하지만, $g(p_n) = 2\pi - 1/n \rightarrow 2\pi$이고 $g(1,0) = 0$이기 때문이다. $f$는 $[0,2\pi)$의 두 끝 $0$과 $2\pi$ 근처를 원 위의 가까운 점들로 보내지만, 정의역에는 끝점 $2\pi$가 없어서 $g$가 이 가까움을 되돌리지 못한다.
+:::
+
+이 예에서 문제가 되는 것은 정의역 $[0,2\pi)$가 컴팩트가 아니라는 점이다. 정의역이 컴팩트이면 역함수는 자동으로 연속이다.
+
+::: 명제 11
+$K$가 컴팩트이고 $f : K \rightarrow Y$가 연속인 전단사이면 $f^{-1} : Y \rightarrow K$는 연속이다.
+:::
+
+::: 증명
+$y_n \rightarrow y$인 $Y$의 점열을 잡고 $x_n = f^{-1}(y_n)$, $x = f^{-1}(y)$라 하자. $x_n \rightarrow x$가 아니라고 가정하면 어떤 $\varepsilon > 0$과 부분수열 $x_{n_k}$가 있어 모든 $k$에 대해 $d_K(x_{n_k}, x) \geq \varepsilon$이다. $K$가 컴팩트이므로 이 부분수열은 다시 수렴하는 부분수열을 갖는다. 그 극한을 $x' \in K$라 하면 $d_K(x', x) \geq \varepsilon$이므로 $x' \neq x$이다. $f$의 연속성과 [§함수의 극한과 연속, ⁋정리 4](/ko/math/analysis/limits_and_continuity#thm4)의 (b)에 의하여 이 부분수열을 따라 $y_{n_k} = f(x_{n_k}) \rightarrow f(x')$인데, 동시에 $y_{n_k} \rightarrow y = f(x)$이다. [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에 의하여 $f(x') = f(x)$이고, $f$가 단사이므로 $x' = x$가 되어 모순이다. 따라서 $f^{-1}(y_n) \rightarrow f^{-1}(y)$이다.
+:::

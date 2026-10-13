@@ -1,7 +1,7 @@
 ---
 title: "미분방정식의 존재성과 유일성"
-description: "완비 거리공간 위의 축약사상 원리를 증명하고, 미분방정식의 초기값 문제를 적분방정식으로 바꾸어 그 해의 존재와 유일성을 보이는 피카르–린델뢰프 정리를 확립한다."
-excerpt: "축약사상 원리, 립시츠 조건, 피카르–린델뢰프 정리"
+description: "초기값 문제를 integral equation으로 바꾸고 축소사상 정리로 Picard–Lindelöf 정리를 증명한다. 립시츠 조건이 빠지면 유일성이 깨지는 반례, 해가 유한시간에 폭발하는 예, Grönwall 부등식을 이용한 유일성과 최대 해 구간, Peano 존재정리의 진술을 다룬다."
+excerpt: "Picard–Lindelöf 정리, Grönwall 부등식, 최대 해 구간"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/existence_uniqueness_ode
@@ -9,191 +9,205 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-weight: 21
-
+weight: 28
 
 published: false
+
 ---
 
-미분방정식은 함수와 그 도함수의 관계로 함수를 규정한다. 가장 기본적인 물음은 주어진 초기 조건 아래 해가 존재하는가, 그리고 유일한가이다. 해가 없으면 모형이 무의미하고 해가 여럿이면 미래가 초기 상태로 결정되지 않으니, 어떤 조건 아래 초기값 문제가 잘 정의되는가를 가려내는 것이 미분방정식 이론의 출발점이 된다. 이 글에서는 해석학의 존재 정리를 떠받치는 contraction 원리를 증명하고, 이를 미분방정식에 적용한다.
+미분방정식 $y' = f(t, y)$에 초기 조건을 주었을 때 해가 존재하는지, 존재한다면 하나뿐인지는 $f$의 성질에 달려 있고, 두 성질은 서로 독립적으로 깨진다. $y' = 3y^{2/3}$, $y(0) = 0$은 해가 무수히 많고, $y' = y^2$, $y(0) = 1$은 해가 하나뿐이지만 유한한 시각에서 발산한다. 이 글에서는 두 현상을 각각 $f$의 어떤 성질이 막아 주는지를 가려낸다.
 
-우리가 택하는 전략은 미분방정식을 integral equation으로 바꾸고, 그 integral equation의 해를 어떤 사상의 *fixed point<sub>고정점</sub>*로 보는 것이다. 그러면 문제는 추상적인 거리공간 위에서 사상이 fixed point를 가지는가라는 순수 해석학의 문제로 환원되고, 이 환원은 contraction 원리라는 하나의 정리로 깔끔하게 해결된다. 이러한 발상은 미분방정식뿐 아니라 integral equation, 함수방정식, 수치해석의 반복법 등 해석학 전반에서 되풀이된다.
+전략은 미분방정식을 integral equation으로 바꾸어 해를 어떤 함수 공간 위의 사상의 fixed point로 보는 것이다. 그럼 [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5)를 적용할 수 있고, 립시츠 조건 아래에서 [정리 4](#thm4)가 나온다. 유일성의 전역적 형태와 해의 최대 존재 구간은 [보조정리 6](#lem6)으로 얻는다.
 
-## 축약사상 원리
+## 초기값 문제와 적분방정식
 
-거리공간 위의 사상이 두 점 사이의 거리를 일정 비율 이상으로 줄인다면, 그 사상을 반복 적용할 때 점들이 한곳으로 모일 것이라는 직관은 자연스럽다. 이 직관을 정확히 다듬은 것이 contraction의 개념이다.
+$D \subseteq \mathbb{R}^2$를 열린집합, $f : D \rightarrow \mathbb{R}$를 연속함수, $(t_0, y_0) \in D$라 하자.
 
 ::: 정의 1
-거리공간 $(X, d)$의 사상 $T : X \rightarrow X$가 *contraction<sub>축약사상</sub>*이라는 것은, 어떤 상수 $0 \leq \lambda < 1$에 대하여 모든 $x, y$에서 $d(T x, T y) \leq \lambda  d(x, y)$인 것이다.
+*초기값 문제<sub>initial value problem</sub>*
+
+$$y' = f(t, y), \qquad y(t_0) = y_0 \tag{IVP}$$
+
+의 *해<sub>solution</sub>*는 $t_0$를 포함하는 구간 $I$ 위의 미분가능한 함수 $\varphi$로서, 모든 $t \in I$에 대하여 $(t, \varphi(t)) \in D$이고 $\varphi'(t) = f(t, \varphi(t))$이며 $\varphi(t_0) = y_0$인 것이다. $I$의 끝점에서는 한쪽 미분을 쓴다.
 :::
 
-상수 $\lambda$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $\lambda$로 성립해야 한다는 점, 그리고 $\lambda$가 $1$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $\lambda = 1$만 보장된다면, 즉 $d(Tx, Ty) \leq d(x, y)$인 경우에는 $T$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 fixed point가 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $Tx = x + 1$은 거리를 정확히 보존하지만 fixed point가 없다.
+해의 정의에는 구간이 포함되어 있다. 같은 식을 만족하더라도 정의역이 다르면 다른 해로 센다는 점이 뒤의 최대 해 구간의 논의에서 중요해진다.
 
-::: 정리 2 (Banach fixed point 정리)
-완비 거리공간 위의 contraction $T$는 유일한 fixed point $x^\ast = T x^\ast$를 가지며, 임의의 출발점 $x_0$에서 시작한 반복 $x_{n+1} = T x_n$이 그 fixed point로 수렴한다.
+미분가능성은 방정식 자체가 요구하는 것이어서, 해는 자동으로 $C^1$ 함수이다. $\varphi$가 미분가능하면 연속이고, $f$가 연속이므로 $\varphi'(t) = f(t, \varphi(t))$도 연속이기 때문이다. 이 관찰이 아래의 동치를 가능하게 한다.
+
+::: 명제 2
+$I$를 $t_0$를 포함하는 구간, $\varphi : I \rightarrow \mathbb{R}$를 모든 $t$에서 $(t, \varphi(t)) \in D$인 연속함수라 하자. 그럼 $\varphi$가 (IVP)의 해일 필요충분조건은
+
+$$\varphi(t) = y_0 + \int_{t_0}^t f(s, \varphi(s)) \dd{s} \qquad (t \in I) \tag{INT}$$
+
+이다.
 :::
 
 ::: 증명
-먼저 연속한 두 항 사이의 거리가 기하급수적으로 줄어듦을 본다. 축약 조건을 반복 적용하면
-
-$$\begin{aligned}
-d(x_{n+1}, x_n) &= d(Tx_n, Tx_{n-1}) \leq \lambda  d(x_n, x_{n-1}) \\
-&\leq \lambda^2 d(x_{n-1}, x_{n-2}) \leq \cdots \leq \lambda^n d(x_1, x_0)
-\end{aligned}$$
-
-을 얻는다. 이제 $m > n$에 대해 삼각부등식을 $m - n$번 적용하고 위 평가와 등비급수의 합을 쓰면
-
-$$\begin{aligned}
-d(x_m, x_n) &\leq \sum_{k=n}^{m-1} d(x_{k+1}, x_k) \leq \sum_{k=n}^{m-1}\lambda^k d(x_1, x_0) \\
-&\leq d(x_1, x_0)\sum_{k=n}^{\infty}\lambda^k = \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)
-\end{aligned}$$
-
-이다. 우변은 $n \rightarrow \infty$일 때 ($0 \leq \lambda < 1$이므로) $0$으로 가고, 이는 $m, n$에 관해 균등하게 작아지므로 $(x_n)$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4){: data-lid="a7l1q" }) 극한 $x_n \rightarrow x^\ast$이 존재한다.
-
-이 극한이 fixed point임을 보인다. Contraction은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
-
-$$x^\ast = \lim_{n\rightarrow\infty} x_{n+1} = \lim_{n\rightarrow\infty} T x_n = T\Bigl(\lim_{n\rightarrow\infty} x_n\Bigr) = T x^\ast$$
-
-이다. 마지막으로 유일성을 본다. $x^\ast, y^\ast$가 둘 다 fixed point이면
-
-$$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda  d(x^\ast, y^\ast)$$
-
-이고, $\lambda < 1$이므로 $(1 - \lambda) d(x^\ast, y^\ast) \leq 0$이 되어 $d(x^\ast, y^\ast) = 0$, 곧 $x^\ast = y^\ast$이다.
+$\varphi$가 해이면 $\varphi'$가 연속이므로 [§미적분의 기본정리, ⁋정리 5](/ko/math/analysis/fundamental_theorem_of_calculus#thm5)에 의하여 $\varphi(t) - \varphi(t_0) = \int_{t_0}^t \varphi'(s) \dd{s}$이고, $\varphi' = f(s, \varphi(s))$, $\varphi(t_0) = y_0$을 대입하면 (INT)를 얻는다. 거꾸로 (INT)가 성립하면 $s \mapsto f(s, \varphi(s))$가 연속함수들의 합성이므로 연속이고, [§미적분의 기본정리, ⁋정리 2](/ko/math/analysis/fundamental_theorem_of_calculus#thm2)에 의하여 우변은 미분가능하며 도함수가 $f(t, \varphi(t))$이다. $t = t_0$을 대입하면 $\varphi(t_0) = y_0$이다.
 :::
 
-위 증명은 fixed point의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$에서 $m \rightarrow \infty$로 보내면
+(INT)에는 도함수가 없고 연속함수만 등장한다. 우변을 함수 $\varphi$에 함수를 대응시키는 사상 $T$로 읽으면, 해는 $T\varphi = \varphi$를 만족하는 fixed point이다. 이 사상을 *Picard 작용소<sub>Picard operator</sub>*라 하고, 상수함수 $\varphi_0 \equiv y_0$에서 출발한 *Picard 반복*을 $\varphi_{n+1} = T\varphi_n$으로 정의한다. 가령 $y' = y$, $y(0) = 1$에서는
 
-$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
+$$\varphi_{n+1}(t) = 1 + \int_0^t \varphi_n(s) \dd{s}$$
 
-라는 *선험적 오차 평가<sub>a priori error estimate</sub>*를 얻는다. 즉 반복 $n$번이면 오차가 $\lambda^n$의 비율로 줄어드는데, 이를 *선형 수렴<sub>linear convergence</sub>*이라 한다. 이 평가는 수치적으로 fixed point를 근사할 때 몇 번 반복해야 원하는 정밀도에 도달하는지를 미리 알려 준다.
+이고, $\varphi_0 = 1$에서 $\varphi_n(t) = \sum_{k=0}^n t^k/k!$이 귀납적으로 얻어져 반복은 $e^t$의 부분합을 차례로 내놓는다. 반복이 항상 수렴하는 것은 아니며, 수렴을 보장하는 것이 다음 절의 조건이다.
 
-## 피카르–린델뢰프 정리
+## 립시츠 조건
 
-이제 초기값 문제
-
-$$y'(t) = f(t, y(t)), \qquad y(t_0) = y_0$$
-
-를 생각한다. 여기서 $f$는 평면의 한 영역에서 정의된 함수이고, 우리가 찾는 것은 그래프가 그 영역 안에 머물면서 위 방정식을 만족하는 함수 $y$이다. 해의 존재·유일성은 $f$가 둘째 변수에 대해 다음 조건을 만족할 때 보장된다.
-
-립시츠 조건이 등장하는 까닭은 다음과 같다. $f$가 단지 연속이기만 하면 페아노 정리에 의해 해의 존재는 보장되지만 유일성은 보장되지 않는다. 유일성을 끌어내려면 $f$가 둘째 변수에 대해 변하는 정도를 일정하게 제어해야 하는데, 그 제어 조건이 바로 립시츠 조건이다. 이 조건은 미분가능성보다는 약하고 연속성보다는 강한, 중간 세기의 regularity이다.
+$f$가 연속이기만 하면 (IVP)의 해는 존재하지만 유일하지 않을 수 있다(뒤의 [예시 5](#ex5)와 [정리 10](#thm10)). 유일성을 얻으려면 $y$가 변할 때 $f$의 값이 변하는 정도를 통제해야 한다.
 
 ::: 정의 3
-평면의 영역 $D$ 위에서 정의된 $f(t, y)$가 $y$에 대해 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $L \geq 0$이 존재하여 $(t, y_1) \in D$이고 $(t, y_2) \in D$인 모든 $t, y_1, y_2$에 대해 $\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$이 성립하는 것이다.
+$S \subseteq D$ 위에서 $f$가 $y$에 관하여 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $L \geq 0$이 존재하여 $(t, y_1), (t, y_2) \in S$인 모든 $t, y_1, y_2$에 대하여 $\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$인 것이다. 이때 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 한다. $D$의 모든 점이 이 조건을 만족하는 근방을 가지면 $f$가 $y$에 관하여 *locally Lipschitz*라 한다.
 :::
 
-상수 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 부른다. 기하적으로 이 조건은 같은 $t$에서 그래프 $y \mapsto f(t, y)$의 두 점을 잇는 모든 할선의 기울기가 $\lvert$기울기$\rvert \leq L$로 균등하게 bounded임을 뜻한다. 만약 $f$가 둘째 변수에 대해 연속미분가능하고 $\partial f / \partial y$가 bounded이면, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="tqdnf" }에 의해
+같은 $t$에서만 두 값을 비교한다는 점에 주의한다. $t$에 대해서는 연속성 이상을 요구하지 않는다.
 
-$$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}(t, \xi)\right\rvert \lvert y_1 - y_2\rvert \leq L \lvert y_1 - y_2\rvert$$
+$f$와 $\partial f/\partial y$가 $D$에서 연속이면 $f$는 locally Lipschitz이다. $D$ 안의 직사각형 $R$을 잡으면 $R$은 컴팩트이므로 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에 의하여 $L = \max_R \lvert \partial f/\partial y\rvert$가 유한하고, $(t, y_1), (t, y_2) \in R$이면 두 점을 잇는 선분이 $R$ 안에 있으므로 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)에 의하여 $y_1$과 $y_2$ 사이의 어떤 $\xi$에서
 
-이 성립하므로 ($L = \sup\lvert \partial f / \partial y\rvert$), 립시츠 조건은 자동으로 만족된다. 이것이 실제 응용에서 립시츠 조건을 확인하는 가장 흔한 방법이다.
+$$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}(t, \xi)\right\rvert \lvert y_1 - y_2\rvert \leq L\lvert y_1 - y_2\rvert$$
 
-::: 정리 4 (피카르–린델뢰프)
-$f$가 $(t_0, y_0)$ 근방에서 연속이고 $y$에 대해 립시츠 조건을 만족하면, $t_0$의 어떤 닫힌구간 $I$ 위에서 초기값 문제의 해가 유일하게 존재한다.
+이다. 그러나 역은 성립하지 않는다. $f(t, y) = \lvert y\rvert$는 $L = 1$인 립시츠 함수이지만 $y = 0$에서 미분가능하지 않다. 반대로 $f(t, y) = y^{2/3}$은 $y = 0$ 근방에서 어떤 $L$로도 립시츠 조건을 만족하지 못한다.
+
+## Picard–Lindelöf 정리
+
+직사각형 $R = [t_0 - a, t_0 + a] \times [y_0 - b, y_0 + b] \subseteq D$를 잡고, $f$가 $R$ 위에서 $y$에 관하여 립시츠 상수 $L$로 립시츠라 하자. $R$이 컴팩트이므로 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에 의하여 $M = \max_R \lvert f\rvert$가 유한하다. 구간의 반폭을
+
+$$h = \min\Bigl(a, \frac{b}{M}, \frac{1}{2L}\Bigr)$$
+
+로 두고($M = 0$ 또는 $L = 0$이면 해당 항은 제외한다), $I_h = [t_0 - h, t_0 + h]$라 하자.
+
+::: 정리 4 (Picard–Lindelöf)
+위의 가정 아래 (IVP)는 $I_h$ 위에서 그래프가 $R$ 안에 놓이는 해를 정확히 하나 가지며, Picard 반복 $\varphi_n$은 이 해로 $I_h$ 위에서 균등수렴한다.
 :::
 
 ::: 증명
-미분방정식과 초기 조건을 적분하면, [§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3){: data-lid="b3uln" }에 의해 문제는 integral equation
+$X$를 $\lVert g - y_0\rVert_\infty \leq b$인 연속함수 $g : I_h \rightarrow \mathbb{R}$들의 집합으로 두고 상한노름이 주는 거리를 부여한다. 여기서 $\lVert g\rVert_\infty = \max_{I_h}\lvert g\rvert$이다. $I_h$가 컴팩트이므로 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에 의하여 최댓값이 존재한다. 연속함수열의 균등극한은 연속이고 상한노름에서 Cauchy인 열은 균등수렴하므로([§균등수렴, ⁋정리 6](/ko/math/analysis/uniform_convergence#thm6), [§균등수렴, ⁋명제 3](/ko/math/analysis/uniform_convergence#prop3)) $I_h$ 위의 연속함수 공간은 완비이고, $X$는 그 닫힌 subset이므로 [§완비 거리공간과 축소사상 정리, ⁋명제 2](/ko/math/analysis/contraction_mapping#prop2)에 의하여 완비 거리공간이다. 상수함수 $y_0$이 $X$에 속하므로 $X \neq \emptyset$이다.
 
-$$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) \dd{s}$$
+먼저 $T$가 $X$를 $X$로 보냄을 확인한다. $g \in X$이면 $\lvert t - t_0\rvert \leq h \leq a$이고 $\lvert g(t) - y_0\rvert \leq b$이므로 $(t, g(t)) \in R$이고, $s \mapsto f(s, g(s))$는 연속이어서 $Tg$가 정의되고 연속이다. 또 $R$ 위에서 $\lvert f\rvert \leq M$이므로
 
-와 동치이다. 실제로 $y$가 미분방정식의 해이면 양변을 $t_0$에서 $t$까지 적분하여 위 식을 얻고, 거꾸로 위 integral equation을 만족하는 연속함수 $y$에 대해서는 [§미적분의 기본정리, ⁋정리 2](/ko/math/analysis/fundamental_theorem_of_calculus#thm2){: data-lid="nyhc5" }에 의해 우변이 $t$에 대해 미분가능하므로 미분하면 $y'(t) = f(t, y(t))$를 얻고 $t = t_0$을 대입하면 $y(t_0) = y_0$을 얻는다. Integral equation 형태가 유리한 이유는 미분이라는 까다로운 연산이 사라지고, 연속함수만 다루면 되기 때문이다.
+$$\lvert (Tg)(t) - y_0\rvert \leq \left\lvert \int_{t_0}^t \lvert f(s, g(s))\rvert \dd{s}\right\rvert \leq M\lvert t - t_0\rvert \leq Mh \leq b$$
 
-우변을 연속함수 $y$에 대응시키는 *피카르 작용소<sub>Picard operator</sub>*
+이다. 구간의 반폭에 $h \leq a$와 $h \leq b/M$을 둔 이유가 여기에 있다. 전자는 $g$가 $f$의 정의역 $R$ 안에서 평가되도록 하고, 후자는 $Tg$의 그래프가 다시 $R$ 안에 머물도록 한다.
 
-$$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s)) \dd{s}$$
-
-를 생각하자. 그러면 integral equation의 해는 정확히 $T$의 fixed point $Ty = y$이다. 작용소가 정의되는 무대를 먼저 확보한다. 가정에서 $f$가 연속이고 립시츠 조건을 만족하는 근방 안에 직사각형 $R = [t_0 - a, t_0 + a] \times [y_0 - b, y_0 + b]$를 잡고, $R$이 컴팩트이므로 유한한 $M = \max_R \lvert f\rvert$를 둔다. 이제 반폭 $h$를 $h \leq a$, $Mh \leq b$, $Lh < 1$이 모두 성립하도록 잡고 $I = [t_0 - h, t_0 + h]$로 두자. 상한노름 $\lVert g\rVert_\infty = \sup_{t\in I}\lvert g(t)\rvert$을 준 $I$ 위의 연속함수들의 공간 $C(I)$는 완비 거리공간이다. 상한노름에 대한 Cauchy 열은 [§균등수렴, ⁋명제 5](/ko/math/analysis/uniform_convergence#prop5){: data-lid="xlawg" }에 의해 균등수렴하고, 그 극한함수는 [§균등수렴, ⁋정리 2](/ko/math/analysis/uniform_convergence#thm2){: data-lid="z4crj" }에 의해 다시 연속이기 때문이다. 그 안에서 $\lVert y - y_0\rVert_\infty \leq b$인 함수들의 모임 $X$는 닫힌 부분집합이므로 $X$도 완비이다. $y \in X$이면 그래프가 $R$ 안에 놓여 $Ty$가 정의되고, $\lvert (Ty)(t) - y_0\rvert \leq M\lvert t - t_0\rvert \leq Mh \leq b$이므로 $T$는 $X$를 $X$ 안으로 보낸다. $X$의 두 원소 $y_1, y_2$에 대해 립시츠 조건을 적분 안에서 적용하면 ($t \geq t_0$인 경우를 적고, $t < t_0$이면 적분 구간의 방향만 뒤집으면 된다)
+다음으로 $T$가 축소사상임을 보인다. $g_1, g_2 \in X$이면 두 그래프가 모두 $R$ 안에 있으므로 립시츠 조건을 적분 안에서 쓸 수 있다. $t \in I_h$에 대하여
 
 $$\begin{aligned}
-\lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr) \dd{s}\right\rvert \\
-&\leq \int_{t_0}^t \lvert f(s, y_1(s)) - f(s, y_2(s))\rvert \dd{s} \\
-&\leq \int_{t_0}^t L \lvert y_1(s) - y_2(s)\rvert \dd{s} \\
-&\leq L \lvert t - t_0\rvert \lVert y_1 - y_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty
+\lvert (Tg_1)(t) - (Tg_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, g_1(s)) - f(s, g_2(s))\bigr) \dd{s}\right\rvert \\
+&\leq \left\lvert \int_{t_0}^t L\lvert g_1(s) - g_2(s)\rvert \dd{s}\right\rvert \\
+&\leq L\lvert t - t_0\rvert \lVert g_1 - g_2\rVert_\infty \leq Lh\lVert g_1 - g_2\rVert_\infty
 \end{aligned}$$
 
-이 모든 $t \in I$에서 성립한다. 좌변의 상한을 취하면
+이고, $t$에 대해 최댓값을 취하면 $\lVert Tg_1 - Tg_2\rVert_\infty \leq Lh\lVert g_1 - g_2\rVert_\infty$이다. $h \leq 1/(2L)$이므로 $Lh \leq 1/2$이다. 축소상수가 $1$보다 작기만 하면 되므로 $1/2$은 편의상의 선택이고, 이 조건 때문에 $h$가 $L$에 반비례하여 작아진다.
 
-$$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
-
-이다. 반폭 $h$를 $Lh < 1$이 되도록 잡아 두었으므로 $T$는 $X$ 위에서 축약상수 $\lambda = Lh$인 contraction이고, [정리 2](#thm2){: data-lid="377ag" }에 의해 $X$ 안에 유일한 fixed point $y$를 가진다. 마지막으로 $I$ 위의 초기값 문제의 해는 모두 $X$에 놓인다. 해의 그래프가 $R$ 안에 있는 동안 $\lvert y'\rvert = \lvert f(t, y)\rvert \leq M$이어서 $\lvert y(t) - y_0\rvert \leq M\lvert t - t_0\rvert \leq Mh \leq b$이므로, 그래프가 $R$의 위아래 변을 뚫고 나갈 수 없기 때문이다. 따라서 이 $y$가 $I$ 위에서 초기값 문제의 유일한 해이다.
+따라서 [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5)에 의하여 $T$는 $X$ 안에 유일한 fixed point $\varphi$를 가지고, $\varphi_0 = y_0 \in X$에서 출발한 반복 $\varphi_n = T^n \varphi_0$이 $\varphi$로 균등수렴한다. [명제 2](#prop2)에 의하여 $X$의 fixed point은 그래프가 $R$ 안에 있는 (IVP)의 해와 같다. 그래프가 $R$ 안에 있는 해 $\psi$는 $\lvert \psi - y_0\rvert \leq b$이므로 $X$의 원소이고, 따라서 $\varphi$와 일치한다.
 :::
 
-증명에서 구간의 길이를 $Lh < 1$이 되도록 줄인 점에 주목하자. 이는 해가 *국소적으로* 존재함만을 보장한다. 즉 초기점 $t_0$ 근방의 작은 구간에서만 해가 보장되며, 그 구간이 전 구간으로 확장되는지는 별개의 문제이다. 한편 립시츠 상수가 작거나 구간이 짧을수록 작용소의 축약 효과가 강해 피카르 반복이 빠르게 수렴한다. 다음에서는 이 반복을 실제로 수행해 해를 구하는 예를 본다.
+정리의 유일성은 그래프가 $R$ 안에 있는 해들 사이에서만 말한다. $R$ 밖으로 나가는 해가 있는지는 여기서 결정되지 않으며, 이는 뒤의 [명제 7](#prop7)에서 해결된다. 또 존재 구간의 길이 $h$는 $a$뿐 아니라 $b/M$과 $1/(2L)$에도 좌우된다. 해가 존재하는 구간이 방정식이 정의된 영역의 크기만으로 정해지지 않는다는 점은 [예시 9](#ex9)에서 구체적으로 나타난다.
 
-## 예시와 계산
+우리는 $y$가 실수값인 경우만 썼지만, $y \in \mathbb{R}^n$인 연립방정식에서도 같은 증명이 그대로 성립한다. $\mathbb{R}^n$에 최댓값 노름 $\lVert y\rVert = \max_i \lvert y_i\rvert$을 쓰면 적분의 노름이 노름의 적분으로 성분별로 평가되므로 위의 모든 부등식이 그대로 유지된다.
 
-피카르 정리의 증명은 단순한 존재 보장에 그치지 않고, 해를 구체적으로 구하는 절차인 피카르 반복을 제공한다. 임의의 출발 함수(보통 상수함수 $y_0 \equiv y_0$)에서 시작해 작용소 $T$를 거듭 적용하면 그 극한이 해가 된다. 가령 $y' = y$, $y(0) = 1$에서 $y_0 \equiv 1$로 출발하면 반복은 지수함수의 부분합 $y_n(t) = \sum_{k=0}^n t^k/k!$을 차례로 내놓고, 극한 $e^t$가 곧 해이다. 우변이 $t$와 $y$ 모두에 의존해도 절차는 그대로 작동하여, $y' = t + y$, $y(0) = 0$의 반복은 해 $y = e^t - 1 - t$로 수렴한다.
-
-반대로 립시츠 조건이 빠지면 유일성이 어떻게 깨지는지를 명시적인 반례로 본다.
+립시츠 조건이 빠지면 유일성이 무너진다.
 
 ::: 예시 5 (유일성의 실패)
-$y' = \sqrt{\lvert y\rvert}$, $y(0) = 0$을 생각하자. 여기서 $f(t, y) = \sqrt{\lvert y\rvert}$는 연속이지만 $y = 0$ 근방에서
+$y' = 3y^{2/3}$, $y(0) = 0$을 보자. 여기서 $f(t, y) = 3y^{2/3}$은 연속이지만 $y \rightarrow 0$일 때
 
-$$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{\sqrt{\lvert y\rvert}}{\lvert y\rvert} = \frac{1}{\sqrt{\lvert y\rvert}} \rightarrow \infty \qquad (y \rightarrow 0)$$
+$$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{3}{\lvert y\rvert^{1/3}} \rightarrow \infty$$
 
-이므로 립시츠 조건을 만족하지 않는다. 이때 항등적으로 $0$인 함수 $y \equiv 0$이 해이지만, 동시에
+이므로 $y = 0$의 어떤 근방에서도 립시츠 조건이 성립하지 않는다. 한편 $\varphi \equiv 0$은 해이고 $\varphi(t) = t^3$도 해이다. $\varphi'(t) = 3t^2$이고 $3(t^3)^{2/3} = 3t^2$이기 때문이다. 더 일반적으로 $c_1 \leq 0 \leq c_2$에 대하여
 
-$$y(t) = \begin{cases} t^2/4, & t \geq 0 \\ 0, & t < 0 \end{cases}$$
+$$\varphi_{c_1, c_2}(t) = \begin{cases} (t - c_1)^3, & t < c_1 \\ 0, & c_1 \leq t \leq c_2 \\ (t - c_2)^3, & t > c_2 \end{cases}$$
 
-도 해이다 ($t \geq 0$에서 $y' = t/2 = \sqrt{t^2/4} = \sqrt{y}$). 더 나아가 임의의 $a > 0$에 대해 $t \leq a$에서는 $0$이고 $t > a$에서는 $(t - a)^2/4$인 함수도 모두 해이므로, 해가 무수히 많다. 립시츠 조건의 부재가 유일성을 송두리째 무너뜨림을 보여 준다.
+도 해이다. 이음점에서 양쪽 도함수가 모두 $0$이므로 $C^1$이고, 각 조각에서는 위의 계산이 그대로 적용된다. 따라서 초기값 문제는 $c_1, c_2$로 매개화되는 해를 무수히 가진다. 이 방정식에서 $\varphi_0 \equiv 0$으로 출발한 Picard 반복은 $T0 = 0$이어서 영원히 $0$에 머문다. 반복은 수렴하지만 그 극한은 해들 중 하나일 뿐이고, $T$는 어떤 구간에서도 축소사상이 아니다.
 :::
 
-## 응용
+## Grönwall 부등식
 
-존재 구간이 국소적이라는 한계는 우변의 regularity에 따라 극복되기도 하고 본질적으로 남기도 한다. 다음 명제는 립시츠 조건이 *전역적*으로 성립할 때 해가 전 구간으로 확장됨을 보인다.
+[정리 4](#thm4)는 그래프가 $R$ 안에 있는 해에 대해서만 유일성을 주었다. 임의의 두 해가 일치함을 보이려면 두 해의 차가 $0$임을 직접 평가해야 하고, 여기에 쓰이는 것이 다음 부등식이다.
 
-::: 명제 6 (전역 존재)
-$f(t, y)$가 띠 영역 $\lvert t - t_0\rvert \leq a$, $y \in \mathbb{R}$ 전체에서 연속이고 $y$에 대해 상수 $L$의 전역 립시츠 조건을 만족하면, 초기값 문제의 해가 구간 $[t_0 - a, t_0 + a]$ 전체에서 유일하게 존재한다.
-:::
+::: 보조정리 6 (Grönwall 부등식)
+$J$를 구간, $t_\ast \in J$, $u : J \rightarrow [0, \infty)$를 연속함수라 하고 $C, L \geq 0$이 모든 $t \in J$에서
 
-::: 증명
-피카르 반복 $y_{n+1} = Ty_n$을 $y_0 \equiv y_0$에서 시작하자. 연속한 두 근사의 차를 평가한다. $M = \sup_{\lvert t - t_0\rvert \leq a}\lvert f(t, y_0)\rvert$로 두면
+$$u(t) \leq C + L\left\lvert \int_{t_\ast}^t u(s) \dd{s}\right\rvert$$
 
-$$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0) \dd{s}\right\rvert \leq M \lvert t - t_0\rvert$$
-
-이고, 귀납적으로 립시츠 조건을 반복 적용하면 ($t \geq t_0$인 경우를 적고, $t < t_0$이면 적분 구간의 방향만 뒤집으면 된다)
-
-$$\begin{aligned}
-\lvert y_{n+1}(t) - y_n(t)\rvert &\leq \int_{t_0}^t L \lvert y_n(s) - y_{n-1}(s)\rvert \dd{s} \\
-&\leq M \frac{L^n \lvert t - t_0\rvert^{n+1}}{(n+1)!}
-\end{aligned}$$
-
-을 얻는다. 따라서 $\lvert t - t_0\rvert \leq a$에서 $\lVert y_{n+1} - y_n\rVert_\infty \leq M (La)^{n+1}/(L (n+1)!)$이고, 우변은 지수급수의 항이라 그 합이 유한하다. 망원합 $y_n = y_0 + \sum_{k=0}^{n-1}(y_{k+1} - y_k)$이 상한노름에서 절대수렴하므로 $y_n$은 어떤 연속함수 $y$로 균등수렴하고, 극한에서 $y = Ty$이다. 유일성은 [정리 4](#thm4){: data-lid="446ch" }의 논법을 구간 전체에서 그뢴발 부등식으로 잇거나, 구간을 길이 $1/(2L)$ 이하의 조각으로 나누어 각 조각에서 [정리 2](#thm2){: data-lid="rimsc" }를 적용해 얻는다.
-:::
-
-[명제 6](#prop6){: data-lid="55nuf" }의 핵심은 립시츠 상수 $L$이 $y$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $L^n / n!$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4){: data-lid="tw9wl" }에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $y$에 대해 선형인 방정식이다. 실제로 $y' = a(t) y + b(t)$에서 $a, b$가 닫힌구간 $I$에서 연속이면 $\lvert a(t)\rvert$이 $I$에서 bounded라 그 상한 $L$이 전역 립시츠 상수가 되고, [명제 6](#prop6){: data-lid="9cvwt" }에 의해 해가 $I$ 전체에서 유일하게 존재한다. 가령 $y' = -2t y$의 해 $e^{-t^2}$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
-
-::: 예시 7 (유한 시간 폭발)
-$y' = y^2$, $y(0) = 1$을 보자. 여기서 $f(t, y) = y^2$는 임의의 bounded 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로
-
-$$\int \frac{\dd{y}}{y^2} = \int \dd{t}  \Longrightarrow  -\frac{1}{y} = t + C$$
-
-를 풀면 $y(0) = 1$에서 $C = -1$, 곧
-
-$$y(t) = \frac{1}{1 - t}$$
-
-이다. 이 해는 $t \rightarrow 1^-$에서 $+\infty$로 발산하므로 구간 $[0, 1)$ 너머로 연장되지 않는다. $\partial f / \partial y = 2y$가 $y$와 함께 무한히 커져 전역 립시츠 조건이 깨지는 것이 폭발의 원인이며, [정리 4](#thm4){: data-lid="c59fl" }의 국소성이 본질적임을 보여 준다.
-:::
-
-마지막으로 피카르 정리가 직접 주는 정량적 귀결 하나를 정리해 둔다. 증명의 오차 평가를 그대로 옮긴 것이다.
-
-::: 명제 8 (반복의 오차)
-[정리 4](#thm4){: data-lid="nxmxk" }의 가정 아래, 피카르 반복 $y_n = T^n y_0$과 참해 $y$ 사이에는
-
-$$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh} \lVert y_1 - y_0\rVert_\infty$$
-
-이 성립한다. 여기서 $h$는 [정리 4](#thm4){: data-lid="q4i3w" }에서 잡은 구간의 반폭이고 $Lh < 1$이다.
+을 만족한다고 하자. 그럼 모든 $t \in J$에서 $u(t) \leq Ce^{L\lvert t - t_\ast\rvert}$이다.
 :::
 
 ::: 증명
-작용소 $T$는 $C(I)$ 위에서 축약상수 $\lambda = Lh < 1$의 contraction이고 $y$는 그 fixed point이므로, [정리 2](#thm2){: data-lid="7qshb" }의 증명에서 얻은 선험적 오차 평가
+$t \geq t_\ast$인 경우를 먼저 보자. $U(t) = C + L\int_{t_\ast}^t u(s) \dd{s}$로 두면 $u$가 연속이므로 $U$는 미분가능하고 $U' = Lu$이다. 가정은 $u \leq U$이므로 $U' \leq LU$이고, 따라서
 
-$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
+$$\frac{\dd{}}{\dd{t}}\Bigl(U(t)e^{-L(t - t_\ast)}\Bigr) = \bigl(U'(t) - LU(t)\bigr)e^{-L(t - t_\ast)} \leq 0$$
 
-을 $x_n = y_n$, $x^\ast = y$, $\lambda = Lh$에 그대로 적용하면 주장하는 부등식을 얻는다.
+이다. 그럼 $U(t)e^{-L(t - t_\ast)} \leq U(t_\ast) = C$이고, $u \leq U$를 다시 쓰면 $u(t) \leq Ce^{L(t - t_\ast)}$이다. $U$의 부호에 대한 가정이 필요하지 않으므로 $C = 0$인 경우도 그대로 포함된다. $t \leq t_\ast$인 경우에는 $v(s) = u(2t_\ast - s)$가 $s \geq t_\ast$에서 같은 가정을 만족하므로 위 결과를 $v$에 적용하면 된다.
 :::
 
-이 평가 덕분에 피카르 반복은 단순한 존재 증명의 도구를 넘어, 정해진 오차 안에서 해를 근사하는 실제 계산법이 된다. $Lh$가 작을수록 한 번의 반복으로 오차가 더 크게 줄어든다.
+$C = 0$인 경우가 유일성의 핵심이다. 이때 결론은 $u \equiv 0$이다. 또 같은 논증에서 $C = \lvert \varphi_1(t_\ast) - \varphi_2(t_\ast)\rvert$로 두면, 두 해의 초기값이 $\delta$만큼 다를 때 $f$가 전체에서 $L$-립시츠이면 두 해의 거리가 $\delta e^{L\lvert t - t_\ast\rvert}$를 넘지 못한다는 평가도 얻는다.
+
+::: 명제 7 (유일성)
+$f$가 $D$ 위에서 연속이고 $y$에 관하여 locally Lipschitz라 하자. $\varphi_1, \varphi_2$가 각각 구간 $I_1, I_2$ 위의 (IVP)의 해이면, $I_1 \cap I_2$ 위에서 $\varphi_1 = \varphi_2$이다.
+:::
+
+::: 증명
+$I = I_1 \cap I_2$는 $t_0$를 포함하는 구간이고, $A = \{t \in I : \varphi_1(t) = \varphi_2(t)\}$로 두자. $t_0 \in A$이고, 두 함수가 연속이므로 $A$는 $I$에서 닫혀 있다. $A$가 $I$에서 열려 있음을 보이면 $I$가 구간이어서 [§연결성과 중간값 정리, ⁋정리 2](/ko/math/analysis/connectedness#thm2)에 의하여 연결이므로 $A = I$이다.
+
+$t_\ast \in A$라 하고 $c = \varphi_1(t_\ast) = \varphi_2(t_\ast)$로 두자. $(t_\ast, c) \in D$이고 $f$가 locally Lipschitz이므로 $(t_\ast, c)$를 중심으로 하는 직사각형 $R_\ast \subseteq D$와 상수 $L$이 있어서 $f$가 $R_\ast$ 위에서 $L$-립시츠이다. 두 해가 연속이므로 $t_\ast$의 어떤 근방 $J \subseteq I$에서 두 그래프가 모두 $R_\ast$ 안에 있다. $u = \lvert \varphi_1 - \varphi_2\rvert$로 두면 (INT)에 의하여 $t \in J$에서
+
+$$u(t) = \left\lvert \int_{t_\ast}^t \bigl(f(s, \varphi_1(s)) - f(s, \varphi_2(s))\bigr) \dd{s}\right\rvert \leq L\left\lvert \int_{t_\ast}^t u(s) \dd{s}\right\rvert$$
+
+이다. [보조정리 6](#lem6)을 $C = 0$으로 적용하면 $J$ 위에서 $u \equiv 0$이므로 $J \subseteq A$이다.
+:::
+
+이 명제에서 [정리 4](#thm4)의 유일성 부분이 갖던 제약이 사라진다. $f$가 locally Lipschitz이기만 하면 (IVP)의 두 해는 공통 정의역 위에서 항상 일치한다. 또 한 점에서 갈라진 두 해가 같은 점에서 다시 만나는 일도 없다. [예시 5](#ex5)의 해들은 모두 $y = 0$ 위의 점에서 갈라지는데, 그 점들에서 립시츠 조건이 깨져 있다.
+
+## 최대 해 구간
+
+이제 $f$가 $D$ 위에서 연속이고 $y$에 관하여 locally Lipschitz라 하자. [정리 4](#thm4)는 각 점 근방에서 해의 존재를 주고, [명제 7](#prop7)은 두 해가 겹치는 구간에서 일치함을 주므로, 해들을 이어 붙여 더 이상 연장할 수 없는 해를 만들 수 있다.
+
+::: 정리 8 (최대 해)
+$(t_0, y_0) \in D$에 대하여 열린구간 $(\alpha, \beta) \ni t_0$ 위의 해 $\varphi$가 있어서 다음이 성립한다.
+
+(1) (IVP)의 모든 해는 $\varphi$의 제한이다. 특히 $\varphi$는 더 큰 구간으로 연장되지 않는다.
+
+(2) $\beta < \infty$이면, 임의의 컴팩트집합 $K \subseteq D$에 대하여 $\tau < \beta$가 있어서 $\tau < t < \beta$에서 $(t, \varphi(t)) \notin K$이다. $\alpha > -\infty$인 경우도 마찬가지이다.
+:::
+
+::: 증명
+(1) (IVP)의 해들의 모임을 $\mathcal{S}$라 하자. [정리 4](#thm4)와 $D$가 열린집합이라는 사실에서 $\mathcal{S} \neq \emptyset$이다. $(t_0, y_0)$를 중심으로 하는 $D$ 안의 직사각형 위에서 $f$가 립시츠가 되도록 직사각형을 충분히 작게 잡을 수 있기 때문이다.
+
+먼저 $\psi \in \mathcal{S}$의 정의역에 끝점 $t_1$이 속하면 $\psi$를 $t_1$ 너머로 연장할 수 있음을 보인다. $t_1$이 오른쪽 끝점이라 하자. $(t_1, \psi(t_1))$에서 [정리 4](#thm4)를 적용하면 $[t_1 - h, t_1 + h]$ 위의 해 $\chi$가 있고 $\chi(t_1) = \psi(t_1)$이다. [명제 7](#prop7)의 증명과 같은 논증으로, 같은 점에서 같은 값을 갖는 $\psi$와 $\chi$는 공통 정의역에서 일치한다. 따라서 $\psi$와 $\chi$를 붙인 함수가 정의되고, 그것이 $t_1$을 내점으로 갖는 해이다. $\chi$가 (IVP)가 아닌 $(t_1, \psi(t_1))$에서의 초기값 문제의 해라는 점은 이 논증에 영향을 주지 않는다. [명제 7](#prop7)이 임의의 초기점에 대해 성립하기 때문이다. 왼쪽 끝점도 같다.
+
+$J$를 $\mathcal{S}$의 모든 해의 정의역의 합집합이라 하자. 두 해는 [명제 7](#prop7)에 의하여 공통 정의역에서 일치하므로 $t \in J$에 대하여 $t$를 정의역에 포함하는 $\psi \in \mathcal{S}$를 골라 $\varphi(t) = \psi(t)$로 두면 $\varphi : J \rightarrow \mathbb{R}$가 잘 정의된다. 위의 연장 결과에 의하여 $J$의 각 점은 어떤 해의 정의역의 내점이므로 $J$는 열린구간 $(\alpha, \beta)$이고 $\varphi$는 각 점 근방에서 어떤 해와 같아 해이다. 모든 해는 정의상 $\varphi$의 제한이다.
+
+(2) 결론이 거짓이라 하자. 그럼 컴팩트집합 $K \subseteq D$와 $t_n \rightarrow \beta$, $t_n < \beta$인 수열이 있어서 $(t_n, \varphi(t_n)) \in K$이다. $K$가 컴팩트이므로 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5)에 의하여 부분수열을 취하여 $(t_n, \varphi(t_n)) \rightarrow (\beta, y_\ast) \in K \subseteq D$로 둘 수 있다. $(\beta, y_\ast)$를 중심으로 하는 직사각형 $[\beta - a, \beta + a] \times [y_\ast - b, y_\ast + b] \subseteq D$를 $f$가 그 위에서 립시츠가 되도록 잡고, 립시츠 상수를 $L$, $\lvert f\rvert$의 최댓값을 $M$이라 하자. 충분히 큰 $n$에 대하여 $\lvert t_n - \beta\rvert < a/2$, $\lvert \varphi(t_n) - y_\ast\rvert < b/2$이므로 $(t_n, \varphi(t_n))$을 중심으로 하는 $[t_n - a/2, t_n + a/2] \times [\varphi(t_n) - b/2, \varphi(t_n) + b/2]$는 위의 큰 직사각형 안에 있고, 같은 $L$과 $M$이 그 위에서도 유효하다. 따라서 [정리 4](#thm4)를 이 작은 직사각형에 적용하면, $n$에 무관한
+
+$$h' = \min\Bigl(\frac{a}{2}, \frac{b}{2M}, \frac{1}{2L}\Bigr)$$
+
+에 대하여 $(t_n, \varphi(t_n))$에서 출발하는 해 $\chi_n$이 $[t_n - h', t_n + h']$ 위에 존재한다. $t_n \rightarrow \beta$이므로 $\beta - t_n < h'$인 $n$을 고르면 $\chi_n$은 $\beta$를 내점으로 가지고, [명제 7](#prop7)에 의하여 $\varphi$와 겹치는 구간에서 일치한다. 그럼 $\varphi$와 $\chi_n$을 붙여 $\varphi$를 $\beta$ 너머로 연장한 해가 얻어지고, 이는 (1)에 모순이다.
+:::
+
+(2)는 최대 해가 유한한 끝에서 끝나려면 그래프가 $D$의 어떤 컴팩트집합에도 머무르지 않고 $D$의 boundary로 빠져나가야 함을 말한다. $D = \mathbb{R}^2$인 경우 이는 $\beta < \infty$이면 $\lvert \varphi(t)\rvert \rightarrow \infty$ ($t \rightarrow \beta$)라는 뜻이다. $K = [t_0, \beta] \times [-N, N]$에 적용하면 모든 $N$에 대하여 $t$가 $\beta$에 충분히 가까울 때 $\lvert \varphi(t)\rvert > N$이기 때문이다.
+
+::: 예시 9 (유한시간 폭발)
+$y' = y^2$, $y(0) = 1$을 보자. $f(t, y) = y^2$은 $\partial f/\partial y = 2y$가 연속이어서 $\mathbb{R}^2$ 위에서 locally Lipschitz이다. 변수분리로 $\dd{y}/y^2 = \dd{t}$를 적분하면 $-1/y = t + C$이고 $y(0) = 1$에서 $C = -1$이므로
+
+$$\varphi(t) = \frac{1}{1 - t}, \qquad t \in (-\infty, 1)$$
+
+이다. 실제로 $\varphi'(t) = (1 - t)^{-2} = \varphi(t)^2$이다. 이 해는 $t \rightarrow 1^-$에서 $+\infty$로 발산한다. 다른 해 $\psi$가 $1$을 정의역에 포함하면, [명제 7](#prop7)에 의하여 $[0, 1)$에서 $\psi = \varphi$이고 $\psi$가 $t = 1$에서 연속이어야 하는데 $\varphi$는 $1$ 근방에서 유계가 아니므로 모순이다. 따라서 최대 해 구간은 $(-\infty, 1)$이다.
+
+초기값을 $y(0) = y_0 > 0$으로 두면 해는 $y_0/(1 - y_0 t)$이고 폭발 시각은 $1/y_0$이다. 초기값이 클수록 폭발이 빨라진다. $y(0) = 0$이면 해가 $y \equiv 0$이어서 전 구간에서 존재한다. 방정식은 모든 $(t, y)$에서 매끄럽지만 정의역이 전체인 것이 해의 정의역이 전체임을 뜻하지 않는다. 립시츠 상수가 $y$와 함께 $2\lvert y\rvert$로 자라므로, [정리 4](#thm4)의 $h$가 해가 커질수록 줄어들어 구간을 이어 붙여도 $1$을 넘지 못한다.
+:::
+
+반대로 [예시 5](#ex5)의 방정식은 해가 무수히 많지만 모든 해가 $\mathbb{R}$ 전체에서 정의된다. 따라서 유일성의 실패와 폭발은 서로 다른 현상이다.
+
+## Peano 존재정리
+
+립시츠 조건을 완전히 버리고 $f$의 연속성만 가정하면 존재는 여전히 성립한다.
+
+::: 정리 10 (Peano)
+$f$가 직사각형 $R = [t_0 - a, t_0 + a] \times [y_0 - b, y_0 + b]$ 위에서 연속이고 $M = \max_R \lvert f\rvert$이면, (IVP)는 $[t_0 - h, t_0 + h]$, $h = \min(a, b/M)$ 위에서 적어도 하나의 해를 가진다.
+:::
+
+증명은 Euler 꺾은선 근사 $\varphi_k$를 만드는 데서 시작한다. 꺾은선은 모두 $R$ 안에 있고 기울기의 크기가 $M$ 이하이므로 uniformly bounded이며 동등연속이다. 따라서 [§동등연속성과 Arzelà–Ascoli 정리, ⁋정리 6](/ko/math/analysis/arzela_ascoli#thm6)에 의하여 균등수렴하는 부분수열이 있고, 그 극한이 (INT)를 만족한다. 이 정리에서는 극한함수가 해임이 보장될 뿐 어느 부분수열을 택하느냐에 따라 다른 극한이 나올 수 있으며, [예시 5](#ex5)가 정확히 이 경우이다. $f(t, y) = 3y^{2/3}$은 연속이므로 [정리 10](#thm10)이 적용되어 해의 존재가 보장되지만, 립시츠 조건이 없으므로 [정리 4](#thm4)와 [명제 7](#prop7)이 적용되지 않고 유일성이 깨진다. [정리 4](#thm4)가 요구하는 조건이 존재가 아니라 유일성에 필요한 조건임이 여기서 드러난다.
 
 ---
 

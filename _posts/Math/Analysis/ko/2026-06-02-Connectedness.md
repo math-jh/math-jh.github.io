@@ -1,7 +1,7 @@
 ---
 title: "연결성과 중간값 정리"
-description: "연결집합을 열린집합에 의한 분할의 부재로 정의하고, 실수의 연결 부분집합이 정확히 구간임을 보인다. 연속함수가 연결성을 보존함을 증명하여 중간값 정리를 엄밀하게 끌어낸다."
-excerpt: "연결집합, 실수의 구간, 중간값 정리"
+description: "거리공간의 subset에 대한 connectedness를 정의하고, ℝ의 connected subset이 정확히 구간임을 증명한다. 연속함수가 connectedness를 보존함을 보여 중간값 정리를 얻고, fixed point와 홀수차 polynomial의 real root에 응용한다. path-connectedness와 topologist's sine curve로 두 개념이 다름을 확인한다."
+excerpt: "connected set, 구간, 중간값 정리, path-connectedness"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/connectedness
@@ -9,147 +9,156 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-weight: 11
-
+weight: 13
 
 published: false
+
 ---
 
-[§연속함수의 성질](/ko/math/analysis/continuous_functions){: data-lid="193bb" }에서 연속함수가 compactness를 보존함을 보았다. 연속함수가 보존하는 또 하나의 근본 성질이 연결성이며, 이로부터 [\[미적분학\] §연속함수](/ko/math/calculus/continuity){: data-lid="xtcze" }에서 도구로 받아들였던 중간값 정리가 엄밀하게 따라 나온다.
+[\[미적분학\] §연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)는 연속함수의 그래프가 끊어지지 않는다는 직관과 함께 도구로 받아들여졌다. 이 직관이 실수의 어떤 성질에 의존하는지는 유리수 위에서 정리가 깨지는 데서 드러난다. $f(x) = x^2 - 2$는 $\mathbb{Q}$ 위의 연속함수이고 $f(0) = -2 < 0 < 2 = f(2)$이지만 $\mathbb{Q}$에는 $f$의 영점이 없다. 정의역에서 빠진 것은 $\sqrt{2}$ 하나이며, 이 한 점 때문에 $\mathbb{Q}\cap[0,2]$는 두 조각으로 갈라진다. 이 글에서는 갈라지지 않는다는 성질을 connectedness로 정식화하고, 그것이 연속함수에 의해 보존됨을 보여 중간값 정리를 얻는다.
 
 ## 연결집합
 
+[§거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1)의 거리공간 $X$와 $E \subseteq X$를 생각하자. $E$의 subset $A$가 *relatively open set*이라는 것은 $X$의 열린집합 $U$가 있어 $A = U \cap E$인 것이다. 이는 $E$를 그 자체로 거리공간으로 보았을 때의 [§거리공간과 열린집합·닫힌집합, ⁋정의 8](/ko/math/analysis/metric_spaces#def8)의 열린집합과 같다.
+
 ::: 정의 1
-거리공간의 부분집합 $E$가 *disconnected<sub>연결되지 않았다</sub>*라는 것은, 열린집합 $U, V$가 존재하여 $E \subseteq U \cup V$, $U \cap E \neq \emptyset$, $V \cap E \neq \emptyset$, 그리고 $U \cap V \cap E = \emptyset$인 것이다. 이러한 분할이 존재하지 않으면 $E$가 *connected<sub>연결</sub>*라고 한다.
+거리공간 $X$의 subset $E$가 *disconnected<sub>비연결</sub>*라는 것은, $E = A \cup B$이면서 $A$, $B$가 $E$의 서로소인 비어 있지 않은 relatively open set인 것이다. 이러한 분해가 존재하지 않을 때 $E$를 *connected<sub>연결</sub>*라 한다.
 :::
 
-[정의 1](#def1){: data-lid="t6g9z" }의 분할 조건을 곱씹어 두는 것이 좋다. 우리는 $E$ 자체를 두 열린집합으로 가르는 것이 아니라, 주변 거리공간의 열린집합 $U, V$로 $E$를 덮되 두 조각 $U \cap E$와 $V \cap E$가 둘 다 비어 있지 않고 서로 겹치지 않도록 한다. 이때 $U \cap E$와 $V \cap E$는 부분공간 $E$의 상대위상에서 각각 열린집합이면서 동시에 (서로의 여집합이므로) 닫힌집합이 된다. 따라서 연결성은 "$E$ 안에서 공집합도 전체도 아닌 열린·닫힌 집합이 존재하지 않음"으로 바꾸어 말할 수 있다.
+$A$와 $B$가 서로소이면서 합집합이 $E$이므로 $A$는 $B$의 $E$에서의 여집합이고, 따라서 $A$와 $B$는 $E$ 안에서 닫힌집합이기도 하다. 그러므로 $E$가 connected라는 것은 $E$ 안에서 열려 있고 동시에 닫혀 있는 subset이 $\emptyset$과 $E$뿐이라는 것과 같다. 공집합과 한 점으로 이루어진 집합은 비어 있지 않은 두 조각으로 나눌 수 없으므로 connected이다.
 
-직관적으로 연결집합은 두 덩어리로 갈라 떼어 놓을 수 없는 집합이다. 실수 위에서 연결집합은 정확히 "구멍 없는" 집합, 곧 구간이라는 것이 다음 정리의 내용이다.
+분해를 만들 때 $A$, $B$를 $E$ 바깥의 열린집합으로 잡아도 되지만, $A \cap B = \emptyset$이어야 하는 곳은 $E$ 안이라는 점에 주의해야 한다. 가령 $\mathbb{R}$의 subset $[0,1]\cup[2,3]$은 $A = [0,1]$, $B = [2,3]$로 분해되며, 이 둘은 $\mathbb{R}$ 안에서는 열려 있지 않지만 $A = (-1, 3/2) \cap E$, $B = (3/2, 4) \cap E$로 쓰이므로 relatively open이다.
+
+$\mathbb{R}$에서 connected인 집합이 무엇인지는 완전히 결정된다. $E \subseteq \mathbb{R}$이 *구간*이라는 것은 $x, y \in E$이고 $x < z < y$이면 $z \in E$인 것이다. 한 점, 공집합, 열린·닫힌·반열린 구간, ray, $\mathbb{R}$ 전체가 모두 이 조건을 만족한다.
 
 ::: 정리 2
-$\mathbb{R}$의 부분집합이 connected인 것은 그것이 구간 (한 점 또는 공집합 포함) 인 것과 동치이다.
+$\mathbb{R}$의 subset $E$가 connected인 것은 $E$가 구간인 것과 동치이다.
 :::
 
 ::: 증명
-$E$가 구간이 아니라 하자. 그러면 $a, b \in E$이면서 $a < c < b$인 $c \notin E$가 있다. $U = (-\infty, c)$, $V = (c, \infty)$로 두면 두 열린집합이 $E$를 분할하므로 $E$는 connected가 아니다.
+$E$가 구간이 아니라 하자. 그럼 $x, y \in E$와 $x < z < y$인 $z \notin E$가 있다. $A = E \cap (-\infty, z)$, $B = E \cap (z, \infty)$로 두면 둘 다 relatively open이고, $x \in A$, $y \in B$이며 $A \cap B = \emptyset$이다. $z \notin E$이므로 $A \cup B = E$이다. 따라서 $E$는 disconnected이다.
 
-거꾸로 $E$가 구간인데 열린집합 $U, V$로 분할되었다 하자. $a \in U \cap E$, $b \in V \cap E$ ($a < b$로 두자) 를 택하면 $[a, b] \subseteq E$이다. $s = \sup\{x \in [a,b] \mid x \in U\}$를 생각하자. $s \in U$이면 ($U$가 열려 있어) $s$ 오른쪽 약간도 $U$에 있어 $s$가 상한이라는 데 모순이거나 $s = b \in V$와 충돌하고, $s \in V$이면 ($V$가 열려 있어) $s$ 왼쪽 약간이 $V$에 있어 상한 정의에 모순이다. 어느 경우든 $s$가 $U$에도 $V$에도 속할 수 없어, $[a,b] \subseteq U \cup V$에 모순이다. 따라서 구간은 connected이다.
+거꾸로 $E$가 구간이면서 $E = A \cup B$로 분해된다고 하자. $a \in A$, $b \in B$를 택하고, 필요하면 $A$와 $B$의 이름을 바꾸어 $a < b$라 하자. $E$가 구간이므로 $[a, b] \subseteq E$이다. 집합 $A \cap [a, b]$는 $a$를 포함하고 $b$로 위에서 유계이므로 [§실수의 완비성, ⁋정의 3](/ko/math/analysis/completeness_of_reals#def3)에 의하여 상한 $s = \sup (A \cap [a, b])$가 존재하고 $a \leq s \leq b$이다. 따라서 $s \in E$이며, $s \in A$이거나 $s \in B$이다.
+
+$s \in A$인 경우를 보자. $b \in B$이고 $A \cap B = \emptyset$이므로 $s \neq b$, 즉 $s < b$이다. $A$가 relatively open이므로 어떤 $\delta > 0$에 대해 $(s - \delta, s + \delta) \cap E \subseteq A$이다. 이 $\delta$를 $s + \delta \leq b$가 되도록 줄이면 $(s, s + \delta) \subseteq [a, b] \subseteq E$이므로 $(s, s+\delta) \subseteq A \cap [a, b]$가 된다. 그런데 이 구간의 점은 $s$보다 크므로 $s$가 상한이라는 데 모순이다.
+
+$s \in B$인 경우를 보자. $a \in A$이므로 $s \neq a$, 즉 $s > a$이다. $B$가 relatively open이므로 어떤 $\delta > 0$에 대해 $(s - \delta, s + \delta) \cap E \subseteq B$이고, $\delta \leq s - a$로 줄여 둘 수 있다. 그럼 $(s - \delta, s] \subseteq [a, b] \subseteq E$이므로 $(s - \delta, s] \subseteq B$이고, $A \cap B = \emptyset$이므로 이 구간은 $A$와 만나지 않는다. 따라서 $A \cap [a, b]$의 모든 원소는 $s - \delta$ 이하이고 $\sup (A \cap [a,b]) \leq s - \delta < s$가 되어 모순이다.
+
+두 경우 모두 모순이므로 구간 $E$는 connected이다.
 :::
 
-실수의 연결집합이 곧 구간이라는 이 동치는 앞으로의 모든 논증과 중간값 정리의 토대가 된다. 구간이 아닌 집합은 [정리 2](#thm2){: data-lid="bvi1x" }의 한 방향에 의해 connected가 아닌데, 분할은 빠진 점 하나만 있으면 곧바로 만들어진다. 가령 유리수 전체 $\mathbb{Q}$에 대해 무리수 $\alpha$를 하나 잡아 $U = (-\infty, \alpha)$, $V = (\alpha, \infty)$로 두면 $\alpha \notin \mathbb{Q}$이므로 두 열린집합이 $\mathbb{Q}$를 분할하여 $\mathbb{Q}$는 connected가 아니다.
+[정리 2](#thm2)의 두 번째 방향이 [§실수의 완비성, ⁋정의 3](/ko/math/analysis/completeness_of_reals#def3)이 쓰이는 곳이다. 상한의 존재를 쓰지 않으면 증명이 성립하지 않으며, 실제로 $\mathbb{Q}$의 구간 $\mathbb{Q} \cap [0, 2]$는 위의 첫 방향의 논증에서처럼 $\sqrt{2}$로 갈라져 connected가 아니다. 이때 $\mathbb{Q} \cap [0,2]$는 $\mathbb{Q}$ 안에서 "$x < y < z$이면 $y$도 속한다"는 구간 조건을 만족하지만 이 조건이 $\mathbb{R}$의 구간과 달리 connectedness를 보장하지 못한다.
 
-연결집합을 새로 만드는 가장 흔한 방법은 공통점을 가진 연결집합들의 합집합을 취하는 것이다.
+## 연속함수와 중간값 정리
 
-::: 명제 3
-$\{E_\alpha\}_{\alpha \in A}$가 거리공간의 connected 부분집합들의 모임이고 공통점 $p \in \bigcap_\alpha E_\alpha$를 가지면, 합집합 $E = \bigcup_\alpha E_\alpha$도 connected이다.
-:::
+Compactness가 연속함수에 의해 보존되었듯([§연속함수의 성질, ⁋정리 1](/ko/math/analysis/continuous_functions#thm1)) connectedness도 보존된다. 증명의 착상은 image에서의 분해를 preimage로 끌어올려 정의역의 분해를 만드는 것이다. 연속함수에서는 열린집합의 preimage가 열려 있다([§함수의 극한과 연속, ⁋명제 5](/ko/math/analysis/limits_and_continuity#prop5)).
 
-::: 증명
-$E$가 열린집합 $U, V$로 분할되었다고 하자. 공통점 $p$는 $U$나 $V$ 가운데 정확히 하나에 속하므로, 일반성을 잃지 않고 $p \in U$라 하자. 임의의 $\alpha$에 대하여 다음을 관찰한다.
-
-$$\begin{aligned}
-E_\alpha &\subseteq E \subseteq U \cup V, \\
-U \cap E_\alpha &\ni p, \quad\text{즉 } U \cap E_\alpha \neq \emptyset, \\
-U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \emptyset.
-\end{aligned}$$
-
-만약 어떤 $\alpha$에서 $V \cap E_\alpha \neq \emptyset$이라면 위 세 조건이 $E_\alpha$의 분할을 이루어 $E_\alpha$가 connected라는 데 모순이다. 따라서 모든 $\alpha$에서 $V \cap E_\alpha = \emptyset$, 곧 $E_\alpha \subseteq U$이고, 합집합을 취하면 $E \subseteq U$여서 $V \cap E = \emptyset$이다. 이는 $V \cap E \neq \emptyset$이라는 분할 조건에 모순이다. 그러므로 $E$는 connected이다.
-:::
-
-[명제 3](#prop3){: data-lid="da5n2" }은 연결성을 점에 붙여 전파시키는 도구이다. 한 점 $x$를 포함하는 모든 연결집합의 합집합은, [명제 3](#prop3){: data-lid="p9wrl" }에 의해 다시 connected이며 그러한 연결집합 가운데 가장 큰 것이 된다. 이를 그 점의 성분이라 부른다.
-
-::: 정의 4
-거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 connected 부분집합의 합집합을 $x$의 *connected component<sub>연결성분</sub>*라 한다.
-:::
-
-Connected component는 [명제 3](#prop3){: data-lid="ypt24" }에 의해 그 자체로 connected이며, $x$를 포함하는 연결집합 중 maximal인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 *totally disconnected<sub>전비연결</sub>*라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
-
-
-## 연결성의 보존과 중간값 정리
-
-Compactness와 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions){: data-lid="dunek" }에서 compactness의 보존을 보았다). 핵심 착상은, image에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실, 곧 연속성의 위상적 특징화가 그대로 동력이 된다.
-
-::: 정리 5
-$f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, image $f(E)$도 connected이다.
+::: 정리 3
+$f : X \rightarrow Y$가 거리공간 사이의 연속함수이고 $E \subseteq X$가 connected이면 $f(E)$도 connected이다.
 :::
 
 ::: 증명
-$f(E)$가 열린집합 $U, V$로 분할된다고 하자. 즉 $f(E) \subseteq U \cup V$, $U \cap f(E) \neq \emptyset$, $V \cap f(E) \neq \emptyset$, $U \cap V \cap f(E) = \emptyset$이라 하자. 연속성의 [§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3){: data-lid="3hyds" }에 의해 $f^{-1}(U)$와 $f^{-1}(V)$는 $X$의 열린집합이다. 이제 이 둘이 $E$를 분할함을 확인한다.
+$f(E)$가 connected가 아니라 하고 $f(E) = A \cup B$를 서로소인 비어 있지 않은 relatively open set으로의 분해라 하자. $Y$의 열린집합 $U$, $V$로 $A = U \cap f(E)$, $B = V \cap f(E)$라 쓰고,
 
-$$\begin{aligned}
-E &\subseteq f^{-1}(f(E)) \subseteq f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V), \\
-f^{-1}(U) \cap E &\neq \emptyset \quad (\text{왜냐하면 } U \cap f(E) \neq \emptyset \text{이라 } f(x) \in U \text{인 } x \in E \text{가 있음}), \\
-f^{-1}(V) \cap E &\neq \emptyset \quad (\text{같은 이유}), \\
-f^{-1}(U) \cap f^{-1}(V) \cap E &= f^{-1}(U \cap V) \cap E = \emptyset \quad (\text{왜냐하면 } U \cap V \cap f(E) = \emptyset).
-\end{aligned}$$
+$$A' = \{x \in E \mid f(x) \in A\} = E \cap f^{-1}(U), \quad B' = \{x \in E \mid f(x) \in B\} = E \cap f^{-1}(V)$$
 
-따라서 $f^{-1}(U), f^{-1}(V)$가 $E$의 분할을 이루어 $E$가 connected라는 데 모순이 생긴다. 그러므로 $f(E)$는 connected이다.
+로 두자. $f$가 연속이므로 $f^{-1}(U)$, $f^{-1}(V)$는 $X$의 열린집합이고 $A'$, $B'$는 $E$의 relatively open set이다. $A$가 비어 있지 않으므로 $f(x) \in A$인 $x \in E$가 있어 $A' \neq \emptyset$이고, 같은 이유로 $B' \neq \emptyset$이다. $E$의 각 점은 $f$에 의해 $A$나 $B$로 가므로 $A' \cup B' = E$이고, $A \cap B = \emptyset$이므로 $A' \cap B' = \emptyset$이다. 이는 $E$가 connected라는 가정에 모순이다.
 :::
 
-[정리 2](#thm2){: data-lid="5ssna" }와 [정리 5](#thm5){: data-lid="tcx41" }를 결합하면 중간값 정리가 즉시 따른다.
+[정리 2](#thm2)와 [정리 3](#thm3)을 합치면 중간값 정리가 나온다. 여기서 두 실수 $u, v$에 대해 $y$가 $u$와 $v$ 사이에 있다는 것은 $\min\{u, v\} \leq y \leq \max\{u, v\}$인 것으로 약속한다.
 
-::: 따름정리 6 (중간값 정리)
-$f : [a, b] \rightarrow \mathbb{R}$가 연속이고 $f(a)$와 $f(b)$ 사이의 임의의 값 $y$에 대하여, $f(c) = y$인 $c \in [a, b]$가 존재한다.
-:::
+::: 따름정리 4 (중간값 정리)
+$I \subseteq \mathbb{R}$가 구간이고 $f : I \rightarrow \mathbb{R}$가 연속이면 다음이 성립한다.
 
-::: 증명
-$[a,b]$가 구간이므로 connected이고 ([정리 2](#thm2){: data-lid="kh3jc" }), [정리 5](#thm5){: data-lid="jmoj2" }에 의해 $f([a,b])$도 connected, 곧 구간이다. $f(a), f(b) \in f([a,b])$이고 구간은 두 점 사이의 모든 값을 포함하므로 $y \in f([a,b])$, 즉 $f(c) = y$인 $c$가 있다.
-:::
-
-이로써 미적분학에서 도구로 받아들였던 중간값 정리가 실수의 완비성에 기초하여 증명되었다. 증명의 구조를 다시 짚으면, 정의역의 연결성, 곧 완비성에서 나오는 [정리 2](#thm2){: data-lid="hpoad" }와 연속성에 의한 연결성의 보존, 곧 [정리 5](#thm5){: data-lid="wokp9" }라는 두 위상적 사실만으로 중간값 정리가 따라 나온다. 해석학에서 익숙한 "사잇값을 모두 취한다"는 성질이 실은 순전히 위상적인 진술임을 보여 준다.
-
-## 응용: 근의 존재와 고정점
-
-중간값 정리의 가장 직접적인 쓰임은 방정식의 근이 존재함을 보이는 것이다. 양 끝에서 부호가 바뀌는 연속함수는 그 사이에서 반드시 $0$을 지나므로, $f(a)$와 $f(b)$의 부호가 다른 연속함수는 $(a, b)$에서 근을 가진다. 이를 일반화하면, degree가 홀수인 임의의 실계수 다항식은 적어도 하나의 실근을 가진다. 최고차항이 값을 지배하여 $x \rightarrow +\infty$와 $x \rightarrow -\infty$에서 부호가 반대이므로, 충분히 큰 구간의 양 끝에서 부호가 바뀌어 [따름정리 6](#cor6){: data-lid="4wrce" }가 근을 보장하기 때문이다.
-
-또 하나의 전형적 응용은 구간을 자기 자신으로 보내는 연속함수가 fixed point를 가진다는 사실이다. 이는 일차원에서의 Brouwer fixed point 정리에 해당한다.
-
-::: 명제 7 (일차원 fixed point 정리)
-$f : [0, 1] \rightarrow [0, 1]$이 연속이면, $f(c) = c$인 $c \in [0, 1]$이 존재한다.
+1. $f(I)$는 구간이다.
+2. $a, b \in I$이고 $y$가 $f(a)$와 $f(b)$ 사이에 있으면, $a$와 $b$ 사이의 $c$로서 $f(c) = y$인 것이 존재한다.
 :::
 
 ::: 증명
-보조함수 $g(x) = f(x) - x$를 생각하면 $g$는 $[0,1]$에서 연속이다. 끝점에서의 값을 보면
+(1) [정리 2](#thm2)에 의해 $I$는 connected이고, [정리 3](#thm3)에 의해 $f(I)$는 connected이므로, 다시 [정리 2](#thm2)에 의해 구간이다.
 
-$$\begin{aligned}
-g(0) &= f(0) - 0 = f(0) \geq 0, \\
-g(1) &= f(1) - 1 \leq 0
-\end{aligned}$$
-
-인데, 이는 $f$의 치역이 $[0,1]$에 들어 있기 때문이다. 만약 $g(0) = 0$이면 $c = 0$이, $g(1) = 0$이면 $c = 1$이 곧 fixed point이다. 그렇지 않으면 $g(0) > 0 > g(1)$이므로 [따름정리 6](#cor6){: data-lid="860cq" }를 $y = 0$에 적용하여 $g(c) = 0$, 곧 $f(c) = c$인 $c \in (0, 1)$를 얻는다.
+(2) $a \leq b$라 하자. $[a, b]$는 $I$에 포함되는 구간이므로 (1)을 $f$의 $[a,b]$로의 제한에 적용하면 $f([a, b])$가 구간이다. 이 구간은 $f(a)$와 $f(b)$를 포함하므로 그 사이의 $y$도 포함하고, 따라서 $f(c) = y$인 $c \in [a, b]$가 있다. $b < a$이면 역할을 바꾸면 된다.
 :::
 
-연결성은 부호의 변화뿐 아니라 두 값을 잇는 continuous path의 존재와도 관련된다. 이 관점에서 자연스러운 변형이 path-connectedness이다.
+이 증명에서 연속성은 [정리 3](#thm3)에서, 정의역의 구조는 [정리 2](#thm2)에서 쓰였고 둘이 독립적으로 기여한다. 따라서 정의역이 구간이라는 가정을 빼면 결론이 깨진다. $f : [0, 1]\cup[2, 3] \rightarrow \mathbb{R}$를 $[0,1]$에서 $0$, $[2,3]$에서 $1$로 두면 $f$는 연속이지만 $1/2$를 취하지 않는다. 앞서 본 $\mathbb{Q}$ 위의 $x^2 - 2$도 같은 현상이다.
+
+한편 [따름정리 4](#cor4)의 역, 곧 구간을 구간으로 보내는 함수가 연속이라는 명제는 성립하지 않는다.
+
+::: 예시 5
+$f : \mathbb{R} \rightarrow \mathbb{R}$를 $x \neq 0$에서 $f(x) = \sin(1/x)$, $f(0) = 0$으로 정의하자. $f$는 $0$에서 연속이 아니지만 모든 구간 $J$에 대해 $f(J)$는 구간이다.
+
+실제로 $0 \notin J$이면 $f$가 $J$ 위에서 연속이므로 [따름정리 4](#cor4)의 (1)에 의해 $f(J)$가 구간이다. $J = \{0\}$이면 $f(J) = \{0\}$이다. 그 외의 경우 $J$는 $0$과 다른 한 점을 포함하는 구간이므로 어떤 $\varepsilon > 0$에 대해 $(0, \varepsilon) \subseteq J$ 또는 $(-\varepsilon, 0) \subseteq J$이다. 앞의 경우를 보자. $k$가 충분히 크면 $x = 1/(\pi/2 + 2\pi k)$와 $x = 1/(3\pi/2 + 2\pi k)$가 $(0, \varepsilon)$에 속하고 이 점들에서 $f$의 값은 각각 $1$, $-1$이다. $f$는 $(0, \varepsilon)$에서 연속이므로 $f((0,\varepsilon))$은 $-1$과 $1$을 포함하는 구간이고, $f(J) \subseteq [-1, 1]$이므로 $f(J) = [-1, 1]$이다. 뒤의 경우도 같다.
+:::
+
+즉 중간값 성질은 연속성보다 약한 조건이다. [따름정리 4](#cor4)를 쓸 때에는 연속성을 어디서 확인했는지를 구간 전체에서 점검해야 하며, 사잇값을 취한다는 사실로부터 연속성을 거꾸로 이끌어서는 안 된다.
+
+## 응용
+
+중간값 정리의 직접적인 쓰임은 방정식의 해의 존재이다. 연속함수가 두 점에서 서로 다른 부호를 가지면 그 사이에서 $0$을 지난다. 이를 이용하면 다음을 얻는다.
+
+::: 명제 6
+$f : [0, 1] \rightarrow [0, 1]$이 연속이면 $f(c) = c$인 $c \in [0, 1]$이 존재한다.
+:::
+
+::: 증명
+$g(x) = f(x) - x$는 $[0, 1]$에서 연속이다. $f$의 치역이 $[0,1]$에 포함되므로 $g(0) = f(0) \geq 0$이고 $g(1) = f(1) - 1 \leq 0$이다. 따라서 $0$은 $g(0)$과 $g(1)$ 사이에 있고, [따름정리 4](#cor4)의 (2)에 의해 $g(c) = 0$인 $c \in [0, 1]$이 존재한다.
+:::
+
+정의역과 공역이 같은 구간 $[0,1]$이라는 가정이 모두 쓰인다. $f(x) = x + 1$은 $\mathbb{R}$ 위에서 연속이지만 fixed point가 없고, $f(x) = x/2$는 $(0, 1]$을 자기 자신으로 보내지 않는다. 구간 $(0,1)$에서 $f(x) = x^2$은 $(0, 1)$을 자기 자신으로 보내지만 $f(x) = x$의 해는 $0$, $1$뿐이어서 fixed point가 없다. 닫힌구간이 필요한 이유는 위 증명이 $g(0) \geq 0$, $g(1) \leq 0$이라는 끝점에서의 값에 의존하기 때문이다.
+
+::: 명제 7
+홀수 $n$에 대하여 실계수 $n$차 polynomial $p$는 real root를 가진다.
+:::
+
+::: 증명
+최고차 계수로 나누어 $p(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_0$이라 해도 root는 변하지 않는다. $R = 1 + \sum_{i=0}^{n-1} \lvert a_i\rvert$로 두고 $\lvert x\rvert \geq R$이라 하자. $R > 1$이므로 $\lvert x\rvert \geq 1$이고 $i \leq n - 1$에 대해 $\lvert x\rvert^i \leq \lvert x\rvert^{n-1}$이므로
+
+$$\Bigl\lvert \sum_{i=0}^{n-1} a_i x^i \Bigr\rvert \leq \Bigl(\sum_{i=0}^{n-1} \lvert a_i\rvert\Bigr)\lvert x\rvert^{n-1} < R \lvert x\rvert^{n-1} \leq \lvert x\rvert^n$$
+
+이 성립한다. 두 번째 부등식은 $\sum \lvert a_i\rvert < R$과 $\lvert x\rvert^{n-1} > 0$에서, 마지막 부등식은 $\lvert x\rvert \geq R$에서 나온다. 따라서 $x = R$에서 $p(R) \geq R^n - \bigl\lvert \sum a_i R^i\bigr\rvert > 0$이다. $n$이 홀수이므로 $x = -R$에서는 $(-R)^n = -R^n$이고 $p(-R) \leq -R^n + \bigl\lvert \sum a_i (-R)^i\bigr\rvert < 0$이다. $p$는 $[-R, R]$에서 연속이고 $0$은 $p(-R)$과 $p(R)$ 사이에 있으므로 [따름정리 4](#cor4)의 (2)에 의해 $p(c) = 0$인 $c$가 존재한다.
+:::
+
+짝수차 polynomial에서는 두 끝에서 부호가 같아 위 논증이 작동하지 않으며, $x^2 + 1$이 real root가 없는 예이다.
+
+## 경로연결
+
+Connectedness를 확인하는 가장 직접적인 방법은 두 점을 집합 안의 곡선으로 잇는 것이다.
 
 ::: 정의 8
-거리공간 $X$의 부분집합 $E$가 *path-connected<sub>경로연결</sub>*라는 것은, 임의의 두 점 $x, y \in E$에 대하여 연속함수 $\gamma : [0, 1] \rightarrow E$가 존재하여 $\gamma(0) = x$, $\gamma(1) = y$인 것이다.
+거리공간의 subset $E$가 *path-connected<sub>경로연결</sub>*라는 것은, 임의의 $x, y \in E$에 대해 연속함수 $\gamma : [0, 1] \rightarrow X$로서 $\gamma([0,1]) \subseteq E$, $\gamma(0) = x$, $\gamma(1) = y$인 것이 존재하는 것이다.
 :::
 
-Path-connected는 "두 점을 $E$ 안에 머무는 곡선으로 이을 수 있음"을 뜻하며, 직관적으로 connected보다 강한 조건이다. 실제로 path-connected이면 connected이지만 그 역은 일반적으로 성립하지 않는다.
+$\mathbb{R}^n$의 볼록집합 $E$는 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 머무르므로 path-connected이다. 이 정의로부터 connectedness가 곧바로 따라 나온다.
 
 ::: 명제 9
 Path-connected인 집합은 connected이다.
 :::
 
 ::: 증명
-$E$가 path-connected인데 connected가 아니라고 가정하고, 열린집합 $U, V$가 $E$를 분할한다고 하자. $x \in U \cap E$, $y \in V \cap E$를 택하고, path-connectedness로 연속함수 $\gamma : [0,1] \rightarrow E$를 $\gamma(0) = x$, $\gamma(1) = y$가 되도록 잡는다. 그러면 정의역 $[0,1]$은 connected이므로([정리 2](#thm2){: data-lid="57ddz" }) [정리 5](#thm5){: data-lid="ng1nz" }에 의해 image $\gamma([0,1])$도 connected이다. 그런데
-
-$$\begin{aligned}
-\gamma([0,1]) &\subseteq E \subseteq U \cup V, \\
-U \cap \gamma([0,1]) &\ni \gamma(0) = x, \\
-V \cap \gamma([0,1]) &\ni \gamma(1) = y, \\
-U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \emptyset
-\end{aligned}$$
-
-이므로 $U, V$가 연결집합 $\gamma([0,1])$을 분할하게 되어 모순이다. 따라서 $E$는 connected이다.
+$E$가 path-connected이면서 $E = A \cup B$가 서로소인 비어 있지 않은 relatively open set으로의 분해라 하자. $A = U \cap E$, $B = V \cap E$인 열린집합 $U, V$를 잡는다. $x \in A$, $y \in B$를 택하고 $\gamma(0) = x$, $\gamma(1) = y$, $\gamma([0,1]) \subseteq E$인 연속함수 $\gamma$를 잡자. $\gamma$의 image가 $E$에 포함되므로 $\gamma^{-1}(A) = \gamma^{-1}(U)$, $\gamma^{-1}(B) = \gamma^{-1}(V)$이고 이들은 $[0,1]$의 열린집합이다. 이 둘은 $0$과 $1$을 각각 포함하여 비어 있지 않고, $A \cap B = \emptyset$이므로 서로소이며, 합집합은 $[0,1]$이다. 이는 $[0,1]$이 connected라는 [정리 2](#thm2)에 모순이다.
 :::
 
-[명제 9](#prop9){: data-lid="quvxp" }는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 path를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 topologist's sine curve
+역은 성립하지 않는다. 이를 보이는 표준적인 예가 topologist's sine curve이며, 증명에 [정리 3](#thm3)과 [따름정리 4](#cor4)가 모두 쓰인다. 먼저 connectedness가 closure로 전달됨을 확인하자.
 
-$$S = \{(x, \sin(1/x)) \mid 0 < x \leq 1\} \cup \{(0, y) \mid -1 \leq y \leq 1\}$$
+::: 보조정리 10
+$G$가 거리공간 $X$의 connected subset이고 $G \subseteq S \subseteq \overline{G}$이면 $S$도 connected이다.
+:::
 
-으로, $S$는 connected이지만 path-connected는 아니다. 원점 부근의 진동이 점점 빨라져, 세로 선분 위의 점과 곡선 위의 점을 잇는 continuous path를 만들 수 없기 때문이다.
+::: 증명
+$S = A \cup B$가 서로소인 비어 있지 않은 relatively open set으로의 분해라 하자. $A \cap G$와 $B \cap G$는 $G$의 서로소인 relatively open set이고 합집합이 $G$이다. $G$가 connected이므로 둘 중 하나가 비어 있어야 하며, 일반성을 잃지 않고 $B \cap G = \emptyset$이라 하자. $b \in B$를 택하고 $X$의 열린집합 $V$로 $B = V \cap S$라 쓰면 $V$는 $b$의 이웃이다. $b \in S \subseteq \overline{G}$이므로 $V$는 $G$의 점 $g$를 포함하고, $G \subseteq S$이므로 $g \in V \cap S = B$이다. 이는 $B \cap G = \emptyset$에 모순이다.
+:::
+
+::: 예시 11 (topologist's sine curve)
+$\mathbb{R}^2$에서 $G = \{(x, \sin(1/x)) \mid 0 < x \leq 1\}$, $L = \{0\} \times [-1, 1]$, $S = G \cup L$이라 하자. 그럼 $S$는 connected이지만 path-connected가 아니다.
+
+*Connected임.* $G$는 구간 $(0, 1]$의 연속함수 $x \mapsto (x, \sin(1/x))$에 의한 image이므로 [정리 2](#thm2), [정리 3](#thm3)에 의해 connected이다. $G \subseteq S$이므로 $S \subseteq \overline{G}$만 보이면 [보조정리 10](#lem10)이 적용된다. $(0, y) \in L$에 대해 $\theta = \arcsin y \in [-\pi/2, \pi/2]$로 두고 $x_k = 1/(\theta + 2\pi k)$ ($k \geq 1$)로 놓자. $\theta + 2\pi k \geq 3\pi/2 > 1$이므로 $x_k \in (0, 1]$이고 $\sin(1/x_k) = \sin\theta = y$이다. $x_k \rightarrow 0$이므로 $(x_k, y) \in G$가 $(0, y)$로 수렴하여 $(0, y) \in \overline{G}$이다.
+
+*Path-connected가 아님.* $\gamma = (\gamma_1, \gamma_2) : [0,1] \rightarrow S$가 연속이고 $\gamma(0) = (0, 0) \in L$, $\gamma(1) = (1, \sin 1) \in G$라 하자. 집합 $\{t \mid \gamma_1(t) = 0\}$은 닫혀 있고 $0$을 포함하며 $1$을 포함하지 않으므로, 그 상한 $t^\ast$는 이 집합에 속하고 $t^\ast < 1$이다. $\gamma_1(t^\ast) = 0$이므로 $\gamma(t^\ast) \in L$이고 $y_0 = \gamma_2(t^\ast)$로 놓는다. $t > t^\ast$이면 $\gamma_1(t) > 0$이므로 $\gamma(t) \in G$, 곧 $\gamma_2(t) = \sin(1/\gamma_1(t))$이다.
+
+$\gamma$가 $t^\ast$에서 연속이므로 $\delta > 0$이 있어 $\lvert t - t^\ast\rvert < \delta$이면 $\lvert \gamma_2(t) - y_0\rvert < 1$이다. $t_1 \in (t^\ast, t^\ast + \delta) \cap [0,1]$을 하나 잡고 $c = \gamma_1(t_1) > 0$이라 하자. $\gamma_1$은 $[t^\ast, t_1]$에서 연속이고 $\gamma_1(t^\ast) = 0$, $\gamma_1(t_1) = c$이므로 [따름정리 4](#cor4)의 (2)에 의해 $[0, c]$의 모든 값을 취한다. $k$를 $2\pi k + \pi/2 > 1/c$가 되도록 크게 잡으면 $x_+ = 1/(2\pi k + \pi/2)$와 $x_- = 1/(2\pi k + 3\pi/2)$가 모두 $(0, c)$에 속하므로, $\gamma_1(u_\pm) = x_\pm$인 $u_\pm \in (t^\ast, t_1)$이 있다. 그럼 $\gamma_2(u_+) = \sin(2\pi k + \pi/2) = 1$, $\gamma_2(u_-) = \sin(2\pi k + 3\pi/2) = -1$이고 둘 다 $y_0$에서 거리가 $1$ 미만이어야 하는데, $1 - (-1) = 2$이므로 불가능하다. 따라서 $(0,0)$과 $(1, \sin 1)$을 잇는 path는 없다.
+:::
+
+$S$의 두 부분 $G$와 $L$은 각각 path-connected이고 서로 닿아 있지만, $L$ 근처에서 $G$가 무한히 진동하기 때문에 path가 $L$에서 $G$로 빠져나올 방법이 없다. Connectedness는 분해가 없음만을 요구하므로 이 진동을 문제 삼지 않는다.
 
 ---
 
