@@ -10,23 +10,25 @@ sidebar:
 
 date: 2026-09-15
 weight: 3
+revising: true
+drift_needed: true
 
 ---
 
 앞선 글에서는 stable map들의 moduli를 구성하였다. 이제 이 공간 위에서 곡선이 주어진 점이나 subvariety를 지나야 한다는 조건을 표현하고, 그 조건들을 동시에 만족하는 곡선을 세어 보자. 이 조건은 evaluation map으로 당겨온 cohomology class로 표현되며, 이들의 곱을 moduli 위에서 적분한 값이 Gromov-Witten invariant이다.
 
-이 글에서는 convex target에 대한 genus $0$ Gromov-Witten invariant를 정의하고, 그 기본 성질들이 moduli의 기하로부터 어떻게 나오는지 살펴본다. Marked point를 잊는 morphism은 string axiom과 divisor axiom을 주며, domain이 두 조각으로 갈라지는 boundary는 splitting axiom과 WDVV equation를 준다. 이 성질들은 서로 다른 조건과 degree에 대한 불변량들을 연결하므로, 정의에서 주어진 moduli 위의 적분을 실제로 계산하는 데 쓰인다.
+이 글에서는 convex target에 대한 genus $0$ Gromov-Witten invariant를 정의하고, 그 기본 성질들이 moduli의 기하로부터 어떻게 나오는지 살펴본다. Marked point를 잊는 morphism은 string axiom과 divisor axiom을 주며, domain이 두 조각으로 갈라지는 boundary는 splitting axiom과 WDVV equation을 준다. 이 성질들은 서로 다른 조건과 degree에 대한 불변량들을 연결하므로, 정의에서 주어진 moduli 위의 적분을 실제로 계산하는 데 쓰인다.
 
-우리는 이전 글에서 시작한 [FP]를 따라 이 성질들을 전개하고, 그 응용으로서 $\mathbb{P}^2$ 안의 general point $3d-1$개를 지나는 degree $d$ rational curve의 개수 $N_d$를 계산하는 Kontsevish formula를 유도하며 이 흐름을 마친다. 이 수는 Gromov-Witten invariant로 표현되며, 위에서 예고한 성질들을 이용하면 낮은 degree의 값으로부터 재귀적으로 계산할 수 있다.
+우리는 이전 글에서 시작한 [FP]를 따라 이 성질들을 전개하고, 그 응용으로서 $\mathbb{P}^2$ 안의 general point $3d-1$개를 지나는 degree $d$ rational curve의 개수 $N_d$를 계산하는 Kontsevich formula를 유도하며 이 흐름을 마친다. 이 수는 Gromov-Witten invariant로 표현되며, 위에서 예고한 성질들을 이용하면 낮은 degree의 값으로부터 재귀적으로 계산할 수 있다.
 
 ## 그로모프-위튼 불변량
 
-우리는 stable curve의 $i$번째 marked point가 subvariety $\Gamma_i\subseteq X$를 지난다는 incidence condition을 evaluation map $\ev_i:\overline{\mathcal{M}}_{0,n}(X,\beta)\rightarrow X$를 통해 moduli stack $\overline{\mathcal{M}}_{0,n}(X,\beta)$ 위의 cohomology class $\ev_i^\ast[\Gamma_i]$로 옮겨서 계산한다. 직관적으로 이들의 곱은 이러한 condition들을 모두 만족하는 class에 해당하므로, 이들의 곱을 moduli 전체에서 적분하면 모든 조건을 동시에 만족하는 stable map의 개수에 해당하는 수를 얻는다. 
+우리는 stable map의 $i$번째 marked point의 image가 subvariety $\Gamma_i\subseteq X$ 위에 놓인다는 incidence condition을 evaluation map $\ev_i:\overline{\mathcal{M}}_{0,n}(X,\beta)\rightarrow X$를 통해 moduli stack $\overline{\mathcal{M}}_{0,n}(X,\beta)$ 위의 cohomology class $\ev_i^\ast[\Gamma_i]$로 옮겨서 계산한다. 직관적으로 이들의 곱은 이러한 condition들을 모두 만족하는 class에 해당하므로, 이들의 곱을 moduli 전체에서 적분하면 모든 조건을 동시에 만족하는 stable map의 개수에 해당하는 수를 얻는다. 
 
 우리는 이미 [§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5){: data-lid="5omgf" }에서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 smooth proper Deligne–Mumford stack인 것을 살펴보았다. 따라서 특히 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋정의 4](/ko/math/stacks/integration_on_deligne_mumford_stacks#def4){: data-lid="7zvbr" }이 잘 적용된다. 
 
 ::: 정의 1
-주어진 cohomology class $\gamma_1,\ldots,\gamma_n\in H^\ast(X,\mathbb{Q})$에 대하여, *Gromov-Witten invariant<sub>그로모프-위튼 불변량</sub>*을
+$X$가 convex인 smooth projective variety이고 $\beta\in H_2(X,\mathbb{Z})$가 effective class라 하자. 주어진 cohomology class $\gamma_1,\ldots,\gamma_n\in H^\ast(X,\mathbb{Q})$에 대하여, *Gromov-Witten invariant<sub>그로모프-위튼 불변량</sub>*을
 
 $$\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}=\int_{\overline{\mathcal{M}}_{0,n}(X,\beta)}\ev_1^\ast\gamma_1\smile\cdots\smile\ev_n^\ast\gamma_n$$
 
@@ -39,15 +41,15 @@ $$\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}=\int_{\overline{\mathcal{M}
 
 $$(-1)^{\deg\gamma_i\deg\gamma_j}$$
 
-의 Koszul sign이 생긴다. 하지만 우리 경우에는 cycle class map을 통해
+의 Koszul sign이 생긴다. 하지만 우리 경우에는 cycle class map
 
 $$A^k(X)_\mathbb{Q}\rightarrow H^{2k}(X, \mathbb{Q})$$
 
 을 통해 얻어지는 class들에만 관심있으므로, 이하의 공리들은 모든 $\gamma_i$가 even degree인 경우에 서술한다. 특히 불변량은 insertion의 순서에 의존하지 않는다.
 
-한편, 각 $\gamma_i$가 homogeneous일 때 피적분식의 degree가 moduli stack의 (virtual) dimension과 맞지 않으면 불변량은 $0$이다. <!-- 생략 L9 (전방 참조): 다음 문장의 primary는 descendant와 구별하는 말이다. 이 스트림에서는 Descendant 불변량 글이 정의하므로 앞당겨 쓴 것이고, 거울대칭 카테고리의 Givental J-function 글에도 정의가 있다 --> 따라서 genus $0$의 primary Gromov-Witten invariant가 $0$이 아닐 수 있으려면 반드시
+한편, 각 $\gamma_i$가 homogeneous일 때 피적분식의 degree가 moduli stack의 (virtual) dimension과 맞지 않으면 불변량은 $0$이다. 따라서 genus $0$의 primary Gromov-Witten invariant가 $0$이 아닐 수 있으려면 반드시
 
-$$\vdim_\mathbb{C}\overline{\mathcal{M}}_{0,n}(X,\beta)=\sum_{i=1}^n\codim\gamma_i=\int_\beta c_1(T_X)+\dim X+n-3$$
+$$\vdim\overline{\mathcal{M}}_{0,n}(X,\beta)=\sum_{i=1}^n\codim\gamma_i=\int_\beta c_1(T_X)+\dim X+n-3$$
 
 이어야 한다. 
 
@@ -61,7 +63,9 @@ $$N_d=\langle h^2,\ldots,h^2\rangle_{0,3d-1,d}$$
 
 를 얻는다. 
 
-실제로 $3d-1$개의 점 $q_1,\ldots,q_{3d-1}\in\mathbb{P}^2$를 general하게 잡으면, 이 점 조건을 만족하는 stable map은 boundary나 multiple cover에 놓이지 않는다. 따라서 evaluation map의 한 점 위 fiber의 각 점은 $(\mathbb{P}^1,p_1,\ldots,p_{3d-1},\mu)$의 꼴로, $\mu:\mathbb{P}^1\rightarrow\mathbb{P}^2$는 그 image와 birational하다. 또, general point condition 아래에서는 각 $q_i$가 image curve의 smooth point에 놓이므로 $\mu(p_i)=q_i$를 만족하는 marked point $p_i$도 유일하게 결정된다. 특히 이러한 stable map은 nontrivial automorphism을 갖지 않으며, 각 general evaluation fiber는 reduced이므로 이 stable map은 stack-theoretic weight나 intersection multiplicity 없이 정확히 multiplicity $1$로 세어진다. <!-- 생략 L1 (진술만): 근거 생략 두 갈래. 해가 boundary를 피하고 automorphism이 없으며 evaluation fiber가 reduced라는 것은 [FP] Lemma 13, 14 (Kleiman–Bertini). 해가 multiple cover가 아니고 각 q_i가 image의 smooth point라는 것은 차원 세기(차수 e가 d보다 작은 유리곡선의 족은 3e-1차원)로, [FP]에 명시되지 않음 -->
+실제로 $3d-1$개의 점 $q_1,\ldots,q_{3d-1}\in\mathbb{P}^2$를 general하게 잡으면, 이 점 조건을 만족하는 stable map은 boundary나 multiple cover에 놓이지 않는다. 따라서 evaluation map의 한 점 위 fiber의 각 점은 $(\mathbb{P}^1,p_1,\ldots,p_{3d-1},\mu)$의 꼴로, $\mu:\mathbb{P}^1\rightarrow\mathbb{P}^2$는 그 image와 birational하다. 또, general point condition 아래에서는 각 $q_i$가 image curve의 smooth point에 놓이므로 $\mu(p_i)=q_i$를 만족하는 marked point $p_i$도 유일하게 결정된다. 특히 이러한 stable map은 nontrivial automorphism을 갖지 않으며, 각 general evaluation fiber는 reduced이므로 이 stable map은 stack-theoretic weight나 intersection multiplicity 없이 정확히 multiplicity $1$로 세어진다.
+
+이 주장들은 차원을 세어 확인할 수 있다. Evaluation map들을 모은 morphism $\ev=(\ev_1,\ldots,\ev_{3d-1}):\overline{\mathcal{M}}_{0,3d-1}(\mathbb{P}^2,d)\rightarrow(\mathbb{P}^2)^{3d-1}$의 source와 target은 모두 차원 $6d-2$이다. Domain이 nodal인 stable map들의 locus는 아래에서 볼 것과 같이 codimension $1$이므로 그 image는 $(\mathbb{P}^2)^{3d-1}$의 proper closed subset이고, general한 $(q_1,\ldots,q_{3d-1})$은 이를 피한다. 다음으로 위의 차원 공식에 $n=0$을 넣으면 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^2,e)$의 차원은 $3e-1$이므로, degree $e$인 rational curve들은 차원 $3e-1$ 이하의 family를 이룬다. 따라서 $d$를 나누는 $k\geq2$에 대하여 degree $d/k$인 rational curve 위에 $3d-1$개의 점이 모두 놓이는 tuple들은 차원 $(3d/k-1)+(3d-1)<2(3d-1)$ 이하의 subset을 이루고, general한 점들은 multiple cover의 image 위에 함께 놓이지 않는다. 또 각 curve의 singular point는 유한개이므로, degree $d$ rational curve 위에 $3d-1$개의 점이 모두 놓이고 그 가운데 $q_i$가 그 curve의 singular point인 tuple들은 차원 $(3d-1)+(3d-2)<2(3d-1)$ 이하이다. 따라서 general한 $q_i$는 image curve의 smooth point에 놓인다. 마지막으로 domain이 $\mathbb{P}^1$이고 automorphism이 없는 stable map들의 locus는 smooth variety이고, 앞의 걸음들에 의하여 general한 점 위의 $\ev$의 fiber는 이 locus 안에 놓인다. Characteristic $0$에서는 generic smoothness에 의하여 smooth variety 사이의 morphism이 target의 dense open subset 위에서 smooth하므로, source와 target의 차원이 같은 이 경우 그 fiber는 reduced인 유한 집합이다.
 
 이제 stable map에 그 image curve $\mu(\mathbb{P}^1)$를 대응시키면, 이는 $q_1,\ldots,q_{3d-1}$을 지나는 degree $d$ rational plane curve가 되며 반대로 이러한 curve $C\subset\mathbb{P}^2$가 주어지면, 그 normalization
 
@@ -141,18 +145,22 @@ $\pi$는 proper flat representable family of nodal curves이므로 [\[스택\] �
 
 $$\int_C\mu^\ast D=\int_{\mu_\ast[C]}D=\int_\beta D$$
 
-이다. 따라서 $\pi_\ast(\ev_{n+1}^\ast D)$는 fiber에 무관한 상수 $\int_\beta D$이고, 이를 [명제 3](#prop3){: data-lid="y5lor" }의 증명과 같은 projection formula 계산에 대입하면 남는 적분이 $\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}$이다. <!-- 생략 L5 (진술만): β≠0 조건의 역할 생략. β=0, n=2에서는 forgetful morphism이 없고 등식이 깨진다 -->
+이다. 따라서 $\pi_\ast(\ev_{n+1}^\ast D)$는 fiber에 무관한 상수 $\int_\beta D$이고, 이를 [명제 3](#prop3){: data-lid="y5lor" }의 증명과 같은 projection formula 계산에 대입하면 남는 적분이 $\langle\gamma_1,\ldots,\gamma_n\rangle_{0,n,\beta}$이다.
 :::
 
 위의 결과들은 모두 forgetful morphism으로부터 나오는 것이었으나, moduli space에 풍부한 조합론적 데이터를 주는 것은 boundary 구조였다. Marked point 집합의 분할 $\{1,\ldots,n\}=A\sqcup B$와 effective class의 분해 $\beta=\beta_1+\beta_2$에 대하여, domain이 node 하나에서 갈라지고 $A$와 $\beta_1$과 $B$와 $\beta_2$가 각각의 조각에 놓이는 stable map들의 locus를 $D(A,B;\beta_1,\beta_2)$로 적는다. 
 
-그럼 이렇게 얻어진 $D(A, B; \beta_1, \beta_2)$가 전체 moduli space의 codimension $1$ locus, 즉 divisor가 된다. 두 조각에는 이름이 없으므로 $D(A,B;\beta_1,\beta_2)$와 $D(B,A;\beta_2,\beta_1)$은 같은 divisor이며, 전체 moduli space의 boundary는 이러한 divisor들의 합집합이고 이들이 stack 위에서 étale-local하게 normal crossing을 이룬다는 것이 알려져 있다. <!-- 생략 L2 (진술만): boundary가 normal crossing divisor라는 것의 증명 생략. [FP] Thm 3, §6.1 --> 
+그럼 이렇게 얻어진 $D(A, B; \beta_1, \beta_2)$가 전체 moduli space의 codimension $1$ locus, 즉 divisor가 된다. 두 조각에는 이름이 없으므로 $D(A,B;\beta_1,\beta_2)$와 $D(B,A;\beta_2,\beta_1)$은 같은 divisor이며, 전체 moduli space의 boundary는 이러한 divisor들의 합집합이고 이들이 stack 위에서 étale-local하게 normal crossing을 이룬다는 것이 알려져 있다. 
+
+Convex target에서 이 사실은 [§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시)에서 확인하였다. 그곳에서 본 것과 같이 $H^1(C,\mu^\ast T_X)=0$이므로 node마다의 smoothing parameter를 $\overline{\mathcal{M}}_{0,n}(X,\beta)$의 coordinate의 일부로 택할 수 있고, boundary는 이 parameter들의 곱이 정의하는 normal crossings divisor이다. 특히 node가 하나뿐인 점 근방에서 $D(A,B;\beta_1,\beta_2)$는 그 node의 smoothing parameter를 reduced local equation으로 갖는다.
 
 이제 $A$와 $B$가 모두 공집합이 아닐 때 각 성분은 [§안정사상들의 모듈라이 공간, §§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps#안정사상들의-모듈라이-공간){: data-lid="qcz34" }의 gluing morphism
 
 $$\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)\times_X\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)\rightarrow\overline{\mathcal{M}}_{0,n}(X,\beta)$$
 
-의 image이고, 두 조각을 구별할 수 있으므로 이 morphism은 image로의 isomorphism이다. <!-- 생략 L3 (개요만): isomorphism의 근거는 개요만. node 선택의 유일성과 boundary의 normality, [FP] Lemma 12 (i) --> 즉 두 조각이 node에서 붙어 있다는 조건은 위 fiber product에 따르면 $(\ev_\bullet,\ev_\bullet)$이 diagonal $\Delta_X\subseteq X\times X$로 간다는 조건으로 해석할 수 있다.
+의 image이고, 두 조각을 구별할 수 있으므로 이 morphism은 image로의 isomorphism이다. 즉 두 조각이 node에서 붙어 있다는 조건은 위 fiber product에 따르면 $(\ev_\bullet,\ev_\bullet)$이 diagonal $\Delta_X\subseteq X\times X$로 간다는 조건으로 해석할 수 있다.
+
+[§안정사상들의 모듈라이 공간, §§예시](/ko/math/gromov-witten_theory/moduli_of_stable_maps#예시)에서 본 것과 같이 convex target에서는 $\mu^\ast T_X$가 global section들로 생성되어 $\ev_\bullet$이 smooth morphism이다. 따라서 $(\ev_\bullet,\ev_\bullet)$은 diagonal $\Delta_X$와 transversal하게 만나고, 이 fiber product는 차원 $\dim\overline{\mathcal{M}}_{0,n}(X,\beta)-1$의 smooth stack이다. 이 차원은 $D(A,B;\beta_1,\beta_2)$가 divisor라는 것과 맞는다.
 
 한편 우리는 이미 [\[스택\] §Deligne–Mumford 스택 위의 적분, ⁋명제 9](/ko/math/stacks/integration_on_deligne_mumford_stacks#prop9){: data-lid="9wmoh" }에서, 이러한 상황에서의 refined class를 계산하는 방법을 살펴보았다. 두 조각의 moduli를 $M_A=\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)$, $M_B=\overline{\mathcal{M}}_{0,B\cup\{\bullet\}}(X,\beta_2)$로 적으면, convex target에서는 이 교차에 여분의 성분이 생기지 않으므로 $D(A,B;\beta_1,\beta_2)$ 위에서 $\prod_i\ev_i^\ast\gamma_i$를 적분하는 것은 refined fundamental class에 대한 적분
 
@@ -164,23 +172,23 @@ $$\int_{M_A\times M_B}\Bigl(\prod_{a\in A}\ev_a^\ast\gamma_a\otimes\prod_{b\in B
 
 $$[\Delta_X]=\sum_kT_k\otimes T^k$$
 
-로 분해할 수 있으며, 이를 사용해서 위의 적분을 $M_A$ 위의 적분과 $M_B$ 위의 적분으로 갈라놓을 수 있다. 물론 이 때 $M_A$와 $M_B$는 stability condition을 만족한다고 가정한다. <!-- 생략 L4 (진술만): 앞 문단의 '여분의 성분이 생기지 않으므로'의 근거 생략. global generation으로 evaluation 미분이 전사여서 fiber product가 smooth. [FP] Lemma 10, §6.2 --> 
+로 분해할 수 있으며, 이를 사용해서 위의 적분을 $M_A$ 위의 적분과 $M_B$ 위의 적분으로 갈라놓을 수 있다. 물론 이 때 $M_A$와 $M_B$는 stability condition을 만족한다고 가정한다. 
 
 ::: 명제 5 (Splitting axiom)
 Stability condition을 만족하는 데이터 $(A,B;\beta_1,\beta_2)$에 대하여 $A,B$가 공집합이 아니면
 
 $$\int_{D(A,B;\beta_1,\beta_2)}\prod_{i=1}^n\ev_i^\ast\gamma_i=\sum_k\langle\gamma_A,T_k\rangle_{0,\lvert A\rvert+1,\beta_1}\langle T^k,\gamma_B\rangle_{0,\lvert B\rvert+1,\beta_2}$$
 
-이 성립한다.
+이 성립한다. 여기서 $\gamma_A$는 $a\in A$인 $\gamma_a$들을 나열한 insertion이고, $\gamma_B$도 마찬가지이다.
 :::
 
-물론 우변의 합 내부에서 있는 각 성분은 올바른 차원에서만 $0$이 아니므로 이 조건까지 포함하에 식을 쓸 수는 있겠지만, 그것이 필수는 아니므로 이 형태를 유지하기로 한다.  
+물론 우변의 합 내부에 있는 각 성분은 올바른 차원에서만 $0$이 아니므로 이 조건까지 포함하여 식을 쓸 수는 있겠지만, 그것이 필수는 아니므로 이 형태를 유지하기로 한다.  
 
 위의 계산은 smooth domain을 갖는 stable map이 이미 한 번 <em-ko>부러진</em-ko> 상태, 즉 domain이 nodal curve로 한 번 퇴화한 상태에서 적분값을 계산하는 방법을 보여준다. 그런데 smooth domain을 갖는 stable map을 이러한 식으로 퇴화시키는 방법은 하나가 아니다. 가장 작은 경우로 marked point 네 개, $\{1,2,3,4\}$가 주어졌다 했을 때, 이를 두 조각으로 나누는 방법은 
 
 $$\{1,2\}\sqcup\{3,4\},\qquad \{1,3\}\sqcup\{2,4\},\qquad \{1,4\}\sqcup\{2,3\}$$
 
-의 셋이 있으며 이렇게 도달한 boundary들은 성분의 구성이 서로 전혀 다르다는 것을 이미 설명하였다. 그럼에도 불구하고 이들이 up to linear equivalence에 대해서는 차이나지 않는다는 것이 우리의 다음 결과이다. 
+의 셋이 있으며 이렇게 도달한 boundary들은 성분의 구성이 서로 전혀 다르다. 그럼에도 불구하고 이들이 up to linear equivalence에 대해서는 차이나지 않는다는 것이 우리의 다음 결과이다. 
 
 주장은 네 개의 marked point를 갖는 stable map의 domain에 대한 것이므로 moduli $\overline{\mathcal{M}}_{0,4}$에서만 확인해도 된다. Smooth curve $\mathbb{P}^1$ 위의 네 점의 위치를 택하는 방법은, automorphism $\PGL_2$을 고려한 후에는, 세 점 $p_1,p_2,p_3$을 $0,1,\infty$로 고정한 후 $p_4$의 위치를 자유롭게 결정하는 것과 정확히 같다. 그럼 이제 위에서 살펴본 세 가지 분할 방법은 이 네 번째 점이 $p_1,p_2,p_3$ 중 하나와 충돌하는 극한이 되며, $p_4$의 위치는 $\overline{\mathcal{M}}_{0,4}\cong\mathbb{P}^1$의 좌표이므로 이렇게 $p_4$를 움직이는 것이 정확히 이 서로 다른 configuration을 이어주는 linear equivalence가 된다. 
 
@@ -199,12 +207,14 @@ $X$로 가는 map을 잊고, domain curve를 stabilize한 뒤 처음 네 marked 
 
 $$\phi:\overline{\mathcal{M}}_{0,n}(X,\beta)\rightarrow\overline{\mathcal{M}}_{0,4}$$
 
-를 얻는다. Boundary point $\{1,2\}\sqcup\{3,4\}$의 preimage는 $A\ni1,2$, $B\ni3,4$인 $D(A,B;\beta_1,\beta_2)$들의 합집합이고, 각 성분의 일반적인 점 근처에서 그 node의 smoothing parameter가 양쪽에서 같은 국소좌표를 주므로 이 preimage는 multiplicity $1$로 나타난다. <!-- 생략 L6 (개요만): multiplicity 1은 개요만. node의 smoothing parameter가 moduli의 국소좌표(D의 reduced 국소 방정식)라는 것과 φ가 M_0,4의 국소좌표를 이 parameter로 당긴다는 것을 보이지 않았다. [FP] §5.2의 변형 계산, Prop 8 --> 따라서 위에서 설명한 linear equivalence를 $\phi^\ast$로 당겨오면
+를 얻는다. Boundary point $\{1,2\}\sqcup\{3,4\}$의 preimage는 $A\ni1,2$, $B\ni3,4$인 $D(A,B;\beta_1,\beta_2)$들의 합집합이고, 각 성분의 일반적인 점 근처에서 그 node의 smoothing parameter가 양쪽에서 같은 국소좌표를 주므로 이 preimage는 multiplicity $1$로 나타난다. 따라서 위에서 설명한 linear equivalence를 $\phi^\ast$로 당겨오면
 
 $$\sum_{\substack{A\ni1,2, B\ni3,4\\ \beta_1+\beta_2=\beta}}D(A,B;\beta_1,\beta_2)\sim\sum_{\substack{A\ni1,3, B\ni2,4\\ \beta_1+\beta_2=\beta}}D(A,B;\beta_1,\beta_2)$$
 
 이다. 이제 양변에 $\prod_i\ev_i^\ast\gamma_i$를 곱해 적분하면 두 값이 같고, 각 항에서 $A,B$는 모두 marked point를 둘 이상 포함하므로 [명제 5](#prop5){: data-lid="0m7u6" }를 적용하면 주장의 양변을 얻는다.
 :::
+
+[명제 6](#prop6)의 증명에서 preimage가 multiplicity $1$로 나타나는 것은 다음과 같이 확인할 수 있다. $A\ni1,2$, $B\ni3,4$인 $D(A,B;\beta_1,\beta_2)$의 일반적인 점에서 domain은 두 성분이 node $x$ 하나에서 만난 것이고, 한 성분에는 marked point $1,2$가, 다른 성분에는 $3,4$가 놓인다. 따라서 $X$로 가는 map과 나머지 marked point를 잊어도 각 성분에는 marked point 둘과 node가 남아 수축되지 않으므로, 이 점 근방에서 $\phi$는 node $x$를 그대로 남긴다. 그런데 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10)에 의하여 $\overline{\mathcal{M}}_{0,4}$의 boundary point $\{1,2\}\sqcup\{3,4\}$ 근방의 국소좌표는 그 점이 나타내는 곡선의 node의 smoothing parameter이므로, $\phi$는 이를 $x$의 smoothing parameter와 unit의 곱으로 당긴다. 앞에서 본 것과 같이 이는 $D(A,B;\beta_1,\beta_2)$의 reduced local equation이므로 multiplicity는 $1$이다.
 
 ## Kontsevich 공식
 
@@ -246,7 +256,7 @@ $$\int T_{2-k}\smile h\smile h$$
 
 $$4+2\lvert S_1\rvert+1=3d_1+2+\lvert S_1\rvert$$
 
-이므로 $\lvert S_1\rvert=3d_1-3$여야 하고, 이 때의 값은 [명제 4](#prop4){: data-lid="ybjc8" }에 의하여 $d_1N_{d_1}$이다. 이 때, $\lvert S_1\rvert=3d_1-3$인 것은 $\lvert S_2\rvert=3d_2-1$일 것을 강제하며, 이 상황에서 둘째 인자는 [명제 4](#prop4){: data-lid="l70dv" }를 세 번 적용하여 $d_2^3N_{d_2}$이 된다. 이제 집합 $S_1$을 고르는 방법은 $\binom{3d-4}{3d_1-3}$가지이므로 좌변은
+이므로 $\lvert S_1\rvert=3d_1-3$이어야 하고, 이 때의 값은 [명제 4](#prop4){: data-lid="ybjc8" }에 의하여 $d_1N_{d_1}$이다. 이 때, $\lvert S_1\rvert=3d_1-3$인 것은 $\lvert S_2\rvert=3d_2-1$일 것을 강제하며, 이 상황에서 둘째 인자는 [명제 4](#prop4){: data-lid="l70dv" }를 세 번 적용하여 $d_2^3N_{d_2}$이 된다. 이제 집합 $S_1$을 고르는 방법은 $\binom{3d-4}{3d_1-3}$가지이므로 좌변은
 
 $$N_d+\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1d_2^3\binom{3d-4}{3d_1-3}N_{d_1}N_{d_2}$$
 
@@ -264,10 +274,12 @@ $$\int h^2\smile h\smile T_k=0$$
 
 $$\sum_{\substack{d_1+d_2=d\\ d_1,d_2\geq1}}d_1^2d_2^2\binom{3d-4}{3d_1-2}N_{d_1}N_{d_2}$$
 
-이다. 이제 양변을 비교하면 주장한 식을 얻는다. <!-- 생략 L7 (개요만): d1과 d2의 교환과 이항계수 대칭으로 정리의 꼴에 맞추는 걸음, 초기값 N1=1(두 점을 지나는 직선) 생략 --> 
+이다. 이제 양변을 비교하면 주장한 식을 얻는다. 
 :::
 
-이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" }의 fundamental class를 virtual fundamental class로 대체해야 한다. <!-- 생략 L8 (전방 참조): virtual fundamental class와 convex에서의 일치는 Perfect obstruction theory 글에서 다룬다 -->
+[정리 7](#thm7)은 $d\geq2$에서 $N_d$를 더 낮은 degree의 값들로 나타내므로, general한 두 점을 지나는 직선은 하나뿐이라는 $N_1=1$에서 출발하여 모든 $N_d$가 결정된다. 나아가 $\mathbb{P}^2$의 genus $0$ Gromov-Witten invariant는 모두 이 수들과 $\mathbb{P}^2$의 cup product로 계산된다. Degree가 $0$이고 $n\geq3$인 경우는 [명제 2](#prop2)가 주고, $n\leq2$이면 stable map이 없어 moduli가 공집합이므로 불변량은 $0$이다. $d\geq1$이면 multilinearity에 의하여 각 insertion을 $T_0,T_1,T_2$ 가운데 하나로 두어도 충분한데, $T_0=1$이 하나라도 있으면 [명제 3](#prop3)에 의하여 불변량은 $0$이고, $T_1=h$는 [명제 4](#prop4)에 의하여 하나마다 $d$를 곱하고 지울 수 있다. 그럼 남는 것은 insertion이 모두 $h^2$인 불변량이며, 이는 앞서 본 차원 조건에 의하여 insertion이 $3d-1$개일 때만 $0$이 아니고 그 값은 $N_d$이다.
+
+이 글 전체는 $X$가 convex여서 $\overline{\mathcal{M}}_{0,n}(X,\beta)$이 기대 차원을 갖는 smooth stack이고 따라서 virtual fundamental class가 통상적인 fundamental class와 일치한다는 사실에 전적으로 의존하였다. 반면 일반적인 target이나 positive genus에서는 moduli가 기대 차원보다 큰 성분을 가질 수 있으므로, [정의 1](#def1){: data-lid="5tj19" }의 fundamental class를 virtual fundamental class로 대체해야 한다.
 
 ---
 
