@@ -5879,6 +5879,13 @@ E:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: equicontinuous
+  en: equicontinuous
+  ko: 동등연속
+  primary: ko
+  defs:
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli
 - id: equipotent
   en: equipotent
   ko: 대등
@@ -14731,6 +14738,13 @@ P:
   defs:
   - label: '[위상수학] §파라콤팩트 공간과 단위분할'
     url: /ko/math/topology/paracompact_spaces
+- id: pointwise_bounded
+  en: pointwise bounded
+  ko: 점별유계
+  primary: en
+  defs:
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli
 - id: pointwise_convergence
   en: pointwise convergence
   ko: 점별수렴
@@ -20230,6 +20244,13 @@ U:
   - label: 균등연속성
     lang: ko
     id: uniform_continuity
+- id: uniformly_equicontinuous
+  en: uniformly equicontinuous
+  ko: 균등 동등연속
+  primary: en
+  defs:
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli
 - id: union
   en: union
   ko: 합집합
