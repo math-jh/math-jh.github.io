@@ -64,7 +64,7 @@ $$\Phi_n(\x)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\bigl(\x-\zeta^m\bigr
 으로 정의한다. 즉 $\Phi_n(\x)$는 $n$번째 primitive root of unity들을 해로 갖는 monic polynomial이다.
 :::
 
-Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 첫째, $\x^n-1$의 모든 해는 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
+Cyclotomic polynomial의 구체적인 분석은 우리의 현재 관심사가 아니므로, 이는 [\[체론\] §원분확대, ⁋정의 1](/ko/math/field_theory/cyclotomic_extensions#def1){: data-lid="2gg0k" }에 미뤄두고 우리는 두 가지 기본 성질만 사용하기로 한다. 첫째, $\x^n-1$의 모든 해는 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 

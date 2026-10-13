@@ -11,8 +11,6 @@ sidebar:
 date: 2026-06-11
 weight: 11
 
-published: false
-
 ---
 
 갈루아 이론을 관통하는 철학은, algebraic extension에 필요한 다항식이 주어졌을 때 이 다항식의 해들을 서로 교환하는 action을 통해 group을 만들고, 이를 통해 extension들을 분류하겠다는 것이며, 이 철학이 실제로 어떻게 작동하는지는 [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory){: data-lid="9x9hd" }에서 마침내 완성하였다. 이제 우리는 이번 글에서 이 이론의 역사적인 출발점, 즉 $5$차방정식의 비가해성을 살펴본다. 
@@ -33,7 +31,7 @@ Field $\mathbb{K}$의 multiplicative group $\mathbb{K}^\times$의 임의의 fini
 
 $$x^k=y^{-k}\in \langle x\rangle \cap \langle y\rangle$$
 
-이며 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="7jjc3" }에 의해 서로소인 $r$과 $s$를 모두 나누므로 $1$이다. 즉 $u^k=v^k=e$이고 $r,s$가 모두 $k$를 나누므로 $n=rs$가 $k$를 나누고, 따라서 $n=k$이다.
+이며 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="7jjc3" }에 의해 서로소인 $r$과 $s$를 모두 나누므로 $1$이다. 즉 $x^k=y^k=e$이고 $r,s$가 모두 $k$를 나누므로 $n=rs$가 $k$를 나누고, 따라서 $xy$의 order는 $n$이다.
 
 이로부터 $G$의 모든 원소는 $x^n=1$을 만족해야 하므로 다항식 $\x^n-1$의 해이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 해를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9){: data-lid="9ta6g" }) $\lvert G\rvert\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 이로부터 원하는 주장을 얻는다. 
 :::
@@ -59,7 +57,7 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 
 ## 순환확대와 거듭제곱근
 
-위에서 살펴본 $K(\zeta)/\mathbb{Q}$는 Galois group이 cyclic group인 finite degree Galois extension으로, 이러한 extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 그러나 위의 경우와는 달리, 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4){: data-lid="2e2al" }에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
+Galois group이 cyclic group인 finite degree Galois extension을 *cyclic extension*<sub>순환확대</sub>라 부른다. 일반적으로 field에 거듭제곱근 $\alpha$($\alpha^n=a\in\mathbb{K}$)를 하나 추가한다고 해서 그 extension이 바로 Galois extension이 되는 것은 아니다. 예를 들어 [§갈루아 이론의 기본정리, ⁋예시 4](/ko/math/field_theory/fundamental_theorem_of_galois_theory#ex4){: data-lid="2e2al" }에서 우리는 $\mathbb{Q}$에 $\sqrt[3]{2}$를 추가한 $\mathbb{Q}(\sqrt[3]{2})$는 다른 conjugate $\omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}$들을 포함하지 못해 Galois extension이 되지 못한다는 것을 살펴보았다. 
 
 그러나 우리는 이러한 실패가 오직 root of unity 때문인 것을 증명할 수 있다. 즉, 만일 base field가 충분한 primitive root of unity를 이미 가지고 있다면 거듭제곱근을 추가하는 것과 cyclic extension은 서로 같은 것이 된다. 이번 절에서 우리는 자연수 $n$을 고정하고, $\mathbb{K}$는 primitive $n$-th root of unity $\zeta$를 포함한다고 가정한다.
 
@@ -69,7 +67,7 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 ::: 증명
 우선 우리는 다음의 원소들
 
-$$\alpha, \cdots\zeta\alpha,\quad,\cdots \zeta^{n-1}\alpha$$
+$$\alpha,\zeta\alpha,\ldots,\zeta^{n-1}\alpha$$
 
 이 다항식 $\x^n-a$의 해들임을 직접 대입하여 확인할 수 있으며, 이들은 모두 서로 다르므로 이들이 정확히 이 다항식의 모든 해들이다. 또, 가정에 의해 $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3){: data-lid="4q873" }의 증명에서와 같이 finite degree Galois extension이다.
 
@@ -164,32 +162,30 @@ $$\mathbb{N}=\mathbb{K}\bigl(u_1(\mathbb{E})\cup\cdots\cup u_s(\mathbb{E})\bigr)
 
 으로 정의하자. $\overline{\mathbb{K}}$의 임의의 $\mathbb{K}$-automorphism $v$에 대하여 $v\circ u_j$들도 $\mathbb{E}$에서 $\overline{\mathbb{K}}$로의 $\mathbb{K}$-homomorphism이므로 $v$는 $u_j(\mathbb{E})$들을 permute하고, 따라서 $v(\mathbb{N})=\mathbb{N}$이다. 즉 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5){: data-lid="v0jwu" }에 의해 $\mathbb{N}/\mathbb{K}$는 quasi-Galois이고, characteristic $0$이므로 finite degree Galois extension이다.
 
-이제 $\mathbb{K}$에서 $\mathbb{N}$까지의 탑을 만든다. 각 $u_j(\mathbb{E})$는 $\mathbb{K}$ 위에서 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되고, $u_j(\zeta)^n=u_j(\zeta^n)=1$이므로 $u_j(\zeta)\in\mu_n=\langle\zeta\rangle$이다. 따라서 $\mathbb{N}$은 $\mathbb{K}(\zeta)$에 원소들 $u_j(\alpha_i)$를 모두 추가하여 얻어진다. 이들을
+이제 각 $u_j(\mathbb{E})$는 $\mathbb{K}$ 위에서 $u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{r-1})$로 생성되고, $u_j(\zeta)^n=u_j(\zeta^n)=1$이므로 $u_j(\zeta)\in\mu_n=\langle\zeta\rangle$이다. 따라서 $\mathbb{N}$은 $\mathbb{K}(\zeta)$에 원소들 $u_j(\alpha_i)$를 모두 추가하여 얻어진다. 즉, $\mathbb{T}_0=\mathbb{K}$, $\mathbb{T}_1=\mathbb{K}(\zeta)$로 두고, 이들을
 
 $$u_1(\alpha_0),\ldots,u_1(\alpha_{r-1}),\quad u_2(\alpha_0),\ldots,u_2(\alpha_{r-1}),\quad\ldots,\quad u_s(\alpha_0),\ldots,u_s(\alpha_{r-1})$$
 
-의 순서로 $\beta_1,\ldots,\beta_{rs}$라 하고, $\mathbb{T}_0=\mathbb{K}$, $\mathbb{T}_1=\mathbb{K}(\zeta)$, $\mathbb{T}_{k+1}=\mathbb{T}_k(\beta_k)$로 두면 $t=rs+1$에 대하여 tower
+의 순서로 하나씩 추가하면 tower
 
-$$\mathbb{K}=\mathbb{T}_0\subseteq\mathbb{T}_1\subseteq\cdots\subseteq\mathbb{T}_t=\mathbb{N}$$
+$$\mathbb{K}=\mathbb{T}_0\subseteq\mathbb{T}_1\subseteq\cdots\subseteq\mathbb{T}_{rs+1}=\mathbb{N}$$
 
-을 얻는다. 이 탑의 각 단계에서 추가되는 원소는 거듭제곱근이다. 첫 단계에서는 $\zeta^n=1\in\mathbb{K}$이다. $k\geq1$에 대하여 $\beta_k=u_j(\alpha_i)$라 하면, $u_j(\zeta)\in\mathbb{T}_1$이고 $u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})$은 $\beta_k$보다 먼저 추가되었으므로
+을 얻는다. 그럼 각 단계에서 추가되는 원소는 거듭제곱근이다. 첫 단계에서는 $\zeta^n=1\in\mathbb{K}$이므로 자명하며, $k\geq1$에 대해서는 $\mathbb{T}_{k+1}=\mathbb{T}_k(u_j(\alpha_i))$라 하면, $u_j(\zeta)\in\mathbb{T}_1$이고 
 
-$$\beta_k^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)\subseteq\mathbb{T}_k$$
+$$u_j(\alpha_i)^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)\subseteq\mathbb{T}_k$$
 
-이다.
+이기 때문이다. 이제 $\mathbb{N}/\mathbb{K}$가 Galois이므로 각 $k$에 대하여 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$가 정의되고 ([§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="0tkg8" }), decreasing sequence
 
-이제 $\mathbb{N}/\mathbb{K}$가 Galois이므로 각 $k$에 대하여 $G_k=\Gal(\mathbb{N}/\mathbb{T}_k)$가 정의되고 ([§갈루아 이론의 기본정리, ⁋보조정리 7](/ko/math/field_theory/fundamental_theorem_of_galois_theory#lem7){: data-lid="0tkg8" }), decreasing sequence
+$$\Gal(\mathbb{N}/\mathbb{K})=G_0\supseteq G_1\supseteq\cdots\supseteq G_{rs+1}=\{e\}$$
 
-$$\Gal(\mathbb{N}/\mathbb{K})=G_0\supseteq G_1\supseteq\cdots\supseteq G_t=\{e\}$$
+를 얻는다. 각 단계 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 abelian Galois extension이다. 첫 단계 $\mathbb{K}(\zeta)/\mathbb{K}$는 [명제 3](#prop3){: data-lid="39zr0" }에 의해 그러하며, $k\geq1$에 대하여 $\mathbb{T}_{k+1}=\mathbb{T}_k(u_j(\alpha_i))$이면 $n_i$가 $n$을 나누므로 $\mu_{n_i}\subseteq\mu_n\subseteq\mathbb{T}_1\subseteq\mathbb{T}_k$이어서 $\mathbb{T}_k$는 primitive $n_i$-th root of unity를 포함하고, 따라서 $\alpha_i=0$인 경우는 자명하며, 그 외에는 [명제 4](#prop4){: data-lid="gfsnj" }에 의해 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 cyclic extension이다. 따라서 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="jn7cx" }과 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12){: data-lid="ril7l" }에 의하여 $\Gal(\mathbb{N}/\mathbb{K})$는 solvable group이다. 마지막으로 
 
-를 얻는다. 각 단계 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 abelian Galois group을 갖는 Galois extension이다. 첫 단계 $\mathbb{K}(\zeta)/\mathbb{K}$는 [명제 3](#prop3){: data-lid="39zr0" }에 의해 그러하다. $k\geq1$이고 $\beta_k=u_j(\alpha_i)$이면, $n_i$가 $n$을 나누므로 $\mu_{n_i}\subseteq\mu_n\subseteq\mathbb{T}_1\subseteq\mathbb{T}_k$이어서 $\mathbb{T}_k$는 primitive $n_i$-th root of unity를 포함하고, 따라서 [명제 4](#prop4){: data-lid="gfsnj" }에 의해 $\mathbb{T}_{k+1}/\mathbb{T}_k$는 cyclic extension이다. 그럼 Galois extension $\mathbb{N}/\mathbb{T}_k$에 [§갈루아 이론의 기본정리, ⁋따름정리 6](/ko/math/field_theory/fundamental_theorem_of_galois_theory#cor6){: data-lid="jn7cx" }을 적용하면 $G_{k+1}$은 $G_k$의 normal subgroup이고
+$$\mathbb{L}_f\subseteq\mathbb{K}_r\subseteq\mathbb{E}=u_1(\mathbb{E})\subseteq\mathbb{N}$$
 
-$$G_k/G_{k+1}\cong\Gal(\mathbb{T}_{k+1}/\mathbb{T}_k)$$
-
-는 abelian이다. 따라서 [\[군론\] §군의 열, ⁋명제 12](/ko/math/group_theory/series_of_groups#prop12){: data-lid="ril7l" }에 의하여 $\Gal(\mathbb{N}/\mathbb{K})$는 solvable group이다.
-
-마지막으로 $\mathbb{L}_f\subseteq\mathbb{K}_r\subseteq\mathbb{E}=u_1(\mathbb{E})\subseteq\mathbb{N}$이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="56hfy" }에 의해 solvable이다.
+이고 $\mathbb{L}_f/\mathbb{K}$가 Galois이므로, [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13){: data-lid="joes0" }에 의하여 restriction $\Gal(\mathbb{N}/\mathbb{K}) \rightarrow \Gal(\mathbb{L}_f/\mathbb{K})$이 surjective이다. 즉 $\Gal(\mathbb{L}_f/\mathbb{K})$는 solvable group의 quotient이므로 [\[군론\] §군의 열, ⁋명제 13](/ko/math/group_theory/series_of_groups#prop13){: data-lid="56hfy" }에 의해 solvable이다.
 :::
+
+그럼 이제 $5$차 이상의 다항식의 근의 공식이 존재하지 않는다는 사실은 $n\geq 5$에 대한 $S_n$의 구조로부터 따라나오는 것이다. 
 
 ::: 따름정리 8 (Abel–Ruffini)
 $5$차 이상의 일반 다항식에 대하여, 거듭제곱근으로 표현되는 근의 공식은 존재하지 않는다.
