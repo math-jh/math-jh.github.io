@@ -4580,6 +4580,13 @@ D:
   see:
   - label: Homotopy equivalence
     id: homotopy_equivalence
+- id: deformation_space
+  en: deformation space
+  ko: 변형 공간
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §마디 곡선의 변형'
+    url: /ko/math/gromov-witten_theory/deformations_of_nodal_curves
 - id: deformation_theory
   en: deformation theory
   ko: 변형이론
@@ -5524,6 +5531,13 @@ D:
   defs:
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+- id: dual_graph
+  en: dual graph
+  ko: 쌍대 그래프
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: dual_lattice
   en: dual lattice
   ko: 쌍대 격자
@@ -7066,6 +7080,13 @@ F:
   defs:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
+- id: forgetful_morphism
+  en: forgetful morphism
+  ko: 망각 사상
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: formal_adjoint
   en: formal adjoint
   ko: 형식 수반작용소
@@ -13815,6 +13836,13 @@ O:
 - id: obstruction_class
   en: obstruction class
   ko: 장애류
+  primary: en
+  defs:
+  - label: '[스킴] §변형이론과 여접 복합체'
+    url: /ko/math/scheme_theory/deformation_theory
+- id: obstruction_space
+  en: obstruction space
+  ko: 장애 공간
   primary: en
   defs:
   - label: '[스킴] §변형이론과 여접 복합체'
