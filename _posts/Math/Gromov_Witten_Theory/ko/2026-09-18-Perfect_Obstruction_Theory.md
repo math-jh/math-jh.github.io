@@ -97,27 +97,20 @@ $$\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)=\dim X-\rank E$$
 
 $$C_{Z/X}=\Spec_Z\bigoplus_{n\geq0}\mathcal{I}^n/\mathcal{I}^{n+1}$$
 
-으로 정의되었으며, 이는 직관적으로 $X$를 $Z$의 normal 방향으로 무한히 확대했을 때 $Z$ 위에 남는 모양으로 생각할 수 있다. 그럼 위 명제의 내용은 $t\neq0$에서의 fiber가 $X$이고 $t=0$에서의 fiber가 $C_{Z/X}$인 $\mathbb{A}^1$ 위의 family가 존재한다는 것, 곧 $X$를 $Z$를 따라 $C_{Z/X}$로 degenerate시킬 수 있다는 것이다. 이 degeneration 때문에 $C_{Z/X}$는 $Z$의 모양과 무관하게 pure dimension $\dim X$를 갖는다. 이때 만일 $Z\hookrightarrow X$가 regular embedding이라면 $C_{Z/X}$는 normal bundle과 같지만, 일반적으로는 그 fiber가 vector space가 아닌 cone으로 주어진다.
+으로 정의되었으며, 이는 직관적으로 $X$를 $Z$의 normal 방향으로 무한히 확대했을 때 $Z$ 위에 남는 모양으로 생각할 수 있다. 이 때 위 명제의 내용은 $t\neq0$에서의 fiber가 $X$이고 $t=0$에서의 fiber가 $C_{Z/X}$인 $\mathbb{A}^1$ 위의 family가 존재한다는 것, 곧 $X$를 $Z$를 따라 $C_{Z/X}$로 degenerate시킬 수 있다는 것으로, 이 degeneration 때문에 $C_{Z/X}$는 $Z$의 모양과 무관하게 pure dimension $\dim X$를 갖는다. 만일 $Z\hookrightarrow X$가 regular embedding이라면 $C_{Z/X}$는 normal bundle과 같지만, 일반적으로는 그 fiber가 vector space가 아닌 cone으로 주어진다.
 
-이제 $E$를 국소적으로 trivialize하여 $s=(s_1,\ldots,s_r)$로 적으면 $\mathcal{I}=(s_1,\ldots,s_r)$이므로, $s$와의 pairing
+이제 $E$를 국소적으로 trivialize하여 $s=(s_1,\ldots,s_r)$로 적자. 그럼 $\mathcal{I}=(s_1,\ldots,s_r)$이므로, $s$와의 pairing $s^\vee:E^\vee\rightarrow\mathcal{O}_X$의 image가 정확히 $\mathcal{I}$이고, 이를 $Z$로 제한하면 surjection $E^\vee\vert_Z\twoheadrightarrow\mathcal{I}/\mathcal{I}^2$을 얻으므로 $C_{Z/X}$는 $E\vert_Z$의 closed subcone이 된다.
 
-$$s^\vee:E^\vee\rightarrow\mathcal{O}_X,\qquad\varphi\mapsto\varphi(s)$$
-
-의 image가 $\mathcal{I}$이다. 실제로 trivialization의 basis를 $e_1,\ldots,e_r$, 그 dual basis를 $e_1^\vee,\ldots,e_r^\vee$라 하면 $s^\vee(e_i^\vee)=e_i^\vee(s)=s_i$이다. 이를 $Z$로 제한하면 surjection $E^\vee\vert_Z\twoheadrightarrow\mathcal{I}/\mathcal{I}^2$을 얻고, $\bigoplus_n\mathcal{I}^n/\mathcal{I}^{n+1}$은 degree $1$의 성분 $\mathcal{I}/\mathcal{I}^2$으로 생성되므로 이는 graded algebra의 surjection
-
-$$\Sym(E^\vee\vert_Z)\twoheadrightarrow\Sym(\mathcal{I}/\mathcal{I}^2)\twoheadrightarrow\bigoplus_{n\geq0}\mathcal{I}^n/\mathcal{I}^{n+1}$$
-
-으로 이어진다. 여기에 $\Spec_Z$를 취하면 closed embedding
-
-$$C_{Z/X}\hookrightarrow N_{Z/X}=\Spec_Z\Sym(\mathcal{I}/\mathcal{I}^2)\hookrightarrow E\vert_Z$$
-
-를 얻으므로 $C_{Z/X}$는 $E\vert_Z$의 closed subcone이 된다. 가운데의 $N_{Z/X}$는 $Z$가 regular embedding이면 normal bundle이고, 일반적으로는 각 fiber가 vector space이지만 그 차원이 점마다 달라질 수 있는 cone이다.
-
-이제 zero section $0_E:Z\hookrightarrow E\vert_Z$에 대한 Gysin map을 cone에 취하여
+이제 zero section $0_E:Z\hookrightarrow E\vert_Z$에 대한 Gysin map을 이 cone에 취하여
 
 $$e(E,s)=0_E^![C_{Z/X}]\in A_{\dim X-r}(Z)$$
 
-로 localized Euler class를 정의한다. 차원이 $\dim X-r$이 되는 것은 pure dimension $\dim X$의 cone을 rank $r$의 bundle의 zero section으로 자르기 때문이며, 이것이 위에서 점마다 센 $\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)$의 전역적인 판본이다. 또 $e(E,s)$를 $X$로 보내면 $e(E)\cap[X]$이고, $s$를 일반적인 위치로 흔든 family $s_t$에 대해 $Z(s_t)$의 class가 $t\rightarrow0$에서 가는 극한은 $e(E,s)$이다. $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이다.
+로 localized Euler class를 정의한다. 위에서 $C_{Z/X}$는 $X$를 $Z$의 normal 방향으로 무한히 확대한 모양이었고, 이를 $s$를 통해 $E\vert_Z$ 안에 넣으면 그 $x\in Z$ 위의 fiber는 $x$에서 $Z$ 밖으로 조금 나갔을 때 $s$가 갖게 되는 값들의 방향을 $E_x$ 안에 모은 것이 된다. 그럼 $0_E^![C_{Z/X}]$의 역할은 $E$의 zero section과 이 cone을 교차시키는 것으로서, 직관적으로는 zero section을 일반적인 section으로 흔들어준 뒤 cone과의 교집합을 보는 것이다. 만일 $s$가 점 $x$에서 transversal하다면, cone의 fiber가 $E_x$ 전체가 되며 따라서 이러한 경우 $Z$가 그대로 나오게 된다. 문제는 $s$가 transversal하지 않은 점으로, 이러한 경우 cone의 fiber가 $E_x$를 전부 채우지 못하며, 이렇게 남는 부분으로 들어간 section들은 $Z$를 깎아주게 된다. 위의 차원 계산은 이러한 방식으로 깎여나가는 정도가 정확히 $Z$가 기대보다 부푼 정도가 되어, 이들이 서로를 상쇄한다는 것이며 따라서 $e(E,s)$는 기대차원의 class가 되는 것이다. 
+
+가령 [예시 1](#ex1)의 상황에서 $s=(\ell_1,0)$인 경우를 보자. 그럼 이것이 정의하는 locus는 직선 $Z(s)=\{\ell_1=0\}$이다. $Z(s)$ 바깥에서는 $\ell_1=0$ 조건이 사라지므로 $s$의 첫째 성분은 값을 가지게 될 수 있지만, 둘째 성분은 항등적으로 $0$이므로 여전히 $0$이다. 이 상황에서 cone은 $E\vert_{Z(s)}=\mathcal{O}_{Z(s)}(1)^{\oplus2}$의 첫째 성분이므로, zero section과의 교차는 첫째 성분 방향으로는 아무것도 깎지 않고 둘째 성분 $\mathcal{O}_{Z(s)}(1)$ 방향에서만 $Z(s)$를 깎는다. 즉 이 교차는 둘째 성분의 zero section으로 $Z(s)$를 자른 것과 같고, 따라서 $e(E,s)=c_1(\mathcal{O}_{Z(s)}(1))\cap[Z(s)]$이다. $Z(s)\cong\mathbb{P}^1$이므로 이는 degree $1$의 point class이다.
+
+
+차원이 $\dim X-r$이 되는 것은 pure dimension $\dim X$의 cone을 rank $r$의 bundle의 zero section으로 자르기 때문이며, 이것이 위에서 점마다 센 $\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)$의 전역적인 판본이다. 또 $e(E,s)$를 $X$로 보내면 $e(E)\cap[X]$이고, $s$를 일반적인 위치로 흔든 family $s_t$에 대해 $Z(s_t)$의 class가 $t\rightarrow0$에서 가는 극한은 $e(E,s)$이다. $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이다.
 
 Cone이 이 class를 정할 수 있는 것은 그것이 각 점의 Kuranishi map을 기록하기 때문이며, 그 방식은 위의 소거에서 바로 보인다. 점 $x\in Z$에서 $s_I$의 미분은 $K'$ 위에서 isomorphism이므로, $x$의 formal neighborhood의 coordinate를 $K$의 coordinate $y$와 $s_I$의 성분들로 잡을 수 있다. 이 coordinate에서 $s_I=0$이 정의하는 subvariety는 $y$만의 공간이고 그 위에서 $s_Q$는 $\kappa(y)$이므로, $Z$의 ideal은 $s_I$의 성분들과 $\kappa(y)$의 성분들로 생성되며 두 묶음은 서로 다른 변수에 걸려 있다. 따라서 $\bigoplus_n\mathcal{I}^n/\mathcal{I}^{n+1}$은 $\kappa^{-1}(0)\subseteq K$의 normal cone의 graded algebra에 $s_I$의 성분들의 class를 polynomial variable로 붙인 것이 되고, $x$의 formal neighborhood에서
 
