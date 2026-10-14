@@ -7256,6 +7256,13 @@ F:
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
+- id: frobenius_endomorphism
+  en: Frobenius endomorphism
+  ko: 프로베니우스 자기준동형사상
+  primary: en
+  defs:
+  - label: '[체론] §체'
+    url: /ko/math/field_theory/fields
 - id: frobenius_manifold
   en: Frobenius manifold
   ko: 프로베니우스 다양체
