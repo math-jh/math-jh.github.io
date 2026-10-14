@@ -111,7 +111,7 @@ $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
-이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }). 따라서 $\gcd(a,n)=1$이면 $a+n\mathbb{Z}$가 생성하는 cyclic subgroup의 크기는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 $\varphi(n)$을 나누고, 이로부터 $(a+n\mathbb{Z})^{\varphi(n)}=1+n\mathbb{Z}$, 즉 $a^{\varphi(n)}\equiv 1\pmod{n}$을 얻는다. ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정리 3](/ko/math/number_theory/euler_theorem#thm3){: data-lid="qq63x" })
+이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }). 따라서 $\gcd(a,n)=1$이면 $a+n\mathbb{Z}$가 생성하는 cyclic subgroup의 크기는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5){: data-lid="wmkcd" }에 의해 $\varphi(n)$을 나누고, 이로부터 $(a+n\mathbb{Z})^{\varphi(n)}=1+n\mathbb{Z}$, 즉 $a^{\varphi(n)}\equiv 1\pmod{n}$을 얻는다. ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정리 3](/ko/math/number_theory/euler_theorem#thm3){: data-lid="qq63x" })
 
 반면 $\gcd(a,n)=d>1$이고 $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$이면 $a+n\mathbb{Z}$는 zero divisor이다. 이는 $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$이고,
 

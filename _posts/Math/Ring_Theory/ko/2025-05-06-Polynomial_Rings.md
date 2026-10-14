@@ -230,7 +230,7 @@ $$u=b_1 u_1 + \cdots + b_n u_n$$
 유일성은 위의 논증에 의해 자명하고, 남는 것은 $u$에 각각의 $a_i$를 대입하여 그 값이 $b_i$가 나오는 것을 확인하는 것 뿐이다. 만일 $j\neq i$라면 $u_j$의 분자에 인수 $\x-a_i$가 등장하므로 $u_j(a_i)=0$이고, $u_i(a_i)=1$이므로 $u(a_i)=b_i$를 얻는다. 
 :::
 
-앞서 본, integral domain 위의 $n$차 polynomial이 많아야 $n$개의 해를 갖는다는 사실은 정수론에서도 쓰인다. Prime number $p$에 대하여 $\mathbb{Z}/p\mathbb{Z}$는 field이므로 ([§가역원과 영인자, ⁋예시 7](/ko/math/ring_theory/units_and_zero_divisors#ex7)), 계수가 정수이고 leading coefficient가 $p$로 나누어지지 않는 $n$차 polynomial $f$에 대하여 합동식 $f(x)\equiv 0\pmod{p}$는 법 $p$에 대하여 많아야 $n$개의 해를 갖는다.
+앞서 본, integral domain 위의 $n$차 polynomial이 많아야 $n$개의 해를 갖는다는 사실은 정수론에서도 쓰인다. Prime number $p$에 대하여 $\mathbb{Z}/p\mathbb{Z}$는 field이므로 ([§가역원과 영인자, ⁋예시 7](/ko/math/ring_theory/units_and_zero_divisors#ex7){: data-lid="zj4hz" }), 계수가 정수이고 leading coefficient가 $p$로 나누어지지 않는 $n$차 polynomial $f$에 대하여 합동식 $f(x)\equiv 0\pmod{p}$는 법 $p$에 대하여 많아야 $n$개의 해를 갖는다.
 
 한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 derivation이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations){: data-lid="dhqm2" }) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
 

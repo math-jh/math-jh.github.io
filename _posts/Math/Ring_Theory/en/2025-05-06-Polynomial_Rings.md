@@ -223,7 +223,7 @@ is the unique polynomial of degree less than $n$ satisfying $u(a_i)=b_i$ for eac
 Uniqueness is trivial by the above argument, and it remains only to verify that substituting each $a_i$ into $u$ yields the value $b_i$.
 :::
 
-The fact seen above, that a polynomial of degree $n$ over an integral domain has at most $n$ roots, is also used in number theory. For a prime number $p$, the ring $\mathbb{Z}/p\mathbb{Z}$ is a field ([§Units and Zero Divisors, ⁋Example 7](/en/math/ring_theory/units_and_zero_divisors#ex7)), so for a polynomial $f$ of degree $n$ with integer coefficients whose leading coefficient is not divisible by $p$, the congruence $f(x)\equiv 0\pmod{p}$ has at most $n$ solutions modulo $p$.
+The fact seen above, that a polynomial of degree $n$ over an integral domain has at most $n$ roots, is also used in number theory. For a prime number $p$, the ring $\mathbb{Z}/p\mathbb{Z}$ is a field ([§Units and Zero Divisors, ⁋Example 7](/en/math/ring_theory/units_and_zero_divisors#ex7){: data-lid="zj4hz" }), so for a polynomial $f$ of degree $n$ with integer coefficients whose leading coefficient is not divisible by $p$, the congruence $f(x)\equiv 0\pmod{p}$ has at most $n$ solutions modulo $p$.
 
 On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Differentiation](/en/math/multilinear_algebra/derivations){: data-lid="dhqm2" }), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
 
