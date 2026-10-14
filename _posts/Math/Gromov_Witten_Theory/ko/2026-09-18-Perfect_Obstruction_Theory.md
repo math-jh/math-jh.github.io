@@ -16,42 +16,31 @@ drift_needed: true
 
 ---
 
-우리는 [§마디 곡선의 변형, ⁋정리 9](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#thm9)에서 prestable curve들의 moduli stack $\mathfrak{M}_{g,n}$이 차원 $3g-3+n$의 smooth algebraic stack임을 보았다. 이를 위해 핵심적인 사실은 prestable curve의 deformation이 unobstructed라는 것으로, 이것이 moduli stack의 smoothness를 보장했다. 
+우리는 [§마디 곡선의 변형, ⁋정의 8](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def8)의 prestable curve들의 moduli stack $\mathfrak{M}_{g,n}$이 차원 $3g-3+n$의 smooth algebraic stack임을 보았다. 이를 위해 핵심적인 사실은 prestable curve의 deformation이 unobstructed라는 것으로, 이것이 moduli stack의 smoothness를 보장했다. 
 
-이와 대조되는 것은...
-> 여기에서 일단 실제 정의 링크로 해 줘. 그러니까 M_g,n이 실제로 나오는 정의 링크를 걸어줘. 그리고 흐름은 어떻게 잡을 거냐면, 이와 대조되는 것은 moduli of stable maps들로, 이런 경우에는 X가 convex가 아닌 한 obstruction space가 살아 있어서 $\mathfrak{M}_{g,n}$이 smoothness가 될 필요가 없었다. 이렇게 적고, 그 다음에 이제 지금 뒤쪽 부분 두 개를 합친다. 즉 moduli of stable maps 상황에서 이야기를 하되, tangent space에서 고차 deformation 상황으로 넘어가는 이야기를 해 주고, 그 과정에서 obstruction이 사라지도록 관계식을 넣어야 한다. 여기서 관계식 개수가 많아야 obstruction space 차원만큼 있으므로 virtual dimension을 이렇게 정의한다. 이렇게 쓰고, 문단 바꾸고, 그 다음에 관점을 바꿔서 쿠라니시 픽처를 소개한다. 이를 다른 말로 하면, deformation들의 공간 T^1이 있고 obstruction들의 공간 T^2가 있고, 뭐 이렇게 해서 Kuranishi mapjㅢ 
+이와 대조되는 것은 [§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps)에서 다룬 stable map들의 moduli $\overline{\mathcal{M}}_{g,n}(X,\beta)$이다. Stable map $(C,p_\bullet,\mu)$의 first-order deformation들이 이루는 deformation space를 $T^1$, $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 étale atlas에서 이 stable map을 나타내는 점에서의 complete local ring을 $R$이라 하자. 그럼 이 점 근방의 formal neighborhood는 $\Spec R$로 주어지며, 이는 이 점을 $k$차까지 두껍게 한 infinitesimal neighborhood를 모든 $k$에 대해 모은 것이다. 이 때, stable map에는 infinitesimal automorphism이 없으므로 $T^1$은 이 점의 tangent space이고, $R$을 $(C,p_\bullet,\mu)$의 universal formal deformation의 base로 사용할 수 있다. 이제 $N=\dim T^1$이라 하고 $T^1$의 coordinate를 $\x_1,\ldots,\x_N$이라 하면, $T^1$의 원점에서의 formal neighborhood는
 
-얘를 우리가 deformation space, tangent space의 deformation space를 본다고 치면 이제 여기서 obstruction이 실제로 생기게 되고, 
+$$\Spec P,\qquad P=\mathbb{C}[[\x_1,\ldots,\x_N]]$$
 
+으로 쓸 수 있으며, cotangent space에서 isomorphism인 surjection $P\rightarrow R$이 존재한다. 그 kernel을 $J$라 하면 $R=P/J$이고 $J\subseteq(\x_1,\ldots,\x_N)^2$이므로, 이 점의 formal neighborhood는 $T^1$의 원점의 formal neighborhood 안에서 이차 이상의 방정식들로 잘라낸, tangent space가 같은 closed subscheme으로 주어진다. 한편 $P$의 maximal ideal을 $\mathfrak{m}_P$라 하면 $P/\mathfrak{m}_PJ\rightarrow R$은 small extension이고, $\Spec R$에서 moduli로 가는 map을 이를 따라 extend하는 것의 obstruction은 $T^2\otimes_{\mathbb{C}}J/\mathfrak{m}_PJ$의 원소, 곧 linear map $(J/\mathfrak{m}_PJ)^\vee\rightarrow T^2$이며 이 map은 injective이다. 따라서 $J$는 많아야 $\dim T^2$개의 방정식으로 생성되며, 이것이 바로 virtual dimension
 
+$$\vdim=\dim T^1-\dim T^2$$
 
-고, 그 근거는 prestable curve의 deformation이 unobstructed라는 것이었다. 한 점 $(C,p_\bullet)$의 deformation을 small extension $A'\rightarrow A$를 따라 한 차수 extend하려 할 때, 그 obstruction class는 obstruction space $T^2(C)$에 kernel $I=\ker(A'\rightarrow A)$를 tensor한 공간 $T^2(C)\otimes_{\mathbb{K}}I$에 놓이고, 이 class가 $0$인 것과 extension이 존재하는 것이 동치였다. 따라서 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate들에서 출발하여 deformation을 한 차수씩 extend해 나가려면 매 단계의 obstruction이 사라지도록 coordinate들 사이에 관계식을 넣어야 하고, 그 결과 versal base는 이 coordinate들에 대한 power series ring을 많아야 $\dim T^2(C)$개의 관계식으로 나눈 것이 된다. Prestable curve의 경우에는 [§마디 곡선의 변형, ⁋명제 7](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop7)에 의하여 obstruction space 자체가 $0$이므로 관계식이 하나도 필요하지 않았고, 따라서 versal base가 power series ring이 되어 $\mathfrak{M}_{g,n}$은 모든 점에서 smooth하였다.
+의 정체였다. 우리가 Gromov-Witten invariant를 계산할 때는 $X$가 convex라는 가정 아래 $T^2=0$이어서 $\vdim$과 실제 차원이 같았다.
 
-에도 deformation space $T^1$과 obstruction space $T^2$가 있으며, 같은 이유로 $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 각 점에서의 complete local ring은 $T^1$의 coordinate들에 대한 power series ring을 많아야 $\dim T^2$개의, 일차항이 없는 관계식으로 나눈 꼴이었다. 즉 점 근방에서 moduli는 $T^1$의 coordinate 위에 $T^2$에 값을 갖는 방정식들을 부과한 것이고, 이 방정식들을 하나의 map으로 적으면 일차항이 없는 formal map
+관점을 바꾸어 이 방정식들을 $T^2$에 값을 갖는 하나의 map으로 생각하자. $T^2$의 basis $e_1,\ldots,e_r$의 dual basis를 택하면, 이를 위의 injection의 dual $(T^2)^\vee\rightarrow J/\mathfrak{m}_PJ$로 보낼 수 있으며, 이를 $J$의 원소 $f_1,\ldots,f_r$로 lift하면 $f_1,\ldots,f_r$은 $J$를 생성한다. 따라서
 
-$$\kappa:(T^1,0)\longrightarrow(T^2,0)$$
+$$\kappa=\sum_{i=1}^rf_ie_i:(T^1,0)\longrightarrow(T^2,0)$$
 
-의 zero locus이다. 이 $\kappa$를 *Kuranishi map*이라 부른다. 방정식 하나는 차원을 많아야 $1$만큼 낮추므로 각 점을 지나는 irreducible component의 차원은 $\dim T^1-\dim T^2$ 이상이고, 이 값이 virtual dimension $\vdim$이다. [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)는 $\dim T^1$과 $\dim T^2$가 각각 점마다 달라질 수 있어도 그 차이는 $X$와 $g$, $n$, $\beta$만으로 결정된다는 것을 보였는데, 이 명제의 exact sequence가 $T^2$에서 $0$으로 끝나는 것이 바로 위의 unobstructedness 때문이었다. 즉 pointed domain의 deformation에는 obstruction이 없으므로 stable map의 obstruction은 모두 map $\mu$를 extend하는 데에서 오고, $T^2$는 $H^1(C,\mu^\ast T_X)$의 quotient이다. 특히 $X$가 convex이면 genus $0$에서 $H^1(C,\mu^\ast T_X)=0$이므로 $T^2=0$이고, $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 차원 $\vdim$의 smooth proper Deligne–Mumford stack이었다. ([§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5))
+로 두면, $\kappa$는 $T^1$의 coordinate에 대한 power series로서 $T^2$에 값을 갖고 상수항과 일차항이 없으며, $R=P/(f_1,\ldots,f_r)$이므로 $(C,p_\bullet,\mu)$를 나타내는 점의 formal neighborhood는 정확히 그 zero locus $\kappa^{-1}(0)$이다. 이 $\kappa$를 *Kuranishi map*이라 부른다. $\kappa$는 coordinate와 lift의 선택에 의존하지만 그 zero locus는 그렇지 않으며, 이차항 $\kappa_2$도 선택에 의존하지 않고 first-order deformation $v$를 이차까지 extend하는 것의 obstruction $\kappa_2(v)\in T^2$를 준다. 또 $\dim T^2$가 $J$를 생성하는 데 필요한 방정식의 개수보다 크면 그 차이만큼의 성분을 항등적으로 $0$으로 잡을 수 있고, 특히 $J=0$이면 $\kappa\equiv0$이다. 즉 각 점 근방에서 moduli는 deformation들의 공간 $T^1$을 obstruction들의 공간 $T^2$에 값을 갖는 방정식 $\kappa=0$으로 잘라낸 것이고, $\vdim$은 $\kappa$의 $\dim T^2$개의 성분이 독립적인 방정식으로 작동할 때 기대되는 차원이다.
 
-그러나 $X$가 convex가 아니면 $H^1(C,\mu^\ast T_X)$가 사라지지 않을 수 있다. [§안정사상들의 모듈라이 공간, ⁋예시 6](/ko/math/gromov-witten_theory/moduli_of_stable_maps#ex6)에서 smooth cubic surface $S$ 위의 line $L$에 대하여 $\overline{\mathcal{M}}_{0,0}(S,2[L])$의 모든 점에서 $T^2$는 $1$차원이었고, moduli는 차원 $2$의 smooth stack이었으나 virtual dimension은 $1$이었다. 각 점에서 Kuranishi map이 항등적으로 $0$이어서 차원을 전혀 낮추지 못한 것이다. 일반적으로 moduli가 smooth한 점에서는 $\dim T^1$이 그 점에서의 실제 차원과 같으므로, 실제 차원이 $\vdim$을 넘는 양은 정확히 $\dim T^2$이다.
-
-Convexity가 이러한 현상을 막아 주는 것도 genus $0$에서뿐이다. $\dim X=d\geq1$이라 하고 $n\geq1$에 대하여 class $0$의 genus $1$ stable map을 보자. 이는 각 component를 한 점으로 보내는 constant map이고, stability에 의해 domain은 stable curve여야 하므로 남는 자료는 $n$-pointed genus $1$ stable curve와 그 image인 $X$의 한 점뿐이다. 따라서
-
-$$\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$$
-
-는 차원 $n+d$의 smooth stack이지만, [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)의 공식은 $\vdim=0+(d-3)(1-1)+n=n$을 준다. Constant map은 domain의 어떤 deformation을 따라서도 constant map으로 extend되므로, 이 명제의 exact sequence에서 pointed domain의 deformation을 $H^1(C,\mu^\ast T_X)$로 보내는 map은 $0$이고 $T^2\cong H^1(C,\mu^\ast T_X)$이다. 한편 $\mu^\ast T_X=\mathcal{O}_C\otimes T_{X,\mu(C)}$는 trivial bundle이므로
-
-$$H^1(C,\mu^\ast T_X)=H^1(C,\mathcal{O}_C)\otimes T_{X,\mu(C)}$$
-
-이고, $g=1$에서 $\dim H^1(C,\mathcal{O}_C)=1$이므로 이 공간은 $d$차원이다. 즉 초과분 $d$는 obstruction space 전체가 사라지지 않고 남은 것이며, 여기서도 Kuranishi map은 항등적으로 $0$이다. $X$가 $\mathbb{P}^r$처럼 convex여도 마찬가지이다.
-
-이는 Gromov-Witten invariant를 정의하는 데에 직접적인 문제가 된다. [§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1)에서 우리는 convex target의 genus $0$ moduli가 smooth proper Deligne–Mumford stack이라는 것을 이용해 그 위에서 cohomology class들의 곱을 적분하였다. 이 때 불변량이 $0$이 아닐 수 있으려면 insertion들의 codimension의 합이 $\vdim$과 같아야 했고, 가령 $\mathbb{P}^2$의 rational curve의 개수 $N_d$를 불변량으로 적을 때 marked point의 개수 $3d-1$은 이 조건으로 정해졌다. 즉 적분의 대상이 되는 fundamental class는 차원 $\vdim$을 가져야 한다. 그러나 위의 두 예시에서 moduli의 fundamental class는 $\vdim$보다 큰 차원을 갖고, 일반적인 moduli는 서로 다른 차원의 irreducible component들을 가질 수 있으므로 ([§안정사상들의 모듈라이 공간, §§Virtual dimension](/ko/math/gromov-witten_theory/moduli_of_stable_maps#기대차원)) 하나의 차원에 놓이는 fundamental class를 말할 수조차 없다. 또 실제 차원은 각 점에서 Kuranishi map이 차원을 얼마나 낮추는지에 따라 $\dim T^1-\dim T^2$ 이상 $\dim T^1$ 이하의 값으로 정해지므로, $X$와 $g$, $n$, $\beta$만으로 결정되는 $\vdim$과 달리 moduli의 구체적인 기하에 의존한다. 따라서 일반적인 target과 genus에서 불변량을 정의하려면 moduli의 실제 차원과 상관없이 차원 $\vdim$을 갖는 class
+그러나 $X$가 convex가 아니면 $T^2$가 사라지지 않아 실제 차원이 $\vdim$보다 커질 수 있으므로, 이 경우 Gromov-Witten invariant를 정의하려면 fundamental class 대신 차원 $\vdim$을 갖는 *virtual fundamental class<sub>가상 기본류</sub>*
 
 $$[\overline{\mathcal{M}}_{g,n}(X,\beta)]^\vir\in A_{\vdim}(\overline{\mathcal{M}}_{g,n}(X,\beta))$$
 
-를 fundamental class 대신 적분의 대상으로 삼아야 한다. 이를 *virtual fundamental class<sub>가상 기본류</sub>*라 부르며, $T^2$가 모든 점에서 $0$이어서 moduli가 차원 $\vdim$의 smooth stack인 경우에는 이것이 보통의 fundamental class와 같아야 한다.
+가 필요하다.
 
-이 class가 무엇이어야 하는지는 위의 국소적인 그림이 알려 준다. Kuranishi map의 성분들이 독립적인 방정식으로 작동하여 그 zero locus가 기대 차원을 가지면 그 fundamental class가 답이 되어야 하고, 그렇지 않으면 방정식들을 일반적인 위치로 흔들었을 때 얻어질 zero locus의 class가 답이 되어야 한다. 위의 두 예시처럼 moduli가 smooth하고 점마다의 $T^2$가 모여 rank $r$의 vector bundle을 이루는 경우를 보자. 이 때 Kuranishi map은 항등적으로 $0$이므로 moduli는 이 vector bundle의 항등적으로 $0$인 section의 zero locus로 볼 수 있다. 이 section을 zero section과 transversal하게 만나는 section으로 흔들 수 있다면 그 zero locus는 codimension $r$이고 그 class는 top Chern class를 fundamental class에 cap한 것이므로, 이 경우 virtual fundamental class는 이 obstruction bundle의 Euler class와 fundamental class의 cap product여야 한다. 실제로 그렇다는 것은 [명제 11](#prop11)의 (4)에서 보며, constant map의 moduli에서는 [예시 14](#ex14)에서 이를 직접 계산한다.
+이 class를 어떻게 정의해야 하는지는 Kuranishi map이 알려 준다. 각 점 근방에서 moduli는 $\kappa$의 zero locus이므로, $\kappa$의 성분들이 독립적인 방정식으로 작동하여 그 zero locus가 기대 차원을 가지면 그 fundamental class가 답이 되어야 하고, 그렇지 않으면 방정식들을 일반적인 위치로 흔들었을 때 얻어질 zero locus의 class가 답이 되어야 한다. 가령 moduli가 smooth하고 점마다의 $T^2$가 모여 rank $r$의 vector bundle을 이루는 경우를 보자. 이 때 Kuranishi map은 항등적으로 $0$이므로 moduli는 이 vector bundle의 항등적으로 $0$인 section의 zero locus로 볼 수 있다. 이 section을 zero section과 transversal하게 만나는 section으로 흔들 수 있다면 그 zero locus는 codimension $r$이고 그 class는 top Chern class를 fundamental class에 cap한 것이므로, 이 경우 virtual fundamental class는 이 obstruction bundle의 Euler class와 fundamental class의 cap product여야 한다. 실제로 그렇다는 것은 [명제 11](#prop11)의 (4)에서 본다.
 
 그러나 일반적으로는 이 그림을 그대로 쓸 수 없다. Moduli는 singular할 수 있고, $T^1$과 $T^2$의 차원은 점마다 jump하며 일정한 것은 그 차이뿐이므로 점마다의 $T^2$를 모아 하나의 vector bundle을 만들 수 없다. 또 Kuranishi map은 coordinate의 선택에 의존하므로 서로 다른 점의 것이 붙지 않고, 방정식을 실제로 흔들 수도 없다. 따라서 두 가지가 필요하다. 하나는 방정식을 흔들지 않고도 흔든 결과의 class를 얻는 방법이며, 이는 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 normal cone으로 정의하는 localized Euler class가 해결한다. 다른 하나는 점마다의 tangent space와 obstruction space를 전체에서 붙여 주는 자료이다. 그 자료는 국소적으로 vector bundle 사이의 morphism $E_0\rightarrow E_1$로 표현되는 complex로서, 각 점 $p$의 fiber에서 kernel이 $T^1$이고 cokernel이 $p$에서의 obstruction space인 것이다. 이 morphism의 rank가 점마다 바뀌면 kernel과 cokernel의 차원은 jump하지만, 두 bundle의 rank의 차이 $\rank E_0-\rank E_1$은 일정하므로 이것이 virtual dimension이 된다.
 
@@ -197,7 +186,7 @@ $$N_{L/\mathbb{P}^2}\xrightarrow{(1,0)}\mathcal{O}_L(1)\oplus\mathcal{O}_L(2)$$
 이다. 둘 다 subbundle이므로 zero section으로 자르면 quotient line bundle의 $c_1$이 남고, 그 degree는 각각 $\deg\mathcal{O}_L(1)=1$과 $\deg\mathcal{O}_L(2)=2$이다. 이는 $c_2(E)=H^2$, $c_2(E')=2H^2$과도 맞는다.
 :::
 
-즉 같은 scheme $L$이 같은 차원의 서로 다른 두 class를 갖는다. [예시 1](#ex1){: data-lid="42vb0" }도 같은 현상을 보여 준다. Smooth한 $\mathbb{P}^2$에는 $\Omega_{\mathbb{P}^2}$ 자신이라는 perfect obstruction theory가 있어 $[\mathbb{P}^2]$를 주지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다. 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다. Stable map의 경우 이 선택은 [명제 12](#prop12){: data-lid="ilo5d" }의 $(R\pi_\ast\mu^\ast T_X)^\vee$로 고정되며, 서로 다른 moduli의 virtual class를 비교하려면 [명제 15](#prop15){: data-lid="5f8c5" }처럼 두 perfect obstruction theory의 compatibility를 따로 확인해야 하는 이유가 여기에 있다.
+즉 같은 scheme $L$이 같은 차원의 서로 다른 두 class를 갖는다. [예시 1](#ex1){: data-lid="42vb0" }도 같은 현상을 보여 준다. Smooth한 $\mathbb{P}^2$에는 $\Omega_{\mathbb{P}^2}$ 자신이라는 perfect obstruction theory가 있어 $[\mathbb{P}^2]$를 주지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다. 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다. Stable map의 경우 이 선택은 [명제 12](#prop12){: data-lid="ilo5d" }의 $(R\pi_\ast\mu^\ast T_X)^\vee$로 고정되며, 서로 다른 moduli의 virtual class를 비교하려면 [명제 14](#prop14){: data-lid="5f8c5" }처럼 두 perfect obstruction theory의 compatibility를 따로 확인해야 하는 이유가 여기에 있다.
 
 ## Intrinsic normal cone
 
@@ -376,37 +365,11 @@ $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\
 
 [§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-lid="gt4df" }에서 우리는 fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$가 존재하는 경우에 대해서만 정의하였으나, 이 fundamental class만 virtual fundamental class로 바꿔주면 convex 가정 없이도 임의의 smooth projective target $X$에 대한 genus $0$ Gromov-Witten invariant를 정의할 수 있으며, convex 가정 하에서 이 두 정의가 같은 것은 위의 [예시 13](#ex13){: data-lid="bt6x3" }에 의해 자명하다. 그럼 이 정의 하에서, virtual class가 forgetful morphism 및 gluing morphism에 대해 잘 행동하는 것을 확인할 수 있으므로 [§그로모프-위튼 불변량, §§그로모프-위튼 불변량의 공리들](/ko/math/gromov-witten_theory/gromov-witten_invariants#그로모프-위튼-불변량의-공리들){: data-lid="huqbc" }의 string·divisor·splitting 공리와 WDVV 관계도 해당 적분들을 virtual class에 대한 적분으로 해석하면 그대로 성립한다.
 
-::: 예시 14
-반대편 극단으로 도입에서 본 constant map의 moduli $\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$을 살펴보자. 여기서는 obstruction이 통째로 살아있다는 것이 우리의 도입부의 주장이었으므로, 이제 엄밀한 언어로 이를 다시 계산하자. 
-
-두 projection을 각각 $p_1:\overline{\mathcal{M}}_{1,n}\times X\rightarrow\overline{\mathcal{M}}_{1,n}$, $p_2:\overline{\mathcal{M}}_{1,n}\times X\rightarrow X$라 하자. Constant map에서는 곡선 위의 모든 점이 $X$의 같은 점으로 대응되므로, universal evaluation map $\mu:\mathcal{C}\rightarrow X$는 projection $p_2$와 universal curve $\pi:\mathcal{C}\rightarrow M$의 합성
-
-$$\mu=p_2\circ\pi$$
-
-로 분해된다. 따라서 target tangent bundle의 pullback은 $\mu^\ast T_X\cong\pi^\ast p_2^\ast T_X$가 되고, 이를 $M$ 위로 밀어내리면 projection formula에 의해
-
-$$R^1\pi_\ast\mu^\ast T_X\cong(R^1\pi_\ast\mathcal{O}_{\mathcal{C}})\otimes p_2^\ast T_X$$
-
-를 얻는다. 여기서 $\overline{\mathcal{M}}_{1,n}$ 위의 genus $1$ universal curve에 Serre duality $H^1(C,\mathcal{O}_C)\cong H^0(C,\omega_C)^\vee$를 family로 적용하면 $R^1\pi_\ast\mathcal{O}_{\mathcal{C}}$는 rank $1$짜리 bundle $p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee$와 같아진다. 따라서 obstruction bundle은
-
-$$h^1(((E')^\bullet)^\vee)\cong R^1\pi_\ast\mu^\ast T_X\cong p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X$$
-
-가 된다. 실제로 각 점 $((C,p_\bullet),x)$에서 상수사상 $\mu$에 의한 pullback은 $\mu^\ast T_X\cong\mathcal{O}_C\otimes T_x X$로 자명해지므로, 이 점에서의 obstruction 공간은
-
-$$H^1(C,\mu^\ast T_X)\cong H^1(C,\mathcal{O}_C)\otimes T_x X$$
-
-가 된다. $C$가 genus $1$ 곡선이므로 $\dim H^1(C,\mathcal{O}_C)=1$이고, 따라서 이 bundle의 rank는 $\dim X=d$가 되어 moduli의 실제 차원 $\dim(\overline{\mathcal{M}}_{1,n}\times X)=n+d$와 가상 차원 $\vdim=n$ 사이의 초과 차원 $d$와 정확히 일치한다. 한편 prestable curve들의 moduli stack $\mathfrak{M}_{1,n}$은 smooth이므로 open condition인 stability를 부과한 (open) substack $\overline{\mathcal{M}}_{1,n}$ 역시 smooth하며, 여기에 target $X$의 smoothness까지 사용하면 moduli stack $\overline{\mathcal{M}}_{1,n}\times X$ 전체가 smooth가 된다. 이제 이 위에 정의된 obstruction $h^1(((E')^\bullet)^\vee)$ 또한 vector bundle이므로, [예시 1](#ex1){: data-lid="1f2tf" }의 $s\equiv0$인 local model이 그대로 적용되어
-
-$$[\overline{\mathcal{M}}_{1,n}(X,0)]^\vir=e(p_1^\ast(\pi_\ast\omega_{\mathcal{C}})^\vee\otimes p_2^\ast T_X)\cap[\overline{\mathcal{M}}_{1,n}\times X]$$
-
-가 된다. $(n+d)$차원 공간 위에서 Euler class와의 cap product로 차원 $n$의 class를 복원한 것으로, [예시 1](#ex1){: data-lid="m97nc" }의 $s\equiv0$인 상황을 stable map moduli에서 재연한 셈이다.
-:::
-
 ## Zero locus의 가상 기본류
 
 [§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="1un49" }의 국소 모형에서 ambient는 smooth variety였다. 그러나 이 모형이 실제로 쓰이는 상황에서는 ambient 자신이 obstruction을 갖는 moduli인 경우가 많다. 가령 smooth projective variety $P$ 안의 smooth subvariety $Y$가 vector bundle $V$의 section $s$의 zero locus로 주어지면, $Y$로 가는 stable map은 $P$로 가는 stable map $f$ 가운데 $f^\ast s=0$인 것이다. 모든 genus $0$ stable map에 대해 $H^1(C,f^\ast V)=0$이면 $\pi_\ast\mu^\ast V$는 $P$의 genus $0$ moduli 위의 vector bundle이고, $Y$의 moduli는 그 section $f\mapsto f^\ast s$의 zero locus가 된다. 두 moduli는 모두 [명제 12](#prop12){: data-lid="3nmml" }의 virtual class를 가지므로, 자연스러운 질문은 [예시 1](#ex1){: data-lid="fn474" }에서처럼 둘이 Euler class로 이어지는지의 여부일 것이다. Stable map의 moduli는 $\mathfrak{M}_{g,n}$에 상대적인 perfect obstruction theory를 가지므로 처음부터 상대적인 형태로 적는다.
 
-::: 명제 15 (Kim–Kresch–Pantev)
+::: 명제 14 (Kim–Kresch–Pantev)
 $\mathfrak{M}$을 locally finite type이고 pure dimensional인 smooth Artin stack, $q:M\rightarrow\mathfrak{M}$을 finite type Deligne–Mumford stack $M$에서의 morphism, $\phi:E^\bullet\rightarrow\LL_{M/\mathfrak{M}}$을 relative perfect obstruction theory라 하자. $M$ 위의 rank $r$ vector bundle $V$와 section $s$에 대하여 $i:Z=Z(s)\hookrightarrow M$을 그 zero locus라 하고, $Z$ 위의 relative perfect obstruction theory $\phi_Z:E_Z^\bullet\rightarrow\LL_{Z/\mathfrak{M}}$이 distinguished triangle
 
 $$i^\ast E^\bullet\longrightarrow E_Z^\bullet\longrightarrow V^\vee\vert_Z[1]\longrightarrow i^\ast E^\bullet[1]$$
@@ -420,13 +383,13 @@ $$[Z]^\vir=0^!_{V,s}[M]^\vir,\qquad i_\ast[Z]^\vir=c_r(V)\cap[M]^\vir$$
 
 이는 [KKP, Theorem 1]을 zero section $0_V:M\rightarrow V$에 적용한 것이다. 이 정리는 relative perfect obstruction theory를 갖는 두 stack이 local complete intersection morphism $v$를 따라 cartesian하게 놓이고 두 obstruction theory가 cotangent complex의 triangle과 compatible하면, $v$의 refined Gysin map이 한쪽의 virtual class를 다른 쪽의 virtual class로 보낸다는 것이다. 지금의 경우 cartesian square는 $s$와 $0_V$의 fiber product $Z=M\times_VM$이고, $0_V$의 cotangent complex를 $Z$로 당긴 것이 $V^\vee\vert_Z[1]$이므로 위의 triangle이 정확히 그 compatibility 조건이 된다. [BF, Proposition 7.5]는 global resolution을 가정하고 $v$가 smooth하거나 $v$의 source와 target이 모두 base 위에서 smooth한 경우에 같은 등식을 주는데, zero section에 대해 뒤의 조건은 $M$이 $\mathfrak{M}$ 위에서 smooth하다는 것이다. [KKP, Theorem 1]은 이러한 가정 없이 base의 pure dimensionality와 $v$가 local complete intersection morphism이라는 것만을 요구하며, [KKP]는 이를 [BF, Proposition 7.5]를 강화한 것으로 소개한다. Base의 smoothness는 $\mathfrak{M}$ 상대 perfect obstruction theory로 정의한 virtual class가 [명제 12](#prop12){: data-lid="qmcty" }에서처럼 유도한 absolute perfect obstruction theory의 virtual class와 같다는 데에 쓰인다. ([KKP, Proposition 3]) 둘째 등식은 refined Gysin map에 대한 공식 $i_\ast0^!_{V,s}\gamma=c_r(V)\cap\gamma$를 $\gamma=[M]^\vir$에 적용한 것이고, 이 공식은 [§가상류의 교차이론, ⁋정의 3](/ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes#def3){: data-lid="oggvg" } 뒤에서 다룬다.
 
-명제는 $E_Z^\bullet$을 가정으로 둔다. 일반적인 $(M,E^\bullet)$에서 이러한 $E_Z^\bullet$을 만들려면 $s$가 주는 $V^\vee\vert_Z[1]\rightarrow\LL_{Z/M}$과 cotangent complex의 triangle의 connecting map을 합성한 $V^\vee\vert_Z\rightarrow i^\ast\LL_{M/\mathfrak{M}}$을 $\phi$를 따라 $i^\ast E^\bullet$으로 들어 올려야 하는데, 그 obstruction은 $\phi$의 cone의 hypercohomology에 있어서 local하게만 사라지고 global하게는 자동이 아니다. 그래서 $E_Z^\bullet$은 경우마다 구성하며, 아래 [예시 16](#ex16){: data-lid="zy2k0" }에서는 universal curve 위의 vector bundle의 short exact sequence에 $R\pi_\ast$를 취해 이를 얻는다. 가장 간단한 경우는 $q$가 smooth한 경우이다. 이때는 $E^\bullet=\Omega_{M/\mathfrak{M}}$으로 둘 수 있고,
+명제는 $E_Z^\bullet$을 가정으로 둔다. 일반적인 $(M,E^\bullet)$에서 이러한 $E_Z^\bullet$을 만들려면 $s$가 주는 $V^\vee\vert_Z[1]\rightarrow\LL_{Z/M}$과 cotangent complex의 triangle의 connecting map을 합성한 $V^\vee\vert_Z\rightarrow i^\ast\LL_{M/\mathfrak{M}}$을 $\phi$를 따라 $i^\ast E^\bullet$으로 들어 올려야 하는데, 그 obstruction은 $\phi$의 cone의 hypercohomology에 있어서 local하게만 사라지고 global하게는 자동이 아니다. 그래서 $E_Z^\bullet$은 경우마다 구성하며, 아래 [예시 15](#ex15){: data-lid="zy2k0" }에서는 universal curve 위의 vector bundle의 short exact sequence에 $R\pi_\ast$를 취해 이를 얻는다. 가장 간단한 경우는 $q$가 smooth한 경우이다. 이때는 $E^\bullet=\Omega_{M/\mathfrak{M}}$으로 둘 수 있고,
 
 $$E_Z^\bullet=\Bigl[\at{-1}{V^\vee\vert_Z}\xrightarrow{\ (\dd{s})^\vee\ }\at{0}{\Omega_{M/\mathfrak{M}}\vert_Z}\Bigr]$$
 
 이 $Z$의 relative perfect obstruction theory이다. $\tau_{\geq-1}\LL_{Z/\mathfrak{M}}=[\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_{M/\mathfrak{M}}\vert_Z]$이고 $V^\vee\vert_Z\rightarrow\mathcal{I}/\mathcal{I}^2$이 surjective이므로, $h^0$에서는 isomorphism이고 $h^{-1}$에서는 surjective이다. 위의 triangle은 이 two-term complex의 stupid truncation이 주는 것이다. 이는 [§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="xf6gi" }의 구성을 $\mathfrak{M}$ 위에서 상대적으로 한 것이다.
 
-[명제 15](#prop15){: data-lid="nny9k" }의 triangle은 각 점에서 $Z$와 $M$의 tangent space와 obstruction space를 이어 준다. 점 $z\in Z$에서의 derived fiber를 $(\cdot)\vert_z$로 적으면, 위 triangle의 dual $V\vert_Z[-1]\rightarrow(E_Z^\bullet)^\vee\rightarrow i^\ast(E^\bullet)^\vee\rightarrow V\vert_Z$의 derived fiber의 cohomology에서 long exact sequence
+[명제 14](#prop14){: data-lid="nny9k" }의 triangle은 각 점에서 $Z$와 $M$의 tangent space와 obstruction space를 이어 준다. 점 $z\in Z$에서의 derived fiber를 $(\cdot)\vert_z$로 적으면, 위 triangle의 dual $V\vert_Z[-1]\rightarrow(E_Z^\bullet)^\vee\rightarrow i^\ast(E^\bullet)^\vee\rightarrow V\vert_Z$의 derived fiber의 cohomology에서 long exact sequence
 
 $$0\rightarrow h^0((E_Z^\bullet)^\vee\vert_z)\rightarrow h^0((E^\bullet)^\vee\vert_z)\xrightarrow{\dd{s}}V_z\rightarrow h^1((E_Z^\bullet)^\vee\vert_z)\rightarrow h^1((E^\bullet)^\vee\vert_z)\rightarrow0$$
 
@@ -434,14 +397,14 @@ $$0\rightarrow h^0((E_Z^\bullet)^\vee\vert_z)\rightarrow h^0((E^\bullet)^\vee\ve
 
 같은 논증을 뒤집으면, $Z$가 smooth하지 않은 점에서는 obstruction이 $0$일 수 없다. 만일 점 $z$에서 relative obstruction이 $0$이라면 위와 같이 그 근방에서 $Z\rightarrow\mathfrak{M}$이 smooth하고, $\mathfrak{M}$이 smooth하므로 $Z$도 smooth해야 하기 때문이다. Absolute perfect obstruction theory에 대해서도 같다. 이는 perfect obstruction theory의 선택과도 무관하다. 어떤 absolute perfect obstruction theory의 obstruction space도 intrinsic obstruction space $\Ext^1(\LL_Z\vert_z,\mathbb{C})$를 포함하고 ([KKP, §3]), 이 공간은 $Z$가 $z$에서 smooth하지 않으면 $0$이 아니기 때문이다. 특히 $Z$가 어떤 irreducible component $D$의 generic point에서 non-reduced이면, smooth locus는 open이고 smooth한 곳은 reduced이므로 $Z$는 $D$의 어느 점에서도 smooth하지 않고, 따라서 $D$의 모든 점에서 relative하게도 absolute하게도 obstructed이다. 이때 obstructed인 것은 scheme으로서의 $Z$이고, reduced structure를 준 $D$ 자체는 generic point에서 smooth하다.
 
-::: 예시 16
+::: 예시 15
 $Y\subset\mathbb{P}^4$를 smooth quintic threefold, 곧 $\mathcal{O}(5)$의 section $s$의 zero locus라 하고 $Y$ 위의 직선을 세자. $\mathcal{O}(5)$는 globally generated이므로 genus $0$ stable map $f:C\rightarrow\mathbb{P}^4$로 당긴 line bundle은 모든 component에서 음이 아닌 degree를 갖고, 따라서 $H^1(C,f^\ast\mathcal{O}(5))=0$이다. 그럼 cohomology와 base change에 의해 $\mathcal{V}_d=\pi_\ast\mu^\ast\mathcal{O}(5)$는 $\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,d)$ 위의 rank $5d+1$ vector bundle이고, $s$는 그 section $\widetilde{s}([f])=f^\ast s$를 준다. Stable map이 $Y$로 들어간다는 것은 $f^\ast s=0$이라는 것이므로 $Z(\widetilde{s})$는 $Y$로 가는 stable map들의 moduli이고, Lefschetz hyperplane theorem에 의해 $H_2(Y)\rightarrow H_2(\mathbb{P}^4)$가 isomorphism이므로 이는 $\overline{\mathcal{M}}_{0,0}(Y,d)$ 하나이다.
 
-[명제 15](#prop15){: data-lid="5llwo" }의 compatibility는 normal bundle sequence $0\rightarrow T_Y\rightarrow T_{\mathbb{P}^4}\vert_Y\rightarrow\mathcal{O}(5)\vert_Y\rightarrow0$에서 온다. 이를 universal map으로 당기고 $R\pi_\ast$를 취한 뒤 dual을 취하면 $\overline{\mathcal{M}}_{0,0}(Y,d)$ 위의 triangle
+[명제 14](#prop14){: data-lid="5llwo" }의 compatibility는 normal bundle sequence $0\rightarrow T_Y\rightarrow T_{\mathbb{P}^4}\vert_Y\rightarrow\mathcal{O}(5)\vert_Y\rightarrow0$에서 온다. 이를 universal map으로 당기고 $R\pi_\ast$를 취한 뒤 dual을 취하면 $\overline{\mathcal{M}}_{0,0}(Y,d)$ 위의 triangle
 
 $$i^\ast(R\pi_\ast\mu^\ast T_{\mathbb{P}^4})^\vee\longrightarrow(R\pi_\ast\mu^\ast T_Y)^\vee\longrightarrow i^\ast\mathcal{V}_d^\vee[1]\longrightarrow i^\ast(R\pi_\ast\mu^\ast T_{\mathbb{P}^4})^\vee[1]$$
 
-을 얻고, 처음 두 항은 [명제 12](#prop12){: data-lid="65y3n" }의 relative perfect obstruction theory들이다. [KKP]는 이 triangle이 cotangent complex의 triangle과 compatible하다고 적고 여기에 [명제 15](#prop15){: data-lid="ycr9q" }을 적용한다. $\mathbb{P}^4$는 convex이므로 [예시 13](#ex13){: data-lid="4mh66" }에 의해 ambient의 virtual class는 fundamental class이고, 따라서
+을 얻고, 처음 두 항은 [명제 12](#prop12){: data-lid="65y3n" }의 relative perfect obstruction theory들이다. [KKP]는 이 triangle이 cotangent complex의 triangle과 compatible하다고 적고 여기에 [명제 14](#prop14){: data-lid="ycr9q" }을 적용한다. $\mathbb{P}^4$는 convex이므로 [예시 13](#ex13){: data-lid="4mh66" }에 의해 ambient의 virtual class는 fundamental class이고, 따라서
 
 $$i_\ast[\overline{\mathcal{M}}_{0,0}(Y,d)]^\vir=c_{5d+1}(\mathcal{V}_d)\cap[\overline{\mathcal{M}}_{0,0}(\mathbb{P}^4,d)]$$
 
