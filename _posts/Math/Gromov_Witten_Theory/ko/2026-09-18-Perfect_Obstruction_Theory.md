@@ -56,7 +56,7 @@ $$e(E,s)\in A_{\dim X-r}(Z(s))$$
 를 정의할 수 있다. 직관적으로 이는 non-transversal section $s$를 올바르게 흔들어줬으면 나왔을 class를 실제로 흔들지 않고도 대수적으로 적어 둔 것으로 이해할 수 있다.
 
 ::: 예시 1
-$X=\mathbb{P}^2$, $E=\mathcal{O}(1)^{\oplus2}$를 보자. 그럼 section $s=(\ell_1,\ell_2)$가 두 일차식으로 주어지므로, 위의 그림에서 $Z(s)$는 기대차원이 $0$이 된다. 실제로 이는 두 직선의 교점인 한 점이고, 그 class의 degree는
+$X=\mathbb{P}^2$, $E=\mathcal{O}(1)^{\oplus2}$를 보자. 그럼 section $s=(\ell_1,\ell_2)$가 두 일차식으로 주어지므로, 위의 그림에서 $Z(s)$는 기대 차원이 $0$이 된다. 실제로 이는 두 직선의 교점인 한 점이고, 그 class의 degree는
 
 $$\int_{\mathbb{P}^2}e(E)=\int_{\mathbb{P}^2}c_1(\mathcal{O}(1))^2=1$$
 
@@ -105,20 +105,11 @@ $$C_{Z/X}=\Spec_Z\bigoplus_{n\geq0}\mathcal{I}^n/\mathcal{I}^{n+1}$$
 
 $$e(E,s)=0_E^![C_{Z/X}]\in A_{\dim X-r}(Z)$$
 
-로 localized Euler class를 정의한다. 위에서 $C_{Z/X}$는 $X$를 $Z$의 normal 방향으로 무한히 확대한 모양이었고, 이를 $s$를 통해 $E\vert_Z$ 안에 넣으면 그 $x\in Z$ 위의 fiber는 $x$에서 $Z$ 밖으로 조금 나갔을 때 $s$가 갖게 되는 값들의 방향을 $E_x$ 안에 모은 것이 된다. 그럼 $0_E^![C_{Z/X}]$의 역할은 $E$의 zero section과 이 cone을 교차시키는 것으로서, 직관적으로는 zero section을 일반적인 section으로 흔들어준 뒤 cone과의 교집합을 보는 것이다. 만일 $s$가 점 $x$에서 transversal하다면, cone의 fiber가 $E_x$ 전체가 되며 따라서 이러한 경우 $Z$가 그대로 나오게 된다. 문제는 $s$가 transversal하지 않은 점으로, 이러한 경우 cone의 fiber가 $E_x$를 전부 채우지 못하며, 이렇게 남는 부분으로 들어간 section들은 $Z$를 깎아주게 된다. 위의 차원 계산은 이러한 방식으로 깎여나가는 정도가 정확히 $Z$가 기대보다 부푼 정도가 되어, 이들이 서로를 상쇄한다는 것이며 따라서 $e(E,s)$는 기대차원의 class가 되는 것이다. 
+로 localized Euler class를 정의한다. 위에서 $C_{Z/X}$는 $X$를 $Z$의 normal 방향으로 무한히 확대한 모양이었고, 이를 $s$를 통해 $E\vert_Z$ 안에 넣으면 그 $x\in Z$ 위의 fiber는 $x$에서 $Z$ 밖으로 조금 나갔을 때 $s$가 갖게 되는 값들의 방향을 $E_x$ 안에 모은 것이 된다. 그럼 $0_E^![C_{Z/X}]$의 역할은 $E\vert_Z$의 zero section과 이 cone을 교차시키는 것으로서, 직관적으로는 zero section을 일반적인 section으로 흔들어준 뒤 cone과의 교집합을 보는 것이다. 만일 $s$가 점 $x$에서 transversal하다면, cone의 fiber가 $E_x$ 전체가 되며 따라서 이러한 경우 $Z$가 그대로 나오게 된다. 문제는 $s$가 transversal하지 않은 점으로, 이러한 경우 cone의 fiber가 $E_x$를 전부 채우지 못하며, 일반적인 section의 값이 이렇게 남는 부분에 놓이는 점들은 교집합에서 빠져 $Z$가 깎이게 된다. 이때 cone은 각 점에서 $\dd{s}_x$의 image 방향은 항상 다 채우므로, 채우지 못하고 남을 수 있는 것은 obstruction space $\coker(\dd{s}_x)$ 방향뿐이며, 그 안에서 cone의 모양을 정하는 것이 Kuranishi map $\kappa$이다. 위의 차원 계산은 이러한 방식으로 깎여나가는 정도가 정확히 $Z$가 기대보다 부푼 정도가 되어, 이들이 서로를 상쇄한다는 것이며 따라서 $e(E,s)$는 기대 차원의 class가 되는 것이다. 
 
 가령 [예시 1](#ex1)의 상황에서 $s=(\ell_1,0)$인 경우를 보자. 그럼 이것이 정의하는 locus는 직선 $Z(s)=\{\ell_1=0\}$이다. $Z(s)$ 바깥에서는 $\ell_1=0$ 조건이 사라지므로 $s$의 첫째 성분은 값을 가지게 될 수 있지만, 둘째 성분은 항등적으로 $0$이므로 여전히 $0$이다. 이 상황에서 cone은 $E\vert_{Z(s)}=\mathcal{O}_{Z(s)}(1)^{\oplus2}$의 첫째 성분이므로, zero section과의 교차는 첫째 성분 방향으로는 아무것도 깎지 않고 둘째 성분 $\mathcal{O}_{Z(s)}(1)$ 방향에서만 $Z(s)$를 깎는다. 즉 이 교차는 둘째 성분의 zero section으로 $Z(s)$를 자른 것과 같고, 따라서 $e(E,s)=c_1(\mathcal{O}_{Z(s)}(1))\cap[Z(s)]$이다. $Z(s)\cong\mathbb{P}^1$이므로 이는 degree $1$의 point class이다.
 
-
-차원이 $\dim X-r$이 되는 것은 pure dimension $\dim X$의 cone을 rank $r$의 bundle의 zero section으로 자르기 때문이며, 이것이 위에서 점마다 센 $\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)$의 전역적인 판본이다. 또 $e(E,s)$를 $X$로 보내면 $e(E)\cap[X]$이고, $s$를 일반적인 위치로 흔든 family $s_t$에 대해 $Z(s_t)$의 class가 $t\rightarrow0$에서 가는 극한은 $e(E,s)$이다. $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이다.
-
-Cone이 이 class를 정할 수 있는 것은 그것이 각 점의 Kuranishi map을 기록하기 때문이며, 그 방식은 위의 소거에서 바로 보인다. 점 $x\in Z$에서 $s_I$의 미분은 $K'$ 위에서 isomorphism이므로, $x$의 formal neighborhood의 coordinate를 $K$의 coordinate $y$와 $s_I$의 성분들로 잡을 수 있다. 이 coordinate에서 $s_I=0$이 정의하는 subvariety는 $y$만의 공간이고 그 위에서 $s_Q$는 $\kappa(y)$이므로, $Z$의 ideal은 $s_I$의 성분들과 $\kappa(y)$의 성분들로 생성되며 두 묶음은 서로 다른 변수에 걸려 있다. 따라서 $\bigoplus_n\mathcal{I}^n/\mathcal{I}^{n+1}$은 $\kappa^{-1}(0)\subseteq K$의 normal cone의 graded algebra에 $s_I$의 성분들의 class를 polynomial variable로 붙인 것이 되고, $x$의 formal neighborhood에서
-
-$$C_{Z/X}\cong I\times C_{\kappa^{-1}(0)/K}$$
-
-를 얻는다. 즉 $\dd{s}_x$의 image 방향으로는 cone이 bundle과 같은 크기이고, 나머지 $Q$ 방향에서 cone의 모양을 정하는 것은 $\kappa$이다.
-
-[예시 1](#ex1){: data-lid="tis96" }을 이 관점에서 다시 보면, $s\equiv0$일 때는 $\mathcal{I}=0$이어서 cone은 zero section 자신이고 $e(E,s)=e(E)\cap[\mathbb{P}^2]$이며, $s$가 transversal할 때는 cone이 $E\vert_Z$ 전체이고 $e(E,s)=[Z]$이다. 일반적으로 $Z$가 local complete intersection인 open set 위에서는 cone이 normal bundle $N_{Z/X}$와 같고, $\mathcal{I}/\mathcal{I}^2$이 locally free이므로 surjection $E^\vee\vert_Z\rightarrow\mathcal{I}/\mathcal{I}^2$의 dual은 $N_{Z/X}$를 $E\vert_Z$의 subbundle로 넣는다. Subbundle을 zero section으로 자르면 quotient의 top Chern class가 남으므로, 대략적으로 말해 $Z$의 smooth한 성분 가운데 기대 차원인 것은 자기 자신의 fundamental class를, 기대보다 큰 것은 *excess bundle* $E\vert_Z/N_{Z/X}$의 top Chern class를 기여하며, 성분들이 만나거나 local complete intersection이 아닌 점에서는 보정이 필요하다. 이때 cone의 성분 하나가 $Z$의 closed subvariety $W$ 위에 놓이면, 그 차원 $\dim X$는 $\dim W$와 fiber의 차원 $r$의 합을 넘을 수 없으므로 $\dim W\geq\dim X-r$이어야 한다. 즉 cone의 성분은 기대 차원 이상의 subvariety 위에만 놓이며, 그런 subvariety라면 $Z$의 성분이 아니어도 된다. 또 $Z$가 local complete intersection이 아닌 점에서는 normal bundle의 closure가 subbundle이 되지 못할 수 있다. 다음은 normal cone이 zero section도 bundle 전체도 아니며 subbundle조차 아닌 예이다.
+일반적으로 cone이 $E\vert_Z$의 subbundle이면 같은 이유로 $e(E,s)$는 그 quotient bundle의 top Chern class를 $[Z]$에 cap한 것이고, 이 quotient를 *excess bundle*이라 부른다. $Z$가 local complete intersection인 곳에서는 $\mathcal{I}/\mathcal{I}^2$이 locally free이므로 cone이 normal bundle $N_{Z/X}$이고 항상 이 경우에 해당하며, [예시 1](#ex1){: data-lid="tis96" }의 $s\equiv0$과 transversal한 $s$가 그 양 끝이다. 전자에서는 cone이 zero section이어서 quotient가 $E$ 전체이므로 $e(E,s)=e(E)\cap[\mathbb{P}^2]$이고, 후자에서는 cone이 $E\vert_Z$ 전체여서 quotient가 $0$이므로 $e(E,s)=[Z]$이다. 이 공식은 성분들이 만나거나 local complete intersection이 아닌 점에서는 보정이 필요하다. 이때 cone의 성분 하나가 $Z$의 closed subvariety $W$ 위에 놓이면, 그 차원 $\dim X$는 $\dim W$와 fiber의 차원 $r$의 합을 넘을 수 없으므로 $\dim W\geq\dim X-r$이어야 한다. 즉 cone의 성분은 기대 차원 이상의 subvariety 위에만 놓이며, 그런 subvariety라면 $Z$의 성분이 아니어도 된다. 또 $Z$가 local complete intersection이 아닌 점에서는 normal bundle의 closure가 subbundle이 되지 못할 수 있다. 다음은 normal cone이 zero section도 bundle 전체도 아니며 subbundle조차 아닌 예이다.
 
 ::: 예시 2
 $X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 이는 $\mathbb{A}^3$ 안의 $Z(\x\y,\x\z)$를 사영화한 것으로, $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, $X$로 보낸 class는
@@ -149,7 +140,7 @@ $$e(E,s)=3[\ell]+[L]\in A_1(Z)$$
 
 이 값은 section을 흔들어서도 얻을 수 있다. 일반적인 이차식 $f,g$에 대해 $s_t=(\x_0\x_1+tf,\x_0\x_2+tg)$로 두면, 일반적인 $t\neq0$에서 $Z(s_t)$는 두 이차곡면의 smooth complete intersection, 곧 degree $4$의 곡선이고 $e(E,s_t)=[Z(s_t)]$이다. $t\rightarrow0$에서 이 곡선이 어디로 가는지 보자. $P$ 근방에서 $\x_0=tu$로 두면 두 방정식은 $u\x_1+f=0$, $u\x_2+g=0$이 되고 $u$를 소거하면 $\x_1g-\x_2f=0$이므로, 극한은 평면 cubic $C_3=\{\x_0=\x_1g-\x_2f=0\}$을 포함한다. 반면 $P$에서 떨어진 곳에서는 $\x_0$이 $0$으로 가지 않으므로 $\x_1,\x_2\rightarrow0$이 되어 극한이 $L$에 놓인다. 극한 cycle의 총 degree가 $4$이고 $C_3$, $L$의 degree가 각각 $3$, $1$이므로 둘 다 multiplicity $1$로 나타나며, 극한은 $[C_3]+[L]$이다. $A_1(P)$에서 $[C_3]=3[\ell]$이므로 이는 위의 계산과 정확히 일치한다.
 
-이 일치는 위에서 본 대로 두 Gysin map의 순서를 바꾼 데에서 오며, 이때 $X\times\mathbb{A}^1$ 안의 전체 zero locus는 극한 곡선들을 포함하는 성분 외에 $P\times\{0\}$이라는 $2$차원 성분을 갖지만, 이 성분은 $t=0$의 fiber 안에 통째로 들어 있어서 Gysin pullback에서 trivial line bundle의 Euler class가 곱해지므로 기여가 $0$이다.
+이 일치는 $X\times\mathbb{A}^1$ 위의 section $(s_t)_t$로 만든 localized Euler class를 $t=0$의 fiber로 Gysin pullback하는 것이 두 Gysin map의 순서를 바꾼 것과 같기 때문이며, 이때 $X\times\mathbb{A}^1$ 안의 전체 zero locus는 극한 곡선들을 포함하는 성분 외에 $P\times\{0\}$이라는 $2$차원 성분을 갖지만, 이 성분은 $t=0$의 fiber 안에 통째로 들어 있어서 Gysin pullback에서 trivial line bundle의 Euler class가 곱해지므로 기여가 $0$이다.
 :::
 
 기대 차원의 성분 $L$은 자기 자신 $[L]$만을 기여하고, 나머지 $3$은 기대보다 한 차원 큰 평면 $P$가 기여한다. 평면의 기여는 대략 excess bundle $E\vert_P/N_{P/X}$의 $c_1$, 곧 $4H-H$이고, $N_{P/X}\rightarrow E\vert_P$가 subbundle이 되지 못하는 점 $p$에서의 보정은 blowup으로 계산된다. 이 경우에는 그 보정이 pushforward에서 사라진다. 특히 $c_2(E)\cap[\mathbb{P}^3]$은 총합 $4$만을 알지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 기억한다. 이 예시에서는 $A_1(Z)$가 성분별로 갈라지므로 이 분해가 class 자체의 정보이지만, 일반적으로는 normal cone의 성분별 기여가 $A_\ast(Z(s))$의 canonical한 분해를 주지는 않는다.
