@@ -2137,6 +2137,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: cauchy_principal_value
+  en: Cauchy principal value
+  ko: 주값
+  primary: ko
+  defs:
+  - label: '[해석학] §이상적분'
+    url: /ko/math/analysis/improper_integrals
 - id: cauchy_product
   en: Cauchy product
   ko: 코시 곱
@@ -9221,6 +9228,8 @@ I:
   defs:
   - label: '[미적분학] §이상적분'
     url: /ko/math/calculus/improper_integrals
+  - label: '[해석학] §이상적분'
+    url: /ko/math/analysis/improper_integrals
 - id: inclusion
   en: inclusion
   ko: 포함관계
