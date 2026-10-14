@@ -4,7 +4,7 @@ translate_worker.py — single-shot ko→en translation worker.
 
 Designed for a four-hour cron (00:15/04:15/.../20:15). Each tick handles ONE post: a missing
 translation, explicit drift, contrastive KO↔EN polish, or read-only verification.
-The default backend is Antigravity with Gemini 3.8 Flash High. Kimi remains an
+The default backend is Antigravity with the CLI's default model at high effort. Kimi remains an
 explicit translation rollback; it does not consume the Antigravity polish queue.
 
 Usage:
@@ -65,7 +65,11 @@ FAIL_DUMP_DIR = Path("/var/tmp/translate-fail")
 TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "antigravity")
 AGY_BIN               = os.environ.get("AGY_BIN") or str(
     Path.home() / ".gemini/bin/agy")
-AGY_MODEL             = os.environ.get("AGY_MODEL", "gemini-3.8-flash-high")
+# 모델 ID 는 넘기지 않고 effort 만 넘긴다. CLI 가 서버 기본 모델(Gemini Flash)에
+# effort 를 붙여 고르므로, 버전이 박힌 ID 처럼 세대가 바뀔 때 사라지지 않는다.
+# AGY_MODEL 을 주면 그 ID 로 고정한다 (Gemini 계열만 — Claude·GPT 는 다른 쿼터 버킷).
+AGY_MODEL             = os.environ.get("AGY_MODEL")
+AGY_EFFORT            = os.environ.get("AGY_EFFORT") or "high"
 AGY_AGENT             = os.environ.get("AGY_AGENT", "blog-translator")
 GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 # kimi-headless 어댑터를 거친다. PATH 의 `kimi` 를 집으면 안 된다 — 그건
@@ -1794,7 +1798,7 @@ def call_translator(prompt: str, *, thinking: bool = False,
         stdin_text = prompt
     elif TRANSLATOR_BACKEND == "antigravity":
         args = [AGY_BIN, "--print", prompt,
-                "--model", AGY_MODEL,
+                *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
                 "--agent", AGY_AGENT,
                 "--output-format", "json",
                 "--disable-slash-commands",
@@ -3065,7 +3069,7 @@ def cmd_dry_run(state: dict) -> int:
     print(f"  translator backend: {TRANSLATOR_BACKEND}")
     if TRANSLATOR_BACKEND == "antigravity":
         print(f"  agy binary: {AGY_BIN}")
-        print(f"  agy model: {AGY_MODEL}")
+        print(f"  agy model: {AGY_MODEL or f'(CLI 기본) effort {AGY_EFFORT}'}")
         print(f"  agy agent: {AGY_AGENT}")
     elif TRANSLATOR_BACKEND == "kimi":
         print(f"  kimi binary: {KIMI_BIN}")
