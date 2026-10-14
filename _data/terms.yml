@@ -1733,6 +1733,27 @@ B:
   see:
   - label: Symmetric monoidal category
     id: symmetric_monoidal_category
+- id: branch
+  en: branch
+  ko: 분지
+  primary: en
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
+- id: branch_cut
+  en: branch cut
+  ko: 분지절단
+  primary: ko
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
+- id: branch_point
+  en: branch point
+  ko: 분지점
+  primary: en
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
 - id: brioschi_formula
   en: Brioschi formula
   ko: 브리오스키 공식
@@ -13048,6 +13069,13 @@ M:
     url: /ko/math/lie_theory/representations_of_sl2
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: multivalued_function
+  en: multivalued function
+  ko: 다가함수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
 - id: multivariable_differentiation
   en: multivariable differentiation
   ko: 다변수 미분
@@ -15253,6 +15281,13 @@ P:
   defs:
   - label: '[가환대수학] §차원'
     url: /ko/math/commutative_algebra/Krull_dimension
+- id: principal_logarithm
+  en: principal logarithm
+  ko: 주치 로그
+  primary: ko
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
 - id: principal_open_set
   en: principal open set
   ko: 주열린집합
@@ -15274,6 +15309,13 @@ P:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: principal_value
+  en: principal value
+  ko: 주치
+  primary: ko
+  defs:
+  - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
+    url: /ko/math/complex_analysis/elementary_functions
 - id: principle_of_least_action
   en: principle of least action
   ko: 최소작용의 원리
