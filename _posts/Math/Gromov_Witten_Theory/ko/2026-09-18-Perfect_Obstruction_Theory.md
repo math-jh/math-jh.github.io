@@ -16,53 +16,48 @@ drift_needed: true
 
 ---
 
-대수기하학에서 공간의 국소적인 모양은 한 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들로 이해된다. Moduli space $M$의 점 $p$에서는 이 두 자료를 변형이론이 준다. Tangent space는 first-order deformation들의 공간 $T^1$이고, 잘라내는 방정식은 deformation을 고차로 늘릴 때 생기는 obstruction에서 온다. [§마디 곡선의 변형, §§장애의 소멸](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#장애의-소멸){: data-lid="v2ws2" }에서 본 것처럼, deformation을 한 차수씩 늘릴 때마다 그 obstruction class는 obstruction space $T^2$에 놓이고, 이것이 사라지도록 $T^1$의 coordinate 사이에 관계식을 넣어야 다음 차수로 갈 수 있다. 이렇게 모은 관계식은 많아야 $\dim T^2$개이며, 이를 하나의 map으로 적으면 $p$의 formal neighborhood는 일차항이 없는 formal map
+우리는 [§마디 곡선의 변형, ⁋정리 9](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#thm9)에서 prestable curve들의 moduli stack $\mathfrak{M}_{g,n}$이 차원 $3g-3+n$의 smooth algebraic stack임을 보았다. 이를 위해 핵심적인 사실은 prestable curve의 deformation이 unobstructed라는 것으로, 이것이 moduli stack의 smoothness를 보장했다. 
+
+이와 대조되는 것은...
+> 여기에서 일단 실제 정의 링크로 해 줘. 그러니까 M_g,n이 실제로 나오는 정의 링크를 걸어줘. 그리고 흐름은 어떻게 잡을 거냐면, 이와 대조되는 것은 moduli of stable maps들로, 이런 경우에는 X가 convex가 아닌 한 obstruction space가 살아 있어서 $\mathfrak{M}_{g,n}$이 smoothness가 될 필요가 없었다. 이렇게 적고, 그 다음에 이제 지금 뒤쪽 부분 두 개를 합친다. 즉 moduli of stable maps 상황에서 이야기를 하되, tangent space에서 고차 deformation 상황으로 넘어가는 이야기를 해 주고, 그 과정에서 obstruction이 사라지도록 관계식을 넣어야 한다. 여기서 관계식 개수가 많아야 obstruction space 차원만큼 있으므로 virtual dimension을 이렇게 정의한다. 이렇게 쓰고, 문단 바꾸고, 그 다음에 관점을 바꿔서 쿠라니시 픽처를 소개한다. 이를 다른 말로 하면, deformation들의 공간 T^1이 있고 obstruction들의 공간 T^2가 있고, 뭐 이렇게 해서 Kuranishi mapjㅢ 
+
+얘를 우리가 deformation space, tangent space의 deformation space를 본다고 치면 이제 여기서 obstruction이 실제로 생기게 되고, 
+
+
+
+고, 그 근거는 prestable curve의 deformation이 unobstructed라는 것이었다. 한 점 $(C,p_\bullet)$의 deformation을 small extension $A'\rightarrow A$를 따라 한 차수 extend하려 할 때, 그 obstruction class는 obstruction space $T^2(C)$에 kernel $I=\ker(A'\rightarrow A)$를 tensor한 공간 $T^2(C)\otimes_{\mathbb{K}}I$에 놓이고, 이 class가 $0$인 것과 extension이 존재하는 것이 동치였다. 따라서 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate들에서 출발하여 deformation을 한 차수씩 extend해 나가려면 매 단계의 obstruction이 사라지도록 coordinate들 사이에 관계식을 넣어야 하고, 그 결과 versal base는 이 coordinate들에 대한 power series ring을 많아야 $\dim T^2(C)$개의 관계식으로 나눈 것이 된다. Prestable curve의 경우에는 [§마디 곡선의 변형, ⁋명제 7](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop7)에 의하여 obstruction space 자체가 $0$이므로 관계식이 하나도 필요하지 않았고, 따라서 versal base가 power series ring이 되어 $\mathfrak{M}_{g,n}$은 모든 점에서 smooth하였다.
+
+에도 deformation space $T^1$과 obstruction space $T^2$가 있으며, 같은 이유로 $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 각 점에서의 complete local ring은 $T^1$의 coordinate들에 대한 power series ring을 많아야 $\dim T^2$개의, 일차항이 없는 관계식으로 나눈 꼴이었다. 즉 점 근방에서 moduli는 $T^1$의 coordinate 위에 $T^2$에 값을 갖는 방정식들을 부과한 것이고, 이 방정식들을 하나의 map으로 적으면 일차항이 없는 formal map
 
 $$\kappa:(T^1,0)\longrightarrow(T^2,0)$$
 
-의 zero locus $\kappa^{-1}(0)$이다. 이 $\kappa$를 *Kuranishi map*이라 부른다.
+의 zero locus이다. 이 $\kappa$를 *Kuranishi map*이라 부른다. 방정식 하나는 차원을 많아야 $1$만큼 낮추므로 각 점을 지나는 irreducible component의 차원은 $\dim T^1-\dim T^2$ 이상이고, 이 값이 virtual dimension $\vdim$이다. [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)는 $\dim T^1$과 $\dim T^2$가 각각 점마다 달라질 수 있어도 그 차이는 $X$와 $g$, $n$, $\beta$만으로 결정된다는 것을 보였는데, 이 명제의 exact sequence가 $T^2$에서 $0$으로 끝나는 것이 바로 위의 unobstructedness 때문이었다. 즉 pointed domain의 deformation에는 obstruction이 없으므로 stable map의 obstruction은 모두 map $\mu$를 extend하는 데에서 오고, $T^2$는 $H^1(C,\mu^\ast T_X)$의 quotient이다. 특히 $X$가 convex이면 genus $0$에서 $H^1(C,\mu^\ast T_X)=0$이므로 $T^2=0$이고, $\overline{\mathcal{M}}_{0,n}(X,\beta)$는 차원 $\vdim$의 smooth proper Deligne–Mumford stack이었다. ([§안정사상들의 모듈라이 공간, ⁋명제 5](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop5))
 
-$\kappa$의 성분 $\dim T^2$개가 독립적인 방정식으로 작동하면 $p$ 근방의 차원은 $\dim T^1-\dim T^2$이고, 이것이 [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="n1eqm" }에서 계산한 virtual dimension $\vdim$이다. 그러나 방정식들이 서로 종속이거나 아예 사라지면 차원을 기대만큼 깎지 못한다. 극단적으로 $\kappa\equiv0$이면 formal neighborhood는 $T^1$ 전체이고, 실제 차원은 $\vdim$을 $\dim T^2$만큼 넘는다. 우리 목표는 이런 경우에도 적분이 가능하도록 차원 $\vdim$의 class, 곧 *virtual fundamental class<sub>가상 기본류</sub>* $[M]^\vir\in A_{\vdim}(M)$을 만드는 것이다.
+그러나 $X$가 convex가 아니면 $H^1(C,\mu^\ast T_X)$가 사라지지 않을 수 있다. [§안정사상들의 모듈라이 공간, ⁋예시 6](/ko/math/gromov-witten_theory/moduli_of_stable_maps#ex6)에서 smooth cubic surface $S$ 위의 line $L$에 대하여 $\overline{\mathcal{M}}_{0,0}(S,2[L])$의 모든 점에서 $T^2$는 $1$차원이었고, moduli는 차원 $2$의 smooth stack이었으나 virtual dimension은 $1$이었다. 각 점에서 Kuranishi map이 항등적으로 $0$이어서 차원을 전혀 낮추지 못한 것이다. 일반적으로 moduli가 smooth한 점에서는 $\dim T^1$이 그 점에서의 실제 차원과 같으므로, 실제 차원이 $\vdim$을 넘는 양은 정확히 $\dim T^2$이다.
 
-이 class는 점마다의 Kuranishi map만으로는 만들 수 없다. 우선 $T^1$과 $T^2$의 차원은 점마다 jump하며 일정한 것은 그 차이뿐이므로, 점마다의 $T^2$를 모아 하나의 vector bundle을 만들 수 없다. 또 $\kappa$는 coordinate의 선택에 의존하여 서로 다른 점의 $\kappa$들이 붙지 않는다. 따라서 점마다의 $T^1$과 $T^2$를 cohomology로 주면서 전체에서 붙는 대상이 필요하다. 그 대상은 vector bundle 사이의 map $E_0\rightarrow E_1$로서, 각 점 $p$의 fiber에서 kernel이 $T^1$, cokernel이 $T^2$가 되는 것이다. 이 map의 rank가 점마다 바뀌면 kernel과 cokernel의 차원은 jump하지만, 두 bundle 자체와 그 rank의 차이 $\rank E_0-\rank E_1=\vdim$은 전체에서 일정하다.
-
-이러한 대상의 원형은 vector bundle의 section의 zero locus이다. Smooth variety $W$ 위의 vector bundle $V$와 section $s$에 대하여 $Z=Z(s)$의 점 $p$에서 tangent space는 $\ker(\dd{s}_p:T_{W,p}\rightarrow V_p)$이고 obstruction space는 $\coker(\dd{s}_p)$이므로, $T_W\vert_Z\xrightarrow{\dd{s}}V\vert_Z$가 위의 조건을 만족한다. 특히 $\dim W=\dim T^1$, $\rank V=\dim T^2$가 되도록 $W$와 $V$를 최소로 잡으면 $\dd{s}_p=0$이고 $s$가 곧 Kuranishi map이다. 일반적인 moduli space는 이런 표현을 étale-local하게만 가지므로, 아래에서 정의할 *perfect obstruction theory*는 이 map에 해당하는 자료를 전체에서 붙여 준 것이다.
-
-Perfect obstruction theory를 정의하는 조건은 고전적인 obstruction class의 언어로 다음과 같이 읽힌다. Scheme $T$에서 $M$으로 가는 map $g$를 ideal $J$의 square-zero extension $T\subset\overline{T}$로 늘리려 할 때, 그 obstruction은 $\Ext^1(g^\ast E^\bullet,J)$에 놓이고 이것이 $0$인 것과 늘릴 수 있는 것이 동치이다. ([BF, Theorem 4.5]) $T=\Spec A$가 $p$로 가는 local Artin $\mathbb{K}$-algebra의 spectrum이고 $\overline{T}$가 그 small extension이면, 이는 $h^1((E^\bullet)^\vee\vert_p)$가 $p$의 obstruction space라는 것이고 위의 Kuranishi map을 이 공간으로 가는 map으로 잡을 수 있다는 것이다.
-
-다만 obstruction space는 obstruction class를 담기만 하면 되므로 하나로 정해지지 않는다. 실제보다 큰 공간도 obstruction space가 되며, perfect obstruction theory 역시 $M$이 정하는 것이 아니라 $M$ 위에 추가로 고르는 자료이다. Virtual class는 이 선택에 의존하므로, stable map moduli에서는 기하적인 출처, 곧 $H^1(C,\mu^\ast T_X)$에서 obstruction을 담는 [명제 12](#prop12){: data-lid="9vcuj" }의 perfect obstruction theory를 쓴다.
-
-대수기하학에서 공간의 국소적인 기하학은 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들의 관계로 이해된다. 일반적인 smooth point에서는 점 근방이 tangent space와 같은 차원을 갖지만, singular point에서는 tangent space, 즉 $1$차 미분이 공간을 온전히 복원하지 못해서 그 tangent space가 실제 공간보다 더 큰 공간의 역할을 한다. 때문에 이러한 곳에서는 $2$차 이상의 고차항이 tangent space를 잘라내서 원래의 공간을 결정하도록 해야 한다. 이러한 고차 방정식들이 $r$개의 독립적인 구속조건으로 작동한다면 기대 차원은 tangent space의 차원보다 $r$만큼 작지만, 방정식들이 서로 종속이 되거나 무력화되면 차원을 기대만큼 깎지 못해 실제 차원이 이 기대치를 초과할 수 있다.
-
-예를 들어, $\mathbb{A}^3$ 안에서 두 방정식 $\x\y=0$, $\x\z=0$으로 정의되는 공간 $X=Z(\x\y,\x\z)$를 생각하자. 이 방정식은 두 개의 방정식으로 정의되므로, 우리가 기대하는 차원은 $3-2=1$이지만, 이를 실제로 그려보면 $\x=0$을 만족하는 곳, 즉 $\y\z$-평면과, $\y,\z$가 동시에 $0$이 되는 곳, 즉 $\x$축의 합집합이 된다. 이 그림에서 $\x$축 부분은 세 미지수에서 두 방정식이 온전히 작동하여 차원을 깎아내리므로 $1$차원의 공간이 되지만, $\y\z$-평면에서는 이 방정식이 차원을 하나밖에 깎지 못해 실제 차원이 기대 차원보다 하나 부풀어오른다. 뿐만 아니라 이 두 성분이 만나는 원점에서는 방정식의 $1$차 도함수가 모두 $0$이 되므로, tangent space의 차원마저 $3$차원이 된다. 
-
-[§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="31q1v" }에서 우리가 계산한 virtual dimension은 바로 이런 직관을 담아내던, <em-ko>올바른</em-ko> 차원이었다. Stable map moduli에서 tangent space는 stable map이 움직이는 방향, 즉 stable map의 deformation space가 되며 $T^2$가 이를 잘라내는 방정식의 역할을 하게 된다는 것이 정의
-
-$$\vdim=\dim T^1(C,p_\bullet,\mu)-\dim T^2(C,p_\bullet,\mu)$$
-
-의 의미였다. 해당 명제에서 우리는 이 virtual dimension이 stable map의 선택에 의존하지 않고 모든 점에서 $g,n,\beta$만으로 결정되는 것은 이미 보았지만, 위에서 살펴본 것과 같은 이유로 이것이 실제 차원이 된다는 보장은 없다. 즉 $\dim T^1$과 $\dim T^2$이 각각 바뀌면서 그 차이만 맞춰주게 되며, 이 과정에서는 당연히 위와 같은 일이 자주 일어나게 된다.
-
-한편 moduli space의 실제 차원 $\dim\overline{\mathcal{M}}_{g,n}(X,\beta)$을 한 점에서의 국소 차원으로 읽으면, 이는 그 점에서의 tangent space의 차원 $\dim T^1$보다 작거나 같으며, 이러한 결손을 잡아내는 보정항으로 사용하고자 한 것이 $\dim T^2$를 도입한 것이기는 하지만 이것이 실제 결손을 측정하는 것은 아니었다. 실제로 차이가 나는 부분은
-
-$$\dim\overline{\mathcal{M}}_{g,n}(X,\beta)-\vdim=\dim T^2-\bigl(\dim T^1-\dim\overline{\mathcal{M}}_{g,n}(X,\beta)\bigr)$$
-
-으로 쓸 수 있으며, 이때 $\dim T^1-\dim\overline{\mathcal{M}}_{g,n}(X,\beta)$은 항상 음이 아니며, 이 수가 $\dim T^2$의 차원을 죽여준다면 virtual dimension과 실제 차원이 같아지게 된다. 이러한 상황에서, 만일 $T^2$의 차원이 $0$이라면 $\dim T^1-\dim\overline{\mathcal{M}}_{g,n}(X,\beta)$의 값이 강제로 $0$이 되고 위의 결손 또한 $0$이 되므로 moduli space는 smooth가 된다. 그러나 $T^2$가 살아있어도 $\dim T^1-\dim\overline{\mathcal{M}}_{g,n}(X,\beta)$가 이를 완벽하게 상쇄한다면 역시 두 차원이 맞게 된다. 
-
-이를 실제 moduli space에서 보기 위해 $X$를 smooth projective variety, $\dim X=d$라 하고 $\beta=0$, $g=1$, $n\geq1$을 택하자. Class $0$의 stable map $\mu:C\rightarrow X$는 각 component를 한 점으로 보내는 constant map이고, stability 때문에 domain은 stable curve여야 하므로 남는 자료는 $n$-pointed genus $1$ stable curve와, 이 curve가 어디로 옮겨지는지를 담는 함숫값 $\mu(C)\in X$뿐이다. 따라서
+Convexity가 이러한 현상을 막아 주는 것도 genus $0$에서뿐이다. $\dim X=d\geq1$이라 하고 $n\geq1$에 대하여 class $0$의 genus $1$ stable map을 보자. 이는 각 component를 한 점으로 보내는 constant map이고, stability에 의해 domain은 stable curve여야 하므로 남는 자료는 $n$-pointed genus $1$ stable curve와 그 image인 $X$의 한 점뿐이다. 따라서
 
 $$\overline{\mathcal{M}}_{1,n}(X,0)\cong\overline{\mathcal{M}}_{1,n}\times X$$
 
-이고 그 차원은 $(3\cdot1-3+n)+d=n+d$이다. 이는 위의 virtual dimension 공식이 주는 $\vdim=0+(d-3)(1-1)+n=n$와는 다른 것으로, 우리 주장은 이것이 실제로 위에서 살펴본 계산에서 나온다는 것이다. Constant map에서는 $\mu^\ast T_X=\mathcal{O}_C\otimes T_{X,\mu(C)}$가 trivial bundle이므로
+는 차원 $n+d$의 smooth stack이지만, [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)의 공식은 $\vdim=0+(d-3)(1-1)+n=n$을 준다. Constant map은 domain의 어떤 deformation을 따라서도 constant map으로 extend되므로, 이 명제의 exact sequence에서 pointed domain의 deformation을 $H^1(C,\mu^\ast T_X)$로 보내는 map은 $0$이고 $T^2\cong H^1(C,\mu^\ast T_X)$이다. 한편 $\mu^\ast T_X=\mathcal{O}_C\otimes T_{X,\mu(C)}$는 trivial bundle이므로
 
 $$H^1(C,\mu^\ast T_X)=H^1(C,\mathcal{O}_C)\otimes T_{X,\mu(C)}$$
 
-이고, $g=1$에서 $\dim H^1(C,\mathcal{O}_C)=1$이므로 이 공간은 $d$차원이다. 나아가 constant map에서는 $\dd{\mu}=0$이므로 $T^2\cong H^1(C,\mu^\ast T_X)$이고, moduli 자체가 smooth하므로 결손항 $\dim T^1-\dim\overline{\mathcal{M}}_{1,n}(X,0)$도 $0$이다. 따라서 초과분 $\dim\overline{\mathcal{M}}_{1,n}(X,0)-\vdim$은 결손항의 상쇄 없이 정확히 $\dim T^2=d$로 나타난 것이다.
+이고, $g=1$에서 $\dim H^1(C,\mathcal{O}_C)=1$이므로 이 공간은 $d$차원이다. 즉 초과분 $d$는 obstruction space 전체가 사라지지 않고 남은 것이며, 여기서도 Kuranishi map은 항등적으로 $0$이다. $X$가 $\mathbb{P}^r$처럼 convex여도 마찬가지이다.
 
-우리 글의 목표는 이렇게 차원이 맞지 않더라도, 적분을 가능하게 해 주는 기대 차원의 class인 *virtual fundamental class<sub>가상 기본류</sub>*
+이는 Gromov-Witten invariant를 정의하는 데에 직접적인 문제가 된다. [§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1)에서 우리는 convex target의 genus $0$ moduli가 smooth proper Deligne–Mumford stack이라는 것을 이용해 그 위에서 cohomology class들의 곱을 적분하였다. 이 때 불변량이 $0$이 아닐 수 있으려면 insertion들의 codimension의 합이 $\vdim$과 같아야 했고, 가령 $\mathbb{P}^2$의 rational curve의 개수 $N_d$를 불변량으로 적을 때 marked point의 개수 $3d-1$은 이 조건으로 정해졌다. 즉 적분의 대상이 되는 fundamental class는 차원 $\vdim$을 가져야 한다. 그러나 위의 두 예시에서 moduli의 fundamental class는 $\vdim$보다 큰 차원을 갖고, 일반적인 moduli는 서로 다른 차원의 irreducible component들을 가질 수 있으므로 ([§안정사상들의 모듈라이 공간, §§Virtual dimension](/ko/math/gromov-witten_theory/moduli_of_stable_maps#기대차원)) 하나의 차원에 놓이는 fundamental class를 말할 수조차 없다. 또 실제 차원은 각 점에서 Kuranishi map이 차원을 얼마나 낮추는지에 따라 $\dim T^1-\dim T^2$ 이상 $\dim T^1$ 이하의 값으로 정해지므로, $X$와 $g$, $n$, $\beta$만으로 결정되는 $\vdim$과 달리 moduli의 구체적인 기하에 의존한다. 따라서 일반적인 target과 genus에서 불변량을 정의하려면 moduli의 실제 차원과 상관없이 차원 $\vdim$을 갖는 class
 
 $$[\overline{\mathcal{M}}_{g,n}(X,\beta)]^\vir\in A_{\vdim}(\overline{\mathcal{M}}_{g,n}(X,\beta))$$
 
-를 구성하는 것으로, 이는 [BF]를 따라 *perfect obstruction theory*라 불리는 자료에서 얻을 수 있다.
+를 fundamental class 대신 적분의 대상으로 삼아야 한다. 이를 *virtual fundamental class<sub>가상 기본류</sub>*라 부르며, $T^2$가 모든 점에서 $0$이어서 moduli가 차원 $\vdim$의 smooth stack인 경우에는 이것이 보통의 fundamental class와 같아야 한다.
+
+이 class가 무엇이어야 하는지는 위의 국소적인 그림이 알려 준다. Kuranishi map의 성분들이 독립적인 방정식으로 작동하여 그 zero locus가 기대 차원을 가지면 그 fundamental class가 답이 되어야 하고, 그렇지 않으면 방정식들을 일반적인 위치로 흔들었을 때 얻어질 zero locus의 class가 답이 되어야 한다. 위의 두 예시처럼 moduli가 smooth하고 점마다의 $T^2$가 모여 rank $r$의 vector bundle을 이루는 경우를 보자. 이 때 Kuranishi map은 항등적으로 $0$이므로 moduli는 이 vector bundle의 항등적으로 $0$인 section의 zero locus로 볼 수 있다. 이 section을 zero section과 transversal하게 만나는 section으로 흔들 수 있다면 그 zero locus는 codimension $r$이고 그 class는 top Chern class를 fundamental class에 cap한 것이므로, 이 경우 virtual fundamental class는 이 obstruction bundle의 Euler class와 fundamental class의 cap product여야 한다. 실제로 그렇다는 것은 [명제 11](#prop11)의 (4)에서 보며, constant map의 moduli에서는 [예시 14](#ex14)에서 이를 직접 계산한다.
+
+그러나 일반적으로는 이 그림을 그대로 쓸 수 없다. Moduli는 singular할 수 있고, $T^1$과 $T^2$의 차원은 점마다 jump하며 일정한 것은 그 차이뿐이므로 점마다의 $T^2$를 모아 하나의 vector bundle을 만들 수 없다. 또 Kuranishi map은 coordinate의 선택에 의존하므로 서로 다른 점의 것이 붙지 않고, 방정식을 실제로 흔들 수도 없다. 따라서 두 가지가 필요하다. 하나는 방정식을 흔들지 않고도 흔든 결과의 class를 얻는 방법이며, 이는 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 normal cone으로 정의하는 localized Euler class가 해결한다. 다른 하나는 점마다의 tangent space와 obstruction space를 전체에서 붙여 주는 자료이다. 그 자료는 국소적으로 vector bundle 사이의 morphism $E_0\rightarrow E_1$로 표현되는 complex로서, 각 점 $p$의 fiber에서 kernel이 $T^1$이고 cokernel이 $p$에서의 obstruction space인 것이다. 이 morphism의 rank가 점마다 바뀌면 kernel과 cokernel의 차원은 jump하지만, 두 bundle의 rank의 차이 $\rank E_0-\rank E_1$은 일정하므로 이것이 virtual dimension이 된다.
+
+이 complex를 cotangent 쪽에서 적은 $E^\bullet=[E^{-1}\rightarrow E^0]$, 곧 $E^{-i}=E_i^\vee$에 cotangent complex로의 morphism $\phi$를 함께 준 것이 [BF]의 *perfect obstruction theory*이다. ([정의 3](#def3)) 그 조건은 obstruction의 언어로 다음과 같이 읽힌다. Deligne–Mumford stack $M$ 위에서 [정의 3](#def3)의 두 조건은, scheme $T$에서의 임의의 morphism $g:T\rightarrow M$과 ideal $J$를 갖는 임의의 square-zero extension $T\subset\overline{T}$에 대하여 $g$를 $\overline{T}$로 extend하는 것의 obstruction이 $\Ext^1(g^\ast E^\bullet,J)$에 놓이고, 이것이 $0$인 것과 extension이 존재하는 것이 동치이며, extension이 존재하면 extension들은 $\Ext^0(g^\ast E^\bullet,J)$의 torsor를 이룬다는 것과 동치이다. ([BF, Theorem 4.5]) $T$가 점 $p$로 가는 local Artin $\mathbb{K}$-algebra의 spectrum이고 $\overline{T}$가 그 small extension이면 이는 $h^1((E^\bullet)^\vee\vert_p)$가 $p$에서의 obstruction space라는 것이고, $T=\Spec\mathbb{K}$가 점 $p$이고 $\overline{T}=\Spec\mathbb{K}[\epsilon]$인 경우에 적용하면 $h^0((E^\bullet)^\vee\vert_p)$가 tangent space $T^1$이라는 것이다. 즉 perfect obstruction theory는 앞의 두 글에서 점마다 계산한 deformation space와 obstruction space를 하나의 complex의 cohomology로 모아 전체에서 붙인 것이다.
+
+다만 obstruction space는 obstruction class를 담기만 하면 되므로 하나로 정해지지 않는다. 실제보다 큰 공간도 obstruction space가 되며, 마찬가지로 perfect obstruction theory는 moduli가 정하는 것이 아니라 그 위에 추가로 고르는 자료이고 virtual class는 이 선택에 의존한다. ([예시 4](#ex4)) Stable map의 경우에는 위에서 본 대로 obstruction이 모두 $H^1(C,\mu^\ast T_X)$에서 오고, 점마다의 $H^0(C,\mu^\ast T_X)$와 $H^1(C,\mu^\ast T_X)$는 universal curve $\pi:\mathcal{C}\rightarrow\overline{\mathcal{M}}_{g,n}(X,\beta)$와 universal map $\mu:\mathcal{C}\rightarrow X$에 대하여 이들을 각 점에서의 cohomology로 갖는 complex $R\pi_\ast\mu^\ast T_X$로 한꺼번에 모인다. 이 complex는 domain curve를 고정하고 map만 움직이는 deformation을 담으므로 $\mathfrak{M}_{g,n}$에 대한 상대적인 perfect obstruction theory를 주고, $\mathfrak{M}_{g,n}$이 smooth하다는 것, 곧 domain curve의 deformation이 unobstructed라는 것이 이 상대적인 자료만으로 stable map moduli의 virtual fundamental class를 정의할 수 있게 해 준다. ([명제 12](#prop12))
 
 ## 벡터다발의 zero locus
 
@@ -121,7 +116,7 @@ $$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
 그러나 이 차원 세기만으로는 localized Euler class가 $Z(s)$ 위의 <em-ko>어디에</em-ko> 놓이는지 알 수 없다. $e(E,s)$를 실제로 정하는 것은 section $s$ 자체가 아니라 $E\vert_{Z(s)}$ 안의 closed subcone $C_{Z(s)/X}$이며, $Z(s)$가 여러 성분을 가지면 normal cone의 각 성분이 저마다의 몫을 기여한다. [예시 1](#ex1){: data-lid="tis96" }에서 normal cone은 $s\equiv0$일 때 zero section이었고 $s$가 transversal할 때 vector bundle 전체였는데, 다음은 normal cone이 그 어느 쪽도 아니며 subbundle조차 아닌 예이다.
 
 ::: 예시 2
-$X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 이는 도입부의 $Z(\x\y,\x\z)\subset\mathbb{A}^3$을 사영화한 것으로, $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, $X$로 보낸 class는
+$X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 이는 $\mathbb{A}^3$ 안의 $Z(\x\y,\x\z)$를 사영화한 것으로, $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, $X$로 보낸 class는
 
 $$c_2(E)\cap[\mathbb{P}^3]=4H^2\cap[\mathbb{P}^3]$$
 
