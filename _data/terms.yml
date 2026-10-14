@@ -2151,6 +2151,8 @@ C:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+  - label: '[해석학] §급수의 재배열과 곱'
+    url: /ko/math/analysis/rearrangements_and_products
 - id: cauchy-riemann_equation
   en: Cauchy-Riemann equation
   ko: 코시-리만 방정식
@@ -16232,6 +16234,13 @@ R:
   - label: 복소켤레
     lang: ko
     id: complex_conjugate
+- id: rearrangement
+  en: rearrangement
+  ko: 재배열
+  primary: ko
+  defs:
+  - label: '[해석학] §급수의 재배열과 곱'
+    url: /ko/math/analysis/rearrangements_and_products
 - id: recollement
   en: recollement
   ko: 르콜망
