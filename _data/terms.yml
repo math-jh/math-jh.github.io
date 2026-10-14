@@ -15316,6 +15316,8 @@ P:
   defs:
   - label: '[복소해석학] §지수함수, 로그, 거듭제곱'
     url: /ko/math/complex_analysis/elementary_functions
+  - label: '[복소해석학] §유수를 이용한 실적분 계산'
+    url: /ko/math/complex_analysis/residue_integrals
 - id: principle_of_least_action
   en: principle of least action
   ko: 최소작용의 원리
