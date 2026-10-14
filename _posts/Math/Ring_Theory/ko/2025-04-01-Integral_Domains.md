@@ -59,7 +59,7 @@ Commutative ring $A$와 그 안의 원소 $a, b \in A$ ($b \neq 0$)에 대하여
    - $d \mid a$이고 $d \mid b$, 그리고
    - $d'$가 $d' \mid a$이고 $d' \mid b$를 만족하면 항상 $d' \mid d$
 
-$a$와 $b$의 greatest common divisor는 $\gcd(a, b)$ 또는 간단히 $(a, b)$로 쓴다.
+$a$와 $b$의 greatest common divisor는 $\gcd(a, b)$ 또는 간단히 $(a, b)$로 쓴다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋정의 4](/ko/math/number_theory/euclidean_algorithm#def4){: data-lid="0595d" })
 :::
 
 정의에 의해, $b \mid a$가 ring $A$에서 성립함은 $(a) \subseteq (b)$와 동치이다. 특히, $d$가 $a$, $b$의 임의의 공약수이면 $(d)$는 $(a, b)$를 포함해야 한다. 따라서 위의 두 조건은 ideal의 언어로 다음과 같이 번역할 수 있다:
@@ -166,7 +166,7 @@ $$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
 
 과 같은 형태의 곱으로 $10$을 나타낼 수도 있으며, 우리는 이러한 식은 서로 다르지 않은 것으로 취급하고 싶다. 이 때문에 위의 정의에서 unit만큼 차이나는 두 원소는 (사실상) 같은 것으로 보는 것이다. 
 
-한편, irreducible과 prime의 차이는 다소 미묘한데, unique factorization domain을 제대로 정의하기 위해서는 이들을 확실하게 구별해야 한다. 우선 다음 명제는 자명하다. 
+한편, irreducible과 prime의 차이는 다소 미묘한데, unique factorization domain을 제대로 정의하기 위해서는 이들을 확실하게 구별해야 한다. 정수론에서 prime number는 positive divisor가 $1$과 자기 자신뿐인 정수로 정의되었으므로 이는 irreducible의 조건이고, 위 정의의 prime 조건은 [\[정수론\] §소수와 산술의 기본정리, ⁋보조정리 2](/ko/math/number_theory/primes#lem2){: data-lid="ilz0g" }에서 따로 증명한 성질이었다. 우선 다음 명제는 자명하다. 
 
 ::: 명제 12
 Integral domain $A$에서 prime element는 항상 irreducible이다.

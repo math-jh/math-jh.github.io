@@ -81,7 +81,7 @@ Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\ma
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="fxjk4" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 [\[집합론\] §자연수와 무한집합, ⁋따름정리 11](/ko/math/set_theory/natural_numbers#cor11){: data-lid="t9z6p" }에 의하여 comaximal이 된다. 
+꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="fxjk4" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
 
 한편, 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
 
@@ -172,7 +172,7 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 이 되며, 특히 만일 $\bigcap \mathfrak{a}_i=0$이라면 isomorphism $A\cong\prod A/\mathfrak{a}_i$를 얻는다. 
 
-도입부에서 언급한 정수 버전은 $A=\mathbb{Z}$인 특수한 경우이다. 즉, pairwise coprime인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하고 $n=n_1\cdots n_r$이라 두면, 서로소 조건이 곧 comaximal 조건 $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$이 되므로 위 명제는 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 준다. 
+도입부에서 언급한 정수 버전은 $A=\mathbb{Z}$인 특수한 경우이다. 즉, pairwise coprime인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하고 $n=n_1\cdots n_r$이라 두면, 서로소 조건이 곧 comaximal 조건 $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$이 되므로 위 명제는 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 준다. 이 isomorphism의 양변의 unit group을 비교하면 [§가역원과 영인자, ⁋명제 8](/ko/math/ring_theory/units_and_zero_divisors#prop8)에 의해 $(\mathbb{Z}/n\mathbb{Z})^\times\cong\prod(\mathbb{Z}/n_i\mathbb{Z})^\times$이고, [§가역원과 영인자, ⁋예시 7](/ko/math/ring_theory/units_and_zero_divisors#ex7)에서 본 것처럼 $(\mathbb{Z}/m\mathbb{Z})^\times$의 크기는 $\varphi(m)$이므로 $\varphi(n)=\varphi(n_1)\cdots\varphi(n_r)$을 얻는다. ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋명제 5](/ko/math/number_theory/euler_theorem#prop5){: data-lid="44rsr" }) 
 
 $\bigcap\mathfrak{a}_i=0$일 때 얻어지는 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실이다. 이 조건은 $A$가 commutative인 경우 [명제 5](#prop5){: data-lid="ve116" }에 의하여 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
 

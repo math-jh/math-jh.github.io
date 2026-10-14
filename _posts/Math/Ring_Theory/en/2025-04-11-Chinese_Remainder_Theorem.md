@@ -81,7 +81,7 @@ Here the condition $\mathfrak{a}+\mathfrak{b}=A$ is equivalent to the identity e
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-which corresponds exactly to the existence of a Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Theorem 8](/en/math/number_theory/euclidean_algorithm#thm8)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of coprime integers $m,n$ are comaximal by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 11](/en/math/set_theory/natural_numbers#cor11){: data-lid="t9z6p" }.
+which corresponds exactly to the existence of a Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Theorem 8](/en/math/number_theory/euclidean_algorithm#thm8)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of coprime integers $m,n$ are comaximal.
 
 On the other hand, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$, which fails in general, does hold when the two ideals are comaximal. The following result is what we need.
 
@@ -175,7 +175,7 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 and in particular, if $\bigcap \mathfrak{a}_i=0$, then we obtain the isomorphism $A\cong\prod A/\mathfrak{a}_i$.
 
-The integer version mentioned in the introduction is the special case $A=\mathbb{Z}$. That is, for pairwise coprime $n_1,\ldots, n_r$, setting $\mathfrak{a}_i=n_i \mathbb{Z}$ and $n=n_1\cdots n_r$, the coprime condition becomes exactly the comaximal condition $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$, so the above proposition yields the isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$.
+The integer version mentioned in the introduction is the special case $A=\mathbb{Z}$. That is, for pairwise coprime $n_1,\ldots, n_r$, setting $\mathfrak{a}_i=n_i \mathbb{Z}$ and $n=n_1\cdots n_r$, the coprime condition becomes exactly the comaximal condition $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$, so the above proposition yields the isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$. Comparing the unit groups of the two sides of this isomorphism, [§Units and Zero Divisors, ⁋Proposition 8](/en/math/ring_theory/units_and_zero_divisors#prop8) gives $(\mathbb{Z}/n\mathbb{Z})^\times\cong\prod(\mathbb{Z}/n_i\mathbb{Z})^\times$, and since, as we saw in [§Units and Zero Divisors, ⁋Example 7](/en/math/ring_theory/units_and_zero_divisors#ex7), the order of $(\mathbb{Z}/m\mathbb{Z})^\times$ is $\varphi(m)$, we obtain $\varphi(n)=\varphi(n_1)\cdots\varphi(n_r)$ ([\[Number Theory\] §Fermat's Little Theorem and Euler's Theorem, ⁋Proposition 5](/en/math/number_theory/euler_theorem#prop5){: data-lid="44rsr" }).
 
 The isomorphism $A\cong\prod A/\mathfrak{a}_i$ obtained when $\bigcap\mathfrak{a}_i=0$ is the strong statement that the ring $A$ decomposes as a product of smaller rings. When $A$ is commutative, this condition is equivalent by [Proposition 5](#prop5){: data-lid="ve116" } to $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$.
 

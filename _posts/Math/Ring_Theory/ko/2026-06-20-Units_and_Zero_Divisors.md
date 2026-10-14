@@ -107,11 +107,11 @@ $n\geq 1$에 대해 정의된 ring $\mathbb{Z}/n\mathbb{Z}$를 보자. 이 ring�
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. 이러한 $x,k$가 존재하면 $a$와 $n$의 공약수는 모두 $ax-kn=1$을 나누므로 $\gcd(a,n)=1$이고, 거꾸로 $\gcd(a,n)=1$이면 [\[집합론\] §자연수와 무한집합, ⁋따름정리 11](/ko/math/set_theory/natural_numbers#cor11){: data-lid="kq1rm" }에 의해 이러한 $x,k$가 존재한다. 정수론에서는 이 동치를 서로소의 특징으로 정리해 두었다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋따름정리 9](/ko/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }) 따라서 $a+n\mathbb{Z}$가 unit인 것은 $a$가 $n$과 서로소인 것과 동치이므로,
+인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §나눗셈과 유클리드 호제법, ⁋따름정리 9](/ko/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
-이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }).
+이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1){: data-lid="g583e" }). 따라서 $\gcd(a,n)=1$이면 $a+n\mathbb{Z}$가 생성하는 cyclic subgroup의 크기는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 $\varphi(n)$을 나누고, 이로부터 $(a+n\mathbb{Z})^{\varphi(n)}=1+n\mathbb{Z}$, 즉 $a^{\varphi(n)}\equiv 1\pmod{n}$을 얻는다. ([\[정수론\] §페르마 소정리와 오일러 정리, ⁋정리 3](/ko/math/number_theory/euler_theorem#thm3){: data-lid="qq63x" })
 
 반면 $\gcd(a,n)=d>1$이고 $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$이면 $a+n\mathbb{Z}$는 zero divisor이다. 이는 $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$이고,
 

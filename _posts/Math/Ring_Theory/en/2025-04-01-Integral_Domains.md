@@ -58,7 +58,7 @@ For a commutative ring $A$ and elements $a, b \in A$ ($b \neq 0$) in it, we defi
    - $d \mid a$ and $d \mid b$, and
    - whenever $d'$ satisfies $d' \mid a$ and $d' \mid b$, always $d' \mid d$.
 
-The greatest common divisor of $a$ and $b$ is written as $\gcd(a, b)$ or simply $(a, b)$.
+The greatest common divisor of $a$ and $b$ is written as $\gcd(a, b)$ or simply $(a, b)$. ([\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Definition 4](/en/math/number_theory/euclidean_algorithm#def4){: data-lid="0595d" })
 :::
 
 By definition, $b \mid a$ holding in the ring $A$ is equivalent to $(a) \subseteq (b)$. In particular, if $d$ is any common divisor of $a$ and $b$, then $(d)$ must contain $(a, b)$. Therefore, the two conditions above can be translated into the language of ideals as follows:
@@ -165,7 +165,7 @@ $$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
 
 one can also represent $10$, and we want to treat such expressions as not being different. For this reason, in the definition above, two elements that differ by a unit are regarded as (essentially) the same. 
 
-Meanwhile, the distinction between irreducible and prime elements is somewhat subtle, and to properly define a unique factorization domain, we must clearly distinguish between them. First, the following proposition is straightforward. 
+Meanwhile, the distinction between irreducible and prime elements is somewhat subtle, and to properly define a unique factorization domain, we must clearly distinguish between them. In number theory a prime number is defined as an integer whose only positive divisors are $1$ and itself, which is the condition of irreducibility, while the prime condition of the definition above was a property proved separately in [\[Number Theory\] §Primes and the Fundamental Theorem of Arithmetic, ⁋Lemma 2](/en/math/number_theory/primes#lem2){: data-lid="ilz0g" }. First, the following proposition is straightforward. 
 
 ::: Proposition 12
 In an integral domain $A$, every prime element is always irreducible.
