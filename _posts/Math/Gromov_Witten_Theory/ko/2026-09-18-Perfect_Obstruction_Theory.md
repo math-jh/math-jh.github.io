@@ -16,9 +16,9 @@ drift_needed: true
 
 ---
 
-우리는 [§마디 곡선의 변형, ⁋정의 8](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def8)의 prestable curve들의 moduli stack $\mathfrak{M}_{g,n}$이 차원 $3g-3+n$의 smooth algebraic stack임을 보았다. 이를 위해 핵심적인 사실은 prestable curve의 deformation이 unobstructed라는 것으로, 이것이 moduli stack의 smoothness를 보장했다. 
+우리는 [§마디 곡선의 변형, ⁋정의 8](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#def8){: data-lid="n4okj" }의 prestable curve들의 moduli stack $\mathfrak{M}_{g,n}$이 차원 $3g-3+n$의 smooth algebraic stack임을 보았다. 이를 위해 핵심적인 사실은 prestable curve의 deformation이 unobstructed라는 것으로, 이것이 moduli stack의 smoothness를 보장했다. 
 
-이와 대조되는 것은 [§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps)에서 다룬 stable map들의 moduli $\overline{\mathcal{M}}_{g,n}(X,\beta)$이다. Stable map $(C,p_\bullet,\mu)$의 first-order deformation들이 이루는 deformation space를 $T^1$, $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 étale atlas에서 이 stable map을 나타내는 점에서의 complete local ring을 $R$이라 하자. 그럼 이 점 근방의 formal neighborhood는 $\Spec R$로 주어지며, 이는 이 점을 $k$차까지 두껍게 한 infinitesimal neighborhood를 모든 $k$에 대해 모은 것이다. 이 때, stable map에는 infinitesimal automorphism이 없으므로 $T^1$은 이 점의 tangent space이고, $R$을 $(C,p_\bullet,\mu)$의 universal formal deformation의 base로 사용할 수 있다. 이제 $N=\dim T^1$이라 하고 $T^1$의 coordinate를 $\x_1,\ldots,\x_N$이라 하면, $T^1$의 원점에서의 formal neighborhood는
+이와 대조되는 것은 [§안정사상들의 모듈라이 공간](/ko/math/gromov-witten_theory/moduli_of_stable_maps){: data-lid="crl4y" }에서 다룬 stable map들의 moduli $\overline{\mathcal{M}}_{g,n}(X,\beta)$이다. Stable map $(C,p_\bullet,\mu)$의 first-order deformation들이 이루는 deformation space를 $T^1$, $\overline{\mathcal{M}}_{g,n}(X,\beta)$의 étale atlas에서 이 stable map을 나타내는 점에서의 complete local ring을 $R$이라 하자. 그럼 이 점 근방의 formal neighborhood는 $\Spec R$로 주어지며, 이는 이 점을 $k$차까지 두껍게 한 infinitesimal neighborhood를 모든 $k$에 대해 모은 것이다. 이 때, stable map에는 infinitesimal automorphism이 없으므로 $T^1$은 이 점의 tangent space이고, $R$을 $(C,p_\bullet,\mu)$의 universal formal deformation의 base로 사용할 수 있다. 이제 $N=\dim T^1$이라 하고 $T^1$의 coordinate를 $\x_1,\ldots,\x_N$이라 하면, $T^1$의 원점에서의 formal neighborhood는
 
 $$\Spec P,\qquad P=\mathbb{C}[[\x_1,\ldots,\x_N]]$$
 
@@ -81,7 +81,7 @@ $$T_{X,x}=K\oplus K',\qquad K=\ker(\dd{s}_x)$$
 
 $$E_x=I\oplus Q, \qquad I=\im(\dd{s}_x),\quad Q\cong\coker(\dd{s}_x)$$
 
-로 쪼갠 뒤 이에 맞춰 $s=(s_I,s_Q)$로 적자. 그럼 $\dd{s}_x$를 $K'$으로 제한한 것은 $I$로의 isomorphism이므로 $s_I$의 Jacobian은 $x$에서 full rank이고, [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4)에 의하여 $s_I=0$은 $x$ 근방에서 tangent space가 $K$인 smooth subvariety를 정의한다. 따라서 $x$의 formal neighborhood에서 $K'$의 coordinate는 $K$의 coordinate에 대한 함수 $\psi$로 쓸 수 있으며, 이 때 이 subvariety는 $\psi$의 graph이고 그 tangent space가 $K$이므로 $\psi$는 일차항이 없다. 이를 남은 방정식 $s_Q$에 대입한
+로 쪼갠 뒤 이에 맞춰 $s=(s_I,s_Q)$로 적자. 그럼 $\dd{s}_x$를 $K'$으로 제한한 것은 $I$로의 isomorphism이므로 $s_I$의 Jacobian은 $x$에서 full rank이고, [\[스킴\] §매끄러운 사상과 에탈 사상, ⁋정리 4](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm4){: data-lid="th3fe" }에 의하여 $s_I=0$은 $x$ 근방에서 tangent space가 $K$인 smooth subvariety를 정의한다. 따라서 $x$의 formal neighborhood에서 $K'$의 coordinate는 $K$의 coordinate에 대한 함수 $\psi$로 쓸 수 있으며, 이 때 이 subvariety는 $\psi$의 graph이고 그 tangent space가 $K$이므로 $\psi$는 일차항이 없다. 이를 남은 방정식 $s_Q$에 대입한
 
 $$\kappa(y)=s_Q(y,\psi(y)):(\ker(\dd{s}_x),0)\rightarrow(\coker(\dd{s}_x),0)$$
 
@@ -93,7 +93,7 @@ $$\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)=\dim X-\rank E$$
 
 는 항상 일정하다는 것이다. 위의 소거에서 coordinate와 방정식이 같은 수만큼 짝지어 사라지기 때문이며, 이 값이 이 모형의 virtual dimension $\vdim$이다. 즉 $Z(s)$가 얼마나 나쁘게 행동하든, 각 점의 Kuranishi 그림이 기대하는 차원은 localized Euler class가 놓이는 차원 $\dim X-\rank E$와 같다. 
 
-그러나 이 계산은 localized Euler class의 차원이 잘 맞아떨어진다는 것일 뿐, 실제로 그 class가 어떤 것인지를 알려주지는 않으며, 실제 정의는 별도로 해 주어야 한다. 핵심적인 도구는 [\[대수다양체\] §교차곱, ⁋명제 9](/ko/math/algebraic_varieties/intersection_product#prop9)이다. $Z=Z(s)$의 ideal sheaf를 $\mathcal{I}$라 하면 $Z$의 $X$ 안에서의 normal cone은
+그러나 이 계산은 localized Euler class의 차원이 잘 맞아떨어진다는 것일 뿐, 실제로 그 class가 어떤 것인지를 알려주지는 않으며, 실제 정의는 별도로 해 주어야 한다. 핵심적인 도구는 [\[대수다양체\] §교차곱, ⁋명제 9](/ko/math/algebraic_varieties/intersection_product#prop9){: data-lid="brhx6" }이다. $Z=Z(s)$의 ideal sheaf를 $\mathcal{I}$라 하면 $Z$의 $X$ 안에서의 normal cone은
 
 $$C_{Z/X}=\Spec_Z\bigoplus_{n\geq0}\mathcal{I}^n/\mathcal{I}^{n+1}$$
 
@@ -229,7 +229,7 @@ Intrinsic normal sheaf와 cone은 deformation theory의 의미도 갖는다. 점
 
 ## Perfect obstruction theory
 
-[§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 모형에서 $Z(s)$의 국소 deformation과 obstruction 자료는 그 미분 $\dd{s}$가 tangent space와 obstruction space를 이어 주는 tangent 방향의 complex
+[§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="uemf3" }의 모형에서 $Z(s)$의 국소 deformation과 obstruction 자료는 그 미분 $\dd{s}$가 tangent space와 obstruction space를 이어 주는 tangent 방향의 complex
 
 $$\Bigl[\at{0}{T_X\vert_{Z(s)}}\xrightarrow{\ \dd{s}\ }\at{1}{E\vert_{Z(s)}}\Bigr]$$
 
@@ -308,7 +308,7 @@ $$N_{L/\mathbb{P}^2}\xrightarrow{(1,0)}\mathcal{O}_L(1)\oplus\mathcal{O}_L(2)$$
 
 ## 가상 기본류의 구성
 
-Perfect obstruction theory $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$이 주어지면 [정리 8](#thm8)에 의하여 pure dimension $0$의 closed substack
+Perfect obstruction theory $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$이 주어지면 [정리 8](#thm8){: data-lid="3duhl" }에 의하여 pure dimension $0$의 closed substack
 
 $$\mathfrak{c}_M\subset\mathfrak{N}_M\hookrightarrow\mathfrak{E}$$
 
