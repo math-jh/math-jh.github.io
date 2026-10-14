@@ -3952,7 +3952,7 @@
 "fxgp2": {relation: required, reviewed: true}
 "fxj4j": {relation: weak, reviewed: true}
 "fxj67": {relation: required, reviewed: true}
-"fxjk4": {relation: required, reviewed: true}
+"fxjk4": {relation: weak, reviewed: true}
 "fxp7g": {relation: required, reviewed: true}
 "fxs17": {relation: required, reviewed: true}
 "fxxqp": {relation: required, reviewed: true}
@@ -7220,7 +7220,7 @@
 "svp2g": {relation: required, reviewed: true}
 "svqvk": {relation: required, reviewed: true}
 "svth4": {relation: weak, reviewed: true}
-"svu88": {relation: required, reviewed: true}
+"svu88": {relation: weak, reviewed: true}
 "svv5o": {relation: required, reviewed: true}
 "svy74": {relation: required, reviewed: true}
 "sw2of": {relation: required, reviewed: true}

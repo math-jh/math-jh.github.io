@@ -107,7 +107,7 @@ For $n\geq 1$, consider the ring $\mathbb{Z}/n\mathbb{Z}$. For an element $a+n\m
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-holds. That is, for some integers $x,k$, the equation $ax-kn=1$ holds. By [\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Corollary 9](/en/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }, the existence of such $x,k$ is equivalent to $\gcd(a,n)=1$, that is, $a$ being coprime to $n$, so
+holds. That is, for some integers $x,k$, the equation $ax-kn=1$ holds. If such $x,k$ exist, every common divisor of $a$ and $n$ divides $ax-kn=1$, so $\gcd(a,n)=1$; conversely, if $\gcd(a,n)=1$, then such $x,k$ exist by [\[Set Theory\] §Natural Numbers and Infinite Sets, ⁋Corollary 11](/en/math/set_theory/natural_numbers#cor11). In number theory this equivalence is recorded as a characterization of coprimality ([\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Corollary 9](/en/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }). Therefore $a+n\mathbb{Z}$ is a unit if and only if $a$ is coprime to $n$, so
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 

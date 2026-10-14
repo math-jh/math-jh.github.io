@@ -107,7 +107,7 @@ $n\geq 1$에 대해 정의된 ring $\mathbb{Z}/n\mathbb{Z}$를 보자. 이 ring�
 
 $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §나눗셈과 유클리드 호제법, ⁋따름정리 9](/ko/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
+인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. 이러한 $x,k$가 존재하면 $a$와 $n$의 공약수는 모두 $ax-kn=1$을 나누므로 $\gcd(a,n)=1$이고, 거꾸로 $\gcd(a,n)=1$이면 [\[집합론\] §자연수와 무한집합, ⁋따름정리 11](/ko/math/set_theory/natural_numbers#cor11)에 의해 이러한 $x,k$가 존재한다. 정수론에서는 이 동치를 서로소의 특징으로 정리해 두었다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋따름정리 9](/ko/math/number_theory/euclidean_algorithm#cor9){: data-lid="svu88" }) 따라서 $a+n\mathbb{Z}$가 unit인 것은 $a$가 $n$과 서로소인 것과 동치이므로,
 
 $$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
