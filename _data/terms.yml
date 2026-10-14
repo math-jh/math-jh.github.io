@@ -17630,6 +17630,13 @@ S:
   defs:
   - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
+- id: separates_points
+  en: separates points
+  ko: 점을 분리한다
+  primary: ko
+  defs:
+  - label: '[해석학] §Stone–Weierstrass 정리'
+    url: /ko/math/analysis/stone_weierstrass
 - id: separation_axiom
   en: separation axiom
   ko: 분리공리
@@ -20039,6 +20046,13 @@ T:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+- id: trigonometric_polynomial
+  en: trigonometric polynomial
+  ko: 삼각다항식
+  primary: en
+  defs:
+  - label: '[해석학] §Stone–Weierstrass 정리'
+    url: /ko/math/analysis/stone_weierstrass
 - id: triple_integral
   en: triple integral
   ko: 삼중적분
@@ -20703,6 +20717,13 @@ V:
   defs:
   - label: '[스택] §고유스택'
     url: /ko/math/stacks/proper_stacks
+- id: vanishes_at_no_point
+  en: vanishes at no point
+  ko: 어디서도 사라지지 않는다
+  primary: ko
+  defs:
+  - label: '[해석학] §Stone–Weierstrass 정리'
+    url: /ko/math/analysis/stone_weierstrass
 - id: vanishing_cycle
   en: vanishing cycle
   ko: 소멸 순환
