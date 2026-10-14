@@ -14,6 +14,8 @@ date: 2021-10-13
 weight: 6
 translated_at: 2026-09-24T19:15:06+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-14T15:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 In this post, we define functions between vector spaces, namely *linear maps*.
 
@@ -40,11 +42,11 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 3. For any $u,v\in V$, $L(u-v)=L(u)-L(v)$.
 :::
 ::: Proof
-Since linear maps preserve scalar multiplication, the first and second assertions follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-lid="1y4gg" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-lid="a2sgz" }. Now, since linear maps preserve vector addition, and by the second assertion,
+Since linear maps preserve scalar multiplication, the first and second assertions follow respectively from [§Vector Spaces, ⁋Proposition 2](/en/math/linear_algebra/vector_spaces#prop2){: data-lid="1y4gg" } and [§Vector Spaces, ⁋Corollary 3](/en/math/linear_algebra/vector_spaces#cor3){: data-lid="a2sgz" }. Now, since linear maps preserve vector addition, and from the second assertion, we have
 
 $$L(u-v)=L\bigl(u+(-v)\bigr)=L(u)+L(-v)=L(u)+\bigl(-L(v)\bigr)=L(u)-L(v)$$
 
-the third assertion also holds.
+so the third assertion also holds.
 :::
 
 ::: Proposition 3
@@ -68,7 +70,7 @@ For any $\alpha\in\mathbb{K}$ and $u\in U$,
 
 $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(u)))=\alpha(L_2\circ L_1)(u)$$
 
-Similarly, we can prove that $(L_2\circ L_1)(u_1+u_2)=(L_2\circ L_1)(u_1)+(L_2\circ L_1)(u_2)$ holds for the sum of vectors as well.
+Similarly, one can prove that $(L_2\circ L_1)(u_1+u_2)=(L_2\circ L_1)(u_1)+(L_2\circ L_1)(u_2)$ holds for the sum of vectors as well.
 :::
 
 ## Kernel and Image of a Linear Map
@@ -110,7 +112,7 @@ $$L(v_1+v_2)=L(v_1)+L(v_2)=0+0=0$$
 
 so that $\alpha v\in\ker L$ and $v_1+v_2\in\ker L$ hold.
 
-Similarly, $\im L$ is a subspace of $W$. If we take any $w,w_1,w_2\in\im L$ and $\alpha\in\mathbb{K}$, by definition
+Similarly, $\im L$ is a subspace of $W$. This is because if we take any $w,w_1,w_2\in\im L$ and $\alpha\in\mathbb{K}$, by definition
 
 $$L(v)=w,\quad L(v_1)=w_1,\quad L(v_2)=w_2$$
 
@@ -121,8 +123,6 @@ $$\alpha w=\alpha L(v)=L(\alpha v)\in\im L$$
 and
 
 $$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
-
-as well.
 :::
 
 Now, using these $\ker L$ and $\im L$, we can determine whether $L$ is injective or surjective.
@@ -136,7 +136,7 @@ For two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$,
 ::: Proof
 The second claim is a tautology.
 
-If $L$ is injective, then the element $v$ satisfying $L(v)=0$ must be unique, and since $0$ satisfies this equation by [Proposition 2](#prop2){: data-lid="86c0z" }, we must have $\ker L=\{0\}$. Therefore, for the first claim, it suffices to show only the proposition
+If $L$ is injective, then $L(v)=0$ must have a unique solution $v$, and since $0$ satisfies this equation by [Proposition 2](#prop2){: data-lid="86c0z" }, we must have $\ker L=\{0\}$. Therefore, for the first claim, it suffices to show only the proposition
 
 > $$\ker L=\{0\}\implies\text{$L$ injective}$$
 
@@ -153,7 +153,7 @@ Speaking less formally, the smaller $\ker L$ is, the closer $L$ is to being inje
 Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be given.
 
 1. If $L$ is injective, then for any linearly independent subset $S\subseteq V$, $L(S)$ is also linearly independent in $W$.
-2. If $L$ is surjective, then for $S\subseteq V$ satisfying $\langle S\rangle=V$, $L(S)$ also satisfies $\langle L(S)\rangle=W$.
+2. If $L$ is surjective, then for any subset satisfying $\langle S\rangle=V$ with $S\subseteq V$, $L(S)$ also satisfies $\langle L(S)\rangle=W$.
 :::
 ::: Proof
 1. For elements of $L(S)$, say $L(x_1),\ldots, L(x_k)$, if
@@ -170,7 +170,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 
     $$v=\sum_{i=1}^n\alpha_ix_i$$
     
-    Applying $L$ to both sides and using [Proposition 3](#prop3){: data-lid="kezui" },
+    If we apply $L$ to both sides and use [Proposition 3](#prop3){: data-lid="kezui" },
     
     $$w=L(v)=L\left(\sum_{i=1}^n\alpha_ix_i\right)=\sum_{i=1}^n\alpha_i L(x_i)$$
     
@@ -192,7 +192,7 @@ defines a linear map $L:V\rightarrow W$. In this case, $\im L=\{0\}$ and $\ker L
 The function defined in the example above is sometimes denoted by $0$. Although this notation may cause confusion with the additive identity $0$, this function is *actually* the identity element in an appropriate vector space. The proof of this is not difficult, but we postpone it for later.
 
 ::: Example 11
-Let a $\mathbb{K}$-vector space $V$ and $W\leq V$ be given. The formula
+Let an arbitrary $\mathbb{K}$-vector space $V$ and $W\leq V$ be given. The formula
 
 $$\iota(w)=w\text{ for all $w\in W$}$$
 
@@ -206,11 +206,11 @@ Consider arbitrary $\mathbb{K}$-vector spaces $V$, $W$ and their product $V\time
 
 $$\pr_1((v,w))=v$$
 
-defines a linear map $\pr_1:V\times W\rightarrow V$. It is easy to verify that $\im\pr_1=V$ and 
+defines a linear map $\pr_1:V\times W\rightarrow V$. We have $\im\pr_1=V$, and 
 
 $$\ker \pr_1=\{(0,w)\mid w\in W\}$$
 
-Of course, we can define $\pr_2:V\times W\rightarrow W$ similarly, and this can be extended to $n$-tuples as well. In particular, for the Euclidean space $\mathbb{K}^n$, 
+can be easily verified. Of course, we can define $\pr_2:V\times W\rightarrow W$ similarly, and this can be extended to $n$-tuples as well. In particular, for the Euclidean space $\mathbb{K}^n$, the formula
 
 $$\pr_i((a_1,\ldots, a_n))=a_i$$
 
@@ -220,7 +220,7 @@ also defines a linear map $\pr_i:\mathbb{K}^n\rightarrow \mathbb{K}$.
 $\pr$ stands for projection, and is often written simply as $p$ or $\pi$.
 
 ::: Example 13
-On $\mathbb{K}[\x]$, let us define a function $D:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x]$ by
+On $\mathbb{K}[\x]$, let us define a function $D:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x]$ by the formula
 
 $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 
@@ -230,7 +230,7 @@ $$D\left(\sum_{i=0}^\infty a_i\x^i\right)=\sum_{i=1}^\infty ia_i\x^{i-1}$$
 The last example is not merely an example, but can be thought of as a prototype of the isomorphisms we will explore in the next post.
 
 ::: Example 14
-Let $V$ be an arbitrary $n$-dimensional $\mathbb{K}$-vector space, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ be a basis of $V$. That is, for any $v\in V$,
+Let an arbitrary $n$-dimensional $\mathbb{K}$-vector space $V$ be given, and let $\mathcal{B}=\{x_1,\ldots, x_n\}$ be a basis of $V$. That is, for any $v\in V$,
 
 $$v=\sum_{i=1}^n v_i x_i$$
 
@@ -254,7 +254,7 @@ $$L(v)+L(w)=(v_1+w_1,v_2+w_2,\ldots,v_n+w_n)=L(v+w)$$
 
 holds.
 
-Since $\mathcal{B}$ is linearly independent, $\ker L$ is $\{0\}$. On the other hand, for any $(\alpha_1,\ldots,\alpha_n)\in\mathbb{K}^n$, the linear combination
+$\ker L$, since $\mathcal{B}$ is linearly independent, is $\{0\}$. On the other hand, for any $(\alpha_1,\ldots,\alpha_n)\in\mathbb{K}^n$, the linear combination
 
 $$\sum_{i=1}^n\alpha_i x_i$$
 
