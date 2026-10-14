@@ -97,11 +97,11 @@ $$\dd{(e_{i_1}\wedge\cdots\wedge e_{i_j})}=\sum_{k=1}^j(-1)^{k-1}x_{i_k}e_{i_1}\
 
 우선 이 complex의 양 끝의 homology는 익숙한 대상으로, $H_0$는 quotient $A/(x_1,\ldots, x_n)$이고 $H_n$은 $x_i$들 모두에 의해 annihilate되는 원소들의 모임이다. 또, Koszul homology는 언제나 $(x_1,\ldots, x_n)$에 의해 annihilate되므로, 자르는 방정식들이 unit ideal을 생성하는 극단적인 경우에는 모든 homology가 소멸한다. 가장 중요한 것은 $x_1,\ldots, x_n$이 regular sequence이면 모든 $i\geq 1$에 대하여 $H_i$가 소멸하고, 그 결과 $K(x_1,\ldots, x_n)$은 $A/(x_1,\ldots, x_n)$의 유한한 free resolution이 된다는 것이다. 직관적으로 가장 단순한 $n=1$의 경우를 보면, 다음의 complex
 
-$$0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$$
+$$0 \rightarrow A\overset{x_1}{\rightarrow}A \rightarrow 0$$
 
 에서 
 
-$$H_1=\ker(A\overset{x_1}{\longrightarrow}A)=\{a\in A\mid x_1a=0\}$$
+$$H_1=\ker(A\overset{x_1}{\rightarrow}A)=\{a\in A\mid x_1a=0\}$$
 
 이므로 $H_1$의 소멸이 곧 $x_1$이 non-zerodivisor라는 조건이 되는데, 이를 모든 degree와 임의의 길이의 sequence로 올린 것이 Koszul complex이다. 이를 associated sheaf로 옮기면 local complete intersection의 structure sheaf가 각 chart 위에서 명시적인 finite free resolution을 갖는다는 것이 된다.
 

@@ -80,7 +80,7 @@ For a Noetherian ring $A$, the following hold.
 
     we see that $(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$ sends $a_i x_i$ to $1$. Now defining $A_\mathfrak{p} \rightarrow M_\mathfrak{p}$ by $1\mapsto a_ix_i$, this is a section of $(\xi_i)_\mathfrak{p}$, and therefore the short exact sequence
 
-    $$0 \longrightarrow \ker (\xi_i)_\mathfrak{p}\longrightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\longrightarrow}A_\mathfrak{p}\longrightarrow 0$$
+    $$0 \rightarrow \ker (\xi_i)_\mathfrak{p}\rightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\rightarrow}A_\mathfrak{p}\rightarrow 0$$
 
     splits. From this we see that $M_\mathfrak{p}\cong A_\mathfrak{p}x_i\oplus\ker(\xi_i)_\mathfrak{p}$. Similarly, viewing $x_i$ as the evaluation map $M^\ast_\mathfrak{p} \rightarrow A_\mathfrak{p};\xi\mapsto \xi(x_i)$, we obtain $M_\mathfrak{p}^\ast\cong A_\mathfrak{p}\xi_i\oplus \ker(x_i)_\mathfrak{p}$, and now
 

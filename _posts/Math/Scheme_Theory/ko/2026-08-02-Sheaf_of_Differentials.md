@@ -292,7 +292,7 @@ $$(s_0,\ldots, s_n)\mapsto \sum_j s_j (\x_j/\x_i)$$
 
 이제 $U_i$ 위에서 morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 
-$$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
+$$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\mapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
 로 정의하면, 우변을 $(\ast)$로 보낸 값이 
 

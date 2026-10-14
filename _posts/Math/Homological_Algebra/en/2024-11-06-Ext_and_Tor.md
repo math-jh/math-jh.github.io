@@ -138,7 +138,7 @@ $$H^n(F^n\Tot(K)^\bullet)=\ker\left(\Hom_\lMod{A}(M, I^n)\rightarrow \Hom_\lMod{
 
 Now analyzing the cohomology long exact sequence for the case $p=n-1$ on the basis of this,
 
-$$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longrightarrow} H^n(F^n\Tot(K)^\bullet) \longrightarrow H^n(F^{n-1}\Tot(K)^\bullet) \longrightarrow 0$$
+$$\cdots \rightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\rightarrow} H^n(F^n\Tot(K)^\bullet) \rightarrow H^n(F^{n-1}\Tot(K)^\bullet) \rightarrow 0$$
 
 we see that $H^n(F^{n-1}\Tot(K)^\bullet)$ is the cokernel of the connecting homomorphism $\delta_{n-1}$. Here $H^n(F^n\Tot(K)^\bullet)$ was already found in the case $p=n$, and the connecting homomorphism $\delta_{n-1}$ again comes from $\Hom_\lMod{A}(M, I^{n-1})\rightarrow \Hom_\lMod{A}(M, I^{n})$, so we obtain
 

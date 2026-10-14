@@ -17,7 +17,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 Although we have already seen the importance of the properness of moduli spaces in [\[Stacks\] §Proper Stacks](/en/math/stacks/proper_stacks){: data-lid="5ib31" }, we cannot expect such a property in general enumerative problems. Among problems of this kind, a classical one is counting curves in $\mathbb{P}^2$ passing through $3d-1$ general points that are degree $d$ rational curves; for example, when $d=2$, it is known that this value is $1$. That is, there must exist a unique curve in $\mathbb{P}^2$ passing through $5$ points. On the other hand, if we consider the map
 
-$$\mu_t:\mathbb{P}^1\longrightarrow\mathbb{P}^2,\qquad [\u:\v]\longmapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
+$$\mu_t:\mathbb{P}^1\rightarrow\mathbb{P}^2,\qquad [\u:\v]\mapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
 
 this is a conic satisfying the equation
 
@@ -145,7 +145,7 @@ $$\Hom_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$$
 
 contains derivations that vanish at the marked points, and therefore records the infinitesimal automorphisms of the domain fixing the marked points. We write the two-term complex obtained in this way as
 
-$$\LL_\mu=\Bigl[\at{-1}{\mu^\ast\Omega_X}\longrightarrow\at{0}{\Omega_C(p_1+\cdots+p_n)}\Bigr]$$
+$$\LL_\mu=\Bigl[\at{-1}{\mu^\ast\Omega_X}\rightarrow\at{0}{\Omega_C(p_1+\cdots+p_n)}\Bigr]$$
 
 Intuitively, this incorporates the twist by the marked points into the domain term of the two-term model representing the relative cotangent complex of $\mu:C\rightarrow X$; by the standard interpretation in deformation theory, in the problem of deforming the pointed domain and the map together while fixing $X$,
 

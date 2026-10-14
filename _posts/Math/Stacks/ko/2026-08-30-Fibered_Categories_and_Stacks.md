@@ -64,7 +64,7 @@ $$f^\ast=F(f): F(V)\rightarrow F(U)$$
 
 을 잘 정의해야 하며, 바꿔 말하면 각각의 $f: U\rightarrow V$와 $V$ 위의 대상이 주어졌을 때, 그 pullback representation을 일관적으로 골라주는 <em-ko>선택</em-ko>을 해 주어야 한다. 그리고, 이러한 선택을 어떻게 하든 두 morphism의 합성
 
-$$U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$$
+$$U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W$$
 
 에 대한 pullback은 이제 더 이상 두 pullback의 합성과 같지 <em-ko>않고</em-ko>, 오직 이 둘 사이의 isomorphism 
 
@@ -77,7 +77,7 @@ Category $\mathcal{C}$ 위의 *pseudofunctor<sub>유사함자</sub>* $F:\mathcal
 
 1. 각 대상 $U\in \mathcal{C}$에 대응되는 groupoid $F(U)$,
 2. 각 morphism $f: U \rightarrow V$마다 대응되는 functor $f^\ast: F(V) \rightarrow F(U)$,
-3. 각 합성가능한 쌍 $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$마다 정의된 natural isomorphism 
+3. 각 합성가능한 쌍 $U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W$마다 정의된 natural isomorphism 
     
     $$\varepsilon_{f, g}: f^\ast\circ g^\ast \xRightarrow{\sim} (g\circ f)^\ast,$$
 
@@ -87,7 +87,7 @@ Category $\mathcal{C}$ 위의 *pseudofunctor<sub>유사함자</sub>* $F:\mathcal
 
 이들이 만족해야 하는 compatibility condition은 다음과 같다. 
 
-> 세 morphism $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W\overset{h}{\longrightarrow}Z$에 대하여
+> 세 morphism $U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W\overset{h}{\rightarrow}Z$에 대하여
 > 
 > $$\varepsilon_{f, h\circ g}\circ(\id_{f^\ast}\ast \varepsilon_{g, h})=\varepsilon_{g\circ f, h}\circ(\varepsilon_{f, g}\ast \id_{h^\ast})$$
 > 
@@ -251,7 +251,7 @@ Site $(\mathcal{C}, \tau)$ 위의 CFG $P:\mathcal{F} \rightarrow \mathcal{C}$에
 
 Global object $x\in F(U)$를 각 $U_i$에 restrict하고, double overlap 위에서 pseudofunctor의 canonical comparison isomorphism을 사용하면 descent datum이 얻어진다. 따라서 restriction functor
 
-$$F(U)\longrightarrow\Desc_F(\mathcal{U})$$
+$$F(U)\rightarrow\Desc_F(\mathcal{U})$$
 
 가 정의된다. 정의 12의 stack 조건은 모든 covering $\mathcal{U}$에 대하여 이 functor가 groupoid의 equivalence라는 것과 같다. 이 functor가 fully faithful인 것은 local morphism들이 global morphism으로 유일하게 붙는다는 prestack 조건이고, essentially surjective인 것은 모든 descent datum이 effective라는 조건이다.
 

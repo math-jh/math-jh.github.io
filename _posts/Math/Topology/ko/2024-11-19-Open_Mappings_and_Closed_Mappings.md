@@ -78,7 +78,7 @@ $$U_i=U\cap f^{-1}(A_i)$$
 ::: 명제 5
 두 위상공간 $X,Y$ 사이의 연속함수 $f:X \rightarrow Y$와 $f$의 canonical decomposition
 
-$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i}{\longrightarrow}Y$$
+$$X \overset{p}{\rightarrow} X/R \overset{h}{\rightarrow} f(X)\overset{i}{\rightarrow}Y$$
 
 를 생각하자. 그럼 다음이 모두 동치이다.
 

@@ -27,7 +27,7 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 Variety $X$ 위의 *line bundle* $\mathcal{L}$은 다음과 같은 데이터로 구성된다.
 
 1. Projection $\pi: \mathcal{L} \rightarrow X$.
-2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^1$. 이들이 정의하는
+2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\rightarrow} U_i \times \mathbb{A}^1$. 이들이 정의하는
     
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
@@ -342,7 +342,7 @@ Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\m
 Variety $X$ 위의 *rank r vector bundle<sub>랭크 $r$ 벡터다발</sub>* $\mathcal{E}$는 다음과 같은 데이터로 구성된다.
 
 1. Projection $\pi: \mathcal{E} \rightarrow X$.
-2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$. 이들이 정의하는
+2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\rightarrow} U_i \times \mathbb{A}^r$. 이들이 정의하는
 
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 

@@ -84,7 +84,7 @@ The image of this homomorphism is the set of principal divisors, and our claim i
 ::: Proposition 4
 Assume that the rays $\Sigma(1)$ of the fan $\Sigma$ span $N_\mathbb{R}$. Then the following sequence is exact:
 
-$$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Sigma) \longrightarrow 0.$$
+$$0 \rightarrow M \rightarrow \Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma) \rightarrow 0.$$
 
 Here the first arrow is $m \mapsto \divisor(\rchi^m)$, and the second arrow is $D \mapsto [D]$.
 :::

@@ -104,7 +104,7 @@ Manifold $M$에 대하여, degree $1$의 anti-derivation $d:\Omega^\ast(M)\right
 
 이와 같이 differential $d$가 정의된 graded algebra를 *differential graded algebra*, 혹은 간단하게 *DG-algebra*라고 부른다. 한편 위의 조건 1에 의하여 다음 sequence
 
-$$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{\longrightarrow}\Omega^2(M)\overset{d}{\longrightarrow}\cdots\overset{d}{\longrightarrow}\Omega^n(M)\longrightarrow 0\tag{1}$$
+$$0\rightarrow\Omega^0(M)\overset{d}{\rightarrow}\Omega^1(M)\overset{d}{\rightarrow}\Omega^2(M)\overset{d}{\rightarrow}\cdots\overset{d}{\rightarrow}\Omega^n(M)\rightarrow 0\tag{1}$$
 
 가 cochain complex가 된다. 또, $d$가 $F^\ast$와 commute하며, $F^\ast$는 graded algebra homomorphism이므로 위의 언어로는 $F^\ast$가 de Rham complex들 사이의 chain map을 유도한다고 이야기할 수 있다. 
 

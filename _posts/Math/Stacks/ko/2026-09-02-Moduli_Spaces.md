@@ -88,7 +88,7 @@ $$q^{\mathrm{univ}}:\mathcal{O}_{\Gr(k,n)}^{\oplus n}\twoheadrightarrow\mathcal{
 
 으로 쓰면, $\Gr(k,n)$이 $F_{k,n}$을 표현하는 natural isomorphism은 명시적으로
 
-$$\Phi_T:\Hom_\Sch(T,\Gr(k,n))\longrightarrow F_{k,n}(T),\qquad f\longmapsto [f^\ast q^{\mathrm{univ}}]$$
+$$\Phi_T:\Hom_\Sch(T,\Gr(k,n))\rightarrow F_{k,n}(T),\qquad f\mapsto [f^\ast q^{\mathrm{univ}}]$$
 
 으로 주어진다. [정의 2](#def2){: data-lid="anq7u" }에서 universal family는 이 natural isomorphism 아래에서 $\id_{\Gr(k,n)}$에 대응하는 원소이므로,
 
@@ -148,7 +148,7 @@ $$\Aut(E,0)\cong\begin{cases}\mu_6 & j(E)=0,\\ \mu_4 & j(E)=1728,\\ \mu_2 & j(E)
 
 이다. 특히 모든 elliptic curve에는 $\mu_2=\{\pm1\}$이 남는다. 그 nontrivial automorphism을 $\iota_E$라 쓰면
 
-$$\iota_E:(\x,\y)\longmapsto(\x,-\y)$$
+$$\iota_E:(\x,\y)\mapsto(\x,-\y)$$
 
 이다.
 
@@ -201,7 +201,7 @@ Universality는 $\underline{M}$에서 algebraic space로 가는 모든 natural t
 ::: 정리 8 (Keel–Mori)
 Noetherian base $S$ 위에서 locally of finite type인 algebraic stack $\mathcal{M}$의 inertia morphism
 
-$$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times_S\mathcal{M}}\mathcal{M}\longrightarrow\mathcal{M}$$
+$$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times_S\mathcal{M}}\mathcal{M}\rightarrow\mathcal{M}$$
 
 이 finite이면, coarse moduli space $\pi:\mathcal{M}\rightarrow M$이 존재한다. 여기에서 $M$은 $S$ 위에서 locally of finite type인 algebraic space이고, $\pi$은 geometric isomorphism classes와 $M$의 geometric points 사이의 bijection을 유도한다. 특히 separated finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
 :::
@@ -225,7 +225,7 @@ $$\mathbb{K}[a,b,\Delta^{-1}]^{\mathbb{G}_m}=\mathbb{K}[j]$$
 
 이다. 이 계산으로 [정리 8](#thm8){: data-lid="7bb6w" }이 보장하는 coarse moduli morphism은 $j$-invariant가 주는 natural transformation
 
-$$\Phi:\underline{M}_{1,1}\longrightarrow\mathbb{A}^1_j,\qquad(E,0)\longmapsto j(E)$$
+$$\Phi:\underline{M}_{1,1}\rightarrow\mathbb{A}^1_j,\qquad(E,0)\mapsto j(E)$$
 
 로 주어진다. Algebraically closed field 위에서는 $j$-invariant가 elliptic curve의 isomorphism class를 완전히 결정하므로, $\Phi$는 geometric points에서 bijective이다. 따라서 $(\mathbb{A}^1_j,\Phi)$은 $\mathcal{M}_{1,1}$의 coarse moduli space이다.
 

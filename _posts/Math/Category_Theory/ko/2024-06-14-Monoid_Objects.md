@@ -82,7 +82,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 그런데 만일 원래의 category가 monoidal category가 아니라, cartesian monoidal category였다면 이 모든 문제가 깔끔하게 해결된다. 우선 $e_G$의 경우는 다음의 합성
 
-$$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
+$$G\overset{\epsilon_G}{\rightarrow}\{e\}\overset{\eta}{\rightarrow}G$$
 
 으로 주어진다. 여기에서 $\epsilon_G$는 $G$에서 terminal object $\{e\}$로 가는 유일한 morphism이고 $\eta$는 monoid object로서의 $G$의 unit이다. 뿐만 아니라, cartesian monoidal category에서는 monoidal product가 categorical product이므로, 다음 diagram
 

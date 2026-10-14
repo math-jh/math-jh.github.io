@@ -82,7 +82,7 @@ $$M \rightarrow \Div_T(X_\Sigma);\qquad m \mapsto \divisor(\rchi^m)$$
 ::: 명제 4
 Fan $\Sigma$의 ray들 $\Sigma(1)$이 $N_\mathbb{R}$를 span한다고 가정하자. 그러면 다음의 sequence는 exact하다:
 
-$$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Sigma) \longrightarrow 0.$$
+$$0 \rightarrow M \rightarrow \Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma) \rightarrow 0.$$
 
 여기서 첫 번째 arrow는 $m \mapsto \divisor(\rchi^m)$이고, 두 번째 arrow는 $D \mapsto [D]$이다.
 :::

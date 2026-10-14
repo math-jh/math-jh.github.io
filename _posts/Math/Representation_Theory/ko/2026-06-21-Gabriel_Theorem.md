@@ -95,7 +95,7 @@ $$q(\underline{\dim} V)=q\bigl(c^{-j}(\underline{\dim} P)\bigr)=q(\underline{\di
 ::: 정리 5
 (Gabriel) $Q$를 oriented cycle이 없는 connected quiver라 하자. $Q$가 *representation-finite<sub>유한표현형</sub>*, 곧 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
 
-$$V\longmapsto\underline{\dim} V$$
+$$V\mapsto\underline{\dim} V$$
 
 는 indecomposable representation의 isomorphism class들과 Tits form $q$의 positive root들 사이의 전단사를 이루며, 특히 indecomposable의 개수는 positive root의 개수와 같다.
 :::

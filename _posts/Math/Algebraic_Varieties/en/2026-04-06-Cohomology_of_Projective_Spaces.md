@@ -50,7 +50,7 @@ For each $(p+1)$-tuple, this is the alternating sum of the sections correspondin
 
 Now let us use these data to compute the respective cohomology groups. Looking first at the case of $\mathbb{P}^1$, the Čech complex is given by
 
-$$0 \longrightarrow \check{C}^0\overset{\delta}{\longrightarrow}\check{C}^1\longrightarrow 0$$
+$$0 \rightarrow \check{C}^0\overset{\delta}{\rightarrow}\check{C}^1\rightarrow 0$$
 
 where
 

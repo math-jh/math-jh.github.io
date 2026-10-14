@@ -181,11 +181,11 @@ $$\frac{A/(f-1)}{\mathfrak{q}}\cong \frac{A/\mathfrak{p}}{(\bar{f}-1)}$$
 
 and by [Proposition 6](#prop6){: data-lid="qxt1n" }, the right-hand side is in turn isomorphic to $(A/\mathfrak{p})[f^{-1}]_0$. But since $\mathfrak{p}$ is a prime ideal, $A/\mathfrak{p}$ is an integral domain and therefore the localization $(A/\mathfrak{p})[f^{-1}]$ is also an integral domain, and hence $(A/\mathfrak{p})[f^{-1}]_0$ is also an integral domain. From this we know that $\mathfrak{q}$ is a prime ideal of $A/(f-1)$. If for convenience we write $\mathfrak{a}=(f-1)$, comparing the following homomorphisms
 
-$$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longrightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\longrightarrow} A_{(\mathfrak{p})}$$
+$$A \overset{a\mapsto a/1}{\rightarrow} S^{-1}A \overset{f\mapsto T}{\rightarrow} A_{(\mathfrak{p})}[T, T^{-1}] \overset{T\mapsto 1}{\rightarrow} A_{(\mathfrak{p})}$$
 
 and
 
-$$A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}$$
+$$A\overset{a\mapsto a+\mathfrak{a}}{\rightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\rightarrow}(A/\mathfrak{a})_\mathfrak{q}$$
 
 yields the desired isomorphism.
 :::

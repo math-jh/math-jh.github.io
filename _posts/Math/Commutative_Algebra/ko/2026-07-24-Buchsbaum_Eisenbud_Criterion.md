@@ -20,7 +20,7 @@ published: false
 
 이 글 전체에서 $A$는 Noetherian ring이다. 우리의 대상은 유한한 free complex, 곧 각 항이 finitely generated free module인 다음의 chain complex
 
-$$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\longrightarrow}F_{n-1}\overset{\varphi_{n-1}}{\longrightarrow}\cdots\overset{\varphi_2}{\longrightarrow}F_1\overset{\varphi_1}{\longrightarrow}F_0$$
+$$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\rightarrow}F_{n-1}\overset{\varphi_{n-1}}{\rightarrow}\cdots\overset{\varphi_2}{\rightarrow}F_1\overset{\varphi_1}{\rightarrow}F_0$$
 
 이다. 목표는 이 complex가 언제 exact인지, 곧 언제 각각의 $1\leq i\leq n$에서 $H_i(F_\bullet)=0$인지를 ([\[호몰로지 대수학\] §호몰로지, ⁋정의 2](/ko/math/homological_algebra/homology#def2){: data-lid="dtqjf" }) $\varphi_i$들의 행렬 자료만으로 판정하는 것이다. 여기서 행렬 자료란 [§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1){: data-lid="bkx46" }에서 도입한 minor ideal $I_r(\varphi)$를 뜻한다. $\varphi:A^m \rightarrow A^n$을 표준 basis에 대한 $n\times m$ 행렬로 보면 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-lid="1i52d" }), $1\leq r\leq \min(m,n)$에서 $I_r(\varphi)$는 $r\times r$ minor들이 생성하는 ideal이고, $r\leq 0$이면 $I_r(\varphi)=A$, $r>\min(m,n)$이면 $I_r(\varphi)=0$이며, 언제나 $I_{r+1}(\varphi)\subseteq I_r(\varphi)$이다. ([§Fitting 아이디얼, ⁋정의 1](/ko/math/commutative_algebra/fitting_ideals#def1){: data-lid="5tls7" } 직후의 포함관계)
 
@@ -160,7 +160,7 @@ $$\operatorname{grade}(\mathfrak{a}A_\mathfrak{q})=\min\{\operatorname{depth}A_\
 ::: 보조정리 9 (Peskine--Szpiro acyclicity lemma)
 Noetherian local ring $(A,\mathfrak{m})$ 위의 finitely generated module들의 유한 complex
 
-$$0 \rightarrow M_s\overset{d_s}{\longrightarrow}M_{s-1}\overset{d_{s-1}}{\longrightarrow}\cdots\overset{d_2}{\longrightarrow}M_1\overset{d_1}{\longrightarrow}M_0\qquad(s\geq 1)$$
+$$0 \rightarrow M_s\overset{d_s}{\rightarrow}M_{s-1}\overset{d_{s-1}}{\rightarrow}\cdots\overset{d_2}{\rightarrow}M_1\overset{d_1}{\rightarrow}M_0\qquad(s\geq 1)$$
 
 가 각각의 $1\leq i\leq s$에서 $\operatorname{depth}M_i\geq i$를 만족한다 하자. 만일 각각의 $i\geq 1$에서 homology $H_i$가 $0$이거나 $\operatorname{depth}H_i=0$이라면, 모든 $i\geq 1$에서 $H_i=0$이다.
 :::
@@ -195,7 +195,7 @@ $$\operatorname{depth}H_q\geq\min(\operatorname{depth}B_q-1,\operatorname{depth}
 ::: 정리 10 (Buchsbaum--Eisenbud)
 Noetherian ring $A$ 위의 finite free complex
 
-$$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\longrightarrow}F_{n-1}\overset{\varphi_{n-1}}{\longrightarrow}\cdots\overset{\varphi_2}{\longrightarrow}F_1\overset{\varphi_1}{\longrightarrow}F_0$$
+$$F_\bullet:\quad 0 \rightarrow F_n\overset{\varphi_n}{\rightarrow}F_{n-1}\overset{\varphi_{n-1}}{\rightarrow}\cdots\overset{\varphi_2}{\rightarrow}F_1\overset{\varphi_1}{\rightarrow}F_0$$
 
 가 주어졌다 하고, 각각의 $F_i$는 rank $n_i$의 free module이며 $\varphi_{n+1}=0$이라 하자. 그럼 다음이 동치이다.
 
@@ -215,11 +215,11 @@ $$I_{r_i}(\varphi_i)_\mathfrak{p}=A_\mathfrak{p},\qquad I_{r_i+1}(\varphi_i)_\ma
 
 이제 grade 조건을 complex의 길이 $n$에 대한 귀납법으로 보인다. $n=1$이면 필요한 것은 $\operatorname{grade}I(\varphi_1)\geq 1$뿐이므로 이미 끝났다. $n\geq 2$라 하고, 모든 $I(\varphi_i)$가 $A$라면 보일 것이 없으므로 어떤 것은 proper이라 하자. 각각의 $I(\varphi_i)$가 $\Ass A$의 어떤 원소에도 포함되지 않으므로 곱 $I(\varphi_1)\cdots I(\varphi_n)$도 그러하고, $\Ass A$가 유한하므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="gtu6d" }) [§동반소아이디얼, ⁋보조정리 2](/ko/math/commutative_algebra/associated_primes#lem2){: data-lid="uo0vd" }에 의하여 이 곱에는 모든 associated prime을 피하는 원소 $x$가 존재한다. Zerodivisor 전체가 associated prime들의 합집합이므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="8wkfv" }) $x$는 non-zerodivisor이고, $x\in I(\varphi_i)$가 모든 $i$에서 성립한다. $\overline{A}=A/(x)$로 두자. 각 $F_j$가 free이고 $x$가 non-zerodivisor이므로 곱하기 $x$는 complex들의 short exact sequence
 
-$$0 \rightarrow F_\bullet\overset{x}{\longrightarrow}F_\bullet \rightarrow F_\bullet/xF_\bullet \rightarrow 0$$
+$$0 \rightarrow F_\bullet\overset{x}{\rightarrow}F_\bullet \rightarrow F_\bullet/xF_\bullet \rightarrow 0$$
 
 을 주고, [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-lid="mlb4i" }의 long exact sequence에서 $2\leq i\leq n$일 때 $H_i(F_\bullet)=0$과 $H_{i-1}(F_\bullet)=0$ 사이에 끼인 $H_i(F_\bullet/xF_\bullet)$는 $0$이다. 그럼 degree $0$의 항을 떼어낸 $\overline{A}$ 위의 finite free complex
 
-$$0 \rightarrow \overline{F}_n\overset{\overline{\varphi}_n}{\longrightarrow}\cdots\overset{\overline{\varphi}_3}{\longrightarrow}\overline{F}_2\overset{\overline{\varphi}_2}{\longrightarrow}\overline{F}_1$$
+$$0 \rightarrow \overline{F}_n\overset{\overline{\varphi}_n}{\rightarrow}\cdots\overset{\overline{\varphi}_3}{\rightarrow}\overline{F}_2\overset{\overline{\varphi}_2}{\rightarrow}\overline{F}_1$$
 
 은 길이가 $n-1$이고 degree $1$ 이상에서 exact이다 (이 절단의 degree $j\geq 1$에서의 homology는 $H_{j+1}(F_\bullet/xF_\bullet)$이다). 귀납적 가정을 적용하면, 절단된 complex의 rank 등식들로부터 $\rank_{\overline{A}}\overline{\varphi}_i=r_i$ ($2\leq i\leq n$, 절단된 complex의 교대합이 원래의 $r_i$와 같으므로)이고, 따라서 $I(\overline{\varphi}_i)=I_{r_i}(\overline{\varphi}_i)=I(\varphi_i)\overline{A}$이며, grade 조건으로부터 $\operatorname{grade}_{\overline{A}}(I(\varphi_i)\overline{A})\geq i-1$이다. $I(\varphi_i)$가 proper인 각각의 $i\geq 2$에서 $x\in I(\varphi_i)$가 non-zerodivisor이므로 [따름정리 8](#cor8){: data-lid="l2lj5" }의 셋째 결과로
 
@@ -272,7 +272,7 @@ $$\Delta:A^n \rightarrow A;\qquad \Delta(e_i)=(-1)^{i+1}\delta_i$$
 ::: 정리 12 (Hilbert--Burch)
 Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 proper ideal $I$에 대하여, $A/I$가 free resolution
 
-$$0 \rightarrow A^{n-1}\overset{\varphi}{\longrightarrow}A^n\overset{\psi}{\longrightarrow}A \rightarrow A/I \rightarrow 0$$
+$$0 \rightarrow A^{n-1}\overset{\varphi}{\rightarrow}A^n\overset{\psi}{\rightarrow}A \rightarrow A/I \rightarrow 0$$
 
 을 가지며 $\pd_A(A/I)=2$라 하자. 그럼 $A$-regular인 원소 $a$가 존재하여
 
@@ -280,7 +280,7 @@ $$I=a\cdot I_{n-1}(\varphi)$$
 
 이고, $\operatorname{grade}I_{n-1}(\varphi)=2$이다. 거꾸로 $\operatorname{grade}I_{n-1}(\varphi)\geq 2$를 만족하는 임의의 $A$-linear map $\varphi:A^{n-1} \rightarrow A^n$과 $A$-regular 원소 $a$에 대하여, complex
 
-$$0 \rightarrow A^{n-1}\overset{\varphi}{\longrightarrow}A^n\overset{a\Delta}{\longrightarrow}A$$
+$$0 \rightarrow A^{n-1}\overset{\varphi}{\rightarrow}A^n\overset{a\Delta}{\rightarrow}A$$
 
 는 exact이고 $\im(a\Delta)=a\cdot I_{n-1}(\varphi)$이며, 따라서 이는 $A/aI_{n-1}(\varphi)$의 free resolution을 준다.
 :::
@@ -293,7 +293,7 @@ $J=I_{n-1}(\varphi)$로 적자.
 
 $J$가 proper임을 확인한다. 만일 $J=A$라면 [따름정리 3](#cor3){: data-lid="alvsb" }에 의하여 basis를 바꾸어 $\varphi$를 $\id_{A^{n-1}}\oplus(0:A^0 \rightarrow A)$의 꼴로 만들 수 있으므로 $A^n/\im\varphi\cong A$이고, exactness에 의하여 $I=\im\psi\cong A^n/\im\varphi\cong A$가 되어 $I$는 non-zerodivisor 하나로 생성되는 principal ideal이다. 그럼 $0 \rightarrow A \rightarrow A \rightarrow A/I \rightarrow 0$이 free resolution이 되어 $\pd_A(A/I)\leq 1$이고 ([§호몰로지 차원, ⁋정의 1](/ko/math/commutative_algebra/homological_dimension#def1){: data-lid="kxx7c" }), 이는 가정 $\pd_A(A/I)=2$에 모순이다.
 
-$\operatorname{grade}J=2$임을 보인다. 거꾸로의 방향을 $a=1$에 적용하면 $0 \rightarrow A^{n-1}\overset{\varphi}{\longrightarrow}A^n\overset{\Delta}{\longrightarrow}A$가 exact이고 $\im\Delta=J$이므로, cokernel을 붙인 $0 \rightarrow A^{n-1} \rightarrow A^n \rightarrow A \rightarrow A/J \rightarrow 0$은 $A/J$의 길이 $2$의 free resolution이고 $\pd_A(A/J)\leq 2$이다. $J$가 proper이므로 $g=\operatorname{grade}J$는 유한하고, [§Depth, ⁋정리 2](/ko/math/commutative_algebra/depth#thm2){: data-lid="qdaxt" }에 의하여 $\Ext_A^g(A/J,A)\neq 0$인데, [§호몰로지 차원, ⁋명제 2](/ko/math/commutative_algebra/homological_dimension#prop2){: data-lid="puuxu" }에 의하여 $i>2$에서 $\Ext_A^i(A/J,A)=0$이므로 $g\leq 2$이다. 따라서 $g=2$이다.
+$\operatorname{grade}J=2$임을 보인다. 거꾸로의 방향을 $a=1$에 적용하면 $0 \rightarrow A^{n-1}\overset{\varphi}{\rightarrow}A^n\overset{\Delta}{\rightarrow}A$가 exact이고 $\im\Delta=J$이므로, cokernel을 붙인 $0 \rightarrow A^{n-1} \rightarrow A^n \rightarrow A \rightarrow A/J \rightarrow 0$은 $A/J$의 길이 $2$의 free resolution이고 $\pd_A(A/J)\leq 2$이다. $J$가 proper이므로 $g=\operatorname{grade}J$는 유한하고, [§Depth, ⁋정리 2](/ko/math/commutative_algebra/depth#thm2){: data-lid="qdaxt" }에 의하여 $\Ext_A^g(A/J,A)\neq 0$인데, [§호몰로지 차원, ⁋명제 2](/ko/math/commutative_algebra/homological_dimension#prop2){: data-lid="puuxu" }에 의하여 $i>2$에서 $\Ext_A^i(A/J,A)=0$이므로 $g\leq 2$이다. 따라서 $g=2$이다.
 
 이제 두 exact complex를 비교한다. $C=A^n/\im\varphi$로 두면 $\psi\circ\varphi=0$과 $\Delta\circ\varphi=0$으로부터 $\psi$와 $\Delta$는 각각 $A$-linear map $\overline{\psi},\overline{\Delta}:C \rightarrow A$를 유도하고, 두 complex의 $A^n$에서의 exactness는 $\ker\psi=\im\varphi=\ker\Delta$를 말하므로 $\overline{\psi}$와 $\overline{\Delta}$는 injective이며 그 image는 각각 $I$와 $J$이다. 특히 $\overline{\Delta}$는 isomorphism $C\cong J$를 주고, 합성 $\lambda=\overline{\psi}\circ\overline{\Delta}^{-1}:J \rightarrow A$는 $\lambda(J)=I$를 만족하는 $A$-linear map이다.
 
@@ -325,7 +325,7 @@ $\operatorname{grade}(I)=2$임을 계산한다. $A$는 regular local ring이므�
 
 이제 [정리 12](#thm12){: data-lid="0awx1" }의 거꾸로의 방향을 $\varphi$와 $a=1$에 적용하면, complex
 
-$$0 \rightarrow A^2\overset{\varphi}{\longrightarrow}A^3\overset{\Delta}{\longrightarrow}A \rightarrow A/I \rightarrow 0$$
+$$0 \rightarrow A^2\overset{\varphi}{\rightarrow}A^3\overset{\Delta}{\rightarrow}A \rightarrow A/I \rightarrow 0$$
 
 은 exact이고, 곧 $A/I$의 free resolution이다. [정리 10](#thm10){: data-lid="2trm8" }의 조건이 실제로 어떻게 성립하는지 짚어보면, rank 등식은 $\rank\varphi=2$, $\rank\Delta=1$로부터 $2+0=2$와 $1+2=3$으로 성립하고, grade 조건은 $\operatorname{grade}I(\Delta)=\operatorname{grade}(I)=2\geq 1$과 $\operatorname{grade}I(\varphi)=\operatorname{grade}I_2(\varphi)=\operatorname{grade}(I)=2\geq 2$로 성립한다. 세 좌표축의 합집합을 정의하는 이 ideal은 $2$개의 원소로는 생성될 수 없고 그 관계식들이 $\varphi$의 두 열로 전부 주어지는데, Hilbert--Burch 정리는 이 상황이 $a=1$인 일반적인 현상의 한 사례임을 말해준다.
 :::

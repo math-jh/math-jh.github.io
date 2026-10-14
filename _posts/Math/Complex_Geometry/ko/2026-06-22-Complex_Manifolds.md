@@ -26,7 +26,7 @@ Complex manifold의 transition function은 $\mathbb{C}^n$의 열린집합 사이
 열린집합 $U \subseteq \mathbb{C}^n$ 위의 함수 $f : U \rightarrow \mathbb{C}$가 *holomorphic<sub>정칙</sub>*하다는 것은, $f$가 $U$에서 연속이고 각 변수에 대하여 따로 holomorphic인 것이다. 곧 임의의 점 $a = (a_1, \ldots, a_n) \in U$와 각 $j$에 대하여, 나머지 좌표를 고정하고 얻는 한 변수 함수
 
 $$
-z_j \longmapsto f(a_1, \ldots, a_{j-1}, z_j, a_{j+1}, \ldots, a_n)
+z_j \mapsto f(a_1, \ldots, a_{j-1}, z_j, a_{j+1}, \ldots, a_n)
 $$
 
 이 $a_j$의 근방에서 (한 변수 함수로서) holomorphic이다.
@@ -71,7 +71,7 @@ $$
 $M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha$가 $U_\alpha$에서 열린집합 $\varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$ 위로의 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \emptyset$일 때마다 *transition map<sub>전이함수</sub>*
 
 $$
-\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \longrightarrow \varphi_\beta(U_\alpha \cap U_\beta)
+\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \rightarrow \varphi_\beta(U_\alpha \cap U_\beta)
 $$
 
 이 [정의 2](#def2){: data-lid="6kepa" }의 의미로 holomorphic인 것이다. 이때 두 holomorphic atlas는 합집합이 다시 holomorphic atlas이면 서로 *compatible<sub>양립가능</sub>*하다 하고, 양립가능성에 의한 equivalence class, 곧 maximal holomorphic atlas를 $M$의 *complex structure<sub>복소구조</sub>*라 한다. 복소구조를 갖춘 topological manifold를 *complex manifold<sub>복소다양체</sub>*라 하고, 국소 모형 $\mathbb{C}^n$의 $n$을 그 *complex dimension<sub>복소차원</sub>* $\dim_{\mathbb{C}} M = n$이라 한다.
@@ -85,7 +85,7 @@ Complex manifold 사이의 morphism에 대한 holomorphicity도 국소 차트로
 $M, N$을 complex manifold라 하고 $f : M \rightarrow N$을 연속사상이라 하자. $f$가 *holomorphic*하다는 것은, $M$의 임의의 점 $p$에 대하여 $p$를 포함하는 차트 $(U, \varphi)$와 $f(p)$를 포함하는 차트 $(V, \psi)$ ($f(U) \subseteq V$) 를 잡았을 때 국소 표현
 
 $$
-\psi \circ f \circ \varphi^{-1} : \varphi(U) \longrightarrow \psi(V)
+\psi \circ f \circ \varphi^{-1} : \varphi(U) \rightarrow \psi(V)
 $$
 
 이 [정의 2](#def2){: data-lid="qqoud" }의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic morphism을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. Holomorphic bijection $f : M \rightarrow N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 morphism이 존재하면 $M, N$은 *biholomorphic<sub>쌍정칙</sub>*하다 한다.
@@ -118,7 +118,7 @@ $$
 는 열린집합이며, morphism
 
 $$
-\varphi_i : U_i \longrightarrow \mathbb{C}^n, \qquad
+\varphi_i : U_i \rightarrow \mathbb{C}^n, \qquad
 \varphi_i([z_0 : \cdots : z_n]) = \left( \frac{z_0}{z_i}, \ldots, \widehat{\frac{z_i}{z_i}}, \ldots, \frac{z_n}{z_i} \right)
 $$
 
@@ -148,7 +148,7 @@ $$
 복소구조는 다음과 같이 얻는다. Quotient map $\pi : \mathbb{C}^n \rightarrow T$는 국소 homeomorphism이다. 충분히 작은 열린집합 $V \subseteq \mathbb{C}^n$을 잡아 $\pi\vert_V$가 그 상 $U = \pi(V)$ 위로의 homeomorphism이 되게 하고, $\varphi = (\pi\vert_V)^{-1} : U \rightarrow V$를 차트로 삼는다. 이런 차트 둘 $\varphi, \varphi'$의 transition function을 보면, 두 국소 preimage는 같은 $T$의 점을 덮으므로 차이가 항상 $\Lambda$의 한 원소만큼의 평행이동
 
 $$
-z \longmapsto z + \lambda, \qquad \lambda \in \Lambda
+z \mapsto z + \lambda, \qquad \lambda \in \Lambda
 $$
 
 이다. 평행이동은 holomorphic이므로 모든 transition function이 holomorphic이고, $T$는 complex manifold가 된다. 또한 $T$는 기본영역 (lattice의 closed 평행육면체) 의 연속 전사상이므로 콤팩트하다.

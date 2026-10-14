@@ -18,7 +18,7 @@ weight: 5
 
 우리는 앞서 $\Ch(\mathcal{A})$의 임의의 short exact sequence
 
-$$0\longrightarrow A_\bullet\longrightarrow B_\bullet\longrightarrow C_\bullet\longrightarrow 0$$
+$$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
 이 주어지면, 이를 통해 long exact sequence
 
@@ -29,13 +29,13 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 ::: 정의 1
 두 abelian category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 $\mathcal{B}$로의 *homological $\delta$-functor<sub>호몰로지 $\delta$-함자</sub>*는 additive functor들 $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), 그리고 임의의 short exact sequence
 
-$$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+$$0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$$
 
 마다 정의된 morphism들 $\delta_n:T_n(C)\rightarrow T_{n-1}(A)$을 의미한다. $n<0$인 경우, $T_n$을 모두 $0$인 것으로 생각한다. 이들은 다음 조건을 만족한다.
 
 1. (Long exact sequence) 다음의 sequence 
     
-    $$\cdots\longrightarrow T_{n+1}(C)\overset{\delta}{\longrightarrow}T_n(A)\longrightarrow T_n(B)\longrightarrow T_n(C)\overset{\delta}{\longrightarrow}T_{n-1}(A)\longrightarrow \cdots$$
+    $$\cdots\rightarrow T_{n+1}(C)\overset{\delta}{\rightarrow}T_n(A)\rightarrow T_n(B)\rightarrow T_n(C)\overset{\delta}{\rightarrow}T_{n-1}(A)\rightarrow \cdots$$
 
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
@@ -51,7 +51,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 위의 정의를 $T^n$들, 그리고 $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$로 바꾸어 쓰면 *cohomological $\delta$-functor*의 정의를 얻는다. 우리는 $n<0$일 경우, $T_n$과 $T^n$이 모두 $0$인 것으로 생각하기로 하였으므로 homological $\delta$-functor의 첫 번째 조건은 특히 
 
-$$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longrightarrow0\longrightarrow 0\longrightarrow\cdots, $$
+$$\cdots\rightarrow T_0(A)\rightarrow T_0(B)\rightarrow T_0(C)\rightarrow0\rightarrow 0\rightarrow\cdots, $$
 
 즉 $T_0$이 right exact functor라는 의미가 된다. 마찬가지로 cohomological $\delta$-functor의 첫 번째 조건은 $T^0$이 left exact functor가 되도록 한다. 
 
@@ -65,7 +65,7 @@ $$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longr
 
 즉 다음의 diagram이 모든 short exact sequence
 
-$$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+$$0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$$
 
 마다 commute하도록 하는 $\alpha_n:S_n\Rightarrow T_n$들의 모임이다. 
 
@@ -108,7 +108,7 @@ $L_iF(A)$가 위에서 선택한 $P_\bullet$의 선택에 의존하지 않는다
 
 이제 left derived functor를 조금 더 자세히 살펴보자. 우선 $F$가 right exact인 것으로부터 다음 sequence
 
-$$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longrightarrow} F(A) \longrightarrow 0$$
+$$F(P_1) \overset{Fd_1}{\rightarrow} F(P_0) \overset{F\epsilon_0}{\rightarrow} F(A) \rightarrow 0$$
 
 가 exact임을 안다. 따라서 
 
@@ -143,7 +143,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1){: data-lid="hbaz7" }), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
-$$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
+$$\cdots\overset{\delta}{\rightarrow}L_iF(A)\rightarrow L_iF(B)\rightarrow L_iF(C)\overset{\delta}{\rightarrow}L_{i-1}F(A)\rightarrow L_{i-1}F(B)\rightarrow L_{i-1}F(C)\overset{\delta}{\rightarrow}\cdots$$
 
 를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1){: data-lid="7kyzg" }의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-lid="zwx4w" }을 사용하면 된다.
 :::

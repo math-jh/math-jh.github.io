@@ -110,7 +110,7 @@ $\Gal(\mathbb{L}/\mathbb{K})$는 compact이다.
 ::: 증명
 우선 각각의 $x\in \mathbb{L}$에 대하여, $\mathbb{L}/\mathbb{K}$는 algebraic extension이므로 $x$는 algebraic이고, 따라서 $x$와 conjugate한 원소들은 오직 유한 개 뿐이다. ([§갈루아 확장, ⁋명제 3](/ko/math/field_theory/galois_extension#prop3){: data-lid="gm9dq" }) 바꿔 말하면, 
 
-$$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\longrightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
+$$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\rightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
 
 를 생각하면 이 함수의 image는 유한집합이다. 따라서 $\Gal(\mathbb{L}/\mathbb{K})$는 유한집합들의 곱의 부분집합이며, 유한집합들은 compact이므로 이 곱 또한 compact이다. ([\[위상수학\] §옹골성과 필터의 수렴, ⁋정리 19 (Tychonoff)](/ko/math/topology/filter_convergence#thm19){: data-lid="fa6xx" }) 따라서 주어진 명제를 보이는 것은 $\Gal(\mathbb{L}/\mathbb{K})$이 $\mathbb{L}^\mathbb{L}$에서 closed임을 보이는 것과 같다. 
 

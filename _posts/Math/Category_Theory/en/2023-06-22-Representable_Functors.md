@@ -41,7 +41,7 @@ holds. For any set $A$, the bijection
 
 $$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
 
-is given by sending an arbitrary element of $A$, $a$, to the function whose image is $a$, namely $a:\ast\rightarrow A$; conversely, by looking at the image of a function $\ast\rightarrow A$, one can obtain an element of $A$. The naturality of this correspondence follows from the fact that, given any function $f:A \rightarrow B$, if for any $a\in A$ we set $b=f(a)$, then under $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$, the image of $b$ is the function $b:\ast \rightarrow B$, which is precisely the composite $\ast\overset{a}{\longrightarrow}A\overset{f}{\longrightarrow}B$.
+is given by sending an arbitrary element of $A$, $a$, to the function whose image is $a$, namely $a:\ast\rightarrow A$; conversely, by looking at the image of a function $\ast\rightarrow A$, one can obtain an element of $A$. The naturality of this correspondence follows from the fact that, given any function $f:A \rightarrow B$, if for any $a\in A$ we set $b=f(a)$, then under $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$, the image of $b$ is the function $b:\ast \rightarrow B$, which is precisely the composite $\ast\overset{a}{\rightarrow}A\overset{f}{\rightarrow}B$.
 :::
 
 The most important theorem related to this is the following Yoneda lemma.

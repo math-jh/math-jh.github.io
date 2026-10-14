@@ -80,7 +80,7 @@ $$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 ::: 보조정리 5
 $A$-module들의 short exact sequence
 
-$$0 \rightarrow M' \overset{u}{\longrightarrow} M \overset{v}{\longrightarrow} M'' \rightarrow  0$$
+$$0 \rightarrow M' \overset{u}{\rightarrow} M \overset{v}{\rightarrow} M'' \rightarrow  0$$
 
 에 대하여, $\ann(M)\subseteq \ann(M')\cap \ann(M'')$이 성립한다.
 :::

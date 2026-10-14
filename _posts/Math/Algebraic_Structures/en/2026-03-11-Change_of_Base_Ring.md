@@ -55,7 +55,7 @@ $$\beta'\cdot_B(\beta\otimes_A x)=(\beta'\beta)\otimes_A x$$
 
 we can define an action $\cdot_B$ of $B$. That this is indeed an action is not difficult to obtain even by a direct computation; or, from the composition
 
-$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B\otimes_A\id_M}{\longrightarrow} \phi^\ast B\otimes_AM$$
+$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B\otimes_A\id_M}{\rightarrow} \phi^\ast B\otimes_AM$$
 
 it can also be thought of as being obtained.[^1] Also, for any $A$-linear map $u:M \rightarrow M'$, one can check that $\id_{\phi^\ast B}\otimes_A u$ defines a $B$-linear map between the two $B$-modules defined in this way.
 

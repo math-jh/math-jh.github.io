@@ -46,7 +46,7 @@ $$C_\bullet(X;A),\qquad C_\bullet(Y;A)$$
 
 들이 주어졌다 하자. $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$로 두고 위의 cochain map을 취하면 우리는 이를 [§코호몰로지](/ko/math/algebraic_topology/cohomology){: data-lid="aqy4b" }의 Alexander-Whitney map $\AW$가 유도하는 함수와 합성하여 다음의 cochain map
 
-$$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\longrightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\longrightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
+$$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\rightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\rightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
 
 을 얻고, 다시 이를 cohomology 레벨로 내리면 각각의 $(p,q)$마다 다음의 $A$-module homomorphism
 
@@ -61,7 +61,7 @@ $${\AW^\ast}\circ{(-\mathbin{\bar{\times}}-)}:H^p(X;A)\otimes_A H^q(Y;A)\rightar
 ::: 정의 1
 Commutative ring $A$와 위상공간 $X$에 대하여, 다음의 합성
 
-$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X;A)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X;A)$$
+$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\rightarrow}H^\bullet(X\times X;A)\overset{\Delta^\ast}{\rightarrow} H^\bullet(X;A)$$
 
 을 $H^\bullet(X;A)$ 위의 *cup product<sub>합곱</sub>*이라 부른다. 
 :::

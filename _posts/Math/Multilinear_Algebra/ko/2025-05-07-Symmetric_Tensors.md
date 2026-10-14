@@ -233,7 +233,7 @@ $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right
 
 이 존재하는 것을 안다. 그럼 $u: M\oplus M \rightarrow M$를 $(x,y)\mapsto x+y$로 정의하면, 다음의 합성
 
-$$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\longrightarrow} \Sym(M)$$
+$$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\rightarrow} \Sym(M)$$
 
 이 $x\otimes y$를 $xy$로 보낸다는 것을 안다. 
 
@@ -263,7 +263,7 @@ $$s=\bar{s}\circ p$$
 
 한편 $\bar{s}$는 반대방향의 함수
 
-$$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
+$$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\rightarrow}\S(M)$$
 
 또한 가지며, 우리의 주장은 많은 경우 이들 두 함수를 서로의 (거의) 역함수로 생각해도 된다는 것이다. 
 

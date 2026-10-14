@@ -67,7 +67,7 @@ and the projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$ is the projection
 
 When $n\geq 1$, this is not a trivial bundle. If this were a trivial bundle, there would exist a non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$. For instance, the function sending every point of $B$ to $1$ in the fiber would be such a section. But suppose an arbitrary section $s:\RP^n \rightarrow E(\gamma_n^1)$ is given; if we consider the following composition using the quotient map $q:S^n \rightarrow \RP^n$:
 
-$$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
+$$S^n \overset{q}{\rightarrow} \RP^n \overset{s}{\rightarrow} E\overset{\pr_2}{\rightarrow} \mathbb{R}^{n+1}$$
 
 this function sends $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$ to a scalar multiple of $\mathbf{x}$. If we denote this scalar by $t(\mathbf{x})$, then $t$ is a continuous function from $S^n$ to $\mathbb{R}$, and because of the quotient map $q$ it satisfies
 

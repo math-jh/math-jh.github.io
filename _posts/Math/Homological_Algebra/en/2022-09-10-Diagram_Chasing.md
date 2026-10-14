@@ -137,7 +137,7 @@ Moreover, if $f':A'\rightarrow B'$ is injective then the first sequence is exact
 ::: Proof
 That $f,g$ and $f',g'$ respectively induce the two given sequences
 
-$$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\longrightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\longrightarrow}\coker(\beta)\overset{(g')^\ast}{\longrightarrow}\coker(\gamma)$$
+$$\ker(\alpha)\overset{f^\sharp}{\rightarrow}\ker(\beta)\overset{g^\sharp}{\rightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\rightarrow}\coker(\beta)\overset{(g')^\ast}{\rightarrow}\coker(\gamma)$$
 
 is a consequence of [Lemma 4](#lem4){: data-lid="yt1hi" }. Moreover, letting $i_A, i_B, i_C$ be the canonical maps from the kernels to $A,B,C$ respectively, we have
 

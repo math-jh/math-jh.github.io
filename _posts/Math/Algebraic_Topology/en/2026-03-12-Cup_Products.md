@@ -45,7 +45,7 @@ $$C_\bullet(X;A),\qquad C_\bullet(Y;A)$$
 
 are given. Setting $C_\bullet=C_\bullet(X;A), D_\bullet=C_\bullet(Y;A)$ and taking the above cochain map, we compose it with the map induced by the Alexander-Whitney map $\AW$ from [§Cohomology](/en/math/algebraic_topology/cohomology){: data-lid="aqy4b" } to obtain the following cochain map
 
-$$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\longrightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\longrightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
+$$(C^\vee(X;A)\otimes C^\vee(Y;A))^\bullet \overset{\times}{\rightarrow} \Hom_A(C_\bullet(X;A)\otimes C_\bullet(Y;A),A)\overset{\Hom(\AW,A)}{\rightarrow} \Hom_A(C_\bullet(X\times Y;A),A)=(C^\vee)^\bullet(X\times Y)$$
 
 and descending this again to the cohomology level, for each $(p,q)$ we obtain the $A$-module homomorphism
 
@@ -60,7 +60,7 @@ Now we can define the cup product.
 ::: Definition 1
 For a commutative ring $A$ and a topological space $X$, the composition
 
-$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X;A)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X;A)$$
+$${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\rightarrow}H^\bullet(X\times X;A)\overset{\Delta^\ast}{\rightarrow} H^\bullet(X;A)$$
 
 is called the *cup product* on $H^\bullet(X;A)$.
 :::

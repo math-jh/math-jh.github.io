@@ -78,7 +78,7 @@ Noetherian ring $A$에 대하여 다음이 성립한다.
 
     을 통해 $(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$가 $a_i x_i$를 $1$로 옮기는 것을 안다. 이제 $A_\mathfrak{p} \rightarrow M_\mathfrak{p}$를 $1\mapsto a_ix_i$로 정의하면, 이는 $(\xi_i)_\mathfrak{p}$의 section이며 따라서 다음의 short exact sequence
 
-    $$0 \longrightarrow \ker (\xi_i)_\mathfrak{p}\longrightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\longrightarrow}A_\mathfrak{p}\longrightarrow 0$$
+    $$0 \rightarrow \ker (\xi_i)_\mathfrak{p}\rightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\rightarrow}A_\mathfrak{p}\rightarrow 0$$
 
     가 split한다. 이로부터 $M_\mathfrak{p}\cong A_\mathfrak{p}x_i\oplus\ker(\xi_i)_\mathfrak{p}$인 것을 안다. 비슷하게 $x_i$를 evaluation map $M^\ast_\mathfrak{p} \rightarrow A_\mathfrak{p};\xi\mapsto \xi(x_i)$로 보면 $M_\mathfrak{p}^\ast\cong A_\mathfrak{p}\xi_i\oplus \ker(x_i)_\mathfrak{p}$를 얻으며, 이제
 

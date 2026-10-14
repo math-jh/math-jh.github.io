@@ -92,7 +92,7 @@ It is easy to verify that the composition of $M$-set homomorphisms is an $M$-set
 
 Fix an arbitrary monoid homomorphism $\phi:M \rightarrow M'$. Then for any $M'$-set $E$, we can regard $E$ as an $M$-set via the composition
 
-$$M\overset{\phi}{\longrightarrow}M'\overset{\rho}{\longrightarrow}\End(E)$$
+$$M\overset{\phi}{\rightarrow}M'\overset{\rho}{\rightarrow}\End(E)$$
 
 Let us write the action defined in this way as $\phi^\ast\rho$. Then explicitly, $\phi^\ast\rho$ is the action defined by
 

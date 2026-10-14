@@ -28,7 +28,7 @@ $$C_k(X,A):=C_k(X)/C_k(A)$$
 
 으로 정의하자. 그럼 어렵지 않게 boundary map $\partial_k:C_k(X) \rightarrow C_{k-1}(X)$이 quotient group들 사이의 map $C_k(X,A) \rightarrow C_{k-1}(X,A)$를 유도하는 것을 안다. 이로부터 다음의 chain complex
 
-$$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A)\longrightarrow\cdots$$
+$$\cdots \rightarrow C_k(X,A)\overset{\partial}{\rightarrow} C_{k-1}(X,A)\rightarrow\cdots$$
 
 를 만들 수 있다. 
 
@@ -124,7 +124,7 @@ $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x
 
 는 모든 $k>1$에 대하여 isomorphism $H_k(X)\cong H_k(X,x)$을 준다. 뿐만 아니라, $k=1$인 경우의 long exact sequence를 보면 
 
-$$0 \rightarrow H_1(X) \rightarrow H_1(X, x) \overset{\partial}{\longrightarrow} H_{0}(x) \overset{\iota_\ast}{\longrightarrow} H_{0}(X)$$
+$$0 \rightarrow H_1(X) \rightarrow H_1(X, x) \overset{\partial}{\rightarrow} H_{0}(x) \overset{\iota_\ast}{\rightarrow} H_{0}(X)$$
 
 인데, 이 때 $\iota_\ast$는 $H_0(x)$의 generator를 $x$를 포함하는 $X$의 path component로 보내므로 injective이고, 따라서 $\partial$은 zero map이며 이로부터 마찬가지의 isomorphism $H_1(X)\cong H_1(X,x)$을 얻는다. 
 
@@ -247,7 +247,7 @@ $$(V,U\cap V)\rightarrow (X,U)$$
 
 을 얻는다. 여기서 $i,j,k$들은 각각의 inclusion에 의해 유도되는 함수들이고, $\partial$들은 connecting map이며 $p$들은 cokernel morphism들이다. 편의를 위해 index들은 생략하였다. 이제 이 long exact sequence morphism을 $\alpha$라 하고, [\[호몰로지 대수학\] §긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8){: data-lid="t7m3a" }이 주는 $\alpha$의 mapping cone exact sequence
 
-$$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(V, U\cap V)\oplus H_{n+1}(X)\overset{\overline{\Phi}}{\longrightarrow} H_n(U\cap V)\oplus H_{n+1}(X,U)\overset{\overline{\Psi}}{\longrightarrow} H_n(V)\oplus H_n(U)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\longrightarrow} H_n(V, U\cap V)\oplus H_n(X)\rightarrow \cdots\end{aligned}$$
+$$\begin{aligned}\cdots &\overset{\overline{\partial}}{\rightarrow} H_{n+1}(V, U\cap V)\oplus H_{n+1}(X)\overset{\overline{\Phi}}{\rightarrow} H_n(U\cap V)\oplus H_{n+1}(X,U)\overset{\overline{\Psi}}{\rightarrow} H_n(V)\oplus H_n(U)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\rightarrow} H_n(V, U\cap V)\oplus H_n(X)\rightarrow \cdots\end{aligned}$$
 
 를 $\Cone(\alpha)$라 하자. 그럼 앞선 excision axiom의 결과에 의하여, 다음의 long exact sequence
 
@@ -262,7 +262,7 @@ $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarro
 ::: 명제 7 (Mayer-Vietoris sequence)
 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하고, 이 위에 정의된 homology theory $H$를 생각하자. 그럼 long exact sequence
 
-$$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
+$$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\rightarrow} H_{n+1}(X)\overset{\partial}{\rightarrow} H_n(U\cap V)\overset{\Phi}{\rightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 
 가 존재하며, 이 때 함수들 $\Psi, \Phi$은 각각 
 

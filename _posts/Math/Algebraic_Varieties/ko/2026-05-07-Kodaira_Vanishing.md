@@ -129,18 +129,18 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9){: data-lid="qw9z5" }에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
-우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $\dd{\varphi_\mathcal{L}}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
+우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $\dd{\varphi_\mathcal{L}}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \rightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 
 1. *$\varphi_\mathcal{L}$ separates points.* 즉, 임의의 두 서로 다른 closed point $p, q \in X$에 대하여, $s(p) = 0$이고 $s(q) \neq 0$인 global section $s \in H^0(X, \mathcal{L})$가 존재한다.
 2. *$\varphi_\mathcal{L}$ separates tangent vectors.* 즉, 임의의 closed point $p \in X$에 대하여, $p$에서 vanish하는 sections의 모음 $\{ s \in H^0(X, \mathcal{L}) \mid s(p) = 0 \}$가 cotangent space에 대응하는 벡터공간 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span한다.
 
 첫 번째 조건은 evaluation map
 
-$$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
+$$H^0(X, \mathcal{L}) \rightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
 
 이 surjective임을 의미하고, 두 번째 조건은 $p$에서 vanish하는 sections들에 의한 restriction map
 
-$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
+$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \rightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
 
 의 image가 전체 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span함을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 
@@ -150,7 +150,7 @@ Algebraically closed field 위의 projective variety $X$와 그 위의 line bund
 
 이제 $\mathcal{L}$이 ample line bundle이라 하고, 이러한 separation 조건들이 $\mathcal{L}^{\otimes m}$에 대해 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $p \neq q$를 포함하는 closed subset $Z = \{p\} \cup \{q\}$를 생각하면, $Z$를 정의하는 ideal sheaf $\mathcal{I}_Z$에 대해 short exact sequence
 
-$$0 \longrightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \longrightarrow 0$$
+$$0 \rightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \rightarrow 0$$
 
 을 얻는다. 여기서 $\mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z$는 $Z$ 위의 line bundle이고,
 
@@ -158,17 +158,17 @@ $$H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \cong \mathcal{L}^{\otimes m}_p \oplus
 
 이다. 이로부터 유도되는 long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \rightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
 
 를 고려하면, 만약 $H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m}) = 0$이면 evaluation map이 surjective가 되어 separation of points가 성립함을 알 수 있다.
 
 마찬가지로 (2)의 경우, 점 $p$의 first infinitesimal neighborhood $\Spec(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$를 생각하여, $\mathcal{I}_p$를 $p$의 ideal sheaf라 할 때 short exact sequence
 
-$$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \longrightarrow 0$$
+$$0 \rightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \rightarrow 0$$
 
 에서 유도되는 long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \rightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 
@@ -176,7 +176,7 @@ $\mathcal{I}_Z$와 $\mathcal{I}_p^2$는 coherent sheaf이므로, [§사영공간
 
 한편 Kodaira vanishing은 [명제 6](#prop6){: data-lid="hld30" }의 고전적인 증명에 다른 방식으로 들어온다. 그 증명에서는 $p$와 $q$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$ 위에서 exceptional divisor만큼 twist를 낮춘 line bundle에 vanishing을 적용하므로, vanishing의 대상이 다시 line bundle이 되어 [명제 1](#prop1){: data-lid="467qy" }의 형태로 환원된다. 더 나아가 $\mathcal{L}^{\otimes m}$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도 관련된 multiplication map
 
-$$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
+$$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
 의 surjectivity를 검증함으로써 얻을 수 있는데, 이때 필요한 vanishing을 구체적인 $m$의 범위와 함께 주는 것은 [§사영공간의 코호몰로지, §§Regularity](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#regularity){: data-lid="orywe" }의 Castelnuovo-Mumford regularity이다. 이러한 vanishing은 higher cohomology가 sections의 생성을 방해하지 않음을 보장하여, linear system의 풍부함을 정량적으로 다룰 수 있게 한다.
 

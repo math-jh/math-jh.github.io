@@ -216,7 +216,7 @@ $$\rho: G \rightarrow \GL(V)$$
 ::: 명제 14
 $G$가 affine algebraic group이고 $A = \mathbb{K}[G]$라 하자. 유한차원 벡터공간 $V$에 대하여, representation $\rho: G \rightarrow \GL(V)$들과 $V$ 위의 comodule structure $\Delta_V: V \rightarrow V \otimes_\mathbb{K} A$들 사이에는 일대일 대응이 있다. 이 대응은 $V$의 basis $v_1, \ldots, v_n$을 고정할 때
 
-$$\rho(g) v_j = \sum_{i=1}^n a_{ij}(g) v_i \qquad\Longleftrightarrow\qquad \Delta_V(v_j) = \sum_{i=1}^n v_i \otimes a_{ij}$$
+$$\rho(g) v_j = \sum_{i=1}^n a_{ij}(g) v_i \qquad\iff\qquad \Delta_V(v_j) = \sum_{i=1}^n v_i \otimes a_{ij}$$
 
 로 주어진다.
 :::

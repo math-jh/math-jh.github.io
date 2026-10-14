@@ -208,7 +208,7 @@ Building on this understanding of the torus, we now define a $T_N$-action on $U_
 
 Specifically, define the $\mathbb{C}$-algebra homomorphism $\rho$ on the coordinate ring $\mathbb{C}[S_\sigma]$ by
 
-$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
+$$\rho : \mathbb{C}[S_\sigma] \rightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \mapsto \rchi^u \otimes \rchi^u.$$
 
 Here $\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$ is the coordinate ring of $T_N$, and $\rchi^u \in \mathbb{C}[S_\sigma]$ is the eigenvector of weight $u$. That $\rho$ is a well-defined algebra homomorphism can be verified directly from bilinearity.
 
@@ -225,7 +225,7 @@ so the result of the action of $t$ on $\rchi^u \in \mathbb{C}[S_\sigma]$ is $\rc
 ::: Proposition 10
 The algebraic torus $T_N$ acts on the affine toric variety $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$. First define the $\mathbb{C}$-algebra homomorphism $\rho$ on the coordinate ring $\mathbb{C}[S_\sigma]$ by
 
-$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
+$$\rho : \mathbb{C}[S_\sigma] \rightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \mapsto \rchi^u \otimes \rchi^u.$$
 
 Then this $\rho$ defines a $T_N$-action on $U_\sigma$, and for each $t \in T_N$ the result of the action of $t$ on $\rchi^u \in \mathbb{C}[S_\sigma]$ is
 
@@ -261,7 +261,7 @@ When $\sigma = \{0\}$, we have $\sigma^\vee = M_{\mathbb{R}}$ and hence $S_\sigm
 
 In the general case $S_\sigma \subseteq M$, so $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$, which induces the natural dominant morphism
 
-$$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma.$$
+$$T_N = \Spec(\mathbb{C}[M]) \rightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma.$$
 
 Moreover, since $\sigma$ is strongly convex, $\sigma^\vee$ is a full-dimensional cone in $M_{\mathbb{R}}$, and there exists a lattice point $u_0 \in M$ in its interior. For any $m \in M$, taking $N$ sufficiently large makes both $Nu_0$ and $Nu_0 + m$ lie in $S_\sigma$; hence $m = (Nu_0 + m) - Nu_0$, showing that $S_\sigma$ generates the entire group $M$, and the fraction field of $\mathbb{C}[S_\sigma]$ coincides with $\mathbb{C}(M)$. Therefore $T_N \hookrightarrow U_\sigma$ is an open dense subset.
 :::

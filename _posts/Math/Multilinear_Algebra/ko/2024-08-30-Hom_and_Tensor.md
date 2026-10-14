@@ -23,7 +23,7 @@ weight: 5
 ::: 명제 1
 Splitting exact sequence
 
-$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+$$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
 와 임의의 $A$-module $K$에 대하여, 이들이 유도하는 다음의 sequence
 
@@ -50,7 +50,7 @@ $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Ho
 ::: 명제 2
 Splitting exact sequence
 
-$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+$$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
 와 임의의 $A$-module $K$에 대하여, 이들이 유도하는 다음의 sequence
 

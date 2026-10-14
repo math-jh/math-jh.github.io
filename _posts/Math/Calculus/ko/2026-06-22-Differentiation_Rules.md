@@ -206,7 +206,7 @@ $$2x + 2y y' = 0$$
 
 지수에 변수가 있는 함수는 양변에 로그를 취한 뒤 미분하는 *로그 미분법<sub>logarithmic differentiation</sub>*이 편하다. 예를 들어 $y = x^x$ ($x > 0$) 에서 $\ln y = x\ln x$의 양변을 미분하면, $(\ln y)' = y'/y$와 곱의 미분법으로
 
-$$\frac{y'}{y} = \ln x + 1 \quad\Longrightarrow\quad y' = x^x(\ln x + 1)$$
+$$\frac{y'}{y} = \ln x + 1 \quad\implies\quad y' = x^x(\ln x + 1)$$
 
 이다.
 :::

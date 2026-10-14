@@ -133,7 +133,7 @@ HRR 정리의 완전한 증명은 상당한 기술적 준비를 필요로 하며
 
 Chern character는 ring homomorphism
 
-$$\operatorname{ch}:K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
+$$\operatorname{ch}:K_0(X)\rightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
 
 을 정의하며, Todd class는 vector bundle의 direct sum에 대해 multiplicative이다. 이들을 조합하여
 

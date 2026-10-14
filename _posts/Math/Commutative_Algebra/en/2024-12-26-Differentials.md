@@ -121,14 +121,14 @@ The most basic consequence of this functoriality is that the Kähler differentia
 ::: Proposition 7
 Suppose an $A$-algebra $E$ and, in $E$, a multiplicative subset $S$ are given ([§Localization, ⁋Definition 3](/en/math/commutative_algebra/localization#def3){: data-lid="1mgpv" }). Via the canonical homomorphism $\varphi:E \rightarrow S^{-1}E$, view $S^{-1}E$ as an $A$-algebra. Then the $S^{-1}E$-linear homomorphism given by [Proposition 6](#prop6){: data-lid="1bkj7" }
 
-$$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
+$$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \rightarrow \Omega_{S^{-1}E/A}$$
 
 is an isomorphism.
 :::
 ::: Proof
 For any $S^{-1}E$-module $M$, we show that the restriction map along $\varphi$
 
-$$\varphi^\ast:\Der_A(S^{-1}E, M) \longrightarrow \Der_A(E, M)$$
+$$\varphi^\ast:\Der_A(S^{-1}E, M) \rightarrow \Der_A(E, M)$$
 
 is a bijection. Since $M$ is an $S^{-1}E$-module, the elements of $S$ act invertibly on $M$, and below, dividing an element of $M$ by an element of $S$ means the inverse of this action.
 
@@ -184,12 +184,12 @@ $$\Omega_\varphi:\Omega_{E'/A} \rightarrow \Omega_{E'/E}$$
 
 That is, $d_{E'/E}$ is identical to the following composition:
 
-$$E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E}$$
+$$E' \overset{d_{E'/A}}{\rightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\rightarrow}\Omega_{E'/E}$$
 
 ::: Proposition 8 (Cotangent sequence)
 The sequence of $E'$-linear maps
 
-$$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E} \longrightarrow 0$$
+$$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\rightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\rightarrow}\Omega_{E'/E} \rightarrow 0$$
 
 is exact.
 :::
@@ -206,7 +206,7 @@ $$\delta(\varphi(e)y')=\varphi(e)\delta(y')+y'\delta(\varphi(e))=\varphi(e)\delt
 
 so $\delta$ is $E$-linear, and hence is an $E$-derivation. Then by the universal property of [Lemma 2](#lem2){: data-lid="v00zn" }, there exists a unique $E'$-linear map $\psi:\Omega_{E'/E} \rightarrow C$ satisfying $\psi\circ d_{E'/E}=\delta$. Now, considering the two compositions $\psi\circ\psi'$ and $\psi'\circ\psi$, on the generators of $C$ and $\Omega_{E'/E}$, respectively, we have
 
-$$\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto} d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto}d_{E'/E}y'$$
+$$\pi(d_{E'/A}y')\overset{\psi'}{\mapsto} d_{E'/E}y'\overset{\psi}{\mapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\mapsto}\pi(d_{E'/A}y')\overset{\psi'}{\mapsto}d_{E'/E}y'$$
 
 and so both are the identity. That is, $\psi'$ is an isomorphism, and therefore $\ker \Omega_\varphi=N=\im \Omega_{\varphi/A}'$.
 :::
@@ -221,7 +221,7 @@ $$d_{E/A}\vert_K: K \rightarrow \Omega_{E/A}$$
 
 and we can consider the following $E$-linear map:
 
-$$K\overset{d\vert_K}{\longrightarrow}\Omega_{E/A}\overset{}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
+$$K\overset{d\vert_K}{\rightarrow}\Omega_{E/A}\overset{}{\rightarrow}\Omega_{E/A}\otimes_EE'$$
 
 Then one can check that the kernel of the above composition contains $K^2$, and therefore from this, an $E$-linear map
 
@@ -232,7 +232,7 @@ is obtained.
 ::: Proposition 9
 In the above situation, the sequence
 
-$$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \longrightarrow 0$$
+$$K/K^2 \overset{\bar{d}}{\rightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \rightarrow 0$$
 
 is exact. 
 :::
@@ -249,7 +249,7 @@ $$\delta(x'y')=\pi(d_{E/A}(xy)\otimes 1)=\pi((x d_{E/A}y+y d_{E/A}x)\otimes 1)=x
 
 so it is an $A$-derivation. Here, the last equality follows from the fact that on $\Omega_{E/A}\otimes_EE'$, the action of $E$ coincides, via $\varphi$, with the action of $E'$. Then by the universal property of [Lemma 2](#lem2){: data-lid="1a8ym" }, the condition $\psi\circ d_{E'/A}=\delta$ uniquely determines an $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$. On the generators, the two compositions $\psi\circ\psi'$ and $\psi'\circ\psi$ satisfy
 
-$$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}x'$$
+$$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\mapsto}d_{E'/A}\varphi(x)\overset{\psi}{\mapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\mapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\mapsto}d_{E'/A}x'$$
 
 and hence both are the identity. That is, $\psi'$ is an isomorphism, and therefore $\ker\Omega_{\varphi/A}'=N'=\im\bar{d}$.
 :::
@@ -262,14 +262,14 @@ The conormal sequence of [Proposition 9](#prop9){: data-lid="xp5jk" } is exact o
 
 The key idea is to express $E$ as a quotient of the most tractable algebra, namely a polynomial algebra. If we choose any spanning set of $E$, say $(t_s)_{s\in S}$ (for instance, all of $E$), then by the adjunction of [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8){: data-lid="rynig" }, defined by $\x_s\mapsto t_s$, a surjective $A$-algebra homomorphism
 
-$$p: R=A[\x_s]_{s\in S}\longrightarrow E$$
+$$p: R=A[\x_s]_{s\in S}\rightarrow E$$
 
 exists. We call such a $p$ a *presentation* of $E$, and write $\mathfrak{I}=\ker p$. Then we can apply [Proposition 9](#prop9){: data-lid="w20ie" } with $\varphi=p$, that is, setting $E$ to be $R$ and $E'$ to be $E$, and the two leftmost terms of its conormal sequence form the following complex.
 
 ::: Definition 10
 For a presentation $p:R \rightarrow E$, the *naive cotangent complex* $\operatorname{NL}(p)$ of $p$ is the two-term complex of $E$-modules consisting of the two leftmost terms of the conormal sequence:
 
-$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
+$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
 
 Here, we place $\mathfrak{I}/\mathfrak{I}^2$ in degree $1$ and $\Omega_{R/A}\otimes_RE$ in degree $0$.
 :::
@@ -290,7 +290,7 @@ exists.
 ::: Proof
 In the conormal sequence
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_{p/A}'}{\longrightarrow}\Omega_{E/A}\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_{p/A}'}{\rightarrow}\Omega_{E/A}\rightarrow0$$
 
 of [Proposition 9](#prop9){: data-lid="e50bm" }, since $\Omega_{p/A}'$ is surjective and its kernel is $\im\bar{d}$, we have $\coker\bar{d}\cong\Omega_{E/A}$ by the first isomorphism theorem.
 :::
@@ -369,7 +369,7 @@ is an invariant of the $A$-algebra $E$. Let us see what $H_1$ measures in the fo
 ::: Example 15
 Consider the algebra $E=A[\x]/(f)$ presented by a single polynomial. Here, we assume that $f$ is a nonzerodivisor in $A[\x]$. For the presentation $p:R=A[\x] \rightarrow E$, we have $\mathfrak{I}=(f)$, and since $f$ is a nonzerodivisor, $\mathfrak{I}/\mathfrak{I}^2$ is a free $E$-module with basis $\overline{f}$. Indeed, if $af\in(f^2)$, then from $af=bf^2$ we obtain $a=bf\in(f)$. Therefore,
 
-$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\longrightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
+$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\rightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
 
 where $Df$ is the derivative of $f$. Then
 

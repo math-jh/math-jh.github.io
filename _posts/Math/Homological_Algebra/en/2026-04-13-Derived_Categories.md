@@ -40,7 +40,7 @@ We will not treat this definition with full rigor, but it is essentially the sam
 
 More concretely, when describing morphisms in $D(\mathcal{A})$ we often use roof diagrams. A morphism in $D(\mathcal{A})$ from $X$ to $Y$ is represented by a diagram
 
-$$X\overset{s}{\longleftarrow} X'\overset{f}{\longrightarrow}Y$$
+$$X\overset{s}{\leftarrow} X'\overset{f}{\rightarrow}Y$$
 
 where $s$ is a quasi-isomorphism and $f$ is a chain map. In other words, inside $D(\mathcal{A})$, a map from $X$ to $Y$ is not an actual map but rather a chain map (precisely, up to chain homotopy) from some $X'$ in the quasi-isomorphism class of $X$ to $Y$. In this process we adjoin $s^{-1}$, which may not exist as an actual chain map, thereby producing the "localization" analogue described above.
 
@@ -50,11 +50,11 @@ $$\frac{a}{b}=\frac{ca}{cb}$$
 
 . Consider two roofs
 
-$$X\overset{s}{\longleftarrow} A\overset{f}{\longrightarrow}Y,\qquad X\overset{t}{\longleftarrow} B\overset{g}{\longrightarrow}Y$$
+$$X\overset{s}{\leftarrow} A\overset{f}{\rightarrow}Y,\qquad X\overset{t}{\leftarrow} B\overset{g}{\rightarrow}Y$$
 
 . They are equivalent if there exists another object $C$ and a roof
 
-$$A\overset{u}{\longleftarrow} C\overset{h}{\longrightarrow}B$$
+$$A\overset{u}{\leftarrow} C\overset{h}{\rightarrow}B$$
 
 such that
 
@@ -182,10 +182,10 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 - (TR1) For every morphism $f : A \rightarrow B$ there exists a distinguished triangle $A \rightarrow B \rightarrow C \rightarrow A[1]$. Also, $A \overset{\id}{\rightarrow} A \rightarrow 0 \rightarrow A[1]$ is a distinguished triangle.
 - (TR2) If $A \rightarrow B \rightarrow C \rightarrow A[1]$ is a distinguished triangle, then so is $B \rightarrow C \rightarrow A[1] \rightarrow B[1]$.
 - (TR3) Given two distinguished triangles, if maps $(u, v)$ make the diagram commute, then there exists a map $w$ completing the morphism of triangles.
-- (TR4) Octahedral axiom: Given a composition $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$, there exist three distinguished triangles forming the associated octahedron.
+- (TR4) Octahedral axiom: Given a composition $B \overset{g}{\rightarrow} C \overset{h}{\rightarrow} D$, there exist three distinguished triangles forming the associated octahedron.
 :::
 
-The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-lid="3mq91" }) In other words, a short exact sequence becomes a distinguished triangle in the derived category
+The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\rightarrow} A \overset{g}{\rightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-lid="3mq91" }) In other words, a short exact sequence becomes a distinguished triangle in the derived category
 
 $$A'[0] \overset{f}{\rightarrow} A[0] \rightarrow A''[0] \rightarrow A'[1]$$
 

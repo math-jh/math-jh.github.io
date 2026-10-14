@@ -129,9 +129,9 @@ $$\partial:\pi_n(X,A,x_0)\rightarrow\pi_{n-1}(A,x_0)$$
 ::: 명제 8 (쌍의 long exact sequence)
 Base point $x_0\in A\subseteq X$에 대하여, 다음의 수열
 
-$$\cdots\rightarrow\pi_n(A,x_0)\overset{i_\ast}{\longrightarrow}\pi_n(X,x_0)\overset{j_\ast}{\longrightarrow}\pi_n(X,A,x_0)\overset{\partial}{\longrightarrow}\pi_{n-1}(A,x_0)\rightarrow\cdots$$
+$$\cdots\rightarrow\pi_n(A,x_0)\overset{i_\ast}{\rightarrow}\pi_n(X,x_0)\overset{j_\ast}{\rightarrow}\pi_n(X,A,x_0)\overset{\partial}{\rightarrow}\pi_{n-1}(A,x_0)\rightarrow\cdots$$
 
-은 마지막 마디 $\pi_1(X,A,x_0)\overset{\partial}{\longrightarrow}\pi_0(A,x_0)\rightarrow\pi_0(X,x_0)$까지 완전하다. (group 구조가 없는 낮은 항에서는 base point를 가진 집합들의 exact sequence로 이해한다.)
+은 마지막 마디 $\pi_1(X,A,x_0)\overset{\partial}{\rightarrow}\pi_0(A,x_0)\rightarrow\pi_0(X,x_0)$까지 완전하다. (group 구조가 없는 낮은 항에서는 base point를 가진 집합들의 exact sequence로 이해한다.)
 :::
 ::: 증명
 핵심 관찰은 $\pi_n(X,A,x_0)$의 한 원소가 $0$이라는 것, 곧 그것이 $J^{n-1}$을 넘어 $\partial I^n$ 전체를 $x_0$으로 보내는 함수로 (쌍의 조건을 유지하며) 변형된다는 것이, 그 원소가 $A$ 안에 완전히 담긴 함수로 변형됨과 동치라는 것이다. 이를 이용해 각 마디의 완전성을 확인한다.
@@ -171,18 +171,18 @@ $p_\ast$가 잘 정의됨은 $p$가 $F=p^{-1}(b_0)$을 $b_0$으로, $e_0$을 $b_
 ::: 정리 10 (Fibration의 long exact sequence)
 $p:E\rightarrow B$가 Serre fibration이고 $B$가 path-connected라 하자. Base point $b_0\in B$과 $e_0\in F=p^{-1}(b_0)$을 고정하면, 다음의 long exact sequence
 
-$$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\longrightarrow}\pi_n(E,e_0)\overset{p_\ast}{\longrightarrow}\pi_n(B,b_0)\overset{\partial}{\longrightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
+$$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\rightarrow}\pi_n(E,e_0)\overset{p_\ast}{\rightarrow}\pi_n(B,b_0)\overset{\partial}{\rightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
 
 이 존재하며, 이는
 
-$$\cdots\rightarrow\pi_1(B,b_0)\overset{\partial}{\longrightarrow}\pi_0(F)\rightarrow\pi_0(E)$$
+$$\cdots\rightarrow\pi_1(B,b_0)\overset{\partial}{\rightarrow}\pi_0(F)\rightarrow\pi_0(E)$$
 
 으로 끝난다. 여기에서 $i:F\hookrightarrow E$는 inclusion이고, 낮은 항에서는 base point를 가진 집합들의 exact sequence로 이해한다.
 :::
 ::: 증명
 쌍 $(E,F)$에 [명제 8](#prop8){: data-lid="1gre9" }을 적용하면 exact sequence
 
-$$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\longrightarrow}\pi_n(E,e_0)\overset{j_\ast}{\longrightarrow}\pi_n(E,F,e_0)\overset{\partial}{\longrightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
+$$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\rightarrow}\pi_n(E,e_0)\overset{j_\ast}{\rightarrow}\pi_n(E,F,e_0)\overset{\partial}{\rightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
 
 을 얻는다. 이제 [보조정리 9](#lem9){: data-lid="ybj7h" }의 isomorphism $p_\ast:\pi_n(E,F,e_0)\overset{\cong}{\rightarrow}\pi_n(B,b_0)$을 이용하여 각 상대항 $\pi_n(E,F,e_0)$을 $\pi_n(B,b_0)$으로 대체한다. Exact sequence의 한 항을 그것과 isomorphic한 항으로, morphism들과 가환하도록 바꾸면 완전성은 보존되므로, 남은 것은 두 morphism이 어떻게 바뀌는지를 확인하는 것뿐이다.
 
@@ -208,7 +208,7 @@ $$H(\gamma,s)(t)=\gamma\bigl((1-s)t\bigr)$$
 
 이 항등함수에서 상수 path $c_{b_0}$으로의 homotopy를 준다. 따라서 모든 $n$에 대하여 $\pi_n(PB)=0$이다. 이제 [정리 10](#thm10){: data-lid="tdgmb" }의 exact sequence
 
-$$\pi_n(PB)\overset{p_\ast}{\longrightarrow}\pi_n(B)\overset{\partial}{\longrightarrow}\pi_{n-1}(\Omega B)\longrightarrow\pi_{n-1}(PB)$$
+$$\pi_n(PB)\overset{p_\ast}{\rightarrow}\pi_n(B)\overset{\partial}{\rightarrow}\pi_{n-1}(\Omega B)\rightarrow\pi_{n-1}(PB)$$
 
 에서 양 끝 항이 $0$이므로 connecting homomorphism $\partial:\pi_n(B)\rightarrow\pi_{n-1}(\Omega B)$이 isomorphism이다. 곧 모든 $n\geq 1$에 대하여
 
@@ -220,11 +220,11 @@ $$\pi_n(\Omega B)\cong\pi_{n+1}(B)$$
 ::: 예시 12 (피복사상)
 [명제 6](#prop6){: data-lid="vr6uq" }에 의하여 covering map $p:E\rightarrow B$는 fibration이고 그 fiber $F$는 discrete space이다. Discrete space의 각 성분은 한 점이므로 $\pi_n(F)=0$이 모든 $n\geq 1$에 대하여 성립하고, $\pi_0(F)$는 fiber의 점들의 집합이다. 이를 [정리 10](#thm10){: data-lid="a3gec" }의 exact sequence에 대입하면, $n\geq 2$인 부분에서
 
-$$0=\pi_n(F)\rightarrow\pi_n(E)\overset{p_\ast}{\longrightarrow}\pi_n(B)\rightarrow\pi_{n-1}(F)=0$$
+$$0=\pi_n(F)\rightarrow\pi_n(E)\overset{p_\ast}{\rightarrow}\pi_n(B)\rightarrow\pi_{n-1}(F)=0$$
 
 이 되어 $p_\ast:\pi_n(E)\rightarrow\pi_n(B)$이 모든 $n\geq 2$에 대하여 isomorphism이다. 즉 covering space는 밑공간의 고차 homotopy group을 그대로 물려받는다. 한편 exact sequence의 꼬리 부분
 
-$$0=\pi_1(F)\rightarrow\pi_1(E)\overset{p_\ast}{\longrightarrow}\pi_1(B)\overset{\partial}{\longrightarrow}\pi_0(F)\rightarrow\pi_0(E)$$
+$$0=\pi_1(F)\rightarrow\pi_1(E)\overset{p_\ast}{\rightarrow}\pi_1(B)\overset{\partial}{\rightarrow}\pi_0(F)\rightarrow\pi_0(E)$$
 
 은 $p_\ast:\pi_1(E)\rightarrow\pi_1(B)$이 injective임을 주며, $\partial:\pi_1(B)\rightarrow\pi_0(F)$은 $\pi_1(B,b_0)$이 fiber $F=p^{-1}(b_0)$에 작용하는 monodromy를 나타낸다. 이는 covering space 이론에서 알려진 $\pi_1$의 단사성과 fiber 위의 $\pi_1$-monodromy action([§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12){: data-lid="yd6yv" } 부근에서 논의되는 Galois 대응의 밑바탕이 되는 사실들)에 대응하는 exact sequence 판본이다.
 
@@ -261,7 +261,7 @@ $$p:S^3\rightarrow\mathbb{CP}^1\cong S^2;\qquad (z_0,z_1)\mapsto[z_0:z_1]$$
 
 [정리 10](#thm10){: data-lid="hyiq0" }의 exact sequence에서 $n=3$ 주변을 보면
 
-$$\pi_3(S^1)\rightarrow\pi_3(S^3)\overset{p_\ast}{\longrightarrow}\pi_3(S^2)\overset{\partial}{\longrightarrow}\pi_2(S^1)$$
+$$\pi_3(S^1)\rightarrow\pi_3(S^3)\overset{p_\ast}{\rightarrow}\pi_3(S^2)\overset{\partial}{\rightarrow}\pi_2(S^1)$$
 
 이다. [예시 12](#ex12){: data-lid="qorg6" }에 의하여 $\pi_3(S^1)=\pi_2(S^1)=0$이므로, $p_\ast:\pi_3(S^3)\rightarrow\pi_3(S^2)$은 isomorphism이다. 즉
 

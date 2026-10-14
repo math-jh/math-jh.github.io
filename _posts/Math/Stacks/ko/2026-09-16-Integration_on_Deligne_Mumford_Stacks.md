@@ -39,12 +39,12 @@ $$A_k(\mathcal{X})_\mathbb{Q}:=Z_k(\mathcal{X})_\mathbb{Q}/R_k(\mathcal{X})_\mat
 
    로 정의한다.
 
-이를 linear하게 확장한 것이 rational equivalence를 보존하므로 pushforward $f_\ast:A_k(\mathcal{X})_\mathbb{Q}\longrightarrow A_k(\mathcal{Y})_\mathbb{Q}$를 정의한다.
+이를 linear하게 확장한 것이 rational equivalence를 보존하므로 pushforward $f_\ast:A_k(\mathcal{X})_\mathbb{Q}\rightarrow A_k(\mathcal{Y})_\mathbb{Q}$를 정의한다.
 :::
 
 [\[대수다양체\] §저우 군, ⁋명제 6](/ko/math/algebraic_varieties/chow_groups#prop6){: data-lid="d66y4" }에서는 같은 차원의 integral subvariety $V\rightarrow W$에 대한 pushforward가 단순히
 
-$$[V]\longmapsto [K(V):K(W)][W]$$
+$$[V]\mapsto [K(V):K(W)][W]$$
 
 로 주어졌던 것을 기억하자. 위 정의는 바로 이 공식을 Deligne–Mumford stack으로 확장한 것으로, 차이는 generic stabilizer의 비율 $e_{\mathcal{W}}/e_{\mathcal{V}}$이 추가된다는 점이다. 이는 근본적으로 [§고유스택, ⁋명제 4](/ko/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" } 직후에 살펴보았듯 coarse moduli에서 scheme-theoretic하게 보이는 degree와, stack이 고유하게 가지고 있는 automorphism 정보가 분리해서 보이는 것으로, 이런 이유에서 곱
 
@@ -66,7 +66,7 @@ $$A_0(\Spec\mathbb{C})_\mathbb{Q}=\mathbb{Q}[\Spec\mathbb{C}]\cong\mathbb{Q}$$
 
 이 되며, proper pushforward는 곧바로 *degree map*
 
-$$\deg:=p_\ast:A_0(\mathcal{X})_\mathbb{Q}\longrightarrow\mathbb{Q}$$
+$$\deg:=p_\ast:A_0(\mathcal{X})_\mathbb{Q}\rightarrow\mathbb{Q}$$
 
 을 정의한다. 그럼 다음이 성립한다.
 
@@ -90,7 +90,7 @@ $$p_\ast[\mathcal{Z}]=\frac{1}{\lvert\Aut(x)\rvert}[\Spec\mathbb{C}]$$
 
 일반적으로 pure $d$-dimensional stack $\mathcal{X}$에는 fundamental cycle $[\mathcal{X}]\in A_d(\mathcal{X})_\mathbb{Q}$이 존재한다는 것이 알려져 있다. 추가로, 만일 $\mathcal{X}$가 smooth이면 fundamental class와의 cap product에 의하여 Chow cohomology와 Chow homology 사이에 identification
 
-$$A^k(\mathcal{X})_\mathbb{Q}\xrightarrow{\sim} A_{d-k}(\mathcal{X})_\mathbb{Q},\qquad\alpha\longmapsto\alpha\cap[\mathcal{X}]$$
+$$A^k(\mathcal{X})_\mathbb{Q}\xrightarrow{\sim} A_{d-k}(\mathcal{X})_\mathbb{Q},\qquad\alpha\mapsto\alpha\cap[\mathcal{X}]$$
 
 이 존재한다. 따라서 top codimension class는 자연스럽게 zero-cycle을 결정하고, 이를 degree map으로 보낸 것을 이 cohomology class의 적분으로 정의할 수 있다.
 
@@ -148,7 +148,7 @@ $$\pi_\ast[\mathcal{X}]=1\cdot\frac{1}{e}[X]=\frac{1}{e}[X]$$
 
 한편, 위에서 설명했듯 적분은 structure morphism을 따른 proper pushforward이므로, 이를 임의의 proper morphism으로 확장할 수 있다. 이를 위해 smooth proper Deligne-Mumford stack 사이의 proper morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$을 생각하자. $\dim\mathcal{X}=m$, $\dim\mathcal{Y}=n$이라 하고 relative dimension을 $r=m-n$이라 하자. Smoothness를 사용하여 homology class를 cohomology class로 바꿔주면, 위의 proper pushforward는 
 
-$$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\longrightarrow A^{k-r}(\mathcal{Y})_\mathbb{Q}$$
+$$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\rightarrow A^{k-r}(\mathcal{Y})_\mathbb{Q}$$
 
 로 쓸 수 있다. 즉 우리는 cohomology class $\alpha$에 대하여, $f_\ast \alpha$를 다음 식
 
@@ -174,7 +174,7 @@ $$W=V\times_Y Z$$
 
 에서 induced closed embedding을 $i':W\hookrightarrow V$라 하면 *refined* Gysin pullback
 
-$$i^!:A_k(V)_\mathbb{Q}\longrightarrow A_{k-c}(W)_\mathbb{Q}$$
+$$i^!:A_k(V)_\mathbb{Q}\rightarrow A_{k-c}(W)_\mathbb{Q}$$
 
 이 정의되는 것이 알려져 있다. 이는 일반적인 Gysin pullback에 더하여, proper pushforward와 base change에 대하여 호환된다. 구체적으로 codimension $c$인 closed regular embedding $i:Z\hookrightarrow Y$와 proper morphism $g:V\rightarrow Y$가 주어지고,
 
@@ -247,7 +247,7 @@ $$\mathcal{Z}=\mathcal{M}\times_X\mathcal{N}$$
 
 는 두 morphism의 image가 $X$에서 일치하는 부분을 나타내며, 이 fiber product는 diagonal을 이용하여 ordinary product 안의 intersection으로 표현할 수 있다. 이를 위해
 
-$$(u,v):\mathcal{M}\times\mathcal{N}\longrightarrow X\times X$$
+$$(u,v):\mathcal{M}\times\mathcal{N}\rightarrow X\times X$$
 
 를 생각하면
 

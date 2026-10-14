@@ -126,7 +126,7 @@ $$\ell(D)\leq \deg(D)+1\tag{$3$}$$
 
 을 얻을 수 있다. 구체적으로 $D = \sum n_i p_i$가 effective라 하면, $f\in H^0(C, \mathcal{O}_C(D))$를 각 점 $p_i$에서의 principal part로 보내는 선형사상
 
-$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}$$
+$$H^0(C, \mathcal{O}_C(D)) \rightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}$$
 
 을 생각할 수 있다. 직관적으로, 이는 $f$가 점 $p_i$에서의 Laurent polynomial의 principal part를 다음의 식
 
@@ -140,11 +140,11 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 일반적으로 이 식이 등식이 되기 위해서는 선형사상이 surjective여야 하지만, 이것이 항상 성립하는 것은 아니다. 이를 확인하기 위해 [명제 3](#prop3){: data-lid="pe306" }의 증명에서 살펴본 short exact sequence
 
-$$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
+$$0\rightarrow \mathcal{O}_C\overset{i}{\rightarrow} \mathcal{O}_C(D)\overset{p}{\rightarrow} \mathcal{O}_D\rightarrow 0$$
 
 으로부터 얻어지는 long exact sequence
 
-$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
+$$0\rightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\rightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\rightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\rightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\rightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
 
 를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 $D$의 support를 갖는 degree $\deg D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
 

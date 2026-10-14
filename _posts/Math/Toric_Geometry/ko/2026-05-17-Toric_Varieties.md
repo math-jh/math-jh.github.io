@@ -129,7 +129,7 @@ Toric variety $X_\Sigma$가 projective variety인 것은 $\Sigma$가 어떤 full
 
 $P \subseteq M_\mathbb{R}$의 lattice point들, 즉 $P \cap M = \{m_0, m_1, \ldots, m_s\}$를 생각하자. 이들을 통해 monomial map
 
-$$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
+$$\phi_P: T_N \rightarrow \mathbb{P}^s, \qquad t \mapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
 을 정의할 수 있다. 여기서 $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $m \in M$에 대응하는 character이다.
 
@@ -158,7 +158,7 @@ $$v_i = e_i \quad (i = 1, \ldots, n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
 이들의 gluing을 직접 확인하여 이것이 $\mathbb{P}^n$이 나오는 것을 직접 확인할 수 있으나, 그 대신 $\Delta_n$의 lattice points를 관찰하자. $\Delta_n$의 lattice point들은 정확히 꼭짓점들 $\{0, e_1, \ldots, e_n\}$이므로, 대응하는 monomial map은
 
-$$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \longrightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \longmapsto [1 : t_1 : \cdots : t_n]$$
+$$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \rightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$$
 
 가 되는 것을 확인할 수 있다.
 :::

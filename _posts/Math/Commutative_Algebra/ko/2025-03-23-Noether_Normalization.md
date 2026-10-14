@@ -141,7 +141,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad M_i/M_{i-1}\cong B/\ma
 
 를 얻는다. 각 $B/\mathfrak{q}_i$에 대하여 결론이 성립한다 하고 그 원소들의 곱을 $a$라 하면, exact sequence
 
-$$0 \longrightarrow (M_{i-1})_a \longrightarrow (M_i)_a \longrightarrow (B/\mathfrak{q}_i)_a \longrightarrow 0$$
+$$0 \rightarrow (M_{i-1})_a \rightarrow (M_i)_a \rightarrow (B/\mathfrak{q}_i)_a \rightarrow 0$$
 
 의 오른쪽 항이 free module이므로 이 exact sequence는 split하고, $i$에 대한 귀납법으로 $(M_i)_a$가 모두 free $A_a$-module이 된다. 따라서 $M=B/\mathfrak{q}$인 경우, 즉 $B$를 $B/\mathfrak{q}$로 바꾸어 $B$가 integral domain이고 $M=B$인 경우만 보이면 충분하다.
 

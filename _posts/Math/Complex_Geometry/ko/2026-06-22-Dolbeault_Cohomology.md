@@ -114,7 +114,7 @@ $$
 Complex manifold $X$와 고정된 정수 $p \geq 0$에 대하여, $\bar{\partial}$를 미분으로 갖는 cochain complex
 
 $$
-0 \longrightarrow \Omega^{p,0}(X) \xrightarrow{\ \bar{\partial}\ } \Omega^{p,1}(X) \xrightarrow{\ \bar{\partial}\ } \Omega^{p,2}(X) \xrightarrow{\ \bar{\partial}\ } \cdots
+0 \rightarrow \Omega^{p,0}(X) \xrightarrow{\ \bar{\partial}\ } \Omega^{p,1}(X) \xrightarrow{\ \bar{\partial}\ } \Omega^{p,2}(X) \xrightarrow{\ \bar{\partial}\ } \cdots
 $$
 
 를 *Dolbeault complex<sub>Dolbeault 복합체</sub>*라 한다. 그 $q$번째 cohomology
@@ -254,7 +254,7 @@ $p = 0$일 때 $\Omega^0$은 holomorphic function의 structure sheaf $\mathcal{O
 Complex manifold $X$와 고정된 $p \geq 0$에 대하여, sheaf의 sequence
 
 $$
-0 \longrightarrow \Omega^p \longrightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,2} \xrightarrow{\ \bar{\partial}\ } \cdots
+0 \rightarrow \Omega^p \rightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,2} \xrightarrow{\ \bar{\partial}\ } \cdots
 $$
 
 는 exact sequence이다. 곧 smooth $(p,q)$-형식 sheaf의 $\bar{\partial}$-복합체는 holomorphic $p$-형식 sheaf $\Omega^p$의 분해이며, 각 $\mathcal{A}^{p,q}$가 fine sheaf이므로 이는 fine resolution이다.
@@ -286,7 +286,7 @@ $$
 [명제 8](#prop8){: data-lid="cnw04" }에 의해
 
 $$
-0 \longrightarrow \Omega^p \longrightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar{\partial}\ } \cdots
+0 \rightarrow \Omega^p \rightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar{\partial}\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar{\partial}\ } \cdots
 $$
 
 는 $\Omega^p$의 분해이고, 각 $\mathcal{A}^{p,q}$는 fine sheaf라 $\Gamma(X, -)$-acyclic하다 (fine sheaf는 모든 positive degree sheaf cohomology가 소멸한다). 따라서 이는 acyclic resolution이다.

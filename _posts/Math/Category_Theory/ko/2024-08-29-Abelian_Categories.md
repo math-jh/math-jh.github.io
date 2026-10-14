@@ -108,7 +108,7 @@ $\mathcal{A}^\op$에서의 chain complex는 *cochain complex<sub>공사슬복합
 ::: 정의 5
 임의의 chain complex $A_\bullet$이 주어졌다 하자. 그럼
 
-$$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
+$$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\rightarrow}A_n\overset{d_n}{\rightarrow}A_{n-1}\rightarrow\cdots$$
 
 이 $A_n$에서 *exact<sub>완전</sub>*라는 것은 위의 monomorphism $B_n \rightarrow Z_n$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
 :::
@@ -127,7 +127,7 @@ $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
 Additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 정의된 임의의 chain complex $A_\bullet$에 대하여, 다음의 데이터
 
-$$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \overset{F(d_n)}{\longrightarrow} F(A_{n-1})\rightarrow\cdots$$
+$$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\rightarrow} F(A_n) \overset{F(d_n)}{\rightarrow} F(A_{n-1})\rightarrow\cdots$$
 
 가 chain complex가 된다는 것을 쉽게 확인할 수 있다. 즉 additive functor $F$는 functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$를 유도한다. 그러나 일반적인 additive functor에 대하여, 원래의 chain complex $A_\bullet$이 exact라는 것이 위와 같이 얻어진 새로운 complex $F(A_\bullet)$가 exact라는 것을 보장해주지는 않는다.
 

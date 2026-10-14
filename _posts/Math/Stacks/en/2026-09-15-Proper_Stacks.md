@@ -92,7 +92,7 @@ is not trivial over $K$ and thus does not directly extend over $A$; however, wit
 
 Since a separated Deligne–Mumford stack of finite type has a finite inertia stack, we can now see that the first assertion of [§Moduli Spaces, ⁋Theorem 8](/en/math/stacks/moduli_spaces#thm8){: data-lid="4iyk3" } implies the second assertion. We write this as
 
-$$\pi:\mathcal{X}\longrightarrow X$$
+$$\pi:\mathcal{X}\rightarrow X$$
 
 In characteristic $0$, over the field $\mathbb{K}$, the stabilizers are finite linearly reductive groups, and the coarse morphism étale-locally takes the form of a finite group quotient.
 
@@ -112,7 +112,7 @@ On the quotient stack $[M/G]$, the action of $G$ contains two types of informati
 
 Now, from the viewpoint of the theorem above, if we take a point $x\in\mathcal{X}$ and represent it in a global quotient presentation $[M/G]$ by a point $p\in M$, then the automorphism group of $x$, $G_x=\Stab_G(p)$, is a subgroup of $G$, where among all elements of $G$ only the part fixing $p$ remains as $G_x$, and this is what is used in the local model above. 
 
-Even within $G_x$ in this local model, the elements are divided according to their roles into those that act effectively. Looking at the local quotient $[V/G_x]$ and its coarse moduli $[V/G_x]\longrightarrow V/G_x$, each $G_x$-orbit is collapsed to a point, whereas $H$ disappears in the process of descending to the stack; thus, the elements that actually move points of $V$ form the quotient $G_x/H$. 
+Even within $G_x$ in this local model, the elements are divided according to their roles into those that act effectively. Looking at the local quotient $[V/G_x]$ and its coarse moduli $[V/G_x]\rightarrow V/G_x$, each $G_x$-orbit is collapsed to a point, whereas $H$ disappears in the process of descending to the stack; thus, the elements that actually move points of $V$ form the quotient $G_x/H$. 
 
 Now, to single out the elements of $H$, we can look at the function field. That is, since $H$ acts trivially on $K(V)$, the action of $G_x$ on the function field factors through $G_x/H$, so that
 

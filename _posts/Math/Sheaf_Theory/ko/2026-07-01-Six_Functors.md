@@ -159,16 +159,16 @@ Six-functor formalism이 가장 구체적으로 드러나는 상황은 공간을
 
 ::: 정리 10 (recollement triangle)
 위의 열린-닫힌 분해에서 임의의 $\mathcal{F}^\bullet \in D(\Sh(X))$에 대해 다음 두 distinguished triangle이 $D(\Sh(X))$ 안에서 자연스럽게 존재한다.
-$$j_! j^{-1} \mathcal{F}^\bullet \longrightarrow \mathcal{F}^\bullet \longrightarrow i_\ast i^{-1} \mathcal{F}^\bullet \xrightarrow{+1}$$
-$$i_\ast i^! \mathcal{F}^\bullet \longrightarrow \mathcal{F}^\bullet \longrightarrow Rj_\ast j^{-1} \mathcal{F}^\bullet \xrightarrow{+1}$$
+$$j_! j^{-1} \mathcal{F}^\bullet \rightarrow \mathcal{F}^\bullet \rightarrow i_\ast i^{-1} \mathcal{F}^\bullet \xrightarrow{+1}$$
+$$i_\ast i^! \mathcal{F}^\bullet \rightarrow \mathcal{F}^\bullet \rightarrow Rj_\ast j^{-1} \mathcal{F}^\bullet \xrightarrow{+1}$$
 :::
 ::: 증명
 첫째 triangle은 sheaf의 short exact sequence
-$$0 \longrightarrow j_! j^{-1} \mathcal{F} \longrightarrow \mathcal{F} \longrightarrow i_\ast i^{-1} \mathcal{F} \longrightarrow 0$$
+$$0 \rightarrow j_! j^{-1} \mathcal{F} \rightarrow \mathcal{F} \rightarrow i_\ast i^{-1} \mathcal{F} \rightarrow 0$$
 에서 온다. 이 sequence의 exactness는 stalk에서 확인한다 ([§층의 유도 범주와 유도 functor, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1){: data-lid="z8gnr" }). 점 $x \in U$에서는 $(j_! j^{-1}\mathcal{F})_x = \mathcal{F}_x$이고 $(i_\ast i^{-1}\mathcal{F})_x = 0$이므로 sequence가 $0 \rightarrow \mathcal{F}_x \rightarrow \mathcal{F}_x \rightarrow 0 \rightarrow 0$이 되어 exact이고, 점 $x \in Z$에서는 extension by zero의 정의에 의해 $(j_! j^{-1}\mathcal{F})_x = 0$이고 $(i_\ast i^{-1}\mathcal{F})_x = \mathcal{F}_x$이므로 $0 \rightarrow 0 \rightarrow \mathcal{F}_x \rightarrow \mathcal{F}_x \rightarrow 0$이 되어 exact이다. Abelian category의 short exact sequence는 derived category에서 distinguished triangle을 낳으므로 첫째 triangle이 성립한다.
 
 둘째 triangle은 첫째 것과 쌍대이다. $i^! \mathcal{F}$는 $i_\ast$의 오른쪽 수반으로, support가 $Z$ 안에 놓인 단면을 추리는 functor $\Gamma_Z$의 derived functor로 해석된다. 미유도 차원에서 left exact sequence
-$$0 \longrightarrow \Gamma_Z \mathcal{F} \longrightarrow \mathcal{F} \longrightarrow j_\ast j^{-1}\mathcal{F}$$
+$$0 \rightarrow \Gamma_Z \mathcal{F} \rightarrow \mathcal{F} \rightarrow j_\ast j^{-1}\mathcal{F}$$
 가 있고, 이를 $\mathcal{F}$의 injective resolution 위에서 derived하면 마지막 항이 $Rj_\ast j^{-1}\mathcal{F}$로, 첫 항이 $R\Gamma_Z \mathcal{F} = i_\ast i^! \mathcal{F}$로 올라가 둘째 triangle을 얻는다. 자세한 논증은 [KS]의 §2.3 및 [Dim]의 §2.3을 따른다.
 :::
 
@@ -195,7 +195,7 @@ $$\cdots \rightarrow H^k_c(X, \mathcal{F}) \rightarrow H^k(\overline{X}, \overli
 :::
 
 먼저 열린 구간 $U = (0, 1)$을 다룬다. 통상적 cohomology는 $U$가 가축이므로 $H^0(U, \mathbb{Z}) = \mathbb{Z}$, $H^k(U, \mathbb{Z}) = 0$ ($k \geq 1$)으로 degree $0$에 집중된다. Compactly supported cohomology를 계산하기 위해 compactification $j: (0,1) \hookrightarrow [0,1]$을 택하자. 이는 open embedding이고 닫힌 보충집합은 두 끝점 $\partial = \{0, 1\}$, 곧 closed embedding $i: \{0,1\} \hookrightarrow [0,1]$이다. 상수 sheaf $\mathbb{Z}_{[0,1]}$에 대한 첫째 recollement triangle ([정리 10](#thm10){: data-lid="u3p3l" })
-$$j_! \mathbb{Z}_U \longrightarrow \mathbb{Z}_{[0,1]} \longrightarrow i_\ast \mathbb{Z}_\partial \xrightarrow{+1}$$
+$$j_! \mathbb{Z}_U \rightarrow \mathbb{Z}_{[0,1]} \rightarrow i_\ast \mathbb{Z}_\partial \xrightarrow{+1}$$
 에 $R\Gamma([0,1], -)$을 적용한다. $[0,1]$이 가축이므로 $R\Gamma([0,1], \mathbb{Z}) = \mathbb{Z}$ (degree $0$)이고, $R\Gamma([0,1], i_\ast \mathbb{Z}_\partial) = R\Gamma(\partial, \mathbb{Z}) = \mathbb{Z}^2$ (degree $0$)이다. 또 $R\Gamma([0,1], j_! \mathbb{Z}_U) = R\Gamma_c(U, \mathbb{Z})$이다. 따라서 long exact sequence는
 $$0 \rightarrow H^0_c(U) \rightarrow H^0([0,1]) = \mathbb{Z} \xrightarrow{\rho} H^0(\partial) = \mathbb{Z}^2 \rightarrow H^1_c(U) \rightarrow H^1([0,1]) = 0$$
 이 된다. Restriction map $\rho$는 대역적 상수 $a$를 두 끝점에서의 값 $(a, a)$로 보내는 diagonal embedding이므로 단사이고, 그 cokernel은 $\mathbb{Z}^2 / \{(a,a)\} \cong \mathbb{Z}$이다. 그러므로

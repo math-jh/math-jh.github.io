@@ -170,11 +170,11 @@ Over topological spaces, we characterized sheafification as the left adjoint of 
 ::: Definition 11
 Suppose a presheaf $F:\mathcal{C}^\op \rightarrow \Set$ and an object $U$ are given. Equip the collection $\operatorname{Cov}_\tau(U)$ of covering sieves on $U$ with the ordering
 
-$$\mathcal{S}\preceq\mathcal{S}'\quad\Longleftrightarrow\quad\mathcal{S}'\subseteq\mathcal{S}.$$
+$$\mathcal{S}\preceq\mathcal{S}'\quad\iff\quad\mathcal{S}'\subseteq\mathcal{S}.$$
 
 Then, since the intersection of two covering sieves gives a common refinement, $\operatorname{Cov}_\tau(U)$ is a filtered preorder. An inclusion $\mathcal{S}'\subseteq\mathcal{S}$ induces a restriction of matching families
 
-$$\operatorname{Match}(\mathcal{S},F)\longrightarrow\operatorname{Match}(\mathcal{S}',F),$$
+$$\operatorname{Match}(\mathcal{S},F)\rightarrow\operatorname{Match}(\mathcal{S}',F),$$
 
 and the colimit of this filtered diagram
 

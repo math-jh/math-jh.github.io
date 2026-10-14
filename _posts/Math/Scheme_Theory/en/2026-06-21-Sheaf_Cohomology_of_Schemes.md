@@ -75,7 +75,7 @@ The second equality follows from the fact that the global sections of the associ
 
 It remains to show that the associated sheaf $\widetilde{I}$ of an injective $A$-module $I$ is acyclic. For this we show that $\widetilde{I}$ is flasque. ([\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Proposition 16](/en/math/algebraic_varieties/sheaf_cohomology#prop16){: data-lid="togdz" }) Since every open subset of $\Spec A$ is of the form $U=\Spec A\setminus Z(\mathfrak{a})$, it suffices to show that the restriction $\widetilde{I}(\Spec A)=I\rightarrow\widetilde{I}(U)$ is surjective for each such $U$. There is an exact sequence connecting the sections of a quasi-coherent sheaf with local cohomology
 
-$$I\longrightarrow\widetilde{I}(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
+$$I\rightarrow\widetilde{I}(U)\rightarrow H^1_{\mathfrak{a}}(I)\rightarrow 0$$
 
 where $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$. Since $I$ is injective, $\Ext^1_A(A/\mathfrak{a}^n,I)=0$ for all $n$, so $H^1_{\mathfrak{a}}(I)=0$, and therefore the above restriction is surjective. Then for any two open subsets $V\subseteq U$, the map $I \rightarrow \widetilde{I}(V)$ factors through $\widetilde{I}(U)$, so $\widetilde{I}(U) \rightarrow \widetilde{I}(V)$ is also surjective, and hence $\widetilde{I}$ is flasque.
 :::
@@ -358,7 +358,7 @@ $$(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa
 
 Applying the given hypothesis to the coherent sheaf $\mathcal{I}_x\mathcal{F}$, there exists $n_1$ such that for all $n\geq n_1$, $H^1(X, \mathcal{I}_x\mathcal{F}\otimes\mathcal{L}^{\otimes n})=0$, so a portion of the long exact sequence
 
-$$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \longrightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa(x) \longrightarrow 0$$
+$$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \rightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa(x) \rightarrow 0$$
 
 is exact. That is, the global sections of $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$ surject onto the fiber at $x$. From this we obtain global generation in a neighborhood of $x$.
 
@@ -487,7 +487,7 @@ Since $\supp\mathcal{O}_X=X$, [Theorem 17](#thm17){: data-lid="kldo5" } implies 
 
 The simplest example is projective space itself. From [Corollary 16](#cor16){: data-lid="kwsot" } we have $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$, so the leading coefficient is $1/n!$, hence $\deg\mathbb{P}^n_\mathbb{K}=1$, and from $P_{\mathcal{O}_{\mathbb{P}^n}}(0)=1$ we get $p_a(\mathbb{P}^n_\mathbb{K})=0$. A less trivial example is the hypersurface $X=V_+(f)\subseteq\mathbb{P}^n_\mathbb{K}$ defined by a non-zero homogeneous polynomial $f$ of positive degree $e$. The polynomial $f$ can be a constant multiple of $\x_j^e$ for at most one $j$, so if $n\geq1$ there must exist a chart $D_+(\x_j)$ where $f$ is not a constant multiple of $\x_j^e$. On this chart, $X$ is the zero set of the dehomogenization $f/\x_j^e$, which is neither $0$ nor a unit, so its zero set is non-empty, and thus $X$ is a non-empty closed subscheme to which [Definition 18](#def18){: data-lid="n5nm9" } applies. Following this through, since $\mathbb{K}[\x_0,\ldots, \x_n]$ is an integral domain, multiplication by $f$ is injective on each chart, and therefore we have a short exact sequence
 
-$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\longrightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
+$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\rightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
 
 Twisting this by $\mathcal{O}(d)$ and applying part 1 of [Proposition 15](#prop15){: data-lid="0fc3w" } and [Corollary 16](#cor16){: data-lid="t1piu" } yields
 

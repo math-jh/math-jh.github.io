@@ -21,13 +21,13 @@ The category $\lMod{A}$ is a bicomplete category. To show this, we must construc
 
 Let $(M_i)_{i\in I}$ be a family of $A$-modules. Then, for the action on $\prod M_i$, it suffices to define $A\otimes\left(\prod M_i\right) \rightarrow M_i$ via the formula
 
-$$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\longrightarrow} A\otimes M_i \overset{\rho_i}{\longrightarrow} M_i $$
+$$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\rightarrow} A\otimes M_i \overset{\rho_i}{\rightarrow} M_i $$
 
 and then use the universal property of the product in $\Ab$ to construct $A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$ and show that this satisfies the conditions for an action.
 
 For the coproduct, since $A\otimes-$ is a left adjoint from $\Ab$ to $\Ab$, it preserves colimits, and therefore
 
-$$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\longrightarrow} \bigoplus_{i\in I}M_i$$
+$$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\rightarrow} \bigoplus_{i\in I}M_i$$
 
 defines the action on $\bigoplus M_i$. For equalizers and coequalizers, given two module homomorphisms $u,v:M \rightarrow N$, they can be defined by
 

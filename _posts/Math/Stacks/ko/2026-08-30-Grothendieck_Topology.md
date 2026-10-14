@@ -171,11 +171,11 @@ $$F(\pr_1)(s_i)=x_{f_i\circ \pr_1}=x_{f_j\circ \pr_2}=F(\pr_2)(s_j)$$
 ::: 정의 11
 Presheaf $F:\mathcal{C}^\op \rightarrow \Set$와 대상 $U$가 주어졌다 하자. $U$ 위의 covering sieve들의 모임 $\operatorname{Cov}_\tau(U)$ 위에 다음의 ordering
 
-$$\mathcal{S}\preceq\mathcal{S}'\quad\Longleftrightarrow\quad\mathcal{S}'\subseteq\mathcal{S}$$
+$$\mathcal{S}\preceq\mathcal{S}'\quad\iff\quad\mathcal{S}'\subseteq\mathcal{S}$$
 
 을 주자. 그럼 두 covering sieve의 교집합이 공통의 refinement를 주므로 $\operatorname{Cov}_\tau(U)$은 filtered preorder이다. Inclusion $\mathcal{S}'\subseteq\mathcal{S}$은 matching family의 restriction
 
-$$\operatorname{Match}(\mathcal{S},F)\longrightarrow\operatorname{Match}(\mathcal{S}',F)$$
+$$\operatorname{Match}(\mathcal{S},F)\rightarrow\operatorname{Match}(\mathcal{S}',F)$$
 
 을 주며, 이 filtered diagram의 colimit
 

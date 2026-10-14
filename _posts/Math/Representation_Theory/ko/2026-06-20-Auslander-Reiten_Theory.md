@@ -57,7 +57,7 @@ $A$-module morphism에 대하여 다음을 정의한다.
 
 Short exact sequence
 
-$$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
+$$0\rightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\rightarrow 0$$
 
 이 *almost split sequence<sub>거의 분할 수열</sub>* 또는 *Auslander–Reiten sequence<sub>아우스란더-라이텐 수열</sub>*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
 :::
@@ -96,11 +96,11 @@ $$\theta^{-1}=\id_B+(f\rho)+(f\rho)^2+\cdots+(f\rho)^n$$
 ::: 정의 5
 유한차원 left $A$-module $C$의 *minimal projective presentation<sub>최소 사영 표시</sub>*은 exact sequence
 
-$$P_1\xrightarrow{\ p_1\ }P_0\xrightarrow{\ p_0\ }C\longrightarrow 0$$
+$$P_1\xrightarrow{\ p_1\ }P_0\xrightarrow{\ p_0\ }C\rightarrow 0$$
 
 으로서, $p_0:P_0\rightarrow C$가 projective cover이고 $p_1:P_1\rightarrow\ker p_0$이 다시 projective cover인 것이다. $(-)^{\ast}=\Hom_A(-,A)$를 적용하면 right $A$-module의 사상열
 
-$$P_0^{\ast}\xrightarrow{\ p_1^{\ast}\ }P_1^{\ast}\longrightarrow \Tr C\longrightarrow 0$$
+$$P_0^{\ast}\xrightarrow{\ p_1^{\ast}\ }P_1^{\ast}\rightarrow \Tr C\rightarrow 0$$
 
 을 얻으며, $C$의 *transpose<sub>전치</sub>*를
 
@@ -134,7 +134,7 @@ $\D$가 유한차원 벡터공간 위에서 $\D\D M\cong M$을 만족하는 cont
 
 1. 임의의 non-projective indecomposable left $A$-module $C$에 대하여, $C$로 끝나는 almost split sequence
 
-$$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
+$$0\rightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\rightarrow 0$$
 
 이 존재한다. 곧 그 시작점은 [정의 6](#def6){: data-lid="1x5xb" }의 AR translate $\tau C=\D\Tr C$와 isomorphic하다.
 

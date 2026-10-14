@@ -62,7 +62,7 @@ $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 
 또, $\mathfrak{m}_p$가 maximal인 것은 *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$을 $\mathbf{f}\mapsto\mathbf{f}(p)$로 정의했을 때, 다음의 diagram
 
-$$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
+$$0\rightarrow \mathfrak{m}_p\rightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\rightarrow}\mathbb{R}\rightarrow 0$$
 
 이 exact인 것으로부터 얻어진다. $\mathcal{C}^\infty_p/\mathfrak{m}_p$이 field $\mathbb{R}$이 되기 때문이다.
 :::

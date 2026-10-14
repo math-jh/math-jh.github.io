@@ -206,7 +206,7 @@ so at points where $y \neq 0$, we obtain $y' = -x/y$, and thus can find the slop
 
 For functions with a variable in the exponent, *logarithmic differentiation* (taking the logarithm of both sides and then differentiating) is convenient. For example, for $y = x^x$ ($x > 0$), differentiating both sides of $\ln y = x\ln x$ and using $(\ln y)' = y'/y$ together with the product rule gives
 
-$$\frac{y'}{y} = \ln x + 1 \quad\Longrightarrow\quad y' = x^x(\ln x + 1)$$
+$$\frac{y'}{y} = \ln x + 1 \quad\implies\quad y' = x^x(\ln x + 1)$$
 :::
 
 ---

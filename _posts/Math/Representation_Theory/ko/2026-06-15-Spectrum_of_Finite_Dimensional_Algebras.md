@@ -88,7 +88,7 @@ $$A/\ker\chi\cong \im\chi=k$$
 ::: 명제 6
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra라 하자. 그럼 대응
 
-$$\chi\longmapsto \ker\chi$$
+$$\chi\mapsto \ker\chi$$
 
 는 $A$의 character들의 집합과 $A$의 maximal ideal들의 집합 사이의 전단사이다.
 :::
@@ -190,7 +190,7 @@ $$\dim A=\sum_\chi \dim A_\chi$$
 
 [정리 8](#thm8){: data-lid="x5wkb" }의 direct sum decomposition $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. Morphism
 
-$$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
+$$A\rightarrow \prod_\chi A_\chi;\qquad x\mapsto (e_\chi x)_\chi$$
 
 은 위 idempotent 관계에 의하여 algebra homomorphism이고 ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 1](/ko/math/algebraic_structures/operations_of_algebras#prop1){: data-lid="9ebgj" }), $x=\sum_\chi e_\chi x$로부터 역사상 $(x_\chi)_\chi\mapsto \sum_\chi x_\chi$이 존재하므로 isomorphism이다.
 
@@ -244,7 +244,7 @@ $k$가 algebraically closed일 때, [명제 6](#prop6){: data-lid="5jhoa" }에 �
 ::: 명제 13
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra라 하자. 평가사상
 
-$$\ev:A\longrightarrow k^{\MaxSpec A};\qquad a\longmapsto (\chi(a))_{\chi\in\MaxSpec A}$$
+$$\ev:A\rightarrow k^{\MaxSpec A};\qquad a\mapsto (\chi(a))_{\chi\in\MaxSpec A}$$
 
 은 unital $k$-algebra homomorphism이고, 그 kernel은 $A$의 nilradical, 곧 nilpotent 원소들의 집합 $\bigcap_\chi\mathfrak{m}_\chi$이다. 따라서 $\ev$이 injective인 것과 $A$가 reduced인 것이 동치이며, 이 경우 $\ev$은 isomorphism $A\cong k^{\MaxSpec A}$이다.
 :::

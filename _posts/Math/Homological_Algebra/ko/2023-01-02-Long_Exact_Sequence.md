@@ -88,7 +88,7 @@ $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
 이고, $v$ 쪽 사각형도 마찬가지이다. 따라서 다음의 사각형
 
-$$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
+$$\begin{aligned}H_n(C)&\overset{\partial}{\rightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\rightarrow}H_{n-1}(A')\end{aligned}$$
 
 이 commute하는 것만 보이면 충분하다. [정리 1](#thm1){: data-lid="aja6h" }의 증명에서의 construction을 따라가면 $\partial$는 다음과 같이 계산된다. 임의의 $[c]\in H_n(C)$에 대하여, $v_n$이 surjective이므로 $v_n(b)=c$이도록 하는 $b\in B_n$이 존재하고, $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$이므로 exactness에 의해 $u_{n-1}(a)=d_n^Bb$이도록 하는 유일한 $a\in A_{n-1}$이 존재하며, $\partial[c]=[a]$이다. 이 값이 lift $b$의 선택에 무관하다는 것도 확인할 수 있는데, $v_n(b)=v_n(\tilde{b})=c$라면 $b-\tilde{b}=u_n(\alpha)$이도록 하는 $\alpha\in A_n$이 존재하고, 그럼 대응되는 두 원소 $a,\tilde{a}$가 $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$과 $u_{n-1}$의 injectivity로부터 $a-\tilde{a}=d_n^A\alpha$를 만족하여 $[a]=[\tilde{a}]$이기 때문이다.
 
@@ -201,7 +201,7 @@ $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 ::: 정의 8
 임의의 chain map $f:C_\bullet\rightarrow D_\bullet$에 대하여, $f$의 *mapping cone<sub>사상뿔</sub>* $\Cone(f)$는 다음의 chain complex
 
-$$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\longrightarrow\cdots$$
+$$\cdots\rightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\rightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\rightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\rightarrow\cdots$$
 
 를 의미한다. 이 때, differential은 다음의 식
 
@@ -212,7 +212,7 @@ $$d_n(x,y)=(-d_{n-1}(x), d_n(y)-f_{n-1}(x))\qquad (x\in C_{n-1},y\in D_n)$$
 
 Chain map $f: C_\bullet \rightarrow D_\bullet$이 주어졌다 하고, $f$의 mapping cone $\Cone(f)$에 대하여, chain complex들의 sequence
 
-$$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
+$$0 \rightarrow D \rightarrow \Cone(f) \overset{\delta}{\rightarrow} C[-1] \rightarrow0$$
 
 을 생각하자. 여기서 $D \rightarrow\Cone(f)$는 $y$를 $(0,y)$로 보내고, $\delta$는 $(x,y)$를 $-x$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1){: data-lid="nxgqc" }에 의하여 다음의 long exact sequence
 

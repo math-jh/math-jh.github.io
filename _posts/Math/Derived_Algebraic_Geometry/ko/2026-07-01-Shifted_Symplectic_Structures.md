@@ -57,7 +57,7 @@ $$\dd{\omega_0}=0,\qquad d_{\dR}\omega_i=\dd{\omega_{i+1}}\quad(i\geq0)$$
 
 을 만족하는 것이다. $\omega_0$을 $\omega$의 *밑에 깔린 $p$-형식*이라 부르고, $\omega\mapsto\omega_0$은 *망각 morphism*
 
-$$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
+$$\mathcal{A}^{p,\mathrm{cl}}(X,n)\rightarrow\mathcal{A}^p(X,n)$$
 
 을 준다.
 :::
@@ -75,7 +75,7 @@ $$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
 ::: 정의 4
 $k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-form<sub>교대 $2$-형식</sub>*이란 원소 $\omega\in\wedge^2V^\ast$을 뜻하며, 이는 $\omega(v,v)=0$을 만족하는 bilinear form과 같다. 그 *flat morphism*을
 
-$$\omega^\flat:V\longrightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
+$$\omega^\flat:V\rightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
 
 으로 둔다. $\omega$이 *nondegenerate<sub>비퇴화</sub>*하다는 것은 $\omega^\flat$이 동형인 것을 뜻하며, 이때 쌍 $(V,\omega)$을 *symplectic vector space*라 부른다.
 :::
@@ -85,7 +85,7 @@ Alternating 조건은 characteristic $0$에서 반대칭 $\omega(v,w)=-\omega(w,
 ::: 정의 5
 Derived stack $X$ 위의 *$n$-shifted symplectic 구조<sub>$n$-shifted symplectic structure</sub>*란, degree $n$의 closed $2$-형식 $\omega\in\mathcal{A}^{2,\mathrm{cl}}(X,n)$으로서, 그 밑에 깔린 $2$-형식 $\omega_0:\mathcal{O}_X\rightarrow(\wedge^2L_X)[n]$이 유도하는 morphism
 
-$$\omega_0^\flat:T_X\longrightarrow L_X[n]$$
+$$\omega_0^\flat:T_X\rightarrow L_X[n]$$
 
 이 $\QCoh(X)$에서 동치인 것을 뜻한다. 이 마지막 조건을 $\omega$의 *nondegeneracy<sub>비퇴화성</sub>*라 부르고, $n$-shifted symplectic 구조를 갖춘 $X$을 $n$-shifted symplectic derived stack이라 한다.
 :::
@@ -117,7 +117,7 @@ Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 
 ::: 정리 8
 $U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
 
-$$T_{\Crit(f)}\overset{\sim}{\longrightarrow}L_{\Crit(f)}[-1]$$
+$$T_{\Crit(f)}\overset{\sim}{\rightarrow}L_{\Crit(f)}[-1]$$
 
 은 Hessian $\Hess(f)$의 대칭성에서 나오며, 이로써 $\Crit(f)$은 자기쌍대적 대칭 obstruction 이론을 가진다.
 :::
@@ -161,7 +161,7 @@ $n$-shifted symplectic 대상을 손으로 하나씩 만드는 대신, 우리는
 ::: 정의 10
 $(X,\omega)$을 $n$-shifted symplectic derived stack, $g:L\rightarrow X$을 morphism이라 하자. $L$ 위의 *isotropic 구조*란 pullback $g^\ast\omega\in\mathcal{A}^{2,\mathrm{cl}}(L,n)$을 $0$으로 이어 주는 homotopy $\gamma$, 곧 closed $2$-형식으로서의 nullhomotopy $\gamma:g^\ast\omega\sim0$이다. 이 자료는 상대 접복합체 위의 morphism
 
-$$\Theta_\gamma:T_{L/X}\longrightarrow L_L[n-1]$$
+$$\Theta_\gamma:T_{L/X}\rightarrow L_L[n-1]$$
 
 을 유도한다. Isotropic 구조 $\gamma$이 *Lagrangian 구조*라는 것은 $\Theta_\gamma$이 동치인 것을 뜻하고, 이때 $g:L\rightarrow X$을 *Lagrangian morphism<sub>Lagrangian 사상</sub>*이라 부른다.
 :::
@@ -178,7 +178,7 @@ $$L_1\times_X^hL_2$$
 ::: 증명
 $W=L_1\times_X^hL_2$이라 하고 그 사영을 $\pi_j:W\rightarrow L_j$이라 하자. 두 isotropic 구조 $\gamma_1,\gamma_2$은 $W$ 위에서 pullback $\pi_1^\ast g_1^\ast\omega$과 $\pi_2^\ast g_2^\ast\omega$을 각각 $0$으로 잇는데, $W$ 위에서 두 pullback이 같은 형식 $\omega\vert_W$의 pullback이므로, 두 nullhomotopy의 차이 $\gamma_1-\gamma_2$이 $W$ 위의 degree $n-1$의 closed $2$-형식 $\omega_W$을 정의한다. Nondegeneracy는 $W$의 접복합체가 두 Lagrangian 조건이 주는 exact sequence
 
-$$T_W\longrightarrow \pi_1^\ast T_{L_1}\oplus\pi_2^\ast T_{L_2}\longrightarrow T_X\vert_W$$
+$$T_W\rightarrow \pi_1^\ast T_{L_1}\oplus\pi_2^\ast T_{L_2}\rightarrow T_X\vert_W$$
 
 에 들어맞고, 각 $L_j$의 Lagrangian 동치 $T_{L_j/X}\simeq L_{L_j}[n-1]$을 대입하여 $T_W\simeq L_W[n-1]$을 얻는 데서 나온다. 이 마지막 대각 논증이 정확히 고전적 symplectic 선형대수에서 두 Lagrangian 부분공간의 교차와 합이 서로 여접적으로 짝지어진다는 사실의 유도 판본이다. 완전한 논증은 ([PTVV])에 있다.
 :::
@@ -192,7 +192,7 @@ $$T_W\longrightarrow \pi_1^\ast T_{L_1}\oplus\pi_2^\ast T_{L_2}\longrightarrow T
 ::: 정리 12 (AKSZ mapping stack, PTVV)
 $F$을 *$d$-orientation*을 갖춘 derived stack이라 하자. 곧 $F$은 $\mathcal{O}$-compact이고, 대역 절단 위에 degree $-d$의 비축퇴 적분 morphism
 
-$$\int_F:H^\ast(F,\mathcal{O}_F)\longrightarrow k[-d]$$
+$$\int_F:H^\ast(F,\mathcal{O}_F)\rightarrow k[-d]$$
 
 을 가진다. 그러면 임의의 $n$-shifted symplectic derived stack $(X,\omega)$에 대하여, mapping stack
 

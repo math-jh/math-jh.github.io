@@ -143,7 +143,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad M_i/M_{i-1}\cong B/\ma
 
 If we assume that the conclusion holds for each $B/\mathfrak{q}_i$ and let $a$ be the product of those elements, then since the right-hand term of the exact sequence
 
-$$0 \longrightarrow (M_{i-1})_a \longrightarrow (M_i)_a \longrightarrow (B/\mathfrak{q}_i)_a \longrightarrow 0$$
+$$0 \rightarrow (M_{i-1})_a \rightarrow (M_i)_a \rightarrow (B/\mathfrak{q}_i)_a \rightarrow 0$$
 
 is a free module, this exact sequence splits, and by induction on $i$, all $(M_i)_a$ are free $A_a$-modules. Therefore, it suffices to show the case where $M=B/\mathfrak{q}$, that is, replacing $B$ by $B/\mathfrak{q}$, the case where $B$ is an integral domain and $M=B$.
 

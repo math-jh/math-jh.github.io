@@ -16,7 +16,7 @@ weight: 14
 
 실제로 이와 같은 family는 나쁘게 행동할 수 있는데, 가령
 
-$$\Spec \mathbb{K}[t,\x]/(t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t]$$
+$$\Spec \mathbb{K}[t,\x]/(t\x) \rightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t]$$
 
 을 보자. 이를 변수 $t$로 parametrize된 family로 생각하면, 고정된 점 $t_0\neq 0$ 위에서는 방정식 $t_0\x=0$이 강제하는 점 $\x=0$ 하나만이 fiber가 되지만, $t=0$ 위에서는 이 조건이 공허해져 fiber가 $\x$ 방향 직선 $\mathbb{A}^1_\mathbb{K}$ 전체가 된다. Fiber의 차원이 $0$에서 $1$로 뛰는 것이다. 
 
@@ -36,7 +36,7 @@ $$B\otimes_A\kappa(t_0)=\mathbb{K}[t,\x]/(t\x, t-t_0)=\mathbb{K}[\x]/(t_0\x)$$
 
 이제 차원이 뛴 $t_0=0$에서 일어난 일을 더 자세히 살펴보자. Residue field $\kappa(0)$을 얻기 위해 우리는 이를 $\times t: A\rightarrow A$의 cokernel로 생각하며, 실제로 $A$가 integral domain이므로 우리는 다음의 exact sequence
 
-$$0 \longrightarrow A \xrightarrow{\ \times t\ } A \longrightarrow \kappa(0) \longrightarrow 0$$
+$$0 \rightarrow A \xrightarrow{\ \times t\ } A \rightarrow \kappa(0) \rightarrow 0$$
 
 가 존재하는 것을 안다. 이제 fiber를 얻기 위해 여기에 $-\otimes_AB$를 적용하면 다음의 diagram
 
@@ -74,7 +74,7 @@ $$M\otimes_AB_\mathfrak{q}\cong M\otimes_{A_\mathfrak{p}}(A_\mathfrak{p}\otimes_
 
 역으로 $\varphi$가 flat이라 하자. 각 $\mathfrak{q}$에 대하여 $B_\mathfrak{q}$는 $A_\mathfrak{p}$-flat이고 $A \rightarrow A_\mathfrak{p}$는 flat이므로, 위와 같은 논증에 의하여 $B_\mathfrak{q}$는 $A$-flat이다. 이제 $A$-module의 단사사상 $M'\hookrightarrow M$을 택하고
 
-$$K=\ker(M'\otimes_AB \longrightarrow M\otimes_AB)$$
+$$K=\ker(M'\otimes_AB \rightarrow M\otimes_AB)$$
 
 라 두자. Localization이 exact functor이므로 $B$의 임의의 maximal ideal $\mathfrak{q}$에 대하여 $K_\mathfrak{q}=\ker(M'\otimes_AB_\mathfrak{q} \rightarrow M\otimes_AB_\mathfrak{q})=0$이다. 그런데 $0\neq \xi\in K$가 존재한다면 $\ann(\xi)$는 $B$의 proper ideal이므로 어떤 maximal ideal $\mathfrak{q}$에 포함되고, $K_\mathfrak{q}=0$으로부터 $s\xi=0$인 $s\in B\setminus \mathfrak{q}$가 존재하여 $\ann(\xi)\not\subseteq \mathfrak{q}$가 되어 모순이다. 따라서 $K=0$이고 $B$는 $A$-flat이다.
 :::
@@ -154,13 +154,13 @@ $$(0)=\mathfrak{N}(B)=\bigcap_{i=1}^k \mathfrak{p}_i$$
 
 우선 curve들의 family
 
-$$\Spec \mathbb{K}[t, \x, \y]/(\y^2 - \x^3 - t) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
+$$\Spec \mathbb{K}[t, \x, \y]/(\y^2 - \x^3 - t) \rightarrow \mathbb{A}^1_\mathbb{K}$$
 
 를 생각하자. 관계식이 $t = \y^2 - \x^3$을 주므로 coordinate ring은 $\mathbb{K}[\x,\y]$와 isomorphic이며, 이 isomorphism 아래에서 $\mathbb{K}[t]$의 action은 $t \mapsto \y^2-\x^3$으로 주어진다. $\y^2-\x^3$이 상수가 아니므로 $\mathbb{K}$ 위에서 초월적이고, 따라서 $\mathbb{K}[t] \rightarrow \mathbb{K}[\x,\y]$는 단사이다. 그럼 $\mathbb{K}[t]$의 $0$이 아닌 원소는 integral domain의 $0$이 아닌 원소로 옮겨져 zerodivisor일 수 없고, [명제 5](#prop5){: data-lid="f71e0" }에 의하여 이 morphism은 flat이다. 그럼에도 $t=0$ 위의 fiber는 cusp singularity를 갖는 $\y^2=\x^3$이다.
 
 또 다른 curve들의 family
 
-$$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
+$$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \rightarrow \mathbb{A}^1_\mathbb{K}$$
 
 도 마찬가지이다. $t=\x\y$로 두면 coordinate ring은 integral domain $\mathbb{K}[\x,\y]$와 isomorphic하고 $\x\y$ 또한 상수가 아니므로 같은 이유로 flat이며, $t\neq 0$ 위의 fiber는 smooth한 쌍곡선 $\x\y=t$이지만 $t=0$ 위의 fiber는 두 직선이 만나 nodal singularity를 갖는 $\x\y=0$이다.
 
@@ -212,7 +212,7 @@ $$\phi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \phi^{-1}(\mathbb
 ::: 예시 10
 Scheme morphism
 
-$$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
+$$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \rightarrow \mathbb{A}^1_\mathbb{K}$$
 
 를 생각하자. Ideal이 $(\x^2, t\x)=(\x)\cap (t,\x^2)$로 분해되므로 $X$는 $t$-축이며, 원점이 embedded point가 된다.
 
@@ -235,7 +235,7 @@ $Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 de
 
 한편, $\varphi$가 finite type이므로 $\varphi^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14){: data-lid="vgz16" }), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 6](/ko/math/commutative_algebra/noether_normalization#thm6){: data-lid="s9m4a" }를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2){: data-lid="avlrf" }에 의하여
 
-$$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
+$$\Spec (B_i)_a \rightarrow \Spec A_a=D(a)$$
 
 는 flat이다. Flatness는 $X$ 위에서 국소적인 조건이고 $\Spec (B_i)_a$들이 $\varphi^{-1}(D(a))$를 덮으므로 $\varphi^{-1}(D(a)) \rightarrow D(a)$는 flat이다. $A$가 integral domain이고 $a\neq 0$이므로 $D(a)$는 공집합이 아니며, 따라서 $U=D(a)$를 열린집합으로 택하면 된다.
 :::

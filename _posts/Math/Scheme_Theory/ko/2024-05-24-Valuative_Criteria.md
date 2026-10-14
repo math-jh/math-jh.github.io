@@ -121,7 +121,7 @@ $$X_a\times_\mathbb{K}X_b=\Spec\bigl(\mathbb{K}[\x_a]\otimes_\mathbb{K}\mathbb{K
 
 이제 $\pi_1\circ\Delta=\pi_2\circ\Delta=\id_X$이므로 $\Delta^{-1}(X_a\times_\mathbb{K}X_b)=X_a\cap X_b$이다. 곧 $a=b$이면 이는 $X_a$ 전체이고 [보조정리 5](#lem5){: data-lid="hs77d" }에 의하여 그 위에서 $\Delta$는 closed embedding이며, 특히 $X$의 두 원점은 네 개의 원점 가운데 $(0_1,0_1)$과 $(0_2,0_2)$로 간다. 반면 $a\neq b$이면 $\Delta$는 $X_1\cap X_2=\Spec\mathbb{K}[t,1/t]$ 위에서 ring homomorphism
 
-$$\mathbb{K}[\x_1,\x_2] \longrightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapsto t$$
+$$\mathbb{K}[\x_1,\x_2] \rightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapsto t$$
 
 가 유도하는 morphism이므로, chart $X_1\times_\mathbb{K}X_2\cong \mathbb{A}^2_\mathbb{K}$ 안에서 $\Delta(X)$는 대각선에서 원점을 뺀 것 $Z(\x_1-\x_2)\cap D(\x_1)$이다. 이 집합의 closure는 대각선 $Z(\x_1-\x_2)$ 전체이고 그 원점이 정확히 $(0_1,0_2)$이므로, $(0_1,0_2)$는 $\Delta(X)$에 속하지 않으면서 그 closure에는 속한다. 따라서 $\Delta(X)$는 닫혀 있지 않고 [명제 4](#prop4){: data-lid="94env" }에 의하여 $X$는 separated가 아니다. 이 공간은 위상적으로도 Hausdorff가 아닌 공간의 표준적인 예이다. 
 
@@ -141,7 +141,7 @@ Noetherian scheme $X$와 scheme morphism $\varphi:X \rightarrow Y$에 대하여,
 
 먼저 $\varphi$가 separated라 가정하고, 위 square의 두 lifting $\gamma_1, \gamma_2$가 주어졌다 하자. $\varphi\circ \gamma_1=\varphi\circ \gamma_2=\beta$이므로 fiber product의 universal property에 의하여 유일한 $\theta:\Spec A \rightarrow X\times_YX$가 존재하여 $\pi_1\circ \theta=\gamma_1$, $\pi_2\circ \theta=\gamma_2$이다. 여기에서 $\pi_1,\pi_2$는 두 projection이다. 이제 $\Delta$가 closed embedding이므로 base change
 
-$$Z=\Spec A\times_{X\times_YX}X \longrightarrow \Spec A$$
+$$Z=\Spec A\times_{X\times_YX}X \rightarrow \Spec A$$
 
 또한 closed embedding이다. Closed embedding이 base change에 대해 안정적인 것은 affine-local하게 $B \rightarrow B/\mathfrak{b}$의 base change가 $C \rightarrow C\otimes_B(B/\mathfrak{b})\cong C/\mathfrak{b}C$로서 여전히 surjective인 것으로부터 얻어진다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3){: data-lid="fstql" })
 
@@ -169,7 +169,7 @@ $$K:=\kappa(\xi)=\mathcal{O}_{T,\xi}=\Frac(B), \qquad \mathcal{O}:=\mathcal{O}_{
 
 이며, 여기에서 $\mathfrak{q}$는 $\eta$에 대응하는 prime ideal이다. 특히 $\mathcal{O}$는 $\Frac(\mathcal{O})=K$인 local domain이다. 위에서 인용한 존재정리로 $\mathcal{O}$를 dominate하는 $K$의 valuation ring $A$를 택하면, local homomorphism $\mathcal{O} \rightarrow A$가 유도하는 morphism
 
-$$\chi:\Spec A \longrightarrow \Spec \mathcal{O} \longrightarrow T \hookrightarrow X\times_YX$$
+$$\chi:\Spec A \rightarrow \Spec \mathcal{O} \rightarrow T \hookrightarrow X\times_YX$$
 
 는 $\Spec A$의 generic point $(0)$을 $\xi$로, closed point $\mathfrak{m}_A$를 $\eta$로 보낸다.
 
@@ -193,7 +193,7 @@ $$\eta=\chi(\mathfrak{m}_A)=\Delta(\gamma_1(\mathfrak{m}_A))\in \Delta(X)$$
 
 이제 앞에서와 같이 두 chart를 $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$라 하고, 이들로 들어가는 두 morphism
 
-$$\gamma_1:\Spec A \longrightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \longrightarrow X_2\subseteq X$$
+$$\gamma_1:\Spec A \rightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \rightarrow X_2\subseteq X$$
 
 를 각각 $\x_1\mapsto t$와 $\x_2\mapsto t$로 정의하면 둘 다 $t\in A$이므로 잘 정의된다. 두 chart는 원점 바깥에서 $\x_1$과 $\x_2$를 동일시하여 붙여졌으므로 $\gamma_1\circ \iota=\gamma_2\circ \iota=\alpha$이고, 따라서 둘 다 이 square의 lifting이다. 그러나 $\gamma_1$은 $\mathfrak{m}_A=(t)$를 첫 번째 chart의 원점 $0_1$로, $\gamma_2$는 두 번째 chart의 원점 $0_2$로 보내므로 $\gamma_1\neq \gamma_2$이다. 곧 점이 빠진 곡선의 germ이 두 개의 극한을 가지며, 이것이 $X$가 separated가 아닌 이유이다.
 :::
@@ -226,7 +226,7 @@ $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
 끝으로 4번은 $S$-scheme들 사이의 separated morphism $\varphi:X \rightarrow Y$, $\varphi':X' \rightarrow Y'$에 대하여 $\varphi\times \varphi'$가 합성
 
-$$X\times_SX' \longrightarrow Y\times_SX' \longrightarrow Y\times_SY'$$
+$$X\times_SX' \rightarrow Y\times_SX' \rightarrow Y\times_SY'$$
 
 으로 분해되고 두 morphism이 각각 $\varphi$와 $\varphi'$의 base change이므로, 3번과 2번에서 따라온다. 
 :::
@@ -283,7 +283,7 @@ $$\phi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\math
 
 $\varphi(X)$가 specialization에 대해 닫혀 있음을 먼저 본다. $y_1=\varphi(x_1)\in \varphi(X)$이고 $y_0\in\cl(\{y_1\})$이라 하자. $W=\cl(\{y_1\})$에 reduced scheme structure를 주면 $W$는 generic point $y_1$을 갖는 integral scheme이고, 앞에서와 같이 $\mathcal{O}=\mathcal{O}_{W,y_0}$는 $\Frac(\mathcal{O})=\kappa(y_1)$인 local domain이다. 이제 $K=\kappa(x_1)$이라 하고 $\varphi$가 유도하는 field homomorphism $\kappa(y_1)\hookrightarrow K$를 통해 $\mathcal{O}$를 $K$의 local subring으로 보자. 그럼 $\mathcal{O}$를 dominate하는 $K$의 valuation ring $A$가 존재하고, 이로부터 두 morphism
 
-$$\Spec A \longrightarrow \Spec\mathcal{O} \longrightarrow W\hookrightarrow Y,\qquad \alpha:\Spec K \longrightarrow X$$
+$$\Spec A \rightarrow \Spec\mathcal{O} \rightarrow W\hookrightarrow Y,\qquad \alpha:\Spec K \rightarrow X$$
 
 를 얻는다. 여기에서 $\alpha$는 점 $x_1$과 $\kappa(x_1)=K$가 정의하는 canonical morphism이다. 이 둘은 바깥쪽 square를 이루는데, $\Spec K \rightarrow Y$로 가는 두 합성이 모두 점 $y_1$과 field homomorphism $\kappa(y_1)\hookrightarrow K$가 정의하는 canonical morphism이기 때문이다. 판정법의 존재성에 의하여 lifting $\gamma_0:\Spec A \rightarrow X$가 존재하고, $\Spec A \rightarrow \Spec\mathcal{O}$가 local homomorphism에서 오므로 $\mathfrak{m}_A$는 $\mathfrak{m}_\mathcal{O}$, 곧 $y_0$으로 간다. 따라서 $\varphi(\gamma_0(\mathfrak{m}_A))=y_0$이고 $y_0\in \varphi(X)$이다.
 
@@ -312,7 +312,7 @@ $\varphi$는 finite type이라 가정되어 있으므로, [정의 9](#def9){: da
 ::: 예시 12
 $\mathbb{A}^1_\mathbb{K}=\Spec\mathbb{K}[\x]$는 $\Spec\mathbb{K}$ 위에서 proper가 아니다. $A=\mathbb{K}[t]_{(t)}$와 $K=\Frac(A)=\mathbb{K}(t)$를 택하고, ring homomorphism
 
-$$\mathbb{K}[\x] \longrightarrow K;\qquad \x\mapsto 1/t$$
+$$\mathbb{K}[\x] \rightarrow K;\qquad \x\mapsto 1/t$$
 
 가 정의하는 morphism $\alpha:\Spec K \rightarrow \mathbb{A}^1_\mathbb{K}$를 생각하자. 모든 것이 $\mathbb{K}$ 위에 있으므로 $\alpha$와 구조사상 $\Spec A \rightarrow \Spec\mathbb{K}$는 바깥쪽 square를 이룬다. 만일 lifting $\gamma:\Spec A \rightarrow \mathbb{A}^1_\mathbb{K}$가 존재한다면 이는 ring homomorphism $\mathbb{K}[\x] \rightarrow A$에 대응하고, $\gamma\circ \iota=\alpha$라는 조건은 이 homomorphism과 $A\hookrightarrow K$의 합성이 $\x$를 $1/t$로 보낸다는 것이다. 곧 $1/t\in A$여야 하는데 $t$는 $A$의 uniformizer이므로 이는 불가능하다. 따라서 lifting이 존재하지 않고, [정리 11](#thm11){: data-lid="a9w1f" }에 의하여 $\mathbb{A}^1_\mathbb{K} \rightarrow \Spec\mathbb{K}$는 proper가 아니다.
 
@@ -335,7 +335,7 @@ Noetherian scheme들에 대하여,
 
 2번의 경우 separated는 [따름정리 8](#cor8){: data-lid="mp4yr" }의 2번이고 finite type morphism의 합성은 finite type이므로, universally closed만 보이면 된다. $Z' \rightarrow Z$가 주어졌다 하면 $X\times_ZZ'=X\times_Y(Y\times_ZZ')$이므로
 
-$$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
+$$X\times_ZZ' \rightarrow Y\times_ZZ' \rightarrow Z'$$
 
 의 두 morphism은 각각 $\varphi$와 $\psi$의 base change이고, 따라서 둘 다 closed map이다. Closed map의 합성은 closed map이므로 $X\times_ZZ' \rightarrow Z'$ 또한 closed이다.
 
@@ -358,7 +358,7 @@ Finite morphism $\varphi:X \rightarrow Y$는 affine morphism이므로 임의의 
 
 바깥쪽 square $\alpha:\Spec K \rightarrow X$, $\beta:\Spec A \rightarrow Y$가 주어졌다 하자. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로, $\beta(\mathfrak{m}_A)$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 택하면 $V$는 $\beta((0))$ 또한 포함하고 따라서 $\beta$는 $V$를 경유한다. 그럼 $\alpha$의 image는 $\varphi^{-1}(V)=\Spec C$에 들어가며, $C$는 $B$-module로서 finitely generated이다. 이제 문제는 다음의 ring homomorphism들
 
-$$B \longrightarrow A,\qquad C \longrightarrow K$$
+$$B \rightarrow A,\qquad C \rightarrow K$$
 
 가 주어졌을 때 이들과 양립하는 $C \rightarrow A$를 만드는 것이 된다.
 
@@ -383,13 +383,13 @@ $$U_i=\Spec \mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\qquad (i=0,\ldots,n)$$
 
 $\pi$가 separated인 것은 chart 위에서 직접 확인된다. $\mathbb{P}^n_\mathbb{Z}\times_\mathbb{Z}\mathbb{P}^n_\mathbb{Z}$는 affine open subset들 $U_i\times_\mathbb{Z}U_j$로 덮이고 $\pi_1\circ\Delta=\pi_2\circ\Delta=\id$이므로 $\Delta^{-1}(U_i\times_\mathbb{Z}U_j)=U_i\cap U_j$이다. 이제 $\Delta$가 이 위에서 유도하는 ring homomorphism
 
-$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \longrightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \rightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
 
 를 보면, 우변은 $\mathbb{Z}$ 위에서 $\x_l/\x_i$들과 $(\x_j/\x_i)^{-1}=\x_i/\x_j$로 생성되는데 앞의 것들은 첫째 인자에서, 뒤의 것은 둘째 인자에서 오므로 이 morphism은 surjective이다. 따라서 $\Delta$는 각 $U_i\times_\mathbb{Z}U_j$ 위에서 closed embedding이고, closed embedding은 target에 대해 affine-local이므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3){: data-lid="4xuyx" }) $\Delta$ 자체가 closed embedding이다.
 
 $\Spec \mathbb{Z}$는 scheme들의 category에서 terminal object이므로, valuation ring $A$와 $K=\Frac(A)$에 대한 바깥쪽 square를 주는 것은 morphism $\Spec K \rightarrow \mathbb{P}^n_\mathbb{Z}$를 주는 것과 같다. Lifting의 유일성은 $\pi$가 separated인 것과 [정리 6](#thm6){: data-lid="63wcp" }에서 따르므로 존재성만 보이면 된다. $\Spec K$는 한 점이므로 주어진 morphism의 image는 적당한 chart $U_i$에 들어가고, 따라서 이 morphism은 ring homomorphism
 
-$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K$$
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \rightarrow K$$
 
 에 대응한다. $\x_j/\x_i$의 image를 $a_j\in K$라 하면 $a_i=1$이다. 이제 $K^\times$ 위에서 $s\preceq t$를 $t/s\in A$로 정의하면, valuation ring의 정의에 의하여 임의의 $s,t$에 대해 $s\preceq t$이거나 $t\preceq s$이고, $t/s\in A$이고 $r/t\in A$일 때 $r/s=(r/t)(t/s)\in A$이므로 $\preceq$는 $K^\times$ 위의 total preorder이다. $a_i=1\neq 0$이므로 유한집합 $\{a_j \mid a_j\neq 0\}$은 공집합이 아니고, 따라서 이 집합의 최소원 $a_k$를 택할 수 있다. 곧 모든 $j$에 대하여
 
@@ -397,7 +397,7 @@ $$b_j:=a_j/a_k\in A$$
 
 이다. ($a_j=0$인 경우 $b_j=0\in A$이다.) 특별히 $b_k=1$이므로 ring homomorphism
 
-$$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
+$$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \rightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
 
 가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition 관계
 

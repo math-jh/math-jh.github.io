@@ -65,14 +65,14 @@ That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set The
 
 Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and this function is the composition of two continuous functions
 
-$$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
+$$X\rightarrow X/S\rightarrow (X/S)/(R/S)$$
 
 so it is continuous.
 :::
 
 Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations){: data-lid="4lib6" }) Then we may consider the canonical decomposition of $f$
 
-$$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
+$$X\overset{p}{\rightarrow}X/R\overset{\bar{f}}{\rightarrow}f(X)\overset{i}{\rightarrow}Y$$
 
 Now if we give $f(X)$ the subspace topology, it is immediate from [Proposition 4](#prop4){: data-lid="3jxc4" } and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3){: data-lid="ofld1" } that $\bar{f}$ is continuous. Also, by the definition of the canonical decomposition, $\bar{f}$ is a bijection. In general $\bar{f}$ need not be a homeomorphism ([§Continuous Functions, ⁋Example 5](/en/math/topology/continuous_functions#ex5){: data-lid="aad2g" }), but the following holds.
 
@@ -100,7 +100,7 @@ Therefore, in this case $\bar{f}$ is a homeomorphism.
 
 Now consider a topological space $X$, a subset $A$, and an equivalence relation $R$ given on $X$. Letting $p:X\rightarrow X/R$ be the canonical projection, the canonical decomposition of $p\vert_A:A\rightarrow X/R$
 
-$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} f(A)\overset{j}{\longrightarrow}X/R$$
+$$A\overset{q}{\rightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\rightarrow} f(A)\overset{j}{\rightarrow}X/R$$
 
 is defined, and by the same argument as above $\overline{(p\vert_A)}$ is a continuous bijection. The following proposition is also almost obvious.
 

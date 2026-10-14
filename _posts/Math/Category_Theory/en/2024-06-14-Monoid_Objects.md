@@ -82,7 +82,7 @@ where $e_G$ is the group homomorphism sending every element of $G$ to the identi
 
 However, if the original category were not just a monoidal category, but a cartesian monoidal category, all these problems are resolved cleanly. First, $e_G$ is given by the composition
 
-$$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
+$$G\overset{\epsilon_G}{\rightarrow}\{e\}\overset{\eta}{\rightarrow}G$$
 
 where $\epsilon_G$ is the unique morphism from $G$ to the terminal object $\{e\}$, and $\eta$ is the unit of $G$ as a monoid object. Furthermore, in a cartesian monoidal category, since the monoidal product is the categorical product, via the following diagram
 

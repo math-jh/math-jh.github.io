@@ -37,12 +37,12 @@ Suppose two Deligne–Mumford stacks $\mathcal{X}, \mathcal{Y}$ and a proper mor
 
    $$f_\ast[\mathcal{V}]:=[K(V):K(W)]\frac{e_\mathcal{W}}{e_\mathcal{V}}[\mathcal{W}]$$
 
-Extending this linearly preserves rational equivalence, thereby defining the pushforward $f_\ast:A_k(\mathcal{X})_\mathbb{Q}\longrightarrow A_k(\mathcal{Y})_\mathbb{Q}$.
+Extending this linearly preserves rational equivalence, thereby defining the pushforward $f_\ast:A_k(\mathcal{X})_\mathbb{Q}\rightarrow A_k(\mathcal{Y})_\mathbb{Q}$.
 :::
 
 Recall that in [\[Algebraic Varieties\] §Chow Groups, ⁋Proposition 6](/en/math/algebraic_varieties/chow_groups#prop6){: data-lid="d66y4" }, the pushforward for an integral subvariety $V\rightarrow W$ of the same dimension was simply given by
 
-$$[V]\longmapsto [K(V):K(W)][W]$$
+$$[V]\mapsto [K(V):K(W)][W]$$
 
 The above definition is precisely the extension of this formula to Deligne–Mumford stacks, the difference being the addition of the ratio of generic stabilizers $e_{\mathcal{W}}/e_{\mathcal{V}}$. Fundamentally, as observed right after [§Proper Stacks, ⁋Proposition 4](/en/math/stacks/proper_stacks#prop4){: data-lid="c5ao0" }, the degree seen scheme-theoretically on the coarse moduli and the automorphism data inherently possessed by the stack are seen separately; for this reason, the product
 
@@ -64,7 +64,7 @@ $$A_0(\Spec\mathbb{C})_\mathbb{Q}=\mathbb{Q}[\Spec\mathbb{C}]\cong\mathbb{Q}$$
 
 and the proper pushforward directly defines the *degree map*
 
-$$\deg:=p_\ast:A_0(\mathcal{X})_\mathbb{Q}\longrightarrow\mathbb{Q}$$
+$$\deg:=p_\ast:A_0(\mathcal{X})_\mathbb{Q}\rightarrow\mathbb{Q}$$
 
 Then the following holds.
 
@@ -88,7 +88,7 @@ holds.
 
 In general, it is known that on a pure $d$-dimensional stack $\mathcal{X}$, there exists a fundamental cycle $[\mathcal{X}]\in A_d(\mathcal{X})_\mathbb{Q}$. Additionally, if $\mathcal{X}$ is smooth, the cap product with the fundamental class yields an identification
 
-$$A^k(\mathcal{X})_\mathbb{Q}\xrightarrow{\sim} A_{d-k}(\mathcal{X})_\mathbb{Q},\qquad\alpha\longmapsto\alpha\cap[\mathcal{X}]$$
+$$A^k(\mathcal{X})_\mathbb{Q}\xrightarrow{\sim} A_{d-k}(\mathcal{X})_\mathbb{Q},\qquad\alpha\mapsto\alpha\cap[\mathcal{X}]$$
 
 between Chow cohomology and Chow homology. Therefore, a top codimension class naturally determines a zero-cycle, and we can define the integral of this cohomology class as its image under the degree map.
 
@@ -145,7 +145,7 @@ In other words, the generic stabilizer, which is invisible in the coarse moduli 
 
 Meanwhile, as explained above, since integration is the proper pushforward along the structure morphism, we can extend this to an arbitrary proper morphism. To this end, consider a proper morphism $f:\mathcal{X}\rightarrow\mathcal{Y}$ between smooth proper Deligne-Mumford stacks. Let $\dim\mathcal{X}=m$ and $\dim\mathcal{Y}=n$, and let the relative dimension be $r=m-n$. Using smoothness to pass from homology classes to cohomology classes, the proper pushforward above can be written as
 
-$$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\longrightarrow A^{k-r}(\mathcal{Y})_\mathbb{Q}$$
+$$f_\ast:A^k(\mathcal{X})_\mathbb{Q}\rightarrow A^{k-r}(\mathcal{Y})_\mathbb{Q}$$
 
 That is, for a cohomology class $\alpha$, we define $f_\ast \alpha$ by the formula
 
@@ -171,7 +171,7 @@ $$W=V\times_Y Z$$
 
 let $i':W\hookrightarrow V$ be the induced closed embedding; then it is known that the *refined* Gysin pullback
 
-$$i^!:A_k(V)_\mathbb{Q}\longrightarrow A_{k-c}(W)_\mathbb{Q}$$
+$$i^!:A_k(V)_\mathbb{Q}\rightarrow A_{k-c}(W)_\mathbb{Q}$$
 
 is defined. In addition to the usual Gysin pullback, this is compatible with proper pushforward and base change. Specifically, suppose given a codimension-$c$ closed regular embedding $i:Z\hookrightarrow Y$ and a proper morphism $g:V\rightarrow Y$, and let
 
@@ -238,7 +238,7 @@ $$\mathcal{Z}=\mathcal{M}\times_X\mathcal{N}$$
 
 represents the locus where the images of the two morphisms agree in $X$, and this fiber product can be expressed as an intersection inside the ordinary product using the diagonal. For this, considering
 
-$$(u,v):\mathcal{M}\times\mathcal{N}\longrightarrow X\times X$$
+$$(u,v):\mathcal{M}\times\mathcal{N}\rightarrow X\times X$$
 
 we have
 

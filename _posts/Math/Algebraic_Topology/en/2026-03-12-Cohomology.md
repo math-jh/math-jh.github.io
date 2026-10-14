@@ -47,15 +47,15 @@ is also a split short exact sequence. This is because the splitting gives a dire
 
 and therefore, by [\[Homological Algebra\] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1){: data-lid="8v7n3" }, we obtain the following long exact sequence
 
-$$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
+$$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\rightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\rightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
 Now, in order to extract information from this exact sequence, we need to examine the connecting maps $\delta$. Following the definition, $\delta_k:B_k\otimes_\mathbb{Z}A\rightarrow Z_k\otimes_\mathbb{Z}A$ is precisely the inclusion homomorphism $i_k:B_k \rightarrow Z_k$ with $-\otimes \id_A$ applied, so let us consider the following short exact sequence
 
-$$0 \rightarrow B_k\overset{i_k}{\longrightarrow} Z_k \overset{p_k}{\longrightarrow}H_k(C)\rightarrow 0$$
+$$0 \rightarrow B_k\overset{i_k}{\rightarrow} Z_k \overset{p_k}{\rightarrow}H_k(C)\rightarrow 0$$
 
 Then, since $B_k$, $Z_k$, and $0$ are all free abelian groups, this can be seen as a free resolution of $H_k(C_\bullet)$, and therefore by definition we can place $\delta_k$ into the following exact sequence
 
-$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow 0$$
+$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\rightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow 0$$
 
 That is, the isomorphisms
 
@@ -302,7 +302,7 @@ $$0 \rightarrow (Z(C)\otimes D)_k \rightarrow (C\otimes D)_k \rightarrow (B(C)\o
 
 Now, considering the long exact sequence in homology from this short exact sequence, we can obtain
 
-$$\cdots \rightarrow H_{k}(B(C)\otimes D)\overset{\delta_k}{\longrightarrow} H_{k}(Z(C)\otimes D)\rightarrow H_{k}(C\otimes D)\rightarrow H_{k-1}(B(C)\otimes D)\overset{\delta_{k-1}}{\longrightarrow} H_{k-1}(Z(C)\otimes D)\rightarrow \cdots$$
+$$\cdots \rightarrow H_{k}(B(C)\otimes D)\overset{\delta_k}{\rightarrow} H_{k}(Z(C)\otimes D)\rightarrow H_{k}(C\otimes D)\rightarrow H_{k-1}(B(C)\otimes D)\overset{\delta_{k-1}}{\rightarrow} H_{k-1}(Z(C)\otimes D)\rightarrow \cdots$$
 
 In particular, relative to $H_k(C\otimes D)$, we obtain the short exact sequence
 

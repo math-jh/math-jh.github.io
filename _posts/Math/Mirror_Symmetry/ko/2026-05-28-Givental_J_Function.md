@@ -250,7 +250,7 @@ $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} 
 
 $X$가 smooth projective toric variety라 하자. 그럼 다음 short exact sequence
 
-$$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \longrightarrow 0$$
+$$0 \rightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \rightarrow 0$$
 
 를 생각할 수 있다. 여기서 $m$은 ray의 개수이며, $\mathbb{Z}^n$은 cocharacter lattice이다. 즉, $H_2$는 ray의 관계식들이 이루는 집합
 

@@ -53,7 +53,7 @@ $$A^G = \{a \in A \mid g \cdot a = a \text{ for all } g \in G\} \subseteq A$$
 
 는 finitely generated이며, 자연스러운 morphism
 
-$$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
+$$\varphi : X \rightarrow X /\!/ G := \Spec(A^G)$$
 
 는 categorical quotient이다. 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 image를 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
 :::
@@ -144,11 +144,11 @@ Cox ring $S$는 polynomial ring이므로 특히 UFD이다. 이로써 toric varie
 
 이제 $S$ 위의 grading을 도입한다. [§토러스 인자와 선다발, ⁋정의 1](/ko/math/toric_geometry/toric_divisors#def1){: data-lid="1jcbv" }에서 살펴본 torus-invariant prime divisor $D_\rho$에 대해, [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4){: data-lid="zgsgx" }에서 우리는 Weil divisor class group $\Cl(X_\Sigma)$가 exact sequence
 
-$$0 \longrightarrow M \longrightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \longrightarrow \Cl(X_\Sigma) \longrightarrow 0$$
+$$0 \rightarrow M \rightarrow \bigoplus_{\rho \in \Sigma(1)} \mathbb{Z} \cdot D_\rho \rightarrow \Cl(X_\Sigma) \rightarrow 0$$
 
 로부터 얻어짐을 확인하였다 (첫 번째 arrow는 [§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3){: data-lid="772c0" }에 의해 $m \mapsto \sum_\rho \langle m, u_\rho \rangle D_\rho$). 이 exact sequence에 $\Hom_\mathbb{Z}(-, \mathbb{C}^\ast)$를 적용하면
 
-$$1 \longrightarrow G \longrightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \longrightarrow T_N \longrightarrow 1$$
+$$1 \rightarrow G \rightarrow (\mathbb{C}^\ast)^{\Sigma(1)} \rightarrow T_N \rightarrow 1$$
 
 을 얻으며, 여기서 $G = \Hom_\mathbb{Z}(\Cl(X_\Sigma), \mathbb{C}^\ast)$, $T_N = N \otimes_\mathbb{Z} \mathbb{C}^\ast$는 $X_\Sigma$의 dense torus이다. 따라서 $G$는 $(\mathbb{C}^\ast)^{\Sigma(1)}$의 subgroup으로서, 자연스럽게 affine space $\mathbb{C}^{\Sigma(1)} = \Spec S$ 위에 diagonal action을 한다.
 
@@ -205,7 +205,7 @@ $$\hat{\x}_{\sigma_i} = \x_i$$
 
 이므로 irrelevant ideal은 $B(\Sigma) = \langle \x_0, \ldots, \x_n \rangle$이고 exceptional set은 $Z(\Sigma) = \{0\}$이다. 한편 Weil divisor의 exact sequence는
 
-$$0 \longrightarrow \mathbb{Z}^n \longrightarrow \mathbb{Z}^{n+1} \longrightarrow \Cl(\mathbb{P}^n) = \mathbb{Z} \longrightarrow 0$$
+$$0 \rightarrow \mathbb{Z}^n \rightarrow \mathbb{Z}^{n+1} \rightarrow \Cl(\mathbb{P}^n) = \mathbb{Z} \rightarrow 0$$
 
 이므로 $G = \Hom_\mathbb{Z}(\mathbb{Z}, \mathbb{C}^\ast) = \mathbb{C}^\ast$이고, 그 action은 diagonal scaling
 

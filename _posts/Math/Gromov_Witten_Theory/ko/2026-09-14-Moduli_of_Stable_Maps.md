@@ -17,7 +17,7 @@ drift_needed: true
 
 우리는 [\[스택\] §고유스택](/ko/math/stacks/proper_stacks){: data-lid="5ib31" }에서 moduli space의 properness가 갖는 중요성을 이미 살펴보았지만, 일반적인 enumerative problem에서는 이러한 성질을 기대할 수 없다. 이러한 종류의 문제 중 고전적인 것은 $\mathbb{P}^2$ 안의 $3d-1$개의 general point를 지나는 degree $d$ rational curve를 세는 문제로, 예를 들어 $d=2$일 때 그 값은 $1$인 것이 알려져 있다. 즉 $\mathbb{P}^2$ 안의 $5$개의 점을 지나는 곡선은 유일하게 존재하여야 한다. 반면 다음 map
 
-$$\mu_t:\mathbb{P}^1\longrightarrow\mathbb{P}^2,\qquad [\u:\v]\longmapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
+$$\mu_t:\mathbb{P}^1\rightarrow\mathbb{P}^2,\qquad [\u:\v]\mapsto[-t\u\v:\u(\u-(1+t)\v):\v(\u-(1+t)\v)],\qquad t\neq 0,-1$$
 
 을 생각하면, 이는 equation
 
@@ -155,7 +155,7 @@ $$\Hom_C(\Omega_C(p_1+\cdots+p_n),\mathcal{O}_C)$$
 
 는 marked point에서 사라지는 derivation을 담으므로, marked point를 고정하는 domain의 infinitesimal automorphism을 기록한다. 이렇게 얻은 two-term complex를
 
-$$\LL_\mu=\Bigl[\at{-1}{\mu^\ast\Omega_X}\longrightarrow\at{0}{\Omega_C(p_1+\cdots+p_n)}\Bigr]$$
+$$\LL_\mu=\Bigl[\at{-1}{\mu^\ast\Omega_X}\rightarrow\at{0}{\Omega_C(p_1+\cdots+p_n)}\Bigr]$$
 
 로 적는다. 직관적으로 이는 $\mu:C\rightarrow X$의 relative cotangent complex를 나타내는 two-term model에서 domain 쪽 항에 marked point의 twist를 넣은 것으로, deformation theory의 표준적인 해석에 의해 $X$를 고정하고 pointed domain과 map을 함께 변형하는 문제에서는
 
@@ -338,7 +338,7 @@ $$\vdim\overline{\mathcal{M}}_{0,A\cup\{\bullet\}}(X,\beta_1)+\vdim\overline{\ma
 
 또 [명제 4](#prop4){: data-lid="w3px3" }의 exact sequence에서 $H^1(C,\mu^\ast T_X)=0$이므로, stable map의 deformation을 pointed domain의 deformation으로 보내는 $T^1\rightarrow T^1(C,p_\bullet)$은 surjective이다. 이를 [§마디 곡선의 변형, ⁋정리 5](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#thm5){: data-lid="u4t65" }의 오른쪽 map, 곧 각 node 근방의 local deformation으로의 restriction과 합성한
 
-$$T^1\longrightarrow\bigoplus_{q\in\Sing C}T_q^1$$
+$$T^1\rightarrow\bigoplus_{q\in\Sing C}T_q^1$$
 
 도 surjective이다. 즉 stable map을 일차적으로 움직여 domain의 node들을 서로 독립적으로 펼 수 있다. 이를 앞에서 본 complete local ring으로 옮기자. $(C,p_\bullet,\mu)$를 나타내는 점 $w\in W$에서 $W$ 위의 universal curve는 $(C,p_\bullet)$의 versal base $R$ 위의 versal family를 어떤 local homomorphism $R\rightarrow\widehat{\mathcal{O}}_{W,w}$로 당긴 것이다. 이 homomorphism이 [§마디 곡선의 변형, ⁋명제 10](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#prop10){: data-lid="qg02e" }의 smoothing parameter $\t_q$를 보내는 원소를 다시 $\t_q$로 적으면, node $q$에서 이 family의 complete local ring은 $\widehat{\mathcal{O}}_{W,w}[[\u_q,\v_q]]/(\u_q\v_q-\t_q)$이므로 node $q$가 node로 남는 locus는 $\t_q=0$이다. 위의 surjectivity는 이 $\t_q$들의 class가 $\widehat{\mathcal{O}}_{W,w}$의 cotangent space에서 linearly independent하다는 것과 같으므로, 앞의 꼴 $\mathbb{C}[[\x_1,\ldots,\x_N]]/(f_1,\ldots,f_m)$에서 $\t_q$들을 변수의 일부로 택할 수 있다. 이 걸음은 surjectivity만 쓰므로, convex가 아닌 target에서도 node들의 집합 $S\subseteq\Sing C$에 대하여 $T^1\rightarrow\bigoplus_{q\in S}T_q^1$가 surjective이면 $\t_q$ ($q\in S$)들을 변수의 일부로 택할 수 있다. 지금은 $T^2=0$이므로 $\widehat{\mathcal{O}}_{W,w}$는 power series ring이고, 따라서 $w$에서 nodal domain을 갖는 stable map들의 locus, 곧 boundary는
 

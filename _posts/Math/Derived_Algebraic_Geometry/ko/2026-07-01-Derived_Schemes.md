@@ -27,7 +27,7 @@ published: false
 ::: 정의 1
 Animated commutative ring $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
 
-$$h_{\Spec R}=\operatorname{Map}_{\operatorname{Ani}}(R,-):\operatorname{Ani}\longrightarrow \mathcal{S}$$
+$$h_{\Spec R}=\operatorname{Map}_{\operatorname{Ani}}(R,-):\operatorname{Ani}\rightarrow \mathcal{S}$$
 
 로 주어지는, animated ring 위의 space값 functor이다. 여기서 $\operatorname{Map}_{\operatorname{Ani}}(R,S)$은 $\operatorname{Ani}$의 mapping space이다. Affine derived scheme들의 $\infty$-범주를 $\mathrm{dAff}=\operatorname{Ani}^\op$로 적는다.
 :::
@@ -94,7 +94,7 @@ Scheme을 점functor로 바라보면 그것은 $\Sch^\op\rightarrow \Set$의 rep
 ::: 정의 6
 *derived prestack*이란 $\infty$-functor $F:\operatorname{Ani}\rightarrow \mathcal{S}$이다. Derived prestack $F$이 *derived stack<sub>유도 스택</sub>*이라는 것은, animated ring $R$의 임의의 étale covering $\{R\rightarrow R_i\}$과 그 Čech nerve $R_\bullet$에 대하여 자연스러운 morphism
 
-$$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
+$$F(R)\overset{\sim}{\rightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 
 이 동치인 것, 곧 $F$이 étale 위상에 대하여 hyperdescent를 만족하는 것을 뜻한다. Derived stack들의 $\infty$-범주를 $\mathrm{dSt}$로 적는다.
 :::
@@ -139,7 +139,7 @@ $$T_X=\LL_X^\vee=\mathcal{R}\mathcal{H}om_{\mathcal{O}_X}(\LL_X,\mathcal{O}_X)$$
 
 1. (추이 삼각형) morphism의 합성 $X\xrightarrow{f}Y\xrightarrow{g}Z$에 대하여 $\QCoh(X)$ 안의 삼각형
 
-$$f^\ast \LL_{Y/Z}\longrightarrow \LL_{X/Z}\longrightarrow \LL_{X/Y}\longrightarrow f^\ast \LL_{Y/Z}[1]$$
+$$f^\ast \LL_{Y/Z}\rightarrow \LL_{X/Z}\rightarrow \LL_{X/Y}\rightarrow f^\ast \LL_{Y/Z}[1]$$
 
 이 존재한다.
 
@@ -158,7 +158,7 @@ Smooth morphism은 여접 복합체가 degree $0$의 locally free sheaf인 경�
 ::: 정의 12
 Derived scheme(또는 geometric derived stack)의 morphism $f:X\rightarrow Y$이 *quasi-smooth<sub>유사매끄러움</sub>*하다는 것은, $f$이 유한표현이고 상대 여접 복합체 $\LL_f$이 perfect이며 그 Tor-amplitude가 $[-1,0]$에 놓이는 것, 곧 $\LL_f$이 국소적으로
 
-$$\LL_f\simeq\bigl[E_1\longrightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
+$$\LL_f\simeq\bigl[E_1\rightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
 
 의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $\LL_f$의 K-이론적 계수
 

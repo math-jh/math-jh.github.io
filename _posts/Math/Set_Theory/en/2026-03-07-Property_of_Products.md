@@ -33,7 +33,7 @@ is a new function, and for each $j$ it satisfies $(f\circ\id_J)(j)=f(j)\in A_j$.
 
 By the preceding paragraph, $F\mapsto F\circ\Delta_J$ defines a function from $\prod_{i\in I}A_i$ to $\prod_{j\in J}A_j$. We denote this by $\pr_J$, borrowing the notation for projection functions. Then for $K\subseteq J\subseteq I$, the composition of the $J$-th projection from $\prod_{i\in I}A_i$ to the partial product $\prod_{j\in J}A_j$ and the $K$-th projection from $\prod_{j\in J}A_j$ to its partial product $\prod_{k\in K}A_k$
 
-$$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in K}A_k$$
+$$\prod_{i\in I}A_i\rightarrow \prod_{j\in J}A_j\rightarrow \prod_{k\in K}A_k$$
 
 is simply the $K$-th projection $\pr_K$ from $\prod_{i\in I}A_i$ to its partial product $\prod_{k\in K}A_k$. This follows from $\Delta_K=\Delta_J\circ\Delta_K$.
 
@@ -82,7 +82,7 @@ While this may cause some confusion when read in text, in diagrams the source an
 
 Since $(J_k)_{k\in K}$ is a partition of $I$, for each $i\in I$ there exists a unique $k\in K$ such that $i\in J_k$. We now define the function $\pr_{ik}$ as the composition
 
-$$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longrightarrow}\prod_{j\in J_k}A_j\overset{\pr_i}{\longrightarrow}A_i$$
+$$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\rightarrow}\prod_{j\in J_k}A_j\overset{\pr_i}{\rightarrow}A_i$$
 
 Then by the universal property of the product $\prod_{i\in I}A_i$, there exists a map $\phi:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\rightarrow\prod_{i\in I}A_i$ making the following diagram commute:
 

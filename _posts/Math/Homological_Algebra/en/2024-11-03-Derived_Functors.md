@@ -19,7 +19,7 @@ translation_polish_source: antigravity-gemini-3.8-flash-high
 
 We previously proved that, given any short exact sequence in $\Ch(\mathcal{A})$
 
-$$0\longrightarrow A_\bullet\longrightarrow B_\bullet\longrightarrow C_\bullet\longrightarrow 0$$
+$$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
 we can construct the long exact sequence
 
@@ -30,13 +30,13 @@ The most essential part of this proof was defining the connecting map $\delta$, 
 ::: Definition 1
 Let two abelian categories $\mathcal{A},\mathcal{B}$ be given. Then a *homological $\delta$-functor* from $\mathcal{A}$ to $\mathcal{B}$ refers to additive functors $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), together with morphisms $\delta_n:T_n(C)\rightarrow T_{n-1}(A)$ defined for each short exact sequence
 
-$$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+$$0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$$
 
 For $n<0$, we regard all $T_n$ as $0$. These satisfy the following conditions.
 
 1. (Long exact sequence) The sequence
     
-    $$\cdots\longrightarrow T_{n+1}(C)\overset{\delta}{\longrightarrow}T_n(A)\longrightarrow T_n(B)\longrightarrow T_n(C)\overset{\delta}{\longrightarrow}T_{n-1}(A)\longrightarrow \cdots$$
+    $$\cdots\rightarrow T_{n+1}(C)\overset{\delta}{\rightarrow}T_n(A)\rightarrow T_n(B)\rightarrow T_n(C)\overset{\delta}{\rightarrow}T_{n-1}(A)\rightarrow \cdots$$
 
     is exact.
 2. (Naturality) Given a homomorphism between short exact sequences
@@ -52,7 +52,7 @@ For $n<0$, we regard all $T_n$ as $0$. These satisfy the following conditions.
 
 Rewriting the above definition with $T^n$ and $\delta^n:T^n(C)\rightarrow T^{n+1}(A)$, we obtain the definition of a *cohomological $\delta$-functor*. Since we agreed that for $n<0$, both $T_n$ and $T^n$ are $0$, the first condition for a homological $\delta$-functor means in particular that
 
-$$\cdots\longrightarrow T_0(A)\longrightarrow T_0(B)\longrightarrow T_0(C)\longrightarrow0\longrightarrow 0\longrightarrow\cdots, $$
+$$\cdots\rightarrow T_0(A)\rightarrow T_0(B)\rightarrow T_0(C)\rightarrow0\rightarrow 0\rightarrow\cdots, $$
 
 that is, $T_0$ is a right exact functor. Similarly, the first condition for a cohomological $\delta$-functor makes $T^0$ a left exact functor.
 
@@ -66,7 +66,7 @@ Let two $\delta$-functors $S,T$ be given. Then a *morphism* from $S$ to $T$, $S\
 
 That is, for every short exact sequence
 
-$$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
+$$0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$$
 
 it is a collection of $\alpha_n:S_n\Rightarrow T_n$ making the following diagram commute.
 
@@ -107,7 +107,7 @@ Take two projective resolutions and apply [§Resolutions, ⁋Theorem 6](/en/math
 
 Now let us examine left derived functors in a little more detail. First, from the fact that $F$ is right exact, we know that the sequence
 
-$$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longrightarrow} F(A) \longrightarrow 0$$
+$$F(P_1) \overset{Fd_1}{\rightarrow} F(P_0) \overset{F\epsilon_0}{\rightarrow} F(A) \rightarrow 0$$
 
 is exact. Therefore, we obtain
 
@@ -140,7 +140,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1){: data-lid="hbaz7" }), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
 
-$$\cdots\overset{\delta}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\delta}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\delta}{\longrightarrow}\cdots$$
+$$\cdots\overset{\delta}{\rightarrow}L_iF(A)\rightarrow L_iF(B)\rightarrow L_iF(C)\overset{\delta}{\rightarrow}L_{i-1}F(A)\rightarrow L_{i-1}F(B)\rightarrow L_{i-1}F(C)\overset{\delta}{\rightarrow}\cdots$$
 
 That the information thus obtained satisfies the second condition of [Definition 1](#def1){: data-lid="7kyzg" } follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6){: data-lid="zwx4w" }.
 :::

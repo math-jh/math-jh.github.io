@@ -45,17 +45,17 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-lid="8v7n3" }에 의해 다음의 long exact sequence
 
-$$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\longrightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
+$$\cdots \rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\rightarrow}Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C\otimes A)\rightarrow B_{k-1}\otimes_\mathbb{Z}A\overset{\delta_{k-1}}{\rightarrow} Z_{k-1}\otimes_\mathbb{Z}A\rightarrow\cdots\tag{2}$$
 
 를 얻는다. 
 
 이제 이 exact sequence로부터 정보를 얻어내기 위해서는 connecting map $\delta$들을 살펴보아야 한다. 정의를 따라가보면, $\delta_k:B_k\otimes_\mathbb{Z}A\rightarrow Z_k\otimes_\mathbb{Z}A$는 정확하게 inclusion homomorphism $i_k:B_k \rightarrow Z_k$에 $-\otimes \id_A$를 취한 것과 같으므로, 다음의 short exact sequence
 
-$$0 \rightarrow B_k\overset{i_k}{\longrightarrow} Z_k \overset{p_k}{\longrightarrow}H_k(C)\rightarrow 0$$
+$$0 \rightarrow B_k\overset{i_k}{\rightarrow} Z_k \overset{p_k}{\rightarrow}H_k(C)\rightarrow 0$$
 
 을 생각하자. 그럼, $B_k$과 $Z_k$, 그리고 $0$은 모두 free abelian group이므로 이는 $H_k(C_\bullet)$의 free resolution으로 볼 수 있고, 따라서 정의에 의해 $\delta_k$을 다음의 exact sequence
 
-$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow 0$$
+$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\rightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow 0$$
 
 에 넣을 수 있다. 즉, 다음의 isomorphism
 
@@ -320,7 +320,7 @@ $$0 \rightarrow (Z(C)\otimes D)_k \rightarrow (C\otimes D)_k \rightarrow (B(C)\o
 
 를 얻는다. 이제 이 short exact sequence로부터 homology들의 long exact sequence를 생각하면, 
 
-$$\cdots \rightarrow H_{k}(B(C)\otimes D)\overset{\delta_k}{\longrightarrow} H_{k}(Z(C)\otimes D)\rightarrow H_{k}(C\otimes D)\rightarrow H_{k-1}(B(C)\otimes D)\overset{\delta_{k-1}}{\longrightarrow} H_{k-1}(Z(C)\otimes D)\rightarrow \cdots$$
+$$\cdots \rightarrow H_{k}(B(C)\otimes D)\overset{\delta_k}{\rightarrow} H_{k}(Z(C)\otimes D)\rightarrow H_{k}(C\otimes D)\rightarrow H_{k-1}(B(C)\otimes D)\overset{\delta_{k-1}}{\rightarrow} H_{k-1}(Z(C)\otimes D)\rightarrow \cdots$$
 
 를 얻을 수 있다. 특히 $H_k(C\otimes D)$를 기준으로 다음의 short exact sequence
 

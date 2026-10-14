@@ -28,7 +28,7 @@ $$\Spec\pi: \Spec A/\mathfrak{a}\rightarrow \Spec A$$
 
 가 주어지고, 이 때 $\Spec\pi$는 injective이며 그 image는 닫힌집합 $Z(\mathfrak{a})$가 된다는 것을 안다. 이 경우에도 위에서와 마찬가지로 canonical decomposition
 
-$$\Spec A/\mathfrak{a}\overset{\Spec\pi\vert^{Z(\mathfrak{a})}}{\longrightarrow} Z(\mathfrak{a}) \overset{\iota}{\longrightarrow}\Spec A$$
+$$\Spec A/\mathfrak{a}\overset{\Spec\pi\vert^{Z(\mathfrak{a})}}{\rightarrow} Z(\mathfrak{a}) \overset{\iota}{\rightarrow}\Spec A$$
 
 을 생각한 후,
 
@@ -189,7 +189,7 @@ Scheme $X$와 $X$의 global section $s\in \Gamma(X, \mathcal{O}_X)$에 대하여
 ::: 정의 8
 Scheme morphism $\varphi: X \rightarrow Y$가 *locally closed embedding<sub>국소 닫힌 매장</sub>*이라는 것은 $Y$의 적당한 open subscheme $\iota:Z\hookrightarrow Y$가 존재하여, 다음의 canonical decomposition
 
-$$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$$
+$$X\overset{\varphi\vert^Z}{\rightarrow}Z\overset{\iota}{\rightarrow} Y$$
 
 을 통해 $\varphi\vert^Z$가 closed embedding인 것이다. 
 :::
@@ -209,7 +209,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 ::: 증명
 우선 $\iota_1=\iota_2\circ\varphi$를 만족하는 $\varphi$가 존재한다 하자. 그럼 $\iota_1^\sharp$은 다음의 합성
 
-$$\mathcal{O}_X\overset{\iota_2^\sharp}{\longrightarrow}(\iota_2)_\ast \mathcal{O}_{Z_2}\overset{(\iota_2)_\ast \varphi^\sharp}{\longrightarrow}(\iota_2)_\ast \varphi_\ast \mathcal{O}_{Z_1}=(\iota_1)_\ast \mathcal{O}_{Z_1}$$
+$$\mathcal{O}_X\overset{\iota_2^\sharp}{\rightarrow}(\iota_2)_\ast \mathcal{O}_{Z_2}\overset{(\iota_2)_\ast \varphi^\sharp}{\rightarrow}(\iota_2)_\ast \varphi_\ast \mathcal{O}_{Z_1}=(\iota_1)_\ast \mathcal{O}_{Z_1}$$
 
 이므로 $\ker\iota_2^\sharp\subseteq \ker\iota_1^\sharp$이고, 곧 [정의 5](#def5){: data-lid="t0x36" }에 의하여 $\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$이다. 
 

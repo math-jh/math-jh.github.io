@@ -384,7 +384,7 @@ $$\Delta_S^!\bigl([M_1]^\vir\times[M_2]^\vir\bigr)\in A_\ast(M_1\times_SM_2)$$
 
 이 compatibility는 [§Perfect obstruction theory, ⁋명제 14](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop14){: data-lid="04qsk" }에서 zero section에 대해 본 것과 같은 꼴의 조건이다. 앞의 국소 모형에서 $W'$은 $M_1\times M_2$ 위의 trivial bundle의 section $\sigma$의 zero locus이고 $\Delta_S^!$은 그 section에 대한 zero section의 Gysin map이므로, 국소적으로 이 비교는 그 명제의 상황이고 그 trivial bundle은 $W'$ 위에서 $f^\ast T_S$이다. $M_1$, $M_2$의 perfect obstruction theory $E_1^\bullet$, $E_2^\bullet$이 global resolution을 가지면 $M_1\times M_2$ 위의 $E_1^\bullet\boxplus E_2^\bullet=\pr_1^\ast E_1^\bullet\oplus\pr_2^\ast E_2^\bullet$도 global resolution을 갖는 perfect obstruction theory이고, 그 virtual class는 $[M_1]^\vir\times[M_2]^\vir$이다. 이제 $u:W'\rightarrow M_1\times M_2$를 자연스러운 morphism이라 하고, $W'$ 위의 perfect obstruction theory $E_{W'}^\bullet$이 global resolution을 가지며 distinguished triangle
 
-$$u^\ast(E_1^\bullet\boxplus E_2^\bullet)\longrightarrow E_{W'}^\bullet\longrightarrow f^\ast\Omega_S[1]\longrightarrow u^\ast(E_1^\bullet\boxplus E_2^\bullet)[1]$$
+$$u^\ast(E_1^\bullet\boxplus E_2^\bullet)\rightarrow E_{W'}^\bullet\rightarrow f^\ast\Omega_S[1]\rightarrow u^\ast(E_1^\bullet\boxplus E_2^\bullet)[1]$$
 
 에 들어간다고 하자. 여기서 셋째 항은 $\Delta_S$의 cotangent complex $\LL_{S/S\times S}=\Omega_S[1]$을 $f:W'\rightarrow S$로 당긴 것이고, 국소적으로는 그 명제의 $V^\vee\vert_Z[1]$에 해당한다. 또 이 triangle이 cotangent complex의 triangle $u^\ast\LL_{M_1\times M_2}\rightarrow\LL_{W'}\rightarrow\LL_{W'/M_1\times M_2}\rightarrow u^\ast\LL_{M_1\times M_2}[1]$과, 두 perfect obstruction theory의 morphism 및 cartesian square가 주는 $f^\ast\LL_{S/S\times S}\rightarrow\LL_{W'/M_1\times M_2}$으로 compatible하다고 하자. 그럼
 

@@ -111,7 +111,7 @@ $\Gal(\mathbb{L}/\mathbb{K})$ is compact.
 ::: Proof
 First, for each $x\in \mathbb{L}$, since $\mathbb{L}/\mathbb{K}$ is an algebraic extension, $x$ is algebraic, and hence there are only finitely many elements conjugate to $x$. ([§Galois Extensions, ⁋Proposition 3](/en/math/field_theory/galois_extension#prop3){: data-lid="gm9dq" }) In other words, if we consider
 
-$$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\longrightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
+$$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\rightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
 
 the image of this map is a finite set. Therefore $\Gal(\mathbb{L}/\mathbb{K})$ is a subset of a product of finite sets, and since finite sets are compact, this product is also compact. ([\[Topology\] §Compactness and Convergence of Filters, ⁋Theorem 19 (Tychonoff)](/en/math/topology/filter_convergence#thm19){: data-lid="fa6xx" }) Thus proving the given proposition amounts to showing that $\Gal(\mathbb{L}/\mathbb{K})$ is closed in $\mathbb{L}^\mathbb{L}$.
 

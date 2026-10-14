@@ -28,7 +28,7 @@ Line bundles, and more generally vector bundles, which we will define later in t
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
 
 1. Projection $\pi: \mathcal{L} \rightarrow X$.
-2. An open cover $\{U_i\}$ of $X$ and, for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^1$. The map defined by these
+2. An open cover $\{U_i\}$ of $X$ and, for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\rightarrow} U_i \times \mathbb{A}^1$. The map defined by these
     
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
@@ -340,7 +340,7 @@ So far we have examined line bundles, whose fibers are one-dimensional vector sp
 On a variety $X$, a *rank $r$ vector bundle* $\mathcal{E}$ consists of the following data.
 
 1. A projection $\pi: \mathcal{E} \rightarrow X$.
-2. An open cover of $X$, $\{U_i\}$, and for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$. The maps defined by these,
+2. An open cover of $X$, $\{U_i\}$, and for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\rightarrow} U_i \times \mathbb{A}^r$. The maps defined by these,
 
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 

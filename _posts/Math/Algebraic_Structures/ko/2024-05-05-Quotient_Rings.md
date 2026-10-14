@@ -76,7 +76,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+(x\alpha'+\alpha x'+xx')$$
 
 에서 $\alpha\alpha'\in S$이고, 1번에 의해 $\ker \phi$가 two-sided ideal이므로 괄호 안의 세 항이 모두 $\ker \phi$에 속한다. 여기에 $1\in S$를 더하면 $S+\ker \phi$가 $A$의 subring임을 얻는다. 또 $S\cap\ker \phi$는 $S$의 덧셈에 대한 subgroup이고, 임의의 $\alpha\in S$와 $y\in S\cap\ker \phi$에 대하여 $\alpha y$와 $y\alpha$가 $S$와 $\ker \phi$ 모두에 속하므로 이는 $S$의 two-sided ideal이다. 이제 합성
 
-$$S\hookrightarrow S+\ker \phi\longrightarrow (S+\ker \phi)/\ker \phi$$
+$$S\hookrightarrow S+\ker \phi\rightarrow (S+\ker \phi)/\ker \phi$$
 
 을 생각하면 이는 전사이고 그 kernel이 $S\cap\ker \phi$이므로, 1번을 적용하여 원하는 isomorphism을 얻는다.
 

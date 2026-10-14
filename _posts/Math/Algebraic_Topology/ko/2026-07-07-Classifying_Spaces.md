@@ -235,7 +235,7 @@ $$P\times_{S^1}\mathbb{C}\rightarrow X$$
 
 이를 명시적으로 universal bundle $\E S^1=S^\infty\rightarrow\CP^\infty$에 적용하면 line bundle
 
-$$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
+$$S^\infty\times_{S^1}\mathbb{C}\rightarrow\CP^\infty$$
 
 을 얻는다. 점 $[\ell]\in\CP^\infty$ 위의 fiber를 살피면 equivalence class $[e,z]$는 unit vector $e$가 결정하는 직선 $\ell=\mathbb{C}e$의 원소 $ze\in\ell$와 같으므로, 이는 각 직선을 그 자신을 fiber로 갖는 tautological line bundle $\gamma$이다. 즉 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8){: data-lid="c2e55" }에서 $\gamma$가 complex line bundle의 universal family가 되었던 것은 universal principal $S^1$-bundle에 $\mathbb{C}$를 붙인 결과가 정확히 $\gamma$이기 때문이며, 거꾸로 그곳에서 $\gamma$의 sphere bundle로 등장했던 $S^\infty$가 바로 $\E S^1$이다.
 
@@ -254,7 +254,7 @@ $$V_n(\mathbb{C}^\infty)=\varinjlim_k V_n(\mathbb{C}^k)$$
 
 이제 여기에 canonical representation $\mathbb{C}^n$을 붙이면 associated bundle
 
-$$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\longrightarrow\Gr(n,\mathbb{C}^\infty)$$
+$$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\rightarrow\Gr(n,\mathbb{C}^\infty)$$
 
 을 얻는다. 점 $[V]$ 위의 fiber를 살피면 $z=(z_1,\ldots,z_n)\in\mathbb{C}^n$에 대해 equivalence class $[(e_1,\ldots,e_n),z]$는 frame이 span하는 부분공간 $V$의 원소 $z_1e_1+\cdots+z_ne_n\in V$와 같으므로, line bundle에서와 마찬가지로 이는 각 부분공간을 그 자신을 fiber로 갖는 tautological $n$-plane bundle $\gamma^n$이며, 거꾸로 $\gamma^n$의 각 fiber의 orthonormal frame 전체를 모으면 $V_n(\mathbb{C}^\infty)$가 복원되는 것도 line bundle에서와 같다. 즉
 

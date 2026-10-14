@@ -38,7 +38,7 @@ $\Gamma_\mathfrak{a}$는 left exact functor이다.
 ::: 증명
 $A$-module들의 exact sequence
 
-$$0 \rightarrow M' \overset{u}{\longrightarrow} M \overset{v}{\longrightarrow} M''$$
+$$0 \rightarrow M' \overset{u}{\rightarrow} M \overset{v}{\rightarrow} M''$$
 
 이 주어졌다 하자. $\Gamma_\mathfrak{a}(u)$는 injective map $u$의 제한이므로 injective이다. 또 $v\circ u=0$으로부터 $\Gamma_\mathfrak{a}(v)\circ\Gamma_\mathfrak{a}(u)=0$이므로, exactness를 위해서는 $\ker\Gamma_\mathfrak{a}(v)\subseteq\im\Gamma_\mathfrak{a}(u)$만 보이면 된다. $m\in\Gamma_\mathfrak{a}(M)$이 $v(m)=0$을 만족한다면 원래 sequence의 exactness에 의하여 $m=u(m')$인 $m'\in M'$이 존재한다. $\mathfrak{a}^nm=0$이라 하면 $u(\mathfrak{a}^nm')=\mathfrak{a}^nm=0$이고 $u$가 injective이므로 $\mathfrak{a}^nm'=0$, 곧 $m'\in\Gamma_\mathfrak{a}(M')$이다.
 :::
@@ -229,13 +229,13 @@ $$H_\mathfrak{a}^i(M/xM)=0\quad(i<t-1),\qquad H_\mathfrak{a}^{t-1}(M/xM)\neq 0$$
 
 이다. 이제 곱하기 $x$가 $M$ 위에서 injective인 것으로부터 short exact sequence
 
-$$0 \rightarrow M \overset{x}{\longrightarrow} M \rightarrow M/xM \rightarrow 0$$
+$$0 \rightarrow M \overset{x}{\rightarrow} M \rightarrow M/xM \rightarrow 0$$
 
 과 그 long exact sequence를 얻고, 두 $H_\mathfrak{a}^i(M)$ 사이의 map은 함자성에 의하여 스칼라 곱 $x$이다.
 
 $i<t$에서 $H_\mathfrak{a}^i(M)=0$임을 보이자. $i=0$은 위에서 보였다. $1\leq i<t$라면 long exact sequence의 조각
 
-$$H_\mathfrak{a}^{i-1}(M/xM) \rightarrow H_\mathfrak{a}^i(M) \overset{x}{\longrightarrow} H_\mathfrak{a}^i(M)$$
+$$H_\mathfrak{a}^{i-1}(M/xM) \rightarrow H_\mathfrak{a}^i(M) \overset{x}{\rightarrow} H_\mathfrak{a}^i(M)$$
 
 에서 $i-1<t-1$이므로 왼쪽 항이 $0$이고, 따라서 곱하기 $x$는 $H_\mathfrak{a}^i(M)$ 위에서 injective이다. 그런데 [명제 4](#prop4){: data-lid="gwv6v" }의 첫째 결과에 의하여 임의의 $h\in H_\mathfrak{a}^i(M)$는 $\mathfrak{a}^nh=0$인 $n$을 가지므로, $x\in\mathfrak{a}$로부터 $x^nh=0$이다. 그럼 $x(x^{n-1}h)=0$에서 injectivity로 $x^{n-1}h=0$이고, 이를 반복하면 $h=0$이다. 따라서 $H_\mathfrak{a}^i(M)=0$이다.
 
@@ -281,7 +281,7 @@ $$H_\mathfrak{m}^i(M)\cong H_\mathfrak{m}^i(M/N)$$
 
 [§Depth, ⁋명제 9](/ko/math/commutative_algebra/depth#prop9){: data-lid="dar6t" }에 의하여 $M/xM\neq 0$이고 $\dim(M/xM)=d-1$이므로, 귀납적 가정에 의하여 $j>d-1$에서 $H_\mathfrak{m}^j(M/xM)=0$이다. 이제 $i>d$를 고정하고 short exact sequence $0 \rightarrow M \overset{x}{\rightarrow} M \rightarrow M/xM \rightarrow 0$의 long exact sequence의 조각
 
-$$H_\mathfrak{m}^{i-1}(M/xM) \rightarrow H_\mathfrak{m}^i(M) \overset{x}{\longrightarrow} H_\mathfrak{m}^i(M)$$
+$$H_\mathfrak{m}^{i-1}(M/xM) \rightarrow H_\mathfrak{m}^i(M) \overset{x}{\rightarrow} H_\mathfrak{m}^i(M)$$
 
 을 보면, $i-1>d-1$이므로 왼쪽 항이 $0$이고 곱하기 $x$는 $H_\mathfrak{m}^i(M)$ 위에서 injective이다. [명제 4](#prop4){: data-lid="mtzeu" }의 첫째 결과에 의하여 $H_\mathfrak{m}^i(M)$의 임의의 원소 $h$는 $\mathfrak{m}^nh=0$인 $n$을 가지므로 $x^nh=0$이고, [정리 10](#thm10){: data-lid="qxzmt" }의 증명에서와 같이 injectivity를 반복 적용하면 $h=0$이다. 따라서 $i>d$에서 $H_\mathfrak{m}^i(M)=0$이다.
 :::

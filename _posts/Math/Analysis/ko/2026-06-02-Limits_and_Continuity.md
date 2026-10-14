@@ -26,7 +26,7 @@ published: false
 ::: 정의 1
 $a$가 $X$의 집적점이고 $L \in Y$라 하자. 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여
 
-$$0 < d_X(x, a) < \delta \Longrightarrow d_Y(f(x), L) < \varepsilon$$
+$$0 < d_X(x, a) < \delta \implies d_Y(f(x), L) < \varepsilon$$
 
 이 성립하면 $x \rightarrow a$일 때 $f(x)$는 $L$로 *수렴<sub>converge</sub>*한다고 하고, $\lim_{x \rightarrow a} f(x) = L$로 적는다.
 :::
@@ -52,7 +52,7 @@ $a$가 $X$의 집적점이고 $L \in Y$라 하자. $\lim_{x \rightarrow a} f(x) 
 ::: 정의 3
 $a \in X$라 하자. 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여
 
-$$d_X(x, a) < \delta \Longrightarrow d_Y(f(x), f(a)) < \varepsilon$$
+$$d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon$$
 
 이 성립하면 $f$는 $a$에서 *연속<sub>continuous</sub>*이라고 한다. $f$가 $X$의 모든 점에서 연속이면 $f$를 연속함수라 한다.
 :::

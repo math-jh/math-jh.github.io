@@ -50,12 +50,12 @@ Abelian category $\mathcal{A}$의 대상 $M$에 대하여, 다음을 정의한�
 
 1. $M$의 *left resolution<sub>왼쪽 분해</sub>*은 다음의 chain complex
     
-    $$\cdots \longrightarrow P_2 \longrightarrow P_1 \longrightarrow P_0 \overset{\epsilon}{\longrightarrow} M \longrightarrow 0$$
+    $$\cdots \rightarrow P_2 \rightarrow P_1 \rightarrow P_0 \overset{\epsilon}{\rightarrow} M \rightarrow 0$$
 
     가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map<sub>첨가 사상</sub>* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*이라 부른다.
 2. $M$의 *right resolution<sub>오른쪽 분해</sub>*은 다음의 cochain complex
     
-    $$0 \longrightarrow M \overset{\eta}{\longrightarrow} I^0 \longrightarrow I^1 \longrightarrow I^2 \longrightarrow \cdots$$
+    $$0 \rightarrow M \overset{\eta}{\rightarrow} I^0 \rightarrow I^1 \rightarrow I^2 \rightarrow \cdots$$
 
     가 exact이도록 하는 cochain complex $I^\bullet$과 *augmentation map* $\eta: M \rightarrow I^0$이다. 만일 각 $I^i$들이 모두 injective object들이라면 이를 *injective resolution<sub>단사분해</sub>*이라 부른다.
 :::
@@ -76,7 +76,7 @@ Abelian category $\mathcal{A}$가 enough projective를 갖는다면, $\mathcal{A
 
 을 얻는다. 그럼 가운데에서 얻어지는 
 
-$$\cdots \overset{d_3}{\longrightarrow} P_2 \overset{d_2}{\longrightarrow} P_1 \overset{d_1}{\longrightarrow} P_0 \overset{\epsilon_0}{\longrightarrow} M \longrightarrow 0$$
+$$\cdots \overset{d_3}{\rightarrow} P_2 \overset{d_2}{\rightarrow} P_1 \overset{d_1}{\rightarrow} P_0 \overset{\epsilon_0}{\rightarrow} M \rightarrow 0$$
 
 을 보면, $n\geq 2$일 때 다음의 식
 
@@ -148,7 +148,7 @@ $$d_n^Q\circ\psi=d_n^Q\circ g_n-(d_n^Q\circ s_{n-1})\circ d_n^P=g_{n-1}\circ d_n
 ::: 보조정리 7
 다음의 short exact sequence
 
-$$0 \longrightarrow A'\overset{i}{\longrightarrow}A\overset{p}{\longrightarrow}A'' \longrightarrow 0$$
+$$0 \rightarrow A'\overset{i}{\rightarrow}A\overset{p}{\rightarrow}A'' \rightarrow 0$$
 
 가 주어졌다 하고, $A'$, $A''$의 projective resolution들 $P_\bullet'$, $P_\bullet''$이 주어졌다 하자. 그럼 $P_n=P_n'\oplus P_n''$으로 정의되는 chain complex $P_\bullet$은 $A$의 projective resolution이 되며, 이들 complex들 사이의 exact sequence
 

@@ -76,7 +76,7 @@ $$H^i(\Spec A, \widetilde{M})\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet
 
 남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde{I}$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde{I}$이 flasque임을 보인다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16){: data-lid="togdz" }) $\Spec A$의 열린집합은 모두 $U=\Spec A\setminus Z(\mathfrak{a})$의 꼴이므로, 각각에 대하여 restriction $\widetilde{I}(\Spec A)=I\rightarrow\widetilde{I}(U)$이 surjective임을 보이면 된다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
 
-$$I\longrightarrow\widetilde{I}(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
+$$I\rightarrow\widetilde{I}(U)\rightarrow H^1_{\mathfrak{a}}(I)\rightarrow 0$$
 
 이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 그럼 임의의 두 열린집합 $V\subseteq U$에 대하여 $I \rightarrow \widetilde{I}(V)$이 $\widetilde{I}(U)$를 지나 인수분해되므로 $\widetilde{I}(U) \rightarrow \widetilde{I}(V)$ 또한 surjective이고, 곧 $\widetilde{I}$은 flasque이다.
 :::
@@ -360,7 +360,7 @@ $$(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa
 
 인 $x$ 위의 skyscraper sheaf로 변한다. 이제 주어진 가정을 coherent sheaf $\mathcal{I}_x\mathcal{F}$에 적용하면 적당한 $n_1$이 존재하여 $n\geq n_1$마다 $H^1(X, \mathcal{I}_x\mathcal{F}\otimes\mathcal{L}^{\otimes n})=0$이므로, long exact sequence의 일부
 
-$$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \longrightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa(x) \longrightarrow 0$$
+$$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \rightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_x\otimes_{\mathcal{O}_{X,x}}\kappa(x) \rightarrow 0$$
 
 이 exact이다. 즉, $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 global section들이 $x$에서의 fiber를 남김없이 준다. 이로부터 $x$의 근방에서의 global generation을 얻는다.
 
@@ -491,7 +491,7 @@ $$\deg X=r!\cdot a_r$$
 
 가장 단순한 예시는 projective space 자신이다. [따름정리 16](#cor16){: data-lid="kwsot" }에서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이므로 최고차항 계수는 $1/n!$이고 따라서 $\deg\mathbb{P}^n_\mathbb{K}=1$이며, $P_{\mathcal{O}_{\mathbb{P}^n}}(0)=1$에서 $p_a(\mathbb{P}^n_\mathbb{K})=0$이다. 이보다 덜 자명한 예시로 positive degree $e$의 nonzero homogeneous polynomial $f$가 정의하는 hypersurface $X=V_+(f)\subseteq\mathbb{P}^n_\mathbb{K}$를 보자. $f$는 많아야 하나의 $j$에 대해서만 $\x_j^e$의 상수배일 수 있으므로, $n\geq1$이라면 $f$가 $\x_j^e$의 상수배가 아닌 chart $D_+(\x_j)$가 반드시 존재한다. 이 chart 위에서 $X$는 dehomogenization $f/\x_j^e$의 zero set인데, 이 원소가 $0$도 unit도 아니므로 그 zero set은 공집합이 아니고, 곧 $X$는 공집합이 아닌 closed subscheme이어서 [정의 18](#def18){: data-lid="n5nm9" }을 적용할 수 있다. 이를 따라가보면 $\mathbb{K}[\x_0,\ldots, \x_n]$가 integral domain이므로 곱하기 $f$는 각 chart 위에서 injective이고, 따라서 short exact sequence
 
-$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\longrightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
+$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\rightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
 
 가 존재하며 이를 $\mathcal{O}(d)$로 twist한 뒤 [명제 15](#prop15){: data-lid="0fc3w" }의 1번과 [따름정리 16](#cor16){: data-lid="t1piu" }를 적용하면
 

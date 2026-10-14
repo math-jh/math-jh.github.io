@@ -128,7 +128,7 @@ Meanwhile, another method of constructing the projective toric variety $X_P$ fro
 
 Consider the lattice points of $P \subseteq M_\mathbb{R}$, i.e., $P \cap M = \{m_0, m_1, \ldots, m_s\}$. Using these we define the monomial map
 
-$$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
+$$\phi_P: T_N \rightarrow \mathbb{P}^s, \qquad t \mapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
 Here $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ is the character corresponding to $m \in M$.
 
@@ -157,7 +157,7 @@ Therefore the normal fan $\Sigma_{\Delta_n}$ has $n+1$ rays $\rho_i = \mathbb{R}
 
 One could directly verify by checking the gluing that this yields $\mathbb{P}^n$, but instead let us observe the lattice points of $\Delta_n$. The lattice points of $\Delta_n$ are exactly the vertices $\{0, e_1, \ldots, e_n\}$, so the corresponding monomial map is
 
-$$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \longrightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \longmapsto [1 : t_1 : \cdots : t_n]$$
+$$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \rightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$$
 
 as one can verify.
 :::

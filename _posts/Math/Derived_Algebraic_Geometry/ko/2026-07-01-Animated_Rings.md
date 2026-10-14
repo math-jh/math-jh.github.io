@@ -45,7 +45,7 @@ $$N(M)_n=M_n/D_n,\qquad \partial=\sum_{i=0}^{n}(-1)^id_i:N(M)_n\rightarrow N(M)_
 ::: 정리 3 (Dold–Kan)
 Normalization 사슬 복합체 functor는 simplicial $A$-module들의 범주와 connective 사슬 복합체들의 범주 사이의 범주 동치
 
-$$N:\operatorname{sMod}_A\overset{\sim}{\longrightarrow}\operatorname{Ch}_{\geq0}(A)$$
+$$N:\operatorname{sMod}_A\overset{\sim}{\rightarrow}\operatorname{Ch}_{\geq0}(A)$$
 
 를 준다. 더욱이 이 동치는 simplicial homotopy를 사슬 homotopy로, 따라서 약한 동치를 quasi-isomorphism으로 대응시킨다.
 :::
@@ -128,7 +128,7 @@ $$\pi_n(P_\bullet\otimes_AC)=H_n\bigl(N(P_\bullet)\otimes_AC\bigr)=\Tor_n^A(B,C)
 ::: 예시 9 (점의 유도 자기교차)
 $A=k[\x]$ 위에서 원점의 coordinate ring $k=k[\x]/(\x)$을 자기 자신과 유도적으로 텐서한 $k\otimes_{k[\x]}^{\mathbb{L}}k$를 계산한다. $\x$는 $k[\x]$의 nonzerodivisor이므로, [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7){: data-lid="buaeo" }의 Koszul resolution
 
-$$0\longrightarrow k[\x]\overset{\times\x}{\longrightarrow}k[\x]\longrightarrow k\longrightarrow0$$
+$$0\rightarrow k[\x]\overset{\times\x}{\rightarrow}k[\x]\rightarrow k\rightarrow0$$
 
 이 $k$의 free $k[\x]$-module 분해를 준다. 여기에 $-\otimes_{k[\x]}k$를 적용하면 곱셈 $\times\x$가 $0$으로 가므로 미분이 사라진 복합체 $[k\overset{0}{\rightarrow}k]$를 얻고, 따라서
 
@@ -175,7 +175,7 @@ $H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$�
 ::: 정리 12 (추이 삼각형)
 Ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여, $D(C)$ 안의 distinguished triangle
 
-$$\LL_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow \LL_{C/A}\longrightarrow \LL_{C/B}\longrightarrow \LL_{B/A}\otimes_B^{\mathbb{L}}C[1]$$
+$$\LL_{B/A}\otimes_B^{\mathbb{L}}C\rightarrow \LL_{C/A}\rightarrow \LL_{C/B}\rightarrow \LL_{B/A}\otimes_B^{\mathbb{L}}C[1]$$
 
 이 존재한다. 특히 전사 $B\rightarrow C=B/I$에 대하여 $H_0(\LL_{C/B})=0$이고
 
@@ -202,7 +202,7 @@ $$\LL_{B/k[\x]}\simeq(I/I^2)[1]\simeq B[1],\qquad I=(\x^2)$$
 
 이다. 따라서 여접 복합체는 두 항짜리 free 복합체로 실현되며, 그 미분은 conormal morphism $\overline{d}:B[1]\rightarrow(k[\x]\dd{\x})\otimes B=B\dd{\x}$, 곧 $\overline{\x^2}\mapsto \dd{(\x^2)}=2\x \dd{\x}$이다. 곧
 
-$$\LL_{B/k}\simeq\Bigl[B\overset{\times2\x}{\longrightarrow}B\dd{\x}\Bigr]$$
+$$\LL_{B/k}\simeq\Bigl[B\overset{\times2\x}{\rightarrow}B\dd{\x}\Bigr]$$
 
 이고 (degree $1$에서 $0$으로), 그 homology는 $k$의 characteristic이 $2$가 아닐 때
 

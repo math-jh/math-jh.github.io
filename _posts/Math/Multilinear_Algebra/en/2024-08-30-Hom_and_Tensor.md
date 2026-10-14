@@ -23,7 +23,7 @@ Previously we saw that $\Hom_{\lMod{A}}(-,N)$ and $\Hom_\lMod{A}(M,-)$ are left 
 ::: Proposition 1
 Given a splitting exact sequence
 
-$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+$$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
 and any $A$-module $K$, the induced sequence
 
@@ -50,7 +50,7 @@ Similarly, the following holds.
 ::: Proposition 2
 Given a splitting exact sequence
 
-$$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
+$$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
 and any $A$-module $K$, the induced sequence
 

@@ -51,7 +51,7 @@ then $L_A$ becomes a linear map from $\mathbb{K}^n$ to $\mathbb{K}^m$.
 
 Suppose an arbitrary linear map $L$ from $\mathbb{K}^n$ to $\mathbb{K}^m$ is given. It is not difficult to check that $L=L_{[L]^{\mathcal{E}_n}_{\mathcal{E}_m}}$. Therefore, the following correspondence exists:
 
-$$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\longleftrightarrow\Mat_{m\times n}(\mathbb{K})$$
+$$\{\text{linear maps from $\mathbb{K}^n$ to $\mathbb{K}^m$}\}\leftrightarrow\Mat_{m\times n}(\mathbb{K})$$
 
 More precisely, $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ and $A\mapsto L_A$ (the definition in [Example 1](#ex1){: data-lid="ol3cg" }) are bijections that are inverses of each other.
 

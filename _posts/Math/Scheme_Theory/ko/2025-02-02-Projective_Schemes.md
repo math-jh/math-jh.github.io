@@ -344,7 +344,7 @@ $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
 의 spectrum이다. 여기에서 $\alpha$는 $\Phi_{f,g}^{-1}\circ\Phi_{g,f}$를 localize하여 얻어진다. 그럼 합성
 
-$$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
+$$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\rightarrow}(A_{(f)})_{\theta_{f,g}} \rightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\rightarrow} A_{(fgh)}$$
 
 을 생각하면, $\Phi_{f,g}$와 $\Psi_f$가 각각 $\rho_{f,fg}$와 $\rho_{f,fgh}$를 확장하므로 $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$이다. 그런데 $A_{(fg)}$는 $\Phi_{f,g}$를 통해 $A_{(f)}$의 $\theta_{f,g}$에서의 localization이며 $\rho_{fg,fgh}$ 또한 같은 식을 만족하므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6){: data-lid="panmq" }의 유일성에 의하여 $\tau=\rho_{fg,fgh}$이다. 이로부터
 

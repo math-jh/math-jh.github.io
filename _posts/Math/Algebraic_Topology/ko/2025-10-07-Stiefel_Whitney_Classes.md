@@ -66,7 +66,7 @@ $$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
 $n\geq 1$일 때 이는 trivial bundle이 아니다. 만일 이것이 trivial bundle이었다면, non-vanishing continuous section $\RP^n\rightarrow E(\gamma_n^1)$이 존재했을 것이다. 가령 $B$의 모든 점에 fiber의 $1$을 대응시키는 함수가 그러하다. 그런데 임의의 section $s:\RP^n \rightarrow E(\gamma_n^1)$이 주어졌다 하고, quotient map $q:S^n \rightarrow \RP^n$을 사용한 다음의 합성
 
-$$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
+$$S^n \overset{q}{\rightarrow} \RP^n \overset{s}{\rightarrow} E\overset{\pr_2}{\rightarrow} \mathbb{R}^{n+1}$$
 
 을 생각하면 이 함수는 $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$을 $\mathbf{x}$의 상수배로 보낸다. 이 상수를 $t(\mathbf{x})$라 하면, $t$는 $S^n$에서 $\mathbb{R}$로의 연속함수이고 quotient map $q$로 인하여
 

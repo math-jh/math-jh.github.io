@@ -136,7 +136,7 @@ $$B=A[\x_1,\ldots, \x_n],\qquad \mathfrak{a}=(f_1,\ldots, f_r), \qquad C=B/\math
 
 이라 하면 $\mathbb{A}^n_S=\Spec B$이고 $X=\Spec C$이라 할 수 있다. 그럼 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="bpuhc" }에서 다음의 exact sequence
 
-$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow 0$$
 
 이 존재하며, 여기서 $\Omega_{B/A}$는 [§미분과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9){: data-lid="78jjn" }에 의하여 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 rank $n$의 free $B$-module이므로, $\Omega_{B/A}\otimes_BC$는 이들을 basis로 하는 rank $n$ free $C$-module이다. 그럼 이 canonical base 하에서, $\bar{d}$는
 
@@ -180,11 +180,11 @@ $$\left(\pi_\Delta\circ (\pr_{j_1,\ldots,j_r}\circ\bar{d}\circ\pi)_\Delta^{-1}\c
 
 이제 $\mathfrak{m}$의 $\dim R$개의 generator를 만들어야 하며, 이 대신 $\mathfrak{m}/\mathfrak{m}^2$을 $\kappa(\mathfrak{p})$-벡터공간으로서 생성하는 원소들을 찾으면 충분하다. ([\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="861pv" }) 이제 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="0vnss" }를 $\kappa(\mathfrak{q})$-algebra $R$과 그 ideal $\mathfrak{m}$에 적용하면 conormal exact sequence
 
-$$\mathfrak{m}/\mathfrak{m}^2\longrightarrow\Omega_{R/\kappa(\mathfrak{q})}\otimes_R\kappa(\mathfrak{p})\longrightarrow \Omega_{\kappa(\mathfrak{p})/\kappa(\mathfrak{q})}\longrightarrow 0$$
+$$\mathfrak{m}/\mathfrak{m}^2\rightarrow\Omega_{R/\kappa(\mathfrak{q})}\otimes_R\kappa(\mathfrak{p})\rightarrow \Omega_{\kappa(\mathfrak{p})/\kappa(\mathfrak{q})}\rightarrow 0$$
 
 을 얻으며, 그 첫째 morphism은 $u+\mathfrak{m}^2\mapsto\dd{u}$로 주어진다. 한편 $R$이 $\kappa(\mathfrak{q})[\x_1,\ldots, \x_n]$의 localization이므로 [\[가환대수학\] §미분, ⁋명제 7](/ko/math/commutative_algebra/differentials#prop7){: data-lid="4y6rf" }과 [§미분과 여접층, ⁋명제 9](/ko/math/scheme_theory/sheaf_of_differentials#prop9){: data-lid="3zlnf" }에 의하여 $\Omega_{R/\kappa(\mathfrak{q})}$는 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 free $R$-module이고, 따라서 $u\in R$의 $\kappa(\mathfrak{p})$에서의 image를 $u(\mathfrak{p})$로 적으면 이 morphism은 $\kappa(\mathfrak{p})$-linear map
 
-$$\mathfrak{m}/\mathfrak{m}^2 \longrightarrow \kappa(\mathfrak{p})^{\oplus n};\qquad u\mapsto \sum_j\frac{\partial u}{\partial \x_j}(\mathfrak{p})\dd{\x_j}$$
+$$\mathfrak{m}/\mathfrak{m}^2 \rightarrow \kappa(\mathfrak{p})^{\oplus n};\qquad u\mapsto \sum_j\frac{\partial u}{\partial \x_j}(\mathfrak{p})\dd{\x_j}$$
 
 이다. 특히 이 map은 $\bar{f}_i$의 class를 $J$의 $i$번째 행으로 보내며, Jacobian의 가정에 의하여 이들의 image들이 일차독립인 벡터들이므로 $\bar{f}_i$의 class들 또한 일차독립이다. 따라서 이 class들에서 basis를 완성하여 $\mathfrak{m}/\mathfrak{m}^2$의 basis를 만들면 원하는 $\mathfrak{m}$의 basis를 얻으며, 앞선 논증들에 의해 $f_1,\ldots, f_r$은 $B_\mathfrak{p}$의 regular sequence이고 quotient $C_\mathfrak{p}=B_\mathfrak{p}/\mathfrak{a}B_\mathfrak{p}$는 $A_\mathfrak{q}$ 위에서 flat이다. 즉 $\varphi$는 $x$에서 flat이고 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1){: data-lid="monpj" }), 따라서 [§평탄사상, ⁋정리 20](/ko/math/scheme_theory/flat_morphisms#thm20){: data-lid="1ueac" }에 의하여 $\varphi$는 $x$의 어떤 열린근방 위에서 flat하다.
 
@@ -217,7 +217,7 @@ $$X=\Spec\bigl(\mathbb{K}[\x_1,\ldots, \x_n]/(g_1,\ldots, g_m)\bigr)$$
 
 이제 $z$에서 Jacobian의 rank를 계산하자. Closed embedding $X_{\overline{\mathbb{K}}}\hookrightarrow \mathbb{A}^n_{\overline{\mathbb{K}}}$의 conormal exact sequence를 생각하면, 가운데 항은 $\dd{\x_1},\ldots, \dd{\x_n}$을 기저로 하는 rank $n$의 free module이고, defining ideal이 $g_1,\ldots, g_m$으로 생성되므로 첫 morphism $\bar{d}$의 image는 $\dd{g_i}=\sum_j(\partial g_i/\partial \x_j)\dd{\x_j}$들이 생성한다. 이 sequence를 $\kappa(z)$로 내리면
 
-$$\Omega_{X_{\overline{\mathbb{K}}}/\overline{\mathbb{K}}}\otimes\kappa(z)\cong\coker\bigl(\kappa(z)^{\oplus m} \longrightarrow \kappa(z)^{\oplus n}\bigr)$$
+$$\Omega_{X_{\overline{\mathbb{K}}}/\overline{\mathbb{K}}}\otimes\kappa(z)\cong\coker\bigl(\kappa(z)^{\oplus m} \rightarrow \kappa(z)^{\oplus n}\bigr)$$
 
 를 얻으며, 여기에서 오른쪽 morphism은 $z$에서 계산한 Jacobian $J=(\partial g_i/\partial \x_j)$의 transpose이다. 한편 $z$가 $\overline{\mathbb{K}}$-point이므로 좌변은 $\mathfrak{m}_z/\mathfrak{m}_z^2$이고 ([§미분과 여접층, ⁋정의 8](/ko/math/scheme_theory/sheaf_of_differentials#def8){: data-lid="319sn" } 직후), $\mathcal{O}_{X_{\overline{\mathbb{K}}},z}$가 regular local ring이므로 그 차원은 $\dim\mathcal{O}_{X_{\overline{\mathbb{K}}},z}=d$이다. ([\[가환대수학\] §차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12){: data-lid="k3if7" }) 따라서 $\rank J(z)=n-d$이며, 이 값을 $c$라 쓰면 $J(z)$의 영이 아닌 $c\times c$ minor $\Delta\in \mathbb{K}[\x_1,\ldots, \x_n]$가 존재한다. 이를 정의하는 index를 $i_1,\ldots, i_c$라 하고 $f_k=g_{i_k}$라 하자. $\mathfrak{a}'=(f_1,\ldots, f_c)$라 하고 $X'=\Spec\bigl(\mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{a}'\bigr)$으로 두면 $\mathfrak{a}'\subseteq \mathfrak{a}$이므로 $X$는 $X'$의 closed subscheme이며, 우리의 주장은 이 포함관계가 $x$ 근방에서는 등호라는 것이다.
 
@@ -270,7 +270,7 @@ Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하�
 ::: 명제 8
 $S=\Spec A$ 위의 closed embedding $X\hookrightarrow \mathbb{A}^n_S$이 주어졌다 하고, $B=A[\x_1,\ldots, \x_n]$, 그 defining ideal을 $\mathfrak{a}\subseteq B$, $C=B/\mathfrak{a}$라 하자. 그럼 $\varphi:X \rightarrow S$가 smooth한 것은 conormal exact sequence가 ([§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="to93a" }) 왼쪽에서도 exact이며 split되는 것, 곧
 
-$$0 \longrightarrow \mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+$$0 \rightarrow \mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\rightarrow} \Omega_{B/A}\otimes_BC \rightarrow \Omega_{C/A} \rightarrow 0$$
 
 이 split short exact sequence인 것과 동치이다. 이 때 $\mathfrak{a}/\mathfrak{a}^2$과 $\Omega_{C/A}$는 모두 finitely generated projective $C$-module이다.
 :::
@@ -346,7 +346,7 @@ Locally of finite presentation인 morphism $\varphi:X \rightarrow S$에 대하�
 ::: 정리 13
 Locally of finite presentation인 morphism $\varphi:X\rightarrow S$에 대하여, $\varphi$가 étale한 것은 임의의 $x\in X$에 대하여 $x$를 포함하는 $X$의 affine open set과 $\varphi(x)$를 포함하는 $S$의 affine open set 위에서 $\varphi$를 다음 꼴의 *standard étale* morphism의 형태로 쓸 수 있는 것과 동치이다.
 
-$$\Spec\bigl((A[\t]/(f))_g\bigr)\longrightarrow\Spec A$$
+$$\Spec\bigl((A[\t]/(f))_g\bigr)\rightarrow\Spec A$$
 
 여기서 $f\in A[\t]$는 monic이고 $g\in A[\t]/(f)$이며, $f'$의 image는 $(A[\t]/(f))_g$에서 가역이다.
 :::
@@ -436,7 +436,7 @@ $$(c,\omega)(c',\omega')=(cc',c\omega'+c'\omega)$$
 
 로 주어지며, 그럼 $T_0=\Spec C\hookrightarrow T=\Spec(C\oplus\Omega_{C/A})$가 실제로 square-zero extension이 되는 것을 확인할 수 있다. 이 때, ring map $c\mapsto(c,0)$과 $c\mapsto(c,\dd{c})$은 모두 $\id_X$의 lifting을 주며, 가정에 의해 이들이 일치하므로 universal derivation이 영이 되어야 하고 따라서 $\Omega_{C/A}=0$이 되어 unramified임을 보일 수 있다.
 
-이제 smoothness를 보이자. 앞선 증명들에서 했던 것처럼 $C=B/\mathfrak{a}$, $B=A[\x_1,\ldots,\x_n]$로 쓰면, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="hvrme" }의 universal property에 의하여 $B\twoheadrightarrow C\overset{\rho_0}{\longrightarrow}R_0$를 $q$를 따라 올리는 $A$-algebra homomorphism $\widetilde{\rho}:B\rightarrow R$를 잡을 수 있다. 그럼 $(q\circ\widetilde{\rho})(\mathfrak{a})=0$이므로 그 image는 $\mathfrak{b}$에 들어가며, 더 나아가
+이제 smoothness를 보이자. 앞선 증명들에서 했던 것처럼 $C=B/\mathfrak{a}$, $B=A[\x_1,\ldots,\x_n]$로 쓰면, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="hvrme" }의 universal property에 의하여 $B\twoheadrightarrow C\overset{\rho_0}{\rightarrow}R_0$를 $q$를 따라 올리는 $A$-algebra homomorphism $\widetilde{\rho}:B\rightarrow R$를 잡을 수 있다. 그럼 $(q\circ\widetilde{\rho})(\mathfrak{a})=0$이므로 그 image는 $\mathfrak{b}$에 들어가며, 더 나아가
 
 $$\widetilde{\rho}(\mathfrak{a}^2)=\widetilde{\rho}(\mathfrak{a})^2\subseteq \mathfrak{b}^2=0$$
 
@@ -446,13 +446,13 @@ $$\delta:\mathfrak{a}/\mathfrak{a}^2\rightarrow\mathfrak{b}$$
 
 을 유도한다. 이 때, $\widetilde{\rho}$가 $C=B/\mathfrak{a}$를 거쳐 factor하는 것은 $\widetilde{\rho}(\mathfrak{a})=0$, 즉 $\delta=0$인 것과 동치이며, $\delta$는 이 lift가 $X$의 defining equation을 만족하지 못하는 obstruction을 기록하는 것이다. 따라서 원하는 lifting을 얻는 문제는 $\widetilde{\rho}$를 $\mathfrak{b}$-valued derivation만큼 보정하여 $\delta$를 없애는 문제로 바뀐다. Smoothness와 [명제 8](#prop8){: data-lid="q3aid" }에 의하여 conormal sequence
 
-$$0\longrightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
+$$0\rightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}\rightarrow0$$
 
 는 split short exact sequence이다. 따라서 $r\circ\bar{d}=\id$를 만족하는 $C$-linear retraction $r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$가 존재하며, 이를 사용하여 $h=-\delta\circ r$로 두면 $h:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{b}$는 $h\circ\bar{d}=-\delta$를 만족한다. 이제 [\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2){: data-lid="7ixjx" }에 의하여 $h$는 $A$-derivation $d:B\rightarrow\mathfrak{b}$에 대응하고, $\widetilde{\rho}+d:B\rightarrow R$는 다시 $A$-algebra homomorphism이다. 이 map은 $\mathfrak{a}$ 위에서 $\delta+h\circ\bar{d}=0$이므로 $C$를 factor through하며, 얻어지는 $\rho:C\rightarrow R$는 $\rho_0$의 lifting이다.
 
-역으로 모든 square-zero extension에 대하여 lifting이 존재한다고 하자. Quotient $\pi:B/\mathfrak{a}^2\twoheadrightarrow C$의 kernel은 $\mathfrak{a}/\mathfrak{a}^2$이고 그 제곱은 영이므로, $T_0=X=\Spec C\hookrightarrow T=\Spec(B/\mathfrak{a}^2)$는 square-zero extension이다. 이를 $\varrho_0=\id_X$에 적용하면, 반대방향으로 $\pi$의 $A$-algebra section $\sigma:C\rightarrow B/\mathfrak{a}^2$를 얻는다. 이제 $B\twoheadrightarrow B/\mathfrak{a}^2$와 $B\twoheadrightarrow C\overset{\sigma}{\longrightarrow}B/\mathfrak{a}^2$의 차이는 $\mathfrak{a}/\mathfrak{a}^2$-valued $A$-derivation이고 따라서 이는 $C$-linear map
+역으로 모든 square-zero extension에 대하여 lifting이 존재한다고 하자. Quotient $\pi:B/\mathfrak{a}^2\twoheadrightarrow C$의 kernel은 $\mathfrak{a}/\mathfrak{a}^2$이고 그 제곱은 영이므로, $T_0=X=\Spec C\hookrightarrow T=\Spec(B/\mathfrak{a}^2)$는 square-zero extension이다. 이를 $\varrho_0=\id_X$에 적용하면, 반대방향으로 $\pi$의 $A$-algebra section $\sigma:C\rightarrow B/\mathfrak{a}^2$를 얻는다. 이제 $B\twoheadrightarrow B/\mathfrak{a}^2$와 $B\twoheadrightarrow C\overset{\sigma}{\rightarrow}B/\mathfrak{a}^2$의 차이는 $\mathfrak{a}/\mathfrak{a}^2$-valued $A$-derivation이고 따라서 이는 $C$-linear map
 
-$$r:\Omega_{B/A}\otimes_BC\longrightarrow\mathfrak{a}/\mathfrak{a}^2$$
+$$r:\Omega_{B/A}\otimes_BC\rightarrow\mathfrak{a}/\mathfrak{a}^2$$
 
 을 유도한다. $f\in\mathfrak{a}$에 대하여 이 derivation의 값은 $f$의 $\mathfrak{a}/\mathfrak{a}^2$에서의 class이므로 $r\circ\bar{d}=\id_{\mathfrak{a}/\mathfrak{a}^2}$이다. 즉 conormal sequence의 왼쪽 morphism은 split injection이고, [명제 8](#prop8){: data-lid="u716l" }에 의하여 $\varphi$는 smooth하다.
 :::

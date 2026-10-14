@@ -168,7 +168,7 @@ $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$
 
 임의의 manifold $M$과 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 임의의 점 $p\in M$마다 differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$이 잘 정의된다. 앞선 [명제 4](#prop4){: data-lid="sjvhv" }에 의하여, 1차원 $\mathbb{R}$-벡터공간으로서 $\mathbb{R}$과 그 tangent space $T_{f(p)}\mathbb{R}$ 사이의 isomorphism이 존재한다. 그럼 이제
 
-$$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
+$$T_pM\overset{\dd{f_p}}{\rightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\rightarrow}\mathbb{R}$$
 
 에 의하여 $\dd{f_p}$를 $(T_pM)^\ast$의 원소로 볼 수 있다.
 

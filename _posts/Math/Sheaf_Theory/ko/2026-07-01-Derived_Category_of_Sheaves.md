@@ -191,7 +191,7 @@ $$R\Gamma(X,\mathcal{F})\cong R\Gamma(Y,f_\ast\mathcal{F})$$
 ::: 따름정리 11 (Local-to-global spectral sequence)
 위상공간 $X$ (또는 ringed space $(X, \mathcal{O}_X)$) 위의 $\mathcal{F}^\bullet, \mathcal{G}^\bullet \in D^+(\operatorname{Mod}(\mathcal{O}_X))$에 대하여, 합성 $R\Hom_X(\mathcal{F}^\bullet, -) \cong R\Gamma(X, -) \circ R\sHom_X(\mathcal{F}^\bullet, -)$에 대한 Grothendieck spectral sequence로부터 다음의 local-to-global spectral sequence
 
-$$E_2^{p,q} = H^p\bigl(X, \sExt^q_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)\bigr) \Longrightarrow \Ext^{p+q}_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
+$$E_2^{p,q} = H^p\bigl(X, \sExt^q_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)\bigr) \Rightarrow \Ext^{p+q}_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
 
 가 존재한다.
 :::

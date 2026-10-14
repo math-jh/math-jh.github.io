@@ -66,7 +66,7 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 {% diagram Math/Set_Theory/Functions-2.svg width="14.24em" alt="commutative_diagram" %}
 
-여기서 $A\overset{f}{\longrightarrow}B$는 $f:A\rightarrow B$의 간편한 표기이다.  
+여기서 $A\overset{f}{\rightarrow}B$는 $f:A\rightarrow B$의 간편한 표기이다.  
 
 위와 같은 상황에서 만일 임의의 $x\in B$에 대하여 $(i\circ g)(x)=(j\circ h)(x)$가 성립한다면, 다음의 사각형
 

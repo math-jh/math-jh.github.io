@@ -127,7 +127,7 @@ $$\ell(D)\leq \deg(D)+1\tag{$3$}$$
 
 Specifically, if $D = \sum n_i p_i$ is effective, we can consider the linear map sending $f\in H^0(C, \mathcal{O}_C(D))$ to its principal part at each point $p_i$:
 
-$$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}$$
+$$H^0(C, \mathcal{O}_C(D)) \rightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}$$
 
 Intuitively, when the principal part of the Laurent polynomial of $f$ at the point $p_i$ is expressed as the following formula
 
@@ -141,11 +141,11 @@ simultaneously for all $p_i$. Then the dimension of the right-hand side of the a
 
 In general, for this formula to become an equality, the linear map must be surjective, but this does not always hold. To verify this, consider the short exact sequence examined in the proof of [Proposition 3](#prop3){: data-lid="pe306" }
 
-$$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0$$
+$$0\rightarrow \mathcal{O}_C\overset{i}{\rightarrow} \mathcal{O}_C(D)\overset{p}{\rightarrow} \mathcal{O}_D\rightarrow 0$$
 
 and the long exact sequence obtained from it:
 
-$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
+$$0\rightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\rightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\rightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\rightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\rightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
 
 Here, since $C$ is a curve and $D=\sum n_i p_i$, the sheaf $\mathcal{O}_D$ is a skyscraper sheaf having the support of $D$ of degree $\deg D$, and from this we know that $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$. Moreover, we know that the linear map ($4$) examined above actually coincides with $p^\ast$ in this long exact sequence, and from this, the cokernel of $p^\ast$ can be obtained via the following chain of isomorphisms:
 

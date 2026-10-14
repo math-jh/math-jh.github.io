@@ -177,7 +177,7 @@ $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 한편 $\mathcal{H}_{(q,z)}$는 또 다른 자연스러운 basis를 갖는데, $\Jac(W_q)$로부터 오는 것이 그것이다. 자연스러운 map
 
-$$\Jac(W_q) \;\longrightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\longmapsto\; [T\cdot e^{W_q/z}\omega]$$
+$$\Jac(W_q) \;\rightarrow\; \mathcal{H}_{(q,z)},\qquad T \;\mapsto\; [T\cdot e^{W_q/z}\omega]$$
 
 을 생각하면, 차원 계산에 의해 이것이 isomorphism임을 보일 수 있고, 이로부터 $\Jac(W_q)$의 basis $\{T_a\}$들로부터 $\mathcal{H}_{(q,z)}$의 basis
 

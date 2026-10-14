@@ -102,7 +102,7 @@ Furthermore, $d$ defined in this way commutes with the pullback $F^\ast$.
 
 A graded algebra equipped with such a differential $d$ is called a *differential graded algebra*, or simply a *DG-algebra*. Meanwhile, by condition 1 above, the following sequence
 
-$$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{\longrightarrow}\Omega^2(M)\overset{d}{\longrightarrow}\cdots\overset{d}{\longrightarrow}\Omega^n(M)\longrightarrow 0\tag{1}$$
+$$0\rightarrow\Omega^0(M)\overset{d}{\rightarrow}\Omega^1(M)\overset{d}{\rightarrow}\Omega^2(M)\overset{d}{\rightarrow}\cdots\overset{d}{\rightarrow}\Omega^n(M)\rightarrow 0\tag{1}$$
 
 becomes a cochain complex. In addition, since $d$ commutes with $F^\ast$ and $F^\ast$ is a graded algebra homomorphism, in the above language we can say that $F^\ast$ induces a chain map between the de Rham complexes.
 

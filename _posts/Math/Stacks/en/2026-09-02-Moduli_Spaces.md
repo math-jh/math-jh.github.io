@@ -89,7 +89,7 @@ $$q^{\mathrm{univ}}:\mathcal{O}_{\Gr(k,n)}^{\oplus n}\twoheadrightarrow\mathcal{
 
 the natural isomorphism by which $\Gr(k,n)$ represents $F_{k,n}$ is given explicitly by
 
-$$\Phi_T:\Hom_\Sch(T,\Gr(k,n))\longrightarrow F_{k,n}(T),\qquad f\longmapsto [f^\ast q^{\mathrm{univ}}]$$
+$$\Phi_T:\Hom_\Sch(T,\Gr(k,n))\rightarrow F_{k,n}(T),\qquad f\mapsto [f^\ast q^{\mathrm{univ}}]$$
 
 In [Definition 2](#def2){: data-lid="anq7u" }, the universal family is the element corresponding to $\id_{\Gr(k,n)}$ under this natural isomorphism, so
 
@@ -149,7 +149,7 @@ $$\Aut(E,0)\cong\begin{cases}\mu_6 & j(E)=0,\\ \mu_4 & j(E)=1728,\\ \mu_2 & j(E)
 
 In particular, every elliptic curve retains $\mu_2=\{\pm1\}$. Writing its nontrivial automorphism as $\iota_E$, we have
 
-$$\iota_E:(\x,\y)\longmapsto(\x,-\y)$$
+$$\iota_E:(\x,\y)\mapsto(\x,-\y)$$
 
 ::: Example 5 (Elliptic curves)
 Over an algebraically closed field $\mathbb{K}$ of characteristic $0$, fix an elliptic curve $E=E_{a,b}$ with
@@ -200,7 +200,7 @@ With the requirements weakened in this way, the representative result guaranteei
 ::: Theorem 8 (Keel–Mori)
 If the inertia morphism
 
-$$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times_S\mathcal{M}}\mathcal{M}\longrightarrow\mathcal{M}$$
+$$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times_S\mathcal{M}}\mathcal{M}\rightarrow\mathcal{M}$$
 
 of an algebraic stack $\mathcal{M}$ that is locally of finite type over a Noetherian base $S$ is finite, then a coarse moduli space $\pi:\mathcal{M}\rightarrow M$ exists. Here $M$ is an algebraic space locally of finite type over $S$, and $\pi$ induces a bijection between geometric isomorphism classes and the geometric points of $M$. In particular, every separated Deligne–Mumford stack of finite type has a coarse moduli space.
 :::
@@ -224,7 +224,7 @@ $$\mathbb{K}[a,b,\Delta^{-1}]^{\mathbb{G}_m}=\mathbb{K}[j]$$
 
 By this computation, the coarse moduli morphism guaranteed by [Theorem 8](#thm8){: data-lid="7bb6w" } is given by the natural transformation
 
-$$\Phi:\underline{M}_{1,1}\longrightarrow\mathbb{A}^1_j,\qquad(E,0)\longmapsto j(E)$$
+$$\Phi:\underline{M}_{1,1}\rightarrow\mathbb{A}^1_j,\qquad(E,0)\mapsto j(E)$$
 
 coming from the $j$-invariant. Over an algebraically closed field, the $j$-invariant completely determines the isomorphism class of an elliptic curve, so $\Phi$ is bijective on geometric points. Therefore $(\mathbb{A}^1_j,\Phi)$ is the coarse moduli space of $\mathcal{M}_{1,1}$.
 

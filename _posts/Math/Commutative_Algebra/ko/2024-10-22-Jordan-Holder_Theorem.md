@@ -91,7 +91,7 @@ Ring $A$에 대해 다음이 모두 동치이다.
 ::: 증명
 우선 첫째 조건을 가정하고 둘째 조건을 보이자. 결론에 반하여 $A$가 첫째 조건을 만족하지만, finite length가 아니라 하자. 이제 $\mathfrak{a}$를 $A/\mathfrak{a}$가 finite length가 아니도록 하는 $A$의 ideal들 중 maximal인 것이라 하자. 그럼 만일 $ab\in \mathfrak{a}$이고 $a\not\in \mathfrak{a}$라면, 다음의 short exact sequence
 
-$$0\longrightarrow A/(\mathfrak{a}:(a))\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
+$$0\rightarrow A/(\mathfrak{a}:(a))\overset{a}{\rightarrow}A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a))\rightarrow 0$$
 
 을 생각할 수 있다. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들){: data-lid="8g52i" }) 이제 $\mathfrak{a}+(a)$는 $\mathfrak{a}$를 strict하게 포함하는 ideal이므로, 정의에 의해 $A/(\mathfrak{a}+(a))$는 finite length여야 한다. 한편 정의로부터 $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$인데, 만일 $b\not\in \mathfrak{a}$라면 $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$가 되므로, 마찬가지로 $\mathfrak{a}$의 정의에 의해 $A/(\mathfrak{a}:(a))$는 finite length여야 한다. 따라서 이들 composition series들을 통해 $A/\mathfrak{a}$의 composition series를 얻고, 이는 $A/\mathfrak{a}$가 finite length가 아니라는 가정에 모순이므로 $b\in \mathfrak{a}$이다. 즉 $\mathfrak{a}$는 prime ideal이다. 이제 1번 조건의 가정에 의해 $\mathfrak{a}$는 maximal이므로, $A/\mathfrak{a}$는 field이고 이는 $A/\mathfrak{a}$가 finite length가 아니라는 가정에 다시 모순이므로 원하는 결과를 얻는다.
 

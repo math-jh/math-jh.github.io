@@ -173,7 +173,7 @@ $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 Meanwhile, $\mathcal{H}_{(q,z)}$ has another natural basis, namely the one coming from $\Jac(W_q)$. Considering the natural map
 
-$$\Jac(W_q) \longrightarrow \mathcal{H}_{(q,z)},\qquad T \longmapsto [T\cdot e^{W_q/z}\omega]$$
+$$\Jac(W_q) \rightarrow \mathcal{H}_{(q,z)},\qquad T \mapsto [T\cdot e^{W_q/z}\omega]$$
 
 , a dimension count shows that this is an isomorphism, and from this, given a basis $\{T_a\}$ of $\Jac(W_q)$, we can choose a basis
 

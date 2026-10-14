@@ -114,8 +114,8 @@ f\phantom{function}&\mapsto\phantom{function}\tilde{f}
 한편 임의의 $g\in\Fun(C, \Fun(B, A))$에 대하여, $\bar{g}$를 먼저 적용한 후 $\tilde{\bar{g}}$를 조사해보면, $\tilde{\bar{g}}$는 $y\mapsto \bar{g}(-,y)$로 정해지는 함수이다. 그런데 $\bar{g}$의 정의에 의하여 이는 다시 $y$를 $g(y)(-)$로 보내는 함수이다. 즉 $\tilde{\bar{g}}$는 다시 $g$가 된다. 이로부터 $\bar{\tilde{f}}=f$이고 $\tilde{\bar{g}}=g$이므로 이들은 서로 역함수 관계이다. 즉, 우리는 다음을 보인 것이다.
 
 $$\begin{aligned}
-  f\overset{\sim}{\longrightarrow}&\tilde{f}\overset{-}{\longrightarrow}\bar{\tilde{f}}=f,\\
-  g\overset{-}{\longrightarrow}&\bar{g}\overset{\sim}{\longrightarrow}\tilde{\bar{g}}=g
+  f\overset{\sim}{\rightarrow}&\tilde{f}\overset{-}{\rightarrow}\bar{\tilde{f}}=f,\\
+  g\overset{-}{\rightarrow}&\bar{g}\overset{\sim}{\rightarrow}\tilde{\bar{g}}=g
 \end{aligned}$$
 
 그러므로 $\sim\;:f\mapsto\tilde{f}$는 전단사이다. 

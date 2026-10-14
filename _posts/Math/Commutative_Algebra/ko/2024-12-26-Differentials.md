@@ -123,14 +123,14 @@ $$\Omega_{\varphi/\phi}': \varphi_!\Omega_{E/A}=\Omega_{E/A}\otimes_EE' \rightar
 ::: 명제 7
 $A$-algebra $E$와 $E$의 multiplicative subset $S$가 주어졌다 하고 ([§국소화, ⁋정의 3](/ko/math/commutative_algebra/localization#def3){: data-lid="1mgpv" }), canonical homomorphism $\varphi:E \rightarrow S^{-1}E$를 통해 $S^{-1}E$를 $A$-algebra로 보자. 그럼 [명제 6](#prop6){: data-lid="1bkj7" }가 주는 $S^{-1}E$-linear homomorphism
 
-$$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \longrightarrow \Omega_{S^{-1}E/A}$$
+$$\Omega_{\varphi/\id_A}':\Omega_{E/A}\otimes_ES^{-1}E \rightarrow \Omega_{S^{-1}E/A}$$
 
 은 isomorphism이다.
 :::
 ::: 증명
 임의의 $S^{-1}E$-module $M$에 대하여 $\varphi$를 따라 restrict하는 map
 
-$$\varphi^\ast:\Der_A(S^{-1}E, M) \longrightarrow \Der_A(E, M)$$
+$$\varphi^\ast:\Der_A(S^{-1}E, M) \rightarrow \Der_A(E, M)$$
 
 이 bijection임을 보인다. $M$이 $S^{-1}E$-module이므로 $S$의 원소들은 $M$ 위에서 invertible action을 주며, 아래에서 $M$의 원소를 $S$의 원소로 나누는 것은 이 action의 역을 뜻한다.
 
@@ -186,14 +186,14 @@ $$\Omega_\varphi:\Omega_{E'/A} \rightarrow \Omega_{E'/E}$$
 
 가 존재한다. 즉 $d_{E'/E}$는 다음의 합성
 
-$$E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E}$$
+$$E' \overset{d_{E'/A}}{\rightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\rightarrow}\Omega_{E'/E}$$
 
 과 동일하다. 
 
 ::: 명제 8 (Cotangent sequence)
 $E'$-linear map들의 sequence
 
-$$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E} \longrightarrow 0$$
+$$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\rightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\rightarrow}\Omega_{E'/E} \rightarrow 0$$
 
 는 exact이다.
 :::
@@ -210,7 +210,7 @@ $$\delta(\varphi(e)y')=\varphi(e)\,\delta(y')+y'\,\delta(\varphi(e))=\varphi(e)\
 
 이므로 $\delta$는 $E$-linear이고, 따라서 $E$-derivation이다. 그럼 [보조정리 2](#lem2){: data-lid="v00zn" }의 universal property에 의하여 $\psi\circ d_{E'/E}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/E} \rightarrow C$가 존재한다. 이제 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$를 생각하면, 각각 $C$와 $\Omega_{E'/E}$의 generator들 위에서
 
-$$\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto} d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto}d_{E'/E}y'$$
+$$\pi(d_{E'/A}y')\overset{\psi'}{\mapsto} d_{E'/E}y'\overset{\psi}{\mapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\mapsto}\pi(d_{E'/A}y')\overset{\psi'}{\mapsto}d_{E'/E}y'$$
 
 이므로 이들은 모두 identity이다. 즉 $\psi'$는 isomorphism이고, 따라서 $\ker \Omega_\varphi=N=\im \Omega_{\varphi/A}'$이다.
 :::
@@ -225,7 +225,7 @@ $$d_{E/A}\vert_K: K \rightarrow \Omega_{E/A}$$
 
 를 생각하고, 다음의 $E$-linear map
 
-$$K\overset{d\vert_K}{\longrightarrow}\Omega_{E/A}\overset{}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
+$$K\overset{d\vert_K}{\rightarrow}\Omega_{E/A}\overset{}{\rightarrow}\Omega_{E/A}\otimes_EE'$$
 
 을 생각할 수 있다. 그럼 위의 합성의 kernel이 $K^2$를 포함한다는 것을 확인할 수 있고, 따라서 이로부터 $E$-linear map
 
@@ -236,7 +236,7 @@ $$\bar{d}:K/K^2 \rightarrow \Omega_{E/A}\otimes_EE'$$
 ::: 명제 9
 위와 같은 상황에서, 다음의 sequence
 
-$$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \longrightarrow 0$$
+$$K/K^2 \overset{\bar{d}}{\rightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \rightarrow 0$$
 
 는 exact이다. 
 :::
@@ -253,7 +253,7 @@ $$\delta(x'y')=\pi(d_{E/A}(xy)\otimes 1)=\pi((x\,d_{E/A}y+y\,d_{E/A}x)\otimes 1)
 
 이므로 $A$-derivation이다. 여기서 마지막 등식은 $\Omega_{E/A}\otimes_EE'$ 위에서 $E$의 action이 $\varphi$를 통한 $E'$의 action과 일치한다는 것에 따른 것이다. 그럼 [보조정리 2](#lem2){: data-lid="1a8ym" }의 universal property에 의하여 $\psi\circ d_{E'/A}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$가 존재한다. 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$는 각각 generator들 위에서
 
-$$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}x'$$
+$$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\mapsto}d_{E'/A}\varphi(x)\overset{\psi}{\mapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\mapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\mapsto}d_{E'/A}x'$$
 
 이 되어 모두 identity이다. 즉 $\psi'$는 isomorphism이고, 따라서 $\ker\Omega_{\varphi/A}'=N'=\im\bar{d}$이다.
 :::
@@ -266,14 +266,14 @@ $$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\
 
 핵심 아이디어는 $E$를 가장 다루기 쉬운 algebra, 즉 polynomial algebra의 quotient로 표현하는 것이다. $E$의 spanning set $(t_s)_{s\in S}$를 아무거나 택하면 (가령 $E$ 전체), [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="rynig" }의 adjunction에 의하여 $\x_s\mapsto t_s$로 정의되는 surjective $A$-algebra homomorphism
 
-$$p: R=A[\x_s]_{s\in S}\longrightarrow E$$
+$$p: R=A[\x_s]_{s\in S}\rightarrow E$$
 
 가 존재한다. 이러한 $p$를 $E$의 *presentation<sub>표현</sub>*이라 부르고, $\mathfrak{I}=\ker p$라 적자. 그럼 [명제 9](#prop9){: data-lid="w20ie" }을 $\varphi=p$, 곧 $E$를 $R$로 $E'$을 $E$로 두어 적용할 수 있으며, 그 conormal sequence의 왼쪽 두 항이 다음의 complex를 이룬다.
 
 ::: 정의 10
 Presentation $p:R \rightarrow E$에 대하여, $p$의 *naive cotangent complex* $\operatorname{NL}(p)$는 conormal sequence의 왼쪽 두 항으로 이루어진 $E$-module들의 two-term complex
 
-$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
+$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
 
 를 뜻한다. 여기서 $\mathfrak{I}/\mathfrak{I}^2$는 degree $1$, $\Omega_{R/A}\otimes_RE$는 degree $0$에 둔다.
 :::
@@ -294,7 +294,7 @@ $$H_0\bigl(\operatorname{NL}(p)\bigr)\cong\Omega_{E/A}$$
 ::: 증명
 [명제 9](#prop9){: data-lid="e50bm" }의 conormal sequence
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\longrightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_{p/A}'}{\longrightarrow}\Omega_{E/A}\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\overset{\Omega_{p/A}'}{\rightarrow}\Omega_{E/A}\rightarrow0$$
 
 에서 $\Omega_{p/A}'$가 surjective이고 그 kernel이 $\im\bar{d}$이므로, first isomorphism theorem에 의하여 $\coker\bar{d}\cong\Omega_{E/A}$이다.
 :::
@@ -375,7 +375,7 @@ $$H_0(\operatorname{NL}_{E/A})\cong\Omega_{E/A},\qquad H_1(\operatorname{NL}_{E/
 ::: 예시 15
 하나의 다항식으로 표현되는 algebra $E=A[\x]/(f)$를 생각하자. 여기서 $f$는 $A[\x]$의 nonzerodivisor라 가정한다. Presentation $p:R=A[\x] \rightarrow E$에 대하여 $\mathfrak{I}=(f)$이고, $f$가 nonzerodivisor이므로 $\mathfrak{I}/\mathfrak{I}^2$는 $\overline{f}$를 기저로 갖는 free $E$-module이다. 실제로 $af\in(f^2)$라면 $af=bf^2$로부터 $a=bf\in(f)$이다. 따라서
 
-$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\longrightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
+$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\rightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
 
 이다. 여기서 $Df$는 $f$의 derivative이다. 그럼
 

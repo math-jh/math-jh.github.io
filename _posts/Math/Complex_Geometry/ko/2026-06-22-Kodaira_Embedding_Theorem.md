@@ -201,7 +201,7 @@ $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$�
 *점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. [\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12){: data-lid="vggq1" }의 blow-up canonical bundle 변화 공식에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7){: data-lid="rsccy" }을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 restriction map
 
 $$
-\Gamma(X, L^{\otimes k}) \longrightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
+\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
 $$
 
 의 전사성을 준다. 곧 두 fiber에서의 값을 독립적으로 처방하는 section이 존재하여 $x, y$가 분리된다. 같은 논법에서 한 점 $x$만 처방하면 *basepoint-free*가 따라온다.

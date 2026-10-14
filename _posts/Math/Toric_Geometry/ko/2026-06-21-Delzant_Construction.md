@@ -50,7 +50,7 @@ $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant pol
 
 ::: 정리 4 (Delzant)
 대응
-$$(M,\omega,\mathbb{T}^n,\mu)\longmapsto\mu(M)$$
+$$(M,\omega,\mathbb{T}^n,\mu)\mapsto\mu(M)$$
 은 symplectic toric manifold의 isomorphism class와 Delzant 다면체의 격자 합동류 (즉 평행이동과 $\GL(n;\mathbb{Z})$ 변환을 무시한 류) 사이의 전단사이다. 구체적으로 다음이 성립한다.
 
 1. 임의의 symplectic toric manifold $(M,\omega,\mathbb{T}^n,\mu)$의 운동량 다면체 $\Delta=\mu(M)$은 Delzant 다면체이다.
@@ -75,11 +75,11 @@ $$\beta:\mathbb{R}^d\rightarrow\mathbb{R}^n,\qquad \beta(e_i)=u_i$$
 ::: 보조정리 5
 $\Delta$이 $d$개 facet을 갖는 Delzant 다면체이고 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$이 $\beta(e_i)=u_i$로 주어진다고 하자. 그럼 $\beta$은 전사이며, 그 kernel $\mathfrak{n}:=\ker\beta\subseteq\mathbb{Z}^d$은 rank $d-n$의 자유 subgroup이고 $\mathbb{Z}^d$의 direct sum 인자(direct summand)이다. 따라서 $\beta$을 실수계수로 확장한 $\beta:\mathbb{R}^d\rightarrow\mathbb{R}^n$은 short exact sequence
 
-$$0\longrightarrow\mathfrak{n}_\mathbb{R}\longrightarrow\mathbb{R}^d\overset{\beta}{\longrightarrow}\mathbb{R}^n\longrightarrow0$$
+$$0\rightarrow\mathfrak{n}_\mathbb{R}\rightarrow\mathbb{R}^d\overset{\beta}{\rightarrow}\mathbb{R}^n\rightarrow0$$
 
 을 주고, 이를 quotient torus로 지수화하면 short exact sequence
 
-$$0\longrightarrow N\longrightarrow\mathbb{T}^d\overset{\bar{\beta}}{\longrightarrow}\mathbb{T}^n\longrightarrow0$$
+$$0\rightarrow N\rightarrow\mathbb{T}^d\overset{\bar{\beta}}{\rightarrow}\mathbb{T}^n\rightarrow0$$
 
 을 얻는다. 여기서 $\mathbb{T}^k=\mathbb{R}^k/\mathbb{Z}^k$이고 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 차원 $d-n$의 부분 torus이다.
 :::

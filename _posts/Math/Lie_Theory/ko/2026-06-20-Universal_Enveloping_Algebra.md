@@ -120,7 +120,7 @@ $U(\mathfrak{g})$는 grading을 갖지 않지만, tensor algebra의 grading이 �
 ::: 정의 6
 각 정수 $n\geq 0$에 대하여, $U(\mathfrak{g})$의 부분공간 $U_n$을 tensor algebra의 부분공간 $\bigoplus_{m\leq n}\T^m(\mathfrak{g})$의 quotient map $\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$에 의한 상으로 정의한다. 즉
 
-$$U_n=\im\Bigl(\textstyle\bigoplus_{m\leq n}\T^m(\mathfrak{g})\longrightarrow U(\mathfrak{g})\Bigr)$$
+$$U_n=\im\Bigl(\textstyle\bigoplus_{m\leq n}\T^m(\mathfrak{g})\rightarrow U(\mathfrak{g})\Bigr)$$
 
 이다. 이 부분공간들의 증가열 $U_0\subseteq U_1\subseteq U_2\subseteq\cdots$을 $U(\mathfrak{g})$의 *canonical filtration<sub>표준 여과</sub>*이라 부른다.
 :::
@@ -156,7 +156,7 @@ $$\bar{x}\bar{y}-\bar{y}\bar{x}=\overline{xy-yx}\in U_2/U_1$$
 
 $\gr U(\mathfrak{g})$가 commutative하고 $\mathfrak{g}$의 상으로 생성되므로, [\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6){: data-lid="4zq5g" }의 보편 성질에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $\mathfrak{g}$를 $U_1/U_0\subseteq\gr U(\mathfrak{g})$로 보내는 $k$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
 
-$$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
+$$\omega:\S(\mathfrak{g})\rightarrow\gr U(\mathfrak{g})$$
 
 로 확장되며, 이는 grading을 보존한다. $\gr U(\mathfrak{g})$가 degree $1$ 부분으로 생성되므로 $\omega$는 전사이다. PBW 정리의 본질은 $\omega$가 isomorphic하다는 것, 곧 단사이기도 하다는 데에 있다.
 
@@ -197,7 +197,7 @@ $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
 조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4){: data-lid="u5ikv" }에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
 
-$$\rho:U(\mathfrak{g})\longrightarrow\End_k(\S(\mathfrak{g}))$$
+$$\rho:U(\mathfrak{g})\rightarrow\End_k(\S(\mathfrak{g}))$$
 
 로 유일하게 올라간다. 이제 임의의 정렬된 단항식 $x_{i_1}\cdots x_{i_n}$ ($i_1\leq\cdots\leq i_n$)에 대하여, 이를 $\rho$를 통해 $1\in\S(\mathfrak{g})$에 작용시키면 조건 1을 반복 적용하여
 
@@ -211,7 +211,7 @@ $$\rho(x_{i_1}\cdots x_{i_n})(1)=x_{i_1}\cdot\bigl(x_{i_2}\cdot(\cdots(x_{i_n}\c
 ::: 정리 10
 [정의 7](#def7){: data-lid="mjd1r" } 이후 구성한 자연스러운 전사 준동형
 
-$$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
+$$\omega:\S(\mathfrak{g})\rightarrow\gr U(\mathfrak{g})$$
 
 는 graded 결합대수의 동형이다.
 :::

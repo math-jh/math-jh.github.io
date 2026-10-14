@@ -162,7 +162,7 @@ $$T^i(C)=\Ext^i_C(\LL_C,\mathcal{O}_C)$$
 
 우리 주장은 이것이 모든 $i\geq1$에 대하여도 $H_i(\LL_C)=0$을 만족한다는 것이며, 이는 국소적인 조건이므로 각 점의 근방에서 확인하면 된다. 우선 $C$의 smooth point 근방에서는 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="xoabf" }의 증명에서와 같이 cotangent complex가 locally free sheaf $\Omega_C$ 하나와 quasi-isomorphic하므로 더 보일 것이 없다. 문제가 될 수 있는 것은 node 근방으로, $C$는 étale-local하게 local model $R=\mathbb{K}[\x,\y]/(\x\y)$로 주어지고, cotangent complex는 étale morphism에 의한 pullback과 compatible하므로 $R$에서 확인하면 충분하다. 이는 $\mathbb{K}[\x,\y]$를 nonzerodivisor 하나로 자른 것이므로 local complete intersection이고 ([\[스킴\] §완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="9arnl" }), 따라서 [\[스킴\] §변형이론과 여접 복합체, §§소박한 여접 복합체와 매끄러움](/ko/math/scheme_theory/deformation_theory#소박한-여접-복합체와-매끄러움){: data-lid="mc2dh" }에서 보았듯 $\LL_R$은 presentation $\mathbb{K}[\x,\y]\rightarrow R$에 대한 naive cotangent complex $\NL_R$과 quasi-isomorphic하다. 이 presentation의 conormal module $(\x\y)/(\x\y)^2$는 $\x\y$의 class 하나를 basis로 갖는 free $R$-module이므로, 해당 링크에서의 Jacobian 계산에 $f=\x\y$를 대입하면
 
-$$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\longrightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
+$$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\rightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
 
 을 얻는다. 이제 우리가 보여야 할 것은 $H_1(\NL_R)=\ker\bar{d}$가 $0$이 된다는 것 뿐이다. 실제로, 만일 
 
@@ -184,11 +184,11 @@ $$\sHom(\Omega_C(\Sigma),\mathcal{O}_C)=\mathcal{T}_{C/\mathbb{K}}(-\Sigma),\qqu
 
 이다. Smooth point 근방에서는 $\Omega_C(\Sigma)=\Omega_C\otimes\mathcal{O}_C(\Sigma)$가 line bundle이므로 $q\geq1$에서 $\sExt^q=0$이고, $\sHom$은 그 dual $\mathcal{T}_{C/\mathbb{K}}\otimes\mathcal{O}_C(-\Sigma)=\mathcal{T}_{C/\mathbb{K}}(-\Sigma)$, 곧 marked point를 보존하는 infinitesimal automorphism들의 sheaf이다. 문제가 되는 것은 node 근방으로, marked point는 node와 만나지 않으므로 이 근방에서는 $\Omega_C(\Sigma)=\Omega_C$이고, 앞에서와 같이 local model $R=\mathbb{K}[\x,\y]/(\x\y)$에서 $\Ext^q_R(\Omega_R,R)$을 계산하면 된다. 우선, 앞에서 $\bar{d}$가 injective임을 보였으므로
 
-$$0\longrightarrow R\overset{\bar{d}}{\longrightarrow}R\dd{\x}\oplus R\dd{\y}\longrightarrow\Omega_R\longrightarrow0$$
+$$0\rightarrow R\overset{\bar{d}}{\rightarrow}R\dd{\x}\oplus R\dd{\y}\rightarrow\Omega_R\rightarrow0$$
 
 은 두 항으로 이루어진 $\Omega_R$의 free resolution이며 여기에 $\Hom_R(-,R)$를 취하면 $\Ext^q_R(\Omega_R,R)$은 complex
 
-$$\at{0}{\Hom_R(R\dd{\x}\oplus R\dd{\y},R)}\overset{\bar{d}^\ast}{\longrightarrow}\at{1}{\Hom_R(R,R)}$$
+$$\at{0}{\Hom_R(R\dd{\x}\oplus R\dd{\y},R)}\overset{\bar{d}^\ast}{\rightarrow}\at{1}{\Hom_R(R,R)}$$
 
 의 $q$번째 cohomology로 계산할 수 있으며, 특히 $q\geq 2$에서는 이 값이 $0$이 되어 node 근방에서도 local obstruction이 없다. 위 complex의 왼쪽 항의 원소는 $\dd{\x}$, $\dd{\y}$에서의 값 $(a,b)$로, 오른쪽 항의 원소는 $1$에서의 값으로 정해지며, $\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$이므로 $\bar{d}^\ast$는
 
@@ -286,7 +286,7 @@ $$\mathcal{C}_{A'}\times_{\Spec A'}\Spec A\cong\mathcal{C}_A$$
 
 위에서 주어진 surjection $A'\rightarrow A$의 kernel을 $J$, $A'$의 maximal ideal을 $\mathfrak{m}$이라 하자. $A'$이 local Artin ring이므로 $\mathfrak{m}^N=0$인 $N$이 존재하고, 따라서 이 surjection은
 
-$$A'=A'/\mathfrak{m}^NJ\longrightarrow\cdots\longrightarrow A'/\mathfrak{m}J\longrightarrow A'/J=A$$
+$$A'=A'/\mathfrak{m}^NJ\rightarrow\cdots\rightarrow A'/\mathfrak{m}J\rightarrow A'/J=A$$
 
 로 분해된다. 각 단계의 kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$는 source ring의 maximal ideal에 의해 소멸하므로, $\mathfrak{m}_{A'}I=0$인 kernel $I$를 갖는 surjection $A'\rightarrow A$에 대해서만 연장을 보이면 충분하다. 이 경우 $I^2=0$이므로 $A'\rightarrow A$는 square-zero extension이 되며, 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="cmkkl" }을 적용할 수 있게 된다. 그럼 coefficient sheaf가 central fiber 위의 $\mathcal{O}_C\otimes_\mathbb{K}I$이므로, flat base change와 $L_C\simeq\Omega_C$를 사용하면 이 obstruction은
 
@@ -294,7 +294,7 @@ $$\ob(\mathcal{C}_A/A')\in\Ext^2_C(\Omega_C,\mathcal{O}_C\otimes_\mathbb{K}I)\co
 
 에 놓이며, 이것이 $0$인 것은 연장이 존재하는 것과 동치이다. 곡선을 연장한 뒤 marked section은 $p_j$ 근방의 smoothness에 의해 항상 extend되므로, 보여야 할 것은 $T^2(C)\cong\Ext^2_C(\Omega_C(\Sigma),\mathcal{O}_C)$가 $0$이라는 것이다. 이를 확인하기 위해 [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="r5mnh" }이 주는 spectral sequence
 
-$$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Longrightarrow\Ext^{p+q}_C(\Omega_C(\Sigma),\mathcal{O}_C)$$
+$$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Rightarrow\Ext^{p+q}_C(\Omega_C(\Sigma),\mathcal{O}_C)$$
 
 의 total degree $2$ 부분을 보면 다음을 얻는다.
 
@@ -374,7 +374,7 @@ $$\mathbb{K}[[\u,\v,\t]]/(\u\v-\t)$$
 
 이제 $(C,p_\bullet)$의 versal formal deformation을 node $p$의 근방으로 제한하면 $\widehat{\mathcal{O}}_{C,p}$의 $R$ 위 formal deformation을 얻고, 위의 versality에 의하여 이는 node의 versal family를 어떤 local homomorphism $\mathbb{K}[[\t]]\rightarrow R$로 당긴 것이다. 이 homomorphism이 $\t$를 보내는 원소를 $\t_p\in\mathfrak{m}_R$로 적자. 그럼 tangent space 사이의 map
 
-$$T^1(C,p_\bullet)\longrightarrow\bigoplus_{p\in\Sing C}T_p^1$$
+$$T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1$$
 
 은 deformation을 각 node 근방의 local deformation으로 제한하는 것이므로 [정리 5](#thm5){: data-lid="zx1zj" }의 오른쪽 map과 같고, 따라서 surjective이다. 이 일차 정보가 versal base 전체로 연장된다는 것이 다음 명제이다.
 

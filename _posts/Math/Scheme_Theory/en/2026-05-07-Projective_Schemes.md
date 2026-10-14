@@ -337,7 +337,7 @@ $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
 Here $\alpha$ is obtained by localizing $\Phi_{f,g}^{-1}\circ\Phi_{g,f}$. Then considering the composition
 
-$$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
+$$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\rightarrow}(A_{(f)})_{\theta_{f,g}} \rightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\rightarrow} A_{(fgh)}$$
 
 since $\Phi_{f,g}$ and $\Psi_f$ respectively extend $\rho_{f,fg}$ and $\rho_{f,fgh}$, we have $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$. However, since $A_{(fg)}$ is the localization of $A_{(f)}$ at $\theta_{f,g}$ via $\Phi_{f,g}$ and $\rho_{fg,fgh}$ also satisfies the same formula, by the uniqueness in [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6){: data-lid="panmq" } we have $\tau=\rho_{fg,fgh}$. From this
 

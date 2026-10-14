@@ -135,7 +135,7 @@ $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha
 ::: 증명
 $f,g$와 $f',g'$이 각각 주어진 두 개의 열
 
-$$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\longrightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\longrightarrow}\coker(\beta)\overset{(g')^\ast}{\longrightarrow}\coker(\gamma)$$
+$$\ker(\alpha)\overset{f^\sharp}{\rightarrow}\ker(\beta)\overset{g^\sharp}{\rightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\rightarrow}\coker(\beta)\overset{(g')^\ast}{\rightarrow}\coker(\gamma)$$
 
 을 유도하는 것은 [보조정리 4](#lem4){: data-lid="yt1hi" }의 결과이다. 뿐만 아니라, $i_A, i_B, i_C$를 각각 kernel들에서 $A,B,C$로의 자명한 함수들이라 하면
 

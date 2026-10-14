@@ -415,13 +415,13 @@ Intuitively, [Proposition 14](#prop14){: data-lid="lkqwz" } shows that even if a
 
     then by [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9){: data-lid="fj9r7" }, an $S$-scheme $p:P_\mathcal{L}\rightarrow S$ is well defined. The group scheme action $\varrho: \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}$ on it is now defined over each $U_i$ by the multiplication of $\mathbb{G}_m$
 
-    $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
+    $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \rightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
 
     Our claim is that this is a $G$-torsor.
 
     First, since locally $P_\mathcal{L}\vert_{U_i}\cong \mathbb{G}_{m, U_i} \rightarrow U_i$ is faithfully flat and of finite presentation, and these properties are local on the base, the map $p:P_\mathcal{L}\rightarrow S$ is faithfully flat and locally of finite presentation. As for the map $(\varrho, \pr_2): \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}\times_S P_\mathcal{L}$ in the second condition of [Definition 12](#def12){: data-lid="9xkno" }, over each $U_i$ it corresponds to the morphism
 
-    $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
+    $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \rightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
 
     which, algebraically, is given by the map between coordinate rings
 

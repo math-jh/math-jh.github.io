@@ -39,7 +39,7 @@ The ideal quotient $(\mathfrak{a}:\mathfrak{b})$ can roughly be thought of as so
 
 Meanwhile, in [\[Multilinear Algebra\] §Exact Sequences, ⁋Proposition 7](/en/math/multilinear_algebra/exact_sequences#prop7){: data-lid="rrfod" } we examined two useful short exact sequences; it is worth adding the following short exact sequence to them and keeping it in mind:
 
-$$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
+$$0 \rightarrow A/(\mathfrak{a}:(a)) \overset{a}{\rightarrow} A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a)) \rightarrow 0$$
 
 The first map $A/(\mathfrak{a}:(a)) \rightarrow A/\mathfrak{a}$ is given by the formula
 
@@ -151,7 +151,7 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 In general, a finitely presented module is finitely generated, but the converse does not hold. However, for any Noetherian ring $A$, the two notions coincide. This is because if $M$ is a finitely generated $A$-module, we obtain the following exact sequence
 
-$$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
+$$0\rightarrow\ker u \rightarrow A^{\oplus n} \overset{u}{\rightarrow} M \rightarrow 0$$
 
 and on the other hand $A^{\oplus n}$ is Noetherian by [Corollary 6](#cor6){: data-lid="zi0kr" }, so its submodule $\ker u$ is finitely generated. Now, considering
 

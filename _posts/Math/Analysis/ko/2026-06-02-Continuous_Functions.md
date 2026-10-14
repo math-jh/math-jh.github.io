@@ -96,11 +96,11 @@ $K$가 컴팩트이고 $f : K \rightarrow Y$가 연속이면 $f$는 균등연속
 ::: 증명
 $f$가 균등연속이 아니라 하자. [명제 5](#prop5){: data-lid="vn2lc" }에 의하여 어떤 $\varepsilon > 0$과 점열 $(x_n), (x_n')$이 있어 $d_K(x_n, x_n') \rightarrow 0$이고 모든 $n$에 대해 $d_Y(f(x_n), f(x_n')) \geq \varepsilon$이다. $K$가 컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있다. 그러면
 
-$$d_K(x_{n_k}', x) \leq d_K(x_{n_k}', x_{n_k}) + d_K(x_{n_k}, x) \longrightarrow 0$$
+$$d_K(x_{n_k}', x) \leq d_K(x_{n_k}', x_{n_k}) + d_K(x_{n_k}, x) \rightarrow 0$$
 
 이므로 $x_{n_k}' \rightarrow x$이다. $f$가 $x$에서 연속이므로 [§함수의 극한과 연속, ⁋정리 4](/ko/math/analysis/limits_and_continuity#thm4){: data-lid="jlofh" }의 (b)에 의하여 $f(x_{n_k}) \rightarrow f(x)$이고 $f(x_{n_k}') \rightarrow f(x)$이며,
 
-$$d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr) \leq d_Y\bigl(f(x_{n_k}), f(x)\bigr) + d_Y\bigl(f(x), f(x_{n_k}')\bigr) \longrightarrow 0$$
+$$d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr) \leq d_Y\bigl(f(x_{n_k}), f(x)\bigr) + d_Y\bigl(f(x), f(x_{n_k}')\bigr) \rightarrow 0$$
 
 이다. 이는 모든 $k$에서 이 거리가 $\varepsilon$ 이상이라는 데 모순이다.
 :::
@@ -151,7 +151,7 @@ $$x = x' + (x - x') \leq x' + 2\sqrt{x'}\sqrt{x - x'} + (x - x') = \bigl(\sqrt{x
 이므로 $\sqrt{x} \leq \sqrt{x'} + \sqrt{x - x'}$이고, 따라서 $\lvert \sqrt{x} - \sqrt{x'} \rvert \leq \sqrt{\lvert x - x' \rvert}$이다. $\delta = \varepsilon^2$으로 두면 $\lvert x - x' \rvert < \delta$일 때 $\lvert \sqrt{x} - \sqrt{x'} \rvert < \varepsilon$이므로 $f$는 균등연속이다. 이 결론은 정의역이 컴팩트가 아닌 $[0,\infty)$에서도 성립한다. $[0,1]$로 제한하면 [정리 6](#thm6){: data-lid="sv9c9" }으로도 얻어진다.
 
 그러나 $x' = 0$으로 두면
-$$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0 \rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty \quad (x \rightarrow 0^+)$$
+$$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0 \rvert} = \frac{1}{\sqrt{x}} \rightarrow \infty \quad (x \rightarrow 0^+)$$
 이므로 어떤 $L$로도 묶이지 않아, $f$는 $[0,1]$에서도 Lipschitz가 아니다.
 :::
 
@@ -164,7 +164,7 @@ $$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0 \rvert} = \frac{1}{\sqrt
 ::: 예시 10 (역함수가 불연속인 연속 전단사)
 $S^1 = \{(u,v) \in \mathbb{R}^2 : u^2 + v^2 = 1\}$이라 하고
 
-$$f : [0, 2\pi) \longrightarrow S^1, \qquad f(t) = (\cos t, \sin t)$$
+$$f : [0, 2\pi) \rightarrow S^1, \qquad f(t) = (\cos t, \sin t)$$
 
 로 두자. $f$는 연속이고 전단사이다. 그러나 역함수 $g = f^{-1}$은 점 $f(0) = (1,0)$에서 연속이 아니다. 점열 $p_n = f(2\pi - 1/n) = (\cos(1/n), -\sin(1/n))$은 $(1,0)$으로 수렴하지만, $g(p_n) = 2\pi - 1/n \rightarrow 2\pi$이고 $g(1,0) = 0$이기 때문이다. $f$는 $[0,2\pi)$의 두 끝 $0$과 $2\pi$ 근처를 원 위의 가까운 점들로 보내지만, 정의역에는 끝점 $2\pi$가 없어서 $g$가 이 가까움을 되돌리지 못한다.
 :::

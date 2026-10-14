@@ -90,7 +90,7 @@ $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
 and likewise for the square involving $v$. Therefore it suffices to show that the following square
 
-$$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
+$$\begin{aligned}H_n(C)&\overset{\partial}{\rightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\rightarrow}H_{n-1}(A')\end{aligned}$$
 
 commutes. Following the construction in the proof of [Theorem 1](#thm1){: data-lid="aja6h" }, $\partial$ is computed as follows. For any $[c]\in H_n(C)$, since $v_n$ is surjective there exists $b\in B_n$ such that $v_n(b)=c$, and since $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$, by exactness there exists a unique $a\in A_{n-1}$ such that $u_{n-1}(a)=d_n^Bb$, and $\partial[c]=[a]$. One can also check that this value is independent of the choice of lift $b$: if $v_n(b)=v_n(\tilde{b})=c$, then there exists $\alpha\in A_n$ such that $b-\tilde{b}=u_n(\alpha)$, and the two corresponding elements $a,\tilde{a}$ then satisfy $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$, so by the injectivity of $u_{n-1}$ we have $a-\tilde{a}=d_n^A\alpha$, whence $[a]=[\tilde{a}]$.
 
@@ -201,7 +201,7 @@ In [Definition 4](#def4){: data-lid="pkm8l" }, we agreed to call chain complexes
 ::: Definition 8
 For any chain map $f:C_\bullet\rightarrow D_\bullet$, the *mapping cone* of $f$, $\Cone(f)$, is the following chain complex
 
-$$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\longrightarrow\cdots$$
+$$\cdots\rightarrow\underbrace{C_n\oplus D_{n+1}}_{\Cone(f)_{n+1}}\overset{d_{n+1}}{\rightarrow}\underbrace{C_{n-1}\oplus D_n}_{\Cone(f)_n}\overset{d_n}{\rightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\Cone(f)_{n-1}}\rightarrow\cdots$$
 
 Here, the differential is given by the formula
 
@@ -211,7 +211,7 @@ $$d_n(x,y)=(-d_{n-1}(x), d_n(y)-f_{n-1}(x))\qquad (x\in C_{n-1},y\in D_n)$$
 
 Suppose a chain map $f: C_\bullet \rightarrow D_\bullet$ is given, and for the mapping cone of $f$, $\Cone(f)$, consider the sequence of chain complexes
 
-$$0 \longrightarrow D \longrightarrow \Cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
+$$0 \rightarrow D \rightarrow \Cone(f) \overset{\delta}{\rightarrow} C[-1] \rightarrow0$$
 
 Here, $D \rightarrow\Cone(f)$ sends $y$ to $(0,y)$, and $\delta$ sends $(x,y)$ to $-x$. Then, since it is immediate from the definitions of these maps that the sequence above is a short exact sequence, by [Theorem 1](#thm1){: data-lid="nxgqc" } there exists the following long exact sequence
 

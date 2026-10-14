@@ -110,11 +110,11 @@ $s=\sup\{i\mid\Ext_A^i(\kappa,M)\neq 0\}$으로 둔다.
 > $A$의 임의의 prime ideal $\mathfrak{p}$와 임의의 $j>n$에 대하여 $\Ext_A^j(A/\mathfrak{p},M)=0$이다.
 
 이를 위해, 적당한 $j>n$에 대하여 $\Ext_A^j(A/\mathfrak{p},M)\neq 0$인 prime $\mathfrak{p}$들의 모임 $\mathcal{T}$가 공집합임을 보인다. $\mathcal{T}\neq\emptyset$이라 가정하면, $A$가 Noetherian이므로 $\mathcal{T}$는 포함관계에 대한 maximal element $\mathfrak{p}_0$을 갖는다. ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3){: data-lid="75ihn" }) 만일 $\mathfrak{p}_0=\mathfrak{m}$이라면 적당한 $j>n$에서 $\Ext_A^j(\kappa,M)\neq 0$이 되어 $n=s$의 정의에 모순이므로, $\mathfrak{p}_0\subsetneq\mathfrak{m}$이고 $x\in\mathfrak{m}\setminus\mathfrak{p}_0$을 택할 수 있다. $A/\mathfrak{p}_0$은 integral domain이고 $x$의 상이 $0$이 아니므로 곱하기 $x$는 $A/\mathfrak{p}_0$ 위에서 injective이며, 다음의 short exact sequence
-$$0\rightarrow A/\mathfrak{p}_0\overset{x}{\longrightarrow}A/\mathfrak{p}_0\rightarrow A/(\mathfrak{p}_0+(x))\rightarrow 0$$
+$$0\rightarrow A/\mathfrak{p}_0\overset{x}{\rightarrow}A/\mathfrak{p}_0\rightarrow A/(\mathfrak{p}_0+(x))\rightarrow 0$$
 을 얻는다. [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6){: data-lid="ssrt3" }에 의하여 $A/(\mathfrak{p}_0+(x))$는 subquotient가 $A/\mathfrak{q}$ 꼴인 filtration을 가지며, 각 $\mathfrak{q}$는 $\mathfrak{p}_0+(x)$를 포함하므로 $x\in\mathfrak{q}\setminus\mathfrak{p}_0$, 곧 $\mathfrak{q}\supsetneq\mathfrak{p}_0$이다. $\mathfrak{p}_0$의 maximality에 의하여 이러한 $\mathfrak{q}$는 $\mathcal{T}$에 속하지 않으므로 $j>n$에서 $\Ext_A^j(A/\mathfrak{q},M)=0$이고, filtration의 short exact sequence들에 $\Hom_A(-,M)$의 long exact sequence를 적용하면 $j>n$에서 $\Ext_A^j(A/(\mathfrak{p}_0+(x)),M)=0$을 얻는다.
 
 이제 위의 short exact sequence에 $\Hom_A(-,M)$을 취한 long exact sequence
-$$\cdots\rightarrow\Ext_A^j(A/(\mathfrak{p}_0+(x)),M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)\overset{x}{\longrightarrow}\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^{j+1}(A/(\mathfrak{p}_0+(x)),M)\rightarrow\cdots$$
+$$\cdots\rightarrow\Ext_A^j(A/(\mathfrak{p}_0+(x)),M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)\overset{x}{\rightarrow}\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^{j+1}(A/(\mathfrak{p}_0+(x)),M)\rightarrow\cdots$$
 에서 가운데 map은 곱하기 $x$가 유도하는 것이므로 $\Ext_A^j(A/\mathfrak{p}_0,M)$ 위의 스칼라 곱 $x$이다. $j>n$이면 $j$와 $j+1$이 모두 $n$보다 크므로 양옆의 항이 $0$이고, 따라서 곱하기 $x:\Ext_A^j(A/\mathfrak{p}_0,M)\rightarrow\Ext_A^j(A/\mathfrak{p}_0,M)$은 isomorphism, 특히 surjective이다. $A$가 Noetherian이므로 $A/\mathfrak{p}_0$은 finitely generated free module들의 resolution을 가지며, 따라서 $\Ext_A^j(A/\mathfrak{p}_0,M)$은 finitely generated $A$-module이다. ([§Depth, ⁋정리 7](/ko/math/commutative_algebra/depth#thm7){: data-lid="afo7l" }의 증명에서와 같은 논증이다.) $x\in\mathfrak{m}$이 이 module 위에 surjective하게 작용하므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="68uua" }에 의하여 $j>n$에서 $\Ext_A^j(A/\mathfrak{p}_0,M)=0$이다. 이는 $\mathfrak{p}_0\in\mathcal{T}$에 모순이므로 $\mathcal{T}=\emptyset$이며, 위의 주장을 얻는다.
 
 마지막으로 임의의 ideal $I$에 대하여 $A/I$는 finitely generated $A$-module이므로 [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6){: data-lid="dse8t" }에 의하여 subquotient가 $A/\mathfrak{p}_k$ 꼴인 filtration $0=N_0\subsetneq\cdots\subsetneq N_r=A/I$를 가지며, 위의 주장에 의하여 각 $\Ext_A^{n+1}(A/\mathfrak{p}_k,M)=0$이다. Filtration의 short exact sequence들과 $\Hom_A(-,M)$의 long exact sequence로부터 $k$에 대한 귀납법으로 $\Ext_A^{n+1}(A/I,M)=0$을 얻는다. 따라서 [§호몰로지 차원, ⁋따름정리 5](/ko/math/commutative_algebra/homological_dimension#cor5){: data-lid="tjaou" }에 의하여 $\operatorname{injdim}_A M\leq n=s$이며, 앞서 보인 $s\leq\operatorname{injdim}_A M$과 종합하여 등식을 얻는다.
@@ -173,7 +173,7 @@ $$\Hom_A(E,E)\cong\widehat{A}$$
 :::
 ::: 증명
 $E_n=(0:_E\mathfrak{m}^n)$으로 두면 [보조정리 10](#lem10){: data-lid="co23h" }에 의하여 $E=\bigcup_n E_n$이다. $\varphi\in\Hom_A(E,E)$이면 $x\in E_n$에 대하여 $\mathfrak{m}^n\varphi(x)=\varphi(\mathfrak{m}^nx)=0$이므로 $\varphi(E_n)\subseteq E_n$이다. $E$가 증가하는 $E_n$들의 합집합이므로, $\varphi$를 각 $E_n$으로 제한하는 것은 isomorphism
-$$\Hom_A(E,E)\overset{\sim}{\longrightarrow}\varprojlim_n\Hom_A(E_n,E)$$
+$$\Hom_A(E,E)\overset{\sim}{\rightarrow}\varprojlim_n\Hom_A(E_n,E)$$
 을 준다. 이는 합집합의 universal property, 곧 $E_n$들 위에서 서로 호환되는 map들의 족이 $E$ 전체 위의 map과 일대일로 대응한다는 사실이다. 한편 $E_n$이 $\mathfrak{m}^n$에 의하여 소멸되므로 임의의 $\Hom_A(E_n,E)$의 상은 $(0:_E\mathfrak{m}^n)=E_n$에 들어가고, 따라서
 $$\Hom_A(E_n,E)=D(E_n)=D(D(A/\mathfrak{m}^n))\cong A/\mathfrak{m}^n$$
 이다. 마지막 isomorphism은 유한 길이 module $A/\mathfrak{m}^n$에 [명제 9](#prop9){: data-lid="axlf3" }를 적용한 것이며, evaluation map의 naturality에 의하여 $m\leq n$에서의 restriction map $D(E_n)\rightarrow D(E_m)$은 canonical projection $A/\mathfrak{m}^n\rightarrow A/\mathfrak{m}^m$에 대응한다. 그러므로

@@ -38,7 +38,7 @@ For a flat ring homomorphism $\phi: A \rightarrow B$, the following are equivale
 ::: Proof
 We first show that the first and second conditions are equivalent. To this end, assume the first condition. Since $B$ is flat by assumption, an exact sequence remains exact after applying $-\otimes_A B$, so one direction of the second condition is trivial. The point is the converse; to show it, suppose that
 
-$$M'\otimes_AB \overset{f\otimes_AB}{\longrightarrow} M\otimes_AB \overset{g\otimes_AB}{\longrightarrow} M''\otimes_AB$$
+$$M'\otimes_AB \overset{f\otimes_AB}{\rightarrow} M\otimes_AB \overset{g\otimes_AB}{\rightarrow} M''\otimes_AB$$
 
 is an exact sequence. First of all,
 
@@ -77,7 +77,7 @@ $$d^0, d^1: B \rightrightarrows B\otimes_A B,\qquad d^0(b)=b\otimes 1,\quad d^1(
 
 These are the two homomorphisms recording the two ways in which $B$ may be inserted into $B\otimes_AB$, and taking their difference $d=d^1-d^0$ we may consider the morphism $d: B\rightarrow B\otimes_AB$. Moreover, since any element coming from $A$ lies in the kernel of $d$ by the defining property of the tensor product, we may consider the sequence
 
-$$0\rightarrow A \overset{\phi}{\longrightarrow}B\overset{d}{\longrightarrow}B\otimes_AB.$$
+$$0\rightarrow A \overset{\phi}{\rightarrow}B\overset{d}{\rightarrow}B\otimes_AB.$$
 
 More generally, let $C^n=B^{\otimes (n+1)}$ be the $(n+1)$-th tensor power of $B$, and consider the morphisms from $C^n$ to $C^{n+1}$ given by
 
@@ -89,7 +89,7 @@ $$\partial^n=\sum_{i=0}^{n+1}(-1)^i\delta_i: C^n \rightarrow C^{n+1}$$
 
 is again a morphism from $C^n$ to $C^{n+1}$. A short computation confirms that this forms a complex, and we call the sequence
 
-$$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{\partial^0}{\longrightarrow} B\otimes_A B \overset{\partial^1}{\longrightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
+$$0 \rightarrow A \overset{\phi}{\rightarrow} B \overset{\partial^0}{\rightarrow} B\otimes_A B \overset{\partial^1}{\rightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
 
 obtained by adjoining $\phi$ as above the *Amitsur complex* of $\phi$.
 
@@ -98,18 +98,18 @@ The key observation is that if $\phi$ is faithfully flat, then this complex is e
 ::: Lemma 3
 For a ring homomorphism $\phi: A \rightarrow B$, the sequence of $B$-modules
 
-$$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
+$$0 \rightarrow B \overset{\phi\otimes B}{\rightarrow} B\otimes_A B \overset{d\otimes B}{\rightarrow} B\otimes_A B\otimes_A B$$
 
 obtained by applying $-\otimes_A B$ to the above sequence is split exact. In particular, if $\phi$ is faithfully flat, then the sequence
 
-$$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{d}{\longrightarrow} B\otimes_A B$$
+$$0 \rightarrow A \overset{\phi}{\rightarrow} B \overset{d}{\rightarrow} B\otimes_A B$$
 
 is exact.
 :::
 ::: Proof
 First, consider the sequence
 
-$$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
+$$0 \rightarrow B \overset{\phi\otimes B}{\rightarrow} B\otimes_A B \overset{d\otimes B}{\rightarrow} B\otimes_A B\otimes_A B$$
 
 obtained by applying $-\otimes_A B$. Our claim is that this is a split exact sequence.
 
@@ -173,7 +173,7 @@ as the morphisms mapping into the two of the three factors singled out by the in
 ::: Definition 4
 A *descent datum* for a ring homomorphism $\phi: A \rightarrow B$ is a pair $(N, \Phi_N)$ consisting of a $B$-module $N$ and a $B\otimes_A B$-module isomorphism
 
-$$\Phi_N: p_1^\ast N=N\otimes_A B \overset{\sim}{\longrightarrow} B\otimes_A N=p_2^\ast N$$
+$$\Phi_N: p_1^\ast N=N\otimes_A B \overset{\sim}{\rightarrow} B\otimes_A N=p_2^\ast N$$
 
 satisfying the *cocycle condition*
 
@@ -199,7 +199,7 @@ which are distinct $B\otimes_AB$-modules, just as in the general case examined a
 ::: Example 5
 Given an $A$-module $M$, set $N=M\otimes_A B$; then the $B\otimes_A B$-module isomorphism
 
-$$\sigma_M: M\otimes_A B\otimes_A B \overset{\sim}{\longrightarrow} B\otimes_A M\otimes_A B;\qquad m\otimes x\otimes y\mapsto x\otimes m\otimes y$$
+$$\sigma_M: M\otimes_A B\otimes_A B \overset{\sim}{\rightarrow} B\otimes_A M\otimes_A B;\qquad m\otimes x\otimes y\mapsto x\otimes m\otimes y$$
 
 between the two base changes $p_1^\ast N=M\otimes_A B\otimes_A B$ and $p_2^\ast N=B\otimes_A M\otimes_A B$ seen above defines a descent datum $(M\otimes_A B, \sigma_M)$. We call this the *canonical descent datum* attached to $M$.
 
@@ -247,9 +247,9 @@ Now identifying these two and applying $p_{12}^\ast \Phi_N$ to both sides, we ob
 
 $$\sum_j \Phi_N(n_j\otimes 1)\otimes c_j=\sum_j (1\otimes n_j)\otimes c_j.$$
 
-Therefore, defining $d_N: N \rightarrow B\otimes_A N$ by $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$, we have $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$. Our claim is then that $\ker(d_N\otimes B)=M\otimes_AB$, so that the above assignment lands in $M\otimes_AB$. Now by the definition of $M$, the sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\longrightarrow} B\otimes_A N$ is exact, and since $B$ is flat, applying $-\otimes_AB$ yields
+Therefore, defining $d_N: N \rightarrow B\otimes_A N$ by $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$, we have $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$. Our claim is then that $\ker(d_N\otimes B)=M\otimes_AB$, so that the above assignment lands in $M\otimes_AB$. Now by the definition of $M$, the sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\rightarrow} B\otimes_A N$ is exact, and since $B$ is flat, applying $-\otimes_AB$ yields
 
-$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\longrightarrow} B\otimes_A N\otimes_A B,$$
+$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\rightarrow} B\otimes_A N\otimes_A B,$$
 
 which is again exact. That is, inside $N\otimes_A B$ we have $M\otimes_A B=\ker(d_N\otimes B)$.
 

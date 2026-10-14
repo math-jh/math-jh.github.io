@@ -39,7 +39,7 @@ $$(N_1:N_2)=\{a\in A\mid aN_2\subseteq N_1\}$$
 
 한편 우리는 [\[다중선형대수학\] §완전열, ⁋명제 7](/ko/math/multilinear_algebra/exact_sequences#prop7){: data-lid="rrfod" }에서 유용한 두 개의 short exact sequence를 살펴보았는데, 여기에 다음의 short exact sequence
 
-$$0 \longrightarrow A/(\mathfrak{a}:(a)) \overset{a}{\longrightarrow} A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a)) \longrightarrow 0$$
+$$0 \rightarrow A/(\mathfrak{a}:(a)) \overset{a}{\rightarrow} A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a)) \rightarrow 0$$
 
 을 추가하여 기억할 가치가 있다. 첫 번째 함수 $A/(\mathfrak{a}:(a)) \rightarrow A/\mathfrak{a}$는 다음의 식
 
@@ -153,7 +153,7 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 일반적으로 finitely presented module은 finitely generated이지만, 그 역은 성립하지 않는다. 하지만 임의의 Noetherian ring $A$에 대해서는 두 개념이 일치한다. 이는 만일 $M$이 finitely generated $A$-module이라면, 다음의 exact sequence
 
-$$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
+$$0\rightarrow\ker u \rightarrow A^{\oplus n} \overset{u}{\rightarrow} M \rightarrow 0$$
 
 를 얻고, 한편 $A^{\oplus n}$은 [따름정리 6](#cor6){: data-lid="zi0kr" }에 의하여 Noetherian이며 따라서 그 submodule $\ker u$는 finitely generated이다. 이제
 

@@ -120,7 +120,7 @@ In this process, points where both coordinates are nonzero become the same point
 
 Now since $\pi_1\circ\Delta=\pi_2\circ\Delta=\id_X$, we have $\Delta^{-1}(X_a\times_\mathbb{K}X_b)=X_a\cap X_b$. That is, if $a=b$ this is all of $X_a$ and by [Lemma 5](#lem5){: data-lid="hs77d" } $\Delta$ is a closed embedding on it; in particular the two origins of $X$ go to $(0_1,0_1)$ and $(0_2,0_2)$ among the four origins. On the other hand, if $a\neq b$ then $\Delta$ is the morphism induced on $X_1\cap X_2=\Spec\mathbb{K}[t,1/t]$ by the ring homomorphism
 
-$$\mathbb{K}[\x_1,\x_2] \longrightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapsto t$$
+$$\mathbb{K}[\x_1,\x_2] \rightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapsto t$$
 
 so within the chart $X_1\times_\mathbb{K}X_2\cong \mathbb{A}^2_\mathbb{K}$, the set $\Delta(X)$ is $Z(\x_1-\x_2)\cap D(\x_1)$, the diagonal with the origin removed. The closure of this set is the entire diagonal $Z(\x_1-\x_2)$, and its origin is exactly $(0_1,0_2)$, so $(0_1,0_2)$ does not belong to $\Delta(X)$ while belonging to its closure. Therefore $\Delta(X)$ is not closed, and by [Proposition 4](#prop4){: data-lid="94env" }, $X$ is not separated. This space is also the standard example of a space that is not Hausdorff topologically.
 
@@ -140,7 +140,7 @@ Throughout the proof we use two standard facts. The first is the existence theor
 
 First assume $\varphi$ is separated, and suppose two liftings $\gamma_1, \gamma_2$ of the above square are given. Since $\varphi\circ \gamma_1=\varphi\circ \gamma_2=\beta$, by the universal property of the fiber product there exists a unique $\theta:\Spec A \rightarrow X\times_YX$ with $\pi_1\circ \theta=\gamma_1$, $\pi_2\circ \theta=\gamma_2$. Here $\pi_1,\pi_2$ are the two projections. Now since $\Delta$ is a closed embedding, the base change
 
-$$Z=\Spec A\times_{X\times_YX}X \longrightarrow \Spec A$$
+$$Z=\Spec A\times_{X\times_YX}X \rightarrow \Spec A$$
 
 is also a closed embedding. That closed embeddings are stable under base change is obtained affine-locally from the fact that a base change of $B \rightarrow B/\mathfrak{b}$ is $C \rightarrow C\otimes_B(B/\mathfrak{b})\cong C/\mathfrak{b}C$, which remains surjective. ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3){: data-lid="fstql" })
 
@@ -168,7 +168,7 @@ $$K:=\kappa(\xi)=\mathcal{O}_{T,\xi}=\Frac(B), \qquad \mathcal{O}:=\mathcal{O}_{
 
 where $\mathfrak{q}$ is the prime ideal corresponding to $\eta$. In particular $\mathcal{O}$ is a local domain with $\Frac(\mathcal{O})=K$. Choosing a valuation ring $A$ of $K$ dominating $\mathcal{O}$ by the existence theorem quoted above, the morphism
 
-$$\chi:\Spec A \longrightarrow \Spec \mathcal{O} \longrightarrow T \hookrightarrow X\times_YX$$
+$$\chi:\Spec A \rightarrow \Spec \mathcal{O} \rightarrow T \hookrightarrow X\times_YX$$
 
 induced by the local homomorphism $\mathcal{O} \rightarrow A$ sends the generic point $(0)$ of $\Spec A$ to $\xi$ and the closed point $\mathfrak{m}_A$ to $\eta$.
 
@@ -192,7 +192,7 @@ Earlier we checked that the line with double origin $X$ is not separated using [
 
 Now as before let the two charts be $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$, and define two morphisms
 
-$$\gamma_1:\Spec A \longrightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \longrightarrow X_2\subseteq X$$
+$$\gamma_1:\Spec A \rightarrow X_1\subseteq X,\qquad \gamma_2:\Spec A \rightarrow X_2\subseteq X$$
 
 by $\x_1\mapsto t$ and $\x_2\mapsto t$ respectively; both are well-defined since $t\in A$. Since the two charts are glued by identifying $\x_1$ and $\x_2$ outside the origin, we have $\gamma_1\circ \iota=\gamma_2\circ \iota=\alpha$, so both are liftings of this square. However, $\gamma_1$ sends $\mathfrak{m}_A=(t)$ to the origin $0_1$ of the first chart, while $\gamma_2$ sends it to the origin $0_2$ of the second chart, so $\gamma_1\neq \gamma_2$. That is, the germ of a curve missing a point has two limits, and this is why $X$ is not separated.
 :::
@@ -225,7 +225,7 @@ For item 5, if a square for $\varphi$ and two liftings $\gamma_1,\gamma_2$ are g
 
 Finally, item 4 follows for $S$-schemes from the fact that for separated morphisms $\varphi:X \rightarrow Y$, $\varphi':X' \rightarrow Y'$, the product $\varphi\times \varphi'$ decomposes as
 
-$$X\times_SX' \longrightarrow Y\times_SX' \longrightarrow Y\times_SY'$$
+$$X\times_SX' \rightarrow Y\times_SX' \rightarrow Y\times_SY'$$
 
 and the two morphisms are base changes of $\varphi$ and $\varphi'$ respectively, so this follows from items 3 and 2.
 :::
@@ -282,7 +282,7 @@ Therefore it suffices to show that $\varphi(T)=\varphi\vert_T(T)$ is a closed se
 
 We first show that $\varphi(X)$ is closed under specialization. Let $y_1=\varphi(x_1)\in \varphi(X)$ and $y_0\in\cl(\{y_1\})$. Giving the reduced scheme structure to $W=\cl(\{y_1\})$, $W$ is an integral scheme with generic point $y_1$, and as before $\mathcal{O}=\mathcal{O}_{W,y_0}$ is a local domain with $\Frac(\mathcal{O})=\kappa(y_1)$. Now let $K=\kappa(x_1)$ and view $\mathcal{O}$ as a local subring of $K$ via the field homomorphism $\kappa(y_1)\hookrightarrow K$ induced by $\varphi$. Then there exists a valuation ring $A$ of $K$ dominating $\mathcal{O}$, and from this we obtain two morphisms
 
-$$\Spec A \longrightarrow \Spec\mathcal{O} \longrightarrow W\hookrightarrow Y,\qquad \alpha:\Spec K \longrightarrow X.$$
+$$\Spec A \rightarrow \Spec\mathcal{O} \rightarrow W\hookrightarrow Y,\qquad \alpha:\Spec K \rightarrow X.$$
 
 Here $\alpha$ is the canonical morphism defined by the point $x_1$ and $\kappa(x_1)=K$. These two form the outer square, because both compositions to $\Spec K \rightarrow Y$ are the canonical morphism defined by the point $y_1$ and the field homomorphism $\kappa(y_1)\hookrightarrow K$. By existence in the criterion, a lifting $\gamma_0:\Spec A \rightarrow X$ exists, and since $\Spec A \rightarrow \Spec\mathcal{O}$ comes from a local homomorphism, $\mathfrak{m}_A$ goes to $\mathfrak{m}_\mathcal{O}$, i.e., $y_0$. Therefore $\varphi(\gamma_0(\mathfrak{m}_A))=y_0$ and $y_0\in \varphi(X)$.
 
@@ -311,7 +311,7 @@ It is good to see what the criterion looks like when it fails. If [Example 7](#e
 ::: Example 12
 $\mathbb{A}^1_\mathbb{K}=\Spec\mathbb{K}[\x]$ is not proper over $\Spec\mathbb{K}$. Choose $A=\mathbb{K}[t]_{(t)}$ and $K=\Frac(A)=\mathbb{K}(t)$, and consider the morphism $\alpha:\Spec K \rightarrow \mathbb{A}^1_\mathbb{K}$ defined by the ring homomorphism
 
-$$\mathbb{K}[\x] \longrightarrow K;\qquad \x\mapsto 1/t.$$
+$$\mathbb{K}[\x] \rightarrow K;\qquad \x\mapsto 1/t.$$
 
 Since everything is over $\mathbb{K}$, $\alpha$ and the structure morphism $\Spec A \rightarrow \Spec\mathbb{K}$ form the outer square. If a lifting $\gamma:\Spec A \rightarrow \mathbb{A}^1_\mathbb{K}$ existed, it would correspond to a ring homomorphism $\mathbb{K}[\x] \rightarrow A$, and the condition $\gamma\circ \iota=\alpha$ means the composition of this homomorphism with $A\hookrightarrow K$ sends $\x$ to $1/t$. That is, $1/t\in A$ must hold, but since $t$ is a uniformizer of $A$ this is impossible. Therefore no lifting exists, and by [Theorem 11](#thm11){: data-lid="a9w1f" }, $\mathbb{A}^1_\mathbb{K} \rightarrow \Spec\mathbb{K}$ is not proper.
 
@@ -334,7 +334,7 @@ For item 1, a closed embedding is separated by item 1 of [Corollary 8](#cor8){: 
 
 For item 2, separated is item 2 of [Corollary 8](#cor8){: data-lid="mp4yr" } and the composition of finite type morphisms is finite type, so we only need to show universally closed. Given $Z' \rightarrow Z$, since $X\times_ZZ'=X\times_Y(Y\times_ZZ')$, the two morphisms
 
-$$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
+$$X\times_ZZ' \rightarrow Y\times_ZZ' \rightarrow Z'$$
 
 are base changes of $\varphi$ and $\psi$ respectively, and hence both are closed maps. The composition of closed maps is a closed map, so $X\times_ZZ' \rightarrow Z'$ is also closed.
 
@@ -357,7 +357,7 @@ A finite morphism $\varphi:X \rightarrow Y$ is an affine morphism, so for any af
 
 Suppose an outer square $\alpha:\Spec K \rightarrow X$, $\beta:\Spec A \rightarrow Y$ is given. Every point of $\Spec A$ is a specialization of the generic point $(0)$ and morphisms preserve specialization, so choosing an affine open subset $V=\Spec B$ of $Y$ containing $\beta(\mathfrak{m}_A)$, we have that $V$ also contains $\beta((0))$ and hence $\beta$ factors through $V$. Then the image of $\alpha$ lies in $\varphi^{-1}(V)=\Spec C$, and $C$ is finitely generated as a $B$-module. Now the problem becomes: given ring homomorphisms
 
-$$B \longrightarrow A,\qquad C \longrightarrow K$$
+$$B \rightarrow A,\qquad C \rightarrow K$$
 
 construct $C \rightarrow A$ compatible with these.
 
@@ -382,13 +382,13 @@ along $U_i\cap U_j=D(\x_j/\x_i)\subseteq U_i$. Here since $\x_i/\x_i=1$, each $U
 
 That $\pi$ is separated is checked directly on charts. $\mathbb{P}^n_\mathbb{Z}\times_\mathbb{Z}\mathbb{P}^n_\mathbb{Z}$ is covered by affine open subsets $U_i\times_\mathbb{Z}U_j$ and $\pi_1\circ\Delta=\pi_2\circ\Delta=\id$, so $\Delta^{-1}(U_i\times_\mathbb{Z}U_j)=U_i\cap U_j$. Now looking at the ring homomorphism induced by $\Delta$ on this,
 
-$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \longrightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \rightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
 
 the right-hand side is generated over $\mathbb{Z}$ by the $\x_l/\x_i$ and $(\x_j/\x_i)^{-1}=\x_i/\x_j$; the former come from the first factor and the latter from the second, so this morphism is surjective. Therefore $\Delta$ is a closed embedding on each $U_i\times_\mathbb{Z}U_j$, and since closed embeddings are affine-local on the target ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3){: data-lid="4xuyx" }), $\Delta$ itself is a closed embedding.
 
 Since $\Spec \mathbb{Z}$ is a terminal object in the category of schemes, giving an outer square for a valuation ring $A$ and $K=\Frac(A)$ is the same as giving a morphism $\Spec K \rightarrow \mathbb{P}^n_\mathbb{Z}$. Uniqueness of liftings follows from $\pi$ being separated and [Theorem 6](#thm6){: data-lid="63wcp" }, so we only need to show existence. Since $\Spec K$ is a single point, the image of the given morphism lies in some chart $U_i$, and hence this morphism corresponds to a ring homomorphism
 
-$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K.$$
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \rightarrow K.$$
 
 Let the image of $\x_j/\x_i$ be $a_j\in K$; then $a_i=1$. Now defining $s\preceq t$ on $K^\times$ by $t/s\in A$, by definition of a valuation ring for any $s,t$ either $s\preceq t$ or $t\preceq s$, and if $t/s\in A$ and $r/t\in A$ then $r/s=(r/t)(t/s)\in A$, so $\preceq$ is a total preorder on $K^\times$. Since $a_i=1\neq 0$, the finite set $\{a_j \mid a_j\neq 0\}$ is nonempty, so we can choose a minimal element $a_k$ of this set. That is, for all $j$,
 
@@ -396,7 +396,7 @@ $$b_j:=a_j/a_k\in A.$$
 
 (If $a_j=0$ then $b_j=0\in A$.) In particular $b_k=1$, so the ring homomorphism
 
-$$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
+$$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \rightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
 
 is defined, and this gives a morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$. To show this is a lifting, we need to check that its composition with $A\hookrightarrow K$ equals the originally given morphism. Since $a_k\neq 0$, the original ring homomorphism sends $\x_k/\x_i$ to the unit $a_k$ of $K$, and hence the image of the original morphism lies in $D(\x_k/\x_i)=U_i\cap U_k$. Then on $U_k$, by the transition relation
 

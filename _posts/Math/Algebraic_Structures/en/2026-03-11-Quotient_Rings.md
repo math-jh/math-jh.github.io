@@ -78,7 +78,7 @@ $$(\alpha+x)(\alpha'+x')=\alpha\alpha'+(x\alpha'+\alpha x'+xx')$$
 
 we have $\alpha\alpha'\in S$, and since $\ker \phi$ is a two-sided ideal by 1, the three terms in parentheses all belong to $\ker \phi$. Adding $1\in S$ to this, we obtain that $S+\ker \phi$ is a subring of $A$. Also, $S\cap\ker \phi$ is a subgroup of $S$ under addition, and for any $\alpha\in S$ and $y\in S\cap\ker \phi$, since both $\alpha y$ and $y\alpha$ belong to both $S$ and $\ker \phi$, this is a two-sided ideal of $S$. Now considering the composition
 
-$$S\hookrightarrow S+\ker \phi\longrightarrow (S+\ker \phi)/\ker \phi$$
+$$S\hookrightarrow S+\ker \phi\rightarrow (S+\ker \phi)/\ker \phi$$
 
 this is surjective and its kernel is $S\cap\ker \phi$, so applying 1 yields the desired isomorphism.
 

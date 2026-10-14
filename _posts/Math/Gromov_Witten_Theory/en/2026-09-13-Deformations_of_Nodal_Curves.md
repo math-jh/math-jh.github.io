@@ -161,7 +161,7 @@ In general, $\LL_C$ is a complex with terms in degree $0$ and above, and for a g
 
 Our claim is that this also satisfies $H_i(\LL_C)=0$ for all $i\geq1$, and since this is a local condition, it suffices to check it in a neighborhood of each point. First, in a neighborhood of a smooth point of $C$, the cotangent complex is quasi-isomorphic to a single locally free sheaf $\Omega_C$ as in the proof of [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Proposition 9](/en/math/scheme_theory/deformation_theory#prop9){: data-lid="xoabf" }, so there is nothing more to show. What could be problematic is near the nodes; étale-locally, $C$ is given by the local model $R=\mathbb{K}[\x,\y]/(\x\y)$, and since the cotangent complex is compatible with pullback by étale morphisms, it suffices to check on $R$. Since this is obtained by cutting out $\mathbb{K}[\x,\y]$ by a single nonzerodivisor, it is a local complete intersection ([\[Schemes\] §Complete Intersections, ⁋Definition 1](/en/math/scheme_theory/complete_intersections#def1){: data-lid="9arnl" }), and hence, as seen in [\[Schemes\] §Deformation Theory and the Cotangent Complex, §§Naive Cotangent Complex and Smoothness](/en/math/scheme_theory/deformation_theory#naive-cotangent-complex-and-smoothness){: data-lid="mc2dh" }, $\LL_R$ is quasi-isomorphic to the naive cotangent complex $\NL_R$ associated with the presentation $\mathbb{K}[\x,\y]\rightarrow R$. Since the conormal module $(\x\y)/(\x\y)^2$ of this presentation is a free $R$-module with the class of $\x\y$ as a basis, substituting $f=\x\y$ into the Jacobian calculation at the corresponding link yields
 
-$$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\longrightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
+$$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\rightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
 
 Now, all we have to show is that $H_1(\NL_R)=\ker\bar{d}$ is $0$. Indeed, if
 
@@ -183,11 +183,11 @@ $$\sHom(\Omega_C(\Sigma),\mathcal{O}_C)=\mathcal{T}_{C/\mathbb{K}}(-\Sigma),\qqu
 
 In a neighborhood of a smooth point, $\Omega_C(\Sigma)=\Omega_C\otimes\mathcal{O}_C(\Sigma)$ is a line bundle, so for $q\geq1$ we have $\sExt^q=0$, and $\sHom$ is its dual $\mathcal{T}_{C/\mathbb{K}}\otimes\mathcal{O}_C(-\Sigma)=\mathcal{T}_{C/\mathbb{K}}(-\Sigma)$, namely the sheaf of infinitesimal automorphisms preserving the marked points. What is problematic is near the nodes; since the marked points do not meet the nodes, we have $\Omega_C(\Sigma)=\Omega_C$ in this neighborhood, and as before, it suffices to compute in the local model $R=\mathbb{K}[\x,\y]/(\x\y)$ the module $\Ext^q_R(\Omega_R,R)$. First, since we showed earlier that $\bar{d}$ is injective,
 
-$$0\longrightarrow R\overset{\bar{d}}{\longrightarrow}R\dd{\x}\oplus R\dd{\y}\longrightarrow\Omega_R\longrightarrow0$$
+$$0\rightarrow R\overset{\bar{d}}{\rightarrow}R\dd{\x}\oplus R\dd{\y}\rightarrow\Omega_R\rightarrow0$$
 
 is a free resolution of $\Omega_R$ consisting of two terms, and applying $\Hom_R(-,R)$ to this, we can compute $\Ext^q_R(\Omega_R,R)$ as the cohomology of the complex
 
-$$\at{0}{\Hom_R(R\dd{\x}\oplus R\dd{\y},R)}\overset{\bar{d}^\ast}{\longrightarrow}\at{1}{\Hom_R(R,R)}$$
+$$\at{0}{\Hom_R(R\dd{\x}\oplus R\dd{\y},R)}\overset{\bar{d}^\ast}{\rightarrow}\at{1}{\Hom_R(R,R)}$$
 
 in degree $q$. In particular, for $q\geq 2$, this value becomes $0$, so there is no local obstruction near the nodes either. An element in the left term of the above complex is determined by its values on $\dd{\x}$ and $\dd{\y}$ as $(a,b)$, and an element in the right term by its value on $1$. Since $\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$, we can write $\bar{d}^\ast$ as
 
@@ -283,7 +283,7 @@ preserves the identification of the central fiber and the marked sections. In ot
 
 For the surjection $A'\rightarrow A$ given above, let its kernel be $J$, and let the maximal ideal of $A'$ be $\mathfrak{m}$. Since $A'$ is a local Artin ring, we have $\mathfrak{m}^N=0$ for some $N$, and therefore this surjection factors as
 
-$$A'=A'/\mathfrak{m}^NJ\longrightarrow\cdots\longrightarrow A'/\mathfrak{m}J\longrightarrow A'/J=A$$
+$$A'=A'/\mathfrak{m}^NJ\rightarrow\cdots\rightarrow A'/\mathfrak{m}J\rightarrow A'/J=A$$
 
 Since the kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$ at each stage is annihilated by the maximal ideal of the source ring, it suffices to show the extension only when $\mathfrak{m}_{A'}I=0$ for the kernel $I$ of the surjection $A'\rightarrow A$. In this case, since $I^2=0$, $A'\rightarrow A$ is a square-zero extension, and therefore we can apply [\[Schemes\] §Deformation Theory and the Cotangent Complex, ⁋Theorem 11](/en/math/scheme_theory/deformation_theory#thm11){: data-lid="cmkkl" }. Then, since the coefficient sheaf is $\mathcal{O}_C\otimes_\mathbb{K}I$ on the central fiber, using flat base change and $L_C\simeq\Omega_C$, this obstruction lies in
 
@@ -291,7 +291,7 @@ $$\ob(\mathcal{C}_A/A')\in\Ext^2_C(\Omega_C,\mathcal{O}_C\otimes_\mathbb{K}I)\co
 
 and its being $0$ is equivalent to the existence of an extension. After extending the curve, the marked sections always extend by smoothness near $p_j$, so what we need to show is that $T^2(C)\cong\Ext^2_C(\Omega_C(\Sigma),\mathcal{O}_C)$ is $0$. To verify this, in the spectral sequence given by [\[Sheaf Theory\] §Derived Category of Sheaves and Derived Functors, ⁋Corollary 11](/en/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="r5mnh" },
 
-$$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Longrightarrow\Ext^{p+q}_C(\Omega_C(\Sigma),\mathcal{O}_C)$$
+$$E_2^{p,q}=H^p\bigl(C,\sExt^q(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)\Rightarrow\Ext^{p+q}_C(\Omega_C(\Sigma),\mathcal{O}_C)$$
 
 looking at the total degree $2$ part yields the following.
 
@@ -371,7 +371,7 @@ Indeed, when the residue field is $\mathbb{K}$, over a complete local $\mathbb{K
 
 Now, restricting the versal formal deformation of $(C,p_\bullet)$ to a neighborhood of the node $p$ yields a formal deformation of $\widehat{\mathcal{O}}_{C,p}$ over $R$, which by the versality above is the pullback of the versal family of the node by some local homomorphism $\mathbb{K}[[\t]]\rightarrow R$. Let us write the element to which this homomorphism sends $\t$ as $\t_p\in\mathfrak{m}_R$. Then the map between tangent spaces
 
-$$T^1(C,p_\bullet)\longrightarrow\bigoplus_{p\in\Sing C}T_p^1$$
+$$T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1$$
 
 is the restriction of deformations to local deformations near each node, so it coincides with the right-hand map in [Theorem 5](#thm5){: data-lid="zx1zj" }, and hence is surjective. That this first-order information extends to the entire versal base is the content of the following proposition.
 

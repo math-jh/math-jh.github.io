@@ -100,7 +100,7 @@ Tangent bundle $TM$이 중요한 것은 manifold 위에 정의된 대다수의 v
 이제 morphism들이 isomorphism으로 구성된 유한차원 $\mathbb{R}$-벡터공간들의 category $\mathbf{FVect}_\text{iso}$를 생각하자. 그럼 $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$는 
 
 - 유한차원 벡터공간들의 pair $(V,W)$들이 object,
-- 유한차원 벡터공간들 사이의 isomorphism들의 pair $(V,W)\overset{(f,g)}{\longrightarrow}(V',W')$가 morphism
+- 유한차원 벡터공간들 사이의 isomorphism들의 pair $(V,W)\overset{(f,g)}{\rightarrow}(V',W')$가 morphism
 
 인 category이다. 따라서 $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$에서 $\mathbf{FVect}_\text{iso}$로의 functor $F$는 $(V,W)$를 받아 $\mathbb{R}$-벡터공간 $F(V,W)$를, $(f,g)$를 받아 isomorphism $F(f,g)$를 내놓아야 한다.
 

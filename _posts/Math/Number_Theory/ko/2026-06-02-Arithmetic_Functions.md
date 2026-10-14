@@ -142,7 +142,7 @@ $\mathbf 1\ast\mu=\varepsilon$이다. 즉 $n>1$이면 $\sum_{d\mid n}\mu(d)=0$�
 ::: 정리 11 (뫼비우스 반전 공식)
 산술적 함수 $f,g$에 대하여 다음 두 조건은 동치이다.
 
-$$g(n)=\sum_{d\mid n}f(d)\quad(\forall n)\quad\Longleftrightarrow\quad f(n)=\sum_{d\mid n}\mu(d) g(n/d)\quad(\forall n)$$
+$$g(n)=\sum_{d\mid n}f(d)\quad(\forall n)\quad\iff\quad f(n)=\sum_{d\mid n}\mu(d) g(n/d)\quad(\forall n)$$
 :::
 
 ::: 증명

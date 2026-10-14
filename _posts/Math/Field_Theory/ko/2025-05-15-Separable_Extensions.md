@@ -78,7 +78,7 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 ::: 예시 4
 좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="ek8pv" }의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10){: data-lid="vk5z0" }의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14){: data-lid="oenpk" }로부터 다음의 exact sequence
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_{\mathbb{Q}[\x]}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\longrightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\longrightarrow 0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\rightarrow}\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}\otimes_{\mathbb{Q}[\x]}\mathbb{Q}(\sqrt{2})\overset{\Omega_0(u)}{\rightarrow}\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}\rightarrow 0$$
 
 로부터 $\Omega_{\mathbb{Q}(\sqrt{2})/\mathbb{Q}}$는 원소 $\dd{(\sqrt{2})}$로 생성되는 $\mathbb{Q}(\sqrt{2})$-module임을 안다. 그런데 다음의 계산
 

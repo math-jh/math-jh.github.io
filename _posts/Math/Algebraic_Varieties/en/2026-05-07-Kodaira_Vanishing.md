@@ -129,18 +129,18 @@ That the set over which the minimum is taken in the above definition is nonempty
 
 In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9){: data-lid="qw9z5" }, we defined a line bundle $\mathcal{L}$ being very ample to mean that the complete linear system $\lvert \mathcal{L} \rvert$ defines a morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$ that is a closed embedding. At that time we did not yet have the language of sheaf cohomology, but now that we have introduced sheaf cohomology, we can put it to better use.
 
-First, suppose that a very ample line bundle $\mathcal{L}$ is given, and consider the closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$ defined by it. Then, from $\varphi$ being an embedding, we know that $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$ holds; furthermore, since $\varphi_\mathcal{L}$ is a closed embedding, $\dd{\varphi_\mathcal{L}}$ is injective, and hence the dual map on the cotangent space $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$ is surjective. From this we know that the following two results hold.
+First, suppose that a very ample line bundle $\mathcal{L}$ is given, and consider the closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$ defined by it. Then, from $\varphi$ being an embedding, we know that $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$ holds; furthermore, since $\varphi_\mathcal{L}$ is a closed embedding, $\dd{\varphi_\mathcal{L}}$ is injective, and hence the dual map on the cotangent space $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \rightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$ is surjective. From this we know that the following two results hold.
 
 1. *$\varphi_\mathcal{L}$ separates points.* That is, for any two distinct closed points $p, q \in X$, there exists, satisfying $s(p) = 0$ and $s(q) \neq 0$, a global section $s \in H^0(X, \mathcal{L})$.
 2. *$\varphi_\mathcal{L}$ separates tangent vectors.* That is, for any closed point $p \in X$, the collection of sections vanishing at $p$, $\{ s \in H^0(X, \mathcal{L}) \mid s(p) = 0 \}$, spans the vector space $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$ corresponding to the cotangent space.
 
 The first condition means that the evaluation map
 
-$$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
+$$H^0(X, \mathcal{L}) \rightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
 
 is surjective, and the second condition means that the image of the restriction map on sections vanishing at $p$,
 
-$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
+$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \rightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
 
 spans the entire $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$. It is not difficult to check that their converses also hold. That is, the following holds.
 
@@ -150,7 +150,7 @@ For a projective variety $X$ over an algebraically closed field and a line bundl
 
 Now suppose $\mathcal{L}$ is an ample line bundle, and let us examine how these separation conditions are verified for $\mathcal{L}^{\otimes m}$ via cohomology. First, in the case of (1), if for two points $p \neq q$ we consider the closed subset $Z = \{p\} \cup \{q\}$ containing them, then for the ideal sheaf defining $Z$, $\mathcal{I}_Z$, we obtain the short exact sequence
 
-$$0 \longrightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \longrightarrow 0$$
+$$0 \rightarrow \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z \rightarrow 0$$
 
 Here $\mathcal{L}^{\otimes m} \otimes \mathcal{O}_Z$ is a line bundle on $Z$, and
 
@@ -158,17 +158,17 @@ $$H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \cong \mathcal{L}^{\otimes m}_p \oplus
 
 holds. Considering the long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \rightarrow H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m})$$
 
 induced from this, we see that if $H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m}) = 0$, the evaluation map becomes surjective and separation of points holds.
 
 Similarly, in the case of (2), if we consider the first infinitesimal neighborhood of the point $p$, $\Spec(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$, and let $\mathcal{I}_p$ be the ideal sheaf of $p$, then from the short exact sequence
 
-$$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \longrightarrow 0$$
+$$0 \rightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \rightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \rightarrow 0$$
 
 the induced long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \rightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
 
 shows that if $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$, then separation of tangent vectors holds.
 
@@ -176,7 +176,7 @@ Since $\mathcal{I}_Z$ and $\mathcal{I}_p^2$ are coherent sheaves, applying [§Co
 
 Meanwhile, Kodaira vanishing enters the classical proof of [Proposition 6](#prop6){: data-lid="hld30" } in a different way. In that proof, on the blow-up of $p$ and $q$, $\pi: \widetilde{X} \rightarrow X$, one applies vanishing to a line bundle with the twist lowered by the exceptional divisor, so that the object of vanishing becomes a line bundle again, reducing to the form of [Proposition 1](#prop1){: data-lid="467qy" }. Furthermore, the condition that $\mathcal{L}^{\otimes m}$ be not only very ample but also that the embedding it defines be projectively normal can be obtained by verifying the surjectivity of the related multiplication map
 
-$$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
+$$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \rightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 
 and what supplies the necessary vanishing together with a concrete range of $m$ is the Castelnuovo-Mumford regularity from [§Cohomology of Projective Space, §§Regularity](/en/math/algebraic_varieties/cohomology_of_projective_spaces#regularity){: data-lid="orywe" }. Such vanishing guarantees that higher cohomology does not obstruct the generation of sections, allowing one to handle the abundance of linear systems quantitatively.
 

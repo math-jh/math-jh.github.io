@@ -329,7 +329,7 @@ $$\Omega_0(u): \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A}$$
 
 을 유도한다. 한편, $E'$를 $E\rightarrow E'$를 사용하여 $E$-algebra로 취급하면, 여기에서 얻어지는 derivation $d_{E'/E}: E' \rightarrow\Omega_{E'/E}$는 $A$-derivation이기도 하므로 $\Omega_{E'/A}$의 universal property에 의하여 다음의 factorization
 
-$$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}$$
+$$E'\overset{d_{E'/A}}{\rightarrow}\Omega_{E'/A}\overset{\Omega_u}{\rightarrow}\Omega_{E'/E}$$
 
 이 존재한다. 그럼 다시 universal property에 의하여 다음의 commutative diagram
 
@@ -342,7 +342,7 @@ $$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrigh
 ::: 명제 13
 $E'$-module들의 sequence
 
-$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}\longrightarrow0$$
+$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\rightarrow}\Omega_{E'/A}\overset{\Omega_u}{\rightarrow}\Omega_{E'/E}\rightarrow0$$
 
 가 exact이다. 
 :::
@@ -360,7 +360,7 @@ $$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N)
 
 이번에는 특히 $u:E \rightarrow E'$가 surjective이고, 따라서 $\mathfrak{I}=\ker u$에 대하여 isomorphism $E'\cong E/\mathfrak{I}$인 경우를 생각하자. 그럼 canonical derivation $d=d_{E/A}$의 $\mathfrak{I}$로의 restriction
 
-$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'$$
+$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\rightarrow}\Omega_{E/A}\overset{i_E}{\rightarrow}\Omega_{E/A}\otimes_EE'$$
 
 을 $d'$라 하면, 임의의 $x,y\in \mathfrak{I}$에 대하여
 
@@ -375,7 +375,7 @@ $$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 ::: 명제 14
 위의 상황에서, 다음의 $E'$-linear map들의 sequence
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\rightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\rightarrow}\Omega_{E'/A}\rightarrow0$$
 
 이 exact이다. 
 :::

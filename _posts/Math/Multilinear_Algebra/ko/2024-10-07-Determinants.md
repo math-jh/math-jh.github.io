@@ -182,7 +182,7 @@ $$\psi(p\otimes_Ax)=(\x p)\otimes_Ax -p\otimes_A u(x)$$
 
 으로 정의하자. 그럼 다음의 $A[\x]$-module들의 exact sequence
 
-$$\iota_!M\overset{\psi}{\longrightarrow}\iota_!M\overset{\rho}{\longrightarrow}M_u\longrightarrow 0$$
+$$\iota_!M\overset{\psi}{\rightarrow}\iota_!M\overset{\rho}{\rightarrow}M_u\rightarrow 0$$
 
 이 exact이다. 
 :::

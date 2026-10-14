@@ -32,7 +32,7 @@ Triangulated 범주 $\mathcal{T}$ 위의 *t-structure<sub>t-구조</sub>*는 충
 1. (포함) $\mathcal{T}^{\leq 0} \subseteq \mathcal{T}^{\leq 1}$이고 $\mathcal{T}^{\geq 1} \subseteq \mathcal{T}^{\geq 0}$이다.
 2. (직교성) $X \in \mathcal{T}^{\leq 0}$, $Y \in \mathcal{T}^{\geq 1}$이면 $\Hom_{\mathcal{T}}(X, Y) = 0$이다.
 3. (절단 삼각형) 임의의 $X \in \mathcal{T}$에 대해 distinguished triangle
-$$A \longrightarrow X \longrightarrow B \xrightarrow{+1}$$
+$$A \rightarrow X \rightarrow B \xrightarrow{+1}$$
 이 존재하여 $A \in \mathcal{T}^{\leq 0}$, $B \in \mathcal{T}^{\geq 1}$이다.
 :::
 
@@ -40,7 +40,7 @@ $$A \longrightarrow X \longrightarrow B \xrightarrow{+1}$$
 
 ::: 명제 2
 $(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$이 t-structure이면 포함 functor $\mathcal{T}^{\leq n} \hookrightarrow \mathcal{T}$는 오른쪽 수반 $\tau_{\leq n}: \mathcal{T} \rightarrow \mathcal{T}^{\leq n}$을, 포함 functor $\mathcal{T}^{\geq n} \hookrightarrow \mathcal{T}$는 왼쪽 수반 $\tau_{\geq n}: \mathcal{T} \rightarrow \mathcal{T}^{\geq n}$을 가진다. 각 $X$에 대해 [정의 1](#def1){: data-lid="ld7r9" }의 절단 삼각형은 유일하게 결정되며 $X$에 functorial하고, 표준적으로
-$$\tau_{\leq 0} X \longrightarrow X \longrightarrow \tau_{\geq 1} X \xrightarrow{+1}$$
+$$\tau_{\leq 0} X \rightarrow X \rightarrow \tau_{\geq 1} X \xrightarrow{+1}$$
 의 형태이다.
 :::
 ::: 증명
@@ -132,7 +132,7 @@ $$\operatorname{Perv}(\{\ast\}) \cong \operatorname{Vec}^{fd}_k$$
 
 ::: 정의 10
 Open embedding $j: U \hookrightarrow X$와 perverse sheaf $\mathcal{F} \in \operatorname{Perv}(U)$에 대해, 표준 morphism $j_! \mathcal{F} \rightarrow Rj_\ast \mathcal{F}$에 perverse cohomology ${}^{p}\mathcal{H}^0$을 적용하여 얻는 $\operatorname{Perv}(X)$ 안의 morphism의 image
-$$j_{!\ast} \mathcal{F} := \im\big({}^{p}\mathcal{H}^0(j_! \mathcal{F}) \longrightarrow {}^{p}\mathcal{H}^0(Rj_\ast \mathcal{F})\big)$$
+$$j_{!\ast} \mathcal{F} := \im\big({}^{p}\mathcal{H}^0(j_! \mathcal{F}) \rightarrow {}^{p}\mathcal{H}^0(Rj_\ast \mathcal{F})\big)$$
 을 $\mathcal{F}$의 *intermediate extension<sub>중간 연장</sub>*이라 부른다. 나아가 irreducible closed submanifold $Z \subseteq X$ (복소 차원 $d$)와 그 smooth한 dense 열린 부분 $U_Z \subseteq Z$ 위의 local system $L$에 대해, open embedding $j: U_Z \hookrightarrow Z$와 closed embedding $i_Z: Z \hookrightarrow X$를 두고
 $$\operatorname{IC}_Z(L) := (i_Z)_\ast j_{!\ast}(L[d]) \in \operatorname{Perv}(X)$$
 을 $(Z, L)$의 *intersection cohomology sheaf* 또는 *IC sheaf*라 부른다.

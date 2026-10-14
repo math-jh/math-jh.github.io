@@ -225,7 +225,7 @@ $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right
 
 exists. Then defining $u: M\oplus M \rightarrow M$ by $(x,y)\mapsto x+y$, we know that the composition
 
-$$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\longrightarrow} \Sym(M)$$
+$$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\rightarrow} \Sym(M)$$
 
 sends $x\otimes y$ to $xy$.
 
@@ -255,7 +255,7 @@ and it is not difficult to check that this is indeed a graded homomorphism. Here
 
 On the other hand, $\bar{s}$ also has a map in the opposite direction,
 
-$$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M),$$
+$$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\rightarrow}\S(M),$$
 
 and our claim is that in many cases these two maps can be thought of as (almost) inverses of each other.
 

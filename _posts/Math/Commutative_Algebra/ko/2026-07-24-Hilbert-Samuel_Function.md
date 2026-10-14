@@ -57,7 +57,7 @@ $$\Delta P=\sum_{k=1}^d c_k\binom{\x}{k-1}$$
 ::: 보조정리 3
 $A$-module들의 short exact sequence
 
-$$0 \rightarrow M' \overset{u}{\longrightarrow} M \overset{v}{\longrightarrow} M'' \rightarrow 0$$
+$$0 \rightarrow M' \overset{u}{\rightarrow} M \overset{v}{\rightarrow} M'' \rightarrow 0$$
 
 에 대하여, $M$이 유한한 길이를 갖는 것과 $M'$, $M''$이 모두 유한한 길이를 갖는 것이 동치이며, 이 때 다음의 식
 
@@ -101,7 +101,7 @@ $R$의 generator의 개수 $s$에 대한 귀납법으로 증명한다. $s=0$인 
 
 이제 $s\geq 1$이라 하고 주장이 $s-1$개의 degree $1$ 원소로 생성되는 graded ring들에 대해 성립한다고 가정하자. 곱하기 $x_s$는 각 degree에서 $R_0$-linear map $M_n \rightarrow M_{n+1}$을 주므로, $K=\{z\in M\mid x_sz=0\}$와 $C=M/x_sM$으로 두면 각각의 $n$에 대하여 다음의 exact sequence
 
-$$0 \rightarrow K_n \rightarrow M_n \overset{x_s}{\longrightarrow} M_{n+1} \rightarrow C_{n+1} \rightarrow 0$$
+$$0 \rightarrow K_n \rightarrow M_n \overset{x_s}{\rightarrow} M_{n+1} \rightarrow C_{n+1} \rightarrow 0$$
 
 를 얻는다. 여기서 $K$가 graded submodule이라는 것은, $z\in K$를 homogeneous 성분들로 분해하여 $z=\sum z_i$로 적으면 $x_sz_i$들이 서로 다른 degree의 homogeneous 성분들이므로 $x_sz=0$이 각각의 $x_sz_i=0$을 함의한다는 것에서 알 수 있고, $x_sM$이 graded submodule이므로 $C$도 graded module이다. $R$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="0a0w7" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="lyfsm" }), 따라서 submodule $K$는 finitely generated이며 ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3){: data-lid="okyff" }) quotient $C$도 그러하다.
 
@@ -124,7 +124,7 @@ $$H_M(n+1)-H_M(n)=H_C(n+1)-H_K(n)$$
     이다. 즉 $P_R$는 degree가 정확히 $s-1$이고, [정리 5](#thm5){: data-lid="kuiaq" }의 degree 상한이 실제로 달성된다.  
     이제 $s\geq 2$라 하고, $0$이 아닌 degree $e$의 homogeneous polynomial $f\in R$에 대하여 $S=R/(f)$를 생각하자. $R$는 integral domain이므로 곱하기 $f$는 injective이고, 각각의 $n\geq e$에 대하여 exact sequence
 
-    $$0 \rightarrow R_{n-e} \overset{f}{\longrightarrow} R_n \rightarrow S_n \rightarrow 0$$
+    $$0 \rightarrow R_{n-e} \overset{f}{\rightarrow} R_n \rightarrow S_n \rightarrow 0$$
 
     로부터 다음의 식
 
@@ -249,7 +249,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 finitely generated $A$
 ::: 증명
 곱하기 $x$는 isomorphism $M \rightarrow xM$을 주므로 short exact sequence
 
-$$0 \rightarrow M \overset{x}{\longrightarrow} M \rightarrow M/xM \rightarrow 0$$
+$$0 \rightarrow M \overset{x}{\rightarrow} M \rightarrow M/xM \rightarrow 0$$
 
 을 얻는다. 만일 $M/xM=0$이라면 $M=xM\subseteq \mathfrak{m}M$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="rqjf0" }에 의하여 $M=0$이 되어 모순이다. 이제 [명제 11](#prop11){: data-lid="b5j2o" }을 $\mathfrak{a}=\mathfrak{m}$에 대해 적용하자. Submodule 쪽의 module이 $M$과 isomorphic하므로 그 Hilbert-Samuel function은 $\chi_{\mathfrak{m},M}$과 같고, 따라서 [명제 11](#prop11){: data-lid="gkg68" }의 첫째 결과의 함수는 $\chi_{\mathfrak{m},M/xM}$ 자신이다. 즉 $\chi_{\mathfrak{m},M/xM}$은 충분히 큰 $n$에서 $0$이거나 degree가 $\deg P_{\mathfrak{m},M}=d(M)$보다 작은 numerical polynomial과 일치한다. $M/xM\neq 0$이므로 이 polynomial은 $0$이 아니고, 따라서 $d(M/xM)\leq d(M)-1$이다.
 :::

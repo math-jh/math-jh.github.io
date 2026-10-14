@@ -32,11 +32,11 @@ $$\dd{(e_{j_1}\wedge\cdots\wedge e_{j_i})}=\sum_{k=1}^i(-1)^{k-1}x_{j_k}e_{j_1}\
 
 가장 작은 경우들을 적어보면, $n=1$일 때 $K(x_1)$은 다음의 complex
 
-$$0 \rightarrow A \overset{x_1}{\longrightarrow} A \rightarrow 0$$
+$$0 \rightarrow A \overset{x_1}{\rightarrow} A \rightarrow 0$$
 
 이고, $n=2$일 때 $K(x_1,x_2)$는 다음의 complex
 
-$$0 \rightarrow A \overset{d_2}{\longrightarrow} A^{\oplus 2}\overset{d_1}{\longrightarrow} A \rightarrow 0$$
+$$0 \rightarrow A \overset{d_2}{\rightarrow} A^{\oplus 2}\overset{d_1}{\rightarrow} A \rightarrow 0$$
 
 이며, 위의 명시적인 식에 의하여 $d_2(e_1\wedge e_2)=x_1e_2-x_2e_1$이고 $d_1(ae_1+be_2)=ax_1+bx_2$이다. 그럼 degree $1$의 cycle $ae_1+be_2$는 관계식 $ax_1+bx_2=0$에 대응되고, boundary들은 자명한 관계식 $(-x_2)x_1+x_1x_2=0$의 배수들에 대응된다. 즉 degree $1$의 homology는 $x_1,x_2$ 사이의 관계식 중 자명하지 않은 것들을 측정한다. 이러한 정보를 module에 대해서도 다루기 위해 다음을 정의한다.
 
@@ -131,7 +131,7 @@ $i=0$의 조건은 곱하기 $x_1$이 $M$ 위에서 injective라는 것이고, $
 ::: 보조정리 6
 $n\geq 2$라 하고 $x'=(x_1,\ldots,x_{n-1})$로 적자. 그럼 임의의 $A$-module $M$에 대하여 다음의 long exact sequence
 
-$$\cdots \rightarrow H_i(x';M) \rightarrow H_i(x;M) \rightarrow H_{i-1}(x';M)\overset{\partial_i}{\longrightarrow} H_{i-1}(x';M) \rightarrow H_{i-1}(x;M) \rightarrow \cdots$$
+$$\cdots \rightarrow H_i(x';M) \rightarrow H_i(x;M) \rightarrow H_{i-1}(x';M)\overset{\partial_i}{\rightarrow} H_{i-1}(x';M) \rightarrow H_{i-1}(x;M) \rightarrow \cdots$$
 
 이 존재하며, connecting homomorphism $\partial_i$는 곱하기 $(-1)^{i-1}x_n$으로 주어진다.
 :::
@@ -169,7 +169,7 @@ $$H_i(x';M) \rightarrow H_i(x;M) \rightarrow H_{i-1}(x';M)$$
 
 에서 양 끝이 모두 $0$이므로 $H_i(x;M)=0$이다. $i=1$인 경우, 같은 보조정리로부터 다음의 exact sequence
 
-$$0=H_1(x';M) \rightarrow H_1(x;M) \rightarrow H_0(x';M)\overset{\partial_1}{\longrightarrow}H_0(x';M)$$
+$$0=H_1(x';M) \rightarrow H_1(x;M) \rightarrow H_0(x';M)\overset{\partial_1}{\rightarrow}H_0(x';M)$$
 
 을 얻는데, [명제 2](#prop2){: data-lid="ibdwa" }에 의하여 $H_0(x';M)=M/x'M$이고 $\partial_1$은 곱하기 $x_n$이다. 그런데 $x_1,\ldots,x_n$이 $M$-regular sequence이므로 곱하기 $x_n$은 $M/x'M$ 위에서 injective이고, 따라서 $H_1(x;M)=0$이다.
 :::
@@ -225,13 +225,13 @@ $n=1$인 경우, [명제 2](#prop2){: data-lid="ho6mp" }에 의하여 $H_1(x_1;M
 
 이제 $n\geq 2$라 하고 주장이 $n-1$에 대하여 성립한다고 가정하자. $x'=(x_1,\ldots,x_{n-1})$로 두고 [보조정리 6](#lem6){: data-lid="lmh6a" }의 exact sequence
 
-$$H_1(x';M)\overset{\partial_2}{\longrightarrow}H_1(x';M) \rightarrow H_1(x;M)=0$$
+$$H_1(x';M)\overset{\partial_2}{\rightarrow}H_1(x';M) \rightarrow H_1(x;M)=0$$
 
 을 생각하자. $\partial_2$는 곱하기 $-x_n$이므로 이 exact sequence는 $H_1(x';M)=x_nH_1(x';M)$을 말해준다. 한편 $A$가 Noetherian이고 $M$이 finitely generated이므로 $M$은 Noetherian module이고 ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="rl89w" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="4aowj" }), 따라서 finite direct sum $K_i(x';M)\cong M^{\oplus\binom{n-1}{i}}$도 Noetherian이다. ([§기본 개념들, ⁋따름정리 6](/ko/math/commutative_algebra/basic_notions#cor6){: data-lid="dg3vj" }) 특히 그 submodule의 quotient인 $H_1(x';M)$은 finitely generated이다. ([§기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3){: data-lid="7cnrg" }과 [§기본 개념들, ⁋명제 4](/ko/math/commutative_algebra/basic_notions#prop4){: data-lid="fwene" }) 그럼 $x_n\in\mathfrak{m}$이므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="8dt1x" }에 의하여 $H_1(x';M)=0$이고, 귀납적 가정에 의하여 $x_1,\ldots,x_{n-1}$은 $M$-regular sequence이다.
 
 마지막으로 [보조정리 6](#lem6){: data-lid="zfjym" }의 exact sequence
 
-$$0=H_1(x;M) \rightarrow H_0(x';M)\overset{\partial_1}{\longrightarrow}H_0(x';M)$$
+$$0=H_1(x;M) \rightarrow H_0(x';M)\overset{\partial_1}{\rightarrow}H_0(x';M)$$
 
 에서 $\partial_1$은 곱하기 $x_n$이므로, 곱하기 $x_n$은 $H_0(x';M)=M/x'M$ 위에서 injective이다. 이를 위의 관찰 $xM\neq M$과 종합하면 $x_1,\ldots,x_n$은 $M$-regular sequence이다.
 :::

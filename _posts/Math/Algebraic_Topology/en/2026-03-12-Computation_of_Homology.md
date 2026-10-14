@@ -29,7 +29,7 @@ $$C_k(X,A):=C_k(X)/C_k(A)$$
 
 Then it is not difficult to see that the boundary map $\partial_k:C_k(X) \rightarrow C_{k-1}(X)$ induces a map $C_k(X,A) \rightarrow C_{k-1}(X,A)$ between the quotient groups. From this we can construct the chain complex
 
-$$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A)\longrightarrow\cdots$$
+$$\cdots \rightarrow C_k(X,A)\overset{\partial}{\rightarrow} C_{k-1}(X,A)\rightarrow\cdots$$
 
 ::: Definition 1
 The $k$-th homology $H_k(X,A)$ of the above chain complex is called *relative homology*.
@@ -121,7 +121,7 @@ $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x
 
 gives, for all $k>1$, the isomorphism $H_k(X)\cong H_k(X,x)$. Moreover, looking at the long exact sequence for $k=1$,
 
-$$0 \rightarrow H_1(X) \rightarrow H_1(X, x) \overset{\partial}{\longrightarrow} H_{0}(x) \overset{\iota_\ast}{\longrightarrow} H_{0}(X)$$
+$$0 \rightarrow H_1(X) \rightarrow H_1(X, x) \overset{\partial}{\rightarrow} H_{0}(x) \overset{\iota_\ast}{\rightarrow} H_{0}(X)$$
 
 here $\iota_\ast$ sends the generator of $H_0(x)$ to the path component of $X$ containing $x$, so it is injective; hence $\partial$ is the zero map, and from this we likewise obtain the isomorphism $H_1(X)\cong H_1(X,x)$.
 
@@ -240,7 +240,7 @@ induces an isomorphism in homology by the excision axiom, so the corresponding m
 
 where $i,j,k$ are the maps induced by the respective inclusions, the $\partial$'s are connecting maps, and the $p$'s are cokernel morphisms. We have omitted the indices for convenience. Now let $\alpha$ be this morphism of long exact sequences, and let the mapping cone exact sequence of $\alpha$ given by [\[Homological Algebra\] §Long Exact Sequences, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8){: data-lid="t7m3a" }
 
-$$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(V, U\cap V)\oplus H_{n+1}(X)\overset{\overline{\Phi}}{\longrightarrow} H_n(U\cap V)\oplus H_{n+1}(X,U)\overset{\overline{\Psi}}{\longrightarrow} H_n(V)\oplus H_n(U)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\longrightarrow} H_n(V, U\cap V)\oplus H_n(X)\rightarrow \cdots\end{aligned}$$
+$$\begin{aligned}\cdots &\overset{\overline{\partial}}{\rightarrow} H_{n+1}(V, U\cap V)\oplus H_{n+1}(X)\overset{\overline{\Phi}}{\rightarrow} H_n(U\cap V)\oplus H_{n+1}(X,U)\overset{\overline{\Psi}}{\rightarrow} H_n(V)\oplus H_n(U)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\rightarrow} H_n(V, U\cap V)\oplus H_n(X)\rightarrow \cdots\end{aligned}$$
 
 be denoted by $\Cone(\alpha)$. Then by the preceding consequence of the excision axiom, there exists the following long exact sequence:
 
@@ -255,7 +255,7 @@ Now since the two long exact sequences connected by $\alpha$ are both exact, $\a
 ::: Proposition 7 (Mayer-Vietoris sequence)
 Suppose a topological space $X$ is expressed as the union of two open sets $X=U\cup V$, and consider a homology theory $H$ defined on it. Then there exists a long exact sequence
 
-$$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
+$$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\rightarrow} H_{n+1}(X)\overset{\partial}{\rightarrow} H_n(U\cap V)\overset{\Phi}{\rightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 
 where the maps $\Psi, \Phi$ are given respectively by
 

@@ -36,7 +36,7 @@ Flat ring homomorphism $\phi: A \rightarrow B$에 대하여 다음이 동치이�
 ::: 증명
 우선 첫째 조건과 둘째 조건이 동치임을 보인다. 이를 위해 첫째 조건을 가정하자. 그럼 가정에 의해 $B$가 flat이므로 exact sequence는 $-\otimes_A B$ 후에도 exact하며, 둘째 조건의 한쪽 방향은 자명하다. 핵심은 반대방향으로, 이를 보이기 위해 
 
-$$M'\otimes_AB \overset{f\otimes_AB}{\longrightarrow} M\otimes_AB \overset{g\otimes_AB}{\longrightarrow} M''\otimes_AB$$
+$$M'\otimes_AB \overset{f\otimes_AB}{\rightarrow} M\otimes_AB \overset{g\otimes_AB}{\rightarrow} M''\otimes_AB$$
 
 이 exact sequence라 하자. 그럼 우선 
 
@@ -75,7 +75,7 @@ $$d^0, d^1: B \rightrightarrows B\otimes_A B,\qquad d^0(b)=b\otimes 1,\quad d^1(
 
 이 주어진다. 이는 $B$를 $B\otimes_AB$에 어떠한 방식으로 집어넣을지를 반영하는 두 homomorphism이며, 이들의 차 $d=d^1-d^0$을 생각하여 morphism $d: B\rightarrow B\otimes_AB$을 생각할 수 있다. 뿐만 아니라, $A$에서 온 원소는 tensor product의 성질에 의하여 $d$의 kernel에 속하므로, 다음의 sequence
 
-$$0\rightarrow A \overset{\phi}{\longrightarrow}B\overset{d}{\longrightarrow}B\otimes_AB$$
+$$0\rightarrow A \overset{\phi}{\rightarrow}B\overset{d}{\rightarrow}B\otimes_AB$$
 
 를 생각할 수 있다. 
 
@@ -89,7 +89,7 @@ $$\partial^n=\sum_{i=0}^{n+1}(-1)^i\delta_i: C^n \rightarrow C^{n+1}$$
 
 은 $C^n$에서 $C^{n+1}$로의 morphism이 된다. 약간의 계산을 통해 이것이 complex가 되는 것을 확인할 수 있으며, 여기에 위와 같이 $\phi$를 붙여서 얻어지는
 
-$$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{\partial^0}{\longrightarrow} B\otimes_A B \overset{\partial^1}{\longrightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
+$$0 \rightarrow A \overset{\phi}{\rightarrow} B \overset{\partial^0}{\rightarrow} B\otimes_A B \overset{\partial^1}{\rightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
 
 를 $\phi$의 *Amitsur complex<sub>Amitsur 복합체</sub>*라 부른다. 
 
@@ -98,18 +98,18 @@ $$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{\partial^0}{\longri
 ::: 보조정리 3
 Ring homomorphism $\phi: A \rightarrow B$에 대하여, 위의 sequence에 $-\otimes_A B$를 취하여 얻어지는 $B$-module의 sequence
 
-$$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
+$$0 \rightarrow B \overset{\phi\otimes B}{\rightarrow} B\otimes_A B \overset{d\otimes B}{\rightarrow} B\otimes_A B\otimes_A B$$
 
 는 split exact하다. 특히 $\phi$가 faithfully flat이면 sequence
 
-$$0 \rightarrow A \overset{\phi}{\longrightarrow} B \overset{d}{\longrightarrow} B\otimes_A B$$
+$$0 \rightarrow A \overset{\phi}{\rightarrow} B \overset{d}{\rightarrow} B\otimes_A B$$
 
 는 exact하다. 
 :::
 ::: 증명
 우선 $-\otimes_A B$를 적용하여 얻어진 sequence
 
-$$0 \rightarrow B \overset{\phi\otimes B}{\longrightarrow} B\otimes_A B \overset{d\otimes B}{\longrightarrow} B\otimes_A B\otimes_A B$$
+$$0 \rightarrow B \overset{\phi\otimes B}{\rightarrow} B\otimes_A B \overset{d\otimes B}{\rightarrow} B\otimes_A B\otimes_A B$$
 
 를 생각하자. 우리 주장은 이것이 split exact sequence라는 것이다. 
 
@@ -173,7 +173,7 @@ $$p_{12}, p_{13}, p_{23}: B\otimes_A B \rightarrow B\otimes_A B\otimes_A B$$
 ::: 정의 4
 Ring homomorphism $\phi: A \rightarrow B$에 대한 *descent datum<sub>하강 자료</sub>*은 $B$-module $N$과 $B\otimes_A B$-module isomorphism
 
-$$\Phi_N: p_1^\ast N=N\otimes_A B \overset{\sim}{\longrightarrow} B\otimes_A N=p_2^\ast N$$
+$$\Phi_N: p_1^\ast N=N\otimes_A B \overset{\sim}{\rightarrow} B\otimes_A N=p_2^\ast N$$
 
 의 pair $(N, \Phi_N)$으로서, $B\otimes_A B\otimes_A B$ 위에서 *cocycle condition*
 
@@ -201,7 +201,7 @@ $$p_1^\ast N=M\otimes_A B\otimes_A B,\qquad p_2^\ast N=B\otimes_A M\otimes_A B$$
 ::: 예시 5
 $A$-module $M$에 대하여 $N=M\otimes_A B$로 두면, 위에서 본 두 base change $p_1^\ast N=M\otimes_A B\otimes_A B$와 $p_2^\ast N=B\otimes_A M\otimes_A B$ 사이의 $B\otimes_A B$-module isomorphism
 
-$$\sigma_M: M\otimes_A B\otimes_A B \overset{\sim}{\longrightarrow} B\otimes_A M\otimes_A B;\qquad m\otimes x\otimes y\mapsto x\otimes m\otimes y$$
+$$\sigma_M: M\otimes_A B\otimes_A B \overset{\sim}{\rightarrow} B\otimes_A M\otimes_A B;\qquad m\otimes x\otimes y\mapsto x\otimes m\otimes y$$
 
 이 descent datum $(M\otimes_A B, \sigma_M)$을 정의한다. 이를 $M$에 딸린 *canonical descent datum*이라 부른다. 
 
@@ -253,9 +253,9 @@ $$p_{13}^\ast \Psi(1\otimes 1\otimes n)=\sum_j n_j\otimes 1\otimes c_j,\qquad (p
 
 $$\sum_j \Phi_N(n_j\otimes 1)\otimes c_j=\sum_j (1\otimes n_j)\otimes c_j$$
 
-을 얻는다. 따라서 $d_N: N \rightarrow B\otimes_A N$을 $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$으로 정의하면 $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$이 성립한다. 그럼 우리 주장은 $\ker(d_N\otimes B)=M\otimes_AB$이고 따라서 위의 대응이 $M\otimes_AB$로 간다는 것이다. 이제 $M$의 정의에 의하여 sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\longrightarrow} B\otimes_A N$이 exact하고, $B$가 flat이므로 여기에 $-\otimes_AB$를 취한
+을 얻는다. 따라서 $d_N: N \rightarrow B\otimes_A N$을 $d_N(n)=\Phi_N(n\otimes 1)-1\otimes n$으로 정의하면 $(d_N\otimes B)\bigl(\sum_j n_j\otimes c_j\bigr)=0$이 성립한다. 그럼 우리 주장은 $\ker(d_N\otimes B)=M\otimes_AB$이고 따라서 위의 대응이 $M\otimes_AB$로 간다는 것이다. 이제 $M$의 정의에 의하여 sequence $0 \rightarrow M \rightarrow N \overset{d_N}{\rightarrow} B\otimes_A N$이 exact하고, $B$가 flat이므로 여기에 $-\otimes_AB$를 취한
 
-$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\longrightarrow} B\otimes_A N\otimes_A B$$
+$$0 \rightarrow M\otimes_A B \rightarrow N\otimes_A B \overset{d_N\otimes B}{\rightarrow} B\otimes_A N\otimes_A B$$
 
 또한 exact하다. 즉 $N\otimes_A B$ 안에서 $M\otimes_A B=\ker(d_N\otimes B)$이다.
 

@@ -79,7 +79,7 @@ Then the following can be easily shown.
 ::: Proposition 5
 Consider a continuous function $f:X \rightarrow Y$ between two topological spaces and its canonical decomposition
 
-$$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i}{\longrightarrow}Y$$
+$$X \overset{p}{\rightarrow} X/R \overset{h}{\rightarrow} f(X)\overset{i}{\rightarrow}Y$$
 
 Then the following are all equivalent.
 

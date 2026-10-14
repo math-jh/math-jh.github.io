@@ -41,7 +41,7 @@ $k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오�
 ::: 정의 3
 $k$가 $Q$의 sink라 하고, $V=(V_i,V_\alpha)$를 $Q$의 representation이라 하자. $k$로 들어오는 arrow들 $\alpha:i\rightarrow k$ (이때 $i=s(\alpha)$) 로부터 morphism
 
-$$V_{\mathrm{in}}=(V_\alpha)_\alpha:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\longrightarrow V_k$$
+$$V_{\mathrm{in}}=(V_\alpha)_\alpha:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$$
 
 을 각 성분에서 $V_\alpha$로 주어지는 morphism으로 정의한다. *Sink에서의 reflection functor* $S_k^+:\Rep(Q)\rightarrow\Rep(\sigma_k Q)$를 다음과 같이 둔다. $W=S_k^+ V$는
 
@@ -71,7 +71,7 @@ $$W_2=\ker(V_\alpha:V_1\rightarrow V_2),\qquad W_1=V_1,\qquad W_{\bar{\alpha}}:W
 ::: 정의 5
 $k$가 $Q$의 source라 하고, $V$를 $Q$의 representation이라 하자. $k$에서 나가는 arrow들 $\alpha:k\rightarrow j$ (이때 $j=t(\alpha)$) 로부터 morphism
 
-$$V_{\mathrm{out}}=(V_\alpha)_\alpha:V_k\longrightarrow\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}$$
+$$V_{\mathrm{out}}=(V_\alpha)_\alpha:V_k\rightarrow\bigoplus_{\alpha:k\rightarrow j}V_{t(\alpha)}$$
 
 을 각 성분이 $V_\alpha$인 morphism으로 정의한다. *Source에서의 reflection functor* $S_k^-:\Rep(Q)\rightarrow\Rep(\sigma_k Q)$는 $W=S_k^- V$를
 
@@ -120,7 +120,7 @@ Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k
 
 이제 차원을 센다. $V_{\mathrm{in}}$이 전사이므로 short exact sequence
 
-$$0\longrightarrow W_k\longrightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
+$$0\rightarrow W_k\rightarrow\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\rightarrow 0$$
 
 을 얻고, $W_k=\ker V_{\mathrm{in}}$이므로 rank–nullity에 의하여
 
@@ -149,7 +149,7 @@ $$S_k^- S_k^+ V\cong V$$
 ::: 증명
 $k$가 sink인 경우를 보인다. $V$가 $S_k$를 direct summand로 가지지 않으므로, 명제 7의 증명에서 본 것과 같이 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$이 전사이다. (그 논증은 $V$가 indecomposable이라는 것보다 약한, $S_k$를 summand로 가지지 않는다는 조건만 사용한다. $\im V_{\mathrm{in}}$의 보충공간이 vertex $k$ 위의 $S_k$-summand를 주기 때문이다.) 따라서
 
-$$0\longrightarrow W_k\xrightarrow{\ j\ }\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\longrightarrow 0$$
+$$0\rightarrow W_k\xrightarrow{\ j\ }\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\xrightarrow{\ V_{\mathrm{in}}\ }V_k\rightarrow 0$$
 
 은 short exact sequence이며, 여기서 $W=S_k^+ V$이고 $j$는 포함이다. 이제 $\sigma_k Q$에서 $k$는 source이고 $W$에서 $k$로부터 나가는 morphism은 $W_{\bar{\alpha}}=\mathrm{pr}_\alpha\circ j:W_k\rightarrow V_{s(\alpha)}$이다. 이들을 모은 morphism이 정확히 $W_{\mathrm{out}}=j:W_k\rightarrow\bigoplus_\alpha V_{s(\alpha)}$인데, $j$가 단사이므로 그 cokernel은
 
@@ -169,7 +169,7 @@ Source의 경우는 $k$가 sink일 때의 논증을 완전히 쌍대화하여, $
 ::: 정의 9
 Oriented cycle이 없는 quiver $Q$의 vertex들을 모두 한 번씩 나열한 순서 $(k_1,k_2,\ldots,k_n)$이 *admissible sink sequence<sub>허용 싱크 나열</sub>*라는 것은, $k_1$이 $Q$의 sink이고, 각 $2\leq r\leq n$에 대하여 $k_r$가 $\sigma_{k_{r-1}}\cdots\sigma_{k_1}Q$의 sink인 것이다. 이러한 나열에 대하여 *Coxeter functor<sub>콕세터 함자</sub>*를
 
-$$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
+$$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\rightarrow\Rep(Q)$$
 
 로 정의한다. Symmetric으로 admissible source sequence를 따라 $S^-$들을 합성하여 $C^-:\Rep(Q)\rightarrow\Rep(Q)$를 정의한다.
 :::
@@ -225,7 +225,7 @@ $$(s_k(d),s_k(d))=(d,d)-2(d,e_k)(e_k,d)+(d,e_k)^2(e_k,e_k)=(d,d)-2(d,e_k)^2+2(d,
 ::: 정리 13
 (Gabriel) $Q$를 oriented cycle이 없는 connected quiver라 하자. $Q$가 *representation-finite*, 곧 유한개의 indecomposable representation만을 (isomorphism을 무시하여) 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
 
-$$V\longmapsto\underline{\dim} V$$
+$$V\mapsto\underline{\dim} V$$
 
 은 indecomposable representation의 isomorphism class들과 Tits form의 positive root들 사이의 전단사이다.
 :::

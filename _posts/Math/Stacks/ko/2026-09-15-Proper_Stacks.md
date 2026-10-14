@@ -92,7 +92,7 @@ $$P_K=\Spec K[u]/(u^n-t)$$
 
 Separated finite type Deligne–Mumford stack은 finite inertia stack을 가지므로, 이제 우리는 [§모듈라이 공간, ⁋정리 8](/ko/math/stacks/moduli_spaces#thm8){: data-lid="4iyk3" }의 첫째 주장이 둘째 주장을 함의하는 것을 확인할 수 있다. 이를
 
-$$\pi:\mathcal{X}\longrightarrow X$$
+$$\pi:\mathcal{X}\rightarrow X$$
 
 로 쓰자. Characteristic $0$인 field $\mathbb{K}$ 위에서는 stabilizer가 finite linearly reductive group이고, coarse morphism은 étale-locally finite group quotient의 형태를 갖는다.
 
@@ -112,7 +112,7 @@ Quotient stack $[M/G]$에서 $G$의 action은 두 종류의 정보를 동시에 
 
 이제 위의 정리의 관점에서, 한 점 $x\in\mathcal{X}$를 잡고 이를 전역 quotient presentation $[M/G]$의 점 $p\in M$으로 나타낸다면, $x$의 automorphism group $G_x=\Stab_G(p)$은 $G$의 subgroup으로, $G$ 전체 원소 중 $p$를 고정하는 부분만 $G_x$로 남게 되며, 이를 사용한 것이 위의 local model이다. 
 
-그럼 이 local model에서의 $G_x$ 안에서도 역할에 따라 실제로 유효하게 작용하는 부분이 나뉜다. Local quotient $[V/G_x]$와 그 coarse moduli $[V/G_x]\longrightarrow V/G_x$를 보면, 각각의 $G_x$-orbit이 한 점으로 줄어드는 반면 $H$는 stack으로 내려오는 과정에서 사라지므로, 실제로 $V$의 점을 움직이는 원소들은 $G_x/H$ 부분이다. 
+그럼 이 local model에서의 $G_x$ 안에서도 역할에 따라 실제로 유효하게 작용하는 부분이 나뉜다. Local quotient $[V/G_x]$와 그 coarse moduli $[V/G_x]\rightarrow V/G_x$를 보면, 각각의 $G_x$-orbit이 한 점으로 줄어드는 반면 $H$는 stack으로 내려오는 과정에서 사라지므로, 실제로 $V$의 점을 움직이는 원소들은 $G_x/H$ 부분이다. 
 
 이제 $H$의 원소들을 골라내기 위해서는 function field를 보면 된다. 즉, $H$가 $K(V)$에 trivial하게 작용하므로 $G_x$의 function field 위 action은 $G_x/H$를 통해 factor하고,
 

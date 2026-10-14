@@ -92,7 +92,7 @@ For a ring $A$, the following are all equivalent.
 ::: Proof
 First, assume the first condition and show the second condition. Suppose for contradiction that $A$ satisfies the first condition but does not have finite length. Let $\mathfrak{a}$ be maximal among the ideals of $A$ such that $A/\mathfrak{a}$ does not have finite length. Then if $ab\in \mathfrak{a}$ and $a\not\in \mathfrak{a}$, we can consider the following short exact sequence
 
-$$0\longrightarrow A/(\mathfrak{a}:(a))\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
+$$0\rightarrow A/(\mathfrak{a}:(a))\overset{a}{\rightarrow}A/\mathfrak{a}\rightarrow A/(\mathfrak{a}+(a))\rightarrow 0$$
 
 ([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions){: data-lid="8g52i" }). Now, since $\mathfrak{a}+(a)$ is an ideal strictly containing $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ must have finite length. On the other hand, from the definition we have $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$, and if $b\not\in \mathfrak{a}$, then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so likewise by the definition of $\mathfrak{a}$, $A/(\mathfrak{a}:(a))$ must have finite length. Therefore, through these composition series we obtain a composition series for $A/\mathfrak{a}$, and since this contradicts the assumption that $A/\mathfrak{a}$ does not have finite length, we have $b\in \mathfrak{a}$. That is, $\mathfrak{a}$ is a prime ideal. Now, by the assumption of condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length; thus we obtain the desired result.
 

@@ -38,7 +38,7 @@ $$U=S^n\setminus\{\text{남극}\},\qquad V=S^n\setminus\{\text{북극}\}$$
 
 의 합집합으로 나타내자. 각 극을 뺀 $U,V$는 stereographic projection에 의해 $\mathbb{R}^n$과 homeomorphic하므로 contractible이고, 교집합 $U\cap V$는 적도 방향으로 $S^{n-1}$에 deformation retract한다. [§호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7){: data-lid="61eqq" }의 Mayer-Vietoris exact sequence는 계수와 무관하게 성립하며, 이를 reduced homology 판본으로 적용하면 각 $k$에 대하여 exact sequence
 
-$$\widetilde{H}_k(U)\oplus\widetilde{H}_k(V)\rightarrow\widetilde{H}_k(S^n)\overset{\partial}{\longrightarrow}\widetilde{H}_{k-1}(U\cap V)\rightarrow\widetilde{H}_{k-1}(U)\oplus\widetilde{H}_{k-1}(V)$$
+$$\widetilde{H}_k(U)\oplus\widetilde{H}_k(V)\rightarrow\widetilde{H}_k(S^n)\overset{\partial}{\rightarrow}\widetilde{H}_{k-1}(U\cap V)\rightarrow\widetilde{H}_{k-1}(U)\oplus\widetilde{H}_{k-1}(V)$$
 
 을 얻는다. $U,V$가 contractible이므로 양 끝 항이 모두 $0$이고, 따라서 connecting homomorphism $\partial$은 isomorphism
 
@@ -121,7 +121,7 @@ $n\geq 0$에 대하여, 포함사상 $\iota:S^n\hookrightarrow D^{n+1}$의 retra
 ::: 증명
 그러한 $r$가 존재한다고 가정하고 모순을 이끌어낸다. 먼저 $n\geq 1$인 경우를 보자. $r\circ\iota=\id_{S^n}$의 양변에 $H_n$을 취하면 functoriality에 의하여
 
-$$H_n(S^n)\overset{\iota_\ast}{\longrightarrow}H_n(D^{n+1})\overset{r_\ast}{\longrightarrow}H_n(S^n)$$
+$$H_n(S^n)\overset{\iota_\ast}{\rightarrow}H_n(D^{n+1})\overset{r_\ast}{\rightarrow}H_n(S^n)$$
 
 의 합성이 $H_n(S^n)$ 위의 항등사상이 된다. 그런데 $D^{n+1}$은 convex 집합이므로 한 점으로 deformation retract하는 contractible 공간이고, 따라서 $n\geq 1$에 대하여 $H_n(D^{n+1})\cong H_n(\ast)=0$이다. ([§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11){: data-lid="pxzps" }) 곧 항등사상 $\id:H_n(S^n)\rightarrow H_n(S^n)$이 $0$을 통과하게 되는데, [명제 1](#prop1){: data-lid="gqyk5" }에 의하여 $H_n(S^n)\cong\mathbb{Z}\neq 0$이므로 이는 모순이다.
 

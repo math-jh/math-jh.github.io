@@ -231,7 +231,7 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 
 여기서 오른쪽으로 가는 morphism은 [명제 2](#prop2){: data-lid="1lfk5" }의 restriction $\iota^\ast$이 유도하는 것이다. [예시 6](#ex6){: data-lid="ipk9a" }의 $S^2$와 [정리 7](#thm7){: data-lid="6hh5r" }의 $\mathbb{P}^n$은 모두 equivariantly formal이다. 두 경우 모두 $H_T^\bullet(X)$이 $h$의 거듭제곱을 free 기저로 가졌고, $t_i\mapsto 0$이 $H^\bullet(X)$를 회복하였기 때문이다. 더 일반적으로 fiber bundle $X\rightarrow X_T\rightarrow BT$의 Serre spectral sequence
 
-$$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Longrightarrow H_T^{p+q}(X)$$
+$$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Rightarrow H_T^{p+q}(X)$$
 
 를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse함을 함의하며, $H^\bullet(X)$가 free $\mathbb{Z}$-module일 때에는 그 역도 성립한다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-module로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
 

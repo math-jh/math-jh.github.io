@@ -235,7 +235,7 @@ is defined. As we saw earlier, over the same open cover as $P$, this is a bundle
 
 Applying this explicitly to the universal bundle $\E S^1=S^\infty\rightarrow\CP^\infty$, we obtain the line bundle
 
-$$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
+$$S^\infty\times_{S^1}\mathbb{C}\rightarrow\CP^\infty$$
 
 Examining the fiber over a point $[\ell]\in\CP^\infty$, since the equivalence class $[e,z]$ equals, for the unit vector $e$ determining the line $\ell=\mathbb{C}e$, the element $ze\in\ell$, this is the tautological line bundle $\gamma$ having each line itself as its fiber. That is, the reason $\gamma$ was the universal family of complex line bundles in [§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8){: data-lid="c2e55" } is that the result of taking the universal principal $S^1$-bundle and attaching $\mathbb{C}$ is precisely $\gamma$, and conversely, the sphere bundle of $\gamma$ appearing there, $S^\infty$, is precisely $\E S^1$.
 
@@ -254,7 +254,7 @@ the space of all orthonormal $n$-frames in $\mathbb{C}^\infty$, with $\Umat(n)$ 
 
 Now attaching the canonical representation $\mathbb{C}^n$ here yields the associated bundle
 
-$$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\longrightarrow\Gr(n,\mathbb{C}^\infty)$$
+$$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\rightarrow\Gr(n,\mathbb{C}^\infty)$$
 
 Examining the fiber over a point $[V]$, for $z=(z_1,\ldots,z_n)\in\mathbb{C}^n$ the equivalence class $[(e_1,\ldots,e_n),z]$ equals $z_1e_1+\cdots+z_ne_n\in V$, the element of the subspace $V$ spanned by the frame; thus, just as for line bundles, this is the tautological $n$-plane bundle $\gamma^n$ having each subspace as its own fiber, and conversely collecting all orthonormal frames of each fiber of $\gamma^n$ recovers $V_n(\mathbb{C}^\infty)$, again as in the line bundle case. That is,
 

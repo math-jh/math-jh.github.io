@@ -33,7 +33,7 @@ $$\operatorname{ch}(E)=\operatorname{rk}(E)+c_1(E)+\frac{c_1(E)^2-2c_2(E)}{2}+\f
 ::: 명제 2
 vector bundle들의 short exact sequence
 
-$$0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0$$
+$$0\rightarrow E'\rightarrow E\rightarrow E''\rightarrow 0$$
 
 에 대하여 다음이 성립한다.
 
@@ -59,7 +59,7 @@ $$\operatorname{ch}(E\otimes F)=\sum_{i,j} e^{x_i+y_j}=\left(\sum_i e^{x_i}\righ
 
 [명제 2](#prop2){: data-lid="3brn0" }의 첫 번째 성질은 Chern character를 Grothendieck group $K_0(X)$ 위에서 잘 정의된 group homomorphism
 
-$$\operatorname{ch}: K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
+$$\operatorname{ch}: K_0(X)\rightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
 
 으로 확장시킨다. 여기서 $A^\bullet(X)$는 $X$의 Chow ring이다.
 
@@ -86,7 +86,7 @@ $$\frac{x}{1-e^{-x}}=1+\frac{1}{2}x+\sum_{k=1}^\infty \frac{B_{2k}}{(2k)!}x^{2k}
 ::: 명제 4
 vector bundle들의 short exact sequence
 
-$$0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0$$
+$$0\rightarrow E'\rightarrow E\rightarrow E''\rightarrow 0$$
 
 에 대하여 다음이 성립한다.
 
@@ -141,7 +141,7 @@ $$\operatorname{td}(T_X)=1+\frac{c_1}{2}+\frac{c_1^2+c_2}{12}$$
 ::: 예시 7 (Projective space)
 Projective space $\mathbb{P}^n$에 대하여, Euler exact sequence
 
-$$0\longrightarrow\mathcal{O}_{\mathbb{P}^n}\longrightarrow\mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}\longrightarrow T_{\mathbb{P}^n}\longrightarrow 0$$
+$$0\rightarrow\mathcal{O}_{\mathbb{P}^n}\rightarrow\mathcal{O}_{\mathbb{P}^n}(1)^{\oplus(n+1)}\rightarrow T_{\mathbb{P}^n}\rightarrow 0$$
 
 으로부터 $c(T_{\mathbb{P}^n})=(1+h)^{n+1}$을 얻는다. 한편 $\mathcal{O}_{\mathbb{P}^n}(1)$의 Chern root는 hyperplane class $h$이고 $\operatorname{td}(\mathcal{O}_{\mathbb{P}^n})=1$이므로, 위의 exact sequence에 [명제 4](#prop4){: data-lid="fgqkc" }를 적용하면
 

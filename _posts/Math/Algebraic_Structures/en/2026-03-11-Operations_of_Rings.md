@@ -21,7 +21,7 @@ Now we define products and coproducts of rings.
 
 The product of rings can be defined without difficulty. Let a family of rings $(A_i)_{i\in I}$ be given. Then the product of abelian groups $\prod_{i\in I}A_i$ is well-defined. On the other hand, $\mu_i: A_i\otimes A_i \rightarrow A_i$ giving the multiplication structure on $A_i$ is the same as a bilinear map $A_i\times A_i \rightarrow A_i$, through which a function between sets
 
-$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
+$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\rightarrow} \prod_{i\in I}A_i$$
 
 can be defined.
 
@@ -92,7 +92,7 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)$$
 
 holds, and therefore $\mu_A:A\otimes A \rightarrow A$ and $\mu_B: B\otimes B \rightarrow B$ define a multiplication on $A\otimes B$:
 
-$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\longrightarrow} A\otimes B$$
+$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\rightarrow} A\otimes B$$
 
 ::: Definition 7
 For any rings $A,B$, the ring $A\otimes B$ defined as above is called their *tensor product*. 

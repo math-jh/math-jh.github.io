@@ -48,7 +48,7 @@ $$\int_{-R}^{R}f(x)\dd{x}+\int_{C_R}f(z)\dd{z}=2\pi i\sum_{\Img z_j>0}\operatorn
 
 이다. $C_R$ 위에서 $\lvert f\rvert\le M/R^2$이고 $C_R$의 길이는 $\pi R$이므로
 
-$$\left\lvert\int_{C_R}f(z)\dd{z}\right\rvert\le\frac{M}{R^2}\cdot\pi R=\frac{\pi M}{R}\longrightarrow0\qquad(R\to\infty)$$
+$$\left\lvert\int_{C_R}f(z)\dd{z}\right\rvert\le\frac{M}{R^2}\cdot\pi R=\frac{\pi M}{R}\rightarrow0\qquad(R\to\infty)$$
 
 이다. 위 등식에서 $R\to\infty$로 보내면 주장을 얻는다.
 :::
@@ -60,7 +60,7 @@ $$\left\lvert\int_{C_R}f(z)\dd{z}\right\rvert\le\frac{M}{R^2}\cdot\pi R=\frac{\p
 ::: 예시 2 (차수 차이가 1인 경우)
 $f(x)=x/(x^2+1)$이면 $\deg Q-\deg P=1$이다. 이때 $f$는 기함수이므로 모든 $R$에 대해 $\int_{-R}^{R}f\dd{x}=0$이다. 그러나 $\int_0^R f\dd{x}=(1/2)\ln(1+R^2)$은 $R\to\infty$에서 발산하므로 $\int_{-\infty}^{\infty}f\dd{x}$는 수렴하지 않는다. 반원호 위에서는 $z/(z^2+1)=1/z+O(1/z^3)$이고 $\int_{C_R}\dd{z}/z=i\pi$이므로
 
-$$\int_{C_R}\frac{z}{z^2+1}\dd{z}\longrightarrow i\pi\neq0$$
+$$\int_{C_R}\frac{z}{z^2+1}\dd{z}\rightarrow i\pi\neq0$$
 
 이다. 실제로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="91r3i" }는 $0+i\pi=2\pi i\operatorname{Res}_{z=i}f=2\pi i\cdot(1/2)$로 성립하며, 반원호의 기여가 살아남아 실축 적분만을 뽑아낼 수 없다.
 :::
@@ -88,7 +88,7 @@ $$\int_0^{\pi/2}e^{-aR\sin\theta}\dd{\theta}\le\int_0^{\pi/2}e^{-2aR\theta/\pi}\
 
 이고, 이를 대입하면
 
-$$\left\lvert\int_{C_R}f(z)e^{iaz}\dd{z}\right\rvert\le M(R)R\cdot2\cdot\frac{\pi}{2aR}=\frac{\pi}{a}M(R)\longrightarrow0$$
+$$\left\lvert\int_{C_R}f(z)e^{iaz}\dd{z}\right\rvert\le M(R)R\cdot2\cdot\frac{\pi}{2aR}=\frac{\pi}{a}M(R)\rightarrow0$$
 
 이다.
 :::
@@ -248,11 +248,11 @@ $$\int_{\Gamma_1}f\dd{z}+\int_{\Gamma_2}f\dd{z}=\int_\varepsilon^R\frac{x^{a-1}}
 
 이다. 큰 원 위에서 $\lvert z^{a-1}\rvert=R^{a-1}$이고 $\lvert1+z\rvert\ge R-1$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="8vbfx" }에서
 
-$$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{R^{a-1}}{R-1}\cdot2\pi R=\frac{2\pi R^{a}}{R-1}\longrightarrow0\qquad(R\to\infty)$$
+$$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{R^{a-1}}{R-1}\cdot2\pi R=\frac{2\pi R^{a}}{R-1}\rightarrow0\qquad(R\to\infty)$$
 
 이다. 이는 $a<1$일 때 분자의 차수 $a$가 분모의 차수 $1$보다 작기 때문이다. 작은 원 위에서는 $\lvert z^{a-1}\rvert=\varepsilon^{a-1}$이고 $\lvert1+z\rvert\ge1-\varepsilon$이므로
 
-$$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\varepsilon^{a-1}}{1-\varepsilon}\cdot2\pi\varepsilon=\frac{2\pi\varepsilon^{a}}{1-\varepsilon}\longrightarrow0\qquad(\varepsilon\to0^+)$$
+$$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\varepsilon^{a-1}}{1-\varepsilon}\cdot2\pi\varepsilon=\frac{2\pi\varepsilon^{a}}{1-\varepsilon}\rightarrow0\qquad(\varepsilon\to0^+)$$
 
 이며, 이는 $a>0$일 때이다. 따라서 $\varepsilon\to0$, $R\to\infty$에서 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="fe5yj" }는
 
@@ -282,11 +282,11 @@ $$\int_{-R}^{-\varepsilon}f\dd{z}=\int_\varepsilon^R\frac{\ln x+i\pi}{1+x^2}\dd{
 
 이다. 두 선분의 합은 $\varepsilon\to0$, $R\to\infty$에서 $2J+i\pi\int_0^\infty\dd{x}/(1+x^2)=2J+i\pi^2/2$이다. 큰 반원 위에서는 $\lvert\operatorname{Log}z\rvert\le\ln R+\pi$이고 $\lvert1+z^2\rvert\ge R^2-1$이므로
 
-$$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{\ln R+\pi}{R^2-1}\cdot\pi R\longrightarrow0$$
+$$\left\lvert\int_{C_R}f\dd{z}\right\rvert\le\frac{\ln R+\pi}{R^2-1}\cdot\pi R\rightarrow0$$
 
 이다. 작은 반원 위에서는 $\lvert\operatorname{Log}z\rvert\le\lvert\ln\varepsilon\rvert+\pi$이고 $\lvert1+z^2\rvert\ge1-\varepsilon^2$이므로
 
-$$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\lvert\ln\varepsilon\rvert+\pi}{1-\varepsilon^2}\cdot\pi\varepsilon\longrightarrow0$$
+$$\left\lvert\int_{c_\varepsilon}f\dd{z}\right\rvert\le\frac{\lvert\ln\varepsilon\rvert+\pi}{1-\varepsilon^2}\cdot\pi\varepsilon\rightarrow0$$
 
 이다. 마지막 극한은 $\varepsilon\ln\varepsilon\to0$에서 온다. 따라서 $2J+i\pi^2/2=i\pi^2/2$이고 $J=0$이다.
 :::
@@ -316,7 +316,7 @@ $$\lvert\cot\pi z\rvert^2=\frac{\cos^2\pi x+s}{\sin^2\pi x+s}\le\frac{1+s}{s}=\c
 
 $\deg Q\ge\deg P+2$이므로 [명제 1](#prop1){: data-lid="h06ls" }의 증명과 같이 $\lvert z\rvert\ge R_0$에서 $\lvert f(z)\rvert\le A/\lvert z\rvert^2$이다. $N$을 $N+1/2>R_0$이고 $f$의 모든 극이 $\Gamma_N$ 안쪽에 놓일 만큼 크게 잡으면 $\Gamma_N$ 위에서 $\lvert z\rvert\ge N+1/2$이다. $\Gamma_N$의 둘레가 $8(N+1/2)$이므로 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="xu722" }에서
 
-$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert\le\pi C\cdot\frac{A}{(N+\frac12)^2}\cdot8\Bigl(N+\frac12\Bigr)=\frac{8\pi CA}{N+\frac12}\longrightarrow0$$
+$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\dd{z}\right\rvert\le\pi C\cdot\frac{A}{(N+\frac12)^2}\cdot8\Bigl(N+\frac12\Bigr)=\frac{8\pi CA}{N+\frac12}\rightarrow0$$
 
 이다. 한편 $\Gamma_N$ 안의 극은 정수 $-N,\dots,N$과 $f$의 극들이므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="dox5j" }로
 

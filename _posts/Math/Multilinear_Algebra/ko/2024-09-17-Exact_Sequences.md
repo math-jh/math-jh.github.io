@@ -105,11 +105,11 @@ $$x_j=\sum_{i\neq j}(-x_i)$$
 ::: 명제 7
 $A$-module $M$의 두 submodule $N_1,N_2$가 주어졌다 하자. 그럼 다음의 두 exact sequence
 
-$$0 \longrightarrow N_1\cap N_2 \overset{\Delta}{\longrightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\longrightarrow} N_1+N_2\longrightarrow 0$$
+$$0 \rightarrow N_1\cap N_2 \overset{\Delta}{\rightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\rightarrow} N_1+N_2\rightarrow 0$$
 
 와
 
-$$0 \longrightarrow M/(N_1\cap N_2)\overset{\Delta'}{\longrightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\longrightarrow}M/(N_1+N_2)\longrightarrow 0$$
+$$0 \rightarrow M/(N_1\cap N_2)\overset{\Delta'}{\rightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\rightarrow}M/(N_1+N_2)\rightarrow 0$$
 
 이 존재한다. 여기서 $i_k,p_k$는 각각 canonical morphism들
 
@@ -164,7 +164,7 @@ $$0\rightarrow N_1\hookrightarrow N_1\oplus N_2\twoheadrightarrow N_2 \rightarro
 ::: 명제 10
 $A$-module들의 exact sequence
 
-$$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N \longrightarrow 0$$
+$$0\rightarrow M \overset{u}{\rightarrow}L \overset{v}{\rightarrow}N \rightarrow 0$$
 
 에 대하여, 다음 조건들이 모두 동치이다.
 

@@ -61,7 +61,7 @@ First, the condition $\mathbf{f}(p)=0$ is well defined. This is because all func
 
 Moreover, the maximality of $\mathfrak{m}_p$ follows from the exactness of the diagram
 
-$$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\longrightarrow}\mathbb{R}\longrightarrow 0$$
+$$0\rightarrow \mathfrak{m}_p\rightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\rightarrow}\mathbb{R}\rightarrow 0$$
 
 where the *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ is defined by $\mathbf{f}\mapsto\mathbf{f}(p)$. This is because $\mathcal{C}^\infty_p/\mathfrak{m}_p$ is the field $\mathbb{R}$.
 :::

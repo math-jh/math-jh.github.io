@@ -19,7 +19,7 @@ weight: 103
 
 Ring들의 곱의 경우는 어렵지 않게 정의할 수 있다. Ring들의 family $(A_i)_{i\in I}$가 주어졌다 하자. 그럼 abelian group의 product $\prod_{i\in I}A_i$가 잘 정의된다. 한편 $A_i$ 위에 곱셈구조를 주는 $\mu_i: A_i\otimes A_i \rightarrow A_i$는 bilinear map $A_i\times A_i \rightarrow A_i$와 같고, 이를 통해 집합들 사이의 함수
 
-$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
+$$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\rightarrow} \prod_{i\in I}A_i$$
 
 를 정의할 수 있다.
 
@@ -90,7 +90,7 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)$$
 
 가 성립하고, 따라서 $\mu_A:A\otimes A \rightarrow A$와 $\mu_B: B\otimes B \rightarrow B$가 $A\otimes B$ 위의 곱셈
 
-$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\longrightarrow} A\otimes B$$
+$$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\rightarrow} A\otimes B$$
 
 을 정의한다.
 

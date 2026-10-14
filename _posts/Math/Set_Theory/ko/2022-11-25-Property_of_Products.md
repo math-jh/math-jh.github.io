@@ -33,7 +33,7 @@ $$\biggl(F\circ\Delta_J, J, \bigcup_{j\in J} A_j\biggr)$$
 
 위의 문단에 의하여, $F\mapsto F\circ\Delta_J$는 $\prod_{i\in I}A_i$에서 $\prod_{j\in J}A_j$로의 함수를 정의한다. 이를 성분함수의 표기를 빌려 $\pr_J$로 적는다. 그럼 $K\subseteq J\subseteq I$에 대하여, 곱집합 $\prod_{i\in I}A_i$에서 부분곱 $\prod_{j\in J}A_j$로의 $J$번째 성분함수와, 곱집합 $\prod_{j\in J}A_j$에서 이 곱집합의 부분곱 $\prod_{k\in K}A_k$로의 $K$번째 성분함수
 
-$$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in K}A_k$$
+$$\prod_{i\in I}A_i\rightarrow \prod_{j\in J}A_j\rightarrow \prod_{k\in K}A_k$$
 
 의 합성은 간단히 곱집합 $\prod_{i\in I}A_i$에서 이 곱집합의 부분곱 $\prod_{k\in K}A_k$로의 $K$번째 성분함수 $\pr_K$와 같다. $\Delta_K=\Delta_J\circ\Delta_K$이기 때문이다. 
 
@@ -82,7 +82,7 @@ $(J_k)_{k\in K}$이 분할이므로, $f_k:J_k\rightarrow \bigcup_{i\in I} A_i$�
 
 $(J_k)_{k\in K}$는 $I$의 분할이므로, 각각의 $i\in I$마다 유일한 $k\in K$가 존재하여 $i\in J_k$이다. 이제 함수 $\pr_{ik}$를 다음의 합성
 
-$$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longrightarrow}\prod_{j\in J_k}A_j\overset{\pr_i}{\longrightarrow}A_i$$
+$$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\rightarrow}\prod_{j\in J_k}A_j\overset{\pr_i}{\rightarrow}A_i$$
 
 으로 정의하자. 그럼 곱집합 $\prod_{i\in I}A_i$의 universal property로부터, 다음의 diagram을 commute하도록 하는 $\phi:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\rightarrow\prod_{i\in I}A_i$가 존재함을 안다.
 

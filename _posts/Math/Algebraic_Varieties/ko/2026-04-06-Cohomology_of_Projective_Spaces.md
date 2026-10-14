@@ -48,7 +48,7 @@ $$(\delta f)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k f_{i_0 \cdots \hat{i
 
 이제 이들 데이터를 이용하여 각각의 cohomology group들을 계산하자. $\mathbb{P}^1$의 경우부터 살펴보면, Čech complex는
 
-$$0 \longrightarrow \check{C}^0\overset{\delta}{\longrightarrow}\check{C}^1\longrightarrow 0$$
+$$0 \rightarrow \check{C}^0\overset{\delta}{\rightarrow}\check{C}^1\rightarrow 0$$
 
 로 주어진다. 여기서
 

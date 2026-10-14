@@ -161,7 +161,7 @@ In particular, for the open submanifold $\GL(n;\mathbb{R})$ of $\Mat_n(\mathbb{R
 
 Let $M$ be an arbitrary manifold and $f:M\rightarrow\mathbb{R}$ a $C^\infty$ function. Then for every point $p\in M$, the differential $\dd{f_p}:T_pM\rightarrow T_{f(p)}\mathbb{R}$ is well defined. By [Proposition 4](#prop4){: data-lid="sjvhv" }, there exists an isomorphism between $\mathbb{R}$ and its tangent space $T_{f(p)}\mathbb{R}$ as 1-dimensional $\mathbb{R}$-vector spaces. Thus, via
 
-$$T_pM\overset{\dd{f_p}}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longrightarrow}\mathbb{R}$$
+$$T_pM\overset{\dd{f_p}}{\rightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\rightarrow}\mathbb{R}$$
 
 we may regard $\dd{f_p}$ as an element of $(T_pM)^\ast$.
 

@@ -140,7 +140,7 @@ $$H^n(F^n\Tot(K)^\bullet)=\ker\left(\Hom_\lMod{A}(M, I^n)\rightarrow \Hom_\lMod{
 
 이다. 이제 이를 바탕으로 $p=n-1$인 경우의 cohomology long exact sequence를 분석하면
 
-$$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longrightarrow} H^n(F^n\Tot(K)^\bullet) \longrightarrow H^n(F^{n-1}\Tot(K)^\bullet) \longrightarrow 0$$
+$$\cdots \rightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\rightarrow} H^n(F^n\Tot(K)^\bullet) \rightarrow H^n(F^{n-1}\Tot(K)^\bullet) \rightarrow 0$$
 
 에서, $H^n(F^{n-1}\Tot(K)^\bullet)$은 connecting homomorphism $\delta_{n-1}$의 cokernel이라는 것을 안다. 이 때, $H^n(F^n\Tot(K)^\bullet)$은 이미 $p=n$인 경우에 구했으며, connecting homomorphism $\delta_{n-1}$은 다시 $\Hom_\lMod{A}(M, I^{n-1})\rightarrow \Hom_\lMod{A}(M, I^{n})$으로부터 오는 것이므로
 

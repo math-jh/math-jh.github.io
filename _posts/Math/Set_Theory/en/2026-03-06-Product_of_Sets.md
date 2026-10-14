@@ -114,8 +114,8 @@ For any $f:B\times C\rightarrow A$, we have $\tilde{f}\in \Fun(C, \Fun(B, A))$. 
 On the other hand, for any $g\in\Fun(C, \Fun(B, A))$, applying first $\bar{g}$ and then $\tilde{\bar{g}}$, we see that $\tilde{\bar{g}}$ is the function defined by $y\mapsto \bar{g}(-,y)$. By the definition of $\bar{g}$, this is the function sending $y$ to $g(y)(-)$. That is, $\tilde{\bar{g}}=g$. From $\bar{\tilde{f}}=f$ and $\tilde{\bar{g}}=g$, we conclude that these are inverse functions of each other. We have thus shown that
 
 $$\begin{aligned}
-  f\overset{\sim}{\longrightarrow}&\tilde{f}\overset{-}{\longrightarrow}\bar{\tilde{f}}=f,\\
-  g\overset{-}{\longrightarrow}&\bar{g}\overset{\sim}{\longrightarrow}\tilde{\bar{g}}=g
+  f\overset{\sim}{\rightarrow}&\tilde{f}\overset{-}{\rightarrow}\bar{\tilde{f}}=f,\\
+  g\overset{-}{\rightarrow}&\bar{g}\overset{\sim}{\rightarrow}\tilde{\bar{g}}=g
 \end{aligned}$$
 
 Therefore $\sim\;:f\mapsto\tilde{f}$ is a bijection.

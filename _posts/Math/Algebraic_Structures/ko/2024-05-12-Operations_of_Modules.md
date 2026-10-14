@@ -20,13 +20,13 @@ Category $\lMod{A}$는 bicomplete category이다. 이를 보이기 위해서는 
 
 $A$-module들의 family $(M_i)_{i\in I}$이 주어졌다 하자. 그럼 $\prod M_i$ 위에서의 action은 다음의 식
 
-$$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\longrightarrow} A\otimes M_i \overset{\rho_i}{\longrightarrow} M_i $$
+$$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\rightarrow} A\otimes M_i \overset{\rho_i}{\rightarrow} M_i $$
 
 을 통해 $A\otimes\left(\prod M_i\right) \rightarrow M_i$를 정의한 후, $\Ab$에서의 product의 universal property를 이용해 $A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$를 만들고 이것이 action의 조건을 만족함을 보이면 된다. 
 
 Coproduct의 경우, $A\otimes-$은 $\Ab$에서 $\Ab$로의 left adjoint이므로 colimit을 보존하고, 따라서 
 
-$$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\longrightarrow} \bigoplus_{i\in I}M_i$$
+$$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\rightarrow} \bigoplus_{i\in I}M_i$$
 
 를 통해 $\bigoplus M_i$ 위에서의 action이 정의된다. Equalizer와 coequalizer의 경우, 두 module homomorphism $u,v:M \rightarrow N$에 대하여
 

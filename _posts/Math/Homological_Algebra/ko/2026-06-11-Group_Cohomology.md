@@ -78,7 +78,7 @@ $$d_n[g_1\mid\cdots\mid g_n]=g_1[g_2\mid\cdots\mid g_n]+\sum_{i=1}^{n-1}(-1)^i[g
 ::: 정리 4
 위의 데이터는 trivial $G$-module $\mathbb{Z}$의 free resolution
 
-$$\cdots\longrightarrow B_2\overset{d_2}{\longrightarrow}B_1\overset{d_1}{\longrightarrow}B_0\overset{\varepsilon}{\longrightarrow}\mathbb{Z}\longrightarrow0$$
+$$\cdots\rightarrow B_2\overset{d_2}{\rightarrow}B_1\overset{d_1}{\rightarrow}B_0\overset{\varepsilon}{\rightarrow}\mathbb{Z}\rightarrow0$$
 
 을 이룬다. 이를 $G$의 *bar resolution*이라 부른다.
 :::
@@ -162,7 +162,7 @@ $$N=1+\sigma+\sigma^2+\cdots+\sigma^{n-1},\qquad \sigma-1$$
 ::: 명제 7
 다음의 sequence
 
-$$\cdots\longrightarrow\mathbb{Z}G\overset{\sigma-1}{\longrightarrow}\mathbb{Z}G\overset{N}{\longrightarrow}\mathbb{Z}G\overset{\sigma-1}{\longrightarrow}\mathbb{Z}G\overset{\varepsilon}{\longrightarrow}\mathbb{Z}\longrightarrow0$$
+$$\cdots\rightarrow\mathbb{Z}G\overset{\sigma-1}{\rightarrow}\mathbb{Z}G\overset{N}{\rightarrow}\mathbb{Z}G\overset{\sigma-1}{\rightarrow}\mathbb{Z}G\overset{\varepsilon}{\rightarrow}\mathbb{Z}\rightarrow0$$
 
 은 trivial $G$-module $\mathbb{Z}$의 free resolution이다.
 :::
@@ -184,7 +184,7 @@ $$H^0(G;M)=M^G,\qquad H^{2k-1}(G;M)\cong\frac{\ker N_M}{(\sigma-1)M},\qquad H^{2
 ::: 증명
 [명제 7](#prop7){: data-lid="yi551" }의 resolution에 $\Hom_{\lMod{\mathbb{Z}G}}(-,M)$을 적용하자. $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z}G,M)\cong M$ ($\varphi\mapsto\varphi(1)$)이고, 이 identification 하에서 $\sigma-1$과 $N$을 곱하는 map들은 각각 $m\mapsto(\sigma-1)\cdot m$과 $N_M$이 된다. 즉 cochain complex는
 
-$$0\longrightarrow M\overset{\sigma-1}{\longrightarrow}M\overset{N_M}{\longrightarrow}M\overset{\sigma-1}{\longrightarrow}M\longrightarrow\cdots$$
+$$0\rightarrow M\overset{\sigma-1}{\rightarrow}M\overset{N_M}{\rightarrow}M\overset{\sigma-1}{\rightarrow}M\rightarrow\cdots$$
 
 이고, [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3){: data-lid="zb4wx" }에 의해 이것의 cohomology가 $H^n(G;M)$이다. $\ker(\sigma-1)=M^G$이므로 주장의 식들을 얻는다.
 :::

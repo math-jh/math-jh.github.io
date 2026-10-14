@@ -261,11 +261,11 @@ $$A_f \rightarrow B_{\phi(f)}$$
 
 를 정의하는 것과 같고, 이는 합성
 
-$$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi(f)}$$
+$$A \overset{\phi}{\rightarrow}B \overset{\epsilon}{\rightarrow} B_{\phi(f)}$$
 
 에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6){: data-lid="0yy23" }을 적용하여 얻어진다. 물론 이렇게 정의된 사상들이 restriction map과 가환함을 보여야 한다. $D(g)\subseteq D(f)$라 하면 $D(\phi(g))\subseteq D(\phi(f))$이고, 두 합성
 
-$$A_f \longrightarrow B_{\phi(f)} \longrightarrow B_{\phi(g)},\qquad A_f \longrightarrow A_g \longrightarrow B_{\phi(g)}$$
+$$A_f \rightarrow B_{\phi(f)} \rightarrow B_{\phi(g)},\qquad A_f \rightarrow A_g \rightarrow B_{\phi(g)}$$
 
 은 모두 $\epsilon_f$와 합성하면 $A \rightarrow B \rightarrow B_{\phi(g)}$가 되므로, 위의 유일성에 의하여 서로 같다.
 
@@ -288,7 +288,7 @@ $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q
 
 Affine scheme들의 category를 $\AffSch$로 적는다. 그럼 functor $\Spec:\cRing^\op \rightarrow \AffSch$는 그 정의에 의해 essentially surjective이다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5){: data-lid="f2mpz" }) 또, 만일 $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$이 어떠한 ring homomorphism $\phi$로부터 유도된 것이라면, [명제 9](#prop9){: data-lid="wrxu6" }의 증명에서 $1=f\in A$로 잡으면
 
-$$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
+$$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\rightarrow} B \overset{\id_B}{\rightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
 이므로, 이 functor는 반드시 faithful이다. 뿐만 아니라 다음이 성립한다.
 
@@ -393,7 +393,7 @@ $$\varphi^{-1}(D(f))=\{x\in X\mid f\not\in \varphi(x)\}=\{x\in X\mid \phi(f)_x\n
 
 이제 sheaf morphism $\varphi^\sharp: \mathcal{O}_{\Spec A} \rightarrow \varphi_\ast \mathcal{O}_X$를 정의한다. 각각의 $f\in A$마다 $V_f=\varphi^{-1}(D(f))=X_{\phi(f)}$라 하고, $\phi$와 restriction map을 합성하여 얻어지는 ring homomorphism을
 
-$$\theta_f: A\overset{\phi}{\longrightarrow} \Gamma(X) \longrightarrow \mathcal{O}_X(V_f)$$
+$$\theta_f: A\overset{\phi}{\rightarrow} \Gamma(X) \rightarrow \mathcal{O}_X(V_f)$$
 
 라 적자. 우리의 주장은 $\theta_f(f)=\phi(f)\vert_{V_f}$가 $\mathcal{O}_X(V_f)$의 unit이라는 것이다. 실제로 $V_f$의 정의에 의하여 임의의 $y\in V_f$마다 $\phi(f)_y$는 $\mathcal{O}_{X,y}$의 unit이므로, 위의 논증을 반복하면 $y$의 열린근방 $W_y\subseteq V_f$와 $u_y\in \mathcal{O}_X(W_y)$가 존재하여 $\phi(f)\vert_{W_y}u_y=1$이도록 할 수 있다. 그럼 교집합 $W_y\cap W_{y'}$ 위에서 $u_y$와 $u_{y'}$의 restriction은 모두 $\phi(f)\vert_{W_y\cap W_{y'}}$의 곱셈에 대한 역원이므로 서로 같고, 따라서 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1){: data-lid="j9udf" }의 gluability axiom에 의하여 이들은 하나의 $u\in \mathcal{O}_X(V_f)$로 붙는다. 이제 $\phi(f)\vert_{V_f}u$와 $1$은 각각의 $W_y$로 제한하면 서로 같으므로, identity axiom에 의하여 $\phi(f)\vert_{V_f}u=1$이다. 
 
@@ -407,7 +407,7 @@ $$\varphi^\sharp(D(f)): A_f=\mathcal{O}_{\Spec A}(D(f)) \rightarrow \mathcal{O}_
 
 가 유일하게 존재한다. 만일 $D(g)\subseteq D(f)$라면 $V_g\subseteq V_f$이고, 두 합성
 
-$$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longrightarrow \mathcal{O}_X(V_g),\qquad A_f \longrightarrow A_g \overset{\varphi^\sharp(D(g))}{\longrightarrow} \mathcal{O}_X(V_g)$$
+$$A_f \overset{\varphi^\sharp(D(f))}{\rightarrow} \mathcal{O}_X(V_f) \rightarrow \mathcal{O}_X(V_g),\qquad A_f \rightarrow A_g \overset{\varphi^\sharp(D(g))}{\rightarrow} \mathcal{O}_X(V_g)$$
 
 은 모두 $\epsilon_f$와 합성하면 $\theta_g$가 되므로, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6){: data-lid="s39f6" }의 유일성에 의하여 서로 같다. 즉 $\varphi^\sharp(D(f))$들은 restriction map과 가환한다. 
 

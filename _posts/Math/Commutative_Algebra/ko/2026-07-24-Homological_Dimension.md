@@ -33,7 +33,7 @@ Projective dimension은 $\pd$로 적고, injective dimension에는 $\operatornam
 $$\cdots \rightarrow \Ext_A^i(M'',N) \rightarrow \Ext_A^i(M,N) \rightarrow \Ext_A^i(M',N) \rightarrow \Ext_A^{i+1}(M'',N) \rightarrow \cdots$$
 를 유도한다.
 
-Projective dimension을 $\Ext$로 특징짓기 위해 syzygy를 도입한다. Projective resolution $\cdots \rightarrow P_1 \overset{d_1}{\longrightarrow} P_0 \overset{\epsilon}{\longrightarrow} M \rightarrow 0$이 주어지면, $\Omega^0 M=M$으로 두고 각각의 $i\geq 0$에 대하여 $\Omega^{i+1}M=\ker(P_i \rightarrow \Omega^i M)$으로 정의한다. 그럼 $\Omega^1 M=\ker\epsilon$이고 $i\geq 1$에서 $\Omega^{i+1}M=\ker d_i$이며, 각각의 $i$에 대하여 short exact sequence
+Projective dimension을 $\Ext$로 특징짓기 위해 syzygy를 도입한다. Projective resolution $\cdots \rightarrow P_1 \overset{d_1}{\rightarrow} P_0 \overset{\epsilon}{\rightarrow} M \rightarrow 0$이 주어지면, $\Omega^0 M=M$으로 두고 각각의 $i\geq 0$에 대하여 $\Omega^{i+1}M=\ker(P_i \rightarrow \Omega^i M)$으로 정의한다. 그럼 $\Omega^1 M=\ker\epsilon$이고 $i\geq 1$에서 $\Omega^{i+1}M=\ker d_i$이며, 각각의 $i$에 대하여 short exact sequence
 $$0 \rightarrow \Omega^{i+1}M \rightarrow P_i \rightarrow \Omega^i M \rightarrow 0$$
 을 얻는다. $\Omega^n M$을 (선택한 resolution에 대한) $M$의 *$n$번째 syzygy*라 부른다.
 
@@ -146,7 +146,7 @@ $$\operatorname{gldim}A=\sup_M\operatorname{injdim}_A M=\sup_I \pd_A(A/I)$$
 
 ::: 정의 8
 위와 같은 상황에서 free resolution
-$$\cdots \rightarrow F_1 \overset{d_1}{\longrightarrow} F_0 \overset{\epsilon}{\longrightarrow} M \rightarrow 0$$
+$$\cdots \rightarrow F_1 \overset{d_1}{\rightarrow} F_0 \overset{\epsilon}{\rightarrow} M \rightarrow 0$$
 (각 $F_i$는 finitely generated free $A$-module)이 *minimal*이라는 것은 모든 $i\geq 1$에 대하여 $d_i(F_i)\subseteq \mathfrak{m}F_{i-1}$이 성립하는 것이다.
 :::
 
@@ -217,7 +217,7 @@ Polynomial ring $\mathbb{K}[\x_1,\ldots, \x_n]$은 local ring이 아니므로 �
 
 ::: 보조정리 14
 Ring $A$와 $A[\x]$-module $M$이 주어졌다 하자. $M$을 $A$-module로 보고 $M[\x]=A[\x]\otimes_A M$이라 하면, 다음의 $A[\x]$-module들의 short exact sequence
-$$0 \rightarrow M[\x] \overset{\psi}{\longrightarrow} M[\x] \overset{\rho}{\longrightarrow} M \rightarrow 0$$
+$$0 \rightarrow M[\x] \overset{\psi}{\rightarrow} M[\x] \overset{\rho}{\rightarrow} M \rightarrow 0$$
 이 존재한다. 여기서 $\psi(f\otimes m)=\x f\otimes m-f\otimes \x m$이고 $\rho(f\otimes m)=fm$이며, $\x m$은 $M$ 위의 $A[\x]$-작용을 뜻한다.
 :::
 ::: 증명

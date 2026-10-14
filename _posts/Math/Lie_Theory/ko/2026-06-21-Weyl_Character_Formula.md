@@ -228,7 +228,7 @@ $$F_t(\mathrm{ch}\,L(\lambda))=\frac{\prod_{\alpha>0}\bigl(e^{t\langle\lambda+\r
 
 이다. 각 인자에 $e^x-e^{-x}=2x+O(x^3)$을 적용하면 $t\rightarrow 0$에서
 
-$$F_t(\mathrm{ch}\,L(\lambda))\longrightarrow\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha^\vee\rangle}{\langle\rho,\alpha^\vee\rangle}=\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha\rangle}{\langle\rho,\alpha\rangle}$$
+$$F_t(\mathrm{ch}\,L(\lambda))\rightarrow\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha^\vee\rangle}{\langle\rho,\alpha^\vee\rangle}=\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha\rangle}{\langle\rho,\alpha\rangle}$$
 
 이고, 좌변의 극한은 $\dim L(\lambda)$이므로 주장한 등식을 얻는다. 분자와 분모의 인자 수가 모두 $\lvert\Phi^+\rvert$로 같아 $t$의 거듭제곱이 상쇄되고 상수항만 남는다.
 :::

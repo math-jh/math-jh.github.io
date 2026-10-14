@@ -158,7 +158,7 @@ $$Y_q=\dd{F_p}(X_p)\qquad (F(p)=q)$$
 
 으로 정의해주면 된다. $Y$가 $X$에 $F$-related이기 위해서는 위의 식이 반드시 성립해야 하므로, 이러한 $Y$가 유일하다는 것은 자명하다. 또, $Y:N\rightarrow TN$은 이제 다음 $C^\infty$ 함수들의 합성
 
-$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{\dd{F}}{\longrightarrow}TN$$
+$$N\overset{F^{-1}}{\rightarrow}M\overset{X}{\rightarrow}TM\overset{\dd{F}}{\rightarrow}TN$$
 
 이므로 $Y$는 $C^\infty$이다. 
 :::

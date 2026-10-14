@@ -414,13 +414,13 @@ $$\text{Zariski}\implies\text{étale}\implies\text{fppf}$$
     
     로 붙이면, [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9){: data-lid="fj9r7" }에 의하여 $S$-scheme $p:P_\mathcal{L}\rightarrow S$가 잘 정의된다. 이제 이 위의 group scheme action $\varrho: \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}$은 각 $U_i$ 위에서 $\mathbb{G}_m$의 곱셈
     
-    $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
+    $$\mathbb{G}_{m, U_i}\times_{U_i} \mathbb{G}_{m, U_i} \rightarrow \mathbb{G}_{m, U_i};\qquad (a, t)\mapsto at$$
     
     로 정의된다. 우리 주장은 이것이 $G$-torsor라는 것이다. 
 
     우선 국소적으로 $P_\mathcal{L}\vert_{U_i}\cong \mathbb{G}_{m, U_i} \rightarrow U_i$는 faithfully flat이고 of finite presentation이므로, 이 성질들이 base의 국소적 성질임에 따라 $p:P_\mathcal{L}\rightarrow S$는 faithfully flat이고 locally of finite presentation이다. [정의 12](#def12){: data-lid="9xkno" }의 둘째 조건의 사상 $(\varrho, \pr_2): \mathbb{G}_m\times_S P_\mathcal{L} \rightarrow P_\mathcal{L}\times_S P_\mathcal{L}$의 경우, 이는 각 $U_i$ 위에서 다음의 morphism
       
-    $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \longrightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
+    $$\mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i} \rightarrow \mathbb{G}_{m, U_i}\times_{U_i}\mathbb{G}_{m, U_i};\qquad (a, t)\mapsto (at, t)$$
       
     에 해당하며, 대수적으로 coordinate ring 사이의 함수 
       

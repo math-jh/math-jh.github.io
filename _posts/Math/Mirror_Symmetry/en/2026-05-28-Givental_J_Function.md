@@ -244,7 +244,7 @@ Here the formally appearing infinite product to $-\infty$ precisely cancels betw
 
 Let $X$ be a smooth projective toric variety. Then we have the following short exact sequence
 
-$$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \longrightarrow 0$$
+$$0 \rightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xrightarrow{\ e_i \mapsto v_i\ } \mathbb{Z}^n \rightarrow 0$$
 
 Here $m$ is the number of rays, and $\mathbb{Z}^n$ is the cocharacter lattice. That is, $H_2$ is identified with the set of relations among rays
 

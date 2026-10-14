@@ -97,11 +97,11 @@ Since the homology of this complex contains everything we need, we introduce the
 
 First, the homology at both ends of this complex are familiar objects: $H_0$ is the quotient $A/(x_1,\ldots, x_n)$ and $H_n$ is the set of elements annihilated by all the $x_i$. Also, Koszul homology is always annihilated by $(x_1,\ldots, x_n)$, so in the extreme case where the cutting equations generate the unit ideal, all homology vanishes. The most important fact is that if $x_1,\ldots, x_n$ is a regular sequence, then $H_i$ vanishes for all $i\geq 1$, and as a result $K(x_1,\ldots, x_n)$ becomes a finite free resolution of $A/(x_1,\ldots, x_n)$. Intuitively, looking at the simplest case $n=1$, in the complex
 
-$$0 \rightarrow A\overset{x_1}{\longrightarrow}A \rightarrow 0$$
+$$0 \rightarrow A\overset{x_1}{\rightarrow}A \rightarrow 0$$
 
 we have
 
-$$H_1=\ker(A\overset{x_1}{\longrightarrow}A)=\{a\in A\mid x_1a=0\}$$
+$$H_1=\ker(A\overset{x_1}{\rightarrow}A)=\{a\in A\mid x_1a=0\}$$
 
 so the vanishing of $H_1$ is exactly the condition that $x_1$ is a non-zerodivisor, and the Koszul complex is the lifting of this to all degrees and sequences of arbitrary length. Transporting this to the associated sheaf means that the structure sheaf of a local complete intersection has an explicit finite free resolution on each chart.
 

@@ -48,7 +48,7 @@ That is, we can always find $G:V\rightarrow W$ making the following diagram comm
 
 Conversely, given any linear map $G:V\rightarrow W$, we may restrict it to $\mathcal{B}$ to define a function $g=G\circ\iota$, and by the uniqueness part of the theorem above, $G$ is the only linear map satisfying this equation. Thus there is a bijection between the following two sets:
 
-$$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
+$$\{\text{functions from $\mathcal{B}$ to $W$}\}\leftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
 
 In other words, a linear map $L$ from $V$ to $W$ is completely determined by how it acts on the basis $\mathcal{B}$, and if $V$ is finite-dimensional, this means that the linear map $L$ is determined solely by its values at finitely many elements.
 

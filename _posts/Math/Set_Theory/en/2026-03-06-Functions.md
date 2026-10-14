@@ -64,7 +64,7 @@ When working with many functions at once, it is convenient to use *diagrams* suc
 
 {% diagram Math/Set_Theory/Functions-2.svg width="14.24em" alt="commutative_diagram" %}
 
-Here $A\overset{f}{\longrightarrow}B$ is a concise notation for $f:A\rightarrow B$.
+Here $A\overset{f}{\rightarrow}B$ is a concise notation for $f:A\rightarrow B$.
 
 In the situation above, if $(i\circ g)(x)=(j\circ h)(x)$ for every $x\in B$, then the square
 

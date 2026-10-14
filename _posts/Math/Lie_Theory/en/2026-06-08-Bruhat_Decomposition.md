@@ -123,7 +123,7 @@ In what follows, when we treat $w\in W$ directly as a matrix, as in $BwB$ or the
 ::: Proposition 6
 For each $w\in W$, the product map
 
-$$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto uwb$$
+$$U_w\times B\rightarrow BwB,\qquad (u,b)\mapsto uwb$$
 
 is an isomorphism of varieties. Hence the Bruhat cell is $BwB\cong\mathbb{A}^{\ell(w)}\times B$, and projecting to the flag variety,
 

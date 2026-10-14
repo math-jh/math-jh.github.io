@@ -78,7 +78,7 @@ $\delta=\operatorname{depth}A$에 대한 귀납법으로, $\operatorname{depth}A
 
 $\delta=0$인 경우, 먼저 $\pd_A M=0$임을 보인다. 결론에 반하여 $p=\pd_A M\geq 1$이라 하고 $M$의 minimal free resolution
 
-$$0\rightarrow F_p\overset{d_p}{\longrightarrow} F_{p-1}\rightarrow\cdots\rightarrow F_0\overset{\epsilon}{\longrightarrow} M\rightarrow 0$$
+$$0\rightarrow F_p\overset{d_p}{\rightarrow} F_{p-1}\rightarrow\cdots\rightarrow F_0\overset{\epsilon}{\rightarrow} M\rightarrow 0$$
 
 을 택하자. 그 길이가 정확히 $p$인 것은 [§호몰로지 차원, ⁋명제 11](/ko/math/commutative_algebra/homological_dimension#prop11){: data-lid="kl0ux" }에 의한 것이다. Resolution의 exactness에 의하여 $d_p$는 injective이고, minimality에 의하여 $d_p(F_p)\subseteq\mathfrak{m}F_{p-1}$이다. 한편 $\operatorname{depth}A=0$이므로 [§Depth, ⁋정리 2](/ko/math/commutative_algebra/depth#thm2){: data-lid="qle67" }에 의하여 $\Hom_A(\kappa,A)\neq 0$이고, 따라서 $\mathfrak{m}s=0$을 만족하는 $0\neq s\in A$가 존재한다. 그럼
 
@@ -98,7 +98,7 @@ $$\pd_A M+(\operatorname{depth}M-1)=\pd_{\overline{A}}\overline{M}+\operatorname
 
 다음으로 $\operatorname{depth}M=0$인 경우를 다룬다. 만일 $M$이 free라면 [명제 1](#prop1){: data-lid="vdxug" }에 의하여 $\operatorname{depth}M=\operatorname{depth}A=\delta\geq 1$이 되어 $\operatorname{depth}M=0$에 모순이므로 $M$은 free가 아니고, 따라서 $\pd_A M\geq 1$이다. $M$의 minimal free resolution의 첫 단계에서 얻어지는 short exact sequence
 
-$$0\rightarrow M'\rightarrow F_0\overset{\epsilon}{\longrightarrow} M\rightarrow 0,\qquad M'=\ker\epsilon$$
+$$0\rightarrow M'\rightarrow F_0\overset{\epsilon}{\rightarrow} M\rightarrow 0,\qquad M'=\ker\epsilon$$
 
 을 생각하자. Minimality에 의하여 $M'\subseteq\mathfrak{m}F_0$이고, $M$이 free가 아니므로 $M'\neq 0$이다. Resolution의 나머지 $\cdots\rightarrow F_2\rightarrow F_1\rightarrow M'\rightarrow 0$은 $M'$의 minimal free resolution이므로 $\pd_A M'=\pd_A M-1$이다.
 
@@ -151,7 +151,7 @@ $$\pd_A M=d-\operatorname{depth}M$$
 ::: 예시 6
 Field $\mathbb{K}$에 대하여 $2$차원 regular local ring $A=\mathbb{K}[[\x,\y]]$와 그 maximal ideal $\mathfrak{m}=(\x,\y)$를 생각하자. $A$는 integral domain이므로 곱하기 $\x$는 $A$ 위에서 injective이고, $A/(\x)\cong\mathbb{K}[[\y]]$에서 $\y$의 image가 non-zerodivisor이므로 $\x,\y$는 $A$-sequence이다. 따라서 [§코쥴 복합체, ⁋따름정리 8](/ko/math/commutative_algebra/koszul_complex#cor8){: data-lid="oeqgd" }에 의하여 Koszul complex $K(\x,\y)$는 $A/\mathfrak{m}=\kappa$의 free resolution이며, 그 첫 syzygy를 떼면 다음의 exact sequence
 
-$$0\rightarrow A\overset{d_2}{\longrightarrow} A^{\oplus 2}\overset{d_1}{\longrightarrow}\mathfrak{m}\rightarrow 0,\qquad d_2(1)=(-\y,\x),\quad d_1(a,b)=a\x+b\y$$
+$$0\rightarrow A\overset{d_2}{\rightarrow} A^{\oplus 2}\overset{d_1}{\rightarrow}\mathfrak{m}\rightarrow 0,\qquad d_2(1)=(-\y,\x),\quad d_1(a,b)=a\x+b\y$$
 
 을 얻는다. 두 differential의 성분이 모두 $\mathfrak{m}$에 속하므로 이는 $\mathfrak{m}$의 minimal free resolution이고, $F_2=0$이므로 $\pd_A\mathfrak{m}=1$이다. $A$가 regular local ring이라 $\operatorname{depth}A=\dim A=2$이므로 [정리 3](#thm3){: data-lid="ps53n" }에 의하여
 
@@ -169,7 +169,7 @@ Field $\mathbb{K}$에 대하여 $A=\mathbb{K}[[\x,\y]]/(\x\y)$를 생각하자. 
 
 $A$에서 곱하기 $\overline{\x}$의 kernel을 계산한다. $f\in\mathbb{K}[[\x,\y]]$에 대하여 $\x f\in(\x\y)$인 것은 $\x f=\x\y g$인 $g$가 존재하는 것, 곧 domain에서 $\x$를 소거하여 $f\in(\y)$인 것과 동치이다. 따라서 $\ker(\cdot\overline{\x})=(\overline{\y})$이고, 같은 계산으로 $\ker(\cdot\overline{\y})=(\overline{\x})$이다. $\epsilon:A\rightarrow M$의 kernel이 $\overline{\x}A=(\overline{\x})$이므로 이 kernel들의 계산을 이어 붙이면 주기 $2$의 free resolution
 
-$$\cdots\overset{\cdot\overline{\y}}{\longrightarrow}A\overset{\cdot\overline{\x}}{\longrightarrow}A\overset{\cdot\overline{\y}}{\longrightarrow}A\overset{\cdot\overline{\x}}{\longrightarrow}A\overset{\epsilon}{\longrightarrow}M\rightarrow 0$$
+$$\cdots\overset{\cdot\overline{\y}}{\rightarrow}A\overset{\cdot\overline{\x}}{\rightarrow}A\overset{\cdot\overline{\y}}{\rightarrow}A\overset{\cdot\overline{\x}}{\rightarrow}A\overset{\epsilon}{\rightarrow}M\rightarrow 0$$
 
 을 얻는다. 모든 differential이 $\overline{\x}$ 또는 $\overline{\y}$의 곱하기이고 이들은 $\mathfrak{m}=(\overline{\x},\overline{\y})$에 속하므로 이 resolution은 minimal이며, 모든 $i$에서 $F_i=A\neq 0$이라 Betti number가 전부 $1$이다. 따라서 [§호몰로지 차원, ⁋명제 11](/ko/math/commutative_algebra/homological_dimension#prop11){: data-lid="41oo6" }에 의하여 $\pd_A M=\infty$이다.
 

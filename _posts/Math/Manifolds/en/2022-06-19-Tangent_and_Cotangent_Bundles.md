@@ -99,7 +99,7 @@ commute, those for which $E_b\rightarrow E'_{b'}$ is an isomorphism.
 Now consider the category $\mathbf{FVect}_\text{iso}$ of finite-dimensional $\mathbb{R}$-vector spaces whose morphisms are isomorphisms. Then $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$ is the category whose
 
 - objects are pairs $(V,W)$ of finite-dimensional vector spaces,
-- morphisms are pairs $(V,W)\overset{(f,g)}{\longrightarrow}(V',W')$ of isomorphisms between finite-dimensional vector spaces.
+- morphisms are pairs $(V,W)\overset{(f,g)}{\rightarrow}(V',W')$ of isomorphisms between finite-dimensional vector spaces.
 
 Thus a functor $F$ from $\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$ to $\mathbf{FVect}_\text{iso}$ must take $(V,W)$ to an $\mathbb{R}$-vector space $F(V,W)$ and $(f,g)$ to an isomorphism $F(f,g)$.
 

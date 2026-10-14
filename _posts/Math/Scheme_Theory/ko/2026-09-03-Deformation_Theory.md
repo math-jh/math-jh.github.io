@@ -21,13 +21,13 @@ $$S=\Spec A,\qquad X=\Spec C,\qquad\text{$C$ an $A$-algebra locally of finite pr
 
 에서 보면, closed embedding $T_0\hookrightarrow T$는 square-zero ideal $\mathfrak{b}\subseteq R$에 의한 square-zero extension
 
-$$0\longrightarrow\mathfrak{b}\longrightarrow R\overset{q}{\longrightarrow} R_0\longrightarrow0\tag{$\ast$}$$
+$$0\rightarrow\mathfrak{b}\rightarrow R\overset{q}{\rightarrow} R_0\rightarrow0\tag{$\ast$}$$
 
 에 대응하며, $S$-morphism $\varrho_0$는 $A$-algebra homomorphism $\rho_0:C\rightarrow R_0$에 대응한다. 즉, 이와 같은 상황에서 $\phi: A\rightarrow C$의 smoothness는 임의의 square-zero extension ($\ast$)와, 임의의 $\rho_0: C\rightarrow R_0$가 주어질 때마다, 그 lifting $\rho: C\rightarrow R$이 항상 존재하는 것과 동치였다. 
  
 이제 $C$가 locally of finite presentation인 $A$-algebra이므로, 적당한 polynomial algebra $B=A[\x_1,\ldots,\x_n]$와 $B$의 finitely generated ideal $\mathfrak{a}$가 존재하여 $C=B/\mathfrak{a}$라 할 수 있다. 자연스러운 projection $\pi:B\twoheadrightarrow C$와 $\rho_0$의 합성
 
-$$\overline{\rho}_0:B\longrightarrow C\overset{\rho_0}{\longrightarrow}R_0$$
+$$\overline{\rho}_0:B\rightarrow C\overset{\rho_0}{\rightarrow}R_0$$
 
 을 생각하자. 그럼 $q$가 surjective이므로 각각의 변수 $\x_i$마다 $q(r_i)=\overline{\rho}_0(\x_i)$을 만족하는 $r_i\in R$들을 택할 수 있으며, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8){: data-lid="7rl2f" }에 의하여 대응 $\x_i\mapsto r_i$는 $A$-algebra homomorphism $\widetilde{\rho}: B\rightarrow R$을 유일하게 정의한다. 이는 $q\circ \widetilde{\rho}=\overline{\rho}_0$을 만족하며, 이 때 각 $r_i$의 선택에는 $\ker q=\mathfrak{b}$만큼의 자유도가 존재한다. 
 
@@ -67,13 +67,13 @@ $$\delta'(\bar{f})-\delta(\bar{f})=D(f)=h(\dd{f}\otimes1)=h(\bar{d}(\bar{f}))$$
 
 로 주어진다. 여기서 $\bar{d}: \mathfrak{a}/\mathfrak{a}^2\rightarrow\Omega_{B/A}\otimes_BC$는 [§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="r4obf" }의 conormal morphism이고 $\delta'-\delta$는 $\bar{d}^\ast$의 image에 속한다는 것을 알 수 있다. 더 중요하게, 어떤 선택이 존재하여 $\mathfrak{a}$를 죽일 수 있는 것은 이제 적당한 $h:\Omega_{B/A}\otimes_BC\rightarrow \mathfrak{b}$가 존재하여 $\delta+\bar{d}^\ast(h)=0$인 것, 즉 $\delta$가 $\bar{d}^\ast$의 image에 속한다는 것과 동일하다. 즉, 이를 확인하기 위해서는 $\delta$를 다음의 class
 
-$$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^{\ast}}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
+$$[\delta]\in\coker\left(\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})\overset{\bar{d}^{\ast}}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,\mathfrak{b})\right)$$
 
 에서 살펴보면 되고, 이는 서로 다른 lift의 차이 $\delta'-\delta=\bar{d}^\ast(h)$가 $\im\bar{d}^\ast$에 속하므로 $\widetilde{\rho}$의 선택에 의존하지 않는다. 
 
 더 일반적으로, 이는 다음의 complex
 
-$$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\right]$$
+$$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/A}\otimes_BC\right]$$
 
 를 $\mathfrak{b}$로 dualize하여 얻는 complex $\Hom_C(\NL_{C/A}, \mathfrak{b})$의 첫째 cohomology이며, 따라서 이 $\mathfrak{b}$를 kernel로 가지는 square-zero extension ($\ast$)에 대한 lifting problem을 재는 obstruction space가 $H^1(\Hom_C(\NL_{C/A}, \mathfrak{b}))$이고, 만일 이것이 임의의 $\mathfrak{b}$에 대해 $0$이 된다면 $A\rightarrow C$가 smooth이게 된다. 이 형식화를 바탕으로 [§매끄러운 사상과 에탈 사상, ⁋정리 15](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm15){: data-lid="6hgti" }의 증명을 다시 보면, 해당 증명에서 한 것은 conormal sequence가 split exact임을 보여 naive cotangent complex 단계에서 이를 해결해버린 것이다. 
 
@@ -82,7 +82,7 @@ $$\NL_{C/A}=\left[\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\
 ::: 정의 1
 $A$-algebra $C$와, $A$ 위의 polynomial algebra $B$에 의한 presentation $C=B/\mathfrak{a}$에 대하여, 위의 complex
 
-$$\NL_{C/A}=\Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\bar{d}}{\longrightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
+$$\NL_{C/A}=\Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\bar{d}}{\rightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
 
 를 $C$의 *naive cotangent complex<sub>소박한 여접 복합체</sub>*라 부르고, 그 homology를 각각
 
@@ -119,13 +119,13 @@ $$H_1(\NL_{C/A})=0,\qquad \Omega_{C/A}\text{ is a finitely generated projective 
 ::: 증명
 $C$가 smooth하면 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="odapy" }에 의하여 conormal sequence
 
-$$0\longrightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
+$$0\rightarrow\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}\rightarrow0$$
 
 는 split short exact sequence이다. 따라서 $H_1(\NL_{C/A})=\ker\bar{d}=0$이고, $\Omega_{C/A}$는 finitely generated free module $\Omega_{B/A}\otimes_BC$의 direct summand이므로 finitely generated projective이다.
 
 이제 $H_1(\NL_{C/A})=0$이고 $\Omega_{C/A}$가 projective라 하자. Presentation $C=B/\mathfrak{a}$에 대한 conormal sequence
 
-$$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otimes_BC\longrightarrow\Omega_{C/A}\longrightarrow0$$
+$$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\rightarrow}\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}\rightarrow0$$
 
 는 항상 right exact이며 ([§미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2){: data-lid="1fipr" }) 여기에 조건 $H_1(\NL_{C/A})=\ker\bar{d}=0$이 주어졌으므로 왼쪽에 $0$을 붙여 short exact sequence를 얻을 수 있다. 또, $\Omega_{C/A}$가 projective이므로 surjection $\Omega_{B/A}\otimes_BC\rightarrow\Omega_{C/A}$가 split한다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4){: data-lid="dqrmi" }) 따라서 [§매끄러운 사상과 에탈 사상, ⁋명제 8](/ko/math/scheme_theory/smooth_and_etale_morphisms#prop8){: data-lid="sj7py" }에 의하여 $C$는 $A$ 위에서 smooth하다.
 
@@ -134,15 +134,15 @@ $$\mathfrak{a}/\mathfrak{a}^2\overset{\bar{d}}{\longrightarrow}\Omega_{B/A}\otim
 
 특히 $C$가 smooth라면, 위의 증명에서 얻은 splitting에 의하여 naive cotangent complex의 splitting
 
-$$\NL_{C/A}\cong \Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\id}{\longrightarrow}\at{0}{\mathfrak{a}/\mathfrak{a}^2}\Bigr]\oplus\Bigl[\at{1}{0}\longrightarrow\at{0}{\Omega_{C/A}}\Bigr]$$
+$$\NL_{C/A}\cong \Bigl[\at{1}{\mathfrak{a}/\mathfrak{a}^2}\overset{\id}{\rightarrow}\at{0}{\mathfrak{a}/\mathfrak{a}^2}\Bigr]\oplus\Bigl[\at{1}{0}\rightarrow\at{0}{\Omega_{C/A}}\Bigr]$$
 
 이 존재한다. 즉, 둘째 summand로의 projection을 $p$라 하면 short exact sequence
 
-$$0\longrightarrow\ker p\longrightarrow\NL_{C/A}\overset{p}{\longrightarrow}[0\longrightarrow\Omega_{C/A}]\longrightarrow0$$
+$$0\rightarrow\ker p\rightarrow\NL_{C/A}\overset{p}{\rightarrow}[0\rightarrow\Omega_{C/A}]\rightarrow0$$
 
 가 존재하며, 이 때
 
-$$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr]$$
+$$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\rightarrow}\mathfrak{a}/\mathfrak{a}^2\Bigr]$$
 
 이므로 모든 $n$에 대하여 $H_n(\ker p)=0$이다. 위의 short exact sequence에 [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1){: data-lid="wwnua" }을 적용하면 모든 degree에서 $H_n(p)$가 isomorphism이 되어, $p$는 $\NL_{C/A}$에서 degree $0$의 projective module $\Omega_{C/A}$로의 quasi-isomorphism이 된다. 즉, 이 경우에는 $\Omega_{C/A}$만 보아도 lifting들의 차이 $T^0(C/A,M)=\Hom_C(\Omega_{C/A},M)$를 계산할 수 있고, lifting의 존재를 가로막는 obstruction space $T^1$은 항상 사라진다.
 
@@ -150,11 +150,11 @@ $$\ker p\cong\Bigl[\mathfrak{a}/\mathfrak{a}^2\overset{\id}{\longrightarrow}\mat
 
 구체적인 상황을 보기 위하여 $B=A[\x_1,\ldots,\x_n]$, $C=B/\mathfrak{a}$로 놓고, $\mathfrak{a}=(f_1,\ldots,f_r)$가 $B$-regular sequence로 생성된다고 하자. 각 $f_j$의 class를 보내는 $C$-linear morphism
 
-$$C^r\longrightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\longmapsto\bar{f}_j$$
+$$C^r\rightarrow\mathfrak{a}/\mathfrak{a}^2,\qquad e_j\mapsto\bar{f}_j$$
 
 은 [§완전교차, ⁋명제 5](/ko/math/scheme_theory/complete_intersections#prop5){: data-lid="6laqx" }와 그 증명에 의하여 isomorphism이므로, 이 경우 naive cotangent complex는 Jacobian에 의해
 
-$$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\longrightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
+$$\NL_{C/A}\cong\left[C^r\overset{\bar{d}}{\rightarrow}C^n\right],\qquad\bar{d}(e_j)=\sum_i\overline{\frac{\partial f_j}{\partial\x_i}}\dd{\x_i}$$
 
 로 주어지며 두 항은 모두 finitely generated free (따라서 finitely generated projective) $C$-module이다. 일반적인 lci 상황에서는 이들 두 free module 사이의 morphism이 남지만, 위에서 살펴본 smooth 상황에서는 여기에 $\bar{d}$가 split injection이라는 조건이 더해져 complex가 degree $0$의 projective module 하나로 줄어드는 것이다. 
 
@@ -166,7 +166,7 @@ Deformation theory의 기하학적 출발점은 $A$-scheme $X_0$를 고정하고
 
 가장 단순한 예시로 두 직선이 원점에서 만나는 node $X_0=\Spec\bigl(A[\x,\y]/(\x\y)\bigr)$를 생각하자. 이를 deform하는 가장 간단한 방법은 방정식 $\x\y=0$을 $\x\y=\t$로 바꾸어 다음의 family
 
-$$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
+$$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\rightarrow\Spec A[\t]$$
 
 를 생각하는 것이다. 이는 $\t=0$에서 $X_0$를 fiber로 갖고, $\t$를 invert한 open set 위에서는 $\x$와 $\y$가 모두 invertible이 되어 smooth한 family를 이룬다. 또한 relation $\x\y=\t$에 의하여 모든 monomial은 $\t^n$, $\t^n\x^i$, $\t^n\y^j$ 가운데 하나로 유일하게 정리되므로, 이 coordinate ring은 $\{1\}\cup\{\x^i\mid i\geq1\}\cup\{\y^j\mid j\geq1\}$을 basis로 갖는 free $A[\t]$-module이다. 따라서 $\pi$는 flat하다. 즉 이 family를 보면 $X_0$의 원점에 있던 singularity가 parameter $\t$를 따라 어떻게 사라지는지를 살펴볼 수 있다.
 
@@ -177,7 +177,7 @@ $$\pi:X=\Spec\bigl(A[\t,\x,\y]/(\x\y-\t)\bigr)\longrightarrow\Spec A[\t]$$
 ::: 정의 3
 Flat $A$-algebra $C$와, $A$의 임의의 square-zero extension
 
-$$0\longrightarrow \mathfrak{b}\longrightarrow A'\longrightarrow A\longrightarrow0$$
+$$0\rightarrow \mathfrak{b}\rightarrow A'\rightarrow A\rightarrow0$$
 
 에 대하여, 다음을 정의한다. 
 
@@ -200,13 +200,13 @@ $$0\rightarrow \mathfrak{b}\rightarrow A'\rightarrow A\rightarrow0$$
 
 과 $A$-algebra $C$의 deformation $(C',\iota)$가 주어졌다면, 여기에 $-\otimes_{A'}C'$를 취한 것이 exact sequence
 
-$$0\longrightarrow \mathfrak{b}\otimes_A C\longrightarrow C'\overset{\bar{\iota}}{\longrightarrow} C\longrightarrow0$$
+$$0\rightarrow \mathfrak{b}\otimes_A C\rightarrow C'\overset{\bar{\iota}}{\rightarrow} C\rightarrow0$$
 
 을 준다. 여기서 $\bar{\iota}$는 quotient $C'\rightarrow C'\otimes_{A'}A$와 $\iota$의 합성이고, $\mathfrak{b}\otimes_{A'} C'\cong \mathfrak{b}\otimes_A(A\otimes_{A'} C')\cong \mathfrak{b}\otimes_A C$이고, $\mathfrak{b}^2=0$이므로 $\mathfrak{b}\otimes_A C$는 $C'$의 square-zero ideal이고, 따라서 이 exact sequence는 $C$의 square-zero extension이다. 
 
 더 일반적으로, 우리는 이 분류 문제를 임의의 $A$-algebra $C$와 $C$-module $M$에 대하여 다룰 수 있다. 다음 (square-zero) extension들
 
-$$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
+$$0\rightarrow M\rightarrow E\overset{p}{\rightarrow} C\rightarrow0$$
 
 을 생각하면, 이들은 다음 commutative diagram
 
@@ -214,7 +214,7 @@ $$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarr
 
 을 morphism으로 갖는 category $\Ext_{\Alg{A}}(C,M)=\operatorname{Exal}_A(C,M)$을 이루며, 이때 이들 morphism들은 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 3](/ko/math/homological_algebra/diagram_chasing#cor3){: data-lid="mj4ii" }에 의해 모두 isomorphism이다. 즉 이 category는 groupoid이고, 그 대상들 사이에 morphism이 존재하는지에 따라 square-zero extension의 isomorphism class들이 나뉜다. 실제로, 위의 category의 임의의 데이터
 
-$$0\longrightarrow M\longrightarrow E\overset{p}{\longrightarrow} C\longrightarrow0$$
+$$0\rightarrow M\rightarrow E\overset{p}{\rightarrow} C\rightarrow0$$
 
 가 주어졌다 하고 $C$를 polynomial ring $B$에 의한 presentation $B/\mathfrak{a}$로 나타내어 lift $B\rightarrow E$를 택한다면 [정의 1](#def1){: data-lid="x4ncd" } 직전의 lifting 계산과 정확히 같은 원리로 class $[\delta_E]\in T^1(C/A,M)$이 대응되며, 이는 우리가 택한 lift $B\rightarrow E$에 의존하지 않으므로 잘 정의된다.
 
@@ -230,7 +230,7 @@ $$E=R\times_{R_0}C=\{(r,c)\in R\times C\mid q(r)=\rho_0(c)\}$$
 
 을 정의할 수 있고, 이는 projection $p:E\rightarrow C$를 통해 $C$의 $\mathfrak{b}$에 의한 square-zero extension
 
-$$0\longrightarrow\mathfrak{b}\longrightarrow E\overset{p}{\longrightarrow}C\longrightarrow0$$
+$$0\rightarrow\mathfrak{b}\rightarrow E\overset{p}{\rightarrow}C\rightarrow0$$
 
 을 정의한다. 이때 $\rho_0$의 lifting $\rho:C\rightarrow R$가 존재하는 것은 $s(c)=(\rho(c),c)$가 $p$의 $A$-algebra section을 주는 것, 곧 이 extension이 split되는 것과 동치이며, 이 때문에 $[\delta]$가 $0$으로 가는 것이 $\rho_0$의 lifting의 존재와 동치임을 안다.
 
@@ -248,7 +248,7 @@ $$\sum_{j}a_jg_j\in \mathfrak{a}$$
 ::: 증명
 $C$가 $A$ 위에서 flat하므로, $C'$이 $A[\epsilon]$ 위에서 flat한 것은 $\epsilon$의 곱셈과 reduction이 주는 sequence
 
-$$0\longrightarrow C\overset{\epsilon}{\longrightarrow}C'\longrightarrow C\longrightarrow0$$
+$$0\rightarrow C\overset{\epsilon}{\rightarrow}C'\rightarrow C\rightarrow0$$
 
 이 exact인 것, 곧 $C'$이 $C$의 $C$에 의한 square-zero extension인 것과 동치이다. 여기서 $\ker(C'\rightarrow C)$는 $\bigl(\epsilon B[\epsilon]+(F_1,\ldots,F_m)\bigr)/(F_1,\ldots,F_m)$이므로, $\epsilon B[\epsilon]\cong B$ 아래에서 이 kernel은
 
@@ -302,7 +302,7 @@ $$\Der_A(B,C)=\Hom_C(\Omega_{B/A}\otimes_BC,C)\overset{\bar{d}^\ast}{\rightarrow
 ::: 정리 5
 Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여 다음의 exact sequence
 
-$$0\longrightarrow T^0(C/A,C)\longrightarrow\Der_A(B,C)\overset{\bar{d}^\ast}{\longrightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\longrightarrow T^1(C/A,C)\longrightarrow0$$
+$$0\rightarrow T^0(C/A,C)\rightarrow\Der_A(B,C)\overset{\bar{d}^\ast}{\rightarrow}\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)\rightarrow T^1(C/A,C)\rightarrow0$$
 
 가 성립하며, 각 항은 deformation theory에서 다음과 같은 의미를 가진다.
 1. $\Hom_C(\mathfrak{a}/\mathfrak{a}^2,C)$는 $C$의 first-order deformation과 presentation $B\twoheadrightarrow C$의 lift $B\rightarrow C'$를 함께 택한 자료를 분류한다.
@@ -319,7 +319,7 @@ $$F=f+\epsilon g\in B[\epsilon],\qquad C'=B[\epsilon]/(F)$$
 
 로 주어진다. 직관적으로 $\Spec C'$는 $\Spec A$를 무한소방향으로 늘리고, 이 방향을 따라 정의된 fat point $\Spec A'=\Spec A[\epsilon]$를 따라 $X_0$를 늘려둔 것이며 이를 어떻게 늘렸는지에 대한 정보가 $g$의 선택에 들어있으며, 더 구체적으로 우리는 [정리 5](#thm5){: data-lid="059xx" }에서 이 선택이 주는 다음의 $C$-linear map
 
-$$\varphi:\mathfrak{a}/\mathfrak{a}^2\longrightarrow C,\qquad \bar{f}\longmapsto\bar{g}$$
+$$\varphi:\mathfrak{a}/\mathfrak{a}^2\rightarrow C,\qquad \bar{f}\mapsto\bar{g}$$
 
 이 정확히 first-order deformation에 대한 정보를 모두 담고 있음을 보았다. 즉, $g$의 선택이 deformation을 결정한다. 
 
@@ -434,7 +434,7 @@ $$B^m\rightarrow\mathfrak{a};\qquad e_j\mapsto f_j$$
 ::: 정의 7
 Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여, *Lichtenbaum–Schlessinger complex<sub>리히텐바움-슐레진저 복합체</sub>* $\operatorname{LS}_{C/A}$는
 
-$$\operatorname{LS}_{C/A}=\Bigl[\at{2}{\Rel/\TrivRel}\overset{d_2}{\longrightarrow}\at{1}{B^m\otimes_BC}\overset{d_1}{\longrightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
+$$\operatorname{LS}_{C/A}=\Bigl[\at{2}{\Rel/\TrivRel}\overset{d_2}{\rightarrow}\at{1}{B^m\otimes_BC}\overset{d_1}{\rightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
 
 로 정의되며, 미분은
 
@@ -536,7 +536,7 @@ $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
 
 이는 위에서 설명한 일반적인 scheme에 대한 infinitesimal thickening을 사용하여 [정의 3](#def3){: data-lid="jsfdd" }을 다시 쓴 것에 불과하다. 실제로 square-zero thickening은 underlying topological space를 바꾸지 않으므로 $S$와 $S'$은 같은 열린집합을 가지며, 특히 affine open $V=\Spec A\subseteq S$에 대응하는 $V'\subseteq S'$ 역시 affine이며 이를 $V'=\Spec A'$이라 쓰면 $A'\twoheadrightarrow A$는 square-zero extension이 된다. 즉, 직관적으로 $S$의 infinitesimal thickening은 affine 조각들마다, compatible한 infinitesimal thickening을 한 후 붙여주는 것이라 생각할 수 있다. 마찬가지로 deformation $X$의 underlying space는 central fiber $X_0$와 같아서 $U\subseteq X_0$는 그대로 $X$의 열린집합을 정하며, 덕분에 deformation의 flatness와 central fiber 조건은 affine open들 위에서 확인할 수 있으며, 각 affine 조각에서는 [정의 3](#def3){: data-lid="x7z35" }의 경우로 환원된다. 특히 $V'=\Spec A'$ 위의 affine open을 $U'=\Spec C'\subseteq X$라 하고 $I=\ker(A'\rightarrow A)$라 하면, $C'$은 $A'$ 위에서 flat하므로 $0\rightarrow I\rightarrow A'\rightarrow A\rightarrow0$을 $C'$과 tensor하여 얻는 sequence
 
-$$0\longrightarrow I\otimes_{A'}C'\longrightarrow C'\longrightarrow C'/IC'\longrightarrow0$$
+$$0\rightarrow I\otimes_{A'}C'\rightarrow C'\rightarrow C'/IC'\rightarrow0$$
 
 는 exact이고, 또한 $I^2=0$이므로 $I\otimes_{A'}C'\cong I\otimes_A(C'/IC')$가 되어 $X_0\hookrightarrow X$의 ideal sheaf가 $\mathcal{G}=f^\ast\mathcal{I}$로 identify된다. 전체가 affine인 경우 $S=\Spec A$, $X_0=\Spec C$, $\mathcal{I}=\widetilde{M}$이라 하면
 
@@ -590,14 +590,14 @@ $$\mathcal{T}_{X_0/S}^q=\sExt^q_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{O}_{X_0
 
 이제 이 둘을 연관짓기 위해, [\[층론\] §층의 유도 범주와 유도 functor, ⁋따름정리 11](/ko/math/sheaf_theory/derived_category_of_sheaves#cor11){: data-lid="dndnd" }을 $\mathcal{G}=\mathcal{O}_{X_0}$와 cotangent complex의 truncation $\mathcal{K}=\tau_{\leq2}\LL_{X_0/S}$에 적용하자. $\mathcal{K}$는 homological degree $0,1,2$, 즉 cohomological degree $-2,-1,0$에만 항을 갖는 bounded complex이므로 $D^+(\mathcal{O}_{X_0})$의 대상이고, triangle $\tau_{\geq3}\LL_{X_0/S}\rightarrow\LL_{X_0/S}\rightarrow\mathcal{K}$의 첫 항은 degree $3$ 이상에서만 $\Ext$에 기여하므로, $i\leq2$에서는 $\mathcal{K}$가 $T^i(X_0/S)$와 $\mathcal{T}^i_{X_0/S}$를 그대로 계산한다. 또 $\LL_{X_0/S}$는 non-negative homological degree에 집중되어 있으므로 $q<0$에서 $\mathcal{T}_{X_0/S}^q=0$이고, 따라서 이는 first quadrant spectral sequence
 
-$$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Longrightarrow T^{p+q}(X_0/S)$$
+$$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Rightarrow T^{p+q}(X_0/S)$$
 
 가 된다. 이 spectral sequence의 낮은 차수 항들을 읽으면 다음을 얻는다.
 
 ::: 정리 12 (Local-to-global exact sequence)
 $X_0$가 $S$ 위에서 flat하고 separated이며 locally of finite presentation인 scheme이라 하자. 이때 exact sequence
 
-$$0\longrightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^1(X_0/S)\longrightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)\overset{d_2}{\longrightarrow}H^2(X_0,\mathcal{T}_{X_0/S}^0)\longrightarrow T^2(X_0/S)$$
+$$0\rightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\rightarrow T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)\overset{d_2}{\rightarrow}H^2(X_0,\mathcal{T}_{X_0/S}^0)\rightarrow T^2(X_0/S)$$
 
 가 성립한다.
 :::

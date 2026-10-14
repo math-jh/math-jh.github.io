@@ -191,10 +191,10 @@ Let a category $\mathcal{A}$ be given, and fix $A\in\obj(\mathcal{A})$.
 
 - For $\mathcal{A}$, the *slice category over $A$*, $\mathcal{A}_{/A}$, is given by the following data.
   - The objects of $\mathcal{A}_{/A}$ are morphisms in $\mathcal{A}$, $f:A_1\rightarrow A$.
-  - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_1=f_2\circ g$, given by $g:A_1\rightarrow A_2$.
+  - For any $(A_1\overset{f_1}{\rightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\rightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_1=f_2\circ g$, given by $g:A_1\rightarrow A_2$.
 - For $\mathcal{A}$, the *slice category under $A$*, ${}_{A/}\mathcal{A}$, is given by the following data.
   - The objects of ${}_{A/}\mathcal{A}$ are morphisms in $\mathcal{A}$, $f:A\rightarrow A_1$.
-  - For any $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$ and $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_2=g\circ f_1$, given by $g:A_1\rightarrow A_2$.
+  - For any $(A\overset{f_1}{\rightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$ and $(A\overset{f_2}{\rightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$, a morphism from $f_1$ to $f_2$ is a morphism satisfying $f_2=g\circ f_1$, given by $g:A_1\rightarrow A_2$.
 :::
 
 ---

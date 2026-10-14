@@ -18,7 +18,7 @@ We read a scheme morphism $\varphi: X \rightarrow S$ as a family parametrized by
 
 Indeed, such a family can behave badly; for instance, consider
 
-$$\Spec \mathbb{K}[t,\x]/(t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t].$$
+$$\Spec \mathbb{K}[t,\x]/(t\x) \rightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t].$$
 
 Thinking of this as a family parametrized by the variable $t$, over a fixed point $t_0\neq 0$ the equation $t_0\x=0$ forces the fiber to be the single point $\x=0$, whereas over $t=0$ this condition becomes vacuous and the fiber becomes the entire line $\mathbb{A}^1_\mathbb{K}$ in the $\x$-direction. The dimension of the fiber jumps from $0$ to $1$.
 
@@ -38,7 +38,7 @@ Then if $t_0\neq 0$, since $t_0$ is a unit this becomes $\mathbb{K}[\x]/(\x)=\ma
 
 Now let us examine more closely what happens at $t_0=0$, where the dimension jumps. To obtain the residue field $\kappa(0)$ we think of it as the cokernel of $\times t: A\rightarrow A$, and indeed since $A$ is an integral domain we know the following exact sequence exists:
 
-$$0 \longrightarrow A \xrightarrow{\ \times t\ } A \longrightarrow \kappa(0) \longrightarrow 0.$$
+$$0 \rightarrow A \xrightarrow{\ \times t\ } A \rightarrow \kappa(0) \rightarrow 0.$$
 
 Now applying $-\otimes_AB$ to obtain the fiber gives the following diagram
 
@@ -76,7 +76,7 @@ holds. Now an injective map $M'\hookrightarrow M$ of $A_\mathfrak{p}$-modules is
 
 Conversely, suppose $\varphi$ is flat. For each $\mathfrak{q}$, $B_\mathfrak{q}$ is $A_\mathfrak{p}$-flat and $A \rightarrow A_\mathfrak{p}$ is flat, so by the same argument as above $B_\mathfrak{q}$ is $A$-flat. Now choose an injective map $M'\hookrightarrow M$ of $A$-modules and set
 
-$$K=\ker(M'\otimes_AB \longrightarrow M\otimes_AB).$$
+$$K=\ker(M'\otimes_AB \rightarrow M\otimes_AB).$$
 
 Since localization is an exact functor, for any maximal ideal $\mathfrak{q}$ of $B$ we have $K_\mathfrak{q}=\ker(M'\otimes_AB_\mathfrak{q} \rightarrow M\otimes_AB_\mathfrak{q})=0$. However, if there existed $0\neq \xi\in K$, then $\ann(\xi)$ would be a proper ideal of $B$ and hence contained in some maximal ideal $\mathfrak{q}$, and from $K_\mathfrak{q}=0$ there would exist $s\in B\setminus \mathfrak{q}$ with $s\xi=0$, giving $\ann(\xi)\not\subseteq \mathfrak{q}$, a contradiction. Therefore $K=0$ and $B$ is $A$-flat.
 :::
@@ -156,13 +156,13 @@ In this example we examine the case where a specific fiber in a family of curves
 
 First consider the family of curves
 
-$$\Spec \mathbb{K}[t, \x, \y]/(\y^2 - \x^3 - t) \longrightarrow \mathbb{A}^1_\mathbb{K}.$$
+$$\Spec \mathbb{K}[t, \x, \y]/(\y^2 - \x^3 - t) \rightarrow \mathbb{A}^1_\mathbb{K}.$$
 
 Since the relation gives $t = \y^2 - \x^3$, the coordinate ring is isomorphic to $\mathbb{K}[\x,\y]$, and under this isomorphism the action of $\mathbb{K}[t]$ is given by $t \mapsto \y^2-\x^3$. Since $\y^2-\x^3$ is not constant it is transcendental over $\mathbb{K}$, and therefore $\mathbb{K}[t] \rightarrow \mathbb{K}[\x,\y]$ is injective. Then nonzero elements of $\mathbb{K}[t]$ map to nonzero elements of an integral domain and cannot be zerodivisors, so by [Proposition 5](#prop5){: data-lid="f71e0" } this morphism is flat. Nevertheless, the fiber over $t=0$ is $\y^2=\x^3$, which has a cusp singularity.
 
 Another family of curves
 
-$$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
+$$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \rightarrow \mathbb{A}^1_\mathbb{K}$$
 
 is the same. Setting $t=\x\y$, the coordinate ring is isomorphic to the integral domain $\mathbb{K}[\x,\y]$ and $\x\y$ is also not constant, so for the same reason it is flat, and the fiber over $t\neq 0$ is the smooth hyperbola $\x\y=t$, while the fiber over $t=0$ is $\x\y=0$, two lines meeting at a nodal singularity.
 
@@ -214,7 +214,7 @@ The last example is the case where what is trapped is an embedded point ([§Alge
 ::: Example 10
 Consider the scheme morphism
 
-$$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}.$$
+$$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \rightarrow \mathbb{A}^1_\mathbb{K}.$$
 
 Since the ideal decomposes as $(\x^2, t\x)=(\x)\cap (t,\x^2)$, $X$ is the $t$-axis with the origin becoming an embedded point.
 
@@ -237,7 +237,7 @@ Since $Y$ is irreducible, every nonempty open subset of $Y$ is dense. Therefore 
 
 On the other hand, since $\varphi$ is of finite type, $\varphi^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14){: data-lid="vgz16" }), and each $B_i$ is a finite type $A$-algebra. Applying [\[Commutative Algebra\] §Noether Normalization, ⁋Theorem 6](/en/math/commutative_algebra/noether_normalization#thm6){: data-lid="s9m4a" } to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Setting $a=a_1\cdots a_k$, each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2){: data-lid="avlrf" }
 
-$$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
+$$\Spec (B_i)_a \rightarrow \Spec A_a=D(a)$$
 
 is flat. Since flatness is a local condition on $X$ and the $\Spec (B_i)_a$ cover $\varphi^{-1}(D(a))$, the map $\varphi^{-1}(D(a)) \rightarrow D(a)$ is flat. Since $A$ is an integral domain and $a\neq 0$, $D(a)$ is nonempty, so we may take $U=D(a)$ as the open set.
 :::

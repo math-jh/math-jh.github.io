@@ -82,7 +82,7 @@ Also, the following holds.
 ::: Lemma 5
 For a short exact sequence of $A$-modules
 
-$$0 \rightarrow M' \overset{u}{\longrightarrow} M \overset{v}{\longrightarrow} M'' \rightarrow  0$$
+$$0 \rightarrow M' \overset{u}{\rightarrow} M \overset{v}{\rightarrow} M'' \rightarrow  0$$
 
 we have $\ann(M)\subseteq \ann(M')\cap \ann(M'')$.
 :::

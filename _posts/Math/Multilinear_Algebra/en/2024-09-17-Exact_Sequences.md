@@ -102,11 +102,11 @@ The following proposition helps us examine [Proposition 6](#prop6){: data-lid="i
 ::: Proposition 7
 Let two submodules $N_1,N_2$ of an $A$-module $M$ be given. Then there exist the following two exact sequences
 
-$$0 \longrightarrow N_1\cap N_2 \overset{\Delta}{\longrightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\longrightarrow} N_1+N_2\longrightarrow 0$$
+$$0 \rightarrow N_1\cap N_2 \overset{\Delta}{\rightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\rightarrow} N_1+N_2\rightarrow 0$$
 
 and
 
-$$0 \longrightarrow M/(N_1\cap N_2)\overset{\Delta'}{\longrightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\longrightarrow}M/(N_1+N_2)\longrightarrow 0$$
+$$0 \rightarrow M/(N_1\cap N_2)\overset{\Delta'}{\rightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\rightarrow}M/(N_1+N_2)\rightarrow 0$$
 
 Here $i_k,p_k$ are the canonical morphisms
 
@@ -159,7 +159,7 @@ To spell this out precisely:
 ::: Proposition 10
 For an exact sequence of $A$-modules
 
-$$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N \longrightarrow 0$$
+$$0\rightarrow M \overset{u}{\rightarrow}L \overset{v}{\rightarrow}N \rightarrow 0$$
 
 the following conditions are all equivalent.
 

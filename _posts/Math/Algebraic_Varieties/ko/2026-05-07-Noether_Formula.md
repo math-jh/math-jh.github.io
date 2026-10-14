@@ -172,7 +172,7 @@ $$K_S^2=(d-4)^2\int_S h^2=d(d-4)^2$$
 
 이다. $c_2(S)$를 계산하기 위해 exact sequence
 
-$$0\longrightarrow T_S\longrightarrow T_{\mathbb{P}^3}\vert_S\longrightarrow\mathcal{O}_S(d)\longrightarrow 0$$
+$$0\rightarrow T_S\rightarrow T_{\mathbb{P}^3}\vert_S\rightarrow\mathcal{O}_S(d)\rightarrow 0$$
 
 를 이용한다. Whitney sum formula에 의해 $c(T_{\mathbb{P}^3}\vert_S)=c(T_S)\cdot c(\mathcal{O}_S(d))$이며, $c(T_{\mathbb{P}^3})=(1+H)^4$로부터 $c(T_{\mathbb{P}^3}\vert_S)=1+4h+6h^2$이다. $c(\mathcal{O}_S(d))=1+dh$이므로, $c(T_S)=1+c_1+c_2$를 대입하여 비교하면
 

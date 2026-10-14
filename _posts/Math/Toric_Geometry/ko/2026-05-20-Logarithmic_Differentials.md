@@ -49,7 +49,7 @@ $$d\log(\rchi^m) = \frac{d\rchi^m}{\rchi^m} \in \Omega^1(T_N)$$
 
 이로부터 자연스러운 $\mathbb{C}$-linear map
 
-$$\Psi: M_\mathbb{C} = M \otimes_\mathbb{Z} \mathbb{C} \longrightarrow \Omega^1(T_N); \qquad m \otimes 1 \longmapsto d\log(\rchi^m)$$
+$$\Psi: M_\mathbb{C} = M \otimes_\mathbb{Z} \mathbb{C} \rightarrow \Omega^1(T_N); \qquad m \otimes 1 \mapsto d\log(\rchi^m)$$
 
 이 정의된다. 우리의 첫 결과는 이 map이 정확히 $T_N$-invariant 1-form의 공간 위로 isomorphism이라는 것이다.
 
@@ -146,7 +146,7 @@ $$d\log(\rchi^m) = d\log\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \frac
 
 이로부터 자연스러운 $\mathcal{O}_{X_\Sigma}$-module map
 
-$$\Phi: M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma} \longrightarrow \Omega^1_{X_\Sigma}(\log D); \qquad m \otimes 1 \longmapsto d\log(\rchi^m)$$
+$$\Phi: M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma} \rightarrow \Omega^1_{X_\Sigma}(\log D); \qquad m \otimes 1 \mapsto d\log(\rchi^m)$$
 
 이 얻어진다. 이것이 isomorphism인 것은 각 $U_\sigma$ 위에서 확인하면 되는데, 위의 좌표에서 $U_\sigma$ 위의 $\Omega^1(\log D)$의 $\mathcal{O}_{U_\sigma}$-module 기저는 정확히 $\{\dd{\x_i}/\x_i\}_{i=1}^k \cup \{\dd{\x_j}\}_{j=k+1}^n$이며 ($\x_j$가 invertible이므로 $\dd{\x_j}$와 $\dd{\x_j}/\x_j$는 $\mathcal{O}_{U_\sigma}^\ast$ 배만큼 차이가 나며 같은 free module을 span한다), 이는 $\{d\log \rchi^{v_i^\ast}\}_{i=1}^n$과 동일하다. 따라서 $\Phi$는 각 affine chart 위에서 free $\mathcal{O}_{U_\sigma}$-module 사이의 동형이고, 이로부터 global isomorphism이 따라온다.
 :::

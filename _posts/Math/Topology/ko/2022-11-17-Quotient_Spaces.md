@@ -65,14 +65,14 @@ $(X/S)/(R/S)\rightarrow X/R$이 전단사함수가 되는 것은 [\[집합론\] 
 
 이와 유사하게 $X/R\rightarrow(X/S)/(R/S)$의 연속성은 $X\rightarrow(X/S)/(R/S)$의 연속성으로부터 얻어지며, 이 함수는 두 연속함수의 합성
 
-$$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
+$$X\rightarrow X/S\rightarrow (X/S)/(R/S)$$
 
 과 같으므로 연속이다. 
 :::
 
 한편 위상공간 $X,Y$와 연속함수 $f:X\rightarrow Y$가 주어졌다 하고, $f$에 의해 정의된 동치관계 $R$을 생각하자. ([\[집합론\] §동치관계의 예시들, ⁋정의 2](/ko/math/set_theory/examples_of_equivalence#def2){: data-lid="6g5g9" }) 그럼 $f$의 canonical decomposition 
 
-$$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
+$$X\overset{p}{\rightarrow}X/R\overset{\bar{f}}{\rightarrow}f(X)\overset{i}{\rightarrow}Y$$
 
 을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#prop4){: data-lid="3jxc4" }와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3){: data-lid="ofld1" }에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5){: data-lid="aad2g" }), 다음이 성립한다. 
 
@@ -100,7 +100,7 @@ $$(p\circ s)\circ\bar{f}=\id_{X/R}$$
 
 이제 위상공간 $X$와 부분집합 $A$, $X$ 위에 주어진 동치관계 $R$을 생각하자. $p:X\rightarrow X/R$을 canonical projection이라 하면, $p\vert_A:A\rightarrow X/R$의 canonical decomposition
 
-$$A\overset{q}{\longrightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\longrightarrow} p(A)\overset{j}{\longrightarrow}X/R$$
+$$A\overset{q}{\rightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\rightarrow} p(A)\overset{j}{\rightarrow}X/R$$
 
 이 정의되며 위와 동일한 논증에 의해 $\overline{(p\vert_A)}$는 연속인 bijection이 된다. 다음 명제 또한 거의 자명하다.
 

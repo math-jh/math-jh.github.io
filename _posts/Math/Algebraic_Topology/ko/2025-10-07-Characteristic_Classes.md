@@ -39,7 +39,7 @@ $$H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong \widetilde{H}^{n-1}(S^{n-
 ::: 정리 2 (Thom isomorphism)
 Oriented rank $n$ vector bundle $p:E\rightarrow B$에 대하여 $E_0=E\setminus 0(B)$를 zero section을 제거한 부분공간이라 하자. 그럼 유일한 *Thom class* $u\in H^n(E, E_0;\mathbb{Z})$가 존재하여, 각 $x\in B$에 대해 $u$를 $(p^{-1}(x), p^{-1}(x)\setminus 0)$로 제한한 것이 $u_x$이다. 더 나아가, cup product와 pullback의 합성
 
-$$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alpha\longmapsto p^\ast\alpha\smile u$$
+$$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alpha\mapsto p^\ast\alpha\smile u$$
 
 는 모든 $k$에 대하여 isomorphism이다.
 :::

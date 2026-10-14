@@ -39,7 +39,7 @@ $$\id_\Set\cong\Hom_\Set(\ast,-)$$
 
 $$\id_\Set(A)=A\rightarrow\Hom_\Set(\ast,A)$$
 
-는 $A$의 임의의 원소 $a$를 받아서, 그 image가 $a$인 함수 $a:\ast\rightarrow A$로 주어지며, 거꾸로 함수 $\ast\rightarrow A$의 image를 보면 $A$의 원소를 얻어낼 수 있다. 이 대응의 naturality는 임의의 함수 $f:A \rightarrow B$가 주어졌을 때, 임의의 $a\in A$에 대해 $b=f(a)$라 하면 $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$에 의한 $b$의 image는 함수 $b:\ast \rightarrow B$이고, 이것이 정확히 합성 $\ast\overset{a}{\longrightarrow}A\overset{f}{\longrightarrow}B$와 같기 때문에 얻어진다.
+는 $A$의 임의의 원소 $a$를 받아서, 그 image가 $a$인 함수 $a:\ast\rightarrow A$로 주어지며, 거꾸로 함수 $\ast\rightarrow A$의 image를 보면 $A$의 원소를 얻어낼 수 있다. 이 대응의 naturality는 임의의 함수 $f:A \rightarrow B$가 주어졌을 때, 임의의 $a\in A$에 대해 $b=f(a)$라 하면 $\id_\Set(B)\rightarrow\Hom_\Set(\ast,B)$에 의한 $b$의 image는 함수 $b:\ast \rightarrow B$이고, 이것이 정확히 합성 $\ast\overset{a}{\rightarrow}A\overset{f}{\rightarrow}B$와 같기 때문에 얻어진다.
 :::
 
 이와 관련된 가장 중요한 정리는 다음의 요네다 보조정리이다.

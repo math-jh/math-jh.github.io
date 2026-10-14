@@ -40,7 +40,7 @@ Henceforth, we assume that all bundles treated in this section are oriented. Onc
 ::: Theorem 2 (Thom isomorphism)
 For an oriented rank $n$ vector bundle $p:E\rightarrow B$, let $E_0=E\setminus 0(B)$ be the subspace with the zero section removed. Then there exists a unique *Thom class* $u\in H^n(E, E_0;\mathbb{Z})$ such that for each $x\in B$, the restriction of $u$ to $(p^{-1}(x), p^{-1}(x)\setminus 0)$ is $u_x$. Moreover, the composite of cup product and pullback
 
-$$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alpha\longmapsto p^\ast\alpha\smile u$$
+$$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alpha\mapsto p^\ast\alpha\smile u$$
 
 is an isomorphism for every $k$.
 :::

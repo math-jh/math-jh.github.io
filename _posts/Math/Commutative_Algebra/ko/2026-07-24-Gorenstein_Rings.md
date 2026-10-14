@@ -82,9 +82,9 @@ Noetherian local ring $(A,\mathfrak{m})$ 위의 $0$이 아닌 finitely generated
 $(A/\mathfrak{p})_\mathfrak{p}$가 [§국소화, ⁋정의 10](/ko/math/commutative_algebra/localization#def10){: data-lid="npq5g" }의 residue field $\kappa(\mathfrak{p})$이므로, [보조정리 3](#lem3){: data-lid="b07k4" }에 의하여
 $$\Ext_A^i(A/\mathfrak{p},M)_\mathfrak{p}\cong\Ext_{A_\mathfrak{p}}^i((A/\mathfrak{p})_\mathfrak{p},M_\mathfrak{p})=\Ext_{A_\mathfrak{p}}^i(\kappa(\mathfrak{p}),M_\mathfrak{p})\neq 0$$
 이므로 $\Ext_A^i(A/\mathfrak{p},M)\neq 0$이다. 이제 $x\in\mathfrak{m}\setminus\mathfrak{p}$를 택하자. $A/\mathfrak{p}$가 integral domain이고 $x$의 image가 $0$이 아니므로 곱하기 $x$는 $A/\mathfrak{p}$ 위에서 injective이고, short exact sequence
-$$0\rightarrow A/\mathfrak{p}\overset{x}{\longrightarrow}A/\mathfrak{p}\rightarrow A/(\mathfrak{p}+(x))\rightarrow 0$$
+$$0\rightarrow A/\mathfrak{p}\overset{x}{\rightarrow}A/\mathfrak{p}\rightarrow A/(\mathfrak{p}+(x))\rightarrow 0$$
 을 얻는다. 여기에 $\Hom_A(-,M)$의 long exact sequence를 적용한
-$$\Ext_A^i(A/\mathfrak{p},M)\overset{x}{\longrightarrow}\Ext_A^i(A/\mathfrak{p},M)\overset{\delta}{\longrightarrow}\Ext_A^{i+1}(A/(\mathfrak{p}+(x)),M)$$
+$$\Ext_A^i(A/\mathfrak{p},M)\overset{x}{\rightarrow}\Ext_A^i(A/\mathfrak{p},M)\overset{\delta}{\rightarrow}\Ext_A^{i+1}(A/(\mathfrak{p}+(x)),M)$$
 에서 가운데 map은 곱하기 $x$가 유도하는 스칼라 곱 $x$이고, 완전성에 의하여 그 cokernel은 $\Ext_A^{i+1}(A/(\mathfrak{p}+(x)),M)$의 submodule $\operatorname{im}\delta$와 isomorphic하다. 만일 $\Ext_A^{i+1}(A/(\mathfrak{p}+(x)),M)=0$이라면 곱하기 $x$가 $\Ext_A^i(A/\mathfrak{p},M)$ 위에서 surjective가 된다. $A$가 Noetherian이므로 $A/\mathfrak{p}$는 finitely generated free resolution을 갖고, 따라서 $\Ext_A^i(A/\mathfrak{p},M)$은 finitely generated $A$-module이다. ([§Depth, ⁋정리 7](/ko/math/commutative_algebra/depth#thm7){: data-lid="our19" }의 증명에서와 같은 논증이다.) $x\in\mathfrak{m}$이 이 module 위에서 surjective하게 작용하므로 [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="q2d6i" }에 의하여 $\Ext_A^i(A/\mathfrak{p},M)=0$이 되어 앞의 결과에 모순이다. 따라서 $\Ext_A^{i+1}(A/(\mathfrak{p}+(x)),M)\neq 0$이고, [§호몰로지 차원, ⁋명제 3](/ko/math/commutative_algebra/homological_dimension#prop3){: data-lid="60atr" }에 의하여 $\operatorname{injdim}_AM\geq i+1$이다.
 :::
 
@@ -124,7 +124,7 @@ $$\Ext_A^0(\overline{A},A)=(0:_Ax)=0,\qquad\Ext_A^1(\overline{A},A)\cong A/xA=\o
 이제 주장을 $i$에 대한 귀납법으로 보인다. $\overline{A}$-module 사이의 $A$-linear map은 자동으로 $\overline{A}$-linear이므로 언제나 $\Hom_A(N,\overline{A})=\Hom_{\overline{A}}(N,\overline{A})$이다.
 
 기저 단계 $i=0$을 보자. $\Hom_A(N,-)$을 short exact sequence $0\rightarrow A\overset{x}{\rightarrow}A\rightarrow\overline{A}\rightarrow 0$에 적용한 long exact sequence
-$$\Hom_A(N,A)\overset{x}{\longrightarrow}\Hom_A(N,A)\rightarrow\Hom_A(N,\overline{A})\overset{\partial}{\longrightarrow}\Ext_A^1(N,A)\overset{x}{\longrightarrow}\Ext_A^1(N,A)$$
+$$\Hom_A(N,A)\overset{x}{\rightarrow}\Hom_A(N,A)\rightarrow\Hom_A(N,\overline{A})\overset{\partial}{\rightarrow}\Ext_A^1(N,A)\overset{x}{\rightarrow}\Ext_A^1(N,A)$$
 을 생각한다. $xN=0$이므로 곱하기 $x$는 $N$ 위에서 $0$이고, 함자성에 의하여 $\Ext_A^\bullet(N,A)$ 위의 스칼라 곱 $x$ 또한 $0$이다. 그럼 $\Hom_A(N,A)=0$과 종합하여 이 long exact sequence는 $\partial$이 $\Hom_A(N,\overline{A})$과 $\Ext_A^1(N,A)$ 사이의 isomorphism임을 주며, 이는 $N$에 대하여 자연스럽다. 곧
 $$\Ext_A^1(N,A)\cong\Hom_A(N,\overline{A})=\Hom_{\overline{A}}(N,\overline{A})$$
 이다.
@@ -132,7 +132,7 @@ $$\Ext_A^1(N,A)\cong\Hom_A(N,\overline{A})=\Hom_{\overline{A}}(N,\overline{A})$$
 이제 $i\geq 1$이라 하고 주장이 $i-1$에 대하여 모든 finitely generated $\overline{A}$-module에 대해 성립한다고 가정하자. $\overline{A}$가 Noetherian이므로 finitely generated free $\overline{A}$-module $\overline{A}^k$로부터의 surjection과 그 kernel $N'$으로 이루어진 $\overline{A}$-module들의 short exact sequence $0\rightarrow N'\rightarrow\overline{A}^k\rightarrow N\rightarrow 0$을 택한다. 여기에 $\Hom_A(-,A)$의 long exact sequence를 적용하고 앞서 계산한 $\Ext_A^j(\overline{A}^k,A)$의 소멸을 사용하면, $i\geq 2$일 때 $\Ext_A^i(\overline{A}^k,A)=\Ext_A^{i+1}(\overline{A}^k,A)=0$이므로
 $$\Ext_A^{i+1}(N,A)\cong\Ext_A^i(N',A)$$
 이고, $\Hom_{\overline{A}}(-,\overline{A})$의 long exact sequence에서 $\Ext_{\overline{A}}^{\geq 1}(\overline{A}^k,\overline{A})=0$이므로 $\Ext_{\overline{A}}^i(N,\overline{A})\cong\Ext_{\overline{A}}^{i-1}(N',\overline{A})$이다. 귀납적 가정을 $N'$에 적용하면 $\Ext_A^i(N',A)\cong\Ext_{\overline{A}}^{i-1}(N',\overline{A})$이므로 $i\geq 2$에서 원하는 isomorphism을 얻는다. $i=1$인 경우에는 위의 두 long exact sequence가 각각
-$$\overline{A}^k\overset{\varphi}{\longrightarrow}\Ext_A^1(N',A)\rightarrow\Ext_A^2(N,A)\rightarrow 0,\qquad\overline{A}^k\overset{\psi}{\longrightarrow}\Hom_{\overline{A}}(N',\overline{A})\rightarrow\Ext_{\overline{A}}^1(N,\overline{A})\rightarrow 0$$
+$$\overline{A}^k\overset{\varphi}{\rightarrow}\Ext_A^1(N',A)\rightarrow\Ext_A^2(N,A)\rightarrow 0,\qquad\overline{A}^k\overset{\psi}{\rightarrow}\Hom_{\overline{A}}(N',\overline{A})\rightarrow\Ext_{\overline{A}}^1(N,\overline{A})\rightarrow 0$$
 을 주는데, 기저 단계의 isomorphism $\Ext_A^1(-,A)\cong\Hom_{\overline{A}}(-,\overline{A})$가 자연스러우므로 $\varphi$와 $\psi$가 이 isomorphism 아래에서 대응하고, 따라서 그 cokernel인 $\Ext_A^2(N,A)$와 $\Ext_{\overline{A}}^1(N,\overline{A})$도 isomorphic하다.
 :::
 

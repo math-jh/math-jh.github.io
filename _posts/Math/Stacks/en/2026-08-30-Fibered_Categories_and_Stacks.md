@@ -64,7 +64,7 @@ $$f^\ast=F(f): F(V)\rightarrow F(U)$$
 
 that provides this functoriality; in other words, whenever a morphism $f: U\rightarrow V$ and an object over $V$ are given, we must make a *choice* that consistently picks out a pullback representative. And however such choices are made, the pullback along a composite of two morphisms
 
-$$U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$$
+$$U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W$$
 
 is now *no longer* equal to the composite of the two pullbacks; all one can require is the existence of an isomorphism
 
@@ -77,7 +77,7 @@ A *pseudofunctor* $F:\mathcal{C}^\op \rightarrow \Grpd$ over a category $\mathca
 
 1. A groupoid $F(U)$ associated to each object $U\in \mathcal{C}$,
 2. A functor $f^\ast: F(V) \rightarrow F(U)$ associated to each morphism $f: U \rightarrow V$,
-3. For each composable pair $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W$, a natural isomorphism
+3. For each composable pair $U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W$, a natural isomorphism
 
     $$\varepsilon_{f, g}: f^\ast\circ g^\ast \xRightarrow{\sim} (g\circ f)^\ast,$$
 
@@ -87,7 +87,7 @@ A *pseudofunctor* $F:\mathcal{C}^\op \rightarrow \Grpd$ over a category $\mathca
 
 The compatibility conditions these must satisfy are as follows.
 
-> For three morphisms $U\overset{f}{\longrightarrow}V\overset{g}{\longrightarrow}W\overset{h}{\longrightarrow}Z$,
+> For three morphisms $U\overset{f}{\rightarrow}V\overset{g}{\rightarrow}W\overset{h}{\rightarrow}Z$,
 >
 > $$\varepsilon_{f, h\circ g}\circ(\id_{f^\ast}\ast \varepsilon_{g, h})=\varepsilon_{g\circ f, h}\circ(\varepsilon_{f, g}\ast \id_{h^\ast})$$
 >
@@ -249,7 +249,7 @@ By [Theorem 8](#thm8){: data-lid="d58tn" }, passing to the pseudofunctor $F:\mat
 
 Restricting a global object $x\in F(U)$ to each $U_i$ and using the canonical comparison isomorphisms of the pseudofunctor on double overlaps produces a descent datum. Hence the restriction functor
 
-$$F(U)\longrightarrow\Desc_F(\mathcal{U})$$
+$$F(U)\rightarrow\Desc_F(\mathcal{U})$$
 
 is defined. The stack condition of Definition 12 is equivalent to this functor being an equivalence of groupoids for every covering $\mathcal{U}$. Its being fully faithful is the prestack condition that local morphisms glue uniquely into a global morphism, and its being essentially surjective is the condition that every descent datum is effective.
 

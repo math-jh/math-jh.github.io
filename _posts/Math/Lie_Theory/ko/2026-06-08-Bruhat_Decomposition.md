@@ -121,7 +121,7 @@ $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 ::: 명제 6
 각 $w\in W$에 대하여, product map
 
-$$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto uwb$$
+$$U_w\times B\rightarrow BwB,\qquad (u,b)\mapsto uwb$$
 
 은 variety의 isomorphism이다. 따라서 Bruhat cell은 $BwB\cong\mathbb{A}^{\ell(w)}\times B$이고, flag variety로 내리면
 

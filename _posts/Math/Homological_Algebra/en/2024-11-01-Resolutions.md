@@ -51,12 +51,12 @@ In an abelian category $\mathcal{A}$, for an object $M$, we define the following
 
 1. A *left resolution* of $M$ is, such that the following chain complex
     
-    $$\cdots \longrightarrow P_2 \longrightarrow P_1 \longrightarrow P_0 \overset{\epsilon}{\longrightarrow} M \longrightarrow 0$$
+    $$\cdots \rightarrow P_2 \rightarrow P_1 \rightarrow P_0 \overset{\epsilon}{\rightarrow} M \rightarrow 0$$
 
     is exact, a chain complex $P_\bullet$ and an *augmentation map* $\epsilon: P_0 \rightarrow M$. If all the $P_i$ are projective objects, we call this a *projective resolution*.
 2. A *right resolution* of $M$ is, such that the following cochain complex
     
-    $$0 \longrightarrow M \overset{\eta}{\longrightarrow} I^0 \longrightarrow I^1 \longrightarrow I^2 \longrightarrow \cdots$$
+    $$0 \rightarrow M \overset{\eta}{\rightarrow} I^0 \rightarrow I^1 \rightarrow I^2 \rightarrow \cdots$$
 
     is exact, a cochain complex $I^\bullet$ and an *augmentation map* $\eta: M \rightarrow I^0$. If all the $I^i$ are injective objects, we call this an *injective resolution*.
 :::
@@ -77,7 +77,7 @@ Continuing in this way, whenever $\epsilon_n:P_n \rightarrow M_{n-1}$ is given, 
 
 Then looking at
 
-$$\cdots \overset{d_3}{\longrightarrow} P_2 \overset{d_2}{\longrightarrow} P_1 \overset{d_1}{\longrightarrow} P_0 \overset{\epsilon_0}{\longrightarrow} M \longrightarrow 0$$
+$$\cdots \overset{d_3}{\rightarrow} P_2 \overset{d_2}{\rightarrow} P_1 \overset{d_1}{\rightarrow} P_0 \overset{\epsilon_0}{\rightarrow} M \rightarrow 0$$
 
 obtained in the middle, for $n\geq 2$ we obtain the following equation
 
@@ -149,7 +149,7 @@ Finally, we conclude by proving the following lemma, which will play an importan
 ::: Lemma 7
 Suppose we are given the following short exact sequence
 
-$$0 \longrightarrow A'\overset{i}{\longrightarrow}A\overset{p}{\longrightarrow}A'' \longrightarrow 0$$
+$$0 \rightarrow A'\overset{i}{\rightarrow}A\overset{p}{\rightarrow}A'' \rightarrow 0$$
 
 and projective resolutions $P_\bullet'$, $P_\bullet''$ of $A'$, $A''$. Then the chain complex $P_\bullet$ defined by $P_n=P_n'\oplus P_n''$ is a projective resolution of $A$, and there exists an exact sequence
 

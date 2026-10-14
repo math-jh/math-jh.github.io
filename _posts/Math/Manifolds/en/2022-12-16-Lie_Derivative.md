@@ -149,7 +149,7 @@ $$Y_q=\dd{F_p}(X_p)\qquad (F(p)=q)$$
 
 Since the above formula must hold for $Y$ to be $F$-related to $X$, the uniqueness of such a $Y$ is obvious. Moreover, $Y:N\rightarrow TN$ is now the composition of the following $C^\infty$ maps
 
-$$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{\dd{F}}{\longrightarrow}TN$$
+$$N\overset{F^{-1}}{\rightarrow}M\overset{X}{\rightarrow}TM\overset{\dd{F}}{\rightarrow}TN$$
 
 and therefore $Y$ is $C^\infty$.
 :::

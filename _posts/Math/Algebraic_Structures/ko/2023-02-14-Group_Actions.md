@@ -90,7 +90,7 @@ $$f(\alpha\cdot x)=\alpha\cdot f(x)$$
 
 임의의 monoid homomorphism $\phi:M \rightarrow M'$을 고정하자. 그럼 임의의 $M'$-set $E$에 대하여, 다음 합성
 
-$$M\overset{\phi}{\longrightarrow}M'\overset{\rho}{\longrightarrow}\End(E)$$
+$$M\overset{\phi}{\rightarrow}M'\overset{\rho}{\rightarrow}\End(E)$$
 
 을 통해 $E$를 $M$-set으로 생각할 수 있다. 이렇게 정의되는 action을 $\phi^\ast\rho$라 적자. 그럼 명시적으로 $\phi^\ast\rho$는 임의의 $\alpha\in M$과 $x\in E$에 대해,
 

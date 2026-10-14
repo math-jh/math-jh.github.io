@@ -89,7 +89,7 @@ Isolated fixed point에서는 $e_T(N_p)=\prod_j w_j$이 $R$의 $0$이 아닌 원
 ::: 정의 4
 $M$이 $\dim_{\mathbb{R}}M=d$인 콤팩트 oriented $T$-variety라 하자. Borel 구성 $M_T\rightarrow BT$은 fiber $M$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2){: data-lid="yt1nh" }), fiber를 따른 적분 (Gysin morphism)
 
-$$\int_M:H_T^k(M)=H^k(M_T)\longrightarrow H^{k-d}(BT)=R^{k-d}$$
+$$\int_M:H_T^k(M)=H^k(M_T)\rightarrow H^{k-d}(BT)=R^{k-d}$$
 
 이 정의된다. 이를 $M$ 위의 *equivariant integration<sub>동변 적분</sub>* 또는 $M\rightarrow\mathrm{pt}$의 pushforward $\pi_\ast$라 부른다. 같은 방식으로 closed $T$-부분다양체의 포함 $j:F\hookrightarrow M$ (normal bundle이 oriented) 에 대해 degree를 $\mathrm{codim}F$만큼 올리는 동변 Gysin pushforward $j_\ast:H_T^\bullet(F)\rightarrow H_T^{\bullet+\mathrm{codim}F}(M)$이 정의된다.
 :::

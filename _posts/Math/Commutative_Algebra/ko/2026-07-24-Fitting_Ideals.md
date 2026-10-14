@@ -20,7 +20,7 @@ published: false
 
 Noetherian ring $A$ 위에서 finitely generated $A$-module은 언제나 finitely presented이므로 ([§기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9){: data-lid="h2ph8" }), $M$은 적당한 free module들 사이의 exact sequence
 
-$$A^m\overset{\varphi}{\longrightarrow}A^n\longrightarrow M\longrightarrow 0$$
+$$A^m\overset{\varphi}{\rightarrow}A^n\rightarrow M\rightarrow 0$$
 
 을 presentation으로 가진다. 여기서 $A^n\to M$의 상은 $M$의 $n$개의 generator를 주고, $\varphi$의 상은 이 generator들 사이의 relation 전체를 이룬다. 우리는 $\varphi$를 표준 basis에 대한 $n\times m$ 행렬로 보고 ([\[다중선형대수학\] §행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1){: data-lid="3thiw" }), 이 행렬의 minor를 다룬다.
 
@@ -109,7 +109,7 @@ $$\operatorname{Fitt}_i(M\otimes_AB)=\operatorname{Fitt}_i(M)B$$
 ::: 증명
 $M$의 presentation $A^m\overset{\varphi}{\to}A^n\to M\to0$에 $B\otimes_A-$를 적용하면, tensor product가 right exact이므로 ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 6](/ko/math/multilinear_algebra/various_modules#prop6){: data-lid="gdhbu" }) exact sequence
 
-$$B^m\overset{\varphi_B}{\longrightarrow}B^n\longrightarrow M\otimes_AB\longrightarrow0$$
+$$B^m\overset{\varphi_B}{\rightarrow}B^n\rightarrow M\otimes_AB\rightarrow0$$
 
 을 얻는다. 이는 $B$-module $M\otimes_AB$의 presentation이며, $\varphi_B$의 행렬은 $\varphi$의 행렬의 각 성분을 $A\to B$로 보낸 것이다. minor는 성분들의 다항식이고 $A\to B$가 ring homomorphism이므로, $\varphi_B$의 $r\times r$ minor는 $\varphi$의 대응하는 minor의 image이다. 따라서 $I_r(\varphi_B)$는 $I_r(\varphi)$의 generator들의 image로 생성되는 $B$의 ideal, 곧 $I_r(\varphi)B$이고,
 
@@ -159,7 +159,7 @@ $$\operatorname{Fitt}_i(M)=A\iff i\ge\mu(M)$$
 ::: 증명
 $\mu=\mu(M)$이라 하자. [§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="ukybx" }에 의하여 $M/\mathfrak{m}M$의 $\kappa$-basis로 image가 내려가는 원소들 $x_1,\ldots,x_\mu$은 $M$의 최소 생성 집합을 이루며, [§호몰로지 차원, ⁋명제 9](/ko/math/commutative_algebra/homological_dimension#prop9){: data-lid="xarii" }가 주는 minimal free resolution의 첫 두 항을 떼면 presentation
 
-$$A^s\overset{\varphi}{\longrightarrow}A^\mu\longrightarrow M\longrightarrow0$$
+$$A^s\overset{\varphi}{\rightarrow}A^\mu\rightarrow M\rightarrow0$$
 
 을 얻는다. Minimal이라는 것은 $\varphi$의 상이 $\mathfrak{m}A^\mu$에 포함된다는 것이므로 ([§호몰로지 차원, ⁋정의 8](/ko/math/commutative_algebra/homological_dimension#def8){: data-lid="qne9b" }), $\varphi$의 모든 성분이 $\mathfrak{m}$에 속한다. 여기서 $n=\mu$이다.
 
@@ -193,11 +193,11 @@ $r=1$인 경우가 특히 중요하다. $\operatorname{Fitt}_0(M)=0$이고 $\ope
 ::: 예시 9
 1. $A=\mathbb{K}[[\x,\y]]$의 maximal ideal $\mathfrak{m}=(\x,\y)$를 $A$-module로 보자. [§Auslander-Buchsbaum 공식, ⁋예시 6](/ko/math/commutative_algebra/auslander_buchsbaum_formula#ex6){: data-lid="kesbi" }에서 살펴본 presentation
 
-    $$A\overset{\varphi}{\longrightarrow}A^2\longrightarrow\mathfrak{m}\longrightarrow0,\qquad\varphi(1)=(-\y,\x)$$
+    $$A\overset{\varphi}{\rightarrow}A^2\rightarrow\mathfrak{m}\rightarrow0,\qquad\varphi(1)=(-\y,\x)$$
 
     에서 $\varphi$는 $2\times1$ 행렬이므로 $2\times2$ minor가 없어 $\operatorname{Fitt}_0(\mathfrak{m})=I_2(\varphi)=0$이고, $\operatorname{Fitt}_1(\mathfrak{m})=I_1(\varphi)=(-\y,\x)=\mathfrak{m}$이다. $\operatorname{Fitt}_1(\mathfrak{m})=\mathfrak{m}\ne A$이므로 [명제 7](#prop7){: data-lid="k9772" }에 의하여 $\mu(\mathfrak{m})\ge2$이고, 따라서 $\mathfrak{m}$은 [정리 8](#thm8){: data-lid="rcxtg" }에 의하여 rank $1$의 free module이 아니다. 곧 Fitting ideal은 $2$차원 regular local ring의 maximal ideal이 principal ideal이 아니라는 사실을 즉시 감지한다.
 
-2. $B=\mathbb{K}[\x]$ 위에서 두 module $M=B/(\x^2)$과 $M'=B/(\x)\oplus B/(\x)$을 비교하자. presentation $B\overset{\x^2}{\to}B\to M\to0$에서 $\operatorname{Fitt}_0(M)=(\x^2)$이고 $\operatorname{Fitt}_1(M)=I_0(\varphi)=B$이다. 한편 presentation $B^2\overset{\operatorname{diag}(\x,\x)}{\longrightarrow}B^2\to M'\to0$에서 $\operatorname{Fitt}_0(M')=I_2=(\x^2)$이고 $\operatorname{Fitt}_1(M')=I_1=(\x)$이다. 두 module은 같은 $\operatorname{Fitt}_0=(\x^2)$을 갖지만 $\operatorname{Fitt}_1$이 각각 $B$와 $(\x)$로 달라, Fitting ideal의 전체 열이 이 두 length $2$ module의 구조를 구별한다.
+2. $B=\mathbb{K}[\x]$ 위에서 두 module $M=B/(\x^2)$과 $M'=B/(\x)\oplus B/(\x)$을 비교하자. presentation $B\overset{\x^2}{\to}B\to M\to0$에서 $\operatorname{Fitt}_0(M)=(\x^2)$이고 $\operatorname{Fitt}_1(M)=I_0(\varphi)=B$이다. 한편 presentation $B^2\overset{\operatorname{diag}(\x,\x)}{\rightarrow}B^2\to M'\to0$에서 $\operatorname{Fitt}_0(M')=I_2=(\x^2)$이고 $\operatorname{Fitt}_1(M')=I_1=(\x)$이다. 두 module은 같은 $\operatorname{Fitt}_0=(\x^2)$을 갖지만 $\operatorname{Fitt}_1$이 각각 $B$와 $(\x)$로 달라, Fitting ideal의 전체 열이 이 두 length $2$ module의 구조를 구별한다.
 :::
 
 Free resolution의 각 행렬에서 뽑은 minor ideal의 depth가 그 complex의 exactness 자체를 판정한다는 Buchsbaum--Eisenbud 정리가 이 방법의 다음 장을 이룬다.

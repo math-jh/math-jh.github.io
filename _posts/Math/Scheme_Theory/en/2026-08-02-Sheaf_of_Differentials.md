@@ -288,7 +288,7 @@ so the kernel is given by the condition $\sum_j s_j(\x_j/\x_i)=0$ on the tuples 
 
 Now, on $U_i$, if we define the morphism $\Omega_{\mathbb{P}^n/A}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$ by
 
-$$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
+$$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\mapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
 the image of the right-hand side under $(\ast)$ is
 

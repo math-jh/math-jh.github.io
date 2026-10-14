@@ -212,7 +212,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 구체적으로, 다음의 $\mathbb{C}$-algebra homomorphism
 
-$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
+$$\rho : \mathbb{C}[S_\sigma] \rightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \mapsto \rchi^u \otimes \rchi^u.$$
 
 을 정의하자. 여기서 $\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$은 $T_N$의 coordinate ring이며, $\rchi^u \in \mathbb{C}[S_\sigma]$는 weight $u$를 갖는 eigenvector이다. $\rho$가 well-defined algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다. 
 
@@ -229,7 +229,7 @@ $$(\id \otimes \ev_t)(\rchi^u \otimes \rchi^u) = \rchi^u \otimes \rchi^u(t) = \r
 ::: 명제 10
 Algebraic torus $T_N$이 affine toric variety $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 작용한다. 우선 coordinate ring $\mathbb{C}[S_\sigma]$ 위에 다음의 $\mathbb{C}$-algebra homomorphism $\rho$를 정의한다.
 
-$$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \longmapsto \rchi^u \otimes \rchi^u.$$
+$$\rho : \mathbb{C}[S_\sigma] \rightarrow \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M], \qquad \rchi^u \mapsto \rchi^u \otimes \rchi^u.$$
 
 그럼 이 $\rho$가 $U_\sigma$ 위의 $T_N$-action을 정의하며, 각각의 $t \in T_N$에 대하여 $t$가 $\rchi^u \in \mathbb{C}[S_\sigma]$에 작용하는 결과는 다음과 같다:
 
@@ -265,7 +265,7 @@ $\sigma = \{0\}$인 경우 $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M
 
 일반적인 경우 $S_\sigma \subseteq M$이므로 $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이고, 이는 자연스러운 dominant morphism
 
-$$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma$$
+$$T_N = \Spec(\mathbb{C}[M]) \rightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma$$
 
 을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $\ell$을 잡으면 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (\ell u_0 + m) - \ell u_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
 :::

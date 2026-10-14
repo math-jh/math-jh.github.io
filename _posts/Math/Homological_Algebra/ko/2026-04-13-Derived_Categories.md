@@ -41,7 +41,7 @@ Abelian category $\mathcal{A}$의 *derived category* $D(\mathcal{A})$는 homotop
 
 조금 더 구체적으로, $D(\mathcal{A})$의 morphism을 설명할 때 우리는 종종 roof diagram을 사용하여 설명한다. $X$에서 $Y$로의 $D(\mathcal{A})$에서의 morphism은 다음의 diagram
 
-$$X\overset{s}{\longleftarrow} X'\overset{f}{\longrightarrow}Y$$
+$$X\overset{s}{\leftarrow} X'\overset{f}{\rightarrow}Y$$
 
 으로 표현되며, 여기서 $s$는 quasi-isomorphism이고, $f$는 chain map이다. 즉, $D(\mathcal{A})$ 안에서, $X$에서 $Y$로의 map은 실제 map이 아니라, $X$의 quasi-isomorphism class에 속하는 $X'$에서 $Y$로의 chain map (정확히는 up to chain homotopy)인 것으로 생각할 수 있다. 이 과정에서 우리는 실제로 chain map으로서 존재하지는 않을 수도 있는 $s^{-1}$을 추가하게 되어 위의 설명에서의 "localization" analogue가 생기게 되는 것이다.
 
@@ -51,11 +51,11 @@ $$\frac{a}{b}=\frac{ca}{cb}$$
 
 꼴의 equivalence로 나타나는 것이다. 다음의 두 roof들
 
-$$X\overset{s}{\longleftarrow} A\overset{f}{\longrightarrow}Y,\qquad X\overset{t}{\longleftarrow} B\overset{g}{\longrightarrow}Y$$
+$$X\overset{s}{\leftarrow} A\overset{f}{\rightarrow}Y,\qquad X\overset{t}{\leftarrow} B\overset{g}{\rightarrow}Y$$
 
 이 주어졌다고 할 때, 이들 둘이 equivalent하다는 것은 또 다른 object $C$와 roof
 
-$$A\overset{u}{\longleftarrow} C\overset{h}{\longrightarrow}B$$
+$$A\overset{u}{\leftarrow} C\overset{h}{\rightarrow}B$$
 
 이 존재하여
 
@@ -211,10 +211,10 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 - (TR1) 모든 morphism $f : A \rightarrow B$에 대해 distinguished triangle $A \rightarrow B \rightarrow C \rightarrow A[1]$가 존재한다. 또한 $A \overset{\id}{\rightarrow} A \rightarrow 0 \rightarrow A[1]$은 distinguished triangle이다.
 - (TR2) $A \rightarrow B \rightarrow C \rightarrow A[1]$이 distinguished triangle이면 $B \rightarrow C \rightarrow A[1] \rightarrow B[1]$도 distinguished triangle이다.
 - (TR3) 두 distinguished triangle이 주어졌을 때, map들 $(u, v)$가 diagram을 commute하게 하면, 이를 triangle 사이의 morphism으로 완성하는 map $w$가 존재한다.
-- (TR4) Octahedral axiom: 합성 $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$이 주어졌을 때, 이와 연관된 octahedron을 이루는 세 개의 distinguished triangle이 존재한다.
+- (TR4) Octahedral axiom: 합성 $B \overset{g}{\rightarrow} C \overset{h}{\rightarrow} D$이 주어졌을 때, 이와 연관된 octahedron을 이루는 세 개의 distinguished triangle이 존재한다.
 :::
 
-Distinguished triangle의 직관은 short exact sequence의 "derived version"이라는 것이다. Abelian category에서 short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$이 있으면, $f$를 complex 사이의 map $A'[0] \rightarrow A[0]$로 볼 수 있고, 이때 mapping cone $C(f)$는 $A''[0]$과 quasi-isomorphic하다. ([§긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8){: data-lid="3mq91" }) 즉 short exact sequence는 derived category에서 distinguished triangle
+Distinguished triangle의 직관은 short exact sequence의 "derived version"이라는 것이다. Abelian category에서 short exact sequence $0 \rightarrow A' \overset{f}{\rightarrow} A \overset{g}{\rightarrow} A'' \rightarrow 0$이 있으면, $f$를 complex 사이의 map $A'[0] \rightarrow A[0]$로 볼 수 있고, 이때 mapping cone $C(f)$는 $A''[0]$과 quasi-isomorphic하다. ([§긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8){: data-lid="3mq91" }) 즉 short exact sequence는 derived category에서 distinguished triangle
 
 $$A'[0] \overset{f}{\rightarrow} A[0] \rightarrow A''[0] \rightarrow A'[1]$$
 

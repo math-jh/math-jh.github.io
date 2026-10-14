@@ -255,11 +255,11 @@ $$A_f \rightarrow B_{\phi(f)}$$
 
 and this is obtained by applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6){: data-lid="0yy23" } to the composite
 
-$$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi(f)}$$
+$$A \overset{\phi}{\rightarrow}B \overset{\epsilon}{\rightarrow} B_{\phi(f)}$$
 
 Of course we must show that these maps commute with restriction maps. If $D(g)\subseteq D(f)$ then $D(\phi(g))\subseteq D(\phi(f))$, and the two composites
 
-$$A_f \longrightarrow B_{\phi(f)} \longrightarrow B_{\phi(g)},\qquad A_f \longrightarrow A_g \longrightarrow B_{\phi(g)}$$
+$$A_f \rightarrow B_{\phi(f)} \rightarrow B_{\phi(g)},\qquad A_f \rightarrow A_g \rightarrow B_{\phi(g)}$$
 
 both compose with $\epsilon_f$ to give $A \rightarrow B \rightarrow B_{\phi(g)}$, so by the uniqueness above they are equal.
 
@@ -282,7 +282,7 @@ The essential image of the functor $\Spec:\cRing^\op \rightarrow \LRS$ from [Pro
 
 We write $\AffSch$ for the category of affine schemes. Then the contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$ is essentially surjective by definition. ([\[Category Theory\] §Natural Transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5){: data-lid="f2mpz" }) Moreover, if $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is induced from some ring homomorphism $\phi$, then taking $1=f\in A$ in the proof of [Proposition 9](#prop9){: data-lid="wrxu6" } gives
 
-$$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
+$$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\rightarrow} B \overset{\id_B}{\rightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
 so this functor is necessarily faithful. Furthermore, the following holds.
 
@@ -385,7 +385,7 @@ and since principal open sets form a base for $\Spec A$ ([\[§Spectrums, ⁋Lemm
 
 Now we define the sheaf morphism $\varphi^\sharp: \mathcal{O}_{\Spec A} \rightarrow \varphi_\ast \mathcal{O}_X$. For each $f\in A$, set $V_f=\varphi^{-1}(D(f))=X_{\phi(f)}$, and write
 
-$$\theta_f: A\overset{\phi}{\longrightarrow} \Gamma(X) \longrightarrow \mathcal{O}_X(V_f)$$
+$$\theta_f: A\overset{\phi}{\rightarrow} \Gamma(X) \rightarrow \mathcal{O}_X(V_f)$$
 
 for the ring homomorphism obtained by composing $\phi$ with the restriction map. Our claim is that $\theta_f(f)=\phi(f)\vert_{V_f}$ is a unit in $\mathcal{O}_X(V_f)$. Indeed, by the definition of $V_f$, for every $y\in V_f$ the element $\phi(f)_y$ is a unit in $\mathcal{O}_{X,y}$, so repeating the argument above we can find an open neighborhood $W_y\subseteq V_f$ of $y$ and $u_y\in \mathcal{O}_X(W_y)$ with $\phi(f)\vert_{W_y}u_y=1$. Then on the intersection $W_y\cap W_{y'}$, the restrictions of $u_y$ and $u_{y'}$ are both multiplicative inverses of $\phi(f)\vert_{W_y\cap W_{y'}}$ and hence equal, so by the gluability axiom of [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="j9udf" } they glue to a single $u\in \mathcal{O}_X(V_f)$. Now $\phi(f)\vert_{V_f}u$ and $1$ agree on each $W_y$, so by the identity axiom $\phi(f)\vert_{V_f}u=1$.
 
@@ -399,7 +399,7 @@ $$\varphi^\sharp(D(f))\circ \epsilon_f=\theta_f$$
 
 If $D(g)\subseteq D(f)$ then $V_g\subseteq V_f$, and the two composites
 
-$$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longrightarrow \mathcal{O}_X(V_g),\qquad A_f \longrightarrow A_g \overset{\varphi^\sharp(D(g))}{\longrightarrow} \mathcal{O}_X(V_g)$$
+$$A_f \overset{\varphi^\sharp(D(f))}{\rightarrow} \mathcal{O}_X(V_f) \rightarrow \mathcal{O}_X(V_g),\qquad A_f \rightarrow A_g \overset{\varphi^\sharp(D(g))}{\rightarrow} \mathcal{O}_X(V_g)$$
 
 both compose with $\epsilon_f$ to give $\theta_g$, so again by the uniqueness in [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6){: data-lid="s39f6" } they are equal. That is, the $\varphi^\sharp(D(f))$ commute with restriction maps.
 

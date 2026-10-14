@@ -30,7 +30,7 @@ $$\Spec\pi: \Spec A/\mathfrak{a}\rightarrow \Spec A$$
 
 and we know that $\Spec\pi$ is injective and its image is the closed set $Z(\mathfrak{a})$. In this case as well, just as above we consider the canonical decomposition
 
-$$\Spec A/\mathfrak{a}\overset{\Spec\pi\vert^{Z(\mathfrak{a})}}{\longrightarrow} Z(\mathfrak{a}) \overset{\iota}{\longrightarrow}\Spec A$$
+$$\Spec A/\mathfrak{a}\overset{\Spec\pi\vert^{Z(\mathfrak{a})}}{\rightarrow} Z(\mathfrak{a}) \overset{\iota}{\rightarrow}\Spec A$$
 
 and from
 
@@ -190,7 +190,7 @@ More generally, it is also clear how $Z(S)$ should be defined for a set $S$ of g
 ::: Definition 8
 A scheme morphism $\varphi: X \rightarrow Y$ is called a *locally closed embedding* if there exists a suitable open subscheme $\iota:Z\hookrightarrow Y$ of $Y$ such that through the canonical decomposition
 
-$$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$$
+$$X\overset{\varphi\vert^Z}{\rightarrow}Z\overset{\iota}{\rightarrow} Y$$
 
 the map $\varphi\vert^Z$ is a closed embedding.
 :::
@@ -210,7 +210,7 @@ Let two closed embeddings $\iota_1: Z_1 \rightarrow X$, $\iota_2: Z_2 \rightarro
 ::: Proof
 First suppose there exists $\varphi$ satisfying $\iota_1=\iota_2\circ\varphi$. Then $\iota_1^\sharp$ is the following composition
 
-$$\mathcal{O}_X\overset{\iota_2^\sharp}{\longrightarrow}(\iota_2)_\ast \mathcal{O}_{Z_2}\overset{(\iota_2)_\ast \varphi^\sharp}{\longrightarrow}(\iota_2)_\ast \varphi_\ast \mathcal{O}_{Z_1}=(\iota_1)_\ast \mathcal{O}_{Z_1}$$
+$$\mathcal{O}_X\overset{\iota_2^\sharp}{\rightarrow}(\iota_2)_\ast \mathcal{O}_{Z_2}\overset{(\iota_2)_\ast \varphi^\sharp}{\rightarrow}(\iota_2)_\ast \varphi_\ast \mathcal{O}_{Z_1}=(\iota_1)_\ast \mathcal{O}_{Z_1}$$
 
 so $\ker\iota_2^\sharp\subseteq \ker\iota_1^\sharp$, and hence by [Definition 5](#def5){: data-lid="t0x36" } we have $\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$.
 

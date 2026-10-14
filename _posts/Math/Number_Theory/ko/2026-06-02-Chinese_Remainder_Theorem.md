@@ -46,7 +46,7 @@ $(a+c)-(b+d) = (a-b)+(c-d)$와 $(a-c)-(b-d) = (a-b)-(c-d)$는 $n$의 배수 둘�
 ::: 명제 3 (약분 법칙)
 $n$이 양의 정수이고 $c \ne 0$이 정수라 하자. $d = \gcd(c, n)$일 때
 
-$$ac \equiv bc \pmod{n} \quad\Longrightarrow\quad a \equiv b \pmod{n/d}$$
+$$ac \equiv bc \pmod{n} \quad\implies\quad a \equiv b \pmod{n/d}$$
 
 이다. 특히 $\gcd(c,n)=1$이면 $ac \equiv bc \pmod{n}$에서 $a \equiv b \pmod{n}$을 얻는다.
 :::

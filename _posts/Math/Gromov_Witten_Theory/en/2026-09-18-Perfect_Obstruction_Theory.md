@@ -111,7 +111,7 @@ $$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{
 ::: Definition 2 (Behrend–Fantechi)
 Let $M$ be a Deligne–Mumford stack. A *perfect obstruction theory* on $M$ is a pair consisting of a complex locally quasi-isomorphic to a two-term complex of vector bundles $[E^{-1}\rightarrow E^0]$, namely $E^\bullet$, and a morphism
 
-$$\phi:E^\bullet\longrightarrow\tau_{\geq-1}\LL_M$$
+$$\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$$
 
 such that $h^0(\phi)$ is an isomorphism and $h^{-1}(\phi)$ is a surjection.
 :::

@@ -53,7 +53,7 @@ $$\beta'\cdot_B(\beta\otimes_A x)=(\beta'\beta)\otimes_A x$$
 
 을 통해 $B$의 action $\cdot_B$를 정의할 수 있다. 이것이 실제로 action이 된다는 것은 단순계산을 통해서도 어렵지 않게 얻어지며, 혹은 합성
 
-$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B\otimes_A\id_M}{\longrightarrow} \phi^\ast B\otimes_AM$$
+$$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B\otimes_A\id_M}{\rightarrow} \phi^\ast B\otimes_AM$$
 
 으로 얻어지는 것으로 생각할 수도 있다.[^1] 또, 임의의 $A$-linear map $u:M \rightarrow M'$에 대하여 $\id_{\phi^\ast B}\otimes_A u$가 이렇게 정의된 두 $B$-module 사이의 $B$-linear map을 정의하는 것을 확인할 수 있다.
 

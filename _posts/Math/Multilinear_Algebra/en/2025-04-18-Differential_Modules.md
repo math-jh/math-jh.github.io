@@ -320,7 +320,7 @@ $$\Omega_0(u): \Omega_{E/A}\otimes_AE'\rightarrow\Omega_{E'/A}.$$
 
 On the other hand, if we regard $E'$ as an $E$-algebra via $E\rightarrow E'$, then the derivation $d_{E'/E}: E' \rightarrow\Omega_{E'/E}$ obtained here is also an $A$-derivation; hence by the universal property of $\Omega_{E'/A}$ there exists a factorization
 
-$$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}.$$
+$$E'\overset{d_{E'/A}}{\rightarrow}\Omega_{E'/A}\overset{\Omega_u}{\rightarrow}\Omega_{E'/E}.$$
 
 Then again by the universal property there exists the following commutative diagram:
 
@@ -331,7 +331,7 @@ Now we introduce two exact sequences that are frequently used.
 ::: Proposition 13
 The sequence of $E'$-modules
 
-$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}\longrightarrow0$$
+$$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\rightarrow}\Omega_{E'/A}\overset{\Omega_u}{\rightarrow}\Omega_{E'/E}\rightarrow0$$
 
 is exact.
 :::
@@ -349,7 +349,7 @@ and we showed immediately after [Proposition 2](#prop2){: data-lid="psha7" } tha
 
 Now consider in particular the case where $u:E \rightarrow E'$ is surjective, so that for $\mathfrak{I}=\ker u$ we have an isomorphism $E'\cong E/\mathfrak{I}$. Denote by $d'$ the composition of the restriction of the canonical derivation $d=d_{E/A}$ to $\mathfrak{I}$ with $i_E$:
 
-$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\longrightarrow}\Omega_{E/A}\overset{i_E}{\longrightarrow}\Omega_{E/A}\otimes_EE'.$$
+$$\mathfrak{I}\overset{d\vert_{\mathfrak{I}}}{\rightarrow}\Omega_{E/A}\overset{i_E}{\rightarrow}\Omega_{E/A}\otimes_EE'.$$
 
 Then for any $x,y\in \mathfrak{I}$,
 
@@ -364,7 +364,7 @@ is well-defined. Moreover, since $\mathfrak{I}$ annihilates $\mathfrak{I}/\mathf
 ::: Proposition 14
 In the above situation, the sequence of $E'$-linear maps
 
-$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
+$$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\rightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\rightarrow}\Omega_{E'/A}\rightarrow0$$
 
 is exact.
 :::

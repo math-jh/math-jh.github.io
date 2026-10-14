@@ -108,7 +108,7 @@ A chain complex in $\mathcal{A}^\op$ is called a *cochain complex*.
 ::: Definition 5
 Let an arbitrary chain complex $A_\bullet$ be given. Then
 
-$$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
+$$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\rightarrow}A_n\overset{d_n}{\rightarrow}A_{n-1}\rightarrow\cdots$$
 
 is said to be *exact* at $A_n$ if the above monomorphism $B_n \rightarrow Z_n$ is an isomorphism. A chain complex that is exact everywhere is called an *exact sequence*.
 :::
@@ -125,7 +125,7 @@ $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
 Let an additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$ be given. Then for any chain complex $A_\bullet$ defined in $\mathcal{A}$, one can easily verify that the following data
 
-$$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \overset{F(d_n)}{\longrightarrow} F(A_{n-1})\rightarrow\cdots$$
+$$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\rightarrow} F(A_n) \overset{F(d_n)}{\rightarrow} F(A_{n-1})\rightarrow\cdots$$
 
 form a chain complex. That is, the additive functor $F$ induces a functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$. However, for a general additive functor, the fact that the original chain complex $A_\bullet$ is exact does not guarantee that the new complex $F(A_\bullet)$ obtained as above is exact.
 
