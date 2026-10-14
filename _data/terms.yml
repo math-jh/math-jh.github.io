@@ -11534,6 +11534,13 @@ L:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+- id: limit_inferior
+  en: limit inferior
+  ko: 하극한
+  primary: ko
+  defs:
+  - label: '[해석학] §상극한과 하극한'
+    url: /ko/math/analysis/limsup_and_liminf
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -11562,6 +11569,13 @@ L:
   defs:
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+- id: limit_superior
+  en: limit superior
+  ko: 상극한
+  primary: ko
+  defs:
+  - label: '[해석학] §상극한과 하극한'
+    url: /ko/math/analysis/limsup_and_liminf
 - id: lindelöf
   en: lindelöf
   ko: 린델뢰프
