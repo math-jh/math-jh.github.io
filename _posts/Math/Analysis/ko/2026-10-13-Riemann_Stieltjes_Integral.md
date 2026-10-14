@@ -205,7 +205,7 @@ $f$와 $\alpha$가 같은 점에서 같은 쪽으로 불연속이면 $f \in \mat
 적분기가 증가함수라는 가정은 두 증가함수의 차로 쓸 수 있는 함수까지 넓힐 수 있다.
 
 ::: 정의 11 (유계변동함수)
-함수 $\alpha : [a,b] \to \mathbb{R}$의 *total variation*을 $V_a^b(\alpha) = \sup_P \sum_{i=1}^n \lvert \alpha(x_i) - \alpha(x_{i-1})\rvert$로 정의한다. 이 값이 유한할 때 $\alpha$를 *유계변동함수<sub>function of bounded variation</sub>*라 한다.
+함수 $\alpha : [a,b] \to \mathbb{R}$의 *total variation<sub>전변동</sub>*을 $V_a^b(\alpha) = \sup_P \sum_{i=1}^n \lvert \alpha(x_i) - \alpha(x_{i-1})\rvert$로 정의한다. 이 값이 유한할 때 $\alpha$를 *유계변동함수<sub>function of bounded variation</sub>*라 한다.
 :::
 
 증가함수 $\alpha$는 모든 합이 $\alpha(b) - \alpha(a)$이므로 유계변동함수이다. $\lvert \alpha(x) - \alpha(y)\rvert \leq L\lvert x - y\rvert$를 만족하는 Lipschitz 함수는 $V_a^b(\alpha) \leq L(b - a)$이므로 역시 그렇고, 특히 $C^1$ 함수가 그렇다.

@@ -7291,6 +7291,13 @@ F:
   defs:
   - label: '[대수다양체] §유리사상'
     url: /ko/math/algebraic_varieties/rational_maps
+- id: function_of_bounded_variation
+  en: function of bounded variation
+  ko: 유계변동함수
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann–Stieltjes 적분'
+    url: /ko/math/analysis/riemann_stieltjes_integral
 - id: function_of_two_variables
   en: function of two variables
   ko: 이변수함수
@@ -12154,6 +12161,8 @@ L:
   defs:
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+  - label: '[해석학] §Riemann–Stieltjes 적분'
+    url: /ko/math/analysis/riemann_stieltjes_integral
 - id: lower_triangular_matrix
   en: lower triangular matrix
   ko: 하삼각행렬
@@ -18622,6 +18631,13 @@ S:
   defs:
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
     url: /ko/math/symplectic_geometry/morse_stationary_phase
+- id: step_function
+  en: step function
+  ko: 계단함수
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann–Stieltjes 적분'
+    url: /ko/math/analysis/riemann_stieltjes_integral
 - id: stereographic_projection
   en: stereographic projection
   ko: 입체사영
@@ -19847,6 +19863,13 @@ T:
     url: /ko/math/algebraic_topology/fibrations
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+- id: total_variation
+  en: total variation
+  ko: 전변동
+  primary: en
+  defs:
+  - label: '[해석학] §Riemann–Stieltjes 적분'
+    url: /ko/math/analysis/riemann_stieltjes_integral#def11
 - id: totally_disconnected
   en: totally disconnected
   ko: 전비연결
@@ -20606,6 +20629,8 @@ U:
   defs:
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+  - label: '[해석학] §Riemann–Stieltjes 적분'
+    url: /ko/math/analysis/riemann_stieltjes_integral
   see:
   - label: 하합
     lang: ko

@@ -5435,3 +5435,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-10-12 01:15
 
 - _posts/Math/Gromov_Witten_Theory/ko/2026-09-18-Perfect_Obstruction_Theory.md: 병기 필요 'intrinsic normal sheaf' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-10-14 15:15
+
+- _posts/Math/Analysis/ko/2026-10-13-Riemann_Stieltjes_Integral.md: 병기 필요 'Riemann–Stieltjes 적분가능' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
