@@ -16,13 +16,13 @@ drift_needed: true
 
 ---
 
-대수기하학에서 공간의 국소적인 모양은 한 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들로 이해된다. Moduli space $M$의 점 $p$에서는 이 두 자료를 변형이론이 준다. Tangent space는 first-order deformation들의 공간 $T^1$이고, 잘라내는 방정식은 deformation을 고차로 늘릴 때 생기는 obstruction에서 온다. [§마디 곡선의 변형, §§장애의 소멸](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#장애의-소멸)에서 본 것처럼, deformation을 한 차수씩 늘릴 때마다 그 obstruction class는 obstruction space $T^2$에 놓이고, 이것이 사라지도록 $T^1$의 coordinate 사이에 관계식을 넣어야 다음 차수로 갈 수 있다. 이렇게 모은 관계식은 많아야 $\dim T^2$개이며, 이를 하나의 map으로 적으면 $p$의 formal neighborhood는 일차항이 없는 formal map
+대수기하학에서 공간의 국소적인 모양은 한 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들로 이해된다. Moduli space $M$의 점 $p$에서는 이 두 자료를 변형이론이 준다. Tangent space는 first-order deformation들의 공간 $T^1$이고, 잘라내는 방정식은 deformation을 고차로 늘릴 때 생기는 obstruction에서 온다. [§마디 곡선의 변형, §§장애의 소멸](/ko/math/gromov-witten_theory/deformations_of_nodal_curves#장애의-소멸){: data-lid="v2ws2" }에서 본 것처럼, deformation을 한 차수씩 늘릴 때마다 그 obstruction class는 obstruction space $T^2$에 놓이고, 이것이 사라지도록 $T^1$의 coordinate 사이에 관계식을 넣어야 다음 차수로 갈 수 있다. 이렇게 모은 관계식은 많아야 $\dim T^2$개이며, 이를 하나의 map으로 적으면 $p$의 formal neighborhood는 일차항이 없는 formal map
 
 $$\kappa:(T^1,0)\longrightarrow(T^2,0)$$
 
 의 zero locus $\kappa^{-1}(0)$이다. 이 $\kappa$를 *Kuranishi map*이라 부른다.
 
-$\kappa$의 성분 $\dim T^2$개가 독립적인 방정식으로 작동하면 $p$ 근방의 차원은 $\dim T^1-\dim T^2$이고, 이것이 [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4)에서 계산한 virtual dimension $\vdim$이다. 그러나 방정식들이 서로 종속이거나 아예 사라지면 차원을 기대만큼 깎지 못한다. 극단적으로 $\kappa\equiv0$이면 formal neighborhood는 $T^1$ 전체이고, 실제 차원은 $\vdim$을 $\dim T^2$만큼 넘는다. 우리 목표는 이런 경우에도 적분이 가능하도록 차원 $\vdim$의 class, 곧 *virtual fundamental class<sub>가상 기본류</sub>* $[M]^\vir\in A_{\vdim}(M)$을 만드는 것이다.
+$\kappa$의 성분 $\dim T^2$개가 독립적인 방정식으로 작동하면 $p$ 근방의 차원은 $\dim T^1-\dim T^2$이고, 이것이 [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="n1eqm" }에서 계산한 virtual dimension $\vdim$이다. 그러나 방정식들이 서로 종속이거나 아예 사라지면 차원을 기대만큼 깎지 못한다. 극단적으로 $\kappa\equiv0$이면 formal neighborhood는 $T^1$ 전체이고, 실제 차원은 $\vdim$을 $\dim T^2$만큼 넘는다. 우리 목표는 이런 경우에도 적분이 가능하도록 차원 $\vdim$의 class, 곧 *virtual fundamental class<sub>가상 기본류</sub>* $[M]^\vir\in A_{\vdim}(M)$을 만드는 것이다.
 
 이 class는 점마다의 Kuranishi map만으로는 만들 수 없다. 우선 $T^1$과 $T^2$의 차원은 점마다 jump하며 일정한 것은 그 차이뿐이므로, 점마다의 $T^2$를 모아 하나의 vector bundle을 만들 수 없다. 또 $\kappa$는 coordinate의 선택에 의존하여 서로 다른 점의 $\kappa$들이 붙지 않는다. 따라서 점마다의 $T^1$과 $T^2$를 cohomology로 주면서 전체에서 붙는 대상이 필요하다. 그 대상은 vector bundle 사이의 map $E_0\rightarrow E_1$로서, 각 점 $p$의 fiber에서 kernel이 $T^1$, cokernel이 $T^2$가 되는 것이다. 이 map의 rank가 점마다 바뀌면 kernel과 cokernel의 차원은 jump하지만, 두 bundle 자체와 그 rank의 차이 $\rank E_0-\rank E_1=\vdim$은 전체에서 일정하다.
 
@@ -30,7 +30,7 @@ $\kappa$의 성분 $\dim T^2$개가 독립적인 방정식으로 작동하면 $p
 
 Perfect obstruction theory를 정의하는 조건은 고전적인 obstruction class의 언어로 다음과 같이 읽힌다. Scheme $T$에서 $M$으로 가는 map $g$를 ideal $J$의 square-zero extension $T\subset\overline{T}$로 늘리려 할 때, 그 obstruction은 $\Ext^1(g^\ast E^\bullet,J)$에 놓이고 이것이 $0$인 것과 늘릴 수 있는 것이 동치이다. ([BF, Theorem 4.5]) $T=\Spec A$가 $p$로 가는 local Artin $\mathbb{K}$-algebra의 spectrum이고 $\overline{T}$가 그 small extension이면, 이는 $h^1((E^\bullet)^\vee\vert_p)$가 $p$의 obstruction space라는 것이고 위의 Kuranishi map을 이 공간으로 가는 map으로 잡을 수 있다는 것이다.
 
-다만 obstruction space는 obstruction class를 담기만 하면 되므로 하나로 정해지지 않는다. 실제보다 큰 공간도 obstruction space가 되며, perfect obstruction theory 역시 $M$이 정하는 것이 아니라 $M$ 위에 추가로 고르는 자료이다. Virtual class는 이 선택에 의존하므로, stable map moduli에서는 기하적인 출처, 곧 $H^1(C,\mu^\ast T_X)$에서 obstruction을 담는 [명제 12](#prop12)의 perfect obstruction theory를 쓴다.
+다만 obstruction space는 obstruction class를 담기만 하면 되므로 하나로 정해지지 않는다. 실제보다 큰 공간도 obstruction space가 되며, perfect obstruction theory 역시 $M$이 정하는 것이 아니라 $M$ 위에 추가로 고르는 자료이다. Virtual class는 이 선택에 의존하므로, stable map moduli에서는 기하적인 출처, 곧 $H^1(C,\mu^\ast T_X)$에서 obstruction을 담는 [명제 12](#prop12){: data-lid="9vcuj" }의 perfect obstruction theory를 쓴다.
 
 대수기하학에서 공간의 국소적인 기하학은 점에서의 tangent space와, 그 안에서 공간을 잘라내는 방정식들의 관계로 이해된다. 일반적인 smooth point에서는 점 근방이 tangent space와 같은 차원을 갖지만, singular point에서는 tangent space, 즉 $1$차 미분이 공간을 온전히 복원하지 못해서 그 tangent space가 실제 공간보다 더 큰 공간의 역할을 한다. 때문에 이러한 곳에서는 $2$차 이상의 고차항이 tangent space를 잘라내서 원래의 공간을 결정하도록 해야 한다. 이러한 고차 방정식들이 $r$개의 독립적인 구속조건으로 작동한다면 기대 차원은 tangent space의 차원보다 $r$만큼 작지만, 방정식들이 서로 종속이 되거나 무력화되면 차원을 기대만큼 깎지 못해 실제 차원이 이 기대치를 초과할 수 있다.
 
