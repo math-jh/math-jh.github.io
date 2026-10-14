@@ -38,21 +38,14 @@ $$\kappa=\sum_{i=1}^rf_ie_i:(T^1,0)\longrightarrow(T^2,0)$$
 
 $$[\overline{\mathcal{M}}_{g,n}(X,\beta)]^\vir\in A_{\vdim}(\overline{\mathcal{M}}_{g,n}(X,\beta))$$
 
-가 필요하다.
+가 필요하다. 핵심적인 아이디어는, 각 점 근방에서 moduli는 $\kappa$의 zero locus로 나타나므로, 이 zero locus의 차원이 기대와 다르더라도, 방정식들을 일반적인 위치로 흔들었을 때 얻어질 zero locus의 class를 구해주면 된다는 것이다. 문제는 이것이 한 점에서의 그림이라는 것으로, 일반적으로 $T^1$과 $T^2$의 차원은 점마다 jump하며 $\kappa$의 정의 자체도 coordinate 선택에 의존하므로 이들 점마다의 그림을 moduli 전체로 이어줄 자료가 필요하며, 이것이 이번 글에서 정의할 *intrinsic normal cone*이고, 이 cone을 vector bundle로 표현되는 공간 안에 넣어 주는 자료로서 *perfect obstruction theory*를 정의할 수 있다. 
 
-이 class를 어떻게 정의해야 하는지는 Kuranishi map이 알려 준다. 각 점 근방에서 moduli는 $\kappa$의 zero locus이므로, $\kappa$의 성분들이 독립적인 방정식으로 작동하여 그 zero locus가 기대 차원을 가지면 그 fundamental class가 답이 되어야 하고, 그렇지 않으면 방정식들을 일반적인 위치로 흔들었을 때 얻어질 zero locus의 class가 답이 되어야 한다. 가령 moduli가 smooth하고 점마다의 $T^2$가 모여 rank $r$의 vector bundle을 이루는 경우를 보자. 이 때 Kuranishi map은 항등적으로 $0$이므로 moduli는 이 vector bundle의 항등적으로 $0$인 section의 zero locus로 볼 수 있다. 이 section을 zero section과 transversal하게 만나는 section으로 흔들 수 있다면 그 zero locus는 codimension $r$이고 그 class는 top Chern class를 fundamental class에 cap한 것이므로, 이 경우 virtual fundamental class는 이 obstruction bundle의 Euler class와 fundamental class의 cap product여야 한다. 실제로 그렇다는 것은 [명제 11](#prop11)의 (4)에서 본다.
-
-그러나 일반적으로는 이 그림을 그대로 쓸 수 없다. Moduli는 singular할 수 있고, $T^1$과 $T^2$의 차원은 점마다 jump하며 일정한 것은 그 차이뿐이므로 점마다의 $T^2$를 모아 하나의 vector bundle을 만들 수 없다. 또 Kuranishi map은 coordinate의 선택에 의존하므로 서로 다른 점의 것이 붙지 않고, 방정식을 실제로 흔들 수도 없다. 따라서 두 가지가 필요하다. 하나는 방정식을 흔들지 않고도 흔든 결과의 class를 얻는 방법이며, 이는 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 normal cone으로 정의하는 localized Euler class가 해결한다. 다른 하나는 점마다의 tangent space와 obstruction space를 전체에서 붙여 주는 자료이다. 그 자료는 국소적으로 vector bundle 사이의 morphism $E_0\rightarrow E_1$로 표현되는 complex로서, 각 점 $p$의 fiber에서 kernel이 $T^1$이고 cokernel이 $p$에서의 obstruction space인 것이다. 이 morphism의 rank가 점마다 바뀌면 kernel과 cokernel의 차원은 jump하지만, 두 bundle의 rank의 차이 $\rank E_0-\rank E_1$은 일정하므로 이것이 virtual dimension이 된다.
-
-이 complex를 cotangent 쪽에서 적은 $E^\bullet=[E^{-1}\rightarrow E^0]$, 곧 $E^{-i}=E_i^\vee$에 cotangent complex로의 morphism $\phi$를 함께 준 것이 [BF]의 *perfect obstruction theory*이다. ([정의 3](#def3)) 그 조건은 obstruction의 언어로 다음과 같이 읽힌다. Deligne–Mumford stack $M$ 위에서 [정의 3](#def3)의 두 조건은, scheme $T$에서의 임의의 morphism $g:T\rightarrow M$과 ideal $J$를 갖는 임의의 square-zero extension $T\subset\overline{T}$에 대하여 $g$를 $\overline{T}$로 extend하는 것의 obstruction이 $\Ext^1(g^\ast E^\bullet,J)$에 놓이고, 이것이 $0$인 것과 extension이 존재하는 것이 동치이며, extension이 존재하면 extension들은 $\Ext^0(g^\ast E^\bullet,J)$의 torsor를 이룬다는 것과 동치이다. ([BF, Theorem 4.5]) $T$가 점 $p$로 가는 local Artin $\mathbb{K}$-algebra의 spectrum이고 $\overline{T}$가 그 small extension이면 이는 $h^1((E^\bullet)^\vee\vert_p)$가 $p$에서의 obstruction space라는 것이고, $T=\Spec\mathbb{K}$가 점 $p$이고 $\overline{T}=\Spec\mathbb{K}[\epsilon]$인 경우에 적용하면 $h^0((E^\bullet)^\vee\vert_p)$가 tangent space $T^1$이라는 것이다. 즉 perfect obstruction theory는 앞의 두 글에서 점마다 계산한 deformation space와 obstruction space를 하나의 complex의 cohomology로 모아 전체에서 붙인 것이다.
-
-다만 obstruction space는 obstruction class를 담기만 하면 되므로 하나로 정해지지 않는다. 실제보다 큰 공간도 obstruction space가 되며, 마찬가지로 perfect obstruction theory는 moduli가 정하는 것이 아니라 그 위에 추가로 고르는 자료이고 virtual class는 이 선택에 의존한다. ([예시 4](#ex4)) Stable map의 경우에는 위에서 본 대로 obstruction이 모두 $H^1(C,\mu^\ast T_X)$에서 오고, 점마다의 $H^0(C,\mu^\ast T_X)$와 $H^1(C,\mu^\ast T_X)$는 universal curve $\pi:\mathcal{C}\rightarrow\overline{\mathcal{M}}_{g,n}(X,\beta)$와 universal map $\mu:\mathcal{C}\rightarrow X$에 대하여 이들을 각 점에서의 cohomology로 갖는 complex $R\pi_\ast\mu^\ast T_X$로 한꺼번에 모인다. 이 complex는 domain curve를 고정하고 map만 움직이는 deformation을 담으므로 $\mathfrak{M}_{g,n}$에 대한 상대적인 perfect obstruction theory를 주고, $\mathfrak{M}_{g,n}$이 smooth하다는 것, 곧 domain curve의 deformation이 unobstructed라는 것이 이 상대적인 자료만으로 stable map moduli의 virtual fundamental class를 정의할 수 있게 해 준다. ([명제 12](#prop12))
 
 ## 벡터다발의 zero locus
 
-이제 우리는 위의 언어를 더 기하학적인 방식으로 올린다. 이를 위해 ambient space 역할을 할 $T^1$은 smooth variety $X$로, $T^2$는 그 위의 vector bundle $E$로 올리며, 이 때 obstruction의 방정식은 이것의 section $s\in \Gamma(X, E)$가 되어, 우리의 moduli space는 이러한 smooth variety $X$ 위에 section들의 locus가 정의하는 common locus가 된다. 
+위에서 마주한 문제는 Kuranishi map이 한 점에서의 그림이라는 것이었다. 우리는 일반적인 경우를 다루기 전에 우선 처음부터 전체에서 이러한 구조가 주어진 경우, 즉 smooth variety 위의 vector bundle의 section과 그 zero locus를 살펴본다. 
 
-따라서 우리는 이러한 상황을 간략하게 복습한다. Smooth variety $X$ 위에 rank $r$의 vector bundle $E$와 section $s\in\Gamma(X,E)$가 주어져 있다 하고
+Smooth variety $X$ 위에 rank $r$의 vector bundle $E$와 section $s\in\Gamma(X,E)$가 주어져 있다 하고
 
 $$Z(s)=\{x\in X\mid s(x)=0\}$$
 
@@ -74,35 +67,21 @@ $$e(E)\cap[\mathbb{P}^2]=c_2(\mathcal{O}(1)^{\oplus2})\cap[\mathbb{P}^2]$$
 로 여전히 degree $1$의 point class를 준다. ([\[대수다양체\] §교차곱, ⁋예시 11](/ko/math/algebraic_varieties/intersection_product#ex11){: data-lid="9kgj4" })
 :::
 
-우리는 deformation space $T^1$과 obstruction space $T^2$을 담기 위해 이와 같이 smooth variety $X$와 vector bundle $E$를 만들었으며, 이 섹션에서 우리 목표는 이를 엄밀하게 만드는 것이다. 고정된 $x\in X$에 대하여, 이를 흔드는 모든 방향이 담겨있는 벡터공간이 $X$의 tangent space $T_{X,x}$이며, 각 점의 fiber $E_x$가 obstruction space가 된다. 
-
-한편 $Z(s)$의 한 점 $x$가 주어졌을 때, 이 점을 흔들었을 때도 여전히 $Z(s)$ 안에 머물러야 한다는 조건이 바로 $Z(s)$의 deformation 방향을 결정한다. 즉 tangent vector $v\in T_{X,x}$ 방향으로의 무한소 이동 $x+\epsilon v$에 대하여
+이 모형이 좋은 점은 각 점 $x\in Z(s)$에서의 Kuranishi 그림이 $s$ 자체로 주어진다는 것이다. 이를 확인하기 위해 $Z(s)$의 Kuranishi 그림을 보자. $Z(s)$의 한 점 $x$가 주어졌을 때, 이 점을 흔들었을 때도 여전히 $Z(s)$ 안에 머물러야 한다는 조건이 바로 $Z(s)$의 deformation 방향을 결정한다. 즉 tangent vector $v\in T_{X,x}$ 방향으로의 무한소 이동 $x+\epsilon v$에 대하여
 
 $$s(x+\epsilon v)=s(x)+\epsilon\dd{s}(v)=\epsilon\dd{s}(v)$$
 
-이므로, 이 일차 변화율 $\dd{s}(v)=0$ 조건이 만족되어야 그 결과가 $Z(s)$ 안에 머무를 수 있다. 따라서 $\dd{s}$의 kernel인 $\ker(\dd{s})$가 $Z(s)$의 실제 tangent space이자 deformation 방향을 이루며, 반대로 $E_x$ 안에서 $\dd{s}$의 image가 채우지 못한 나머지 방향들, 곧 cokernel $\coker(\dd{s})$는 section을 $0$으로 유지하도록 통제할 수 없는 방향들이며, 이것이 바로 $Z(s)$의 실제 obstruction space가 된다.
+이므로, 이 일차 변화율 $\dd{s}(v)=0$ 조건이 만족되어야 그 결과가 $Z(s)$ 안에 머무를 수 있다. 따라서 $\dd{s}$의 kernel인 $\ker(\dd{s})$가 $Z(s)$의 실제 tangent space이자 deformation 방향을 이루며, 반대로 $E_x$ 안에서 $\dd{s}$의 image가 채우지 못한 나머지 방향들, 곧 cokernel $\coker(\dd{s})$는 section을 $0$으로 유지하도록 통제할 수 없는 방향들로 이것이 바로 $Z(s)$의 obstruction space가 된다.
 
-이를 요약하면, $Z(s)$의 국소 deformation과 obstruction 자료는 그 미분 $\dd{s}$가 tangent space $T^1$과 obstruction $T^2$를 이어 주는 tangent 방향의 complex
+그럼 $Z(s)$의 모든 점에서 Kuranishi 그림이 $s$로 주어진다는 것은, 각 점 $x$에서 $\dd{s}_x$의 image 방향에 해당하는 방정식들로 같은 수의 coordinate를 소거하면 남는 $\ker(\dd{s}_x)\rightarrow\coker(\dd{s}_x)$가 $x$에서의 Kuranishi map이 된다는 말이다. 특히 $\dd{s}_x=0$이면 $s$를 $x$의 근방으로 제한한 것이 그대로 $x$에서의 Kuranishi map이다. 따라서 점마다 Kuranishi map을 따로 잡아 붙일 필요 없이, $s$ 하나가 모든 점의 Kuranishi map 역할을 동시에 한다.
 
-$$\Bigl[\at{0}{T_X\vert_{Z(s)}}\xrightarrow{\ \dd{s}\ }\at{1}{E\vert_{Z(s)}}\Bigr]$$
+핵심적인 관찰은, $\dd{s}_x$의 rank가 점마다 바뀌어 [예시 1](#ex1){: data-lid="fkmo8" }처럼 tangent space가 기대보다 부풀더라도 obstruction space 역시 같은 크기로 늘어나므로, 둘의 차이
 
-에 온전히 담겨 있으며, 보편적으로 대수기하학에서 우리는 cotangent 방향을 살펴보므로 이 complex를 dualize하여 degree $-1$과 $0$에 놓이는 complex로 적으면
+$$\dim\ker(\dd{s}_x)-\dim\coker(\dd{s}_x)=\dim X-\rank E$$
 
-$$E^\bullet=\Bigl[\at{-1}{E^\vee\vert_{Z(s)}}\xrightarrow{\ (\dd{s})^\vee\ }\at{0}{\Omega_X\vert_{Z(s)}}\Bigr]$$
+는 항상 일정하다는 것이다. 위의 소거에서 coordinate와 방정식이 같은 수만큼 짝지어 사라지기 때문이며, 이 값이 이 모형의 virtual dimension $\vdim$이다. 즉 $Z(s)$가 얼마나 나쁘게 행동하든, 위에서 정의한 Gysin map은 항상 정확히 $\dim X-\rank E$ 차원, 곧 올바른 차원의 class를 뽑아 준다. 
 
-을 얻는다. 이제 이 complex에 $R\Hom(-,\mathcal{O}_{Z(s)})$을 적용하여 원래의 tangent 방향을 복원하면, $0$차 cohomology와 $1$차 cohomology
-
-$$h^0((E^\bullet)^\vee)=\ker(\dd{s}),\qquad h^1((E^\bullet)^\vee)=\coker(T_X\vert_{Z(s)}\rightarrow E\vert_{Z(s)})$$
-
-가 실제 tangent space와 obstruction space를 준다. 
-
-핵심적인 관찰은, 여기서 [예시 1](#ex1){: data-lid="fkmo8" }처럼 tangent space가 기대보다 부풀더라도 obstruction 역시 같은 크기로 늘어나므로, 둘의 차이
-
-$$\dim h^0((E^\bullet)^\vee)-\dim h^1((E^\bullet)^\vee)=\dim X-\rank E$$
-
-는 항상 virtual dimension $\vdim$으로 보존된다는 것이다. 즉, 실제 moduli space가 얼마나 나쁘게 행동하든, 위에서 정의한 Gysin map은 항상 정확히 $\dim X-\rank E$ 차원, 즉 올바른 차원의 virtual class를 뽑아주게 된다. 
-
-그러나 이 차원 세기만으로는 localized Euler class가 $Z(s)$ 위의 <em-ko>어디에</em-ko> 놓이는지 알 수 없다. $e(E,s)$를 실제로 정하는 것은 section $s$ 자체가 아니라 $E\vert_{Z(s)}$ 안의 closed subcone $C_{Z(s)/X}$이며, $Z(s)$가 여러 성분을 가지면 normal cone의 각 성분이 저마다의 몫을 기여한다. [예시 1](#ex1){: data-lid="tis96" }에서 normal cone은 $s\equiv0$일 때 zero section이었고 $s$가 transversal할 때 vector bundle 전체였는데, 다음은 normal cone이 그 어느 쪽도 아니며 subbundle조차 아닌 예이다.
+그러나 이 차원 세기는 각 점의 Kuranishi map의 일차 부분, 곧 $\dd{s}_x$의 kernel과 cokernel만 본 것이어서, localized Euler class가 $Z(s)$ 위의 <em-ko>어디에</em-ko> 놓이는지는 알 수 없다. $e(E,s)$를 실제로 정하는 것은 section $s$ 자체가 아니라 Kuranishi map의 고차항까지 기록하는 $E\vert_{Z(s)}$ 안의 closed subcone $C_{Z(s)/X}$이며, $Z(s)$가 여러 성분을 가지면 normal cone의 각 성분이 저마다의 몫을 기여한다. [예시 1](#ex1){: data-lid="tis96" }에서 normal cone은 $s\equiv0$일 때 zero section이었고 $s$가 transversal할 때 vector bundle 전체였는데, 다음은 normal cone이 그 어느 쪽도 아니며 subbundle조차 아닌 예이다.
 
 ::: 예시 2
 $X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 이는 $\mathbb{A}^3$ 안의 $Z(\x\y,\x\z)$를 사영화한 것으로, $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, $X$로 보낸 class는
@@ -140,6 +119,20 @@ $$e(E,s)=3[\ell]+[L]\in A_1(Z)$$
 
 ## Perfect obstruction theory
 
+[§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 모형에서 $Z(s)$의 국소 deformation과 obstruction 자료는 그 미분 $\dd{s}$가 tangent space와 obstruction space를 이어 주는 tangent 방향의 complex
+
+$$\Bigl[\at{0}{T_X\vert_{Z(s)}}\xrightarrow{\ \dd{s}\ }\at{1}{E\vert_{Z(s)}}\Bigr]$$
+
+에 온전히 담겨 있었다. 보편적으로 대수기하학에서 우리는 cotangent 방향을 살펴보므로 이 complex를 dualize하여 degree $-1$과 $0$에 놓이는 complex로 적으면
+
+$$E^\bullet=\Bigl[\at{-1}{E^\vee\vert_{Z(s)}}\xrightarrow{\ (\dd{s})^\vee\ }\at{0}{\Omega_X\vert_{Z(s)}}\Bigr]$$
+
+을 얻고, 이 complex에 $R\Hom(-,\mathcal{O}_{Z(s)})$을 적용하여 원래의 tangent 방향을 복원하면 그 cohomology
+
+$$h^0((E^\bullet)^\vee)=\ker(\dd{s}),\qquad h^1((E^\bullet)^\vee)=\coker(T_X\vert_{Z(s)}\rightarrow E\vert_{Z(s)})$$
+
+가 tangent space와 obstruction space를 준다.
+
 이제 위의 논의를 어떻게 적용해야 하는지는 명확하다. 즉 일반적인 stack $M$은 cotangent complex $\LL_M$을 가지며, 우리는 이 중 deformation과 obstruction이 잡히는 truncation $\tau_{\geq -1}\LL_M$을 보면 된다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" }) 이제 만일 étale-local하게 $M$이 smooth variety $X$ 안의 closed subscheme으로 표현되고, 그 ideal sheaf가 $\mathcal{I}$라 하면 이 truncation은 다음의 꼴
 
 $$\tau_{\geq-1}\LL_M=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{\ }}\at{0}{\Omega_X\vert_M}\Bigr]$$
@@ -156,11 +149,7 @@ $$\phi:E^\bullet\longrightarrow\tau_{\geq-1}\LL_M$$
 
 이 정의에서, 우선 $h^0(\phi)$가 isomorphism이라는 것은 $E^\bullet$의 $0$차 항이 $M$의 deformation을 정확히 재현한다는 뜻이다. 수정이 필요했던 부분은 원래 $\mathcal{I}/\mathcal{I}^2$ 쪽이 들어있던 $-1$항으로, 여기에서 $h^{-1}(\phi)$가 surjection이라는 것은 $E^\bullet$의 $-1$차 항이 $M$의 obstruction을 <em-ko>빠짐없이</em-ko> 지배한다는 뜻이다. 즉, $E^\bullet$ 쪽에 실제보다 많은 obstruction이 있는 것은 허용되지만 하나라도 빠뜨리는 것은 허용되지 않는다. 두 조건이 함께 성립한다는 것은 $M$의 normal sheaf, 곧 가능한 모든 obstruction 방향이 $E^\bullet$이 정하는 vector bundle stack 안에 closed하게 들어간다는 것과 동치이며, 이는 [정리 9](#thm9){: data-lid="4u3le" }에서 정확히 보인다.
 
-위에서 살펴본 $Z(s)\hookrightarrow X$에 의해 만들어진 complex
-
-$$E^\bullet=\Bigl[\at{-1}{E^\vee\vert_{Z(s)}}\xrightarrow{\ (\dd{s})^\vee\ }\at{0}{\Omega_X\vert_{Z(s)}}\Bigr]$$
-
-에서 truncation 
+이 절의 처음에 $Z(s)\hookrightarrow X$로부터 만든 complex $E^\bullet$에서 truncation 
 
 $$\tau_{\geq-1}\LL_{Z(s)}=[\at{-1}{\mathcal{I}/\mathcal{I}^2}\rightarrow\at{0}{\Omega_X\vert_{Z(s)}}]$$
 
