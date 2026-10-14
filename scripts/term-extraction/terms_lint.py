@@ -16,8 +16,8 @@ categories.yml ko 표시명)과 대조한다. 차이: 저쪽은 in-memory 재작
   E CASE      인명 파생 고유명사 소문자 (terms_common._PROPER_FORMS 기준;
               추출 시점 교정과 같은 표 — 기존 항목의 드리프트를 잡는다)
                                                                 [--fix 가능]
-  E DEFS_ORDER defs 가 논리 순서가 아님 (categories.yml 순서→weight; 2026-07-21
-              추가 — add_def 는 등록순 append 라 논리 순서 보장이 없었음. 모든
+  E DEFS_ORDER defs 가 카테고리 순서가 아님 (categories.yml 순서→weight; 2026-07-21
+              추가 — add_def 는 등록순 append 라 카테고리 순서 보장이 없었음. 모든
               def 대상이 해석 가능할 때만 검사·정렬)              [--fix 가능]
   E URL       def/ref url 이 어떤 글의 permalink 도 아님 (깨진 링크)
   E DUP_ID/DUP_TERM 중복 (Čech/čech 같은 정규화 중복 포함)
@@ -258,7 +258,7 @@ _WEIGHT_CACHE: dict[str, tuple | None] = {}
 
 
 def _cat_idx() -> dict[str, int]:
-    """카테고리 url 슬러그 → categories.yml subjects 순서 index (= 논리 순서)."""
+    """카테고리 url 슬러그 → categories.yml subjects 순서 index (= 카테고리 순서)."""
     global _CAT_IDX
     if _CAT_IDX is None:
         cats = yaml.safe_load(CATEGORIES_PATH.read_text(encoding="utf-8"))
@@ -270,7 +270,7 @@ def _cat_idx() -> dict[str, int]:
 
 
 def _def_key(item: str, pmap: dict) -> tuple | None:
-    """def 항목의 논리 순서 키 (cat_idx, weight). 해석 불가면 None."""
+    """def 항목의 카테고리 순서 키 (cat_idx, weight). 해석 불가면 None."""
     m = re.search(r"^\s*url: (\S+)$", item, re.M)
     if not m:
         return None
@@ -313,7 +313,7 @@ def _defs_block(chunk: str) -> tuple[int, int, list[str]] | None:
 
 
 def _defs_reorder(chunk: str, pmap: dict) -> str | None:
-    """defs 를 논리 순서로 재정렬한 청크. 재정렬 불필요·불가면 None.
+    """defs 를 카테고리 순서로 재정렬한 청크. 재정렬 불필요·불가면 None.
 
     def 대상 중 하나라도 (카테고리·weight) 해석이 안 되면 판단 불가로 두고
     건드리지 않는다 — 깨진 url 은 URL 검사가 따로 보고한다."""
@@ -335,7 +335,7 @@ def _defs_reorder(chunk: str, pmap: dict) -> str | None:
 def check_defs_order(text: str, pmap: dict) -> list[Issue]:
     _, groups = split_file(text)
     return [Issue("E", "DEFS_ORDER",
-                  f"{chunk_id(c)}: defs 가 논리 순서(카테고리→weight)가 아님",
+                  f"{chunk_id(c)}: defs 가 카테고리 순서(categories.yml 순서→weight)가 아님",
                   fixable=True)
             for chunks in groups.values() for c in chunks
             if _defs_reorder(c, pmap) is not None]
