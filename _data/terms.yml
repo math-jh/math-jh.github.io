@@ -9415,6 +9415,13 @@ I:
   - label: 유한
     lang: ko
     id: finite
+- id: infinite_descent
+  en: infinite descent
+  ko: 무한강하법
+  primary: ko
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: infinite-dimensional
   en: infinite-dimensional
   ko: 무한차원
@@ -15176,6 +15183,13 @@ P:
   defs:
   - label: '[정수론] §소수와 산술의 기본정리'
     url: /ko/math/number_theory/primes
+- id: primitive
+  en: primitive
+  ko: 원시
+  primary: ko
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: primitive_cohomology
   en: primitive cohomology
   ko: ''
@@ -15683,6 +15697,13 @@ P:
   defs:
   - label: '[위상수학] §준층'
     url: /ko/math/topology/presheaves
+- id: pythagorean_triple
+  en: pythagorean triple
+  ko: 피타고라스 세 쌍
+  primary: ko
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 Q:
 - id: qr_decomposition
   en: QR decomposition
