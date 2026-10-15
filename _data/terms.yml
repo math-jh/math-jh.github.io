@@ -3690,6 +3690,13 @@ C:
   defs:
   - label: '[위상수학] §연결공간'
     url: /ko/math/topology/connected_spaces
+- id: connected_set
+  en: connected set
+  ko: 연결집합
+  primary: en
+  defs:
+  - label: '[해석학] §연결성과 중간값 정리'
+    url: /ko/math/analysis/connectedness
 - id: connected_space
   en: connected space
   ko: 연결공간
@@ -16784,6 +16791,13 @@ R:
   defs:
   - label: '[체론] §대수적 폐포'
     url: /ko/math/field_theory/algebraically_closed_extensions
+- id: relatively_open_set
+  en: relatively open set
+  ko: 상대열린집합
+  primary: en
+  defs:
+  - label: '[해석학] §연결성과 중간값 정리'
+    url: /ko/math/analysis/connectedness
 - id: remainder
   en: remainder
   ko: 나머지
