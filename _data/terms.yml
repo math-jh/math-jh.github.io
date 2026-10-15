@@ -3128,6 +3128,13 @@ C:
   defs:
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
+- id: compact_set
+  en: compact set
+  ko: 컴팩트 집합
+  primary: en
+  defs:
+  - label: '[해석학] §연속함수의 성질'
+    url: /ko/math/analysis/continuous_functions
 - id: compact_space
   en: compact space
   ko: 컴팩트 공간
