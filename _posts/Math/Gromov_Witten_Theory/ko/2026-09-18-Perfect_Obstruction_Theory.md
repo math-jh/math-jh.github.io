@@ -179,41 +179,41 @@ $c_2(E)\cap[\mathbb{P}^3]$은 총 degree가 $4$라는 것만을 알려주지만,
 
 ## Intrinsic normal cone
 
-[예시 2](#ex2){: data-lid="3o76h" }의 계산에 쓰인 것은 $E\vert_Z$ 안의 normal cone $C_{Z/X}$ 하나였다. 그러나 일반적인 moduli $M$은 하나의 smooth variety 안의 zero locus로 전역적으로 표현되지 않고, étale-local하게만 그러한 표현을 가지며, 그 국소 표현들은 서로 다른 ambient를 갖는다. 문제는 normal cone이 ambient에 의존한다는 것이다. 가령 $Z=Z(s)\subset X$를 $X\times\mathbb{A}^1$ 안의 $Z\times\{0\}$으로 보면, 이는 $\mathbb{A}^1$의 coordinate $t$에 대하여 $\pr_1^\ast E\oplus\mathcal{O}$의 section $(s,t)$의 zero locus이고, 그 normal cone은 $C_{Z/X}\times\mathbb{A}^1\subset E\vert_Z\oplus\mathcal{O}_Z$로 한 차원 커진다. 그럼에도 zero section으로 자른 class는 바뀌지 않는데, 늘어난 $\mathbb{A}^1$ 방향이 cone과 bundle 양쪽에 똑같이 더해져 Gysin map에서 그대로 상쇄되기 때문이다. 이 늘어난 방향은 정확히 ambient의 늘어난 tangent 방향 $T_{\mathbb{A}^1}$이며, 이는 cone 자체가 아니라 cone을 ambient의 tangent 방향으로 나눈 것만이 의미를 갖는다는 것을 시사한다. 이 절에서는 이를 엄밀하게 만든다.
+[예시 2](#ex2){: data-lid="3o76h" }의 계산에 쓰인 것은 $E\vert_Z$ 안의 normal cone $C_{Z/X}$ 하나였다. 그러나 일반적인 moduli $M$은 오직 étale-local하게만 smooth variety 안의 zero locus이며, 이 각각의 국소적인 표현들은 서로 다른 ambient space를 가지므로 normal cone이 잘 정의되지 않는다. 핵심적인 관찰은 normal cone 자체는 잘 정의되지 않더라도 class $0^![C_{Z/X}]$ 자체는 잘 정의된다는 것으로, 가령 $Z$를 $X\times\mathbb{A}^1$ 안의 $Z\times\{0\}$, 곧 $\pr_1^\ast E\oplus\mathcal{O}$의 section $(s,t)$의 zero locus로 보면 normal cone은 $C_{Z/X}\times\mathbb{A}^1$로 한 차원 커지지만 zero section으로 자른 class는 그대로이다. 이는 ambient space가 늘어난 tangent space 방향 $T_{\mathbb{A}^1}$이 cone과 bundle 양쪽에 똑같이 더해져 Gysin map을 계산할 때 그대로 상쇄되기 때문이다. 이로부터 우리는 cone을 ambient space의 tangent 방향으로 나눈 것이 본질적으로 유의미한 데이터일 것임을 추측할 수 있다. 
 
 ::: 명제 3
-Scheme $Z$와 두 closed immersion $i:Z\hookrightarrow Y$, $i':Z\hookrightarrow Y'$, 그리고 smooth morphism $f:Y'\rightarrow Y$가 $f\circ i'=i$를 만족한다 하자. 그럼 normal cone들의 sequence
+Scheme $Z$와 두 closed immersion $i:Z\hookrightarrow X$, $i':Z\hookrightarrow X'$, 그리고 smooth morphism $f:X'\rightarrow X$가 $f\circ i'=i$를 만족한다 하자. 그럼 normal cone들의 sequence
 
-$$0\rightarrow i'^\ast T_{Y'/Y}\rightarrow C_{Z/Y'}\rightarrow C_{Z/Y}\rightarrow0$$
+$$0\rightarrow (i')^\ast T_{X'/X}\rightarrow C_{Z/X'}\rightarrow C_{Z/X}\rightarrow0$$
 
-은 exact이다. 즉 étale-local하게 $C_{Z/Y'}\cong i'^\ast T_{Y'/Y}\times C_{Z/Y}$이고, $C_{Z/Y'}\rightarrow C_{Z/Y}$는 이 곱의 projection이다.
+은 exact이다. 즉 étale-local하게 $C_{Z/X'}\cong (i')^\ast T_{X'/X}\times C_{Z/X}$이고, $C_{Z/X'}\rightarrow C_{Z/X}$는 이 곱의 projection이다.
 :::
-
 ::: 증명
-주장은 étale-local하고, smooth morphism은 국소적으로 étale morphism $Y'\rightarrow Y\times\mathbb{A}^n$과 projection의 합성이며, normal cone은 ambient를 étale morphism으로 바꾸거나 $Y\times\mathbb{A}^n$의 $Y$ 위의 automorphism으로 옮겨도 변하지 않는다. 따라서 $Y=\Spec A$가 affine이고 $Y'=Y\times\mathbb{A}^n$, $i'=i\times\{0\}$인 경우, 곧 $Z\times\{0\}\subset Y\times\mathbb{A}^n$의 normal cone만 계산하면 된다. $Z$의 ideal을 $I\subseteq A$라 하면 $Z\times\{0\}$의 ideal은 $I'=I\cdot A[t_1,\ldots,t_n]+(t_1,\ldots,t_n)$이고, $A[t_1,\ldots,t_n]$을 monomial $t^\beta$들로 분해하면 $I'^k$의 $t^\beta$ 성분은 $I^{\max(k-\lvert\beta\rvert,0)}t^\beta$이다. 따라서
+주장은 étale-local하고, smooth morphism은 국소적으로 étale morphism $X'\rightarrow X\times\mathbb{A}^n$과 projection의 합성이며, normal cone은 ambient를 étale morphism으로 바꾸거나 $X\times\mathbb{A}^n$의 $X$ 위의 automorphism으로 옮겨도 변하지 않는다. 따라서 $X=\Spec A$가 affine이고 $X'=X\times\mathbb{A}^n$, $i'=i\times\{0\}$인 경우, 곧 $Z\times\{0\}\subset X\times\mathbb{A}^n$의 normal cone만 계산하면 된다. $Z$의 ideal을 $I\subseteq A$라 하면 $Z\times\{0\}$의 ideal은 $I'=I\cdot A[t_1,\ldots,t_n]+(t_1,\ldots,t_n)$이고, $A[t_1,\ldots,t_n]$을 monomial $t^\beta$들로 분해하면 $I'^k$의 $t^\beta$ 성분은 $I^{\max(k-\lvert\beta\rvert,0)}t^\beta$이다. 따라서
 
 $$\bigoplus_{k\geq0}I'^k/I'^{k+1}\cong\Bigl(\bigoplus_{k\geq0}I^k/I^{k+1}\Bigr)[T_1,\ldots,T_n]$$
 
-이고, 여기서 $T_j$는 $t_j$의 class이다. 곧 $C_{Z/Y'}=C_{Z/Y}\times\mathbb{A}^n$이며, 이 $\mathbb{A}^n$은 $Z$로 제한한 relative tangent bundle $i'^\ast T_{Y'/Y}$이다.
+이고, 여기서 $T_j$는 $t_j$의 class이다. 곧 $C_{Z/X'}=C_{Z/X}\times\mathbb{A}^n$이며, 이 $\mathbb{A}^n$은 $Z$로 제한한 relative tangent bundle $(i')^\ast T_{X'/X}$이다.
 :::
 
-이 명제는 앞서 본 $X\times\mathbb{A}^1$의 현상이 일반적으로 일어난다는 것이다. 즉 ambient를 smooth하게 키우면 cone은 정확히 늘어난 relative tangent 방향만큼 커진다. 그럼 cone을 ambient의 tangent 방향으로 나누고 싶은데, 그러려면 먼저 tangent 방향이 cone 위에 작용해야 한다. Smooth scheme $W$의 closed subscheme $U$에 대하여 $\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_W\vert_U$의 dual은 morphism $T_W\vert_U\rightarrow N_{U/W}$를 주며, 여기서 $N_{U/W}=\Spec_U\Sym(\mathcal{I}/\mathcal{I}^2)$은 normal cone $C_{U/W}$를 담는 normal sheaf이다. $N_{U/W}$는 fiber별로 덧셈을 갖는 abelian cone이므로, $T_W\vert_U$는 이 morphism을 통해 $N_{U/W}$ 위에 평행이동으로 작용한다.
+이 명제는 앞서 본 $X\times\mathbb{A}^1$의 현상이 일반적으로 일어난다는 것이다. 즉 ambient space $X$와 그 위에 smooth하게 얹힌 공간 $f:X'\rightarrow X$, 가령 projection $f:X\times\mathbb{A}^n\rightarrow X$가 있을 때, $Z$를 $X$의 부분공간으로 보았을 때의 normal cone $C_{Z/X}$와 $X'$의 부분공간으로 보았을 때의 normal cone $C_{Z/X'}$을 비교하면, $C_{Z/X'}$이 $C_{Z/X}$보다 커지는 정도는 정확히 relative tangent bundle $(i')^\ast T_{X'/X}$가 담고 있다는 것이다.
+
+이제 위에서 설명한 것과 같이 cone을 tangent 방향으로 나누기 위해서는 tangent bundle이 cone 위에 작용해야 한다. Smooth scheme $W$의 closed subscheme $U$에 대하여 $\mathcal{I}/\mathcal{I}^2\rightarrow\Omega_W\vert_U$의 dual은 morphism $T_W\vert_U\rightarrow N_{U/W}$를 주며, 여기서 $N_{U/W}=\Spec_U\Sym(\mathcal{I}/\mathcal{I}^2)$은 normal cone $C_{U/W}$를 담는 normal sheaf이다. $N_{U/W}$는 fiber별로 덧셈을 갖는 abelian cone이므로, $T_W\vert_U$는 이 morphism을 통해 $N_{U/W}$ 위에 평행이동으로 작용한다.
 
 ::: 명제 4
 Smooth scheme $W$의 closed subscheme $U$에 대하여, normal cone $C_{U/W}\subset N_{U/W}$는 $T_W\vert_U$의 평행이동에 대해 불변이다.
 :::
-
 ::: 증명
 $U$를 대각선을 거쳐 $W\times W$ 안에 넣고 두 projection $p_1,p_2:W\times W\rightarrow W$를 생각하자. 둘 다 smooth이므로 [명제 3](#prop3){: data-lid="tnoek" }을 각각에 적용할 수 있으며, normal sheaf에 대해서도 같은 exact sequence가 성립한다. 먼저 $p_1$에 대한 [명제 3](#prop3){: data-lid="h13fg" }으로 $N_{U/W\times W}\cong T_W\vert_U\times N_{U/W}$, $C_{U/W\times W}\cong T_W\vert_U\times C_{U/W}$로 동일시하자. 대각선 $W\rightarrow W\times W$가 주는 $N_{U/W}\rightarrow N_{U/W\times W}$는 $p_1$과 $p_2$가 유도하는 두 map 모두의 section이고, 이로부터 위의 동일시 아래에서 $p_2$가 유도하는 $N_{U/W\times W}\rightarrow N_{U/W}$가 $(v,n)\mapsto v+n$, 곧 $T_W\vert_U$의 작용임을 확인할 수 있다. 한편 $p_2$에 대한 [명제 3](#prop3){: data-lid="2bynq" }에서 $C_{U/W\times W}$의 image는 $C_{U/W}$이므로, $T_W\vert_U\times C_{U/W}$의 작용 아래 image는 $C_{U/W}$ 안에 있다.
 :::
 
-[예시 2](#ex2){: data-lid="jsjlc" }에서 확인해 보면, 국소 모형에서 $T_X\vert_Z$는 $\dd{s}$를 통해 $E\vert_Z$에 작용한다. $P\setminus\{p\}$ 위에서 $s=\x_0(\x_1,\x_2)$의 미분의 image는 $(\x_1,\x_2)$가 생성하는 line, 곧 $C_P$의 fiber이므로 $C_P$는 이 평행이동으로 보존되고, $L$ 위에서는 $C_L$이 $E\vert_L$ 전체이므로 자명하다.
+이제 우리는 intrinsic normal cone을 정의한다. 우선 Deligne–Mumford stack $M$의 *local embedding*이란 $M$의 étale chart, 곧 affine scheme $U$에서의 étale morphism $U\rightarrow M$과, 그 chart $U$를 smooth affine scheme $W$ 안에 넣는 closed embedding $U\hookrightarrow W$의 쌍을 말한다. $M$은 이러한 chart들로 덮이고 각 chart는 affine space 안에 넣을 수 있으므로, local embedding은 항상 존재한다. 
 
-이제 vector bundle $F$가 cone $C$에 평행이동으로 작용할 때 그 quotient stack을 $[C/F]$로 적자. Deligne–Mumford stack $M$의 *local embedding*이란 affine scheme $U$에서의 étale morphism $U\rightarrow M$과 smooth affine scheme $W$로의 closed immersion $U\hookrightarrow W$의 쌍을 말한다. 두 local embedding $U\hookrightarrow W$, $U\hookrightarrow W'$이 주어지면 $U\hookrightarrow W\times W'$이 둘을 함께 지배하고 두 projection이 smooth이므로, [명제 3](#prop3){: data-lid="s6lja" }과 [명제 4](#prop4){: data-lid="zle0a" }에 의하여 $T_{W\times W'/W}$ 방향을 먼저 나누어
+우리가 하려는 것은 각 chart에서 아무 local embedding $U\hookrightarrow W$를 잡아 그 normal cone $C_{U/W}$를 생각한 뒤, 이를 ambient의 tangent 방향으로 나눈 quotient stack $[C_{U/W}/T_W\vert_U]$를 취하는 것이다. 같은 chart $U$의 두 local embedding $U\hookrightarrow W$, $U\hookrightarrow W'$이 주어지면 $U\hookrightarrow W\times W'$이 둘을 함께 지배하고 두 projection이 smooth이므로, [명제 3](#prop3){: data-lid="s6lja" }과 [명제 4](#prop4){: data-lid="zle0a" }에 의하여 $T_{W\times W'/W}$ 방향을 먼저 나누어
 
 $$[C_{U/W\times W'}/T_{W\times W'}\vert_U]\cong[C_{U/W}/T_W\vert_U]$$
 
-를 얻고, $W'$에 대해서도 같다. Normal sheaf에 대해서도 마찬가지이다. 즉 normal cone을 ambient의 tangent bundle로 나눈 quotient stack은 local embedding의 선택에 의존하지 않으며, 이들을 붙여 $M$ 위의 stack을 얻는다.
+를 얻고, $W'$에 대해서도 같으므로 잘 정의되며, 이는 normal sheaf에 대해서도 마찬가지이다. 따라서 이 quotient stack은 local embedding의 선택에 의존하지 않고 잘 정의되며, 이들을 붙이면 $M$ 위의 stack을 얻을 수 있다.
 
 ::: 정의 5
 Deligne–Mumford stack $M$의 *intrinsic normal sheaf* $\mathfrak{N}_M$과 *intrinsic normal cone* $\mathfrak{c}_M\subset\mathfrak{N}_M$은 모든 local embedding $U\hookrightarrow W$에 대하여
@@ -223,11 +223,17 @@ $$\mathfrak{N}_M\vert_U=[N_{U/W}/T_W\vert_U],\qquad\mathfrak{c}_M\vert_U=[C_{U/W
 가 되도록 붙여서 얻은 stack이다.
 :::
 
-Intrinsic normal sheaf는 cotangent complex만으로도 적을 수 있다. Stack $M$은 cotangent complex $\LL_M$을 가지며, 그 가운데 deformation과 obstruction이 잡히는 것은 truncation $\tau_{\geq-1}\LL_M$이다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" }) Local embedding $U\hookrightarrow W$에서 $U$의 ideal sheaf를 $\mathcal{I}$라 하면 이 truncation은
+[정의 5](#def5)에서 cone을 tangent 방향으로 나눈 것은 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 Kuranishi 그림과 같은 현상이다. 거기서 $\im(\dd{s}_x)$ 방향의 coordinate와 방정식이 짝지어 사라지고 $\dd{s}_x$의 kernel과 cokernel만 남았듯, local embedding을 바꿀 때 complex $[T_W\vert_U\rightarrow N_{U/W}]$의 두 항에 더해지는 방향도 서로 상쇄되어 ([명제 3](#prop3)) tangent와 obstruction만 남는다.
+
+이는 cotangent complex를 이용하여 다음과 같이 살펴볼 수도 있다. Stack $M$은 cotangent complex $\LL_M$을 가지며, 그 가운데 deformation과 obstruction이 잡히는 것은 truncation $\tau_{\geq-1}\LL_M$이다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" }) Local embedding $U\hookrightarrow W$에서 $U$의 ideal sheaf를 $\mathcal{I}$라 하면 이 truncation은
 
 $$\tau_{\geq-1}\LL_M\vert_U=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{\ }}\at{0}{\Omega_W\vert_U}\Bigr]$$
 
-이 된다. 한편 degree $0,1$에 놓인 abelian cone들의 complex $[G^0\rightarrow G^1]$에 대해 quotient stack $[G^1/G^0]$을 $h^1/h^0$으로 적으면, 이 stack은 complex의 quasi-isomorphism class에만 의존한다. 위 truncation의 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸면 그 dual은 $[T_W\vert_U\rightarrow N_{U/W}]$이므로, 이 의미의 dual을 $(-)^\vee$로 적으면 $\mathfrak{N}_M=h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$이다. $M$이 smooth이면 $W=M$으로 잡을 수 있으므로 $\mathfrak{c}_M=\mathfrak{N}_M=[0/T_M]=BT_M$이다. 더 일반적으로 $M$이 local complete intersection이면 normal cone이 normal bundle과 같으므로 $\mathfrak{c}_M=\mathfrak{N}_M$은 vector bundle stack이고, 역도 성립한다. 즉 $\mathfrak{c}_M$과 $\mathfrak{N}_M$의 차이는 $M$이 local complete intersection에서 벗어난 정도를 잰다.
+이 되고, 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸는 dual을 $(-)^\vee$로 적으면 $(\tau_{\geq-1}\LL_M)^\vee\vert_U=[T_W\vert_U\rightarrow N_{U/W}]$, 곧 위의 complex가 된다. 이 상황에서 $T_W\vert_U$는 이 map을 통해 $N_{U/W}$에 평행이동으로 작용하므로 quotient stack $[N_{U/W}/T_W\vert_U]$가 정의되고, 이를 $h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$로 적는다. 이 표기에 대하여 [정의 5](#def5)는
+
+$$\mathfrak{N}_M=h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$$
+
+를 준다. 여기에서 우변은 local embedding과 무관하게 적어진 식이며, 이것이 다시 $\mathfrak{N}_M$이 embedding의 선택에 의존하지 않는다는 것을 보여 준다.
 
 ::: 명제 6
 Intrinsic normal cone $\mathfrak{c}_M$은 pure dimension $0$이다.
@@ -237,7 +243,7 @@ Intrinsic normal cone $\mathfrak{c}_M$은 pure dimension $0$이다.
 Local embedding $U\hookrightarrow W$에서 $W$가 pure dimension이라 하자. Normal cone $C_{U/W}$는 pure dimension $\dim W$이고, quotient map $C_{U/W}\rightarrow[C_{U/W}/T_W\vert_U]$는 $T_W\vert_U$-torsor이므로 relative dimension $\dim W$의 smooth surjection이다. 따라서 $\mathfrak{c}_M\vert_U$의 차원은 $\dim W-\dim W=0$이다.
 :::
 
-$M$이 smooth인 경우를 보면 이 $0$은 $BT_M$의 차원 $\dim M-\dim M$이다. 즉 차원 $0$이라는 것은 $\mathfrak{c}_M$이 normal 방향을 tangent 방향만큼 나눈 것이라는 데에서 오며, 이 수가 아래에서 virtual dimension을 고정한다.
+$M$이 smooth이면 $W=M$으로 잡을 수 있으므로 $\mathfrak{c}_M=[0/T_M]=BT_M$이고, 이 $0$은 그 차원 $\dim M-\dim M$이다. 즉 차원 $0$이라는 것은 $\mathfrak{c}_M$이 normal 방향을 tangent 방향만큼 나눈 것이라는 데에서 오며, 이 수가 아래에서 virtual dimension을 고정한다.
 
 Intrinsic normal sheaf와 cone은 deformation theory의 의미도 갖는다. 점 $p\in M$ 근방의 local embedding을 $\mathcal{I}\subseteq\mathfrak{m}_p^2$가 되도록 잡으면 $p$에서 $T_W\vert_p\rightarrow N_{U/W}\vert_p$가 $0$이 되어, $\mathfrak{N}_M$의 $p$에서의 fiber는 벡터공간 $(\mathcal{I}/\mathfrak{m}_p\mathcal{I})^\vee$로 coarse하게 표현된다. 이는 $M$의 $p$에서의 obstruction space 가운데 가장 작은 것, 곧 universal obstruction space이며 ([BF, Lemma 4.6]), 그 모든 원소는 어떤 small extension의 obstruction으로 나타난다. 이 공간은 $\Ext^1(\LL_M\vert_p,k)$와 같다. Nakayama lemma에 의해 이 공간이 $0$인 것은 $p$ 근방에서 $\mathcal{I}=0$, 곧 $U=W$인 것과 동치이고, $\mathcal{I}\subseteq\mathfrak{m}_p^2$이므로 이는 $M$이 $p$에서 smooth한 것과 동치이다. 이 공간의 원소 가운데 curvilinear small extension, 곧 $p$를 지나는 jet $\Spec k[t]/(t^n)\rightarrow M$을 한 차수 늘리는 문제의 obstruction으로 나타나는 것은 정확히 $\mathfrak{c}_M$의 fiber의 원소들이다. ([BF, Proposition 4.7]) 즉 $\mathfrak{N}_M$이 가능한 obstruction 방향 전체라면, $\mathfrak{c}_M$은 $M$ 안의 곡선 조각을 늘리려 할 때 부딪히는 obstruction 방향들이다.
 
