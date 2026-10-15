@@ -24,7 +24,7 @@ published: false
 집합 $K\subseteq X$의 *open cover<sub>열린덮개</sub>*는 $X$의 열린집합들의 모임 $\mathcal{U}$로서 $K\subseteq\bigcup_{U\in\mathcal{U}}U$를 만족하는 것이다. $\mathcal{U}$의 부분모임이 여전히 $K$를 덮을 때 이를 *subcover*라 한다.
 
 ::: 정의 1
-$K\subseteq X$가 *compact*라는 것은 $K$의 모든 open cover가 유한 subcover를 가지는 것이다.
+$K\subseteq X$가 *compact<sub>콤팩트</sub>*라는 것은 $K$의 모든 open cover가 유한 subcover를 가지는 것이다.
 :::
 
 $K$ 자신을 거리공간으로 보아도 같은 개념이 된다. $K$의 열린집합은 $X$의 열린집합 $U$에 대한 $U\cap K$ 꼴이므로, $K$를 덮는 $X$의 열린집합들과 $K$를 덮는 $K$의 열린집합들이 서로 대응하기 때문이다. 따라서 compactness는 $K$가 어느 공간 안에 놓여 있는지에 의존하지 않는 성질이다.
@@ -40,7 +40,7 @@ $K\subseteq X$가 *sequentially compact*라는 것은 $K$의 점으로 이루어
 거리공간이 *complete*라는 것은 모든 Cauchy sequence가 수렴하는 것이다. 이에 더해 다음 조건이 필요하다.
 
 ::: 정의 3
-$K\subseteq X$가 *totally bounded*라는 것은 임의의 $\varepsilon>0$에 대해 $K$가 중심이 $K$에 있고 반지름이 $\varepsilon$인 유한개의 열린 공으로 덮이는 것이다.
+$K\subseteq X$가 *totally bounded<sub>완전유계(인)</sub>*라는 것은 임의의 $\varepsilon>0$에 대해 $K$가 중심이 $K$에 있고 반지름이 $\varepsilon$인 유한개의 열린 공으로 덮이는 것이다.
 :::
 
 Totally bounded이면 bounded이다. $\varepsilon=1$로 잡아 $K\subseteq B(c_1,1)\cup\cdots\cup B(c_k,1)$이라 하고 $R=\max_i d(c_1,c_i)+1$이라 두면, 삼각부등식에 의해 $K\subseteq B(c_1,R)$이다. 역은 성립하지 않는다. 아래 [예시 8](#ex8){: data-lid="7h2hg" }이 그 반례이다.

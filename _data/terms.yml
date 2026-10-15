@@ -1995,6 +1995,13 @@ C:
   defs:
   - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
+- id: cantor_intersection_theorem
+  en: Cantor intersection theorem
+  ko: Cantor 교집합 정리
+  primary: en
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
 - id: cap_product
   en: cap product
   ko: 교적
@@ -8508,6 +8515,13 @@ H:
   defs:
   - label: '[체론] §순수비분리확대체'
     url: /ko/math/field_theory/purely_inseparable_extensions
+- id: heine_borel_theorem
+  en: Heine–Borel theorem
+  ko: Heine–Borel 정리
+  primary: ko
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
 - id: hermitian_form
   en: Hermitian form
   ko: 에르미트 형식
@@ -11248,6 +11262,13 @@ L:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: lebesgue_number_lemma
+  en: Lebesgue number lemma
+  ko: Lebesgue 수 보조정리
+  primary: en
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness
 - id: lefschetz_decomposition
   en: Lefschetz decomposition
   ko: 레프셰츠 분해
@@ -18953,6 +18974,13 @@ S:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: subcover
+  en: subcover
+  ko: 부분덮개
+  primary: en
+  defs:
+  - label: '[위상수학] §옹골공간'
+    url: /ko/math/topology/compact_spaces
 - id: subextension
   en: subextension
   ko: 부분확장
@@ -19991,6 +20019,13 @@ T:
   defs:
   - label: '[해석학] §Riemann–Stieltjes 적분'
     url: /ko/math/analysis/riemann_stieltjes_integral#def11
+- id: totally_bounded
+  en: totally bounded
+  ko: 완전유계(인)
+  primary: en
+  defs:
+  - label: '[해석학] §컴팩트성'
+    url: /ko/math/analysis/compactness#def3
 - id: totally_disconnected
   en: totally disconnected
   ko: 전비연결
