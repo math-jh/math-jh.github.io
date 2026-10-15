@@ -6289,6 +6289,13 @@ E:
   defs:
   - label: '[대수다양체] §Hirzebruch-Riemann-Roch'
     url: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
+- id: excess_intersection_formula
+  en: excess intersection formula
+  ko: 잉여 교차 공식
+  primary: en
+  defs:
+  - label: '[대수다양체] §Hirzebruch-Riemann-Roch'
+    url: /ko/math/algebraic_varieties/hirzebruch_riemann_roch
 - id: excision_theorem
   en: excision theorem
   ko: 절제 정리
