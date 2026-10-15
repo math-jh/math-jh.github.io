@@ -16,7 +16,7 @@ drift_needed: true
 
 ---
 
-Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다. ([§Perfect obstruction theory, ⁋명제 11](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop11){: data-lid="4munh" })
+Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다. ([§Perfect obstruction theory, ⁋명제 12](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop12){: data-lid="4munh" })
 
 [\[대수다양체\] §교차곱](/ko/math/algebraic_varieties/intersection_product){: data-lid="8i3l7" }에서 우리는 두 class의 intersection product를 하는 법을 살펴보았으나, 우리 경우에는 대부분의 공간이 smooth가 아니므로 이것이 잘 정의되지 않는다. 만일 $S$가 smooth하고 두 map이 proper라면 우리는 그 대안으로 두 class를 $S$로 pushforward한 후 교차시킬 수 있겠지만, 그 결과는 $S$의 class이므로 우리가 원하는 결과가 아니다. 때문에 우리는 [\[스택\] §Deligne–Mumford 스택 위의 적분, §§곱공간과 대각선 교차](/ko/math/stacks/integration_on_deligne_mumford_stacks#곱공간과-대각선-교차){: data-lid="qj2hs" }에서 증명 없이 받아들인 refined Gysin pullback을 엄밀하게 정의해야 한다. 
 
@@ -382,7 +382,7 @@ $$\Delta_S^!\bigl([M_1]^\vir\times[M_2]^\vir\bigr)\in A_\ast(M_1\times_SM_2)$$
 
 가 fiber product 위의 기대 차원 class를 정의한다. 한쪽에는 virtual class를, 다른 쪽에는 ordinary fundamental class를 넣어도 된다. 다만 fiber product가 그 자체로 moduli라서 따로 perfect obstruction theory와 virtual class를 갖는 경우, 그 virtual class가 이 class와 같은지는 별개의 문제이다. 가령 두 stable map을 붙여 얻는 moduli의 virtual class가 두 virtual class의 이러한 교차와 같다는 비교에는 두 obstruction theory의 compatibility를 따로 확인해야 한다.
 
-이 compatibility는 [§Perfect obstruction theory, ⁋명제 14](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop14){: data-lid="04qsk" }에서 zero section에 대해 본 것과 같은 꼴의 조건이다. 앞의 국소 모형에서 $W'$은 $M_1\times M_2$ 위의 trivial bundle의 section $\sigma$의 zero locus이고 $\Delta_S^!$은 그 section에 대한 zero section의 Gysin map이므로, 국소적으로 이 비교는 그 명제의 상황이고 그 trivial bundle은 $W'$ 위에서 $f^\ast T_S$이다. $M_1$, $M_2$의 perfect obstruction theory $E_1^\bullet$, $E_2^\bullet$이 global resolution을 가지면 $M_1\times M_2$ 위의 $E_1^\bullet\boxplus E_2^\bullet=\pr_1^\ast E_1^\bullet\oplus\pr_2^\ast E_2^\bullet$도 global resolution을 갖는 perfect obstruction theory이고, 그 virtual class는 $[M_1]^\vir\times[M_2]^\vir$이다. 이제 $u:W'\rightarrow M_1\times M_2$를 자연스러운 morphism이라 하고, $W'$ 위의 perfect obstruction theory $E_{W'}^\bullet$이 global resolution을 가지며 distinguished triangle
+이 compatibility는 [§Perfect obstruction theory, ⁋명제 15](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop15){: data-lid="04qsk" }에서 zero section에 대해 본 것과 같은 꼴의 조건이다. 앞의 국소 모형에서 $W'$은 $M_1\times M_2$ 위의 trivial bundle의 section $\sigma$의 zero locus이고 $\Delta_S^!$은 그 section에 대한 zero section의 Gysin map이므로, 국소적으로 이 비교는 그 명제의 상황이고 그 trivial bundle은 $W'$ 위에서 $f^\ast T_S$이다. $M_1$, $M_2$의 perfect obstruction theory $E_1^\bullet$, $E_2^\bullet$이 global resolution을 가지면 $M_1\times M_2$ 위의 $E_1^\bullet\boxplus E_2^\bullet=\pr_1^\ast E_1^\bullet\oplus\pr_2^\ast E_2^\bullet$도 global resolution을 갖는 perfect obstruction theory이고, 그 virtual class는 $[M_1]^\vir\times[M_2]^\vir$이다. 이제 $u:W'\rightarrow M_1\times M_2$를 자연스러운 morphism이라 하고, $W'$ 위의 perfect obstruction theory $E_{W'}^\bullet$이 global resolution을 가지며 distinguished triangle
 
 $$u^\ast(E_1^\bullet\boxplus E_2^\bullet)\rightarrow E_{W'}^\bullet\rightarrow f^\ast\Omega_S[1]\rightarrow u^\ast(E_1^\bullet\boxplus E_2^\bullet)[1]$$
 
