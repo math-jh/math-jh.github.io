@@ -223,13 +223,13 @@ $$\mathfrak{N}_M\vert_U=[N_{U/W}/T_W\vert_U],\qquad\mathfrak{c}_M\vert_U=[C_{U/W
 가 되도록 붙여서 얻은 stack이다.
 :::
 
-[정의 5](#def5)에서 cone을 tangent 방향으로 나눈 것은 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)의 Kuranishi 그림과 같은 현상이다. 거기서 $\im(\dd{s}_x)$ 방향의 coordinate와 방정식이 짝지어 사라지고 $\dd{s}_x$의 kernel과 cokernel만 남았듯, local embedding을 바꿀 때 complex $[T_W\vert_U\rightarrow N_{U/W}]$의 두 항에 더해지는 방향도 서로 상쇄되어 ([명제 3](#prop3)) tangent와 obstruction만 남는다.
+[정의 5](#def5){: data-lid="6z7ze" }에서 cone을 tangent 방향으로 나눈 것은 [§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="kwjq5" }의 Kuranishi 그림과 같은 현상이다. 거기서 $\im(\dd{s}_x)$ 방향의 coordinate와 방정식이 짝지어 사라지고 $\dd{s}_x$의 kernel과 cokernel만 남았듯, local embedding을 바꿀 때 complex $[T_W\vert_U\rightarrow N_{U/W}]$의 두 항에 더해지는 방향도 서로 상쇄되어 ([명제 3](#prop3){: data-lid="kpude" }) tangent와 obstruction만 남는다.
 
 이는 cotangent complex를 이용하여 다음과 같이 살펴볼 수도 있다. Stack $M$은 cotangent complex $\LL_M$을 가지며, 그 가운데 deformation과 obstruction이 잡히는 것은 truncation $\tau_{\geq-1}\LL_M$이다. ([\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="0fpnl" }) Local embedding $U\hookrightarrow W$에서 $U$의 ideal sheaf를 $\mathcal{I}$라 하면 이 truncation은
 
 $$\tau_{\geq-1}\LL_M\vert_U=\Bigl[\at{-1}{\mathcal{I}/\mathcal{I}^2}\xrightarrow{\ \dd{\ }}\at{0}{\Omega_W\vert_U}\Bigr]$$
 
-이 되고, 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸는 dual을 $(-)^\vee$로 적으면 $(\tau_{\geq-1}\LL_M)^\vee\vert_U=[T_W\vert_U\rightarrow N_{U/W}]$, 곧 위의 complex가 된다. 이 상황에서 $T_W\vert_U$는 이 map을 통해 $N_{U/W}$에 평행이동으로 작용하므로 quotient stack $[N_{U/W}/T_W\vert_U]$가 정의되고, 이를 $h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$로 적는다. 이 표기에 대하여 [정의 5](#def5)는
+이 되고, 각 항을 abelian cone $\Spec_U\Sym(-)$로 바꾸는 dual을 $(-)^\vee$로 적으면 $(\tau_{\geq-1}\LL_M)^\vee\vert_U=[T_W\vert_U\rightarrow N_{U/W}]$, 곧 위의 complex가 된다. 이 상황에서 $T_W\vert_U$는 이 map을 통해 $N_{U/W}$에 평행이동으로 작용하므로 quotient stack $[N_{U/W}/T_W\vert_U]$가 정의되고, 이를 $h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$로 적는다. 이 표기에 대하여 [정의 5](#def5){: data-lid="6du8d" }는
 
 $$\mathfrak{N}_M=h^1/h^0((\tau_{\geq-1}\LL_M)^\vee)$$
 
@@ -278,7 +278,7 @@ $$\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$$
 
 $$\phi^\vee:\mathfrak{N}_M\rightarrow\mathfrak{E}=h^1/h^0((E^\bullet)^\vee)$$
 
-를 유도하며, 국소적으로 $E^\bullet=[E^{-1}\rightarrow E^0]$이면 $E_i=(E^{-i})^\vee$에 대하여 $\mathfrak{E}=[E_1/E_0]$이다. 앞의 모형에서는 $\phi^{-1}=s^\vee$이므로 $\phi^\vee$는 normal cone을 $E\vert_{Z(s)}$ 안에 넣던 map $N_{Z(s)/X}\rightarrow E\vert_{Z(s)}$를 tangent 방향으로 나눈 것이다. 즉 $\mathfrak{N}_M$이 진짜 normal 방향을 진짜 tangent 방향으로 나눈 것이라면, $\mathfrak{E}$는 perfect obstruction theory가 내놓은 obstruction bundle $E_1$을 $E_0$로 나눈 것으로, 같은 역할을 하되 vector bundle로 이루어진 쪽이다. [정의 7](#def7)의 두 조건은 바로 이 morphism이 $\mathfrak{N}_M$을, 따라서 $\mathfrak{c}_M$을 $\mathfrak{E}$ 안에 closed하게 넣는다는 것과 동치이며, 이것이 다음 정리이다. 이 정리는 [BF, Proposition 2.6]을 cotangent complex에 적용한 것으로, [BF, Theorem 4.5]의 일부이다.
+를 유도하며, 국소적으로 $E^\bullet=[E^{-1}\rightarrow E^0]$이면 $E_i=(E^{-i})^\vee$에 대하여 $\mathfrak{E}=[E_1/E_0]$이다. 앞의 모형에서는 $\phi^{-1}=s^\vee$이므로 $\phi^\vee$는 normal cone을 $E\vert_{Z(s)}$ 안에 넣던 map $N_{Z(s)/X}\rightarrow E\vert_{Z(s)}$를 tangent 방향으로 나눈 것이다. 즉 $\mathfrak{N}_M$이 진짜 normal 방향을 진짜 tangent 방향으로 나눈 것이라면, $\mathfrak{E}$는 perfect obstruction theory가 내놓은 obstruction bundle $E_1$을 $E_0$로 나눈 것으로, 같은 역할을 하되 vector bundle로 이루어진 쪽이다. [정의 7](#def7){: data-lid="nb0iz" }의 두 조건은 바로 이 morphism이 $\mathfrak{N}_M$을, 따라서 $\mathfrak{c}_M$을 $\mathfrak{E}$ 안에 closed하게 넣는다는 것과 동치이며, 이것이 다음 정리이다. 이 정리는 [BF, Proposition 2.6]을 cotangent complex에 적용한 것으로, [BF, Theorem 4.5]의 일부이다.
 
 ::: 정리 8 (Behrend–Fantechi)
 Deligne–Mumford stack $M$ 위에서 국소적으로 vector bundle 두 항의 complex와 quasi-isomorphic한 $E^\bullet$과 morphism $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$에 대하여 다음은 동치이다.
@@ -298,7 +298,7 @@ $$N_{U/W}=\Spec_U\Sym(\mathcal{I}/\mathcal{I}^2)\rightarrow\Spec_U\Sym(E^{-1})=E
 이 closed immersion이라는 것과 동치이다. 이 map은 양쪽에 작용하는 같은 vector bundle $E_0=T_W\vert_U$의 작용과 호환되므로, quotient로 내려 $\mathfrak{N}_M\vert_U\rightarrow\mathfrak{E}\vert_U$가 closed immersion이라는 것과 동치이다.
 :::
 
-이로부터 [정의 7](#def7){: data-lid="3zi1b" }의 두 조건을 점마다 읽을 수 있다. $h^0(\phi)$가 isomorphism이라는 것은 $E^\bullet$의 $0$차 항이 $M$의 deformation을 정확히 재현한다는 뜻이고, $h^{-1}(\phi)$가 surjection이라는 것은 $E^\bullet$의 $-1$차 항이 $M$의 obstruction을 <em-ko>빠짐없이</em-ko> 담는다는 뜻이다. 즉 $E^\bullet$ 쪽에 실제보다 많은 obstruction이 있는 것은 허용되지만 하나라도 빠뜨리는 것은 허용되지 않는다. 실제로 점 $p$에서 보면 $\phi^\vee$는 $M$의 $p$에서의 obstruction space $h^1((\tau_{\geq-1}\LL_M)^\vee\vert_p)$에서 $\phi$의 obstruction space $h^1((E^\bullet)^\vee\vert_p)$로 가는 injective map을 주므로, 어떤 perfect obstruction theory의 obstruction space도 $M$ 자신의 obstruction space를 포함한다. 특히 이 절의 처음에 $Z(s)\hookrightarrow X$로부터 만든 morphism $E^\bullet\rightarrow\tau_{\geq-1}\LL_{Z(s)}$는 degree $0$에서 $\Omega_X\vert_{Z(s)}$의 identity이고 degree $-1$에서 surjection $s^\vee$이므로, [정리 8](#thm8)의 증명에서 본 것처럼 실제로 perfect obstruction theory이다.
+이로부터 [정의 7](#def7){: data-lid="3zi1b" }의 두 조건을 점마다 읽을 수 있다. $h^0(\phi)$가 isomorphism이라는 것은 $E^\bullet$의 $0$차 항이 $M$의 deformation을 정확히 재현한다는 뜻이고, $h^{-1}(\phi)$가 surjection이라는 것은 $E^\bullet$의 $-1$차 항이 $M$의 obstruction을 <em-ko>빠짐없이</em-ko> 담는다는 뜻이다. 즉 $E^\bullet$ 쪽에 실제보다 많은 obstruction이 있는 것은 허용되지만 하나라도 빠뜨리는 것은 허용되지 않는다. 실제로 점 $p$에서 보면 $\phi^\vee$는 $M$의 $p$에서의 obstruction space $h^1((\tau_{\geq-1}\LL_M)^\vee\vert_p)$에서 $\phi$의 obstruction space $h^1((E^\bullet)^\vee\vert_p)$로 가는 injective map을 주므로, 어떤 perfect obstruction theory의 obstruction space도 $M$ 자신의 obstruction space를 포함한다. 특히 이 절의 처음에 $Z(s)\hookrightarrow X$로부터 만든 morphism $E^\bullet\rightarrow\tau_{\geq-1}\LL_{Z(s)}$는 degree $0$에서 $\Omega_X\vert_{Z(s)}$의 identity이고 degree $-1$에서 surjection $s^\vee$이므로, [정리 8](#thm8){: data-lid="y9tij" }의 증명에서 본 것처럼 실제로 perfect obstruction theory이다.
 
 Perfect obstruction theory는 $M$만으로 정해지는 것이 아니라 $M$ 위에 추가로 주어지는 자료이며, 같은 $M$ 위에도 서로 다른 perfect obstruction theory가 있을 수 있다. 앞으로 정의할 virtual class는 이 선택에 의존한다.
 
@@ -322,7 +322,7 @@ $$\mathfrak{c}_M\subset\mathfrak{N}_M\hookrightarrow\mathfrak{E}$$
 
 다만 $\mathfrak{E}$는 국소적으로 $[E_1/E_0]$, 곧 vector bundle $E_1$을 vector bundle $E_0$의 평행이동으로 나눈 것이므로, 각 점이 $E_0\rightarrow E_1$의 kernel이라는 벡터공간만큼의 automorphism을 갖는 Artin stack이다. 따라서 그 안에서 zero section으로 자르려면 Artin stack의 Chow group과 그 위의 Gysin map이 필요하다. 이를 피하기 위해 [BF]는 $E^\bullet$이 *global resolution*, 곧 전역적인 vector bundle들의 complex $F^\bullet=[F^{-1}\rightarrow F^0]$과의 isomorphism $F^\bullet\cong E^\bullet$을 갖는다고 가정한다. 이 때 $F_i=(F^{-i})^\vee$로 두면 $\mathfrak{E}=[F_1/F_0]$이고, quotient map $F_1\rightarrow\mathfrak{E}$는 fiber가 $F_0$인 smooth surjection이다. 따라서 $\mathfrak{c}_M$을 이 map으로 당기면 $M$ 위의 실제 vector bundle $F_1$ 안의 cone을 얻고, 이를 자르는 것은 Deligne–Mumford stack $M$ 위의 보통의 Gysin map으로 할 수 있다.
 
-즉 [§§벡터다발의 zero locus](#벡터다발의-zero-locus)에서 normal cone $C_{Z/X}$가 하던 역할을 일반적인 $M$에서는 $\mathfrak{c}_M$이 하고, 이를 $F_1$로 끌어올리면 그 교차를 실제로 계산할 수 있다. 국소 모형에서는 $F_0=T_X\vert_Z$, $F_1=E\vert_Z$로 잡을 수 있고 $\mathfrak{c}_Z=[C_{Z/X}/T_X\vert_Z]$를 $E\vert_Z$로 끌어올린 것은 $C_{Z/X}$ 자신이므로, 이는 localized Euler class를 정의할 때 [예시 2](#ex2){: data-lid="nhbvj" }에서 한 일과 정확히 같다. 따라서 다음과 같이 정의하는 것이 자연스럽다.
+즉 [§§벡터다발의 zero locus](#벡터다발의-zero-locus){: data-lid="8efcp" }에서 normal cone $C_{Z/X}$가 하던 역할을 일반적인 $M$에서는 $\mathfrak{c}_M$이 하고, 이를 $F_1$로 끌어올리면 그 교차를 실제로 계산할 수 있다. 국소 모형에서는 $F_0=T_X\vert_Z$, $F_1=E\vert_Z$로 잡을 수 있고 $\mathfrak{c}_Z=[C_{Z/X}/T_X\vert_Z]$를 $E\vert_Z$로 끌어올린 것은 $C_{Z/X}$ 자신이므로, 이는 localized Euler class를 정의할 때 [예시 2](#ex2){: data-lid="nhbvj" }에서 한 일과 정확히 같다. 따라서 다음과 같이 정의하는 것이 자연스럽다.
 
 ::: 정의 10
 Deligne–Mumford stack $M$ 위의 perfect obstruction theory $E^\bullet$이 global resolution $F^\bullet$을 갖는다 하자. Fiber product
@@ -345,7 +345,7 @@ $$\dim[M]^\vir=\rank F_0-\rank F_1=\rank E^\bullet=\vdim$$
 이 정의에서 $\mathfrak{c}_M$은 $M$만으로 정해지므로, virtual class를 정하는 것은 $\mathfrak{c}_M$ 자체가 아니라 $\mathfrak{c}_M$이 $\mathfrak{E}$ 안에 놓이는 방식이고, 그것은 $\phi$가 정한다.
 
 ::: 예시 11
-[예시 9](#ex9)의 두 perfect obstruction theory가 주는 virtual class를 계산하자. 위에서 본 것처럼 이들은 각각의 localized Euler class이다. $L$은 Cartier divisor이므로 normal cone은 두 경우 모두 같은 line bundle $N_{L/\mathbb{P}^2}=\mathcal{O}_L(1)$이고, 달라지는 것은 이 cone이 들어가는 곳이다. 각각 $E\vert_L$과 $E'\vert_L$ 안에 $\mathcal{I}/\mathcal{I}^2=\mathcal{O}_L(-1)$로 가는 map의 dual을 통해 놓이며, 첫째 경우에는 $E^\vee$의 두 basis가 모두 $\x$로 가므로 이 embedding은
+[예시 9](#ex9){: data-lid="thqsa" }의 두 perfect obstruction theory가 주는 virtual class를 계산하자. 위에서 본 것처럼 이들은 각각의 localized Euler class이다. $L$은 Cartier divisor이므로 normal cone은 두 경우 모두 같은 line bundle $N_{L/\mathbb{P}^2}=\mathcal{O}_L(1)$이고, 달라지는 것은 이 cone이 들어가는 곳이다. 각각 $E\vert_L$과 $E'\vert_L$ 안에 $\mathcal{I}/\mathcal{I}^2=\mathcal{O}_L(-1)$로 가는 map의 dual을 통해 놓이며, 첫째 경우에는 $E^\vee$의 두 basis가 모두 $\x$로 가므로 이 embedding은
 
 $$N_{L/\mathbb{P}^2}\xrightarrow{(1,1)}\mathcal{O}_L(1)^{\oplus2}$$
 
@@ -355,7 +355,7 @@ $$N_{L/\mathbb{P}^2}\xrightarrow{(1,0)}\mathcal{O}_L(1)\oplus\mathcal{O}_L(2)$$
 
 이다. 둘 다 subbundle이므로 zero section으로 자르면 quotient line bundle의 $c_1$이 남고, 그 degree는 각각 $\deg\mathcal{O}_L(1)=1$과 $\deg\mathcal{O}_L(2)=2$이다. 이는 $c_2(E)=H^2$, $c_2(E')=2H^2$과도 맞는다. 즉 같은 scheme $L$ 위의 두 perfect obstruction theory는 같은 차원의 서로 다른 virtual class를 준다.
 
-[예시 1](#ex1)의 $\mathbb{P}^2$에서도 같은 일이 일어난다. Smooth한 $\mathbb{P}^2$에 $\Omega_{\mathbb{P}^2}$ 자신을 perfect obstruction theory로 주면 $F_1=0$이므로 $C(F^\bullet)=\mathbb{P}^2$이고 virtual class는 $[\mathbb{P}^2]$이지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다.
+[예시 1](#ex1){: data-lid="7uho0" }의 $\mathbb{P}^2$에서도 같은 일이 일어난다. Smooth한 $\mathbb{P}^2$에 $\Omega_{\mathbb{P}^2}$ 자신을 perfect obstruction theory로 주면 $F_1=0$이므로 $C(F^\bullet)=\mathbb{P}^2$이고 virtual class는 $[\mathbb{P}^2]$이지만, $\mathcal{O}(1)^{\oplus2}$의 zero section $s\equiv0$으로 본 perfect obstruction theory는 차원이 $2$ 작은 point class를 준다.
 :::
 
 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다. 그럼 다음은 perfect obstruction theory와 그것이 정하는 virtual class의 성질이다. 
