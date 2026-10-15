@@ -124,15 +124,23 @@ $$A_1(P\cap L)\rightarrow A_1(P)\oplus A_1(L)\rightarrow A_1(Z)\rightarrow0$$
 
 에 의하여 $A_1(Z)\cong A_1(P)\oplus A_1(L)\cong\mathbb{Z}^2$임을 계산할 수 있다. 즉 $e(E,s)\in A_1(Z)$는 두 성분에서의 degree의 쌍 $(a,b)$로 결정되며 $a+b=4$이다.
 
-이제 이 class를 직접 구하자. Normal cone $C=C_{Z/X}$은 $E\vert_Z$ 안의 pure dimension $3$의 closed subcone이다. 우리 주장은 이 cone이 두 개의 component로 이루어져 있다는 것으로, 이 성분들의 support는 각각 $P$와 $L$이 된다. 
+이제 이 class를 직접 구하자. Normal cone $C=C_{Z/X}$은 $E\vert_Z$ 안의 pure dimension $3$의 closed subcone이다. 또, 위에서 살펴본 것과 같이 cone의 각 성분의 support는 expected dimension $1$보다 크므로, support가 $\{p\}$인 부분은 없으며 따라서 $C$의 각 성분은 $Z\setminus\{p\}$ 위에서 계산한 후 closure를 취하면 얻어진다. 
 
-이를 보기 위해 우선 교점 $p$를 빼고 보자. 위에서 본 대로 cone의 성분의 support는 $1$차원 이상이므로 support가 $\{p\}$인 성분은 없고, 따라서 $C$의 각 성분은 $Z\setminus\{p\}$ 위의 부분의 closure이다. 그런데 $Z\setminus\{p\}$에서는 $Z$가 국소적으로 $P$나 $L$ 하나뿐이어서 cone을 바로 계산할 수 있다. $L\setminus\{p\}$ 근방에서는 $\x_0$이 unit이므로 ideal이 $(\x_1,\x_2)$가 되어 $Z$는 codimension $2$의 complete intersection이고, 그곳의 normal cone은 $E\vert_L$ 전체이다. 반면 $P\setminus\{p\}$ 근방에서는 $\x_1,\x_2$ 중 하나가 unit이므로 ideal이 $(\x_0)$이 되어 $Z$는 Cartier divisor $P$이고, normal cone은 line bundle $N_{P/X}=\mathcal{O}_P(1)$이다. 이것이 $E\vert_P$ 안에 놓이는 방식은 $E^\vee\vert_P=\mathcal{O}_P(-2)^{\oplus2}\rightarrow\mathcal{I}_P/\mathcal{I}_P^2=\mathcal{O}_P(-1)$에서 읽을 수 있는데, 두 기저가 각각 $\x_0\x_1=\x_1\cdot\x_0$과 $\x_0\x_2=\x_2\cdot\x_0$으로 가므로 이 map은 $(\x_1,\x_2)$이고, 그 dual
+우선 $L\setminus\{p\}$를 보면, 이 위에서 $\x_0$은 unit이므로 이를 정의하는 ideal은 $(\x_1,\x_2)$가 되며, 이는 codimension 2 complete intersection이므로 normal cone이 곧 normal bundle이 되며 그 rank는 $2$이다. 그런데 $E$의 rank 또한 $2$이므로, $E\vert_L$ 전체가 normal cone이 되어야 한다. 
+
+비슷하게 $P\setminus\{p\}$ 근방에서는 $\x_1,\x_2$ 중 하나가 unit이므로 ideal이 $(\x_0)$이 되며, 이는 방정식 하나로 잘린 Cartier divisor이다. 이러한 상황에서 normal cone은 항상 $N_{D/X}=\mathcal{O}_X(D)\vert_D$로 주어지므로 우리 상황에서 이는 line bundle $N_{P/X}=\mathcal{O}_P(1)$이다. 
+
+이 line bundle이 $E\vert_P$ 안에 어떻게 놓이는지는 $s$를 $P$의 방정식 $\x_0$으로 나누어 보면 알 수 있다. $s=\x_0\cdot(\x_1,\x_2)$이므로 $P$ 바깥에서 $s$의 값은 $(\x_1,\x_2)$ 방향을 향하고, 따라서 $P\setminus\{p\}$의 각 점 $x$에서 cone의 fiber는 $E_x$ 안에서 $(\x_1(x),\x_2(x))$가 생성하는 직선이다. 이를 식으로 적으면, 
+
+$$E^\vee\vert_P=\mathcal{O}_P(-2)^{\oplus2}\rightarrow\mathcal{I}_P/\mathcal{I}_P^2=\mathcal{O}_P(-1)$$
+
+은 $E^\vee$의 두 기저를 $\x_0\x_1=\x_1\cdot\x_0$과 $\x_0\x_2=\x_2\cdot\x_0$으로 보내므로 $(\x_1,\x_2)$를 곱하는 map이고, 그 dual
 
 $$N_{P/X}=\mathcal{O}_P(1)\xrightarrow{(\x_1,\x_2)}\mathcal{O}_P(2)^{\oplus2}=E\vert_P$$
 
-가 그 embedding이다. 즉 $P\setminus\{p\}$의 각 점 $x$에서 cone의 fiber는 $E_x$ 안의 $(\x_1(x):\x_2(x))$ 방향의 직선이다.
+가 cone을 $E\vert_P$ 안에 넣는 embedding이다.
 
-이제 closure를 취하자. Support가 $L$인 성분은 이미 $L$ 전체 위의 bundle이므로 그대로 $C_L=E\vert_L$이다. 반면 support가 $P$인 성분 $C_P$는 $P\setminus\{p\}$ 위의 이 line subbundle의 closure인데, 위의 map은 $p$에서 $0$이 되므로 closure는 $p$ 위에서 새로운 점들을 얻는다. $p$ 근처에서 $P$의 coordinate를 $(\x_1,\x_2)$로 보면 점 $x$에서의 직선의 방향 $(\x_1(x):\x_2(x))$는 곧 $x$가 $p$로 다가가는 방향이므로, 그 극한들은 $E_p$의 모든 직선을 훑는다. 따라서 $C_P$는 $p$ 위에서 fiber $E_p$ 전체를 포함하고, $E\vert_P$의 subbundle이 아니다. 또 두 성분은 각각 $P\setminus\{p\}$와 $L\setminus\{p\}$ 위에서 reduced한 vector bundle이므로 multiplicity $1$로 나타나고, $[C]=[C_P]+[C_L]$이다.
+이제 이렇게 구한 각 성분에 closure를 취하자. Support가 $L$인 성분은 이미 $L$ 전체 위의 bundle이므로 그대로 $C_L=E\vert_L$이다. 반면 support가 $P$인 성분 $C_P$는 $P\setminus\{p\}$ 위의 이 line subbundle의 closure인데, 위의 map은 $p$에서 $0$이 되므로 closure는 $p$ 위에서 새로운 점들을 얻는다. $p$ 근처에서 $P$의 coordinate를 $(\x_1,\x_2)$로 보면 점 $x$에서의 직선의 방향 $(\x_1(x):\x_2(x))$는 곧 $x$가 $p$로 다가가는 방향이므로, 그 극한들은 $E_p$의 모든 직선을 훑는다. 따라서 $C_P$는 $p$ 위에서 fiber $E_p$ 전체를 포함하고, $E\vert_P$의 subbundle이 아니다. 또 두 성분은 각각 $P\setminus\{p\}$와 $L\setminus\{p\}$ 위에서 reduced한 vector bundle이므로 multiplicity $1$로 나타나고, $[C]=[C_P]+[C_L]$이다.
 
 $C_L$은 vector bundle $E\vert_L$ 자신이므로 zero section으로 자르면 $0^![C_L]=[L]$이다. $C_P$의 기여를 계산하기 위해 $P$를 $p$에서 blowup한 $\pi:\widetilde{P}\rightarrow P$와 그 exceptional divisor $e$를 잡자. $\x_1,\x_2$는 $p$의 ideal을 생성하므로 $\pi^\ast(\x_1,\x_2)$는 $e$를 따라 정확히 한 번 사라지고, 따라서 위의 map은 $\pi$로 당긴 뒤 line subbundle
 
