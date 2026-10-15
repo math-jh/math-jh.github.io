@@ -109,7 +109,9 @@ $$e(E,s)=0_E^![C_{Z/X}]\in A_{\dim X-r}(Z)$$
 
 가령 [예시 1](#ex1){: data-lid="qn2a2" }의 상황에서 $s=(\ell_1,0)$인 경우를 보자. 그럼 이것이 정의하는 locus는 직선 $Z(s)=\{\ell_1=0\}$이다. $Z(s)$ 바깥에서는 $\ell_1=0$ 조건이 사라지므로 $s$의 첫째 성분은 값을 가지게 될 수 있지만, 둘째 성분은 항등적으로 $0$이므로 여전히 $0$이다. 이 상황에서 cone은 $E\vert_{Z(s)}=\mathcal{O}_{Z(s)}(1)^{\oplus2}$의 첫째 성분이므로, zero section과의 교차는 첫째 성분 방향으로는 아무것도 깎지 않고 둘째 성분 $\mathcal{O}_{Z(s)}(1)$ 방향에서만 $Z(s)$를 깎는다. 즉 이 교차는 둘째 성분의 zero section으로 $Z(s)$를 자른 것과 같고, 따라서 $e(E,s)=c_1(\mathcal{O}_{Z(s)}(1))\cap[Z(s)]$이다. $Z(s)\cong\mathbb{P}^1$이므로 이는 degree $1$의 point class이다.
 
-일반적으로 cone이 $E\vert_Z$의 subbundle이면 같은 이유로 $e(E,s)$는 그 quotient bundle의 top Chern class를 $[Z]$에 cap한 것이고, 이 quotient를 *excess bundle*이라 부른다. $Z$가 local complete intersection인 곳에서는 $\mathcal{I}/\mathcal{I}^2$이 locally free이므로 cone이 normal bundle $N_{Z/X}$이고 항상 이 경우에 해당하며, [예시 1](#ex1){: data-lid="tis96" }의 $s\equiv0$과 transversal한 $s$가 그 양 극단이다. 전자에서는 cone이 zero section이어서 quotient가 $E$ 전체이므로 $e(E,s)=e(E)\cap[\mathbb{P}^2]$이고, 후자에서는 cone이 $E\vert_Z$ 전체여서 quotient가 $0$이므로 $e(E,s)=[Z]$이다. 이 공식은 성분들이 만나거나 local complete intersection이 아닌 점에서는 보정이 필요하다. 이때 cone의 성분 하나를 $Z$로 내린 image의 closure, 즉 그 성분의 support를 $W$라 하면, 그 성분의 차원 $\dim X$는 $\dim W$와 fiber의 차원 $r$의 합을 넘을 수 없으므로 $\dim W\geq\dim X-r$이어야 한다. 즉 cone의 각 성분의 support는 기대 차원 이상의 subvariety이며, $Z$의 성분이 아니어도 된다. 또 $Z$가 local complete intersection이 아닌 점에서는 normal bundle의 closure가 subbundle이 되지 못할 수 있다. 다음은 normal cone이 zero section도 bundle 전체도 아니며 subbundle조차 아닌 예이다.
+일반적으로 cone이 $E\vert_Z$의 subbundle $N_{Z/X}$인 경우, $e(E,s)$는 *excess bundle* $E\vert_Z/N_{Z/X}$의 top Chern class를 $[Z]$에 cap한 것으로 주어진다. $Z$가 local complete intersection인 곳에서는 $\mathcal{I}/\mathcal{I}^2$이 locally free이므로 cone이 normal bundle $N_{Z/X}$이고 항상 이 경우에 해당하며, [예시 1](#ex1){: data-lid="tis96" }의 $s\equiv0$과 transversal한 $s$가 그 양 극단이다. 전자에서는 cone이 zero section이어서 quotient가 $E$ 전체이므로 $e(E,s)=e(E)\cap[\mathbb{P}^2]$이고, 후자에서는 cone이 $E\vert_Z$ 전체여서 quotient가 $0$이므로 $e(E,s)=[Z]$이다. 
+
+이 공식은 성분들이 만나거나 local complete intersection이 아닌 점에서는 보정이 필요하다. 이때 cone의 성분 하나를 $Z$로 내린 image의 closure, 즉 그 성분의 support를 $W$라 하면, 그 성분의 차원 $\dim X$는 $\dim W$와 fiber의 차원 $r$의 합을 넘을 수 없으므로 $\dim W\geq\dim X-r$이어야 한다. 즉 cone의 각 성분의 support는 기대 차원 이상의 subvariety이며, $Z$의 성분이 아니어도 된다. 또 $Z$가 local complete intersection이 아닌 점에서는 normal bundle의 closure가 subbundle이 되지 못할 수 있다. 다음은 normal cone이 zero section도 bundle 전체도 아니며 subbundle조차 아닌 예로, 이 경우에도 cone을 성분별로 나누어 각 성분을 zero section으로 자르면 $e(E,s)$를 계산할 수 있음을 보여 준다.
 
 ::: 예시 2
 $X=\mathbb{P}^3$ 위의 $E=\mathcal{O}(2)^{\oplus2}$와 section $s=(\x_0\x_1,\x_0\x_2)$를 생각하자. 그럼 그 zero locus $Z=Z(s)$는 평면 $P=\{\x_0=0\}$과 직선 $L=\{\x_1=\x_2=0\}$의 합집합이고 둘은 한 점 $p=[0:0:0:1]$에서 만난다. 기대 차원은 $3-2=1$이고, localized Euler class $e(E,s)$를 $X$로 보낸 class는
@@ -162,18 +164,18 @@ $C_L$은 vector bundle $E\vert_L$ 자신이므로 zero section으로 자르면 $
 
 $$\varphi:E\vert_P=\mathcal{O}_P(2)^{\oplus2}\rightarrow\mathcal{O}_P(3);\qquad(v_1,v_2)\mapsto\x_2v_1-\x_1v_2$$
 
-의 kernel로 생각할 수 있으며, 이 때 $x\neq p$에서는 $(\x_2(x),-\x_1(x))\neq0$이므로 $\varphi_x$의 kernel은 $(\x_1(x),\x_2(x))$가 생성하는 직선이고, $x=p$에서는 $\varphi_p=0$이므로 kernel은 $E_p$ 전체이다. 이를 $E\vert_P$의 total space와 그 projection $\pi:E\vert_P\rightarrow P$로 말하자. Total space의 점은 $x\in P$와 $v\in E_x$의 쌍 $(x,v)$이고, 이 점에서 line bundle $\pi^\ast\mathcal{O}_P(3)$의 fiber는 $\mathcal{O}_P(3)_x$이다. 그런데 $\varphi_x(v)$는 바로 이 fiber의 원소이므로, $(x,v)\mapsto\varphi_x(v)$는 total space의 각 점에 $\pi^\ast\mathcal{O}_P(3)$의 fiber의 원소를 하나씩 주는 section이다. 그 zero locus는 각 $x$에서 $\ker\varphi_x$를 모은 것, 곧 $C_P$이므로 $C_P$는 total space 안의 Cartier divisor이다. Line bundle의 section이 정하는 Cartier divisor의 class는 그 line bundle의 $c_1$을 cap한 것이고 $c_1$은 flat pullback과 교환하므로
+의 kernel로 생각할 수 있으며, 이 때 $x\neq p$에서는 $(\x_2(x),-\x_1(x))\neq0$이므로 $\varphi_x$의 kernel은 $(\x_1(x),\x_2(x))$가 생성하는 직선이고, $x=p$에서는 $\varphi_p=0$이므로 kernel은 $E_p$ 전체이다. 이 데이터는 $E\vert_P$의 total space와 그 projection $\pi:E\vert_P\rightarrow P$를 사용하면, $\varphi$는 $E\vert_P$ 위의 line bundle $\pi^\ast \mathcal{O}_P(3)$의 section으로 생각할 수 있으며 이 section의 zero locus가 바로 $C_P$가 된다. 따라서 이는 total space 안의 Cartier divisor이며, 그 class는 line bundle의 $c_1$과 cap하여 다음의 식 
 
 $$[C_P]=c_1(\pi^\ast\mathcal{O}_P(3))\cap[E\vert_P]=\pi^\ast(3H\cap[P])$$
 
-이고, zero section의 Gysin map은 flat pullback $\pi^\ast$의 역이므로 $0^![C_P]=3H\cap[P]$이다. 따라서 $P$ 안의 직선을 $\ell$이라 하면
+과 같이 계산할 수 있다. 여기서 $c_1$은 flat pullback과 commute한다는 사실을 사용하였다. 이 때, zero section의 Gysin map은 flat pullback $\pi^\ast$의 역이므로 $0^![C_P]=3H\cap[P]$을 얻고, 따라서 $P$ 안의 직선을 $\ell$이라 하면
 
 $$e(E,s)=3[\ell]+[L]\in A_1(Z)$$
 
-이고, 곧 $(a,b)=(3,1)$이다.
+임을 안다. 
 :::
 
-기대 차원의 성분 $L$은 자기 자신 $[L]$만을 기여하고, 나머지 $3$은 기대보다 한 차원 큰 평면 $P$가 기여한다. 평면의 기여는 excess bundle $E\vert_P/N_{P/X}$의 $c_1$, 곧 $4H-H$이다. 실제로 sequence $0\rightarrow\mathcal{O}_P(1)\rightarrow\mathcal{O}_P(2)^{\oplus2}\xrightarrow{\varphi}\mathcal{O}_P(3)\rightarrow0$은 $P\setminus\{p\}$에서 exact이므로 그곳에서 $\mathcal{O}_P(3)$은 excess bundle 그 자체이고, $N_{P/X}\rightarrow E\vert_P$가 subbundle이 되지 못하는 점 $p$에서도 $\varphi$는 정의되어 있어 $C_P$를 그 kernel로 잘라낸다. 또 $p$는 이 class에 보정을 줄 수 없다. $A_1(\{p\})=0$이므로 $A_1(P)\rightarrow A_1(P\setminus\{p\})$가 isomorphism이고, 따라서 $0^![C_P]$는 $P\setminus\{p\}$ 위의 값으로 결정되기 때문이다. 특히 $c_2(E)\cap[\mathbb{P}^3]$은 총합 $4$만을 알지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 기억한다. 이 예시에서는 $A_1(Z)$가 성분별로 갈라지므로 이 분해가 class 자체의 정보이지만, 일반적으로는 normal cone의 성분별 기여가 $A_\ast(Z(s))$의 canonical한 분해를 주지는 않는다.
+$c_2(E)\cap[\mathbb{P}^3]$은 총 degree가 $4$라는 것만을 알려주지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 알려준다. 이 중 $1$은 기대 차원의 성분 $L$이 자기 자신 $[L]$로 기여한 것이고, $3$은 기대보다 한 차원 큰 평면 $P$에서 온 것이다. 이 $3$은 $P\setminus\{p\}$ 위의 excess bundle $E\vert_P/N_{P/X}\cong\mathcal{O}_P(3)$의 $c_1$, 곧 $4H-H$이다.
 
 ## Intrinsic normal cone
 
