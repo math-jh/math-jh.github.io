@@ -124,40 +124,56 @@ $$A_1(P\cap L)\rightarrow A_1(P)\oplus A_1(L)\rightarrow A_1(Z)\rightarrow0$$
 
 에 의하여 $A_1(Z)\cong A_1(P)\oplus A_1(L)\cong\mathbb{Z}^2$임을 계산할 수 있다. 즉 $e(E,s)\in A_1(Z)$는 두 성분에서의 degree의 쌍 $(a,b)$로 결정되며 $a+b=4$이다.
 
-이제 이 class를 직접 구하자. Normal cone $C=C_{Z/X}$은 $E\vert_Z$ 안의 pure dimension $3$의 closed subcone이다. 또, 위에서 살펴본 것과 같이 cone의 각 성분의 support는 expected dimension $1$보다 크므로, support가 $\{p\}$인 부분은 없으며 따라서 $C$의 각 성분은 $Z\setminus\{p\}$ 위에서 계산한 후 closure를 취하면 얻어진다. 
+이제 이 class를 직접 구하자. Normal cone $C=C_{Z/X}$은 $E\vert_Z$ 안의 pure dimension $3$의 closed subcone이다. 또, 위에서 살펴본 것과 같이 cone의 각 성분의 support는 expected dimension $1$ 이상이므로, support가 $\{p\}$인 부분은 없으며 따라서 $C$의 각 성분은 $Z\setminus\{p\}$ 위에서 계산한 후 closure를 취하면 얻어진다. 
 
 우선 $L\setminus\{p\}$를 보면, 이 위에서 $\x_0$은 unit이므로 이를 정의하는 ideal은 $(\x_1,\x_2)$가 되며, 이는 codimension 2 complete intersection이므로 normal cone이 곧 normal bundle이 되며 그 rank는 $2$이다. 그런데 $E$의 rank 또한 $2$이므로, $E\vert_L$ 전체가 normal cone이 되어야 한다. 
 
-비슷하게 $P\setminus\{p\}$ 근방에서는 $\x_1,\x_2$ 중 하나가 unit이므로 ideal이 $(\x_0)$이 되며, 이는 방정식 하나로 잘린 Cartier divisor이다. 이러한 상황에서 normal cone은 항상 $N_{D/X}=\mathcal{O}_X(D)\vert_D$로 주어지므로 우리 상황에서 이는 line bundle $N_{P/X}=\mathcal{O}_P(1)$이다. 
+비슷하게 $P\setminus\{p\}$ 근방에서는 $\x_1,\x_2$ 중 하나가 unit이므로 ideal이 $(\x_0)$이 되며, 이는 방정식 하나로 잘린 Cartier divisor이다. 일반적으로 Cartier divisor $D$의 normal cone은 항상 $N_{D/X}=\mathcal{O}_X(D)\vert_D$로 주어지므로 우리 상황에서 이는 line bundle $N_{P/X}=\mathcal{O}_P(1)$이다. 
 
 이 line bundle이 $E\vert_P$ 안에 어떻게 놓이는지는 $s$를 $P$의 방정식 $\x_0$으로 나누어 보면 알 수 있다. $s=\x_0\cdot(\x_1,\x_2)$이므로 $P$ 바깥에서 $s$의 값은 $(\x_1,\x_2)$ 방향을 향하고, 따라서 $P\setminus\{p\}$의 각 점 $x$에서 cone의 fiber는 $E_x$ 안에서 $(\x_1(x),\x_2(x))$가 생성하는 직선이다. 이를 식으로 적으면, 
 
 $$E^\vee\vert_P=\mathcal{O}_P(-2)^{\oplus2}\rightarrow\mathcal{I}_P/\mathcal{I}_P^2=\mathcal{O}_P(-1)$$
 
-은 $E^\vee$의 두 기저를 $\x_0\x_1=\x_1\cdot\x_0$과 $\x_0\x_2=\x_2\cdot\x_0$으로 보내므로 $(\x_1,\x_2)$를 곱하는 map이고, 그 dual
+은 $E^\vee$의 두 basis를 $\x_0\x_1=\x_1\cdot\x_0$과 $\x_0\x_2=\x_2\cdot\x_0$으로 보내므로 $(\x_1,\x_2)$를 곱하는 map이고, 그 dual
 
 $$N_{P/X}=\mathcal{O}_P(1)\xrightarrow{(\x_1,\x_2)}\mathcal{O}_P(2)^{\oplus2}=E\vert_P$$
 
 가 cone을 $E\vert_P$ 안에 넣는 embedding이다.
 
-이제 이렇게 구한 각 성분에 closure를 취하자. Support가 $L$인 성분은 이미 $L$ 전체 위의 bundle이므로 그대로 $C_L=E\vert_L$이다. 반면 support가 $P$인 성분 $C_P$는 $P\setminus\{p\}$ 위의 이 line subbundle의 closure인데, 위의 map은 $p$에서 $0$이 되므로 closure는 $p$ 위에서 새로운 점들을 얻는다. $p$ 근처에서 $P$의 coordinate를 $(\x_1,\x_2)$로 보면 점 $x$에서의 직선의 방향 $(\x_1(x):\x_2(x))$는 곧 $x$가 $p$로 다가가는 방향이므로, 그 극한들은 $E_p$의 모든 직선을 훑는다. 따라서 $C_P$는 $p$ 위에서 fiber $E_p$ 전체를 포함하고, $E\vert_P$의 subbundle이 아니다. 또 두 성분은 각각 $P\setminus\{p\}$와 $L\setminus\{p\}$ 위에서 reduced한 vector bundle이므로 multiplicity $1$로 나타나고, $[C]=[C_P]+[C_L]$이다.
+이제 이렇게 구한 각 성분에 closure를 취하자. 이 과정에서 새로 얻어지는 점은 $p$ 위에만 있으므로 이 근처에서만 계산하면 충분하다. 따라서 $\x_3\neq0$인 affine chart에서 $\mathcal{O}(1)$과 $\mathcal{O}(2)$를 각각 $\x_3$과 $\x_3^2$으로 trivialize하여, $p$를 원점으로, $E$의 total space를 $\mathbb{C}^3\times\mathbb{C}^2$로 보자. 이 chart에서 $L$의 점은 $(x,0,0)$이고 $P$의 점은 $(0,y,z)$ 꼴이다. 우선 $L\setminus \{p\}$ 위의 cone은 $E\vert_L$ 전체로 주어졌으므로 이 부분은
 
-$C_L$은 vector bundle $E\vert_L$ 자신이므로 zero section으로 자르면 $0^![C_L]=[L]$이다. $C_P$의 기여를 계산하기 위해 $P$를 $p$에서 blowup한 $\pi:\widetilde{P}\rightarrow P$와 그 exceptional divisor $e$를 잡자. $\x_1,\x_2$는 $p$의 ideal을 생성하므로 $\pi^\ast(\x_1,\x_2)$는 $e$를 따라 정확히 한 번 사라지고, 따라서 위의 map은 $\pi$로 당긴 뒤 line subbundle
+$$C_L^\circ=\{(x,0,0)\mid x\neq0\}\times\mathbb{C}^2$$
 
-$$\Lambda=\pi^\ast\mathcal{O}_P(1)\otimes\mathcal{O}_{\widetilde{P}}(e)\hookrightarrow\pi^\ast E\vert_P$$
+로 표기할 수 있으며, $P$의 line bundle은 $(\x_1,\x_2)$로 주어지므로 
 
-를 거친다. $\Lambda$의 total space는 $C_P$로 proper하고 birational하게 가므로, zero section의 Gysin map이 proper pushforward와 호환된다는 것과 subbundle을 zero section으로 자르면 quotient의 top Chern class가 남는다는 것에 의하여
+$$C_P^\circ=\{((0,y,z),\lambda(y,z))\mid(y,z)\neq(0,0),\lambda\in\mathbb{C}\}$$
 
-$$0^![C_P]=\pi_\ast\bigl(c_1(\pi^\ast E\vert_P/\Lambda)\cap[\widetilde{P}]\bigr)=\pi_\ast\bigl((3\pi^\ast H-e)\cap[\widetilde{P}]\bigr)=3H\cap[P]$$
+가 된다. 이제 $C_L^\circ$은 closure를 취하면 정확히 $x=0$인 점을 더하여 $C_L=E\vert_L$로 나오며, $C_P$의 경우 위 집합을
 
-이다. 마지막 등식은 $e$가 한 점으로 수축되어 $\pi_\ast[e]=0$이기 때문이다. 따라서 $P$ 안의 직선을 $\ell$이라 하면
+$$C_P^\circ=\{((0,y,z),v)\mid zv_1-yv_2=0,(y,z)\neq (0,0)\}$$
+
+으로 써 주면 그 closure가 
+
+$$C_P=\{((0,y,z),v)\mid zv_1-yv_2=0\}$$
+
+로 주어지는 것을 안다. 즉 $C_P$는 $p$ 위에서는 fiber $E_p$ 전체를 가진다. 전체 cone $C$의 class는 이렇게 구한 두 성분들의 합 $[C]=[C_P]+[C_L]$으로 나타난다. 따라서 이들 각각의 Gysin pullback을 계산하여 localized Euler class를 계산할 수 있다.
+
+$C_L$은 vector bundle $E\vert_L$ 자신이므로 zero section으로 자르면 $0^![C_L]=[L]$이다. 계산이 필요한 것은 $C_P$ 쪽이다. 우선 $C_P$를 정의하는 조건 $zv_1-yv_2=0$을 homogeneous coordinate로 적으면, $C_P$는 map
+
+$$\varphi:E\vert_P=\mathcal{O}_P(2)^{\oplus2}\rightarrow\mathcal{O}_P(3);\qquad(v_1,v_2)\mapsto\x_2v_1-\x_1v_2$$
+
+의 kernel로 생각할 수 있으며, 이 때 $x\neq p$에서는 $(\x_2(x),-\x_1(x))\neq0$이므로 $\varphi_x$의 kernel은 $(\x_1(x),\x_2(x))$가 생성하는 직선이고, $x=p$에서는 $\varphi_p=0$이므로 kernel은 $E_p$ 전체이다. 이를 $E\vert_P$의 total space와 그 projection $\pi:E\vert_P\rightarrow P$로 말하자. Total space의 점은 $x\in P$와 $v\in E_x$의 쌍 $(x,v)$이고, 이 점에서 line bundle $\pi^\ast\mathcal{O}_P(3)$의 fiber는 $\mathcal{O}_P(3)_x$이다. 그런데 $\varphi_x(v)$는 바로 이 fiber의 원소이므로, $(x,v)\mapsto\varphi_x(v)$는 total space의 각 점에 $\pi^\ast\mathcal{O}_P(3)$의 fiber의 원소를 하나씩 주는 section이다. 그 zero locus는 각 $x$에서 $\ker\varphi_x$를 모은 것, 곧 $C_P$이므로 $C_P$는 total space 안의 Cartier divisor이다. Line bundle의 section이 정하는 Cartier divisor의 class는 그 line bundle의 $c_1$을 cap한 것이고 $c_1$은 flat pullback과 교환하므로
+
+$$[C_P]=c_1(\pi^\ast\mathcal{O}_P(3))\cap[E\vert_P]=\pi^\ast(3H\cap[P])$$
+
+이고, zero section의 Gysin map은 flat pullback $\pi^\ast$의 역이므로 $0^![C_P]=3H\cap[P]$이다. 따라서 $P$ 안의 직선을 $\ell$이라 하면
 
 $$e(E,s)=3[\ell]+[L]\in A_1(Z)$$
 
 이고, 곧 $(a,b)=(3,1)$이다.
 :::
 
-기대 차원의 성분 $L$은 자기 자신 $[L]$만을 기여하고, 나머지 $3$은 기대보다 한 차원 큰 평면 $P$가 기여한다. 평면의 기여는 대략 excess bundle $E\vert_P/N_{P/X}$의 $c_1$, 곧 $4H-H$이고, $N_{P/X}\rightarrow E\vert_P$가 subbundle이 되지 못하는 점 $p$에서의 보정은 blowup으로 계산된다. 이 경우에는 그 보정이 pushforward에서 사라진다. 특히 $c_2(E)\cap[\mathbb{P}^3]$은 총합 $4$만을 알지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 기억한다. 이 예시에서는 $A_1(Z)$가 성분별로 갈라지므로 이 분해가 class 자체의 정보이지만, 일반적으로는 normal cone의 성분별 기여가 $A_\ast(Z(s))$의 canonical한 분해를 주지는 않는다.
+기대 차원의 성분 $L$은 자기 자신 $[L]$만을 기여하고, 나머지 $3$은 기대보다 한 차원 큰 평면 $P$가 기여한다. 평면의 기여는 excess bundle $E\vert_P/N_{P/X}$의 $c_1$, 곧 $4H-H$이다. 실제로 sequence $0\rightarrow\mathcal{O}_P(1)\rightarrow\mathcal{O}_P(2)^{\oplus2}\xrightarrow{\varphi}\mathcal{O}_P(3)\rightarrow0$은 $P\setminus\{p\}$에서 exact이므로 그곳에서 $\mathcal{O}_P(3)$은 excess bundle 그 자체이고, $N_{P/X}\rightarrow E\vert_P$가 subbundle이 되지 못하는 점 $p$에서도 $\varphi$는 정의되어 있어 $C_P$를 그 kernel로 잘라낸다. 또 $p$는 이 class에 보정을 줄 수 없다. $A_1(\{p\})=0$이므로 $A_1(P)\rightarrow A_1(P\setminus\{p\})$가 isomorphism이고, 따라서 $0^![C_P]$는 $P\setminus\{p\}$ 위의 값으로 결정되기 때문이다. 특히 $c_2(E)\cap[\mathbb{P}^3]$은 총합 $4$만을 알지만, localized Euler class는 이 $4$가 $Z$의 두 성분에 $3$과 $1$로 나뉘어 있다는 것까지 기억한다. 이 예시에서는 $A_1(Z)$가 성분별로 갈라지므로 이 분해가 class 자체의 정보이지만, 일반적으로는 normal cone의 성분별 기여가 $A_\ast(Z(s))$의 canonical한 분해를 주지는 않는다.
 
 ## Intrinsic normal cone
 
