@@ -22,7 +22,7 @@ published: false
 우선 우리는 다음을 정의한다. 
 
 ::: 정의 1
-정수 $a, b$에 대하여 $b = ac$인 정수 $c$가 존재할 때 *$a$가 $b$를 나눈다<sub>$a$ divides $b$</sub>*고 하고 $a \mid b$로 적는다. 이때 $a$를 $b$의 *약수<sub>divisor</sub>*, $b$를 $a$의 *배수<sub>multiple</sub>*라 한다. 나누지 않을 때는 $a \nmid b$로 적는다.
+정수 $a, b$에 대하여 $b=ac$인 정수 $c$가 존재할 때 *$a$가 $b$를 나눈다<sub>$a$ divides $b$</sub>*고 하고 $a\mid b$로 적는다. 이때 $a$를 $b$의 *약수<sub>divisor</sub>*, $b$를 $a$의 *배수<sub>multiple</sub>*라 한다. 나누지 않을 때는 $a\nmid b$로 적는다.
 :::
 
 그럼 다음이 성립한다. 
@@ -30,17 +30,17 @@ published: false
 ::: 명제 2
 정수 $a, b, c$에 대하여 다음이 성립한다.
 
-1. $a \mid b$이고 $b \mid c$이면 $a \mid c$이다.
-2. $a \mid b$이고 $a \mid c$이면 임의의 정수 $x, y$에 대하여 $a \mid (bx + cy)$이다.
-3. $a \mid b$이고 $b \neq 0$이면 $\lvert a\rvert \leq \lvert b\rvert$이다.
+1. $a\mid b$이고 $b\mid c$이면 $a\mid c$이다.
+2. $a\mid b$이고 $a\mid c$이면 임의의 정수 $x,y$에 대하여 $a\mid (bx + cy)$이다.
+3. $a\mid b$이고 $b\neq 0$이면 $\lvert a\rvert\leq\lvert b\rvert$이다.
 :::
 ::: 증명
-1. $b = ad$, $c = be$인 정수 $d, e$가 있으므로 $c = a(de)$이다.
-2. $b = ad$, $c = ae$라 하면 $bx + cy = a(dx + ey)$이다.
-3. $b = ac$에서 $b \neq 0$이므로 $c \neq 0$이고, 따라서 $\lvert c\rvert \geq 1$이다. 그러므로 $\lvert b\rvert = \lvert a\rvert\lvert c\rvert \geq \lvert a\rvert$이다.
+1. $b=ad$, $c=be$인 정수 $d,e$가 있으므로 $c=a(de)$이다.
+2. $b=ad$, $c=ae$라 하면 $bx+cy=a(dx+ey)$이다.
+3. $b=ac$에서 $b\neq 0$이므로 $c\neq 0$이고, 따라서 $\lvert c\rvert\geq 1$이다. 그러므로 $\lvert b\rvert=\lvert a\rvert\lvert c\rvert \geq \lvert a\rvert$이다.
 :::
 
-두 정수가 항상 나누어떨어지는 것은 아니지만, 나누어떨어지지 않더라도 다음과 같이 몫과 나머지를 유일하게 결정할 수 있다.
+일반적으로 두 정수가 항상 나누어떨어지는 것은 아니지만, 나누어떨어지지 않더라도 다음과 같이 몫과 나머지를 유일하게 결정할 수 있다.
 
 ::: 정리 3 (나눗셈 정리)
 정수 $a$와 양의 정수 $b$에 대하여 다음을 만족하는 정수 $q, r$이 유일하게 존재한다.
@@ -49,9 +49,8 @@ $$a = bq + r, \qquad 0 \leq r < b$$
 
 $q$를 *몫<sub>quotient</sub>*, $r$을 *나머지<sub>remainder</sub>*라 한다.
 :::
-
 ::: 증명
-존재성. $S = \{a - bk \mid k \in \mathbb{Z},\ a - bk \geq 0\}$으로 두자. $k = -\lvert a\rvert$이면 $b \geq 1$이므로 $a - bk = a + b\lvert a\rvert \geq a + \lvert a\rvert \geq 0$이고, 따라서 $S$는 공집합이 아닌 음이 아닌 정수의 집합이다. 정렬성에 의하여 $S$는 가장 작은 원소 $r = a - bq$를 갖는다. $r \geq 0$은 $S$의 정의에서 나온다. $r \geq b$라 가정하면 $r - b = a - b(q+1) \geq 0$이므로 $r - b \in S$인데 $r - b < r$이어서 $r$의 최소성에 모순이다. 따라서 $r < b$이다.
+존재성의 경우 $S=\{a-bk\mid k \in \mathbb{Z},\ a - bk \geq 0\}$으로 두자. $k = -\lvert a\rvert$이면 $b \geq 1$이므로 $a - bk = a + b\lvert a\rvert \geq a + \lvert a\rvert \geq 0$이고, 따라서 $S$는 공집합이 아닌 음이 아닌 정수의 집합이다. 정렬성에 의하여 $S$는 가장 작은 원소 $r = a - bq$를 갖는다. $r \geq 0$은 $S$의 정의에서 나온다. $r \geq b$라 가정하면 $r - b = a - b(q+1) \geq 0$이므로 $r - b \in S$인데 $r - b < r$이어서 $r$의 최소성에 모순이다. 따라서 $r < b$이다.
 
 유일성. $a = bq + r = bq' + r'$이고 $0 \leq r, r' < b$라 하자. 그러면 $b(q - q') = r' - r$이므로 $b \mid r' - r$이다. 한편 $-b < r' - r < b$에서 $\lvert r' - r\rvert < b$이다. $r' - r \neq 0$이면 [명제 2](#prop2){: data-lid="1xmqe" }의 (3)에 의하여 $\lvert r' - r\rvert \geq b$이므로 모순이고, 따라서 $r = r'$이다. 그러면 $b(q - q') = 0$이고 $b > 0$이므로 $q = q'$이다.
 :::
