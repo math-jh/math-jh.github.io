@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-10-11
+last_modified_at: 2026-10-15
 
 weight: 49
 
@@ -499,3 +499,28 @@ return f"{head} old 가 EN 에 없음 ... {old[lo:lo + 30]!r} ... {text[at:at + 
 (위 스니펫의 마지막 반환 문자열은 줄여 적었다.) 없는 경우에는 `old`의 접두사 중 EN에 들어 있는 가장 긴 것을 이분 탐색으로 찾는다. 접두사가 있다는 성질은 길이에 대해 단조라서 이분 탐색이 성립한다. 그 길이가 곧 처음 어긋나는 글자의 위치이고, 메시지에는 그 지점에서 `old`가 이어 가려던 30자와 EN에 실제로 있는 30자를 나란히 `repr`로 싣는다. `repr`을 쓰는 것이 요점이다. 리터럴 `\n`과 개행이 따옴표 안에서 다르게 찍혀서, 위의 JSON 이스케이프 병이 한 눈에 보인다. 테스트는 정확히 그 입력, 곧 `Let $$\n\mathfrak{p}`를 EN의 `Let $$` 개행 `\mathfrak{p}`에 대 보고 "앞 6/" 자가 일치하고 두 조각이 위 형태로 찍히는지를 확인한다.
 
 테스트 쪽에는 부수 수정이 하나 있다. `run_all`이 메모를 정리하려고 대시보드의 실제 메모 파일을 읽으므로, 새 테스트가 늘면서 테스트가 운영 상태 파일에 닿을 길도 늘었다. `setUp`이 `NOTE_STATE`와 `NOTE_LOCK`을 임시 디렉터리로 돌리고, `save_state`는 목으로 막는다. 이 변경이 실제 틱에서 도는 것은 아직 보지 못했고, 막힘 표시는 같은 요청이 두 번 연속 WAIT로 넘어가는 틱이 나와야 화면에서 확인된다.
+
+## 버전이 적힌 모델 ID가 사라진 날
+
+관련 커밋: [`296bea9e`](https://github.com/math-jh/math-jh.github.io/commit/296bea9e)
+{: .notice--info}
+
+처음 세운 호출은 `--model gemini-3.8-flash-high`로 엔진을 못 박았다. 10월 14일에 autopush의 커밋 메시지 쪽이 비슷하게 `gemini-3.7` ID를 부르다가, CLI 세대가 바뀌면서 그 ID가 사라진 것을 만났다. 모델 호출이 실패하면 autopush는 휴리스틱 본문으로 강등하므로 에러 대신 커밋 메시지만 조용히 얇아졌다. 사용자는 그 방식을 번역 워커에도 옮기라고 했다.
+
+> 번역 워커도 같은 방식으로 바꿔줘, effort high로.
+
+그 결과 호출부는 모델 ID가 환경변수로 주어졌을 때만 `--model`을 넘기고, 아니면 `--effort`만 넘긴다.
+
+```python
+AGY_MODEL             = os.environ.get("AGY_MODEL")
+AGY_EFFORT            = os.environ.get("AGY_EFFORT") or "high"
+...
+args = [AGY_BIN, "--print", prompt,
+        *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
+        "--agent", AGY_AGENT,
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+모델 선택을 CLI의 서버 기본값에 맡기는 것이므로, 어느 모델이 번역했는지는 이제 이 스크립트가 알지 못한다. 대신 세대가 바뀌어도 ID가 사라져 호출이 깨지는 일이 없다. `AGY_MODEL`을 직접 주면 예전처럼 고정되고, 주석에는 Gemini 계열만 넣으라고 적어 두었다. Claude나 GPT를 고르면 다른 쿼터 버킷을 쓰기 때문이다. crontab에 있던 `AGY_MODEL=gemini-3.8-flash-high` 두 줄도 같은 변경에서 걷어냈다.
+
+남는 어긋남이 하나 있다. `_config.yml`의 `translation_source_tag`와 `translation_polish_source_tag`는 아직 `antigravity-gemini-3.8-flash-high`이다. 이 값은 모델 이름이기 전에 위에서 본 대로 "현재 엔진의 이름표"이고, 폴리싱을 한 번 더 돌릴지 가르는 키이기도 해서 이 변경에서는 건드리지 않았다. 그러니 앞으로 이 태그가 가리키는 모델과 실제로 번역한 모델이 달라질 수 있다.
