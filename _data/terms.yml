@@ -221,6 +221,13 @@ A:
     url: /ko/math/calculus/vector_functions
   - label: '[리만기하학] §측지선'
     url: /ko/math/riemannian_geometry/geodesics
+- id: accumulation_point
+  en: accumulation point
+  ko: 집적점
+  primary: ko
+  defs:
+  - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
+    url: /ko/math/analysis/bolzano_weierstrass
 - id: action
   en: action
   ko: 작용
