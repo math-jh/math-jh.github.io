@@ -3385,6 +3385,13 @@ C:
     url: '/ko/math/manifolds/vector_fields'
   - label: '[토릭 기하학] §토릭 다양체의 정의'
     url: '/ko/math/toric_geometry/toric_varieties'
+- id: completeness_of_the_real_numbers
+  en: completeness of the real numbers
+  ko: 실수의 완비성
+  primary: ko
+  defs:
+  - label: '[해석학] §실수의 완비성'
+    url: /ko/math/analysis/completeness_of_reals
 - id: completion
   en: completion
   ko: 완비화
@@ -11655,6 +11662,13 @@ L:
   defs:
   - label: '[해석학] §상극한과 하극한'
     url: /ko/math/analysis/limsup_and_liminf
+- id: limit_of_a_sequence
+  en: limit of a sequence
+  ko: 수열의 극한
+  primary: ko
+  defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
