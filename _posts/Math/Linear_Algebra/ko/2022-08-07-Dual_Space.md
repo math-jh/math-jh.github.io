@@ -24,7 +24,7 @@ $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 이 $V^\ast$의 basis가 된다는 것을 안다. 이를 $\mathcal{B}$의 *dual basis<sub>쌍대기저</sub>*라 부른다. 
 
-$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="uwc13" }의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립하며, 사실 $V$가 무한차원인 경우 반드시 $\dim V<\dim V^\ast$이다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻어진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다.
+$V$가 무한차원이라 하더라도 basis $\mathcal{B}$에 대하여, 위의 식과 같이 정의된 집합 $\mathcal{B}^\ast$가 일차독립이라는 것은 어떠한 수정도 없이 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="uwc13" }의 증명과 동일한 증명을 이용할 수 있다. 따라서 항상 $\dim V\leq\dim V^\ast$가 성립한다. 그러나 $V$가 무한차원이라면 $\mathcal{B}^\ast$는 $V^\ast$의 basis가 되지 못한다. 이를 살펴보기 위해서는 임의의 $\mathcal{B}$의 모든 원소들을 $1$로 보내는 함수를 extend하여 얻어진 함수가 $\mathcal{B}^\ast$의 원소들의 일차결합으로 나타날 수 없음만 확인하면 된다. 사실 이 경우에는 반드시 $\dim V<\dim V^\ast$이다.
 
 ## 이중쌍대공간
 

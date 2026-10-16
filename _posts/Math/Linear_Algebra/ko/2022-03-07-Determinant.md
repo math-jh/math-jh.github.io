@@ -43,26 +43,20 @@ $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightar
 
 $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
-이 주어졌다 하자. 만일 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대해 항상 다음의 식
+이 주어졌다 하자. 만일 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대하여, $v_i=v_j$일 때마다 항상 $f(v_1,\ldots, v_n)=0$이 성립한다면 $f$를 *alternating multilinear map<sub>교대다중선형사상</sub>*이라 부른다.
+:::
+
+위와 같이 multilinear map $f:V\times\cdots\times V\rightarrow W$이 주어졌다 하자. 그럼 $f$가 *antisymmetric*이라는 것은 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대하여 다음의 식
 
 $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ldots, v_n)$$
 
-이 성립한다면 $f$를 *alternating multilinear map<sub>교대다중선형사상</sub>*이라 부른다.
-:::
-
-위와 같이 multilinear map $f:V\times\cdots\times V\rightarrow W$이 주어졌다 하자. 그럼 $f$가 *antisymmetric*이라는 것은 임의의 $v_1,\ldots, v_n$와 임의의 $i\neq j$에 대하여, 만일 $v_i=v_j$이면 $f(v_1,\ldots, v_n)=0$인 것이다.
+이 성립하는 것이다.
 
 ::: 명제 3
-Multilinear map $f:V\times\cdots\times V\rightarrow W$가 alternating인 것은 $f$가 antisymmetric인 것과 동치이다.
+Alternating multilinear map은 antisymmetric이다.
 :::
 ::: 증명
-우선 $f$가 alternating이라 가정하자. 그럼 임의의 $v_i=v_j$를 만족하는 임의의 $v_1,\ldots, v_n\in V$에 대하여
-
-$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
-
-이 성립하므로 $f$는 antisymmetric이기도 하다. (첫째 등식은 $v_i=v_j$라는 사실을, 둘째 등식은 $f$가 alternating이라는 사실을 사용하였다.)
-
-거꾸로 $f$가 antisymmetric이라 하자. 임의의 $v_1,\ldots, v_n$과 임의의 $i\neq j$에 대하여, $f$가 antisymmetric이라는 사실은 다음의 식
+$f$가 alternating이라 하자. 임의의 $v_1,\ldots, v_n$과 임의의 $i\neq j$에 대하여, $f$가 alternating이라는 사실은 다음의 식
 
 $$f(v_1,\ldots, v_i+v_j,\ldots, v_i+v_j,\ldots, v_n)=0$$
 
@@ -70,10 +64,16 @@ $$f(v_1,\ldots, v_i+v_j,\ldots, v_i+v_j,\ldots, v_n)=0$$
 
 $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i,\ldots, v_j,\ldots,v_n)\\&\phantom{==}+f(v_1,\ldots, v_j,\ldots, v_i,\ldots,v_n)+f(v_1,\ldots, v_j,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
-이 되고, 다시 $f$는 antisymmetric이므로 $v_i, v_j$가 각각 두 번 나오는 첫째 항, 마지막 항이 $0$이 된다. 이로부터 원하는 결론을 얻는다.
+이 되고, 다시 $f$는 alternating이므로 $v_i, v_j$가 각각 두 번 나오는 첫째 항, 마지막 항이 $0$이 된다. 이로부터 원하는 결론을 얻는다.
 :::
 
-특히, $f$가 변수 $n$개의 alternating multilinear map이고 $v_1,\ldots, v_n$ 중 하나가 다른 $n-1$개의 벡터들의 일차결합이라 가정하자. 그럼 multilinearity를 적용한 후, 위의 명제를 적용하면 $f(v_1,\ldots, v_n)=0$임을 알 수 있다. 
+$\mathbb{K}$가 $\mathbb{R}$이나 $\mathbb{C}$라면 위 명제의 역도 성립한다. $f$가 antisymmetric이라 하면, $v_i=v_j$를 만족하는 임의의 $v_1,\ldots, v_n\in V$에 대하여
+
+$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
+
+이 성립하므로 $2f(v_1,\ldots, v_n)=0$이고, 양변을 $2$로 나누면 $f(v_1,\ldots, v_n)=0$이다. (첫째 등식은 $v_i=v_j$라는 사실을, 둘째 등식은 $f$가 antisymmetric이라는 사실을 사용하였다.)
+
+한편, $f$가 변수 $n$개의 alternating multilinear map이고 $v_1,\ldots, v_n$ 중 하나가 다른 $n-1$개의 벡터들의 일차결합이라 가정하자. 그럼 multilinearity를 적용하면 $f(v_1,\ldots, v_n)$은 같은 벡터가 두 번 들어간 항들의 합이 되므로, $f$가 alternating이라는 사실로부터 $f(v_1,\ldots, v_n)=0$임을 알 수 있다. 
 
 이제 우리는 행렬식을 정의할 수 있게 되었다.
 
@@ -120,7 +120,7 @@ $n$차원 공간에서 일차독립인 $n$개의 벡터가 주어졌다 하자. 
 
 {% diagram Math/Linear_Algebra/Determinant-4.svg width="12em" alt="Multilinearity" %}
 
-뿐만 아니라, 등적변형을 생각하면 고정된 한 변 $v_n$에 대하여, 밑면을 이루는 $n-1$개의 벡터 $v_1,\ldots, v_{n-1}$의 일차결합을 $v_n$에 더하여도 $D$의 값은 유지된다. 이는 곧, 만일 $v_n$이 $v_1,\ldots, v_{n-1}$의 일차결합이라면 $D(v_1,\ldots, v_n)=0$이라는 것이고 따라서 [명제 3](#prop3){: data-lid="2rt11" }에 의해 이는 $D$가 alternating이라는 것과 동치가 된다.
+뿐만 아니라, 등적변형을 생각하면 고정된 한 변 $v_n$에 대하여, 밑면을 이루는 $n-1$개의 벡터 $v_1,\ldots, v_{n-1}$의 일차결합을 $v_n$에 더하여도 $D$의 값은 유지된다. 이는 곧, 만일 $v_n$이 $v_1,\ldots, v_{n-1}$의 일차결합이라면 $D(v_1,\ldots, v_n)=0$이라는 것이고, 이는 $D$가 alternating이라는 것과 동치이다.
 
 우리는 아직 행렬식의 유일성을 증명하지 않았지만, [정의 4](#def4){: data-lid="8h1fc" }는 행렬식을 완전하게 결정해준다는 것을 확인할 수 있고, 따라서 행렬식을 부호가 있는 부피로 생각할 수 있다. 이제 이 그림 상에서, 행렬식이 $0$인 것과 $A$가 가역이 아닌 것이 동치인 이유는 $n$차원 공간에서, $n$차원 미만의 나란히꼴의 부피는 항상 0이기 때문임을 알 수 있다.
 

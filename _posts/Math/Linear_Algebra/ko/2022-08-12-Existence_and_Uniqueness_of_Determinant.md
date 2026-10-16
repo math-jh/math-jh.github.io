@@ -48,7 +48,7 @@ $$\sgn(\tau\circ\tau')=\sgn(\tau)\sgn(\tau')$$
 
 이 성립한다.
 
-임의의 alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$가 주어졌다 하자. 그럼 $\sgn$의 정의에 의하여, 
+임의의 alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$가 주어졌다 하자. 그럼 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)과 $\sgn$의 정의에 의하여, 
 
 $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)})$$
 
@@ -69,7 +69,7 @@ $$v_i=v_1^ie_1+\cdots+v_n^ie_n,\qquad i=1,\ldots, n$$
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-이 성립한다. [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-lid="zj3f0" }에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
+이 성립한다. [§행렬식, ⁋정의 2](/ko/math/linear_algebra/determinant#def2){: data-lid="zj3f0" }에 의하여, $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $f(e_{i_1},\ldots,e_{i_n})$의 값은 항상 0이 되므로, 우변의 식은 
 
 $$f(v_1,\ldots, v_n)=\sum_{\tau\in S_n}v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}f(e_{\tau(1)},\ldots, e_{\tau(n)})$$
 
@@ -87,7 +87,7 @@ $$D(e_1,\ldots, e_n)=D'(e_1,\ldots, e_n)=1$$
 
 $$D(v_1,\ldots, v_n)=\sum_{\tau\in S_n}\sgn(\tau)v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}$$
 
-으로 정의한 후 $D$가 실제로 alternating multilinear map이 된다는 것을 보이면 된다. 이는 단순히 위의 계산을 반대방향으로 반복하는 것이므로 생략한다.
+으로 정의한 후 $D$가 실제로 alternating multilinear map이 된다는 것을 보이면 된다. 각 항이 $v_k$의 성분을 정확히 하나씩 포함하므로 $D$는 multilinear이다. 이제 $i\neq j$에 대하여 $v_i=v_j$라 하고, $i$와 $j$를 바꾸는 transposition을 $\upsilon$이라 하자. 그럼 $S_n$의 원소들은 $\tau$와 $\tau\circ\upsilon$의 쌍들로 나뉘며, $v_i=v_j$이므로 이 두 permutation에 대응되는 항은 곱해지는 성분들이 같고 $\sgn(\tau\circ\upsilon)=-\sgn(\tau)$이다. 따라서 이들이 서로 상쇄되어 $D(v_1,\ldots, v_n)=0$이다.
 :::
 
 따라서 행렬식이 잘 정의되며, 이를 $\det$으로 적는다. 위 명제의 증명과정에서 우리는 행렬식 $\det A$를 식으로 얻어냈다. 즉, 행렬 $A$의 $i$번째 열벡터를 $A_i$로 표기하면 $A_i$의 $j$번째 성분은 $A_{ji}$와 같고, 따라서 
@@ -125,7 +125,7 @@ $$(AB)_{ij}=\sum_{k=1}^nA_{ik}B_{kj}$$
 
 $$\begin{aligned}\det(AB)&=\det((AB)_1, (AB)_2,\ldots, (AB)_n)\\&=\sum_{\tau\in S_n}\sgn(\tau)(AB)_{\tau(1)1}(AB)_{\tau(2)2}\cdots(AB)_{\tau(n)n}\\&=\sum_{\tau\in S_n}\sgn(\tau)\left(\sum_{i_1=1}^nA_{\tau(1)i_1}B_{i_11}\right)\cdots\left(\sum_{i_n=1}^nA_{\tau(n)i_n}B_{i_nn}\right)\\&=\sum_{\tau\in S_n}\sum_{i_1,\ldots, i_n=1}^n\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}B_{i_11}\cdots B_{i_nn}\\&=\sum_{i_1,\ldots, i_n=1}^nB_{i_11}\cdots B_{i_nn}\left(\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}\right)\\&=\sum_{i_1,\ldots, i_n=1}^n\det(A_{i_1},\ldots, A_{i_n})B_{i_11}\cdots B_{i_nn}\end{aligned}$$
 
-[§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-lid="1kgu4" }에 의하여 $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $\det(A_{i_1},\ldots, A_{i_n})$의 값은 항상 0이 되므로, 위 식의 우변에서는 $i_1,\ldots, i_n$이 서로 다른 항들만 남는다. 이제 $\upsilon\in S_n$을 다음의 식
+[§행렬식, ⁋정의 2](/ko/math/linear_algebra/determinant#def2){: data-lid="1kgu4" }에 의하여 $i_1,\ldots, i_n$들 중 같은 것이 존재한다면 $\det(A_{i_1},\ldots, A_{i_n})$의 값은 항상 0이 되므로, 위 식의 우변에서는 $i_1,\ldots, i_n$이 서로 다른 항들만 남는다. 이제 $\upsilon\in S_n$을 다음의 식
 
 $$\upsilon(1)=i_1,\ldots, \upsilon(n)=i_n$$
 
@@ -142,7 +142,7 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 :::
 ::: 증명
-[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla){: data-lid="ga49b" }로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-lid="zcri0" }에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla){: data-lid="ga49b" }로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋정의 2](/ko/math/linear_algebra/determinant#def2){: data-lid="zcri0" }에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 

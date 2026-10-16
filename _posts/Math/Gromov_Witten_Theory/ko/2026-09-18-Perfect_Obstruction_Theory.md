@@ -360,36 +360,42 @@ $$N_{L/\mathbb{P}^2}\xrightarrow{(1,0)}\mathcal{O}_L(1)\oplus\mathcal{O}_L(2)$$
 
 따라서 virtual class를 fundamental class를 대체하는 올바른 차원의 class라고 부를 때, 그 차원과 class를 고르는 것은 공간이 아니라 $\phi$이다.
 
-Virtual class에 기대하는 가장 중요한 성질은 deformation invariance이다. 그런데 서로 다른 공간 $M_b$와 $M_{b'}$의 virtual class는 직접 비교할 수 없으므로, 이들을 fiber로 갖는 family $\mathcal{X}\rightarrow B$의 class 하나에서 각각을 잘라낸 것으로 쓰고 비교는 $\mathcal{X}$ 안에서 해야 한다. 실제 moduli에서 이러한 family는 base에 상대적인 perfect obstruction theory를 가지고 나온다.
+지금까지의 perfect obstruction theory는 cotangent complex $\LL_M=\LL_{M/\Spec\mathbb{K}}$을 대상으로 한다. 우리는 base scheme $S$ 위에 정의된 $S$-scheme들을 생각하는 것처럼, perfect obstruction theory 또한 base $\mathfrak{B}$에 대한 relative 버전을 만들어줄 수 있다. 
 
-이 구성은 base 위에서도 그대로 할 수 있다. $\mathfrak{B}$를 pure dimensional인 smooth Artin stack, $q:M\rightarrow\mathfrak{B}$를 Deligne–Mumford stack $M$에서의 morphism이라 하고, [정의 7](#def7){: data-lid="5uak4" }에서 $\tau_{\geq-1}\LL_M$을 $\tau_{\geq-1}\LL_{M/\mathfrak{B}}$로 바꾼 것을 $q$에 대한 *relative perfect obstruction theory*라 부른다. Local embedding $U\hookrightarrow W$를 $W$가 $\mathfrak{B}$ 위에서 smooth하도록 잡고 $T_W\vert_U$ 대신 relative tangent bundle $T_{W/\mathfrak{B}}\vert_U$로 나누면 *relative intrinsic normal cone* $\mathfrak{c}_{M/\mathfrak{B}}$를 얻으며, [정리 8](#thm8){: data-lid="bdguf" }과 [정의 10](#def10){: data-lid="kzesu" }은 그대로 성립한다. ([BF, §7]) 달라지는 것은 차원이다. $C_{U/W}$는 pure dimension $\dim W$이고 $T_{W/\mathfrak{B}}$의 rank는 $\dim W-\dim\mathfrak{B}$이므로, [명제 6](#prop6){: data-lid="8mnqd" }의 증명과 같은 차원 세기로 $\mathfrak{c}_{M/\mathfrak{B}}$는 pure dimension $\dim\mathfrak{B}$이고, virtual class $[M]^\vir$은 $A_{\dim\mathfrak{B}+\rank E^\bullet}(M)$에 놓인다. 아래 명제의 셋째와 넷째 주장도 smooth를 $\mathfrak{B}$ 위에서 smooth로 바꾸면 그대로 성립한다. ([BF, Proposition 7.3])
+Pure dimensional smooth Artin stack $\mathfrak{B}$가 주어졌다 하고, Deligne-Mumford stack $M$에서 $\mathfrak{B}$로의 structure morphism $q:M\rightarrow \mathfrak{B}$가 주어졌다 하자. 그럼 [정의 7](#def7){: data-lid="5uak4" }에서 $\tau_{\geq-1}\LL_M$을 $\tau_{\geq-1}\LL_{M/\mathfrak{B}}$로 바꾸어 $q$에 대한 *relative perfect obstruction theory*를 정의할 수 있다. 비슷하게, local embedding $U\hookrightarrow W$를 $W$가 $\mathfrak{B}$ 위에서 smooth하도록 잡고 [정의 5](#def5)에서 $T_W\vert_U$ 대신 relative tangent bundle $T_{W/\mathfrak{B}}\vert_U$로 나누어
 
-그럼 다음은 perfect obstruction theory와 그것이 정하는 virtual class의 성질이다. 
+$$\mathfrak{N}_{M/\mathfrak{B}}\vert_U=[N_{U/W}/T_{W/\mathfrak{B}}\vert_U],\qquad\mathfrak{c}_{M/\mathfrak{B}}\vert_U=[C_{U/W}/T_{W/\mathfrak{B}}\vert_U]$$
+
+로 두면 *relative intrinsic normal sheaf* $\mathfrak{N}_{M/\mathfrak{B}}$와 *relative intrinsic normal cone* $\mathfrak{c}_{M/\mathfrak{B}}\subset\mathfrak{N}_{M/\mathfrak{B}}$를 얻는다. 그럼 이렇게 정의한 relative 버전에서도 [정리 8](#thm8){: data-lid="bdguf" }과 [정의 10](#def10){: data-lid="kzesu" }은 그대로 성립한다는 것을 보일 수 있다.
+
+이 상황에서 다소 신경을 써 주어야 하는 것은 차원으로, $C_{U/W}$는 pure dimension $\dim W$이고 $T_{W/\mathfrak{B}}$의 rank는 $\dim W-\dim\mathfrak{B}$이므로, [명제 6](#prop6){: data-lid="8mnqd" }의 증명과 같이 차원을 세 보면 relative intrinsic normal cone $\mathfrak{c}_{M/\mathfrak{B}}$의 차원은 pure dimension $\dim\mathfrak{B}$이고, 따라서 virtual class $[M]^\vir$은 $A_{\dim\mathfrak{B}+\rank E^\bullet}(M)$에 놓이게 된다. 
+
+다음은 perfect obstruction theory와 그것이 정하는 virtual class의 성질이다. 
 
 ::: 명제 12
 Deligne–Mumford stack $M$ 위의 perfect obstruction theory $\phi:E^\bullet\rightarrow\tau_{\geq-1}\LL_M$에 대하여, virtual class $[M]^\vir=0^!_{E^\bullet}[\mathfrak{c}_M]$은 다음을 만족한다.
 
 1. $[M]^\vir$은 virtual dimension $\vdim=\rank E^\bullet=\rank E^0-\rank E^{-1}$의 cycle이다.
-2. $M$이 flat family의 fiber로 주어지고 $\phi$가 family 위의 perfect obstruction theory와 compatible하면, $[M]^\vir$은 family의 virtual class를 fiber로 Gysin pullback한 것이다. 특히 $[M]^\vir$은 family 안에서의 deformation에 대해 불변이다.
+2. $M$이 family의 fiber로 주어지고 $\phi$가 family 위의 perfect obstruction theory와 compatible하면, $[M]^\vir$은 family의 virtual class를 fiber로 Gysin pullback한 것이다. 특히 $[M]^\vir$은 family 안에서의 deformation에 대해 불변이다.
 3. $h^1((E^\bullet)^\vee)=0$이면 $M$은 smooth하고 $[M]^\vir=[M]$은 보통의 fundamental class이다.
 4. $M$이 smooth하고 $h^1((E^\bullet)^\vee)$가 rank $r$의 vector bundle이면 $[M]^\vir=c_r(h^1((E^\bullet)^\vee))\cap[M]$이다.
 :::
 
-첫째 주장은 이미 위에서 살펴보았다. 셋째 주장과 넷째 주장의 가정에서는 $M$의 smoothness로부터 $\mathfrak{c}_M=\bB T_M$이고, 따라서 $C(F^\bullet)$은 $F_0\rightarrow F_1$의 image가 된다. 셋째 주장의 가정에서는 이 image가 $F_1$ 전체가 되므로 $[M]$이 남게 되며, 넷째 주장의 가정에서는 이 image가 cokernel이 $h^1((E^\bullet)^\vee)$인 subbundle이므로, $h^1((E^\bullet)^\vee)$의 top Chern class가 남게 된다.
+첫째 주장은 이미 위에서 살펴보았다. 셋째 주장과 넷째 주장의 가정에서는 $M$의 smoothness로부터 $\mathfrak{c}_M=\bB T_M$이고, 따라서 $C(F^\bullet)$은 $F_0\rightarrow F_1$의 image가 된다. 셋째 주장의 가정에서는 이 image가 $F_1$ 전체가 되므로 $[M]$이 남게 되며, 넷째 주장의 가정에서는 이 image가 cokernel이 $h^1((E^\bullet)^\vee)$인 subbundle이므로, $h^1((E^\bullet)^\vee)$의 top Chern class가 남게 된다. 셋째와 넷째 주장은 smooth를 $\mathfrak{B}$ 위에서 smooth로 바꾸면 relative perfect obstruction theory에 대해서도 그대로 성립한다. ([BF, Proposition 7.3])
 
-다소 설명이 필요한 것은 둘째 주장의 compatibility이다. $\mathcal{X}$를 smooth variety $B$ 위의 Deligne–Mumford stack, $\phi_{\mathcal{X}}:E_{\mathcal{X}}^\bullet\rightarrow\tau_{\geq-1}\LL_{\mathcal{X}}$를 그 perfect obstruction theory, $M$을 점 $b\in B$ 위의 fiber, $i:M\hookrightarrow\mathcal{X}$라 하자. 그럼 $\phi$와 $\phi_{\mathcal{X}}$가 compatible하다는 것은 triangle 
+다소 설명이 필요한 것은 둘째 주장의 compatibility이다. 우선 둘째 주장을 식으로 엄밀하게 적기 위해 $\mathcal{X}$를 smooth variety $B$ 위의 Deligne–Mumford stack이라 하고, 점 $b\in B$에서의 fiber가 $M$이며 $i:M\hookrightarrow\mathcal{X}$라 하자. 그럼 $M\rightarrow\mathcal{X}\rightarrow\Spec\mathbb{K}$에 대하여 cotangent complex들 사이의 distinguished triangle
+
+$$i^\ast\LL_{\mathcal{X}/\Spec\mathbb{K}}\rightarrow\LL_{M/\Spec\mathbb{K}}\rightarrow\LL_{M/\mathcal{X}}\rightarrow i^\ast\LL_{\mathcal{X}/\Spec\mathbb{K}}[1]$$
+
+이 존재하던 것을 기억하자. $\mathcal{X}$ 안에서 $M$의 ideal sheaf를 $\mathcal{I}$라 하면 $i$가 closed embedding이므로 $h^0(\LL_{M/\mathcal{X}})=0$이고 $h^{-1}(\LL_{M/\mathcal{X}})=\mathcal{I}/\mathcal{I}^2$이며, 따라서 이 triangle은 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)의 conormal sequence $\mathcal{I}/\mathcal{I}^2\rightarrow i^\ast\Omega_{\mathcal{X}}\rightarrow\Omega_M\rightarrow0$을 왼쪽으로 연장한 것이고 그 셋째 항은 $M$을 $\mathcal{X}$에서 잘라내는 방정식을 기록한다. 이제 $\phi_{\mathcal{X}}:E_{\mathcal{X}}^\bullet\rightarrow\tau_{\geq-1}\LL_{\mathcal{X}}$를 $\mathcal{X}$의 perfect obstruction theory라 하자. 그럼 $\phi$와 $\phi_{\mathcal{X}}$가 compatible하다는 것은 triangle 
 
 $$i^\ast E_{\mathcal{X}}^\bullet\rightarrow E^\bullet\rightarrow\mathcal{O}_M^{\oplus\dim B}[1]\rightarrow i^\ast E_{\mathcal{X}}^\bullet[1]$$
 
-이 존재하여 이것이 cotangent complex의 triangle 
+이 존재하여 이것이 위의 triangle로 가는 morphism of triangles를 이룬다는 것이다. ([BF, Definition 5.8]) 여기서 셋째 항 $\mathcal{O}_M^{\oplus\dim B}[1]$은 $b$의 maximal ideal $\mathfrak{m}_b$에 대하여 $\LL_{\{b\}/B}=(\mathfrak{m}_b/\mathfrak{m}_b^2)[1]$을 $M$으로 당긴 것이고, 셋째 vertical map은 $M=\mathcal{X}\times_B\{b\}$에서 오는 자연스러운 map이다. $b$의 국소좌표 $t_1,\ldots,t_{\dim B}$를 $\mathcal{X}$로 당긴 것이 $M$을 잘라내는 방정식이므로, 이 map은 $h^{-1}$에서 surjection $\mathcal{O}_M^{\oplus\dim B}\rightarrow\mathcal{I}/\mathcal{I}^2$이다. 곧 $M$의 perfect obstruction theory가 $\mathcal{X}$의 것을 $M$으로 당긴 것에 fiber의 normal 방향 $\mathcal{O}_M^{\oplus\dim B}$를 더한 것이라는 뜻이며, 이 덕분에 두 cone을 같은 곳에서 비교할 수 있다. 이 가정 하에서 둘째 주장은 $\{b\}\hookrightarrow B$의 refined Gysin map $i_b^!:A_k(\mathcal{X})\rightarrow A_{k-\dim B}(M)$에 대한 등식
 
-$$i^\ast\LL_{\mathcal{X}}\rightarrow\LL_M\rightarrow\LL_{M/\mathcal{X}}\rightarrow i^\ast\LL_{\mathcal{X}}[1]$$
+$$[M]^\vir=i_b^![\mathcal{X}]^\vir$$
 
-로 가는 morphism of triangles를 이룬다는 것이다. ([BF, Definition 5.8, Proposition 5.10]) 곧 $M$의 perfect obstruction theory가 $\mathcal{X}$의 것을 $M$으로 당긴 것에 fiber의 normal 방향 $\mathcal{O}_M^{\oplus\dim B}$를 더한 것이라는 뜻이며, 이 덕분에 두 cone을 같은 곳에서 비교할 수 있다.
-
-가령 $X\times B$ 위의 vector bundle $E$의 section $\widetilde{s}$를 잡고 $s_b=\widetilde{s}\vert_{X\times\{b\}}$라 하면, family $\mathcal{X}=Z(\widetilde{s})$는 $B$ 상대 perfect obstruction theory $[E^\vee\vert_{\mathcal{X}}\rightarrow\Omega_{X\times B/B}\vert_{\mathcal{X}}]$를 가지며, 이를 fiber $M=Z(s_b)$로 당긴 것은 그대로 $M$의 perfect obstruction theory $[E^\vee\vert_M\rightarrow\Omega_X\vert_M]$이다. Target을 변형하는 stable map의 family에서도 target의 relative tangent bundle로 만든 perfect obstruction theory가 같은 성질을 갖는다. 이처럼 $\mathcal{X}$의 $B$ 상대 perfect obstruction theory를 fiber로 당긴 것이 $M$의 perfect obstruction theory이면 compatibility는 저절로 성립하고, 이 경우에는 $\mathcal{X}\rightarrow B$가 flat이 아니어도 $[M]^\vir=i_b^![\mathcal{X}]^\vir$이다. ([BF, Proposition 7.2]) 여기서 $i_b^!$은 $\{b\}\hookrightarrow B$의 refined Gysin map이다. 이때 등식은 cone을 fiber로 당겨서 얻는 것이 아니다. $\mathcal{X}\rightarrow B$가 flat이 아니면 cone은 fiber로 당기는 것과 가환하지 않으며 ([BF, Proposition 7.1]), 등식은 zero section의 Gysin map과 $i_b^!$의 순서를 바꾸는 데서 나온다.
-
-여기서 deformation invariance가 나온다. $B$가 connected이고 $\mathcal{X}$가 $B$ 위에서 proper라 하자. $\mathcal{X}$ 위의 cohomology class $\gamma$를 $\gamma\cap[\mathcal{X}]^\vir$의 차원이 $\dim B$가 되도록 잡고 $p:\mathcal{X}\rightarrow B$로 밀면, $p_\ast(\gamma\cap[\mathcal{X}]^\vir)$는 $A_{\dim B}(B)=\mathbb{Z}[B]$의 원소, 곧 $[B]$의 정수배이다. 이를 점 $b$에서 자른 것이 $\gamma$를 $M$으로 제한하여 $[M]^\vir$ 위에서 적분한 값이므로, 그 값은 $b$에 의존하지 않는다.
+이다. ([BF, Proposition 5.10]) 위의 triangle에서 $\rank E^\bullet=\rank E_{\mathcal{X}}^\bullet-\dim B$이므로 양변의 차원은 맞는다. 이 등식은 cone끼리의 등식에서 오지 않는다. $\mathcal{X}$의 cone을 $M$으로 제한한 것은 일반적으로 $M$의 cone과 다르며, 등식은 zero section의 Gysin map과 $i_b^!$의 순서를 바꾼 뒤 $i_b^!$가 $\mathcal{X}$의 cone의 class를 $M$의 cone의 class로 보낸다는 데서 나온다.
 
 ## 안정사상들의 가상 기본류
 
@@ -433,6 +439,8 @@ $$[\overline{\mathcal{M}}_{0,n}(X,\beta)]^\vir=[\overline{\mathcal{M}}_{0,n}(X,\
 :::
 
 [§그로모프-위튼 불변량, ⁋정의 1](/ko/math/gromov-witten_theory/gromov-witten_invariants#def1){: data-lid="gt4df" }에서 우리는 fundamental class $[\overline{\mathcal{M}}_{0,n}(X,\beta)]$가 존재하는 경우에 대해서만 정의하였으나, 이 fundamental class만 virtual fundamental class로 바꿔주면 convex 가정 없이도 임의의 smooth projective target $X$에 대한 genus $0$ Gromov-Witten invariant를 정의할 수 있으며, convex 가정 하에서 이 두 정의가 같은 것은 위의 [예시 14](#ex14){: data-lid="bt6x3" }에 의해 자명하다. 그럼 이 정의 하에서, virtual class가 forgetful morphism 및 gluing morphism에 대해 잘 행동하는 것을 확인할 수 있으므로 [§그로모프-위튼 불변량, §§그로모프-위튼 불변량의 공리들](/ko/math/gromov-witten_theory/gromov-witten_invariants#그로모프-위튼-불변량의-공리들){: data-lid="huqbc" }의 string·divisor·splitting 공리와 WDVV 관계도 해당 적분들을 virtual class에 대한 적분으로 해석하면 그대로 성립한다.
+
+실제 moduli에서 [명제 12](#prop12)의 둘째 주장의 family는 base에 상대적인 perfect obstruction theory를 가지고 나온다. 가령 $X\times B$ 위의 vector bundle $E$의 section $\widetilde{s}$를 잡고 $s_b=\widetilde{s}\vert_{X\times\{b\}}$라 하면, family $\mathcal{X}=Z(\widetilde{s})$는 $B$ 상대 perfect obstruction theory $[E^\vee\vert_{\mathcal{X}}\rightarrow\Omega_{X\times B/B}\vert_{\mathcal{X}}]$를 가지며, 이를 fiber $M=Z(s_b)$로 당긴 것은 그대로 $M$의 perfect obstruction theory $[E^\vee\vert_M\rightarrow\Omega_X\vert_M]$이다. Target을 변형하는 stable map의 family에서도 $T_X$ 대신 target의 relative tangent bundle로 만든 [명제 13](#prop13)의 perfect obstruction theory가 같은 성질을 갖는다. 이처럼 $\mathcal{X}$의 $B$ 상대 perfect obstruction theory를 fiber로 당긴 것이 $M$의 perfect obstruction theory이면 compatibility는 저절로 성립하고, $[M]^\vir=i_b^![\mathcal{X}]^\vir$이다. ([BF, Proposition 7.2]) 이때 $\mathfrak{c}_M$은 $\mathfrak{c}_{\mathcal{X}/B}$를 $M$으로 제한한 것의 closed substack이지만 일반적으로 그 전체는 아니다. ([BF, Proposition 7.1])
 
 ## Zero locus의 가상 기본류
 

@@ -47,7 +47,7 @@ $$\sgn(\tau\circ\tau')=\sgn(\tau)\sgn(\tau')$$
 
 holds.
 
-Suppose an arbitrary alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$ is given. Then by the definition of $\sgn$, we see that
+Suppose an arbitrary alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$ is given. Then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3) and the definition of $\sgn$, we see that
 
 $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)})$$
 
@@ -68,7 +68,7 @@ then
 $$\begin{aligned}f(v_1,\ldots, v_n)&=\sum_{i_1=1}^nv_{i_1}^1f(e_{i_1},v_2,\ldots, v_n)\\
 &=\sum_{i_1,i_2=1}^n v_{i_1}^1v_{i_2}^2f(e_{i_1},e_{i_2},v_3,\ldots, v_n)\\&=\cdots\\&=\sum_{i_1,\ldots, i_n=1}^nv_{i_1}^1v_{i_2}^2\ldots v_{i_n}^nf(e_{i_1},\ldots, e_{i_n})\end{aligned}$$
 
-holds. By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="zj3f0" }, if there are identical indices among $i_1,\ldots, i_n$, the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
+holds. By [§Determinant, ⁋Definition 2](/en/math/linear_algebra/determinant#def2){: data-lid="zj3f0" }, if there are identical indices among $i_1,\ldots, i_n$, the value of $f(e_{i_1},\ldots,e_{i_n})$ is always 0, so the right-hand side becomes
 
 $$f(v_1,\ldots, v_n)=\sum_{\tau\in S_n}v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}f(e_{\tau(1)},\ldots, e_{\tau(n)})$$
 
@@ -86,7 +86,7 @@ For existence, similarly motivated by equation (1), if we define
 
 $$D(v_1,\ldots, v_n)=\sum_{\tau\in S_n}\sgn(\tau)v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}$$
 
-it suffices to show that $D$ is indeed an alternating multilinear map. Since this is simply repeating the above calculation in reverse, we omit it.
+it suffices to show that $D$ is indeed an alternating multilinear map. Since each term contains exactly one component of each $v_k$, $D$ is multilinear. Now let $v_i=v_j$ for some $i\neq j$, and let $\upsilon$ be the transposition exchanging $i$ and $j$. Then the elements of $S_n$ split into pairs $\tau$ and $\tau\circ\upsilon$, and since $v_i=v_j$, the terms corresponding to these two permutations have the same product of components while $\sgn(\tau\circ\upsilon)=-\sgn(\tau)$. Hence they cancel each other, and $D(v_1,\ldots, v_n)=0$.
 :::
 
 Therefore, the determinant is well-defined, and we denote it by $\det$. In the course of proving the proposition above, we obtained a formula for the determinant $\det A$. That is, for a matrix $A$, if we denote its $i$-th column vector by $A_i$, then in $A_i$, the $j$-th component is equal to $A_{ji}$, and therefore
@@ -124,7 +124,7 @@ Therefore,
 
 $$\begin{aligned}\det(AB)&=\det((AB)_1, (AB)_2,\ldots, (AB)_n)\\&=\sum_{\tau\in S_n}\sgn(\tau)(AB)_{\tau(1)1}(AB)_{\tau(2)2}\cdots(AB)_{\tau(n)n}\\&=\sum_{\tau\in S_n}\sgn(\tau)\left(\sum_{i_1=1}^nA_{\tau(1)i_1}B_{i_11}\right)\cdots\left(\sum_{i_n=1}^nA_{\tau(n)i_n}B_{i_nn}\right)\\&=\sum_{\tau\in S_n}\sum_{i_1,\ldots, i_n=1}^n\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}B_{i_11}\cdots B_{i_nn}\\&=\sum_{i_1,\ldots, i_n=1}^nB_{i_11}\cdots B_{i_nn}\left(\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)i_1}\cdots A_{\tau(n)i_n}\right)\\&=\sum_{i_1,\ldots, i_n=1}^n\det(A_{i_1},\ldots, A_{i_n})B_{i_11}\cdots B_{i_nn}\end{aligned}$$
 
-By [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="1kgu4" }, if there are duplicate indices among $i_1,\ldots, i_n$, the value of $\det(A_{i_1},\ldots, A_{i_n})$ is always 0, so on the right-hand side of the above equation, only terms where $i_1,\ldots, i_n$ are distinct remain. Now, if we define $\upsilon\in S_n$ to be the element satisfying the equation
+By [§Determinant, ⁋Definition 2](/en/math/linear_algebra/determinant#def2){: data-lid="1kgu4" }, if there are duplicate indices among $i_1,\ldots, i_n$, the value of $\det(A_{i_1},\ldots, A_{i_n})$ is always 0, so on the right-hand side of the above equation, only terms where $i_1,\ldots, i_n$ are distinct remain. Now, if we define $\upsilon\in S_n$ to be the element satisfying the equation
 
 $$\upsilon(1)=i_1,\ldots, \upsilon(n)=i_n$$
 
@@ -141,7 +141,7 @@ In the previous post, we gave a geometric explanation that a matrix $A$ being in
 For any matrix $A\in\Mat_n(\mathbb{K})$, $\det A\neq 0$ is equivalent to $A$ being invertible.
 :::
 ::: Proof
-From [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-lid="ga49b" }, we know that $A$ being invertible is equivalent to the linear map defined by $A$, $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$, being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is in turn equivalent to $L_A$ being surjective, which is equivalent to the basis of $\col(A)$, the column vectors $A_1,\ldots, A_n$, being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="zcri0" } we have $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
+From [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-lid="ga49b" }, we know that $A$ being invertible is equivalent to the linear map defined by $A$, $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$, being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is in turn equivalent to $L_A$ being surjective, which is equivalent to the basis of $\col(A)$, the column vectors $A_1,\ldots, A_n$, being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Definition 2](/en/math/linear_algebra/determinant#def2){: data-lid="zcri0" } we have $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
 
 Conversely, assume that $A$ is invertible. Then from the equation
 

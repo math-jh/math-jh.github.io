@@ -81,7 +81,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 위의 정리를 이용하면 [\[집합론\] §Retraction과 section, ⁋명제 1](/ko/math/set_theory/retraction_and_section#prop1){: data-lid="7jn0o" }에 대응되는 다음 명제를 증명할 수 있다.
 
 ::: 따름정리 2
-두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
+두 유한차원 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
 1. 만일 $L$이 단사함수라면, 적당한 linear map $R:W\rightarrow V$가 존재하여 $R\circ L=\id_V$이다.
 2. 만일 $L$이 전사함수라면, 적당한 linear map $S:W\rightarrow V$가 존재하여 $L\circ S=\id_W$이다.

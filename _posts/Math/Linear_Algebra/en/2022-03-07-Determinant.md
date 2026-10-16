@@ -42,26 +42,20 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a multilinear map
 
 $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
-be given. If for any $v_1,\ldots, v_n$ and any $i\neq j$ the following equation
+be given. If for any $v_1,\ldots, v_n$ and any $i\neq j$ we always have $f(v_1,\ldots, v_n)=0$ whenever $v_i=v_j$, then $f$ is called an *alternating multilinear map*.
+:::
+
+As above, let a multilinear map $f:V\times\cdots\times V\rightarrow W$ be given. Then $f$ is said to be *antisymmetric* if for any $v_1,\ldots, v_n$ and any $i\neq j$ the following equation
 
 $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ldots, v_n)$$
 
-always holds, then $f$ is called an *alternating multilinear map*.
-:::
-
-As above, let a multilinear map $f:V\times\cdots\times V\rightarrow W$ be given. Then $f$ is said to be *antisymmetric* if for any $v_1,\ldots, v_n$ and any $i\neq j$, whenever $v_i=v_j$ we have $f(v_1,\ldots, v_n)=0$.
+holds.
 
 ::: Proposition 3
-A multilinear map $f:V\times\cdots\times V\rightarrow W$ is alternating if and only if $f$ is antisymmetric.
+An alternating multilinear map is antisymmetric.
 :::
 ::: Proof
-First, assume that $f$ is alternating. Then, whenever $v_i=v_j$ for any $v_1,\ldots, v_n\in V$,
-
-$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
-
-holds, so $f$ is also antisymmetric. (The first equality uses the fact that $v_i=v_j$, and the second uses the fact that $f$ is alternating.)
-
-Conversely, assume that $f$ is antisymmetric. For any $v_1,\ldots, v_n$ and any $i\neq j$, the fact that $f$ is antisymmetric gives the equation
+Let $f$ be alternating. For any $v_1,\ldots, v_n$ and any $i\neq j$, the fact that $f$ is alternating gives the equation
 
 $$f(v_1,\ldots, v_i+v_j,\ldots, v_i+v_j,\ldots, v_n)=0$$
 
@@ -69,10 +63,16 @@ where $v_i+v_j$ appears in the $i,j$-th components, respectively. Now applying m
 
 $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i,\ldots, v_j,\ldots,v_n)\\&\phantom{==}+f(v_1,\ldots, v_j,\ldots, v_i,\ldots,v_n)+f(v_1,\ldots, v_j,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
-and since $f$ is again antisymmetric, the first and last terms (in which $v_i, v_j$ each appear twice) become $0$. From this, we obtain the desired conclusion.
+and since $f$ is again alternating, the first and last terms (in which $v_i, v_j$ each appear twice) become $0$. From this, we obtain the desired conclusion.
 :::
 
-In particular, suppose $f$ is an alternating multilinear map in $n$ variables and one of $v_1,\ldots, v_n$ is a linear combination of the other $n-1$ vectors. Then applying multilinearity followed by the proposition above, we see that $f(v_1,\ldots, v_n)=0$.
+If $\mathbb{K}$ is $\mathbb{R}$ or $\mathbb{C}$, the converse of the above proposition also holds. Let $f$ be antisymmetric. Then for any $v_1,\ldots, v_n\in V$ with $v_i=v_j$,
+
+$$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1,\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
+
+holds, so $2f(v_1,\ldots, v_n)=0$, and dividing both sides by $2$ gives $f(v_1,\ldots, v_n)=0$. (The first equality uses the fact that $v_i=v_j$, and the second uses the fact that $f$ is antisymmetric.)
+
+Meanwhile, suppose $f$ is an alternating multilinear map in $n$ variables and one of $v_1,\ldots, v_n$ is a linear combination of the other $n-1$ vectors. Then applying multilinearity expresses $f(v_1,\ldots, v_n)$ as a sum of terms in which some vector appears twice, so from the fact that $f$ is alternating we see that $f(v_1,\ldots, v_n)=0$.
 
 We are now in a position to define the determinant.
 
@@ -117,7 +117,7 @@ In the usual notion of area, multiplying the length of one side of a parallelogr
 
 {% diagram Math/Linear_Algebra/Determinant-4.svg width="12em" alt="Multilinearity" %}
 
-Moreover, considering shear transformations, for a fixed side $v_n$, adding a linear combination of the $n-1$ vectors $v_1,\ldots, v_{n-1}$ forming the base to $v_n$ preserves the value of $D$. This means that if $v_n$ is a linear combination of $v_1,\ldots, v_{n-1}$, then $D(v_1,\ldots, v_n)=0$, and hence by [Proposition 3](#prop3){: data-lid="2rt11" } this is equivalent to $D$ being alternating.
+Moreover, considering shear transformations, for a fixed side $v_n$, adding a linear combination of the $n-1$ vectors $v_1,\ldots, v_{n-1}$ forming the base to $v_n$ preserves the value of $D$. This means that if $v_n$ is a linear combination of $v_1,\ldots, v_{n-1}$, then $D(v_1,\ldots, v_n)=0$, and this is equivalent to $D$ being alternating.
 
 We have not yet proved the uniqueness of the determinant, but we can verify that [Definition 4](#def4){: data-lid="8h1fc" } completely determines it; thus we may think of the determinant as signed volume. Now in this picture, we can see that the reason the determinant being $0$ is equivalent to $A$ being non-invertible is that in $n$-dimensional space, the volume of a parallelepiped of dimension less than $n$ is always 0.
 

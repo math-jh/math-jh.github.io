@@ -29,7 +29,7 @@ weight: 7
 정의에 의해 임의의 isomorphism은 두 집합 $V,W$ 사이의 전단사함수이다. 뿐만 아니라, 다음 보조정리에 의하여 그 역 또한 성립한다. 
 
 ::: 보조정리 2
-두 $\mathbb{K}$-벡터공간 $V$, $W$에 대하여 $L:V\rightarrow W$가 isomorphism이라 하자. 그럼 $L$의 역함수 $L^{-1}$이 존재하며, $L^{-1}$은 linear이다.
+두 $\mathbb{K}$-벡터공간 $V$, $W$에 대하여 linear map $L:V\rightarrow W$가 전단사라 하자. 그럼 $L$의 역함수 $L^{-1}$이 존재하며, $L^{-1}$은 linear이다.
 :::
 ::: 증명
 $L^{-1}$이 존재한다는 것은 집합론에서의 결과이며, 이 때 $L\circ L^{-1}=\id_W$이고 $L^{-1}\circ L=\id_V$이다. 
@@ -86,12 +86,12 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 다음 두 명제들은 새로 번호를 붙이기도 아깝다.
 
 1. $L$이 단사인 것은 $\nullity L=0$인 것과 동치이다.
-2. $L$이 전사인 것은 $\rank L=\dim W$인 것과 동치이다.
+2. $W$가 유한차원이라면, $L$이 전사인 것은 $\rank L=\dim W$인 것과 동치이다.
 
 뿐만 아니라, 다음의 정리가 성립한다.
 
 ::: 정리 7 (Rank-nullity theorem)
-두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$이 주어졌다 하자. 그럼 다음의 식 
+두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$이 주어졌다 하자. 만일 $V$가 유한차원이라면 다음의 식 
 
 $$\rank L+\nullity L=\dim V$$
 
