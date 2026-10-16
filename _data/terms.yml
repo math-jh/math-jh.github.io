@@ -10003,6 +10003,8 @@ I:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: intermediate_extension
   en: intermediate extension
   ko: 중간 연장
@@ -13724,6 +13726,8 @@ N:
     url: /ko/math/ring_theory/division_rings
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: normal_bundle
   en: normal bundle
   ko: 법다발
@@ -13874,6 +13878,13 @@ N:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: normed_space
+  en: normed space
+  ko: 노름공간
+  primary: en
+  defs:
+  - label: '[해석학] §거리공간과 열린집합·닫힌집합'
+    url: /ko/math/analysis/metric_spaces
 - id: novikov_ring
   en: Novikov ring
   ko: 노비코프 환
