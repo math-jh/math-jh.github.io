@@ -80,7 +80,7 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1){: data-lid="7jn0o" }.
 
 ::: Corollary 2
-Suppose we are given two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$.
+Suppose we are given two finite-dimensional $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$.
 
 1. If $L$ is injective, there exists a linear map $R:W\rightarrow V$ such that $R\circ L=\id_V$.
 2. If $L$ is surjective, there exists a linear map $S:W\rightarrow V$ such that $L\circ S=\id_W$.
