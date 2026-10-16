@@ -9978,6 +9978,13 @@ I:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+- id: intermediate_value_property
+  en: intermediate value property
+  ko: 중간값 성질
+  primary: en
+  defs:
+  - label: '[해석학] §연결성과 중간값 정리'
+    url: /ko/math/analysis/connectedness
 - id: intermediate_value_theorem
   en: intermediate value theorem
   ko: 중간값 정리
