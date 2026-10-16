@@ -436,11 +436,19 @@ $$\vdim=\int_\beta c_1(T_X)+(\dim X-3)(1-g)+n$$
 
 {% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-4.svg width="26.48em" alt="absolute obstruction theory from the relative one" %}
 
-에서 둘째 vertical map을 만들어야 하고, 이는 합성 $a:E^\bullet\xrightarrow{\phi}\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$에 대하여 $(E')^\bullet=\Cone(a)[-1]$로 정의하면 양 끝의 vertical map이 주어져 있으므로 자동으로 존재한다. 이렇게 얻은 $\phi'$이 $h^0$에서 isomorphism이고 $h^{-1}$에서 surjective라는 것은 five lemma에서 나온다. 이 때 base의 smoothness는 $q^\ast\LL_{\mathfrak{M}_{g,n}}$에 음의 degree 항이 없게 하고, $M$이 Deligne–Mumford stack이라는 것은 curve의 무한소 automorphism이 담긴 degree $1$ 항을 죽이므로, 둘이 함께 $(E')^\bullet$의 amplitude를 $[-1,0]$으로 지켜주어 이를 perfect obstruction theory로 만들게 된다. 
+에서 둘째 vertical map을 만들어야 하고, 이는 합성 $a:E^\bullet\xrightarrow{\phi}\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$에 대하여 $(E')^\bullet=\Cone(a)[-1]$로 정의하면 양 끝의 vertical map이 주어져 있으므로 자동으로 존재한다.
+
+여기서 $\Cone(a)$는 $a$의 mapping cone이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8)) Mapping cone은 distinguished triangle $E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]\rightarrow\Cone(a)\rightarrow E^\bullet[1]$에 들어가며, 이를 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12)의 (TR2)로 한 번 돌리고 전체를 $[-1]$만큼 shift하면 위 diagram의 윗줄 $q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow(E')^\bullet\rightarrow E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$을 얻는다. 아랫줄도 connecting map $\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$로부터 같은 방식으로 얻어지므로, $(E')^\bullet$은 $\LL_M$을 얻는 방식에서 $\LL_{M/\mathfrak{M}_{g,n}}$ 자리에 $E^\bullet$을 넣은 것이다. 또 $a$의 정의에 의해 오른쪽 사각형이 commute하므로, (TR3)에 의해 가운데를 채우는 $\phi'$이 존재한다.
+
+이렇게 얻은 $\phi'$이 perfect obstruction theory라는 것은 두 triangle의 cohomology long exact sequence를 나란히 놓은 diagram
+
+{% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-5.svg width="55.62em" alt="cohomology sequences of the two triangles" %}
+
+에서 읽을 수 있다. 윗줄은 위 diagram의 윗줄에서, 아랫줄은 아랫줄에서 온 것이다. $h^0(\phi)$가 isomorphism이고 $h^{-1}(\phi)$가 surjective이므로, [\[호몰로지 대수학\] §Diagram chasing, ⁋명제 1](/ko/math/homological_algebra/diagram_chasing#prop1)을 연속한 네 항씩 적용하면 $h^0(\phi')$은 isomorphism이고 $h^{-1}(\phi')$은 surjective이다. 이 때 base의 smoothness는 $q^\ast\LL_{\mathfrak{M}_{g,n}}$에 음의 degree 항이 없게 하고, $M$이 Deligne–Mumford stack이라는 것은 curve의 무한소 automorphism이 담긴 degree $1$ 항을 죽이므로, 둘이 함께 $(E')^\bullet$의 amplitude를 $[-1,0]$으로 지켜주어 이를 perfect obstruction theory로 만들게 된다. 실제로 $M$이 Deligne–Mumford stack이면 $h^1(\LL_M)=0$이므로 아랫줄의 $h^0(\LL_{M/\mathfrak{M}_{g,n}})\rightarrow h^1(q^\ast\LL_{\mathfrak{M}_{g,n}})$은 surjective이고, $h^0(\phi)$가 isomorphism이므로 윗줄의 $h^0(E^\bullet)\rightarrow h^1(q^\ast\LL_{\mathfrak{M}_{g,n}})$도 surjective이다. 그럼 $h^1(E^\bullet)=0$이므로 $h^1((E')^\bullet)=0$이다.
 
 이 triangle은 relative obstruction과 absolute obstruction의 관계도 알려준다. Triangle을 dualize하여 점 $z=[(C,p_\bullet,\mu)]$에서의 derived fiber의 cohomology를 취하면, $M$이 Deligne–Mumford stack이고 $\mathfrak{M}_{g,n}$이 smooth하므로 양 끝이 $0$인 exact sequence
 
-$$\begin{aligned}0&\rightarrow h^{-1}(q^\ast\LL_{\mathfrak{M}_{g,n}}^\vee\vert_z)\rightarrow h^0((E^\bullet)^\vee\vert_z)\rightarrow h^0(((E')^\bullet)^\vee\vert_z)\\&\rightarrow h^0(q^\ast\LL_{\mathfrak{M}_{g,n}}^\vee\vert_z)\rightarrow h^1((E^\bullet)^\vee\vert_z)\rightarrow h^1(((E')^\bullet)^\vee\vert_z)\rightarrow0\end{aligned}$$
+{% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-6.svg width="53.66em" alt="relative and absolute deformations and obstructions at a point" %}
 
 을 얻는다. 각 항은 차례로 marked curve의 무한소 automorphism, $H^0(C,\mu^\ast T_X)$, $T^1$, marked curve의 deformation, $H^1(C,\mu^\ast T_X)$, $T^2$이고, 이는 [§안정사상들의 모듈라이 공간, ⁋명제 4](/ko/math/gromov-witten_theory/moduli_of_stable_maps#prop4){: data-lid="ydjrs" }의 exact sequence이다. 특히 relative obstruction $H^1(C,\mu^\ast T_X)$는 absolute obstruction $T^2$로 surjective하게 가고, 그 kernel은 curve의 deformation, 가령 node를 펴는 방향의 image이다. 따라서 relative하게 unobstructed인 점은 absolute하게도 unobstructed이다. 반대로 $H^1(C,\mu^\ast T_X)\neq0$이더라도 그 전체가 curve의 deformation의 image이면 $T^2=0$이므로, relative하게는 obstructed이지만 absolute하게는 unobstructed인 점이 있을 수 있다.
 
