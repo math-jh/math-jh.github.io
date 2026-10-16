@@ -10001,10 +10001,10 @@ I:
   ko: 내부점
   primary: en
   defs:
-  - label: '[미분다양체] §경계가 있는 다양체'
-    url: /ko/math/manifolds/manifolds_with_boundary
   - label: '[해석학] §거리공간과 열린집합·닫힌집합'
     url: /ko/math/analysis/metric_spaces
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: intermediate_extension
   en: intermediate extension
   ko: 중간 연장
@@ -11892,10 +11892,10 @@ L:
   ko: 선형계
   primary: en
   defs:
-  - label: '[대수다양체] §선형계'
-    url: /ko/math/algebraic_varieties/linear_systems
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
+  - label: '[대수다양체] §선형계'
+    url: /ko/math/algebraic_varieties/linear_systems
 - id: linearization
   en: linearization
   ko: 선형화
