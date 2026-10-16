@@ -12318,6 +12318,13 @@ L:
     url: /ko/math/group_theory/series_of_groups
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
+- id: lower_integral
+  en: lower integral
+  ko: 하적분
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: lower_semicontinuous
   en: lower semicontinuous
   ko: 하반연속
@@ -12679,6 +12686,8 @@ M:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral#def1
 - id: metric
   en: metric
   ko: 거리함수
@@ -19978,6 +19987,13 @@ T:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: thomae_function
+  en: Thomae function
+  ko: Thomae 함수
+  primary: ko
+  defs:
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: tits_form
   en: Tits form
   ko: 티츠 형식
@@ -20926,6 +20942,13 @@ U:
   defs:
   - label: '[복소해석학] §유수를 이용한 실적분 계산'
     url: /ko/math/complex_analysis/residue_integrals
+- id: upper_integral
+  en: upper integral
+  ko: 상적분
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: upper_set
   en: upper set
   ko: 상집합

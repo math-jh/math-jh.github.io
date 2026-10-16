@@ -20,7 +20,7 @@ published: false
 ## 분할과 Darboux 합
 
 ::: 정의 1 (분할과 Darboux 합)
-$[a,b]$의 *분할<sub>partition</sub>*은 $a = x_0 < x_1 < \cdots < x_n = b$인 유한집합 $P = \{x_0, \dots, x_n\}$이다. 각 $i$에 대하여 $I_i = [x_{i-1}, x_i]$, $\Delta x_i = x_i - x_{i-1}$로 적고, $\lVert P\rVert = \max_i \Delta x_i$를 $P$의 *mesh*라 한다. Bounded function $f : [a,b] \to \mathbb{R}$에 대하여
+$[a,b]$의 *분할<sub>partition</sub>*은 $a = x_0 < x_1 < \cdots < x_n = b$인 유한집합 $P = \{x_0, \dots, x_n\}$이다. 각 $i$에 대하여 $I_i = [x_{i-1}, x_i]$, $\Delta x_i = x_i - x_{i-1}$로 적고, $\lVert P\rVert = \max_i \Delta x_i$를 $P$의 *mesh<sub>너비</sub>*라 한다. Bounded function $f : [a,b] \to \mathbb{R}$에 대하여
 
 $$m_i = \inf_{x \in I_i} f(x), \qquad M_i = \sup_{x \in I_i} f(x)$$
 
