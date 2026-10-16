@@ -143,7 +143,7 @@ In the previous post, we explained geometrically that a matrix $A$ being inverti
 For any matrix $A\in\Mat_n(\mathbb{K})$, $\det A\neq 0$ is equivalent to $A$ being invertible.
 :::
 ::: Proof
-From [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-lid="ga49b" }, we know that $A$ being invertible is equivalent to the linear map defined by $A$, $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$, being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is in turn equivalent to $L_A$ being surjective, which is equivalent to the basis of $\col(A)$, the column vectors $A_1,\ldots, A_n$, being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Definition 2](/en/math/linear_algebra/determinant#def2){: data-lid="zcri0" } we have $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
+From [§Fundamental Theorem of Linear Algebra](/en/math/linear_algebra/ftla){: data-lid="ga49b" }, we know that $A$ being invertible is equivalent to the linear map defined by $A$, $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$, being invertible. Since $\mathbb{K}^n$ is finite-dimensional, this is in turn equivalent to $L_A$ being surjective, that is, $\col(A)=\mathbb{K}^n$, which is equivalent to the $n$ column vectors $A_1,\ldots, A_n$ that span $\col(A)$ being linearly independent. If $A_1,\ldots, A_n$ are not linearly independent, then by [§Determinant, ⁋Definition 2](/en/math/linear_algebra/determinant#def2){: data-lid="zcri0" } we have $\det A=0$. That is, if $\det A\neq 0$, then $A$ is invertible.
 
 Conversely, assume that $A$ is invertible. Then from the equation
 
@@ -230,7 +230,7 @@ This is immediate from the identity
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\C&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-together with [Proposition 9](#prop9){: data-lid="l13qf" } and [Lemma 4](#lem4){: data-lid="ausxq" }. The middle matrix is a lower triangular matrix whose diagonal entries are all 1, so its determinant is 1 by [Proposition 8](#prop8){: data-lid="283r5" }. For the last matrix, performing $l$ row swaps followed by $l$ column swaps results in $2l$ sign changes, so the determinant of the given matrix is equal to $\det B$.
+together with [Proposition 9](#prop9){: data-lid="l13qf" } and [Lemma 4](#lem4){: data-lid="ausxq" }. The middle matrix is a lower triangular matrix whose diagonal entries are all 1, so its determinant is 1 by [Proposition 8](#prop8){: data-lid="283r5" }. For the last matrix, performing $kl$ row swaps to move the bottom $l$ rows in front of the top $k$ rows followed by $kl$ column swaps in the same manner results in $2kl$ sign changes, so the determinant of the given matrix is equal to $\det B$.
 :::
 
 We can extend the results above inductively without difficulty. That is,
