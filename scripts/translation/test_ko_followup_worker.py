@@ -45,6 +45,26 @@ class FollowupBatchTest(unittest.TestCase):
         self.assertIn("이들 두 quotient가", diff)
         self.assertNotIn('data-lid="bbbbb"', diff)
 
+    def test_scoped_diff_context_is_the_current_text(self) -> None:
+        baseline = (
+            "antisymmetric은 같은 성분이면 0인 것이다.\n"
+            + "문맥입니다.\n" * 2
+            + "두 정의는 동치이다.\n"
+        )
+        current = baseline.replace(
+            "같은 성분이면 0인 것이다", "교환하면 부호가 바뀌는 것이다",
+        ).replace("두 정의는 동치이다", "alternating이면 antisymmetric이다")
+
+        diff = worker._scoped_ko_diff(
+            baseline, current,
+            [{"quote": "두 정의는 동치이다.", "line": 6}],
+            "ko.md",
+        )
+
+        self.assertIn("+alternating이면 antisymmetric이다.", diff)
+        self.assertIn(" antisymmetric은 교환하면 부호가 바뀌는 것이다.", diff)
+        self.assertNotIn("같은 성분이면 0", diff)
+
     def test_scoped_diff_keeps_the_finding_links_metadata(self) -> None:
         baseline = '[대상](target)\n'
         current = '[대상](target){: data-lid="aaaaa" }\n'
@@ -263,6 +283,26 @@ class FollowupBatchTest(unittest.TestCase):
         self.assertEqual(why, "already synchronized")
         self.assertIn(
             "The final English already includes the justification.",
+            captured["prompt"],
+        )
+
+    def test_codex_receives_the_current_korean_post(self) -> None:
+        captured = {}
+
+        def run(cmd, **kwargs):
+            captured["prompt"] = kwargs["input"]
+            out_path = Path(cmd[cmd.index("--output-last-message") + 1])
+            out_path.write_text('{"pass":true,"why":"ok"}', encoding="utf-8")
+            return SimpleNamespace(returncode=0, stderr="")
+
+        with patch.object(worker.subprocess, "run", side_effect=run):
+            worker.codex_pass(
+                [{"issue": "gap"}], "KO diff", "(no changes)", "EN",
+                current_ko="정의 2. 같은 성분이면 0이다.",
+            )
+
+        self.assertIn(
+            "--- BEGIN CURRENT KO ---\n정의 2. 같은 성분이면 0이다.\n--- END CURRENT KO ---",
             captured["prompt"],
         )
 

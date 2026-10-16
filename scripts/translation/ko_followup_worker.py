@@ -144,7 +144,10 @@ def _scoped_ko_diff(
 
     Follow-up review owns the correction identified by each finding. Link
     metadata or prose edited elsewhere belongs to its own workflow and must not
-    make this request pass or fail.
+    make this request pass or fail. Such edits are folded into the old side, so
+    they never show as changes and every context line is the current text; a
+    definition rewritten just outside the radius must not reappear in its
+    pre-edit wording beside the corrected statement.
     """
     before = baseline.splitlines(keepends=True)
     after = current.splitlines(keepends=True)
@@ -166,9 +169,9 @@ def _scoped_ko_diff(
             and change_end > start - FINDING_CHANGE_RADIUS
             for start, end in spans
         )
-        scoped.extend(after[j1:j2] if relevant else before[i1:i2])
+        scoped.extend(before[i1:i2] if relevant else after[j1:j2])
 
-    return _diff(baseline, "".join(scoped), f"a/{path}", f"b/{path}")
+    return _diff("".join(scoped), current, f"a/{path}", f"b/{path}")
 
 
 def _fallback_ko_base(path: str, reviewed_at: str) -> str | None:
@@ -295,13 +298,16 @@ def _replacement_miss(text: str, old: str, idx: int, total: int) -> str:
 
 CODEX_PROMPT = """Review one completed Korean-source correction and its English follow-up.
 
-You receive the original reviewed findings, the two unified diffs, and the final
-English text after the proposed follow-up. Judge whether the KO diff resolves
-the original issue, and whether the final English faithfully reflects that resolved
-Korean meaning without invention, omission, or unrelated rewriting. The KO diff is
-deliberately scoped to the finding. Do not judge other edits in the post; in
-particular, another link's data-lid metadata belongs to a separate link-level
-workflow. When
+You receive the original reviewed findings, the two unified diffs, the current
+Korean post, and the final English text after the proposed follow-up. Judge
+whether the KO diff resolves the original issue, and whether the final English
+faithfully reflects that resolved Korean meaning without invention, omission, or
+unrelated rewriting. The KO diff is deliberately scoped to the finding: edits
+elsewhere in the post are folded into its context, so its context lines are the
+current Korean text. CURRENT KO is the whole Korean post as it now stands; read
+it for definitions and earlier statements the corrected passage relies on that
+lie outside the diff. Do not judge other edits in the post; in particular,
+another link's data-lid metadata belongs to a separate link-level workflow. When
 the EN diff is empty, inspect FINAL EN rather than assuming the correction is
 missing: it is acceptable only when FINAL EN already expresses the corrected
 meaning. Do not use outside mathematical knowledge to broaden the requested
@@ -338,6 +344,11 @@ AUTHOR NOTE:
 EN DIFF:
 @@EN_DIFF@@
 
+CURRENT KO:
+--- BEGIN CURRENT KO ---
+@@CURRENT_KO@@
+--- END CURRENT KO ---
+
 FINAL EN:
 --- BEGIN FINAL EN ---
 @@FINAL_EN@@
@@ -347,14 +358,15 @@ FINAL EN:
 
 def codex_pass(
     findings: list[dict], ko_diff: str, en_diff: str, final_en: str,
-    author_note: str = "",
+    author_note: str = "", current_ko: str = "",
 ) -> tuple[bool, str]:
     prompt = (CODEX_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
               .replace("@@AUTHOR_NOTE@@", author_note or "(none)")
               .replace("@@EN_DIFF@@", en_diff)
-              .replace("@@FINAL_EN@@", final_en))
+              .replace("@@FINAL_EN@@", final_en)
+              .replace("@@CURRENT_KO@@", current_ko or "(not provided)"))
     with tempfile.TemporaryDirectory(prefix="codex-ko-followup-") as tmp:
         out_path = Path(tmp) / "last-message.json"
         proc = subprocess.run(
@@ -402,7 +414,9 @@ def reviewed_candidate(
             detail = hard_error or next(iter(new_lints or new_struct))
             raise RuntimeError(f"deterministic gate: {detail}")
         en_diff = _diff(current_en, candidate, f"a/{en_rel}", f"b/{en_rel}")
-        passed, why = codex_pass(findings, ko_diff, en_diff, candidate, author_note)
+        passed, why = codex_pass(
+            findings, ko_diff, en_diff, candidate, author_note, current_ko=current_ko,
+        )
         if passed:
             return candidate, True, why
         feedback = why
