@@ -6683,6 +6683,7 @@
 "nyhc5": {relation: required, reviewed: true}
 "nymqp": {relation: required, reviewed: true}
 "nynvs": {relation: required, reviewed: true}
+"nyoog": {relation: weak}
 "nywiz": {relation: required, reviewed: true}
 "nyx72": {relation: weak, reviewed: true}
 "nz2qq": {relation: required, reviewed: true}
