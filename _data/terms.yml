@@ -5550,6 +5550,13 @@ D:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: double_sequence
+  en: double sequence
+  ko: 이중수열
+  primary: en
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: dual_basis
   en: dual basis
   ko: 쌍대기저
@@ -10535,6 +10542,13 @@ I:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: iterated_limit
+  en: iterated limit
+  ko: 반복극한
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: i_th_row_vector
   en: $i$th row vector
   ko: $i$번째 행벡터
@@ -15022,6 +15036,13 @@ P:
 - id: pointwise_convergence
   en: pointwise convergence
   ko: 점별수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
+- id: pointwise_limit
+  en: pointwise limit
+  ko: 점별극한
   primary: ko
   defs:
   - label: '[해석학] §함수열과 점별수렴'
