@@ -5439,3 +5439,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-10-14 15:15
 
 - _posts/Math/Analysis/ko/2026-10-13-Riemann_Stieltjes_Integral.md: 병기 필요 'Riemann–Stieltjes 적분가능' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-10-16 11:15
+
+- _posts/Math/Analysis/ko/2026-06-02-Existence_Uniqueness_ODE.md: 병기 필요 'locally Lipschitz' — 위키 ko 문서 '립시츠 연속 함수' — 병기형 도출 필요

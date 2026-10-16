@@ -3901,6 +3901,13 @@ C:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: contraction_mapping
+  en: contraction mapping
+  ko: 축소사상
+  primary: ko
+  defs:
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
 - id: contraction_operator
   en: contraction operator
   ko: 축약 연산자
@@ -5958,6 +5965,13 @@ E:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: equicontinuity
+  en: equicontinuity
+  ko: 동등연속성
+  primary: ko
+  defs:
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli
 - id: equicontinuous
   en: equicontinuous
   ko: 동등연속
@@ -8226,6 +8240,13 @@ G:
   defs:
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+- id: grönwall_s_inequality
+  en: 'Grönwall''s inequality'
+  ko: Grönwall 부등식
+  primary: en
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: grothendieck_duality
   en: Grothendieck duality
   ko: 그로텐디크 쌍대성
@@ -14826,6 +14847,13 @@ P:
   see:
   - label: Divisor class group
     id: divisor_class_group
+- id: picard_iteration
+  en: Picard iteration
+  ko: Picard 반복
+  primary: en
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: picard_operator
   en: Picard operator
   ko: 피카르 작용소
@@ -18508,6 +18536,13 @@ S:
   defs:
   - label: '[가환대수학] §단사가군과 Matlis duality'
     url: /ko/math/commutative_algebra/matlis_duality
+- id: solution
+  en: solution
+  ko: 해
+  primary: ko
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: solvable
   en: solvable
   ko: 가해
