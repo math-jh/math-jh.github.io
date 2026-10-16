@@ -9,6 +9,10 @@
 # 인라인 시 dvisvgm 글리프 id(g1-101 등)가 페이지 안에서 충돌하므로 경로
 # 해시(+같은 파일 재등장 순번)로 네임스페이싱한다. 출력은 한 줄로 눌러서
 # 인용 블록(>) 안의 임베드가 kramdown에서 깨지지 않게 한다.
+#
+# width는 figure와 svg 양쪽에 건다. figure는 본문 폭(max-width:100%)에서
+# 멈추고 svg는 지정 폭을 유지하므로, 본문보다 넓은 다이어그램은 줄어들거나
+# 삐져나가는 대신 figure 안에서 가로 스크롤된다 (.katex-display와 같은 방식).
 require 'digest'
 
 module Jekyll
@@ -51,7 +55,7 @@ module Jekyll
                 .sub(/\A<\?xml[^>]*\?>\s*/, '')
                 .gsub(/<!--.*?-->/m, '')
       svg = namespace_ids(svg, id_prefix(context))
-      svg = svg.sub('<svg ', %(<svg style="width:100%;height:auto" ))
+      svg = svg.sub('<svg ', %(<svg style="width:#{width || '100%'};height:auto" ))
       svg = svg.gsub(/\s*\n\s*/, ' ').strip
       label = alt.empty? ? '' : %( role="img" aria-label="#{attr_escape(alt)}")
       %(<figure class="diagram align-center"#{style}#{label}>#{svg}</figure>)

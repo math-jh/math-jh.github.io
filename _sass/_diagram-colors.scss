@@ -13,10 +13,15 @@ $diag-accent3: #3a1f0b; // 코코아
 figure.diagram {
   display: block;
   margin: 0 auto 1em;
+  // 본문보다 넓으면 가로 스크롤 (svg 폭은 태그가 인라인으로 고정)
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 
   svg {
     display: block;
     width: 100%;
+    max-width: none;
     height: auto;
     fill: currentColor; // 글리프(fill 무속성)가 본문 글자색을 상속
   }
