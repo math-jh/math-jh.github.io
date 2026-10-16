@@ -48,7 +48,7 @@ $$\sgn(\tau\circ\tau')=\sgn(\tau)\sgn(\tau')$$
 
 이 성립한다.
 
-임의의 alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$가 주어졌다 하자. 그럼 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3)과 $\sgn$의 정의에 의하여, 
+임의의 alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$가 주어졌다 하자. 그럼 [§행렬식, ⁋명제 3](/ko/math/linear_algebra/determinant#prop3){: data-lid="vypfd" }과 $\sgn$의 정의에 의하여, 
 
 $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)})$$
 

@@ -47,7 +47,7 @@ $$\sgn(\tau\circ\tau')=\sgn(\tau)\sgn(\tau')$$
 
 holds.
 
-Suppose an arbitrary alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$ is given. Then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3) and the definition of $\sgn$, we see that
+Suppose an arbitrary alternating multilinear map $f:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$ is given. Then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3){: data-lid="vypfd" } and the definition of $\sgn$, we see that
 
 $$f(v_1,v_2,\ldots, v_n)=\sgn(\tau)f(v_{\tau(1)},v_{\tau(2)},\ldots, v_{\tau(n)})$$
 
