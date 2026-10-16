@@ -97,7 +97,7 @@ That is, each element of $\mathbb{K}[\x]$ is, for some natural number $n$ and $\
 
 $$p(\x)=\alpha_n\x^n+\alpha_{n-1}\x^{n-1}+\cdots+\alpha_1\x+\alpha_0$$
 
-If $\alpha_n\neq0$, we call this the *degree* of $p(\x)$, and in this case $\alpha_n\x^n$ is called the *leading term*. The degree of the zero polynomial $0$ is either left undefined or formally regarded as $-\infty$; accordingly, when we speak of polynomials of degree at most $n$, we agree to include $0$ as well. A polynomial whose leading coefficient is 1 is called a *monic polynomial*. Now suppose another element of $\mathbb{K}[\x]$
+If $\alpha_n\neq0$, we call $n$ the *degree* of $p(\x)$, and in this case $\alpha_n\x^n$ is called the *leading term*. The degree of the zero polynomial $0$ is either left undefined or formally regarded as $-\infty$; accordingly, when we speak of polynomials of degree at most $n$, we agree to include $0$ as well. A polynomial whose leading coefficient is 1 is called a *monic polynomial*. Now suppose another element of $\mathbb{K}[\x]$
 
 $$q(\x)=\beta_m\x^m+\beta_{m-1}\x^{m-1}+\cdots+\beta_1\x+\beta_0$$
 
