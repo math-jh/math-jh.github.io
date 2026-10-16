@@ -1,6 +1,6 @@
 ---
 title: "Dimension of Vector Spaces"
-description: "A vector space does not have a unique basis, but any two bases have the same number of elements. This post proves the lemma that all finite bases have equal cardinality and the theorem on dimension."
+description: "A basis of a vector space is not unique, but any two bases always have the same number of elements. We prove the lemma showing that finite bases have the same number of elements and the dimension theorem."
 excerpt: "Bases and dimension of vector spaces"
 
 categories: [Math / Linear Algebra]
@@ -14,90 +14,89 @@ date: 2022-07-31
 weight: 5
 translated_at: 2026-06-26T19:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-26T19:30:02+00:00
+last_polished_at: 2026-10-16T19:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Dimension of a Vector Space
 
-From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9){: data-lid="jomic" } and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11){: data-lid="uvnhd" }, we see that a basis of a vector space $V$ need not be unique. However, in these examples the number of elements in each basis remains the same. This is not a coincidence.
+From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9){: data-lid="jomic" } and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11){: data-lid="uvnhd" }, we see that a basis of a vector space $V$ need not be unique. However, looking at these examples, we can also see that they have in common that the number of elements in a basis remains the same. This is not a coincidence.
 
 ::: Theorem 1
 For a $\mathbb{K}$-vector space $V$, if two bases $\mathcal{B}_1$ and $\mathcal{B}_2$ of $V$ are given, then $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$ holds.
 :::
 
-This theorem includes the case where $\mathcal{B}_1$ and $\mathcal{B}_2$ are infinite. To establish it, three steps are required.
+This theorem includes the case where $\mathcal{B}_1$ and $\mathcal{B}_2$ are infinite. To show this, three steps are required.
 
-1. First, if *any* basis of $V$ is infinite, then all other bases are necessarily infinite and have the same cardinality.
-2. Therefore, if any basis of $V$ is finite, then all other bases must also be finite.
+1. First, if *some* basis of $V$ is infinite, then the other bases are also necessarily infinite and have the same cardinality.
+2. Therefore, if some basis of $V$ is finite, then all other bases must also be finite.
 3. Finally, if two finite bases of $V$ are given, the number of elements in these two bases is the same.
 
-Of course, there is no reason we could not prove this theorem now, but just as with [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10){: data-lid="8kb3u" }, doing so requires a bit of set-theoretic background, so we defer it to a separate post. The last step, however, can be proved without any additional prerequisites.
+Of course, there is no reason we could not prove this theorem now, but just as with [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10){: data-lid="8kb3u" }, proving it requires some set-theoretic background, so we leave it to a separate post. The last step, however, can be proved without any special background knowledge.
 
 ::: Lemma 2
 For a $\mathbb{K}$-vector space $V$, if $\mathcal{B}_1$ and $\mathcal{B}_2$ are both finite bases of $V$, then $\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$ holds.
 :::
 ::: Proof
-Let $\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$ and $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$; we must show that $m=n$. Suppose, for contradiction, that $m>n$.
+Let $\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$ and $\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$; we must show that $m=n$. Suppose, to the contrary, that $m>n$.
 
-Since $x_1\in V$, we can express $x_1$ as a linear combination of $y_1$, $y_2$, $\ldots$, $y_n$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6){: data-lid="3rk0z" }, the set $\{x_1,y_1,y_2,\ldots, y_n\}$ is linearly dependent. That is, there exist scalars $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$, not all zero, such that
+First, since $x_1\in V$, we can express $x_1$ as a linear combination of $y_1$, $y_2$, $\ldots$, $y_n$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6){: data-lid="3rk0z" }, the set $\{x_1,y_1,y_2,\ldots, y_n\}$ is linearly dependent. That is, there exist scalars $\beta_1$, $\alpha_1$, $\alpha_2$, $\ldots$, $\alpha_n$, not all zero, such that
 
 $$\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_n y_n=0\tag{1}$$
 
-Here, $\beta_1$ cannot be zero. If $\beta_1=0$, then the above equation becomes
+Here, it is clear that $\beta_1$ cannot be zero. If $\beta_1=0$, then the above equation becomes
 
 $$\alpha_1y_1+\alpha_2y_2+\cdots+\alpha_ny_n=0$$
 
-which contradicts the assumption that $y_1$, $y_2$, $\ldots$, $y_n$ are linearly independent. Also, if all $\alpha_i$ are zero, then $\beta_1x_1=0$, and since $\beta_1\neq 0$, we have $x_1=0$. In this case $\{x_1, x_2, \ldots, x_m\}$ would trivially be linearly dependent, so we may assume that some $\alpha_i$ is nonzero. Then we can rearrange equation (1) to obtain
+which contradicts the assumption that $y_1$, $y_2$, $\ldots$, $y_n$ are linearly independent. Also, if all $\alpha_i$ are zero, then $\beta_1x_1=0$, and since $\beta_1\neq 0$, we have $x_1=0$. In this case $\{x_1, x_2, \ldots, x_m\}$ would trivially be linearly dependent, so let us assume that some nonzero $\alpha_i$ exists. Then we can rearrange equation (1) above to obtain the equation
 
-$$y_i=\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}y_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}y_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}y_n$$
+$$y_i=-\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\alpha_{i-1}}{\alpha_i}y_{i-1}-\frac{\alpha_{i+1}}{\alpha_i}y_{i+1}-\cdots-\frac{\alpha_n}{\alpha_i}y_n$$
 
-Therefore, even if we remove $y_i$ from the set $\{x_1, y_1, y_2, \ldots, y_n\}$, this set still spans $V$.
+Therefore, even if from the set $\{x_1, y_1, y_2, \ldots, y_n\}$ we remove $y_i$, this set still spans $V$.
 
 On the other hand, this set is linearly independent. For any scalars $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$, if
 
 $$\beta_1'x_1+\alpha_1'y_1+\alpha_2'y_2+\cdots+\alpha_{i-1}'y_{i-1}+\alpha_{i+1}'y_{i+1}+\cdots+\alpha_n'y_n=0$$
 
-then, by the same reasoning as above, $\beta_1'\neq 0$, and thus
+then, for the same reason as above, $\beta_1'\neq 0$, and thus substituting
 
 $$x_1=-\frac{\alpha_1'}{\beta_1'}y_1-\frac{\alpha_2'}{\beta_1'}y_2-\cdots-\frac{\alpha_{i-1}'}{\beta_1'}y_{i-1}-\frac{\alpha_{i+1}'}{\beta_1'}y_{i+1}-\cdots-\frac{\alpha_n'}{\beta_1'}y_n$$
 
-Substituting this into the preceding equation gives
+into the preceding equation gives
 
-$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}+\frac{\alpha_1}{\alpha_i}\right)y_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_{i-1}'}+\frac{\alpha_{i-1}}{\alpha_i}\right)y_{i+1}+y_i+\left(\frac{\alpha_{i+1}'\beta_{i+1}}{\alpha_i\beta_{i+1}'}+\frac{\alpha_{i+1}}{\alpha_i}\right)y_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_n}{\alpha_i\beta_n'}+\frac{\alpha_n}{\alpha_i}\right)y_n$$
+$$0=\left(\frac{\alpha_1'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_1}{\alpha_i}\right)y_1+\cdots+\left(\frac{\alpha_{i-1}'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_{i-1}}{\alpha_i}\right)y_{i-1}-y_i+\left(\frac{\alpha_{i+1}'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_{i+1}}{\alpha_i}\right)y_{i+1}+\cdots+\left(\frac{\alpha_n'\beta_1}{\alpha_i\beta_1'}-\frac{\alpha_n}{\alpha_i}\right)y_n$$
 
-Since the coefficient of $y_i$ is not zero, this contradicts the assumption that $\{y_1,y_2,\ldots,y_n\}$ is linearly independent.
+Since the coefficient of $y_i$ is not $0$, this contradicts the assumption that $\{y_1,y_2,\ldots,y_n\}$ is linearly independent.
 
-Thus we have obtained a new basis $\{x_1,y_1,y_2,\ldots,y_{i-1}, y_{i+1},\ldots, y_n\}$ of $V$. Without loss of generality, suppose the vector we eliminated was $y_n$; then this new basis is $\{x_1, y_1, \ldots, y_{n-1}\}$. Now add $x_2$ to this basis to obtain $\{x_2, x_1, y_1, y_2, \ldots, y_n\}$.
-
-If
+Thus we have obtained a new basis of $V$, $\{x_1,y_1,y_2,\ldots,y_{i-1}, y_{i+1},\ldots, y_n\}$. Without loss of generality, if the vector we eliminated was $y_n$, then the resulting new basis is $\{x_1, y_1, \ldots, y_{n-1}\}$. Now let us again add $x_2$ to this basis and consider $\{x_2, x_1, y_1, y_2, \ldots, y_{n-1}\}$.
 
 $$\beta_2x_2+\beta_1x_1+\alpha_1y_1+\alpha_2y_2+\ldots+\alpha_{n-1}y_{n-1}=0$$
 
-then by the same logic as above, $\beta_2\neq 0$, and excluding the case $x_2=0$, there exists a nonzero coefficient among $\beta_1$, $\alpha_1$, $\ldots$, $\alpha_{n-1}$.
+If the above holds, then by the same logic as above, $\beta_2\neq 0$, and excluding the case $x_2=0$, there exists a nonzero coefficient among $\beta_1$, $\alpha_1$, $\ldots$, $\alpha_{n-1}$.
 
-If $\beta_1$ is the only nonzero coefficient, then the above equation becomes $\beta_2x_2+\beta_1x_1=0$, so $\{x_1,x_2\}$ is linearly dependent and the proof is complete.
+Here, if $\beta_1$ is the only nonzero coefficient, then the above equation becomes $\beta_2x_2+\beta_1x_1=0$, so $\{x_1,x_2\}$ is linearly dependent and the proof is complete.
 
-Otherwise, if some $\alpha_i\neq 0$ exists, we repeat the same process to obtain a new basis $\{x_2,x_1,y_1,y_2,\ldots,y_{n-2}\}$.
+Otherwise, if some $\alpha_i\neq 0$ exists, we repeat the same process as above to again obtain a new basis $\{x_2,x_1,y_1,y_2,\ldots,y_{n-2}\}$.
 
 Repeating this process leads to two possibilities.
 
-1. If the process stops at some stage,
+1. If this process stops at some point,
 
     $$\beta_kx_k+\beta_{k-1}x_{k-1}+\cdots+\beta_1x_1=0$$
     
     will hold, so $\{x_1,x_2,\ldots,x_m\}$ is linearly dependent.
-2. Otherwise, after $n$ iterations we will have completely replaced the original basis $\{y_1,y_2,\ldots, y_n\}$ with the new basis $\{x_1, x_2, \ldots, x_n\}$. In this case, since $x_{n+1}\in V$ can be expressed as a linear combination of $\{x_1, x_2, \ldots, x_n\}$, the set $\{x_1,x_2,\ldots, x_{n+1}\}$ is linearly dependent, and hence so is $\{x_1,x_2,\ldots, x_m\}$.
+2. Otherwise, after $n$ repetitions we will completely replace the original basis $\{y_1,y_2,\ldots, y_n\}$ with a new basis $\{x_1, x_2, \ldots, x_n\}$. In this case, since $x_{n+1}\in V$ can be expressed as a linear combination of $\{x_1, x_2, \ldots, x_n\}$, the set $\{x_1,x_2,\ldots, x_{n+1}\}$ is linearly dependent, and hence so is $\{x_1,x_2,\ldots, x_m\}$.
 
 In either case, $\{x_1,x_2,\ldots, x_m\}$ is linearly dependent and therefore cannot be a basis, which is a contradiction.
 :::
 
-In fact, the proof above actually established a slightly stronger statement than the original proposition:
+In fact, the proof of the proposition above establishes the following proposition, which is slightly stronger than the original:
 
-> Let a $\mathbb{K}$-vector space $V$ have a finite basis $\mathcal{B}$. Then any subset of $V$ with more elements than $\mathcal{B}$ is necessarily linearly dependent.
+> Suppose a $\mathbb{K}$-vector space $V$ has a finite basis $\mathcal{B}$. Then, whenever it has more elements than $\mathcal{B}$, a subset of $V$ is necessarily linearly dependent.
 
-Since by [Theorem 1](#thm1){: data-lid="7p5f3" } all bases of $V$ have the same cardinality, the following definition is well-posed.
+In any case, by [Theorem 1](#thm1){: data-lid="7p5f3" }, all bases of $V$ have the same size, so the following definition makes sense.
 
 ::: Definition 3
-For a $\mathbb{K}$-vector space $V$, the cardinality of a basis of $V$ is called the *dimension* of $V$, denoted by $\dim V$, or by $\dim_\mathbb{K}V$ when we need to emphasize $\mathbb{K}$. If $\dim V$ is finite, $V$ is a *finite-dimensional* vector space; otherwise, $V$ is an *infinite-dimensional* vector space.
+For a $\mathbb{K}$-vector space $V$, the cardinality of a basis of $V$ is called the *dimension* of $V$ and is denoted by $\dim V$, or when we need to emphasize $\mathbb{K}$, by $\dim_\mathbb{K}V$. If $\dim V$ is finite, $V$ is a *finite-dimensional* vector space; otherwise, $V$ is an *infinite-dimensional* vector space.
 :::
 
 ::: Example 4
@@ -115,74 +114,74 @@ From now on, we always assume that the vector spaces we deal with are finite-dim
 Depending on the situation, results in finite-dimensional vector spaces may or may not hold in infinite dimensions. For example, the following proposition can be extended to the infinite-dimensional case, but in this post we restrict ourselves to the finite-dimensional case.
 
 ::: Proposition 5
-For a $\mathbb{K}$-vector space $V$ and any linearly independent subset $S$ of $V$, there exists a basis $\mathcal{B}$ of $V$ containing $S$.
+For a $\mathbb{K}$-vector space $V$ and, in $V$, any linearly independent subset $S$, there exists an $S$-containing basis of $V$, $\mathcal{B}$.
 :::
 ::: Proof
-If $\langle S\rangle=V$, there is nothing more to prove. Otherwise, there exists $v\in V$ with $v\not\in\langle S\rangle$. Let $S_1=S\cup\{v\}$. Then $S_1$ is linearly independent. Obviously $v\neq0$, and for any linear combination of elements of $S_1$
+If $\langle S\rangle=V$, there is nothing more to prove. Otherwise, with $v\not\in\langle S\rangle$, there exists $v\in V$. Now define the set $S_1=S\cup\{v\}$. Then $S_1$ is linearly independent. Obviously $v\neq0$, and now if for an arbitrary linear combination of $S_1$ we set
 
 $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$  
 
-if $\alpha_v\neq 0$, we can move $\alpha_vv$ to the other side and multiply by $-\alpha_v^{-1}$ to express $v$ as a linear combination of elements of $S$, which contradicts the choice of $v$. Therefore $\alpha_v=0$, and then since the elements of $S$ are linearly independent, $\alpha_x=0$ holds for all $x\in S$. Thus $\alpha_x=0$ holds for all $x\in S_1$.
+then when $\alpha_v\neq 0$, moving $\alpha_vv$ to the other side and multiplying by $-\alpha_v^{-1}$ allows us to express $v$ as a linear combination of the elements of $S$, which contradicts the choice of $v$. Therefore $\alpha_v=0$, and then since the elements of $S$ are linearly independent, $\alpha_x=0$ holds for all $x\in S$. Thus, $\alpha_x=0$ holds for all $x\in S_1$.
 
-Now if $\langle S\rangle_1=V$, the proof is complete; otherwise we can repeat the same process by defining $S_2=S_1\cup\{v'\}$. Of course, we must show that $S_2$ is linearly independent, but since we picked $v'$ from $V\setminus\langle S\rangle_1$, this follows by exactly the same logic as above.
+Now if $\langle S_1\rangle=V$, the proof is again complete, and otherwise we can repeat this in the exact same way by defining $S_2=S_1\cup\{v'\}$. Of course, we must show that $S_2$ is linearly independent, but since we picked $v'$ from $V\setminus\langle S_1\rangle$, this can be done by the exact same logic as shown above.
 
-By the preceding [Lemma 2](#lem2){: data-lid="byovf" }, this process terminates in at most $\dim V$ steps, and when it ends we obtain the desired basis $S_n$.
+By the preceding [Lemma 2](#lem2){: data-lid="byovf" }, this process terminates within at most the $\dim V$-th step, and when this process ends we obtain the desired basis $S_n$.
 :::
 
-A basis of $V$ is a set that is both linearly independent and spans $V$. The above proposition says that we can add vectors to a linearly independent set appropriately to make it span $V$. Conversely, if there is a set spanning $V$, we can remove some redundant elements from it to also satisfy the linear independence condition. The basic idea of the proof of this proposition is the same as that of [Proposition 5](#prop5){: data-lid="xejg2" }, but since $S$ may be infinite, the proof does not work by removing elements from $S$ one by one.
+A basis of $V$ is a set that is both linearly independent and spans $V$. The above proposition says that we can appropriately add vectors to a linearly independent set so that it spans $V$. Conversely, if there is a set spanning $V$, we can appropriately remove some overlapping elements from it so that it also satisfies the linear independence condition. The basic idea of the proof of this proposition is the same as that of [Proposition 5](#prop5){: data-lid="xejg2" }, but since $S$ may be an infinite set, the proof does not work by removing elements from $S$ one by one.
 
 ::: Proposition 6
-For a $\mathbb{K}$-vector space $V$ and a subset $S$ spanning $V$, some subset of $S$ is a basis of $V$.
+For a $\mathbb{K}$-vector space $V$ and a $V$-spanning subset $S$, some subset of $S$ is a basis of $V$.
 :::
 ::: Proof
-Let $S_0=\emptyset$. Then $\langle S\rangle_0=\{0\}$. Pick an element $x_1$ from $S\setminus\langle S\rangle_0$ and let $S_1=\{x_1\}=S_0\cup\{x_1\}$; similarly, pick an element $x_2$ from $S\setminus\langle S\rangle_1$ to form $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$, repeating this process.
+Let $S_0=\emptyset$. Then $\langle S_0\rangle=\{0\}$. Now choose from $S\setminus\langle S_0\rangle$ an element $x_1$ and let $S_1=\{x_1\}=S_0\cup\{x_1\}$; similarly, choose from $S\setminus\langle S_1\rangle$ an element $x_2$ to form $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$, repeating this process.
 
-The sets $S_i$ obtained in this way are linearly independent subsets by definition, and as long as $\langle S\rangle_i$ is not equal to $S$, the number of elements in $S_{i+1}$ is always one greater than that in $S_i$. Therefore, it suffices to show that $S\setminus\langle S\rangle_i$ is nonempty for all $i < n = \dim V$.
+The sets $S_i$ obtained in this way are linearly independent subsets by definition, and as long as $\langle S_i\rangle$ is not equal to $S$, the number of elements in $S_{i+1}$ is always one greater than that in $S_i$. Therefore, for all $i < n = \dim V$, it suffices to show that $S\setminus\langle S_i\rangle$ is nonempty.
 
-Choose a natural number $m$ such that $S\setminus\langle S\rangle_m=\emptyset$. That is, $S\subseteq\langle S\rangle_m$. From [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4){: data-lid="egvx8" }, we know that taking $\span$ preserves inclusion relations between sets, so
+Choose a natural number $m$ such that $S\setminus\langle S_m\rangle=\emptyset$. That is, $S\subseteq\langle S_m\rangle$. Now, from [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4){: data-lid="egvx8" }, we know that taking $\span$ preserves inclusion relations between sets, so
 
-$$\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)$$
+$$\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)$$
 
-and since $\langle S\rangle_m$ on the right-hand side is already a subspace of $V$, by [§Basis of a Vector Space, ⁋Definition 2](/en/math/linear_algebra/basis#def2){: data-lid="gxq0q" } we have $\span\bigl(\langle S\rangle\bigr)=\langle S\rangle_m$. Therefore, from
+and since $\langle S_m\rangle$ on the right-hand side is already a subspace of $V$, by [§Basis of a Vector Space, ⁋Definition 2](/en/math/linear_algebra/basis#def2){: data-lid="gxq0q" } we know that $\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$. Therefore, from
 
-$$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
+$$V=\langle S\rangle\subseteq\span\bigl(\langle S_m\rangle\bigr)=\langle S_m\rangle$$
 
-we conclude that $\langle S\rangle_m=V$.
+we conclude that $\langle S_m\rangle=V$.
 :::
 
-Finally, let us examine two slightly more general examples.
+Finally, let us examine two somewhat general examples.
 
 ::: Example 7
-Let two $\mathbb{K}$-vector spaces $V$ and $W$ be given. Then their *product* $V\times W$ is the vector space of vectors of the form $(v,w)$ for arbitrary $v\in V$, $w\in W$. Its operations are given by
+Let two $\mathbb{K}$-vector spaces $V$ and $W$ be given. Then their *product* $V\times W$ is, for arbitrary $v\in V$ and $w\in W$, the vector space of vectors of the form $(v,w)$. Its operations are given respectively by
 
 $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
-It is not difficult to verify that if $\mathcal{B}_1$ and $\mathcal{B}_2$ are bases of $V$ and $W$ respectively, then the subset
+It is not difficult to verify that if $\mathcal{B}_1$ and $\mathcal{B}_2$ are bases of $V$ and $W$ respectively, then the subset of $V\times W$,
 
-$$\mathcal{B}=\{(x, y)\mid x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
+$$\mathcal{B}=\{(x, 0)\mid x\in \mathcal{B}_1\}\cup\{(0, y)\mid y\in \mathcal{B}_2\}$$
 
-of $V\times W$ is a basis of $V\times W$. In particular, if both $V$ and $W$ are finite-dimensional, then $V\times W$ is also finite-dimensional and $\dim(V\times W)=(\dim V)+(\dim W)$.
+is a basis of $V\times W$. In particular, if both $V$ and $W$ are finite-dimensional, then so is $V\times W$, and $\dim(V\times W)$ is equal to $(\dim V)+(\dim W)$.
 :::
 
 ::: Example 8
-Now let a $\mathbb{K}$-vector space $V$ be given, and let $W_1$ and $W_2$ be two subspaces of $V$. Then the subspace $W_1+W_2$ of $V$ is defined as
+Now let a $\mathbb{K}$-vector space $V$ be given, and let two subspaces of $V$, $W_1$ and $W_2$, be given. Then the subspace of $V$ denoted $W_1+W_2$ is defined as
 
-> the smallest subspace of $V$ containing both $W_1$ and $W_2$.
+> the smallest among the subspaces containing the two subspaces $W_1$ and $W_2$ in $V$.
 
 In symbols, we may write $W_1+W_2=\span(W_1\cup W_2)$.
 
-Assuming that both $W_1$ and $W_2$ are finite-dimensional,
+Now assuming that $W_1,W_2$ are both finite-dimensional,
 
 $$\dim(W_1+W_2)=\dim W_1+\dim W_2-\dim(W_1\cap W_2)$$
 
 holds.
 :::
 ::: Proof
-Let $W_1$ and $W_2$ be $m$- and $n$-dimensional respectively, and let $W_1\cap W_2$ be $k$-dimensional. Then there exists a basis $\mathcal{B}_0=\{x_1,\ldots, x_k\}$ of $W_1\cap W_2$. This set is a linearly independent subset of both $W_1$ and $W_2$, so there exist bases of $W_1$ and $W_2$ containing it. Let these be $\mathcal{B}_1$ and $\mathcal{B}_2$. Then
+Let $W_1,W_2$ be $m$- and $n$-dimensional, respectively, and let $W_1\cap W_2$ be $k$-dimensional. Then $W_1\cap W_2$ has a basis $\mathcal{B}_0=\{x_1,\ldots, x_k\}$. Since this set is a linearly independent subset of $W_1$ and $W_2$, there exist bases of $W_1$ and $W_2$, respectively, containing this set. Let these be $\mathcal{B}_1$ and $\mathcal{B}_2$. Then we may write
 
 $$\mathcal{B}_1=\{y_1,\ldots, y_m\},\quad \mathcal{B}_2=\{z_1,\ldots, z_n\},\qquad y_1=z_1=x_1,\ldots, y_k=z_k=x_k$$
 
-Now the set
+Now the following set
 
 $$\mathcal{B}_1\cup\mathcal{B}_2=\{x_1=y_1,\ldots, x_k=y_k, \quad y_{k+1}, \ldots, y_m,\quad z_{k+1},\ldots, z_n\}$$
 
@@ -190,19 +189,19 @@ spans $W_1+W_2$. Moreover, this set is linearly independent. To show this, let
 
 $$\alpha_1x_1+\cdots+\alpha_kx_k+\beta_{k+1}y_{k+1}+\cdots+\beta_{m}y_m+\gamma_{k+1}z_{k+1}+\cdots+\gamma_{n}z_n=0\tag{2}$$
 
-For arbitrary scalars $\beta_i$, $\gamma_i$ ($i\leq k$) satisfying $\alpha_i=\beta_i+\gamma_i$,
+Subject to $\alpha_i=\beta_i+\gamma_i$, for arbitrary scalars $\beta_i$, $\gamma_i$ ($i\leq k$), if we write
 
 $$\beta_1y_1+\cdots+\beta_ky_k+\beta_{k+1}y_{k+1}+\cdots+\beta_{m}y_m=-\gamma_1z_1-\cdots-\gamma_kz_k-\gamma_{k+1}z_{k+1}-\cdots-\gamma_{n}z_n$$
 
-then the left-hand side is an element of $W_1$ and the right-hand side is an element of $W_2$, so this common vector lies in $W_1\cap W_2$. Since $\mathcal{B}_0$ is a basis of $W_1\cap W_2$, we can choose appropriate scalars $\alpha_i'$ so that
+then the left-hand side is an element of $W_1$ and the right-hand side is an element of $W_2$, so this common vector is an element of $W_1\cap W_2$. Since $\mathcal{B}_0$ is a basis of $W_1\cap W_2$, we can again choose suitable scalars $\alpha_i'$ and write
 
 $$\beta_1y_1+\cdots+\beta_my_m=\alpha_1'x_1+\cdots+\alpha_k'x_k=-\gamma_1z_1-\cdots-\gamma_nz_n$$
 
-In the case of the first equality, moving the $\alpha_i'x_i$ terms back to the left-hand side and combining them with the $\beta_iy_i$ terms gives
+However, in the case of the first equality, moving the $\alpha_i'x_i$ terms back to the left-hand side and combining them with the $\beta_iy_i$ terms gives
 
 $$(\beta_1-\alpha_1')y_1+\cdots+(\beta_k-\alpha_k')y_k+\beta_{k+1}y_{k+1}+\cdots+\beta_my_m=0$$
 
-so by the linear independence of $\mathcal{B}_1$ all coefficients are zero, and in particular $\beta_{k+1}=\cdots=\beta_m=0$. Similarly, from the second equality $\gamma_{k+1}=\cdots=\gamma_n=0$, and then the remaining equation from (2) is simply $\alpha_1x_1+\cdots+\alpha_kx_k=0$; but since $x_1,\ldots,x_k$ form a basis of $W_1\cap W_2$, by linear independence again these are all zero. Thus $\mathcal{B}_1\cup\mathcal{B}_2$ is a linearly independent subset spanning $W_1+W_2$, and therefore a basis of $W_1+W_2$. Hence
+so by the linear independence of $\mathcal{B}_1$ all coefficients are 0, and in particular $\beta_{k+1}=\cdots=\beta_m=0$. Similarly, from the second equality $\gamma_{k+1}=\cdots=\gamma_n=0$, and then the only remaining equation in (2) is $\alpha_1x_1+\cdots+\alpha_kx_k=0$; since $x_1,\ldots,x_k$ form a basis of $W_1\cap W_2$, by linear independence again these are all 0 as well. That is, $\mathcal{B}_1\cup\mathcal{B}_2$ is a linearly independent subset that spans $W_1+W_2$, and is therefore a basis of $W_1+W_2$. Now
 
 $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$$
 :::
