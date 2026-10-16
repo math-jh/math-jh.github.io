@@ -6088,6 +6088,8 @@ E:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: essential_extension
   en: essential extension
   ko: 본질적 확대
@@ -10742,6 +10744,8 @@ J:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
   see:
   - label: Jump
     id: jump
@@ -11690,6 +11694,13 @@ L:
   defs:
   - label: '[해석학] §상극한과 하극한'
     url: /ko/math/analysis/limsup_and_liminf
+- id: limit_of_a_function
+  en: limit of a function
+  ko: 함수의 극한
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: limit_of_a_sequence
   en: limit of a sequence
   ko: 수열의 극한
@@ -16892,6 +16903,8 @@ R:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+  - label: '[해석학] §함수의 극한과 연속'
+    url: /ko/math/analysis/limits_and_continuity
 - id: removable_singularity
   en: removable singularity
   ko: 가제거 특이점
