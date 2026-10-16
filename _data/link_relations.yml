@@ -3211,7 +3211,7 @@
 "bh482": {relation: required, reviewed: true}
 "bhaig": {relation: weak, reviewed: true}
 "bhh8c": {relation: required, reviewed: true}
-"bhhzn": {relation: required}
+"bhhzn": {relation: required, reviewed: true}
 "bhl4b": {relation: required, reviewed: true}
 "bho1y": {relation: requires-review}
 "bhqc2": {relation: required, reviewed: true}
@@ -4143,7 +4143,7 @@
 "eugp5": {relation: required, reviewed: true}
 "eurm0": {relation: required, reviewed: true}
 "euv41": {relation: weak, reviewed: true}
-"euz65": {relation: required}
+"euz65": {relation: required, reviewed: true}
 "ev2so": {relation: required, reviewed: true}
 "evgza": {relation: required, reviewed: true}
 "evq3p": {relation: required, reviewed: true}
@@ -7440,7 +7440,7 @@
 "qmibx": {relation: weak, reviewed: true}
 "qmp2i": {relation: required, reviewed: true}
 "qmyh3": {relation: weak, reviewed: true}
-"qmz40": {relation: required}
+"qmz40": {relation: required, reviewed: true}
 "qn08r": {relation: required, reviewed: true}
 "qn2a2": {relation: required, reviewed: true}
 "qn2gf": {relation: required, reviewed: true}
