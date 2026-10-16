@@ -7498,6 +7498,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+- id: fundamental_matrix
+  en: fundamental matrix
+  ko: 기본행렬
+  primary: ko
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: fundamental_solution
   en: fundamental solution
   ko: 기본해
@@ -8897,6 +8904,8 @@ H:
   defs:
   - label: '[가환대수학] §차원'
     url: /ko/math/commutative_algebra/Krull_dimension
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: homogeneous_coordinate
   en: homogeneous coordinate
   ko: 동차좌표
@@ -11876,6 +11885,8 @@ L:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: linearization
   en: linearization
   ko: 선형화
@@ -18577,6 +18588,13 @@ S:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: solution_space
+  en: solution space
+  ko: 해공간
+  primary: en
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: solvable
   en: solvable
   ko: 가해
@@ -21527,6 +21545,13 @@ W:
   defs:
   - label: '[미적분학] §선적분'
     url: /ko/math/calculus/line_integrals
+- id: wronskian
+  en: Wronskian
+  ko: 론스키안
+  primary: en
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 Y:
 - id: young_diagram
   en: Young diagram
