@@ -9130,7 +9130,7 @@
 "wmcaw": {relation: required, reviewed: true}
 "wmi3v": {relation: required, reviewed: true}
 "wmiiz": {relation: required, reviewed: true}
-"wmkcd": {relation: required}
+"wmkcd": {relation: required, reviewed: true}
 "wmnec": {relation: required, reviewed: true}
 "wmpbt": {relation: required, reviewed: true}
 "wmplh": {relation: weak, reviewed: true}
