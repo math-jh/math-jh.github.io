@@ -10098,6 +10098,13 @@ I:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: interval_of_convergence
+  en: interval of convergence
+  ko: 수렴구간
+  primary: ko
+  defs:
+  - label: '[해석학] §멱급수와 해석함수'
+    url: /ko/math/analysis/power_series
 - id: intrinsic_normal_cone
   en: intrinsic normal cone
   ko: 내재적 법원뿔
@@ -15178,6 +15185,8 @@ P:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+  - label: '[해석학] §멱급수와 해석함수'
+    url: /ko/math/analysis/power_series
 - id: power_set
   en: power set
   ko: 멱집합
@@ -16363,6 +16372,8 @@ R:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+  - label: '[해석학] §멱급수와 해석함수'
+    url: /ko/math/analysis/power_series
   see:
   - label: 멱급수
     lang: ko
