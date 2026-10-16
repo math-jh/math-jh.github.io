@@ -387,15 +387,29 @@ Deligne–Mumford stack $M$ 위의 perfect obstruction theory $\phi:E^\bullet\ri
 
 $$i^\ast\LL_{\mathcal{X}/\Spec\mathbb{K}}\rightarrow\LL_{M/\Spec\mathbb{K}}\rightarrow\LL_{M/\mathcal{X}}\rightarrow i^\ast\LL_{\mathcal{X}/\Spec\mathbb{K}}[1]$$
 
-이 존재하던 것을 기억하자. $\mathcal{X}$ 안에서 $M$의 ideal sheaf를 $\mathcal{I}$라 하면 $i$가 closed embedding이므로 $h^0(\LL_{M/\mathcal{X}})=0$이고 $h^{-1}(\LL_{M/\mathcal{X}})=\mathcal{I}/\mathcal{I}^2$이며, 따라서 이 triangle은 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)의 conormal sequence $\mathcal{I}/\mathcal{I}^2\rightarrow i^\ast\Omega_{\mathcal{X}}\rightarrow\Omega_M\rightarrow0$을 왼쪽으로 연장한 것이고 그 셋째 항은 $M$을 $\mathcal{X}$에서 잘라내는 방정식을 기록한다. 이제 $\phi_{\mathcal{X}}:E_{\mathcal{X}}^\bullet\rightarrow\tau_{\geq-1}\LL_{\mathcal{X}}$를 $\mathcal{X}$의 perfect obstruction theory라 하자. 그럼 $\phi$와 $\phi_{\mathcal{X}}$가 compatible하다는 것은 triangle 
+이 존재하던 것을 기억하자. $\mathcal{X}$ 안에서 $M$의 ideal sheaf를 $\mathcal{I}$라 하면 $i$가 closed embedding이므로 $h^0(\LL_{M/\mathcal{X}})=0$이고 $h^{-1}(\LL_{M/\mathcal{X}})=\mathcal{I}/\mathcal{I}^2$이며, 따라서 이 triangle은 [\[가환대수학\] §미분, ⁋명제 9](/ko/math/commutative_algebra/differentials#prop9)의 conormal sequence $\mathcal{I}/\mathcal{I}^2\rightarrow i^\ast\Omega_{\mathcal{X}}\rightarrow\Omega_M\rightarrow0$을 왼쪽으로 연장한 것이고 그 셋째 항은 $M$을 $\mathcal{X}$에서 잘라내는 방정식을 기록한다. 
+
+그럼 이 상황에서, $\mathcal{X}$의 perfect obstruction theory $\phi_{\mathcal{X}}:E_{\mathcal{X}}^\bullet\rightarrow\tau_{\geq-1}\LL_{\mathcal{X}}$가 $M$의 perfect obstruction theory $\phi: E^\bullet \rightarrow \tau_{\geq-1}\LL_M$와 compatible하다는 것은 triangle 
 
 $$i^\ast E_{\mathcal{X}}^\bullet\rightarrow E^\bullet\rightarrow\mathcal{O}_M^{\oplus\dim B}[1]\rightarrow i^\ast E_{\mathcal{X}}^\bullet[1]$$
 
-이 존재하여 이것이 위의 triangle로 가는 morphism of triangles를 이룬다는 것이다. ([BF, Definition 5.8]) 여기서 셋째 항 $\mathcal{O}_M^{\oplus\dim B}[1]$은 $b$의 maximal ideal $\mathfrak{m}_b$에 대하여 $\LL_{\{b\}/B}=(\mathfrak{m}_b/\mathfrak{m}_b^2)[1]$을 $M$으로 당긴 것이고, 셋째 vertical map은 $M=\mathcal{X}\times_B\{b\}$에서 오는 자연스러운 map이다. $b$의 국소좌표 $t_1,\ldots,t_{\dim B}$를 $\mathcal{X}$로 당긴 것이 $M$을 잘라내는 방정식이므로, 이 map은 $h^{-1}$에서 surjection $\mathcal{O}_M^{\oplus\dim B}\rightarrow\mathcal{I}/\mathcal{I}^2$이다. 곧 $M$의 perfect obstruction theory가 $\mathcal{X}$의 것을 $M$으로 당긴 것에 fiber의 normal 방향 $\mathcal{O}_M^{\oplus\dim B}$를 더한 것이라는 뜻이며, 이 덕분에 두 cone을 같은 곳에서 비교할 수 있다. 이 가정 하에서 둘째 주장은 $\{b\}\hookrightarrow B$의 refined Gysin map $i_b^!:A_k(\mathcal{X})\rightarrow A_{k-\dim B}(M)$에 대한 등식
+이 존재하여 이것이 위의 triangle로 가는 morphism of triangles
+
+{% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-2.svg width="26.17em" alt="compatibility as a morphism of triangles" %}
+
+을 이룬다는 것이다. 여기서 셋째 항 $\mathcal{O}_M^{\oplus\dim B}[1]$과 셋째 vertical map은 cartesian diagram
+
+{% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-3.svg width="6.34em" alt="the fiber over b as a cartesian square" %}
+
+에서 오는 것이다. 즉, 셋째 vertical map은 위의 diagram이 유도하는 자연스러운 map $g^\ast\LL_{\{b\}/B}\rightarrow\LL_{M/\mathcal{X}}$으로, 여기에 다음 identification
+
+$$g^\ast\LL_{\{b\}/B}=g^\ast(\mathfrak{m}_b/\mathfrak{m}_b^2)[1]\cong\mathcal{O}_M^{\oplus\dim B}[1],\qquad\mathfrak{m}_b=(t_1,\cdots,t_{\dim B})$$
+
+을 적용한 것이다. $M=\mathcal{X}\times_B\{b\}$이므로 $\mathcal{I}$는 $\mathfrak{m}_b$를 당긴 것으로 생성되고, 따라서 이 map은 $h^{-1}$에서 surjective이다. 곧 윗줄의 triangle은 $M$의 perfect obstruction theory가 $\mathcal{X}$의 것을 $M$으로 당긴 것에 fiber의 normal 방향 $\mathcal{O}_M^{\oplus\dim B}$를 더한 것이라는 뜻이고, 셋째 vertical map의 surjectivity는 이렇게 더한 항이 $M$을 $\mathcal{X}$에서 잘라내는 방정식 $\mathcal{I}/\mathcal{I}^2$를 빠짐없이 덮는다는 뜻이다. 그럼 이 가정 하에서 둘째 주장은 $\{b\}\hookrightarrow B$의 refined Gysin map $i_b^!:A_k(\mathcal{X})\rightarrow A_{k-\dim B}(M)$에 대한 등식
 
 $$[M]^\vir=i_b^![\mathcal{X}]^\vir$$
 
-이다. ([BF, Proposition 5.10]) 위의 triangle에서 $\rank E^\bullet=\rank E_{\mathcal{X}}^\bullet-\dim B$이므로 양변의 차원은 맞는다. 이 등식은 cone끼리의 등식에서 오지 않는다. $\mathcal{X}$의 cone을 $M$으로 제한한 것은 일반적으로 $M$의 cone과 다르며, 등식은 zero section의 Gysin map과 $i_b^!$의 순서를 바꾼 뒤 $i_b^!$가 $\mathcal{X}$의 cone의 class를 $M$의 cone의 class로 보낸다는 데서 나온다.
+이다. 이 등식은 zero section의 Gysin map과 $i_b^!$의 순서를 바꾼 뒤, $i_b^!$가 $\mathcal{X}$의 cone의 class를 $M$의 cone의 class로 보낸다는 데서 나온다.
 
 ## 안정사상들의 가상 기본류
 
@@ -418,11 +432,11 @@ $$\vdim=\int_\beta c_1(T_X)+(\dim X-3)(1-g)+n$$
 이다.
 :::
 
-이에 대한 증명 전략은 우선 target쪽에서 $T_X$로 만든 relative complex $(R\pi_\ast\mu^\ast T_X)^\vee$와 그 domain curve들이 속한 base stack $\mathfrak{M}_{g,n}$를 사용하여 이 둘이 이루는 distinguished triangle
+위에서 살펴보았듯 relative complex $(R\pi_\ast\mu^\ast T_X)^\vee$가 relative perfect obstruction theory가 되므로, 실제로 보여야 할 것은 이로부터 absolute perfect obstruction theory를 얻는 과정이다. 즉 다음 diagram
 
-$$q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow (E')^\bullet\rightarrow E^\bullet\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$$
+{% diagram Math/Gromov_Witten_Theory/Perfect_Obstruction_Theory-4.svg width="26.48em" alt="absolute obstruction theory from the relative one" %}
 
-을 만드는 것이다. 이 때 base의 smoothness는 $q^\ast\LL_{\mathfrak{M}_{g,n}}$에 음의 degree 항이 없게 하고, $M$이 Deligne–Mumford stack이라는 것은 curve의 무한소 automorphism이 담긴 degree $1$ 항을 죽이므로, 둘이 함께 $(E')^\bullet$의 amplitude를 $[-1,0]$으로 지켜주어 이를 perfect obstruction theory로 만들게 된다. 
+에서 둘째 vertical map을 만들어야 하고, 이는 합성 $a:E^\bullet\xrightarrow{\phi}\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$에 대하여 $(E')^\bullet=\Cone(a)[-1]$로 정의하면 양 끝의 vertical map이 주어져 있으므로 자동으로 존재한다. 이렇게 얻은 $\phi'$이 $h^0$에서 isomorphism이고 $h^{-1}$에서 surjective라는 것은 five lemma에서 나온다. 이 때 base의 smoothness는 $q^\ast\LL_{\mathfrak{M}_{g,n}}$에 음의 degree 항이 없게 하고, $M$이 Deligne–Mumford stack이라는 것은 curve의 무한소 automorphism이 담긴 degree $1$ 항을 죽이므로, 둘이 함께 $(E')^\bullet$의 amplitude를 $[-1,0]$으로 지켜주어 이를 perfect obstruction theory로 만들게 된다. 
 
 이 triangle은 relative obstruction과 absolute obstruction의 관계도 알려준다. Triangle을 dualize하여 점 $z=[(C,p_\bullet,\mu)]$에서의 derived fiber의 cohomology를 취하면, $M$이 Deligne–Mumford stack이고 $\mathfrak{M}_{g,n}$이 smooth하므로 양 끝이 $0$인 exact sequence
 
