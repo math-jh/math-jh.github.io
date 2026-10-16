@@ -142,7 +142,7 @@ $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(
 임의의 행렬 $A\in\Mat_n(\mathbb{K})$에 대하여, $\det A\neq 0$인 것과 $A$가 가역인 것이 동치이다.
 :::
 ::: 증명
-[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla){: data-lid="ga49b" }로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것과 동치이고, 이는 $\col(A)$의 basis인 열벡터들 $A_1,\ldots, A_n$들이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋정의 2](/ko/math/linear_algebra/determinant#def2){: data-lid="zcri0" }에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
+[§선형대수학의 기본정리](/ko/math/linear_algebra/ftla){: data-lid="ga49b" }로부터, $A$가 가역인 것은 $A$에 의해 정의되는 linear map $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$이 가역인 것과 동치라는 것을 안다. $\mathbb{K}^n$은 유한차원이므로 이는 다시 $L_A$가 surjective인 것, 즉 $\col(A)=\mathbb{K}^n$인 것과 동치이고, 이는 $\col(A)$를 생성하는 $n$개의 열벡터들 $A_1,\ldots, A_n$이 일차독립인 것과 동치이다. 만일 $A_1,\ldots, A_n$들이 일차독립이 아니라면 [§행렬식, ⁋정의 2](/ko/math/linear_algebra/determinant#def2){: data-lid="zcri0" }에 의하여 $\det A=0$이 된다. 즉, $\det A\neq 0$이라면 $A$는 가역이다.
 
 거꾸로 $A$가 가역이라 가정하자. 그럼 다음의 식
 
@@ -230,7 +230,7 @@ $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\C&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
-과 [명제 9](#prop9){: data-lid="l13qf" }, 그리고 [보조정리 4](#lem4){: data-lid="ausxq" }에 의해 자명하다. 가운데 행렬의 경우 대각성분이 모두 1인 하삼각행렬이므로 [명제 8](#prop8){: data-lid="283r5" }에 의해 그 행렬식은 1이다. 마지막 행렬의 경우, $l$번의 행 바꿈 후 $l$번의 열 바꿈을 하여 $2l$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
+과 [명제 9](#prop9){: data-lid="l13qf" }, 그리고 [보조정리 4](#lem4){: data-lid="ausxq" }에 의해 자명하다. 가운데 행렬의 경우 대각성분이 모두 1인 하삼각행렬이므로 [명제 8](#prop8){: data-lid="283r5" }에 의해 그 행렬식은 1이다. 마지막 행렬의 경우, 아래쪽 $l$개의 행을 위쪽 $k$개의 행 앞으로 옮기는 $kl$번의 행 바꿈 후 같은 방식의 $kl$번의 열 바꿈을 하여 $2kl$번의 부호 변경이 생겨 주어진 행렬의 행렬식이 $\det B$와 같게 된다.
 :::
 
 어렵지 않게 위의 결과들을 귀납적으로 확장할 수 있다. 즉
