@@ -32,7 +32,7 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 By definition, any isomorphism is a bijection between the two sets $V,W$. Moreover, by the following lemma the converse also holds.
 
 ::: Lemma 2
-For two $\mathbb{K}$-vector spaces $V$, $W$, let $L:V\rightarrow W$ be an isomorphism. Then the inverse function of $L$, $L^{-1}$, exists, and $L^{-1}$ is linear.
+For two $\mathbb{K}$-vector spaces $V$, $W$, let $L:V\rightarrow W$ be a bijective linear map. Then the inverse function of $L$, $L^{-1}$, exists, and $L^{-1}$ is linear.
 :::
 ::: Proof
 The existence of $L^{-1}$ is a result from set theory, and in this case $L\circ L^{-1}=\id_W$ and $L^{-1}\circ L=\id_V$.
@@ -89,12 +89,12 @@ Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be 
 The following two propositions are hardly worth numbering separately.
 
 1. $L$ is injective if and only if $\nullity L=0$.
-2. $L$ is surjective if and only if $\rank L=\dim W$.
+2. If $W$ is finite-dimensional, $L$ is surjective if and only if $\rank L=\dim W$.
 
 Moreover, the following theorem holds.
 
 ::: Theorem 7 (Rank-nullity theorem)
-Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be given. Then the equation 
+Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be given. If $V$ is finite-dimensional, then the equation 
 
 $$\rank L+\nullity L=\dim V$$
 
