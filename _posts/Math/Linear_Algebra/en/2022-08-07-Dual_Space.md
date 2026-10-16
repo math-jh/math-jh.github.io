@@ -25,7 +25,7 @@ $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\}$$
 
 forms a basis of $V^\ast$. We call this the *dual basis* of $\mathcal{B}$.
 
-Even when $V$ is infinite-dimensional, for a basis $\mathcal{B}$, the fact that the set $\mathcal{B}^\ast$ defined as above is linearly independent follows from the exact same proof as in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="uwc13" }, without any modification. Hence $\dim V\leq\dim V^\ast$ always holds, and in fact, if $V$ is infinite-dimensional then necessarily $\dim V<\dim V^\ast$. To see this, it suffices to verify that the function obtained by extending the function that sends every element of an arbitrary $\mathcal{B}$ to $1$ cannot be expressed as a linear combination of elements of $\mathcal{B}^\ast$.
+Even when $V$ is infinite-dimensional, for a basis $\mathcal{B}$, the fact that the set $\mathcal{B}^\ast$ defined as above is linearly independent follows from the exact same proof as in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5){: data-lid="uwc13" }, without any modification. Hence $\dim V\leq\dim V^\ast$ always holds. However, if $V$ is infinite-dimensional, $\mathcal{B}^\ast$ fails to be a basis of $V^\ast$. To see this, it suffices to verify that the function obtained by extending the function that sends every element of an arbitrary $\mathcal{B}$ to $1$ cannot be expressed as a linear combination of elements of $\mathcal{B}^\ast$. In fact, in this case, necessarily $\dim V<\dim V^\ast$.
 
 ## Double Dual Space
 
