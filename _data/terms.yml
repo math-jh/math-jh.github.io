@@ -12584,6 +12584,13 @@ M:
   defs:
   - label: '[리만기하학] §제2기본형식'
     url: /ko/math/riemannian_geometry/second_fundamental_form
+- id: mean_value_inequality
+  en: mean value inequality
+  ko: 평균값 부등식
+  primary: en
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: mean_value_property
   en: mean value property
   ko: 평균값 성질
@@ -14137,6 +14144,13 @@ O:
   defs:
   - label: '[스킴] §스킴'
     url: /ko/math/scheme_theory/schemes
+- id: operator_norm
+  en: operator norm
+  ko: 연산자 노름
+  primary: en
+  defs:
+  - label: '[해석학] §역함수 정리와 음함수 정리'
+    url: /ko/math/analysis/inverse_function_theorem
 - id: opposite_category
   en: opposite category
   ko: 반대 카테고리
