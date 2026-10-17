@@ -925,6 +925,13 @@ A:
   see:
   - label: Descending chain condition
     id: descending_chain_condition
+- id: associate
+  en: associate
+  ko: 동반원
+  primary: en
+  defs:
+  - label: '[환론] §정역'
+    url: /ko/math/ring_theory/integral_domains
 - id: associated_bundle
   en: associated bundle
   ko: 수반다발
