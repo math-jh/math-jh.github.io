@@ -36,15 +36,22 @@ def log(message: str) -> None:
     dc.log(message)
 
 
+def _subset(call: dict, items: list[dict]) -> dict:
+    """The call with only these items; it keeps only the target excerpts they use."""
+    keys = {item.get("target_key") for item in items}
+    return {**call, "items": items,
+            "targets": {k: v for k, v in call["targets"].items() if k in keys}}
+
+
+def subset_call(call: dict, lids: list[str]) -> dict:
+    wanted = set(lids)
+    return _subset(call, [item for item in call["items"] if item["id"] in wanted])
+
+
 def _split(call: dict) -> list[dict]:
-    """Halve a call's items; each half keeps only the target excerpts it uses."""
+    """Halve a call's items."""
     items = call["items"]
-    halves = []
-    for part in (items[: len(items) // 2], items[len(items) // 2:]):
-        keys = {item.get("target_key") for item in part}
-        halves.append({**call, "items": part,
-                       "targets": {k: v for k, v in call["targets"].items() if k in keys}})
-    return halves
+    return [_subset(call, part) for part in (items[: len(items) // 2], items[len(items) // 2:])]
 
 
 def step1_prompt(call: dict) -> str:
@@ -54,13 +61,7 @@ def step1_prompt(call: dict) -> str:
 
 def _chunks(call: dict) -> list[dict]:
     items = call["items"]
-    out = []
-    for i in range(0, len(items), MAX_ITEMS):
-        part = items[i:i + MAX_ITEMS]
-        keys = {item.get("target_key") for item in part}
-        out.append({**call, "items": part,
-                    "targets": {k: v for k, v in call["targets"].items() if k in keys}})
-    return out
+    return [_subset(call, items[i:i + MAX_ITEMS]) for i in range(0, len(items), MAX_ITEMS)]
 
 
 def _run_parts(stage: str, parts: list[dict]) -> tuple[dict[str, dict], list[dict]]:

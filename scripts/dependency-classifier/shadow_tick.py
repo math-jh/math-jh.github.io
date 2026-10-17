@@ -45,7 +45,6 @@ RETRY_SEC = 3600
 FIT_EVERY_SEC = 24 * 3600
 NEXT = {"S1": "S2", "S2": "S3", "S3": None}
 LEDGER_REL = store.LEDGER_REL
-DASHBOARD_URL = dc.DASHBOARD_URL.replace("#audit", "#shadow")
 
 
 def _fingerprint(paths: list[Path]) -> str:
@@ -342,7 +341,7 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
             if result["to_human"]:
                 dc.notify("[dependency] 링크 재판정",
                           f"{paths[0].stem}: 판정 대기 {result['to_human']}건 추가", level="passive",
-                          url=DASHBOARD_URL)
+                          url=dc.DASHBOARD_URL)
             store.save_state(state)
             commit_ledger(f"{paths[0].stem}: 확정 {result['finalized']}건, "
                           f"사람 판정 대기 {result['to_human']}건", commit)

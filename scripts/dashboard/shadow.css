@@ -1,4 +1,5 @@
-/* #shadow — 링크 재판정. 대시보드 스킨(dashboard.css)의 변수만 쓴다. */
+/* 링크 재판정 (#audit 아래쪽). 대시보드 스킨(dashboard.css)의 변수만 쓴다. */
+.sh-wrap{margin-top:2.4rem}
 .sh-bar{display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;font-family:var(--sans);font-size:.82rem;margin-bottom:.8rem;position:relative}
 .sh-bar b{font-size:1rem}
 .sh-help{margin-left:auto;font-weight:700;width:1.7rem}
@@ -41,4 +42,15 @@
 .sh-reveal{border-left:3px solid var(--brass);padding-left:.7rem;margin:.4rem 0}
 .sh-form{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
 .sh .bad{color:var(--bad)}
+.sh-item--sel{box-shadow:inset 2px 0 0 var(--brass);padding-left:.6rem}
+/* 미리보기를 열면 두 칸이 된다 — 왼쪽 목록, 오른쪽에 그 링크가 있는 구워진 글. */
+.sh-cols--pv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.4rem;align-items:start}
+.sh-pv{display:none}
+.sh-cols--pv .sh-pv{display:block;position:sticky;top:.8rem;border:1px solid var(--rule);padding:.6rem;background:var(--panel)}
+.sh-pv__head{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.5rem;font-family:var(--sans);font-size:.74rem}
+.sh-pv__head .path{flex:1;min-width:0;word-break:break-all}
+.sh-pv__open{white-space:nowrap}
+.sh-pv__frame{width:100%;height:calc(100vh - 6rem);border:1px solid var(--rule);background:var(--paper);display:block}
+/* 좁은 화면에서는 미리보기를 위에 붙여 두고 목록이 그 아래로 지나가게 한다. */
+@media (max-width:1000px){.sh-cols--pv{grid-template-columns:1fr}.sh-cols--pv .sh-pv{order:-1;top:0;z-index:5}.sh-pv__frame{height:42vh}}
 @media (max-width:760px){.sh-ctx{grid-template-columns:1fr}.sh-tools{margin-left:0}}

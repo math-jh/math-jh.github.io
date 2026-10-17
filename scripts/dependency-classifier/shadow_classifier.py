@@ -12,7 +12,8 @@ and this package's docstrings; criteria.md holds the criteria.
 Modes:
   (no flag)          one cron tick
   --probe PATH       Step 1 of one unit for one stage, nothing written to state
-  --pilot N          the signal pilot: Step 1 by S1 twice, S2, and S3 on N units
+  --pilot N          the signal pilot: Step 1 by S1 twice (a third time where those
+                     two disagree), S2, and S3 on N units
   --pilot-report     the pilot's distributions
   --status           counts
 """
@@ -20,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -72,7 +74,7 @@ def probe(path_arg: str, stage: str, out: str | None, prompt_only: bool) -> int:
 
 # ── pilot ────────────────────────────────────────────────────────────────
 
-PILOT_RUNS = (("S1a", "S1"), ("S1b", "S1"), ("S2", "S2"), ("S3", "S3"))
+PILOT_RUNS = (("S1a", "S1"), ("S1b", "S1"), ("S1c", "S1"), ("S2", "S2"), ("S3", "S3"))
 
 
 def pilot_units(n: int) -> list[list[Path]]:
@@ -99,11 +101,26 @@ def pilot_units(n: int) -> list[list[Path]]:
     return chosen
 
 
+def agy_quota() -> str:
+    """The Gemini weekly line of `agy -p /quota` — read directly, because the HUD's
+    agy figure is not trustworthy.  Before and after a pilot pass it gives the cost."""
+    try:
+        out = subprocess.run([models.AGY_BIN, "-p", "/quota"], capture_output=True, text=True,
+                             timeout=60, stdin=subprocess.DEVNULL).stdout
+    except (OSError, subprocess.TimeoutExpired):
+        return "unread"
+    for line in out.splitlines():
+        if line.startswith("Gemini Models") and "Weekly" in line:
+            return " ".join(line.split("\t")[2:])
+    return "unread"
+
+
 def pilot(n: int) -> int:
     held = store.try_tick_lock()
     if held is None:
         log("pilot: a shadow tick (or another pilot) holds the tick lock")
         return 0
+    log(f"pilot: agy weekly remaining at start: {agy_quota()}")
     try:
         for paths in pilot_units(n):
             unit = units.load_unit(paths)
@@ -119,12 +136,27 @@ def pilot(n: int) -> int:
                 for name, stage in PILOT_RUNS:
                     if name in saved["runs"]:
                         continue
+                    asked = call
+                    if name == "S1c":
+                        # The third S1 answer is asked only where the first two disagree:
+                        # the majority of three is then the same as asking all three.
+                        runs = saved["runs"]
+                        if "S1a" not in runs or "S1b" not in runs:
+                            continue
+                        split = [lid for lid, row in runs["S1a"].items()
+                                 if lid in runs["S1b"] and runs["S1b"][lid]["relation"] != row["relation"]]
+                        if not split:
+                            runs[name] = {}
+                            saved["usage"][name] = []
+                            store.write_json(out_path, pipe.jsonable(record))
+                            continue
+                        asked = pipe.subset_call(call, split)
                     if not models.available(stage):
                         log(f"pilot: {models.PROVIDER[stage]} quota closed; {name} left for later")
                         continue
                     started = time.time()
                     try:
-                        rows, usages = pipe.run_step1(stage, call)
+                        rows, usages = pipe.run_step1(stage, asked)
                     except Exception as exc:  # noqa: BLE001
                         saved["errors"][name] = str(exc)[:500]
                         log(f"pilot: {name} gave no answer for {call['source_rel']}: {exc}")
@@ -133,8 +165,9 @@ def pilot(n: int) -> int:
                     saved["usage"][name] = usages
                     saved["errors"].pop(name, None)
                     store.write_json(out_path, pipe.jsonable(record))
-                    log(f"pilot: {name} {call['source_rel']} {len(rows)} item(s) "
+                    log(f"pilot: {name} {asked['source_rel']} {len(rows)} item(s) "
                         f"{time.time() - started:.0f}s")
+        log(f"pilot: agy weekly remaining at end: {agy_quota()}")
         return 0
     finally:
         held.release()

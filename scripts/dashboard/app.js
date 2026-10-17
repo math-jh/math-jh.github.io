@@ -16,24 +16,18 @@ var state = {
   stampErr: false,
   kotypoDone: {},
   draftCat: '', draftSort: 'mtime', draftLimit: DRAFT_PAGE,
-  wSortKey: 'un', wSortDesc: true,
-  /* 링크 보류에서 고른 건. 고르는 순간 주기 렌더를 멈춘다 — #app 을 통째로 다시
-     그리면 미리보기 iframe 이 새로 만들어져 글을 처음부터 다시 굽는다. */
-  holdSel: null, holdFreeze: false, holdNote: '',
-  /* 판정 요청이 도는 중. 키 연타로 다음 건까지 판정되는 걸 막는다. */
-  holdBusy: false
+  wSortKey: 'un', wSortDesc: true
 };
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
    모달 직결, 파이프라인은 개요 우측 칼럼에 상주. */
-var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 'cron', 'shadow'];
-var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어', shadow: '링크 재판정' };
+var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 'cron'];
+var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어' };
 var PAGE_DESC = {
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
-  translation: '지금 큐·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
+  translation: '지금 큐·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사, 번역 짝 맞춤, 링크 재판정',
   index: 'GSC 색인 분포와 조치 대상', activity: '커밋·대기 댓글 PR·시스템 상태',
-  cron: '블로그 크론 워커 일시정지·재개',
-  shadow: '의존성 링크 전면 재판정 — 판정 대기·감사·판례'
+  cron: '블로그 크론 워커 일시정지·재개'
 };
 
 function route() {
@@ -391,12 +385,6 @@ function alertsOf(d) {
   if (sys.jekyll !== 'active') out.push({ level: 'bad', text: 'Jekyll dev 서버가 ' + sys.jekyll, to: 'activity' });
   if (sys.mem && /hit_cap=[1-9]/.test(sys.mem)) out.push({ level: 'warn', text: 'Jekyll 메모리 cap 도달 이력', sub: sys.mem.trim(), to: 'activity' });
   if (sys.quota && sys.quota.weekly >= .9) out.push({ level: 'warn', text: '주간 쿼터 ' + Math.round(sys.quota.weekly * 100) + '% — 워커가 스킵될 수 있다', to: 'activity' });
-  var la = d.link_audit;
-  if (la && la.held.length) out.push({
-    level: 'warn', text: '의존성 링크 판정 불일치 ' + la.held.length + '건',
-    sub: la.ready ? '그중 ' + la.ready + '건은 태그를 달았으니 체크만 하면 된다'
-      : '1차와 2차가 갈려 태그가 빠진 링크 — 글에서 직접 정한다', to: 'audit'
-  });
   if (s.missing_en) out.push({ level: 'warn', text: '발행글 중 EN 없음 ' + s.missing_en + '건', to: 'audit' });
   if (s.orphan_en) out.push({ level: 'warn', text: '고아 EN(ko 없음) ' + s.orphan_en + '건', to: 'audit' });
   if (g && g.actionable) {
@@ -516,7 +504,7 @@ function overview(d) {
       d: '영문 ' + num(s.en) + '편 (' + pct(s.en, s.published) + '%) · 30일 신규 ' + s.new30d },
     { n: num(d.audit ? d.audit.posts_with_issues : null), l: '링크 이슈 글', to: 'audit',
       d: d.audit ? d.audit.scanned + '편 검사 · ' + ago(d.audit.mtime) + ' 갱신' : 'audit-report.md 없음' },
-    { n: num(d.shadow ? d.shadow.human + d.shadow.audit : null), l: '링크 재판정', to: 'shadow', accent: true,
+    { n: num(d.shadow ? d.shadow.human + d.shadow.audit : null), l: '링크 재판정', to: 'audit', accent: true,
       d: d.shadow ? '판정 대기 ' + d.shadow.human + ' · 감사 ' + d.shadow.audit + ' · 초안 ' + d.shadow.drafts +
         ' · 섀도 원장 ' + num(d.shadow.ledger) : '섀도 상태 없음' },
     { n: num(sys.dirty_count), l: '커밋 안 된 변경', to: 'activity',
@@ -929,392 +917,6 @@ function secTranslation(d) {
   return s;
 }
 
-/* 의존성 링크 감사 — 1차 분류와 2차 교차검증이 갈린 링크. 분류기가 값을
-   requires-review 로 바꿔 둔 상태라 그 링크는 의존성 그래프에서 빠져 있다.
-   목록에서 한 건을 고르면 오른쪽에 구워진 글이 그대로 뜨고(그 링크를 강조한다),
-   판정 버튼이 그 링크의 원장 레코드(_data/link_relations.yml)에 값과 reviewed 를
-   쓴 뒤 보류 원장에서 뺀다. 원장에 값을 직접 적은 경우를 위해 '원장 값 확인'
-   경로도 남아 있다. */
-function heldItems(d) {
-  return ((d.link_audit || {}).held) || [];
-}
-function heldByIdent(d, ident) {
-  var list = heldItems(d), i;
-  for (i = 0; i < list.length; i++) if (list[i].ident === ident) return list[i];
-  return null;
-}
-
-/* 미리보기 iframe 안에서 그 링크 하나를 짚는다. 본문 링크는 소스 순서 그대로
-   `.page__content` 에 나오므로, 같은 href 중 서버가 준 rank 번째가 그 출현이다.
-   livereload 로 프레임이 다시 뜨면 onload 가 같은 일을 다시 한다. */
-function markPreview(frame) {
-  var k = frame.__hold, doc;
-  if (!k) return;
-  try { doc = frame.contentDocument; } catch (e) { return; }
-  if (!doc || !doc.body) return;
-  if (!doc.getElementById('dash-hl')) {
-    var st = doc.createElement('style');
-    st.id = 'dash-hl';
-    st.textContent = '.dash-hl{outline:2px solid #b3541e;outline-offset:3px;' +
-      'background:rgba(179,84,30,.14)}';
-    (doc.head || doc.body).appendChild(st);
-  }
-  Array.prototype.forEach.call(doc.querySelectorAll('.dash-hl'), function (a) {
-    a.classList.remove('dash-hl');
-  });
-  var root = doc.querySelector('.page__content') || doc.body;
-  /* 글 앞뒤의 선수지식·읽을만한 글 블록도 `.page__content` 안에 있고 같은 href 를
-     갖는다. 본문 출현이 아니므로 순번에서 뺀다. */
-  var all = Array.prototype.filter.call(
-    root.querySelectorAll('a[href]'),
-    function (a) {
-      return a.getAttribute('href') === k.target && !a.closest('.semantic-reading');
-    });
-  var hit = all[k.rank >= 0 ? k.rank : 0] || all[0];
-  if (!hit) return;
-  hit.classList.add('dash-hl');
-  /* 프레임 안에서만 스크롤한다 — scrollIntoView 는 바깥 대시보드 페이지까지 끌고 간다. */
-  var win = frame.contentWindow;
-  win.scrollTo(0, Math.max(0, hit.getBoundingClientRect().top + win.scrollY
-                              - win.innerHeight * 0.4));
-}
-
-function renderHoldPreview(d) {
-  var box = document.getElementById('holds-preview');
-  if (!box) return;
-  var k = state.holdSel ? heldByIdent(d, state.holdSel) : null;
-  if (!k) {
-    state.holdSel = null;
-    state.holdFreeze = false;
-    box.innerHTML = '<p class="hint">왼쪽에서 한 건을 고르면 그 링크가 있는 글을 ' +
-      '구워진 채로 띄운다. 링크에 마우스를 올리면 가리키는 대상도 보인다.</p>';
-    return;
-  }
-  var frame = document.getElementById('holds-frame');
-  if (!frame || frame.__permalink !== k.permalink) {
-    box.innerHTML = '';
-    var head = el('div', 'lp__head');
-    head.appendChild(el('span', 'path', k.path.replace(/^_posts\//, '') + ':' + k.line));
-    if (k.permalink) {
-      var open = el('a', 'lp__open', '새 탭 ↗');
-      open.href = k.permalink;
-      open.target = '_blank';
-      head.appendChild(open);
-    }
-    box.appendChild(head);
-    frame = el('iframe', 'lp__frame');
-    frame.id = 'holds-frame';
-    frame.__permalink = k.permalink;
-    frame.__hold = k;
-    frame.onload = function () {
-      /* 미리보기를 클릭하면 포커스가 프레임 안으로 들어가므로 거기서도 키를 받는다. */
-      try { frame.contentDocument.addEventListener('keydown', holdKey); } catch (e) { }
-      markPreview(frame);
-    };
-    frame.src = k.permalink || 'about:blank';
-    box.appendChild(frame);
-    box.appendChild(el('div', 'lp__acts'));
-    box.appendChild(el('div', 'lp__why'));
-  } else {
-    frame.__hold = k;
-    box.querySelector('.lp__head .path').textContent =
-      k.path.replace(/^_posts\//, '') + ':' + k.line;
-    markPreview(frame);
-  }
-  var acts = box.querySelector('.lp__acts');
-  var why = box.querySelector('.lp__why');
-  acts.innerHTML = '';
-  var err = el('span', 'lp__err', '');
-  HOLD_KEYS.forEach(function (rel, i) {
-    var b = el('button', 'ghost-btn' + (rel === k.new ? ' ghost-btn--on' : ''));
-    b.appendChild(el('span', 'kbd', String(i + 1)));
-    b.appendChild(document.createTextNode(rel));
-    b.onclick = function () { resolveHold(k, rel, acts, err); };
-    acts.appendChild(b);
-  });
-  if (k.verdict) {
-    var c = el('button', 'ghost-btn', '원장 값 확인 (' + k.verdict + ')');
-    c.onclick = function () { resolveHold(k, '', acts, err); };
-    acts.appendChild(c);
-  }
-  acts.appendChild(err);
-  why.innerHTML =
-    '<div class="lp__line"><b>1차</b> ' + esc(k.old || '—') +
-    ' <span class="muted">(' + esc(k.decided_by || '기록 없음') + ')</span>' +
-    ' · <b>2차</b> ' + esc(k.new) +
-    ' <span class="muted">(' + esc(k.verifier) + ')</span>' +
-    ' · <span class="muted">' + esc(k.target) + '</span></div>' +
-    '<div class="lp__line">' + esc(k.reason || '근거 기록 없음') + '</div>';
-}
-
-function selectHold(ident) {
-  /* 고른 행을 다시 누르면 선택을 푼다 — 그래야 주기 갱신이 돌아온다. */
-  var same = state.holdSel === ident;
-  state.holdSel = same ? null : ident;
-  state.holdFreeze = !same;
-  var list = document.getElementById('holds-list');
-  if (list) {
-    Array.prototype.forEach.call(list.querySelectorAll('tr'), function (tr) {
-      tr.classList.toggle('is-sel', tr.dataset.ident === state.holdSel);
-    });
-  }
-  renderHoldPreview(state.data);
-}
-
-/* 키보드 판정: j/k 로 이동, 1/2/3 으로 HOLD_KEYS 순서대로 판정, u 로 마지막 판정 되돌리기. */
-var HOLD_KEYS = ['required', 'weak', 'forward'];
-function holdKey(e) {
-  if (route() !== 'audit' || e.ctrlKey || e.metaKey || e.altKey) return;
-  if (!document.getElementById('modal').hidden) return;
-  var t = e.target;
-  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-  if (e.key === 'u') {
-    e.preventDefault();
-    undoHold();
-    return;
-  }
-  var list = heldItems(state.data);
-  if (!list.length) return;
-  var at = -1, i;
-  for (i = 0; i < list.length; i++) if (list[i].ident === state.holdSel) at = i;
-  if (e.key === 'j' || e.key === 'k') {
-    e.preventDefault();
-    if (state.holdBusy) return;
-    var to = at < 0 ? 0 : Math.max(0, Math.min(list.length - 1, at + (e.key === 'j' ? 1 : -1)));
-    if (to === at) return;
-    state.holdSel = list[to].ident;
-    state.holdFreeze = true;
-    var box = document.getElementById('holds-list');
-    if (box) {
-      Array.prototype.forEach.call(box.querySelectorAll('tr'), function (tr) {
-        var on = tr.dataset.ident === state.holdSel;
-        tr.classList.toggle('is-sel', on);
-        if (on) tr.scrollIntoView({ block: 'nearest' });
-      });
-    }
-    renderHoldPreview(state.data);
-    return;
-  }
-  var n = '123'.indexOf(e.key);
-  if (n < 0 || at < 0) return;
-  e.preventDefault();
-  if (state.holdBusy) return;
-  var prev = document.getElementById('holds-preview');
-  var acts = prev && prev.querySelector('.lp__acts');
-  if (!acts) return;
-  resolveHold(list[at], HOLD_KEYS[n], acts, acts.querySelector('.lp__err'));
-}
-document.addEventListener('keydown', holdKey);
-
-/* 판정 한 건. relation 이 비면 글에 직접 단 태그를 서버가 확인하는 예전 경로다. */
-function resolveHold(k, relation, acts, err) {
-  state.holdBusy = true;
-  Array.prototype.forEach.call(acts.querySelectorAll('button'), function (b) {
-    b.disabled = true;
-  });
-  err.textContent = '';
-  fetch(API + 'linkaudit/resolve', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
-    body: JSON.stringify(relation ? { ident: k.ident, relation: relation }
-                                  : { ident: k.ident })
-  })
-    .then(function (r) {
-      return r.json().catch(function () { return {}; }).then(function (v) {
-        if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
-        return v;
-      });
-    })
-    .then(function (v) { state.holdBusy = false; afterResolve(k.ident, v.note); })
-    .catch(function (e) {
-      state.holdBusy = false;
-      Array.prototype.forEach.call(acts.querySelectorAll('button'), function (b) {
-        b.disabled = false;
-      });
-      err.textContent = e.message || String(e);
-    });
-}
-
-/* 해소된 건을 목록에서 빼고 다음 건으로 넘어간다. 전체 재렌더 대신 목록·미리보기만
-   손대는 이유는 iframe 이다 — 다시 만들면 글을 처음부터 다시 굽는다. */
-function afterResolve(ident, note) {
-  state.holdNote = note || '';
-  var list = heldItems(state.data);
-  var at = -1, i;
-  for (i = 0; i < list.length; i++) if (list[i].ident === ident) at = i;
-  if (at >= 0) list.splice(at, 1);
-  var next = list[Math.min(at, list.length - 1)];
-  state.holdSel = next ? next.ident : null;
-  renderHoldList(state.data);
-  renderHoldPreview(state.data);
-  /* 서버 값(확정 수·커밋 대기 편수)은 조용히 맞춰 온다. 화면은 이미 갱신돼 있고,
-     이 응답으로 목록을 다시 그리면 사용자가 고른 건이 튄다. */
-  fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
-    .then(function (fresh) {
-      var keep = state.holdSel;
-      state.data = fresh;
-      state.holdSel = heldByIdent(fresh, keep) ? keep : null;
-      renderHoldList(state.data);
-      renderHoldPreview(state.data);
-    })
-    .catch(function () { });
-}
-
-function renderHoldList(d) {
-  var a = d.link_audit || { held: [], ready: 0, settled: 0, uncommitted: [] };
-  var list = document.getElementById('holds-list');
-  var title = document.getElementById('holds-title');
-  var foot = document.getElementById('holds-foot');
-  var commit = document.getElementById('holds-commit');
-  if (!list) return;
-  if (title) {
-    /* 방금 내린 판정이 쓴 lid 는 화면에 남는 흔적이 없으므로 제목 옆에 붙인다. */
-    title.textContent = '의존성 링크 보류 — ' + a.held.length + '건'
-      + (state.holdNote ? ' · ' + state.holdNote : '');
-  }
-  var undo = document.getElementById('holds-undo');
-  if (undo) {
-    undo.textContent = a.undo ? '되돌리기: ' + a.undo.relation + ' · ' + a.undo.brief
-                              : '되돌릴 판정 없음';
-    undo.title = a.undo ? a.undo.path : '';
-    undo.disabled = !a.undo || state.holdBusy;
-  }
-  var pend = (a.uncommitted || []).length;
-  if (commit) {
-    commit.textContent = pend ? '링크 판정 커밋' : '커밋할 변경 없음';
-    commit.disabled = !pend;
-  }
-  if (foot) {
-    foot.textContent = '원장에 값이 있는 것 ' + num(a.ready) + '건 · 지금까지 확정 ' +
-      num(a.settled) + '건 · ' + ago(a.mtime) +
-      ' 갱신. 확정한 링크는 검증기가 다시 걸지 않는다. 키보드: j/k 이동, 1/2/3 판정, u 되돌리기(커밋 전 판정만).';
-  }
-  list.innerHTML = '';
-  if (!a.held.length) {
-    list.appendChild(el('p', 'hint', '1차와 2차 판정이 갈린 링크가 없다.'));
-    return;
-  }
-  list.appendChild(table(['위치', '판정'], a.held.map(function (k, i) {
-    var tr = row([
-      { html: '<span class="path">' + esc(k.path.replace(/^_posts\//, '')) +
-              '</span><span class="muted">:' + k.line + '</span>' +
-              '<div class="holdrow__brief">' + esc(k.brief) + '</div>' },
-      { html: esc(k.old || '—') + ' <span class="muted">→</span> ' + esc(k.new) +
-              (k.verdict ? ' <span class="muted">· 원장 ' + esc(k.verdict) + '</span>' : ''),
-        cls: 'sans' }
-    ], 'clickable' + (k.ident === state.holdSel ? ' is-sel' : '') +
-       (i && a.held[i - 1].pair !== k.pair ? ' pair-start' : ''));
-    tr.dataset.ident = k.ident;
-    tr.onclick = function () { selectHold(k.ident); };
-    return tr;
-  })));
-}
-
-/* 가장 최근의 커밋 전 판정을 되돌린다. 되살아난 건을 다시 고른 상태로 둔다. */
-function undoHold(err) {
-  var u = ((state.data || {}).link_audit || {}).undo;
-  if (!u || state.holdBusy) return;
-  state.holdBusy = true;
-  var btn = document.getElementById('holds-undo');
-  if (btn) btn.disabled = true;
-  err = err || document.querySelector('.holds__head .lp__err');
-  if (err) err.textContent = '';
-  fetch(API + 'linkaudit/undo', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
-    body: JSON.stringify({ ident: u.ident })
-  })
-    .then(function (r) {
-      return r.json().catch(function () { return {}; }).then(function (v) {
-        if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
-        return v;
-      });
-    })
-    .then(function () { return true; })
-    .catch(function (e) {
-      if (err) err.textContent = '되돌리지 못함: ' + (e.message || String(e));
-      return false;
-    })
-    .then(function (ok) {
-      /* 실패해도 서버가 그 기록을 지웠을 수 있으니 다시 받아 온다. */
-      return fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
-        .then(function (fresh) {
-          state.data = fresh;
-          if (ok) {
-            state.holdSel = u.ident;
-            state.holdFreeze = true;
-            state.holdNote = '';
-          }
-        });
-    })
-    .catch(function () { })
-    .then(function () {
-      state.holdBusy = false;
-      renderHoldList(state.data);
-      renderHoldPreview(state.data);
-      var sel = document.querySelector('#holds-list tr.is-sel');
-      if (sel) sel.scrollIntoView({ block: 'nearest' });
-    });
-}
-
-function commitLinkChanges(btn, err) {
-  btn.disabled = true;
-  err.textContent = '';
-  fetch(API + 'linkaudit/commit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
-    body: '{}'
-  })
-    .then(function (r) {
-      return r.json().catch(function () { return {}; }).then(function (v) {
-        if (!r.ok || !v.ok) throw new Error(v.error || ('HTTP ' + r.status));
-        return v;
-      });
-    })
-    .then(function (v) {
-      err.textContent = '커밋됨 (push 는 autopush)';
-      return fetch(API + 'summary?fresh=1').then(function (r) { return r.json(); })
-        .then(function (fresh) { state.data = fresh; renderHoldList(state.data); });
-    })
-    .catch(function (e) {
-      btn.disabled = false;
-      err.textContent = e.message || String(e);
-    });
-}
-
-function linkAuditBlock(d) {
-  var wrap = el('div', 'holds');
-  var head = el('div', 'holds__head');
-  var title = el('h3', null, '의존성 링크 보류');
-  title.id = 'holds-title';
-  var commit = el('button', 'ghost-btn');
-  commit.id = 'holds-commit';
-  var cerr = el('span', 'lp__err', '');
-  commit.onclick = function () { commitLinkChanges(commit, cerr); };
-  var undo = el('button', 'ghost-btn');
-  undo.id = 'holds-undo';
-  undo.onclick = function () { undoHold(cerr); };
-  head.appendChild(title);
-  head.appendChild(undo);
-  head.appendChild(commit);
-  head.appendChild(cerr);
-  wrap.appendChild(head);
-  var cols = el('div', 'holds__cols');
-  var left = el('div', 'holds__list');
-  left.id = 'holds-list';
-  var right = el('div', 'lp');
-  right.id = 'holds-preview';
-  cols.appendChild(left);
-  cols.appendChild(right);
-  wrap.appendChild(cols);
-  var foot = el('p', 'hint');
-  foot.id = 'holds-foot';
-  wrap.appendChild(foot);
-  /* 목록·미리보기는 DOM 이 붙은 뒤에 채운다 (id 로 찾는다). */
-  setTimeout(function () { renderHoldList(d); renderHoldPreview(d); }, 0);
-  return wrap;
-}
-
 /* ── 감사 ─────────────────────────────────────────────────────────────── */
 /* 주간 감사(scripts/audit/check_links.py)의 지적 종류 — 무엇을 보고 어떻게 읽는지. */
 var AUDIT_KIND = {
@@ -1382,8 +984,11 @@ function secAudit(d) {
     right.appendChild(el('pre', 'log', d.orphan_en.map(function (o) { return o.path; }).join('\n')));
   }
   c.appendChild(left); c.appendChild(right); s.appendChild(c);
-  /* 보류 목록과 미리보기는 폭을 다 쓴다 — 왼쪽 목록, 오른쪽에 그 링크가 있는 글. */
-  s.appendChild(linkAuditBlock(d));
+  /* 의존성 링크 전면 재판정은 폭을 다 쓴다 — 판정 대기·감사·판례 (shadow.js). */
+  var sh = el('div', 'sh-wrap');
+  sh.appendChild(el('h3', null, '링크 재판정'));
+  sh.appendChild(window.secShadow(d));
+  s.appendChild(sh);
   return s;
 }
 
@@ -1588,8 +1193,7 @@ function secCron(d) {
 var SECTIONS = {
   drafts: secDrafts, weights: secWeights,
   translation: secTranslation, audit: secAudit, index: secIndex, activity: secActivity,
-  cron: secCron,
-  shadow: function (d) { return window.secShadow(d); }
+  cron: secCron
 };
 
 /* ── 페이지 셸 · 렌더 · 로드 ──────────────────────────────────────────── */
@@ -1647,13 +1251,9 @@ function load(fresh) {
         }
       } catch (e) { }
       state.stampErr = false;
-      if (route() === 'shadow' && hadData) {
-        /* 재판정 페이지는 자기 데이터를 따로 읽는다. 다시 그리면 쓰던 설명이 날아간다. */
-        return;
-      }
-      if (state.holdFreeze && route() === 'audit') {
-        /* 링크 판정 중이다. 새 스냅샷은 받아 두되 화면은 건드리지 않는다. */
-        renderHoldList(state.data);
+      if (route() === 'audit' && hadData) {
+        /* 감사 페이지의 링크 재판정은 자기 데이터를 따로 읽는다. 다시 그리면 쓰던
+           설명이 날아간다. 위쪽 감사 숫자는 주간 갱신이라 처음 그린 값으로 충분하다. */
         return;
       }
       render();
@@ -1673,7 +1273,6 @@ function load(fresh) {
 }
 
 window.addEventListener('hashchange', function () {
-  state.holdFreeze = false;
   window.scrollTo(0, 0);
   render();
 });

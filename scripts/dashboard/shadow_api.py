@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""#shadow 페이지의 데이터와 판정 동작 — 의존성 링크 전면 재판정(섀도 원장).
+"""감사 페이지(#audit) 링크 재판정의 데이터와 판정 동작 — 의존성 링크 전면 재판정(섀도 원장).
 
 데이터의 정본은 scripts/dependency-classifier/shadow_*.py 가 쓰는 상태다
 (~/.local/state/dependency-shadow, _data/link_relations_next.yml). 여기서는 그걸
@@ -80,10 +80,16 @@ def _context(u: units.Unit | None, lid: str) -> dict:
             "markup": text[link.start:link.ial_end or link.end], "target": link.target}
 
 
-def _brief(rec: dict) -> dict:
+def _permalinks() -> dict[str, str]:
+    """소스 경로 → 그 글의 permalink. 미리보기가 dev 서버의 구워진 글을 띄울 때 쓴다."""
+    return {post.rel: post.permalink for post in dc._POSTS}
+
+
+def _brief(rec: dict, permalinks: dict[str, str]) -> dict:
     """Where the link is, from the unit record alone — cheap enough for every row."""
     return {"path": rec.get("source"), "line": rec.get("line"), "markup": rec.get("link"),
-            "target": rec.get("target"), "same_page": (rec.get("features") or {}).get("same_page")}
+            "target": rec.get("target"), "same_page": (rec.get("features") or {}).get("same_page"),
+            "permalink": permalinks.get(rec.get("source") or "")}
 
 
 def link_detail(lid: str) -> dict:
@@ -122,6 +128,7 @@ def snapshot() -> dict:
     state = store.load_state()
     queue = store.load_queue()
     cache = _Units()
+    permalinks = _permalinks()
     stages: dict[str, int] = {}
     for entry in state["units"].values():
         key = entry.get("next") or "done"
@@ -136,7 +143,7 @@ def snapshot() -> dict:
             "lid": lid, "kind": item.get("kind"), "decisive": item.get("decisive"),
             "votes": item.get("votes"), "precedents": item.get("precedents"),
             "issues": item.get("issues"), "was": item.get("was"), "created": item.get("created"),
-            "stages": _stage_view(rec), **_brief(rec),
+            "stages": _stage_view(rec), **_brief(rec, permalinks),
         })
     for g in groups.values():
         g["items"].sort(key=lambda x: (not x.get("decisive"), x.get("created") or 0))
@@ -153,7 +160,7 @@ def snapshot() -> dict:
     for lid, item in sorted(queue["audit"].items(), key=lambda kv: kv[1].get("created", 0)):
         rec = cache.record(item["unit"]).get("links", {}).get(lid, {})
         audit.append({"lid": lid, "stratum": item.get("stratum"), "created": item.get("created"),
-                      **_brief(rec)})
+                      **_brief(rec, permalinks)})
 
     stats = book.load_stats()
     return {
@@ -178,8 +185,10 @@ def snapshot() -> dict:
                      "raised_by": e.meta.get("raised_by"), "body": e.body}
                     for e in book.entries("Q") if e.status == "open"],
         "criteria": sp.criteria_text(),
-        "settled": sorted(({"lid": k, **v} for k, v in queue["settled"].items()),
-                          key=lambda x: -x.get("at", 0))[:20],
+        "settled": [{**x, **_brief((cache.record(x["unit"]) if x.get("unit") else {})
+                                   .get("links", {}).get(x["lid"], {}), permalinks)}
+                    for x in sorted(({"lid": k, **v} for k, v in queue["settled"].items()),
+                                    key=lambda x: -x.get("at", 0))[:20]],
     }
 
 

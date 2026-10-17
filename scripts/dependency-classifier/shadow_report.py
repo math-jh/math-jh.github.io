@@ -7,7 +7,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-RUNS = ("S1a", "S1b", "S2", "S3")
+RUNS = ("S1a", "S1b", "S1c", "S2", "S3")
 VOTERS = ("S1a", "S2", "S3")
 
 
@@ -28,6 +28,16 @@ def load(pilot_dir: Path) -> list[dict]:
                             "runs": {name: runs[name][lid] for name in RUNS
                                      if name in runs and lid in runs[name]}})
     return out
+
+
+def s1_majority(runs: dict) -> str | None:
+    """S1's relation by the majority of S1a, S1b and (where those two differ) S1c."""
+    a, b, c = (runs.get(k, {}).get("relation") for k in ("S1a", "S1b", "S1c"))
+    if a is None or b is None:
+        return None
+    if a == b:
+        return a
+    return c if c in (a, b) else None
 
 
 def usage_table(pilot_dir: Path) -> list[str]:
@@ -119,6 +129,23 @@ def render(pilot_dir: Path) -> str:
                   "in_paren", "in_heading", "target_before", "target_post_earlier"):
             group(f"feature {f}", lambda x, f=f: x["features"].get(f))
         group("feature pair_size>1", lambda x: (x["features"].get("pair_size") or 1) > 1)
+
+    third = [x for x in complete if "S1b" in x["runs"]
+             and x["runs"]["S1b"]["relation"] != x["runs"]["S1a"]["relation"]]
+    if any("S1c" in x["runs"] for x in third):
+        lines.append("\n## votes with the S1 majority of three (S1c asked where S1a≠S1b)")
+        maj = {x["lid"]: s1_majority(x["runs"]) for x in complete if "S1b" in x["runs"]}
+        ready = [x for x in complete if x["lid"] in maj and (x not in third or "S1c" in x["runs"])]
+        unan_a = sum(1 for x in ready if len({x["runs"][v]["relation"] for v in VOTERS}) == 1)
+        unan_m = sum(1 for x in ready if maj[x["lid"]]
+                     and len({maj[x["lid"]], x["runs"]["S2"]["relation"], x["runs"]["S3"]["relation"]}) == 1)
+        lines.append(f"- unanimous with S1a alone: {_pct(unan_a, len(ready))}")
+        lines.append(f"- unanimous with the majority: {_pct(unan_m, len(ready))}")
+        asked = [x for x in third if "S1c" in x["runs"]]
+        sided = Counter("S1a" if x["runs"]["S1c"]["relation"] == x["runs"]["S1a"]["relation"]
+                        else "S1b" if x["runs"]["S1c"]["relation"] == x["runs"]["S1b"]["relation"]
+                        else "neither" for x in asked)
+        lines.append(f"- S1c on {len(asked)} split link(s) sided with: {dict(sided)}")
 
     lines.append("\n## usage")
     lines.extend(usage_table(pilot_dir))

@@ -94,7 +94,7 @@ except Exception:
     def _ko_typos(_verdict):
         return []
 
-# 링크 전면 재판정(#shadow)의 데이터층 — 섀도 파이프라인과 같은 모듈로 읽고 쓴다.
+# 링크 전면 재판정(감사 페이지 #audit 아래쪽)의 데이터층 — 섀도 파이프라인과 같은 모듈로 읽고 쓴다.
 try:
     import shadow_api as _shadow
 except Exception:
@@ -1254,7 +1254,7 @@ def posts_indexed():
 # index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
 # (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
 SECTIONS = {"workers", "pipeline", "drafts", "weights", "translation", "audit",
-            "index", "activity", "cron", "shadow"}
+            "index", "activity", "cron"}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -1542,7 +1542,7 @@ class Handler(BaseHTTPRequestHandler):
         return self._send(200, json.dumps({"ok": True, **data}, ensure_ascii=False))
 
     def _shadow_post(self, path):
-        """#shadow 의 판정 동작. 본문은 JSON, 동작 이름은 경로 끝."""
+        """링크 재판정의 판정 동작. 본문은 JSON, 동작 이름은 경로 끝."""
         if _shadow is None:
             return self._send(503, json.dumps({"ok": False, "error": "shadow_api 없음"},
                                               ensure_ascii=False))

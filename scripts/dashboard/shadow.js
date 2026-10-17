@@ -1,6 +1,6 @@
-/* #shadow — 의존성 링크 전면 재판정(섀도 원장)의 사람 쪽 화면.
-   데이터는 /api/shadow (60초 폴링과 무관하게 이 페이지가 직접 읽는다 — 판정 중에
-   주기 렌더가 입력 칸을 날리지 않도록 app.js 의 load() 는 이 페이지를 다시 그리지
+/* 의존성 링크 전면 재판정(섀도 원장)의 사람 쪽 화면 — 감사 페이지(#audit) 아래쪽.
+   데이터는 /api/shadow (60초 폴링과 무관하게 이 블록이 직접 읽는다 — 판정 중에
+   주기 렌더가 입력 칸을 날리지 않도록 app.js 의 load() 는 감사 페이지를 다시 그리지
    않는다). 동작은 /api/shadow/<동작> POST.
    판정 기준은 scripts/dependency-classifier/criteria.md 한 곳에만 있고, "?" 가 그
    파일을 렌더해 보여 준다 — 프롬프트가 넣는 것과 같은 글이다. */
@@ -11,7 +11,8 @@ var SH = {
   open: {},        /* lid → 펼침 */
   detail: {},      /* lid → {source_context, target_context} */
   reveal: {},      /* 감사 lid → 서버가 돌려준 공개 정보 */
-  note: {}         /* lid·qid → 쓰던 설명 */
+  note: {},        /* lid·qid → 쓰던 설명 */
+  pv: null         /* 미리보기 중인 링크 (lid·permalink·path·line) */
 };
 var SH_REL = { required: '필수', weak: '배경', forward: '예고' };
 var SH_TABS = [['queue', '판정 대기'], ['audit', '감사'], ['drafts', '판례 초안'],
@@ -79,6 +80,79 @@ function shDetail(lid, then) {
   fetch(API + 'shadow/link?lid=' + encodeURIComponent(lid)).then(function (r) { return r.json(); })
     .then(function (j) { delete SH_LOADING[lid]; if (j.ok) SH.detail[lid] = j; shRender(); if (then) then(); },
           function () { delete SH_LOADING[lid]; });
+}
+
+/* ── 미리보기 ─────────────────────────────────────────────────────────── */
+/* 고른 링크가 있는 글을 dev 서버(4001)에서 구워진 채로 띄우고 그 링크를 짚는다.
+   칸은 #shadow-root 밖에 있어 shRender 가 건드리지 않는다 — 다시 만들면 iframe 이
+   글을 처음부터 다시 굽는다. 구워진 글의 <a> 에도 data-lid 가 남아 있어 그걸로
+   찾는다. livereload 로 프레임이 다시 뜨면 onload 가 같은 일을 다시 한다. */
+function shMark(frame) {
+  var k = SH.pv, doc;
+  if (!k) return;
+  try { doc = frame.contentDocument; } catch (e) { return; }
+  if (!doc || !doc.body) return;
+  if (!doc.getElementById('dash-hl')) {
+    var st = doc.createElement('style');
+    st.id = 'dash-hl';
+    st.textContent = '.dash-hl{outline:2px solid #b3541e;outline-offset:3px;' +
+      'background:rgba(179,84,30,.14)}';
+    (doc.head || doc.body).appendChild(st);
+  }
+  Array.prototype.forEach.call(doc.querySelectorAll('.dash-hl'), function (a) {
+    a.classList.remove('dash-hl');
+  });
+  var hit = doc.querySelector('a[data-lid="' + k.lid + '"]');
+  if (!hit) return;
+  hit.classList.add('dash-hl');
+  /* 프레임 안에서만 스크롤한다 — scrollIntoView 는 바깥 대시보드 페이지까지 끌고 간다. */
+  var win = frame.contentWindow;
+  win.scrollTo(0, Math.max(0, hit.getBoundingClientRect().top + win.scrollY
+                              - win.innerHeight * 0.4));
+}
+function shPaint() {
+  var pane = document.getElementById('sh-preview');
+  if (!pane) return;
+  var k = SH.pv;
+  pane.parentNode.classList.toggle('sh-cols--pv', !!k);
+  if (!k) { pane.innerHTML = ''; return; }
+  var frame = pane.querySelector('iframe');
+  if (!frame || frame.__permalink !== k.permalink) {
+    pane.innerHTML = '';
+    var head = el('div', 'sh-pv__head');
+    head.appendChild(el('span', 'path'));
+    var open = el('a', 'sh-pv__open', '새 탭 ↗');
+    open.target = '_blank';
+    head.appendChild(open);
+    var close = el('button', 'ghost-btn', '닫기');
+    close.onclick = function () { SH.pv = null; shPaint(); shRender(); };
+    head.appendChild(close);
+    pane.appendChild(head);
+    frame = el('iframe', 'sh-pv__frame');
+    frame.__permalink = k.permalink;
+    /* 글꼴·KaTeX 가 늦게 자리를 잡으면 줄이 밀리므로 조금 뒤 한 번 더 짚는다. */
+    frame.onload = function () { shMark(frame); setTimeout(function () { shMark(frame); }, 1200); };
+    frame.src = k.permalink;
+    pane.appendChild(frame);
+  } else {
+    shMark(frame);
+  }
+  pane.querySelector('.path').textContent = String(k.path || '').replace(/^_posts\//, '') + ':' + k.line;
+  pane.querySelector('.sh-pv__open').href = k.permalink;
+}
+/* 같은 링크를 다시 누르면 닫는다. */
+function shPvBtn(x) {
+  if (!x.permalink) return document.createTextNode('');
+  var on = !!SH.pv && SH.pv.lid === x.lid;
+  var b = el('button', 'ghost-btn' + (on ? ' sh-tab--on' : ''), '미리보기');
+  b.onclick = function () {
+    SH.pv = on ? null : { lid: x.lid, permalink: x.permalink, path: x.path, line: x.line };
+    shPaint(); shRender();
+  };
+  return b;
+}
+function shSel(row, x) {
+  if (SH.pv && SH.pv.lid === x.lid) row.classList.add('sh-item--sel');
 }
 
 /* ── 조각 ─────────────────────────────────────────────────────────────── */
@@ -190,6 +264,8 @@ function shItem(x, g, openQs) {
     SH.open[x.lid] = !SH.open[x.lid]; if (SH.open[x.lid]) shDetail(x.lid); shRender();
   });
   top.appendChild(tog);
+  top.appendChild(shPvBtn(x));
+  shSel(row, x);
   row.appendChild(top);
   if (SH.open[x.lid]) {
     row.appendChild(shContext(x.lid));
@@ -264,6 +340,8 @@ function shAudit(d) {
     var top = el('div', 'sh-item__top');
     top.appendChild(shWhere(x));
     top.appendChild(el('span', 'tag', x.stratum || ''));
+    top.appendChild(shPvBtn(x));
+    shSel(row, x);
     row.appendChild(top);
     if (!SH.detail[x.lid]) shDetail(x.lid);
     row.appendChild(shContext(x.lid));
@@ -410,7 +488,10 @@ function shSettled(d) {
     top.appendChild(shBtn('되돌리기', null, function () {
       if (confirm(x.lid + ' 판정을 되돌릴까?')) shPost('reopen', { lid: x.lid }).then(shLoad);
     }));
+    top.appendChild(shPvBtn(x));
+    shSel(row, x);
     row.appendChild(top);
+    if (x.path) row.appendChild(shWhere(x));
     frag.appendChild(row);
   });
   return frag;
@@ -463,8 +544,13 @@ function shRender() {
 }
 
 window.secShadow = function () {
+  var cols = el('div', 'sh-cols');
   var root = el('div', 'sh');
   root.id = 'shadow-root';
-  setTimeout(function () { shRender(); shLoad(); }, 0);
-  return root;
+  var pane = el('div', 'sh-pv');
+  pane.id = 'sh-preview';
+  cols.appendChild(root);
+  cols.appendChild(pane);
+  setTimeout(function () { shRender(); shPaint(); shLoad(); }, 0);
+  return cols;
 };
