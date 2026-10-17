@@ -17072,6 +17072,13 @@ R:
   defs:
   - label: '[복소해석학] §유수정리'
     url: /ko/math/complex_analysis/residue_theorem
+- id: residue_at_infinity
+  en: residue at infinity
+  ko: 무한대에서의 유수
+  primary: en
+  defs:
+  - label: '[복소해석학] §유수정리'
+    url: /ko/math/complex_analysis/residue_theorem
 - id: residue_class
   en: residue class
   ko: 잉여류
