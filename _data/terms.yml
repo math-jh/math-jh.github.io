@@ -17193,6 +17193,13 @@ R:
   defs:
   - label: '[리만기하학] §리만 곡률'
     url: /ko/math/riemannian_geometry/curvature
+- id: riemann_integrable
+  en: Riemann integrable
+  ko: Riemann 적분가능
+  primary: en
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: riemann_integral
   en: Riemann integral
   ko: 리만적분
