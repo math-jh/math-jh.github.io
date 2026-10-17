@@ -666,6 +666,13 @@ A:
   defs:
   - label: '[미적분학] §무한급수'
     url: /ko/math/calculus/series
+- id: alternating_series_test
+  en: alternating series test
+  ko: 교대급수 판정
+  primary: en
+  defs:
+  - label: '[해석학] §무한급수와 수렴판정법'
+    url: /ko/math/analysis/series
 - id: amalgamation
   en: amalgamation
   ko: 접합
@@ -2172,6 +2179,20 @@ C:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: cauchy_condensation_test
+  en: Cauchy condensation test
+  ko: Cauchy 응축판정
+  primary: en
+  defs:
+  - label: '[해석학] §무한급수와 수렴판정법'
+    url: /ko/math/analysis/series
+- id: cauchy_criterion
+  en: Cauchy criterion
+  ko: Cauchy 판정
+  primary: ko
+  defs:
+  - label: '[해석학] §Cauchy 수열과 완비성'
+    url: /ko/math/analysis/cauchy_sequences
 - id: cauchy_principal_value
   en: Cauchy principal value
   ko: 주값
