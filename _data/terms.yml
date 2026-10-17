@@ -6272,6 +6272,13 @@ E:
   defs:
   - label: '[정수론] §페르마 소정리와 오일러 정리'
     url: /ko/math/number_theory/euler_theorem
+- id: euler_s_totient_function
+  en: 'Euler''s totient function'
+  ko: Euler phi 함수
+  primary: ko
+  defs:
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: euler_vector_field
   en: Euler vector field
   ko: 오일러 벡터장
@@ -15378,6 +15385,13 @@ P:
   defs:
   - label: '[스택] §스택'
     url: /ko/math/stacks/fibered_categories_and_stacks
+- id: primality_test
+  en: primality test
+  ko: 소수 판정
+  primary: en
+  defs:
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: primary_decomposition
   en: primary decomposition
   ko: 으뜸분해
@@ -17536,6 +17550,13 @@ R:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: rsa_cryptosystem
+  en: RSA cryptosystem
+  ko: RSA 암호
+  primary: en
+  defs:
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: Russell's_paradox
   en: Russell's paradox
   ko: 러셀의 역설
@@ -21649,6 +21670,13 @@ W:
   - label: 특성류
     lang: ko
     id: characteristic_class
+- id: wilson_s_theorem
+  en: 'Wilson''s theorem'
+  ko: 윌슨 정리
+  primary: en
+  defs:
+  - label: '[정수론] §페르마 소정리와 오일러 정리'
+    url: /ko/math/number_theory/euler_theorem
 - id: winding_number
   en: winding number
   ko: 회전수
