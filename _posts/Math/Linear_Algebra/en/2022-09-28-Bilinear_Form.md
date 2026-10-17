@@ -1,6 +1,6 @@
 ---
 title: "Bilinear Forms"
-description: "This post reviews the dual spaces and canonical isomorphisms of finite-dimensional vector spaces, and outlines the definition, symmetry, alternating properties, and nondegeneracy conditions of bilinear forms."
+description: "This post reviews the dual spaces and natural isomorphisms of finite-dimensional vector spaces, and summarizes the definition, symmetry, alternating properties, and nondegeneracy conditions of bilinear forms."
 excerpt: "Bilinear forms and dual spaces"
 
 categories: [Math / Linear Algebra]
@@ -14,24 +14,26 @@ date: 2022-09-28
 weight: 20
 translated_at: 2026-09-25T07:15:06+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-17T07:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In the previous post, we defined for a vector space $V$ its dual space $V^\ast$, and saw that if $V$ is finite-dimensional, the dual space of $V^\ast$, namely $V^{\ast\ast}$, is isomorphic to $V$. The key fact used in this process was that a non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$ defines injective linear maps from $V$ to $W^\ast$, and from $W$ to $V^\ast$. We applied this fact to the canonical pairing
+In the previous post, for a vector space $V$, we defined its dual space $V^\ast$, and saw that if $V$ is finite-dimensional, the dual space of $V^\ast$, namely $V^{\ast\ast}$, is isomorphic to $V$. The key fact used in this process was that a non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$ defines injective linear maps from $V$ to $W^\ast$ and from $W$ to $V^\ast$. We applied this fact to the canonical pairing
 
 $$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{K};\quad (v,f)\mapsto f(v)$$
 
-and, considering dimensions, saw that $V$ and $V^{\ast\ast}$ are isomorphic. To describe the map $V\rightarrow V^{\ast\ast}$ induced in this way, there was no need to choose a basis for $V$.
+and, by considering dimensions, saw that $V$ and $V^{\ast\ast}$ are isomorphic. To describe the map $V\rightarrow V^{\ast\ast}$ induced in this way, there was no need to choose a basis of $V$.
 
-Meanwhile, at the beginning of the previous post, we mentioned that $V$ and $V^\ast$ also have the same dimension; however, unlike the natural isomorphism $V\rightarrow V^{\ast\ast}$ above, there was the difference that it had to be defined by choosing a specific basis $\{x_1,\ldots, x_n\}$, choosing their dual basis $\{\xi^1,\ldots, \xi^n\}$, and setting $x_i\mapsto \xi^i$.
+Meanwhile, at the beginning of the previous post, we mentioned that $V$ and $V^\ast$ also have the same dimension; however, unlike the natural isomorphism $V\rightarrow V^{\ast\ast}$ above, this differed in that it had to be defined by choosing a specific basis $\{x_1,\ldots, x_n\}$, taking its dual basis $\{\xi^1,\ldots, \xi^n\}$, and setting $x_i\mapsto \xi^i$.
 
 ## Bilinear Forms
 
 Now we focus on the case where $V=W$.
 
 ::: Definition 1
-For any pairing $\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$, if $W=V$, then this pairing is called a *bilinear form* defined on $V$. That $\langle -,-\rangle$ is a *non-degenerate bilinear form* means that $\langle-,-\rangle$ is non-degenerate as a pairing.
+For any pairing $\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$, if $W=V$, then this pairing is called a *bilinear form* defined on $V$. To say that $\langle -,-\rangle$ is a *non-degenerate bilinear form* means that $\langle-,-\rangle$ is non-degenerate as a pairing.
 :::
 
-Suppose a bilinear form is given on $V$. Then through the same argument as above, we obtain linear maps from $V$ to $V^\ast$:
+Suppose a bilinear form is given on $V$. Then, through the same argument as above, we obtain linear maps from $V$ to $V^\ast$:
 
 $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
@@ -55,20 +57,20 @@ Suppose we are given a finite-dimensional $\mathbb{K}$-vector space $V$, and con
 
 $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
-The isomorphism in (1) can be rewritten as follows.
+The isomorphism in equation (1) can be restated as follows.
 
 ::: Corollary 3
-Given a non-degenerate bilinear form $\langle -,-\rangle$ on a finite-dimensional $\mathbb{K}$-vector space $V$, for every $f\in V^\ast$, there exists a unique $w\in V$ such that
+Consider a non-degenerate bilinear form $\langle -,-\rangle$ given on a finite-dimensional $\mathbb{K}$-vector space $V$. For each $f\in V^\ast$, there exists a unique $w\in V$ such that
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
 holds.
 :::
 
-Then, in particular, we can bring the notion of orthogonal complement defined in the previous post to $V$. That is, we define as follows.
+Then, in particular, we can bring the notion of orthogonal complement defined in the previous post to $V$. That is, we define it as follows.
 
 ::: Definition 4
-Given a non-degenerate bilinear form $\langle -,-\rangle$ on a finite-dimensional $\mathbb{K}$-vector space $V$, for any $v\in V$, the collection of elements satisfying the equation $\langle w,v\rangle=0$ among all $w\in V$ is called the *orthogonal complement* of $v$, and is denoted by $v^\perp$. More generally, for any subset $S\subseteq V$, we define the set
+Suppose a non-degenerate bilinear form $\langle -,-\rangle$ is given on a finite-dimensional $\mathbb{K}$-vector space $V$. For any $v\in V$, the collection of elements satisfying the equation $\langle w,v\rangle=0$ among all $w\in V$ is called the *orthogonal complement* of $v$, and is denoted by $v^\perp$. More generally, for any subset $S\subseteq V$, we define the set
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
@@ -80,10 +82,10 @@ The vector $w\in V$ uniquely determines, by [Corollary 3](#cor3){: data-lid="xwf
 For a general bilinear form, using $\langle w,v\rangle=0$ to define $v^\perp$ and using $\langle v,w\rangle=0$ may give different results, so the definition of $W^\perp$ can vary depending on whether it is defined from the left or from the right. To avoid such a phenomenon, it is wise to consider the following property.
 
 ::: Definition 5
-When a bilinear form $\langle-,-\rangle$ satisfies that for any $v,w\in V$, $\langle v,w\rangle=0$ and $\langle w,v\rangle=0$ are equivalent to each other, $\langle-,-\rangle$ is said to be *reflexive*.
+When a bilinear form $\langle-,-\rangle$ is such that for any $v,w\in V$, $\langle v,w\rangle=0$ and $\langle w,v\rangle=0$ are equivalent to each other, $\langle-,-\rangle$ is said to be *reflexive*.
 :::
 
-That a symmetric form is reflexive is trivial, but the converse does not hold. For instance, an alternating form also satisfies
+It is obvious that a symmetric form is reflexive, but the converse does not hold. For instance, an alternating form also satisfies
 
 $$\langle v,w\rangle=-\langle w,v\rangle$$
 
@@ -104,13 +106,13 @@ $$\langle u,w\rangle\langle v,u\rangle=\langle u,v\rangle\langle w,u\rangle\tag{
 
 for all $u,v,w$.
 
-Now if for all $u$ we have $\langle u,u\rangle=0$, then
+Now, if for all $u$ we have $\langle u,u\rangle=0$, then
 
 $$0=\langle u+v,u+v\rangle=\langle u,v\rangle+\langle v,u\rangle$$
 
-shows that $\langle-,-\rangle$ is alternating.
+and so $\langle-,-\rangle$ is alternating.
 
-Otherwise, since $\langle u_0,u_0\rangle\neq 0$ for some $u_0$, evaluating $(\ast)$ at $w=u=u_0$ gives
+Otherwise, $\langle u_0,u_0\rangle\neq 0$ for some $u_0$, and evaluating $(\ast)$ at $w=u=u_0$ gives
 
 $$\langle u_0,u_0\rangle\bigl(\langle v,u_0\rangle-\langle u_0,v\rangle\bigr)=0$$
 
@@ -118,7 +120,7 @@ so we see that for all $v$, $\langle v,u_0\rangle=\langle u_0,v\rangle$ holds. T
 
 $$\langle u,u_0\rangle\bigl(\langle u,w\rangle-\langle w,u\rangle\bigr)=0$$
 
-Here $u,w$ can be arbitrary vectors, and two cases arise. First, if $\langle u,u_0\rangle\neq 0$, then immediately $\langle u,w\rangle=\langle w,u\rangle$. If $\langle u,u_0\rangle=0$, setting $u'=u+u_0$ gives $\langle u', u_0\rangle=\langle u_0,u_0\rangle\neq 0$, and thus for all $w$, $\langle u', w\rangle=\langle w,u'\rangle$ holds. But we have already shown above that $\langle u_0,w\rangle=\langle w,u_0\rangle$ for all vectors, from which the conclusion follows.
+Above, $u,w$ can be arbitrary vectors, and two cases arise. First, if $\langle u,u_0\rangle\neq 0$, then immediately $\langle u,w\rangle=\langle w,u\rangle$. If $\langle u,u_0\rangle=0$, setting $u'=u+u_0$ gives $\langle u', u_0\rangle=\langle u_0,u_0\rangle\neq 0$, and thus for all $w$, $\langle u', w\rangle=\langle w,u'\rangle$ holds. Yet we have already shown above that $\langle u_0,w\rangle=\langle w,u_0\rangle$ for all vectors, from which the conclusion follows.
 :::
 
 Therefore, the forms whose orthogonal complement does not depend on left or right are precisely symmetric forms and alternating forms. In what follows, results on subspaces are developed for non-degenerate reflexive forms encompassing both cases, which in particular apply directly to non-degenerate alternating forms as well. We add a few definitions.
@@ -143,7 +145,7 @@ Given a finite-dimensional $\mathbb{K}$-vector space $V$ equipped with a non-deg
 3. $W$ being non-degenerate, $W^\perp$ being non-degenerate, and $V=W\oplus W^\perp$ are equivalent.
 :::
 ::: Proof
-The dual of the inclusion map $W\hookrightarrow V$, namely the restriction $V^\ast\rightarrow W^\ast$, is surjective ([§Dual Space, ⁋Proposition 6](/en/math/linear_algebra/dual_space#prop6){: data-lid="oz8n9" }). Meanwhile, since $\langle-,-\rangle$ is non-degenerate, $v\mapsto\langle v,-\rangle$ is injective, and since dimensions are equal, it defines an isomorphism $V\rightarrow V^\ast$. Therefore, composing this with the restriction above,
+The dual of the inclusion map $W\hookrightarrow V$, namely the restriction $V^\ast\rightarrow W^\ast$, is surjective ([§Dual Space, ⁋Proposition 6](/en/math/linear_algebra/dual_space#prop6){: data-lid="oz8n9" }). Meanwhile, since $\langle-,-\rangle$ is non-degenerate, $v\mapsto\langle v,-\rangle$ is injective, and since the dimensions are equal, it defines an isomorphism $V\rightarrow V^\ast$. Therefore, its composition with the restriction above,
 
 $$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
 
@@ -187,35 +189,35 @@ If $V,W$ are given two bases $\mathcal{B}=\{x_1,\ldots, x_n\}$ and $\mathcal{C}=
 
 $$\mathcal{B}^\ast=\{\xi^1,\ldots, \xi^n\},\qquad\mathcal{C}^\ast=\{\upsilon^1,\ldots,\upsilon^m\}$$
 
-are well-defined. Now consider the bases
+are well-defined. Now, transferring these along $\varphi_V,\varphi_W$, let us consider the bases
 
 $$\mathcal{B}'=\{\varphi_V(\xi^1),\ldots,\varphi_V(\xi^n)\},\qquad\mathcal{C}'=\{\varphi_W(\upsilon^1),\ldots,\varphi_W(\upsilon^m)\}$$
 
-obtained by transferring these along $\varphi_V,\varphi_W$. That is, these are elements of $V,W$ defined by the equations
+so obtained. That is, through the equations
 
-$$\langle x_i,\varphi_V(\xi^j)\rangle=\delta_{ij},\qquad\langle y_i,\varphi_W(\upsilon^j)\rangle=\delta_{ij}.$$
+$$\langle x_i,\varphi_V(\xi^j)\rangle=\delta_{ij},\qquad\langle y_i,\varphi_W(\upsilon^j)\rangle=\delta_{ij}$$
 
-Now, for any $L:V\rightarrow W$, let
+these are defined as elements of $V,W$. Now, for any $L:V\rightarrow W$, suppose that
 
-$$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m.\end{aligned}$$
+$$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
-If we view the dual map $L^\ast:W^\ast\rightarrow V^\ast$ via the identifications $\varphi$ above as a map from $W$ to $V$, that is, if we consider $L':W\rightarrow V$ defined by the diagram
+holds. If we view the dual map $L^\ast:W^\ast\rightarrow V^\ast$ via the identifications $\varphi$ above as a map from $W$ to $V$, that is, if from the following diagram
 
 {% diagram Math/Linear_Algebra/Bilinear_Form-1.svg width="8.27em" alt="identification" %}
 
-then one can verify that the matrix representation of this linear map with respect to the two bases $\mathcal{C}'$ and $\mathcal{B}'$ is $[L']_{\mathcal{B}'}^{\mathcal{C}'}=\bigl([L]_\mathcal{C}^\mathcal{B}\bigr)^t$.
+we consider the map $L':W\rightarrow V$ defined thereby, then one can verify that the matrix representation of this linear map with respect to the two bases $\mathcal{C}'$ and $\mathcal{B}'$ is $[L']_{\mathcal{B}'}^{\mathcal{C}'}=\bigl([L]_\mathcal{C}^\mathcal{B}\bigr)^t$.
 
-Meanwhile, one can see that $L':W\rightarrow V$ defined in this way satisfies the following equation:
+Meanwhile, for $L':W\rightarrow V$ defined in this way, one can see that the following equation
 
 $$\langle Lv, w\rangle_W=\langle v,L'w\rangle_V\qquad\text{for all $v\in V$ and $w\in W$}\tag{2}$$
 
-This can be verified from
+is satisfied. From
 
-$$\langle Lv,w\rangle=(\varphi^{-1}_W(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w)))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=\langle v,L'w\rangle.$$
+$$\langle Lv,w\rangle=(\varphi^{-1}_W(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\ast(\varphi^{-1}_W(w)))(v)=(\varphi^{-1}_V(v)\circ L')(w)=(\varphi^{-1}_V(v))(L'w)=\langle v,L'w\rangle$$
 
-We call $L'$ satisfying this equation the *adjoint* of the linear map $L$, and by a slight abuse of notation, we also write it as $L^\ast$.
+this can be verified. We call $L'$ satisfying this equation the *adjoint* of the linear map $L$, and by a slight abuse of notation, we also write it as $L^\ast$.
 
-The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement){: data-lid="pbhto" } were all obtained from the relation $(Lv,f)=(v,L^\ast f)$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $\langle -,-\rangle$ obtained above, we obtain the following results.
+The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement){: data-lid="pbhto" } were all obtained from the relation $(Lv,f)=(v,L^\ast f)$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $\langle -,-\rangle$, obtained above, we obtain the following results.
 
 ::: Proposition 10
 Suppose we are given two finite-dimensional $\mathbb{K}$-vector spaces $V,W$ equipped with symmetric non-degenerate bilinear forms, a linear map $L:V\rightarrow W$, and its adjoint $L^\ast:W\rightarrow V$. Then
@@ -230,7 +232,7 @@ In particular, the subspaces of $V$ and $W$ obtained in 3 and 4,
 
 $$\ker L, \quad(\ker L)^\perp, \quad\im L,\quad(\im L)^\perp$$
 
-are sometimes called the *four fundamental subspaces* determined by $L$. If $\ker L$ and $\im L$ are non-degenerate in the sense of [Definition 7](#def7){: data-lid="0zj3a" }, then by [Proposition 8](#prop8){: data-lid="g0dgy" }, they are orthogonally decomposed as
+are sometimes called the *four fundamental subspaces* determined by $L$. If $\ker L$ and $\im L$ are non-degenerate in the sense of [Definition 7](#def7){: data-lid="0zj3a" }, then by [Proposition 8](#prop8){: data-lid="g0dgy" }, they decompose orthogonally as
 
 $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
@@ -241,14 +243,14 @@ and in particular, if $\langle-,-\rangle$ is positive-definite, then every subsp
 Now consider a $\mathbb{K}$-vector space $V$ equipped with a symmetric non-degenerate bilinear form. Then a subset of $V$, $\{v_1,\ldots, v_n\}$, is said to be an *orthogonal set* if whenever $i\neq j$, $\langle v_i,v_j\rangle=0$ holds. If a basis of $V$, $\mathcal{B}$, is also an orthogonal set, we call it an *orthogonal basis*.
 
 ::: Definition 11
-If for a field $\mathbb{K}$, the condition
+For a field $\mathbb{K}$, if the condition
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
-is satisfied by some natural number $p$, then the smallest such number is called the *characteristic* of $\mathbb{K}$ and denoted by $\ch \mathbb{K}=p$. If no natural number $p$ satisfying the above equation exists, we consider $\mathbb{K}$ to have characteristic 0.
+is satisfied by some natural number $p$, then the smallest such number is called the *characteristic* of $\mathbb{K}$ and is denoted by $\ch \mathbb{K}=p$. If no natural number $p$ satisfying the above equation exists, we consider $\mathbb{K}$ to have characteristic 0.
 :::
 
-For example, $\mathbb{R}$ has characteristic 0. If on $\mathbb{F}_2=\{0,1\}$ we define addition and multiplication by
+For example, $\mathbb{R}$ has characteristic 0. If on $\mathbb{F}_2=\{0,1\}$ we define addition and multiplication by the equations
 
 $$0+0=0,\quad 0+1=1,\quad 1+0=1,\quad 1+1=0$$
 
@@ -270,9 +272,9 @@ and from the two conditions $\langle u,v\rangle\neq 0$ and $\ch \mathbb{K}\neq 2
 
 > In any non-$\{0\}$ $\mathbb{K}$-vector space equipped with a non-degenerate symmetric bilinear form, we must have $\langle w,w\rangle\neq 0$ for some $w$.
 
-We prove the original proposition by induction on the dimension of $V$. The case $\dim V=0$ requires no proof. Now assume that the proof is complete in the case $\dim V=k$. Then, whenever $\dim V=k+1$ for a vector space $V$, we have $\langle w,w\rangle\neq 0$ for some vector $w$. 
+We prove the original proposition by induction on the dimension of $V$. The case $\dim V=0$ requires no proof. Now assume that the proof is complete in the case $\dim V=k$. Then, whenever $\dim V=k+1$ for an arbitrary vector space $V$, we have $\langle w,w\rangle\neq 0$ for some vector $w$. 
 
-Now let $W=\span w$. Since $\langle w,w\rangle\neq 0$, we have $w\notin W^\perp$, and since $W$ is $1$-dimensional, $W\cap W^\perp=\{0\}$; that is, $W$ is non-degenerate in the sense of [Definition 7](#def7){: data-lid="2dxia" }. Therefore, by [Proposition 8](#prop8){: data-lid="i7zbg" }, $V=W\oplus W^\perp$, $W^\perp$ is also non-degenerate, and $\dim W^\perp=\dim V-1=k$. Applying the induction hypothesis to the $k$-dimensional space $W^\perp$ equipped with the non-degenerate form, there exists an orthogonal basis $\mathcal{B}$, and since $W=\span w$ is orthogonal to $W^\perp$, $\mathcal{B}\cup\{w\}$ is an orthogonal basis of $V$.
+Now let $W=\span w$. Since $\langle w,w\rangle\neq 0$, we have $w\notin W^\perp$, and since $W$ is $1$-dimensional, $W\cap W^\perp=\{0\}$; that is, $W$ is non-degenerate in the sense of [Definition 7](#def7){: data-lid="2dxia" }. Therefore, by [Proposition 8](#prop8){: data-lid="i7zbg" }, $V=W\oplus W^\perp$, $W^\perp$ is also non-degenerate, and $\dim W^\perp=\dim V-1=k$. Applying the induction hypothesis to the $k$-dimensional space $W^\perp$ equipped with a non-degenerate form, there exists an orthogonal basis $\mathcal{B}$, and since $W=\span w$ is orthogonal to $W^\perp$, $\mathcal{B}\cup\{w\}$ is an orthogonal basis of $V$.
 :::
 
 ## Gram matrix
@@ -281,13 +283,13 @@ Suppose an arbitrary bilinear form $\langle-,-\rangle:V\times V\rightarrow \math
 
 $$\langle v,w\rangle=\left\langle\sum_{i=1}^nv_ix_i,\sum_{j=1}^n w_jx_j\right\rangle=\sum_{i,j=1}^n v_iw_j\langle x_i,x_j\rangle$$
 
-If we denote the matrix whose $(i,j)$-entry is $\langle x_i,x_j\rangle$ for now as the $n\times n$ matrix $G$, the equation above can be simply written as
+If for a moment we denote the matrix with $(i,j)$-entry $\langle x_i,x_j\rangle$, an $n\times n$ matrix, by $G$, the equation above can be written simply as
 
 $$\langle v,w\rangle=v^t Gw$$
 
 Here, $G$ is called the *Gram matrix* with respect to the basis $\mathcal{B}$.
 
-On $V$, consider two bases $\mathcal{B},\mathcal{C}$. Denoting the Gram matrices with respect to these by $G_\mathcal{B},G_\mathcal{C}$ respectively, we may write the equation above precisely as
+On $V$, consider two given bases $\mathcal{B},\mathcal{C}$. Denoting the Gram matrices with respect to these by $G_\mathcal{B},G_\mathcal{C}$ respectively, we may write the equation above precisely as
 
 $$\langle v,w\rangle=[v]^t_\mathcal{B}G_\mathcal{B}[w]_\mathcal{B}=[v]^t_\mathcal{C}G_\mathcal{C}[w]_\mathcal{C}$$
 
