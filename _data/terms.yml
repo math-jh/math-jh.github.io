@@ -14923,6 +14923,13 @@ P:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
+- id: periodic_continued_fraction
+  en: periodic continued fraction
+  ko: 순환연분수
+  primary: en
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: permutation
   en: permutation
   ko: 치환
