@@ -12868,6 +12868,13 @@ M:
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
     url: /ko/math/number_theory/arithmetic_functions
+- id: möbius_inversion_formula
+  en: Möbius inversion formula
+  ko: 뫼비우스 반전 공식
+  primary: en
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: möbius_strip
   en: Möbius strip
   ko: 뫼비우스 띠
@@ -14860,6 +14867,13 @@ P:
   see:
   - label: Imperfect field
     id: imperfect_field
+- id: perfect_number
+  en: perfect number
+  ko: 완전수
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: perfect_obstruction_theory
   en: perfect obstruction theory
   ko: 완전 장애 이론
