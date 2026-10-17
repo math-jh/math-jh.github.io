@@ -3319,6 +3319,13 @@ C:
   defs:
   - label: '[리 이론] §Weyl 완전가약성 정리'
     url: /ko/math/lie_theory/weyl_complete_reducibility
+- id: complete_residue_system
+  en: complete residue system
+  ko: 완전잉여계
+  primary: en
+  defs:
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: complete_ring
   en: complete ring
   ko: 완비환
