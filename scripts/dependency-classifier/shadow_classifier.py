@@ -100,9 +100,9 @@ def pilot_units(n: int) -> list[list[Path]]:
 
 
 def pilot(n: int) -> int:
-    held = store.lock(5)
+    held = store.try_tick_lock()
     if held is None:
-        log("pilot: another shadow process holds the lock")
+        log("pilot: a shadow tick (or another pilot) holds the tick lock")
         return 0
     try:
         for paths in pilot_units(n):

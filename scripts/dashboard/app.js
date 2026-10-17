@@ -26,13 +26,14 @@ var state = {
 
 /* 워커·파이프라인은 별도 페이지 없이 개요에서 소화한다 — 워커 행은 로그
    모달 직결, 파이프라인은 개요 우측 칼럼에 상주. */
-var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 'cron'];
-var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어' };
+var ROUTES = ['drafts', 'weights', 'translation', 'audit', 'index', 'activity', 'cron', 'shadow'];
+var SECTION_LABEL = { drafts: '미발행', weights: 'weight 지도', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어', shadow: '링크 재판정' };
 var PAGE_DESC = {
   drafts: '미발행 초안 목록·필터·lint', weights: '카테고리별 weight 눈금자',
   translation: '지금 큐·KO-TYPOS·최근 시도', audit: '링크·frontmatter 감사와 번역 짝 맞춤',
   index: 'GSC 색인 분포와 조치 대상', activity: '커밋·대기 댓글 PR·시스템 상태',
-  cron: '블로그 크론 워커 일시정지·재개'
+  cron: '블로그 크론 워커 일시정지·재개',
+  shadow: '의존성 링크 전면 재판정 — 판정 대기·감사·판례'
 };
 
 function route() {
@@ -515,6 +516,9 @@ function overview(d) {
       d: '영문 ' + num(s.en) + '편 (' + pct(s.en, s.published) + '%) · 30일 신규 ' + s.new30d },
     { n: num(d.audit ? d.audit.posts_with_issues : null), l: '링크 이슈 글', to: 'audit',
       d: d.audit ? d.audit.scanned + '편 검사 · ' + ago(d.audit.mtime) + ' 갱신' : 'audit-report.md 없음' },
+    { n: num(d.shadow ? d.shadow.human + d.shadow.audit : null), l: '링크 재판정', to: 'shadow', accent: true,
+      d: d.shadow ? '판정 대기 ' + d.shadow.human + ' · 감사 ' + d.shadow.audit + ' · 초안 ' + d.shadow.drafts +
+        ' · 섀도 원장 ' + num(d.shadow.ledger) : '섀도 상태 없음' },
     { n: num(sys.dirty_count), l: '커밋 안 된 변경', to: 'activity',
       d: sys.dirty_count ? (sys.dirty[0] || '').replace(/^[ MADRCU?!]+/, '') : 'working tree clean' }
   ];
@@ -1584,7 +1588,8 @@ function secCron(d) {
 var SECTIONS = {
   drafts: secDrafts, weights: secWeights,
   translation: secTranslation, audit: secAudit, index: secIndex, activity: secActivity,
-  cron: secCron
+  cron: secCron,
+  shadow: function (d) { return window.secShadow(d); }
 };
 
 /* ── 페이지 셸 · 렌더 · 로드 ──────────────────────────────────────────── */
@@ -1625,6 +1630,7 @@ function load(fresh) {
       .catch(function () { return state.kotypoDone; })
   ])
     .then(function (rs) {
+      var hadData = !!state.data;
       state.data = rs[0];
       state.kotypoDone = rs[1] || {};
       /* 구 저장소(localStorage) 1회 이전 — 서버 도입 전 체크를 살린다. */
@@ -1641,6 +1647,10 @@ function load(fresh) {
         }
       } catch (e) { }
       state.stampErr = false;
+      if (route() === 'shadow' && hadData) {
+        /* 재판정 페이지는 자기 데이터를 따로 읽는다. 다시 그리면 쓰던 설명이 날아간다. */
+        return;
+      }
       if (state.holdFreeze && route() === 'audit') {
         /* 링크 판정 중이다. 새 스냅샷은 받아 두되 화면은 건드리지 않는다. */
         renderHoldList(state.data);

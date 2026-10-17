@@ -44,16 +44,12 @@ WIP_CAP = 4
 RETRY_SEC = 3600
 FIT_EVERY_SEC = 24 * 3600
 NEXT = {"S1": "S2", "S2": "S3", "S3": None}
-LEDGER_REL = str(store.LEDGER_PATH.relative_to(store.ROOT))
+LEDGER_REL = store.LEDGER_REL
+DASHBOARD_URL = dc.DASHBOARD_URL.replace("#audit", "#shadow")
 
 
 def _fingerprint(paths: list[Path]) -> str:
     return units.Unit(key="", paths=paths, texts={p: p.read_text(encoding="utf-8") for p in paths}).fingerprint
-
-
-def _production_blank(unit: units.Unit, production: dict) -> bool:
-    return any((production.get(lid) is None or production[lid].relation not in dc.RELATIONS)
-               for lid in unit.lids)
 
 
 def pick(state: dict) -> tuple | None:
@@ -109,8 +105,9 @@ def pick(state: dict) -> tuple | None:
                 return paths, "S1", unit, "delta"
             entry["fp"] = unit.fingerprint              # edits without new links
             continue
-        (fresh_blank if any(production.get(l) is None for l in _cheap_lids(paths))
-         else fresh_other).append(paths)
+        blank = any(production.get(l) is None or production[l].relation not in dc.RELATIONS
+                    for l in _cheap_lids(paths))
+        (fresh_blank if blank else fresh_other).append(paths)
     for paths in fresh_blank + fresh_other:
         unit = units.load_unit(paths)
         if unit.waiting or not unit.lids:
@@ -145,16 +142,20 @@ def start_round(unit: units.Unit, record: dict, reason: str) -> list[str]:
     return lids
 
 
-def commit_ledger(records: dict, detail: str, commit: bool) -> None:
-    before = store.LEDGER_PATH.read_text(encoding="utf-8") if store.LEDGER_PATH.exists() else None
-    store.save_ledger(records)
+def commit_ledger(detail: str, commit: bool) -> None:
+    """Commit whatever the shadow ledger holds now (the dashboard's rulings ride along)."""
     if not commit:
         log(f"shadow ledger saved without commit: {detail}")
         return
     if not commit_outputs("Link Dependencies Shadow", [LEDGER_REL], detail, log=log, repo=store.ROOT):
-        if before is not None:
-            store.write_text(store.LEDGER_PATH, before)
-        raise RuntimeError("could not commit the shadow ledger; restored it")
+        raise RuntimeError("could not commit the shadow ledger")
+
+
+def _locked():
+    held = store.lock(120)
+    if held is None:
+        raise RuntimeError("shadow state stayed locked for two minutes")
+    return held
 
 
 def maybe_fit(state: dict) -> None:
@@ -184,38 +185,112 @@ def run_digest() -> bool:
     return shadow_digest.run_one()
 
 
+def run_recheck(commit: bool) -> bool:
+    """One approved "다시 볼 후보": Step 4 again on all three stages with the new precedent.
+
+    The link keeps its value if every stage still lands on it with agreeing
+    precedents; otherwise it goes to the human queue as a recheck.
+    """
+    queue = store.load_queue()
+    if not queue["recheck"]:
+        return False
+    if not all(models.available(s) for s in models.STAGES):
+        return False
+    item = queue["recheck"][0]
+    lid = item["lid"]
+    found = None
+    for paths in units.all_units():
+        h = units.unit_hash(dc.unit_key(paths))
+        record = store.load_unit_record(h)
+        if lid in record.get("links", {}):
+            found = (paths, h, record)
+            break
+    if found is None or units.load_unit(found[0]).link(lid) is None:
+        with _locked():
+            queue = store.load_queue()
+            queue["recheck"] = [x for x in queue["recheck"] if x != item]
+            store.save_queue(queue)
+        log(f"shadow recheck {lid}: the link is gone; dropped")
+        return True
+    paths, h, record = found
+    unit = units.load_unit(paths)
+    rec = record["links"][lid]
+    results = {}
+    try:
+        for stage in models.STAGES:
+            rows, usages = pipe.run_step4(stage, pipe.step4_items(unit, record, stage, [lid]))
+            pipe._record_issue(stage, lid, rows[lid])
+            results[stage] = rows[lid]
+    except Exception as exc:  # noqa: BLE001
+        log(f"ERROR shadow recheck {lid}: {exc}")
+        return True
+    final = (rec.get("final") or {}).get("relation")
+    relations = {r["relation"] for r in results.values()}
+    precedents = {r["precedent"] for r in results.values()}
+    rec.setdefault("rechecks", []).append({"precedent": item["precedent"], "results": results,
+                                           "at": int(time.time())})
+    held = _locked()
+    queue = store.load_queue()
+    queue["recheck"] = [x for x in queue["recheck"] if x != item]
+    if relations == {final} and len(precedents) == 1:
+        log(f"shadow recheck {lid}: still {final} under {item['precedent']}")
+    else:
+        queue["human"][lid] = {"unit": record["unit"], "kind": "recheck",
+                               "votes": {s: r["relation"] for s, r in results.items()},
+                               "precedents": {s: r["precedent"] for s, r in results.items()},
+                               "issues": sorted({r.get("pending_id") for r in results.values()
+                                                 if r.get("pending_id")}),
+                               "was": final, "precedent": item["precedent"],
+                               "decisive": pipe.decisive(lid, rec, record["links"]),
+                               "created": int(time.time())}
+        log(f"shadow recheck {lid}: sent to the human queue ({sorted(relations)})")
+    with held:
+        store.merge_unit_record(h, record, [lid])
+        store.save_queue(queue)
+    return True
+
+
 def tick(*, commit: bool = True) -> int:
     if dc.legacy_classifier_running():
         log("legacy dependency classifier is still running; skip this tick")
         return 0
-    production_lock = dc.ledger.try_lock()
-    if production_lock is None:
-        log("link relation ledger is locked (dashboard); skip this tick")
+    probe = dc.ledger.try_lock()
+    if probe is None:
+        # The old classifier holds this for its whole tick; the dashboard only for
+        # a moment.  Either way, mint_lids should not race it.
+        log("link relation ledger is locked (old classifier or dashboard); skip this tick")
         return 0
-    shadow_lock = store.try_lock()
-    if shadow_lock is None:
-        production_lock.release()
-        log("shadow state is locked (dashboard or another tick); skip this tick")
+    probe.release()
+    tick_lock = store.try_tick_lock()
+    if tick_lock is None:
+        log("another shadow tick (or the pilot) is still running; skip this tick")
         return 0
     try:
         if dc.mint_lids(commit=commit):
             return 0
         if run_digest():
             return 0
+        if run_recheck(commit):
+            return 0
         state = store.load_state()
         state.setdefault("started_at", int(time.time()))
+        maybe_fit(state)
         picked = pick(state)
         if picked is None:
-            store.save_state(state)
-            maybe_fit(state)
             store.save_state(state)
             log("shadow: nothing runnable this tick (rounds waiting on quota, or all done)")
             return 0
         paths, stage, unit, reason = picked
         return run(state, paths, stage, unit, reason, commit=commit)
     finally:
-        shadow_lock.release()
-        production_lock.release()
+        try:
+            # Dashboard rulings write the shadow ledger too; commit them even on a
+            # tick that finalized nothing, so they never sit in the tree for autopush.
+            if commit and dirty_paths([LEDGER_REL], store.ROOT):
+                commit_ledger("대시보드 판정 반영", commit)
+        except Exception as exc:  # noqa: BLE001
+            log(f"ERROR shadow ledger commit: {exc}")
+        tick_lock.release()
 
 
 def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: str,
@@ -236,7 +311,8 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
         record["round"] = round_lids
         if not round_lids:
             entry.update({"next": None, "updated": int(time.time())})
-            store.save_unit_record(h, record)
+            with _locked():
+                store.merge_unit_record(h, record, [])
             store.save_state(state)
             return 0
         log(f"shadow {stage} {key}: {len(round_lids)} link(s) ({reason})")
@@ -246,28 +322,35 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
             entry["updated"] = int(time.time())
             store.save_state(state)
             return 0
-        store.save_unit_record(h, record)
+        result = None
+        with _locked():
+            fresh = store.merge_unit_record(h, record, round_lids)
+            if stage == "S3":
+                queue = store.load_queue()
+                records = store.load_ledger()
+                result = pipe.finalize(fresh, round_lids, records, queue, state["started_at"])
+                store.save_unit_record(h, fresh)
+                store.save_queue(queue)
+                store.save_ledger(records)
         entry.update({"next": NEXT[stage], "updated": int(time.time()), "fp": unit.fingerprint})
         entry.pop("error", None)
         entry.pop("retry_after", None)
         log(f"shadow {stage} {key}: {summary}")
-        if stage == "S3":
-            queue = store.load_queue()
-            records = store.load_ledger()
-            result = pipe.finalize(record, round_lids, records, queue, state["started_at"])
-            store.save_unit_record(h, record)
-            store.save_queue(queue)
-            commit_ledger(records, f"{paths[0].stem}: 확정 {result['finalized']}건, "
-                                   f"사람 판정 대기 {result['to_human']}건", commit)
+        if result is not None:
             entry["links"] = len(unit.lids)
             log(f"shadow finalized {key}: {result}")
+            if result["to_human"]:
+                dc.notify("[dependency] 링크 재판정",
+                          f"{paths[0].stem}: 판정 대기 {result['to_human']}건 추가", level="passive",
+                          url=DASHBOARD_URL)
+            store.save_state(state)
+            commit_ledger(f"{paths[0].stem}: 확정 {result['finalized']}건, "
+                          f"사람 판정 대기 {result['to_human']}건", commit)
         store.save_state(state)
         return 0
     except Exception as exc:  # noqa: BLE001
         entry.update({"updated": int(time.time()), "retry_after": int(time.time() + RETRY_SEC),
                       "error": str(exc)[:1000]})
-        if "record" in locals():
-            store.save_unit_record(h, record)
         store.save_state(state)
         log(f"ERROR shadow {stage} {key}: {exc}")
         return 1

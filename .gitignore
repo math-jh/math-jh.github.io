@@ -67,3 +67,7 @@ AGENTS.md
 
 # local-only Codex skills
 codex-skills/
+
+# 링크 재판정의 판례·판례 대기 (scripts/dependency-classifier/shadow_book.py).
+# 비공개 글(로컬 전용 연구 스트림)의 문장을 그대로 인용하므로 공개 repo 에 올리지 않는다.
+scripts/dependency-classifier/book/

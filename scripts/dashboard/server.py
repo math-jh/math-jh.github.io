@@ -94,6 +94,12 @@ except Exception:
     def _ko_typos(_verdict):
         return []
 
+# 링크 전면 재판정(#shadow)의 데이터층 — 섀도 파이프라인과 같은 모듈로 읽고 쓴다.
+try:
+    import shadow_api as _shadow
+except Exception:
+    _shadow = None
+
 # 판본 비교기(#compare)의 데이터층. bs4 가 없으면 비교기만 죽고 나머지는 그대로 산다.
 sys.path.insert(0, HERE)
 try:
@@ -1146,6 +1152,15 @@ def sec_cron():
     return data
 
 
+def _shadow_counts():
+    if _shadow is None:
+        return None
+    try:
+        return _shadow.counts()
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def build_summary():
     posts = scan_posts()
     stats, categories, orphan_en, unpublished = sec_posts(posts)
@@ -1165,6 +1180,7 @@ def build_summary():
         comment_prs=sec_comment_prs(),
         audit=sec_audit(),
         link_audit=sec_link_audit(),
+        shadow=_shadow_counts(),
         gsc=sec_gsc(),
         git=sec_git(),
         system=sec_system(),
@@ -1218,7 +1234,9 @@ STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
           # 범용 판본 비교기 (감사와 무관하게 임의 판본을 비교한다)
           "/compare.html": ("compare.html", "text/html; charset=utf-8"),
           "/compare.css": ("compare.css", "text/css; charset=utf-8"),
-          "/compare.js": ("compare.js", "application/javascript; charset=utf-8")}
+          "/compare.js": ("compare.js", "application/javascript; charset=utf-8"),
+          "/shadow.js": ("shadow.js", "application/javascript; charset=utf-8"),
+          "/shadow.css": ("shadow.css", "text/css; charset=utf-8")}
 
 
 # 비교 대상 글의 permalink 를 찾기 위한 얕은 캐시 (frontmatter 스캔은 0.1s 남짓).
@@ -1236,7 +1254,7 @@ def posts_indexed():
 # index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
 # (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
 SECTIONS = {"workers", "pipeline", "drafts", "weights", "translation", "audit",
-            "index", "activity", "cron"}
+            "index", "activity", "cron", "shadow"}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -1286,6 +1304,9 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(200, f.read().strip() or "{}")
             except OSError:
                 return self._send(200, "{}")
+
+        if path in ("/api/shadow", "/api/shadow/link"):
+            return self._shadow_get(path, q)
 
         if path == "/api/summary":
             if q.get("fresh"):
@@ -1425,6 +1446,11 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
+        if path.startswith("/api/shadow/"):
+            why = self._reject_write()
+            if why:
+                return self._send(403, json.dumps({"ok": False, "error": why}, ensure_ascii=False))
+            return self._shadow_post(path)
         if path not in ("/api/kotypo", "/api/kotypo-note", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume", "/api/linkaudit/resolve",
                         "/api/linkaudit/commit", "/api/linkaudit/undo",
@@ -1499,6 +1525,64 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get("X-Dash-Action") != "1":
             return "X-Dash-Action 헤더 없음"
         return None
+
+    def _shadow_get(self, path, q):
+        if _shadow is None:
+            return self._send(503, json.dumps({"ok": False, "error": "shadow_api 없음"},
+                                              ensure_ascii=False))
+        try:
+            if path == "/api/shadow/link":
+                data = _shadow.link_detail((q.get("lid") or [""])[0])
+            else:
+                data = _shadow.snapshot()
+        except KeyError as e:
+            return self._send(404, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))
+        except Exception as e:  # noqa: BLE001
+            return self._send(500, json.dumps({"ok": False, "error": repr(e)}, ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, **data}, ensure_ascii=False))
+
+    def _shadow_post(self, path):
+        """#shadow 의 판정 동작. 본문은 JSON, 동작 이름은 경로 끝."""
+        if _shadow is None:
+            return self._send(503, json.dumps({"ok": False, "error": "shadow_api 없음"},
+                                              ensure_ascii=False))
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 <= n <= 200_000:
+                raise ValueError("본문이 너무 크다")
+            b = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
+            action = path.rsplit("/", 1)[1]
+            if action == "rule":
+                out = _shadow.rule(b["lid"], b["relation"], b.get("explanation") or "")
+            elif action == "reopen":
+                out = _shadow.reopen(b["lid"])
+            elif action == "audit":
+                out = _shadow.audit(b["lid"], b["relation"], b.get("explanation") or "")
+            elif action == "register":
+                out = _shadow.register(b["qid"], b.get("explanation") or "")
+            elif action == "issue":
+                out = _shadow.edit_issue(b["id"], b.get("statement"), b.get("description"))
+            elif action == "move":
+                out = _shadow.move(b["lid"], b.get("from"), b.get("to"), b.get("new"))
+            elif action == "close":
+                out = _shadow.close_issue(b["id"], b["action"], b.get("into"))
+            elif action == "draft":
+                out = _shadow.draft(b["id"], b["action"], b.get("edited"), b.get("choice"),
+                                    bool(b.get("accept_recheck", True)))
+            elif action == "precedent":
+                out = _shadow.precedent(b["id"], b["action"], b.get("description"))
+            elif action == "consolidate":
+                out = _shadow.consolidate(b["kind"], b.get("ids") or [])
+            else:
+                return self._send(404, json.dumps({"ok": False, "error": "없는 동작"},
+                                                  ensure_ascii=False))
+        except _shadow.Busy as e:
+            return self._send(409, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))
+        except (KeyError, ValueError) as e:
+            return self._send(400, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))
+        except Exception as e:  # noqa: BLE001
+            return self._send(500, json.dumps({"ok": False, "error": repr(e)}, ensure_ascii=False))
+        return self._send(200, json.dumps({"ok": True, **out}, ensure_ascii=False))
 
     def _snapshot_action(self, path):
         """판본 굽기·지우기. 굽기는 백그라운드 스레드라 즉시 돌아온다(진행은 폴링)."""

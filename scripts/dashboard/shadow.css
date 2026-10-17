@@ -1,0 +1,44 @@
+/* #shadow — 링크 재판정. 대시보드 스킨(dashboard.css)의 변수만 쓴다. */
+.sh-bar{display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;font-family:var(--sans);font-size:.82rem;margin-bottom:.8rem;position:relative}
+.sh-bar b{font-size:1rem}
+.sh-help{margin-left:auto;font-weight:700;width:1.7rem}
+.sh-pop{position:absolute;right:0;top:2rem;z-index:20;width:min(40rem,92vw);max-height:70vh;overflow:auto;background:var(--panel);border:1px solid var(--rule);padding:1rem 1.2rem;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.sh-md h2,.sh-md h3,.sh-md h4{font-family:var(--sans);font-size:.9rem;margin:.9rem 0 .3rem}
+.sh-md p,.sh-md li{font-size:.84rem;line-height:1.65}
+.sh-md ul{margin:.2rem 0 .4rem 1.1rem;padding:0}
+.sh-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 1rem}
+.sh-tab--on{color:var(--brass);border-color:var(--brass)}
+.sh-msg{font-family:var(--sans);font-size:.8rem;color:var(--brass);margin:.2rem 0 .6rem}
+.sh-group{border:1px solid var(--rule);padding:.8rem 1rem;margin:0 0 1rem}
+.sh-group__h{font-family:var(--sans);font-size:.86rem;margin-bottom:.6rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.sh-tools{display:flex;gap:.35rem;margin-left:auto}
+.sh-item{border-top:1px solid var(--rule);padding:.6rem 0}
+.sh-item:first-of-type{border-top:0}
+.sh-item__top{display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-start}
+.sh-where{flex:1 1 22rem;min-width:0}
+.sh-markup{font-family:var(--mono, monospace);font-size:.74rem;color:var(--muted);word-break:break-all}
+.sh-votes{display:flex;gap:.3rem;font-family:var(--sans);font-size:.72rem}
+.sh-vote{border:1px solid var(--rule);padding:.05rem .35rem}
+.sh-vote--required{color:var(--bad);border-color:var(--bad)}
+.sh-vote--weak{color:var(--ok);border-color:var(--ok)}
+.sh-vote--forward{color:var(--brass);border-color:var(--brass)}
+.sh-act{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin:.45rem 0}
+.sh-rel--required:hover{color:var(--bad);border-color:var(--bad)}
+.sh-rel--weak:hover{color:var(--ok);border-color:var(--ok)}
+.sh-move{font-family:var(--sans);font-size:.72rem;max-width:22rem}
+.sh-note{width:100%;min-height:3.2rem;font-family:var(--sans);font-size:.8rem;box-sizing:border-box;margin:.2rem 0}
+.sh-input{width:100%;font-family:var(--sans);font-size:.82rem;box-sizing:border-box}
+.sh-label{display:block;font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:.4rem}
+.sh-check{font-family:var(--sans);font-size:.78rem;display:block;margin:.4rem 0}
+.sh-ctx{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.5rem 0;font-size:.8rem;line-height:1.6}
+.sh-ctx b{font-family:var(--sans);font-size:.72rem;display:block;color:var(--muted)}
+.sh-ctx > div > div{white-space:pre-wrap;max-height:16rem;overflow:auto}
+.sh-stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.7rem;margin:.4rem 0}
+.sh-stage{border:1px solid var(--rule);padding:.5rem .6rem;font-size:.8rem;line-height:1.55}
+.sh-stage__h{font-family:var(--sans);font-size:.76rem;margin-bottom:.25rem}
+.sh-q{font-size:.8rem;color:var(--ink);opacity:.85;margin:.2rem 0}
+.sh-step4{border-top:1px dashed var(--rule);margin-top:.35rem;padding-top:.3rem}
+.sh-reveal{border-left:3px solid var(--brass);padding-left:.7rem;margin:.4rem 0}
+.sh-form{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
+.sh .bad{color:var(--bad)}
+@media (max-width:760px){.sh-ctx{grid-template-columns:1fr}.sh-tools{margin-left:0}}

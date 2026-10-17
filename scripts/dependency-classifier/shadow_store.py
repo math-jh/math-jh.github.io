@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
 """Where the shadow pipeline keeps things, and how it writes them.
 
-Two places, on purpose:
+Three places, on purpose:
 
 * ``_data/link_relations_next.yml`` (in the repo) — the shadow ledger.  Only
   finished records, in the production format ``{relation, reviewed}``, keyed by
   lid.  Jekyll reads it as a fallback for lids the production ledger has no
   value for (``_plugins/graph_data.rb :: relation_of``), and it replaces the
   production ledger when the shadow run is promoted.
+* ``scripts/dependency-classifier/book/`` (in the repo, gitignored) — the
+  precedent and pending-issue files, which the human reads and edits.
 * ``~/.local/state/dependency-shadow/`` (never in the repo) — everything else:
   per-unit stage results with the models' traces, the human and audit queues,
-  digest jobs, and the precedent and pending-issue files.  The repo is public
-  and some judged posts are private (the local-only research stream), and
-  traces, precedents, and pending issues quote the source text verbatim, so
-  none of them may live in the repo.
+  digest jobs, precedent statistics, the calibration.
+  The repo is public and some judged posts are private (the local-only research
+  stream).  Traces, precedents, and pending issues quote the source text
+  verbatim, so none of them may be committed: the book folder is in .gitignore
+  and the rest never enters the repo.
 
-Every write is an atomic replace.  ``LOCK_PATH`` serialises the cron tick and
-the dashboard's writes to this state.
+Every write is an atomic replace.  Three locks:
+* ``TICK_LOCK_PATH`` — held for a whole tick (and by the pilot), so ticks never
+  overlap.  Model calls happen under it, so nothing else waits on it.
+* ``LOCK_PATH`` — held only around a read-modify-write of the queue, the shadow
+  ledger, or a unit record, by the tick and by the dashboard alike.
+* ``BOOK_LOCK_PATH`` — held around a read-modify-write of a precedent or
+  pending-issue file (shadow_book).
 """
 from __future__ import annotations
 
@@ -32,19 +40,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
 import link_relations as ledger  # noqa: E402
 
 ROOT = ledger.ROOT
-LEDGER_PATH = ROOT / "_data" / "link_relations_next.yml"
+LEDGER_REL = "_data/link_relations_next.yml"
+LEDGER_PATH = ROOT / LEDGER_REL
 STATE_DIR = Path(os.environ.get(
     "DEPENDENCY_SHADOW_STATE_DIR", str(Path.home() / ".local" / "state" / "dependency-shadow")))
 STATE_PATH = STATE_DIR / "state.json"
 UNITS_DIR = STATE_DIR / "units"
 QUEUE_PATH = STATE_DIR / "queue.json"
 PILOT_DIR = STATE_DIR / "pilot"
-PRECEDENTS_DIR = STATE_DIR / "precedents"
-PENDING_DIR = STATE_DIR / "pending"
-HISTORY_DIR = STATE_DIR / "history"
+# Precedents and pending issues are files the human reads and edits, so they live in
+# the repo (synced to the user's devices) — but in a gitignored folder, because
+# they quote private posts and the repo is public.
+BOOK_DIR = Path(os.environ.get(
+    "DEPENDENCY_SHADOW_BOOK_DIR", str(ROOT / "scripts" / "dependency-classifier" / "book")))
+PRECEDENTS_DIR = BOOK_DIR / "precedents"
+PENDING_DIR = BOOK_DIR / "pending"
+HISTORY_DIR = BOOK_DIR / "history"
 STATS_PATH = STATE_DIR / "precedent-stats.json"
 CALIBRATION_PATH = STATE_DIR / "calibration.json"
 LOCK_PATH = Path("/tmp/dependency-shadow.lock")
+TICK_LOCK_PATH = Path("/tmp/dependency-shadow-tick.lock")
+BOOK_LOCK_PATH = Path("/tmp/dependency-shadow-book.lock")
 
 LEDGER_HEADER = """\
 # 섀도 원장 — 의존성 링크 전면 재판정의 확정 결과 (2026-10-17 결정).
@@ -108,14 +124,22 @@ class Lock:
         self.release()
 
 
-def try_lock() -> Lock | None:
-    handle = open(LOCK_PATH, "w")
+def _try(path: Path) -> Lock | None:
+    handle = open(path, "w")
     try:
         fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except OSError:
         handle.close()
         return None
     return Lock(handle)
+
+
+def try_lock() -> Lock | None:
+    return _try(LOCK_PATH)
+
+
+def try_tick_lock() -> Lock | None:
+    return _try(TICK_LOCK_PATH)
 
 
 def lock(timeout: float) -> Lock | None:
@@ -174,3 +198,23 @@ def load_queue() -> dict:
 
 def save_queue(queue: dict) -> None:
     write_json(QUEUE_PATH, queue)
+
+
+def merge_unit_record(unit_hash: str, mine: dict, lids: list[str]) -> dict:
+    """Write this round's links into the latest copy, keeping what others wrote since.
+
+    The tick holds a unit record in memory for minutes while models answer; the
+    dashboard may meanwhile write a human ruling into another link of the same
+    unit.  Only the round's links and the round bookkeeping come from ``mine``.
+    The caller holds LOCK_PATH.
+    """
+    fresh = load_unit_record(unit_hash)
+    links = fresh.setdefault("links", {})
+    for lid in lids:
+        if lid in mine.get("links", {}):
+            links[lid] = mine["links"][lid]
+    for key in ("unit", "round", "round_no", "usage"):
+        if key in mine:
+            fresh[key] = mine[key]
+    save_unit_record(unit_hash, fresh)
+    return fresh

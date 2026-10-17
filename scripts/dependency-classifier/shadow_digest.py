@@ -158,16 +158,26 @@ def run_one() -> bool:
     try:
         payload, usage = models.call("S2", digest_prompt(job, views, candidates))
     except Exception as exc:  # noqa: BLE001
-        job["attempts"] = job.get("attempts", 0) + 1
-        store.save_queue(queue)
+        held = store.lock(60)
+        if held is not None:
+            with held:
+                queue = store.load_queue()
+                for j in queue["digest"]:
+                    if j.get("id") == job.get("id"):
+                        j["attempts"] = j.get("attempts", 0) + 1
+                store.save_queue(queue)
         log(f"ERROR shadow digest {job.get('id')}: {exc}")
         return True
     draft = _clean(payload, set(lids), {c["id"] for c in candidates})
-    queue = store.load_queue()
-    queue["digest"] = [j for j in queue["digest"] if j.get("id") != job.get("id")]
-    queue["drafts"].append({"id": f"D-{int(time.time())}", "job": job, "draft": draft,
-                            "created": int(time.time()), "usage": usage})
-    store.save_queue(queue)
+    held = store.lock(120)
+    if held is None:
+        raise RuntimeError("shadow state stayed locked for two minutes")
+    with held:
+        queue = store.load_queue()
+        queue["digest"] = [j for j in queue["digest"] if j.get("id") != job.get("id")]
+        queue["drafts"].append({"id": f"D-{int(time.time())}", "job": job, "draft": draft,
+                                "created": int(time.time()), "usage": usage})
+        store.save_queue(queue)
     log(f"shadow digest {job.get('id')}: draft {draft['action']}")
     return True
 

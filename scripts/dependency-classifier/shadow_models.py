@@ -28,7 +28,12 @@ STAGES = ("S1", "S2", "S3")
 PROVIDER = {"S1": "Antigravity", "S2": "Claude Opus", "S3": "Codex"}
 
 AGY_BIN = dc.AGY_BIN
-AGY_MODEL = dc.AGY_MODEL
+# No model ID, only an effort level: the house convention, so a model generation
+# change on the Antigravity side cannot break the call (a pinned ID fails with
+# "not recognized").  medium, not high: on a whole-article prompt high spends ~4k
+# thinking tokens per link and overruns the output limit; medium gave the same
+# relations on the 2026-10-17 probe at half the tokens.
+AGY_EFFORT = os.environ.get("DEPENDENCY_SHADOW_AGY_EFFORT", "medium")
 AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
 CLAUDE_BIN = dc.CLAUDE_BIN
 CLAUDE_MODEL = dc.CLAUDE_MODEL
@@ -51,13 +56,88 @@ class ModelError(RuntimeError):
 LAST_RAW = ""
 
 
+_HEX = set("0123456789abcdefABCDEF")
+
+
+def repair_json_text(raw: str) -> str:
+    """Make a model's almost-JSON parseable without touching what it meant.
+
+    Models quote the source verbatim, and the source is full of LaTeX, so a
+    string may carry ``\\im`` or ``\\[`` unescaped (invalid escapes), or ``\\theta``
+    that a decoder would read as a tab followed by "heta".  Inside strings, a
+    backslash that does not start a valid escape — or that starts a LaTeX command
+    (an escape letter followed by more letters) — is doubled, and raw newlines
+    become ``\\n``.
+    """
+    out = []
+    i, n = 0, len(raw)
+    in_str = False
+    while i < n:
+        ch = raw[i]
+        if not in_str:
+            out.append(ch)
+            if ch == '"':
+                in_str = True
+            i += 1
+            continue
+        if ch == '"':
+            out.append(ch)
+            in_str = False
+            i += 1
+            continue
+        if ch == "\\" and i + 1 < n:
+            nxt = raw[i + 1]
+            if nxt in '"\\/':
+                out.append(raw[i:i + 2])
+                i += 2
+                continue
+            if nxt == "u" and all(c in _HEX for c in raw[i + 2:i + 6]) and len(raw[i + 2:i + 6]) == 4:
+                out.append(raw[i:i + 6])
+                i += 6
+                continue
+            if nxt in "bfnrt" and not (i + 2 < n and raw[i + 2].isascii() and raw[i + 2].isalpha()):
+                out.append(raw[i:i + 2])
+                i += 2
+                continue
+            out.append("\\\\")
+            i += 1
+            continue
+        if ch == "\n":
+            out.append("\\n")
+        elif ch == "\t":
+            out.append("\\t")
+        else:
+            out.append(ch)
+        i += 1
+    return "".join(out)
+
+
+def parse_model_json(raw: str) -> dict:
+    """The first JSON object in a reply, repairing LaTeX-laden strings if needed."""
+    import re
+    text = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw.strip(), flags=re.I)
+    decoder = json.JSONDecoder()
+    for candidate in (text, repair_json_text(text)):
+        start = candidate.find("{")
+        while start >= 0:
+            try:
+                value, _ = decoder.raw_decode(candidate[start:])
+            except json.JSONDecodeError:
+                start = candidate.find("{", start + 1)
+                continue
+            if isinstance(value, dict) and ("items" in value or start == candidate.find("{")):
+                return value
+            start = candidate.find("{", start + 1)
+    raise ModelError(f"model returned no JSON object: {raw[:300]!r}")
+
+
 def available(stage: str) -> bool:
     return dc.provider_available(PROVIDER[stage])
 
 
 def _agy(prompt: str) -> tuple[dict, dict]:
     proc = subprocess.run(
-        [AGY_BIN, "--print", prompt, "--agent", AGY_AGENT, "--model", AGY_MODEL,
+        [AGY_BIN, "--print", prompt, "--agent", AGY_AGENT, "--effort", AGY_EFFORT,
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "20m"],
         cwd="/tmp", stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=TIMEOUT,
     )
@@ -71,7 +151,7 @@ def _agy(prompt: str) -> tuple[dict, dict]:
     usage["turns"] = envelope.get("num_turns")
     global LAST_RAW
     LAST_RAW = str(envelope.get("response", ""))
-    return dc.parse_json_value(LAST_RAW), usage
+    return parse_model_json(LAST_RAW), usage
 
 
 def _claude(prompt: str) -> tuple[dict, dict]:
@@ -92,7 +172,7 @@ def _claude(prompt: str) -> tuple[dict, dict]:
     usage["cost_usd"] = envelope.get("total_cost_usd")
     global LAST_RAW
     LAST_RAW = str(envelope.get("result", ""))
-    return dc.parse_json_value(LAST_RAW), usage
+    return parse_model_json(LAST_RAW), usage
 
 
 def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
@@ -123,7 +203,7 @@ def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
                 usage = dict(event["usage"])
         global LAST_RAW
         LAST_RAW = out_path.read_text(encoding="utf-8")
-        return dc.parse_json_value(LAST_RAW), usage
+        return parse_model_json(LAST_RAW), usage
 
 
 def call(stage: str, prompt: str, schema: dict | None = None) -> tuple[dict, dict]:

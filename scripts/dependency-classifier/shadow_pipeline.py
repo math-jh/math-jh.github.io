@@ -27,6 +27,8 @@ import shadow_models as models
 import shadow_prompts as sp
 
 MAX_RETRY = 1
+# One call answers at most this many links; a whole article goes in with every chunk.
+MAX_ITEMS = int(__import__("os").environ.get("DEPENDENCY_SHADOW_MAX_ITEMS", "20"))
 
 
 def log(message: str) -> None:
@@ -50,23 +52,49 @@ def step1_prompt(call: dict) -> str:
                            lang=call["lang"], targets=call["targets"], items=call["items"])
 
 
+def _chunks(call: dict) -> list[dict]:
+    items = call["items"]
+    out = []
+    for i in range(0, len(items), MAX_ITEMS):
+        part = items[i:i + MAX_ITEMS]
+        keys = {item.get("target_key") for item in part}
+        out.append({**call, "items": part,
+                    "targets": {k: v for k, v in call["targets"].items() if k in keys}})
+    return out
+
+
+def _run_parts(stage: str, parts: list[dict]) -> tuple[dict[str, dict], list[dict]]:
+    rows, usages = {}, []
+    for part in parts:
+        r, u = run_step1(stage, part)
+        rows.update(r)
+        usages.extend(u)
+    return rows, usages
+
+
 def run_step1(stage: str, call: dict) -> tuple[dict[str, dict], list[dict]]:
     """Step 1 for one source file.  Returns rows by lid and the usage of each call."""
+    if len(call["items"]) > MAX_ITEMS:
+        return _run_parts(stage, _chunks(call))
     prompt = step1_prompt(call)
     if len(prompt.encode("utf-8")) > models.MAX_PROMPT_BYTES and len(call["items"]) > 1:
-        rows, usages = {}, []
-        for half in _split(call):
-            r, u = run_step1(stage, half)
-            rows.update(r)
-            usages.extend(u)
-        return rows, usages
+        return _run_parts(stage, _split(call))
     rows: dict[str, dict] = {}
     usages: list[dict] = []
     pending = call
     for attempt in range(MAX_RETRY + 1):
         ids = [item["id"] for item in pending["items"]]
         schema = sp.step1_schema(ids) if stage == "S3" else None
-        payload, usage = models.call(stage, step1_prompt(pending), schema)
+        try:
+            payload, usage = models.call(stage, step1_prompt(pending), schema)
+        except models.ModelError as exc:
+            if "output token limit" in str(exc) and len(pending["items"]) > 1:
+                log(f"{stage} step 1: output limit on {len(pending['items'])} item(s); asking in halves")
+                r, u = _run_parts(stage, _split(pending))
+                rows.update(r)
+                usages.extend(u)
+                break
+            raise
         usage = {**usage, "items": len(ids), "prompt_bytes": len(step1_prompt(pending).encode())}
         usages.append(usage)
         got = sp.validate_step1(payload, set(ids))
