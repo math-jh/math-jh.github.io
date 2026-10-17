@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-06-15
-last_modified_at: 2026-07-27
+last_modified_at: 2026-10-17
 weight: 20
 
 ---
@@ -101,3 +101,37 @@ elif re.match(r'<use\s', tag):
 이 규칙 목록은 유한하다. 새 그림이 목록에 없는 색을 쓰면 다크 모드에서 조용히 라이트와 같은 색으로 눌러붙는다. `scripts/diagrams/check_diagram_colors.py`가 이걸 잡는다. `_diagram-colors.scss`와 `main_dark.scss` 두 CSS 소스에서 속성 선택자에 등장하는 색을 파싱해 allowlist를 만들고, SVG에 그 밖의 색이 있으면 stderr에 경고한다. 빌드를 막지는 않는다. `build.sh`가 SVG 하나를 뽑을 때마다 바로 이 스크립트를 부른다.
 
 「사후: 흰 지우개와 mask 절개」에서 다룬 mask 절개는 이번에 일부 회귀했다. 절개의 경계에는 안티앨리어싱이 반투명 픽셀 몇 개를 남기는데, 인라인 SVG가 CSS로 배경색을 그대로 덧칠할 수 있게 되자 그 잔흔이 눈에 띄기 시작했다. 그래서 mask로 바꿔뒀던 31장을 역변환으로 되돌렸다. 역변환 결과가 mask 적용 이전 SVG와 바이트 단위로 같은지 확인하는 게이트를 통과한 것만 un-mask한다. 이제 흰 지우개는 실제 흰 도형인 채로 남고, `[fill='#fff']`·`[stroke='#fff']` 규칙이 배경색으로 불투명하게 덧칠한다. `build.sh`의 `STRIP` 기본값도 0으로 내려갔다. 인라인 경로는 mask 변환이 필요 없고, `img.invert`로 렌더되는 파일에 한해 `--strip`으로 옛 방식을 켤 수 있다.
+
+## 사후: 본문보다 넓은 그림의 가로 스크롤
+
+인라인 태그가 `<figure>` 안에 SVG를 그대로 넣게 된 뒤에도, 폭이 본문보다 넓은 그림은 오른쪽으로 삐져나갔다. 사용자가 Gromov–Witten 쪽 글의 relative POT 증명 전략을 읽던 중에 걸린 문제다. 긴 가환도식을 설명하던 답변이 세로로 쌓은 도식을 내놓자 사용자는 이렇게 짚었다.
+
+> 수직방향 다이어그램은 내가 태어나서 처음 봐. 네가 그렇게 한 이유는 짐작이 가. 너무 길어서 오른쪽으로 overflow 생길 것 같아서 그렇지? 근데 아무리 그래도 저건 아니야...
+
+곧이어 같은 세션에서, 별도 세션에 맡길 요청으로 정리됐다.
+
+> 지금 폭 긴 diagram들이 기본적으로 삐져나가게 되어 있거든? svg로 구운거 말하는거야. 이게 삐져나가는 대신, x방향 스크롤하게 해 줄래? 지금 참고로 POT 글의 5번째 diagram이 그렇게 되어 있어서, 지금은 수동으로 폭을 줄여놨어.
+
+원인은 폭이 한 곳에만 걸려 있던 것이다. 태그는 `width`를 `<figure>`의 `style`에만 주었고, SVG는 `width:100%`로 figure를 따라갔다. figure의 폭이 본문보다 크면 둘이 같이 본문 밖으로 나간다. [수정](https://github.com/math-jh/math-jh.github.io/commit/60a49bc484d788be6069128bbb8dd65e36562b60)은 SVG에도 같은 폭을 직접 주고, figure는 본문 폭에서 멈추게 했다.
+
+```ruby
+svg = svg.sub('<svg ', %(<svg style="width:#{width || '100%'};height:auto" ))
+```
+{: data-filename="_plugins/diagram_tag.rb"}
+
+```scss
+figure.diagram {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  svg { max-width: none; }
+}
+```
+{: data-filename="_sass/_diagram-colors.scss"}
+
+`width`를 주지 않은 그림은 이전처럼 `100%`이므로 달라지는 것이 없다. `max-width: none`은 테마가 이미지·SVG에 거는 `max-width:100%`를 풀기 위한 것이다. 이게 남아 있으면 SVG가 다시 figure 폭으로 줄어들어 스크롤할 것이 없어진다.
+
+스크롤바는 [스크롤바 리팩토링](/ko/llm_workshop/scrollbar_refactor)에서 `.katex-display`용으로 만든 4px 직각 트랙 없는 모양을 그대로 쓴다. `_base.scss`의 선택자 목록에 `figure.diagram`을 얹고, 라이트·다크 스킨의 thumb 색(`#bfa46a`, `#8f7434`)과 Firefox용 `scrollbar-color` 블록에도 같은 방식으로 추가했다. 수식과 그림이 넘칠 때 같은 모양의 스크롤바가 뜬다.
+
+사용자는 이어서 이 5번 그림 말고 넘칠 만한 그림이 다른 글에 더 있는지 물었고, 실제 동작을 보고 싶다고 했다. 이 글을 쓰는 시점에 그 확인 결과는 저장소에 남아 있지 않다.
