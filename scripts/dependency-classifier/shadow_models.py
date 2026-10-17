@@ -20,6 +20,7 @@ import json
 import os
 import subprocess
 import tempfile
+import time
 from pathlib import Path
 
 import dependency_classifier as dc
@@ -135,15 +136,64 @@ def available(stage: str) -> bool:
     return dc.provider_available(PROVIDER[stage])
 
 
-def _agy(prompt: str) -> tuple[dict, dict]:
-    proc = subprocess.run(
-        [AGY_BIN, "--print", prompt, "--agent", AGY_AGENT, "--effort", AGY_EFFORT,
-         "--output-format", "json", "--disable-slash-commands", "--print-timeout", "20m"],
-        cwd="/tmp", stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=TIMEOUT,
-    )
+def _run_until_envelope(args: list[str]) -> str:
+    """Run agy and return its JSON envelope as soon as it is complete.
+
+    agy sometimes finishes the turn, prints the envelope, and then does not exit
+    (2026-10-17: the stream stopped at 20:53 and the process was still alive past
+    21:05).  Reading the pipe as it fills and stopping at the first complete
+    envelope keeps such a hang from holding a tick until the timeout.
+    """
+    import threading
+    proc = subprocess.Popen(args, cwd="/tmp", stdin=subprocess.DEVNULL,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out: list[bytes] = []
+    err: list[bytes] = []
+
+    def pump(stream, sink) -> None:
+        while True:
+            chunk = stream.read1(65536)
+            if not chunk:
+                return
+            sink.append(chunk)
+
+    readers = [threading.Thread(target=pump, args=(proc.stdout, out), daemon=True),
+               threading.Thread(target=pump, args=(proc.stderr, err), daemon=True)]
+    for t in readers:
+        t.start()
+    deadline = time.monotonic() + TIMEOUT
+    while True:
+        if proc.poll() is not None:
+            readers[0].join(10)
+            break
+        text = b"".join(out).decode("utf-8", "replace").strip()
+        if text.endswith("}"):
+            try:
+                json.loads(text)
+            except json.JSONDecodeError:
+                pass
+            else:
+                proc.terminate()
+                try:
+                    proc.wait(10)
+                except subprocess.TimeoutExpired:
+                    proc.kill()
+                return text
+        if time.monotonic() > deadline:
+            proc.kill()
+            raise ModelError(f"Antigravity gave no envelope within {TIMEOUT}s")
+        time.sleep(2)
     if proc.returncode:
-        raise ModelError(f"Antigravity exited {proc.returncode}: {proc.stderr.strip()[:400]}")
-    envelope = json.loads(proc.stdout)
+        raise ModelError(f"Antigravity exited {proc.returncode}: "
+                         f"{b''.join(err).decode('utf-8', 'replace').strip()[:400]}")
+    return b"".join(out).decode("utf-8", "replace")
+
+
+def _agy(prompt: str) -> tuple[dict, dict]:
+    raw = _run_until_envelope(
+        [AGY_BIN, "--print", prompt, "--agent", AGY_AGENT, "--effort", AGY_EFFORT,
+         "--output-format", "json", "--disable-slash-commands", "--print-timeout", "20m"])
+    envelope = json.loads(raw)
     if envelope.get("status") != "SUCCESS":
         raise ModelError(f"Antigravity status {envelope.get('status')}: "
                          f"{str(envelope.get('error', ''))[:300]}")
