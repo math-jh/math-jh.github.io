@@ -3319,6 +3319,13 @@ C:
   defs:
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: /ko/math/analysis/cauchy_sequences
+- id: complete_quotient
+  en: complete quotient
+  ko: 완전 몫
+  primary: en
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: complete_reducibility
   en: complete reducibility
   ko: 완전가약성
