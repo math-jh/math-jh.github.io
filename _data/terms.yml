@@ -17476,6 +17476,13 @@ R:
   defs:
   - label: '[대수적 구조] §몫환, 환 동형사상'
     url: /ko/math/algebraic_structures/quotient_rings
+- id: ring_of_formal_power_series
+  en: ring of formal power series
+  ko: 형식적 멱급수환
+  primary: en
+  defs:
+  - label: '[환론] §다항식환'
+    url: /ko/math/ring_theory/polynomial_rings
 - id: ring_of_fractions
   en: ring of fractions
   ko: 분수환
