@@ -1,6 +1,6 @@
 ---
 title: "Least Squares Method"
-description: "We derive the least squares method via normal equations in Euclidean and inner product spaces, and cover line fitting for planar points and the pseudoinverse."
+description: "We derive the least squares method via normal equations in Euclidean and inner product spaces, and cover an example of line fitting for planar points and the pseudoinverse."
 excerpt: "Orthogonal projections and least squares"
 
 categories: [Math / Linear Algebra]
@@ -14,21 +14,22 @@ date: 2022-10-09
 weight: 23
 translated_at: 2026-06-26T20:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-26T20:30:02+00:00
+last_polished_at: 2026-10-18T19:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Least Squares Method
 
-The method of least squares we introduce now is first considered for Euclidean spaces $\mathbb{R}^n$ with the dot product defined on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms){: data-lid="b8zuu" }, this can be generalized to an arbitrary $\mathbb{R}$-inner product space in the same way.
+The method of least squares to be introduced now is first considered for Euclidean spaces $\mathbb{R}^n$ and the dot product given on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms){: data-lid="b8zuu" }, this can be generalized to a general $\mathbb{R}$-inner product space in the same way.
 
-Consider an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and the system of linear equations $Ax=y$. If $m=n$ and $A$ is invertible, this equation has a unique solution, but this is not the case in general. In particular, consider the case where $m>n$. Then since $\rank(A)\leq n< m$, for most $y$—excluding those vectors lying in the image of $A$—this equation cannot be solved.
+Consider an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and the system of linear equations $Ax=y$. If $m=n$ and $A$ is invertible, this equation has a unique solution, but this is not the case in general. In particular, consider the case where $m>n$. Then since $\rank(A)\leq n< m$, for most $y$ (excluding vectors corresponding to the image of $A$) this equation cannot be solved.
 
-A typical example is finding an appropriate function that represents given data. Of course, using Lagrange interpolation we can choose a suitable basis and find an $n$-th degree function approximating the given $n+1$ data points, but if we try to find a linear function representing this data, we cannot find an exact solution unless all the given $n+1$ points lie on a single straight line.
+A typical example is, when various data are given, finding an appropriate function that represents them. Of course, using Lagrange interpolation we can choose a suitable basis and find an $n$-th degree function approximating the given $n+1$ data points, but if we try to find a linear function representing this data, we cannot find an exact solution unless all the given $n+1$ points lie on a single straight line.
 
-We project an arbitrary given vector $y$ onto $\im A$, and then solve the equation $Ax=\hat{y}$ for this vector $\hat{y}=\proj_{\im(A)}y$. However, from the previous post we know that $y-\hat{y}\in (\im A)^\perp$, so we know that
+We project an arbitrary given vector $y$ onto $\im A$, and then, for this vector $\hat{y}=\proj_{\im(A)}y$, we will solve the equation $Ax=\hat{y}$. However, since from the previous post we know that $y-\hat{y}\in (\im A)^\perp$, we know that
 
 $$\langle y-\hat{y}, v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
-holds. Therefore we obtain the following equation:
+Therefore we obtain the following equation:
 
 $$\langle y-\hat{y}, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
 
@@ -43,7 +44,7 @@ $$A^tAx=A^ty$$
 This process can be summarized as follows.
 
 ::: Proposition 1
-For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\mathbb{R}^m$, a vector $x\in\mathbb{R}^n$ minimizes the value of the real number $\lVert Au-y\rVert$ if and only if the following equation holds:
+For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\mathbb{R}^m$, a vector $x\in\mathbb{R}^n$ minimizes the value of the real number $\lVert Ax-y\rVert$ if and only if the following equation holds:
 
 $$A^tAx=A^ty$$
 :::
@@ -51,7 +52,7 @@ $$A^tAx=A^ty$$
 The example discussed in the introduction can be solved in the following way.
 
 ::: Example 2
-Suppose three points $(0,1)$, $(1,3)$, $(2,4)$ are given in the plane, and consider the problem of finding the straight line $y=ax+b$ that best fits these points. If all three points lie on a single straight line, then the system of equations in the unknowns $a,b$
+Suppose three points $(0,1)$, $(1,3)$, $(2,4)$ are given in the plane, and consider the problem of finding the straight line $y=a\x+b$ that best fits these points. If all three points lie on a single straight line, then the system of equations in the unknowns $a,b$
 
 $$\begin{aligned}a\cdot 0+b&=1\\ a\cdot 1+b&=3\\ a\cdot 2+b&=4\end{aligned}$$
 
@@ -71,17 +72,17 @@ and since $\det(A^tA)=5\cdot 3-3\cdot 3=6\neq 0$, the matrix $A^tA$ is invertibl
 
 $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&-3\\ -3&5\end{pmatrix}\begin{pmatrix}11\\ 8\end{pmatrix}=\frac{1}{6}\begin{pmatrix}9\\ 7\end{pmatrix}=\begin{pmatrix}3/2\\ 7/6\end{pmatrix}$$
 
-That is, the straight line that best represents the given three points in the least-squares sense is $y=\frac{3}{2}x+\frac{7}{6}$.
+That is, the straight line that best represents the given three points in the least-squares sense is $y=\frac{3}{2}\x+\frac{7}{6}$.
 
 {% diagram Math/Linear_Algebra/Least_Squares_Method-1.svg width="11.95em" alt="linear least squares fit" %}
 :::
 
-More generally, even if we choose the inner product $\langle-,-\rangle$ to be the $L^2$-inner product on a space of functions instead of the dot product, we can repeat similar examples.
+More generally, even if we choose the inner product $\langle-,-\rangle$ to be, for instance, an $L^2$-inner product on a space of functions instead of the dot product, we can repeat a similar example.
 
 What was essentially used in [Example 2](#ex2){: data-lid="pp22p" } is only the fact that the function to be found is linear in the unknown coefficients. That is, as long as the model we wish to use is of the form of a linear combination $c_1f_1+\cdots+c_kf_k$ of previously chosen functions $f_1,\ldots, f_k$, we can construct a matrix $A$ whose $(i,j)$-entry is the value of $f_j$ at the $i$-th data point and solve the same normal equation to obtain the coefficients $c_j$. In particular, [Example 2](#ex2){: data-lid="7g4fh" } was the case with $f_1(t)=t$, $f_2(t)=1$, and the same method applies directly to the case of general polynomial functions as well.
 
 ::: Example 3
-Consider the problem of finding the quadratic function $y=a\x^2+b\x+c$ that best represents the four points $(-2,5)$, $(-1,2)$, $(1,1)$, $(2,4)$ in the plane. Stacking the values of $(\x^2,\x,1)$ at each point as rows gives
+For the four points $(-2,5)$, $(-1,2)$, $(1,1)$, $(2,4)$ in the plane, consider the problem of finding the quadratic function $y=a\x^2+b\x+c$ that best represents them. Stacking the values of $(\x^2,\x,1)$ at each point as rows gives
 
 $$A=\begin{pmatrix}4&-2&1\\ 1&-1&1\\ 1&1&1\\ 4&2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\\ c\end{pmatrix},\qquad y=\begin{pmatrix}5\\ 2\\ 1\\ 4\end{pmatrix}$$
 
@@ -98,41 +99,41 @@ The determinant of this coefficient matrix is $34\cdot 4-10\cdot 10=36$, so it i
 {% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
-Looking back at the derivation of [Proposition 1](#prop1){: data-lid="afcib" }, the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat{y}=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat{y}$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by
+Looking back at the derivation of [Proposition 1](#prop1){: data-lid="afcib" }, for the least-squares solution $x$, the resulting vector $Ax$ was exactly equal to the orthogonal projection of $y$ onto $\im A$, the vector $\proj_{\im A}y$, and this was originally the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat{y}=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat{y}$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then since $x=(A^tA)^{-1}A^ty$, the approximation is given by
 
 $$\hat{y}=A(A^tA)^{-1}A^ty$$
 
 The matrix $P=A(A^tA)^{-1}A^t$ appearing here represents the orthogonal projection onto $\im A$.
 
 ::: Example 4
-Returning to [Example 2](#ex2){: data-lid="mlh8m" }, let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, we have
+Returning to [Example 2](#ex2){: data-lid="mlh8m" }, let us compute the error with respect to the approximating function directly. Since $x=(3/2,7/6)$, 
 
 $$\hat{y}=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
-and therefore the error is
+and therefore the error is 
 
 $$y-\hat{y}=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
 
-Taking the inner product of this error with each of the two columns $(0,1,2)$ and $(1,1,1)$ of $A$ gives
+Taking the inner product of this error with each of the two columns $(0,1,2)$ and $(1,1,1)$ of $A$ gives 
 
 $$0\cdot\left(-\frac{1}{6}\right)+1\cdot\frac{1}{3}+2\cdot\left(-\frac{1}{6}\right)=0,\qquad -\frac{1}{6}+\frac{1}{3}-\frac{1}{6}=0$$
 
-so we can verify that the error is perpendicular to $\im A$. At this time, the error is $\lVert y-\hat{y}\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$, which quantitatively represents the degree to which the given three points fail to be collinear.
+so we can verify that the error is perpendicular to $\im A$. Here, the error is $\lVert y-\hat{y}\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$, which quantitatively represents the degree to which the given three points fail to be collinear. 
 :::
 
 ## Pseudoinverse
 
-Now we consider the opposite case: a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ with $m< n$.
+This time, conversely, we consider the case where $m< n$ for a matrix $A\in\Mat_{m\times n}(\mathbb{R})$. 
 
-First, suppose arbitrary $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im(A)$ are given, and assume $A$ is not injective. Then there exist non-zero vectors $u$ satisfying $Au=0$, and therefore if a vector $x$ satisfying $Ax=y$ is given, we can see that the $x+u$ are also solutions. Now let us find among these the solution with the smallest norm and call it the *minimum-norm solution*. That is, the entire set of solutions of $Ax=y$ forms $x_0+\ker A$ for a particular solution $x_0$, and we seek the point on this affine subspace that minimizes the norm.
+First, suppose an arbitrary $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im(A)$ are given, and assume $A$ is not injective. Then there exist non-zero vectors $u$ satisfying $Au=0$, and therefore if a vector $x$ satisfying $Ax=y$ is given, we can see that the $x+u$ are also solutions. Now let us find among these the solution with the smallest norm and call it the *minimum-norm solution*. That is, the entire set of solutions of $Ax=y$ is of the form $x_0+\ker A$ for a particular solution $x_0$, and we seek the point on this affine subspace that minimizes the norm.
 
-This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9){: data-lid="gqqxl" }. The point that minimizes the distance from the origin to the affine subspace $x_0+\ker A$ is unique, and the vector drawn from this point to the affine subspace is perpendicular to $\ker A$. Therefore the minimum-norm solution is the unique solution lying in $(\ker A)^\perp$. On the other hand, by [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-lid="ijhkt" }, we have $(\ker A)^\perp=\im A^t$. This can be summarized as follows.
+This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9){: data-lid="gqqxl" }. The point that minimizes the distance from the origin to the affine subspace $x_0+\ker A$ is unique, and the vector drawn from the origin to this point is perpendicular to $\ker A$. Therefore the minimum-norm solution is the unique solution lying in $(\ker A)^\perp$. On the other hand, by [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-lid="ijhkt" }, $(\ker A)^\perp=\im A^t$ holds. We summarize this as follows.
 
 ::: Proposition 5
-For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im A$, among the solutions of the equation $Ax=y$ there exists a unique solution that minimizes the norm, and this is the unique solution belonging to $\im A^t$.
+For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\im A$, among the solutions of the equation $Ax=y$, there exists a unique solution that minimizes the norm, and this is the unique solution belonging to $\im A^t$.
 :::
 ::: Proof
-Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 8](/en/math/linear_algebra/bilinear_form#prop8){: data-lid="r4sj1" },
+Since $y\in\im A$, there exists $x_0$ satisfying $Ax_0=y$, and the entire set of solutions of $Ax=y$ is equal to $x_0+\ker A$. By [§Bilinear Forms, ⁋Proposition 8](/en/math/linear_algebra/bilinear_form#prop8){: data-lid="r4sj1" },
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
@@ -140,18 +141,18 @@ holds, so we can decompose $x_0$ as $x_0=p+q$. Here $p\in (\ker A)^\perp$ and $q
 
 $$\lVert x\rVert^2=\lVert p\rVert^2+\lVert u\rVert^2\geq \lVert p\rVert^2$$
 
-holds. Equality holds only when $u=0$, i.e., $x=p$, so the solution minimizing the norm is unique and equals $p$. Also, by the same proposition $(\ker A)^\perp=\im A^t$, so $p\in\im A^t$.
+holds. Equality holds only when $u=0$, i.e., $x=p$, so the solution minimizing the norm is unique and equals $p$. Also, by [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10){: data-lid="ixcnb" }, $(\ker A)^\perp=\im A^t$, so $p\in\im A^t$. Furthermore, if any solution $p+u$ (where $u\in\ker A$) belongs to $\im A^t=(\ker A)^\perp$, then $u=(p+u)-p\in(\ker A)^\perp\cap\ker A=\{0\}$, so $p$ is the unique solution belonging to $\im A^t$.
 :::
 
-Now let us consider the case where we can construct this minimum-norm solution explicitly. If $A$ is of *full row rank*, i.e., $\rank A=m$, then $\im A=\mathbb{R}^m$, so $Ax=y$ has a solution for all $y\in\mathbb{R}^m$, and by the above proposition the minimum-norm solution is uniquely determined on $\im A^t$.
+Now let us consider the case where we can find this minimum-norm solution explicitly. If $A$ is of *full row rank*, that is, $\rank A=m$, then $\im A=\mathbb{R}^m$, so $Ax=y$ has a solution for all $y\in\mathbb{R}^m$, and according to the above proposition the minimum-norm solution is uniquely determined on $\im A^t$.
 
 ::: Proposition 6
-If a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ satisfies $\rank A=m$, then $AA^t\in\Mat_m(\mathbb{R})$ is invertible, and for any $y\in\mathbb{R}^m$ the minimum-norm solution of the equation $Ax=y$ is given by
+If a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ satisfies $\rank A=m$, then $AA^t\in\Mat_m(\mathbb{R})$ is invertible, and for any $y\in\mathbb{R}^m$, the minimum-norm solution of the equation $Ax=y$ is given by
 
 $$x=A^t(AA^t)^{-1}y$$
 :::
 ::: Proof
-First we show that $AA^t$ is invertible. Since $AA^t$ is an $m\times m$ square matrix, it suffices to show that $AA^tz=0$ has only the solution $z=0$. If $AA^tz=0$, then
+First we show that $AA^t$ is invertible. Since $AA^t$ is an $m\times m$ square matrix, it suffices to show that $AA^tz=0$ has only $z=0$ as a solution. If $AA^tz=0$, then
 
 $$\lVert A^tz\rVert^2=\langle A^tz, A^tz\rangle=\langle z, AA^tz\rangle=0$$
 
@@ -161,41 +162,41 @@ Now setting $x=A^t(AA^t)^{-1}y$, we have
 
 $$Ax=AA^t(AA^t)^{-1}y=y$$
 
-so $x$ is a solution of $Ax=y$. Moreover, since $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$, by [Proposition 5](#prop5){: data-lid="60mql" } the vector $x$ is the minimum-norm solution.
+so $x$ is a solution of $Ax=y$. Moreover, since $x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$, by [Proposition 5](#prop5){: data-lid="60mql" }, $x$ is the minimum-norm solution.
 :::
 
-As seen in the proof, from the fact that the minimum-norm solution lies on $\im A^t$ we can assume the form $x=A^tz$, substitute this into $Ax=y$, and solve $AA^tz=y$ to obtain $z=(AA^t)^{-1}y$. Then $A^t(AA^t)^{-1}$ becomes a *right inverse* of $A$, i.e., a matrix satisfying $A\cdot A^t(AA^t)^{-1}=I_m$.
+As seen in the proof, from the fact that the minimum-norm solution lies in $\im A^t$, assuming the form $x=A^tz$, substituting this into $Ax=y$, and solving $AA^tz=y$ yields $z=(AA^t)^{-1}y$. Then $A^t(AA^t)^{-1}$ is a *right inverse* of $A$, that is, a matrix satisfying $A\cdot A^t(AA^t)^{-1}=I_m$.
 
-The case of least squares treated in the previous section and the case of minimum norm treated in this section can be viewed as dual situations. When $A$ is of *full column rank*, i.e., $\rank A=n$, the matrix $A^tA$ becomes invertible and the normal equation of [Proposition 1](#prop1){: data-lid="tk1bn" } gives the unique least-squares solution $x=(A^tA)^{-1}A^ty$, and then $(A^tA)^{-1}A^t$ becomes a left inverse of $A$. On the other hand, when $A$ is of full row rank, the right inverse $A^t(AA^t)^{-1}$ gives the minimum-norm solution as above. The following concept unifies these two matrices.
+The case of least squares treated in the previous section and the case of minimum norm treated in this section can be viewed as dual situations. When $A$ has *full column rank*, that is, $\rank A=n$, the matrix $A^tA$ is invertible and the normal equation of [Proposition 1](#prop1){: data-lid="tk1bn" } gives the unique least-squares solution $x=(A^tA)^{-1}A^ty$, in which case $(A^tA)^{-1}A^t$ is a left inverse of $A$. On the other hand, when $A$ has full row rank, the right inverse $A^t(AA^t)^{-1}$ gives the minimum-norm solution as above. The following concept unifies these two matrices.
 
 ::: Definition 7
-For a matrix $A\in\Mat_{m\times n}(\mathbb{R})$, if $A$ has full column rank we define
+For a matrix $A\in\Mat_{m\times n}(\mathbb{R})$, if $A$ has full column rank, by
 
 $$A^+:=(A^tA)^{-1}A^t$$
 
-and if $A$ has full row rank we define
+and if it has full row rank, by
 
 $$A^+:=A^t(AA^t)^{-1}$$
 
-The matrix $A^+\in\Mat_{n\times m}(\mathbb{R})$ defined in this way is called the *Moore-Penrose pseudoinverse* of $A$.
+the matrix $A^+\in\Mat_{n\times m}(\mathbb{R})$ defined in this way is called the *Moore-Penrose pseudoinverse* of $A$.
 :::
 
-The two formulas above cannot be used directly in the general situation without the rank assumption on $A$, because at least one of $A^tA$ or $AA^t$ is not invertible. The pseudoinverse for a general matrix is defined using singular value decomposition, and when $A$ falls into one of the two cases above, this definition coincides with the formulas above. It is known that $A^+$ is then uniquely characterized by the following four conditions:
+The two formulas above cannot be used as they are in the general situation without assumptions on the rank of $A$, because at least one of $A^tA$ and $AA^t$ is not invertible. The pseudoinverse for a general matrix is defined using the singular value decomposition, and when $A$ falls into the two cases above, this definition coincides with the formulas above. It is known that $A^+$ is uniquely characterized by the following four conditions:
 
 $$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 
-and through this we can verify that $A^+$ is well-defined by $A$.
+and through this we can confirm that $A^+$ is well-defined by $A$.
 
 ::: Remark 8
 If $A$ is an invertible square matrix, then $A^+=A^{-1}$ holds. This is because both $A^tA$ and $AA^t$ are invertible, so $A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$. In this sense, the pseudoinverse generalizes the notion of an inverse.
 :::
 
-With the introduction of the pseudoinverse, the least squares of the previous section and the minimum norm of this section are unified into a single formula. When $A$ has full column rank, $x=A^+ y=(A^tA)^{-1}A^ty$ is the unique least-squares solution minimizing $\lVert Ax-y\rVert$, and when $A$ has full row rank, $x=A^+ y=A^t(AA^t)^{-1}y$ is the minimum-norm solution of $Ax=y$. Even for a general matrix, $x=A^+ y$ gives the unique solution among those minimizing $\lVert Ax-y\rVert$ that again has minimum norm, and thus the problems treated separately in the two sections are naturally unified into a single object called the pseudoinverse.
+Introducing the pseudoinverse unifies the least squares of the previous section and the minimum norm of this section into a single formula. When $A$ has full column rank, $x=A^+ y=(A^tA)^{-1}A^ty$ is the unique least-squares solution minimizing $\lVert Ax-y\rVert$, and when $A$ has full row rank, $x=A^+ y=A^t(AA^t)^{-1}y$ is the minimum-norm solution of $Ax=y$. Even for a general matrix, $x=A^+ y$ gives the unique solution among those minimizing $\lVert Ax-y\rVert$ that again has minimum norm, and thus the problems treated separately in the two sections are naturally unified into a single object called the pseudoinverse.
 
 ---
 
 **References**
 
-**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 
 ---
