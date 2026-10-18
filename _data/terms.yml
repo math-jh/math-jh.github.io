@@ -8305,6 +8305,13 @@ G:
   defs:
   - label: '[사교기하학] §양자 코호몰로지'
     url: /ko/math/symplectic_geometry/quantum_cohomology
+- id: gromov-witten_theory
+  en: Gromov-Witten theory
+  ko: 그로모프-위튼 이론
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §그로모프-위튼 불변량'
+    url: /ko/math/gromov-witten_theory/gromov-witten_invariants
 - id: grönwall_s_inequality
   en: 'Grönwall''s inequality'
   ko: Grönwall 부등식
@@ -13950,6 +13957,8 @@ N:
     url: /ko/math/commutative_algebra/regular_local_rings
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+  - label: '[그로모프-위튼 이론] §마디 곡선의 변형'
+    url: /ko/math/gromov-witten_theory/deformations_of_nodal_curves
 - id: normalized_chain_complex
   en: normalized chain complex
   ko: 정규화 사슬 복합체
