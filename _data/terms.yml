@@ -6387,7 +6387,7 @@ E:
   ko: 초과다발
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: excess_intersection
   en: excess intersection
@@ -8441,7 +8441,7 @@ G:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
-  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: gysin_sequence
   en: Gysin sequence
@@ -12166,7 +12166,7 @@ L:
   ko: 국소화된 Euler류
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: locally_bounded
   en: locally bounded
@@ -13821,7 +13821,7 @@ N:
   defs:
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
-  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: normal_cone
   en: normal cone
@@ -16776,7 +16776,7 @@ R:
   ko: 정련된 귀진 사상
   primary: en
   defs:
-  - label: '[그로모프-위튼 이론] §가상류의 교차이론'
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: refinement
   en: refinement
