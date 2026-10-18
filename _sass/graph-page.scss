@@ -424,7 +424,8 @@ body.dependencies-linear .graph-page--dependencies .gc-viewport {
     border-radius: 999px;
   }
 
-  .gc-canvas { visibility: hidden; pointer-events: none; }
+  // 힘 기반 보기의 캔버스는 그 보기의 카드 높이로 크기가 잡혀 있어서, 숨겨도 잘라 두지 않으면 세로 스크롤 영역을 늘린다.
+  .gc-canvas { visibility: hidden; pointer-events: none; overflow: hidden; }
   .gc-linear { display: block; }
 }
 

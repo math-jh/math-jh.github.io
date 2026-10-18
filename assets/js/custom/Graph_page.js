@@ -264,8 +264,7 @@
     });
     return {
       positions: positions, width: width, height: height, laneGap: laneGap,
-      column: column, lane: lane, firstParent: firstParent,
-      trunk: trunk
+      column: column, lane: lane, firstParent: firstParent
     };
   }
 
@@ -351,15 +350,8 @@
     function radius(n) {
       // 선형 보기는 레인 간격이 15px 이라 점을 작게 둔다.
       if (layoutMode === 'linear') return Math.min(4.4, 2.2 + 0.32 * Math.sqrt(deg[n.id] || 0));
-      return Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95;
+      return 2.6 + 0.8 * Math.sqrt(deg[n.id] || 0);
     }
-    var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
-    var hubCandidates = data.classified
-      ? data.nodes.filter(function (n) { return (deg[n.id] || 0) > 0; })
-      : data.nodes.slice();
-    var hubSet = new Set(hubCandidates
-      .sort(function (a, b) { return (deg[b.id] || 0) - (deg[a.id] || 0); })
-      .slice(0, labelTop).map(function (n) { return n.id; }));
 
     function passesFilter(n) {
       var mc = !famKeys.has(n.family) || activeFams.has(n.family);
@@ -718,7 +710,7 @@
     }
     /* 어느 라벨을 띄울지. 중요한 것부터 자리를 잡고, 겹치는 덜 중요한 라벨은 숨긴다:
        고른 글(짝이면 둘) > 검색어에 맞는 글 > 고른 글과 바로 이어진 글 > 그 밖의 켜진 글.
-       아무것도 안 골랐을 때는 본류 위의 글이 마지막 단계다. */
+       고르거나 짚은 글도 검색어도 없으면 라벨을 띄우지 않는다. */
     function placeLinearLabels() {
       var focus = activeFocus(), pair = selected && pairWith;
       var primary = new Set(), direct = new Set(), focusing = hlNodes.size > 0;
@@ -742,7 +734,7 @@
         if (primary.has(n.id)) tier = 0;
         else if (matched) tier = 1;
         else if (direct.has(n.id)) tier = 2;
-        else if (focusing ? hlNodes.has(n.id) : linearGeometry.trunk.has(n.id)) tier = 3;
+        else if (focusing && hlNodes.has(n.id)) tier = 3;
         else return;
         candidates.push({ entry: entry, tier: tier, matched: matched });
       });
@@ -772,11 +764,11 @@
         label.setAttribute('y', y);
         if (box.angle) label.setAttribute('transform', 'rotate(' + box.angle + ' ' + x + ' ' + y + ')');
         else label.removeAttribute('transform');
-        label.setAttribute('fill', main ? 'rgba(' + cfg.accentLight + ',0.98)'
-          : focusing || c.matched ? 'rgba(' + cfg.labelHi + ',0.98)' : 'rgba(' + cfg.label + ',0.72)');
+        label.setAttribute('fill', 'rgba(' + (main ? cfg.accentLight : cfg.labelHi) + ',0.98)');
       });
     }
-    function linearTint(n, alpha) {
+    // 글의 색을 투명도만 바꿔 쓴다. 두 보기의 흐린 점과 평상시 선이 이 색이다.
+    function tint(n, alpha) {
       return n.family === 'misc'
         ? 'hsla(' + n.hue + ',0%,58%,' + alpha + ')'
         : 'hsla(' + n.hue + ',' + cfg.nodeSat + '%,' + cfg.nodeLight + '%,' + alpha + ')';
@@ -798,7 +790,7 @@
         if (!entry.spine) { path.style.display = 'none'; return; }
         path.style.display = '';
         var on = quiet && passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]);
-        path.setAttribute('stroke', on ? linearTint(byId[e[1]], 0.5) : 'rgba(' + cfg.link + ',0.06)');
+        path.setAttribute('stroke', on ? tint(byId[e[1]], 0.5) : 'rgba(' + cfg.link + ',0.06)');
         path.setAttribute('stroke-width', '1.3');
       });
       // 약한 관계부터 DOM 앞쪽에 둔다. 강조된 선은 맨 위층이다.
@@ -887,58 +879,54 @@
       updateLinearStyles();
     }
 
-    function hslaFade(hue, a) { return 'hsla(' + hue + ',38%,55%,' + a + ')'; }
+    /* 힘 기반 보기의 점과 라벨은 선형 보기와 같은 문법이다. 고른 글은 밝은 brass 로 조금
+       크게, 함께 켜진 글은 brass, 나머지는 제 색이고, 흐린 상태는 색은 두고 투명도만 낮춘다.
+       점마다 어두운 테를 둘러 밑을 지나는 선과 갈라 준다. */
     function draw(node, ctx, scale) {
       var st = nodeState(node);
-      var r = radius(node);
       var sel = selected && selected.id === node.id;
+      var r = sel ? Math.max(radius(node) + 1.5, radius(node) * 1.3) : radius(node);
       ctx.save();
-      if (st === 'off' || st === 'idle') {
-        ctx.fillStyle = hslaFade(node.hue, st === 'idle' ? 0.3 : 0.09);
-        ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
-      } else {
-        if (cfg.glow) { ctx.shadowColor = node.__c; ctx.shadowBlur = cfg.glow; }
-        ctx.fillStyle = sel ? 'rgb(' + cfg.accent + ')' : node.__c;
-        ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
-        ctx.shadowBlur = 0;
-        if (sel) {
-          ctx.lineWidth = 2 / scale;
-          ctx.strokeStyle = 'rgba(' + cfg.accent + ',0.55)';
-          ctx.beginPath(); ctx.arc(node.x, node.y, r + 3 / scale, 0, 6.2832); ctx.stroke();
-        }
-      }
+      ctx.globalAlpha = st === 'off' ? 0.16 : st === 'idle' ? 0.45 : 1;
+      ctx.fillStyle = sel ? 'rgb(' + cfg.accentLight + ')'
+        : hlNodes.has(node.id) ? 'rgb(' + cfg.accent + ')' : node.__c;
+      ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 6.2832); ctx.fill();
+      // 멀리서 보면 테가 점을 덮지 않게 반지름에 비례해 줄인다.
+      ctx.lineWidth = Math.min(1.4 / scale, r * 0.4);
+      ctx.strokeStyle = 'rgb(15,16,20)';
+      ctx.stroke();
       ctx.restore();
 
+      var focus = activeFocus();
+      var main = focus && focus.id === node.id ||
+        !!(selected && pairWith) && (selected.id === node.id || pairWith.id === node.id);
       var focused = hlNodes.size > 0 && hlNodes.has(node.id);
       var matched = query && node.title.toLowerCase().indexOf(query) >= 0;
-      if (st !== 'off' && (focused || matched || hubSet.has(node.id))) {
-        var emph = focused || matched;
-        var fs = Math.max(3.5, (emph ? 11.5 : 10) / scale);
-        ctx.font = (emph ? '600 ' : '') + fs + 'px ' + cfg.font;
+      // 라벨은 고르거나 짚은 글과 그 이웃, 검색어에 맞는 글에만 띄운다.
+      if (st !== 'off' && (main || focused || matched)) {
+        var fs = Math.max(3.5, (main ? 12 : 10.5) / scale);
+        var x = node.x, y = node.y + r + 2.5 / scale;
+        ctx.font = (main ? '600 ' : '') + fs + 'px ' + cfg.font;
         ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-        ctx.fillStyle = emph
-          ? 'rgba(' + cfg.labelHi + ',0.98)'
-          : 'rgba(' + cfg.label + ',' + (st === 'idle' ? 0.46 : 0.72) + ')';
-        ctx.fillText(node.title, node.x, node.y + r + 2.5 / scale);
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = 3 / scale;
+        ctx.strokeStyle = 'rgba(15,16,20,0.9)';
+        ctx.strokeText(node.title, x, y);
+        ctx.fillStyle = 'rgba(' + (main ? cfg.accentLight : cfg.labelHi) + ',0.98)';
+        ctx.fillText(node.title, x, y);
       }
     }
     function pointerArea(node, color, ctx) {
       ctx.fillStyle = color;
       ctx.beginPath(); ctx.arc(node.x, node.y, Math.max(11, radius(node)), 0, 6.2832); ctx.fill();
     }
+    /* 켜진 선은 두 보기 모두 brass 한 색이다. 고른 글에서 나가는 forward 만 짙은 brass 로
+       가른다. 평상시 선은 도착 글의 색으로 칠한다 — 선형 보기의 첫 부모 선과 같은 규칙이다. */
     function linkColor(l) {
       if (hlLinks.has(lid(l))) {
-        var highlightedEnds = endpoints(l);
         var focused = activeFocus();
-        if (layoutMode === 'linear') {
-          if (focused && l.relation === 'forward' && highlightedEnds[0] === focused.id) {
-            return 'rgba(' + cfg.accentOut + ',0.9)';
-          }
-          return 'rgba(' + cfg.accent + ',0.85)';
-        }
-        if (focused) {
-          if (highlightedEnds[0] === focused.id) return 'rgba(' + cfg.accentOut + ',0.9)';
-          if (highlightedEnds[1] === focused.id) return 'rgba(' + cfg.accentIn + ',0.9)';
+        if (focused && l.relation === 'forward' && endpoints(l)[0] === focused.id) {
+          return 'rgba(' + cfg.accentOut + ',0.9)';
         }
         return 'rgba(' + cfg.accent + ',0.85)';
       }
@@ -946,15 +934,11 @@
       var e = endpoints(l);
       var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !activeFocus();
       if (!on) return 'rgba(' + cfg.link + ',0.035)';
-      if (layoutMode === 'linear') {
-        if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.1)';
-        if (l.relation === 'forward') return 'rgba(' + cfg.link + ',0.14)';
-        return 'rgba(' + cfg.link + ',0.2)';
+      // 접근자는 프레임마다 링크 수만큼 불리므로 색 문자열을 링크에 붙여 둔다.
+      if (!l.__tint) {
+        l.__tint = tint(byId[e[1]], l.relation === 'weak' ? 0.16 : l.relation === 'forward' ? 0.24 : 0.34);
       }
-      if (l.relation === 'weak') return 'rgba(' + cfg.link + ',0.2)';
-      if (l.relation === 'forward') return 'rgba(' + cfg.link + ',0.3)';
-      if (l.relation === 'required') return 'rgba(' + cfg.link + ',0.44)';
-      return 'rgba(' + cfg.link + ',0.36)';
+      return l.__tint;
     }
     // 화살촉은 링크와 같은 색·같은 투명도로 칠한다. 불투명하게 칠하면 면적이
     // 있는 만큼 뒤를 지나는 밝은 링크를 잘라 먹는다. weak 만 면적 때문에 점선보다
@@ -1004,7 +988,7 @@
       .nodePointerAreaPaint(pointerArea)
       .linkColor(linkColor)
       .linkWidth(function (l) {
-        if (hlLinks.has(lid(l))) return 2.4;
+        if (hlLinks.has(lid(l))) return 1.5;
         if (hlSoftLinks.has(lid(l))) return 1.1;
         if (l.relation === 'required') return 1.2;
         if (l.relation === 'weak') return 0.85;
@@ -1619,10 +1603,10 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var cfg = {
-          nodeSat: 48, nodeLight: 60, glow: 14,
+          nodeSat: 48, nodeLight: 60,
           accent: '240,198,116', accentLight: '255,236,190', link: '150,150,160',
-          accentIn: '165,111,20', accentOut: '107,58,0',
-          label: '174,168,150', labelHi: '240,198,116',
+          accentOut: '107,58,0',
+          labelHi: '240,198,116',
           font: '"MySansSerifFont", system-ui, sans-serif',
           openLabel: lang === 'ko' ? '글로 이동 →' : 'Open post →',
           layoutToggle: layoutToggle,
