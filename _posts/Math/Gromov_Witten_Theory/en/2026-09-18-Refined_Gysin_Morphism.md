@@ -1,5 +1,5 @@
 ---
-title: "Intersection Theory of Virtual Classes"
+title: "Refined Gysin Morphism"
 description: "We construct the Gysin morphism for regular embeddings and its refined version via deformation to the normal cone. Using the excess intersection formula and functoriality, we obtain an operation that intersects two virtual classes along the diagonal over a smooth base."
 excerpt: "Refined Gysin homomorphisms, excess intersection, and diagonal intersection of virtual classes"
 
@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-09-18
 
-weight: 5
+weight: 4
 translated_at: 2026-09-29T15:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
 last_polished_at: 2026-10-09T23:15:06+00:00
@@ -245,7 +245,7 @@ The exterior product $\gamma_1\times\gamma_2$ is a class of dimension $k_1+k_2$,
 
 Now let us write out what $\Delta_S^!(\gamma_1\times\gamma_2)$ actually computes. Before [Definition 3](#def3){: data-lid="f5act" }, we verified that the following diagram is cartesian:
 
-{% diagram Math/Gromov_Witten_Theory/Intersection_Theory_of_Virtual_Classes-1.svg width="14.81em" alt="fiber product as the pullback of the diagonal" %}
+{% diagram Math/Gromov_Witten_Theory/Refined_Gysin_Morphism-1.svg width="14.81em" alt="fiber product as the pullback of the diagonal" %}
 
 That is, this is the case where
 
