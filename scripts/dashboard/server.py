@@ -117,7 +117,7 @@ WORKERS = [
          log=f"{ROOT}/scripts/translation/translation.log", log_kind="followup"),
     dict(key="terms", name="용어 추출", schedule="홀수 시각 :15", interval=7200,
          log=f"{ROOT}/scripts/term-extraction/term_extract_worker.log"),
-    dict(key="dependency", name="의존성 링크 분류", schedule=":30 / :45", interval=1800,
+    dict(key="dependency", name="의존성 링크 분류", schedule=":05 / :45", interval=1800,
          log=os.path.expanduser("~/.local/state/dependency-classifier.log")),
     dict(key="terms_lint", name="용어 lint", schedule="매일 04:20", interval=86400,
          log=f"{ROOT}/scripts/term-extraction/term_extraction_lint.log"),
@@ -127,7 +127,7 @@ WORKERS = [
          log=f"{ROOT}/scripts/audit/audit.log"),
     dict(key="index_monitor", name="GSC 색인 모니터", schedule="매일 03:00", interval=86400,
          log=f"{ROOT}/scripts/index-monitor/monitor.log"),
-    dict(key="blogdev", name="개발 노트 봇", schedule="매일 10:05", interval=86400,
+    dict(key="blogdev", name="개발 노트 봇", schedule="매일 10:25", interval=86400,
          log=f"{ROOT}/scripts/blogdev-bot/run.log"),
     dict(key="pagefind", name="Pagefind 재색인", schedule="매일 04:50", interval=86400,
          watch=f"{ROOT}/_site/pagefind/pagefind-entry.json"),
@@ -1152,15 +1152,6 @@ def sec_cron():
     return data
 
 
-def _shadow_counts():
-    if _shadow is None:
-        return None
-    try:
-        return _shadow.counts()
-    except Exception:  # noqa: BLE001
-        return None
-
-
 def build_summary():
     posts = scan_posts()
     stats, categories, orphan_en, unpublished = sec_posts(posts)
@@ -1180,7 +1171,6 @@ def build_summary():
         comment_prs=sec_comment_prs(),
         audit=sec_audit(),
         link_audit=sec_link_audit(),
-        shadow=_shadow_counts(),
         gsc=sec_gsc(),
         git=sec_git(),
         system=sec_system(),
@@ -1305,7 +1295,7 @@ class Handler(BaseHTTPRequestHandler):
             except OSError:
                 return self._send(200, "{}")
 
-        if path in ("/api/shadow", "/api/shadow/link"):
+        if path in ("/api/shadow", "/api/shadow/link", "/api/shadow/pilot"):
             return self._shadow_get(path, q)
 
         if path == "/api/summary":
@@ -1532,7 +1522,9 @@ class Handler(BaseHTTPRequestHandler):
                                               ensure_ascii=False))
         try:
             if path == "/api/shadow/link":
-                data = _shadow.link_detail((q.get("lid") or [""])[0])
+                data = _shadow.link_detail((q.get("lid") or [""])[0], (q.get("unit") or [""])[0])
+            elif path == "/api/shadow/pilot":
+                data = _shadow.pilot()
             else:
                 data = _shadow.snapshot()
         except KeyError as e:

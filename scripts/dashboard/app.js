@@ -504,9 +504,6 @@ function overview(d) {
       d: '영문 ' + num(s.en) + '편 (' + pct(s.en, s.published) + '%) · 30일 신규 ' + s.new30d },
     { n: num(d.audit ? d.audit.posts_with_issues : null), l: '링크 이슈 글', to: 'audit',
       d: d.audit ? d.audit.scanned + '편 검사 · ' + ago(d.audit.mtime) + ' 갱신' : 'audit-report.md 없음' },
-    { n: num(d.shadow ? d.shadow.human + d.shadow.audit : null), l: '링크 재판정', to: 'audit', accent: true,
-      d: d.shadow ? '판정 대기 ' + d.shadow.human + ' · 감사 ' + d.shadow.audit + ' · 초안 ' + d.shadow.drafts +
-        ' · 섀도 원장 ' + num(d.shadow.ledger) : '섀도 상태 없음' },
     { n: num(sys.dirty_count), l: '커밋 안 된 변경', to: 'activity',
       d: sys.dirty_count ? (sys.dirty[0] || '').replace(/^[ MADRCU?!]+/, '') : 'working tree clean' }
   ];

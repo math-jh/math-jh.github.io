@@ -14,6 +14,9 @@ Modes:
   --probe PATH       Step 1 of one unit for one stage, nothing written to state
   --pilot N          the signal pilot: Step 1 by S1 twice (a third time where those
                      two disagree), S2, and S3 on N units
+  --skip K           with --pilot: leave out the first K of those units
+  --only PATH...     the pilot on the units holding these posts instead
+  --lids LID...      with --only: ask only about these links
   --pilot-report     the pilot's distributions
   --status           counts
 """
@@ -115,20 +118,32 @@ def agy_quota() -> str:
     return "unread"
 
 
-def pilot(n: int) -> int:
+def pilot(n: int, skip: int = 0, only: list[str] | None = None,
+          lids: list[str] | None = None) -> int:
     held = store.try_tick_lock()
     if held is None:
         log("pilot: a shadow tick (or another pilot) holds the tick lock")
         return 0
     log(f"pilot: agy weekly remaining at start: {agy_quota()}")
     try:
-        for paths in pilot_units(n):
+        chosen = [find_unit(p) for p in only] if only else pilot_units(n)[skip:]
+        for paths in chosen:
             unit = units.load_unit(paths)
             out_path = store.PILOT_DIR / f"{units.unit_hash(unit.key)}.json"
             record = store.read_json(out_path, {})
             if record.get("fingerprint") != unit.fingerprint:
                 record = {"unit": unit.key, "fingerprint": unit.fingerprint, "calls": []}
-            calls = units.build_calls(unit)
+            try:
+                calls = units.build_calls(unit)
+            except OSError as exc:
+                # The post index is read once at start; a post renamed during a
+                # long pass leaves it stale.  The next pass picks the unit up.
+                log(f"pilot: skipped {paths[0].name} (a linked post moved during the pass): {exc}")
+                continue
+            if lids:
+                calls = [pipe.subset_call(c, lids) for c in calls]
+                calls = [{**c, "features": {i["id"]: c["features"][i["id"]] for i in c["items"]}}
+                         for c in calls if c["items"]]
             if not record["calls"]:
                 record["calls"] = [{"source": c["source_rel"], "features": c["features"],
                                     "runs": {}, "usage": {}, "errors": {}} for c in calls]
@@ -183,7 +198,8 @@ def status() -> int:
     state = store.load_state()
     counts: dict[str, int] = {}
     for entry in state["units"].values():
-        counts[entry.get("stage", "?")] = counts.get(entry.get("stage", "?"), 0) + 1
+        key = f"next {entry['next']}" if entry.get("next") else "round done"
+        counts[key] = counts.get(key, 0) + 1
     queue = store.load_queue()
     print(json.dumps({
         "state": str(store.STATE_PATH), "stages": counts,
@@ -202,14 +218,17 @@ def main() -> int:
     parser.add_argument("--out")
     parser.add_argument("--prompt-only", action="store_true")
     parser.add_argument("--pilot", type=int)
+    parser.add_argument("--skip", type=int, default=0)
+    parser.add_argument("--only", nargs="+")
+    parser.add_argument("--lids", nargs="+")
     parser.add_argument("--pilot-report", action="store_true")
     parser.add_argument("--status", action="store_true")
     parser.add_argument("--no-commit", action="store_true")
     args = parser.parse_args()
     if args.probe:
         return probe(args.probe, args.stage, args.out, args.prompt_only)
-    if args.pilot:
-        return pilot(args.pilot)
+    if args.pilot or args.only:
+        return pilot(args.pilot or 0, args.skip, args.only, args.lids)
     if args.pilot_report:
         return pilot_report()
     if args.status:

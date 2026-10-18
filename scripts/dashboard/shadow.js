@@ -8,11 +8,13 @@
 
 var SH = {
   data: null, tab: 'queue', busy: false, err: '',
-  open: {},        /* lid → 펼침 */
   detail: {},      /* lid → {source_context, target_context} */
   reveal: {},      /* 감사 lid → 서버가 돌려준 공개 정보 */
   note: {},        /* lid·qid → 쓰던 설명 */
-  pv: null         /* 미리보기 중인 링크 (lid·permalink·path·line) */
+  pv: null,        /* 미리보기 중인 링크 (lid·permalink·path·line) */
+  modal: null,     /* 근거 모달에 띄운 lid — 문맥이 늦게 와도 그 모달에만 넣는다 */
+  pilot: null,     /* /api/shadow/pilot — 판정 대기 아래에 읽기 전용으로 붙인다 */
+  pilotAll: false  /* 파일럿에서 만장일치 링크도 보이기 */
 };
 var SH_REL = { required: '필수', weak: '배경', forward: '예고' };
 var SH_TABS = [['queue', '판정 대기'], ['audit', '감사'], ['drafts', '판례 초안'],
@@ -67,23 +69,27 @@ function shPost(action, body) {
   }, function (e) { SH.busy = false; SH.err = String(e); shRender(); throw e; });
 }
 function shLoad() {
+  shLoadPilot();
   return fetch(API + 'shadow').then(function (r) { return r.json(); }).then(function (j) {
     if (!j.ok) { SH.err = j.error || '읽기 실패'; } else { SH.data = j; }
     shRender();
   }, function (e) { SH.err = String(e); shRender(); });
 }
 var SH_LOADING = {};
-function shDetail(lid, then) {
+/* unit 은 큐 밖의 링크(파일럿)일 때만 넘긴다. */
+function shDetail(lid, then, unit) {
   if (SH.detail[lid]) { if (then) then(); return; }
   if (SH_LOADING[lid]) return;
   SH_LOADING[lid] = true;
-  fetch(API + 'shadow/link?lid=' + encodeURIComponent(lid)).then(function (r) { return r.json(); })
+  fetch(API + 'shadow/link?lid=' + encodeURIComponent(lid) + (unit ? '&unit=' + encodeURIComponent(unit) : ''))
+    .then(function (r) { return r.json(); })
     .then(function (j) { delete SH_LOADING[lid]; if (j.ok) SH.detail[lid] = j; shRender(); if (then) then(); },
           function () { delete SH_LOADING[lid]; });
 }
 
 /* ── 미리보기 ─────────────────────────────────────────────────────────── */
-/* 고른 링크가 있는 글을 dev 서버(4001)에서 구워진 채로 띄우고 그 링크를 짚는다.
+/* 고른 링크가 있는 글을 dev 서버(4001)에서 구워진 채로 오른쪽 칸에 늘 띄우고 그 링크를
+   짚는다. 링크 행을 누르면 고르고, 아무것도 안 골랐으면 보이는 목록의 첫 링크를 고른다.
    칸은 #shadow-root 밖에 있어 shRender 가 건드리지 않는다 — 다시 만들면 iframe 이
    글을 처음부터 다시 굽는다. 구워진 글의 <a> 에도 data-lid 가 남아 있어 그걸로
    찾는다. livereload 로 프레임이 다시 뜨면 onload 가 같은 일을 다시 한다. */
@@ -114,8 +120,11 @@ function shPaint() {
   var pane = document.getElementById('sh-preview');
   if (!pane) return;
   var k = SH.pv;
-  pane.parentNode.classList.toggle('sh-cols--pv', !!k);
-  if (!k) { pane.innerHTML = ''; return; }
+  if (!k) {
+    pane.innerHTML = '<p class="hint">왼쪽에서 링크를 고르면 그 링크가 있는 글을 구워진 채로 ' +
+      '띄운다. 링크에 마우스를 올리면 가리키는 대상도 보인다.</p>';
+    return;
+  }
   var frame = pane.querySelector('iframe');
   if (!frame || frame.__permalink !== k.permalink) {
     pane.innerHTML = '';
@@ -124,9 +133,6 @@ function shPaint() {
     var open = el('a', 'sh-pv__open', '새 탭 ↗');
     open.target = '_blank';
     head.appendChild(open);
-    var close = el('button', 'ghost-btn', '닫기');
-    close.onclick = function () { SH.pv = null; shPaint(); shRender(); };
-    head.appendChild(close);
     pane.appendChild(head);
     frame = el('iframe', 'sh-pv__frame');
     frame.__permalink = k.permalink;
@@ -140,19 +146,27 @@ function shPaint() {
   pane.querySelector('.path').textContent = String(k.path || '').replace(/^_posts\//, '') + ':' + k.line;
   pane.querySelector('.sh-pv__open').href = k.permalink;
 }
-/* 같은 링크를 다시 누르면 닫는다. */
-function shPvBtn(x) {
-  if (!x.permalink) return document.createTextNode('');
-  var on = !!SH.pv && SH.pv.lid === x.lid;
-  var b = el('button', 'ghost-btn' + (on ? ' sh-tab--on' : ''), '미리보기');
-  b.onclick = function () {
-    SH.pv = on ? null : { lid: x.lid, permalink: x.permalink, path: x.path, line: x.line };
-    shPaint(); shRender();
-  };
-  return b;
+/* 고르기는 다시 그리지 않고 표시만 옮긴다 — 다시 그리면 쓰던 설명 칸의 포커스가 날아간다. */
+function shSelect(x) {
+  if (!x.permalink) return;
+  SH.pv = { lid: x.lid, permalink: x.permalink, path: x.path, line: x.line };
+  Array.prototype.forEach.call(document.querySelectorAll('#shadow-root .sh-item'), function (r) {
+    r.classList.toggle('sh-item--sel', r.dataset.lid === x.lid);
+  });
+  shPaint();
 }
-function shSel(row, x) {
+var SH_SEEN = {}, SH_FIRST = null;   /* 한 번 그릴 때 보인 링크들 — 고른 게 사라지면 첫 링크로 */
+function shPick(row, x) {
+  row.dataset.lid = x.lid;
+  if (!x.permalink) return;
+  SH_SEEN[x.lid] = true;
+  if (!SH_FIRST) SH_FIRST = x;
+  row.classList.add('sh-item--pick');
   if (SH.pv && SH.pv.lid === x.lid) row.classList.add('sh-item--sel');
+  row.onclick = function (e) {
+    if (e.target.closest('button, select, textarea, input, a, label')) return;
+    shSelect(x);
+  };
 }
 
 /* ── 조각 ─────────────────────────────────────────────────────────────── */
@@ -182,20 +196,40 @@ function shWhere(x) {
   w.appendChild(m);
   return w;
 }
-function shContext(lid) {
-  var box = el('div', 'sh-ctx');
+function shCtxHtml(lid) {
   var d = SH.detail[lid];
-  if (!d) { box.appendChild(shBtn('문맥 보기', null, function () { shDetail(lid); })); return box; }
-  if (d.gone) { box.appendChild(el('p', 'hint', '이 링크는 글에서 사라졌다.')); return box; }
-  var s = el('div', 'sh-ctx__src'); s.innerHTML = '<b>소스</b><div>' + esc(d.source_context || '') + '</div>';
-  var t = el('div', 'sh-ctx__tgt'); t.innerHTML = '<b>대상 ' + esc(d.target || '') + '</b><div>' + esc(d.target_context || '') + '</div>';
-  box.appendChild(s); box.appendChild(t);
+  if (!d) return '<p class="hint">문맥 읽는 중…</p>';
+  if (d.gone) return '<p class="hint">이 링크는 글에서 사라졌다.</p>';
+  return '<div class="sh-ctx"><div class="sh-ctx__src"><b>소스</b><div>' + esc(d.source_context || '') +
+    '</div></div><div class="sh-ctx__tgt"><b>대상 ' + esc(d.target || '') + '</b><div>' +
+    esc(d.target_context || '') + '</div></div></div>';
+}
+function shContext(lid, unit) {
+  var box = el('div');
+  if (!SH.detail[lid]) { box.appendChild(shBtn('문맥 보기', null, function () { shDetail(lid, null, unit); })); return box; }
+  box.innerHTML = shCtxHtml(lid);
   setTimeout(function () { shMath(box); }, 0);
   return box;
 }
-function shStages(stages) {
+/* 근거 보기 — 옛 링크 보류 화면의 모달처럼, 링크 문장과 대상, 모델별 판정과 근거를 한 창에.
+   문맥은 늦게 올 수 있어 자리만 두고, 그 모달이 아직 열려 있을 때만 채운다. */
+function shReasons(x, stages, keys, unit) {
+  SH.modal = x.lid;
+  shSelect(x);
+  openModalHtml('의존성 링크 — ' + String(x.path || '').replace(/^_posts\//, '') + ':' + (x.line || '?'),
+    '<div class="sh-m"><p class="sh-m__link"><code>' + esc(x.markup || x.lid) + '</code></p>' +
+    '<div id="sh-m-ctx">' + shCtxHtml(x.lid) + '</div>' + shStages(stages, keys).outerHTML + '</div>');
+  if (SH.detail[x.lid]) return;
+  shDetail(x.lid, function () {
+    var box = document.getElementById('sh-m-ctx');
+    if (!box || SH.modal !== x.lid || document.getElementById('modal').hidden) return;
+    box.innerHTML = shCtxHtml(x.lid);
+    shMath(box);
+  }, unit);
+}
+function shStages(stages, keys) {
   var w = el('div', 'sh-stages');
-  ['S1', 'S2', 'S3'].forEach(function (s) {
+  (keys || ['S1', 'S2', 'S3']).forEach(function (s) {
     var v = stages && stages[s];
     if (!v) return;
     var r = v.step1 || {};
@@ -231,7 +265,7 @@ function shNoteBox(key, placeholder) {
 /* ── 판정 대기 ───────────────────────────────────────────────────────── */
 function shQueue(d) {
   var frag = document.createDocumentFragment();
-  if (!d.human.length) { frag.appendChild(el('p', 'hint', '판정을 기다리는 링크가 없다.')); return frag; }
+  if (!d.human.length) frag.appendChild(el('p', 'hint', '판정을 기다리는 링크가 없다.'));
   var openQs = d.pending || [];
   d.human.forEach(function (g) {
     var box = el('div', 'sh-group');
@@ -253,6 +287,7 @@ function shQueue(d) {
     g.items.forEach(function (x) { box.appendChild(shItem(x, g, openQs)); });
     frag.appendChild(box);
   });
+  frag.appendChild(shPilot());
   return frag;
 }
 function shItem(x, g, openQs) {
@@ -260,17 +295,9 @@ function shItem(x, g, openQs) {
   var top = el('div', 'sh-item__top');
   top.appendChild(shWhere(x));
   top.appendChild(shVotes(x.votes));
-  var tog = shBtn(SH.open[x.lid] ? '접기' : '근거 보기', null, function () {
-    SH.open[x.lid] = !SH.open[x.lid]; if (SH.open[x.lid]) shDetail(x.lid); shRender();
-  });
-  top.appendChild(tog);
-  top.appendChild(shPvBtn(x));
-  shSel(row, x);
+  top.appendChild(shBtn('근거 보기', null, function () { shReasons(x, x.stages); }));
+  shPick(row, x);
   row.appendChild(top);
-  if (SH.open[x.lid]) {
-    row.appendChild(shContext(x.lid));
-    row.appendChild(shStages(x.stages));
-  }
   var act = el('div', 'sh-act');
   ['required', 'weak', 'forward'].forEach(function (rel) {
     act.appendChild(shBtn(SH_REL[rel] + ' (' + rel + ')', 'sh-rel sh-rel--' + rel, function () {
@@ -340,8 +367,7 @@ function shAudit(d) {
     var top = el('div', 'sh-item__top');
     top.appendChild(shWhere(x));
     top.appendChild(el('span', 'tag', x.stratum || ''));
-    top.appendChild(shPvBtn(x));
-    shSel(row, x);
+    shPick(row, x);
     row.appendChild(top);
     if (!SH.detail[x.lid]) shDetail(x.lid);
     row.appendChild(shContext(x.lid));
@@ -488,11 +514,71 @@ function shSettled(d) {
     top.appendChild(shBtn('되돌리기', null, function () {
       if (confirm(x.lid + ' 판정을 되돌릴까?')) shPost('reopen', { lid: x.lid }).then(shLoad);
     }));
-    top.appendChild(shPvBtn(x));
-    shSel(row, x);
+    shPick(row, x);
     row.appendChild(top);
     if (x.path) row.appendChild(shWhere(x));
     frag.appendChild(row);
+  });
+  return frag;
+}
+
+/* ── 파일럿 ──────────────────────────────────────────────────────────── */
+/* 신호 파일럿(shadow_classifier.py --pilot)의 판정 — 판정 대기 아래에 읽기 전용으로 붙인다.
+   S1 은 agy 두 번(둘이 갈리면 세 번)의 다수결이고, 그 셋은 근거 보기에서 따로 보인다.
+   파일럿은 큐를 쓰지 않으므로 여기서 판정할 것은 없다. 새로 읽기로 갱신한다. */
+var SH_PILOT_KEYS = ['S1a', 'S1b', 'S1c', 'S2', 'S3'];
+function shLoadPilot() {
+  return fetch(API + 'shadow/pilot').then(function (r) { return r.json(); }).then(function (j) {
+    if (j.ok) { SH.pilot = j; shRender(); }
+  }, function () { });
+}
+function shPilotItem(x, unit, models) {
+  var row = el('div', 'sh-item');
+  var top = el('div', 'sh-item__top');
+  top.appendChild(shWhere(x));
+  top.appendChild(shVotes({ S1: x.s1, S2: x.runs.S2 && x.runs.S2.relation, S3: x.runs.S3 && x.runs.S3.relation }));
+  top.appendChild(el('span', 'sh-agy', 'agy ' + ['S1a', 'S1b', 'S1c'].map(function (k) {
+    return x.runs[k] ? (SH_REL[x.runs[k].relation] || x.runs[k].relation) : '—';
+  }).join('·')));
+  top.appendChild(shBtn('근거 보기', null, function () {
+    var stages = {};
+    SH_PILOT_KEYS.forEach(function (k) { if (x.runs[k]) stages[k] = { model: models[k], step1: x.runs[k] }; });
+    shReasons(x, stages, SH_PILOT_KEYS, unit);
+  }));
+  shPick(row, x);
+  row.appendChild(top);
+  return row;
+}
+function shPilot() {
+  var frag = document.createDocumentFragment();
+  var p = SH.pilot;
+  if (!p || !p.posts.length) return frag;
+  var s = p.summary;
+  frag.appendChild(el('h3', 'sh-sub', '파일럿 (읽기 전용)'));
+  frag.appendChild(el('p', 'hint', '글 ' + s.posts + '편 · 링크 ' + s.links + ' · 세 차수가 끝난 링크 ' + s.done +
+    ' · 만장일치 ' + s.unanimous + ' (agy 첫 답만 쓰면 ' + s.unanimous_s1a + ')'));
+  if (p.last) frag.appendChild(el('p', 'hint', '마지막 기록 ' + p.last));
+  (p.quota || []).forEach(function (q) { frag.appendChild(el('p', 'hint', q)); });
+  var lab = el('label', 'sh-check');
+  var cb = el('input'); cb.type = 'checkbox'; cb.checked = SH.pilotAll;
+  cb.onchange = function () { SH.pilotAll = cb.checked; shRender(); };
+  lab.appendChild(cb);
+  lab.appendChild(document.createTextNode(' 만장일치 링크도 보기'));
+  frag.appendChild(lab);
+  /* 지금 도는 글이 맨 위에 오도록 최근 것부터. */
+  p.posts.slice().reverse().forEach(function (post) {
+    var box = el('div', 'sh-group');
+    var done = post.links.filter(function (x) { return x.done; });
+    var unan = done.filter(function (x) { return x.unanimous; });
+    var errs = Object.keys(post.errors || {});
+    box.appendChild(el('div', 'sh-group__h', String(post.unit || '').split('+')[0].replace(/^_posts\//, '') +
+      ' — 링크 ' + post.links.length + ' · 끝남 ' + done.length + ' · 만장일치 ' + unan.length +
+      ' · 돈 차수 ' + post.ran.join(' ') + (errs.length ? ' · 답 없음 ' + errs.join(' ') : '')));
+    var shown = post.links.filter(function (x) { return SH.pilotAll || !x.unanimous; })
+      .sort(function (a, b) { return (a.unanimous ? 1 : 0) - (b.unanimous ? 1 : 0); });
+    if (!shown.length) box.appendChild(el('p', 'hint', '갈린 링크가 없다.'));
+    shown.forEach(function (x) { box.appendChild(shPilotItem(x, post.unit, p.models)); });
+    frag.appendChild(box);
   });
   return frag;
 }
@@ -503,6 +589,7 @@ function shRender() {
   if (!root) return;
   var y = window.scrollY;
   root.innerHTML = '';
+  SH_SEEN = {}; SH_FIRST = null;
   var d = SH.data;
   var bar = el('div', 'sh-bar');
   if (d) {
@@ -541,6 +628,7 @@ function shRender() {
   body.appendChild({ queue: shQueue, audit: shAudit, drafts: shDrafts, book: shBook, settled: shSettled }[SH.tab](d));
   root.appendChild(body);
   window.scrollTo(0, y);
+  if ((!SH.pv || !SH_SEEN[SH.pv.lid]) && SH_FIRST) shSelect(SH_FIRST);
 }
 
 window.secShadow = function () {

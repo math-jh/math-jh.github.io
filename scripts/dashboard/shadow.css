@@ -32,8 +32,9 @@
 .sh-label{display:block;font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:.4rem}
 .sh-check{font-family:var(--sans);font-size:.78rem;display:block;margin:.4rem 0}
 .sh-ctx{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.5rem 0;font-size:.8rem;line-height:1.6}
-.sh-ctx b{font-family:var(--sans);font-size:.72rem;display:block;color:var(--muted)}
-.sh-ctx > div > div{white-space:pre-wrap;max-height:16rem;overflow:auto}
+.sh-ctx b{font-family:var(--sans);font-size:.72rem;display:block;color:var(--muted);overflow-wrap:anywhere}
+.sh-ctx > div{min-width:0}
+.sh-ctx > div > div{white-space:pre-wrap;max-height:16rem;overflow:auto;overflow-wrap:anywhere}
 .sh-stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.7rem;margin:.4rem 0}
 .sh-stage{border:1px solid var(--rule);padding:.5rem .6rem;font-size:.8rem;line-height:1.55}
 .sh-stage__h{font-family:var(--sans);font-size:.76rem;margin-bottom:.25rem}
@@ -42,15 +43,21 @@
 .sh-reveal{border-left:3px solid var(--brass);padding-left:.7rem;margin:.4rem 0}
 .sh-form{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
 .sh .bad{color:var(--bad)}
+.sh-agy{font-family:var(--sans);font-size:.72rem;color:var(--muted);align-self:center}
+.sh-item--pick{cursor:pointer}
 .sh-item--sel{box-shadow:inset 2px 0 0 var(--brass);padding-left:.6rem}
-/* 미리보기를 열면 두 칸이 된다 — 왼쪽 목록, 오른쪽에 그 링크가 있는 구워진 글. */
-.sh-cols--pv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.4rem;align-items:start}
-.sh-pv{display:none}
-.sh-cols--pv .sh-pv{display:block;position:sticky;top:.8rem;border:1px solid var(--rule);padding:.6rem;background:var(--panel)}
+/* 늘 두 칸이다 — 왼쪽 목록, 오른쪽에 고른 링크가 있는 구워진 글. */
+.sh-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.4rem;align-items:start}
+.sh-pv{position:sticky;top:.8rem;border:1px solid var(--rule);padding:.6rem;background:var(--panel);min-height:12rem}
 .sh-pv__head{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.5rem;font-family:var(--sans);font-size:.74rem}
 .sh-pv__head .path{flex:1;min-width:0;word-break:break-all}
 .sh-pv__open{white-space:nowrap}
 .sh-pv__frame{width:100%;height:calc(100vh - 6rem);border:1px solid var(--rule);background:var(--paper);display:block}
 /* 좁은 화면에서는 미리보기를 위에 붙여 두고 목록이 그 아래로 지나가게 한다. */
-@media (max-width:1000px){.sh-cols--pv{grid-template-columns:1fr}.sh-cols--pv .sh-pv{order:-1;top:0;z-index:5}.sh-pv__frame{height:42vh}}
+@media (max-width:1000px){.sh-cols{grid-template-columns:1fr}.sh-pv{order:-1;top:0;z-index:5}.sh-pv__frame{height:42vh}}
+/* 근거 보기 모달 — 링크 문장, 문맥, 모델별 판정과 근거 */
+.sh-m__link{font-size:.8rem;margin:.6rem 0}
+.sh-m__link code{white-space:pre-wrap;word-break:break-all}
+.sh-m .sh-stages{margin-top:.8rem}
+.sh-sub{margin:1.6rem 0 .4rem}
 @media (max-width:760px){.sh-ctx{grid-template-columns:1fr}.sh-tools{margin-left:0}}

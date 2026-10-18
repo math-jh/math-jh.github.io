@@ -13,6 +13,7 @@
 * 감사 — 만장일치로 끝난 링크의 표본. 모델들의 답을 가린 채 먼저 고르고, 고른 뒤에
   공개한다. 만장일치와 다르게 고르면 설명이 있어야 판정이 들어간다.
 * 판례 — digest 워커의 초안 승인, 판례·판례 대기의 한 줄 설명 수정, 철회·정리.
+그 밖에 신호 파일럿(shadow_classifier.py --pilot)의 판정을 읽기 전용으로 펼친다.
 """
 from __future__ import annotations
 
@@ -22,6 +23,7 @@ from pathlib import Path
 import dependency_classifier as dc
 import shadow_book as book
 import shadow_prompts as sp
+import shadow_report as report
 import shadow_store as store
 import shadow_units as units
 
@@ -92,14 +94,67 @@ def _brief(rec: dict, permalinks: dict[str, str]) -> dict:
             "permalink": permalinks.get(rec.get("source") or "")}
 
 
-def link_detail(lid: str) -> dict:
-    """Source paragraph and target excerpt of one queued link, read on demand."""
+def link_detail(lid: str, unit: str = "") -> dict:
+    """Source paragraph and target excerpt of one link, read on demand — a queued link,
+    or with ``unit`` a pilot link."""
     queue = store.load_queue()
     item = queue["human"].get(lid) or queue["audit"].get(lid) or queue["settled"].get(lid)
-    if item is None:
+    if item is None and not unit:
         raise KeyError(lid)
-    paths = _unit_paths().get(item["unit"])
+    paths = _unit_paths().get(item["unit"] if item is not None else unit)
     return {"lid": lid, **_context(units.load_unit(paths) if paths else None, lid)}
+
+
+PILOT_RUNS = {"S1a": "Antigravity", "S1b": "Antigravity", "S1c": "Antigravity",
+              "S2": "Claude", "S3": "Codex"}
+PILOT_FIELDS = ("relation", "preview", "need", "need_kind", "provided", "evidence", "reason",
+                "other_side", "flip_condition", "basis", "boundary", "inconsistent", "quote_score")
+
+
+def pilot() -> dict:
+    """파일럿 판정을 글별·링크별로 편다. S1 은 S1a·S1b(갈리면 S1c)의 다수결이다."""
+    cache = _Units()
+    permalinks = _permalinks()
+    posts = []
+    for path in sorted(store.PILOT_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+        record = store.read_json(path, {})
+        u = cache.unit(record.get("unit", ""))
+        links, ran = [], set()
+        for call in record.get("calls", []):
+            runs = call.get("runs", {})
+            ran |= set(runs)
+            for lid, features in call.get("features", {}).items():
+                mine = {name: {k: rows[lid].get(k) for k in PILOT_FIELDS}
+                        for name, rows in runs.items() if lid in rows}
+                s1 = report.s1_majority(mine)
+                link = u.link(lid) if u else None
+                done = s1 is not None and "S2" in mine and "S3" in mine
+                links.append({
+                    "lid": lid, "path": call.get("source"), "line": link.line if link else None,
+                    "markup": u.texts[link.source][link.start:link.ial_end or link.end] if link else None,
+                    "permalink": permalinks.get(call.get("source") or ""),
+                    "same_page": features.get("same_page"),
+                    "runs": mine, "s1": s1, "done": done,
+                    "unanimous": done and len({s1, mine["S2"]["relation"], mine["S3"]["relation"]}) == 1,
+                    "unanimous_s1a": done and len({mine["S1a"]["relation"], mine["S2"]["relation"],
+                                                   mine["S3"]["relation"]}) == 1,
+                })
+        errors = {name: err for call in record.get("calls", [])
+                  for name, err in (call.get("errors") or {}).items()}
+        posts.append({"unit": record.get("unit"), "links": links, "ran": sorted(ran),
+                      "errors": errors})
+    every = [x for p in posts for x in p["links"]]
+    done = [x for x in every if x["done"]]
+    try:
+        tail = (store.STATE_DIR / "pilot.log").read_text(encoding="utf-8").splitlines()[-200:]
+    except OSError:
+        tail = []
+    return {"posts": posts, "models": PILOT_RUNS,
+            "summary": {"posts": len(posts), "links": len(every), "done": len(done),
+                        "unanimous": sum(1 for x in done if x["unanimous"]),
+                        "unanimous_s1a": sum(1 for x in done if x["unanimous_s1a"])},
+            "last": tail[-1] if tail else "",
+            "quota": [line for line in tail if "agy weekly remaining" in line][-2:]}
 
 
 def _stage_view(rec: dict) -> dict:
@@ -190,18 +245,6 @@ def snapshot() -> dict:
                     for x in sorted(({"lid": k, **v} for k, v in queue["settled"].items()),
                                     key=lambda x: -x.get("at", 0))[:20]],
     }
-
-
-def counts() -> dict:
-    """개요 카드용 — 큐 파일 하나와 원장 줄 수만 읽는다."""
-    queue = store.load_queue()
-    try:
-        ledger = sum(1 for line in store.LEDGER_PATH.read_text(encoding="utf-8").splitlines()
-                     if line.startswith('"'))
-    except OSError:
-        ledger = 0
-    return {"human": len(queue["human"]), "audit": len(queue["audit"]),
-            "drafts": len(queue["drafts"]), "ledger": ledger}
 
 
 # ── 판정 ──────────────────────────────────────────────────────────────────
