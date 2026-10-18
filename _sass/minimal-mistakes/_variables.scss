@@ -81,6 +81,10 @@ $indent-var: 1.3em !default;
 }
 
 /* Sans-serif */
+// NanumGothic woff2 = Google Fonts TTF with its missed baseline shift applied by hand:
+// Google raised every glyph (Bold +51, Regular +44 units) except Bold i and Regular
+// i j I J Y = plus the 8822 non-KS X 1001 Hangul, which sat that far below the rest.
+// A fresh Google download brings the defect back.
 @font-face {
   font-family: "MySansSerifFont";
   font-style: normal;
