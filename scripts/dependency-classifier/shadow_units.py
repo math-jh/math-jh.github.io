@@ -10,11 +10,14 @@ KO link's translation and shares its record.
 One model call covers one source file: the full source text once, then one
 excerpt per distinct cross-article target, then the items.  Same-article
 targets need no excerpt — the source is already in the prompt — so the item
-just points at the target's line.
+just points at the target's line.  The source goes to the models with its
+front-matter description and excerpt emptied (lines kept, so line numbers still
+match): they summarize the post and are not something the reader can rely on.
 """
 from __future__ import annotations
 
 import hashlib
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -23,6 +26,7 @@ import shadow_features as feat
 from common import by_permalink, parse_labels  # noqa: E402  (path set by dependency_classifier)
 
 ROOT = dc.ROOT
+SUMMARY_FIELD_RE = re.compile(r"^(description|excerpt):.*$", re.MULTILINE)
 
 
 @dataclass
@@ -83,6 +87,16 @@ def _target_post(link) -> Path | None:
     return post.path if post else None
 
 
+def model_text(text: str) -> str:
+    """The source as the models see it: front-matter summary fields emptied."""
+    if not text.startswith("---\n"):
+        return text
+    end = text.find("\n---\n", 4)
+    if end < 0:
+        return text
+    return SUMMARY_FIELD_RE.sub(r'\1: ""', text[:end]) + text[end:]
+
+
 def build_calls(unit: Unit, only: set[str] | None = None) -> list[dict]:
     """One call spec per source file: text, target excerpts, items, features."""
     calls = []
@@ -122,7 +136,7 @@ def build_calls(unit: Unit, only: set[str] | None = None) -> list[dict]:
             items.append(item)
         calls.append({
             "source": path, "source_rel": str(path.relative_to(ROOT)),
-            "lang": path.parent.name, "text": text,
+            "lang": path.parent.name, "text": model_text(text),
             "targets": targets, "items": items, "features": features,
         })
     return calls
