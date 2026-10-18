@@ -1,7 +1,7 @@
 ---
-title: "가상류의 교차이론"
-description: "Regular embedding의 Gysin morphism과 그 refined 판본을 deformation to the normal cone으로 구성하고, excess intersection formula와 functoriality를 거쳐 두 virtual class를 smooth base 위의 대각선으로 교차시키는 연산을 얻는다."
-excerpt: "Refined Gysin homomorphisms, excess intersection, and diagonal intersection of virtual classes over a smooth base"
+title: "Refined Gysin morphism"
+description: "Regular embedding의 Gysin morphism과 그 refined 판본을 deformation to the normal cone으로 구성하고, excess intersection formula와 functoriality를 거쳐 두 class를 smooth base 위의 대각선으로 교차시키는 연산을 얻는다."
+excerpt: "Refined Gysin homomorphisms, excess intersection, and diagonal intersection over a smooth base"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
@@ -10,13 +10,13 @@ sidebar:
 
 date: 2026-09-18
 
-weight: 5
+weight: 4
 revising: true
 drift_needed: true
 
 ---
 
-Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다. ([§Perfect obstruction theory, ⁋명제 12](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop12){: data-lid="4munh" })
+Gromov-Witten 이론에서는 virtual class들을 서로 교차시켜야 하는 일이 계속 생긴다. 두 moduli $M_1,M_2$가 공통의 공간 $S$로 가는 map을 가질 때, 두 조건을 동시에 만족하는 대상들의 moduli는 fiber product $M_1\times_SM_2$이고, 우리는 $[M_1]^\vir$과 $[M_2]^\vir$로부터 이 fiber product 위의 class를 얻고자 한다.
 
 [\[대수다양체\] §교차곱](/ko/math/algebraic_varieties/intersection_product){: data-lid="8i3l7" }에서 우리는 두 class의 intersection product를 하는 법을 살펴보았으나, 우리 경우에는 대부분의 공간이 smooth가 아니므로 이것이 잘 정의되지 않는다. 만일 $S$가 smooth하고 두 map이 proper라면 우리는 그 대안으로 두 class를 $S$로 pushforward한 후 교차시킬 수 있겠지만, 그 결과는 $S$의 class이므로 우리가 원하는 결과가 아니다. 때문에 우리는 [\[스택\] §Deligne–Mumford 스택 위의 적분, §§곱공간과 대각선 교차](/ko/math/stacks/integration_on_deligne_mumford_stacks#곱공간과-대각선-교차){: data-lid="qj2hs" }에서 증명 없이 받아들인 refined Gysin pullback을 엄밀하게 정의해야 한다. 
 
@@ -137,25 +137,25 @@ $$i^!:A_k(X')\rightarrow A_{k-d}(W')$$
 
 정의의 핵심은 결과 class가 실제 preimage $W'$ 위에 살면서 차원은 여전히 기대값 $k-d$를 유지한다는 것이다. 특히 $W'$이 기대 차원보다 클 때에도 이 연산은 잘 정의된 $(k-d)$차원 class를 준다.
 
-[§Perfect obstruction theory, §§벡터다발의 zero locus](/ko/math/gromov-witten_theory/perfect_obstruction_theory#벡터다발의-zero-locus){: data-lid="8fhy4" }에서 보았듯, virtual class의 원형은 다음과 같다. Smooth한 공간 위의 rank $r$ vector bundle $E\rightarrow V$가 주어졌다 하고, 그 section $s:V\rightarrow E$이 주어졌다 하자. 이 section의 zero locus를 $Z(s)$라 하고, $E$의 zero section을 $0_E: V\hookrightarrow E$라 하면 우리가 기대하는 class는 normal cone $C_{Z/V}$를 $E\vert_Z$ 안에 넣은 후 zero section으로 잘라 만들어진 class이다. 즉, 이 construction은 정확히 [정의 3](#def3){: data-lid="brunk" }에서
+이 construction의 기본적인 예시는 vector bundle의 section으로 자르는 것이다. $M$ 위의 rank $r$ vector bundle $V$와 그 section $s:M\rightarrow V$가 주어졌다 하자. 이 section의 zero locus를 $Z=Z(s)$라 하고, $V$의 zero section을 $0_V:M\hookrightarrow V$라 하면, normal cone $C_{Z/M}$을 $V\vert_Z$ 안에 넣은 후 zero section으로 잘라 $Z$ 위의 class를 만들 수 있다. 즉, 이 construction은 정확히 [정의 3](#def3){: data-lid="brunk" }에서
 
-$$X=E,\quad X'=W=V,\quad g=s: V\rightarrow E,\quad i=0_E: V\rightarrow E$$
+$$X=V,\quad X'=W=M,\quad g=s: M\rightarrow V,\quad i=0_V: M\rightarrow V$$
 
-을 입력으로 넣은 경우이다. 이 때, $E$의 total space $\Spec_V\Sym(E^\vee)$에서 zero section $0_E$는 정확히 fiber 방향의 linear coordinate들이 모두 사라지는 조건으로 주어지므로, 이는 degree $1$ 이상인 부분을 모두 $0$으로 보내는 map $\Sym(E^\vee)\rightarrow\mathcal{O}_V$으로 주어진다. 즉 $0_E$는 codimension $r$ regular embedding으로, 그 conormal sheaf는 $E^\vee$, 그리고 normal bundle은 $(E^\vee)^\vee=E$가 되어 $N=E$이고 $d=r$이다. 
+을 입력으로 넣은 경우이다. 이 때, $V$의 total space $\Spec_M\Sym(V^\vee)$에서 zero section $0_V$는 정확히 fiber 방향의 linear coordinate들이 모두 사라지는 조건으로 주어지므로, 이는 degree $1$ 이상인 부분을 모두 $0$으로 보내는 map $\Sym(V^\vee)\rightarrow\mathcal{O}_M$으로 주어진다. 즉 $0_V$는 codimension $r$ regular embedding으로, 그 conormal sheaf는 $V^\vee$, 그리고 normal bundle은 $(V^\vee)^\vee=V$가 되어 $N=V$이고 $d=r$이다. 
 
 그럼 이 상황에서 
 
-$$W'=s^{-1}(0_E(V))=Z,\qquad g^\ast N=E\vert_Z$$
+$$W'=s^{-1}(0_V(M))=Z,\qquad g^\ast N=V\vert_Z$$
 
-이므로 [정의 3](#def3){: data-lid="7v7s1" } 이전에 살펴본 것처럼 $C_{Z/V}$가 $E\vert_Z$ 안에 들어가게 된다. 구체적으로, zero section이 degree $1$ 부분을 $0$으로 보내는 algebra map에 대응하듯, section $s$는 degree $1$ 부분이 $s^\vee:E^\vee\rightarrow\mathcal{O}_V$인 algebra map $\Sym(E^\vee)\rightarrow\mathcal{O}_V$에 대응한다. 국소적으로 $s=(s_1,\ldots,s_r)$이면 $s^\vee$는 $e_i\mapsto s_i$이다. $Z$는 두 section의 fiber product $V\times_{s,E,0_E}V$이므로 그 structure sheaf는 $\mathcal{O}_V$를 $s^\vee(e)-0=s^\vee(e)$ $(e\in E^\vee)$들로 나눈 것이고, 따라서 $Z$의 ideal sheaf는 $\mathcal{I}=s^\vee(E^\vee)$, 국소적으로 $(s_1,\ldots,s_r)$이다. 이로부터 surjection $E^\vee\vert_Z\rightarrow\mathcal{I}/\mathcal{I}^2$을 얻고, 이것이 closed embedding $C_{Z/V}\hookrightarrow E\vert_Z$를 준다. 따라서 [정의 3](#def3){: data-lid="0p60g" }을 vector bundle의 section에 적용하면 localized Euler class를 일반적인 cycle에 작용시키는 연산을 얻고, virtual class도 같은 방식으로 다룰 수 있게 된다. 이렇게 얻은 refined Gysin을
+이므로 [정의 3](#def3){: data-lid="7v7s1" } 이전에 살펴본 것처럼 $C_{Z/M}$이 $V\vert_Z$ 안에 들어가게 된다. 구체적으로, zero section이 degree $1$ 부분을 $0$으로 보내는 algebra map에 대응하듯, section $s$는 degree $1$ 부분이 $s^\vee:V^\vee\rightarrow\mathcal{O}_M$인 algebra map $\Sym(V^\vee)\rightarrow\mathcal{O}_M$에 대응한다. 국소적으로 $s=(s_1,\ldots,s_r)$이면 $s^\vee$는 $e_i\mapsto s_i$이다. $Z$는 두 section의 fiber product $M\times_{s,V,0_V}M$이므로 그 structure sheaf는 $\mathcal{O}_M$을 $s^\vee(e)-0=s^\vee(e)$ $(e\in V^\vee)$들로 나눈 것이고, 따라서 $Z$의 ideal sheaf는 $\mathcal{I}=s^\vee(V^\vee)$, 국소적으로 $(s_1,\ldots,s_r)$이다. 이로부터 surjection $V^\vee\vert_Z\rightarrow\mathcal{I}/\mathcal{I}^2$을 얻고, 이것이 closed embedding $C_{Z/M}\hookrightarrow V\vert_Z$를 준다. 따라서 [정의 3](#def3){: data-lid="0p60g" }을 vector bundle의 section에 적용하면, normal cone을 zero section으로 자르는 이 연산을 $M$ 위의 일반적인 cycle에 작용시킬 수 있다. 이렇게 얻은 refined Gysin을
 
-$$0^!_{E,s}:A_k(V)\rightarrow A_{k-r}(Z)$$
+$$0^!_{V,s}:A_k(M)\rightarrow A_{k-r}(Z)$$
 
-로 적는다. $0_E$는 $V$의 smoothness와 무관하게 regular embedding이므로 이는 임의의 $V$에서 정의되며, $j:Z\hookrightarrow V$에 대하여
+로 적는다. $0_V$는 $M$의 smoothness와 무관하게 regular embedding이므로 이는 임의의 $M$에서 정의되며, $j:Z\hookrightarrow M$에 대하여
 
-$$j_\ast 0^!_{E,s}\gamma=c_r(E)\cap\gamma$$
+$$j_\ast 0^!_{V,s}\gamma=c_r(V)\cap\gamma$$
 
-이다. 곧 top Chern class 식은 $V$로 pushforward한 뒤에 성립하며, $0^!_{E,s}\gamma$ 자체는 그보다 정밀하게 $Z$ 위에 사는 class이다.
+이다. 즉, $M$으로 pushforward하면 top Chern class 식이 성립하며, $0^!_{V,s}\gamma$ 자체는 그보다 정밀하게 $Z$ 위에 사는 class이다.
 
 또, 정의에서 다음은 거의 자명하다.
 
@@ -272,9 +272,9 @@ $$(ji)^!\alpha=i^!(j^!\alpha)\in A_{k-d-e}(W')$$
 
 가 성립한다. 우변의 $i^!$은 $X'\rightarrow X$를 따른 refined Gysin morphism이며, 이 성질을 *functoriality*라 부른다. 증명의 결정적인 걸음은 둘이다. 먼저 $j$가 vector bundle의 zero section이고 $Y'$이 그 bundle을 $X'$으로 당긴 것이면, $W'$의 $Y'$ 안의 normal cone이 $C_{W'/X'}$에 bundle의 fiber를 곱한 것이 되어 등식이 바로 성립한다. 일반적인 경우에는 [명제 2](#prop2){: data-lid="692zi" }의 증명에서 구성한 deformation to the normal cone $M\rightarrow\mathbb{A}^1$을 $X\subseteq Y$에 대해 만들어 $j$를 zero section $X\hookrightarrow N_{X/Y}$까지 퇴화시킨다. 이 퇴화의 $t=0$ fiber에서 $Y'$은 $N_{X/Y}$를 $X'$으로 당긴 bundle 안의 cone $C_{X'/Y'}$이 되므로 앞의 경우로 돌아오고, $W\times\mathbb{A}^1\hookrightarrow M$을 따른 refined Gysin과 fiber $M_t$를 고르는 Gysin이 [명제 7](#prop7){: data-lid="vhfns" }의 (2)에 의하여 교환하므로 fiber마다 얻는 class가 $t$에 무관하다. 따라서 $t\neq0$에서의 $(ji)^!\alpha$가 $t=0$에서 얻는 $i^!(j^!\alpha)$와 같다.
 
-이를 vector bundle의 zero section에 쓰면 localized Gysin을 단계적으로 계산할 수 있다. $V$ 위의 vector bundle의 short exact sequence $0\rightarrow E'\rightarrow E\rightarrow E''\rightarrow0$과 $E$의 section $s$가 주어졌다 하고, $s$를 $E''$로 보낸 section을 $s''$이라 하자. $Z(s'')$ 위에서 $s$는 $E'$에 들어가므로 $E'\vert_{Z(s'')}$의 section $s'$이 되고, $Z(s')=Z(s)$이다. 한편 $E$의 zero section은 $E'$의 zero section과 total space 사이의 포함 $E'\hookrightarrow E$의 합성이다. 이 포함은 $E$의 fiber 방향 linear coordinate 가운데 $(E'')^\vee\subseteq E^\vee$에 속하는 것들이 사라지는 곳이므로 codimension $\rank E''$의 regular embedding이고, 이를 $s$로 당기면 $s''$의 성분들이 $Z(s'')$를 정의하며 [정의 3](#def3){: data-lid="ym8ys" } 뒤에서 $0^!_{E,s}$를 만들 때와 같은 surjection으로 normal cone $C_{Z(s'')/V}$가 $E''\vert_{Z(s'')}$에 들어간다. 즉 이 포함의 refined Gysin은 $0^!_{E'',s''}$이고, functoriality에 의하여 모든 $\alpha\in A_k(V)$에 대하여
+이를 vector bundle의 zero section에 쓰면 localized Gysin을 단계적으로 계산할 수 있다. $M$ 위의 vector bundle의 short exact sequence $0\rightarrow V'\rightarrow V\rightarrow V''\rightarrow0$과 $V$의 section $s$가 주어졌다 하고, $s$를 $V''$로 보낸 section을 $s''$이라 하자. $Z(s'')$ 위에서 $s$는 $V'$에 들어가므로 $V'\vert_{Z(s'')}$의 section $s'$이 되고, $Z(s')=Z(s)$이다. 한편 $V$의 zero section은 $V'$의 zero section과 total space 사이의 포함 $V'\hookrightarrow V$의 합성이다. 이 포함은 $V$의 fiber 방향 linear coordinate 가운데 $(V'')^\vee\subseteq V^\vee$에 속하는 것들이 사라지는 곳이므로 codimension $\rank V''$의 regular embedding이고, 이를 $s$로 당기면 $s''$의 성분들이 $Z(s'')$를 정의하며 [정의 3](#def3){: data-lid="ym8ys" } 뒤에서 $0^!_{V,s}$를 만들 때와 같은 surjection으로 normal cone $C_{Z(s'')/M}$이 $V''\vert_{Z(s'')}$에 들어간다. 즉 이 포함의 refined Gysin은 $0^!_{V'',s''}$이고, functoriality에 의하여 모든 $\alpha\in A_k(M)$에 대하여
 
-$$0^!_{E,s}\alpha=0^!_{E',s'}\bigl(0^!_{E'',s''}\alpha\bigr)\in A_{k-\rank E}(Z(s))$$
+$$0^!_{V,s}\alpha=0^!_{V',s'}\bigl(0^!_{V'',s''}\alpha\bigr)\in A_{k-\rank V}(Z(s))$$
 
 이다.
 
@@ -284,7 +284,7 @@ $$(i_1\times i_2)^!(\alpha_1\times\alpha_2)=i_1^!\alpha_1\times i_2^!\alpha_2$$
 
 이다. Functoriality로 $i_1\times i_2=(i_1\times\id)\circ(\id\times i_2)$로 나누면, 각 단계는 한 factor의 normal cone에 다른 factor를 곱한 cone을 자르는 것이기 때문이다.
 
-## Virtual class의 상대 교차
+## 상대 교차
 
 지금까지 우리는 scheme 위에서 Gysin morphism을 정의했지만, 우리가 실제로 궁금한 것은 stable map의 moduli, 곧 Deligne-Mumford stack 위에서의 Gysin morphism이다. $\mathbb{Q}$-계수 Chow group과 proper pushforward, 그리고 그 위에서 refined Gysin pullback이 구성되어 base change와 호환된다는 것은 [\[스택\] §Deligne–Mumford 스택 위의 적분](/ko/math/stacks/integration_on_deligne_mumford_stacks){: data-lid="t0m5w" }에서 이미 확보하였다. 위 구성은 $i$가 embedding이라는 사실을 étale 국소적으로만 사용하므로, 앞 절들의 $X,X',W,W'$ 자리에 moduli stack을 넣어도, 또 $i$가 unramified이면서 étale 국소적으로 regular embedding인 morphism, 곧 *regular local immersion*이어도 refined Gysin은 같은 방식으로 정의된다. 정의는 이렇게 옮겨지지만 성질의 증명은 사정이 다르다. Regular local immersion을 따라서는 blow-up을 할 수 없으므로, refined Gysin이 rational equivalence를 보존한다는 것과 [명제 7](#prop7){: data-lid="iaotn" }의 commutativity는 blow-up을 쓰지 않는 논증으로 다시 증명해야 한다. 우리는 이 결과들이 stack 위에서도 성립한다는 것을 증명 없이 사용한다. 이러한 일반화가 반드시 필요한 이유는 stack $S$에 비자명한 automorphism이 있으면 대각선 $\Delta_S:S\rightarrow S\times S$는 embedding이 아니지만, $S$가 smooth이기만 하면 언제나 regular local immersion이기 때문이다.
 
@@ -308,7 +308,7 @@ Exterior product $\gamma_1\times\gamma_2$는 $k_1+k_2$차원의 class이며, 이
 
 이제 $\Delta_S^!(\gamma_1\times\gamma_2)$가 실제로 무엇을 계산하는지 풀어 쓰자. 우리는 [정의 3](#def3){: data-lid="f5act" } 앞에서 다음 diagram이 cartesian임을 확인하였다.
 
-{% diagram Math/Gromov_Witten_Theory/Intersection_Theory_of_Virtual_Classes-1.svg width="14.81em" alt="fiber product as the pullback of the diagonal" %}
+{% diagram Math/Gromov_Witten_Theory/Refined_Gysin_Morphism-1.svg width="14.81em" alt="fiber product as the pullback of the diagonal" %}
 
 즉 이는 [정의 3](#def3){: data-lid="qyn7v" }에서 
 
@@ -359,38 +359,22 @@ $$(\x^2\y,\x\y^2)=\x\y\cdot(\x,\y)=(\x)\cap(\y)\cap(\x,\y)^3$$
 
 $$\Delta^!([D_1]\times[D_2])=\Delta^!(f_1\times f_2)^![\mathbb{P}^2\times\mathbb{P}^2]=(f_1\times f_2)^!\Delta^![\mathbb{P}^2\times\mathbb{P}^2]=(f_1\times f_2)^![\mathbb{P}^2]$$
 
-이다. 마지막 항은 $\Delta$를 따른 refined Gysin이다. $f_1\times f_2$의 normal bundle을 $\Delta$로 당기면 $E\vert_{W'}$, $E=\mathcal{O}(D_1)\oplus\mathcal{O}(D_2)$이고, $D_1\times D_2$의 방정식을 당기면 section $s=(\x^2\y,\x\y^2)$이므로, 두 경우 모두 $C=C_{W'/\mathbb{P}^2}$가 같은 surjection $E^\vee\vert_{W'}\rightarrow\mathcal{I}/\mathcal{I}^2$으로 $E\vert_{W'}$ 안에 들어간다. 즉 이 class는 [정의 3](#def3){: data-lid="jath1" } 뒤에서 본 $0^!_{E,s}[\mathbb{P}^2]$이고, $C$를 zero section으로 잘라 얻는다.
+이다. 마지막 항은 $\Delta$를 따른 refined Gysin이다. $f_1\times f_2$의 normal bundle을 $\Delta$로 당기면 $V\vert_{W'}$, $V=\mathcal{O}(D_1)\oplus\mathcal{O}(D_2)$이고, $D_1\times D_2$의 방정식을 당기면 section $s=(\x^2\y,\x\y^2)$이므로, 두 경우 모두 $C=C_{W'/\mathbb{P}^2}$가 같은 surjection $V^\vee\vert_{W'}\rightarrow\mathcal{I}/\mathcal{I}^2$으로 $V\vert_{W'}$ 안에 들어간다. 즉 이 class는 [정의 3](#def3){: data-lid="jath1" } 뒤에서 본 $0^!_{V,s}[\mathbb{P}^2]$이고, $C$를 zero section으로 잘라 얻는다.
 
-이제 $C$의 성분을 찾자. $L_1$ 위에서 $P$가 아닌 점 근방에서는 $\y$가 unit이므로 $W'$의 ideal은 $(\x)$이고, $W'$은 그곳에서 $L_1$과 같다. 따라서 $C$는 그곳에서 line bundle $N_{L_1/\mathbb{P}^2}$이다. 또 surjection $E^\vee\vert_{W'}\rightarrow\mathcal{I}/\mathcal{I}^2$은 $\x^2\y\in\mathcal{I}^2$이므로 첫째 성분을 $0$으로 보내고, 둘째 성분을 $\x\y^2$, 곧 generator $\x$의 unit배로 보낸다. 그러므로 $L_1\setminus\{P\}$ 위에서 $C$는 $E$의 둘째 summand와 같고, 그 closure는 $L_1$ 전체 위의 line subbundle $C_1=0\oplus\mathcal{O}(D_2)\vert_{L_1}$이며 multiplicity는 $1$이다. 같은 이유로 $L_2$ 위에는 line subbundle $C_2=\mathcal{O}(D_1)\vert_{L_2}\oplus0$이 있다. 나머지 성분은 $P$ 위에 놓이는데, [명제 2](#prop2){: data-lid="eykz4" }에 의해 $C$는 pure dimension $2$이고 fiber $E_P$의 dimension도 $2$이므로 그러한 성분은 $E_P$ 전체뿐이다. 그 multiplicity를 $m\geq0$이라 하면
+이제 $C$의 성분을 찾자. $L_1$ 위에서 $P$가 아닌 점 근방에서는 $\y$가 unit이므로 $W'$의 ideal은 $(\x)$이고, $W'$은 그곳에서 $L_1$과 같다. 따라서 $C$는 그곳에서 line bundle $N_{L_1/\mathbb{P}^2}$이다. 또 surjection $V^\vee\vert_{W'}\rightarrow\mathcal{I}/\mathcal{I}^2$은 $\x^2\y\in\mathcal{I}^2$이므로 첫째 성분을 $0$으로 보내고, 둘째 성분을 $\x\y^2$, 곧 generator $\x$의 unit배로 보낸다. 그러므로 $L_1\setminus\{P\}$ 위에서 $C$는 $V$의 둘째 summand와 같고, 그 closure는 $L_1$ 전체 위의 line subbundle $C_1=0\oplus\mathcal{O}(D_2)\vert_{L_1}$이며 multiplicity는 $1$이다. 같은 이유로 $L_2$ 위에는 line subbundle $C_2=\mathcal{O}(D_1)\vert_{L_2}\oplus0$이 있다. 나머지 성분은 $P$ 위에 놓이는데, [명제 2](#prop2){: data-lid="eykz4" }에 의해 $C$는 pure dimension $2$이고 fiber $V_P$의 dimension도 $2$이므로 그러한 성분은 $V_P$ 전체뿐이다. 그 multiplicity를 $m\geq0$이라 하면
 
-$$[C]=[C_1]+[C_2]+m[E_P]$$
+$$[C]=[C_1]+[C_2]+m[V_P]$$
 
 이다.
 
-각 성분을 zero section으로 잘라 더하면 $0^!_{E,s}[\mathbb{P}^2]$를 얻는다. Zero section은 $C_1$ 안에서 normal bundle이 $C_1$인 codimension $1$ regular embedding이므로 [명제 5](#prop5){: data-lid="s85yq" }를 zero section $L_1\hookrightarrow E\vert_{L_1}$과 $C_1$에 쓸 수 있고, 그 excess bundle은 $E\vert_{L_1}/C_1\cong\mathcal{O}(D_1)\vert_{L_1}$이다. 따라서 $C_1$이 주는 class는 degree $3$인 $c_1(\mathcal{O}(D_1)\vert_{L_1})\cap[L_1]$이다. 같은 방법으로 $C_2$가 주는 class는 degree $3$인 $c_1(\mathcal{O}(D_2)\vert_{L_2})\cap[L_2]$이고, $E_P$가 주는 class는 $[P]$이다. 한편 이 class를 $\mathbb{P}^2$로 pushforward하면 앞에서 본 $j_\ast0^!_{E,s}\gamma=c_r(E)\cap\gamma$에 의하여 $c_2(E)\cap[\mathbb{P}^2]$가 되므로 전체 degree는 $3\cdot3=9$이다. 따라서 $m=9-3-3=3$이고, $C$의 성분별로 적으면
+각 성분을 zero section으로 잘라 더하면 $0^!_{V,s}[\mathbb{P}^2]$를 얻는다. Zero section은 $C_1$ 안에서 normal bundle이 $C_1$인 codimension $1$ regular embedding이므로 [명제 5](#prop5){: data-lid="s85yq" }를 zero section $L_1\hookrightarrow V\vert_{L_1}$과 $C_1$에 쓸 수 있고, 그 excess bundle은 $V\vert_{L_1}/C_1\cong\mathcal{O}(D_1)\vert_{L_1}$이다. 따라서 $C_1$이 주는 class는 degree $3$인 $c_1(\mathcal{O}(D_1)\vert_{L_1})\cap[L_1]$이다. 같은 방법으로 $C_2$가 주는 class는 degree $3$인 $c_1(\mathcal{O}(D_2)\vert_{L_2})\cap[L_2]$이고, $V_P$가 주는 class는 $[P]$이다. 한편 이 class를 $\mathbb{P}^2$로 pushforward하면 앞에서 본 $j_\ast0^!_{V,s}\gamma=c_r(V)\cap\gamma$에 의하여 $c_2(V)\cap[\mathbb{P}^2]$가 되므로 전체 degree는 $3\cdot3=9$이다. 따라서 $m=9-3-3=3$이고, $C$의 성분별로 적으면
 
 $$\Delta^!([D_1]\times[D_2])=c_1(\mathcal{O}(D_1)\vert_{L_1})\cap[L_1]+c_1(\mathcal{O}(D_2)\vert_{L_2})\cap[L_2]+3[P]$$
 
 이다.
 :::
 
-이 계산에서 $P$는 $W'$의 reduced 구조 $L_1\cup L_2$의 성분이 아니지만, embedded point 때문에 cone $C$가 $P$ 위에 성분 $E_P$를 multiplicity $3$으로 가지고 $3[P]$를 기여한다. 이 기여는 $W'$ 대신 $W'_{\mathrm{red}}$를 보아서는 얻을 수 없다. 실제로 $W'_{\mathrm{red}}$는 $\mathbb{P}^2$의 Cartier divisor $\{\x\y=0\}$이므로, 이를 fiber product로 보고 [명제 5](#prop5){: data-lid="5acgl" }를 $d=2$, $d'=1$, $N'=\mathcal{O}(2)\vert_{W'_{\mathrm{red}}}$로 적용하면 excess bundle의 first Chern class는 각 line 위에서 degree $6-2=4$이고 답의 degree는 $8$이 되어 $9$와 맞지 않는다. [명제 5](#prop5){: data-lid="klid8" }는 fiber product $W'$ 자신이 regular embedding일 것을 요구하는데, $W'$은 $P$에서 regular embedding이 아니기 때문이다. 이처럼 fiber product가 기대보다 클 때 [명제 8](#prop8){: data-lid="mwefa" }의 class를 계산하는 데에는 $W'_{\mathrm{red}}$가 아니라 $W'$의 scheme 구조가 정하는 normal cone이 필요하다.
-
-한편 [명제 8](#prop8){: data-lid="u9xv3" }에 virtual class $\gamma_i=[M_i]^\vir$를 넣으면
-
-$$\Delta_S^!\bigl([M_1]^\vir\times[M_2]^\vir\bigr)\in A_\ast(M_1\times_SM_2)$$
-
-가 fiber product 위의 기대 차원 class를 정의한다. 한쪽에는 virtual class를, 다른 쪽에는 ordinary fundamental class를 넣어도 된다. 다만 fiber product가 그 자체로 moduli라서 따로 perfect obstruction theory와 virtual class를 갖는 경우, 그 virtual class가 이 class와 같은지는 별개의 문제이다. 가령 두 stable map을 붙여 얻는 moduli의 virtual class가 두 virtual class의 이러한 교차와 같다는 비교에는 두 obstruction theory의 compatibility를 따로 확인해야 한다.
-
-이 compatibility는 [§Perfect obstruction theory, ⁋명제 15](/ko/math/gromov-witten_theory/perfect_obstruction_theory#prop15){: data-lid="04qsk" }에서 zero section에 대해 본 것과 같은 꼴의 조건이다. 앞의 국소 모형에서 $W'$은 $M_1\times M_2$ 위의 trivial bundle의 section $\sigma$의 zero locus이고 $\Delta_S^!$은 그 section에 대한 zero section의 Gysin map이므로, 국소적으로 이 비교는 그 명제의 상황이고 그 trivial bundle은 $W'$ 위에서 $f^\ast T_S$이다. $M_1$, $M_2$의 perfect obstruction theory $E_1^\bullet$, $E_2^\bullet$이 global resolution을 가지면 $M_1\times M_2$ 위의 $E_1^\bullet\boxplus E_2^\bullet=\pr_1^\ast E_1^\bullet\oplus\pr_2^\ast E_2^\bullet$도 global resolution을 갖는 perfect obstruction theory이고, 그 virtual class는 $[M_1]^\vir\times[M_2]^\vir$이다. 이제 $u:W'\rightarrow M_1\times M_2$를 자연스러운 morphism이라 하고, $W'$ 위의 perfect obstruction theory $E_{W'}^\bullet$이 global resolution을 가지며 distinguished triangle
-
-$$u^\ast(E_1^\bullet\boxplus E_2^\bullet)\rightarrow E_{W'}^\bullet\rightarrow f^\ast\Omega_S[1]\rightarrow u^\ast(E_1^\bullet\boxplus E_2^\bullet)[1]$$
-
-에 들어간다고 하자. 여기서 셋째 항은 $\Delta_S$의 cotangent complex $\LL_{S/S\times S}=\Omega_S[1]$을 $f:W'\rightarrow S$로 당긴 것이고, 국소적으로는 그 명제의 $V^\vee\vert_Z[1]$에 해당한다. 또 이 triangle이 cotangent complex의 triangle $u^\ast\LL_{M_1\times M_2}\rightarrow\LL_{W'}\rightarrow\LL_{W'/M_1\times M_2}\rightarrow u^\ast\LL_{M_1\times M_2}[1]$과, 두 perfect obstruction theory의 morphism 및 cartesian square가 주는 $f^\ast\LL_{S/S\times S}\rightarrow\LL_{W'/M_1\times M_2}$으로 compatible하다고 하자. 그럼
-
-$$\Delta_S^!\bigl([M_1]^\vir\times[M_2]^\vir\bigr)=[W']^\vir$$
-
-이다. 위의 triangle에서 rank를 세면 $\rank E_{W'}^\bullet=\rank E_1^\bullet+\rank E_2^\bullet-s$이므로, 이는 [명제 8](#prop8){: data-lid="pgpas" }에서 차원이 $s$만큼 떨어지는 것과 맞는다.
+이 계산에서 $P$는 $W'$의 reduced 구조 $L_1\cup L_2$의 성분이 아니지만, embedded point 때문에 cone $C$가 $P$ 위에 성분 $V_P$를 multiplicity $3$으로 가지고 $3[P]$를 기여한다. 이 기여는 $W'$ 대신 $W'_{\mathrm{red}}$를 보아서는 얻을 수 없다. 실제로 $W'_{\mathrm{red}}$는 $\mathbb{P}^2$의 Cartier divisor $\{\x\y=0\}$이므로, 이를 fiber product로 보고 [명제 5](#prop5){: data-lid="5acgl" }를 $d=2$, $d'=1$, $N'=\mathcal{O}(2)\vert_{W'_{\mathrm{red}}}$로 적용하면 excess bundle의 first Chern class는 각 line 위에서 degree $6-2=4$이고 답의 degree는 $8$이 되어 $9$와 맞지 않는다. [명제 5](#prop5){: data-lid="klid8" }는 fiber product $W'$ 자신이 regular embedding일 것을 요구하는데, $W'$은 $P$에서 regular embedding이 아니기 때문이다. 이처럼 fiber product가 기대보다 클 때 [명제 8](#prop8){: data-lid="mwefa" }의 class를 계산하는 데에는 $W'_{\mathrm{red}}$가 아니라 $W'$의 scheme 구조가 정하는 normal cone이 필요하다.
 
 ---
 
