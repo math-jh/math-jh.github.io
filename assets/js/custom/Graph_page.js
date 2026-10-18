@@ -40,10 +40,21 @@
     return force;
   }
 
-  // required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
-  // 더한다. weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
-  // 초기 층으로 쓴다. 따라서 카테고리 내부 순서는 살리되 101→201 같은 구획
-  // 간격을 전역 거리로 오해하지 않는다.
+  // 글마다 고정된 [0, 1) 값 (FNV-1a). 배치의 흔들림이 새로고침마다 바뀌지 않게 한다.
+  function unitHash(text) {
+    var h = 2166136261;
+    for (var i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return ((h >>> 0) % 10000) / 10000;
+  }
+
+  /* 선형 보기 배치. git 커밋 그래프의 본선(first-parent) 문법을 빌린다 — x 는 읽는 순서의
+     열이고 y 는 레인이다. 각 글은 선수 글 하나를 '첫 부모'로 골라 그 레인을 이어 가고,
+     가장 깊은 글에서 첫 부모를 거슬러 올라간 사슬이 0 번 레인의 본류가 된다.
+
+     열: required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
+     더한다. weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
+     초기 층으로 쓴다. 따라서 카테고리 내부 순서는 살리되 101→201 같은 구획
+     간격을 전역 거리로 오해하지 않는다. */
   function linearPositions(data, viewportWidth, viewportHeight) {
     var nodes = data.nodes, reqAdj = {};
     nodes.forEach(function (n) { reqAdj[n.id] = []; });
@@ -129,73 +140,133 @@
       });
     }
 
-    /* 어느 글이 '큰길' 위에 있는가 = 그 글을 지나는 required 경로가 몇 개인가.
-       진입점에서 그 글까지의 경로 수 × 그 글에서 종점까지의 경로 수다. 경로 수는
-       깊이에 따라 지수로 커져 배정도 실수를 넘기므로 로그로 센다. 이 값이 큰 글을
-       열의 한가운데에 두면 본류가 화면 중앙을 가로지르는 한 줄로 드러난다. */
-    function logAdd(a, b) {
-      if (a === -Infinity) return b;
-      if (b === -Infinity) return a;
-      var hi = Math.max(a, b);
-      return hi + Math.log1p(Math.exp(Math.min(a, b) - hi));
-    }
-    var topo = comps.map(function (_, i) { return i; })
-      .sort(function (a, b) { return rank[a] - rank[b] || a - b; });
-    var hasPred = comps.map(function () { return false; });
-    adj.forEach(function (nexts) { nexts.forEach(function (v) { hasPred[v] = true; }); });
-    var toHere = comps.map(function () { return -Infinity; });
-    var fromHere = comps.map(function () { return -Infinity; });
-    topo.forEach(function (i) { if (!hasPred[i]) toHere[i] = 0; });
-    topo.forEach(function (i) {
-      adj[i].forEach(function (v) { toHere[v] = logAdd(toHere[v], toHere[i]); });
-    });
-    topo.slice().reverse().forEach(function (i) {
-      if (!adj[i].length) fromHere[i] = 0;
-      adj[i].forEach(function (v) { fromHere[i] = logAdd(fromHere[i], fromHere[v]); });
-    });
-    var traffic = comps.map(function (_, i) { return toHere[i] + fromHere[i]; });
-
     var used = Array.from(new Set(rank)).sort(function (a, b) { return a - b; });
     var compressed = {}; used.forEach(function (value, i) { compressed[value] = i; });
-    var layers = {};
-    nodes.forEach(function (n) {
-      var r = compressed[rank[compOf[n.id]]];
-      (layers[r] = layers[r] || []).push(n);
+    var column = {};
+    nodes.forEach(function (n) { column[n.id] = compressed[rank[compOf[n.id]]]; });
+    var columns = used.length;
+    var order = nodes.map(function (n) { return n.id; }).sort(function (a, b) {
+      return column[a] - column[b] || (a < b ? -1 : a > b ? 1 : 0);
     });
-    var positions = {};
-    // rowGap 은 행 사이에 가로 레인이 지날 골을 남겨야 한다 — 점 반지름 최대 7px 을
-    // 양쪽에서 빼고 레인 2층(±3.5px)이 들어갈 폭이 나오는 값이다.
-    var columnGap = 66, rowGap = 28, padX = 56, padY = 52;
-    var capacity = Math.max(1, Math.floor((viewportHeight - 2 * padY) / rowGap) + 1);
-    var visualColumn = 0;
-    Object.keys(layers).sort(function (a, b) { return Number(a) - Number(b); }).forEach(function (rawRank) {
-      var layer = layers[rawRank];
-      // 본류가 가운데다. 경로가 많이 지나는 글부터 놓고, 같으면 카테고리·weight
-      // 순으로 갈라 배치가 새로고침마다 흔들리지 않게 한다.
-      layer.sort(function (a, b) {
-        return (traffic[compOf[b.id]] - traffic[compOf[a.id]]) ||
-          (a.category || '').localeCompare(b.category || '') ||
-          (Number(a.weight) || 0) - (Number(b.weight) || 0) || a.title.localeCompare(b.title);
+
+    // 첫 부모 후보는 왼쪽 열에 있는 required 선수 글이다. 깊이 = 진입점에서 오는 가장 긴 사슬.
+    var degree = {}, parents = {}, kids = {};
+    order.forEach(function (id) { parents[id] = []; kids[id] = []; });
+    data.links.forEach(function (l) {
+      var e = endpoints(l);
+      degree[e[0]] = (degree[e[0]] || 0) + 1;
+      degree[e[1]] = (degree[e[1]] || 0) + 1;
+      if (l.relation === 'required' && parents[e[1]] && column[e[0]] < column[e[1]]) parents[e[1]].push(e[0]);
+    });
+    var depth = {};
+    order.forEach(function (id) {
+      depth[id] = parents[id].reduce(function (m, p) { return Math.max(m, depth[p] + 1); }, 0);
+    });
+    // 가장 깊은 선수 글. 여럿이면 연결이 많은 글, 그래도 같으면 가까운 열.
+    var firstParent = {};
+    order.forEach(function (id) {
+      var best = null;
+      parents[id].forEach(function (p) {
+        if (!best) { best = p; return; }
+        var dp = depth[p] - depth[best], gp = (degree[p] || 0) - (degree[best] || 0);
+        var cp = column[p] - column[best];
+        if (dp > 0 || !dp && (gp > 0 || !gp && (cp > 0 || !cp && p < best))) best = p;
       });
-      for (var start = 0; start < layer.length; start += capacity) {
-        var chunk = layer.slice(start, start + capacity);
-        // 0번을 중앙 행에 두고 위·아래로 번갈아 채운다. 오프셋이 정수 칸이라
-        // 모든 열이 같은 격자를 쓴다 — 격자가 둘로 갈리면 행 사이 골이 남의 행
-        // 위로 떨어져 가로 레인이 노드를 관통한다.
-        chunk.forEach(function (n, i) {
-          var offset = Math.ceil(i / 2) * (i % 2 ? -1 : 1);
-          positions[n.id] = { column: visualColumn, y: offset * rowGap };
-        });
-        visualColumn += 1;
+      if (best) { firstParent[id] = best; kids[best].push(id); }
+    });
+
+    var tip = order.reduce(function (best, id) {
+      if (!best) return id;
+      var dd = depth[id] - depth[best];
+      return dd > 0 || !dd && (degree[id] || 0) > (degree[best] || 0) ? id : best;
+    }, null);
+    var trunk = new Set();
+    for (var step = tip; step; step = firstParent[step]) trunk.add(step);
+
+    // 어느 자식이 부모의 레인을 이어 가는가: 본류 위의 자식, 없으면 뒤로 가장 길게 이어지는 자식.
+    var reach = {};
+    order.slice().reverse().forEach(function (id) {
+      reach[id] = kids[id].reduce(function (m, c) { return Math.max(m, reach[c] + 1); }, 0);
+    });
+    var heir = {};
+    order.forEach(function (id) {
+      var best = null;
+      kids[id].forEach(function (c) {
+        if (best && trunk.has(best)) return;
+        if (!best || trunk.has(c) || reach[c] > reach[best] ||
+            reach[c] === reach[best] && (column[c] < column[best] || column[c] === column[best] && c < best)) best = c;
+      });
+      if (best) heir[id] = best;
+    });
+    var chains = [];
+    order.forEach(function (id) {
+      if (firstParent[id] && heir[firstParent[id]] === id) return;
+      var members = [id];
+      for (var x = id; heir[x]; x = heir[x]) members.push(heir[x]);
+      chains.push({
+        members: members, trunk: trunk.has(id),
+        start: firstParent[id] ? column[firstParent[id]] : column[id],
+        end: column[members[members.length - 1]]
+      });
+    });
+
+    /* 레인 배정 (gitamine 의 '곧은 가지'). 한 사슬은 갈라져 나온 부모의 열부터 끝 열까지
+       한 레인을 점유하고, 끝나면 그 레인을 다음 사슬이 다시 쓴다. 본류가 0 이고 나머지는
+       왼쪽부터 훑으며 0 에 가장 가까운 빈 레인(+1, −1, +2, −2 …)을 받는다. */
+    chains.sort(function (a, b) {
+      return (b.trunk - a.trunk) || a.start - b.start || (b.end - b.start) - (a.end - a.start) ||
+        (a.members[0] < b.members[0] ? -1 : 1);
+    });
+    var occupied = {}, lane = {}, minLane = 0, maxLane = 0;
+    function laneFree(l, s, e) {
+      return (occupied[l] || []).every(function (r) { return e < r[0] || s > r[1]; });
+    }
+    chains.forEach(function (chain) {
+      var l = 0;
+      if (!chain.trunk) {
+        for (var k = 1; !l; k++) {
+          if (laneFree(k, chain.start, chain.end)) l = k;
+          else if (laneFree(-k, chain.start, chain.end)) l = -k;
+        }
       }
+      (occupied[l] = occupied[l] || []).push([chain.start, chain.end]);
+      minLane = Math.min(minLane, l); maxLane = Math.max(maxLane, l);
+      chain.members.forEach(function (id) { lane[id] = l; });
     });
-    var width = Math.max(viewportWidth, padX * 2 + Math.max(0, visualColumn - 1) * columnGap);
-    Object.keys(positions).forEach(function (id) {
-      positions[id].x = padX + positions[id].column * columnGap;
-      positions[id].y += viewportHeight / 2;
-      delete positions[id].column;
+
+    /* x: 열 간격은 양옆 열의 글 수로 정한다 — 빽빽한 곳은 넓게, 성긴 곳은 좁게. 거기에
+       열마다 고정된 작은 흔들림을 더하고, 같은 열 안의 글도 양옆 간격의 30% 안에서 엇갈리게
+       둔다. 열이 격자로 줄 서 보이지 않게 하려는 것이고, 30% 라 열 순서는 뒤집히지 않는다. */
+    var perColumn = [], gaps = [], columnX = [48], c;
+    for (c = 0; c < columns; c++) perColumn.push(0);
+    order.forEach(function (id) { perColumn[column[id]] += 1; });
+    for (c = 0; c < columns - 1; c++) {
+      gaps.push(30 + 8.5 * Math.sqrt(perColumn[c] + perColumn[c + 1]) + (unitHash('gap' + c) - 0.5) * 14);
+      columnX.push(columnX[c] + gaps[c]);
+    }
+    // 오른쪽 여백은 본류 끝 글의 비스듬한 라벨이 들어갈 자리다.
+    var width = Math.max(viewportWidth, Math.ceil(columnX[columns - 1] + 170));
+
+    // y: 레인 간격 15px. 카드에 다 안 들어가면 9px 까지 좁히고, 그래도 넘치면 세로로 스크롤한다.
+    var padY = 26, span = Math.max(1, maxLane - minLane);
+    var laneGap = Math.max(9, Math.min(15, (viewportHeight - 2 * padY) / span));
+    var height = Math.max(viewportHeight, Math.ceil(span * laneGap + 2 * padY));
+    var top = (height - span * laneGap) / 2;
+
+    var positions = {};
+    order.forEach(function (id) {
+      var col = column[id];
+      var room = Math.min(col > 0 ? gaps[col - 1] : 40, col < columns - 1 ? gaps[col] : 40) * 0.3;
+      positions[id] = {
+        x: columnX[col] + (unitHash(id) * 2 - 1) * room,
+        y: top + (lane[id] - minLane) * laneGap
+      };
     });
-    return { positions: positions, width: width, height: viewportHeight, rowGap: rowGap };
+    return {
+      positions: positions, width: width, height: height, laneGap: laneGap,
+      column: column, lane: lane, firstParent: firstParent,
+      trunk: trunk
+    };
   }
 
   /* 필터 칩(family) 정의는 그래프 JSON 이 실어 온다 (_data/categories.yml 의
@@ -274,12 +345,13 @@
        집합에 넣으면 '이 길'과 '이 길로 들어오는 것'이 같은 굵기·같은 색이 되어
        경로가 묻힌다. */
     var hlSoftNodes = new Set(), hlSoftLinks = new Set();
-    var hoverCb = null, clickCb = null, linearGeometry = null, linearLanes = {};
+    var hoverCb = null, clickCb = null, linearGeometry = null;
     var linearNodeEls = [], linearLinkEls = [];
 
     function radius(n) {
-      var value = Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95;
-      return layoutMode === 'linear' ? Math.max(5.5, value) : value;
+      // 선형 보기는 레인 간격이 15px 이라 점을 작게 둔다.
+      if (layoutMode === 'linear') return Math.min(4.4, 2.2 + 0.32 * Math.sqrt(deg[n.id] || 0));
+      return Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95;
     }
     var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
     var hubCandidates = data.classified
@@ -302,7 +374,6 @@
       if (hlNodes.size && !hlNodes.has(n.id)) {
         return hlSoftNodes.has(n.id) ? 'idle' : 'off';
       }
-      if (layoutMode === 'linear' && !hlNodes.size) return 'idle';
       return 'on';
     }
     function addHighlightedLink(link) {
@@ -321,8 +392,13 @@
         if (e[0] === node.id || e[1] === node.id) hlLinks.add(lid(l));
       });
     }
-    /* 이 노드를 고르면 함께 켜지는 엣지들. 레인 배정기도 같은 집합을 쓴다 —
-       한 번에 같이 보이는 선끼리만 높이를 다투면 된다. */
+    /* 이 노드를 고르면 함께 켜지는 엣지들. 조상(required 를 거슬러 닿는 글)은 전부 켜지만,
+       조상 사이의 선을 다 그리면 수백 개가 엉킨다. 그래서 그리는 선은
+         1. 고른 글로 들어오는 선 전부 — 첫 부모가 아닌 다른 부모까지,
+         2. 조상끼리의 첫 부모 선 전부 — 레인 위의 직선이다,
+         3. 1·2 만으로는 오른쪽으로 나가는 선이 없는 조상(줄기 끝)에서 가장 가까운 오른쪽
+            조상으로 가는 선 하나.
+       3 이 있어서 켜진 어느 글에서든 그려진 선만 따라 고른 글까지 끊기지 않고 간다. */
     function linearFocusLinks(id) {
       var out = [];
       // Only the chosen article may branch to optional context. Weak edges point
@@ -332,17 +408,37 @@
 
       // Required edges point prerequisite -> dependent. Walk only upstream and
       // never expand weak/forward edges from prerequisites reached on this walk.
-      var todo = [id], seen = new Set();
+      var inside = [], ancestors = new Set(), todo = [id], seen = new Set();
       while (todo.length) {
         var here = todo.pop();
         if (seen.has(here)) continue;
         seen.add(here);
         (requiredIn[here] || []).forEach(function (link) {
           var source = endpoints(link)[0];
-          out.push(link);
+          inside.push(link); ancestors.add(source);
           if (!seen.has(source)) todo.push(source);
         });
       }
+      var geo = linearGeometry;
+      if (!geo) return out.concat(inside);
+      var leaves = new Set(), fromSource = {};
+      inside.forEach(function (link) {
+        var e = endpoints(link);
+        if (e[1] === id || geo.firstParent[e[1]] === e[0]) { out.push(link); leaves.add(e[0]); }
+        (fromSource[e[0]] = fromSource[e[0]] || []).push(link);
+      });
+      ancestors.forEach(function (source) {
+        if (leaves.has(source)) return;
+        var col = geo.column[source], lane = geo.lane[source];
+        var options = fromSource[source].filter(function (link) { return geo.column[endpoints(link)[1]] > col; });
+        if (!options.length) options = fromSource[source];
+        options.sort(function (a, b) {
+          var ta = endpoints(a)[1], tb = endpoints(b)[1];
+          return geo.column[ta] - geo.column[tb] ||
+            Math.abs(geo.lane[ta] - lane) - Math.abs(geo.lane[tb] - lane) || lid(a).localeCompare(lid(b));
+        });
+        out.push(options[0]);
+      });
       return out;
     }
     function focusLinear(node) {
@@ -555,282 +651,215 @@
       Object.keys(attrs || {}).forEach(function (key) { el.setAttribute(key, attrs[key]); });
       return el;
     }
-    /* 가로 레인의 높이 배정.
-       기본은 출발 노드의 행 위(오프셋 0)에 그대로 눕히는 것이다. 비키는 경우는 둘뿐:
-       레인이 남의 점을 관통할 때, 그리고 **한 번에 같이 켜지는 다른 레인**과 겹칠 때.
-       서로 다른 선택에서만 보이는 레인끼리는 겹쳐도 화면에 함께 뜨지 않으니 내버려 둔다.
-       비켜야 하면 행 사이 골(행에서 rowGap/2, 한 골에 2층)로 내려간다. */
-    function assignLanes() {
-      linearLanes = {};
-      if (!linearGeometry) return;
-      var gap = linearGeometry.rowGap || 28, SUB = 3.5, CLEAR = 5;
-      var minY = 18, maxY = linearGeometry.height - 24;
-      // 너무 멀리 밀어내면 짧은 엣지가 화면 반대편까지 내려간다 — 골 4칸까지만 본다.
-      var bands = Math.min(4, Math.ceil(linearGeometry.height / gap) + 1);
-      function slots(prefer) {
-        var out = [0];
-        for (var band = 0; band < bands; band++) {
-          var mid = gap / 2 + band * gap;
-          [-SUB, SUB].forEach(function (sub) {
-            [prefer, -prefer].forEach(function (side) { out.push(side * (mid + sub)); });
+    /* 선형 보기의 선 모양. 첫 부모 선은 레인 위의 직선이고, 갈라지는 자리에서는 부모 바로
+       뒤에서 한 번 휘어 자기 레인으로 들어간다. 그 밖의 선(합류선)은 출발 글의 레인을 따라
+       가다가 도착 직전에 휜다 — 갈라짐의 거울상이다. 휘는 구간은 낙차가 클수록 길게 잡아
+       꺾임이 세로로 서지 않게 한다. */
+    function linkPath(link) {
+      var e = endpoints(link);
+      var s = linearGeometry.positions[e[0]], t = linearGeometry.positions[e[1]];
+      if (!s || !t) return '';
+      var dx = t.x - s.x, dy = t.y - s.y;
+      if (dx < 24) {
+        // 같은 열이거나 왼쪽으로 가는 선(순환 안의 required, weak 일부). 고른 화면에서만 보인다.
+        return 'M' + s.x + ',' + s.y + ' C' + (s.x + 34) + ',' + s.y + ' ' +
+          (t.x - 34) + ',' + t.y + ' ' + t.x + ',' + t.y;
+      }
+      if (!dy) return 'M' + s.x + ',' + s.y + ' L' + t.x + ',' + t.y;
+      var run = Math.min(dx * 0.8, Math.max(20, Math.abs(dy) * 0.45 + 14));
+      if (linearGeometry.firstParent[e[1]] === e[0]) {
+        return 'M' + s.x + ',' + s.y + ' C' + (s.x + run / 2) + ',' + s.y + ' ' +
+          (s.x + run / 2) + ',' + t.y + ' ' + (s.x + run) + ',' + t.y + ' L' + t.x + ',' + t.y;
+      }
+      return 'M' + s.x + ',' + s.y + ' L' + (t.x - run) + ',' + s.y + ' C' + (t.x - run / 2) + ',' + s.y + ' ' +
+        (t.x - run / 2) + ',' + t.y + ' ' + t.x + ',' + t.y;
+    }
+    /* 라벨 자리. 고른 글은 점 오른쪽에 가로로, 나머지는 점 오른쪽 위나 아래로 32° 비스듬히.
+       자리마다 글상자의 네 꼭짓점을 구해 이미 놓인 라벨과 겹치는지 본다 — 분리축 판정이라
+       가로 라벨과 비스듬한 라벨이 섞여도 된다. */
+    function labelBox(entry, spot, size, bold) {
+      var p = linearGeometry.positions[entry.node.id], r = radius(entry.node);
+      var x = spot === 'right' ? r + 5 : 3;
+      var y = spot === 'right' ? 4 : spot === 'above' ? -(r + 2) : r + 8;
+      var angle = spot === 'right' ? 0 : spot === 'above' ? -32 : 32;
+      var w = entry.width * size / 10.5 * (bold ? 1.07 : 1) + 2;
+      var ascent = size * 0.8 + 1, descent = size * 0.25 + 1;
+      var cos = Math.cos(angle * Math.PI / 180), sin = Math.sin(angle * Math.PI / 180);
+      var box = { x: x, y: y, angle: angle, corners: [],
+        minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity };
+      [[-1, -ascent], [w, -ascent], [w, descent], [-1, descent]].forEach(function (c) {
+        var q = { x: p.x + x + c[0] * cos - c[1] * sin, y: p.y + y + c[0] * sin + c[1] * cos };
+        box.corners.push(q);
+        box.minX = Math.min(box.minX, q.x); box.maxX = Math.max(box.maxX, q.x);
+        box.minY = Math.min(box.minY, q.y); box.maxY = Math.max(box.maxY, q.y);
+      });
+      return box;
+    }
+    function boxesOverlap(a, b) {
+      if (a.maxX < b.minX || b.maxX < a.minX || a.maxY < b.minY || b.maxY < a.minY) return false;
+      var polys = [a.corners, b.corners];
+      for (var p = 0; p < 2; p++) {
+        for (var i = 0; i < 4; i++) {
+          var p1 = polys[p][i], p2 = polys[p][(i + 1) % 4];
+          var nx = p2.y - p1.y, ny = p1.x - p2.x;
+          var range = polys.map(function (poly) {
+            var lo = Infinity, hi = -Infinity;
+            poly.forEach(function (q) {
+              var d = q.x * nx + q.y * ny;
+              if (d < lo) lo = d;
+              if (d > hi) hi = d;
+            });
+            return [lo, hi];
           });
+          if (range[0][1] < range[1][0] || range[1][1] < range[0][0]) return false;
         }
-        return out;
       }
-
-      // 어떤 선택에서 켜지는지 — 링크별·노드별로. 레인과 상대(다른 레인이든 점이든)가
-      // 이 집합을 공유할 때만 자리를 다툰다. 함께 뜨지 않으면 겹쳐도 보이지 않는다.
-      var linkFocus = {}, nodeFocus = {};
-      function mark(store, key, id) { (store[key] = store[key] || new Set()).add(id); }
-      data.nodes.forEach(function (n) {
-        mark(nodeFocus, n.id, n.id);
-        linearFocusLinks(n.id).forEach(function (l) {
-          var ends = endpoints(l);
-          mark(linkFocus, lid(l), n.id);
-          mark(nodeFocus, ends[0], n.id);
-          mark(nodeFocus, ends[1], n.id);
-        });
-      });
-      function shares(a, b) {
-        if (!a || !b) return false;
-        var small = a, large = b;
-        if (small.size > large.size) { small = b; large = a; }
-        var shared = false;
-        small.forEach(function (id) { if (large.has(id)) shared = true; });
-        return shared;
-      }
-
-      // 행별 노드 목록 — 레인이 같이 켜지는 점을 지나는지 보는 데 쓴다.
-      var rows = {};
-      data.nodes.forEach(function (n) {
-        var p = linearGeometry.positions[n.id];
-        if (p) (rows[p.y] = rows[p.y] || []).push({ id: n.id, x: p.x, r: radius(n) });
-      });
-      var rowKeys = Object.keys(rows).map(Number);
-      function crossesNode(key, y, x0, x1) {
-        return rowKeys.some(function (ry) {
-          if (Math.abs(ry - y) > 12) return false;
-          return rows[ry].some(function (n) {
-            return n.x > x0 + 1 && n.x < x1 - 1 && Math.abs(ry - y) < n.r + 2.5 &&
-              shares(linkFocus[key], nodeFocus[n.id]);
-          });
+      return true;
+    }
+    /* 어느 라벨을 띄울지. 중요한 것부터 자리를 잡고, 겹치는 덜 중요한 라벨은 숨긴다:
+       고른 글(짝이면 둘) > 검색어에 맞는 글 > 고른 글과 바로 이어진 글 > 그 밖의 켜진 글.
+       아무것도 안 골랐을 때는 본류 위의 글이 마지막 단계다. */
+    function placeLinearLabels() {
+      var focus = activeFocus(), pair = selected && pairWith;
+      var primary = new Set(), direct = new Set(), focusing = hlNodes.size > 0;
+      if (pair) { primary.add(selected.id); primary.add(pairWith.id); }
+      else if (focus) {
+        primary.add(focus.id);
+        linearLinkEls.forEach(function (entry) {
+          if (!hlLinks.has(lid(entry.link))) return;
+          var e = endpoints(entry.link);
+          if (e[1] === focus.id) direct.add(e[0]);
+          else if (e[0] === focus.id) direct.add(e[1]);
         });
       }
-
+      var candidates = [];
+      linearNodeEls.forEach(function (entry) {
+        var n = entry.node;
+        entry.label.style.display = 'none';
+        if (nodeState(n) === 'off') return;
+        var matched = !!query && n.title.toLowerCase().indexOf(query) >= 0;
+        var tier;
+        if (primary.has(n.id)) tier = 0;
+        else if (matched) tier = 1;
+        else if (direct.has(n.id)) tier = 2;
+        else if (focusing ? hlNodes.has(n.id) : linearGeometry.trunk.has(n.id)) tier = 3;
+        else return;
+        candidates.push({ entry: entry, tier: tier, matched: matched });
+      });
+      candidates.sort(function (a, b) {
+        return a.tier - b.tier || (deg[b.entry.node.id] || 0) - (deg[a.entry.node.id] || 0) ||
+          (a.entry.node.id < b.entry.node.id ? -1 : 1);
+      });
       var placed = [];
-      var pending = [];
-      data.links.forEach(function (link) {
-        var e = endpoints(link);
-        var s = linearGeometry.positions[e[0]], t = linearGeometry.positions[e[1]];
-        if (!s || !t || Math.abs(t.x - s.x) < 16) return;   // 수직 가지는 laneX 를 쓴다
-        pending.push({ key: lid(link), relation: link.relation, base: s.y,
-                       x0: Math.min(s.x, t.x), x1: Math.max(s.x, t.x) });
-      });
-      // 왼쪽부터 훑어 나가며 칠한다 (구간 그래프 greedy 의 표준 순서).
-      pending.sort(function (a, b) { return a.x0 - b.x0 || a.x1 - b.x1; });
-      pending.forEach(function (lane) {
-        var options = slots(lane.relation === 'weak' ? -1 : 1);
-        var chosen = null, best = null, bestCost = Infinity;
-        for (var i = 0; i < options.length; i++) {
-          var y = lane.base + options[i];
-          if (y < minY || y > maxY) continue;
-          if (crossesNode(lane.key, y, lane.x0, lane.x1)) continue;
-          // 빈 층이 하나도 없을 때를 대비해 겹치는 길이의 합을 재 둔다.
-          var cost = 0;
-          placed.forEach(function (other) {
-            if (Math.abs(other.y - y) >= CLEAR) return;
-            var overlap = Math.min(other.x1, lane.x1) - Math.max(other.x0, lane.x0);
-            if (overlap > 4 && shares(linkFocus[other.key], linkFocus[lane.key])) cost += overlap;
-          });
-          if (cost === 0) { chosen = y; break; }
-          if (cost < bestCost) { bestCost = cost; best = y; }
+      candidates.forEach(function (c) {
+        var main = c.tier === 0, size = main ? 12 : 10.5;
+        var spots = main ? ['right', 'above', 'below'] : focusing ? ['above', 'below'] : ['below', 'above'];
+        var box = null;
+        for (var i = 0; i < spots.length && !box; i++) {
+          var trial = labelBox(c.entry, spots[i], size, main);
+          if (!placed.some(function (other) { return boxesOverlap(trial, other); })) box = trial;
         }
-        if (chosen === null) chosen = best === null ? lane.base : best;
-        placed.push({ key: lane.key, y: chosen, x0: lane.x0, x1: lane.x1 });
-        linearLanes[lane.key] = chosen;
+        // 고른 글의 라벨은 자리가 없어도 첫 자리에 띄운다.
+        if (!box && main) box = labelBox(c.entry, spots[0], size, true);
+        if (!box) return;
+        placed.push(box);
+        var label = c.entry.label, p = linearGeometry.positions[c.entry.node.id];
+        var x = p.x + box.x, y = p.y + box.y;
+        label.style.display = '';
+        label.style.fontSize = size + 'px';
+        label.style.fontWeight = main ? '600' : '400';
+        label.setAttribute('x', x);
+        label.setAttribute('y', y);
+        if (box.angle) label.setAttribute('transform', 'rotate(' + box.angle + ' ' + x + ' ' + y + ')');
+        else label.removeAttribute('transform');
+        label.setAttribute('fill', main ? 'rgba(' + cfg.accentLight + ',0.98)'
+          : focusing || c.matched ? 'rgba(' + cfg.labelHi + ',0.98)' : 'rgba(' + cfg.label + ',0.72)');
       });
     }
-    function gitPath(link, index) {
-      var e = endpoints(link);
-      var source = linearGeometry.positions[e[0]], target = linearGeometry.positions[e[1]];
-      if (!source || !target) return '';
-      var sx = source.x, sy = source.y, tx = target.x, ty = target.y;
-      var dx = tx - sx;
-
-      /* 노드 → 사선 직선 → (고정 반지름 모서리) → 레인 직선 → (모서리) → 사선 직선 → 노드.
-         모서리만 2차 베지에로 둥글리므로 낙차는 곡선이 아니라 사선이 흡수한다. */
-      function routedPath(start, end, laneStart, laneEnd, mainDirection) {
-        function unit(from, to) {
-          var ux = to.x - from.x, uy = to.y - from.y;
-          var length = Math.sqrt(ux * ux + uy * uy) || 1;
-          return { x: ux / length, y: uy / length };
-        }
-        function span(from, to) {
-          return Math.sqrt(Math.pow(to.x - from.x, 2) + Math.pow(to.y - from.y, 2));
-        }
-        var cornerRadius = 12;
-        var sourceDirection = unit(start, laneStart);
-        var targetDirection = unit(laneEnd, end);
-        var sourceRadius = radius(byId[e[0]]);
-        var targetRadius = radius(byId[e[1]]) + 3;
-        var sourceEdge = {
-          x: start.x + sourceDirection.x * sourceRadius,
-          y: start.y + sourceDirection.y * sourceRadius
-        };
-        var targetEdge = {
-          x: end.x - targetDirection.x * targetRadius,
-          y: end.y - targetDirection.y * targetRadius
-        };
-        // 짧은 변에서는 반지름이 그 변의 절반을 넘지 않게 줄인다 — 넘으면 두 모서리가 겹친다.
-        var laneHalf = span(laneStart, laneEnd) / 2;
-        var sourceCorner = Math.min(cornerRadius, span(sourceEdge, laneStart) / 2, laneHalf);
-        var targetCorner = Math.min(cornerRadius, span(laneEnd, targetEdge) / 2, laneHalf);
-        return 'M' + sourceEdge.x + ',' + sourceEdge.y +
-          ' L' + (laneStart.x - sourceDirection.x * sourceCorner) + ',' + (laneStart.y - sourceDirection.y * sourceCorner) +
-          ' Q' + laneStart.x + ',' + laneStart.y +
-          ' ' + (laneStart.x + mainDirection.x * sourceCorner) + ',' + (laneStart.y + mainDirection.y * sourceCorner) +
-          ' L' + (laneEnd.x - mainDirection.x * targetCorner) + ',' + (laneEnd.y - mainDirection.y * targetCorner) +
-          ' Q' + laneEnd.x + ',' + laneEnd.y +
-          ' ' + (laneEnd.x + targetDirection.x * targetCorner) + ',' + (laneEnd.y + targetDirection.y * targetCorner) +
-          ' L' + targetEdge.x + ',' + targetEdge.y;
-      }
-
-      if (Math.abs(dx) < 16) {
-        var side = sx < linearGeometry.width / 2 ? 1 : -1;
-        var laneX = sx + side * (20 + (index % 3) * 7);
-        laneX = Math.max(16, Math.min(linearGeometry.width - 16, laneX));
-        var verticalDirection = ty >= sy ? 1 : -1;
-        var verticalCurve = Math.min(24, Math.max(8, Math.abs(ty - sy) * 0.28));
-        return routedPath(
-          { x: sx, y: sy }, { x: tx, y: ty },
-          { x: laneX, y: sy + verticalDirection * verticalCurve },
-          { x: laneX, y: ty - verticalDirection * verticalCurve },
-          { x: 0, y: verticalDirection }
-        );
-      }
-      var direction = dx > 0 ? 1 : -1;
-      var laneY = linearLanes[lid(link)];
-      if (laneY === undefined) laneY = sy;
-      laneY = Math.max(18, Math.min(linearGeometry.height - 24, laneY));
-
-      // 사선 구간의 가로 길이. 낙차가 클수록 벌려 기울기를 SLOPE_LIMIT 아래로 누른다.
-      var MIN_RUN = 22, MAX_RUN = 120, SLOPE_LIMIT = 1.3, MIN_LANE = 26;
-      function runFor(drop) {
-        return Math.max(MIN_RUN, Math.min(MAX_RUN, drop / SLOPE_LIMIT));
-      }
-      var sourceRun = runFor(Math.abs(laneY - sy));
-      var targetRun = runFor(Math.abs(ty - laneY));
-      // 두 사선이 가로 간격을 다 먹으면 레인이 사라진다 — 남는 폭 안으로 비례 축소.
-      var budget = Math.max(0, Math.abs(dx) - MIN_LANE);
-      if (sourceRun + targetRun > budget) {
-        var scale = budget / (sourceRun + targetRun);
-        sourceRun *= scale; targetRun *= scale;
-      }
-      return routedPath(
-        { x: sx, y: sy }, { x: tx, y: ty },
-        { x: sx + direction * sourceRun, y: laneY },
-        { x: tx - direction * targetRun, y: laneY },
-        { x: direction, y: 0 }
-      );
+    function linearTint(n, alpha) {
+      return n.family === 'misc'
+        ? 'hsla(' + n.hue + ',0%,58%,' + alpha + ')'
+        : 'hsla(' + n.hue + ',' + cfg.nodeSat + '%,' + cfg.nodeLight + '%,' + alpha + ')';
     }
     function updateLinearStyles() {
       if (!linearGeometry) return;
+      var quiet = !activeFocus();
       linearLinkEls.forEach(function (entry) {
-        var link = entry.link;
-        var color = linkColor(link);
-        entry.path.setAttribute('stroke', color);
-        entry.arrow.setAttribute('fill', arrowColor(link));
-        entry.path.setAttribute('stroke-width', hlSoftLinks.has(lid(link)) ? '1.1' :
-          hlLinks.has(lid(link)) ? '2.4' :
-          (link.relation === 'required' ? '1.2' : link.relation === 'weak' ? '0.85' : '1'));
+        var link = entry.link, key = lid(link), e = endpoints(link), path = entry.path;
+        // 켜진 선은 모두 같은 굵기·진하기다. 레인 위 선과 합류선을 달리 칠하면 같은 길이
+        // 중간에 끊겨 보인다.
+        if (hlLinks.has(key) || hlSoftLinks.has(key)) {
+          path.style.display = '';
+          path.setAttribute('stroke', linkColor(link));
+          path.setAttribute('stroke-width', hlLinks.has(key) ? '1.5' : '1.1');
+          return;
+        }
+        // 평상시에 보이는 선은 첫 부모 선뿐이다. 나머지는 고르거나 짚을 때만 나온다.
+        if (!entry.spine) { path.style.display = 'none'; return; }
+        path.style.display = '';
+        var on = quiet && passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]);
+        path.setAttribute('stroke', on ? linearTint(byId[e[1]], 0.5) : 'rgba(' + cfg.link + ',0.06)');
+        path.setAttribute('stroke-width', '1.3');
       });
-      // 링크마다 선과 화살촉을 한 묶음으로 두고, 약한 관계부터 DOM 앞쪽에
-      // 재배치한다. 하이라이트가 바뀔 때도 선택된 링크 전체가 맨 위로 올라간다.
+      // 약한 관계부터 DOM 앞쪽에 둔다. 강조된 선은 맨 위층이다.
       linearLinkEls.slice().sort(function (a, b) {
-        // 경로가 맨 위 층이다 — 밖에서 들어오는 선이 그 위를 덮으면 안 된다.
         return linearLinkPaintOrder(a.link, hlLinks.has(lid(a.link))) -
             linearLinkPaintOrder(b.link, hlLinks.has(lid(b.link))) || a.order - b.order;
-      }).forEach(function (entry) { entry.group.parentNode.appendChild(entry.group); });
+      }).forEach(function (entry) { entry.path.parentNode.appendChild(entry.path); });
       linearNodeEls.forEach(function (entry) {
-        var node = entry.node;
-        var state = nodeState(node);
+        var node = entry.node, state = nodeState(node);
         var isSelected = selected && selected.id === node.id;
-        var focused = hlNodes.size > 0 && hlNodes.has(node.id);
-        var matched = query && node.title.toLowerCase().indexOf(query) >= 0;
-        entry.dot.setAttribute('r', radius(node));
-        entry.dot.setAttribute('fill', isSelected ? 'rgb(' + cfg.accent + ')' : node.__c);
-        entry.dot.setAttribute('fill-opacity', state === 'off' ? '0.09' : state === 'idle' ? '0.3' : '1');
-        entry.dot.setAttribute('stroke', isSelected ? 'rgba(' + cfg.accent + ',0.62)' : 'none');
-        entry.dot.setAttribute('stroke-width', isSelected ? '2' : '0');
-        // 선형 보기는 점이 수백 개 깔린 SVG 라 강조된 점에만 빛을 준다.
-        var lit = isSelected || focused;
-        var glowColor = isSelected ? 'rgb(' + cfg.accent + ')' : node.__c;
-        // 좁은 층이 점 가장자리를 밝히고 넓은 층이 번짐을 만든다.
-        entry.dot.style.filter = cfg.glow && lit
-          ? 'drop-shadow(0 0 ' + cfg.glow / 5 + 'px ' + glowColor + ') drop-shadow(0 0 ' + cfg.glow * 0.7 + 'px ' + glowColor + ')'
-          : '';
-        entry.label.style.display = state !== 'off' && (focused || matched || hubSet.has(node.id)) ? '' : 'none';
-        entry.label.setAttribute('fill', focused || matched
-          ? 'rgba(' + cfg.labelHi + ',0.98)'
-          : 'rgba(' + cfg.label + ',' + (state === 'idle' ? '0.46' : '0.72') + ')');
-        entry.label.setAttribute('font-weight', focused || matched ? '600' : '400');
+        var opacity = state === 'off' ? '0.16' : state === 'idle' ? '0.45' : '1';
+        entry.dot.setAttribute('r', isSelected ? 5.5 : radius(node));
+        entry.dot.setAttribute('fill', isSelected ? 'rgb(' + cfg.accentLight + ')'
+          : hlNodes.has(node.id) ? 'rgb(' + cfg.accent + ')' : node.__c);
+        entry.dot.setAttribute('fill-opacity', opacity);
+        entry.dot.setAttribute('stroke-opacity', opacity);
       });
+      placeLinearLabels();
     }
     function renderLinear() {
+      var geo = linearGeometry;
       linearSvg.innerHTML = '';
       linearNodeEls = []; linearLinkEls = [];
-      linearSvg.setAttribute('width', Math.ceil(linearGeometry.width));
-      linearSvg.setAttribute('height', Math.ceil(linearGeometry.height));
-      linearSvg.setAttribute('viewBox', '0 0 ' + linearGeometry.width + ' ' + linearGeometry.height);
-      linearSvg.style.width = Math.ceil(linearGeometry.width) + 'px';
-      linearSvg.style.height = Math.ceil(linearGeometry.height) + 'px';
+      linearSvg.setAttribute('width', Math.ceil(geo.width));
+      linearSvg.setAttribute('height', Math.ceil(geo.height));
+      linearSvg.setAttribute('viewBox', '0 0 ' + geo.width + ' ' + geo.height);
+      linearSvg.style.width = Math.ceil(geo.width) + 'px';
+      linearSvg.style.height = Math.ceil(geo.height) + 'px';
 
+      // 방향은 왼쪽→오른쪽 읽는 순서가 말해 주므로 화살촉은 두지 않는다.
       var linksGroup = svgElement('g', { class: 'gc-linear__links' });
-      var pendingLinks = [];
       data.links.forEach(function (link, index) {
-        var group = svgElement('g', { class: 'gc-linear__link' });
+        var e = endpoints(link);
         var path = svgElement('path', {
-          d: gitPath(link, index), fill: 'none', 'stroke-linecap': 'round',
-          'stroke-linejoin': 'round', 'vector-effect': 'non-scaling-stroke'
+          d: linkPath(link), fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
         });
         if (link.relation === 'weak') path.setAttribute('stroke-dasharray', '2 5');
         else if (link.relation === 'forward') path.setAttribute('stroke-dasharray', '9 5');
-        group.appendChild(path); linksGroup.appendChild(group);
-        pendingLinks.push({ link: link, path: path, group: group, order: index });
+        linksGroup.appendChild(path);
+        linearLinkEls.push({ link: link, path: path, order: index, spine: geo.firstParent[e[1]] === e[0] });
       });
       linearSvg.appendChild(linksGroup);
-      pendingLinks.forEach(function (entry) {
-        var length = entry.path.getTotalLength();
-        var middle = length / 2;
-        var point = entry.path.getPointAtLength(middle);
-        var before = entry.path.getPointAtLength(Math.max(0, middle - 0.75));
-        var after = entry.path.getPointAtLength(Math.min(length, middle + 0.75));
-        var angle = Math.atan2(after.y - before.y, after.x - before.x) * 180 / Math.PI;
-        var arrow = svgElement('path', {
-          d: 'M-4,-3 L4,0 L-4,3 Z',
-          transform: 'translate(' + point.x + ' ' + point.y + ') rotate(' + angle + ')',
-          'aria-hidden': 'true', 'pointer-events': 'none'
-        });
-        entry.group.appendChild(arrow);
-        linearLinkEls.push({
-          link: entry.link, path: entry.path, arrow: arrow,
-          group: entry.group, order: entry.order
-        });
-      });
 
       var nodesGroup = svgElement('g', { class: 'gc-linear__nodes' });
+      // 라벨은 점들 위의 따로 된 층이다. 점 묶음 안에 두면 뒤에 그려지는 점이 라벨을 가린다.
+      var labelsGroup = svgElement('g', { class: 'gc-linear__labels', 'aria-hidden': 'true' });
+      // 누를 자리는 이웃 레인의 점과 겹치지 않을 만큼만.
+      var hitRadius = Math.max(6, Math.min(11, geo.laneGap * 0.55));
       data.nodes.forEach(function (node) {
-        var p = linearGeometry.positions[node.id];
+        var p = geo.positions[node.id];
         var group = svgElement('g', {
           class: 'gc-linear__node', transform: 'translate(' + p.x + ' ' + p.y + ')',
           tabindex: '0', role: 'button', 'aria-label': node.title
         });
-        var hit = svgElement('circle', { r: '11', fill: 'transparent' });
-        var dot = svgElement('circle', { r: radius(node) });
-        var label = svgElement('text', { x: '0', y: radius(node) + 13, 'text-anchor': 'middle' });
+        var hit = svgElement('circle', { r: hitRadius, fill: 'transparent' });
+        var dot = svgElement('circle', { r: radius(node), stroke: 'rgb(15,16,20)', 'stroke-width': '1.4' });
+        var label = svgElement('text', { x: p.x, y: p.y });
         label.textContent = node.title;
+        labelsGroup.appendChild(label);
         var title = svgElement('title'); title.textContent = node.title; group.appendChild(title);
-        group.appendChild(hit); group.appendChild(dot); group.appendChild(label);
+        group.appendChild(hit); group.appendChild(dot);
         group.addEventListener('mouseenter', function () {
           hovered = node; refocus(); if (hoverCb) hoverCb(node.id);
         });
@@ -845,9 +874,16 @@
           }
         });
         nodesGroup.appendChild(group);
-        linearNodeEls.push({ node: node, dot: dot, label: label });
+        linearNodeEls.push({ node: node, dot: dot, label: label, width: 0 });
       });
       linearSvg.appendChild(nodesGroup);
+      linearSvg.appendChild(labelsGroup);
+      // 라벨 폭은 그릴 때 한 번 잰다. 글꼴이 아직 안 왔으면 0 이 나오니 글자 수로 어림한다.
+      linearNodeEls.forEach(function (entry) {
+        var measured = 0;
+        try { measured = entry.label.getComputedTextLength(); } catch (e) { /* 렌더 전 */ }
+        entry.width = measured || entry.node.title.length * 9.5;
+      });
       updateLinearStyles();
     }
 
@@ -1037,7 +1073,6 @@
       var viewportHeight = canvasViewport.clientHeight;
       if (!viewportWidth || !viewportHeight) return;
       linearGeometry = linearPositions(data, viewportWidth, viewportHeight);
-      assignLanes();
       renderLinear();
     }
     function sizeForce() {
@@ -1585,7 +1620,7 @@
       .then(function (data) {
         var cfg = {
           nodeSat: 48, nodeLight: 60, glow: 14,
-          accent: '240,198,116', link: '150,150,160',
+          accent: '240,198,116', accentLight: '255,236,190', link: '150,150,160',
           accentIn: '165,111,20', accentOut: '107,58,0',
           label: '174,168,150', labelHi: '240,198,116',
           font: '"MySansSerifFont", system-ui, sans-serif',
