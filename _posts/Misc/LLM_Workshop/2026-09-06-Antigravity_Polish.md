@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-10-15
+last_modified_at: 2026-10-18
 
 weight: 49
 
@@ -230,7 +230,7 @@ for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
 
 `MAX_PROPOSAL_ATTEMPTS`는 2다. 두 번째도 거절되면 그때 사용자 요청을 거절 처리하고, 체크를 풀고, 사유를 대시보드 행에 남긴다.
 
-세 번째 관문은 KO diff의 범위다(`6bfbe498`). 사용자가 한 글에서 지적 하나를 고치는 김에 다른 문단도 손보거나, 분류기가 같은 글의 다른 링크에 `data-relation`을 달아 두면, 감사 시점 원문과 현재 원문의 diff에 그것들이 다 섞였다. 판정자는 그 무관한 변경을 보고 거절하기도 했다. `_scoped_ko_diff`는 각 지적의 인용문이 원문에서 차지하는 줄 범위를 구하고, `difflib.SequenceMatcher`의 변경 덩어리 중 그 범위의 앞뒤 두 줄 안에 걸치는 것만 새 판본으로 두고 나머지는 옛 판본으로 되돌린 뒤 diff를 다시 뜬다. 판정 프롬프트에도 "다른 링크의 data-relation은 별도 워크플로의 소유"라고 적었다.
+세 번째 관문은 KO diff의 범위다(`6bfbe498`). 사용자가 한 글에서 지적 하나를 고치는 김에 다른 문단도 손보거나, 분류기가 같은 글의 다른 링크에 `data-relation`을 달아 두면, 감사 시점 원문과 현재 원문의 diff에 그것들이 다 섞였다. 판정자는 그 무관한 변경을 보고 거절하기도 했다. `_scoped_ko_diff`는 각 지적의 인용문이 원문에서 차지하는 줄 범위를 구하고, `difflib.SequenceMatcher`의 변경 덩어리 중 그 범위의 앞뒤 두 줄 안에 걸치는 것만 변경으로 남기고 나머지는 옛 판본 쪽으로 접은 뒤 diff를 다시 뜬다(접는 방향은 아래 「범위 밖 수정은 옛 판본 쪽으로 접는다」). 판정 프롬프트에도 "다른 링크의 data-relation은 별도 워크플로의 소유"라고 적었다.
 
 ## 지적을 읽는 화면과 모델에게 남기는 말
 
@@ -524,3 +524,23 @@ args = [AGY_BIN, "--print", prompt,
 모델 선택을 CLI의 서버 기본값에 맡기는 것이므로, 어느 모델이 번역했는지는 이제 이 스크립트가 알지 못한다. 대신 세대가 바뀌어도 ID가 사라져 호출이 깨지는 일이 없다. `AGY_MODEL`을 직접 주면 예전처럼 고정되고, 주석에는 Gemini 계열만 넣으라고 적어 두었다. Claude나 GPT를 고르면 다른 쿼터 버킷을 쓰기 때문이다. crontab에 있던 `AGY_MODEL=gemini-3.8-flash-high` 두 줄도 같은 변경에서 걷어냈다.
 
 남는 어긋남이 하나 있다. `_config.yml`의 `translation_source_tag`와 `translation_polish_source_tag`는 아직 `antigravity-gemini-3.8-flash-high`이다. 이 값은 모델 이름이기 전에 위에서 본 대로 "현재 엔진의 이름표"이고, 폴리싱을 한 번 더 돌릴지 가르는 키이기도 해서 이 변경에서는 건드리지 않았다. 그러니 앞으로 이 태그가 가리키는 모델과 실제로 번역한 모델이 달라질 수 있다.
+
+## 범위 밖 수정은 옛 판본 쪽으로 접는다
+
+관련 커밋: [`f40b5917`](https://github.com/math-jh/math-jh.github.io/commit/f40b5917)
+{: .notice--info}
+
+범위 diff에는 맥락 줄이 남는 구멍이 있었다. 처음 구현은 범위 밖 변경을 옛 판본으로 되돌려 `baseline`에 합치고, 그 결과를 diff의 새 쪽에 올렸다. 변경 줄만 보면 문제가 없지만 변경 줄 옆의 맥락 줄은 옛 문구가 된다. 지적된 문장 가까이에 있는 정의가 반경 밖에서 이미 고쳐져 있으면, 판정자는 고쳐지기 전의 정의를 맥락으로 읽으면서 그 아래의 정정된 서술을 평가하게 된다. 테스트의 사례가 그 모양이다. "antisymmetric은 같은 성분이면 0인 것이다"가 "교환하면 부호가 바뀌는 것이다"로 고쳐진 글에서, 세 줄 아래 "두 정의는 동치이다"를 "alternating이면 antisymmetric이다"로 고친 지적을 검토한다. 옛 방식의 diff에는 맥락 줄에 옛 정의가 실렸다.
+
+방향을 뒤집으면 된다. 범위 밖 덩어리는 새 판본(`after`)으로, 범위 안 덩어리만 옛 판본(`before`)으로 두어 합성 텍스트를 만들고, 그것을 diff의 **옛 쪽**에 놓는다. 새 쪽은 `current` 그대로다.
+
+```python
+scoped.extend(before[i1:i2] if relevant else after[j1:j2])
+
+return _diff("".join(scoped), current, f"a/{path}", f"b/{path}")
+```
+{: data-filename="scripts/translation/ko_followup_worker.py"}
+
+범위 밖 수정은 양쪽에 모두 들어 있어 변경으로 나타나지 않고, 맥락 줄은 어디서나 현재 문구다. 반경 안의 변경만 `+`/`-`로 남는다. 새 테스트는 같은 입력에서 `+alternating이면 antisymmetric이다.`와 현재 정의가 맥락 줄로 나오고, 옛 정의 "같은 성분이면 0"은 diff 어디에도 없는지 확인한다.
+
+그래도 diff는 조각이라, 반경 밖에서 정의가 바뀌었다는 사실은 판정자에게 보이지 않는다. 그 부분은 프롬프트에 현재 한글 글 전체를 `--- BEGIN CURRENT KO ---` 구분자로 넣어 메웠다. 정정된 서술이 기대는 앞선 정의가 diff 밖에 있으면 거기서 읽으라는 안내도 프롬프트에 들어갔다. 배선은 `reviewed_candidate`가 이미 들고 있던 `current_ko`를 `codex_pass`에 넘기는 것이 전부다. 글 전문이 붙으니 프롬프트는 길어진다. 이 변경이 실제 틱에서 거절을 줄이는지는 아직 보지 못했다.
