@@ -4,33 +4,3 @@
 # 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다.
 # Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
-"0gskh": {relation: weak, reviewed: true}
-"28xaw": {relation: weak, reviewed: true}
-"2tmsi": {relation: weak, reviewed: true}
-"4ucbf": {relation: weak, reviewed: true}
-"5gtrf": {relation: weak, reviewed: true}
-"7onxz": {relation: weak, reviewed: true}
-"8d40c": {relation: weak, reviewed: true}
-"978rp": {relation: weak, reviewed: true}
-"a2saj": {relation: weak, reviewed: true}
-"c6ats": {relation: weak, reviewed: true}
-"e6tco": {relation: weak, reviewed: true}
-"fvwff": {relation: weak, reviewed: true}
-"ghqcp": {relation: weak, reviewed: true}
-"gmbhu": {relation: weak, reviewed: true}
-"h6720": {relation: weak, reviewed: true}
-"hryl0": {relation: weak, reviewed: true}
-"k5e4q": {relation: weak, reviewed: true}
-"ke1tr": {relation: weak, reviewed: true}
-"l3pxi": {relation: weak, reviewed: true}
-"maj83": {relation: weak, reviewed: true}
-"me9ta": {relation: required, reviewed: true}
-"nmyhe": {relation: weak, reviewed: true}
-"o6nle": {relation: weak, reviewed: true}
-"oha9l": {relation: required, reviewed: true}
-"q5bwu": {relation: required, reviewed: true}
-"qf2x7": {relation: weak, reviewed: true}
-"v6wel": {relation: required, reviewed: true}
-"wbtzv": {relation: weak, reviewed: true}
-"ytq7s": {relation: required, reviewed: true}
-"zs5z3": {relation: required, reviewed: true}
