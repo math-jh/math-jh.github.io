@@ -17469,6 +17469,13 @@ R:
   defs:
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+- id: ring_isomorphism
+  en: ring isomorphism
+  ko: 환 동형사상
+  primary: en
+  defs:
+  - label: '[대수적 구조] §몫환, 환 동형사상'
+    url: /ko/math/algebraic_structures/quotient_rings
 - id: ring_of_fractions
   en: ring of fractions
   ko: 분수환
