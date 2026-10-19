@@ -4,13 +4,16 @@
 # 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다.
 # Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
+"01vpb": {relation: weak, reviewed: true}
 "0gskh": {relation: weak, reviewed: true}
 "0tbuu": {relation: weak, reviewed: true}
 "0uxy8": {relation: required, reviewed: true}
+"1d76n": {relation: weak, reviewed: true}
 "28xaw": {relation: weak, reviewed: true}
 "2tmsi": {relation: weak, reviewed: true}
 "3hdgo": {relation: required, reviewed: true}
 "3p0eo": {relation: required, reviewed: true}
+"3p6i7": {relation: forward, reviewed: true}
 "4ucbf": {relation: required, reviewed: true}
 "5fawj": {relation: required, reviewed: true}
 "5gtrf": {relation: weak, reviewed: true}
@@ -19,19 +22,24 @@
 "7ob2g": {relation: required, reviewed: true}
 "7onxz": {relation: weak, reviewed: true}
 "7qv76": {relation: required, reviewed: true}
+"7vbrn": {relation: required, reviewed: true}
 "8d40c": {relation: required, reviewed: true}
 "978rp": {relation: weak, reviewed: true}
+"9i8w3": {relation: weak, reviewed: true}
 "a2saj": {relation: weak, reviewed: true}
 "aa9nh": {relation: required, reviewed: true}
 "b6t7n": {relation: weak, reviewed: true}
 "bdx8n": {relation: required, reviewed: true}
+"bg4tf": {relation: weak, reviewed: true}
 "bvcb7": {relation: required, reviewed: true}
 "c6ats": {relation: weak, reviewed: true}
 "cjqps": {relation: required, reviewed: true}
+"dhg7o": {relation: required, reviewed: true}
 "e28ow": {relation: weak, reviewed: true}
 "e6tco": {relation: weak, reviewed: true}
 "ecyf4": {relation: required, reviewed: true}
 "er8nr": {relation: required, reviewed: true}
+"f17dm": {relation: weak, reviewed: true}
 "fvwff": {relation: weak, reviewed: true}
 "g4tp8": {relation: required, reviewed: true}
 "ghqcp": {relation: weak, reviewed: true}
@@ -43,10 +51,13 @@
 "iubi5": {relation: required, reviewed: true}
 "ivizb": {relation: required, reviewed: true}
 "ivnb8": {relation: required, reviewed: true}
+"j2le3": {relation: required, reviewed: true}
 "jlofh": {relation: required, reviewed: true}
+"jtlp0": {relation: required, reviewed: true}
 "k5e4q": {relation: weak, reviewed: true}
 "ke1tr": {relation: weak, reviewed: true}
 "l3pxi": {relation: weak, reviewed: true}
+"l69i4": {relation: required, reviewed: true}
 "l7l4m": {relation: required, reviewed: true}
 "l9d8y": {relation: weak, reviewed: true}
 "m8oso": {relation: required, reviewed: true}
@@ -57,6 +68,7 @@
 "nj39k": {relation: weak, reviewed: true}
 "nmyhe": {relation: weak, reviewed: true}
 "np6an": {relation: weak, reviewed: true}
+"o4nvr": {relation: weak, reviewed: true}
 "o6nle": {relation: weak, reviewed: true}
 "of97z": {relation: weak, reviewed: true}
 "oha9l": {relation: required, reviewed: true}
@@ -65,16 +77,20 @@
 "phxck": {relation: weak, reviewed: true}
 "q5bwu": {relation: required, reviewed: true}
 "qf2x7": {relation: weak, reviewed: true}
+"qh1th": {relation: weak, reviewed: true}
 "qhe3h": {relation: required, reviewed: true}
 "r2whd": {relation: required, reviewed: true}
 "resqt": {relation: weak, reviewed: true}
 "rvwdv": {relation: weak, reviewed: true}
+"s6hc5": {relation: required, reviewed: true}
 "sx2vi": {relation: required, reviewed: true}
 "tkjmv": {relation: required, reviewed: true}
 "utiwg": {relation: weak, reviewed: true}
 "v6wel": {relation: required, reviewed: true}
+"v9cv5": {relation: required, reviewed: true}
 "vc2xu": {relation: weak, reviewed: true}
 "vn2lc": {relation: required, reviewed: true}
+"vzw9k": {relation: required, reviewed: true}
 "wbtzv": {relation: weak, reviewed: true}
 "x6bj4": {relation: required, reviewed: true}
 "xvf5g": {relation: required, reviewed: true}
@@ -82,3 +98,4 @@
 "ytq7s": {relation: required, reviewed: true}
 "zkql3": {relation: required, reviewed: true}
 "zs5z3": {relation: required, reviewed: true}
+"zy2i4": {relation: required, reviewed: true}
