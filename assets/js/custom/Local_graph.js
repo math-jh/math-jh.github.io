@@ -3,12 +3,14 @@
  * 현재 글의 선수 글(required 를 두 단계 거슬러)과 후속 글(두 단계 따라 내려가)을 의존성
  * 페이지 선형 보기와 같은 레인 문법(Linear_layout.js)으로 그린다. 왼쪽이 선수 글, 오른쪽이
  * 후속 글이고, 현재 글에서 첫 부모를 거슬러 올라간 사슬과 현재 글 뒤로 이어지는 사슬이 0 번
- * 레인이다. weak·forward 는 현재 글에 바로 닿는 것만 넣는다. 현재 글은 상자 한가운데에 두고,
- * 열 간격이 너무 좁아질 만큼 넓은 그래프는 양옆을 잘라 낸다.
+ * 레인이다. weak·forward 는 현재 글에 바로 닿는 것만 넣는다. 현재 글은 상자 가로 한가운데에
+ * 두고, 열 간격이 너무 좁아질 만큼 넓은 그래프는 양옆을 잘라 낸다. 사이드바 상자의 높이는
+ * 보이는 레인에 맞춘다.
  *
- * 평상시에는 라벨 없이 점과 선만 보인다. 점을 짚으면 그 글과 바로 이어진 선과 글이 켜지고
- * 라벨이 뜬다. 점 클릭 = 그 글로 이동. 빈 곳 클릭 또는 ⤢ 버튼 → 화면 중앙 오버레이로 크게
- * 보기. 사이드바는 라이트·다크 스킨을 따르므로 색은 local-graph.scss 의 변수로 칠한다.
+ * 평상시에는 현재 글 제목만 떠 있고 나머지는 점과 선뿐이다. 점을 짚으면 그 글과 바로 이어진
+ * 선과 글이 켜지고 라벨이 뜬다. 점 클릭 = 그 글로 이동. 빈 곳 클릭 또는 ⤢ 버튼 → 화면 중앙
+ * 오버레이로 크게 보기. 사이드바는 라이트·다크 스킨을 따르므로 색은 local-graph.scss 의 변수로
+ * 칠한다.
  */
 (function () {
   'use strict';
@@ -18,6 +20,24 @@
     var el = document.createElementNS(SVG_NS, name);
     Object.keys(attrs || {}).forEach(function (key) { el.setAttribute(key, attrs[key]); });
     return el;
+  }
+
+  // linkPath 가 만든 d(M·L·C 만 쓴다)를 따라 6px 안팎 간격으로 지나는 점을 짚는다.
+  function trace(d, visit) {
+    var at = null;
+    (d.match(/[MLC][^MLC]*/g) || []).forEach(function (part) {
+      var n = part.slice(1).trim().split(/[\s,]+/).map(Number);
+      if (part[0] === 'M') { at = { x: n[0], y: n[1] }; visit(at.x, at.y); return; }
+      var end = part[0] === 'L' ? { x: n[0], y: n[1] } : { x: n[4], y: n[5] };
+      var c1 = part[0] === 'L' ? at : { x: n[0], y: n[1] }, c2 = part[0] === 'L' ? end : { x: n[2], y: n[3] };
+      var reach = Math.hypot(c1.x - at.x, c1.y - at.y) + Math.hypot(c2.x - c1.x, c2.y - c1.y) + Math.hypot(end.x - c2.x, end.y - c2.y);
+      for (var i = 1, steps = Math.max(2, Math.ceil(reach / 6)); i <= steps; i++) {
+        var s = i / steps, u = 1 - s;
+        visit(u * u * u * at.x + 3 * u * u * s * c1.x + 3 * u * s * s * c2.x + s * s * s * end.x,
+          u * u * u * at.y + 3 * u * u * s * c1.y + 3 * u * s * s * c2.y + s * s * s * end.y);
+      }
+      at = end;
+    });
   }
 
   /* 현재 글 둘레의 부분그래프와 그 열·레인. 첫 부모 고르기(깊이·연결 수)는 전역 그래프
@@ -206,42 +226,167 @@
       })
       .catch(function () {});
 
-    /* 상자 크기에 맞춘 좌표. 현재 글을 상자 한가운데 둔다. x 배율은 현재 글 양옆 중 먼 쪽이
-       상자 반폭에 들어가게 정하되, 평균 열 간격이 minStep 보다 좁아지면 거기서 멈추고 바깥은
-       잘라 낸다. 열이 적어 maxStep 보다 벌어질 때도 멈춘다. y 는 상자 안에 보이는 글들의 레인이
-       반높이에 들어가게 정한다. k 는 선이 휘는 구간의 길이 배율이다. */
-    function place(W, H, big) {
+    // 회전하지 않은 글상자. boxesOverlap 이 꼭짓점으로 판정하므로 꼭짓점도 채운다.
+    function rectBox(minX, maxX, minY, maxY) {
+      return { minX: minX, maxX: maxX, minY: minY, maxY: maxY,
+        corners: [{ x: minX, y: minY }, { x: maxX, y: minY }, { x: maxX, y: maxY }, { x: minX, y: maxY }] };
+    }
+
+    /* 상자 크기에 맞춘 좌표. 현재 글을 가로 한가운데 둔다. x 배율은 현재 글 양옆 중 먼 쪽이
+       상자 반폭에 들어가게 정하되, 평균 열 간격이 minStep 보다 좁아지면 거기서 멈춘다. 열이
+       적어 maxStep 보다 벌어질 때도 멈춘다. 사이드바는 넘치는 양옆을 잘라 내고, 오버레이는 전부
+       그려서 스크롤하게 한다. k 는 선이 휘는 구간의 길이 배율이다.
+
+       세로 레인 간격은 보이는 레인 수로 정한다. 점이 있는 레인과, 평상시 선이 길게 눕는
+       레인(첫 부모 선은 도착 글의 레인, 나머지는 출발 글의 레인)이다. 간격은 정해 둔 값(사이드바
+       14px, 오버레이 24px)에서 시작해 높이가 limit 를 넘으면 좁히되 9px·14px 밑으로는 줄이지
+       않는다. 높이는 그려질 점·평상시 선·현재 글 제목(cap)에 맞춘다.
+
+       오버레이의 SVG 는 그려질 것을 다 담고, 현재 글을 화면 가운데로 스크롤할 수 있을 만큼
+       현재 글 양옆을 띄운다. */
+    function place(W, limit, big, cap) {
       var spread = L.spreadColumns(model.order, model.column, model.columns, 0);
       var avg = model.columns > 1 ? spread.columnX[model.columns - 1] / (model.columns - 1) : 1;
-      var padX = big ? 44 : 12, padY = big ? 32 : 14;
+      var padX = big ? 44 : 12, padY = big ? 32 : 10;
       var minStep = big ? 36 : 16, maxStep = big ? 90 : 30;
       var selfX = spread.x[self], side = 0;
       model.order.forEach(function (id) { side = Math.max(side, Math.abs(spread.x[id] - selfX)); });
       var sx = side > 0 ? (W / 2 - padX) / side : maxStep / avg;
       sx = Math.max(minStep / avg, Math.min(maxStep / avg, sx));
-      var cx = W / 2, cy = H / 2, xs = {}, reach = 0;
+      // 사이드바는 상자 좌표, 오버레이는 현재 글을 x = 0 에 둔 좌표다.
+      var cx = big ? 0 : W / 2, xs = {}, lo = 0, hi = 0;
+      function seen(a, b) { return big || b >= 0 && a <= W; }
       model.order.forEach(function (id) {
         xs[id] = cx + (spread.x[id] - selfX) * sx;
-        if (xs[id] >= 0 && xs[id] <= W) reach = Math.max(reach, Math.abs(model.lane[id]));
+        if (seen(xs[id], xs[id])) { lo = Math.min(lo, model.lane[id]); hi = Math.max(hi, model.lane[id]); }
       });
-      var gap = reach ? Math.min(big ? 24 : 14, (H / 2 - padY) / reach) : 0;
-      var positions = {};
+      var drawn = model.links.filter(function (l) { return model.drawn.has(L.lid(l)); });
+      drawn.forEach(function (l) {
+        var e = L.endpoints(l), flat = model.lane[model.firstParent[e[1]] === e[0] ? e[1] : e[0]];
+        if (seen(xs[e[0]], xs[e[1]])) { lo = Math.min(lo, flat); hi = Math.max(hi, flat); }
+      });
+      var span = hi - lo, room = limit - 2 * padY - cap.lines * cap.lineHeight;
+      var gap = span ? Math.max(big ? 14 : 9, Math.min(big ? 24 : 14, room / span)) : 0;
+
+      // 현재 글을 y = 0 에 두고 그려질 점과 평상시 선이 지나는 자리를 모은다.
+      var rel = {}, r = big ? 5.5 : 4.5, top = -r, bottom = r, left = -r, right = r, dots = [];
+      function touch(x, y, pad) {
+        if (!seen(x, x)) return;
+        top = Math.min(top, y - pad);
+        bottom = Math.max(bottom, y + pad);
+        left = Math.min(left, x - pad);
+        right = Math.max(right, x + pad);
+      }
       model.order.forEach(function (id) {
-        positions[id] = { x: xs[id], y: cy + model.lane[id] * gap };
+        var p = rel[id] = { x: xs[id], y: model.lane[id] * gap };
+        touch(p.x, p.y, r);
+        if (id !== self) dots.push(rectBox(p.x - 3, p.x + 3, p.y - 3, p.y + 3));
       });
-      return { positions: positions, k: Math.min(1, sx), gap: gap, step: avg * sx };
+      drawn.forEach(function (l) {
+        var e = L.endpoints(l);
+        trace(L.linkPath(rel[e[0]], rel[e[1]], model.firstParent[e[1]] === e[0], Math.min(1, sx)),
+          function (x, y) { touch(x, y, 1); });
+      });
+
+      /* 현재 글 제목 자리. 짚은 글의 라벨처럼 점 오른쪽·왼쪽에 가로로, 그다음 오른쪽 위·아래로
+         비스듬히 놓아 보고, 마지막으로 점 바로 위·아래에 가로로 가운데 맞춰 놓아 본다. 사이드바
+         상자 가로 안에 드는 자리 가운데 다른 점을 가장 적게 덮는 곳을 고르고, 같으면 앞의 자리다.
+         선은 덮어도 된다. 여러 줄로 나뉜 제목은 가운데 맞춘 자리에만 들어간다. */
+      function centered(p, below) {
+        var ascent = cap.size * 0.8 + 1, descent = cap.size * 0.25 + 1, block = (cap.lines - 1) * cap.lineHeight;
+        var first = below ? p.y + r + 3 + ascent : p.y - r - 3 - descent - block;
+        var box = rectBox(p.x - cap.width / 2 - 1, p.x + cap.width / 2 + 1, first - ascent, first + block + descent);
+        box.x = 0; box.y = first - p.y; box.angle = 0; box.centered = true;
+        return box;
+      }
+      var label = null, fewest = Infinity;
+      var spots = cap.lines > 1 ? [] : ['right', 'left', 'above', 'below'].map(function (spot) {
+        return L.labelBox(rel[self], r, cap.width * 10.5 / (cap.size * 1.07), spot, cap.size, true);
+      });
+      spots.concat([centered(rel[self], false), centered(rel[self], true)]).forEach(function (box) {
+        if (!big && (box.minX < 2 || box.maxX > W - 2)) return;
+        var hits = dots.filter(function (dot) { return L.boxesOverlap(box, dot); }).length;
+        if (hits < fewest) { label = box; fewest = hits; }
+      });
+      top = Math.min(top, label.minY);
+      bottom = Math.max(bottom, label.maxY);
+      left = Math.min(left, label.minX);
+      right = Math.max(right, label.maxX);
+
+      // 점은 x 배율이 이미 padX 안쪽에 두었으니, 넘침은 제목까지 담아 12px 여백으로만 잰다.
+      var ox = big ? Math.max(12 - left, W / 2) : 0;
+      var SW = big ? Math.ceil(ox + Math.max(right + 12, W / 2)) : W;
+      var SH = Math.ceil(bottom - top + 2 * padY), cy = padY - top;
+      var positions = {};
+      model.order.forEach(function (id) { positions[id] = { x: ox + rel[id].x, y: cy + rel[id].y }; });
+      label.minX += ox;
+      label.maxX += ox;
+      label.minY += cy;
+      label.maxY += cy;
+      label.corners.forEach(function (c) { c.x += ox; c.y += cy; });
+      return { positions: positions, k: Math.min(1, sx), gap: gap, step: avg * sx, W: SW, H: SH, label: label };
     }
 
     function render(el, big) {
-      var W = el.clientWidth, H = el.clientHeight;
-      if (W < 40 || H < 40) return;
-      var geo = place(W, H, big);
       el.innerHTML = '';
+      // 오버레이 캔버스 높이의 상한. 카드가 화면 높이의 84% 를 넘지 않게 한다.
+      var W = el.clientWidth, limit = big
+        ? Math.floor(window.innerHeight * 0.84) - overlay.querySelector('.lg-overlay__head').offsetHeight - 2
+        : 240;
+      if (W < 40 || limit < 40) return;
       var svg = svgEl('svg', {
-        class: 'lg-svg' + (big ? ' lg-svg--big' : ''), width: W, height: H,
-        viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': t.title
+        class: 'lg-svg' + (big ? ' lg-svg--big' : ''), role: 'img', 'aria-label': t.title
       });
       el.appendChild(svg);
+
+      /* 현재 글 제목은 늘 띄운다. 상자보다 길면 낱말 단위로 줄을 나누고, 한 낱말이 넘치면 글자를
+         줄인다. 폭은 SVG 안에서 잰다. */
+      var cap = { size: big ? 12 : 11 };
+      var capEl = svgEl('text', { class: 'lg-label is-self is-main' });
+      capEl.style.fontSize = cap.size + 'px';
+      svg.appendChild(capEl);
+      function measure(s) {
+        capEl.textContent = s;
+        try { return capEl.getComputedTextLength(); } catch (e) { return s.length * cap.size * 0.9; }
+      }
+      var maxWidth = W - 8, lines = [], line = '';
+      model.byId[self].title.split(' ').forEach(function (word) {
+        var next = line ? line + ' ' + word : word;
+        if (line && measure(next) > maxWidth) { lines.push(line); line = word; } else line = next;
+      });
+      lines.push(line);
+      cap.width = Math.max.apply(null, lines.map(measure));
+      if (cap.width > maxWidth) {
+        cap.size *= maxWidth / cap.width;
+        cap.width = maxWidth;
+        capEl.style.fontSize = cap.size + 'px';
+      }
+      cap.lines = lines.length;
+      cap.lineHeight = cap.size * 1.2;
+
+      var geo = place(W, limit, big, cap), view = W, H = geo.H;
+      W = geo.W;
+      svg.setAttribute('width', W);
+      svg.setAttribute('height', H);
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      el.style.height = (big ? Math.min(H, limit) : H) + 'px';
+      if (big) {
+        // 가로 스크롤바가 자리를 차지하면 그만큼 캔버스를 늘린다.
+        el.style.height = Math.min(H, limit) + el.offsetHeight - el.clientHeight + 'px';
+        el.scrollLeft = geo.positions[self].x - view / 2;
+        el.scrollTop = geo.positions[self].y - el.clientHeight / 2;
+      }
+      // 제목 자리의 x·y 는 점에서 본 글자 시작점이고, 가운데 맞춘 자리면 글줄의 가운데다.
+      var at = geo.positions[self], capX = at.x + geo.label.x, capY = at.y + geo.label.y;
+      capEl.textContent = '';
+      capEl.setAttribute('text-anchor', geo.label.centered ? 'middle' : 'start');
+      capEl.setAttribute('y', capY);
+      if (geo.label.angle) capEl.setAttribute('transform', 'rotate(' + geo.label.angle + ' ' + capX + ' ' + capY + ')');
+      lines.forEach(function (text, i) {
+        var span = svgEl('tspan', { x: capX, dy: i ? cap.lineHeight : 0 });
+        span.textContent = text;
+        capEl.appendChild(span);
+      });
 
       // 레인이나 열이 촘촘하면 이웃 점과 겹치지 않게 줄인다.
       var room = Math.min(geo.gap ? geo.gap * 0.42 : Infinity, geo.step ? geo.step * 0.45 : Infinity);
@@ -289,8 +434,8 @@
         var title = svgEl('title'); title.textContent = n.title; group.appendChild(title);
         group.appendChild(svgEl('circle', { class: 'lg-hit', r: hitRadius }));
         group.appendChild(svgEl('circle', { class: 'lg-dot', r: radius(id) }));
-        var label = svgEl('text', { class: 'lg-label' + (id === self ? ' is-self' : '') });
-        label.textContent = n.title;
+        var label = id === self ? capEl : svgEl('text', { class: 'lg-label' });
+        if (id !== self) label.textContent = n.title;
         labelsGroup.appendChild(label);
         group.addEventListener('mouseenter', function () { focus(id); });
         group.addEventListener('mouseleave', function () { focus(null); });
@@ -320,20 +465,23 @@
         if (text > W - 4) { size = size * (W - 4) / text; text = W - 4; }
         var left = Math.max(2, Math.min(W - 2 - text, p.x - text / 2));
         var y = p.y - r - 5 < size + 2 ? r + size + 3 : -(r + 5);
-        return { x: left - p.x, y: y, angle: 0, size: size,
-          minX: left, maxX: left + text, minY: p.y + y - size, maxY: p.y + y + 2 };
+        var box = rectBox(left, left + text, p.y + y - size, p.y + y + 2);
+        box.x = left - p.x; box.y = y; box.angle = 0; box.size = size;
+        return box;
       }
       /* 라벨은 짚은 글이 먼저 자리를 잡고, 이어진 글은 연결 수 순으로 겹치지 않는 자리에만
-         뜬다. 상자 밖으로 나가는 자리는 쓰지 않는다. */
+         뜬다. 상자 밖으로 나가는 자리와 현재 글 제목 자리는 쓰지 않는다. 현재 글의 라벨은 늘
+         떠 있는 제목이라 움직이지 않는다. */
       function placeLabels(focusId, neighbors) {
-        Object.keys(nodeEls).forEach(function (id) { nodeEls[id].label.style.display = 'none'; });
+        Object.keys(nodeEls).forEach(function (id) { if (id !== self) nodeEls[id].label.style.display = 'none'; });
         if (!focusId) return;
         var rest = Array.from(neighbors).filter(function (id) { return id !== focusId; });
         rest.sort(function (a, b) {
           return (model.degree[b] || 0) - (model.degree[a] || 0) || (a < b ? -1 : 1);
         });
-        var placed = [];
+        var placed = [geo.label];
         [focusId].concat(rest).forEach(function (id) {
+          if (id === self) return;
           var main = id === focusId;
           var size = big ? (main ? 12 : 10.5) : (main ? 11 : 9.5);
           var spots = main ? ['right', 'left', 'above', 'below'] : ['above', 'below', 'right', 'left'];
