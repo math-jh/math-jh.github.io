@@ -12,21 +12,22 @@ date: 2022-06-14
 weight: 3
 translated_at: 2026-06-01T05:00:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-01T05:00:05+00:00
+last_polished_at: 2026-10-19T15:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In this post we define tangent vectors on a manifold and the space they generate, the tangent space.
+Now we define tangent vectors on a manifold and the space they generate, the tangent space.
 
 ## Motivation
 
 In **[Lee]**, a fairly lengthy portion of the beginning of Chapter 3 is devoted to justifying the definitions we will make; let us first briefly review this.
 
-The simplest example of a manifold is $\mathbb{R}^m$, and a slightly more complicated example is a surface contained in $\mathbb{R}^m$. A tangent vector at a point $p$ on this surface literally means vectors tangent to the surface at $p$. If this surface is a two-dimensional surface in $\mathbb{R}^3$, then collecting these vectors yields exactly the tangent plane at $p$. However, generalizing this to a definition of tangent vectors on a manifold is not straightforward. In that definition, the existence of an ambient space $\mathbb{R}^m$ containing the surface is essential, because we defined a manifold in a purely intrinsic way.
+The simplest example of a manifold is $\mathbb{R}^m$, and a slightly more complicated example is a surface contained in $\mathbb{R}^m$. A tangent vector at a point $p$ on this surface literally means vectors tangent to the surface at $p$. If this surface is a two-dimensional surface in $\mathbb{R}^3$, then collecting these vectors yields exactly the tangent plane at $p$. However, generalizing this to a definition of tangent vectors on a manifold is not straightforward. In this definition, the existence of an ambient space $\mathbb{R}^m$ containing the surface is essential, because we defined a manifold in a purely intrinsic way.
 
-Instead, in the situation above we can observe that tangent vectors give rise to directional derivatives. That is, given any tangent vector $v$, this vector assigns to each function $f$ defined in a neighborhood of $p$ the directional derivative in the $v$-direction
+Instead, in the situation above we can observe that directional derivatives arise whenever tangent vectors are given. That is, given any tangent vector $v$, this vector well-defines the directional derivative in the $v$-direction
 
 $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
-Our idea is to define this operator, the *directional derivative*, as the tangent vector.
+for each function $f$ defined in a neighborhood of $p$. Our idea is to define this operator, the *directional derivative*, as the tangent vector.
 
 ## Sheaf of Differentiable Functions
 
@@ -34,13 +35,13 @@ Let $C^\infty(U)$ be the collection of $C^\infty$ functions defined on an open s
 
 $$\rho_{UV}:f\mapsto f\vert_V$$
 
-Then this structure becomes a sheaf of rings $\mathcal{C}^\infty_M$ on $M$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="be9pk" }) The stalk of $\mathcal{C}^\infty$ at any $p\in M$ is written $\mathcal{C}^\infty_{M,p}$, or simply $\mathcal{C}^\infty_p$ when there is no danger of confusion. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-lid="jyq1k" })
+Then this structure becomes a sheaf of rings $\mathcal{C}^\infty_M$ defined on $M$. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1){: data-lid="be9pk" }) The stalk of $\mathcal{C}^\infty$ at any $p\in M$ is written $\mathcal{C}^\infty_{M,p}$, or $\mathcal{C}^\infty_p$ when there is no confusion. ([\[Topology\] §Presheaves, ⁋Definition 9](/en/math/topology/presheaves#def9){: data-lid="jyq1k" })
 
 ::: Proposition 1
-For any manifold $M$, $\mathcal{C}^\infty_p$ has the structure of an $\mathbb{R}$-algebra.
+For any manifold $M$ and a point $p\in M$, $\mathcal{C}^\infty_p$ has the structure of an $\mathbb{R}$-algebra.
 :::
 ::: Proof
-To show this, it suffices to define operations on $\mathcal{C}^\infty_p$. Choose two elements $\mathbf{f},\mathbf{g}$ of $\mathcal{C}^\infty_p$. Then there exist suitable open neighborhoods $U,V$ of $p$ such that we may regard $\mathbf{f}$ and $\mathbf{g}$ as the germs of $(f,U)$ and $(g,V)$, respectively. Now define $\mathbf{f}+\mathbf{g}$ as the equivalence class of the function
+To show this, it suffices to define the operations on $\mathcal{C}^\infty_p$. Choose two elements $\mathbf{f},\mathbf{g}$ of $\mathcal{C}^\infty_p$. Then there exist suitable open neighborhoods $U,V$ of $p$ such that we may regard $\mathbf{f}$ and $\mathbf{g}$ as the germs of $(f,U)$ and $(g,V)$, respectively. Now define $\mathbf{f}+\mathbf{g}$ as the equivalence class of the function
 
 $$(f\vert_{U\cap V}+g\vert_{U\cap V}, U\cap V)$$
 
@@ -49,46 +50,46 @@ In other words, to compute the sum of two germs $\mathbf{f}$ and $\mathbf{g}$, w
 Similarly, one can define multiplication of functions and scalar multiplication.
 :::
 
-In fact, for scalar multiplication defined on $\mathcal{C}^\infty_p$, since this can simply be thought of as multiplication by constant functions, we may regard $\mathcal{C}^\infty_p$ as a ring rather than an algebra. Thus $(M,\mathcal{C}^\infty_M)$ becomes a ringed space. The next proposition shows that this space is a *locally ringed space*.
+In fact, for scalar multiplication defined on $\mathcal{C}^\infty_p$, since this can simply be thought of as multiplication by a constant function, we may regard $\mathcal{C}^\infty_p$ as a ring rather than an algebra. Thus $(M,\mathcal{C}^\infty_M)$ becomes a ringed space. The next proposition shows that this space is a *locally ringed space*.
 
 ::: Proposition 2
-The ring $\mathcal{C}^\infty_p$ is a local ring, and its maximal ideal is given by
+The ring $\mathcal{C}^\infty_p$ is a local ring, and its maximal ideal is given by the following expression:
 
 $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 :::
 ::: Proof
-First, the condition $\mathbf{f}(p)=0$ is well defined. This is because all functions belonging to $\mathbf{f}$ must have the same value at $p$. It is not difficult to see that $\mathfrak{m}_p$ is indeed an ideal.
+First, the condition $\mathbf{f}(p)=0$ is well-defined. This is because functions belonging to $\mathbf{f}$ must all have the same value at the point $p$. It is not difficult to see that $\mathfrak{m}_p$ is indeed an ideal.
 
-Moreover, the maximality of $\mathfrak{m}_p$ follows from the exactness of the diagram
+In addition, that $\mathfrak{m}_p$ is maximal is obtained from the fact that when the *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ is defined by $\mathbf{f}\mapsto\mathbf{f}(p)$, the following diagram
 
 $$0\rightarrow \mathfrak{m}_p\rightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\rightarrow}\mathbb{R}\rightarrow 0$$
 
-where the *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ is defined by $\mathbf{f}\mapsto\mathbf{f}(p)$. This is because $\mathcal{C}^\infty_p/\mathfrak{m}_p$ is the field $\mathbb{R}$.
+is exact. This is because $\mathcal{C}^\infty_p/\mathfrak{m}_p$ is the field $\mathbb{R}$.
 :::
 
 ## Tangent Vectors
 
-Summarizing the preceding content without the language of sheaves is as follows.
+To summarize the preceding content without the language of sheaves, it is as follows.
 
-We have decided to define a tangent vector at $p$ as a *directional derivative at the point $p$*. This directional derivative is of course well defined for any function differentiable on all of $M$, but differentiability is essentially a local property, so in fact the directional derivative of a function defined only on a suitable open neighborhood $U$ of $p$ can also be defined.[^1]
+We decided to define a tangent vector at the point $p$ as a *directional derivative at the point $p$*. This directional derivative is of course well-defined for any function differentiable on all of $M$, but since differentiability is essentially a local property, in fact at the point $p$, the directional derivative of a function defined only on a suitable open neighborhood $U$ can also be defined.[^1]
 
-Moreover, if two functions $f,g$ agree on some open neighborhood $U$ of $p$, then their derivatives at $p$ also coincide, so when dealing with directional derivatives they may be treated as identical. Thus the objects of our interest are no longer functions but equivalence classes of functions, which explicitly is as follows.
+Moreover, if two functions $f,g$ define, around the point $p$, the same function on some open neighborhood $U$, then their derivatives at the point $p$ also coincide, so when dealing with directional derivatives they may be treated as identical. Then the objects of our interest are no longer functions but equivalence classes of functions, which explicitly is as follows:
 
-$$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
+$$\mathcal{C}^\infty_p=\{(f,U)\mid p\in U\text{ open}, f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some open $W\subseteq U\cap V$ with $p\in W$}$$
 
-Let us write the equivalence class of $f$ as $\mathbf{f}$. Then the content of [Proposition 1](#prop1){: data-lid="r1jog" } is that scalar multiplication and addition, and even multiplication, are well defined on $\mathcal{C}^\infty_p$, as in $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$.
+Let us write the equivalence class of $f$ as $\mathbf{f}$. Then, as in $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$, scalar multiplication and addition, and furthermore multiplication, are well defined on $\mathcal{C}^\infty_p$; this is the content of [Proposition 1](#prop1){: data-lid="r1jog" }.
 
-Now a tangent vector is a directional derivative that assigns a real number to each element of $\mathcal{C}^\infty_p$. Here the derivative is defined as a linear map satisfying the Leibniz rule.
+Now, a tangent vector is a directional derivative that assigns a real value to each element of $\mathcal{C}^\infty_p$. Here, the derivative is defined as a linear map satisfying the Leibniz rule.
 
 ::: Definition 3
-Let $M$ be a manifold and $p\in M$ a point. An $\mathbb{R}$-linear map $v:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ satisfying the Leibniz rule
+Consider a manifold $M$ and a point $p\in M$. Satisfying the following Leibniz rule
 
 $$v(\mathbf{f}\mathbf{g})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})$$
 
-is called a *tangent vector* of $M$ at $p$. The collection of tangent vectors of $M$ at $p$ is called the *tangent space* of $M$ at $p$, and is written $T_pM$.
+an $\mathbb{R}$-linear map $v:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ is called a *tangent vector* at the point $p$ of $M$. The collection of tangent vectors at the point $p$ of $M$ is called the *tangent space* at the point $p$ of $M$, and is written $T_pM$.
 :::
 
-The next proposition states a fact that is already easy to guess.
+The next proposition is a fact that can already be easily guessed from its name.
 
 ::: Proposition 4
 The $T_pM$ defined in [Definition 3](#def3){: data-lid="jci0j" } is an $\mathbb{R}$-vector space.
@@ -98,15 +99,15 @@ Since both $\mathcal{C}^\infty_p$ and $\mathbb{R}$ are $\mathbb{R}$-vector space
 
 $$(v+w)(\mathbf{f})=v(\mathbf{f})+w(\mathbf{f})$$
 
-to show that $T_pM$ is closed under addition we compute
+to show that $T_pM$ is closed under addition, we compute
 
 $$\begin{aligned}(v+w)(\mathbf{fg})&=v(\mathbf{fg})+w(\mathbf{fg})=\mathbf{f}(p)v(\mathbf{g})+\mathbf{g}(p)v(\mathbf{f})+\mathbf{f}(p)w(\mathbf{g})+\mathbf{g}(p)w(\mathbf{f})\\
 &=\mathbf{f}(p)(v+w)(\mathbf{g})+\mathbf{g}(p)(v+w)(\mathbf{f})\end{aligned}$$
 
-and confirm that $v+w$ is also an element of $T_pM$.
+and confirm that $v+w$ is also an element of $T_pM$. In the case of scalar multiplication as well, by computing $(cv)(\mathbf{fg})=cv(\mathbf{fg})=\mathbf{f}(p)(cv)(\mathbf{g})+\mathbf{g}(p)(cv)(\mathbf{f})$ we obtain $cv\in T_pM$.
 :::
 
-Moreover, for any tangent vector $v$ and the constant function $\mathbf{c}$ having the value $c$ at every point, $v(\mathbf{c})=0$ always holds. If we denote by $\mathbf{1}$ the constant function with value $1$, then since $\mathbf{c}=c\cdot\mathbf{1}$ it suffices to show the following:
+Moreover, for any tangent vector $v$ and the constant function with value $c$ at every point, $\mathbf{c}$, $v(\mathbf{c})=0$ always holds. If $\mathbf{1}$ is the constant function with value $1$, then since $\mathbf{c}=c\cdot\mathbf{1}$ it suffices to show only the following:
 
 ::: Lemma 5
 For any tangent vector $v$, we have $v(\mathbf{1})=0$.
@@ -126,4 +127,4 @@ However, we still do not know what kind of space $T_pM$ is. In particular, we do
 
 ---
 
-[^1]: Functions defined only on $$U$$ can be extended to all of $$M$$ via a partition of unity, so in the present situation we need not distinguish the two.
+[^1]: Even for a function defined only on $U$, via a partition of unity, one can choose a function, agreeing with it on a smaller open neighborhood of the point $p$, that is defined on all of $M$ and is $C^\infty$, so in the present situation we do not need to distinguish the two.
