@@ -15073,6 +15073,13 @@ P:
   defs:
   - label: '[대수다양체] §그라스만 다양체'
     url: /ko/math/algebraic_varieties/grassmannians
+- id: plücker_relation
+  en: Plücker relation
+  ko: 플뤼커 관계식
+  primary: en
+  defs:
+  - label: '[대수다양체] §그라스만 다양체'
+    url: /ko/math/algebraic_varieties/grassmannians
 - id: plurigenus
   en: plurigenus
   ko: 다중 종수
