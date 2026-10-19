@@ -1,8 +1,77 @@
 /* ==========================================================================
-   로컬 의존성 그래프 — 우측 사이드바 목차 아래, 항상 표시(현재 글 2-hop 이웃).
+   로컬 의존성 그래프 — 우측 사이드바 목차 아래, 항상 표시(현재 글의 선수·후속 글).
    톤은 목차(.toc)에 맞춘다: sans-serif-narrow · gray 본문 · brass nav__title.
    소형 그래프의 빈 곳을 클릭하거나 ⤢ 버튼을 누르면 화면 중앙 오버레이로 크게 본다.
    ========================================================================== */
+
+/* 그래프 SVG. 점·선의 문법은 의존성 페이지 선형 보기와 같다 — 글의 색 점에 배경색 테, 평상시
+   선은 도착 글의 색, 짚은 글에 닿는 선과 글은 brass, 현재 글은 밝은 brass. 이 파일은 라이트·
+   다크 스킨마다 따로 컴파일되므로 배경 밝기로 갈라 칠한다. 글의 색상(hue)은 JS 가 --h 로
+   넘기고, 밝기는 여기서 정한다. */
+.lg-svg {
+  @if lightness($background-color) < 50% {
+    --lg-node-l: 60%;
+    --lg-accent: 240, 198, 116;
+    --lg-self: 255, 236, 190;
+    --lg-label: 240, 198, 116;
+    --lg-label-main: 255, 236, 190;
+    --lg-ink: 150, 150, 160;
+  } @else {
+    --lg-node-l: 46%;
+    --lg-accent: 173, 122, 46;
+    --lg-self: 122, 74, 10;
+    --lg-label: 128, 86, 22;
+    --lg-label-main: 84, 50, 4;
+    --lg-ink: 26, 34, 51;
+  }
+  --s: 48%;
+  display: block;
+  font-family: $sans-serif-narrow;
+}
+
+.lg-link {
+  display: none;
+  fill: none;
+  stroke-width: 1.1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.12s;
+
+  &.is-on { display: inline; stroke: hsla(var(--h), var(--s), var(--lg-node-l), 0.5); }
+  &.is-dim { display: inline; stroke: rgba(var(--lg-ink), 0.07); }
+  &.is-hl { display: inline; stroke: rgba(var(--lg-accent), 0.85); stroke-width: 1.3px; }
+  .lg-svg--big & { stroke-width: 1.3px; }
+  .lg-svg--big &.is-hl { stroke-width: 1.5px; }
+}
+
+.lg-node {
+  cursor: pointer;
+  transition: opacity 0.12s;
+
+  &.is-off { opacity: 0.16; }
+}
+.lg-hit { fill: transparent; }
+.lg-dot {
+  fill: hsl(var(--h), var(--s), var(--lg-node-l));
+  stroke: $background-color;
+  stroke-width: 1.2px;
+  .lg-node.is-hl & { fill: rgb(var(--lg-accent)); }
+  .lg-node.is-self & { fill: rgb(var(--lg-self)); }
+}
+
+// 라벨은 점들 위의 따로 된 층이다 — 점 묶음 안에 두면 뒤에 그려지는 점이 라벨을 가린다.
+.lg-label {
+  pointer-events: none;
+  font-size: 10.5px;
+  fill: rgba(var(--lg-label), 0.98);
+  paint-order: stroke;
+  stroke: rgba($background-color, 0.9);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+
+  &.is-main { font-weight: 600; }
+  &.is-main, &.is-self { fill: rgba(var(--lg-label-main), 0.98); }
+}
 .localgraph-side {
   margin-top: 2em;
   font-family: $sans-serif-narrow;
@@ -43,7 +112,7 @@
   }
 }
 
-/* 화면 중앙 오버레이 — 2-hop 그래프를 크게 */
+/* 화면 중앙 오버레이 — 로컬 그래프를 크게 */
 .lg-overlay {
   position: fixed;
   inset: 0;
@@ -105,5 +174,6 @@
     align-items: center;
   }
 
-  &__canvas { flex: 1; position: relative; }
+  // SVG 는 열 때의 크기로 그려지므로, 창이 줄면 다시 그릴 때까지 넘치는 부분을 자른다.
+  &__canvas { flex: 1; position: relative; min-height: 0; overflow: hidden; }
 }
