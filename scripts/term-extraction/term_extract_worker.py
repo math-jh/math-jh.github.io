@@ -93,11 +93,14 @@ REL_REVIEW = str(REVIEW_PATH.relative_to(BLOG_ROOT))
 LLM_PROVIDER = os.environ.get("TERM_EXTRACT_PROVIDER", "antigravity")
 _DEFAULT_BIN = {"antigravity": str(Path.home() / ".gemini/bin/agy"),
                 "claude": str(Path.home() / ".local/bin/claude")}
-_DEFAULT_MODEL = {"antigravity": "gemini-3.8-flash-high", "claude": "haiku"}
+# Antigravity 는 모델 ID 없이 effort 만 넘긴다 — 모델은 agy 기본값을 따른다
+# (고정한 ID 는 언젠가 낡는다). high 는 예전 gemini-3.8-flash-high 고정의 effort 다.
+_DEFAULT_MODEL = {"antigravity": "", "claude": "haiku"}
 LLM_BIN = os.environ.get("TERM_EXTRACT_LLM",
                          _DEFAULT_BIN.get(LLM_PROVIDER, _DEFAULT_BIN["claude"]))
 LLM_MODEL = os.environ.get("TERM_EXTRACT_MODEL",
                            _DEFAULT_MODEL.get(LLM_PROVIDER, ""))
+LLM_EFFORT = os.environ.get("TERM_EXTRACT_EFFORT") or "high"
 LLM_TIMEOUT = 600
 QUARANTINE_FAILS = 3
 QUARANTINE_SEC = 7 * 24 * 3600
@@ -261,8 +264,7 @@ def _call_antigravity(prompt: str) -> str:
     args = [LLM_BIN, "--print", "[cron]\n\n" + prompt,
             "--output-format", "json", "--disable-slash-commands",
             "--print-timeout", "15m"]
-    if LLM_MODEL:
-        args += ["--model", LLM_MODEL]
+    args += ["--model", LLM_MODEL] if LLM_MODEL else ["--effort", LLM_EFFORT]
     proc = subprocess.run(args, stdin=subprocess.DEVNULL, capture_output=True,
                           text=True, timeout=LLM_TIMEOUT, cwd="/tmp")
     if proc.returncode != 0:

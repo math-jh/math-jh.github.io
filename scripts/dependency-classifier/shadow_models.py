@@ -39,6 +39,7 @@ AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
 CLAUDE_BIN = dc.CLAUDE_BIN
 CLAUDE_MODEL = dc.CLAUDE_MODEL
 CODEX_BIN = dc.CODEX_BIN
+# Empty by default, like the classifier's: Codex then uses its configured model.
 CODEX_MODEL = dc.CODEX_REVIEW_MODEL
 CODEX_EFFORT = dc.CODEX_REVIEW_EFFORT
 TIMEOUT = int(os.environ.get("DEPENDENCY_SHADOW_TIMEOUT", "1500"))
@@ -247,7 +248,7 @@ def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
     with tempfile.TemporaryDirectory(prefix="dependency-shadow-codex-") as tmp:
         tmp_path = Path(tmp)
         out_path = tmp_path / "last-message.json"
-        args = [CODEX_BIN, "exec", "--model", CODEX_MODEL,
+        args = [CODEX_BIN, "exec", *(["--model", CODEX_MODEL] if CODEX_MODEL else []),
                 "-c", f'model_reasoning_effort="{CODEX_EFFORT}"',
                 "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
                 "--color", "never", "--json", "--output-last-message", str(out_path)]

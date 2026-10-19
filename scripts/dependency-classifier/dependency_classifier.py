@@ -112,20 +112,26 @@ PROVIDER_SLOT_PATHS = {
 }
 
 AGY_BIN = os.environ.get("DEPENDENCY_AGY_BIN", str(Path.home() / ".gemini/bin/agy"))
-AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL", "gemini-3.8-flash-high")
+# No model ID by default, only an effort level: the model is the Antigravity CLI's
+# own default.  high keeps the effort of the former gemini-3.8-flash-high pin.
+AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL")
+AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT") or "high"
 CLAUDE_BIN = os.environ.get("DEPENDENCY_CLAUDE_BIN", str(Path.home() / ".local/bin/claude"))
 CLAUDE_MODEL = os.environ.get("DEPENDENCY_CLAUDE_MODEL", "opus")
 CODEX_BIN = os.environ.get(
     "DEPENDENCY_CODEX_BIN", str(Path.home() / ".npm-global/bin/codex-multi-auth-codex"))
-# sol is the model ~/.codex/config.toml calls the strongest of the Codex line.
+# No model ID by default, only an effort level: a pinned ID goes stale (on
+# 2026-10-19 gpt-5.6-sol was refused on a Free-plan account and answered "Selected
+# model is at capacity" for an afternoon).  Left empty, Codex uses the model of
+# ~/.codex/config.toml; the variables remain for an emergency pin.
 CODEX_MODEL_OVERRIDE = os.environ.get("DEPENDENCY_CODEX_MODEL")
 CODEX_EFFORT_OVERRIDE = os.environ.get("DEPENDENCY_CODEX_EFFORT")
 CODEX_FIRST_MODEL = os.environ.get(
-    "DEPENDENCY_CODEX_FIRST_MODEL", CODEX_MODEL_OVERRIDE or "gpt-5.6-sol")
+    "DEPENDENCY_CODEX_FIRST_MODEL", CODEX_MODEL_OVERRIDE or "")
 CODEX_FIRST_EFFORT = os.environ.get(
     "DEPENDENCY_CODEX_FIRST_EFFORT", CODEX_EFFORT_OVERRIDE or "medium")
 CODEX_REVIEW_MODEL = os.environ.get(
-    "DEPENDENCY_CODEX_REVIEW_MODEL", CODEX_MODEL_OVERRIDE or "gpt-5.6-sol")
+    "DEPENDENCY_CODEX_REVIEW_MODEL", CODEX_MODEL_OVERRIDE or "")
 CODEX_REVIEW_EFFORT = os.environ.get(
     "DEPENDENCY_CODEX_REVIEW_EFFORT", CODEX_EFFORT_OVERRIDE or "medium")
 MODEL_TIMEOUT = int(os.environ.get("DEPENDENCY_MODEL_TIMEOUT", "900"))
@@ -718,7 +724,8 @@ def call_antigravity(items: list[dict], *, mode: str) -> dict:
 
 def ask_antigravity(prompt: str) -> dict:
     proc = subprocess.run(
-        [AGY_BIN, "--print", prompt, "--model", AGY_MODEL,
+        [AGY_BIN, "--print", prompt,
+         *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "15m"],
         cwd="/tmp", stdin=subprocess.DEVNULL, capture_output=True, text=True,
         timeout=MODEL_TIMEOUT,
@@ -792,7 +799,7 @@ def call_codex(items: list[dict], *, mode: str) -> dict:
             encoding="utf-8",
         )
         proc = subprocess.run(
-            [CODEX_BIN, "exec", "--model", model,
+            [CODEX_BIN, "exec", *(["--model", model] if model else []),
              "-c", f'model_reasoning_effort="{effort}"',
              "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
              "--color", "never", "--output-schema", str(schema_path),

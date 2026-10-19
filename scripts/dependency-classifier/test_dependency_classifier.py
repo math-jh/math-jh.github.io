@@ -161,7 +161,7 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
         def fake_run(argv: list[str], **kwargs):
             self.assertEqual(argv[0], dc.CODEX_BIN)
             self.assertEqual(dc.CODEX_BIN, str(Path.home() / ".npm-global/bin/codex-multi-auth-codex"))
-            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-sol")
+            self.assertNotIn("--model", argv)
             self.assertIn('model_reasoning_effort="medium"', argv)
             self.assertIn("--sandbox", argv)
             self.assertEqual(argv[argv.index("--sandbox") + 1], "read-only")
@@ -180,11 +180,11 @@ class IncompleteResponseRecoveryTest(unittest.TestCase):
 
         self.assertEqual(result, {"items": [row("a")]})
 
-    def test_codex_review_uses_sol_medium(self) -> None:
+    def test_codex_review_passes_effort_without_model(self) -> None:
         reviewed = {"id": "a", "relation": "required", "reason": "test"}
 
         def fake_run(argv: list[str], **kwargs):
-            self.assertEqual(argv[argv.index("--model") + 1], "gpt-5.6-sol")
+            self.assertNotIn("--model", argv)
             self.assertIn('model_reasoning_effort="medium"', argv)
             output_path = Path(argv[argv.index("--output-last-message") + 1])
             output_path.write_text(json.dumps({"items": [reviewed]}), encoding="utf-8")

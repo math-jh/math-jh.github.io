@@ -371,7 +371,7 @@ def codex_pass(
         out_path = Path(tmp) / "last-message.json"
         proc = subprocess.run(
             [tw.CODEX_BIN, "exec",
-             "--model", tw.CODEX_REVIEW_MODEL,
+             *(["--model", tw.CODEX_REVIEW_MODEL] if tw.CODEX_REVIEW_MODEL else []),
              "-c", f'model_reasoning_effort="{tw.CODEX_REVIEW_EFFORT}"',
              "--sandbox", "read-only", "--skip-git-repo-check", "--ephemeral",
              "--color", "never", "--output-last-message", str(out_path), "-"],
