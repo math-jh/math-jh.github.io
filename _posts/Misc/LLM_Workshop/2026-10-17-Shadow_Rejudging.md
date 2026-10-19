@@ -14,6 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-10-17
+last_modified_at: 2026-10-19
 
 weight: 58
 
@@ -183,6 +184,63 @@ win.scrollTo(0, Math.max(0, hit.getBoundingClientRect().top + win.scrollY
 > 판례 파일은 레포에 놓되, gitignore된 곳에 두면 충분해.
 
 판례는 repo 안의 gitignore된 `scripts/dependency-classifier/book/`에 두었다. 사용자의 기기에서는 열어 볼 수 있고, push되지는 않는다. trace와 큐는 상태 디렉터리에 그대로 있다. 모델 호출이 몇 분씩 걸리는 동안 대시보드 판정이 막히지 않도록 잠금도 나눴다. 틱 전체를 막는 잠금, 큐·원장을 짧게 고쳐 쓸 때만 잡는 잠금, 판례 파일용 잠금, 이렇게 셋이다.
+
+## "제공"의 범위를 좁힌 사흘
+
+시험 운영을 돌리면서 가장 자주 고친 곳은 `criteria.md`의 "소스가 제공한다" 대목이었다. 이 한 문단이 required와 weak를 가르는 경계라서, 모델이 한쪽으로 쏠리는 글이 나올 때마다 여기가 바뀌었다. 같은 글 안을 가리키는 링크에서는 대상 박스 자체를 제공으로 치지 않는다는 문장을 먼저 더했고([커밋 4b143074](https://github.com/math-jh/math-jh.github.io/commit/4b143074)), 그다음 두 번은 방향이 서로 반대였다.
+
+[커밋 b71c9a10](https://github.com/math-jh/math-jh.github.io/commit/b71c9a10)은 소스가 대상에서 얻은 진술을 근거로 적어 두고 거기서 나아가면, 그것이 대상을 이 경우에 적용한 결과일 뿐이어도 제공으로 보았다. 프롬프트의 예시도 그에 맞춰 "full"이었다. 같은 날 저녁 [커밋 f505a2a6](https://github.com/math-jh/math-jh.github.io/commit/f505a2a6)이 이 문장을 통째로 뒤집었다. 적용 결과는 그것이 결론이든 다음 걸음의 근거든 제공이 아니고, 대상의 진술이나 정의 자체가 소스에 적혀 있어야 제공이다. 같은 예시 두 개가 "full"에서 "none"으로 바뀌었다.
+
+```text
+· "[정리 4]에 의해 $(a_n)$은 어떤 $L$로 수렴하고, 모든 $a_n\leq 1$이므로 $L\leq 1$이다."
+  Only the result of applying the target to $(a_n)$ is written; that bounded monotone
+  sequences converge is stated nowhere outside the target → "none", even though the
+  argument proceeds from the result.
+```
+{: data-filename="scripts/dependency-classifier/shadow_prompts.py"}
+
+[커밋 8d410289](https://github.com/math-jh/math-jh.github.io/commit/8d410289)는 제공이 아닌 것을 둘 더했다. 글 앞머리에서 "이 글에서는 ~을 보인다"고 예고하는 문장은, 독자가 그 시점에 기댈 수 없으므로 제공이 아니다. 반대로 "앞 글에서 보았듯"처럼 다른 글에서 이미 보인 사실을 다시 짚는 문장은 제공이다. 프롬프트의 예시 문장도 이 구분에 맞춰 "앞 글에서 보았듯"을 넣어 고쳤고, 같은 글의 박스가 아래에서 증명되는 경우를 다룬 예시가 새로 하나 생겼다.
+
+front matter의 `description`과 `excerpt`는 규칙 문장만으로는 부족해서 코드로 막았다. 두 필드는 글을 요약할 뿐인데 소스 전문에 그대로 들어가 있으면 모델이 거기서 "제공"을 찾아낸다. `shadow_units.py`는 모델에 넘기는 본문에서 두 필드를 비운다.
+
+```python
+SUMMARY_FIELD_RE = re.compile(r"^(description|excerpt):.*$", re.MULTILINE)
+
+def model_text(text: str) -> str:
+    """The source as the models see it: front-matter summary fields emptied."""
+    if not text.startswith("---\n"):
+        return text
+    end = text.find("\n---\n", 4)
+    if end < 0:
+        return text
+    return SUMMARY_FIELD_RE.sub(r'\1: ""', text[:end]) + text[end:]
+```
+{: data-filename="scripts/dependency-classifier/shadow_units.py"}
+
+필드를 지우지 않고 빈 문자열로 두는 것은 줄 수를 지키기 위해서다. 판정 대기 화면이 보여 주는 줄 번호와 모델이 인용하는 줄 번호가 같은 원문 기준으로 남는다. 치환 범위를 첫 `---` 블록의 앞부분으로 자른 것도 본문에 `description:`으로 시작하는 줄이 있어도 건드리지 않기 위해서다.
+
+## 출력을 내고도 끝나지 않는 agy
+
+10월 17일 밤에는 판정이 끝났는데 틱이 끝나지 않는 일이 있었다. agy가 응답 envelope을 다 찍은 뒤에도 프로세스가 종료하지 않았다. 출력은 20시 53분에 멎었고 프로세스는 21시 5분이 지나도 살아 있었다. `subprocess.run(..., timeout=TIMEOUT)`은 프로세스가 끝나야 반환하므로, 기본 타임아웃인 1500초가 다 찰 때까지 틱 하나가 붙들려 있었다. [커밋 4b143074](https://github.com/math-jh/math-jh.github.io/commit/4b143074)는 호출을 `Popen`으로 바꿔 파이프를 스레드로 읽다가, 모인 stdout이 `}`로 끝나고 JSON으로 파싱되는 순간 프로세스를 정리하고 그 텍스트를 돌려준다.
+
+```python
+text = b"".join(out).decode("utf-8", "replace").strip()
+if text.endswith("}"):
+    try:
+        json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    else:
+        proc.terminate()
+        try:
+            proc.wait(10)
+        except subprocess.TimeoutExpired:
+            proc.kill()
+        return text
+```
+{: data-filename="scripts/dependency-classifier/shadow_models.py"}
+
+2초마다 한 번 검사하고, 파싱이 안 되면 아직 덜 온 것으로 보고 기다린다. envelope이 끝내 오지 않으면 예전과 같은 `TIMEOUT`에서 프로세스를 죽이고 `ModelError`를 낸다. 정상 종료한 경우에는 리더 스레드를 10초까지 기다려 남은 출력을 마저 받는다. 응답은 이미 받은 뒤라 프로세스를 죽여도 잃는 것이 없다.
 
 ## 정리
 
