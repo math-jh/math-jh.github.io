@@ -9319,6 +9319,13 @@ I:
   see:
   - label: Central idempotent
     id: central_idempotent
+- id: identity_component
+  en: identity component
+  ko: 단위 성분
+  primary: en
+  defs:
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: identity_element
   en: identity element
   ko: 항등원
