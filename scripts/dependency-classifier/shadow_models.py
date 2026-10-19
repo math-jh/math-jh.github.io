@@ -225,6 +225,24 @@ def _claude(prompt: str) -> tuple[dict, dict]:
     return parse_model_json(LAST_RAW), usage
 
 
+def _codex_failure(stdout: str) -> str:
+    """The message of the last error event in Codex's --json stream.  An upstream
+    failure leaves stderr empty and reports itself only here."""
+    message = ""
+    for line in stdout.splitlines():
+        try:
+            event = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(event, dict):
+            continue
+        if event.get("type") == "error":
+            message = str(event.get("message") or message)
+        elif event.get("type") == "turn.failed" and isinstance(event.get("error"), dict):
+            message = str(event["error"].get("message") or message)
+    return message
+
+
 def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
     with tempfile.TemporaryDirectory(prefix="dependency-shadow-codex-") as tmp:
         tmp_path = Path(tmp)
@@ -240,7 +258,8 @@ def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
         proc = subprocess.run(args + ["-"], input="[cron]\n\n" + prompt, cwd=tmp,
                               capture_output=True, text=True, timeout=TIMEOUT)
         if proc.returncode:
-            raise ModelError(f"Codex exited {proc.returncode}: {proc.stderr.strip()[:400]}")
+            detail = proc.stderr.strip() or _codex_failure(proc.stdout)
+            raise ModelError(f"Codex exited {proc.returncode}: {detail[:400]}")
         if not out_path.exists():
             raise ModelError("Codex produced no last-message file")
         usage: dict = {}
