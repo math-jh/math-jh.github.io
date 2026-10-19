@@ -13755,6 +13755,13 @@ N:
   defs:
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+- id: non-degenerate_pairing
+  en: non-degenerate pairing
+  ko: 비퇴화 페어링
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: non-zerodivisor
   en: non-zerodivisor
   ko: 정칙원소
