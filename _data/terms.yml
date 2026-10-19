@@ -17862,6 +17862,13 @@ S:
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
+- id: segre_embedding
+  en: Segre embedding
+  ko: 세그레 매장
+  primary: en
+  defs:
+  - label: '[대수다양체] §사영다양체'
+    url: /ko/math/algebraic_varieties/projective_varieties
 - id: self-adjoint
   en: self-adjoint
   ko: 자기수반
