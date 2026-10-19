@@ -36,4 +36,20 @@
   \node[below] at (s) {$s$};
 \end{tikzpicture}
 
+%%FIG compatibility of one jet locus cutout as a morphism of triangles (Research_Note_2026_10_22-2.svg)
+\begin{tikzcd}
+	{E_{J_\alpha}^\bullet\vert_{J_{\alpha+e_k}}} & {E_{J_{\alpha+e_k}}^\bullet} & {\mathcal{L}_{\alpha,k}^\vee\vert_{J_{\alpha+e_k}}[1]} & {E_{J_\alpha}^\bullet\vert_{J_{\alpha+e_k}}[1]} \\
+	{\LL_{J_\alpha/\mathfrak{M}_{0,n}}\vert_{J_{\alpha+e_k}}} & {\LL_{J_{\alpha+e_k}/\mathfrak{M}_{0,n}}} & {\LL_{J_{\alpha+e_k}/J_\alpha}} & {\LL_{J_\alpha/\mathfrak{M}_{0,n}}\vert_{J_{\alpha+e_k}}[1]}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow["{\phi_{J_\alpha}\vert_{J_{\alpha+e_k}}}"', from=1-1, to=2-1]
+	\arrow["{\phi_{J_{\alpha+e_k}}}", from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow["{\phi_{J_\alpha}\vert_{J_{\alpha+e_k}}[1]}", from=1-4, to=2-4]
+\end{tikzcd}
+
 \end{document}
