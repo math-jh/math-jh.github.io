@@ -1,7 +1,7 @@
 ---
 title: "Differential Forms"
-description: "Differential forms on manifolds are defined using tensor bundles and exterior algebra bundles. The wedge product introduces a graded algebra structure, followed by an explanation of pullbacks under smooth maps."
-excerpt: "Differential forms on manifolds, wedge products, and pullbacks"
+description: "Differential forms on manifolds are defined using tensor bundles and exterior algebra bundles. The wedge product introduces a graded algebra structure, followed by an explanation of the pullback operation by functions."
+excerpt: "Differential form"
 
 categories: [Math / Manifolds]
 permalink: /en/math/manifolds/differential_forms
@@ -12,6 +12,8 @@ date: 2022-06-21
 weight: 12
 translated_at: 2026-09-25T11:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-20T19:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Vector Bundles
 
@@ -22,7 +24,7 @@ For a manifold $M$,
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
-are called the *$(r,s)$-tensor bundle*, *exterior algebra bundle*, and *exterior $k$-bundle* over $M$, respectively. The elements of their smooth sections
+are called, over $M$, the *$(r,s)$-tensor bundle*, *exterior algebra bundle*, and *exterior $k$-bundle*, respectively. The elements of their smooth sections
 
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 
@@ -33,7 +35,7 @@ For two simple tensors
 
 $$\omega=\alpha^1\otimes\cdots\otimes \alpha^r\otimes u_{r+1}\otimes\cdots\otimes u_{r+s}\in\mathcal{T}^{r,s}(T_p^\ast M),\quad u=u_1\otimes\cdots\otimes u_r\otimes \alpha^{r+1}\otimes\cdots\otimes \alpha^{r+s}\in\mathcal{T}^{r,s}(T_pM)$$
 
-define
+let us define
 
 $$(\omega,u)=\alpha^1(u_1)\alpha^2(u_2)\cdots \alpha^{r+s}(u_{r+s})$$
 
@@ -71,7 +73,7 @@ then, letting $n=\dim M$, we can regard $\Omega^\ast(M)$ as the $\mathbb{N}$-gra
 
 $$\Omega^\ast(M)=\bigoplus_{k=0}^n\Omega^k(M)$$
 
-Furthermore, because the scalar multiplication on $\Omega^\ast(M)$ by $\mathbb{R}$ can actually be performed at each point $p$, we may also view the coefficients of $\Omega^\ast(M)$ as $C^\infty(M)$. Algebraically, this can be viewed as changing the coefficient ring via the ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$, and henceforth we always regard $\Omega^\ast(M)$ as being endowed with this $\mathbb{N}$-graded $C^\infty(M)$-algebra structure.
+Furthermore, because the scalar multiplication on $\Omega^\ast(M)$ by $\mathbb{R}$ can actually be performed at each point $p$, we may also view the coefficients of $\Omega^\ast(M)$ as $C^\infty(M)$. Algebraically, this can be viewed as changing the coefficient ring via the ring homomorphism $\mathbb{R}\rightarrow C^\infty(M)$, and henceforth we always regard $\Omega^\ast(M)$ as being endowed with an $\mathbb{N}$-graded $C^\infty(M)$-algebra structure in this way.
 
 Now suppose a $C^\infty$ map $F:M\rightarrow N$ is given. Then the linear map $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is well-defined. Therefore, applying the functoriality of the exterior algebra to the dual map of $\dd{F_p}$, we obtain
 
@@ -83,7 +85,7 @@ $$(F^\ast\omega)_p=\bigwedge({\dd{F}}_p^\ast)(\omega_{F(p)})$$
 
 The differential form $F^\ast\omega$ obtained in this way is called the *pullback* of $\omega$ by $F$. Furthermore, by definition $F^\ast$ is a graded algebra homomorphism, so it also preserves $\wedge$.
 
-In particular, suppose $\omega$ is a $k$-form. At a point $p\in M$, to compute $(F^\ast\omega)_p$, substituting $k$ vectors $X_1(p),\ldots, X_k(p)$, we obtain
+In particular, suppose $\omega$ is a $k$-form. At a point $p\in M$, to compute $(F^\ast\omega)_p$, we substitute $k$ vectors $X_1(p),\ldots, X_k(p)$ to obtain
 
 $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\ldots, X_k(p)\bigr)=\omega_{F(p)}\bigl(\dd{F_p}(X_1(p)), \ldots, \dd{F_p}(X_k(p))\bigr)$$
 
@@ -92,7 +94,7 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 At each point $p$, since $\bigwedge\nolimits^0(T_p^\ast M)=\mathbb{R}$, $\Omega^0(M)$ in [Definition 1](#def1){: data-lid="s1j41" } is equal to $C^\infty(M)$. For any $f\in C^\infty(M)$, its differential $\dd{f}$ is the function that takes each point $p\in M$ and outputs $\dd{f_p}:T_pM\rightarrow\mathbb{R}$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6){: data-lid="fc98r" }) That is, $\dd{f}\in\Gamma(T^\ast M)=\Omega^1(M)$. This operator $d$ is also defined for general differential forms as follows.
 
 ::: Theorem 2
-For a manifold $M$, there uniquely exists a degree $1$ anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$ satisfying the following two conditions. (For the proof, see **[War]**.)
+For a manifold $M$, there exists a unique degree $1$ anti-derivation $d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$ satisfying the following two conditions. (For the proof, see **[War]**.)
 
 1. $d^2=0$,
 2. For any $f\in\Omega^0(M)$, $\dd{f}$ is equal to the differential of $f$ as above.
@@ -113,11 +115,11 @@ We call the cohomology group corresponding to the cochain complex of (1) the *de
 ## Interior multiplication
 
 ::: Definition 3
-Consider a manifold $M$ and a vector field $X$ given on it. Then $\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$ is the map that assigns to each $k$-form $\omega$ the $(k-1)$-form $\iota_X\omega$ defined by the formula
+Consider a manifold $M$ and a vector field $X$ given on it. Then $\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$ is the map that assigns to each $k$-form $\omega$, by the formula
 
 $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1})$$
 
-where in the case $k=0$, we set $\iota_X\omega=0$. This is called the *interior multiplication* by $X$.
+the $(k-1)$-form $\iota_X\omega$, where in the case $k=0$, we set $\iota_X\omega=0$. This is called the *interior multiplication* by $X$.
 :::
 
 ::: Proposition 4
