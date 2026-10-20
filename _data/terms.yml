@@ -13948,6 +13948,13 @@ N:
   defs:
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+- id: normal_sheaf
+  en: normal sheaf
+  ko: 법층
+  primary: en
+  defs:
+  - label: '[스킴] §미분과 여접층'
+    url: /ko/math/scheme_theory/sheaf_of_differentials
 - id: normal_space
   en: normal space
   ko: 정규공간
