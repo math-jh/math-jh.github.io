@@ -12,11 +12,13 @@ date: 2022-06-19
 weight: 9
 translated_at: 2026-09-06T07:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-20T07:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-First, we define the following.
+First, let us define the following.
 
 ::: Definition 1
-Let a manifold $M$ and a coordinate system $(U,\varphi)$ be given. Let $\varphi=(x^i)_{i=1}^m$, let $0\leq k\leq m$, and for $p\in \varphi(U)$, the manifold given by the set
+Let a manifold $M$ and a coordinate system $(U,\varphi)$ be given. Here, let $\varphi=(x^i)_{i=1}^m$ and $0\leq k\leq m$. For $p\in \varphi(U)$, the manifold given by the set
 
 $$S=\{q\in U\mid x^i(q)=r^i(p), k+1\leq i\leq m\}$$
 
@@ -24,7 +26,7 @@ endowed with the subspace topology and the coordinate system $(S, (x^j\vert_S)_{
 :::
 
 ::: Lemma 2
-Let an immersion $F:M\rightarrow N$ between two manifolds be given. Then for each $p\in M$, there exist a coordinate system $(V,\varphi)$ containing $F(p)$ and an open neighborhood $U$ of $p$ such that $F\vert_U$ is injective and $F(U)$ is a slice of $(V,\varphi)$.
+Let an immersion $F:M\rightarrow N$ between two manifolds be given. Then for each $p\in M$, there exist a coordinate system $(V,\varphi)$ containing $F(p)$ and a suitable open neighborhood $U$ of $p$ such that $F\vert_U$ is injective and $F(U)$ is a slice of $(V,\varphi)$.
 :::
 ::: Proof
 Let $\dim M=k$ and $\dim N=n$. Choose, containing $F(p)$, a coordinate system $(V_0,\psi)$, $\psi=(y^i)_{i=1}^n$. Since $\dd{F_p}$ is injective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 10](/en/math/manifolds/submanifolds#cor10){: data-lid="nmpu0" }, a suitable subset of the set $\{y^i\circ F\}$ forms, near the point $p$, a coordinate system for $M$. Rearranging the order of coordinates, we may assume that $x^j=y^j\circ F$ ($j=1,\ldots,k$) form, on a suitable open neighborhood of $p$, denoted $U_1$, a coordinate system $(U_1,x)$, $x=(x^j)_{j=1}^k$. Shrinking $U_1$ if necessary, we may assume $F(U_1)\subseteq V_0$.
@@ -37,7 +39,7 @@ $$\psi(F(q))=\bigl(x^1(q),\ldots,x^k(q),h^{k+1}(x(q)),\ldots,h^n(x(q))\bigr)$$
 
 holds. That is, $F(U_1)$ is, in $\psi$-coordinates, the graph of the function $h=(h^{k+1},\ldots,h^n)$.
 
-Now consider the open subset of $V_0$
+Now if we consider the open subset of $V_0$
 
 $$V'=\left\{q'\in V_0\mid (y^1(q'),\ldots,y^k(q'))\in x(U_1)\right\}$$
 
@@ -74,12 +76,12 @@ However, if $F$ were an embedding, we could choose $(V,\varphi)$ appropriately s
 
 We are now ready to extend the implicit function theorem to differentiable manifolds.
 
-::: Theorem 3 (Implicit function theorem)
-Let $U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open subset, and for distinction, let the coordinates of $\mathbb{R}^{m-n}$ be $s^1,\ldots, s^{m-n}$, and the coordinates of $\mathbb{R}^n$ be $r^1,\ldots, r^n$. Also, let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose that for some point $(s_0,r_0)\in U$, we have $f(s_0,r_0)=0$. If at the point $(s_0,r_0)$, the Jacobian matrix
+::: Theorem 3 (Implicit Function Theorem)
+Let $U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open subset, and for distinction, let the coordinates of $\mathbb{R}^{m-n}$ be $s^1,\ldots, s^{m-n}$, and the coordinates of $\mathbb{R}^n$ be $r^1,\ldots, r^n$. Also, let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose that for some point $(s_0,r_0)\in U$, we have $f(s_0,r_0)=0$. If, in the Jacobian matrix at the point $(s_0,r_0)$,
 
 $$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^{m-n}&\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^{m-n}&\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\ \vdots&\vdots&\ddots&\vdots&\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^{m-n}&\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
-has the property that its $n\times n$ submatrix
+the $n\times n$ submatrix
 
 $$\begin{pmatrix}\partial f^1/\partial r^1&\partial f^1/\partial r^2&\cdots&\partial f^1/\partial r^n\\\partial f^2/\partial r^1&\partial f^2/\partial r^2&\cdots&\partial f^2/\partial r^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial r^1&\partial f^n/\partial r^2&\cdots&\partial f^n/\partial r^n\end{pmatrix}$$
 
@@ -87,20 +89,20 @@ is nonsingular, then there exist an open neighborhood of $s_0$, denoted $V$, an 
 
 $$f(p,q)=0\iff q=g(p)$$
 
-is satisfied.
+holds.
 :::
 
 ::: Corollary 4 (Submersion level set theorem)
-Let $F:M\rightarrow N$ be $C^\infty$, fix $q\in F(M)$, and let $P=F^{-1}(q)$. If for every $p\in P$, the differential $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is surjective, then there exists a unique manifold structure defined on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
+Let $F:M\rightarrow N$ be $C^\infty$, fix $q\in F(M)$, and let $P=F^{-1}(q)$. If for every $p\in P$, $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ is surjective, then there exists a unique manifold structure defined on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
 
-Moreover, in this case $\iota$ is an embedding, and the codimension of $P$, $\dim M-\dim P$, is equal to $\dim N$."
+Moreover, in this case $\iota$ is an embedding, and the codimension $\dim M-\dim P$ of $P$ is equal to $\dim N$.
 :::
 ::: Proof
 Let $\dim M=m$ and $\dim N=n$. Fix an arbitrary $p\in P$, and choose a coordinate system $(Y,\psi)$, $\psi=(y^j)_{j=1}^n$ containing $q=F(p)$ such that $\psi(q)=0$. Since $\dd{F_p}$ is surjective, by [§Submanifolds and the Inverse Function Theorem, ⁋Corollary 9](/en/math/manifolds/submanifolds#cor9){: data-lid="fmsff" }, there exist functions $x^{n+1},\ldots,x^m$ such that
 
 $$x^1=y^1\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^{n+1},\quad\ldots,\quad x^m$$
 
-form, on a suitable open neighborhood of $p$, denoted $W$, a coordinate system. Shrinking $W$ if necessary, we may assume $F(W)\subseteq Y$. Then for $w\in W$, having $F(w)=q$ is equivalent, since $\psi$ is injective, to $y^j(F(w))=0$ holding for all $j\leq n$, and therefore
+form a coordinate system on a suitable open neighborhood $W$ of $p$. Shrinking $W$ if necessary, we may assume $F(W)\subseteq Y$. Then for $w\in W$, having $F(w)=q$ is equivalent, since $\psi$ is injective, to $y^j(F(w))=0$ holding for all $j\leq n$, and therefore
 
 $$P\cap W=\left\{w\in W\mid x^1(w)=\cdots=x^n(w)=0\right\}$$
 
@@ -114,7 +116,7 @@ Since $x=(x^i)_{i=1}^m$ is a homeomorphism from $W$ to the open subset $x(W)\sub
 
 $$\varphi_{p'}\circ\varphi_p^{-1}:a\mapsto \bigl(\text{$x'\circ x^{-1}(0,a)$의 마지막 $m-n$개의 성분}\bigr)$$
 
-which, between two coordinate systems of $M$, is the composition and restriction of $C^\infty$ transition functions, and thus is $C^\infty$. Since $P$ is Hausdorff and second countable as a subspace of $M$, these charts make $P$ into an $(m-n)$-dimensional manifold.
+which, as the composition and restriction of $C^\infty$ transition functions between two coordinate systems of $M$, is $C^\infty$. Since $P$ is Hausdorff and second countable as a subspace of $M$, these charts make $P$ into an $(m-n)$-dimensional manifold.
 
 With respect to this structure, $\iota:P\hookrightarrow M$ is of the form $a\mapsto(0,a)$ in coordinates and thus is $C^\infty$, and $\dd{\iota}$ is injective at every point. That is, $\iota$ is an injective immersion and therefore a submanifold, and since $P$ was endowed with the subspace topology from the beginning, it is an embedding. Counting dimensions, the codimension of $P$ is $\dim M-\dim P=m-(m-n)=n=\dim N$.
 
@@ -124,9 +126,9 @@ Finally, the uniqueness of this manifold structure follows from [§Uniqueness of
 The following corollary does not require $\dd{F_p}$ to be surjective, but only that its rank is constant, so it can be used even when the preceding corollary does not apply.
 
 ::: Corollary 5 (Constant-rank level set theorem)
-Let $F:M\rightarrow N$ be $C^\infty$, and suppose that $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ has the same rank $r$ at every point $p\in M$. Fixing $q\in F(M)$ and letting $P=F^{-1}(q)$, there exists a unique manifold structure defined on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
+Let $F:M\rightarrow N$ be $C^\infty$, and suppose that $\dd{F_p}:T_pM\rightarrow T_{F(p)}N$ has the same rank $r$ at every point $p\in M$. Fix $q\in F(M)$ and let $P=F^{-1}(q)$. Then there exists a unique manifold structure defined on $P$ such that the canonical injection $\iota:P\hookrightarrow M$ is a submanifold.
 
-Moreover, in this case $\iota$ is an embedding, and the codimension of $P$, $\dim M-\dim P$, is equal to $r$.
+Moreover, in this case $\iota$ is an embedding, and the codimension $\dim M-\dim P$ of $P$ is equal to $r$.
 :::
 
 Using these theorems, we can show that a particular subset of a given manifold $M$ is an embedded submanifold, which typically follows an argument such as the following.
@@ -140,7 +142,7 @@ For any point $x\in \mathbb{R}^{n+1}$ and $v\in T_x\mathbb{R}^{n+1}$,
 
 $$\dd{f_x}(v)=v(f)=\sum v^i\frac{\partial f}{\partial r^i}\bigg\vert_{x}=2\sum r^i(x) v^i$$
 
-holds, from which we see that as long as $x$ is not the origin, by adjusting $v$ we can make $\dd{f_x}(v)$ take any real value. That is, since $\dd{f_x}$ is always surjective away from the origin, there exists a unique manifold structure such that $f^{-1}(1)$ is a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given to $S^n$, and by [Corollary 4](#cor4){: data-lid="zeyal" } again, we see that this is an embedded submanifold of $\mathbb{R}^{n+1}$.
+holds, from which we see that if $x$ is not the origin, by adjusting $v$ we can make $\dd{f_x}(v)$ take any real value. That is, since $\dd{f_x}$ is always surjective except at the origin, there exists a unique manifold structure such that $f^{-1}(1)$ is a submanifold of $\mathbb{R}^{n+1}$. By uniqueness, this structure coincides with the manifold structure given to $S^n$, and again by [Corollary 4](#cor4){: data-lid="zeyal" }, we see that this structure is an embedded submanifold of $\mathbb{R}^{n+1}$.
 :::
 
 ---
