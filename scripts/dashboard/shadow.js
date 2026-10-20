@@ -13,6 +13,7 @@ var SH = {
   note: {},        /* lid·qid → 쓰던 설명 */
   pv: null,        /* 미리보기 중인 링크 (lid·permalink·path·line) */
   modal: null,     /* 근거 모달에 띄운 lid — 문맥이 늦게 와도 그 모달에만 넣는다 */
+  after: null,     /* 판정한 링크 바로 아래 lid — 다시 그린 뒤 미리보기를 거기로 옮긴다 */
   pilot: null,     /* /api/shadow/pilot — 판정 대기 아래에 읽기 전용으로 붙인다 */
   pilotAll: false  /* 파일럿에서 만장일치 링크도 보이기 */
 };
@@ -155,11 +156,13 @@ function shSelect(x) {
   });
   shPaint();
 }
-var SH_SEEN = {}, SH_FIRST = null;   /* 한 번 그릴 때 보인 링크들 — 고른 게 사라지면 첫 링크로 */
+/* 한 번 그릴 때 보인 링크들 — 고른 게 사라지면 판정한 링크 바로 아래 링크로(SH.after),
+   그것도 없으면 첫 링크로 */
+var SH_SEEN = {}, SH_FIRST = null;
 function shPick(row, x) {
   row.dataset.lid = x.lid;
   if (!x.permalink) return;
-  SH_SEEN[x.lid] = true;
+  SH_SEEN[x.lid] = x;
   if (!SH_FIRST) SH_FIRST = x;
   row.classList.add('sh-item--pick');
   if (SH.pv && SH.pv.lid === x.lid) row.classList.add('sh-item--sel');
@@ -167,6 +170,16 @@ function shPick(row, x) {
     if (e.target.closest('button, select, textarea, input, a, label')) return;
     shSelect(x);
   };
+}
+/* 판정 직전 화면에서 그 링크 바로 아래 링크 — 맨 아래였으면 바로 위 링크. 미리보기 중이
+   아닌 링크를 판정했으면 null 이라 미리보기는 그대로 남는다. */
+function shAfter(lid) {
+  if (!SH.pv || SH.pv.lid !== lid) return null;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#shadow-root .sh-item--pick'));
+  var i = rows.findIndex(function (r) { return r.dataset.lid === lid; });
+  if (i < 0) return null;
+  var r = rows[i + 1] || rows[i - 1];
+  return r ? r.dataset.lid : null;
 }
 
 /* ── 조각 ─────────────────────────────────────────────────────────────── */
@@ -301,8 +314,9 @@ function shItem(x, g, openQs) {
   var act = el('div', 'sh-act');
   ['required', 'weak', 'forward'].forEach(function (rel) {
     act.appendChild(shBtn(SH_REL[rel] + ' (' + rel + ')', 'sh-rel sh-rel--' + rel, function () {
+      var after = shAfter(x.lid);
       shPost('rule', { lid: x.lid, relation: rel, explanation: SH.note[x.lid] || '' })
-        .then(function () { delete SH.note[x.lid]; shLoad(); });
+        .then(function () { delete SH.note[x.lid]; SH.after = after; shLoad(); });
     }));
   });
   var mv = el('select', 'sh-move');
@@ -375,10 +389,12 @@ function shAudit(d) {
     var act = el('div', 'sh-act');
     ['required', 'weak', 'forward'].forEach(function (rel) {
       act.appendChild(shBtn(SH_REL[rel] + ' (' + rel + ')', 'sh-rel sh-rel--' + rel, function () {
+        var after = shAfter(x.lid);
         shPost('audit', { lid: x.lid, relation: rel, explanation: SH.note['a:' + x.lid] || '' }).then(function (j) {
           if (j.need_explanation) { SH.reveal[x.lid] = j.reveal; shRender(); return; }
           delete SH.reveal[x.lid]; delete SH.note['a:' + x.lid];
           SH.err = j.match ? '일치 — ' + x.lid : '반영 — ' + x.lid + ' (digest 로 넘어갔다)';
+          SH.after = after;
           shLoad();
         });
       }));
@@ -628,7 +644,12 @@ function shRender() {
   body.appendChild({ queue: shQueue, audit: shAudit, drafts: shDrafts, book: shBook, settled: shSettled }[SH.tab](d));
   root.appendChild(body);
   window.scrollTo(0, y);
-  if ((!SH.pv || !SH_SEEN[SH.pv.lid]) && SH_FIRST) shSelect(SH_FIRST);
+  /* SH.after 는 쓸 때만 비운다 — 파일럿 읽기가 먼저 끝나 옛 데이터로 한 번 더 그려도 남도록. */
+  if (!SH.pv || !SH_SEEN[SH.pv.lid]) {
+    var next = (SH.after && SH_SEEN[SH.after]) || SH_FIRST;
+    SH.after = null;
+    if (next) shSelect(next);
+  }
 }
 
 window.secShadow = function () {
