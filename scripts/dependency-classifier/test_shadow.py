@@ -397,6 +397,44 @@ class ScopeTest(unittest.TestCase):
                 [[paths["live"]], [paths["draft"]], [paths["rev"], paths["en"]]])
         self.assertEqual(skip, {"draft", "rev+en"})
 
+    def test_recheck_drops_links_of_paused_posts(self):
+        from types import SimpleNamespace
+        import shadow_tick
+        import shadow_units as units
+        paths = [EndToEndFakeModelTest.POST]
+        key = dc.unit_key(paths)
+        record = {"unit": key, "links": {"zzzzz": {"final": {"relation": "weak"}}}}
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["recheck"] = [{"lid": "zzzzz", "precedent": "P-0001", "created": 0}]
+            store.save_queue(queue)
+        with patch.object(units, "all_units", return_value=[paths]), \
+                patch.object(store, "load_unit_record", return_value=record), \
+                patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
+                patch.object(shadow_tick, "out_of_scope", return_value={key}), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(models, "call", side_effect=AssertionError("no model call")):
+            self.assertTrue(shadow_tick.run_recheck(commit=False))
+        queue = store.load_queue()
+        self.assertEqual(queue["recheck"], [])
+        self.assertNotIn("zzzzz", queue["human"])
+
+    def test_recheck_candidates_skip_paused_posts(self):
+        import shadow_digest
+        import shadow_tick
+        import shadow_units as units
+        s1 = {"basis": "zz-basis", "evidence": "e", "reason": "r"}
+        rec = {"final": {"relation": "weak"}, "stages": {"S1": {"step1": s1}},
+               "features": {"target_kind": "zz", "in_proof": True}}
+        for name in ("paused", "live"):
+            store.write_json(store.UNITS_DIR / f"zz-{name}.json",
+                             {"unit": name, "links": {f"{name}-link": rec}})
+        ruled = (None, {"links": {"ruled": rec}}, "ruled")
+        with patch.object(units, "all_units", return_value=[]), \
+                patch.object(shadow_tick, "out_of_scope", return_value={"paused"}):
+            ids = {c["id"] for c in shadow_digest._recheck_candidates([ruled])}
+        self.assertEqual(ids, {"live-link"})
+
 
 if __name__ == "__main__":
     unittest.main()

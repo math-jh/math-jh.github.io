@@ -78,7 +78,12 @@ def _locate(lid: str) -> tuple[units.Unit, dict] | None:
 
 
 def _recheck_candidates(job_links: list[tuple[units.Unit, dict, str]]) -> list[dict]:
-    """Finished links whose Step 1 answers look like the ruled links' — by pattern, not by model."""
+    """Finished links whose Step 1 answers look like the ruled links' — by pattern, not by model.
+
+    Links of drafts and posts under revision are left out: the recheck would drop them.
+    """
+    from shadow_tick import out_of_scope
+    paused = out_of_scope(units.all_units())
     patterns = set()
     for _, record, lid in job_links:
         rec = record["links"][lid]
@@ -88,6 +93,8 @@ def _recheck_candidates(job_links: list[tuple[units.Unit, dict, str]]) -> list[d
     out = []
     for path in sorted(store.UNITS_DIR.glob("*.json")):
         record = store.read_json(path, {})
+        if record.get("unit") in paused:
+            continue
         for lid, rec in record.get("links", {}).items():
             if lid in ruled or not (rec.get("final") or {}).get("relation"):
                 continue

@@ -223,19 +223,25 @@ def run_recheck(commit: bool) -> bool:
         return False
     item = queue["recheck"][0]
     lid = item["lid"]
+    all_paths = units.all_units()
     found = None
-    for paths in units.all_units():
+    for paths in all_paths:
         h = units.unit_hash(dc.unit_key(paths))
         record = store.load_unit_record(h)
         if lid in record.get("links", {}):
             found = (paths, h, record)
             break
-    if found is None or units.load_unit(found[0]).link(lid) is None:
+    gone = found is None or units.load_unit(found[0]).link(lid) is None
+    # A draft or a post under revision gets a fresh round once its flag is gone,
+    # and that round sees the new precedent anyway.
+    paused = not gone and dc.unit_key(found[0]) in out_of_scope(all_paths)
+    if gone or paused:
         with _locked():
             queue = store.load_queue()
             queue["recheck"] = [x for x in queue["recheck"] if x != item]
             store.save_queue(queue)
-        log(f"shadow recheck {lid}: the link is gone; dropped")
+        log(f"shadow recheck {lid}: " + ("the link is gone" if gone else "its post is a draft or under revision")
+            + "; dropped")
         return True
     paths, h, record = found
     unit = units.load_unit(paths)
