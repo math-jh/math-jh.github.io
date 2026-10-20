@@ -13701,6 +13701,13 @@ N:
   defs:
   - label: '[대수다양체] §Noether Formula'
     url: /ko/math/algebraic_varieties/noether_formula
+- id: noether-lefschetz_locus
+  en: Noether-Lefschetz locus
+  ko: 뇌터-렙셰츠 궤적
+  primary: en
+  defs:
+  - label: '[대수다양체] §K3 Surfaces'
+    url: /ko/math/algebraic_varieties/k3_surfaces
 - id: noether_normalization
   en: Noether normalization
   ko: 뇌터 정규화
