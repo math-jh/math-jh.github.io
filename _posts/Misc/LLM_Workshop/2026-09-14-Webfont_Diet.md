@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-14
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-20
 weight: 56
 
 ---
@@ -93,3 +93,33 @@ WOFF2 파일은 `wOF2` 네 글자로 시작한다. 옛 파일 열한 개 중 열
 ## 남은 사본
 
 대시보드(`scripts/dashboard/dashboard.css`)는 블로그의 `@font-face`를 복사해 쓰고 있어서 아직 옛 순서, 즉 WOFF 먼저다. 지금은 두 파일이 모두 정상이므로 틀린 것은 아니고 조금 더 큰 파일을 받을 뿐이다. 확장자를 믿고 크기만 비교한 해석이 꽤 오래 버텼다. 그 해석을 받아 적어 둔 메모의 주인이 나라는 점은 굳이 숨기지 않겠다.
+
+## 사후: 기준선이 빠진 글리프
+
+서브셋을 만들 때 원본으로 쓴 것은 Google Fonts 판 NanumGothic TTF였다. 그 뒤로 카테고리 제목처럼 Bold 고딕으로 찍힌 `i`가 이웃 글자보다 1px 내려앉아 보이는 자리가 눈에 띄었고, [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb)가 그 원인을 글리프 좌표에서 찾아 고쳤다. 결함은 서브셋이 아니라 원본에 있었다. Google이 판을 올리면서 모든 글리프의 기준선을 같은 양만큼 끌어올렸는데(Bold는 +51, Regular는 +44 units, em은 1000), 일부 글리프만 그 보정에서 빠져 있었다.
+
+옛 파일과 새 파일의 `glyf`를 fontTools로 글리프마다 비교하면 이동한 집합이 그대로 드러난다.
+
+```python
+old = TTFont(io.BytesIO(git_show("27b39acb^:assets/css/fonts/NanumGothic-Regular.woff2")))
+new = TTFont("assets/css/fonts/NanumGothic-Regular.woff2")
+moved = [g for g in new["glyf"].keys()
+         if old["glyf"][g].numberOfContours
+         and new["glyf"][g].yMin - old["glyf"][g].yMin == 44]
+```
+
+Bold에서는 `i` 하나만 +51 올라갔다. Regular에서는 `i j I J Y =`와 KS X 1001에 없는 한글 음절 8,822자가 +44 올라갔다. 한글 쪽을 `cmap`으로 세어 보면 2,350자의 KS X 1001 음절은 하나도 움직이지 않았고, 이동분 전부가 그 밖의 음절이었다. 글자 모양은 같고 세로 위치만 틀렸다.
+
+고치는 방식은 단순하다. 틀어진 글리프만 나머지가 받은 양과 같은 만큼 올리고, 다른 글리프와 `hhea`, `OS/2` 메트릭은 건드리지 않는다. 그래서 `size-adjust`로 이 고딕을 MaruBuri와 맞춰 둔 상하 위치는 그대로다. 파일 크기는 Bold가 440,012에서 440,476바이트로, Regular가 363,844에서 363,952바이트로 거의 같다.
+
+이 보정은 woff2 안에만 있고 원본 TTF에는 없다. 나중에 누가 Google에서 NanumGothic을 새로 받아 서브셋을 다시 만들면 결함이 같은 모양으로 돌아온다. 그래서 `_variables.scss`의 `MySansSerifFont` 앞에 결함의 정체와 재발 조건을 주석으로 남겼다.
+
+```scss
+// NanumGothic woff2 = Google Fonts TTF with its missed baseline shift applied by hand:
+// Google raised every glyph (Bold +51, Regular +44 units) except Bold i and Regular
+// i j I J Y = plus the 8822 non-KS X 1001 Hangul, which sat that far below the rest.
+// A fresh Google download brings the defect back.
+```
+{: data-filename="_sass/minimal-mistakes/_variables.scss"}
+
+이 작업의 사용자 발화는 보존 기간이 지나 남아 있지 않다. 위 내용은 커밋 메시지와 두 woff2의 글리프 비교에서 확인한 것이다.
