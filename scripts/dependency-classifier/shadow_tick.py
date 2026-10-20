@@ -14,7 +14,8 @@ Order of business:
    complete results early.  A new round starts only while fewer than ``WIP_CAP``
    rounds are open.  New links in a finished unit come before untouched units,
    and among untouched units those with links production has no value for come
-   first, since the shadow ledger fills exactly those slots on the site.
+   first, since the shadow ledger fills exactly those slots on the site.  Only
+   published posts that are not under revision are judged (``out_of_scope``).
 
 A round is the set of links one pass through S1→S2→S3 judges.  If a unit's text
 changes while its round is open, the round restarts.  After S3 the round is
@@ -27,6 +28,7 @@ failed run, so those words appear only for real failures.
 """
 from __future__ import annotations
 
+import re
 import time
 from pathlib import Path
 
@@ -51,16 +53,40 @@ def _fingerprint(paths: list[Path]) -> str:
     return units.Unit(key="", paths=paths, texts={p: p.read_text(encoding="utf-8") for p in paths}).fingerprint
 
 
+# The key of scripts/ci/freeze_revising_posts.py for a published post being reworked.
+REVISING_RE = re.compile(r"^revising:\s*true\s*$", re.M)
+
+
+def out_of_scope(all_paths: list[list[Path]]) -> set[str]:
+    """Keys of the units the cron leaves alone: drafts (``published: false``) and posts
+    under revision.  Their text is still being edited and links come and go, so they
+    are judged once the flag is gone (user decision 2026-10-20).  A round under way
+    pauses and restarts then, since the text will have changed."""
+    published = {post.path: post.published for post in dc._POSTS}
+    skip = set()
+    for paths in all_paths:
+        for path in paths:
+            text = path.read_text(encoding="utf-8")
+            front = text[4:].split("\n---", 1)[0] if text.startswith("---\n") else ""
+            if not published.get(path, True) or REVISING_RE.search(front):
+                skip.add(dc.unit_key(paths))
+                break
+    return skip
+
+
 def pick(state: dict) -> tuple | None:
     """The next (paths, stage, unit, reason) to run, or None."""
     now = time.time()
     all_paths = units.all_units()
     rels = [str(p.relative_to(store.ROOT)) for paths in all_paths for p in paths]
     dirty = set(dirty_paths(rels, store.ROOT))
+    skip = out_of_scope(all_paths)
     entries = state["units"]
-    open_rounds = sum(1 for e in entries.values() if e.get("next"))
+    open_rounds = sum(1 for key, e in entries.items() if e.get("next") and key not in skip)
 
     def usable(paths: list[Path], key: str) -> bool:
+        if key in skip:
+            return False
         if any(str(p.relative_to(store.ROOT)) in dirty for p in paths):
             return False
         entry = entries.get(key, {})

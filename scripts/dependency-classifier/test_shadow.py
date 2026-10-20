@@ -379,5 +379,24 @@ class EndToEndFakeModelTest(unittest.TestCase):
         self.assertEqual(open_q[0].description, "통합 쟁점")
 
 
+class ScopeTest(unittest.TestCase):
+    def test_drafts_and_revising_posts_are_left_alone(self):
+        from types import SimpleNamespace
+        import shadow_tick
+        d = Path(tempfile.mkdtemp(prefix="scope-", dir=TMP))
+        heads = {"live": "title: a", "draft": "title: b\npublished: false",
+                 "rev": "title: c\nrevising: true", "en": "title: d"}
+        paths = {}
+        for name, head in heads.items():
+            paths[name] = d / f"{name}.md"
+            paths[name].write_text(f"---\n{head}\n---\nbody\n", encoding="utf-8")
+        posts = [SimpleNamespace(path=p, published=name != "draft") for name, p in paths.items()]
+        key = lambda ps: "+".join(p.stem for p in ps)  # noqa: E731
+        with patch.object(dc, "_POSTS", posts), patch.object(dc, "unit_key", key):
+            skip = shadow_tick.out_of_scope(
+                [[paths["live"]], [paths["draft"]], [paths["rev"], paths["en"]]])
+        self.assertEqual(skip, {"draft", "rev+en"})
+
+
 if __name__ == "__main__":
     unittest.main()
