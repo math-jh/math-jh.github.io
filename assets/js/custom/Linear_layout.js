@@ -250,18 +250,30 @@
   /* 선 모양. 첫 부모 선은 레인 위의 직선이고, 갈라지는 자리에서는 부모 바로 뒤에서 한 번
      휘어 자기 레인으로 들어간다. 그 밖의 선(합류선)은 출발 글의 레인을 따라 가다가 도착
      직전에 휜다 — 갈라짐의 거울상이다. 휘는 구간은 낙차가 클수록 길게 잡아 꺾임이 세로로
-     서지 않게 한다. k 는 휘는 구간의 길이 배율이고, 열 간격이 좁은 그림에서 줄여 쓴다. */
-  function linkPath(s, t, isFirstParent, k) {
+     서지 않게 한다. k 는 휘는 구간의 길이 배율이고, 열 간격이 좁은 그림에서 줄여 쓴다.
+     왼쪽으로 가는 선(순환 안의 required, weak 일부)은 출발 글에서 도착 글 쪽으로 반 레인 휘어
+     나와 레인 사이 빈 줄을 따라 가다가 도착 직전에 휜다. 레인 위를 달리면 그 레인의 점들을
+     꿰어 그 글들과도 이어진 것처럼 보이기 때문이다. gap 은 레인 간격이다. */
+  function linkPath(s, t, isFirstParent, k, gap) {
     if (!s || !t) return '';
     k = k || 1;
     var dx = t.x - s.x, dy = t.y - s.y;
+    function bend(drop) { return Math.max(20 * k, Math.abs(drop) * 0.45 + 14 * k); }
+    if (dx <= -24 * k) {
+      var y = s.y + (dy < 0 ? -1 : 1) * (gap || 12 * k) / 2;
+      var leave = bend(y - s.y), enter = bend(t.y - y), fit = Math.min(1, -dx / (leave + enter));
+      leave *= fit; enter *= fit;
+      return 'M' + s.x + ',' + s.y + ' C' + (s.x - leave / 2) + ',' + s.y + ' ' +
+        (s.x - leave / 2) + ',' + y + ' ' + (s.x - leave) + ',' + y + ' L' + (t.x + enter) + ',' + y +
+        ' C' + (t.x + enter / 2) + ',' + y + ' ' + (t.x + enter / 2) + ',' + t.y + ' ' + t.x + ',' + t.y;
+    }
     if (dx < 24 * k) {
-      // 같은 열이거나 왼쪽으로 가는 선(순환 안의 required, weak 일부).
+      // 같은 열 안의 선.
       return 'M' + s.x + ',' + s.y + ' C' + (s.x + 34 * k) + ',' + s.y + ' ' +
         (t.x - 34 * k) + ',' + t.y + ' ' + t.x + ',' + t.y;
     }
     if (!dy) return 'M' + s.x + ',' + s.y + ' L' + t.x + ',' + t.y;
-    var run = Math.min(dx * 0.8, Math.max(20 * k, Math.abs(dy) * 0.45 + 14 * k));
+    var run = Math.min(dx * 0.8, bend(dy));
     if (isFirstParent) {
       return 'M' + s.x + ',' + s.y + ' C' + (s.x + run / 2) + ',' + s.y + ' ' +
         (s.x + run / 2) + ',' + t.y + ' ' + (s.x + run) + ',' + t.y + ' L' + t.x + ',' + t.y;

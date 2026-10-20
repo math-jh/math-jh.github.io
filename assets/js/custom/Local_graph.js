@@ -284,7 +284,7 @@
       });
       drawn.forEach(function (l) {
         var e = L.endpoints(l);
-        trace(L.linkPath(rel[e[0]], rel[e[1]], model.firstParent[e[1]] === e[0], Math.min(1, sx)),
+        trace(L.linkPath(rel[e[0]], rel[e[1]], model.firstParent[e[1]] === e[0], Math.min(1, sx), gap),
           function (x, y) { touch(x, y, 1); });
       });
 
@@ -408,7 +408,7 @@
         var e = L.endpoints(link);
         var path = svgEl('path', {
           class: 'lg-link',
-          d: L.linkPath(geo.positions[e[0]], geo.positions[e[1]], model.firstParent[e[1]] === e[0], geo.k)
+          d: L.linkPath(geo.positions[e[0]], geo.positions[e[1]], model.firstParent[e[1]] === e[0], geo.k, geo.gap)
         });
         if (link.relation === 'weak') path.setAttribute('stroke-dasharray', '2 5');
         else if (link.relation === 'forward') path.setAttribute('stroke-dasharray', '9 5');

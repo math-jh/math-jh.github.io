@@ -441,7 +441,7 @@
     function linkPath(link) {
       var e = endpoints(link);
       return Layout.linkPath(linearGeometry.positions[e[0]], linearGeometry.positions[e[1]],
-        linearGeometry.firstParent[e[1]] === e[0]);
+        linearGeometry.firstParent[e[1]] === e[0], 1, linearGeometry.laneGap);
     }
     // 고른 글의 라벨은 점 오른쪽에 가로로, 나머지는 점 오른쪽 위나 아래로 비스듬히 놓는다.
     function labelBox(entry, spot, size, bold) {
