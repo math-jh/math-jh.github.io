@@ -7925,6 +7925,13 @@ G:
   defs:
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+- id: genus_formula
+  en: genus formula
+  ko: 종수 공식
+  primary: en
+  defs:
+  - label: '[대수다양체] §표준선다발'
+    url: /ko/math/algebraic_varieties/canonical_bundle
 - id: genus_g_n_-point_degree_beta_gromov-witten_invariant
   en: genus $g$, $n$-point, degree $\beta$ Gromov-Witten invariant
   ko: 그로모프-위튼 불변량
@@ -14045,6 +14052,13 @@ N:
   defs:
   - label: '[가환대수학] §영점정리'
     url: /ko/math/commutative_algebra/nullstellensatz
+- id: numerical_equivalence
+  en: numerical equivalence
+  ko: 수치적 동치
+  primary: en
+  defs:
+  - label: '[대수다양체] §곡면에서의 리만-로흐 정리'
+    url: /ko/math/algebraic_varieties/riemann_roch_surfaces
 - id: numerical_polynomial
   en: numerical polynomial
   ko: 수치 다항식
