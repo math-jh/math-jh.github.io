@@ -160,6 +160,7 @@
 "ghqcp": {relation: weak, reviewed: true}
 "gjia1": {relation: required, reviewed: true}
 "gmbhu": {relation: weak, reviewed: true}
+"gngll": {relation: weak, reviewed: true}
 "gqj2v": {relation: forward, reviewed: true}
 "gub40": {relation: required, reviewed: true}
 "gw8c8": {relation: required, reviewed: true}
@@ -212,6 +213,7 @@
 "lhuop": {relation: required, reviewed: true}
 "litlx": {relation: weak, reviewed: true}
 "lm39p": {relation: required, reviewed: true}
+"lmgod": {relation: weak, reviewed: true}
 "lmrho": {relation: required, reviewed: true}
 "lsbxo": {relation: required, reviewed: true}
 "m85w7": {relation: required, reviewed: true}
@@ -278,6 +280,7 @@
 "t3cd5": {relation: required, reviewed: true}
 "t4k4c": {relation: required, reviewed: true}
 "t51kr": {relation: required, reviewed: true}
+"t5r57": {relation: required, reviewed: true}
 "tkjmv": {relation: required, reviewed: true}
 "tpsgt": {relation: required, reviewed: true}
 "tpsxb": {relation: weak, reviewed: true}
