@@ -14471,6 +14471,13 @@ O:
   defs:
   - label: '[집합론] §서수들 사이의 순서관계'
     url: /ko/math/set_theory/order_relations_between_ordinals
+- id: ordinary_double_point
+  en: ordinary double point
+  ko: 통상 이중점
+  primary: en
+  defs:
+  - label: '[대수다양체] §베주 정리'
+    url: /ko/math/algebraic_varieties/bezout_theorem
 - id: orientable
   en: orientable
   ko: 가향
