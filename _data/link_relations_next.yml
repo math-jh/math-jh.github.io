@@ -5,6 +5,7 @@
 # Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
 "01vpb": {relation: weak, reviewed: true}
+"04sw7": {relation: weak, reviewed: true}
 "04zmd": {relation: required, reviewed: true}
 "0agcc": {relation: required, reviewed: true}
 "0fvm2": {relation: weak, reviewed: true}
@@ -20,6 +21,7 @@
 "1vm97": {relation: required, reviewed: true}
 "28f6o": {relation: required, reviewed: true}
 "28xaw": {relation: weak, reviewed: true}
+"29rat": {relation: weak, reviewed: true}
 "2e2al": {relation: weak, reviewed: true}
 "2tmsi": {relation: weak, reviewed: true}
 "30g6y": {relation: required, reviewed: true}
@@ -34,6 +36,7 @@
 "3p6i7": {relation: forward, reviewed: true}
 "4ctjd": {relation: forward, reviewed: true}
 "4d21s": {relation: required, reviewed: true}
+"4dqye": {relation: required, reviewed: true}
 "4hf9f": {relation: required, reviewed: true}
 "4mlmd": {relation: weak, reviewed: true}
 "4q873": {relation: required, reviewed: true}
@@ -41,6 +44,7 @@
 "4ucbf": {relation: required, reviewed: true}
 "4wioj": {relation: weak, reviewed: true}
 "56hfy": {relation: required, reviewed: true}
+"5887s": {relation: required, reviewed: true}
 "5ac8a": {relation: required, reviewed: true}
 "5fawj": {relation: required, reviewed: true}
 "5gtrf": {relation: weak, reviewed: true}
@@ -84,6 +88,7 @@
 "978rp": {relation: weak, reviewed: true}
 "9arnl": {relation: required, reviewed: true}
 "9i8w3": {relation: weak, reviewed: true}
+"9ialn": {relation: required, reviewed: true}
 "9iftl": {relation: required, reviewed: true}
 "9ji9i": {relation: required, reviewed: true}
 "9o73p": {relation: required, reviewed: true}
@@ -126,6 +131,8 @@
 "e4s3k": {relation: required, reviewed: true}
 "e5e8d": {relation: required, reviewed: true}
 "e6tco": {relation: weak, reviewed: true}
+"e9tag": {relation: required, reviewed: true}
+"eaggw": {relation: weak, reviewed: true}
 "ecyf4": {relation: required, reviewed: true}
 "eig60": {relation: weak, reviewed: true}
 "ej8i4": {relation: weak, reviewed: true}
@@ -281,6 +288,7 @@
 "wbtzv": {relation: weak, reviewed: true}
 "wchiy": {relation: weak, reviewed: true}
 "wetkp": {relation: required, reviewed: true}
+"wq0h3": {relation: required, reviewed: true}
 "wr8kj": {relation: required, reviewed: true}
 "wta98": {relation: required, reviewed: true}
 "wyxfx": {relation: required, reviewed: true}
