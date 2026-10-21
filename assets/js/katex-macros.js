@@ -108,6 +108,7 @@ window.KATEX_MACROS = {
     "\\Crit":"\\operatorname{Crit}",
     "\\curl":"\\operatorname{curl}",
     "\\degree":"\\operatorname{deg}",
+    "\\Def":"\\operatorname{Def}",
     "\\Der":"\\operatorname{Der}",
     "\\Desc":"\\operatorname{Desc}",
     "\\diag":"\\operatorname{diag}",
