@@ -4394,6 +4394,13 @@ C:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: cycle_class_map
+  en: cycle class map
+  ko: 순환류 사상
+  primary: en
+  defs:
+  - label: '[대수다양체] §저우 군'
+    url: /ko/math/algebraic_varieties/chow_groups
 - id: cyclic_extension
   en: cyclic extension
   ko: 순환확대
@@ -12182,6 +12189,13 @@ L:
     url: /ko/math/algebraic_structures/field_of_fractions
   - label: '[가환대수학] §국소화'
     url: /ko/math/commutative_algebra/localization
+- id: localization_exact_sequence
+  en: localization exact sequence
+  ko: 국소화 완전열
+  primary: en
+  defs:
+  - label: '[대수다양체] §저우 군'
+    url: /ko/math/algebraic_varieties/chow_groups
 - id: localization_theorem
   en: localization theorem
   ko: 국소화 정리
