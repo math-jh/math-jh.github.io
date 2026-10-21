@@ -50,4 +50,49 @@
   \node[accent1, right] at (10.2,2.5) {$q$};
 \end{tikzpicture}
 
+%%FIG contracting the bubble of a relative stable morphism gives a Gathmann comb (Li_Relative_GW-2.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% left: Li, a map to X[1]_0
+  \draw[line width=.8pt] (0,0) rectangle (2.8,3.6);
+  \draw[line width=.8pt] (2.8,0) rectangle (4.8,3.6);
+  \draw[accent1, line width=1.2pt] (4.8,0)--(4.8,3.6);
+  \node at (1.4,-.45) {$X$};
+  \node at (3.8,-.45) {$P$};
+  \node[below] at (2.8,0) {$Y$};
+  \node[accent1, right] at (4.8,.5) {$Y[1]_0$};
+  %% components in X: C_1 tangent to the nodal divisor at a_1, C_2 transversal at a_2
+  \draw[line width=.9pt] (.4,3.2) .. controls (2.2,3.3) and (2.8,3.2) .. (2.8,2.6);
+  \draw[line width=.9pt] (.4,.5) .. controls (1.5,.6) and (2.2,.9) .. (2.8,1);
+  \node at (1.1,2.9) {$C_1$};
+  \node at (1.1,.95) {$C_2$};
+  %% the bubble component C', with poles at a_1, a_2 and a zero at the relative marking q
+  \draw[line width=.9pt] (2.8,2.6) .. controls (2.8,2) and (4.8,2.6) .. (4.8,1.8) .. controls (4.8,1) and (3.2,1) .. (2.8,1);
+  \node at (3.75,1.8) {$C'$};
+  \fill (2.8,2.6) circle[radius=1.6pt];
+  \fill (2.8,1) circle[radius=1.6pt];
+  \node[left] at (2.8,2.35) {$m_1$};
+  \node[above left] at (2.8,1) {$m_2$};
+  \fill[accent1] (4.8,1.8) circle[radius=1.8pt];
+  \node[accent1, right] at (4.8,1.8) {$q$};
+  %% contraction
+  \draw[->, line width=.7pt] (6.1,1.8)--(7.1,1.8) node[midway, above] {\small 수축};
+  %% right: Gathmann, the image in X; C' becomes the component Z inside Y
+  \draw[line width=.8pt] (7.6,0) rectangle (10.4,3.6);
+  \draw[accent1, line width=1.2pt] (10.4,0)--(10.4,3.6);
+  \draw[line width=2.4pt] (10.4,1)--(10.4,2.6);
+  \node at (9,-.45) {$X$};
+  \node[accent1, right] at (10.4,.5) {$Y$};
+  \node[right] at (10.4,2.45) {$Z$};
+  \draw[line width=.9pt] (8,3.2) .. controls (9.8,3.3) and (10.4,3.2) .. (10.4,2.6);
+  \draw[line width=.9pt] (8,.5) .. controls (9.1,.6) and (9.8,.9) .. (10.4,1);
+  \node at (8.7,2.9) {$C_1$};
+  \node at (8.7,.95) {$C_2$};
+  \fill (10.4,2.6) circle[radius=1.6pt];
+  \fill (10.4,1) circle[radius=1.6pt];
+  \node[left] at (10.4,2.35) {$m_1$};
+  \node[above left] at (10.4,1) {$m_2$};
+  \fill[accent1] (10.4,1.8) circle[radius=1.8pt];
+  \node[accent1, right] at (10.4,1.8) {$q$};
+\end{tikzpicture}
+
 \end{document}
