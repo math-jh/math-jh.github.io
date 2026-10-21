@@ -5,9 +5,10 @@ Marvin 은 git history 와 파일만 본다. 그래서 "무엇이 바뀌었는�
 "왜 그렇게 정했는가"는 diff 에서 추측하게 되고, 실제로 틀린 유래를 적은 적이 있다
 (2026-08-07 dd 스윕 글의 도입부. 사용자가 손으로 고쳤다). 결정은 대화에 있었다.
 
-트랜스크립트는 `~/.claude/projects/<project-slug>/*.jsonl` 이고 사용자 세션은 14 일
-보존된다 (`~/.local/bin/reap-claude-sessions.py`, CLAUDE_SESSION_KEEP_DAYS). 커밋
-날짜로 창을 잡아 그 구간의 발화를 시간순으로 낸다.
+트랜스크립트는 `~/.claude/projects/<project-slug>/*.jsonl` 이고 사용자 세션은 1 년
+보존된다 (`~/.claude/settings.json` 의 cleanupPeriodDays=365 — `~/.local/bin/reap-claude-sessions.py`
+는 봇 세션만 지운다). 커밋 날짜로 창을 잡아 그 구간의 발화를 시간순으로 낸다.
+창이 열리기 전에 마지막으로 쓰인 파일은 열지 않는다 (collect 주석).
 
 **user 역할 레코드가 곧 사용자 발화는 아니다.** 슬래시 커맨드 본문, `/commit` 이
 주입하는 상태 블록, 붙여넣은 검토 지시서, task-notification, system-reminder 가 전부
@@ -78,6 +79,12 @@ def collect(lo: datetime, hi: datetime, pat: re.Pattern | None, max_chars: int):
         scanned += 1
         mtime = datetime.fromtimestamp(os.path.getmtime(path), timezone.utc)
         oldest = mtime if oldest is None else min(oldest, mtime)
+        # 레코드는 생긴 뒤에 쓰이므로 timestamp <= mtime 이다. 창이 열리기 전에 마지막으로
+        # 쓰인 파일에는 창 안의 발화가 없다 — 보존이 길어져도 읽는 양은 창 이후에 쓰인
+        # 파일로 묶인다. 파일 안의 순서는 믿지 않는다: 이어 붙인 세션은 옛 timestamp
+        # 레코드를 뒤에 붙인다(2026-10-21 실측, 최대 46 시간 역행).
+        if mtime < lo:
+            continue
         with open(path, encoding="utf-8") as fh:
             for line in fh:
                 try:
@@ -142,7 +149,7 @@ def main() -> None:
               " `--pad-before 0` 으로 창을 줄여라.)")
 
     if not rows:
-        print("\n(이 창에 사용자 발화가 없다. 보존 기간(14일)을 벗어났거나 그날 대화가"
+        print("\n(이 창에 사용자 발화가 없다. 보존 기간(1년)을 벗어났거나 그날 대화가"
               " 없었다는 뜻이다. 없는 발화를 지어내지 말고, 결정 근거는 커밋 메시지와"
               " 코드 주석에서만 취한다.)")
     print(f"\n— {len(shown)}/{len(rows)}건")
