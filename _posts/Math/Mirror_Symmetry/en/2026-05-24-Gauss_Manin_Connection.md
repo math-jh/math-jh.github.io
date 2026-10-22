@@ -1,7 +1,7 @@
 ---
 title: "Gauss-Manin Connection"
-description: "This post examines the module isomorphism arising in the Dubrovin connection of mirror symmetry. It covers the construction of holomorphic volume forms in Landau-Ginzburg models, focusing on B-side oscillating integrals and the Gauss-Manin system."
-excerpt: "B-model D-module structures, oscillating integrals, and Gauss-Manin connections on cohomology"
+description: "This post examines in detail the module isomorphism claimed in the Dubrovin connection of mirror symmetry. It covers the construction of holomorphic volume forms in Landau-Ginzburg models, focusing on B-side oscillating integrals and the Gauss-Manin system."
+excerpt: "B-model D-module structure, oscillating integrals, and the Gauss-Manin connection on cohomology"
 
 categories: [Math / Mirror Symmetry]
 permalink: /en/math/mirror_symmetry/gauss-manin_connection
@@ -12,6 +12,8 @@ date: 2026-05-24
 weight: 5
 translated_at: 2026-10-03T15:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-22T07:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 In this post, we examine in detail the $D$-module isomorphism asserted in [§Dubrovin Connection, ⁋Conjecture 4](/en/math/mirror_symmetry/dubrovin_connection#conj4){: data-lid="qcy8y" }. To this end, we must look at both the A-side and the B-side. Since the A-side was already covered to some extent in [\[Symplectic Geometry\] §Quantum Cohomology, ⁋Definition 7](/en/math/symplectic_geometry/quantum_cohomology#def7){: data-lid="9rb24" }, we first examine the B-side, namely oscillating integrals and the Gauss-Manin system. 
 
@@ -31,7 +33,7 @@ and viewing $\Omega$ as a rational section of $\mathcal{K}_Y$, we have $\divisor
 
 $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 
-there. Meanwhile, abstracting the ambient data $(Y, D)$ on which this construction operates leads to the log Calabi-Yau pair of the following definition.
+there. Meanwhile, abstracting the ambient data $(Y, D)$ itself on which this construction operates leads to the log Calabi-Yau pair of the following definition.
 
 ::: Definition 1
 When a pair $(Y, D)$ of a smooth projective variety $Y$ and a reduced SNC divisor ([\[Toric Geometry\] §Logarithmic Differential Forms on Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/logarithmic_differentials#def5){: data-lid="gqq7g" }) $D \subseteq Y$ satisfies $K_Y + D \sim 0$, we call it a *log Calabi-Yau pair*. In this case, the non-vanishing volume form $\omega=\Omega\vert_{\check{X}}$ obtained via the construction above is called the *canonical holomorphic volume form* of the log CY pair. 
@@ -43,7 +45,7 @@ $$\omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_N}}{\x_1 \cdots \x_N} = d
 
 ## Lefschetz thimble
 
-An oscillating integral is a bona fide integral, obtained by integrating an actual function along an actual integration path. Specifically, for a superpotential $W_q$, the *oscillating integral* along a path $\Gamma$ called a *Lefschetz thimble* is defined by
+An oscillating integral is an honest integral, obtained by integrating an actual function along an actual integration path. Specifically, for a superpotential $W_q$, the *oscillating integral* along a path $\Gamma$ called a *Lefschetz thimble* is defined by
 
 $$\mathcal{I}_\Gamma(q,z)=\int_\Gamma e^{W_q/z}\omega$$
 
@@ -51,7 +53,7 @@ Here, $\omega$ is the volume form on $\check{X}$ defined above, $q$ is the quant
 
 To this end, for each point $p\in \Crit(W_q)$, we call the cycle of the form
 
-$$\Gamma_p := \left\{ x(0) \in \check{X} \middle\vert \lim_{t \rightarrow -\infty} x(t) = p, \lim_{t \rightarrow +\infty} \Real\left(\frac{W_q(x(t))}{z}\right) = -\infty \right\}$$
+$$\Gamma_p := \left\{ x(0) \in \check{X} \middle\vert \lim_{t \rightarrow -\infty} x(t) = p, \lim_{t \rightarrow +\infty} \Real \left(\frac{W_q(x(t))}{z}\right) = -\infty \right\}$$
 
 a *Lefschetz thimble*. Here, $x(t)$ is a negative gradient flow line of $\Real(W_q/z)$, and thus $\Gamma_p$ is the unstable manifold of $p$. ([\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Definition 14](/en/math/symplectic_geometry/morse_stationary_phase#def14){: data-lid="mn6r9" }) It is known that if $W_q$ is of Morse type, $\Gamma_p$ forms a cycle of real dimension $N$ ([\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Proposition 15](/en/math/symplectic_geometry/morse_stationary_phase#prop15){: data-lid="uty75" }). Meanwhile, from the ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$ examined in [§Mirror Symmetry: An Overview](/en/math/mirror_symmetry/overview){: data-lid="cevbm" }, the number of critical points coincides precisely with $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$. The Lefschetz thimbles $\{\Gamma_p\}_{p \in \Crit(W_q)}$ corresponding to these critical points form a $\mathbb{C}$-basis of the *$N$th rapid decay homology*
 
@@ -61,7 +63,7 @@ Here, the rapid decay homology $H_\ast(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathb
 
 $$S_z=\{x \in \check{X} \mid \Real(W_q(x)/z) \ll 0\}$$
 
-consisting of points with sufficiently negative $\Real(W_q/z)$, and quotienting out chains that lie entirely within $S_z$ by zero. More rigorously, we set
+consisting of points with sufficiently small $\Real(W_q/z)$, and quotienting chains that lie entirely within $S_z$ to zero. More rigorously, we set
 
 $$S_z^M=\{x \in \check{X} \mid \Real(W_q(x)/z) <-M\}$$
 
@@ -69,7 +71,7 @@ and consider the relative singular homology $H_n(\check{X}, S_z^M; \mathbb{C})$;
 
 From this expression, the role of $z$ also becomes somewhat visible: when $z\rightarrow 0$, $e^{W_q/z}$ oscillates rapidly according to the phase of $W_q$, so the dominant contribution to the integral appears only near the stationary phase, that is, near $p$. Since we know that on the B-side the mirror symmetry statement is about the critical points of $W_q$, the role of $z$ is clear.
 
-However, one must note that $z$ is actually not a real parameter, but a complex parameter. Indeed, if the argument of $z$ changes, $W_q$ must also be aligned in that direction to become the real part, so the definition of $\Gamma_p$ above will change slightly. When varying $z$ in this way, the basis defined by the Lefschetz thimbles itself changes, and this is also the case for the Dubrovin connection on the A-side (even though not explicitly mentioned in that post). That is, the values of $\nabla^z$ will also vary as $z$ changes, but we simply had not paid attention to this; viewing it on $\mathbb{C}^\ast$ reveals a richer structure. In short, looking at the stationary phase asymptote as $z \rightarrow 0^+$ is merely one section of this structure, and we will preserve the data they contain over all of $\mathbb{C}^\ast$.
+However, one must note that $z$ is actually not a real parameter, but a complex parameter. Indeed, if the argument of $z$ changes, $W_q$ must also be aligned in that direction for it to become the real part, so the definition of $\Gamma_p$ above will change slightly. When varying $z$ in this way, the basis defined by the Lefschetz thimbles itself changes, and this is also the case for the Dubrovin connection on the A-side (even though not explicitly mentioned in that post). That is, the values of $\nabla^z$ will also vary as $z$ changes, but we simply had not paid attention to this; viewing it on $\mathbb{C}^\ast$ reveals a richer structure. In short, looking at the stationary phase asymptote as $z \rightarrow 0^+$ is merely one section of this structure, and we will preserve the data they contain over all of $\mathbb{C}^\ast$.
 
 Summarizing the discussion so far, we have the following.
 
@@ -83,34 +85,34 @@ where $\Gamma_p$ is chosen as a Lefschetz thimble that can be continuously isoto
 
 Here, choosing $\Gamma_p$ so that it can be continuously isotoped as $(q,z)$ varies ensures that, as the critical point varies with $(q,z)$ and the thimble is consequently deformed, this deformation is continuous. That is, it parallel transports the cycle as the parameters $(q,z)$ vary, and this will provide the basis for the Gauss-Manin connection to be defined shortly. 
 
-As mentioned above, since $e^{W_q/z}$ oscillates rapidly depending on the phase of $W_q$, the dominant contribution to the integral arises only near the points where the phase is stationary, that is, near the critical points. The following proposition restates [\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Proposition 16](/en/math/symplectic_geometry/morse_stationary_phase#prop16){: data-lid="jbsvn" } adapted to our setting. 
+As mentioned above, since $e^{W_q/z}$ oscillates rapidly depending on the phase of $W_q$, the dominant contribution to the integral arises only near the points where the phase is stationary, that is, near the critical points. The following proposition restates [\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Proposition 16](/en/math/symplectic_geometry/morse_stationary_phase#prop16){: data-lid="jbsvn" } adapted to our setting.
 
 ::: Proposition 3 (Stationary phase asymptotic)
-For a non-degenerate critical point $p$ of $W_q$ and the Lefschetz thimble $\Gamma_p$ passing through it, as $z \rightarrow 0^+$,
+For $W_q$'s non-degenerate critical point $p$ and the Lefschetz thimble $\Gamma_p$ passing through it, as $z \rightarrow 0^+$,
 
 $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\det\Hess_p(W_q)}} \big(1 + O(z)\big)$$
 
-holds. Here $N = \dim_\mathbb{C} \check{X}$, $\Hess_p$ is the Hessian at $p$ with respect to holomorphic coordinates $y$ near $p$ in which $\omega$ becomes the standard volume form $\dd{y_1}\wedge\cdots\wedge\dd{y_N}$, and the branch of $\sqrt{}$ is determined by the orientation of $\Gamma_p$.
+holds. Here $N = \dim_\mathbb{C} \check{X}$, $\Hess_p$ is, with $\omega$ becoming the standard volume form $\dd{y_1}\wedge\cdots\wedge\dd{y_N}$ near $p$ in holomorphic coordinates $y$, the Hessian at $p$, and the branch of $\sqrt{}$ is determined by the orientation of $\Gamma_p$.
 :::
 
-The core of the proof is to reduce $W_q$ to a quadratic form near $p$ using [\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Theorem 6](/en/math/symplectic_geometry/morse_stationary_phase#thm6){: data-lid="ts49d" } and then apply Gaussian integration. In any case, what is important in our setting is the fact that as $z \rightarrow 0^+$, the oscillating integral is completely determined by the *local data at each critical point*, namely the critical value $W_q(p)$ and the Hessian determinant. In particular, from the viewpoint of the mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$, the critical values $\{ W_q(p) \}$ are interpreted on the A-side as the *canonical coordinates* of quantum cohomology.
+The core of the proof is, near $p$, to use [\[Symplectic Geometry\] §Morse Theory and Stationary Phase Approximation, ⁋Theorem 6](/en/math/symplectic_geometry/morse_stationary_phase#thm6){: data-lid="ts49d" } to reduce $W_q$ to a quadratic form and then apply Gaussian integration. In any case, what is important in our setting is the fact that as $z \rightarrow 0^+$, the oscillating integral is completely determined by the *local data at each critical point*, namely the critical value $W_q(p)$ and the Hessian determinant. In particular, from the viewpoint of the mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$, the critical values $\{ W_q(p) \}$ are interpreted on the A-side as the *canonical coordinates* of quantum cohomology.
 
 ## Gauss-Manin Connection
 
-To track the $(q, z)$-dependence of oscillating integrals, we introduce the *Gauss-Manin connection* $\nabla^{GM}$. In order to define this, we must first set up the vector bundle that serves as its setting. Taking the parameter space of $(q,z)$, $B=(\mathbb{C}^\ast)^r\times \mathbb{C}^\ast$, as the base manifold, for each base point $(q, z) \in B$ we consider the *rapid decay relative cohomology* (the dual of the rapid decay homology defined above)
+To track the $(q, z)$-dependence of oscillating integrals, we introduce the *Gauss-Manin connection* $\nabla^{GM}$. In order to define this, we must first set up the vector bundle that serves as its setting. Taking the parameter space of $(q,z)$, $B=(\mathbb{C}^\ast)^r\times \mathbb{C}^\ast$, as the base manifold, for each base point $(q, z) \in B$ on it we consider the *rapid decay relative cohomology* (the dual of the rapid decay homology defined above)
 
 $$\mathcal{H}_{(q, z)} := H^N(\check{X}, \{ \Real(W_q/z) \ll 0 \}; \mathbb{C})$$
 
-and consider the family
+and the family
 
 $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 
-assigning this as the fiber. At each point $(q,z)$, elements of this cohomology are inherently paired with elements of rapid decay homology to yield values. Since rapid decay homology has the Lefschetz thimbles as its basis, in view of [Definition 2](#def2){: data-lid="j8afh" }, it is natural to take $[e^{W_q/z}\omega]$ as a representative for elements of this cohomology. 
+assigning this as the fiber. At each point $(q,z)$, these are elements of the above cohomology, whose essence is to be paired with elements of rapid decay homology to yield values. Since rapid decay homology has the Lefschetz thimbles as its basis, in view of [Definition 2](#def2){: data-lid="j8afh" }, it is natural to take $[e^{W_q/z}\omega]$ as a representative for elements of this cohomology. 
 
-It is known that if $W_q$ is of Morse type, this family defines a vector bundle $\mathcal{H}$ over $B$. In particular, the fact that these fibers patch together nicely is possible precisely because, when choosing the Lefschetz thimbles earlier, we selected those that can be continuously isotoped with respect to $(q,z)$. That is, when a cycle $\Gamma$ varies continuously with $(q, z)$, the cohomology class paired with it can also be parallel transported to "follow along", and formulating this parallel transport in the form of a connection gives the *Gauss-Manin connection*.
+It is known that if $W_q$ is of Morse type, this family defines over $B$ a vector bundle $\mathcal{H}$. In particular, the fact that these fibers patch together nicely is possible precisely because, when choosing the Lefschetz thimbles earlier, we selected those that can be continuously isotoped with respect to $(q,z)$. That is, when a cycle $\Gamma$ varies continuously with $(q, z)$, the cohomology class paired with it can also be parallel transported to "follow along", and formulating this parallel transport in the form of a connection gives the *Gauss-Manin connection*.
 
 ::: Definition 4 (Gauss-Manin connection)
-The *Gauss-Manin connection* $\nabla^{GM}$ on the vector bundle $\mathcal{H} \rightarrow (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$ is the flat connection uniquely determined by the following condition:
+On the vector bundle $\mathcal{H} \rightarrow (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$, the *Gauss-Manin connection* $\nabla^{GM}$ is the flat connection uniquely determined by the following condition:
 
 > A section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$ is *$\nabla^{GM}$-flat* if and only if, for *any* family of cycles $\{\Gamma(q, z)\}$ continuously isotoped in the sense immediately following [Definition 2](#def2){: data-lid="ojmda" }, the *period*
 > 
@@ -132,7 +134,7 @@ $$\nabla^{GM}_{\partial_{q_i}} [e^{W_q/z} \omega] = \left[\frac{\partial_{q_i} W
 ::: Proof
 Computing by the chain rule at the cochain level gives
 
-$$\partial_{q_i}\left(e^{W_q/z} \omega\right) = \frac{\partial_{q_i} W_q}{z} e^{W_q/z} \omega,\qquad z\partial_z\left(e^{W_q/z} \omega\right) = -\frac{W_q}{z} e^{W_q/z} \omega$$
+$$\partial_{q_i} \left(e^{W_q/z} \omega\right) = \frac{\partial_{q_i} W_q}{z} e^{W_q/z} \omega,\qquad z\partial_z \left(e^{W_q/z} \omega\right) = -\frac{W_q}{z} e^{W_q/z} \omega$$
 
 (where $\omega$ is independent of $q, z$). The well-definedness of $\nabla^{GM}$ follows from the fact that cocycle variations drop into coboundaries, namely that for any $(N-1)$-form $\beta$, $\dd{(e^{W_q/z}\beta)} = e^{W_q/z}(\dd{\beta} + z^{-1} \dd{W_q} \wedge \beta)$ is exact, and the flatness $[\nabla^{GM}_{\partial_{q_i}}, \nabla^{GM}_{\partial_{q_j}}] = 0$ is immediately obtained from the commutativity of partial derivatives.
 :::
@@ -159,25 +161,25 @@ Since the above formulas are statements at the level of cohomology classes, to c
 
 $$z \partial_{q_i}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_i}W_q\cdot e^{W_q/z} \omega,\qquad z^2 \partial_z\mathcal{I}_\Gamma = -\int_\Gamma W_q\cdot e^{W_q/z} \omega \tag{$\ast$}$$
 
-. However, the right-hand side of ($\ast$) differs from the form in [Definition 2](#def2){: data-lid="ukqwy" } that we know; to resolve this, we need to broaden the integrand to the form $f e^{W_q/z}\omega$, provided that $f$ does not violate the decaying condition of rapid decay homology. Since $\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$ vanishes exponentially to $0$ near the boundary of the thimble $\Gamma$, as long as $f$ has at most polynomial growth it can be controlled sufficiently, so the natural function space is the space of regular functions $\mathcal{O}(\check{X})$.
+. However, the right-hand side of ($\ast$) differs from the form in [Definition 2](#def2){: data-lid="ukqwy" } that we know; to resolve this, we need to broaden the integrand to the form $f e^{W_q/z}\omega$, provided that $f$ does not violate the decaying condition of rapid decay homology. Since $\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$ vanishes exponentially to $0$ near the boundary of the thimble $\Gamma$, as long as $f$ has at most polynomial growth it can be controlled sufficiently, so the natural function space is the space of regular functions $\mathcal{O}(\check{X})$. 
 
 The problem is that if defined this way, the collection of regular functions is infinite-dimensional (as a vector space), making it impossible to add all of them. To resolve this, we observe that when we define the pairing using period integrals, the value depends only on the cohomology class. Indeed, if $f, g \in \mathcal{O}(\check{X})$ define the same cohomology class (that is, if for some rapid decay form $\alpha$ the identity $(f-g)\cdot e^{W_q/z}\omega = \dd{\alpha}$ holds), then from Stokes' theorem,
 
 $$\int_\Gamma (f-g)\cdot e^{W_q/z}\omega = \int_\Gamma \dd{\alpha} = \int_{\partial\Gamma}\alpha = 0$$
 
-, and it follows that the value of $\mathcal{I}^f_\Gamma$ depends only on the cohomology class $[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$ of $f$. That is, the space of unknowns we need to deal with is not actually $\mathcal{O}(\check{X})$ but $\mathcal{H}_{(q,z)}$, and this problem is resolved as long as $\mathcal{H}_{(q,z)}$ is finite-dimensional. And this indeed holds: if $W_q$ is of Morse type, the rapid decay homology $H_N(\check{X},指示 S_z;\mathbb{C})$ has a thimble basis $\{[\Gamma_p]\}_{p\in\Crit(W_q)}$, and since this is the dual of $\mathcal{H}_{(q,z)}$, we have
+, and it follows that the value of $\mathcal{I}^f_\Gamma$ depends only on the cohomology class $[f\cdot e^{W_q/z}\omega] \in \mathcal{H}_{(q,z)}$ of $f$. That is, the space of unknowns we need to deal with is not actually $\mathcal{O}(\check{X})$ but $\mathcal{H}_{(q,z)}$, and this problem is resolved as long as $\mathcal{H}_{(q,z)}$ is finite-dimensional. And this indeed holds: if $W_q$ is of Morse type, the rapid decay homology $H_N(\check{X}, S_z;\mathbb{C})$ has a thimble basis $\{[\Gamma_p]\}_{p\in\Crit(W_q)}$, and since this is the dual of $\mathcal{H}_{(q,z)}$, we have
 
 $$\dim_\mathbb{C}\mathcal{H}_{(q,z)} = \lvert\Crit(W_q)\rvert$$
 
 .
 
-Meanwhile, $\mathcal{H}_{(q,z)}$ has another natural basis, namely the one coming from $\Jac(W_q)$. Considering the natural map
+Meanwhile, $\mathcal{H}_{(q,z)}$ has another natural basis, namely the one coming from $\mathrm{Jac}(W_q)$. Considering the natural map
 
 $$\Jac(W_q) \rightarrow \mathcal{H}_{(q,z)},\qquad T \mapsto [T\cdot e^{W_q/z}\omega]$$
 
 , a dimension count shows that this is an isomorphism, and from this, given a basis $\{T_a\}$ of $\Jac(W_q)$, we can choose a basis
 
-$$\bigl\{e_a := [T_a e^{W_q/z}\omega] \bigr\}_{a=0,\ldots,\mu-1}$$
+$$\bigl\{ e_a := [T_a e^{W_q/z}\omega] \bigr\}_{a=0,\ldots,\mu-1}$$
 
 of $\mathcal{H}_{(q,z)}$. That is, we currently have a basis $\{e_a\}$ on the rapid decay cohomology side and a basis $\{[\Gamma_p]\}_{p=0,\ldots,\mu-1}$ on the rapid decay homology side (indexing thimbles by critical points), and using these we can define the *period matrix*
 
@@ -197,20 +199,20 @@ $$z \partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b \mathcal{I}^b_p,\qquad z^2 
 In particular, $\mathcal{I}$ is an invertible matrix-valued function, and forms a *fundamental solution matrix* of the B-model connection $\nabla^z_B$ trivialized by the frame $\{e_a\}_a$.
 :::
 
-Specifically, dual to $\{[\Gamma_p]\}$, the basis $\{f^p\}\subseteq\mathcal{H}_{(q,z)}$ consists of *horizontal sections* of $\nabla^z_B$ by [Definition 4](#def4){: data-lid="l69xc" }, and within $\mathcal{H}$, the change-of-basis between the non-flat frame $\{e_a\}$ and the flat frame $\{f^p\}$ is precisely
+Specifically, the dual basis $\{f^p\}\subseteq\mathcal{H}_{(q,z)}$ to $\{[\Gamma_p]\}$ consists of *horizontal sections* of $\nabla^z_B$ by [Definition 4](#def4){: data-lid="l69xc" }, and within $\mathcal{H}$, the change-of-basis between the non-flat frame $\{e_a\}$ and the flat frame $\{f^p\}$ is precisely
 
 $$e_a = \sum_p \mathcal{I}^a_p f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a e_a$$
 
-Therefore, the rows of $\mathcal{I}^{-1}$ are, in the frame $\{e_a\}$, the horizontal sections of $\nabla^z_B$, so that $\mathcal{I}$ itself encodes all data of $\nabla^z_B$. That this fundamental solution matrix $\mathcal{I}$ coincides on the A-side with the fundamental solution of the quantum cohomology $D$-module ($J$-function) is the assertion of the mirror theorem, which we treat in the next post.
+Therefore, the rows of $\mathcal{I}^{-1}$ are the horizontal sections of $\nabla^z_B$ expressed in the frame $\{e_a\}$, so that $\mathcal{I}$ itself encodes all data of $\nabla^z_B$. That this fundamental solution matrix $\mathcal{I}$ coincides on the A-side with the fundamental solution ($J$-function) of the quantum cohomology $D$-module is the assertion of the mirror theorem, which we treat in the next post. 
 
-## Example: Oscillating Integrals of $\mathbb{P}^n$
+## Example: Oscillating integral of $\mathbb{P}^n$
 
 ::: Example 8 ($X = \mathbb{P}^n$)
 From [§Mirror Symmetry: An Overview, ⁋Definition 4](/en/math/mirror_symmetry/overview#def4){: data-lid="cqgb3" }, the Hori-Vafa mirror of $\mathbb{P}^n$ is given in the form
 
 $$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{\dd{\x_1} \wedge \cdots \wedge \dd{\x_n}}{\x_1 \cdots \x_n}$$
 
-Computing the derivatives to find the critical points, we have
+Here, computing the derivatives to find the critical points, we have
 
 $$\partial_{\x_i}W_q =1 - \frac{1}{\x_i}\frac{q}{\x_1\cdots \x_n} = 0$$
 
@@ -230,19 +232,19 @@ Now, according to [Proposition 7](#prop7){: data-lid="lnpcd" }, the period matri
 
 $$z\partial_q\mathcal{I}^a_p = \sum_b (M_q)^a_b\mathcal{I}^b_p$$
 
-so for $a<n$, the component $a$ satisfies
+so for $a<n$, for each such $a$,
 
 $$z\partial_q\mathcal{I}_p^a=\frac{1}{q}\mathcal{I}_p^{a+1}$$
 
-which implies $\mathcal{I}_p^n=(qz\partial_q)^n \mathcal{I}_p^0$; combining this with the equation obtained from the first column,
+holds, which implies $\mathcal{I}_p^n=(qz\partial_q)^n \mathcal{I}_p^0$; combining this with the equation
 
 $$z\partial_q\mathcal{I}_p^n=\mathcal{I}_p^0$$
 
-we obtain for $\mathcal{I}_p^0$ the $(n+1)$-th order ODE
+obtained from the first column, we obtain for $\mathcal{I}_p^0$ the $(n+1)$-th order ODE
 
 $$(z\partial_q)\bigl(qz\partial_q\bigr)^n \mathcal{I}^0_p = \mathcal{I}^0_p$$
 
-which is the quantum differential equation of $\mathbb{P}^n$, identical to the hypergeometric ODE satisfied by the A-side $J$-function. In the case of the stationary phase asymptotic, the coordinates in which $\omega$ becomes the standard volume form are $u_i = \log\x_i$, so the Hessian in [Proposition 3](#prop3){: data-lid="7757y" } must be computed with respect to $u$. Since at $x_\zeta$, the derivatives $\partial_{u_i}\partial_{u_j} W_q$ have diagonal entries $2x_\zeta$ and off-diagonal entries $x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$),
+which is the quantum differential equation of $\mathbb{P}^n$, identical to the hypergeometric ODE satisfied by the A-side $J$-function. In the case of the stationary phase asymptotic, the coordinates in which $\omega$ becomes the standard volume form are $u_i = \log\x_i$, so the Hessian in [Proposition 3](#prop3){: data-lid="7757y" } must be computed with respect to $u$. Since at $x_\zeta$, $\partial_{u_i}\partial_{u_j} W_q$ has diagonal entries $2x_\zeta$ and off-diagonal entries $x_\zeta$ ($\mathbf{1} := (1,\ldots,1)^\top$),
 
 $$\Hess_{x_\zeta}(W_q) = x_\zeta\bigl(I_n + \mathbf{1}\mathbf{1}^\top\bigr),\qquad \det \Hess_{x_\zeta}(W_q) = (n+1) (\zeta q^{1/(n+1)})^{n}$$
 
