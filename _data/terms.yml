@@ -12675,6 +12675,13 @@ M:
   see:
   - label: Prime ideal
     id: prime_ideal
+- id: maximal_solution
+  en: maximal solution
+  ko: 최대 해
+  primary: ko
+  defs:
+  - label: '[해석학] §미분방정식의 존재성과 유일성'
+    url: /ko/math/analysis/existence_uniqueness_ode
 - id: maximal_spectrum
   en: maximal spectrum
   ko: 극대 스펙트럼
