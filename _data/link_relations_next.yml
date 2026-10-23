@@ -5,6 +5,7 @@
 # Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
 "01vpb": {relation: weak, reviewed: true}
+"035xy": {relation: weak, reviewed: true}
 "04sw7": {relation: weak, reviewed: true}
 "04zmd": {relation: required, reviewed: true}
 "071az": {relation: weak, reviewed: true}
@@ -128,6 +129,7 @@
 "7a2zi": {relation: weak, reviewed: true}
 "7bjkq": {relation: required, reviewed: true}
 "7bluo": {relation: required, reviewed: true}
+"7f7h7": {relation: required, reviewed: true}
 "7h2hg": {relation: required, reviewed: true}
 "7jjc3": {relation: required, reviewed: true}
 "7kwur": {relation: weak, reviewed: true}
@@ -264,6 +266,7 @@
 "f5u1i": {relation: required, reviewed: true}
 "f709n": {relation: required, reviewed: true}
 "f8yf7": {relation: weak, reviewed: true}
+"f9iao": {relation: required, reviewed: true}
 "fbx98": {relation: weak, reviewed: true}
 "foz9f": {relation: weak, reviewed: true}
 "fqff9": {relation: weak, reviewed: true}
@@ -344,6 +347,7 @@
 "k5e4q": {relation: weak, reviewed: true}
 "k8z6a": {relation: weak, reviewed: true}
 "k9pnn": {relation: weak, reviewed: true}
+"kccmw": {relation: required, reviewed: true}
 "kd8a3": {relation: required, reviewed: true}
 "kdbrw": {relation: required, reviewed: true}
 "ke1tr": {relation: weak, reviewed: true}
@@ -381,6 +385,7 @@
 "moanv": {relation: weak, reviewed: true}
 "mrsqo": {relation: weak, reviewed: true}
 "mzasp": {relation: weak, reviewed: true}
+"n06eg": {relation: required, reviewed: true}
 "n5g6y": {relation: required, reviewed: true}
 "n5mor": {relation: weak, reviewed: true}
 "n5oyz": {relation: required, reviewed: true}
@@ -478,6 +483,7 @@
 "sn7ld": {relation: weak, reviewed: true}
 "ssyat": {relation: required, reviewed: true}
 "suizo": {relation: weak, reviewed: true}
+"suj19": {relation: weak, reviewed: true}
 "sv9c9": {relation: weak, reviewed: true}
 "svcy9": {relation: required, reviewed: true}
 "sx2vi": {relation: required, reviewed: true}
@@ -547,6 +553,7 @@
 "wsmg0": {relation: required, reviewed: true}
 "wta98": {relation: required, reviewed: true}
 "wv3lo": {relation: weak, reviewed: true}
+"wwznu": {relation: required, reviewed: true}
 "wyxfx": {relation: required, reviewed: true}
 "wz81q": {relation: required, reviewed: true}
 "wzt75": {relation: required, reviewed: true}
@@ -564,6 +571,7 @@
 "xoj3o": {relation: required, reviewed: true}
 "xvf5g": {relation: required, reviewed: true}
 "xwl8y": {relation: required, reviewed: true}
+"xx9id": {relation: required, reviewed: true}
 "y0hcz": {relation: weak, reviewed: true}
 "y1cd6": {relation: required, reviewed: true}
 "y2bip": {relation: weak, reviewed: true}
