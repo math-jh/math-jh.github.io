@@ -652,6 +652,13 @@ A:
   defs:
   - label: '[군론] §대칭군'
     url: /ko/math/group_theory/symmetric_groups
+- id: alternating_harmonic_series
+  en: alternating harmonic series
+  ko: 교대조화급수
+  primary: en
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: alternating_multilinear_map
   en: alternating multilinear map
   ko: 교대다중선형사상
