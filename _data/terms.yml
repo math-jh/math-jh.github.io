@@ -19548,6 +19548,13 @@ S:
   defs:
   - label: '[해석학] §부분수열과 Bolzano–Weierstrass 정리'
     url: /ko/math/analysis/bolzano_weierstrass
+- id: subsequential_limit
+  en: subsequential limit
+  ko: 부분수열 극한값
+  primary: en
+  defs:
+  - label: '[해석학] §상극한과 하극한'
+    url: /ko/math/analysis/limsup_and_liminf
 - id: subset
   en: subset
   ko: 부분집합
