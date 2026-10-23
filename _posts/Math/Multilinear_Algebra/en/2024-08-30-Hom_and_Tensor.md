@@ -12,70 +12,71 @@ date: 2024-08-30
 weight: 5
 translated_at: 2026-06-01T16:00:04+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-01T16:00:04+00:00
+last_polished_at: 2026-10-23T15:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In this post we take a closer look at $\Hom$ and the tensor product.
+In this post, let us examine $\Hom$ and the tensor product in a bit more detail. 
 
 ## Hom functor
 
-Previously we saw that $\Hom_{\lMod{A}}(-,N)$ and $\Hom_\lMod{A}(M,-)$ are left exact functors, and we called the modules $M$ and $N$ that make them exact functors *projective* and *injective* modules, respectively. The following two propositions go in a somewhat different direction, showing that any *splitting* exact sequence remains exact after applying $\Hom$.
+Previously, we saw that $\Hom_\lMod{A}(M,-)$ and $\Hom_{\lMod{A}}(-,N)$ are left exact functors, and we called $M$ and $N$ that make them exact functors *projective* and *injective* modules, respectively. The following two propositions go in a somewhat different direction, showing that any *splitting* exact sequence necessarily remains an exact sequence even after applying $\Hom$. 
 
 ::: Proposition 1
-Given a splitting exact sequence
+For a splitting exact sequence
 
 $$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
-and any $A$-module $K$, the induced sequence
+and any $A$-module $K$, the following sequence induced by them
 
 $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom_\lMod{A}(M,K) \rightarrow 0$$
 
-is a splitting exact sequence. Conversely, if the above sequence is exact for every $K$, then the original exact sequence is a splitting exact sequence.
+is a splitting exact sequence. Conversely, if the above sequence is an exact sequence for every $K$, then the original exact sequence is a splitting exact sequence.
 :::
 ::: Proof
 That the given exact sequence $0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$ splits is equivalent to the existence of a suitable retraction $r:L \rightarrow M$. ([§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="fkmny" }) Now consider
 
 $$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
 
-From the identity $r\circ u=\id_M$ we know that $\Hom_\lMod{A}(r,\id_K)$ has a section, and applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="z26zg" } again shows that the second sequence splits.
+From the equation $r\circ u=\id_M$, we know that $\Hom_\lMod{A}(u,\id_K)$ has a section, and applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="z26zg" } again shows that the second sequence splits. 
 
-For the converse, set $K=M$ and consider the short exact sequence
+For the converse, setting $K=M$ and considering the short exact sequence
 
 $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
 
-Then there exists a suitable $f\in\Hom_\lMod{A}(L,M)$ with $f\circ u=\id_M$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="44wri" } again completes the proof.
+there exists a suitable $f\in\Hom_\lMod{A}(L,M)$ such that $f\circ u=\id_M$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10){: data-lid="44wri" } again completes the proof.
 :::
 
 Similarly, the following holds.
 
 ::: Proposition 2
-Given a splitting exact sequence
+For a splitting exact sequence
 
 $$0 \rightarrow M \overset{u}{\rightarrow} L \overset{v}{\rightarrow} N \rightarrow 0$$
 
-and any $A$-module $K$, the induced sequence
+and any $A$-module $K$, the following sequence induced by them
 
 $$0 \rightarrow \Hom_\lMod{A}(K,M) \rightarrow\Hom_\lMod{A}(K,L) \rightarrow\Hom_\lMod{A}(K,N) \rightarrow 0$$
 
-is a splitting exact sequence. Conversely, if the above sequence is exact for every $K$, then the original exact sequence is a splitting exact sequence.
+is a splitting exact sequence. Conversely, if the above sequence is an exact sequence for every $K$, then the original exact sequence is a splitting exact sequence.
 :::
 
 ## Homomorphism $M^\ast\otimes_AN \rightarrow \Hom_{\rMod{A}}(M,N)$
 
-For convenience, assume that $A$ is a commutative ring. Then $\lMod{A}=\rMod{A}$, so there is no need to distinguish whether an arbitrary $A$-module is a left or right $A$-module. In this case, for aesthetic reasons when writing subscripts, we fix $\rMod{A}$ as our notation. Now let three $A$-modules $M,N,L$ be given. Then we can construct the following $A$-module homomorphism
+For convenience, assume that $A$ is a commutative ring. Then $\lMod{A}=\rMod{A}$, so there is no need to distinguish whether an arbitrary $A$-module is a left $A$-module or a right $A$-module. In this case, for aesthetic reasons when writing subscripts, we fix $\rMod{A}$ as our notation. Now let three $A$-modules $M,N,L$ be given. Then we can construct the following $A$-module homomorphism
 
 $$\nu:\Hom_{\rMod{A}}(M,L)\otimes_A N \rightarrow\Hom_{\rMod{A}}(M,L\otimes_AN)$$
 
-More generally, if $A,B$ are rings (not necessarily commutative), $M$ is a left $A$-module, $N$ is a left $B$-module, and $L$ is an $(A,B)$-bimodule, then we can construct the following $\mathbb{Z}$-module homomorphism
+More generally, if $A,B$ are rings (not necessarily commutative), and a left $A$-module $M$, a left $B$-module $N$, and an $(A,B)$-bimodule $L$ are given, then we can construct the following $\mathbb{Z}$-module homomorphism
 
-$$\Hom_{\lMod{A}}(M,L)\otimes_AN \rightarrow \Hom_{\lMod{A}}(M, L\otimes_BN)$$
+$$\Hom_{\lMod{A}}(M,L)\otimes_BN \rightarrow \Hom_{\lMod{A}}(M, L\otimes_BN)$$
 
-([\[Bou\] II.4.2]())
+(**[Bou]** II.4.2) 
 
-First, for any $u\in\Hom_{\rMod{A}}(M,L)$ and any $y\in N$, the formula
+For this, first, for any $u\in\Hom_{\rMod{A}}(M,L)$ and any $y\in N$, the formula
 
 $$x\mapsto u(x)\otimes_Ay$$
 
-defines an $A$-linear map from $M$ to $L\otimes_AN$. Then one checks that the above function sending $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$ to an element of $\Hom_{\rMod{A}}(M, L\otimes_AN)$ is $A$-balanced. Therefore it induces the $A$-linear map $\nu$.
+defines, from $M$ to $L\otimes_AN$, an $A$-linear map; then one sees that the above function sending an element $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$ to an element of $\Hom_{\rMod{A}}(M, L\otimes_AN)$ is $A$-balanced. Therefore, the above $A$-linear map $\nu$ is induced from this.
 
 ::: Proposition 3
 For $\nu$ defined as above, the following hold.
@@ -87,54 +88,56 @@ For $\nu$ defined as above, the following hold.
 In particular, if $L=A$, we obtain the following corollary.
 
 ::: Corollary 4
-Let two arbitrary $A$-modules $M,N$ be given. If either $M$ or $N$ is a finitely generated projective $A$-module, then there is an isomorphism
+Let two arbitrary $A$-modules $M,N$ be given. If either $M$ or $N$ is a finitely generated projective $A$-module, then the following isomorphism
 
 $$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
+
+exists.
 :::
 
 Also, setting $N=\Hom_{\rMod{A}}(M', L')$, we obtain the following corollary.
 
 ::: Corollary 5
-There exists the following $A$-linear map
+The following $A$-linear map
 
 $$\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M\otimes M', L\otimes L')$$
 
-and this is an isomorphism if one of the following pairs
+exists, and this is an isomorphism if one of the following pairs
 
 $$(M,M'),\quad (M,L),\quad (M',L')$$
 
-is a finitely generated projective $A$-module.
+consists of finitely generated projective $A$-modules.
 :::
 
 ## Trace
 
-We still assume that $A$ is a commutative ring. Then for any $A$-module $M$,
+We still assume that $A$ is a commutative ring. Then for any $A$-module $M$, we know that
 
 $$M^\ast\times M \rightarrow A;\qquad (\xi,x) \mapsto \langle x, \xi\rangle$$
 
-is $A$-balanced. Therefore this function satisfies the following $A$-linear map
+is $A$-balanced. Therefore, this function induces the following $A$-linear map
 
 $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
-Now if $M$ is a finitely generated projective $A$-module, then by [Corollary 4](#cor4){: data-lid="4jdz3" } we can identify the left-hand side with $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$, and thus a unique $A$-linear map from $\End_\rMod{A}(M)$ to $A$ is defined.
+Now if $M$ is a finitely generated projective $A$-module, then by [Corollary 4](#cor4){: data-lid="4jdz3" } we can identify the left-hand side with $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$, and thus an $A$-linear map from $\End_\rMod{A}(M)$ to $A$ is uniquely determined from this.
 
 ::: Definition 6
 The map defined above is called the *trace map* and is denoted by $\tr$.
 :::
 
-Let an arbitrary $u\in\End_\rMod{A}(M)$ be given. After identifying $\End_\rMod{A}(M)$ with $M^\ast\otimes_AM$, we can choose finitely many $\xi_i\in M^\ast, x_i\in M$ and write it as the sum
+Suppose an arbitrary $u\in\End_\rMod{A}(M)$ is given. After identifying $\End_\rMod{A}(M)$ with $M^\ast\otimes_AM$, we can choose finitely many $\xi_i\in M^\ast, x_i\in M$ and write it as the following sum
 
 $$\sum_i \xi_i\otimes_A x_i\tag{1}$$
 
-and the fact that this element corresponds to $u$ by [Corollary 4](#cor4){: data-lid="7ar8h" } means that the formula
+and the fact that this element corresponds to $u$ by [Corollary 4](#cor4){: data-lid="7ar8h" } means that the following equation
 
 $$u(x)=\sum_i\langle x,\xi_i\rangle x_i\qquad\text{for all $x\in M$}\tag{2}$$
 
-holds. Then by the definition of the trace map,
+holds. Then by the definition of the trace map, we have
 
 $$\tr(u)=\sum_i\langle x_i,\xi_i\rangle$$
 
-In general there may be infinitely many pairs $\xi_i\in M^\ast, x_i\in M$ satisfying (2), but this is because there are infinitely many ways to represent an element of $M^\ast\otimes_AM$ as in (1), and in any case $\tau:M^\ast\otimes_AM \rightarrow A$ is well-defined, so $\tr$ does not depend on this choice.
+In general, there may be infinitely many pairs $\xi_i\in M^\ast, x_i\in M$ satisfying (2), but this is because there are infinitely many ways to represent an element of $M^\ast\otimes_AM$ as in (1), and in any case $\tau:M^\ast\otimes_AM \rightarrow A$ is well-defined, so $\tr$ does not depend on this choice.
 
 Moreover, one can check that $\tr$ is an $A$-linear map, and furthermore the following holds.
 
@@ -142,6 +145,8 @@ Moreover, one can check that $\tr$ is an $A$-linear map, and furthermore the fol
 For any two finitely generated projective $A$-modules $M,N$ and $A$-linear maps $u:M \rightarrow N$, $v:N \rightarrow M$ between them,
 
 $$\tr(u\circ v)=\tr(v\circ u)$$
+
+holds.
 :::
 
 ---
