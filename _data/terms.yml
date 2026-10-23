@@ -8771,6 +8771,13 @@ H:
   - label: 야코비 행렬
     lang: ko
     id: jacobian_matrix
+- id: hessian_matrix
+  en: Hessian matrix
+  ko: 헤세 행렬
+  primary: en
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: higher_direct_image
   en: higher direct image
   ko: 고직상
@@ -12956,6 +12963,13 @@ M:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+- id: mixed_partial_derivative
+  en: mixed partial derivative
+  ko: 혼합 편도함수
+  primary: en
+  defs:
+  - label: '[해석학] §고계 편도함수와 극값'
+    url: /ko/math/analysis/higher_derivatives_and_extrema
 - id: mixed_tensor
   en: mixed tensor
   ko: 혼합 텐서
