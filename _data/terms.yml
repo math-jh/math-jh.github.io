@@ -1358,6 +1358,13 @@ B:
     id: vector_space
   - label: Dual basis
     id: dual_basis
+- id: bernstein_polynomial
+  en: Bernstein polynomial
+  ko: 번스타인 다항식
+  primary: en
+  defs:
+  - label: '[해석학] §Stone–Weierstrass 정리'
+    url: /ko/math/analysis/stone_weierstrass
 - id: best_approximation
   en: best approximation
   ko: 최선 근사
