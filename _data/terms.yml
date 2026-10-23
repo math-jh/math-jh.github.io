@@ -5346,6 +5346,13 @@ D:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+- id: dirichlet_integral
+  en: Dirichlet integral
+  ko: Dirichlet 적분
+  primary: en
+  defs:
+  - label: '[해석학] §이상적분'
+    url: /ko/math/analysis/improper_integrals
 - id: disconnected
   en: disconnected
   ko: 연결되지 않았다
@@ -10046,6 +10053,13 @@ I:
   defs:
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
+- id: integral_test
+  en: integral test
+  ko: 적분판정법
+  primary: en
+  defs:
+  - label: '[해석학] §이상적분'
+    url: /ko/math/analysis/improper_integrals
 - id: integral_with_variable_upper_limit
   en: integral with variable upper limit
   ko: 가변상한 적분
