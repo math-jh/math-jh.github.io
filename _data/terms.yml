@@ -5018,6 +5018,13 @@ D:
   defs:
   - label: '[집합론] §이항관계들 사이의 연산'
     url: /ko/math/set_theory/operation_of_binary_relations
+- id: diagonal_argument
+  en: diagonal argument
+  ko: 대각선 논법
+  primary: en
+  defs:
+  - label: '[해석학] §동등연속성과 Arzelà–Ascoli 정리'
+    url: /ko/math/analysis/arzela_ascoli
 - id: diagonal_matrix
   en: diagonal matrix
   ko: 대각행렬
