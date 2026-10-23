@@ -1245,6 +1245,13 @@ B:
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
     url: /ko/math/mirror_symmetry/gauss-manin_connection
+- id: baire_category_theorem
+  en: Baire category theorem
+  ko: Baire 범주정리
+  primary: en
+  defs:
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
 - id: bar_involution
   en: bar involution
   ko: ''
@@ -3321,6 +3328,8 @@ C:
   defs:
   - label: '[해석학] §Cauchy 수열과 완비성'
     url: /ko/math/analysis/cauchy_sequences
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
 - id: complete_quotient
   en: complete quotient
   ko: 완전 몫
@@ -4789,6 +4798,13 @@ D:
 - id: dense
   en: dense
   ko: 조밀
+  primary: en
+  defs:
+  - label: '[위상수학] §집합의 내부, 폐포, 경계'
+    url: /ko/math/topology/other_concepts
+- id: dense_set
+  en: dense set
+  ko: 조밀집합
   primary: en
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
@@ -7498,6 +7514,13 @@ F:
   defs:
   - label: '[해석학] §균등수렴'
     url: /ko/math/analysis/uniform_convergence
+- id: function_space
+  en: function space
+  ko: 함수공간
+  primary: en
+  defs:
+  - label: '[해석학] §완비 거리공간과 축소사상 정리'
+    url: /ko/math/analysis/contraction_mapping
 - id: functional
   en: functional
   ko: 범함수
