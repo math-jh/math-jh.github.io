@@ -617,6 +617,7 @@
 "opm3m": {relation: required, reviewed: true}
 "orq20": {relation: required, reviewed: true}
 "orqq8": {relation: weak, reviewed: true}
+"orywe": {relation: weak, reviewed: true}
 "otst5": {relation: weak, reviewed: true}
 "owd7a": {relation: weak, reviewed: true}
 "owsnq": {relation: required, reviewed: true}
@@ -714,6 +715,7 @@
 "sfc1c": {relation: required, reviewed: true}
 "sifjg": {relation: required, reviewed: true}
 "sjhs0": {relation: weak, reviewed: true}
+"sk1fe": {relation: weak, reviewed: true}
 "ski5z": {relation: forward, reviewed: true}
 "smfoh": {relation: required, reviewed: true}
 "smv9z": {relation: required, reviewed: true}
