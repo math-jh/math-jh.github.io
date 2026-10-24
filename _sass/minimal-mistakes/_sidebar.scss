@@ -214,6 +214,10 @@
       padding: 5px;
       border: 1px solid $border-color;
     }
+
+    @include breakpoint($xx-large) {
+      max-width: 170px;
+    }
   }
 }
 
