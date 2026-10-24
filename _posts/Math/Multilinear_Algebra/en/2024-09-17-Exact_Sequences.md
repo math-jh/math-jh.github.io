@@ -1,7 +1,7 @@
 ---
 title: "Exact Sequences"
-description: "We define exact sequences and splitting exact sequences based on properties of intersections of submodules, and examine their properties."
-excerpt: "Exact sequences of modules, and short/long exact sequences"
+description: "We define the concepts of exact sequences and splitting exact sequences based on properties of intersections of submodules of a parent module, and examine their properties."
+excerpt: "Exact sequences of modules, and short and long exact sequences"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/exact_sequences
@@ -12,95 +12,100 @@ date: 2024-09-17
 weight: 1
 translated_at: 2026-06-01T17:30:05+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-01T17:30:05+00:00
+last_polished_at: 2026-10-24T03:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In the [\[Multilinear Algebra\]](/en/multilinear_algebra/) category we study the properties of modules. Although we examined properties of modules in [\[Algebraic Structures\]](/en/algebraic_structures/), that category focused on what can be defined and proved in common for general algebraic structures, whereas this category focuses more on properties unique to modules.
+In the [\[Multilinear Algebra\]](/en/multilinear_algebra/) category, we study the properties of modules. Although we examined properties of modules in [\[Algebraic Structures\]](/en/algebraic_structures/), that category focused on what can be defined and proved in common for general algebraic structures, whereas this category focuses more on properties unique to modules.
 
-For example, results for modules defined over a field $\mathbb{K}$—that is, $\mathbb{K}$-vector spaces—were studied in [\[Linear Algebra\]](/en/linear_algebra/). Choosing bases for $\mathbb{K}$-vector spaces or using them to represent linear maps as matrices are things one can hardly expect in general algebraic structures.
+For example, results on modules defined specifically over a field $\mathbb{K}$, that is, $\mathbb{K}$-vector spaces, were examined in [\[Linear Algebra\]](/en/linear_algebra/), where choosing bases for $\mathbb{K}$-vector spaces or using them to represent linear maps as matrices are things one can hardly expect in general algebraic structures.
 
-From this perspective, the main goal of the [\[Multilinear Algebra\]](/en/multilinear_algebra/) category may be said to generalize the results of [\[Linear Algebra\]](/en/linear_algebra/) as far as possible by replacing $\mathbb{K}$ with a general ring $A$. On the other hand, because the posts in this category were written with non-specialists or lower-year undergraduates in mind, they hardly used the language of [\[Category Theory\]](/en/category_theory/); thus another goal is to recast the contents of [\[Linear Algebra\]](/en/linear_algebra/) in modern language.
+From this perspective, the main goal of the [\[Multilinear Algebra\]](/en/multilinear_algebra/) category may be said to generalize the results in [\[Linear Algebra\]](/en/linear_algebra/) as far as possible by replacing $\mathbb{K}$ with a general ring $A$. On the other hand, the posts in that category were written with non-majors or lower-year undergraduates in mind, and in particular barely used the language of [\[Category Theory\]](/en/category_theory/); likewise, recasting the contents of [\[Linear Algebra\]](/en/linear_algebra/) into modern language is also one of the goals.
 
-In the posts of this category, an $A$-module always means a left $A$-module, and the same arguments can be carried out for right $A$-modules in an appropriate way. When a left $A$-module and a right $A$-module must appear together in the same post, we do not make this omission in order to avoid confusion; however, even in such cases one can unfold the same argument by interchanging left $A$-modules with right $A$-modules and vice versa.
+In the posts of this category, an $A$-module always means a left $A$-module, and the same argument can be carried out for a right $A$-module in an appropriate way. When a left $A$-module and a right $A$-module must appear simultaneously in the same post, we do not make this omission in order to avoid confusion; even in such cases, however, the same argument can be carried out by interchanging left $A$-modules with right $A$-modules, and right $A$-modules with left $A$-modules.
 
 ## Sum of Modules
 
 The goal of this post is to introduce several exact sequences and define the notion of a split exact sequence. We begin with the following simple lemma.
 
 ::: Lemma 1
-For a family $(N_i)_{i\in I}$ of submodules of an $A$-module $M$, the intersection $\bigcap_{i\in I} N_i$ is a submodule of $M$.
+For a non-empty index set $I$, let a family of submodules of an $A$-module $M$, $(N_i)_{i\in I}$, be given. Then the intersection $\bigcap_{i\in I} N_i$ is a submodule of $M$.
 :::
 ::: Proof
 The proof of [\[Linear Algebra\] §Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3){: data-lid="9prqv" } did not use the fact that $\mathbb{K}$ is a field, so we may use the same proof.
 :::
 
 ::: Definition 2
-Let a subset $X$ of an $A$-module $M$ be given. Then we write $\langle X\rangle$ for the smallest submodule of $M$ containing $X$, and call it the submodule generated by $X$. In this case we call $X$ a *generating set* of $\langle X\rangle$.
+For an $A$-module $M$, let a subset $X$ be given. Then the smallest submodule containing $X$ in $M$ is denoted by $\langle X\rangle$, and is called the submodule generated by $X$. In this case, we call $X$ a *generating set* of $\langle X\rangle$.
 
-If for some submodule $N$ of $M$ one can find a finite set $X$ such that $N=\langle X\rangle$, then we call $N$ *finitely generated*.
+If, for some submodule of $M$, $N$, one can find, satisfying $N=\langle X\rangle$, a finite set $X$, then we call $N$ *finitely generated*.
 :::
 
 Then the following holds.
 
 ::: Proposition 3
-For any subset $X$ of an $A$-module $M$, $\langle X\rangle$ equals the set of all linear combinations of elements of $X$.
+For an $A$-module $M$ and any subset $X$ of it, $\langle X\rangle$ equals the set of all linear combinations of elements of $X$.
 :::
 ::: Proof
 The proof is the same as that of [\[Linear Algebra\] §Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4){: data-lid="740xa" }.
 :::
 
-In particular, let a family $(N_i)_{i\in I}$ of submodules of an $A$-module $M$ be given. Then we write $\sum N_i$ for the submodule $\left\langle \bigcup N_i\right\rangle$ of $M$ generated by the subset $\bigcup N_i$. Now for each $i$, since $N_i$ is a submodule of $M$, there are inclusions $N_i \hookrightarrow M$. From these there arises the following canonical morphism
+In particular, for an $A$-module $M$, let a family $(N_i)_{i\in I}$ of submodules be given. Then the submodule of $M$ generated by the subset $\bigcup N_i$ of $M$, $\left\langle \bigcup N_i\right\rangle$, is denoted by $\sum N_i$. Now for each $i$, since $N_i$ is a submodule of $M$, there are inclusions $N_i \hookrightarrow M$. From this, the following canonical morphism
 
 $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
-On the other hand, $\bigoplus N_i$ is generated by the union of the canonical inclusions $N_i\hookrightarrow\bigoplus_{i\in I}N_i$, and the image of this union under the above canonical morphism is $\sum N_i$, so the following holds.
+exists. On the other hand, $\bigoplus N_i$ is generated by the union of the canonical inclusions $N_i\hookrightarrow\bigoplus_{i\in I}N_i$, and since the image of this union under the above canonical morphism is $\sum N_i$, the following holds.
 
 ::: Proposition 4
 The image of the canonical morphism $\bigoplus N_i \rightarrow M$ defined above is $\sum N_i$.
 :::
 
-That is, there is an exact sequence
+That is, the following exact sequence
 
 $$\bigoplus_{i\in I} N_i \rightarrow M \rightarrow M\bigg/\sum_{i\in I} N_i \rightarrow 0\tag{$\ast$}$$
 
-Now let a family $(N_i)_{i\in I}$ of submodules of an $A$-module $M$ be given, and let canonical surjections $M \twoheadrightarrow M/N_i$ be given. Then from these there arises the following canonical morphism
+exists.
+
+This time, suppose that for an $A$-module $M$, a family $(N_i)_{i\in I}$ of submodules is given, and canonical surjections $M \twoheadrightarrow M/N_i$ are given. Then from these, the following canonical morphism
 
 $$M \rightarrow \prod_{i\in I} M/N_i$$
 
-The following proposition is also obvious.
+is given. Since an element $x\in M$ being sent to $0$ by this morphism is equivalent to the condition that for each $i\in I$, $x+N_i=0$, that is, $x\in N_i$, the following holds.
 
 ::: Proposition 5
 The kernel of the canonical morphism $M \rightarrow \prod_{i\in I} M/N_i$ defined above is $\bigcap N_i$.
 :::
 
-That is, there is an exact sequence
+That is, the following exact sequence
 
 $$0 \rightarrow \bigcap_{i\in I} N_i \rightarrow M \rightarrow\prod_{i\in I} M/N_i$$
 
+exists.
+
 ## Direct Sum and Sum of Modules
 
-For a given $A$-module $M$ and a family $(N_i)_{i\in I}$ of submodules of $M$, if the canonical morphism $\bigoplus N_i \rightarrow M$ is an isomorphism, we call $M$ the direct sum of the $N_i$. For this to be the case, we first know from $(\ast)$ that $M=\sum N_i$ must hold. That is, every element of $M$ must be expressible as a linear combination of elements of the $N_i$. On the other hand, one can check that the canonical morphism $\bigoplus N_i \rightarrow M$ being injective is equivalent to the expression of such a linear combination being unique. More generally, the following holds.
+For a given $A$-module $M$ and a family of submodules of $M$, $(N_i)_{i\in I}$, if the canonical morphism $\bigoplus N_i \rightarrow M$ is an isomorphism, we call $M$ the direct sum of the $N_i$. For this, we first know from $(\ast)$ that $M=\sum N_i$ must hold. That is, every element of $M$ must be expressed as a linear combination of elements of the $N_i$. On the other hand, one can verify that the canonical morphism $\bigoplus N_i \rightarrow M$ being injective is equivalent to the uniqueness of writing such a linear combination. More generally, the following holds.
 
 ::: Proposition 6
 In the situation above, the following are all equivalent.
 
 1. $\sum_{i\in I} N_i=\bigoplus_{i\in I} N_i$.
-2. If $x_i\in N_i$ satisfy $\sum_{i\in I} x_i=0$, then $x_i=0$ for all $i$.
+2. If, for elements satisfying $x_i\in N_i$ with $x_i=0$ except for finitely many $x_i$, $\sum_{i\in I} x_i=0$, then for all $i$, $x_i=0$.
 3. For any $j\in I$, the intersection of $N_j$ and $\sum_{i\neq j} N_i$ is $0$.
 :::
 ::: Proof
-The equivalence of the first two conditions is obvious, and writing $\bigoplus N_i$ coordinate-wise, it is also obvious that the first condition implies the last. Now assume the last condition and prove the second. Let $x_i\in N_i$ satisfying $\sum x_i=0$ be given. Then for any $j\in I$,
+The equivalence of the first two conditions is obvious, and writing $\bigoplus N_i$ coordinate-wise, it is also obvious that the first condition implies the last. Now assume the last condition and prove the second. Let elements satisfying $\sum x_i=0$ with $x_i\in N_i$ be given. Then for any $j\in I$,
 
 $$x_j=\sum_{i\neq j}(-x_i)$$
 
-and assuming the last condition, the above equation forces $x_j=0$, completing the proof.
+and assuming the last condition, we must have $x_j=0$ from the equation above, which completes the proof.
 :::
 
 ## Supplementary Submodules
 
-The following proposition helps us examine [Proposition 6](#prop6){: data-lid="i2k3r" } a little more intuitively when $M$ is the direct sum of two submodules $N_1,N_2$.
+The following proposition, especially when $M$ is the direct sum of two submodules $N_1,N_2$, helps us examine [Proposition 6](#prop6){: data-lid="i2k3r" } a little more intuitively.
 
 ::: Proposition 7
-Let two submodules $N_1,N_2$ of an $A$-module $M$ be given. Then there exist the following two exact sequences
+For an $A$-module $M$, let two submodules $N_1,N_2$ be given. Then the following two exact sequences
 
 $$0 \rightarrow N_1\cap N_2 \overset{\Delta}{\rightarrow} N_1\oplus N_2 \overset{i_1-i_2}{\rightarrow} N_1+N_2\rightarrow 0$$
 
@@ -108,24 +113,25 @@ and
 
 $$0 \rightarrow M/(N_1\cap N_2)\overset{\Delta'}{\rightarrow}(M/N_1)\oplus(M/N_2)\overset{p_1-p_2}{\rightarrow}M/(N_1+N_2)\rightarrow 0$$
 
-Here $i_k,p_k$ are the canonical morphisms
+exist. Here $i_k,p_k$ are the canonical morphisms
 
 $$i_k: N_k \rightarrow N_1+N_2,\qquad p_k:M/N_k \rightarrow M/(N_1+N_2)$$
 
-and $\Delta, \Delta'$ are the morphisms defined respectively by the formulas
+respectively, and $\Delta, \Delta'$ are the morphisms defined respectively by the formulas
 
 $$\Delta(x)=(x,x),\qquad \Delta'(x+(N_1\cap N_2))=(x+N_1,x+N_2)$$
+.
 :::
 
-The proof of this is a straightforward computation, so we omit it. Anyway, to explain the first exact sequence,
+The proof of this is a simple computation, so we omit it. In any case, to explain the first exact sequence, since
 
 $$N_1\oplus N_2=\{(x_1,x_2)\mid x_k\in N_k\}$$
 
-so no matter how $N_1$ and $N_2$ are situated inside $M$, the elements of $N_1$ and $N_2$ appear inside $N_1\oplus N_2$ as elements of the form $(x_1,0)$ and $(0,x_2)$ respectively, and hence are treated as distinct. In particular, even if $x\in N_1\cap N_2$, as long as $x\neq 0$, $x\in N_1$ and $x\in N_2$ are different elements inside $N_1\oplus N_2$. However,
+no matter how, inside $M$, $N_1$ and $N_2$ are situated, the elements of $N_1$ and $N_2$ appear inside $N_1\oplus N_2$ as elements of the form $(x_1,0)$ and $(0,x_2)$ respectively, and therefore they are treated as distinct. In particular, even if $x\in N_1\cap N_2$, as long as $x$ is not $0$, $x\in N_1$ and $x\in N_2$ are different elements inside $N_1\oplus N_2$. However, through
 
 $$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
 
-once we send these to $N_1+N_2$ via this map, the elements that were treated as distinct in this way must have image $0$, and therefore the kernel of $i_1-i_2$ is exactly $N_1\cap N_2$.
+once we send this to $N_1+N_2$, the elements treated as distinct in this way must have image $0$, and therefore the kernel of $i_1-i_2$ is exactly $N_1\cap N_2$.
 
 Meanwhile, we make the following definition.
 
@@ -133,28 +139,28 @@ Meanwhile, we make the following definition.
 For any $A$-module $M$ and two submodules $N_1, N_2$ of $M$, if $M$ is the direct sum of $N_1$ and $N_2$, we call $N_1,N_2$ *supplementary submodules* of each other. If a submodule $N$ of $M$ has a supplementary submodule, we call $N$ a *direct summand* of $M$.
 :::
 
-Thus, in such a situation $N_1+N_2=M$ and $N_1\cap N_2=0$. Then using this, one can check that restricting the domain of the canonical morphism $M \rightarrow M/N_1$ to $N_2$ is an isomorphism, and similarly that restricting the domain of $M \rightarrow M/N_2$ to $N_1$ is an isomorphism.
+That is, in such a situation, $N_1+N_2=M$ and $N_1\cap N_2=0$. Then using this, one can check that the restriction of the canonical morphism $M \rightarrow M/N_1$ to $N_2$ is an isomorphism, and similarly that the restriction of $M \rightarrow M/N_2$ to $N_1$ is an isomorphism.
 
 ## Split Exact Sequences
 
 Finally, before defining a split exact sequence, we introduce the following lemma. Its proof can be found in [\[Homological Algebra\] §Diagram chasing, ⁋Proposition 1](/en/math/homological_algebra/diagram_chasing#prop1){: data-lid="krlzt" }.
 
 ::: Lemma 9 (Four lemma)
-Consider a commutative diagram whose rows are exact
+Suppose a commutative diagram whose rows are exact
 
 {% diagram Math/Multilinear_Algebra/Exact_Sequences-1.svg width="15.54em" alt="Four_lemma" %}
 
-and assume that $\alpha$ is surjective and $\delta$ is injective. Then
+is given, and assume that $\alpha$ is surjective and $\delta$ is injective. Then
 
-1. If $\gamma$ is surjective then $\beta$ is also surjective.
-2. If $\beta$ is injective then $\gamma$ is also injective.
+1. If $\gamma$ is surjective, then $\beta$ is also surjective.
+2. If $\beta$ is injective, then $\gamma$ is also injective.
 :::
 
-We now define a split exact sequence via the following proposition. A split exact sequence is an exact sequence of the form
+We now define a split exact sequence via the following proposition. A split exact sequence means an exact sequence of the form
 
 $$0\rightarrow N_1\hookrightarrow N_1\oplus N_2\twoheadrightarrow N_2 \rightarrow 0$$
 
-To spell this out precisely:
+and to spell this out precisely, we have the following.
 
 ::: Proposition 10
 For an exact sequence of $A$-modules
@@ -163,16 +169,16 @@ $$0\rightarrow M \overset{u}{\rightarrow}L \overset{v}{\rightarrow}N \rightarrow
 
 the following conditions are all equivalent.
 
-1. There exists a linear retraction $r:L \rightarrow M$ of $u$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="1ffj4" })
-2. There exists a linear section $s:N \rightarrow L$ of $v$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="eq9gr" })
+1. For $u$, there exists a linear retraction $r:L \rightarrow M$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="1ffj4" })
+2. For $v$, there exists a linear section $s:N \rightarrow L$. ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2){: data-lid="eq9gr" })
 3. There exists an isomorphism $\alpha: L \rightarrow M\oplus N$ making the following diagram commute:
-
+    
     {% diagram Math/Multilinear_Algebra/Exact_Sequences-2.svg width="21.10em" alt="splitting_sequence" %}
 :::
 ::: Proof
 First assume condition 3. Then setting $r=\pr_M\circ\alpha$ gives condition 1, and similarly, composing the canonical inclusion $i_N: N \rightarrow M\oplus N$ with $\alpha^{-1}$ and setting $s=\alpha^{-1}\circ i_N$ gives condition 2.
 
-For the remaining directions, we assume conditions 1 and 2 respectively and prove condition 3. If condition 1 holds, define $\alpha:L \rightarrow M\oplus N$ by $z\mapsto (r(z), v(z))$; if condition 2 holds, define $\beta: M\oplus N \rightarrow L$ by $(x,y)\mapsto u(x)+s(y)$. Then by [Lemma 9](#lem9){: data-lid="0num7" } one sees that $\alpha,\beta^{-1}$ define the isomorphism required in condition 3.
+For the remaining directions, we assume conditions 1 and 2 respectively and prove condition 3. If condition 1 holds, we define $\alpha:L \rightarrow M\oplus N$ by $z\mapsto (r(z), v(z))$, and if condition 2 holds, we define $\beta: M\oplus N \rightarrow L$ by $(x,y)\mapsto u(x)+s(y)$. Then by [Lemma 9](#lem9){: data-lid="0num7" }, one sees that $\alpha,\beta^{-1}$ define the isomorphism required in condition 3.
 :::
 
 ---
