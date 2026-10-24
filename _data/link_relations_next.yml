@@ -5,6 +5,7 @@
 # Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
 "001p1": {relation: weak, reviewed: true}
+"00w8x": {relation: weak, reviewed: true}
 "01vpb": {relation: weak, reviewed: true}
 "035xy": {relation: weak, reviewed: true}
 "04sw7": {relation: weak, reviewed: true}
@@ -144,6 +145,7 @@
 "61sgl": {relation: required, reviewed: true}
 "629s1": {relation: required, reviewed: true}
 "63yth": {relation: weak, reviewed: true}
+"65feo": {relation: required, reviewed: true}
 "65j64": {relation: weak, reviewed: true}
 "66yi1": {relation: required, reviewed: true}
 "695vo": {relation: required, reviewed: true}
@@ -298,6 +300,7 @@
 "bn566": {relation: forward, reviewed: true}
 "bngs0": {relation: required, reviewed: true}
 "bnpwu": {relation: required, reviewed: true}
+"bpd9d": {relation: required, reviewed: true}
 "bv2sl": {relation: required, reviewed: true}
 "bvcb7": {relation: required, reviewed: true}
 "bvs1c": {relation: weak, reviewed: true}
@@ -345,6 +348,7 @@
 "dtiba": {relation: required, reviewed: true}
 "dvshf": {relation: required, reviewed: true}
 "e0nn1": {relation: weak, reviewed: true}
+"e0sir": {relation: weak, reviewed: true}
 "e17km": {relation: weak, reviewed: true}
 "e28ow": {relation: weak, reviewed: true}
 "e2m64": {relation: weak, reviewed: true}
@@ -363,6 +367,7 @@
 "ebox7": {relation: required, reviewed: true}
 "ecyf4": {relation: required, reviewed: true}
 "ed0je": {relation: required, reviewed: true}
+"edoso": {relation: required, reviewed: true}
 "eev15": {relation: weak, reviewed: true}
 "efvi0": {relation: weak, reviewed: true}
 "ehd6h": {relation: required, reviewed: true}
@@ -397,6 +402,7 @@
 "gaaja": {relation: weak, reviewed: true}
 "gc1d4": {relation: weak, reviewed: true}
 "gcmsp": {relation: weak, reviewed: true}
+"gd3pp": {relation: required, reviewed: true}
 "gfsnj": {relation: required, reviewed: true}
 "ghqcp": {relation: weak, reviewed: true}
 "gjia1": {relation: required, reviewed: true}
@@ -409,6 +415,7 @@
 "gspp9": {relation: forward, reviewed: true}
 "gub40": {relation: required, reviewed: true}
 "gvju9": {relation: required, reviewed: true}
+"gvxns": {relation: weak, reviewed: true}
 "gw8c8": {relation: required, reviewed: true}
 "gxeqj": {relation: weak, reviewed: true}
 "gxu1x": {relation: required, reviewed: true}
@@ -435,6 +442,7 @@
 "hsv0s": {relation: required, reviewed: true}
 "hvv85": {relation: weak, reviewed: true}
 "hz9uj": {relation: weak, reviewed: true}
+"hzft9": {relation: required, reviewed: true}
 "i099u": {relation: required, reviewed: true}
 "i194y": {relation: required, reviewed: true}
 "i3lvi": {relation: weak, reviewed: true}
@@ -584,6 +592,7 @@
 "o9gf5": {relation: required, reviewed: true}
 "oefr5": {relation: required, reviewed: true}
 "of97z": {relation: weak, reviewed: true}
+"ogd67": {relation: weak, reviewed: true}
 "oglni": {relation: required, reviewed: true}
 "oha9l": {relation: required, reviewed: true}
 "oiwxg": {relation: required, reviewed: true}
@@ -603,6 +612,7 @@
 "p4e1s": {relation: required, reviewed: true}
 "p5dud": {relation: required, reviewed: true}
 "p6arh": {relation: required, reviewed: true}
+"p7bvq": {relation: required, reviewed: true}
 "p82wt": {relation: required, reviewed: true}
 "pav90": {relation: required, reviewed: true}
 "pbjjp": {relation: required, reviewed: true}
@@ -699,6 +709,7 @@
 "sx2vi": {relation: required, reviewed: true}
 "syi9h": {relation: weak, reviewed: true}
 "syyec": {relation: weak, reviewed: true}
+"t16wr": {relation: required, reviewed: true}
 "t3cd5": {relation: required, reviewed: true}
 "t4k4c": {relation: required, reviewed: true}
 "t4r1e": {relation: required, reviewed: true}
@@ -780,6 +791,7 @@
 "wbtzv": {relation: weak, reviewed: true}
 "wchiy": {relation: weak, reviewed: true}
 "wciyz": {relation: required, reviewed: true}
+"we10a": {relation: weak, reviewed: true}
 "wetkp": {relation: required, reviewed: true}
 "wg89y": {relation: required, reviewed: true}
 "whytw": {relation: required, reviewed: true}
@@ -820,6 +832,7 @@
 "xniuo": {relation: weak, reviewed: true}
 "xoabf": {relation: required, reviewed: true}
 "xoj3o": {relation: required, reviewed: true}
+"xpo63": {relation: required, reviewed: true}
 "xu3ec": {relation: required, reviewed: true}
 "xvf5g": {relation: required, reviewed: true}
 "xwl8y": {relation: required, reviewed: true}
@@ -855,6 +868,7 @@
 "z0js2": {relation: weak, reviewed: true}
 "z8dy9": {relation: weak, reviewed: true}
 "z8p7i": {relation: required, reviewed: true}
+"z8pkw": {relation: required, reviewed: true}
 "z9uos": {relation: required, reviewed: true}
 "zaeko": {relation: weak, reviewed: true}
 "zbzhj": {relation: required, reviewed: true}
