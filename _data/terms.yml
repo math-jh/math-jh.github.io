@@ -20286,6 +20286,13 @@ T:
   defs:
   - label: '[해석학] §멱급수와 해석함수'
     url: /ko/math/analysis/power_series
+- id: term-by-term_integration
+  en: term-by-term integration
+  ko: 항별 적분
+  primary: ko
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: terminal_object
   en: terminal object
   ko: 끝 대상
