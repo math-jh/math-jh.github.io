@@ -1,0 +1,118 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+// 웹폰트 @font-face 전용 시트. 라이트/다크 테마 시트(main.css·main_dark.css)와 따로
+// 두고 늘 켜 둔다 — 테마 시트 안에 있으면 테마를 바꿀 때마다 브라우저가 @font-face 를
+// 전부 새 FontFace 로 다시 등록해 글꼴을 다시 풀고 본문 전체를 다시 배치한다.
+// 글꼴 파일 경로(fonts/...)는 이 시트 위치(/assets/css/) 기준이다.
+// 이 시트를 링크하는 곳: _includes/head.html, scripts/dashboard/{compare,audit-2026-08}.html
+
+/* Serif*/
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/MaruBuri-Regular.woff2') format('woff2'),
+       url('fonts/MaruBuri-Regular.woff') format('woff');
+  font-display: swap;
+  size-adjust: 111%; // enlarge Korean to meet Latin size on mixed lines (Latin stays 100% → EN-only site unaffected)
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: normal;
+  src: url('fonts/Merriweather-Light.woff2') format('woff2'),
+       url('fonts/Merriweather-Light.woff') format('woff');
+  font-display: swap;
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Hahmlet-Medium.woff2') format('woff2'),
+       url('fonts/Hahmlet-Medium.woff') format('woff');
+  font-display: swap;
+  size-adjust: 111%; // italic Korean enlarged to match italic Latin
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Regular.woff2') format('woff2'),
+       url('fonts/Merriweather-Regular.woff') format('woff');
+  font-display: swap;
+  unicode-range:U+0028-0029;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-style: italic;
+  src: url('fonts/Merriweather-Italic.woff2') format('woff2'),
+       url('fonts/Merriweather-Italic.woff') format('woff');
+  font-display: swap;
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/MaruBuri-Bold.woff2') format('woff2'),
+       url('fonts/MaruBuri-Bold.woff') format('woff');
+  font-display: swap;
+  size-adjust: 111%; // match bold Latin
+  unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
+}
+
+@font-face {
+  font-family: "MySerifFont";
+  font-weight: bold;
+  src: url('fonts/Merriweather-Bold.woff2') format('woff2'),
+       url('fonts/Merriweather-Bold.woff') format('woff');
+  font-display: swap;
+  unicode-range: U+0020-0027, U+0040-005A, U+005C, U+005E-007F;
+}
+
+/* Sans-serif */
+// NanumGothic woff2 = Google Fonts TTF with its missed baseline shift applied by hand:
+// Google raised every glyph (Bold +51, Regular +44 units) except Bold i and Regular
+// i j I J Y = plus the 8822 non-KS X 1001 Hangul, which sat that far below the rest.
+// A fresh Google download brings the defect back.
+@font-face {
+  font-family: "MySansSerifFont";
+  font-style: normal;
+  src: url('fonts/NanumGothic-Regular.woff2') format('woff2'),
+       url('fonts/NanumGothic-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MySansSerifFont";
+  font-weight: bold;
+  src: url('fonts/NanumGothic-Bold.woff2') format('woff2'),
+       url('fonts/NanumGothic-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+/* Emphasizing_font */
+@font-face {
+  font-family: "MyEmphFont";
+  font-style: normal;
+  src: url('fonts/IBMPlexSansKR-Regular.woff2') format('woff2'),
+       url('fonts/IBMPlexSansKR-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+/* Material Symbols Sharp */
+@font-face {
+  font-family: "Material Symbols Sharp";
+  font-style: normal;
+  src: url('fonts/material-symbols-sharp.woff2') format('woff2');
+  font-display: swap;
+}

@@ -118,7 +118,7 @@ body.dependencies-linear {
     color: $text-color;
     transition: opacity 0.15s;
 
-    i { width: 8px; height: 8px; border-radius: 50%; }
+    i { width: 8px; height: 8px; border-radius: 50%; transition: filter 0.2s ease-in-out; }
     &:not(.on) { opacity: 0.36; }
     &:not(.on) i { filter: grayscale(1); }
   }

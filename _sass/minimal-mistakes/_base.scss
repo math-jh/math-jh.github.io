@@ -429,28 +429,21 @@ nav {
    Global animation transition
    ========================================================================== */
 
-b,
-i,
-strong,
-em,
-blockquote,
-p,
-q,
-span,
-figure,
-img,
-h1,
-h2,
-header,
-input,
-a,
-tr,
-td,
-form button,
-input[type="submit"],
-.btn,
-.highlight,
-.archive__item-teaser {
+// hover·focus 로 값이 실제로 바뀌는 요소에만 건다. 본문 텍스트 요소(p·span·h1… — 수식
+// 글이면 KaTeX span 수만 개)에 걸면, 테마 전환처럼 모든 색이 한꺼번에 바뀌는 순간 그 수만
+// 개가 다 애니메이션을 돈다.
+$global-transition-targets: 'a, img, input, form button, input[type="submit"], .btn, .archive__item-teaser';
+
+#{$global-transition-targets} {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+// 테마 전환(스타일시트 교체) 동안 Color_scheme.js 가 <html> 에 붙이는 클래스 — 전환 순간의
+// 색 변화는 애니메이션하지 않고 한 번에 바꾼다.
+html.theme-swapping {
+  #{$global-transition-targets} {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
 }
