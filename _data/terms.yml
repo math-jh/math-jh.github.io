@@ -18476,6 +18476,13 @@ S:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: sign_function
+  en: sign function
+  ko: 부호함수
+  primary: en
+  defs:
+  - label: '[해석학] §미분'
+    url: /ko/math/analysis/differentiation
 - id: signature
   en: signature
   ko: 부호수
