@@ -356,4 +356,5 @@ head_scripts:
   - /assets/js/custom/Terms_overlay.js
   - /assets/js/custom/Xref_preview.js
   - /assets/js/custom/Proof_animate.js
+  - /assets/js/custom/Print_fit.js
   - /assets/js/custom/Local_graph.js

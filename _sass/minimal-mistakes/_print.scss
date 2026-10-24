@@ -1,16 +1,27 @@
 /* ==========================================================================
    PRINT STYLES
+
+   인쇄본은 웹 화면의 사본이 아니라 한 편의 수학 문서다. 본문(제목·정리 박스·
+   수식·다이어그램·각주·참고문헌)만 남기고, 화면에서만 의미가 있는 것(내비게이션·
+   의존성 그래프·읽기 안내·댓글·설명 문구)은 지운다. 글꼴 가족은 화면과 같고,
+   크기·간격만 종이 기준(pt·mm)으로 다시 잡는다.
    ========================================================================== */
 
 @media print {
+
+  /* 판면: 본문 10.5pt 한글(아래 html 9.5pt × 한글 size-adjust 111%)로 한 줄 약 35자.
+     한글 단행본(본문 9.5–10.5pt, 한 줄 25–35자)과 kotex 기본 판면(10pt, 약 34자)의
+     범위에 맞춘 값이다. */
+  @page {
+    size: A4;
+    margin: 25mm 40mm 28mm;
+  }
 
   [hidden] {
     display: none;
   }
 
   * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -18,235 +29,298 @@
     margin: 0;
     padding: 0;
     min-height: auto !important;
-    font-size: 16px;
+    font-size: 9.5pt;
   }
 
   body {
-    margin: 0 auto;
+    margin: 0;
     background: #fff !important;
     color: #000 !important;
     font-size: 1rem;
     line-height: 1.5;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #000;
+/*
+   화면 전용 요소
+   ========================================================================== */
+
+  .masthead,
+  .skip-links,
+  .sidebar,
+  .sidebar__top,
+  .sidebar__right-slot,          // 목차 + 의존성 그래프
+  .page__subtitle,               // 설명 문구
+  .revising-notice,              // 수정 중 배너 (사이트 상태라 종이엔 무의미)
+  .semantic-reading,             // 읽어야 할 글 · 읽을만한 글
+  .page__comments,
+  .page__share,
+  .page__related,
+  .pagination,
+  .page__footer,
+  .header-link,
+  .reversefootnote,
+  .search-content,
+  .recent-content,
+  .terms-content,
+  .xref-preview,
+  .lg-overlay,
+  .no-print {
+    display: none !important;
+  }
+
+  #main,
+  .page,
+  .page__inner-wrap {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+/*
+   제목 블록
+   ========================================================================== */
+
+  .page__header--lead {
+    margin: 0 0 2.2em;
+  }
+
+  .page__eyebrow {
+    margin-bottom: 0.4em;
+    font-size: 0.8em;
+    color: #444;
+  }
+
+  .page__title {
+    margin: 0 0 0.45em;
+    font-size: 2em;
     line-height: 1.2;
-    margin-bottom: 0.75rem;
-    margin-top: 0;
+    color: #000;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  .page__dates {
+    font-size: 0.8em;
+    color: #444;
+
+    .material-icons {
+      display: none;
+    }
   }
 
-  h2 {
-    font-size: 2rem;
+/*
+   본문
+   ========================================================================== */
+
+  .page__content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #000;
+      line-height: 1.3;
+      break-after: avoid;
+      break-inside: avoid;
+    }
+
+    h2 {
+      margin: 2em 0 0.7em;
+      padding-bottom: 0;
+      font-size: 1.4em;
+    }
+
+    h3 {
+      margin: 1.6em 0 0.6em;
+      font-size: 1.18em;
+    }
+
+    h4,
+    h5,
+    h6 {
+      margin: 1.4em 0 0.5em;
+      font-size: 1.05em;
+    }
   }
 
-  h3 {
-    font-size: 1.75rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-  }
-
-  h5 {
-    font-size: 1.25rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-  }
-
+  /* 상호참조·외부 링크 모두 본문 글자로 찍는다. */
   a,
   a:visited {
-    color: #000;
-    text-decoration: underline;
-    word-wrap: break-word;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .footnotes {
+    margin-top: 2.5em;
+    font-size: 0.85em;
+  }
+
+  img {
+    display: block;
+    max-width: 100% !important;
+    border: 0;
+    break-inside: avoid;
+  }
+
+  hr {
+    height: 0;
+    margin: 2em 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #999;
   }
 
   table {
     border-collapse: collapse;
+    break-inside: avoid;
   }
 
   thead {
     display: table-header-group;
   }
 
-  table,
-  th,
-  td {
-    border-bottom: 1px solid #000;
-  }
-
-  td,
-  th {
-    padding: 8px 16px;
-  }
-
-  img {
-    border: 0;
-    display: block;
-    max-width: 100% !important;
-    vertical-align: middle;
-  }
-
-  hr {
-    border: 0;
-    border-bottom: 2px solid #bbb;
-    height: 0;
-    margin: 2.25rem 0;
-    padding: 0;
-  }
-
-  dt {
-    font-weight: bold;
-  }
-
-  dd {
-    margin: 0;
-    margin-bottom: 0.75rem;
-  }
-
-  abbr[title],
-  acronym[title] {
-    border: 0;
-    text-decoration: none;
-  }
-
-  table,
-  blockquote,
-  pre,
-  code,
-  figure,
-  li,
-  hr,
-  ul,
-  ol,
-  a,
   tr {
-    page-break-inside: avoid;
-  }
-
-  h2,
-  h3,
-  h4,
-  p,
-  a {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
-  }
-
-  h1 + p,
-  h2 + p,
-  h3 + p {
-    page-break-before: avoid;
-  }
-
-  img {
-    page-break-after: auto;
-    page-break-before: auto;
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   pre {
     white-space: pre-wrap !important;
-    word-wrap: break-word;
-  }
-
-  a[href^='http://']:after,
-  a[href^='https://']:after,
-  a[href^='ftp://']:after {
-    content: " (" attr(href) ")";
-    font-size: 80%;
-  }
-
-  abbr[title]:after,
-  acronym[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  #main {
-    max-width: 100%;
-  }
-
-  .page {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .page-break,
-  .page-break-before {
-    page-break-before: always;
-  }
-
-  .page-break-after {
-    page-break-after: always;
-  }
-
-  .no-print {
-    display: none;
-  }
-
-  a.no-reformat:after {
-    content: '';
-  }
-
-  abbr[title].no-reformat:after,
-  acronym[title].no-reformat:after {
-    content: '';
-  }
-
-  .page__hero-caption {
-    color: #000 !important;
-    background: #fff !important;
-    opacity: 1;
-
-    a {
-      color: #000 !important;
-    }
+    overflow-wrap: break-word;
+    break-inside: avoid;
   }
 
 /*
-   Hide the following elements on print
+   정리 박스 · 증명 — 수학 책의 정리 환경처럼 짠다. 괘선·채움 없이 라벨을 본문 첫 줄
+   앞에 붙이고("정의 1. …"), 박스의 끝은 위아래 간격으로 가른다. 라벨이 본문과 한
+   줄이라 쪽 끝에 라벨만 남는 일도 없다.
    ========================================================================== */
 
-  .masthead,
-  .toc,
-  .page__share,
-  .page__related,
-  .pagination,
-  .ads,
-  .page__footer,
-  .page__comments-form,
-  .author__avatar,
-  .author__content,
-  .author__urls-wrapper,
-  .nav__list,
-  .sidebar,
-  .adsbygoogle {
-    display: none !important;
-    height: 1px !important;
+  @each $c in join($thm-boxes, $thm-collapsibles) {
+    .#{$c} {
+      margin: 1.1em 0 !important;
+      padding: 0 !important;
+      color: #000 !important;
+      background: none !important;
+      border: 0 !important;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @each $c in $thm-boxes {
+    /* 명제·정의는 대개 몇 줄이라 쪽을 가르지 않는다 (한 쪽보다 길면 브라우저가 가른다).
+       증명은 길어서 그대로 흐르게 둔다. */
+    .#{$c} {
+      break-inside: avoid;
+    }
+
+    /* 화면에서 박스 바로 뒤 증명을 끌어올리는 음수 마진을 종이 간격으로 다시 잡는다. */
+    .#{$c} + .proof {
+      margin-top: -0.5em !important;
+    }
+  }
+
+  /* 라벨: .thm-head 는 첫 <p> 안의 span 이라 inline 으로 돌리면 첫 줄 앞에 그대로
+     붙는다. 화면의 헤어라인(::after) 자리에는 마침표를 찍는다. */
+  .thm-head {
+    display: inline;
+    margin: 0 0.3em 0 0;
+    font-size: 1em;
+
+    &::after {
+      content: ".";
+      font-family: $sans-serif;
+      font-weight: bold;
+      background: none !important;
+    }
+  }
+
+  @each $c in $thm-boxes {
+    .#{$c} .thm-head::after {
+      color: map-get($thm-colors, $c);
+    }
+  }
+
+  .thm-tag {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background: none !important;
+  }
+
+  /* 증명·접기 박스의 summary 는 <p> 밖의 블록이라 float 로 첫 줄 앞에 앉힌다. 줄 높이를
+     본문과 같게 둬야 기준선이 맞고, details 를 flow-root 로 둬야 접힌 박스가 float 를
+     감싼다. */
+  @each $c in $thm-collapsibles {
+    details.#{$c} {
+      display: flow-root;
+
+      > summary {
+        float: left;
+        margin: 0 0.5em 0 0 !important;
+        font-size: 1em;
+        line-height: 1.8;
+
+        &::before {
+          content: none;
+        }
+
+        &::after {
+          content: ".";
+          flex: none;
+          align-self: auto;
+          height: auto;
+          min-width: 0;
+          margin: 0 !important;
+          background: none !important;
+        }
+      }
+    }
+  }
+
+  /* QED 표식: 화면에서는 Proof_animate.js 가 화면 레이아웃으로 잰 top(px)을 박아
+     두므로, 폭이 다른 인쇄 레이아웃에서는 엉뚱한 줄에 앉는다. 펼친 증명은 박스 아래
+     (= 마지막 줄 아래)에서 재고 본문 오른쪽 끝에 붙인다. 채움은 배경 대신 테두리로 —
+     배경은 인쇄 기본 설정에서 빠진다. */
+  .qed-mark {
+    border: calc(#{$qed-size} / 2) solid $proof-color;
+    background: none;
+    transition: none;
+  }
+
+  details.proof.qed-open .qed-mark,
+  details.proof--alone.qed-open .qed-mark {
+    top: auto !important;
+    right: 0;
+    bottom: 0.5em;
+    transform: none;
+  }
+
+/*
+   수식 · 다이어그램 — 종이에는 가로 스크롤이 없으므로 넓은 것은 본문 폭에 맞춰 줄인다.
+   ========================================================================== */
+
+  /* --eq-w: 수식의 자연 폭(수식 글자 크기 em). beforeprint 에 Print_fit.js 가 단다.
+     100cqi(이 디스플레이의 폭)를 그 값으로 나누면 딱 들어가는 글자 크기가 된다. */
+  .katex-display {
+    overflow: visible;
+    container-type: inline-size;
+    break-inside: avoid;
+  }
+
+  .katex-display > .katex {
+    font-size: min(1em, calc(100cqi / var(--eq-w, 0.001))) !important;
+  }
+
+  figure.diagram {
+    max-width: 100% !important;
+    overflow: visible;
+    break-inside: avoid;
+
+    svg {
+      max-width: 100% !important;
+    }
   }
 }
