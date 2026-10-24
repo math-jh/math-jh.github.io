@@ -14280,6 +14280,13 @@ O:
     id: alexandroff_compactification
   - label: Compactification
     id: compactification
+- id: one-sided_derivative
+  en: one-sided derivative
+  ko: 한쪽 미분계수
+  primary: en
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: open_ball
   en: open ball
   ko: 열린공
