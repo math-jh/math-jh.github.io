@@ -11877,6 +11877,13 @@ L:
   defs:
   - label: '[해석학] §상극한과 하극한'
     url: /ko/math/analysis/limsup_and_liminf
+- id: limit_laws
+  en: limit laws
+  ko: 극한법칙
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: limit_of_a_function
   en: limit of a function
   ko: 함수의 극한
