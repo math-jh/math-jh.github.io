@@ -37,9 +37,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
-<link rel="stylesheet" id="theme-light" href="{{ '/assets/css/main.css' | relative_url }}">
 {% if site.dark_theme %}
-  <link rel="stylesheet" id="theme-dark" href="/assets/css/main_dark.css">
+  <!-- 라이트/다크 한 장 — 빌드 때 _plugins/theme_css.rb 가 main.css·main_dark.css 를 합친다 -->
+  <link rel="stylesheet" id="theme-css" href="{{ '/assets/css/theme.css' | relative_url }}">
   <script>
   /* Pre-paint theme apply (3-state: auto|light|dark) — prevents FOUC.
      로직의 단일 출처는 _includes/js/theme-core.js — 빌드 시 여기와
@@ -47,9 +47,11 @@
      예전엔 여기에 압축 사본이 따로 살아 주석으로만 동기화됐다). */
   (function () {
   {% include js/theme-core.js %}
-  themeApplyStylesheets(themeGetMode());
+  themeApply(themeGetMode());
   })();
   </script>
+{% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% endif %}
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>

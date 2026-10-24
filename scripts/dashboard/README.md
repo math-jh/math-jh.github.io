@@ -196,7 +196,9 @@ flock 아래에서만 한다. 통째로 덮으면 그 사이 워커가 붙인 �
 - **`main.css` 와 `main_dark.css` 중 안 쓰는 쪽을 `disabled` 로 꺼야 한다.** 둘 다 살려 두면
   나중 것(dark)이 이겨 밝은 배경에 밝은 글자가 얹힌다 — 정리 박스 안 본문이 유령처럼 사라진다.
   대시보드 본체는 `data-theme` 만 세우면 되지만 비교기는 링크 토글까지 해야 한다
-  (로직 원본은 `_includes/js/theme-core.js`).
+  (모드 해석의 원본은 `_includes/js/theme-core.js`). 블로그 페이지 자체는 두 장을 합친
+  `theme.css` 한 장을 `data-theme` 로 가른다(`_plugins/theme_css.rb`) — 비교기만 두 장을 직접 문다.
+  웹폰트 `@font-face` 는 테마 시트가 아니라 `fonts.css` 에 있으니 비교기도 그것을 같이 링크한다.
 - **`[hidden]` 은 클래스의 `display` 에 밀린다.** 모달·원문 패널처럼 클래스로 display 를 주는
   요소는 `[hidden]{display:none!important}` 로 다시 이겨 주지 않으면 처음부터 열려 있다.
 - **`<ins>` 는 본문에서 이미 두 번 전용됐다** — 전역(`_base`)에서 밑줄 2px + `margin-right:1em`,
