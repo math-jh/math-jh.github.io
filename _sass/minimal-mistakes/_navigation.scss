@@ -22,6 +22,10 @@
     max-width: $x-large;
   }
 
+  @include breakpoint($xx-large) {
+    max-width: $max-width-wide;
+  }
+
   ol {
     padding: 0;
     list-style: none;
@@ -34,6 +38,10 @@
 
     @include breakpoint($x-large) {
       width: calc(100% - #{$right-sidebar-width});
+    }
+
+    @include breakpoint($xx-large) {
+      width: calc(100% - #{$right-sidebar-width-wide});
     }
   }
 
@@ -439,18 +447,21 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: $type-size-4;
+  font-size: $type-size-aside;
   line-height: 1.2em;
   color: mix($primary-color, #fff, 40%);
 
+  // .sidebar li 의 em 축소가 중첩 목록에서 곱해지지 않게 한다.
+  li {
+    font-size: inherit;
+  }
+
   a {
     color: $muted-text-color;   // neutral (was washed link-blue) — not distracting
-    font-size: 0.95em;
   }
 
   a:hover {
     color: $text-color;          // darken + underline on hover = clearly clickable
-    font-size: 0.95em;
     text-decoration: underline;
   }
 
@@ -504,7 +515,7 @@
   margin: 0.5rem 0;
   padding: 0.25rem 0;
   font-family: $sans-serif-narrow;
-  font-size: $type-size-6;
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
@@ -542,7 +553,7 @@
 
   .nav__title {
     color: $highlight-color;
-    font-size: $type-size-6;
+    font-size: $type-size-aside;
     background: $background-color;
   }
 
@@ -558,7 +569,7 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-6;
+  font-size: $type-size-aside;
   // The glow's centre travels exactly from the rail's top to its bottom. Clip
   // vertically to the rail so at either end only half the glow shows and its
   // brightest point marks the line's start/end, instead of the faded tail
@@ -607,10 +618,6 @@
 
   &.is-progress-ready::after {
     opacity: 1;
-  }
-
-  @include breakpoint($large) {
-    font-size: $type-size-7;
   }
 
   a {

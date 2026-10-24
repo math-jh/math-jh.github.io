@@ -11,6 +11,7 @@
   padding: 0 1em;
   max-width: 100%;
   @include breakpoint($x-large) { max-width: $max-width; }
+  @include breakpoint($xx-large) { max-width: $max-width-wide; }
 
   &__main {
     display: grid;

@@ -11,6 +11,7 @@
   그래서 죽은 링크가 생기지 않고, 발행 여부에 따라 목록을 손볼 필요도 없다.
 {%- endcomment -%}
 {%- assign subject_urls = site.data.subject_pages[include.lang] -%}
+{%- assign _ui = site.data.ui-text[include.lang] -%}
 {%- assign counter = 0 -%}
 
 <div class="subj-grid">
@@ -25,7 +26,7 @@
   <section class="subj-section">
     <div class="subj-section__head">
       <h2>{% if include.lang == 'en' %}{{ sec.en }}{% else %}{{ sec.ko }}{% endif %}</h2>
-      <span class="subj-section__count">{{ sec_count }} subject{% if sec_count != 1 %}s{% endif %}</span>
+      <span class="subj-section__count">{% if sec_count == 1 %}{{ _ui.subject_count_one }}{% else %}{{ _ui.subject_count_other | replace: "__N__", sec_count }}{% endif %}</span>
     </div>
     <div class="subj-cards">
     {%- for subj in sec.subjects -%}
@@ -38,7 +39,7 @@
       <a class="subj-card" href="{{ subj_url }}" style="background-image: url('/assets/images/Pages/Thumbnails/Files/{{ file }}.jpeg');">
         <span class="subj-card__en">{{ en }}</span>
         <span class="subj-card__ko">{{ ko }}</span>
-        <span class="subj-card__go">Read more <i class="material-icons" aria-hidden="true">arrow_forward</i></span>
+        <span class="subj-card__go">{{ _ui.subject_card_more }} <i class="material-icons" aria-hidden="true">arrow_forward</i></span>
       </a>
       {%- endif -%}
     {%- endfor -%}

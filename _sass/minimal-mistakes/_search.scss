@@ -51,6 +51,10 @@
       max-width: $max-width;
     }
 
+    @include breakpoint($xx-large) {
+      max-width: $max-width-wide;
+    }
+
   }
 
   &__form {

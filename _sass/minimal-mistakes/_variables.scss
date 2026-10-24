@@ -44,6 +44,8 @@ $type-size-5: 1em !default; // ~16px
 $type-size-6: 0.75em !default; // ~12px
 $type-size-7: 0.6875em !default; // ~11px
 $type-size-8: 0.625em !default; // ~10px
+// 왼쪽 사이드바·목차·의존성 그래프 제목. 부모가 본문 글자 크기인 자리에 건다.
+$type-size-aside: 0.75em !default;
 
 /* headline scale */
 $h-size-1: 1.563em !default; // ~25.008px
@@ -167,6 +169,9 @@ $medium-wide: 900px !default;
 $large: 1024px !default;
 $x-large: 1280px !default;
 $max-width: $x-large !default;
+// 양쪽 칸을 $right-sidebar-width-wide 로 넓히는 폭. 넓어진 틀($max-width-wide)에
+// 세로 스크롤바까지 들어간다. 본문 칸 폭은 $x-large 와 같다.
+$xx-large: 1400px !default;
 
 /*
    Grid
@@ -175,6 +180,7 @@ $max-width: $x-large !default;
 $right-sidebar-width-narrow: 200px !default;
 $right-sidebar-width: 200px !default;
 $right-sidebar-width-wide: 250px !default;
+$max-width-wide: $max-width + 2 * ($right-sidebar-width-wide - $right-sidebar-width) !default;
 
 /*
    Other

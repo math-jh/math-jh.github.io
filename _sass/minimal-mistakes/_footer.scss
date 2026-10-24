@@ -27,6 +27,10 @@
     @include breakpoint($x-large) {
       max-width: $x-large;
     }
+
+    @include breakpoint($xx-large) {
+      max-width: $max-width-wide;
+    }
   }
 
   a {

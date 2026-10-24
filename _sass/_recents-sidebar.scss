@@ -80,6 +80,13 @@
   }
 }
 
+@media (min-width: $xx-large) {
+  .layout--single .sidebar__right-slot {
+    right: -1 * $right-sidebar-width-wide;
+    width: $right-sidebar-width-wide;
+  }
+}
+
 /* Shared section styling. */
 .recents-block {
   font-family: $sans-serif-narrow;
@@ -240,10 +247,8 @@
    밀린다. 그래서 본문 taxonomy 와 recents 를 하나의 2단 grid 로 묶고, recents 는
    그 컬럼 안에서 position:sticky 로 붙인다 — grid 컬럼이라 본문을 밀지 않는다.
 
-   글자는 좌측 사이드바와 동일하게: .nav__list .nav__items 는 $type-size-4 라
-   커서, 좌측은 .sidebar 의 `p,li { font-family:$sans-serif; font-size:$type-size-6 }`
-   로 줄이고 sans-serif 로 바꾼다. 우측엔 그 규칙이 없어 본문 serif·큰 글자로 나왔다.
-   그 규칙을 그대로 복제한다.
+   글자는 좌측 사이드바와 동일하게: 크기는 .nav__list .nav__items 가 정하고,
+   글꼴·행간은 좌측 .sidebar 의 `p, li` 규칙에서 오므로 그 둘을 여기 복제한다.
    ========================================================================== */
 .layout--categories {
   // 우측 gutter(padding-right)는 이제 grid 컬럼이 대신하므로 회수한다.
@@ -260,6 +265,9 @@
     }
     @include breakpoint($x-large) {
       grid-template-columns: minmax(0, 1fr) $right-sidebar-width;
+    }
+    @include breakpoint($xx-large) {
+      grid-template-columns: minmax(0, 1fr) $right-sidebar-width-wide;
     }
   }
 
@@ -282,11 +290,10 @@
 
     .nav__list { margin-bottom: 0; }
 
-    // 좌측 .sidebar 의 `p, li` 규칙을 복제 (글꼴·크기·행간)
+    // 좌측 .sidebar 의 `p, li` 규칙을 복제 (글꼴·행간)
     li,
     p {
       font-family: $sans-serif;
-      font-size: $type-size-6;
       line-height: 1.5;
     }
 

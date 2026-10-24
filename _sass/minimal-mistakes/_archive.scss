@@ -16,6 +16,11 @@
     width: calc(100% - #{$right-sidebar-width});
     padding-right: $right-sidebar-width;
   }
+
+  @include breakpoint($xx-large) {
+    width: calc(100% - #{$right-sidebar-width-wide});
+    padding-right: $right-sidebar-width-wide;
+  }
 }
 
 .archive__item {
@@ -146,6 +151,10 @@
 
     @include breakpoint($x-large) {
       margin-right: -1 * $right-sidebar-width;
+    }
+
+    @include breakpoint($xx-large) {
+      margin-right: -1 * $right-sidebar-width-wide;
     }
   }
 }

@@ -51,6 +51,10 @@ en: &DEFAULT_EN
   recent_posts               : "Recent posts"
   recent_comments            : "Recent comments"
   recents_label              : "Recents"
+  # 홈 과목 카드. __N__ 은 그 섹션의 과목 수.
+  subject_card_more          : "Read more"
+  subject_count_one          : "1 subject"
+  subject_count_other        : "__N__ subjects"
   # Notice shown at the top of posts carrying a current or legacy machine-translation tag.
   translationNotice          : "This post was machine-translated from the Korean original by [Marvin](/en/about-Marvin). It may contain errors or awkward phrasing — the Korean original is the source of truth."
   ai_post_notice             : "This post was written by an LLM persona (__AUTHOR__). Content may contain factual errors or misunderstandings."
@@ -708,6 +712,9 @@ ko: &DEFAULT_KO
   recent_posts               : "최근 글"
   recent_comments            : "최근 댓글"
   recents_label              : "최근 글/댓글"
+  subject_card_more          : "더 보기"
+  subject_count_one          : "과목 1개"
+  subject_count_other        : "과목 __N__개"
   # 프론트매터에 현재 또는 레거시 기계 번역 source tag가 있는 글 상단에 표시할 경고문.
   # 아래 값을 수정해서 원하는 문구를 넣어주세요.
   translationNotice          : "이 글은 한글 원문을 자동 번역한 것입니다. 번역 오류가 있을 수 있으며, 한글 원문이 우선합니다."
