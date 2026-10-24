@@ -100,6 +100,49 @@ search: false
   font-display: swap;
 }
 
+// 인쇄 전용 산세리프 (_print.scss 의 명제 본문·라벨·제목). 같은 나눔고딕 파일에, 세리프
+// 본문과 찍힌 크기가 같도록 문자 범위별 size-adjust 를 준다: 한글 114.5% = MaruBuri(111%)
+// 와 잉크 높이가 같은 값, 그 밖(라틴·숫자·기호) 102.5% = Merriweather Light 와 x-height 가
+// 같은 값 (숫자도 이쪽이 본문 숫자에 가깝다). 한글 face 를 뒤에 둬야 겹치는 범위에서 먼저
+// 쓰인다. 화면에서는 쓰지 않으므로 Print_fit.js 가 미리 받아 둔다.
+@font-face {
+  font-family: "MyPrintSansFont";
+  font-style: normal;
+  src: url('fonts/NanumGothic-Regular.woff2') format('woff2'),
+       url('fonts/NanumGothic-Regular.woff') format('woff');
+  size-adjust: 102.5%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyPrintSansFont";
+  font-style: normal;
+  src: url('fonts/NanumGothic-Regular.woff2') format('woff2'),
+       url('fonts/NanumGothic-Regular.woff') format('woff');
+  size-adjust: 114.5%;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
+}
+
+@font-face {
+  font-family: "MyPrintSansFont";
+  font-weight: bold;
+  src: url('fonts/NanumGothic-Bold.woff2') format('woff2'),
+       url('fonts/NanumGothic-Bold.woff') format('woff');
+  size-adjust: 102.5%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyPrintSansFont";
+  font-weight: bold;
+  src: url('fonts/NanumGothic-Bold.woff2') format('woff2'),
+       url('fonts/NanumGothic-Bold.woff') format('woff');
+  size-adjust: 114.5%;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
+}
+
 /* Emphasizing_font */
 @font-face {
   font-family: "MyEmphFont";
