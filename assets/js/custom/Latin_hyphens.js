@@ -20,8 +20,33 @@
   // 경우 기호가 스팬 밖에 남으면 그 낱말만 하이픈이 죽는다. 한글은 밖에 둔다.
   var WORD = /[^\s가-힣]*[A-Za-z][A-Za-z'-]*[^\s가-힣]*/g;
   var SKIP = '.katex, code, pre, [lang="en"]';
+  // 뒤에 한글이 공백 없이 붙는 스팬("homomorphism이다")에 다는 클래스. Gecko 는 낱말을
+  // 공백으로만 자르고, 한 낱말 안에서 lang 이 바뀌면 그 낱말의 자동 하이픈을 통째로 끈다
+  // (nsLineBreaker 의 mCurrentWordContainsMixedLang). _page.scss 가 이 클래스에 빈
+  // inline-block ::after 를 달아 낱말을 스팬 끝에서 끊는다 (Blink 는 스팬 단위로 하이픈을
+  // 걸어 이 문제가 없다). 빈 inline-block 은 그 자리에 줄바꿈 기회를 만드는데, 영문과
+  // 한글 사이는 어느 엔진에서나 이미 줄바꿈 기회이므로 한글이 붙을 때만 달면 새로 생기는
+  // 자리가 없다. 마침표·괄호·수식 앞에 달면 그 앞에서 줄이 끊길 수 있게 된다.
+  var JOINED = 'ko-follows';
+  var HANGUL = /[가-힣]/;
 
-  function wrapWords(text) {
+  // 텍스트 노드 끝에서 끝난 스팬 뒤의 첫 글자. 링크 안 낱말 뒤에 링크 밖 조사가 붙는
+  // 경우처럼 요소 경계를 넘는다. 다른 문단·목록 항목이나 수식으로 넘어가면 이어지는
+  // 글자가 아니다.
+  function nextChar(block, span) {
+    var walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT, null);
+    var node;
+
+    walker.currentNode = span.firstChild;
+    while ((node = walker.nextNode())) {
+      if (!node.nodeValue) continue;
+      if (node.parentNode.closest('p, li') !== block || node.parentNode.closest('.katex')) return '';
+      return node.nodeValue.charAt(0);
+    }
+    return '';
+  }
+
+  function wrapWords(text, tails) {
     var v = text.nodeValue;
     var frag = document.createDocumentFragment();
     var last = 0, m;
@@ -34,6 +59,8 @@
       span.textContent = m[0];
       frag.appendChild(span);
       last = m.index + m[0].length;
+      if (last === v.length) tails.push(span);              // 뒤 글자는 다음 노드에 있다
+      else if (HANGUL.test(v.charAt(last))) span.className = JOINED;
     }
     if (last === 0) return;                                  // 감쌀 게 없었다
     if (last < v.length) frag.appendChild(document.createTextNode(v.slice(last)));
@@ -57,7 +84,12 @@
         if (WORD.test(node.nodeValue)) targets.push(node);
       }
 
-      targets.forEach(wrapWords);   // 순회가 끝난 뒤 교체한다 (walker 무효화 방지)
+      // 순회가 끝난 뒤 교체한다 (walker 무효화 방지)
+      var tails = [];
+      targets.forEach(function (text) { wrapWords(text, tails); });
+      tails.forEach(function (span) {
+        if (HANGUL.test(nextChar(block, span))) span.className = JOINED;
+      });
     });
   };
 })();

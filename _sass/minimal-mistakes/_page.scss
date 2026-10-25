@@ -194,6 +194,15 @@ body {
              kotex 은 한글 사이에만 glue 를 넣지 라틴 낱말 내부는 건드리지 않는다.
              그 자리를 막으면 남는 폭이 전부 한글 글자 사이로 간다. */
           text-justify: inter-word;
+
+          /* 뒤에 한글이 공백 없이 붙은 낱말("homomorphism이다"). Gecko 는 이 둘을 한
+             낱말로 보고 lang 이 섞였다며 하이픈을 끈다. 빈 inline-block 이 낱말을 여기서
+             끊는다. 상자가 비어 있으므로 조사 글자는 그대로 양끝맞춤에 참여하고, 복사되는
+             글자도 없다. 클래스는 Latin_hyphens.js 가 단다. */
+          &.ko-follows::after {
+            content: "";
+            display: inline-block;
+          }
         }
       }
     }
