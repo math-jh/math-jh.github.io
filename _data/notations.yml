@@ -4332,6 +4332,11 @@
     defs:
     - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes#def1
+  - symbol: \rProj_S(\mathcal{A})
+    meaning: quasi-coherent graded algebra의 relative Proj
+    defs:
+    - label: §준연접층
+      url: /ko/math/scheme_theory/quasicoherent_sheaves#def23
   - symbol: \Sch_{/S}
     meaning: $S$ 위의 스킴들의 슬라이스 범주
     defs:
@@ -4342,6 +4347,11 @@
     defs:
     - label: §스펙트럼
       url: /ko/math/scheme_theory/spectrums#def1
+  - symbol: \rSpec_S(\mathcal{A})
+    meaning: quasi-coherent algebra의 relative spectrum
+    defs:
+    - label: §준연접층
+      url: /ko/math/scheme_theory/quasicoherent_sheaves#def21
   - symbol: \supp(f)
     meaning: section의 support
     defs:
