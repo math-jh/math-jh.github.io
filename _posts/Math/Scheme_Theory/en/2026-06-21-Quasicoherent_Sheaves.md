@@ -368,7 +368,7 @@ applying [Proposition 6](#prop6){: data-lid="3c4dz" } shows that $\widetilde{\im
 
 Thus, the closed subschemes of $X$ correspond precisely to the quasi-coherent ideal sheaves of $\mathcal{O}_X$, that is, subsheaves of $\mathcal{O}_X$ that are quasi-coherent $\mathcal{O}_X$-modules. One direction is given by [Proposition 18](#prop18){: data-lid="24v29" }. Conversely, given such an $\mathcal{I}$, for each affine open subset $\Spec A$, $\mathcal{I}(\Spec A)$ is an ideal of $A$, and since $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$ holds by [Theorem 10](#thm10){: data-lid="kiu0l" } and [Lemma 3](#lem3){: data-lid="gwkzp" }, $\mathcal{I}$ induces a unique closed subscheme of $X$ by [§Closed Subschemes, ⁋Proposition 6](/en/math/scheme_theory/closed_subschemes#prop6){: data-lid="748jt" }. This correspondence is nothing other than the correspondence between an ideal $\mathfrak{a}\subseteq A$ and the quotient $A/\mathfrak{a}$ in the affine setting. Moreover, [Proposition 18](#prop18){: data-lid="2cmre" } is also the fact used without proof in the proof of [§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3){: data-lid="sacst" }.
 
-## Affine Morphisms and the Relative Spectrum
+## The Relative Spectrum and the Relative Proj
 
 A closed embedding could be completely described via a specific sheaf, namely the ideal sheaf of $\mathcal{O}_X$, and we saw above that this ideal sheaf is a quasi-coherent sheaf. Closed embeddings are not the only morphisms completely determined by a sheaf in this way, and we will see that affine morphisms also admit such a description. ([§Properties of Scheme Morphisms, ⁋Definition 8](/en/math/scheme_theory/properties_of_scheme_morphisms#def8){: data-lid="jtbrp" }) The crucial fact is that to define an affine morphism $X\rightarrow S$, it suffices to glue together affine open subschemes of $X$ (and maps from them to $S$). However, since affine subschemes are completely determined precisely by their coordinate rings, we can instead solve the problem of gluing these rings. In this setting, for an affine morphism $\varphi: X \rightarrow S$, each ring $\mathcal{O}_X(\varphi^{-1}(V))$ is equipped with a ring homomorphism from $\mathcal{O}_S(V)$ given by the structure morphism and is thus an $\mathcal{O}_S(V)$-algebra; hence all of this data is packaged into a single sheaf on $S$, namely $\varphi_\ast\mathcal{O}_X$, together with its algebra structure.
 
@@ -430,6 +430,22 @@ and by [§Fiber Products, ⁋Lemma 3](/en/math/scheme_theory/fiber_products#lem3
 $$p^{-1}(V')\cong \Spec \mathcal{A}(V)\times_{\Spec B}\Spec B'\cong \Spec (\mathcal{A}(V)\otimes_BB')$$
 
 On the other hand, by the proof of [Proposition 15](#prop15){: data-lid="ubu4y" }, we have $(\varphi^\ast\mathcal{A})\vert_{V'}\cong \widetilde{\mathcal{A}(V)\otimes_BB'}$, so by the first assertion of [Theorem 20](#thm20){: data-lid="r284j" }, $\rSpec_{S'}(\varphi^\ast\mathcal{A})$ over $V'$ is also $\Spec (\mathcal{A}(V)\otimes_BB')$. Since all these isomorphisms are canonically determined by $\phi:B\rightarrow B'$ and the structure of $\mathcal{A}(V)$ as a $B$-algebra, they agree on overlaps and glue to an isomorphism over $S'$.
+:::
+
+In the same way, the $\Proj$ construction can also be carried out over a base. When a direct sum $\mathcal{A}=\bigoplus_{n\geq0}\mathcal{A}_n$ of quasi-coherent $\mathcal{O}_S$-modules is an $\mathcal{O}_S$-algebra whose multiplication is compatible with the grading, we call it a quasi-coherent graded $\mathcal{O}_S$-algebra. Then for each affine open subset $V=\Spec B$ of $S$ we can take $\Proj$ of the graded ring $\mathcal{A}(V)$, and since $B$ maps into each degree $0$ localization of $\mathcal{A}(V)$, we obtain a morphism $\Proj\mathcal{A}(V)\rightarrow V$. Moreover, for $f\in B$ we have $\mathcal{A}(D(f))=\mathcal{A}(V)_f$, and on each piece $D_+(g)$ of [§Projective Schemes, ⁋Theorem 10](/en/math/scheme_theory/projective_schemes#thm10), the degree $0$ localization of $\mathcal{A}(V)_f$ is that of $\mathcal{A}(V)$ further localized at $f$; hence $\Proj\mathcal{A}(D(f))$ is the open subscheme of $\Proj\mathcal{A}(V)$ lying over $D(f)$. Therefore these glue in exactly the same way as the affine open subsets of $S$ do.
+
+::: Definition 23
+For a quasi-coherent graded $\mathcal{O}_S$-algebra $\mathcal{A}$, the scheme over $S$ obtained by gluing the $\Proj\mathcal{A}(V)$ over the affine open subsets $V$ of $S$ as above is called the *relative Proj* of $\mathcal{A}$ and denoted by $\rProj_S(\mathcal{A})$.
+:::
+
+Unlike the relative spectrum, $\rProj_S(\mathcal{A})\rightarrow S$ is in general not an affine morphism. Moreover, $\Proj$ is not functorial with respect to graded ring homomorphisms, and different graded algebras can give the same $\Proj$ (for instance, $\mathcal{A}$ and its Veronese subalgebra $\bigoplus_n\mathcal{A}_{dn}$), so no correspondence like the third assertion of [Theorem 20](#thm20) holds. Nevertheless, base change behaves in the same way as in [Proposition 22](#prop22).
+
+::: Proposition 24
+For a scheme morphism $\varphi:S'\rightarrow S$ and a quasi-coherent graded $\mathcal{O}_S$-algebra $\mathcal{A}$,
+
+$$\rProj_{S'}(\varphi^\ast\mathcal{A})\cong \rProj_S(\mathcal{A})\times_SS'$$
+
+holds.
 :::
 
 ---

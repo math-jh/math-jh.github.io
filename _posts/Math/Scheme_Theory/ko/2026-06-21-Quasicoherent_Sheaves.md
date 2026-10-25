@@ -370,7 +370,7 @@ $$0 \rightarrow \ker\phi \rightarrow A \rightarrow \im\phi \rightarrow 0,\qquad 
 
 이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-module과 정확히 대응한다. 한 방향은 [명제 18](#prop18){: data-lid="24v29" }이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10){: data-lid="kiu0l" }과 [보조정리 3](#lem3){: data-lid="gwkzp" }에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6){: data-lid="748jt" }에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 18](#prop18){: data-lid="2cmre" }은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3){: data-lid="sacst" }의 증명에서 증명 없이 사용한 사실이기도 하다. 
 
-## Affine morphism과 relative spectrum
+## Relative spectrum과 relative Proj
 
 Closed embedding은 특정한 sheaf, 즉 $\mathcal{O}_X$의 ideal sheaf를 통해 완전하게 설명할 수 있었으며, 우리는 위에서 이 ideal sheaf가 quasi-coherent sheaf인 것을 살펴보았다. 이렇게 sheaf를 통해 완전하게 정해지는 morphism은 closed embedding 뿐이 아니며, 우리는 affine morphism 또한 이러한 방식의 표현을 갖는다는 것을 살펴볼 것이다. ([§스킴 사상의 성질들, ⁋정의 8](/ko/math/scheme_theory/properties_of_scheme_morphisms#def8){: data-lid="jtbrp" }) 핵심적인 사실은 affine morphism $X\rightarrow S$를 정의하기 위해서는 $X$의 open affine subscheme들 (그리고 이들로부터 $S$로의 map들)을 붙여주면 된다는 것이다. 그런데 affine subscheme들은 정확하게 그 coordinate ring으로부터 완전하게 얻어지는 것이므로 우리는 이 ring들을 붙이는 문제를 대신 풀면 된다. 이 때 affine morphism $\varphi: X \rightarrow S$에 대하여 각각의 ring $\mathcal{O}_X(\varphi^{-1}(V))$는 structure morphism이 주는 $\mathcal{O}_S(V)$로부터의 ring homomorphism을 함께 가지므로 $\mathcal{O}_S(V)$-algebra이고, 따라서 이 데이터 전체는 $S$ 위의 sheaf $\varphi_\ast\mathcal{O}_X$ 하나와 그 algebra 구조로 정리된다.
 
@@ -432,6 +432,22 @@ $$p^{-1}(V')\cong X\times_SV'\cong (X\times_SV)\times_VV'$$
 $$p^{-1}(V')\cong \Spec \mathcal{A}(V)\times_{\Spec B}\Spec B'\cong \Spec (\mathcal{A}(V)\otimes_BB')$$
 
 를 얻는다. 한편 [명제 15](#prop15){: data-lid="ubu4y" }의 증명에 의하여 $(\varphi^\ast\mathcal{A})\vert_{V'}\cong \widetilde{\mathcal{A}(V)\otimes_BB'}$이므로, [정리 20](#thm20){: data-lid="r284j" }의 첫째 주장에 의하여 $\rSpec_{S'}(\varphi^\ast\mathcal{A})$ 또한 $V'$ 위에서 $\Spec (\mathcal{A}(V)\otimes_BB')$이다. 이 isomorphism들은 모두 $\phi:B\rightarrow B'$과 $\mathcal{A}(V)$의 $B$-algebra 구조로부터 canonical하게 정해지므로 overlap 위에서 일치하여 $S'$ 위의 isomorphism으로 붙는다.
+:::
+
+같은 방식으로 $\Proj$ 구성도 base 위로 올릴 수 있다. Quasi-coherent $\mathcal{O}_S$-module들의 direct sum $\mathcal{A}=\bigoplus_{n\geq0}\mathcal{A}_n$이 grading과 호환되는 곱셈을 갖는 $\mathcal{O}_S$-algebra일 때, 이를 quasi-coherent graded $\mathcal{O}_S$-algebra라 부르자. 그럼 $S$의 affine open subset $V=\Spec B$마다 graded ring $\mathcal{A}(V)$의 $\Proj$를 취할 수 있고, $B$가 $\mathcal{A}(V)$의 각 degree $0$ localization으로 들어가므로 morphism $\Proj\mathcal{A}(V)\rightarrow V$가 생긴다. 또 $f\in B$에 대하여 $\mathcal{A}(D(f))=\mathcal{A}(V)_f$이고, [§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)의 조각 $D_+(g)$마다 $\mathcal{A}(V)_f$의 degree $0$ localization은 $\mathcal{A}(V)$의 것을 다시 $f$에서 localization한 것이므로, $\Proj\mathcal{A}(D(f))$는 $\Proj\mathcal{A}(V)$에서 $D(f)$ 위에 놓인 open subscheme이다. 따라서 이들은 $S$의 affine open subset들이 붙는 방식 그대로 서로 붙는다.
+
+::: 정의 23
+Quasi-coherent graded $\mathcal{O}_S$-algebra $\mathcal{A}$에 대하여, $S$의 affine open subset $V$마다의 $\Proj\mathcal{A}(V)$를 위와 같이 붙여 얻은 $S$ 위의 scheme을 $\mathcal{A}$의 *relative Proj*라 부르고 $\rProj_S(\mathcal{A})$로 적는다.
+:::
+
+Relative spectrum과 달리 $\rProj_S(\mathcal{A})\rightarrow S$는 일반적으로 affine morphism이 아니다. 또 $\Proj$는 graded ring homomorphism에 대해 functorial하지 않고, 서로 다른 graded algebra가 같은 $\Proj$를 줄 수도 있으므로 (가령 $\mathcal{A}$와 그 Veronese subalgebra $\bigoplus_n\mathcal{A}_{dn}$), [정리 20](#thm20)의 셋째 주장과 같은 대응은 성립하지 않는다. 그러나 base change에 대해서는 [명제 22](#prop22)와 같은 꼴의 성질이 성립한다.
+
+::: 명제 24
+Scheme morphism $\varphi:S'\rightarrow S$와 quasi-coherent graded $\mathcal{O}_S$-algebra $\mathcal{A}$에 대하여
+
+$$\rProj_{S'}(\varphi^\ast\mathcal{A})\cong \rProj_S(\mathcal{A})\times_SS'$$
+
+이 성립한다.
 :::
 
 ---
