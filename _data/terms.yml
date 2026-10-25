@@ -16340,6 +16340,8 @@ Q:
     url: /ko/math/algebraic_varieties/canonical_bundle
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - label: '[스킴] §준연접층'
+    url: /ko/math/scheme_theory/quasicoherent_sheaves
   see:
   - label: Coherent sheaf
     id: coherent_sheaf
@@ -17193,6 +17195,13 @@ R:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+- id: relative_proj
+  en: relative Proj
+  ko: 상대 Proj
+  primary: en
+  defs:
+  - label: '[스킴] §준연접층'
+    url: /ko/math/scheme_theory/quasicoherent_sheaves
 - id: relative_spectrum
   en: relative spectrum
   ko: 상대 스펙트럼

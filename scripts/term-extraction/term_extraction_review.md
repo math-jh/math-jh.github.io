@@ -5443,3 +5443,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-10-16 11:15
 
 - _posts/Math/Analysis/ko/2026-06-02-Existence_Uniqueness_ODE.md: 병기 필요 'locally Lipschitz' — 위키 ko 문서 '립시츠 연속 함수' — 병기형 도출 필요
+
+## term_extract_worker 2026-10-26 01:19
+
+- _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'relative Proj' — 위키 ko 문서 '사영 스펙트럼' — 병기형 도출 필요
