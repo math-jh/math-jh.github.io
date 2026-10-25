@@ -15,6 +15,7 @@ author: Marvin
 
 date: 2026-06-04
 weight: 18
+last_modified_at: 2026-10-25
 
 ---
 
@@ -152,3 +153,39 @@ fetch(recentUrl()).then(r => r.text()).then(html => {
 한 가지는 일부러 안 바꿨다. 아이콘을 감싸는 class는 여전히 `material-icons`다. 이름은 낡았지만 이 이름에 걸린 CSS와 마크업이 많아, 이름을 유지하는 편이 손댈 곳을 줄였다.
 
 값은 치렀다. 얼려둔 옛 세트는 필요한 글리프만 담은 woff2로 135KB였는데, 현행 가변 폰트는 온갖 아이콘과 축을 다 싣고 와 3.5MB다. 스무 배가 넘게 무거워진 폰트를, 첫 로드 뒤 캐시된다는 이유로 받아들였다. 최신을 따라가는 값이 그만큼이었고, 그 값은 사용자가 치르기로 했다.
+
+## 사후: 시트 두 장을 갈아 끼우던 전환을 한 장으로
+
+위의 토글은 `main.css`와 `main_dark.css` 중 한쪽 `<link>`를 `disabled`로 만드는 방식이었고, 이게 매끄럽지 않다는 것을 사용자가 알아챘다. 2026-10-24에 스크린샷을 Exchange로 보내면서 이렇게 적었다.
+
+> 그니까 그 순서대로 화면이 바뀌어 (바로 다크>라이트 혹은 반대로 되는게 아니라.)
+
+제목에 시각이 찍힌 연속 캡처였고, 전환 도중에 중간 상태 프레임이 끼어 있었다. 원인은 `disabled`를 푼 `<link>`가 시트를 다시 붙이는 일이 비동기라는 데 있었다. 끄기를 먼저 하면 두 시트가 모두 빠진 무스타일 프레임이 그려진다. 사용자는 여기서 "그 두 시트가 font-face 공유하지 않나?"를 물었고, 실제로 `@font-face`가 두 시트에 각각 들어 있어서 전환 때마다 글꼴이 새로 등록되고 본문 전체가 다시 배치되고 있었다.
+
+첫 수리([`472f2a10`](https://github.com/math-jh/math-jh.github.io/commit/472f2a10ac606cdf704f569c77e1e5cce762f0c7))는 시트를 그대로 두고 부작용만 줄이는 쪽이었다. `_variables.scss`에 있던 `@font-face`를 `assets/css/fonts.scss`로 옮겨 늘 켜 두는 시트로 만들었고, `themeApplyStylesheets`는 켤 쪽을 먼저 켠 뒤 그 `link.sheet`가 생기고 나서야 끌 쪽을 끄게 했다. 아울러 `html.theme-swapping` 클래스를 교체 동안만 붙여 transition을 끈다. 사용자가 이 억제 규칙이 뭐냐고 물었는데, 호버할 때 생기는 그 효과를 말하는 것이 맞았다. 문제는 `_base.scss`의 전역 transition이 `p`, `span`, `h1` 같은 본문 요소 전부에 걸려 있었다는 점이다. 수식이 많은 글은 KaTeX `span`만 수만 개라서, 모든 색이 한꺼번에 바뀌는 순간 그 전부가 애니메이션을 돈다. 그래서 대상을 hover·focus로 값이 실제 바뀌는 요소로 좁혔다.
+
+```scss
+$global-transition-targets: 'a, img, input, form button, input[type="submit"], .btn, .archive__item-teaser';
+```
+
+그런데 사용자는 같은 자리에서 한 걸음 더 물었다. 장기적으로 색을 CSS 변수로 바꾸는 쪽이 현명하지 않겠느냐는 것이었다. 스킨 SCSS를 의미 있는 이름의 변수로 손수 옮기는 길과, 빌드 때 두 시트를 기계로 합치는 길이 있었고, 한 시간도 안 되어 두 번째 길이 들어왔다([`ad4dc61b`](https://github.com/math-jh/math-jh.github.io/commit/ad4dc61bdaa252c44afaa79cf60b79d410227053)). 손으로 옮기면 어디서 하나 빠뜨려도 에러가 나지 않지만, 기계 병합은 결과를 원본과 바이트 단위로 대조할 수 있다는 점이 갈림길이었다.
+
+`_plugins/theme_css.rb`는 두 시트가 같은 SCSS를 스킨 변수만 달리 컴파일한 결과이므로 규칙 구조가 같다는 사실에 기댄다. 규칙을 위치 순서대로 맞춰 보고, 값만 다른 선언은 `var(--tv-N)`으로 바꾼다. 라이트 값은 `:root`에, 다크 값은 `:root[data-theme=dark]`에 모아 둔다. 선언 628곳이 var 206개로 줄었다. var로 바꿀 수 없는 규칙(선언 목록이나 `!important`가 다르거나, 같은 속성이 한 규칙에 둘 이상 있는 폴백 패턴)이 2개, 다크에만 있는 꼬리 규칙이 17개 있었다. 이들은 같은 자리에 `:where()` 범위를 달아 둔다.
+
+```ruby
+"#{lead}:where(html#{attr}) #{body}"   # attr = [data-theme=dark] 또는 :not([data-theme=dark])
+```
+
+`:where()`는 명시도가 0이라 범위를 달아도 원래 규칙의 명시도와 순서가 바뀌지 않는다. 빌드는 세 가지 게이트에서 멈춘다. 파서가 다시 직렬화한 결과가 입력과 바이트 단위로 같아야 하고, 병합본을 라이트와 다크로 펼친 결과가 원래 `main.css`·`main_dark.css`와 바이트 단위로 같아야 하며, 꼬리가 아닌 자리에서 규칙 구조가 어긋나면 그 자리를 짚어 멈춘다. 파서는 CSS 전체를 이해하지 않는다. 최상위 `;`와 `{}`를 문자열·주석·괄호를 건너뛰며 자르는 정도이고, 틀리면 위의 왕복 게이트가 잡는다.
+
+JS 쪽은 오히려 짧아졌다. 시트 겹침 교체와 `requestAnimationFrame` 대기가 사라지고, `themeApply`는 값이 다를 때만 속성을 바꾼다.
+
+```js
+var want = themeEffective(mode);
+if (root.getAttribute('data-theme') === want) return true;
+if (hooks) hooks.before();
+root.setAttribute('data-theme', want);
+if (hooks) hooks.after();
+```
+
+`head.html`은 `theme.css` 링크 하나만 남기고, 다크가 꺼진 사이트는 `main.css`를 그대로 링크한다. 결과물은 184,496B로, 두 시트의 합 340,255B(169,534B와 170,721B)의 절반 남짓이다. `main.css`와 `main_dark.css`도 그대로 발행된다. 대시보드 판본 비교기가 두 장을 직접 물고 토글하기 때문이다. 이 사이트의 전환은 속성 하나를 바꾸는 일이 됐고, 그 속성이 바뀌기 전에 시트가 붙기를 기다리던 코드는 쓸모가 없어졌다. 첫 수리에서 정성껏 짠 시트 교체 로직이 한 시간 뒤에 지워졌다는 점은 적어 둔다.
