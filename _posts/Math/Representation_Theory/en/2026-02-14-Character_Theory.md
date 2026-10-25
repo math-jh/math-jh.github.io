@@ -1,7 +1,7 @@
 ---
 title: "Characters of Representations"
-description: "We define characters of group representations and examine their additive and multiplicative properties. Introducing class functions and inner products shows that characters are constant on conjugacy classes and distinguish irreducible representations."
-excerpt: "Definitions and orthogonality relations of character functions"
+description: "We define characters of group representations and examine their additive and multiplicative properties. By introducing class functions and inner products, we show that characters are constant on conjugacy classes and serve as a key tool for distinguishing irreducible representations."
+excerpt: "Definition and orthogonality relations of character functions"
 
 categories: [Math / Representation Theory]
 permalink: /en/math/representation_theory/character_theory
@@ -12,6 +12,8 @@ date: 2026-02-14
 weight: 2
 translated_at: 2026-09-25T19:15:05+00:00
 translation_source: antigravity-gemini-3.8-flash-high
+last_polished_at: 2026-10-25T11:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 In this post, we define character functions and examine their properties. These will be of great help in our goal of classifying representations. 
 
@@ -59,7 +61,7 @@ holds ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math
 A function $\rchi:G\rightarrow\mathbb{C}$ is a *class function* if $\rchi(hgh^{-1})=\rchi(g)$ holds for all $g,h\in G$. We denote the collection of all class functions defined on $G$ by $\mathbb{C}_\class(G)$. 
 :::
 
-By definition, class functions are determined by their values on each conjugacy class, and therefore as a vector space, $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$. Meanwhile, the important idea we considered in the previous post was that given any value, averaging it over all of $G$ yields a $G$-invariant value; using this, we can make the following definition on $\mathbb{C}_\class(G)$.
+By definition, class functions are determined by their values on each conjugacy class, and therefore, as a vector space, $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$. Meanwhile, the idea we considered important in the previous post was that given any value, averaging it over all of $G$ yields a $G$-invariant value; using this, we can make the following definition on $\mathbb{C}_\class(G)$.
 
 ::: Definition 4
 For any class functions $\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$, we define
@@ -67,11 +69,11 @@ For any class functions $\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$, we define
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g)\overline{\rchi_2(g)}$$
 :::
 
-This is simply transferring the standard Hermitian product defined on the target space $\mathbb{C}$ onto $\mathbb{C}_\class(G)$. On the other hand, for any representation $\rho$ with character $\rchi_\rho$, we can choose $\rho$ to be unitary by [§Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6){: data-lid="qd9uh" }, so for any $g\in G$,
+This is merely transferring the standard Hermitian product defined on the target space $\mathbb{C}$ onto $\mathbb{C}_\class(G)$. On the other hand, for the character $\rchi_\rho$ of a representation $\rho$, since we can choose $\rho$ to be unitary by [§Representation Theory of Finite Groups, ⁋Proposition 6](/en/math/representation_theory/representations_of_finite_groups#prop6){: data-lid="qd9uh" }, for any $g\in G$ we have
 
 $$\rchi_\rho(g^{-1})=\tr(\rho(g^{-1}))=\tr(\rho(g)^{-1})=\tr(\rho(g)^\dagger)=\overline{\tr(\rho(g))}=\overline{\rchi_\rho(g)}$$
 
-holds; therefore, for two characters $\rchi_1,\rchi_2$, we see that the following equation
+and therefore, for two characters $\rchi_1,\rchi_2$, we see that the following equation
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g)\overline{\rchi_2(g)}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_1(g^{-1})\overline{\rchi_2(g^{-1})}=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_1(g)}\rchi_2(g)=\langle \rchi_2,\rchi_1\rangle$$
 
@@ -79,81 +81,77 @@ holds. That is, when restricted to characters, this inner product takes real val
 
 ## Orthogonality of Characters
 
-As seen in the previous post, for any representation $U$, there exists the following subspace of fixed points
+As seen in the previous post, for any representation $U$, there exists the following subspace of fixed points:
 
 $$U^G=\{u\in U\mid g\cdot u=u\text{ for all $g\in G$}\}$$
 
-, where
+Here,
 
 $$p:U\rightarrow U^G;\qquad u\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdot u$$
 
-defines a projection from $U$ to $U$ that is $G$-invariant, and its image is $U^G$. By definition, the subrepresentation defined on $U^G$ is precisely the trivial representation
+defines a $G$-invariant projection from $U$ to $U$, whose image is $U^G$. By definition, the subrepresentation defined on $U^G$ is precisely the trivial representation
 
 $$G\rightarrow \Aut(U^G);\quad g\mapsto \id_{U^G}$$
 
-, so from this we can decompose the representation $U$ into the trivial representation $U^G$ and the remaining part $W$ to obtain
+so from this we can decompose the representation $U$ into the trivial representation $U^G$ and the non-trivial part $W$ to obtain
 
 $$U=U^G\oplus W$$
 
-.
-
-Moreover, we can also compute the dimension of $U^G$. In the decomposition above, by choosing suitable bases for $U^G$ and $W$, we can represent this in the form of a block matrix
+Moreover, we can also compute the dimension of $U^G$. In the decomposition above, by using suitable bases for $U^G$ and $W$, we can represent $p$ in the form of a block matrix
 
 $$\begin{pmatrix}\id_{U^G}&0\\0&0\end{pmatrix}$$
 
-, so the trace of $p: U\rightarrow U$ is equal to $\dim U^G$. Now by definition,
+so the trace of $p: U\rightarrow U$ is equal to $\dim U^G$. Now by definition,
 
 $$\dim U^G=\tr(p)=\tr\left(\frac{1}{\lvert G\rvert}\sum_{g\in G}\rho(g)\right)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\tr(\rho(g))=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi(g)\tag{1}$$
 
-.
-
-More generally, in [§Representation Theory of Finite Groups, ⁋Definition 3](/en/math/representation_theory/representations_of_finite_groups#def3){: data-lid="fxp7g" }, for any $G$-representations $V,W$, regarding them as underlying $\mathbb{C}$-vector spaces, we defined on their $\Hom$-set $\Hom_\mathbb{C}(V,W)$ the $G$-action
+More generally, in [§Representation Theory of Finite Groups, ⁋Definition 3](/en/math/representation_theory/representations_of_finite_groups#def3){: data-lid="fxp7g" }, for any $G$-representations $V,W$, we defined on their $\Hom$-set $\Hom_\mathbb{C}(V,W)$ (as underlying $\mathbb{C}$-vector spaces) the $G$-action
 
 $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)\qquad\text{for all $v\in V$}$$
 
-. Then the equation
+Then the equation
 
 $$\Hom_\mathbb{C}(V,W)^G=\Hom_G(V,W)$$
 
-holds; therefore, applying equation (1) to $U=\Hom(V,W)$ and the corresponding projection $p$, we see that
+holds, and thus applying equation (1) to $U=\Hom(V,W)$ and the corresponding projection $p$, we see that
 
 $$\dim \Hom_G(V,W)=\tr(p)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\Hom(V,W)}(g)$$
 
-. On the other hand, using $\Hom_\mathbb{C}(V,W)\cong V^\ast\otimes W$, the character on the right-hand side is given by the equation
+On the other hand, using $\Hom_\mathbb{C}(V,W)\cong V^\ast\otimes W$, the character on the right-hand side is obtained from the equation
 
 $$\rchi_{\Hom_\mathbb{C}(V,W)}(g)=\overline{\rchi_V(g)}\rchi_W(g)$$
 
-, so the equation above can be rewritten as
+so the equation above can be rewritten as
 
 $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rchi_W(g)=\langle \rchi_W, \rchi_V\rangle$$
 
-. Finally, assuming that $V,W$ are irreducible representations, we know from [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="cn3dy" } that for $\Hom_G(V,W)$, if $V\cong W$, it is $1$-dimensional, and otherwise $0$-dimensional, so
+Finally, assuming that $V,W$ are irreducible representations, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="cn3dy" }, $\Hom_G(V,W)$ is $1$-dimensional if $V\cong W$ and $0$-dimensional otherwise, so
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
-, from which we obtain the equation
+from which we obtain the equation
 
 $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
-. That is, with respect to the inner product of [Definition 4](#def4){: data-lid="0euwm" }, the irreducible characters form an orthonormal set. Since we know that $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$, it follows from this that there cannot be more irreducible representations than the number of conjugacy classes of $G$. Moreover, using this inner product, for any representation $V$ with character $\rchi_V$, and a fixed irreducible representation $V_i$ with character $\rchi_{V_i}$, we can take their inner product to compute within $V$ the multiplicity of $V_i$.
+That is, with respect to the inner product of [Definition 4](#def4){: data-lid="0euwm" }, the irreducible characters form an orthonormal set. Since we know that $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$, from this we see that there cannot be more irreducible representations than the number of conjugacy classes of $G$. Moreover, using this inner product, we can take the inner product of the character $\rchi_V$ of any representation $V$ and the character $\rchi_{V_i}$ of a fixed irreducible representation $V_i$ to compute the multiplicity of $V_i$ in $V$.
 
-## Regular Representation
+## Regular representation
 
 In this section, we obtain the Artin-Wedderburn decomposition considered in [§Representation Theory of Finite Groups, §§Maschke's Theorem](/en/math/representation_theory/representations_of_finite_groups#maschkes-theorem){: data-lid="b18uv" } using characters. To this end, first observe that $\mathbb{C}[G]$ is a left $\mathbb{C}[G]$-module defined over itself, and thus from the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-, it is also a representation of $G$. This is obtained simply by restricting the module structure defined on $\mathbb{C}[G]$, that is, the multiplication structure of $\mathbb{C}[G]$ as a ring, to $G$; explicitly, for any $g\in G$, using its image in $\mathbb{C}[G]$, $\delta_g=\sum_{x\in G}\delta_g(x)x$, we can write
+it is also a representation of $G$. This is obtained simply by restricting the module structure defined on $\mathbb{C}[G]$, that is, the multiplication structure of $\mathbb{C}[G]$ as a ring, to $G$. Explicitly, using the image $\delta_g=\sum_{x\in G}\delta_g(x)x$ in $\mathbb{C}[G]$ of any $g\in G$, we can write
 
 $$g\cdot \left(\sum_{y\in G} \phi(y)y\right)=\left(\sum_{x\in G}\delta_g(x)x\right)\left(\sum_{y\in G}\phi(y)y\right)=\sum_{z\in G}\left(\sum_{x\in G}\delta_g(x)\phi(x^{-1}z)\right)z=\sum_{z\in G}\phi(g^{-1}z)z=\sum_{z\in G}\phi(z)(gz)$$
 
-, and such a representation is called the *regular representation*.
+and such a representation is called the *regular representation*.
 
-Now to decompose $\mathbb{C}[G]$, we consider the character theory of the regular representation. Viewing $\mathbb{C}[G]$ as above as a vector space with the elements $g\in G$ (more precisely, the $\delta_g$) as a basis, if we represent each linear operator from the regular representation $\rho_\reg$, that is, $\rho_\reg(g)$, as a matrix and consider its trace, we have
+Now, to decompose $\mathbb{C}[G]$, we consider the character theory of the regular representation. Viewing $\mathbb{C}[G]$ as above as a vector space with the elements $g\in G$ (more precisely, the $\delta_g$) as a basis, if we represent each linear operator $\rho_\reg(g)$ given by the regular representation $\rho_\reg$ as a matrix and consider its trace, we have
 
 $$\rchi_{\mathbb{C}[G]}(g)=\begin{cases}\lvert G\rvert&\text{if $g=e$}\\0&\text{otherwise}\end{cases}\tag{2}$$
 
-. Now if $V_i$ is an irreducible subrepresentation of $\mathbb{C}[G]$, then
+Now if $V_i$ is an irreducible subrepresentation of $\mathbb{C}[G]$, then
 
 $$\langle\rchi_{\mathbb{C}[G]}, \rchi_{V_i}\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G}\rchi_{\mathbb{C}[G]}(g)\overline{\rchi_{V_i}(g)}=\frac{1}{\lvert G\rvert} \rchi_{\mathbb{C}[G]}(e)\overline{\rchi_{V_i}(e)}=\dim V_i$$
 
@@ -161,13 +159,11 @@ holds. That is, we obtain the following decomposition:
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\oplus\dim V_i}$$
 
-. Furthermore, considering that $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="8laa2" }, $V_i$ is mapped only to $V_i$, we know that each $V_i^{\oplus\dim V_i}$ is precisely the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and from the uniqueness of the Artin-Wedderburn theorem, we can verify that this is indeed equal to
+Furthermore, considering that $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="8laa2" }, $V_i$ is mapped only to $V_i$, we know that each $V_i^{\oplus\dim V_i}$ is precisely the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and from the uniqueness of the Artin-Wedderburn theorem, we can verify that this is indeed equal to
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
-.
-
-## Projection Formula
+## Projection formula
 
 Earlier, we showed that the characters of irreducible representations form an orthonormal set in $\mathbb{C}_\class(G)$. Now we show that they form an orthonormal basis of $\mathbb{C}_\class(G)$.
 
@@ -214,7 +210,7 @@ and therefore $\overline{\phi(g)}=0$ must hold for all $g$.
 
 We conclude this post with an example illustrating the theory developed since the previous post. First, for an arbitrary *abelian* group $G$, in an irreducible representation $\rho:G\rightarrow\Aut(V)$, each $\rho(h)$ is a $G$-map and thus acts as a scalar by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8){: data-lid="vzycy" }, from which every subspace of $V$ is a subrepresentation, so $V$ is $1$-dimensional. Therefore, to test our theory, we need a non-abelian group. For computational convenience, let us consider the smallest non-abelian group, $S_3$. Explicitly,
 
-$$S_3=\{(\ ),(1\ 2),(1\ 3),(2\ 3),(1\ 2\ 3),(1\ 3\ 2)\}$$
+$$S_3=\{(),(1\quad 2),(1\quad 3),(2\quad 3),(1\quad 2\quad 3),(1\quad 3\quad 2)\}$$
 
 First, it is clear that the following two representations
 
@@ -240,7 +236,7 @@ $$\lvert S_3\rvert=6=1^2+1^2+2^2$$
 
 we can verify that the dimensions match the irreducible decomposition. Going a step further, let us compute the characters of these three irreducible representations. For this, consider the conjugacy classes of $S_3$:
 
-$$A_1=\{(\ )\},\qquad A_2=\{(1\ 2),(1\ 3),(2\ 3)\},\qquad A_3=\{(1\ 2\ 3),(1\ 3\ 2)\}$$
+$$A_1=\{()\},\qquad A_2=\{(1\quad 2),(1\quad 3),(2\quad 3)\},\qquad A_3=\{(1\quad 2\quad 3),(1\quad 3\quad 2)\}$$
 
 For convenience of notation, if a character $\rchi$ takes values $a_1,a_2,a_3$ on $A_1,A_2,A_3$, we write it in the vector form $(a_1,a_2,a_3)$. 
 
@@ -253,17 +249,17 @@ First, to compute this directly, let us choose a basis of $V_\std$:
 
 $$\{e_1=(1,0,-1), e_2=(0,1,-1)\}$$
 
-Then $(\ )$ does not affect this basis, so naturally $\rchi_\std$ takes the value $2$ on $A_1$. On $A_2$, for instance, acting by $(1\ 2)$ swaps the basis elements with each other, which corresponds to the matrix
+Then $()$ does not affect this basis, so naturally $\rchi_\std$ takes the value $2$ on $A_1$. On $A_2$, for instance, acting by $(1\quad 2)$ swaps the basis elements with each other, which corresponds to the matrix
 
-$$\rho_\std((1\ 2))=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
+$$\rho_\std((1\quad 2))=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
-whose trace is $0$. For reference, if $(1\ 3)$ acts on this basis, $e_1$ is sent to $-e_1$ and $e_2$ is sent to $(-1,1,0)=-e_1+e_2$, corresponding to the matrix
+whose trace is $0$. For reference, if $(1\quad 3)$ acts on this basis, $e_1$ is sent to $-e_1$ and $e_2$ is sent to $(-1,1,0)=-e_1+e_2$, corresponding to the matrix
 
-$$\rho_\std((1\ 3))=\begin{pmatrix}-1&-1\\0&1\end{pmatrix}$$
+$$\rho_\std((1\quad 3))=\begin{pmatrix}-1&-1\\0&1\end{pmatrix}$$
 
 and since the trace of this matrix is also $0$, we can confirm by calculation that the character function is indeed a class function. In the case of $A_3$, since it sends $e_1$ to $(-1,1,0)=-e_1+e_2$ and $e_2$ to $(-1,0,1)=-e_1$, we have
 
-$$\rho_\std((1\ 2\ 3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
+$$\rho_\std((1\quad 2\quad 3))=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}$$
 
 showing that $\rchi_\std$ is $(2,0,-1)$. 
 
@@ -273,7 +269,7 @@ $$V_\perm=V_0\oplus V_\std$$
 
 We already know that the character of $V_0$ is $(1,1,1)$. Now considering the action on $V_\perm$, since
 
-$$\rho_\perm((\ ))=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\ 2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\ 2\ 3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
+$$\rho_\perm(())=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\quad 2))=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad \rho_\perm((1\quad 2\quad 3))=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$$
 
 we know that $\rchi_\perm$ is $(3,1,0)$, and now from [Proposition 2](#prop2){: data-lid="j4xpb" }, since $\rchi_\perm=\rchi_0+\rchi_\std$, we see that $\rchi_\std$ is $(2,0,-1)$. The three characters obtained in this way,
 
