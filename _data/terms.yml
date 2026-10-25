@@ -18532,6 +18532,13 @@ S:
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: simple_closed_curve
+  en: simple closed curve
+  ko: 단순 닫힌 곡선
+  primary: en
+  defs:
+  - label: '[미적분학] §그린 정리'
+    url: /ko/math/calculus/greens_theorem
 - id: simple_group
   en: simple group
   ko: 단순군
