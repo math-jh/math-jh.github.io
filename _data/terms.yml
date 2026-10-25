@@ -7500,6 +7500,13 @@ F:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+- id: fully_faithful_functor
+  en: fully faithful functor
+  ko: 충만충실 함자
+  primary: en
+  defs:
+  - label: '[범주론] §자연변환'
+    url: /ko/math/category_theory/natural_transformations
 - id: function
   en: function
   ko: 함수
