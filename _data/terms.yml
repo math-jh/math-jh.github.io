@@ -17025,6 +17025,13 @@ R:
   see:
   - label: Singular point
     id: singular_point
+- id: regular_curve
+  en: regular curve
+  ko: 정칙곡선
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: regular_element
   en: regular element
   ko: 정칙원
