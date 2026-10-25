@@ -92,6 +92,11 @@ $comment-rule: mix($text-color, $background-color, 20%);
   cursor: pointer;
 }
 
+/* 버튼 글자 "i" 는 ::before 로 — 이름은 aria-label 이 맡고, 복사에 들어가지 않는다 */
+.comment-info__toggle::before {
+  content: "i";
+}
+
 .comment-info__toggle:hover,
 .comment-info__toggle:focus-visible,
 .comment-info[data-open] .comment-info__toggle {

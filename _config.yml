@@ -358,3 +358,4 @@ head_scripts:
   - /assets/js/custom/Proof_animate.js
   - /assets/js/custom/Print_fit.js
   - /assets/js/custom/Local_graph.js
+  - /assets/js/custom/Copy_tex.js

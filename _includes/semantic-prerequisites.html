@@ -12,7 +12,7 @@
     <div class="comment-info js-comment-info">
       <button type="button" class="comment-info__toggle js-comment-info-toggle"
               aria-expanded="false" aria-controls="semantic-prerequisites-info-panel"
-              aria-label="{{ site.data.ui-text[lang].semantic_prerequisites_info_label | default: site.data.ui-text[lang].comment_info_label | default: '안내' | escape }}">i</button>
+              aria-label="{{ site.data.ui-text[lang].semantic_prerequisites_info_label | default: site.data.ui-text[lang].comment_info_label | default: '안내' | escape }}"></button>
       <div class="comment-info__panel" id="semantic-prerequisites-info-panel" role="note">
         <ul>
           {%- if site.data.ui-text[lang].semantic_prerequisites_notices -%}

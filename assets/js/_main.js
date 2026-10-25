@@ -275,13 +275,15 @@ $(function() {
   });
 
   // Add anchors for headings
+  // 글자 노드 없이 aria-label 과 ::before 아이콘(_page.scss)만 둔다 — 본문을 복사할 때
+  // 제목 뒤에 아이콘 이름·스크린리더용 글자가 섞이지 않도록.
   $('.page__content').find('h1, h2, h3, h4, h5, h6').each(function() {
     var id = $(this).attr('id');
     if (id) {
       var anchor = document.createElement("a");
       anchor.className = 'header-link';
       anchor.href = '#' + id;
-      anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"material-icons\" style=\"vertical-align:-.2em\">link</i>';
+      anchor.setAttribute('aria-label', 'Permalink');
       anchor.title = "Permalink";
       $(this).append(anchor);
     }
