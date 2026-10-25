@@ -70,19 +70,22 @@
 
 %%FIG the line through q and p tends to the tangent line as q approaches p (Point_and_Diagonal_Blowups-3.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
-  %% a curve through p, parametrized as (t, .35 t^2 - .08 t^3)
-  \draw[line width=.9pt] plot[domain=-1.9:2.4, variable=\t, samples=120]
-    ({\t},{.35*\t*\t-.08*\t*\t*\t});
-  %% secant lines through p and q_i, and the limiting tangent line
-  \foreach \s/\lab in {2/{q_1},1.1/{q_2}}{
+  %% secant lines through p and q, q', and the limiting tangent line
+  \foreach \s in {2,1.1}{
     \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
-    \draw[black!50, line width=.7pt] (-2.2,{-2.2*\m})--(2.7,{2.7*\m});
+    \draw[accent1!55, line width=.8pt] (-2.2,{-2.2*\m})--(2.7,{2.7*\m});
+  }
+  \draw[accent1, line width=1pt] (-2.2,0)--(2.7,0);
+  \node[accent1, right] at (2.7,0) {$\ell$};
+  %% a curve through p, parametrized as (t, .35 t^2 - .08 t^3)
+  \draw[black!50, line width=.9pt] plot[domain=-1.9:2.4, variable=\t, samples=120]
+    ({\t},{.35*\t*\t-.08*\t*\t*\t});
+  \foreach \s/\lab in {2/{q},1.1/{q'}}{
+    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
     \fill ({\s},{\s*\m}) circle[radius=1.6pt];
     \node[above left=1pt] at ({\s},{\s*\m}) {$\lab$};
   }
-  \draw[accent1, line width=1pt] (-2.2,0)--(2.7,0);
-  \node[accent1, right] at (2.7,0) {$\ell_0$};
-  \fill[accent1] (0,0) circle[radius=2pt];
+  \fill (0,0) circle[radius=2pt];
   \node[below=2pt] at (0,0) {$p$};
 \end{tikzpicture}
 
