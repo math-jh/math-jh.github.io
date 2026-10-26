@@ -7,7 +7,48 @@
 \usepackage{diagram-style}
 \begin{document}
 
-%%FIG blowing up a point separates the lines through it (Point_and_Diagonal_Blowups-1.svg)
+%%FIG the vector into the diagonal inside the slice through a point of the diagonal (Point_and_Diagonal_Blowups-1.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% the diagonal, drawn as a slightly tilted line
+  \draw[line width=1pt] (-3,-.4)--(3,.4) node[right] {$\Delta$};
+  %% the slice {p} x P^2 through (p,p); in-plane coordinates (y_1-x_1, y_2-x_2)
+  \begin{scope}[x={(-.6cm,-.45cm)}, y={(0cm,1cm)}]
+    \draw[black!50] (-2.9,-1.6)--(2.1,-1.6)--(2.1,2.4)--(-2.9,2.4)--cycle;
+    \node[black!50, above right] at (-2.9,2.4) {$\{p\}\times\mathbb{P}^2$};
+    \draw[black!50] (-1.5,0)--(1.5,0);
+    \draw[black!50] (0,-1.5)--(0,1.1);
+    %% auxiliary lines reading off the two components of the vector
+    \draw[dashed, black!50] (-1.1,1)--(-1.1,0) node[midway, right=1pt, black] {$q_2-p_2$};
+    \draw[dashed, black!50] (-1.1,1)--(0,1) node[midway, above left=1pt, black] {$q_1-p_1$};
+    %% the vector from (p,q) into the diagonal
+    \draw[->, accent1, line width=1pt, shorten >=2.5pt] (-1.1,1)--(0,0);
+    \fill (-1.1,1) circle[radius=1.6pt] node[above right=1pt] {$(p,q)$};
+  \end{scope}
+  \fill[accent1] (0,0) circle[radius=2pt] node[below right=1pt] {$(p,p)$};
+\end{tikzpicture}
+
+%%FIG the line through q and p tends to the tangent line as q approaches p (Point_and_Diagonal_Blowups-2.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% secant lines through p and q, q', and the limiting tangent line
+  \foreach \s in {2,1.1}{
+    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
+    \draw[accent1!55, line width=.8pt] (-2.2,{-2.2*\m})--(2.7,{2.7*\m});
+  }
+  \draw[accent1, line width=1pt] (-2.2,0)--(2.7,0);
+  \node[accent1, right] at (2.7,0) {$\ell$};
+  %% a curve through p, parametrized as (t, .35 t^2 - .08 t^3)
+  \draw[black!50, line width=.9pt] plot[domain=-1.9:2.4, variable=\t, samples=120]
+    ({\t},{.35*\t*\t-.08*\t*\t*\t});
+  \foreach \s/\lab in {2/{q},1.1/{q'}}{
+    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
+    \fill ({\s},{\s*\m}) circle[radius=1.6pt];
+    \node[above left=1pt] at ({\s},{\s*\m}) {$\lab$};
+  }
+  \fill (0,0) circle[radius=2pt];
+  \node[below=2pt] at (0,0) {$p$};
+\end{tikzpicture}
+
+%%FIG blowing up a point separates the lines through it (Point_and_Diagonal_Blowups-3.svg)
 \begin{tikzpicture}[line cap=round]
   %% the plane: four lines through p
   \foreach \ang in {15,60,105,150}{
@@ -31,7 +72,7 @@
   \draw[->, black!50, line width=.8pt] (3.4,0)--(2.1,0) node[midway, above] {$\sigma$};
 \end{tikzpicture}
 
-%%FIG strict transforms of a nodal and a cuspidal cubic (Point_and_Diagonal_Blowups-2.svg)
+%%FIG strict transforms of a nodal and a cuspidal cubic (Point_and_Diagonal_Blowups-4.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
   %% downstairs: the nodal cubic y^2 = x^2(x+1) and the cuspidal cubic y^2 = x^3
   \draw[line width=.9pt] plot[domain=-1.55:1.55, variable=\t, samples=120]
@@ -66,47 +107,6 @@
 
   \draw[->, black!50, line width=.8pt] (.2,2.55)--(.2,1.65);
   \draw[->, black!50, line width=.8pt] (5.4,2.55)--(5.4,1.65);
-\end{tikzpicture}
-
-%%FIG the line through q and p tends to the tangent line as q approaches p (Point_and_Diagonal_Blowups-3.svg)
-\begin{tikzpicture}[line cap=round, line join=round]
-  %% secant lines through p and q, q', and the limiting tangent line
-  \foreach \s in {2,1.1}{
-    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
-    \draw[accent1!55, line width=.8pt] (-2.2,{-2.2*\m})--(2.7,{2.7*\m});
-  }
-  \draw[accent1, line width=1pt] (-2.2,0)--(2.7,0);
-  \node[accent1, right] at (2.7,0) {$\ell$};
-  %% a curve through p, parametrized as (t, .35 t^2 - .08 t^3)
-  \draw[black!50, line width=.9pt] plot[domain=-1.9:2.4, variable=\t, samples=120]
-    ({\t},{.35*\t*\t-.08*\t*\t*\t});
-  \foreach \s/\lab in {2/{q},1.1/{q'}}{
-    \pgfmathsetmacro{\m}{.35*\s-.08*\s*\s}
-    \fill ({\s},{\s*\m}) circle[radius=1.6pt];
-    \node[above left=1pt] at ({\s},{\s*\m}) {$\lab$};
-  }
-  \fill (0,0) circle[radius=2pt];
-  \node[below=2pt] at (0,0) {$p$};
-\end{tikzpicture}
-
-%%FIG the vector into the diagonal inside the slice through a point of the diagonal (Point_and_Diagonal_Blowups-4.svg)
-\begin{tikzpicture}[line cap=round, line join=round]
-  %% the diagonal, drawn as a slightly tilted line
-  \draw[line width=1pt] (-3,-.4)--(3,.4) node[right] {$\Delta$};
-  %% the slice {p} x P^2 through (p,p); in-plane coordinates (y_1-x_1, y_2-x_2)
-  \begin{scope}[x={(-.6cm,-.45cm)}, y={(0cm,1cm)}]
-    \draw[black!50] (-2.9,-1.6)--(2.1,-1.6)--(2.1,2.4)--(-2.9,2.4)--cycle;
-    \node[black!50, above right] at (-2.9,2.4) {$\{p\}\times\mathbb{P}^2$};
-    \draw[black!50] (-1.5,0)--(1.5,0);
-    \draw[black!50] (0,-1.5)--(0,1.1);
-    %% auxiliary lines reading off the two components of the vector
-    \draw[dashed, black!50] (-1.1,1)--(-1.1,0) node[midway, right=1pt, black] {$q_2-p_2$};
-    \draw[dashed, black!50] (-1.1,1)--(0,1) node[midway, above left=1pt, black] {$q_1-p_1$};
-    %% the vector from (p,q) into the diagonal
-    \draw[->, accent1, line width=1pt, shorten >=2.5pt] (-1.1,1)--(0,0);
-    \fill (-1.1,1) circle[radius=1.6pt] node[above right=1pt] {$(p,q)$};
-  \end{scope}
-  \fill[accent1] (0,0) circle[radius=2pt] node[below right=1pt] {$(p,p)$};
 \end{tikzpicture}
 
 \end{document}
