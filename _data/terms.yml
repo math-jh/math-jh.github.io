@@ -2823,6 +2823,13 @@ C:
   see:
   - label: Complete category
     id: complete_category
+- id: cocone
+  en: cocone
+  ko: 여뿔
+  primary: en
+  defs:
+  - label: '[범주론] §극한'
+    url: /ko/math/category_theory/limits
 - id: cocontinuous_functor
   en: cocontinuous functor
   ko: 여연속 함자
