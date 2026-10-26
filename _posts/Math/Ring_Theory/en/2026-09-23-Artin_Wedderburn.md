@@ -153,7 +153,7 @@ Let $A=A_1\times\cdots\times A_k$, and let $e_i\in A$ be the element whose $i$-t
 2. If each $A_i$ is a semisimple ring, then $A$ is also a semisimple ring.
 :::
 ::: Proof
-1. That the $e_i$ form a complete set of central orthogonal idempotents can be checked directly by componentwise calculation. ([§Central Idempotents and Ring Decomposition, ⁋Theorem 5](/en/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" }) Then, from the equations
+1. That the $e_i$ form a complete set of central orthogonal idempotents can be checked directly by componentwise calculation. ([§Idempotents and Product Decomposition, ⁋Theorem 5](/en/math/ring_theory/idempotents#thm5){: data-lid="e0b4o" }) Then, from the equations
     
     $$1=\sum e_i,\qquad e_ie_j=\delta_{ij}e_i$$
     
