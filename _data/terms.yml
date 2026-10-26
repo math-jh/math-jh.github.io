@@ -6693,6 +6693,13 @@ F:
     id: full
   - label: Forgetful functor
     id: forgetful_functor
+- id: faithful_functor
+  en: faithful functor
+  ko: 충실함자
+  primary: en
+  defs:
+  - label: '[범주론] §자연변환'
+    url: /ko/math/category_theory/natural_transformations
 - id: faithfully_flat
   en: faithfully flat
   ko: 충실평탄
@@ -9445,6 +9452,13 @@ I:
   - label: 항등원
     lang: ko
     id: identity_element
+- id: identity_functor
+  en: identity functor
+  ko: 항등함자
+  primary: en
+  defs:
+  - label: '[범주론] §함자'
+    url: /ko/math/category_theory/functors
 - id: identity_matrix
   en: identity matrix
   ko: 항등행렬
