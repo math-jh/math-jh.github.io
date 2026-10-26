@@ -10599,6 +10599,13 @@ I:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: irreducible_submodule
+  en: irreducible submodule
+  ko: 기약부분가군
+  primary: en
+  defs:
+  - label: '[가환대수학] §으뜸분해'
+    url: /ko/math/commutative_algebra/primary_decomposition
 - id: irregularity
   en: irregularity
   ko: 불규칙성
