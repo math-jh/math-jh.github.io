@@ -48,7 +48,22 @@
   \node[below=2pt] at (0,0) {$p$};
 \end{tikzpicture}
 
-%%FIG blowing up a point separates the lines through it (Point_and_Diagonal_Blowups-3.svg)
+%%FIG the fiber of the second projection as two cartesian squares (Point_and_Diagonal_Blowups-3.svg)
+\begin{tikzcd}
+	{X_q} & {Y_q} & {\{q\}} \\
+	X & Y & {\mathbb{P}^2}
+	\arrow["{\pi\vert_{X_q}}", from=1-1, to=1-2]
+	\arrow[hook, from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-2, to=2-3]
+	\arrow[hook, from=1-3, to=2-3]
+	\arrow["\pi"', from=2-1, to=2-2]
+	\arrow["{\pr_2}"', from=2-2, to=2-3]
+\end{tikzcd}
+
+%%FIG blowing up a point separates the lines through it (Point_and_Diagonal_Blowups-4.svg)
 \begin{tikzpicture}[line cap=round]
   %% the plane: four lines through q
   \foreach \ang in {15,60,105,150}{
@@ -72,7 +87,7 @@
   \draw[->, black!50, line width=.8pt] (3.4,0)--(2.1,0) node[midway, above] {$\sigma$};
 \end{tikzpicture}
 
-%%FIG strict transforms of a nodal and a cuspidal cubic (Point_and_Diagonal_Blowups-4.svg)
+%%FIG strict transforms of a nodal and a cuspidal cubic (Point_and_Diagonal_Blowups-5.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
   %% downstairs: the nodal cubic y^2 = x^2(x+1) and the cuspidal cubic y^2 = x^3
   \draw[line width=.9pt] plot[domain=-1.55:1.55, variable=\t, samples=120]
