@@ -1,6 +1,6 @@
 ---
 title: "Division Rings"
-description: "A division ring is defined as a ring in which every nonzero element is a unit, and it is shown that such a ring has no zero divisors. Wedderburn's little theorem, which states that every finite division ring is a field, is proved using the class equation and cyclotomic polynomials, followed by a direct verification that the quaternions form a noncommutative division ring. Schur's lemma is then presented to show that the endomorphism ring of a simple module is a division ring."
+description: "A division ring is defined as a ring in which every nonzero element is a unit, and it is shown that such a ring has no zero divisors. Wedderburn's little theorem, which states that every finite division ring is a field, is proved using the class equation and cyclotomic polynomials, followed by a direct verification that the quaternions form a noncommutative division ring as a representative example of the infinite case, and Schur's lemma shows that division rings arise as endomorphism rings of simple modules."
 excerpt: "Division rings, quaternions, Wedderburn's little theorem, and Schur's lemma"
 
 categories: [Math / Ring Theory]
@@ -13,11 +13,12 @@ date: 2026-06-20
 weight: 5
 translated_at: 2026-07-30T20:45:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-07-30T20:45:02+00:00
+last_polished_at: 2026-10-26T11:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In this post we study in earnest rings in which every nonzero element has a multiplicative inverse, i.e. *division rings*.
+In this post, we study in earnest rings in which every nonzero element has a multiplicative inverse, i.e., *division rings*.
 
-Unless otherwise stated, a ring is always assumed to have an identity $1\neq 0$, and a division ring is *not* assumed to be commutative.
+Unless otherwise stated, a ring is assumed to have an identity $1\neq 0$, and a division ring is *not* assumed to be commutative.
 
 ## Division Rings and Zero Divisors
 
@@ -32,7 +33,7 @@ We have already verified in [§Units and Zero Divisors, ⁋Definition 1](/en/mat
 The first property of a division ring is as follows.
 
 ::: Proposition 2
-A division ring $D$ has no zero divisors. That is, if $ab=0$ then $a=0$ or $b=0$. In particular, every field is an integral domain.
+A division ring $D$ has no nonzero zero divisors. That is, if $ab=0$ then $a=0$ or $b=0$. In particular, every field is an integral domain.
 :::
 ::: Proof
 Let $a,b\in D$ with $ab=0$ and $a\neq 0$. Since $D$ is a division ring, $a$ has an inverse $a^{-1}$, and multiplying both sides on the left by $a^{-1}$ gives
@@ -46,7 +47,7 @@ Thus if $a\neq 0$ then $b=0$, which means that $a=0$ or $b=0$ whenever $ab=0$. H
 
 The above [Proposition 2](#prop2){: data-lid="86if1" } can in fact be obtained immediately from [§Units and Zero Divisors, ⁋Proposition 4](/en/math/ring_theory/units_and_zero_divisors#prop4){: data-lid="8aebo" }, since in a division ring every nonzero element is a unit, so there is no possibility of a nonzero zero divisor existing. However, the converse is not generally true; for instance, $\mathbb{Z}$ is such an example, as we already observed right after the above proposition.
 
-Moreover, in that post we already examined a partial converse of the above [Proposition 2](#prop2){: data-lid="57g8t" }, namely that for *finite* rings, an integral domain is always a field. ([§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="75o9q" }) The proof of this corollary does not essentially use the commutativity of the ring, yet commutativity was assumed in that corollary because there simply do not exist any finite non-commutative zero-divisor-free rings when commutativity is dropped.
+Moreover, in that post we already examined a partial converse of the above [Proposition 2](#prop2){: data-lid="57g8t" }, namely that for *finite* rings, an integral domain is always a field. ([§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="75o9q" }) The proof of this corollary does *not* essentially use the commutativity of the ring, yet the reason commutativity was assumed in that corollary is that the finite non-commutative zero-divisor-free rings that would be dealt with when commutativity is dropped do not exist.
 
 To examine this phenomenon, we first organize properties of the center $Z(D)$ of a division ring $D$. This is a commutative subring of $D$ ([\[Algebraic Structures\] §Definition of a Ring, ⁋Definition 8](/en/math/algebraic_structures/rings#def8){: data-lid="qozsj" }), and moreover it is a field. This is because any nonzero $z\in Z(D)$ has an inverse $z^{-1}$ in $D$, and for any $x\in D$ we have
 
@@ -54,7 +55,7 @@ $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
 so $z^{-1}\in Z(D)$. Hence if $D$ is finite, then $Z(D)$ is a finite field, and letting $q$ be its number of elements, we have $q\geq 2$.
 
-Still assuming finiteness, if we view $D$ as a vector space over $Z(D)$, then for $n=\dim_{Z(D)} D$ we have $|D|=q^n$. More generally, any sub-division ring $D'$ of $D$ containing $Z(D)$ is also a vector space over $Z(D)$, so its number of elements is of the form $q^d$, and if $D$ is an $m$-dimensional vector space over $D'$ then from $q^n=(q^d)^m$ we obtain $d\mid n$. By a similar reasoning, we need the following cyclotomic polynomial to prove the main result of this section.
+Still assuming the above finiteness, if we view $D$ as a vector space over $Z(D)$, then for $n=\dim_{Z(D)} D$ we have $\lvert D\rvert=q^n$. More generally, a sub-division ring $D'$ of $D$ containing $Z(D)$ is also a vector space over $Z(D)$, so its number of elements is of the form $q^d$, and if $D$ is an $m$-dimensional vector space over $D'$ then from $q^n=(q^d)^m$ we obtain $d\mid n$. In a similar vein, we need the following cyclotomic polynomial to prove the main result of this section.
 
 ::: Definition 3
 For a positive integer $n$, the *$n$th cyclotomic polynomial* $\Phi_n(\x)$ is defined by
@@ -64,39 +65,39 @@ $$\Phi_n(\x)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\bigl(\x-\zeta^m\bigr
 That is, $\Phi_n(\x)$ is the monic polynomial whose roots are the primitive $n$th roots of unity.
 :::
 
-We use two basic properties of cyclotomic polynomials. First, every root of $\x^n-1$ is a primitive $d$th root of unity for some $d\mid n$, so
+Since a detailed analysis of cyclotomic polynomials is not our current concern, we postpone this to [\[Field Theory\] §Cyclotomic Extensions, ⁋Definition 1](/en/math/field_theory/cyclotomic_extensions#def1){: data-lid="2gg0k" } and use only two basic properties. First, since every root of $\x^n-1$ is, for some $d\mid n$, a primitive $d$th root of unity,
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 
-holds, and therefore by performing the division from [§Polynomial Rings, ⁋Proposition 5](/en/math/ring_theory/polynomial_rings#prop5){: data-lid="6hf3r" } inside $\mathbb{Z}[\x]$, we inductively know that each $\Phi_d(\x)$ has integer coefficients. Second, for a proper divisor $d$ of $n$,
+holds, and therefore by performing the division from [§Polynomial Rings, ⁋Proposition 5](/en/math/ring_theory/polynomial_rings#prop5){: data-lid="6hf3r" } inside $\mathbb{Z}[\x]$, we inductively know that each $\Phi_d(\x)$ has integer coefficients. Second, for a proper divisor of $n$, $d$, since the right-hand side of
 
 $$\x^n-1=(\x^d-1)\cdot\prod_{e\mid n\text{ but }e\nmid d}\Phi_e(\x)$$
 
-contains the factor $\Phi_n(\x)$ on the right-hand side, so $\Phi_n(\x)$ divides $(\x^n-1)/(\x^d-1)$ in $\mathbb{Z}[\x]$. In particular, substituting an integer $q$ into these integer polynomials, we know that $\Phi_n(q)$ divides both $q^n-1$ and $(q^n-1)/(q^d-1)$ as integers.
+contains the factor $\Phi_n(\x)$, $\Phi_n(\x)$ divides, in $\mathbb{Z}[\x]$, $(\x^n-1)/(\x^d-1)$. In particular, substituting an integer $q$ into these integer polynomials, we know that $\Phi_n(q)$ divides both $q^n-1$ and $(q^n-1)/(q^d-1)$ as integers.
 
 Finally, we isolate one analytic inequality that we will need.
 
 ::: Proposition 4
-For integers $q\geq 2$ and $n\geq 2$, we have $|\Phi_n(q)|>q-1$.
+For integers $q\geq 2$ and $n\geq 2$, we have $\lvert\Phi_n(q)\rvert>q-1$.
 :::
 ::: Proof
 Substituting $q$ into the cyclotomic polynomial, by [Definition 3](#def3){: data-lid="oxsio" } we have
 
 $$\Phi_n(q)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}(q-\zeta^m)$$
 
-We estimate the absolute value of each factor from below. Writing $\zeta=\cos\theta+i\sin\theta$ ($\theta\neq 0$), we have
+We estimate the absolute value of each factor from below. If we write $\zeta=\cos\theta+i\sin\theta$ ($\theta\neq 0$), then
 
-$$|q-\zeta^m|^2=(q-\cos m\theta)^2+\sin^2 m\theta=q^2-2q\cos m\theta+1$$
+$$\lvert q-\zeta^m\rvert^2=(q-\cos m\theta)^2+\sin^2 m\theta=q^2-2q\cos m\theta+1$$
 
 and therefore
 
-$$|q-\zeta^m|^2-(q-1)^2=q^2-2q\cos m\theta+1-(q^2-2q+1)=2q(1-\cos m\theta)\geq 0$$
+$$\lvert q-\zeta^m\rvert^2-(q-1)^2=q^2-2q\cos m\theta+1-(q^2-2q+1)=2q(1-\cos m\theta)\geq 0$$
 
-For every primitive root $\zeta^m$ we have $|q-\zeta^m|\geq q-1\geq 1$, and in particular
+For every primitive root $\zeta^m$, we have $\lvert q-\zeta^m\rvert\geq q-1\geq 1$, and in particular
 
-$$|\Phi_n(q)|=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}|q-\zeta^m|\geq|q-\zeta|\geq q-1$$
+$$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\zeta^m\rvert\geq\lvert q-\zeta\rvert\geq q-1$$
 
-For the last inequality, using $\zeta\neq 1$, i.e. $\cos\theta\neq 1$, this inequality is strict, and we obtain the strict inequality of the proposition.
+where, for the last inequality, using $\zeta\neq 1$, that is, $\cos\theta\neq 1$, this inequality is strict, so we obtain the strict inequality of the proposition.
 :::
 
 We now prove the theorem.
@@ -105,52 +106,52 @@ We now prove the theorem.
 Every finite division ring is a field. That is, every finite division ring is commutative.
 :::
 ::: Proof
-Let $D$ be a finite division ring and $Z=Z(D)$ its center. As we saw above, $Z$ is a finite field; letting $q\geq 2$ be its number of elements, $D$ is a finite-dimensional vector space over $Z$ with $|D|=q^n$ elements. Our claim is that $n=1$, so that $D=Z$ is commutative.
+Let $D$ be a finite division ring and $Z=Z(D)$ its center. As we saw earlier, $Z$ is a finite field, and if we let its number of elements be $q\geq 2$, then $D$ is a finite-dimensional vector space over $Z$, so its number of elements is of the form $\lvert D\rvert=q^n$. Our claim is that $n=1$, so that $D=Z$ is commutative.
 
-To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="zj5ue" }) The class equation of $D^\times$ for the conjugation action from [\[Algebraic Structures\] §Group Actions, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9){: data-lid="874le" } is
+To this end, we write the class equation of the multiplicative group $D^\times=D\setminus\{0\}$. ([\[Algebraic Structures\] §Group Action, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14){: data-lid="zj5ue" }) The class equation of $D^\times$ for the conjugation action from [\[Algebraic Structures\] §Group Action, ⁋Proposition 9](/en/math/algebraic_structures/group_actions#prop9){: data-lid="874le" } is
 
-$$|D^\times|=|Z(D^\times)|+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
+$$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
-where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12){: data-lid="6xd4d" }, and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $|Z(D^\times)|=q-1$.
+where $C_{D^\times}(x)$ is the centralizer of $x$ defined right after [\[Algebraic Structures\] §Group Action, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12){: data-lid="6xd4d" }, and the sum is over all representatives not belonging to $Z(D^\times)$. Also, since $Z(D^\times)=Z^\times=Z\setminus\{0\}$, we have $\lvert Z(D^\times)\rvert=q-1$.
 
-Now for each $x\in D^\times$, the set $C_D(x)=\{y\in D\mid xy=yx\}$ is a sub-division ring of $D$ containing $Z$. In this case we have seen that $C_D(x)$ is a $Z$-vector space, and since $|Z|=q$, we have $|C_D(x)|=q^{d(x)}$ for some $d(x)$. Also, since $D$ is a vector space over $C_D(x)$, we have $d(x)\mid n$. Since $C_{D^\times}(x)=C_D(x)\setminus\{0\}$, we have
+Now for each $x\in D^\times$, $C_D(x)=\{y\in D\mid xy=yx\}$ is a sub-division ring of $D$ and contains $Z$. In this case, we have seen that $C_D(x)$ is a $Z$-vector space, and since $\lvert Z\rvert=q$, it is of the form $\lvert C_D(x)\rvert=q^{d(x)}$. Also, since $D$ is a vector space over $C_D(x)$, we have $d(x)\mid n$. Since $C_{D^\times}(x)=C_D(x)\setminus\{0\}$, we have
 
 $$\bigl[D^\times:C_{D^\times}(x)\bigr]=\frac{q^n-1}{q^{d(x)}-1}$$
 
-and for this to be an integer we must have $d(x)\mid n$. If $x$ is not in the center, then $C_D(x)\neq D$, so $d(x)<n$. Hence the class equation takes the form
+and for this number to be an integer, we must have $d(x)\mid n$. Now if $x$ does not belong to the center, then $C_D(x)\neq D$, so $d(x)<n$. Hence the class equation takes the form
 
 $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 
 where each $d(x)$ in the sum is a proper divisor of $n$.
 
-Now assume $n\geq 2$ and derive a contradiction. The cyclotomic polynomial $\Phi_n(\x)$ divides $q^n-1$, and for each proper divisor $d=d(x)<n$, it also divides $\frac{q^n-1}{q^d-1}$. Therefore, from $(\ast)$ above, $\Phi_n(q)$ must also divide $q-1$. That is, $\Phi_n(q)\mid q-1$ and $q-1\geq 1$, so $|\Phi_n(q)|\leq q-1$. However, by [Proposition 4](#prop4){: data-lid="69hcj" }, if $n\geq 2$ then $|\Phi_n(q)|>q-1$, a contradiction.
+Now assume $n\geq 2$ and derive a contradiction. The cyclotomic polynomial $\Phi_n(q)$ divides $q^n-1$, and for each proper divisor $d=d(x)<n$, it also divides $\frac{q^n-1}{q^d-1}$. Therefore, in $(\ast)$ above, $\Phi_n(q)$ must also divide $q-1$. That is, $\Phi_n(q)\mid q-1$, and since $q-1\geq 1$, we have $\lvert\Phi_n(q)\rvert\leq q-1$. However, by [Proposition 4](#prop4){: data-lid="69hcj" }, if $n\geq 2$, then $\lvert\Phi_n(q)\rvert>q-1$, a contradiction.
 :::
 
 The first consequence of this theorem is to reconfirm the result about finite integral domains.
 
 ::: Corollary 6
-Let $A$ be a finite ring with $0\neq 1$. If $A$ has no nonzero zero-divisors, then $A$ is a field.
+If $0\neq 1$ and a finite ring $A$ has no nonzero zero-divisors, then $A$ is a field.
 :::
 ::: Proof
-Let $A$ be a finite ring with no zero divisors other than $0$. For any nonzero $a\in A$, consider the left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$. If $ax=ay$, then $a(x-y)=0$, and since $a$ is not a zero divisor, $x=y$, i.e. $\lambda_a$ is injective. Since $A$ is finite, $\lambda_a$ is surjective, and there exists $v$ with $av=1$. Applying the same argument to right multiplication, there exists $w$ with $wa=1$, and $w=w(av)=(wa)v=v$, so $v$ is a two-sided inverse of $a$. Thus every nonzero element is a unit and $A$ is a division ring. A finite division ring is a field by [Theorem 5](#thm5){: data-lid="etup8" }.
+Let $A$ be a finite ring with no zero divisors other than $0$. For any nonzero $a\in A$, consider the left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$. If $ax=ay$, then $a(x-y)=0$, and since $a$ is not a zero divisor, $x=y$, that is, $\lambda_a$ is injective. Since $A$ is a finite set, $\lambda_a$ is surjective, and $av=1$ for some $v$. Applying the same argument to right multiplication, $wa=1$ for some $w$, and since $w=w(av)=(wa)v=v$, $v$ is a two-sided inverse of $a$. Therefore, every nonzero element is a unit and $A$ is a division ring. A finite division ring is a field by [Theorem 5](#thm5){: data-lid="etup8" }.
 :::
 
-What makes this essentially different from [§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="3kdoc" } is that we do not assume the commutativity of $A$. If we had assumed commutativity from the outset, then [Theorem 5](#thm5){: data-lid="61glb" } would not have been needed to prove this corollary. The power of this theorem lies in achieving the same result using only finiteness, without commutativity.
+What makes this essentially different from [§Units and Zero Divisors, ⁋Corollary 6](/en/math/ring_theory/units_and_zero_divisors#cor6){: data-lid="3kdoc" } is that we do not assume the commutativity of $A$. If we had assumed commutativity from the outset, then [Theorem 5](#thm5){: data-lid="61glb" } would not have been needed to prove this corollary. The power of this theorem lies in achieving the same result using only the assumption of finiteness, without commutativity.
 
 ## Quaternions
 
-By [Theorem 5](#thm5){: data-lid="hmkyl" }, a non-commutative division ring must necessarily be infinite, so we must look for examples among infinite rings. The most classical one is the space of *quaternions* defined by Hamilton, which is a 4-dimensional vector space over the real field $\mathbb{R}$ equipped with a multiplication.
+By [Theorem 5](#thm5){: data-lid="hmkyl" }, a non-commutative division ring is necessarily infinite, so one must look for examples among infinite rings. The most classical one is the space of *quaternions* defined by Hamilton, which is a vector space over the real field $\mathbb{R}$ of dimension $4$ equipped with a multiplication.
 
 ::: Definition 7
-The *quaternion algebra* $\mathbb{H}$ is the 4-dimensional vector space over $\mathbb{R}$ with basis $1,i,j,k$, whose elements are of the form
+The *quaternion algebra* $\mathbb{H}$ is the vector space with basis $1,i,j,k$ over $\mathbb{R}$ of dimension $4$, whose elements are of the form
 
 $$q=a+bi+cj+dk\qquad(a,b,c,d\in\mathbb{R})$$
 
-and whose multiplication is defined by extending $\mathbb{R}$-bilinearly from the identity $1$ and the relations
+and whose multiplication has $1$ as the identity and is defined by extending the relations
 
 $$i^2=j^2=k^2=-1,\qquad ij=k,\quad jk=i,\quad ki=j,\qquad ji=-k,\quad kj=-i,\quad ik=-j$$
 
-on the basis elements.
+on the basis elements $\mathbb{R}$-bilinearly.
 :::
 
 That this multiplication is associative does not follow merely from extending the relations bilinearly, so this must be checked separately. The simplest method is to realize $\mathbb{H}$ inside the ring of $2\times 2$ complex matrices $\Mat_2(\mathbb{C})$. For a given quaternion $q=a+bi+cj+dk$, set $z=a+bi$, $w=c+di$ and define the $\mathbb{R}$-linear map $\varphi:\mathbb{H}\rightarrow\Mat_2(\mathbb{C})$ by
@@ -163,56 +164,56 @@ $$\varphi(1)=I,\qquad\varphi(i)=\begin{pmatrix}i&0\\ 0&-i\end{pmatrix},\qquad\va
 
 and that these four matrices satisfy all the relations of [Definition 7](#def7){: data-lid="87q8s" } is verified by direct computation. Since both sides are bilinear in $q,q'$, it follows that $\varphi(qq')=\varphi(q)\varphi(q')$ for all quaternions, and since the four matrices above are linearly independent over $\mathbb{R}$, $\varphi$ is injective. Thus the associativity of multiplication in $\Mat_2(\mathbb{C})$ carries over to $\mathbb{H}$, and $\mathbb{H}$ becomes a ring isomorphic to the subring $\varphi(\mathbb{H})\subseteq\Mat_2(\mathbb{C})$. On the other hand, the determinant of this matrix
 
-$$|z|^2+|w|^2=a^2+b^2+c^2+d^2$$
+$$\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$$
 
 defines the norm of the quaternion.
 
 ::: Definition 8
-For a quaternion $q=a+bi+cj+dk$, its *conjugate* is defined by
+For a quaternion $q=a+bi+cj+dk$, we define its *conjugate* by
 
 $$\bar{q}=a-bi-cj-dk$$
 
-and its *norm* is defined by
+and its *norm* by
 
 $$N(q)=q\bar{q}$$
 :::
 
-For any quaternion $q=a+bi+cj+dk$, multiplying by the conjugate $\bar{q}$ indeed yields, by the relations of [Definition 7](#def7){: data-lid="bq7yw" }, cancellation of all coefficients of the $i,j,k$ terms, giving
+For any quaternion $q=a+bi+cj+dk$, multiplying by the conjugate $\bar{q}$, one can verify that all coefficients of the $i,j,k$ terms indeed cancel out by the relations of [Definition 7](#def7){: data-lid="bq7yw" }, so that
 
 $$N(q)=q\bar{q}=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
-In particular, $N(q)=0$ is equivalent to $a=b=c=d=0$, i.e. $q=0$.
+holds. In particular, $N(q)=0$ is equivalent to $a=b=c=d=0$, that is, $q=0$. Also, since the conjugate of $\bar{q}$ is again $q$, we have $\bar{q}q=\bar{q}\bar{\bar{q}}=N(\bar{q})=a^2+(-b)^2+(-c)^2+(-d)^2=N(q)$, and therefore both $q\bar{q}$ and $\bar{q}q$ are equal to $N(q)$.
 
-Another property of the norm is that it preserves multiplication. Indeed, it is easily verified that the conjugate satisfies $\overline{q_1q_2}=\bar{q}_2\bar{q}_1$, and using this we obtain
+Another property of the norm is that it preserves multiplication. Indeed, it is easily verified that the conjugate satisfies $\overline{q_1q_2}=\bar{q}_2\bar{q}_1$, and using this,
 
 $$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar{q}_2\bar{q}_1=q_1N(q_2)\bar{q}_1=N(q_2)q_1\bar{q}_1=N(q_1)N(q_2)$$
 
-Writing this multiplicativity in coordinates gives
+holds. Writing this multiplicativity in coordinates gives
 
 $$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdots)^2+(\cdots)^2$$
 
-which is Euler's [four-square identity](https://en.wikipedia.org/wiki/Euler%27s_four-square_identity). In any case, what is important for us is that we can use this to prove that $\mathbb{H}$ is a division ring.
+which is Euler's [four-square identity](https://en.wikipedia.org/wiki/Euler%27s_four-square_identity), stating that the product of two sums of four squares is again a sum of four squares. In any case, what is important for us is that we can use this to prove that $\mathbb{H}$ is a division ring.
 
 ::: Proposition 9
 The quaternion algebra $\mathbb{H}$ is a noncommutative division ring.
 :::
 ::: Proof
-That $\mathbb{H}$ is a ring with $1\neq 0$ was verified above, and its noncommutativity is obvious from $ij=k\neq -k=ji$. It remains to show that every nonzero $q\in\mathbb{H}$ has a two-sided multiplicative inverse.
+That $\mathbb{H}$ is a ring with $1\neq 0$ was verified above, and that it is not commutative is obvious from $ij=k\neq -k=ji$. It remains to show that every nonzero $q\in\mathbb{H}$ has a two-sided multiplicative inverse.
 
-Let $q=a+bi+cj+dk\neq 0$. We have seen above that $N(q)=a^2+b^2+c^2+d^2$ is a positive real number. This can be viewed as an element of $\mathbb{H}$, and moreover it commutes with every element of $\mathbb{H}$. The same holds for the inverse $N(q)^{-1}$ of $N(q)$, and therefore
+Let $q=a+bi+cj+dk\neq 0$. We have seen above that $N(q)=a^2+b^2+c^2+d^2$ is a positive real number. Then this can be viewed as an element of $\mathbb{H}$, and moreover it commutes with every element of $\mathbb{H}$. The same holds for the inverse $N(q)^{-1}$ of $N(q)$, and therefore
 
 $$q\cdot\bigl(N(q)^{-1}\bar{q}\bigr)=N(q)^{-1}(q\bar{q})=N(q)^{-1}N(q)=1$$
 
-and similarly
+and in the same way, one can verify that
 
 $$\bigl(N(q)^{-1}\bar{q}\bigr)\cdot q=N(q)^{-1}(\bar{q} q)=N(q)^{-1}N(q)=1$$
 
-can be verified. That is, $q^{-1}=N(q)^{-1}\bar{q}$ is a two-sided inverse of $q$, yielding the desired claim.
+holds. That is, $q^{-1}=N(q)^{-1}\bar{q}$ is a two-sided inverse of $q$, from which we obtain the desired claim.
 :::
 
 ## Endomorphism Rings of Simple Modules
 
-Division rings are useful when dealing with endomorphisms of modules. A nonzero module $M$ over a ring $A$ is called a *simple module* if $M$ has no submodules other than $0$ and itself. For convenience we fix $M$ as a left module. Then the following holds.
+Division rings are useful when dealing with endomorphisms of modules. A nonzero module $M$ defined over a ring $A$ is called a *simple module* if $M$ has no submodules other than $0$ and itself. For convenience of discussion, let us fix $M$ to be a left module. Then the following holds.
 
 ::: Lemma 10 (Schur)
 For simple modules $M,N$ over a ring $A$, the following hold.
@@ -223,10 +224,10 @@ For simple modules $M,N$ over a ring $A$, the following hold.
 ::: Proof
 Let $f:M\rightarrow N$ be a nonzero $A$-module homomorphism. The kernel $\ker f$ is a submodule of $M$, and since $f\neq 0$, we have $\ker f\neq M$. Since $M$ is simple, $\ker f=0$, i.e. $f$ is injective. Also $\im f$ is a nonzero submodule of $N$, and since $N$ is simple, $\im f=N$, i.e. $f$ is surjective. Hence $f$ is an isomorphism. This establishes the first result.
 
-Now consider the case $M=N$. Then $\End_A(M)$ is a ring with composition of morphisms as multiplication and the identity map $\id_M$ as identity. Since $M$ is nonzero, $\id_M\neq 0$, i.e. this ring is not zero. By the first result, any nonzero $f\in\End_A(M)$ is an isomorphism, and its inverse $f^{-1}$ is also an $A$-module homomorphism, hence an element of $\End_A(M)$. Moreover $f\circ f^{-1}=f^{-1}\circ f=\id_M$, so $f$ is a unit. That is, every nonzero element is a unit, and $\End_A(M)$ is a division ring.
+Now consider the case $M=N$. Then $\End_A(M)$ is a ring with composition of morphisms as multiplication and the identity map $\id_M$ as identity. Since $M$ is nonzero, $\id_M\neq 0$, i.e. this ring is not $0$. By the first result, any nonzero $f\in\End_A(M)$ is an isomorphism, and its inverse $f^{-1}$ is also an $A$-module homomorphism, hence an element of $\End_A(M)$. Moreover $f\circ f^{-1}=f^{-1}\circ f=\id_M$, so $f$ is a unit. That is, every nonzero element is a unit, and $\End_A(M)$ is a division ring.
 :::
 
-This lemma supplies division rings in abundance in the form of endomorphism rings of simple modules. Conversely, viewing a division ring itself as a vector space over a smaller field, it is represented by matrices inside the ring of linear endomorphisms over that field, and the matrix representation of the quaternions $\mathbb{H}$ written by hand right after [Definition 7](#def7){: data-lid="6k04p" } is also obtained in this way. Considering the subfield $\mathbb{C}=\mathbb{R}+\mathbb{R}i$ of $\mathbb{H}$ and viewing $\mathbb{H}$ as a $\mathbb{C}$-vector space by left multiplication, a quaternion $q=a+bi+cj+dk$ can be written uniquely as
+This lemma supplies division rings in abundance in the form of endomorphism rings of simple modules. Conversely, viewing a division ring itself as a vector space over a smaller field, it is represented by matrices inside the ring of linear endomorphisms over that field, and the matrix representation of the quaternions $\mathbb{H}$ written by hand right after [Definition 7](#def7){: data-lid="6k04p" } is also obtained in this way. Viewing $\mathbb{H}$ as a $\mathbb{C}$-vector space by multiplying the subfield $\mathbb{C}=\mathbb{R}+\mathbb{R}i$ of $\mathbb{H}$ on the left, a quaternion $q=a+bi+cj+dk$ can be written uniquely as
 
 $$q=z+wj$$
 
@@ -238,15 +239,15 @@ so $\rho_q$ is a $\mathbb{C}$-linear map, i.e. an element of $\End_{\mathbb{C}}(
 
 $$\mathbb{H}\rightarrow\Mat_2(\mathbb{C});\quad q\mapsto M_q$$
 
-is an injective ring homomorphism. Here the two rows of $M_q$ are the coordinates of $\rho_q(1)$ and $\rho_q(j)$, and using from the relations of [Definition 7](#def7){: data-lid="76vnm" } that $ji=-ij$, so that $ju=\bar{u}j$ holds for any $u\in\mathbb{C}$, we obtain from $\rho_q(1)=q=z+wj$ and
+is an injective ring homomorphism. Here the two rows of $M_q$ are the coordinates of $\rho_q(1)$ and $\rho_q(j)$, respectively, and since $ji=-ij$ from the relations of [Definition 7](#def7){: data-lid="76vnm" }, using the fact that $ju=\bar{u}j$ holds for any $u\in\mathbb{C}$, from $\rho_q(1)=q=z+wj$ and
 
 $$\rho_q(j)=jq=jz+jwj=\bar{z}j+\bar{w}j^2=-\bar{w}+\bar{z}j$$
 
-that
+we obtain
 
 $$M_q=\begin{pmatrix}z&w\\ -\bar{w}&\bar{z}\end{pmatrix}$$
 
-This is the matrix representation written above, and its determinant $|z|^2+|w|^2$ is precisely the norm $N(q)$, so the fact that $M_q$ is invertible for nonzero $q$ is the same content as what [Proposition 9](#prop9){: data-lid="ab0ch" } showed.
+This is the matrix representation written above, and its determinant $\lvert z\rvert^2+\lvert w\rvert^2$ is precisely the norm $N(q)$, so the fact that $M_q$ is an invertible matrix for nonzero $q$ is the same content as what [Proposition 9](#prop9){: data-lid="ab0ch" } showed.
 
 ---
 
