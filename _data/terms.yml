@@ -22016,6 +22016,13 @@ W:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
 Y:
+- id: yoneda_lemma
+  en: Yoneda lemma
+  ko: 요네다 보조정리
+  primary: en
+  defs:
+  - label: '[범주론] §표현가능한 함자'
+    url: /ko/math/category_theory/representable_functors
 - id: young_diagram
   en: Young diagram
   ko: 영 다이어그램
