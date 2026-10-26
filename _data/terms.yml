@@ -2124,6 +2124,13 @@ C:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: cartesian_monoidal_category
+  en: Cartesian monoidal category
+  ko: 데카르트 모노이드 범주
+  primary: en
+  defs:
+  - label: '[범주론] §모노이드 범주'
+    url: /ko/math/category_theory/monoidal_categories
 - id: cartesian_morphism
   en: Cartesian morphism
   ko: 데카르트 사상
@@ -2938,6 +2945,13 @@ C:
 - id: coherence_condition
   en: coherence condition
   ko: 일관성 조건
+  primary: en
+  defs:
+  - label: '[범주론] §모노이드 범주'
+    url: /ko/math/category_theory/monoidal_categories
+- id: coherence_theorem
+  en: coherence theorem
+  ko: 일관성 정리
   primary: en
   defs:
   - label: '[범주론] §모노이드 범주'
@@ -21193,6 +21207,13 @@ U:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+- id: unitor
+  en: unitor
+  ko: 단위자
+  primary: en
+  defs:
+  - label: '[범주론] §모노이드 범주'
+    url: /ko/math/category_theory/monoidal_categories
 - id: universal_a_-derivation
   en: universal $A$-derivation
   ko: 보편 $A$-미분
