@@ -889,6 +889,13 @@ A:
   defs:
   - label: '[표현론] §Quiver와 경로대수'
     url: /ko/math/representation_theory/path_algebras
+- id: artin-rees_lemma
+  en: Artin-Rees lemma
+  ko: 아틴-리스 보조정리
+  primary: en
+  defs:
+  - label: '[가환대수학] §부풀림 대수'
+    url: /ko/math/commutative_algebra/blowup_algebra
 - id: artin_stack
   en: Artin stack
   ko: 아틴 스택
