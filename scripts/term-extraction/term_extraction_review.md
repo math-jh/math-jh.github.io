@@ -5447,3 +5447,9 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-10-26 01:19
 
 - _posts/Math/Scheme_Theory/ko/2026-06-21-Quasicoherent_Sheaves.md: 병기 필요 'relative Proj' — 위키 ko 문서 '사영 스펙트럼' — 병기형 도출 필요
+
+## term_extract_worker 2026-10-27 11:15
+
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'lying over' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going up' ko 미상 — 보류
+- _posts/Math/Commutative_Algebra/ko/2024-10-20-Lying_Over_and_Going_Up.md: 주요 용어 'going down' ko 미상 — 보류
