@@ -267,7 +267,7 @@ and then over an affine open subset of $S$, $\Spec A$, this gives $\mathbb{A}^n_
 That is, on affine space, the cotangent sheaf is a trivial bundle whose basis is formed by the differentials of the coordinate functions. When passing to projective space, the situation becomes more interesting: the cotangent sheaf of $\mathbb{P}^n$ is no longer free, but it is expressed as a short exact sequence of twisting sheaves, namely the Euler exact sequence.
 
 ::: Theorem 10 (Euler exact sequence)
-Over a ring $A$, for the projective space $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$ ([§Projective Schemes, ⁋Definition 1](/en/math/scheme_theory/projective_schemes#def1){: data-lid="mzvam" }), there exists a short exact sequence of $\mathcal{O}_{\mathbb{P}^n_A}$-modules:
+Over a ring $A$, for the projective space $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$ ([§Projective Space and the Proj Construction, ⁋Definition 1](/en/math/scheme_theory/projective_schemes#def1){: data-lid="mzvam" }), there exists a short exact sequence of $\mathcal{O}_{\mathbb{P}^n_A}$-modules:
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n_A/A} \rightarrow \mathcal{O}_{\mathbb{P}^n_A}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n_A} \rightarrow 0$$
 :::

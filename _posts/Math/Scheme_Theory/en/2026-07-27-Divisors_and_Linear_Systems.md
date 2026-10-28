@@ -294,7 +294,7 @@ Generating sections determine a morphism to projective space. Let $X$ be a schem
 
 $$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$ generates $\mathcal{L}_x$}\}$$
 
-is an open set. This is because on a trivializing open set for $\mathcal{L}$, $s_i$ corresponds to a single function, and the set of points where that function is a unit is open. Also, since the $s_i$ globally generate $\mathcal{L}$, $\{X_{s_i}\}$ is an open cover of $X$, and on $X_{s_i}$ the section $s_i$ gives a trivialization of $\mathcal{L}$, so for each $j$ the ratio $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$ is well-defined. Now $D_+(\x_i)$ is isomorphic to $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$ ([§Projective Schemes, ⁋Theorem 10](/en/math/scheme_theory/projective_schemes#thm10){: data-lid="lunk6" }), so the ring homomorphism
+is an open set. This is because on a trivializing open set for $\mathcal{L}$, $s_i$ corresponds to a single function, and the set of points where that function is a unit is open. Also, since the $s_i$ globally generate $\mathcal{L}$, $\{X_{s_i}\}$ is an open cover of $X$, and on $X_{s_i}$ the section $s_i$ gives a trivialization of $\mathcal{L}$, so for each $j$ the ratio $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$ is well-defined. Now $D_+(\x_i)$ is isomorphic to $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$ ([§Projective Space and the Proj Construction, ⁋Theorem 10](/en/math/scheme_theory/projective_schemes#thm10){: data-lid="lunk6" }), so the ring homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad \frac{\x_j}{\x_i}\mapsto \frac{s_j}{s_i}$$
 

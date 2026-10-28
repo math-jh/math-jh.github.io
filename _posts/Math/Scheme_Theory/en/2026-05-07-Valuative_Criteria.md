@@ -21,7 +21,7 @@ In this post, we define separated morphisms and proper morphisms. In previous po
 Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
 
 1. If $\varphi$ induces an isomorphism between $X$ and an open subscheme of $Y$, we call $\varphi$ an *open embedding*.
-2. We say $\varphi$ is *projective* if for some suitable $n$, $\varphi$ can be factored as a composition of a closed embedding and a projection $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes){: data-lid="upx9k" })
+2. We say $\varphi$ is *projective* if for some suitable $n$, $\varphi$ can be factored as a composition of a closed embedding and a projection $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Space and the Proj Construction](/en/math/scheme_theory/projective_schemes){: data-lid="upx9k" })
 3. We say $\varphi$ is *quasi-projective* if it can be factored as a composition of a suitable open embedding $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
