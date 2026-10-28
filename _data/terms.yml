@@ -7056,6 +7056,13 @@ F:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: finite_presentation
+  en: finite presentation
+  ko: 유한표시
+  primary: en
+  defs:
+  - label: '[가환대수학] §기본 개념들'
+    url: /ko/math/commutative_algebra/basic_notions
 - id: finite_subcover
   en: finite subcover
   ko: 유한부분덮개
@@ -10368,6 +10375,13 @@ I:
   defs:
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+- id: invariant_factor
+  en: invariant factor
+  ko: 불변인자
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: invariant_submodule
   en: invariant submodule
   ko: 불변 부분가군
