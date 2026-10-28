@@ -21351,6 +21351,13 @@ U:
   see:
   - label: Proper morphism
     id: proper_morphism
+- id: unmixedness
+  en: unmixedness
+  ko: 비혼합성
+  primary: en
+  defs:
+  - label: '[가환대수학] §Cohen-Macaulay 환'
+    url: /ko/math/commutative_algebra/cohen_macaulay_rings
 - id: unobstructed
   en: unobstructed
   ko: 장애 없음
