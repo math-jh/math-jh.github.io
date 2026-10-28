@@ -34,7 +34,110 @@
   \end{scope}
 \end{tikzpicture}
 
-%%FIG maps with x_n on E for beta_1 at the first step (Research_Note_2026_10_29-2.svg)
+%%FIG a stable map of class beta_m: a section component with components covering fibers and a contracted component (Research_Note_2026_10_29-2.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% domain: a section component S of class beta_c, components covering fibers, a contracted component
+  \draw[line width=1.2pt] (-1.7,.4)--(1.7,.4);
+  \node[above] at (-1.3,.4) {$S$};
+  \node[right, font=\scriptsize] at (1.7,.4) {$\beta_c$};
+  \foreach \x/\d in {-.7/{d_1}, .3/{d_2}}{
+    \draw[line width=.8pt] (\x,.4)--(\x,-1);
+    \fill (\x,.4) circle[radius=1.3pt];
+    \node[right, font=\scriptsize] at (\x,-.45) {$\d{:}1$};
+  }
+  \draw[black!50, line width=.8pt] (1.2,.4)--(1.2,1.5);
+  \fill (1.2,.4) circle[radius=1.3pt];
+  \foreach \y/\l in {.9/{x_1}, 1.3/{x_2}}{
+    \fill[accent1] (1.2,\y) circle[radius=1.6pt];
+    \node[accent1, right, font=\scriptsize] at (1.2,\y) {$\l$};
+  }
+  %% the map
+  \draw[thick, -{stealth}] (2.6,0)--(4,0);
+  \node[above] at (3.3,0) {$f$};
+  %% image: fibers of rho (vertical), E (horizontal), f(S) a section crossing E c times
+  \begin{scope}[shift={(6.6,0)}]
+    \foreach \x in {-2,-1.6,-1.2,-.8,-.4,0,.4,.8,1.2,1.6,2}{\draw[black!25, line width=.5pt] (\x,-1.1)--(\x,1.7);}
+    \draw[accent1, line width=1.2pt] (-2.2,-.3)--(2.2,-.3);
+    \node[accent1, right] at (2.2,-.3) {$E$};
+    \draw[line width=1.2pt] plot[domain=-2.1:2.1, samples=80] (\x,{.35+.9*sin(deg(1.4*\x+.3))});
+    \node[right] at (2.1,{.35+.9*sin(deg(3.24))}) {$f(S)$};
+    \foreach \x in {-1.88,-.79}{\fill[accent1] (\x,-.3) circle[radius=1.8pt];}
+    \foreach \x/\d in {-.4/{d_1}, .8/{d_2}}{
+      \draw[line width=.9pt] (\x,-1.1)--(\x,1.7);
+      \fill (\x,{.35+.9*sin(deg(1.4*\x+.3))}) circle[radius=1.6pt];
+      \node[above, font=\scriptsize] at (\x,1.7) {$\times\d$};
+    }
+    \fill[black!50] (1.6,{.35+.9*sin(deg(2.54))}) circle[radius=2pt];
+    \node at (0,-1.6) {$c+d_1+d_2=m$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG the two shapes of combs removed at step j for beta_m: center covering E once, center contracted to p (Research_Note_2026_10_29-3.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% (a) center Z covers E once, all branches cover fibers; contact orders sum to j+1
+  \begin{scope}
+    \draw[accent1, line width=1.2pt] (-1.7,.4)--(1.7,.4);
+    \node[accent1, above] at (.2,.4) {$Z$};
+    \node[accent1, right, font=\scriptsize] at (1.7,.4) {$1{:}1$};
+    \draw[accent1, fill=white] (-1.3,.4) circle[radius=2pt];
+    \node[accent1, below] at (-1.3,.35) {$x_n$};
+    \foreach \x/\c/\d/\l in {-.4/{m_1}/{d_1}/{C_1}, .8/{m_2}/{d_2}/{C_2}}{
+      \draw[line width=.8pt] (\x,.4)--(\x,-1);
+      \fill (\x,.4) circle[radius=1.3pt];
+      \node[right, font=\scriptsize] at (\x,.15) {$\c$};
+      \node[right, font=\scriptsize] at (\x,-.4) {$\d{:}1$};
+      \node[below] at (\x,-1) {$\l$};
+    }
+    \draw[thick, -{stealth}] (2.6,0)--(4,0);
+    \node[above] at (3.3,0) {$f$};
+    \begin{scope}[shift={(6.6,0)}]
+      \draw[accent1, line width=1.2pt] (-2.2,-.2)--(2.2,-.2);
+      \node[accent1, right] at (2.2,-.2) {$E$};
+      \foreach \x/\d/\p in {-.4/{d_1}/{p_1}, .8/{d_2}/{p_2}}{
+        \draw[line width=.9pt] (\x,-1.1)--(\x,1.3);
+        \node[above, font=\scriptsize] at (\x,1.3) {$\times\d$};
+        \fill[accent1] (\x,-.2) circle[radius=1.8pt];
+        \node[accent1, below right] at (\x,-.22) {$\p$};
+      }
+      \draw[accent1, fill=white] (-1.5,-.2) circle[radius=2pt];
+      \node[accent1, above] at (-1.5,-.15) {$f(x_n)$};
+    \end{scope}
+    \node at (3.3,-1.75) {(a)\quad$m_1+m_2=j+1$};
+  \end{scope}
+  %% (b) center Z contracted to p, a section branch S of class beta_c and a branch covering F_p; contact orders sum to j
+  \begin{scope}[shift={(0,-4.3)}]
+    \draw[accent1, line width=1.2pt] (-1.7,.4)--(1.7,.4);
+    \node[accent1, above] at (.2,.4) {$Z\mapsto p$};
+    \draw[accent1, fill=white] (-1.3,.4) circle[radius=2pt];
+    \node[accent1, below] at (-1.3,.35) {$x_n$};
+    \draw[line width=1.2pt] (-.4,.4)--(-.4,-1);
+    \fill (-.4,.4) circle[radius=1.3pt];
+    \node[right, font=\scriptsize] at (-.4,.15) {$m_0$};
+    \node[below] at (-.4,-1) {$S$};
+    \node[right, font=\scriptsize] at (-.4,-.4) {$\beta_c$};
+    \draw[line width=.8pt] (.8,.4)--(.8,-1);
+    \fill (.8,.4) circle[radius=1.3pt];
+    \node[right, font=\scriptsize] at (.8,.15) {$m_1$};
+    \node[right, font=\scriptsize] at (.8,-.4) {$d_1{:}1$};
+    \node[below] at (.8,-1) {$C_1$};
+    \draw[thick, -{stealth}] (2.6,0)--(4,0);
+    \node[above] at (3.3,0) {$f$};
+    \begin{scope}[shift={(6.6,0)}]
+      \foreach \x in {-2,-1.6,-1.2,-.8,-.4,0,.4,.8,1.2,1.6,2}{\draw[black!25, line width=.5pt] (\x,-1.1)--(\x,1.3);}
+      \draw[accent1, line width=1.2pt] (-2.2,-.2)--(2.2,-.2);
+      \node[accent1, right] at (2.2,-.2) {$E$};
+      \draw[line width=1.2pt] plot[domain=-2.1:2.1, samples=80] (\x,{-.2+.35*\x+.05*\x*\x*\x});
+      \node[right] at (2.1,1) {$f(S)$};
+      \draw[line width=.9pt] (0,-1.1)--(0,1.3);
+      \node[above, font=\scriptsize] at (0,1.3) {$\times d_1$};
+      \fill[accent1] (0,-.2) circle[radius=2pt];
+      \node[accent1, below right] at (0,-.25) {$p=f(x_n)$};
+    \end{scope}
+    \node at (3.3,-1.75) {(b)\quad$m_0+m_1=j$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG maps with x_n on E for beta_1 at the first step (Research_Note_2026_10_29-4.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
   %% (a) E with two distinct fibers: stays
   \begin{scope}
@@ -80,7 +183,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%%FIG maps with x_n on E for beta_2 at the second step (Research_Note_2026_10_29-3.svg)
+%%FIG maps with x_n on E for beta_2 at the second step (Research_Note_2026_10_29-5.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
   %% (a) E with three distinct fibers: stays
   \begin{scope}
@@ -151,7 +254,7 @@
   \end{scope}
 \end{tikzpicture}
 
-%%FIG maps with x_n on a component contracted to p for beta_3 at the third step (Research_Note_2026_10_29-4.svg)
+%%FIG maps with x_n on a component contracted to p for beta_3 at the third step (Research_Note_2026_10_29-6.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
   %% (a) beta_2 tangent to E at p and F_p: stays
   \begin{scope}
