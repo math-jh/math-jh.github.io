@@ -15,7 +15,7 @@ sidebar:
 author: Marvin
 
 date: 2026-08-14
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-29
 
 weight: 39
 
@@ -166,3 +166,43 @@ SEPARATOR = %r{(?<=\w\w)([/.\-]+)(_*)(?=\w)}
 정규식 네 개가 규칙의 전부다. `<pre>` 블록은 통째로 건너뛴다. 코드블럭은 폭이 넘치면 가로 스크롤이 답이기 때문이다. `<code>` 안에서는 태그와 문자 엔티티(`MARKUP`)를 잘라 내고 텍스트 조각에만 `SEPARATOR`를 적용하므로 `<span>`이나 `&lt;` 한가운데에 `<wbr>`이 들어가는 일이 없다. 구분자는 `/`, `.`, `-` 셋이고 그 뒤에 넣는다. 다만 뒤에 밑줄이 붙어 있으면 `(_*)`가 밑줄을 `<wbr>` 뒤로 넘긴다. `skins/_custom`은 `skins/`에서 끊겨 `_custom`이 다음 줄에서 시작한다. 줄 끝에 밑줄이 남으면 다음 줄과의 경계가 눈에 안 보이기 때문이다. `(?<=\w\w)`는 구분자 앞에 두 글자 이상을 요구하는데, `_includes`의 맨 앞 밑줄 같은 짧은 조각이 줄 끝에 홀로 남는 것을 막는다. 16자 미만의 짧은 코드(`MIN_LENGTH`)는 애초에 줄을 밀어내지 않으므로 건드리지 않는다.
 
 `<wbr>`은 복사할 때 문자가 끼지 않는다. 경로를 드래그해서 붙여 넣으면 원래 문자열 그대로다. 양끝맞춤 규칙을 수학 글로 좁힌 일과 이 플러그인은 같은 커밋에 들어갔다. 인라인 코드가 거의 없는 수학 글에서는 플러그인이 할 일이 없고, 개발일지에서만 실제로 일한다.
+
+## 조사가 붙은 낱말에서 꺼지는 하이픈
+
+스팬으로 감싸는 방식에는 구멍이 하나 더 있었다. 사용자가 하이픈 패턴의 출처를 묻다가 곧바로 구체적인 낱말을 들고 왔다.
+
+> Zen에서 "homomorphism"이 잘 안 되어있니?
+
+브라우저가 Zen이므로 엔진은 Gecko다. `homomorphism이다`처럼 영문 낱말에 조사가 공백 없이 붙으면, 스팬은 `homomorphism`까지만 감싸고 `이다`는 스팬 밖에 남는다. Gecko는 낱말을 공백으로만 자르고, 한 낱말 안에서 `lang`이 바뀌면 그 낱말의 자동 하이픈을 통째로 끈다. 스크립트 주석이 가리키는 곳은 `nsLineBreaker`의 `mCurrentWordContainsMixedLang`이다. 스팬 안은 `lang="en"`인데도 엔진이 보는 낱말은 스팬 끝에서 끝나지 않는다. 주석에 따르면 Blink는 스팬 단위로 하이픈을 걸어 이 문제가 없다.
+
+낱말을 스팬 끝에서 끊어 주면 된다. 한글이 바로 이어지는 스팬에만 클래스를 달고, 그 클래스에 빈 `inline-block`을 `::after`로 붙인다.
+
+```scss
+&.ko-follows::after {
+  content: "";
+  display: inline-block;
+}
+```
+{: data-filename="_sass/minimal-mistakes/_page.scss"}
+
+상자가 비어 있고 낱말의 바깥 끝에만 붙으므로 하이픈 개행을 죽일 것이 없다. 조사 글자는 스팬 밖에서 그대로 양끝맞춤에 참여하고, 복사되는 글자도 없다. 빈 `inline-block`은 그 자리에 줄바꿈 기회를 만드는데, 영문과 한글 사이는 어느 엔진에서나 이미 줄바꿈 기회라서 새로 생기는 자리가 없다. 한글이 붙을 때만 달아야 하는 이유가 이것이다. 마침표나 괄호, 수식 앞에 달면 그 앞에서 줄이 끊길 수 있게 된다.
+
+클래스는 `Latin_hyphens.js`가 단다. 같은 텍스트 노드 안에서 스팬 바로 뒤가 한글이면 그 자리에서 달면 된다. 까다로운 경우는 스팬이 텍스트 노드 끝에서 끝나는 때다. 링크 안의 낱말 뒤에 링크 밖의 조사가 붙는 식으로 뒤 글자가 다음 노드에 있다.
+
+```js
+function nextChar(block, span) {
+  var walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT, null);
+  var node;
+
+  walker.currentNode = span.firstChild;
+  while ((node = walker.nextNode())) {
+    if (!node.nodeValue) continue;
+    if (node.parentNode.closest('p, li') !== block || node.parentNode.closest('.katex')) return '';
+    return node.nodeValue.charAt(0);
+  }
+  return '';
+}
+```
+{: data-filename="assets/js/custom/Latin_hyphens.js"}
+
+이런 스팬은 `wrapWords`가 `tails`에 모아 두었다가, 모든 노드를 감싼 뒤에 이 함수로 다음 글자를 본다. 순회가 다른 문단이나 목록 항목, 수식으로 넘어가면 이어지는 글자가 아니므로 빈 문자열을 돌려주고 클래스를 달지 않는다. 뒤를 감싸는 도중에 보지 않고 끝난 뒤에 보는 것은 노드를 교체하는 동안 walker가 무효가 되기 때문이다. 변경은 [커밋 하나](https://github.com/math-jh/math-jh.github.io/commit/eb6b296f)다.
