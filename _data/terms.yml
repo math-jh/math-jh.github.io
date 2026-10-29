@@ -13133,6 +13133,13 @@ M:
   defs:
   - label: '[다중선형대수학] §텐서대수'
     url: /ko/math/multilinear_algebra/tensor_algebras
+- id: ml_inequality
+  en: ML inequality
+  ko: ML 부등식
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: möbius_function
   en: Möbius function
   ko: 뫼비우스 함수
@@ -15143,6 +15150,13 @@ P:
   see:
   - label: Homotopy
     id: homotopy
+- id: path_independence
+  en: path independence
+  ko: 경로 독립성
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: peak
   en: peak
   ko: 봉우리
@@ -15795,6 +15809,8 @@ P:
   defs:
   - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
     url: /ko/math/number_theory/pythagorean_triples
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: primitive_cohomology
   en: primitive cohomology
   ko: ''
