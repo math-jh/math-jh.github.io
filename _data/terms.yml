@@ -6010,6 +6010,13 @@ E:
   see:
   - label: Immersion
     id: immersion
+- id: embedding_dimension
+  en: embedding dimension
+  ko: 임베딩 차원
+  primary: en
+  defs:
+  - label: '[가환대수학] §정칙성의 호몰로지 판정'
+    url: /ko/math/commutative_algebra/homological_criterion_for_regularity
 - id: empty_set
   en: empty set
   ko: 공집합
@@ -19307,6 +19314,13 @@ S:
   defs:
   - label: '[그로모프-위튼 이론] §안정사상들의 모듈라이 공간'
     url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
+- id: stably_free_module
+  en: stably free module
+  ko: 안정 자유 가군
+  primary: en
+  defs:
+  - label: '[가환대수학] §정칙성의 호몰로지 판정'
+    url: /ko/math/commutative_algebra/homological_criterion_for_regularity
 - id: stack
   en: stack
   ko: 스택
