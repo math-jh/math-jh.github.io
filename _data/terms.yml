@@ -12546,6 +12546,13 @@ L:
   defs:
   - label: '[토릭 기하학] §토릭 다양체 위의 로그 미분형식'
     url: /ko/math/toric_geometry/logarithmic_differentials
+- id: logarithmic_derivative
+  en: logarithmic derivative
+  ko: 로그미분
+  primary: en
+  defs:
+  - label: '[복소해석학] §편각원리와 Rouché 정리'
+    url: /ko/math/complex_analysis/argument_principle
 - id: logarithmic_differential
   en: logarithmic differential
   ko: 로그 미분형식
