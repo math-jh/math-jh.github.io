@@ -4184,6 +4184,13 @@ C:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: cosyzygy
+  en: cosyzygy
+  ko: 코시지지
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: cotangent
   en: cotangent
   ko: 여접
