@@ -20609,6 +20609,20 @@ T:
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: torsion_functor
+  en: torsion functor
+  ko: 비틀림 함자
+  primary: en
+  defs:
+  - label: '[가환대수학] §국소 코호몰로지'
+    url: /ko/math/commutative_algebra/local_cohomology
+- id: torsion_module
+  en: torsion module
+  ko: 비틀림가군
+  primary: en
+  defs:
+  - label: '[가환대수학] §국소 코호몰로지'
+    url: /ko/math/commutative_algebra/local_cohomology
 - id: torsor
   en: torsor
   ko: 비틀기
