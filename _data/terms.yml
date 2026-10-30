@@ -3615,6 +3615,13 @@ C:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: complex_torus
+  en: complex torus
+  ko: 복소토러스
+  primary: ko
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complexification
   en: complexification
   ko: 복소화
