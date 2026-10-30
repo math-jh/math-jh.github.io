@@ -7010,6 +7010,13 @@ F:
   defs:
   - label: '[스택] §모듈라이 공간'
     url: /ko/math/stacks/moduli_spaces
+- id: fine_resolution
+  en: fine resolution
+  ko: 미세 분해
+  primary: en
+  defs:
+  - label: '[복소기하학] §돌보 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: fine_sheaf
   en: fine sheaf
   ko: 미세층
