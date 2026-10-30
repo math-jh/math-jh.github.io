@@ -18778,6 +18778,13 @@ S:
     url: /ko/math/calculus/greens_theorem
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+- id: simply_connected_domain
+  en: simply connected domain
+  ko: 단순연결 영역
+  primary: ko
+  defs:
+  - label: '[미적분학] §그린 정리'
+    url: /ko/math/calculus/greens_theorem
 - id: simply_connected_space
   en: simply connected space
   ko: 단순연결공간
