@@ -9356,6 +9356,13 @@ H:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+- id: hurwitz_s_theorem
+  en: 'Hurwitz''s theorem'
+  ko: Hurwitz 정리
+  primary: en
+  defs:
+  - label: '[복소해석학] §Riemann 사상정리'
+    url: /ko/math/complex_analysis/riemann_mapping_theorem
 - id: hyperelliptic_curve
   en: hyperelliptic curve
   ko: 초타원곡선
@@ -13398,6 +13405,13 @@ M:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: montel_s_theorem
+  en: 'Montel''s theorem'
+  ko: Montel 정리
+  primary: en
+  defs:
+  - label: '[복소해석학] §Riemann 사상정리'
+    url: /ko/math/complex_analysis/riemann_mapping_theorem
 - id: moore-penrose_pseudoinverse
   en: Moore-Penrose pseudoinverse
   ko: 유사역행렬
