@@ -11022,6 +11022,13 @@ J:
   defs:
   - label: '[가환대수학] §조르단-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
+- id: jordan_s_lemma
+  en: 'Jordan''s lemma'
+  ko: Jordan 보조정리
+  primary: en
+  defs:
+  - label: '[복소해석학] §유수를 이용한 실적분 계산'
+    url: /ko/math/complex_analysis/residue_integrals
 - id: j_th_column_vector
   en: $j$th column vector
   ko: $j$번째 열벡터
@@ -11214,6 +11221,13 @@ K:
     id: image
   - label: Exact sequence
     id: exact_sequence
+- id: keyhole_contour
+  en: keyhole contour
+  ko: 열쇠구멍 경로
+  primary: en
+  defs:
+  - label: '[복소해석학] §유수를 이용한 실적분 계산'
+    url: /ko/math/complex_analysis/residue_integrals
 - id: killing_form
   en: Killing form
   ko: 킬링 형식
