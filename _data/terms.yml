@@ -726,6 +726,13 @@ A:
   defs:
   - label: '[해석학] §멱급수와 해석함수'
     url: /ko/math/analysis/power_series
+- id: analytic_continuation
+  en: analytic continuation
+  ko: 해석적 접속
+  primary: en
+  defs:
+  - label: '[복소해석학] §영점과 일치정리'
+    url: /ko/math/complex_analysis/zeros_and_identity_theorem
 - id: analytic_function
   en: analytic function
   ko: 해석함수
