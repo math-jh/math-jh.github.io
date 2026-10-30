@@ -2185,6 +2185,13 @@ C:
   defs:
   - label: '[리 이론] §sl₂의 표현론'
     url: /ko/math/lie_theory/representations_of_sl2
+- id: casorati_weierstrass_theorem
+  en: Casorati–Weierstrass theorem
+  ko: Casorati–Weierstrass 정리
+  primary: en
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: Regularity
   en: Castelnuovo-Mumford regularity
   ko: 정칙성
