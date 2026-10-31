@@ -19,7 +19,7 @@ Given any group $H$ and ring $A$, we have defined the group ring $AH$. ([\[Algeb
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}$$
 
-Here $hx$ is of course defined by viewing $h$ as an element of $AH$ via $h\mapsto \delta_h$, then using the $AH$-module structure. Then $M^H$ is an $A$-submodule of $M$, but if the group $H$ is not commutative, it is generally not an $AH$-submodule. Also, if a subgroup $G$ of $H$ is given, then $M^H\leq M^G$ is obvious. 
+Here $hx$ is of course defined by viewing $h$ as an element of $AH$ via $h\mapsto \delta_h$, then using the $AH$-module structure. Then $M^H$ is an $A$-submodule of $M$. Also, if a subgroup $G$ of $H$ is given, then $M^H\leq M^G$ is obvious. 
 
 Now suppose $x\in M^G$ and $h\in H$ are given, and let $\bar{h}=hG$ be an element of $H/G$. Then, since
 
@@ -118,27 +118,27 @@ $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 
 
 holds. Now considering the tower of subgroups of $S_{p_1+\cdots+p_n}$
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq S_{p_1}\times S_{p_2}\times\cdots\times S_{p_n}$$
 
 by the result of [Proposition 2](#prop2){: data-lid="pf1re" },
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)$$
 
 holds. Now computing the right-hand side, by the above inclusions,
 
-$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
+$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
 
 and therefore
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
 
 holds. If we had initially started with the following tower of subgroups
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots+p_{n-1}}\times 1$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1}\times\cdots\times S_{p_n}$$
 
 we would obtain
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
 
 and in particular, in the case $n=3$, the associativity of $\Sym(M)$ is shown from this. For commutativity, taking $\sigma$ to be the permutation arranging, among the $p_1+p_2$ elements, the first $p_1$ elements and the last $p_2$ elements into the form
 
