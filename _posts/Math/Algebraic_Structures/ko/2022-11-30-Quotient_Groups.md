@@ -16,7 +16,7 @@ weight: 5
 
 ## 정규부분군
 
-한편 [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations){: data-lid="4mlmd" }을 통해 우리는 다음 두 가지가 같다는 것을 안다.
+한편 [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations){: data-lid="4mlmd" }를 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
 집합 $G$에 동치관계 $R$을 주는 것 $\iff$ 집합 $G$의 분할 $(G_i)_{i\in I}$을 택하는 것
 {: .text-center}
