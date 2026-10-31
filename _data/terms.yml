@@ -20880,6 +20880,13 @@ T:
   see:
   - label: Binary relation
     id: binary_relation
+- id: transitivity_triangle
+  en: transitivity triangle
+  ko: 추이 삼각형
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: transpose
   en: transpose
   ko: 전치
