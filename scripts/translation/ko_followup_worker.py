@@ -3,9 +3,12 @@
 
 The dashboard checkbox is a request, not an acknowledgement.  Every request
 present when a run starts is handled sequentially: Antigravity proposes the
-narrowly scoped EN replacement, then Codex sees only the original finding plus
-KO/EN unified diffs plus the final English text and decides whether both sides
-implement that finding.
+narrowly scoped EN replacement from the scoped KO diff and the current KO, then
+Codex sees the original finding, the KO/EN unified diffs, the current KO and the
+final English text and judges two things separately.  Whether the Korean resolves
+the finding is the author's part: if not, the request is rejected and unchecked.
+Whether the English follows the corrected Korean is this worker's part: if every
+proposal fails, the request stays checked and waits for the next run.
 The author may attach a note to a request (dashboard, same request key); both
 models receive it as the author's message, and it is removed with the request
 once the follow-up passes.
@@ -39,6 +42,8 @@ LOG_PREFIX = "KO-FOLLOWUP"
 MAX_REPLACEMENTS = 12
 MAX_PROPOSAL_ATTEMPTS = 2
 FINDING_CHANGE_RADIUS = 2
+# reviewed_candidate 의 결과
+PASSED, KO_UNRESOLVED, EN_UNFAITHFUL = "passed", "ko-unresolved", "en-unfaithful"
 
 
 def log(message: str) -> None:
@@ -210,6 +215,12 @@ only English changes required by the accepted KO changes. Preserve every unrelat
 byte, all LaTeX, Jekyll syntax, anchors, references, and translation provenance.
 Do not correct or enrich anything outside the original findings.
 
+CURRENT KO is the whole corrected Korean post. The KO DIFF shows only the changes
+nearest each finding, so a correction placed a few lines away (after a display, in
+the paragraph following a box) may be missing from it. Whenever you change the
+English for a finding, take its content and wording from the corresponding passage
+of CURRENT KO, never from your own reconstruction of the mathematics.
+
 AUTHOR NOTE is a message from the Korean author about this follow-up (for
 example, how a finding was resolved, why a finding was left unchanged, or how
 the English should read). Follow it for the English where it stays within the
@@ -219,12 +230,17 @@ If REVIEW FEEDBACK is present, the previous proposal failed final review. Make a
 new replacement plan from CURRENT EN that directly resolves that feedback while
 remaining within the original findings.
 
-Return JSON only:
-{"replacements":[{"old":"exact unique substring from current EN","new":"replacement"}]}
+Output the replacements as plain-text blocks and nothing else, one block each:
 
-Each `old` must occur exactly once in CURRENT EN. Use JSON-compliant double
-backslashes for LaTeX. If the English already expresses the corrected Korean,
-return {"replacements":[]}.
+<<<OLD
+exact unique substring of CURRENT EN, copied character for character
+===NEW
+its replacement
+>>>END
+
+Copy text and LaTeX exactly as they appear, with every `$` and single
+backslashes; escape nothing. Each OLD must occur exactly once in CURRENT EN. If
+the English already expresses the corrected Korean, output only NO CHANGES.
 
 ORIGINAL FINDINGS:
 @@FINDINGS@@
@@ -238,6 +254,11 @@ AUTHOR NOTE:
 REVIEW FEEDBACK:
 @@REVIEW_FEEDBACK@@
 
+CURRENT KO:
+--- BEGIN CURRENT KO ---
+@@CURRENT_KO@@
+--- END CURRENT KO ---
+
 CURRENT EN:
 --- BEGIN EN ---
 @@CURRENT_EN@@
@@ -245,26 +266,37 @@ CURRENT EN:
 """
 
 
+# 치환안은 JSON 이 아니라 구분자 블록으로 받는다. LaTeX 를 JSON 문자열로 이스케이프해
+# 내게 하면 모델이 `$` 를 흘려(`$\lambda$` → `\lambda`) OLD 가 EN 과 어긋난다.
+# 같은 본문을 블록으로 옮기게 하면 바이트 단위로 보존된다.
+_REPLACEMENT_BLOCK_RE = re.compile(r"<<<OLD\n(.*?)\n===NEW\n(.*?)\n?>>>END", re.DOTALL)
+
+
+def _parse_replacements(out: str) -> list[tuple[str, str]]:
+    blocks = _REPLACEMENT_BLOCK_RE.findall(out)
+    if not blocks:
+        if out.strip() == "NO CHANGES":
+            return []
+        raise RuntimeError(f"Antigravity returned no replacement blocks: {out[:200]!r}")
+    return blocks
+
+
 def antigravity_candidate(
     current_en: str, findings: list[dict], ko_diff: str,
-    review_feedback: str = "", author_note: str = "",
+    review_feedback: str = "", author_note: str = "", current_ko: str = "",
 ) -> str:
     prompt = (ANTIGRAVITY_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
               .replace("@@AUTHOR_NOTE@@", author_note or "(none)")
               .replace("@@REVIEW_FEEDBACK@@", review_feedback or "(none; first proposal)")
-              .replace("@@CURRENT_EN@@", current_en))
-    payload = tw._parse_json_object(tw.call_translator(prompt, thinking=False))
-    replacements = payload.get("replacements") if isinstance(payload, dict) else None
-    if not isinstance(replacements, list) or len(replacements) > MAX_REPLACEMENTS:
+              .replace("@@CURRENT_EN@@", current_en)
+              .replace("@@CURRENT_KO@@", current_ko or "(not provided)"))
+    replacements = _parse_replacements(tw.call_translator(prompt, thinking=False))
+    if len(replacements) > MAX_REPLACEMENTS:
         raise RuntimeError("Antigravity returned an invalid replacement list")
     candidate = current_en
-    for idx, item in enumerate(replacements, 1):
-        if not isinstance(item, dict):
-            raise RuntimeError("Antigravity replacement is not an object")
-        old = str(item.get("old") or "")
-        new = str(item.get("new") or "")
+    for idx, (old, new) in enumerate(replacements, 1):
         if not old:
             raise RuntimeError(f"Antigravity replacement {idx}/{len(replacements)}: old 가 비었음")
         if candidate.count(old) != 1:
@@ -299,10 +331,10 @@ def _replacement_miss(text: str, old: str, idx: int, total: int) -> str:
 CODEX_PROMPT = """Review one completed Korean-source correction and its English follow-up.
 
 You receive the original reviewed findings, the two unified diffs, the current
-Korean post, and the final English text after the proposed follow-up. Judge
-whether the KO diff resolves the original issue, and whether the final English
-faithfully reflects that resolved Korean meaning without invention, omission, or
-unrelated rewriting. The KO diff is deliberately scoped to the finding: edits
+Korean post, and the final English text after the proposed follow-up. Judge two
+things separately: whether the corrected Korean resolves the original issue, and
+whether the final English faithfully reflects that resolved Korean meaning without
+invention, omission, or unrelated rewriting. The KO diff is deliberately scoped to the finding: edits
 elsewhere in the post are folded into its context, so its context lines are the
 current Korean text. CURRENT KO is the whole Korean post as it now stands; read
 it for definitions and earlier statements the corrected passage relies on that
@@ -330,7 +362,16 @@ the Korean as it now stands: fail English that adds content the Korean does not
 have. Address the note in "why", in Korean.
 
 Return JSON only:
-{"pass":true,"why":"short concrete reason"}
+{"ko_resolved":true,"en_faithful":true,"why":"short concrete reason"}
+
+`ko_resolved` answers the first question alone: does the Korean as it now stands
+(CURRENT KO; the KO DIFF shows the changes nearest each finding and can omit a
+correction placed a few lines away) resolve every original finding? That is the
+author's part. `en_faithful` answers the second alone: does FINAL EN faithfully
+reflect the resolved Korean for those findings? That is the follow-up's part, and
+a defect in the English is never a reason to set `ko_resolved` to false. In "why",
+write in Korean what the Korean still lacks when `ko_resolved` is false, and
+otherwise what the English must change when `en_faithful` is false.
 
 ORIGINAL FINDINGS:
 @@FINDINGS@@
@@ -359,7 +400,11 @@ FINAL EN:
 def codex_pass(
     findings: list[dict], ko_diff: str, en_diff: str, final_en: str,
     author_note: str = "", current_ko: str = "",
-) -> tuple[bool, str]:
+) -> tuple[bool, bool, str]:
+    """Codex 판정 `(ko_resolved, en_faithful, why)`.
+
+    두 판정은 책임이 다르다. KO 가 지적을 해소했는지는 저자 몫이라 False 면 요청을
+    거절하고, EN 이 그 KO 를 따르는지는 이 워커 몫이라 False 면 EN 을 다시 만든다."""
     prompt = (CODEX_PROMPT
               .replace("@@FINDINGS@@", json.dumps(findings, ensure_ascii=False, indent=2))
               .replace("@@KO_DIFF@@", ko_diff)
@@ -383,16 +428,23 @@ def codex_pass(
                 f"Codex follow-up exited {proc.returncode}: {tw._flat(proc.stderr)[:180]}"
             )
         payload = tw._parse_json_object(out_path.read_text(encoding="utf-8"))
-    if not isinstance(payload, dict) or not isinstance(payload.get("pass"), bool):
+    if not isinstance(payload, dict) \
+            or not isinstance(payload.get("ko_resolved"), bool) \
+            or not isinstance(payload.get("en_faithful"), bool):
         raise RuntimeError("Codex returned an invalid follow-up JSON shape")
-    return payload["pass"], str(payload.get("why") or "").strip()[:500]
+    return (payload["ko_resolved"], payload["en_faithful"],
+            str(payload.get("why") or "").strip()[:500])
 
 
 def reviewed_candidate(
     current_en: str, current_ko: str, baseline: str, findings: list[dict],
     ko_diff: str, path: str, en_rel: str, author_note: str = "",
-) -> tuple[str, bool, str]:
-    """Propose EN from the original text, feeding one rejection back for repair."""
+) -> tuple[str, str, str]:
+    """Propose EN from the original text, feeding one rejection back for repair.
+
+    Returns `(candidate, status, why)`. `status` is PASSED, KO_UNRESOLVED (the
+    author's correction does not resolve a finding — no EN attempt can fix that)
+    or EN_UNFAITHFUL (every EN proposal failed review — the follow-up's own part)."""
     old_lints = set(tw.lint_latex(current_en))
     old_struct = set(tw.lint_structure(baseline, current_en))
     feedback = ""
@@ -401,7 +453,7 @@ def reviewed_candidate(
     for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
         candidate = antigravity_candidate(
             current_en, findings, ko_diff, review_feedback=feedback,
-            author_note=author_note,
+            author_note=author_note, current_ko=current_ko,
         )
         warnings: list[str] = []
         hard_error = tw.validate_translation(
@@ -414,15 +466,17 @@ def reviewed_candidate(
             detail = hard_error or next(iter(new_lints or new_struct))
             raise RuntimeError(f"deterministic gate: {detail}")
         en_diff = _diff(current_en, candidate, f"a/{en_rel}", f"b/{en_rel}")
-        passed, why = codex_pass(
+        ko_resolved, en_faithful, why = codex_pass(
             findings, ko_diff, en_diff, candidate, author_note, current_ko=current_ko,
         )
-        if passed:
-            return candidate, True, why
+        if not ko_resolved:
+            return candidate, KO_UNRESOLVED, why
+        if en_faithful:
+            return candidate, PASSED, why
         feedback = why
         if attempt < MAX_PROPOSAL_ATTEMPTS:
             log(f"RETRY {path}: Codex 피드백으로 EN 수정안 재생성 — {tw._flat(why)}")
-    return candidate, False, why
+    return candidate, EN_UNFAITHFUL, why
 
 
 def _acquire_autopush_lock() -> int | None:
@@ -496,7 +550,7 @@ def _record_rejection(
     latest = _read_json(REQUEST_STATE)
     latest.pop(request_key, None)
     _write_json(REQUEST_STATE, latest)
-    log(f"REJECT {path}: 체크 해제·수정 후 재요청 — {reason}")
+    log(f"REJECT {path}: KO 가 지적을 해소하지 못함, 체크 해제·KO 수정 후 재요청 — {reason}")
 
 
 def _record_wait(
@@ -570,15 +624,20 @@ def _process_target_locked(target: tuple, state: dict) -> int:
     log(f"START {path}: 지적 {len(findings)}건, Antigravity EN 반영"
         + (f" · 메모 {len(author_note)}자" if author_note else ""))
     try:
-        candidate, passed, why = reviewed_candidate(
+        candidate, status, why = reviewed_candidate(
             current_en, current_ko, baseline, findings, ko_diff, path, en_rel,
             author_note=author_note,
         )
     except Exception as exc:
         _record_wait(request_key, path, entry, state, str(exc))
         return 1
-    if not passed:
+    if status == KO_UNRESOLVED:
         _record_rejection(request_key, path, entry, state, why)
+        return 0
+    if status == EN_UNFAITHFUL:
+        # KO 는 지적을 해소했다. 실패한 것은 이 워커의 EN 반영이므로 사용자 요청은
+        # 그대로 두고 다음 실행에서 다시 만든다 (막힘 표시는 _record_wait 의 횟수).
+        _record_wait(request_key, path, entry, state, f"EN 반영이 판정을 통과하지 못함 — {why}")
         return 0
 
     fd = _acquire_autopush_lock()

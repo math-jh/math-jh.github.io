@@ -245,7 +245,7 @@ class FollowupBatchTest(unittest.TestCase):
         old = "Let $$\\n\\mathfrak{p}"   # literal backslash-n instead of a newline
         with patch.object(
             worker.tw, "call_translator",
-            return_value=json.dumps({"replacements": [{"old": old, "new": "x"}]}),
+            return_value=f"<<<OLD\n{old}\n===NEW\nx\n>>>END\n",
         ):
             with self.assertRaises(RuntimeError) as caught:
                 worker.antigravity_candidate(en, [], "")
@@ -255,6 +255,20 @@ class FollowupBatchTest(unittest.TestCase):
         self.assertIn("앞 6/", message)
         self.assertIn(repr("\\n\\mathfrak{p}"), message)
         self.assertIn(repr("\n\\mathfrak{p}\n$$ be prime.\n"), message)
+
+    def test_replacement_blocks_keep_latex_byte_for_byte(self) -> None:
+        out = (
+            "<<<OLD\nfor a constant $\\lambda$.\n===NEW\n"
+            "when $v=0$ or for a constant $\\lambda$.\n>>>END\n"
+            "<<<OLD\n $F(T')$\n===NEW\n>>>END\n"
+        )
+        self.assertEqual(worker._parse_replacements(out), [
+            ("for a constant $\\lambda$.", "when $v=0$ or for a constant $\\lambda$."),
+            (" $F(T')$", ""),
+        ])
+        self.assertEqual(worker._parse_replacements("NO CHANGES\n"), [])
+        with self.assertRaises(RuntimeError):
+            worker._parse_replacements('{"replacements": []}')
 
     def test_duplicated_replacement_reports_the_count(self) -> None:
         message = worker._replacement_miss("ab ab", "ab", 2, 3)
@@ -267,19 +281,20 @@ class FollowupBatchTest(unittest.TestCase):
             captured["prompt"] = kwargs["input"]
             out_path = Path(cmd[cmd.index("--output-last-message") + 1])
             out_path.write_text(
-                '{"pass":true,"why":"already synchronized"}', encoding="utf-8",
+                '{"ko_resolved":true,"en_faithful":true,"why":"already synchronized"}',
+                encoding="utf-8",
             )
             return SimpleNamespace(returncode=0, stderr="")
 
         with patch.object(worker.subprocess, "run", side_effect=run):
-            passed, why = worker.codex_pass(
+            ko_resolved, en_faithful, why = worker.codex_pass(
                 [{"issue": "missing justification"}],
                 "KO correction",
                 "(no changes)",
                 "The final English already includes the justification.",
             )
 
-        self.assertTrue(passed)
+        self.assertTrue(ko_resolved and en_faithful)
         self.assertEqual(why, "already synchronized")
         self.assertIn(
             "The final English already includes the justification.",
@@ -292,7 +307,9 @@ class FollowupBatchTest(unittest.TestCase):
         def run(cmd, **kwargs):
             captured["prompt"] = kwargs["input"]
             out_path = Path(cmd[cmd.index("--output-last-message") + 1])
-            out_path.write_text('{"pass":true,"why":"ok"}', encoding="utf-8")
+            out_path.write_text(
+                '{"ko_resolved":true,"en_faithful":true,"why":"ok"}', encoding="utf-8",
+            )
             return SimpleNamespace(returncode=0, stderr="")
 
         with patch.object(worker.subprocess, "run", side_effect=run):
@@ -308,7 +325,7 @@ class FollowupBatchTest(unittest.TestCase):
 
     def test_rejected_proposal_is_regenerated_from_codex_feedback(self) -> None:
         proposals = ["unchanged EN", "corrected EN"]
-        verdicts = [(False, "state the component comparison"), (True, "fixed")]
+        verdicts = [(True, False, "state the component comparison"), (True, True, "fixed")]
         with (
             patch.object(worker, "antigravity_candidate", side_effect=proposals) as propose,
             patch.object(worker, "codex_pass", side_effect=verdicts) as review,
@@ -317,12 +334,12 @@ class FollowupBatchTest(unittest.TestCase):
             patch.object(worker.tw, "lint_structure", return_value=[]),
             patch.object(worker, "log"),
         ):
-            candidate, passed, why = worker.reviewed_candidate(
+            candidate, status, why = worker.reviewed_candidate(
                 "unchanged EN", "corrected KO", "old KO", [{"issue": "gap"}],
                 "KO diff", "ko.md", "en.md",
             )
 
-        self.assertTrue(passed)
+        self.assertEqual(status, worker.PASSED)
         self.assertEqual(candidate, "corrected EN")
         self.assertEqual(why, "fixed")
         self.assertEqual(review.call_count, 2)
@@ -330,6 +347,72 @@ class FollowupBatchTest(unittest.TestCase):
             propose.call_args_list[1].kwargs["review_feedback"],
             "state the component comparison",
         )
+        self.assertEqual(propose.call_args_list[0].kwargs["current_ko"], "corrected KO")
+
+    def _review_with(self, verdicts):
+        with (
+            patch.object(worker, "antigravity_candidate", return_value="EN") as propose,
+            patch.object(worker, "codex_pass", side_effect=verdicts),
+            patch.object(worker.tw, "validate_translation", return_value=None),
+            patch.object(worker.tw, "lint_latex", return_value=[]),
+            patch.object(worker.tw, "lint_structure", return_value=[]),
+            patch.object(worker, "log"),
+        ):
+            result = worker.reviewed_candidate(
+                "EN", "KO", "old KO", [{"issue": "gap"}], "KO diff", "ko.md", "en.md",
+            )
+        return result, propose.call_count
+
+    def test_unresolved_korean_rejects_without_retrying_english(self) -> None:
+        (_, status, why), proposals = self._review_with([(False, False, "KO 미해소")])
+        self.assertEqual(status, worker.KO_UNRESOLVED)
+        self.assertEqual(why, "KO 미해소")
+        self.assertEqual(proposals, 1)
+
+    def test_english_failure_is_the_workers_not_a_rejection(self) -> None:
+        (_, status, why), proposals = self._review_with(
+            [(True, False, "EN 누락"), (True, False, "EN 창작")])
+        self.assertEqual(status, worker.EN_UNFAITHFUL)
+        self.assertEqual(why, "EN 창작")
+        self.assertEqual(proposals, worker.MAX_PROPOSAL_ATTEMPTS)
+
+    def _process_with_status(self, status: str):
+        with tempfile.TemporaryDirectory(prefix="ko-followup-test-") as tmp:
+            root = Path(tmp)
+            (root / "ko.md").write_text("정의.\n고친 문장.\n", encoding="utf-8")
+            (root / "en.md").write_text("Definition.\nOld sentence.\n", encoding="utf-8")
+            request_state = root / "requests.json"
+            request_state.write_text(json.dumps({"ko.md@t1": 1}), encoding="utf-8")
+            entry = {
+                "ko_reviewed_at": "t1", "en_path": "en.md",
+                "ko_review_base_content": "정의.\n틀린 문장.\n",
+                "verify_ko_typos_review": [{"verdict": "VALID", "quote": "틀린 문장."}],
+            }
+            state = {"files": {"ko.md": entry}}
+            with (
+                patch.object(worker.tw, "BLOG_ROOT", root),
+                patch.object(worker, "REQUEST_STATE", request_state),
+                patch.object(worker, "reviewed_candidate",
+                             return_value=("EN", status, "사유")),
+                patch.object(worker.tw, "save_state"),
+                patch.object(worker, "log"),
+            ):
+                rc = worker._process_target_locked(("ko.md@t1", "ko.md", "t1", entry), state)
+            remaining = json.loads(request_state.read_text(encoding="utf-8"))
+        return rc, entry, remaining
+
+    def test_english_failure_keeps_the_request_waiting(self) -> None:
+        rc, entry, remaining = self._process_with_status(worker.EN_UNFAITHFUL)
+        self.assertEqual(rc, 0)
+        self.assertIn("ko.md@t1", remaining)
+        self.assertNotIn("ko_followup_rejected_request", entry)
+        self.assertIn("EN 반영", entry["ko_followup_wait"]["reason"])
+
+    def test_unresolved_korean_unchecks_the_request(self) -> None:
+        rc, entry, remaining = self._process_with_status(worker.KO_UNRESOLVED)
+        self.assertEqual(rc, 0)
+        self.assertNotIn("ko.md@t1", remaining)
+        self.assertEqual(entry["ko_followup_rejected_request"], "ko.md@t1")
 
 
 if __name__ == "__main__":

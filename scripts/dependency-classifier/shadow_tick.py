@@ -346,10 +346,16 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
         if stage == "S1" and reason in ("new", "delta", "restart"):
             start_round(unit, record, reason)
             entry.update({"fp": unit.fingerprint, "next": "S1", "started": int(time.time())})
+        elif stage == "S1" and not record.get("round"):
+            # The round's S1 failed before anything was saved, so the unit record never
+            # got its round: start it again rather than close the unit as finished.
+            start_round(unit, record, "restart")
         round_lids = [lid for lid in record.get("round", []) if unit.link(lid) is not None]
         record["round"] = round_lids
         if not round_lids:
             entry.update({"next": None, "updated": int(time.time())})
+            entry.pop("error", None)
+            entry.pop("retry_after", None)
             with _locked():
                 store.merge_unit_record(h, record, [])
             store.save_state(state)
