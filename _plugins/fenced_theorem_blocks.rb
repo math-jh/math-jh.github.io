@@ -302,11 +302,31 @@ if defined?(Jekyll::Hooks)
     }
   end
 
+  # serve 의 watch 리빌드는 글 전체를 다시 읽으므로 이 훅도 매번 830편을 다시 변환했다
+  # (~0.35s, 2026-10-31 측정). convert 는 내용만 보는 순수 함수라, serve 에서는 글 경로마다
+  # 지난 입력·출력을 들고 있다가 입력 문자열이 완전히 같으면 출력을 재사용한다. 글당 최신
+  # 한 쌍이라 쌓이지 않는다. 일회성 build(CI)는 글마다 한 번이니 메모하지 않는다.
+  module FencedTheoremBlocks
+    CONVERT_MEMO = {} # doc.path => [입력(frozen), 출력(frozen) 또는 :same]
+
+    def self.convert_memoized(path, content)
+      hit = CONVERT_MEMO[path]
+      if hit && hit[0] == content
+        return hit[1] == :same ? content : hit[1].dup
+      end
+
+      out = convert(content)
+      CONVERT_MEMO[path] = [content.dup.freeze, out.equal?(content) ? :same : out.dup.freeze]
+      out
+    end
+  end
+
   Jekyll::Hooks.register :site, :pre_render, priority: Jekyll::Hooks::PRIORITY_MAP[:high] do |site|
+    memo = site.config["serving"]
     site.posts.docs.each do |doc|
       next unless doc.content.is_a?(String)
 
-      converted = FencedTheoremBlocks.convert(doc.content)
+      converted = memo ? FencedTheoremBlocks.convert_memoized(doc.path, doc.content) : FencedTheoremBlocks.convert(doc.content)
       # link_normalizer 와 동일한 신뢰 경로: Jekyll 4 의 content= writer 가 항상
       # @content 를 갈아끼우지 않으므로 ivar 직접 주입.
       doc.instance_variable_set(:@content, converted) unless converted.equal?(doc.content)
