@@ -83,9 +83,9 @@ Since $\mathcal{D}$ is an integrable distribution, containing $p$, there exists 
 
 $$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
-is an isomorphism, we can find, satisfying
+is an isomorphism, we can find, satisfying for all $x\in S$
 
-$$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p$$
+$$\dd{\Phi_x}(\tilde{X}_x)=X_{\Phi(x)},\qquad \dd{\Phi_x}(\tilde{Y}_x)=Y_{\Phi(x)}$$
 
 two vector fields $\tilde{X},\tilde{Y}$. Then, since these and $X,Y$ are $\Phi$-related vector fields respectively, by [§Lie Derivative, ⁋Proposition 9](/en/math/manifolds/Lie_derivative#prop9){: data-lid="ikjb9" }, $[\tilde{X},\tilde{Y}]$ and $[X,Y]$ are $\Phi$-related. Therefore
 
@@ -190,9 +190,9 @@ to the right-hand side, we see that
 
 $$\frac{\partial}{\partial x^1}(Y_i(x^{k+j}))=\sum_{l=2}^k c_{il}Y_l(x^{k+j})$$
 
-holds. Now, for a fixed slice $W$, the $Y_i(x^{k+j})$ are single-variable functions of $x^1$, and therefore the above equations become $k-1$ linear homogeneous ODEs, so the solution is uniquely determined by the initial values.
+holds. Now, for a 1-dimensional slice $W$ obtained by fixing all $x^2,\ldots,x^m$ to constants, the $Y_i(x^{k+j})$ are single-variable functions of $x^1$, and therefore the above equations become $k-1$ linear homogeneous ODEs, so the solution is uniquely determined by the initial values.
 
-The slices obtained this way meet $S\cap U$ at only a single point, and since
+These slices $W$ meet $S\cap U$ at only a single point, and since
 
 $$Y_i(x^{k+j})=Z_i(w^{k+j})=0$$
 
