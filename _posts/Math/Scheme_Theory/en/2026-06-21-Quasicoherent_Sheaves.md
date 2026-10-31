@@ -68,7 +68,7 @@ Now we show the two sheaf conditions of [\[Topology\] §Sheaves, ⁋Proposition 
 
 $$s=\Bigl(\sum_i a_if_i^{m_i}\Bigr)s=\sum_i a_i(f_i^{m_i}s)=0$$
 
-holds. For gluing, if on each $D(f_i)$, the given sections $s_i=a_i/f_i^{m_i}\in M_{f_i}$ agree on the overlaps, then in the same manner as in the proof of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6){: data-lid="la9qc" }, using a partition of unity of the form $1=\sum b_i a_i f_i^{Nm_i+m_i}$, we verify that $s=\sum b_i a_i f_i^{Nm_i}\in M$ restricts on every $D(f_i)$ to $s_i$. In this argument, all calculations are identical except that multiplication in $A$ is replaced by the scalar action on $M$.
+holds. For gluing, if on each $D(f_i)$, the given sections $s_i=a_i/f_i^{m_i}\in M_{f_i}$ agree on the overlaps, then in the same manner as in the proof of [§Affine Scheme, ⁋Lemma 6](/en/math/scheme_theory/affine_schemes#lem6){: data-lid="la9qc" }, using a partition of unity of the form $1=\sum b_i f_i^{Nm_i+m_i}$, we verify that $s=\sum b_i a_i f_i^{Nm_i}\in M$ restricts on every $D(f_i)$ to $s_i$. In this argument, all calculations are identical except that multiplication in $A$ is replaced by the scalar action on $M$.
 
 Finally, each $\widetilde{M}(D(f))=M_f$ is a module over $\mathcal{O}_{\Spec A}(D(f))=A_f$, and since the restriction map is compatible with the scalar action, $\widetilde{M}$ is an $\mathcal{O}_{\Spec A}$-module.
 :::
