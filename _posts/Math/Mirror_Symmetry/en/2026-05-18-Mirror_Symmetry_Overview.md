@@ -62,7 +62,7 @@ Among these, there is a unique relation $v_0 + v_1 + \cdots + v_n = 0$, and ther
 
 $$Q = (1, 1, \ldots, 1) \in \Mat_{1 \times (n+1)}(\mathbb{Z}).$$
 
-According to the explanation above, this encodes the information of the standard scaling action of the torus defined on $\mathbb{P}^n$,
+According to the explanation above, this encodes the information of the standard scaling action of the torus defined on $\mathbb{C}^{n+1}$,
 
 $$t\cdot(\x_0,\ldots, \x_n)=(t \x_0, \ldots, t \x_n)$$
 
