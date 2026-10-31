@@ -64,7 +64,7 @@ In addition, that $\mathfrak{m}_p$ is maximal is obtained from the fact that whe
 
 $$0\rightarrow \mathfrak{m}_p\rightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\rightarrow}\mathbb{R}\rightarrow 0$$
 
-is exact. This is because $\mathcal{C}^\infty_p/\mathfrak{m}_p$ is the field $\mathbb{R}$.
+is exact. This is because $\mathcal{C}^\infty_p/\mathfrak{m}_p$ is the field $\mathbb{R}$. Finally, if $\mathbf{f}\notin\mathfrak{m}_p$, then $\mathbf{f}(p)\neq 0$, so by continuity a function $f$ belonging to $\mathbf{f}$ is not zero on a suitable open neighborhood of $p$, and since $1/f$ is a $C^\infty$ function on that neighborhood, $\mathbf{f}$ is a unit of $\mathcal{C}^\infty_p$. Therefore, $\mathfrak{m}_p$ is the unique maximal ideal of $\mathcal{C}^\infty_p$.
 :::
 
 ## Tangent Vectors
