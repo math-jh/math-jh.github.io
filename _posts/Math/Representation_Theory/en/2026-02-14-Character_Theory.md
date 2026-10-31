@@ -172,7 +172,7 @@ Let an arbitrary function $\phi:G\rightarrow \mathbb{C}$ and an arbitrary repres
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
-then $\rho_\phi$ is a $G$-map if and only if $\phi$ is a class function. 
+then if $\phi$ is a class function, $\rho_\phi$ is a $G$-map. 
 :::
 ::: Proof
 In order for $\rho_\phi$ to be a $G$-map, for any $h\in G$ and any $v\in V$, the equation
@@ -187,11 +187,11 @@ and since taking this sum over $hgh^{-1}$ yields the same sum, we can write
 
 $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G}\phi(hgh^{-1})\rho(h)\rho(g)(v)=\rho(h)\left(\sum_{g\in G}\phi(hgh^{-1})\rho(g)v\right)$$
 
-Now, for this to be equal to
+Now, if $\phi$ is a class function, then since $\phi(g)=\phi(hgh^{-1})$, this is equal to
 
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
-it must precisely be that $\phi(g)=\phi(hgh^{-1})$, that is, $\phi$ must be a class function. 
+and thus $\rho_\phi$ is a $G$-map. 
 :::
 
 Now, using this, we show that every class function is expressed as a linear combination of irreducible characters. That is, for a class function $\phi$, we must show that if $\langle \rchi_V,\phi\rangle=0$ holds for all irreducible characters $\rchi_V$, then $\phi=0$. 
