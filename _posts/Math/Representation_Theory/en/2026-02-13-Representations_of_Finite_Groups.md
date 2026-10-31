@@ -111,7 +111,7 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 and in the case of $\mathbb{C}[G]$, the coproduct $A\rightarrow A\otimes A$ used here is
 
-$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
+$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G];\qquad g\mapsto g\otimes g$$
 
 Then, similarly, the $\Hom$ defined in [Definition 3](#def3){: data-lid="lkxfx" } is in an adjunction relation with this $\otimes$, and it is for this reason that the somewhat artificial-looking $G$-actions in [Definition 3](#def3){: data-lid="2oqok" } appear.
 
