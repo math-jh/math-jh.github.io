@@ -181,7 +181,7 @@ $$A^+:=A^t(AA^t)^{-1}$$
 the matrix $A^+\in\Mat_{n\times m}(\mathbb{R})$ defined in this way is called the *Moore-Penrose pseudoinverse* of $A$.
 :::
 
-The two formulas above cannot be used as they are in the general situation without assumptions on the rank of $A$, because at least one of $A^tA$ and $AA^t$ is not invertible. The pseudoinverse for a general matrix is defined using the singular value decomposition, and when $A$ falls into the two cases above, this definition coincides with the formulas above. It is known that $A^+$ is uniquely characterized by the following four conditions:
+The two formulas above cannot be used as they are in the general situation without assumptions on the rank of $A$, because both $A^tA$ and $AA^t$ may fail to be invertible. The pseudoinverse for a general matrix is defined using the singular value decomposition, and when $A$ falls into the two cases above, this definition coincides with the formulas above. It is known that $A^+$ is uniquely characterized by the following four conditions:
 
 $$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 
