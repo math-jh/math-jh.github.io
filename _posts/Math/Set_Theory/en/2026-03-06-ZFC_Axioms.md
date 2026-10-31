@@ -1,6 +1,6 @@
 ---
 title: "ZFC Axioms"
-description: "We examine how Cantor's naive set theory leads to paradoxes like Russell's paradox, and introduce key axioms of ZFC such as the axiom of existence and the axiom of extensionality proposed to resolve them."
+description: "We examine how Cantor's naive set theory leads to contradictions such as Russell's paradox, and introduce key axioms of the ZFC axiom system proposed to resolve this, including the axiom of existence and the axiom of extensionality."
 excerpt: "The axioms of set theory"
 
 categories: [Math / Set Theory]
@@ -12,30 +12,31 @@ date: 2021-08-07
 weight: 1
 translated_at: 2026-06-02T09:30:03+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-02T09:30:03+00:00
+last_polished_at: 2026-10-31T11:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Historical Background
 
-It would be no exaggeration to say that set theory, as the foundation of the mathematics we study, began with Cantor in the 19th century. Cantor's naive set theory can be summarized by the following principle:
+It would be no exaggeration to say that set theory, as the foundation of the mathematics we study, began with Cantor in the 19th century. Cantor's naive set theory can be summarized by the following philosophy:
 
-> For any property $P$, there exists a set $Y=\{x\mid P(x)\}$ of all elements satisfying $P$.
+> For any property $P$, the set of all elements satisfying $P$, $Y=\{x\mid P(x)\}$, exists.
 
 However, mathematicians discovered that this approach leads to various contradictions.
 
 ::: Example 1 (Russell's Paradox)
-Define the set $\mathcal{S}$ to be the collection of all $x$ satisfying $x\not\in x$. Then $\mathcal{S}$ is either an element of itself or not.
+Define the set $\mathcal{S}$ to be the collection of all elements satisfying $x\not\in x$, over all $x$. Then $\mathcal{S}$ is either an element of itself or not.
 
-- Suppose $\mathcal{S}$ is an element of itself. Then $\mathcal{S}$ must also satisfy its defining property ($x\not\in x$), so $\mathcal{S}\not\in\mathcal{S}$. This contradicts the assumption that $\mathcal{S}\in\mathcal{S}$; hence $\mathcal{S}$ cannot be an element of itself.
-- Therefore $\mathcal{S}$ must not be an element of itself; that is, $\mathcal{S}\not\in\mathcal{S}$. Yet this too is a contradiction. Since $\mathcal{S}$ is the collection of all elements satisfying $x\not\in x$, and $\mathcal{S}$ satisfies this property, it must belong to $\mathcal{S}$.
+- Suppose $\mathcal{S}$ is an element of itself. Then the definition of $\mathcal{S}$ ($x\not\in x$) must also be satisfied by $\mathcal{S}$, so $\mathcal{S}\not\in\mathcal{S}$. Since this contradicts the assumption that $\mathcal{S}$ is an element of itself, $\mathcal{S}$ cannot be an element of itself.
+- Therefore $\mathcal{S}$ must not be an element of itself; that is, $\mathcal{S}\not\in\mathcal{S}$. Yet this too is a contradiction. Since $\mathcal{S}$ is the collection of all elements satisfying $x\not\in x$, $\mathcal{S}$, which satisfies this, must also belong to $\mathcal{S}$.
 
 Thus, whether $\mathcal{S}$ is an element of itself or not, a contradiction arises in either case. This is called *Russell's paradox*.
 :::
 
 To prevent such paradoxes, sets must be defined by rigorous methods rather than simply as *collections of elements*. The framework that accomplishes this is axiomatic set theory.
 
-The posts in the [Set Theory](/en/set_theory) category are not intended as an introduction to axiomatic set theory, but as a starting topic for these posts, a brief overview of the ZFC axiom system—the most widely used system—seems a good choice.
+The posts in the [Set Theory](/en/set_theory) category are not intended as an introduction to axiomatic set theory, but as a starting topic for these posts, a brief overview of the ZFC axiom system, the most widely used system, seems a good choice.
 
-## ZFC Axioms
+## ZFC Axiom System
 
 If no sets existed at all, then any proposition we write about sets would be true. This is because the logical formula $P\implies Q$ is always true when $P$ is false, regardless of the truth value of $Q$. Therefore, our first axiom asserts that at least one set exists in this world.
 
@@ -57,15 +58,15 @@ Let $A$ and $B$ be sets with no elements. Then both statements
 
 $$((x\in A)\implies (x\in B)),\qquad ((x\in B)\implies (x\in A))$$
 
-are true. Therefore, by the axiom of extensionality, $A=B$. 
+are true. Therefore, by the axiom of extensionality, $A=B$.
 :::
 
-Since the axiom of existence tells us that at least one such set exists, both the existence and uniqueness of a *set with no elements* are guaranteed. We now call this set the *empty set* and denote it by $\emptyset$.
+Since the axiom of existence tells us that at least one such set exists, both the existence and uniqueness of the *set with no elements* are guaranteed. We now call this set the *empty set* and denote it by $\emptyset$.
 
 The following axiom is worth remembering in particular because it prevents [Example 1](#ex1){: data-lid="0o7xn" }.
 
-::: misc The Axiom Schema of Comprehension. {#axiom-comprehension}
-Given any set $A$ and any proposition $P$, there exists a set $B$ such that $x\in B$ if and only if $x\in A$ and $P(x)$.
+::: misc The Axiom schema of Comprehension. {#axiom-comprehension}
+Let any set $A$ and proposition $P$ be given. Then, such that $x\in B$ is equivalent to $x\in A$ and $P(x)$, there exists a set $B$.
 :::
 
 From a formal standpoint, the above axiom asserts that a certain property holds for every proposition $P$. Since expressing this in first-order logic as a single statement is impossible, we regard it as a collection of axioms rather than a single axiom, and call it the axiom *schema* of comprehension.
@@ -81,67 +82,67 @@ What created the contradiction in naive set theory was the following assumption:
 
 > Let $P$ be a proposition about $x$. Then there exists a set $B$ such that $x\in B$ if and only if $P(x)$.
 
-Now, according to the comprehension schema introduced above, unlike in [Example 1](#ex1){: data-lid="n6tdz" }, we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; we can only define
+Now, according to the newly introduced comprehension schema, unlike in [Example 1](#ex1){: data-lid="n6tdz" }, we cannot directly define $\mathcal{S}=\{x\mid x\not\in x\}$; for an already existing set $A$, we can only define
 
-$$B=\{x\in A\mid x\not\in x\}$$
+$$B=\{x\in A\mid x\not\in x\}.$$
 
-for an already existing set $A$. But unlike the set $\mathcal{S}$, this set creates no contradiction whatsoever. 
+However, unlike the set $\mathcal{S}$, this set does not create any contradiction. 
 
 - If $B\in B$, then by definition $B\not\in B$ and $B\in A$, which is a contradiction. 
 - If $B\not\in B$, then $B\not\in A$ **or** $B\in B$. 
 
-In the second case, if $B\in B$ then we obtain a contradiction, so necessarily $B\not\in A$, and through this the contradiction of Russell's paradox is prevented.
+In the second case, if $B\in B$, it is a contradiction, so necessarily $B\not\in A$; through this, contradictions such as Russell's paradox are prevented.
 :::
 
 ::: Example 4
-The above example shows that when a set $A$ is given, there always exists a set $B$ not belonging to $A$. In particular, the *set of all sets*, that is, a universal set does not exist.  
+The above example shows that when a set $A$ is given, there always exists a set $B$ not belonging to $A$. In particular, the *set of all sets*, that is, the universal set does not exist.  
 :::
 
 By choosing the proposition $P$ appropriately, we can construct various familiar sets from the comprehension schema. That these are unique is obvious from extensionality.
 
 ::: Example 5
-For any sets $A$ and $B$, let the property $P$ concerning $x$ be given by $x\in B$. Then the set
+For any sets $A$ and $B$, let the property $P$ of $x$ be given by $x\in B$. Then the set
 
 $$\{x\in A\mid P(x)\}$$
 
-is the collection of elements belonging to both $A$ and $B$. We call this set the *intersection* of $A$ and $B$, denoted $A\cap B$.
+is the collection of elements belonging simultaneously to $A$ and $B$. We call this set the *intersection* of $A$ and $B$, denoted $A\cap B$.
 :::
 
 ::: Example 6
-Now, given two sets $A$ and $B$, let the property $Q$ concerning $x$ be given by $x\not\in B$. Then the set
+Now, given two sets $A$ and $B$, let the property $Q$ of $x$ be given by $x\not\in B$. Then the set
 
 $$\{x\in A\mid Q(x)\}$$
 
-is the collection of elements belonging to $A$ but not to $B$. We call this the *difference* of $B$ from $A$, denoted $A\setminus B$.
+is the collection of elements belonging to $A$ and not belonging to $B$. We call this the *difference* of $B$ from $A$, denoted $A\setminus B$.
 :::
 
-Alternatively, $A\setminus B$ is also called the *complement* of $B$ relative to $A$.[^1] 
+Alternatively, $A\setminus B$ is also called the *complement of $B$ relative to $A$.*[^1] 
 
-If the existence of sets other than the empty set is not guaranteed, the above two examples are of little use. The following axioms provide methods for constructing non-empty sets.
+If the existence of sets other than the empty set is not guaranteed, the above two examples are of little use. The following axioms show how to construct non-empty sets.
 
 ::: misc The Axiom of Pair. {#axiom-pair}
 For any sets $A$ and $B$, there exists a set $C$ such that $x\in C$ if and only if $x=A$ or $x=B$.
 :::
 
-Again, this set is unique by extensionality and is denoted $\{A,B\}$. Now taking $A=B=\emptyset$, from
+Again, this set is unique by extensionality, and we denote it by $\{A,B\}$. Now setting $A=B=\emptyset$, from
 
-$$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\wedge(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
+$$x\in \{\emptyset\}\iff x=\emptyset\iff (x=\emptyset)\vee(x=\emptyset)\iff x\in \{\emptyset,\emptyset\}$$
 
-we obtain $\{\emptyset, \emptyset\}=\{\emptyset\}$. Also, since $\emptyset\not\in \emptyset$, we have $\emptyset\neq\{\emptyset\}$. 
+we see that $\{\emptyset, \emptyset\}=\{\emptyset\}$. Also, since $\emptyset\not\in \emptyset$, we have $\emptyset\neq\{\emptyset\}$. 
 
 ::: misc The Axiom of Union. {#axiom-union}
 For any set $\mathcal{S}$, there exists a set $U$ such that $x\in U$ if and only if $x\in A$ for some $A\in\mathcal{S}$.
 :::
 
-For example, if $\mathcal{S}=\{A,B\}$, then we can verify that $U$ becomes the set of elements satisfying $x\in A$ or $x\in B$, that is, $A\cup B$. This is sometimes written as $\bigcup\mathcal{S}$.
+For example, if $\mathcal{S}=\{A,B\}$, we can verify that $U$ becomes the set of elements such that $x\in A$ or $x\in B$, that is, $A\cup B$. In notation, this is also written as $\bigcup\mathcal{S}$.
 
-::: misc The Axiom of Power Set. {#axiom-powerset}
+::: misc The Axiom of Power set. {#axiom-powerset}
 For any set $S$, there exists a set $\mathcal{P}$ such that $X\in \mathcal{P}$ if and only if $X\subseteq S$.
 :::
 
-This set is called the *power set* of $S$ and is denoted $\mathcal{P}(S)$. 
+We call this set the *power set* of $S$ and denote it by $\mathcal{P}(S)$. 
 
-The ZFC axiom system includes several additional axioms beyond these, which will be introduced as needed.
+The ZFC axiom system includes several other axioms besides these, but we will introduce them as needed.
 
 ---
 **References**
@@ -152,4 +153,4 @@ Wikipedia, [Naive set theory](https://en.wikipedia.org/wiki/Naive_set_theory), [
 
 ---
 
-[^1]: In axiomatic set theory, simply the "complement of $$B$$" does not exist. This is because its definition would require a universal set.
+[^1]: In axiomatic set theory, simply the *complement of $B$* does not exist. This is because defining it requires a universal set.
