@@ -130,7 +130,7 @@ holds. Let the dimension of $(A,\mathcal{T},\mathcal{A})$ be $d$, and the dimens
 
 Let $(U,\varphi)$ be a coordinate system of $(A,\mathcal{T},\mathcal{A})$. Without loss of generality we may assume that the image of $\varphi$ is $\mathbb{R}^d$, and since $\id$ is surjective, the image of the composition $\varphi\circ\id$ is also $\mathbb{R}^d$.
 
-On the other hand, since $(A,\mathcal{T}',\mathcal{A}')$ is a manifold, we can cover it by *countable* coordinate systems homeomorphic to $\mathbb{R}^{d'}$, $(V,\sigma)$. But $\varphi\circ\id\circ\sigma^{-1}$ is $C^\infty$, and as $C^1$ functions they all map the measure zero sets $\mathbb{R}^{d'}$ to measure zero sets, so it is a contradiction that their image is $\mathbb{R}^d$.
+On the other hand, since $(A,\mathcal{T}',\mathcal{A}')$ is a manifold, we can cover it by *countable* coordinate systems homeomorphic to $\mathbb{R}^{d'}$, $(V,\sigma)$. But $\varphi\circ\id\circ\sigma^{-1}$ is $C^\infty$, and since $d'<d$, as $C^1$ functions they all map $\mathbb{R}^{d'}$ to a measure zero set in $\mathbb{R}^d$, so it is a contradiction that their image is $\mathbb{R}^d$.
 :::
 
 ---
