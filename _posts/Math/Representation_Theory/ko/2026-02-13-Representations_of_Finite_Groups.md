@@ -113,7 +113,7 @@ $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (
 
 을 사용해야 하고, 이 때 사용하는 coproduct $A\rightarrow A\otimes A$이 $\mathbb{C}[G]$의 경우에는 
 
-$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
+$$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G];\qquad g\mapsto g\otimes g$$
 
 이기 때문이다. 그럼 마찬가지로 [정의 3](#def3){: data-lid="lkxfx" }에서 정의한 $\Hom$이 이 $\otimes$와 adjunction 관계에 있고, 이러한 이유로 다소 인위적으로 보이는 [정의 3](#def3){: data-lid="2oqok" }의 $G$-action들이 등장하는 것이다. 
 

@@ -52,7 +52,7 @@ $$y_i=-\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\al
 
 을 얻는다. 따라서 만일 우리가 집합 $\{x_1, y_1, y_2, \ldots, y_n\}$에서 $y_i$를 빼더라도 이 집합은 여전히 $V$를 span한다.  
 
-한편, 이 집합은 일차독립이다. 어떠한 스칼라들 $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$에 대하여 
+한편, 이 집합은 일차독립이다. 모두 0은 아닌 스칼라들 $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_{i-1}'$, $\alpha_{i+1}'$, $\ldots$, $\alpha_n'$에 대하여 
 
 $$\beta_1'x_1+\alpha_1'y_1+\alpha_2'y_2+\cdots+\alpha_{i-1}'y_{i-1}+\alpha_{i+1}'y_{i+1}+\cdots+\alpha_n'y_n=0$$
 
@@ -135,7 +135,7 @@ $\mathbb{K}$-벡터공간 $V$와, $V$를 span하는 부분집합 $S$에 대하�
 ::: 증명
 $S_0=\emptyset$이라 하자. 그럼 $\langle S_0\rangle=\{0\}$이다. 이제 $S\setminus\langle S_0\rangle$의 원소 $x_1$을 택해 $S_1=\{x_1\}=S_0\cup\{x_1\}$이라 하고, 비슷하게 $S\setminus\langle S_1\rangle$의 원소 $x_2$를 택해 $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$를 만드는 과정을 반복한다.
 
-이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $\langle S_i\rangle$가 $S$와 같지 않은 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. 따라서 모든 $i < n = \dim V$에 대하여 $S\setminus\langle S_i\rangle$가 공집합이 아니라는 것을 보이면 충분하다. 
+이렇게 얻어진 집합 $S_i$들은 정의에 의해 일차독립인 부분집합이 되며, $S\setminus\langle S_i\rangle$가 공집합이 아닌 한 $S_{i+1}$의 원소의 개수는 $S_i$보다 항상 하나 더 많다. [보조정리 2](#lem2)에 의해 이 과정은 많아야 $\dim V$번째 단계 안에 끝나므로, 과정이 끝나는 단계 $m$에서 $\langle S_m\rangle=V$임을 보이면 충분하다. 
 
 자연수 $m$을 $S\setminus\langle S_m\rangle=\emptyset$이도록 택하자. 즉 $S\subseteq\langle S_m\rangle$이다. 이제 [§벡터공간의 기저, ⁋보조정리 4](/ko/math/linear_algebra/basis#lem4){: data-lid="egvx8" }로부터 $\span$을 취하는 것은 집합 사이의 포함관계를 유지한다는 것을 알 수 있으므로
 

@@ -173,7 +173,7 @@ $$Aw'=A(A-\mu I)^{q-1}w=(A-\mu I)^{q-1}Aw=(A-\mu I)^{q-1}\lambda w=\lambda (A-\m
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
-와 linear operator를 제한한 $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$를 생각하면 이 linear operator의 eigenvalue는 정확하게 $A$의 eigenvalue 중 $\lambda$가 아닌 것들에 해당하는 것들이다. 실제로 $\mu\neq \lambda$가 $A$의 eigenvalue이면 $v\in E_\mu(A)$에 대하여 $(A-\lambda I)^kv=(\mu-\lambda)^kv$이므로 $v=(A-\lambda I)^k\left((\mu-\lambda)^{-k}v\right)\in \im (A-\lambda I)^k=W_\lambda(A)$이고, 따라서 $\mu$는 $A\vert_{W_\lambda(A)}$의 eigenvalue이다. 즉 귀납법이 잘 작동하고, 따라서 다음이 성립한다. 
+와 linear operator를 제한한 $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$를 생각하면 이 linear operator의 eigenvalue는 정확하게 $A$의 eigenvalue 중 $\lambda$가 아닌 것들에 해당하는 것들이다. 실제로 $\mu\neq \lambda$가 $A$의 eigenvalue이면 $v\in E_\mu(A)$에 대하여 $(A-\lambda I)^kv=(\mu-\lambda)^kv$이므로 $v=(A-\lambda I)^k\left((\mu-\lambda)^{-k}v\right)\in \im (A-\lambda I)^k=W_\lambda(A)$이고, 따라서 $\mu$는 $A\vert_{W_\lambda(A)}$의 eigenvalue이다. 더 나아가 $G_\mu(A)$는 $A$-invariant이고 그 위에서 $A-\mu I$의 적당한 거듭제곱이 $0$이므로, $A-\lambda I=(\mu-\lambda)I+(A-\mu I)$는 $G_\mu(A)$ 위에서 invertible이다. 따라서 $G_\mu(A)=(A-\lambda I)^k(G_\mu(A))\subseteq\im(A-\lambda I)^k=W_\lambda(A)$이고, $A\vert_{W_\lambda(A)}$의 $\mu$에 대한 generalized eigenspace는 $G_\mu(A)$와 같다. 즉 귀납법이 잘 작동하고, 따라서 다음이 성립한다. 
 
 ::: 정리 6 (제1분해정리)
 유한차원 벡터공간 $V$ 위에 정의된 linear operator $A:V\rightarrow V$에 대하여, $A$의 모든 eigenvalue들을 $\lambda_1,\ldots,\lambda_m$이라 하자. 그럼 다음의 direct sum decomposition

@@ -93,7 +93,7 @@ yielding the desired result.
 Combining this with [Proposition 2](#prop2){: data-lid="3b8cl" }, we obtain the following.
 
 ::: Corollary 4
-Suppose three $A$-modules $M,N,L$ are given, and fix finite bases $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$. Then for any linear maps $u:M \rightarrow N$, $v:N \rightarrow L$, the formula
+Suppose $A$ is commutative and three $A$-modules $M,N,L$ are given, and fix finite bases $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$. Then for any linear maps $u:M \rightarrow N$, $v:N \rightarrow L$, the formula
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$
 

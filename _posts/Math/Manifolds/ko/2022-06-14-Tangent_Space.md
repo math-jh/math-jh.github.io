@@ -64,7 +64,7 @@ $$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 
 $$0\rightarrow \mathfrak{m}_p\rightarrow \mathcal{C}^\infty_p\overset{\ev_p}{\rightarrow}\mathbb{R}\rightarrow 0$$
 
-이 exact인 것으로부터 얻어진다. $\mathcal{C}^\infty_p/\mathfrak{m}_p$이 field $\mathbb{R}$이 되기 때문이다.
+이 exact인 것으로부터 얻어진다. $\mathcal{C}^\infty_p/\mathfrak{m}_p$이 field $\mathbb{R}$이 되기 때문이다. 마지막으로 $\mathbf{f}\notin\mathfrak{m}_p$라 하면 $\mathbf{f}(p)\neq 0$이므로, $\mathbf{f}$에 속하는 함수 $f$는 연속성에 의해 $p$의 적당한 열린근방에서 $0$이 아니고, 그 근방에서 $1/f$는 $C^\infty$ 함수이므로 $\mathbf{f}$는 $\mathcal{C}^\infty_p$의 unit이다. 따라서 $\mathfrak{m}_p$는 $\mathcal{C}^\infty_p$의 유일한 maximal ideal이다.
 :::
 
 ## 접벡터

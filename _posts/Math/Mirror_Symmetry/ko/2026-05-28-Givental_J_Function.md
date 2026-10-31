@@ -319,7 +319,7 @@ $$(z\partial_q)(qz\partial_q)^n\mathcal{I}_p^0=\mathcal{I}_p^0 \tag{$\ast\ast$}$
 
 $$\Phi_0(q, z) := I_{\mathbb{P}^n}(q, z)\big\vert_{H=0} = \sum_{d \geq 0} \frac{q^d}{(d!)^{n+1}z^{(n+1)d}}$$
 
-를 얻는다. 이 $\Phi_0$가 ($\ast\ast$)를 만족함을 직접 확인하자. 직접 계산하면 $qz\partial_q$의 작용은 항별로 $d$를 끌어내고 $z^{-1}$ 인자를 붙이므로
+를 얻는다. 이 $\Phi_0$가 ($\ast\ast$)를 만족함을 직접 확인하자. 직접 계산하면 $qz\partial_q$의 작용은 항별로 $d$를 끌어내고 $z$ 인자를 곱하므로
 
 $$(qz\partial_q)^n\Phi_0 = \sum_{d\geq 0}\frac{d^n q^d}{(d!)^{n+1}z^{(n+1)d - n}},$$
 
@@ -347,12 +347,12 @@ $$z\partial_{t^a} s = T_a \star_t s\qquad (a = 0, 1, \ldots, \dim_\mathbb{C} H^\
 ::: 정의 9 (Big $J$-function)
 $X$의 *big Givental $J$-function<sub>큰 기벤탈 $J$-함수</sub>* $J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
 
-$$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
+$$J_X^{\mathrm{big}}(t, z) := 1 + \frac{t}{z} + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0), (0, 1)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z(z - \psi)}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a$$
 
-여기서 첫 marked point에 $T_a/(z-\psi)$가 (즉 $T_a$의 pullback에 모든 degree의 $\psi^k$가 generating function 형태로) 끼이고, 나머지 $n$개 marked point에 모두 $t \in H^\ast(X)$가 삽입되어 총 $n+1$개 marked point를 이룬다.
+여기서 첫 marked point에 $T_a/(z(z-\psi))$가 (즉 $T_a$의 pullback에 모든 degree의 $\psi^k$가 generating function 형태로) 끼이고, 나머지 $n$개 marked point에 모두 $t \in H^\ast(X)$가 삽입되어 총 $n+1$개 marked point를 이룬다.
 :::
 
-Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4){: data-lid="ah3k7" }의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원되는데, $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오고, 이들이 $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$로 합산되며 $\psi$-shift 보정이 추가 $z^{-1}$ 인자를 만들어내어, 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3){: data-lid="fm5qj" }의 small $J$-function 형태가 그대로 복원된다. 
+Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4){: data-lid="ah3k7" }의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원된다. $\beta=0$인 항들은 $n\geq 2$에 대하여 $\langle \tau_{n-2}(T_a), t_{(2)},\ldots,t_{(2)}\rangle_{0,n+1,0}=\int_X T_a t_{(2)}^n$이므로 $1+t_{(2)}/z$와 합쳐 $e^{t_{(2)}/z}$를 이룬다. $\beta\neq 0$인 항들에서는 $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오는데, 앞의 것은 $\sum_n (t_{(2)}\cdot \beta)^n/n! = e^{t_{(2)}\cdot\beta}$로 합산되어 Novikov variable의 재매개화 $q^\beta\mapsto e^{t_{(2)}\cdot\beta}q^\beta$가 되고 뒤의 것은 cup product로 곱해지는 prefactor $e^{t_{(2)}/z}$로 모인다. 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3){: data-lid="fm5qj" }의 small $J$-function 형태가 그대로 복원된다. 
 
 Big $J$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5){: data-lid="6vh4q" }도 big 버전으로 격상되어 *전체* $S$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $I = J$도 ([명제 7](#prop7){: data-lid="7kav7" }) mirror map $\tau(q)$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
 

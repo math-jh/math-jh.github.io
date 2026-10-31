@@ -185,7 +185,7 @@ $$A^+:=A^t(AA^t)^{-1}$$
 으로 정의되는 행렬 $A^+\in\Mat_{n\times m}(\mathbb{R})$을 $A$의 *Moore-Penrose pseudoinverse<sub>유사역행렬</sub>*라 부른다.
 :::
 
-위 두 식은 $A$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $A^tA$이나 $AA^t$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $A$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $A^+$은 다음 네 조건
+위 두 식은 $A$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $A^tA$와 $AA^t$ 둘 다 가역이 아닐 수 있기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $A$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $A^+$은 다음 네 조건
 
 $$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 

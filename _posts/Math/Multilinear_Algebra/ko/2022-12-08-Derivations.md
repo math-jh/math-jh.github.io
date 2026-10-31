@@ -160,7 +160,7 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 와 같이 적을 수도 있다. 다음 명제는 이를 더욱 일반화한 것이다. 
 
 ::: 명제 5
-위 가정과 표기 아래에서, 미지수 $T_1, \dots, T_n$에 대한 다항식 
+위 가정과 표기 아래에서, 서로 commute하는 $(E, E', E'')$의 derivation들 $D_1, \dots, D_n$에 대하여 $D=(D_1, \dots, D_n)$이라 하고, 미지수 $T_1, \dots, T_n$에 대한 다항식 
 $F \in A[T_1, \dots, T_n]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$

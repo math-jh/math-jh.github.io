@@ -183,7 +183,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
-으로 정의하면, $\rho_\phi$가 $G$-map인 것과 $\phi$가 class function인 것이 동치이다. 
+으로 정의하면, $\phi$가 class function일 때 $\rho_\phi$는 $G$-map이다. 
 :::
 ::: 증명
 $\rho_\phi$가 $G$-map이기 위해서는 임의의 $h\in G$와 임의의 $v\in V$에 대하여 다음 식
@@ -202,7 +202,7 @@ $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G
 
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
-와 같기 위해서는 정확히 $\phi(g)=\phi(hgh^{-1})$, 곧 $\phi$가 class function이어야 한다. 
+와 같다. 이는 $\phi$가 class function이어서 $\phi(hgh^{-1})=\phi(g)$이기 때문이다. 
 :::
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $\phi$에 대하여, $\langle \rchi_V,\phi\rangle=0$이 모든 irreducible character $\rchi_V$에 대해 성립한다면 $\phi=0$이라는 것을 보여야 한다. 

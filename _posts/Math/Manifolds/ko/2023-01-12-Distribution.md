@@ -81,9 +81,9 @@ $\mathcal{D}$는 integrable distribution이므로, 점 $p$를 포함하는 $\mat
 
 $$\dd{\Phi_x}:T_xS\rightarrow\mathcal{D}(\Phi(x))$$
 
-이 isomorphism이므로, 우리는 
+이 isomorphism이므로, 우리는 모든 $x\in S$에 대하여
 
-$$\dd{\Phi_s}(\tilde{X}_s)=X_p,\qquad \dd{\Phi_s}(\tilde{Y}_s)=Y_p$$
+$$\dd{\Phi_x}(\tilde{X}_x)=X_{\Phi(x)},\qquad \dd{\Phi_x}(\tilde{Y}_x)=Y_{\Phi(x)}$$
 
 을 만족하는 두 벡터장 $\tilde{X},\tilde{Y}$를 찾을 수 있다. 그럼 이들은 각각 $X,Y$와 $\Phi$-related인 벡터장들이므로, [§리 미분, ⁋명제 9](/ko/math/manifolds/Lie_derivative#prop9){: data-lid="ikjb9" }에 의하여 $[\tilde{X},\tilde{Y}]$는 $[X,Y]$와 $\Phi$-related이다. 따라서
 
@@ -188,9 +188,9 @@ $$[Y_1,Y_i]=\sum_{l=1}^k c_{il}Y_l$$
 
 $$\frac{\partial}{\partial x^1}(Y_i(x^{k+j}))=\sum_{l=2}^k c_{il}Y_l(x^{k+j})$$
 
-임을 안다. 이제 고정된 slice $W$에 대하여, $Y_i(x^{k+j})$들은 $x^1$에 대한 일변수함수이고, 따라서 위의 식은 $k-1$개의 linear homogeneous ODE가 되므로, 그 해는 초기값에 의하여 유일하게 결정된다. 
+임을 안다. 이제 $x^2,\ldots,x^m$을 모두 상수로 고정하여 얻어지는 1차원 slice $W$에 대하여, $Y_i(x^{k+j})$들은 $x^1$에 대한 일변수함수이고, 따라서 위의 식은 $k-1$개의 linear homogeneous ODE가 되므로, 그 해는 초기값에 의하여 유일하게 결정된다. 
 
-이렇게 얻어진 slice들은 $S\cap U$와 단 하나의 점에서만 만나고, 여기에서는
+이러한 slice $W$들은 $S\cap U$와 단 하나의 점에서만 만나고, 여기에서는
 
 $$Y_i(x^{k+j})=Z_i(w^{k+j})=0$$
 

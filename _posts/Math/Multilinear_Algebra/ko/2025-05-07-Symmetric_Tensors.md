@@ -18,7 +18,7 @@ weight: 13
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}$$
 
-으로 정의하자. 여기서 $hx$는 당연히, $h\mapsto \delta_h$를 통해 $h$를 $AH$의 원소로 본 후, $AH$-module 구조를 이용하여 정의된 것이다. 그럼 $M^H$는 $M$의 $A$-submodule이지만, group $H$가 commutative가 아니라면 일반적으로 $AH$-submodule이 되지는 않는다. 또, 만일 $H$의 subgroup $G$가  주어졌다면 $M^H\leq M^G$임이 자명하다. 
+으로 정의하자. 여기서 $hx$는 당연히, $h\mapsto \delta_h$를 통해 $h$를 $AH$의 원소로 본 후, $AH$-module 구조를 이용하여 정의된 것이다. 그럼 $M^H$는 $M$의 $A$-submodule이다. 또, 만일 $H$의 subgroup $G$가  주어졌다면 $M^H\leq M^G$임이 자명하다. 
 
 이제 $x\in M^G$와 $h\in H$가 주어졌다 하고, $H/G$의 원소 $\bar{h}=hG$가 주어졌다 하자. 그럼 
 
@@ -125,27 +125,27 @@ $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 
 
 이 성립한다고 가정하자. 이제 $S_{p_1+\cdots+p_n}$의 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq \left\{\id_{p_1}\right\}\times S_{p_2+\cdots+p_n}$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1}\times S_{p_2+\cdots+p_n}\geq S_{p_1}\times S_{p_2}\times\cdots\times S_{p_n}$$
 
 을 생각하면, [명제 2](#prop2){: data-lid="pf1re" }의 결과에 의하여
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}\circ\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)$$
 
 이 성립한다. 이제 우변을 계산하면, 위의 포함관계에 의해
 
-$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/S_{p_2+\cdots+p_n}}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
+$$\tr_{(S_{p_1}\times S_{p_2+\cdots+p_n})/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=x_1\otimes\tr_{S_{p_2+\cdots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2\otimes\cdots\otimes x_n)=x_1\otimes (x_2\cdots x_n)$$
 
 이고 따라서
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=\tr_{S_{p_1+\cdots+p_n}/(S_{p_1}\times S_{p_2+\cdots+p_n})}(x_1\otimes (x_2\cdots x_n))=x_1(x_2\cdots x_n)$$
 
 이 성립한다. 만일 처음 시작을 다음 subgroup들의 tower
 
-$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1+\cdots+p_{n-1}}\times 1$$
+$$S_{p_1+\cdots+p_n}\geq S_{p_1+\cdots+p_{n-1}}\times S_{p_n}\geq S_{p_1}\times\cdots\times S_{p_n}$$
 
 로 시작했다면 
 
-$$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
+$$\tr_{S_{p_1+\cdots +p_n}/(S_{p_1}\times\cdots\times S_{p_n})}(x_1\otimes\cdots\otimes x_n)=(x_1\cdots x_{n-1})x_n$$
 
 을 얻을 것이며 특히 $n=3$인 경우에는 이로부터 $\Sym(M)$의 associativity가 보여진다. Commutativity의 경우, $\sigma$를 $p_1+p_2$개의 원소 중, 앞의 $p_1$개의 원소와 뒤의 $p_2$개의 원소를 다음의 꼴
 

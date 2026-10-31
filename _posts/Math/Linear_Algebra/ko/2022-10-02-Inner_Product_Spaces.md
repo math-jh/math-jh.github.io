@@ -54,7 +54,7 @@ $\mathbb{R}$-내적공간 $V$의 임의의 벡터 $u,v$에 대하여 다음의 �
 
 $$\lvert \langle u,v\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
-이 성립한다. 등호는 $u=\lambda v$를 만족하는 적당한 상수 $\lambda$가 존재할 때 성립한다. 
+이 성립한다. 등호는 $v=0$이거나 $u=\lambda v$를 만족하는 적당한 상수 $\lambda$가 존재할 때 성립한다. 
 :::
 ::: 증명
 만일 $v=0$이라면 양 변이 모두 0이므로 부등식이 성립한다. $v\neq 0$이라 가정하자. 그럼 $\langle v,v\rangle\neq 0$이다. 이제
@@ -220,11 +220,11 @@ $$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'
 이 성립한다. 
 :::
 ::: 증명
-식
+$U$의 원소 $x_j'$를 orthonormal basis $\mathcal{B}$에 대해 전개하면 $x_j'=\sum_{i=1}^k\langle x_j', x_i\rangle x_i$이고, 마찬가지로 $x_i=\sum_{j=1}^k\langle x_i, x_j'\rangle x_j'$이므로
 
-$$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
+$$\sum_{j=1}^k\langle v, x'_j\rangle x'_j=\sum_{j=1}^k\sum_{i=1}^k\langle v, x'_j\rangle\langle x'_j, x_i\rangle x_i=\sum_{i=1}^k\left\langle v, \sum_{j=1}^k\langle x_i, x'_j\rangle x'_j\right\rangle x_i=\sum_{i=1}^k\langle v, x_i\rangle x_i$$
 
-의 다른 표현일 뿐이다.
+이 성립한다.
 :::
 
 다음의 *projection theorem*은 이렇게 정의한 벡터 $\proj_Uv$가 $v$와 가장 가까운 $U$의 원소임을 알려준다.

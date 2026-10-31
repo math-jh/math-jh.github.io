@@ -87,7 +87,7 @@ $$\mathbf{f}=\sum_{i=1}^m\frac{\partial(f\circ\varphi^{-1})}{\partial r^i}\bigg\
 
 $$\sum_{i=1}^m a_i\mathbf{x}^i=0\mod{\mathfrak{m}}_p^2$$
 
-이라 하자. 그럼 $U$ 위에서 위 식은
+이라 하자. 그럼 $\varphi(U)$ 위에서 위 식은
 
 $$\sum_{i=1}^m a_i (x^i\circ\varphi^{-1})=0\mod{\mathfrak{m}}_0^2$$
 
@@ -120,7 +120,7 @@ $$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ 
 
 $$v=\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p$$
 
-으로 주어진다. 이 식이 맞는지를 체크해 보기 위해서는 임의의 $\mathbf{f}$에다 위 식의 양 변에 있는 tangent vector들을 각각 적용해본 후 그 결과를 비교하면 된다. 혹은 더 간단하게, $\mathbf{f}$는 $\mathbf{x}^i+\mathfrak{m}_p^2$들의 linear combination으로 나타나니, $\mathbf{x}^j$에 대해서만 적용해 봐도 충분할 것이다. 우변을 $\mathbf{x}^j$에 적용해보면,
+으로 주어진다. 이 식이 맞는지를 체크해 보기 위해서는 임의의 $\mathbf{f}$에다 위 식의 양 변에 있는 tangent vector들을 각각 적용해본 후 그 결과를 비교하면 된다. 혹은 더 간단하게, tangent vector는 상수와 $\mathfrak{m}_p^2$의 원소를 $0$으로 보내고 $\mathbf{f}-f(p)+\mathfrak{m}_p^2$는 $\mathbf{x}^i+\mathfrak{m}_p^2$들의 linear combination으로 나타나니, $\mathbf{x}^j$에 대해서만 적용해 봐도 충분할 것이다. 우변을 $\mathbf{x}^j$에 적용해보면,
 
 $$\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p x^j=\sum_{i=1}^m v(x^i)\delta_{ij}=v(x^j)$$
 

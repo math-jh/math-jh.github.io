@@ -106,7 +106,7 @@ $$N_{E/A}(\alpha)N_{E/A}(\alpha') = N_{E/A}(\alpha\alpha') = N_{E/A}(1) = 1$$
 
 $$h : x \mapsto \alpha x$$
 
-는 injective이고 $E$는 finitely generated이므로 $h$는 bijective이다. 이제 $\alpha\alpha' = 1$인 $\alpha' \in E$를 잡으면,
+의 determinant $N_{E/A}(\alpha)$가 $A$에서 invertible이므로 $h$는 bijective이다. 이제 $\alpha\alpha' = 1$인 $\alpha' \in E$를 잡으면,
 
 $$h(\alpha'\alpha- 1) = \alpha\alpha'\alpha - \alpha = (\alpha\alpha' - 1)\alpha = 0$$
 

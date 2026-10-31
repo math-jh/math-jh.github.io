@@ -1,6 +1,6 @@
 ---
 title: "행렬식"
-description: "자유 가환군 위에서의 행렬식을 정의하고 그 기본 성질을 증명한다. 곱셈 공식, 가역성, 그리고 유한차원 자유 가환군에서 선형 사상의 가역성과의 관계를 다룬다."
+description: "Free module 위에서의 행렬식을 정의하고 그 기본 성질을 증명한다. 곱셈 공식, 가역성, 그리고 유한한 basis를 갖는 free module에서 선형 사상의 가역성과의 관계를 다룬다."
 excerpt: "Free module 자기사상의 determinant와 기본 성질"
 
 categories: [Math / Multilinear Algebra]
@@ -93,7 +93,7 @@ $${\bigwedge}^p(u)(e_I)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 ::: 따름정리 6
 Free $A$-module $M$이 유한한 basis $(e_i)_{1\leq i\leq n}$을 갖는다 하자. 그럼 임의의 $u\in\End_\rMod{A}(M)$과 $\alpha,\beta\in A$에 대하여 다음 식
 
-$$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
+$$\det(\alpha\cdot\id_M+\beta u)=\sum_{k=0}^n\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
 
 를 얻는다. 
 :::

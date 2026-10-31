@@ -83,7 +83,7 @@ $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
 꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §나눗셈과 유클리드 호제법, ⁋정리 8](/ko/math/number_theory/euclidean_algorithm#thm8){: data-lid="fxjk4" }) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
 
-한편, 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
+한편, $A$가 commutative라면 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
 
 ::: 명제 4
 $A$의 two-sided ideal들 $\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 주어졌다 하고, $A=\mathfrak{a}+\mathfrak{b}_i$가 모든 $i$에 대해 성립한다 가정하자. 그럼

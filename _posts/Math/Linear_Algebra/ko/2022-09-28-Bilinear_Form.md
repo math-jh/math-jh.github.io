@@ -78,7 +78,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 을 $S$의 orthogonal complement로 정의한다.
 :::
 
-벡터 $w\in V$는 [따름정리 3](#cor3){: data-lid="xwfq2" }에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $f$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7){: data-lid="hvju7" }의 의미에서 $v$의 orthogonal complement에 속한다면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space){: data-lid="qrjjp" }의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
+벡터 $v\in V$는 [따름정리 3](#cor3){: data-lid="xwfq2" }에 의해 $f\in V^\ast$를 유일하게 지정하는데, 위의 정의는 만일 $w$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7){: data-lid="hvju7" }의 의미에서 이렇게 얻어진 $f$의 orthogonal complement에 속한다면, $w$를 $v$에 직교하는 것으로 생각하고, 이러한 $w$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space){: data-lid="qrjjp" }의 결과들을 모두 $V$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
 일반적인 bilinear form에서는 $\langle w,v\rangle=0$으로 정의한 $v^\perp$과 $\langle v,w\rangle=0$으로 정의한 것이 서로 다를 수 있어, $W^\perp$이 왼쪽에서 정의되었는지, 오른쪽에서 정의되었는지에 따라 그 정의가 달라질 수 있다. 이와 같은 현상을 피하기 위해서는 다음과 같은 성질을 생각하는 것이 현명하다. 
 

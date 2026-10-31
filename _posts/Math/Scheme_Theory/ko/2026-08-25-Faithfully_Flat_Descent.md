@@ -46,7 +46,7 @@ $$0=(g\otimes B)\circ(f\otimes B)=(g\circ f)\otimes B$$
 
 $$\im(g\circ f)\otimes_A B \rightarrow M''\otimes_A B$$ 
 
-의 image 또한 $0$이다. 그런데 이를 $\im(g\circ f)\hookrightarrow M''$에서 오는 것으로 생각하면, $B$가 flat이므로 위의 morphism 또한 injective이며, 따라서 faithfulness에 의해 $\im(g\circ f)=0$이고 $\im f\subseteq \ker g$가 성립한다. 이제 exactness를 확인하기 위해 $H=\ker g/\im f$가 $0$임을 보이면 되는데, 이는 $B$가 flat이므로 자명하다. 그럼 앞서와 같은 논리로, faithfulness에 의해 $H=0$이고 따라서 원래 sequence가 exact하다.
+의 image 또한 $0$이다. 그런데 이를 $\im(g\circ f)\hookrightarrow M''$에서 오는 것으로 생각하면, $B$가 flat이므로 위의 morphism 또한 injective이며, 따라서 faithfulness에 의해 $\im(g\circ f)=0$이고 $\im f\subseteq \ker g$가 성립한다. 이제 exactness를 확인하기 위해 $H=\ker g/\im f$가 $0$임을 보이면 되는데, $H\otimes_A B=0$임은 $B$가 flat이므로 자명하다. 그럼 앞서와 같은 논리로, faithfulness에 의해 $H=0$이고 따라서 원래 sequence가 exact하다.
 
 거꾸로 둘째 조건을 가정하고 첫째 조건을 보이자. $M\otimes_A B=0$이라 하면, sequence $0 \rightarrow M \rightarrow 0$이 $-\otimes_A B$ 후 exact하므로 가정에 의해 $0 \rightarrow M \rightarrow 0$이 exact하다. 즉 $M=0$이고 $\phi$는 faithfully flat이다.
 

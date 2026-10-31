@@ -66,7 +66,7 @@ $$\widetilde{M}(D(f))=M_f$$
 
 $$s=\Bigl(\sum_i a_if_i^{m_i}\Bigr)s=\sum_i a_i(f_i^{m_i}s)=0$$
 
-이다. 접합성의 경우, 각 $D(f_i)$ 위에서 주어진 section들 $s_i=a_i/f_i^{m_i}\in M_{f_i}$가 겹치는 부분에서 일치하면, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6){: data-lid="la9qc" }의 증명에서와 동일하게 $1=\sum b_i a_i f_i^{Nm_i+m_i}$ 꼴의 partition of unity를 사용하여 $s=\sum b_i a_i f_i^{Nm_i}\in M$이 모든 $D(f_i)$ 위에서 $s_i$로 제한됨을 확인한다. 이 논증에서 $A$의 곱셈을 $M$ 위로의 scalar action으로 바꾼 것을 제외하면 모든 계산이 동일하다.
+이다. 접합성의 경우, 각 $D(f_i)$ 위에서 주어진 section들 $s_i=a_i/f_i^{m_i}\in M_{f_i}$가 겹치는 부분에서 일치하면, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6){: data-lid="la9qc" }의 증명에서와 동일하게 $1=\sum b_i f_i^{Nm_i+m_i}$ 꼴의 partition of unity를 사용하여 $s=\sum b_i a_i f_i^{Nm_i}\in M$이 모든 $D(f_i)$ 위에서 $s_i$로 제한됨을 확인한다. 이 논증에서 $A$의 곱셈을 $M$ 위로의 scalar action으로 바꾼 것을 제외하면 모든 계산이 동일하다.
 
 마지막으로 각 $\widetilde{M}(D(f))=M_f$는 $\mathcal{O}_{\Spec A}(D(f))=A_f$ 위의 module이고, restriction map이 scalar action과 호환되므로 $\widetilde{M}$은 $\mathcal{O}_{\Spec A}$-module이다.
 :::

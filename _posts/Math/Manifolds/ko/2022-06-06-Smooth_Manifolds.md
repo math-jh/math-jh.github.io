@@ -61,7 +61,7 @@ $$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\inf
 Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방 $W$에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는, $M$의 미분구조에 속하는 어떤 coordinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:\varphi(U\cap W)\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
 :::
 
-점 $p$의 또 다른 열린근방에서 coordinate chart $(V,\psi)$가 정의되었다 하자. 만일 $f\circ\varphi^{-1}$이 $\varphi(p)$에서 $C^\infty$이지만 $f\circ\psi^{-1}$은 $\psi(p)$에서 그렇지 않다면 이 정의는 좋은 정의가 아니다. 그러나 $\psi(U\cap V)$에서
+점 $p$의 또 다른 열린근방에서 coordinate chart $(V,\psi)$가 정의되었다 하자. 만일 $f\circ\varphi^{-1}$이 $\varphi(p)$에서 $C^\infty$이지만 $f\circ\psi^{-1}$은 $\psi(p)$에서 그렇지 않다면 이 정의는 좋은 정의가 아니다. 그러나 $\psi(U\cap V\cap W)$에서
 
 $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 

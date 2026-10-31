@@ -29,7 +29,7 @@ weight: 15
 이에 대한 증명은 $\rho^\ast$의 정의에 의해 자명하다. 한편, 이와 같은 상황에서 우리는 $F$에도 $(E,E)$-bimodule structure를 줄 수 있다. 그렇다면 $d':F \rightarrow N$이 언제 (left/right) $E$-linear이기도 한지를 살펴보는 것이 당연할 것이다. 
 
 ::: 명제 2
-[명제 1](#prop1){: data-lid="u3lh3" }의 상황을 가정하고, $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 
+[명제 1](#prop1){: data-lid="u3lh3" }의 상황을 가정하고, $\varepsilon$-derivation $d': F \rightarrow N$이 주어졌다 하자. 그럼 $d'$가 left (resp. right) $E$-linear한 것은 $d'$가 $F$의 subalgebra $\rho(E)$에서 항등적으로 $0$인 것과 동치이다. 여기서 $d'$의 degree를 $\delta$라 할 때, $d'$가 left $E$-linear라는 것은 $d'(\rho(e)x)=\varepsilon(\delta,\deg(e))\rho(e)d'(x)$인 것이다.
 :::
 
 이제 $\Der_A(F, N)$을 $F$에서 $N$으로 가는 $A$-derivation들의 모임으로 정의하자. 그럼 [명제 2](#prop2){: data-lid="l73b2" }의 조건을 만족하여 $E$-linear가 되는 derivation들의 모임은 $\rho(E)$에서 identically zero인 derivation들의 모임과 같으므로 이들 모임은 $\Der_A(F, N)$의 $A$-submodule이 된다. 이를 $\Der_E(F,N)$으로 적자. 
@@ -92,7 +92,7 @@ $$xd_1(x)+d_1(x)x=0$$
 ::: 증명
 우선 abelian group $B \oplus E$ 위에 다음의 식
 
-$$(b, t)(b', t') = (bb', bt' + b't)$$
+$$(b, t)(b', t') = (bb', bt' + tb')$$
 
 으로 곱셈을 정의하여 이를 associative $\mathbb{Z}$-algebra로 생각하자. 그럼 canonical injection $t\mapsto (0,t)$에 의하여 $E$를 $\mathbb{Z}$-algebra $B\oplus E$의 two-sided ideal과 동일시할 수 있으며 이 때 $E^2=0$이다. 
 
@@ -384,7 +384,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\rightarrow}\Omega_{E/A}\oti
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 
-을 얻으며, 이를 통해 원하는 결과를 얻는다. 
+을 얻는다. 한편 임의의 $E'$-module $N$에 대하여 $\Der_A(E',N)$은 $\mathfrak{I}$에서 $0$이 되는 $\Der_A(E,N)$의 원소들과 같고, 이들은 $I$를 $0$으로 보내는 $\Hom_E(\Omega_{E/A},N)$의 원소들, 즉 $\Hom_{E'}(\Omega_{E/A}/I,N)$의 원소들과 대응되므로, $\Omega_0(u)$가 유도하는 $\Omega_{E/A}/I\rightarrow\Omega_{E'/A}$는 isomorphism이다. 이를 통해 원하는 결과를 얻는다. 
 :::
 
 ---

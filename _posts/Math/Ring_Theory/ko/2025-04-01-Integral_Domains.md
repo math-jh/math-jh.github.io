@@ -294,13 +294,11 @@ $$d = p_1^{\min(e_1, f_1)} p_2^{\min(e_2, f_2)} \cdots p_n^{\min(e_n, f_n)}$$
 ::: 증명
 먼저 $d$의 각 prime 인수 $p_i$의 지수 $\min(e_i, f_i)$는 $a$와 $b$ 양쪽의 factorization에서 $p_i$가 등장하는 최소 횟수이므로, $d \mid a$이고 $d \mid b$임이 자명하다. 즉, $d$는 공약수이다.
 
-이제 $c$를 $a$와 $b$의 임의의 공약수라고 하자. 그러면 $c$의 prime factorization은 다음과 같다:
+이제 $c$를 $a$와 $b$의 임의의 공약수라고 하자. 그런데 $c \mid a$이므로 $c$의 각 prime factor는 $a$의 어떤 prime factor와 associate해야 하고, 따라서 적당한 unit $w\in A^\times$와 $g_i\geq 0$에 대하여 $c$를 다음의 꼴
 
-$$c = q_1^{g_1} \cdots q_m^{g_m}$$
+$$c = w\cdot p_1^{g_1} \cdots p_n^{g_n}$$
 
-그런데 $c \mid a, b$이므로 각 $q_j$는 $a$ 또는 $b$의 어떤 prime factor와 associate해야 한다. 즉, $\{q_1, \dots, q_m\} \subseteq \{p_1, \dots, p_n\}$이다.
-
-또한 각 지수 $g_j$는 $a$와 $b$에서 $q_j$의 지수 이상일 수 없으므로, $g_j \leq \min(e_j, f_j)$이다.  따라서 $c \mid d$이고, $d$는 $a$, $b$의 greatest common divisor이다.
+로 쓸 수 있다. 또한 각 지수 $g_i$는 $a$와 $b$에서 $p_i$의 지수 이상일 수 없으므로, $g_i \leq \min(e_i, f_i)$이다.  따라서 $c \mid d$이고, $d$는 $a$, $b$의 greatest common divisor이다.
 :::
 
 그럼 다음 정리는 지금까지 다룬 세 정의를 한데 묶어준다. 
@@ -310,15 +308,15 @@ $$c = q_1^{g_1} \cdots q_m^{g_m}$$
 :::
 
 ::: 증명
-보여야 할 것은 오직 임의의 PID가 UFD라는 사실 뿐이다. PID $A$를 고정하고, non-zero, non-unit $r\in A$를 고정하자. 우선 우리는 ideal들의 chain
+보여야 할 것은 오직 임의의 PID가 UFD라는 사실 뿐이다. PID $A$를 고정하고, 우선 모든 non-zero, non-unit이 irreducible들의 유한곱으로 표현됨을 보이자. 결론에 반하여 irreducible들의 유한곱으로 표현될 수 없는 non-zero, non-unit $r\in A$가 존재한다고 가정하고, ideal들의 chain
 
 $$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
 
-를 귀납적으로 만들어낼 것이다. 만일 $r$가 irreducible이라면 여기서 과정을 끝내고, 그렇지 않다면 non-unit인 $r_1, r_2$가 존재하여 $r = r_1 r_2$와 같이 쓸 수 있다. 다시 이들 둘 모두가 irreducible이라면 여기에서 과정을 종료하고, 그렇지 않다면 이 과정을 반복하는 식으로 위의 ideal들의 chain을 잡을 수 있다. 
+를 귀납적으로 만들어낼 것이다. $r_0=r$은 irreducible이 아니므로 non-unit인 $s, s'$이 존재하여 $r_0 = ss'$과 같이 쓸 수 있고, $s$와 $s'$ 중 적어도 하나는 irreducible들의 유한곱으로 표현될 수 없다. 이를 $s$라 하고 $r_1=s$로 두면, $s'$이 non-unit이므로 $(r_0)\subsetneq (r_1)$이다. 이제 $r_1$에 대해 같은 과정을 반복하는 식으로 위의 ideal들의 chain을 잡을 수 있다. 
 
-이제 $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$라 하자. 그럼 $\mathfrak{a}$가 ideal인 것은 자명하며, $A$가 PID라는 가정으로부터 $\mathfrak{a}=(a)$이도록 하는 $a\in A$가 존재한다. 그럼 어떠한 $n$에 대해서는 $a\in (r_n)$이어야 하고, 그럼 이 $n$ 이후부터는 $(r_n)$이 항상 $a$를 포함하므로 $(r_n)\subsetneq (r_{n+1})$에 모순이다. 
+이제 $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$라 하자. 그럼 $\mathfrak{a}$가 ideal인 것은 자명하며, $A$가 PID라는 가정으로부터 $\mathfrak{a}=(a)$이도록 하는 $a\in A$가 존재한다. 그럼 어떠한 $n$에 대해서는 $a\in (r_n)$이어야 하고, 그럼 이 $n$ 이후부터는 $(r_n)$이 항상 $a$를 포함하므로 $(r_n)\subsetneq (r_{n+1})$에 모순이다. 따라서 모든 non-zero, non-unit은 irreducible들의 유한곱으로 표현된다. 
 
-유일성의 경우는 
+유일성의 경우는 임의의 non-zero, non-unit $r\in A$에 대하여 
 
 $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 

@@ -61,7 +61,7 @@ $$v_0=-e_1-\cdots-e_n,\quad v_i=e_i\qquad (i=1,\ldots, n)$$
 
 $$Q = (1,\, 1,\, \ldots,\, 1) \in \Mat_{1 \times (n+1)}(\mathbb{Z}).$$
 
-로 주어진다. 위의 설명에 따르면, 이는 $\mathbb{P}^n$ 위에 정의된 torus의 standard scaling action 
+로 주어진다. 위의 설명에 따르면, 이는 $\mathbb{C}^{n+1}$ 위에 정의된 torus의 standard scaling action 
 
 $$t\cdot(\x_0,\ldots, \x_n)=(t \x_0, \ldots, t \x_n)$$
 

@@ -128,7 +128,7 @@ $$\dim(A,\mathcal{T}',\mathcal{A}')<\dim(A,\mathcal{T},\mathcal{A})$$
 
 $(U,\varphi)$가 $(A,\mathcal{T},\mathcal{A})$의 coordinate system이라 하자. 일반성을 잃지 않고 $\varphi$의 image가 $\mathbb{R}^d$라 가정할 수 있으며, 이 때 $\id$는 전사함수이므로 합성 $\varphi\circ\id$의 image 또한 $\mathbb{R}^d$이다.
 
-한편, $(A,\mathcal{T}',\mathcal{A}')$는 manifold이므로 이를 $\mathbb{R}^{d'}$와 homeomorphic한 *countable*한 coordinate system들 $(V,\sigma)$들로 덮을 수 있다. 그런데 $\varphi\circ\id\circ\sigma^{-1}$은 $C^\infty$이고, 이들은 $C^1$ 함수로서 모두 measure zero set $\mathbb{R}^{d'}$들을 measure zero set들로 보내므로 이들의 image가 $\mathbb{R}^d$가 되는 것은 모순이다. 
+한편, $(A,\mathcal{T}',\mathcal{A}')$는 manifold이므로 이를 $\mathbb{R}^{d'}$와 homeomorphic한 *countable*한 coordinate system들 $(V,\sigma)$들로 덮을 수 있다. 그런데 $\varphi\circ\id\circ\sigma^{-1}$은 $C^\infty$이고, $d'<d$이므로 이들은 $C^1$ 함수로서 모두 $\mathbb{R}^{d'}$를 $\mathbb{R}^d$의 measure zero set으로 보내므로 이들의 image가 $\mathbb{R}^d$가 되는 것은 모순이다. 
 :::
 
 ---

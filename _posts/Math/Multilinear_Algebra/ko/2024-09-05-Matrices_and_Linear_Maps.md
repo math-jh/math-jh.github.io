@@ -71,7 +71,7 @@ $$u(e_i)=\sum_{j\in J} x_{ji} f_j$$
 우리는 앞서 두 행렬의 곱을 정의하는 방법을 살펴보았다. [\[선형대수학\] §선형대수학의 기본정리, ⁋정리 5](/ko/math/linear_algebra/ftla#thm5){: data-lid="21nb7" }와 마찬가지로, 이들 행렬의 곱은 선형사상의 합성에 대응된다. 우선 다음 명제를 보이자.
 
 ::: 명제 3
-만일 $I,J$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$과 $x\in M$에 대하여 다음 식
+만일 $A$가 commutative이고 $I,J$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$과 $x\in M$에 대하여 다음 식
 
 $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
@@ -92,7 +92,7 @@ $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right),
 이를 [명제 2](#prop2){: data-lid="3b8cl" }와 합치면 다음 결과를 얻는다.
 
 ::: 따름정리 4
-세 $A$-module $M,N,L$이 주어졌다 하고, 유한한 basis $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$를 고정하자. 그럼 임의의 linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, 다음 식
+$A$가 commutative이고 세 $A$-module $M,N,L$이 주어졌다 하고, 유한한 basis $\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$를 고정하자. 그럼 임의의 linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, 다음 식
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$
 
@@ -127,7 +127,7 @@ $$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ij}=\lang
 
 ## 행렬표현과 trace
 
-앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6){: data-lid="odc8j" }에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
+이 절에서는 $A$가 commutative ring이라 가정한다. 앞서 우리는 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6){: data-lid="odc8j" }에서 linear map의 trace를 정의하였다. 이번에는 임의의 $n\times n$ 행렬 $X$에 대하여, $X$의 trace를 다음 식
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
@@ -167,11 +167,7 @@ $$u(x_i)=\sum_{j\in J} u_{ji}(x_i),\qquad u_{ji}(x_i)\in N_j$$
 
 $$[u]^I_J=(u_{ji})_{(j,i)\in J\times I}$$
 
-이 잘 정의된다. 이 행렬은 다음의 ring
-
-$$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
-
-위에 정의된 $J\times I$ 행렬로 생각할 수 있다.
+이 잘 정의된다. 이 행렬은 $(j,i)$ 성분이 $\Hom_{\lMod{A}}(M_i,N_j)$의 원소인 $J\times I$ 행렬로 생각할 수 있다.
 
 이러한 일반화를 하여도 위에서 살펴본 모든 명제들이 그대로 성립함을 확인할 수 있다. 특히 행렬의 곱이 주목할 만한데, $I,J$가 모두 유한하고, 여기에 더해 각각의 $M_i$와 $N_j$들이 유한한 basis $\mathcal{B}_i$, $\mathcal{C}_j$들을 갖는다 하자. 그럼 이들의 basis를 모두 모아둔 것들이 각각 $M$과 $N$의 basis $\mathcal{B},\mathcal{C}$를 이룬다. 그럼 이 basis에 대해 linear map $u:M \rightarrow N$을 행렬로 나타낸 것은, 위의 $[u]_J^I$에서 각각의 성분 $u_{ji}$들을 basis $\mathcal{B}_i$, $\mathcal{C}_j$에 대해 행렬로 나타낸 것을 대입한 행렬과 같음을 확인할 수 있으며, 이것이 행렬의 곱에 대해 유의미하게 행동한다. 즉, 또 다른 direct sum $L=\bigoplus_{k\in K} L_k$와, basis $\mathcal{D}=\bigcup \mathcal{D}_k$에 대하여 $v:N \rightarrow L$을 마찬가지 방식으로 써 보면, $v\circ u$의 basis $\mathcal{B}, \mathcal{D}$에 대한 행렬표현은 다음의 행렬
 

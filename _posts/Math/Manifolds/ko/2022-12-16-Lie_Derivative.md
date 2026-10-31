@@ -28,7 +28,7 @@ $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 이제 $M$ 위에 벡터장 $X$가 주어졌다 하고, 각 점 $p$에서 $X_p$ 방향으로의 방향미분 $X_pf$를 구하는 문제를 생각해보자. 이는 기하학적으로는 위와 같이 모든 점 $p$마다 $\gamma(0)=p$, $\gamma'(0)=X_p$를 만족하는 곡선 $\gamma_p$를 잡아 위의 식 (1)을 적용하는 것과 같다. 그런데 우리는 이러한 성질을 만족하는 곡선이 반드시 존재한다는 것을 알고 있다. ([§벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6){: data-lid="xfxlz" })
 
 ::: 정의 1
-Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, 함수 $f\in C^\infty(M)$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
+Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, $X$의 integral flow들이 정의하는 함수를 $\phi^t$라 하고, 함수 $f\in C^\infty(M)$이 주어졌다 하자. 그럼 $f$의 *Lie derivative<sub>리 미분</sub>* $\mathcal{L}_Xf$는 다음의 식
 
 $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
 
