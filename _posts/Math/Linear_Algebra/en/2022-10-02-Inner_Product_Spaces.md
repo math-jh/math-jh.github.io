@@ -54,7 +54,7 @@ In an $\mathbb{R}$-inner product space $V$, for any vectors $u,v$, the inequalit
 
 $$\lvert \langle u,v\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
-holds. Equality holds when $u=\lambda v$ is satisfied by some constant $\lambda$.
+holds. Equality holds when $v=0$ or when $u=\lambda v$ is satisfied by some constant $\lambda$.
 :::
 ::: Proof
 If $v=0$, then both sides are 0, so the inequality holds. Assume $v\neq 0$. Then $\langle v,v\rangle\neq 0$. Now if we define
@@ -220,9 +220,11 @@ $$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'
 holds.
 :::
 ::: Proof
-This is simply another expression of the formula
+Expanding the element $x_j'$ of $U$ with respect to the orthonormal basis $\mathcal{B}$ gives $x_j'=\sum_{i=1}^k\langle x_j', x_i\rangle x_i$, and similarly $x_i=\sum_{j=1}^k\langle x_i, x_j'\rangle x_j'$, so
 
-$$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
+$$\sum_{j=1}^k\langle v, x'_j\rangle x'_j=\sum_{j=1}^k\sum_{i=1}^k\langle v, x'_j\rangle\langle x'_j, x_i\rangle x_i=\sum_{i=1}^k\left\langle v, \sum_{j=1}^k\langle x_i, x'_j\rangle x'_j\right\rangle x_i=\sum_{i=1}^k\langle v, x_i\rangle x_i$$
+
+holds.
 :::
 
 The following *projection theorem* tells us that the vector $\proj_Uv$ defined in this way is the element closest to $v$ in $U$.
