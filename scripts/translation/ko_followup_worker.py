@@ -474,12 +474,7 @@ def _commit_pair(ko_path: Path, en_path: Path) -> tuple[bool, str]:
 
 
 def _clear_completed(entry: dict) -> None:
-    for key in (
-        "verify_ko_typos", "verify_ko_typos_review", "ko_reviewed_at",
-        "ko_review_base_content", "ko_review_base_sha256",
-        "ko_followup_rejected_at", "ko_followup_rejection_reason",
-        "ko_followup_rejected_request", "ko_followup_wait",
-    ):
+    for key in tw.KO_AUDIT_FIELDS:
         entry.pop(key, None)
     entry["ko_followup_completed_at"] = datetime.now(timezone.utc).isoformat(
         timespec="seconds"

@@ -3238,6 +3238,88 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
     return findings[:KO_REVIEW_MAX_FINDINGS]
 
 
+# KO 원문 감사 한 벌을 이루는 state 필드. 감사는 폴리싱이나 Phase 4 에서 생기고,
+# 지우는 곳은 대시보드 체크 뒤 ko_followup_worker 의 판정 통과(_clear_completed)
+# 하나뿐이다. 그쪽도 이 튜플을 쓴다. 대시보드는 `verify_ko_typos` 가 빈 값이면
+# 해소된 것으로 보므로(ko_typos.py 계약), 다른 경로가 이 필드를 비우거나 항목을
+# 갈아끼우며 떨어뜨리면 판정과 기준 판본만 남은 지적이 큐에서 조용히 사라진다.
+KO_AUDIT_FIELDS = (
+    "verify_ko_typos", "verify_ko_typos_review", "ko_reviewed_at",
+    "ko_review_base_content", "ko_review_base_sha256",
+    "ko_followup_rejected_at", "ko_followup_rejection_reason",
+    "ko_followup_rejected_request", "ko_followup_wait",
+)
+
+
+def has_outstanding_ko_audit(entry: dict) -> bool:
+    """Codex 가 FALSE 로 기각하지 않은 KO 지적이 남은 감사가 있는가."""
+    return any(str(r.get("verdict") or "UNSURE").upper() != "FALSE"
+               for r in entry.get("verify_ko_typos_review") or [])
+
+
+def ko_typo_findings(claims: List[str]) -> List[dict]:
+    """Claude 의미 검증의 KO-TYPOS 문자열을 review_ko_findings 입력 꼴로 바꾼다."""
+    return [{
+        "kind": "ERROR", "quote": "", "issue": claim,
+        "suggested_fix": "", "source": "claude-verify",
+    } for claim in claims]
+
+
+def record_ko_review(entry: dict, ko_path: Path, ko_review: List[dict]) -> None:
+    """새 KO 감사를 state 항목에 기록한다 (지적 · 판정 · 감사 시각 · 기준 판본)."""
+    # FALSE 판정도 지운 채로 저장하지 않는다 — 대시보드의 '수정' 체크
+    # 흐름과 사용자의 최종 판단이 전체 목록을 본다. 주석을 다는 것이지
+    # 거르는 것이 아니다.
+    entry["verify_ko_typos"] = [o["claim"] for o in ko_review[:20]]
+    entry["verify_ko_typos_review"] = ko_review[:20]
+    entry["ko_reviewed_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    # A later follow-up must compare exactly what the user changed after
+    # this audit.  Git cannot reconstruct an audited uncommitted KO, so
+    # retain the precise baseline only while this finding is outstanding.
+    ko_review_base = ko_path.read_text(encoding="utf-8")
+    entry["ko_review_base_content"] = ko_review_base
+    entry["ko_review_base_sha256"] = hashlib.sha256(
+        ko_review_base.encode("utf-8")).hexdigest()
+
+
+def merge_ko_audit(prev: dict, entry: dict, ko_path: Path,
+                   new_review: List[dict], key: str) -> None:
+    """`prev` 의 미해결 KO 감사와 새 판정 `new_review` 로 `entry` 의 감사 한 벌을 정한다.
+
+    새 판정이 없으면 미해결 감사를 그대로 옮긴다 (요청 키 `<ko-path>@<ko_reviewed_at>`
+    가 유지된다). 둘 다 있으면 현재 KO 를 새 기준 판본으로 다시 묶는다. 이때 옛
+    지적은 FALSE 가 아니고, 인용문이 현재 KO 에 그대로 남았거나 인용문이 없는 것만
+    옮긴다 — 인용문이 사라진 지적은 사용자가 그 문장을 고친 것이다. 감사 시각이
+    바뀌므로 옛 요청 키로 걸린 체크·거절·대기 기록은 후속 워커가 stale 로 정리한다."""
+    if not has_outstanding_ko_audit(prev):
+        if new_review:
+            record_ko_review(entry, ko_path, new_review)
+        return
+    for field in KO_AUDIT_FIELDS:
+        if field in prev:
+            entry[field] = prev[field]
+    if not new_review:
+        return
+    ko_text = ko_path.read_text(encoding="utf-8")
+    known = {o.get("claim") for o in new_review}
+    kept = []
+    for old in prev.get("verify_ko_typos_review") or []:
+        if str(old.get("verdict") or "UNSURE").upper() == "FALSE" \
+                or old.get("claim") in known:
+            continue
+        quote = str(old.get("quote") or "")
+        if quote and quote not in ko_text:
+            continue
+        old = dict(old)
+        old["line"] = ko_text.count("\n", 0, ko_text.find(quote)) + 1 if quote else None
+        kept.append(old)
+    for field in KO_AUDIT_FIELDS:
+        entry.pop(field, None)
+    record_ko_review(entry, ko_path, kept + list(new_review))
+    log(f"KO-AUDIT ({key}): 미해결 감사와 합침 — 옛 지적 {len(kept)}건 유지, "
+        f"새 지적 {len(new_review)}건, 기준 판본을 현재 KO 로 갱신")
+
+
 def check_en(ko_text: str, en_text: str, verdict_text: str = "") -> dict:
     """EN 검증 한 벌. run_verify(Phase 4)와 폴리싱 패스가 같이 쓴다.
 
@@ -3291,7 +3373,19 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
 
     entry = state["files"].get(key, {})
     entry.update(check["fields"])
-    entry["verify_ko_typos"] = ko_typos[:20] or None
+    # 재검증이 같은 지적을 다시 짚지 못한 것은 해소가 아니다. 미해결 감사는 그대로
+    # 두고(지우는 것은 후속 판정뿐), 새로 나온 KO-TYPOS 는 폴리싱과 같은 Codex 판정을
+    # 거쳐 감사 한 벌에 넣어야 대시보드 체크가 후속 워커에 닿는다.
+    prev = dict(entry)
+    reviewed = {o.get("claim") for o in entry.get("verify_ko_typos_review") or []}
+    findings = [f for f in {
+        _finding_claim(f): f for f in ko_typo_findings(ko_typos)
+    }.values() if _finding_claim(f) not in reviewed]
+    new_review = review_ko_findings(ko_path, key, findings) if findings else []
+    if has_outstanding_ko_audit(prev) or new_review:
+        merge_ko_audit(prev, entry, ko_path, new_review, key)
+    else:
+        entry["verify_ko_typos"] = None
     if verdict_text:
         entry["verify_verdict"] = verdict_text[:4000]
     state["files"][key] = entry
@@ -3476,6 +3570,7 @@ def main() -> int:
                 warnings, gate_residual = _run_output_gate(
                     en_path, ko_path, key, [],
                 )
+                prev_entry = dict(state["files"].get(key) or {})
                 state["files"][key] = {
                     "status": "done",
                     "last_attempt_ts": time.time(),
@@ -3487,6 +3582,7 @@ def main() -> int:
                     "regions_retranslated": n_re, "regions_total": n_tot,
                     "warnings": warnings or None,
                 }
+                merge_ko_audit(prev_entry, state["files"][key], ko_path, [], key)
                 hangul_warns = [w for w in warnings if "Hangul" in w]
                 if hangul_warns:
                     state["files"][key]["needs_review"] = hangul_warns
@@ -3618,10 +3714,7 @@ def main() -> int:
         # 읽기 전용 생성한다. 기존 Claude 의미 검증이 낸 KO-TYPOS도 ERROR
         # 후보로 합친 뒤 Codex가 진위와 최소 수정안을 독립 판정한다.
         ko_review: List[dict] = []
-        ko_findings = [{
-            "kind": "ERROR", "quote": "", "issue": claim,
-            "suggested_fix": "", "source": "claude-verify",
-        } for claim in extract_ko_typos(verdict_text)]
+        ko_findings = ko_typo_findings(extract_ko_typos(verdict_text))
         if reason == "polish":
             try:
                 ko_findings.extend(audit_ko_source(ko_path, key))
@@ -3636,6 +3729,7 @@ def main() -> int:
             ko_review = review_ko_findings(ko_path, key, ko_findings)
 
         final_meta = en_translation_meta(en_path)
+        prev_entry = dict(state["files"].get(key) or {})
         state["files"][key] = {
             "status": "done",
             "last_attempt_ts": time.time(),
@@ -3665,23 +3759,7 @@ def main() -> int:
             # 게이트를 거치고도 남은 한글만 여기 온다 — 임계 미만 한글 잔존·한글
             # 앵커는 정오 판단에 사람이 필요하다. 확인 후 손으로 지운다.
             state["files"][key]["needs_review"] = hangul_warns
-        if ko_review:
-            # FALSE 판정도 지운 채로 저장하지 않는다 — 대시보드의 '수정' 체크
-            # 흐름과 사용자의 최종 판단이 전체 목록을 본다. 주석을 다는 것이지
-            # 거르는 것이 아니다.
-            state["files"][key]["verify_ko_typos"] = [
-                o["claim"] for o in ko_review[:20]
-            ]
-            state["files"][key]["verify_ko_typos_review"] = ko_review[:20]
-            state["files"][key]["ko_reviewed_at"] = datetime.now(
-                timezone.utc).isoformat(timespec="seconds")
-            # A later follow-up must compare exactly what the user changed after
-            # this audit.  Git cannot reconstruct an audited uncommitted KO, so
-            # retain the precise baseline only while this finding is outstanding.
-            ko_review_base = ko_path.read_text(encoding="utf-8")
-            state["files"][key]["ko_review_base_content"] = ko_review_base
-            state["files"][key]["ko_review_base_sha256"] = hashlib.sha256(
-                ko_review_base.encode("utf-8")).hexdigest()
+        merge_ko_audit(prev_entry, state["files"][key], ko_path, ko_review, key)
 
         # 게이트가 못 고치고 남긴 것도 같은 알림에 싣는다 (한글 경고와 중복되지
         # 않게 warnings 에 없는 것만).
