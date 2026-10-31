@@ -72,7 +72,7 @@ to construct the inverse of the above $Z(A)$-linear map, so this becomes a $Z(A)
 We previously examined how to define the product of two matrices. As in [\[Linear Algebra\] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5){: data-lid="21nb7" }, the product of these matrices corresponds to the composition of linear maps. First, let us prove the following proposition.
 
 ::: Proposition 3
-If $I,J$ are finite sets, then for any linear map $u:M \rightarrow N$ and any $x\in M$, the formula
+If $A$ is commutative and $I,J$ are finite sets, then for any linear map $u:M \rightarrow N$ and any $x\in M$, the formula
 
 $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
@@ -128,7 +128,7 @@ so we obtain the desired result.
 
 ## Matrix Representations and Trace
 
-Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6){: data-lid="odc8j" }. Now, for any $n\times n$ matrix $X$, let us define the trace of $X$ by
+Suppose $A$ is a commutative ring. Previously we defined the trace of a linear map in [§Hom and the Tensor Product, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6){: data-lid="odc8j" }. Now, for any $n\times n$ matrix $X$, let us define the trace of $X$ by
 
 $$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
@@ -168,11 +168,7 @@ the following matrix
 
 $$[u]^I_J=(u_{ji})_{(j,i)\in J\times I}$$
 
-is well-defined. This matrix can be regarded, over the following ring
-
-$$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
-
-as a $J\times I$ matrix.
+is well-defined. This matrix can be regarded as a $J\times I$ matrix whose $(j,i)$ entry is an element of $\Hom_{\lMod{A}}(M_i,N_j)$.
 
 Even with this generalization, one can verify that all the propositions examined above still hold. In particular, matrix multiplication is noteworthy: suppose $I,J$ are both finite, and in addition each of the $M_i$ and $N_j$ has a finite basis $\mathcal{B}_i$, $\mathcal{C}_j$. Then the collection of all their bases forms, for $M$ and $N$ respectively, the bases $\mathcal{B},\mathcal{C}$. Then one can verify that representing the linear map $u:M \rightarrow N$ as a matrix with respect to these bases equals the matrix obtained by substituting into the above $[u]_J^I$ the matrix representations of each entry $u_{ji}$ with respect to the bases $\mathcal{B}_i$, $\mathcal{C}_j$; and this behaves meaningfully under matrix multiplication. That is, for another direct sum $L=\bigoplus_{k\in K} L_k$ and basis $\mathcal{D}=\bigcup \mathcal{D}_k$, if we write $v:N \rightarrow L$ in the same manner, the matrix representation of $v\circ u$ with respect to the bases $\mathcal{B}, \mathcal{D}$ becomes the matrix having the following matrix
 
