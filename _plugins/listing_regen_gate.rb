@@ -17,6 +17,11 @@
 # 파일 각각의 mtime·크기·inode. 프로세스 첫 빌드와, 빌드가 중간에 실패한 다음 빌드는
 # 지문 비교 없이 전부 렌더한다 (지문은 post_write 에서만 확정한다).
 #
+# 지문은 두 묶음이다. 용어 묶음(TERMS_URLS: /ko/terms·/ko/notations·terms.json)은
+# site.data.terms·notations 만 읽고 글의 frontmatter·요약문을 보지 않으므로, _data·템플릿·
+# 전체 URL 목록·자기 내용만으로 판단한다 — 글 제목 변경이나 비공개 글(mtime 이 수정일)
+# 수정 때 이 셋(렌더 ~0.74s)까지 다시 그리지 않으려는 것 (2026-10-31). 나머지는 위 전부.
+#
 # 대상은 아래 LAYOUTS·URLS 로 고른 것뿐이다 — 피드(본문을 싣는다)·CSS·글은 손대지 않는다.
 # 새 목록 페이지가 본문을 읽기 시작하면(예: post.content) 여기 지문에도 넣어야 한다.
 # serve 의 incremental 에서만 켠다; 일회성 build(CI)에는 영향이 없다.
@@ -27,12 +32,21 @@ module ListingRegenGate
   URLS = %w[/assets/data/terms.json /sitemap.xml].freeze
   EXCLUDED_DATA = %w[link_relations link_relations_next page_urls].freeze
   DOC_VOLATILE = %w[excerpt semantic_navigation regenerate].freeze
-  STATE = { current: nil, last: nil }
+  TERMS_URLS = %w[/ko/terms /ko/notations /assets/data/terms.json].freeze
+  STATE = { listing: {}, terms: {} } # 묶음 => { current:, last: }
 
   module_function
 
+  def group_of(page)
+    return nil unless page.is_a?(Jekyll::Page)
+    return :terms if TERMS_URLS.include?(page.url)
+    return :listing if LAYOUTS.include?(page.data["layout"]) || URLS.include?(page.url)
+
+    nil
+  end
+
   def gated?(page)
-    page.is_a?(Jekyll::Page) && (LAYOUTS.include?(page.data["layout"]) || URLS.include?(page.url))
+    !group_of(page).nil?
   end
 
   # 값만 보는 정규 직렬화를 digest 에 흘려 넣는다. Marshal 은 한 덩어리 안에서 같은
@@ -71,10 +85,27 @@ module ListingRegenGate
     "#{path}\0-\0"
   end
 
-  def fingerprint(site)
-    d = Digest::SHA256.new
-    canon(site.data.reject { |k, _| EXCLUDED_DATA.include?(k) }, d)
-    site.collections.each_value.flat_map(&:docs).sort_by(&:path).each do |doc|
+  # { listing: hex, terms: hex }. 공통 부분(_data·템플릿·전체 URL)을 먼저 한 번 계산한다.
+  def fingerprints(site)
+    docs = site.collections.each_value.flat_map(&:docs).sort_by(&:path)
+    base = Digest::SHA256.new
+    canon(site.data.reject { |k, _| EXCLUDED_DATA.include?(k) }, base)
+    %w[layouts_dir includes_dir].each do |key|
+      dir = site.in_source_dir(site.config[key] || "_#{key.delete_suffix('_dir')}")
+      Dir.glob(File.join(dir, "**", "*")).sort.each { |f| base << file_stamp(f) }
+    end
+    base << (docs.map(&:url) + site.pages.map(&:url)).sort.join("\0") # seo.html 의 hreflang 조회
+    base = base.hexdigest
+
+    terms = Digest::SHA256.new << base
+    site.pages.select { |p| group_of(p) == :terms }.sort_by(&:url).each do |page|
+      terms << page.url << "\0"
+      canon(page.data.reject { |k, _| k == "regenerate" }, terms)
+      terms << page.content.to_s << "\0"
+    end
+
+    d = Digest::SHA256.new << base
+    docs.each do |doc|
       d << doc.relative_path.to_s << "\0" << doc.url << "\0"
       canon(doc.data.reject { |k, _| DOC_VOLATILE.include?(k) }, d)
       excerpt = doc.data["excerpt"]
@@ -84,19 +115,16 @@ module ListingRegenGate
     site.pages.sort_by { |p| [p.url, p.relative_path.to_s] }.each do |page|
       d << page.url << "\0" << page.relative_path.to_s << "\0"
       canon(page.data.reject { |k, _| k == "regenerate" }, d)
-      d << page.content.to_s << "\0" if gated?(page)
+      d << page.content.to_s << "\0" if group_of(page) == :listing
     end
     d << site.static_files.map(&:relative_path).sort.join("\0")
-    %w[layouts_dir includes_dir].each do |key|
-      dir = site.in_source_dir(site.config[key] || "_#{key.delete_suffix('_dir')}")
-      Dir.glob(File.join(dir, "**", "*")).sort.each { |f| d << file_stamp(f) }
-    end
-    d.hexdigest
+    { listing: d.hexdigest, terms: terms.hexdigest }
   end
 
   def skip?(site, page)
-    STATE[:current] && STATE[:current] == STATE[:last] && gated?(page) &&
-      File.exist?(page.destination(site.dest))
+    group = group_of(page) or return false
+    state = STATE[group]
+    state[:current] && state[:current] == state[:last] && File.exist?(page.destination(site.dest))
   end
 
   module Regen
@@ -112,11 +140,11 @@ Jekyll::Regenerator.prepend(ListingRegenGate::Regen)
 
 # 다른 pre_render 훅(graph_data·page_url_index 등)이 끝난 뒤에 계산한다.
 Jekyll::Hooks.register :site, :pre_render, priority: Jekyll::Hooks::PRIORITY_MAP[:low] do |site|
-  ListingRegenGate::STATE[:current] =
-    (site.config["serving"] && site.incremental? ? ListingRegenGate.fingerprint(site) : nil)
+  fps = site.config["serving"] && site.incremental? ? ListingRegenGate.fingerprints(site) : {}
+  ListingRegenGate::STATE.each { |group, state| state[:current] = fps[group] }
 end
 
 # 쓰기까지 끝난 빌드의 지문만 다음 빌드의 비교 기준이 된다.
 Jekyll::Hooks.register :site, :post_write do |_site|
-  ListingRegenGate::STATE[:last] = ListingRegenGate::STATE[:current]
+  ListingRegenGate::STATE.each_value { |state| state[:last] = state[:current] }
 end
