@@ -208,12 +208,13 @@ def log(message: str) -> None:
 
 
 def notify(subject: str, body: str, level: str = "active",
-           url: str = DASHBOARD_URL) -> None:
-    """Best-effort alert.  A failed notification must not fail the tick."""
+           url: str = DASHBOARD_URL, digest: bool = False) -> None:
+    """Best-effort alert.  A failed notification must not fail the tick.
+    ``digest`` defers it to the shim's daily summary (no action needed now)."""
     try:
         proc = subprocess.run(
             [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level,
-             *(("-u", url) if url else ())],
+             *(("-u", url) if url else ()), *(("--digest",) if digest else ())],
             check=False, timeout=20, capture_output=True, text=True,
         )
         if proc.returncode:

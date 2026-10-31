@@ -175,6 +175,13 @@ def _stage_view(rec: dict) -> dict:
                              "reason": s4.get("precedent_reason"),
                              "pending": s4.get("pending_id"),
                              "note": (s4.get("reveal") or {}).get("difference_note")}
+        # 새 판례로 다시 본 결과 — recheck 항목의 표결은 이것이다(stages 는 첫 라운드 그대로).
+        last = (rec.get("rechecks") or [None])[-1]
+        r = last and last.get("results", {}).get(stage)
+        if r:
+            view["recheck"] = {"relation": r.get("relation"), "precedent": r.get("precedent"),
+                               "reason": r.get("precedent_reason"), "pending": r.get("pending_id"),
+                               "trigger": last.get("precedent"), "at": last.get("at")}
         out[stage] = view
     return out
 

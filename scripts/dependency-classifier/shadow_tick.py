@@ -44,6 +44,11 @@ from cron_commit import commit_outputs, dirty_paths
 log = dc.log
 WIP_CAP = 4
 RETRY_SEC = 3600
+# A prompt over the byte limit is deterministic: the same text builds the same
+# prompt, so the hourly retry only re-spent the earlier stages' calls (S2 Step 1 is
+# Opus) and logged the same failure.  Such a unit is parked until its text changes,
+# with a weekly retry in case the limit itself was raised.
+PARK_SEC = 7 * 24 * 3600
 FIT_EVERY_SEC = 24 * 3600
 NEXT = {"S1": "S2", "S2": "S3", "S3": None}
 LEDGER_REL = store.LEDGER_REL
@@ -82,7 +87,8 @@ def pick(state: dict) -> tuple | None:
     dirty = set(dirty_paths(rels, store.ROOT))
     skip = out_of_scope(all_paths)
     entries = state["units"]
-    open_rounds = sum(1 for key, e in entries.items() if e.get("next") and key not in skip)
+    open_rounds = sum(1 for key, e in entries.items()
+                      if e.get("next") and key not in skip and not e.get("parked_fp"))
 
     def usable(paths: list[Path], key: str) -> bool:
         if key in skip:
@@ -90,6 +96,8 @@ def pick(state: dict) -> tuple | None:
         if any(str(p.relative_to(store.ROOT)) in dirty for p in paths):
             return False
         entry = entries.get(key, {})
+        if entry.get("parked_fp") and _fingerprint(paths) != entry["parked_fp"]:
+            return True                                 # the text changed: try again
         return entry.get("retry_after", 0) <= now
 
     # 1. rounds under way, oldest first
@@ -366,6 +374,7 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
         entry.update({"next": NEXT[stage], "updated": int(time.time()), "fp": unit.fingerprint})
         entry.pop("error", None)
         entry.pop("retry_after", None)
+        entry.pop("parked_fp", None)
         log(f"shadow {stage} {key}: {summary}")
         if result is not None:
             entry["links"] = len(unit.lids)
@@ -373,13 +382,27 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
             if result["to_human"]:
                 dc.notify("[dependency] 링크 재판정",
                           f"{paths[0].stem}: 판정 대기 {result['to_human']}건 추가", level="passive",
-                          url=dc.DASHBOARD_URL)
+                          url=dc.DASHBOARD_URL, digest=True)
             store.save_state(state)
             commit_ledger(f"{paths[0].stem}: 확정 {result['finalized']}건, "
                           f"사람 판정 대기 {result['to_human']}건", commit)
         store.save_state(state)
         return 0
     except Exception as exc:  # noqa: BLE001
+        if isinstance(exc, models.ModelError) and "prompt exceeds" in str(exc):
+            first = entry.get("parked_fp") != unit.fingerprint
+            entry.update({"updated": int(time.time()), "retry_after": int(time.time() + PARK_SEC),
+                          "error": str(exc)[:1000], "parked_fp": unit.fingerprint})
+            store.save_state(state)
+            # No "error"/"failed" here: the dashboard would read this handled state
+            # as a broken worker (see the module docstring).
+            log(f"shadow {stage} {key}: parked — {exc}; waits until the text changes")
+            if first:
+                dc.notify("[dependency] 섀도 판정 보류",
+                          f"{paths[0].stem} {stage}: 프롬프트가 한도({models.MAX_PROMPT_BYTES} bytes)를 "
+                          f"넘어 글이 바뀔 때까지 이 글은 건너뜁니다.\n{exc}",
+                          level="passive", url=dc.DASHBOARD_URL, digest=True)
+            return 0
         entry.update({"updated": int(time.time()), "retry_after": int(time.time() + RETRY_SEC),
                       "error": str(exc)[:1000]})
         store.save_state(state)

@@ -2085,14 +2085,18 @@ def translate(
 NOTIFY_BIN = shutil.which("notify") or str(Path.home() / ".local/bin/notify")
 
 
-def _notify(subject: str, body: str, level: str = "active") -> None:
+def _notify(subject: str, body: str, level: str = "active", digest: bool = False) -> None:
     """Best-effort 알림. 실패해도 로그만 남기고 번역은 계속한다.
 
     벤더는 shim(~/.local/bin/notify) 안에만 있다. 여기서 아는 것은 서명뿐이다.
+    digest=True 는 shim 의 하루 요약(매일 08:30)으로 미룬다 — 검토 지적처럼 사람이
+    보긴 해야 하지만 급하지 않은 것. 번역 실패(EN 발행 정지)와 검토 단계의 원문 수정
+    (계약 위반)은 즉시 보낸다. (2026-10-31 사용자 결정)
     """
     try:
         r = subprocess.run(
-            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level],
+            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level,
+             *(["--digest"] if digest else [])],
             check=False, timeout=20, capture_output=True, text=True,
         )
         if r.returncode != 0:
@@ -3451,7 +3455,7 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         body += verdict_text + "\n"
     if lints:
         body += "LINTS:\n" + "\n".join(lints)
-    _notify(f"translation verify flagged: {key}", body[:1500])
+    _notify(f"translation verify flagged: {key}", body[:1500], digest=True)
     return 0
 
 
@@ -3603,6 +3607,7 @@ def main() -> int:
                     _notify(
                         "[translate-worker] drift-incremental warnings",
                         "\n".join(body),
+                        digest=True,
                     )
                 return 0
             log(f"drift: incremental unavailable for {key}, full re-translation")
@@ -3820,6 +3825,7 @@ def main() -> int:
                 _notify(
                     f"[translate-worker] {reason}: {title}",
                     "\n".join(body_lines),
+                    digest=True,
                 )
         stats = state.setdefault("stats", {})
         stats["total_done"]      = stats.get("total_done", 0) + 1

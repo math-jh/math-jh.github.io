@@ -29,11 +29,38 @@ import shadow_prompts as sp
 MAX_RETRY = 1
 # One call answers at most this many links; a whole article goes in with every chunk.
 MAX_ITEMS = int(__import__("os").environ.get("DEPENDENCY_SHADOW_MAX_ITEMS", "20"))
+# Step 4 and the reveal send their items in batches whose prompt stays under this
+# many bytes.  Half the hard limit: Step 4's second call adds the precedent files on
+# top.  Until 2026-10-31 both sent every item in one call, so a unit with many
+# flagged links (Quasicoherent_Sheaves: 31+ items × ~9.5 KB) overflowed the limit
+# at S2 on every retry — after S2's Step 1 had already spent its Opus calls.
+BATCH_PROMPT_BYTES = models.MAX_PROMPT_BYTES // 2
 
 
 def log(message: str) -> None:
     import dependency_classifier as dc
     dc.log(message)
+
+
+def pack(items: list, size_of, budget: int | None = None,
+         max_items: int | None = None) -> list[list]:
+    """Greedy batches in order: each one's prompt (``size_of(batch)`` bytes) stays
+    within ``budget`` and ``max_items``.  A single item over budget still gets a
+    batch of its own; the model call then refuses it with "prompt exceeds"."""
+    budget = BATCH_PROMPT_BYTES if budget is None else budget
+    max_items = MAX_ITEMS if max_items is None else max_items
+    batches: list[list] = []
+    cur: list = []
+    for item in items:
+        trial = cur + [item]
+        if cur and (len(trial) > max_items or size_of(trial) > budget):
+            batches.append(cur)
+            cur = [item]
+        else:
+            cur = trial
+    if cur:
+        batches.append(cur)
+    return batches
 
 
 def _subset(call: dict, items: list[dict]) -> dict:
@@ -193,6 +220,13 @@ def step4_items(unit: units.Unit, unit_rec: dict, stage: str, lids: list[str]) -
     return items
 
 
+def step4_batches(items: list[dict]) -> list[list[dict]]:
+    p_lines = book.index_lines("P")
+    q_lines = book.index_lines("Q", limit=80)
+    return pack(items, lambda batch: len(sp.step4_prompt(
+        items=batch, precedent_lines=p_lines, pending_lines=q_lines).encode("utf-8")))
+
+
 def run_step4(stage: str, items: list[dict]) -> tuple[dict[str, dict], list[dict]]:
     """Step 4 for a batch: a first call on the index, a second with any files asked for."""
     p_live = {e.id: e for e in book.live("P")}
@@ -287,10 +321,14 @@ def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str]) ->
                       "your_blind_review": mine_view, "lower": lows})
     if not items:
         return []
-    ids = [i["id"] for i in items]
-    payload, usage = models.call(stage, sp.reveal_prompt(items),
-                                 sp.reveal_schema(ids) if stage == "S3" else None)
-    rows = sp.validate_reveal(payload, set(ids))
+    rows: dict[str, dict] = {}
+    usages: list[dict] = []
+    for batch in pack(items, lambda b: len(sp.reveal_prompt(b).encode("utf-8"))):
+        ids = [i["id"] for i in batch]
+        payload, usage = models.call(stage, sp.reveal_prompt(batch),
+                                     sp.reveal_schema(ids) if stage == "S3" else None)
+        rows.update(sp.validate_reveal(payload, set(ids)))
+        usages.append({**usage, "items": len(ids), "step": "reveal"})
     for item in items:
         lid = item["id"]
         result = rows.get(lid)
@@ -311,7 +349,7 @@ def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str]) ->
             elif check["verdict"] == "covered" and check["precedent"]:
                 book.add_opinion(low["pending_id"],
                                  f"{models.PROVIDER[stage]} ({stage}): {check['precedent']} 이(가) 이미 다룬다")
-    return [{**usage, "items": len(ids), "step": "reveal"}]
+    return usages
 
 
 def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | None) -> dict:
@@ -341,11 +379,18 @@ def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | Non
     for lid in forced:
         links[lid]["stages"][stage]["forced"] = True
     if review:
-        rows4, usages = run_step4(stage, step4_items(unit, unit_rec, stage, review))
-        usage.extend(usages)
-        for lid, row in rows4.items():
-            _record_issue(stage, lid, row)
-            links[lid]["stages"][stage]["step4"] = row
+        batches = step4_batches(step4_items(unit, unit_rec, stage, review))
+        if len(batches) > 1:
+            log(f"{stage} step 4: {len(review)} item(s) in {len(batches)} calls")
+        # One batch at a time, recording its issues before the next: each call
+        # reads the open pending issues afresh, so a later batch can attach to an
+        # issue an earlier one raised instead of raising it again.
+        for batch in batches:
+            rows4, usages = run_step4(stage, batch)
+            usage.extend(usages)
+            for lid, row in rows4.items():
+                _record_issue(stage, lid, row)
+                links[lid]["stages"][stage]["step4"] = row
     if lower and forced:
         usage.extend(run_reveal(stage, unit, unit_rec, sorted(forced)))
     return {"stage": stage, "links": len(round_lids), "flagged": len(flagged),

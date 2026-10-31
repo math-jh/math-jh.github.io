@@ -52,7 +52,10 @@ function shMd(src) {
 }
 function shMath(node) {
   if (window.renderMathInElement) {
-    window.renderMathInElement(node, { delimiters: window.KATEX_DELIMITERS, macros: window.KATEX_MACROS,
+    /* 글의 링크 라벨은 `[\[집합론\] §…]`처럼 \[ \] 를 쓰므로 수식 구분자에서 뺀다 —
+       글의 display 수식은 $$…$$ 뿐이다. */
+    var delims = (window.KATEX_DELIMITERS || []).filter(function (d) { return d.left !== '\\['; });
+    window.renderMathInElement(node, { delimiters: delims, macros: window.KATEX_MACROS,
                                        strict: false, throwOnError: false });
   }
 }
@@ -260,6 +263,13 @@ function shStages(stages, keys) {
         esc(v.step4.precedent) + (v.step4.pending ? ' · 쟁점 ' + esc(v.step4.pending) : '') +
         (v.step4.reason ? '<div>' + esc(v.step4.reason) + '</div>' : '') +
         (v.step4.note ? '<div class="muted">차이 메모: ' + esc(v.step4.note) + '</div>' : '') + '</div>';
+    }
+    if (v.recheck) {
+      var rc = v.recheck;
+      h += '<div class="sh-step4">새 판례 ' + esc(rc.trigger || '') + '로 다시 봄 (표결): <b>' +
+        esc(SH_REL[rc.relation] || rc.relation) + '</b> · 판례 ' + esc(rc.precedent || '—') +
+        (rc.pending ? ' · 쟁점 ' + esc(rc.pending) : '') +
+        (rc.reason ? '<div>' + esc(rc.reason) + '</div>' : '') + '</div>';
     }
     c.innerHTML = h;
     w.appendChild(c);
@@ -648,7 +658,15 @@ function shRender() {
   if (!SH.pv || !SH_SEEN[SH.pv.lid]) {
     var next = (SH.after && SH_SEEN[SH.after]) || SH_FIRST;
     SH.after = null;
-    if (next) shSelect(next);
+    if (next) {
+      shSelect(next);
+      /* 새로 고른 카드가 화면 밖이면 그 카드까지만 스크롤한다 — 화면 안이면 그대로 둔다. */
+      var row = document.querySelector('#shadow-root .sh-item--sel');
+      if (row) {
+        var b = row.getBoundingClientRect();
+        if (b.top < 0 || b.bottom > window.innerHeight) row.scrollIntoView({ block: 'center' });
+      }
+    }
   }
 }
 
@@ -663,3 +681,16 @@ window.secShadow = function () {
   setTimeout(function () { shRender(); shPaint(); shLoad(); }, 0);
   return cols;
 };
+
+/* 고른 링크의 판정 단축키 — r 필수, w 배경, f 예고. 설명 칸·입력 칸에 쓰는 중이거나
+   수정키를 같이 누르면 듣지 않는다. 고른 행의 버튼을 그대로 누르므로 동작은 버튼과 같다. */
+document.addEventListener('keydown', function (e) {
+  var rel = { r: 'required', w: 'weak', f: 'forward' }[e.key];
+  if (!rel || e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+  if (e.target.closest && e.target.closest('input, textarea, select, [contenteditable]')) return;
+  var row = document.querySelector('#shadow-root .sh-item--sel');
+  var btn = row && row.querySelector('.sh-rel--' + rel);
+  if (!btn || btn.disabled) return;
+  e.preventDefault();
+  btn.click();
+});

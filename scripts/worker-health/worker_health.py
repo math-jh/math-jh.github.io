@@ -11,8 +11,12 @@
   실패(크래시 등)는 워커 상태에 흔적이 안 남으므로 그대로 알린다.
 * 크론 등록 누락과 blog-autopush.timer 비활성.
 
-모든 조건은 2회 연속 확인 후 한 번 알리고, 복구 때 한 번 더 알린다. 첫 실행은
-현재 이상을 조용히 기준선으로 삼는다. 대시보드가 응답하지 않으면 로그만 남긴다
+모든 조건은 2회 연속 확인 후 한 번 알리고, 복구 때 한 번 더 알린다. 복구는
+CLEAR_SEC(3시간) 동안 정상이 이어져야 확정한다 — 그 사이에 다시 나빠지면 같은
+장애가 이어지는 것으로 보고 새로 알리지 않는다. 2026-10-31 이전에는 정상 판정 한 번에
+바로 '복구'를 보내서, 2시간마다 오류가 떴다 꺼지는 워커 하나가 '오류/복구' 한 쌍을
+하루 12번 보냈다(2주 90통). 첫 실행은 현재 이상을 조용히 기준선으로 삼는다.
+대시보드가 응답하지 않으면 로그만 남긴다
 (대시보드 중단 알림은 pi-health-monitor 몫이다).
 """
 
@@ -34,6 +38,7 @@ SUMMARY_URL = "http://127.0.0.1:8089/api/summary"
 STATE_PATH = HOME / ".local/state/blog-worker-health.json"
 NOTIFY = HOME / ".local/bin/notify"
 THRESHOLD = 2
+CLEAR_SEC = 3 * 3600
 RESUME_GRACE_SLACK = 15 * 60
 
 TRANSLATION_STATE = BLOG / "scripts/translation/translation_state.json"
@@ -140,8 +145,11 @@ class Monitor:
         if bad:
             if old and old.get("muted"):
                 old["body"] = body
+                old.pop("clear_since", None)
                 return
             entry = old or {"count": 0, "alerted": False, "since": now_iso()}
+            if entry.pop("clear_since", None) is not None:
+                log(f"{key}: 복구 확정 전에 재발 — 같은 장애로 이어 본다")
             entry["count"] = int(entry.get("count", 0)) + 1
             entry["body"] = body
             if entry["count"] >= THRESHOLD and not entry.get("alerted"):
@@ -152,7 +160,13 @@ class Monitor:
         if not old:
             return
         if old.get("alerted") and not old.get("muted"):
-            if not self.notify(f"복구: {title}", "현재 점검에서 정상 상태로 돌아왔습니다.",
+            since = float(old.setdefault("clear_since", time.time()))
+            if time.time() - since < CLEAR_SEC:
+                return                          # 복구 확정 대기
+            if self.dry_run:
+                log(f"[dry-run] {key}: {CLEAR_SEC // 3600}시간 정상 — 복구 확정")
+            if not self.notify(f"복구: {title}",
+                               f"{CLEAR_SEC // 3600}시간 동안 정상 상태가 이어졌습니다.",
                                recovery=True):
                 return
         conds.pop(key, None)
@@ -227,7 +241,8 @@ def main() -> int:
     check(m, summary, now)
     m.drop_unseen()
     state["checked_at"] = now_iso()
-    bad = [k for k, v in state.get("conditions", {}).items()]
+    bad = [k + ("(복구 대기)" if v.get("clear_since") else "")
+           for k, v in state.get("conditions", {}).items()]
     if not dry_run:
         save_state(state)
     if initial or bad:

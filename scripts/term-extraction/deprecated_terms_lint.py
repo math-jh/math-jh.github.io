@@ -14,7 +14,7 @@ prose 한정: frontmatter·수식·코드·참고문헌(prose_lines) + 헤딩·�
       deprecated_terms_lint.py --all             (발행글 포함)
       deprecated_terms_lint.py 파일...            (지정 파일만)
       deprecated_terms_lint.py --notify          (cron 용: 베이스라인 대비
-                                                  신규 오염만 텔레그램 알림)
+                                                  신규 오염 중 새로 생긴 것만 하루 요약 알림)
       deprecated_terms_lint.py --write-baseline  (현 잔존을 기지 보류분으로 기록)
 종료코드: 잔존 있으면 1 (--notify 는 신규 있으면 1).
 """
@@ -37,6 +37,10 @@ tier1, protected = _DEPR
 
 # 초안 판정은 terms_common.is_draft 단일 출처 (이중 SoT 감사 [9], 2026-07-22).
 BASELINE = os.path.join(HERE, "deprecated_baseline.txt")
+# 지난 --notify 때의 신규 목록. 베이스라인이 7월 이후 그대로라 같은 ~200건이 매일
+# 다시 알림으로 갔다(2026-10-31 정리). 이제는 이 목록에 없던 것만 알린다. repo 밖에
+# 두어 autopush 가 매일 커밋하지 않게 한다.
+NOTIFIED = os.path.expanduser("~/.local/state/deprecated-terms-notified.txt")
 
 FLAGS = {"--all", "--notify", "--write-baseline"}
 args = [a for a in sys.argv[1:] if a not in FLAGS]
@@ -96,14 +100,31 @@ if notify:
     except OSError:
         base = set()
     new = sorted(keys - base)
-    if new:
+    try:
+        seen = {l.strip() for l in open(NOTIFIED, encoding="utf-8") if l.strip()}
+        seeded = True
+    except OSError:
+        seen, seeded = set(), False
+    fresh = [k for k in new if k not in seen]
+    if fresh and seeded:
         from terms_lint import send_notify
-        ex = ", ".join(k.split("|")[1] for k in new[:5])
-        send_notify(f"영어화 확정 용어의 한국어형 신규 {len(new)}건: "
-                    f"{ex}{' …' if len(new) > 5 else ''} "
+        ex = ", ".join(k.split("|")[1] for k in fresh[:5])
+        send_notify(f"영어화 확정 용어의 한국어형 신규 {len(fresh)}건 늘어 "
+                    f"(베이스라인 밖 누적 {len(new)}건): "
+                    f"{ex}{' …' if len(fresh) > 5 else ''} "
                     f"(deprecated_terms_lint.py 로 확인)",
-                    subject="[용어 린트]")
-        print(f"신규 {len(new)}건 알림")
+                    subject="[용어 린트]", digest=True)
+        print(f"신규 {len(new)}건 중 새로 생긴 {len(fresh)}건 알림")
+    elif fresh:
+        print(f"신규 {len(new)}건 — 지난 알림 목록이 없어 이번 것을 기준으로 기록만 함")
+    else:
+        print(f"신규 {len(new)}건 — 지난 알림과 같음, 알림 생략")
+    try:
+        os.makedirs(os.path.dirname(NOTIFIED), exist_ok=True)
+        with open(NOTIFIED, "w", encoding="utf-8") as f:
+            f.write("\n".join(new) + ("\n" if new else ""))
+    except OSError as e:
+        print(f"알림 목록 기록 실패: {e}")
     sys.exit(1 if new else 0)
 
 sys.exit(1 if total else 0)

@@ -18,6 +18,8 @@ from unittest.mock import patch
 TMP = tempfile.mkdtemp(prefix="shadow-test-")
 os.environ["DEPENDENCY_SHADOW_STATE_DIR"] = TMP
 os.environ["DEPENDENCY_SHADOW_BOOK_DIR"] = str(Path(TMP) / "book")
+# Rounds finalize and call dc.notify; tests must not reach the phone (or the digest).
+os.environ["DEPENDENCY_NOTIFY_BIN"] = "/bin/true"
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent / "dashboard"))
@@ -434,6 +436,71 @@ class ScopeTest(unittest.TestCase):
                 patch.object(shadow_tick, "out_of_scope", return_value={"paused"}):
             ids = {c["id"] for c in shadow_digest._recheck_candidates([ruled])}
         self.assertEqual(ids, {"live-link"})
+
+
+class StepFourBatchingTest(unittest.TestCase):
+    # Named to sort after BookTest/EndToEnd: these rounds share the module's temp book.
+    """Step 4 and the reveal split their items so no prompt overflows (2026-10-31)."""
+
+    def test_pack(self):
+        sizes = {"a": 5, "b": 5, "c": 5, "d": 20}
+        out = pipe.pack(list("abcd"), lambda b: sum(sizes[x] for x in b), budget=10, max_items=5)
+        self.assertEqual(out, [["a", "b"], ["c"], ["d"]])          # d alone, over budget
+        self.assertEqual(pipe.pack(list("abc"), lambda b: 0, budget=10, max_items=2),
+                         [["a", "b"], ["c"]])
+
+    def test_round_with_one_item_per_call(self):
+        """The end-to-end round, with every Step 4 / reveal call holding one item."""
+        import shadow_tick as tick
+        import shadow_units as units
+        e2e = EndToEndFakeModelTest()
+        prompts = []
+
+        def call(stage, prompt, schema=None):
+            if not prompt.startswith(sp.STEP1_HEAD[:40]):
+                prompts.append(len(e2e._items(prompt)))
+            return e2e.fake_call(stage, prompt, schema)
+
+        paths = next(p for p in units.all_units() if EndToEndFakeModelTest.POST in p)
+        state = {"units": {}, "started_at": time.time() - 30 * 86400}
+        with patch.object(models, "call", side_effect=call), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(pipe, "BATCH_PROMPT_BYTES", 1), \
+                patch.object(tick, "dirty_paths", return_value=[]), \
+                patch.object(tick, "commit_outputs", return_value=True):
+            for stage, why in (("S1", "new"), ("S2", "continue"), ("S3", "continue")):
+                self.assertEqual(tick.run(state, paths, stage, units.load_unit(paths), why,
+                                          commit=False), 0)
+        self.assertIsNone(state["units"][units.load_unit(paths).key]["next"])
+        self.assertTrue(prompts)
+        self.assertEqual(set(prompts), {1})
+
+
+class UnitParkingTest(unittest.TestCase):
+    """A prompt over the byte limit parks the unit instead of retrying hourly."""
+
+    def test_oversize_parks_quietly(self):
+        import shadow_tick as tick
+        import shadow_units as units
+        paths = next(p for p in units.all_units() if EndToEndFakeModelTest.POST in p)
+        unit = units.load_unit(paths)
+        state = {"units": {}, "started_at": time.time()}
+        logged, sent = [], []
+        with patch.object(models, "call",
+                          side_effect=models.ModelError("prompt exceeds 400000 bytes")), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(tick, "log", side_effect=logged.append), \
+                patch.object(dc, "notify", side_effect=lambda *a, **k: sent.append(k)), \
+                patch.object(tick, "dirty_paths", return_value=[]):
+            self.assertEqual(tick.run(state, paths, "S1", unit, "new", commit=False), 0)
+            self.assertEqual(tick.run(state, paths, "S1", unit, "new", commit=False), 0)
+        entry = state["units"][unit.key]
+        self.assertEqual(entry["parked_fp"], unit.fingerprint)
+        self.assertGreater(entry["retry_after"], time.time() + 6 * 86400)
+        self.assertFalse(any(dc_err in line.lower() for line in logged
+                             for dc_err in ("error", "failed", "failure")))
+        self.assertEqual(len(sent), 1)                     # announced once, to the digest
+        self.assertTrue(sent[0].get("digest"))
 
 
 if __name__ == "__main__":

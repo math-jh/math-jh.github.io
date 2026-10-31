@@ -106,10 +106,11 @@ def release_lock() -> None:
 
 
 def send_notify(msg: str, subject: str = "[terms_lint]",
-                ttl: int | None = 86400) -> None:
+                ttl: int | None = 86400, digest: bool = False) -> None:
     """알림 한 통. 벤더는 shim(~/.local/bin/notify) 안에만 있다.
 
-    deprecated_terms_lint.py 가 이 함수를 import 해서 쓴다.
+    deprecated_terms_lint.py 가 이 함수를 import 해서 쓴다. digest=True 는 shim 의
+    하루 요약으로 미룬다(급하지 않은 정보성 알림).
     """
     import subprocess
     notify = Path.home() / ".local/bin/notify"
@@ -117,6 +118,8 @@ def send_notify(msg: str, subject: str = "[terms_lint]",
         cmd = [str(notify), "-s", subject, "-b", msg, "-g", "blog"]
         if ttl is not None:
             cmd.extend(["--archive", "--ttl", str(ttl)])
+        if digest:
+            cmd.append("--digest")
         r = subprocess.run(cmd,
                            capture_output=True, text=True, timeout=20)
         if r.returncode != 0:
