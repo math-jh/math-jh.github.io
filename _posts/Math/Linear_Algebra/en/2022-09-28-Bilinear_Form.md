@@ -77,7 +77,7 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 to be the orthogonal complement of $S$.
 :::
 
-The vector $w\in V$ uniquely determines, by [Corollary 3](#cor3){: data-lid="xwfq2" }, an element $f\in V^\ast$; the definition above means that if the $f$ thus obtained belongs, in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7){: data-lid="hvju7" }, to the orthogonal complement of $v$, we regard $w$ as orthogonal to $v$, and take the collection of such $w$ to be the orthogonal complement. Through this process, all results of [§Dual Space](/en/math/linear_algebra/dual_space){: data-lid="qrjjp" } can be transferred to $V$. In the remainder of this post, we examine this process in detail.
+The vector $v\in V$ uniquely determines, by [Corollary 3](#cor3){: data-lid="xwfq2" }, an element $f\in V^\ast$; the definition above means that if $w$ belongs, in the sense of [§Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7){: data-lid="hvju7" }, to the orthogonal complement of the $f$ thus obtained, we regard $w$ as orthogonal to $v$, and take the collection of such $w$ to be the orthogonal complement. Through this process, all results of [§Dual Space](/en/math/linear_algebra/dual_space){: data-lid="qrjjp" } can be transferred to $V$. In the remainder of this post, we examine this process in detail.
 
 For a general bilinear form, using $\langle w,v\rangle=0$ to define $v^\perp$ and using $\langle v,w\rangle=0$ may give different results, so the definition of $W^\perp$ can vary depending on whether it is defined from the left or from the right. To avoid such a phenomenon, it is wise to consider the following property.
 
