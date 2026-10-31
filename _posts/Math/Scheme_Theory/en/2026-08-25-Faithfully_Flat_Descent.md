@@ -49,7 +49,7 @@ the image of
 
 $$\im(g\circ f)\otimes_A B \rightarrow M''\otimes_A B$$
 
-coming from the inclusion is also $0$. However, viewing this map as arising from $\im(g\circ f)\hookrightarrow M''$, since $B$ is flat the above morphism is also injective; thus by faithfulness $\im(g\circ f)=0$, and $\im f\subseteq \ker g$ holds. Now, to verify exactness it suffices to show that $H=\ker g/\im f$ is $0$, which is immediate since $B$ is flat. By the same argument as before, faithfulness gives $H=0$, and therefore the original sequence is exact.
+coming from the inclusion is also $0$. However, viewing this map as arising from $\im(g\circ f)\hookrightarrow M''$, since $B$ is flat the above morphism is also injective; thus by faithfulness $\im(g\circ f)=0$, and $\im f\subseteq \ker g$ holds. Now, to verify exactness it suffices to show that $H=\ker g/\im f$ is $0$, and that $H\otimes_A B=0$ is immediate since $B$ is flat. By the same argument as before, faithfulness gives $H=0$, and therefore the original sequence is exact.
 
 Conversely, assume the second condition and let us prove the first. If $M\otimes_A B=0$, then since the sequence $0 \rightarrow M \rightarrow 0$ is exact after $-\otimes_A B$, by assumption $0 \rightarrow M \rightarrow 0$ is exact. That is, $M=0$, and $\phi$ is faithfully flat.
 
