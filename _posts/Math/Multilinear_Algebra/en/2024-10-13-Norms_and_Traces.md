@@ -106,7 +106,7 @@ Conversely, suppose that $N_{E/A}(\alpha)$ is invertible in $A$. Then the $A$-mo
 
 $$h : x \mapsto \alpha x$$
 
-is injective, and since $E$ is finitely generated, $h$ is bijective. Now if we take an element satisfying $\alpha\alpha' = 1$, say $\alpha' \in E$, then
+has determinant $N_{E/A}(\alpha)$, which is invertible in $A$, so $h$ is bijective. Now if we take an element satisfying $\alpha\alpha' = 1$, say $\alpha' \in E$, then
 
 $$h(\alpha'\alpha- 1) = \alpha\alpha'\alpha - \alpha = (\alpha\alpha' - 1)\alpha = 0$$
 
