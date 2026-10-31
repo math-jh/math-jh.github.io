@@ -162,7 +162,7 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 The following proposition generalizes this further. 
 
 ::: Proposition 5
-Under the above assumptions and notation, suppose given a polynomial in the indeterminates $T_1, \dots, T_n$, $F \in A[T_1, \dots, T_n]$. That is, $F(T)$, $F(T')$ mean
+Under the above assumptions and notation, for mutually commuting derivations $D_1, \dots, D_n$ of $(E, E', E'')$, let $D=(D_1, \dots, D_n)$, and suppose given a polynomial in the indeterminates $T_1, \dots, T_n$, $F \in A[T_1, \dots, T_n]$. That is, $F(T)$, $F(T')$ mean
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
 
