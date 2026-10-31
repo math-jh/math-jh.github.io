@@ -76,7 +76,7 @@ Therefore, if we now compute the remainder term in the above theorem and show th
 Let us follow through these calculations in a few concrete examples.
 
 ::: Example 3
-Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation](/en/math/calculus/differentiation_rules){: data-lid="0zmhp" }, for any $k$ we have $f^{(k)}(0) = 1$. Therefore, the Taylor polynomial is
+Since any derivative of $f(x) = e^x$ is itself, as verified in [§Differentiation, §§Derivatives of Trigonometric and Exponential Functions](/en/math/calculus/differentiation_rules#derivatives-of-trigonometric-and-exponential-functions){: data-lid="0zmhp" }, for any $k$ we have $f^{(k)}(0) = 1$. Therefore, the Taylor polynomial is
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}$$
 

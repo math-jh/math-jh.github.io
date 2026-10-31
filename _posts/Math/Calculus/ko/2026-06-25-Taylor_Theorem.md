@@ -74,7 +74,7 @@ $$(-R_n(x))\bigl(-(n+1)(x-c)^n\bigr) = \bigl(-(x-a)^{n+1}\bigr)\left(-\frac{f^{(
 실제 몇몇 예시에서 이들 계산을 따라가보자.
 
 ::: 예시 3
-$f(x) = e^x$의 임의의 미분은 자기 자신인 것을 [§미분법](/ko/math/calculus/differentiation_rules){: data-lid="0zmhp" }에서 확인하였으므로, 임의의 $k$에 대하여 $f^{(k)}(0) = 1$이다. 따라서 테일러 다항식은
+$f(x) = e^x$의 임의의 미분은 자기 자신인 것을 [§미분법, §§삼각함수와 지수함수의 도함수](/ko/math/calculus/differentiation_rules#삼각함수와-지수함수의-도함수){: data-lid="0zmhp" }에서 확인하였으므로, 임의의 $k$에 대하여 $f^{(k)}(0) = 1$이다. 따라서 테일러 다항식은
 
 $$P_n(x) = \sum_{k=0}^n \frac{x^k}{k!}$$
 
