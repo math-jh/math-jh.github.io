@@ -1,6 +1,6 @@
 ---
 title: "Determinants"
-description: "We define the determinant on a free abelian group and prove its basic properties. We cover the multiplication formula, invertibility, and its relationship with the invertibility of linear maps on finite-dimensional free abelian groups."
+description: "We define the determinant on a free module and prove its basic properties. We cover the multiplication formula, invertibility, and its relationship with the invertibility of linear maps on free modules with a finite basis."
 excerpt: "Determinant of an endomorphism of a free module and its basic properties"
 
 categories: [Math / Multilinear Algebra]
@@ -95,7 +95,7 @@ so it suffices to apply the preceding lemma.
 ::: Corollary 6
 Suppose a free $A$-module $M$ has a finite basis $(e_i)_{1\leq i\leq n}$. Then for any $u\in\End_\rMod{A}(M)$ and $\alpha,\beta\in A$, we obtain the following formula:
 
-$$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
+$$\det(\alpha\cdot\id_M+\beta u)=\sum_{k=0}^n\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
 :::
 ::: Proof
 The left-hand side arises from reducing the following wedge product:
