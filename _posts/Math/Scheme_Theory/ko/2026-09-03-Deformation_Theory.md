@@ -11,6 +11,7 @@ sidebar:
 date: 2026-09-03
 
 weight: 22
+drift_needed: true
 ---
 
 ## 소박한 여접 복합체
@@ -376,7 +377,33 @@ $$(\t+a\t^2)(\t+b\t^2)\equiv\t^2\neq0\pmod{\t^3}$$
 
 이므로 이차로 연장할 수 없다. 즉 tangent vector를 정하는 것과, 그 속도로 출발하여 공간 안에 머무는 경로를 차수별로 구성하는 것은 별개의 문제가 된다. 우리 상황에서는 출발 속도가 주어진 first-order deformation에 대응하고, 경로의 고차 보정은 이미 정해진 일차항을 유지하면서 flatness를 만족하도록 방정식에 고차항을 더하는 것에 대응한다. 고차 변형이론은 이러한 보정으로 deformation을 계속 연장할 수 있는지를 살펴보는 역할을 한다.
 
-이를 직관적으로 살펴보기 위해 앞에서 고정한 presentation
+::: 예시 7 (Node 위의 점)
+Node $C=A[\x,\y]/(\x\y)$의 원점, 곧 $\x,\y\mapsto0$으로 주어지는 $A$-algebra homomorphism $C\rightarrow A$를 움직이는 문제를 생각하자. 이는 [정의 1](#def1) 직전의 lifting problem에서 $B=A[\x,\y]$, $f=\x\y$, $\mathfrak{a}=(f)$로 둔 경우이다.
+
+먼저 곡선을 고정하고 점만 움직이자. 원점을 $A[\t]/(\t^2)$로 들어올린 것은 $\x\mapsto a\t$, $\y\mapsto b\t$ ($a,b\in A$)의 꼴이고, $(a\t)(b\t)=0$이므로 이들은 모두 $C$를 거친다. 즉 일차에서는 모든 속도 $(a,b)\in\Der_A(C,A)\cong A^2$이 허용된다. 이제 $\mathfrak{b}=(\t^2)$를 kernel로 갖는 $R=A[\t]/(\t^3)\rightarrow R_0=A[\t]/(\t^2)$를 따라 이를 들어올리면, lift $\widetilde{\rho}$는 $\x\mapsto a\t+a'\t^2$, $\y\mapsto b\t+b'\t^2$의 꼴이고
+
+$$\delta(\bar{f})=\widetilde{\rho}(\x\y)=(a\t+a'\t^2)(b\t+b'\t^2)=ab\t^2$$
+
+이다. 즉 보정 $a',b'$은 $\t^2$의 계수에 나타나지 않는다. 실제로 lift를 $h\in\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$만큼 바꿀 때 $\delta$가 변하는 양
+
+$$\bar{d}^\ast(h)(\bar{f})=h(\dd{f})=\rho_0(\y)h(\dd{\x})+\rho_0(\x)h(\dd{\y})$$
+
+은 $\rho_0(\x)=a\t$, $\rho_0(\y)=b\t$가 $\mathfrak{b}$를 소멸시키므로 $0$이다. 따라서 $\bar{d}^\ast=0$이고, $\mathfrak{a}/\mathfrak{a}^2$가 $\bar{f}$로 생성되는 free $C$-module이므로 $T^1(C/A,\mathfrak{b})\cong\mathfrak{b}\cong A$이며 obstruction은 $[\delta]=ab$이다. 특히 $A$가 field이면 속도 $(a,b)$가 second order로 연장되는 것은 점이 두 축 가운데 하나를 따라 움직이는 경우뿐이다.
+
+이번에는 [정의 3](#def3) 앞에서 본 family $\x\y=\t$의 parameter를 $\s$로 바꾸어 적고, 곡선과 점을 함께 움직이자. 곡선의 parameter와 그 위의 점의 쌍은
+
+$$\widetilde{C}=A[\s,\x,\y]/(\x\y-\s)$$
+
+의 점이므로, 이는 $\widetilde{C}$의 원점을 들어올리는 문제이다. 일차에서 lift는 $\x\mapsto a\t$, $\y\mapsto b\t$, $\s\mapsto c\t$의 꼴이고 $\x\y-\s\mapsto ab\t^2-c\t\equiv-c\t\pmod{\t^2}$이므로 $c=0$이어야 한다. 즉 node 위에 점을 둔 채로는 곡선이 일차에서 펴질 수 없으며, 이는 [예시 6](#ex6)에서 $\x\y=\epsilon$이 원점 위의 점을 갖지 않았던 것과 같은 현상이다. 그러나 이차에서는 $\s\mapsto c'\t^2$이 허용되어
+
+$$\widetilde{\rho}(\x\y-\s)\equiv(ab-c')\t^2\pmod{\t^3}$$
+
+이 되고, $c'=ab$로 택하면 오차가 사라진다. 이 경우 $\bar{d}^\ast(h)(\overline{\x\y-\s})=-h(\dd{\s})$이므로 $\bar{d}^\ast$는 surjective이고 $T^1(\widetilde{C}/A,\mathfrak{b})=0$이다. 실제로 $\widetilde{C}\cong A[\x,\y]$는 smooth하다. ([명제 2](#prop2))
+
+두 경우 모두 obstruction은 남는 오차를 보정이 만들 수 있는 변화로 나눈 것이다. 첫째 경우에는 보정 $a',b'$이 오차 $ab\t^2$를 바꾸지 못하지만, 둘째 경우에는 곡선의 이차 변형 $c'\t^2$가 이를 상쇄한다. 가령 앞에서 본 $\x=\t$, $\y=\t$는 고정된 node 위에서는 이차로 연장되지 않지만, 곡선을 $\x\y=\t^2$으로 함께 움직이면 그 위에 모든 차수에서 머문다.
+:::
+
+이제 $C$ 자신의 deformation을 연장하는 문제를 살펴보기 위해 앞에서 고정한 presentation
 
 $$C=B/\mathfrak{a},\qquad B=A[\x_1,\ldots,\x_n],\qquad \mathfrak{a}=(f_1,\ldots,f_m)$$
 
@@ -431,7 +458,7 @@ $$B^m\rightarrow\mathfrak{a};\qquad e_j\mapsto f_j$$
 
 의 kernel $\Rel$의 원소들이다. 이들 방정식들 사이의 *trivial relation*이란 이들 방정식이 $B$의 commutativity에 의해 만족해야 하는 trivial relation들로, 가령 $f_if_j-f_jf_i=0$와 같은 식을 의미한다. 이는 $B^m$의 원소로서는 $j$번째 성분이 $f_i$이고 $i$번째 성분이 $-f_j$이며 나머지 성분이 $0$인 원소 $f_ie_j-f_je_i\in\Rel$에 대응하며, 이러한 원소들이 생성하는 submodule을 $\TrivRel\subseteq\Rel$이라 하자. 이러한 trivial relation들은 $B$의 commutativity에 의해 언제나 성립하므로 obstruction을 만드는 데 아무런 역할을 하지 않는다. 따라서 이들을 $\Rel$에서 지워낸 quotient module $\Rel/\TrivRel$을 생각하면 된다.
 
-::: 정의 7
+::: 정의 8
 Finitely presented $A$-algebra $C=B/\mathfrak{a}$에 대하여, *Lichtenbaum–Schlessinger complex<sub>리히텐바움-슐레진저 복합체</sub>* $\operatorname{LS}_{C/A}$는
 
 $$\operatorname{LS}_{C/A}=\Bigl[\at{2}{\Rel/\TrivRel}\overset{d_2}{\rightarrow}\at{1}{B^m\otimes_BC}\overset{d_1}{\rightarrow}\at{0}{\Omega_{B/A}\otimes_BC}\Bigr]$$
@@ -459,7 +486,7 @@ $$\sum_jc_jg_j\equiv\sum_ja_jh_j\pmod{\mathfrak{a}}$$
 
 를 만족시키는 $h_j\in B$가 존재하는 것이었다. 그런데 우변은 $h=(\bar{h}_1,\ldots,\bar{h}_m)\in\Hom_C(B^m\otimes_BC,C)$가 미분 $d_2$를 따라 만드는 coboundary의 $a$에서의 값이다. 따라서 이러한 $h_j$가 존재하는 것은 $\eta$가 coboundary인 것, 곧 $[\eta]=0\in T^2(C/A,C)$인 것과 정확히 동치이며 바로 이때 second-order deformation이 존재한다. 즉 다음이 성립한다. 
 
-::: 정리 8
+::: 정리 9
 First-order deformation $\xi\in T^1(C/A,C)$가 $A[\t]/(\t^3)$ 위의 flat deformation으로의 extension이 존재하는 것은 $\ob(\xi)=0$인 것과 동치이다.
 :::
 
@@ -481,9 +508,9 @@ $$\tau_{\leq1}\LL_{C/A}\simeq\NL_{C/A},\qquad \tau_{\leq2}\LL_{C/A}\simeq\operat
 
 $$T^i(C/A,M)=\Ext^i_C(\LL_{C/A},M)$$
 
-로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 extension이 존재할 때 그 선택들의 차이를 나타내며 ([정리 5](#thm5){: data-lid="5kmzi" }), $T^2$는 extension의 obstruction을 통제한다. ([정리 8](#thm8){: data-lid="gqa0w" }). 이제 [명제 2](#prop2){: data-lid="h13ib" }의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
+로 놓으면, $T^0$는 infinitesimal automorphism을, $T^1$은 first-order deformation과 extension이 존재할 때 그 선택들의 차이를 나타내며 ([정리 5](#thm5){: data-lid="5kmzi" }), $T^2$는 extension의 obstruction을 통제한다. ([정리 9](#thm9){: data-lid="gqa0w" }). 이제 [명제 2](#prop2){: data-lid="h13ib" }의 smoothness 판정을 full cotangent complex에 적용하면 deformation의 모든 degree에 대한 다음 결론을 얻는다.
 
-::: 명제 9
+::: 명제 10
 $C$가 $A$ 위에서 smooth하면 모든 $C$-module $M$에 대하여
 
 $$T^i(C/A,M)=0\qquad(i>0)$$
@@ -516,7 +543,7 @@ $$0\rightarrow M_C\rightarrow C'\rightarrow C\rightarrow0$$
 
 $$\eta:\Rel/\TrivRel\rightarrow M_C$$
 
-를 얻을 수 있으며, 이 때 presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$가 잘 정의되었다. 이 class가 바로 obstruction class로, 우리는 $[\eta]=0$인 것이 이러한 square-zero extension $C'$의 존재성과 동치임을 안다. 이 관점에서 앞선 [정리 8](#thm8){: data-lid="orkga" }은 first-order deformation $\xi$를 second order로 lifting하는 특수한 경우의 결과였다. 그럼 obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
+를 얻을 수 있으며, 이 때 presentation과 lift의 선택을 바꾸면 $\eta$는 coboundary만큼 변하므로 그 class $[\eta]\in T^2(C/A,M_C)$가 잘 정의되었다. 이 class가 바로 obstruction class로, 우리는 $[\eta]=0$인 것이 이러한 square-zero extension $C'$의 존재성과 동치임을 안다. 이 관점에서 앞선 [정리 9](#thm9){: data-lid="orkga" }은 first-order deformation $\xi$를 second order로 lifting하는 특수한 경우의 결과였다. 그럼 obstruction이 사라졌을 때 deformation들의 isomorphism class는 $T^1(C/A,M_C)$ 위의 torsor를 이루고, 각 deformation의 infinitesimal automorphism은 $T^0(C/A,M_C)$이 분류한다.
 
 이제 남은 일은 이 계산을 일반적인 scheme으로 올리는 것이다. 이를 위해서는 먼저 base의 square-zero thickening을 정하고, 각 affine 조각 위에서 flat family를 만든 다음, 두 조각의 overlap에서 이 family들을 식별하는 isomorphism을 골라야 한다. 마지막으로 이 isomorphism들이 triple overlap에서 cocycle 조건을 만족해야 비로소 하나의 scheme deformation이 된다. 뿐만 아니라, cotangent complex도 affine 조각마다 계산한 뒤 restriction과 compatible하도록 붙여야 한다. 이 절에서는 이 과정을 모두 다시 수행하는 대신, 어느 층위에서 어떤 data와 obstruction이 나타나는지 밝히고 이들이 하나의 global $\Ext$로 조립되는 과정을 정리한다.
 
@@ -526,7 +553,7 @@ $$(a,u)(b,v)=(ab,av+bu)$$
 
 을 주면, 이는 $\mathcal{I}^2=0$인 $\mathcal{O}_S$-algebra가 된다. 그럼 이에 대한 relative spectrum $S[\mathcal{I}]=\rSpec_S(\mathcal{O}_S\oplus\mathcal{I})$은 $S$의 split square-zero thickening이고, 특히 $\mathcal{I}=\mathcal{O}_S$인 경우 우리는 이를 $S[\epsilon]$이라 적는다. $S=\Spec A$이면 이는 앞에서 사용한 $\Spec(A[\epsilon])$과 같으며, 더 일반적으로는 square-zero ideal sheaf $\mathcal{I}=\ker(\mathcal{O}_{S'}\rightarrow\mathcal{O}_S)$로 정의된 closed embedding $S\hookrightarrow S'$을 base의 thickening으로 사용할 수 있다.
 
-::: 정의 10
+::: 정의 11
 Flat morphism $f:X_0\rightarrow S$, square-zero ideal sheaf $\mathcal{I}$가 정의하는 closed embedding $i:S\hookrightarrow S'$에 대하여, $X_0$의 $S'$ 위로의 *deformation<sub>변형</sub>*이란 flat $S'$-scheme $X$와 $S$-isomorphism
 
 $$\iota:X\times_{S'}S\xrightarrow{\sim}X_0$$
@@ -568,7 +595,7 @@ $$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qq
 
 로 적는다. 그럼 다음 정리는 affine scheme에서 살펴보았던 것들을 하나로 정리한 것이다.
 
-::: 정리 11 (Deformation theorem)
+::: 정리 12 (Deformation theorem)
 Flat하고 separated이며 locally of finite presentation인 morphism $f:X_0\rightarrow S$와, $S$의 square-zero ideal sheaf $\mathcal{I}$가 정의하는 extension $S\hookrightarrow S'$이 주어졌다 하고, $\mathcal{G}=f^\ast\mathcal{I}$라 하자. 그럼 canonical obstruction class
 
 $$\ob(X_0/S')\in T^2(X_0/S,\mathcal{G})$$
@@ -578,7 +605,7 @@ $$\ob(X_0/S')\in T^2(X_0/S,\mathcal{G})$$
 
 특히 $S'=S[\epsilon]$인 경우, first-order deformation들의 isomorphism class는 $T^1(X_0/S)$와 자연스럽게 일대일 대응하며 trivial deformation은 $0$에 대응한다.
 
-위의 [정리 11](#thm11){: data-lid="z7f7e" }에서 얻은 불변량 $T^i(X_0/S)$는 cotangent complex의 global $\Ext$로 정의되므로, 각 affine 조각 위에서의 정보를 직접 읽어내기 위해서는 *sheaf Ext*
+위의 [정리 12](#thm12){: data-lid="z7f7e" }에서 얻은 불변량 $T^i(X_0/S)$는 cotangent complex의 global $\Ext$로 정의되므로, 각 affine 조각 위에서의 정보를 직접 읽어내기 위해서는 *sheaf Ext*
 
 $$\sExt^q_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})=R^q\sHom_{\mathcal{O}_{X_0}}(\mathcal{F},\mathcal{G})$$
 
@@ -594,7 +621,7 @@ $$E_2^{p,q}=H^p(X_0,\mathcal{T}_{X_0/S}^q)\Rightarrow T^{p+q}(X_0/S)$$
 
 가 된다. 이 spectral sequence의 낮은 차수 항들을 읽으면 다음을 얻는다.
 
-::: 정리 12 (Local-to-global exact sequence)
+::: 정리 13 (Local-to-global exact sequence)
 $X_0$가 $S$ 위에서 flat하고 separated이며 locally of finite presentation인 scheme이라 하자. 이때 exact sequence
 
 $$0\rightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\rightarrow T^1(X_0/S)\rightarrow H^0(X_0,\mathcal{T}_{X_0/S}^1)\overset{d_2}{\rightarrow}H^2(X_0,\mathcal{T}_{X_0/S}^0)\rightarrow T^2(X_0/S)$$
@@ -611,7 +638,7 @@ $$0\rightarrow H^1(X_0,\mathcal{T}_{X_0/S}^0)\rightarrow T^1(X_0/S)\rightarrow H
 
 또한 degree $0$에서는 $E_2^{0,0}=E_\infty^{0,0}$이므로 자연스러운 isomorphism $T^0(X_0/S)\cong H^0(X_0,\mathcal{T}_{X_0/S}^0)$이 성립하며, 이는 global infinitesimal automorphism이 곧 각 조각의 local automorphism들의 global section으로 이루어짐을 보여준다.
 
-::: 따름정리 13
+::: 따름정리 14
 $X_0$가 $S$ 위에서 smooth하면 모든 $i$에 대하여
 
 $$T^i(X_0/S)\cong H^i(X_0,\mathcal{T}_{X_0/S})$$
@@ -619,7 +646,7 @@ $$T^i(X_0/S)\cong H^i(X_0,\mathcal{T}_{X_0/S})$$
 이다. 특히 first-order deformation들의 isomorphism class는 $H^1(X_0,\mathcal{T}_{X_0/S})$가 분류한다.
 :::
 ::: 증명
-Smooth한 경우 $\LL_{X_0/S}\simeq\Omega_{X_0/S}$이고 $\Omega_{X_0/S}$가 locally free이므로 $q>0$에서 $\mathcal{T}_{X_0/S}^q=0$이며 $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$이다. 따라서 [정리 12](#thm12){: data-lid="51og8" }의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
+Smooth한 경우 $\LL_{X_0/S}\simeq\Omega_{X_0/S}$이고 $\Omega_{X_0/S}$가 locally free이므로 $q>0$에서 $\mathcal{T}_{X_0/S}^q=0$이며 $\mathcal{T}_{X_0/S}^0=\sHom_{\mathcal{O}_{X_0}}(\Omega_{X_0/S},\mathcal{O}_{X_0})=\mathcal{T}_{X_0/S}$이다. 따라서 [정리 13](#thm13){: data-lid="51og8" }의 spectral sequence가 $q=0$인 한 행으로 퇴화한다.
 :::
 
 ---
