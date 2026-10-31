@@ -31,7 +31,7 @@ Suppose two associative unital graded $A$-algebras $E,F$ are given, and let $M$ 
 The proof of this is obvious from the definition of $\rho^\ast$. Meanwhile, in such a situation we can also endow $F$ with an $(E,E)$-bimodule structure. It is then natural to examine when $d':F \rightarrow N$ is also (left/right) $E$-linear. 
 
 ::: Proposition 2
-Assuming the situation of [Proposition 1](#prop1){: data-lid="u3lh3" }, let an $\varepsilon$-derivation $d': F \rightarrow N$ be given. Then $d'$ is left (resp. right) $E$-linear if and only if $d'$ is, on the subalgebra of $F$, $\rho(E)$, identically $0$. 
+Assuming the situation of [Proposition 1](#prop1){: data-lid="u3lh3" }, let an $\varepsilon$-derivation $d': F \rightarrow N$ be given. Then $d'$ is left (resp. right) $E$-linear if and only if $d'$ is, on the subalgebra of $F$, $\rho(E)$, identically $0$. Here, letting the degree of $d'$ be $\delta$, that $d'$ is left $E$-linear means that $d'(\rho(e)x)=\varepsilon(\delta,\deg(e))\rho(e)d'(x)$.
 :::
 
 Now let us define $\Der_A(F, N)$ to be the collection of derivations from $F$ to $N$ that are $A$-derivations. Then the collection of derivations satisfying the condition of [Proposition 2](#prop2){: data-lid="l73b2" } and becoming $E$-linear coincides with the collection of derivations identically zero on $\rho(E)$, so this collection forms, in $\Der_A(F, N)$, an $A$-submodule. Let us denote this by $\Der_E(F,N)$. 
@@ -92,7 +92,7 @@ Then, regarding $B$ as a $\mathbb{Z}$-algebra, from $B$ to $E$ there exists a un
 ::: Proof
 First, define multiplication on the abelian group $B \oplus E$ by the formula
 
-$$(b, t)(b', t') = (bb', bt' + b't)$$
+$$(b, t)(b', t') = (bb', bt' + tb')$$
 
 and regard this as an associative $\mathbb{Z}$-algebra. Then via the canonical injection $t\mapsto (0,t)$, we can identify $E$ with a two-sided ideal of the $\mathbb{Z}$-algebra $B\oplus E$, and in this case $E^2=0$.
 
@@ -376,7 +376,7 @@ In the notation of the preceding argument, we can identify $\Omega_{E/A}\otimes_
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 
-and through this we obtain the desired result.
+On the other hand, for any $E'$-module $N$, $\Der_A(E',N)$ is equal to the elements of $\Der_A(E,N)$ that are $0$ on $\mathfrak{I}$, and since these correspond to the elements of $\Hom_E(\Omega_{E/A},N)$ that send $I$ to $0$, that is, the elements of $\Hom_{E'}(\Omega_{E/A}/I,N)$, the map $\Omega_{E/A}/I\rightarrow\Omega_{E'/A}$ induced by $\Omega_0(u)$ is an isomorphism. Through this we obtain the desired result.
 :::
 
 ---
