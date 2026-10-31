@@ -374,7 +374,7 @@ $$\left(1-\frac{\t^2}{2}\right)^2+\t^2-1=\frac{\t^4}{4}$$
 다음은 이러한 보정이 불가능한 예시이다.
 
 ::: 예시 7 (Node 위의 점)
-[예시 6](#ex6)에서는 node $C=A[\x,\y]/(\x\y)$ 자신을 deform하였다. 이번에는 그 원점 $\x,\y\mapsto0$을 [정의 1](#def1) 직전의 lifting problem으로 움직여 보자. 일차에서는 $(a\t)(b\t)=0$이므로, 임의의 $a,b\in A$에 대하여 $\x\mapsto a\t$, $\y\mapsto b\t$가 $C\rightarrow A[\t]/(\t^2)$를 정의한다.
+[예시 6](#ex6){: data-lid="dx6hj" }에서는 node $C=A[\x,\y]/(\x\y)$ 자신을 deform하였다. 이번에는 그 원점 $\x,\y\mapsto0$을 [정의 1](#def1){: data-lid="0r607" } 직전의 lifting problem으로 움직여 보자. 일차에서는 $(a\t)(b\t)=0$이므로, 임의의 $a,b\in A$에 대하여 $\x\mapsto a\t$, $\y\mapsto b\t$가 $C\rightarrow A[\t]/(\t^2)$를 정의한다.
 
 곡선을 고정하고 점만 움직이는 경우, 이를 $A[\t]/(\t^3)$으로 들어올린 $\x\mapsto a\t+a'\t^2$, $\y\mapsto b\t+b'\t^2$에 대하여
 
@@ -386,7 +386,7 @@ $$\x\y\mapsto(a\t+a'\t^2)(b\t+b'\t^2)\equiv ab\t^2\pmod{\t^3}$$
 
 $$\x\y-\s\mapsto-c\t+(ab-c')\t^2\pmod{\t^3}$$
 
-이다. 일차에서 $c\neq0$이면 곡선은 $\x\y=c\t$, 곧 [예시 6](#ex6)의 nontrivial deformation이 되고, 거기서 본 것과 같이 그 위에는 원점을 확장하는 점이 없다. 따라서 일차에서는 $c=0$이 강제된다. 그러나 이차에서는 $c'=ab$로 택하면 오차가 사라진다. 실제로 $\bar{d}(\overline{\x\y-\s})$에는 새로운 항 $-\dd{\s}$가 생겨 $\bar{d}^\ast$가 surjective가 되고, $T^1(\widetilde{C}/A,\mathfrak{b})=0$이다.
+이다. 일차에서 $c\neq0$이면 곡선은 $\x\y=c\t$, 곧 [예시 6](#ex6){: data-lid="o3v5z" }의 nontrivial deformation이 되고, 거기서 본 것과 같이 그 위에는 원점을 확장하는 점이 없다. 따라서 일차에서는 $c=0$이 강제된다. 그러나 이차에서는 $c'=ab$로 택하면 오차가 사라진다. 실제로 $\bar{d}(\overline{\x\y-\s})$에는 새로운 항 $-\dd{\s}$가 생겨 $\bar{d}^\ast$가 surjective가 되고, $T^1(\widetilde{C}/A,\mathfrak{b})=0$이다.
 
 즉 고정된 곡선 위에서는 보정 $a',b'$이 오차 $ab\t^2$를 바꾸지 못하지만, 곡선의 이차 변형 $c'\t^2$는 이를 그대로 상쇄한다. 가령 $(\x,\y)=(\t,\t)$는 $\x\y=0$ 위에서는 이차로 연장되지 않고 일차에서 펴지는 쌍곡선 $\x\y=c\t$ 위에도 놓일 수 없지만, 이차에서 펴지는 쌍곡선 $\x\y=\t^2$ 위에는 모든 차수에서 놓인다.
 :::
