@@ -44,7 +44,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "26"
 
       # node-canvas needs native libs; fonts-liberation gives Arial-compatible
       # metrics so the baked-in tile titles render the same as locally.
