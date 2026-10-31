@@ -43,9 +43,14 @@ require "pathname"
 # `git log -- <file>` per document: each per-file call re-walks all of history,
 # ~0.12s apiece on the Pi, and ~960 of them were most of every cold start
 # (2026-10-31: startup build 120s → 15s, clean build ~150s → 75s; the single
-# walk takes ~0.6s). The per-file query stays as the fallback for files the
-# index doesn't know, and is what the index was checked against (0 mismatches
-# over every tracked .md/.html, both path forms).
+# walk takes ~0.6s; checked against the per-file query it replaced: 0 mismatches
+# over every tracked .md/.html, both path forms). A path the index doesn't know
+# has no git date, and git is never asked about it one by one: untracked or
+# gitignored files (the private research posts the local preview reads) get
+# their mtime directly — the value the gem would have reached after its own
+# empty `git log` — since asking cost ~1.6s per watch rebuild, twice over (our
+# per-file fallback, then the gem's Determinator at render). A post first
+# committed while `serve` runs gets its git date at the next restart.
 #
 # Requires full git history at build (CI: actions/checkout fetch-depth: 0).
 module Jekyll
@@ -63,8 +68,8 @@ module Jekyll
       ignore_shas.any? { |s| !s.empty? && sha.start_with?(s) }
     end
 
-    # last_real_commit_time for every path at once, from a single walk. Commits
-    # arrive newest first (same order as the per-file query), so a path takes the
+    # Last real commit time for every path at once, from a single walk. Commits
+    # arrive newest first (same order as `git log -- <path>`), so a path takes the
     # first non-skipped commit that touches it; after MAX_WALK skipped commits, or
     # at the end of history, it falls back to the newest one it saw.
     # --no-renames: a rename then touches both paths, as `git log -- <path>` sees it.
@@ -112,36 +117,11 @@ module Jekyll
       rel.start_with?("..") ? nil : prefix + rel
     end
 
+    # Most recent non-skipped commit time for `path`, or nil if it has no history
+    # in the index (untracked, gitignored, generated, or outside the repo).
     def self.commit_time(source, path, ignore_shas)
       rel = repo_relative(source, path)
-      index = git_index(source, ignore_shas)
-      return index[rel] if rel && index.key?(rel)
-      # The index holds every path in history, so a miss on a path that isn't on
-      # disk (a generated page) has nothing to find. A miss on a real file means it
-      # is untracked or was committed after this process built the index: ask git.
-      return nil unless File.exist?(File.expand_path(path.to_s, source))
-      last_real_commit_time(source, path, ignore_shas)
-    end
-
-    # Most recent commit time for `path`, skipping skip-marked / blacklisted
-    # commits. Falls back to the absolute newest commit if every candidate is
-    # skipped, and to nil if the file has no git history yet. Per-file version of
-    # git_index — the fallback, and the reference the index is checked against.
-    def self.last_real_commit_time(source, path, ignore_shas)
-      raw = `git -C #{Shellwords.escape(source)} log --no-merges --max-count=#{MAX_WALK} -z \
-             --format=#{Shellwords.escape('%H%x1f%cI%x1f%B')} -- #{Shellwords.escape(path.to_s)} 2>/dev/null`
-      newest = nil
-      raw.split("\x00").each do |rec|
-        next if rec.empty?
-        sha, iso, msg = rec.split("\x1f", 3)
-        next if sha.nil? || iso.nil?
-        t = (Time.parse(iso) rescue nil)
-        next if t.nil?
-        newest ||= t                                          # remember newest for fallback
-        next if skip_commit?(sha, msg, ignore_shas)
-        return t                                              # newest non-skipped commit
-      end
-      newest
+      rel && git_index(source, ignore_shas)[rel]
     end
 
     Jekyll::Hooks.register(:site, :post_read) do |site|
@@ -157,7 +137,17 @@ module Jekyll
         next unless cur.nil? || cur.is_a?(Jekyll::LastModifiedAt::Determinator)
 
         t = GIT_TIME_CACHE[item.path] ||= commit_time(site.source, item.path, ignore)
-        item.data["last_modified_at"] = t if t
+        if t
+          item.data["last_modified_at"] = t
+        elsif cur && File.exist?(abs = File.expand_path(item.path.to_s, site.source))
+          # No git history (untracked / gitignored, e.g. the private research posts
+          # the local preview reads). Left alone, the gem's Determinator runs
+          # `git log -n 1 -- <file>` at render time — a full history walk, ~0.13s,
+          # for an empty answer — and then falls back to the file's mtime. Put that
+          # same value here without asking git (2026-10-31: 13 such spawns, 1.6s,
+          # on every watch rebuild, mostly from posts listed on /recent/).
+          item.data["last_modified_at"] = Time.at(File.mtime(abs).to_i)
+        end
       end
     end
   end

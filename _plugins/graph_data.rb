@@ -187,15 +187,19 @@ module GraphData
   # win over every popularity signal; within the same available frontier, direct
   # citation count is the strength signal.  Reciprocal reachability means a
   # required SCC, so those candidates are tied rather than deadlocking the sort.
-  def rank_recommendations(candidates, cited_pairs, by_url)
-    required_adjacency = Hash.new { |h, k| h[k] = [] }
-    cited_pairs.each do |(src, tgt), entry|
-      required_adjacency[tgt] << src if entry[:relation] == "required"
+  def rank_recommendations(candidates, cited_pairs, by_url, index: nil)
+    required_adjacency = index&.fetch(:required_adjacency) || begin
+      adjacency = Hash.new { |h, k| h[k] = [] }
+      cited_pairs.each do |(src, tgt), entry|
+        adjacency[tgt] << src if entry[:relation] == "required"
+      end
+      adjacency
     end
 
     urls = candidates.keys
     reachability = {}
-    urls.each { |url| reachability[url] = reachable_from(url, required_adjacency) }
+    memo = index ? index[:reachability] : {}
+    urls.each { |url| reachability[url] = (memo[url] ||= reachable_from(url, required_adjacency)) }
 
     outgoing = Hash.new { |h, k| h[k] = [] }
     indegree = Hash.new(0)
@@ -243,14 +247,43 @@ module GraphData
     ordered
   end
 
+  # semantic_navigation 이 글마다 cited_pairs·docs 전체를 다시 훑으면 글 수의 제곱이 된다
+  # (2026-10-31: watch 리빌드마다 742회 × ~4ms = 3.1s). 그래서 모델 하나에 대해 한 번만
+  # 색인을 만든다 — 글별로 걸린 인용 쌍, required 역방향 인접 목록, 카테고리별 글, 도달
+  # 집합 메모. 모델 Hash 안에 두므로 그 빌드가 끝나면 같이 버려진다. 목록은 원래 순회
+  # 순서(cited_pairs·docs 삽입 순서)를 그대로 지켜 후보 삽입 순서와 동점 처리가 같다.
+  def navigation_index(model)
+    model[:navigation_index] ||= begin
+      pairs_by_url = Hash.new { |h, k| h[k] = [] }
+      required_adjacency = Hash.new { |h, k| h[k] = [] }
+      model[:cited_pairs].each do |pair, entry|
+        src, tgt = pair
+        pairs_by_url[src] << [pair, entry]
+        pairs_by_url[tgt] << [pair, entry]
+        required_adjacency[tgt] << src if entry[:relation] == "required"
+      end
+      docs_by_category = Hash.new { |h, k| h[k] = [] }
+      model[:docs].each { |doc| docs_by_category[category_of(doc)] << doc }
+      {
+        pairs_by_url: pairs_by_url,
+        required_adjacency: required_adjacency,
+        docs_by_category: docs_by_category,
+        reachability: {}
+      }
+    end
+  end
+
   def semantic_navigation(site, lang, current_url, limit: RECOMMENDATION_LIMIT, model: nil)
     model ||= dependency_model(site, lang)
     current = norm(current_url)
     return nil unless model[:classified_by_source][current]
 
+    index = navigation_index(model)
+    pairs = index[:pairs_by_url].fetch(current, [])
+
     required = []
     weak = []
-    model[:cited_pairs].each do |(src, tgt), entry|
+    pairs.each do |(src, tgt), entry|
       next unless src == current
 
       target_doc = model[:by_url][tgt]
@@ -276,7 +309,7 @@ module GraphData
       candidate[:relations] << relation unless candidate[:relations].include?(relation)
     end
 
-    model[:cited_pairs].each do |(src, tgt), entry|
+    pairs.each do |(src, tgt), entry|
       if tgt == current && %w[required weak].include?(entry[:relation])
         add_candidate.call(src, entry[:relation], entry[:weight])
       elsif src == current && entry[:relation] == "forward"
@@ -287,10 +320,10 @@ module GraphData
     current_doc = model[:by_url][current]
     current_weight = current_doc.data["weight"]&.to_i
     weight_next_doc = if current_weight
-      model[:docs]
+      index[:docs_by_category].fetch(category_of(current_doc), [])
         .select do |doc|
           doc_weight = doc.data["weight"]&.to_i
-          category_of(doc) == category_of(current_doc) && doc_weight && doc_weight > current_weight
+          doc_weight && doc_weight > current_weight
         end
         .min_by do |doc|
           [doc.data["weight"].to_i, (doc.data["title"] || doc.basename).to_s, doc.url]
@@ -298,7 +331,7 @@ module GraphData
     end
     weight_next_url = weight_next_doc && norm(weight_next_doc.url)
 
-    next_reads = rank_recommendations(candidates, model[:cited_pairs], model[:by_url])
+    next_reads = rank_recommendations(candidates, model[:cited_pairs], model[:by_url], index: index)
       .reject { |url| url == weight_next_url }
       .first(limit)
       .map do |url|
