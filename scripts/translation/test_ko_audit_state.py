@@ -137,5 +137,33 @@ class KoAuditStateTest(unittest.TestCase):
         self.assertEqual(fresh["ko_review_base_content"], KO)
 
 
+class KoAuditOutputTest(unittest.TestCase):
+    def setUp(self) -> None:
+        patcher = patch.object(tw, "log", lambda msg: None)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_blocks_keep_quotes_byte_for_byte(self) -> None:
+        out = (
+            "<<<FINDING\nKIND: ERROR\nQUOTE:\n$$w_1-w_1'=w_2-w_2'$$\nISSUE:\n부호가 틀렸다\n"
+            "FIX:\n$$w_1-w_1'=w_2'-w_2$$\n>>>END\n"
+            "<<<FINDING\nKIND: EXPLANATION\nQUOTE:\n상수 $\\lambda$가 존재할 때\nISSUE:\n"
+            "$v=0$ 인 경우가 빠졌다\nFIX:\n>>>END\n"
+        )
+        self.assertEqual(tw.parse_ko_audit_output(out), [
+            {"kind": "ERROR", "quote": "$$w_1-w_1'=w_2-w_2'$$", "issue": "부호가 틀렸다",
+             "suggested_fix": "$$w_1-w_1'=w_2'-w_2$$"},
+            {"kind": "EXPLANATION", "quote": "상수 $\\lambda$가 존재할 때",
+             "issue": "$v=0$ 인 경우가 빠졌다", "suggested_fix": ""},
+        ])
+
+    def test_no_findings_and_malformed_output(self) -> None:
+        self.assertEqual(tw.parse_ko_audit_output("NO FINDINGS\n"), [])
+        with self.assertRaises(RuntimeError):
+            tw.parse_ko_audit_output('{"findings": []}')
+        broken = "<<<FINDING\nQUOTE:\nx\n>>>END\n"
+        self.assertEqual(tw.parse_ko_audit_output(broken), [])
+
+
 if __name__ == "__main__":
     unittest.main()

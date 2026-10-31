@@ -1397,10 +1397,19 @@ Do not report style preferences, optional enrichment, mere brevity, alternative 
 
 @@HOUSE@@
 
-Output JSON only, with this exact shape:
-{"findings":[{"kind":"ERROR or EXPLANATION","quote":"exact Korean quote","issue":"short reason","suggested_fix":"minimal Korean correction or addition"}]}
+Output plain-text blocks and nothing else, one block per candidate:
 
-If there is no candidate, output {"findings":[]}.
+<<<FINDING
+KIND: ERROR or EXPLANATION
+QUOTE:
+exact Korean quote, copied character for character from the post
+ISSUE:
+short reason
+FIX:
+minimal Korean correction or addition
+>>>END
+
+Copy quotes and LaTeX exactly as they appear in the post, with every `$` and single backslashes; escape nothing. If there is no candidate, output only NO FINDINGS.
 
 Korean post:
 --- KO POST ---
@@ -3189,6 +3198,34 @@ def lint_structure(ko_text: str, en_text: str) -> list:
 from ko_typos import extract_ko_typos  # noqa: E402
 
 
+# KO 감사 후보는 JSON 이 아니라 구분자 블록으로 받는다. 인용문은 KO 에서 글자 그대로
+# 찾아야 하는데, LaTeX 를 JSON 문자열로 이스케이프해 내게 하면 모델이 `$` 를 흘려
+# 수식을 인용한 후보가 위치를 못 찾고 버려진다.
+_KO_AUDIT_BLOCK_RE = re.compile(r"<<<FINDING\n(.*?)\n?>>>END", re.DOTALL)
+_KO_AUDIT_FIELDS_RE = re.compile(
+    r"\A\s*KIND:[ \t]*(?P<kind>[A-Za-z]+)[ \t]*\n"
+    r"QUOTE:[ \t]*\n(?P<quote>.*?)\n"
+    r"ISSUE:[ \t]*\n(?P<issue>.*?)\n"
+    r"FIX:[ \t]*\n?(?P<suggested_fix>.*)\Z", re.DOTALL)
+
+
+def parse_ko_audit_output(out: str) -> List[dict]:
+    """KO 감사 응답에서 후보 목록을 꺼낸다 (kind · quote · issue · suggested_fix)."""
+    blocks = _KO_AUDIT_BLOCK_RE.findall(out)
+    if not blocks:
+        if out.strip() == "NO FINDINGS":
+            return []
+        raise RuntimeError(f"Antigravity returned no KO-audit blocks: {out[:200]!r}")
+    findings = []
+    for block in blocks:
+        m = _KO_AUDIT_FIELDS_RE.match(block)
+        if m is None:
+            log(f"KO-AUDIT: 형식이 맞지 않는 후보 블록을 건너뜀 — {_flat(block)[:120]}")
+            continue
+        findings.append({k: v.strip() for k, v in m.groupdict().items()})
+    return findings
+
+
 def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
     """Return high-confidence KO-source candidates found during a polish run.
 
@@ -3211,11 +3248,9 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
             level="timeSensitive",
         )
         raise RuntimeError("KO source changed during read-only Antigravity audit")
-    payload = _parse_json_object(out)
-    if not isinstance(payload, dict) or not isinstance(payload.get("findings"), list):
-        raise RuntimeError("Antigravity returned an invalid KO-audit JSON shape")
     findings = []
-    for raw in payload.get("findings") or []:
+    unlocated = []
+    for raw in parse_ko_audit_output(out):
         if not isinstance(raw, dict):
             continue
         kind = str(raw.get("kind") or "").upper()
@@ -3228,7 +3263,10 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
         # A finding without an exact source locus cannot provide a trustworthy
         # line number or later diff target.  Treat a paraphrased/hallucinated
         # quote as invalid triage rather than showing an unlocatable warning.
+        # 모델이 인용문을 다듬어 옮기면 진짜 지적도 여기서 빠지므로, 몇 건이
+        # 버려지는지는 로그에 남긴다.
         if pos < 0:
+            unlocated.append(quote)
             continue
         findings.append({
             "kind": kind,
@@ -3239,6 +3277,9 @@ def audit_ko_source(ko_path: Path, key: str) -> List[dict]:
             "line": ko_text.count("\n", 0, pos) + 1,
         })
     log(f"KO-AUDIT ({key}): {len(findings)} candidate(s)")
+    if unlocated:
+        log(f"KO-AUDIT ({key}): 인용문이 KO 와 일치하지 않아 버린 후보 {len(unlocated)}건 — "
+            + " | ".join(_flat(q)[:80] for q in unlocated[:3]))
     return findings[:KO_REVIEW_MAX_FINDINGS]
 
 
