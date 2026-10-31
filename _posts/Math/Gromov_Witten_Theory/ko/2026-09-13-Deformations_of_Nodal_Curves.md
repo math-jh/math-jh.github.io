@@ -100,7 +100,7 @@ Nodal curve $C$의 각 node $p$에서 first-order local deformation들의 공간
 
 {% diagram Math/Gromov_Witten_Theory/Deformations_of_Nodal_Curves-2.svg width="51.68em" alt="the local fibers xy=t over the deformation space" %}
 
-한편 prestable curve는 nodal curve $C$의 smooth locus에 marked point $p_1,\ldots,p_n$을 둔 것이다. 따라서 위 그림에 marked point들을 더해주면, 이들은 curve가 deform됨에 따라 함께 움직이면서 각 $p_i$를 지나는 section을 정의한다. 그럼 marked point들이 서로 같아질 수 없으므로 이 section들은 disjoint하게 되며, 따라서 prestable curve의 first-order deformation은 underlying curve의 deformation과 이 marked section들을 함께 택한 자료로 주어진다. 이 때 각 자료 사이의 isomorphism은 $\Spec\mathbb{K}[\epsilon]$ 위의 family들의 isomorphism으로서, central fiber에서 identity이고, 각 marked section을 그에 대응하는 marked section으로 보내는 것이다. 이러한 isomorphism class들이 이루는 $\mathbb{K}$-vector space를 $T^1(C,p_\bullet)$로 적는다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="fqff9" }의 $T^1$을 marked curve에 적용한 것으로, 같은 방식으로 모든 marked section을 보존하는 infinitesimal automorphism들의 $\mathbb{K}$-vector space를 $T^0(C,p_\bullet)$로 적는다. 
+한편 prestable curve는 nodal curve $C$의 smooth locus에 marked point $p_1,\ldots,p_n$을 둔 것이다. 따라서 위 그림에 marked point들을 더해주면, 이들은 curve가 deform됨에 따라 함께 움직이면서 각 $p_i$를 지나는 section을 정의한다. 그럼 marked point들이 서로 같아질 수 없으므로 이 section들은 disjoint하게 되며, 따라서 prestable curve의 first-order deformation은 underlying curve의 deformation과 이 marked section들을 함께 택한 자료로 주어진다. 이 때 각 자료 사이의 isomorphism은 $\Spec\mathbb{K}[\epsilon]$ 위의 family들의 isomorphism으로서, central fiber에서 identity이고, 각 marked section을 그에 대응하는 marked section으로 보내는 것이다. 이러한 isomorphism class들이 이루는 $\mathbb{K}$-vector space를 $T^1(C,p_\bullet)$로 적는다. 이는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="fqff9" }의 $T^1$을 marked curve에 적용한 것으로, 같은 방식으로 모든 marked section을 보존하는 infinitesimal automorphism들의 $\mathbb{K}$-vector space를 $T^0(C,p_\bullet)$로 적는다. 
 
 이들 $T^0(C,p_\bullet)$과 $T^1(C,p_\bullet)$은 underlying nodal curve에 새로 추가된 marked point들이 추가로 부과하는 조건으로 정해지므로, 이 두 조건을 별도로 나누어 보는 것이 합리적이다. 우선 deformation 쪽의 경우, 우리는 이미 위에서 $T_p^1$은 오직 node에서만 생기는 것을 살펴보았으며, 정의에 의해 marked point들은 smooth point에만 찍히므로 여기에 영향을 미치지 않는다. 즉 node에서 계산한 $T_p^1$은 prestable curve에 대해서도 동일하게 유지된다. 
 
@@ -148,7 +148,7 @@ $$T_eG\cong T^0(C,p_\bullet)\cong H^0\bigl(\widetilde{C},\mathcal{T}_{\widetilde
 
 을 얻는다. 위의 계산에서 우리는 임의의 automorphism은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴로 쓰이는 것을 알고 있으며, 이때 derivation $v$는 smooth curve $\widetilde{C}$ 위에서 vector field를 의미하므로 이 식은 automorphism을 항등원에서 infinitesimal하게 움직이는 방향이 normalization 위의 vector field로 나타난다는 것으로 해석할 수 있다.
 
-지금까지의 계산을 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="6chlh" }의 언어로 다시 정리해 두자. 이를 통해 우리는 앞선 명제들에서 수행한 local한 계산을 곡선 전체의 deformation으로 이어 붙이고, 고차 deformation의 obstruction이 놓이는 $T^2$까지 계산할 수 있다. 표기의 편의를 위해 $\LL_C=\LL_{C/\mathbb{K}}$, $\Omega_C=\Omega_{C/\mathbb{K}}$라 하면, marked point가 없는 경우, 이 정리가 주는 공간
+지금까지의 계산을 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="6chlh" }의 언어로 다시 정리해 두자. 이를 통해 우리는 앞선 명제들에서 수행한 local한 계산을 곡선 전체의 deformation으로 이어 붙이고, 고차 deformation의 obstruction이 놓이는 $T^2$까지 계산할 수 있다. 표기의 편의를 위해 $\LL_C=\LL_{C/\mathbb{K}}$, $\Omega_C=\Omega_{C/\mathbb{K}}$라 하면, marked point가 없는 경우, 이 정리가 주는 공간
 
 $$T^i(C)=\Ext^i_C(\LL_C,\mathcal{O}_C)$$
 
@@ -158,9 +158,9 @@ $$T^i(C)=\Ext^i_C(\LL_C,\mathcal{O}_C)$$
 - $T^0(C)$는 trivial deformation의 automorphism 가운데 central fiber에서 identity인 것들, 곧 $C$의 infinitesimal automorphism을 잰다. 앞에서 본 것과 같이 이들은 국소적으로 $f\mapsto f+\epsilon v(f)$의 꼴이므로 $T^0(C)$는 $C$ 위의 global vector field들의 공간이며, $\Aut(C)$의 항등원에서의 tangent space이다.
 - $T^2(C)$는 이러한 deformation을 고차의 deformation으로 연장할 때의 obstruction을 통제한다.
 
-일반적으로 $\LL_C$는 degree $0$ 이상에서 항을 갖는 complex로, 일반적인 singular scheme에서는 이 complex가 담고 있는 정보를 $\Omega_C$로 옮기는 방법이 존재하지 않는다. 그러나 우리의 경우인 nodal curve에서는 $\LL_C$는 degree $0$에 놓인 $\Omega_C$와 quasi-isomorphic하며, 아래에서 보듯 이는 node의 local model이 hypersurface이고 reduced라는 데서 온다. 이를 확인하기 위해 우선 $\LL_C\rightarrow H_0(\LL_C)$를 정의하자. 이는 오직 degree $0$에서만 quotient map $(\LL_C)_0\rightarrow H_0(\LL_C)$로, 나머지 degree에서는 $0$으로 정의되는 map이다. 이 map은 $\LL_C$를 나타내는 complex의 선택에 의존하지 않고 잘 정의되는 것을 확인할 수 있다. 또 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="cj6r9" } 직전에서 본 것과 같이 $H_0(\LL_C)=\Omega_C$이므로 이 map은 morphism $\LL_C\rightarrow\Omega_C$이고, 정의에 의하여 $H_0$에서 isomorphism이다.
+일반적으로 $\LL_C$는 degree $0$ 이상에서 항을 갖는 complex로, 일반적인 singular scheme에서는 이 complex가 담고 있는 정보를 $\Omega_C$로 옮기는 방법이 존재하지 않는다. 그러나 우리의 경우인 nodal curve에서는 $\LL_C$는 degree $0$에 놓인 $\Omega_C$와 quasi-isomorphic하며, 아래에서 보듯 이는 node의 local model이 hypersurface이고 reduced라는 데서 온다. 이를 확인하기 위해 우선 $\LL_C\rightarrow H_0(\LL_C)$를 정의하자. 이는 오직 degree $0$에서만 quotient map $(\LL_C)_0\rightarrow H_0(\LL_C)$로, 나머지 degree에서는 $0$으로 정의되는 map이다. 이 map은 $\LL_C$를 나타내는 complex의 선택에 의존하지 않고 잘 정의되는 것을 확인할 수 있다. 또 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 10](/ko/math/scheme_theory/deformation_theory#prop10){: data-lid="cj6r9" } 직전에서 본 것과 같이 $H_0(\LL_C)=\Omega_C$이므로 이 map은 morphism $\LL_C\rightarrow\Omega_C$이고, 정의에 의하여 $H_0$에서 isomorphism이다.
 
-우리 주장은 이것이 모든 $i\geq1$에 대하여도 $H_i(\LL_C)=0$을 만족한다는 것이며, 이는 국소적인 조건이므로 각 점의 근방에서 확인하면 된다. 우선 $C$의 smooth point 근방에서는 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 9](/ko/math/scheme_theory/deformation_theory#prop9){: data-lid="xoabf" }의 증명에서와 같이 cotangent complex가 locally free sheaf $\Omega_C$ 하나와 quasi-isomorphic하므로 더 보일 것이 없다. 문제가 될 수 있는 것은 node 근방으로, $C$는 étale-local하게 local model $R=\mathbb{K}[\x,\y]/(\x\y)$로 주어지고, cotangent complex는 étale morphism에 의한 pullback과 compatible하므로 $R$에서 확인하면 충분하다. 이는 $\mathbb{K}[\x,\y]$를 nonzerodivisor 하나로 자른 것이므로 local complete intersection이고 ([\[스킴\] §완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="9arnl" }), 따라서 [\[스킴\] §변형이론과 여접 복합체, §§소박한 여접 복합체와 매끄러움](/ko/math/scheme_theory/deformation_theory#소박한-여접-복합체와-매끄러움){: data-lid="mc2dh" }에서 보았듯 $\LL_R$은 presentation $\mathbb{K}[\x,\y]\rightarrow R$에 대한 naive cotangent complex $\NL_R$과 quasi-isomorphic하다. 이 presentation의 conormal module $(\x\y)/(\x\y)^2$는 $\x\y$의 class 하나를 basis로 갖는 free $R$-module이므로, 해당 링크에서의 Jacobian 계산에 $f=\x\y$를 대입하면
+우리 주장은 이것이 모든 $i\geq1$에 대하여도 $H_i(\LL_C)=0$을 만족한다는 것이며, 이는 국소적인 조건이므로 각 점의 근방에서 확인하면 된다. 우선 $C$의 smooth point 근방에서는 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 10](/ko/math/scheme_theory/deformation_theory#prop10){: data-lid="xoabf" }의 증명에서와 같이 cotangent complex가 locally free sheaf $\Omega_C$ 하나와 quasi-isomorphic하므로 더 보일 것이 없다. 문제가 될 수 있는 것은 node 근방으로, $C$는 étale-local하게 local model $R=\mathbb{K}[\x,\y]/(\x\y)$로 주어지고, cotangent complex는 étale morphism에 의한 pullback과 compatible하므로 $R$에서 확인하면 충분하다. 이는 $\mathbb{K}[\x,\y]$를 nonzerodivisor 하나로 자른 것이므로 local complete intersection이고 ([\[스킴\] §완전교차, ⁋정의 1](/ko/math/scheme_theory/complete_intersections#def1){: data-lid="9arnl" }), 따라서 [\[스킴\] §변형이론과 여접 복합체, §§소박한 여접 복합체와 매끄러움](/ko/math/scheme_theory/deformation_theory#소박한-여접-복합체와-매끄러움){: data-lid="mc2dh" }에서 보았듯 $\LL_R$은 presentation $\mathbb{K}[\x,\y]\rightarrow R$에 대한 naive cotangent complex $\NL_R$과 quasi-isomorphic하다. 이 presentation의 conormal module $(\x\y)/(\x\y)^2$는 $\x\y$의 class 하나를 basis로 갖는 free $R$-module이므로, 해당 링크에서의 Jacobian 계산에 $f=\x\y$를 대입하면
 
 $$\LL_R\simeq \NL_R\cong\Bigl[\at{1}{R}\overset{\bar{d}}{\rightarrow}\at{0}{R\dd{\x}\oplus R\dd{\y}}\Bigr],\qquad\bar{d}(1)=\y\dd{\x}+\x\dd{\y}$$
 
@@ -176,7 +176,7 @@ $$\ann(\y)=(\x),\qquad \ann(\x)=(\y)$$
 
 $$T^i(C)=\Ext^i_C(\Omega_C,\mathcal{O}_C),\qquad\mathcal{T}^q_{C/\mathbb{K}}=\sExt^q(\Omega_C,\mathcal{O}_C)$$
 
-이 성립한다. 여기서 $\mathcal{T}^q_{C/\mathbb{K}}$는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="6d3kc" }의 국소 자료이며, 특히 $\mathcal{T}^0_{C/\mathbb{K}}$는 앞에서 계산한 $\mathcal{T}_{C/\mathbb{K}}$이다.
+이 성립한다. 여기서 $\mathcal{T}^q_{C/\mathbb{K}}$는 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 13](/ko/math/scheme_theory/deformation_theory#thm13){: data-lid="6d3kc" }의 국소 자료이며, 특히 $\mathcal{T}^0_{C/\mathbb{K}}$는 앞에서 계산한 $\mathcal{T}_{C/\mathbb{K}}$이다.
 
 그럼 우선 marked point들은 smooth locus에 놓여 있으므로 $\mathcal{O}_C(\Sigma)$는 line bundle이며, 우리는 $\Omega_C$를 이것으로 twist한 $\Omega_C(\Sigma)=\Omega_C\otimes\mathcal{O}_C(\Sigma)$의 sheaf Ext를 계산한다. 우리가 보일 것은 다음의 식들
 
@@ -230,7 +230,7 @@ $$0 \rightarrow H^1\bigl(C, \mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr) \rightarro
 이 성립하며, 또 $T^0(C, p_\bullet)=H^0(C, \mathcal{T}_{C/\mathbb{K}}(-\Sigma))$이다.
 :::
 ::: 증명
-앞에서 계산한 대로 marked point들은 automorphism sheaf에 twist $(-\Sigma)$를 더하지만, node의 local deformation space $T_p^1$은 바꾸지 않는다. 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="940xu" }로부터
+앞에서 계산한 대로 marked point들은 automorphism sheaf에 twist $(-\Sigma)$를 더하지만, node의 local deformation space $T_p^1$은 바꾸지 않는다. 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 13](/ko/math/scheme_theory/deformation_theory#thm13){: data-lid="940xu" }로부터
 
 $$0\rightarrow H^1\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)\rightarrow T^1(C,p_\bullet)\rightarrow\bigoplus_{p\in\Sing C}T_p^1\rightarrow H^2\bigl(C,\mathcal{T}_{C/\mathbb{K}}(-\Sigma)\bigr)$$
 
@@ -288,7 +288,7 @@ $$\mathcal{C}_{A'}\times_{\Spec A'}\Spec A\cong\mathcal{C}_A$$
 
 $$A'=A'/\mathfrak{m}^NJ\rightarrow\cdots\rightarrow A'/\mathfrak{m}J\rightarrow A'/J=A$$
 
-로 분해된다. 각 단계의 kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$는 source ring의 maximal ideal에 의해 소멸하므로, $\mathfrak{m}_{A'}I=0$인 kernel $I$를 갖는 surjection $A'\rightarrow A$에 대해서만 연장을 보이면 충분하다. 이 경우 $I^2=0$이므로 $A'\rightarrow A$는 square-zero extension이 되며, 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="cmkkl" }을 적용할 수 있게 된다. 그럼 coefficient sheaf가 central fiber 위의 $\mathcal{O}_C\otimes_\mathbb{K}I$이므로, flat base change와 $L_C\simeq\Omega_C$를 사용하면 이 obstruction은
+로 분해된다. 각 단계의 kernel $\mathfrak{m}^rJ/\mathfrak{m}^{r+1}J$는 source ring의 maximal ideal에 의해 소멸하므로, $\mathfrak{m}_{A'}I=0$인 kernel $I$를 갖는 surjection $A'\rightarrow A$에 대해서만 연장을 보이면 충분하다. 이 경우 $I^2=0$이므로 $A'\rightarrow A$는 square-zero extension이 되며, 따라서 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="cmkkl" }을 적용할 수 있게 된다. 그럼 coefficient sheaf가 central fiber 위의 $\mathcal{O}_C\otimes_\mathbb{K}I$이므로, flat base change와 $L_C\simeq\Omega_C$를 사용하면 이 obstruction은
 
 $$\ob(\mathcal{C}_A/A')\in\Ext^2_C(\Omega_C,\mathcal{O}_C\otimes_\mathbb{K}I)\cong T^2(C)\otimes_\mathbb{K}I$$
 
@@ -317,7 +317,7 @@ $$E_2^{1,1}=H^1\bigl(C,\sExt^1(\Omega_C(\Sigma),\mathcal{O}_C)\bigr)=0$$
 
 이제 residue field가 $\mathbb{K}$인 complete local $\mathbb{K}$-algebra $R$을 고정하자. 그럼 이 위에 정의된 formal deformation $\mathcal{X}$가 *versal*이라는 것은 임의의 formal deformation이 주어졌을 때 이것이 $\mathcal{X}$의 pullback으로 결정되는 것이다. 더 정확하게 말하자면, residue field가 $\mathbb{K}$인 임의의 complete local $\mathbb{K}$-algebra $S$ 위의 임의의 formal deformation이 주어졌을 때, 어떠한 local homomorphism $R\rightarrow S$를 따라 $\mathcal{X}$를 당겨 이 formal deformation을 얻을 수 있는 것이며, 우리는 추가로 $S=\mathbb{K}[\epsilon]$인 경우 이러한 local homomorphism이 <em-ko>유일하게</em-ko> 결정될 것 또한 요구한다. 직관적으로 local homomorphism $R\rightarrow\mathbb{K}[\epsilon]$은 곧 $R$의 tangent vector이며, $\mathbb{K}[\epsilon]$ 위의 deformation들은 $T^1(C, p_\bullet)$을 이루므로 이 조건은 $R$의 tangent space와 $T^1(C, p_\bullet)$을 identify하는 것이다. 
 
-그럼 $(C,p_\bullet)$은 versal formal deformation을 가진다는 것이 알려져 있다. 직관적으로 이는 $N=\dim T^1(C,p_\bullet)$에 대하여 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate $\s_1,\ldots,\s_N$을 잡고, $\mathbb{K}[[\s_1,\ldots,\s_N]]/(\s_1,\ldots,\s_N)^2$ 위의 first-order deformation에서 출발하여 이를 한 차수씩 연장해 나가는 것이다. 각 단계의 연장에 대한 obstruction은 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 11](/ko/math/scheme_theory/deformation_theory#thm11){: data-lid="lqfm6" }에 의하여 $T^2(C)$로 통제되므로, 이 obstruction이 사라지도록 $\s_1,\ldots,\s_N$ 사이에 관계식을 넣어야만 연장이 된다. 이렇게 얻어진 결과는 이 관계식들이 생성하는 ideal $J$에 대하여
+그럼 $(C,p_\bullet)$은 versal formal deformation을 가진다는 것이 알려져 있다. 직관적으로 이는 $N=\dim T^1(C,p_\bullet)$에 대하여 $T^1(C,p_\bullet)$의 basis에 대응하는 coordinate $\s_1,\ldots,\s_N$을 잡고, $\mathbb{K}[[\s_1,\ldots,\s_N]]/(\s_1,\ldots,\s_N)^2$ 위의 first-order deformation에서 출발하여 이를 한 차수씩 연장해 나가는 것이다. 각 단계의 연장에 대한 obstruction은 [\[스킴\] §변형이론과 여접 복합체, ⁋정리 12](/ko/math/scheme_theory/deformation_theory#thm12){: data-lid="lqfm6" }에 의하여 $T^2(C)$로 통제되므로, 이 obstruction이 사라지도록 $\s_1,\ldots,\s_N$ 사이에 관계식을 넣어야만 연장이 된다. 이렇게 얻어진 결과는 이 관계식들이 생성하는 ideal $J$에 대하여
 
 $$R\cong\mathbb{K}[[\s_1,\ldots,\s_N]]/J\tag{$\ast$}$$
 
