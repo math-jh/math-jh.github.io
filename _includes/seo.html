@@ -45,8 +45,10 @@ the Korean tagline as their description, which weakens English-language signals.
 {%- comment -%}
 Find alternate-language version of this post by URL substitution. Posts pair
 ko↔en on identical category+slug (date prefix may differ). We do an exact
-URL swap first; if no match exists in site.posts we skip hreflang emission
-(prevents broken hreflang clusters which Google penalizes).
+URL swap first; if no post or page has that URL we skip hreflang emission
+(prevents broken hreflang clusters which Google penalizes). Existence is looked up
+in site.data.page_urls (_plugins/page_url_index.rb) instead of walking site.posts
+and site.pages here on every page — that walk was ~13ms per rendered page.
 {%- endcomment -%}
 {%- assign alt_post = nil -%}
 {%- if page.url contains "/ko/" -%}
@@ -58,21 +60,8 @@ URL swap first; if no match exists in site.posts we skip hreflang emission
   {%- assign other_lang = "ko" -%}
   {%- assign alt_url = page.url | replace_first: "/en/", "/ko/" -%}
 {%- endif -%}
-{%- if alt_url -%}
-  {%- for p in site.posts -%}
-    {%- if p.url == alt_url -%}
-      {%- assign alt_post = p -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {%- if alt_post == nil -%}
-    {%- for p in site.pages -%}
-      {%- if p.url == alt_url -%}
-        {%- assign alt_post = p -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endif -%}
+{%- if alt_url and site.data.page_urls[alt_url] -%}
+  {%- assign alt_post = alt_url -%}
 {%- endif -%}
 
 {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
@@ -170,9 +159,9 @@ URL swap first; if no match exists in site.posts we skip hreflang emission
 {%- if alt_post %}
   {%- if this_lang == "ko" -%}
     {%- assign ko_canonical = canonical_url -%}
-    {%- assign en_canonical = alt_post.url | absolute_url -%}
+    {%- assign en_canonical = alt_url | absolute_url -%}
   {%- else -%}
-    {%- assign ko_canonical = alt_post.url | absolute_url -%}
+    {%- assign ko_canonical = alt_url | absolute_url -%}
     {%- assign en_canonical = canonical_url -%}
   {%- endif %}
 <link rel="alternate" hreflang="ko" href="{{ ko_canonical }}" />
