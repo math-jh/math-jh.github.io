@@ -123,7 +123,7 @@ commute. Written as a formula, we can write $\Hom(f,g)(u)=g\circ u\circ f^{-1}$.
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-holds for all $u$, so the directional derivative of this correspondence in the $w_i^j$-direction is $u\mapsto w_i^j\circ u\circ f^{-1}$, which is continuous. Moreover, since this argument holds no matter what linear map is substituted for $g$, we know from this that any higher directional derivative of $g\mapsto\Hom(f,g)$ is always continuous. That is, $g\mapsto\Hom(f,g)$ is $C^\infty$. That this correspondence also depends smoothly on $f$ is somewhat more tedious than for $g$, but since $f$ is an isomorphism we can choose $t$ sufficiently small so that $f+tw_i^j$ is invertible, and then repeat the above argument.
+holds for all $u$, so the directional derivative of this correspondence in the $w_i^j$-direction is $u\mapsto w_i^j\circ u\circ f^{-1}$, which is continuous. Moreover, since this argument holds no matter what linear map is substituted for $g$, we know from this that any higher directional derivative of $g\mapsto\Hom(f,g)$ is always continuous. That is, $g\mapsto\Hom(f,g)$ is $C^\infty$. That this correspondence also depends smoothly on $f$ is somewhat more tedious than for $g$, but the map assigning $f^{-1}$ to an isomorphism $f$ is $C^\infty$ by Cramer's rule and $\Hom(f,g)(u)=g\circ u\circ f^{-1}$ is linear in $f^{-1}$, so we can repeat the above argument for $f^{-1}$.
 
 The following are all examples of smooth functors.
 
