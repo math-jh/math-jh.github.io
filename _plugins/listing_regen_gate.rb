@@ -6,41 +6,50 @@
 # 과목홈 54개·Misc 목록·Terms·Notations(archive_custom), 카테고리 아카이브(categories),
 # 최근 글(recent), terms.json 은 regenerate: true 이고 sitemap.xml 은 소스 없는 생성
 # 페이지라, 글 하나의 본문만 고쳐도 리빌드마다 65개가 전부 다시 렌더됐다 (~3s,
-# 2026-10-31 측정). 이 페이지들이 읽는 것은 글 본문이 아니라 글의 frontmatter·요약문·
-# 수정일·URL, _data, 페이지 목록, 템플릿이다. 그것들을 지문 하나로 묶어, 지난 빌드와
-# 같고 출력 파일이 있으면 Regenerator 가 이 페이지들을 건너뛰게 한다.
+# 2026-10-31 측정). 이 페이지들은 글 본문을 읽지 않는다. 그래서 각자 실제로 읽는 입력을
+# 지문으로 묶어, 지난 빌드와 같고 출력 파일이 있으면 Regenerator 가 건너뛰게 한다.
 #
-# 지문에 넣는 것: _data 전부(link_relations*·page_urls 제외 — 목록 페이지는 안 읽고,
-# 앞의 것은 분류기 틱마다 바뀐다), 모든 컬렉션 문서의 경로·URL·frontmatter·요약문
-# (read_time 이 켜진 글은 본문까지 — page__meta 가 단어 수를 센다), 모든 페이지의
-# URL·데이터와 대상 페이지의 소스 내용, 정적 파일 목록(sitemap), _layouts·_includes
-# 파일 각각의 mtime·크기·inode. 프로세스 첫 빌드와, 빌드가 중간에 실패한 다음 빌드는
-# 지문 비교 없이 전부 렌더한다 (지문은 post_write 에서만 확정한다).
+# 묶음 둘 (모두 _layouts·_includes 파일 stamp, 전체 문서·페이지 URL 목록(seo.html 의
+# hreflang), 자기 페이지들의 데이터·소스 내용을 공통으로 넣는다):
+#   terms     — /ko/terms·/ko/notations·terms.json. _data 전부를 본다 (terms·notations 포함).
+#               글의 frontmatter·요약문은 안 본다.
+#   structure — 과목홈·Misc 목록(archive_custom)·카테고리 아카이브(categories)·최근 글
+#               (recent)·sitemap. _data 는 terms·notations 를 빼고, 글은 목록 구조를 정하는
+#               필드만(STRUCTURE_FIELDS — 제목·카테고리·순서·게시일·permalink·sitemap 등)
+#               본다. **수정일(last_modified_at)과 요약문(excerpt)은 일부러 뺐다**: 즉시
+#               반영할 것은 글 추가·삭제(와 드문 구조 필드 변경)뿐이고, 수정일·요약문은
+#               정기 재시작(RuntimeMaxSec=3h)·full-rebuild 때 반영되면 된다는 사용자 결정
+#               (2026-10-31). 그래서 최근 글의 수정일·요약, sitemap 의 lastmod, 과목 카드·
+#               아카이브의 요약은 그때까지 옛것일 수 있다.
+# 공통 제외: _data 의 link_relations*(글 페이지만 읽고 분류기 틱마다 바뀐다)·page_urls(URL
+# 목록으로 대신). read_time 이 켜진 글은 본문까지 넣는다 (page__meta 가 단어 수를 센다).
+# 프로세스 첫 빌드와, 빌드가 중간에 실패한 다음 빌드는 지문 비교 없이 전부 렌더한다
+# (지문은 post_write 에서만 확정한다).
 #
-# 지문은 두 묶음이다. 용어 묶음(TERMS_URLS: /ko/terms·/ko/notations·terms.json)은
-# site.data.terms·notations 만 읽고 글의 frontmatter·요약문을 보지 않으므로, _data·템플릿·
-# 전체 URL 목록·자기 내용만으로 판단한다 — 글 제목 변경이나 비공개 글(mtime 이 수정일)
-# 수정 때 이 셋(렌더 ~0.74s)까지 다시 그리지 않으려는 것 (2026-10-31). 나머지는 위 전부.
-#
-# 대상은 아래 LAYOUTS·URLS 로 고른 것뿐이다 — 피드(본문을 싣는다)·CSS·글은 손대지 않는다.
-# 새 목록 페이지가 본문을 읽기 시작하면(예: post.content) 여기 지문에도 넣어야 한다.
+# 대상은 아래 상수로 고른 페이지뿐이다 — 피드(본문을 싣는다)·CSS·글은 손대지 않는다.
+# 대상 페이지가 새 입력(글 본문, 다른 필드, 다른 _data)을 읽기 시작하면 해당 묶음 지문에도
+# 넣어야 한다 — 안 그러면 그 변경이 미리보기에 안 뜬다.
 # serve 의 incremental 에서만 켠다; 일회성 build(CI)에는 영향이 없다.
 require "digest"
 
 module ListingRegenGate
-  LAYOUTS = %w[archive_custom categories recent].freeze
-  URLS = %w[/assets/data/terms.json /sitemap.xml].freeze
-  EXCLUDED_DATA = %w[link_relations link_relations_next page_urls].freeze
-  DOC_VOLATILE = %w[excerpt semantic_navigation regenerate].freeze
   TERMS_URLS = %w[/ko/terms /ko/notations /assets/data/terms.json].freeze
-  STATE = { listing: {}, terms: {} } # 묶음 => { current:, last: }
+  STRUCTURE_LAYOUTS = %w[archive_custom categories recent].freeze
+  STRUCTURE_URLS = %w[/sitemap.xml].freeze
+  EXCLUDED_DATA = %w[link_relations link_relations_next page_urls].freeze
+  TERMS_DATA = %w[terms notations].freeze
+  # archive-single·subject-cards·page__meta·nav_recents·categories·recent 레이아웃과 sitemap 이
+  # 글에서 읽는 필드 중 즉시 반영할 것 (last_modified_at·excerpt 는 지연 반영 — 위 주석)
+  STRUCTURE_FIELDS = %w[title categories category weight date permalink header link
+                        published sitemap read_time show_date words_per_minute].freeze
+  STATE = { terms: {}, structure: {} } # 묶음 => { current:, last: }
 
   module_function
 
   def group_of(page)
     return nil unless page.is_a?(Jekyll::Page)
     return :terms if TERMS_URLS.include?(page.url)
-    return :listing if LAYOUTS.include?(page.data["layout"]) || URLS.include?(page.url)
+    return :structure if STRUCTURE_LAYOUTS.include?(page.data["layout"]) || STRUCTURE_URLS.include?(page.url)
 
     nil
   end
@@ -85,40 +94,47 @@ module ListingRegenGate
     "#{path}\0-\0"
   end
 
-  # { listing: hex, terms: hex }. 공통 부분(_data·템플릿·전체 URL)을 먼저 한 번 계산한다.
+  def own_pages(site, group, out)
+    site.pages.select { |p| group_of(p) == group }.sort_by { |p| [p.url, p.relative_path.to_s] }.each do |page|
+      out << page.url << "\0" << page.relative_path.to_s << "\0"
+      canon(page.data.reject { |k, _| k == "regenerate" }, out)
+      out << page.content.to_s << "\0"
+    end
+  end
+
+  # { terms:, structure: } 각 hex. 공통 부분은 한 번만 계산한다.
   def fingerprints(site)
     docs = site.collections.each_value.flat_map(&:docs).sort_by(&:path)
-    base = Digest::SHA256.new
-    canon(site.data.reject { |k, _| EXCLUDED_DATA.include?(k) }, base)
+    common = Digest::SHA256.new
     %w[layouts_dir includes_dir].each do |key|
       dir = site.in_source_dir(site.config[key] || "_#{key.delete_suffix('_dir')}")
-      Dir.glob(File.join(dir, "**", "*")).sort.each { |f| base << file_stamp(f) }
+      Dir.glob(File.join(dir, "**", "*")).sort.each { |f| common << file_stamp(f) }
     end
-    base << (docs.map(&:url) + site.pages.map(&:url)).sort.join("\0") # seo.html 의 hreflang 조회
-    base = base.hexdigest
+    common << (docs.map(&:url) + site.pages.map(&:url)).sort.join("\0")
+    data = site.data.reject { |k, _| EXCLUDED_DATA.include?(k) }
+    common << "|data|"
+    canon(data.reject { |k, _| TERMS_DATA.include?(k) }, common)
+    common = common.hexdigest
 
-    terms = Digest::SHA256.new << base
-    site.pages.select { |p| group_of(p) == :terms }.sort_by(&:url).each do |page|
-      terms << page.url << "\0"
-      canon(page.data.reject { |k, _| k == "regenerate" }, terms)
-      terms << page.content.to_s << "\0"
-    end
+    terms = Digest::SHA256.new << common
+    canon(data.select { |k, _| TERMS_DATA.include?(k) }, terms)
+    own_pages(site, :terms, terms)
 
-    d = Digest::SHA256.new << base
+    structure = Digest::SHA256.new << common
     docs.each do |doc|
-      d << doc.relative_path.to_s << "\0" << doc.url << "\0"
-      canon(doc.data.reject { |k, _| DOC_VOLATILE.include?(k) }, d)
-      excerpt = doc.data["excerpt"]
-      d << (excerpt.respond_to?(:content) ? excerpt.content : excerpt).to_s << "\0"
-      d << doc.content.to_s if doc.data["read_time"]
+      structure << "#{doc.relative_path}\0#{doc.url}\0"
+      canon(doc.data.slice(*STRUCTURE_FIELDS), structure)
+      structure << doc.content.to_s if doc.data["read_time"]
     end
+    own_pages(site, :structure, structure)
+    # sitemap 이 읽는 페이지 쪽 입력 — 페이지 데이터(sitemap: false 등)와 정적 파일 목록
     site.pages.sort_by { |p| [p.url, p.relative_path.to_s] }.each do |page|
-      d << page.url << "\0" << page.relative_path.to_s << "\0"
-      canon(page.data.reject { |k, _| k == "regenerate" }, d)
-      d << page.content.to_s << "\0" if group_of(page) == :listing
+      structure << page.url << "\0"
+      canon(page.data.reject { |k, _| %w[regenerate last_modified_at].include?(k) }, structure)
     end
-    d << site.static_files.map(&:relative_path).sort.join("\0")
-    { listing: d.hexdigest, terms: terms.hexdigest }
+    structure << site.static_files.map(&:relative_path).sort.join("\0")
+
+    { terms: terms.hexdigest, structure: structure.hexdigest }
   end
 
   def skip?(site, page)
