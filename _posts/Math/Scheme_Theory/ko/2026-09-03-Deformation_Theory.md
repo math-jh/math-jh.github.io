@@ -371,36 +371,24 @@ $$\left(1-\frac{\t^2}{2}\right)^2+\t^2-1=\frac{\t^4}{4}$$
 
 이므로 이차까지 방정식을 만족한다. 이 보정항은 출발 속도를 바꾸지 않고 가속도를 정하며, 일반적으로 $\x=\sqrt{1-\t^2}$, $\y=\t$의 $\t=0$에서의 테일러전개는 모든 차수에서 방정식을 만족하는 보정을 준다.
 
-문제는 이것이 항상 가능한 것이 아니라는 데에 있다. 가령 $\x\y=0$의 원점에서 속도 $(1,1)$로 출발하는 $\x=\t$, $\y=\t$는 일차에서는 허용되지만, 어떤 $a,b\in\mathbb{R}$에 대해서도
-
-$$(\t+a\t^2)(\t+b\t^2)\equiv\t^2\neq0\pmod{\t^3}$$
-
-이므로 이차로 연장할 수 없다. 즉 tangent vector를 정하는 것과, 그 속도로 출발하여 공간 안에 머무는 경로를 차수별로 구성하는 것은 별개의 문제가 된다. 우리 상황에서는 출발 속도가 주어진 first-order deformation에 대응하고, 경로의 고차 보정은 이미 정해진 일차항을 유지하면서 flatness를 만족하도록 방정식에 고차항을 더하는 것에 대응한다. 고차 변형이론은 이러한 보정으로 deformation을 계속 연장할 수 있는지를 살펴보는 역할을 한다.
+다음은 이러한 보정이 불가능한 예시이다.
 
 ::: 예시 7 (Node 위의 점)
-Node $C=A[\x,\y]/(\x\y)$의 원점, 곧 $\x,\y\mapsto0$으로 주어지는 $A$-algebra homomorphism $C\rightarrow A$를 움직이는 문제를 생각하자. 이는 [정의 1](#def1) 직전의 lifting problem에서 $B=A[\x,\y]$, $f=\x\y$, $\mathfrak{a}=(f)$로 둔 경우이다.
+[예시 6](#ex6)에서는 node $C=A[\x,\y]/(\x\y)$ 자신을 deform하였다. 이번에는 그 원점 $\x,\y\mapsto0$을 [정의 1](#def1) 직전의 lifting problem으로 움직여 보자. 일차에서는 $(a\t)(b\t)=0$이므로, 임의의 $a,b\in A$에 대하여 $\x\mapsto a\t$, $\y\mapsto b\t$가 $C\rightarrow A[\t]/(\t^2)$를 정의한다.
 
-먼저 곡선을 고정하고 점만 움직이자. 원점을 $A[\t]/(\t^2)$로 들어올린 것은 $\x\mapsto a\t$, $\y\mapsto b\t$ ($a,b\in A$)의 꼴이고, $(a\t)(b\t)=0$이므로 이들은 모두 $C$를 거친다. 즉 일차에서는 모든 속도 $(a,b)\in\Der_A(C,A)\cong A^2$이 허용된다. 이제 $\mathfrak{b}=(\t^2)$를 kernel로 갖는 $R=A[\t]/(\t^3)\rightarrow R_0=A[\t]/(\t^2)$를 따라 이를 들어올리면, lift $\widetilde{\rho}$는 $\x\mapsto a\t+a'\t^2$, $\y\mapsto b\t+b'\t^2$의 꼴이고
+곡선을 고정하고 점만 움직이는 경우, 이를 $A[\t]/(\t^3)$으로 들어올린 $\x\mapsto a\t+a'\t^2$, $\y\mapsto b\t+b'\t^2$에 대하여
 
-$$\delta(\bar{f})=\widetilde{\rho}(\x\y)=(a\t+a'\t^2)(b\t+b'\t^2)=ab\t^2$$
+$$\x\y\mapsto(a\t+a'\t^2)(b\t+b'\t^2)\equiv ab\t^2\pmod{\t^3}$$
 
-이다. 즉 보정 $a',b'$은 $\t^2$의 계수에 나타나지 않는다. 실제로 lift를 $h\in\Hom_C(\Omega_{B/A}\otimes_BC,\mathfrak{b})$만큼 바꿀 때 $\delta$가 변하는 양
+이다. 보정 $a',b'$은 $\t^2$의 계수에 나타나지 않으며, 이는 $\bar{d}(\overline{\x\y})=\y\dd{\x}+\x\dd{\y}$의 계수 $\x,\y$가 $\mathfrak{b}=(\t^2)$ 위에 $0$으로 작용하여 $\bar{d}^\ast=0$이기 때문이다. 따라서 obstruction은 $ab\in T^1(C/A,\mathfrak{b})\cong A$이고, 속도 $(a,b)$는 $ab=0$일 때에만 이차로 연장된다.
 
-$$\bar{d}^\ast(h)(\bar{f})=h(\dd{f})=\rho_0(\y)h(\dd{\x})+\rho_0(\x)h(\dd{\y})$$
+이번에는 곡선도 family $\x\y=\s$를 따라 함께 움직이자. 이는 $\widetilde{C}=A[\s,\x,\y]/(\x\y-\s)$의 원점을 움직이는 문제이며, $\s\mapsto c\t+c'\t^2$로 두면
 
-은 $\rho_0(\x)=a\t$, $\rho_0(\y)=b\t$가 $\mathfrak{b}$를 소멸시키므로 $0$이다. 따라서 $\bar{d}^\ast=0$이고, $\mathfrak{a}/\mathfrak{a}^2$가 $\bar{f}$로 생성되는 free $C$-module이므로 $T^1(C/A,\mathfrak{b})\cong\mathfrak{b}\cong A$이며 obstruction은 $[\delta]=ab$이다. 특히 $A$가 field이면 속도 $(a,b)$가 second order로 연장되는 것은 점이 두 축 가운데 하나를 따라 움직이는 경우뿐이다.
+$$\x\y-\s\mapsto-c\t+(ab-c')\t^2\pmod{\t^3}$$
 
-이번에는 [정의 3](#def3) 앞에서 본 family $\x\y=\t$의 parameter를 $\s$로 바꾸어 적고, 곡선과 점을 함께 움직이자. 곡선의 parameter와 그 위의 점의 쌍은
+이다. 일차에서 $c\neq0$이면 곡선은 $\x\y=c\t$, 곧 [예시 6](#ex6)의 nontrivial deformation이 되고, 거기서 본 것과 같이 그 위에는 원점을 확장하는 점이 없다. 따라서 일차에서는 $c=0$이 강제된다. 그러나 이차에서는 $c'=ab$로 택하면 오차가 사라진다. 실제로 $\bar{d}(\overline{\x\y-\s})$에는 새로운 항 $-\dd{\s}$가 생겨 $\bar{d}^\ast$가 surjective가 되고, $T^1(\widetilde{C}/A,\mathfrak{b})=0$이다.
 
-$$\widetilde{C}=A[\s,\x,\y]/(\x\y-\s)$$
-
-의 점이므로, 이는 $\widetilde{C}$의 원점을 들어올리는 문제이다. 일차에서 lift는 $\x\mapsto a\t$, $\y\mapsto b\t$, $\s\mapsto c\t$의 꼴이고 $\x\y-\s\mapsto ab\t^2-c\t\equiv-c\t\pmod{\t^2}$이므로 $c=0$이어야 한다. 즉 node 위에 점을 둔 채로는 곡선이 일차에서 펴질 수 없으며, 이는 [예시 6](#ex6)에서 $\x\y=\epsilon$이 원점 위의 점을 갖지 않았던 것과 같은 현상이다. 그러나 이차에서는 $\s\mapsto c'\t^2$이 허용되어
-
-$$\widetilde{\rho}(\x\y-\s)\equiv(ab-c')\t^2\pmod{\t^3}$$
-
-이 되고, $c'=ab$로 택하면 오차가 사라진다. 이 경우 $\bar{d}^\ast(h)(\overline{\x\y-\s})=-h(\dd{\s})$이므로 $\bar{d}^\ast$는 surjective이고 $T^1(\widetilde{C}/A,\mathfrak{b})=0$이다. 실제로 $\widetilde{C}\cong A[\x,\y]$는 smooth하다. ([명제 2](#prop2))
-
-두 경우 모두 obstruction은 남는 오차를 보정이 만들 수 있는 변화로 나눈 것이다. 첫째 경우에는 보정 $a',b'$이 오차 $ab\t^2$를 바꾸지 못하지만, 둘째 경우에는 곡선의 이차 변형 $c'\t^2$가 이를 상쇄한다. 가령 앞에서 본 $\x=\t$, $\y=\t$는 고정된 node 위에서는 이차로 연장되지 않지만, 곡선을 $\x\y=\t^2$으로 함께 움직이면 그 위에 모든 차수에서 머문다.
+즉 고정된 곡선 위에서는 보정 $a',b'$이 오차 $ab\t^2$를 바꾸지 못하지만, 곡선의 이차 변형 $c'\t^2$는 이를 그대로 상쇄한다. 가령 $(\x,\y)=(\t,\t)$는 $\x\y=0$ 위에서는 이차로 연장되지 않고 일차에서 펴지는 쌍곡선 $\x\y=c\t$ 위에도 놓일 수 없지만, 이차에서 펴지는 쌍곡선 $\x\y=\t^2$ 위에는 모든 차수에서 놓인다.
 :::
 
 이제 $C$ 자신의 deformation을 연장하는 문제를 살펴보기 위해 앞에서 고정한 presentation
