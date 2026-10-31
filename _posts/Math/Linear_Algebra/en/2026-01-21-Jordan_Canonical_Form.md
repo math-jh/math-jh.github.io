@@ -170,7 +170,7 @@ Therefore, considering the preceding decomposition
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
-and the restricted linear operator $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$, the eigenvalues of this linear operator are precisely those eigenvalues of $A$ other than $\lambda$. Indeed, if $\mu\neq \lambda$ is an eigenvalue of $A$, then for $v\in E_\mu(A)$ we have $(A-\lambda I)^kv=(\mu-\lambda)^kv$, so $v=(A-\lambda I)^k\left((\mu-\lambda)^{-k}v\right)\in \im (A-\lambda I)^k=W_\lambda(A)$, and hence $\mu$ is an eigenvalue of $A\vert_{W_\lambda(A)}$. That is, induction works, and thus the following holds.
+and the restricted linear operator $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$, the eigenvalues of this linear operator are precisely those eigenvalues of $A$ other than $\lambda$. Indeed, if $\mu\neq \lambda$ is an eigenvalue of $A$, then for $v\in E_\mu(A)$ we have $(A-\lambda I)^kv=(\mu-\lambda)^kv$, so $v=(A-\lambda I)^k\left((\mu-\lambda)^{-k}v\right)\in \im (A-\lambda I)^k=W_\lambda(A)$, and hence $\mu$ is an eigenvalue of $A\vert_{W_\lambda(A)}$. Furthermore, since $G_\mu(A)$ is $A$-invariant and a suitable power of $A-\mu I$ is $0$ on it, $A-\lambda I=(\mu-\lambda)I+(A-\mu I)$ is invertible on $G_\mu(A)$. Therefore, $G_\mu(A)=(A-\lambda I)^k(G_\mu(A))\subseteq\im(A-\lambda I)^k=W_\lambda(A)$, and the generalized eigenspace of $A\vert_{W_\lambda(A)}$ for $\mu$ is equal to $G_\mu(A)$. That is, induction works, and thus the following holds.
 
 ::: Theorem 6 (First Decomposition Theorem)
 On a finite-dimensional vector space $V$, for a linear operator $A:V\rightarrow V$, let all eigenvalues of $A$ be $\lambda_1,\ldots,\lambda_m$. Then the following direct sum decomposition
