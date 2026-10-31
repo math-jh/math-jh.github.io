@@ -82,7 +82,7 @@ $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
 which corresponds exactly to the existence of a Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([\[Number Theory\] §Division and the Euclidean Algorithm, ⁋Theorem 8](/en/math/number_theory/euclidean_algorithm#thm8)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of two coprime integers $m,n$ are comaximal. 
 
-On the other hand, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$, which does not hold in general, holds when the two ideals are comaximal. The result to show this is as follows.
+On the other hand, if $A$ is commutative, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$, which does not hold in general, holds when the two ideals are comaximal. The result to show this is as follows.
 
 ::: Proposition 4
 Suppose two-sided ideals of $A$, $\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$, are given, and assume that $A=\mathfrak{a}+\mathfrak{b}_i$ holds for all $i$. Then
