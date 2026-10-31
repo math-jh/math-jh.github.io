@@ -87,7 +87,7 @@ To complete the proof, we must show that these $m$ elements $\mathbf{x}^i+\mathf
 
 $$\sum_{i=1}^m a_i\mathbf{x}^i=0\mod{\mathfrak{m}}_p^2$$
 
-Then on $U$, this equation becomes
+Then on $\varphi(U)$, this equation becomes
 
 $$\sum_{i=1}^m a_i (x^i\circ\varphi^{-1})=0\mod{\mathfrak{m}}_0^2$$
 
@@ -116,7 +116,7 @@ These $m$ tangent vectors are, as noted above, the dual of the basis of $\mathfr
 
 $$v=\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p$$
 
-To check that this formula is correct, it suffices to apply the tangent vectors on both sides of the above formula to an arbitrary $\mathbf{f}$ and compare the results. Or, more simply, since $\mathbf{f}$ is expressed as a linear combination of the $\mathbf{x}^i+\mathfrak{m}_p^2$, it is enough to apply them to $\mathbf{x}^j$ alone. Applying the right-hand side to $\mathbf{x}^j$,
+To check that this formula is correct, it suffices to apply the tangent vectors on both sides of the above formula to an arbitrary $\mathbf{f}$ and compare the results. Or, more simply, since tangent vectors send constants and elements of $\mathfrak{m}_p^2$ to $0$ and $\mathbf{f}-f(p)+\mathfrak{m}_p^2$ is expressed as a linear combination of the $\mathbf{x}^i+\mathfrak{m}_p^2$, it is enough to apply them to $\mathbf{x}^j$ alone. Applying the right-hand side to $\mathbf{x}^j$,
 
 $$\sum_{i=1}^m v(x^i)\frac{\partial}{\partial x^i}\bigg\vert_p x^j=\sum_{i=1}^m v(x^i)\delta_{ij}=v(x^j)$$
 
