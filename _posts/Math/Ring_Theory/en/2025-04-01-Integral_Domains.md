@@ -295,13 +295,11 @@ is a greatest common divisor of $a$ and $b$. (With the convention that if all ex
 ::: Proof
 First, in $d$, for each prime factor $p_i$, the exponent $\min(e_i, f_i)$ is the minimum number of times that, in the factorizations of both $a$ and $b$, the factor $p_i$ appears, so it is clear that $d \mid a$ and $d \mid b$. That is, $d$ is a common divisor.
 
-Now let $c$ be any common divisor of $a$ and $b$. Then the prime factorization of $c$ is as follows:
+Now let $c$ be any common divisor of $a$ and $b$. However, since $c \mid a$, each prime factor of $c$ must be associate to some prime factor of $a$, and thus for some unit $w\in A^\times$ and $g_i\geq 0$, we can write $c$ in the form
 
-$$c = q_1^{g_1} \cdots q_m^{g_m}$$
+$$c = w\cdot p_1^{g_1} \cdots p_n^{g_n}$$
 
-However, since $c \mid a, b$, each $q_j$ must be associate to some prime factor of $a$ or $b$. That is, $\{q_1, \dots, q_m\} \subseteq \{p_1, \dots, p_n\}$.
-
-Furthermore, each exponent $g_j$ cannot exceed, in $a$ and $b$, the exponent of $q_j$, so $g_j \leq \min(e_j, f_j)$. Therefore, $c \mid d$, and $d$ is a greatest common divisor of $a$ and $b$.
+Furthermore, each exponent $g_i$ cannot exceed, in $a$ and $b$, the exponent of $p_i$, so $g_i \leq \min(e_i, f_i)$. Therefore, $c \mid d$, and $d$ is a greatest common divisor of $a$ and $b$.
 :::
 
 Then the following theorem ties together the three definitions we have discussed so far. 
@@ -311,15 +309,15 @@ Every Euclidean domain is a Principal Ideal Domain, and every Principal Ideal Do
 :::
 
 ::: Proof
-The only thing we need to show is the fact that any PID is a UFD. Fix a PID $A$, and fix a non-zero, non-unit $r\in A$. First, we will inductively construct a chain of ideals
+The only thing we need to show is the fact that any PID is a UFD. Fix a PID $A$, and first let us show that every non-zero, non-unit can be expressed as a finite product of irreducibles. Suppose to the contrary that there exists a non-zero, non-unit $r\in A$ that cannot be expressed as a finite product of irreducibles. We will inductively construct a chain of ideals
 
 $$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
 
-If $r$ is irreducible, we terminate the process here; otherwise, there exist non-units $r_1, r_2$ such that we can write $r = r_1 r_2$. If both of these are again irreducible, we terminate the process here; otherwise, by repeating this process, we can obtain the chain of ideals above. 
+Since $r_0=r$ is not irreducible, there exist non-units $s, s'$ such that we can write $r_0 = ss'$, and at least one of $s$ and $s'$ cannot be expressed as a finite product of irreducibles. Letting this be $s$ and setting $r_1=s$, since $s'$ is a non-unit, we have $(r_0)\subsetneq (r_1)$. Now by repeating the same process for $r_1$, we can obtain the chain of ideals above. 
 
-Now let $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$. Then it is clear that $\mathfrak{a}$ is an ideal, and from the assumption that $A$ is a PID, we have $\mathfrak{a}=(a)$ for some $a\in A$. Then for some $n$, we must have $a\in (r_n)$, and from this $n$ onward, $(r_n)$ always contains $a$, contradicting $(r_n)\subsetneq (r_{n+1})$. 
+Now let $\mathfrak{a}=\bigcup_{i=0}^\infty (r_i)$. Then it is clear that $\mathfrak{a}$ is an ideal, and from the assumption that $A$ is a PID, we have $\mathfrak{a}=(a)$ for some $a\in A$. Then for some $n$, we must have $a\in (r_n)$, and from this $n$ onward, $(r_n)$ always contains $a$, contradicting $(r_n)\subsetneq (r_{n+1})$. Therefore, every non-zero, non-unit can be expressed as a finite product of irreducibles. 
 
-For uniqueness, suppose that two expressions are given as
+For uniqueness, suppose that for any non-zero, non-unit $r\in A$, two expressions are given as
 
 $$r = p_1 \cdots p_m = q_1 \cdots q_n$$
 
