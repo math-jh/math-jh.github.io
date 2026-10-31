@@ -63,7 +63,7 @@ On the other hand, to understand an object in mathematics, it suffices to know t
 Consider a manifold $M$ and a point $p\in M$. For $p$, on a suitable open neighborhood $W$, that a function $f$ defined thereon is at $p$ $C^\infty$ means that, containing $p$ and belonging to the differentiable structure of $M$, for some coordinate chart $(U,\varphi)$, the function $f\circ\varphi^{-1}:\varphi(U\cap W)\rightarrow \mathbb{R}$ is at the point $\varphi(p)$ $C^\infty$.
 :::
 
-Suppose that on another open neighborhood of the point $p$, a coordinate chart $(V,\psi)$ is defined. If $f\circ\varphi^{-1}$ is at $\varphi(p)$ $C^\infty$, but $f\circ\psi^{-1}$ is not so at $\psi(p)$, then this definition is not a good definition. However, on $\psi(U\cap V)$, since
+Suppose that on another open neighborhood of the point $p$, a coordinate chart $(V,\psi)$ is defined. If $f\circ\varphi^{-1}$ is at $\varphi(p)$ $C^\infty$, but $f\circ\psi^{-1}$ is not so at $\psi(p)$, then this definition is not a good definition. However, on $\psi(U\cap V\cap W)$, since
 
 $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
