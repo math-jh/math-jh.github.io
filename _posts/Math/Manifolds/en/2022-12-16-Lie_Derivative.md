@@ -30,7 +30,7 @@ we know that we can obtain the value of the directional derivative. ([§Examples
 Now suppose a vector field $X$ on $M$ is given, and consider the problem of finding the directional derivative $X_pf$ at each point $p$ in the direction of $X_p$. Geometrically, as above, this is equivalent to choosing, for every point $p$, a curve $\gamma_p$ satisfying $\gamma(0)=p$ and $\gamma'(0)=X_p$, and applying formula (1) above. But we know that a curve satisfying this property necessarily exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6){: data-lid="xfxlz" })
 
 ::: Definition 1
-Fix a manifold $M$ and a vector field $X$ defined on it, and suppose a function $f\in C^\infty(M)$ is given. Then the *Lie derivative* $\mathcal{L}_Xf$ of $f$ is the function defined by the formula
+Fix a manifold $M$ and a vector field $X$ defined on it, let $\phi^t$ be the function defined by the integral flows of $X$, and suppose a function $f\in C^\infty(M)$ is given. Then the *Lie derivative* $\mathcal{L}_Xf$ of $f$ is the function defined by the formula
 
 $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
 :::
