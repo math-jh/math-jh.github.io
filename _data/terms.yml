@@ -7186,6 +7186,13 @@ F:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: first_chern_class
+  en: first Chern class
+  ko: 제1 Chern 류
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: first_chern_form
   en: first Chern form
   ko: 제1 천 형식
