@@ -53,7 +53,7 @@ $$y_i=-\frac{\beta_1}{\alpha_i}x_1-\frac{\alpha_1}{\alpha_i}y_1-\cdots-\frac{\al
 
 Therefore, even if from the set $\{x_1, y_1, y_2, \ldots, y_n\}$ we remove $y_i$, this set still spans $V$.
 
-On the other hand, this set is linearly independent. For any scalars $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_n'$, if
+On the other hand, this set is linearly independent. For scalars $\beta_1'$, $\alpha_1'$, $\ldots$, $\alpha_{i-1}'$, $\alpha_{i+1}'$, $\ldots$, $\alpha_n'$, not all zero, if
 
 $$\beta_1'x_1+\alpha_1'y_1+\alpha_2'y_2+\cdots+\alpha_{i-1}'y_{i-1}+\alpha_{i+1}'y_{i+1}+\cdots+\alpha_n'y_n=0$$
 
@@ -136,7 +136,7 @@ For a $\mathbb{K}$-vector space $V$ and a $V$-spanning subset $S$, some subset o
 ::: Proof
 Let $S_0=\emptyset$. Then $\langle S_0\rangle=\{0\}$. Now choose from $S\setminus\langle S_0\rangle$ an element $x_1$ and let $S_1=\{x_1\}=S_0\cup\{x_1\}$; similarly, choose from $S\setminus\langle S_1\rangle$ an element $x_2$ to form $S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$, repeating this process.
 
-The sets $S_i$ obtained in this way are linearly independent subsets by definition, and as long as $\langle S_i\rangle$ is not equal to $S$, the number of elements in $S_{i+1}$ is always one greater than that in $S_i$. Therefore, for all $i < n = \dim V$, it suffices to show that $S\setminus\langle S_i\rangle$ is nonempty.
+The sets $S_i$ obtained in this way are linearly independent subsets by definition, and as long as $S\setminus\langle S_i\rangle$ is nonempty, the number of elements in $S_{i+1}$ is always one greater than that in $S_i$. By [Lemma 2](#lem2){: data-lid="ol09y" }, this process terminates within at most the $\dim V$-th step, so it suffices to show that $\langle S_m\rangle=V$ at the step $m$ where the process terminates.
 
 Choose a natural number $m$ such that $S\setminus\langle S_m\rangle=\emptyset$. That is, $S\subseteq\langle S_m\rangle$. Now, from [§Basis of a Vector Space, ⁋Lemma 4](/en/math/linear_algebra/basis#lem4){: data-lid="egvx8" }, we know that taking $\span$ preserves inclusion relations between sets, so
 
