@@ -53,7 +53,7 @@ By definition, if arbitrary $x\in M$ and $\xi\in M^\ast$ are given, this pair sp
 For an arbitrary $A$-module $M$ and its dual $M^\ast$, we say that $x\in M$ and $\xi\in M^\ast$ are *orthogonal* if $\langle x,\xi\rangle=0$.
 :::
 
-If every pair of elements from two subsets of $M$ and $M^\ast$ is orthogonal, we say that the two are orthogonal. Meanwhile, fix an arbitrary $x\in M$, and suppose that $\xi,\xi_1,\xi_2\in M^\ast$ and $\alpha\in A$ are given. Then, since
+If every pair of elements from two subsets of $M$ and $M^\ast$ is orthogonal, we say that the two are orthogonal. Meanwhile, fix an arbitrary $x\in M$, and suppose that $\xi,\xi_1,\xi_2\in M^\ast$ orthogonal to $x$ and $\alpha\in A$ are given. Then, since
 
 $$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0,\qquad \langle x,\xi\cdot\alpha\rangle=\langle x,\xi\rangle\alpha=0$$
 
