@@ -11,7 +11,7 @@
 #
 # Run this when local output still looks stale. It clears the incremental
 # metadata and cache and restarts the server, forcing one clean full build
-# (~30s). Production is unaffected — CI always builds clean from scratch.
+# (~75s, measured 2026-10-31). Production is unaffected — CI always builds clean from scratch.
 
 set -euo pipefail
 
