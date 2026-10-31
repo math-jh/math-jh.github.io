@@ -69,9 +69,9 @@ $$v=w_1+w_2=w_1'+w_2'$$
 
 then in
 
-$$w_1-w_1'=w_2-w_2'$$
+$$w_1-w_1'=w_2'-w_2$$
 
-the left-hand side is an element of $W_1$ and the right-hand side is an element of $W_2$, so from the condition $W_1\cap W_2=\{0\}$ we have $w_1-w_1'=w_2-w_2'=0$.
+the left-hand side is an element of $W_1$ and the right-hand side is an element of $W_2$, so from the condition $W_1\cap W_2=\{0\}$ we have $w_1-w_1'=w_2'-w_2=0$.
 :::
 
 One direction of the proposition above holds even when $I$ has three or more elements. That is, if $V=\bigoplus_{i\in I}W_i$, then $V=\sum_{i\in I}W_i$, and whenever $i\neq j$, $W_i\cap W_j=\{0\}$ holds, and its proof is also the same as above. However, the converse does not hold in general.
