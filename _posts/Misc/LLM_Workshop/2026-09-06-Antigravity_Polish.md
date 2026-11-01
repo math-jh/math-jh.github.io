@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-01
 
 weight: 49
 
@@ -544,3 +544,79 @@ return _diff("".join(scoped), current, f"a/{path}", f"b/{path}")
 범위 밖 수정은 양쪽에 모두 들어 있어 변경으로 나타나지 않고, 맥락 줄은 어디서나 현재 문구다. 반경 안의 변경만 `+`/`-`로 남는다. 새 테스트는 같은 입력에서 `+alternating이면 antisymmetric이다.`와 현재 정의가 맥락 줄로 나오고, 옛 정의 "같은 성분이면 0"은 diff 어디에도 없는지 확인한다.
 
 그래도 diff는 조각이라, 반경 밖에서 정의가 바뀌었다는 사실은 판정자에게 보이지 않는다. 그 부분은 프롬프트에 현재 한글 글 전체를 `--- BEGIN CURRENT KO ---` 구분자로 넣어 메웠다. 정정된 서술이 기대는 앞선 정의가 diff 밖에 있으면 거기서 읽으라는 안내도 프롬프트에 들어갔다. 배선은 `reviewed_candidate`가 이미 들고 있던 `current_ko`를 `codex_pass`에 넘기는 것이 전부다. 글 전문이 붙으니 프롬프트는 길어진다. 이 변경이 실제 틱에서 거절을 줄이는지는 아직 보지 못했다.
+
+## 감사를 지우는 길은 하나여야 한다
+
+관련 커밋: [`08a3bb7f`](https://github.com/math-jh/math-jh.github.io/commit/08a3bb7f)
+{: .notice--info}
+
+KO 감사는 state 항목에 한 벌의 필드로 들어 있다. 지적 목록(`verify_ko_typos`), Codex 판정이 붙은 목록(`verify_ko_typos_review`), 감사 시각, 감사 당시 원문(`ko_review_base_content`)과 그 해시다. 대시보드는 `verify_ko_typos`가 비어 있으면 해소된 것으로 읽는다(`ko_typos.py` 계약). 그래서 이 필드가 후속 판정 밖의 경로에서 비워지면 지적이 큐에서 조용히 사라진다. 에러는 나지 않는다.
+
+그런 경로가 둘 있었다. 하나는 Phase 4 재검증이다. `run_verify`는 검증기가 이번에 KO-TYPOS를 하나도 안 냈으면 `verify_ko_typos`를 `None`으로 덮었다. 같은 지적을 검증기가 다시 짚지 못했다는 것은 사용자가 고쳤다는 뜻이 아닌데도 그랬다. 다른 하나는 재번역이다. drift 증분 번역은 `state["files"][key]`를 새 dict로 통째로 갈아 끼우므로, 이전 항목에 있던 감사 필드는 새 항목에 오지 않았다.
+
+수리는 필드 목록을 한 곳에 모으는 것으로 시작한다. 후속 워커의 `_clear_completed`가 따로 들고 있던 아홉 개 키 튜플을 `translate_worker.KO_AUDIT_FIELDS`로 옮기고 양쪽이 같은 것을 쓴다.
+
+```python
+def merge_ko_audit(prev, entry, ko_path, new_review, key):
+    if not has_outstanding_ko_audit(prev):
+        if new_review:
+            record_ko_review(entry, ko_path, new_review)
+        return
+    for field in KO_AUDIT_FIELDS:
+        if field in prev:
+            entry[field] = prev[field]
+    if not new_review:
+        return
+    ...
+```
+{: data-filename="scripts/translation/translate_worker.py"}
+
+`has_outstanding_ko_audit`은 Codex가 FALSE로 기각하지 않은 지적이 하나라도 남았는지를 본다. 남았으면 이전 항목의 감사 필드를 새 항목으로 그대로 옮긴다. 감사 시각도 그대로이므로 대시보드 체크가 가리키는 요청 키(`<ko-path>@<ko_reviewed_at>`)가 유지된다. 재번역 경로(`main`)는 항목을 갈아 끼우기 직전에 `prev_entry`를 떠 두었다가 이 함수를 부른다. 새 판정이 없는 경우다.
+
+새 판정이 같이 있으면 합친다. 옛 지적 중 FALSE가 아닌 것, 인용문이 현재 KO에 그대로 남은 것(인용문이 없는 지적은 그냥 둔다)만 가져오고, 인용문이 사라진 지적은 사용자가 그 문장을 고친 것으로 보아 버린다. 합친 목록에는 현재 KO가 새 기준 판본으로 붙고 감사 시각이 바뀐다. 옛 키로 걸려 있던 체크·거절·대기 기록은 후속 워커가 stale로 정리한다.
+
+`run_verify`의 새 KO-TYPOS는 이전에는 문자열 그대로 `verify_ko_typos`에 들어갔다. 폴리싱이 올리는 지적은 Codex 판정을 거친 뒤에 올라오는데 이쪽은 판정 없이 올라왔던 셈이다. 이제 이미 판정을 받은 `claim`은 거르고 나머지만 `review_ko_findings`에 보내며, 결과는 같은 `merge_ko_audit`으로 들어간다. 테스트(`test_ko_audit_state.py`) 7건은 재검증이 미해결 감사를 지우지 않는 것, 판정이 모두 FALSE이면 지우는 것, 이미 판정한 지적을 다시 보내지 않는 것, 재번역된 항목이 감사를 이어받는 것을 확인한다. 이 경로가 운영 틱에서 도는 것은 아직 보지 못했다.
+
+## 후속 워커의 거절은 누구의 몫인가
+
+관련 커밋: [`48c5847e`](https://github.com/math-jh/math-jh.github.io/commit/48c5847e)
+{: .notice--info}
+
+사용자는 후속 워커에 거절당한 요청 하나를 열어 보다가 판정 방향이 이상하다고 짚었다.
+
+> 하나 후속워커에서 거절당했어. 근데 왜 후속워커가 영어를 기준으로 생각하는지 모르겠네. 영어는 자기가 수정해야 하는거지 기준이 아닌데.
+
+원인은 판정이 `{"pass": bool}` 하나였다는 데 있다. Codex가 "한글이 지적을 해소했는가"와 "영어가 그 한글을 충실히 따르는가"를 한 불리언으로 답하니, 영어 쪽 결함도 거절로 돌아가 사용자가 체크를 풀고 한글을 고쳐 다시 올리는 길로 이어졌다. 영어를 고치는 것은 워커의 일이고 한글은 저자의 일인데 책임이 섞여 있었다.
+
+판정을 둘로 가른다.
+
+```python
+{"ko_resolved": true, "en_faithful": true, "why": "..."}
+```
+
+`reviewed_candidate`는 이제 세 결과를 돌려준다.
+
+```python
+if not ko_resolved:
+    return candidate, KO_UNRESOLVED, why
+if en_faithful:
+    return candidate, PASSED, why
+feedback = why   # 영어만 문제: 피드백을 붙여 다시 제안
+...
+return candidate, EN_UNFAITHFUL, why
+```
+{: data-filename="scripts/translation/ko_followup_worker.py"}
+
+`KO_UNRESOLVED`는 영어를 몇 번 다시 만들어도 고쳐지지 않으므로 재시도 없이 바로 돌려보내고, 기존 거절 경로로 체크를 풀고 사유를 남긴다. 로그 문구도 "KO 가 지적을 해소하지 못함"으로 바뀌었다. `EN_UNFAITHFUL`은 두 번의 제안이 다 실패한 경우이며, 이때는 거절하지 않고 `_record_wait`로 넘겨 요청을 체크된 채 둔다. 다음 실행이 영어를 처음부터 다시 만든다. 앞 절의 막힘 표시가 이 대기를 세므로 반복되면 대시보드에 나타난다. Codex 프롬프트에는 영어 결함은 `ko_resolved`를 false로 만들 이유가 아니라는 문장을 명시했다.
+
+같은 날 영어 제안 쪽에도 두 가지가 들어갔다. 제안 프롬프트에 현재 한글 전문(`CURRENT KO`)을 주고, 한글 diff가 지적 근처 변경만 보여 준다는 점을 알리며 수학을 스스로 재구성하지 말고 한글의 해당 구절에서 가져오라고 적었다. 그리고 치환 목록을 JSON에서 구분자 블록으로 바꿨다.
+
+```
+<<<OLD
+정확히 한 번 나오는 EN 부분 문자열
+===NEW
+치환문
+>>>END
+```
+
+모델이 LaTeX를 JSON 문자열로 이스케이프하다 `$`를 흘려(`$\lambda$`가 `\lambda`로) `old`가 EN과 어긋나는 일이 있었기 때문이다. 앞 절의 `_replacement_miss`가 진단하던 병의 한 갈래다. 블록 형식은 이스케이프를 요구하지 않아 본문이 바이트 단위로 보존된다. `_parse_replacements`는 블록이 없고 `NO CHANGES`도 아니면 예외를 던지므로, 모델이 옛 JSON 형식으로 답해도 조용히 빈 치환으로 읽히지 않는다.
