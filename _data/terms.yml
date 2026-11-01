@@ -5963,6 +5963,13 @@ E:
   defs:
   - label: '[대수적 위상수학] §코호몰로지'
     url: /ko/math/algebraic_topology/cohomology
+- id: elementary_divisor
+  en: elementary divisor
+  ko: 기본인자
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: elementary_matrix
   en: elementary matrix
   ko: 기본행렬
