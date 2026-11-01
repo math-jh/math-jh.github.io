@@ -260,6 +260,8 @@ window.KATEX_MACROS = {
     "\\Ovir":"\\widehat{\\mathcal{O}}^{\\,\\mathrm{vir}}",
     // virtual class 의 상첨자: [M]^\vir
     "\\vir":"{\\mathrm{vir}}",
+    // 점의 class: [\pt], \pt_E
+    "\\pt":"\\mathrm{pt}",
     // misc
     "\\half":"\\tfrac{1}{2}",
     "\\shift":"(#1)\\text{-shifted}",
