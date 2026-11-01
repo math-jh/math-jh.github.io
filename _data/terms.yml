@@ -1901,6 +1901,13 @@ C:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: calabi-yau_manifold
+  en: Calabi-Yau manifold
+  ko: 칼라비-야우 다양체
+  primary: en
+  defs:
+  - label: '[거울대칭] §거울대칭 개요'
+    url: /ko/math/mirror_symmetry/overview
 - id: calabi-yau_threefold
   en: Calabi-Yau threefold
   ko: 칼라비-야우 삼중체
