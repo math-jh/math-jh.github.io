@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "canvas": "^3.2.3",
-    "js-yaml": "^5.4.2",
+    "js-yaml": "^5.5.0",
     "pagefind": "^1.4.0"
   }
 }
