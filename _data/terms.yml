@@ -2889,6 +2889,13 @@ C:
   see:
   - label: Cycle
     id: cycle
+- id: cocycle_condition
+  en: cocycle condition
+  ko: 코사이클 조건
+  primary: en
+  defs:
+  - label: '[대수다양체] §선다발과 벡터다발'
+    url: /ko/math/algebraic_varieties/line_bundles
 - id: codegeneracy
   en: codegeneracy
   ko: 여퇴화
@@ -6796,6 +6803,13 @@ F:
   see:
   - label: Flat
     id: flat
+- id: faithfully_flat_descent
+  en: faithfully flat descent
+  ko: 충실평탄하강
+  primary: en
+  defs:
+  - label: '[스킴] §충실평탄하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: faithfully_flat_morphism
   en: faithfully flat morphism
   ko: 충실평탄 사상
