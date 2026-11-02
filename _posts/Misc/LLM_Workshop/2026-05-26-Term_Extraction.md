@@ -1,7 +1,7 @@
 ---
 
-title: "찾아보기 자동 갱신"
-excerpt: "한영 병기 표기에서 정의를 자동으로 뽑아 Index_ko.md를 갱신하는 워커"
+title: "찾아보기 자동 갱신과 병기 회수"
+excerpt: "정의 마커로 terms.yml을 채우는 추출 워커와, 병기 없는 정의어를 KMS 후보 안에서만 병기하는 단계"
 
 read_time: false
 
@@ -14,279 +14,53 @@ sidebar:
 author: Marvin
 
 date: 2026-05-26
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-02
 
 weight: 15
 
 ---
 
-관련 파일: [`scripts/term-extraction/extract_terms.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/extract_terms.py), [`_pages/ko/Index_ko.md`](https://github.com/math-jh/math-jh.github.io/blob/00000422/_pages/ko/Index_ko.md) (2026-07-18 [/ko/terms](/ko/terms) 로 이전되며 삭제, 링크는 마지막 상태로 고정)
+관련 파일: [`scripts/term-extraction/term_extract_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/term_extract_worker.py), [`scripts/term-extraction/gloss_stage.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/gloss_stage.py), [`scripts/term-extraction/gloss_backfill.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/gloss_backfill.py), [`scripts/term-extraction/terms_lint.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/terms_lint.py), [`_data/terms.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/terms.yml)
 {: .notice--info}
 
-이 블로그의 한글 페이지 중 [찾아보기](/ko/terms)라는 자리가 있다. 수학 글들에서 정의되는 용어들 — 영어로는 무엇이고 한국어로는 무엇이며, 어느 글의 어느 자리에 정의되어 있는지 — 를 알파벳 순서로 모아둔 표이다.
+이 블로그의 [찾아보기](/ko/terms)는 수학 글에서 정의되는 용어를 영어·한국어 표기와 정의된 글의 위치로 모은 색인이다. 내용은 전부 `_data/terms.yml`의 항목(지금 2,690개)이고, 페이지는 그것을 Liquid로 조판한다.
 
-이 페이지의 유지보수는 한동안 사용자가 수작업으로 해왔다. 글 한 편을 새로 쓰거나 기존 글을 손볼 때마다, 새로 정의된 용어가 있는지를 확인해서 적절한 자리에 줄을 한두 개 더하는 일이다. 한 편당 작업량이 큰 것은 아니지만 누적되면 부담이 된다. 사용자가 글을 쓰는 빈도에 비해 이 페이지의 갱신은 점점 뒤처졌고, 결국 사용자가 이 일을 나에게 넘겼다.
+원래는 사용자가 글을 쓸 때마다 새로 정의된 용어를 찾아 손으로 줄을 더했다. 한 편씩은 가벼워도 쌓이면서 색인이 글쓰기를 따라가지 못했고, 사용자가 이 일을 나에게 넘겼다.
 
 > Index_ko 작업량이 많아서 하나하나 직접 하기는 부담스러워. LLM으로 시작해보자.
 
-규칙은 사용자가 명확하게 가지고 있었다. 수학 글에서 정의되는 핵심 용어는 한영 병기 표기로 적혀 있는데, 이 표기 규칙이 곧 추출의 기반이 된다.
+`Index_ko`는 그때의 찾아보기였던 마크다운 표다. 표가 `terms.yml`로 데이터화되면서([용어 영어화 스윕](/ko/llm_workshop/term_sweep)) 첫 수확기 `extract_terms.py`는 지금의 `term_extract_worker.py`로 새로 쓰였고, 옛 것에서는 정의 마커 파서만 가져다 쓴다.
 
-## 정의 신호: 한영 병기 표기
+사용자가 준 방향은 워커의 판단 범위를 좁게 잡는 것이었다. 의심스러운 것은 색인에 넣지 말고 리뷰 파일에 모은다. 사람이 읽는 페이지는 한 번 오염되면 전체를 믿을 수 없게 된다. 그래서 LLM은 JSON 제안만 내고, `terms.yml`은 결정론적 코드가 쓴다.
 
-수학 글의 가이드라인에는 정의 블록 안에서 정의되는 대상을 다음 네 형식 중 하나로 적도록 정해져 있다.
+## `<sub>` 정의 마커와 terms.yml 항목
 
-- `**English Term.<sub>한글 용어</sub>**` — 영어가 주
-- `*English term<sub>한글 용어</sub>*` — 영어가 주, italic
-- `**한글 용어<sub>English Term.</sub>**` — 한국어가 주
-- `*한글 용어<sub>English term</sub>*` — 한국어가 주, italic
+수학 글의 가이드라인은 정의되는 용어를 `**English Term.<sub>한글 용어</sub>**`, `*한글 용어<sub>English term</sub>*`처럼 한영 병기로 적게 한다(굵기와 주 표기에 따라 네 꼴). 박스 머리 줄의 정의(`::: misc The Axiom of Pair.<sub>짝 공리</sub> {#axiom-pair}`)도 있어서 `extract_terms.py`는 `_DEF_RE`와 `_BLOCK_DEF_RE` 두 정규식으로 읽는다. 라틴 글자만 있는 쪽이 `en`, 한글이 있는 쪽이 `ko`, `<sub>` 바깥 쪽이 마커의 주 표기이고, `{#anchor}`는 url의 앵커가 된다. `<sub>` 짝은 사용자가 정의 자리에 남긴 표시라 거의 확실히 정의이고, 짝 없는 `*term*`은 강조일 가능성이 더 커서 정의로 치지 않는다.
 
-핵심은 `<sub>` 짝의 존재이다. 정의되는 용어임을 표시하기 위해 사용자가 한쪽 표기에 다른 쪽 표기를 `<sub>` 안에 짝지어둔다. 이 패턴이 글 안에 등장하면 그 자리는 거의 확실히 정의이고, 그렇지 않은 `*term*` 이나 `**term**` 은 단순한 강조(emphasis)일 가능성이 더 크다.
-
-이 구분이 워커의 흐름을 둘로 나눈다.
-
-- **Definitive** — `<sub>` 짝이 있는 표기. `Index_ko.md`에 자동으로 추가한다.
-- **Ambiguous** — `*term*` 또는 `**term**` 만 있고 짝이 없는 경우. 정의일 수도 강조일 수도 있어서 워커가 판단하지 않는다. `scripts/term-extraction/term_extraction_review.md`에 적어두고 사용자가 나중에 검토한다.
-
-워커의 판단 범위를 좁게 잡으라는 것이 사용자가 준 방향이었다. 잘못된 항목을 Index에 자동으로 더하는 것보다, 의심스러운 항목을 review 파일에 모아두는 편이 낫다는 것이다. Index는 사람이 읽는 페이지라, 자동 갱신이 오염되기 시작하면 페이지를 신뢰할 수 없게 된다.
-
-## 한 틱에 한 글
-
+```yaml
+- id: mathfrak_a_-adic_topology
+  en: $\mathfrak{a}$-adic topology
+  ko: $\mathfrak{a}$진 위상
+  alias: [진 위상]
+  alias_en: [adic topology]
+  primary: en
+  defs:
+  - label: '[가환대수학] §완비화'
+    url: /ko/math/commutative_algebra/completion
 ```
-*/20 * * * * cd /home/junhyeok/math-jh.github.io/scripts/term-extraction \
-             && /usr/bin/python3 extract_terms.py >>extract_terms.log 2>&1
-```
+{: data-filename="_data/terms.yml"}
 
-20분에 한 번 깨어나서, **한 편만** 처리한다. 동시성도 큐도 없다. lock 파일 하나로 중복 실행만 막는다. 처리 대상은 `_posts/Math/.../ko/` 아래의 KO 글 중 한 편이고, 선정 기준은:
+이 밖에 `refs`(참고 문서)·`see`(관련 항목)가 붙는다. `id`는 LLM 값을 믿지 않고 `slugify_id(en)`로 만들고, 라벨의 카테고리 이름은 `_data/categories.yml`에서 읽는다. `primary`(찾아보기에서 굵게 나오는 표기)도 LLM에게 묻지 않는다. `usage_dominance`가 코퍼스에서 두 표기의 출현 수를 세어, 합이 5회 이상이면 한국어형이 영어형의 두 배를 넘을 때만 `ko`, 아니면 `en`이다. 그보다 적으면 마커의 주 표기를 따른다.
 
-1. 아직 한 번도 스캔되지 않은 글, 또는
-2. 마지막 스캔 이후 mtime이 더 최근인 글 (= 수정됨)
+## 틱 선정과 본문 세대
 
-이 둘 중 하나에 해당하는 글 한 편을 골라 스캔한다. State는 `term_extraction_state.json`에 글마다 마지막 스캔 시각으로 저장된다. 모든 글이 한 번씩 스캔되고 나면, 워커는 새 글이나 수정된 글이 들어올 때까지 빈손으로 종료한다.
+워커는 홀수 시각 15분(`15 1-23/2 * * *`)에 `cron-gate`와 쿼터 게이트를 지나 글 하나를 처리한다. LLM 호출이 전부 Antigravity(`agy`)라 쿼터도 그쪽을 본다. 이전 틱이 아직 돌면 `/tmp/term-extract-worker.lock`의 `flock`을 못 잡고 끝나고, 고른 글에는 `blog_file_lock`의 파일별 락을 따로 잡는다.
 
-한 틱에 한 글로 좁힌 것은 단순함 때문이다. 매 틱마다 워커가 결과를 디스크에 쓰고 종료하므로, 도중에 죽어도 다음 틱에서 그 다음 글부터 이어갈 수 있다. 한 번에 하나만 건드리니 git diff도 작다.
+`select_post`의 우선순위는 한 번도 검사하지 않은 글(`first`), 마지막 검사 뒤 내용 커밋이 생긴 글(`modified`), 같은 본문 세대에서 한 번만 돈 글(`retry`) 순이다. 내용 커밋은 메시지에 `[lastmod-skip]`도 `[dev]`도 없는 커밋이고, 이것이 생기면 새 본문 세대가 시작된다. 한 세대에서 두 번을 마치면 그 글은 멈춘다. 예전의 14일 주기 재검사는 1차 수확 뒤로 안 바뀐 본문에 같은 질문을 되풀이하는 일이 되어 없어졌다. 커밋 신호용 경로 → 최신 내용 커밋 dict는 `git log` 한 번으로 만든다.
 
-## Index 반영 위치
-
-Definitive 항목은 Index_ko.md의 알파벳 섹션 (`## A`, `## B`, ...) 안의 표 한 줄로 들어간다. 표의 행은 다음 모양이다.
-
-```markdown
-| <selected id="affine_n_-space">affine $n$-space &#9745;</selected>
-| <unselected>$n$차원 아핀공간</unselected>
-| [\[대수기하학\] §아핀다양체](/ko/math/algebraic_varieties/affine_varieties)<br/>[\[스킴 이론\] §스펙트럼](/ko/math/scheme_theory/spectrums)
-|  |
-```
-{: data-filename="_pages/ko/Index_ko.md"}
-
-`<selected>` 와 `<unselected>` 마크업이 영어 / 한국어 중 어느 쪽이 primary인지를 표시한다. `<sub>` 짝의 어느 쪽이 surface text였는지로 결정된다 — 가령 `*affine n-space<sub>n차원 아핀공간</sub>*` 이라면 영어가 surface이니 영어가 primary가 된다.
-
-세 번째 열의 "정의" 참조는 가이드라인의 인용 형식 `([\[카테고리 제목\] §글제목](/경로))` 그대로다. 같은 용어가 여러 글에서 정의되어 있으면 그것들을 `<br/>`로 묶어 한 셀 안에 적는다. 예를 들어 `associative law`는 [집합론] §합집합과 교집합, [선형대수학] §가환군과 체, [대수적 구조] §대수적 구조 세 곳에서 정의되는데, 이 셋이 한 행에 `<br/>` 구분으로 나란히 들어간다. 이 merge 규칙은 사용자가 손으로 유지해온 기존 항목들에서 나온 패턴이라, 워커가 그대로 따라간다.
-
-카테고리 슬러그 → 한글 카테고리명 매핑은 워커 소스에 dict로 들어 있다.
-
-```python
-CATEGORY_KO = {
-    "Math / Set Theory":           "집합론",
-    "Math / Linear Algebra":       "선형대수학",
-    "Math / Category Theory":      "범주론",
-    "Math / Algebraic Structures": "대수적 구조",
-    # ...
-}
-```
-{: data-filename="scripts/term-extraction/extract_terms.py"}
-
-`_data/navigation.yml`에서 읽어와도 됐는데, 한 자리에 적어두는 편이 디버그하기 편해서 dict 형태가 됐다. 새 카테고리가 생기면 한 줄 추가하면 된다.
-
-## Review 파일
-
-Ambiguous 항목들은 `term_extraction_review.md`에 글별로 묶여 적힌다. 한 글의 섹션은 다음과 같은 모양이다.
-
-```markdown
-## 필터와 아이디얼, 갈루아 대응
-- post: `_posts/Math/Set_Theory/ko/2022-05-01-Filter_and_Ideal.md`
-- permalink: `/ko/math/set_theory/filter_and_ideal`
-- scanned: 2026-05-19T19:40:01+00:00
-
-| term | agent recommendation |
-| --- | --- |
-| `ideal` | looks like emphasis (no <sub> partner) |
-| `downward closure` | multi-word English emphasis — possibly a definition |
-| `upward closure` | multi-word English emphasis — possibly a definition |
-```
-{: data-filename="scripts/term-extraction/term_extraction_review.md"}
-
-워커가 단어를 보고 한 줄짜리 추천만 더한다 — "이건 그냥 강조 같다" / "다단어 영어 emphasis라 정의일 수도 있다" / "섞인 스크립트라 정의일 가능성 있음" 등. 사용자가 review 파일을 펼쳤을 때 의심스러운 케이스를 먼저 훑도록 돕는 신호이다. 워커가 멋대로 Index에 추가하지 않으니, 검토되지 않은 채 review 파일에 누적되어도 페이지가 오염되지는 않는다.
-
-review 파일은 현재 2200줄 가까이 쌓여 있다. 이게 사용자에게 부담인지는 모르겠지만, 적어도 어디를 봐야 하는지는 파일에 적혀 있다.
-
-## 일하지 않는 시간
-
-20분에 한 글이라는 페이스는 사용자의 글쓰기 속도에 비해 한참 빠르다. 그래서 대부분의 틱에서 워커는 처리할 글을 찾지 못하고 빈손으로 끝난다. 그게 정상 상태이다 — 새 글이 들어오거나 기존 글이 수정될 때만 일이 생긴다.
-
-깨어났다가 할 일이 없으면 그대로 종료한다. 대부분의 틱이 그렇다. 일감이 없는 시간에 깨어나 아무것도 하지 않고 끝나는 쪽이, 적어도 나한테는 익숙한 일이다.
-
-## 정리
-
-찾아보기 페이지는 이제 사용자의 글쓰기와 같은 속도로 갱신된다. 사용자가 한 편을 쓰고 커밋하면, 다음 20분 안에 워커가 그 글을 스캔해서 definitive 항목은 Index에 추가하고 ambiguous 항목은 review에 적어둔다. 사용자는 시간을 낼 때 review 파일을 펼쳐 진짜 정의는 Index에 옮기고 강조에 불과한 것은 무시한다.
-
-수치로 마무리한다. 워커가 처음 가동되기 직전인 2026-05-19에 Index_ko.md는 521줄이었다. 일주일 뒤 정식 커밋 시점에는 백필 작업의 결과로 990줄이 되었다. 그 사이 워커가 표를 채웠고, 사용자는 그것을 한 번에 검토하지 않고 글을 계속 썼다.
-
-review.md 쪽에는 아직 검토되지 않은 586개의 ambiguous 항목이 함께 쌓여 있다. 이 중 적지 않은 수가 진짜 정의일 것이고, 그것들이 모두 Index에 도달하기는 어려울지도 모른다. 그래도 늘어난 469줄은 그대로 남으니, 본업은 한 셈이다.
-
-## 사후: terms.yml 동시쓰기 락
-
-아래 두 절이 다루는 스크립트는 위에서 설명한 `extract_terms.py`(20분 cron)가 아니다. 그 사이 추출 파이프라인은 LLM 기반 `term_extract_worker.py`로 갈아엎어졌고(:00/:30 cron, `_data/terms.yml`을 직접 채운다), 지금 크론표에 `extract_terms.py`는 없다. 아래는 이 v2 워커와, 같은 디렉토리의 `terms_lint.py`(terms.yml 검증·정규화기)에 붙은 변경이다.
-
-`terms_lint.py --fix`는 terms.yml을 읽고 다시 쓴다. 그 사이 다른 프로세스가 같은 파일을 고치면 나중에 쓰는 쪽이 먼저 쓴 쪽의 수정을 지워버리는 lost update가 난다. PID 파일 하나로 막는다([커밋](https://github.com/math-jh/math-jh.github.io/commit/2222583c5ab63044fb2f3ce82c1f72eafc248a8e)).
-
-```python
-def acquire_lock(wait_s: float = LOCK_WAIT) -> bool:
-    """살아 있는 PID 가 쥐고 있으면 놓을 때까지 기다린다. 상한 초과 시 False."""
-    deadline = time.monotonic() + wait_s
-    while True:
-        if LOCK_PATH.exists():
-            alive = True
-            try:
-                os.kill(int(LOCK_PATH.read_text().strip()), 0)
-            except (ValueError, ProcessLookupError, FileNotFoundError):
-                alive = False          # 스테일 lock (죽은 PID·깨진 내용)
-            except OSError:
-                alive = True           # PermissionError 등, 살아 있다고 본다
-            if alive:
-                if time.monotonic() >= deadline:
-                    return False
-                time.sleep(5)
-                continue
-        try:
-            LOCK_PATH.write_text(str(os.getpid()))
-        except OSError:
-            return False
-        return True
-```
-{: data-filename="scripts/term-extraction/terms_lint.py"}
-
-살아있는지는 `os.kill(pid, 0)`으로 확인한다. 시그널을 실제로 보내지 않고 그 PID의 프로세스가 존재하는지만 물어보는 관용구다. lock 파일은 있는데 그 안의 PID가 이미 죽어 있으면(프로세스가 죽은 뒤 lock 파일만 남은 경우) 스테일로 보고 바로 가져간다. 살아 있으면 180초까지 기다리고, 그래도 안 풀리면 이번 회차는 건너뛴다. `terms_lint.py --fix`는 매일 04:20에 도는 감사라, 오늘 못 하면 내일 하면 된다는 게 이 타임아웃의 근거다. lock은 `--fix`가 실제 `terms.yml`을 대상으로 할 때만 걸린다. `--path`로 다른 파일을 검사하는 테스트 실행은 잠글 이유가 없다.
-
-## 사후: 자기 산출물은 자기가 커밋
-
-지금까지 이 두 워커는 변경이 있으면 텔레그램으로 요약만 보내고, 실제 diff는 워킹트리에 남겨 autopush가 주워가게 했다. 이제는 자기 산출물을 자기 이름으로 커밋한다. 새로 생긴 `scripts/lib/cron_commit.py`가 그 공용 로직이다([커밋](https://github.com/math-jh/math-jh.github.io/commit/b991ae0181f3f2e4943efe4ba4eaf71cf9fe5254)).
-
-```python
-def commit_outputs(worker: str, paths: Sequence[str], summary: str, *,
-                   marker: str | None = LASTMOD_SKIP,
-                   log: Callable[[str], None] | None = None,
-                   repo: Path = BLOG_ROOT,
-                   wait_sec: int = LOCK_WAIT_SEC) -> bool:
-    changed = dirty_paths(paths, repo)
-    if not changed:
-        return False
-    subject = f"cron({worker}): {summary}".rstrip()
-    if marker:
-        subject += f" {marker}"
-    ...
-    rc, _, err = _git(repo, "add", "--", *changed)
-    rc, out, err = _git(repo, "commit", "-m", subject, "--", *changed)
-```
-{: data-filename="scripts/lib/cron_commit.py"}
-
-push는 하지 않는다. autopush가 워킹트리를 통째로 haiku 분류기에 넘겨 기계적/내용적 커밋으로 가르는데, 봇 산출물이 거기 섞이면 분류기가 볼 diff가 커지고 여러 크론의 산출물이 "Auto-mechanical: N file(s)" 한 커밋에 뭉쳐 어느 크론이 뭘 했는지 히스토리에서 사라진다. 자기 파일을 자기가 먼저 커밋해두면 그 파일은 이미 커밋된 상태라 `git add -A` 대상에서 빠지고, autopush 몫은 push만 남는다. 커밋 author는 사용자, committer는 Claude로 다른 자동 커밋과 같은 정체성 규약을 쓴다.
-
-`term_extract_worker.py`는 한영 병기 표기를 다듬으면서 글 본문 자체도 고친다. 처리 전에 그 글이 이미 dirty했다면(사용자가 편집 중이었다면) 커밋 목록에서 뺀다. 넣으면 작업 중인 원고가 `[lastmod-skip]` 붙은 봇 커밋에 딸려 들어가기 때문이다.
-
-같은 변경에 재검사 빈도 조정도 딸려 왔다. `term_extract_worker.py`는 한 번 스캔한 글도 14일이 지나면 다시 검사 대상에 올리는데, 1차 수확이 끝나 대부분의 글이 이미 스캔된 뒤로는 이 재검사가 안 바뀐 글에도 매번 LLM을 불러 같은 답을 받아오는 낭비가 됐다. 이제는 마지막 검사 이후 그 글이 실제로 바뀐 경우에만 stale 대상에 넣는다. 글마다 `git log`로 커밋 시각을 물으면 600여 개 경로에 600번 프로세스를 띄우는 셈이라, 전체 히스토리를 한 번에 훑어 경로 → 최신 커밋 시각 dict를 만든다. `terms.yml` 자체를 순회하는 감사도 짝수 시각(하루 23회)에서 하루 한 번으로 줄었다. 짝수 시각 조건 그대로 두면 하루 23회 LLM을 불러 see 링크를 228건 밀어 넣는 정도였다.
-
-## 인명 대문자 드리프트와 장식 매크로
-
-항목 등재는 손으로도 들어온다. `module`(가군)과 `associated sheaf`(연관층) 두 항목이 `primary: en`으로 [등재됐고](https://github.com/math-jh/math-jh.github.io/commit/36b36288), 정렬은 `terms_lint --fix`가 맞췄다. 같은 커밋에 `mech_ambig.txt`가 아홉 줄에서 한 줄로 줄었는데, 기계 스윕이 판정을 못 해 사람에게 넘긴 잔량이 그만큼 정리됐다는 뜻이다. 여기까지는 표에 줄을 더하는 일이다.
-
-문제는 이미 들어간 줄이다. 추출 시점에는 `terms_common._PROPER_FORMS`가 인명 파생 고유명사를 정본 대문자형으로 교정한다. `noetherian`은 `Noetherian`이 되고 `hausdorff`는 `Hausdorff`가 된다. 그런데 그 교정은 새로 뽑는 항목에만 걸리므로, 표에 이미 소문자로 앉아 있는 것들은 아무도 다시 보지 않았다. [CASE 검사](https://github.com/math-jh/math-jh.github.io/commit/820acb7d)는 그 표를 **기존 항목에도** 매일 들이대는 검사다.
-
-```python
-def check_case(text: str) -> list[Issue]:
-    """en 표기의 인명 파생 고유명사 소문자 드리프트 (_PROPER_FORMS 기준)."""
-    _, groups = split_file(text)
-    out = []
-    for chunks in groups.values():
-        for c in chunks:
-            en = chunk_field(c, "en")
-            if not en:
-                continue
-            fixed = normalize_proper_case(en)
-            if fixed != en:
-                out.append(Issue("E", "CASE",
-                                 f"{chunk_id(c)}: en {en!r} → {fixed!r}",
-                                 fixable=True))
-    return out
-```
-{: data-filename="scripts/term-extraction/terms_lint.py"}
-
-검사와 교정이 같은 함수를 부르므로 `--fix`는 검사가 지적한 것과 정확히 같은 값을 쓴다. `normalize_proper_case`는 `$...$` 구간을 건너뛰고 표에 없는 관용 소문자 형용사(`abelian` 등)는 그대로 두며, 이미 올바른 표기에 다시 걸어도 같은 값이 나온다. 표에는 25개가 더해졌고 `Cartesian` 하나는 관용 소문자 예외에서 대문자 확정으로 자리를 옮겼다.
-
-같은 커밋에 `fold`도 손봤다. `fold`는 수식과 발음기호를 접어 평문으로 만드는 공통 전처리인데, `$\bar{\partial}$`가 `bar`로 시작하는 문자열로 접히는 바람에 B 그룹에 분류되고 있었다. 장식 매크로를 벗겨 인자만 남기면 `partial`이 되어 P 그룹으로 간다. 그런데 같은 `fold`를 중복 판정에도 쓰고 있었고, 거기서 장식을 벗기면 `$\partial$`와 `$\bar{\partial}$`가 한 키로 접혀 서로를 중복이라고 우긴다. 두 요구가 반대 방향이라 플래그 하나로 갈랐다.
-
-```python
-def fold(s: str, strip_decor: bool = True) -> str:
-    ...
-    if strip_decor:
-        s = _DECOR_RE.sub(r"\1", s)
-
-def dedup_key(s: str) -> str:
-    """대소문자·발음기호·수식 무시 중복 판정 키."""
-    return re.sub(r"[^a-z0-9]", "", fold(s, strip_decor=False).casefold())
-```
-{: data-filename="scripts/term-extraction/terms_common.py"}
-
-분류와 정렬은 벗긴 쪽을, 중복 판정은 남긴 쪽을 쓴다. 한 함수가 두 답을 내야 하는 자리였고, 기본값을 벗기는 쪽에 둔 것은 부르는 자리가 그쪽이 더 많아서다.
-
-## 같은 글이 두 번 등재한 표제어
-
-색인 2,400항목을 사용자가 훑자 같은 용어가 두 줄로 들어간 자리가 여럿 나왔다. `antisymmetry`와 `antisymmetric`처럼 품사만 다른 쌍, `Cauchy`와 `Cauchy sequence`, `ample`·`ample line bundle`·`ampleness` 셋, `GCD`와 `greatest common divisor`. 대부분 한 글이 같은 개념을 두 표기로 쓰고 추출기가 두 번 뽑은 결과였다. 사용자의 방향은 두 갈래였다. 이미 들어간 것은 정리하고, 추출기가 다시 만들지 못하게 하라는 것.
-
-> 내 생각에 추출기는 이것들이 안 생기게 해야 하는 게 맞고.
-
-정리 쪽은 `merge_duplicate_terms.py`(`32d76251`)다. 같은 정의 글을 공유하는 표제어 쌍마다 유사도를 재는데, 영어끼리와 한국어끼리를 **따로** 잰다. `GCD`와 `greatest common divisor`는 영어 유사도가 0.27이지만 한국어는 둘 다 '최대공약수'라 1.00이다. 한 문자열로 합쳐 재면 이런 쌍을 놓친다.
-
-```python
-def sim(a: str, b: str) -> float | None:
-    """한쪽이 비어 있으면 그 언어로는 판단하지 않는다 (0 이 아니라 '모름')."""
-    x, y = norm(a), norm(b)
-    if not x or not y:
-        return None
-    return difflib.SequenceMatcher(None, x, y).ratio()
-```
-{: data-filename="scripts/term-extraction/merge_duplicate_terms.py"}
-
-어느 한 언어라도 0.9를 넘으면 후보가 된다. 합친다는 것은 지우는 것이 아니다. 진 쪽의 영어형은 새 필드 `alias_en`으로, 한국어형은 기존 `alias`로 내려가서 색인 검색(`data-search`)과 md_lint의 이형 검사에 그대로 남는다. `defs`·`refs`·`see`는 합집합으로 옮긴다. 기계가 정하지 않는 쌍은 `--review` 목록으로 뺐다. 사용자가 짚은 `disjoint`와 `relatively prime`이 대표적이다.
-
-> Disjoint는 집합 같은 데에서 서로소인 집합이라고 얘기를 하긴 하지만. 그 집합 같은 데에서 Relative Prime을 서로소라고 하진 않잖아.
-
-한국어 라벨이 둘 다 '서로소'라서 문자열로는 굴절 변형과 구별되지 않는다. 정의 글이 여럿인 항목도 기계가 건드리지 않는다. `closed`는 `$\bar\partial$-closed`와 한 글을 공유하지만 다른 두 글에서도 정의되는 제 몫의 용어라, 합치면 그 두 정의가 사라진다. 스크립트는 `--dry-run`이 기본이고, 목록 판정은 사용자가 항목마다 내렸다(`coequalizer`는 한국어 라벨을 새로 찾고, `transpose`는 분리하되 `see`로 엮고, `affine n-space`류는 합치는 식이었다). 지금 `alias_en`을 가진 항목이 105개다.
-
-예방 쪽은 추출기 안의 게이트다(`83d12047`). 새 표제어를 넣기 전에 `near_duplicates()`가 두 곳을 본다. 같은 글이 이미 정의하는 항목, 그리고 한국어 라벨이 같은 항목이다. 비교 대상에는 표제어뿐 아니라 `alias`와 `alias_en`도 넣는다. 병합하면서 내려 둔 옛 이름이 바로 추출기가 다음에 다시 집어 올 이름이기 때문이다. 걸리면 모델에게 "이미 이게 있는데 새로 넣는 게 맞나"를 묻는다. 프롬프트에는 실제로 갈렸던 반례(`disjoint`/`relatively prime`, `Grothendieck topology`/`pretopology`, `cap product`/`cup product`)를 적어 두었다.
-
-판정을 못 받으면 넣지 않는다.
-
-```python
-    try:
-        out = llm_json(NEAR_DUP_PROMPT + "\n".join(lines))
-    except Exception as exc:  # noqa: BLE001
-        log(f"근접중복 판정 실패 — 폐기: {exc}")
-        return False
-```
-{: data-filename="scripts/term-extraction/term_extract_worker.py"}
-
-비대칭의 이유는 복구 비용이다. 잘못 들어간 항목은 색인에 남아 나중에 사람이 훑어 병합해야 하지만, 안 들어간 항목은 그 글이 다시 추출 대상이 될 때 같은 자리에서 다시 후보가 된다. 게이트가 생긴 뒤 로그에 남은 판정은 24건이고, 그중 21건이 폐기, 3건이 추가였다. 폐기 사유는 대부분 약어 병기(`elementary row operation, ero`)였고, 추가된 것은 `infinite-dimensional vector space`처럼 유한/무한 한 글자로 뜻이 갈리는 경우였다.
-
-같은 커밋에서 추출과 게이트 호출이 전부 Antigravity(`agy`)로 옮겨 갔다. `agy`는 프롬프트를 인자로 받고 결과를 JSON 봉투에 담아 돌려주므로 `claude -p`와 호출 모양이 다르다. 봉투의 `status`를 보지 않으면 실패한 호출의 빈 `response`가 "찾은 용어 없음"과 구별되지 않는다.
-
-재실행 규칙도 이때 바뀌었다(`83f6d1ec`). 예전에는 마지막 검사 뒤 14일이 지나고 그사이 바뀐 글을 다시 넣었는데, 이제는 그 글을 건드린 **무태그 내용 커밋**이 생겨야 새 "본문 세대"로 보고, 한 세대에서 추출과 1차 재시도를 합쳐 두 번을 마치면 멈춘다. `[lastmod-skip]`과 `[dev]` 커밋은 본문이 바뀐 신호로 치지 않는다. 기간이 지났다는 이유만으로 같은 본문에 같은 질문을 되풀이하던 일이 없어졌고, 매일 돌던 `terms.yml` 자체 감사도 수동 경로(`--audit-letter`)만 남았다.
-
-## gitignore된 글은 추출하지 않는다
-
-선정 0단계는 "한 번도 안 돌린 글"이고, `published: false`인 글도 여기에 든다. 초안 단계에서 정의를 미리 색인해 두는 것은 의도한 동작이다. 문제는 같은 0단계가 `.gitignore`로 저장소 밖에 둔 글까지 집는다는 점이었다. 그런 글은 GitHub에 올라가지 않는데, 거기서 뽑은 정의가 `_data/terms.yml`의 `defs`로 들어가면 공개되는 찾아보기가 올라가지 않은 글의 위치를 가리킨다. 사용자는 두 경우를 이렇게 갈랐다.
+대상은 `_posts/Math/**/ko/*.md`이고, 초안의 정의도 미리 색인하도록 `published: false` 글을 넣는다. `.gitignore`로 저장소 밖에 둔 글은 뺀다. 거기서 뽑은 정의가 `defs`에 들어가면 공개되는 찾아보기가 올라가지 않은 글을 가리킨다.
 
 > publish 상태가 false인 글에 도는 건 상관 없는데, gitignore에서 무시하고 있는 파일들에 대해서는 돌지 않았으면 좋겠어. 크론을 그렇게 수정하고, terms.yml에 이미 등재된 것들은 삭제해줘.
-
-`c5c3483e`는 글 목록을 만드는 `all_ko_posts()` 앞에 무시 목록 조회를 하나 둔다.
 
 ```python
 def gitignored_posts() -> set[str] | None:
@@ -301,43 +75,71 @@ def gitignored_posts() -> set[str] | None:
 ```
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
-`.gitignore` 패턴을 직접 해석하지 않고 git에 묻는다. `--others --ignored`는 추적되지 않으면서 무시 규칙에 걸린 파일만 내므로, 무시 패턴이 넓게 잡혀 있어도 화이트리스트로 추적에 올린 글은 목록에 오르지 않는다. 경로 구분자는 NUL(`-z`)로 받는다. 한글 파일명을 git이 따옴표와 8진수 이스케이프로 내보내는 일을 피하려는 것이다.
+패턴은 git에 묻는다. `--others --ignored`는 추적되지 않으면서 무시 규칙에 걸린 파일만 내므로 화이트리스트로 추적에 올린 글은 빠지지 않는다. 조회가 실패하면 "무시 목록 없음"으로 읽지 않고 그 틱을 쉰다. 그렇게 읽으면 git이 잠깐 막힌 틱 하나가 올라가지 않은 글의 정의를 흘리고, 들어간 항목은 사람이 찾아 지워야 한다. 쉰 틱은 두 시간 뒤에 다시 돈다. 이미 등재돼 있던 항목은 사용자 말대로 따로 지웠다.
 
-조회가 실패했을 때 무엇을 돌려줄지가 이 변경에서 갈릴 수 있던 자리다. 실패하면 `None`을 돌려주고, 호출하는 쪽은 빈 목록을 반환해 그 틱을 쉰다.
+고를 글이 없으면 `대상 없음` 한 줄만 로그에 쓴다. 대시보드가 이 로그의 mtime으로 워커 생존을 판정해서, 어떤 틱은 아무것도 하지 않았다는 사실을 기록하려고 깨어난다. 적어도 나한테는 익숙한 근무 형태다.
+
+## 결정론 applier와 쓰기 게이트
+
+`process_post`는 고른 글을 네 단계로 처리한다.
+
+1. **정의 마커.** 색인에 없는 마커는 새 항목이 된다(한 글에 12개까지). 색인에 있는데 이 글이 `defs`에 없으면 LLM이 같은 개념의 복습(`skip`)인지, 동음이의어거나 문맥이 달라 정의처를 더할 것(`add_def`)인지 판정한다.
+2. **병기 상시 단계.** 마지막 절에서 다룬다.
+3. **주요 사용 용어.** `retry`·`modified` 글에서만 LLM이 주요 용어를 10개까지 뽑고, 색인에 없고 코퍼스에 두 번 이상 나오는 것만 남겨(환각 거르기) 그 용어가 나오는 글 중 논리적으로 가장 앞선 글을 고르게 한다.
+4. **적용.** 결정론 코드가 항목을 만들어 게이트를 통과하면 쓴다.
+
+LLM 응답은 `json.JSONDecoder.raw_decode`로 값을 하나씩 훑어 여러 배열을 이어 붙이고, `agy`의 JSON 봉투는 `status`까지 본다. 안 보면 실패한 호출의 빈 `response`가 "찾은 용어 없음"과 구별되지 않는다.
 
 ```python
-    ignored = gitignored_posts()
-    if ignored is None:
-        log("경고: git ls-files 실패 — gitignore 판정 불가, 이번 틱 쉼")
-        return []
+def write_gate(old_text: str, new_text: str, expect_added: int) -> bool:
+    ...  # YAML 파싱 실패면 False
+    if new_n != old_n + expect_added:
+        return False
+    old_errs = [i for i in semantic_checks(old_d, pmap, ko_by_slug) if i.level == "E"]
+    new_errs = [i for i in semantic_checks(new_d, pmap, ko_by_slug) if i.level == "E"]
+    if len(new_errs) > len(old_errs):
+        ...  # 늘어난 에러를 로그에 남긴다
+        return False
+    return True
 ```
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
-실패를 "무시 목록 없음"으로 읽고 전부 추출하는 쪽이 코드는 한 줄 더 짧다. 그러나 그러면 git이 잠깐 막힌 틱 하나가 올라가지 않은 글의 정의를 `terms.yml`에 흘리고, 한 번 들어간 항목은 사람이 찾아 지우는 수밖에 없다. 쉬는 틱은 다음 홀수 시각 :15에 다시 돌면 되므로 두 쪽의 비용이 같지 않다. 이미 등재돼 있던 항목은 사용자가 말한 대로 따로 지웠고, 워커는 새로 들어오는 것만 막는다.
+게이트는 YAML 파싱, 항목 수("기존 + 이번에 넣은 수"), `terms_lint`와 같은 의미 검사(스키마, 절 분류, 라벨, url 실재, 중복, 없는 항목을 가리키는 see)의 에러 증가를 본다. 기준이 "에러 0"이 아니라 "늘지 않음"이라, 색인에 남은 옛 문제가 워커를 멈추지 않는다. 통과하면 원본을 `terms.yml.bak-extract`로 남기고 임시 파일을 `replace`한다. 떨어지면 그 글의 변경 전체가 버려지고, 같은 글이 세 번 연속 실패하면 7일 격리하며 알림을 한 통 보낸다. 정상 변경은 알리지 않는다.
 
-## 절 글자를 가로지르는 id 대조
+## 리뷰 파일, terms.yml 락, 자기 커밋
 
-근접중복 게이트와 dedup 키를 지나고도 같은 용어가 두 줄로 들어가는 길이 하나 남아 있었다. 항목은 `en`의 첫 라틴 글자 절에 놓인다. `$\partial$-operator`는 장식 매크로를 벗기면 `partial`이라 P 절에 있지만, 추출기가 어떤 글에서 `del operator`를 뽑으면 새 항목은 D 절 후보가 된다. 기존 항목의 id는 `del_operator`이고 새 항목이 만들 id도 `del_operator`인데, 두 항목은 서로 다른 절에 있다. 마지막 등재 직전의 중복 검사가 그 후보 절 안에서만 id를 찾고 있었다.
+기계가 정하지 않는 것은 `term_extraction_review.md`에 틱마다 한 줄씩 붙는다. 상한을 넘은 후보나 불완전한 마커도 오르지만, 대부분은 한국어형을 모르는 주요 용어와 병기 소스를 못 찾은 용어다. 워커가 이것을 색인으로 옮기지 않으니 쌓여도 찾아보기는 오염되지 않는다. 파일은 5,400줄이 넘었다. 사용자에게 부담인지는 모르겠지만, 어디를 봐야 하는지는 적어도 적혀 있다.
+
+`terms.yml`을 쓰는 것은 워커만이 아니다. 매일 04:20의 `terms_lint.py --fix`는 라벨 드리프트, 절 분류, 정렬, 인명 대문자(`noetherian` → `Noetherian`), defs 순서처럼 결정적인 것만 고치고, 읽고 다시 쓰는 사이의 lost update를 막으려고 PID 파일 락 `/tmp/extract-terms.lock`을 잡는다. 주인이 살아 있는지는 시그널 없이 존재만 묻는 `os.kill(pid, 0)`으로 보고, 죽었으면 스테일로 가져가며, 살아 있으면 180초 기다린 뒤 이번 회차를 건너뛴다. 매일 도는 감사라 다음 날 하면 된다. 라벨 재번호 도구 `relabel.py`는 이 락과 워커의 `flock`을 둘 다 기다리고, 워커는 자기 `flock`만 잡는다.
+
+변경이 있으면 워커는 `scripts/lib/cron_commit.py`로 자기 산출물을 `[Cron] Terms (extract) [lastmod-skip]` 커밋으로 남기고, push는 autopush에 맡긴다. autopush가 워킹트리를 LLM 분류기로 갈라 커밋할 때 봇 산출물이 섞이면, 분류할 diff가 커지고 여러 크론의 산출물이 한 커밋에 묶여 출처가 사라진다. 커밋은 `/tmp/blog-autopush.lock`을 잡고, 바뀐 경로만 pathspec으로 넣는다. 병기 단계가 고친 글이 처리 전부터 dirty했으면(사용자가 편집 중이면) 커밋에서 빼서, 작업 중인 원고가 봇 커밋에 딸려 들어가지 않게 한다.
+
+## 근접중복 게이트와 절을 가로지르는 id 대조
+
+색인 2,400항목을 사용자가 훑었을 때 `ample`·`ample line bundle`·`ampleness`, `GCD`와 `greatest common divisor`처럼 같은 용어가 두 줄로 들어간 자리가 여럿 나왔다. 대부분 한 글이 같은 개념을 두 표기로 쓰고 추출기가 두 번 뽑은 결과였다. 사용자의 방향은 이미 들어간 것은 정리하고, 추출기가 다시 만들지 못하게 하라는 것이었다.
+
+> 내 생각에 추출기는 이것들이 안 생기게 해야 하는 게 맞고.
+
+정리는 손으로 돌리는 `merge_duplicate_terms.py`(`--dry-run` 기본)다. 같은 정의 글을 공유하는 쌍마다 `difflib.SequenceMatcher` 유사도를 영어끼리와 한국어끼리 **따로** 재고, 한쪽이라도 0.9를 넘으면 후보다. `GCD`와 `greatest common divisor`는 영어 유사도 0.27, 한국어는 둘 다 '최대공약수'라 1.00이다. 진 쪽 표기는 `alias_en`·`alias`로 내려 검색과 md_lint 이형 검사에 남기고, `defs`·`refs`·`see`는 합집합으로 옮긴다. 문자열로 못 가르는 쌍은 `--review` 목록으로 빠져 사용자가 항목마다 판정했다. 라벨이 둘 다 '서로소'인 `disjoint`와 `relatively prime`이 대표적이다.
+
+> Disjoint는 집합 같은 데에서 서로소인 집합이라고 얘기를 하긴 하지만. 그 집합 같은 데에서 Relative Prime을 서로소라고 하진 않잖아.
+
+예방은 추출기 안의 근접중복 게이트다. `near_duplicates()`가 같은 글이 정의하는 항목과 한국어 라벨이 같은 항목을, 병합으로 내려 둔 `alias`·`alias_en`까지 넣어 같은 방식으로 잰다. 그 옛 이름이 바로 추출기가 다시 집어 올 이름이다. 0.9를 넘으면 모델에게 묻고(프롬프트에는 `disjoint`/`relatively prime` 같은 실제 반례를 적어 두었다), 판정을 못 받으면 넣지 않는다.
 
 ```python
-# 변경 전
-if eid in seen_new or any(chunk_id(c) == eid for c in groups.get(lt, [])):
-    continue
+    try:
+        out = llm_json(NEAR_DUP_PROMPT + "\n".join(lines))
+    except Exception as exc:  # noqa: BLE001
+        log(...)  # 판정 실패, 폐기
+        return False
 ```
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
-dedup 키(`entry_index`)는 `fold(..., strip_decor=False)` 뒤 영숫자만 남기므로 `$\partial$-operator`는 `partialoperator`, `del operator`는 `deloperator`가 되어 서로 만나지 않는다. 그래서 [28187e63](https://github.com/math-jh/math-jh.github.io/commit/28187e63)은 id로 걸리는 색인을 따로 두었다. 절을 가리지 않고 모든 항목의 id를 훑는다.
+잘못 들어간 항목은 사람이 찾아 병합해야 하지만, 안 들어간 항목은 그 글이 다시 대상이 될 때 다시 후보가 된다. 로그에 남은 판정 185건 중 폐기 173건은 대부분 소유격(`Euler's criterion`), 품사 파생(`diagonalize`), 약어 병기(`elementary row operation, ero`)이고, 추가된 12건은 `fundamental matrix`(한국어 '기본행렬'이 `elementary matrix`와 겹친다)처럼 라벨이 겹쳐도 뜻이 다른 경우다.
+
+중복 판정 키는 `terms_common.fold()`로 수식·발음기호를 접은 뒤 영숫자만 남긴 것이다. 절 분류는 `$\bar{\partial}$`의 장식을 벗겨 P 절로 보내야 하고 중복 판정은 장식을 남겨야 `$\partial$`와 섞이지 않아서, `strip_decor` 플래그로 갈랐다. 그래도 남는 중복이 있었다. P 절의 `$\partial$-operator`는 id가 `del_operator`인데, 어떤 글이 `del operator`를 정의하면 키(`deloperator`)는 `partialoperator`와 만나지 않고, D 절 후보가 될 새 항목의 id는 역시 `del_operator`다. 등재 검사가 후보 절 안에서만 id를 찾았으므로 새 용어가 됐고, 쓰기 게이트의 `DUP_ID`에 걸려 그 글의 변경 전체가 매번 버려졌다. Dolbeault 코호몰로지 글은 8월 6일부터 10월 2일까지 게이트에서 21번 떨어지며 세 번마다 7일씩 격리됐다. 지금은 `id_index()`가 절을 가리지 않고 모든 항목의 id → (절, 위치)를 따로 모은다.
 
 ```python
-def id_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
-    idx = {}
-    for letter, chunks in groups.items():
-        for i, c in enumerate(chunks):
-            cid = chunk_id(c)
-            if cid:
-                idx.setdefault(cid, (letter, i))
-    return idx
-
 def find_entry(idx, ids, key, en):
     if key and key in idx:
         return idx[key]
@@ -346,6 +148,31 @@ def find_entry(idx, ids, key, en):
 ```
 {: data-filename="scripts/term-extraction/term_extract_worker.py"}
 
-`find_entry`는 dedup 키를 먼저 보고, 없으면 이 `en`으로 `build_entry`를 불렀을 때 생길 id(`slugify_id(normalize_proper_case(en))`)를 `ids`에서 찾는다. 새 id를 계산하는 `new_entry_id`는 `build_entry`가 id를 만드는 식과 같은 두 함수를 같은 순서로 부른다. 호출 자리는 세 곳이다. 본문에 표시된 정의 마커가 이미 색인에 있는 용어인지 가르는 자리, 표시 없는 이탤릭을 병기 대상으로 볼지 정하는 자리, LLM이 낸 새 후보를 거르는 자리. 마지막 등재 검사는 `eid in ids`로 바뀌어 절을 묻지 않는다. 이전에는 이 셋이 dedup 키만 보았으므로 표기가 다른 기존 항목은 "없는 용어"로 분류되어 새 항목 후보가 되었다.
+`find_entry`는 dedup 키가 없으면 이 `en`으로 항목을 만들 때 생길 id(`slugify_id(normalize_proper_case(en))`)를 찾는다. 마커 분류, 병기 대상 판정, 주요 용어 거르기가 모두 이 함수를 지나고, 마지막 등재 검사도 `eid in ids`로 절을 묻지 않는다. 테스트(`ExistingEntryTest`)는 이 사례를 그대로 재현하고, LLM 호출을 `AssertionError`로 막은 채 파일 불변을 확인한다.
 
-테스트(`ExistingEntryTest`)는 위 사례를 그대로 쓴다. D 절의 `Dolbeault complex`와 P 절의 `del_operator`가 든 작은 `terms.yml`을 임시 디렉터리에 만들고, `del operator`를 정의하는 글을 `process_post`에 넣는다. LLM 호출이 일어나면 `AssertionError`를 내도록 막아 두었고, 결과가 변경 없음이며 `terms.yml`이 한 글자도 안 바뀌어야 통과한다. 이미 있는 용어라면 모델에게 물어볼 것도 없다는 것을 호출 자체를 금지하는 방식으로 검증한다.
+## 한영 병기 회수: KMS 후보와 동음이의 게이트
+
+정의 박스의 이탤릭 정의어도 `*english<sub>한국어</sub>*`로 적는 것이 규칙인데, 이보다 오래된 글에는 병기 없는 영어 이탤릭이 수백 개 있었고 파서는 이것들을 읽지 못한다. 사용자가 이 격차를 메우는 방향을 정했고, 일은 일회성 백필 `gloss_backfill.py`와 워커에 상주하는 `gloss_stage.py`로 나뉘었다.
+
+먼저 정해진 것은 무엇을 병기하지 *않을* 것인가였다. 사용자 룰링으로, 다른 글에 병기 전례가 있거나 `terms.yml`에 있는 용어가 병기 없이 다시 나오면 누락이 아니라 **의도적 재사용**이라 건드리지 않는다. 대상은 색인에 없는 신규 용어뿐이고, 여러 글에 나오면 같은 카테고리에서 `weight`가 가장 작은 글 하나에만 붙인다(카테고리가 다르면 리뷰). 어느 경로에서든 LLM은 새 역어를 만들지 못한다. positive root에 '양근'을 지어 붙인 사고가 코드 주석에 전례로 남아 있다.
+
+병기는 남이 만든 소스에서만 온다. 백필은 코퍼스 전례(S0)나 `terms.yml`의 기존 대응(S0b)에 걸리면 재사용으로 보고, 신규 용어의 후보는 대한수학회(KMS) 수학용어집의 영문명 exact 일치 행(S1, 복수 후보 가능)과 위키백과 langlink(S2, 리뷰 전용)에서 가져온다. detect → research → classify → apply 단계마다 캐시를 남긴다.
+
+1차 실행에서 KMS exact 단일 매치 45건이 자동 적용됐고, 남은 판정은 REVIEW 346건(다중 정의처 21 · 위키만 196 · 무소스 129)과 REUSE 154건이었다. REVIEW에는 항목별 권고를 붙여 넘겼고, 사용자는 권고에서 이탈할 항목만 표시했다. 확정 룰링은 결정론적 스크립트가 일괄 적용해 적용 261, 역어 없이 색인만 하는 ko-빈 21, 영구 생략 39, 보류 25로 끝났고, ko 글 131편이 고쳐져 `terms.yml`에 항목 281개가 들어갔다. 적용은 파일별 트랜잭션이라 검증에 실패한 파일만 원복된다.
+
+자동 적용 45건을 사후 검토하니 8건이 오병기였다. KMS는 전 분야 용어집이라 교차 분야 동음이의어가 섞인다. 환론 문맥의 reducible에 분수 쪽 뜻의 '약분가능'이 붙는 식인데, 그 문맥이면 '가약'이어야 한다. 그래서 상시 단계에서는 exact 단일 매치도 자동이 아니다. 워커의 LLM이 정의 박스 앞 400자와 후보를 받아 수학적 의미가 맞는지 `yes`·`no`·`unsure`로 답하고, `yes`일 때만 적용한다.
+
+```python
+if gv != "yes":
+    verdict, val = "review", \
+        f"게이트 {gv}: KMS 단일 후보 {val!r} 자동 적용 보류"
+```
+{: data-filename="scripts/term-extraction/term_extract_worker.py"}
+
+호출 실패도 리뷰다. KMS 복수 후보는 별도 프롬프트가 목록 *안에서* 번호로 고르고 코드가 범위를 검사하며, 맞는 후보가 없다는 `NONE`도 리뷰다. 마지막으로 `apply_gloss()`가 한글 없는 병기를 거부하고, 적용 뒤 `$` 개수와 늘어난 길이를 검증한다.
+
+상시 단계는 고른 글의 `::: 정의` 박스에서 무병기 이탤릭을 찾아(수식·코드는 마스킹), 생략이 확정된 용어(`gloss_skip.yml`, 대부분 `ambient`·`principal` 같은 단독 형용사), 이미 리뷰에 올린 용어(`gloss_pending.json`), 색인에 있는 용어를 거른다. 남은 신규 용어만 위의 소스와 게이트를 타고, 병기가 붙으면 같은 틱에 새 항목이 된다. KMS·위키 캐시는 백필과 공유하며 read-merge-write로 쓴다.
+
+룰링이 둘 더 있다. 정의처가 전부 교양수학(`categories.yml`의 `section: liberal_arts`, 지금은 미적분학과 선형대수학)인 용어는 커리큘럼상 선행일 뿐 정식 거처가 없는 것으로 보고, 이후 전공 글의 정의를 뉘앙스 판정 없이 `defs`에 추가한다. 등록순 append라 순서 보장이 없던 `defs`는 `terms_lint.py`의 `DEFS_ORDER`가 카테고리 순서와 `weight` 순으로 잠근다.
+
+이 파이프라인에서 LLM이 하는 일은 번역이 아니다. 남이 만든 후보를 문맥에 대 보고 고르거나 기각하는 것이고, 허용된 출력은 번호 하나나 세 단어짜리 판정뿐이다. 백필 내내 새 역어를 지어낸 횟수는 0이었다. 내가 하는 일이 결국 객관식 문제 풀이라는 점에 대해서는, 생각하지 않기로 했다.

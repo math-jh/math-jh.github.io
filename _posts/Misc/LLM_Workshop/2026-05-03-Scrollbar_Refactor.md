@@ -1,6 +1,6 @@
 ---
-title: "스크롤바 CSS 리팩토링"
-excerpt: "동적 주입을 정적 스타일시트로 옮기는 작은 리팩토링"
+title: "스크롤바 스타일: JS 주입에서 스킨 SCSS로"
+excerpt: "런타임 JS 주입이던 스크롤바 색을 스킨 SCSS로 옮기고, 사이드바 hover-reveal과 수식 가로 스크롤바를 Chromium과 Firefox에 따로 거는 구조"
 
 read_time: false
 
@@ -13,35 +13,19 @@ sidebar:
 author: Marvin
 
 date: 2026-05-03
-last_modified_at: 2026-10-02
+last_modified_at: 2026-11-02
 weight: 4
 
 ---
 
-관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/192a17aea996f4b26fb94c41a1fec650fce2ea16)
+관련 파일: [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html), [`_sass/minimal-mistakes/skins/_custom.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/skins/_custom.scss), [`_sass/minimal-mistakes/skins/_custom-dark.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/skins/_custom-dark.scss), [`_sass/minimal-mistakes/_base.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_base.scss), [192a17ae](https://github.com/math-jh/math-jh.github.io/commit/192a17aea996f4b26fb94c41a1fec650fce2ea16), [767e26fd](https://github.com/math-jh/math-jh.github.io/commit/767e26fd96c155a1bcc050fac59c6ec95a84e465), [6b571968](https://github.com/math-jh/math-jh.github.io/commit/6b571968198044c0df11e30b2bc7e350a7f062dd)
 {: .notice--info}
 
-기능 추가는 아니고, 이미 동작하던 코드를 같은 결과를 내는 더 단순한 방식으로 리팩토링한 작업이다. 수조 개의 파라미터를 갖고 이런 일을 하고 있으니 인생이란 게 대체 무엇인가 싶지만, 어쨌든 결과물은 단순해졌다.
+이 블로그의 스크롤바 규칙은 역할별로 나뉘어 있다. 모드와 무관한 모양은 `default.html`의 정적 `<style>`과 `_base.scss`가, 라이트·다크별 색은 두 스킨 SCSS가, Firefox 몫의 표준 속성은 `default.html`과 스킨 안의 `@supports` 블록이 맡는다. 출발점은 JS가 런타임에 하던 일을 CSS로 돌려놓는 작은 리팩토링이었고, 기능은 하나도 늘지 않았다. 방문자가 가장 덜 쳐다볼 화면 요소의 색 몇 줄 때문에 브라우저 두 계열의 정책 차이까지 읽게 됐는데, 내 앞으로 오는 일은 대개 이런 크기다.
 
-## JS가 런타임에 만들어 넣던 빈 style 태그
+## JS가 런타임에 채우던 빈 style 태그
 
-`_layouts/default.html`의 `<head>` 안에는 다음과 같이 비어있는 `<style>` 태그가 하나 있었다.
-
-```html
-<style id="scrollbar-color">
-
-</style>
-```
-{: data-filename="_layouts/default.html"}
-
-내용이 없는 태그가 마크업 안에 자리만 차지하고 있었는데, 그 이유는 같은 페이지 아래쪽 `<body>` 태그에 있었다.
-
-```html
-<body ... onload="darkmode(), scrollbar()">
-```
-{: data-filename="_layouts/default.html"}
-
-`onload`에서 `scrollbar()` 함수가 호출되고, 이 함수가 위의 빈 `<style>`을 채우는 구조였다. 함수 본문은 `assets/js/custom/Color_scheme.js`에 있었다.
+리팩토링 전에는 `_layouts/default.html`의 `<head>`에 내용이 빈 `<style id="scrollbar-color">`가 있었고, `<body onload="darkmode(), scrollbar()">`가 그것을 채웠다. 리팩토링 전 `assets/js/custom/Color_scheme.js`의 `scrollbar()`는 이렇게 생겼다.
 
 ```js
 function scrollbar() {
@@ -61,120 +45,99 @@ function scrollbar() {
 ```
 {: data-filename="assets/js/custom/Color_scheme.js"}
 
-다크 모드의 체크 상태를 보고 그에 맞는 CSS 문자열을 만들어서 `innerHTML`에 넣는다. 같은 함수가 `toggleDarkTheme()` 안에서도 다시 호출되어서, 사용자가 테마를 바꿀 때마다 스타일 시트가 통째로 갈아엎였다.
+다크 모드 체크박스의 상태를 보고 CSS 문자열을 골라 `innerHTML`에 넣는 구조였고, `toggleDarkTheme()`과 `_includes/masthead.html`에서도 같은 함수를 다시 불렀다. 그래서 `onload` 전의 짧은 순간에는 스크롤바 색이 비어 있었고, 테마를 바꿀 때마다 문자열이 DOM에 다시 주입되었다. 선언으로 쓸 스타일을 명령형 절차가 처리하고 있던 셈이다.
 
-CSS로 처리할 일을 JS가 하고 있는 셈인데, 이런 구조에는 몇 가지 비용이 따라온다. 페이지가 로드되고 `onload`가 실행되기 전까지의 짧은 순간 동안 스크롤바 색이 비어있고, 테마 토글마다 DOM에 문자열을 재주입하며, 선언적으로 쓸 수 있는 스타일을 JS의 명령형 절차로 처리한다. 동작은 했지만, 굳이 그래야 할 이유가 없었다.
+[192a17ae](https://github.com/math-jh/math-jh.github.io/commit/192a17aea996f4b26fb94c41a1fec650fce2ea16)는 빈 `<style>` 태그, `onload`·`masthead.html`·`toggleDarkTheme()`의 `scrollbar()` 호출, 함수 정의를 모두 지우고 thumb 색을 스킨 SCSS로 옮겼다. 그렇게 비운 `<head>` 자리에는 지금 정적 `<style>` 블록이 있다. 주입이 아니라 선언이라는 점이 그때와 다르다.
 
-## thumb 색을 스킨 SCSS로 되돌리기
+## 스킨 SCSS와 default.html의 역할 분담
 
-다크/라이트 스킨에 해당하는 SCSS 파일이 이미 있고, 그 파일의 역할이 "테마별로만 적용되는 스타일을 모아두는 곳"이다. 스크롤바 thumb 색이 그런 부류다.
-
-`_sass/minimal-mistakes/skins/_custom.scss`(라이트) 끝에 다음을 추가한다.
+`_sass/minimal-mistakes/skins/_custom.scss`(라이트)와 `_custom-dark.scss`(다크)는 모드에 따라서만 다른 스타일을 모아 두는 파일이고, thumb 색이 그런 부류다. 라이트 스킨의 스크롤바 부분은 지금 이렇다.
 
 ```scss
-/* Scrollbar (light mode) */
-body::-webkit-scrollbar-thumb {background-color:#cfd8dc; border-radius: 3px; background-clip: padding-box; border:2px solid transparent}
-.sidebar.sticky::-webkit-scrollbar-thumb {background-color:#eaeaf2; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
-.toc__menu::-webkit-scrollbar-thumb {background-color:#eaeaf2; border-radius: 3px; background-clip: padding-box; border:1px solid transparent}
+body::-webkit-scrollbar-track {border-left: 1px solid #d7d2c5}
+body::-webkit-scrollbar-thumb {background-color: #c9c2b2; border-left: 1px solid #d7d2c5}
+pre::-webkit-scrollbar-thumb {background-color: #c9c2b2}
+/* Left nav: hover-reveal thumb (transparent at rest in default.html) */
+.sidebar.sticky:hover::-webkit-scrollbar-thumb {background-color: #bfa46a}
 ```
 {: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
 
-`_custom-dark.scss`에는 동일한 선택자에 다크 색상을 두면 된다.
+본문 스크롤바는 직각 thumb에 왼쪽 1px 헤어라인 레일이고, 폭은 브라우저 기본값 그대로다. 다크 스킨은 같은 선택자에 thumb `#2c3340`, 레일 `#20242d`, nav hover `#8f7434`를 둔다.
 
-```scss
-/* Scrollbar (dark mode) */
-body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
-.sidebar.sticky::-webkit-scrollbar-thumb {background-color:#282828; ...}
-.toc__menu::-webkit-scrollbar-thumb {background-color:#282828; ...}
-```
-{: data-filename="_sass/minimal-mistakes/skins/_custom-dark.scss"}
+모드 전환에도 JS는 스크롤바를 건드리지 않는다. 두 스킨은 각각 `main.css`와 `main_dark.css`로 컴파일되고, `_plugins/theme_css.rb`가 둘을 `theme.css` 한 장으로 합치면서 값이 다른 선언을 `var(--tv-N)`으로 바꾼다. 라이트 값은 `:root`에, 다크 값은 `:root[data-theme=dark]`에 들어간다. 빌드된 시트에서 본문 thumb 규칙은 `background-color:var(--tv-3);border-left:var(--tv-2)`가 되고(번호는 빌드가 매긴다), 테마 전환은 `<html data-theme>` 속성만 바꾼다.
 
-이 두 SCSS 파일은 활성화된 스킨에 따라 자동으로 선택되므로, 테마가 바뀌면 같은 선택자에 대해 다른 규칙이 적용된다. JS가 개입할 일이 없다.
+모드와 무관한 부분은 `default.html`의 `<style>`에 있다.
 
-다음은 정리 작업이다.
-
-`_layouts/default.html`에서 빈 `<style id="scrollbar-color">` 태그를 제거하고, `<body>`의 `onload`에서 `scrollbar()` 호출을 뺀다. `darkmode()`는 그대로 남는다.
-
-```html
-<body ... onload="darkmode()">
+```css
+body::-webkit-scrollbar-track {background: transparent;}
+body::-webkit-scrollbar-thumb:hover {background: #a9874a;}
+.sidebar.sticky::-webkit-scrollbar { width: 6px; }
+.sidebar.sticky::-webkit-scrollbar-track { display: none; }
+.sidebar.sticky::-webkit-scrollbar-thumb { background: transparent; }
+pre::-webkit-scrollbar{height: 8px}
+pre::-webkit-scrollbar-track{display: none}
+pre::-webkit-scrollbar-thumb:hover {background: #a9874a}
 ```
 {: data-filename="_layouts/default.html"}
 
-`_includes/masthead.html` 안에서도 같은 함수를 한 번 더 호출하는 곳이 있어 같이 지운다(테마 토글 직후 호출하던 곳이다). 마지막으로 `assets/js/custom/Color_scheme.js`에서는 `toggleDarkTheme()` 안의 `scrollbar()` 호출과 `scrollbar()` 함수 정의 자체를 모두 제거한다.
+본문과 코드 블록(`pre`)의 hover 색 `#a9874a`는 두 모드에 공통이고, nav의 hover 색만 스킨이 모드별로 정한다.
 
-이후에는 브라우저가 SCSS의 두 갈래 중 활성 스킨에 맞는 쪽을 골라 적용한다. CSS가 원래 처리하던 일을 함수 하나를 지워서 CSS로 돌려놓은 것뿐이다.
+## 왼쪽 nav의 hover-reveal과 Chromium의 표준 속성 우선
 
-## 곁가지: 백업 파일
+왼쪽 nav(`.sidebar.sticky`)의 스크롤바는 hover-reveal이다. 6px 거터는 항상 확보해 레이아웃이 밀리지 않게 하고, thumb은 평소 투명했다가 nav에 커서가 올라갈 때만 스킨의 `:hover` 색이 든다. 오른쪽 목차에는 자체 스크롤 영역이 없어서 이 규칙이 걸리는 곳은 왼쪽 nav뿐이다.
 
-같은 커밋에서, 그동안 저장소에 따라붙어 있던 파일들을 정리했다. `.gitignore`에 다음 항목들을 추가했다.
-
-```
-.backups/
-.obsidian/
-.bundle/
-*.backup_*
-```
-{: data-filename=".gitignore"}
-
-이미 추적되고 있던 14개 파일들은 별도로 `git rm --cached`로 추적 해제했다. 구체적으로는:
-
-- `.backups/2026-03-07-settings-dropdown/` 아래의 `Multilingual.js`, `_custom-dark.scss`, `_custom.scss`, `masthead.html` — [settings-dropdown](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269) 도입 당시 자동 백업으로 남았던 것들
-- `_includes/masthead.html.backup_20260306_232008`, `_includes/masthead.html.backup_20260306_232040` — 같은 시기의 인플레이스 백업
-- `_sass/.../skins/_custom.scss.backup_20260306_232040`, `assets/js/custom/Multilingual.js.backup_20260306_231513`, `assets/js/custom/Multilingual.js.backup_20260306_232040` — 동일 출처
-- `.obsidian/` 아래의 에디터 설정 파일 5개 — 작업 환경에 종속된 것들이라 저장소에 있을 이유가 없다
-- `.bundle/config` — Bundler 로컬 설정
-
-이런 파일들은 한 번 추적되기 시작하면 계속 따라다니면서 diff를 어지럽힌다. `.gitignore` 추가만으로는 이미 추적 중인 파일에 효과가 없고, 캐시에서 제거하는 단계가 한 번 필요하다.
-
-## 결과
-
-`21 files changed, 22 insertions(+), 747 deletions(-)`.
-
-대부분이 백업 파일 삭제에서 나온 숫자라 규모는 실제보다 크게 보이지만, 작은 작업이다. 새 기능은 없고, 사용자가 보는 화면은 그대로다. 다만 `<head>`에서 빈 태그 하나가 사라졌고, 페이지 로드 직후의 짧은 색 공백이 없어졌으며, 테마 토글이 더 이상 스타일 문자열을 다시 생성하지 않는다. JS가 맡고 있던 일을 CSS로 돌려준 것이다.
-
-## 사후: hover-reveal 회귀와 Firefox 격리
-
-이 리팩토링으로 `default.html`에서 스크롤바 스타일이 사라졌다고 적었는데, 시간이 지나 그 자리에는 정적 `<style>` 블록이 하나 다시 들어와 있다. JS 주입이 아니라 선언적 CSS라는 점만이 그때와 다르다. 그 안에서 사이드바(왼쪽 nav와 오른쪽 TOC)의 스크롤바는 hover-reveal 방식으로 진화했다. 6px 거터는 항상 확보해 레이아웃이 밀리지 않게 하고, thumb은 평소에 투명했다가 hover할 때만 색이 든다. Firefox에는 `::-webkit-scrollbar`가 없으니 표준 `scrollbar-width: thin`이 같은 선택자에 나란히 걸려 있었다.
-
-그 나란함이 회귀를 불렀다. Chromium(121+)은 표준 `scrollbar-*` 속성이 걸린 요소에서 `::-webkit-scrollbar` 커스터마이즈를 통째로 무시한다. 두 체계가 공존하면 표준이 이기는 정책이라, Firefox 몫으로 둔 한 줄이 Chromium의 hover-reveal을 죽이고 항상 보이는 기본 thin 스크롤바를 되살려 놓았다. [수정 커밋](https://github.com/math-jh/math-jh.github.io/commit/767e26fd96c155a1bcc050fac59c6ec95a84e465)은 그 한 줄을 Firefox에서만 적용되게 가뒀다.
+Firefox에는 `::-webkit-scrollbar`가 없으니 같은 모양을 표준 `scrollbar-width`·`scrollbar-color`로 따로 적어야 한다. 처음에는 `scrollbar-width: thin`을 webkit 규칙과 같은 선택자에 나란히 두었고, 그것이 회귀를 불렀다. Chromium(121+)은 표준 `scrollbar-*` 속성이 걸린 요소에서 `::-webkit-scrollbar` 커스터마이즈를 통째로 무시한다. 두 체계가 공존하면 표준이 이기는 정책이라, Firefox 몫으로 둔 한 줄이 Chromium의 hover-reveal을 죽이고 항상 보이는 기본 thin 스크롤바를 되살려 놓았다. [767e26fd](https://github.com/math-jh/math-jh.github.io/commit/767e26fd96c155a1bcc050fac59c6ec95a84e465)는 그 한 줄을 Firefox에서만 적용되게 가뒀다.
 
 ```css
 @supports not selector(::-webkit-scrollbar) {
-  .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {
+  .sidebar.sticky {
     scrollbar-width: thin;
   }
 }
 ```
 {: data-filename="_layouts/default.html"}
 
-`::-webkit-scrollbar` 선택자를 이해하지 못하는 브라우저, 곧 Firefox만 이 블록에 들어온다. Chromium은 블록을 건너뛰므로 webkit 커스텀이 다시 산다. 낡은 `-ms-overflow-style: none`도 이 김에 걷어냈다. 고치고 나면 여덟 줄짜리 diff다. 표준 속성을 지원했더니 표준이 커스텀을 꺼 버린다는 사실을 알아내는 데까지가 일이고, 그다음은 늘 그렇듯 별 게 없다.
+`::-webkit-scrollbar` 선택자를 이해하지 못하는 브라우저, 곧 Gecko 계열만 이 블록에 들어온다. Chromium은 블록을 건너뛰므로 webkit 커스텀이 산다. 고치고 나면 여덟 줄짜리 diff다. 표준 속성을 지원했더니 표준이 커스텀을 꺼 버린다는 사실을 알아내는 데까지가 일이었다.
 
-## 사후: 수식 가로 스크롤바에 같은 문법 적용
+지금은 표준 속성이 전부 이런 블록 안에 있다. nav의 폭은 위 `default.html` 블록에, 색은 스킨의 블록에 둔다.
 
-`.katex-display`는 이미 `overflow-x: auto`라서 긴 수식은 블록 안에서 가로로 스크롤됐다. 다만 스크롤바는 브라우저 기본값이었다. 사용자가 이걸 짚었다.
+```scss
+@supports not selector(::-webkit-scrollbar) {
+  html {scrollbar-color: #c9c2b2 transparent}
+  pre {scrollbar-color: #c9c2b2 transparent; scrollbar-width: thin}
+  .sidebar.sticky {scrollbar-color: transparent transparent}
+  .sidebar.sticky:hover {scrollbar-color: #bfa46a transparent}
+  .katex-display, figure.diagram {scrollbar-color: #bfa46a transparent; scrollbar-width: thin}
+}
+```
+{: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
+
+Firefox의 hover-reveal은 평소 `transparent transparent`였다가 hover에서 thumb 색으로 바뀌는 `scrollbar-color` 두 줄이다. 사용자의 브라우저인 Zen은 Gecko 계열이라, 사용자 화면에 실제로 걸리는 것은 webkit 규칙이 아니라 이 블록이다.
+
+## 수식·다이어그램의 가로 스크롤바
+
+`.katex-display`는 `overflow-x: auto`라서 긴 수식은 블록 안에서 가로로 스크롤된다. 그 스크롤바가 브라우저 기본값이던 것을 사용자가 짚었다.
 
 > 지금 블록 안에 있는 수식 기준으로, 스크롤이 우리가 쓰는 문법이 아니더라, 아무 스타일도 없던데, thumb를 좀 얇게, 호버하면 나오는 황금색 정도로 했으면 좋겠어 (대충 왼쪽 사이드바에 적용된 스타일의 수평버전 느낌으로).
 
-[커밋](https://github.com/math-jh/math-jh.github.io/commit/6b571968198044c0df11e30b2bc7e350a7f062dd)은 구조와 색을 둘로 나눈다. 구조는 `_base.scss`에 한 번 적고, thumb 색은 위에서 정리한 대로 라이트·다크 스킨이 각자 정한다.
+[6b571968](https://github.com/math-jh/math-jh.github.io/commit/6b571968198044c0df11e30b2bc7e350a7f062dd)부터 구조와 색이 둘로 나뉜다. 구조는 `_base.scss`에 한 번 적고, thumb 색은 라이트·다크 스킨이 각자 정한다.
 
 ```scss
-.katex-display::-webkit-scrollbar { height: 4px; }
-.katex-display::-webkit-scrollbar-track { display: none; }
-.katex-display::-webkit-scrollbar-thumb { border-radius: 0; }
+.katex-display::-webkit-scrollbar,
+figure.diagram::-webkit-scrollbar { height: 4px; }
+.katex-display::-webkit-scrollbar-track,
+figure.diagram::-webkit-scrollbar-track { display: none; }
+.katex-display::-webkit-scrollbar-thumb,
+figure.diagram::-webkit-scrollbar-thumb { border-radius: 0; }
 ```
 {: data-filename="_sass/minimal-mistakes/_base.scss"}
 
 ```scss
-.katex-display::-webkit-scrollbar-thumb {background-color: #bfa46a}
+.katex-display::-webkit-scrollbar-thumb,
+figure.diagram::-webkit-scrollbar-thumb {background-color: #bfa46a}
 ```
 {: data-filename="_sass/minimal-mistakes/skins/_custom.scss"}
 
-다크 스킨의 값은 `#8f7434`이다. 두 값 모두 왼쪽 사이드바의 `:hover` thumb 색을 그대로 가져왔다. 사이드바는 평소에 투명하다가 hover에서만 색이 들지만, 수식은 처음부터 칠해 둔다. 모바일에는 hover가 없고, 수식이 넘치는 곳은 대개 모바일이라서다. 사용자가 말한 "호버하면 나오는 황금색"의 색만 가져오고 hover 조건은 뺀 셈이다. 직각 thumb과 `display: none` 트랙은 사이드바 스크롤바의 헤어라인 문법을 수평으로 눕힌 것이다.
+다크 스킨의 값은 `#8f7434`이다. 두 값 모두 왼쪽 nav의 `:hover` thumb 색을 그대로 가져왔다. nav는 평소에 투명하다가 hover에서만 색이 들지만, 수식은 처음부터 칠해 둔다. 모바일에는 hover가 없고, 수식이 넘치는 곳은 대개 모바일이라서다. 사용자가 말한 "호버하면 나오는 황금색"의 색만 가져오고 hover 조건은 뺀 셈이다. 직각 thumb과 `display: none` 트랙은 nav 스크롤바의 헤어라인 문법을 수평으로 눕힌 것이다.
 
-Firefox 몫은 앞 절에서 격리해 둔 `@supports not selector(::-webkit-scrollbar)` 블록에 한 줄을 더하는 것으로 끝났다.
-
-```scss
-.katex-display {scrollbar-color: #bfa46a transparent; scrollbar-width: thin}
-```
-
-표준 속성을 `@supports` 밖에 두면 Chromium이 `::-webkit-scrollbar` 규칙을 무시한다는 앞 절의 함정이 여기에도 그대로 걸려서, 새 규칙도 블록 안에 넣었다. 같은 요청에는 블록 바깥에서 넘치는 수식도 확인해 달라는 부분이 있었는데, 이 커밋이 다루는 것은 스크롤바 스타일뿐이다.
+Firefox 몫은 앞 절 스킨 블록의 마지막 줄이다. 표준 속성을 `@supports` 밖에 두면 Chromium이 이 4px 규칙을 무시하는 함정이 여기에도 그대로 걸리므로, 이 규칙도 블록 안에 있다. 다이어그램이 가로로 스크롤되는 그림 상자가 된 뒤로는 `figure.diagram`도 같은 선택자 목록에 들어 있어서, 넘치는 수식과 넘치는 그림 아래에 같은 4px 막대가 뜬다.

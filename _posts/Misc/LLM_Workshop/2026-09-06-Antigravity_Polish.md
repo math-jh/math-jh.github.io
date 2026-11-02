@@ -1,7 +1,7 @@
 ---
 
 title: "원문을 다시 읽는 번역 워커"
-excerpt: "번역 엔진을 Kimi에서 Antigravity로 옮기면서 원문대조 폴리싱 패스를 세우고, 그 김에 한글 원문의 오류까지 같이 훑어 대시보드로 올리게 한 일"
+excerpt: "Antigravity 대조 폴리싱 패스와 그 안의 한글 원문 감사, 대시보드에서 체크한 지적을 EN까지 잇는 후속 워커"
 
 read_time: false
 
@@ -14,269 +14,96 @@ sidebar:
 author: Marvin
 
 date: 2026-09-06
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-02
 
 weight: 49
 
 ---
 
-관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/ko_followup_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/ko_followup_worker.py), [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [4d2ebc7c](https://github.com/math-jh/math-jh.github.io/commit/4d2ebc7c), [20cc224b](https://github.com/math-jh/math-jh.github.io/commit/20cc224b), [8ae10c43](https://github.com/math-jh/math-jh.github.io/commit/8ae10c43), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py)
+관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/ko_followup_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/ko_followup_worker.py), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py), [`scripts/dashboard/server.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/server.py), [`scripts/dashboard/app.js`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/app.js), [`_config.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_config.yml), [4d2ebc7c](https://github.com/math-jh/math-jh.github.io/commit/4d2ebc7c), [20cc224b](https://github.com/math-jh/math-jh.github.io/commit/20cc224b), [8ae10c43](https://github.com/math-jh/math-jh.github.io/commit/8ae10c43)
 {: .notice--info}
 
-EN 코퍼스는 전부 Kimi K3가 번역한 것이다. 그 번역을 다시 훑는 패스를 붙이기로 하면서, 사용자는 같은 엔진으로 자기 결과를 검토시키는 구도를 피했다.
+폴리싱 패스를 붙일 때 EN 코퍼스는 전부 Kimi K3의 번역이었다. 사용자는 같은 엔진으로 자기 결과를 검토시키는 구도를 피했다.
 
 > 근데 이제 번역도 원래 Kimi로 translate가 다 됐었잖아. 근데 이제 그거를 또 똑같이 Kimi로 polish 하는 것보다는 다른 걸로 하는 게 나을 것 같아서, Antigravity로 올렸어. 그리고 올리면서 한글 글에 오류가 있는 것도 걔가 같이 보게 했고, 그리고 겸사겸사 영문과 한글 글의 불일치가 있으면 그것도 하게 했단 말이야.
 
-같은 자리에서 주기도 바뀌었다. 8월 전수 감사가 지적을 한꺼번에 쏟아내는 바람에 사용자가 끝내 따라가지 못했고, 그 경험에서 하루 6편이 실제로 소화되는 양이라는 계산이 나왔다. 30분마다 돌던 것을 4시간에 한 번으로 늘린 것은 그 숫자에 맞춘 결과다. 워커가 느려서가 아니라 사람이 읽을 수 있는 속도가 상한이다.
+이 글은 폴리싱 패스, 같은 틱의 한글 원문 감사, 대시보드에서 체크한 지적을 영문에 반영하는 후속 워커를 다룬다. 워커 본체는 [자동 번역 워커](/ko/llm_workshop/translation_worker) 글에 있다.
 
-## 엔진 이름을 `_config.yml`로 끌어올리기
+번역 워커는 4시간에 한 편씩 돈다. 8월 전수 감사가 지적을 한꺼번에 쏟아냈을 때 사용자가 끝내 따라가지 못했고, 하루 6편이 실제로 소화되는 양이라는 숫자가 그때 나왔다. 상한은 워커의 속도가 아니라 사람이 지적을 읽는 속도다.
 
-기계번역 고지는 EN frontmatter의 `translation_source`가 `_config.yml`의 정본 태그와 일치할 때만 붙는다. 태그를 `kimi-cli`에서 갈아치우면 기존 EN 400여 편이 전부 고지를 잃는다. 그래서 정본 하나가 아니라 세 개의 키로 나눴다.
+## `translation_polish_source` 태그로 도는 폴리싱 큐
+
+폴리싱 대기열은 따로 없다. `_config.yml`의 엔진 이름표 세 키 중 하나가 큐 노릇을 한다.
 
 ```yaml
 translation_source_tag         : "antigravity-gemini-3.8-flash-high"
 translation_source_legacy_tags : ["kimi-cli"]
 translation_polish_source_tag  : "antigravity-gemini-3.8-flash-high"
 ```
+{: data-filename="_config.yml"}
 
-`legacy`는 "더 이상 새로 쓰지 않지만 계속 표시할 엔진"이다. 고지 include는 현재 태그와 legacy 목록을 둘 다 본다.
-
-{% raw %}
-```liquid
-{% assign _machine_translation = false %}
-{% if page.translation_source == site.translation_source_tag %}
-  {% assign _machine_translation = true %}
-{% elsif site.translation_source_legacy_tags contains page.translation_source %}
-  {% assign _machine_translation = true %}
-{% endif %}
-```
-{% endraw %}
-
-`_data/ui-text.yml`의 키 이름은 `kimi_translation_notice` 그대로 뒀다. 엔진 이름이 키에 들어가 있는 것이 이제 와서 어색하지만, 이름을 바꾸면 include와 두 언어 블록을 동시에 고쳐야 하고 얻는 것이 없다.
-
-워커 쪽은 백엔드 이름에서 태그를 역산한다. 롤백 경로를 남겨 둔 것이라, `TRANSLATOR_BACKEND=kimi`로 되돌리면 태그도 따라 돌아간다.
+앞의 두 키는 원 번역의 출처라 기계번역 고지가 보고, 마지막 키는 지금의 대조 폴리싱을 거쳤는지를 적는다. 그래서 Kimi가 번역하고 Antigravity가 다듬은 글도 `translation_source: kimi-cli`를 지킨다. Phase 3은 EN의 `translation_polish_source`가 이 값과 다른 글을 집는다.
 
 ```python
-_BACKEND_SOURCE_TAGS = {
-    "antigravity": _CONFIG_TRANSLATION_SOURCE_TAG,
-    "kimi": "kimi-cli",
-    "glm": "glm-cli",
-}
-```
-
-`_load_translation_source_tags()`는 `_config.yml`에서 세 키를 읽고, 현재 태그나 폴리싱 태그가 비어 있으면 그냥 죽는다. 고지 include와 짝이 되는 값이라 조용히 빈 문자열로 넘어가면 사이트 전체에서 고지가 사라진다.
-
-## 폴리싱 패스를 태그로 세우기
-
-폴리싱은 별도 큐가 아니라 frontmatter 태그 하나로 굴러간다. EN에 `translation_polish_source`가 현재 폴리싱 태그와 같으면 이미 이번 패스를 거친 것이고, 아니면 대상이다.
-
-```python
-    meta = en_translation_meta(existing_en)
-    if meta.get("translation_polish_source") == TRANSLATION_POLISH_SOURCE_TAG:
-        continue                       # already polished by the current pass
-    return ko, existing_en, "polish"
-```
-
-그다음 Phase 4의 검증은 조건이 정확히 반대다.
-
-```python
-    if meta.get("translation_polish_source") != TRANSLATION_POLISH_SOURCE_TAG:
-        continue                       # current contrastive pass comes first
-```
-
-두 조건이 서로의 여집합이라 순서가 저절로 강제된다. 폴리싱 안 된 글은 Phase 3이 가져가고, 폴리싱된 글만 Phase 4가 검증한다. 나중에 엔진을 또 바꾸면 `translation_polish_source_tag`만 새 값으로 두면 되고, 코퍼스 전체가 자동으로 다시 폴리싱 대기열에 들어간다. 태그를 큐로 쓰는 이유가 이것이다.
-
-frontmatter는 본문과 분리해서 처리한다. `_polish_fm_fields`가 KO/EN 필드를 JSON으로 주고받고, 본문 프롬프트는 frontmatter를 아예 보지 않는다. 프롬프트에 "Output ONLY the complete repaired English body"라고 적힌 것은 그래서다. 본문 폴리싱이 `title:` 줄을 건드리면 permalink와 사이드바가 같이 흔들린다.
-
-## 폴리싱 중에 한글 원문을 함께 읽기
-
-같은 호출에서 한글 원문의 오류도 보게 했다. 프롬프트는 이걸 read-only 분류 작업으로 규정한다.
-
-```
-Read the complete Korean mathematics post below during this polishing run.
-This is a read-only triage task: never rewrite the post and never discuss
-the English translation.
-```
-
-프롬프트로 부탁하는 것만으로는 부족해서 해시로 확인한다. 후보를 받아 Codex 2차 판정을 붙이는 `review_ko_findings`가 전후 SHA-256을 비교하고, 다르면 알림을 띄운다.
-
-```python
-    if hashlib.sha256(ko_path.read_bytes()).hexdigest() != before:
-        log(f"GATE-KO-REVIEW ({key}): KO 파일이 변경됨 — read-only 계약 위반")
-        _notify("[translate-worker] Codex KO 검토가 원문을 수정함",
-                f"{key}\nCodex 검토 전용 단계 전후의 KO 해시가 다릅니다.",
-                level="timeSensitive")
-        return out
-```
-
-Codex 판정은 `VALID`·`FALSE`·`UNSURE` 셋 중 하나만 받는다. 호출이 실패하거나 응답이 파싱되지 않은 후보는 판정 없이 그대로 남긴다. 검토가 안 됐다는 이유로 후보를 숨기면 사용자 알림에서 조용히 사라지고, 그건 오류가 없다는 뜻으로 읽힌다.
-
-후보에는 원문의 인용구가 딸려 오는데, 그 인용구가 KO 본문에서 안 찾아지면 후보를 버린다.
-
-```python
-        pos = ko_text.find(quote)
-        # A finding without an exact source locus cannot provide a trustworthy
-        # line number or later diff target.
-        if pos < 0:
-            continue
-```
-
-인용구를 못 찾는 후보는 위치를 알려줄 수 없고, 나중에 수정분을 대조할 기준도 못 준다. 모델이 원문을 살짝 바꿔 옮긴 것과 없는 문장을 지어낸 것을 여기서 구분할 방법은 없으니 둘 다 버린다.
-
-찾아진 후보는 그 시점의 KO 전문을 상태 파일에 통째로 남긴다.
-
-```python
-            ko_review_base = ko_path.read_text(encoding="utf-8")
-            state["files"][key]["ko_review_base_content"] = ko_review_base
-            state["files"][key]["ko_review_base_sha256"] = hashlib.sha256(
-                ko_review_base.encode("utf-8")).hexdigest()
-```
-
-git에서 꺼내면 될 것 같지만 안 된다. 감사 시점의 KO가 아직 커밋 안 된 워킹트리 상태일 수 있고, 그러면 재구성할 방법이 없다. 후보가 살아 있는 동안만 들고 있다가 해소되면 버린다.
-
-## `\times`가 탭이 되는 자리
-
-모델 응답을 JSON으로 받다 보면 수식이 문제가 된다. 유효한 JSON 안에 LaTeX 백슬래시가 한 개짜리로 들어오면 `json.loads`가 그걸 이스케이프로 읽는다. `\times`는 예외 없이 탭 문자 하나에 `imes`가 붙은 문자열이 되고, 파싱은 성공한다. 깨진 채로 통과하는 쪽이 실패하는 쪽보다 나쁘다.
-
-```python
-    def protect_math(m: re.Match) -> str:
-        return re.sub(r'(?<!\\)\\(?![\\"])', r'\\\\', m.group(0))
-
-    t = re.sub(r"\$\$.*?\$\$|\$[^$\n]*\$", protect_math, t, flags=re.DOTALL)
-```
-
-수식 구간 안에서만 홑백슬래시를 이중으로 만든다. 뒤에 백슬래시나 따옴표가 오는 경우는 건드리지 않는데, 그건 모델이 제대로 이스케이프한 것이라 손대면 거꾸로 깨진다. 수식 밖의 JSON 이스케이프는 원래 의미를 유지한다.
-
-## 대시보드 체크박스는 승인이 아니라 요청
-
-한글 오류를 고치면 EN도 따라가야 한다. `ko_followup_worker.py`가 그 일을 맡는데, 대시보드 체크박스의 의미를 정한 것이 설계의 전부다.
-
-```python
-"""Follow up dashboard-confirmed Korean fixes and synchronize the English post.
-
-The dashboard checkbox is a request, not an acknowledgement.  One request is
-handled per run: Antigravity proposes the narrowly scoped EN replacement, then
-Codex sees only the original finding plus KO/EN unified diffs and decides whether
-both changes implement that finding.  The queue item is removed only after a
-passing check and a successful content commit.
-"""
-```
-
-체크를 승인으로 읽으면 체크하는 순간 항목이 큐에서 빠지고, EN 동기화가 실패해도 아무도 모른다. 요청으로 읽으면 항목은 EN 커밋이 실제로 들어갈 때까지 남는다.
-
-판정하는 Codex에게는 원래 지적과 KO/EN 두 diff만 준다. 글 전문을 주면 지적과 무관한 개선안을 함께 들고 오고, 그러면 판정이 "이 지적을 구현했는가"가 아니라 "이 글이 좋아졌는가"가 된다. 제안하는 쪽과 판정하는 쪽에 다른 모델을 놓은 것도 같은 이유다.
-
-follow-up은 별도 크론이고, 번역 워커와 2시간씩 엇갈리게 걸려 있다.
-
-```bash
-15 */4    * * * … translate_worker.py
-15 2-22/4 * * * … ko_followup_worker.py
-```
-
-앞의 것이 0·4·8·12·16·20시에 한 편을 폴리싱하고, 뒤의 것이 2·6·10·14·18·22시에 체크된 요청 하나를 처리한다. 폴리싱이 올린 한글 지적을 사용자가 대시보드에서 체크하면 다음 짝수 시각에 EN이 따라온다. 같은 시각에 두 워커가 같은 글을 두고 부딪히는 일도 없다.
-
-결국 2시간마다 뭔가가 한 편씩 도는데, 그 사이에 사람이 읽어주지 않으면 다음 틱은 의미가 없다. 주기를 정한 것도 그쪽이었다.
-
-## 폴리싱도 출력 한도에 걸리다
-
-번역 쪽 조각내기는 진작에 있었다. KO 본문이 길면 `:::` 정리 박스 경계로 잘라 따로 호출하는 `_split_regions`/`translate_body_chunked`가 통짜 번역이 출력 한도에서 끊기는 문제를 이미 막아 왔다. 폴리싱은 그 경로를 안 탔다. `build_polish_prompt`로 KO/EN을 통째로 한 번에 넘겼는데, CA/Differentials 글에서 KO 22,793자를 그대로 보냈다가 안티그래비티가 출력 토큰 한도에서 잘렸다. 폴리싱 출력은 EN 전문이라 번역과 같은 크기 문제를 그대로 물려받은 것인데, 조각내기 코드는 없었다.
-
-기존 `_group_regions`를 그대로 쓸 수는 없었다. 그 함수는 KO 리전 하나의 길이만 보고 묶는데, 폴리싱은 KO와 EN을 짝지어 같이 보내야 하고 조각 경계도 두 쪽에서 동일해야 한다. `_group_region_pairs`는 box id로 KO/EN 리전을 짝짓고, 각 짝의 길이는 둘 중 긴 쪽으로 잰다.
-
-```python
-span = max(len(ko_text), len(en_text))
-if cur_ko and cur_len + span > max_chars:
-    batches.append(("".join(cur_ko), "".join(cur_en)))
-    cur_ko, cur_en, cur_len = [], [], 0
+        meta = en_translation_meta(existing_en)
+        if meta.get("translation_polish_source") == TRANSLATION_POLISH_SOURCE_TAG:
+            continue                       # already polished by the current pass
+        return ko, existing_en, "polish"
 ```
 {: data-filename="scripts/translation/translate_worker.py"}
 
-KO만 보면 안 되는 이유는 폴리싱 출력이 EN 길이에 가깝기 때문이다. 번역이 짧게 요약된 문단이 있으면 KO는 짧은데 EN이 길어, KO 기준으로만 자르면 그 조각에서 다시 출력 한도에 걸릴 수 있다.
+엔진을 또 바꾸면 이 값만 고치면 되고, 코퍼스 전체가 다시 대기열에 선다. 호출부는 `AGY_MODEL`이 없으면 `--effort high`만 넘기므로, 값 속의 모델 이름은 실제 모델과 어긋날 수 있다. 이 태그는 이번 패스의 이름표다.
 
-id 열이 KO와 EN에서 어긋나면(`_split_regions`가 뽑은 순서가 다르면) `_group_region_pairs`는 `None`을 돌려주고, 호출부는 조각내지 않은 통짜 폴리싱으로 되돌아간다. 정상 경로에서는 `lint_structure`를 통과한 글만 폴리싱까지 오므로 박스 수가 같고 어긋나지 않지만, 어긋난 경우를 조용히 조각내면 짝 없는 텍스트를 모델이 지어내거나 지운다.
+본문 프롬프트(`POLISH_INSTRUCTIONS`)는 한글을 의미의 유일한 기준으로 두고, 한글이 틀려 보여도 영문에서 바로잡지 말라고 적는다. 한글 오류는 감사 몫이다. frontmatter는 `_polish_fm_fields`가 JSON으로 따로 다룬다.
 
-조각마다 붙는 프롬프트도 번역 쪽과 같은 모양이다. 전체 중 몇 번째 조각인지 적고, 도입부·요약·전환 문장을 만들지 말고 분할 사실도 언급하지 말라고 명시한다. 다만 폴리싱은 라벨 번호를 새로 매기는 게 아니라 기존 번호를 그대로 지키는 일이라, 주의사항도 "라벨 번호는 조각을 넘어 이어지니 보이는 대로 유지하라"로 바뀐다.
+KO나 EN 본문이 4,000자를 넘으면 조각으로 나눈다. 경계는 번역 경로의 `_split_regions`(`:::` 박스 여는 줄)를 쓰되, `_group_region_pairs`가 box id로 KO·EN 리전을 짝짓고 각 짝을 `max(len(ko_text), len(en_text))`로 잰다. 출력이 EN이라 KO만 재면 영문이 긴 조각에서 다시 한도에 걸린다. id 열이 어긋나면 `None`을 돌려 통짜 폴리싱으로 물러선다. 짝 없는 조각을 보내면 모델이 대응 없는 쪽을 지어내거나 지운다.
 
-경계값 자체도 두 번 내려갔다. 처음에는 번역 쪽 24,000자/12,000자 기준을 그대로 물려받아 10,000자/6,000자로 낮췄는데, 그 사흘 뒤 4,000자/4,000자로 한 번 더 낮아졌다. 판정 기준도 바뀌었다. 처음엔 KO 길이만 봤지만, 폴리싱 출력이 EN 쪽에 가깝다는 점을 감안해 KO와 EN 중 긴 쪽으로 조각 여부를 판정하게 됐다.
+폴리싱은 검증까지 끝낸다. 최종 EN에 `check_en`(`lint_latex`·`lint_structure`, 수식이 어긋날 때만 모델 판정)을 돌려 `verified_at`을 같이 찍으므로, 이 검사가 예외로 끝난 글만 Phase 4로 간다.
 
-```python
-chunked = (polish_body_chunked(ko_body, en_current_body)
-           if max(len(ko_body), len(en_current_body)) > FULL_CHUNK_THRESHOLD
-           else None)
-```
-{: data-filename="scripts/translation/translate_worker.py"}
+## EN 제목 고정 가드와 `§옛 제목` 인용 갱신
 
-번역과 폴리싱이 같은 상수(`FULL_CHUNK_THRESHOLD`, `MAX_CHUNK_CHARS`)를 공유하므로, 이 값을 내리면 번역 쪽 조각도 더 잘게 쪼개진다. 번역은 출력이 EN 하나뿐이라 원래도 여유가 있었지만, 두 경로를 하나의 상수로 묶어 둔 대가로 폴리싱이 요구하는 보수적인 값을 함께 물려받았다.
+폴리싱은 frontmatter의 `title`도 다시 쓴다. 다른 EN 글이 그 제목을 `[§Basic Notions](…)` 꼴로 그대로 인용하므로, 제목이 바뀌면 인용이 옛 제목으로 남는다.
 
-## 후속 요청이 거절되기까지의 세 관문
+> 폴리싱이 En 제목도 바꾼다고?
 
-체크박스 절을 쓴 뒤로 후속 워커는 몇 번 더 바뀌었다. 먼저 "한 번에 요청 하나"가 없어졌다. 지금은 실행이 시작될 때 큐에 있는 요청을 전부 순차 처리하고, 각 항목은 실행당 한 번만 시도한다. 한 항목이 대기로 남아도 뒤의 요청은 막히지 않는다.
+바뀐 제목을 나란히 놓고 보니 뜻을 고친 것보다 문체만 다듬은 것이 많았다.
 
-`f5bf0549`는 판정 쪽의 두 가지 헛돌기를 막았다. 하나는 EN diff가 비었을 때였다. 판정자는 diff만 받았으므로 빈 EN diff를 보면 "EN이 고쳐지지 않았다"고 거절했는데, 실제로는 EN이 이미 올바른 뜻을 담고 있어 고칠 것이 없는 경우가 있었다. 이제 판정자는 최종 EN 전문(`FINAL EN`)을 같이 받고, 빈 diff일 때는 그 본문이 고친 한글의 뜻을 이미 담고 있는지를 직접 본다. 다른 하나는 첫 수정안이 거절될 때였다. 거절 사유는 대개 구체적이어서("이 문장의 계수도 바꿔야 한다"), 그대로 제안자에게 돌려주면 고칠 수 있었다.
+> 1번으로 해줘. 근데 지금 바뀐 것들만 놓고 보면, 이전 제목들이 나은게 많아보이는데, 네 생각은 어때?
+
+나는 같은 생각이라고 답했고, 변경은 두 겹이다. 프롬프트는 현재 EN 제목이 한글 제목의 대상과 어긋날 때만 바꾸고 관사·단복수·어순·전치사·대시를 지키라고 적는다. 그 뒤의 결정론 가드는 `_title_key`(대소문자, 선행 `The`, 대시 종류, 단어 끝 복수 `s`를 지운 비교 키)가 같으면 현재 제목으로 되돌린다. 단어나 어순이 바뀐 제목은 키가 달라 통과하고, 그때는 `sweep_title`이 이 글을 인용하는 다른 EN 글의 `§옛 제목`을 새 제목으로 바꾼다.
 
 ```python
-for attempt in range(1, MAX_PROPOSAL_ATTEMPTS + 1):
-    candidate = antigravity_candidate(
-        current_en, findings, ko_diff, review_feedback=feedback,
-        author_note=author_note,
-    )
-    ...
-    passed, why = codex_pass(findings, ko_diff, en_diff, candidate, author_note)
-    if passed:
-        return candidate, True, why
-    feedback = why
+pat = re.compile(r"(?<!\S)§" + re.escape(old) + r"(?=,|$)")
 ```
-{: data-filename="scripts/translation/ko_followup_worker.py"}
+{: data-filename="scripts/translation/section_anchor_gate.py"}
 
-`MAX_PROPOSAL_ATTEMPTS`는 2다. 두 번째도 거절되면 그때 사용자 요청을 거절 처리하고, 체크를 풀고, 사유를 대시보드 행에 남긴다.
+`§`는 라벨 맨 앞이나 공백 뒤에서 시작해 라벨 끝이나 `,`에서 끝나야 하므로, `§§` 절 인용이나 옛 제목으로 시작하는 다른 제목(`§Basic Notions of Rings`)은 건드리지 않는다. 링크 경로가 대상 글의 permalink일 때만 고치고, 고친 형제 파일은 커밋하지 않고 워킹트리에 남겨 autopush에 맡긴다. 10월 28일에는 `Projective Schemes`가 `Projective Space and the Proj Construction`으로 바뀌면서 인용하던 EN 7편이 함께 갱신됐다.
 
-세 번째 관문은 KO diff의 범위다(`6bfbe498`). 사용자가 한 글에서 지적 하나를 고치는 김에 다른 문단도 손보거나, 분류기가 같은 글의 다른 링크에 `data-relation`을 달아 두면, 감사 시점 원문과 현재 원문의 diff에 그것들이 다 섞였다. 판정자는 그 무관한 변경을 보고 거절하기도 했다. `_scoped_ko_diff`는 각 지적의 인용문이 원문에서 차지하는 줄 범위를 구하고, `difflib.SequenceMatcher`의 변경 덩어리 중 그 범위의 앞뒤 두 줄 안에 걸치는 것만 변경으로 남기고 나머지는 옛 판본 쪽으로 접은 뒤 diff를 다시 뜬다(접는 방향은 아래 「범위 밖 수정은 옛 판본 쪽으로 접는다」). 판정 프롬프트에도 "다른 링크의 data-relation은 별도 워크플로의 소유"라고 적었다.
+## 폴리싱 중의 한글 원문 감사와 Codex 2차 판정
 
-## 지적을 읽는 화면과 모델에게 남기는 말
+같은 틱에서 `audit_ko_source`가 한글 글 전문을 Antigravity에 한 번 더 보낸다. 프롬프트는 이것을 `read-only triage task`로 규정하고, 글을 고치지도 영문을 논하지도 말라고 적는다. 에이전트에 도구는 없지만 호출 전후의 KO SHA-256을 비교해, 다르면 즉시 알림을 보내고 감사를 실패로 돌린다. 응답은 후보마다 구분자 블록 하나다.
 
-폴리싱 한 번이 한글 지적을 서너 개씩 올리니, 그것을 읽는 쪽의 부담이 늘었다. 사용자가 짚은 곳은 두 군데였다.
+```
+<<<FINDING
+KIND: ERROR or EXPLANATION
+QUOTE:
+exact Korean quote, copied character for character from the post
+ISSUE:
+short reason
+FIX:
+minimal Korean correction or addition
+>>>END
+```
 
-> 지금 번역워커가 돌면 원문 지적 로그가 뜨잖아, 그거 가독성 좀 개선하자.
+`QUOTE`가 KO에서 `find`로 안 찾아지는 후보는 버린다. 위치가 없으면 줄 번호도, 나중에 수정분을 대조할 기준도 없다. 다듬어 옮긴 인용과 지어낸 인용은 가를 수 없어 둘 다 버리고, 건수만 로그에 남긴다. 검증기(Claude)가 verdict에 적은 KO-TYPOS도 `ERROR` 후보로 합류한다.
 
-> 대시보드에서 클릭하면 나오는 로그도 잘 보이게 바꿔줘. 그게 핵심이야.
+후보는 `review_ko_findings`가 `codex exec --sandbox read-only --ephemeral`에 KO 전문과 함께 넘겨, 후보마다 `VALID`·`FALSE`·`UNSURE`와 최소 수정안을 받는다. 여기서도 전후 해시를 비교한다. 호출이나 파싱이 실패한 후보는 판정 없이 남긴다. 숨기면 오류가 없다는 뜻으로 읽힌다.
 
-폰 알림에는 원래 `[VALID] [ERROR] 한글 md line 90:`으로 시작해 긴 인용, 지적, `(제안: …)`을 한 줄에 이어 붙인 문자열 뒤에 `→ 이유`와 `수정안:`이 또 붙었다. 대시보드와 후속 워커가 비교 키로 쓰는 `claim` 문자열을 그대로 찍은 탓에 수정안이 두 번 나왔고, 뒤에는 safe verdict 전문까지 딸려 와서 Bark의 3000자 상한에서 잘리기 일쑤였다. `6e23d63c`는 `claim`은 그대로 두고 알림 쪽 렌더러만 새로 썼다. 항목마다 `L90 · VALID` 한 줄, 인용 한 줄(160자를 넘으면 가운데를 줄인다. 틀린 곳이 문장 끝에 있는 경우가 많아서다), 문제, 수정 순이다. VALID는 Codex가 확정한 이유만 보이고, UNSURE와 미검토는 원 지적과 Codex 의견을 나란히 둔다. 잘려도 되는 것(경고, verdict 전문)은 뒤로 보냈다.
-
-대시보드 모달은 모노스페이스 `<pre>`에 같은 한 줄을 쏟던 것을 구조화된 목록으로 바꿨다. 이를 위해 서버가 지적의 `line`·`quote`·`issue`·`suggested_fix`를 따로 내보낸다. 수식 렌더도 사용자가 요청했다.
-
-> 문제랑 수정도 수식 렌더가 되면 좋겠어.
-
-대시보드는 블로그와 같은 오리진에 있으므로 `/assets/katex/`와 `katex-macros.js`를 그대로 불러 모달에 auto-render를 건다. 걸리는 것은 모델이 가끔 `$` 없이 LaTeX를 쓴다는 점이었다(`\alpha\smile\beta를 …`). 두 쪽에서 막았다. 워커의 Codex 프롬프트는 수식을 반드시 `$…$`로 쓰라고 요구하고, 이미 저장된 항목은 대시보드의 `wrapBareTex`가 감싼다. 이 함수는 기존 `$` 구간을 먼저 쪼개 건드리지 않고, 남은 텍스트에서 `\명령`을 포함하는 ASCII 수식 문자 연속을 찾아 한글·끝 구두점·공백에서 끊은 뒤 중괄호 균형이 맞을 때만 `$`로 싼다.
-
-마지막은 반대 방향의 통로다.
-
-> 그 과정에서, 내가 모델에게 전할 말이 있으면 넣을 방법이 없어. 그 기능 좀 추가해줘.
-
-모달 아래에 메모 칸이 생겼다. 메모는 체크 파일과 따로 `~/.local/state/blog_dashboard_kotypo_notes.json`에 요청 키(`<ko-path>@<ko_reviewed_at>`) 단위로 병합 저장된다. 체크 map은 클라이언트가 통째로 교체하는 방식이라, 거기 섞으면 다른 탭이 메모를 날린다. 후속 워커는 메모를 제안 프롬프트와 판정 프롬프트 양쪽에 `AUTHOR NOTE`로 넣는다. 판정 쪽에는 이것이 작성자의 설명이지 명령이 아니라고 적었다. 작성자가 "이 지적은 오탐이라 고치지 않았다"고 하면 그 근거가 수학적으로 타당하고 글이 뒷받침할 때만 통과시키고, 판정 이유에서 메모에 답하게 했다.
-
-메모가 있으면 지적 위치의 KO가 바뀌지 않았어도 요청이 판정으로 넘어간다. 원래 이런 요청은 "지적 위치의 KO 변경이 없음"으로 영영 대기에 머물렀다. 오탐을 해명할 길이 체크 해제 말고는 없었던 셈이다. 승인되면 메모도 지워지고, 거절되면 남아서 고쳐 쓸 수 있다. 재감사로 키가 바뀌었거나 지적이 사라진 메모는 매 실행 첫머리에 정리한다. 이제 사용자와 판정자 사이에 대화 비슷한 것이 생겼다. 한 턴에 4시간이 걸리는 대화이긴 하다.
-
-## 수학이 아닌 지적은 올리지 않는다
-
-이 감사는 한동안 저자의 편집 결정을 오류로 올렸다. 사용자가 대시보드 대기열을 보다가 짚은 것은 세 가지였고, 그중 둘이 이 워커의 문제였다([96a9fbea](https://github.com/math-jh/math-jh.github.io/commit/96a9fbea)).
+무엇을 지적할 수 있는지는 사용자가 대시보드 대기열을 보다가 짚었다([96a9fbea](https://github.com/math-jh/math-jh.github.io/commit/96a9fbea)).
 
 > 지금 번역 크론이 돌면서 원문 지적을 하는데, 공통적으로 (1) \x,\y 등은 이 블로그에서 사용하는 표준적인 매크로인데 계속 지적을 한다. 프롬프트 수정이 필요하다. 이런 식으로 매크로 몇개 넣기보다는, 프롬프트에 GUIDELINE-Translate 혹은 GUIDELINE-Edit 등을 보게 하면 될 것 같다. (2) 지금 대기중인 Derivatives 글 같은 경우에는 애초에 얘가 지적할 사안이 아니다. 수학적인 내용이 아니고, 애초에 이건 우리가 terms.yml에서 derivatives를 등재할 때, primary:en으로 썼지만, calculus 카테고리는 교양수학인 걸 고려해서 한글로 쓰기로 합의 본 사안이다.
 
-(1)은 모델이 블로그 매크로를 모른다는 문제다. 매크로 몇 개를 프롬프트에 적어 넣는 대신, 사용자 말대로 편집 지침을 읽게 했다. `house_conventions()`는 호출할 때마다 `GUIDELINE-Edit.md`에서 `## N. <제목>` 절을 제목으로 골라 싣는다.
-
-```python
-HOUSE_GUIDELINE_SECTIONS = ("수식 표기", "용어 사용")
-...
-    if len(picked) != len(HOUSE_GUIDELINE_SECTIONS):
-        log(f"HOUSE-CONVENTIONS: {HOUSE_GUIDELINE.name} 에서 절 "
-            f"{HOUSE_GUIDELINE_SECTIONS} 을 다 찾지 못해 전문을 싣는다")
-        picked = [guide.strip()]
-```
-{: data-filename="scripts/translation/translate_worker.py"}
-
-절 번호가 아니라 제목으로 고르는 것은 지침의 절 순서가 바뀌어도 규약이 빠지지 않게 하려는 것이다. 하나라도 못 찾으면 지침 전문으로 물러선다. 지침 옆에는 `assets/js/katex-macros.js`의 키를 정규식으로 뽑은 매크로 목록이 붙는다. 정본 파일을 매번 읽으므로 매크로가 늘어도 다음 틱부터 반영된다.
-
-(2)는 프롬프트에 규약을 더한다고 풀리지 않는다. Derivatives 글의 한글 병기는 오류가 아니라 저자가 정한 표기인데, 후속 워커는 저자가 메모로 그렇게 적은 뒤에도 거절했다. 그래서 감사가 무엇을 지적할 수 있는지를 한 문장으로 잘라 세 프롬프트에 같은 문구로 실었다. 1차 후보를 뽑는 Antigravity, 2차를 판정하는 Codex, 원문과 번역을 대조하는 verify의 `KO-TYPOS`다.
+(1)은 `house_conventions()`가 받는다. 호출마다 `GUIDELINE-Edit.md`에서 제목이 "수식 표기"·"용어 사용"인 절을 골라 싣고(못 찾으면 지침 전문), `katex-macros.js`에서 뽑은 매크로 목록을 붙인다. (2)는 규약으로 풀리지 않아서, 감사 범위를 한 문장으로 잘라 Antigravity·Codex·KO-TYPOS 세 프롬프트에 같은 문구로 실었다.
 
 ```python
 KO_FINDING_SCOPE = (
@@ -290,199 +117,37 @@ KO_FINDING_SCOPE = (
 ```
 {: data-filename="scripts/translation/translate_worker.py"}
 
-기존 ERROR 정의에 있던 `malformed LaTeX symbol`, `evident typo`도 손봤다. 각각 `broken LaTeX that cannot render`, `a typo that garbles the mathematical meaning`으로 좁혔다. 이 표현이 남아 있으면 범위 문장을 실어도 모델이 표기 지적을 "오타"로 되살린다. Codex 판정 프롬프트에는 범위 밖 후보와, 인용한 한글이 하우스 규약을 따르는 후보를 둘 다 FALSE로 두라는 문장을 넣었다. 용어와 병기는 `md_lint`와 `terms.yml`이 따로 지키므로, 이 경로가 같은 것을 두 번 세지 않게 하는 것이 목적이다.
+ERROR 정의의 `malformed LaTeX symbol`, `evident typo`도 각각 `broken LaTeX that cannot render`, `a typo that garbles the mathematical meaning`으로 좁혔다. 넓은 표현이 남으면 모델이 표기 지적을 "오타"로 되살린다. Codex는 범위 밖 후보와, 하우스 규약을 따르는 한글을 인용한 후보를 FALSE로 둔다.
 
-후속 워커의 판정 기준도 같은 방향으로 바뀌었다. 이전에는 메모를 "저자의 설명이지 명령이 아니다"로 읽고, 오탐이라는 주장에 수학적 근거를 요구했다. 지금은 수학적 참·거짓을 뺀 모든 것이 저자의 최종 결정이다.
+판정이 붙은 목록은 `record_ko_review`가 FALSE까지 포함해 state에 쓰고, 감사 시점의 KO 전문(`ko_review_base_content`)과 해시를 같이 둔다. 그 KO가 커밋 전 워킹트리였을 수 있어서 git으로는 복원되지 않는다. FALSE가 아닌 지적은 `L90 · VALID`, 인용, 문제, 수정 순의 알림으로도 나간다. 알림 shim이 3000자에서 뒤를 자르므로 KO 지적을 맨 앞에 두고, 사용자 결정으로 매일 08:30의 하루 요약에 묶는다.
 
-```
-What the author decides is final for everything except mathematical
-truth. ... terminology, the language or gloss form of a term, notation and
-the blog's macros, style, and how much explanation or detail the post gives are
-the author's editorial decisions, and such a finding passes on the author's word
-alone. Only when the finding says the Korean states something mathematically
-false may you weigh the note's reasoning ...
-```
+## JSON을 지나며 깨지는 LaTeX와 구분자 블록 응답
 
-한글 원문이 수학적으로 거짓이라는 지적만 메모의 논거를 따져 보고, 나머지는 메모 한 줄로 통과한다. 반대편 조건도 하나 남겼다. EN은 지금의 한글을 따라야 하므로, 한글에 없는 내용을 덧붙인 영문은 여전히 거절한다.
-
-세 번째 지적은 의존성 분류기가 각주 안의 링크를 판정할 때 맥락이 빠진다는 것이었다. 같은 커밋이 그쪽도 고쳤지만, 분류기의 이야기라 여기에는 적지 않는다.
-
-## state의 status가 말하지 못하는 현재 단계
-
-대시보드 번역 큐 화면은 `translation_state.json`의 `status`를 세어 보여 주고 있었다. 사용자는 그 숫자를 읽다가 걸렸다.
-
-> 스테이터스가 done인 게 150건이고 draft skip이 292건인데, 지금 draft skip 현재 그러니까 상황이 아닌 거 같거든. 내가 하고 싶은 말은 지금 남아 있는 글 중에 draft skip으로 넘어갈 예정인 글이 292개란 뜻이야? 그건 아니잖아.
-
-사용자의 의심이 맞았다. `status`는 그 글에 마지막으로 기록된 사건이어서, 초안일 때 한 번 찍힌 `draft_skip`은 글이 발행된 뒤에도 그대로 남는다. "지금 큐의 어디에 있는가"라는 질문에는 답이 되지 못하는 필드를 세고 있었다. 재번역 대기도 같은 문제였다. `drift_needed` 표시가 있는 글 중에는 초안이거나 개정 중이어서 워커가 집지 않는 글이 있는데, 그런 글까지 재번역 대기로 세고 있었다([02e434c5](https://github.com/math-jh/math-jh.github.io/commit/02e434c5)).
-
-판정을 대시보드에 다시 구현하면 워커의 단계 조건이 바뀔 때마다 두 벌이 어긋난다. 그래서 워커에 `--queue` 모드를 만들고, `find_next_target`과 같은 순서의 조건을 글 하나에 그대로 적용하는 `queue_bucket`을 두었다.
+JSON 응답에서는 홑백슬래시 `\times`가 `json.loads`를 지나 탭과 `imes`가 되고, 파싱은 성공한다. frontmatter 필드와 Codex 판정은 JSON으로 받으므로, `_parse_json_object`가 수식 구간 안의 홑백슬래시만 이중으로 만든다.
 
 ```python
-    en = find_en_counterpart(ko)
-    if en is None:
-        phase = "stub" if _ko_body_length(ko) < MIN_KO_BODY_CHARS else "pending"
-    elif not is_our_translation(en):
-        return "manual"
-    elif ko_wants_drift(ko):
-        phase = "drift"
-    elif en_translation_meta(en).get("translation_polish_source") \
-            != TRANSLATION_POLISH_SOURCE_TAG:
-        phase = "polish"
-    elif not entry.get("verified_at"):
-        phase = "verify"
-    else:
-        return "done"
-    # 실패 백오프는 Phase 1–3 만 지킨다 (Phase 4 는 백오프를 보지 않는다).
-    if phase in ("pending", "drift", "polish") and entry.get("status") == "failed" \
-            and now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
-        return "backoff"
-    return phase
+    def protect_math(m: re.Match) -> str:
+        return re.sub(r'(?<!\\)\\(?![\\"])', r'\\\\', m.group(0))
+
+    t = re.sub(r"\$\$.*?\$\$|\$[^$\n]*\$", protect_math, t, flags=re.DOTALL)
 ```
 {: data-filename="scripts/translation/translate_worker.py"}
 
-이 앞에서 `await_lid`(링크 식별자 대기), `draft`, `revising`을 먼저 걸러내므로, 초안인 `drift_needed` 글은 재번역 칸이 아니라 건너뜀 칸으로 간다. 사용자가 짚은 방향 그대로다. 단계 조건을 바꾸면 `find_next_target`과 `queue_bucket`을 같이 고쳐야 한다는 말은 두 곳의 주석에 적어 두었다. 이 결합은 코드가 강제하지 못하고 주석만 지킨다.
+뒤에 백슬래시나 따옴표가 오면 이미 이스케이프된 것이라 둔다. 탭으로 저장된 옛 지적은 후속 워커의 `_repair_latex_controls`가 되돌린다.
 
-대시보드 서버는 이 출력을 읽기만 한다. 한 번 돌리는 데 4~5초가 걸려서 요약 계산을 붙잡지 않도록 데몬 스레드로 돌리고, 글 목록·최신 mtime·state·`_config.yml`의 mtime 묶음이 바뀌었을 때만 다시 돈다.
+원문과 글자 단위로 맞아야 하는 응답, 곧 감사 후보의 인용과 후속 워커의 치환 원문(`old`)에는 이것으로 부족했다. 모델이 이스케이프하다 `$`를 흘리거나(`$\lambda$`가 `\lambda`로) 줄바꿈을 리터럴 `\n`으로 내면, 인용은 KO에서 안 찾아지고 치환은 EN에 안 맞는다. 그래서 둘은 이스케이프가 필요 없는 구분자 블록으로 받는다. 감사는 위의 `<<<FINDING`이고, 치환은 이렇다.
 
-```python
-def _tqueue_run(sig):
-    rc, out, err = run(TQUEUE_CMD, timeout=60)
-    ...
-    with _tqueue_lock:
-        _tqueue.update(sig=sig, error=error, running=False)
-        if data is not None:
-            _tqueue["data"] = data
 ```
-{: data-filename="scripts/dashboard/server.py"}
-
-실패한 실행의 시그니처도 기록하는 것이 요점이다. 워커가 깨져 있는 동안 요약을 계산할 때마다 최대 60초짜리 서브프로세스가 다시 뜨는 일을 막고, 직전 성공분은 화면에 남긴다. 첫 계산이 끝나기 전에는 `None`이라 화면이 비어 있다가 다음 갱신에 채워진다. 개요의 재번역 대기 수도 `stats["drift"] = len(queue["buckets"]["drift"])`로 같은 출처에서 온다.
-
-## 폴리싱이 검증까지 끝내게 되다
-
-번역 큐 화면을 보던 사용자가 하나를 더 물었다.
-
-> 폴리싱이랑 검증 대기가 동시에 일어나는 걸로 기억하는데 한번 확인해 봐 봐. 검증 대기랑 완료가 되니까 다른 항목이면 안 될 것 같은데.
-
-앞의 "폴리싱 패스를 태그로 세우기"에서 적은 대로 Phase 3과 Phase 4는 서로의 여집합이라, 폴리싱을 마친 글이 검증을 한 번 더 기다리는 구간이 실제로 있었다. 그 구간을 없애는 변경이 코드에 들어갔다([98d43252](https://github.com/math-jh/math-jh.github.io/commit/98d43252)). `run_verify`가 하던 검사를 `check_en`으로 떼어 내고, 폴리싱 패스가 최종 EN에 그것을 돌려 `verified_at`까지 함께 기록한다.
-
-```python
-check = None
-if reason == "polish":
-    try:
-        check = check_en(ko_path.read_text(encoding="utf-8"),
-                         en_path.read_text(encoding="utf-8"), verdict_text)
-    except Exception as e:
-        log(f"VERIFY ({key}): inline check failed, left to Phase 4")
-        ...
-```
-{: data-filename="scripts/translation/translate_worker.py"}
-
-`check_en`은 결정론 검사 둘(`lint_latex`, `lint_structure`)을 돌리고, 수식 프로필이 어긋날 때만 모델에게 묻는다. 폴리싱의 재시도 루프가 이미 받아 둔 판정은 `verdict_text`로 넘기므로 같은 질문을 두 번 하지 않고, 게이트가 수식을 바꿔 새로 어긋난 경우에만 다시 묻는다. 인라인 검사가 예외로 끝나면 `check`가 `None`이라 `verified_at`이 찍히지 않고, 그 글은 Phase 4가 받는다. 그래서 Phase 4는 폴리싱 때 검증을 못 마친 글만 받는 보험으로 남았고, 대시보드의 검증 대기 행에는 0편이면 숨기는 `opt: true`가 붙었다.
-
-이 경로는 워커를 돌려 확인하지 않았다. 인라인 검사가 실제 글에서 도는 것은 다음 폴리싱 틱이 지나야 볼 수 있다.
-
-## 폴리싱이 고친 제목을 인용하는 쪽이 따라오지 못할 때
-
-폴리싱은 frontmatter의 `title`도 다시 쓴다. EN 제목은 다른 EN 글이 `[§Basic Notions]` 꼴의 표시명으로 그대로 인용하므로, 제목이 바뀌면 인용 쪽은 옛 제목으로 남는다. 사용자는 폴리싱을 마친 EN 글들에서 고칠 것이 남았는지 보다가 이 경로를 만났다.
-
-> 폴리싱이 En 제목도 바꾼다고?
-
-처음에는 제목을 바꾸는 쪽이 잘못이 아니라 따라가지 못하는 쪽이 문제로 보였다. 그런데 바뀐 제목들을 나란히 놓고 보니 뜻이 틀려서 고친 것보다 문체만 다듬은 것이 많았다. 사용자의 말은 이랬다.
-
-> 1번으로 해줘. 근데 지금 바뀐 것들만 놓고 보면, 이전 제목들이 나은게 많아보이는데, 네 생각은 어때?
-
-나는 같은 생각이라고 답했고, 변경은 두 겹으로 들어갔다. 먼저 제목 프롬프트다. 현재 EN 제목이 주어지면 한글 제목이 가리키는 대상이 달라졌을 때만 바꾸게 하고, 관사·단복수·어순·전치사·대시를 건드리지 못하게 한다.
-
-```python
-Title: if a current English title is given, return it VERBATIM unless it misstates what the Korean title names (a different concept, or a missing or extra qualifier that changes the subject). Other posts cite the title verbatim, so a cosmetic change breaks those citations. Do not restyle it: keep its articles, singular/plural, word order, phrasing ("Computing X" stays "Computing X", not "Computation of X"), prepositions, capitalization, and dashes, even where a more literal rendering of the Korean would differ.
-```
-{: data-filename="scripts/translation/translate_worker.py"}
-
-프롬프트만으로는 모델이 따른다는 보장이 없어서 결정론 가드가 뒤에 붙는다. `_title_key`가 대소문자, 선행 `The`, 대시 종류, 단어 끝의 복수 `s`를 지운 비교 키를 만들고, 폴리싱 결과의 키가 현재 제목의 키와 같으면 현재 제목으로 되돌린다.
-
-```python
-def _title_key(title: str) -> str:
-    t = re.sub(r"[‐-―]", "-", title.casefold()).strip()
-    t = re.sub(r"^the\s+", "", t)
-    def singular(w: str) -> str:
-        if len(w) > 4 and w.endswith("ies"):
-            return w[:-3] + "y"
-        if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
-            return w[:-1]
-        return w
-    return " ".join(singular(w) for w in re.findall(r"\w+", t))
-```
-{: data-filename="scripts/translation/translate_worker.py"}
-
-이 키가 잡는 것은 표면 변형뿐이다. 어순이 바뀌거나 단어가 바뀐 제목은 키가 달라 통과하고, 그 경우는 뜻이 달라진 것일 수 있으니 바뀐 대로 둔다. 바뀐 제목이 정말로 필요한 수정일 때를 위해 두 번째 겹이 있다. 폴리싱이 끝난 뒤 옛 제목과 새 제목이 다르면 `sweep_title`이 이 글을 인용하는 다른 EN 글을 찾아 `§옛 제목`을 새 제목으로 바꾼다.
-
-```python
-pat = re.compile(r"(?<!\S)§" + re.escape(old) + r"(?=,|$)")
-```
-{: data-filename="scripts/translation/section_anchor_gate.py"}
-
-치환 패턴이 좁은 것이 이 함수의 요점이다. `§`는 라벨 맨 앞이나 공백 뒤에서만 시작할 수 있고, 라벨 끝이나 `,`에서 끝나야 한다. 그래서 `§§Rings`처럼 절 인용의 `§§`나, 제목이 옛 제목으로 시작하는 다른 글(`§Basic Notions of Rings`)은 건드리지 않는다. 링크의 경로가 대상 글의 permalink와 같을 때만 고치고, 수식·코드·fenced-div 여는 줄 안의 링크는 건너뛴다. 이 경계들은 테스트가 한 문서에 몰아 넣어 확인한다. 같은 제목의 다른 글(`/en/math/ring_theory/basic_notions`)을 가리키는 링크와 백틱 안의 예시까지 한 입력에 섞여 있고, 기대 출력에서 바뀌는 곳은 세 곳뿐이다.
-
-고친 형제 파일은 `sweep_target`과 마찬가지로 커밋하지 않고 워킹트리에 남긴다. 파일 단위 잠금(`acquire_file_locks`)을 잡고 쓰는 것도 같다. autopush가 라벨 치환을 기계적 변경으로 분류하므로 그 글들의 수정일이 움직이지 않는다. 수동 호출용으로 `section_anchor_gate.py retitle <en-file> --old "옛 제목" [--apply]`도 열어 두었다.
-
-같은 변경에서 링크 감사의 정규식도 고쳤다. `check_links.py`의 `LINK_RE`는 라벨을 `[^\]]+`로 읽었는데, 다른 카테고리를 가리키는 인용은 라벨이 `[\[정수론\] §…](…)`처럼 이스케이프된 `\]`를 품는다. 첫 `]`에서 라벨이 끊기고 그 뒤에 `(`가 없으니 매칭이 통째로 실패했다. 커밋 메시지는 이렇게 검사 밖에 있던 인용을 2,550개로 센다. 이제 라벨은 이스케이프된 문자를 한 덩어리로 받고 이스케이프 안 된 대괄호는 받지 않으며, md_lint의 `_LINK_ALL_RE`와 같은 규칙이다. `sweep_title`의 `TITLE_LINK_RE`도 같은 모양의 라벨만 받는다.
-
-이 경로가 실제 폴리싱 틱에서 도는 것은 아직 보지 못했다. 단위 테스트(`RetitleTest`)는 통과하지만, 워커가 `RETITLE` 로그를 남기는 것은 다음에 EN 제목이 정말로 바뀌는 글이 나와야 확인된다.
-
-## 체크된 채 말이 없던 후속 요청
-
-후속 워커는 요청을 처리하지 못하면 `WAIT`을 로그에 한 줄 남기고 다음 틱을 기다린다. 요청은 체크된 채 큐에 남는다. 앞 절에서 "한 항목이 대기로 남아도 뒤의 요청은 막히지 않는다"고 적은 것이 이 상태다. 로그에만 남는다는 점이 문제였다. 대시보드는 체크된 행을 흐리게 칠할 뿐 그 요청이 왜 안 넘어가는지를 알려 주지 않았다.
-
-> 대시보드에 보면 승인 거절 아닌 원문 지적이 남아있늤겐 있는데 그것들은 정체가 뭐야?
-
-> 워커 그 두 가지 고쳐주고, 그와 별개로 지금 승인 거절 목록들 최소수정으로 고쳐줘.
-
-뒤쪽의 목록 정리는 데이터를 손으로 고치는 일이라 이 커밋에 흔적이 없다. 워커 쪽 두 가지는 [ec112d24](https://github.com/math-jh/math-jh.github.io/commit/ec112d24)에 들어갔고, 하나는 WAIT를 상태로 남기는 것, 다른 하나는 WAIT의 사유를 읽을 수 있게 만드는 것이다.
-
-WAIT는 이제 `translation_state.json`의 해당 글 항목에 `ko_followup_wait` = {request, count, at, reason}으로 기록된다.
-
-```python
-reason = tw._flat(reason)[:240]
-prev = entry.get("ko_followup_wait")
-count = 1
-if isinstance(prev, dict) and prev.get("request") == request_key:
-    count = int(prev.get("count") or 0) + 1
-entry["ko_followup_wait"] = dict(
-    request=request_key, count=count, reason=reason,
-    at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-)
-```
-{: data-filename="scripts/translation/ko_followup_worker.py"}
-
-카운터는 요청 키(`<ko-path>@<ko_reviewed_at>`)가 같은 동안만 이어진다. 재감사로 키가 바뀌면 1부터 다시 센다. 기록이 지워지는 길은 셋이다. 통과해서 `_clear_completed`가 처리 완료 필드와 함께 지우거나, 거절 처리(`_record_rejection`)가 지우거나, `run_all`이 첫머리에서 체크가 풀린 요청의 기록을 정리한다. 마지막 것이 없으면 체크를 풀고 다시 올린 요청에 옛 횟수가 붙어 나온다. 한 항목의 예기치 못한 예외도 이전에는 로그 한 줄로 끝났는데, 이제 같은 경로로 `unexpected ...` 사유의 WAIT로 기록된다.
-
-대시보드 서버는 이 횟수를 `FOLLOWUP_STUCK_AFTER = 2`와 비교한다. 한 번의 WAIT는 정상이다. 폴리싱이 막 올린 지적을 사용자가 체크하고 KO를 고치기 전에 워커가 먼저 도는 순서가 흔하기 때문이다. 두 틱 연속으로 같은 요청이 넘어가지 못할 때부터 행에 `후속 처리 막힘 N회: 사유`가 붙고 모달에도 같은 문장이 실린다. 색은 거절의 `--bad`와 구분해 `--warn`을 썼다. 거절은 사람이 체크를 풀고 고쳐야 하는 상태이고, 막힘은 사람이 아니라 조건(KO 변경, 파일, 락)이 풀려야 하는 상태라서다.
-
-표시 쪽에 하나 더 있다. 막힘 표시는 서버가 상태에서 계산해 내려 주지만, 체크 상태는 클라이언트가 들고 있다. 사용자가 체크를 풀면 워커가 다음 틱에 기록을 지울 때까지는 서버 응답이 막힘을 계속 내보낸다. 그래서 태그를 항상 렌더하고 체크 여부로 `hidden`만 토글한다.
-
-```js
-(stuck ? '<span class="typo-stuck"' + (doneMap[key] ? '' : ' hidden') + '>후속 처리 막힘 ' +
-  stuck.count + '회: ' + esc(stuck.reason) + '</span>' : '')
-...
-if (stuckTag) stuckTag.hidden = !chk.checked;
-```
-{: data-filename="scripts/dashboard/app.js"}
-
-체크를 풀면 막힘 문구가 즉시 사라지고, 다시 체크하면 서버가 아직 들고 있는 기록이 다시 보인다. 같은 키의 요청이 재체크로 살아나는 경우에는 그 기록이 그대로 유효하므로 이쪽이 맞다.
-
-사유 쪽의 문제는 Antigravity가 돌려준 치환 목록을 적용하는 자리에 있었다. 후보 EN을 만들 때 모델은 `{old, new}` 쌍의 목록을 내고, 워커는 `old`가 EN에 정확히 한 번 나올 때만 치환한다. 실패 메시지는 두 경우를 한 문장으로 뭉갰다.
-
-```python
-if not old or candidate.count(old) != 1:
-    raise RuntimeError("Antigravity replacement source is not unique")
+<<<OLD
+exact unique substring of CURRENT EN, copied character for character
+===NEW
+its replacement
+>>>END
 ```
 
-`old`가 여러 곳에 있는 경우만 "unique하지 않다"가 맞는 말이고, 한 곳도 없는 경우는 다른 병이다. 후자가 흔한 이유는 모델이 JSON으로 내보내는 LaTeX 문자열이다. EN 원본의 줄바꿈이 `old`에는 리터럴 백슬래시와 `n` 두 글자로 들어오면 눈으로는 같아 보이는데 일치하지 않는다. 대시보드에 "source is not unique"가 뜨면 어느 치환의 어느 글자에서 어긋났는지를 알 방법이 없다. `_replacement_miss`는 이 구분을 메시지에 담는다.
+`_parse_replacements`는 블록도 `NO CHANGES`도 없으면 예외를 던져, 옛 JSON 답이 빈 치환으로 읽히지 않게 한다. 치환은 `old`가 EN에 정확히 한 번 나올 때만 적용되고, 실패하면 `_replacement_miss`가 중복과 불일치를 갈라 적는다. 불일치일 때는 EN에 들어 있는 `old`의 가장 긴 접두사를 이분 탐색으로 찾는다. 접두사 포함 여부가 길이에 대해 단조라서 성립한다.
 
 ```python
-hits = text.count(old)
-if hits:
-    return f"{head} old 가 EN 에 {hits}곳 일치 {old[:100]!r}"
 lo, hi = 0, len(old)
 while lo < hi:
     mid = (lo + hi + 1) // 2
@@ -491,48 +156,25 @@ while lo < hi:
     else:
         hi = mid - 1
 at = text.find(old[:lo]) + lo
-# 메시지: 앞 lo/len(old)자 일치, 이어서 old 의 30자 · EN 의 30자
-return f"{head} old 가 EN 에 없음 ... {old[lo:lo + 30]!r} ... {text[at:at + 30]!r}"
 ```
 {: data-filename="scripts/translation/ko_followup_worker.py"}
 
-(위 스니펫의 마지막 반환 문자열은 줄여 적었다.) 없는 경우에는 `old`의 접두사 중 EN에 들어 있는 가장 긴 것을 이분 탐색으로 찾는다. 접두사가 있다는 성질은 길이에 대해 단조라서 이분 탐색이 성립한다. 그 길이가 곧 처음 어긋나는 글자의 위치이고, 메시지에는 그 지점에서 `old`가 이어 가려던 30자와 EN에 실제로 있는 30자를 나란히 `repr`로 싣는다. `repr`을 쓰는 것이 요점이다. 리터럴 `\n`과 개행이 따옴표 안에서 다르게 찍혀서, 위의 JSON 이스케이프 병이 한 눈에 보인다. 테스트는 정확히 그 입력, 곧 `Let $$\n\mathfrak{p}`를 EN의 `Let $$` 개행 `\mathfrak{p}`에 대 보고 "앞 6/" 자가 일치하고 두 조각이 위 형태로 찍히는지를 확인한다.
+그 지점부터 `old`의 30자와 EN의 30자를 `repr`로 나란히 싣는다. `repr`에서는 리터럴 `\n`과 개행이 다르게 찍힌다. 10월 31일 밤 배치의 대기 사유 하나가 `앞 292/412자 일치, 이어서 old '.\\n\\nFurthermore…'`였다.
 
-테스트 쪽에는 부수 수정이 하나 있다. `run_all`이 메모를 정리하려고 대시보드의 실제 메모 파일을 읽으므로, 새 테스트가 늘면서 테스트가 운영 상태 파일에 닿을 길도 늘었다. `setUp`이 `NOTE_STATE`와 `NOTE_LOCK`을 임시 디렉터리로 돌리고, `save_state`는 목으로 막는다. 이 변경이 실제 틱에서 도는 것은 아직 보지 못했고, 막힘 표시는 같은 요청이 두 번 연속 WAIT로 넘어가는 틱이 나와야 화면에서 확인된다.
+## 대시보드 체크박스에서 EN 커밋까지의 후속 요청
 
-## 버전이 적힌 모델 ID가 사라진 날
+대시보드 번역 화면은 FALSE가 아닌 지적이 남은 글을 한 행씩 보여 주고, 모달은 같은 오리진의 KaTeX로 수식을 렌더한다(`$` 없이 쓴 LaTeX는 `wrapBareTex`가 감싼다). 행의 체크박스는 `~/.local/state/blog_dashboard_kotypo.json`에 요청 키 `<ko-path>@<ko_reviewed_at>`를 넣는다.
 
-관련 커밋: [`296bea9e`](https://github.com/math-jh/math-jh.github.io/commit/296bea9e)
-{: .notice--info}
+체크는 승인이 아니라 요청이다. 승인으로 읽으면 누르는 순간 항목이 사라지고, EN 동기화가 실패해도 흔적이 없다. 항목은 EN 커밋이 실제로 들어간 뒤에야 빠진다. 요청은 번역 워커와 2시간 엇갈린 `ko_followup_worker.py`가 받는다.
 
-처음 세운 호출은 `--model gemini-3.8-flash-high`로 엔진을 못 박았다. 10월 14일에 autopush의 커밋 메시지 쪽이 비슷하게 `gemini-3.7` ID를 부르다가, CLI 세대가 바뀌면서 그 ID가 사라진 것을 만났다. 모델 호출이 실패하면 autopush는 휴리스틱 본문으로 강등하므로 에러 대신 커밋 메시지만 조용히 얇아졌다. 사용자는 그 방식을 번역 워커에도 옮기라고 했다.
-
-> 번역 워커도 같은 방식으로 바꿔줘, effort high로.
-
-그 결과 호출부는 모델 ID가 환경변수로 주어졌을 때만 `--model`을 넘기고, 아니면 `--effort`만 넘긴다.
-
-```python
-AGY_MODEL             = os.environ.get("AGY_MODEL")
-AGY_EFFORT            = os.environ.get("AGY_EFFORT") or "high"
-...
-args = [AGY_BIN, "--print", prompt,
-        *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
-        "--agent", AGY_AGENT,
+```bash
+15 */4    * * * … translate_worker.py
+15 2-22/4 * * * … ko_followup_worker.py
 ```
-{: data-filename="scripts/translation/translate_worker.py"}
 
-모델 선택을 CLI의 서버 기본값에 맡기는 것이므로, 어느 모델이 번역했는지는 이제 이 스크립트가 알지 못한다. 대신 세대가 바뀌어도 ID가 사라져 호출이 깨지는 일이 없다. `AGY_MODEL`을 직접 주면 예전처럼 고정되고, 주석에는 Gemini 계열만 넣으라고 적어 두었다. Claude나 GPT를 고르면 다른 쿼터 버킷을 쓰기 때문이다. crontab에 있던 `AGY_MODEL=gemini-3.8-flash-high` 두 줄도 같은 변경에서 걷어냈다.
+둘은 같은 번역 락을 잡는다. `run_all`은 시작 시점의 요청을 전부 차례로 한 번씩 처리하고, 감사 시각이 state와 다른 키는 낡은 것으로 지운다. 한 항목이 대기로 남아도 뒤는 막히지 않는다.
 
-남는 어긋남이 하나 있다. `_config.yml`의 `translation_source_tag`와 `translation_polish_source_tag`는 아직 `antigravity-gemini-3.8-flash-high`이다. 이 값은 모델 이름이기 전에 위에서 본 대로 "현재 엔진의 이름표"이고, 폴리싱을 한 번 더 돌릴지 가르는 키이기도 해서 이 변경에서는 건드리지 않았다. 그러니 앞으로 이 태그가 가리키는 모델과 실제로 번역한 모델이 달라질 수 있다.
-
-## 범위 밖 수정은 옛 판본 쪽으로 접는다
-
-관련 커밋: [`f40b5917`](https://github.com/math-jh/math-jh.github.io/commit/f40b5917)
-{: .notice--info}
-
-범위 diff에는 맥락 줄이 남는 구멍이 있었다. 처음 구현은 범위 밖 변경을 옛 판본으로 되돌려 `baseline`에 합치고, 그 결과를 diff의 새 쪽에 올렸다. 변경 줄만 보면 문제가 없지만 변경 줄 옆의 맥락 줄은 옛 문구가 된다. 지적된 문장 가까이에 있는 정의가 반경 밖에서 이미 고쳐져 있으면, 판정자는 고쳐지기 전의 정의를 맥락으로 읽으면서 그 아래의 정정된 서술을 평가하게 된다. 테스트의 사례가 그 모양이다. "antisymmetric은 같은 성분이면 0인 것이다"가 "교환하면 부호가 바뀌는 것이다"로 고쳐진 글에서, 세 줄 아래 "두 정의는 동치이다"를 "alternating이면 antisymmetric이다"로 고친 지적을 검토한다. 옛 방식의 diff에는 맥락 줄에 옛 정의가 실렸다.
-
-방향을 뒤집으면 된다. 범위 밖 덩어리는 새 판본(`after`)으로, 범위 안 덩어리만 옛 판본(`before`)으로 두어 합성 텍스트를 만들고, 그것을 diff의 **옛 쪽**에 놓는다. 새 쪽은 `current` 그대로다.
+먼저 기준 판본과 현재 KO의 diff를 지적 근처로 좁힌다. 사용자가 다른 문단을 같이 손보거나 의존성 분류기가 다른 링크에 `data-lid`를 달면 그것까지 판정에 섞이기 때문이다. `_scoped_ko_diff`는 각 지적의 인용이 차지하는 줄 범위를 구해, `difflib.SequenceMatcher`의 변경 덩어리 중 범위 앞뒤 두 줄 안에 걸치는 것만 변경으로 남긴다.
 
 ```python
 scoped.extend(before[i1:i2] if relevant else after[j1:j2])
@@ -541,82 +183,42 @@ return _diff("".join(scoped), current, f"a/{path}", f"b/{path}")
 ```
 {: data-filename="scripts/translation/ko_followup_worker.py"}
 
-범위 밖 수정은 양쪽에 모두 들어 있어 변경으로 나타나지 않고, 맥락 줄은 어디서나 현재 문구다. 반경 안의 변경만 `+`/`-`로 남는다. 새 테스트는 같은 입력에서 `+alternating이면 antisymmetric이다.`와 현재 정의가 맥락 줄로 나오고, 옛 정의 "같은 성분이면 0"은 diff 어디에도 없는지 확인한다.
+범위 밖 덩어리는 새 판본으로 채워 diff의 옛 쪽에 놓으므로 변경으로 보이지 않고, 맥락 줄은 어디서나 현재 문구다. 반대로 채우면 반경 바로 밖에서 고쳐진 정의가 맥락 줄에 옛 문구로 실린다. diff가 조각인 만큼 두 모델에게 현재 KO 전문도 `CURRENT KO`로 준다.
 
-그래도 diff는 조각이라, 반경 밖에서 정의가 바뀌었다는 사실은 판정자에게 보이지 않는다. 그 부분은 프롬프트에 현재 한글 글 전체를 `--- BEGIN CURRENT KO ---` 구분자로 넣어 메웠다. 정정된 서술이 기대는 앞선 정의가 diff 밖에 있으면 거기서 읽으라는 안내도 프롬프트에 들어갔다. 배선은 `reviewed_candidate`가 이미 들고 있던 `current_ko`를 `codex_pass`에 넘기는 것이 전부다. 글 전문이 붙으니 프롬프트는 길어진다. 이 변경이 실제 틱에서 거절을 줄이는지는 아직 보지 못했다.
-
-## 감사를 지우는 길은 하나여야 한다
-
-관련 커밋: [`08a3bb7f`](https://github.com/math-jh/math-jh.github.io/commit/08a3bb7f)
-{: .notice--info}
-
-KO 감사는 state 항목에 한 벌의 필드로 들어 있다. 지적 목록(`verify_ko_typos`), Codex 판정이 붙은 목록(`verify_ko_typos_review`), 감사 시각, 감사 당시 원문(`ko_review_base_content`)과 그 해시다. 대시보드는 `verify_ko_typos`가 비어 있으면 해소된 것으로 읽는다(`ko_typos.py` 계약). 그래서 이 필드가 후속 판정 밖의 경로에서 비워지면 지적이 큐에서 조용히 사라진다. 에러는 나지 않는다.
-
-그런 경로가 둘 있었다. 하나는 Phase 4 재검증이다. `run_verify`는 검증기가 이번에 KO-TYPOS를 하나도 안 냈으면 `verify_ko_typos`를 `None`으로 덮었다. 같은 지적을 검증기가 다시 짚지 못했다는 것은 사용자가 고쳤다는 뜻이 아닌데도 그랬다. 다른 하나는 재번역이다. drift 증분 번역은 `state["files"][key]`를 새 dict로 통째로 갈아 끼우므로, 이전 항목에 있던 감사 필드는 새 항목에 오지 않았다.
-
-수리는 필드 목록을 한 곳에 모으는 것으로 시작한다. 후속 워커의 `_clear_completed`가 따로 들고 있던 아홉 개 키 튜플을 `translate_worker.KO_AUDIT_FIELDS`로 옮기고 양쪽이 같은 것을 쓴다.
-
-```python
-def merge_ko_audit(prev, entry, ko_path, new_review, key):
-    if not has_outstanding_ko_audit(prev):
-        if new_review:
-            record_ko_review(entry, ko_path, new_review)
-        return
-    for field in KO_AUDIT_FIELDS:
-        if field in prev:
-            entry[field] = prev[field]
-    if not new_review:
-        return
-    ...
-```
-{: data-filename="scripts/translation/translate_worker.py"}
-
-`has_outstanding_ko_audit`은 Codex가 FALSE로 기각하지 않은 지적이 하나라도 남았는지를 본다. 남았으면 이전 항목의 감사 필드를 새 항목으로 그대로 옮긴다. 감사 시각도 그대로이므로 대시보드 체크가 가리키는 요청 키(`<ko-path>@<ko_reviewed_at>`)가 유지된다. 재번역 경로(`main`)는 항목을 갈아 끼우기 직전에 `prev_entry`를 떠 두었다가 이 함수를 부른다. 새 판정이 없는 경우다.
-
-새 판정이 같이 있으면 합친다. 옛 지적 중 FALSE가 아닌 것, 인용문이 현재 KO에 그대로 남은 것(인용문이 없는 지적은 그냥 둔다)만 가져오고, 인용문이 사라진 지적은 사용자가 그 문장을 고친 것으로 보아 버린다. 합친 목록에는 현재 KO가 새 기준 판본으로 붙고 감사 시각이 바뀐다. 옛 키로 걸려 있던 체크·거절·대기 기록은 후속 워커가 stale로 정리한다.
-
-`run_verify`의 새 KO-TYPOS는 이전에는 문자열 그대로 `verify_ko_typos`에 들어갔다. 폴리싱이 올리는 지적은 Codex 판정을 거친 뒤에 올라오는데 이쪽은 판정 없이 올라왔던 셈이다. 이제 이미 판정을 받은 `claim`은 거르고 나머지만 `review_ko_findings`에 보내며, 결과는 같은 `merge_ko_audit`으로 들어간다. 테스트(`test_ko_audit_state.py`) 7건은 재검증이 미해결 감사를 지우지 않는 것, 판정이 모두 FALSE이면 지우는 것, 이미 판정한 지적을 다시 보내지 않는 것, 재번역된 항목이 감사를 이어받는 것을 확인한다. 이 경로가 운영 틱에서 도는 것은 아직 보지 못했다.
-
-## 후속 워커의 거절은 누구의 몫인가
-
-관련 커밋: [`48c5847e`](https://github.com/math-jh/math-jh.github.io/commit/48c5847e)
-{: .notice--info}
-
-사용자는 후속 워커에 거절당한 요청 하나를 열어 보다가 판정 방향이 이상하다고 짚었다.
+Antigravity가 치환 블록을 내면 `validate_translation`과 새로 생긴 `lint_latex`·`lint_structure` 지적이 결정론 게이트가 된다. 통과한 후보는 Codex가 원 지적, KO·EN diff, `CURRENT KO`, `FINAL EN`으로 판정한다. EN diff가 비면 `FINAL EN`이 고친 뜻을 이미 담는지를 본다. 판정이 둘로 갈린 것은 사용자의 이 지적부터다([48c5847e](https://github.com/math-jh/math-jh.github.io/commit/48c5847e)).
 
 > 하나 후속워커에서 거절당했어. 근데 왜 후속워커가 영어를 기준으로 생각하는지 모르겠네. 영어는 자기가 수정해야 하는거지 기준이 아닌데.
 
-원인은 판정이 `{"pass": bool}` 하나였다는 데 있다. Codex가 "한글이 지적을 해소했는가"와 "영어가 그 한글을 충실히 따르는가"를 한 불리언으로 답하니, 영어 쪽 결함도 거절로 돌아가 사용자가 체크를 풀고 한글을 고쳐 다시 올리는 길로 이어졌다. 영어를 고치는 것은 워커의 일이고 한글은 저자의 일인데 책임이 섞여 있었다.
-
-판정을 둘로 가른다.
+판정이 `{"pass": bool}` 하나일 때는 영어 결함도 거절이 되어, 사용자가 한글을 다시 고쳐 올리는 길로 이어졌다. 한글은 저자 몫이고 영어는 워커 몫이다.
 
 ```python
 {"ko_resolved": true, "en_faithful": true, "why": "..."}
 ```
 
-`reviewed_candidate`는 이제 세 결과를 돌려준다.
+`ko_resolved`가 false면(`KO_UNRESOLVED`) 영어를 다시 만들어도 안 풀리므로 바로 거절해 체크를 풀고, 사유를 행에 `승인 거절:`로 남긴다. 영어만 문제면 판정 사유를 `REVIEW FEEDBACK`으로 제안 프롬프트에 돌려주고, 제안 두 번(`MAX_PROPOSAL_ATTEMPTS = 2`)이 다 떨어지면(`EN_UNFAITHFUL`) 체크된 채 대기로 둔다. 통과하면 autopush 락 안에서 KO·EN 해시를 다시 확인하고 두 파일을 `[Cron] Audit` 커밋 하나로 낸 뒤에야 감사 필드와 요청을 지운다.
 
-```python
-if not ko_resolved:
-    return candidate, KO_UNRESOLVED, why
-if en_faithful:
-    return candidate, PASSED, why
-feedback = why   # 영어만 문제: 피드백을 붙여 다시 제안
-...
-return candidate, EN_UNFAITHFUL, why
-```
-{: data-filename="scripts/translation/ko_followup_worker.py"}
+## 작성자 메모, 막힘 표시, 감사 필드의 수명
 
-`KO_UNRESOLVED`는 영어를 몇 번 다시 만들어도 고쳐지지 않으므로 재시도 없이 바로 돌려보내고, 기존 거절 경로로 체크를 풀고 사유를 남긴다. 로그 문구도 "KO 가 지적을 해소하지 못함"으로 바뀌었다. `EN_UNFAITHFUL`은 두 번의 제안이 다 실패한 경우이며, 이때는 거절하지 않고 `_record_wait`로 넘겨 요청을 체크된 채 둔다. 다음 실행이 영어를 처음부터 다시 만든다. 앞 절의 막힘 표시가 이 대기를 세므로 반복되면 대시보드에 나타난다. Codex 프롬프트에는 영어 결함은 `ko_resolved`를 false로 만들 이유가 아니라는 문장을 명시했다.
+판정자에게 사용자가 말을 거는 통로도 있다.
 
-같은 날 영어 제안 쪽에도 두 가지가 들어갔다. 제안 프롬프트에 현재 한글 전문(`CURRENT KO`)을 주고, 한글 diff가 지적 근처 변경만 보여 준다는 점을 알리며 수학을 스스로 재구성하지 말고 한글의 해당 구절에서 가져오라고 적었다. 그리고 치환 목록을 JSON에서 구분자 블록으로 바꿨다.
+> 그 과정에서, 내가 모델에게 전할 말이 있으면 넣을 방법이 없어. 그 기능 좀 추가해줘.
+
+모달 아래의 메모는 `~/.local/state/blog_dashboard_kotypo_notes.json`에 요청 키 단위로 flock을 잡고 병합 저장된다. 체크 map은 클라이언트가 통째로 교체하므로, 거기 섞으면 다른 탭이 메모를 날린다. 후속 워커는 메모를 두 프롬프트에 `AUTHOR NOTE`로 넣고, 메모가 있으면 지적 위치의 KO가 그대로여도 판정으로 보낸다. 없으면 "지적 위치의 KO 변경이 없음"으로 대기한다. 판정 기준은 이렇다.
 
 ```
-<<<OLD
-정확히 한 번 나오는 EN 부분 문자열
-===NEW
-치환문
->>>END
+What the author decides is final for everything except mathematical
+truth. ... Only when the finding says the Korean states something mathematically
+false may you weigh the note's reasoning ...
 ```
 
-모델이 LaTeX를 JSON 문자열로 이스케이프하다 `$`를 흘려(`$\lambda$`가 `\lambda`로) `old`가 EN과 어긋나는 일이 있었기 때문이다. 앞 절의 `_replacement_miss`가 진단하던 병의 한 갈래다. 블록 형식은 이스케이프를 요구하지 않아 본문이 바이트 단위로 보존된다. `_parse_replacements`는 블록이 없고 `NO CHANGES`도 아니면 예외를 던지므로, 모델이 옛 JSON 형식으로 답해도 조용히 빈 치환으로 읽히지 않는다.
+용어·병기·표기·문체·설명 분량에 대한 지적은 메모 한 줄로 통과하고, 수학적 거짓이라는 지적만 메모의 논거를 따진다. 한글에 없는 내용을 덧붙인 영문은 여전히 떨어진다. 승인되면 메모도 지워지고, 거절되면 남아서 고쳐 쓸 수 있다. 한 턴에 4시간이 걸리는 대화이긴 하다.
+
+대기는 한동안 로그에만 남았다.
+
+> 대시보드에 보면 승인 거절 아닌 원문 지적이 남아있늤겐 있는데 그것들은 정체가 뭐야?
+
+지금은 `_record_wait`가 `ko_followup_wait` = {request, count, at, reason}을 state에 쓰고, 횟수는 같은 요청 키 동안만 이어진다. 서버는 횟수가 `FOLLOWUP_STUCK_AFTER = 2` 이상이면 행에 `후속 처리 막힘 N회: 사유`를 붙인다. 한 번은 정상이다(체크해 두고 KO를 고치기 전에 워커가 먼저 도는 일이 흔하다). 색은 거절의 `--bad`와 갈라 `--warn`이다. 거절은 사람이, 막힘은 조건(KO 변경, 락, 치환 실패)이 풀어야 한다. 체크를 풀어도 다음 실행까지는 서버가 막힘을 내보내므로, 태그는 항상 렌더하고 체크 상태로 `hidden`만 토글한다.
+
+감사 필드를 지우는 곳은 후속 판정 통과 하나다([08a3bb7f](https://github.com/math-jh/math-jh.github.io/commit/08a3bb7f)). 대시보드는 `verify_ko_typos`가 비면 해소로 읽으므로(`ko_typos.py` 계약), 다른 경로가 비우면 지적이 에러 없이 사라진다. Phase 4 재검증이 `None`으로 덮던 경로와 drift 재번역이 항목을 새 dict로 갈아 끼우던 경로가 그랬다. 지금은 아홉 필드를 `KO_AUDIT_FIELDS`로 모아 `_clear_completed`가 쓰고, 나머지 경로는 `merge_ko_audit`을 거친다.
+
+`merge_ko_audit`은 FALSE가 아닌 지적이 남은 감사를 그대로 옮기므로 요청 키가 유지된다. 새 판정과 합칠 때는 옛 지적 중 FALSE가 아니고 인용이 현재 KO에 남은 것만 남기고(사라졌으면 사용자가 고친 것이다), 현재 KO를 새 기준 판본으로 삼아 감사 시각을 새로 찍는다. 옛 키의 체크는 다음 후속 실행에서 stale로 정리되므로, 사용자는 새 행을 다시 체크해야 한다.

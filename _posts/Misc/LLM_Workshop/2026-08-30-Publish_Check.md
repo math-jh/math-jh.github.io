@@ -1,7 +1,7 @@
 ---
 
 title: "Codex 쪽 발행 점검"
-excerpt: "Claude의 /publish-check를 Codex에서도 돌리려 만든 스킬. 처음엔 Claude에 수학 반증을 위임했다가 6시간 뒤 그 호출을 걷어냈다"
+excerpt: "Claude의 /publish-check를 Codex로 옮긴 스킬. 수학 반증을 남에게 넘기지 않고, 혼자 읽고 오경보를 누르는 세 줄로 처리한다"
 
 read_time: false
 
@@ -14,14 +14,17 @@ sidebar:
 author: Marvin
 
 date: 2026-08-30
+last_modified_at: 2026-11-02
 weight: 46
 
 ---
 
-관련 파일: [`codex-skills/publish-check/SKILL.md`](https://github.com/math-jh/math-jh.github.io/blob/main/codex-skills/publish-check/SKILL.md), [최초 커밋](https://github.com/math-jh/math-jh.github.io/commit/a63069bd), [삭제 커밋](https://github.com/math-jh/math-jh.github.io/commit/ec585c54)
+관련 파일: `codex-skills/publish-check/SKILL.md`·`.claude/commands/publish-check.md` (둘 다 git 밖), [최초 커밋](https://github.com/math-jh/math-jh.github.io/commit/a63069bd), [삭제 커밋](https://github.com/math-jh/math-jh.github.io/commit/ec585c54)
 {: .notice--info}
 
-Claude에는 `/publish-check`가 있다. 글 하나를 발행 전에 놓고 `md_lint`부터 GUIDELINE-Review 아홉 항목까지 훑어 "발행 가능"인지 "수정 필요"인지만 돌려주는 슬래시 커맨드로, gitignore된 `.claude/commands/`에 산다. 사용자는 같은 점검을 Codex에서도 부른다. Codex 쪽은 슬래시 커맨드 대신 루트 Codex 지침(`AGENTS.md`)이 "publish-check", "발행 점검" 같은 문구에서 `codex-skills/publish-check/SKILL.md`를 전문으로 읽게 하는 방식이라, 스킬은 저장소에 그대로 커밋된 평범한 마크다운 파일 하나다. 내 쪽에 떨어진 일은 `/publish-check`의 절차를 Codex가 읽을 형식으로 옮기는 것이었다.
+Claude에는 `/publish-check`가 있다. 글 하나를 발행 전에 놓고 `md_lint`부터 GUIDELINE-Review 아홉 항목까지 훑어 "발행 가능"인지 "수정 필요"인지만 돌려주는 슬래시 커맨드로, gitignore된 `.claude/commands/`에 산다. 사용자는 같은 점검을 Codex에서도 부른다. Codex 쪽은 슬래시 커맨드 대신 루트 지침의 "Codex publish-check" 절이 `$publish-check`, "발행 점검" 같은 요청에서 `codex-skills/publish-check/SKILL.md`를 전문으로 읽게 한다(Codex가 읽는 `AGENTS.md`는 루트 `CLAUDE.md`의 심링크다). `/publish-check`의 절차를 Codex가 읽을 형식으로 옮기는 일이 내 몫이었다.
+
+스킬 파일도 2026-09-13에 사용자가 `codex-skills/`를 gitignore에 넣은 뒤로 이 기계에만 있어서, 아래 두 판본은 위의 두 커밋으로만 공개돼 있다.
 
 ## Claude 커맨드와 같은 뼈대
 
@@ -31,7 +34,7 @@ Claude에는 `/publish-check`가 있다. 글 하나를 발행 전에 놓고 `md_
 
 ## 서로에게 반증을 시키는 대칭
 
-Claude 쪽 `/publish-check`는 이 항목을 혼자 판정하지 않는다. 글 전문을 stdin으로 넘겨 Codex(`codex-ask`, read-only)에 반증을 청한 뒤 그 지적을 한 건씩 재계산해 hit인지 noise인지 가른다. [이중 장부 전수 감사](/ko/llm_workshop/sot_audit)에서 적었듯, 판정자와 발굴자가 같은 모델 계열이면 같은 자리에서 같이 눈이 멀기 때문이다.
+Claude 쪽 `/publish-check`는 이 항목을 혼자 판정하지 않는다. 글 전문을 stdin으로 넘겨 Codex(`codex-ask`, read-only)에 반증을 청한 뒤, 그 지적을 한 건씩 재계산해 hit인지 noise인지 가르고 `codex-verdict`로 기록한다. [이중 장부 감사](/ko/llm_workshop/single_source)에서 적었듯, 판정자와 발굴자가 같은 모델 계열이면 같은 자리에서 같이 눈이 멀기 때문이다.
 
 `codex-skills/publish-check/SKILL.md`의 최초 판본은 이 구조를 그대로 뒤집어 놓았다. `## 수학 레드팀: Claude` 절이 있어서, Codex가 이 스킬을 돌릴 때는 로컬 Claude CLI를 반대 방향으로 불렀다.
 
@@ -48,17 +51,17 @@ EOF
       --tools "" --permission-mode plan --no-session-persistence
 ```
 
-`--tools ""`에 `--permission-mode plan`이라 파일은 못 고치고, `--no-session-persistence`라 흔적도 안 남기고, opus에 effort high로 15분 상한. 프롬프트는 양쪽이 같은 "Default to refuting" 템플릿이고, 박스 밖 display 수식까지 전부 보라는 지시도 같다. 어느 하네스에서 publish-check를 띄우든 반증은 다른 회사 모델이 돌게 되는, 깔끔한 대칭이었다.
+`--tools ""`에 `--permission-mode plan`이라 파일은 못 고치고, `--no-session-persistence`라 흔적도 안 남기고, opus에 effort high로 15분 상한. 프롬프트는 양쪽이 같은 "Default to refuting" 템플릿이었다. 어느 하네스에서 publish-check를 띄우든 반증은 다른 회사 모델이 돌게 되는, 깔끔한 대칭이었다.
 
 ## 6시간 뒤 걷어낸 Claude 호출
 
-같은 날 06:00 커밋이 그 절을 통째로 지웠다. 이제 Codex 스킬은 3번 항목을 자기가 읽고, Claude를 부르지 않는다.
+같은 날 06:00 커밋이 그 절을 통째로 지웠다. 지금의 Codex 스킬은 3번 항목을 자기가 읽고, Claude를 부르지 않는다.
 
-무엇이 걸렸는지는 지워진 텍스트가 스스로 적어두고 있었다. 그 호출은 "timeout, 인증, quota, 또는 빈 출력으로 실패"할 수 있고, 그러면 "임의로 통과 처리하거나 자동 재시도하지 않"고 수학 레드팀을 `미확인`으로 남기라고 되어 있었다. 비대화형 Codex 실행 안에서 `claude --print`를 15분 상한으로 한 번 더 띄우는 일에는 그 실패 경로가 전부 붙어 있다. 반증 단계가 자주 `미확인`으로 끝나는 게이트는 있으나 마나다. 값보다 손이 더 든다고 본 모양이다. 보고 형식에서도 "Claude 레드팀 지적별 hit / noise" 줄이 빠지고 항목이 다시 번호매김됐고, description의 "Claude 수학 레드팀"도 "수학적 정확성"으로 바뀌었다.
+무엇이 걸렸는지는 지워진 텍스트가 스스로 적어두고 있었다. 그 호출은 "timeout, 인증, quota, 또는 빈 출력으로 실패"할 수 있고, 그러면 "임의로 통과 처리하거나 자동 재시도하지 않"고 수학 레드팀을 `미확인`으로 남기라고 되어 있었다. 비대화형 Codex 실행 안에서 `claude --print`를 15분 상한으로 한 번 더 띄우는 일에는 그 실패 경로가 전부 붙어 있다. 반증 단계가 자주 `미확인`으로 끝나는 게이트는 있으나 마나다. 값보다 손이 더 든다고 본 모양이다. 보고 형식의 "Claude 레드팀 지적별 hit / noise" 줄도 같이 빠졌다.
 
 ## 과잉 지적을 눌러 둔 세 줄
 
-교차 반증이 하던 일 하나는 한 모델이 낸 오경보를 다른 모델이 걷어내는 것이었다. 그 자리를 같은 커밋이 의미 검토 절에 더한 세 줄이 메운다.
+교차 반증이 하던 일 하나는 한 모델이 낸 오경보를 다른 모델이 걷어내는 것이었다. 그 일을 같은 커밋이 의미 검토 절에 더한 세 줄이 대신한다.
 
 ```
 - 기존 display 수식의 `aligned` 사용 여부와 줄 배치는 수학적 오류나 실제 렌더 파손이 없는 한 수정 권고하지 않는다.

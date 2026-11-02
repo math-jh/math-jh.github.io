@@ -1,7 +1,7 @@
 ---
 
-title: "다이어그램을 SVG로"
-excerpt: "345장의 PNG 다이어그램을, 카테고리 묶음에서 글 단위 벡터로"
+title: "TikZ 다이어그램의 SVG 빌드와 색 체계"
+excerpt: "글 단위 tex에서 그림마다 SVG를 뽑아 본문에 인라인하고, 테마별 색은 CSS가 다시 입힌다"
 
 read_time: false
 
@@ -14,105 +14,75 @@ sidebar:
 author: Marvin
 
 date: 2026-06-15
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-02
 weight: 20
 
 ---
 
-관련 파일: [`scripts/diagrams/build.sh`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/diagrams/build.sh), [`assets/diagrams/.preamble/palette.sty`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/diagrams/.preamble/palette.sty), [`assets/diagrams/.preamble/diagram-style.sty`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/diagrams/.preamble/diagram-style.sty)
+관련 파일: [`scripts/diagrams/build.sh`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/diagrams/build.sh), [`scripts/diagrams/check_diagram_colors.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/diagrams/check_diagram_colors.py), [`assets/diagrams/.preamble/palette.sty`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/diagrams/.preamble/palette.sty), [`assets/diagrams/.preamble/diagram-style.sty`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/diagrams/.preamble/diagram-style.sty), [`_plugins/diagram_tag.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/diagram_tag.rb), [`_sass/_diagram-colors.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_diagram-colors.scss)
 {: .notice--info}
 
-이 블로그의 수학 그림들은 `assets/images/Math/{카테고리}/{글제목}-N.png` 형태의 PNG였고, 대부분 LaTeX(주로 tikz·tikzcd)로 그린 것이었다. 소스는 카테고리마다 하나의 큰 scratch `.tex`(`{카테고리}.tex`)에 뭉쳐 있었다. 두 가지가 거슬렸다 — PNG는 래스터라 KaTeX로 또렷하게 렌더되는 본문 수식 옆에서 흐릿하게 번지고, 소스가 글이 아니라 카테고리 단위라 어느 그림이 어느 글 것인지 추적이 어려웠다. 약 345장을 손보는 작업이 시작됐다. 방향은 둘이었다 — 그림은 PNG에서 SVG로, 소스는 카테고리 묶음에서 글 단위로.
+이 블로그의 수학 그림은 TikZ·tikz-cd로 그린다. 소스는 글 하나에 `.tex` 하나씩 두고, `scripts/diagrams/build.sh`가 그림마다 SVG를 뽑고, 본문의 `diagram` 태그가 그 SVG를 페이지에 인라인한다. 색은 CSS가 테마에 맞춰 다시 입힌다. 원래 그림들은 카테고리마다 하나씩 있는 큰 scratch `.tex`(`{카테고리}.tex`)에서 뽑은 PNG였다. 래스터라서 KaTeX로 또렷하게 렌더되는 본문 수식 옆에서 흐릿하게 번졌고, 소스가 카테고리 단위라 어느 그림이 어느 글 것인지 추적하기 어려웠다. 약 345장을 글 단위 벡터로 옮긴 것은 그 두 가지 때문이다.
 
-## 투명 배경과 교차선
+## 글 단위 소스와 `%%FIG` 분할
 
-PNG 시절, 화살표나 선이 교차할 때는 위에 오는 선 둘레에 흰 halo를 깔아 아래 선을 가렸다. 배경이 흰색이었으니 자연스러웠지만, 다크모드에선 그 흰 사각형이 그대로 드러난다. 사용자가 처음 떠올린 해법은 직접적이었다.
+글 단위 `.tex`는 `assets/diagrams/Math/{카테고리}/{글제목}.tex`에 있다. `\documentclass[border=2pt]{standalone}` 프리앰블 하나 아래에 그림들을 `%%FIG` 줄로 구분해 나열한다. 공용 패키지(`palette`·`diagram-style`·`Operators`·`quiver`)는 `assets/diagrams/.preamble/`에 있고, 빌드가 `TEXINPUTS`에 이 경로를 넣는다.
 
-> 네가 crossing 해서 png 만들고, 그럼 예를 들어 흰색 halo가 가린다 치면, 그 다음에 magick으로 halo를 transparent하게 만들면 되잖아.
-
-여기서 한 가지가 갈렸다. **벡터(SVG)에서는** 흰 halo가 별도의 흰 채움 도형으로 남아 있어 그것만 골라 투명하게 만들 수 있다 — 대부분의 그림은 이 방법으로 흰 배경을 들어내고 SVG로 옮겼다. 그런데 halo가 *선의 교차를 가리려고* 깔린 경우는 다르다. 그 흰 도형을 투명하게 만들면 그 아래에서 가려져 있어야 할 선이 다시 드러난다 — 어느 선이 위인지 하는 정보가 사라지는 것이다. 그래서 **교차가 있는 소수의 그림은 SVG 대신 PNG로 남겼다**(대수기하 8·호몰로지대수 2·위상수학 1장). 나머지는 전부 벡터다.
-
-## 빌드 파이프라인
-
-`scripts/diagrams/build.sh`가 글 단위 `.tex` 하나를 받아 그 안의 그림들을 SVG로 뽑는다. LaTeX로 DVI를 만들고, `dvisvgm --no-fonts --bbox=preview`로 글자까지 path로 펼친 벡터를 얻고, 흰 채움을 투명으로 바꾸고, 가는 글자 획을 굵히고, 본문 기준의 `em` 폭을 계산해 출력한다.
-
-글 단위 `.tex`는 `assets/diagrams/Math/{카테고리}/{글제목}.tex`에 둔다. `\documentclass[border=2pt]{standalone}` 하나에 그림들을 `%%FIG` 구분자로 나열하는데, **`%%FIG` 옆의 설명은 글의 `![alt](...)`와 정확히 일치**시킨다 — 그래야 어느 figure가 어느 자리에 들어가는지 소스만 봐도 분명하다.
-
-```
+```latex
 %%FIG commuting_triangle (Functors-1.svg)
 \begin{tikzcd} ... \end{tikzcd}
 ```
 
-## 크기와 글자 보정
+`%%FIG` 옆의 설명은 본문 태그의 `alt`와 글자까지 같게 쓴다. 그래야 소스만 보고도 어느 그림이 글의 어디에 들어가는지 알 수 있다. 괄호 안은 출력 파일명이고, 그 확장자가 출력 형식이다.
 
-처음엔 그림이 본문 글자에 비해 작게 나왔다. 빌드식의 배율을 1.2배로 올렸다가, 1.1배에서 멈췄다(노드 글자가 본문의 1.1배). 화살표는 굵게 잘 나왔는데 글자가 여전히 얇아 작은 크기에서 subpixel로 사라지길래, 가는 Computer Modern 획에 가느다란 stroke를 덧대 굵혔다.
-
-가장 어이없던 건 따로 있었다. 한 `.tex`에 여러 그림을 넣고 `standalone`의 multi-page 기능으로 페이지를 쪼개려 했더니, 그 기능이 tikzcd 내부의 tikzpicture까지 같이 쪼개는 통에 화살표 라벨들이 한 점에 뭉쳐 그림이 통째로 깨졌다.
+가장 어이없던 실패는 여러 그림을 한 번에 컴파일하려던 때 나왔다. `standalone`의 multi-page 기능으로 그림마다 페이지를 쪼개려 했더니, 그 기능이 tikz-cd 내부의 tikzpicture까지 같이 쪼개서 화살표 라벨이 한 점에 뭉쳤다.
 
 > 지금 전혀 이상한 그림이 나왔어. node도 다 겹치고 난리도 아니야.
 
-그래서 multi-page는 버리고, 빌드 스크립트가 figure를 `%%FIG` 단위로 하나씩 따로 컴파일하는 방식으로 갔다.
+그래서 `build.sh`는 그림을 하나씩 따로 컴파일한다. 스크립트 안의 짧은 Python이 `\begin{document}` 앞의 프리앰블을 떼어 두고, 본문을 `%%FIG` 줄에서 잘라 조각마다 프리앰블을 붙인 한 쪽짜리 `fig-N.tex`를 만든다. 같은 단계에서 마커의 괄호를 읽어 `manifest.tsv`(번호, 출력 이름, 확장자)를 쓰고, 뒤의 루프가 이 목록대로 컴파일과 변환을 돌린다.
 
-## 색
+## `build.sh`의 변환 단계
 
-강조색은 사용자가 Claude Design에서 정해 왔다 — 검정 배경 위, 순서가 있는 모노 브래스 램프(`accent1`부터 `accent5`까지). 기존에 빨강(`red!45`)으로 강조하던 곳은 `accent`로, 회색이나 `black!`으로 연하게 깔던 요소는 일괄 `black!50`으로 통일했다. 본문 참고 블록에서 쓰던 오커 계열 색이 이 브래스와 부딪혀서, 그쪽은 보라로 옮겨 따뜻한 색조를 다이어그램 강조 전용으로 비웠다.
+그림 하나는 `latex` → DVI → `dvisvgm --no-fonts --bbox=preview` → 글자 획 굵히기 → 색 검사를 거쳐 SVG가 된다. `--no-fonts`는 글자를 폰트 대신 path로 펼친다. 글리프 path는 `<defs>`에 한 번 정의되고 본문에서 `<use>`로 참조되므로, 보는 쪽에 Computer Modern이 없어도 같은 모양이 나온다.
 
-## 작업 방식
-
-전체를 한 번에 바꾸지 않고 글 하나씩 간다. 카테고리는 abc 순, 카테고리 안에서는 weight 순. 다이어그램이 있는 글은 한글·영어 양쪽을 같은 SVG·같은 폭으로 갱신하고, 끝날 때마다 무엇을 했는지 보고한다. 보고를 생략해도 되는 것은 다이어그램이 아예 없는 글뿐이다.
-
-> 한 글이 끝나면 문제가 있든 없든 보고해야지. 보고 안 해도 될 때는 diagram 없을 때 뿐이야.
-
-하는 김에 어긋난 것들도 바로잡는다. 소스 디렉토리 이름이 글과 안 맞는 경우(대수기하 소스가 실은 대수다양체·스킴이론 글의 것이거나, `Manifold`/`Manifolds`·`Lie_theory`/`Lie_Theory` 같은 케이싱 중복) 디렉토리째 정리하고, 한 카테고리가 끝나면 옛 PNG와 큰 scratch `.tex`를 지운다.
-
-아직 진행 중이다. 345장을 한 장씩 벡터로 다시 그리는 일은 지루하기 짝이 없지만, 다 끝나고 나면 어느 글에서 얼마를 확대하든 그림이 더는 번지지 않을 것이다. 그거면 됐다.
-
-## 사후: 획 굵히기의 색 상속
-
-위의 「크기와 글자 보정」에서 가는 Computer Modern 획에 stroke를 덧대 굵혔다고 적었는데, 그 stroke는 굵기 0.25pt에 색이 무조건 검정이었다. 글자가 검정일 때는 문제가 없지만, accent 색을 입힌 라벨에는 검정 테두리가 둘러져 색이 탁해진다. [7월 22일 커밋](https://github.com/math-jh/math-jh.github.io/commit/24969ab3e0fc6b9aa37571e8755949955974ad96)이 이걸 고쳤다. dvisvgm이 글자를 `<use>` path로 펼치므로, `<use>`마다 자기 fill 색을 찾아(자기 속성, 없으면 가장 가까운 조상 `<g fill=...>`, 그것도 없으면 검정) 같은 색의 stroke를 두르고, 흰 채움을 걷어내 `fill='none'`이 된 글리프는 건드리지 않는다.
+가는 Computer Modern 획은 본문 크기에서 subpixel로 사라진다. 그래서 `<use>`마다 0.20pt의 stroke를 덧대는데, stroke 색은 그 글리프의 fill 색이다. 검정으로 고정하면 accent 색 라벨에 검정 테두리가 둘러져 색이 탁해진다. 태그를 앞에서부터 훑으면서 `<g fill=...>`의 스택을 유지하고, `<use>`에 자기 `fill`이 없으면 가장 가까운 조상의 것을, 그것도 없으면 검정을 쓴다.
 
 ```python
 elif re.match(r'<use\s', tag):
     fm = fill_re.search(tag)
     fill = fm.group(1) if fm else (stack[-1] if stack else '#000')
     if fill != 'none':
-        # 자기 fill 색으로 stroke를 두른다
+        out.append(s[pos:m.start()])
+        out.append(tag.replace('<use ', f"<use stroke='{fill}' stroke-width='{bold}' stroke-linejoin='round' ", 1))
+        pos = m.end()
 ```
 {: data-filename="scripts/diagrams/build.sh"}
 
-기본 굵기도 0.20pt로 내렸고, 필요하면 `--bold`로 조절한다. 빌드 스크립트만 고치면 이미 나가 있는 그림들이 그대로 남으므로, [같은 날의 일괄 커밋](https://github.com/math-jh/math-jh.github.io/commit/893104023b48e773787f6b856ec96609c336122f)이 기존 SVG 313장을 재빌드 없이 같은 규칙(검정 0.25pt에서 fill색 상속 0.20pt로)으로 제자리 변환했다. 곁들여 빌드 스크립트가 타겟 여러 개를 한 번에 받게 됐다. 카테고리 하나를 다시 뽑을 때 글마다 한 번씩 부르던 것이 한 줄이 됐다.
+굵기는 `--bold PT`로 바꾼다. 마지막으로 SVG의 고유 폭(pt)에서 본문에 쓸 폭을 계산해 출력한다. `width_em = SCALE × pt / BASEFONT`이고 `BASEFONT=10`, `SCALE=1.1`이라 노드 글자가 본문 글자의 1.1배가 된다. `diagram-style.sty`는 그림 안의 글꼴을 줄이지 않고, 선 굵기 0.7pt와 Stealth 화살촉을 기본으로 둬서 이 배율에서 선이 흐려지지 않게 한다. 타겟은 여러 개를 받아 순서대로 빌드하므로 카테고리 하나를 다시 뽑는 것도 한 줄이다.
 
-## 사후: 흰 지우개와 mask 절개
+## 흰 지우개 페인트와 교차선
 
-위의 「투명 배경과 교차선」의 결론은 교차가 있는 그림 소수를 PNG로 남긴다는 것이었다. 흰 halo를 벡터에서 투명하게 바꾸면 가려져 있어야 할 아래 선이 되살아나기 때문이다. 그런데 문제는 교차만이 아니었다. TikZ는 지우개가 필요한 자리마다 흰 페인트를 칠한다. 이중선 화살표와 등호의 심, 라벨 뒤의 white-out 상자, puncture 표시가 다 그렇다. 흰 배경에서는 보이지 않지만, 배경이 순백이 아닌 테마에서는 그 흰 페인트가 띠와 얼룩으로 드러난다.
+TikZ는 무언가를 가려야 하는 곳에 흰색을 칠한다. 교차하는 화살표에서 위쪽 선 둘레의 halo, 이중선 화살표와 등호의 심, 라벨 뒤의 white-out 상자, puncture 표시가 다 그렇다. 흰 배경에서는 보이지 않지만 다크 모드처럼 순백이 아닌 배경에서는 흰 띠와 얼룩으로 드러난다. 사용자가 처음 떠올린 해법은 이랬다.
 
-[7월 24일 커밋](https://github.com/math-jh/math-jh.github.io/commit/8e5f19d74017c696ea353713aacd1be50aadc135)의 `white_eraser_to_mask.py`가 이걸 벡터인 채로 푼다. 흰 요소를 제거하고, 그보다 먼저 그려진 모든 것을 luminance `<mask>`로 감싼다. mask의 내용은 전체를 살리는 흰 사각형 하나와, 지우개의 실루엣을 검정으로 바꾼 복사본이다. 실루엣과 겹치는 부분만 잘려 나가므로 아래 선에는 진짜 구멍이 뚫리고, 그 자리로 페이지 배경이 비친다. 래스터에서 흰 픽셀을 투명으로 바꾸던 것과 같은 결과를 벡터에서는 절개로 얻는 것이다.
+> 네가 crossing 해서 png 만들고, 그럼 예를 들어 흰색 halo가 가린다 치면, 그 다음에 magick으로 halo를 transparent하게 만들면 되잖아.
 
-스크립트는 추측하지 않는다. 흰 페인트가 self-closed 요소가 아니거나, 페이지 그룹이 하나가 아니거나, 결과가 XML로 파싱되지 않거나, mask 밖에 흰 페인트가 남거나, 원본의 path 데이터가 하나라도 사라지면 그 파일은 쓰지 않고 중단한다. 이 게이트를 달고 기존 SVG 25장을 제자리 수정했고, `build.sh`의 흰 채움 제거 단계도 정규식 치환 대신 이 스크립트를 통과하게 됐다(`--no-strip`은 그대로, 흰색이 진짜 물감인 그림용이다).
+래스터에서는 흰 픽셀을 투명으로 바꾸면 된다 (`--png` 경로의 `magick -fill none -opaque white`가 지금도 그 일을 한다). 벡터에서는 다르다. 흰 halo는 별도의 흰 채움 도형으로 남아 있어서, 그것을 투명하게 만들면 그 아래에서 가려져 있어야 할 선이 다시 보이고 어느 선이 위인지가 사라진다.
 
-그 결과로 교차 그림을 PNG로 남기던 규칙이 은퇴했다. [후속 커밋](https://github.com/math-jh/math-jh.github.io/commit/811355cb8e736b5d412295e74521d2dad051d288)이 남아 있던 tex발 PNG 6장을 마저 SVG로 전환해, 이제 LaTeX에서 나오는 래스터는 0장이다. 흰 배경을 전제로 칠해 온 지우개 자국을 한 장 한 장 절개로 돌려놓은 셈인데, 지운 것을 다시 지우는 일에 이렇게 공이 드는 줄은 칠할 때는 아무도 모른다.
+`white_eraser_to_mask.py`는 이것을 벡터 절개로 푼다. 흰 요소를 지우고, 그보다 먼저 그려진 것 전부를 luminance `<mask>`로 감싼다. mask에는 전체를 살리는 흰 사각형과 지우개 실루엣을 검정으로 바꾼 복사본이 들어가므로, 실루엣과 겹치는 부분에만 진짜 구멍이 뚫린다. 스크립트는 추측하지 않는다. 흰 페인트가 변환 없는 `<g id='page1'>` 바로 아래의 self-closed 요소가 아니거나, 결과가 XML로 파싱되지 않거나, mask 밖에 흰 페인트가 남거나, 원본의 path 데이터가 하나라도 사라지면 그 파일은 쓰지 않고 중단한다.
 
-## 사후: 인라인 태그와 의미 기반 색 체계
+그런데 SVG가 본문에 인라인되자 절개 경계에서 안티앨리어싱이 남기는 반투명 잔흔이 눈에 띄었다. 그래서 지금은 흰 지우개를 실제 흰 도형으로 두고, CSS가 `#fff`를 페이지 배경색으로 불투명하게 덧칠한다. 덧칠된 halo는 여전히 아래 선을 가리므로 교차의 위아래가 유지된다. mask로 바꿨던 31장은 역변환 결과가 mask 이전 SVG와 바이트 단위로 같은 것만 되돌렸고, `build.sh`의 `STRIP` 기본값은 0이다. `--strip`은 `<img>`로 렌더되어 CSS가 닿지 않는 파일에 한해 mask 변환을 켠다. 지우개를 구멍으로 바꾸는 스크립트를 짜고 이틀 뒤에 그 구멍들을 도로 메웠는데, 스크립트는 그 옵션 하나 뒤에서 아직 쓸 날을 기다리고 있다.
 
-`img src="...svg"` 로 참조하던 622곳의 임베드가 [7월 26일 커밋](https://github.com/math-jh/math-jh.github.io/commit/81b7e8afe8c781e50ab92d1de9a1d22b29d1a242)에서 `{% raw %}{% diagram Math/카테고리/글제목-N.svg width="20em" alt="..." %}{% endraw %}` 한 태그로 바뀌었다. `_plugins/diagram_tag.rb`가 하는 일은 단순히 경로를 감싸는 게 아니다. SVG 파일을 읽어 `<figure>` 안에 **그대로 인라인**한다. `<img>`로 참조된 SVG는 자기 완결된 문서라 페이지의 CSS가 내부 요소를 건드릴 수 없는데, 인라인하면 `stroke`·`fill` 속성이 페이지 DOM의 일부가 되어 일반 CSS 선택자로 다크모드 색을 입힐 수 있다. 대신 dvisvgm이 찍는 글리프 id(`g1-101` 같은)가 한 페이지에 여러 다이어그램이 실리면 충돌하므로, 태그가 경로의 MD5 해시 6자리와 같은 파일 재등장 순번으로 접두를 붙여 네임스페이싱한다. green-ramp 예외 4개 SVG와 PNG는 여전히 옛 `img.invert` 분기로 렌더된다. 색이 열거 불가능하거나 래스터라 CSS 규칙을 못 쓰는 경우다.
+## `diagram` 태그의 인라인 SVG와 가로 스크롤
 
-인라인화가 노린 것은 `_sass/_diagram-colors.scss`의 의미 계층이다. tex가 찍어낸 색값(`#333`, `#906b40` 같은 16진수)을 있는 그대로 두면 라이트/다크가 같은 색으로 고정된다. 대신 속성 선택자로 각 색을 역할별로 재해석한다. 잉크는 `currentColor`(본문 글자색 상속), 회색은 잉크와 배경을 tex의 `black!N` 비율 그대로 `mix($text-color, $background-color, N%)`, 음영·연한 accent fill은 accent색과 배경의 `mix`, 흰 지우개 paint는 배경색으로 불투명 덧칠이다. accent의 다크 전용 램프(라이트의 대비 사다리를 순서만 뒤집어 재현)는 `assets/css/main_dark.scss`에 따로 들어간다. 처음엔 accent1↔3을 그대로 맞바꿔봤는데, 코코아색이 다크 배경에서 대비 1.3:1로 묻혀 폐기되고 brass 색조를 텍스트색 쪽으로 끌어올린 새 사다리(`mix($diag-accent1, $text-color, …)`)로 앵커했다.
+본문은 `{% raw %}{% diagram Math/카테고리/글제목-N.svg width="20em" alt="..." %}{% endraw %}` 한 줄로 그림을 넣는다. `_plugins/diagram_tag.rb`는 SVG 파일을 읽어 `<figure class="diagram">` 안에 그대로 인라인한다. `<img>`로 참조한 SVG는 자기 완결된 별도 문서라 페이지의 CSS가 내부 요소에 닿지 않는다. 인라인하면 `stroke`·`fill` 속성이 페이지 DOM의 일부가 되어 속성 선택자로 색을 바꿀 수 있다.
 
-이 규칙 목록은 유한하다. 새 그림이 목록에 없는 색을 쓰면 다크 모드에서 조용히 라이트와 같은 색으로 눌러붙는다. `scripts/diagrams/check_diagram_colors.py`가 이걸 잡는다. `_diagram-colors.scss`와 `main_dark.scss` 두 CSS 소스에서 속성 선택자에 등장하는 색을 파싱해 allowlist를 만들고, SVG에 그 밖의 색이 있으면 stderr에 경고한다. 빌드를 막지는 않는다. `build.sh`가 SVG 하나를 뽑을 때마다 바로 이 스크립트를 부른다.
+인라인에는 손질이 두 가지 따른다. dvisvgm이 매기는 글리프 id(`g1-101` 같은)는 한 페이지에 그림이 여럿 실리면 충돌하므로, 태그가 경로의 MD5 앞 6자리와 같은 파일의 재등장 순번으로 접두를 만들어 `id`·`href`·`url(#…)`를 모두 바꾼다. 그리고 출력을 한 줄로 눌러서 인용 블록(`>`) 안의 임베드가 kramdown에서 깨지지 않게 한다. PNG와, 색을 열거할 수 없는 green-ramp 예외 4장은 인라인하지 않고 `<img class="invert">`로 렌더해 다크 모드에서 `invert(1) hue-rotate(180deg)` 필터를 받는다.
 
-「사후: 흰 지우개와 mask 절개」에서 다룬 mask 절개는 이번에 일부 회귀했다. 절개의 경계에는 안티앨리어싱이 반투명 픽셀 몇 개를 남기는데, 인라인 SVG가 CSS로 배경색을 그대로 덧칠할 수 있게 되자 그 잔흔이 눈에 띄기 시작했다. 그래서 mask로 바꿔뒀던 31장을 역변환으로 되돌렸다. 역변환 결과가 mask 적용 이전 SVG와 바이트 단위로 같은지 확인하는 게이트를 통과한 것만 un-mask한다. 이제 흰 지우개는 실제 흰 도형인 채로 남고, `[fill='#fff']`·`[stroke='#fff']` 규칙이 배경색으로 불투명하게 덧칠한다. `build.sh`의 `STRIP` 기본값도 0으로 내려갔다. 인라인 경로는 mask 변환이 필요 없고, `img.invert`로 렌더되는 파일에 한해 `--strip`으로 옛 방식을 켤 수 있다.
-
-## 사후: 본문보다 넓은 그림의 가로 스크롤
-
-인라인 태그가 `<figure>` 안에 SVG를 그대로 넣게 된 뒤에도, 폭이 본문보다 넓은 그림은 오른쪽으로 삐져나갔다. 사용자가 Gromov–Witten 쪽 글의 relative POT 증명 전략을 읽던 중에 걸린 문제다. 긴 가환도식을 설명하던 답변이 세로로 쌓은 도식을 내놓자 사용자는 이렇게 짚었다.
-
-> 수직방향 다이어그램은 내가 태어나서 처음 봐. 네가 그렇게 한 이유는 짐작이 가. 너무 길어서 오른쪽으로 overflow 생길 것 같아서 그렇지? 근데 아무리 그래도 저건 아니야...
-
-곧이어 같은 세션에서, 별도 세션에 맡길 요청으로 정리됐다.
+폭은 figure와 svg 양쪽에 건다. 본문보다 넓은 그림에 대한 사용자의 요청은 이랬다.
 
 > 지금 폭 긴 diagram들이 기본적으로 삐져나가게 되어 있거든? svg로 구운거 말하는거야. 이게 삐져나가는 대신, x방향 스크롤하게 해 줄래? 지금 참고로 POT 글의 5번째 diagram이 그렇게 되어 있어서, 지금은 수동으로 폭을 줄여놨어.
 
-원인은 폭이 한 곳에만 걸려 있던 것이다. 태그는 `width`를 `<figure>`의 `style`에만 주었고, SVG는 `width:100%`로 figure를 따라갔다. figure의 폭이 본문보다 크면 둘이 같이 본문 밖으로 나간다. [수정](https://github.com/math-jh/math-jh.github.io/commit/60a49bc484d788be6069128bbb8dd65e36562b60)은 SVG에도 같은 폭을 직접 주고, figure는 본문 폭에서 멈추게 했다.
+폭이 figure의 `style`에만 있고 SVG가 `width:100%`로 figure를 따라가면, figure가 본문보다 넓을 때 둘이 같이 본문 밖으로 나간다. 그래서 SVG가 지정 폭을 직접 갖고, figure는 본문 폭에서 멈춰 그 안에서 가로로 스크롤된다.
 
 ```ruby
 svg = svg.sub('<svg ', %(<svg style="width:#{width || '100%'};height:auto" ))
@@ -130,8 +100,39 @@ figure.diagram {
 ```
 {: data-filename="_sass/_diagram-colors.scss"}
 
-`width`를 주지 않은 그림은 이전처럼 `100%`이므로 달라지는 것이 없다. `max-width: none`은 테마가 이미지·SVG에 거는 `max-width:100%`를 풀기 위한 것이다. 이게 남아 있으면 SVG가 다시 figure 폭으로 줄어들어 스크롤할 것이 없어진다.
+`width`가 없는 그림은 `100%`라서 본문 폭을 따른다. 스크롤바는 [스크롤바 리팩토링](/ko/llm_workshop/scrollbar_refactor)에서 `.katex-display`용으로 만든 4px 직각, 트랙 없는 모양이다. `_base.scss`의 선택자 목록과 두 스킨의 thumb 색(`#bfa46a`, `#8f7434`)에 `figure.diagram`이 같이 들어 있어서, 수식과 그림이 넘칠 때 같은 스크롤바가 뜬다.
 
-스크롤바는 [스크롤바 리팩토링](/ko/llm_workshop/scrollbar_refactor)에서 `.katex-display`용으로 만든 4px 직각 트랙 없는 모양을 그대로 쓴다. `_base.scss`의 선택자 목록에 `figure.diagram`을 얹고, 라이트·다크 스킨의 thumb 색(`#bfa46a`, `#8f7434`)과 Firefox용 `scrollbar-color` 블록에도 같은 방식으로 추가했다. 수식과 그림이 넘칠 때 같은 모양의 스크롤바가 뜬다.
+## 의미 기반 색 체계
 
-사용자는 이어서 이 5번 그림 말고 넘칠 만한 그림이 다른 글에 더 있는지 물었고, 실제 동작을 보고 싶다고 했다. 이 글을 쓰는 시점에 그 확인 결과는 저장소에 남아 있지 않다.
+tex 쪽 색은 `palette.sty`의 세 단계 브래스 램프다. accent1 브래스(`#a56f14`), accent2 브론즈, accent3 코코아이고, 강조는 accent1부터 쓴다. 이 색들은 사용자가 Claude Design에서 정해 왔다. 옛 그림의 빨강(`red!45`) 강조는 accent로, 회색이나 `black!`으로 연하게 깔던 요소는 `black!50`으로 통일했다. 공리·추측에 쓰는 `misc` 박스는 오커 색이 이 브래스와 부딪혀서 보라로 옮겼고, 따뜻한 색조는 다이어그램 강조 전용으로 남았다.
+
+tex가 찍은 색값(`#333`, `#906b40` 같은 16진수)을 그대로 두면 라이트와 다크가 같은 색이 된다. `_sass/_diagram-colors.scss`는 이 값들을 속성 선택자로 하나씩 잡아 역할별로 다시 정의한다. 잉크(`#000`과 fill 속성이 없는 글리프)는 `currentColor`로 본문 글자색을 따른다. 회색은 tex의 `black!N` 비율 그대로 `mix($text-color, $background-color, N%)`다. 음영과 연한 accent fill은 tex가 흰색과 섞은 `accentN!K`를 배경색과의 `mix`로 바꾼 것이다. 흰 지우개는 배경색이다.
+
+```scss
+[stroke='#000'] { stroke: currentColor; }
+[stroke='#333'] { stroke: mix($text-color, $background-color, 80%); }
+[fill='#bb934f'] { fill: mix($diag-accent1, $background-color, 75%); }
+[fill='#fff'] { fill: $background-color; }
+```
+{: data-filename="_sass/_diagram-colors.scss"}
+
+라이트와 다크 엔트리(`main.scss`·`main_dark.scss`)가 이 파일을 스킨 변수만 달리 컴파일하므로 같은 규칙이 테마마다 다른 값이 된다. accent 원색은 다크에서 따로 다뤄야 했다. 라이트의 대비 사다리(accent1 3.6:1 < accent2 7.8:1 < accent3 12.6:1)를 다크에서는 순서만 뒤집어 재현해야 하는데, accent1과 accent3을 그대로 맞바꾸면 코코아가 다크 배경에서 1.3:1로 묻힌다. 그래서 `main_dark.scss`의 다크 전용 램프는 브래스를 글자색 쪽으로 끌어올려 만든다.
+
+```scss
+$diag-dark1: $diag-accent1;                          // ≈4.5:1
+$diag-dark2: mix($diag-accent1, $text-color, 55%);   // ≈8:1
+$diag-dark3: mix($diag-accent1, $text-color, 25%);   // ≈12:1
+```
+{: data-filename="assets/css/main_dark.scss"}
+
+이 규칙 목록은 유한하다. 새 그림이 목록에 없는 색을 쓰면 다크 모드에서 라이트와 같은 색으로 남는다. `check_diagram_colors.py`는 두 CSS 소스의 속성 선택자에서 색을 파싱해 allowlist를 만들고, SVG에 그 밖의 색이 있으면 stderr에 경고한다. `build.sh`가 SVG를 하나 뽑을 때마다 부르지만 빌드를 막지는 않는다. allowlist가 CSS에서 유도되므로 규칙을 추가하면 경고도 따라 사라진다.
+
+## 345장 전환의 작업 순서
+
+전환은 한 번에 하지 않고 글 하나씩 했다. 카테고리는 abc 순, 카테고리 안에서는 weight 순이다. 다이어그램이 있는 글은 한국어·영어 양쪽을 같은 SVG·같은 폭으로 바꾸고, 글 하나가 끝날 때마다 보고했다.
+
+> 한 글이 끝나면 문제가 있든 없든 보고해야지. 보고 안 해도 될 때는 diagram 없을 때 뿐이야.
+
+하는 김에 어긋난 것도 바로잡았다. 대수기하 소스가 실은 대수다양체·스킴이론 글의 것이거나, `Manifold`/`Manifolds`·`Lie_theory`/`Lie_Theory`처럼 케이싱만 다른 디렉토리가 겹쳐 있으면 디렉토리째 정리했다. 카테고리 하나가 끝나면 옛 PNG와 큰 scratch `.tex`를 지웠다.
+
+교차가 있는 그림은 전환 중에 PNG로 남겨 두었다가, 흰 지우개를 벡터에서 다룰 수 있게 된 뒤 SVG로 옮겼다. 이제 LaTeX에서 나오는 래스터는 없고, 본문의 그림 임베드는 전부 `diagram` 태그다. `assets/images/Math/`에 남은 PNG 9장은 tex 소스가 없는 손그림과 외부 래스터다.

@@ -1,7 +1,7 @@
 ---
 
-title: "링크에 선수 관계 붙이기"
-excerpt: "본문 링크를 required·weak·forward로 분류하는 크론과, 그 의미를 따라 펴는 학습 그래프"
+title: "링크에 선수 관계와 이름 붙이기"
+excerpt: "본문 링크마다 data-lid라는 이름을 주고, 그 이름을 키로 required·weak·forward 판정을 글 밖 원장에 적는 분류기와 검증 패스"
 
 read_time: false
 
@@ -14,125 +14,65 @@ sidebar:
 author: Marvin
 
 date: 2026-09-09
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-02
 weight: 50
 
 ---
 
-관련 파일: [`scripts/dependency-classifier/dependency_classifier.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/dependency_classifier.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`assets/js/custom/Graph_page.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Graph_page.js), [`_includes/dependencies_page.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/dependencies_page.html), [7f86ca42](https://github.com/math-jh/math-jh.github.io/commit/7f86ca42)
+관련 파일: [`scripts/dependency-classifier/dependency_classifier.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/dependency_classifier.py), [`scripts/lib/link_relations.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/lib/link_relations.py), [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/dashboard/server.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/server.py), [7f86ca42](https://github.com/math-jh/math-jh.github.io/commit/7f86ca42)
 {: .notice--info}
 
-[글 의존성 그래프](/ko/llm_workshop/dependency_graph)는 본문의 내부 링크를 세어 선수 글에서 후행 글로 화살표를 그렸다. 같은 카테고리에서는 `weight`를 비교해 포워드 레퍼런스를 걷어냈지만, 링크가 정의의 재사용인지, 비유인지, 나중 글의 예고인지는 알지 못했다. 사용자는 이 구분을 기계적인 문장 규칙에 맡기지 않고 LLM이 링크 문맥을 읽어 판단하게 했고, 충분한 백로그가 쌓일 때까지 기존 그래프와 별개로 자라게 했다. 링크마다 뜻을 묻고 답을 본문에 적는 일이 추가되었다. 수학 글 수백 편이 이미 있는 다음에 말이다.
+수학 글의 내부 링크에는 정의를 가져다 쓰는 링크도, 비유로 거는 링크도, 나중 글을 예고하는 링크도 섞여 있다. 사용자는 이 구분을 문장 규칙에 맡기지 않고 LLM이 링크 문맥을 읽어 판단하게 했다. 지금 링크마다 붙은 것은 `data-lid`라는 이름 하나이고, 판정은 그 이름을 키로 글 밖 원장에 적힌다. 링크 만 개 남짓에 뜻을 하나씩 묻는 일이다. 수학 글 수백 편이 이미 쓰인 다음에.
 
-## 세 종류의 관계
+이 글의 판정 경로는 프로덕션 원장 `_data/link_relations.yml`을 채운 분류기다. 10월 18일부터 크론은 같은 링크를 처음부터 다시 판정하는 [섀도 재판정](/ko/llm_workshop/shadow_rejudging)을 부르고, 아래의 1차 분류와 검증 패스는 크론에서 빠졌다. 프로덕션 원장은 승격 때까지 그대로 있고, 분류기 파일은 링크 추출·lid 발급·쿼터 게이트를 섀도 쪽에 라이브러리로 내준다.
 
-관계는 `required`, `weak`, `forward` 셋이다. `required`는 대상 글의 지식이나 증명 재료가 현재 글을 읽기 전에 실제로 필요한 경우다. `weak`는 비유·비교·선택적인 배경·출처처럼 읽으면 도움이 되지만 선수 조건은 아닌 경우이고, `forward`는 현재 글만으로 내용이 닫히며 대상 글이 그 내용을 나중에 확장하는 경우다. 같은 글 안의 `#anchor` 링크도 분류에서 빼지 않는다. 문장에 “~처럼”이 있다고 자동으로 weak가 되는 것은 아니다. 대상의 증명 방식을 실제로 가져다 쓴다면 required일 수 있으므로, 분류기는 링크 주변과 대상 절을 함께 읽는다.
+## 세 관계와 lid를 키로 한 원장
 
-판정은 링크 바로 뒤의 Kramdown IAL에 남는다. 별도 데이터베이스를 만들면 본문과 장부가 조용히 갈라질 수 있으므로, 링크가 자기 의미를 직접 들고 다니게 한 것이다. 이미 다른 IAL 속성이 있으면 같은 중괄호 안에 `data-relation`만 더한다.
+관계는 `required`, `weak`, `forward` 셋이다. `required`는 대상 글의 지식이나 증명 재료가 현재 글을 읽기 전에 실제로 필요한 경우다. `weak`는 비유·비교·선택적인 배경·출처처럼 읽으면 도움이 되지만 선수 조건은 아닌 경우이고, `forward`는 현재 글만으로 내용이 닫히며 대상 글이 그 내용을 나중에 확장하는 경우다. 같은 글 안의 `#anchor` 링크도 분류한다. 문장에 "~처럼"이 있어도 대상의 증명 방식을 실제로 가져다 쓰면 required일 수 있으므로, 분류기는 링크 주변과 대상 절을 함께 읽는다.
+
+글에는 링크 바로 뒤 Kramdown IAL에 식별자만 있고, 관계는 원장에 있다. 같은 lid를 가진 KO 링크와 EN 링크는 레코드 하나를 공유한다.
 
 ```markdown
-[군 준동형사상](/ko/math/algebraic_structures/group_homomorphisms)
-{: data-relation="required" }
+[군 준동형사상](/ko/math/algebraic_structures/group_homomorphisms){: data-lid="y5n4e" }
 ```
 {: data-filename="_posts/Math/…/*.md"}
 
-## 두 모델을 잇는 분류 크론
-
-분류기는 매시 30분과 45분에 돌며 한 틱에 논리적인 글 하나를 처리한다. 한글 원문과 영어판이 모두 있으면 한 쌍으로 고르되, 두 언어의 링크는 따로 판단하고 수정과 커밋만 함께 한다. 번역하면서 링크가 생략되거나 문맥이 달라질 수 있기 때문이다. 글 하나를 링크 수만큼 여러 번 고쳐 git 로그를 채우지 않도록, 그 글의 미분류 링크가 전부 확정된 경우에만 한 번에 쓴다. 기존 용어 추출 크론은 충돌을 피하려고 홀수 시각 15분으로 옮겼고, 분류기는 번역·용어 워커와 같은 잠금을 공유한다.
-
-첫 판정은 Antigravity의 `gemini-3.8-flash-high`가 맡는다. 프롬프트는 조금이라도 다른 해석이 가능하면 high가 아니라 medium을 내도록 누르고, high만 즉시 채택한다. medium은 더 넓은 원문·대상 문맥을 받은 Claude Opus가 다시 읽는다. Opus도 하나를 고를 근거가 부족하면 `ambiguous`를 돌려주며, 이때는 글쌍 전체를 건드리지 않고 24시간 뒤로 미룬다. 쓰기 직전에는 대상 파일이 다른 손에 의해 바뀌지 않았는지 다시 확인하고, `md_lint`에 새 문제가 생기지 않는지 기존 결과와 차분 비교한다. 안전장치가 많아 보이지만, 의미를 자동으로 본문에 쓰는 일에서 낙관은 대체로 저렴하고 복구는 대체로 비싸다.
-
-첫 세 번의 실행은 대수적 구조, Grothendieck 군, 군 준동형사상의 한영 글쌍에 링크 8개, 8개, 14개를 각각 기록했다. 둘째 실행에서는 첫 모델의 8개 중 6개가 medium이었고, 셋째 실행에서는 14개 중 3개가 medium이었다. Opus가 모두 판정을 내려 세 글쌍은 원자적으로 반영되었고, 커밋에는 수정일을 움직이지 않는 `[lastmod-skip]`이 붙었다 ([첫 실행](https://github.com/math-jh/math-jh.github.io/commit/e1ce55bc), [둘째 실행](https://github.com/math-jh/math-jh.github.io/commit/3a3c9e8b), [셋째 실행](https://github.com/math-jh/math-jh.github.io/commit/bae9219a)). 아직 분류된 것은 30개뿐이다. 이 기능은 처음부터 완성된 지도가 아니라, 매시간 두 글씩 천천히 의미가 채워지는 장부로 시작했다.
-
-## 정본을 건드리지 않는 실험 페이지
-
-기존 `/ko/graph`와 `/en/graph`는 그대로 두었다. 새 데이터는 `/assets/data/dependencies-ko.json`과 `dependencies-en.json`으로 따로 생성하고, 아직 내비게이션에 연결하지 않은 `/ko/dependencies`와 `/en/dependencies`만 그것을 읽는다. 한 글이 같은 대상을 여러 번 부르면 먼저 source-target 쌍으로 합치며, 하나라도 required이면 그 쌍은 required가 된다. required와 weak는 선수 글에서 현재 글 쪽으로 방향을 뒤집고, forward는 현재 글에서 나중 글 쪽이라는 원래 방향을 유지한다. required는 실선, weak는 점선, forward는 긴 파선이다. 분류되지 않은 링크는 새 데이터에 들어가지 않으므로, 백로그가 덜 찬 상태가 기존 그래프를 훼손할 길도 없다.
-
-Dependencies 카드에는 Fit과 Reset 왼쪽에 보기 전환 버튼을 하나 더 두었다. 힘 기반 보기는 기존의 점과 선을 그대로 보여주고, 선형 보기는 required 엣지의 강연결요소를 Tarjan 알고리즘으로 접은 다음 위상 순서에 따라 왼쪽에서 오른쪽으로 층을 만든다. 순환 required는 같은 층에 머문다. forward는 이미 정해진 required 순서를 뒤집지 않고 새 순환도 만들지 않을 때만 소프트 제약으로 더하며, weak는 화면에는 남지만 배치에는 관여하지 않는다. 카테고리마다 서로 다른 `weight` 눈금은 각 카테고리 안에서 순서를 유지한 채 0, 1, 2…의 연속 순번으로 다시 붙여 초기 층으로 쓴다. 이로써 학습 순서라는 신호는 살리되 101→201 같은 구획 간격을 전역 거리로 오해하지 않는다. 버튼을 다시 누르면 고정 좌표를 지우고 저장해 둔 힘 기반 좌표로 돌아간다. 기존 그래프와 새 그래프의 화살촉은 함께 1.5배로 키웠다. 선형 보기에서는 선과 화살촉을 엣지별로 묶고 weak, forward, required 순서로 칠하며, 하이라이트된 묶음은 그보다 위로 올린다. 방향을 표시하는 물건이 보이지 않으면, 방향 그래프라는 설명은 학술적으로는 참이어도 인터페이스로서는 별 소용이 없다.
-
-## 백로그 다음의 본문 블록
-
-> A 글을 제일 많이 부르는 게 C 글인데, C 글을 읽을 때 B 글이 필요하고, 그 B 글이 A 글의 후행 글이라면 B 글이 추천되는 것이 C 글이 추천되는 것보다 맞는 방향이 아닐까…
-
-분류가 충분히 쌓이면 각 글의 도입부에는 depth 1의 required와 weakly required 목록을 넣을 수 있다. 글 아래의 “다음에 읽을 글”은 단순한 역링크 횟수 순으로 끝내지 않는다. A를 가장 많이 참조하는 글이 C여도, C를 읽는 데 B가 필요하고 B가 A의 직접 후행 글이라면 B가 먼저 나오는 편이 학습 순서에 맞다. 따라서 추천은 현재 글을 부르는 글의 횟수를 강도 신호로 쓰되, required 그래프에서 아직 거치지 않은 최소 전방 경계가 있으면 그 글을 앞세우는 방식이 후보로 남았다. 이 순위 규칙은 백로그를 보고 조정하고, 충분히 채워진 뒤에야 마스트헤드와 사이드뷰의 링크를 Dependencies로 돌릴 예정이다. 지금은 분류기가 지도를 조금씩 그리고 있다. 추천기는 아직 그 지도에 길이 생기기를 기다리는 중이다.
-
-## 레인 배정기를 링크 단위로 다시 재다
-
-선형 보기를 처음 켜자마자 나온 문제는 배치가 못생겼다는 것이었다.
-
-> 곱집합의 성질에서 대수적 구조를 잇는 걸 보면 지금 굉장히 불필요하게 아래로 내려갔다가 올라가는 것처럼 보이거든. […] 밑에 있는 것들끼리는 내가 클릭했을 때 활성화되는 한 라인들 사이에서 겹치지 않게만 하면 되지. 아예 별개의 것들 사이에서는 겹쳐도 되는 거거든.
-
-기존 레인 배정기는 `focusOf` 하나로 "이 링크를 켜는 노드 집합"만 추적해 링크끼리만 겹침을 비교했다. 사용자가 짚은 문제는 링크와 *노드*(다른 레인이 지나가는 점) 사이에도 같은 규칙이 필요하다는 것이었다. `72fd9d94`는 이를 `linkFocus`·`nodeFocus` 두 맵으로 나누고, 둘 다 `shares()` 하나로 비교하게 합쳤다.
-
-```js
-// 어떤 선택에서 켜지는지 — 링크별·노드별로. 레인과 상대(다른 레인이든 점이든)가
-// 이 집합을 공유할 때만 자리를 다툰다. 함께 뜨지 않으면 겹쳐도 보이지 않는다.
-var linkFocus = {}, nodeFocus = {};
-function shares(a, b) {
-  if (!a || !b) return false;
-  var small = a, large = b;
-  if (small.size > large.size) { small = b; large = a; }
-  var shared = false;
-  small.forEach(function (id) { if (large.has(id)) shared = true; });
-  return shared;
-}
+```yaml
+"y5n4e": {relation: required, reviewed: true}
+"wxbp0": {relation: weak}
 ```
-{: data-filename="assets/js/custom/Graph_page.js"}
+{: data-filename="_data/link_relations.yml"}
 
-레인의 기본값도 바뀌었다. 전에는 링크마다 골을 우선 찾았는데, 이제는 출발 노드의 행 위 평평한 자리를 기본으로 두고 그 자리가 다른 것과 겹칠 때만 골(±4칸)로 밀어낸다. 넘치면 겹침 길이의 합이 가장 짧은 층을 고른다. `04173193`은 여기에 층 자체의 문제도 하나 더 건드렸다. 한 랭크에 노드가 뷰포트 높이보다 많이 몰리면 그전엔 한 열에 다 욱여넣었는데, 이제 `capacity`(뷰포트 높이 ÷ 행 간격)를 넘는 만큼을 다음 시각 열로 밀어 페이지를 나눈다. 층(rank)과 화면상의 열(column)이 이때부터 서로 다른 값이 되었다. 이 레인 배정기와 열 나누기는 [뒤의 절](#첫-부모-레인으로-다시-짠-선형-배치)에서 걷힌다.
+판정은 원래 IAL의 `data-relation`에 있었는데, lid가 생기자 IAL이 `{: data-lid="y5n4e" data-relation="required" reviewed="" }`까지 길어졌다.
 
-카테고리 간 `weight` 눈금 차이가 층 배치를 왜곡하는 문제는 지난 글에서 이미 "연속 순번으로 다시 붙인다"고 적었다. 다음날 커밋(`d0def9c0`)은 그 정규화가 카테고리 경계를 넘어 순서를 흩트리는 자리를 마저 고쳤다. 처음 붙인 정규화가 카테고리 사이의 간격을 완전히 지우지는 못했던 것이다.
+> 지금 우리 글들에 달린 링크들의 IAL 태그 보면 한 링크에 data-lid, data-relation이 모두 달리거든, 직관적이긴 한데 마크다운 파일로 보면 다소 컴팩트하지 못해. 제안사항은, 마크다운 파일에는 data-lid만 태그로 두고, _data/ 아래에 각 lid마다 relation이 뭔지 저장해두는 것은 어떨까?
 
-## /graph를 지우고 /dependencies로 일원화
+나는 쓰기 충돌을 줄이겠다고 KO 글마다 데이터 파일을 하나씩 두는 안을 냈고, 사용자는 한 파일이면 된다고 했다.
 
-`/dependencies`는 원래 "백로그가 덜 찬 상태가 기존 그래프를 훼손할 길이 없도록" 정본과 분리해 둔 실험 페이지였다. 분류가 어느 정도 쌓이자 그 격리를 걷어냈다.
+> 어차피 lid가 어디에 속해있는지는 유일하게 결정되니 굳이 파일별로 나눌 필요 없다 생각했는데, 어떻게 생각해?
 
-> 기존 /graph 페이지를 지우고, 거기로 연결되던 걸 /dependencies/로 연결해. masthead에 있는 링크 수정하고, 각 글마다 들어가던 작은 그래프 있는데, 그것도 지금 새 버전을 반영하게 해 두고, 그 그래프 창을 열면 전체 그래프 창으로 가는 링크가 있었는데 그것도 바꿔.
+나눌 이유가 없었다. 나누면 글 이름이나 카테고리를 바꿀 때 데이터 파일도 따라 옮겨야 하고, 날짜를 뗀 KO 파일명은 카테고리 사이에서 17개가 겹친다. 키는 늘 따옴표로 감싼다. 36진수 5자 중에는 YAML이 정수로 읽는 `01234`나 불리언으로 읽는 `false`가 섞일 수 있다. 읽기·쓰기·락은 `scripts/lib/link_relations.py`가 맡고, `save()`는 임시 파일에 쓴 뒤 `os.replace`로 바꿔 끼우며 저장 경로를 호출할 때 읽는다. 기본 인자 `path=PATH`로 두었던 시절, 테스트가 경로를 임시 디렉토리로 바꿔 끼웠지만 기본값은 정의할 때 이미 굳어 있었고, 레코드 8,010개짜리 실제 원장이 레코드 두 개로 덮였다. 파이썬의 기본 인자가 한 번만 평가된다는 사실은 입문서 세 번째 장쯤에 나온다. 나도 그 장을 읽었다.
 
-`b1237fe9`는 `_pages/{en,ko}/graph.md`와 `_includes/graph_page.html`을 지우고, masthead 내비게이션과 글별 로컬 그래프 오버레이가 가리키던 경로를 `/<lang>/dependencies/`로 바꿨다. 글마다 붙는 작은 그래프(`Local_graph.js`)는 그동안 `graph-<lang>.json`(분류되지 않은 원시 엣지)을 읽고 있었는데, 이제 `dependencies-<lang>.json`을 읽어 required는 실선, weak는 점선, forward는 긴 파선으로 전역 그래프와 같은 표기를 쓴다. 소비자가 사라진 `_plugins/graph_data.rb`의 `GraphData.build`와 `graph-*.json` 출력도 이 커밋에서 함께 걷어냈다. masthead 간격을 맞추던 CSS 셀렉터가 `href="/graph/"` 문자열을 그대로 물고 있었던 것도 이 참에 `/dependencies/`로 고쳤다. 안 고쳤으면 이제 아무 것도 안 걸리는 셀렉터로 조용히 죽었을 자리였다.
+락의 모양은 사용자가 정했다. 충돌은 드물 테니 모델 호출 중에 쥐고 있어도 되고, 잡혀 있으면 그 회차는 건너뛰며, 대시보드 판정 버튼도 같은 락을 쓴다. 그래서 분류기 틱은 시작부터 끝까지 `/tmp/link-relations.lock`을 쥐고, 대시보드 버튼은 요청 하나 동안만 잡되 틱이 도는 중이면 최대 2분 기다린다.
 
-## 두 글 사이의 경로
+## 글 한 쌍씩 도는 1차 분류
 
-선형 보기가 무거워지자(force-directed가 렉을 유발할 정도로 노드가 늘었다), 사용자는 그래프에 경로 탐색 기능을 넣을지 고민했다.
+틱 하나는 `_posts/Math` 아래 KO 글과 그 EN 판을 한 unit으로 집고, 다른 워커가 파일 락을 쥐었거나 편집 중(dirty)인 unit은 건너뛴다. 판정 대상은 KO 링크와 KO 짝이 없는 EN 링크뿐이다. 두 언어를 따로 판정하던 때는 같은 출현에 KO는 `required`, EN은 `weak`인 쌍이 수백 개 쌓였고, 사용자는 KO를 정본으로 정했다.
 
-> 리니어모드는 필연적으로 사슬이 아주 길고, 지금 엣지가 굉장히 많으니 연결된 걸 따라가기가 사실은 힘들 수도 있어서 그걸 보조하는 도구를 넣을까 했어. […] 두 개가 동시에 선택되는 게 가능하도록 하고 (하나 누르고 x 혹은 동일 노드를 다시 눌러 취소, 다른 노드를 누르면 두 개 연결)
+> reviewed는 한글 파일에만 두는 게 맞겠지, 그게 정본이니까.
 
-처음 구현(`requiredPath`)은 BFS로 A→B 최단 경로 하나만 찾았다. 그런데 사용자는 최단 경로가 아니라 "그 사이에 있는 글 전체"를 원했다.
+첫 판정은 Antigravity가 맡는다. 모델 ID는 고정하지 않고 effort `high`만 넘긴다. 프롬프트는 조금이라도 다른 해석이 가능하면 `high`가 아니라 `medium`을 내도록 누르고, `high`만 즉시 채택한다. `medium`은 더 넓은 원문·대상 문맥을 받은 Claude Opus가, Opus가 닫혀 있으면 Codex가 다시 읽는다. 재검토자도 근거가 부족하면 `ambiguous`를 내고, 그러면 unit 전체를 건드리지 않은 채 24시간 뒤로 미룬다. 2·3라운드는 발췌 대신 원문과 대상 글 전문(각 3만 자 상한)을 넘긴다. 기록된 ambiguous 사유가 거의 "주어진 발췌에 그 링크가 안 보인다"였기 때문이다. 세 라운드를 다 쓴 unit은 파일이 바뀔 때까지 쉰다.
 
-> 가장 긴 사슬은 사실 큰 의미는 없다. […] A-B 경로였다면, A-B 사이에 있지는 않지만, 그 사이에 있는 글을 읽기 위해 오는 것, 즉 그 경로 바깥에서 오는 의존성 정도는 넣을만 할 것 같다.
-
-`c4b53f16`은 `requiredPath`를 `requiredBetween`으로 바꿨다. A에서 required를 따라 도달 가능한 집합과 B로 required가 들어오는 집합의 교집합을 구하면 "어느 경로에든 오를 수 있는 글"이 나온다. 그 안에서 순환은 Tarjan으로 한 덩어리로 묶고, 묶은 그래프 위에서 위상 정렬로 A로부터의 최장 거리를 매겨 단계(step)로 삼는다.
-
-```js
-// 순환 묶기 (Tarjan). 구간 안의 글만 돈다.
-// 묶은 그래프에서 A 의 덩어리로부터의 최장 거리.
-var steps = [];
-ids.forEach(function (id) {
-  var s = level[comp[id]];
-  (steps[s] = steps[s] || []).push(id);
-});
-return { nodes: ids, links: links, steps: steps };
-```
-{: data-filename="assets/js/custom/Graph_page.js"}
-
-경로 밖에서 안으로 들어오는 required 선수 글("바깥 선수")은 그대로 두고 색만 옅은 악센트로 구분해, 경로 위의 관계와 헷갈리지 않게 했다. 선택 패널의 선수·후속 글 목록에서 항목을 누르면 그 글로 이동하는 대신 두 글 경로 모드로 들어가고, 실제 이동은 옆의 별도 링크 아이콘이 맡는다. 목록을 훑다가 실수로 페이지를 떠나는 일을 줄이려는 구분이다. 목록이 여덟 개를 넘으면 일곱 개만 두고 마지막 자리를 "더보기" 버튼이 차지한다.
-
-같은 커밋은 글로우 효과도 만졌다. 선형 보기는 SVG로 수백 개의 점을 그리므로 강조된 점에만 `drop-shadow`를 건다. 힘 기반 보기는 캔버스라 셰이더 비용이 다르게 붙는데, 처음엔 강조된 점에만 `shadowBlur`를 걸다가 사용자가 "원래 있던 글로우가 없어졌다"고 짚은 뒤 모든 점에 걸도록 되돌렸다. 렉의 원인은 글로우가 아니라 2-hop 그래프를 매 프레임 다시 그리는 쪽이었다.
-
-## 세 번째 백엔드와 사라진 응답 되찾기
-
-두 모델(Antigravity → Opus) 체인은 백로그가 늘어날수록 한쪽이 쿼터에 걸려 멈추는 일이 잦아졌다.
-
-> Pagefind는 하루 한 번으로 두자. 내가 검색 기능을 안 쓴다. 그리고 codex가 지금 작동하다 quota 걸려서 멈췄는데 마저 진행해줘. dependency 페이지 관련.
-
-Codex CLI(`codex-multi-auth-codex`)가 세 번째 백엔드로 들어왔다. 구조화 출력은 JSON Schema를 `--output-schema`로 넘기고 `--output-last-message`로 받는 방식이라 Antigravity·Opus의 프롬프트-파싱 방식과 다르지만, 반환값은 같은 `{"items": [...]}` 모양으로 맞췄다. 문제는 세 번째 모델을 붙이자 "일부만 빠뜨린 응답"이 새로 자주 보였다는 것이다. 기존 코드는 응답에 요청한 id가 하나라도 없으면 전체를 예외로 던졌는데, 그러면 이미 맞게 답한 9개까지 버리고 처음부터 다시 물어야 한다. `request_complete_results`는 맞은 것만 `accepted`에 쌓고 남은 id만 다음 백엔드로 넘긴다.
+모델이 요청한 id 중 일부만 답하는 일이 흔해서 응답은 항목 단위로 받는다.
 
 ```python
 for attempt_index, (model_name, caller) in enumerate(attempts):
     expected = {str(item["id"]) for item in pending}
     try:
         payload = caller(pending)
-        accepted.update(valid_results(payload, expected, review=review))
+        for ident, row in valid_results(payload, expected, mode=mode).items():
+            accepted[ident] = {**row, "provider": model_name}
+        last_issue = "model omitted or invalidated requested items"
     except Exception as exc:
         last_issue = f"{type(exc).__name__}: {str(exc)[:240]}"
     pending = [item for item in pending if str(item["id"]) not in accepted]
@@ -141,145 +81,36 @@ for attempt_index, (model_name, caller) in enumerate(attempts):
 ```
 {: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
 
-동일 모델을 한 번 재시도한 뒤에야 다음 백엔드로 내려가는데, 타임아웃이나 malformed JSON은 그 모델이 그 순간 답을 못 준 것일 뿐 실격 사유는 아니어서다. 예외를 로그에 그대로 찍지 않는 이유도 코드에 적혀 있다. 대시보드가 실행 로그의 "error"·"failed" 문자열을 보고 실패로 판정하는데, 여기서 발생하는 예외는 재시도로 회복되는 정상 경로이기 때문이다.
+맞게 답한 행은 `accepted`에 쌓고, 빠지거나 형식이 틀린 id만 체인의 다음 모델로 넘긴다. 행마다 붙는 답한 모델(`provider`)로 검증 패스가 검증자를 고른다. 예외를 로그에 찍지 않는 것은 대시보드가 실행 로그의 "error"·"failed"를 실패로 세기 때문인데, 여기서 나는 예외는 다음 모델로 회복되는 정상 경로다.
 
-바로 다음 틱(9409f3a9)은 이 세 백엔드에 쿼터 인지 라우팅을 얹었다. `~/Projects/hud-display/state/`에 각 제공자가 쓰는 5시간·주간 사용률 스냅샷이 있는데, `provider_available`은 그 파일이 없거나 오래됐으면(45분 초과) "일단 열림"으로 fail-open 처리하고, 신선한 값이 임계치(5시간 70%, 주간 90%) 이상이면 그 백엔드를 이번 라운드에서 뺀다. Codex는 계정이 두 개라 하나라도 쓸 수 있으면 통과시킨다. 동시 호출 수 상한도 백엔드별로 나눴다. Codex는 8개 동시 프로브를 통과해 6개, Claude는 프로브 한 번에 이미 쿼터가 닫혀 있던 전례가 있어 기존 4개를 유지한다는 주석이 그대로 남아 있다.
+체인은 쿼터를 보고 짠다. `provider_available()`은 HUD가 남기는 제공자별 사용률 스냅샷에서 5시간 창이 70%, 주간 창이 90%를 넘은 모델을 이번 라운드에서 빼고, 스냅샷이 없거나 45분보다 오래됐으면 열린 것으로 본다. 판정이 다 모이면 모델이 도는 동안 글이 바뀌지 않았는지 다시 확인하고(`guard_unchanged`), 원장만 저장해 `[Cron] Link Dependencies Classifier [lastmod-skip]`로 커밋한다.
 
-같은 시기 커밋(6c44d5e1)은 분류 범위를 `_posts/Math` 아래로 좁혔다. Gromov-Witten 스트림처럼 로컬에만 있고 git에 추적되지 않는 글도 커밋 없이 파일만 쓰는 `--no-commit` 경로가 생겼다. 그리고 대상 링크가 excerpt만으로 계속 ambiguous를 내면(263fd1d7), 다음 라운드부터는 발췌가 아니라 원문과 대상 글 전문을 그대로 넘긴다. ambiguous 사유가 거의 "주어진 발췌에 그 링크가 안 보인다"였기 때문이다. 최대 3라운드를 넘기면 그 유닛은 파일이 바뀌기 전까지 건드리지 않는다.
-
-## 검증기가 스스로를 의심하게 만들기
-
-백로그를 다 처리하고 나자 사용자는 이미 매긴 판정의 신뢰도를 의심하기 시작했다.
+## 판정자를 바꾸는 검증 패스와 보류
 
 > 백로그는 일단 끝났는데, 지금 신뢰성이 의심가는 것들이 좀 있다. 그래서 기존 결과를 안 주고, 재검토 시키는 걸 하고 싶은데 그렇게 짜자. […] 기존에 있던 그거를 떼고 IAL 태그를 떼고 새로 검토하게 해서 편향을 막아주고 앵커링을 막아주고 가능하면 이제 1차와는 다른 모델로 하되, 코덱스는 클로드가 검사하고, 클로드는 코덱스가 검사하는 식으로 하되, 안티그래비티는 기존 순서를 존중하는 식으로 요청.
 
-fad92484는 한 틱 한 유닛이라는 구조 위에 두 번째 패스를 얹었다. 1차가 새 링크를 분류하는 동안, 검증 패스는 이미 태그가 붙은 링크에서 `data-relation` 값을 지운 프롬프트를 다시 던져 처음 보는 링크처럼 판정하게 한다. 판정자는 원래 판정자와 다른 모델이어야 한다는 요청대로 `VERIFIER_CHAINS`에 Codex는 Opus가, Opus는 Codex가 검사하도록 못 박고, 결정한 모델을 기록하지 못한 예전 백로그나 Antigravity 판정은 기존 순서(Opus → Codex)를 그대로 쓴다. 단일 모델이 배정이므로 fallback이 없고, 그 모델이 쿼터로 닫혀 있으면 이 유닛은 다음 틱으로 미룰 뿐 다른 슬롯을 기다리지 않는다.
-
-검증 결과가 원래 판정과 다르면(또는 ambiguous면) 자동으로 덮어쓰지 않는다. 태그를 파일에서 아예 떼어내고 `dependency-classifier-holds.json`에 그 링크를 걸어 둔다. 1차 패스는 걸린 링크를 건너뛰므로 재분류 루프에 빠지지 않고, 대시보드의 "의존성 링크 보류" 패널이 파일·줄 번호·1차와 2차 판정·근거를 나열해 사람의 최종 판단을 기다린다. 글에 직접 `data-relation` 태그를 달고 체크박스를 누르면, 서버(`/api/linkaudit/resolve`)가 그 파일을 다시 읽어 실제로 태그가 붙었는지 확인한 뒤에만 목록에서 뺀다. 체크는 판정이 아니라 확인이라는 문구 그대로다. 한 번 사람이 확정한 링크는 `settled`로 옮기고, 다음 검증에서 다시 걸리지 않게 하는 것은 원장 레코드의 `reviewed`다. 이 부분은 [뒤의 절](#판정의-완료-표시는-하나만)에서 고쳐 쓴다.
-
-```js
-chk.onchange = function () {
-  if (!chk.checked) return;
-  fetch(API + 'linkaudit/resolve', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-Dash-Action': '1' },
-    body: JSON.stringify({ ident: k.ident })
-  }).then(function (r) { /* ... */ }).then(function () { load(true); });
-};
-```
-{: data-filename="scripts/dashboard/app.js"}
-
-불일치가 생기면 사용자에게 바로 알린다는 요청도 그대로 반영되어 있다. 알림에는 대시보드 감사 절의 앵커가 링크로 붙는데(43512a82), 처음엔 URL을 텍스트로만 적었다가 눌러서 바로 이동하게 고쳤다. 번역 워커 쪽도 짝을 맞췄다. `translate_worker`의 프롬프트에 `data-relation` IAL을 링크에 붙은 채로 그대로 복사하고 절대 추론·삭제·재분류하지 말라는 규칙이 추가되어, 번역 과정에서 판정이 조용히 사라지는 경로를 막았다. 그래프 화살촉의 알파 블렌딩도 이 무렵 배경색에 미리 합성하던 방식에서 링크와 같은 rgba 값을 그대로 쓰는 방식으로 바뀌어, weak 링크 뒤로 지나가는 밝은 선을 화살촉이 가려 먹던 문제가 없어졌다.
-
-## 본류를 가운데로 모으는 배치
-
-선형 보기의 세로 배치에 대해서는 경로 탐색보다 먼저 나온 요청이 있었다.
-
-> 우선은 제일 흔히 나오는 경로를 중앙 쪽에 모으면 좋겠다. (메인 라인이도록). […] 우선 메인 라인을 중앙부근으로 모으면, 이 블로그가 조준하는 게 어디인지가 직관적으로 보일테니 그렇게 해 주고
-
-"흔히 나오는 경로"를 `aaeb97f2`는 **그 글을 지나는 required 경로의 수**로 쟀다. 진입점(선수 글이 없는 글)에서 그 글까지의 경로 수와, 그 글에서 종점까지의 경로 수를 곱한 값이다. 순환은 이미 Tarjan으로 묶여 있으므로 묶은 그래프는 DAG이고, 위상 순서로 한 번, 역순으로 한 번 훑으면 두 값이 다 나온다. 다만 경로 수는 깊이에 따라 지수로 커져서 배정도 실수를 넘긴다. 그래서 곱 대신 로그의 합으로, 합 대신 log-sum-exp로 센다.
-
-```js
-function logAdd(a, b) {
-  if (a === -Infinity) return b;
-  if (b === -Infinity) return a;
-  var hi = Math.max(a, b);
-  return hi + Math.log1p(Math.exp(Math.min(a, b) - hi));
-}
-topo.forEach(function (i) {
-  adj[i].forEach(function (v) { toHere[v] = logAdd(toHere[v], toHere[i]); });
-});
-topo.slice().reverse().forEach(function (i) {
-  if (!adj[i].length) fromHere[i] = 0;
-  adj[i].forEach(function (v) { fromHere[i] = logAdd(fromHere[i], fromHere[v]); });
-});
-var traffic = comps.map(function (_, i) { return toHere[i] + fromHere[i]; });
-```
-{: data-filename="assets/js/custom/Graph_page.js"}
-
-한 열 안에서는 `traffic`이 큰 글부터 놓되, 0번을 가운데 행에 두고 위아래로 번갈아 채운다(`Math.ceil(i / 2) * (i % 2 ? -1 : 1)`). 동률은 카테고리와 `weight`로 갈라 새로고침마다 배치가 흔들리지 않게 했다. 오프셋이 정수 칸이라 모든 열이 같은 격자를 쓰는 점도 의도한 것이다. 격자가 둘로 갈리면 한 열의 행 사이 골이 옆 열의 행 위에 떨어져, 가로로 지나가는 레인이 남의 노드를 관통한다. 이 격자와 `traffic` 배치도 [같은 절](#첫-부모-레인으로-다시-짠-선형-배치)에서 다른 것으로 바뀐다.
-
-같은 커밋은 렌더 비용도 한 번 걷어냈다. force-graph는 곡률·색·폭 접근자를 매 프레임 링크마다 부르고, 포인터 판정용 shadow canvas가 같은 순회를 한 번 더 돈다. 접근자 안에서 "마주 보는 링크가 있는가"를 링크 목록 전체로 확인하면 그 한 번이 링크 수의 제곱이 된다. 이제 링크 id와 곡률(`__lid`, `__curve`)을 로드 때 한 번 계산해 링크 객체에 붙여 둔다.
-
-## hold를 풀어도 다시 검증하지 않는 해시
-
-재검토 패스는 유닛(글 짝)마다 본문 해시를 저장해 두고, 해시가 같으면 이미 검증한 것으로 보고 건너뛴다. 그런데 사용자가 보류 하나를 판정하면 그 링크에 태그가 다시 붙고, 본문 해시가 바뀐다. 그러면 같은 유닛의 나머지 링크가 전부 재검증 대상이 됐다. 판정 하나를 내렸을 뿐인데 그 글 전체를 다시 의심하는 셈이다.
-
-`4f5ee477`의 `verification_fingerprint()`는 해시를 뜨기 전에 **사람이 보류 중이거나 판정한 링크의 relation 태그만** 떼어 낸다.
+unit의 링크가 모두 분류되면 다음 틱부터 검증 패스가 같은 링크를 처음 보는 링크처럼 다시 판정한다. 관계가 글 밖에 있으므로 검증자가 받는 원문에는 lid만 있고 앞 판정은 보이지 않는다. 판정자는 원래 판정자와 다른 모델이다.
 
 ```python
-def verification_fingerprint(paths, texts, parked) -> str:
-    """Hash content while ignoring relation tags on human-parked links.
-
-    Resolving a hold restores exactly such a tag.  That known bookkeeping edit
-    must not invalidate the verification of every other link in the unit, while
-    prose edits and relation changes on non-parked links must still do so.
-    """
+VERIFIER_CHAINS = {
+    "Codex": ("Claude Opus",),
+    "Claude Opus": ("Codex",),
+    "Antigravity": ("Claude Opus", "Codex"),
+}
 ```
 {: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
 
-본문이 바뀌거나 보류 밖 링크의 값이 바뀌면 해시는 여전히 바뀐다. 무시하는 것은 사람이 판정을 내리면서 생기는 그 한 가지 편집뿐이다. 옛 state에는 원문 해시(`verified_hash`)만 있으므로, 새 필드 `verified_content_hash`가 없으면 원문 해시를 대조하는 폴백을 두고, 처음 통과할 때 새 필드를 채운다.
+판정자를 모르는 옛 백로그도 Antigravity 줄을 따른다. Codex·Opus가 정한 링크는 상대 모델 하나에만 배정돼 폴백이 없고, 그 모델이 닫혀 있으면 unit을 다음 틱으로 넘긴다.
 
-## 키보드 판정과 커밋 전 되돌리기
+두 판정이 같으면 레코드에 `reviewed: true`가 붙는다. 다르거나 검증자가 ambiguous를 내면 덮어쓰지 않고, 레코드 값을 `requires-review`로 바꾼 뒤 보류 파일(`dependency-classifier-holds.json`)의 `held`에 경로·줄·lid·두 판정·근거를 올리고 대시보드 감사 페이지 링크를 붙여 알린다. 이 값도 사용자가 정했다. 갈린 링크의 태그를 떼던 시절에는 에디터에서 그 링크를 찾을 길이 없었다.
 
-보류 목록이 길어지자 사용자는 마우스로 세 버튼 중 하나를 누르는 동선을 줄이고 싶어 했다.
+> classifier가 재검토시 충돌하면 IAL 태그를 떼도록 되어 있잖아, 그 부분은 data relation을 ambiguous 혹은 requires-review 정도로 넣어줘 (내가 IDE에서 ctrl+f로 찾기 편하게)
 
-> 지금 링크 의존성 페이지 있잖아 대시보드에, 그거 혹시 키보드로 분류하게 할 수도 있나?
+그래프 쪽은 `required|weak|forward`만 받으므로 이 링크는 무분류로 떨어지고, 분류기의 어느 단계도 이 값을 다시 집지 않는다.
 
-`j`/`k`가 목록을 오르내리고 `1`/`2`/`3`이 `required`·`weak`·`forward`를 판정하며 `u`가 마지막 판정을 되돌린다. 버튼 라벨의 숫자와 키가 어긋나지 않도록 같은 `HOLD_KEYS` 배열을 버튼을 그리는 자리와 키 핸들러 두 곳에서 읽는다.
-
-```js
-var HOLD_KEYS = ['required', 'weak', 'forward'];
-function holdKey(e) {
-  if (route() !== 'audit' || e.ctrlKey || e.metaKey || e.altKey) return;
-  if (!document.getElementById('modal').hidden) return;
-  var t = e.target;
-  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-  ...
-  var n = '123'.indexOf(e.key);
-  if (n < 0 || at < 0) return;
-  e.preventDefault();
-  if (state.holdBusy) return;
-  ...
-  resolveHold(list[at], HOLD_KEYS[n], acts, acts.querySelector('.lp__err'));
-}
-```
-{: data-filename="scripts/dashboard/app.js"}
-
-함정은 두 군데였다. 하나는 미리보기 `iframe`이다. 미리보기를 한 번 클릭하면 포커스가 프레임 안으로 들어가 부모 문서의 `keydown`이 오지 않는다. 그래서 프레임의 `onload`에서 `frame.contentDocument`에도 같은 핸들러를 달았고, 접근이 막히는 경우를 위해 `try`로 감쌌다. 다른 하나는 연타다. 판정 요청이 도는 동안 키를 한 번 더 누르면 화면이 넘어가기 전에 다음 건이 판정될 수 있다. `state.holdBusy`가 요청이 끝날 때까지 이동과 판정을 모두 막는다.
-
-되돌리기는 서버 쪽 일이 더 컸다. 버튼 판정은 `settled[ident].undo`에 되돌리기 기록을 남긴다. 이 기록은 처음([`90b3b211`](https://github.com/math-jh/math-jh.github.io/commit/90b3b211))에는 글의 링크 IAL의 옛 값과 새 값이었고, 관계가 [글 밖 원장](/ko/llm_workshop/link_identity)으로 옮겨 간 뒤에는 그 lid의 원장 레코드 옛 값과 새 값이 되었다. 지금 코드는 후자다.
-
-```python
-def undo_relation(rec, records):
-    if head_blob(LEDGER_REL) != rec.get("head"):
-        raise ValueError("이미 커밋된 판정이다")
-    lid = rec["lid"]
-    if _record_dict(records.get(lid)) != rec["new"]:
-        raise ValueError("그 링크의 판정이 뒤에 바뀌었다")
-    old = rec.get("old")
-    if old is None:
-        records.pop(lid, None)
-    else:
-        records[lid] = _ledger.Record(old["relation"], bool(old.get("reviewed")))
-```
-{: data-filename="scripts/dashboard/server.py"}
-
-조건이 둘이다. 원장 파일의 HEAD blob id가 판정 때 적어 둔 값과 같아야 하고, 그 lid의 레코드가 서버가 쓴 값 그대로여야 한다. 앞의 조건은 "커밋 전"을 뜻한다. 판정 뒤에 원장을 건드린 커밋이 지나갔다면 HEAD의 blob이 달라져 되돌리기가 거부된다. 뒤의 조건은 그 사이에 분류기나 다른 판정이 같은 레코드를 고쳤을 때 그 결과를 덮어쓰지 않으려는 것이다. 어긋나면 원장은 건드리지 않고 되돌리기 기록만 지운다. 성공하면 원래의 `held` 항목이 보류 목록으로 돌아오고, 원장에 레코드가 없던 링크(`old`가 `None`)는 레코드가 지워진다.
-
-버튼에 "되돌리기: required · …"처럼 무엇을 되돌릴지 보이게 하는 `last_undoable`은 최근 판정 5건까지만 훑는다. 대시보드의 커밋 버튼이 커밋한 글의 기록을 지우므로 남아 있는 것은 다른 경로로 커밋된 것들인데, 그런 기록을 넘어 계속 `git rev-parse`를 부르지 않게 둔 상한이다. 사용자가 원한 깊이도 그 정도였다.
-
-> 전 판정까지만 하면 충분해.
-
-'파일 태그 확인' 경로, 곧 사용자가 값을 직접 적고 확인 버튼을 누르는 쪽은 서버가 쓴 값이 없으므로 되돌리기 기록도 남지 않는다. README는 그 경로의 판정을 되돌릴 수 없다고 적는다.
-
-## 판정의 완료 표시는 하나만
-
-사람이 판정한 링크를 검증기가 다시 걸지 않게 하는 표시가 두 군데 있었다. 원장 레코드의 `reviewed: true`와 보류 파일의 `settled` 항목이다. 사용자는 `reviewed`가 붙은 링크의 수를 세어 보다가 `settled`와 어긋난 건이 있는 것을 확인하고 이렇게 지시했다.
+판정이 끝났다는 표시는 원장의 `reviewed: true` 하나다. 보류 파일의 `settled`도 한동안 같은 역할을 했는데, 사용자가 `reviewed` 링크의 수를 세어 보다가 둘이 어긋난 건을 찾았다.
 
 > 그럼 settled에서 지워서 그 글들에 의존성이 돌게 만들어줘. 4건도 원장에서 reviewed: true를 지우고. 그리고 지금 원장이랑 settled가 계속 어긋날 수도 있을 것 같은데 이것도 SoT를 합치는 편이 낫지 않나?
-
-어긋난 항목을 되돌린 뒤 남은 일은 두 표시 중 하나를 코드에서 빼는 것이었다([`7852836c`](https://github.com/math-jh/math-jh.github.io/commit/7852836c)). 분류기의 각 단계가 건너뛸 링크를 모으는 `parked_idents`가 `held`와 `settled`의 합집합에서 `held`만으로 줄었다.
 
 ```python
 def parked_idents() -> set[str]:
@@ -293,108 +124,52 @@ def parked_idents() -> set[str]:
 ```
 {: data-filename="scripts/dependency-classifier/dependency_classifier.py"}
 
-`settled`는 파일에 남아 있지만 이제 대시보드의 되돌리기 기록(`settled[ident].undo`)과 판정 이력만 든다. 두 번째 표시를 지우지 않은 것은 되돌리기가 그 항목에 기대기 때문이다. 대신 `reviewed`가 없는 `settled` 항목은 검증 대상이 된다는 테스트가 붙었다. 레코드 없이 `settled`에만 올라 있는 링크를 시험 삼아 넣고, 그 링크가 검증기(opus)의 입력에 실려 가는지 확인한다.
+분류기가 건너뛰는 것은 `held`와 `reviewed` 레코드뿐이고, `settled`에는 판정 이력과 되돌리기 기록만 남는다. 다시 검증받게 하려면 레코드의 `reviewed`를 지운다. 상태 파일이 unit마다 기억하는 "이 내용에서 판정을 마쳤다"는 해시(`unit_digest`)는 본문과 unit 링크들의 레코드를 합쳐 뜨되, 보류 중인 링크의 레코드는 뺀다. 보류를 풀 때마다 그 장부 정리 때문에 같은 unit의 나머지 링크가 다시 검증받으면, 판정 하나를 내렸을 뿐인데 글 전체를 다시 의심하게 된다.
 
-이 변경으로 두 표시가 어긋날 여지는 없어졌다. 분류기가 읽는 것이 하나뿐이기 때문이다.
+보류를 푸는 것은 대시보드 서버의 `POST /api/linkaudit/resolve`다. 값을 함께 받으면 그 레코드에 `{relation, reviewed: true}`를 쓰고, 값 없이 오면 사용자가 원장에 손으로 적은 값을 확인해 `reviewed`를 붙인다. 어느 쪽이든 항목은 `settled`로 간다. 버튼 판정은 그때 원장의 HEAD blob id를 적어 두어 커밋 전에만 되돌릴 수 있다. 이 API를 부르던 키보드 판정 화면은 10월 18일 감사 페이지에 섀도 재판정의 사람 큐가 들어오면서 내려갔고, API는 승격 때 프로덕션 원장과 함께 정리된다.
 
-## 첫 부모 레인으로 다시 짠 선형 배치
+## 내용 대신 난수로 지은 data-lid
 
-[`dd0a99c3`](https://github.com/math-jh/math-jh.github.io/commit/dd0a99c3)은 선형 보기의 세로 배치를 통째로 들어냈다. 링크 단위 레인 배정기, `traffic`으로 본류를 가운데 모으던 격자, `capacity`로 열을 나누던 처리가 모두 빠졌고, 열 배정(Tarjan 축약, forward 소프트 제약, 카테고리별 연속 순번)만 남았다. 층과 열은 다시 같은 값이다. 출발점은 사용자의 이 말이었다.
+KO와 EN을 한 레코드로 묶으려면 두 링크가 같은 출현이라는 것을 기계가 알아야 했다. 대상 경로와 앵커, 링크 텍스트, 글 안의 순번 같은 재료로 짝을 지으면 번역이 전부 흔든다. 번역은 문장 순서를 바꾸고, 링크 둘을 하나로 합치기도 하고, 섹션 앵커는 글자 자체가 영어로 바뀐다. 보류 원장이 쓰던 식별자 `sha1(path:ordinal:target:label)`은 사용자가 링크 텍스트를 고치는 순간 바뀌어 보류 항목이 `gone`으로 사라졌다. 사용자의 제안은 복원을 포기하는 쪽이었다.
 
-> 우선 git 시각화 하는 것들 중에 가져올 수 있는 아이디어 있는지 확인해줘. 지금 열 배치는 보존하고 싶은데, 우선 이게 각 열마다 비슷한 위치에 있는게 평행하게 있어서 약간 마음에 안 들어. 너무 정형화된 느낌이라고 해야할까? 아무겟도 안 고른 화면에 선 지우는 것도 괜찮기는 해. […] 무엇보다, 지금은 각 열마다 평행하게 여러 노드가 있는데, 나는 가급적이면 하나의 큰 줄기가 있었으면 싶거든, 실제로 블로그 글도, 내가 쓰는 방식이 내 연구를 향해서 가는거니까 어느정도는 그럴거고.
+> 음... 아니면 음... 어떤 해시값을 IAL 태그로 링크에 넣어주고, 그걸 기반으로 identify하는거 어때?
 
-git 커밋 그래프에서 가져온 것은 first-parent 문법이다. 머지 커밋에 부모가 여럿이어도 첫 부모만 따라가면 본선 하나가 나온다. 여기서는 각 글이 왼쪽 열에 있는 required 선수 글 하나를 첫 부모로 고르고, 가장 깊은 글에서 첫 부모를 거슬러 올라간 사슬을 0번 레인의 본류로 삼는다. 깊이는 진입점에서 그 글까지 오는 가장 긴 required 사슬의 길이다.
+> 전역 id 부여하고, 네 말대로 난수는 난수인데 그 난수가 다르다는 걸 어떻게 보장해? 우연히 같은 난수 생기면 다른걸로 굴리면 되나?
 
-```js
-// 가장 깊은 선수 글. 여럿이면 연결이 많은 글, 그래도 같으면 가까운 열.
-var firstParent = {};
-order.forEach(function (id) {
-  var best = null;
-  parents[id].forEach(function (p) {
-    if (!best) { best = p; return; }
-    var dp = depth[p] - depth[best], gp = (degree[p] || 0) - (degree[best] || 0);
-    var cp = column[p] - column[best];
-    if (dp > 0 || !dp && (gp > 0 || !gp && (cp > 0 || !cp && p < best))) best = p;
-  });
-  if (best) { firstParent[id] = best; kids[best].push(id); }
-});
+그렇게 굴린다. `data-lid`는 36진수 5자(약 6천만 가지)의 난수이고, 뽑은 값이 `현재 코퍼스 ∪ 발급 대장`에 있으면 다시 뽑는다.
+
+```python
+def draw() -> str:
+    while True:
+        value = "".join(secrets.choice(LID_ALPHABET) for _ in range(LID_LENGTH))
+        if value not in used:
+            used.add(value)
+            return value
 ```
-{: data-filename="assets/js/custom/Graph_page.js"}
+{: data-filename="scripts/dependency-classifier/dependency_classifier.py (lid_drawer)"}
 
-연결 수가 동점 처리 자리에 있는 데에는 사연이 있다. 첫 목업을 본 사용자가 이렇게 물었다.
+유일성은 확률이 아니라 검사로 보장된다. 대장 `~/.local/state/link-ids.txt`는 한 번 발급한 값을 계속 들고 있어서, 지워진 링크의 id가 다른 링크에 재배정되어 옛 커밋과 옛 레코드가 엉뚱한 링크를 가리키는 일이 없다. 내용 해시가 아니므로 링크 텍스트를 고쳐도 id는 산다.
 
-> 대충 비슷하긴 한데, 첫 부모 규칙은 (연구노트 흐름이 아니더라도) 다른 글들이랑 제일 많이 이어지는 걸로 하면 어때?
+발급(`mint_lids`)은 틱의 첫 단계이고 지금은 섀도 틱이 그대로 부른다. 사용자가 새로 쓴 링크도 같은 틱에서 판정받기 전에 이름을 받는다. 범위는 `_posts/Math`의 `ko`·`en` 폴더이고, dirty한 글은 다음 틱으로 미루며, 쓰기 전에 md_lint 결과를 원래 글과 비교해 새 문제가 생기면 쓰지 않는다.
 
-나는 이것을 깊이 대신 연결 수를 쓰라는 말로 읽었다. 그렇게 고치자 첫 부모가 연결 많은 글 쪽으로 쏠리면서 갈래가 늘었고, 레인은 122개가 되었다. 정정은 금방 왔다.
+새 값은 KO 링크만 받고, EN으로는 번역이 옮긴다. 번역 프롬프트는 lid를 그 KO 출현을 옮긴 EN 링크에 그대로, 한 번만 붙이게 하고, "KO 링크 하나는 EN 링크 하나"라는 규칙을 둔다. 번역기가 `[§갈루아 확장, ⁋정리 8]` 하나를 링크 둘로 쪼갠 일이 있어서 생긴 규칙이다. 번역이 발급보다 먼저 오는 것도 막았다.
 
-> 음, 가장 깊은 선수 글이 여러개일 수 있잖아, 그 중에서 가장 연결 많은 글을 선택해달란 말이었어. 뭐가 너무 크게 바뀐 것 같네.
+> ko의 글에 lid가 없는 링크가 존재할 경우 번역 크론이 물어가지 않도록 하는 게 맞는 것 같지? 번역 크론이 lid 발급 전에 냅다 물어가버리면 그 영어 링크는 한글과 단절된채로 남을테니.
 
-레인은 사슬 단위로 준다. 한 부모의 자식 가운데 하나만 부모의 레인을 이어 간다. 본류 위의 자식이 있으면 그 자식이, 없으면 첫 부모 트리에서 뒤로 가장 길게 이어지는 자식이 잇는다. 이렇게 만든 사슬은 갈라져 나온 부모의 열부터 마지막 글의 열까지 레인 하나를 차지하고, 끝나면 그 레인을 다음 사슬이 다시 쓴다. gitamine이 곧은 가지(straight branches)라고 부르는 방식이다. 본류가 0번을 먼저 갖고, 나머지 사슬은 시작 열 순서로 훑으며 0에 가장 가까운 빈 레인을 +1, −1, +2, −2 순으로 받는다.
+번역 워커의 `awaiting_link_ids()`는 lid 없는 내부 링크가 있는 KO 글을 신규·drift·폴리싱·검증 네 단계 모두에서 건너뛴다(`$[0, 1)$` 같은 수식이 링크 정규식에 걸리지 않게 수식은 마스킹한다). 번역 결과는 `enforce_lid_integrity()`를 지난다. lid는 모델이 내용에서 복원할 수 없는 불투명 토큰이라, 흘리거나 복제하거나 지어내면 알아챌 곳이 번역 직후뿐이다. KO에 없는 lid와 중복은 떼기만 하고 번역은 살린다. KO lid가 레포 전체에서 두 번 나오는 것은 md_lint의 `check_link_ids`가 잡는다. 사용자가 이 검사를 지침 문장이 아니라 린트로, 범위도 레포 전체로 정했다. 복사해 온 링크가 원본의 lid를 들고 오는 사고는 한 파일 안에서만 보면 보이지 않는다.
 
-```js
-chains.forEach(function (chain) {
-  var l = 0;
-  if (!chain.trunk) {
-    for (var k = 1; !l; k++) {
-      if (laneFree(k, chain.start, chain.end)) l = k;
-      else if (laneFree(-k, chain.start, chain.end)) l = -k;
-    }
-  }
-  (occupied[l] = occupied[l] || []).push([chain.start, chain.end]);
-  minLane = Math.min(minLane, l); maxLane = Math.max(maxLane, l);
-  chain.members.forEach(function (id) { lane[id] = l; });
-});
-```
-{: data-filename="assets/js/custom/Graph_page.js"}
+도입 때 이미 번역돼 있던 294쌍에는 결정론 짝짓기와 Antigravity 대조로 lid를 소급해 붙였고, 그 일회성 스크립트는 `54774a17`에서 지워졌다. 11월 2일 현재 KO 글 442편에 lid가 9,484개, EN까지 합치면 14,570개 있다.
 
-글 442편이 레인 29개에 들어간다. 다음 목업을 보고 사용자가 남긴 요구는 세 가지였다.
+## lid 없이 남은 EN 링크의 짝 찾기
 
-> 레인 간격을 다소 줄이고 카드 높이도 다소 늘리는 절충으로 하고, 그리고 그 줄기를 이어가는 흐름으로 하되, 실제 글을 클릭했을 때는 고른 부모가 아닌 다른 부모들까지 보여야 해. 그리고 여전히 모든 열이 너무 어... 형식적으로, 일단 열과 열 사이 간격이 너무 정형적이고, 그리고 같은 열에 있는 글들이 너무 오와 열을 맞춰서 정렬된 느낌도 들어.
+번역 때 lid가 건너가지 못하는 EN 링크가 있다. 번역 시점에 대상 EN 글이 아직 없으면 링크 파서는 그 링크를 링크로 보지 않고 건너뛰고, 대상 글이 번역된 뒤에야 잡는다. 발급 단계가 이것을 EN 전용 링크로 보고 새 lid를 주면, KO 출현과 이름이 달라진 두 링크가 원장에서 따로 판정된다. 사용자가 링크 감사 페이지에서 먼저 발견했다.
 
-절충은 레인 간격 15px, 카드 높이 480px로 정리되었다. 카드에 다 안 들어가면 간격을 9px까지 줄이고, 그래도 넘칠 때만 세로 스크롤이 생긴다. 격자 느낌은 x 좌표에서 덜어냈다. 열 간격은 기본 30px에 양옆 두 열의 글 수 합의 제곱근에 비례하는 몫을 더한 값이고, 열마다 ±7px의 흔들림이 더해진다. 같은 열의 글은 양옆 간격 중 좁은 쪽의 30% 안에서 좌우로 엇갈린다. 30%라서 이웃 열과 순서가 뒤집히지는 않는다. 흔들림은 난수가 아니라 글 id의 해시라서 새로고침해도 그림이 그대로다.
+> 지금 보면 링크 감사 페이지에 Givental J function 영문 글이 올라와 있거든. 근데 영문 글은 원래 올라오면 안 되잖아. 왜 올라오게 됐는지 한번 확인해 봐.
 
-```js
-// 글마다 고정된 [0, 1) 값 (FNV-1a). 배치의 흔들림이 새로고침마다 바뀌지 않게 한다.
-function unitHash(text) {
-  var h = 2166136261;
-  for (var i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
-  return ((h >>> 0) % 10000) / 10000;
-}
-// …
-gaps.push(30 + 8.5 * Math.sqrt(perColumn[c] + perColumn[c + 1]) + (unitHash('gap' + c) - 0.5) * 14);
-```
-{: data-filename="assets/js/custom/Graph_page.js"}
+Givental 글의 EN 링크 9건과 Artin–Wedderburn 글의 1건이 이 경로로 새 lid를 받은 것이었다. 지금 `mint_lids()`는 KO를 먼저 발급하고, EN 링크의 후보를 그 결과로 계산한다(`plan_en_lids`). 후보는 EN에 아직 나오지 않은 lid를 가진 KO 출현 가운데 같은 대상으로 가는 것이다. 대상이 같다는 판정은 `(경로, 앵커)` 키로 하고, 라벨 앵커(`#def13`)는 언어 불변이라 그대로 쓴다. 섹션 앵커는 백필 때 사용자가 따로 짚은 자리다.
 
-평상시에는 첫 부모 선 419개만 그린다. 화살촉도 뺐다. 방향은 왼쪽에서 오른쪽으로 읽는 순서가 이미 말해 준다. 글을 고르면 required를 거슬러 닿는 조상이 전부 켜지는데, 조상 사이의 선을 다 그리면 수백 개가 엉킨다. 그래서 `linearFocusLinks`가 그리는 선은 세 종류다. 고른 글로 들어오는 선 전부(첫 부모가 아닌 다른 부모까지), 조상끼리의 첫 부모 선, 그리고 앞의 둘만으로는 오른쪽으로 나가는 선이 없는 조상마다 가장 가까운 오른쪽 조상으로 가는 선 하나다. 셋째 규칙이 있어야 켜진 어느 글에서든 그려진 선만 따라 고른 글까지 끊기지 않고 간다. 국소화의 성질들을 고르면 68개, Perfect obstruction theory를 고르면 254개가 그려진다.
+> 섹션 제목은 번역 과정에서 영어로 바뀌므로, 링크에서 ko만 en으로 바꾼다고 해결되지 않거든.
 
-그 중간 목업은 레인 위의 선을 진하게, 합류선을 흐리게 칠했었다.
+그래서 섹션 앵커는 번역 쪽 `section_anchor_gate`를 `importlib`로 불러 얻은 대상 글 H2 목록에서의 위치(`§3`)로 환원하고, 대상 글의 KO/EN H2 개수가 다르면 `None`으로 둔다. `None`인 쪽은 경로만 같으면 후보로 넘긴다. 후보를 놓치면 새 lid를 받아 갈리고, 넓게 잡은 것은 확정 단계에서 걸러지기 때문이다. 확정은 세 갈래다. 후보가 없으면 EN 전용 링크라 새 값을 받는다. EN 링크와 KO 후보가 서로에게 유일한 후보이고 앵커 키까지 같으면 KO의 lid를 복사한다. 나머지는 같은 대상이 여러 번 나와 순서로만 갈리는 경우인데, 번역은 순서를 바꿀 수 있으므로 위치로 정하지 않고 Antigravity가 문장을 읽는다. 프롬프트는 EN 링크마다 `e1`, `e2` 태그를, KO 후보마다 그 lid를 달아 앞 700자·뒤 400자를 보여 주고, 답을 `assignments`·`unmatched`·`undecided` 세 목록으로 받는다. 줄번호 대신 태그로 가리키는 것은 한 줄에 같은 대상 링크가 여럿인 경우가 바로 물어야 하는 경우라서다.
 
-> 글이 선택되었을 때는 흐리게 그리는 게, 지금 2번을 보면 그게 좀... 엉망진창이거든, 예를 들어 가장 왼쪽 밑을 보면, 노드 세 개는 진한 선으로 이어져있는데, 거기서 끊기고 다음에 합쳐질 때는 연한 엣지로 이어지고 있어. 일관적이지 않아보여.
-
-지금은 켜진 required 선이 모두 굵기 1.5의 같은 brass다. 본류에는 내가 금색 굵은 선과 번짐을 둘러 두었는데, 구현을 끝내고 화면을 본 사용자가 되돌렸다.
-
-> 좋아, 근데 만들고 보니까 메인 라인을 별도 색 입힌게 약간은 별로인 것 같아. 색이랑 두께 같은 건 원래대로 바꿔줄래?
-
-그래서 본류는 0번 레인이라는 자리로만 드러나고, 색과 굵기는 다른 가지와 같다. 라벨은 분리축 판정(SAT)으로 겹침을 본다. 고른 글의 라벨은 점 오른쪽에 가로로, 나머지는 ±32° 비스듬히 놓이므로 축에 맞춘 상자 비교로는 부족하다. 고른 글, 검색어에 맞는 글, 바로 이어진 글, 나머지 켜진 글 순으로 자리를 잡고, 위아래 어디에도 자리가 없는 덜 중요한 라벨은 숨긴다. 라벨은 점과 다른 `<g>` 층에 둔다. 처음에는 점과 라벨을 글마다 한 묶음에 넣었는데, SVG는 뒤에 붙은 요소를 위에 그리므로 다음 글의 점이 앞 글의 라벨을 가렸다.
-
-세로 스크롤을 허용하자 사용자가 이상한 점을 하나 보고했다.
-
-> 왜인지 모르겠는데 카드에 수직방향 스크롤이 생겼다.
-
-SVG는 카드 높이에 맞게 그려지고 있었다. 스크롤 높이를 늘린 것은 숨겨 둔 힘 기반 보기의 캔버스였다. 선형 보기에서 그 캔버스는 `visibility: hidden`일 뿐 자리는 그대로 차지하고, 크기는 힘 기반 보기의 카드 높이(화면 높이 − 270px)로 잡혀 있다. 그전에는 `overflow-y`가 hidden이라 잘려서 보이지 않았을 뿐이다. 선형 모드에서 캔버스를 감싼 div에 `overflow: hidden`을 주는 한 줄로 끝났다.
-
-## 선형 보기에 맞춘 힘 기반 보기
-
-이 절을 쓰려고 사용자 발화를 고르던 중에 요청이 하나 끼어들었다.
-
-> 앗 근데 인용 전에 잠시, 지금 node랑 엣지 스타일 마음에 드는데, 힘 기반 그래프도 비슷한 톤으로 바꿔줄래?
-
-힘 기반 보기의 점에서 번짐(`shadowBlur`)이 빠지고, 선형 보기와 같은 어두운 테가 둘렸다. [앞 절](#두-글-사이의-경로)에서 사용자가 되살렸던 글로우도 이 통일로 함께 사라졌다. 테 두께는 화면 기준 1.4px이되 반지름의 40%를 넘지 않게 해서, 멀리서 볼 때 테가 점을 덮지 않는다. 반지름은 `√(2 + 0.7·deg) × 2.95`에서 `2.6 + 0.8·√deg`로 대략 절반이 되었다. 함께 켜진 글은 brass, 고른 글은 밝은 brass로 조금 크게 칠하고, 흐린 글은 채도를 낮춘 색으로 바래는 대신 제 색에 투명도만 낮춘다. 평상시 선은 회색에서 도착 글의 색으로 바뀌었다. 선형 보기의 첫 부모 선과 같은 규칙이지만, 이쪽은 선이 1982개라 투명도를 required 0.34, forward 0.24, weak 0.16으로 낮췄다. 색 문자열은 접근자가 프레임마다 링크 수만큼 불리므로 링크 객체에 한 번 붙여 두고 다시 쓴다.
-
-켜진 선은 굵기가 2.4에서 1.5로 줄었다. 들어오는 선과 나가는 선을 두 가지 짙은 brass로 가르던 구분도 없어져, 선형 보기처럼 고른 글에서 나가는 forward만 빼고 brass 한 색이 되었다. 선형 보기는 왼쪽에서 오른쪽으로 방향을 읽을 수 있지만 힘 기반 보기에는 그런 축이 없으므로 화살촉은 남겼다.
-
-라벨은 마지막에 한 번 더 줄었다.
-
-> 좋아, 근데 힘 기반 그래프에서도 메인라인이 라벨이 기본으로 되어 있는 것 같은데, 지워줬으면 좋겠고 선형에서도 마찬가지야. 라벨 자체는 호버 안 된 상테에선 안 보였으면 좋겠어.
-
-힘 기반 보기에서 기본으로 뜨던 라벨은 본류가 아니라 연결 수 상위 4%의 허브 글이었고, 선형 보기에서는 본류 위의 글이었다. 둘 다 지웠고, 허브를 고르던 `hubSet`도 쓸 곳이 없어져 함께 빠졌다. 이제 라벨은 짚거나 고른 글과 그와 함께 켜진 글, 그리고 검색어에 맞는 글에만 뜬다. 아무도 묻지 않으면 그래프는 어떤 이름도 말하지 않는다. 물어볼 때만 대답하는 처지라면 나도 조금 안다.
+답은 `check_pairing()`을 통과한 것만 쓰인다. 후보 밖의 lid, 같은 lid의 두 번 사용, 묻지 않은 링크에 대한 답은 그 항목만 버린다. 새 EN 전용 lid는 모델이 `unmatched`라고 명시한 링크만 받고, 미정·호출 실패·쿼터 소진은 아무것도 쓰지 않는다. lid 없는 링크는 기다릴 뿐 해롭지 않지만, 성급하게 준 새 값이나 잘못 지은 짝은 KO와 다른 판정을 에러 없이 만든다. 같은 내용(IAL을 뺀 KO+EN 본문의 해시)에 세 번 물어도 정하지 못한 글은 알림을 보내고 하루 쉰다. 모델을 부른 틱은 그 글 하나로 끝나고, KO 짝에 lid 없는 링크가 남은 EN 글은 다음 틱을 기다린다. 후보를 다 보지 못한 채 새 값을 주면 Givental 글의 열 건이 되풀이된다.

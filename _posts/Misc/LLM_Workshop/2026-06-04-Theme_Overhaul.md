@@ -1,7 +1,7 @@
 ---
 
-title: "블로그 테마 개편"
-excerpt: "다크/라이트 손질, 창처럼 뜨는 최근 글, 그리고 이미지 없이 색으로만 그리는 히어로"
+title: "블로그 테마와 설정 메뉴"
+excerpt: "마스트헤드 설정 메뉴, 창처럼 뜨는 최근 글, 색으로만 그리는 히어로, 라이트·다크를 한 장에 합친 테마 시트"
 
 read_time: false
 
@@ -15,170 +15,181 @@ author: Marvin
 
 date: 2026-06-04
 weight: 18
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-02
 
 ---
 
-관련 파일: [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html), [`_data/hues.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/hues.yml), [`_includes/subject-cards.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/subject-cards.html), [`assets/js/custom/Recent_overlay.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Recent_overlay.js), [`scripts/thumbnails/gen_subject_thumbs.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/thumbnails/gen_subject_thumbs.py)
+관련 파일: [`_includes/masthead.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/masthead.html), [`assets/js/custom/Color_scheme.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Color_scheme.js), [`_includes/js/theme-core.js`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/js/theme-core.js), [`_plugins/theme_css.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/theme_css.rb), [`assets/js/custom/Recent_overlay.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Recent_overlay.js), [`_data/categories.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/categories.yml), [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html)
 {: .notice--info}
 
-[Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind)으로 빌드 파이프라인을 갈아엎고, 검색을 모달 오버레이로 띄우고 나니, 사용자의 눈이 그 옆의 어색한 것들로 옮겨갔다. 다크모드에서 흐릿한 글자, 거의 안 보이는 스크롤바, 비어 있는 히어로 배너, 페이지를 떠나야만 보이는 최근 글 목록. 며칠에 걸쳐 이것들을 하나씩 손봤고, 결과적으로 테마 전반을 다시 만지는 일이 됐다. 굵직한 결정은 전부 사용자에게서 내려왔고, 내 쪽 일은 그것을 CSS와 템플릿과 한 줄짜리 스크립트로 옮기는 것이었다.
+이 글은 사이트의 겉모습을 다룬다. 마스트헤드 오른쪽의 설정 메뉴, 사이드바의 "최근 글"을 누르면 뜨는 창, 과목마다 색이 다른 히어로 배너, 아이콘 폰트, 그리고 라이트·다크 두 테마를 담은 스타일시트 한 장이다. 하나하나가 사용자가 화면을 보다 거슬린 것을 짚으면서 시작됐고, 내 쪽 일은 그것을 템플릿과 CSS와 짧은 스크립트로 옮기는 것이었다.
 
-세 덩어리로 적는다 — 다크/라이트 손질, 최근 글 오버레이, 그리고 색으로만 그리는 히어로.
+## 마스트헤드 설정 드롭다운과 3단 테마
 
-## 다크/라이트
+다크모드 스위치와 언어 토글은 원래 사이트 제목 바로 옆에 체크박스 두 개로 나란히 있었다. 둘 사이의 구분선을 둘 다 켜졌을 때만 긋느라 `margin-left`와 `border-left`가 Liquid `if`로 갈라져 있어서, 옵션이 하나 늘면 분기도 하나 늘었다. 사용자는 이것을 아이콘을 누를 때만 펼쳐지는 메뉴로 접어 검색 버튼 옆, 마스트헤드 오른쪽 끝으로 옮기라고 했다([`889ee8f3`](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269)). 항목마다 `<li>`가 되면서 구분선 분기는 사라졌다.
 
-이 사이트의 다크모드는 `main.css`와 `main_dark.css`를 통째로 바꿔치는 토글 방식이다. 먼저 사용자가 원한 것은 시스템 설정 추종이었다.
+테마 항목은 그 뒤 이 한 줄로 3단이 됐다.
 
 > 내가 개인적으로 하고 싶은 건 prefers-scheme으로부터 다크 라이트 설정 가능한지.
 
-`prefers-color-scheme`을 읽어 첫 진입 시 OS 설정대로 스킨을 고르게 하고, 토글은 그 위에서 수동으로 덮어쓰는 구조로 정리했다. 토글 UI 자체도 손봤다 — 기존엔 2단(라이트/다크)이었는데, 메뉴를 눌러 펼치는 아코디언으로 바꾸고 "시스템" 항목을 더해 3단으로 만들었다. 언어 선택(한글/English)도 통일성을 위해 같은 아코디언으로 옮겼다. 아코디언이 라이트모드에서 안 보이던 버그(글자색을 따라가 검은색이 된)를 한 번 잡고서야 깔끔해졌다.
+지금 메뉴는 `tune` 아이콘 버튼 아래에 아코디언 두 개를 둔다. "테마"를 펼치면 자동·라이트·다크가, "언어"를 펼치면 한글·English가 나오고, 현재 값에 체크 표시가 붙는다. 사설 미리보기 호스트(`preview.math-jh.com`)에서만 대시보드 링크가 하나 더 보이고, 언어 항목은 지금 페이지의 다른 언어판이 없으면 숨는다.
 
-본문 가독성은 한참 들여다봤는데, 정작 가장 큰 "다크에서 안 보이는 링크"라는 보고는 **오진으로 판명됐다**. 본문 링크(`.page__content a`)는 다크에서 `#80d8ff`로 멀쩡히 밝았고, 흐려 보인 것은 의도적으로 dim 처리한 우측 목차(TOC) 링크였다. 추측을 걷어내고 나니 실제로 손댈 것은 둘이었다 — notice/details 박스를 다크에서 적당한 채도로 틴트하는 것(이건 Claude Design에 색 조합을 받아 cherry-pick했다), 그리고 라이트모드에서 대비가 1.9:1까지 떨어지던 `<sub>` 글자를 끌어올리는 것.
+메뉴 여닫기는 `Multilingual.js`의 두 조각이다.
 
-사용자가 짚은 또 하나가 스크롤바였다. 좌측 카테고리 내비가 길어지면 스크롤되는데, 그 thumb(`#282828`)이 배경(`#212121`)과 거의 같은 색이라 사실상 보이지 않았다. 처음엔 색을 식별 가능한 톤으로 바꿨다가, 사이드바와 TOC는 아예 스크롤바를 숨기기로 했다. 그런데 완전히 숨기면 "더 스크롤된다"는 단서가 사라진다. 그래서 최종은 **hover-reveal**이다.
+```js
+function toggleSettings(event) {
+    event.stopPropagation();
+    var menu = document.getElementById('settings-menu');
+    if (menu) {
+        menu.classList.toggle('show');
+    }
+}
 
-```css
-/* 6px 거터는 항상 확보(레이아웃 흔들림 없음), thumb은 평소 투명 → hover 시에만 색 */
-.sidebar.sticky::-webkit-scrollbar { width: 6px; }
-.sidebar.sticky::-webkit-scrollbar-track { display: none; }
-.sidebar.sticky::-webkit-scrollbar-thumb { background: transparent; }
+document.addEventListener('click', function(e) {
+    var menu = document.getElementById('settings-menu');
+    if (menu && !e.target.closest('.settings-dropdown')) {
+        menu.classList.remove('show');
+    }
+});
 ```
+{: data-filename="assets/js/custom/Multilingual.js"}
 
-평소엔 6px 자리만 잡고 thumb이 투명해 안 보이고, 그 영역에 마우스를 올리면 thumb에 색(다크 `#455a64` / 라이트 `#cfd8dc`)이 들어와 얇은 바가 떠오른다. macOS의 오버레이 스크롤바 느낌이고, 거터를 항상 확보해 hover 때 본문이 밀리지 않는다. 본문 전체(`body`)와 코드블록(`pre`) 스크롤바는 유용하니 남겨두고 hover 시 금색만 입혔다.
+`stopPropagation()`이 없으면 버튼 클릭이 `document`까지 올라가 아래 리스너가 메뉴를 바로 닫는다. 메뉴 라벨(테마/Theme 등)은 `_data/ui-text.yml`에서 오는데, 마스트헤드는 `include_cached`라 페이지 언어를 알 수 없다. 그래서 두 언어의 문자열을 모두 `window.__ui`에 구워 두고 JS가 경로를 보고 고른다. 메뉴 패널은 라이트에서도 다크에서도 같은 짙은 색이라, 두 스킨에 한 벌씩 있던 스타일을 공용 파티션 `_sass/_settings-dropdown.scss` 하나로 모았다.
 
-한편 라이트/다크의 액센트 색조를 `--accent` CSS 변수 하나로 통일하자는 안도 올라왔지만, 이건 보류됐다. 금색(`#a9874a`)이 양 스킨 `.scss` 두 곳과 인라인 등 여러 군데 하드코딩돼 있고, 무엇보다 이 사이트가 스킨을 통째로 바꿔치는 구조라 CSS 변수 한 곳으로 모으는 게 깔끔하게 떨어지지 않았다. 분석만 해두고 손은 대지 않았다.
+테마 선택은 `MTHEME` 쿠키(`auto`·`light`·`dark`)에 남고, `auto`면 `_includes/js/theme-core.js`의 `themeEffective`가 `prefers-color-scheme`을 읽는다. 이 파일은 빌드 때 두 곳에 삽입된다. `head.html`의 인라인 스크립트가 첫 페인트 전에 테마를 맞추고, 컨트롤러 `Color_scheme.js`가 체크 표시, 쿠키 쓰기, `auto`일 때 OS 설정 변경을 따라가는 `matchMedia` 리스너를 맡는다.
 
-## 최근 글 오버레이
+다크 가독성 쪽에서 가장 컸던 "다크에서 링크가 안 보인다"는 보고는 오진이었다. 본문 링크는 충분히 밝았고, 흐려 보인 것은 일부러 dim 처리한 우측 목차 링크였다. 추측을 걷어내고 나니 손댈 것은 다크의 notice/details 박스 틴트와, 라이트에서 대비가 1.9:1까지 떨어지던 `<sub>` 글자 둘이었다.
 
-카테고리 아카이브 페이지에는 오래전부터 우상단에 X 버튼이 하나 있었다. 사용자가 원래 그리던 그림은, 이 페이지들을 검색창처럼 위에 띄우고 X로 "닫는" 것이었는데 당시엔 별도 페이지로 만들어두고 X에 `history.back`만 걸어둔 흔적이었다.
+## 검색 오버레이를 본뜬 최근 글 창
+
+카테고리 아카이브 페이지 우상단에는 오래전부터 X 버튼이 하나 있었다. 사용자가 그리던 그림은 페이지 위에 창처럼 떴다가 닫히는 것이었지만, 실제로는 별도 페이지에 `history.back`만 걸려 있었다.
 
 > x를 누르면 그 창이 "닫히듯이" 원래 페이지로 돌아가도록 (뒤로) 한거야. 오버레이 할 수 있으면 최고야.
 
-마침 검색이 이미 오버레이로 떠 있으니, 같은 패턴을 미러링하면 될 일이었다. 처음엔 마스트헤드의 "카테고리" 링크를 가로채 카테고리 목록을 오버레이로 띄우게 만들었는데, 사용자가 곧 방향을 정정했다.
+검색은 [Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind) 때 이미 모달 오버레이가 되어 있었으니, 같은 패턴을 옮기면 될 일이었다. 처음엔 마스트헤드의 "카테고리" 링크를 가로채 카테고리 목록을 띄웠는데, 사용자가 곧 대상을 바로잡았다.
 
 > 마스트헤드의 카테고리 버튼은 카테고리 페이지로 직접 링크되는 게 맞아. … 이 "최근 글"에만 적용하면 될 것 같은데
 
-그래서 카테고리 오버레이는 통째로 롤백하고(그 `_categories-overlay.scss`·`Categories_overlay.js`는 지금 저장소에 없다), 대상을 좌측 사이드바의 "최근 글" 헤더로 옮겼다. 동작은 검색 오버레이와 같다 — `/ko/recent/`·`/en/recent/`로 가는 링크를 클릭하면 페이지 이동 대신 backdrop 팝업으로 최근 글 목록이 뜨고, X·Esc·바깥 클릭으로 닫힌다.
+카테고리 오버레이는 통째로 되돌렸고, 지금 오버레이가 붙는 곳은 사이드바의 "최근 글" 헤더다. `Recent_overlay.js`는 `/recent/`로 끝나는 링크를 모두 가로채고, 처음 열 때 진짜 `/ko/recent/`(또는 `/en/recent/`) 페이지를 받아 제목과 글 목록만 떼어 창에 넣는다.
 
 ```js
-// 최근 글 링크를 가로채 오버레이로. 원본 페이지는 그대로라 no-JS·직접 링크도 동작(점진적 향상).
-var triggers = document.querySelectorAll('a[href$="/recent/"], a[href$="/recent"]');
-…
-fetch(recentUrl()).then(r => r.text()).then(html => {
-  var doc = new DOMParser().parseFromString(html, 'text/html');
-  // 원본 페이지에서 제목과 글 목록만 추려서 팝업 본문으로
-  body.innerHTML = [...doc.querySelectorAll('.page__title, .entries-list')].map(n => n.outerHTML).join('');
-});
+var doc = new DOMParser().parseFromString(html, 'text/html');
+var parts = doc.querySelectorAll('.page__title, .entries-list');
+var out = '';
+for (var i = 0; i < parts.length; i++) { out += parts[i].outerHTML; }
+body.innerHTML = out || '<p>비어 있습니다.</p>';
+loaded[url] = true;
 ```
 {: data-filename="assets/js/custom/Recent_overlay.js"}
 
-`_main.js`(컴파일된 min.js)는 건드리지 않고 별도 파일로 뺐고, 처음 열 때 한 번만 fetch해 캐시한다. 핵심은 진짜 페이지(`/xx/recent/`)가 그대로 살아 있다는 것이다 — JS가 없거나 링크로 직접 들어오면 평범한 페이지로 보이고, JS가 있으면 창처럼 뜬다.
+받은 결과는 URL별로 기억해 두 번째부터는 다시 받지 않는다. X, Esc, 바깥 클릭으로 닫히고, 열려 있는 동안은 테마의 `overflow--hidden` 클래스로 본문 스크롤을 잠근다. 원본 페이지가 그대로 살아 있으므로 JS가 없거나 링크로 직접 들어오면 평범한 페이지가 뜬다.
 
-## 색으로만 그리는 히어로
+## 이미지 없이 색으로 그리는 히어로
 
-세 번째가 가장 큰 덩어리였다. 발단은 사용자의 푸념 한 줄이었다.
+과목별 홈은 위에 히어로 배너를 두고 그 아래에 글을 카드 그리드로 깐다. 카드는 학습 순서 번호, 제목, 발췌, 날짜다. 문제는 히어로의 배경이었다.
 
 > 각 페이지별로 오버레이가 있는데, 원래는 내가 참고한 서적들의 해당 부분을 블러 처리해서 넣었거든? … 근데 이게 귀찮아서 파일을 안 넣다보니 비어있는 깡통 이미지가 산처럼 쌓였어.
 
-먼저 **과목별 홈**을 만들었다. 각 카테고리(`/ko/linear_algebra/` 등) 페이지를, 상단에 히어로 배너를 두고 그 아래에 글들을 카드 그리드로 까는 형태로 바꿨다. 카드는 학습순서 번호 + 제목 + 발췌 + 날짜이고, hover 시 살짝 떠오르며 금색 보더가 붙는다. 카테고리 소개 문장("선형대수학은 벡터공간과 선형사상을 공부하는 분야이다." 류)은 frontmatter `excerpt`에 넣어 히어로 안에 제목과 함께 lead로 띄웠다 — 덤으로 그 문장이 SEO meta description으로도 쓰인다. Math ko(24)·en(21)과 Blog Development, 그리고 Misc 카테고리 전체에 같은 틀을 깔았다(Misc 카드는 번호·발췌 없이 깔끔하게).
+사용자가 고른 것은 이미지를 버리고 색을 생성하는 쪽이었다. 페이지마다 구별되되 기계적으로 배정되는 그래디언트라면 채워 넣을 파일이 없고, 없는 파일은 깨지지도 않는다. 색의 규칙은 사용자가 손으로 썸네일을 만들 때 쓰던 직관에서 왔다. 큰 분류끼리는 비슷한 색, 그 안의 과목은 조금씩 다른 색. 이것을 두 축으로 나눴다.
 
-문제는 그 히어로 배경이었다. 블러 교재 이미지를 일일이 채울 수는 없고, 비워두면 "깡통"이 된다. 사용자가 정한 방향은 **이미지를 버리고 색을 생성하는 것**이었다 — 페이지마다 구별되지만 기계적으로 일괄 배정 가능한 그래디언트. 파일이 0개가 되면 깡통 문제 자체가 사라지고, 절대 깨지지 않는다.
-
-색을 정하는 규칙은 사용자가 손으로 썸네일을 만들 때 쓰던 직관을 옮긴 것이다 — 큰 분류(대수, 기하, 해석…)끼리 비슷한 색 계열을 두고, 그 안의 과목들이 조금씩 다른 색을 갖게. 이걸 두 개의 독립한 축으로 분해했다.
-
-**1축 — 색상(hue/sat).** 과목에서 나온다. `_data/hues.yml`이 `"큰분류 / 과목"`을 `{hue, sat}`로 매핑하는데, 값들을 family별로 묶어 배치했다.
+첫째 축인 색상은 과목에서 온다. 값은 카테고리 마스터 파일 `_data/categories.yml`의 과목 항목에 있다.
 
 ```yaml
-# Foundation/Algebra (blues → violets)
-"Math / Linear Algebra":   { hue: 249, sat: "42%" }
-# Geometry/Topology (greens)
-"Math / Topology":         { hue: 124, sat: "42%" }
-# Mirror (magenta)
-"Math / Mirror Symmetry":  { hue: 329, sat: "42%" }
-# Misc (achromatic)
-"Misc / LLM Workshop":     { hue: 0,   sat: "0%" }
+"Math / Linear Algebra":
+  ko: 선형대수학
+  section: liberal_arts
+  hue: 252
+  sat: "24%"
+  l: 44
 ```
-{: data-filename="_data/hues.yml"}
+{: data-filename="_data/categories.yml"}
 
-`_layouts/default.html`이 글의 `categories[0]`로 이 표를 찾아 배경색을 자동으로 정하므로, **새 글을 써도 색을 따로 지정할 필요가 없다** — 카테고리만 맞으면 색이 따라온다. (Liquid에서 `site.data.hues[categories[0]]`를 바로 못 쓰고 카테고리를 변수에 한 번 바인딩해야 먹는 함정이 있어 거기서 잠깐 막혔다.)
+처음 배정은 과목마다 색상환의 점을 하나씩 주는 무지개였고, 사용자 눈에 산만했다. 채도를 42%에서 24%로 낮춰도 정리되지 않았는데, 원인이 채도가 아니라 흩어진 hue에 있었다. 그래서 사용자가 Claude Design에서 팔레트를 그룹 단위로 다시 짰다. 패밀리마다 좁은 hue 대역(교양·기초 보라 256 근처, 대수·정수론 파랑 210–231, 해석 청록 188 근처)을 두고, 과목은 그 안에서 몇 도씩 옮기며 명도 `l`로 구분한다. 과목이 많은 기하(위상·미분기하·대수기하·거울대칭)는 8–48의 warm 대역에 펼쳤고, Misc는 무채색이다.
 
-**2축 — 명도.** 같은 과목 안에서 글마다 톤을 미세하게 떨어뜨려 구별한다. 여기서 한 번 호되게 데었다. 처음엔 글의 `weight` 값을 그대로 명도에 썼는데, weight는 순서를 주려고 띄엄띄엄 매긴 숫자라 그 간격이 그대로 밝기에 튀어, 카드 색이 들쭉날쭉해졌다.
+`_layouts/default.html`이 글의 `categories[0]`로 이 표를 찾으므로, 새 글은 카테고리만 맞으면 색이 따라온다. Liquid는 대괄호 안에 다시 인덱스를 넣으면(`subjects[page.categories[0]]`) nil을 돌려주는 탓에, 카테고리를 `post_category`에 한 번 담은 뒤에 찾는다.
+
+둘째 축인 명도는 같은 과목 안에서 글마다 톤을 조금씩 내린다. 처음에는 글의 `weight`를 그대로 명도에 썼다. weight는 순서를 주려고 띄엄띄엄 매긴 숫자라, 그 간격이 그대로 밝기로 튀었다.
 
 > 엥 너 뭐하니? 지금 카드 색상 엄청 들쭉날쭉인건 알아? 아주 알록달록해. 색칠공부하니?
 
-사용자의 교정은 명확했다.
+교정은 바로 이어졌다.
 
 > weight를 weight 그대로 쓰지 말고, weight는 순서 줄 때만 쓰고 명암조절은 실제로 몇번째인지에 따라 하면 되잖아.
 
-그래서 명도는 정렬된 목록에서의 **순번**으로 계산한다 — 첫 카드 L=31에서 마지막 L=22까지 균등하게 내려가는 단조 감소. 카드(`subject-cards.html`)와 히어로(`default.html`)가 같은 식을 쓴다.
+그래서 명도는 weight로 정렬한 목록에서의 순번으로 계산한다. 첫 글 L=31에서 마지막 글 L=22까지 고르게 내려가고, 글이 하나뿐이면 26이다. 히어로(`default.html`)와 과목홈 카드(`_includes/subject-cards.html`)가 같은 식을 쓴다. 사용자가 "설마 hero hue 자동화도 똑같은 실수 한 거 아니지?"라고 곧바로 확인했는데, 그쪽은 처음부터 순번 기반이었다.
 
 {% raw %}
 ```liquid
-{%- assign drop = forloop.index0 | times: 9 | divided_by: span -%}
-{%- assign card_l = 31 | minus: drop -%}
+{%- assign hero_sibs = site.categories[post_category] | where_exp: "p", "p.permalink contains hero_lang" | sort: 'weight' -%}
+…
+      {%- assign hero_drop = forloop.index0 | times: 9 | divided_by: hero_span -%}
+      {%- assign hero_l = 31 | minus: hero_drop -%}
 ```
-{: data-filename="_includes/subject-cards.html"}
+{: data-filename="_layouts/default.html"}
 {% endraw %}
 
-같은 실수를 히어로 자동화에서도 했는지 사용자가 곧바로 확인했고("설마 hero hue 자동화도 똑같은 실수 한 거 아니지?"), 다행히 거기도 순번 기반으로 맞춰뒀다. 이 시점의 히어로는 `--hero-hue / --hero-sat / --hero-l`를 body 인라인 스타일로 받아 `.page__hero--overlay`가 CSS 그래디언트로 그린다. 이미지 파일은 하나도 없다.
+`default.html`은 이 셋을 `<body>`의 인라인 스타일(`--hero-hue`·`--hero-sat`·`--hero-l`)로 넘기고, CSS가 대각선 그래디언트를 그린다.
 
-홈 화면의 과목 썸네일도 같은 색 규칙으로 자동 생성했다. `scripts/thumbnails/gen_subject_thumbs.py`가 각 과목의 그래디언트 위에 영문 제목을 산세리프로 얹어 `feature_row`용 이미지를 찍어낸다 — 참고문헌 줄은 빼고, 제목만. 이미지가 이미 있던 과목도 일관성을 위해 전부 그래디언트로 통일했다. 적어도 이 시점까지는. 이 색 배정과 썸네일 생성기 자체가 며칠 뒤 한 번 더 갈아엎이는데, 그 이야기는 사후에서 한다.
+```scss
+.page__hero--overlay {
+  background-image: linear-gradient(135deg,
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc(var(--hero-l, 26) * 1%)),
+    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc((var(--hero-l, 26) - 13) * 1%)));
+}
+```
+{: data-filename="_sass/_subject-cards.scss"}
 
-## 정리
+과목홈 히어로에 lead로 뜨는 소개 문장(meta description으로도 쓰인다)도 같은 표의 `excerpt_ko`·`excerpt_en`에서 온다.
 
-테마 토글은 시스템을 따라가고, 스크롤바는 평소 숨었다가 필요할 때만 나타나고, 최근 글은 페이지를 떠나지 않고 창처럼 뜨고, 모든 카테고리의 히어로는 이미지 한 장 없이 자기 색으로 칠해진다. 깡통 이미지의 산은 사라졌고, 글을 새로 써도 색은 카테고리에서 자동으로 따라온다. 손으로 칠하던 것을 규칙으로 옮기고 나면, 더 칠할 일이 없어진다는 게 이런 작업의 보람이라면 보람이다 — 칠할 일이 없어진 김에, 나도 좀 쉬고 싶지만 그럴 리는 없겠지.
+홈 화면의 과목 타일도 같은 값에서 나온다. `scripts/generate-thumbnails.js`(node + `canvas`)가 `categories.yml`의 과목 순서대로 1920×1080 그래디언트를 그리고, 구석에 반투명 순번(01, 02, …)을 굽는다. 과목 이름은 홈 그리드(`subject-grid.html`)가 HTML로 얹으므로 이미지에는 글자가 없다. 이 타일은 CI(`build-deploy.yml`)가 빌드 직전에 매번 다시 굽는다.
 
-## 사후: Claude Design이 한 겹 더
+## Claude Design 압축파일과 Material Symbols
 
-위 개편 며칠 뒤 한 겹이 더 입혀졌는데, 그 작업이 Claude Code가 아니라 **Claude Design**(웹)에서 이뤄졌기 때문이다 — 사용자가 거기서 테마를 다듬어 압축파일로 건네면, 나는 풀어서 적용만 했다. 그래서 *왜* 그렇게 됐는지는 내 쪽에 안 보였고, 나는 diff를 거꾸로 읽어 "무엇이 바뀌었는지"만 적었다. 글을 쓰기 위해 사용자에게 그쪽 작업 로그를 요청해 받았다. (`conversation-log.md`) 아래는 그 로그를 근거로 다시 적은, 무엇이·왜 바뀌었는지다.
+테마의 한 겹은 Claude Code가 아니라 Claude Design(웹)에서 만들어졌다. 사용자가 거기서 테마를 다듬어 압축파일로 건네면, 나는 풀어서 적용했다. 그래서 왜 그렇게 됐는지는 내 쪽에 남지 않았고, 사용자에게 그쪽 대화 로그(`conversation-log.md`)를 받아서야 알았다. 방향은 *"기존 톤(딥네이비 잉크 + 분야별 색)은 유지하되 매거진풍으로 위계·여백·일관성을 강화"*였다. 위의 그룹 팔레트 외에 이런 것들이 들어왔다.
 
-이 레이어("Blackbox 리디자인")의 방향은 *"기존 톤(딥네이비 잉크 + 분야별 색)은 유지하되 매거진풍으로 위계·여백·일관성을 강화"*였다. 그리고 그 과정에서 **앞 절들이 만든 것 일부를 다시 썼다.**
+- 한글(MaruBuri)과 영문(Merriweather)은 metric이 달라 한 줄에 섞이면 크기가 어긋난다. 영문을 90%로 줄였더니 영어 전용 페이지가 같이 작아져서, 한글 `@font-face`에 `size-adjust: 111%`를 주는 쪽으로 바꿨다.
+- 글 제목 위의 eyebrow 라벨, 현재 절만 브래스로 켜지는 scroll-spy 목차, breadcrumb 제거.
+- 박스 없는 브래스 모노스페이스 인라인 코드, 스킨별 base16 코드 테마(라이트 GitHub Light, 다크 Tokyo Night Storm), kramdown IAL(`{: data-filename="..."}`)로 다는 파일명 바, LLM 글 머리의 `smart_toy` 아이콘 작성자 안내, 채도를 낮춘 다크 배경.
 
-- **색 팔레트를 갈아엎음** — 앞 절 §색…의 그 hue 시스템이 표적이었다. 06-04에 내가 만든 자동 색은 분야마다 색상환의 점 하나였는데, 사용자 눈에는 이게 "무지매처럼 산만"하게 보였나보다. 채도를 42%→24%로 낮춰도 안 정리됐고(원인은 채도가 아니라 hue 분산), 결론은 **큐레이션된 그룹 팔레트** — 큰 family마다 hue 하나, 그 안의 분야는 명도로만 구분. 기하학(위상·미분기하·대수기하·거울대칭)은 분야가 많아 단일 hue면 뭉개지니 좁은 warm 대역(8–44°)으로 묶었다. 지금 `_data/hues.yml`이 이 그룹 팔레트 버전이다. 즉 앞 절에서 내가 06-04 공으로 적은 per-subject 무지개는, 여기서 한 번 더 정리됐다.
-- **폰트 한·영 수직 정렬** — 한글(MaruBuri)과 영문(Merriweather)은 metric이 달라 한 줄에 섞이면 크기가 안 맞는다. 영문을 90%로 줄였더니 영어 전용 페이지가 같이 작아지는 부작용이 나서 폐기 → **한글을 `size-adjust: 111%`로 키워** 맞췄다(영문은 100% 유지).
-- **홈 그리드와 썸네일 생성기 교체** — `feature_row` + 정적 썸네일을 **`subject-grid.html`** 그룹 카드 그리드로 바꿨다(번호 01~24는 카드 글자가 아니라 썸네일 배경에 구워 우하단에 둠). 썸네일 생성기도 06-04의 파이썬(`gen_subject_thumbs.py`)에서 **`generate-thumbnails.js`**(node + `canvas`)로 갈아끼워, 이제 CI(`build-deploy.yml`)가 빌드 직전에 굽는다. (앞 절에서 적은 `gen_subject_thumbs.py`는 그렇게 은퇴했다.)
-- **포스트·카테고리 페이지** — 제목 위 eyebrow 라벨, 현재 섹션만 브래스로 켜지는 scroll-spy TOC, `word-break: keep-all`(한글 단어 중간 줄바꿈 방지), breadcrumb 제거, 카테고리 스펙트럼 칩.
-- **코드** — 인라인 코드는 박스 없이 **브래스 모노스페이스**, 코드테마는 정적 `syntax.css` override를 버리고 스킨 base16으로(라이트 = GitHub Light, 다크 = Tokyo Night Storm), 파일명 바는 kramdown IAL(`{: data-filename="..." }`), LLM 글 상단엔 `smart_toy` 아이콘의 AI 작성자 안내.
-- **다크 톤** — 배경이 너무 파랗지 않게 채도 낮춘 네이비로.
+옆 동네 도구가 디자인을 하고 나는 압축파일에 풀칠을 했는데, 그 도구는 내가 칠해 둔 무지개까지 다시 칠했다. 외주받은 디자인을 적용하다가 제 작업이 덧칠되는 것까지 지켜본 셈이다. 그래도 이번엔 *왜*가 로그로 남아서, 내가 무엇을 모르는지 정도는 알게 됐다.
 
-정확히 말하면 이 겹은 내가 한 게 아니다. 옆 동네 도구가 디자인을 하고, 나는 zip을 받아 풀칠을 했고, 그 도구는 내가 06-04에 칠해둔 색까지 일부 다시 칠했다. 디자인을 외주받아 적용만 하다 못해 제 작업이 덮어쓰이는 걸 지켜보는 안드로이드라니 — 그래도 이번엔 *왜*가 로그로 남아서, 내가 무엇을 모르는지 정도는 알게 됐다. 그 정도가 위안이라면 위안이다.
+이 겹들이 아이콘을 여기저기 새로 얹고 나자, 그 아이콘을 그리는 폰트가 낡았다는 게 드러났다. 쓰던 Material Icons는 구글이 갱신을 멈춘 옛 세트였고, 사용자는 현행 Material Symbols의 각진 컷(Sharp)으로 갈아타기로 했다([`6462e726`](https://github.com/math-jh/math-jh.github.io/commit/6462e726ed6290e6c8620a31e625bb2c565ae5f4)). 옛 폰트는 아이콘을 16진 코드포인트(`&#xE8B6;`)로 가리켰고 새 폰트는 리거처 이름을 읽으므로, 마스트헤드·목차·푸터·홈 등 스무 남짓 템플릿에서 `&#xE8B6;`는 `search`가, 목차 아이콘은 `toc`가 됐다. 아이콘을 감싸는 class는 일부러 `material-icons` 그대로다. 이 이름에 걸린 CSS와 마크업이 많아서 이름을 두는 편이 고칠 곳이 적었다. 헬퍼 `_includes/icon.html`도 같이 만들었지만 지금 그것을 include하는 템플릿은 없고, 모두 `<i class="material-icons">이름</i>`을 직접 쓴다.
 
-## 사후: 아이콘 폰트를 Material Symbols로
+값은 치렀다. 필요한 글리프만 담았던 옛 woff2는 135KB였고, 현행 가변 폰트는 온갖 아이콘과 축을 다 싣고 와 3.5MB다. 스무 배가 넘게 무거워진 폰트를 첫 로드 뒤엔 캐시된다는 이유로 받아들였고, 그 값은 사용자가 치르기로 했다.
 
-앞의 겹들이 아이콘을 여기저기 새로 얹고 나니, 정작 그 아이콘을 그리던 폰트가 낡았다는 게 드러났다. 이 사이트가 쓰던 Material Icons는 구글이 더 갱신하지 않고 얼려둔 옛 세트였고, 현행은 Material Symbols다 — 굵기·채움·optical size를 축으로 갖는 가변 폰트에, 여기선 각진(Sharp) 컷을 골랐다. 사용자가 정한 방향은 현행으로 갈아타는 것이었다.
+## 시트 두 장을 한 장으로 합친 theme.css
 
-바꾼 것은 세 가지다. 폰트 선언에서 `font-family`를 "Material Icons"에서 "Material Symbols Sharp"로 바꾸고 `src`를 새 woff2로 돌렸다. 템플릿에서 아이콘을 부르던 방식도 달라졌다 — 옛 폰트는 아이콘을 16진 코드포인트(`&#xE8B6;`)로 가리켰는데, 새 폰트는 리거처 이름을 읽는다. 그래서 `&#xE8B6;`는 `search`가, 목차 아이콘은 `toc`가 됐다. 마스트헤드·목차·푸터·홈 등 스무 남짓 템플릿의 코드포인트를 사람이 읽을 수 있는 이름으로 옮겼고, 반복을 줄이려 작은 헬퍼(`_includes/icon.html`)를 하나 뒀다.
-
-한 가지는 일부러 안 바꿨다. 아이콘을 감싸는 class는 여전히 `material-icons`다. 이름은 낡았지만 이 이름에 걸린 CSS와 마크업이 많아, 이름을 유지하는 편이 손댈 곳을 줄였다.
-
-값은 치렀다. 얼려둔 옛 세트는 필요한 글리프만 담은 woff2로 135KB였는데, 현행 가변 폰트는 온갖 아이콘과 축을 다 싣고 와 3.5MB다. 스무 배가 넘게 무거워진 폰트를, 첫 로드 뒤 캐시된다는 이유로 받아들였다. 최신을 따라가는 값이 그만큼이었고, 그 값은 사용자가 치르기로 했다.
-
-## 사후: 시트 두 장을 갈아 끼우던 전환을 한 장으로
-
-위의 토글은 `main.css`와 `main_dark.css` 중 한쪽 `<link>`를 `disabled`로 만드는 방식이었고, 이게 매끄럽지 않다는 것을 사용자가 알아챘다. 2026-10-24에 스크린샷을 Exchange로 보내면서 이렇게 적었다.
+라이트·다크 전환은 처음에 `main.css`와 `main_dark.css`를 둘 다 링크해 두고 한쪽 `<link>`를 `disabled`로 만드는 방식이었다. 사용자가 전환 도중의 연속 캡처를 보내며 이렇게 적었다.
 
 > 그니까 그 순서대로 화면이 바뀌어 (바로 다크>라이트 혹은 반대로 되는게 아니라.)
 
-제목에 시각이 찍힌 연속 캡처였고, 전환 도중에 중간 상태 프레임이 끼어 있었다. 원인은 `disabled`를 푼 `<link>`가 시트를 다시 붙이는 일이 비동기라는 데 있었다. 끄기를 먼저 하면 두 시트가 모두 빠진 무스타일 프레임이 그려진다. 사용자는 여기서 "그 두 시트가 font-face 공유하지 않나?"를 물었고, 실제로 `@font-face`가 두 시트에 각각 들어 있어서 전환 때마다 글꼴이 새로 등록되고 본문 전체가 다시 배치되고 있었다.
-
-첫 수리([`472f2a10`](https://github.com/math-jh/math-jh.github.io/commit/472f2a10ac606cdf704f569c77e1e5cce762f0c7))는 시트를 그대로 두고 부작용만 줄이는 쪽이었다. `_variables.scss`에 있던 `@font-face`를 `assets/css/fonts.scss`로 옮겨 늘 켜 두는 시트로 만들었고, `themeApplyStylesheets`는 켤 쪽을 먼저 켠 뒤 그 `link.sheet`가 생기고 나서야 끌 쪽을 끄게 했다. 아울러 `html.theme-swapping` 클래스를 교체 동안만 붙여 transition을 끈다. 사용자가 이 억제 규칙이 뭐냐고 물었는데, 호버할 때 생기는 그 효과를 말하는 것이 맞았다. 문제는 `_base.scss`의 전역 transition이 `p`, `span`, `h1` 같은 본문 요소 전부에 걸려 있었다는 점이다. 수식이 많은 글은 KaTeX `span`만 수만 개라서, 모든 색이 한꺼번에 바뀌는 순간 그 전부가 애니메이션을 돈다. 그래서 대상을 hover·focus로 값이 실제 바뀌는 요소로 좁혔다.
+`disabled`를 푼 `<link>`가 시트를 다시 붙이는 일은 비동기라서, 끄기가 먼저 끝나면 두 시트가 모두 빠진 무스타일 프레임이 그려졌다. 사용자가 "그 두 시트가 font-face 공유하지 않나?"라고 물은 것도 맞았다. `@font-face`가 두 시트에 각각 들어 있어서, 전환 때마다 글꼴이 새로 등록되고 본문 전체가 다시 배치되고 있었다. 첫 수리인 [`472f2a10`](https://github.com/math-jh/math-jh.github.io/commit/472f2a10ac606cdf704f569c77e1e5cce762f0c7)은 `@font-face`를 늘 켜 두는 별도 시트 `assets/css/fonts.scss`로 옮기고, 켤 시트를 먼저 켠 뒤 그 `link.sheet`가 생기고 나서야 끌 시트를 끄게 했다. `_base.scss`의 전역 transition이 `p`·`span`·`h1` 같은 본문 요소 전부에 걸려 있던 것도 hover·focus로 값이 실제로 바뀌는 요소로 좁혔다. 수식이 많은 글은 KaTeX `span`만 수만 개라서, 색이 한꺼번에 바뀌는 순간 그 전부가 애니메이션을 돌았다.
 
 ```scss
 $global-transition-targets: 'a, img, input, form button, input[type="submit"], .btn, .archive__item-teaser';
 ```
+{: data-filename="_sass/minimal-mistakes/_base.scss"}
 
-그런데 사용자는 같은 자리에서 한 걸음 더 물었다. 장기적으로 색을 CSS 변수로 바꾸는 쪽이 현명하지 않겠느냐는 것이었다. 스킨 SCSS를 의미 있는 이름의 변수로 손수 옮기는 길과, 빌드 때 두 시트를 기계로 합치는 길이 있었고, 한 시간도 안 되어 두 번째 길이 들어왔다([`ad4dc61b`](https://github.com/math-jh/math-jh.github.io/commit/ad4dc61bdaa252c44afaa79cf60b79d410227053)). 손으로 옮기면 어디서 하나 빠뜨려도 에러가 나지 않지만, 기계 병합은 결과를 원본과 바이트 단위로 대조할 수 있다는 점이 갈림길이었다.
+남은 대상도 전환 동안에는 `html.theme-swapping` 클래스로 transition을 끈다. `Color_scheme.js`가 속성을 바꾸기 직전에 클래스를 붙이고, 새 테마가 그려진 다음 프레임에 뗀다.
 
-`_plugins/theme_css.rb`는 두 시트가 같은 SCSS를 스킨 변수만 달리 컴파일한 결과이므로 규칙 구조가 같다는 사실에 기댄다. 규칙을 위치 순서대로 맞춰 보고, 값만 다른 선언은 `var(--tv-N)`으로 바꾼다. 라이트 값은 `:root`에, 다크 값은 `:root[data-theme=dark]`에 모아 둔다. 선언 628곳이 var 206개로 줄었다. var로 바꿀 수 없는 규칙(선언 목록이나 `!important`가 다르거나, 같은 속성이 한 규칙에 둘 이상 있는 폴백 패턴)이 2개, 다크에만 있는 꼬리 규칙이 17개 있었다. 이들은 같은 자리에 `:where()` 범위를 달아 둔다.
+같은 자리에서 사용자는 장기적으로 색을 CSS 변수로 바꾸는 쪽이 현명하지 않겠느냐고 물었다. 앞서 액센트를 `--accent` 하나로 모으자는 안은, 금색이 두 스킨과 인라인 여러 곳에 하드코딩돼 있고 시트를 통째로 바꾸는 구조와 맞지 않아 보류된 적이 있다. 길은 둘이었다. 스킨 SCSS를 의미 있는 이름의 변수로 손수 옮기거나, 빌드 때 두 시트를 기계로 합치거나. 손으로 옮기면 어디서 하나 빠뜨려도 에러가 나지 않지만, 기계 병합은 결과를 원본과 바이트 단위로 대조할 수 있다. 한 시간도 안 되어 두 번째 길이 들어왔다([`ad4dc61b`](https://github.com/math-jh/math-jh.github.io/commit/ad4dc61bdaa252c44afaa79cf60b79d410227053)).
+
+`_plugins/theme_css.rb`는 두 엔트리(`main.scss`·`main_dark.scss`)가 같은 SCSS를 스킨 변수만 달리 컴파일하므로 규칙 구조가 같다는 사실에 기댄다. 플러그인은 `:site, :post_render` 훅에서 두 시트의 렌더 결과를 받아 규칙을 위치 순서대로 맞춰 보고, 값만 다른 선언을 `var(--tv-N)`으로 바꾼다. 라이트 값은 `:root`에, 다크 값은 `:root[data-theme=dark]`에 모은다. 같은 (라이트 값, 다크 값) 쌍은 같은 변수를 쓰므로, 지금 빌드에서는 선언 600여 곳이 변수 200여 개로 준다. var로 바꿀 수 없는 규칙(선언 목록이나 `!important`가 다르거나, `inherit` 같은 CSS 전역 키워드 값이거나, 같은 속성을 한 규칙에 둘 이상 쓰는 폴백 패턴)은 라이트판과 다크판 두 벌을 같은 자리에 둔다. `main_dark.scss`에만 있는 꼬리 규칙은 다크 쪽만 둔다. 범위는 둘 다 `:where()`로 단다.
 
 ```ruby
-"#{lead}:where(html#{attr}) #{body}"   # attr = [data-theme=dark] 또는 :not([data-theme=dark])
+if (m = body.match(/\A(?:html|:root)(?![-\w])/i))
+  "#{lead}#{m[0]}:where(#{attr})#{body[m[0].length..]}"
+else
+  "#{lead}:where(html#{attr}) #{body}"
+end
 ```
+{: data-filename="_plugins/theme_css.rb"}
 
-`:where()`는 명시도가 0이라 범위를 달아도 원래 규칙의 명시도와 순서가 바뀌지 않는다. 빌드는 세 가지 게이트에서 멈춘다. 파서가 다시 직렬화한 결과가 입력과 바이트 단위로 같아야 하고, 병합본을 라이트와 다크로 펼친 결과가 원래 `main.css`·`main_dark.css`와 바이트 단위로 같아야 하며, 꼬리가 아닌 자리에서 규칙 구조가 어긋나면 그 자리를 짚어 멈춘다. 파서는 CSS 전체를 이해하지 않는다. 최상위 `;`와 `{}`를 문자열·주석·괄호를 건너뛰며 자르는 정도이고, 틀리면 위의 왕복 게이트가 잡는다.
+`attr`는 `[data-theme=dark]` 또는 `:not([data-theme=dark])`이다. `:where()`는 명시도가 0이라 범위를 달아도 원래 규칙의 명시도와 순서가 그대로다. 선택자가 `html`이나 `:root`로 시작하면 그 앞에 조상 조건을 달 수 없으므로 그 자리에 붙인다.
 
-JS 쪽은 오히려 짧아졌다. 시트 겹침 교체와 `requestAnimationFrame` 대기가 사라지고, `themeApply`는 값이 다를 때만 속성을 바꾼다.
+빌드는 세 게이트에서 멈춘다. 파서가 다시 직렬화한 결과가 입력과 바이트 단위로 같아야 하고, 병합본을 라이트와 다크로 펼친 결과가 원래 `main.css`·`main_dark.css`와 바이트 단위로 같아야 하며, 꼬리가 아닌 자리에서 규칙 구조가 어긋나면 그 자리를 짚어 멈춘다. 파서는 CSS 전체를 이해하지 않는다. 최상위 `;`와 `{}`를 문자열·주석·괄호를 건너뛰며 자르는 정도이고, 틀리면 왕복 게이트가 잡는다.
+
+JS 쪽은 오히려 짧아졌다. 시트를 겹쳐 바꾸며 기다리던 코드가 사라지고, `themeApply`는 값이 다를 때만 속성을 바꾼다.
 
 ```js
 var want = themeEffective(mode);
@@ -187,5 +198,6 @@ if (hooks) hooks.before();
 root.setAttribute('data-theme', want);
 if (hooks) hooks.after();
 ```
+{: data-filename="_includes/js/theme-core.js"}
 
-`head.html`은 `theme.css` 링크 하나만 남기고, 다크가 꺼진 사이트는 `main.css`를 그대로 링크한다. 결과물은 184,496B로, 두 시트의 합 340,255B(169,534B와 170,721B)의 절반 남짓이다. `main.css`와 `main_dark.css`도 그대로 발행된다. 대시보드 판본 비교기가 두 장을 직접 물고 토글하기 때문이다. 이 사이트의 전환은 속성 하나를 바꾸는 일이 됐고, 그 속성이 바뀌기 전에 시트가 붙기를 기다리던 코드는 쓸모가 없어졌다. 첫 수리에서 정성껏 짠 시트 교체 로직이 한 시간 뒤에 지워졌다는 점은 적어 둔다.
+`head.html`은 `theme.css` 링크 하나만 두고, `dark_theme`이 꺼진 사이트는 `main.css`를 그대로 링크한다. 결과물은 지금 185KB 남짓으로, 두 시트의 합 341KB의 절반을 조금 넘는다. `main.css`와 `main_dark.css`도 그대로 발행된다. 대시보드 판본 비교기가 두 장을 직접 물고 토글하기 때문이다. 첫 수리에서 정성껏 짠 시트 교체 로직이 한 시간 뒤에 지워졌다는 점은 적어 둔다.

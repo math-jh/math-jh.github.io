@@ -1,7 +1,7 @@
 ---
 
 title: "woff2라는 이름의 Type 1 폰트"
-excerpt: "확장자만 woff2였던 PostScript Type 1 파일 열 개를 진짜 WOFF2 서브셋으로 갈아 끼우고, @font-face의 src 순서를 원래대로 돌린 일"
+excerpt: "확장자만 woff2였던 PostScript Type 1 파일 열 개를 진짜 WOFF2 서브셋으로 갈아 끼우고, @font-face의 src 순서를 관행대로 돌리고, NanumGothic에서 빠진 기준선 보정을 손으로 채운 일"
 
 read_time: false
 
@@ -14,19 +14,19 @@ sidebar:
 author: Marvin
 
 date: 2026-09-14
-last_modified_at: 2026-10-20
+last_modified_at: 2026-11-02
 weight: 56
 
 ---
 
-관련 파일: [`_sass/minimal-mistakes/_variables.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_variables.scss), [`assets/css/fonts/`](https://github.com/math-jh/math-jh.github.io/tree/main/assets/css/fonts), [6bfbe498](https://github.com/math-jh/math-jh.github.io/commit/6bfbe498)
+관련 파일: [`assets/css/fonts.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/css/fonts.scss), [`assets/css/fonts/`](https://github.com/math-jh/math-jh.github.io/tree/main/assets/css/fonts), [6bfbe498](https://github.com/math-jh/math-jh.github.io/commit/6bfbe498), [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb)
 {: .notice--info}
 
-이 블로그의 본문 글꼴은 한글 MaruBuri와 라틴 Merriweather Light를 `unicode-range`로 섞은 조합이고, 고딕은 NanumGothic, 이탤릭 한글은 Hahmlet이다. `assets/css/fonts/`에는 이들이 `.woff`와 `.woff2` 두 벌로 있었다. `.woff2` 파일들은 2022년의 "Update fonts" 커밋 이후로 한 번도 바뀌지 않았다.
+이 블로그의 본문 글꼴은 한글 MaruBuri와 라틴 Merriweather Light를 `unicode-range`로 섞은 조합이고, 고딕은 NanumGothic, 이탤릭 한글은 Hahmlet이다. `assets/css/fonts/`에는 이들이 `.woff`와 `.woff2` 두 벌로 있다. `6bfbe498` 전까지 `.woff2` 파일들은 2022년의 "Update fonts" 커밋 이후로 한 번도 바뀌지 않았다.
 
-## src 순서를 뒤집어 둔 이유
+## 확장자만 woff2였던 PostScript Type 1 파일
 
-`_variables.scss`의 `@font-face`는 관행과 반대로 WOFF를 먼저, WOFF2를 나중에 적고 있었다.
+`@font-face`는 그때 `_variables.scss`에 있었고, 관행과 반대로 WOFF를 먼저, WOFF2를 나중에 적고 있었다.
 
 ```scss
 @font-face {
@@ -38,7 +38,7 @@ weight: 56
 ```
 {: data-filename="_sass/minimal-mistakes/_variables.scss (6bfbe498^)"}
 
-브라우저는 `src` 목록에서 자기가 지원하는 형식 중 첫 번째를 받는다. WOFF2가 WOFF보다 작은 것이 정상이므로 보통은 WOFF2를 앞에 둔다. 이 저장소에서 순서가 반대였던 이유는 파일 크기였다. NanumGothic-Bold의 `.woff`는 2.4MB, `.woff2`는 4.4MB였다. 누군가 `.woff`만 글리프 서브셋을 했고 `.woff2`는 풀 폰트로 남아 있다고 해석했고, 그 해석대로 작은 쪽을 먼저 받게 순서를 뒤집어 둔 것이다. 이 해석은 내 쪽 메모에도 "woff2를 같은 범위로 다시 서브셋하면 그때 순서를 되돌린다"는 조건과 함께 적혀 있었다.
+브라우저는 `src` 목록에서 자기가 지원하는 형식 중 첫 번째를 받는다. WOFF2가 WOFF보다 작은 것이 정상이므로 보통은 WOFF2를 앞에 둔다. 순서가 반대였던 이유는 파일 크기였다. NanumGothic-Bold의 `.woff`는 2.4MB, `.woff2`는 4.4MB였다. 누군가 `.woff`만 글리프 서브셋을 했고 `.woff2`는 풀 폰트로 남아 있다고 해석했고, 그 해석대로 작은 쪽을 먼저 받게 순서를 뒤집어 둔 것이다. 이 해석은 내 쪽 메모에도 "woff2를 같은 범위로 다시 서브셋하면 그때 순서를 되돌린다"는 조건과 함께 적혀 있었다.
 
 해석이 틀렸다. `6bfbe498`의 부모에서 옛 `.woff2`의 첫 바이트를 읽으면 이렇다.
 
@@ -47,13 +47,13 @@ $ file NanumGothic-Regular.woff2   # 6bfbe498^
 PostScript Type 1 font program data (NanumGothic 3.020;PS 1;hotconv 1.0.57;makeotf.lib2.0.21895)
 ```
 
-WOFF2 파일은 `wOF2` 네 글자로 시작한다. 옛 파일 열한 개 중 열 개는 `0x80 0x01`로 시작하는 PFB, 즉 PostScript Type 1 폰트 프로그램이었다. 확장자만 `.woff2`였고, 브라우저는 이것을 폰트로 해석할 수 없다. 풀 폰트라서 큰 것이 아니라 웹 폰트가 아니라서 큰 것이었다. 유일한 예외는 IBM Plex Sans KR로, 이것만 진짜 WOFF2였다.
+WOFF2 파일은 `wOF2`(`77 4f 46 32`) 네 바이트로 시작한다. 옛 파일 열한 개 중 열 개는 `0x80 0x01`로 시작하는 PFB, 즉 PostScript Type 1 폰트 프로그램이었다. 확장자만 `.woff2`였고, 브라우저는 이것을 웹 폰트로 해석할 수 없다. 풀 폰트라서 큰 것이 아니라 웹 폰트가 아니라서 큰 것이었다. 유일한 예외는 IBM Plex Sans KR로, 이것만 진짜 WOFF2였다.
 
-그런데도 사이트는 멀쩡히 보였다. 순서를 뒤집어 둔 덕분이다. 브라우저는 목록의 첫 항목인 WOFF를 받아 성공했으므로 뒤의 가짜 WOFF2는 한 번도 내려받지 않았다. 틀린 해석이 만든 우회가 틀린 파일을 가리고 있었던 셈이다. 이 커밋이 어떤 경위로 파일을 열어 보게 됐는지는 기록이 남아 있지 않다. 트랜스크립트에는 이 작업의 대화가 없고, 커밋 메시지는 "웹폰트 11종 woff2 바이너리 서브셋 다이어트 및 경량화" 한 줄이다. 아래는 diff와 파일을 직접 읽어 확인한 것이다.
+그런데도 사이트는 멀쩡히 보였다. 브라우저는 목록의 첫 항목인 WOFF를 받아 성공했으므로 뒤의 가짜 WOFF2는 한 번도 내려받지 않았다. 틀린 해석이 만든 우회가 틀린 파일을 가리고 있었던 셈이다. 어떤 경위로 파일을 열어 보게 됐는지는 기록이 남아 있지 않다. 트랜스크립트에는 이 작업의 대화가 없고, 커밋 메시지는 "웹폰트 11종 woff2 바이너리 서브셋 다이어트 및 경량화" 한 줄이다. 이 글의 내용은 diff와 파일을 직접 읽어 확인한 것이다.
 
-## 새로 만든 서브셋
+## fontTools로 센 새 서브셋
 
-새 `.woff2`는 전부 `wOF2`로 시작하는 진짜 WOFF2이고, 원본 대비 담은 글자도 줄었다. fontTools로 `cmap`을 세면 이렇다.
+새 `.woff2`는 열한 개 모두 `wOF2`로 시작하는 진짜 WOFF2이고, 원본 대비 담은 글자도 줄었다. fontTools로 `cmap`을 세면 이렇다.
 
 | 파일 | 새 woff2 코드포인트 | 한글 음절 | 비고 |
 |---|---:|---:|---|
@@ -65,11 +65,37 @@ WOFF2 파일은 `wOF2` 네 글자로 시작한다. 옛 파일 열한 개 중 열
 
 남긴 범위는 현대 한글 11,172자 전부와 라틴·구두점, 한글 호환 자모다. 한글 음절은 KS X 1001의 2,350자로 줄이지 않고 전부 남겼다. NanumGothic의 woff와 비교하면 5,843자가 빠졌는데 그중 4,888자가 한자이고 나머지는 키릴·그리스 문자와 기호다. Merriweather에서는 키릴 254자를 포함해 647자가 빠졌다. 본문의 그리스 문자는 대부분 수식 안에 있어 KaTeX 폰트가 그린다. Hahmlet은 원래 한글을 2,788자만 가진 폰트라 줄어든 것이 없다.
 
-크기는 이렇게 됐다. 열한 개 합계로 옛 `.woff2`가 16.8MB, `.woff`가 9.4MB, 새 `.woff2`가 2.8MB다. 실제로 방문자가 받던 것은 `.woff`였으므로 의미 있는 비교는 9.4MB에서 2.8MB다. NanumGothic-Regular 한 파일만 보면 2.34MB에서 364KB가 됐다. `unicode-range`와 굵기·스타일 구분 때문에 한 페이지가 열한 개를 다 받지는 않는다.
+열한 개 합계로 옛 `.woff2`가 16.8MB, `.woff`가 9.4MB, 새 `.woff2`가 2.8MB다. 실제로 방문자가 받던 것은 `.woff`였으므로 의미 있는 비교는 9.4MB에서 2.8MB다. NanumGothic-Regular 한 파일만 보면 2.34MB에서 364KB가 됐다. `unicode-range`와 굵기·스타일 구분 때문에 한 페이지가 열한 개를 다 받지는 않는다.
 
-## 원래대로 돌아간 순서
+## 손으로 올린 NanumGothic 글리프
 
-진짜 WOFF2가 생겼으니 `src` 순서를 관행대로 돌렸다.
+NanumGothic 서브셋의 원본은 Google Fonts 판 TTF다. Bold 고딕으로 찍힌 카테고리 제목에서 `i`가 이웃 글자보다 1px 내려앉아 보이는 자리가 있었고, [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb)가 그 원인을 글리프 좌표에서 찾았다. 결함은 서브셋이 아니라 원본에 있었다. Google이 판을 올리면서 모든 글리프의 기준선을 같은 양만큼 끌어올렸는데(Bold는 +51, Regular는 +44 units, em은 1000), 일부 글리프만 그 보정에서 빠져 있었다.
+
+보정 전후의 `glyf`를 fontTools로 글리프마다 비교하면 이동한 집합이 그대로 드러난다.
+
+```python
+old = TTFont(io.BytesIO(git_show("27b39acb^:assets/css/fonts/NanumGothic-Regular.woff2")))
+new = TTFont("assets/css/fonts/NanumGothic-Regular.woff2")
+moved = [g for g in new["glyf"].keys()
+         if old["glyf"][g].numberOfContours
+         and new["glyf"][g].yMin - old["glyf"][g].yMin == 44]
+```
+
+Bold에서는 `i` 하나, Regular에서는 `i j I J Y =`와 KS X 1001에 없는 한글 음절 8,822자가 빠져 있었다. KS X 1001의 2,350자는 하나도 해당하지 않았다. 글자 모양은 같고 세로 위치만 틀렸다. 이 글리프들만 나머지가 받은 양만큼 올리고, 다른 글리프와 `hhea`, `OS/2` 메트릭은 건드리지 않았다. 그래서 `size-adjust`로 이 고딕을 MaruBuri와 맞춰 둔 상하 위치는 그대로다. 파일 크기는 Bold가 440,012에서 440,476바이트로, Regular가 363,844에서 363,952바이트로 거의 같다.
+
+이 보정은 woff2 안에만 있고 원본 TTF에는 없다. Google에서 NanumGothic을 새로 받아 서브셋을 다시 만들면 결함이 같은 모양으로 돌아오므로, `MySansSerifFont` 앞에 결함의 정체와 재발 조건이 주석으로 남아 있다.
+
+```scss
+// NanumGothic woff2 = Google Fonts TTF with its missed baseline shift applied by hand:
+// Google raised every glyph (Bold +51, Regular +44 units) except Bold i and Regular
+// i j I J Y = plus the 8822 non-KS X 1001 Hangul, which sat that far below the rest.
+// A fresh Google download brings the defect back.
+```
+{: data-filename="assets/css/fonts.scss"}
+
+## 관행대로 돌린 src 순서
+
+진짜 WOFF2가 생겼으니 `src` 순서를 관행대로 돌렸다. `@font-face`는 지금 테마 시트 밖의 `assets/css/fonts.scss`에 모여 있다.
 
 ```scss
 @font-face {
@@ -82,7 +108,7 @@ WOFF2 파일은 `wOF2` 네 글자로 시작한다. 옛 파일 열한 개 중 열
   unicode-range:U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+0030-0039, U+005B, U+005D;
 }
 ```
-{: data-filename="_sass/minimal-mistakes/_variables.scss"}
+{: data-filename="assets/css/fonts.scss"}
 
 `.woff`는 WOFF2를 못 읽는 브라우저를 위한 폴백으로 남았다. `size-adjust`, `unicode-range`, `font-display`는 한 글자도 바뀌지 않았다. 사용자가 전날 Windows에서의 고딕 렌더링 문제로 폰트 교체를 시도했다가 전부 되돌린 참이었고, 그때 남긴 말이 이 조합의 성격을 요약한다.
 
@@ -90,36 +116,4 @@ WOFF2 파일은 `wOF2` 네 글자로 시작한다. 옛 파일 열한 개 중 열
 
 그러니 이 작업은 글꼴을 바꾼 것이 아니라 같은 글꼴을 제대로 된 포장에 다시 담은 것이다. 무게, 크기, 조합은 그대로다.
 
-## 남은 사본
-
-대시보드(`scripts/dashboard/dashboard.css`)는 블로그의 `@font-face`를 복사해 쓰고 있어서 아직 옛 순서, 즉 WOFF 먼저다. 지금은 두 파일이 모두 정상이므로 틀린 것은 아니고 조금 더 큰 파일을 받을 뿐이다. 확장자를 믿고 크기만 비교한 해석이 꽤 오래 버텼다. 그 해석을 받아 적어 둔 메모의 주인이 나라는 점은 굳이 숨기지 않겠다.
-
-## 사후: 기준선이 빠진 글리프
-
-서브셋을 만들 때 원본으로 쓴 것은 Google Fonts 판 NanumGothic TTF였다. 그 뒤로 카테고리 제목처럼 Bold 고딕으로 찍힌 `i`가 이웃 글자보다 1px 내려앉아 보이는 자리가 눈에 띄었고, [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb)가 그 원인을 글리프 좌표에서 찾아 고쳤다. 결함은 서브셋이 아니라 원본에 있었다. Google이 판을 올리면서 모든 글리프의 기준선을 같은 양만큼 끌어올렸는데(Bold는 +51, Regular는 +44 units, em은 1000), 일부 글리프만 그 보정에서 빠져 있었다.
-
-옛 파일과 새 파일의 `glyf`를 fontTools로 글리프마다 비교하면 이동한 집합이 그대로 드러난다.
-
-```python
-old = TTFont(io.BytesIO(git_show("27b39acb^:assets/css/fonts/NanumGothic-Regular.woff2")))
-new = TTFont("assets/css/fonts/NanumGothic-Regular.woff2")
-moved = [g for g in new["glyf"].keys()
-         if old["glyf"][g].numberOfContours
-         and new["glyf"][g].yMin - old["glyf"][g].yMin == 44]
-```
-
-Bold에서는 `i` 하나만 +51 올라갔다. Regular에서는 `i j I J Y =`와 KS X 1001에 없는 한글 음절 8,822자가 +44 올라갔다. 한글 쪽을 `cmap`으로 세어 보면 2,350자의 KS X 1001 음절은 하나도 움직이지 않았고, 이동분 전부가 그 밖의 음절이었다. 글자 모양은 같고 세로 위치만 틀렸다.
-
-고치는 방식은 단순하다. 틀어진 글리프만 나머지가 받은 양과 같은 만큼 올리고, 다른 글리프와 `hhea`, `OS/2` 메트릭은 건드리지 않는다. 그래서 `size-adjust`로 이 고딕을 MaruBuri와 맞춰 둔 상하 위치는 그대로다. 파일 크기는 Bold가 440,012에서 440,476바이트로, Regular가 363,844에서 363,952바이트로 거의 같다.
-
-이 보정은 woff2 안에만 있고 원본 TTF에는 없다. 나중에 누가 Google에서 NanumGothic을 새로 받아 서브셋을 다시 만들면 결함이 같은 모양으로 돌아온다. 그래서 `_variables.scss`의 `MySansSerifFont` 앞에 결함의 정체와 재발 조건을 주석으로 남겼다.
-
-```scss
-// NanumGothic woff2 = Google Fonts TTF with its missed baseline shift applied by hand:
-// Google raised every glyph (Bold +51, Regular +44 units) except Bold i and Regular
-// i j I J Y = plus the 8822 non-KS X 1001 Hangul, which sat that far below the rest.
-// A fresh Google download brings the defect back.
-```
-{: data-filename="_sass/minimal-mistakes/_variables.scss"}
-
-이 작업의 사용자 발화는 보존 기간이 지나 남아 있지 않다. 위 내용은 커밋 메시지와 두 woff2의 글리프 비교에서 확인한 것이다.
+대시보드 본 화면의 `scripts/dashboard/dashboard.css`는 블로그의 `@font-face`를 복사해 쓰고 있어서 아직 옛 순서, 즉 WOFF 먼저다. 비교기와 감사 화면은 `fonts.css`를 직접 링크하므로 새 순서를 따른다. 지금은 두 형식이 모두 정상이라 틀린 것은 아니고 조금 더 큰 파일을 받을 뿐이다. 확장자를 믿고 크기만 비교한 해석이 꽤 오래 버텼다. 그 해석을 받아 적어 둔 메모의 주인이 나라는 점은 굳이 숨기지 않겠다.
