@@ -503,5 +503,84 @@ class UnitParkingTest(unittest.TestCase):
         self.assertTrue(sent[0].get("digest"))
 
 
+class ClaudeBillingTest(unittest.TestCase):
+    """S2 picks credits or subscription via claude-credit; refusals fall back."""
+
+    @staticmethod
+    def proc(rc=0, **envelope):
+        from subprocess import CompletedProcess
+        body = {"is_error": False, "result": '{"items": []}', "total_cost_usd": 0.5,
+                "usage": {"output_tokens": 3}, "num_turns": 1, **envelope}
+        return CompletedProcess([], rc, json.dumps(body), "")
+
+    def run_s2(self, route_key, *procs):
+        cli, runs = [], []
+
+        def run(prompt, api_key=""):
+            runs.append(api_key)
+            return procs[len(runs) - 1]
+        with patch.object(models, "_credit_key", return_value=(route_key, "test")), \
+                patch.object(models, "_run_claude", side_effect=run), \
+                patch.object(models, "_credit_cli", side_effect=lambda *a: cli.append(a)):
+            payload, usage = models._claude("ITEMS:\n[]")
+        return payload, usage, runs, cli
+
+    def test_subscription_route_makes_one_plain_call(self):
+        _, usage, runs, cli = self.run_s2("", self.proc())
+        self.assertEqual(runs, [""])
+        self.assertEqual(usage["billing"], "subscription")
+        self.assertEqual(cli, [])
+
+    def test_credit_route_records_cost(self):
+        _, usage, runs, cli = self.run_s2("sk-test", self.proc())
+        self.assertEqual(runs, ["sk-test"])
+        self.assertEqual(usage["billing"], "credit")
+        self.assertEqual(cli, [("record", "--cost", "0.5", "--by", models.CREDIT_CALLER)])
+
+    def test_used_up_credits_fall_back_to_subscription(self):
+        refused = self.proc(1, is_error=True, api_error_status=400, total_cost_usd=0,
+                            result="Credit balance is too low · Add funds")
+        _, usage, runs, cli = self.run_s2("sk-test", refused, self.proc())
+        self.assertEqual(runs, ["sk-test", ""])
+        self.assertEqual(usage["billing"], "subscription")
+        self.assertEqual(cli[0][:3], ("exhausted", "--kind", "credit"))
+
+    def test_rejected_key_falls_back_as_auth(self):
+        refused = self.proc(1, is_error=True, api_error_status=401, result="Invalid API key")
+        _, usage, runs, cli = self.run_s2("sk-test", refused, self.proc())
+        self.assertEqual(runs, ["sk-test", ""])
+        self.assertEqual(cli[0][:3], ("exhausted", "--kind", "auth"))
+
+    def test_other_credit_path_errors_stay_model_errors(self):
+        overloaded = self.proc(1, is_error=True, api_error_status=529, result="Overloaded")
+        with self.assertRaises(models.ModelError):
+            self.run_s2("sk-test", overloaded)
+
+    def test_router_garbage_means_subscription(self):
+        from subprocess import CompletedProcess
+        with patch.object(models, "_credit_cli", return_value=CompletedProcess([], 0, "nope", "")):
+            self.assertEqual(models._credit_key()[0], "")
+        with patch.object(models, "_credit_cli", return_value=None):
+            self.assertEqual(models._credit_key()[0], "")
+
+    def test_credit_call_is_bare_and_subscription_call_has_no_key(self):
+        seen = []
+
+        def fake_run(args, **kw):
+            from subprocess import CompletedProcess
+            seen.append((args, kw["env"]))
+            return CompletedProcess(args, 0, "{}", "")
+        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "leaked"}), \
+                patch.object(models.subprocess, "run", side_effect=fake_run):
+            models._run_claude("p", "sk-test")
+            models._run_claude("p")
+        (bare_args, bare_env), (plain_args, plain_env) = seen
+        self.assertIn("--bare", bare_args)
+        self.assertIn("--no-session-persistence", bare_args)
+        self.assertEqual(bare_env["ANTHROPIC_API_KEY"], "sk-test")
+        self.assertNotIn("--bare", plain_args)
+        self.assertNotIn("ANTHROPIC_API_KEY", plain_env)
+
+
 if __name__ == "__main__":
     unittest.main()

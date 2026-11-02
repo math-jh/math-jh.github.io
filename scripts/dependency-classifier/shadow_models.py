@@ -13,11 +13,23 @@ Calls are kept lean on purpose.  Antigravity runs the tool-less agent
 prompt overhead; Claude runs with no tools and a one-line system prompt from
 /tmp.  The first user message of a Claude call starts with the literal
 ``[cron]`` — reap-claude-sessions.py deletes bot transcripts by that prefix.
+
+Billing of S2 (2026-11-02).  Once the quota gate lets an S2 call through,
+``claude-credit route`` (~/.local/bin) picks who pays for it: the Max plan's
+monthly API credits or the subscription.  It picks the credits when the 7d
+forecast runs out (the HUD's formula) or in the credit cycle's last week; the
+gate itself is untouched, so a held Claude quota still stops S2.  A credit call
+is the same request run as ``claude --bare --no-session-persistence`` with the
+Console key — bare mode reads only that key, never the subscription login, and
+leaves no transcript.  If the credits are refused (used up, key rejected) the
+call is reported with ``claude-credit exhausted`` and run again on the
+subscription.  ``usage["billing"]`` records which one paid.
 """
 from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import tempfile
 import time
@@ -45,6 +57,11 @@ CODEX_EFFORT = dc.CODEX_REVIEW_EFFORT
 TIMEOUT = int(os.environ.get("DEPENDENCY_SHADOW_TIMEOUT", "1500"))
 CLAUDE_SYSTEM = ("You are a judging engine for the internal links of a mathematics blog. "
                  "Follow the user prompt exactly and return only the requested JSON.")
+CREDIT_BIN = os.environ.get("CLAUDE_CREDIT_BIN",
+                            str(Path.home() / ".local" / "bin" / "claude-credit"))
+CREDIT_CALLER = "dependency-shadow-S2"
+# What the API says when the organization has no credit left.
+CREDIT_REFUSED = re.compile(r"credit balance|purchase credits|add funds", re.I)
 # 인자 하나의 한도는 페이지 크기의 32배다 (이 Pi 는 16K 페이지라 512 KiB). agy 는
 # 프롬프트를 인자로 받으므로 넘기 전에 잘라야 한다 — 여유를 두고 400 KB.
 MAX_PROMPT_BYTES = int(os.environ.get("DEPENDENCY_SHADOW_MAX_PROMPT_BYTES", "400000"))
@@ -205,14 +222,97 @@ def _agy(prompt: str) -> tuple[dict, dict]:
     return parse_model_json(LAST_RAW), usage
 
 
-def _claude(prompt: str) -> tuple[dict, dict]:
+def _credit_cli(*args: str) -> subprocess.CompletedProcess | None:
+    try:
+        return subprocess.run([CREDIT_BIN, *args], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+
+def _credit_key() -> tuple[str, str]:
+    """``(api key, reason)`` when this call should be paid with the plan's API
+    credits, ``("", reason)`` when it goes on the subscription.  Anything the
+    router can't answer means the subscription — the path S2 always used."""
+    proc = _credit_cli("route", "--json")
+    if proc is None or proc.returncode:
+        return "", "credit router unavailable"
+    try:
+        route = json.loads(proc.stdout)
+    except ValueError:
+        return "", "credit router output unreadable"
+    reason = str(route.get("reason", ""))
+    if route.get("route") != "credit":
+        return "", reason
+    try:
+        return Path(route["key_file"]).read_text(encoding="utf-8").strip(), reason
+    except (KeyError, OSError):
+        return "", "credit key unreadable"
+
+
+def _run_claude(prompt: str, api_key: str = "") -> subprocess.CompletedProcess:
     env = {**os.environ, "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1"}
-    proc = subprocess.run(
-        [CLAUDE_BIN, "-p", "--model", CLAUDE_MODEL, "--tools", "",
+    env.pop("ANTHROPIC_API_KEY", None)
+    env.pop("ANTHROPIC_AUTH_TOKEN", None)
+    mode: list[str] = []
+    if api_key:
+        mode = ["--bare", "--no-session-persistence"]
+        env["ANTHROPIC_API_KEY"] = api_key
+    return subprocess.run(
+        [CLAUDE_BIN, *mode, "-p", "--model", CLAUDE_MODEL, "--tools", "",
          "--system-prompt", CLAUDE_SYSTEM, "--output-format", "json"],
         input="[cron]\n\n" + prompt, cwd="/tmp", env=env,
         capture_output=True, text=True, timeout=TIMEOUT,
     )
+
+
+def _credit_refusal(proc: subprocess.CompletedProcess) -> str:
+    """``"credit"``/``"auth"`` when the API refused the credit call for billing or
+    the key, ``""`` when it answered (or broke for some other reason)."""
+    try:
+        envelope = json.loads(proc.stdout)
+    except ValueError:
+        envelope = {}
+    if not isinstance(envelope, dict):
+        envelope = {}
+    if proc.returncode == 0 and not envelope.get("is_error"):
+        return ""
+    if envelope.get("api_error_status") in (401, 403):
+        return "auth"
+    if CREDIT_REFUSED.search(f"{envelope.get('result', '')} {proc.stderr}"):
+        return "credit"
+    return ""
+
+
+def _claude(prompt: str) -> tuple[dict, dict]:
+    api_key, reason = _credit_key()
+    if api_key:
+        proc = _run_claude(prompt, api_key)
+        refusal = _credit_refusal(proc)
+        if not refusal:
+            # Record the spend before parsing: a reply that fails validation was still paid for.
+            try:
+                cost = float(json.loads(proc.stdout).get("total_cost_usd") or 0)
+            except (ValueError, AttributeError, TypeError):
+                cost = 0.0
+            _credit_cli("record", "--cost", str(cost), "--by", CREDIT_CALLER)
+            payload, usage = _claude_result(proc)
+            usage["billing"] = "credit"
+            print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] S2 billed to API credits ({reason})",
+                  flush=True)
+            return payload, usage
+        try:
+            detail = str(json.loads(proc.stdout).get("result", ""))
+        except (ValueError, AttributeError):
+            detail = proc.stderr
+        _credit_cli("exhausted", "--kind", refusal, "--detail", detail[:300], "--by", CREDIT_CALLER)
+        print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] S2 API credits refused ({refusal}); "
+              "running it on the subscription", flush=True)
+    payload, usage = _claude_result(_run_claude(prompt))
+    usage["billing"] = "subscription"
+    return payload, usage
+
+
+def _claude_result(proc: subprocess.CompletedProcess) -> tuple[dict, dict]:
     if proc.returncode:
         raise ModelError(f"Claude Opus exited {proc.returncode}: {proc.stderr.strip()[:400]}")
     envelope = json.loads(proc.stdout)
