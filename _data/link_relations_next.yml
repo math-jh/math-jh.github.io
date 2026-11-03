@@ -620,6 +620,7 @@
 "c70pi": {relation: required, reviewed: true}
 "c715h": {relation: required, reviewed: true}
 "c775e": {relation: required, reviewed: true}
+"c7afp": {relation: weak, reviewed: true}
 "c7n2q": {relation: required, reviewed: true}
 "c8t5o": {relation: weak, reviewed: true}
 "cabl2": {relation: weak, reviewed: true}
@@ -831,6 +832,7 @@
 "goe6x": {relation: required, reviewed: true}
 "gqhj5": {relation: required, reviewed: true}
 "gqj2v": {relation: forward, reviewed: true}
+"grazk": {relation: required, reviewed: true}
 "gskmc": {relation: required, reviewed: true}
 "gspp9": {relation: forward, reviewed: true}
 "gtjwc": {relation: required, reviewed: true}
@@ -940,6 +942,7 @@
 "ipx68": {relation: forward, reviewed: true}
 "iq442": {relation: required, reviewed: true}
 "iq4mh": {relation: required, reviewed: true}
+"iqix3": {relation: required, reviewed: true}
 "irc4h": {relation: required, reviewed: true}
 "is9e5": {relation: required, reviewed: true}
 "isfgj": {relation: required, reviewed: true}
