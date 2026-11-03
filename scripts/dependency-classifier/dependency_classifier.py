@@ -725,7 +725,8 @@ def call_antigravity(items: list[dict], *, mode: str) -> dict:
 
 def ask_antigravity(prompt: str) -> dict:
     proc = subprocess.run(
-        [AGY_BIN, "--print", prompt,
+        # `[cron]` 접두사: 세션 리퍼가 agy 대화 db 를 봇 대화로 알아보는 표지.
+        [AGY_BIN, "--print", "[cron]\n\n" + prompt,
          *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "15m"],
         cwd="/tmp", stdin=subprocess.DEVNULL, capture_output=True, text=True,

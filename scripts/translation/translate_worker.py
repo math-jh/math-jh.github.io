@@ -1809,7 +1809,9 @@ def call_translator(prompt: str, *, thinking: bool = False,
             args += ["--mcp-config-file", mcp_config_file]
         stdin_text = prompt
     elif TRANSLATOR_BACKEND == "antigravity":
-        args = [AGY_BIN, "--print", prompt,
+        # 첫 user 메시지의 리터럴 `[cron]` 은 세션 리퍼(reap-claude-sessions.py)가
+        # agy 대화 db 를 봇 대화로 알아보는 표지다.
+        args = [AGY_BIN, "--print", "[cron]\n\n" + prompt,
                 *(["--model", AGY_MODEL] if AGY_MODEL else ["--effort", AGY_EFFORT]),
                 "--agent", AGY_AGENT,
                 "--output-format", "json",

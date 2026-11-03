@@ -209,7 +209,8 @@ def _run_until_envelope(args: list[str]) -> str:
 
 def _agy(prompt: str) -> tuple[dict, dict]:
     raw = _run_until_envelope(
-        [AGY_BIN, "--print", prompt, "--agent", AGY_AGENT, "--effort", AGY_EFFORT,
+        # `[cron]` 접두사: 세션 리퍼가 agy 대화 db 를 봇 대화로 알아보는 표지.
+        [AGY_BIN, "--print", "[cron]\n\n" + prompt, "--agent", AGY_AGENT, "--effort", AGY_EFFORT,
          "--output-format", "json", "--disable-slash-commands", "--print-timeout", "20m"])
     envelope = json.loads(raw)
     if envelope.get("status") != "SUCCESS":
