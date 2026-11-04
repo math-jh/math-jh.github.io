@@ -17416,6 +17416,13 @@ R:
   defs:
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
+- id: relative_separable_closure
+  en: relative separable closure
+  ko: 상대분리가능폐포
+  primary: en
+  defs:
+  - label: '[체론] §분리가능차수'
+    url: /ko/math/field_theory/separable_degree
 - id: relative_spectrum
   en: relative spectrum
   ko: 상대 스펙트럼
