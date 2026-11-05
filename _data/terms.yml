@@ -4022,6 +4022,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+- id: contracting_homotopy
+  en: contracting homotopy
+  ko: 수축 호모토피
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: contraction
   en: contraction
   ko: 축약사상
