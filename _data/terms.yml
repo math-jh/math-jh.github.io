@@ -2355,6 +2355,8 @@ C:
     url: /ko/math/algebraic_structures/group_actions
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: central_extension
   en: central extension
   ko: 중심확장
@@ -13980,6 +13982,13 @@ N:
   see:
   - label: Solvable
     id: solvable
+- id: nilpotent_lie_algebra
+  en: nilpotent Lie algebra
+  ko: 멱영 리 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: nilpotent_operator
   en: nilpotent operator
   ko: 멱영작용소
@@ -19259,6 +19268,13 @@ S:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+- id: solvable_lie_algebra
+  en: solvable Lie algebra
+  ko: 가해 리 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: source
   en: source
   ko: 소스
