@@ -18806,6 +18806,13 @@ S:
   defs:
   - label: '[리 이론] §Killing 형식과 Cartan 판정법'
     url: /ko/math/lie_theory/killing_form_and_cartan_criterion
+- id: simple_lie_algebra
+  en: simple Lie algebra
+  ko: 단순 리 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: simple_module
   en: simple module
   ko: 단순가군
