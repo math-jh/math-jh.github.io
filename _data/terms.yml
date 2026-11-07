@@ -6800,6 +6800,13 @@ F:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+- id: faithful_representation
+  en: faithful representation
+  ko: 충실 표현
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 완전가약성 정리'
+    url: /ko/math/lie_theory/weyl_complete_reducibility
 - id: faithfully_flat
   en: faithfully flat
   ko: 충실평탄
