@@ -12743,6 +12743,13 @@ L:
     url: /ko/math/linear_algebra/Gaussian_elimination
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: lowering_operator
+  en: lowering operator
+  ko: 내림 연산자
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: lu_decomposition
   en: LU decomposition
   ko: LU 분해
@@ -16918,6 +16925,13 @@ R:
   - label: 근판정
     lang: ko
     id: root_test
+- id: raising_operator
+  en: raising operator
+  ko: 올림 연산자
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: rank
   en: rank
   ko: 랭크
