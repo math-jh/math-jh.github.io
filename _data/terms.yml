@@ -2615,7 +2615,7 @@ C:
   ko: 크리스토펠 기호
   alias: [크리스토펠 심볼]
   alias_en: [Christoffel symbol]
-  primary: ko
+  primary: en
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
     url: '/ko/math/riemannian_geometry/Levi-Civita_connection'
@@ -4887,7 +4887,7 @@ D:
 - id: delzant_polytope
   en: Delzant polytope
   ko: 델잔트 다면체
-  primary: ko
+  primary: en
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
@@ -5449,7 +5449,7 @@ D:
 - id: dirichlet_function
   en: Dirichlet function
   ko: 디리클레 함수
-  primary: ko
+  primary: en
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
@@ -5731,6 +5731,13 @@ D:
   see:
   - label: Dual space
     id: dual_space
+- id: double_dual_space
+  en: double dual space
+  ko: 이중쌍대공간
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍대공간'
+    url: /ko/math/linear_algebra/dual_space
 - id: double_integral
   en: double integral
   ko: 이중적분
@@ -7624,7 +7631,7 @@ F:
 - id: fubini_study_metric
   en: Fubini–Study metric
   ko: 푸비니-스터디 계량
-  primary: ko
+  primary: en
   defs:
   - label: '[복소기하학] §Kähler manifold'
     url: /ko/math/complex_geometry/kahler_manifolds
@@ -12316,7 +12323,7 @@ L:
 - id: lipschitz_constant
   en: Lipschitz constant
   ko: 립시츠 상수
-  primary: ko
+  primary: en
   defs:
   - label: '[해석학] §연속함수의 성질'
     url: /ko/math/analysis/continuous_functions
@@ -12326,7 +12333,7 @@ L:
   en: Lipschitz continuity
   ko: 립시츠 연속
   alias_en: [Lipschitz continuous]
-  primary: ko
+  primary: en
   defs:
   - label: '[해석학] §연속함수의 성질'
     url: /ko/math/analysis/continuous_functions
@@ -15557,7 +15564,7 @@ P:
 - id: poisson_bracket
   en: Poisson bracket
   ko: 푸아송 괄호
-  primary: ko
+  primary: en
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
@@ -17758,7 +17765,7 @@ R:
 - id: riemann_sphere
   en: Riemann sphere
   ko: 리만 구면
-  primary: ko
+  primary: en
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
@@ -20542,7 +20549,7 @@ T:
 - id: taylor_series
   en: Taylor series
   ko: 테일러 급수
-  primary: ko
+  primary: en
   defs:
   - label: '[미적분학] §테일러 정리'
     url: /ko/math/calculus/taylor_theorem
@@ -20664,7 +20671,7 @@ T:
 - id: thomae_function
   en: Thomae function
   ko: Thomae 함수
-  primary: ko
+  primary: en
   defs:
   - label: '[해석학] §함수의 극한과 연속'
     url: /ko/math/analysis/limits_and_continuity
