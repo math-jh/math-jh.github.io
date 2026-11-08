@@ -12,17 +12,18 @@ date: 2022-11-15
 weight: 7
 translated_at: 2026-06-03T04:00:01+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-03T04:00:01+00:00
+last_polished_at: 2026-11-08T15:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 ## Definition of Subspaces
 
-Just as when dealing with algebraic structures, after equipping a set $X$ with a topological structure it is natural to examine how this structure restricts to a subset $A\subseteq X$. The first idea that comes to mind is to select, among the open sets of $X$, only those contained in $A$ and declare them to be the open sets of the topological space $A$. However, this attempt is bound to fail: if $A$ is not an open set in $X$, then the whole set $A$ itself does not belong to this collection.
+Just as when dealing with algebraic structures, after equipping a set $X$ with a topological structure, it is natural to examine how this structure restricts to a subset $A\subseteq X$. The first idea that comes to mind is to select, among the open sets of $X$, only those contained in $A$ and define them to be the open sets of the topological space $A$. However, this attempt is bound to fail, because if $A$ is not an open set in $X$, then the whole set $A$ itself does not belong to this collection.
 
 ::: Definition 1
-Let a topological space $(X,\mathcal{T})$ and a subset $A$ of $X$ be given. Then the initial topology on $A$ defined by the inclusion $\iota:A\hookrightarrow X$ is called the *subspace topology on $A$*.
+Let a topological space $(X,\mathcal{T})$ and a subset of $X$, $A$, be given. Then the initial topology defined by $\iota:A\hookrightarrow X$ on $A$ is called the *subspace topology on $A$*.
 :::
 
-For any open set $U$ of $X$, we have $\iota^{-1}(U)=U\cap A$, and for any family of open sets $(U_i)_{i\in I}$,
+For any open set of $X$, $U$, we have $\iota^{-1}(U)=U\cap A$, and for any family of open sets $(U_i)_{i\in I}$,
 
 $$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\cap A=\bigcup_{i\in I} (U_i\cap A)=\bigcup_{i\in I} \iota^{-1}(U_i)$$
 
@@ -34,54 +35,54 @@ hold, so by [§Initial and Final Topology, ⁋Proposition 2](/en/math/topology/i
 
 $$\mathcal{T}_A=\{U\cap A\mid U\in\mathcal{T}\}$$
 
-In books such as **[Mun]**, this is sometimes taken as the definition of a subspace. From this we see that if $A\subseteq B\subseteq X$, then whether we regard $A$ as a subspace of $X$ or as a subspace of $B$ (with the subspace topology), we obtain the same space.
+In books such as **[Mun]**, this is even taken as the definition of a subspace. From this, we see that if $A\subseteq B\subseteq X$, then whether we regard $A$ as a subspace of $X$ or as a subspace of $B\subseteq X$ equipped with the subspace topology, we obtain the same space.
 
-One must be careful when dealing with subspaces: a set may be open in $\mathcal{T}_A$ without being open in $\mathcal{T}$.
+When dealing with subspaces, one must be careful that even if a set is open in $\mathcal{T}_A$, it may not be open in $\mathcal{T}$.
 
 {% diagram Math/Topology/Subspaces-1.svg width="27.83em" alt="open_in_subspace_but_not_in_whole" %}
 
 This situation is easily resolved if $A$ is an open set.
 
 ::: Lemma 2
-For a subspace $A$ of a topological space $X$, a necessary and sufficient condition for every open set of $A$ to be open in $X$ is that $A$ be an open set in $X$.
+For a topological space $X$ and a subspace $A$, a necessary and sufficient condition for every open set of $A$ to be open in $X$ is that $A$ be an open set in $X$.
 :::
 ::: Proof
 Since $A$ is an open set in $A$, one direction is trivial.
 
-For the converse, given any open set of $A$, there exists an open set $U$ of $X$ such that it can be written as $U\cap A$; since $A$ is also open, $U\cap A$ is open.
+For the converse, if we choose any open set of $A$, it can be written as $U\cap A$ for some open set of $X$, $U$; since $A$ is also an open set, $U\cap A$ is also an open set.
 :::
 
-It is not difficult to see that the closed sets in the subspace $A$ are precisely the sets of the form $A\cap C$ for closed sets $C$ of $X$. A similar situation can arise for closed sets, and the remedy is likewise simple.
+It is not difficult to see that the closed sets in the subspace $A$ are precisely the sets that, for a closed set of $X$, $C$, appear in the form $A\cap C$. In the case of closed sets as well, a situation like the example above can arise, and the way to resolve this is likewise simple.
 
 ::: Lemma 3
-For a subspace $A$ of a topological space $X$, a necessary and sufficient condition for every closed set of $A$ to be closed in $X$ is that $A$ be a closed set in $X$.
+For a topological space $X$ and a subspace $A$, a necessary and sufficient condition for every closed set of $A$ to be closed in $X$ is that $A$ be a closed set in $X$.
 :::
 ::: Proof
 Since $A$ is a closed set in $A$, one direction is trivial.
 
-For the converse, given any closed set of $A$, there exists a closed set $U$ of $X$ such that it can be written as $U\cap A$; since $A$ is also closed, $U\cap A$ is closed.
+For the converse, if we choose any closed set of $A$, it can be written as $U\cap A$ for some closed set of $X$, $U$; since $A$ is also a closed set, $U\cap A$ is also a closed set.
 :::
 
-We have defined all topological properties in terms of neighborhoods up to now, and this too can be adjusted just as in the lemmas above.
+Up to now, we have defined all topological properties through the notion of neighborhoods, and this too can be properly modified just as in the lemmas above.
 
 ::: Lemma 4
-For a subspace $A$ of a topological space $X$ and any point $x\in A$, a necessary and sufficient condition for every neighborhood of $x$ in $A$ to be a neighborhood of $x$ in $X$ is that $A$ be a neighborhood of $x$ in $X$.
+For a topological space $X$, given a subspace $A$ and any $x\in A$, a necessary and sufficient condition for every neighborhood in $A$ of $x$ to be a neighborhood in $X$ of $x$ is that $A$ be a neighborhood in $X$ of $x$.
 :::
 ::: Proof
-Since $A$ is a neighborhood of $x$ in $A$, one direction is trivial.
+Since $A$ is a neighborhood in $A$ of $x$, one direction is trivial.
 
-For the converse, let $U$ be an arbitrary neighborhood of $x$ in $A$. Then there exists an open neighborhood $U'$ of $x$ (in $A$) contained in $U$. On the other hand, if $A$ is a neighborhood of $x$ in $X$, then there exists an open neighborhood $V$ of $x$ (in $X$) contained in $A$. Now $U'\cap V$ is a nonempty subset, $U'\cap V\subseteq U$, and since $U'\cap V$ is an open neighborhood of $x$ in $X$, it follows that $U$ is a neighborhood of $x$ in $X$.
+For the converse, choose an arbitrary neighborhood of $x$ in $A$, $U$. Then there exists, contained in $U$, an open neighborhood of $x$ (in $A$), $U'$. On the other hand, if $A$ is a neighborhood in $X$ of $x$, there exists, contained in $A$, an open neighborhood (in $X$) of $x$, $V$. At this point, choosing to satisfy $U'=W\cap A$ an open set of $X$, $W$, since $V\subseteq A$, $U'\cap V=W\cap A\cap V=W\cap V$ is an open set in $X$. Now $U'\cap V$ is a nonempty subset, $U'\cap V\subseteq U$, and since $U'\cap V$ is an open neighborhood in $X$ of $x$, $U$ is a neighborhood in $X$ of $x$.
 :::
 
-Using these lemmas, we can restrict the concepts we have examined so far to subspaces.
+Through these lemmas, we can restrict the concepts we have examined so far to subspaces.
 
 ::: Proposition 5
-Let $X$ be a topological space and let $A\subseteq B\subseteq X$ be subsets. Then the closure of $A$ in $B$, denoted $\cl_BA$, is equal to
+Consider a topological space $X$ and subsets $A\subseteq B\subseteq X$. Then the closure $\cl_BA$ of $A$ in $B$ is equal to
 
 $$\cl_BA=B\cap\cl_XA$$
 :::
 ::: Proof
-For any $x\in B$, a neighborhood of $x$ in $B$ is always of the form $V\cap B$ for some suitable neighborhood $V$ of $x$ in $X$. Now using $V\cap A=(V\cap B)\cap A$ and [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="30tit" }, we obtain the desired result.
+For any $x\in B$, a neighborhood of $x$ in $B$ can always be written, for a suitable neighborhood of $x$ in $X$, $V$, in the form $V\cap B$. Now using $V\cap A=(V\cap B)\cap A$ and [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6){: data-lid="30tit" }, we obtain the desired result.
 :::
 
 Therefore, for $A\subseteq B\subseteq X$, the condition that $A$ be a dense subset of $B$ is equivalent to
@@ -91,45 +92,45 @@ $$B=\cl_BA=B\cap\cl_XA$$
 and from this in turn we see that it is equivalent to $B\subseteq\cl_XA$.
 
 ::: Proposition 6
-Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subsets of $X$, and suppose that one of the following two conditions holds.
+Let a topological space $X$ and a family of subsets of $X$, $(A_i)_{i\in I}$, be given, and suppose that one of the following two conditions holds.
 
-1. $X=\bigcup_{i\in I}\interior(A_i)$, or
-2. $(A_i)_{i\in I}$ is a locally finite closed covering of $X$.
+1. $X=\bigcup_{i\in I}\interior(A_i)$ holds, or
+2. $(A_i)_{i\in I}$ is a locally finite, closed covering of $X$.
 
-Then an arbitrary subset $B$ of $X$ is open (resp. closed) in $X$ if and only if $B\cap A_i$ is open (resp. closed) in $A_i$ for every $i$.
+Then, an arbitrary subset of $X$, $B$, is open (resp. closed) in $X$ if and only if for every $A_i$, $B\cap A_i$ is open (resp. closed) in $A_i$.
 :::
 ::: Proof
-First, from the identity
+First, from 
 
-$$X\setminus B\cap A_i=A_i\setminus (B\cap A_i)$$
+$$(X\setminus B)\cap A_i=A_i\setminus (B\cap A_i)$$
 
-it suffices to prove the proposition for either open sets or closed sets. Also, if $B$ is open in $X$ then $B\cap A_i$ is open in $A_i$ by definition, so the heart of the proposition is the converse.
+it suffices to prove this proposition for either open sets or closed sets. Also, if $B$ is open in $X$, then $B\cap A_i$ being open in $A_i$ is by definition, so the heart of the proposition is the converse.
 
-1. Assume that $(A_i)$ satisfies the first condition, and suppose that $B\cap A_i$ is open in $A_i$. Regarding $A_i$ as the whole set and $\interior A_i$ as a subspace, we know from this that $B\cap\interior A_i$ is open in $\interior A_i$. Since $\interior A_i$ is an open set, applying [Lemma 2](#lem2){: data-lid="ckhze" } we see that $B\cap\interior A_i$ is open in $X$. Therefore, from
-
+1. Suppose that the $(A_i)$ satisfy the first condition, and assume that $B\cap A_i$ is open in $A_i$. Regarding $A_i$ as the whole set and $\interior A_i$ as a subspace, we know from this that $B\cap\interior A_i$ is open in $\interior A_i$. Now since $\interior A_i$ is an open set, applying [Lemma 2](#lem2){: data-lid="ckhze" } shows that $B\cap\interior A_i$ is open in $X$. Therefore, from
+    
     $$B=B\cap X=B\cap\left(\bigcup_{i\in I} \interior A_i\right)=\bigcup_{i\in I}(B\cap\interior A_i)$$
-
-    we see that $B$ is open.
-2. Now suppose that $(A_i)$ satisfies the second condition. This time we assume that all the $B\cap A_i$ are closed in $A_i$. Then by [Lemma 3](#lem3){: data-lid="bypay" }, each $B\cap A_i$ is a closed set in $X$. Now $(B\cap A_i)$ is a collection of locally finite closed sets, and since $B=\bigcup (B\cap A_i)$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-lid="2iewu" } we conclude that $B$ is closed.
+    
+    we see that $B$ is an open set.
+2. Now suppose that $(A_i)$ satisfies the second condition. This time, we assume that the $B\cap A_i$ are all closed in $A_i$. Then $B\cap A_i$ is a closed set in $X$ by [Lemma 3](#lem3){: data-lid="bypay" }. Now $(B\cap A_i)$ is a locally finite collection of closed sets, and since $B=\bigcup (B\cap A_i)$, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-lid="2iewu" }, $B$ is a closed set.
 :::
 
 ## Subspaces and Continuous Functions
 
-Let topological spaces $X,Y$ and a function $f:X\rightarrow Y$ be given. Then for any set $B$ with $f(X)\subseteq B\subseteq Y$, the function obtained by restricting the codomain of $f$ to $B$ is continuous. This is trivial by [Definition 1](#def1){: data-lid="gjyvh" } and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3){: data-lid="8cb8m" }.
+Let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given. Then for any set satisfying $f(X)\subseteq B\subseteq Y$, denoted $B$, the function obtained by restricting the codomain of $f$ to $B$ is continuous. This is trivial by [Definition 1](#def1){: data-lid="gjyvh" } and [§Initial and Final Topology, ⁋Proposition 3](/en/math/topology/initial_and_final_topology#prop3){: data-lid="8cb8m" }.
 
-Now suppose, in the same setting, that a subset $A$ of $X$ is given. Then the restriction of $f:X\rightarrow Y$ to $A$, denoted $f\vert_A$, equals $f\circ\iota$ for the inclusion $\iota:A\hookrightarrow X$. Since this is a composition of two continuous functions, we immediately see that $f\vert_A$ is also continuous. However, the converse does not hold in general.
+Now suppose, in the same setting as above, that a subset of $X$, $A$, is given. Then the restriction of $f:X\rightarrow Y$ to $A$, denoted $f\vert_A$, is, with respect to $\iota:A\hookrightarrow X$, equal to $f\circ\iota$. Since this is the composition of two continuous functions, we clearly see that $f\vert_A$ is also continuous. However, the converse does not hold in general.
 
 ::: Example 7
-Let $f:X\rightarrow Y$ be a function between two topological spaces that is not continuous. For any $x\in X$, if we set $A=\{x\}$, then $f\vert_A$ is continuous. This is because for any open set $U$ of $Y$, the preimage $f^{-1}(U)$ is always either empty or $\{x\}$.
+Suppose that a function between two topological spaces $f:X\rightarrow Y$ is not continuous. For any $x\in X$, if we set $A=\{x\}$, then $f\vert_A$ is continuous. This is because for any open set in $Y$, $U$, $(f\vert_A)^{-1}(U)$ is always either the empty set or $\{x\}$.
 :::
 
-Instead, if the set $A$ is a neighborhood of $x$, then the continuity of $f\vert_A$ at the point $x\in X$ implies that $f$ is continuous at $x$. This is because by [Lemma 4](#lem4){: data-lid="z1sia" }, a neighborhood of $x$ in $A$ can always be viewed as a neighborhood in $X$. To use this argument to show that $f$ is continuous at every point, one would have to prove that for each $x\in X$ there is a neighborhood $N(x)$ such that $f\vert_{N(x)}$ is continuous; however, by the following proposition we can prove that $f$ is continuous using even weaker information.
+Instead, if the set $A$ is a neighborhood of $x$, then the continuity of $f\vert_A$ at the point $x\in X$ implies that $f$ is continuous at $x$. This is because by [Lemma 4](#lem4){: data-lid="z1sia" }, a neighborhood of $x$ in $A$ can always be viewed as a neighborhood in $X$. To use this argument to show that the function $f$ is continuous at all points, one would have to choose for each $x\in X$ a neighborhood $N(x)$ and prove that $f\vert_{N(x)}$ is necessarily continuous; however, by the following proposition, we can prove that $f$ is continuous using even weaker information.
 
 ::: Proposition 8
-Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subsets satisfying one of the conditions of [Proposition 6](#prop6){: data-lid="fysbg" }. Then an arbitrary function $f:X\rightarrow Y$ into a topological space $Y$ is continuous if and only if all the restrictions $f\vert_{A_i}$ are continuous.
+Let $X$ be a topological space and let $(A_i)_{i\in I}$ be a collection of subsets satisfying one of the conditions of [Proposition 6](#prop6){: data-lid="fysbg" }. Then, for any topological space $Y$, an arbitrary function $f:X\rightarrow Y$ is continuous if and only if all $f\vert_{A_i}$ are continuous.
 :::
 ::: Proof
-It suffices to assume that all the $f\vert_{A_i}$ are continuous and show that $f$ is continuous. Let $B$ be an arbitrary closed set of $Y$ and set $A=f^{-1}(B)$. Since all the $f\vert_{A_i}$ are continuous, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$ are all closed sets. Applying [Proposition 6](#prop6){: data-lid="i9fpp" }, we see that $A$ is closed, and therefore $f$ is continuous.
+It suffices to assume that all $f\vert_{A_i}$ are continuous and show that $f$ is continuous. In $Y$, choose an arbitrary closed set $B$, and let $A=f^{-1}(B)$. Since all $f\vert_{A_i}$ are continuous, $(f\vert_{A_i})^{-1}(B)=A\cap A_i$ are all closed sets in $A_i$. From this, applying [Proposition 6](#prop6){: data-lid="i9fpp" }, we see that $A$ is closed, and therefore $f$ is continuous.
 :::
 
 ---
