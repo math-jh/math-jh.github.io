@@ -12,14 +12,15 @@ date: 2022-11-17
 weight: 10
 translated_at: 2026-06-03T04:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-03T04:30:02+00:00
+last_polished_at: 2026-11-08T19:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
 Now we examine how to define a topology on a quotient set. ([\[Set Theory\] §Equivalence Relations, ⁋Definition 4](/en/math/set_theory/equivalence_relations#def4){: data-lid="gqeyf" })
 
 ## Locally closed subspace
 
 ::: Definition 1
-Let $X$ be a topological space. A subset $A$ is called *locally closed* at $x\in A$ if there exists a neighborhood $V$ of $x$ in $X$ such that $A\cap V$ is closed in $V$. If $A$ is locally closed at every $x\in A$, then we call $A$ itself locally closed.
+Let a topological space $X$ be given. A subset $A$ is said to be *locally closed* at $x\in A$ if in $X$, there exists for $x$ a neighborhood $V$ such that $A\cap V$ is closed in $V$. If $A$ is locally closed at every $x\in A$, then we call $A$ itself locally closed.
 :::
 
 ::: Proposition 2
@@ -27,29 +28,29 @@ For a topological space $X$ and a subset $A$, the following are all equivalent.
 
 1. $A$ is locally closed in $X$.
 2. $A$ is the intersection of an open set and a closed set in $X$.
-3. $A$ is open in its closure $\cl A$ (in $X$).
+3. $A$ is open relative to its closure in $X$, $\cl A$.
 :::
 ::: Proof
-First, suppose $A$ is locally closed, and for each $x\in A$ let $V_x$ be an open neighborhood of $x$ in $X$ satisfying the condition of [Definition 1](#def1){: data-lid="ovwee" }. Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-lid="q5kvx" }, we see that $A$ is closed in $U$. Thus $A=U\cap C$ for some closed set $C$ in $X$, so the second condition holds.
+First, suppose that $A$ is locally closed, and for any $x\in A$, consider in $X$ a neighborhood of $x$, $V$, satisfying the condition of [Definition 1](#def1){: data-lid="ovwee" }. If, with $x\in W\subseteq V$, we choose an open set $W$, then since $A\cap W=(A\cap V)\cap W$, $A\cap W$ is also closed in $W$, and thus there exists an open neighborhood of $x$ satisfying the same condition. Let this be $V_x$. Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6){: data-lid="q5kvx" }, we know that $A$ is closed in $U$. Therefore, in $X$, for a suitable closed set $C$, we have $A=U\cap C$, so the second condition holds.
 
-Now suppose $A=U\cap C$ holds for an open set $U$ and a closed set $C$ in $X$. Then $\cl A\subseteq C$, so
+Now suppose that in $X$, for an open set $U$ and a closed set $C$, $A=U\cap C$ holds. Then since $\cl A\subseteq C$,
 
 $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 
-holds, and in particular $A=U\cap\cl A$. From this we see that $A$ is open in $\cl A$.
+holds, and in particular $A=U\cap\cl A$. From this we see that $A$ is an open set of $\cl A$.
 
-Finally, if there exists an open set $U$ in $X$ satisfying $A=U\cap\cl A$, then $A$ is closed in $U$ and hence locally closed.
+Finally, if, satisfying $A=U\cap\cl A$, there exists in $X$ an open set $U$, then $A$ is closed in the set $U$ and is therefore locally closed.
 :::
 
-In particular, from condition 2, if a continuous function $f:X\rightarrow Y$ and a locally closed subset $B$ of $Y$ are given, then $f^{-1}(B)$ is also locally closed in $X$.
+In particular, from condition 2, if a continuous function $f:X\rightarrow Y$ and a locally closed subset of $Y$, $B$, are given, then $f^{-1}(B)$ is also locally closed in $X$.
 
-## Quotient Spaces
+## Quotient space
 
 ::: Definition 3
-Let a topological space $X$ be given, and let $R$ be an equivalence relation on the set $X$. Then the *quotient space* of $X$ by $R$ means the space $X/R$ equipped with the final topology defined by the canonical projection $p:X\rightarrow X/R$.
+Let a topological space $X$ be given, and on the set $X$ let an equivalence relation $R$ be given. Then, by $R$, the *quotient space* of $X$ means the space equipped with the final topology defined by the canonical projection $p:X\rightarrow X/R$, namely $X/R$.
 :::
 
-By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5){: data-lid="x7lvw" }, the open sets in $X/R$ are exactly those sets $U$ such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5){: data-lid="2ey4z" }, we can verify that the open sets on $X/R$ correspond bijectively to the open sets of $X$ that are *saturated* with respect to $R$.
+By [§Initial and Final Topology, ⁋Proposition 5](/en/math/topology/initial_and_final_topology#prop5){: data-lid="x7lvw" }, an open set in $X/R$ means precisely a set such that $p^{-1}(U)$ is open in $X$.[^1] Rewriting this in the language of [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 5](/en/math/set_theory/examples_of_equivalence#def5){: data-lid="2ey4z" }, one can verify that the open sets on $X/R$ correspond bijectively to open sets that are *saturated* with respect to $R$ in $X$.
 
 Meanwhile, by [§Initial and Final Topology, ⁋Proposition 6](/en/math/topology/initial_and_final_topology#prop6){: data-lid="aon9j" }, the following holds.
 
@@ -58,19 +59,19 @@ Let a topological space $X$, a quotient space $X/R$, and the canonical projectio
 :::
 
 ::: Proposition 5
-Consider a topological space $X$ and two equivalence relations $R,S$ defined on $X$. If $S$ is a finer equivalence relation than $R$, then the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism for the equivalence relation $R/S$ defined on $X/S$.
+Consider a topological space $X$ and, defined on $X$, two equivalence relations $R,S$. If $S$ is a finer equivalence relation than $R$, then for the equivalence relation on $X/S$ defined by $R/S$, the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism.
 :::
 ::: Proof
-That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8){: data-lid="guisq" }. By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
+That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8). By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
 
-Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and this function is the composition of two continuous functions
+Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and since this function is equal to the composition of two continuous functions
 
 $$X\rightarrow X/S\rightarrow (X/S)/(R/S)$$
 
-so it is continuous.
+it is continuous.
 :::
 
-Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations){: data-lid="4lib6" }) Then we may consider the canonical decomposition of $f$
+Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations)) Then we may consider the canonical decomposition of $f$
 
 $$X\overset{p}{\rightarrow}X/R\overset{\bar{f}}{\rightarrow}f(X)\overset{i}{\rightarrow}Y$$
 
@@ -80,13 +81,13 @@ Now if we give $f(X)$ the subspace topology, it is immediate from [Proposition 4
 For the above diagram, the following are equivalent.
 
 1. $\bar{f}$ is a homeomorphism from $X/R$ onto $f(X)$.
-2. For an open set $U\subseteq X$ saturated with respect to $R$, $f(U)$ is open in $f(X)$.
-3. For a closed set $C\subseteq X$ saturated with respect to $R$, $f(C)$ is closed in $f(X)$.
+2. For an $R$-saturated open set $U\subseteq X$, $f(U)$ is open in $f(X)$.
+3. For an $R$-saturated closed set $C\subseteq X$, $f(C)$ is closed in $f(X)$.
 :::
 
 This is obvious because the second or third condition exactly means that $\bar{f}^{-1}$ is also continuous.
 
-Meanwhile, in the same situation as above, suppose there exists a *continuous* section $s:Y\rightarrow X$ of $f$. Then $f$ is surjective, so $i=\id_Y$. Now both $\bar{f}$ and $p\circ s$ are continuous, and
+Meanwhile, in the same situation as above, suppose that $f$ has a *continuous* section $s:Y\rightarrow X$. Then $f$ is surjective, so $i=\id_Y$. Now both $\bar{f}$ and $p\circ s$ are continuous, and
 
 $$\bar{f}\circ(p\circ s)=f\circ s=\id_Y$$
 
@@ -98,9 +99,9 @@ Therefore, in this case $\bar{f}$ is a homeomorphism.
 
 ## Quotient Spaces and Subspaces
 
-Now consider a topological space $X$, a subset $A$, and an equivalence relation $R$ given on $X$. Letting $p:X\rightarrow X/R$ be the canonical projection, the canonical decomposition of $p\vert_A:A\rightarrow X/R$
+Now consider a topological space $X$, a subset $A$, and, given on $X$, an equivalence relation $R$. Letting $p:X\rightarrow X/R$ be the canonical projection, the canonical decomposition of $p\vert_A:A\rightarrow X/R$
 
-$$A\overset{q}{\rightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\rightarrow} f(A)\overset{j}{\rightarrow}X/R$$
+$$A\overset{q}{\rightarrow}A/(R\vert_A)\overset{\overline{(p\vert_A)}}{\rightarrow} p(A)\overset{j}{\rightarrow}X/R$$
 
 is defined, and by the same argument as above $\overline{(p\vert_A)}$ is a continuous bijection. The following proposition is also almost obvious.
 
@@ -108,8 +109,8 @@ is defined, and by the same argument as above $\overline{(p\vert_A)}$ is a conti
 In the above decomposition, the following are all equivalent.
 
 1. $\overline{(p\vert_A)}$ is a homeomorphism.
-2. An open set $U\subseteq A$ that is $R\vert_A$-saturated is the intersection of an open set in $X$ that is $R$-saturated with $A$.
-3. A closed set $C\subseteq A$ that is $R\vert_A$-saturated is the intersection of a closed set in $X$ that is $R$-saturated with $A$.
+2. An $R\vert_A$-saturated open set $U\subseteq A$ is the intersection of an $R$-saturated open set in $X$ with $A$.
+3. An $R\vert_A$-saturated closed set $C\subseteq A$ is the intersection of an $R$-saturated closed set in $X$ with $A$.
 :::
 
 ---
