@@ -17000,6 +17000,13 @@ R:
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
+- id: rational_canonical_form
+  en: rational canonical form
+  ko: 유리표준형
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: rational_equivalence
   en: rational equivalence
   ko: 유리 동치
