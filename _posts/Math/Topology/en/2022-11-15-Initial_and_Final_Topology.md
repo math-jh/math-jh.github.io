@@ -1,6 +1,6 @@
 ---
 title: "Initial and Final Topology"
-description: "The initial topology is the weakest topology that makes given functions continuous, while the final topology is defined in the opposite direction. We examine the existence of the initial topology and its concrete structure via a subbase."
+description: "The initial topology is the weakest topology that makes all given functions continuous, while the final topology is a topological structure defined in the opposite direction. We examine the existence of the initial topology and its concrete structure via a subbase."
 excerpt: "Initial/final topology and their examples"
 
 categories: [Math / Topology]
@@ -12,91 +12,92 @@ date: 2022-11-15
 weight: 6
 translated_at: 2026-06-03T03:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-03T03:30:02+00:00
+last_polished_at: 2026-11-08T11:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-In [§Continuous Functions](/en/math/topology/continuous_functions){: data-lid="z7rab" } we defined, for a continuous function $f:X \rightarrow Y$, the function $f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$ by the formula
+In [§Continuous Functions](/en/math/topology/continuous_functions){: data-lid="z7rab" }, for a continuous function $f:X \rightarrow Y$, we defined via the formula 
 
 $$f^\mathcal{T}(V)=f^{-1}(V)$$
 
-Conversely, for *any* function $f:X\rightarrow Y$, the map taking an arbitrary subset of $Y$ to its preimage under $f$,
+the function $f^\mathcal{T}:\mathcal{T}_Y\rightarrow\mathcal{T}_X$. However, thinking in reverse, for *any* function $f:X\rightarrow Y$, the function which assigns to an arbitrary subset of $Y$ its preimage under $f$,
 
 $$f^\text{pre}:\mathcal{P}(Y)\rightarrow\mathcal{P}(X); \qquad V\mapsto f^{-1}(V)$$
 
-is always well defined, and restricting this to the subset $\mathcal{T}_Y$ of $\mathcal{P}(Y)$ yields exactly $f^\mathcal{T}$. In this case, the condition that the image of $f^\text{pre}\vert_{\mathcal{T}(Y)}$ lies in $\mathcal{T}_X\subseteq \mathcal{P}(X)$ is precisely the condition that $f$ is continuous.
+is always well-defined, and restricting this to a subset of $\mathcal{P}(Y)$, namely $\mathcal{T}_Y$, is precisely equal to $f^\mathcal{T}$. In this case, the condition that the image of the function $f^\text{pre}\vert_{\mathcal{T}_Y}$ is contained in $\mathcal{T}_X\subseteq \mathcal{P}(X)$ is precisely the condition for $f$ to be a continuous function. 
 
-In particular, fixing an arbitrary set $X$ with the discrete topology $\mathcal{T}_1$ and the trivial topology $\mathcal{T}_2$ on it, any function from the topological space $(X, \mathcal{T}_1)$ to an arbitrary topological space $(Y, \mathcal{T})$ is continuous, and any function from an arbitrary topological space $(Y,\mathcal{T})$ to $(X, \mathcal{T}_2)$ is always continuous.
+In particular, if we fix an arbitrary set $X$ and the discrete topology $\mathcal{T}_1$ and trivial topology $\mathcal{T}_2$ defined on it, any function from the topological space $(X, \mathcal{T}_1)$ to an arbitrary topological space $(Y, \mathcal{T})$ is continuous, and any function from an arbitrary topological space $(Y,\mathcal{T})$ to $(X, \mathcal{T}_2)$ is always continuous. 
 
 ## Initial topology
 
-In this post we examine topological structures defined by similar properties.
+In this post, we examine topological structures defined by similar properties. 
 
 ::: Definition 1
-Let a set $X$ and a family of topological spaces $(Y_i,\mathcal{T}_i)_{i\in I}$ be given, and suppose that for each $i$ a function $f_i:X\rightarrow Y_i$ is given. The weakest topology on $X$ making all the functions $f_i$ continuous is called the *initial topology defined by the $f_i$*.
+Suppose that a set $X$ and a family of topological spaces $(Y_i,\mathcal{T}_i)_{i\in I}$ are given, and that for each $i$, functions $f_i:X\rightarrow Y_i$ are given. Among the topologies making all the functions $f_i$ continuous, the weakest topology on the set $X$ is called the *initial topology defined by the $f_i$*. 
 :::
 
-For topologies $(\mathcal{T}_j)_{j\in J}$ on $X$, suppose that the functions $f_i$ from the topological space $(X, \mathcal{T}_j)$ to $(Y_i,\mathcal{T}_i)$ are all continuous. Then $\mathcal{T}=\bigcap_{j\in J}\mathcal{T}_j$ defines a topology on $X$, and one can show that the functions $f_i$ from this topological space $(X,\mathcal{T})$ to $(Y_i,\mathcal{T}_i)$ are all continuous. Moreover, since any function whose domain carries the discrete topology is always continuous, such a topology always exists, and therefore the existence of the initial topology is trivial. As is always the case with this kind of argument, this is an impeccable proof of the existence of the initial topology, but it is of little help in seeing what the initial topology actually looks like. Hence we need to examine the situation somewhat more concretely.
+For topologies defined on $X$, $(\mathcal{U}_j)_{j\in J}$, suppose that from the topological space $(X, \mathcal{U}_j)$ to $(Y_i,\mathcal{T}_i)$, the functions $f_i$ are all continuous. Then $\mathcal{T}=\bigcap_{j\in J}\mathcal{U}_j$ defines a topology on $X$, and one can show that from this topological space $(X,\mathcal{T})$ to $(Y_i,\mathcal{T}_i)$, the functions $f_i$ are all continuous. Moreover, since any function taking the discrete topology as its domain is always continuous, a topology satisfying this condition always exists, and therefore, by taking the intersection of all topologies satisfying this condition, it is trivial that the initial topology always exists. As is always the case with this kind of argument, this is an impeccable argument for demonstrating the existence of the initial topology, but it is of little help in examining what the initial topology looks like. Hence, we need to examine the situation somewhat more concretely.
 
-For each function $f_i$ to be continuous, $f_i^{-1}(U_i)$ must be an open set in $X$ for every open set $U_i$ of $Y_i$, so the initial topology we define must contain all elements of the form $f_i^{-1}(U_i)$. On the other hand, a topology containing these elements must also contain their finite intersections and arbitrary unions. Therefore we can prove the following proposition.
+For the function $f_i$ to be continuous, for any open set of $Y_i$, $U_i$, the preimage $f_i^{-1}(U_i)$ must be an open set in $X$, so the initial topology we define must contain all elements of the form $f_i^{-1}(U_i)$. On the other hand, a topology containing these elements must also contain their finite intersections and arbitrary unions. Therefore, we can prove the following proposition.
 
 ::: Proposition 2
-The initial topology of [Definition 1](#def1){: data-lid="vmp2g" } is exactly the topology generated by taking the set
+The initial topology of [Definition 1](#def1){: data-lid="vmp2g" } is precisely the topology generated by taking the following set
 
-$$\mathcal{S}=\{f_i^{-1}(U_i)\mid \text{$U_i$ open in $Y_i$}\}$$
+$$\mathcal{S}=\{f_i^{-1}(U_i)\mid i\in I, \text{$U_i$ open in $Y_i$}\}$$
 
 as a subbase.
 :::
 ::: Proof
-Let us write the initial topology as $\mathcal{T}_\ini$, and the topology generated by taking $\mathcal{S}$ as a subbase as $\mathcal{T}$. Since $\mathcal{T}$ makes all the $f_i$ continuous by definition, $\mathcal{T}_\ini$ is weaker than $\mathcal{T}$. Thus it suffices to show that $\mathcal{T}$ is weaker than $\mathcal{T}_\ini$, which is trivial because $\mathcal{T}$ is the weakest topology containing $\mathcal{S}$.
+Let us write the initial topology as $\mathcal{T}_\ini$, and write the topology generated by taking $\mathcal{S}$ as a subbase as $\mathcal{T}$. Since by definition $\mathcal{T}$ makes all the $f_i$ continuous, $\mathcal{T}_\ini$ is a weaker topology than $\mathcal{T}$. Therefore, it suffices to show that $\mathcal{T}$ is weaker than $\mathcal{T}_\ini$; since with respect to $\mathcal{T}_\ini$, each $f_i$ is continuous, we have $\mathcal{S}\subseteq\mathcal{T}_\ini$, which is trivial because $\mathcal{T}$ is the weakest topology containing $\mathcal{S}$.
 :::
 
-Then the initial topology has the following universal property.
+Then the initial topology has the following kind of universal property.
 
 ::: Proposition 3
 In the situation of [Definition 1](#def1){: data-lid="2oq1d" }, suppose additionally that a topological space $Z$ and a map $g:Z\rightarrow X$ are given. Then $g$ is continuous if and only if each $f_i\circ g$ is continuous.
 :::
 ::: Proof
-If $g$ is continuous then $f_i\circ g$ is trivially continuous as a composition of continuous functions. Thus we only need to show the opposite direction.
+If $g$ is continuous, then $f_i\circ g$ is trivially continuous as a composition of continuous functions. Therefore, let us show only the converse direction.
 
-Suppose each function $f_i\circ g$ is continuous. For an arbitrary proper open subset $U$ of $X$, by [Proposition 2](#prop2){: data-lid="jb8nc" } there exist $U_j$ such that
+Suppose each function $f_i\circ g$ is continuous. For any proper open subset of $X$, $U$, by [Proposition 2](#prop2){: data-lid="jb8nc" },
 
 $$U=\bigcap_{j=1}^n f_j^{-1}(U_j)$$
 
-holds. Therefore
+holds for some $U_j$. Therefore
 
 $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)^{-1}(U_j)$$
 
-and by assumption each $(f_j\circ g)^{-1}(U_j)$ is an open set, so $g^{-1}(U)$ must also be an open set. That is, $g$ is continuous.
+and since $(f_j\circ g)^{-1}(U_j)$ is an open set by assumption, $g^{-1}(U)$ must also be an open set. That is, $g$ is continuous.
 :::
 
 
 ## Final topology
 
 ::: Definition 4
-Let a set $X$ and a family of topological spaces $(Y_i,\mathcal{T}_i)_{i\in I}$ be given, and suppose that for each $i$ a function $f_i:Y_i\rightarrow X$ is given. The strongest topology on $X$ making all the $f_i$ continuous is called the *final topology defined by the $f_i$*.
+Let a set $X$ and a family of topological spaces $(Y_i,\mathcal{T}_i)_{i\in I}$ be given, and suppose that for each $i$ a function $f_i:Y_i\rightarrow X$ is given. Making all $f_i$ continuous, the strongest topology on $X$ is called the *final topology* generated by the $f_i$.
 :::
 
 If the trivial topology is given on $X$, then any function into $X$ is always continuous. But since the union of topologies is not generally a topology, unlike the initial topology, the existence proof depends heavily on the following proposition.
 
 ::: Proposition 5
-The topology of [Definition 4](#def4){: data-lid="or8n8" } is defined by the set
+The topology of [Definition 4](#def4){: data-lid="or8n8" } is defined by the following set:
 
 $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all $i$}\}$$
 :::
 ::: Proof
-That the given set $\mathcal{T}_\fin$ is actually a topology is easily verified. Thus it suffices to show that $\mathcal{T}_\fin$ satisfies all the conditions of [Definition 4](#def4){: data-lid="tpw0n" }.
+That the given topology $\mathcal{T}_\fin$ is actually a topology is easily verified. Thus it suffices to show that $\mathcal{T}_\fin$ satisfies all the conditions of [Definition 4](#def4){: data-lid="tpw0n" }.
 
-First, for arbitrary $U\in\mathcal{T}_\fin$ and arbitrary $i$, that $f_i^{-1}(U)$ is open in $Y_i$ is clear from the definition of $\mathcal{T}_\fin$. On the other hand, suppose another topology $\mathcal{T}$ on $X$ satisfying the given condition is given. Then for arbitrary $U\in\mathcal{T}$, each $f^{-1}_i(U)$ must be open in $Y_i$. Therefore, by the definition of $\mathcal{T}_\fin$, we have $U\in\mathcal{T}_\fin$, and thus $\mathcal{T}_\fin$ is stronger than $\mathcal{T}$.
+First, for arbitrary $U\in\mathcal{T}_\fin$ and arbitrary $i$, that $f_i^{-1}(U)$ is open in $Y_i$ is clear from the definition of $\mathcal{T}_\fin$. On the other hand, suppose that on $X$, another topology $\mathcal{T}$ satisfying the given condition is given. Then for arbitrary $U\in\mathcal{T}$, $f^{-1}_i(U)$ must be open in $Y_i$. Therefore, by the definition of $\mathcal{T}_\fin$, we have $U\in\mathcal{T}_\fin$, and thus $\mathcal{T}_\fin$ is stronger than $\mathcal{T}$.
 :::
 
-Likewise, the final topology satisfies the following universal property, similar to that of the initial topology.
+Likewise, the final topology also satisfies the following universal property, similar to that of the initial topology.
 
 ::: Proposition 6
 In the situation of [Definition 4](#def4){: data-lid="w03d2" }, suppose additionally that a topological space $Z$ and a map $g:X\rightarrow Z$ are given. Then $g$ is continuous if and only if each $g\circ f_i$ is continuous.
 :::
 ::: Proof
-If $g$ is continuous then $g\circ f_i$ is trivially continuous as a composition of continuous functions. Thus we only need to show the opposite direction.
+If $g$ is continuous, then $g\circ f_i$ is trivially continuous as a composition of continuous functions. Therefore, let us show only the converse direction.
 
-Suppose each function $g\circ f_i$ is continuous. Then for any open set $U\subseteq Z$, the sets
+Suppose each function $g\circ f_i$ is continuous. Then for any open set $U\subseteq Z$, the following sets
 
 $$(g\circ f_i)^{-1}(U)=f_i^{-1}(g^{-1}(U))$$
 
