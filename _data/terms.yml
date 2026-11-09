@@ -14282,6 +14282,13 @@ N:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: normal_matrix
+  en: normal matrix
+  ko: 정규행렬
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소 스펙트럼 정리'
+    url: /ko/math/linear_algebra/complex_spectral_theorem
 - id: normal_neighborhood
   en: normal neighborhood
   ko: 정규근방
