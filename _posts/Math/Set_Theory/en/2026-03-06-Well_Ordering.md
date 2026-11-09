@@ -46,7 +46,7 @@ More generally, the following holds.
 If $\alpha$ is an ordinal number, then $\alpha$'s successor $S(\alpha)=\alpha\cup\{\alpha\}$ is also an ordinal.
 :::
 ::: Proof
-First, every element of $S(\alpha)=\alpha\cup\{\alpha\}$ is a subset of $S(\alpha)$. The elements that were in the set $\alpha$ will also be in the set containing $\alpha$, namely $S(\alpha)$, and the newly added *element* $\alpha$ is by definition also a subset of $S(\alpha)$.
+First, every element of $S(\alpha)=\alpha\cup\{\alpha\}$ is a subset of $S(\alpha)$. The elements that were in the set $\alpha$ will also be in the set containing $\alpha$, namely $S(\alpha)$, and the newly added *element* $\alpha$ is by definition also a subset of $S(\alpha)$. Also, since $x\in\alpha$ for all $x\in\alpha$, $\alpha$ is the greatest element of $S(\alpha)$ with respect to $\in$, and therefore $S(\alpha)$ is also strictly well-ordered by $\in$.
 :::
 
 The next proposition shows a way to construct *larger* ordinals by an even more general method than introducing the successor function $S$ in this way.

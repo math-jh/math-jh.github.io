@@ -46,7 +46,7 @@ $\emptyset$은 vacuous하게 ordinal이고, 모든 자연수들도 ordinal이 �
 만일 $\alpha$가 ordinal number라면, $\alpha$의 successor $S(\alpha)=\alpha\cup\{\alpha\}$ 또한 ordinal이다.
 :::
 ::: 증명
-우선, $S(\alpha)=\alpha\cup\{\alpha\}$의 모든 원소는 $S(\alpha)$의 부분집합이다. 집합 $\alpha$에 들어있던 원소들은 $\alpha$를 포함하는 집합인 $S(\alpha)$에도 들어있을 것이고, 우리가 새로 추가한 <em-ko>원소</em-ko> $\alpha$는 정의에 의해 $S(\alpha)$의 부분집합이기도 하다.   
+우선, $S(\alpha)=\alpha\cup\{\alpha\}$의 모든 원소는 $S(\alpha)$의 부분집합이다. 집합 $\alpha$에 들어있던 원소들은 $\alpha$를 포함하는 집합인 $S(\alpha)$에도 들어있을 것이고, 우리가 새로 추가한 <em-ko>원소</em-ko> $\alpha$는 정의에 의해 $S(\alpha)$의 부분집합이기도 하다. 또, 모든 $x\in\alpha$에 대하여 $x\in\alpha$이므로 $\alpha$는 $\in$에 대한 $S(\alpha)$의 greatest element이고, 따라서 $S(\alpha)$ 역시 $\in$으로 strictly well-ordered된다.   
 :::
 
 다음 명제는 이렇게 successor funcion $S$를 도입하는 것보다 더더욱 일반적인 방법으로 <em-ko>더 큰</em-ko> ordinal을 만드는 방법을 보여준다. 
