@@ -134,7 +134,7 @@ $$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 does not generally form a filter on $A$. Upon reflection, this is only because $\mathcal{F}\vert_A$ might contain the empty set. That is, if every element of $\mathcal{F}$ is not disjoint from $A$, then $\mathcal{F}\vert_A$ defines a filter on $A$. 
 
 ::: Definition 8
-If in the above situation $\mathcal{F}\vert_A$ defines a filter on $A$, we call the filter $\mathcal{F}$ a filter on $A$. 
+If in the above situation $\mathcal{F}\vert_A$ defines a filter on $A$, we say that the filter $\mathcal{F}$ induces the filter $\mathcal{F}\vert_A$ on $A$. 
 :::
 
 ---

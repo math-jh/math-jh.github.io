@@ -132,7 +132,7 @@ $$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 은 일반적으로 $A$의 filter가 되지 않는다. 이는 생각해보면 오직 $\mathcal{F}\vert_A$가 공집합을 포함할 수도 있기 때문이다. 즉, $\mathcal{F}$의 모든 원소가 $A$와 서로소가 아니라면 $\mathcal{F}\vert_A$는 $A$ 위에 filter를 정의한다. 
 
 ::: 정의 8
-만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, filter $\mathcal{F}$를 $A$의 filter라 부른다. 
+만일 위의 상황에서 $\mathcal{F}\vert_A$가 $A$의 filter를 정의한다면, filter $\mathcal{F}$가 $A$ 위에 filter $\mathcal{F}\vert_A$를 유도한다고 말한다. 
 :::
 
 ---
