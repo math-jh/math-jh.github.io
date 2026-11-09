@@ -112,7 +112,7 @@ and we know that this is always possible. ([\[Manifolds\] §Vector Fields, ⁋Th
 
 To summarize the above process, the Hamiltonian $H$ describes the motion of the object through the equation
 
-$$\dd{H}=\langle-J_0\nabla H(z), -\rangle$$
+$$\dd{H}=\langle J_0(-J_0\nabla H(z)), -\rangle$$
 
 Now, if we define on $\mathbb{R}^{2n}$ a $2$-form
 

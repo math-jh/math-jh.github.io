@@ -112,7 +112,7 @@ $$X_H=-J_0\nabla H(z)$$
 
 위의 과정을 요약하자면, Hamiltonian $H$는 다음의 식
 
-$$\dd{H}=\langle-J_0\nabla H(z), -\rangle$$
+$$\dd{H}=\langle J_0(-J_0\nabla H(z)), -\rangle$$
 
 을 통해 물체의 운동을 기술한다. 이제 $\mathbb{R}^{2n}$ 위에 $2$-form
 
