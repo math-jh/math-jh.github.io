@@ -15673,6 +15673,13 @@ P:
   defs:
   - label: '[선형대수학] §스펙트럼 정리'
     url: /ko/math/linear_algebra/spectral_theorem
+- id: positive_definite_operator
+  en: positive definite operator
+  ko: 양의 정부호 작용소
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: positive_line_bundle
   en: positive line bundle
   ko: 양의 선다발
