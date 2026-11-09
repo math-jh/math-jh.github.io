@@ -230,7 +230,7 @@ $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal
 
 That is, the integral for two mutually independent conditions separates on the product into the product of each integral. 
 
-While we use the product when simply considering two stacks together as above, to compare two morphisms over the same base we must use the fiber product. To this end, suppose we are given morphisms
+While we use the product when simply considering two stacks together as above, to compare two morphisms over the same base we must use the fiber product. To this end, suppose we are given a $d$-dimensional smooth variety $X$ and morphisms
 
 $$u:\mathcal{M}\rightarrow X,\qquad v:\mathcal{N}\rightarrow X$$
 

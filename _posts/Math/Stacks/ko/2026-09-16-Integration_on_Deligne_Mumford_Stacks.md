@@ -237,7 +237,7 @@ $$\int_{\mathcal{X}\times\mathcal{Y}}\pr_\mathcal{X}^\ast\alpha\cdot\pr_\mathcal
 
 를 얻는다. 즉 서로 독립적인 두 조건에 대한 적분은 product 위에서 각 적분의 곱으로 분리된다. 
 
-위와 같이 두 stack을 단순히 함께 고려할 때에는 product를 사용하지만, 두 morphism을 같은 base 위에서 비교하려면 fiber product를 사용해야 한다. 이를 위해 morphism
+위와 같이 두 stack을 단순히 함께 고려할 때에는 product를 사용하지만, 두 morphism을 같은 base 위에서 비교하려면 fiber product를 사용해야 한다. 이를 위해 $d$차원 smooth variety $X$와 morphism
 
 $$u:\mathcal{M}\rightarrow X,\qquad v:\mathcal{N}\rightarrow X$$
 
