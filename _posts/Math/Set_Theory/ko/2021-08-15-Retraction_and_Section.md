@@ -36,7 +36,7 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 이므로 $y\in f(A)$이고, 따라서 $f$는 전사함수이다.
 :::
 
-따라서 함수 $f:A\rightarrow B$가 단사함수라는 것은 다음의 diagram 
+따라서 $A\neq\emptyset$일 때 함수 $f:A\rightarrow B$가 단사함수라는 것은 다음의 diagram 
 
 {% diagram Math/Set_Theory/Retraction_and_Section-1.svg width="5.54em" alt="injection" %}
 

@@ -37,7 +37,7 @@ $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 so $y\in f(A)$, and therefore $f$ is surjective.
 :::
 
-Therefore, that a function $f:A\rightarrow B$ is injective means that there is $r:B\rightarrow A$ making the diagram 
+Therefore, when $A\neq\emptyset$, that a function $f:A\rightarrow B$ is injective means that there is $r:B\rightarrow A$ making the diagram 
 
 {% diagram Math/Set_Theory/Retraction_and_Section-1.svg width="5.54em" alt="injection" %}
 
