@@ -49,7 +49,7 @@ The answer to this question is affirmative; although **[Mun]** proved this direc
 Meanwhile, by further refining [Definition 1](#def1){: data-lid="v70fw" }, we can define a *subbase* as follows.
 
 ::: Definition 3
-For a topological space $(X,\mathcal{T})$, a *subbase* $\mathcal{S}$ means, for any $U\in\mathcal{T}$, that $S\subseteq U$ holds for some $S\in\mathcal{S}$, forming an open covering of $X$.
+For a topological space $(X,\mathcal{T})$, a *subbase* $\mathcal{S}$ means an open covering of $X$ such that the collection of finite intersections of elements of $\mathcal{S}$ is a base for $\mathcal{T}$.
 :::
 
 By collecting finite intersections of elements of $\mathcal{S}$, we can form a new collection $\mathcal{B}$. To check whether this collection is a base, only condition 2 is needed; in any case, the elements of $\mathcal{B}$ are obtained as finite intersections of elements of $\mathcal{S}$, and therefore $B_1\cap B_2$ is still a finite intersection of elements of $\mathcal{S}$, so $\mathcal{B}$ is a base.

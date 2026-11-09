@@ -49,7 +49,7 @@ weight: 2
 한편 [정의 1](#def1){: data-lid="v70fw" }을 더 다듬어서 다음과 같이 *subbase*를 정의할 수 있다.
 
 ::: 정의 3
-위상공간 $(X,\mathcal{T})$의 *subbase<sub>부분기저</sub>* $\mathcal{S}$는 임의의 $U\in\mathcal{T}$에 대하여, $S\subseteq U$인 $S\in\mathcal{S}$가 존재하는 $X$의 open covering을 의미한다.
+위상공간 $(X,\mathcal{T})$의 *subbase<sub>부분기저</sub>* $\mathcal{S}$는 $\mathcal{S}$의 원소들의 유한한 교집합들을 모은 모임이 $\mathcal{T}$의 base가 되는 $X$의 open covering을 의미한다.
 :::
 
 $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 $\mathcal{B}$를 만들 수 있다. 이 모임이 base인지를 체크하는 데 필요한 것은 오직 2번 조건 뿐인데, 어차피 $\mathcal{B}$의 원소들은 $\mathcal{S}$의 유한한 교집합으로 얻어지고, 따라서 $B_1\cap B_2$를 해봐야 $\mathcal{S}$의 원소들의 유한한 교집합이므로 $\mathcal{B}$가 base가 된다. 
