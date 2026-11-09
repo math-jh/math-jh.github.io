@@ -29,7 +29,7 @@ $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
 Scheme theory에서 다룬 많은 성질들이 그러하듯, properness 또한 scheme 자체의 성질이라기보다는 scheme morphism의 성질이었고, 어떠한 $S$-scheme $X$가 proper하다는 것은 이를 사용하여 structure morphism $X\rightarrow S$가 proper인 것으로 정의했었다. 마침 우리는 representable stack morphism의 경우 scheme morphism으로서의 성질 $P$를 그대로 부여할 수 있음을 알고 있다. ([§대수적 스택, ⁋정의 4](/ko/math/stacks/algebraic_stacks#def4){: data-lid="asugv" })
 
-다만 여기에는 주의할 점이 있다. Scheme theory에서 separated morphism을 diagonal이 closed embedding인 것으로 정의했던 것과 달리 ([\[스킴\] §값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3){: data-lid="y52r9" }), stack에서는 대상들의 automorphism 때문에 diagonal이 monomorphism이 될 수 없다. 그 대신, closed embedding은 proper monomorphism이므로 ([\[스킴\] §값매김환, ⁋따름정리 13](/ko/math/scheme_theory/valuative_criteria#cor13){: data-lid="68l54" } 직후의 논의) 우리는 algebraic stack의 morphism $f: \mathcal{X}\rightarrow \mathcal{Y}$가 separated라는 것을, *algebraic space 사이의 morphism* $\Delta_f$가 proper하다는 것으로 정의하고, 그 후 *algebraic stack 사이의 morphism* $f: \mathcal{X}\rightarrow \mathcal{Y}$가 proper하다는 것은 이 separatedness 정의를 이용하여 언제나처럼 정의한다. ([\[스킴\] §값매김환, ⁋정리 11](/ko/math/scheme_theory/valuative_criteria#thm11){: data-lid="xmsvo" })
+다만 여기에는 주의할 점이 있다. Scheme theory에서 separated morphism을 diagonal이 closed embedding인 것으로 정의했던 것과 달리 ([\[스킴\] §값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3){: data-lid="y52r9" }), stack에서는 대상들의 automorphism 때문에 diagonal이 monomorphism이 될 수 없다. 그 대신, closed embedding은 proper monomorphism이므로 ([\[스킴\] §값매김환, ⁋따름정리 13](/ko/math/scheme_theory/valuative_criteria#cor13){: data-lid="68l54" } 직후의 논의) 우리는 algebraic stack의 morphism $f: \mathcal{X}\rightarrow \mathcal{Y}$가 separated라는 것을, *algebraic space에 의해 representable한 morphism* $\Delta_f$가 proper하다는 것으로 정의하고, 그 후 *algebraic stack 사이의 morphism* $f: \mathcal{X}\rightarrow \mathcal{Y}$가 proper하다는 것은 이 separatedness 정의를 이용하여 언제나처럼 정의한다. ([\[스킴\] §값매김환, ⁋정리 11](/ko/math/scheme_theory/valuative_criteria#thm11){: data-lid="xmsvo" })
 
 ::: 정의 1
 두 algebraic stack $\mathcal{X}$, $\mathcal{Y}$와 이들 사이의 morphism $f: \mathcal{X}\rightarrow \mathcal{Y}$가 주어졌다 하자. 
@@ -112,7 +112,7 @@ Quotient stack $[M/G]$에서 $G$의 action은 두 종류의 정보를 동시에 
 
 이제 위의 정리의 관점에서, 한 점 $x\in\mathcal{X}$를 잡고 이를 전역 quotient presentation $[M/G]$의 점 $p\in M$으로 나타낸다면, $x$의 automorphism group $G_x=\Stab_G(p)$은 $G$의 subgroup으로, $G$ 전체 원소 중 $p$를 고정하는 부분만 $G_x$로 남게 되며, 이를 사용한 것이 위의 local model이다. 
 
-그럼 이 local model에서의 $G_x$ 안에서도 역할에 따라 실제로 유효하게 작용하는 부분이 나뉜다. Local quotient $[V/G_x]$와 그 coarse moduli $[V/G_x]\rightarrow V/G_x$를 보면, 각각의 $G_x$-orbit이 한 점으로 줄어드는 반면 $H$는 stack으로 내려오는 과정에서 사라지므로, 실제로 $V$의 점을 움직이는 원소들은 $G_x/H$ 부분이다. 
+그럼 이 local model에서의 $G_x$ 안에서도 역할에 따라 실제로 유효하게 작용하는 부분이 나뉜다. Local quotient $[V/G_x]$와 그 coarse moduli $[V/G_x]\rightarrow V/G_x$를 보면, 각각의 $G_x$-orbit이 한 점으로 줄어드는 반면 $G_x$의 $V$ 위 action의 kernel $H$는 coarse moduli로 내려오는 과정에서 사라지므로, 실제로 $V$의 점을 움직이는 원소들은 $G_x/H$ 부분이다. 
 
 이제 $H$의 원소들을 골라내기 위해서는 function field를 보면 된다. 즉, $H$가 $K(V)$에 trivial하게 작용하므로 $G_x$의 function field 위 action은 $G_x/H$를 통해 factor하고,
 
