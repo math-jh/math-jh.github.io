@@ -1997,6 +1997,7 @@
 "svp2g": {relation: required, reviewed: true}
 "sw2pg": {relation: required, reviewed: true}
 "swaxp": {relation: required, reviewed: true}
+"swwn3": {relation: weak, reviewed: true}
 "sx2vi": {relation: required, reviewed: true}
 "sybwn": {relation: required, reviewed: true}
 "syi9h": {relation: weak, reviewed: true}
@@ -2444,6 +2445,7 @@
 "z5mif": {relation: required, reviewed: true}
 "z67v1": {relation: required, reviewed: true}
 "z6qjz": {relation: weak, reviewed: true}
+"z6wwg": {relation: required, reviewed: true}
 "z73ba": {relation: required, reviewed: true}
 "z7f7e": {relation: weak, reviewed: true}
 "z8657": {relation: required, reviewed: true}
