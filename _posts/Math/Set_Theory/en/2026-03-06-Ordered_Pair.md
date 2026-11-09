@@ -40,7 +40,7 @@ If $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.
 First, the premise means that for any $x$, the two propositions $x\in A\implies x\in B$ and $x\in B\implies x\in C$ are true. Therefore, by syllogism, $x\in A\implies x\in C$ is also true, and since $x$ can be chosen arbitrarily, $A\subseteq C$ holds.
 :::
 
-From the two propositions above, we know that $\subseteq$ is an order relation between sets. ([§Definition of Order Relations, ⁋Definition 2](/en/math/set_theory/order_relations#def2){: data-lid="kqyue" })
+From the two propositions above and the axiom of extensionality that if $A\subseteq B$ and $B\subseteq A$, then $A=B$, we know that $\subseteq$ is an order relation between sets. ([§Definition of Order Relations, ⁋Definition 2](/en/math/set_theory/order_relations#def2){: data-lid="kqyue" })
 
 ## Ordered Pairs
 
