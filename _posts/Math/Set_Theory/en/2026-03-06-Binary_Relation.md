@@ -33,10 +33,10 @@ If $=$ were a binary relation between sets, then the set representing it
 
 $$E=\{(A,A)\mid\text{$A$ any set}\}$$
 
-would exist. That is, $E$ would have to be the product of two universal sets.
+would exist.
 :::
 
-If the product of two universal sets exists, then by the following proposition a universal set must also exist, which contradicts [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-lid="zvv91" }. Therefore, $=$ defined between all sets cannot be a binary relation.
+If such an $E$ exists, then by the following proposition a universal set must also exist, which contradicts [§ZFC Axioms, ⁋Example 4](/en/math/set_theory/zfc_axioms#ex4){: data-lid="zvv91" }. Therefore, $=$ defined between all sets cannot be a binary relation.
 
 ::: Proposition 3
 Let $R$ be a binary relation. Then there exist unique sets $A$, $B$ such that
