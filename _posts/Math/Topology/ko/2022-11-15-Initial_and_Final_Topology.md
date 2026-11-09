@@ -56,11 +56,11 @@ Initial topology를 $\mathcal{T}_\ini$으로 적고, $\mathcal{S}$를 subbase로
 ::: 증명
 만일 $g$가 연속이라면 $f_i\circ g$는 연속함수들의 합성이므로 자명하게 연속이다. 따라서 반대방향만 보이자.
 
-각각의 함수 $f_i\circ g$가 연속이라 하자. $X$의 임의의 열린 진부분집합 $U$에 대하여, [명제 2](#prop2){: data-lid="jb8nc" }에 의해 
+각각의 함수 $f_i\circ g$가 연속이라 하자. [명제 2](#prop2){: data-lid="jb8nc" }에 의해 $X$의 열린집합은 $\mathcal{S}$의 원소들의 유한한 교집합
 
 $$U=\bigcap_{j=1}^n f_j^{-1}(U_j)$$
 
-가 성립하도록 하는 $U_j$들이 존재한다. 따라서
+들의 합집합이고 $g^{-1}$은 합집합을 보존하므로, 이러한 꼴의 $U$에 대하여 $g^{-1}(U)$가 열린집합임을 보이면 충분하다. 그런데
 
 $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)^{-1}(U_j)$$
 

@@ -58,11 +58,11 @@ In the situation of [Definition 1](#def1){: data-lid="2oq1d" }, suppose addition
 ::: Proof
 If $g$ is continuous, then $f_i\circ g$ is trivially continuous as a composition of continuous functions. Therefore, let us show only the converse direction.
 
-Suppose each function $f_i\circ g$ is continuous. For any proper open subset of $X$, $U$, by [Proposition 2](#prop2){: data-lid="jb8nc" },
+Suppose each function $f_i\circ g$ is continuous. By [Proposition 2](#prop2){: data-lid="jb8nc" }, an open set of $X$ is a union of finite intersections of elements of $\mathcal{S}$
 
 $$U=\bigcap_{j=1}^n f_j^{-1}(U_j)$$
 
-holds for some $U_j$. Therefore
+and since $g^{-1}$ preserves unions, it suffices to show that $g^{-1}(U)$ is an open set for $U$ of this form. Now,
 
 $$g^{-1}(U)=g^{-1}\left(\bigcap f_j^{-1}(U_j)\right)=\bigcap_{j=1}^n(f_j\circ g)^{-1}(U_j)$$
 
