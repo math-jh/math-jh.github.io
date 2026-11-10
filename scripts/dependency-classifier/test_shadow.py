@@ -172,13 +172,117 @@ class FinalizeTest(unittest.TestCase):
                            precedent={"S1": "P-0001", "S2": "none", "S3": "P-0001"}),
         }}
         records, queue = {}, store.load_queue()
-        result = pipe.finalize(record, ["l1", "l2", "l3"], records, queue, time.time() - 30 * 86400)
-        self.assertEqual(result["finalized"], 1)
-        self.assertEqual(result["to_human"], 2)
+        bumped = []
+        with patch.object(pipe.book, "bump_applied", lambda pid, lid: bumped.append((pid, lid))):
+            result = pipe.finalize(record, ["l1", "l2", "l3"], records, queue, time.time() - 30 * 86400)
+        self.assertEqual(result["finalized"], 2)
+        self.assertEqual(result["to_human"], 1)
         self.assertEqual(records["l1"].relation, "weak")
         self.assertIn("l2", queue["human"])
-        self.assertIn("l3", queue["human"])           # precedents disagreed
+        self.assertEqual(records["l3"].relation, "weak")    # precedents disagreed, votes did not
+        self.assertEqual(bumped, [("P-0001", "l3")])         # cited by two of three
         self.assertTrue(queue["human"]["l2"]["decisive"])
+
+    def test_one_model_citation_in_a_split_is_not_counted(self):
+        record = {"unit": "u", "links": {
+            "l1": link_rec("a.md", "/ko/math/y", {"S1": "weak", "S2": "weak", "S3": "weak"},
+                           precedent={"S1": "P-0001", "S2": "none", "S3": "P-0002"}),
+        }}
+        bumped = []
+        with patch.object(pipe.book, "bump_applied", lambda pid, lid: bumped.append(pid)):
+            pipe.finalize(record, ["l1"], {}, store.load_queue(), time.time() - 30 * 86400)
+        self.assertEqual(bumped, [])
+
+    def test_promote_copies_principle_into_criteria(self):
+        import shadow_digest as digest
+        criteria = Path(TMP) / "criteria.md"
+        criteria.write_text("### 관계\n본문\n\n### 승격된 원칙\n(아직 없다)\n", encoding="utf-8")
+        for pid, extra in (("P-0901", "## 원칙 초안\n첫째 원칙\n이어지는 줄.\n"), ("P-0902", "")):
+            book.write(pid, {"id": pid, "status": "active", "description": "d", "question": "need"},
+                       f"## 쟁점\nq\n\n## 판정\nr\n\n{extra}")
+        with patch.object(digest.sp, "CRITERIA_PATH", criteria):
+            with self.assertRaises(ValueError):
+                digest.apply_consolidation("promote", ["P-0901", "P-0902"])   # P-0902 has no draft
+            self.assertEqual(book.get("P-0901").status, "active")             # nothing changed
+            digest.apply_consolidation("promote", ["P-0901"])
+            digest.apply_consolidation("promote", ["P-0901"])                 # idempotent
+        self.assertEqual(criteria.read_text(encoding="utf-8"),
+                         "### 관계\n본문\n\n### 승격된 원칙\n- (P-0901) 첫째 원칙 이어지는 줄.\n")
+        self.assertEqual(book.get("P-0901").status, "promoted")
+
+    def test_merge_goes_through_a_draft_that_absorbs_the_rest(self):
+        import shadow_digest as digest
+        for pid, expl in (("P-0911", "첫 설명"), ("P-0912", "둘째 설명")):
+            book.write(pid, {"id": pid, "status": "active", "description": pid, "question": "provided"},
+                       f"## 쟁점\nq\n\n## 판정\n{pid} 판정\n\n## 이유\nr\n\n## 사용자 설명 (원문)\n{expl}\n\n"
+                       f"## 대표 예시 (최대 2개)\n- lid `ab{pid[-3:]}` — e — weak\n")
+        out = digest.apply_consolidation("merge", ["P-0911", "P-0912"])
+        self.assertTrue(out["queued"])
+        self.assertEqual(book.get("P-0912").status, "active")              # nothing yet
+        queue = store.load_queue()
+        queue["digest"] = [j for j in queue["digest"] if j.get("kind") == "merge"]
+        store.save_queue(queue)
+        reply = {"action": "merge", "question": "provided", "issue": "합친 쟁점", "ruling": "양쪽 판정",
+                 "relation": None, "reason": "근거", "description": "합친 판례", "principle": "합친 원칙",
+                 "examples": ["ab911", "zzzzz"], "note": "두 쪽을 합쳤다"}
+        with patch.object(digest.models, "available", return_value=True), \
+                patch.object(digest.models, "call", return_value=(reply, {})):
+            self.assertTrue(digest.run_one())
+        draft = store.load_queue()["drafts"][-1]
+        self.assertEqual(draft["draft"]["action"], "merge")
+        self.assertEqual(draft["draft"]["examples"], ["ab911"])           # only lids the precedents list
+        digest.apply_draft(draft["id"])
+        keep, gone = book.get("P-0911"), book.get("P-0912")
+        self.assertEqual(gone.status, "superseded")
+        self.assertEqual(gone.meta["superseded_by"], "P-0911")
+        self.assertIn("양쪽 판정", keep.body)
+        self.assertIn("첫 설명", keep.body)
+        self.assertIn("(P-0912) 둘째 설명", keep.body)
+        self.assertEqual(keep.meta["absorbs"], ["P-0912"])
+
+    def test_provisional_outcome_is_the_two_one_majority(self):
+        self.assertEqual(risk.provisional_outcome({"S1": "weak", "S2": "required", "S3": "required"}),
+                         "required")
+        self.assertIsNone(risk.provisional_outcome({"S1": "weak", "S2": "required", "S3": "forward"}))
+        self.assertIsNone(risk.provisional_outcome({"S1": "weak", "S2": "weak", "S3": None}))
+
+    def test_lone_s1(self):
+        lone = link_rec("a.md", "/ko/math/x", {"S1": "weak", "S2": "required", "S3": "required"})
+        self.assertTrue(pipe.lone_s1(lone))
+        reviewed = link_rec("a.md", "/ko/math/x", {"S1": "weak", "S2": "required", "S3": "required"},
+                            precedent={"S1": "none"})
+        self.assertFalse(pipe.lone_s1(reviewed))             # S1 already ran Step 4
+        self.assertFalse(pipe.lone_s1(
+            link_rec("a.md", "/ko/math/x", {"S1": "required", "S2": "weak", "S3": "required"})))
+        self.assertFalse(pipe.lone_s1(
+            link_rec("a.md", "/ko/math/x", {"S1": "weak", "S2": "weak", "S3": "weak"})))
+
+    def test_late_s1_step4_settles_the_vote(self):
+        record = {"unit": "u", "links": {
+            "l1": link_rec("a.md", "/ko/math/x#def1", {"S1": "weak", "S2": "required", "S3": "required"}),
+            "l2": link_rec("a.md", "/ko/math/x#def2", {"S1": "weak", "S2": "weak", "S3": "weak"}),
+        }}
+
+        class FakeUnit:
+            def link(self, lid):
+                return object()
+
+        row = {"relation": "required", "precedent": "P-0001", "precedent_reason": "",
+               "pending": None, "new_issue": None, "candidates": []}
+        seen = []
+        with patch.object(pipe, "step4_items", lambda u, r, stage, lids: (seen.append((stage, lids)), lids)[1]), \
+                patch.object(pipe, "step4_batches", lambda items: [items]), \
+                patch.object(pipe, "run_step4", lambda stage, batch: ({lid: dict(row) for lid in batch}, [{}])), \
+                patch.object(pipe, "_record_issue", lambda *a: None):
+            out = pipe.run_late_s1(FakeUnit(), record, ["l1", "l2"])
+        self.assertEqual(seen, [("S1", ["l1"])])
+        self.assertEqual(out, {"late_s1": 1, "late_s1_changed": 1})
+        self.assertTrue(record["links"]["l1"]["stages"]["S1"]["late"])
+        records, queue = {}, store.load_queue()
+        with patch.object(pipe.book, "bump_applied", lambda pid, lid: None):
+            result = pipe.finalize(record, ["l1", "l2"], records, queue, time.time() - 30 * 86400)
+        self.assertEqual(result["finalized"], 2)
+        self.assertEqual(records["l1"].relation, "required")
 
     def test_decisive_only_without_another_required_in_pair(self):
         links = {
@@ -501,6 +605,23 @@ class UnitParkingTest(unittest.TestCase):
                              for dc_err in ("error", "failed", "failure")))
         self.assertEqual(len(sent), 1)                     # announced once, to the digest
         self.assertTrue(sent[0].get("digest"))
+
+
+class CommitLedgerTest(unittest.TestCase):
+    """Only a ledger left dirty after the commit attempt is a failure."""
+
+    def test_nothing_to_commit_is_quiet(self):
+        import shadow_tick as tick
+        with patch.object(tick, "commit_outputs", return_value=False), \
+                patch.object(tick, "dirty_paths", return_value=[]):
+            tick.commit_ledger("Series: 확정 0건, 사람 판정 대기 2건", True)
+
+    def test_dirty_after_attempt_raises(self):
+        import shadow_tick as tick
+        with patch.object(tick, "commit_outputs", return_value=False), \
+                patch.object(tick, "dirty_paths", return_value=[tick.LEDGER_REL]):
+            with self.assertRaises(RuntimeError):
+                tick.commit_ledger("Line_Bundles: 확정 2건, 사람 판정 대기 2건", True)
 
 
 class ClaudeBillingTest(unittest.TestCase):

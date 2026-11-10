@@ -159,7 +159,7 @@ NOTIFY_BIN = os.environ.get(
     "DEPENDENCY_NOTIFY_BIN", str(Path.home() / ".local" / "bin" / "notify"))
 # 알림을 누르면 바로 판정할 수 있는 자리로 보낸다.
 DASHBOARD_URL = os.environ.get(
-    "DEPENDENCY_DASHBOARD_URL", "https://preview.math-jh.com/dash/#audit")
+    "DEPENDENCY_DASHBOARD_URL", "https://preview.math-jh.com/dash/audit")
 
 IAL_RE = re.compile(r'^\{:\s*([^}]*)\}')
 LID_RE = re.compile(r'\bdata-lid\s*=\s*["\']([^"\']*)["\']')

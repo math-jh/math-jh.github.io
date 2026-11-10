@@ -1240,9 +1240,9 @@ def posts_indexed():
         _posts_cache.update(ts=now, all=allp, by_path={p["path"]: p for p in allp})
     return _posts_cache
 
-# 구 상세 경로 — 라우팅은 hash(#workers …)로 넘어갔지만, 북마크된 구 경로에도
-# index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
-# (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
+# 섹션 경로(/dash/audit …) — 전부 index.html 을 주고 app.js 가 경로를 읽어 그린다.
+# workers·pipeline 은 개요에 있어서 app.js 가 /dash/ 로 바꾼다.
+# (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/audit" 처럼 접두사가 없다.)
 SECTIONS = {"workers", "pipeline", "drafts", "weights", "translation", "audit",
             "index", "activity", "cron"}
 

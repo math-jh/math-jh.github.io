@@ -15,26 +15,36 @@
 .sh-tools{display:flex;gap:.35rem;margin-left:auto}
 .sh-item{border-top:1px solid var(--rule);padding:.6rem 0}
 .sh-item:first-of-type{border-top:0}
-.sh-item__top{display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-start}
-.sh-where{flex:1 1 22rem;min-width:0}
-.sh-markup{font-family:var(--mono, monospace);font-size:.74rem;color:var(--muted);word-break:break-all}
-.sh-votes{display:flex;gap:.3rem;font-family:var(--sans);font-size:.72rem}
-.sh-vote{border:1px solid var(--rule);padding:.05rem .35rem}
-.sh-vote--required{color:var(--bad);border-color:var(--bad)}
-.sh-vote--weak{color:var(--ok);border-color:var(--ok)}
-.sh-vote--forward{color:var(--brass);border-color:var(--brass)}
-.sh-act{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin:.45rem 0}
+.sh-item__top{display:flex;flex-wrap:wrap;gap:.8rem;align-items:baseline}
+.sh-lid{font-family:var(--mono, monospace);font-size:.78rem}
+.sh-filter{display:flex;flex-wrap:wrap;gap:1rem;margin:0 0 .9rem}
+.sh-filter--on{color:var(--brass);text-decoration:none;font-weight:700}
+/* 표결은 읽기만 하는 글자다 — 누르는 버튼(판정)과 모양이 겹치지 않게 테두리 없이. */
+.sh-votes{display:flex;gap:.6rem;font-family:var(--sans);font-size:.74rem}
+.sh-vote{color:var(--muted)}
+.sh-vote--required{color:var(--bad)}
+.sh-vote--weak{color:var(--ok)}
+.sh-vote--forward{color:var(--brass)}
+.sh-link{background:none;border:0;padding:0;font:inherit;font-family:var(--sans);font-size:.74rem;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.sh-link:hover{color:var(--ink)}
+.sh-act{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;justify-content:flex-end;margin:.45rem 0}
+.sh-act__check{font-family:var(--sans);font-size:.74rem;color:var(--muted);margin-right:.4rem}
+.sh-top__end{margin-left:auto}
+.sh-item__top > .sh-vote{font-family:var(--sans);font-size:.74rem}
+.sh-draft__desc{font-family:var(--sans);font-size:.86rem;font-weight:700;margin:.4rem 0 .2rem}
+.sh-draft__p{font-size:.84rem;line-height:1.65;margin:.2rem 0}
 .sh-rel--required:hover{color:var(--bad);border-color:var(--bad)}
 .sh-rel--weak:hover{color:var(--ok);border-color:var(--ok)}
-.sh-move{font-family:var(--sans);font-size:.72rem;max-width:22rem}
-.sh-note{width:100%;min-height:3.2rem;font-family:var(--sans);font-size:.8rem;box-sizing:border-box;margin:.2rem 0}
+/* 설명 칸은 한 줄로 접혀 있다가 쓸 때 펴진다. */
+.sh-note{width:100%;height:1.9rem;min-height:1.9rem;resize:vertical;font-family:var(--sans);font-size:.8rem;box-sizing:border-box;margin:.35rem 0 0}
+.sh-note:focus,.sh-note:not(:placeholder-shown){height:4.5rem}
 .sh-input{width:100%;font-family:var(--sans);font-size:.82rem;box-sizing:border-box}
+/* 입력 칸 색은 감사 화면의 KO 지적 메모 칸(.kr__note)과 같은 변수를 쓴다 — 다크 모드도 따라간다. */
+.sh-note,.sh-input{padding:.3rem .5rem;border:1px solid var(--rule);border-radius:0;background:var(--code-bg);color:var(--ink)}
+.sh-note::placeholder,.sh-input::placeholder{color:var(--muted)}
+.sh-note:focus,.sh-input:focus{outline:none;border-color:var(--ink)}
 .sh-label{display:block;font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:.4rem}
 .sh-check{font-family:var(--sans);font-size:.78rem;display:block;margin:.4rem 0}
-.sh-ctx{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.5rem 0;font-size:.8rem;line-height:1.6}
-.sh-ctx b{font-family:var(--sans);font-size:.72rem;display:block;color:var(--muted);overflow-wrap:anywhere}
-.sh-ctx > div{min-width:0}
-.sh-ctx > div > div{white-space:pre-wrap;max-height:16rem;overflow:auto;overflow-wrap:anywhere}
 .sh-stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.7rem;margin:.4rem 0}
 .sh-stage{border:1px solid var(--rule);padding:.5rem .6rem;font-size:.8rem;line-height:1.55}
 .sh-stage__h{font-family:var(--sans);font-size:.76rem;margin-bottom:.25rem}
@@ -46,18 +56,18 @@
 .sh-agy{font-family:var(--sans);font-size:.72rem;color:var(--muted);align-self:center}
 .sh-item--pick{cursor:pointer}
 .sh-item--sel{box-shadow:inset 2px 0 0 var(--brass);padding-left:.6rem}
-/* 늘 두 칸이다 — 왼쪽 목록, 오른쪽에 고른 링크가 있는 구워진 글. */
+/* 늘 두 칸이다 — 왼쪽 목록, 오른쪽에 고른 링크의 소스 글과 대상(위아래). */
 .sh-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:1.4rem;align-items:start}
 .sh-pv{position:sticky;top:.8rem;border:1px solid var(--rule);padding:.6rem;background:var(--panel);min-height:12rem}
 .sh-pv__head{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.5rem;font-family:var(--sans);font-size:.74rem}
-.sh-pv__head .path{flex:1;min-width:0;word-break:break-all}
+.sh-pv__label{font-weight:700}
+.sh-pv__sub{flex:1;min-width:0;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sh-pv__slot + .sh-pv__slot{margin-top:.6rem}
 .sh-pv__open{white-space:nowrap}
-.sh-pv__frame{width:100%;height:calc(100vh - 6rem);border:1px solid var(--rule);background:var(--paper);display:block}
+.sh-pv__frame{width:100%;height:calc((100vh - 8rem) / 2);border:1px solid var(--rule);background:var(--paper);display:block}
 /* 좁은 화면에서는 미리보기를 위에 붙여 두고 목록이 그 아래로 지나가게 한다. */
-@media (max-width:1000px){.sh-cols{grid-template-columns:1fr}.sh-pv{order:-1;top:0;z-index:5}.sh-pv__frame{height:42vh}}
-/* 근거 보기 모달 — 링크 문장, 문맥, 모델별 판정과 근거 */
-.sh-m__link{font-size:.8rem;margin:.6rem 0}
-.sh-m__link code{white-space:pre-wrap;word-break:break-all}
+@media (max-width:1000px){.sh-cols{grid-template-columns:1fr}.sh-pv{order:-1;top:0;z-index:5}.sh-pv__frame{height:24vh}}
+/* 근거 보기 모달 — 모델별 판정과 근거 */
 .sh-m .sh-stages{margin-top:.8rem}
 .sh-sub{margin:1.6rem 0 .4rem}
-@media (max-width:760px){.sh-ctx{grid-template-columns:1fr}.sh-tools{margin-left:0}}
+@media (max-width:760px){.sh-tools{margin-left:0}}

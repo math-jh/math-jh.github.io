@@ -17,8 +17,11 @@
 """
 from __future__ import annotations
 
+import functools
 import time
 from pathlib import Path
+
+import yaml
 
 import dependency_classifier as dc
 import shadow_book as book
@@ -87,11 +90,33 @@ def _permalinks() -> dict[str, str]:
     return {post.rel: post.permalink for post in dc._POSTS}
 
 
+@functools.lru_cache(maxsize=None)
+def _subject_names() -> dict[str, str]:
+    """`categories:` 문자열 → 한국어 표시명 (_data/categories.yml 의 subjects)."""
+    data = yaml.safe_load((store.ROOT / "_data" / "categories.yml").read_text(encoding="utf-8"))
+    return {k: (v or {}).get("ko") or k for k, v in (data.get("subjects") or {}).items()}
+
+
+@functools.lru_cache(maxsize=None)
+def _post_label(base: str) -> str:
+    """permalink(앵커 뗀 것) → '[카테고리] 글 제목'. 미리보기 칸 제목 옆에 붙는다."""
+    post = dc.by_permalink(base, dc._POSTS) if base else None
+    if post is None:
+        return ""
+    cats = post.categories if isinstance(post.categories, list) else [post.categories]
+    name = _subject_names().get(cats[0], cats[0]) if cats and cats[0] else ""
+    return (f"[{name}] " if name else "") + (post.title or "")
+
+
 def _brief(rec: dict, permalinks: dict[str, str]) -> dict:
     """Where the link is, from the unit record alone — cheap enough for every row."""
+    permalink = permalinks.get(rec.get("source") or "")
+    target = rec.get("target") or ""
+    target_base = target.split("#", 1)[0] or permalink or ""
     return {"path": rec.get("source"), "line": rec.get("line"), "markup": rec.get("link"),
-            "target": rec.get("target"), "same_page": (rec.get("features") or {}).get("same_page"),
-            "permalink": permalinks.get(rec.get("source") or "")}
+            "target": target, "same_page": (rec.get("features") or {}).get("same_page"),
+            "permalink": permalink,
+            "source_label": _post_label(permalink or ""), "target_label": _post_label(target_base)}
 
 
 def link_detail(lid: str, unit: str = "") -> dict:
@@ -186,6 +211,25 @@ def _stage_view(rec: dict) -> dict:
     return out
 
 
+# Votes the human can usually settle at a glance. The dashboard filters on this; the
+# grouping stays by issue. A link gets the first class it fits.
+def _quick(votes: dict) -> str | None:
+    vals = [votes.get(s) for s in STAGES]
+    if None not in vals and len(set(vals)) == 1:
+        return "unanimous"
+    if votes.get("S2") and votes.get("S2") == votes.get("S3"):
+        return "pair"
+    if "forward" in vals:
+        return "forward"
+    return None
+
+
+def _category(path: str | None) -> str:
+    """_posts/Math/<category>/ko/… → <category>, so one issue's links from one series sit together."""
+    parts = (path or "").split("/")
+    return parts[2] if len(parts) > 2 else ""
+
+
 def snapshot() -> dict:
     state = store.load_state()
     queue = store.load_queue()
@@ -205,18 +249,19 @@ def snapshot() -> dict:
             "lid": lid, "kind": item.get("kind"), "decisive": item.get("decisive"),
             "votes": item.get("votes"), "precedents": item.get("precedents"),
             "issues": item.get("issues"), "was": item.get("was"), "created": item.get("created"),
+            "quick": _quick(item.get("votes") or {}),
             "stages": _stage_view(rec), **_brief(rec, permalinks),
         })
     for g in groups.values():
-        g["items"].sort(key=lambda x: (not x.get("decisive"), x.get("created") or 0))
+        g["items"].sort(key=lambda x: (_category(x.get("path")), x.get("path") or "", x.get("line") or 0))
         if g["issue"]:
             e = book.get(g["issue"])
             if e is not None:
                 g.update({"description": e.description, "question": e.meta.get("question"),
                           "status": e.status, "body": e.body})
-    human = sorted(groups.values(),
-                   key=lambda g: (not any(x.get("decisive") for x in g["items"]), g["issue"] is None,
-                                  min(x.get("created") or 0 for x in g["items"])))
+    # Group order must not depend on which links are still waiting: the human works
+    # top-down, and a key like "oldest remaining link" reshuffles groups as links leave.
+    human = sorted(groups.values(), key=lambda g: (g["issue"] is None, g["issue"] or ""))
 
     audit = []
     for lid, item in sorted(queue["audit"].items(), key=lambda kv: kv[1].get("created", 0)):
@@ -441,8 +486,21 @@ def draft(draft_id: str, action: str, edited: dict | None, choice: str | None,
         return {"discarded": draft_id}
     allowed = {k: v for k, v in (edited or {}).items()
                if k in ("issue", "ruling", "reason", "description", "principle", "relation", "question")}
-    return shadow_digest.apply_draft(draft_id, edited=allowed, choice=choice,
-                                     accept_recheck=accept_recheck)
+    # Approving a draft also carries out the consolidation proposals it brought, after
+    # the draft itself is written — a promote copies the precedent's principle into
+    # criteria.md as it stands then, so an amend on the same precedent must land first.
+    item = next((d for d in store.load_queue()["drafts"] if d["id"] == draft_id), None)
+    props = list((item or {}).get("draft", {}).get("consolidation") or [])
+    out = shadow_digest.apply_draft(draft_id, edited=allowed, choice=choice,
+                                    accept_recheck=accept_recheck)
+    done, failed = [], []
+    for c in sorted(props, key=lambda c: c.get("kind") != "promote"):
+        try:
+            done.append({"kind": c.get("kind"), "ids": c.get("ids"),
+                         **consolidate(c.get("kind"), c.get("ids") or [])})
+        except (ValueError, RuntimeError, KeyError) as e:
+            failed.append({"kind": c.get("kind"), "ids": c.get("ids"), "error": str(e)})
+    return {**out, "consolidated": done, "consolidation_failed": failed}
 
 
 def precedent(pid: str, action: str, description: str | None = None) -> dict:
@@ -470,4 +528,14 @@ def consolidate(kind: str, ids: list[str]) -> dict:
     import shadow_digest
     if kind not in ("merge", "promote") or not ids:
         raise ValueError("kind 는 merge·promote, ids 필요")
-    return shadow_digest.apply_consolidation(kind, ids)
+    out = shadow_digest.apply_consolidation(kind, ids)
+    # The proposal is done (promoted, or queued as a merge draft): take it off the
+    # draft that carried it, so the card no longer offers it.
+    with _locked():
+        queue = store.load_queue()
+        for d in queue["drafts"]:
+            props = d["draft"].get("consolidation") or []
+            d["draft"]["consolidation"] = [c for c in props
+                                           if not (c.get("kind") == kind and c.get("ids") == ids)]
+        store.save_queue(queue)
+    return out

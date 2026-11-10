@@ -176,11 +176,19 @@ def start_round(unit: units.Unit, record: dict, reason: str) -> list[str]:
 
 
 def commit_ledger(detail: str, commit: bool) -> None:
-    """Commit whatever the shadow ledger holds now (the dashboard's rulings ride along)."""
+    """Commit whatever the shadow ledger holds now (the dashboard's rulings ride along).
+
+    ``commit_outputs`` also returns False when there is nothing to commit: a round
+    that sent every link to the human queue leaves the ledger as it was, and
+    autopush may have taken the change while we waited for its lock.  Only a ledger
+    still dirty afterwards is a failure.
+    """
     if not commit:
         log(f"shadow ledger saved without commit: {detail}")
         return
-    if not commit_outputs("Link Dependencies Shadow", [LEDGER_REL], detail, log=log, repo=store.ROOT):
+    if commit_outputs("Link Dependencies Shadow", [LEDGER_REL], detail, log=log, repo=store.ROOT):
+        return
+    if dirty_paths([LEDGER_REL], store.ROOT):
         raise RuntimeError("could not commit the shadow ledger")
 
 
@@ -199,18 +207,23 @@ def maybe_fit(state: dict) -> None:
         record = store.read_json(path, {})
         for rec in record.get("links", {}).values():
             final = (rec.get("final") or {}).get("relation")
+            weight = 1.0
+            if not final and (rec.get("final") or {}).get("by") == "human":
+                final = risk.provisional_outcome({s: pipe.vote(rec, s) for s in models.STAGES})
+                weight = risk.PROVISIONAL_WEIGHT
             if not final:
                 continue
             for stage, srec in rec.get("stages", {}).items():
                 row = srec.get("step1")
                 if row:
                     outcomes[stage].append((risk.vector(row, rec.get("features", {})),
-                                            int(row["relation"] != final)))
+                                            int(row["relation"] != final), weight))
     fitted = risk.fit(outcomes)
     state["fitted_at"] = int(time.time())
     if fitted:
         log("shadow calibration refitted: " + ", ".join(
-            f"{s} n={m['n']} overturned={m['overturned']}" for s, m in fitted.items()))
+            f"{s} n={m['n']} overturned={m['overturned']} provisional={m['provisional']}"
+            for s, m in fitted.items()))
 
 
 def run_digest() -> bool:
@@ -367,6 +380,17 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
             entry["updated"] = int(time.time())
             store.save_state(state)
             return 0
+        if stage == "S3":
+            # S1 lone dissent without Step 4: give S1 its Step 4 before the tally.
+            # If S1 is closed or the call breaks, the round finalizes as it stands.
+            if models.available("S1"):
+                try:
+                    summary.update(pipe.run_late_s1(unit, record, round_lids))
+                except Exception as exc:  # noqa: BLE001
+                    log(f"shadow late S1 {key}: skipped ({type(exc).__name__}); "
+                        "the round finalizes without it")
+            else:
+                log(f"shadow late S1 {key}: S1 closed; the round finalizes without it")
         result = None
         with _locked():
             fresh = store.merge_unit_record(h, record, round_lids)

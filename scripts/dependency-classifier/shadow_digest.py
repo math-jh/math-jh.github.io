@@ -7,6 +7,9 @@ Jobs come from the dashboard (``queue["digest"]``):
                required explanation
   ruling_note  a disputed link the human ruled with an (optional) explanation
   register     "판례로 등록" on a pending issue, after its links were ruled
+  merge        a consolidation proposal to merge live precedents into the first:
+               the draft is the keeper's text rewritten to decide every case the
+               others decide
 
 One job per tick, on Claude.  The model reads the explanation verbatim, the
 models' answers on the links, the live precedents and pending issues, and a
@@ -21,6 +24,7 @@ precedent files until the human approves the draft on the dashboard
 from __future__ import annotations
 
 import json
+import re
 import time
 
 import dependency_classifier as dc
@@ -155,15 +159,19 @@ def run_one() -> bool:
         return False
     job = queue["digest"][0]
     lids = list(job.get("rulings", {}))
-    located = []
-    for lid in lids:
-        found = _locate(lid)
-        if found:
-            located.append((found[0], found[1], lid))
-    views = [_link_view(u, r["links"][lid], lid) for u, r, lid in located]
-    candidates = _recheck_candidates(located) if located else []
     try:
-        payload, usage = models.call("S2", digest_prompt(job, views, candidates))
+        if job.get("kind") == "merge":
+            draft, usage = run_merge(job)
+        else:
+            located = []
+            for lid in lids:
+                found = _locate(lid)
+                if found:
+                    located.append((found[0], found[1], lid))
+            views = [_link_view(u, r["links"][lid], lid) for u, r, lid in located]
+            candidates = _recheck_candidates(located) if located else []
+            payload, usage = models.call("S2", digest_prompt(job, views, candidates))
+            draft = _clean(payload, set(lids), {c["id"] for c in candidates})
     except Exception as exc:  # noqa: BLE001
         held = store.lock(60)
         if held is not None:
@@ -175,7 +183,6 @@ def run_one() -> bool:
                 store.save_queue(queue)
         log(f"ERROR shadow digest {job.get('id')}: {exc}")
         return True
-    draft = _clean(payload, set(lids), {c["id"] for c in candidates})
     held = store.lock(120)
     if held is None:
         raise RuntimeError("shadow state stayed locked for two minutes")
@@ -265,7 +272,9 @@ def apply_draft(draft_id: str, *, edited: dict | None = None, choice: str | None
                 "relation": draft["relation"], "created": time.strftime("%Y-%m-%d"),
                 "source": job.get("qid") or job.get("kind"), "supersedes": []}
         written = None
-        if draft["action"] == "new" or (draft["action"] == "conflict" and choice == "supersede"):
+        if draft["action"] == "merge":
+            written = apply_merge(draft)
+        elif draft["action"] == "new" or (draft["action"] == "conflict" and choice == "supersede"):
             pid = book.next_id("P")
             older = None
             if draft["action"] == "conflict":
@@ -299,22 +308,148 @@ def apply_draft(draft_id: str, *, edited: dict | None = None, choice: str | None
         return {"written": written}
 
 
+PROMOTED_HEADING = "### 승격된 원칙"
+PROMOTED_EMPTY = "(아직 없다)"
+
+
+def principle_text(body: str) -> str | None:
+    """The "## 원칙 초안" section of a precedent body, joined into one line."""
+    m = re.search(r"^## 원칙 초안\s*\n(.*?)(?=^## |\Z)", body, re.M | re.S)
+    if not m:
+        return None
+    text = " ".join(line.strip() for line in m.group(1).splitlines() if line.strip())
+    return text or None
+
+
+def add_principles(text: str, lines: list[str]) -> str:
+    """Append bullet lines to the promoted-principles section of criteria.md.
+
+    The section runs from its heading to the next heading or the end of the file;
+    the placeholder line goes once a principle is in.  A line whose "(P-…)" tag is
+    already in the section is skipped."""
+    m = re.search(rf"^{re.escape(PROMOTED_HEADING)}[ \t]*\n(.*?)(?=^#{{1,3}} |\Z)", text, re.M | re.S)
+    if not m:
+        raise ValueError(f"criteria.md 에 '{PROMOTED_HEADING}' 절이 없다")
+    section = [l for l in m.group(1).rstrip("\n").splitlines() if l.strip() != PROMOTED_EMPTY]
+    for line in lines:
+        tag = line.split(")", 1)[0] + ")"
+        if not any(l.startswith(tag) for l in section):
+            section.append(line)
+    body = "\n".join(section).strip("\n")
+    tail = text[m.end():]
+    return text[:m.start(1)] + body + "\n" + ("\n" + tail if tail else "")
+
+
 def apply_consolidation(kind: str, ids: list[str]) -> dict:
-    """promote: mark promoted (the criteria line is written by hand in criteria.md);
-    merge: keep the first, supersede the rest into it."""
+    """promote: copy each precedent's "## 원칙 초안" into criteria.md's promoted
+    section, then mark it promoted (it leaves the live index, so the criteria line
+    is what the prompts keep).  A precedent without that section is refused, and
+    nothing changes.  merge: queue a digest job; the worker drafts the first
+    precedent's text absorbing the rest, and only approving that draft rewrites it
+    and supersedes the rest (``apply_merge``)."""
     held = store.lock(30)
     if held is None:
         raise RuntimeError("shadow state is busy; try again")
     with held:
         if kind == "promote":
-            for pid in ids:
-                e = book.get(pid)
-                if e is not None:
-                    book.write(pid, {**e.meta, "status": "promoted"}, e.body)
+            found = [(pid, book.get(pid)) for pid in ids]
+            missing = [pid for pid, e in found if e is None]
+            if missing:
+                raise ValueError(f"없는 판례: {', '.join(missing)}")
+            lines = []
+            for pid, e in found:
+                text = principle_text(e.body)
+                if text is None:
+                    raise ValueError(f"{pid} 에 '## 원칙 초안' 절이 없어 승격할 수 없다")
+                lines.append(f"- ({pid}) {text}")
+            path = sp.CRITERIA_PATH
+            store.write_text(path, add_principles(path.read_text(encoding="utf-8"), lines))
+            for pid, e in found:
+                book.write(pid, {**e.meta, "status": "promoted"}, e.body)
             return {"promoted": ids}
-        keep, *rest = ids
-        for pid in rest:
-            e = book.get(pid)
-            if e is not None:
-                book.write(pid, {**e.meta, "status": "superseded", "superseded_by": keep}, e.body)
-        return {"merged_into": keep, "superseded": rest}
+        live = {e.id for e in book.live("P")}
+        if len(ids) < 2 or any(pid not in live for pid in ids):
+            raise ValueError("병합은 살아 있는 판례 둘 이상이어야 한다")
+        queue = store.load_queue()
+        if any(j.get("kind") == "merge" and j.get("ids") == ids for j in queue["digest"]):
+            return {"queued": None, "ids": ids}
+        job = {"id": f"J-{int(time.time() * 1000)}", "kind": "merge", "ids": ids,
+               "created": int(time.time())}
+        queue["digest"].append(job)
+        store.save_queue(queue)
+        return {"queued": job["id"], "ids": ids}
+
+
+# ── merge: the keeper absorbs the others, through a draft ───────────────
+
+MERGE_HEAD = """You maintain the precedents of a link-judging pipeline for a mathematics blog. Several live precedents are to be merged into the first one (the keeper); the others will be superseded and leave the index, so the keeper's new text is all that remains of them. Do not use tools and do not alter files. Return JSON only:
+{"action":"merge","question":"provided","issue":"…","ruling":"…","relation":"weak","reason":"…","description":"…","principle":"…","examples":["lid"],"note":"…"}
+
+Rules:
+- The merged ruling must decide every case each precedent decides, with the same conclusion under the same conditions. Where the precedents split a question into two sides (e.g. one says when it is provided, another when it is not), state both sides and the condition that separates them. Do not drop a condition, a conclusion, or a distinction a precedent draws.
+- "issue" is one general question covering all of them. "relation" is the relation the ruling most often concludes, or null if the sides conclude differently. "description" is one line of at most 80 characters. "principle" is one sentence a later criteria revision could adopt.
+- "reason" keeps each precedent's grounds, and cites other precedents by id where they did.
+- "examples": at most 2 lids, from the examples the precedents already list.
+- "note": one line on what was combined and what separates the cases.
+- If the precedents are not about one issue, so that one ruling cannot carry them without losing a distinction, return {"action":"none","note":"…"} saying why.
+- Write every text field in Korean, keep mathematical terms in English, and quote labels exactly.
+
+CRITERIA (Korean):
+"""
+
+LID_RE = re.compile(r"lid `([0-9a-z]{5})`")
+
+
+def merge_prompt(entries: list[book.Entry]) -> str:
+    files = "".join(f"<<<{e.id}\n{e.path.read_text(encoding='utf-8')}\n{e.id}>>>\n" for e in entries)
+    return (MERGE_HEAD + sp.criteria_text() + "\n\nKEEPER: " + entries[0].id
+            + "\n\nPRECEDENT FILES (keeper first):\n" + files)
+
+
+def run_merge(job: dict) -> dict:
+    """Ask Claude for the keeper's merged text; returns (draft, usage)."""
+    entries = [book.get(pid) for pid in job["ids"]]
+    if any(e is None or e.status != "active" for e in entries):
+        return {"action": "none", "precedent": job["ids"][0], "merged": job["ids"][1:],
+                "note": "병합할 판례 가운데 살아 있지 않은 것이 있다", "examples": [], "recheck": [],
+                "consolidation": []}, {}
+    payload, usage = models.call("S2", merge_prompt(entries))
+    known = {lid for e in entries for lid in LID_RE.findall(e.body)}
+    draft = {k: (str(payload.get(k)).strip() if payload.get(k) else "")
+             for k in ("issue", "ruling", "reason", "description", "principle", "note")}
+    draft["description"] = draft["description"][:book.DESCRIPTION_MAX]
+    draft.update({
+        "action": "merge" if payload.get("action") == "merge" and draft["ruling"] else "none",
+        "precedent": entries[0].id, "merged": [e.id for e in entries[1:]],
+        "question": payload.get("question") if payload.get("question") in book.QUESTIONS
+        else entries[0].meta.get("question", "need"),
+        "relation": payload.get("relation") if payload.get("relation") in sp.RELATIONS else None,
+        "examples": [x for x in payload.get("examples") or [] if x in known][:2],
+        "not_covered": None, "conflict_note": "", "recheck": [], "consolidation": [],
+    })
+    return draft, usage
+
+
+def _merged_explanations(entries: list[book.Entry]) -> str:
+    notes = []
+    for e in entries:
+        text = _old_explanation(e)
+        if text:
+            notes.append(text if e is entries[0] else f"({e.id}) {text}")
+    return "\n\n".join(notes)
+
+
+def apply_merge(draft: dict) -> str:
+    """Rewrite the keeper with the merged text and supersede the others into it.
+    Called by apply_draft under the state lock."""
+    keep = book.get(draft["precedent"])
+    rest = [book.get(pid) for pid in draft.get("merged", [])]
+    if keep is None or keep.status != "active" or any(e is None or e.status != "active" for e in rest):
+        raise ValueError("병합할 판례가 그새 바뀌었다 — 초안을 버리고 다시 제안할 것")
+    meta = {**keep.meta, "description": draft["description"], "question": draft["question"],
+            "relation": draft["relation"],
+            "absorbs": sorted(set(keep.meta.get("absorbs") or []) | {e.id for e in rest})}
+    book.write(keep.id, meta, _body(draft, "", _merged_explanations([keep, *rest])))
+    for e in rest:
+        book.write(e.id, {**e.meta, "status": "superseded", "superseded_by": keep.id}, e.body)
+    return keep.id

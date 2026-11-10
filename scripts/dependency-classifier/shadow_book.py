@@ -27,6 +27,10 @@ import yaml
 
 import shadow_store as store
 
+# The book holds over a thousand files and the dashboard reads them all on every
+# snapshot; the pure-Python loader makes that the bulk of the request time.
+_YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+
 P_STATUSES = ("active", "promoted", "superseded", "revoked")
 Q_STATUSES = ("open", "merged", "ruled", "dismissed")
 QUESTIONS = ("preview", "need", "provided")
@@ -81,7 +85,7 @@ def _dir(kind: str) -> Path:
 def parse(path: Path) -> Entry:
     text = path.read_text(encoding="utf-8")
     m = FRONT_RE.match(text)
-    meta = yaml.safe_load(m.group(1)) if m else {}
+    meta = yaml.load(m.group(1), Loader=_YAML_LOADER) if m else {}
     return Entry(id=str(meta.get("id", path.stem)), meta=meta or {},
                  body=(m.group(2) if m else text).strip() + "\n", path=path)
 

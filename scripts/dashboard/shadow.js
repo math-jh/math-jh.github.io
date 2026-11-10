@@ -8,16 +8,18 @@
 
 var SH = {
   data: null, tab: 'queue', busy: false, err: '',
-  detail: {},      /* lid → {source_context, target_context} */
+  filter: null,    /* 판정 대기의 표결 필터 (SH_FILTERS) */
   reveal: {},      /* 감사 lid → 서버가 돌려준 공개 정보 */
   note: {},        /* lid·qid → 쓰던 설명 */
-  pv: null,        /* 미리보기 중인 링크 (lid·permalink·path·line) */
-  modal: null,     /* 근거 모달에 띄운 lid — 문맥이 늦게 와도 그 모달에만 넣는다 */
+  pv: null,        /* 미리보기 중인 링크 (lid·permalink·target·소스와 대상의 '[카테고리] 글 제목') */
   after: null,     /* 판정한 링크 바로 아래 lid — 다시 그린 뒤 미리보기를 거기로 옮긴다 */
   pilot: null,     /* /api/shadow/pilot — 판정 대기 아래에 읽기 전용으로 붙인다 */
   pilotAll: false  /* 파일럿에서 만장일치 링크도 보이기 */
 };
 var SH_REL = { required: '필수', weak: '배경', forward: '예고' };
+/* 서버가 링크마다 붙이는 quick 값(shadow_api._quick) — 하나만 고른다. */
+var SH_FILTERS = [[null, '전체'], ['unanimous', '세 모델 만장일치'], ['pair', 'Claude·Codex 동의'],
+                  ['forward', 'forward가 낀 표결']];
 var SH_TABS = [['queue', '판정 대기'], ['audit', '감사'], ['drafts', '판례 초안'],
                ['book', '판례·쟁점'], ['settled', '최근 판정']];
 
@@ -79,27 +81,16 @@ function shLoad() {
     shRender();
   }, function (e) { SH.err = String(e); shRender(); });
 }
-var SH_LOADING = {};
-/* unit 은 큐 밖의 링크(파일럿)일 때만 넘긴다. */
-function shDetail(lid, then, unit) {
-  if (SH.detail[lid]) { if (then) then(); return; }
-  if (SH_LOADING[lid]) return;
-  SH_LOADING[lid] = true;
-  fetch(API + 'shadow/link?lid=' + encodeURIComponent(lid) + (unit ? '&unit=' + encodeURIComponent(unit) : ''))
-    .then(function (r) { return r.json(); })
-    .then(function (j) { delete SH_LOADING[lid]; if (j.ok) SH.detail[lid] = j; shRender(); if (then) then(); },
-          function () { delete SH_LOADING[lid]; });
-}
 
 /* ── 미리보기 ─────────────────────────────────────────────────────────── */
-/* 고른 링크가 있는 글을 dev 서버(4001)에서 구워진 채로 오른쪽 칸에 늘 띄우고 그 링크를
+/* 오른쪽 칸에 고른 링크의 소스 글과 대상을 dev 서버(4001)에서 구워진 채로 위아래로 띄운다.
+   위는 소스 글에서 그 링크를, 아래는 대상 글에서 가리키는 박스(앵커가 없으면 글 첫머리)를
    짚는다. 링크 행을 누르면 고르고, 아무것도 안 골랐으면 보이는 목록의 첫 링크를 고른다.
    칸은 #shadow-root 밖에 있어 shRender 가 건드리지 않는다 — 다시 만들면 iframe 이
    글을 처음부터 다시 굽는다. 구워진 글의 <a> 에도 data-lid 가 남아 있어 그걸로
    찾는다. livereload 로 프레임이 다시 뜨면 onload 가 같은 일을 다시 한다. */
-function shMark(frame) {
-  var k = SH.pv, doc;
-  if (!k) return;
+function shHit(frame, find) {
+  var doc;
   try { doc = frame.contentDocument; } catch (e) { return; }
   if (!doc || !doc.body) return;
   if (!doc.getElementById('dash-hl')) {
@@ -112,48 +103,83 @@ function shMark(frame) {
   Array.prototype.forEach.call(doc.querySelectorAll('.dash-hl'), function (a) {
     a.classList.remove('dash-hl');
   });
-  var hit = doc.querySelector('a[data-lid="' + k.lid + '"]');
-  if (!hit) return;
+  var win = frame.contentWindow;
+  var hit = find(doc);
+  if (!hit) { win.scrollTo(0, 0); return; }
   hit.classList.add('dash-hl');
   /* 프레임 안에서만 스크롤한다 — scrollIntoView 는 바깥 대시보드 페이지까지 끌고 간다. */
-  var win = frame.contentWindow;
   win.scrollTo(0, Math.max(0, hit.getBoundingClientRect().top + win.scrollY
-                              - win.innerHeight * 0.4));
+                              - win.innerHeight * 0.3));
+}
+/* 대상의 주소와 앵커. 같은 글 안의 링크(#thm3)는 소스 글을 다시 띄운다. */
+function shTarget(k) {
+  var t = String(k.target || '');
+  var i = t.indexOf('#');
+  return { url: i === 0 ? k.permalink : (i > 0 ? t.slice(0, i) : t),
+           anchor: i >= 0 ? decodeURIComponent(t.slice(i + 1)) : '' };
+}
+function shFindSource(lid) {
+  return function (doc) { return doc.querySelector('a[data-lid="' + lid + '"]'); };
+}
+/* 앵커는 박스 번호(span.thm-n)에 붙어 있다 — 박스 전체를 짚는다. */
+function shFindTarget(anchor) {
+  return function (doc) {
+    var a = anchor && doc.getElementById(anchor);
+    return a && (a.closest('.definition, .proposition, .example, .remark, .misc') || a);
+  };
+}
+function shSlot(pane, cls, label, sub, url, find) {
+  var slot = pane.querySelector('.' + cls);
+  if (!slot) {
+    slot = el('div', 'sh-pv__slot ' + cls);
+    var head = el('div', 'sh-pv__head');
+    head.appendChild(el('span', 'sh-pv__label', label));
+    head.appendChild(el('span', 'sh-pv__sub'));
+    var open = el('a', 'sh-pv__open', '새 탭 ↗');
+    open.target = '_blank';
+    head.appendChild(open);
+    slot.appendChild(head);
+    pane.appendChild(slot);
+  }
+  slot.querySelector('.sh-pv__open').href = url;
+  slot.querySelector('.sh-pv__sub').textContent = sub || '';
+  var frame = slot.querySelector('iframe');
+  if (!frame || frame.__url !== url) {
+    if (frame) frame.remove();
+    frame = el('iframe', 'sh-pv__frame');
+    frame.__url = url;
+    /* 글꼴·KaTeX 가 늦게 자리를 잡으면 줄이 밀리므로 조금 뒤 한 번 더 짚는다. */
+    frame.onload = function () {
+      shHit(frame, frame.__find);
+      setTimeout(function () { shHit(frame, frame.__find); }, 1200);
+    };
+    frame.src = url;
+    slot.appendChild(frame);
+  }
+  frame.__find = find;
+  shHit(frame, find);
 }
 function shPaint() {
   var pane = document.getElementById('sh-preview');
   if (!pane) return;
   var k = SH.pv;
   if (!k) {
-    pane.innerHTML = '<p class="hint">왼쪽에서 링크를 고르면 그 링크가 있는 글을 구워진 채로 ' +
-      '띄운다. 링크에 마우스를 올리면 가리키는 대상도 보인다.</p>';
+    pane.innerHTML = '<p class="hint">왼쪽에서 링크를 고르면 위에 그 링크가 있는 글을, ' +
+      '아래에 링크가 가리키는 대상을 구워진 채로 띄운다.</p>';
     return;
   }
-  var frame = pane.querySelector('iframe');
-  if (!frame || frame.__permalink !== k.permalink) {
-    pane.innerHTML = '';
-    var head = el('div', 'sh-pv__head');
-    head.appendChild(el('span', 'path'));
-    var open = el('a', 'sh-pv__open', '새 탭 ↗');
-    open.target = '_blank';
-    head.appendChild(open);
-    pane.appendChild(head);
-    frame = el('iframe', 'sh-pv__frame');
-    frame.__permalink = k.permalink;
-    /* 글꼴·KaTeX 가 늦게 자리를 잡으면 줄이 밀리므로 조금 뒤 한 번 더 짚는다. */
-    frame.onload = function () { shMark(frame); setTimeout(function () { shMark(frame); }, 1200); };
-    frame.src = k.permalink;
-    pane.appendChild(frame);
-  } else {
-    shMark(frame);
-  }
-  pane.querySelector('.path').textContent = String(k.path || '').replace(/^_posts\//, '') + ':' + k.line;
-  pane.querySelector('.sh-pv__open').href = k.permalink;
+  var hint = pane.querySelector('.hint');
+  if (hint) hint.remove();
+  shSlot(pane, 'sh-pv__slot--src', '소스', k.sourceLabel, k.permalink, shFindSource(k.lid));
+  var t = shTarget(k);
+  shSlot(pane, 'sh-pv__slot--tgt', '대상', k.targetLabel, t.url + (t.anchor ? '#' + encodeURIComponent(t.anchor) : ''),
+         shFindTarget(t.anchor));
 }
 /* 고르기는 다시 그리지 않고 표시만 옮긴다 — 다시 그리면 쓰던 설명 칸의 포커스가 날아간다. */
 function shSelect(x) {
   if (!x.permalink) return;
-  SH.pv = { lid: x.lid, permalink: x.permalink, path: x.path, line: x.line };
+  SH.pv = { lid: x.lid, permalink: x.permalink, target: x.target,
+            sourceLabel: x.source_label, targetLabel: x.target_label };
   Array.prototype.forEach.call(document.querySelectorAll('#shadow-root .sh-item'), function (r) {
     r.classList.toggle('sh-item--sel', r.dataset.lid === x.lid);
   });
@@ -201,47 +227,14 @@ function shVotes(votes) {
   });
   return w;
 }
-function shWhere(x) {
-  var w = el('div', 'sh-where');
-  w.innerHTML = '<span class="path">' + esc(String(x.path || '').replace(/^_posts\//, '')) +
-    '</span><span class="muted">:' + esc(x.line) + '</span> ' +
-    (x.decisive ? '<span class="tag tag--drift">화면 영향</span>' : '') +
-    (x.same_page ? '<span class="tag">같은 글</span>' : '') +
-    (x.kind === 'recheck' ? '<span class="tag">재검토</span>' : '');
-  var m = el('div', 'sh-markup', x.markup || '');
-  w.appendChild(m);
-  return w;
+/* 카드의 이름표는 lid 하나다 — 어디 있는 링크인지는 미리보기가 보여 준다. */
+function shId(x) {
+  return el('span', 'sh-lid', x.lid);
 }
-function shCtxHtml(lid) {
-  var d = SH.detail[lid];
-  if (!d) return '<p class="hint">문맥 읽는 중…</p>';
-  if (d.gone) return '<p class="hint">이 링크는 글에서 사라졌다.</p>';
-  return '<div class="sh-ctx"><div class="sh-ctx__src"><b>소스</b><div>' + esc(d.source_context || '') +
-    '</div></div><div class="sh-ctx__tgt"><b>대상 ' + esc(d.target || '') + '</b><div>' +
-    esc(d.target_context || '') + '</div></div></div>';
-}
-function shContext(lid, unit) {
-  var box = el('div');
-  if (!SH.detail[lid]) { box.appendChild(shBtn('문맥 보기', null, function () { shDetail(lid, null, unit); })); return box; }
-  box.innerHTML = shCtxHtml(lid);
-  setTimeout(function () { shMath(box); }, 0);
-  return box;
-}
-/* 근거 보기 — 옛 링크 보류 화면의 모달처럼, 링크 문장과 대상, 모델별 판정과 근거를 한 창에.
-   문맥은 늦게 올 수 있어 자리만 두고, 그 모달이 아직 열려 있을 때만 채운다. */
-function shReasons(x, stages, keys, unit) {
-  SH.modal = x.lid;
+/* 근거 보기 — 모델별 판정과 근거. 링크 문장과 대상은 오른쪽 미리보기에 떠 있다. */
+function shReasons(x, stages, keys) {
   shSelect(x);
-  openModalHtml('의존성 링크 — ' + String(x.path || '').replace(/^_posts\//, '') + ':' + (x.line || '?'),
-    '<div class="sh-m"><p class="sh-m__link"><code>' + esc(x.markup || x.lid) + '</code></p>' +
-    '<div id="sh-m-ctx">' + shCtxHtml(x.lid) + '</div>' + shStages(stages, keys).outerHTML + '</div>');
-  if (SH.detail[x.lid]) return;
-  shDetail(x.lid, function () {
-    var box = document.getElementById('sh-m-ctx');
-    if (!box || SH.modal !== x.lid || document.getElementById('modal').hidden) return;
-    box.innerHTML = shCtxHtml(x.lid);
-    shMath(box);
-  }, unit);
+  openModalHtml('근거 — ' + x.lid, '<div class="sh-m">' + shStages(stages, keys).outerHTML + '</div>');
 }
 function shStages(stages, keys) {
   var w = el('div', 'sh-stages');
@@ -289,8 +282,20 @@ function shNoteBox(key, placeholder) {
 function shQueue(d) {
   var frag = document.createDocumentFragment();
   if (!d.human.length) frag.appendChild(el('p', 'hint', '판정을 기다리는 링크가 없다.'));
-  var openQs = d.pending || [];
+  /* 표결 필터 — 묶음은 늘 쟁점별이고, 필터는 그 안에서 맞는 링크만 남긴다. */
+  var count = {};
+  d.human.forEach(function (g) { g.items.forEach(function (x) { if (x.quick) count[x.quick] = (count[x.quick] || 0) + 1; }); });
+  var bar = el('div', 'sh-filter');
+  SH_FILTERS.forEach(function (f) {
+    var b = el('button', 'sh-link' + (SH.filter === f[0] ? ' sh-filter--on' : ''),
+               f[1] + (f[0] ? ' ' + (count[f[0]] || 0) : ''));
+    b.onclick = function () { SH.filter = f[0]; SH.pv = null; shRender(); };
+    bar.appendChild(b);
+  });
+  frag.appendChild(bar);
   d.human.forEach(function (g) {
+    if (SH.filter) g = Object.assign({}, g, { items: g.items.filter(function (x) { return x.quick === SH.filter; }) });
+    if (!g.items.length) return;
     var box = el('div', 'sh-group');
     var head = el('div', 'sh-group__h');
     if (g.issue) {
@@ -307,51 +312,45 @@ function shQueue(d) {
       head.innerHTML = '<b>쟁점 없음</b> <span class="muted">(' + g.items.length + '건)</span>';
     }
     box.appendChild(head);
-    g.items.forEach(function (x) { box.appendChild(shItem(x, g, openQs)); });
+    g.items.forEach(function (x) { box.appendChild(shItem(x, g)); });
     frag.appendChild(box);
   });
   frag.appendChild(shPilot());
   return frag;
 }
-function shItem(x, g, openQs) {
+/* 판정한 링크를 서버 응답을 기다리지 않고 지금 화면에서 뺀다 — 전체 다시 읽기는 뒤따른다. */
+function shDrop(lid) {
+  var d = SH.data;
+  if (!d) return;
+  d.human = d.human.map(function (g) {
+    return Object.assign({}, g, { items: g.items.filter(function (x) { return x.lid !== lid; }) });
+  }).filter(function (g) { return g.items.length; });
+  d.progress.human = Math.max(0, d.progress.human - 1);
+}
+/* 카드: lid·표결·근거 보기 한 줄, 그 아래 설명 칸, 맨 아래 판정 버튼. 설명은 쓰고 나서
+   판정을 누르면 판정과 함께 digest 로 넘어간다. */
+function shItem(x, g) {
   var row = el('div', 'sh-item');
   var top = el('div', 'sh-item__top');
-  top.appendChild(shWhere(x));
+  top.appendChild(shId(x));
   top.appendChild(shVotes(x.votes));
-  top.appendChild(shBtn('근거 보기', null, function () { shReasons(x, x.stages); }));
+  var why = el('button', 'sh-link', '근거 보기');
+  why.onclick = function () { shReasons(x, x.stages); };
+  top.appendChild(why);
   shPick(row, x);
   row.appendChild(top);
+  row.appendChild(shNoteBox(x.lid, '설명 (선택)'));
   var act = el('div', 'sh-act');
   ['required', 'weak', 'forward'].forEach(function (rel) {
     act.appendChild(shBtn(SH_REL[rel] + ' (' + rel + ')', 'sh-rel sh-rel--' + rel, function () {
       var after = shAfter(x.lid);
       shPost('rule', { lid: x.lid, relation: rel, explanation: SH.note[x.lid] || '' })
-        .then(function () { delete SH.note[x.lid]; SH.after = after; shLoad(); });
+        .then(function () {
+          delete SH.note[x.lid]; SH.after = after; shDrop(x.lid); shRender(); shLoad();
+        });
     }));
   });
-  var mv = el('select', 'sh-move');
-  mv.innerHTML = '<option value="">다른 쟁점으로…</option>' +
-    openQs.filter(function (q) { return q.id !== g.issue; }).map(function (q) {
-      return '<option value="' + esc(q.id) + '">' + esc(q.id + ' — ' + q.description) + '</option>';
-    }).join('') + '<option value="__new">새 쟁점 만들기</option>';
-  mv.onchange = function () {
-    var v = mv.value;
-    if (!v) return;
-    if (v === '__new') {
-      var question = prompt('어느 질문이 애매한가? (preview / need / provided)', 'provided');
-      if (!question) return;
-      var statement = prompt('쟁점 진술 (일반형 질문)');
-      if (!statement) return;
-      var description = prompt('한 줄 설명 (80자 이내)');
-      if (!description) return;
-      shPost('move', { lid: x.lid, from: g.issue, new: { question: question, statement: statement, description: description } }).then(shLoad);
-    } else {
-      shPost('move', { lid: x.lid, from: g.issue, to: v }).then(shLoad);
-    }
-  };
-  act.appendChild(mv);
   row.appendChild(act);
-  row.appendChild(shNoteBox(x.lid, '설명 (선택) — 쓰면 판정과 함께 digest 로 넘어가 판례 초안이 된다'));
   return row;
 }
 function shEditIssue(g) {
@@ -389,12 +388,9 @@ function shAudit(d) {
   d.audit.forEach(function (x) {
     var row = el('div', 'sh-item');
     var top = el('div', 'sh-item__top');
-    top.appendChild(shWhere(x));
-    top.appendChild(el('span', 'tag', x.stratum || ''));
+    top.appendChild(shId(x));
     shPick(row, x);
     row.appendChild(top);
-    if (!SH.detail[x.lid]) shDetail(x.lid);
-    row.appendChild(shContext(x.lid));
     var rv = SH.reveal[x.lid];
     var act = el('div', 'sh-act');
     ['required', 'weak', 'forward'].forEach(function (rel) {
@@ -409,7 +405,7 @@ function shAudit(d) {
         });
       }));
     });
-    row.appendChild(act);
+    /* 공개된 뒤에는 설명을 쓰고 아래 버튼을 다시 누르는 순서라 버튼을 맨 아래에 둔다. */
     if (rv) {
       var p = el('div', 'sh-reveal');
       p.appendChild(el('p', null, '만장일치 값: ' + (SH_REL[rv.final] || rv.final) + ' — 다르게 고르려면 이유를 쓰고 다시 누른다.'));
@@ -417,65 +413,116 @@ function shAudit(d) {
       p.appendChild(shNoteBox('a:' + x.lid, '왜 만장일치가 틀렸는지 (필수)'));
       row.appendChild(p);
     }
+    row.appendChild(act);
     frag.appendChild(row);
   });
   return frag;
 }
 
 /* ── 판례 초안 ───────────────────────────────────────────────────────── */
+/* 판례 초안 — 초안 하나가 카드 하나다. 한 줄 설명과 원칙 초안만 펴 두고 쟁점·판정·이유는
+   "본문 보기"로 연다. 초안 글은 digest 가 쓴 그대로 승인한다(고칠 칸을 두지 않는다).
+   정리안(승격·병합)은 초안마다 따로 붙어 오지만 초안과 무관하게 적용되므로 아래 한 묶음으로
+   모아 판정 대기 카드와 같은 꼴로 보인다. */
+var SH_DRAFT_KIND = { 'new': '새 판례', amend: '보강', conflict: '충돌', none: '판례 아님', merge: '병합' };
+function shDraftCard(it) {
+  var dr = it.draft;
+  var row = el('div', 'sh-item');
+  var top = el('div', 'sh-item__top');
+  var what = SH_DRAFT_KIND[dr.action] || dr.action;
+  if (dr.action === 'amend' || dr.action === 'conflict') what = dr.precedent + ' ' + what;
+  if (dr.action === 'merge') what = dr.precedent + ' 에 ' + (dr.merged || []).join(', ') + ' ' + what;
+  top.appendChild(el('span', 'sh-lid', what));
+  top.appendChild(el('span', 'sh-vote sh-vote--' + (dr.relation || 'none'), SH_REL[dr.relation] || ''));
+  var body = el('button', 'sh-link', '본문 보기');
+  body.onclick = function () {
+    var md = '## 쟁점\n' + (dr.issue || '') + '\n\n## 판정\n' + (dr.ruling || '') + '\n\n## 이유\n' + (dr.reason || '');
+    openModalHtml(it.id + ' — ' + (dr.description || ''), '<div class="sh-md">' + shMd(md) + '</div>');
+    shMath(document.getElementById('modal'));
+  };
+  top.appendChild(body);
+  row.appendChild(top);
+  row.appendChild(el('p', 'sh-draft__desc', dr.description || ''));
+  if (dr.principle) row.appendChild(el('p', 'sh-draft__p', dr.principle));
+  if (dr.conflict_note) row.appendChild(el('p', 'hint', '충돌: ' + dr.conflict_note));
+  if (dr.note) row.appendChild(el('p', 'hint', '병합: ' + dr.note));
+  var act = el('div', 'sh-act');
+  var cb = null;
+  if ((dr.recheck || []).length) {
+    var rc = el('label', 'sh-act__check');
+    cb = el('input'); cb.type = 'checkbox'; cb.checked = true;
+    rc.appendChild(cb);
+    rc.appendChild(document.createTextNode(' 다시 볼 후보 ' + dr.recheck.length + '건도 함께'));
+    act.appendChild(rc);
+  }
+  var choice = null;
+  if (dr.action === 'conflict') {
+    choice = el('select');
+    choice.innerHTML = '<option value="supersede">기존 판례를 새 판례로 대체</option>' +
+      '<option value="distinguish">구별되는 경우로 보고 기존 판례에 해당 없음 추가</option>';
+    act.appendChild(choice);
+  }
+  act.appendChild(shBtn('버리기', null, function () {
+    if (confirm(it.id + ' 초안을 버릴까?')) shPost('draft', { id: it.id, action: 'discard' }).then(shLoad);
+  }));
+  act.appendChild(shBtn('승인', null, function () {
+    shPost('draft', { id: it.id, action: 'approve', edited: null, choice: choice ? choice.value : null,
+                      accept_recheck: cb ? cb.checked : false }).then(function (j) {
+      var bad = j.consolidation_failed || [];
+      SH.err = bad.length ? '정리안 적용 실패 — ' + bad.map(function (c) {
+        return c.kind + ' ' + (c.ids || []).join('+') + ': ' + c.error; }).join(' / ') : '';
+      shLoad();
+    });
+  }, dr.action === 'none'));
+  row.appendChild(act);
+  return row;
+}
+/* 정리안 카드 — 승격은 설명 없이, 병합만 이유 한 줄을 단다. */
+function shConsolidationCard(c) {
+  var row = el('div', 'sh-item');
+  var top = el('div', 'sh-item__top');
+  var ids = (c.ids || []).join(' + ');
+  top.appendChild(el('span', 'sh-lid', c.kind === 'promote' ? ids + ' 승격' : ids + ' 병합'));
+  row.appendChild(top);
+  var go = shBtn('적용', null, function () { shPost('consolidate', { kind: c.kind, ids: c.ids }).then(shLoad); });
+  /* 승격은 이름표뿐이라 버튼을 같은 줄 오른쪽에 둔다. */
+  if (c.kind === 'promote' || !c.note) {
+    go.classList.add('sh-top__end');
+    top.appendChild(go);
+    return row;
+  }
+  row.appendChild(el('p', 'sh-draft__p', c.note));
+  var act = el('div', 'sh-act');
+  act.appendChild(go);
+  row.appendChild(act);
+  return row;
+}
 function shDrafts(d) {
   var frag = document.createDocumentFragment();
   if (!d.drafts.length) { frag.appendChild(el('p', 'hint', 'digest 가 만든 초안이 없다.')); return frag; }
+  var box = el('div', 'sh-group');
+  var head = el('div', 'sh-group__h');
+  head.innerHTML = '<b>판례 초안</b> <span class="muted">(' + d.drafts.length + '건)</span>';
+  box.appendChild(head);
+  d.drafts.forEach(function (it) { box.appendChild(shDraftCard(it)); });
+  frag.appendChild(box);
+  /* 같은 정리안이 여러 초안에 실려 올 수 있다 — 종류와 대상이 같으면 하나로 센다. */
+  var seen = {}, props = [];
   d.drafts.forEach(function (it) {
-    var dr = it.draft, job = it.job || {};
-    var box = el('div', 'sh-group');
-    var label = { 'new': '새 판례', amend: dr.precedent + ' 보강', conflict: dr.precedent + ' 과(와) 충돌', none: '판례 아님' }[dr.action];
-    box.appendChild(el('div', 'sh-group__h', it.id + ' — ' + label + ' (' + (job.kind || '') + (job.qid ? ' · ' + job.qid : '') + ')'));
-    var ex = el('div', 'sh-q', '사용자 설명: ' + (job.explanation || '(없음)'));
-    box.appendChild(ex);
-    var fields = {};
-    [['description', '한 줄 설명 (80자)'], ['issue', '쟁점'], ['ruling', '판정'], ['reason', '이유'], ['principle', '원칙 초안']].forEach(function (f) {
-      box.appendChild(el('label', 'sh-label', f[1]));
-      var t = f[0] === 'description' ? el('input', 'sh-input') : el('textarea', 'sh-note');
-      t.value = dr[f[0]] || '';
-      fields[f[0]] = t;
-      box.appendChild(t);
+    (it.draft.consolidation || []).forEach(function (c) {
+      var key = c.kind + ':' + (c.ids || []).join(',');
+      if (!seen[key]) { seen[key] = true; props.push(c); }
     });
-    if (dr.conflict_note) box.appendChild(el('p', 'hint', '충돌: ' + dr.conflict_note));
-    box.appendChild(el('p', 'hint', '관계 ' + (dr.relation || '—') + ' · 질문 ' + dr.question +
-      ' · 대표 예시 ' + (dr.examples || []).join(', ') + (dr.not_covered ? ' · 해당 없음 ' + dr.not_covered.lid : '')));
-    var rc = el('label', 'sh-check');
-    var cb = el('input'); cb.type = 'checkbox'; cb.checked = true;
-    rc.appendChild(cb);
-    rc.appendChild(document.createTextNode(' 다시 볼 후보 ' + (dr.recheck || []).length + '건도 함께 승인'));
-    box.appendChild(rc);
-    var choice = null;
-    if (dr.action === 'conflict') {
-      var sel = el('select', 'sh-move');
-      sel.innerHTML = '<option value="supersede">기존 판례를 고친다 (새 판례가 대체)</option>' +
-        '<option value="distinguish">구별되는 경우로 본다 (기존 판례에 해당 없음 추가)</option>';
-      choice = sel;
-      box.appendChild(sel);
-    }
-    var act = el('div', 'sh-act');
-    act.appendChild(shBtn('승인', null, function () {
-      var edited = {};
-      Object.keys(fields).forEach(function (k) { edited[k] = fields[k].value; });
-      shPost('draft', { id: it.id, action: 'approve', edited: edited, choice: choice ? choice.value : null,
-                        accept_recheck: cb.checked }).then(shLoad);
-    }, dr.action === 'none'));
-    act.appendChild(shBtn('버리기', null, function () {
-      if (confirm(it.id + ' 초안을 버릴까?')) shPost('draft', { id: it.id, action: 'discard' }).then(shLoad);
-    }));
-    box.appendChild(act);
-    (dr.consolidation || []).forEach(function (c) {
-      var line = el('div', 'sh-act');
-      line.appendChild(el('span', null, '정리안: ' + c.kind + ' ' + (c.ids || []).join(', ') + ' — ' + (c.note || '')));
-      line.appendChild(shBtn('적용', null, function () { shPost('consolidate', { kind: c.kind, ids: c.ids }).then(shLoad); }));
-      box.appendChild(line);
-    });
-    frag.appendChild(box);
   });
+  if (props.length) {
+    var pbox = el('div', 'sh-group');
+    var h = el('div', 'sh-group__h');
+    h.innerHTML = '<b>정리안</b> <span class="muted">(' + props.length + '건 · 초안을 승인하면 함께 적용된다)</span>';
+    pbox.appendChild(h);
+    props.sort(function (a, b) { return (a.kind === 'promote' ? 0 : 1) - (b.kind === 'promote' ? 0 : 1); });
+    props.forEach(function (c) { pbox.appendChild(shConsolidationCard(c)); });
+    frag.appendChild(pbox);
+  }
   return frag;
 }
 
@@ -536,13 +583,12 @@ function shSettled(d) {
     var row = el('div', 'sh-item');
     var top = el('div', 'sh-item__top');
     top.innerHTML = '<b>' + esc(x.lid) + '</b> → ' + esc(SH_REL[x.relation] || x.relation) +
-      ' <span class="muted">(' + esc(x.how === 'audit' ? '감사' : '판정') + ' · ' + ago(x.at) + ')</span>';
+      ' <span class="muted">(' + esc({ audit: '감사', tiebreak: 'Fable 판정' }[x.how] || '판정') + ' · ' + ago(x.at) + ')</span>';
     top.appendChild(shBtn('되돌리기', null, function () {
       if (confirm(x.lid + ' 판정을 되돌릴까?')) shPost('reopen', { lid: x.lid }).then(shLoad);
     }));
     shPick(row, x);
     row.appendChild(top);
-    if (x.path) row.appendChild(shWhere(x));
     frag.appendChild(row);
   });
   return frag;
@@ -561,16 +607,18 @@ function shLoadPilot() {
 function shPilotItem(x, unit, models) {
   var row = el('div', 'sh-item');
   var top = el('div', 'sh-item__top');
-  top.appendChild(shWhere(x));
+  top.appendChild(shId(x));
   top.appendChild(shVotes({ S1: x.s1, S2: x.runs.S2 && x.runs.S2.relation, S3: x.runs.S3 && x.runs.S3.relation }));
   top.appendChild(el('span', 'sh-agy', 'agy ' + ['S1a', 'S1b', 'S1c'].map(function (k) {
     return x.runs[k] ? (SH_REL[x.runs[k].relation] || x.runs[k].relation) : '—';
   }).join('·')));
-  top.appendChild(shBtn('근거 보기', null, function () {
+  var why = el('button', 'sh-link', '근거 보기');
+  why.onclick = function () {
     var stages = {};
     SH_PILOT_KEYS.forEach(function (k) { if (x.runs[k]) stages[k] = { model: models[k], step1: x.runs[k] }; });
-    shReasons(x, stages, SH_PILOT_KEYS, unit);
-  }));
+    shReasons(x, stages, SH_PILOT_KEYS);
+  };
+  top.appendChild(why);
   shPick(row, x);
   row.appendChild(top);
   return row;

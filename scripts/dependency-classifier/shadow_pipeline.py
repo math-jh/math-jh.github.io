@@ -397,6 +397,41 @@ def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | Non
             "forced": len(forced), "reviewed": len(review)}
 
 
+def lone_s1(rec: dict) -> bool:
+    """S1 alone disagrees with S2 and S3, which agree, and S1 never ran Step 4."""
+    s1 = rec.get("stages", {}).get("S1")
+    if not s1 or s1.get("step4"):
+        return False
+    others = {vote(rec, s) for s in STAGES[1:]}
+    return len(others) == 1 and vote(rec, "S1") not in others
+
+
+def run_late_s1(unit: units.Unit, unit_rec: dict, round_lids: list[str]) -> dict:
+    """After S3: S1 Step 4 for links where S1 is the lone dissenter without Step 4.
+
+    S1's Step 2 rarely flags, so its Step 1 vote often enters the tally without a
+    look at the precedents.  This gives it that look before finalization.  The
+    prompt carries only S1's own Step 1, so the votes stay independent.  The row is
+    stored as S1's step4 with ``late: True``; ``vote`` then reads it."""
+    links = unit_rec["links"]
+    lids = sorted(lid for lid in round_lids
+                  if lid in links and unit.link(lid) is not None and lone_s1(links[lid]))
+    if not lids:
+        return {"late_s1": 0}
+    usage = unit_rec.setdefault("usage", {}).setdefault("S1", [])
+    changed = 0
+    for batch in step4_batches(step4_items(unit, unit_rec, "S1", lids)):
+        rows4, usages = run_step4("S1", batch)
+        usage.extend({**u, "late": True} for u in usages)
+        for lid, row in rows4.items():
+            _record_issue("S1", lid, row)
+            before = vote(links[lid], "S1")
+            links[lid]["stages"]["S1"]["step4"] = row
+            links[lid]["stages"]["S1"]["late"] = True
+            changed += vote(links[lid], "S1") != before
+    return {"late_s1": len(lids), "late_s1_changed": changed}
+
+
 # ── finalization (after S3) ───────────────────────────────────────────────
 
 AUDIT_RATES = {"decisive": 0.04, "cross": 0.017, "same_page": 0.007, "precedent": 0.25}
@@ -440,7 +475,13 @@ def audit_draw(lid: str, rec: dict, links: dict, started_at: float) -> str | Non
 
 def finalize(unit_rec: dict, round_lids: list[str], records: dict, queue: dict,
              started_at: float) -> dict:
-    """Unanimous with agreeing precedents → shadow ledger; anything else → human queue."""
+    """Unanimous votes → shadow ledger; anything else → human queue.
+
+    The precedents the models chose need not agree: a unanimous relation is final
+    even when one model cites a precedent and another cites none or a different
+    one.  Such links fall in the "precedent" audit stratum.  When the choices
+    differ, a precedent's applied count grows only if at least two models cited
+    it, so a single model's citation does not push it toward promotion."""
     now = int(time.time())
     links = unit_rec["links"]
     done = disputed = sampled = 0
@@ -449,13 +490,15 @@ def finalize(unit_rec: dict, round_lids: list[str], records: dict, queue: dict,
         votes = {s: vote(rec, s) for s in STAGES}
         precs = {s: rec["stages"][s]["step4"]["precedent"] for s in STAGES
                  if rec["stages"][s].get("step4")}
-        precedent_split = len(precs) >= 2 and len(set(precs.values())) > 1
-        if len(set(votes.values())) == 1 and not precedent_split:
+        if len(set(votes.values())) == 1:
             relation = votes["S1"]
             rec["final"] = {"relation": relation, "by": "unanimous", "at": now}
             records[lid] = dc.ledger.Record(relation, True)
-            for pid in set(precs.values()) - {"none"}:
-                book.bump_applied(pid, lid)
+            chosen = list(precs.values())
+            split = len(set(chosen)) > 1
+            for pid in set(chosen) - {"none"}:
+                if not split or chosen.count(pid) >= 2:
+                    book.bump_applied(pid, lid)
             done += 1
             stratum = audit_draw(lid, rec, links, started_at)
             if stratum:

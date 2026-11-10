@@ -12,7 +12,9 @@ calibrated, but their ranking is already useful, and the share is what fixes
 the cost of Step 3–4.
 
 The outcome of a judgment is whether the stage's Step 1 relation equals the
-link's final relation (unanimous vote, human ruling, or audit correction).
+link's final relation (unanimous vote, human ruling, or audit correction).  A
+link still waiting for a human counts too, against the two-against-one majority
+of its votes and at a lower weight (``provisional_outcome``).
 """
 from __future__ import annotations
 
@@ -28,6 +30,7 @@ MIN_OUTCOMES = int(os.environ.get("DEPENDENCY_SHADOW_MIN_OUTCOMES", "300"))
 MIN_OVERTURNED = 15
 FLAG_SHARE = float(os.environ.get("DEPENDENCY_SHADOW_FLAG_SHARE", "0.25"))
 QUOTE_FLOOR = 0.6
+PROVISIONAL_WEIGHT = 0.5
 KINDS = ("definition", "proposition", "theorem", "lemma", "corollary", "example",
          "remark", "section", "post")
 BASES = ("forward", "required_meaning", "required_step", "weak_verify", "weak_other", "boundary")
@@ -87,38 +90,58 @@ def score(stage: str, row: dict, f: dict, model: dict | None = None) -> dict:
             "reasons": (["model"] if by_model else []) + hard, "by": "model"}
 
 
-def _fit_logistic(X: np.ndarray, y: np.ndarray, l2: float = 1.0, steps: int = 3000,
+def _fit_logistic(X: np.ndarray, y: np.ndarray, weights: np.ndarray | None = None,
+                  l2: float = 1.0, steps: int = 3000,
                   lr: float = 0.1) -> tuple[np.ndarray, float]:
+    sw = np.ones(len(y)) if weights is None else weights
     w = np.zeros(X.shape[1])
     b = 0.0
-    n = len(y)
+    n = float(sw.sum())
     for _ in range(steps):
         p = 1 / (1 + np.exp(-(X @ w + b)))
-        grad_w = X.T @ (p - y) / n + l2 * w / n
-        grad_b = float(np.sum(p - y) / n)
+        r = sw * (p - y)
+        grad_w = X.T @ r / n + l2 * w / n
+        grad_b = float(np.sum(r) / n)
         w -= lr * grad_w
         b -= lr * grad_b
     return w, b
 
 
-def fit(outcomes: dict[str, list[tuple[list[float], int]]]) -> dict:
-    """outcomes[stage] = [(vector, overturned)].  Writes and returns the model."""
+def provisional_outcome(votes: dict[str, str | None]) -> str | None:
+    """The two-against-one majority of a link still waiting for a human, or None.
+
+    Disputed links are where Step 1 judgments go wrong, but they reach a final
+    relation only when a human rules, so a fit on final outcomes alone learns from
+    almost nothing but unanimous links.  The majority stands in until the ruling,
+    at ``PROVISIONAL_WEIGHT``: human rulings mostly go with it, not always."""
+    values = [v for v in votes.values() if v]
+    if len(values) != 3:
+        return None
+    top = max(set(values), key=values.count)
+    return top if values.count(top) == 2 else None
+
+
+def fit(outcomes: dict[str, list[tuple]]) -> dict:
+    """outcomes[stage] = [(vector, overturned)] or [(vector, overturned, weight)].
+    Writes and returns the model."""
     model = {}
     for stage, rows in outcomes.items():
-        y = np.array([o for _, o in rows], dtype=float)
+        y = np.array([r[1] for r in rows], dtype=float)
         if len(rows) < MIN_OUTCOMES or y.sum() < MIN_OVERTURNED:
             continue
-        X = np.array([v for v, _ in rows], dtype=float)
+        X = np.array([r[0] for r in rows], dtype=float)
+        sw = np.array([r[2] if len(r) > 2 else 1.0 for r in rows], dtype=float)
         mean = X.mean(axis=0)
         scale = X.std(axis=0)
         scale[scale == 0] = 1.0
         Xs = (X - mean) / scale
-        w, b = _fit_logistic(Xs, y)
+        w, b = _fit_logistic(Xs, y, sw)
         risks = 1 / (1 + np.exp(-(Xs @ w + b)))
         threshold = float(np.quantile(risks, 1 - FLAG_SHARE))
         model[stage] = {"weights": w.tolist(), "bias": b, "mean": mean.tolist(),
                         "scale": scale.tolist(), "threshold": threshold,
                         "n": len(rows), "overturned": int(y.sum()),
+                        "provisional": int((sw < 1).sum()),
                         "fitted_at": int(time.time())}
     store.write_json(store.CALIBRATION_PATH, model)
     return model

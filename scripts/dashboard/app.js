@@ -1,13 +1,8 @@
-/* 블로그 대시보드 — 개요가 허브인 hash 라우팅 SPA.
+/* 블로그 대시보드 — 개요가 허브인 SPA. 섹션마다 실제 경로(/dash/audit …)가 있고,
+   같은 탭 안의 이동은 pushState 라 다시 불러오지 않는다. 서버는 섹션 경로에 index.html 을 준다.
    탭 네비 없음: 진입은 개요의 지표·알림·섹션 색인, 복귀는 각 페이지의 '개요로'.
    데이터는 /api/summary 스냅샷 하나 (60초 폴링, 실패 시 마지막 스냅샷 유지). */
 'use strict';
-
-/* 구 경로(/dash/workers 등)로 들어오면 hash 라우트로 넘긴다. */
-(function () {
-  var m = location.pathname.match(/^\/dash\/(workers|pipeline|drafts|weights|translation|audit|index|activity|cron)\/?$/);
-  if (m) location.replace('/dash/#' + m[1]);
-})();
 
 var API = '/dash/api/';
 var DRAFT_PAGE = 20;
@@ -30,11 +25,26 @@ var PAGE_DESC = {
   cron: '블로그 크론 워커 일시정지·재개'
 };
 
-function route() {
-  var p = location.hash.replace(/^#/, '');
-  return ROUTES.indexOf(p) >= 0 ? p : '';
+function routeOf(pathname) {
+  var m = pathname.match(/^\/dash\/([^\/]*)\/?$/);
+  return m && ROUTES.indexOf(m[1]) >= 0 ? m[1] : '';
 }
-function link(k) { return '#' + (k || ''); }
+function route() { return routeOf(location.pathname); }
+function link(k) { return '/dash/' + (k || ''); }
+
+/* hash 주소(/dash/#audit — 북마크·알림 링크)는 같은 섹션의 경로로 바꾼다. 처음 열 때와,
+   이미 열린 탭에서 hash 만 바뀔 때(문서를 다시 읽지 않는다) 둘 다 부른다.
+   workers·pipeline 은 따로 페이지가 없고 개요에 있다. 바꿨으면 true. */
+function hashToPath() {
+  var h = location.hash.replace(/^#/, '');
+  var to = ROUTES.indexOf(h) >= 0 ? h
+    : (h === 'workers' || h === 'pipeline' || /^\/dash\/(workers|pipeline)\/?$/.test(location.pathname)) ? ''
+    : null;
+  if (to === null) return false;
+  history.replaceState(null, '', link(to));
+  return true;
+}
+hashToPath();
 
 /* ── 유틸 ─────────────────────────────────────────────────────────────── */
 function el(tag, cls, text) {
@@ -350,7 +360,7 @@ function stampText(d) {
 function masthead(d) {
   var mh = el('div', 'mh'), inner = el('div', 'mh__inner'), nav = el('div', 'mh__nav');
   var title = el('a', 'site-title');
-  title.href = '#';
+  title.href = link('');
   title.title = '대시보드 홈으로';
   title.innerHTML = 'BLACK<span class="site-title__box">BOX</span><span class="site-title__dash">Dashboard</span>';
   nav.appendChild(title);
@@ -1213,6 +1223,7 @@ function render() {
   var d = state.data;
   if (!d) return;
   var rt = route();
+  state.shown = rt;
   var app = document.getElementById('app');
   app.innerHTML = '';
   app.appendChild(masthead(d));
@@ -1269,10 +1280,29 @@ function load(fresh) {
     });
 }
 
-window.addEventListener('hashchange', function () {
+/* 같은 탭에서 섹션으로 가는 평범한 왼쪽 클릭만 가로채 pushState 로 넘긴다.
+   Cmd·Ctrl·Shift·Alt·가운데 클릭과 target 이 붙은 링크는 브라우저 기본 동작(새 탭·새 창)으로 둔다. */
+document.addEventListener('click', function (e) {
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  var a = e.target.closest('a[href]');
+  if (!a || a.target || a.hasAttribute('download')) return;
+  var u = new URL(a.href, location.href);
+  if (u.origin !== location.origin || u.search || u.hash) return;
+  var to = routeOf(u.pathname);
+  if (!to && !/^\/dash\/?$/.test(u.pathname)) return;
+  e.preventDefault();
+  if (to === route()) return;
+  history.pushState(null, '', link(to));
   window.scrollTo(0, 0);
   render();
 });
+/* 뒤로·앞으로, 그리고 열린 탭에서 hash 주소로 간 경우. 섹션이 그대로면 다시 그리지 않는다. */
+function syncRoute() {
+  if (hashToPath()) window.scrollTo(0, 0);
+  if (route() !== state.shown) render();
+}
+window.addEventListener('popstate', syncRoute);
+window.addEventListener('hashchange', syncRoute);
 wireModal();
 applyTheme(themeMode());
 load(false);

@@ -10,7 +10,7 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링�
 | --- | --- |
 | `server.py` | stdlib HTTP 서버(8089, 127.0.0.1). 정적 파일 + `/api/*` |
 | `index.html` | 셸 (`#app` + 모달 + pre-paint 테마) |
-| `app.js` | hash 라우팅 SPA — 마스트헤드·개요·상세 섹션 렌더러 전부 |
+| `app.js` | 경로 라우팅 SPA(pushState) — 마스트헤드·개요·상세 섹션 렌더러 전부 |
 | `dashboard.css` | 블로그 스킨(`_sass/minimal-mistakes/skins/_custom{,-dark}.scss`)의 토큰·자체를 그대로 |
 | `favicon-gauge5.svg` | 파비콘 — 본사이트 마크(네이비 타일 + 브래스 네모, 8/16/sw3) 안에 계기판 |
 | `restart.sh` | 서버 재기동 |
@@ -26,9 +26,12 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링�
 
 **개요가 허브다** — 탭 네비 없음. `/dash/` 개요(판정 한 줄 + 24시간 실행 히트맵 + 지표 6장 +
 "지금 볼 것" + 파이프라인 + 최근 커밋 + 섹션 색인)에서 각 섹션으로 들어가고 `← 개요로` 로 돌아온다.
-라우팅은 hash: `#workers` `#pipeline` `#drafts` `#weights` `#translation` `#audit` `#index` `#activity`.
-구 경로(`/dash/workers` 등)는 서버가 index.html 을 주고 app.js 가 hash 로 리다이렉트한다.
-감사(`#audit`)와 색인(`#index`)은 별도 페이지다. 번역 큐에는 검증기 KO-TYPOS 지적 목록이
+섹션마다 실제 경로가 있다: `/dash/drafts` `/dash/weights` `/dash/translation` `/dash/audit`
+`/dash/index` `/dash/activity` `/dash/cron`. 서버는 이 경로들에 index.html 을 주고 app.js 가 경로를
+읽어 그린다. 같은 탭의 평범한 클릭은 app.js 가 가로채 pushState 로 넘기고(다시 불러오지 않음),
+Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 열린다. hash 주소(`/dash/#audit`)로
+들어오면 같은 섹션의 경로로 바꾸고, `workers`·`pipeline` 은 개요에 있어서 `/dash/` 로 보낸다.
+번역 큐에는 검증기 KO-TYPOS 지적 목록이
 뜨고(행 클릭 → 지적 전문 모달), 감사의 이슈 종류 행을 클릭하면 글·줄 단위 상세 모달이 열린다
 (`audit-report.md` 의 Actionable items 를 서버가 kind 별로 파싱).
 
@@ -135,7 +138,7 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링�
 `scripts/index-monitor/state-com.json`, GitHub의 열린 `comment/*` PR, `git log`,
 `systemctl --user is-active jekyll-blog`, `~/Projects/hud-display/state/claude_quota.json`.
 
-## 의존성 링크 보류 (`#audit` 의 '의존성 링크 보류')
+## 의존성 링크 보류 (`/dash/audit` 의 '의존성 링크 보류')
 
 의존성 링크 분류기는 한 링크를 두 번 판정한다 — 1차 분류 뒤, 값을 모르는 **다른 모델**이
 다시 분류한다. 둘이 갈리거나 2차가 ambiguous 를 내면 분류기가 **그 링크의 원장 레코드를
