@@ -8687,6 +8687,13 @@ G:
     url: /ko/math/algebraic_topology/characteristic_classes
   - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
+- id: gysin_pullback
+  en: Gysin pullback
+  ko: 기쟁 풀백
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
+    url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: gysin_sequence
   en: Gysin sequence
   ko: 가신 완전열
