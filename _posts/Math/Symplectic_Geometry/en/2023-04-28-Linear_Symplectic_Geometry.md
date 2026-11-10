@@ -46,7 +46,7 @@ $$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
 is a subspace of $V$. Thus, choosing a basis of this subspace, we obtain $u_1,\ldots, u_k$. Now let $V=U\oplus W$. Then, for $W$, we can find a basis $e_1,\ldots, e_n,f_1,\ldots, f_n$ as follows. 
 
-Choose an arbitrary vector $e_1\in W$. Then, since $\omega$ is non-degenerate on $W$, there exists, satisfying $\omega(e_1,f_1)\neq 0$, a vector $f_1\in W$, and by multiplying by a scalar as needed, we may assume $\omega(e_1,f_1)=1$. Since $\omega$ is skew-symmetric, it is clear that $\omega(e_1,e_1)=\omega(f_1,f_1)=0$.
+If $W=\{0\}$, there is nothing more to do, so assume $W\neq\{0\}$ and choose a nonzero vector $e_1\in W$. Then, since $\omega$ is non-degenerate on $W$, there exists, satisfying $\omega(e_1,f_1)\neq 0$, a vector $f_1\in W$, and by multiplying by a scalar as needed, we may assume $\omega(e_1,f_1)=1$. Since $\omega$ is skew-symmetric, it is clear that $\omega(e_1,e_1)=\omega(f_1,f_1)=0$.
 
 Repeating this process, with the two conditions
 
