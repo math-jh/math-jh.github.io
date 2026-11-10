@@ -124,7 +124,7 @@ class Monitor:
         if self.dry_run:
             log(f"[dry-run] {title}: {body}")
             return True
-        r = subprocess.run([str(NOTIFY), "-s", title, "-b", body, "-g", "blog",
+        r = subprocess.run([str(NOTIFY), "-s", title, "-b", body, "-g", "blog/worker",
                             "-l", "active" if recovery else "timeSensitive"],
                            capture_output=True, text=True, timeout=30)
         log(f"notification {'sent' if r.returncode == 0 else f'failed rc={r.returncode}'}: {title}")

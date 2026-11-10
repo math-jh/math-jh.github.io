@@ -2106,7 +2106,7 @@ def _notify(subject: str, body: str, level: str = "active", digest: bool = False
     """
     try:
         r = subprocess.run(
-            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level,
+            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog/worker", "-l", level,
              *(["--digest"] if digest else [])],
             check=False, timeout=20, capture_output=True, text=True,
         )

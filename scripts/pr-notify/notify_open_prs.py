@@ -79,7 +79,7 @@ def compose(fresh: list[dict]) -> tuple[str, str]:
 
 def send(subject: str, body: str, url: str) -> None:
     result = subprocess.run(
-        [str(NOTIFY), "-s", subject, "-b", body, "-g", "blog", "--url", url],
+        [str(NOTIFY), "-s", subject, "-b", body, "-g", "blog/deploy", "--url", url],
         capture_output=True, text=True, timeout=30,
     )
     if result.returncode != 0:

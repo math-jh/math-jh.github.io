@@ -68,7 +68,7 @@ def send_notify(msg: str) -> None:
     notify = Path.home() / ".local/bin/notify"
     try:
         r = subprocess.run(
-            [str(notify), "-s", "[extract_terms]", "-b", msg, "-g", "blog"],
+            [str(notify), "-s", "[extract_terms]", "-b", msg, "-g", "blog/worker"],
             capture_output=True, text=True, timeout=20)
         if r.returncode != 0:
             log(f"알림 전송 실패 rc={r.returncode}: {r.stderr.strip()[:200]}")

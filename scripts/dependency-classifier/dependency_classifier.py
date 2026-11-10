@@ -213,7 +213,7 @@ def notify(subject: str, body: str, level: str = "active",
     ``digest`` defers it to the shim's daily summary (no action needed now)."""
     try:
         proc = subprocess.run(
-            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog", "-l", level,
+            [NOTIFY_BIN, "-s", subject, "-b", body, "-g", "blog/worker", "-l", level,
              *(("-u", url) if url else ()), *(("--digest",) if digest else ())],
             check=False, timeout=20, capture_output=True, text=True,
         )

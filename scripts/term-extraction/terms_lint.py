@@ -115,7 +115,7 @@ def send_notify(msg: str, subject: str = "[terms_lint]",
     import subprocess
     notify = Path.home() / ".local/bin/notify"
     try:
-        cmd = [str(notify), "-s", subject, "-b", msg, "-g", "blog"]
+        cmd = [str(notify), "-s", subject, "-b", msg, "-g", "blog/worker"]
         if ttl is not None:
             cmd.extend(["--archive", "--ttl", str(ttl)])
         if digest:
