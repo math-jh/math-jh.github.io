@@ -164,7 +164,7 @@ $A$의 well-ordering이 존재한다. 자신을 제외한 $\mathbb{N}$의 임의
 ::: 증명
 다음의 수열
 
-$$(1,1),\quad (1,2),(2,1),\quad (1,3),(2,2),(3,1),\quad \cdots$$
+$$(0,0),\quad (0,1),(1,0),\quad (0,2),(1,1),(2,0),\quad \cdots$$
 
 에 의해 자명.
 :::
@@ -172,7 +172,7 @@ $$(1,1),\quad (1,2),(2,1),\quad (1,3),(2,2),(3,1),\quad \cdots$$
 ::: 증명 (명제 13)
 $A$가 cardinal $\mathfrak{a}$를 갖는 집합이라 하자. 그럼 첫 번째 보조정리로부터 어떤 $B\subseteq A$는 $\mathbb{N}$과 equipotent하고, 따라서 두 번째 보조정리에 의해 $B\times B$와 $B$ 사이의 전단사함수가 존재한다. 이를 $f$라 하자. 
 
-$B$를 포함하는 $A$의 부분집합 $X$와, 그 위에서 정의된 $f$의 extension $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 임의의 chain에 대하여 가장 큰 정의역을 갖는 쌍이 maximal element가 되므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
+$B$를 포함하는 $A$의 부분집합 $X$와, $f$의 extension인 전단사함수 $\psi:X\rightarrow X\times X$에 대해 $\mathfrak{M}$이 이러한 쌍 $(X,\psi)$들의 모임이라 하자. 그럼 $\mathfrak{M}$의 공집합이 아닌 임의의 chain에 대하여 정의역들과 함수들의 합집합을 취한 쌍이 upper bound가 되고 공집합인 chain은 $(B,f)$를 upper bound로 가지므로, $\mathfrak{M}$은 inductive한 집합이고, 따라서 Zorn's lemma에 의해 $\mathfrak{M}$의 maximal element $(F, \tilde{f})$가 존재한다.
 
 이제 $\card F=\mathfrak{a}$임을 보이면 충분하다. 만일 $\card F=\mathfrak{b}<\mathfrak{a}$라면, bijection $\tilde{f}$에 의해 $\mathfrak{b}=\mathfrak{b}^2$이므로 
 

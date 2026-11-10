@@ -164,7 +164,7 @@ The set $\mathbb{N}\times\mathbb{N}$ is equipotent to $\mathbb{N}$.
 ::: Proof
 From the following sequence,
 
-$$(1,1),\quad (1,2),(2,1),\quad (1,3),(2,2),(3,1),\quad \cdots$$
+$$(0,0),\quad (0,1),(1,0),\quad (0,2),(1,1),(2,0),\quad \cdots$$
 
 this is clear.
 :::
@@ -172,7 +172,7 @@ this is clear.
 ::: Proof (Proposition 13)
 Let $A$ be a set with cardinal $\mathfrak{a}$. Then, by the first lemma, some $B\subseteq A$ is equipotent to $\mathbb{N}$, and thus by the second lemma, there exists a bijection between $B\times B$ and $B$. Let this be $f$. 
 
-For a subset containing $B$ within $A$, $X$, and an extension of $f$ defined on it, $\psi:X\rightarrow X\times X$, let $\mathfrak{M}$ be the collection of such pairs $(X,\psi)$. Then, for any chain in $\mathfrak{M}$, the pair with the largest domain is a maximal element, so $\mathfrak{M}$ is an inductive set; therefore, by Zorn's lemma, $\mathfrak{M}$ has a maximal element $(F, \tilde{f})$.
+For a subset containing $B$ within $A$, $X$, and a bijection $\psi:X\rightarrow X\times X$ that is an extension of $f$, let $\mathfrak{M}$ be the collection of such pairs $(X,\psi)$. Then, for any non-empty chain in $\mathfrak{M}$, the pair obtained by taking the union of the domains and the union of the functions is an upper bound, and the empty chain has $(B,f)$ as an upper bound, so $\mathfrak{M}$ is an inductive set; therefore, by Zorn's lemma, $\mathfrak{M}$ has a maximal element $(F, \tilde{f})$.
 
 It now suffices to show that $\card F=\mathfrak{a}$. If $\card F=\mathfrak{b}<\mathfrak{a}$, then by the bijection $\tilde{f}$, we have $\mathfrak{b}=\mathfrak{b}^2$, so 
 
