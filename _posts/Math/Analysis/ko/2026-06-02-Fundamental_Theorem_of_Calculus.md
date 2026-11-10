@@ -19,7 +19,7 @@ published: false
 
 두 방향은 가정이 서로 다르다. 앞의 것은 피적분함수가 연속인 점에서만 성립하고, 뒤의 것은 도함수가 적분가능하다는 가정이 있어야 의미가 있다. 이 글은 두 정리를 각각에 필요한 가정 아래에서 증명하고, 가정이 빠지면 무엇이 무너지는지를 반례로 확인한 뒤, 부분적분·치환적분·적분의 평균값 정리를 이 위에서 엄밀하게 세운다.
 
-이 글에서 $f$가 적분가능하다는 것은 $[a,b]$에서 Riemann 적분가능하다는 뜻이다. 다음 성질을 그대로 쓴다. [§Riemann 적분, ⁋정의 4](/ko/math/analysis/riemann_integral#def4){: data-lid="rtsai" }에 의하여 적분가능한 함수는 bounded이고, [§Riemann 적분, ⁋명제 12](/ko/math/analysis/riemann_integral#prop12){: data-lid="g42ep" }에 의하여 적분은 선형이며 단조이고, [§Riemann 적분, ⁋명제 16](/ko/math/analysis/riemann_integral#prop16){: data-lid="syyec" }에 의하여 구간가법성 $\int_a^c f = \int_a^b f + \int_b^c f$가 성립한다. 또 [§Riemann 적분, ⁋명제 13](/ko/math/analysis/riemann_integral#prop13){: data-lid="7ryou" }에 의하여 $f$가 적분가능하면 $\lvert f\rvert$도 적분가능하고 $\bigl\lvert\int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$이며 적분가능한 함수의 곱은 적분가능하고, [§Riemann 적분, ⁋정리 6](/ko/math/analysis/riemann_integral#thm6){: data-lid="zgsv6" }에 의하여 연속함수는 적분가능하다. 끝점의 대소와 무관하게 구간가법성을 쓰기 위해 $\int_y^x f = -\int_x^y f$, $\int_x^x f = 0$으로 약속한다.
+이 글에서 $f$가 적분가능하다는 것은 $[a,b]$에서 Riemann integrable하다는 뜻이다. 다음 성질을 그대로 쓴다. [§Riemann 적분, ⁋정의 4](/ko/math/analysis/riemann_integral#def4){: data-lid="rtsai" }에 의하여 적분가능한 함수는 bounded이고, [§Riemann 적분, ⁋명제 12](/ko/math/analysis/riemann_integral#prop12){: data-lid="g42ep" }에 의하여 적분은 선형이며 단조이고, [§Riemann 적분, ⁋명제 16](/ko/math/analysis/riemann_integral#prop16){: data-lid="syyec" }에 의하여 구간가법성 $\int_a^c f = \int_a^b f + \int_b^c f$가 성립한다. 또 [§Riemann 적분, ⁋명제 13](/ko/math/analysis/riemann_integral#prop13){: data-lid="7ryou" }에 의하여 $f$가 적분가능하면 $\lvert f\rvert$도 적분가능하고 $\bigl\lvert\int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$이며 적분가능한 함수의 곱은 적분가능하고, [§Riemann 적분, ⁋정리 6](/ko/math/analysis/riemann_integral#thm6){: data-lid="zgsv6" }에 의하여 연속함수는 적분가능하다. 끝점의 대소와 무관하게 구간가법성을 쓰기 위해 $\int_y^x f = -\int_x^y f$, $\int_x^x f = 0$으로 약속한다.
 
 ## 가변상한 적분
 
@@ -138,10 +138,10 @@ $$G'(x) = 2x\sin\frac{1}{x^2} - \frac{2}{x}\cos\frac{1}{x^2}$$
 
 $$G'(x_n) = -\frac{2}{x_n} = -2\sqrt{2\pi n}$$
 
-이 되어 $n \rightarrow \infty$일 때 $-\infty$로 발산한다. bounded가 아닌 함수는 [§Riemann 적분, ⁋정의 4](/ko/math/analysis/riemann_integral#def4){: data-lid="w7e7a" }에 의하여 Riemann 적분가능하지 않으므로 $\int_0^1 G'$ 자체가 정의되지 않고, [정리 5](#thm5){: data-lid="in8va" }의 등식은 의미를 잃는다. 이 경우 적분을 정의하는 쪽을 넓혀야 비로소 $G(1) - G(0)$을 복원할 수 있다.
+이 되어 $n \rightarrow \infty$일 때 $-\infty$로 발산한다. bounded가 아닌 함수는 [§Riemann 적분, ⁋정의 4](/ko/math/analysis/riemann_integral#def4){: data-lid="w7e7a" }에 의하여 Riemann integrable하지 않으므로 $\int_0^1 G'$ 자체가 정의되지 않고, [정리 5](#thm5){: data-lid="in8va" }의 등식은 의미를 잃는다. 이 경우 적분을 정의하는 쪽을 넓혀야 비로소 $G(1) - G(0)$을 복원할 수 있다.
 :::
 
-$G'$가 bounded이기만 하면 충분한 것도 아니다. 모든 점에서 미분가능하고 $G'$가 bounded이지만 Riemann 적분가능하지 않은 함수가 존재한다(Volterra의 예). 따라서 [정리 5](#thm5){: data-lid="i79jg" }의 가정은 $G'$의 적분가능성 자체여야 한다.
+$G'$가 bounded이기만 하면 충분한 것도 아니다. 모든 점에서 미분가능하고 $G'$가 bounded이지만 Riemann integrable하지 않은 함수가 존재한다(Volterra의 예). 따라서 [정리 5](#thm5){: data-lid="i79jg" }의 가정은 $G'$의 적분가능성 자체여야 한다.
 
 ## 부분적분과 치환적분
 

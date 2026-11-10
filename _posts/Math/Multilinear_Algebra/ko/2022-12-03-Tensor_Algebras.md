@@ -120,7 +120,7 @@ $$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A
 
 ## Mixed tensor
 
-이제 $A$-module $M$과 그 dual module $M^\ast$, 그리고 이 둘 사이의 Kronecker pairing $\langle x,\xi\rangle$를 기억하자. ([§쌍대공간, ⁋정의 1](/ko/math/multilinear_algebra/dual_spaces#def1){: data-lid="clvkt" }) 선형대수에서 다루는 많은 대상들은 $M$과 $M^\ast$ 여러 개의 tensor product 안에서 찾을 수 있는데, 가령 $M$이 finitely generated projective라면 [§Hom과 텐서곱, ⁋따름정리 4](/ko/math/multilinear_algebra/hom_and_tensor#cor4){: data-lid="30pl4" }에 의하여 $M^\ast\otimes_AM\cong \End_\rMod{A}(M)$이다. 이러한 대상들을 한꺼번에 다루기 위해 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, 앞 절에서 살펴본 direct sum 분해를 $M_1=M$, $M_2=M^\ast$에 적용하여 다음의 isomorphism
+이제 $A$-module $M$과 그 dual module $M^\ast$, 그리고 이 둘 사이의 Kronecker pairing $\langle x,\xi\rangle$를 기억하자. ([§쌍대공간, ⁋정의 1](/ko/math/multilinear_algebra/dual_spaces#def1){: data-lid="clvkt" }) 선형대수에서 다루는 많은 대상들은 $M$과 $M^\ast$ 여러 개의 tensor product 안에서 찾을 수 있는데, 가령 $M$이 finitely generated projective라면 [§Hom과 텐서곱, ⁋따름정리 4](/ko/math/multilinear_algebra/hom_and_tensor#cor4){: data-lid="30pl4" }에 의하여 $M^\ast\otimes_AM\cong \End_\rMod{A}(M)$이다. 이러한 대상들을 한꺼번에 다루기 위해 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, 앞 절에서 살펴본 direct sum decomposition을 $M_1=M$, $M_2=M^\ast$에 적용하여 다음의 isomorphism
 
 $$\T^n(M\oplus M^\ast)\cong\bigoplus_{(i_1,\ldots, i_n)\in\{1,2\}^n} M_{i_1}\otimes\cdots\otimes M_{i_n}$$
 

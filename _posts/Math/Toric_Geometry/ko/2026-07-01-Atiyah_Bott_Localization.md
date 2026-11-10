@@ -33,7 +33,7 @@ $$N_{\mathrm{loc}}:=N\otimes_R\mathrm{Frac}(R)$$
 Localization 정리의 무대는 fixed locus $M^T=\{x\in M\mid g\cdot x=x\text{ for all }g\in T\}$이다. Torus 작용의 fixed locus는 variety로서 잘 행동하며, 각 성분 주위에서 작용이 normal 방향으로 어떻게 보이는지가 정리의 핵심 데이터가 된다.
 
 ::: 명제 1
-$T$가 콤팩트 variety $M$ 위에 매끄럽게 작용할 때, fixed locus $M^T$은 closed smooth 부분다양체이며 유한히 많은 connected 성분 $F$의 disjoint union이다. 각 성분 $F$는 $T$-불변이고 그 위에서 $T$가 자명하게 작용한다. 더 나아가 $F$의 normal bundle $N_F=TM\vert_F/TF$은 fiber마다 $T$-작용을 가지며, 이 작용의 weight들은 모두 $0$이 아니다.
+$T$가 콤팩트 variety $M$ 위에 매끄럽게 작용할 때, fixed locus $M^T$은 closed smooth 부분다양체이며 유한히 많은 connected component $F$의 disjoint union이다. 각 성분 $F$는 $T$-불변이고 그 위에서 $T$가 자명하게 작용한다. 더 나아가 $F$의 normal bundle $N_F=TM\vert_F/TF$은 fiber마다 $T$-작용을 가지며, 이 작용의 weight들은 모두 $0$이 아니다.
 :::
 ::: 증명
 $T$는 콤팩트이므로 $M$ 위에 $T$-불변 Riemann metric을 평균화로 만들 수 있고, 그에 대한 exponential map은 $T$-동변이다. 한 fixed point $x\in M^T$에서 $T$는 tangent space $T_xM$ 위에 선형으로 (isotropy representation으로) 작용하며, 이 선형표현의 weight $0$ 고유공간을 $(T_xM)^T$라 하면 $T$-동변 exponential map이 $(T_xM)^T$의 작은 근방을 $M^T$ 위로 보내는 chart를 준다. 따라서 $M^T$은 각 점 근방에서 $(T_xM)^T$로 모형화되는 smooth 부분다양체이고, $M$이 콤팩트이므로 성분의 수는 유한하다. 정의상 $M^T$의 모든 점이 고정되므로 각 성분 위에서 작용은 자명하다.
@@ -45,23 +45,23 @@ $T$는 콤팩트이므로 $M$ 위에 $T$-불변 Riemann metric을 평균화로 �
 
 ## 동변 Euler class
 
-명제 1의 normal bundle $N_F$은 $T$-동변 vector bundle이다. 우리는 그 *동변 Euler class*를 만들어, localization 정리에서 $F$로의 기여를 이 class로 나누는 형태로 기술할 것이다. 정의는 Borel 구성을 통해 보통의 Euler class를 동변 판본으로 들어올리는 것이다. 앞으로 다룰 normal bundle은 모두 복소 bundle이므로 (예시의 $\mathbb{P}^n$, Grassmannian, smooth toric variety는 모두 complex manifold이다), 우리는 복소 $T$-동변 bundle에 한정해 정의한다.
+명제 1의 normal bundle $N_F$은 $T$-동변 vector bundle이다. 우리는 그 *동변 Euler class*를 만들어, localization 정리에서 $F$로의 기여를 이 class로 나누는 형태로 기술할 것이다. 정의는 Borel construction을 통해 보통의 Euler class를 동변 판본으로 들어올리는 것이다. 앞으로 다룰 normal bundle은 모두 복소 bundle이므로 (예시의 $\mathbb{P}^n$, Grassmannian, smooth toric variety는 모두 complex manifold이다), 우리는 복소 $T$-동변 bundle에 한정해 정의한다.
 
 ::: 정의 2
-$T$-공간 $Y$ 위의 복소 $T$-동변 vector bundle $E\rightarrow Y$에 대하여, Borel 구성 $E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$은 $Y_T$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1){: data-lid="qiy2q" }) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $E$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
+$T$-공간 $Y$ 위의 복소 $T$-동변 vector bundle $E\rightarrow Y$에 대하여, Borel construction $E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$은 $Y_T$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1){: data-lid="qiy2q" }) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $E$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
 
 $$c_i^T(E):=c_i(E_T)\in H_T^{2i}(Y),\qquad e_T(E):=c_{\mathrm{rank}}^T(E)=e\big((E_T)_{\mathbb{R}}\big)\in H_T^{2\mathrm{rank}(E)}(Y)$$
 
 로 정의한다. 여기서 우변의 보통 Chern class와 Euler class는 각각 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6){: data-lid="kscpq" }과 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 3](/ko/math/algebraic_topology/characteristic_classes#def3){: data-lid="7st7d" }의 것이다.
 :::
 
-보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9){: data-lid="5l74p" }) 특히 $T$-동변 bundle의 직합에 대해 $e_T(E\oplus E')=e_T(E)e_T(E')$이다.
+보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel construction이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9){: data-lid="5l74p" }) 특히 $T$-동변 bundle의 직합에 대해 $e_T(E\oplus E')=e_T(E)e_T(E')$이다.
 
 이 정의가 명제 1의 fixed component $F$ 위에서 어떻게 구체화되는지를 살피자. $F$ 위에서 $T$가 자명하게 작용하므로 $F_T=ET\times_T F=BT\times F$이고, 따라서
 
 $$H_T^\bullet(F)=H^\bullet(BT\times F)=R\otimes_{\mathbb{Q}}H^\bullet(F;\mathbb{Q})$$
 
-이다 (Künneth). $T$가 자명하게 작용하는 공간 위의 $T$-동변 복소 bundle $N_F$은 weight에 따라 고유 subbundle들로 분해된다. 곧 $N_F=\bigoplus_{\chi}(N_F)_\chi$이고 여기서 $T$는 $(N_F)_\chi$ 위에 character $\chi\in M_T$로 작용한다. 명제 1에 의해 나타나는 $\chi$는 모두 $0$이 아니다. 한 weight bundle $(N_F)_\chi$의 Borel 구성은 $BT\times F$ 위에서 $L_\chi\boxtimes(N_F)_\chi$ 꼴로 풀려, 그 보통의 Chern root가 $x_{\chi,j}+\chi$ ($x_{\chi,j}$는 $(N_F)_\chi$의 $H^\bullet(F)$ 안에서의 Chern root, $\chi\in R$) 가 된다. 따라서
+이다 (Künneth). $T$가 자명하게 작용하는 공간 위의 $T$-동변 복소 bundle $N_F$은 weight에 따라 고유 subbundle들로 분해된다. 곧 $N_F=\bigoplus_{\chi}(N_F)_\chi$이고 여기서 $T$는 $(N_F)_\chi$ 위에 character $\chi\in M_T$로 작용한다. 명제 1에 의해 나타나는 $\chi$는 모두 $0$이 아니다. 한 weight bundle $(N_F)_\chi$의 Borel construction은 $BT\times F$ 위에서 $L_\chi\boxtimes(N_F)_\chi$ 꼴로 풀려, 그 보통의 Chern root가 $x_{\chi,j}+\chi$ ($x_{\chi,j}$는 $(N_F)_\chi$의 $H^\bullet(F)$ 안에서의 Chern root, $\chi\in R$) 가 된다. 따라서
 
 $$e_T(N_F)=\prod_{\chi}\prod_{j}\big(x_{\chi,j}+\chi\big)\in R\otimes_{\mathbb{Q}}H^\bullet(F)$$
 
@@ -87,14 +87,14 @@ Isolated fixed point에서는 $e_T(N_p)=\prod_j w_j$이 $R$의 $0$이 아닌 원
 콤팩트 oriented variety 위에서는 cohomology class를 fundamental class 위에서 평가하는 적분이 있다. ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10){: data-lid="d07qp" }) 동변 판본에서는 이것이 $R$에 값을 갖는 $R$-선형 사상이 되며, fiber를 따라 적분하는 Gysin morphism으로 실현된다.
 
 ::: 정의 4
-$M$이 $\dim_{\mathbb{R}}M=d$인 콤팩트 oriented $T$-variety라 하자. Borel 구성 $M_T\rightarrow BT$은 fiber $M$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2){: data-lid="yt1nh" }), fiber를 따른 적분 (Gysin morphism)
+$M$이 $\dim_{\mathbb{R}}M=d$인 콤팩트 oriented $T$-variety라 하자. Borel construction $M_T\rightarrow BT$은 fiber $M$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2){: data-lid="yt1nh" }), fiber를 따른 적분 (Gysin morphism)
 
 $$\int_M:H_T^k(M)=H^k(M_T)\rightarrow H^{k-d}(BT)=R^{k-d}$$
 
 이 정의된다. 이를 $M$ 위의 *equivariant integration<sub>동변 적분</sub>* 또는 $M\rightarrow\mathrm{pt}$의 pushforward $\pi_\ast$라 부른다. 같은 방식으로 closed $T$-부분다양체의 포함 $j:F\hookrightarrow M$ (normal bundle이 oriented) 에 대해 degree를 $\mathrm{codim}F$만큼 올리는 동변 Gysin pushforward $j_\ast:H_T^\bullet(F)\rightarrow H_T^{\bullet+\mathrm{codim}F}(M)$이 정의된다.
 :::
 
-$\int_M$은 $R$-선형이며 degree를 $d=\dim_{\mathbb{R}}M$만큼 낮춘다. Borel 구성을 잊고 $t_i=0$으로 보내면 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8){: data-lid="ebzys" }의 augmentation) 보통의 적분 $H^\bullet(M)\rightarrow\mathbb{Q}$, 곧 fundamental class 위에서의 평가로 환원된다. Fiber 적분과 동변 Gysin morphism의 구성은 [BT]의 §6과 [AF]의 §2를 따른다. 이 적분이 fixed component로 어떻게 분해되는지를 지배하는 것이 다음의 세 항등식이다.
+$\int_M$은 $R$-선형이며 degree를 $d=\dim_{\mathbb{R}}M$만큼 낮춘다. Borel construction을 잊고 $t_i=0$으로 보내면 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8){: data-lid="ebzys" }의 augmentation) 보통의 적분 $H^\bullet(M)\rightarrow\mathbb{Q}$, 곧 fundamental class 위에서의 평가로 환원된다. Fiber 적분과 동변 Gysin morphism의 구성은 [BT]의 §6과 [AF]의 §2를 따른다. 이 적분이 fixed component로 어떻게 분해되는지를 지배하는 것이 다음의 세 항등식이다.
 
 ::: 명제 5
 $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathrm{pt}$, $\pi_F:F\rightarrow\mathrm{pt}$을 상수사상이라 하자. 그럼 다음이 성립한다.
@@ -176,7 +176,7 @@ $\alpha\in H_T^\bullet(M)$에 대하여
 
 $$\int_M\alpha=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 
-이 $\mathrm{Frac}(R)$ 안에서 성립한다. 여기서 합은 fixed locus $M^T$의 connected 성분 $F$ 전체에 대한 것이다. 특히 좌변은 $R$의 원소이고 우변은 fixed point에서의 데이터만으로 계산된다.
+이 $\mathrm{Frac}(R)$ 안에서 성립한다. 여기서 합은 fixed locus $M^T$의 connected component $F$ 전체에 대한 것이다. 특히 좌변은 $R$의 원소이고 우변은 fixed point에서의 데이터만으로 계산된다.
 :::
 ::: 증명
 [정리 7](#thm7){: data-lid="a9ffe" }의 등식 $\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$을 $H_T^\bullet(M)_{\mathrm{loc}}$ 안에서 잡고, $\mathrm{Frac}(R)$-선형으로 확장한 equivariant integration $\int_M$을 양변에 적용한다. [명제 5](#prop5){: data-lid="1248e" }의 함자성 $\int_M\circ j_{F\ast}=\int_F$로부터

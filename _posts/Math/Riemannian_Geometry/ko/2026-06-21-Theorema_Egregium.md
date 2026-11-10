@@ -97,7 +97,7 @@ $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 우변은 [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5){: data-lid="a22wh" }의 대칭성을 갖춘 곡률 텐서를 정규직교 평면 $\{e_1, e_2\}$ 위에서 평가한 것으로, 이는 정확히 그 평면의 sectional curvature이다. 2차원 곡면에서는 각 점의 접평면이 유일하므로 sectional curvature가 한 수로 결정되고, 그것이 바로 Gauss curvature이다. 따라서 2차원에서 Gauss curvature과 sectional curvature는 같은 양의 두 이름이다.
 
 ::: 참고 4
-[정리 3](#thm3){: data-lid="naofs" }의 우변이 제1기본형식만으로 적힌다는 사실은 좌표 공식으로도 명시할 수 있다. Christoffel 기호는 제1기본형식 $E, F, G$와 그 1계 편미분으로 이루어지고 곡률 텐서 $R$의 성분은 다시 Christoffel 기호와 그 1계 편미분으로 표현되므로, Gauss curvature은 $E, F, G$와 그 2계까지의 편미분만의 함수가 된다. 이를 명시적으로 적은 것이 *Brioschi 공식<sub>Brioschi formula</sub>*
+[정리 3](#thm3){: data-lid="naofs" }의 우변이 제1기본형식만으로 적힌다는 사실은 좌표 공식으로도 명시할 수 있다. Christoffel symbols는 제1기본형식 $E, F, G$와 그 1계 편미분으로 이루어지고 곡률 텐서 $R$의 성분은 다시 Christoffel symbols와 그 1계 편미분으로 표현되므로, Gauss curvature은 $E, F, G$와 그 2계까지의 편미분만의 함수가 된다. 이를 명시적으로 적은 것이 *Brioschi 공식<sub>Brioschi formula</sub>*
 
 $$K = \frac{\det \begin{pmatrix} -\frac{1}{2} E_{vv} + F_{uv} - \frac{1}{2} G_{uu} & \frac{1}{2} E_u & F_u - \frac{1}{2} E_v \\ F_v - \frac{1}{2} G_u & E & F \\ \frac{1}{2} G_v & F & G \end{pmatrix} - \det \begin{pmatrix} 0 & \frac{1}{2} E_v & \frac{1}{2} G_u \\ \frac{1}{2} E_v & E & F \\ \frac{1}{2} G_u & F & G \end{pmatrix}}{(EG - F^2)^2}$$
 

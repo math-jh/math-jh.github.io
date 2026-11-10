@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-[§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="453cb" }은 단순연결 영역에서 holomorphic function의 closed 경로 적분이 소멸함을 알려 주었다. 이 소멸 현상의 진짜 위력은, 피적분함수에 $1/(w-z)$라는 인위적인 극점을 하나 끼워 넣었을 때 비로소 드러난다. Holomorphic function $f$를 원판의 boundary에서 적분하되 kernel $1/(w-z)$로 무게를 주면, 그 적분이 interior의 한 점 $z$에서의 함숫값 $f(z)$를 정확히 되돌려 준다. 이것이 Cauchy 적분공식으로, holomorphic function이 boundary 위의 값만으로 interior 전체에서 완전히 결정된다는 놀라운 강성을 표현한다. 더 나아가 이 공식의 적분기호 안에서 $z$에 대해 미분을 자유로이 반복할 수 있어, 한 번 복소미분가능한 함수가 자동으로 무한히 미분가능하다는 실해석에는 유례가 없는 결론이 따라 나온다. 여기에서 도함수의 크기를 경계값으로 어림하는 Cauchy 부등식이 나오고, 그로부터 유계 entire function이 상수임을 말하는 Liouville 정리와 대수학의 기본정리가, 그리고 적분공식의 역방향으로 Cauchy 정리의 역인 Morera 정리가 차례로 갈라져 나온다.
+[§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="453cb" }은 단순연결 영역에서 holomorphic function의 closed path integral이 소멸함을 알려 주었다. 이 소멸 현상의 진짜 위력은, 피적분함수에 $1/(w-z)$라는 인위적인 극점을 하나 끼워 넣었을 때 비로소 드러난다. Holomorphic function $f$를 원판의 boundary에서 적분하되 kernel $1/(w-z)$로 무게를 주면, 그 적분이 interior의 한 점 $z$에서의 함숫값 $f(z)$를 정확히 되돌려 준다. 이것이 Cauchy 적분공식으로, holomorphic function이 boundary 위의 값만으로 interior 전체에서 완전히 결정된다는 놀라운 강성을 표현한다. 더 나아가 이 공식의 적분기호 안에서 $z$에 대해 미분을 자유로이 반복할 수 있어, 한 번 복소미분가능한 함수가 자동으로 무한히 미분가능하다는 실해석에는 유례가 없는 결론이 따라 나온다. 여기에서 도함수의 크기를 경계값으로 어림하는 Cauchy 부등식이 나오고, 그로부터 유계 entire function이 상수임을 말하는 Liouville 정리와 대수학의 기본정리가, 그리고 적분공식의 역방향으로 Cauchy 정리의 역인 Morera 정리가 차례로 갈라져 나온다.
 
 ## Cauchy 적분공식
 
@@ -139,7 +139,7 @@ $f$가 entire function이고 평면 전체에서 유계이면, 곧 어떤 상수
 :::
 
 ::: 증명
-$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="1dody" }) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 [정리 4](#thm4){: data-lid="lt6cz" }를 $n = 1$에 적용하면
+$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="1dody" }) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic domain에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 [정리 4](#thm4){: data-lid="lt6cz" }를 $n = 1$에 적용하면
 
 $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!M}{r} = \frac{M}{r}$$
 

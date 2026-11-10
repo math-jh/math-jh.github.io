@@ -73,7 +73,7 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13){: data-lid="649h0" }) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
 :::
 
-앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="ys0cs" }에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3){: data-lid="jhwvn" }을 살펴보자. 
+앞서 우리는 [§순수비분리확대체, ⁋예시 9](/ko/math/field_theory/purely_inseparable_extensions#ex9){: data-lid="ys0cs" }에서 갈루아 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3){: data-lid="jhwvn" }을 살펴보자. 
 
 ::: 예시 4
 좋은 경우는, [§순수비분리확대체](/ko/math/field_theory/purely_inseparable_extensions){: data-lid="ek8pv" }의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10){: data-lid="vk5z0" }의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $\dd{\x}$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14){: data-lid="oenpk" }로부터 다음의 exact sequence

@@ -196,7 +196,7 @@ $$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\rightarrow}\pi_n(E,e_0)\overset
 ## 예시
 
 ::: 예시 11 (경로-고리 fibration)
-Base point $b_0$을 가진 path-connected 공간 $B$에 대하여, $b_0$에서 출발하는 path들의 공간
+Base point $b_0$을 가진 path-connected space $B$에 대하여, $b_0$에서 출발하는 path들의 공간
 
 $$PB=\{\gamma:I\rightarrow B\mid \gamma(0)=b_0\}$$
 
@@ -267,7 +267,7 @@ $$\pi_3(S^1)\rightarrow\pi_3(S^3)\overset{p_\ast}{\rightarrow}\pi_3(S^2)\overset
 
 $$\pi_3(S^2)\cong\pi_3(S^3)$$
 
-이다. 이제 오른쪽 항을 계산하자. [명제 13](#prop13){: data-lid="yr9vy" }에 의하여 $\pi_1(S^3)=\pi_2(S^3)=0$이므로, [정리 2](#thm2){: data-lid="bmgik" }에 의하여 Hurewicz 준동형
+이다. 이제 오른쪽 항을 계산하자. [명제 13](#prop13){: data-lid="yr9vy" }에 의하여 $\pi_1(S^3)=\pi_2(S^3)=0$이므로, [정리 2](#thm2){: data-lid="bmgik" }에 의하여 Hurewicz homomorphism
 
 $$h_3:\pi_3(S^3)\rightarrow H_3(S^3)$$
 

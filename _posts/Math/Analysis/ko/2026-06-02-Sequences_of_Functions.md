@@ -113,12 +113,12 @@ $$\lim_{m\to\infty}\Bigl(\lim_{n\to\infty} a_{m,n}\Bigr) = 0 \neq 1 = \lim_{n\to
 
 반복극한을 거듭하면 연속함수에서 출발해도 연속성·적분가능성을 완전히 잃은 함수까지 닿을 수 있다.
 
-::: 예시 6 (Dirichlet 함수)
+::: 예시 6 (Dirichlet function)
 $\mathbb{R}$에서 $g_{m}(x) = \lim_{n\to\infty}\cos^{2n}(m!\pi x)$를 정의하고 $d(x) = \lim_{m\to\infty} g_m(x)$를 생각하자. $m!x$가 정수이면 $\cos(m!\pi x) = \pm 1$이므로 $\cos^{2n}(m!\pi x) = 1$이다. 정수가 아니면 $\lvert\cos(m!\pi x)\rvert < 1$이므로 $\cos^{2n}(m!\pi x)$는 공비의 절댓값이 $1$보다 작은 등비수열이어서 $0$으로 간다. 그러므로
 
 $$g_m(x) = \begin{cases} 1, & m!x \in \mathbb{Z},\\ 0, & m!x \notin \mathbb{Z} \end{cases}$$
 
-이다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m!x$가 정수이므로 $g_m(x) = 1$이고, 따라서 $d(x) = 1$이다. $x$가 무리수이면 어떤 $m$에 대해서도 $m!x$가 정수가 아니므로 $g_m(x) = 0$이고 $d(x) = 0$이다. 결국 $d$는 유리수에서 $1$, 무리수에서 $0$인 Dirichlet 함수이며([§Riemann 적분, ⁋예시 9](/ko/math/analysis/riemann_integral#ex9){: data-lid="l72n4" }), 이는 모든 점에서 불연속이고 어떤 구간에서도 Riemann 적분가능하지 않다.
+이다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m!x$가 정수이므로 $g_m(x) = 1$이고, 따라서 $d(x) = 1$이다. $x$가 무리수이면 어떤 $m$에 대해서도 $m!x$가 정수가 아니므로 $g_m(x) = 0$이고 $d(x) = 0$이다. 결국 $d$는 유리수에서 $1$, 무리수에서 $0$인 Dirichlet function이며([§Riemann 적분, ⁋예시 9](/ko/math/analysis/riemann_integral#ex9){: data-lid="l72n4" }), 이는 모든 점에서 불연속이고 어떤 구간에서도 Riemann integrable하지 않다.
 :::
 
 연속함수 $\cos^{2n}(m!\pi x)$의 열을 한 번 극한 취한 $g_m$은 값이 $1$인 점이 $\frac{1}{m!}\mathbb{Z}$뿐이고 나머지에서는 $0$인, 비교적 순한 함수이지만, 이를 한 번 더 극한 취하면 이처럼 병적인 함수가 된다. 점별극한을 취할 때마다 정규성이 한 단계씩 깨질 수 있다.

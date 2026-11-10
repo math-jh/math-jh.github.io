@@ -14,7 +14,7 @@ weight: 8
 published: false
 ---
 
-Holomorphic function이 각 점 근방에서 자신의 Taylor 급수와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3){: data-lid="od9xu" }) 그 국소적 성질에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점이 놓이는 방식이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor 급수의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="wfi8p" }) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
+Holomorphic function이 각 점 근방에서 자신의 Taylor series와 일치한다는 사실은 ([§멱급수와 해석성, ⁋정리 3](/ko/math/complex_analysis/power_series_and_analyticity#thm3){: data-lid="od9xu" }) 그 국소적 성질에 강한 제약을 건다. 가장 먼저 드러나는 것이 영점이 놓이는 방식이다. 항등적으로 $0$이 아닌 holomorphic function의 영점에서는 Taylor series의 상수항이 사라지되 어느 finite degree의 계수는 살아남아야 하고, 이로부터 영점이 $(z - z_0)^m$이라는 정확한 인수를 내놓으며 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="wfi8p" }) 서로 떨어져 고립된다는 결론이 나온다. 영점이 고립된다는 이 국소적 사실을 연결성과 결합하면, 두 holomorphic function이 집적점을 갖는 작은 집합에서만 일치해도 영역 전체에서 일치한다는 일치정리에 이른다. Holomorphic function은 이렇듯 극히 적은 자료로 완전히 결정되는 강직한 대상이며, 이 강직성은 최대절댓값 원리와 단위원판의 자기사상을 통제하는 Schwarz 보조정리로 이어진다. 이 글에서 다루는 결과들은 모두 멱급수 전개라는 하나의 원천에서 흘러나온다.
 
 ## 영점의 고립성
 
@@ -40,7 +40,7 @@ $f$가 점 $z_0$의 한 근방에서 holomorphic이고 $f(z_0) = 0$이라 하자
 ::: 증명
 $z_0$의 한 원판 $D(z_0, R)$에서 $f$가 holomorphic이므로 [§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="1axcj" }에 의해 그 원판에서 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$, $a_n = f^{(n)}(z_0)/n!$이다.
 
-만일 모든 $n$에 대해 $a_n = 0$이면 Taylor 급수가 항등적으로 $0$이므로 $f$가 $D(z_0, R)$에서 항등적으로 $0$이 되어 경우 (1)이 성립한다.
+만일 모든 $n$에 대해 $a_n = 0$이면 Taylor series가 항등적으로 $0$이므로 $f$가 $D(z_0, R)$에서 항등적으로 $0$이 되어 경우 (1)이 성립한다.
 
 그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5){: data-lid="p5txa" }), [§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6){: data-lid="3ekwf" }에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
 
@@ -58,7 +58,7 @@ $$f(z) = (z - z_0)^m\,g(z)$$
 Holomorphic function이 적은 자료로 결정된다는 강직성이 가장 선명하게 드러나는 곳이 일치정리이다. 두 holomorphic function이 어떤 집적점을 갖는 집합에서 일치하면, 그 차가 집적점을 갖는 영점집합을 가지므로 [명제 2](#prop2){: data-lid="5rboi" }에 의해 국소적으로 소멸하고, 이 국소적 소멸이 연결성을 따라 영역 전체로 퍼져 두 함수가 어디서나 일치하게 된다. 우선 차함수의 소멸로 문제를 환원하는 형태로 적은 뒤, 두 함수의 일치라는 일상적 형태로 옮긴다.
 
 ::: 정리 3 (일치정리)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f, g$가 $\Omega$에서 holomorphic이라 하자. 만일 두 함수가 일치하는 집합
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 $f, g$가 $\Omega$에서 holomorphic이라 하자. 만일 두 함수가 일치하는 집합
 
 $$S = \{z \in \Omega \mid f(z) = g(z)\}$$
 
@@ -79,9 +79,9 @@ $A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closu
 연결성에 의해 $A = \Omega$이므로 $h$가 $\Omega$ 전체에서 항등적으로 $0$이고, 곧 $\Omega$에서 $f = g$이다.
 :::
 
-일치정리는 holomorphic function이 그래프의 한 조각으로 전체가 정해지는 대상임을 말한다. Connected 영역 위의 holomorphic function은 집적점을 갖는 임의의 집합, 가령 한 점에 모여드는 수열이나 아무리 짧은 곡선 조각 위에서의 값만으로 영역 전체에서 유일하게 결정된다. 실변수의 smooth 함수와의 차이는 여기서 극명하다. 실축의 한 구간에서 $0$이면서 다른 구간에서는 $0$이 아닌 smooth 함수는 얼마든지 있지만, 그러한 함수는 결코 holomorphic일 수 없다.
+일치정리는 holomorphic function이 그래프의 한 조각으로 전체가 정해지는 대상임을 말한다. Connected domain 위의 holomorphic function은 집적점을 갖는 임의의 집합, 가령 한 점에 모여드는 수열이나 아무리 짧은 곡선 조각 위에서의 값만으로 영역 전체에서 유일하게 결정된다. 실변수의 smooth 함수와의 차이는 여기서 극명하다. 실축의 한 구간에서 $0$이면서 다른 구간에서는 $0$이 아닌 smooth 함수는 얼마든지 있지만, 그러한 함수는 결코 holomorphic일 수 없다.
 
-집적점이 $\Omega$ *안*에 있어야 한다는 조건은 본질적이다. 가령 $\sin(\pi/z)$는 $\Omega = \mathbb{C} \setminus \{0\}$에서 holomorphic이고 그 영점 $1/k$ ($k \in \mathbb{Z} \setminus \{0\}$) 이 $0$으로 집적하지만, 집적점 $0$은 $\Omega$에 속하지 않으므로 함수가 항등적으로 $0$일 필요가 없다. 일치정리의 가장 흔한 쓰임 가운데 하나는 실축에서 알려진 항등식을 복소영역으로 끌어올리는 것이다. 두 holomorphic function이 실축의 한 구간에서 일치하면, 그 구간이 집적점을 가지므로 두 함수가 공통 holomorphic 영역 전체에서 일치한다. 실변수의 항등식 $\sin^2 x + \cos^2 x = 1$이나 $e^{x+y} = e^x e^y$이 곧장 복소변수로 넘어가는 것이 이 원리의 사례이다.
+집적점이 $\Omega$ *안*에 있어야 한다는 조건은 본질적이다. 가령 $\sin(\pi/z)$는 $\Omega = \mathbb{C} \setminus \{0\}$에서 holomorphic이고 그 영점 $1/k$ ($k \in \mathbb{Z} \setminus \{0\}$) 이 $0$으로 집적하지만, 집적점 $0$은 $\Omega$에 속하지 않으므로 함수가 항등적으로 $0$일 필요가 없다. 일치정리의 가장 흔한 쓰임 가운데 하나는 실축에서 알려진 항등식을 복소영역으로 끌어올리는 것이다. 두 holomorphic function이 실축의 한 구간에서 일치하면, 그 구간이 집적점을 가지므로 두 함수가 공통 holomorphic domain 전체에서 일치한다. 실변수의 항등식 $\sin^2 x + \cos^2 x = 1$이나 $e^{x+y} = e^x e^y$이 곧장 복소변수로 넘어가는 것이 이 원리의 사례이다.
 
 ::: 예시 4 (항등식의 해석적 접속)
 함수방정식 $e^{z+w} = e^z e^w$을 모든 $z, w \in \mathbb{C}$에 대해 일치정리로 확립한다. $w$를 임의의 고정된 복소수로 두고 두 함수
@@ -96,7 +96,7 @@ $$F(z) = e^{z+w}, \qquad G(z) = e^z e^w$$
 Holomorphic function의 강직성은 그 절댓값에도 나타난다. 비상수 holomorphic function의 절댓값은 영역 interior의 어느 점에서도 국소적 최댓값에 이를 수 없으며, 따라서 bounded domain에서 절댓값의 최댓값은 항상 boundary에서 달성된다. 이 최대절댓값 원리는 평균값 성질에서 곧장 따라 나온다. Holomorphic function의 한 점에서의 값은 그 점을 center로 하는 임의의 원 위에서의 평균이므로 ([§Cauchy 적분공식, ⁋따름정리 7](/ko/math/complex_analysis/cauchy_integral_formula#cor7){: data-lid="2i5yz" }), center에서의 절댓값이 원 위 모든 값보다 작지 않다면 원 위에서 절댓값이 줄곧 같은 값을 유지할 수밖에 없기 때문이다.
 
 ::: 정리 5 (최대절댓값 원리)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$가 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면, 곧 $z_0$의 어떤 근방 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이면, $f$는 $\Omega$에서 상수이다.
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 $f$가 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$가 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면, 곧 $z_0$의 어떤 근방 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$이면, $f$는 $\Omega$에서 상수이다.
 :::
 
 ::: 증명
@@ -120,13 +120,13 @@ $$u\,u_x - v\,u_y = 0, \qquad u\,u_y + v\,u_x = 0$$
 
 이 된다. 이를 $(u_x, u_y)$에 대한 선형방정식으로 보면 계수행렬식이 $u^2 + v^2 = c^2 > 0$이므로 유일해는 $u_x = u_y = 0$이고, 다시 Cauchy–Riemann에서 $v_x = v_y = 0$이다. 따라서 $f' = u_x + i v_x = 0$이 $D(z_0, \delta)$에서 성립하여 $f$가 그 원판에서 상수이다.
 
-어느 경우든 $f$는 $z_0$의 한 근방에서 상수이다. 그렇다면 $f$와 상수함수 $f(z_0)$이 집적점을 갖는 집합(그 근방 전체)에서 일치하므로, connected 영역 $\Omega$에서 [정리 3](#thm3){: data-lid="6yl4p" }에 의해 $f$는 $\Omega$ 전체에서 상수 $f(z_0)$이다.
+어느 경우든 $f$는 $z_0$의 한 근방에서 상수이다. 그렇다면 $f$와 상수함수 $f(z_0)$이 집적점을 갖는 집합(그 근방 전체)에서 일치하므로, connected domain $\Omega$에서 [정리 3](#thm3){: data-lid="6yl4p" }에 의해 $f$는 $\Omega$ 전체에서 상수 $f(z_0)$이다.
 :::
 
 최대절댓값 원리는 holomorphic function의 절댓값이 평탄한 봉우리를 가질 수 없음을 말한다. 절댓값이 interior의 한 점에서 주변보다 크거나 같아지는 순간 함수는 상수로 무너지므로, 비상수 holomorphic function의 절댓값에는 interior의 국소적 최댓값이 아예 존재하지 않는다. 이 원리를 bounded domain에 적용하면 최댓값의 위치가 boundary로 밀려난다는 다음 형태가 나온다.
 
 ::: 따름정리 6 (경계에서의 최댓값)
-$\Omega \subseteq \mathbb{C}$가 bounded connected 열린집합이고 $f$가 $\Omega$에서 holomorphic이며 closure $\overline{\Omega}$에서 연속이라 하자. 그러면 $\lvert f\rvert$는 boundary $\partial\Omega$ 위에서 최댓값에 이른다. 곧
+$\Omega \subseteq \mathbb{C}$가 bounded connected open set이고 $f$가 $\Omega$에서 holomorphic이며 closure $\overline{\Omega}$에서 연속이라 하자. 그러면 $\lvert f\rvert$는 boundary $\partial\Omega$ 위에서 최댓값에 이른다. 곧
 
 $$\max_{z \in \overline{\Omega}}\lvert f(z)\rvert = \max_{z \in \partial\Omega}\lvert f(z)\rvert$$
 
@@ -136,7 +136,7 @@ $$\max_{z \in \overline{\Omega}}\lvert f(z)\rvert = \max_{z \in \partial\Omega}\
 ::: 증명
 $\overline{\Omega}$이 bounded이고 닫혀 있으므로 콤팩트이고, $\lvert f\rvert$가 그 위에서 연속이므로 어떤 점 $z_\ast \in \overline{\Omega}$에서 최댓값 $M = \lvert f(z_\ast)\rvert$에 이른다. 만일 $z_\ast \in \partial\Omega$이면 최댓값이 boundary에서 달성되어 증명이 끝난다.
 
-그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 interior point $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, [정리 5](#thm5){: data-lid="a07ca" }에 의해 $f$는 connected 집합 $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
+그렇지 않고 $z_\ast \in \Omega$이라 하자. 그러면 $\lvert f\rvert$가 $\overline{\Omega}$ 전체의 최댓값을 interior point $z_\ast$에서 가지므로 특히 $z_\ast$에서 국소적 최댓값에 이르고, [정리 5](#thm5){: data-lid="a07ca" }에 의해 $f$는 connected set $\Omega$에서 상수이다. $f$가 $\overline{\Omega}$에서 연속이므로 $\overline{\Omega}$ 전체에서도 같은 상수이고, 따라서 $\lvert f\rvert$가 $\partial\Omega$ 위에서도 같은 값 $M$을 가진다 (bounded domain의 boundary는 공집합이 아니다). 어느 경우든 최댓값은 boundary에서 달성된다.
 :::
 
 [따름정리 6](#cor6){: data-lid="fjwma" }은 holomorphic function의 절댓값을 추정하는 데 자주 쓰인다. 영역 안에서 $\lvert f\rvert$의 크기를 가늠하려면 boundary에서의 크기만 통제하면 충분하다. 가령 한 영역에서 holomorphic이고 boundary에서 절댓값이 $1$을 넘지 않는 함수는 영역 interior에서도 절댓값이 $1$을 넘지 않는다. 이 관찰이 다음 절의 Schwarz 보조정리에서 결정적으로 쓰인다.
@@ -165,7 +165,7 @@ $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 
 이다. 곧 모든 $z \in \mathbb{D}$에서 $\lvert f(z)\rvert = \lvert z\rvert\,\lvert g(z)\rvert \leq \lvert z\rvert$이고, $z = 0$에서 $\lvert f'(0)\rvert = \lvert g(0)\rvert \leq 1$이다. 이로써 (1)이 증명된다.
 
-(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. [정리 5](#thm5){: data-lid="uqjnf" }에 의해 $g$는 connected 영역 $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
+(2)를 위해 등호의 경우를 본다. 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이면 $\lvert g(z_0)\rvert = 1$이고, $\lvert f'(0)\rvert = 1$이면 $\lvert g(0)\rvert = 1$이다. 어느 경우든 $\mathbb{D}$ 안의 한 점에서 $\lvert g\rvert$가 그 상한 $1$에 이르므로, $\lvert g\rvert$가 interior point에서 최댓값 $1$을 가진다. [정리 5](#thm5){: data-lid="uqjnf" }에 의해 $g$는 connected domain $\mathbb{D}$에서 상수이고, 그 절댓값이 $1$이므로 $g(z) \equiv \lambda$ ($\lvert\lambda\rvert = 1$) 이다. 따라서 $f(z) = \lambda z$이다.
 :::
 
 Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에서 더 멀어지지 않음을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 회전이 아닌 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic morphism에 의해 늘어나지 않는다는 사실로 이어진다.

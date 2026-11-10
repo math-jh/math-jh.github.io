@@ -112,7 +112,7 @@ $$\nabla_{\dot{\gamma}} \dot{\gamma} = D_t \dot{\gamma} = 0$$
 을 모든 $t \in I$에서 만족할 때 $\gamma$를 *geodesic<sub>측지선</sub>*이라 부르고, 위의 식을 *측지선 방정식<sub>geodesic equation</sub>*이라 부른다.
 :::
 
-측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-lid="r97vd" }의 언어로 다시 읽으면, 속도장 $\dot{\gamma}$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot{\gamma}}\dot{\gamma}$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9){: data-lid="fzqrw" }의 증명에서와 같이 Christoffel 기호로 풀어 측지선 방정식은 다음의 식
+측지선 방정식은 [§레비-치비타 접속, ⁋정의 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8){: data-lid="r97vd" }의 언어로 다시 읽으면, 속도장 $\dot{\gamma}$가 곡선 $\gamma$ 자신을 따라 parallel vector field인 것과 같다. 즉 측지선이란 *자신의 속도를 parallel transport하며 나아가는* 곡선이다. Local coordinate $(x^i)$에서 $\gamma(t) = (\gamma^1(t), \ldots, \gamma^n(t))$로 쓰면, $\nabla_{\dot{\gamma}}\dot{\gamma}$를 [§레비-치비타 접속, ⁋명제 9](/ko/math/riemannian_geometry/Levi-Civita_connection#prop9){: data-lid="fzqrw" }의 증명에서와 같이 Christoffel symbols로 풀어 측지선 방정식은 다음의 식
 
 $$\ddot{\gamma}^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t)) \dot{\gamma}^i(t) \dot{\gamma}^j(t) = 0, \qquad k = 1, \ldots, n$$
 
@@ -181,7 +181,7 @@ $$\dot{\gamma}^k = w^k, \qquad \dot{w}^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gam
 가장 기본적인 두 예시를 살펴본다.
 
 ::: 예시 8
-유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주자. [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7){: data-lid="qqbx4" }에서 보았듯 모든 Christoffel 기호가 $0$이므로, 측지선 방정식은
+유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주자. [§레비-치비타 접속, ⁋예시 7](/ko/math/riemannian_geometry/Levi-Civita_connection#ex7){: data-lid="qqbx4" }에서 보았듯 모든 Christoffel symbols가 $0$이므로, 측지선 방정식은
 
 $$\ddot{\gamma}^k(t) = 0, \qquad k = 1, \ldots, n$$
 

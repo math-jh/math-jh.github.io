@@ -1,7 +1,7 @@
 ---
 title: "거의 복소구조"
-description: "실벡터다발의 자기준동형 J로서 J²=-id를 만족하는 거의 복소구조를 정의하고, 복소다양체의 표준 J가 그 예임을 보인다. J의 ±i 고유공간 분해로 복소화 접다발을 (1,0)·(0,1) 부분으로 나누고 (p,q)-형식의 분해를 얻는다. Nijenhuis 텐서로 적분가능성을 특징짓고, 그 소멸이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리를 서술한다."
-excerpt: "거의 복소구조, J²=-id, 거의 복소다양체, 복소화 접다발, T^{1,0}, (p,q)-형식, 적분가능성, Nijenhuis 텐서, involutive distribution, Newlander–Nirenberg 정리, S^6, S^4"
+description: "실벡터다발의 자기준동형 J로서 J²=-id를 만족하는 거의 복소구조를 정의하고, 복소다양체의 표준 J가 그 예임을 보인다. J의 ±i 고유공간 분해로 복소화 접다발을 (1,0)·(0,1) 부분으로 나누고 (p,q)-형식의 분해를 얻는다. Nijenhuis tensor로 적분가능성을 특징짓고, 그 소멸이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리를 서술한다."
+excerpt: "거의 복소구조, J²=-id, 거의 복소다양체, 복소화 접다발, T^{1,0}, (p,q)-형식, 적분가능성, Nijenhuis tensor, involutive distribution, Newlander–Nirenberg 정리, S^6, S^4"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/almost_complex_structures
@@ -16,7 +16,7 @@ published: false
 
 Complex manifold는 holomorphic transition function을 갖는 좌표계로 정의되었고, 그 강성의 거의 모든 출처가 이 holomorphicity였다 ([§복소다양체, ⁋정의 3](/ko/math/complex_geometry/complex_manifolds#def3){: data-lid="7q3dt" }). 그러나 복소구조가 tangent space 수준에서 무엇을 하는지는 좌표계의 언어만으로는 잘 보이지 않는다. 각 점에서 holomorphic coordinate $z_j = x_j + i y_j$의 곱셈 $i$는 실 tangent space $T_p M$ 위의 한 선형사상, 곧 $\partial/\partial x_j$를 $\partial/\partial y_j$로, $\partial/\partial y_j$를 $-\partial/\partial x_j$로 보내는 morphism으로 나타난다. 이 morphism을 $J_p$라 하면 $J_p^2 = -\id$이고, 점이 변할 때 $J_p$는 매끄럽게 변한다. 이렇게 추출된 자료 $J$가 거의 복소구조이다.
 
-이 글의 목표는 거의 복소구조를 복소구조와 독립적으로 정의하고, 복소구조에서 오는 $J$가 이를 만족함을 보인 뒤, 거꾸로 어떤 $J$가 복소구조에서 오는가 하는 *적분가능성* 물음에 답하는 것이다. 답의 핵심은 Nijenhuis 텐서의 소멸이며, 이것이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리가 이 글의 정점이다. 거의 복소구조는 복소구조보다 약하므로 위상적 제약만으로 존재 여부가 갈리는 일도 있으며, 짝수차원이라도 거의 복소구조를 전혀 갖지 못하는 manifold가 있다는 사실도 함께 다룬다.
+이 글의 목표는 거의 복소구조를 복소구조와 독립적으로 정의하고, 복소구조에서 오는 $J$가 이를 만족함을 보인 뒤, 거꾸로 어떤 $J$가 복소구조에서 오는가 하는 *적분가능성* 물음에 답하는 것이다. 답의 핵심은 Nijenhuis tensor의 소멸이며, 이것이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리가 이 글의 정점이다. 거의 복소구조는 복소구조보다 약하므로 위상적 제약만으로 존재 여부가 갈리는 일도 있으며, 짝수차원이라도 거의 복소구조를 전혀 갖지 못하는 manifold가 있다는 사실도 함께 다룬다.
 
 ## 거의 복소구조
 
@@ -131,7 +131,7 @@ $$
 
 ## (p,q)-형식
 
-Cotangent space의 분해를 exterior algebra로 끌어올리면 복소화 differential form이 차수별로 정밀하게 갈라진다. 이 (p,q)-분해는 적분가능성을 differential form의 언어로 옮기는 데 쓰이며, 더 나아가 Dolbeault 이론 전체의 무대가 된다.
+Cotangent space의 분해를 exterior algebra로 끌어올리면 복소화 differential form이 차수별로 정밀하게 갈라진다. 이 (p,q)-분해는 적분가능성을 differential form의 언어로 옮기는 데 쓰이며, 더 나아가 Dolbeault theory 전체의 무대가 된다.
 
 ::: 정의 6
 거의 complex manifold $(M, J)$ 위의 복소화 differential form의 다발을 $\Lambda^k_{\mathbb{C}} = \bigwedge^k (T^\ast M) \otimes_{\mathbb{R}} \mathbb{C}$라 하자. 음이 아닌 정수 $p, q$에 대하여 *(p,q)-form<sub>(p,q)-형식</sub>*의 다발 $\Lambda^{p,q}$을 각 점 $x$에서
@@ -140,7 +140,7 @@ $$
 \Lambda^{p,q}_x = \left( \bigwedge\nolimits^p \Lambda^{1,0}_x \right) \wedge \left( \bigwedge\nolimits^q \Lambda^{0,1}_x \right)
 $$
 
-으로 정의한다. $\Lambda^{p,q}$의 smooth 단면 전체를 $\Omega^{p,q}(M)$으로 적는다.
+으로 정의한다. $\Lambda^{p,q}$의 smooth section 전체를 $\Omega^{p,q}(M)$으로 적는다.
 :::
 
 말하자면 $(p,q)$-형식은 (1,0)-covector $p$개와 (0,1)-covector $q$개를 wedge한 것들의 $\mathbb{C}$-선형결합이다. 표준 거의 복소구조에서는 국소적으로
@@ -183,7 +183,7 @@ Complex manifold의 표준 거의 복소구조 $J$에 대해서는 $T^{1,0} M$�
 거의 complex manifold $(M, J)$의 거의 복소구조 $J$가 *integrable<sub>적분가능</sub>*하다는 것은, $M$ 위에 complex manifold 구조가 존재하여 그 표준 거의 복소구조 ([명제 3](#prop3){: data-lid="jaq2k" }) 가 $J$와 일치하는 것이다.
 :::
 
-적분가능성은 정의상 복소구조의 존재라는 대역적 조건이지만, 놀랍게도 순전히 국소적인 미분 조건으로 판정된다. 그 판정량이 Nijenhuis 텐서이다. (1,0)-벡터장들의 Lie bracket이 다시 (1,0)이 되는가, 곧 분포 $T^{1,0} M$이 *involutive<sub>대합적</sub>* 한가를 재기 위해, 켤레로 닫힌 실 형식의 양으로 옮긴 것이 Nijenhuis 텐서이다.
+적분가능성은 정의상 복소구조의 존재라는 대역적 조건이지만, 놀랍게도 순전히 국소적인 미분 조건으로 판정된다. 그 판정량이 Nijenhuis tensor이다. (1,0)-벡터장들의 Lie bracket이 다시 (1,0)이 되는가, 곧 분포 $T^{1,0} M$이 *involutive<sub>대합적</sub>* 한가를 재기 위해, 켤레로 닫힌 실 형식의 양으로 옮긴 것이 Nijenhuis tensor이다.
 
 ::: 정의 9
 거의 complex manifold $(M, J)$의 *Nijenhuis tensor<sub>네이엔하위스 텐서</sub>* $N_J$는 두 벡터장 $X, Y \in \mathfrak{X}(M)$에 대하여
@@ -198,7 +198,7 @@ $$
 표현식에 Lie bracket이 들어 있어 처음에는 미분연산자처럼 보이지만, 실제로는 함수에 대해 $C^\infty(M)$-쌍선형이어서 각 점에서의 값이 그 점에서의 $X_p, Y_p$에만 의존한다. 곧 $N_J$는 진짜 텐서이다.
 
 ::: 명제 10
-Nijenhuis 텐서 $N_J$는 두 변수 모두에서 $C^\infty(M)$-선형이고 반대칭이다. 따라서 각 점 $p$에서 $N_J(X, Y)\vert_p$는 $X_p, Y_p$에만 의존하는 $(1,2)$-텐서를 정의한다.
+Nijenhuis tensor $N_J$는 두 변수 모두에서 $C^\infty(M)$-선형이고 반대칭이다. 따라서 각 점 $p$에서 $N_J(X, Y)\vert_p$는 $X_p, Y_p$에만 의존하는 $(1,2)$-텐서를 정의한다.
 :::
 
 ::: 증명
@@ -222,7 +222,7 @@ $$
 으로 상쇄된다. 따라서 $N_J(fX, Y) = f\, N_J(X, Y)$이다. 덧셈 보존은 Lie bracket의 가법성에서 명백하므로 $N_J$는 $C^\infty(M)$-선형이고, 점별로 결정되는 텐서이다.
 :::
 
-이제 핵심 동치를 세운다. Nijenhuis 텐서의 소멸은 (1,0)-분포의 대합성과 같은 내용이며, 이는 다시 exterior derivative가 (p,q)-분해를 한 칸 어긋남까지만 흩뜨린다는 형식 조건과 같다.
+이제 핵심 동치를 세운다. Nijenhuis tensor의 소멸은 (1,0)-분포의 대합성과 같은 내용이며, 이는 다시 exterior derivative가 (p,q)-분해를 한 칸 어긋남까지만 흩뜨린다는 형식 조건과 같다.
 
 ::: 명제 11
 거의 complex manifold $(M, J)$에 대하여 다음 세 조건은 서로 동치이다.
@@ -277,7 +277,7 @@ $\dd{\alpha}$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha
 
 충분성이 정리의 본체이며 증명은 길고 해석적이므로 핵심 구조만 적는다. $N_J = 0$이라 가정하면 [명제 11](#prop11){: data-lid="unsxd" }에 의해 복소 분포 $T^{1,0} M$이 involutive하다. 보이고자 하는 바는 각 점 둘레에 국소 복소좌표 $z_1, \ldots, z_n$이 존재하여 $\dd{z_j}$들이 $\Lambda^{1,0}$을 점별 생성하는 것, 동치로 holomorphic function처럼 행동하는 좌표 $z_j$ (곧 $\bar{Z} z_j = 0$이 모든 (0,1)-벡터장 $\bar{Z}$에 대해 성립) 가 충분히 많이 존재하는 것이다.
 
-실해석적($C^\omega$) 경우에는 이것이 복소화 Frobenius 정리로 곧장 따라온다. 계수를 복소수로 확장한 holomorphic 영역에서 involutive 복소 분포는 integral manifold를 가지며, 이 integral manifold들의 횡단 좌표가 바라던 $z_j$를 준다. 이 논법은 Cauchy–Kovalevskaya 정리에 기대므로 해석성을 본질적으로 쓴다.
+실해석적($C^\omega$) 경우에는 이것이 복소화 Frobenius 정리로 곧장 따라온다. 계수를 복소수로 확장한 holomorphic domain에서 involutive 복소 분포는 integral manifold를 가지며, 이 integral manifold들의 횡단 좌표가 바라던 $z_j$를 준다. 이 논법은 Cauchy–Kovalevskaya 정리에 기대므로 해석성을 본질적으로 쓴다.
 
 Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar{\partial}$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar{\partial} z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $\dd{z_j}$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
 
@@ -301,7 +301,7 @@ $$
 으로 상수계수 거의 복소구조 $J_0$를 정의하면, 이는 동일시 $z_j = x_j + i y_j$로 $\mathbb{R}^{2n} = \mathbb{C}^n$에 준 복소구조의 표준 $J$이다. $N_{J_0}$가 점별로 결정된다는 [명제 10](#prop10){: data-lid="n56bp" }에 의해 좌표 벡터장에서의 값만 확인하면 되는데, $J_0$가 좌표 벡터장을 좌표 벡터장으로 보내고 좌표 벡터장들끼리의 Lie bracket은 모두 $0$이므로 $N_{J_0} = 0$이고, 따라서 적분가능하다. 이는 $\mathbb{C}^n$이 complex manifold라는 사실의 거의 복소구조 버전이다.
 :::
 
-콤팩트한 예로 가장 기본적인 것은 리만 구면이다.
+콤팩트한 예로 가장 기본적인 것은 Riemann sphere이다.
 
 ::: 예시 14 ($S^2 \cong \mathbb{CP}^1$)
 $2$차원 구면 $S^2$는 complex manifold $\mathbb{CP}^1$의 바탕 smooth manifold이며 ([§복소다양체, ⁋예시 9](/ko/math/complex_geometry/complex_manifolds#ex9){: data-lid="lodue" }), 그 표준 거의 복소구조는 적분가능하다. 더 일반적으로 [정리 12](#thm12){: data-lid="j2t7v" } 직후의 관찰에 따라, $S^2$ 위의 임의의 거의 복소구조는 실차원 $2$이므로 $N_J = 0$을 자동으로 만족하여 적분가능하다. 따라서 $S^2$ 위의 모든 거의 복소구조는 어떤 Riemann surface 구조에서 온다.
@@ -319,7 +319,7 @@ $6$차원 구면 $S^6$는 거의 복소구조를 가진다. 이를 octonion $\ma
 $4$차원 구면 $S^4$는 짝수차원이지만 거의 복소구조를 전혀 갖지 못한다. 거의 복소구조 $J$가 있으면 tangent bundle $TS^4$이 복소 vector bundle 구조를 가져 Chern class가 정의되고, 특히 실 Pontryagin·Euler class가 Chern class로 표현되어야 한다. 그러나 $S^4$의 cohomology ([\[대수적 위상수학\] §코호몰로지](/ko/math/algebraic_topology/cohomology){: data-lid="xg44v" }) 는 degree $0$과 $4$에만 자명하지 않은 부분을 가지므로 중간 degree의 Chern class가 들어설 자리가 없고, Euler 수 $\chi(S^4) = 2$와 서명 $\sigma(S^4) = 0$이 거의 complex manifold가 만족해야 하는 관계식 $c_1^2 = 2\chi + 3\sigma$와 양립하지 못한다. $S^4$에서는 좌변이 $0$이어야 하는데 우변은 $4$이므로 모순이다. 따라서 $S^4$ 위에는 거의 복소구조가 없으며, 거의 복소구조의 존재는 순수한 위상적 장애를 동반한다.
 :::
 
-이 마지막 두 예는 거의 복소구조의 위계를 보여준다. $S^4$는 거의 복소구조조차 갖지 못하고, $S^6$는 거의 복소구조는 갖지만 그 표준적인 것이 적분가능하지 않으며 (복소구조의 존재 여부는 미결), $S^2$는 거의 복소구조가 언제나 적분가능하다. 거의 복소구조에서 복소구조로 가는 다리가 Newlander–Nirenberg 정리이고, 그 다리를 건널 수 있는지를 가르는 척도가 Nijenhuis 텐서이다. 적분가능한 거의 복소구조 위에서 exterior derivative가 (p,q)-분해와 맞물려 $\partial$와 $\bar{\partial}$로 갈라지는 정밀한 구조는 Dolbeault cohomology에서 본격적으로 다룬다.
+이 마지막 두 예는 거의 복소구조의 위계를 보여준다. $S^4$는 거의 복소구조조차 갖지 못하고, $S^6$는 거의 복소구조는 갖지만 그 표준적인 것이 적분가능하지 않으며 (복소구조의 존재 여부는 미결), $S^2$는 거의 복소구조가 언제나 적분가능하다. 거의 복소구조에서 복소구조로 가는 다리가 Newlander–Nirenberg 정리이고, 그 다리를 건널 수 있는지를 가르는 척도가 Nijenhuis tensor이다. 적분가능한 거의 복소구조 위에서 exterior derivative가 (p,q)-분해와 맞물려 $\partial$와 $\bar{\partial}$로 갈라지는 정밀한 구조는 Dolbeault cohomology에서 본격적으로 다룬다.
 
 ---
 

@@ -61,7 +61,7 @@ $$\Psi: M_\mathbb{C} \xrightarrow{\ \sim\ } \Omega^1(T_N)^{T_N}$$
 을 정의한다. 특히 $\Omega^1(T_N)^{T_N}$은 $n$차원이며, $N$의 $\mathbb{Z}$-기저 $e_1, \ldots, e_n$의 dual $e_1^\ast, \ldots, e_n^\ast \in M$에 대해 $\{d\log \x_i\}_{i=1}^n = \{d\log(\rchi^{e_i^\ast})\}_{i=1}^n$이 그 기저를 이룬다.
 :::
 ::: 증명
-$N$의 기저 $e_1, \ldots, e_n$과 dual 기저 $e_1^\ast, \ldots, e_n^\ast \in M$을 고정하면, $\rchi^{e_i^\ast} = \x_i$가 $T_N$의 좌표 함수이다. 위에서 $d\log \x_i$가 $T_N$-invariant임을 보였으므로 $\Psi$의 image는 $\Omega^1(T_N)^{T_N}$에 포함된다.
+$N$의 기저 $e_1, \ldots, e_n$과 dual basis $e_1^\ast, \ldots, e_n^\ast \in M$을 고정하면, $\rchi^{e_i^\ast} = \x_i$가 $T_N$의 좌표 함수이다. 위에서 $d\log \x_i$가 $T_N$-invariant임을 보였으므로 $\Psi$의 image는 $\Omega^1(T_N)^{T_N}$에 포함된다.
 
 역으로 임의의 1-form $\omega \in \Omega^1(T_N)$은 좌표 $\x_1, \ldots, \x_n$에 대해
 
@@ -85,7 +85,7 @@ $T_N = \mathbb{C}^\ast$ ($n=1$)의 경우, $M = \mathbb{Z}$이며 $M$의 generat
 :::
 
 ::: 예시 4
-$T_N = (\mathbb{C}^\ast)^2$의 경우 standard 기저 $\{e_1^\ast, e_2^\ast\} \subseteq M$에 대해 $\rchi^{e_1^\ast} = \x$, $\rchi^{e_2^\ast} = \y$이며
+$T_N = (\mathbb{C}^\ast)^2$의 경우 standard basis $\{e_1^\ast, e_2^\ast\} \subseteq M$에 대해 $\rchi^{e_1^\ast} = \x$, $\rchi^{e_2^\ast} = \y$이며
 
 $$\omega_{T_N} = \frac{\dd{\x}}{\x} \wedge \frac{\dd{\y}}{\y}$$
 
@@ -138,7 +138,7 @@ $$\Omega^1_{X_\Sigma}(\log D) \cong M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma}$
 이 존재한다. 더 구체적으로, character lattice $M$의 원소 $m \in M$을 logarithmic differential $d\log(\rchi^m) = d\rchi^m / \rchi^m$에 대응시키는 map이 위 isomorphism을 정의한다.
 :::
 ::: 증명
-먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9){: data-lid="ez0pl" }에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
+먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9){: data-lid="ez0pl" }에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
 
 $$d\log(\rchi^m) = d\log\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \frac{\dd{\x_i}}{\x_i}$$
 
@@ -168,7 +168,7 @@ $$d\log \x = \frac{\dd{\x}}{\x}$$
 :::
 
 ::: 예시 10
-$X_\Sigma = \mathbb{P}^n$의 경우 fan은 $N = \mathbb{Z}^n$의 standard 기저 $e_1, \ldots, e_n$과 $e_0 = -e_1 - \cdots - e_n$의 $n+1$개 ray로 이루어진다. 각 $e_i$에 대응하는 divisor를 $D_i$라 하면 boundary는 $D = D_0 + D_1 + \cdots + D_n$이고 $[D_0] = [D_1] = \cdots = [D_n] = H$이므로 $D \sim (n+1) H$이다. $M$의 standard 기저 $e_1^\ast, \ldots, e_n^\ast$에 대해 $\rchi^{e_i^\ast} = \x_i$ ($1 \le i \le n$)가 affine 좌표가 되어
+$X_\Sigma = \mathbb{P}^n$의 경우 fan은 $N = \mathbb{Z}^n$의 standard basis $e_1, \ldots, e_n$과 $e_0 = -e_1 - \cdots - e_n$의 $n+1$개 ray로 이루어진다. 각 $e_i$에 대응하는 divisor를 $D_i$라 하면 boundary는 $D = D_0 + D_1 + \cdots + D_n$이고 $[D_0] = [D_1] = \cdots = [D_n] = H$이므로 $D \sim (n+1) H$이다. $M$의 standard basis $e_1^\ast, \ldots, e_n^\ast$에 대해 $\rchi^{e_i^\ast} = \x_i$ ($1 \le i \le n$)가 affine 좌표가 되어
 
 $$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\qquad \text{기저: } \frac{\dd{\x_1}}{\x_1}, \ldots, \frac{\dd{\x_n}}{\x_n}$$
 
@@ -176,7 +176,7 @@ $$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\q
 :::
 
 ::: 예시 11
-$X_\Sigma = \mathbb{P}^1 \times \mathbb{P}^1$의 경우 $N = \mathbb{Z}^2$이고 fan은 네 개의 ray $\pm e_1, \pm e_2$와 네 개의 maximal cone으로 이루어진다. Boundary는 네 boundary divisor의 합이며, $M = \mathbb{Z}^2$의 standard 기저에 대해
+$X_\Sigma = \mathbb{P}^1 \times \mathbb{P}^1$의 경우 $N = \mathbb{Z}^2$이고 fan은 네 개의 ray $\pm e_1, \pm e_2$와 네 개의 maximal cone으로 이루어진다. Boundary는 네 boundary divisor의 합이며, $M = \mathbb{Z}^2$의 standard basis에 대해
 
 $$\Omega^1_{\mathbb{P}^1 \times \mathbb{P}^1}(\log D) \cong \mathcal{O}^{\oplus 2};\qquad \text{기저: } \frac{\dd{\x}}{\x}, \frac{\dd{\y}}{\y}$$
 
@@ -209,7 +209,7 @@ $$\Omega^n_{X_\Sigma}(\log D) \cong \mathcal{O}_{X_\Sigma};\qquad K_{X_\Sigma} =
 ::: 증명
 [명제 8](#prop8){: data-lid="2hrnx" }에서 $\Omega^1_{X_\Sigma}(\log D) \cong M \otimes \mathcal{O}_{X_\Sigma}$이므로 $\Omega^n_{X_\Sigma}(\log D) \cong \bigwedge^n (M \otimes \mathcal{O}) \cong (\bigwedge^n M) \otimes \mathcal{O} \cong \mathcal{O}_{X_\Sigma}$이며 ($M$이 rank $n$의 free abelian group이므로 $\bigwedge^n M \cong \mathbb{Z}$이다), 그 generator는 정확히 $\omega_\Sigma$이다. $M$의 기저를 바꾸면 $\GL_n(\mathbb{Z})$의 변환에 의해 $\omega_\Sigma$가 $\det \in \{\pm 1\}$배만 변하므로 canonical하다.
 
-이제 $K_{X_\Sigma}$를 계산하기 위해, $\omega_\Sigma$를 $\Omega^n_{X_\Sigma}$의 rational section으로 봐서 $\divisor(\omega_\Sigma)$를 계산한다. Smooth ray $\rho \in \Sigma(1)$에 대해 $\rho$를 face로 갖는 maximal cone $\sigma$를 잡고 (smooth가정에 의해 $\sigma$의 ray들이 $N$의 기저 $v_1, \ldots, v_n$의 일부를 이루며 $v_\rho = v_1$이라 할 수 있다), 그 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$를 $M$의 기저 $m_i$로 잡자. 그럼 $U_\sigma$ 위에서 $\rchi^{v_i^\ast} = \x_i$이고 $D_\rho \cap U_\sigma = \{\x_1 = 0\}$이며
+이제 $K_{X_\Sigma}$를 계산하기 위해, $\omega_\Sigma$를 $\Omega^n_{X_\Sigma}$의 rational section으로 봐서 $\divisor(\omega_\Sigma)$를 계산한다. Smooth ray $\rho \in \Sigma(1)$에 대해 $\rho$를 face로 갖는 maximal cone $\sigma$를 잡고 (smooth가정에 의해 $\sigma$의 ray들이 $N$의 기저 $v_1, \ldots, v_n$의 일부를 이루며 $v_\rho = v_1$이라 할 수 있다), 그 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$를 $M$의 기저 $m_i$로 잡자. 그럼 $U_\sigma$ 위에서 $\rchi^{v_i^\ast} = \x_i$이고 $D_\rho \cap U_\sigma = \{\x_1 = 0\}$이며
 
 $$\omega_\Sigma\vert_{U_\sigma} = \frac{\dd{\x_1}}{\x_1} \wedge \frac{\dd{\x_2}}{\x_2} \wedge \cdots \wedge \frac{\dd{\x_n}}{\x_n}$$
 

@@ -281,7 +281,7 @@ $$\theta^kx=\frac{g^{dk}}{f^{ek}}\cdot\frac{b}{f^m}=\frac{bg^{dk}}{f^{ek+m}}=0$$
 
 이 되어 $(A_{(f)})_\theta$에서 $x/\theta^n=0$이다. 즉 $\Phi$는 injective이며, 이상에서 $\Phi$는 isomorphism이다.
 
-마지막으로 이 isomorphism이 [보조정리 8](#lem8){: data-lid="c3pcn" }의 homeomorphism과 정합적임을 확인해두자. $\mathfrak{p}\in D_+(f)$의 image를 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$라 하면, $f\not\in \mathfrak{p}$이므로
+마지막으로 이 isomorphism이 [보조정리 8](#lem8){: data-lid="c3pcn" }의 homeomorphism과 compatible함을 확인해두자. $\mathfrak{p}\in D_+(f)$의 image를 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$라 하면, $f\not\in \mathfrak{p}$이므로
 
 $$\theta=\frac{g^d}{f^e}\in \mathfrak{q}\iff g^d\in \mathfrak{p}\iff g\in \mathfrak{p}$$
 

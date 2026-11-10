@@ -125,7 +125,7 @@ $$\int_{[0,1]}\dd{f}=f(1)-f(0)$$
 :::
 
 ::: 참고 4
-미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1){: data-lid="rz61c" }의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) bounded 영역 $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1){: data-lid="rhctz" }은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1){: data-lid="rz61c" }의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) bounded domain $D$와 $1$-form $\omega=P\dd{x}+Q\dd{y}$에 대하여 $\dd{\omega}=(\partial Q/\partial x-\partial P/\partial y)\dd{x}\wedge \dd{y}$이므로 [정리 1](#thm1){: data-lid="rhctz" }은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
 :::
 
 ---

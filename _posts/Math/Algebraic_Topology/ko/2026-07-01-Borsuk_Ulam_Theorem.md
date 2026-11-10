@@ -68,7 +68,7 @@ $$g(-x)=\frac{f(-x)-f(x)}{\lvert f(-x)-f(x)\rvert}=-g(x)$$
 차원 $1$의 경우는 원의 피복 $\mathbb{R}\rightarrow S^1$과 그 위의 lifting 이론만으로 완결적으로 다룰 수 있다. 이 기초 사례가 이후 일반 차원 귀납의 출발점이 된다.
 
 ::: 보조정리 4
-임의의 antipodal 연속 자기사상 $f:S^1\rightarrow S^1$의 degree $\deg f$는 홀수이다.
+임의의 antipodal continuous self-map $f:S^1\rightarrow S^1$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
 $S^1=\{e^{2\pi i\theta}\mid\theta\in\mathbb{R}\}$으로 보고, covering map $p:\mathbb{R}\rightarrow S^1$, $p(\theta)=e^{2\pi i\theta}$을 생각하자. 이때 대척점 $-e^{2\pi i\theta}=e^{2\pi i(\theta+1/2)}$은 $\theta\mapsto\theta+1/2$에 대응한다.
@@ -100,7 +100,7 @@ F(\theta+1)&=F\bigl((\theta+\frac{1}{2})+\frac{1}{2}\bigr)=F(\theta+\frac{1}{2})
 보조정리 4의 증명에서 antipodal 조건은 반주기 $1/2$만큼의 이동이 lifting을 정확히 $1/2+q$만큼 밀어낸다는 사실로 번역되었고, 한 바퀴는 반주기의 두 배이므로 회전수가 $1+2q$라는 홀수 형태로 강제되었다. 같은 현상이 임의의 차원에서 성립하며, 이것이 다음 정리의 내용이다.
 
 ::: 정리 5 (Borsuk)
-$n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이다.
+$n\geq 1$에 대하여, 임의의 antipodal continuous self-map $f:S^n\rightarrow S^n$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
 $n=1$인 경우와 $n\geq 2$인 경우를 나누어 다룬다. $n=1$은 [보조정리 4](#lem4){: data-lid="7jcjt" }에서 이미 확립하였다. 이제 $n\geq 2$라 하자. 이 경우의 증명은 antipode에 의한 quotient space, 곧 real projective space $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
@@ -216,7 +216,7 @@ $n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되�
 그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2){: data-lid="9twyb" }의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
 :::
 
-같은 논증은 embedding뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff 공간으로 가는 단사 연속함수는 자동으로 image 위로의 homeomorphism이 되므로 embedding과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.
+같은 논증은 embedding뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff space로 가는 단사 연속함수는 자동으로 image 위로의 homeomorphism이 되므로 embedding과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.
 
 ---
 

@@ -27,7 +27,7 @@ $$f_{T'}(u^\ast x)\xrightarrow{\sim}u^\ast f_T(x)$$
 
 을 주어 pullback과 호환되게 하는 자료이다. 두 stack morphism 사이의 2-morphism은 이 functor들을 잇고 pullback coherence와 호환되는 natural transformation이다. CFG의 언어에서는 각각 base 위의 functor와 natural transformation으로 표현된다. ([§스택, ⁋정의 7](/ko/math/stacks/fibered_categories_and_stacks#def7){: data-lid="55se2" })
 
-Stack의 descent 조건은 local data를 global 대상으로 붙일 수 있음을 보장하지만, scheme이나 algebraic space와 같은 local model을 주지는 않는다. 따라서 dimension, tangent space, smoothness 등의 개념을 아직 익숙한 대수기하의 언어로 논할 수 없다. 이번 글의 목표는 stack 가운데 이러한 기하를 갖는 algebraic stack을 가려내는 것이다.
+Stack의 descent 조건은 local data를 global object로 붙일 수 있음을 보장하지만, scheme이나 algebraic space와 같은 local model을 주지는 않는다. 따라서 dimension, tangent space, smoothness 등의 개념을 아직 익숙한 대수기하의 언어로 논할 수 없다. 이번 글의 목표는 stack 가운데 이러한 기하를 갖는 algebraic stack을 가려내는 것이다.
 
 ## Stack의 올곱
 

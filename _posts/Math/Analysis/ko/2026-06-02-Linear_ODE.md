@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4){: data-lid="elxwt" }에서 얻은 해는 local solution이다. 비선형 방정식 $y'=y^2$, $y(0)=1$의 해 $y=1/(1-t)$는 [§미분방정식의 존재성과 유일성, ⁋예시 9](/ko/math/analysis/existence_uniqueness_ode#ex9){: data-lid="ee6oq" }에서 보았듯이 $t=1$에서 발산하므로, 우변이 매끄러워도 해가 정의되는 구간은 우변만으로 정해지지 않는다. 이 글에서 다루는 linear system에서는 이런 일이 일어나지 않는다. 계수가 연속인 구간 전체에서 해가 존재하고, 해 전체의 모임은 유한차원 벡터공간이 되어 선형대수로 다룰 수 있다. 아래에서 $\mathbb{K}$는 $\mathbb{R}$ 또는 $\mathbb{C}$이고, $\mathbb{K}^n$에는 Euclid 노름 $\lVert\cdot\rVert$를, $n\times n$ 행렬에는 그로부터 유도된 작용소노름 $\lVert A\rVert$를 쓴다. 따라서 $\lVert Ax\rVert\le\lVert A\rVert\lVert x\rVert$이고 $\lVert AB\rVert\le\lVert A\rVert\lVert B\rVert$이다. 벡터값·행렬값 함수의 미분과 적분은 성분별로 정의하며, $\lVert\int f\rVert\le\int\lVert f\rVert$가 성립한다.
+[§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4){: data-lid="elxwt" }에서 얻은 해는 local solution이다. 비선형 방정식 $y'=y^2$, $y(0)=1$의 해 $y=1/(1-t)$는 [§미분방정식의 존재성과 유일성, ⁋예시 9](/ko/math/analysis/existence_uniqueness_ode#ex9){: data-lid="ee6oq" }에서 보았듯이 $t=1$에서 발산하므로, 우변이 매끄러워도 해가 정의되는 구간은 우변만으로 정해지지 않는다. 이 글에서 다루는 linear system에서는 이런 일이 일어나지 않는다. 계수가 연속인 구간 전체에서 해가 존재하고, 해 전체의 모임은 유한차원 벡터공간이 되어 선형대수로 다룰 수 있다. 아래에서 $\mathbb{K}$는 $\mathbb{R}$ 또는 $\mathbb{C}$이고, $\mathbb{K}^n$에는 Euclidean norm $\lVert\cdot\rVert$를, $n\times n$ 행렬에는 그로부터 유도된 작용소노름 $\lVert A\rVert$를 쓴다. 따라서 $\lVert Ax\rVert\le\lVert A\rVert\lVert x\rVert$이고 $\lVert AB\rVert\le\lVert A\rVert\lVert B\rVert$이다. 벡터값·행렬값 함수의 미분과 적분은 성분별로 정의하며, $\lVert\int f\rVert\le\int\lVert f\rVert$가 성립한다.
 
 ## 전역 해의 존재
 
@@ -27,7 +27,7 @@ $$x'(t)=A(t)x(t)+b(t)$$
 을 *선형 미분방정식계<sub>linear system</sub>*라 한다. $b\equiv0$이면 *제차<sub>homogeneous</sub>*, 아니면 *비제차*라 한다.
 :::
 
-우변이 $x$에 대해 선형이므로 해의 크기가 우변에 의해 가속되는 일이 없다. 이 사실을 [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4){: data-lid="s43o0" }의 Picard 반복이 구간 전체에서 수렴한다는 형태로 쓰면 다음을 얻는다.
+우변이 $x$에 대해 선형이므로 해의 크기가 우변에 의해 가속되는 일이 없다. 이 사실을 [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4){: data-lid="s43o0" }의 Picard iteration이 구간 전체에서 수렴한다는 형태로 쓰면 다음을 얻는다.
 
 ::: 정리 2 (전역 존재와 유일성)
 $A$, $b$가 구간 $I$에서 연속이라 하자. 임의의 $t_0\in I$, $x_0\in\mathbb{K}^n$에 대하여 $x(t_0)=x_0$을 만족하는 해 $x:I\to\mathbb{K}^n$이 존재하고, 유일하다.
@@ -57,7 +57,7 @@ $$\lVert d_k(t)\rVert\le\frac{CM^k\lvert t-t_0\rvert^{k+1}}{(k+1)!}\le\frac{CM^k
 일반적인 구간 $I$에서는 $t_0$을 포함하는 컴팩트 구간 $J_1\subseteq J_2\subseteq\cdots$로 $I$를 덮는다. 각 $J_m$ 위의 해는 유일성에 의해 서로 일치하므로 하나의 함수 $x:I\to\mathbb{K}^n$을 정하고, 이는 $I$ 위의 해이다. $I$ 위의 두 해는 모든 $J_m$ 위에서 일치하므로 유일하다.
 :::
 
-증명에서 $M$이 해의 크기에 의존하지 않는다는 점이 쓰였다. [§미분방정식의 존재성과 유일성, ⁋예시 9](/ko/math/analysis/existence_uniqueness_ode#ex9){: data-lid="cceve" }의 $y'=y^2$에서는 우변의 립시츠 상수가 $\lvert y\rvert$와 함께 커지므로 같은 평가가 구간 전체로 확장되지 않는다.
+증명에서 $M$이 해의 크기에 의존하지 않는다는 점이 쓰였다. [§미분방정식의 존재성과 유일성, ⁋예시 9](/ko/math/analysis/existence_uniqueness_ode#ex9){: data-lid="cceve" }의 $y'=y^2$에서는 우변의 Lipschitz constant가 $\lvert y\rvert$와 함께 커지므로 같은 평가가 구간 전체로 확장되지 않는다.
 
 ## 해공간
 

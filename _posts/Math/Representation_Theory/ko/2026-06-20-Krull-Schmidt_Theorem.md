@@ -158,7 +158,7 @@ $$M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$$
 이 정리가 보장하는 유일성 덕분에, 유한차원 representation $V$에 대하여 그 분해에 나타나는 indecomposable들의 isomorphism class와 각각의 중복도가 $V$의 불변량으로 잘 정의된다. 따라서 $\Rep(Q)$의 유한차원 대상을 이해하는 문제는 indecomposable representation들을 isomorphism을 무시하고 분류하는 문제로 환원된다. 예시 2에서 본 $V$까지 포함하여 선형 $A_2$ quiver의 indecomposable은 두 simple representation과 한 개의 비simple indecomposable로 이루어지며, 이러한 분류가 모든 quiver에 대하여 가능한지, 가능하다면 그 목록이 무엇인지가 다음 논의의 주제이다.
 
 ::: 참고 7
-Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원 representation 이론의 기본 단위로 확정한다. 이 단위 위에서 indecomposable들 사이의 morphism을 체계적으로 기술하는 것이 *Auslander–Reiten 이론*이며, almost split sequence와 Auslander–Reiten quiver가 그 핵심 도구이다. 또한 어떤 quiver $Q$가 유한개의 indecomposable representation만을 가지는지, 곧 *representation-finite*인지를 묻는 문제의 답이 *Gabriel의 정리*로, $Q$의 underlying graph가 type $A$, $D$, $E$의 Dynkin diagram일 때에 한정된다. 두 이론 모두 분해의 존재성과 유일성을 전제로 indecomposable의 세계를 분석하므로, 이 글의 결과가 그 출발점에 놓인다.
+Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원 representation 이론의 기본 단위로 확정한다. 이 단위 위에서 indecomposable들 사이의 morphism을 체계적으로 기술하는 것이 *Auslander–Reiten theory*이며, almost split sequence와 Auslander–Reiten quiver가 그 핵심 도구이다. 또한 어떤 quiver $Q$가 유한개의 indecomposable representation만을 가지는지, 곧 *representation-finite*인지를 묻는 문제의 답이 *Gabriel의 정리*로, $Q$의 underlying graph가 type $A$, $D$, $E$의 Dynkin diagram일 때에 한정된다. 두 이론 모두 분해의 존재성과 유일성을 전제로 indecomposable의 세계를 분석하므로, 이 글의 결과가 그 출발점에 놓인다.
 :::
 
 ---

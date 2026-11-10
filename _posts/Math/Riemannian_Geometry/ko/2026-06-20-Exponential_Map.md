@@ -1,6 +1,6 @@
 ---
 title: "지수사상"
-description: "측지선의 자료를 한 점의 접공간 위로 모으는 exponential map을 도입한다. 측지선의 초기조건에 대한 매끄러운 의존성과 동차성으로부터 exponential map이 0의 star-shaped 근방에서 매끄러움을 보이고, 0에서의 미분이 항등사상임을 계산하여 역함수 정리로 normal neighborhood와 normal coordinate를 얻는다. Normal coordinate에서 metric과 Christoffel 기호의 값, Gauss lemma, 그리고 유클리드 공간과 구면에서의 예시를 다룬다."
+description: "측지선의 자료를 한 점의 접공간 위로 모으는 exponential map을 도입한다. 측지선의 초기조건에 대한 매끄러운 의존성과 동차성으로부터 exponential map이 0의 star-shaped 근방에서 매끄러움을 보이고, 0에서의 미분이 항등사상임을 계산하여 역함수 정리로 normal neighborhood와 normal coordinate를 얻는다. Normal coordinate에서 metric과 Christoffel symbols의 값, Gauss lemma, 그리고 유클리드 공간과 구면에서의 예시를 다룬다."
 excerpt: "측지선을 한 점의 접공간 위로 모으는 exponential map과 normal coordinate, 그리고 Gauss lemma"
 
 categories: [Math / Riemannian Geometry]
@@ -124,7 +124,7 @@ $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한�
 
 1. 각 $v = \sum_i v^i E_i \in V$에 대해, 측지선 $\gamma_v$는 좌표상에서 원점을 지나는 직선 $t \mapsto (t v^1, \ldots, t v^n)$으로 표현된다 (이것이 정의되는 $t$에 대해).
 2. Metric의 성분은 $p$에서 $g_{ij}(p) = \delta_{ij}$이다.
-3. Christoffel 기호는 $p$에서 모두 소멸한다. 즉 $\Gamma_{ij}^k(p) = 0$이다.
+3. Christoffel symbols는 $p$에서 모두 소멸한다. 즉 $\Gamma_{ij}^k(p) = 0$이다.
 :::
 
 ::: 증명

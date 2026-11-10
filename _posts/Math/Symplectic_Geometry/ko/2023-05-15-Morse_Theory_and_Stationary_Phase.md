@@ -46,7 +46,7 @@ $$\operatorname{Hess}_p(f) = \left[\frac{\partial^2 f}{\partial x_i\partial x_j}
 으로 주어지는 대칭행렬이다. Critical point가 $\dd{f_p}=0$이라는 1차 조건만으로 결정되는 데에 반해, Hessian은 그 critical point가 어떤 종류인가, 즉 극소·극대·안장점인가를 구분하는 이차 정보를 담는다.
 
 ::: 정의 3
-Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian 행렬이 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\rightarrow\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
+Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian matrix가 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\rightarrow\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
 :::
 
 Non-degenerate critical point $p$에서 $\operatorname{Hess}_p(f)$의 signature는 좌표 변환에 대한 불변량이다. Positive eigenvalue의 개수와 음의 eigenvalue의 개수가 좌표 선택에 의존하지 않으므로 다음 정의가 의미를 가진다.

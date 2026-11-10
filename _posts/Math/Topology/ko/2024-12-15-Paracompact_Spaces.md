@@ -1,6 +1,6 @@
 ---
 title: "파라콤팩트 공간과 단위분할"
-description: "파라콤팩트 공간의 정의와 정규성을 증명하고, Shrinking Lemma를 통해 paracompact Hausdorff 공간에서 임의의 열린 덮개에 종속된 단위분할이 존재함을 보이며 위상다양체에 적용한다."
+description: "파라콤팩트 공간의 정의와 정규성을 증명하고, Shrinking Lemma를 통해 paracompact Hausdorff space에서 임의의 열린 덮개에 종속된 단위분할이 존재함을 보이며 위상다양체에 적용한다."
 excerpt: "Paracompact spaces, normality, partitions of unity, and topological manifolds"
 
 categories: [Math / Topology]
@@ -15,9 +15,9 @@ weight: 17
 
 ## 국소성과 대역성의 가교
 
-위상공간 위에서 우리가 다루려는 대상은 흔히 국소적으로 먼저 주어진다. 각 점 근방에서 정의된 연속함수, 국소적으로 얻어진 절단, 좌표조각마다 놓인 구성이 그러하다. 이러한 국소적 자료를 하나의 대역적 대상으로 이어 붙이려면, 각 조각을 자기 정의역 안에서 부드럽게 소멸시키면서 전체에 걸쳐 값이 겹치지 않게 배분하는 장치가 필요하다. 이 역할을 하는 표준적인 도구가 *partition of unity*이며, 그것이 자연스럽게 존재하는 무대가 바로 이 글에서 다루는 paracompact Hausdorff 공간이다.
+위상공간 위에서 우리가 다루려는 대상은 흔히 국소적으로 먼저 주어진다. 각 점 근방에서 정의된 연속함수, 국소적으로 얻어진 절단, 좌표조각마다 놓인 구성이 그러하다. 이러한 국소적 자료를 하나의 대역적 대상으로 이어 붙이려면, 각 조각을 자기 정의역 안에서 부드럽게 소멸시키면서 전체에 걸쳐 값이 겹치지 않게 배분하는 장치가 필요하다. 이 역할을 하는 표준적인 도구가 *partition of unity*이며, 그것이 자연스럽게 존재하는 무대가 바로 이 글에서 다루는 paracompact Hausdorff space이다.
 
-Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼 것을 요구하지만 ([§옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1){: data-lid="bobvw" }), 우리가 실제로 다루는 공간의 대부분은 compact가 아니다. Paracompactness는 유한성 대신 국소유한성을 요구하여 compactness를 알맞게 약화시킨 조건으로, compact 공간에서 성립하던 여러 논증을 국소적으로 되살릴 수 있게 해 준다. 우리는 이 개념을 도입하고, paracompact Hausdorff 공간이 normal임을 보인 뒤, 이를 발판으로 임의의 열린 덮개에 종속된 partition of unity를 언제나 구성할 수 있음을 증명한다.
+Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼 것을 요구하지만 ([§옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1){: data-lid="bobvw" }), 우리가 실제로 다루는 공간의 대부분은 compact가 아니다. Paracompactness는 유한성 대신 국소유한성을 요구하여 compactness를 알맞게 약화시킨 조건으로, compact space에서 성립하던 여러 논증을 국소적으로 되살릴 수 있게 해 준다. 우리는 이 개념을 도입하고, paracompact Hausdorff space가 normal임을 보인 뒤, 이를 발판으로 임의의 열린 덮개에 종속된 partition of unity를 언제나 구성할 수 있음을 증명한다.
 
 ## Paracompact 공간
 
@@ -57,14 +57,14 @@ $$O_k=B_{k+1}\setminus\cl(B_{k-2})$$
 
 은 열린집합으로 $A_k\subseteq O_k$를 만족한다. 여기서 $k\geq 3$이면 $O_k=\{x: k-2<\lVert x\rVert<k+1\}$이고, $k=1,2$일 때는 $B_{k-2}=\emptyset$이라 $\cl(B_{k-2})=\emptyset$이므로 $O_k=B_{k+1}$이다.
 
-이제 각 $k$에 대하여 compact 집합 $A_k$를 다룬다. 각 $x\in A_k$는 어떤 $U_{i}$에 속하므로 $x\in U_i\cap O_k$이며, 이러한 열린집합들이 $A_k$를 덮는다. $A_k$가 compact이므로 유한 개의 $i$, 곧 유한집합 $F_k\subseteq I$를 택하여 $(U_i\cap O_k)_{i\in F_k}$이 $A_k$를 덮도록 할 수 있다. ([§옹골공간, ⁋명제 2](/ko/math/topology/compact_spaces#prop2){: data-lid="qfxl6" }) 모든 $k\geq 1$에 걸쳐 모은 family
+이제 각 $k$에 대하여 compact set $A_k$를 다룬다. 각 $x\in A_k$는 어떤 $U_{i}$에 속하므로 $x\in U_i\cap O_k$이며, 이러한 열린집합들이 $A_k$를 덮는다. $A_k$가 compact이므로 유한 개의 $i$, 곧 유한집합 $F_k\subseteq I$를 택하여 $(U_i\cap O_k)_{i\in F_k}$이 $A_k$를 덮도록 할 수 있다. ([§옹골공간, ⁋명제 2](/ko/math/topology/compact_spaces#prop2){: data-lid="qfxl6" }) 모든 $k\geq 1$에 걸쳐 모은 family
 
 $$\mathcal{V}=(U_i\cap O_k)_{k\geq 1,i\in F_k}$$
 
 를 생각하자. 각 원소는 열린집합이며 $U_i$에 포함되므로 $\mathcal{V}$는 $\mathcal{U}$의 open refinement이고, $A_k$들이 $\mathbb{R}^n$을 덮으므로 $\mathcal{V}$도 $\mathbb{R}^n$을 덮는다. 끝으로 $\mathcal{V}$가 locally finite임을 본다. 점 $x$에 대하여 $r=\lVert x\rVert$이라 두면 근방 $B_{r+1}=\{y:\lVert y\rVert<r+1\}$은 $O_k$와 만나는 경우 $k-2<r+1$, 곧 $k<r+3$일 때뿐이므로 유한 개의 $k$에 대해서만 $O_k$와 만난다. 각 $k$마다 $\mathcal{V}$의 원소는 유한 개($\lvert F_k\rvert$개)뿐이므로, $B_{r+1}$은 $\mathcal{V}$의 유한히 많은 원소만을 만난다. 따라서 $\mathcal{V}$는 locally finite open refinement이고 $\mathbb{R}^n$은 paracompact이다.
 :::
 
-이 예시의 논증은 $\mathbb{R}^n$의 특수성보다는 두 가지 성질, 곧 국소적 옹골성과 가산 개의 compact 집합으로의 소진에만 의존한다. 실제로 같은 방법으로 임의의 second countable LCH space, 나아가 가산 개의 compact 부분집합의 합집합으로 적히는 임의의 LCH space가 paracompact임을 보일 수 있다. 이는 뒤에서 다룰 topological manifold의 paracompactness의 바탕이 된다.
+이 예시의 논증은 $\mathbb{R}^n$의 특수성보다는 두 가지 성질, 곧 국소적 옹골성과 가산 개의 compact set으로의 소진에만 의존한다. 실제로 같은 방법으로 임의의 second countable LCH space, 나아가 가산 개의 compact 부분집합의 합집합으로 적히는 임의의 LCH space가 paracompact임을 보일 수 있다. 이는 뒤에서 다룰 topological manifold의 paracompactness의 바탕이 된다.
 
 ## Paracompact Hausdorff 공간의 정규성
 
@@ -164,7 +164,7 @@ Point-finiteness가 초한귀납의 극한 단계와 최종 단계에서 덮개�
 Paracompact Hausdorff space $X$의 임의의 open covering $(U_\alpha)_{\alpha\in J}$에 대하여, $(U_\alpha)$에 종속된 partition of unity가 존재한다.
 :::
 ::: 증명
-증명은 네 단계로 이루어진다. 먼저 덮개를 같은 첨수로 놓인 국소유한 세분으로 바꾸고, 이를 두 번 수축시켜 닫힌 덮개를 얻은 뒤, Urysohn 보조정리로 각 조각의 bump 함수를 만들고, 마지막으로 이들을 정규화한다.
+증명은 네 단계로 이루어진다. 먼저 덮개를 같은 첨수로 놓인 국소유한 세분으로 바꾸고, 이를 두 번 수축시켜 닫힌 덮개를 얻은 뒤, Urysohn 보조정리로 각 조각의 bump function을 만들고, 마지막으로 이들을 정규화한다.
 
 **(1) 정밀 국소유한 세분.** $X$가 paracompact이므로 $(U_\alpha)$의 locally finite open refinement $(W_\beta)_{\beta\in K}$이 존재한다. 세분의 정의에 의해 각 $\beta$마다 $W_\beta\subseteq U_{\alpha(\beta)}$인 $\alpha(\beta)\in J$를 하나 고른다. 이제 각 $\alpha\in J$에 대하여
 
@@ -178,7 +178,7 @@ $$\cl(Q_\alpha)\subseteq P_\alpha\subseteq\cl(P_\alpha)\subseteq V_\alpha\subset
 
 를 만족한다.
 
-**(3) Bump 함수.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\rightarrow[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2){: data-lid="gsrmy" }) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
+**(3) Bump function.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\rightarrow[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2){: data-lid="gsrmy" }) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
 
 $$\supp\psi_\alpha=\cl(\{x\mid\psi_\alpha(x)\neq 0\})\subseteq\cl(P_\alpha)\subseteq V_\alpha\subseteq U_\alpha$$
 

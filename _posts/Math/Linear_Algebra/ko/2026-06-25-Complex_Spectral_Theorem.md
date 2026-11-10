@@ -60,7 +60,7 @@ $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu
 그럼 $\{e_1,\ldots,e_n\}$은 $V$의 orthonormal basis이고, $j<n$에 대해서는 $Le_j\in\span(e_1,\ldots,e_j)$이며 $j=n$에 대해서는 $Le_n\in V=\span(e_1,\ldots,e_n)$이 자명하게 성립한다. 즉 이 기저에 대한 $L$의 행렬표현은 upper triangular matrix가 된다. 이 기저의 벡터들을 열로 갖는 행렬을 $U$라 하면 $U$는 unitary이고 ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6){: data-lid="m9l4l" }) $U^\ast AU=T$가 upper triangular이므로 $A=UTU^\ast$이다.
 :::
 
-Upper triangular matrix $T$는 $A$와 닮음이므로 같은 특성다항식을 가지며, upper triangular matrix의 특성다항식은 $\prod_i(\x-T_{ii})$이므로 $T$의 대각성분 $T_{11},\ldots,T_{nn}$은 정확히 $A$의 고윳값들을 중복도까지 담는다. Schur 분해는 임의의 복소행렬이 unitary transformation만으로 고윳값들을 대각선에 드러낼 수 있음을 말한다.
+Upper triangular matrix $T$는 $A$와 닮음이므로 같은 특성다항식을 가지며, upper triangular matrix의 특성다항식은 $\prod_i(\x-T_{ii})$이므로 $T$의 대각성분 $T_{11},\ldots,T_{nn}$은 정확히 $A$의 고윳값들을 중복도까지 담는다. Schur decomposition은 임의의 복소행렬이 unitary transformation만으로 고윳값들을 대각선에 드러낼 수 있음을 말한다.
 
 만일 추가로 주어진 행렬이 normal이었다면, 이 upper triangular matrix가 추가로 diagonal matrix가 된다.
 
@@ -77,7 +77,7 @@ $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\l
 이고, 따라서 $\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$이므로 $j>1$에 대해 $T_{1j}=0$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $0$이다. 그럼 $T$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $(n-1)\times(n-1)$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $T$ 전체가 대각이다. 따라서 $A=UTU^\ast$은 unitary diagonalization이다.
 :::
 
-Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form){: data-lid="blwr3" }과 좋은 대조를 이룬다. 조르당 표준형은 일반적으로 unitary가 아닌 change of basis를 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 change of basis를 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
+Schur decomposition은 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form){: data-lid="blwr3" }과 좋은 대조를 이룬다. 조르당 표준형은 일반적으로 unitary가 아닌 change of basis를 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur decomposition은 change of basis를 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
 
 ## 복소 스펙트럼 정리
 

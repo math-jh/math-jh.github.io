@@ -298,7 +298,7 @@ $$x\mapsto [z,x]_\varepsilon$$
 ::: 명제 11
  $E$가 graded $A$-algebra라 하자. 
 
-1. 임의의 $\varepsilon$-derivation $d : E \rightarrow E$와 $E$의 모든 homogeneous 원소 $z$에 대하여 ${[d, \ad(z)]_\varepsilon = \ad(\dd{z})}$이 성립한다. 
+1. 임의의 $\varepsilon$-derivation $d : E \rightarrow E$와 $E$의 모든 homogeneous element $z$에 대하여 ${[d, \ad(z)]_\varepsilon = \ad(\dd{z})}$이 성립한다. 
 2. 만일 $E$가 associative라면, $\ad(z)$는 $E$의 $\varepsilon$-derivation이며, 그 degree는 $\deg(z)$이다.
 :::
 
@@ -320,7 +320,7 @@ $$x\mapsto [z,x]_\varepsilon$$
 이것이 성립할 경우, 위의 식에서 $d$를 inner $\varepsilon$-derivation으로 대체해주면 다음 따름정리를 얻는다. 
 
 ::: 따름정리 12
-Associative graded algebra $E$의 두 homogeneous 원소 $x,y$에 대해 다음의 식
+Associative graded algebra $E$의 두 homogeneous element $x,y$에 대해 다음의 식
 
 $${[\ad_\varepsilon(x), \ad_\varepsilon(y)]_\varepsilon = \ad_\varepsilon([x,y]_\varepsilon)}$$
 

@@ -1,6 +1,6 @@
 ---
 title: "최소다항식"
-description: "행렬에 다항식을 대입하는 연산을 정의하고, 일차분해정리를 이용해 케일리-해밀턴 정리를 증명한다. 나아가 최소다항식을 도입하여 특성다항식을 나눈다는 사실과 대각화가능성의 판정법을 다룬다. 끝으로 작용소를 diagonalizable 부분과 nilpotent 부분으로 가르는 조르당-슈발레 분해를 구성한다."
+description: "행렬에 다항식을 대입하는 연산을 정의하고, 일차분해정리를 이용해 케일리-해밀턴 정리를 증명한다. 나아가 최소다항식을 도입하여 특성다항식을 나눈다는 사실과 대각화가능성의 판정법을 다룬다. 끝으로 작용소를 diagonalizable part와 nilpotent part로 가르는 조르당-슈발레 분해를 구성한다."
 excerpt: "케일리-해밀턴 정리와 최소다항식"
 
 categories: [Math / Linear Algebra]
@@ -86,7 +86,7 @@ $$p_A(A)v=\left(\prod_{\mu\neq\lambda}(A-\mu I)^{d_\mu}\right)(A-\lambda I)^{d_\
 이다. $V$가 $G_\lambda(A)$들의 direct sum이므로 임의의 $v\in V$에 대하여 $p_A(A)v=0$이고, 따라서 $p_A(A)=0$이다. 
 :::
 
-우리는 $\mathbb{K}$가 algebraically closed field인 경우만 생각하였는데, 만일 그렇지 않다면 $\mathbb{K}$를 포함하는 아무 algebraically closed field $\mathbb{L}$를 생각한 후 (가령 $\mathbb{R}$의 경우 $\mathbb{C}$), $p_A$를 $\mathbb{L}$의 다항식으로 보면 된다. 이 때, $A$의 특성다항식은 $\mathbb{L}$에서도 마찬가지로 $p_A$이므로, 위의 증명에 의해 똑같이 $p_A(A)=0$임을 확인할 수 있으며, 이 다항식은 ($\mathbb{L}$에서의 다항식이라 하기는 하였지만) 모든 성분이 $\mathbb{K}$에 속하므로 이 등식이 $\mathbb{K}$에서도 성립한다. 다만, 이러한 $\mathbb{L}$의 존재성을 보이는 것은 현재 수준에서는 어려운 일이므로 증명 바깥에서 간략히 설명하였다. 어쨌든 직관적으로 케일리-해밀턴 정리는, 특성다항식이 $A$의 모든 eigenvalue를 충분히 높은 중복도로 담고 있어 $A$를 대입하면 각 generalized eigenspace 위에서의 nilpotent 부분까지 모두 소멸시킨다는 것을 말한다. 
+우리는 $\mathbb{K}$가 algebraically closed field인 경우만 생각하였는데, 만일 그렇지 않다면 $\mathbb{K}$를 포함하는 아무 algebraically closed field $\mathbb{L}$를 생각한 후 (가령 $\mathbb{R}$의 경우 $\mathbb{C}$), $p_A$를 $\mathbb{L}$의 다항식으로 보면 된다. 이 때, $A$의 특성다항식은 $\mathbb{L}$에서도 마찬가지로 $p_A$이므로, 위의 증명에 의해 똑같이 $p_A(A)=0$임을 확인할 수 있으며, 이 다항식은 ($\mathbb{L}$에서의 다항식이라 하기는 하였지만) 모든 성분이 $\mathbb{K}$에 속하므로 이 등식이 $\mathbb{K}$에서도 성립한다. 다만, 이러한 $\mathbb{L}$의 존재성을 보이는 것은 현재 수준에서는 어려운 일이므로 증명 바깥에서 간략히 설명하였다. 어쨌든 직관적으로 케일리-해밀턴 정리는, 특성다항식이 $A$의 모든 eigenvalue를 충분히 높은 중복도로 담고 있어 $A$를 대입하면 각 generalized eigenspace 위에서의 nilpotent part까지 모두 소멸시킨다는 것을 말한다. 
 
 ## 최소다항식
 
@@ -178,7 +178,7 @@ $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
 ## 조르당-슈발레 분해
 
-지금까지의 논의에서, 핵심적인 도구이자 motivation 역할을 한 것은 Jordan form이었다. 한편 각각의 Jordan block을 생각하면, 이 block은 두 개의 조각, 즉 eigenvalue를 담고 있는 diagonal part와, 그 위에 super-diagonal 성분으로 나타나는 nilpotent 부분으로 나뉘었다. 우리는 지금까지의 논의를 적용하여, 이 분해를 공간 전체로 확장하는 작업으로 이 글을 마무리한다. 
+지금까지의 논의에서, 핵심적인 도구이자 motivation 역할을 한 것은 Jordan form이었다. 한편 각각의 Jordan block을 생각하면, 이 block은 두 개의 조각, 즉 eigenvalue를 담고 있는 diagonal part와, 그 위에 super-diagonal 성분으로 나타나는 nilpotent part로 나뉘었다. 우리는 지금까지의 논의를 적용하여, 이 분해를 공간 전체로 확장하는 작업으로 이 글을 마무리한다. 
 
 우선 분해의 유일성에 필요한 세 가지 사실을 관찰해 두자. 
 
@@ -187,11 +187,11 @@ $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 3. Commute하는 두 nilpotent operator $N,M$의 차는 다시 nilpotent이다. $N^a=M^b=0$이면 $N,M$이 commute하므로 이항정리로부터 $(N-M)^{a+b}=0$이기 때문이다.
 
 ::: 정리 11 (조르당-슈발레 분해)
-$\mathbb{K}$가 algebraically closed라 하자. 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, 다음을 만족하는 diagonalizable 작용소 $A_s$와 nilpotent 작용소 $A_n$이 유일하게 존재한다:
+$\mathbb{K}$가 algebraically closed라 하자. 유한차원 벡터공간 $V$ 위에 정의된 임의의 linear operator $A:V\rightarrow V$에 대하여, 다음을 만족하는 diagonalizable 작용소 $A_s$와 nilpotent operator $A_n$이 유일하게 존재한다:
 
 $$A=A_s+A_n,\qquad A_sA_n=A_nA_s.$$
 
-나아가 $A_s$와 $A_n$은 상수항이 없는 $A$의 다항식으로 표현된다. $A_s$를 $A$의 diagonalizable 부분, $A_n$을 nilpotent 부분이라 부른다.
+나아가 $A_s$와 $A_n$은 상수항이 없는 $A$의 다항식으로 표현된다. $A_s$를 $A$의 diagonalizable part, $A_n$을 nilpotent part라 부른다.
 :::
 
 ::: 증명

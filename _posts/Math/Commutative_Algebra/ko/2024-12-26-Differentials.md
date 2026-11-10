@@ -273,7 +273,7 @@ $$p: R=A[\x_s]_{s\in S}\rightarrow E$$
 ::: 정의 10
 Presentation $p:R \rightarrow E$에 대하여, $p$의 *naive cotangent complex* $\operatorname{NL}(p)$는 conormal sequence의 왼쪽 두 항으로 이루어진 $E$-module들의 two-term complex
 
-$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
+$$\operatorname{NL}(p)=\Bigl[\at{1}{\mathfrak{I}/\mathfrak{I}^2}\overset{\bar{d}}{\rightarrow}\at{0}{\Omega_{R/A}\otimes_RE}\Bigr]$$
 
 를 뜻한다. 여기서 $\mathfrak{I}/\mathfrak{I}^2$는 degree $1$, $\Omega_{R/A}\otimes_RE$는 degree $0$에 둔다.
 :::
@@ -375,7 +375,7 @@ $$H_0(\operatorname{NL}_{E/A})\cong\Omega_{E/A},\qquad H_1(\operatorname{NL}_{E/
 ::: 예시 15
 하나의 다항식으로 표현되는 algebra $E=A[\x]/(f)$를 생각하자. 여기서 $f$는 $A[\x]$의 nonzerodivisor라 가정한다. Presentation $p:R=A[\x] \rightarrow E$에 대하여 $\mathfrak{I}=(f)$이고, $f$가 nonzerodivisor이므로 $\mathfrak{I}/\mathfrak{I}^2$는 $\overline{f}$를 기저로 갖는 free $E$-module이다. 실제로 $af\in(f^2)$라면 $af=bf^2$로부터 $a=bf\in(f)$이다. 따라서
 
-$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\rightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
+$$\operatorname{NL}_{E/A}=\Bigl[\at{1}{E\overline{f}}\overset{\bar{d}}{\rightarrow}\at{0}{E\dd{\x}}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
 
 이다. 여기서 $Df$는 $f$의 derivative이다. 그럼
 

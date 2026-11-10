@@ -1,7 +1,7 @@
 ---
 title: "복소다양체"
-description: "여러 변수 복소정칙함수에서 출발하여 복소다양체를 위상다양체에 복소정칙 전이함수를 갖는 holomorphic atlas로 정의한다. 복소사영공간, 복소토러스, Riemann 곡면 등의 예시를 다루고, 복소정칙접공간과 holomorphic tangent bundle을 도입한다. 끝으로 콤팩트 연결 복소다양체 위의 복소정칙함수가 상수임을 최대원리로 증명한다."
-excerpt: "여러 변수 복소정칙함수, holomorphic atlas, 복소차원, CP^n, 복소토러스, Riemann 곡면, holomorphic tangent space, Wirtinger derivative, 최대원리"
+description: "여러 변수 복소정칙함수에서 출발하여 복소다양체를 위상다양체에 복소정칙 전이함수를 갖는 holomorphic atlas로 정의한다. 복소사영공간, 복소토러스, Riemann surface 등의 예시를 다루고, 복소정칙접공간과 holomorphic tangent bundle을 도입한다. 끝으로 콤팩트 연결 복소다양체 위의 복소정칙함수가 상수임을 최대원리로 증명한다."
+excerpt: "여러 변수 복소정칙함수, holomorphic atlas, 복소차원, CP^n, 복소토러스, Riemann surface, holomorphic tangent space, Wirtinger derivative, 최대원리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/complex_manifolds
@@ -55,13 +55,13 @@ $$
 \frac{\partial}{\partial \bar{z}_j} = \frac{1}{2}\left( \frac{\partial}{\partial x_j} + i \frac{\partial}{\partial y_j} \right)
 $$
 
-로 정의하면, $C^1$급 함수 $f$가 정의 1의 의미로 holomorphic인 것은 모든 $j$에 대하여 Cauchy–Riemann 방정식
+로 정의하면, $C^1$급 함수 $f$가 정의 1의 의미로 holomorphic인 것은 모든 $j$에 대하여 Cauchy–Riemann equations
 
 $$
 \frac{\partial f}{\partial \bar{z}_j} = 0 \quad (j = 1, \ldots, n)
 $$
 
-이 성립하는 것과 동치이다. 각 변수에 대한 한 변수 Cauchy–Riemann 방정식을 모은 것에 지나지 않으므로 이는 즉시 따라온다. 이 관점은 뒤에서 holomorphic tangent space를 다룰 때 다시 등장한다.
+이 성립하는 것과 동치이다. 각 변수에 대한 한 변수 Cauchy–Riemann equations를 모은 것에 지나지 않으므로 이는 즉시 따라온다. 이 관점은 뒤에서 holomorphic tangent space를 다룰 때 다시 등장한다.
 
 ## 복소다양체
 
@@ -131,7 +131,7 @@ $$
 \left( \frac{w_0}{w_j}, \ldots, \frac{w_{i-1}}{w_j}, \frac{1}{w_j}, \frac{w_{i+1}}{w_j}, \ldots, \widehat{\frac{w_j}{w_j}}, \ldots, \frac{w_n}{w_j} \right)
 $$
 
-이 된다. 각 성분은 $w_k / w_j$ 또는 $1/w_j$ 꼴이고, 정의역 $\varphi_i(U_i \cap U_j) = \{ w \mid w_j \neq 0 \}$에서 분모 $w_j$가 결코 $0$이 아니므로, 모든 성분은 $w$의 holomorphic function이다 (다항식을 영점이 아닌 holomorphic function으로 나눈 것이므로). 따라서 $\varphi_j \circ \varphi_i^{-1}$은 holomorphic이고, 대칭으로 $\varphi_i \circ \varphi_j^{-1}$도 holomorphic이다. 곧 모든 transition function이 biholomorphic이며, $\{(U_i, \varphi_i)\}$는 holomorphic atlas이다. $\mathbb{CP}^n$은 콤팩트 Hausdorff 공간이므로 (단위구면 $S^{2n+1} \subseteq \mathbb{C}^{n+1}$의 연속 전사상이므로) 콤팩트 complex manifold이다.
+이 된다. 각 성분은 $w_k / w_j$ 또는 $1/w_j$ 꼴이고, 정의역 $\varphi_i(U_i \cap U_j) = \{ w \mid w_j \neq 0 \}$에서 분모 $w_j$가 결코 $0$이 아니므로, 모든 성분은 $w$의 holomorphic function이다 (다항식을 영점이 아닌 holomorphic function으로 나눈 것이므로). 따라서 $\varphi_j \circ \varphi_i^{-1}$은 holomorphic이고, 대칭으로 $\varphi_i \circ \varphi_j^{-1}$도 holomorphic이다. 곧 모든 transition function이 biholomorphic이며, $\{(U_i, \varphi_i)\}$는 holomorphic atlas이다. $\mathbb{CP}^n$은 콤팩트 Hausdorff space이므로 (단위구면 $S^{2n+1} \subseteq \mathbb{C}^{n+1}$의 연속 전사상이므로) 콤팩트 complex manifold이다.
 
 다음 예는 lattice에 의한 quotient로, 모든 차원에서 콤팩트 complex manifold를 만들어내는 또 하나의 표준적인 방법이다.
 
@@ -151,7 +151,7 @@ $$
 z \mapsto z + \lambda, \qquad \lambda \in \Lambda
 $$
 
-이다. 평행이동은 holomorphic이므로 모든 transition function이 holomorphic이고, $T$는 complex manifold가 된다. 또한 $T$는 기본영역 (lattice의 closed 평행육면체) 의 연속 전사상이므로 콤팩트하다.
+이다. 평행이동은 holomorphic이므로 모든 transition function이 holomorphic이고, $T$는 complex manifold가 된다. 또한 $T$는 기본영역 (lattice의 closed parallelepiped) 의 연속 전사상이므로 콤팩트하다.
 
 복소차원 $1$의 경우 $T = \mathbb{C}/\Lambda$는 *elliptic curve<sub>타원곡선</sub>*의 복소해석적 모습이며 항상 projective variety로 실현된다. 그러나 차원이 올라가면 사정이 달라진다. 일반적인 lattice $\Lambda \subseteq \mathbb{C}^n$ ($n \geq 2$) 에 대한 복소토러스는 어떠한 $\mathbb{CP}^N$에도 holomorphic하게 embedding되지 않는다. 곧 *비대수적*이다. Projective이 되기 위해서는 lattice가 추가적인 정수 대수적 조건 (Riemann 관계식) 을 만족해야 하는데, 이를 만족하는 lattice는 전체 가운데 measure zero인 부분집합을 이루므로 무작위로 잡은 lattice는 이를 만족하지 않는다. 모든 콤팩트 complex manifold가 대수적이지는 않다는 사실의 가장 손쉬운 출처가 바로 이 복소토러스이다.
 
@@ -161,9 +161,9 @@ $$
 복소차원 $1$의 connected complex manifold를 *Riemann surface<sub>리만 곡면</sub>*라 한다.
 :::
 
-Riemann surface는 실차원 $2$의 smooth 곡면 위에 holomorphic transition function을 얹은 것이다. 차원이 가장 낮은 만큼 복소기하학의 거의 모든 현상이 처음 나타나는 시험장이며, 앞서의 타원곡선 $\mathbb{C}/\Lambda$도 그 한 예이다. 가장 단순한 콤팩트 Riemann surface는 $\mathbb{CP}^1$이다.
+Riemann surface는 실차원 $2$의 smooth surface 위에 holomorphic transition function을 얹은 것이다. 차원이 가장 낮은 만큼 복소기하학의 거의 모든 현상이 처음 나타나는 시험장이며, 앞서의 타원곡선 $\mathbb{C}/\Lambda$도 그 한 예이다. 가장 단순한 콤팩트 Riemann surface는 $\mathbb{CP}^1$이다.
 
-::: 예시 9 (Riemann 구면 $\mathbb{CP}^1$)
+::: 예시 9 (Riemann sphere $\mathbb{CP}^1$)
 [예시 6](#ex6){: data-lid="uwpp7" }에서 $n = 1$인 경우 $\mathbb{CP}^1$은 두 차트
 
 $$
@@ -177,10 +177,10 @@ $$
 w = \frac{z_0}{z_1} = \frac{1}{z}, \qquad z \in \mathbb{C}^\ast
 $$
 
-이다. $\mathbb{C}^\ast$에서 $z \mapsto 1/z$는 holomorphic이므로 이는 holomorphic atlas이다. 위상적으로 $\mathbb{CP}^1$은 $\mathbb{C}$에 한 점 ($[0:1]$에 해당하는 $z = \infty$) 을 더한 것으로, $2$차원 구면 $S^2$와 homeomorphic이다. 이것이 확장복소평면 $\widehat{\mathbb{C}}$의 ([\[복소해석학\] §복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-lid="a1guo" }) complex manifold 구조이며, *Riemann 구면*이라 부른다.
+이다. $\mathbb{C}^\ast$에서 $z \mapsto 1/z$는 holomorphic이므로 이는 holomorphic atlas이다. 위상적으로 $\mathbb{CP}^1$은 $\mathbb{C}$에 한 점 ($[0:1]$에 해당하는 $z = \infty$) 을 더한 것으로, $2$차원 구면 $S^2$와 homeomorphic이다. 이것이 확장복소평면 $\widehat{\mathbb{C}}$의 ([\[복소해석학\] §복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13){: data-lid="a1guo" }) complex manifold 구조이며, *Riemann sphere*라 부른다.
 :::
 
-마지막으로, 가장 풍부한 예시의 출처는 projective algebraic geometry이다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous 다항식들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
+마지막으로, 가장 풍부한 예시의 출처는 projective algebraic geometry이다. $\mathbb{CP}^N$ 안의 smooth projective algebraic variety, 곧 homogeneous polynomial들의 공통 영점집합으로 정의되고 매끄러움 조건 (Jacobian의 최대 계수) 을 만족하는 부분집합은, 자연스럽게 complex manifold 구조를 물려받는다. 음함수 정리의 holomorphic 버전이 국소적으로 그러한 영점집합을 $\mathbb{C}^k$의 그래프로 펴주기 때문이다. 이렇게 얻는 complex manifold는 정의상 projective이며 따라서 algebraic하다. 앞서 본 복소토러스의 예와 합치면, 콤팩트 complex manifold의 세계는 projective인 것 (대수적) 과 non-projective인 것 (비대수적) 으로 갈린다. 어느 쪽인지를 가르는 기준을 추구하는 것이 복소기하학의 한 주된 동력이다.
 
 ## 복소정칙접공간
 
@@ -245,7 +245,7 @@ $$
 Complex manifold가 smooth manifold와 결정적으로 갈라지는 지점이 holomorphic function의 강성이다. 한 변수 holomorphic function의 최대절대값 원리가 여러 변수, 나아가 manifold 위로 올라가면, 콤팩트성 아래에서 holomorphic function이 상수밖에 없다는 강력한 결론을 낳는다. 먼저 국소판 최대원리를 정리한다.
 
 ::: 명제 12 (여러 변수 최대절대값 원리)
-$U \subseteq \mathbb{C}^n$이 connected 열린집합이고 $f : U \rightarrow \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 interior point $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
+$U \subseteq \mathbb{C}^n$이 connected open set이고 $f : U \rightarrow \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 interior point $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
@@ -281,9 +281,9 @@ $$
 
 를 둔다. $S$는 정의상 열려 있다. $S$가 닫혀 있음과 비어 있지 않음을 보이면, $M$의 연결성으로 $S = M$이 되어 결론이 따른다.
 
-먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 interior point $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12){: data-lid="lzptz" }에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
+먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 interior point $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12){: data-lid="lzptz" }에 의해 $g$는 connected open set $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
 
-다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected chart $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12){: data-lid="i7ty6" }의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
+다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected chart $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12){: data-lid="i7ty6" }의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected open set $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
 
 이로써 $S$는 비어 있지 않고 열려 있으며 닫혀 있다. $M$이 connected이므로 $S = M$이고, $f$는 $M$ 전체에서 (한 근방마다 상수이며 connected이므로) 상수이다.
 :::

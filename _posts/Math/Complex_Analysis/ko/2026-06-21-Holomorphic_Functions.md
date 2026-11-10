@@ -1,7 +1,7 @@
 ---
 title: "복소정칙함수"
-description: "복소미분가능성을 한 변수 차분비의 극한으로 정의하고, 영역에서 복소미분가능한 복소정칙함수를 도입한다. Cauchy–Riemann 방정식과 Wirtinger 미분으로 실미분가능성과의 관계를 밝히고, 멱급수·지수·삼각함수의 복소정칙성과 실수부·허수부가 이루는 조화함수를 다룬다."
-excerpt: "복소미분가능성, 복소정칙함수, Cauchy–Riemann 방정식, Wirtinger derivative, 멱급수, 조화함수"
+description: "복소미분가능성을 한 변수 차분비의 극한으로 정의하고, 영역에서 복소미분가능한 복소정칙함수를 도입한다. Cauchy–Riemann equations와 Wirtinger 미분으로 실미분가능성과의 관계를 밝히고, 멱급수·지수·삼각함수의 복소정칙성과 실수부·허수부가 이루는 조화함수를 다룬다."
+excerpt: "복소미분가능성, 복소정칙함수, Cauchy–Riemann equations, Wirtinger derivative, 멱급수, 조화함수"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/holomorphic_functions
@@ -14,7 +14,7 @@ weight: 2
 published: false
 ---
 
-복소평면을 거리공간으로 정비하고 ([§복소수와 복소평면, ⁋정의 8](/ko/math/complex_analysis/complex_numbers#def8){: data-lid="vl83s" }) 나면, 그 위에서 정의된 함수의 미분을 물을 수 있다. 형식상 복소미분의 정의는 실함수의 미분과 똑같이 차분비 $(f(z_0+h)-f(z_0))/h$의 극한이지만, 이번에는 증분 $h$가 복소수여서 평면의 모든 방향에서 같은 극한을 강요한다. 이 한 줄의 조건이 실함수에는 없는 엄청난 경직성을 낳아, 한 번 복소미분가능한 함수가 무한히 미분가능하고 멱급수로 전개되며 그 실수부와 허수부가 조화방정식을 만족하는 등 풍부한 구조가 따라 나온다. 이 글에서는 복소미분가능성과 *holomorphicity*를 정의하고, 그것이 실미분가능성과 어떻게 다른지를 Cauchy–Riemann 방정식으로 정확히 잡아낸다.
+복소평면을 거리공간으로 정비하고 ([§복소수와 복소평면, ⁋정의 8](/ko/math/complex_analysis/complex_numbers#def8){: data-lid="vl83s" }) 나면, 그 위에서 정의된 함수의 미분을 물을 수 있다. 형식상 복소미분의 정의는 실함수의 미분과 똑같이 차분비 $(f(z_0+h)-f(z_0))/h$의 극한이지만, 이번에는 증분 $h$가 복소수여서 평면의 모든 방향에서 같은 극한을 강요한다. 이 한 줄의 조건이 실함수에는 없는 엄청난 경직성을 낳아, 한 번 복소미분가능한 함수가 무한히 미분가능하고 멱급수로 전개되며 그 실수부와 허수부가 조화방정식을 만족하는 등 풍부한 구조가 따라 나온다. 이 글에서는 복소미분가능성과 *holomorphicity*를 정의하고, 그것이 실미분가능성과 어떻게 다른지를 Cauchy–Riemann equations로 정확히 잡아낸다.
 
 함수의 정의역으로는 항상 $\mathbb{C}$의 *영역<sub>domain</sub>*, 곧 공집합이 아닌 열린 연결집합 $\Omega \subseteq \mathbb{C}$를 택한다. 영역에서 함수를 다루는 까닭은, 미분이 본질적으로 한 점 근방의 정보를 요구하므로 정의역이 열려 있어야 하고, 연결성은 뒤에서 보듯 "도함수가 $0$이면 상수" 같은 전역적 결론을 가능하게 하기 때문이다.
 
@@ -28,7 +28,7 @@ $$f'(z_0) = \lim_{h \rightarrow 0} \frac{f(z_0 + h) - f(z_0)}{h}$$
 이 존재하면 $f$가 $z_0$에서 *복소미분가능<sub>complex differentiable</sub>*하다고 하고, 그 극한값 $f'(z_0)$을 $z_0$에서의 *도함수<sub>derivative</sub>*라 한다. 여기서 $h$는 $0$이 아닌 복소수이며 $z_0 + h \in \Omega$인 범위에서 $0$으로 보낸다.
 :::
 
-극한 $h \rightarrow 0$은 복소평면 위에서의 극한, 곧 $\lvert h\rvert \rightarrow 0$이므로 $h$가 $0$에 다가가는 *방향*에 무관하게 같은 값을 주어야 한다는 강한 요구이다. 실수축을 따라 $h \rightarrow 0$으로 보내든, 허수축을 따라 보내든, 혹은 나선을 그리며 보내든 차분비가 모두 같은 극한 $f'(z_0)$으로 수렴해야 한다. 실함수의 한쪽·양쪽 미분과 달리 평면에는 다가가는 길이 무수히 많으므로, 이 일치 요구가 곧 아래 Cauchy–Riemann 방정식이라는 구속으로 번역된다.
+극한 $h \rightarrow 0$은 복소평면 위에서의 극한, 곧 $\lvert h\rvert \rightarrow 0$이므로 $h$가 $0$에 다가가는 *방향*에 무관하게 같은 값을 주어야 한다는 강한 요구이다. 실수축을 따라 $h \rightarrow 0$으로 보내든, 허수축을 따라 보내든, 혹은 나선을 그리며 보내든 차분비가 모두 같은 극한 $f'(z_0)$으로 수렴해야 한다. 실함수의 한쪽·양쪽 미분과 달리 평면에는 다가가는 길이 무수히 많으므로, 이 일치 요구가 곧 아래 Cauchy–Riemann equations라는 구속으로 번역된다.
 
 ::: 정의 2
 함수 $f : \Omega \rightarrow \mathbb{C}$가 영역 $\Omega$의 *모든* 점에서 복소미분가능하면, $f$를 $\Omega$ 위의 *holomorphic function<sub>복소정칙함수</sub>*이라 한다. $\mathbb{C}$ 전체에서 holomorphic인 함수는 *entire function<sub>전해석함수</sub>*이라 부른다.
@@ -84,9 +84,9 @@ $$\frac{\overline{z_0 + h} - \overline{z_0}}{h} = \frac{\bar{h}}{h}$$
 
 ## Cauchy–Riemann 방정식
 
-[예시 4](#ex4){: data-lid="4bxuu" }는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + iv(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="4qzyt" }) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
+[예시 4](#ex4){: data-lid="4bxuu" }는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann equations이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + iv(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="4qzyt" }) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
 
-::: 정리 5 (Cauchy–Riemann 방정식)
+::: 정리 5 (Cauchy–Riemann equations)
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$이며 $z_0 = x_0 + iy_0 \in \Omega$이라 하자. 그러면 $f$가 $z_0$에서 복소미분가능한 것은 $u, v$가 $(x_0, y_0)$에서 ($\mathbb{R}^2$의 함수로서) 실미분가능하고 그곳에서
 
 $$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$$
@@ -114,7 +114,7 @@ v(x_0+s, y_0+t) - v(x_0, y_0) &= bs + at + \Img r(h)
 
 $$\begin{pmatrix} u_x & u_y \\ v_x & v_y \end{pmatrix} = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$$
 
-임을 뜻한다. 여기서 곧바로 $u_x = a = v_y$, $u_y = -b = -v_x$, 곧 Cauchy–Riemann 방정식을 읽으며, $f'(z_0) = a + ib = u_x + i v_x$이다.
+임을 뜻한다. 여기서 곧바로 $u_x = a = v_y$, $u_y = -b = -v_x$, 곧 Cauchy–Riemann equations를 읽으며, $f'(z_0) = a + ib = u_x + i v_x$이다.
 
 역으로 $u, v$가 $(x_0, y_0)$에서 실미분가능하고 그곳에서 $u_x = v_y$, $u_y = -v_x$라 하자. $a = u_x$, $b = v_x$로 두면 $v_y = a$, $u_y = -b$이므로 위 야코비 행렬이 다시 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 꼴이다. 실미분가능성을 실허 두 성분으로 묶어 $h = s + it$로 쓰면
 
@@ -136,18 +136,18 @@ $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="bnu35" }) 의 직접적 귀결이다.
 
 ::: 따름정리 6
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$의 네 편미분 $u_x, u_y, v_x, v_y$이 $\Omega$에서 모두 존재하고 연속이라 하자. 그러면 $f$가 $\Omega$에서 holomorphic인 것은 $\Omega$의 모든 점에서 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$가 성립하는 것과 동치이다.
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$의 네 편미분 $u_x, u_y, v_x, v_y$이 $\Omega$에서 모두 존재하고 연속이라 하자. 그러면 $f$가 $\Omega$에서 holomorphic인 것은 $\Omega$의 모든 점에서 Cauchy–Riemann equations $u_x = v_y$, $u_y = -v_x$가 성립하는 것과 동치이다.
 :::
 
 ::: 증명
-편미분이 연속이면 $u, v$가 각 점에서 실미분가능하다 ([\[해석학\] §다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="eh14n" }). 따라서 실미분가능성은 가정에서 자동으로 충족되고, [정리 5](#thm5){: data-lid="2e2xa" }의 동치성에서 복소미분가능성은 각 점에서 Cauchy–Riemann 방정식과 동치로 환원된다. 이것이 $\Omega$의 모든 점에서 성립하는 것이 곧 $f$가 $\Omega$에서 holomorphic이라는 것이다.
+편미분이 연속이면 $u, v$가 각 점에서 실미분가능하다 ([\[해석학\] §다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="eh14n" }). 따라서 실미분가능성은 가정에서 자동으로 충족되고, [정리 5](#thm5){: data-lid="2e2xa" }의 동치성에서 복소미분가능성은 각 점에서 Cauchy–Riemann equations와 동치로 환원된다. 이것이 $\Omega$의 모든 점에서 성립하는 것이 곧 $f$가 $\Omega$에서 holomorphic이라는 것이다.
 :::
 
 [따름정리 6](#cor6){: data-lid="pg1c2" }은 실제 계산에서 holomorphicity를 확인하는 가장 흔한 도구이다. 가령 다항식이나 $e^x(\cos y + i\sin y)$처럼 성분이 smooth한 함수에 대해서는 편미분의 연속성이 자동이므로, Cauchy–Riemann 두 등식만 점검하면 된다. 이 판정을 더 간결하게 적는 표기가 다음 절의 Wirtinger 미분이다.
 
 ## Wirtinger derivative
 
-Cauchy–Riemann 방정식의 두 등식은 적절한 미분연산자를 도입하면 단 하나의 등식으로 압축된다. 발상은 함수를 실변수 $x, y$가 아니라 형식적으로 $z = x + iy$와 $\bar{z} = x - iy$의 함수로 보고, 이 두 변수에 대한 미분을 정의하는 것이다.
+Cauchy–Riemann equations의 두 등식은 적절한 미분연산자를 도입하면 단 하나의 등식으로 압축된다. 발상은 함수를 실변수 $x, y$가 아니라 형식적으로 $z = x + iy$와 $\bar{z} = x - iy$의 함수로 보고, 이 두 변수에 대한 미분을 정의하는 것이다.
 
 ::: 정의 7
 $\Omega \subseteq \mathbb{C}$에서 실미분가능한 함수 $f$에 대하여 *Wirtinger derivative<sub>Wirtinger derivative</sub>*을
@@ -157,10 +157,10 @@ $$\frac{\partial f}{\partial z} = \frac{1}{2}\left(\frac{\partial f}{\partial x}
 으로 정의하고, 각각 $\partial_z f$, $\partial_{\bar{z}} f$로도 적는다. 여기서 $\partial_x f$, $\partial_y f$는 $f$를 두 실변수 $x, y$의 (복소숫값) 함수로 본 편미분이다.
 :::
 
-이 정의는 $\partial_z$가 $z = x + iy$, $\partial_{\bar{z}}$가 $\bar{z} = x - iy$에 대한 "도함수"처럼 행동하도록 고안된 것이다. 실제로 형식적으로 $x = (z + \bar{z})/2$, $y = (z - \bar{z})/(2i)$로 두고 연쇄법칙을 적용하면 위 두 연산자가 나온다. 표기의 정당성은 다음 항등식들로 확인되는데, $\partial_z z = 1$, $\partial_z \bar{z} = 0$, $\partial_{\bar{z}} z = 0$, $\partial_{\bar{z}} \bar{z} = 1$이 성립한다. 가령 $z = x + iy$에 대해 $\partial_{\bar{z}} z = (\partial_x + i\partial_y)(x + iy)/2 = (1 + i\cdot i)/2 = 0$이다. 이 표기로 Cauchy–Riemann 방정식은 단 하나의 등식이 된다.
+이 정의는 $\partial_z$가 $z = x + iy$, $\partial_{\bar{z}}$가 $\bar{z} = x - iy$에 대한 "도함수"처럼 행동하도록 고안된 것이다. 실제로 형식적으로 $x = (z + \bar{z})/2$, $y = (z - \bar{z})/(2i)$로 두고 연쇄법칙을 적용하면 위 두 연산자가 나온다. 표기의 정당성은 다음 항등식들로 확인되는데, $\partial_z z = 1$, $\partial_z \bar{z} = 0$, $\partial_{\bar{z}} z = 0$, $\partial_{\bar{z}} \bar{z} = 1$이 성립한다. 가령 $z = x + iy$에 대해 $\partial_{\bar{z}} z = (\partial_x + i\partial_y)(x + iy)/2 = (1 + i\cdot i)/2 = 0$이다. 이 표기로 Cauchy–Riemann equations는 단 하나의 등식이 된다.
 
 ::: 명제 8
-$f = u + iv$가 $z_0$에서 실미분가능하다고 하자. 그러면 $z_0$에서 Cauchy–Riemann 방정식이 성립하는 것은
+$f = u + iv$가 $z_0$에서 실미분가능하다고 하자. 그러면 $z_0$에서 Cauchy–Riemann equations가 성립하는 것은
 
 $$\frac{\partial f}{\partial \bar{z}}(z_0) = 0$$
 
@@ -172,11 +172,11 @@ $f = u + iv$의 편미분을 직접 대입하면
 
 $$\frac{\partial f}{\partial \bar{z}} = \frac{1}{2}\left( (u_x + i v_x) + i(u_y + i v_y) \right) = \frac{1}{2}\bigl( (u_x - v_y) + i(v_x + u_y) \bigr)$$
 
-이다. 이 복소수가 $0$인 것은 실부와 허부가 모두 $0$인 것, 곧 $u_x - v_y = 0$이고 $v_x + u_y = 0$인 것과 동치인데, 이는 정확히 $u_x = v_y$, $u_y = -v_x$, 곧 Cauchy–Riemann 방정식이다. 한편
+이다. 이 복소수가 $0$인 것은 실부와 허부가 모두 $0$인 것, 곧 $u_x - v_y = 0$이고 $v_x + u_y = 0$인 것과 동치인데, 이는 정확히 $u_x = v_y$, $u_y = -v_x$, 곧 Cauchy–Riemann equations이다. 한편
 
 $$\frac{\partial f}{\partial z} = \frac{1}{2}\left( (u_x + i v_x) - i(u_y + i v_y) \right) = \frac{1}{2}\bigl( (u_x + v_y) + i(v_x - u_y) \bigr)$$
 
-인데, Cauchy–Riemann 방정식이 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $(2u_x + 2iv_x)/2 = u_x + i v_x$가 되어, [정리 5](#thm5){: data-lid="inicn" }의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
+인데, Cauchy–Riemann equations가 성립하면 $v_y = u_x$, $u_y = -v_x$이므로 우변이 $(2u_x + 2iv_x)/2 = u_x + i v_x$가 되어, [정리 5](#thm5){: data-lid="inicn" }의 도함수 공식에 의해 $f'(z_0) = u_x + i v_x = \partial_z f(z_0)$이다.
 :::
 
 [명제 8](#prop8){: data-lid="rteyh" }은 holomorphicity를 "$f$가 $\bar{z}$에 의존하지 않는다"로 해석하게 해 준다. 형식적으로 $\partial_{\bar{z}} f = 0$은 $f$가 $\bar{z}$에 무관하게 $z$만의 함수임을 뜻하며, holomorphic function이 곧 "$z$만의 함수"라는 직관을 정당화한다. 이 관점에서 [예시 4](#ex4){: data-lid="xgliy" }의 $f(z) = \bar{z}$는 $\partial_{\bar{z}}\bar{z} = 1 \neq 0$이라 어디에서도 holomorphic이 아님이 즉시 보인다. 또 holomorphic function의 도함수가 $\partial_z f$로 주어지므로, 실무에서는 $f$를 $z$로 적고 평범하게 미분하면 도함수가 나온다. 가령 $f(z) = z^2$이면 $\partial_z f = 2z$, $\partial_{\bar{z}} f = 0$이다.
@@ -252,7 +252,7 @@ $f = u + iv$가 영역 $\Omega$에서 holomorphic이면, $u = \Real f$와 $v = \
 :::
 
 ::: 증명
-$f$가 holomorphic이면 [정리 5](#thm5){: data-lid="k8nal" }에 의해 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하며, 절 서두에서 받아들인 대로 $C^2$급이다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
+$f$가 holomorphic이면 [정리 5](#thm5){: data-lid="k8nal" }에 의해 $u, v$가 Cauchy–Riemann equations $u_x = v_y$, $u_y = -v_x$를 만족하며, 절 서두에서 받아들인 대로 $C^2$급이다. 첫 등식을 $x$로, 둘째 등식을 $y$로 편미분하면
 
 $$u_{xx} = v_{yx}, \qquad u_{yy} = -v_{xy}$$
 
@@ -263,20 +263,20 @@ $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 이다. $v$에 대해서도 같은 방식으로, $u_y = -v_x$를 $x$로, $u_x = v_y$를 $y$로 편미분하여 $v_{xx} = -u_{yx}$, $v_{yy} = u_{xy}$를 얻고 $u_{yx} = u_{xy}$를 쓰면 $\Delta v = v_{xx} + v_{yy} = -u_{yx} + u_{xy} = 0$이다. 따라서 $u, v$가 모두 조화이다.
 :::
 
-[명제 12](#prop12){: data-lid="neurm" }에서 holomorphic function 하나가 두 조화함수 $u, v$를 주며, 이 둘은 Cauchy–Riemann 방정식으로 묶여 있다. 이 관계에 이름을 붙인다.
+[명제 12](#prop12){: data-lid="neurm" }에서 holomorphic function 하나가 두 조화함수 $u, v$를 주며, 이 둘은 Cauchy–Riemann equations로 묶여 있다. 이 관계에 이름을 붙인다.
 
 ::: 정의 13
-영역 $\Omega$ 위의 두 조화함수 $u, v$가 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$를 만족하면, $v$를 $u$의 *harmonic conjugate<sub>조화켤레</sub>*라 한다.
+영역 $\Omega$ 위의 두 조화함수 $u, v$가 Cauchy–Riemann equations $u_x = v_y$, $u_y = -v_x$를 만족하면, $v$를 $u$의 *harmonic conjugate<sub>조화켤레</sub>*라 한다.
 :::
 
-조화켤레는 [정의 13](#def13){: data-lid="6ldk1" }의 비대칭성이 시사하듯 $u$에서 $v$로의 일방적 관계이며, 실제로 $v$가 $u$의 조화켤레이면 $-u$가 $v$의 조화켤레가 된다 (Cauchy–Riemann 방정식의 두 등식을 $(v, -u)$에 대해 다시 쓰면 확인된다). 주어진 조화함수 $u$에 대해 그 조화켤레 $v$가 (적절한 영역에서) 존재하면, $f = u + iv$가 holomorphic function이 되어 임의의 조화함수를 holomorphic function의 실수부로 실현할 수 있다. 가장 단순한 예로 $u(x, y) = x^2 - y^2$를 보면 $u_{xx} + u_{yy} = 2 - 2 = 0$이라 조화이고, $v(x, y) = 2xy$가 $v_y = 2x = u_x$, $v_x = 2y = -u_y$로 조화켤레이며, 둘을 합치면 $f(z) = (x^2 - y^2) + 2ixy = z^2$으로 holomorphic function을 회복한다.
+조화켤레는 [정의 13](#def13){: data-lid="6ldk1" }의 비대칭성이 시사하듯 $u$에서 $v$로의 일방적 관계이며, 실제로 $v$가 $u$의 조화켤레이면 $-u$가 $v$의 조화켤레가 된다 (Cauchy–Riemann equations의 두 등식을 $(v, -u)$에 대해 다시 쓰면 확인된다). 주어진 조화함수 $u$에 대해 그 조화켤레 $v$가 (적절한 영역에서) 존재하면, $f = u + iv$가 holomorphic function이 되어 임의의 조화함수를 holomorphic function의 실수부로 실현할 수 있다. 가장 단순한 예로 $u(x, y) = x^2 - y^2$를 보면 $u_{xx} + u_{yy} = 2 - 2 = 0$이라 조화이고, $v(x, y) = 2xy$가 $v_y = 2x = u_x$, $v_x = 2y = -u_y$로 조화켤레이며, 둘을 합치면 $f(z) = (x^2 - y^2) + 2ixy = z^2$으로 holomorphic function을 회복한다.
 
 ::: 예시 14 (지수함수의 실허부와 조화성)
 Entire function $e^z = e^x(\cos y + i\sin y)$의 실수부와 허수부는
 
 $$u(x, y) = e^x \cos y, \qquad v(x, y) = e^x \sin y$$
 
-이다. [명제 12](#prop12){: data-lid="5uzqi" }에 의해 둘 다 조화여야 하는데, 직접 확인하면 $u_{xx} = e^x\cos y$, $u_{yy} = -e^x\cos y$이므로 $\Delta u = 0$이고, 같은 계산으로 $\Delta v = 0$이다. 또 $u_x = e^x\cos y = v_y$, $u_y = -e^x\sin y = -v_x$로 Cauchy–Riemann 방정식이 성립하여 $v$가 $u$의 조화켤레임을 본다. 도함수는 [명제 8](#prop8){: data-lid="y9p62" }의 $f' = \partial_z f = u_x + i v_x = e^x\cos y + ie^x\sin y = e^z$로, 앞서 항별미분으로 얻은 $(e^z)' = e^z$와 일치한다.
+이다. [명제 12](#prop12){: data-lid="5uzqi" }에 의해 둘 다 조화여야 하는데, 직접 확인하면 $u_{xx} = e^x\cos y$, $u_{yy} = -e^x\cos y$이므로 $\Delta u = 0$이고, 같은 계산으로 $\Delta v = 0$이다. 또 $u_x = e^x\cos y = v_y$, $u_y = -e^x\sin y = -v_x$로 Cauchy–Riemann equations가 성립하여 $v$가 $u$의 조화켤레임을 본다. 도함수는 [명제 8](#prop8){: data-lid="y9p62" }의 $f' = \partial_z f = u_x + i v_x = e^x\cos y + ie^x\sin y = e^z$로, 앞서 항별미분으로 얻은 $(e^z)' = e^z$와 일치한다.
 :::
 
 ---

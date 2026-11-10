@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="rtgha" }에서 우리는 naive 여접 복합체 $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
+[\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="rtgha" }에서 우리는 naive cotangent complex $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
 
 우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 유도 tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $\LL_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
 
@@ -30,10 +30,10 @@ Homotopy 이론적 정련의 출발점은 대상을 하나의 고정된 집합�
 $\Delta$의 morphism은 $i$번째 원소를 건너뛰는 단사 *coface<sub>여면</sub>* $\delta^i:[n-1]\rightarrow[n]$과 $i$번째 원소를 겹치는 전사 *codegeneracy<sub>여퇴화</sub>* $\sigma^i:[n+1]\rightarrow[n]$으로 생성되므로, simplicial object $X$는 그 image $X_n$들과 함께 *face map<sub>면 사상</sub>* $d_i=X(\delta^i):X_n\rightarrow X_{n-1}$과 *degeneracy map<sub>퇴화 사상</sub>* $s_i=X(\sigma^i):X_n\rightarrow X_{n+1}$ ($0\leq i\leq n$)으로 완전히 결정되며, 이들은 *simplicial identity<sub>단체 항등식</sub>*, 곧 face 사이의 $d_id_j=d_{j-1}d_i$ ($i<j$), face와 degeneracy 사이의 $d_is_j=s_{j-1}d_i$ ($i<j$)와 $d_js_j=d_{j+1}s_j=\id$와 $d_is_j=s_jd_{i-1}$ ($i>j+1$), 그리고 degeneracy 사이의 $s_is_j=s_{j+1}s_i$ ($i\leq j$)를 만족한다.
 :::
 
-직관적으로 $X_n$은 "$n$-단체들의 모임"이고, face map은 한 단체의 $i$번째 face를 취하며, degeneracy map은 낮은 차원의 단체를 퇴화한 높은 차원 단체로 밀어 넣는다. Ring이나 module 같은 대수적 대상 $\mathcal{C}$에서의 simplicial object는 이렇게 조합적으로 얽힌 대상들의 열로서, 하나의 대상만으로는 볼 수 없는 higher homotopy 정보를 실어 나른다. Simplicial module의 경우 이 정보는 놀랍도록 깔끔한 대수적 형태로 번역되는데, 그 다리가 normalization 사슬 복합체이다.
+직관적으로 $X_n$은 "$n$-단체들의 모임"이고, face map은 한 단체의 $i$번째 face를 취하며, degeneracy map은 낮은 차원의 단체를 퇴화한 높은 차원 단체로 밀어 넣는다. Ring이나 module 같은 대수적 대상 $\mathcal{C}$에서의 simplicial object는 이렇게 조합적으로 얽힌 대상들의 열로서, 하나의 대상만으로는 볼 수 없는 higher homotopy 정보를 실어 나른다. Simplicial module의 경우 이 정보는 놀랍도록 깔끔한 대수적 형태로 번역되는데, 그 다리가 normalized chain complex이다.
 
 ::: 정의 2
-Simplicial $A$-module $M$에 대하여, 각 $n$에서 degeneracy들의 image가 생성하는 부분모듈 $D_n=\sum_{i=0}^{n-1}\im(s_i)\subseteq M_n$을 잡고, *normalization 사슬 복합체<sub>normalized chain complex</sub>* $N(M)$를
+Simplicial $A$-module $M$에 대하여, 각 $n$에서 degeneracy들의 image가 생성하는 부분모듈 $D_n=\sum_{i=0}^{n-1}\im(s_i)\subseteq M_n$을 잡고, *normalized chain complex<sub>정규화 사슬 복합체</sub>* $N(M)$를
 
 $$N(M)_n=M_n/D_n,\qquad \partial=\sum_{i=0}^{n}(-1)^id_i:N(M)_n\rightarrow N(M)_{n-1}$$
 
@@ -43,14 +43,14 @@ $$N(M)_n=M_n/D_n,\qquad \partial=\sum_{i=0}^{n}(-1)^id_i:N(M)_n\rightarrow N(M)_
 여기서 교대합 $\sum(-1)^id_i$가 $D_n$을 $D_{n-1}$로 보내 quotient 위에 잘 내려오고 $\partial^2=0$이 simplicial identity로부터 따르는 것은 직접 확인된다 ([\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology){: data-lid="5gfzz" }의 사슬 복합체 형식). $N(M)_n$은 동형으로 $\bigcap_{i=0}^{n-1}\ker(d_i)\subseteq M_n$과 일치하며, 이 부분모듈 위에서 $\partial$은 남은 마지막 face $(-1)^nd_n$으로 주어진다. Normalization이 담아내는 정보가 얼마나 손실 없는지를 말해 주는 것이 다음의 고전적 정리이다.
 
 ::: 정리 3 (Dold–Kan)
-Normalization 사슬 복합체 functor는 simplicial $A$-module들의 범주와 connective 사슬 복합체들의 범주 사이의 범주 동치
+Normalized chain complex functor는 simplicial $A$-module들의 범주와 connective chain complex들의 범주 사이의 범주 동치
 
 $$N:\operatorname{sMod}_A\overset{\sim}{\rightarrow}\operatorname{Ch}_{\geq0}(A)$$
 
 를 준다. 더욱이 이 동치는 simplicial homotopy를 사슬 homotopy로, 따라서 약한 동치를 quasi-isomorphism으로 대응시킨다.
 :::
 ::: 증명
-Inverse functor $\Gamma:\operatorname{Ch}_{\geq0}(A)\rightarrow\operatorname{sMod}_A$를 명시적으로 구성한다. Connective 복합체 $C$에 대하여
+Inverse functor $\Gamma:\operatorname{Ch}_{\geq0}(A)\rightarrow\operatorname{sMod}_A$를 명시적으로 구성한다. Connective complex $C$에 대하여
 
 $$\Gamma(C)_n=\bigoplus_{[n]\twoheadrightarrow[k]}C_k$$
 
@@ -71,7 +71,7 @@ $\operatorname{Poly}_k$에서의 대상, 곧 $k[\x_1,\ldots,\x_n]$을 *free anim
 
 이 정의의 요체는 "polynomial ring은 이미 완벽하므로 손대지 않고, 나머지 ring은 polynomial ring들의 정합적 colimit으로 재구성한다"는 *nonabelian derived functor<sub>비아벨 유도 함자</sub>*의 철학이다. 한 ordinary ring $B$를 이 $\infty$-범주 안에서 보려면, $B$를 free animated ring들의 simplicial diagram $P_\bullet$의 homotopy colimit으로 실현한다. Sifted colimit을 요구하는 이유는 정확히 이것인데, 유한곱과 정합적인 colimit인 sifted colimit만이 대수 구조 (곱셈)를 colimit 뒤에도 보존하기 때문이다 ([\[범주론\] §극한](/ko/math/category_theory/limits){: data-lid="09zw3" }의 colimit 개념). 실용적으로는 Dold–Kan 대응을 통해, animated $k$-algebra를 "각 항이 polynomial ring인 simplicial commutative ring $P_\bullet$"으로 다루어도 무방하다.
 
-Animated ring $R$의 밑에 깔린 simplicial set (또는 Dold–Kan을 통한 connective 복합체)의 homotopy가 그 대상의 가장 기본적인 불변량이다.
+Animated ring $R$의 밑에 깔린 simplicial set (또는 Dold–Kan을 통한 connective complex)의 homotopy가 그 대상의 가장 기본적인 불변량이다.
 
 ::: 정의 5
 Animated ring $R$을 simplicial commutative ring $R_\bullet$으로 실현했을 때, 그 밑에 깔린 simplicial abelian group의 *homotopy group*
@@ -81,7 +81,7 @@ $$\pi_i(R)=H_i\bigl(N(R_\bullet)\bigr)\qquad(i\geq0)$$
 을 $R$의 homotopy group이라 부른다. Animated ring morphism $f:R\rightarrow S$가 *약한 동치<sub>weak equivalence</sub>*라는 것은 모든 $i$에 대하여 $\pi_i(f):\pi_i(R)\rightarrow\pi_i(S)$가 isomorphism인 것, 곧 $f$가 $\pi_\ast$-isomorphism인 것을 뜻한다.
 :::
 
-$\pi_i(R)$는 Dold–Kan 대응에 의하여 normalization 복합체 $N(R_\bullet)$의 $i$번째 homology이므로, 실현 $R_\bullet$의 선택에 약한 동치를 무시하면 무관한 불변량이다. 특히 $\pi_0$은 $R$이 나르는 "고전적 그림자"에 해당하고, 높은 $\pi_i$들은 ordinary ring에는 없던 순수 homotopy 정보이다. 다음 명제는 이 정보들이 어떤 대수 구조를 이루는지 밝힌다.
+$\pi_i(R)$는 Dold–Kan 대응에 의하여 normalized chain complex $N(R_\bullet)$의 $i$번째 homology이므로, 실현 $R_\bullet$의 선택에 약한 동치를 무시하면 무관한 불변량이다. 특히 $\pi_0$은 $R$이 나르는 "고전적 그림자"에 해당하고, 높은 $\pi_i$들은 ordinary ring에는 없던 순수 homotopy 정보이다. 다음 명제는 이 정보들이 어떤 대수 구조를 이루는지 밝힌다.
 
 ::: 명제 6
 Animated ring $R$에 대하여 $\pi_0(R)$은 자연스럽게 ordinary commutative ring이 되고, 각 $\pi_i(R)$ ($i\geq1$)은 $\pi_0(R)$-module이 된다. Ordinary ring은 정확히 $\pi_i=0$ ($i\geq1$)인 animated ring, 곧 *discrete*한 animated ring으로서 $\operatorname{Ani}(\mathrm{CRing}_k)$에 완전 충실하게 들어간다.
@@ -116,7 +116,7 @@ $$\pi_n\bigl(B\otimes_A^{\mathbb{L}}C\bigr)\cong\Tor_n^A(B,C)\qquad(n\geq0)$$
 특히 $\pi_0(B\otimes_A^{\mathbb{L}}C)=B\otimes_AC$는 classical tensor product이고, $B$나 $C$ 중 하나가 $A$ 위에서 flat이면 higher homotopy가 모두 소멸하여 유도 tensor product는 classical tensor product와 약하게 동치이다.
 :::
 ::: 증명
-$P_\bullet\overset{\sim}{\rightarrow}B$를 free simplicial $A$-algebra 분해라 하면 [정의 7](#def7){: data-lid="vy7ja" }에 의하여 $B\otimes_A^{\mathbb{L}}C=P_\bullet\otimes_AC$이고, 그 homotopy는 Dold–Kan에 의하여 normalization 복합체 $N(P_\bullet\otimes_AC)=N(P_\bullet)\otimes_AC$의 homology이다. 각 $P_n$은 polynomial $A$-algebra이므로 free, 따라서 flat $A$-module이고, $P_\bullet\rightarrow B$가 약한 동치이므로 $N(P_\bullet)$은 $B$의 flat $A$-module 분해이다. 그럼 [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2){: data-lid="3d48b" }의 $\Tor$ 정의에 의하여
+$P_\bullet\overset{\sim}{\rightarrow}B$를 free simplicial $A$-algebra 분해라 하면 [정의 7](#def7){: data-lid="vy7ja" }에 의하여 $B\otimes_A^{\mathbb{L}}C=P_\bullet\otimes_AC$이고, 그 homotopy는 Dold–Kan에 의하여 normalized chain complex $N(P_\bullet\otimes_AC)=N(P_\bullet)\otimes_AC$의 homology이다. 각 $P_n$은 polynomial $A$-algebra이므로 free, 따라서 flat $A$-module이고, $P_\bullet\rightarrow B$가 약한 동치이므로 $N(P_\bullet)$은 $B$의 flat $A$-module 분해이다. 그럼 [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2){: data-lid="3d48b" }의 $\Tor$ 정의에 의하여
 
 $$\pi_n(P_\bullet\otimes_AC)=H_n\bigl(N(P_\bullet)\otimes_AC\bigr)=\Tor_n^A(B,C)$$
 
@@ -143,34 +143,34 @@ $$\pi_\ast\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)\cong\Lambda_k[\varepsilon],
 
 ## 완전한 여접 복합체
 
-이제 목표였던 여접 복합체를 구성한다. Naive 여접 복합체는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10){: data-lid="21to7" }). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler differential을 각 항에서 취한 뒤 normalize한다.
+이제 목표였던 여접 복합체를 구성한다. Naive cotangent complex는 $B$를 polynomial algebra의 quotient로 한 번 표현한 뒤 conormal sequence의 두 항을 취한 것이었다 ([\[가환대수학\] §미분, ⁋정의 10](/ko/math/commutative_algebra/differentials#def10){: data-lid="21to7" }). 완전한 여접 복합체는 그 "한 번의 표현"을 simplicial 자유 분해로 승격하여, Kähler differential을 각 항에서 취한 뒤 normalize한다.
 
 ::: 정의 10
 $A$-algebra $B$에 대하여, 각 항 $P_n$이 polynomial $A$-algebra이고 약한 동치 $P_\bullet\overset{\sim}{\rightarrow}B$를 이루는 free simplicial 분해를 택하자 (곧 $\pi_0(P_\bullet)=B$, $\pi_{>0}(P_\bullet)=0$). 이때 $B$의 $A$ 위에서의 *cotangent complex<sub>여접 복합체</sub>* $\LL_{B/A}$는 각 항의 Kähler differential을 $B$로 base change한 simplicial $B$-module
 
 $$\LL_{B/A}=\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$$
 
-를 Dold–Kan 대응을 통해 connective 복합체로 본 것, 곧 derived category $D(B)$의 대상이다.
+를 Dold–Kan 대응을 통해 connective complex로 본 것, 곧 derived category $D(B)$의 대상이다.
 :::
 
-각 $P_n$이 polynomial algebra이므로 $\Omega_{P_n/A}$는 free $P_n$-module이고, 따라서 $\Omega_{P_n/A}\otimes_{P_n}B$는 free $B$-module이다. 곧 $\LL_{B/A}$는 각 degree에서 free인 connective 복합체로 실현되며, naive 여접 복합체가 하나의 presentation만 쓴 것과 달리 모든 higher degree에 항을 가진다. 이 구성이 의미를 가지려면 분해의 선택에 무관해야 하고, 낮은 degree에서 옛 불변량을 복원해야 한다.
+각 $P_n$이 polynomial algebra이므로 $\Omega_{P_n/A}$는 free $P_n$-module이고, 따라서 $\Omega_{P_n/A}\otimes_{P_n}B$는 free $B$-module이다. 곧 $\LL_{B/A}$는 각 degree에서 free인 connective complex로 실현되며, naive cotangent complex가 하나의 presentation만 쓴 것과 달리 모든 higher degree에 항을 가진다. 이 구성이 의미를 가지려면 분해의 선택에 무관해야 하고, 낮은 degree에서 옛 불변량을 복원해야 한다.
 
 ::: 정리 11
 [정의 10](#def10){: data-lid="jvnq9" }의 $\LL_{B/A}\in D(B)$는 free simplicial resolution $P_\bullet\rightarrow B$의 선택에 quasi-isomorphism을 무시하면 무관하다. 나아가
 
 $$H_0(\LL_{B/A})\cong\Omega_{B/A}$$
 
-이고, degree $1$ 이하의 절단은 naive 여접 복합체와 일치한다.
+이고, degree $1$ 이하의 절단은 naive cotangent complex와 일치한다.
 
 $$\tau_{\leq1}\LL_{B/A}\simeq\NL_{B/A}$$
 :::
 ::: 증명
 무관성은 두 free simplicial resolution 사이에 언제나 세 번째 공통 정련이 존재하고, [\[가환대수학\] §미분, ⁋정리 14](/ko/math/commutative_algebra/differentials#thm14){: data-lid="vvx13" }이 각 단계에서 준 homotopy 무관성을 simplicial degree 전체에 걸쳐 정합적으로 이어 붙임으로써 나온다. 곧 $\LL_{B/A}$는 abelianization functor의 왼쪽 유도 functor (nonabelian derived functor)로서 잘 정의되며, cofibrant 분해의 선택에 무관하다.
 
-$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalization 복합체에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11){: data-lid="ok1ja" }에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\NL_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}\LL_{B/A}\simeq\NL_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
+$H_0$의 계산은 다음과 같다. $\Omega_{P_\bullet/A}\otimes_{P_\bullet}B$의 normalized chain complex에서 $H_0$은 $\Omega_{P_0/A}\otimes_{P_0}B$를 두 face의 image로 quotient한 것인데, $P_0\rightarrow B$가 전사이고 $P_1$이 relation들을 준다는 점에서 이는 정확히 conormal sequence의 cokernel, 곧 [\[가환대수학\] §미분, ⁋명제 11](/ko/math/commutative_algebra/differentials#prop11){: data-lid="ok1ja" }에서와 같은 $\Omega_{B/A}$이다. 마지막으로 $P_\bullet$의 처음 두 항 $P_1\rightrightarrows P_0\rightarrow B$만 남겨 절단하면 그로부터 얻는 두 항 복합체가 $\NL_{B/A}$의 정의와 일치하므로 $\tau_{\leq1}\LL_{B/A}\simeq\NL_{B/A}$이다. 완전한 논증은 ([Qui], [Ill], [Stacks, Cotangent Complex])에 있다.
 :::
 
-곧 완전한 여접 복합체는 naive 여접 복합체의 정보를 낮은 degree에서 그대로 담으면서, 그 위에 higher homology를 얹은 대상이다. 이 higher homology가 있어야만 비로소 변형이론이 요구했던 추이 삼각형이 성립한다.
+곧 완전한 여접 복합체는 naive cotangent complex의 정보를 낮은 degree에서 그대로 담으면서, 그 위에 higher homology를 얹은 대상이다. 이 higher homology가 있어야만 비로소 변형이론이 요구했던 추이 삼각형이 성립한다.
 
 ::: 정리 12 (추이 삼각형)
 Ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여, $D(C)$ 안의 distinguished triangle

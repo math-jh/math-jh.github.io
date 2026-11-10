@@ -1,7 +1,7 @@
 ---
 title: "Cauchy 수열과 완비성"
-description: "극한값을 모르는 채로 수렴을 판정하게 해 주는 Cauchy 수열을 정의하고, 실수에서 수렴과 Cauchy가 동치임을 Bolzano–Weierstrass 정리로 증명한다. 유리수에서의 반례, 인접한 항의 차가 0으로 가도 Cauchy가 아닌 예, 인접 차가 등비로 줄어드는 수열의 수렴을 함께 다룬다."
-excerpt: "Cauchy 수열의 정의, 실수에서의 Cauchy 판정법, 유리수 반례와 수축수열"
+description: "극한값을 모르는 채로 수렴을 판정하게 해 주는 Cauchy sequence를 정의하고, 실수에서 수렴과 Cauchy가 동치임을 Bolzano–Weierstrass 정리로 증명한다. 유리수에서의 반례, 인접한 항의 차가 0으로 가도 Cauchy가 아닌 예, 인접 차가 등비로 줄어드는 수열의 수렴을 함께 다룬다."
+excerpt: "Cauchy sequence의 정의, 실수에서의 Cauchy 판정법, 유리수 반례와 수축수열"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/cauchy_sequences
@@ -20,7 +20,7 @@ published: false
 ## Cauchy 수열
 
 ::: 정의 1
-수열 $(a_n)$이 *Cauchy 수열<sub>Cauchy sequence</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 자연수 $N$이 존재하여 모든 $m, n \geq N$에 대해 $\lvert a_m - a_n\rvert < \varepsilon$이 성립하는 것이다.
+수열 $(a_n)$이 *Cauchy sequence<sub>코시 수열</sub>*라는 것은, 임의의 $\varepsilon > 0$에 대하여 자연수 $N$이 존재하여 모든 $m, n \geq N$에 대해 $\lvert a_m - a_n\rvert < \varepsilon$이 성립하는 것이다.
 :::
 
 수렴의 정의는 항과 극한 사이의 거리를 통제하지만, 이 정의는 항과 항 사이의 거리를 통제한다. 여기서 $m, n$은 $N$ 이상의 임의의 두 첨자이며, 서로 인접할 필요가 없다. 이 점은 뒤의 예시에서 결정적으로 쓰인다.
@@ -28,7 +28,7 @@ published: false
 수렴하는 수열은 Cauchy이다.
 
 ::: 명제 2
-수렴하는 실수열은 Cauchy 수열이다.
+수렴하는 실수열은 Cauchy sequence이다.
 :::
 
 ::: 증명
@@ -40,7 +40,7 @@ $$\lvert a_m - a_n\rvert \leq \lvert a_m - L\rvert + \lvert L - a_n\rvert < \fra
 :::
 
 ::: 명제 3
-Cauchy 수열은 bounded이다.
+Cauchy sequence는 bounded이다.
 :::
 
 ::: 증명
@@ -53,14 +53,14 @@ $$M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert a_N\rvert + 1
 
 ## Cauchy 판정법
 
-이제 역방향을 보인다. 증명의 구조는 다음과 같다. Cauchy 수열은 [명제 3](#prop3){: data-lid="37aed" }에 의해 bounded이므로 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="h42zw" }에 의해 수렴 부분수열을 가진다. 그 극한을 $L$이라 하면, 부분수열의 항들이 $L$에 가깝고 수열의 항들이 서로 가까우므로 전체 수열의 항도 $L$에 가깝다.
+이제 역방향을 보인다. 증명의 구조는 다음과 같다. Cauchy sequence는 [명제 3](#prop3){: data-lid="37aed" }에 의해 bounded이므로 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="h42zw" }에 의해 수렴 부분수열을 가진다. 그 극한을 $L$이라 하면, 부분수열의 항들이 $L$에 가깝고 수열의 항들이 서로 가까우므로 전체 수열의 항도 $L$에 가깝다.
 
 ::: 정리 4 (Cauchy 판정법)
-실수열 $(a_n)$이 수렴하는 것은 $(a_n)$이 Cauchy 수열인 것과 동치이다.
+실수열 $(a_n)$이 수렴하는 것은 $(a_n)$이 Cauchy sequence인 것과 동치이다.
 :::
 
 ::: 증명
-수렴하면 Cauchy라는 것은 [명제 2](#prop2){: data-lid="24rt7" }이다. 역으로 $(a_n)$이 Cauchy 수열이라 하자. [명제 3](#prop3){: data-lid="4ohfn" }에 의해 $(a_n)$은 bounded이므로, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="kn7zr" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다.
+수렴하면 Cauchy라는 것은 [명제 2](#prop2){: data-lid="24rt7" }이다. 역으로 $(a_n)$이 Cauchy sequence라 하자. [명제 3](#prop3){: data-lid="4ohfn" }에 의해 $(a_n)$은 bounded이므로, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="kn7zr" }에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다.
 
 $a_n \rightarrow L$을 보인다. $\varepsilon > 0$을 임의로 잡는다. $\lvert a_n - L\rvert$를 $\lvert a_n - a_{n_k}\rvert$와 $\lvert a_{n_k} - L\rvert$의 합으로 쪼갤 것이므로, 각각을 $\varepsilon/2$ 미만으로 만든다. Cauchy 조건에 의해 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$인 $N$이 존재한다. 부분수열의 수렴에 의해 $K$가 존재하여 $k \geq K$이면 $\lvert a_{n_k} - L\rvert < \varepsilon/2$이다. 이제 $k \geq \max\{K, N\}$을 하나 고르면 $n_k \geq k \geq N$이므로 $a_{n_k}$는 두 조건을 모두 만족한다. 따라서 모든 $n \geq N$에 대하여
 
@@ -73,9 +73,9 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 
 ## 유리수에서의 반례
 
-Cauchy 수열이 항상 수렴하는 성질은 $\mathbb{R}$의 성질이며, 수렴하는 점이 공간 안에 있어야 한다는 조건이 숨어 있다. 같은 정의를 $\mathbb{Q}$에서 적용하면 판정법이 깨진다.
+Cauchy sequence가 항상 수렴하는 성질은 $\mathbb{R}$의 성질이며, 수렴하는 점이 공간 안에 있어야 한다는 조건이 숨어 있다. 같은 정의를 $\mathbb{Q}$에서 적용하면 판정법이 깨진다.
 
-::: 예시 5 (유리수에서 수렴하지 않는 Cauchy 수열)
+::: 예시 5 (유리수에서 수렴하지 않는 Cauchy sequence)
 $a_n = \lfloor 10^n\sqrt{2}\rfloor/10^n$, 즉 $\sqrt{2}$를 소수점 아래 $n$째 자리에서 버린 값이라 하자($a_1 = 1.4$, $a_2 = 1.41$, $a_3 = 1.414, \ldots$). 각 $a_n$은 유리수이고 $0 \leq \sqrt{2} - a_n < 10^{-n}$이다. $m \geq n \geq N$이면 $a_m$과 $a_n$ 모두 구간 $(\sqrt{2} - 10^{-N},\ \sqrt{2}]$에 들어 있으므로
 
 $$\lvert a_m - a_n\rvert < 10^{-N}$$
@@ -85,7 +85,7 @@ $$\lvert a_m - a_n\rvert < 10^{-N}$$
 그러나 $(a_n)$은 $\mathbb{Q}$ 안에서 수렴하지 않는다. $a_n \rightarrow q$인 유리수 $q$가 있다면, 이 수렴은 $\mathbb{R}$에서도 성립한다. 그런데 $0 \leq \sqrt{2} - a_n < 10^{-n}$이므로 $\mathbb{R}$에서 $a_n \rightarrow \sqrt{2}$이고, [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2){: data-lid="gxrap" }에 의해 $q = \sqrt{2}$가 된다. $\sqrt{2}$가 무리수이므로 모순이다.
 :::
 
-$\mathbb{R}$에서는 같은 수열이 $\sqrt{2}$로 수렴한다. 완비성은 이처럼 Cauchy 수열이 모이는 점이 빠져 있는 일이 없다는 뜻이다. 거리공간으로 일반화되면 이것이 *완비 거리공간*의 정의가 된다.
+$\mathbb{R}$에서는 같은 수열이 $\sqrt{2}$로 수렴한다. 완비성은 이처럼 Cauchy sequence가 모이는 점이 빠져 있는 일이 없다는 뜻이다. 거리공간으로 일반화되면 이것이 *완비 거리공간*의 정의가 된다.
 
 ## 인접한 항의 차와 Cauchy 조건
 
@@ -113,7 +113,7 @@ $a_n = \log n$도 마찬가지이다. 평균값 정리에 의해 $\log(n+1) - \l
 
 $$\lvert a_{n+2} - a_{n+1}\rvert \leq c\lvert a_{n+1} - a_n\rvert$$
 
-이 성립하면, $(a_n)$은 Cauchy 수열이고 따라서 수렴한다.
+이 성립하면, $(a_n)$은 Cauchy sequence이고 따라서 수렴한다.
 :::
 
 ::: 증명

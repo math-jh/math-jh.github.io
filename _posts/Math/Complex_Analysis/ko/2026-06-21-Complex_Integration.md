@@ -159,13 +159,13 @@ $$\int_\gamma f\dd{z} = \sum_{k=1}^n \bigl( F(\gamma(t_k)) - F(\gamma(t_{k-1})) 
 로, 중간항이 망원합으로 소거되어 같은 결론을 얻는다.
 :::
 
-[정리 8](#thm8){: data-lid="nuf7d" }의 우변은 곡선의 시점과 종점에만 의존하고 그 사이를 어떤 경로로 잇는지에는 전혀 무관하다. 이로부터 원시함수의 존재가 곧 경로 독립성과 closed 경로 적분의 소멸로 번역됨이 따라 나온다.
+[정리 8](#thm8){: data-lid="nuf7d" }의 우변은 곡선의 시점과 종점에만 의존하고 그 사이를 어떤 경로로 잇는지에는 전혀 무관하다. 이로부터 원시함수의 존재가 곧 경로 독립성과 closed path integral의 소멸로 번역됨이 따라 나온다.
 
 ::: 따름정리 9
 $\Omega \subseteq \mathbb{C}$가 열려 있고 연속함수 $f$가 $\Omega$에서 원시함수 $F$를 가진다고 하자. 그러면 다음이 성립한다.
 
 1. (경로 독립) 자취가 $\Omega$에 들어 있고 시점·종점이 같은 두 piecewise $C^1$ curve $\gamma_1, \gamma_2$에 대하여 $\int_{\gamma_1} f\dd{z} = \int_{\gamma_2} f\dd{z}$이다.
-2. (closed 경로) 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여 $\oint_\gamma f\dd{z} = 0$이다.
+2. (closed path) 자취가 $\Omega$에 들어 있는 임의의 closed piecewise $C^1$ curve $\gamma$에 대하여 $\oint_\gamma f\dd{z} = 0$이다.
 :::
 
 ::: 증명

@@ -251,11 +251,11 @@ $\mathbb{P}^n$의 경우 $X$가 Fano이므로 ($c_1(TX)$가 ample) 각 cohomolog
 
 ## 큰 양자 코호몰로지와 고전 극한
 
-위에서 정의한 small quantum product는 cohomology의 *고정된* basis 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a: \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-lid="6rdz6" }에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 intersection number $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
+위에서 정의한 small quantum product는 cohomology의 *고정된* basis 위에서의 곱셈이고, 그 deformation은 오직 Novikov variable $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a: \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4){: data-lid="6rdz6" }에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 intersection number $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
 
 $$\sum_{k \ge 0} \frac{1}{k!} \langle T_a, T_b, T_c, \underbrace{t_2, \ldots, t_2}_{k} \rangle_{0, k+3, \beta}^X q^\beta = e^{\langle t_2, \beta\rangle} q^\beta \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$$
 
-가 된다. 즉 $H^2$ 방향을 켜는 효과는 Novikov 변수를 $q^\beta \mapsto e^{\langle t_2, \beta\rangle} q^\beta$로 reparametrize하는 것에 지나지 않으며, $H^2$ 방향의 deformation은 이미 small quantum product의 $q$ 안에 들어 있다 (이런 의미에서 $q_a = e^{t^a}$로 두기도 한다). 따라서 정말로 새로운 deformation은 degree가 $2$가 아닌 방향 ($\deg T_a \neq 2$)에서 나오는데, 이 방향들은 divisor equation으로 지수함수로 접히지 않아 $t$에 대한 멱급수로 남는다. 이렇게 cohomology class 자체를 deformation 매개변수로 삼아 모든 방향을 켠 가장 일반적인 곱셈이 *big quantum product*이다.
+가 된다. 즉 $H^2$ 방향을 켜는 효과는 Novikov variable을 $q^\beta \mapsto e^{\langle t_2, \beta\rangle} q^\beta$로 reparametrize하는 것에 지나지 않으며, $H^2$ 방향의 deformation은 이미 small quantum product의 $q$ 안에 들어 있다 (이런 의미에서 $q_a = e^{t^a}$로 두기도 한다). 따라서 정말로 새로운 deformation은 degree가 $2$가 아닌 방향 ($\deg T_a \neq 2$)에서 나오는데, 이 방향들은 divisor equation으로 지수함수로 접히지 않아 $t$에 대한 멱급수로 남는다. 이렇게 cohomology class 자체를 deformation 매개변수로 삼아 모든 방향을 켠 가장 일반적인 곱셈이 *big quantum product*이다.
 
 ::: 정의 12
 $t = \sum_a t^a T_a \in H^\ast(X, \mathbb{C})$를 형식적 변수, *Gromov-Witten potential<sub>그로모프-위튼 퍼텐셜</sub>*을

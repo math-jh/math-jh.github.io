@@ -199,7 +199,7 @@ Category $\mathcal{C}$ 위의 CFG들이 이루는 2-category와 pseudofunctor $\
 
 도입부에서처럼 moduli problem을 set-valued presheaf $F$로 적으면, 이를 <em-ko>푸는</em-ko> 것은 $F$와 naturally isomorphic한 functor of points $h_X$를 갖는 기하학적 대상 $X$를 찾는 것이다. 우리는 지금까지 이 target을 $\Grpd$로 바꾸어 family와 그 사이의 isomorphism을 모두 기억하는 언어를 마련했지만, 이것만으로 representability나 local-to-global 성질이 보장되지는 않는다.
 
-이 섹션에서 우리는 이러한 representability 문제가 moduli functor가 sheaf가 되는 것과 밀접한 관련이 있다는 것을 보인다. Sheaf condition을 말하려면 먼저 base category에 topology를 주어야 한다. 지금까지의 정의에는 topology가 쓰이지 않았으므로, covering 위의 compatible한 대상과 isomorphism이 global 대상으로 붙는다는 보장은 없다. Stack은 CFG에 [§그로텐디크 위상, ⁋정의 6](/ko/math/stacks/grothendieck_topology#def6){: data-lid="memtv" }의 covering에 대한 descent 조건을 부과한 $\Grpd$-valued sheaf이다. 
+이 섹션에서 우리는 이러한 representability 문제가 moduli functor가 sheaf가 되는 것과 밀접한 관련이 있다는 것을 보인다. Sheaf condition을 말하려면 먼저 base category에 topology를 주어야 한다. 지금까지의 정의에는 topology가 쓰이지 않았으므로, covering 위의 compatible한 대상과 isomorphism이 global object로 붙는다는 보장은 없다. Stack은 CFG에 [§그로텐디크 위상, ⁋정의 6](/ko/math/stacks/grothendieck_topology#def6){: data-lid="memtv" }의 covering에 대한 descent 조건을 부과한 $\Grpd$-valued sheaf이다. 
 
 이 섹션에서 $(\mathcal{C}, \tau)$은 site이고, 위상은 covering family $\{U_i \rightarrow U\}$로 주어지는 pretopology로 기술하기로 한다. ([§그로텐디크 위상, ⁋정의 4](/ko/math/stacks/grothendieck_topology#def4){: data-lid="aqaxp" }) 또, CFG를 다룰 때는 $P:\mathcal{F} \rightarrow \mathcal{C}$의 cleavage를 하나 고정하여 $f: V\rightarrow U$의 pullback $f^\ast$과 restriction $x\vert_V=f^\ast x$을 사용한다.
 
@@ -219,9 +219,9 @@ $$g^\ast\beta: g^\ast f^\ast x\rightarrow g^\ast f^\ast y$$
 
 앞서 설명한 전략에서 CFG는 $\Grpd$-valued presheaf에 해당하므로, 이를 $\Grpd$-valued sheaf로 만들려면 covering 위의 local fiber groupoid들을 하나의 global fiber groupoid로 붙일 수 있어야 한다. Groupoid는 대상과 그 사이의 isomorphism들로 이루어지므로, 여기에는 morphism을 붙이는 문제와 대상을 붙이는 문제가 함께 들어 있다.
 
-먼저 morphism을 붙이는 문제를 생각하자. 고정된 두 대상 $x,y\in\mathcal{F}(U)$에 대하여, $\rIsom_U(x,y)$은 이 둘의 restriction 사이에 존재하는 local isomorphism들을 모은 presheaf이다. 여기서는 local isomorphism들의 source와 target이 이미 global 대상 $x,y$의 restriction으로 주어져 있다. 이 presheaf가 sheaf라는 것은 covering 위에서 주어진 local isomorphism들이 overlap에서 일치할 때 유일한 global isomorphism으로 붙는다는 뜻이다. 이것이 morphism에 대한 descent이며, [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6){: data-lid="a9deb" }의 categorical equivalence에서는 full faithfulness에 해당한다.
+먼저 morphism을 붙이는 문제를 생각하자. 고정된 두 대상 $x,y\in\mathcal{F}(U)$에 대하여, $\rIsom_U(x,y)$은 이 둘의 restriction 사이에 존재하는 local isomorphism들을 모은 presheaf이다. 여기서는 local isomorphism들의 source와 target이 이미 global object $x,y$의 restriction으로 주어져 있다. 이 presheaf가 sheaf라는 것은 covering 위에서 주어진 local isomorphism들이 overlap에서 일치할 때 유일한 global isomorphism으로 붙는다는 뜻이다. 이것이 morphism에 대한 descent이며, [\[스킴\] §충실평탄하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6){: data-lid="a9deb" }의 categorical equivalence에서는 full faithfulness에 해당한다.
 
-대상을 붙이는 문제에서는 global 대상이 미리 주어져 있지 않다. 따라서 각 $U_i$ 위의 대상 $x_i$뿐 아니라 overlap $U_{ij}$ 위에서 이들을 identify하는 isomorphism $\varphi_{ij}$도 함께 주어야 한다. 이들은  $x_i$들을 어떻게 붙일지를 지정하는 자료이며, 이들이 cocycle 조건을 만족할 때 얻는 것이 descent datum이다. 이 descent datum이 실제 global 대상의 restriction으로부터 오는지를 묻는 것이 대상에 대한 effective descent이고, 위 categorical equivalence에서는 essential surjectivity에 해당한다. Full faithfulness만으로 essential surjectivity가 따라오지는 않으므로, morphism을 붙일 수 있다는 사실만으로 대상을 붙일 수 있는 것은 아니다. 이는 [\[스킴\] §충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4){: data-lid="nqy0f" }의 descent datum을 임의의 CFG로 옮긴 것이다.
+대상을 붙이는 문제에서는 global object가 미리 주어져 있지 않다. 따라서 각 $U_i$ 위의 대상 $x_i$뿐 아니라 overlap $U_{ij}$ 위에서 이들을 identify하는 isomorphism $\varphi_{ij}$도 함께 주어야 한다. 이들은  $x_i$들을 어떻게 붙일지를 지정하는 자료이며, 이들이 cocycle 조건을 만족할 때 얻는 것이 descent datum이다. 이 descent datum이 실제 global object의 restriction으로부터 오는지를 묻는 것이 대상에 대한 effective descent이고, 위 categorical equivalence에서는 essential surjectivity에 해당한다. Full faithfulness만으로 essential surjectivity가 따라오지는 않으므로, morphism을 붙일 수 있다는 사실만으로 대상을 붙일 수 있는 것은 아니다. 이는 [\[스킴\] §충실평탄하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4){: data-lid="nqy0f" }의 descent datum을 임의의 CFG로 옮긴 것이다.
 
 이를 위해 다음 정의에서 사용할 표기를 고정하자. 주어진 covering family $\{f_i: U_i \rightarrow U\}_{i\in I}$에 대하여,
 

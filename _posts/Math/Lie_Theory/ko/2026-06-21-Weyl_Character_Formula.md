@@ -16,7 +16,7 @@ published: false
 
 최고 무게 정리는 유한차원 irreducible representation이 정확히 dominant integral weight $\lambda$에 대한 $L(\lambda)$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $L(\lambda)$의 weight 구조, 곧 어떤 weight $\mu$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12){: data-lid="6m9im" }). $\sl_2$에서 이 정보는 단순하였다. Highest weight $m$의 irreducible representation은 $m, m-2, \ldots, -m$의 weight를 각각 중복도 $1$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5){: data-lid="fr0ch" }). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl character formula이다.
 
-이 글에서 우리는 representation $V$의 모든 weight 중복도를 한꺼번에 담는 *formal character*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $M(\mu)$의 formal character가 $e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir 원소가 정하는 central character를 이용하여 $\mathrm{ch}\,L(\lambda)$를 Verma module character들의 교대합으로 풀고, 이를 정리하면 dominant integral $\lambda$에 대하여
+이 글에서 우리는 representation $V$의 모든 weight 중복도를 한꺼번에 담는 *formal character*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $M(\mu)$의 formal character가 $e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir element가 정하는 central character를 이용하여 $\mathrm{ch}\,L(\lambda)$를 Verma module character들의 교대합으로 풀고, 이를 정리하면 dominant integral $\lambda$에 대하여
 
 $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}}{\sum_{w\in W}(-1)^{\ell(w)}e^{w\rho}}$$
 
@@ -38,7 +38,7 @@ $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 로 정한 commutative ring이다. 곧 $\mathbb{Z}[P]$의 일반적인 원소는 유한합 $\sum_\mu c_\mu e^\mu$ ($c_\mu\in\mathbb{Z}$, 유한 개를 빼고 $c_\mu=0$)이다.
 :::
 
-기호 $e^\mu$는 단지 lattice 원소 $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent polynomial ring $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
+기호 $e^\mu$는 단지 lattice element $\mu$를 multiplicative group의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent polynomial ring $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 lattice $P$의 basis, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 ring automorphism으로 작용한다. 이 $W$-작용이 character 공식의 분자와 분모를 떠받치는 대칭이다.
 
 ::: 정의 2
 유한차원 representation $V$의 weight decomposition $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
@@ -52,7 +52,7 @@ Formal character는 $V$의 weight들과 그 중복도를 빠짐없이 기록하�
 
 $$\mathrm{ch}(V\oplus W)=\mathrm{ch}\,V+\mathrm{ch}\,W,\qquad\mathrm{ch}(V\otimes W)=\mathrm{ch}\,V\cdot\mathrm{ch}\,W$$
 
-가 성립한다. 또한 유한차원 representation의 weight 집합은 Weyl group 작용에 대해 불변이고 중복도가 보존되므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12){: data-lid="u4b6w" }의 증명) $\mathrm{ch}\,V$는 $W$-불변, 곧 $w\cdot\mathrm{ch}\,V=\mathrm{ch}\,V$이다. 끝으로 $e^0=1$의 계수에 모든 weight space의 차원을 모으면 전체 차원을 읽을 수 있는데, 이는 모든 형식기호 $e^\mu$를 $1$로 평가하는 ring 준동형 $\varepsilon:\mathbb{Z}[P]\rightarrow\mathbb{Z}$, $e^\mu\mapsto 1$을 통해
+가 성립한다. 또한 유한차원 representation의 weight 집합은 Weyl group 작용에 대해 불변이고 중복도가 보존되므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12){: data-lid="u4b6w" }의 증명) $\mathrm{ch}\,V$는 $W$-불변, 곧 $w\cdot\mathrm{ch}\,V=\mathrm{ch}\,V$이다. 끝으로 $e^0=1$의 계수에 모든 weight space의 차원을 모으면 전체 차원을 읽을 수 있는데, 이는 모든 형식기호 $e^\mu$를 $1$로 평가하는 ring homomorphism $\varepsilon:\mathbb{Z}[P]\rightarrow\mathbb{Z}$, $e^\mu\mapsto 1$을 통해
 
 $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 
@@ -144,10 +144,10 @@ $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$
 
 ## Weyl character formula
 
-이제 irreducible representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
+이제 irreducible representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir element의 central character가 강하게 제약한다.
 
 ::: 명제 8
-$\mathfrak{g}$의 Casimir 원소 $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이면 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같고, 거꾸로 두 고윳값이 같으면 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$이다.
+$\mathfrak{g}$의 Casimir element $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이면 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같고, 거꾸로 두 고윳값이 같으면 $\langle\mu+\rho,\mu+\rho\rangle=\langle\mu'+\rho,\mu'+\rho\rangle$이다.
 :::
 ::: 증명
 $\Omega$는 $U(\mathfrak{g})$의 중심에 속하므로 ($\sl_2$의 경우가 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12){: data-lid="z7pww" }) 각 weight space를 보존하며 highest weight module 위에서는 스칼라로 작용한다. $\mathfrak{h}$의 기저 $(H_i)$와 Killing form $\kappa$에 대한 그 dual basis $(H^i)$를 잡고 각 $\alpha\in\Phi^+$에 대해 $\kappa(e_\alpha,f_\alpha)=1$이 되도록 $e_\alpha\in\mathfrak{g}_\alpha$, $f_\alpha\in\mathfrak{g}_{-\alpha}$를 택하면 $\Omega=\sum_iH_iH^i+\sum_{\alpha\in\Phi^+}(e_\alpha f_\alpha+f_\alpha e_\alpha)$이다. $[e_\alpha,f_\alpha]=t_\alpha$ ($t_\alpha\in\mathfrak{h}$는 $\kappa$가 $\alpha$에 대응시키는 원소)를 써서 $\mathfrak{n}^+$를 오른쪽으로 몰고 $\sum_{\alpha\in\Phi^+}t_\alpha=t_{2\rho}=2t_\rho$를 쓰면
@@ -214,7 +214,7 @@ $$\dim L(\lambda)=\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha\rangle
 이 성립한다.
 :::
 ::: 증명
-$\mathfrak{h}^\ast$의 regular 원소 $\rho^\vee$ (모든 positive root $\alpha$에 대해 $\langle\alpha,\rho^\vee\rangle>0$)를 고정하고, 실변수 $t$에 대해 ring 준동형 $F_t:\widehat{\mathbb{Z}[P]}\rightarrow\mathbb{R}$을 $F_t(e^\mu)=e^{t\langle\mu,\rho^\vee\rangle}$로 정의한다. $F_0=\varepsilon$이고 $F_t(\mathrm{ch}\,L(\lambda))$는 $t\rightarrow 0$에서 $\dim L(\lambda)$로 수렴한다. [정리 9](#thm9){: data-lid="iekrp" }를 $F_t$로 평가하면
+$\mathfrak{h}^\ast$의 regular 원소 $\rho^\vee$ (모든 positive root $\alpha$에 대해 $\langle\alpha,\rho^\vee\rangle>0$)를 고정하고, 실변수 $t$에 대해 ring homomorphism $F_t:\widehat{\mathbb{Z}[P]}\rightarrow\mathbb{R}$을 $F_t(e^\mu)=e^{t\langle\mu,\rho^\vee\rangle}$로 정의한다. $F_0=\varepsilon$이고 $F_t(\mathrm{ch}\,L(\lambda))$는 $t\rightarrow 0$에서 $\dim L(\lambda)$로 수렴한다. [정리 9](#thm9){: data-lid="iekrp" }를 $F_t$로 평가하면
 
 $$F_t(\mathrm{ch}\,L(\lambda))=\frac{\sum_{w}(-1)^{\ell(w)}e^{t\langle w(\lambda+\rho),\rho^\vee\rangle}}{\prod_{\alpha>0}\bigl(e^{t\langle\alpha,\rho^\vee\rangle/2}-e^{-t\langle\alpha,\rho^\vee\rangle/2}\bigr)}$$
 
@@ -247,7 +247,7 @@ $$\mathrm{ch}\,L(m\varpi)=\frac{x^{m+1}-x^{-(m+1)}}{x-x^{-1}}=x^m+x^{m-2}+\cdots
 을 주며, 이는 weight $m,m-2,\ldots,-m$이 각각 중복도 $1$로 나타남을 뜻해 [§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5){: data-lid="nusfi" }의 $V(m)$과 정확히 일치한다. 차원 공식은 $\langle\lambda+\rho,\alpha\rangle/\langle\rho,\alpha\rangle=(m+1)/1=m+1$을 주어 $\dim L(m\varpi)=m+1$로, 같은 결론을 회복한다.
 :::
 
-$\sl_2$에서는 분자의 등비급수가 그대로 weight 사슬을 내어주므로 character 공식이 곧 $\sl_2$ 분류의 재서술이 된다. 다음으로 $\sl_3$에서는 positive root가 셋이고 Weyl group이 $S_3$이어서 중복도가 비로소 자명하지 않게 된다.
+$\sl_2$에서는 분자의 등비급수가 그대로 weight string을 내어주므로 character 공식이 곧 $\sl_2$ 분류의 재서술이 된다. 다음으로 $\sl_3$에서는 positive root가 셋이고 Weyl group이 $S_3$이어서 중복도가 비로소 자명하지 않게 된다.
 
 ::: 예시 12
 $\mathfrak{g}=\sl_3$에서 simple root는 $\alpha_1,\alpha_2$이고 positive root는 $\alpha_1,\alpha_2,\alpha_1+\alpha_2$의 셋이다. Weyl group은 $W\cong S_3$으로 $\lvert W\rvert=6$이며, $\rho=\alpha_1+\alpha_2$ (곧 두 fundamental weight의 합 $\varpi_1+\varpi_2$)이다. 내적을 $\langle\alpha_i,\alpha_i\rangle=2$, $\langle\alpha_1,\alpha_2\rangle=-1$로 normalize한다.

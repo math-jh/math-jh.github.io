@@ -29,7 +29,7 @@ $K\subseteq X$가 *compact<sub>콤팩트</sub>*라는 것은 $K$의 모든 open 
 
 $K$ 자신을 거리공간으로 보아도 같은 개념이 된다. $K$의 열린집합은 $X$의 열린집합 $U$에 대한 $U\cap K$ 꼴이므로, $K$를 덮는 $X$의 열린집합들과 $K$를 덮는 $K$의 열린집합들이 서로 대응하기 때문이다. 따라서 compactness는 $K$가 어느 공간 안에 놓여 있는지에 의존하지 않는 성질이다.
 
-개구간 $(0,1)$은 compact가 아니다. $U_n=(1/n,1)$ $(n\geq 2)$로 이루어진 모임은 $(0,1)$을 덮지만, 유한개의 $U_n$의 합집합은 가장 큰 첨자 $N$에 대해 $U_N$과 같아서 $(0,1/N]$을 놓친다. 같은 방식으로 $\mathbb{R}$은 열린 구간 $(-n,n)$들로 덮어 보면 compact가 아님을 알 수 있다. 이처럼 open cover의 정의는 반례를 보이기에는 직접적이지만, compact임을 보이거나 compact 집합에서 결론을 끌어내기에는 점열 쪽이 다루기 쉽다.
+개구간 $(0,1)$은 compact가 아니다. $U_n=(1/n,1)$ $(n\geq 2)$로 이루어진 모임은 $(0,1)$을 덮지만, 유한개의 $U_n$의 합집합은 가장 큰 첨자 $N$에 대해 $U_N$과 같아서 $(0,1/N]$을 놓친다. 같은 방식으로 $\mathbb{R}$은 열린 구간 $(-n,n)$들로 덮어 보면 compact가 아님을 알 수 있다. 이처럼 open cover의 정의는 반례를 보이기에는 직접적이지만, compact임을 보이거나 compact set에서 결론을 끌어내기에는 점열 쪽이 다루기 쉽다.
 
 ::: 정의 2
 $K\subseteq X$가 *sequentially compact*라는 것은 $K$의 점으로 이루어진 모든 점열이 $K$의 점으로 수렴하는 부분수열을 가지는 것이다.
@@ -50,7 +50,7 @@ Totally bounded이면 bounded이다. $\varepsilon=1$로 잡아 $K\subseteq B(c_1
 Open cover의 정의에서 sequential compactness를 끌어내려면 Lebesgue 수라는 보조 도구가 필요하다.
 
 ::: 보조정리 4 (Lebesgue number lemma)
-$X$가 sequentially compact 거리공간이고 $\mathcal{U}$가 $X$의 open cover이면, 어떤 $\delta>0$이 존재하여 반지름이 $\delta$인 모든 열린 공 $B(x,\delta)$가 $\mathcal{U}$의 어떤 원소에 포함된다.
+$X$가 sequentially compact metric space이고 $\mathcal{U}$가 $X$의 open cover이면, 어떤 $\delta>0$이 존재하여 반지름이 $\delta$인 모든 열린 공 $B(x,\delta)$가 $\mathcal{U}$의 어떤 원소에 포함된다.
 :::
 
 ::: 증명
@@ -129,10 +129,10 @@ $\mathbb{R}^n$에서는 bounded 점열이 수렴하는 부분수열을 갖지만
 
 ## Cantor 교집합 정리
 
-닫힌 구간이 $[a_1,b_1]\supseteq[a_2,b_2]\supseteq\cdots$ 꼴로 줄어들면 공통부분이 비어 있지 않다는 [§부분수열과 Bolzano–Weierstrass 정리, ⁋보조정리 5](/ko/math/analysis/bolzano_weierstrass#lem5){: data-lid="maj83" }가 compact 집합 일반으로 확장된다.
+닫힌 구간이 $[a_1,b_1]\supseteq[a_2,b_2]\supseteq\cdots$ 꼴로 줄어들면 공통부분이 비어 있지 않다는 [§부분수열과 Bolzano–Weierstrass 정리, ⁋보조정리 5](/ko/math/analysis/bolzano_weierstrass#lem5){: data-lid="maj83" }가 compact set 일반으로 확장된다.
 
 ::: 정리 10 (Cantor 교집합 정리)
-거리공간 $X$에서 $K_1\supseteq K_2\supseteq\cdots$이 비어 있지 않은 compact 집합들의 감소열이면, $\bigcap_{n\geq1}K_n\neq\emptyset$이다.
+거리공간 $X$에서 $K_1\supseteq K_2\supseteq\cdots$이 비어 있지 않은 compact set들의 감소열이면, $\bigcap_{n\geq1}K_n\neq\emptyset$이다.
 :::
 
 ::: 증명

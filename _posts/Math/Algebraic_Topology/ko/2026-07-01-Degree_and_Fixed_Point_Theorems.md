@@ -1,6 +1,6 @@
 ---
 title: "사상의 차수와 Brouwer·Lefschetz 고정점 정리"
-description: "H_n(S^n)=Z를 이용해 구면 자기사상의 차수를 정의하고 그 성질을 확립한 뒤, no-retraction 보조정리로 Brouwer 고정점 정리와 hairy ball 정리를, 호몰로지 대각합으로 Lefschetz 고정점 정리를 증명한다."
+description: "H_n(S^n)=Z를 이용해 구면 자기사상의 차수를 정의하고 그 성질을 확립한 뒤, no-retraction 보조정리로 Brouwer fixed point theorem과 hairy ball 정리를, 호몰로지 대각합으로 Lefschetz fixed point theorem을 증명한다."
 excerpt: "Mapping degree, the Brouwer and Lefschetz fixed-point theorems, and the hairy ball theorem"
 
 categories: [Math / Algebraic Topology]
@@ -178,7 +178,7 @@ $$x\cdot v(x)=-x_1x_2+x_2x_1-\cdots-x_{2m-1}x_{2m}+x_{2m}x_{2m-1}=0$$
 
 ## Lefschetz 고정점 정리
 
-Brouwer 정리는 원판이라는 특정한 공간에 대한 결과였다. 이를 임의의 콤팩트 공간으로 확장하려면, 자기사상이 homology에 남기는 흔적 전체를 하나의 정수로 요약하는 불변량이 필요하다. 그 불변량이 Lefschetz 수이며, 이를 정의하기 위해 우리는 계수를 유리수로 바꾼 homology를 사용한다. [§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6){: data-lid="09h97" } 이후의 논의에서 보았듯 계수군을 임의의 abelian group으로 바꾸어도 homology 이론은 그대로 성립하므로, 계수를 $\mathbb{Q}$로 잡은 homology $H_i(X;\mathbb{Q})=H_i(X)\otimes_\mathbb{Z}\mathbb{Q}$를 생각할 수 있다. 이는 $\mathbb{Q}$ 위의 vector space이며, $X$가 유한 CW complex이거나 삼각화가능한 콤팩트 공간이면 각 $H_i(X;\mathbb{Q})$는 유한차원이고 충분히 큰 $i$에 대하여 $0$이다. 유한차원 vector space 사이의 선형사상에는 trace $\operatorname{tr}$이 정의되므로, 다음이 유의미하다.
+Brouwer 정리는 원판이라는 특정한 공간에 대한 결과였다. 이를 임의의 콤팩트 공간으로 확장하려면, 자기사상이 homology에 남기는 흔적 전체를 하나의 정수로 요약하는 불변량이 필요하다. 그 불변량이 Lefschetz 수이며, 이를 정의하기 위해 우리는 계수를 유리수로 바꾼 homology를 사용한다. [§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6){: data-lid="09h97" } 이후의 논의에서 보았듯 계수군을 임의의 abelian group으로 바꾸어도 homology theory는 그대로 성립하므로, 계수를 $\mathbb{Q}$로 잡은 homology $H_i(X;\mathbb{Q})=H_i(X)\otimes_\mathbb{Z}\mathbb{Q}$를 생각할 수 있다. 이는 $\mathbb{Q}$ 위의 vector space이며, $X$가 유한 CW complex이거나 삼각화가능한 콤팩트 공간이면 각 $H_i(X;\mathbb{Q})$는 유한차원이고 충분히 큰 $i$에 대하여 $0$이다. 유한차원 vector space 사이의 선형사상에는 trace $\operatorname{tr}$이 정의되므로, 다음이 유의미하다.
 
 ::: 정의 9
 $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하고, $f:X\rightarrow X$를 연속함수라 하자. 각 $i$에 대하여 유도된 선형사상 $f_\ast:H_i(X;\mathbb{Q})\rightarrow H_i(X;\mathbb{Q})$의 trace를 취하여 얻는 정수

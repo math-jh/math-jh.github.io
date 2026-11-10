@@ -244,7 +244,7 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 
 의 네 개만이 남는 것을 확인할 수 있다. 실제로, 빠진 두 원소 $231, 312$에 해당하는 Bruhat cell의 점들을 직접 적어준 후 $\Pet_3$과의 교집합을 생각하면 이것이 공집합임을 쉽게 확인할 수 있다. 
 
-위에서 구한 네 개의 flag들은 simple root 부분집합 $A\subseteq\{\alpha_1,\alpha_2\}$와, 이들이 정의하는 Weyl group $W_A$의 maximal length element $w_A$를 대응시킨 $2^{n-1}=4$개의 coordinate flag로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여준다.
+위에서 구한 네 개의 flag들은 simple root subset $A\subseteq\{\alpha_1,\alpha_2\}$와, 이들이 정의하는 Weyl group $W_A$의 maximal length element $w_A$를 대응시킨 $2^{n-1}=4$개의 coordinate flag로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여준다.
 :::
 
 한편 [명제 9](#prop9){: data-lid="nwq2m" }의 핵심적인 아이디어는 $G/B$의 Bruhat decomposition과 $\mathcal{Y}$의 교집합을 취하여 $\mathcal{Y}$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8){: data-lid="81xjh" }에서 opposite Borel subgroup을 통한 decomposition을 살펴보았으므로 $\mathcal{Y}\cap B^-wB/B$를 통해 $\mathcal{Y}$의 성질을 탐구할 수도 있다. 
@@ -297,16 +297,16 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 
 {% diagram Math/Lie_Theory/Richardson_Peterson_Variety-4.svg width="24em" alt="Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $\mathcal{Y}^\vee_P$의 한 점 $y$ (곧 $G^\vee/B^\vee$의 flag) 가 주는 evaluation $\operatorname{ev}_y$는 Peterson 동형 $\Phi\colon a\mapsto f_a$를 통해 character $\rchi_y=\operatorname{ev}_y\circ\Phi$ (오른쪽 사각형, $\rchi_y(a)=f_a(y)$) 로 끌어올려지고, $\mathbb{C}[q]$로 제한하면 $y$의 quantum parameter 값 $q_0$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $q_0$ 위의 fiber 점 $=$ $q_0$ 위의 character $=$ flag." %}
 
-을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum 곱셈 연산자에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
+을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum multiplication operator에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
 
 그리고 이 동시 고유값들이 어디에 놓여 있는지를 말해 주는 것이 [정리 11](#thm11){: data-lid="x7ibo" }이다. Isomorphism $\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$ 아래에서 각 class $a$는 $\mathcal{Y}^\vee_P$ 위의 regular function $f_a$에 대응하므로, 사전의 언어로 위 character $\rchi_y$는 다름 아닌 flag $y$에서의 evaluation $\rchi_y=\ev_y$이고, 따라서 $\rchi_y(a)=f_a(y)$이다. 즉 동시 고유값 $\rchi_y(a)$는 추상적으로 떠 있는 수가 아니라, $G^\vee/B^\vee$ 안의 구체적인 flag $y$에서 좌표함수 $f_a$의 값을 읽은 것이다. 이렇게 추상적인 대수 $QH^\ast(G/P)$의 spectrum $\Spec QH^\ast(G/P)=\mathcal{Y}^\vee_P$이 flag variety $G^\vee/B^\vee$ 안에 실제 점들로 앉고, 그 점(곧 flag) 하나하나가 quantum 곱셈의 동시 고유값 한 벌을 손에 쥐어 준다. 
 
 가장 작은 Grassmannian $\mathbb{P}^1=\Gr(1,2)$에서는 이 전부를 손으로 볼 수 있다. $n=2$에서는 Peterson 조건 $NV_1\subseteq V_2=\mathbb{C}^2$이 공허하여 $\mathcal{Y}=\Fl_2=\mathbb{P}^1$ 전체이고, stratum $\mathcal{Y}_B$는 opposite big cell과의 교집합 $\mathbb{P}^1\setminus\{w_0B\}\cong\mathbb{A}^1$이다. 한편 $QH^\ast(\mathbb{P}^1)=\mathbb{C}[\sigma,q]/(\sigma^2-q)\cong\mathbb{C}[\sigma]$ 역시 한 변수 polynomial ring이라 정리의 동형과 부합하고, 이 동형 아래에서 quantum parameter는 affine 좌표의 제곱 $q=\sigma^2$으로 실현된다. Generic $q_0$의 fiber는 $\sigma=\pm\sqrt{q_0}$의 두 점, 곧 $\binom{2}{1}=2$개이고, $q_0=0$의 fiber는 한 점 $B/B$ 위에 길이 $2$로 앉은 double point로서 그 coordinate ring이 classical cohomology $\mathbb{C}[\sigma]/(\sigma^2)=H^\ast(\mathbb{P}^1)$이다. 곧 quantum에서 classical로의 퇴화까지 stratum 안에서 기하적으로 일어난다.
 
-일반적인 $\Gr(k,n)$에서도 마찬가지로 generic $q_0$의 fiber는 $\binom{n}{k}$개의 서로 다른 점으로 이루어진다. 이 유한 개의 점들은 또 하나의 명시적인 model을 갖는데, 이들이 어떤 Laurent 다항식, 곧 superpotential의 critical point들로 실현된다는 것이 mirror symmetry의 내용 중 하나이며, 일반적인 $G/P$에 대해 이 대응을 구성하는 것은 현재도 활발히 연구되는 주제다 ([거울대칭](/ko/mirror_symmetry/) 참조).
+일반적인 $\Gr(k,n)$에서도 마찬가지로 generic $q_0$의 fiber는 $\binom{n}{k}$개의 서로 다른 점으로 이루어진다. 이 유한 개의 점들은 또 하나의 명시적인 model을 갖는데, 이들이 어떤 Laurent polynomial, 곧 superpotential의 critical point들로 실현된다는 것이 mirror symmetry의 내용 중 하나이며, 일반적인 $G/P$에 대해 이 대응을 구성하는 것은 현재도 활발히 연구되는 주제다 ([거울대칭](/ko/mirror_symmetry/) 참조).
 
 ::: 참고 12
-[명제 9](#prop9){: data-lid="q9kxv" }의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $\mathcal{Y}$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 degree에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17){: data-lid="ru8lp" }에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
+[명제 9](#prop9){: data-lid="q9kxv" }의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $\mathcal{Y}$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 degree에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 6](/ko/math/lie_theory/bruhat_decomposition#prop6){: data-lid="ru8lp" }에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
 :::
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "함수의 극한과 연속"
-description: "거리공간 사이의 함수에 대하여 극한과 연속을 ε-δ로 정의하고, 수열판정과 열린집합의 preimage를 통한 동치 조건을 증명한다. 합성과 사칙연산의 연속성, 불연속의 분류, Dirichlet 함수와 Thomae 함수, 단조함수의 불연속점이 가산임을 다룬다."
-excerpt: "ε-δ 극한, 수열판정, 연속의 동치 정의, 불연속의 분류와 Thomae 함수"
+description: "거리공간 사이의 함수에 대하여 극한과 연속을 ε-δ로 정의하고, 수열판정과 열린집합의 preimage를 통한 동치 조건을 증명한다. 합성과 사칙연산의 연속성, 불연속의 분류, Dirichlet function과 Thomae function, 단조함수의 불연속점이 가산임을 다룬다."
+excerpt: "ε-δ 극한, 수열판정, 연속의 동치 정의, 불연속의 분류와 Thomae function"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/limits_and_continuity
@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[\[미적분학\] §함수의 극한, ⁋정의 2](/ko/math/calculus/functions_and_limits#def2){: data-lid="kf1l4" }와 [\[미적분학\] §연속함수, ⁋정의 1](/ko/math/calculus/continuity#def1){: data-lid="qcsc6" }에서 실함수의 극한과 연속을 $\varepsilon$-$\delta$로 다루었다. 이 글에서는 정의역과 공역을 [§거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="4solv" }의 거리공간으로 넓히고, 극한과 연속을 수열과 열린집합의 언어로 다시 쓴다. 이후 글에서 연속함수의 성질을 증명할 때 쓰는 도구는 이 세 가지 표현을 상황에 따라 바꿔 쓰는 것이다. 뒷부분에서는 실함수의 불연속점이 어떤 모양일 수 있는지를 Dirichlet 함수, Thomae 함수, 단조함수의 순서로 살핀다.
+[\[미적분학\] §함수의 극한, ⁋정의 2](/ko/math/calculus/functions_and_limits#def2){: data-lid="kf1l4" }와 [\[미적분학\] §연속함수, ⁋정의 1](/ko/math/calculus/continuity#def1){: data-lid="qcsc6" }에서 실함수의 극한과 연속을 $\varepsilon$-$\delta$로 다루었다. 이 글에서는 정의역과 공역을 [§거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="4solv" }의 거리공간으로 넓히고, 극한과 연속을 수열과 열린집합의 언어로 다시 쓴다. 이후 글에서 연속함수의 성질을 증명할 때 쓰는 도구는 이 세 가지 표현을 상황에 따라 바꿔 쓰는 것이다. 뒷부분에서는 실함수의 불연속점이 어떤 모양일 수 있는지를 Dirichlet function, Thomae function, 단조함수의 순서로 살핀다.
 
 이 글에서 $(X, d_X)$와 $(Y, d_Y)$는 거리공간이고 $f : X \rightarrow Y$는 함수이다. $B_X(a, \delta)$는 $X$에서의 열린 공을 뜻한다.
 
@@ -151,15 +151,15 @@ $f(x) = \sin(1/x)$ ($x \neq 0$), $f(0) = 0$으로 정의하면 $0$은 essential 
 
 이 예시에서 $f(0)$의 값은 전혀 영향을 주지 않는다. $f(0)$을 어떻게 바꾸어도 불연속이 해소되지 않는다는 점에서 (iii)은 (i)과 근본적으로 다르다.
 
-::: 예시 10 (Dirichlet 함수)
+::: 예시 10 (Dirichlet function)
 $D : \mathbb{R} \rightarrow \mathbb{R}$를 $x \in \mathbb{Q}$이면 $D(x) = 1$, $x \notin \mathbb{Q}$이면 $D(x) = 0$으로 정의한다. $D$는 모든 점에서 essential discontinuity를 갖는다. $a \in \mathbb{R}$과 $n \geq 1$에 대하여 $\mathbb{Q}$와 $\mathbb{R} \setminus \mathbb{Q}$가 $\mathbb{R}$에서 dense이므로 ([§실수의 완비성, ⁋정리 8](/ko/math/analysis/completeness_of_reals#thm8){: data-lid="6jbjd" }) 구간 $(a, a + 1/n)$에서 유리수 $x_n$과 무리수 $y_n$을 하나씩 고를 수 있다. $x_n, y_n \rightarrow a$이고 $D(x_n) = 1$, $D(y_n) = 0$이므로, [정리 2](#thm2){: data-lid="lw5gc" }에 의하여 $D$의 우극한은 존재하지 않는다. 구간 $(a - 1/n, a)$에서 같은 논증을 하면 좌극한도 존재하지 않는다.
 :::
 
 ## Thomae 함수
 
-연속인 점과 불연속인 점이 서로 섞이는 예로 Thomae 함수가 있다. $x \in \mathbb{Q}$는 $x = p/q$ ($p \in \mathbb{Z}$, $q \geq 1$, $p$와 $q$는 서로소)로 유일하게 적히며, 이 $q$를 $x$의 분모라 한다. $T : \mathbb{R} \rightarrow \mathbb{R}$를 유리수 $x$에서 $T(x) = 1/q$ ($q$는 $x$의 분모)로, 무리수 $x$에서 $T(x) = 0$으로 정의한다.
+연속인 점과 불연속인 점이 서로 섞이는 예로 Thomae function이 있다. $x \in \mathbb{Q}$는 $x = p/q$ ($p \in \mathbb{Z}$, $q \geq 1$, $p$와 $q$는 서로소)로 유일하게 적히며, 이 $q$를 $x$의 분모라 한다. $T : \mathbb{R} \rightarrow \mathbb{R}$를 유리수 $x$에서 $T(x) = 1/q$ ($q$는 $x$의 분모)로, 무리수 $x$에서 $T(x) = 0$으로 정의한다.
 
-::: 명제 11 (Thomae 함수)
+::: 명제 11 (Thomae function)
 모든 $a \in \mathbb{R}$에 대하여 $\lim_{x \rightarrow a} T(x) = 0$이다. 따라서 $T$는 무리수에서 연속이고 유리수에서 removable discontinuity를 갖는다.
 :::
 
@@ -173,11 +173,11 @@ $$\delta = \min\{1, \lvert x_1 - a\rvert, \ldots, \lvert x_m - a\rvert\}$$
 $a$가 무리수이면 $T(a) = 0$이므로 극한값이 함숫값과 같아 $T$는 $a$에서 연속이다. $a$가 유리수이면 $T(a) > 0$이므로 극한값 $0$과 다르고, 좌극한과 우극한이 모두 $0$이므로 removable discontinuity이다.
 :::
 
-$\delta$를 잡을 때 쓴 것은 $\varepsilon$ 이상인 값을 갖는 점이 $a$ 가까이에 유한개뿐이라는 사실이다. 이것이 $\delta$를 $\varepsilon$에 따라 유한개의 점을 피하는 최솟값으로 잡는 이유이다. 또 Dirichlet 함수와 달리 $T$의 불연속점 집합 $\mathbb{Q}$는 $\mathbb{R}$에서 dense이다. 함수는 dense한 집합 위에서 불연속일 수 있고, 그러면서도 극한이 모든 점에서 존재할 수 있다.
+$\delta$를 잡을 때 쓴 것은 $\varepsilon$ 이상인 값을 갖는 점이 $a$ 가까이에 유한개뿐이라는 사실이다. 이것이 $\delta$를 $\varepsilon$에 따라 유한개의 점을 피하는 최솟값으로 잡는 이유이다. 또 Dirichlet function과 달리 $T$의 불연속점 집합 $\mathbb{Q}$는 $\mathbb{R}$에서 dense이다. 함수는 dense한 집합 위에서 불연속일 수 있고, 그러면서도 극한이 모든 점에서 존재할 수 있다.
 
 ## 단조함수의 불연속점
 
-Dirichlet 함수는 불연속점이 $\mathbb{R}$ 전체이다. 단조함수에서는 불연속점이 훨씬 적다.
+Dirichlet function은 불연속점이 $\mathbb{R}$ 전체이다. 단조함수에서는 불연속점이 훨씬 적다.
 
 $f : I \rightarrow \mathbb{R}$가 구간 $I$ 위에서 increasing이라 하자. $a \in I$에 대하여 $a$가 $I$의 오른쪽 끝점이 아니면 $f(a+) = \inf\{f(x) \mid x \in I, x > a\}$로, 왼쪽 끝점이 아니면 $f(a-) = \sup\{f(x) \mid x \in I, x < a\}$로 둔다. $a$가 $I$의 왼쪽 끝점이면 $f(a-) = f(a)$로, 오른쪽 끝점이면 $f(a+) = f(a)$로 약속한다. 이 값들이 실제로 한쪽 극한이 되며 $f(a-) \leq f(a) \leq f(a+)$임을 먼저 보인다.
 

@@ -106,7 +106,7 @@ $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들�
 
 1. $R(X, Y) Z = -R(Y, X) Z$. (정의로부터)
 2. $\langle R(X, Y) Z, W\rangle = -\langle R(X, Y) W, Z\rangle$. (metric-compatibility로부터)
-3. $\langle R(X, Y) Z, W\rangle = \langle R(Z, W) X, Y\rangle$. (pair 교환 대칭)
+3. $\langle R(X, Y) Z, W\rangle = \langle R(Z, W) X, Y\rangle$. (pair symmetry)
 4. (제1 Bianchi 항등식) $R(X, Y) Z + R(Y, Z) X + R(Z, X) Y = 0$. (torsion-freeness로부터)
 :::
 
@@ -120,7 +120,7 @@ $(M, g)$의 Levi-Civita connection의 곡률 텐서 $R$은 다음 대칭성들�
 Connection $\nabla$의 곡률 텐서가 $R \equiv 0$일 때 $\nabla$를 *flat<sub>평탄</sub>* connection이라 부른다.
 :::
 
-[명제 4](#prop4){: data-lid="efdsy" }의 직접적 결과로, flat connection 하에서는 모든 simply connected 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 한다. 여기에 $\nabla$의 torsion-freeness를 더하면 그렇게 얻은 parallel frame $(E_1, \ldots, E_n)$이 $[E_i, E_j] = \nabla_{E_i} E_j - \nabla_{E_j} E_i = 0$을 만족해 coordinate frame이 되므로, $\nabla$가 단순 partial derivative로 환원되는 coordinate system $(t^1, \ldots, t^n)$, 곧 *flat coordinate*가 국소적으로 존재한다는 결과로 이어진다.
+[명제 4](#prop4){: data-lid="efdsy" }의 직접적 결과로, flat connection 하에서는 모든 simply connected domain 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 한다. 여기에 $\nabla$의 torsion-freeness를 더하면 그렇게 얻은 parallel frame $(E_1, \ldots, E_n)$이 $[E_i, E_j] = \nabla_{E_i} E_j - \nabla_{E_j} E_i = 0$을 만족해 coordinate frame이 되므로, $\nabla$가 단순 partial derivative로 환원되는 coordinate system $(t^1, \ldots, t^n)$, 곧 *flat coordinate*가 국소적으로 존재한다는 결과로 이어진다.
 
 ---
 

@@ -62,7 +62,7 @@ Let a topological space $X$, a quotient space $X/R$, and the canonical projectio
 Consider a topological space $X$ and, defined on $X$, two equivalence relations $R,S$. If $S$ is a finer equivalence relation than $R$, then for the equivalence relation on $X/S$ defined by $R/S$, the bijection $(X/S)/(R/S)\rightarrow X/R$ is a homeomorphism.
 :::
 ::: Proof
-That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8){: data-lid="1p2np" }. By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
+That $(X/S)/(R/S)\rightarrow X/R$ is a bijection was already shown in [\[Set Theory\] §Examples of Equivalence Relations, §§Quotient of an equivalence relation](/en/math/set_theory/examples_of_equivalence#quotient-of-an-equivalence-relation){: data-lid="l9ose" }. By [Proposition 4](#prop4){: data-lid="47l8f" }, the continuity of this function is equivalent to the continuity of $X/S\rightarrow X/R$, and the continuity of this function in turn follows from the continuity of $X\rightarrow X/R$.
 
 Similarly, the continuity of $X/R\rightarrow(X/S)/(R/S)$ is obtained from the continuity of $X\rightarrow(X/S)/(R/S)$, and since this function is equal to the composition of two continuous functions
 
@@ -71,7 +71,7 @@ $$X\rightarrow X/S\rightarrow (X/S)/(R/S)$$
 it is continuous.
 :::
 
-Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations){: data-lid="bt4sj" }) Then we may consider the canonical decomposition of $f$
+Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2){: data-lid="6g5g9" }) Then we may consider the canonical decomposition of $f$
 
 $$X\overset{p}{\rightarrow}X/R\overset{\bar{f}}{\rightarrow}f(X)\overset{i}{\rightarrow}Y$$
 

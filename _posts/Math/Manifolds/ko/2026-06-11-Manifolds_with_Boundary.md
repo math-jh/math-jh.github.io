@@ -95,7 +95,7 @@ $$x\mapsto \bigl(\theta(x/\lvert x\rvert),1-\lvert x\rvert\bigr)$$
 
 ## 접공간과 바깥 방향
 
-경계가 있는 manifold $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space){: data-lid="uzidk" }에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1){: data-lid="wl0so" }의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§여접공간, ⁋정리 2](/ko/math/manifolds/cotangent_space#thm2){: data-lid="ya09o" }의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor 전개 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
+경계가 있는 manifold $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space){: data-lid="uzidk" }에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1){: data-lid="wl0so" }의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§여접공간, ⁋정리 2](/ko/math/manifolds/cotangent_space#thm2){: data-lid="ya09o" }의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor expansion 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
 
 ::: 정의 6
 경계점 $p\in\partial M$에서의 tangent vector $v=\sum_{i=1}^ma^i\partial/\partial x^i\vert_p$가 *outward<sub>바깥 방향</sub>*라는 것은 $a^m<0$인 것이고, *inward<sub>안쪽 방향</sub>*라는 것은 $a^m>0$인 것이다.

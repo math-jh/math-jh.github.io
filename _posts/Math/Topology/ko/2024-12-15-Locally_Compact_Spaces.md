@@ -15,7 +15,7 @@ weight: 16
 
 ## 국소적 옹골공간
 
-Compactness는 위상공간이 지닐 수 있는 성질 가운데 가장 강력한 것에 속하지만, 정작 우리가 다루는 많은 공간은 compact가 아니다. Euclidean space $\mathbb{R}^n$은 유계가 아니어서 compact가 아니고, 뒤에서 다룰 topological manifold 역시 국소적으로만 Euclidean space를 닮았을 뿐 전체로는 compact일 이유가 없다. 그럼에도 이러한 공간들은 각 점 주위에서만큼은 compact 공간처럼 행동한다. 우리는 이 국소적인 성질을 분리해 내어, 전역적 compactness가 없는 공간에서도 compact 공간의 논증을 국소적으로 되살리고자 한다. 더 나아가 이러한 공간에 단 하나의 점을 더하는 것만으로 compact 공간을 얻을 수 있음을 보게 될 것이다.
+Compactness는 위상공간이 지닐 수 있는 성질 가운데 가장 강력한 것에 속하지만, 정작 우리가 다루는 많은 공간은 compact가 아니다. Euclidean space $\mathbb{R}^n$은 유계가 아니어서 compact가 아니고, 뒤에서 다룰 topological manifold 역시 국소적으로만 Euclidean space를 닮았을 뿐 전체로는 compact일 이유가 없다. 그럼에도 이러한 공간들은 각 점 주위에서만큼은 compact space처럼 행동한다. 우리는 이 국소적인 성질을 분리해 내어, 전역적 compactness가 없는 공간에서도 compact space의 논증을 국소적으로 되살리고자 한다. 더 나아가 이러한 공간에 단 하나의 점을 더하는 것만으로 compact space를 얻을 수 있음을 보게 될 것이다.
 
 우리는 각 점 주위의 옹골성이라는 이 국소적 조건을 다음과 같이 정식화한다.
 
@@ -32,13 +32,13 @@ Hausdorff space $X$의 점 $x$에 대하여 다음 두 조건은 동치이다.
 2. $x$의 임의의 열린근방 $V$에 대하여, 열린집합 $W$가 존재하여 $x\in W$, $\cl(W)\subseteq V$이며 $\cl(W)$가 compact이다.
 :::
 ::: 증명
-둘째 조건에서 $V=X$로 두면 $\cl(W)$가 $x$를 품는 열린집합 $W$를 포함하는 compact 집합이 되어 $x$의 compact neighborhood를 이루므로, 둘째 조건은 첫째 조건을 함의한다.
+둘째 조건에서 $V=X$로 두면 $\cl(W)$가 $x$를 품는 열린집합 $W$를 포함하는 compact set이 되어 $x$의 compact neighborhood를 이루므로, 둘째 조건은 첫째 조건을 함의한다.
 
 거꾸로 $X$가 $x$에서 locally compact라 하고 $x$의 열린근방 $V$가 주어졌다 하자. $x$의 compact neighborhood $K$를 잡고 $U=\interior(K)$라 두면 $U$는 $x$를 품는 열린집합이며 $U\subseteq K$이다. 이제 $V$를 $V\cap U$로 바꾸어 처음부터 $V\subseteq U\subseteq K$라 가정하여도 무방하다. 더 작은 $V$에 대해 결론을 얻으면 원래의 $V$에 대해서도 결론이 성립하기 때문이다.
 
 $K$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간, ⁋보조정리 6](/ko/math/topology/compact_spaces#lem6){: data-lid="b7wxx" }) 한편 $V\subseteq K$는 $X$의 열린집합이므로 부분공간 $K$에서도 열린집합이고, 따라서 $K\setminus V$는 $K$의 닫힌집합으로서 $x$를 포함하지 않는다. $K$의 regularity를 점 $x$와 닫힌집합 $K\setminus V$에 적용하면, $K$에서 열린 서로소인 두 집합 $P\ni x$와 $Q\supseteq K\setminus V$를 얻는다. $P\subseteq K\setminus Q\subseteq V$이고 $K\setminus Q$는 $K$의 닫힌집합이므로 $\cl_K(P)\subseteq K\setminus Q\subseteq V$이다.
 
-이제 $W=P\cap U$라 두자. $P$는 $K$에서 열린집합이고 $U$는 $X$의 열린집합이며 $U\subseteq K$이므로 $W$는 $X$에서 열린집합이고 $x\in W$이다. $W\subseteq U\subseteq K$이고 $K$는 $X$의 닫힌집합이므로 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5){: data-lid="avhph" }) $\cl(W)\subseteq K$이다. 따라서 $\cl(W)=\cl(W)\cap K=\cl_K(W)\subseteq\cl_K(P)\subseteq V$이다. 끝으로 $\cl(W)$는 compact 집합 $K$의 닫힌 부분집합이므로 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="1zr12" }) 이로써 둘째 조건이 성립한다.
+이제 $W=P\cap U$라 두자. $P$는 $K$에서 열린집합이고 $U$는 $X$의 열린집합이며 $U\subseteq K$이므로 $W$는 $X$에서 열린집합이고 $x\in W$이다. $W\subseteq U\subseteq K$이고 $K$는 $X$의 닫힌집합이므로 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5){: data-lid="avhph" }) $\cl(W)\subseteq K$이다. 따라서 $\cl(W)=\cl(W)\cap K=\cl_K(W)\subseteq\cl_K(P)\subseteq V$이다. 끝으로 $\cl(W)$는 compact set $K$의 닫힌 부분집합이므로 compact이다. ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="1zr12" }) 이로써 둘째 조건이 성립한다.
 :::
 
 [명제 2](#prop2){: data-lid="fm34z" }의 둘째 조건은 LCH space에서 각 점이 compact closure를 갖는 열린집합들로 이루어진 neighborhood basis를 가진다는 것으로 읽을 수 있다. 이는 앞으로 국소적 논증을 펼칠 때마다 반복적으로 사용되며, one-point compactification의 Hausdorff성을 판정할 때에도 핵심적인 역할을 한다. 또한 이 성질로부터 임의의 LCH space가 regular임이 곧바로 따르는데, 점 $x$와 이를 포함하지 않는 닫힌집합 $C$가 주어지면 $V=X\setminus C$에 둘째 조건을 적용하여 얻은 $W$와 $X\setminus\cl(W)$가 $x$와 $C$를 분리하기 때문이다.
@@ -46,7 +46,7 @@ $K$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간, �
 가장 기본적인 예로 Euclidean space $\mathbb{R}^n$이 LCH임을 들 수 있다. 임의의 점 $x$에 대하여 닫힌 공 $\{y:\lVert y-x\rVert\leq 1\}$은 Heine–Borel 정리에 의해 compact이고 열린 공을 품으므로 $x$의 compact neighborhood를 이루며, $\mathbb{R}^n$이 Hausdorff임은 이미 알고 있다. 마찬가지로 임의의 discrete space도 LCH인데, 각 점 $x$에 대하여 한원소집합 $\{x\}$이 열린 유한집합으로서 compact neighborhood가 되고 discrete space는 Hausdorff이기 때문이다. 조금 덜 자명한 예는 topological manifold이다.
 
 ::: 예시 3
-각 점이 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방을 갖는 Hausdorff 공간은 LCH space이다. 뒤에서 정의할 topological manifold가 바로 이러한 공간이다. 실제로 그러한 공간 $M$의 각 점 $x$에 대하여 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방 $U$를 잡으면, 그 homeomorphism 아래에서 $x$에 대응하는 점이 $\mathbb{R}^n$에서 compact neighborhood를 가지므로 ($\mathbb{R}^n$이 LCH이기 때문이다) 이를 $U$로 되끌어 오면 $x$의 compact neighborhood를 얻는다.
+각 점이 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방을 갖는 Hausdorff space는 LCH space이다. 뒤에서 정의할 topological manifold가 바로 이러한 공간이다. 실제로 그러한 공간 $M$의 각 점 $x$에 대하여 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방 $U$를 잡으면, 그 homeomorphism 아래에서 $x$에 대응하는 점이 $\mathbb{R}^n$에서 compact neighborhood를 가지므로 ($\mathbb{R}^n$이 LCH이기 때문이다) 이를 $U$로 되끌어 오면 $x$의 compact neighborhood를 얻는다.
 :::
 
 Locally compact이라는 조건은 얼핏 매우 약해 보이지만 결코 자동으로 주어지는 것은 아니다. 다음은 locally compact space가 아닌 대표적인 예이다.
@@ -67,12 +67,12 @@ Hausdorff space의 부분공간은 다시 Hausdorff이므로 국소적 옹골성
 
 먼저 $A\subseteq X$가 열린집합이라 하고 $x\in A$가 주어졌다 하자. $A$는 $x$의 $X$에서의 열린근방이므로 [명제 2](#prop2){: data-lid="mhkki" }의 둘째 조건에 의하여 $X$의 열린집합 $W$가 존재하여 $x\in W$이고 $\cl_X(W)\subseteq A$이며 $\cl_X(W)$가 compact이다. $\cl_X(W)\subseteq A$이므로 $A$에서의 closure $\cl_A(W)$는 $\cl_X(W)$와 같고, 이는 compact이면서 $A$에서 열린 $W$를 포함하므로 $x$의 $A$에서의 compact neighborhood이다.
 
-이제 $A\subseteq X$가 닫힌집합이라 하고 $x\in A$가 주어졌다 하자. $X$에서 $x$의 compact neighborhood $K$를 잡고, $x$를 품는 $X$의 열린집합 $U\subseteq K$를 택한다. 그럼 $K\cap A$는 compact 집합 $K$의 닫힌 부분집합이므로 compact이고 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="8taec" }), $U\cap A$는 $A$에서 열린집합으로서 $x$를 품고 $K\cap A$에 포함되므로 $K\cap A$는 $x$의 $A$에서의 compact neighborhood이다.
+이제 $A\subseteq X$가 닫힌집합이라 하고 $x\in A$가 주어졌다 하자. $X$에서 $x$의 compact neighborhood $K$를 잡고, $x$를 품는 $X$의 열린집합 $U\subseteq K$를 택한다. 그럼 $K\cap A$는 compact set $K$의 닫힌 부분집합이므로 compact이고 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="8taec" }), $U\cap A$는 $A$에서 열린집합으로서 $x$를 품고 $K\cap A$에 포함되므로 $K\cap A$는 $x$의 $A$에서의 compact neighborhood이다.
 :::
 
 ## 일점 옹골화의 구성
 
-Compact가 아닌 공간을 compact로 만드는 가장 경제적인 방법은 부족한 부분을 단 하나의 점으로 메우는 것이다. 직관적으로는 $\mathbb{R}$의 양끝으로 달아나는 점들을 하나의 무한원점으로 모아 원을 만드는 것과 같다. 우리는 이 옹골화를 임의의 위상공간에 대해 명시적으로 정식화하고, 그것이 compact 공간을 낳음을 보인 뒤, 그 구성이 언제 Hausdorff 공간을 낳는지까지 규명한다.
+Compact가 아닌 공간을 compact로 만드는 가장 경제적인 방법은 부족한 부분을 단 하나의 점으로 메우는 것이다. 직관적으로는 $\mathbb{R}$의 양끝으로 달아나는 점들을 하나의 무한원점으로 모아 원을 만드는 것과 같다. 우리는 이 옹골화를 임의의 위상공간에 대해 명시적으로 정식화하고, 그것이 compact space를 낳음을 보인 뒤, 그 구성이 언제 Hausdorff space를 낳는지까지 규명한다.
 
 ::: 정의 6
 위상공간 $X$가 주어졌다 하자. $X$에 속하지 않는 새로운 점 하나를 $\infty$라 적고 집합 $X^+=X\cup\{\infty\}$을 생각한다. $X^+$의 부분집합 가운데 다음 두 종류를 열린집합으로 선언한다. 첫째로 $X$의 열린집합 $U$, 둘째로 $X$에서 compact이며 닫힌 부분집합 $C$에 대한 $X^+\setminus C$이다. 이렇게 얻은 위상공간 $X^+$를 $X$의 *one-point compactification<sub>일점 옹골화</sub>*, 또는 *Alexandroff compactification<sub>알렉산드로프 콤팩트화</sub>*이라 부른다.
@@ -102,13 +102,13 @@ $X^+$의 임의의 open covering $(O_i)_{i\in I}$이 주어졌다 하자. $\inft
 
 ## Hausdorff 판정과 보편성
 
-One-point compactification은 어떤 공간에 대해서도 compact 공간을 낳지만, 그 결과가 다시 Hausdorff가 되는지는 별개의 문제이다. 예컨대 $\mathbb{Q}^+$은 compact이지만 Hausdorff가 아니다. 다음 정리는 $X^+$가 Hausdorff가 되는 조건이 정확히 앞서 정의한 국소적 옹골성임을 밝힌다.
+One-point compactification은 어떤 공간에 대해서도 compact space를 낳지만, 그 결과가 다시 Hausdorff가 되는지는 별개의 문제이다. 예컨대 $\mathbb{Q}^+$은 compact이지만 Hausdorff가 아니다. 다음 정리는 $X^+$가 Hausdorff가 되는 조건이 정확히 앞서 정의한 국소적 옹골성임을 밝힌다.
 
 ::: 정리 9
 위상공간 $X$에 대하여 $X^+$가 Hausdorff space일 필요충분조건은 $X$가 LCH space인 것이다.
 :::
 ::: 증명
-먼저 $X^+$가 Hausdorff라 하자. 부분공간 $X$는 Hausdorff space의 부분공간이므로 Hausdorff이다. 국소적 옹골성을 보이기 위해 $x\in X$를 고정하면, $X^+$의 Hausdorff성에 의해 $x$와 $\infty$를 분리하는 서로소인 열린집합 $U\ni x$와 $W\ni\infty$가 존재한다. $W$는 $\infty$를 품으므로 둘째 종류이고, 따라서 $X$의 compact인 닫힌집합 $C$에 대해 $W=X^+\setminus C$이다. $U\cap W=\emptyset$으로부터 $U\subseteq C$이고, $U$는 $\infty$를 품지 않으므로 $X$에 포함되는 열린집합이다. 따라서 $C$는 $x$를 품는 열린집합 $U$를 포함하는 compact 집합, 곧 $x$의 compact neighborhood이며 $X$는 $x$에서 locally compact이다.
+먼저 $X^+$가 Hausdorff라 하자. 부분공간 $X$는 Hausdorff space의 부분공간이므로 Hausdorff이다. 국소적 옹골성을 보이기 위해 $x\in X$를 고정하면, $X^+$의 Hausdorff성에 의해 $x$와 $\infty$를 분리하는 서로소인 열린집합 $U\ni x$와 $W\ni\infty$가 존재한다. $W$는 $\infty$를 품으므로 둘째 종류이고, 따라서 $X$의 compact인 닫힌집합 $C$에 대해 $W=X^+\setminus C$이다. $U\cap W=\emptyset$으로부터 $U\subseteq C$이고, $U$는 $\infty$를 품지 않으므로 $X$에 포함되는 열린집합이다. 따라서 $C$는 $x$를 품는 열린집합 $U$를 포함하는 compact set, 곧 $x$의 compact neighborhood이며 $X$는 $x$에서 locally compact이다.
 
 거꾸로 $X$가 LCH라 하자. $X^+$의 서로 다른 두 점을 분리해야 한다. 두 점이 모두 $X$에 속하면 $X$가 Hausdorff이므로 이들을 $X$에서 분리하는 서로소인 열린집합을 얻고, 이들은 [정의 6](#def6){: data-lid="8yt7b" }의 첫째 종류로서 $X^+$에서도 열린집합이다. 남은 경우는 한 점이 $x\in X$이고 다른 한 점이 $\infty$인 경우이다. $X$가 LCH이므로 [명제 2](#prop2){: data-lid="qvpzb" }에 의하여 $x$의 열린근방 $U$가 존재하여 $K=\cl(U)$가 compact이다. $X$가 Hausdorff이므로 $K$는 닫힌집합이고 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5){: data-lid="msmlm" }), 따라서 $X^+\setminus K$는 $\infty$를 품는 둘째 종류의 열린집합이다. $U\subseteq K$이므로 $U$와 $X^+\setminus K$는 서로소이며 각각 $x$와 $\infty$를 분리한다.
 :::
@@ -121,7 +121,7 @@ LCH space $X$가 주어졌다 하자. Compact Hausdorff space $Y$와 점 $p\in Y
 ::: 증명
 $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 부분집합으로 본다. $Y$가 Hausdorff이므로 $\{p\}$는 $Y$의 닫힌집합이고, 따라서 $X=Y\setminus\{p\}$는 $Y$의 열린 부분공간이다. 즉 $X$의 위상은 $Y$로부터 유도된 부분공간 위상과 일치한다.
 
-이제 $Y$의 열린집합이 정확히 $X^+$의 열린집합과 대응함을 보인다. $Y$의 열린집합 $O$가 $p$를 포함하지 않으면 $O\subseteq X$이고 $X$가 $Y$의 열린 부분공간이므로 $O$는 $X$의 열린집합, 곧 [정의 6](#def6){: data-lid="mcw78" }의 첫째 종류이다. 거꾸로 $X$의 열린집합은 $X$가 $Y$에서 열린집합이므로 $Y$의 열린집합이다. 한편 $Y$의 열린집합 $O$가 $p$를 포함하면 $Y\setminus O$는 compact 공간 $Y$의 닫힌집합이므로 compact이고 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="xnfi5" }), $Y\setminus O\subseteq X$이며 $Y$에서 닫힌집합이므로 $X$에서도 닫힌집합이다. 따라서 $O=X^+\setminus(Y\setminus O)$은 $X$의 compact인 닫힌집합의 여집합, 곧 둘째 종류이다. 거꾸로 $X$의 compact인 닫힌집합 $C$에 대하여 $C$는 $Y$에서도 compact이고 $Y$가 Hausdorff이므로 닫힌집합이어서 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5){: data-lid="6b2ws" }) $Y\setminus C$는 $p$를 품는 $Y$의 열린집합이다.
+이제 $Y$의 열린집합이 정확히 $X^+$의 열린집합과 대응함을 보인다. $Y$의 열린집합 $O$가 $p$를 포함하지 않으면 $O\subseteq X$이고 $X$가 $Y$의 열린 부분공간이므로 $O$는 $X$의 열린집합, 곧 [정의 6](#def6){: data-lid="mcw78" }의 첫째 종류이다. 거꾸로 $X$의 열린집합은 $X$가 $Y$에서 열린집합이므로 $Y$의 열린집합이다. 한편 $Y$의 열린집합 $O$가 $p$를 포함하면 $Y\setminus O$는 compact space $Y$의 닫힌집합이므로 compact이고 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3){: data-lid="xnfi5" }), $Y\setminus O\subseteq X$이며 $Y$에서 닫힌집합이므로 $X$에서도 닫힌집합이다. 따라서 $O=X^+\setminus(Y\setminus O)$은 $X$의 compact인 닫힌집합의 여집합, 곧 둘째 종류이다. 거꾸로 $X$의 compact인 닫힌집합 $C$에 대하여 $C$는 $Y$에서도 compact이고 $Y$가 Hausdorff이므로 닫힌집합이어서 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5){: data-lid="6b2ws" }) $Y\setminus C$는 $p$를 품는 $Y$의 열린집합이다.
 
 그러므로 $p$를 $\infty$와 동일시하는 집합 사이의 대응 $h:X^+\rightarrow Y$는 열린집합을 열린집합으로, 그 역도 마찬가지로 대응시키는 전단사이며, 따라서 homeomorphism이다. $h$는 $X$ 위에서 $\varphi$와 일치하고 $\infty$를 $p$로 보내야 하므로 유일하다.
 :::

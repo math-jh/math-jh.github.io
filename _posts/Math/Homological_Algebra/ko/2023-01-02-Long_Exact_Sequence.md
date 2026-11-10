@@ -117,7 +117,7 @@ $$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
 
 이는 곧, 각각의 $f_n$들이 모두 isomorphism인 chain map $(f_n)_{n\in\mathbb{Z}}$이 존재한다는 것과 동치이다.
 
-한편 homology 대수학에서 우리가 사용할 수 있는 도구는 homology 뿐이므로, 다음과 같이 isomorphism의 개념을 약화시킬 수 있다.
+한편 호몰로지 대수학에서 우리가 사용할 수 있는 도구는 homology 뿐이므로, 다음과 같이 isomorphism의 개념을 약화시킬 수 있다.
 
 ::: 정의 4
 두 chain complex $C_\bullet$, $D_\bullet$이 *quasi-isomorphic<sub>유사동형</sub>*하다는 것은 적당한 chain map $f:C_\bullet\rightarrow D_\bullet$이 존재하여 모든 $n$에 대하여 $H_n(f)$가 isomorphism이 되는 것이다. 이 때, $f$를 *quasi-isomorphism<sub>유사동형사상</sub>*이라 부른다.[^1]
@@ -138,7 +138,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 {% diagram Math/Homological_Algebra/Long_Exact_Sequence-5.svg width="30.61em" alt="chain_homotopy" %}
 
-에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
+에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic<sub>호모토픽</sub>*한 chain map이라 부른다. 
 :::
 
 만일 어떤 chain map $f$에 대하여, $f=\dd{h}+hd$를 만족하는 $h$가 존재한다면, $h$를 $f$와 $0$ 사이의 chain homotopy로 볼 수 있다. 따라서 이와 같은 $h$가 존재할 경우 $f$를 *null homotopic*하다 부른다. 

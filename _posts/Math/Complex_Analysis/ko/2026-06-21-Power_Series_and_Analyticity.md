@@ -1,7 +1,7 @@
 ---
 title: "멱급수와 해석성"
-description: "Cauchy 적분공식에서 핵을 기하급수로 전개하여, 복소정칙함수가 각 점 근방에서 자신의 Taylor 급수로 전개됨을 보이고 그 수렴반지름이 가장 가까운 특이점까지의 거리 이상임을 밝힌다. 역으로 수렴 멱급수가 복소정칙임을 더해 복소정칙성과 해석성이 동치임을 증명하고, 항별 미적분, 영점의 위수, Cauchy 곱을 다룬다."
-excerpt: "Taylor 급수 전개, 복소정칙=해석적, 수렴반지름과 특이점, 항별 미분과 적분, 영점의 위수, Cauchy 곱"
+description: "Cauchy 적분공식에서 핵을 기하급수로 전개하여, 복소정칙함수가 각 점 근방에서 자신의 Taylor series로 전개됨을 보이고 그 수렴반지름이 가장 가까운 특이점까지의 거리 이상임을 밝힌다. 역으로 수렴 멱급수가 복소정칙임을 더해 복소정칙성과 해석성이 동치임을 증명하고, 항별 미적분, 영점의 위수, Cauchy 곱을 다룬다."
+excerpt: "Taylor series 전개, 복소정칙=해석적, 수렴반지름과 특이점, 항별 미분과 적분, 영점의 위수, Cauchy 곱"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/power_series_and_analyticity
@@ -14,7 +14,7 @@ weight: 7
 published: false
 ---
 
-[§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-lid="4c7d0" }은 holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3){: data-lid="sym94" }) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋예시 12](/ko/math/analysis/power_series#ex12){: data-lid="4n1a1" }에서 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="l9tvu" }), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
+[§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1){: data-lid="4c7d0" }은 holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3){: data-lid="sym94" }) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor series와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor series가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋예시 12](/ko/math/analysis/power_series#ex12){: data-lid="4n1a1" }에서 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor series로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="l9tvu" }), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
 
 ## Holomorphic function의 Taylor 전개
 
@@ -24,7 +24,7 @@ $$\frac{1}{w - z} = \frac{1}{(w - z_0) - (z - z_0)} = \frac{1}{w - z_0}\cdot\fra
 
 으로 쓰면, $\lvert z - z_0\rvert < \lvert w - z_0\rvert$인 한 마지막 인수가 공비 $(z - z_0)/(w - z_0)$의 기하급수로 전개된다. 이를 적분공식에 대입하고 경계원 위에서 균등수렴하는 급수를 항별로 적분하면, $f(z)$가 $(z - z_0)^n$의 멱급수로 쓰이고 그 계수가 정확히 Cauchy 미분공식이 주는 $f^{(n)}(z_0)/n!$로 떨어진다.
 
-::: 정리 1 (Taylor 전개)
+::: 정리 1 (Taylor expansion)
 $f$가 열린 원판 $D(z_0, R)$에서 holomorphic이라 하자. 그러면 모든 $z \in D(z_0, R)$에 대하여
 
 $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
@@ -56,23 +56,23 @@ $$f(z) = \sum_{n=0}^{\infty}\frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 을 얻는다. 절대수렴은 위 항별 어림에서 일반항의 크기가 $\lvert f^{(n)}(z_0)/n!\rvert\,\lvert z - z_0\rvert^n \leq M\,(\lvert z - z_0\rvert/r)^n$으로 수렴하는 기하급수에 지배되기 때문이다 ([§Cauchy 적분공식, ⁋정리 4](/ko/math/complex_analysis/cauchy_integral_formula#thm4){: data-lid="rty0j" }로 $\lvert f^{(n)}(z_0)/n!\rvert \leq M/r^n$). 끝으로 $z$가 임의였고 $r < R$을 $z$에 맞춰 잡았으므로 전개는 $D(z_0, R)$ 전체에서 성립한다.
 :::
 
-[정리 1](#thm1){: data-lid="1guwi" }은 holomorphic function이 holomorphic인 영역 안의 어느 점을 중심으로 잡아도 그 점을 중심으로 하는 멱급수로 전개됨을 말한다. 계수가 $f^{(n)}(z_0)/n!$로 도함수에 의해 결정되므로 이 급수는 정확히 $f$의 Taylor 급수이며, 실변수에서와 달리 나머지항을 따로 따질 필요 없이 항상 함수 자신으로 수렴한다. 전개의 중심을 $z_0$으로 옮겨 놓고 보면, 한 점에서 무한히 미분가능하다는 국소적 정보가 그 점 근방 전체에서의 함수값을 멱급수를 통해 완전히 복원한다는 뜻이다.
+[정리 1](#thm1){: data-lid="1guwi" }은 holomorphic function이 holomorphic인 영역 안의 어느 점을 중심으로 잡아도 그 점을 중심으로 하는 멱급수로 전개됨을 말한다. 계수가 $f^{(n)}(z_0)/n!$로 도함수에 의해 결정되므로 이 급수는 정확히 $f$의 Taylor series이며, 실변수에서와 달리 나머지항을 따로 따질 필요 없이 항상 함수 자신으로 수렴한다. 전개의 중심을 $z_0$으로 옮겨 놓고 보면, 한 점에서 무한히 미분가능하다는 국소적 정보가 그 점 근방 전체에서의 함수값을 멱급수를 통해 완전히 복원한다는 뜻이다.
 
-전개가 성립하는 반지름에 관해서는 [정리 1](#thm1){: data-lid="ds0mi" }이 이미 다음을 함의한다. $f$가 $D(z_0, R)$ 전체에서 holomorphic이기만 하면 Taylor 급수가 그 원판 전체에서 수렴하므로, 멱급수의 수렴반지름은 $R$ 이상이다. 이를 singular point의 언어로 다시 적으면 수렴반지름의 기하학적 의미가 드러난다.
+전개가 성립하는 반지름에 관해서는 [정리 1](#thm1){: data-lid="ds0mi" }이 이미 다음을 함의한다. $f$가 $D(z_0, R)$ 전체에서 holomorphic이기만 하면 Taylor series가 그 원판 전체에서 수렴하므로, 멱급수의 수렴반지름은 $R$ 이상이다. 이를 singular point의 언어로 다시 적으면 수렴반지름의 기하학적 의미가 드러난다.
 
 ::: 따름정리 2 (수렴반지름과 singular point)
-$f$가 점 $z_0$에서 holomorphic이라 하고, $f$의 $z_0$에서의 Taylor 급수의 수렴반지름을 $\rho$라 하자. 그러면 $\rho$은 $z_0$을 중심으로 하여 $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름과 같다. 특히 $f$가 $D(z_0, R)$에서 holomorphic이면 $\rho \geq R$이고, 곧 $\rho$은 $z_0$에서 $f$의 가장 가까운 singular point까지의 거리 이상이다.
+$f$가 점 $z_0$에서 holomorphic이라 하고, $f$의 $z_0$에서의 Taylor series의 수렴반지름을 $\rho$라 하자. 그러면 $\rho$은 $z_0$을 중심으로 하여 $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름과 같다. 특히 $f$가 $D(z_0, R)$에서 holomorphic이면 $\rho \geq R$이고, 곧 $\rho$은 $z_0$에서 $f$의 가장 가까운 singular point까지의 거리 이상이다.
 :::
 
 ::: 증명
-$f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $R_\ast \in (0, \infty]$이라 하자. 곧 $f$는 $D(z_0, R_\ast)$에서 holomorphic이지만 그보다 큰 어떤 중심 $z_0$의 원판으로도 holomorphic하게 확장되지 않는다. [정리 1](#thm1){: data-lid="jte4n" }을 $D(z_0, R_\ast)$에 적용하면 Taylor 급수가 이 원판 전체에서 수렴하므로 수렴반지름은 $\rho \geq R_\ast$이다.
+$f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $R_\ast \in (0, \infty]$이라 하자. 곧 $f$는 $D(z_0, R_\ast)$에서 holomorphic이지만 그보다 큰 어떤 중심 $z_0$의 원판으로도 holomorphic하게 확장되지 않는다. [정리 1](#thm1){: data-lid="jte4n" }을 $D(z_0, R_\ast)$에 적용하면 Taylor series가 이 원판 전체에서 수렴하므로 수렴반지름은 $\rho \geq R_\ast$이다.
 
 반대로 $\rho > R_\ast$이라 가정하면, 멱급수 $\sum_n \frac{f^{(n)}(z_0)}{n!}(z - z_0)^n$가 $D(z_0, \rho)$에서 수렴하고, 수렴 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="es4wd" }) 이 급수는 $D(z_0, \rho) \supsetneq D(z_0, R_\ast)$에서 holomorphic인 함수 $g$를 정의한다. $g$는 $D(z_0, R_\ast)$에서 $f$와 일치하므로 $f$를 더 큰 원판 $D(z_0, \rho)$로 holomorphic하게 확장한 것이 되어, $R_\ast$이 그러한 원판의 최대 반지름이라는 정의에 어긋난다. 따라서 $\rho = R_\ast$이다.
 
 마지막 진술은 $f$가 $D(z_0, R)$에서 holomorphic이면 정의상 $R_\ast \geq R$이므로 $\rho \geq R$이라는 데서 나온다. 가장 가까운 singular point까지의 거리란 $f$가 holomorphic하게 확장되지 못하게 막는 점까지의 거리이므로, $\rho = R_\ast$은 그 거리와 같다 (singular point가 없으면 $\rho = \infty$).
 :::
 
-[따름정리 2](#cor2){: data-lid="oi67a" }는 멱급수의 수렴반지름이라는 순전히 해석적인 양이 실은 함수의 singular point라는 기하학적 자료에 의해 결정됨을 보여 준다. 가령 $1/(1 + z^2)$는 실축 위에서는 매끄럽고 bounded이지만 $z = \pm i$에서 분모가 소멸하므로, 원점에서의 Taylor 급수 $\sum_n (-1)^n z^{2n}$의 수렴반지름은 가장 가까운 singular point $\pm i$까지의 거리인 $1$이다. 실변수만 보아서는 왜 하필 반지름이 $1$인지 설명할 길이 없던 현상이, 복소평면으로 올라가 허축 위의 singular point를 보면 곧장 해명된다.
+[따름정리 2](#cor2){: data-lid="oi67a" }는 멱급수의 수렴반지름이라는 순전히 해석적인 양이 실은 함수의 singular point라는 기하학적 자료에 의해 결정됨을 보여 준다. 가령 $1/(1 + z^2)$는 실축 위에서는 매끄럽고 bounded이지만 $z = \pm i$에서 분모가 소멸하므로, 원점에서의 Taylor series $\sum_n (-1)^n z^{2n}$의 수렴반지름은 가장 가까운 singular point $\pm i$까지의 거리인 $1$이다. 실변수만 보아서는 왜 하필 반지름이 $1$인지 설명할 길이 없던 현상이, 복소평면으로 올라가 허축 위의 singular point를 보면 곧장 해명된다.
 
 ## Holomorphicity와 해석성의 동치
 
@@ -86,7 +86,7 @@ $f$가 holomorphic하게 확장되는 가장 큰 열린 원판의 반지름을 $
 :::
 
 ::: 증명
-$(1) \Rightarrow (2)$. $f$가 $\Omega$에서 holomorphic이고 $z_0 \in \Omega$이라 하자. $\Omega$가 열려 있으므로 $D(z_0, R) \subseteq \Omega$인 $R > 0$이 있고, [정리 1](#thm1){: data-lid="3dfvp" }에 의해 $f$는 이 원판에서 자신의 Taylor 급수와 같다. 곧 $f$는 $z_0$의 근방 $D(z_0, R)$에서 멱급수의 합이므로 $z_0$에서 해석적이다.
+$(1) \Rightarrow (2)$. $f$가 $\Omega$에서 holomorphic이고 $z_0 \in \Omega$이라 하자. $\Omega$가 열려 있으므로 $D(z_0, R) \subseteq \Omega$인 $R > 0$이 있고, [정리 1](#thm1){: data-lid="3dfvp" }에 의해 $f$는 이 원판에서 자신의 Taylor series와 같다. 곧 $f$는 $z_0$의 근방 $D(z_0, R)$에서 멱급수의 합이므로 $z_0$에서 해석적이다.
 
 $(2) \Rightarrow (1)$. $z_0 \in \Omega$을 임의로 잡으면 가정에 의해 어떤 근방 $D(z_0, r) \subseteq \Omega$에서 $f(z) = \sum_{n} a_n (z - z_0)^n$이 성립한다. 수렴하는 멱급수의 합은 그 수렴원판에서 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="nmopn" }) $f$는 $D(z_0, r)$에서, 특히 $z_0$에서 복소미분가능하다. $z_0$이 임의였으므로 $f$는 $\Omega$의 모든 점에서 복소미분가능하고, 따라서 $\Omega$에서 holomorphic이다 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2){: data-lid="iewxu" }).
 :::
@@ -123,7 +123,7 @@ $$G'(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}\cdot(n+1)(z - z_0)^n = \sum_{n=0}^
 
 ## 영점의 위수
 
-해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor 급수의 상수항이 사라지고, 더 높은 degree의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 finite degree에서 멈추며, 그 degree가 영점의 order이다.
+해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor series의 상수항이 사라지고, 더 높은 degree의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 finite degree에서 멈추며, 그 degree가 영점의 order이다.
 
 ::: 정의 5 (영점의 위수)
 $f$가 $z_0$에서 holomorphic이고 $f(z_0) = 0$이며 $z_0$의 어떤 근방에서 $f$가 항등적으로 $0$은 아니라 하자. $z_0$에서의 Taylor 계수 $a_n = f^{(n)}(z_0)/n!$ 가운데 $0$이 아닌 것이 처음 나타나는 지수, 곧
@@ -133,7 +133,7 @@ $$m = \min\{\,n \geq 0 \mid a_n \neq 0\,\}$$
 을 $z_0$에서 $f$의 *order of the zero<sub>영점의 위수</sub>*라 한다.
 :::
 
-영점이라는 가정에서 $a_0 = f(z_0) = 0$이므로 order는 항상 $m \geq 1$이다. Order $1$인 영점을 *단순영점<sub>simple zero</sub>*이라 부르고, 이는 $f(z_0) = 0$이면서 $f'(z_0) \neq 0$인 경우와 같다. Order $m$이 잘 정의되려면 그런 $0$이 아닌 계수가 존재해야 하는데, 만일 모든 $a_n$이 $0$이면 Taylor 급수가 항등적으로 $0$이 되어 [정리 1](#thm1){: data-lid="bsz7l" }에 의해 $f$가 $z_0$의 근방에서 항등적으로 $0$이 되므로, 그 경우를 정의에서 배제한 것이다. Order의 핵심은 영점에서 $(z - z_0)^m$을 정확히 그만큼 뽑아낼 수 있다는 다음 인수분해이다.
+영점이라는 가정에서 $a_0 = f(z_0) = 0$이므로 order는 항상 $m \geq 1$이다. Order $1$인 영점을 *단순영점<sub>simple zero</sub>*이라 부르고, 이는 $f(z_0) = 0$이면서 $f'(z_0) \neq 0$인 경우와 같다. Order $m$이 잘 정의되려면 그런 $0$이 아닌 계수가 존재해야 하는데, 만일 모든 $a_n$이 $0$이면 Taylor series가 항등적으로 $0$이 되어 [정리 1](#thm1){: data-lid="bsz7l" }에 의해 $f$가 $z_0$의 근방에서 항등적으로 $0$이 되므로, 그 경우를 정의에서 배제한 것이다. Order의 핵심은 영점에서 $(z - z_0)^m$을 정확히 그만큼 뽑아낼 수 있다는 다음 인수분해이다.
 
 ::: 명제 6 (영점의 인수분해)
 $f$가 $z_0$에서 holomorphic이고 그곳에서 order $m \geq 1$인 영점을 가진다고 하자. 그러면 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 함수 $g$가 존재하여 그 근방에서
@@ -192,7 +192,7 @@ $$f(z)\,g(z) = \sum_{n=0}^{\infty} c_n (z - z_0)^n, \qquad c_n = \sum_{k=0}^{n} 
 
 $$f(z)\,g(z) = \sum_{k=0}^{\infty}\sum_{l=0}^{\infty} a_k\,b_l\,(z - z_0)^{k+l} = \sum_{n=0}^{\infty}\left(\sum_{k=0}^{n} a_k\,b_{n-k}\right)(z - z_0)^n$$
 
-이 되어 주장하는 계수 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$를 얻는다. 한편 $f$와 $g$가 모두 $D(z_0, \rho)$에서 holomorphic이므로 그 곱 $fg$도 $D(z_0, \rho)$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-lid="rqo0p" }), [정리 1](#thm1){: data-lid="te82v" }에 의해 그 Taylor 급수가 $D(z_0, \rho)$ 전체에서 수렴하므로 곱급수의 수렴반지름은 $\rho$ 이상이다.
+이 되어 주장하는 계수 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$를 얻는다. 한편 $f$와 $g$가 모두 $D(z_0, \rho)$에서 holomorphic이므로 그 곱 $fg$도 $D(z_0, \rho)$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3){: data-lid="rqo0p" }), [정리 1](#thm1){: data-lid="te82v" }에 의해 그 Taylor series가 $D(z_0, \rho)$ 전체에서 수렴하므로 곱급수의 수렴반지름은 $\rho$ 이상이다.
 :::
 
 [명제 8](#prop8){: data-lid="tiu2c" }의 계수 공식 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$는 두 계수열의 합성곱이며, degree $n$의 계수가 두 인수에서 degree의 합이 $n$이 되는 모든 조합의 기여를 모은 것이다. 이는 다항식의 곱셈을 무한급수로 확장한 것에 지나지 않으나, holomorphic function의 절대수렴이 재배열을 정당화해 주는 덕분에 유한 다항식에서와 똑같이 작동한다. 곱의 수렴반지름이 두 인수의 더 작은 쪽 이상이라는 결론도 [따름정리 2](#cor2){: data-lid="mzee9" }의 시각에서 자연스럽다. 곱 $fg$의 singular point는 $f$나 $g$ 가운데 적어도 하나가 특이한 곳에서만 생기므로, 가장 가까운 singular point까지의 거리가 두 함수 각각의 그것보다 가까워질 수 없기 때문이다.

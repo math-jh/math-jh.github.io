@@ -1,7 +1,7 @@
 ---
 title: "Delzant 구성"
-description: '콤팩트 connected symplectic toric manifold가 그 운동량 다면체에 의해 symplectomorphism을 무시하고 유일하게 결정되며, 모든 Delzant 다면체가 사교 축약을 통해 이렇게 실현됨을 보이는 Delzant 정리를 다룬다. 다면체의 facet 데이터로부터 부분 torus를 추출해 $$\mathbb{C}^d$$를 축약하는 명시적 구성을 서술하고, 같은 다면체가 결정하는 대수기하의 projective toric variety와의 대응을 정리한다.'
-excerpt: "Delzant 다면체, Delzant 정리, 사교 축약에 의한 구성, symplectic toric manifold와 운동량 다면체의 일대일 대응"
+description: '콤팩트 connected symplectic toric manifold가 그 운동량 다면체에 의해 symplectomorphism을 무시하고 유일하게 결정되며, 모든 Delzant polytope이 사교 축약을 통해 이렇게 실현됨을 보이는 Delzant 정리를 다룬다. 다면체의 facet 데이터로부터 subtorus를 추출해 $$\mathbb{C}^d$$를 축약하는 명시적 구성을 서술하고, 같은 다면체가 결정하는 대수기하의 projective toric variety와의 대응을 정리한다.'
+excerpt: "Delzant polytope, Delzant 정리, 사교 축약에 의한 구성, symplectic toric manifold와 운동량 다면체의 일대일 대응"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/delzant_construction
@@ -16,7 +16,7 @@ published: false
 
 [\[사교기하학\] §운동량 사상, ⁋정리 10](/ko/math/symplectic_geometry/moment_map#thm10){: data-lid="rxibk" }은 compact connected symplectic manifold 위의 torus action이 Hamiltonian일 때 그 운동량 사상의 image가 볼록 다면체가 됨을 말한다. 작용하는 torus의 차원이 variety의 절반, 즉 가능한 가장 큰 차원에 이르는 극단적인 경우에 이 대응은 완벽해진다. 이때 variety는 운동량 다면체에 의해 그 사교 구조와 action까지 통째로 복원되며, 거꾸로 다면체가 만족해야 할 조합론적 조건도 정확히 결정된다. 이것이 1988년 Delzant가 증명한 정리이며, symplectic 기하의 한 부류 전체를 순전히 볼록 다면체의 데이터로 번역한다.
 
-이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant 다면체*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$의 부분 torus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2){: data-lid="em5as" }의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties){: data-lid="5qo6p" }에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch 곡면을 예시로 든다.
+이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant polytope*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$의 subtorus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2){: data-lid="em5as" }의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties){: data-lid="5qo6p" }에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch 곡면을 예시로 든다.
 
 ## Symplectic toric manifold와 Delzant 다면체
 
@@ -31,7 +31,7 @@ Torus의 차원 $n$이 정확히 $(\dim M)/2$이라는 점이 결정적이다. �
 이제 다면체 쪽의 조건을 정한다. 볼록성 정리는 운동량 다면체가 볼록임만을 주지만, action이 효과적이고 차원이 최대일 때는 각 꼭짓점에서의 국소 모형이 다면체에 강한 정수론적 제약을 부과한다. 이 제약을 추출한 것이 다음 정의이다.
 
 ::: 정의 2
-$\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant polytope</sub>*라는 것은 다음 세 조건을 만족하는 것이다.
+$\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant polytope<sub>델잔트 다면체</sub>*라는 것은 다음 세 조건을 만족하는 것이다.
 
 1. (*simple*) 각 꼭짓점에서 정확히 $n$개의 facet이 만난다 (동치로, $n$개의 모서리가 만난다).
 2. (*rational<sub>유리</sub>*) 각 꼭짓점에서 만나는 모서리들의 방향을 $\mathbb{Z}^n$의 원소인 primitive vector $v_1,\ldots,v_n\in\mathbb{Z}^n$으로 택할 수 있다.
@@ -46,23 +46,23 @@ $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant pol
 
 ## Delzant 정리
 
-이제 두 부류를 잇는 정리를 서술한다. 정리는 대응의 존재와 유일성을 한꺼번에 주장한다. 즉 모든 symplectic toric manifold는 Delzant 다면체를 운동량 다면체로 가지며, 다면체가 variety를 동형을 무시하고 결정하고, 거꾸로 모든 Delzant 다면체가 이렇게 실현된다.
+이제 두 부류를 잇는 정리를 서술한다. 정리는 대응의 존재와 유일성을 한꺼번에 주장한다. 즉 모든 symplectic toric manifold는 Delzant polytope을 운동량 다면체로 가지며, 다면체가 variety를 동형을 무시하고 결정하고, 거꾸로 모든 Delzant polytope이 이렇게 실현된다.
 
 ::: 정리 4 (Delzant)
 대응
 $$(M,\omega,\mathbb{T}^n,\mu)\mapsto\mu(M)$$
-은 symplectic toric manifold의 isomorphism class와 Delzant 다면체의 격자 합동류 (즉 평행이동과 $\GL(n;\mathbb{Z})$ 변환을 무시한 류) 사이의 전단사이다. 구체적으로 다음이 성립한다.
+은 symplectic toric manifold의 isomorphism class와 Delzant polytope의 격자 합동류 (즉 평행이동과 $\GL(n;\mathbb{Z})$ 변환을 무시한 류) 사이의 전단사이다. 구체적으로 다음이 성립한다.
 
-1. 임의의 symplectic toric manifold $(M,\omega,\mathbb{T}^n,\mu)$의 운동량 다면체 $\Delta=\mu(M)$은 Delzant 다면체이다.
+1. 임의의 symplectic toric manifold $(M,\omega,\mathbb{T}^n,\mu)$의 운동량 다면체 $\Delta=\mu(M)$은 Delzant polytope이다.
 2. 두 symplectic toric manifold가 isomorphic할 필요충분조건은 그 운동량 다면체가 평행이동과 $\GL(n;\mathbb{Z})$ 변환으로 일치하는 것이다.
-3. 임의의 Delzant 다면체 $\Delta\subseteq\mathbb{R}^n$에 대하여, $\mu(M)=\Delta$인 symplectic toric manifold $(M_\Delta,\omega_\Delta,\mathbb{T}^n,\mu_\Delta)$이 존재한다.
+3. 임의의 Delzant polytope $\Delta\subseteq\mathbb{R}^n$에 대하여, $\mu(M)=\Delta$인 symplectic toric manifold $(M_\Delta,\omega_\Delta,\mathbb{T}^n,\mu_\Delta)$이 존재한다.
 :::
 
 세 주장 가운데 가장 내용이 풍부한 것은 존재성 3이다. 1과 2는 각 꼭짓점에서의 국소 표준형, 즉 [참고 3](#rmk3){: data-lid="172y7" }의 모형과 운동량 사상의 국소 정규형으로부터 따라오는 분석적 사실인 반면, 3은 주어진 조합론적 데이터로부터 실제로 variety를 빚어내야 하기 때문이다. 우리는 이 구성을 다음 절에서 상세히 다루고, 그것이 곧 정리의 증명에서 가장 무거운 부분을 이룬다. 구성의 출발점은 다면체의 facet들이 주는 선형 데이터를 short exact sequence로 묶는 것이다.
 
 ## Facet 데이터와 부분 torus
 
-Delzant 다면체 $\Delta\subseteq\mathbb{R}^n$이 $d$개의 facet을 갖는다고 하자. 각 facet $F_i$는 안쪽을 향하는 primitive 법선 벡터 $u_i\in\mathbb{Z}^n$과 실수 $\lambda_i\in\mathbb{R}$로 결정되는 반공간 $\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i\}$의 boundary에 놓이며, 따라서 다면체는
+Delzant polytope $\Delta\subseteq\mathbb{R}^n$이 $d$개의 facet을 갖는다고 하자. 각 facet $F_i$는 안쪽을 향하는 primitive 법선 벡터 $u_i\in\mathbb{Z}^n$과 실수 $\lambda_i\in\mathbb{R}$로 결정되는 반공간 $\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i\}$의 boundary에 놓이며, 따라서 다면체는
 
 $$\Delta=\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i,\ i=1,\ldots,d\}$$
 
@@ -70,10 +70,10 @@ $$\Delta=\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i,\ i=1,\ldots,d
 
 $$\beta:\mathbb{R}^d\rightarrow\mathbb{R}^n,\qquad \beta(e_i)=u_i$$
 
-을 정의하자. 여기서 $e_1,\ldots,e_d$은 $\mathbb{R}^d$의 표준 basis이다. Delzant 다면체의 simple·smooth 조건은 각 꼭짓점에서 $n$개의 $u_i$가 $\mathbb{Z}^n$의 basis를 이룸을 뜻하므로, 특히 $\beta$은 $\mathbb{Z}^d$을 $\mathbb{Z}^n$ 위로 보내는 전사이다. 다음 보조정리가 이 전사성을 정확히 만들고 부분 torus를 추출한다.
+을 정의하자. 여기서 $e_1,\ldots,e_d$은 $\mathbb{R}^d$의 표준 basis이다. Delzant polytope의 simple·smooth 조건은 각 꼭짓점에서 $n$개의 $u_i$가 $\mathbb{Z}^n$의 basis를 이룸을 뜻하므로, 특히 $\beta$은 $\mathbb{Z}^d$을 $\mathbb{Z}^n$ 위로 보내는 전사이다. 다음 보조정리가 이 전사성을 정확히 만들고 subtorus를 추출한다.
 
 ::: 보조정리 5
-$\Delta$이 $d$개 facet을 갖는 Delzant 다면체이고 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$이 $\beta(e_i)=u_i$로 주어진다고 하자. 그럼 $\beta$은 전사이며, 그 kernel $\mathfrak{n}:=\ker\beta\subseteq\mathbb{Z}^d$은 rank $d-n$의 자유 subgroup이고 $\mathbb{Z}^d$의 direct sum 인자(direct summand)이다. 따라서 $\beta$을 실수계수로 확장한 $\beta:\mathbb{R}^d\rightarrow\mathbb{R}^n$은 short exact sequence
+$\Delta$이 $d$개 facet을 갖는 Delzant polytope이고 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$이 $\beta(e_i)=u_i$로 주어진다고 하자. 그럼 $\beta$은 전사이며, 그 kernel $\mathfrak{n}:=\ker\beta\subseteq\mathbb{Z}^d$은 rank $d-n$의 자유 subgroup이고 $\mathbb{Z}^d$의 direct sum 인자(direct summand)이다. 따라서 $\beta$을 실수계수로 확장한 $\beta:\mathbb{R}^d\rightarrow\mathbb{R}^n$은 short exact sequence
 
 $$0\rightarrow\mathfrak{n}_\mathbb{R}\rightarrow\mathbb{R}^d\overset{\beta}{\rightarrow}\mathbb{R}^n\rightarrow0$$
 
@@ -81,17 +81,17 @@ $$0\rightarrow\mathfrak{n}_\mathbb{R}\rightarrow\mathbb{R}^d\overset{\beta}{\rig
 
 $$0\rightarrow N\rightarrow\mathbb{T}^d\overset{\bar{\beta}}{\rightarrow}\mathbb{T}^n\rightarrow0$$
 
-을 얻는다. 여기서 $\mathbb{T}^k=\mathbb{R}^k/\mathbb{Z}^k$이고 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 차원 $d-n$의 부분 torus이다.
+을 얻는다. 여기서 $\mathbb{T}^k=\mathbb{R}^k/\mathbb{Z}^k$이고 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 차원 $d-n$의 subtorus이다.
 :::
 ::: 증명
 $\Delta$의 한 꼭짓점 $p$을 택하면, simple 조건에 의해 $p$에서 정확히 $n$개의 facet $F_{i_1},\ldots,F_{i_n}$이 만나고, smooth 조건에 의해 그 법선 $u_{i_1},\ldots,u_{i_n}$은 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis를 이룬다. 이 $n$개의 벡터가 이미 $\beta(\mathbb{Z}^d)$ 안에서 $\mathbb{Z}^n$ 전체를 생성하므로 $\beta$은 전사이다.
 
 전사인 $\mathbb{Z}$-module morphism $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$에 대하여, $\mathbb{Z}^n$이 자유이므로 short exact sequence $0\rightarrow\ker\beta\rightarrow\mathbb{Z}^d\rightarrow\mathbb{Z}^n\rightarrow0$은 분할된다. 따라서 $\mathbb{Z}^d\cong\ker\beta\oplus\mathbb{Z}^n$이고 $\mathfrak{n}=\ker\beta$은 rank $d-n$의 자유 direct sum 인자이다. 분할성에 의해 $\mathbb{R}^d=\mathfrak{n}_\mathbb{R}\oplus(\mathbb{Z}^n\text{의 들어올림})$이므로 실수계수 exact sequence도 곧바로 따라온다.
 
-마지막으로 functor $V\mapsto V/(\text{격자})$을 적용한다. $\mathfrak{n}$이 $\mathbb{Z}^d$의 direct sum 인자이므로 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 $\mathbb{T}^d=\mathbb{R}^d/\mathbb{Z}^d$의 closed 부분 torus이고, quotient $\mathbb{T}^d/N$은 $\mathbb{R}^n/\mathbb{Z}^n=\mathbb{T}^n$과 isomorphic하다. 분할성 덕분에 torsion이 생기지 않아 $N$은 연결된 차원 $d-n$의 torus이며, 지수화한 열 $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$이 완전하다.
+마지막으로 functor $V\mapsto V/(\text{격자})$을 적용한다. $\mathfrak{n}$이 $\mathbb{Z}^d$의 direct sum 인자이므로 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 $\mathbb{T}^d=\mathbb{R}^d/\mathbb{Z}^d$의 closed subtorus이고, quotient $\mathbb{T}^d/N$은 $\mathbb{R}^n/\mathbb{Z}^n=\mathbb{T}^n$과 isomorphic하다. 분할성 덕분에 torsion이 생기지 않아 $N$은 연결된 차원 $d-n$의 torus이며, 지수화한 열 $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$이 완전하다.
 :::
 
-이 exact sequence가 구성의 척추이다. 큰 torus $\mathbb{T}^d$은 곧 $\mathbb{C}^d$ 위에 표준적으로 작용하고, 그 안의 부분 torus $N$이 우리가 나눌 대칭이며, quotient $\mathbb{T}^n$이 축약 후에도 살아남아 결과 variety에 작용하는 토러스가 된다. $N$이 $\mathbb{Z}^d$의 direct sum 인자라는 점은 단순한 부수 사실이 아니라, $N$이 $\mathbb{T}^d$의 closed subgroup으로서 매끄럽게 작용하고 quotient가 다시 torus가 되도록 보장하는 핵심이다. 상수 $\lambda_i$들은 아직 쓰이지 않았는데, 이들은 다음 절에서 축약을 취하는 운동량 사상의 값을 정하는 데 들어간다.
+이 exact sequence가 구성의 척추이다. 큰 torus $\mathbb{T}^d$은 곧 $\mathbb{C}^d$ 위에 표준적으로 작용하고, 그 안의 subtorus $N$이 우리가 나눌 대칭이며, quotient $\mathbb{T}^n$이 축약 후에도 살아남아 결과 variety에 작용하는 토러스가 된다. $N$이 $\mathbb{Z}^d$의 direct sum 인자라는 점은 단순한 부수 사실이 아니라, $N$이 $\mathbb{T}^d$의 closed subgroup으로서 매끄럽게 작용하고 quotient가 다시 torus가 되도록 보장하는 핵심이다. 상수 $\lambda_i$들은 아직 쓰이지 않았는데, 이들은 다음 절에서 축약을 취하는 운동량 사상의 값을 정하는 데 들어간다.
 
 ## 사교 축약에 의한 구성
 
@@ -105,7 +105,7 @@ $$\phi:\mathbb{C}^d\rightarrow(\mathfrak{t}^d)^\ast\cong\mathbb{R}^d,\qquad \phi
 
 으로 둔다. 이는 예시 8의 운동량 사상의 부호를 뒤집은 것으로, [\[사교기하학\] §운동량 사상, ⁋참고 5](/ko/math/symplectic_geometry/moment_map#rmk5){: data-lid="ydd05" }가 정리한 반대 부호 관례를 택한 것에 해당하며, 이하의 구성은 이 관례를 일관되게 따른다.
 
-부분 torus $N\subseteq\mathbb{T}^d$의 action에 대한 운동량 사상은 $\phi$을 $N$의 Lie algebra로 사영한 것이다. [보조정리 5](#lem5){: data-lid="57hc3" }의 exact sequence를 Lie algebra 수준에서 쌍대화하면, 포함 $\iota:\mathfrak{n}\hookrightarrow\mathbb{R}^d$의 쌍대 $\iota^\ast:(\mathbb{R}^d)^\ast\rightarrow\mathfrak{n}^\ast$을 합성하여 $N$-action의 운동량 사상
+subtorus $N\subseteq\mathbb{T}^d$의 action에 대한 운동량 사상은 $\phi$을 $N$의 Lie algebra로 사영한 것이다. [보조정리 5](#lem5){: data-lid="57hc3" }의 exact sequence를 Lie algebra 수준에서 쌍대화하면, 포함 $\iota:\mathfrak{n}\hookrightarrow\mathbb{R}^d$의 쌍대 $\iota^\ast:(\mathbb{R}^d)^\ast\rightarrow\mathfrak{n}^\ast$을 합성하여 $N$-action의 운동량 사상
 
 $$\phi_N:=\iota^\ast\circ\phi:\mathbb{C}^d\rightarrow\mathfrak{n}^\ast$$
 
@@ -119,7 +119,7 @@ $$M_\Delta:=\phi_N^{-1}(c)/N=\mathbb{C}^d /\!\!/_{\!c}\, N$$
 은 차원 $2n$의 compact connected symplectic manifold이고, 그 위에는 quotient $\mathbb{T}^n=\mathbb{T}^d/N$의 효과적 Hamiltonian action이 잔여 action으로 내려와 $(M_\Delta,\omega_\Delta,\mathbb{T}^n,\mu_\Delta)$을 symplectic toric manifold로 만든다. 그 운동량 다면체는 정확히 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::
 ::: 증명
-먼저 $c$이 regular value이고 action이 자유로움을 본다. 점 $z\in\mathbb{C}^d$에서 좌표가 영이 되는 첨자의 집합을 $I(z)=\{k\mid z_k=0\}$이라 하자. $\mathbb{T}^d$의 점 $z$에서의 stabilizer는 정확히 $I(z)$가 지표하는 좌표 부분 torus $\mathbb{T}^{I(z)}=\{t\mid t_k=0\text{ for }k\notin I(z)\}$이다. 따라서 $N$이 $z$에서 자유롭게 작용할 필요충분조건은 $N\cap\mathbb{T}^{I(z)}=\{1\}$이다. Lie algebra 수준의 조건 $\mathfrak{n}_\mathbb{R}\cap\mathbb{R}^{I(z)}=0$은 이 교집합이 finite group임만을 주므로, 아래에서는 이를 격자 수준의 조건으로 강화한다.
+먼저 $c$이 regular value이고 action이 자유로움을 본다. 점 $z\in\mathbb{C}^d$에서 좌표가 영이 되는 첨자의 집합을 $I(z)=\{k\mid z_k=0\}$이라 하자. $\mathbb{T}^d$의 점 $z$에서의 stabilizer는 정확히 $I(z)$가 지표하는 좌표 subtorus $\mathbb{T}^{I(z)}=\{t\mid t_k=0\text{ for }k\notin I(z)\}$이다. 따라서 $N$이 $z$에서 자유롭게 작용할 필요충분조건은 $N\cap\mathbb{T}^{I(z)}=\{1\}$이다. Lie algebra 수준의 조건 $\mathfrak{n}_\mathbb{R}\cap\mathbb{R}^{I(z)}=0$은 이 교집합이 finite group임만을 주므로, 아래에서는 이를 격자 수준의 조건으로 강화한다.
 
 이제 $\phi_N(z)=c$인 점, 즉 $\iota^\ast\bigl(\pi(\lvert z_1\rvert^2,\ldots,\lvert z_d\rvert^2)-\pi\lambda\bigr)=0$인 점을 보자. 이 조건은 벡터 $\pi(\lvert z_k\rvert^2)_k-\pi\lambda$가 $\iota^\ast$의 kernel, 곧 $\mathfrak{n}^\perp=\im\beta^\ast=\{(\langle x,u_k\rangle)_k\mid x\in\mathbb{R}^n\}$에 속함을 뜻한다. 따라서 어떤 $x\in\mathbb{R}^n$이 존재하여 모든 $k$에 대해
 
@@ -140,7 +140,7 @@ $$\dim M_\Delta=\dim\mathbb{C}^d-2\dim N=2d-2(d-n)=2n$$
 끝으로 운동량 다면체가 $\Delta$임은 위 projection에서 직접 읽힌다. $\mu_\Delta(z)=x$이 가능한 값의 집합은 정확히 $\{x\in\mathbb{R}^n\mid\langle x,u_k\rangle+\lambda_k\geq0\text{ for all }k\}=\Delta$이므로 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::
 
-이 구성은 Delzant 정리의 존재성 부분, 즉 [정리 4](#thm4){: data-lid="ig0y8" }의 3을 증명한다. 상수 $\lambda_i$들이 비로소 여기서 쓰였는데, 이들은 축약을 취하는 운동량 값 $c=\iota^\ast(\pi\lambda)$을 정하여 다면체의 facet들이 놓이는 위치, 곧 다면체의 크기와 모양을 결정한다. 법선 $u_i$들이 작용하는 부분 torus $N$을 통해 variety의 *위상*과 action을 빚는다면, 상수 $\lambda_i$들은 그 위에 얹히는 symplectic form의 *부피*를 조절하는 셈이다. 두 다면체가 평행이동으로만 다르면 $u_i$이 같고 $\lambda_i$만 일제히 바뀌는데, 이는 운동량 사상에 상수를 더하는 자유도에 흡수되어 같은 symplectic toric manifold를 준다. 이것이 [정리 4](#thm4){: data-lid="hkcry" }의 유일성 2에서 평행이동을 합동으로 허용하는 이유이다.
+이 구성은 Delzant 정리의 존재성 부분, 즉 [정리 4](#thm4){: data-lid="ig0y8" }의 3을 증명한다. 상수 $\lambda_i$들이 비로소 여기서 쓰였는데, 이들은 축약을 취하는 운동량 값 $c=\iota^\ast(\pi\lambda)$을 정하여 다면체의 facet들이 놓이는 위치, 곧 다면체의 크기와 모양을 결정한다. 법선 $u_i$들이 작용하는 subtorus $N$을 통해 variety의 *위상*과 action을 빚는다면, 상수 $\lambda_i$들은 그 위에 얹히는 symplectic form의 *부피*를 조절하는 셈이다. 두 다면체가 평행이동으로만 다르면 $u_i$이 같고 $\lambda_i$만 일제히 바뀌는데, 이는 운동량 사상에 상수를 더하는 자유도에 흡수되어 같은 symplectic toric manifold를 준다. 이것이 [정리 4](#thm4){: data-lid="hkcry" }의 유일성 2에서 평행이동을 합동으로 허용하는 이유이다.
 
 증명 안에서 각 점 $z$의 좌표 소멸 패턴 $I(z)$이 그 image $x$이 놓이는 facet들과 정확히 대응한 것은 우연이 아니다. 다면체의 face 구조가 그대로 축약공간의 torus orbit 구조로 번역되며, 꼭짓점(가장 많은 facet이 만나는 곳)은 $\mathbb{T}^n$-action의 fixed point에, facet의 상대 내부는 codimension $1$의 orbit에 대응한다. 이 대응은 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5){: data-lid="m7l4d" } 직후에서 본 cone과 orbit의 대응의 사교기하학적 짝이다.
 
@@ -159,7 +159,7 @@ Diffeomorphism은 양쪽 모두의 stratification이 $\Delta$의 face lattice와
 마지막 주장은 사교 축약이 주는 형식과 toric divisor가 주는 형식이 같은 부류임을 말한다. 가정에 의해 $\lambda_k$이 모두 정수이므로, $\Delta$의 facet 데이터 $\langle x,u_k\rangle\geq-\lambda_k$은 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9){: data-lid="9pb94" }의 strictly convex piecewise linear function, 곧 ample divisor $D=\sum_k\lambda_k D_{\rho_k}$을 정의하며, 그 polytope $\Delta_D$이 정확히 $\Delta$이다. 축약으로 얻은 $\omega_\Delta$의 운동량 다면체가 $\Delta$이라는 [정리 6](#thm6){: data-lid="6kkbe" }의 결론은, Atiyah-Guillemin-Sternberg 그림에서 $[\omega_\Delta]$이 이 ample 부류와 같은 $\mathbb{T}^n$-equivariant cohomology류로 표현됨과 동치이다. 따라서 $\omega_\Delta$은 $\mathcal{O}(D)$의 Chern 형식을 대표하는 Kähler 형식과 같은 부류이다.
 :::
 
-이 명제는 사교기하와 대수기하의 두 toric 세계가 Delzant 다면체라는 하나의 조합론적 데이터 위에서 만남을 보여 준다. 대수 쪽은 다면체로부터 normal fan을 거쳐 complex manifold를 짓고, 사교 쪽은 같은 다면체의 facet으로부터 부분 torus를 거쳐 symplectic manifold를 짓는다. 둘은 같은 smooth variety이며, 다면체의 크기를 담은 상수 $\lambda_i$들이 한쪽에서는 ample line bundle의 선택으로, 다른 쪽에서는 symplectic form의 부피로 나타난다. 다면체가 lattice polytope이라는 조건(상수 $\lambda_i$가 정수가 되도록 함)은 대수 쪽에서 line bundle이 실제로 존재하기 위한 정수성 조건이며, 사교 쪽에서는 형식이 정수 cohomology류를 갖는 prequantization 조건에 해당한다.
+이 명제는 사교기하와 대수기하의 두 toric 세계가 Delzant 다면체라는 하나의 조합론적 데이터 위에서 만남을 보여 준다. 대수 쪽은 다면체로부터 normal fan을 거쳐 complex manifold를 짓고, 사교 쪽은 같은 다면체의 facet으로부터 subtorus를 거쳐 symplectic manifold를 짓는다. 둘은 같은 smooth variety이며, 다면체의 크기를 담은 상수 $\lambda_i$들이 한쪽에서는 ample line bundle의 선택으로, 다른 쪽에서는 symplectic form의 부피로 나타난다. 다면체가 lattice polytope이라는 조건(상수 $\lambda_i$가 정수가 되도록 함)은 대수 쪽에서 line bundle이 실제로 존재하기 위한 정수성 조건이며, 사교 쪽에서는 형식이 정수 cohomology류를 갖는 prequantization 조건에 해당한다.
 
 ## 예시
 
@@ -170,9 +170,9 @@ $\mathbb{R}^n$의 표준 단체 ([§토릭 다양체의 정의, ⁋예시 10](/k
 
 $$\Delta=\{x\in\mathbb{R}^n\mid x_i\geq0\ (i=1,\ldots,n),\ x_1+\cdots+x_n\leq1\}$$
 
-을 생각하자. 이는 $d=n+1$개의 facet을 가지며, 안쪽 법선은 $u_i=e_i$ ($i=1,\ldots,n$)와 $u_{n+1}=-e_1-\cdots-e_n$이고 상수는 $\lambda_i=0$, $\lambda_{n+1}=1$이다. 각 꼭짓점에서 만나는 $n$개의 법선이 $\mathbb{Z}^n$의 basis를 이루므로 $\Delta$은 Delzant 다면체이다.
+을 생각하자. 이는 $d=n+1$개의 facet을 가지며, 안쪽 법선은 $u_i=e_i$ ($i=1,\ldots,n$)와 $u_{n+1}=-e_1-\cdots-e_n$이고 상수는 $\lambda_i=0$, $\lambda_{n+1}=1$이다. 각 꼭짓점에서 만나는 $n$개의 법선이 $\mathbb{Z}^n$의 basis를 이루므로 $\Delta$은 Delzant polytope이다.
 
-$\beta:\mathbb{Z}^{n+1}\rightarrow\mathbb{Z}^n$은 $\beta(e_i)=e_i$ ($i\leq n$), $\beta(e_{n+1})=-e_1-\cdots-e_n$이므로 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,1,\ldots,1)$이고, 부분 torus $N\subseteq\mathbb{T}^{n+1}$은 대각 원 $S^1$이다. 따라서 [정리 6](#thm6){: data-lid="sfi38" }의 구성은 $\mathbb{C}^{n+1}$을 대각 $S^1$로 축약하는 것, 곧
+$\beta:\mathbb{Z}^{n+1}\rightarrow\mathbb{Z}^n$은 $\beta(e_i)=e_i$ ($i\leq n$), $\beta(e_{n+1})=-e_1-\cdots-e_n$이므로 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,1,\ldots,1)$이고, subtorus $N\subseteq\mathbb{T}^{n+1}$은 대각 원 $S^1$이다. 따라서 [정리 6](#thm6){: data-lid="sfi38" }의 구성은 $\mathbb{C}^{n+1}$을 대각 $S^1$로 축약하는 것, 곧
 
 $$M_\Delta=\mathbb{C}^{n+1}/\!\!/_{\!c}\,S^1=\mathbb{CP}^n$$
 
@@ -186,13 +186,13 @@ $\mathbb{R}^2$의 단위 정사각형
 
 $$\Delta=[0,1]\times[0,1]=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq1\}$$
 
-을 생각하자. 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=-e_2$이고 상수는 $\lambda_1=\lambda_2=0$, $\lambda_3=\lambda_4=1$이다. 각 꼭짓점에서 만나는 두 법선, 가령 $(0,0)$에서 $\{e_1,e_2\}$과 $(1,1)$에서 $\{-e_1,-e_2\}$은 모두 $\mathbb{Z}^2$의 basis이므로 정사각형은 Delzant 다면체이다.
+을 생각하자. 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=-e_2$이고 상수는 $\lambda_1=\lambda_2=0$, $\lambda_3=\lambda_4=1$이다. 각 꼭짓점에서 만나는 두 법선, 가령 $(0,0)$에서 $\{e_1,e_2\}$과 $(1,1)$에서 $\{-e_1,-e_2\}$은 모두 $\mathbb{Z}^2$의 basis이므로 정사각형은 Delzant polytope이다.
 
-$\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 $\beta(e_1)=e_1$, $\beta(e_2)=e_2$, $\beta(e_3)=-e_1$, $\beta(e_4)=-e_2$이므로 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,0,1)$이고, 부분 torus $N\subseteq\mathbb{T}^4$은 두 좌표쌍 $(z_1,z_3)$과 $(z_2,z_4)$을 각각 대각으로 회전시키는 $S^1\times S^1$이다. 축약은 두 인자에서 따로 일어나 각각 $\mathbb{C}^2/\!\!/S^1=\mathbb{CP}^1$을 주므로
+$\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 $\beta(e_1)=e_1$, $\beta(e_2)=e_2$, $\beta(e_3)=-e_1$, $\beta(e_4)=-e_2$이므로 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,0,1)$이고, subtorus $N\subseteq\mathbb{T}^4$은 두 좌표쌍 $(z_1,z_3)$과 $(z_2,z_4)$을 각각 대각으로 회전시키는 $S^1\times S^1$이다. 축약은 두 인자에서 따로 일어나 각각 $\mathbb{C}^2/\!\!/S^1=\mathbb{CP}^1$을 주므로
 
 $$M_\Delta=(\mathbb{C}^2/\!\!/_{\!c_1}S^1)\times(\mathbb{C}^2/\!\!/_{\!c_2}S^1)=\mathbb{CP}^1\times\mathbb{CP}^1$$
 
-이다. 이는 정사각형이 두 구간의 곱 $[0,1]\times[0,1]$이고 구간 $[0,1]$이 [\[사교기하학\] §운동량 사상, ⁋예시 7](/ko/math/symplectic_geometry/moment_map#ex7){: data-lid="ut9ml" }에서 본 $\mathbb{CP}^1=S^2$의 운동량 다면체라는 사실의 반영이다. 더 일반적으로 두 Delzant 다면체의 곱은 두 symplectic toric manifold의 곱에 대응하며, 직사각형 $[0,a]\times[0,b]$은 두 인자의 symplectic form이 각각 $a$, $b$로 재조정된 $\mathbb{CP}^1\times\mathbb{CP}^1$을 준다.
+이다. 이는 정사각형이 두 구간의 곱 $[0,1]\times[0,1]$이고 구간 $[0,1]$이 [\[사교기하학\] §운동량 사상, ⁋예시 7](/ko/math/symplectic_geometry/moment_map#ex7){: data-lid="ut9ml" }에서 본 $\mathbb{CP}^1=S^2$의 운동량 다면체라는 사실의 반영이다. 더 일반적으로 두 Delzant polytope의 곱은 두 symplectic toric manifold의 곱에 대응하며, 직사각형 $[0,a]\times[0,b]$은 두 인자의 symplectic form이 각각 $a$, $b$로 재조정된 $\mathbb{CP}^1\times\mathbb{CP}^1$을 준다.
 :::
 
 마지막 예시는 같은 정사각형을 비틀어 얻는 Hirzebruch 곡면으로, 다면체의 모양이 variety의 위상을 어떻게 바꾸는지를 보여 준다.
@@ -202,12 +202,12 @@ $$M_\Delta=(\mathbb{C}^2/\!\!/_{\!c_1}S^1)\times(\mathbb{C}^2/\!\!/_{\!c_2}S^1)=
 
 $$\Delta_a=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq h-a x_1\}$$
 
-을 생각하자 (여기서 $h>a$로 두어 다면체가 비지 않게 한다). 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=(-a,-1)$이고, 위쪽 모서리의 기울기가 $-a$이다. 각 꼭짓점에서 만나는 두 법선의 행렬식을 보면, 가령 $(1,h-a)$에서 $\{-e_1,(-a,-1)\}$의 행렬식은 $\det\begin{pmatrix}-1&-a\\0&-1\end{pmatrix}=1$이고 나머지 꼭짓점에서도 $\pm1$이므로 $\Delta_a$은 Delzant 다면체이다.
+을 생각하자 (여기서 $h>a$로 두어 다면체가 비지 않게 한다). 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=(-a,-1)$이고, 위쪽 모서리의 기울기가 $-a$이다. 각 꼭짓점에서 만나는 두 법선의 행렬식을 보면, 가령 $(1,h-a)$에서 $\{-e_1,(-a,-1)\}$의 행렬식은 $\det\begin{pmatrix}-1&-a\\0&-1\end{pmatrix}=1$이고 나머지 꼭짓점에서도 $\pm1$이므로 $\Delta_a$은 Delzant polytope이다.
 
-이 다면체가 정의하는 symplectic toric manifold $M_{\Delta_a}$은 *Hirzebruch 곡면<sub>Hirzebruch surface</sub>* $\mathbb{F}_a=\mathbb{P}(\mathcal{O}_{\mathbb{P}^1}\oplus\mathcal{O}_{\mathbb{P}^1}(a))$이다. $a=0$이면 $\Delta_0$은 직사각형이 되어 [예시 9](#ex9){: data-lid="d7g0y" }의 $\mathbb{F}_0=\mathbb{CP}^1\times\mathbb{CP}^1$로 환원되고, $a$이 커질수록 사다리꼴이 기울어지며 위쪽 모서리의 법선 $(-a,-1)$이 비틀린다. $\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 네 법선 $e_1,e_2,-e_1,(-a,-1)$로 주어지고 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,-a,1)$이며, 대응하는 부분 torus $N\subseteq\mathbb{T}^4$의 비대각 action이 $\mathbb{C}^4$을 비틀어 축약함으로써 $\mathbb{CP}^1$ 위의 비자명한 $\mathbb{CP}^1$-다발을 낳는다. 대수 쪽에서 $\Delta_a$의 normal fan은 ray $e_1,e_2,-e_1,(-a,-1)$이 생성하는 fan으로, 정확히 $\mathbb{F}_a$의 표준 fan이며 [명제 7](#prop7){: data-lid="g84gz" }이 다시 확인된다.
+이 다면체가 정의하는 symplectic toric manifold $M_{\Delta_a}$은 *Hirzebruch 곡면<sub>Hirzebruch surface</sub>* $\mathbb{F}_a=\mathbb{P}(\mathcal{O}_{\mathbb{P}^1}\oplus\mathcal{O}_{\mathbb{P}^1}(a))$이다. $a=0$이면 $\Delta_0$은 직사각형이 되어 [예시 9](#ex9){: data-lid="d7g0y" }의 $\mathbb{F}_0=\mathbb{CP}^1\times\mathbb{CP}^1$로 환원되고, $a$이 커질수록 사다리꼴이 기울어지며 위쪽 모서리의 법선 $(-a,-1)$이 비틀린다. $\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 네 법선 $e_1,e_2,-e_1,(-a,-1)$로 주어지고 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,-a,1)$이며, 대응하는 subtorus $N\subseteq\mathbb{T}^4$의 비대각 action이 $\mathbb{C}^4$을 비틀어 축약함으로써 $\mathbb{CP}^1$ 위의 비자명한 $\mathbb{CP}^1$-다발을 낳는다. 대수 쪽에서 $\Delta_a$의 normal fan은 ray $e_1,e_2,-e_1,(-a,-1)$이 생성하는 fan으로, 정확히 $\mathbb{F}_a$의 표준 fan이며 [명제 7](#prop7){: data-lid="g84gz" }이 다시 확인된다.
 :::
 
-세 예시는 Delzant 다면체의 조합론적 변형이 symplectic toric manifold의 위상적 변형으로 직접 번역됨을 보여 준다. 단체를 정사각형으로 바꾸면 $\mathbb{CP}^2$이 $\mathbb{CP}^1\times\mathbb{CP}^1$이 되고, 정사각형을 사다리꼴로 비틀면 Hirzebruch 곡면들의 족이 나온다. 다면체의 facet을 잘라내는 조작은 variety의 blow-up에, 모서리의 기울기를 바꾸는 조작은 다발 구조의 비틀림에 대응한다. 이렇게 Delzant 정리는 symplectic manifold의 분류 문제 하나를 lattice polytope의 조합론으로 온전히 옮겨 놓는다.
+세 예시는 Delzant polytope의 조합론적 변형이 symplectic toric manifold의 위상적 변형으로 직접 번역됨을 보여 준다. 단체를 정사각형으로 바꾸면 $\mathbb{CP}^2$이 $\mathbb{CP}^1\times\mathbb{CP}^1$이 되고, 정사각형을 사다리꼴로 비틀면 Hirzebruch 곡면들의 족이 나온다. 다면체의 facet을 잘라내는 조작은 variety의 blow-up에, 모서리의 기울기를 바꾸는 조작은 다발 구조의 비틀림에 대응한다. 이렇게 Delzant 정리는 symplectic manifold의 분류 문제 하나를 lattice polytope의 조합론으로 온전히 옮겨 놓는다.
 
 ---
 

@@ -13,7 +13,7 @@ weight: 3
 published: false
 ---
 
-[§접속](/ko/math/riemannian_geometry/connection){: data-lid="4gqzj" }에서 우리는 임의의 vector bundle 위에 connection이 항상 존재한다는 것을 살펴봤지만, 그러한 connection은 일반적으로 유일하지 않다. 한편 manifold 위에 추가로 non-degenerate symmetric bilinear 자료 — 즉 (pseudo-)Riemannian metric — 이 주어지면 그것으로부터 자연스럽게 *canonical*한 connection을 하나 골라낼 수 있는데, 이 글에서는 이러한 connection — *Levi-Civita connection* — 을 정의하고 그 존재와 유일성을 보인 뒤, 이를 통해 *parallel transport*까지 도달한다.
+[§접속](/ko/math/riemannian_geometry/connection){: data-lid="4gqzj" }에서 우리는 임의의 vector bundle 위에 connection이 항상 존재한다는 것을 살펴봤지만, 그러한 connection은 일반적으로 유일하지 않다. 한편 manifold 위에 추가로 non-degenerate symmetric bilinear data — 즉 (pseudo-)Riemannian metric — 이 주어지면 그것으로부터 자연스럽게 *canonical*한 connection을 하나 골라낼 수 있는데, 이 글에서는 이러한 connection — *Levi-Civita connection* — 을 정의하고 그 존재와 유일성을 보인 뒤, 이를 통해 *parallel transport*까지 도달한다.
 
 ## 리만 계량과의 호환성
 
@@ -107,17 +107,17 @@ Koszul 공식은 local coordinate에서 connection coefficient를 metric으로�
 
 $$2\langle \nabla_{E_i} E_j, E_k\rangle = E_i g_{jk} + E_j g_{ki} - E_k g_{ij}$$
 
-가 된다. 따라서 metric $(g_{ij})$의 역행렬 $(g^{ij})$에 대해 $\nabla_{E_i} E_j = \Gamma_{ij}^k E_k$의 *Christoffel 기호* $\Gamma_{ij}^k$는 다음과 같이 명시적으로 표현된다.
+가 된다. 따라서 metric $(g_{ij})$의 역행렬 $(g^{ij})$에 대해 $\nabla_{E_i} E_j = \Gamma_{ij}^k E_k$의 *Christoffel symbols* $\Gamma_{ij}^k$는 다음과 같이 명시적으로 표현된다.
 
 ::: 명제 6
 Pseudo-Riemannian manifold $(M, g)$의 Levi-Civita connection의 connection coefficient는 local coordinate $(x^i)$에서
 
 $$\Gamma_{ij}^k = \frac{1}{2} \sum_{l=1}^n g^{kl} \left(\frac{\partial g_{jl}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)$$
 
-로 주어진다. 이를 *Christoffel 기호<sub>Christoffel symbols</sub>*라 부른다.
+로 주어진다. 이를 *Christoffel symbols<sub>크리스토펠 기호</sub>*라 부른다.
 :::
 
-Christoffel 기호는 index $i, j$에 대해 대칭이며 ($\Gamma_{ij}^k = \Gamma_{ji}^k$), 이는 [정의 3](#def3){: data-lid="nyx72" } 직후의 관찰과 일치하는 결과이다.
+Christoffel symbols는 index $i, j$에 대해 대칭이며 ($\Gamma_{ij}^k = \Gamma_{ji}^k$), 이는 [정의 3](#def3){: data-lid="nyx72" } 직후의 관찰과 일치하는 결과이다.
 
 ::: 예시 7
 유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주면 모든 $\Gamma_{ij}^k = 0$이며, Levi-Civita connection은 표준적인 component별 미분

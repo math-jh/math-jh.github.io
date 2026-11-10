@@ -192,14 +192,14 @@ $$V_\alpha\oplus W_\alpha:V_i\oplus W_i\rightarrow V_j\oplus W_j$$
 를 배정하여 얻는 representation이다.
 :::
 
-Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질의 representation 판본이다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1){: data-lid="57obw" }) 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
+Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질의 representation 판본이다. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1){: data-lid="57obw" }) 이러한 평행성은 우연이 아니며, 다음 절에서 보일 equivalence of categories로 완전히 설명된다.
 
 ## $\Rep(Q)$와 $kQ$-module의 동치
 
 이 글의 주된 정리는 quiver의 representation이 path algebra 위의 module과 본질적으로 같은 자료라는 것이다. 직관적으로, representation $V$가 주어지면 각 vertex의 공간들을 모두 모은 $M=\bigoplus_i V_i$ 위에 path들이 작용하게 만들 수 있다. Trivial path $e_i$는 $M$을 $i$번째 성분 $V_i$로 projection하는 morphism으로, arrow $\alpha:i\rightarrow j$는 $V_\alpha$를 통해 $V_i$를 $V_j$로 보내는 morphism으로 작용시키는 것이다. 거꾸로 $kQ$-module $M$이 주어지면 idempotent $e_i$가 잘라내는 부분공간 $e_iM$을 vertex $i$ 위의 공간으로, arrow의 action을 그 사이의 선형사상으로 회복할 수 있다.
 
 ::: 정리 12
-Quiver $Q$와 field $k$에 대하여, 위에서 서술한 대응은 category 동치
+Quiver $Q$와 field $k$에 대하여, 위에서 서술한 대응은 equivalence of categories
 
 $$\Rep(Q)\cong \lMod{kQ}$$
 

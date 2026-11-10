@@ -77,7 +77,7 @@ $$\Lambda^+=\left\{t\,\omega_{U_\alpha}(p)\mid \text{$p\in U_\alpha$, $t>0$}\rig
 
 $$\Lambda\vert_{U_\alpha}\cong U_\alpha\times \mathbb{R};\qquad t\,\omega_{U_\alpha}(p)\mapsto (p,t)$$
 
-에 의하여 $\Lambda^+\cap \Lambda\vert_{U_\alpha}\cong U_\alpha\times(0,\infty)$은 열린집합이고 connected이다. 따라서 $\Lambda^+$는 이러한 connected 열린집합들의 합집합인데, $M$이 connected이므로 임의의 두 $U_\alpha$들은 서로 겹치는 chart들의 유한한 사슬로 연결되고, 사슬을 따라 $U_\alpha\times(0,\infty)$꼴의 집합들이 차례로 만나므로 $\Lambda^+$는 connected이다. 같은 이유로 $\Lambda^-$도 connected인 열린집합이다. 즉 $\Lambda\setminus\{0\}$은 공집합이 아닌 서로소인 두 connected 열린집합의 합집합이므로 정확히 두 개의 component를 갖는다.
+에 의하여 $\Lambda^+\cap \Lambda\vert_{U_\alpha}\cong U_\alpha\times(0,\infty)$은 열린집합이고 connected이다. 따라서 $\Lambda^+$는 이러한 connected open set들의 합집합인데, $M$이 connected이므로 임의의 두 $U_\alpha$들은 서로 겹치는 chart들의 유한한 사슬로 연결되고, 사슬을 따라 $U_\alpha\times(0,\infty)$꼴의 집합들이 차례로 만나므로 $\Lambda^+$는 connected이다. 같은 이유로 $\Lambda^-$도 connected인 열린집합이다. 즉 $\Lambda\setminus\{0\}$은 공집합이 아닌 서로소인 두 connected open set의 합집합이므로 정확히 두 개의 component를 갖는다.
 
 **(1)$\implies$(2)** $\Lambda\setminus\{0\}$이 정확히 두 개의 component $\Lambda_1,\Lambda_2$를 갖는다 하자. 우선 $0$이 아닌 임의의 $v\in\Lambda\setminus\{0\}$에 대하여 ray $\{tv\mid t>0\}$는 connected이므로 하나의 component에 포함되고, 스칼라곱 $\mu:v\mapsto -v$는 $\Lambda\setminus\{0\}$의 homeomorphism이므로 component들을 component들로 보낸다.
 

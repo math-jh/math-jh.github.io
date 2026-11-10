@@ -52,7 +52,7 @@ $\mathcal{M}$을 다음의 조건을 만족하는 관계들 $G\subseteq A\times 
 
 우리는 $\mathcal{M}$의 원소 $G$마다 정의된 $U=\pr_1G$가 [§정렬집합의 성질들, ⁋명제 4](/ko/math/set_theory/well_ordering#prop4){: data-lid="5049s" }의 조건을 만족함을 보일 것이다. 이를 위해 임의의 $U$, $U'$에 대하여 $U$가 $U'$의 segment이거나 그 반대라는 것을 보이자.
 
-$G$, $G'\in \mathcal{M}$가 임의로 주어졌고 $U$, $U'$가 그 정의역이라 하자. 이 때, (1) $x$를 끝점으로 갖는 segment가 $U$와 $U'$에서 동일한 집합을 나타내고, (2) 그 segment 위에서의 order가 $G$와 $G'$에서 동일하도록 하는, $x\in U\cap U'$들을 모아 그 집합을 $V$라 하자. 만일 $x\in V$이고 $y\in U$가 $y\leq x$를 만족한다면, $U$와 $U'$ 모두에서 $y\in S_x$이다. 또, $U$에서 $y$보다 작은 원소는 $U'$에서도 $y$보다 작다. 따라서 $y\in V$이고, $V$는 $U$의 segment이다.
+$G$, $G'\in \mathcal{M}$가 임의로 주어졌고 $U$, $U'$가 그 정의역이라 하자. 이 때, (1) $x$를 끝점으로 갖는 segment가 $U$와 $U'$에서 동일한 집합을 나타내고, (2) 그 segment 위에서의 order가 $G$와 $G'$에서 동일하도록 하는, $x\in U\cap U'$들을 모아 그 집합을 $V$라 하자. 만일 $x\in V$이고 $y\in U$가 $y<x$를 만족한다면, $U$와 $U'$ 모두에서 $y\in S_x$이다. 또, $U$에서 $y$보다 작은 원소는 $U'$에서도 $y$보다 작다. 따라서 $y\in V$이고, $V$는 $U$의 segment이다.
 
 이제 $U$와 $U'$가 원하는 조건을 만족하기 위해서는, $U=V$이거나 반대로 $U'=V$임만 보이면 충분하다. $V\neq U$이고 $V\neq U'$라 가정하자. 그럼 $U\setminus V$와 $U'\setminus V$의 least element $x$와 $x'$에 대하여, $V=S_x=S_{x'}$가 $U$와 $U'$ 각각에서 성립한다. 그런데 두 번째 조건에 의하여 $V\in\mathcal{S}$이므로 $x=p(S_x)=p(V)=p(S_{x'})=x'$이고, 따라서 $x\in V$이다. 한편 $x$는 $U\setminus V$의 least element이므로 $x\not\in V$이고, 이는 모순이다.
 

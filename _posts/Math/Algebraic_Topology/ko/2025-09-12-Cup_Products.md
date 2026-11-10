@@ -18,7 +18,7 @@ weight: 11
 
 ## 코호몰로지의 외적
 
-Commutative ring $A$를 고정하고, $A$-module들의 chain complex $C_\bullet,D_\bullet$이 주어졌다 하자. ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" }) 이들의 dual sequence
+Commutative ring $A$를 고정하고, $A$-module들의 chain complex $C_\bullet,D_\bullet$이 주어졌다 하자. 이들의 dual sequence
 
 $$(C^\vee)^\bullet=\Hom_A(C_\bullet,A),\qquad (D^\vee)^\bullet=\Hom_A(D_\bullet,A)$$
 
@@ -26,7 +26,7 @@ $$(C^\vee)^\bullet=\Hom_A(C_\bullet,A),\qquad (D^\vee)^\bullet=\Hom_A(D_\bullet,
 
 $$((C\otimes D)^\vee)^\bullet=\Hom_A((C\otimes D)_\bullet,A)$$
 
-에 대하여, 우리는 우선 
+에 대하여 ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" }), 우리는 우선 
 
 $$\times:(C^\vee\otimes D^\vee)^\bullet\rightarrow ((C\otimes D)^\vee)^\bullet$$
 

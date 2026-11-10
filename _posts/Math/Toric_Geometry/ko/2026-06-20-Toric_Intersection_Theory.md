@@ -80,7 +80,7 @@ $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 (2) $\rho_1, \ldots, \rho_k$가 $\Sigma$의 어떤 cone도 이루지 않는다고 하자. 그러면 어떤 maximal cone도 이들 ray를 모두 포함하지 못한다. Divisor $D_{\rho_i}$의 support는 정확히 ray $\rho_i$를 포함하는 cone들에 대응하는 orbit들의 합집합이므로, 교집합 $\bigcap_i \operatorname{Supp} D_{\rho_i}$는 $\rho_1, \ldots, \rho_k$를 모두 face로 갖는 cone에 대응하는 orbit들로 이루어진다. 그러한 cone이 $\Sigma$에 존재하지 않으므로 이 교집합은 공집합이다. 그런데 이처럼 support들의 교집합이 공집합인 cycle들은 자명하게 properly intersect하고, 그 intersection product는 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6){: data-lid="0yzhw" }) 교집합의 component들 위의 합으로 주어져 빈 합이 된다. 따라서 곱은 $0$이다.
 :::
 
-명제 2의 (2)가 *Stanley-Reisner relation*이다. Fan $\Sigma$의 ray 집합 $\Sigma(1)$ 위에서, "함께 하나의 cone을 이루는 ray들의 부분집합"을 face라 부르면 $\Sigma$는 추상적인 simplicial complex의 구조를 가지며, cone을 이루지 않는 부분집합 $\{\rho_{i_1}, \ldots, \rho_{i_k}\}$을 *non-face*라 부른다. 명제 2의 (2)는 정확히 모든 non-face에 대응하는 monomial $\x_{\rho_{i_1}} \cdots \x_{\rho_{i_k}}$이 사라진다는 진술이다. 이 두 종류의 관계가 Chow ring을 완전히 결정한다는 것이 다음 절의 주제이다.
+명제 2의 (2)가 *Stanley-Reisner relation*이다. Fan $\Sigma$의 set of rays $\Sigma(1)$ 위에서, "함께 하나의 cone을 이루는 ray들의 부분집합"을 face라 부르면 $\Sigma$는 추상적인 simplicial complex의 구조를 가지며, cone을 이루지 않는 부분집합 $\{\rho_{i_1}, \ldots, \rho_{i_k}\}$을 *non-face*라 부른다. 명제 2의 (2)는 정확히 모든 non-face에 대응하는 monomial $\x_{\rho_{i_1}} \cdots \x_{\rho_{i_k}}$이 사라진다는 진술이다. 이 두 종류의 관계가 Chow ring을 완전히 결정한다는 것이 다음 절의 주제이다.
 
 ::: 참고 3
 명제 2의 (1)에서 우리는 $X_\Sigma$의 smoothness를 본질적으로 사용했다. $X_\Sigma$가 smooth가 아니라 simplicial일 뿐인 일반적 경우에는 우변에 cone의 *multiplicity* $\mult(\sigma) = [N_\sigma : \mathbb{Z}v_{\rho_1} + \cdots + \mathbb{Z}v_{\rho_k}]$가 곱해져

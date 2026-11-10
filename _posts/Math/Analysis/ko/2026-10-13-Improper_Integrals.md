@@ -1,6 +1,6 @@
 ---
 title: "이상적분"
-description: "구간이 유계가 아니거나 피적분함수가 유계가 아닌 경우로 Riemann 적분을 확장하는 이상적분을 정의하고, Cauchy 판정, 비교판정, 극한비교판정으로 수렴을 판정한다. 적분 sin x/x의 조건수렴, 적분판정법, 피적분함수가 0으로 가지 않는 수렴 예, 주값과의 차이를 다룬다."
+description: "구간이 유계가 아니거나 피적분함수가 유계가 아닌 경우로 Riemann integral을 확장하는 이상적분을 정의하고, Cauchy 판정, 비교판정, 극한비교판정으로 수렴을 판정한다. 적분 sin x/x의 조건수렴, 적분판정법, 피적분함수가 0으로 가지 않는 수렴 예, 주값과의 차이를 다룬다."
 excerpt: "이상적분의 정의, Cauchy 판정·비교판정, 조건수렴, 적분판정법, 주값"
 
 categories: [Math / Analysis]
@@ -29,7 +29,7 @@ $$\int_a^\beta f(x)\dd{x} = \lim_{c \rightarrow \beta^-} \int_a^c f(x)\dd{x}$$
 
 $\beta = \infty$이면 구간이 유계가 아닌 경우이고, $\beta$가 유한하며 $f$가 $\beta$ 근방에서 유계가 아니면 함수가 유계가 아닌 경우이다. singular point가 왼쪽 끝점 $\alpha$에 있는 $f : (\alpha, b] \rightarrow \mathbb{R}$에는 $\lim_{c \rightarrow \alpha^+} \int_c^b f$로 같은 방식의 정의를 쓴다. singular point가 양쪽 끝이거나 구간 내부의 점 $c$에 있는 경우에는 singular point에서 구간을 둘로 쪼개어, 두 이상적분이 *각각* 수렴할 때에만 수렴한다고 하고 그 합을 적분값으로 정한다. 쪼개는 점은 어디에 잡아도 상관이 없다. [§Riemann 적분, ⁋명제 16](/ko/math/analysis/riemann_integral#prop16){: data-lid="sz2ci" }에 의하여 $\int_a^b = \int_a^c + \int_c^b$이므로 $\int_a^\beta f$의 수렴 여부는 $\int_c^\beta f$의 수렴 여부와 같기 때문이다. 이후의 정리는 $[a,\beta)$ 형태에 대해 쓰며, 다른 형태는 구간을 쪼개거나 $x \mapsto -x$로 옮겨 같은 방식으로 다룬다.
 
-$f$가 $[a,\beta]$ 전체에서 Riemann integrable이면 이상적분은 새로운 것을 주지 않는다. $\lvert f\rvert \leq M$이라 하면 $\lvert \int_a^\beta f - \int_a^c f\rvert = \lvert\int_c^\beta f\rvert \leq M(\beta - c)$이고 이는 $c \rightarrow \beta^-$에서 $0$으로 가므로, 이상적분은 Riemann 적분과 같은 값으로 수렴한다. 가령 $\sin x/x$는 $x = 0$에서 값 $1$을 주어 연속으로 확장되므로 $\int_0^1 (\sin x/x)\dd{x}$는 보통의 적분이다.
+$f$가 $[a,\beta]$ 전체에서 Riemann integrable이면 이상적분은 새로운 것을 주지 않는다. $\lvert f\rvert \leq M$이라 하면 $\lvert \int_a^\beta f - \int_a^c f\rvert = \lvert\int_c^\beta f\rvert \leq M(\beta - c)$이고 이는 $c \rightarrow \beta^-$에서 $0$으로 가므로, 이상적분은 Riemann integral과 같은 값으로 수렴한다. 가령 $\sin x/x$는 $x = 0$에서 값 $1$을 주어 연속으로 확장되므로 $\int_0^1 (\sin x/x)\dd{x}$는 보통의 적분이다.
 
 이상적분의 기본 예는 거듭제곱이다.
 
@@ -58,7 +58,7 @@ $F(t) = \int_a^t f$로 두면 $\int_c^b f = F(b) - F(c)$이므로, 주장은 $\l
 
 수렴하면 극한을 $L$이라 하고 $\varepsilon/2$에 대한 $M$을 잡는다. $t \gt M$이면 $\lvert F(t) - L\rvert \lt \varepsilon/2$이므로 $b \gt c \gt M$에서 $\lvert F(b) - F(c)\rvert \leq \lvert F(b) - L\rvert + \lvert L - F(c)\rvert \lt \varepsilon$이다.
 
-역으로 Cauchy 조건을 가정하자. 수열 $x_n = F(a+n)$은 $a + n \gt M$인 $n$에서 $\lvert x_n - x_m\rvert \lt \varepsilon$이므로 Cauchy 수열이고, [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="vryvk" }에 의하여 어떤 $L$로 수렴한다. 이제 $\varepsilon \gt 0$이 주어졌을 때 $\varepsilon/2$에 대한 $M$을 잡고, $a + N \gt M$이면서 $\lvert x_N - L\rvert \lt \varepsilon/2$인 $N$을 고른다. 이런 $N$은 $x_n \rightarrow L$이므로 충분히 큰 $N$에서 존재한다. $t \gt M$이면 $\lvert F(t) - L\rvert \leq \lvert F(t) - F(a+N)\rvert + \lvert x_N - L\rvert \lt \varepsilon$이다. 여기서 $\varepsilon/2$씩 나눈 것은 두 항을 합쳐 $\varepsilon$ 안에 넣기 위해서이다.
+역으로 Cauchy 조건을 가정하자. 수열 $x_n = F(a+n)$은 $a + n \gt M$인 $n$에서 $\lvert x_n - x_m\rvert \lt \varepsilon$이므로 Cauchy sequence이고, [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="vryvk" }에 의하여 어떤 $L$로 수렴한다. 이제 $\varepsilon \gt 0$이 주어졌을 때 $\varepsilon/2$에 대한 $M$을 잡고, $a + N \gt M$이면서 $\lvert x_N - L\rvert \lt \varepsilon/2$인 $N$을 고른다. 이런 $N$은 $x_n \rightarrow L$이므로 충분히 큰 $N$에서 존재한다. $t \gt M$이면 $\lvert F(t) - L\rvert \leq \lvert F(t) - F(a+N)\rvert + \lvert x_N - L\rvert \lt \varepsilon$이다. 여기서 $\varepsilon/2$씩 나눈 것은 두 항을 합쳐 $\varepsilon$ 안에 넣기 위해서이다.
 :::
 
 수열만으로는 충분하지 않다는 점에 주의한다. $F(a+n)$이 수렴해도 $F(t)$는 $t$가 정수 사이를 움직이는 동안 발산할 수 있고, 위 증명의 마지막 단계가 그 틈을 메운다.
@@ -107,7 +107,7 @@ $L = 0$이면 $\varepsilon = 1$로 잡아 $c$ 이후에서 $f \leq g$이고, [�
 
 ## 조건수렴의 예
 
-::: 명제 7 (Dirichlet 적분)
+::: 명제 7 (Dirichlet integral)
 $\int_0^\infty (\sin x/x)\dd{x}$는 수렴하지만 절대수렴하지 않는다.
 :::
 

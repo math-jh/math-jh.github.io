@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="rv8sv" }는 $\mathbb{R}$의 bounded sequence가 수렴하는 부분수열을 가진다고 말한다. 함수열에 대해서도 같은 형태의 정리를 원한다면, 수렴을 균등수렴으로 읽어야 한다. 점별수렴하는 부분수열은 bounded만으로도 얻어지지만, 극한이 연속이라는 보장도, 수렴이 균등하다는 보장도 없다. 이 글에서는 compact 거리공간 $K$ 위의 연속함수열이 균등수렴하는 부분수열을 가지기 위한 조건이 bounded이면서 동등연속인 것임을 보인다. 값은 $\mathbb{R}$ 또는 $\mathbb{C}$에서 취하고, $C(K)$는 $K$ 위의 연속함수 전체에 상한노름 $\lVert f\rVert=\sup_{x\in K}\lvert f(x)\rvert$을 준 거리공간이다. $B(x,r)$은 $K$의 열린 공을 뜻한다. [§균등수렴, ⁋정의 1](/ko/math/analysis/uniform_convergence#def1){: data-lid="plkp6" }에서 보았듯이 이 노름에 대한 수렴이 균등수렴이다.
+[§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4){: data-lid="rv8sv" }는 $\mathbb{R}$의 bounded sequence가 수렴하는 부분수열을 가진다고 말한다. 함수열에 대해서도 같은 형태의 정리를 원한다면, 수렴을 균등수렴으로 읽어야 한다. 점별수렴하는 부분수열은 bounded만으로도 얻어지지만, 극한이 연속이라는 보장도, 수렴이 균등하다는 보장도 없다. 이 글에서는 compact metric space $K$ 위의 연속함수열이 균등수렴하는 부분수열을 가지기 위한 조건이 bounded이면서 동등연속인 것임을 보인다. 값은 $\mathbb{R}$ 또는 $\mathbb{C}$에서 취하고, $C(K)$는 $K$ 위의 연속함수 전체에 상한노름 $\lVert f\rVert=\sup_{x\in K}\lvert f(x)\rvert$을 준 거리공간이다. $B(x,r)$은 $K$의 열린 공을 뜻한다. [§균등수렴, ⁋정의 1](/ko/math/analysis/uniform_convergence#def1){: data-lid="plkp6" }에서 보았듯이 이 노름에 대한 수렴이 균등수렴이다.
 
 ## 유계성과 동등연속성
 
@@ -79,10 +79,10 @@ $E=\{x_1,x_2,\dots\}$로 나열한다. 유한집합이면 아래 과정이 유�
 
 ## Arzelà–Ascoli 정리
 
-$E$를 $K$의 셀 수 있는 dense subset으로 잡아야 한다. Compact 거리공간에는 그런 집합이 있다. 각 $m$에 대해 $K$를 반지름 $1/m$인 유한개의 열린 공으로 덮을 수 있으므로([§컴팩트성, ⁋정의 1](/ko/math/analysis/compactness#def1){: data-lid="j7fdd" }), 이 공들의 중심을 모든 $m$에 대해 모으면 셀 수 있는 집합 $E$를 얻는다. 임의의 $x\in K$와 $r>0$에 대해 $1/m<r$인 $m$을 잡으면 $x$는 반지름 $1/m$인 공 중 하나에 속하고 그 중심이 $E$에 있으므로, $E$는 $x$의 $r$-근방과 만난다.
+$E$를 $K$의 셀 수 있는 dense subset으로 잡아야 한다. Compact metric space에는 그런 집합이 있다. 각 $m$에 대해 $K$를 반지름 $1/m$인 유한개의 열린 공으로 덮을 수 있으므로([§컴팩트성, ⁋정의 1](/ko/math/analysis/compactness#def1){: data-lid="j7fdd" }), 이 공들의 중심을 모든 $m$에 대해 모으면 셀 수 있는 집합 $E$를 얻는다. 임의의 $x\in K$와 $r>0$에 대해 $1/m<r$인 $m$을 잡으면 $x$는 반지름 $1/m$인 공 중 하나에 속하고 그 중심이 $E$에 있으므로, $E$는 $x$의 $r$-근방과 만난다.
 
 ::: 정리 6 (Arzelà–Ascoli)
-$K$가 compact 거리공간이고 $(f_n)$이 $C(K)$의 함수열로서 pointwise bounded이고 equicontinuous라 하자. 그러면 $(f_n)$은 uniformly bounded이고, 균등수렴하는 부분수열을 가진다. 극한은 $C(K)$에 속한다.
+$K$가 compact metric space이고 $(f_n)$이 $C(K)$의 함수열로서 pointwise bounded이고 equicontinuous라 하자. 그러면 $(f_n)$은 uniformly bounded이고, 균등수렴하는 부분수열을 가진다. 극한은 $C(K)$에 속한다.
 :::
 
 ::: 증명
@@ -94,7 +94,7 @@ $$\lvert g_k(x)-g_l(x)\rvert\leq\lvert g_k(x)-g_k(e_i)\rvert+\lvert g_k(e_i)-g_l
 
 이다. $N$은 $x$에 의존하지 않으므로 $\lVert g_k-g_l\rVert\leq\varepsilon$이다. $\varepsilon/3$으로 나눈 것은 위 세 항에 각각 같은 크기를 배분하기 위해서이고, 유한개의 $e_i$를 쓴 것은 $N$을 점마다 새로 잡지 않고 하나로 고정하기 위해서이다.
 
-이제 극한을 만든다. 각 $x$에 대해 $(g_k(x))$가 $\mathbb{C}$의 Cauchy 수열이므로 $g(x)=\lim_kg_k(x)$가 존재한다. 위에서 $k,l\geq N$이면 모든 $x$에 대해 $\lvert g_k(x)-g_l(x)\rvert\leq\varepsilon$이므로, $l\rightarrow\infty$로 보내면 $\lvert g_k(x)-g(x)\rvert\leq\varepsilon$이다. 즉 $k\geq N$이면 $\lVert g_k-g\rVert\leq\varepsilon$이고 $g_k\rightarrow g$는 균등수렴이다. [§균등수렴, ⁋정리 6](/ko/math/analysis/uniform_convergence#thm6){: data-lid="twp3z" }에 의하여 연속함수열의 균등극한은 연속이므로 $g\in C(K)$이다.
+이제 극한을 만든다. 각 $x$에 대해 $(g_k(x))$가 $\mathbb{C}$의 Cauchy sequence이므로 $g(x)=\lim_kg_k(x)$가 존재한다. 위에서 $k,l\geq N$이면 모든 $x$에 대해 $\lvert g_k(x)-g_l(x)\rvert\leq\varepsilon$이므로, $l\rightarrow\infty$로 보내면 $\lvert g_k(x)-g(x)\rvert\leq\varepsilon$이다. 즉 $k\geq N$이면 $\lVert g_k-g\rVert\leq\varepsilon$이고 $g_k\rightarrow g$는 균등수렴이다. [§균등수렴, ⁋정리 6](/ko/math/analysis/uniform_convergence#thm6){: data-lid="twp3z" }에 의하여 연속함수열의 균등극한은 연속이므로 $g\in C(K)$이다.
 :::
 
 [정리 6](#thm6){: data-lid="7c6pc" }은 pointwise boundedness만 가정했는데 결론은 uniform boundedness까지 포함한다. 동등연속성이 점별 정보를 정의역 전체로 퍼뜨리기 때문이다. 또 균등수렴하는 부분수열을 뽑기만 하고 전체 수열이 수렴한다고는 말하지 않는다. $f_n=(-1)^n$은 상수함수열이어서 동등연속이고 uniformly bounded이지만 수렴하지 않는다.
@@ -110,7 +110,7 @@ $K$가 compact 거리공간일 때 $F\subseteq C(K)$가 compact인 것은 $F$가
 ::: 증명
 ($\Leftarrow$) $(f_n)$을 $F$의 점열이라 하자. $F$가 uniformly bounded이므로 pointwise bounded이고, [정리 6](#thm6){: data-lid="cvaqm" }에 의하여 $C(K)$에서 어떤 $g$로 수렴하는 부분수열이 있다. $F$가 닫혀 있으므로 $g\in F$이다. 따라서 $F$는 sequentially compact이고, [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5){: data-lid="95or5" }에 의하여 거리공간에서 이는 compact와 같다.
 
-($\Rightarrow$) $F$가 compact이면 닫혀 있고 bounded이다. 또한 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5){: data-lid="64m9y" }에 의하여 totally bounded이다. $\varepsilon>0$이 주어졌다고 하자. $F$의 유한개 원소 $f_1,\dots,f_m$이 있어 모든 $f\in F$에 대해 어떤 $i$가 $\lVert f-f_i\rVert<\varepsilon/3$을 만족한다. 각 $f_i$는 compact 집합 $K$ 위의 연속함수이므로 [§연속함수의 성질, ⁋정리 6](/ko/math/analysis/continuous_functions#thm6){: data-lid="2m1ac" }에 의하여 균등연속이고, $d(x,y)<\delta_i$이면 $\lvert f_i(x)-f_i(y)\rvert<\varepsilon/3$인 $\delta_i$가 있다. $\delta=\min_i\delta_i$라 두자. $d(x,y)<\delta$이고 $f\in F$이면 위의 $i$에 대해
+($\Rightarrow$) $F$가 compact이면 닫혀 있고 bounded이다. 또한 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5){: data-lid="64m9y" }에 의하여 totally bounded이다. $\varepsilon>0$이 주어졌다고 하자. $F$의 유한개 원소 $f_1,\dots,f_m$이 있어 모든 $f\in F$에 대해 어떤 $i$가 $\lVert f-f_i\rVert<\varepsilon/3$을 만족한다. 각 $f_i$는 compact set $K$ 위의 연속함수이므로 [§연속함수의 성질, ⁋정리 6](/ko/math/analysis/continuous_functions#thm6){: data-lid="2m1ac" }에 의하여 균등연속이고, $d(x,y)<\delta_i$이면 $\lvert f_i(x)-f_i(y)\rvert<\varepsilon/3$인 $\delta_i$가 있다. $\delta=\min_i\delta_i$라 두자. $d(x,y)<\delta$이고 $f\in F$이면 위의 $i$에 대해
 
 $$\lvert f(x)-f(y)\rvert\leq\lvert f(x)-f_i(x)\rvert+\lvert f_i(x)-f_i(y)\rvert+\lvert f_i(y)-f(y)\rvert<\varepsilon$$
 
@@ -142,22 +142,22 @@ $$\int_0^{2\pi}\bigl(\sin(ax)-\sin(bx)\bigr)^2\dd{x}=2\pi$$
 정의역의 compactness도 빠질 수 없다.
 
 ::: 예시 9 (정의역이 compact가 아닌 경우)
-$\varphi(x)=\max\{0,1-\lvert x\rvert\}$라 하고 $\mathbb{R}$ 위에서 $f_n(x)=\varphi(x-n)$으로 둔다. 각 $f_n$은 $0\leq f_n\leq1$이고 Lipschitz 상수가 $1$이므로 uniformly bounded이고 동등연속이다. 그러나 고정된 $x$에 대해 $n>x+1$이면 $f_n(x)=0$이므로 $f_n$은 $0$으로 점별수렴한다. 부분수열이 균등수렴한다면 그 극한은 점별극한 $0$이어야 하는데 $\lVert f_n\rVert=1$이므로 모순이다. 따라서 균등수렴하는 부분수열은 없다. 봉우리가 $x=n$으로 달아나기 때문에, 증명에서 쓴 유한 덮개를 만들 수 없다.
+$\varphi(x)=\max\{0,1-\lvert x\rvert\}$라 하고 $\mathbb{R}$ 위에서 $f_n(x)=\varphi(x-n)$으로 둔다. 각 $f_n$은 $0\leq f_n\leq1$이고 Lipschitz constant가 $1$이므로 uniformly bounded이고 동등연속이다. 그러나 고정된 $x$에 대해 $n>x+1$이면 $f_n(x)=0$이므로 $f_n$은 $0$으로 점별수렴한다. 부분수열이 균등수렴한다면 그 극한은 점별극한 $0$이어야 하는데 $\lVert f_n\rVert=1$이므로 모순이다. 따라서 균등수렴하는 부분수열은 없다. 봉우리가 $x=n$으로 달아나기 때문에, 증명에서 쓴 유한 덮개를 만들 수 없다.
 :::
 
 ## 균등 Lipschitz 함수열
 
-동등연속성을 확인하는 가장 흔한 방법은 도함수나 Lipschitz 상수를 균등하게 제어하는 것이다.
+동등연속성을 확인하는 가장 흔한 방법은 도함수나 Lipschitz constant를 균등하게 제어하는 것이다.
 
 ::: 따름정리 10
-$K$가 compact 거리공간이고 $(f_n)$이 $K$ 위의 함수열로서, 상수 $L$이 있어 모든 $n$과 $x,y\in K$에 대해 $\lvert f_n(x)-f_n(y)\rvert\leq L d(x,y)$이며, 어떤 $x_0\in K$에서 $(f_n(x_0))$이 bounded라 하자. 그러면 $(f_n)$은 균등수렴하는 부분수열을 가진다.
+$K$가 compact metric space이고 $(f_n)$이 $K$ 위의 함수열로서, 상수 $L$이 있어 모든 $n$과 $x,y\in K$에 대해 $\lvert f_n(x)-f_n(y)\rvert\leq L d(x,y)$이며, 어떤 $x_0\in K$에서 $(f_n(x_0))$이 bounded라 하자. 그러면 $(f_n)$은 균등수렴하는 부분수열을 가진다.
 :::
 
 ::: 증명
 $\varepsilon>0$에 대해 $\delta=\varepsilon/L$로 두면($L=0$이면 모든 $f_n$이 상수이므로 임의의 $\delta$) $d(x,y)<\delta$일 때 모든 $n$에 대해 $\lvert f_n(x)-f_n(y)\rvert\leq L d(x,y)<\varepsilon$이므로 $(f_n)$은 equicontinuous이다. 각 $f_n$은 Lipschitz이므로 연속이다. 또 $K$가 compact이어서 $D=\sup_{x,y\in K}d(x,y)$가 유한하고, $\lvert f_n(x)\rvert\leq\lvert f_n(x_0)\rvert+LD$이므로 $(f_n)$은 uniformly bounded이다. [정리 6](#thm6){: data-lid="0eiv7" }을 적용하면 된다.
 :::
 
-특히 $K=[a,b]$이고 $f_n$이 미분가능하며 $\lvert f_n'\rvert\leq L$이면 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="hy5fn" }에 의하여 $f_n$은 Lipschitz 상수 $L$을 가지므로 위의 결론이 성립한다.
+특히 $K=[a,b]$이고 $f_n$이 미분가능하며 $\lvert f_n'\rvert\leq L$이면 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="hy5fn" }에 의하여 $f_n$은 Lipschitz constant $L$을 가지므로 위의 결론이 성립한다.
 
 Uniform boundedness(여기서는 한 점에서의 boundedness)가 빠지면 결론이 무너진다. 상수함수열 $f_n\equiv n$은 $L=0$으로 균등 Lipschitz이지만, 모든 점에서 $f_n(x)=n\rightarrow\infty$이므로 점별수렴하는 부분수열조차 없다. 반대로 Lipschitz 조건이 빠져도 무너진다는 것이 [예시 8](#ex8){: data-lid="2k37b" }이다. 두 조건은 각각 [정리 6](#thm6){: data-lid="zi6gd" }의 두 가정에 대응하며, 어느 쪽도 다른 쪽으로 대신할 수 없다.
 

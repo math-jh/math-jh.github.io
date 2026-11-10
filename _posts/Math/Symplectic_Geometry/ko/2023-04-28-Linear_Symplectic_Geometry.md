@@ -45,7 +45,7 @@ $$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
 
 이 $V$의 부분공간이 된다는 것을 쉽게 확인할 수 있다. 따라서 이 부분공간의 basis를 택하면 $u_1,\ldots, u_k$를 얻는다. 이제 $V=U\oplus W$라 하자. 그럼 $W$의 basis $e_1,\ldots, e_n,f_1,\ldots, f_n$을 다음과 같이 찾을 수 있다. 
 
-임의의 벡터 $e_1\in W$를 하나 택하자. 그럼 $\omega$는 $W$ 위에서 non-degenerate이므로, $\omega(e_1,f_1)\neq 0$을 만족하는 $f_1\in W$이 존재하며, 필요한만큼 상수배를 하여 $\omega(e_1,f_1)=1$이라 가정할 수 있다. $\omega$가 skew-symmetric이므로 $\omega(e_1,e_1)=\omega(f_1,f_1)=0$임은 자명하다.
+$W=\{0\}$이면 더 할 것이 없으므로, $W\neq\{0\}$이라 하고 $0$이 아닌 벡터 $e_1\in W$를 하나 택하자. 그럼 $\omega$는 $W$ 위에서 non-degenerate이므로, $\omega(e_1,f_1)\neq 0$을 만족하는 $f_1\in W$이 존재하며, 필요한만큼 상수배를 하여 $\omega(e_1,f_1)=1$이라 가정할 수 있다. $\omega$가 skew-symmetric이므로 $\omega(e_1,e_1)=\omega(f_1,f_1)=0$임은 자명하다.
 
 이와 같은 과정을 반복하여, 다음 두 조건
 

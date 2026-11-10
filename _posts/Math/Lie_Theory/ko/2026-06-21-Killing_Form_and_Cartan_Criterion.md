@@ -103,7 +103,7 @@ $$\mathfrak{g}^{\perp}=\left\{x\in\mathfrak{g}\mid \kappa(x,y)=0\text{ for all }
 
 ## Jordan–Chevalley decomposition
 
-Cartan의 판정법의 증명은 단 한 번, endomorphism을 semisimple 부분과 nilpotent 부분으로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
+Cartan의 판정법의 증명은 단 한 번, endomorphism을 semisimple 부분과 nilpotent part로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
 
 ::: 명제 5 (Jordan–Chevalley)
 $V$가 algebraically closed field $k$ 위의 유한차원 벡터공간이고 $x\in\End(V)$라 하자. 그럼 다음을 만족하는 $x_s,x_n\in\End(V)$가 유일하게 존재한다.

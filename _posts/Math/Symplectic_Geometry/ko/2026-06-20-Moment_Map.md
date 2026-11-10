@@ -1,6 +1,6 @@
 ---
 title: "운동량 사상"
-description: "Symplectic manifold 위의 Hamiltonian 군작용과 운동량 사상을 정의하고, 그 기본 성질과 예시를 다룬다. 끝으로 Atiyah-Guillemin-Sternberg 볼록성 정리를 서술하여 toric 기하로의 다리를 놓는다."
+description: "Symplectic manifold 위의 Hamiltonian 군작용과 운동량 사상을 정의하고, 그 기본 성질과 예시를 다룬다. 끝으로 Atiyah-Guillemin-Sternberg convexity theorem을 서술하여 toric 기하로의 다리를 놓는다."
 excerpt: "Hamiltonian 군작용과 moment map, 그리고 볼록성 정리"
 
 categories: [Math / Symplectic Geometry]
@@ -17,7 +17,7 @@ published: false
 
 [§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6){: data-lid="7vtlx" }에서 우리는 함수 $H\in C^\infty(M)$마다 nondegeneracy를 이용해 Hamiltonian 벡터장 $X_H$를 정의하였다. 이제 우리는 함수 하나가 아니라 Lie group $G$가 symplectic manifold $(M,\omega)$에 symplectomorphism으로 작용하는 상황을 생각한다. 이때 $G$의 Lie algebra $\mathfrak{g}$의 각 원소 $X$는 $M$ 위의 벡터장 $X_M$을 낳으며, 좋은 경우에는 이 $X_M$이 어떤 함수의 Hamiltonian 벡터장이 된다. 이 함수들을 $\mathfrak{g}$에 대해 한꺼번에 모은 것이 *운동량 사상<sub>moment map</sub>* $\mu:M\rightarrow\mathfrak{g}^\ast$이다.
 
-운동량 사상은 고전역학에서 대칭성으로부터 보존량을 얻는 Noether 정리의 기하학적 형태이다. 회전 대칭이 각운동량을, 평행이동 대칭이 선운동량을 보존시키듯, group action의 각 일매개변수 subgroup은 보존되는 함수 하나를 준다. 더 나아가 운동량 사상은 Marsden-Weinstein reduction의 출발점이며, torus action의 경우 그 image가 convex 다면체가 되어 toric 기하와 Delzant 대응으로 이어진다. 우리는 먼저 fundamental 벡터장과 Hamiltonian action을 정의하고, 운동량 사상의 기본 성질과 표준적인 예시들을 살펴본 뒤, 끝으로 Atiyah-Guillemin-Sternberg 볼록성 정리를 서술한다.
+운동량 사상은 고전역학에서 대칭성으로부터 보존량을 얻는 Noether 정리의 기하학적 형태이다. 회전 대칭이 각운동량을, 평행이동 대칭이 선운동량을 보존시키듯, group action의 각 일매개변수 subgroup은 보존되는 함수 하나를 준다. 더 나아가 운동량 사상은 Marsden-Weinstein reduction의 출발점이며, torus action의 경우 그 image가 convex 다면체가 되어 toric 기하와 Delzant 대응으로 이어진다. 우리는 먼저 fundamental vector field와 Hamiltonian action을 정의하고, 운동량 사상의 기본 성질과 표준적인 예시들을 살펴본 뒤, 끝으로 Atiyah-Guillemin-Sternberg convexity theorem을 서술한다.
 
 ## Fundamental 벡터장
 
@@ -58,7 +58,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 
 여기서 $\mathfrak{g}^\ast$ 위의 *coadjoint action* $\Ad^\ast$는 [\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19){: data-lid="zfq1k" }의 adjoint action의 dual로 정의된다. 즉 $\xi\in\mathfrak{g}^\ast$, $X\in\mathfrak{g}$에 대하여 $\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$이다. 역원 $g^{-1}$이 들어가는 것은 $g\mapsto\Ad_g^\ast$가 left action이 되도록 하기 위함이다.
 
-조건 1은 정의 2 직전의 관찰을 정합적으로 만든 것이다. 각 $X$마다 $X_M$의 Hamiltonian function $\mu^X$를 주되, 그 함수가 $X$에 선형으로 의존하도록 $\mathfrak{g}^\ast$-값 morphism 하나로 묶은 것이다. $\mu^X$가 $X$에 선형임은 $\mu(p)$가 $\mathfrak{g}^\ast$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 group의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1을 만족하는 $\mu$에 대하여 $X\mapsto\mu^X$이 Lie algebra 준동형이라는 조건과 동치이다.
+조건 1은 정의 2 직전의 관찰을 정합적으로 만든 것이다. 각 $X$마다 $X_M$의 Hamiltonian function $\mu^X$를 주되, 그 함수가 $X$에 선형으로 의존하도록 $\mathfrak{g}^\ast$-값 morphism 하나로 묶은 것이다. $\mu^X$가 $X$에 선형임은 $\mu(p)$가 $\mathfrak{g}^\ast$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 group의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1을 만족하는 $\mu$에 대하여 $X\mapsto\mu^X$이 Lie algebra homomorphism이라는 조건과 동치이다.
 
 운동량 사상의 가장 중요한 해석은 보존량이다. $G$-불변 함수 $H\in C^\infty(M)$, 즉 $H\circ\psi_g=H$인 함수를 Hamiltonian으로 갖는 흐름을 생각하면, $\mu$는 그 흐름을 따라 보존된다.
 
@@ -66,7 +66,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 $(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $H\in C^\infty(M)$이 $G$-불변이라 하자. 그럼 $H$의 Hamiltonian 벡터장 $X_H$의 흐름을 따라 $\mu$는 일정하다. 즉 각 $X\in\mathfrak{g}$에 대해 $\mu^X$는 $X_H$를 따라 보존되는 양이다.
 :::
 ::: 증명
-$\mu^X$가 $X_H$를 따라 변화하는 율은 Poisson 괄호 ([§사교다양체, ⁋정의 7](/ko/math/symplectic_geometry/symplectic_manifold#def7){: data-lid="hjo0k" }) $X_H\mu^X=\{\mu^X,H\}$이다. $H$가 $G$-불변이므로 $X$ 방향으로 미분하면 $X_M H=0$, 즉 $\dd{H}(X_M)=0$이다. 한편 조건 1에 의하여 $\iota_{X_M}\omega=\dd{\mu}^X$이므로
+$\mu^X$가 $X_H$를 따라 변화하는 율은 Poisson bracket ([§사교다양체, ⁋정의 7](/ko/math/symplectic_geometry/symplectic_manifold#def7){: data-lid="hjo0k" }) $X_H\mu^X=\{\mu^X,H\}$이다. $H$가 $G$-불변이므로 $X$ 방향으로 미분하면 $X_M H=0$, 즉 $\dd{H}(X_M)=0$이다. 한편 조건 1에 의하여 $\iota_{X_M}\omega=\dd{\mu}^X$이므로
 
 $$\{\mu^X,H\}=-X_{\mu^X}H=-\dd{H}(X_{\mu^X})=-\dd{H}(X_M)=0$$
 
@@ -81,7 +81,7 @@ $$\{\mu^X,H\}=-X_{\mu^X}H=-\dd{H}(X_{\mu^X})=-\dd{H}(X_M)=0$$
 $(M,\omega)$ 위의 connected Lie group $G$의 symplectic action에 대하여 다음이 성립한다.
 
 1. 조건 1을 만족하는 $\mu:M\rightarrow\mathfrak{g}^\ast$이 존재한다면, 또 하나의 그러한 $\mu'$은 $\mu'=\mu+c$ ($c\in\mathfrak{g}^\ast$ 상수)의 꼴이다. 단 $M$이 connected라고 가정한다.
-2. 조건 1을 만족하는 $\mu$가 조건 2 ($\Ad^\ast$-equivariance)도 만족할 필요충분조건은 morphism $X\mapsto\mu^X$이 Lie algebra 준동형, 즉 $\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$인 것이다.
+2. 조건 1을 만족하는 $\mu$가 조건 2 ($\Ad^\ast$-equivariance)도 만족할 필요충분조건은 morphism $X\mapsto\mu^X$이 Lie algebra homomorphism, 즉 $\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$인 것이다.
 :::
 ::: 증명
 **1.** 두 morphism $\mu,\mu'$이 조건 1을 만족하면, 각 $X$에 대해 $\dd{(\mu'^X-\mu^X)}=\iota_{X_M}\omega-\iota_{X_M}\omega=0$이다. $M$이 connected이므로 $\mu'^X-\mu^X$은 상수이고, 이 상수를 $c(X)$라 하면 $X\mapsto c(X)$는 선형이므로 $c\in\mathfrak{g}^\ast$를 정의한다. 즉 $\mu'=\mu+c$이다.
@@ -90,13 +90,13 @@ $(M,\omega)$ 위의 connected Lie group $G$의 symplectic action에 대하여 �
 
 $$X_M\mu^Y=-\langle\mu,[X,Y]\rangle=-\mu^{[X,Y]}\qquad\text{(모든 }X,Y\in\mathfrak{g}\text{에 대해)}$$
 
-좌변을 풀어 쓰면 $X_M\mu^Y=\dd{\mu}^Y(X_M)=\omega(Y_M,X_M)=\omega(X_{\mu^Y},X_{\mu^X})=\{\mu^Y,\mu^X\}=-\{\mu^X,\mu^Y\}$이다. 여기서 조건 1로부터 오는 $X_M=X_{\mu^X}$, $Y_M=X_{\mu^Y}$와 Poisson 괄호의 정의, 그리고 $\omega$의 반대칭성을 사용하였다. 두 무한소 형태를 견주면 equivariance는 $\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$과 동치이다.
+좌변을 풀어 쓰면 $X_M\mu^Y=\dd{\mu}^Y(X_M)=\omega(Y_M,X_M)=\omega(X_{\mu^Y},X_{\mu^X})=\{\mu^Y,\mu^X\}=-\{\mu^X,\mu^Y\}$이다. 여기서 조건 1로부터 오는 $X_M=X_{\mu^X}$, $Y_M=X_{\mu^Y}$와 Poisson bracket의 정의, 그리고 $\omega$의 반대칭성을 사용하였다. 두 무한소 형태를 견주면 equivariance는 $\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$과 동치이다.
 :::
 
-1번에 의하면 운동량 사상은 존재할 경우 $\mathfrak{g}^\ast$의 상수만큼의 자유도를 갖는다. $G$가 가령 semisimple이어서 $[\mathfrak{g},\mathfrak{g}]=\mathfrak{g}$인 경우에는 2번의 준동형 조건이 이 상수를 강제로 고정하여 운동량 사상이 유일해진다. Compact group이나 torus의 경우에는 상수를 적절히 택해 equivariance가 성립하도록 만들 수 있다. 2번은 또한 운동량 사상이 Poisson 괄호와 Lie bracket을 잇는 준동형을 준다는 점을 보여 주며, 이는 Hamiltonian action을 Poisson algebra의 언어로 재서술하는 출발점이 된다.
+1번에 의하면 운동량 사상은 존재할 경우 $\mathfrak{g}^\ast$의 상수만큼의 자유도를 갖는다. $G$가 가령 semisimple이어서 $[\mathfrak{g},\mathfrak{g}]=\mathfrak{g}$인 경우에는 2번의 준동형 조건이 이 상수를 강제로 고정하여 운동량 사상이 유일해진다. Compact group이나 torus의 경우에는 상수를 적절히 택해 equivariance가 성립하도록 만들 수 있다. 2번은 또한 운동량 사상이 Poisson bracket과 Lie bracket을 잇는 준동형을 준다는 점을 보여 주며, 이는 Hamiltonian action을 Poisson algebra의 언어로 재서술하는 출발점이 된다.
 
 ::: 참고 5
-Fundamental 벡터장의 대응 $X\mapsto X_M$에서 부호 하나가 나타나는 것은 left action의 결합법칙 $\psi_g\circ\psi_h=\psi_{gh}$ 때문이다. 일매개변수 subgroup의 흐름을 합성하는 순서가 group과 vector field에서 반대로 작용하여 $[X,Y]_M=-[X_M,Y_M]$이 된다. 문헌에 따라서는 처음부터 $X_M$을 $-\frac{d}{\dd{t}}\bigr\vert_{0}\exp(tX)\cdot p$로 정의하거나 right action을 써서 준동형이 되게 하며, 이에 맞추어 운동량 사상의 정의 조건 1의 부호를 $\dd{\mu}^X=-\iota_{X_M}\omega$로 바꾸기도 한다. 우리는 **[CdS]**를 따라 위의 관례를 택하였다. 어느 관례를 택하든 운동량 사상의 image와 그 볼록성은 변하지 않는다.
+Fundamental vector field의 대응 $X\mapsto X_M$에서 부호 하나가 나타나는 것은 left action의 결합법칙 $\psi_g\circ\psi_h=\psi_{gh}$ 때문이다. 일매개변수 subgroup의 흐름을 합성하는 순서가 group과 vector field에서 반대로 작용하여 $[X,Y]_M=-[X_M,Y_M]$이 된다. 문헌에 따라서는 처음부터 $X_M$을 $-\frac{d}{\dd{t}}\bigr\vert_{0}\exp(tX)\cdot p$로 정의하거나 right action을 써서 준동형이 되게 하며, 이에 맞추어 운동량 사상의 정의 조건 1의 부호를 $\dd{\mu}^X=-\iota_{X_M}\omega$로 바꾸기도 한다. 우리는 **[CdS]**를 따라 위의 관례를 택하였다. 어느 관례를 택하든 운동량 사상의 image와 그 볼록성은 변하지 않는다.
 :::
 
 운동량 사상은 group의 곱에 대해 자연스럽게 행동한다. 두 Hamiltonian 공간의 곱은 다시 Hamiltonian 공간이며, 그 운동량 사상은 성분별로 주어진다.
@@ -109,7 +109,7 @@ $$\mu(p_1,p_2)=\bigl(\mu_1(p_1),\mu_2(p_2)\bigr)\in\mathfrak{g}_1^\ast\oplus\mat
 이다.
 :::
 ::: 증명
-$G_1\times G_2$의 Lie algebra는 $\mathfrak{g}_1\oplus\mathfrak{g}_2$이고, $(X_1,X_2)\in\mathfrak{g}_1\oplus\mathfrak{g}_2$의 fundamental 벡터장은 곱 manifold 위에서 $(X_1)_{M_1}\oplus(X_2)_{M_2}$이다. 곱 symplectic form을 $\omega=\pi_1^\ast\omega_1+\pi_2^\ast\omega_2$라 하면, $\iota_{(X_1)_{M_1}\oplus(X_2)_{M_2}}\omega=\pi_1^\ast(\iota_{(X_1)_{M_1}}\omega_1)+\pi_2^\ast(\iota_{(X_2)_{M_2}}\omega_2)$이다. 한편 위에서 정의한 $\mu$에 대해 $\mu^{(X_1,X_2)}=\mu_1^{X_1}\circ\pi_1+\mu_2^{X_2}\circ\pi_2$이므로
+$G_1\times G_2$의 Lie algebra는 $\mathfrak{g}_1\oplus\mathfrak{g}_2$이고, $(X_1,X_2)\in\mathfrak{g}_1\oplus\mathfrak{g}_2$의 fundamental vector field는 곱 manifold 위에서 $(X_1)_{M_1}\oplus(X_2)_{M_2}$이다. 곱 symplectic form을 $\omega=\pi_1^\ast\omega_1+\pi_2^\ast\omega_2$라 하면, $\iota_{(X_1)_{M_1}\oplus(X_2)_{M_2}}\omega=\pi_1^\ast(\iota_{(X_1)_{M_1}}\omega_1)+\pi_2^\ast(\iota_{(X_2)_{M_2}}\omega_2)$이다. 한편 위에서 정의한 $\mu$에 대해 $\mu^{(X_1,X_2)}=\mu_1^{X_1}\circ\pi_1+\mu_2^{X_2}\circ\pi_2$이므로
 
 $$\dd{\mu}^{(X_1,X_2)}=\pi_1^\ast(\dd{\mu_1}^{X_1})+\pi_2^\ast(\dd{\mu_2}^{X_2})=\pi_1^\ast(\iota_{(X_1)_{M_1}}\omega_1)+\pi_2^\ast(\iota_{(X_2)_{M_2}}\omega_2)$$
 
@@ -123,7 +123,7 @@ $$\dd{\mu}^{(X_1,X_2)}=\pi_1^\ast(\dd{\mu_1}^{X_1})+\pi_2^\ast(\dd{\mu_2}^{X_2})
 ::: 예시 7
 반지름 $1$의 구면 $S^2\subseteq\mathbb{R}^3$에 원기둥좌표 $(\theta,h)$를 주자. 여기서 $h\in[-1,1]$은 height이고 $\theta\in[0,2\pi)$는 $z$축 둘레의 각이며, 점은 $(\sqrt{1-h^2}\cos\theta,\sqrt{1-h^2}\sin\theta,h)$이다. Area form은 이 좌표에서 $\omega=\dd{\theta}\wedge \dd{h}$로 적힌다. $G=S^1$이 $z$축 둘레의 회전 $\theta\mapsto\theta+t$로 작용하면 이는 $\omega$를 보존한다.
 
-$S^1$의 Lie algebra $\mathfrak{g}=\mathbb{R}$의 표준 generator $X=1$의 fundamental 벡터장은 $X_{S^2}=\partial_\theta$이다. 그럼 $\iota_{\partial_\theta}\omega=\iota_{\partial_\theta}(\dd{\theta}\wedge \dd{h})=\dd{h}$이므로, $\mathfrak{g}^\ast\cong\mathbb{R}$로 식별하여
+$S^1$의 Lie algebra $\mathfrak{g}=\mathbb{R}$의 표준 generator $X=1$의 fundamental vector field는 $X_{S^2}=\partial_\theta$이다. 그럼 $\iota_{\partial_\theta}\omega=\iota_{\partial_\theta}(\dd{\theta}\wedge \dd{h})=\dd{h}$이므로, $\mathfrak{g}^\ast\cong\mathbb{R}$로 식별하여
 
 $$\mu(\theta,h)=h$$
 
@@ -141,7 +141,7 @@ $$\omega=\sum_{j=1}^n \dd{x_j}\wedge \dd{y_j}=\frac{i}{2}\sum_{j=1}^n \dd{z_j}\w
 
 $$(t_1,\ldots,t_n)\cdot(z_1,\ldots,z_n)=(e^{2\pi it_1}z_1,\ldots,e^{2\pi it_n}z_n)$$
 
-으로 작용하면 이는 각 $\lvert z_j\rvert$를 보존하므로 $\omega$를 보존한다. $\mathfrak{t}=\mathbb{R}^n$의 $j$번째 표준 generator $X=e_j$의 fundamental 벡터장은 $2\pi(x_j\partial_{y_j}-y_j\partial_{x_j})$이고, $\iota_{X_{\mathbb{C}^n}}\omega=-2\pi(x_j\dd{x_j}+y_j\dd{y_j})=-\pi\dd{(x_j^2+y_j^2)}=-\pi\dd{\lvert z_j\rvert^2}$이다. 따라서 $\mathfrak{t}^\ast\cong\mathbb{R}^n$으로 식별하여
+으로 작용하면 이는 각 $\lvert z_j\rvert$를 보존하므로 $\omega$를 보존한다. $\mathfrak{t}=\mathbb{R}^n$의 $j$번째 표준 generator $X=e_j$의 fundamental vector field는 $2\pi(x_j\partial_{y_j}-y_j\partial_{x_j})$이고, $\iota_{X_{\mathbb{C}^n}}\omega=-2\pi(x_j\dd{x_j}+y_j\dd{y_j})=-\pi\dd{(x_j^2+y_j^2)}=-\pi\dd{\lvert z_j\rvert^2}$이다. 따라서 $\mathfrak{t}^\ast\cong\mathbb{R}^n$으로 식별하여
 
 $$\mu(z_1,\ldots,z_n)=-\pi\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\bigr)$$
 
@@ -163,7 +163,7 @@ Manifold $Q$ 위에 Lie group $G$가 작용하면, 이를 cotangent bundle $T^\a
 
 $$\langle\mu(q,p),X\rangle=\lambda_{(q,p)}(X_{T^\ast Q})=p\bigl(X_Q(q)\bigr)$$
 
-로 주어진다. 여기서 $X_Q$는 $Q$ 위의 fundamental 벡터장이다. $Q=\mathbb{R}^3$이고 $G=\mathrm{SO}(3)$이 회전으로 작용하는 경우, 이 운동량 사상은 정확히 고전역학의 각운동량 $\mu=q\times p$를 준다.
+로 주어진다. 여기서 $X_Q$는 $Q$ 위의 fundamental vector field이다. $Q=\mathbb{R}^3$이고 $G=\mathrm{SO}(3)$이 회전으로 작용하는 경우, 이 운동량 사상은 정확히 고전역학의 각운동량 $\mu=q\times p$를 준다.
 :::
 
 Cotangent lift가 항상 Hamiltonian이라는 사실의 증명은 tautological $1$-form이 $\iota_{X_{T^\ast Q}}\omega=\dd{(\iota_{X_{T^\ast Q}}\lambda)}$를 만족하도록 자연스럽게 구성된다는 점에서 따라온다. 자세한 계산은 **[CdS]** 또는 **[MS]**에 있다.
@@ -178,10 +178,10 @@ $(M,\omega)$가 compact connected symplectic manifold이고, torus $T$가 $M$ �
 
 이 정리의 image $\mu(M)$을 action의 *운동량 다면체<sub>moment polytope</sub>*라 부른다. Fixed point는 운동량 사상의 critical point이며, 운동량 다면체의 꼭짓점은 모두 $\mu(M^T)$에 속한다. 예시 7의 $S^2$에서 두 극점이 fixed point이고 그 image $\{-1,1\}$의 convex hull이 구간 $[-1,1]$인 것이 이 정리의 가장 단순한 사례이다.
 
-볼록성 정리는 toric 기하와 직접 연결된다. $2n$차원 compact symplectic manifold에 $n$차원 torus, 즉 최대 차원의 torus가 효과적으로 Hamiltonian action을 할 때 이를 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부르며, 이 경우 운동량 다면체는 단순하고 integral한 매우 특별한 다면체 (*Delzant 다면체*)가 된다. Delzant의 정리는 이러한 다면체와 symplectic toric manifold 사이에 일대일 대응이 성립함을, 즉 다면체가 manifold를 그 action과 함께 완전히 결정함을 말한다. 이로써 symplectic 기하의 한 부류 전체가 순전히 조합론적인 convex 다면체의 데이터로 번역된다.
+볼록성 정리는 toric 기하와 직접 연결된다. $2n$차원 compact symplectic manifold에 $n$차원 torus, 즉 최대 차원의 torus가 효과적으로 Hamiltonian action을 할 때 이를 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부르며, 이 경우 운동량 다면체는 단순하고 integral한 매우 특별한 다면체 (*Delzant polytope*)가 된다. Delzant의 정리는 이러한 다면체와 symplectic toric manifold 사이에 일대일 대응이 성립함을, 즉 다면체가 manifold를 그 action과 함께 완전히 결정함을 말한다. 이로써 symplectic 기하의 한 부류 전체가 순전히 조합론적인 convex 다면체의 데이터로 번역된다.
 
 ::: 참고 11
-볼록성은 작용하는 group이 abelian, 즉 torus라는 점에 결정적으로 의존한다. 일반적인 nonabelian compact group $G$의 Hamiltonian action에서는 운동량 사상의 image $\mu(M)\subseteq\mathfrak{g}^\ast$ 자체가 convex일 필요는 없다. 대신 Kirwan은 $\mu(M)$과 positive Weyl chamber $\mathfrak{t}_+^\ast$의 교집합 $\mu(M)\cap\mathfrak{t}_+^\ast$이 convex 다면체임을 보였으며 (Kirwan 볼록성 정리), 그 증명은 $M$ 전체의 maximal torus action에 위의 정리를 그대로 적용하는 것으로는 얻어지지 않고 $\lVert\mu\rVert^2$의 Morse 이론이나 symplectic cross-section 위의 abelian 볼록성을 거친다. Coadjoint action이 자명하지 않은 nonabelian 경우에는 equivariance가 본질적인 역할을 한다.
+볼록성은 작용하는 group이 abelian, 즉 torus라는 점에 결정적으로 의존한다. 일반적인 nonabelian compact group $G$의 Hamiltonian action에서는 운동량 사상의 image $\mu(M)\subseteq\mathfrak{g}^\ast$ 자체가 convex일 필요는 없다. 대신 Kirwan은 $\mu(M)$과 positive Weyl chamber $\mathfrak{t}_+^\ast$의 교집합 $\mu(M)\cap\mathfrak{t}_+^\ast$이 convex 다면체임을 보였으며 (Kirwan convexity theorem), 그 증명은 $M$ 전체의 maximal torus action에 위의 정리를 그대로 적용하는 것으로는 얻어지지 않고 $\lVert\mu\rVert^2$의 Morse 이론이나 symplectic cross-section 위의 abelian 볼록성을 거친다. Coadjoint action이 자명하지 않은 nonabelian 경우에는 equivariance가 본질적인 역할을 한다.
 :::
 
 ---

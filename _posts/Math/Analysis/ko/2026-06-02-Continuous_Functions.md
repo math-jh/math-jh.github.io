@@ -127,14 +127,14 @@ Heine–Cantor 정리의 가정 중 어느 하나라도 빠지면 균등연속�
 
 $$d_Y\bigl(f(x), f(x')\bigr) \leq L d_X(x, x')$$
 
-이면 $f$를 *Lipschitz 연속<sub>Lipschitz continuous</sub>*이라 하고, 이 $L$을 *Lipschitz 상수*라 부른다.
+이면 $f$를 *Lipschitz continuous*라 하고, 이 $L$을 *Lipschitz constant*라 부른다.
 
 ::: 명제 8
-Lipschitz 연속인 함수는 균등연속이다.
+Lipschitz continuous인 함수는 균등연속이다.
 :::
 
 ::: 증명
-Lipschitz 상수를 $L$이라 하고 $\varepsilon > 0$이 주어졌다고 하자. $\delta = \varepsilon/(L+1)$로 택한다. $L = 0$인 경우에도 $\delta$가 정의되도록 분모에 $1$을 더한 것이다. $d_X(x,x') < \delta$이면
+Lipschitz constant를 $L$이라 하고 $\varepsilon > 0$이 주어졌다고 하자. $\delta = \varepsilon/(L+1)$로 택한다. $L = 0$인 경우에도 $\delta$가 정의되도록 분모에 $1$을 더한 것이다. $d_X(x,x') < \delta$이면
 
 $$d_Y\bigl(f(x), f(x')\bigr) \leq L d_X(x,x') \leq \frac{L}{L+1} \varepsilon < \varepsilon$$
 
@@ -155,7 +155,7 @@ $$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0 \rvert} = \frac{1}{\sqrt
 이므로 어떤 $L$로도 묶이지 않아, $f$는 $[0,1]$에서도 Lipschitz가 아니다.
 :::
 
-이로써 Lipschitz 연속, 균등연속, 연속은 이 순서로 약해지는 조건이고, 어느 방향의 역도 일반적으로는 성립하지 않는다.
+이로써 Lipschitz continuous, 균등연속, 연속은 이 순서로 약해지는 조건이고, 어느 방향의 역도 일반적으로는 성립하지 않는다.
 
 ## 연속 전단사의 역함수
 

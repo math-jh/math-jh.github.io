@@ -47,7 +47,7 @@ $$\varphi(t) = y_0 + \int_{t_0}^t f(s, \varphi(s)) \dd{s} \qquad (t \in I) \tag{
 $\varphi$가 해이면 $\varphi'$가 연속이므로 [§미적분의 기본정리, ⁋정리 5](/ko/math/analysis/fundamental_theorem_of_calculus#thm5){: data-lid="lcywe" }에 의하여 $\varphi(t) - \varphi(t_0) = \int_{t_0}^t \varphi'(s) \dd{s}$이고, $\varphi' = f(s, \varphi(s))$, $\varphi(t_0) = y_0$을 대입하면 (INT)를 얻는다. 거꾸로 (INT)가 성립하면 $s \mapsto f(s, \varphi(s))$가 연속함수들의 합성이므로 연속이고, [§미적분의 기본정리, ⁋정리 2](/ko/math/analysis/fundamental_theorem_of_calculus#thm2){: data-lid="8zwen" }에 의하여 우변은 미분가능하며 도함수가 $f(t, \varphi(t))$이다. $t = t_0$을 대입하면 $\varphi(t_0) = y_0$이다.
 :::
 
-(INT)에는 도함수가 없고 연속함수만 등장한다. 우변을 함수 $\varphi$에 함수를 대응시키는 사상 $T$로 읽으면, 해는 $T\varphi = \varphi$를 만족하는 fixed point이다. 이 사상을 *Picard 작용소<sub>Picard operator</sub>*라 하고, 상수함수 $\varphi_0 \equiv y_0$에서 출발한 *Picard 반복*을 $\varphi_{n+1} = T\varphi_n$으로 정의한다. 가령 $y' = y$, $y(0) = 1$에서는
+(INT)에는 도함수가 없고 연속함수만 등장한다. 우변을 함수 $\varphi$에 함수를 대응시키는 사상 $T$로 읽으면, 해는 $T\varphi = \varphi$를 만족하는 fixed point이다. 이 사상을 *Picard 작용소<sub>Picard operator</sub>*라 하고, 상수함수 $\varphi_0 \equiv y_0$에서 출발한 *Picard iteration*을 $\varphi_{n+1} = T\varphi_n$으로 정의한다. 가령 $y' = y$, $y(0) = 1$에서는
 
 $$\varphi_{n+1}(t) = 1 + \int_0^t \varphi_n(s) \dd{s}$$
 
@@ -58,7 +58,7 @@ $$\varphi_{n+1}(t) = 1 + \int_0^t \varphi_n(s) \dd{s}$$
 $f$가 연속이기만 하면 (IVP)의 해는 존재하지만 유일하지 않을 수 있다(뒤의 [예시 5](#ex5){: data-lid="bn566" }와 [정리 10](#thm10){: data-lid="gqj2v" }). 유일성을 얻으려면 $y$가 변할 때 $f$의 값이 변하는 정도를 통제해야 한다.
 
 ::: 정의 3
-$S \subseteq D$ 위에서 $f$가 $y$에 관하여 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $L \geq 0$이 존재하여 $(t, y_1), (t, y_2) \in S$인 모든 $t, y_1, y_2$에 대하여 $\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$인 것이다. 이때 $L$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 한다. $D$의 모든 점이 이 조건을 만족하는 근방을 가지면 $f$가 $y$에 관하여 *locally Lipschitz*라 한다.
+$S \subseteq D$ 위에서 $f$가 $y$에 관하여 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $L \geq 0$이 존재하여 $(t, y_1), (t, y_2) \in S$인 모든 $t, y_1, y_2$에 대하여 $\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$인 것이다. 이때 $L$을 *Lipschitz constant<sub>립시츠 상수</sub>*라 한다. $D$의 모든 점이 이 조건을 만족하는 근방을 가지면 $f$가 $y$에 관하여 *locally Lipschitz*라 한다.
 :::
 
 같은 $t$에서만 두 값을 비교한다는 점에 주의한다. $t$에 대해서는 연속성 이상을 요구하지 않는다.
@@ -71,14 +71,14 @@ $$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}
 
 ## Picard–Lindelöf 정리
 
-직사각형 $R = [t_0 - a, t_0 + a] \times [y_0 - b, y_0 + b] \subseteq D$를 잡고, $f$가 $R$ 위에서 $y$에 관하여 립시츠 상수 $L$로 립시츠라 하자. $R$이 컴팩트이므로 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-lid="lsbxo" }에 의하여 $M = \max_R \lvert f\rvert$가 유한하다. 구간의 반폭을
+직사각형 $R = [t_0 - a, t_0 + a] \times [y_0 - b, y_0 + b] \subseteq D$를 잡고, $f$가 $R$ 위에서 $y$에 관하여 Lipschitz constant $L$로 립시츠라 하자. $R$이 컴팩트이므로 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2){: data-lid="lsbxo" }에 의하여 $M = \max_R \lvert f\rvert$가 유한하다. 구간의 반폭을
 
 $$h = \min\Bigl(a, \frac{b}{M}, \frac{1}{2L}\Bigr)$$
 
 로 두고($M = 0$ 또는 $L = 0$이면 해당 항은 제외한다), $I_h = [t_0 - h, t_0 + h]$라 하자.
 
 ::: 정리 4 (Picard–Lindelöf)
-위의 가정 아래 (IVP)는 $I_h$ 위에서 그래프가 $R$ 안에 놓이는 해를 정확히 하나 가지며, Picard 반복 $\varphi_n$은 이 해로 $I_h$ 위에서 균등수렴한다.
+위의 가정 아래 (IVP)는 $I_h$ 위에서 그래프가 $R$ 안에 놓이는 해를 정확히 하나 가지며, Picard iteration $\varphi_n$은 이 해로 $I_h$ 위에서 균등수렴한다.
 :::
 
 ::: 증명
@@ -118,7 +118,7 @@ $$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{3}{\lvert y\
 
 $$\varphi_{c_1, c_2}(t) = \begin{cases} (t - c_1)^3, & t < c_1 \\ 0, & c_1 \leq t \leq c_2 \\ (t - c_2)^3, & t > c_2 \end{cases}$$
 
-도 해이다. 이음점에서 양쪽 도함수가 모두 $0$이므로 $C^1$이고, 각 조각에서는 위의 계산이 그대로 적용된다. 따라서 초기값 문제는 $c_1, c_2$로 매개화되는 해를 무수히 가진다. 이 방정식에서 $\varphi_0 \equiv 0$으로 출발한 Picard 반복은 $T0 = 0$이어서 영원히 $0$에 머문다. 반복은 수렴하지만 그 극한은 해들 중 하나일 뿐이고, $T$는 어떤 구간에서도 축소사상이 아니다.
+도 해이다. 이음점에서 양쪽 도함수가 모두 $0$이므로 $C^1$이고, 각 조각에서는 위의 계산이 그대로 적용된다. 따라서 초기값 문제는 $c_1, c_2$로 매개화되는 해를 무수히 가진다. 이 방정식에서 $\varphi_0 \equiv 0$으로 출발한 Picard iteration은 $T0 = 0$이어서 영원히 $0$에 머문다. 반복은 수렴하지만 그 극한은 해들 중 하나일 뿐이고, $T$는 어떤 구간에서도 축소사상이 아니다.
 :::
 
 ## Grönwall 부등식
@@ -178,7 +178,7 @@ $(t_0, y_0) \in D$에 대하여 열린구간 $(\alpha, \beta) \ni t_0$ 위의 �
 
 $J$를 $\mathcal{S}$의 모든 해의 정의역의 합집합이라 하자. 두 해는 [명제 7](#prop7){: data-lid="qjuwa" }에 의하여 공통 정의역에서 일치하므로 $t \in J$에 대하여 $t$를 정의역에 포함하는 $\psi \in \mathcal{S}$를 골라 $\varphi(t) = \psi(t)$로 두면 $\varphi : J \rightarrow \mathbb{R}$가 잘 정의된다. 위의 연장 결과에 의하여 $J$의 각 점은 어떤 해의 정의역의 내점이므로 $J$는 열린구간 $(\alpha, \beta)$이고 $\varphi$는 각 점 근방에서 어떤 해와 같아 해이다. 모든 해는 정의상 $\varphi$의 제한이다.
 
-(2) 결론이 거짓이라 하자. 그럼 컴팩트집합 $K \subseteq D$와 $t_n \rightarrow \beta$, $t_n < \beta$인 수열이 있어서 $(t_n, \varphi(t_n)) \in K$이다. $K$가 컴팩트이므로 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5){: data-lid="t3cd5" }에 의하여 부분수열을 취하여 $(t_n, \varphi(t_n)) \rightarrow (\beta, y_\ast) \in K \subseteq D$로 둘 수 있다. $(\beta, y_\ast)$를 중심으로 하는 직사각형 $[\beta - a, \beta + a] \times [y_\ast - b, y_\ast + b] \subseteq D$를 $f$가 그 위에서 립시츠가 되도록 잡고, 립시츠 상수를 $L$, $\lvert f\rvert$의 최댓값을 $M$이라 하자. 충분히 큰 $n$에 대하여 $\lvert t_n - \beta\rvert < a/2$, $\lvert \varphi(t_n) - y_\ast\rvert < b/2$이므로 $(t_n, \varphi(t_n))$을 중심으로 하는 $[t_n - a/2, t_n + a/2] \times [\varphi(t_n) - b/2, \varphi(t_n) + b/2]$는 위의 큰 직사각형 안에 있고, 같은 $L$과 $M$이 그 위에서도 유효하다. 따라서 [정리 4](#thm4){: data-lid="7wd4y" }를 이 작은 직사각형에 적용하면, $n$에 무관한
+(2) 결론이 거짓이라 하자. 그럼 컴팩트집합 $K \subseteq D$와 $t_n \rightarrow \beta$, $t_n < \beta$인 수열이 있어서 $(t_n, \varphi(t_n)) \in K$이다. $K$가 컴팩트이므로 [§컴팩트성, ⁋정리 5](/ko/math/analysis/compactness#thm5){: data-lid="t3cd5" }에 의하여 부분수열을 취하여 $(t_n, \varphi(t_n)) \rightarrow (\beta, y_\ast) \in K \subseteq D$로 둘 수 있다. $(\beta, y_\ast)$를 중심으로 하는 직사각형 $[\beta - a, \beta + a] \times [y_\ast - b, y_\ast + b] \subseteq D$를 $f$가 그 위에서 립시츠가 되도록 잡고, Lipschitz constant를 $L$, $\lvert f\rvert$의 최댓값을 $M$이라 하자. 충분히 큰 $n$에 대하여 $\lvert t_n - \beta\rvert < a/2$, $\lvert \varphi(t_n) - y_\ast\rvert < b/2$이므로 $(t_n, \varphi(t_n))$을 중심으로 하는 $[t_n - a/2, t_n + a/2] \times [\varphi(t_n) - b/2, \varphi(t_n) + b/2]$는 위의 큰 직사각형 안에 있고, 같은 $L$과 $M$이 그 위에서도 유효하다. 따라서 [정리 4](#thm4){: data-lid="7wd4y" }를 이 작은 직사각형에 적용하면, $n$에 무관한
 
 $$h' = \min\Bigl(\frac{a}{2}, \frac{b}{2M}, \frac{1}{2L}\Bigr)$$
 
@@ -194,7 +194,7 @@ $$\varphi(t) = \frac{1}{1 - t}, \qquad t \in (-\infty, 1)$$
 
 이다. 실제로 $\varphi'(t) = (1 - t)^{-2} = \varphi(t)^2$이다. 이 해는 $t \rightarrow 1^-$에서 $+\infty$로 발산한다. 다른 해 $\psi$가 $1$을 정의역에 포함하면, [명제 7](#prop7){: data-lid="l7d74" }에 의하여 $[0, 1)$에서 $\psi = \varphi$이고 $\psi$가 $t = 1$에서 연속이어야 하는데 $\varphi$는 $1$ 근방에서 유계가 아니므로 모순이다. 따라서 최대 해 구간은 $(-\infty, 1)$이다.
 
-초기값을 $y(0) = y_0 > 0$으로 두면 해는 $y_0/(1 - y_0 t)$이고 폭발 시각은 $1/y_0$이다. 초기값이 클수록 폭발이 빨라진다. $y(0) = 0$이면 해가 $y \equiv 0$이어서 전 구간에서 존재한다. 방정식은 모든 $(t, y)$에서 매끄럽지만 정의역이 전체인 것이 해의 정의역이 전체임을 뜻하지 않는다. 립시츠 상수가 $y$와 함께 $2\lvert y\rvert$로 자라므로, [정리 4](#thm4){: data-lid="mb6k9" }의 $h$가 해가 커질수록 줄어들어 구간을 이어 붙여도 $1$을 넘지 못한다.
+초기값을 $y(0) = y_0 > 0$으로 두면 해는 $y_0/(1 - y_0 t)$이고 폭발 시각은 $1/y_0$이다. 초기값이 클수록 폭발이 빨라진다. $y(0) = 0$이면 해가 $y \equiv 0$이어서 전 구간에서 존재한다. 방정식은 모든 $(t, y)$에서 매끄럽지만 정의역이 전체인 것이 해의 정의역이 전체임을 뜻하지 않는다. Lipschitz constant가 $y$와 함께 $2\lvert y\rvert$로 자라므로, [정리 4](#thm4){: data-lid="mb6k9" }의 $h$가 해가 커질수록 줄어들어 구간을 이어 붙여도 $1$을 넘지 못한다.
 :::
 
 반대로 [예시 5](#ex5){: data-lid="1qyjg" }의 방정식은 해가 무수히 많지만 모든 해가 $\mathbb{R}$ 전체에서 정의된다. 따라서 유일성의 실패와 폭발은 서로 다른 현상이다.

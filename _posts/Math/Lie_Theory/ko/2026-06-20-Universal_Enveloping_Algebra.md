@@ -41,7 +41,7 @@ $$\begin{aligned}
 
 의 우변을 전개하면 여섯 개의 양항과 여섯 개의 음항이 모두 상쇄되어 $0$이 된다. 따라서 commutator는 $A$의 바탕 벡터공간 위에 Lie algebra 구조를 정의한다. 이렇게 얻어진 Lie algebra를 $A_{\mathrm{Lie}}$로 표기하기로 한다. 대응 $A\mapsto A_{\mathrm{Lie}}$는 결합 단위 대수에서 Lie algebra로 가는 functor이며, 우리가 정의할 보편 포락 대수는 정확히 이 functor의 left adjoint를 실현한다.
 
-이 functor가 어떤 대상을 보내는지를 살펴보는 가장 단순한 예시는 자기준동형 대수이다. 벡터공간 $V$에 대하여 $\End_k(V)$는 합성을 곱셈으로 갖는 결합 단위 대수이며, 그 commutator로 얻어지는 Lie algebra를 $\mathfrak{gl}(V)$로 표기한다. $\mathfrak{g}$의 *representation*이란 Lie algebra 준동형 $\mathfrak{g}\rightarrow\mathfrak{gl}(V)$, 곧 $\mathfrak{g}\rightarrow\End_k(V)_{\mathrm{Lie}}$를 뜻한다.
+이 functor가 어떤 대상을 보내는지를 살펴보는 가장 단순한 예시는 자기준동형 대수이다. 벡터공간 $V$에 대하여 $\End_k(V)$는 합성을 곱셈으로 갖는 결합 단위 대수이며, 그 commutator로 얻어지는 Lie algebra를 $\mathfrak{gl}(V)$로 표기한다. $\mathfrak{g}$의 *representation*이란 Lie algebra homomorphism $\mathfrak{g}\rightarrow\mathfrak{gl}(V)$, 곧 $\mathfrak{g}\rightarrow\End_k(V)_{\mathrm{Lie}}$를 뜻한다.
 
 ## 보편 포락 대수의 정의
 
@@ -77,10 +77,10 @@ $$U(\mathfrak{g})\cong\S(\mathfrak{g})$$
 
 ## 보편 성질
 
-$U(\mathfrak{g})$라는 이름의 "보편"은 다음 성질에서 비롯한다. $\mathfrak{g}$에서 임의의 결합대수로 가는 Lie algebra 준동형은 모두 $\iota$를 통해 유일하게 인수분해된다.
+$U(\mathfrak{g})$라는 이름의 "보편"은 다음 성질에서 비롯한다. $\mathfrak{g}$에서 임의의 결합대수로 가는 Lie algebra homomorphism은 모두 $\iota$를 통해 유일하게 인수분해된다.
 
 ::: 명제 4
-임의의 $k$ 위의 결합 단위 대수 $A$와 Lie algebra 준동형 $f:\mathfrak{g}\rightarrow A_{\mathrm{Lie}}$에 대하여, 다음 도식
+임의의 $k$ 위의 결합 단위 대수 $A$와 Lie algebra homomorphism $f:\mathfrak{g}\rightarrow A_{\mathrm{Lie}}$에 대하여, 다음 도식
 
 $$\iota:\mathfrak{g}\rightarrow U(\mathfrak{g}),\qquad f=\bar{f}\circ\iota$$
 
@@ -91,7 +91,7 @@ $f$를 단순히 벡터공간 사이의 $k$-linear map으로 보면, [\[다중�
 
 $$\tilde{f}(x\otimes y-y\otimes x-[x,y])=f(x)f(y)-f(y)f(x)-f([x,y])=[f(x),f(y)]_A-f([x,y])$$
 
-인데, $f$가 Lie algebra 준동형이라는 가정에서 우변이 $0$이다. 따라서 $\mathfrak{I}\subseteq\ker\tilde{f}$이고, quotient algebra의 보편 성질에 의하여 $\tilde{f}$는 결합 단위 대수 준동형 $\bar{f}:U(\mathfrak{g})\rightarrow A$로 유일하게 내려간다. 구성에 의하여 $\bar{f}\circ\iota=f$이다.
+인데, $f$가 Lie algebra homomorphism이라는 가정에서 우변이 $0$이다. 따라서 $\mathfrak{I}\subseteq\ker\tilde{f}$이고, quotient algebra의 보편 성질에 의하여 $\tilde{f}$는 결합 단위 대수 준동형 $\bar{f}:U(\mathfrak{g})\rightarrow A$로 유일하게 내려간다. 구성에 의하여 $\bar{f}\circ\iota=f$이다.
 
 유일성은 $U(\mathfrak{g})$가 $\iota(\mathfrak{g})$로 생성된다는 사실에서 따라온다. $U(\mathfrak{g})$는 $\T(\mathfrak{g})$의 quotient이고 $\T(\mathfrak{g})$는 $\T^1(\mathfrak{g})=\mathfrak{g}$로 생성되므로, $\iota(\mathfrak{g})$ 위에서의 값이 일치하는 두 결합 단위 대수 준동형은 같다. $\bar{f}\circ\iota=f$가 $\iota(\mathfrak{g})$ 위에서의 값을 결정하므로 $\bar{f}$는 유일하다.
 :::
@@ -103,14 +103,14 @@ $$\Hom_{\mathbf{Lie}_k}(\mathfrak{g},A_{\mathrm{Lie}})\cong\Hom_{\mathbf{Alg}_k}
 를 정의한다는 것으로 다시 쓸 수 있다. 즉 functor $U:\mathbf{Lie}_k\rightarrow\mathbf{Alg}_k$는 commutator functor $(-)_{\mathrm{Lie}}:\mathbf{Alg}_k\rightarrow\mathbf{Lie}_k$의 left adjoint이며, $\iota$는 이 adjunction의 unit이다. 이 동형의 한 가지 직접적인 귀결로, $\mathfrak{g}$의 representation $\mathfrak{g}\rightarrow\End_k(V)_{\mathrm{Lie}}$들은 정확히 결합대수 준동형 $U(\mathfrak{g})\rightarrow\End_k(V)$들, 곧 $U(\mathfrak{g})$-module 구조들과 일대일로 대응한다. 이것이 $\mathfrak{g}$의 표현론을 결합대수 $U(\mathfrak{g})$의 module 이론으로 옮기는 다리이다.
 
 ::: 명제 5
-Lie algebra 준동형 $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$에 대하여, 다음 도식
+Lie algebra homomorphism $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$에 대하여, 다음 도식
 
 $$\iota_{\mathfrak{h}}\circ\phi=U(\phi)\circ\iota_{\mathfrak{g}}$$
 
 을 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재하며, 이 대응은 $U$를 functor로 만든다.
 :::
 ::: 증명
-합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra 준동형의 합성이므로 다시 Lie algebra 준동형이다. 따라서 [명제 4](#prop4){: data-lid="6qhje" }를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. Functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra 준동형 $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
+합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra homomorphism의 합성이므로 다시 Lie algebra homomorphism이다. 따라서 [명제 4](#prop4){: data-lid="6qhje" }를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. Functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra homomorphism $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
 :::
 
 ## 표준 여과와 associated graded
@@ -195,7 +195,7 @@ $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
 이제 조건 2가 모든 $i,j$와 모든 기저원소 $z_S$에 대하여 성립함을 $\lvert S\rvert$에 대한 귀납법으로 확인한다. 대칭성에 의해 $i>j$인 경우만 보면 되고, $i=j$이면 좌변이 자명히 $0$이며 $[x_i,x_i]=0$이다. $i>j$이고 $j\leq S$인 경우, action의 정의가 정확히 $x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$가 되도록 위에서 $x_i\cdot z_{(j,S)}$을 정의하였으므로 조건 2가 성립한다. $j\leq S$가 아닌 일반적인 경우는 $S=(l,S')$ ($l\leq S'$, $l<j<i$)로 쓰고, $x_l$을 한 칸 끄집어낸 뒤 길이 $n-1$인 $S'$에 대한 귀납 가정과 $\mathfrak{g}$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $i,j,l$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $\mathfrak{g}$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8){: data-lid="177y9" }의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
 
-조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4){: data-lid="u5ikv" }에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
+조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra homomorphism이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra homomorphism으로 확장된다. [명제 4](#prop4){: data-lid="u5ikv" }에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
 
 $$\rho:U(\mathfrak{g})\rightarrow\End_k(\S(\mathfrak{g}))$$
 

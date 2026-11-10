@@ -248,7 +248,7 @@ $$e\leq\operatorname{grade}I(\psi_e)\leq\operatorname{depth}A$$
 Noetherian ring $A$의 $A$-sequence $x_1,\ldots,x_n$에 대하여, Koszul complex $K(x_1,\ldots,x_n)$은 [정리 10](#thm10){: data-lid="r50we" }의 조건 (2)를 만족한다. 특히 [§코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7){: data-lid="na0z3" }의 degree $1$ 이상에서의 exactness가 판정법으로 재확인된다.
 :::
 ::: 증명
-$K_i=\bigwedge\nolimits^iA^n$은 rank $\binom{n}{i}$의 free module이고, differential $d_i$의 행렬 성분은 [§코쥴 복합체](/ko/math/commutative_algebra/koszul_complex){: data-lid="lttim" }에서 살펴본 명시적인 식에 의하여 basis $e_J$ ($J$는 $i$개의 원소를 갖는 index 집합)와 $e_K$ ($K$는 $i-1$개) 사이에서 $J=K\cup\{l\}$일 때 $\pm x_l$, 아닐 때 $0$이다. $c_i=\binom{n-1}{i-1}$로 두면 Pascal의 규칙으로 $c_i+c_{i+1}=\binom{n}{i}$이다.
+$K_i=\bigwedge\nolimits^iA^n$은 rank $\binom{n}{i}$의 free module이고, differential $d_i$의 행렬 성분은 [§코쥴 복합체](/ko/math/commutative_algebra/koszul_complex){: data-lid="lttim" }에서 살펴본 명시적인 식에 의하여 basis $e_J$ ($J$는 $i$개의 원소를 갖는 index set)와 $e_K$ ($K$는 $i-1$개) 사이에서 $J=K\cup\{l\}$일 때 $\pm x_l$, 아닐 때 $0$이다. $c_i=\binom{n-1}{i-1}$로 두면 Pascal의 규칙으로 $c_i+c_{i+1}=\binom{n}{i}$이다.
 
 우선 각각의 $j$에 대하여 $x_j^{c_i}\in I_{c_i}(d_i)$임을 본다. 행을 $j\notin K$인 $K$들로, 열을 $j\in J$인 $J$들로 제한하면 대응 $K\mapsto K\cup\{j\}$가 행과 열의 일대일대응을 주고 그 크기는 $c_i$이다. 이 부분행렬에서 대각 성분 $(K,K\cup\{j\})$는 $\pm x_j$이며, 비대각 성분 $(K,J)$는 $e_K$가 $\dd{(e_J)}$에 나타나려면 $K=J\setminus\{l\}$이어야 하는데 $j\notin K$와 $j\in J$로부터 $l=j$, 곧 $J=K\cup\{j\}$가 강제되므로 $0$이다. 따라서 이 부분행렬은 대각행렬이고 그 행렬식은 $\pm x_j^{c_i}$이다.
 

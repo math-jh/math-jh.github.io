@@ -1,6 +1,6 @@
 ---
 title: "최고 무게 가군"
-description: "Semisimple Lie algebra의 Borel subalgebra로 유도되는 Verma module M(λ)를 구성하고, 그 보편성과 PBW 기저, 유일한 maximal submodule과 irreducible quotient L(λ)를 확립한다. 이로부터 유한차원 irreducible 표현이 정확히 dominant integral weight λ에 대한 L(λ)들로 분류된다는 최고 무게 정리를 각 simple root의 sl₂-triple과 Weyl 완전가약성을 통해 증명한다."
+description: "Semisimple Lie algebra의 Borel subalgebra로 유도되는 Verma module M(λ)를 구성하고, 그 보편성과 PBW 기저, 유일한 maximal submodule과 irreducible quotient L(λ)를 확립한다. 이로부터 유한차원 irreducible 표현이 정확히 dominant integral weight λ에 대한 L(λ)들로 분류된다는 최고 무게 정리를 각 simple root의 sl₂-triple과 Weyl complete reducibility를 통해 증명한다."
 excerpt: "Borel subalgebra, weight, highest weight vector, Verma module M(λ), irreducible quotient L(λ), dominant integral weight, 최고 무게 정리"
 
 categories: [Math / Lie Theory]
@@ -16,7 +16,7 @@ published: false
 
 Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 정리에 의해 irreducible representation의 분류 문제로 환원된다 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7){: data-lid="mjakg" }). $\sl_2$의 경우 이 분류는 highest weight vector에서 출발해 lowering operator를 반복 적용하는 사슬을 분석하여 완성되었으며, 각 음이 아닌 정수마다 유일한 irreducible representation이 대응되었다 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6){: data-lid="yluvf" }). 일반적인 semisimple Lie algebra에서도 같은 골격이 유지된다. Cartan subalgebra $\mathfrak{h}$에 대한 weight 분해가 $h$의 고윳값 분해를 대신하고, positive root들이 정하는 subalgebra $\mathfrak{n}^+$가 raising operator의 역할을 모아 담으며, $\mathfrak{n}^+$가 죽이는 highest weight vector 하나가 representation 전체를 생성한다.
 
-이 글에서 우리는 그러한 highest weight vector로 생성되는 가장 보편적인 module인 Verma module $M(\lambda)$를 보편 포락 대수의 induced module로 구성하고, 그 유일한 maximal submodule을 quotient로 잘라 irreducible module $L(\lambda)$를 얻는다. 그런 뒤 $L(\lambda)$가 유한차원이 되는 것이 정확히 $\lambda$가 dominant integral weight일 때임을 보여, 유한차원 irreducible representation이 dominant integral weight들과 일대일로 대응한다는 *최고 무게 정리<sub>theorem of the highest weight</sub>*를 확립한다. 이 글 전체에서 $\mathfrak{g}$는 대수적으로 닫힌 표수 $0$의 체 (편의상 $\mathbb{C}$) 위의 유한차원 semisimple Lie algebra이고, $\mathfrak{h}$는 그 Cartan subalgebra, $\Phi\subseteq\mathfrak{h}^\ast$는 그에 대한 root system이며, representation 또는 module이라 하면 $\mathfrak{g}$-module, 곧 Lie algebra 준동형 $\mathfrak{g}\rightarrow\gl(V)$가 정하는 $U(\mathfrak{g})$-module을 뜻한다.
+이 글에서 우리는 그러한 highest weight vector로 생성되는 가장 보편적인 module인 Verma module $M(\lambda)$를 보편 포락 대수의 induced module로 구성하고, 그 유일한 maximal submodule을 quotient로 잘라 irreducible module $L(\lambda)$를 얻는다. 그런 뒤 $L(\lambda)$가 유한차원이 되는 것이 정확히 $\lambda$가 dominant integral weight일 때임을 보여, 유한차원 irreducible representation이 dominant integral weight들과 일대일로 대응한다는 *최고 무게 정리<sub>theorem of the highest weight</sub>*를 확립한다. 이 글 전체에서 $\mathfrak{g}$는 대수적으로 닫힌 표수 $0$의 체 (편의상 $\mathbb{C}$) 위의 유한차원 semisimple Lie algebra이고, $\mathfrak{h}$는 그 Cartan subalgebra, $\Phi\subseteq\mathfrak{h}^\ast$는 그에 대한 root system이며, representation 또는 module이라 하면 $\mathfrak{g}$-module, 곧 Lie algebra homomorphism $\mathfrak{g}\rightarrow\gl(V)$가 정하는 $U(\mathfrak{g})$-module을 뜻한다.
 
 ## Borel subalgebra와 weight
 
@@ -139,7 +139,7 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 끝으로 weight 구조를 본다. $f_k\in\mathfrak{g}_{-\beta_k}$이므로 [명제 3](#prop3){: data-lid="sc2jp" }에 의하여 $f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$는 weight $\lambda-\sum_k m_k\beta_k$를 갖는다. 고정된 weight $\mu=\lambda-\sum_k m_k\beta_k$를 주는 지수 $(m_1,\ldots,m_N)$의 개수는 유한하므로 각 weight space는 유한차원이며, $M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$는 weight module이다.
 :::
 
-명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-lid="fcuog" }) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 infinite-dimensional weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
+명제 7은 $M(\lambda)$가 $\sl_2$에서의 highest weight string을 정확히 일반화함을 보여준다. $\sl_2$의 highest weight vector에서 $f$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-lid="fcuog" }) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $M(\lambda)$는 infinite-dimensional weight module이 된다. Highest weight space $M(\lambda)_\lambda$는 $v_\lambda^+$ 하나로 생성되는 $1$차원이고, 다른 모든 weight는 $\lambda$에서 positive root들을 빼서 얻어지므로 $\lambda$보다 "아래"에 놓인다.
 
 ## Irreducible quotient
 
@@ -173,7 +173,7 @@ $L(\lambda)$가 irreducible이고 highest weight $\lambda$를 가짐은 [정의 
 Highest weight의 유일성을 본다. $V$가 highest weight vector로 생성되는 irreducible module이면 위에서 본 대로 $V\cong L(\lambda)$이고, [명제 7](#prop7){: data-lid="zfc0v" }에 의하여 $L(\lambda)$의 모든 weight는 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$, $\beta_k\in\Phi^+$)의 꼴이다. 이 weight들 가운데 어떤 다른 weight $\mu$에도 positive root를 더해서는 도달할 수 없는 maximal인 것은 $\lambda$뿐이다. $\lambda$에 positive root를 더하면 $\lambda$보다 위의 weight가 되는데 그러한 weight space는 $0$이기 때문이다. 따라서 $\lambda$는 $V$에 의해 내재적으로 결정되며, $L(\mu)\cong L(\lambda)$이면 양쪽의 이 maximal weight가 같아 $\mu=\lambda$이다.
 :::
 
-명제 10은 모든 irreducible highest weight module이 정확히 $\mathfrak{h}^\ast$의 원소로 색인됨을 말한다. 그러나 임의의 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 일반적으로 무한차원이다. $\sl_2$의 highest weight 사슬이 $\mu$가 음이 아닌 정수일 때에만 유한 단계에서 닫혔던 것처럼 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-lid="0k6sc" } 이후의 논의), $L(\lambda)$가 유한차원이 되려면 $\lambda$가 각 simple root 방향으로 정수성 조건을 만족해야 한다. 다음 절에서 그 조건을 정확히 규정한다.
+명제 10은 모든 irreducible highest weight module이 정확히 $\mathfrak{h}^\ast$의 원소로 색인됨을 말한다. 그러나 임의의 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 일반적으로 무한차원이다. $\sl_2$의 highest weight string이 $\mu$가 음이 아닌 정수일 때에만 유한 단계에서 닫혔던 것처럼 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4){: data-lid="0k6sc" } 이후의 논의), $L(\lambda)$가 유한차원이 되려면 $\lambda$가 각 simple root 방향으로 정수성 조건을 만족해야 한다. 다음 절에서 그 조건을 정확히 규정한다.
 
 ## 최고 무게 정리
 
@@ -212,7 +212,7 @@ $$e_i\cdot\bigl(f_i^{\,n_i+1}\cdot v\bigr)=(n_i+1)\,(n_i-n_i)\,f_i^{\,n_i}\cdot 
 (3) 단사성과 전사성을 정리한다. (1)에서 모든 $0$이 아닌 유한차원 irreducible representation이 어떤 dominant integral $\lambda$에 대한 $L(\lambda)$와 isomorphic임을 보였으므로 대응 $\lambda\mapsto L(\lambda)$는 전사이다. (2)에서 dominant integral $\lambda$마다 $L(\lambda)$가 실제로 유한차원 irreducible representation임을 보였으므로 이 대응은 잘 정의된다. 단사성은 [명제 10](#prop10){: data-lid="kuwqb" }에서 $L(\mu)\cong L(\lambda)$이면 $\mu=\lambda$임을 이미 보였으므로 성립한다. 따라서 대응은 전단사이다.
 :::
 
-증명의 핵심은 각 simple root 방향에서 representation을 $\sl_{2,\alpha_i}$-module로 잘라 $\sl_2$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $\lambda(h_i)\in\mathbb{Z}_{\geq 0}$은 각 방향의 highest weight 사슬이 $\sl_2$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $M(\lambda)$의 irreducible quotient $L(\lambda)$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 finite weight 집합을 하나로 묶어 representation 전체의 유한차원성을 보장한다. 
+증명의 핵심은 각 simple root 방향에서 representation을 $\sl_{2,\alpha_i}$-module로 잘라 $\sl_2$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $\lambda(h_i)\in\mathbb{Z}_{\geq 0}$은 각 방향의 highest weight string이 $\sl_2$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $M(\lambda)$의 irreducible quotient $L(\lambda)$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 finite weight 집합을 하나로 묶어 representation 전체의 유한차원성을 보장한다. 
 
 이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7){: data-lid="t0b1a" }에 의해 임의의 유한차원 representation은 irreducible representation들의 direct sum이고, 그 irreducible 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 representation은 각 dominant integral weight $\lambda$에 대한 $L(\lambda)$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $\sl_2$에서 모든 irreducible representation이 음이 아닌 정수 $n$으로 색인되고 $L(n)=V(n)$이었던 것이 이 일반적 그림의 가장 단순한 경우이다. ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5){: data-lid="qttsi" })
 

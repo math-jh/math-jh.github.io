@@ -409,7 +409,7 @@ $\SU(2)$의 경우, $T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$이고 $W=\mat
 - **Regular:** $\theta \neq 0, \pi$인 원소들. 이들은 reflection의 fixed point가 아니다.
 - **Singular:** $\theta=0$ (항등원)과 $\theta=\pi$ ($\text{diag}(-1,-1)$). 이들은 reflection에 의해 고정된다.
 
-Torus $T\cong S^1$에서 singular 원소는 정확히 두 점이며, regular 원소들은 그 여집합이다.
+Torus $T\cong S^1$에서 singular element는 정확히 두 점이며, regular 원소들은 그 여집합이다.
 :::
 
 일반적으로 다음이 성립한다.
@@ -418,20 +418,20 @@ Torus $T\cong S^1$에서 singular 원소는 정확히 두 점이며, regular 원
 Compact connected Lie group $G$의 maximal torus $T$에 대하여:
 
 1. Regular 원소들은 $T$에서 dense open subset을 이룬다.
-2. Singular 원소들은 $T$에서 codimension $\geq 1$인 closed subset을 이룬다.
-3. Singular 원소들의 집합은 유한 개의 subgroup들의 합집합이다.
+2. Singular element들은 $T$에서 codimension $\geq 1$인 closed subset을 이룬다.
+3. Singular element들의 집합은 유한 개의 subgroup들의 합집합이다.
 :::
 ::: 증명
-(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T\mid wtw^{-1}=t\}$는 $T$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
+(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T\mid wtw^{-1}=t\}$는 $T$의 proper closed subgroup이다. Singular element들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
 
 (3): 각 $w\neq e$에 대한 fixed point set이 $T$의 closed subgroup이고, $W$가 유한이므로 유한 개의 subgroup들의 합집합이다.
 :::
 
-Singular 원소들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $\SU(2)$의 경우, singular 원소 두 점이 $S^1$을 두 개의 반원으로 나눈다. Weyl group action은 이 두 반원을 서로 맞바꾸며, regular 원소들 위에서 free action을 정의한다.
+Singular element들이 $T$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $\SU(2)$의 경우, singular element 두 점이 $S^1$을 두 개의 반원으로 나눈다. Weyl group action은 이 두 반원을 서로 맞바꾸며, regular 원소들 위에서 free action을 정의한다.
 
 이 관점에서 보면, $T$의 regular 원소들의 quotient $T_{\text{reg}}/W$는 연결된 공간이며, 이를 *Weyl chamber*의 개념과 연결할 수 있다. $\SU(2)$의 경우 $T_{\text{reg}}/W \cong (0,\pi)$는 1차원 interval이고, 이것이 바로 1차원 Weyl chamber에 해당한다.
 
-더 일반적인 Lie group에서는 singular 원소들이 torus를 여러 chamber들로 나누고, 각 chamber는 Weyl group action의 fundamental domain 역할을 한다. 이것이 다음 글에서 다룰 root system과 Weyl chamber의 기하적 토대가 된다.
+더 일반적인 Lie group에서는 singular element들이 torus를 여러 chamber들로 나누고, 각 chamber는 Weyl group action의 fundamental domain 역할을 한다. 이것이 다음 글에서 다룰 root system과 Weyl chamber의 기하적 토대가 된다.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "고계 편도함수와 극값"
-description: "고계 편도함수를 정의하고, 편미분의 순서가 바뀌어도 값이 같다는 Schwarz 정리를 증명하며 순서가 바뀌는 반례를 제시한다. 이를 이용해 2차 다변수 테일러 정리를 얻고, Hessian 행렬의 부호로 임계점이 극대·극소·안장점 중 어느 것인지 판정하는 방법과 판정이 되지 않는 경우를 다룬다."
+description: "고계 편도함수를 정의하고, 편미분의 순서가 바뀌어도 값이 같다는 Schwarz 정리를 증명하며 순서가 바뀌는 반례를 제시한다. 이를 이용해 2차 다변수 테일러 정리를 얻고, Hessian matrix의 부호로 임계점이 극대·극소·안장점 중 어느 것인지 판정하는 방법과 판정이 되지 않는 경우를 다룬다."
 excerpt: "편미분의 순서교환, 2차 테일러 정리, Hessian 판정"
 
 categories: [Math / Analysis]
@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="2dara" }에서 다변수함수의 미분을 일차근사로 정의하고 [§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="c891e" }에서 편도함수가 연속이면 미분가능함을 보았다. 일변수에서 $f'(a)=0$인 점의 성격을 $f''(a)$의 부호가 결정하듯, 다변수에서 극값을 판정하려면 이계 편도함수가 필요하다. 이 글에서는 고계 편도함수를 정의하고, 이계 편도함수들이 이루는 Hessian 행렬이 $f$의 이차 근사를 주도록 테일러 정리를 확장한 뒤, 이를 극값 판정에 적용한다. 그 과정에서 편미분을 취하는 순서가 결과에 영향을 주는지가 먼저 문제가 된다.
+[§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="2dara" }에서 다변수함수의 미분을 일차근사로 정의하고 [§다변수 미분, ⁋정리 5](/ko/math/analysis/multivariable_differentiation#thm5){: data-lid="c891e" }에서 편도함수가 연속이면 미분가능함을 보았다. 일변수에서 $f'(a)=0$인 점의 성격을 $f''(a)$의 부호가 결정하듯, 다변수에서 극값을 판정하려면 이계 편도함수가 필요하다. 이 글에서는 고계 편도함수를 정의하고, 이계 편도함수들이 이루는 Hessian matrix가 $f$의 이차 근사를 주도록 테일러 정리를 확장한 뒤, 이를 극값 판정에 적용한다. 그 과정에서 편미분을 취하는 순서가 결과에 영향을 주는지가 먼저 문제가 된다.
 
 ## 고계 편도함수
 
@@ -30,7 +30,7 @@ $$\partial_i\partial_j f=\frac{\partial^2 f}{\partial x_i\partial x_j}=\frac{\pa
 
 $$H_f(a)=\bigl(\partial_i\partial_j f(a)\bigr)_{i,j=1}^n$$
 
-을 $f$의 $a$에서의 *Hessian 행렬*이라 한다.
+을 $f$의 $a$에서의 *Hessian matrix*라 한다.
 :::
 
 이 글에서 $\partial_i\partial_j$는 $j$번째 변수로 먼저 미분하고 $i$번째 변수로 나중에 미분하는 것을 뜻한다. 이 순서가 의미를 가지려면 $\partial_i\partial_j f$와 $\partial_j\partial_i f$가 일반적으로 달라질 수 있어야 하는데, 실제로 그런 함수가 존재한다.
@@ -99,7 +99,7 @@ $$\left\lvert\frac{\partial_y f(a_1+h,a_2)-\partial_y f(a_1,a_2)}{h}-\partial_y\
 을 얻는다. $\varepsilon$은 임의였으므로 좌변의 차분비는 $h\rightarrow 0$일 때 $\partial_y\partial_x f(a)$로 수렴한다. 이 극한이 정의상 $\partial_x\partial_y f(a)$이므로 증명이 끝난다.
 :::
 
-[예시 2](#ex2){: data-lid="ou2ne" }에서는 $\partial_y\partial_x f$가 원점에서 불연속이어서 이 정리를 쓸 수 없고, 실제로 결론도 성립하지 않았다. 반대로 $f$가 $C^2$이면 모든 $i\neq j$에 대해 두 혼합 편도함수가 모두 연속이므로 [정리 3](#thm3){: data-lid="zqtsq" }이 적용되어 Hessian 행렬 $H_f(a)$는 symmetric matrix가 된다. 더 높은 계수에서도 같은 결론이 성립한다.
+[예시 2](#ex2){: data-lid="ou2ne" }에서는 $\partial_y\partial_x f$가 원점에서 불연속이어서 이 정리를 쓸 수 없고, 실제로 결론도 성립하지 않았다. 반대로 $f$가 $C^2$이면 모든 $i\neq j$에 대해 두 혼합 편도함수가 모두 연속이므로 [정리 3](#thm3){: data-lid="zqtsq" }이 적용되어 Hessian matrix $H_f(a)$는 symmetric matrix가 된다. 더 높은 계수에서도 같은 결론이 성립한다.
 
 ::: 따름정리 4
 $f$가 $U$ 위의 $C^k$ 함수이면, $k$계 이하의 편도함수는 미분하는 변수의 순서에 의존하지 않는다. 즉 $\{1,\dots,k\}$의 임의의 순열 $\sigma$에 대하여 $\partial_{i_1}\cdots\partial_{i_k}f=\partial_{i_{\sigma(1)}}\cdots\partial_{i_{\sigma(k)}}f$이다.
@@ -130,7 +130,7 @@ $\varphi(t)=f(a+th)$라 하자. $C^1$ 함수는 미분가능하므로([§다변�
 
 $$\varphi''(t)=\sum_{i,j=1}^n\partial_j\partial_i f(a+th)h_ih_j$$
 
-이고, 이는 $f$가 $C^2$이므로 연속이다. 일변수 [§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9){: data-lid="qkuqi" }의 Lagrange 나머지 꼴에 의하여 $\varphi(1)=\varphi(0)+\varphi'(0)+\varphi''(\theta)/2$인 $\theta\in(0,1)$이 존재한다. 이를 풀어 쓰면 첫째 식이다. 이때 $\partial_j\partial_i f=\partial_i\partial_j f$는 [정리 3](#thm3){: data-lid="i2akb" }에 의한 것이다.
+이고, 이는 $f$가 $C^2$이므로 연속이다. 일변수 [§평균값 정리와 테일러 정리, ⁋정리 9](/ko/math/analysis/mean_value_theorem#thm9){: data-lid="qkuqi" }의 Lagrange remainder 꼴에 의하여 $\varphi(1)=\varphi(0)+\varphi'(0)+\varphi''(\theta)/2$인 $\theta\in(0,1)$이 존재한다. 이를 풀어 쓰면 첫째 식이다. 이때 $\partial_j\partial_i f=\partial_i\partial_j f$는 [정리 3](#thm3){: data-lid="i2akb" }에 의한 것이다.
 
 둘째 식은 첫째 식에서 얻는다. $\varepsilon>0$이 주어졌을 때 이계 편도함수들이 $a$에서 연속이므로 $\lVert h\rVert<\delta$이면 모든 $i,j$에 대하여 $\lvert\partial_i\partial_j f(a+\theta h)-\partial_i\partial_j f(a)\rvert<\varepsilon$이 되는 $\delta>0$이 있다. $\lvert h_i\rvert\le\lVert h\rVert$이므로 첫째 식과 둘째 식의 차는
 
@@ -139,7 +139,7 @@ $$\left\lvert\frac12\sum_{i,j}\bigl(\partial_i\partial_j f(a+\theta h)-\partial_
 이하이다. $\varepsilon$이 임의이므로 나머지는 $o(\lVert h\rVert^2)$이다.
 :::
 
-이차 항 $\sum_{i,j}\partial_i\partial_j f(a)h_ih_j$는 Hessian 행렬이 정하는 이차형식이며, 이를 $Q_a(h)$로 적는다. $a$가 아래에서 보듯 $\nabla f(a)=0$인 점이면 일차 항이 사라지므로 $f(a+h)-f(a)$의 거동은 $Q_a(h)$가 결정한다.
+이차 항 $\sum_{i,j}\partial_i\partial_j f(a)h_ih_j$는 Hessian matrix가 정하는 이차형식이며, 이를 $Q_a(h)$로 적는다. $a$가 아래에서 보듯 $\nabla f(a)=0$인 점이면 일차 항이 사라지므로 $f(a+h)-f(a)$의 거동은 $Q_a(h)$가 결정한다.
 
 ## 이차형식의 부호
 

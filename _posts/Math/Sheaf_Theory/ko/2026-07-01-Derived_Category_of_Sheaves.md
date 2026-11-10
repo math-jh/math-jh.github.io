@@ -1,6 +1,6 @@
 ---
 title: "층의 유도 범주와 유도 functor"
-description: "공간 위 층의 abelian 범주가 충분한 injective를 가짐을 확인하고, 그 유도 범주에서 Rf_*·Lf^*·⊗^L·RHom을 정의하여 층 코호몰로지와 Leray spectral sequence을 derived functor의 언어로 통합한다."
+description: "공간 위 층의 abelian category가 충분한 injective를 가짐을 확인하고, 그 유도 범주에서 Rf_*·Lf^*·⊗^L·RHom을 정의하여 층 코호몰로지와 Leray spectral sequence을 derived functor의 언어로 통합한다."
 excerpt: "D(Sh(X)), the derived functors Rf_*, Lf^*, ⊗^L, RHom, and their adjunctions"
 
 categories: [Math / Sheaf Theory]

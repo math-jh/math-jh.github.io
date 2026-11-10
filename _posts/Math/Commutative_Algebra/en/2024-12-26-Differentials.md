@@ -269,7 +269,7 @@ exists. We call such a $p$ a *presentation* of $E$, and write $\mathfrak{I}=\ker
 ::: Definition 10
 For a presentation $p:R \rightarrow E$, the *naive cotangent complex* $\operatorname{NL}(p)$ of $p$ is the two-term complex of $E$-modules consisting of the two leftmost terms of the conormal sequence:
 
-$$\operatorname{NL}(p)=\Bigl[\mathfrak{I}/\mathfrak{I}^2\overset{\bar{d}}{\rightarrow}\Omega_{R/A}\otimes_RE\Bigr]$$
+$$\operatorname{NL}(p)=\Bigl[\at{1}{\mathfrak{I}/\mathfrak{I}^2}\overset{\bar{d}}{\rightarrow}\at{0}{\Omega_{R/A}\otimes_RE}\Bigr]$$
 
 Here, we place $\mathfrak{I}/\mathfrak{I}^2$ in degree $1$ and $\Omega_{R/A}\otimes_RE$ in degree $0$.
 :::
@@ -369,7 +369,7 @@ is an invariant of the $A$-algebra $E$. Let us see what $H_1$ measures in the fo
 ::: Example 15
 Consider the algebra $E=A[\x]/(f)$ presented by a single polynomial. Here, we assume that $f$ is a nonzerodivisor in $A[\x]$. For the presentation $p:R=A[\x] \rightarrow E$, we have $\mathfrak{I}=(f)$, and since $f$ is a nonzerodivisor, $\mathfrak{I}/\mathfrak{I}^2$ is a free $E$-module with basis $\overline{f}$. Indeed, if $af\in(f^2)$, then from $af=bf^2$ we obtain $a=bf\in(f)$. Therefore,
 
-$$\operatorname{NL}_{E/A}=\Bigl[E\overline{f}\overset{\bar{d}}{\rightarrow}E\dd{\x}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
+$$\operatorname{NL}_{E/A}=\Bigl[\at{1}{E\overline{f}}\overset{\bar{d}}{\rightarrow}\at{0}{E\dd{\x}}\Bigr],\qquad \bar{d}(\overline{f})=\overline{Df}\dd{\x}$$
 
 where $Df$ is the derivative of $f$. Then
 

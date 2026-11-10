@@ -1,6 +1,6 @@
 ---
 title: "Derived scheme과 derived stack"
-description: "Animated 가환환을 이어붙여 derived scheme을 정의하고 그 truncation이 고전적 스킴임을 본 뒤, animated 환 위의 étale 하강 함자로서의 derived stack, 여접 복합체 L_X, quasi-smooth 사상과 유도 올곱이 주는 virtual 구조를 다룬다."
+description: "Animated commutative ring을 이어붙여 derived scheme을 정의하고 그 truncation이 고전적 스킴임을 본 뒤, animated 환 위의 étale 하강 함자로서의 derived stack, 여접 복합체 L_X, quasi-smooth 사상과 유도 올곱이 주는 virtual 구조를 다룬다."
 excerpt: "Derived schemes/stacks, the cotangent complex L_X, quasi-smooth maps, and derived fiber products"
 
 categories: [Math / Derived Algebraic Geometry]
@@ -160,7 +160,7 @@ Derived scheme(또는 geometric derived stack)의 morphism $f:X\rightarrow Y$이
 
 $$\LL_f\simeq\bigl[E_1\rightarrow E_0\bigr],\qquad E_0\text{ (degree }0),\quad E_1\text{ (degree }1)$$
 
-의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual 상대차원<sub>virtual relative dimension</sub>*을 $\LL_f$의 K-이론적 계수
+의 꼴로 두 항의 locally free sheaf로 표현되는 것을 뜻한다. 이때 $f$의 *virtual relative dimension<sub>가상 상대차원</sub>*을 $\LL_f$의 K-이론적 계수
 
 $$\operatorname{vdim}(f)=\rank E_0-\rank E_1$$
 
@@ -180,12 +180,12 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 
 2. $f$이 quasi-smooth이면 그 truncation $t_0(f):t_0(X)\rightarrow t_0(Y)$은 국소적으로 smooth morphism 위에서 $r$개의 방정식으로 잘린 것이며, 이 방정식들이 regular sequence를 이룰 때 고전적 lci morphism이 된다. 이 조건은 $f$이 discrete할 (곧 $X$이 고전적 scheme일) 필요충분조건인 $\pi_1(\mathcal{O}_X)=0$과 동치이다.
 
-3. Quasi-smooth morphism은 임의의 base change에 대하여 닫혀 있고, virtual 상대차원을 보존한다. 곧 $f$이 quasi-smooth이고 $Y'\rightarrow Y$이 임의의 morphism이면 $f':X\times_Y^hY'\rightarrow Y'$도 quasi-smooth이며 $\operatorname{vdim}(f')=\operatorname{vdim}(f)$이다.
+3. Quasi-smooth morphism은 임의의 base change에 대하여 닫혀 있고, virtual relative dimension을 보존한다. 곧 $f$이 quasi-smooth이고 $Y'\rightarrow Y$이 임의의 morphism이면 $f':X\times_Y^hY'\rightarrow Y'$도 quasi-smooth이며 $\operatorname{vdim}(f')=\operatorname{vdim}(f)$이다.
 :::
 ::: 증명
-**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul 복합체이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11){: data-lid="dgavj" }의 base change로 계산되어 $\LL_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 locally free sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $\LL_{P/Y}$은 degree $0$의 locally free sheaf이고, [명제 11](#prop11){: data-lid="wj194" }의 추이 삼각형이 $\LL_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $\LL_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
+**(1)** 절단 $s:P\rightarrow E$의 유도 영점자리 $Z(s)=P\times_E^hP$은 국소적으로 $E$을 rank $r$의 자명 다발로 놓아 $s=(s_1,\ldots,s_r)$으로 쓰면 $\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$, 곧 $s_i$들에 대한 Koszul complex이다. Embedding $Z(s)\hookrightarrow P$의 여접 복합체는 [명제 11](#prop11){: data-lid="dgavj" }의 base change로 계산되어 $\LL_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$, 곧 degree $1$에 집중된 locally free sheaf이다. $P$이 $Y$ 위에서 smooth하므로 $\LL_{P/Y}$은 degree $0$의 locally free sheaf이고, [명제 11](#prop11){: data-lid="wj194" }의 추이 삼각형이 $\LL_{X/Y}$을 degree $0,1$의 두 항으로 준다. 따라서 $Z(s)$은 quasi-smooth이다. 역으로 $f$이 quasi-smooth이면 $\LL_f\simeq[E_1\rightarrow E_0]$의 $E_0$을 실현하는 smooth 인수 $P$을 국소적으로 잡고, $E_1$을 실현하는 절단 $s$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
 
-**(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 것이며, 그 방정식들이 regular sequence를 이룰 때 고전적 lci가 된다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul 복합체가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
+**(2)** $X=Z(s)$이면 $t_0(X)=\{s=0\}$은 $P$의 고전적 영점자리이고, 이는 국소적으로 $r$개의 방정식으로 잘린 것이며, 그 방정식들이 regular sequence를 이룰 때 고전적 lci가 된다. $X$이 discrete함은 $s_1,\ldots,s_r$이 regular sequence를 이루어 Koszul complex가 $\pi_0$에 집중되는 것, 곧 $\pi_1(\mathcal{O}_X)=0$인 것과 동치이다. Regular sequence가 아니면 Koszul homology가 $\pi_{\geq1}\mathcal{O}_X\neq0$을 낳아 $X$은 discrete하지 않다.
 
 **(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11){: data-lid="mpph0" }의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 locally free sheaf의 rank를 보존하는 데서 따른다. 따라서 $\LL_{f'}\simeq g^\ast \LL_f$이 다시 Tor-amplitude $[-1,0]$이고 $\operatorname{vdim}$이 rank로 정해지므로 보존된다.
 :::
@@ -234,9 +234,9 @@ $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum
 ::: 증명
 **(1)** $\pi_0$이 유도 tensor product를 고전적 tensor product로 truncate하므로 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="lmsjf" }) $\pi_0\mathcal{O}_W=B\otimes_AC$이고, $t_0$이 $\pi_0$-sheaf만 보므로 $t_0(W)$이 고전적 올곱이다. Higher homotopy $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$도 같은 명제이다.
 
-**(2)** Quasi-smooth의 base change 안정성과 virtual 상대차원 보존은 [명제 13](#prop13){: data-lid="w8o8z" }의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal orientation $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
+**(2)** Quasi-smooth의 base change 안정성과 virtual relative dimension 보존은 [명제 13](#prop13){: data-lid="w8o8z" }의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal orientation $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
 
-**(3)** $W$이 quasi-smooth이므로 그 여접 복합체의 절단이 $t_0(W)$ 위에 perfect obstruction 이론 $\LL_W\vert_{t_0(W)}\rightarrow \LL_{t_0(W)}$을 주고, 이 자료로부터 intrinsic normal cone을 obstruction 다발의 전체 공간 안으로 끊어 virtual fundamental class $[W]^{\mathrm{vir}}$을 얻는다. $Z$이 smooth이고 교차가 proper이면 이 class의 pushforward가 교차곱의 정의와 일치함은 deformation to the normal cone과 대조하여 나온다. ([\[대수다양체\] §교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1){: data-lid="4n0zm" }) isolated point $p$에서는 $[W]^{\mathrm{vir}}$의 길이가 $\mathcal{O}_{W,p}$의 Euler characteristic $\sum(-1)^n\operatorname{length}\pi_n$이고, $\pi_n=\Tor_n^A(B,C)$이므로 Serre의 Tor 공식과 일치한다. 완전한 논증은 ([TV], [Kha])에 있다.
+**(3)** $W$이 quasi-smooth이므로 그 여접 복합체의 절단이 $t_0(W)$ 위에 perfect obstruction theory $\LL_W\vert_{t_0(W)}\rightarrow \LL_{t_0(W)}$을 주고, 이 자료로부터 intrinsic normal cone을 obstruction 다발의 전체 공간 안으로 끊어 virtual fundamental class $[W]^{\mathrm{vir}}$을 얻는다. $Z$이 smooth이고 교차가 proper이면 이 class의 pushforward가 교차곱의 정의와 일치함은 deformation to the normal cone과 대조하여 나온다. ([\[대수다양체\] §교차곱, ⁋정의 1](/ko/math/algebraic_varieties/intersection_product#def1){: data-lid="4n0zm" }) isolated point $p$에서는 $[W]^{\mathrm{vir}}$의 길이가 $\mathcal{O}_{W,p}$의 Euler characteristic $\sum(-1)^n\operatorname{length}\pi_n$이고, $\pi_n=\Tor_n^A(B,C)$이므로 Serre의 Tor 공식과 일치한다. 완전한 논증은 ([TV], [Kha])에 있다.
 :::
 
 [명제 15](#prop15){: data-lid="yozg8" }가 이 글의 핵심이다. 고전적 올곱은 $\pi_0$만 보아 교차의 초과분을 뭉갰지만, 유도 올곱은 그 초과분을 $\Tor$로 정확히 붙들어 virtual 차원과 virtual class로 번역한다. Serre가 intersection multiplicity를 $\Tor$의 교대합으로 정의해야 했던 이유가 여기서 기하적으로 설명된다. 그 교대합이 바로 유도 올곱 $\mathcal{O}_W$의 Euler characteristic인 것이다. 이 virtual class 형식은 Gromov–Witten 이론에서 stable map들의 moduli space가 기대차원보다 클 때, 그 위의 virtual fundamental class로 불변량을 정의하는 데 쓰이는 것과 같은 구조이며, 유도 기하는 그러한 moduli를 quasi-smooth derived stack으로 실현하여 이 class를 자연스럽게 공급한다.
@@ -266,15 +266,15 @@ $$\operatorname{vdim}(Z)=0+0-1=-1$$
 의 quasi-smooth derived scheme이다. $t_0(Z)$은 한 점이지만, $\pi_1\mathcal{O}_Z=k\neq0$이 이 음의 virtual 차원을 실현한다. 곧 두 점이 직선 위에서 일반적으로 만나지 않아 기대 intersection number가 $0$이라는 사실이, Serre 공식 $\operatorname{length}\pi_0-\operatorname{length}\pi_1=1-1=0$으로 정확히 나온다. 고전적 올곱이 이를 "한 점"으로 뭉갠 자리에서, 유도 올곱은 $-1$차원의 virtual 구조를 붙든다.
 
 ::: 예시 17 (derived critical locus)
-Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $\dd{f}$은 cotangent 다발 $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *derived critical locus<sub>유도 임계점 자리</sub>* $\operatorname{Crit}(f)$을 $\dd{f}$의 유도 영점자리로 정의한다.
+Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *derived critical locus<sub>유도 임계점 자리</sub>* $\operatorname{Crit}(f)$을 $\dd{f}$의 유도 영점자리로 정의한다.
 
 $$\operatorname{Crit}(f)=Z(\dd{f})=U\times_{\Omega_U}^hU$$
 
-[명제 13](#prop13){: data-lid="3bwtt" }에 의하여 이는 rank $n$ 다발의 절단의 유도 영점자리이므로 quasi-smooth이고 $\operatorname{vdim}=n-n=0$이며, 그 structure sheaf는 편미분들에 대한 Koszul 복합체
+[명제 13](#prop13){: data-lid="3bwtt" }에 의하여 이는 rank $n$ 다발의 절단의 유도 영점자리이므로 quasi-smooth이고 $\operatorname{vdim}=n-n=0$이며, 그 structure sheaf는 편미분들에 대한 Koszul complex
 
 $$\mathcal{O}_{\operatorname{Crit}(f)}=\operatorname{Kos}\bigl(k[\x_1,\ldots,\x_n];\partial_1f,\ldots,\partial_nf\bigr)$$
 
-이다. $t_0(\operatorname{Crit}(f))=\Spec k[\x]/(\partial_1f,\ldots,\partial_nf)$은 고전적 critical point scheme, 곧 Jacobian ring의 spectrum이다. 편미분들이 regular sequence를 이루면 (가령 isolated 비축퇴 critical point) Koszul 복합체가 $\pi_0$에 집중되어 유도 구조가 고전적 구조와 같지만, regular sequence가 아니면 higher homotopy가 살아난다. 예컨대 $n=2$, $f=\x_1^2\x_2$이면 $\partial_1f=2\x_1\x_2$, $\partial_2f=\x_1^2$이 공통 인수 $\x_1$을 가져 regular sequence가 아니므로, Koszul homology $\pi_1\mathcal{O}_{\operatorname{Crit}(f)}\neq0$이 critical point 자리의 비축소성을 유도적으로 검출한다. $\operatorname{Crit}(f)$의 접복합체 $T_{\operatorname{Crit}(f)}$은 Hessian이 대칭이라는 사실 때문에 여접 복합체와 자기쌍대적이며, 이 self-duality가 derived critical locus 위의 $(-1)$-shifted symplectic 구조로 정착된다.
+이다. $t_0(\operatorname{Crit}(f))=\Spec k[\x]/(\partial_1f,\ldots,\partial_nf)$은 고전적 critical point scheme, 곧 Jacobian ring의 spectrum이다. 편미분들이 regular sequence를 이루면 (가령 isolated 비축퇴 critical point) Koszul complex가 $\pi_0$에 집중되어 유도 구조가 고전적 구조와 같지만, regular sequence가 아니면 higher homotopy가 살아난다. 예컨대 $n=2$, $f=\x_1^2\x_2$이면 $\partial_1f=2\x_1\x_2$, $\partial_2f=\x_1^2$이 공통 인수 $\x_1$을 가져 regular sequence가 아니므로, Koszul homology $\pi_1\mathcal{O}_{\operatorname{Crit}(f)}\neq0$이 critical point 자리의 비축소성을 유도적으로 검출한다. $\operatorname{Crit}(f)$의 접복합체 $T_{\operatorname{Crit}(f)}$은 Hessian이 대칭이라는 사실 때문에 여접 복합체와 자기쌍대적이며, 이 self-duality가 derived critical locus 위의 $(-1)$-shifted symplectic 구조로 정착된다.
 :::
 
 ::: 예시 18 (평면 위 두 곡선의 비횡단 교차)

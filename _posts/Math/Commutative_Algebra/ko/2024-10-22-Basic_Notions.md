@@ -236,7 +236,7 @@ Noetherian ring $A$ 위의 finitely generated $A$-algebra $B$는 Noetherian이�
 ::: 증명
 $B$가 finitely generated $A$-algebra이므로, 적당한 $n$에 대하여 surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$이 존재한다. 즉 어떠한 ideal $I$에 대하여 $B\cong A[\x_1,\ldots,\x_n]/I$이다. [정리 12](#thm12){: data-lid="5oi67" }를 반복하여 적용하면 $A[\x_1,\ldots,\x_n]$이 Noetherian임을 안다.
 
-이제 Noetherian ring의 quotient가 Noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-lid="516ei" }에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 Noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로, [정리 3](#thm3){: data-lid="sumkr" }에 의하여 $B$는 Noetherian이다.
+이제 Noetherian ring의 quotient가 Noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3){: data-lid="516ei" }에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 Noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로 $B$는 Noetherian이다.
 :::
 
 ---

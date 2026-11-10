@@ -174,7 +174,7 @@ $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\
 ::: 명제 4 (A-side fundamental solution matrix)
 Endomorphism $S(q, z) \in \End(H^\ast(X))$를 다음의 matrix element
 
-$$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
+$$\eta\bigl(T_a, S(q,z)T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
 
 으로 정의하자. 여기서 $\eta$는 Poincaré pairing이다. 그럼 $S$는 다음을 만족한다. 
 

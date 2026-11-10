@@ -102,7 +102,7 @@ Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 �
 앞서 우리는 [명제 2](#prop2){: data-lid="qbslt" }에서 $\Spec$을 functor $\Spec: \cRing^\op \rightarrow \Set$으로 취급할 수 있음을 살펴보았다. 뿐만 아니라, $\Spec$은 $\cRing^\op$에서 $\Top$으로의 functor이기도 하다.
 
 ::: 명제 8
-Ring $A$의 spectrum $\Spec A$ 위에 [정의 7](#def7){: data-lid="6nl20" }의 위상구조를 주면, [명제 2](#prop2){: data-lid="n4r2u" }의 functor $\Spec: \cRing^\op \rightarrow \Top$은 functor이다. 
+Ring $A$의 spectrum $\Spec A$ 위에 [정의 7](#def7){: data-lid="6nl20" }의 위상구조를 주면, [명제 2](#prop2){: data-lid="n4r2u" }의 functor $\Spec$은 functor $\Spec: \cRing^\op \rightarrow \Top$이기도 하다. 
 :::
 ::: 증명
 [명제 2](#prop2){: data-lid="52367" }에서 추가로 보여야 할 것은 임의의 ring homomorphism $\phi: A \rightarrow B$가 주어졌을 때, $\Spec \phi: \Spec B \rightarrow \Spec A$가 <em-ko>연속</em-ko>함수라는 것이다. 따라서 $\Spec A$의 임의의 닫힌집합을 가져왔을 때, 이 닫힌집합의 $\Spec\phi$에 의한 preimage도 $\Spec B$에서의 닫힌집합임을 보이면 충분하다. ([\[위상수학\] §연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4){: data-lid="k6ef9" }의 셋째 조건)

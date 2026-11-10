@@ -1,6 +1,6 @@
 ---
 title: "동변 코호몰로지"
-description: "위상군의 작용을 기억하는 코호몰로지 이론을 Borel 구성으로 정의하고, 분류공간의 코호몰로지를 계수로 갖는 대수 구조와 torus 작용의 weight 기술을 다룬다."
+description: "위상군의 작용을 기억하는 코호몰로지 이론을 Borel construction으로 정의하고, 분류공간의 코호몰로지를 계수로 갖는 대수 구조와 torus 작용의 weight 기술을 다룬다."
 excerpt: "Borel construction, equivariant cohomology H_G(X)=H(X_G), and H_T(pt)=Sym(character lattice)"
 
 categories: [Math / Toric Geometry]
@@ -48,7 +48,7 @@ $X_G$는 정확히 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙�
 
 ## 동변 코호몰로지의 기본 성질
 
-Borel 구성이 fiber bundle $X_G\rightarrow BG$로 실현된다는 사실로부터 equivariant cohomology의 기본 성질이 한꺼번에 따라온다. 우리는 먼저 이 bundle 구조를 정리한다.
+Borel construction이 fiber bundle $X_G\rightarrow BG$로 실현된다는 사실로부터 equivariant cohomology의 기본 성질이 한꺼번에 따라온다. 우리는 먼저 이 bundle 구조를 정리한다.
 
 ::: 명제 2
 $G$-space $X$에 대하여 projection $\pi:X_G\rightarrow BG$, $[e,x]\mapsto [e]$는 fiber $X$를 갖는 fiber bundle이다. 이로부터 다음이 성립한다.
@@ -137,10 +137,10 @@ $$c_r\big(\pi^\ast E\otimes\mathcal{O}(1)\big)=0$$
 
 $$0=c_r\big(\pi^\ast E\otimes\mathcal{O}(1)\big)=\prod_{i=1}^r(x_i-h)$$
 
-이고, 전체 부호 $(-1)^r$을 정리하면 진술한 관계식을 얻는다. Free 기저 $1,h,\ldots,h^{r-1}$은 Leray–Hirsch 정리에서 나온다. 한 fiber로 제한하면 $\mathcal{O}(-1)$은 $\mathbb{P}^{r-1}$ 위의 tautological line bundle로 제한되어 $h$는 hyperplane class의 음수가 되고, 따라서 $1,h,\ldots,h^{r-1}$이 fiber $\mathbb{P}^{r-1}$의 cohomology의 기저로 제한된다. Leray–Hirsch 정리에 의해 이들은 $H^\bullet(\mathbb{P}(E))$의 free $H^\bullet(B)$-기저를 이룬다. 자세한 내용은 [tD]의 §16, §19를 따른다.
+이고, 전체 부호 $(-1)^r$을 정리하면 진술한 관계식을 얻는다. Free basis $1,h,\ldots,h^{r-1}$은 Leray–Hirsch 정리에서 나온다. 한 fiber로 제한하면 $\mathcal{O}(-1)$은 $\mathbb{P}^{r-1}$ 위의 tautological line bundle로 제한되어 $h$는 hyperplane class의 음수가 되고, 따라서 $1,h,\ldots,h^{r-1}$이 fiber $\mathbb{P}^{r-1}$의 cohomology의 기저로 제한된다. Leray–Hirsch 정리에 의해 이들은 $H^\bullet(\mathbb{P}(E))$의 free $H^\bullet(B)$-기저를 이룬다. 자세한 내용은 [tD]의 §16, §19를 따른다.
 :::
 
-이 정리에서 $E$가 일반적인 vector bundle일 때는 관계식이 $E$의 Chern class들로 쓰이지만, 우리가 다룰 torus의 경우 $E$가 항상 character에 대응하는 line bundle들의 직합으로 나타나므로 위의 분해된 형태로 충분하다. 이제 $h$를 $H^\bullet(B)$-계수 polynomial ring의 변수로 보면, $H^\bullet(\mathbb{P}(E))$은 $h$에 대해 $r$차의 monic 다항식 하나를 법으로 하는 quotient임을 알 수 있다.
+이 정리에서 $E$가 일반적인 vector bundle일 때는 관계식이 $E$의 Chern class들로 쓰이지만, 우리가 다룰 torus의 경우 $E$가 항상 character에 대응하는 line bundle들의 직합으로 나타나므로 위의 분해된 형태로 충분하다. 이제 $h$를 $H^\bullet(B)$-계수 polynomial ring의 변수로 보면, $H^\bullet(\mathbb{P}(E))$은 $h$에 대해 $r$차의 monic polynomial 하나를 법으로 하는 quotient임을 알 수 있다.
 
 ## 예시: 회전하는 2-구면
 
@@ -229,14 +229,14 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 이 동형인 것이다.
 :::
 
-여기서 오른쪽으로 가는 morphism은 [명제 2](#prop2){: data-lid="1lfk5" }의 restriction $\iota^\ast$이 유도하는 것이다. [예시 6](#ex6){: data-lid="ipk9a" }의 $S^2$와 [정리 7](#thm7){: data-lid="6hh5r" }의 $\mathbb{P}^n$은 모두 equivariantly formal이다. 두 경우 모두 $H_T^\bullet(X)$이 $h$의 거듭제곱을 free 기저로 가졌고, $t_i\mapsto 0$이 $H^\bullet(X)$를 회복하였기 때문이다. 더 일반적으로 fiber bundle $X\rightarrow X_T\rightarrow BT$의 Serre spectral sequence
+여기서 오른쪽으로 가는 morphism은 [명제 2](#prop2){: data-lid="1lfk5" }의 restriction $\iota^\ast$이 유도하는 것이다. [예시 6](#ex6){: data-lid="ipk9a" }의 $S^2$와 [정리 7](#thm7){: data-lid="6hh5r" }의 $\mathbb{P}^n$은 모두 equivariantly formal이다. 두 경우 모두 $H_T^\bullet(X)$이 $h$의 거듭제곱을 free basis로 가졌고, $t_i\mapsto 0$이 $H^\bullet(X)$를 회복하였기 때문이다. 더 일반적으로 fiber bundle $X\rightarrow X_T\rightarrow BT$의 Serre spectral sequence
 
 $$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Rightarrow H_T^{p+q}(X)$$
 
 를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse함을 함의하며, $H^\bullet(X)$가 free $\mathbb{Z}$-module일 때에는 그 역도 성립한다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-module로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
 
 ::: 참고 9
-$X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel 구성과 같은 $H_G^\bullet(X;\mathbb{R})$을 differential form으로 계산하는 model이 존재한다. Cartan model에서는 equivariant differential form의 복합체
+$X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel construction과 같은 $H_G^\bullet(X;\mathbb{R})$을 differential form으로 계산하는 model이 존재한다. Cartan model에서는 equivariant differential form의 복합체
 
 $$\Omega_G^\bullet(X)=\big(\mathrm{Sym}(\mathfrak{g}^\ast)\otimes\Omega^\bullet(X)\big)^G$$
 

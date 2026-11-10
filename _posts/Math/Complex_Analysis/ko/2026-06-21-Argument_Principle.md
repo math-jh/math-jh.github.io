@@ -14,7 +14,7 @@ weight: 12
 published: false
 ---
 
-Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-lid="a904x" }), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6){: data-lid="628ph" }). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 성질을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed 경로를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
+Holomorphic function의 영점은 고립되어 finite order를 가지며 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2){: data-lid="a904x" }), 유리형함수의 극 역시 finite order를 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6){: data-lid="628ph" }). 한 영역 안에서 이러한 영점과 극이 각각 몇 개나 있는지를 세는 일은 함수의 성질을 파악하는 데 핵심적이지만, 영점과 극의 위치를 일일이 찾지 않고 그 개수만을 알아내는 길이 있다면 훨씬 강력하다. 편각원리는 바로 그 길을 연다. 대수적 미분 $f'/f$을 closed path를 따라 적분하면, 그 값이 경로 안의 영점 수에서 극 수를 뺀 것을 정확히 세어 준다. 이 양은 동시에 상곡선 $f \circ \gamma$이 원점을 감는 횟수, 곧 편각의 총 증가량으로도 읽히므로 위상적 의미를 가진다. 편각원리는 그 자체로 영점·극의 계수를 주는 동시에, 함수를 작게 섭동해도 영점 수가 변하지 않는다는 Rouché 정리를 낳고, 거기서 다시 비상수 holomorphic function이 열린집합을 열린집합으로 보낸다는 open mapping 정리와 injective holomorphic function의 역의 holomorphicity가 흘러나온다. 이 글은 유수정리를 출발점으로 삼아 이 일련의 결과를 차례로 확립한다.
 
 ## 유리형함수와 편각원리
 
@@ -169,11 +169,11 @@ $$\varepsilon = \min_{\lvert z - z_0\rvert = \delta}\lvert F(z)\rvert = \min_{\l
 [정리 7](#thm7){: data-lid="nxosz" }은 비상수 holomorphic function이 각 점 근방에서 정확히 일정한 겹수로 값을 덮음을 말한다. $f'(z_0) \neq 0$인 점, 곧 $m = 1$인 점 근방에서는 $f$이 국소적으로 단사여서 일대일 사상이 되고, $f'(z_0) = 0$인 critical point 근방에서는 order $m \geq 2$만큼 여러 겹으로 값을 취한다. 이 사실은 바로 다음의 open mapping 정리를 곧장 내놓는다. Holomorphic function이 $w_0$ 근방의 모든 값을 취한다면, 그 image는 $w_0$의 한 근방을 통째로 포함하므로 열려 있을 수밖에 없기 때문이다.
 
 ::: 정리 8 (open mapping 정리)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에서 holomorphic이며 상수가 아니라 하자. 그러면 $f$은 *open map<sub>열린사상</sub>*이다. 곧 $\Omega$의 임의의 열린 부분집합 $U$에 대해 image $f(U)$이 $\mathbb{C}$에서 열려 있다.
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 $f$이 $\Omega$에서 holomorphic이며 상수가 아니라 하자. 그러면 $f$은 *open map<sub>열린사상</sub>*이다. 곧 $\Omega$의 임의의 열린 부분집합 $U$에 대해 image $f(U)$이 $\mathbb{C}$에서 열려 있다.
 :::
 
 ::: 증명
-$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected 열린집합 $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3){: data-lid="vindi" }에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 finite order $m \geq 1$인 영점을 가진다.
+$U \subseteq \Omega$이 열려 있다고 하고, $w_0 \in f(U)$을 임의로 잡아 $f(U)$이 $w_0$의 한 근방을 포함함을 보이면 된다. $w_0 = f(z_0)$인 $z_0 \in U$을 택한다. $f$이 connected open set $\Omega$에서 상수가 아니므로, [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3){: data-lid="vindi" }에 의해 $f - w_0$은 어떤 근방에서도 항등적으로 $0$이 아니고, 따라서 $z_0$에서 finite order $m \geq 1$인 영점을 가진다.
 
 [정리 7](#thm7){: data-lid="g2k2u" }을 $f$과 $z_0$에 적용한다. [정리 7](#thm7){: data-lid="734a0" }이 주는 $\delta > 0$과 $\varepsilon > 0$을, $\overline{D(z_0, \delta)} \subseteq U$이 되도록 $\delta$을 더 줄여 잡을 수 있다 ($U$이 열려 있으므로). 그러면 $0 < \lvert w - w_0\rvert < \varepsilon$인 모든 $w$에 대해 $f(z) = w$인 해가 $D(z_0, \delta) \subseteq U$ 안에 (적어도 하나) 존재하므로 $w \in f(U)$이다. 또 $w = w_0$ 자신도 $f(z_0)$으로서 $f(U)$에 든다. 따라서
 
@@ -213,11 +213,11 @@ $$(f^{-1})'(w_0) = \frac{1}{f'(z_0)} = \frac{1}{f'(f^{-1}(w_0))}$$
 끝으로 open mapping 정리는 최대절댓값 원리에 새로운 시야를 준다. 이미 평균값 성질로 증명한 이 원리를 ([§영점과 일치정리, ⁋정리 5](/ko/math/complex_analysis/zeros_and_identity_theorem#thm5){: data-lid="tf8bg" }), 여기서는 image가 열려 있다는 사실만으로 다시 얻는다.
 
 ::: 따름정리 10 (open mapping 정리에 의한 최대절댓값 원리)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$이 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면 $f$은 $\Omega$에서 상수이다.
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 $f$이 $\Omega$에서 holomorphic이라 하자. 만일 $\lvert f\rvert$이 $\Omega$의 어떤 점 $z_0$에서 국소적 최댓값에 이르면 $f$은 $\Omega$에서 상수이다.
 :::
 
 ::: 증명
-$f$이 상수가 아니라고 가정하고 모순을 이끈다. $f$이 connected 열린집합에서 비상수이므로 [정리 8](#thm8){: data-lid="t31id" }에 의해 $f$은 open mapping이다. $\lvert f\rvert$이 $z_0$에서 국소적 최댓값에 이른다 함은, 어떤 근방 $D(z_0, r) \subseteq \Omega$ 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$임을 뜻한다. 곧 image $f(D(z_0, r))$이 closed 원판 $\overline{D(0, \lvert f(z_0)\rvert)}$ 안에 들어 있다.
+$f$이 상수가 아니라고 가정하고 모순을 이끈다. $f$이 connected open set에서 비상수이므로 [정리 8](#thm8){: data-lid="t31id" }에 의해 $f$은 open mapping이다. $\lvert f\rvert$이 $z_0$에서 국소적 최댓값에 이른다 함은, 어떤 근방 $D(z_0, r) \subseteq \Omega$ 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$임을 뜻한다. 곧 image $f(D(z_0, r))$이 closed 원판 $\overline{D(0, \lvert f(z_0)\rvert)}$ 안에 들어 있다.
 
 그런데 $w_0 = f(z_0)$은 그 closed 원판의 boundary $\lvert w\rvert = \lvert f(z_0)\rvert$ 위의 점이다. Open mapping 정리에서 $f(D(z_0, r))$은 열린집합이므로 $w_0$의 한 근방 $D(w_0, \varepsilon)$을 포함하는데, 이 근방에는 $\lvert w\rvert > \lvert w_0\rvert$인 점 (가령 $w_0$을 원점에서 멀어지는 방향으로 조금 옮긴 점) 이 반드시 들어 있다. 이는 $f(D(z_0, r)) \subseteq \overline{D(0, \lvert f(z_0)\rvert)}$에 어긋난다. 따라서 가정이 틀렸고, $f$은 $\Omega$에서 상수이다.
 :::

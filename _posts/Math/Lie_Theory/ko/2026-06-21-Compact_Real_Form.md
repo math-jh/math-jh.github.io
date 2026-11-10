@@ -57,13 +57,13 @@ $\mathfrak{g}_0$의 $\mathbb{R}$-basis $(x_1,\ldots,x_n)$을 택하면, 이는 �
 
 ## Compact real form
 
-Real form의 이름에 붙은 "compact"는 그 real form에 대응하는 connected 단순연결 Lie group이 compact라는 데에서 온다. 이 군론적 조건이 Lie algebra 차원에서는 Killing form의 부호로 정확히 번역되며, 우리는 후자를 정의로 삼는다.
+Real form의 이름에 붙은 "compact"는 그 real form에 대응하는 connected simply connected Lie group이 compact라는 데에서 온다. 이 군론적 조건이 Lie algebra 차원에서는 Killing form의 부호로 정확히 번역되며, 우리는 후자를 정의로 삼는다.
 
 ::: 정의 4
 복소 semisimple Lie algebra $\mathfrak{g}$의 real form $\mathfrak{u}$가 *compact real form<sub>콤팩트 실형식</sub>*이라는 것은 $\mathfrak{u}$의 Killing form $\kappa_{\mathfrak{u}}$가 음의 정부호, 곧 모든 $0\neq x\in\mathfrak{u}$에 대하여 $\kappa_{\mathfrak{u}}(x,x)<0$인 것이다.
 :::
 
-음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $\mathfrak{u}$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9){: data-lid="1wul2" }에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="7dzbr" }), $-\kappa_{\mathfrak{u}}$는 $\mathfrak{u}$ 위의 양의 정부호 inner product이고 Killing form이 $\Aut(\mathfrak{u})$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3){: data-lid="vzo3f" }) $\Ad(U)$-불변이다. 따라서 $\Ad:U\rightarrow\GL(\mathfrak{u})$의 image는 직교군 $\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$ 안에 들어가는 closed subgroup이고, 이는 compact이다. Semisimple의 경우 $\ker\Ad=Z(U)$가 이산이고 유한하므로 $U$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
+음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $\mathfrak{u}$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9){: data-lid="1wul2" }에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $\mathfrak{u}$의 connected simply connected Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="7dzbr" }), $-\kappa_{\mathfrak{u}}$는 $\mathfrak{u}$ 위의 양의 정부호 inner product이고 Killing form이 $\Aut(\mathfrak{u})$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3){: data-lid="vzo3f" }) $\Ad(U)$-불변이다. 따라서 $\Ad:U\rightarrow\GL(\mathfrak{u})$의 image는 직교군 $\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$ 안에 들어가는 closed subgroup이고, 이는 compact이다. Semisimple의 경우 $\ker\Ad=Z(U)$가 이산이고 유한하므로 $U$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
 
 ::: 예시 5
 $\su(n)$은 trace가 $0$인 skew-Hermitian 복소행렬들의 실 Lie algebra, 곧
@@ -205,7 +205,7 @@ $$\langle v,w\rangle=\int_U\langle\rho(u)v,\rho(u)w\rangle_0\dd{u}$$
 
 $$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\dd{u}=\langle v,w\rangle$$
 
-이므로 $\langle-,-\rangle$은 $U$-불변이다. 이제 $W\subseteq V$가 subrepresentation이면 그 orthogonal complement $W^\perp$ 역시 subrepresentation이다. 임의의 $w\in W$, $x\in W^\perp$, $g\in U$에 대하여 $\langle w,\rho(g)x\rangle=\langle\rho(g^{-1})w,x\rangle=0$이고 ($\rho(g^{-1})w\in W$), 따라서 $\rho(g)x\in W^\perp$이기 때문이다. 그럼 $V=W\oplus W^\perp$가 representation의 direct sum 분해이고, $\dim V$에 대한 귀납법으로 $V$가 irreducible subrepresentation들의 direct sum임이 따른다.
+이므로 $\langle-,-\rangle$은 $U$-불변이다. 이제 $W\subseteq V$가 subrepresentation이면 그 orthogonal complement $W^\perp$ 역시 subrepresentation이다. 임의의 $w\in W$, $x\in W^\perp$, $g\in U$에 대하여 $\langle w,\rho(g)x\rangle=\langle\rho(g^{-1})w,x\rangle=0$이고 ($\rho(g^{-1})w\in W$), 따라서 $\rho(g)x\in W^\perp$이기 때문이다. 그럼 $V=W\oplus W^\perp$가 representation의 direct sum decomposition이고, $\dim V$에 대한 귀납법으로 $V$가 irreducible subrepresentation들의 direct sum임이 따른다.
 :::
 
 이 논법은 적분 가능한 group, 곧 compact group에서만 직접 통한다. $\SL(n;\mathbb{C})$ 같은 noncompact group이나 추상 semisimple Lie algebra에는 평균낼 측도가 없으므로 그대로 적용되지 않는다 ([§근계](/ko/math/lie_theory/root_systems){: data-lid="8i3tl" }의 $\sl_2$ 논의에서 지적한 바와 같다). Weyl의 착상은 representation을 일단 compact real form $\mathfrak{u}$에 대응하는 compact group $U$의 representation으로 끌어내려 거기에서 완전가약성을 얻은 뒤, 그 분해가 원래의 복소 Lie algebra representation의 분해이기도 함을 복소화로 되돌려 받는 것이다.
@@ -214,7 +214,7 @@ $$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\dd{u
 $\mathfrak{g}$가 복소 semisimple Lie algebra이면 $\mathfrak{g}$의 모든 유한차원 representation은 완전가약이다.
 :::
 ::: 증명
-$\rho:\mathfrak{g}\rightarrow\gl(V)$를 유한차원 복소 representation이라 하자. [정리 7](#thm7){: data-lid="utatx" }에 의해 $\mathfrak{g}$는 compact real form $\mathfrak{u}$를 가지며, $\mathfrak{g}=\mathfrak{u}\oplus i\mathfrak{u}$이다. $\mathfrak{u}$의 connected 단순연결 Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="twnmo" }), $\mathfrak{u}$가 compact real form이라는 데에서 $U$는 compact이다 ([정의 4](#def4){: data-lid="7tm22" } 이후의 논의).
+$\rho:\mathfrak{g}\rightarrow\gl(V)$를 유한차원 복소 representation이라 하자. [정리 7](#thm7){: data-lid="utatx" }에 의해 $\mathfrak{g}$는 compact real form $\mathfrak{u}$를 가지며, $\mathfrak{g}=\mathfrak{u}\oplus i\mathfrak{u}$이다. $\mathfrak{u}$의 connected simply connected Lie group을 $U$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="twnmo" }), $\mathfrak{u}$가 compact real form이라는 데에서 $U$는 compact이다 ([정의 4](#def4){: data-lid="7tm22" } 이후의 논의).
 
 $\rho$를 $\mathfrak{u}\subseteq\mathfrak{g}$로 제한하면 실 Lie algebra representation $\rho\vert_{\mathfrak{u}}:\mathfrak{u}\rightarrow\gl(V)$를 얻고, $U$가 단순연결이므로 이는 group representation $\widetilde{\rho}:U\rightarrow\GL(V)$로 적분된다 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15){: data-lid="fl67m" }의 1). $U$가 compact이므로 [명제 10](#prop10){: data-lid="ob93z" }에 의해 $\widetilde{\rho}$는 완전가약이고, $V=\bigoplus_j W_j$로 $U$-irreducible subrepresentation들의 direct sum으로 분해된다.
 

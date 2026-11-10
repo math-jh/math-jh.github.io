@@ -144,7 +144,7 @@ $$M_a\vert_{A_\lambda}=\lambda(a)\id+N_a,\qquad N_a:=M_a\vert_{A_\lambda}-\lambd
 
 $$M_{\alpha a+b}\vert_{A_\lambda}=\alpha M_a\vert_{A_\lambda}+M_b\vert_{A_\lambda}=(\alpha\lambda(a)+\lambda(b))\id+(\alpha N_a+N_b)$$
 
-이고 우변의 nilpotent 부분 $\alpha N_a+N_b$은 $\lambda(\alpha a+b)\id$을 뺀 나머지여야 하므로, 일반화고유값의 유일성으로부터 $\lambda(\alpha a+b)=\alpha\lambda(a)+\lambda(b)$이다.
+이고 우변의 nilpotent part $\alpha N_a+N_b$은 $\lambda(\alpha a+b)\id$을 뺀 나머지여야 하므로, 일반화고유값의 유일성으로부터 $\lambda(\alpha a+b)=\alpha\lambda(a)+\lambda(b)$이다.
 
 곱셈을 보존함을 보이자. 블록 위에서
 
@@ -168,7 +168,7 @@ $$M_{ab}\vert_{A_\lambda}=\lambda(ab)\id+(\text{nilpotent})=\lambda(a)\lambda(b)
 
 ## 구조분해와 reduced algebra
 
-정리 8의 direct sum 분해는 단순한 벡터공간 분해가 아니라 대수의 분해이기도 하다. 이를 정리하기 위해 direct sum 분해에 따르는 idempotent들을 도입한다.
+정리 8의 direct sum decomposition은 단순한 벡터공간 분해가 아니라 대수의 분해이기도 하다. 이를 정리하기 위해 direct sum decomposition에 따르는 idempotent들을 도입한다.
 
 ::: 따름정리 9
 [정리 8](#thm8){: data-lid="j7wke" }의 가정 하에서, 각 character $\chi$에 대응하는 부분공간 $A_\chi$는 $A$의 ideal이며, 적당한 원소들 $e_\chi\in A_\chi$가 존재하여
@@ -199,13 +199,13 @@ $$A\rightarrow \prod_\chi A_\chi;\qquad x\mapsto (e_\chi x)_\chi$$
 마지막으로 direct sum 분해로부터 $\dim A=\sum_\chi \dim A_\chi$이고, 각 $A_\chi\neq 0$이므로 $\dim A_\chi\geq 1$이다. 따라서 character의 개수는 $\sum_\chi 1\leq \sum_\chi \dim A_\chi=\dim A$ 이하이다.
 :::
 
-따름정리 9는 정리 8의 분해가 곧 대수의 구조분해 $A\cong\prod_\chi A_\chi$임을 보여 준다. 각 블록 $A_\chi$는 하나의 character를 갖는 local algebra로, character의 "위치"와 그 위에 얹힌 nilpotent 정보 $\mathfrak{n}_\chi$로 이루어진다. 분해가 $1$차원 블록들로, 곧 nilpotent 부분 없이 깔끔하게 떨어지는 경우를 따로 정의한다.
+따름정리 9는 정리 8의 분해가 곧 대수의 구조분해 $A\cong\prod_\chi A_\chi$임을 보여 준다. 각 블록 $A_\chi$는 하나의 character를 갖는 local algebra로, character의 "위치"와 그 위에 얹힌 nilpotent 정보 $\mathfrak{n}_\chi$로 이루어진다. 분해가 $1$차원 블록들로, 곧 nilpotent part 없이 깔끔하게 떨어지는 경우를 따로 정의한다.
 
 ::: 정의 10
 대수 $A$가 *reduced<sub>감약</sub>*라는 것은 $A$의 nonzero nilpotent 원소가 존재하지 않는 것, 곧 $a^n=0$이면 $a=0$인 것이다.
 :::
 
-Reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 사라지는 것과 동치이며, 이는 다시 regular representation이 동시대각화 가능하다는 선형대수학적 조건과 같다.
+Reduced라는 조건은 정리 8의 분해에서 nilpotent part가 완전히 사라지는 것과 동치이며, 이는 다시 regular representation이 동시대각화 가능하다는 선형대수학적 조건과 같다.
 
 ::: 명제 11
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이며 $N=\dim A$라 하자. 다음 네 조건이 동치이다.
@@ -229,7 +229,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 마지막 주장은 (3)의 증명에서 본 대각화에서 $\varepsilon_i$가 $e_{\chi}$에 해당하고 $M_a e_\chi=\chi(a)e_\chi$임을 관찰하면 된다. 실제로 일반적인 경우에도 [따름정리 9](#cor9){: data-lid="1429x" }의 idempotent $e_\chi$에 대하여 $ae_\chi\in A_\chi$이고 $ae_\chi=\chi(a)e_\chi+N_a(e_\chi)$인데, reduced인 경우 $N_a=0$이므로 $M_a e_\chi=\chi(a)e_\chi$이다.
 :::
 
-명제 11은 reduced인 가환대수가 정확히 regular representation이 동시대각화되는 경우, 곧 각 블록이 $1\times 1$로 떨어지는 경우임을 말해 준다. 이 경우 character의 개수는 차원과 정확히 같고, idempotent $e_\chi$들이 공통 고유벡터들의 basis를 이룬다. 일반적인 경우와의 차이는 오직 nilpotent 부분 $\mathfrak{n}_\chi$의 존재 여부이다.
+명제 11은 reduced인 가환대수가 정확히 regular representation이 동시대각화되는 경우, 곧 각 블록이 $1\times 1$로 떨어지는 경우임을 말해 준다. 이 경우 character의 개수는 차원과 정확히 같고, idempotent $e_\chi$들이 공통 고유벡터들의 basis를 이룬다. 일반적인 경우와의 차이는 오직 nilpotent part $\mathfrak{n}_\chi$의 존재 여부이다.
 
 ## Spectrum
 

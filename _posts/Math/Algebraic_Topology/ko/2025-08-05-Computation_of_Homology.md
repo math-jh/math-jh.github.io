@@ -201,7 +201,7 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 ## 메이어-피토리스 열
 
-분량상 증명을 적지는 않았지만, [정리 2](#thm2){: data-lid="e3657" }는 homology 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5){: data-lid="61hhn" }의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
+분량상 증명을 적지는 않았지만, [정리 2](#thm2){: data-lid="e3657" }는 homology theory를 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5){: data-lid="61hhn" }의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
 
 ::: 정의 6 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $H_k$과, 이들 사이의 natural transformation

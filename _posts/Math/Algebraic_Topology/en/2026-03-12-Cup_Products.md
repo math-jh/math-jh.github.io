@@ -19,7 +19,7 @@ Earlier, when introducing cohomology, we stated that one of the greatest advanta
 
 ## The Cross Product in Cohomology
 
-Fix a commutative ring $A$, and suppose that chain complexes of $A$-modules $C_\bullet,D_\bullet$ are given. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" }) For their dual sequences
+Fix a commutative ring $A$, and suppose that chain complexes of $A$-modules $C_\bullet,D_\bullet$ are given. For their dual sequences
 
 $$(C^\vee)^\bullet=\Hom_A(C_\bullet,A),\qquad (D^\vee)^\bullet=\Hom_A(D_\bullet,A)$$
 
@@ -27,7 +27,7 @@ and
 
 $$((C\otimes D)^\vee)^\bullet=\Hom_A((C\otimes D)_\bullet,A)$$
 
-we first define 
+([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Proposition 8](/en/math/algebraic_structures/operations_of_modules#prop8){: data-lid="7nh4b" }), we first define 
 
 $$\times:(C^\vee\otimes D^\vee)^\bullet\rightarrow ((C\otimes D)^\vee)^\bullet$$
 

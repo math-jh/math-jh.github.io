@@ -22,7 +22,7 @@ We now define the integral over a surface by adding one variable to the line int
 ::: Definition 1
 On a planar region $D$, a $C^1$ map
 
-$$\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$$
+$$\mathbf{r}\colon D \rightarrow \mathbb{R}^3;\qquad \mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$$
 
 is called a *parametrized surface*.
 :::

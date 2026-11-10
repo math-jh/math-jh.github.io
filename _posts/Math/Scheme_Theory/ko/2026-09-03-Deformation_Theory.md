@@ -1,6 +1,6 @@
 ---
 title: "변형이론과 여접 복합체"
-description: "Square-zero 확대를 따른 변형과 obstruction을 통해 Kähler differential만으로는 부족한 이유를 밝히고, naive 여접 복합체와 완전한 여접 복합체가 affine algebra의 변형을 어떻게 재는지 계산한 뒤 스킴의 국소 변형과 접합 자료를 local-to-global spectral sequence로 조립한다."
+description: "Square-zero 확대를 따른 변형과 obstruction을 통해 Kähler differential만으로는 부족한 이유를 밝히고, naive cotangent complex와 완전한 여접 복합체가 affine algebra의 변형을 어떻게 재는지 계산한 뒤 스킴의 국소 변형과 접합 자료를 local-to-global spectral sequence로 조립한다."
 excerpt: "Square-zero extensions, first-order deformations T^1, obstructions T^2, and why Ω is not enough"
 
 categories: [Math / Scheme Theory]

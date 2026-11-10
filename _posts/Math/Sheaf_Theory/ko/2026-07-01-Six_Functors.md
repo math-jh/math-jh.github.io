@@ -36,7 +36,7 @@ $$Rf_! := Rp_\ast \circ j_!$$
 로 정의한다.
 :::
 
-여기서 $j_!$은 exact이므로 derived할 필요가 없고 $Rp_\ast$만 $p$의 properness를 통해 통제되므로, $Rf_!$은 잘 정의된 functor이다. 우리가 다루는 locally compact Hausdorff 공간 사이의 separated map은 항상 compactifiable한데, 가장 기본적인 예로 $f = a_X: X \rightarrow \{\ast\}$의 경우 $X$의 one-point compactification $\overline{X} = X \cup \{\infty\}$을 택하면 $j: X \hookrightarrow \overline{X}$는 open embedding이고 $\overline{X}$가 compact이므로 $p: \overline{X} \rightarrow \{\ast\}$는 proper이다. 일반적인 $f$에 대해서는 $X$의 one-point compactification $\hat{X} = X \cup \{\infty\}$을 써서, $x \mapsto (x, f(x))$로 주어지는 embedding $X \hookrightarrow \hat{X} \times Y$의 image의 closure를 $\overline{X}$로 택하면 된다. $\overline{X}$는 $\hat{X} \times Y$의 닫힌집합이고 $\hat{X}$가 compact이므로 사영 $p: \overline{X} \rightarrow Y$는 proper이며, $X$의 image는 locally compact이고 $\hat{X} \times Y$는 Hausdorff이므로 자신의 closure 안에서 열려 있어 $j: X \hookrightarrow \overline{X}$는 open embedding이다. 정의가 의미를 가지려면 $Rp_\ast \circ j_!$이 compactification의 선택에 의존하지 않음을 보여야 하는데, 이는 proper map에 대한 base change 정리로부터 따라 나온다. 따라서 먼저 그 정리를 진술한다.
+여기서 $j_!$은 exact이므로 derived할 필요가 없고 $Rp_\ast$만 $p$의 properness를 통해 통제되므로, $Rf_!$은 잘 정의된 functor이다. 우리가 다루는 locally compact Hausdorff space 사이의 separated map은 항상 compactifiable한데, 가장 기본적인 예로 $f = a_X: X \rightarrow \{\ast\}$의 경우 $X$의 one-point compactification $\overline{X} = X \cup \{\infty\}$을 택하면 $j: X \hookrightarrow \overline{X}$는 open embedding이고 $\overline{X}$가 compact이므로 $p: \overline{X} \rightarrow \{\ast\}$는 proper이다. 일반적인 $f$에 대해서는 $X$의 one-point compactification $\hat{X} = X \cup \{\infty\}$을 써서, $x \mapsto (x, f(x))$로 주어지는 embedding $X \hookrightarrow \hat{X} \times Y$의 image의 closure를 $\overline{X}$로 택하면 된다. $\overline{X}$는 $\hat{X} \times Y$의 닫힌집합이고 $\hat{X}$가 compact이므로 사영 $p: \overline{X} \rightarrow Y$는 proper이며, $X$의 image는 locally compact이고 $\hat{X} \times Y$는 Hausdorff이므로 자신의 closure 안에서 열려 있어 $j: X \hookrightarrow \overline{X}$는 open embedding이다. 정의가 의미를 가지려면 $Rp_\ast \circ j_!$이 compactification의 선택에 의존하지 않음을 보여야 하는데, 이는 proper map에 대한 base change 정리로부터 따라 나온다. 따라서 먼저 그 정리를 진술한다.
 
 Proper base change는 $Rp_\ast$를 fiber별로 계산할 수 있게 해 주는 정리로, 그 핵심은 proper map의 higher direct image의 stalk가 fiber 위의 cohomology로 주어진다는 사실이다. 다음 형태의 cartesian square를 생각하자. $g: Y' \rightarrow Y$가 임의의 연속함수이고 $f: X \rightarrow Y$가 주어졌을 때, fiber product $X' = X \times_Y Y'$와 사영 $g': X' \rightarrow X$, $f': X' \rightarrow Y'$를 둔다.
 
@@ -79,7 +79,7 @@ $f: X \rightarrow Y$가 proper map이면 $Rf_! \cong Rf_\ast$이다.
 $f$ 자신이 proper이므로 항등 open embedding $j = \id_X$와 $p = f$로 이루어진 자명한 compactification $f = f \circ \id_X$을 택할 수 있다. $\id_X{}_! = \id$이므로 [명제 3](#prop3){: data-lid="b2pnx" }에 의해 $Rf_! = R f_\ast \circ \id = Rf_\ast$이다.
 :::
 
-특히 $X$가 compact이면 $a_X: X \rightarrow \{\ast\}$가 proper이므로 $R\Gamma_c(X, -) = R(a_X)_! = R(a_X)_\ast = R\Gamma(X, -)$이 되어, compact 공간에서는 compactly supported cohomology와 통상적 cohomology가 일치한다. 두 cohomology의 차이는 오직 비콤팩트 공간에서 나타난다. 또한 고유 받음은 통상적 받음과 마찬가지로 합성에 대해 함자적으로 행동한다.
+특히 $X$가 compact이면 $a_X: X \rightarrow \{\ast\}$가 proper이므로 $R\Gamma_c(X, -) = R(a_X)_! = R(a_X)_\ast = R\Gamma(X, -)$이 되어, compact space에서는 compactly supported cohomology와 통상적 cohomology가 일치한다. 두 cohomology의 차이는 오직 비콤팩트 공간에서 나타난다. 또한 고유 받음은 통상적 받음과 마찬가지로 합성에 대해 함자적으로 행동한다.
 
 ::: 명제 5
 Compactifiable map $f: X \rightarrow Y$, $g: Y \rightarrow Z$에 대해 합성 $gf$도 compactifiable하며 자연스러운 동형
@@ -182,7 +182,7 @@ $$R\Gamma_c(X, \mathcal{F}^\bullet) := R(a_X)_! \mathcal{F}^\bullet$$
 
 [정의 1](#def1){: data-lid="pf23o" } 직후에 보았듯이 $a_X$의 compactification은 one-point compactification $j: X \hookrightarrow \overline{X} = X \cup \{\infty\}$으로 주어지므로, compactly supported cohomology는
 $$R\Gamma_c(X, \mathcal{F}) = R\Gamma(\overline{X}, j_! \mathcal{F})$$
-로 계산된다. 즉 $\mathcal{F}$를 무한대 점에서 $0$이 되도록 연장한 뒤 compact 공간 $\overline{X}$ 위의 통상적 cohomology를 취하는 것이다. $X$가 이미 compact이면 [따름정리 4](#cor4){: data-lid="kbsp2" }에 의해 $R\Gamma_c = R\Gamma$이고, 비콤팩트 공간에서 무한대 점의 추가가 두 cohomology의 차이를 만든다. $\mathcal{F}$가 $\overline{X}$ 위의 sheaf $\overline{\mathcal{F}}$의 restriction $\mathcal{F} = j^{-1}\overline{\mathcal{F}}$으로 주어진 경우, 첫째 recollement triangle에서 $Z = \{\infty\}$, $U = X$로 두고 $\overline{\mathcal{F}}$에 $R\Gamma(\overline{X}, -)$를 적용하면
+로 계산된다. 즉 $\mathcal{F}$를 무한대 점에서 $0$이 되도록 연장한 뒤 compact space $\overline{X}$ 위의 통상적 cohomology를 취하는 것이다. $X$가 이미 compact이면 [따름정리 4](#cor4){: data-lid="kbsp2" }에 의해 $R\Gamma_c = R\Gamma$이고, 비콤팩트 공간에서 무한대 점의 추가가 두 cohomology의 차이를 만든다. $\mathcal{F}$가 $\overline{X}$ 위의 sheaf $\overline{\mathcal{F}}$의 restriction $\mathcal{F} = j^{-1}\overline{\mathcal{F}}$으로 주어진 경우, 첫째 recollement triangle에서 $Z = \{\infty\}$, $U = X$로 두고 $\overline{\mathcal{F}}$에 $R\Gamma(\overline{X}, -)$를 적용하면
 $$\cdots \rightarrow H^k_c(X, \mathcal{F}) \rightarrow H^k(\overline{X}, \overline{\mathcal{F}}) \rightarrow H^k(\{\infty\}, \overline{\mathcal{F}}_\infty) \rightarrow H^{k+1}_c(X, \mathcal{F}) \rightarrow \cdots$$
 형태의 long exact sequence를 얻는데, 다음 절에서 이를 직접 활용한다.
 

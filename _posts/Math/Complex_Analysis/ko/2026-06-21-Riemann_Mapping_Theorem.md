@@ -61,11 +61,11 @@ $\mathcal{F}$의 임의의 함수열 $(f_n)$을 잡아, $\Omega$의 모든 콤�
 
 이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z \mid \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, [보조정리 2](#lem2){: data-lid="v4juz" }에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 finite covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
 
-유한 개의 점 $w_{j_1}, \dots, w_{j_p}$ 각각에서 $(g_n)$이 수렴하므로 Cauchy 수열이고, 따라서 어떤 $N$이 있어 $m, n \geq N$이면 모든 $i = 1, \dots, p$에서 $\lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert < \varepsilon/3$이다. 이제 임의의 $z \in K$을 잡고, $\lvert z - w_{j_i}\rvert < \delta$인 중심 $w_{j_i}$을 고른다. $m, n \geq N$에 대해 삼각부등식으로
+유한 개의 점 $w_{j_1}, \dots, w_{j_p}$ 각각에서 $(g_n)$이 수렴하므로 Cauchy sequence이고, 따라서 어떤 $N$이 있어 $m, n \geq N$이면 모든 $i = 1, \dots, p$에서 $\lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert < \varepsilon/3$이다. 이제 임의의 $z \in K$을 잡고, $\lvert z - w_{j_i}\rvert < \delta$인 중심 $w_{j_i}$을 고른다. $m, n \geq N$에 대해 삼각부등식으로
 
 $$\lvert g_n(z) - g_m(z)\rvert \leq \lvert g_n(z) - g_n(w_{j_i})\rvert + \lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert + \lvert g_m(w_{j_i}) - g_m(z)\rvert < \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon$$
 
-이다. 첫째와 셋째 항은 동등연속성에서, 둘째 항은 유한 개 점에서의 Cauchy 성질에서 나왔다. 이 어림이 $z \in K$에 무관한 $N$으로 성립하므로, $(g_n)$은 $K$ 위에서 균등 Cauchy 수열이고, [§복소수와 복소평면, ⁋정리 10](/ko/math/complex_analysis/complex_numbers#thm10){: data-lid="663nn" }에 의해 $K$ 위에서 균등수렴한다. $K$이 임의의 콤팩트 집합이었으므로 $(g_n)$은 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴한다. 따라서 $\mathcal{F}$은 정규족이다.
+이다. 첫째와 셋째 항은 동등연속성에서, 둘째 항은 유한 개 점에서의 Cauchy 성질에서 나왔다. 이 어림이 $z \in K$에 무관한 $N$으로 성립하므로, $(g_n)$은 $K$ 위에서 균등 Cauchy sequence이고, [§복소수와 복소평면, ⁋정리 10](/ko/math/complex_analysis/complex_numbers#thm10){: data-lid="663nn" }에 의해 $K$ 위에서 균등수렴한다. $K$이 임의의 콤팩트 집합이었으므로 $(g_n)$은 $\Omega$의 모든 콤팩트 부분집합 위에서 균등수렴한다. 따라서 $\mathcal{F}$은 정규족이다.
 :::
 
 Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함숫값의 boundedness라는 검증하기 쉬운 조건으로 환원한다. 단위원판으로 가는 사상들은 그 값이 절댓값 $1$ 이하로 한꺼번에 bounded이므로 자동으로 국소유계하고, 따라서 [정리 3](#thm3){: data-lid="u71yk" }에 의해 정규족을 이룬다. 이것이 증명에서 극값사상을 추출할 때 쓰는 콤팩트성의 원천이다. 한편 극한사상이 다시 단사임을 보장하려면 injective holomorphic function 열의 극한에 관한 사실이 필요한데, 그것이 Hurwitz 정리이다.
@@ -75,7 +75,7 @@ Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함�
 정규족에서 뽑은 극한이 단사성을 잃지 않는지를 통제하려면, injective holomorphic function 열의 국소균등극한이 단사이거나 상수임을 알아야 한다. 이는 영점의 개수가 국소균등수렴 아래 안정적이라는 더 일반적인 사실의 특수한 경우이며, 그 안정성은 영점 수를 경계적분으로 세는 [§편각원리와 Rouché 정리, ⁋정리 3](/ko/math/complex_analysis/argument_principle#thm3){: data-lid="br48v" }에서 나온다. 함수열이 균등수렴하면 그 대수적 미분 $f_n'/f_n$도 균등수렴하므로, boundary 위의 적분이 극한과 어울려 영점 수가 보존된다.
 
 ::: 정리 4 (Hurwitz)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 만일 각 $f_n$이 $\Omega$에서 영점을 갖지 않으면, $f$은 $\Omega$에서 항등적으로 $0$이거나 영점을 갖지 않는다.
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 만일 각 $f_n$이 $\Omega$에서 영점을 갖지 않으면, $f$은 $\Omega$에서 항등적으로 $0$이거나 영점을 갖지 않는다.
 :::
 
 ::: 증명
@@ -91,11 +91,11 @@ $(f_n)$이 $\gamma$ 위에서 $f$로 균등수렴하므로, 충분히 큰 $n$에
 Hurwitz 정리는 영점을 갖지 않는다는 성질이 국소균등극한 아래 보존됨을 말하되, 극한이 통째로 $0$으로 무너지는 퇴화의 가능성만을 예외로 남긴다. 이 정리에서 단사성에 관한 따름정리가 곧장 나온다. Injective holomorphic function 열의 극한은 단사이거나 상수인데, 단사성을 깨는 유일한 길이 상수로 무너지는 것이기 때문이다.
 
 ::: 따름정리 5 (단사성의 보존)
-$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 injective holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
+$\Omega \subseteq \mathbb{C}$가 connected open set이고 injective holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
 :::
 
 ::: 증명
-$f$이 상수가 아니라고 하고 단사임을 보인다. 단사성에 어긋난다고 가정하여, 서로 다른 두 점 $a, b \in \Omega$ ($a \neq b$) 에서 $f(a) = f(b) = c$이라 하자. 두 보조 함수열을 생각한다. 점 $b$을 포함하지 않는 connected 열린집합 $\Omega' = \Omega \setminus \{b\}$ 위에서 함수열
+$f$이 상수가 아니라고 하고 단사임을 보인다. 단사성에 어긋난다고 가정하여, 서로 다른 두 점 $a, b \in \Omega$ ($a \neq b$) 에서 $f(a) = f(b) = c$이라 하자. 두 보조 함수열을 생각한다. 점 $b$을 포함하지 않는 connected open set $\Omega' = \Omega \setminus \{b\}$ 위에서 함수열
 
 $$g_n(z) = f_n(z) - f_n(b)$$
 

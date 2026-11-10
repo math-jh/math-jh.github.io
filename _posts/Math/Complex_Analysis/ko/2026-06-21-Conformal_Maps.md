@@ -140,7 +140,7 @@ $$A + \overline{B}\,\bar{w} + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\
 이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline{B}$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
 :::
 
-[정리 7](#thm7){: data-lid="qudxd" }은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 $\lvert w\rvert^2$의 계수가 $C = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
+[정리 7](#thm7){: data-lid="qudxd" }은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann sphere 위의 (stereographic projection을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 $\lvert w\rvert^2$의 계수가 $C = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
 
 ## 교차비와 세 점 결정
 

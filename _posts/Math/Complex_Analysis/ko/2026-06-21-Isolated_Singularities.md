@@ -1,7 +1,7 @@
 ---
 title: "고립특이점과 Laurent 급수"
-description: "구멍 뚫린 원판에서 복소정칙인 함수가 음의 멱까지 허용하는 Laurent 급수로 전개됨을 Cauchy 적분공식으로 보이고, 그 주부의 항 수에 따라 고립특이점을 removable, pole, essential의 셋으로 분류한다. Riemann 가제거 정리, 극에서 함수가 무한대로 발산함, Casorati–Weierstrass 정리, 그리고 무한대에서의 singular point까지 다룬다."
-excerpt: "Laurent 급수, 고립특이점 분류, removable singularity, pole과 위수, essential singularity, Riemann 가제거 정리, Casorati–Weierstrass, 무한대에서의 singular point"
+description: "구멍 뚫린 원판에서 복소정칙인 함수가 음의 멱까지 허용하는 Laurent series로 전개됨을 Cauchy 적분공식으로 보이고, 그 주부의 항 수에 따라 고립특이점을 removable, pole, essential의 셋으로 분류한다. Riemann 가제거 정리, 극에서 함수가 무한대로 발산함, Casorati–Weierstrass 정리, 그리고 무한대에서의 singular point까지 다룬다."
+excerpt: "Laurent series, 고립특이점 분류, removable singularity, pole과 위수, essential singularity, Riemann 가제거 정리, Casorati–Weierstrass, 무한대에서의 singular point"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/isolated_singularities
@@ -14,13 +14,13 @@ weight: 9
 published: false
 ---
 
-Holomorphic function은 holomorphic한 영역 안의 각 점 근방에서 자신의 Taylor 급수로 전개되어 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="ly3lg" }) 그곳에서의 성질이 완전히 통제되었다. 그러나 분석에서 정작 흥미로운 점은 함수가 holomorphicity를 잃는 점, 곧 singular point이다. $1/z$의 원점이나 $e^{1/z}$의 원점처럼, 함수가 한 점만 빼고 그 주위에서 holomorphic인 상황을 *isolated singularity<sub>고립특이점</sub>*라 부른다. 이런 점 근방에서는 Taylor 급수만으로 전개가 불가능한데, 함수가 그 점에서 정의되지도 holomorphic이지도 않기 때문이다. 그 대신 음의 멱 $(z - z_0)^{-1}, (z - z_0)^{-2}, \dots$까지 허용하는 더 넓은 급수, 곧 Laurent 급수가 등장한다. Laurent 급수에서 음의 멱이 모인 부분, 곧 주부가 singular point의 본성을 그대로 읽어 준다. 주부가 아예 없으면 singular point는 사실 메울 수 있는 가짜 singular point이고, 음의 멱이 유한 개면 극이며, 무한히 많으면 essential singularity이다. 이 글은 Laurent 전개를 확립한 뒤 이 셋의 분류와 각각의 해석적 성질을 다룬다.
+Holomorphic function은 holomorphic한 영역 안의 각 점 근방에서 자신의 Taylor series로 전개되어 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="ly3lg" }) 그곳에서의 성질이 완전히 통제되었다. 그러나 분석에서 정작 흥미로운 점은 함수가 holomorphicity를 잃는 점, 곧 singular point이다. $1/z$의 원점이나 $e^{1/z}$의 원점처럼, 함수가 한 점만 빼고 그 주위에서 holomorphic인 상황을 *isolated singularity<sub>고립특이점</sub>*라 부른다. 이런 점 근방에서는 Taylor 급수만으로 전개가 불가능한데, 함수가 그 점에서 정의되지도 holomorphic이지도 않기 때문이다. 그 대신 음의 멱 $(z - z_0)^{-1}, (z - z_0)^{-2}, \dots$까지 허용하는 더 넓은 급수, 곧 Laurent series가 등장한다. Laurent series에서 음의 멱이 모인 부분, 곧 주부가 singular point의 본성을 그대로 읽어 준다. 주부가 아예 없으면 singular point는 사실 메울 수 있는 가짜 singular point이고, 음의 멱이 유한 개면 극이며, 무한히 많으면 essential singularity이다. 이 글은 Laurent expansion을 확립한 뒤 이 셋의 분류와 각각의 해석적 성질을 다룬다.
 
 ## 환형 영역에서의 Laurent 전개
 
-Taylor 전개는 함수가 원판 *전체*에서 holomorphic임을 요구했다. Isolated singularity를 다루려면 중심을 도려낸 영역, 곧 환형 영역에서 holomorphic function을 전개해야 한다. 핵심 발상은 Taylor 전개에서와 같이 Cauchy 적분공식의 kernel을 기하급수로 펼치는 것이되, 이번에는 안쪽 경계원과 바깥쪽 경계원 두 개를 쓴다는 점이 다르다. 바깥 원에서는 $1/(w - z)$를 양의 멱으로, 안쪽 원에서는 음의 멱으로 전개하여 두 급수를 합치면, 양·음 양쪽 멱을 모두 가진 Laurent 급수가 나온다.
+Taylor expansion은 함수가 원판 *전체*에서 holomorphic임을 요구했다. Isolated singularity를 다루려면 중심을 도려낸 영역, 곧 환형 영역에서 holomorphic function을 전개해야 한다. 핵심 발상은 Taylor 전개에서와 같이 Cauchy 적분공식의 kernel을 기하급수로 펼치는 것이되, 이번에는 안쪽 경계원과 바깥쪽 경계원 두 개를 쓴다는 점이 다르다. 바깥 원에서는 $1/(w - z)$를 양의 멱으로, 안쪽 원에서는 음의 멱으로 전개하여 두 급수를 합치면, 양·음 양쪽 멱을 모두 가진 Laurent series가 나온다.
 
-::: 정의 1 (환형 영역과 Laurent 급수)
+::: 정의 1 (환형 영역과 Laurent series)
 $0 \leq r < R \leq \infty$과 $z_0 \in \mathbb{C}$에 대하여 집합
 
 $$A(z_0; r, R) = \{z \in \mathbb{C} : r < \lvert z - z_0\rvert < R\}$$
@@ -29,13 +29,13 @@ $$A(z_0; r, R) = \{z \in \mathbb{C} : r < \lvert z - z_0\rvert < R\}$$
 
 $$\sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$$
 
-을 $z_0$을 중심으로 하는 *Laurent 급수<sub>Laurent series</sub>*라 하고, 이 급수가 한 점에서 수렴한다는 것은 양의 멱 부분 $\sum_{n=0}^{\infty} a_n (z - z_0)^n$과 음의 멱 부분 $\sum_{n=1}^{\infty} a_{-n}(z - z_0)^{-n}$이 모두 수렴하는 것을 뜻한다.
+을 $z_0$을 중심으로 하는 *Laurent series<sub>로랑 급수</sub>*라 하고, 이 급수가 한 점에서 수렴한다는 것은 양의 멱 부분 $\sum_{n=0}^{\infty} a_n (z - z_0)^n$과 음의 멱 부분 $\sum_{n=1}^{\infty} a_{-n}(z - z_0)^{-n}$이 모두 수렴하는 것을 뜻한다.
 :::
 
-음의 멱 부분 $\sum_{n=1}^{\infty} a_{-n}(z - z_0)^{-n}$을 Laurent 급수의 *principal part<sub>주부</sub>*라 부르고, 양의 멱 부분을 *regular part<sub>정칙부</sub>*라 부른다. 변수치환 $\zeta = (z - z_0)^{-1}$로 보면 주부는 $\zeta$에 대한 보통의 멱급수 $\sum_{n=1}^{\infty} a_{-n}\zeta^n$이므로 어떤 $\lvert\zeta\rvert < 1/r$, 곧 $\lvert z - z_0\rvert > r$에서 수렴하고, regular part는 어떤 $\lvert z - z_0\rvert < R$에서 수렴한다. 따라서 $r < R$인 경우 Laurent 급수는 환형 영역 $A(z_0; r, R)$에서 수렴하며, 이 영역이 바로 전개가 사는 곳이다.
+음의 멱 부분 $\sum_{n=1}^{\infty} a_{-n}(z - z_0)^{-n}$을 Laurent series의 *principal part<sub>주부</sub>*라 부르고, 양의 멱 부분을 *regular part<sub>정칙부</sub>*라 부른다. 변수치환 $\zeta = (z - z_0)^{-1}$로 보면 주부는 $\zeta$에 대한 보통의 멱급수 $\sum_{n=1}^{\infty} a_{-n}\zeta^n$이므로 어떤 $\lvert\zeta\rvert < 1/r$, 곧 $\lvert z - z_0\rvert > r$에서 수렴하고, regular part는 어떤 $\lvert z - z_0\rvert < R$에서 수렴한다. 따라서 $r < R$인 경우 Laurent series는 환형 영역 $A(z_0; r, R)$에서 수렴하며, 이 영역이 바로 전개가 사는 곳이다.
 
-::: 정리 2 (Laurent 전개)
-$f$가 환형 영역 $A = A(z_0; r, R)$에서 holomorphic이라 하자. 그러면 $f$는 $A$에서 Laurent 급수
+::: 정리 2 (Laurent expansion)
+$f$가 환형 영역 $A = A(z_0; r, R)$에서 holomorphic이라 하자. 그러면 $f$는 $A$에서 Laurent series
 
 $$f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$$
 
@@ -82,7 +82,7 @@ $$\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho} \frac{f(z)}{(z - z_0)^{k+1
 이 된다. 이는 위에서 얻은 $a_k$의 공식과 같으므로 $b_k = a_k$이고, 전개가 유일하다. 절대·균등수렴은 regular part와 주부가 각각 자신의 수렴원판·수렴 외부영역의 콤팩트 부분집합에서 멱급수로서 절대·균등수렴하기 때문이다.
 :::
 
-[정리 2](#thm2){: data-lid="321hi" }는 Taylor 전개의 환형 영역 판본으로, 함수가 중심에서 holomorphic일 필요를 음의 멱을 허용하는 대가로 떼어 낸 것이다. $f$가 사실 원판 $D(z_0, R)$ 전체에서 holomorphic이면 $n < 0$인 계수의 적분 피적분함수 $f(w)(w - z_0)^{-n-1}$이 원판 안에서 holomorphic이므로 [§Cauchy 정리, ⁋따름정리 4](/ko/math/complex_analysis/cauchy_theorem#cor4){: data-lid="8gwe6" }에 의해 그 적분이 모두 $0$이 되어, Laurent 급수가 Taylor 급수로 되돌아간다. 음의 멱 계수가 살아남느냐 아니냐가 곧 중심에서 함수가 holomorphic으로 메워지느냐를 가르며, 이것이 다음 절의 분류를 떠받친다. 한 가지 주의할 점은 같은 함수라도 중심이 같은 서로 다른 환형 영역에서는 서로 다른 Laurent 전개를 가질 수 있다는 것이다. 유일성은 어디까지나 하나의 고정된 환형 영역 안에서의 이야기이다.
+[정리 2](#thm2){: data-lid="321hi" }는 Taylor expansion의 환형 영역 판본으로, 함수가 중심에서 holomorphic일 필요를 음의 멱을 허용하는 대가로 떼어 낸 것이다. $f$가 사실 원판 $D(z_0, R)$ 전체에서 holomorphic이면 $n < 0$인 계수의 적분 피적분함수 $f(w)(w - z_0)^{-n-1}$이 원판 안에서 holomorphic이므로 [§Cauchy 정리, ⁋따름정리 4](/ko/math/complex_analysis/cauchy_theorem#cor4){: data-lid="8gwe6" }에 의해 그 적분이 모두 $0$이 되어, Laurent series가 Taylor series로 되돌아간다. 음의 멱 계수가 살아남느냐 아니냐가 곧 중심에서 함수가 holomorphic으로 메워지느냐를 가르며, 이것이 다음 절의 분류를 떠받친다. 한 가지 주의할 점은 같은 함수라도 중심이 같은 서로 다른 환형 영역에서는 서로 다른 Laurent expansion을 가질 수 있다는 것이다. 유일성은 어디까지나 하나의 고정된 환형 영역 안에서의 이야기이다.
 
 ::: 예시 3 (영역에 따라 달라지는 전개)
 함수 $f(z) = 1/(z(z - 1)) = 1/(z - 1) - 1/z$은 $z = 0$과 $z = 1$ 두 곳에서만 특이하므로, 원점을 중심으로 두 개의 환형 영역 $0 < \lvert z\rvert < 1$과 $1 < \lvert z\rvert < \infty$에서 각각 holomorphic이다. 안쪽 영역 $0 < \lvert z\rvert < 1$에서는 $\lvert z\rvert < 1$이므로 $1/(z - 1) = -1/(1 - z) = -\sum_{n=0}^{\infty} z^n$으로 전개하여
@@ -93,15 +93,15 @@ $$f(z) = -\frac{1}{z} - \sum_{n=0}^{\infty} z^n \qquad (0 < \lvert z\rvert < 1)$
 
 $$f(z) = \sum_{n=1}^{\infty} z^{-n} - \frac{1}{z} = \sum_{n=2}^{\infty} z^{-n} \qquad (1 < \lvert z\rvert < \infty)$$
 
-을 얻고, 이번에는 전개가 통째로 음의 멱으로만 이루어진다. 같은 함수, 같은 중심이지만 두 환형 영역에서 Laurent 전개가 전혀 다르다.
+을 얻고, 이번에는 전개가 통째로 음의 멱으로만 이루어진다. 같은 함수, 같은 중심이지만 두 환형 영역에서 Laurent expansion이 전혀 다르다.
 :::
 
 ## 고립특이점의 분류
 
-이제 함수가 한 점만 빼고 그 주위에서 holomorphic인 상황을 정식으로 다룬다. 그러한 점을 도려낸 환형 영역 $0 < \lvert z - z_0\rvert < R$에서 holomorphic function은 [정리 2](#thm2){: data-lid="c9ea0" }에 의해 Laurent 급수를 가지며, 그 주부의 항 수가 singular point의 본성을 결정한다.
+이제 함수가 한 점만 빼고 그 주위에서 holomorphic인 상황을 정식으로 다룬다. 그러한 점을 도려낸 환형 영역 $0 < \lvert z - z_0\rvert < R$에서 holomorphic function은 [정리 2](#thm2){: data-lid="c9ea0" }에 의해 Laurent series를 가지며, 그 주부의 항 수가 singular point의 본성을 결정한다.
 
 ::: 정의 4 (isolated singularity와 그 분류)
-$f$가 어떤 $R > 0$에 대해 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이지만 $z_0$ 자체에서는 holomorphic이 아니라 하자. 이때 $z_0$을 $f$의 *isolated singularity<sub>고립특이점</sub>*라 한다. $z_0$을 중심으로 하는 이 환형 영역에서의 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$의 주부에 따라 isolated singularity를 다음 셋으로 분류한다.
+$f$가 어떤 $R > 0$에 대해 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이지만 $z_0$ 자체에서는 holomorphic이 아니라 하자. 이때 $z_0$을 $f$의 *isolated singularity<sub>고립특이점</sub>*라 한다. $z_0$을 중심으로 하는 이 환형 영역에서의 Laurent expansion $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$의 주부에 따라 isolated singularity를 다음 셋으로 분류한다.
 
 1. 모든 $n < 0$에서 $a_n = 0$이면, 곧 주부가 없으면 $z_0$을 *removable singularity<sub>가제거 특이점</sub>*라 한다.
 2. 음의 지수 계수 가운데 $0$이 아닌 것이 유한 개이면, 곧 어떤 $m \geq 1$이 있어 $a_{-m} \neq 0$이고 모든 $n < -m$에서 $a_n = 0$이면 $z_0$을 order $m$인 *pole<sub>극</sub>*이라 한다.
@@ -112,7 +112,7 @@ $f$가 어떤 $R > 0$에 대해 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert <
 
 ## Removable singularity와 Riemann 가제거 정리
 
-Removable singularity는 이름 그대로 메울 수 있는 가짜 singular point이다. 주부가 없으면 Laurent 급수가 보통의 멱급수가 되어 $z_0$에서 holomorphic function으로 수렴하므로, $f(z_0)$의 값을 그 멱급수의 상수항으로 정의해 주기만 하면 singular point가 사라진다. 놀라운 점은 이 가제거성을 판정하는 데 Laurent 계수를 들여다볼 필요조차 없고, 함수가 singular point 근방에서 bounded라는 약한 조건만으로 충분하다는 것이다.
+Removable singularity는 이름 그대로 메울 수 있는 가짜 singular point이다. 주부가 없으면 Laurent series가 보통의 멱급수가 되어 $z_0$에서 holomorphic function으로 수렴하므로, $f(z_0)$의 값을 그 멱급수의 상수항으로 정의해 주기만 하면 singular point가 사라진다. 놀라운 점은 이 가제거성을 판정하는 데 Laurent 계수를 들여다볼 필요조차 없고, 함수가 singular point 근방에서 bounded라는 약한 조건만으로 충분하다는 것이다.
 
 ::: 정리 5 (Riemann 가제거 정리)
 $f$가 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이라 하자. 그러면 다음 세 조건은 동치이다.
@@ -133,11 +133,11 @@ $(3) \Rightarrow (1)$. 함수 $h(z) = (z - z_0)^2 f(z)$를 생각하고 $h(z_0) 
 
 $$\frac{h(z) - h(z_0)}{z - z_0} = \frac{(z - z_0)^2 f(z)}{z - z_0} = (z - z_0)f(z) \xrightarrow[z \rightarrow z_0]{} 0$$
 
-이 가정 (3)에 의해 $0$으로 수렴하므로 $h'(z_0) = 0$이 존재한다. 따라서 $h$는 $z_0$을 포함한 원판 $D(z_0, R)$ 전체에서 holomorphic이고, $h(z_0) = 0$, $h'(z_0) = 0$이므로 그 Taylor 전개는 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="wq1ed" }) $n = 2$부터 시작한다. 곧 $h(z) = \sum_{n=2}^{\infty} c_n (z - z_0)^n$이고, $(z - z_0)^2$으로 나누면
+이 가정 (3)에 의해 $0$으로 수렴하므로 $h'(z_0) = 0$이 존재한다. 따라서 $h$는 $z_0$을 포함한 원판 $D(z_0, R)$ 전체에서 holomorphic이고, $h(z_0) = 0$, $h'(z_0) = 0$이므로 그 Taylor expansion은 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="wq1ed" }) $n = 2$부터 시작한다. 곧 $h(z) = \sum_{n=2}^{\infty} c_n (z - z_0)^n$이고, $(z - z_0)^2$으로 나누면
 
 $$f(z) = \frac{h(z)}{(z - z_0)^2} = \sum_{n=2}^{\infty} c_n (z - z_0)^{n-2} = \sum_{k=0}^{\infty} c_{k+2}(z - z_0)^k$$
 
-이 $0 < \lvert z - z_0\rvert < R$에서 성립한다. 이는 주부가 없는 Laurent 전개이므로 $z_0$은 removable singularity이다.
+이 $0 < \lvert z - z_0\rvert < R$에서 성립한다. 이는 주부가 없는 Laurent expansion이므로 $z_0$은 removable singularity이다.
 
 끝으로 extension의 holomorphicity와 유일성을 본다. 주부 없는 전개 $f(z) = \sum_{k=0}^{\infty} c_{k+2}(z - z_0)^k$의 우변은 $z_0$에서도 holomorphic function을 정의하므로, $f(z_0) = c_2$로 두면 $f$가 $D(z_0, R)$ 전체에서 holomorphic이 된다. 유일성은 [§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3){: data-lid="3m34v" }에서 나온다. 두 holomorphic extension은 구멍 뚫린 원판에서 일치하고 그 영역이 집적점을 가지므로 $z_0$에서도 같은 값을 가져야 한다.
 :::
@@ -159,13 +159,13 @@ $f$가 $z_0$에서 isolated singularity를 가진다고 하자. 다음 세 조�
 :::
 
 ::: 증명
-$(1) \Rightarrow (2)$. Order $m$인 극이면 Laurent 전개가 $f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^n$ ($a_{-m} \neq 0$) 이다. $(z - z_0)^m$을 묶어내면
+$(1) \Rightarrow (2)$. Order $m$인 극이면 Laurent expansion이 $f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^n$ ($a_{-m} \neq 0$) 이다. $(z - z_0)^m$을 묶어내면
 
 $$f(z) = (z - z_0)^{-m}\sum_{n=-m}^{\infty} a_n (z - z_0)^{n+m} = (z - z_0)^{-m}\sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$$
 
 이고, $g(z) = \sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$로 두면 이 멱급수는 $z_0$에서 holomorphic으로 확장되며 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9){: data-lid="gcxth" }) $g(z_0) = a_{-m} \neq 0$이다.
 
-$(2) \Rightarrow (1)$. $g$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$이면 $g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^k$ ($b_0 = g(z_0) \neq 0$) 이고, $f(z) = (z - z_0)^{-m}g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{k-m}$이다. 이는 가장 낮은 멱이 $-m$이고 그 계수 $b_0 \neq 0$인 Laurent 전개이므로 $z_0$은 order $m$인 극이다.
+$(2) \Rightarrow (1)$. $g$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$이면 $g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^k$ ($b_0 = g(z_0) \neq 0$) 이고, $f(z) = (z - z_0)^{-m}g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{k-m}$이다. 이는 가장 낮은 멱이 $-m$이고 그 계수 $b_0 \neq 0$인 Laurent expansion이므로 $z_0$은 order $m$인 극이다.
 
 $(2) \Leftrightarrow (3)$. (2)에서 $g(z_0) \neq 0$이고 $g$가 holomorphic이므로 연속성에 의해 $z_0$의 어떤 근방에서 $g$가 $0$이 아니고, 따라서 그 근방에서
 
@@ -220,7 +220,7 @@ Casorati–Weierstrass 정리는 세 종류의 isolated singularity를 함수값
 $f$가 어떤 $\rho > 0$에 대해 $\lvert z\rvert > \rho$에서 holomorphic이라 하자. 함수 $\tilde{f}(\zeta) = f(1/\zeta)$를 생각하면 $\tilde{f}$는 구멍 뚫린 원판 $0 < \lvert\zeta\rvert < 1/\rho$에서 holomorphic이다. $f$가 $\infty$에서 가지는 singular point의 종류를 $\tilde{f}$가 $\zeta = 0$에서 가지는 singular point의 종류로 정의한다. 곧 $\tilde{f}$가 $0$에서 removable singularity·order $m$인 극·essential singularity를 가지면, $f$가 $\infty$에서 각각 removable singularity·order $m$인 극·essential singularity를 가진다고 한다.
 :::
 
-치환 $z = 1/\zeta$에서 $\lvert z\rvert > \rho$가 $0 < \lvert\zeta\rvert < 1/\rho$로 옮겨지므로, $\lvert z\rvert > \rho$에서의 $f$의 Laurent 전개 $f(z) = \sum_{n} a_n z^n$은 $\tilde{f}(\zeta) = \sum_n a_n \zeta^{-n}$이 되어 두 전개의 지수 부호가 뒤집힌다. 따라서 무한대에서의 분류는 $f$의 전개에서 *양의* 멱이 어떻게 나타나는지로 읽힌다. $f$의 전개에 양의 멱이 없으면 ($a_n = 0$ for $n > 0$) $\infty$이 removable singularity이고, 양의 멱이 유한 개로 가장 높은 것이 $z^m$이면 ($a_m \neq 0$, $a_n = 0$ for $n > m$) $\infty$이 order $m$인 극이며, 양의 멱이 무한히 많으면 essential singularity이다. Degree $m \geq 1$인 다항식 $p(z) = a_m z^m + \cdots + a_0$은 양의 멱이 $z^m$까지 정확히 유한 개이므로 $\infty$에서 order $m$인 극을 가지고, $e^z = \sum_{n \geq 0} z^n/n!$은 양의 멱이 무한히 많으므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="gclnt" }) $\infty$에서 essential singularity를 가진다.
+치환 $z = 1/\zeta$에서 $\lvert z\rvert > \rho$가 $0 < \lvert\zeta\rvert < 1/\rho$로 옮겨지므로, $\lvert z\rvert > \rho$에서의 $f$의 Laurent expansion $f(z) = \sum_{n} a_n z^n$은 $\tilde{f}(\zeta) = \sum_n a_n \zeta^{-n}$이 되어 두 전개의 지수 부호가 뒤집힌다. 따라서 무한대에서의 분류는 $f$의 전개에서 *양의* 멱이 어떻게 나타나는지로 읽힌다. $f$의 전개에 양의 멱이 없으면 ($a_n = 0$ for $n > 0$) $\infty$이 removable singularity이고, 양의 멱이 유한 개로 가장 높은 것이 $z^m$이면 ($a_m \neq 0$, $a_n = 0$ for $n > m$) $\infty$이 order $m$인 극이며, 양의 멱이 무한히 많으면 essential singularity이다. Degree $m \geq 1$인 다항식 $p(z) = a_m z^m + \cdots + a_0$은 양의 멱이 $z^m$까지 정확히 유한 개이므로 $\infty$에서 order $m$인 극을 가지고, $e^z = \sum_{n \geq 0} z^n/n!$은 양의 멱이 무한히 많으므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10){: data-lid="gclnt" }) $\infty$에서 essential singularity를 가진다.
 
 이 관점이 곧장 주는 깔끔한 결과 하나는 entire function의 분류이다. Entire function이 무한대에서 길들기만 하면 그 모양이 다항식으로 강제된다.
 
@@ -229,7 +229,7 @@ $f$가 entire function이고 $\infty$에서 removable singularity 또는 극을 
 :::
 
 ::: 증명
-$f$가 entire function이므로 평면 전체에서 Taylor 전개 $f(z) = \sum_{n=0}^{\infty} a_n z^n$을 가진다 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="rpowv" }). 이것이 곧 $\lvert z\rvert > 0$에서의 Laurent 전개이기도 하므로, 무한대에서의 singular point는 위에서 본 대로 양의 멱이 어떻게 나타나는지로 읽힌다.
+$f$가 entire function이므로 평면 전체에서 Taylor expansion $f(z) = \sum_{n=0}^{\infty} a_n z^n$을 가진다 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="rpowv" }). 이것이 곧 $\lvert z\rvert > 0$에서의 Laurent 전개이기도 하므로, 무한대에서의 singular point는 위에서 본 대로 양의 멱이 어떻게 나타나는지로 읽힌다.
 
 $\infty$이 removable singularity이면 양의 멱이 모두 사라져 ($n > 0$에서 $a_n = 0$) $f(z) = a_0$이 상수이다. $\infty$이 order $m$인 극이면 가장 높은 양의 멱이 $z^m$이고 ($a_m \neq 0$, $n > m$에서 $a_n = 0$) 따라서
 

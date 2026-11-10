@@ -1,6 +1,6 @@
 ---
 title: "완비 거리공간과 축소사상 정리"
-description: "거리공간에서 Cauchy 수열이 항상 수렴할 때 완비라고 하며, R^n과 sup 거리를 준 C[a,b]가 완비임을 증명한다. 완비 거리공간 위의 축소사상이 fixed point를 유일하게 가짐을 보이고 반복법의 오차 추정을 얻은 뒤, 가정이 빠지면 정리가 무너지는 반례와 cos x = x에의 적용을 다룬다. 마지막으로 Baire 범주정리를 증명하고 R의 비가산성을 이끌어낸다."
+description: "거리공간에서 Cauchy sequence가 항상 수렴할 때 완비라고 하며, R^n과 sup 거리를 준 C[a,b]가 완비임을 증명한다. 완비 거리공간 위의 축소사상이 fixed point를 유일하게 가짐을 보이고 반복법의 오차 추정을 얻은 뒤, 가정이 빠지면 정리가 무너지는 반례와 cos x = x에의 적용을 다룬다. 마지막으로 Baire 범주정리를 증명하고 R의 비가산성을 이끌어낸다."
 excerpt: "완비 거리공간, C[a,b]의 완비성, Banach 고정점 정리와 오차 추정, 가정의 반례, cos x = x, Baire 범주정리"
 
 categories: [Math / Analysis]
@@ -15,19 +15,19 @@ published: false
 
 ---
 
-[§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="lnyuz" }에서 실수의 Cauchy 수열은 항상 수렴함을 보았다. 이 성질은 극한값을 미리 알지 못해도 수렴을 판정할 수 있게 해 주며, 실수의 순서 구조가 아니라 거리만으로 서술되므로 일반적인 [§거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="rlghh" }의 거리공간으로 그대로 옮겨진다. 이 글에서는 이 성질을 가진 거리공간을 완비 거리공간으로 부르고, 그 위에서 성립하는 두 가지 정리를 증명한다. 하나는 축소사상이 유일한 fixed point을 가지며 그 fixed point이 반복으로 계산된다는 Banach fixed point 정리이고, 다른 하나는 완비 거리공간이 가산 개의 '얇은' 집합으로 덮이지 않는다는 Baire 범주정리이다.
+[§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="lnyuz" }에서 실수의 Cauchy sequence는 항상 수렴함을 보았다. 이 성질은 극한값을 미리 알지 못해도 수렴을 판정할 수 있게 해 주며, 실수의 순서 구조가 아니라 거리만으로 서술되므로 일반적인 [§거리공간과 열린집합·닫힌집합, ⁋정의 1](/ko/math/analysis/metric_spaces#def1){: data-lid="rlghh" }의 거리공간으로 그대로 옮겨진다. 이 글에서는 이 성질을 가진 거리공간을 완비 거리공간으로 부르고, 그 위에서 성립하는 두 가지 정리를 증명한다. 하나는 축소사상이 유일한 fixed point을 가지며 그 fixed point이 반복으로 계산된다는 Banach fixed point 정리이고, 다른 하나는 완비 거리공간이 가산 개의 '얇은' 집합으로 덮이지 않는다는 Baire 범주정리이다.
 
 ## 완비 거리공간
 
-거리공간 $(X,d)$의 수열 $(x_n)$이 *Cauchy 수열<sub>Cauchy sequence</sub>*이라는 것은, 임의의 $\varepsilon>0$에 대해 어떤 $N$이 있어 $m,n\ge N$이면 $d(x_m,x_n)<\varepsilon$이 성립한다는 뜻이다. 수렴하는 수열은 항상 Cauchy 수열이다. 극한을 $x$라 하면 $m,n\ge N$에서 $d(x_m,x_n)\le d(x_m,x)+d(x,x_n)$이 $\varepsilon$ 미만이 되도록 $N$을 잡을 수 있기 때문이다. 역은 일반적으로 성립하지 않는다.
+거리공간 $(X,d)$의 수열 $(x_n)$이 *Cauchy sequence<sub>코시 수열</sub>*라는 것은, 임의의 $\varepsilon>0$에 대해 어떤 $N$이 있어 $m,n\ge N$이면 $d(x_m,x_n)<\varepsilon$이 성립한다는 뜻이다. 수렴하는 수열은 항상 Cauchy sequence이다. 극한을 $x$라 하면 $m,n\ge N$에서 $d(x_m,x_n)\le d(x_m,x)+d(x,x_n)$이 $\varepsilon$ 미만이 되도록 $N$을 잡을 수 있기 때문이다. 역은 일반적으로 성립하지 않는다.
 
 ::: 정의 1
-거리공간 $(X,d)$의 모든 Cauchy 수열이 $X$의 점으로 수렴하면 $(X,d)$를 *완비 거리공간<sub>complete metric space</sub>*이라 한다.
+거리공간 $(X,d)$의 모든 Cauchy sequence가 $X$의 점으로 수렴하면 $(X,d)$를 *완비 거리공간<sub>complete metric space</sub>*이라 한다.
 :::
 
-완비성은 위상이 아니라 거리의 성질이다. [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="ktj4x" }에 의하여 $\mathbb{R}$은 완비이지만 $\mathbb{R}$과 homeomorphic한 $(0,1)$은 보통의 거리에서 완비가 아니다. $x_n = 1/n$은 $(0,1)$에서 Cauchy 수열이지만 극한 $0$이 $(0,1)$ 밖에 있다. 같은 이유로 $(0,1]$도 완비가 아니다. 유리수 집합 $\mathbb{Q}$도 완비가 아니다. $\sqrt{2}$의 decimal expansion를 소수점 아래 $n$째 자리에서 끊은 수열은 $\mathbb{Q}$의 Cauchy 수열이지만 $\mathbb{Q}$에서는 [§실수의 완비성, ⁋예시 5](/ko/math/analysis/completeness_of_reals#ex5){: data-lid="qq1o1" }에 의하여 극한이 없다.
+완비성은 위상이 아니라 거리의 성질이다. [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="ktj4x" }에 의하여 $\mathbb{R}$은 완비이지만 $\mathbb{R}$과 homeomorphic한 $(0,1)$은 보통의 거리에서 완비가 아니다. $x_n = 1/n$은 $(0,1)$에서 Cauchy sequence이지만 극한 $0$이 $(0,1)$ 밖에 있다. 같은 이유로 $(0,1]$도 완비가 아니다. 유리수 집합 $\mathbb{Q}$도 완비가 아니다. $\sqrt{2}$의 decimal expansion를 소수점 아래 $n$째 자리에서 끊은 수열은 $\mathbb{Q}$의 Cauchy sequence이지만 $\mathbb{Q}$에서는 [§실수의 완비성, ⁋예시 5](/ko/math/analysis/completeness_of_reals#ex5){: data-lid="qq1o1" }에 의하여 극한이 없다.
 
-완비인 대표적인 공간은 $\mathbb{R}$이다. $\mathbb{R}^n$도 보통의 거리 $\lVert x-y\rVert$에서 완비이다. $(x^{(m)})$이 $\mathbb{R}^n$의 Cauchy 수열이면, 각 좌표 $i$에 대해 $\lvert x^{(m)}_i - x^{(l)}_i\rvert\le \lVert x^{(m)}-x^{(l)}\rVert$이므로 $(x^{(m)}_i)_m$은 $\mathbb{R}$의 Cauchy 수열이고 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="w6m1k" }에 의하여 어떤 $x_i$로 수렴한다. $x=(x_1,\dots,x_n)$이라 하면 $\lVert x^{(m)}-x\rVert^2$은 $n$개의 항 $\lvert x^{(m)}_i-x_i\rvert^2$의 합이고 각 항이 $0$으로 가므로 $x^{(m)}\to x$이다.
+완비인 대표적인 공간은 $\mathbb{R}$이다. $\mathbb{R}^n$도 보통의 거리 $\lVert x-y\rVert$에서 완비이다. $(x^{(m)})$이 $\mathbb{R}^n$의 Cauchy sequence이면, 각 좌표 $i$에 대해 $\lvert x^{(m)}_i - x^{(l)}_i\rvert\le \lVert x^{(m)}-x^{(l)}\rVert$이므로 $(x^{(m)}_i)_m$은 $\mathbb{R}$의 Cauchy sequence이고 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="w6m1k" }에 의하여 어떤 $x_i$로 수렴한다. $x=(x_1,\dots,x_n)$이라 하면 $\lVert x^{(m)}-x\rVert^2$은 $n$개의 항 $\lvert x^{(m)}_i-x_i\rvert^2$의 합이고 각 항이 $0$으로 가므로 $x^{(m)}\to x$이다.
 
 완비 공간의 subset이 언제 다시 완비인지는 다음과 같이 정리된다.
 
@@ -36,7 +36,7 @@ published: false
 :::
 
 ::: 증명
-$A$가 닫혀 있다고 하고 $(a_n)$을 $A$의 Cauchy 수열이라 하자. 이는 $X$의 Cauchy 수열이기도 하므로 어떤 $x\in X$로 수렴한다. [§거리공간과 열린집합·닫힌집합, ⁋명제 12](/ko/math/analysis/metric_spaces#prop12){: data-lid="2f9lw" }에 의하여 닫힌집합은 그 점들의 수열의 극한을 포함하므로 $x\in A$이다. 역으로 $A$가 완비이고 $a_n\in A$가 $x\in X$로 수렴하면, $(a_n)$은 수렴하므로 Cauchy 수열이고 $A$의 완비성에 의해 $A$의 어떤 점 $a$로 수렴한다. [§거리공간과 열린집합·닫힌집합, ⁋명제 7](/ko/math/analysis/metric_spaces#prop7){: data-lid="24l6q" }에 의하여 $x=a\in A$이므로 $A$는 닫혀 있다.
+$A$가 닫혀 있다고 하고 $(a_n)$을 $A$의 Cauchy sequence라 하자. 이는 $X$의 Cauchy 수열이기도 하므로 어떤 $x\in X$로 수렴한다. [§거리공간과 열린집합·닫힌집합, ⁋명제 12](/ko/math/analysis/metric_spaces#prop12){: data-lid="2f9lw" }에 의하여 닫힌집합은 그 점들의 수열의 극한을 포함하므로 $x\in A$이다. 역으로 $A$가 완비이고 $a_n\in A$가 $x\in X$로 수렴하면, $(a_n)$은 수렴하므로 Cauchy sequence이고 $A$의 완비성에 의해 $A$의 어떤 점 $a$로 수렴한다. [§거리공간과 열린집합·닫힌집합, ⁋명제 7](/ko/math/analysis/metric_spaces#prop7){: data-lid="24l6q" }에 의하여 $x=a\in A$이므로 $A$는 닫혀 있다.
 :::
 
 특히 $[1,\infty)$, $[a,b]$는 $\mathbb{R}$의 닫힌집합이므로 완비이다.
@@ -54,9 +54,9 @@ $C[a,b]$는 $d$에 대해 완비 거리공간이다.
 :::
 
 ::: 증명
-$(f_n)$을 $C[a,b]$의 Cauchy 수열이라 하자. 극한 후보를 점별로 만들고, 그것이 연속이며 $d$에 대해서도 수렴함을 차례로 확인한다.
+$(f_n)$을 $C[a,b]$의 Cauchy sequence라 하자. 극한 후보를 점별로 만들고, 그것이 연속이며 $d$에 대해서도 수렴함을 차례로 확인한다.
 
-먼저 각 $x\in[a,b]$에 대해 $\lvert f_n(x)-f_m(x)\rvert\le d(f_n,f_m)$이므로 $(f_n(x))_n$은 $\mathbb{R}$의 Cauchy 수열이고, $\mathbb{R}$이 완비이므로 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="eesnt" }에 의하여 수렴한다. 그 극한을 $f(x)$로 정의한다.
+먼저 각 $x\in[a,b]$에 대해 $\lvert f_n(x)-f_m(x)\rvert\le d(f_n,f_m)$이므로 $(f_n(x))_n$은 $\mathbb{R}$의 Cauchy sequence이고, $\mathbb{R}$이 완비이므로 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="eesnt" }에 의하여 수렴한다. 그 극한을 $f(x)$로 정의한다.
 
 다음으로 $d(f_n,f)\to0$을 보인다. $\varepsilon>0$이 주어졌을 때 $m,n\ge N$이면 $d(f_n,f_m)<\varepsilon$이 되도록 $N$을 잡는다. $n\ge N$과 $x\in[a,b]$를 고정하면 모든 $m\ge N$에 대해 $\lvert f_n(x)-f_m(x)\rvert<\varepsilon$이다. 여기서 $m\to\infty$로 보내면 [§수열의 수렴, ⁋명제 6](/ko/math/analysis/convergence_of_sequences#prop6){: data-lid="trf1o" }에 의하여 $\lvert f_n(x)-f(x)\rvert\le\varepsilon$이다. $x$는 임의이므로 $n\ge N$에서 $\sup_x\lvert f_n(x)-f(x)\rvert\le\varepsilon$이다. 이 단계에서는 $f$가 $C[a,b]$에 속하는지를 아직 모르므로 $d(f_n,f)$가 아니라 상한 자체로 적었다.
 
@@ -128,13 +128,13 @@ $$f(x)-f(y)=(x-y)+\frac{y-x}{xy}=(x-y)\Bigl(1-\frac{1}{xy}\Bigr)$$
 :::
 
 ::: 예시 7 (완비성이 빠진 경우)
-$X=(0,1]$에서 $f(x)=x/2$는 $(0,1]$을 자기 자신으로 보내고 $k=1/2$인 축소사상이다. 그러나 fixed point이 될 수 있는 값은 $0$뿐이며 $0\notin X$이다. 반복수열 $x_n=x_0/2^n$은 $X$의 Cauchy 수열이지만 $X$ 안에 극한이 없다.
+$X=(0,1]$에서 $f(x)=x/2$는 $(0,1]$을 자기 자신으로 보내고 $k=1/2$인 축소사상이다. 그러나 fixed point이 될 수 있는 값은 $0$뿐이며 $0\notin X$이다. 반복수열 $x_n=x_0/2^n$은 $X$의 Cauchy sequence이지만 $X$ 안에 극한이 없다.
 
 유리수 위에서도 같은 일이 일어난다. $f(x)=x/2+1/x$는 $\mathbb{Q}\cap[1,2]$를 자기 자신으로 보낸다. 실제로 $x\in[1,2]$에서 산술·기하평균 부등식에 의해 $f(x)\ge2\sqrt{(x/2)(1/x)}=\sqrt2$이고 $f(x)\le\max(f(1),f(2))=3/2$이다. 또한
 
 $$f(x)-f(y)=(x-y)\Bigl(\frac12-\frac1{xy}\Bigr)$$
 
-에서 $x,y\in[1,2]$이면 $1/(xy)\in[1/4,1]$이므로 $\lvert 1/2-1/(xy)\rvert\le1/2$이다. 따라서 $f$는 $k=1/2$인 축소사상이다. 그러나 fixed point의 조건 $x=x/2+1/x$는 $x^2=2$이므로 $\mathbb{Q}$에는 fixed point이 없다. 유리수에서 시작한 반복수열 $1, 3/2, 17/12, \dots$은 $\sqrt2$로 가는 Cauchy 수열이며, 그 극한은 $\mathbb{R}$에서만 존재한다.
+에서 $x,y\in[1,2]$이면 $1/(xy)\in[1/4,1]$이므로 $\lvert 1/2-1/(xy)\rvert\le1/2$이다. 따라서 $f$는 $k=1/2$인 축소사상이다. 그러나 fixed point의 조건 $x=x/2+1/x$는 $x^2=2$이므로 $\mathbb{Q}$에는 fixed point이 없다. 유리수에서 시작한 반복수열 $1, 3/2, 17/12, \dots$은 $\sqrt2$로 가는 Cauchy sequence이며, 그 극한은 $\mathbb{R}$에서만 존재한다.
 :::
 
 ## 반복법에의 적용
@@ -174,9 +174,9 @@ $n\ge2$에서는 $x_{n-1},r_{n-1}$이 이미 주어졌다고 하자. $U_n$이 de
 
 $$\overline{B}(x_1,r_1)\supseteq\overline{B}(x_2,r_2)\supseteq\cdots$$
 
-을 얻으며 $\overline{B}(x_n,r_n)\subseteq U_n$, $\overline{B}(x_1,r_1)\subseteq W$이다. 반지름을 $r_n<1/n$으로 택하는 이유는 공의 지름이 $0$으로 가게 하여 중심들이 Cauchy 수열이 되도록 하기 위해서이다.
+을 얻으며 $\overline{B}(x_n,r_n)\subseteq U_n$, $\overline{B}(x_1,r_1)\subseteq W$이다. 반지름을 $r_n<1/n$으로 택하는 이유는 공의 지름이 $0$으로 가게 하여 중심들이 Cauchy sequence가 되도록 하기 위해서이다.
 
-실제로 $m\ge n$이면 $x_m\in\overline{B}(x_n,r_n)$이므로 $d(x_m,x_n)\le r_n<1/n$이다. 따라서 $(x_n)$은 Cauchy 수열이고, $X$의 완비성에 의해 어떤 $x\in X$로 수렴한다. 각 $n$에 대해 $m\ge n$인 모든 $x_m$이 닫힌집합 $\overline{B}(x_n,r_n)$에 있으므로 극한 $x$도 [§거리공간과 열린집합·닫힌집합, ⁋명제 12](/ko/math/analysis/metric_spaces#prop12){: data-lid="3vrs2" }에 의하여 이 집합에 속한다. 그러므로 모든 $n$에 대해 $x\in\overline{B}(x_n,r_n)\subseteq U_n$이고, 또 $x\in\overline{B}(x_1,r_1)\subseteq W$이다. 즉 $x\in W\cap\bigcap_nU_n$이다.
+실제로 $m\ge n$이면 $x_m\in\overline{B}(x_n,r_n)$이므로 $d(x_m,x_n)\le r_n<1/n$이다. 따라서 $(x_n)$은 Cauchy sequence이고, $X$의 완비성에 의해 어떤 $x\in X$로 수렴한다. 각 $n$에 대해 $m\ge n$인 모든 $x_m$이 닫힌집합 $\overline{B}(x_n,r_n)$에 있으므로 극한 $x$도 [§거리공간과 열린집합·닫힌집합, ⁋명제 12](/ko/math/analysis/metric_spaces#prop12){: data-lid="3vrs2" }에 의하여 이 집합에 속한다. 그러므로 모든 $n$에 대해 $x\in\overline{B}(x_n,r_n)\subseteq U_n$이고, 또 $x\in\overline{B}(x_1,r_1)\subseteq W$이다. 즉 $x\in W\cap\bigcap_nU_n$이다.
 :::
 
 여집합을 취하면 같은 내용이 다음과 같이 읽힌다. 공집합이 아닌 완비 거리공간은 내부가 공집합인 닫힌집합들의 가산 합집합이 될 수 없다. $F_n$이 그런 집합이면 $U_n=X\setminus F_n$은 열린 dense 집합이고, $\bigcap U_n\ne\emptyset$은 $\bigcup F_n\ne X$를 뜻한다. 완비성은 여기서도 필수이다. $\mathbb{Q}=\bigcup_{q\in\mathbb{Q}}\{q\}$는 가산 개의 한 점 집합의 합집합이고, 각 한 점 집합은 $\mathbb{Q}$에서 닫혀 있으며 내부가 공집합이므로 Baire 범주정리의 결론이 $\mathbb{Q}$에서는 성립하지 않는다.

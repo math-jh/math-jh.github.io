@@ -54,7 +54,7 @@ Category $\Ring$은 complete이다.
 Ring들의 family $(A_i)_{i\in I}$에 대하여, direct product $\prod_{i\in I}A_i$의 원소 중 finitely supported인 것들의 모임을 ring들의 *direct sum<sub>직합</sub>*이라 부르고 $\bigoplus_{i\in I} A_i$로 적는다.
 :::
 
-이는 [§가환군, ⁋정의 2](/ko/math/algebraic_structures/abelian_groups#def2){: data-lid="qe9a0" }에서 abelian group에 대해 정의한 direct sum과 정확히 같은 정신이다. 다만 모든 $A_i$가 nonzero이고 index 집합 $I$가 무한일 때 direct sum $\bigoplus A_i$는 항등원 $(1)_{i\in I}$을 포함하지 않으므로 (unital) ring이 아니며, 이로 인해 이 개념은 주로 $\Rng$에서 사용하게 된다. 반대로 $I$가 유한집합일 때는 그 정의에 의해 direct sum이 direct product와 정확하게 일치한다.
+이는 [§가환군, ⁋정의 2](/ko/math/algebraic_structures/abelian_groups#def2){: data-lid="qe9a0" }에서 abelian group에 대해 정의한 direct sum과 정확히 같은 정신이다. 다만 모든 $A_i$가 nonzero이고 index set $I$가 무한일 때 direct sum $\bigoplus A_i$는 항등원 $(1)_{i\in I}$을 포함하지 않으므로 (unital) ring이 아니며, 이로 인해 이 개념은 주로 $\Rng$에서 사용하게 된다. 반대로 $I$가 유한집합일 때는 그 정의에 의해 direct sum이 direct product와 정확하게 일치한다.
 
 Abelian group의 경우 direct sum이 coproduct가 되지만 ([§가환군, ⁋정리 1](/ko/math/algebraic_structures/abelian_groups#thm1){: data-lid="hau6v" }), ring에서는 그렇지 않다. 따라서 ring들의 coproduct는 따로 정의해야 한다.
 

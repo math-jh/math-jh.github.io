@@ -17,7 +17,7 @@ published: false
 
 [§다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1){: data-lid="v9twh" }에서 사상 $f$의 미분 $Df(a)$는 $a$ 근방에서 $f$를 가장 잘 근사하는 선형사상이었다. 선형사상이 가역이면 그것이 근사하는 사상도 $a$ 근방에서 가역이리라 기대할 수 있고, 역함수 정리는 이 기대가 $C^1$ 가정 아래 참임을 말해 준다.
 
-한 변수에서는 이 사실에 별도의 증명이 필요하지 않다. $f$가 $C^1$이고 $f'(a)\neq 0$이면 $f'$의 연속성에 의해 $a$ 근방에서 $f'$의 부호가 유지되고, 따라서 [§평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4){: data-lid="k0a3i" }에 의해 $f$는 그 근방에서 순단조이다. 여러 변수에서는 단조성이라는 도구가 없으므로, 방정식 $f(x)=y$의 해의 존재와 유일성을 [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5){: data-lid="hbqbs" }로 직접 확보하는 것이 증명의 골격이 된다. 이 글에서는 사상의 정의역을 $\mathbb{R}^n$의 열린집합으로 두고, $\mathbb{R}^n$에는 Euclid 노름을, 선형사상에는 연산자 노름 $\lVert T\rVert=\sup_{\lVert v\rVert=1}\lVert Tv\rVert$을 쓴다. 따라서 $\lVert Tv\rVert\leq\lVert T\rVert\lVert v\rVert$이다.
+한 변수에서는 이 사실에 별도의 증명이 필요하지 않다. $f$가 $C^1$이고 $f'(a)\neq 0$이면 $f'$의 연속성에 의해 $a$ 근방에서 $f'$의 부호가 유지되고, 따라서 [§평균값 정리와 테일러 정리, ⁋따름정리 4](/ko/math/analysis/mean_value_theorem#cor4){: data-lid="k0a3i" }에 의해 $f$는 그 근방에서 순단조이다. 여러 변수에서는 단조성이라는 도구가 없으므로, 방정식 $f(x)=y$의 해의 존재와 유일성을 [§완비 거리공간과 축소사상 정리, ⁋정리 5](/ko/math/analysis/contraction_mapping#thm5){: data-lid="hbqbs" }로 직접 확보하는 것이 증명의 골격이 된다. 이 글에서는 사상의 정의역을 $\mathbb{R}^n$의 열린집합으로 두고, $\mathbb{R}^n$에는 Euclidean norm을, 선형사상에는 연산자 노름 $\lVert T\rVert=\sup_{\lVert v\rVert=1}\lVert Tv\rVert$을 쓴다. 따라서 $\lVert Tv\rVert\leq\lVert T\rVert\lVert v\rVert$이다.
 
 ## 역함수 정리
 

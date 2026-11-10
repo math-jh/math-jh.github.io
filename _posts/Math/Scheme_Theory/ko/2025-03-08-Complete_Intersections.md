@@ -1,6 +1,6 @@
 ---
 title: "완전교차"
-description: "Global section들의 가족이 정의하는 vanishing scheme을 다루고, regular sequence로 잘리는 local complete intersection의 codimension이 자르는 방정식의 개수와 일치함을 보인다. Koszul 복합체가 주는 국소적인 자유 분해로부터 conormal sheaf가 rank k의 locally free sheaf임을 얻고, 사영공간 안에서 대역적으로 잘리는 경우에 Hilbert polynomial을 계산하여 그 degree가 자르는 방정식들의 degree의 곱임을 확인한다."
+description: "Global section들의 가족이 정의하는 vanishing scheme을 다루고, regular sequence로 잘리는 local complete intersection의 codimension이 자르는 방정식의 개수와 일치함을 보인다. Koszul complex가 주는 국소적인 자유 분해로부터 conormal sheaf가 rank k의 locally free sheaf임을 얻고, 사영공간 안에서 대역적으로 잘리는 경우에 Hilbert polynomial을 계산하여 그 degree가 자르는 방정식들의 degree의 곱임을 확인한다."
 excerpt: "Local complete intersection의 codimension, Koszul 분해, Hilbert polynomial과 degree"
 
 categories: [Math / Scheme Theory]
@@ -147,7 +147,7 @@ $$\mathfrak{a}=(\x_1,\x_2)\cap(\x_3,\x_4)=(\x_1\x_3, \x_1\x_4, \x_2\x_3, \x_2\x_
 
 이다. 원점이 아닌 $Z$의 점은 모두 네 chart $D(\x_i)$ 가운데 하나에 놓이는데, 가령 $A_{\x_1}$ 안에서는 $\x_3=\x_1^{-1}(\x_1\x_3)$과 $\x_4=\x_1^{-1}(\x_1\x_4)$가 모두 $\mathfrak{a}A_{\x_1}$에 속하고 남은 두 generator $\x_2\x_3, \x_2\x_4$는 이 둘이 생성하는 ideal에 담기므로 $\mathfrak{a}A_{\x_1}=(\x_3,\x_4)A_{\x_1}$이다. 여기에서 $A_{\x_1}$과 $A_{\x_1}/(\x_3)$이 모두 integral domain이라 $\x_3,\x_4$는 regular sequence이고, 나머지 세 좌표에 대해서도 같은 계산이 성립하므로, 원점을 제외하면 $Z$는 codimension $2$의 local complete intersection이며 [명제 5](#prop5){: data-lid="phvcn" }에 의하여 그 위에서 fiber의 차원은 $2$이다.
 
-문제가 되는 곳은 원점이다. 이에 대응하는 maximal ideal을 $\mathfrak{m}=(\x_1,\x_2,\x_3,\x_4)$라 하면 $\mathfrak{m}\mathfrak{a}$의 homogeneous 원소는 모두 degree $3$ 이상인 데 반해 $\mathfrak{a}$의 네 generator는 모두 degree $2$이므로, 이들의 $\mathbb{K}$-linear combination 가운데 $\mathfrak{m}\mathfrak{a}$에 속하는 것은 $0$뿐이고 따라서 $\mathfrak{a}/\mathfrak{m}\mathfrak{a}$는 $4$차원이다. 이 vector space는 이미 $\mathfrak{m}$에 의해 소멸되고 $A\setminus \mathfrak{m}$의 원소는 그 위에서 $\mathbb{K}^\times$의 원소로 작용하므로 $\mathfrak{m}$에서 localize하여도 바뀌지 않으며, 곧 원점에서의 fiber $\mathfrak{a}_\mathfrak{m}/\mathfrak{m}\mathfrak{a}_\mathfrak{m}$ 또한 $4$차원이다. 따라서 $Z$는 local complete intersection이 아니며, 이는 동시에 $\mathcal{I}/\mathcal{I}^2$이 locally free가 아닌 예이기도 하다.
+문제가 되는 곳은 원점이다. 이에 대응하는 maximal ideal을 $\mathfrak{m}=(\x_1,\x_2,\x_3,\x_4)$라 하면 $\mathfrak{m}\mathfrak{a}$의 homogeneous element는 모두 degree $3$ 이상인 데 반해 $\mathfrak{a}$의 네 generator는 모두 degree $2$이므로, 이들의 $\mathbb{K}$-linear combination 가운데 $\mathfrak{m}\mathfrak{a}$에 속하는 것은 $0$뿐이고 따라서 $\mathfrak{a}/\mathfrak{m}\mathfrak{a}$는 $4$차원이다. 이 vector space는 이미 $\mathfrak{m}$에 의해 소멸되고 $A\setminus \mathfrak{m}$의 원소는 그 위에서 $\mathbb{K}^\times$의 원소로 작용하므로 $\mathfrak{m}$에서 localize하여도 바뀌지 않으며, 곧 원점에서의 fiber $\mathfrak{a}_\mathfrak{m}/\mathfrak{m}\mathfrak{a}_\mathfrak{m}$ 또한 $4$차원이다. 따라서 $Z$는 local complete intersection이 아니며, 이는 동시에 $\mathcal{I}/\mathcal{I}^2$이 locally free가 아닌 예이기도 하다.
 
 ## Hilbert polynomial과 degree
 

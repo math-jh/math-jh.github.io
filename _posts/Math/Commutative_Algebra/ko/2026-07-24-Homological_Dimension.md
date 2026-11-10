@@ -237,7 +237,7 @@ $$z\equiv \sum_k 1\otimes \x^k m_k=1\otimes\Big(\sum_k \x^k m_k\Big)=1\otimes \r
 
 마지막으로 $\psi$가 injective임을 보인다. $z=\sum_{k=0}^N \x^k\otimes m_k\neq 0$이고 $m_N\neq 0$이라 하자. 그럼
 $$\psi(z)=\sum_{k=0}^N \x^{k+1}\otimes m_k-\sum_{k=0}^N \x^k\otimes \x m_k$$
-인데, 위의 direct sum 분해에서 degree $N+1$ 성분은 첫째 합의 $\x^{N+1}\otimes m_N$ 뿐이며 이는 $m_N\neq 0$이므로 $0$이 아니다. 따라서 $\psi(z)\neq 0$이다.
+인데, 위의 direct sum decomposition에서 degree $N+1$ 성분은 첫째 합의 $\x^{N+1}\otimes m_N$ 뿐이며 이는 $m_N\neq 0$이므로 $0$이 아니다. 따라서 $\psi(z)\neq 0$이다.
 :::
 
 변수를 더하는 조작이 projective dimension을 얼마나 늘리는지는 다음의 표준적인 부등식들로 통제된다.

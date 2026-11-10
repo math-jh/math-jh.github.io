@@ -1,7 +1,7 @@
 ---
 title: "유수를 이용한 실적분 계산"
-description: "유수정리를 이용하여 유리함수의 무한적분, Jordan 보조정리를 통한 Fourier 적분, 단위원 치환에 의한 삼각적분, 실축 위의 극이 있는 적분(Cauchy 주값), 분지절단과 열쇠구멍 경로, 그리고 cot를 이용한 무한급수의 합을 계산한다. 각 경로에서 큰 원과 작은 원 위의 적분이 소멸하는 이유를 부등식으로 직접 확인하고, 가정이 빠지면 공식이 어떻게 무너지는지를 반례로 보인다."
-excerpt: "유리함수의 무한적분, Jordan 보조정리, 단위원 치환, Cauchy 주값, 열쇠구멍 경로, 원점 우회 반원, π cot πz 급수 합"
+description: "유수정리를 이용하여 유리함수의 무한적분, Jordan 보조정리를 통한 Fourier integral, 단위원 치환에 의한 삼각적분, 실축 위의 극이 있는 적분(Cauchy principal value), 분지절단과 열쇠구멍 경로, 그리고 cot를 이용한 무한급수의 합을 계산한다. 각 경로에서 큰 원과 작은 원 위의 적분이 소멸하는 이유를 부등식으로 직접 확인하고, 가정이 빠지면 공식이 어떻게 무너지는지를 반례로 보인다."
+excerpt: "유리함수의 무한적분, Jordan 보조정리, 단위원 치환, Cauchy principal value, 열쇠구멍 경로, 원점 우회 반원, π cot πz 급수 합"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/residue_integrals
@@ -95,7 +95,7 @@ $$\left\lvert\int_{C_R}f(z)e^{iaz}\dd{z}\right\rvert\le M(R)R\cdot2\cdot\frac{\p
 
 [§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6){: data-lid="75xfi" }을 그대로 쓰면 $\lvert e^{iaz}\rvert\le1$이므로 $M(R)\cdot\pi R$만 얻는데, [보조정리 3](#lem3){: data-lid="9yei0" }은 $e^{-aR\sin\theta}$를 적분하여 $R$ 인자를 $1/R$로 상쇄한다. 이 때문에 $f$가 $1/R^2$만큼 빠르게 줄어들 필요가 없고 $0$으로 가기만 하면 된다. 또 $a>0$일 때 상반평면에서 닫아야 하는 이유도 여기에 있다. 하반평면에서는 $\lvert e^{iaz}\rvert=e^{aR\lvert\sin\theta\rvert}$가 지수적으로 커져서 반원호 적분이 소멸하지 않는다. $\cos$은 우함수이고 $\sin$은 기함수이므로 $a>0$인 경우만 다루면 충분하다.
 
-::: 명제 4 (Fourier 적분)
+::: 명제 4 (Fourier integral)
 $P,Q$가 polynomial이고 $Q$가 실축 위에서 영점을 갖지 않으며 $\deg Q\ge\deg P+1$이라 하자. $f=P/Q$이고 $a>0$이면 $\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}$는 수렴하고
 
 $$\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j>0}\operatorname{Res}_{z=z_j}\bigl(f(z)e^{iaz}\bigr)$$
@@ -115,7 +115,7 @@ $$\int_{R_0}^{t}f(x)e^{iax}\dd{x}=\left[\frac{f(x)e^{iax}}{ia}\right]_{R_0}^{t}-
 이다. 첫째 항은 $f(t)\to0$이므로 $t\to\infty$에서 수렴한다. $f'=(P'Q-PQ')/Q^2$에서 분자의 차수는 $\deg P+\deg Q-1$ 이하이고 분모의 차수는 $2\deg Q$이므로 $\deg Q-\deg(\text{분자})\ge2$이고, 따라서 $\lvert f'(x)\rvert\le M'/x^2$이다. [\[미적분학\] §이상적분, ⁋명제 3](/ko/math/calculus/improper_integrals#prop3){: data-lid="jiv6v" }과 [\[미적분학\] §이상적분, ⁋명제 4](/ko/math/calculus/improper_integrals#prop4){: data-lid="zclhy" }에 의하여 둘째 항의 적분도 수렴한다. $t\to-\infty$ 쪽도 같으므로 두 극한이 독립적으로 존재하고, 그 합은 대칭 극한과 같다.
 :::
 
-::: 예시 5 (차수 차이가 1인 Fourier 적분)
+::: 예시 5 (차수 차이가 1인 Fourier integral)
 $a>0$일 때 $\int_{-\infty}^{\infty}x\sin(ax)/(x^2+1)\dd{x}=\pi e^{-a}$이다. $f(z)=z/(z^2+1)$은 $\deg Q-\deg P=1$이므로 [명제 1](#prop1){: data-lid="fup4j" }이 아닌 [명제 4](#prop4){: data-lid="3pxe3" }를 쓴다. $f(z)e^{iaz}$의 상반평면 극은 $z=i$ 하나이고 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="78dm2" }에 의하여
 
 $$\operatorname{Res}_{z=i}\frac{ze^{iaz}}{z^2+1}=\frac{ze^{iaz}}{2z}\bigg\rvert_{z=i}=\frac{e^{-a}}{2}$$
@@ -147,7 +147,7 @@ $$\oint_{\lvert z\rvert=1}F(z)\dd{z}=\int_0^{2\pi}F(e^{i\theta})ie^{i\theta}\dd{
 이다. $F(e^{i\theta})$의 분모는 $R(\cos\theta,\sin\theta)$의 분모에서 오므로 단위원 위에서 $0$이 되지 않고, 따라서 $F$는 단위원 위에 극이 없다. 단위원은 내부의 각 극을 한 번씩 반시계방향으로 돌므로 [§유수정리, ⁋정리 2](/ko/math/complex_analysis/residue_theorem#thm2){: data-lid="ienqq" }에 의하여 결론을 얻는다.
 :::
 
-주의할 점은 $F$의 극에 원점이 포함될 수 있다는 것이다. $1/(iz)$ 인자와, $\cos n\theta$ 같은 항에서 나오는 $z^{-n}$ 때문에 원점은 보통 극이 되며, 이 경우 residue는 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="x5a50" }의 단순극 공식이 아니라 Laurent 전개나 고차극 공식으로 구해야 한다.
+주의할 점은 $F$의 극에 원점이 포함될 수 있다는 것이다. $1/(iz)$ 인자와, $\cos n\theta$ 같은 항에서 나오는 $z^{-n}$ 때문에 원점은 보통 극이 되며, 이 경우 residue는 [§유수정리, ⁋명제 3](/ko/math/complex_analysis/residue_theorem#prop3){: data-lid="x5a50" }의 단순극 공식이 아니라 Laurent expansion이나 고차극 공식으로 구해야 한다.
 
 표준적인 경우로 $a>1$일 때 $\int_0^{2\pi}\dd{\theta}/(a+\cos\theta)$를 보자. 치환하면 피적분함수가
 
@@ -173,7 +173,7 @@ $$g'(0)=-\frac{1}{2i}\cdot\frac{4z^3h-(z^4+1)h'}{h^2}\bigg\rvert_{z=0}=-\frac{1}
 
 ## 실축 위의 극과 Cauchy 주값
 
-피적분함수가 실축 위에 극을 가지면 앞의 경로는 극을 지나가게 되어 쓸 수 없다. 극이 실축 위의 $c$에 있으면 이상적분은 $c$의 양쪽에서 독립적인 극한으로 정의되어야 한다. 그런데 $\int dx/x$처럼 이 독립적인 극한은 존재하지 않아도, $c$의 양쪽에서 같은 속도로 극을 도려낸 극한은 존재할 수 있다. 이를 이용하여 *Cauchy 주값<sub>principal value</sub>*을
+피적분함수가 실축 위에 극을 가지면 앞의 경로는 극을 지나가게 되어 쓸 수 없다. 극이 실축 위의 $c$에 있으면 이상적분은 $c$의 양쪽에서 독립적인 극한으로 정의되어야 한다. 그런데 $\int dx/x$처럼 이 독립적인 극한은 존재하지 않아도, $c$의 양쪽에서 같은 속도로 극을 도려낸 극한은 존재할 수 있다. 이를 이용하여 *Cauchy principal value<sub>주값</sub>*을
 
 $$\operatorname{PV}\int_{-\infty}^{\infty}f(x)\dd{x}=\lim_{\substack{\varepsilon\to0^+\\R\to\infty}}\Bigl(\int_{-R}^{R}f(x)\dd{x}-\sum_k\int_{c_k-\varepsilon}^{c_k+\varepsilon}f(x)\dd{x}\Bigr)$$
 
@@ -199,7 +199,7 @@ $$\int_{\gamma_\varepsilon}\frac{r}{z-c}\dd{z}=r\int_{\theta_1}^{\theta_2}\frac{
 
 단순극이라는 가정은 본질적이다. 이차극 $1/z^2$의 경우 $\theta=\pi$에서 $0$까지의 반원 위 적분은 $[-1/z]_{-\varepsilon}^{\varepsilon}=-2/\varepsilon$이어서 $\varepsilon\to0$에서 발산한다.
 
-::: 명제 9 (실축 위에 단순극이 있는 Fourier 적분)
+::: 명제 9 (실축 위에 단순극이 있는 Fourier integral)
 $P,Q$가 polynomial이고 $\deg Q\ge\deg P+1$이며 $Q$의 실영점 $c_1,\dots,c_k$가 모두 단순영점이라 하자. $f=P/Q$이고 $a>0$이면
 
 $$\operatorname{PV}\int_{-\infty}^{\infty}f(x)e^{iax}\dd{x}=2\pi i\sum_{\Img z_j>0}\operatorname{Res}_{z=z_j}\bigl(f(z)e^{iaz}\bigr)+\pi i\sum_{l=1}^{k}\operatorname{Res}_{z=c_l}\bigl(f(z)e^{iaz}\bigr)$$
@@ -217,7 +217,7 @@ $$\int_{[-R,R]\setminus\bigcup(c_l-\varepsilon,c_l+\varepsilon)}f(x)e^{iax}\dd{x
 
 작은 반원이 시계방향이어서 $-\pi i\operatorname{Res}$가 좌변에 나타나고, 이를 우변으로 넘겨 $+\pi i\operatorname{Res}$가 된다. 이 부호가 실수하기 쉬운 곳이다.
 
-::: 예시 10 (Dirichlet 적분)
+::: 예시 10 (Dirichlet integral)
 $\int_0^{\infty}\sin x/x\dd{x}=\pi/2$이다. $f(z)=1/z$로 놓으면 $\deg Q-\deg P=1$이고 실영점 $0$은 단순영점이며 상반평면에는 극이 없다. $\operatorname{Res}_{z=0}e^{iz}/z=1$이므로 [명제 9](#prop9){: data-lid="phkvc" }에서
 
 $$\operatorname{PV}\int_{-\infty}^{\infty}\frac{e^{ix}}{x}\dd{x}=\pi i$$

@@ -40,10 +40,10 @@ $$\omega\in H^n\bigl(X,\wedge^pL_X\bigr)=\pi_0\mathcal{A}^p(X,n)$$
 
 ## 닫힌 형식과 de Rham 복합체
 
-고전적으로 형식 $\omega$이 닫혀 있다는 것은 de Rham 미분이 소멸한다는 성질 $d_{\dR}\omega=0$이었다. Derived 세계에서 등식 $d_{\dR}\omega=0$은 너무 거칠다. Cochain 수준에서 정확히 $0$이 되기를 요구하는 대신, 우리는 $d_{\dR}\omega$을 $0$으로 이어 주는 homotopy, 그리고 그 homotopy들 사이의 더 높은 homotopy까지 모두 자료로 기억해야 한다. 이를 담는 그릇이 de Rham 복합체이다. 각 affine 조각에서 여접 복합체 $L_{B/A}$을 이어붙여 $L_X$을 얻었듯 ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10){: data-lid="6l9th" }), 그 exterior power들을 weight에 따라 쌓아 대역적 de Rham 복합체를 만든다.
+고전적으로 형식 $\omega$이 닫혀 있다는 것은 de Rham 미분이 소멸한다는 성질 $d_{\dR}\omega=0$이었다. Derived 세계에서 등식 $d_{\dR}\omega=0$은 너무 거칠다. Cochain 수준에서 정확히 $0$이 되기를 요구하는 대신, 우리는 $d_{\dR}\omega$을 $0$으로 이어 주는 homotopy, 그리고 그 homotopy들 사이의 더 높은 homotopy까지 모두 자료로 기억해야 한다. 이를 담는 그릇이 de Rham complex이다. 각 affine 조각에서 여접 복합체 $L_{B/A}$을 이어붙여 $L_X$을 얻었듯 ([§Simplicial 가환환과 animation, ⁋정의 10](/ko/math/derived_algebraic_geometry/animated_rings#def10){: data-lid="6l9th" }), 그 exterior power들을 weight에 따라 쌓아 대역적 de Rham complex를 만든다.
 
 ::: 정의 2
-Derived stack $X$의 *de Rham 복합체<sub>de Rham complex</sub>*는 weight로 매겨진 graded mixed complex
+Derived stack $X$의 *de Rham complex<sub>드람 복합체</sub>*는 weight로 매겨진 graded mixed complex
 
 $$\dR(X)=\bigoplus_{p\geq0}(\wedge^pL_X)[-p]$$
 
@@ -105,7 +105,7 @@ $$\wedge^2L_{\mathbf{B}G}=\wedge^2\bigl(\mathfrak{g}^\ast[-1]\bigr)\simeq\Sym^2(
 
 $$H^2\bigl(\mathbf{B}G,\wedge^2L_{\mathbf{B}G}\bigr)=H^0\bigl(\mathbf{B}G,\Sym^2\mathfrak{g}^\ast\bigr)=\bigl(\Sym^2\mathfrak{g}^\ast\bigr)^G$$
 
-곧 $\mathfrak{g}$ 위의 $G$-불변 대칭 bilinear form과 같다. 이 가운데 nondegenerate한 것이 유도하는 morphism은 $T_{\mathbf{B}G}=\mathfrak{g}[1]\rightarrow L_{\mathbf{B}G}[2]=\mathfrak{g}^\ast[1]$, 곧 $\mathfrak{g}\cong\mathfrak{g}^\ast$을 주는 비축퇴 불변 형식이다. $G$이 semisimple이면 Killing 형식 $\kappa(x,y)=\operatorname{tr}(\ad x\circ\ad y)$이 정확히 이러한 형식을 주므로, $\mathbf{B}G$은 canonically $2$-shifted symplectic이다. 실제로 reductive $G$에 대하여 $\mathbf{B}G$ 위의 $2$-shifted symplectic 구조는 $\mathfrak{g}$ 위의 비축퇴 $G$-불변 형식과 일대일 대응한다. Torus $T=\mathbb{G}_m^r$의 경우 $\mathfrak{g}=\mathfrak{t}$이 abelian이라 Killing 형식이 $0$이지만, adjoint 작용이 자명하여 $\mathfrak{t}$ 위의 임의의 비축퇴 대칭형식이 불변이므로, cocharacter lattice 위의 비축퇴 짝짓기를 하나 골라 $\mathbf{B}T$을 $2$-shifted symplectic으로 만들 수 있다. 특히 $\mathbf{B}\mathbb{G}_m$은 $\mathfrak{t}=k$ 위의 표준 짝짓기로 $2$-shifted symplectic이다.
+곧 $\mathfrak{g}$ 위의 $G$-불변 대칭 bilinear form과 같다. 이 가운데 nondegenerate한 것이 유도하는 morphism은 $T_{\mathbf{B}G}=\mathfrak{g}[1]\rightarrow L_{\mathbf{B}G}[2]=\mathfrak{g}^\ast[1]$, 곧 $\mathfrak{g}\cong\mathfrak{g}^\ast$을 주는 비축퇴 불변 형식이다. $G$이 semisimple이면 Killing form $\kappa(x,y)=\operatorname{tr}(\ad x\circ\ad y)$이 정확히 이러한 형식을 주므로, $\mathbf{B}G$은 canonically $2$-shifted symplectic이다. 실제로 reductive $G$에 대하여 $\mathbf{B}G$ 위의 $2$-shifted symplectic 구조는 $\mathfrak{g}$ 위의 비축퇴 $G$-불변 형식과 일대일 대응한다. Torus $T=\mathbb{G}_m^r$의 경우 $\mathfrak{g}=\mathfrak{t}$이 abelian이라 Killing form이 $0$이지만, adjoint 작용이 자명하여 $\mathfrak{t}$ 위의 임의의 비축퇴 대칭형식이 불변이므로, cocharacter lattice 위의 비축퇴 짝짓기를 하나 골라 $\mathbf{B}T$을 $2$-shifted symplectic으로 만들 수 있다. 특히 $\mathbf{B}\mathbb{G}_m$은 $\mathfrak{t}=k$ 위의 표준 짝짓기로 $2$-shifted symplectic이다.
 :::
 
 $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifted 구조가 stack 방향의 대칭에서 나온다면, 우리에게 정작 흥미로운 것은 음의 shift이다. 음의 shift는 유도 두께에서, 특히 방정식이 만드는 장애에서 나타나며, 그 원형이 derived critical locus이다.
@@ -115,11 +115,11 @@ $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifte
 Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $\dd{f}$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $\dd{f}$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17){: data-lid="tajoq" }) 이 대상은 quasi-smooth이고 virtual dimension $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
 
 ::: 정리 8
-$U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
+$U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy equivalence
 
 $$T_{\Crit(f)}\overset{\sim}{\rightarrow}L_{\Crit(f)}[-1]$$
 
-은 Hessian $\Hess(f)$의 대칭성에서 나오며, 이로써 $\Crit(f)$은 자기쌍대적 대칭 obstruction 이론을 가진다.
+은 Hessian $\Hess(f)$의 대칭성에서 나오며, 이로써 $\Crit(f)$은 자기쌍대적 대칭 obstruction theory를 가진다.
 :::
 ::: 증명
 $Z=\Crit(f)$이라 적자. 이는 rank $\dim U$의 다발 $\Omega_U$의 절단 $\dd{f}$의 유도 영점자리이므로, [§Derived scheme과 derived stack, ⁋명제 13](/ko/math/derived_algebraic_geometry/derived_schemes#prop13){: data-lid="jtoy5" }을 $E=\Omega_U$, $s=\dd{f}$에 적용하면 embedding $Z\hookrightarrow U$의 상대 여접 복합체가 $L_{Z/U}\simeq(T_U\vert_Z)[1]$이 된다. $U$이 매끄러우므로 $L_U=\Omega_U$은 degree $0$에 집중되고, [§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11){: data-lid="dc95o" }의 추이 삼각형이
@@ -139,7 +139,7 @@ $$T_Z\simeq L_Z[-1]$$
 Closed $2$-형식 자체는 다음에서 온다. $\Crit(f)$은 cotangent bundle $T^\ast U$ 안에서 영절단 $U$과 $\dd{f}$의 graph를 유도적으로 겹친 것이고, $T^\ast U$은 canonical 형식 $\omega_{\mathrm{can}}=\dd{\lambda}$으로 $0$-shifted symplectic이다. ([예시 6](#ex6){: data-lid="0tqky" }) 이 형식이 두 겹침 위에서 소멸하는 정합 자료가 $\Crit(f)$ 위의 degree $-1$의 closed $2$-형식을 낳으며, 위에서 계산한 $\omega_0^\flat$이 그 nondegeneracy를 준다. 이 구성이 뒤의 [정리 11](#thm11){: data-lid="la2lk" }에서 Lagrangian 교차의 특수한 경우로 다시 나타난다. 완전한 논증은 ([PTVV], [BBJ])에 있다.
 :::
 
-[정리 8](#thm8){: data-lid="lupa8" }의 핵심은 Hessian의 대칭성이라는 순전히 미적분적인 사실이 $(-1)$-shifted symplectic 구조라는 대역적 자료로 승격된다는 것이다. 고전적으로 $t_0(\Crit(f))=\Spec\bigl(k[U]/(\partial_1f,\ldots,\partial_nf)\bigr)$은 Jacobian ring의 spectrum일 뿐이지만, 유도 구조는 그 위에 자기쌍대적 obstruction 이론을 얹어 접방향과 여접방향을 한 번의 shift로 맞바꾼다. 이 국소 그림이 실은 모든 $(-1)$-shifted symplectic 대상의 보편적 모형이라는 것이 Brav–Bussi–Joyce의 Darboux 정리이다.
+[정리 8](#thm8){: data-lid="lupa8" }의 핵심은 Hessian의 대칭성이라는 순전히 미적분적인 사실이 $(-1)$-shifted symplectic 구조라는 대역적 자료로 승격된다는 것이다. 고전적으로 $t_0(\Crit(f))=\Spec\bigl(k[U]/(\partial_1f,\ldots,\partial_nf)\bigr)$은 Jacobian ring의 spectrum일 뿐이지만, 유도 구조는 그 위에 자기쌍대적 obstruction theory를 얹어 접방향과 여접방향을 한 번의 shift로 맞바꾼다. 이 국소 그림이 실은 모든 $(-1)$-shifted symplectic 대상의 보편적 모형이라는 것이 Brav–Bussi–Joyce의 Darboux 정리이다.
 
 ::: 정리 9 (Brav–Bussi–Joyce의 Darboux 정리)
 $(X,\omega)$을 $(-1)$-shifted symplectic derived scheme이라 하자. 그러면 $X$은 Zariski 국소적으로 어떤 smooth scheme $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$의 derived critical locus
@@ -149,7 +149,7 @@ $$X\vert_{\text{국소}}\simeq\Crit(f)$$
 와 그 표준적 $(-1)$-shifted symplectic 구조에 동치이다. 그 결과 고전적 truncation $t_0(X)$은 자연스럽게 algebraic d-critical locus의 구조를 물려받는다.
 :::
 ::: 증명
-증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth algebra 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=\dd{\lambda}$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들이 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
+증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth algebra 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=\dd{\lambda}$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul complex와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들이 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
 :::
 
 Darboux 정리는 $(-1)$-shifted symplectic 기하가 왜 열거기하와 맞닿는지를 설명한다. Calabi–Yau 3-fold 위의 안정층의 moduli는 PTVV에 의하여 $(-1)$-shifted symplectic이고 ([정리 12](#thm12){: data-lid="hjmr1" } 뒤의 논의), [정리 9](#thm9){: data-lid="clcrd" }에 의하여 국소적으로 $\Crit(f)$이므로, 그 위에서 $f$이 정의하는 vanishing cycle sheaf이나 Behrend 함수가 대역적으로 접착되어 Donaldson–Thomas 불변량의 categorified·motivic 판본을 낳는다. 곧 $(-1)$-shifted 구조는 DT 이론의 국소 재료인 critical point 자료를 기하적으로 조직하는 언어이다.
@@ -220,7 +220,7 @@ $$T_M\simeq p_\ast\operatorname{ev}^\ast L_X[n]\simeq(p_\ast\operatorname{ev}^\a
 
 앞의 두 정리는 구체적 moduli를 계산 가능한 대상으로 만든다. 먼저 [예시 6](#ex6){: data-lid="ak7i7" }의 cotangent bundle을 임의의 shift로 올린 표준 대상을 본다.
 
-::: 예시 14 (shifted 여접 stack)
+::: 예시 14 (shifted cotangent stack)
 Derived stack $X$과 정수 $n$에 대하여, *$n$-shifted 여접 stack*을 $X$ 위의 상대 Spec
 
 $$T^\ast[n]X=\Spec_{\mathcal{O}_X}\Sym_{\mathcal{O}_X}\bigl(T_X[-n]\bigr)$$

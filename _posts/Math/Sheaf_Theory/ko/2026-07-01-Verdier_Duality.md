@@ -1,6 +1,6 @@
 ---
 title: "Verdier duality"
-description: "Dualizing complex와 Verdier 쌍대 함자를 도입하고, Rf_!와 f^!의 수반에서 나오는 Verdier duality 정리를 진술하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
+description: "Dualizing complex와 Verdier dual 함자를 도입하고, Rf_!와 f^!의 수반에서 나오는 Verdier duality 정리를 진술하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
 excerpt: "The dualizing complex, the Verdier dual D_X, and Poincaré duality as a special case"
 
 categories: [Math / Sheaf Theory]
@@ -191,7 +191,7 @@ $$0 = H^0_c(V) \rightarrow H^0_c(U) = 0 \rightarrow H^0(\{0\}) = k \xrightarrow{
 이제 stalk 공식 $\mathcal{H}^j(\omega_X)_0 \cong H^{-j}_c(U, k)^\vee$에 대입하면 $\mathcal{H}^{-2}(\omega_X)_0 \cong H^2_c(U)^\vee \cong k^2$, $\mathcal{H}^{-1}(\omega_X)_0 \cong H^1_c(U)^\vee \cong k$을 얻어 [예시 10](#ex10){: data-lid="tp499" }의 주장이 확인된다. 최고차 stalk $\mathcal{H}^{-2}(\omega_X)_0 \cong k^2$의 차원 $2$는 node를 지나는 국소 분지(branch)의 수와 정확히 일치하며, $0$이어야 할 $\mathcal{H}^{-1}(\omega_X)_0$에 추가로 나타나는 $k$가 singular point가 만들어 내는 잉여 항이다. Smooth한 variety였다면 [정리 9](#thm9){: data-lid="c5l4d" }에 의해 $\omega_X$이 한 degree에 집중되었을 것이나, node에서는 두 degree에 퍼진다.
 
 ::: 참고 11
-[예시 10](#ex10){: data-lid="79ktp" }이 보여 주는 현상은 특이공간의 cohomology 이론을 다시 설계해야 할 필요를 시사한다. $\omega_X$가 shift된 상수 sheaf가 아니므로 $\mathbf{D}_X k_X = \omega_X \not\cong k_X[n]$이고, 따라서 [정리 9](#thm9){: data-lid="dtghp" }의 유도가 무너져 통상적 cohomology $H^\bullet(X)$은 더 이상 Poincaré duality를 만족하지 않는다. 이를 복구하려면 $k_X$를 대신할, 그 자체로 self-dual에 가까운 constructible complex를 찾아야 한다. 그러한 complex를 stratification에 적합한 "중간" 받음과 절단으로 구성하여 특이공간에서 Poincaré duality를 회복하는 것이 intersection cohomology와 그 sheaf 차원 정식화의 출발점이며, 이는 constructible complex의 추가 구조를 다룬 뒤에 본격적으로 전개된다.
+[예시 10](#ex10){: data-lid="79ktp" }이 보여 주는 현상은 특이공간의 cohomology theory를 다시 설계해야 할 필요를 시사한다. $\omega_X$가 shift된 상수 sheaf가 아니므로 $\mathbf{D}_X k_X = \omega_X \not\cong k_X[n]$이고, 따라서 [정리 9](#thm9){: data-lid="dtghp" }의 유도가 무너져 통상적 cohomology $H^\bullet(X)$은 더 이상 Poincaré duality를 만족하지 않는다. 이를 복구하려면 $k_X$를 대신할, 그 자체로 self-dual에 가까운 constructible complex를 찾아야 한다. 그러한 complex를 stratification에 적합한 "중간" 받음과 절단으로 구성하여 특이공간에서 Poincaré duality를 회복하는 것이 intersection cohomology와 그 sheaf 차원 정식화의 출발점이며, 이는 constructible complex의 추가 구조를 다룬 뒤에 본격적으로 전개된다.
 :::
 
 ---

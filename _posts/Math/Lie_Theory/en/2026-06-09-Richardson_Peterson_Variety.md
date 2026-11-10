@@ -309,7 +309,7 @@ In the smallest Grassmannian $\mathbb{P}^1=\Gr(1,2)$, we can see all of this by 
 Similarly, for general $\Gr(k,n)$, the fiber over generic $q_0$ consists of $\binom{n}{k}$ distinct points. These finitely many points have another explicit model: that they are realized as the critical points of a Laurent polynomial, namely a superpotential, is one of the assertions of mirror symmetry, and constructing this correspondence for general $G/P$ remains an actively studied topic (see [Mirror Symmetry](/en/mirror_symmetry/)).
 
 ::: Remark 12
-The affine paving of [Proposition 9](#prop9){: data-lid="q9kxv" } is also the starting point for cohomology computations. By the paving, the cohomology of $\mathcal{Y}$ is a free module with a basis indexed by the cells, and vanishes in odd degrees. That is, the affine paving argument for flag varieties from [§Bruhat Decomposition, ⁋Proposition 17](/en/math/lie_theory/bruhat_decomposition#prop17){: data-lid="ru8lp" } works for Peterson varieties in exactly the same way, and Insko–Tymoczko [IT] developed the intersection theory of Peterson varieties on this basis.
+The affine paving of [Proposition 9](#prop9){: data-lid="q9kxv" } is also the starting point for cohomology computations. By the paving, the cohomology of $\mathcal{Y}$ is a free module with a basis indexed by the cells, and vanishes in odd degrees. That is, the affine paving argument for flag varieties from [§Bruhat Decomposition, ⁋Proposition 6](/en/math/lie_theory/bruhat_decomposition#prop6){: data-lid="ru8lp" } works for Peterson varieties in exactly the same way, and Insko–Tymoczko [IT] developed the intersection theory of Peterson varieties on this basis.
 :::
 
 ---

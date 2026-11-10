@@ -208,7 +208,7 @@ Batyrev의 핵심 통찰은 두 Calabi-Yau family $V, V^\circ$가 서로 *mirror
 
 $$\bigl\{ V \subseteq X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subseteq X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
 
-의 generic member들의 stringy Hodge number는 $n \ge 4$일 때 다음의 mirror 대칭
+의 generic member들의 stringy Hodge number는 $n \ge 4$일 때 다음의 mirror symmetry
 
 $$h^{p,q}_{\mathrm{st}}(V) = h^{n-1-p,\, q}_{\mathrm{st}}(V^\circ)$$
 

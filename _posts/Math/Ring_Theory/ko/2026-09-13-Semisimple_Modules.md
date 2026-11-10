@@ -120,7 +120,7 @@ Semisimple module $M$, $N$에 대하여 다음이 성립한다.
 ::: 증명
 둘째 결과를 먼저 보인다. $T$가 $S$와 isomorphic한 $M$의 simple submodule이라 하자. $f(T)\cong T/(T\cap\ker f)$는 $T$가 simple이므로 $0$이거나 $S$와 isomorphic하고, 어느 경우에도 $f(T)\subseteq N_S$이다. $M_S$는 이러한 $T$들의 합이므로 $f(M_S)\subseteq N_S$이다.
 
-이제 첫째 결과를 보인다. Semisimple module $M$의 direct sum 분해 $M=\bigoplus_{i\in I}S_i$를 고르고 canonical projection $\pr_i:M\rightarrow S_i$를 생각하자. 위의 결과에 의해 $\pr_i(M_S)\subseteq (S_i)_S$인데, $S_i$는 simple이므로 $S_i\cong S$이면 $(S_i)_S=S_i$이고 그렇지 않으면 $(S_i)_S=0$이다. 따라서 $M_S=\bigoplus_{S_i\cong S}S_i$이고,
+이제 첫째 결과를 보인다. Semisimple module $M$의 direct sum decomposition $M=\bigoplus_{i\in I}S_i$를 고르고 canonical projection $\pr_i:M\rightarrow S_i$를 생각하자. 위의 결과에 의해 $\pr_i(M_S)\subseteq (S_i)_S$인데, $S_i$는 simple이므로 $S_i\cong S$이면 $(S_i)_S=S_i$이고 그렇지 않으면 $(S_i)_S=0$이다. 따라서 $M_S=\bigoplus_{S_i\cong S}S_i$이고,
 
 $$M=\bigoplus M_S$$
 

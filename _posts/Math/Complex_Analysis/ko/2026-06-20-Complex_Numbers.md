@@ -1,7 +1,7 @@
 ---
 title: "복소수와 복소평면"
-description: "체 ℂ를 복습하고, 절댓값과 켤레, 극형식과 Euler 형식을 통해 복소수 곱셈의 기하적 의미를 밝힌다. 거리 d(z,w)=|z−w|로 ℂ를 ℝ²와 동일시하여 완비성과 컴팩트성을 옮기고, 입체사영으로 얻는 확장복소평면과 Riemann 구면을 소개한다."
-excerpt: "체 ℂ, 절댓값과 켤레, 극형식, ℂ의 거리·완비성·컴팩트성, Riemann 구면"
+description: "체 ℂ를 복습하고, 절댓값과 켤레, 극형식과 Euler 형식을 통해 복소수 곱셈의 기하적 의미를 밝힌다. 거리 d(z,w)=|z−w|로 ℂ를 ℝ²와 동일시하여 완비성과 컴팩트성을 옮기고, 입체사영으로 얻는 확장복소평면과 Riemann sphere를 소개한다."
+excerpt: "체 ℂ, 절댓값과 켤레, 극형식, ℂ의 거리·완비성·컴팩트성, Riemann sphere"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/complex_numbers
@@ -238,7 +238,7 @@ $$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 Complex analysis에서는 함수가 무한대로 발산하는 양상을 한 점 $\infty$를 덧붙여 다루는 것이 편리하다. 이렇게 얻는 *확장복소평면*은 평면에 점 하나를 더한 집합에 그치지 않고, 입체사영을 통해 구면이라는 컴팩트한 기하적 대상과 동일시된다.
 
 ::: 정의 13
-복소평면에 형식적 기호 $\infty$를 하나 덧붙인 집합 $\widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$을 *확장복소평면<sub>extended complex plane</sub>* 혹은 *Riemann 구면<sub>Riemann sphere</sub>*이라 한다.
+복소평면에 형식적 기호 $\infty$를 하나 덧붙인 집합 $\widehat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$을 *확장복소평면<sub>extended complex plane</sub>* 혹은 *Riemann sphere<sub>리만 구면</sub>*라 한다.
 :::
 
 $\widehat{\mathbb{C}}$를 구면과 동일시하기 위해, 단위구면 $S^2 = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_1^2 + x_2^2 + x_3^2 = 1\}$과 그 위의 북극 $N = (0, 0, 1)$을 생각한다. 복소평면을 $\mathbb{R}^3$의 평면 $\{x_3 = 0\}$에 놓고, 점 $z = x + yi$를 $(x, y, 0)$과 동일시한다. *입체사영<sub>stereographic projection</sub>*은 북극 $N$과 평면 위의 점 $z$를 잇는 직선이 구면과 다시 만나는 점을 $z$에 대응시키는 morphism이다. 직선 $N + t\,(z - N)$이 $S^2$와 만나는 조건을 풀면, $z = x + yi$에 대응하는 구면 위의 점은

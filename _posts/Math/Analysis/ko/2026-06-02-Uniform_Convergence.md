@@ -54,7 +54,7 @@ $$\lvert f_m(x) - f_n(x)\rvert \leq \lvert f_m(x) - f(x)\rvert + \lvert f(x) - f
 
 이다.
 
-역으로 $(f_n)$이 균등 Cauchy라 하자. 각 $x$를 고정하면 $(f_n(x))$는 Cauchy 수열이므로 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="fidhm" }에 의해 수렴한다. 그 극한을 $f(x)$라 하자. $\varepsilon > 0$에 대해 균등 Cauchy 조건의 $N$을 잡으면, $n \geq N$이고 모든 $x$에 대해 $m \geq N$인 모든 $m$에서 $\lvert f_m(x) - f_n(x)\rvert < \varepsilon$이다. 여기서 $x$와 $n$을 고정하고 $m \rightarrow \infty$로 보내면 $\lvert f(x) - f_n(x)\rvert \leq \varepsilon$을 얻는다. 이것이 모든 $x$와 $n \geq N$에서 성립하므로 $\lVert f - f_n\rVert_\infty \leq \varepsilon$이고, 균등수렴이 증명되었다. 극한을 취한 뒤에는 부등호가 등호를 포함하는 $\leq$로 바뀌는 점에 주의한다.
+역으로 $(f_n)$이 균등 Cauchy라 하자. 각 $x$를 고정하면 $(f_n(x))$는 Cauchy sequence이므로 [§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4){: data-lid="fidhm" }에 의해 수렴한다. 그 극한을 $f(x)$라 하자. $\varepsilon > 0$에 대해 균등 Cauchy 조건의 $N$을 잡으면, $n \geq N$이고 모든 $x$에 대해 $m \geq N$인 모든 $m$에서 $\lvert f_m(x) - f_n(x)\rvert < \varepsilon$이다. 여기서 $x$와 $n$을 고정하고 $m \rightarrow \infty$로 보내면 $\lvert f(x) - f_n(x)\rvert \leq \varepsilon$을 얻는다. 이것이 모든 $x$와 $n \geq N$에서 성립하므로 $\lVert f - f_n\rVert_\infty \leq \varepsilon$이고, 균등수렴이 증명되었다. 극한을 취한 뒤에는 부등호가 등호를 포함하는 $\leq$로 바뀌는 점에 주의한다.
 :::
 
 ## Weierstrass M-판정

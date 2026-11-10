@@ -1,6 +1,6 @@
 ---
 title: "Riemann–Stieltjes 적분"
-description: "증가함수 α에 대한 Darboux 상합과 하합으로 Riemann–Stieltjes 적분을 정의하고, 판정법과 연속함수의 적분가능성을 증명한다. α가 계단함수이면 유한합으로, C¹이면 Riemann 적분 ∫fα'dx로 환원됨을 보이고, f와 α가 같은 쪽으로 불연속인 점에서 적분이 존재하지 않는 반례와 부분적분, 확률분포의 기댓값 ∫g dF, 유계변동함수까지 다룬다."
+description: "증가함수 α에 대한 Darboux 상합과 하합으로 Riemann–Stieltjes 적분을 정의하고, 판정법과 연속함수의 적분가능성을 증명한다. α가 계단함수이면 유한합으로, C¹이면 Riemann integral ∫fα'dx로 환원됨을 보이고, f와 α가 같은 쪽으로 불연속인 점에서 적분이 존재하지 않는 반례와 부분적분, 확률분포의 기댓값 ∫g dF, 유계변동함수까지 다룬다."
 excerpt: "증가함수에 대한 적분의 정의, 계단함수와 C¹ 함수로의 환원, 부분적분, 기댓값, 유계변동함수"
 
 categories: [Math / Analysis]
@@ -137,7 +137,7 @@ $[a,b] = [-1, 1]$에서 $\alpha(x) = 0$ ($x < 0$), $\alpha(x) = 1$ ($x \geq 0$)�
 ## $\alpha$가 미분가능한 경우
 
 ::: 정리 9 ($\alpha \in C^1$)
-$\alpha$가 $[a,b]$에서 $C^1$인 증가함수이고 $f$가 bounded function이면 $f \in \mathcal{R}(\alpha)$인 것은 $f\alpha' \in \mathcal{R}$(Riemann 적분가능)인 것과 동치이고, 이때
+$\alpha$가 $[a,b]$에서 $C^1$인 증가함수이고 $f$가 bounded function이면 $f \in \mathcal{R}(\alpha)$인 것은 $f\alpha' \in \mathcal{R}$(Riemann integrable)인 것과 동치이고, 이때
 
 $$\int_a^b f\dd{\alpha} = \int_a^b f(x)\alpha'(x)\dd{x}$$
 
@@ -145,7 +145,7 @@ $$\int_a^b f\dd{\alpha} = \int_a^b f(x)\alpha'(x)\dd{x}$$
 :::
 
 ::: 증명
-$M = \sup \lvert f\rvert$이라 하고 $\varepsilon > 0$이 주어졌다고 하자. $\varepsilon' = \varepsilon/(M+1)$로 둔다. $\alpha'$는 연속이므로 [정리 4](#thm4){: data-lid="a9jig" }(의 $\alpha(x) = x$인 경우)에 의하여 Riemann 적분가능하고, [정리 3](#thm3){: data-lid="grn5e" }에 의하여 $U(P_0, \alpha') - L(P_0, \alpha') < \varepsilon'$인 분할 $P_0$가 있다. $P_0$의 임의의 세분 $P$에 대하여 같은 부등식이 성립한다.
+$M = \sup \lvert f\rvert$이라 하고 $\varepsilon > 0$이 주어졌다고 하자. $\varepsilon' = \varepsilon/(M+1)$로 둔다. $\alpha'$는 연속이므로 [정리 4](#thm4){: data-lid="a9jig" }(의 $\alpha(x) = x$인 경우)에 의하여 Riemann integrable하고, [정리 3](#thm3){: data-lid="grn5e" }에 의하여 $U(P_0, \alpha') - L(P_0, \alpha') < \varepsilon'$인 분할 $P_0$가 있다. $P_0$의 임의의 세분 $P$에 대하여 같은 부등식이 성립한다.
 
 각 $I_i$에서 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3){: data-lid="7unaq" }에 의하여 $\Delta\alpha_i = \alpha'(t_i)\Delta x_i$인 $t_i \in (x_{i-1}, x_i)$가 있다. 임의의 $s_i \in I_i$에 대하여 $\lvert \alpha'(s_i) - \alpha'(t_i)\rvert$는 $I_i$ 위에서 $\alpha'$의 $\sup - \inf$ 이하이므로
 
@@ -160,7 +160,7 @@ $$\Bigl\lvert \sum_i f(s_i)\Delta\alpha_i - \sum_i f(s_i)\alpha'(s_i)\Delta x_i 
 상합은 세분에서 줄어드므로 상적분은 $P_0$의 세분들에 대한 상합의 infimum이다. 따라서 위 부등식에서 $\lvert \overline{\int} f\dd{\alpha} - \overline{\int} f\alpha'\dd{x}\rvert \leq \varepsilon$이고, 하적분도 마찬가지이다. $\varepsilon$이 임의이므로 $f$의 $\alpha$에 대한 상적분과 하적분은 각각 $f\alpha'$의 상적분과 하적분과 같다. 그러므로 한쪽이 같은 값을 가지는 것과 다른 쪽이 그런 것은 동치이고, 값도 같다.
 :::
 
-$\alpha(x) = x$이면 $\alpha' = 1$이므로 이 정리는 [정의 1](#def1){: data-lid="e2inc" }이 Riemann 적분을 포함한다는 말과 같다. 이 정리는 $\alpha$에 점프가 없고 도함수가 연속일 때의 환원이고, 점프가 있는 경우는 [정리 6](#thm6){: data-lid="oz7p4" }이 담당한다. 둘은 [명제 5](#prop5){: data-lid="nqma4" }로 합쳐진다.
+$\alpha(x) = x$이면 $\alpha' = 1$이므로 이 정리는 [정의 1](#def1){: data-lid="e2inc" }이 Riemann integral을 포함한다는 말과 같다. 이 정리는 $\alpha$에 점프가 없고 도함수가 연속일 때의 환원이고, 점프가 있는 경우는 [정리 6](#thm6){: data-lid="oz7p4" }이 담당한다. 둘은 [명제 5](#prop5){: data-lid="nqma4" }로 합쳐진다.
 
 ## 확률분포의 기댓값
 

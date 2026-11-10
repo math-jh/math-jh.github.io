@@ -1,6 +1,6 @@
 ---
 title: "Riemann 적분"
-description: "Darboux 상합과 하합으로 Riemann 적분을 정의하고, 모든 ε에 대해 상합과 하합의 차를 ε보다 작게 하는 분할이 존재한다는 Riemann 판정법을 증명한다. 연속함수, 단조함수, 불연속점이 유한한 bounded function의 적분가능성과 Dirichlet 함수, Thomae 함수의 예를 다루고, 적분의 선형성, 단조성, 구간가법성과 f의 제곱, 절댓값의 적분가능성을 보인다."
+description: "Darboux 상합과 하합으로 Riemann integral을 정의하고, 모든 ε에 대해 상합과 하합의 차를 ε보다 작게 하는 분할이 존재한다는 Riemann 판정법을 증명한다. 연속함수, 단조함수, 불연속점이 유한한 bounded function의 적분가능성과 Dirichlet function, Thomae function의 예를 다루고, 적분의 선형성, 단조성, 구간가법성과 f의 제곱, 절댓값의 적분가능성을 보인다."
 excerpt: "Darboux 합, Riemann 판정법, 적분가능한 함수의 부류, 적분의 기본 성질"
 
 categories: [Math / Analysis]
@@ -66,12 +66,12 @@ $$L(P, f) \leq L(P \cup Q, f) \leq U(P \cup Q, f) \leq U(Q, f)$$
 
 [명제 3](#prop3){: data-lid="7fgvx" }에 의하여 하합들의 집합은 위로 bounded이고 상합들의 집합은 아래로 bounded이다. 따라서 이들의 supremum과 infimum이 [§실수의 완비성, ⁋정의 3](/ko/math/analysis/completeness_of_reals#def3){: data-lid="aghpm" }에 의하여 존재한다.
 
-::: 정의 4 (Riemann 적분)
+::: 정의 4 (Riemann integral)
 Bounded function $f : [a,b] \to \mathbb{R}$에 대하여
 
 $$\underline{\int_a^b} f = \sup_P L(P, f), \qquad \overline{\int_a^b} f = \inf_P U(P, f)$$
 
-를 각각 *하적분<sub>lower integral</sub>*과 *상적분<sub>upper integral</sub>*이라 한다. 두 값이 같을 때 $f$를 $[a,b]$에서 *Riemann 적분가능<sub>Riemann integrable</sub>*하다고 하고, 공통값을 $\int_a^b f(x)\dd{x}$ 또는 $\int_a^b f$로 적는다.
+를 각각 *하적분<sub>lower integral</sub>*과 *상적분<sub>upper integral</sub>*이라 한다. 두 값이 같을 때 $f$를 $[a,b]$에서 *Riemann integrable*하다고 하고, 공통값을 $\int_a^b f(x)\dd{x}$ 또는 $\int_a^b f$로 적는다.
 :::
 
 [명제 3](#prop3){: data-lid="4i1h7" }에서 $Q$를 고정하고 $P$에 대한 supremum을 취하면 $\underline{\int} f \leq U(Q, f)$이고, 이어서 $Q$에 대한 infimum을 취하면 $\underline{\int} f \leq \overline{\int} f$이다. 그러므로 적분가능성은 이 부등식이 등식이라는 조건이다. 정의 자체가 bounded function에 대해서만 이루어졌다는 점에 주의해야 한다. Bounded가 아닌 함수는 상합이나 하합이 정의되지 않으므로 이 글의 의미로는 적분가능하지 않다.
@@ -95,7 +95,7 @@ Bounded function $f : [a,b] \to \mathbb{R}$이 적분가능한 것은 모든 $\v
 ## 연속함수와 단조함수
 
 ::: 정리 6
-$[a,b]$ 위의 연속함수는 Riemann 적분가능하다.
+$[a,b]$ 위의 연속함수는 Riemann integrable하다.
 :::
 
 ::: 증명
@@ -111,7 +111,7 @@ $\varepsilon'$을 $\varepsilon/(b-a)$로 잡지 않고 절반으로 잡은 것�
 연속성이 적분가능성에 필요한 조건은 아니다. 불연속점이 많아도 함수가 한쪽 방향으로만 움직이면 적분가능하다.
 
 ::: 정리 7
-$[a,b]$ 위의 단조함수는 Riemann 적분가능하다.
+$[a,b]$ 위의 단조함수는 Riemann integrable하다.
 :::
 
 ::: 증명
@@ -134,7 +134,7 @@ $$f(x) = \sum_{1/k \leq x} 2^{-k}$$
 ## 불연속점이 있는 함수
 
 ::: 정리 8
-$[a,b]$ 위의 bounded function이 유한개의 점을 제외한 모든 점에서 연속이면 Riemann 적분가능하다.
+$[a,b]$ 위의 bounded function이 유한개의 점을 제외한 모든 점에서 연속이면 Riemann integrable하다.
 :::
 
 ::: 증명
@@ -147,19 +147,19 @@ $$U(P, f) - L(P, f) \leq 2K \cdot 2k\eta + \varepsilon'(b-a) < \frac{\varepsilon
 이고 [정리 5](#thm5){: data-lid="dagir" }에 의하여 $f$는 적분가능하다.
 :::
 
-Bounded라는 가정은 빼면 안 된다. $f(x) = 1/x$ ($x > 0$), $f(0) = 0$은 불연속점이 $0$ 하나뿐이지만 bounded가 아니어서 상합이 정의되지 않고, 따라서 Riemann 적분가능하지 않다.
+Bounded라는 가정은 빼면 안 된다. $f(x) = 1/x$ ($x > 0$), $f(0) = 0$은 불연속점이 $0$ 하나뿐이지만 bounded가 아니어서 상합이 정의되지 않고, 따라서 Riemann integrable하지 않다.
 
 이제 불연속점이 유한개를 넘어서는 두 예를 비교한다. 두 함수 모두 불연속점이 $[0,1]$에서 조밀하지만 결과는 반대이다.
 
-::: 예시 9 (Dirichlet 함수)
+::: 예시 9 (Dirichlet function)
 $f : [0,1] \to \mathbb{R}$을 유리수에서 $1$, 무리수에서 $0$으로 정의한다. 유리수와 무리수는 각각 $\mathbb{R}$에서 조밀하므로 임의의 분할의 모든 부분구간에서 $m_i = 0$, $M_i = 1$이다. 따라서 모든 분할 $P$에 대하여
 
 $$L(P, f) = 0, \qquad U(P, f) = \sum_{i=1}^n \Delta x_i = 1$$
 
-이고 $\underline{\int} f = 0 \neq 1 = \overline{\int} f$이다. $f$는 Riemann 적분가능하지 않다.
+이고 $\underline{\int} f = 0 \neq 1 = \overline{\int} f$이다. $f$는 Riemann integrable하지 않다.
 :::
 
-::: 예시 10 (Thomae 함수)
+::: 예시 10 (Thomae function)
 $f : [0,1] \to \mathbb{R}$을, $x$가 기약분수 $p/q$ ($q \geq 1$)로 적히면 $f(x) = 1/q$, 무리수이면 $f(x) = 0$으로 정의한다. 이 함수는 적분가능하고 $\int_0^1 f = 0$이다.
 
 $\varepsilon > 0$이 주어졌다고 하고 $1/N < \varepsilon/2$인 자연수 $N$을 잡는다. $f(x) \geq 1/N$인 점들의 집합은 $q \leq N$인 기약분수 $p/q$들이므로 유한집합이고, 그 원소의 수를 $k$라 하자. $\lVert P\rVert < \varepsilon/(4k)$인 분할 $P$를 잡는다. 무리수가 조밀하므로 모든 부분구간에서 $m_i = 0$이고 $L(P, f) = 0$이다. 이 점들을 하나도 포함하지 않는 부분구간에서는 $M_i \leq 1/N$이다. 이 점들을 포함하는 부분구간은 각 점이 많아야 두 개의 부분구간에 속하므로 $2k$개 이하이고, 이들에서는 $M_i \leq 1$이며 길이의 합은 $2k \cdot \varepsilon/(4k) = \varepsilon/2$ 이하이다. 따라서
@@ -171,13 +171,13 @@ $$U(P, f) - L(P, f) \leq \frac{1}{N}(b-a) + \frac{\varepsilon}{2} < \varepsilon$
 같은 논증으로 $f$는 모든 무리수에서 연속이다. $x_0$가 무리수이고 $\varepsilon > 0$이면, $f \geq \varepsilon$인 점은 유한개이고 $x_0$는 그중에 없으므로, $x_0$의 충분히 작은 근방에서는 $f < \varepsilon$이다. 반면 유리수 $p/q$에서는 $f(p/q) = 1/q > 0$인데 그 근방에 $f = 0$인 무리수가 있으므로 불연속이다. 따라서 불연속점 집합은 $[0,1]$의 유리수 전체이고, [정리 8](#thm8){: data-lid="qykxw" }로는 이 함수의 적분가능성을 얻을 수 없다.
 :::
 
-Dirichlet 함수와 Thomae 함수는 모두 유리수에서 불연속이지만, Dirichlet 함수의 진동은 모든 점에서 $1$로 일정한 반면 Thomae 함수의 진동은 점프의 크기 $1/q$가 $q$와 함께 $0$으로 모이기 때문에 상합과 하합의 차에 기여하는 부분이 작게 통제된다. 이 현상을 정확히 기술하는 것이 다음 판정법이다.
+Dirichlet function과 Thomae function은 모두 유리수에서 불연속이지만, Dirichlet function의 진동은 모든 점에서 $1$로 일정한 반면 Thomae function의 진동은 점프의 크기 $1/q$가 $q$와 함께 $0$으로 모이기 때문에 상합과 하합의 차에 기여하는 부분이 작게 통제된다. 이 현상을 정확히 기술하는 것이 다음 판정법이다.
 
 ::: 정리 11 (Lebesgue 판정법)
 Bounded function $f : [a,b] \to \mathbb{R}$이 Riemann 적분가능한 것은 $f$의 불연속점 집합이 측도 $0$인 것과 동치이다. 여기서 집합 $S \subseteq \mathbb{R}$이 *측도 $0$*이라 함은 모든 $\varepsilon > 0$에 대하여 $S$를 덮는 가산개의 구간들로 길이의 합이 $\varepsilon$ 미만인 것이 있다는 뜻이다.
 :::
 
-가산집합은 측도 $0$이므로 Thomae 함수는 이 판정법과 부합한다. Dirichlet 함수의 불연속점 집합은 $[0,1]$ 전체이고 이는 측도 $0$이 아니다. 유한집합은 측도 $0$이므로 [정리 8](#thm8){: data-lid="r5663" }은 이 판정법의 특수한 경우이고, 단조함수의 불연속점은 가산개이므로 [정리 7](#thm7){: data-lid="w5tak" }도 그러하다. 이 글에서는 측도의 도구가 필요한 이 정리를 진술만 한다.
+가산집합은 측도 $0$이므로 Thomae function은 이 판정법과 부합한다. Dirichlet function의 불연속점 집합은 $[0,1]$ 전체이고 이는 측도 $0$이 아니다. 유한집합은 측도 $0$이므로 [정리 8](#thm8){: data-lid="r5663" }은 이 판정법의 특수한 경우이고, 단조함수의 불연속점은 가산개이므로 [정리 7](#thm7){: data-lid="w5tak" }도 그러하다. 이 글에서는 측도의 도구가 필요한 이 정리를 진술만 한다.
 
 ## 적분의 성질
 

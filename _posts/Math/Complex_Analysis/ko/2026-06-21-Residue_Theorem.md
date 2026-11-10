@@ -1,6 +1,6 @@
 ---
 title: "유수정리"
-description: "isolated singularity에서 Laurent 전개의 음의 일차 계수를 residue로 정의하고, 닫힌 경로 안에 유한개의 singular point를 갖는 holomorphic function의 경로적분이 residue와 회전수의 합으로 결정된다는 유수정리를 증명한다. 극에서의 residue 계산 공식, essential singularity의 residue, 무한대에서의 residue와 residue 총합 0을 다룬다."
+description: "isolated singularity에서 Laurent expansion의 음의 일차 계수를 residue로 정의하고, 닫힌 경로 안에 유한개의 singular point를 갖는 holomorphic function의 경로적분이 residue와 회전수의 합으로 결정된다는 유수정리를 증명한다. 극에서의 residue 계산 공식, essential singularity의 residue, 무한대에서의 residue와 residue 총합 0을 다룬다."
 excerpt: "residue, 유수정리, 극에서의 유수 공식, Essential singularity의 residue, 무한대에서의 유수와 유수 총합 0"
 
 categories: [Math / Complex Analysis]
@@ -15,11 +15,11 @@ published: false
 
 ---
 
-단위원을 반시계방향으로 한 바퀴 도는 경로에서 $\oint \dd{z}/z = 2\pi i$이고, $\oint z^n\dd{z}$는 $n \neq -1$인 모든 정수 $n$에 대하여 $0$이다. 단위원 안에서 $1/z$가 원점이라는 단 하나의 singular point를 가지기 때문에 적분이 소멸하지 않으며, 그 값 $2\pi i$는 $1/z$의 계수 $1$에서 나온다. isolated singularity 근방에서 함수는 [§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2){: data-lid="jyi9m" }에 의하여 Laurent 급수로 전개되고, 정수 멱의 경로적분 가운데 $n = -1$인 항만 남으므로 경로적분에 기여하는 것은 $(z - z_0)^{-1}$의 계수 하나뿐이다. 이 계수를 residue라 부르고, 유수정리는 닫힌 경로의 적분이 경로 안에 놓인 singular point들의 residue를 회전수로 가중하여 합한 값임을 말한다. 이 글에서는 residue를 정의하고 유수정리를 증명한 뒤, 극과 essential singularity에서 residue를 구하는 방법, 그리고 무한대에서의 residue를 다룬다.
+단위원을 반시계방향으로 한 바퀴 도는 경로에서 $\oint \dd{z}/z = 2\pi i$이고, $\oint z^n\dd{z}$는 $n \neq -1$인 모든 정수 $n$에 대하여 $0$이다. 단위원 안에서 $1/z$가 원점이라는 단 하나의 singular point를 가지기 때문에 적분이 소멸하지 않으며, 그 값 $2\pi i$는 $1/z$의 계수 $1$에서 나온다. isolated singularity 근방에서 함수는 [§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2){: data-lid="jyi9m" }에 의하여 Laurent series로 전개되고, 정수 멱의 경로적분 가운데 $n = -1$인 항만 남으므로 경로적분에 기여하는 것은 $(z - z_0)^{-1}$의 계수 하나뿐이다. 이 계수를 residue라 부르고, 유수정리는 닫힌 경로의 적분이 경로 안에 놓인 singular point들의 residue를 회전수로 가중하여 합한 값임을 말한다. 이 글에서는 residue를 정의하고 유수정리를 증명한 뒤, 극과 essential singularity에서 residue를 구하는 방법, 그리고 무한대에서의 residue를 다룬다.
 
 ## 유수의 정의
 
-$f$가 $z_0$에서 isolated singularity를 가지면 어떤 $R > 0$에 대하여 $0 < \lvert z - z_0\rvert < R$에서 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$이라는 Laurent 전개가 성립한다.
+$f$가 $z_0$에서 isolated singularity를 가지면 어떤 $R > 0$에 대하여 $0 < \lvert z - z_0\rvert < R$에서 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$이라는 Laurent expansion이 성립한다.
 
 ::: 정의 1 (유수)
 위와 같은 $f$에 대하여 음의 일차 계수 $a_{-1}$을 $f$의 $z_0$에서의 *residue<sub>유수</sub>*라 하고
@@ -48,13 +48,13 @@ $$\oint_\gamma f(z)\dd{z} = 2\pi i \sum_{j=1}^{k} n(\gamma, z_j)\operatorname{Re
 :::
 
 ::: 증명
-각 $z_j$에서 $f$의 Laurent 전개의 주부를 $P_j(z) = \sum_{n=1}^{\infty} a_{-n}^{(j)}(z - z_j)^{-n}$이라 하자. 변수 $w = 1/(z - z_j)$에 대하여 $P_j$는 $w$의 멱급수이고, 이 멱급수는 $\lvert w\rvert > 1/R_j$인 점에서 수렴한다. 멱급수가 한 점에서 수렴하면 그 점보다 절댓값이 작은 모든 점에서 수렴하므로 $P_j$는 모든 $w \in \mathbb{C}$에서, 곧 $\mathbb{C} \setminus \{z_j\}$에서 수렴하고 그곳에서 holomorphic이다. 또 $\mathbb{C} \setminus \{z_j\}$의 임의의 compact 집합 위에서 균등수렴한다.
+각 $z_j$에서 $f$의 Laurent expansion의 주부를 $P_j(z) = \sum_{n=1}^{\infty} a_{-n}^{(j)}(z - z_j)^{-n}$이라 하자. 변수 $w = 1/(z - z_j)$에 대하여 $P_j$는 $w$의 멱급수이고, 이 멱급수는 $\lvert w\rvert > 1/R_j$인 점에서 수렴한다. 멱급수가 한 점에서 수렴하면 그 점보다 절댓값이 작은 모든 점에서 수렴하므로 $P_j$는 모든 $w \in \mathbb{C}$에서, 곧 $\mathbb{C} \setminus \{z_j\}$에서 수렴하고 그곳에서 holomorphic이다. 또 $\mathbb{C} \setminus \{z_j\}$의 임의의 compact set 위에서 균등수렴한다.
 
-함수 $g = f - \sum_{j=1}^{k} P_j$를 생각한다. $z_j$의 구멍 뚫린 근방에서 $f - P_j$는 Laurent 전개의 regular part이므로 $z_j$까지 holomorphic으로 확장되고, 나머지 $P_\ell$ ($\ell \neq j$)은 $z_j$에서 holomorphic이다. 따라서 $g$의 모든 $z_j$는 removable singularity이며, $g$는 $\Omega$ 전체에서 holomorphic인 함수로 확장된다. $\Omega$가 단순연결이므로 [§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="81yjw" }에 의하여 $\oint_\gamma g\dd{z} = 0$이고, 따라서
+함수 $g = f - \sum_{j=1}^{k} P_j$를 생각한다. $z_j$의 구멍 뚫린 근방에서 $f - P_j$는 Laurent expansion의 regular part이므로 $z_j$까지 holomorphic으로 확장되고, 나머지 $P_\ell$ ($\ell \neq j$)은 $z_j$에서 holomorphic이다. 따라서 $g$의 모든 $z_j$는 removable singularity이며, $g$는 $\Omega$ 전체에서 holomorphic인 함수로 확장된다. $\Omega$가 단순연결이므로 [§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8){: data-lid="81yjw" }에 의하여 $\oint_\gamma g\dd{z} = 0$이고, 따라서
 
 $$\oint_\gamma f(z)\dd{z} = \sum_{j=1}^{k}\oint_\gamma P_j(z)\dd{z}$$
 
-이다. $\gamma$의 자취는 $z_j$를 포함하지 않는 compact 집합이므로 $P_j$의 급수는 그 위에서 균등수렴하고, 항별로 적분할 수 있다. $n \geq 2$이면 $(z - z_j)^{-n}$은 $\mathbb{C} \setminus \{z_j\}$에서 원시함수 $(z - z_j)^{1-n}/(1-n)$을 가지므로 닫힌 경로 위의 적분이 $0$이다. $n = 1$인 항은 회전수의 정의에 의하여 $\oint_\gamma (z - z_j)^{-1}\dd{z} = 2\pi i\cdot n(\gamma, z_j)$를 준다. 그러므로 $\oint_\gamma P_j\dd{z} = 2\pi i\cdot n(\gamma, z_j) a_{-1}^{(j)}$이고, 이를 $j$에 대해 더하면 된다.
+이다. $\gamma$의 자취는 $z_j$를 포함하지 않는 compact set이므로 $P_j$의 급수는 그 위에서 균등수렴하고, 항별로 적분할 수 있다. $n \geq 2$이면 $(z - z_j)^{-n}$은 $\mathbb{C} \setminus \{z_j\}$에서 원시함수 $(z - z_j)^{1-n}/(1-n)$을 가지므로 닫힌 경로 위의 적분이 $0$이다. $n = 1$인 항은 회전수의 정의에 의하여 $\oint_\gamma (z - z_j)^{-1}\dd{z} = 2\pi i\cdot n(\gamma, z_j)$를 준다. 그러므로 $\oint_\gamma P_j\dd{z} = 2\pi i\cdot n(\gamma, z_j) a_{-1}^{(j)}$이고, 이를 $j$에 대해 더하면 된다.
 :::
 
 회전수는 경로 밖의 singular point를 걸러 낸다. $\gamma$가 단순닫힌곡선이고 반시계방향이면 안쪽 점의 회전수는 $1$, 바깥쪽 점의 회전수는 $0$이므로 공식은 안쪽 singular point의 residue 합에 $2\pi i$를 곱한 꼴이 된다. 반시계방향이 아니면 부호가 바뀐다. 시계방향 경로에서는 안쪽 점의 회전수가 $-1$이다.
@@ -63,7 +63,7 @@ $$\oint_\gamma f(z)\dd{z} = \sum_{j=1}^{k}\oint_\gamma P_j(z)\dd{z}$$
 
 ## 극에서의 유수 계산
 
-residue의 정의대로 Laurent 전개 전체를 구하는 것은 번거롭다. 극에서는 주부가 유한합이므로 곱하고 미분하는 것만으로 $a_{-1}$을 얻는다. $z_0$가 order $m$인 극이라는 것은 $a_{-m} \neq 0$이고 $n < -m$에서 $a_n = 0$이라는 뜻이다.
+residue의 정의대로 Laurent expansion 전체를 구하는 것은 번거롭다. 극에서는 주부가 유한합이므로 곱하고 미분하는 것만으로 $a_{-1}$을 얻는다. $z_0$가 order $m$인 극이라는 것은 $a_{-m} \neq 0$이고 $n < -m$에서 $a_n = 0$이라는 뜻이다.
 
 ::: 명제 3 (극에서의 유수)
 $m \geq 1$이고 $(z - z_0)^m f(z)$가 $z_0$에서 holomorphic으로 확장된다고 하자. 곧 $z_0$는 order가 $m$ 이하인 극이거나 removable singularity이다. 그럼
@@ -78,7 +78,7 @@ $$\operatorname{Res}_{z = z_0}\frac{g}{h} = \frac{g(z_0)}{h'(z_0)}$$
 :::
 
 ::: 증명
-가정에서 $a_n = 0$ ($n < -m$)이므로 $(z - z_0)^m f(z) = \sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$이다. 이는 $z_0$에서 holomorphic인 함수의 Taylor 전개이고, Taylor 계수는 [§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="w4er4" }에 의하여 도함수로 주어진다. $a_{-1}$은 $k = m - 1$인 항의 계수이므로
+가정에서 $a_n = 0$ ($n < -m$)이므로 $(z - z_0)^m f(z) = \sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$이다. 이는 $z_0$에서 holomorphic인 함수의 Taylor expansion이고, Taylor 계수는 [§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1){: data-lid="w4er4" }에 의하여 도함수로 주어진다. $a_{-1}$은 $k = m - 1$인 항의 계수이므로
 
 $$a_{-1} = \frac{1}{(m-1)!}\frac{d^{m-1}}{\dd{z}^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]\bigg\rvert_{z = z_0}$$
 
@@ -98,12 +98,12 @@ $$\operatorname{Res}_{z = i} f = \frac{d}{\dd{z}}(z + i)^{-2}\bigg\rvert_{z = i}
 
 $$\operatorname{Res}_{z = 0} f = \frac{1}{2!}\frac{d^2}{\dd{z}^2}(e^z - 1)\bigg\rvert_{z = 0} = \frac{1}{2}$$
 
-이다. 실제 Laurent 전개는 $f(z) = z^{-2} + 1/2z^{-1} + 1/6 + \cdots$이므로 order는 $2$이고, $m = 3$이 order보다 크지만 같은 값이 나온다. $m = 1$을 쓰면 $z f(z) = (e^z - 1)/z^2$이 $z \rightarrow 0$에서 발산하여 공식이 적용되지 않는다.
+이다. 실제 Laurent expansion은 $f(z) = z^{-2} + 1/2z^{-1} + 1/6 + \cdots$이므로 order는 $2$이고, $m = 3$이 order보다 크지만 같은 값이 나온다. $m = 1$을 쓰면 $z f(z) = (e^z - 1)/z^2$이 $z \rightarrow 0$에서 발산하여 공식이 적용되지 않는다.
 :::
 
 ## Essential singularity의 residue
 
-essential singularity에서는 Laurent 전개의 음의 거듭제곱 항이 무한히 많으므로 [명제 3](#prop3){: data-lid="abnce" }의 어떤 $m$도 조건을 만족하지 않는다. 가령 $e^{1/z}$에 대하여 $z^m e^{1/z}$은 $z \rightarrow 0^+$에서 모든 $m$에 대하여 발산한다. 이 경우 residue는 Laurent 전개를 직접 구해서 $z^{-1}$의 계수를 읽어 내야 한다. $e^{1/z} = \sum_{n=0}^{\infty} z^{-n}/n!$이므로 $\operatorname{Res}_{z = 0} e^{1/z} = 1$이고, 따라서 $\oint_{\lvert z\rvert = 1} e^{1/z}\dd{z} = 2\pi i$이다.
+essential singularity에서는 Laurent expansion의 음의 거듭제곱 항이 무한히 많으므로 [명제 3](#prop3){: data-lid="abnce" }의 어떤 $m$도 조건을 만족하지 않는다. 가령 $e^{1/z}$에 대하여 $z^m e^{1/z}$은 $z \rightarrow 0^+$에서 모든 $m$에 대하여 발산한다. 이 경우 residue는 Laurent expansion을 직접 구해서 $z^{-1}$의 계수를 읽어 내야 한다. $e^{1/z} = \sum_{n=0}^{\infty} z^{-n}/n!$이므로 $\operatorname{Res}_{z = 0} e^{1/z} = 1$이고, 따라서 $\oint_{\lvert z\rvert = 1} e^{1/z}\dd{z} = 2\pi i$이다.
 
 ::: 예시 5 (두 멱급수의 곱)
 $f(z) = e^{z + 1/z}$은 $z = 0$에서 essential singularity를 가진다. $e^z$와 $e^{1/z}$는 각각 $z \neq 0$에서 절대수렴하는 급수 $\sum_a z^a/a!$와 $\sum_b z^{-b}/b!$로 전개되므로, 두 급수의 곱을 항의 순서와 무관하게 전개할 수 있다.
@@ -119,7 +119,7 @@ $$\operatorname{Res}_{z = 0} f = \sum_{a=0}^{\infty}\frac{1}{a!(a+1)!} = 1 + \fr
 
 ## 무한대에서의 유수
 
-$f$가 어떤 $R > 0$에 대하여 $\lvert z\rvert > R$에서 holomorphic이면 $\lvert z\rvert > R$에서 $f(z) = \sum_{n=-\infty}^{\infty} a_n z^n$인 Laurent 전개가 성립한다. 이 경우 $\infty$를 $f$의 isolated singularity로 취급하여 residue를 정의한다. 정의에서 부호를 주의해야 한다.
+$f$가 어떤 $R > 0$에 대하여 $\lvert z\rvert > R$에서 holomorphic이면 $\lvert z\rvert > R$에서 $f(z) = \sum_{n=-\infty}^{\infty} a_n z^n$인 Laurent expansion이 성립한다. 이 경우 $\infty$를 $f$의 isolated singularity로 취급하여 residue를 정의한다. 정의에서 부호를 주의해야 한다.
 
 ::: 정의 6 (무한대에서의 유수)
 $f$가 $\lvert z\rvert > R$에서 holomorphic이고 그곳에서 $f(z) = \sum_{n} a_n z^n$이라 하자. $f$의 *무한대에서의 residue*를

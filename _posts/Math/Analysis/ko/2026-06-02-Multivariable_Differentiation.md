@@ -19,7 +19,7 @@ published: false
 
 ## 전미분
 
-$\mathbb{R}^n$과 $\mathbb{R}^m$에는 Euclid 노름 $\lVert\cdot\rVert$를 쓴다. 선형사상 $L:\mathbb{R}^n\to\mathbb{R}^m$의 행렬을 $(L_{ij})$라 하면 [\[선형대수학\] §내적공간, ⁋명제 3](/ko/math/linear_algebra/inner_product_spaces#prop3){: data-lid="75iso" }에 의해 $\lVert Lx\rVert^2=\sum_i\bigl(\sum_j L_{ij}x_j\bigr)^2\le\bigl(\sum_{i,j}L_{ij}^2\bigr)\lVert x\rVert^2$이므로, 모든 $x$에 대해 $\lVert Lx\rVert\le M\lVert x\rVert$인 상수 $M$이 존재한다. 이런 $M$ 중 최솟값을 $\lVert L\rVert$로 적는다. 정의에 의해 $\lVert Lx\rVert\le\lVert L\rVert\lVert x\rVert$이고, 특히 선형사상은 연속이다.
+$\mathbb{R}^n$과 $\mathbb{R}^m$에는 Euclidean norm $\lVert\cdot\rVert$를 쓴다. 선형사상 $L:\mathbb{R}^n\to\mathbb{R}^m$의 행렬을 $(L_{ij})$라 하면 [\[선형대수학\] §내적공간, ⁋명제 3](/ko/math/linear_algebra/inner_product_spaces#prop3){: data-lid="75iso" }에 의해 $\lVert Lx\rVert^2=\sum_i\bigl(\sum_j L_{ij}x_j\bigr)^2\le\bigl(\sum_{i,j}L_{ij}^2\bigr)\lVert x\rVert^2$이므로, 모든 $x$에 대해 $\lVert Lx\rVert\le M\lVert x\rVert$인 상수 $M$이 존재한다. 이런 $M$ 중 최솟값을 $\lVert L\rVert$로 적는다. 정의에 의해 $\lVert Lx\rVert\le\lVert L\rVert\lVert x\rVert$이고, 특히 선형사상은 연속이다.
 
 ::: 정의 1
 $U\subseteq\mathbb{R}^n$이 열린집합이고 $a\in U$라 하자. 함수 $f:U\to\mathbb{R}^m$이 $a$에서 *미분가능<sub>differentiable</sub>*하다는 것은 선형사상 $L:\mathbb{R}^n\to\mathbb{R}^m$이 존재하여

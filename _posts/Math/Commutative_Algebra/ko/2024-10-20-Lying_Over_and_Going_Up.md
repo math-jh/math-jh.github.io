@@ -81,9 +81,9 @@ Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이
 2. $b\in\mathfrak{p}B$를 만족하는 $A$의 prime ideal $\mathfrak{p}$가 주어지면, $f_b$의 최고차항 계수가 아닌 계수들은 모두 $\mathfrak{p}$에 속한다.
 :::
 ::: 증명
-$b$가 integral이므로 $b$를 해로 갖는 monic 다항식 $g\in A[\x]$가 존재한다. $K[\x]$에서 $f_b\mid g$이며, $f_b$의 해들은 모두 $g$의 해여서 $A$ 위에서 integral이다. 따라서 이 해들의 대칭식인 $f_b$의 계수들도 $A$ 위에서 integral이고, $A$가 integrally closed이므로 $A$에 속한다.
+$b$가 integral이므로 $b$를 해로 갖는 monic polynomial $g\in A[\x]$가 존재한다. $K[\x]$에서 $f_b\mid g$이며, $f_b$의 해들은 모두 $g$의 해여서 $A$ 위에서 integral이다. 따라서 이 해들의 대칭식인 $f_b$의 계수들도 $A$ 위에서 integral이고, $A$가 integrally closed이므로 $A$에 속한다.
 
-이제 $b\in\mathfrak{p}B$라 하자. $b=\sum_i p_i b_i$ ($p_i\in\mathfrak{p}, b_i\in B$)라 적고, $b_i$들이 생성하는 $B$의 $A$-subalgebra를 $B'$라 하면 $B'$은 finitely generated $A$-module이다. $b\in\mathfrak{p}B'$이므로 [§정수적 확장, ⁋정리 1](/ko/math/commutative_algebra/integral_extension#thm1){: data-lid="yzem3" }에 의하여 $b$를 해로 갖고 최고차항이 아닌 계수들이 모두 $\mathfrak{p}$에 속하는 monic 다항식 $g\in A[\x]$를 얻는다. 앞서 보인 바에 의해 $h=g/f_b\in A[\x]$이고, $g=f_b h$를 $\mathfrak{p}$로 나누면 $(A/\mathfrak{p})[\x]$에서 $\x^{\deg g}=\overline{f_b}\overline{h}$가 된다. $A/\mathfrak{p}$가 domain이므로 $\overline{f_b}$는 $\x$의 거듭제곱이어야 하며, 이는 $f_b$의 최고차항 계수가 아닌 계수들이 $\mathfrak{p}$에 속함을 뜻한다.
+이제 $b\in\mathfrak{p}B$라 하자. $b=\sum_i p_i b_i$ ($p_i\in\mathfrak{p}, b_i\in B$)라 적고, $b_i$들이 생성하는 $B$의 $A$-subalgebra를 $B'$라 하면 $B'$은 finitely generated $A$-module이다. $b\in\mathfrak{p}B'$이므로 [§정수적 확장, ⁋정리 1](/ko/math/commutative_algebra/integral_extension#thm1){: data-lid="yzem3" }에 의하여 $b$를 해로 갖고 최고차항이 아닌 계수들이 모두 $\mathfrak{p}$에 속하는 monic polynomial $g\in A[\x]$를 얻는다. 앞서 보인 바에 의해 $h=g/f_b\in A[\x]$이고, $g=f_b h$를 $\mathfrak{p}$로 나누면 $(A/\mathfrak{p})[\x]$에서 $\x^{\deg g}=\overline{f_b}\overline{h}$가 된다. $A/\mathfrak{p}$가 domain이므로 $\overline{f_b}$는 $\x$의 거듭제곱이어야 하며, 이는 $f_b$의 최고차항 계수가 아닌 계수들이 $\mathfrak{p}$에 속함을 뜻한다.
 :::
 
 ::: 정리 6 (Going down)

@@ -136,7 +136,7 @@ Ring $A$에 대하여 $n\times n$ matrix ring $\Mat_n(A)$를 생각하자. $E_{i
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
-를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4){: data-lid="fwck4" }에 의해 left module 분해
+를 만족하므로 orthogonal idempotent의 complete set이다. 따라서 [명제 4](#prop4){: data-lid="fwck4" }에 의해 left module decomposition
 
 $$\Mat_n(A)=\Mat_n(A)E_{11}\oplus\cdots\oplus \Mat_n(A)E_{nn}$$
 
