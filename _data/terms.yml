@@ -17000,6 +17000,13 @@ R:
     id: rank
   - label: Vector bundle
     id: vector_bundle
+- id: rank_theorem
+  en: rank theorem
+  ko: 계수 정리
+  primary: en
+  defs:
+  - label: '[미분다양체] §부분다양체와 역함수 정리'
+    url: /ko/math/manifolds/submanifolds
 - id: ratio_test
   en: ratio test
   ko: 비판정
