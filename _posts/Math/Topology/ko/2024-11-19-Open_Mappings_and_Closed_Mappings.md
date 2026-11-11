@@ -64,7 +64,7 @@ $$f\vert_{f^{-1}(A)}(U\cap f^{-1}(A))=f(U)\cap A$$
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-으로 정의하자. 그럼 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$이 성립하고, 따라서 가정에 의하여 $f(U)\cap A_i$가 모든 $i$에 대해 열린집합 (resp. 닫힌집합)이다. 따라서 만일 $U$가 열린집합이라면 $f(U)$는 열린집합들의 합집합이므로 열린집합이고, $U$가 닫힌집합이면 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4){: data-lid="ej1v1" }에 의하여 닫힌집합이 된다. 
+으로 정의하자. 그럼 $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$이 성립하고, 따라서 가정에 의하여 $f(U)\cap A_i$가 모든 $i$에 대해 $A_i$의 열린집합 (resp. 닫힌집합)이다. (1)의 경우 각 $A_i$가 닫힌집합이므로, $U$가 닫힌집합이면 $f(U)\cap A_i$들이, $U$가 열린집합이면 $A_i\setminus f(U)$들이 $Y$의 닫힌집합들의 locally finite family를 이룬다. 따라서 [§집합의 내부, 폐포, 경계, ⁋명제 4](/ko/math/topology/other_concepts#prop4){: data-lid="ej1v1" }에 의하여 이들의 합집합 $f(U)$ 또는 $Y\setminus f(U)$가 닫힌집합이다. (2)의 경우 각 $\interior A_i$가 열린집합이므로, $U$가 열린집합이면 $f(U)\cap\interior A_i$들이, $U$가 닫힌집합이면 $(\interior A_i)\setminus f(U)$들이 $Y$의 열린집합이 되고, 이들의 합집합 $f(U)$ 또는 $Y\setminus f(U)$가 열린집합이다. 
 :::
 
 ## 동치관계들

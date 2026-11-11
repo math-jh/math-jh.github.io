@@ -66,7 +66,7 @@ The second result can be proved similarly. In $X$, let an open set (resp. closed
 
 $$U_i=U\cap f^{-1}(A_i)$$
 
-Then $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$ holds, and thus by assumption $f(U)\cap A_i$ is an open set (resp. closed set) for all $i$. Therefore, if $U$ is an open set, then $f(U)$ is a union of open sets and hence open, and if $U$ is a closed set, then by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-lid="ej1v1" } it is a closed set. 
+Then $f\vert_{f^{-1}(A_i)}(U_i)=f(U)\cap A_i$ holds, and thus by assumption $f(U)\cap A_i$ is an open set (resp. closed set) of $A_i$ for all $i$. In the case of (1), since each $A_i$ is a closed set, the sets $f(U)\cap A_i$ if $U$ is a closed set, or the sets $A_i\setminus f(U)$ if $U$ is an open set, form a locally finite family of closed sets of $Y$. Therefore, by [§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4){: data-lid="ej1v1" }, their union $f(U)$ or $Y\setminus f(U)$ is a closed set. In the case of (2), since each $\interior A_i$ is an open set, the sets $f(U)\cap\interior A_i$ if $U$ is an open set, or the sets $(\interior A_i)\setminus f(U)$ if $U$ is a closed set, are open sets of $Y$, and their union $f(U)$ or $Y\setminus f(U)$ is an open set. 
 :::
 
 ## Equivalence Relations
