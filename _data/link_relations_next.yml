@@ -29,7 +29,7 @@
 "0b681": {relation: weak, reviewed: true}
 "0bvq4": {relation: required, reviewed: true}
 "0c0mf": {relation: required, reviewed: true}
-"0c0wa": {relation: weak, reviewed: true}
+"0c0wa": {relation: required, reviewed: true}
 "0cs6t": {relation: required, reviewed: true}
 "0d3dl": {relation: required, reviewed: true}
 "0dei6": {relation: weak, reviewed: true}
@@ -2983,7 +2983,7 @@
 "ynxf2": {relation: weak, reviewed: true}
 "ynyr4": {relation: weak, reviewed: true}
 "york4": {relation: required, reviewed: true}
-"ypm19": {relation: weak, reviewed: true}
+"ypm19": {relation: required, reviewed: true}
 "yqcdt": {relation: weak, reviewed: true}
 "yr2k6": {relation: weak, reviewed: true}
 "yr4si": {relation: required, reviewed: true}
