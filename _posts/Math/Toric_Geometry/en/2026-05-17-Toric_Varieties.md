@@ -1,6 +1,6 @@
 ---
 title: "Definition of Toric Varieties"
-description: "We explore how general toric varieties are constructed by gluing affine toric varieties that share faces corresponding to strictly convex polyhedral cones. We also examine the definition and properties of fans, the underlying combinatorial structures."
+description: "We cover the process of constructing general toric varieties by gluing affine toric varieties corresponding to strictly convex polyhedral cones along shared faces. We also examine the definition and properties of fans, which are combinatorial structures."
 excerpt: "General toric varieties obtained by gluing affine toric varieties from a fan"
 
 categories: [Math / Toric Geometry]
@@ -13,53 +13,54 @@ date: 2026-05-17
 weight: 2
 translated_at: 2026-06-03T11:00:03+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-03T11:00:03+00:00
+last_polished_at: 2026-11-11T11:15:06+00:00
+translation_polish_source: antigravity-gemini-3.8-flash-high
 ---
-The affine toric variety defined in [§Affine Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/affine_toric_varieties#def5){: data-lid="ervm0" } is the algebraic variety $U_\tau$ corresponding to a single strongly convex rational polyhedral cone $\tau$. As we saw in [§Affine Toric Varieties, ⁋Example 14](/en/math/toric_geometry/affine_toric_varieties#ex14){: data-lid="99419" }, this can be regarded as an algebraic variety equipped with a torus action structure, and by definition it is the $\Spec$ of a suitable ring, hence an affine variety.
+The affine toric variety defined in [§Affine Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/affine_toric_varieties#def5){: data-lid="ervm0" } is, corresponding to a single strongly convex rational polyhedral cone $\tau$, the algebraic variety $U_\tau$. As we saw in [§Affine Toric Varieties, ⁋Example 14](/en/math/toric_geometry/affine_toric_varieties#ex14){: data-lid="99419" }, this can be regarded as an algebraic variety equipped with a torus action structure, and by definition it is the $\Spec$ of a suitable ring, hence an affine variety. 
 
-In this post we examine how a general toric variety is obtained by gluing affine toric varieties. Specifically, we saw that the affine toric variety $U_\tau$ corresponding to a face $\tau$ of a cone $\sigma$ is a principal open subset of $U_\sigma$ ([§Affine Toric Varieties, ⁋Proposition 13](/en/math/toric_geometry/affine_toric_varieties#prop13){: data-lid="in64a" }); equivalently, if two cones share a common face, this yields inclusions between the affine toric varieties they define, and thus allows us to perform gluing.
+In this post, we will examine the process of gluing affine toric varieties to obtain a general toric variety. Specifically, we saw that for a cone $\sigma$, the affine toric variety corresponding to a face $\tau$, $U_\tau$, is a principal open set of $U_\sigma$ ([§Affine Toric Varieties, ⁋Proposition 13](/en/math/toric_geometry/affine_toric_varieties#prop13){: data-lid="in64a" }); in other words, if two cones share a face, this will also define inclusions into the affine toric varieties defined by each cone, and thus allows us to perform gluing.
 
 ## Definition of a Fan
 
-To glue affine toric varieties together as above, we need a combinatorial structure controlling how the individual cones meet one another. For this purpose we define a *fan*.
+To glue affine toric varieties together as above, we need a combinatorial structure controlling how the individual cones meet one another. For this purpose, we define a *fan*.
 
 ::: Definition 1
-Given a lattice $N$, a *fan* $\Sigma$ in $N_\mathbb{R}$ is a collection of strongly convex rational polyhedral cones satisfying the following conditions:
+For a lattice $N$, a *fan* defined in $N_\mathbb{R}$, $\Sigma$, is a finite collection of strongly convex rational polyhedral cones satisfying the following conditions:
 
-1. Every face of a cone in $\Sigma$ also belongs to $\Sigma$.
-2. The intersection of any two cones in $\Sigma$ is a face of each.
+1. For any cone in $\Sigma$, $\tau$, each face also belongs to $\Sigma$.
+2. For any two cones in $\Sigma$, $\tau_1, \tau_2$, the intersection $\tau_1 \cap \tau_2$ is a face of each.
 :::
 
-The second condition is what makes the gluing process described above work in [Definition 3](#def3){: data-lid="8wf61" }; it forces two distinct cones $\tau_1, \tau_2$ to meet only along their common face. The first condition, meanwhile, can be viewed as a kind of closedness, since a fan contains all faces of each of its cones.
+The second condition is needed when gluing through the above process in [Definition 3](#def3){: data-lid="8wf61" }, and forces two distinct cones $\tau_1, \tau_2$ to meet only along their common face. Meanwhile, the first condition can be viewed as requiring a kind of closedness, since a fan contains all faces of each cone.
 
 ::: Example 2
-In $N = \mathbb{Z}^2$, we can consider a fan consisting of three 2-dimensional cones $\tau_0, \tau_1, \tau_2$ arranged radially about the origin and covering $\mathbb{R}^2$. For instance, take the three vectors $e_1, e_2, -e_1-e_2$ and consider the three cones they generate.
+In $N = \mathbb{Z}^2$, we can consider a fan where three 2-dimensional cones $\tau_0, \tau_1, \tau_2$ cover $\mathbb{R}^2$ radially about the origin. For instance, consider the three vectors $e_1, e_2, -e_1-e_2$, and then consider the three cones they generate.
 
 {% diagram Math/Toric_Geometry/Toric_Varieties-1.svg width="20em" alt="The fan of $\mathbb{P}^2$" %}
 
-Each cone is generated by two ray generators $\rho_i, \rho_{i+1}$, and these rays become the 1-dimensional cones. The origin $\{0\}$ itself is a 0-dimensional cone contained in every fan. This fan is the most basic example defining the toric variety of $\mathbb{P}^2$.
+Each cone is generated by the rays spanned by two adjacent vectors, and these rays become 1-dimensional cones. The origin $\{0\}$ itself is a 0-dimensional cone, contained in every fan. This fan is the most basic example defining the toric variety of $\mathbb{P}^2$.
 :::
 
 ## Definition of a Toric Variety
 
-Now, given a fan $\Sigma$, we can define an algebraic variety $X_\Sigma$ from it. In fact, all the basic tools needed for this have already been explained; only the language of [Definition 1](#def1){: data-lid="qydeb" } was additionally required. To summarize the construction in precise mathematical terms: given a fan $\Sigma$, for each cone $\tau \in \Sigma$ we obtain the affine toric variety $U_\tau$ by [§Affine Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/affine_toric_varieties#def5){: data-lid="gof5r" }. Then, when two cones $\tau_1, \tau_2 \in \Sigma$ have a common face $\tau_1 \cap \tau_2$, [§Affine Toric Varieties, ⁋Proposition 13](/en/math/toric_geometry/affine_toric_varieties#prop13){: data-lid="aeh6k" } implies that $U_{\tau_1 \cap \tau_2}$ is a principal open subset of both $U_{\tau_1}$ and $U_{\tau_2}$, and thus we have isomorphisms and inclusions
+Now, given a fan $\Sigma$, we can define an algebraic variety $X_\Sigma$ from it. In fact, all the basic tools needed for this have already been explained; only the language of [Definition 1](#def1){: data-lid="qydeb" } was additionally required. To summarize the construction in precise mathematical terms: suppose a fan $\Sigma$ is given, and for each cone $\tau \in \Sigma$, we obtain the affine toric variety $U_\tau$ by [§Affine Toric Varieties, ⁋Definition 5](/en/math/toric_geometry/affine_toric_varieties#def5){: data-lid="gof5r" }. Here, when two cones $\tau_1, \tau_2 \in \Sigma$ have a common face $\tau_1 \cap \tau_2$, by [§Affine Toric Varieties, ⁋Proposition 13](/en/math/toric_geometry/affine_toric_varieties#prop13){: data-lid="aeh6k" }, $U_{\tau_1 \cap \tau_2}$ is a principal open subset of both $U_{\tau_1}$ and $U_{\tau_2}$, and therefore between them an isomorphism and inclusions
 
 $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subseteq U_{\tau_2}$$
 
-which allow us to glue the $U_\tau$ together.
+exist, through which we can glue the $U_\tau$ together.
 
 ::: Definition 3
 Given a fan $\Sigma$, the algebraic variety obtained by gluing the affine toric varieties $\{U_\tau\}_{\tau \in \Sigma}$ in the manner described above is called the *toric variety* defined by $\Sigma$, and is denoted $X_\Sigma$.
 :::
 
-The following generalizes [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="ovrqb" }.
+Then the following generalizes [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="ovrqb" }.
 
 ::: Proposition 4
 The toric variety $X_\Sigma$ is a normal, separated algebraic variety.
 :::
 
 ::: Proof
-The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="z2vns" }, and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$ is closed. On each affine chart this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
+The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15){: data-lid="z2vns" }, and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$ is closed. On each affine chart, this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
 :::
 
 One important property that the toric variety $X_\Sigma$ inherits from the affine toric varieties is that it contains the algebraic torus $T_N$ as an open dense subset ([§Affine Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/affine_toric_varieties#prop11){: data-lid="q2dhu" }). Indeed, the affine chart $U_{\{0\}}$ corresponding to the 0-dimensional cone $\{0\} \in \Sigma$ is isomorphic to $T_N$, and every other $U_\tau$ contains it as an open subset. Hence $T_N \subseteq X_\Sigma$ defines an open dense embedding.
@@ -67,25 +68,25 @@ One important property that the toric variety $X_\Sigma$ inherits from the affin
 As we saw in [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="wpec5" }, each affine toric variety $U_\tau$ carries a natural action of the algebraic torus $T_N$. In that post we observed that the inclusion between affine toric varieties induced by an inclusion of cones is invariant under the torus action, so this action extends to all of $X_\Sigma$ via gluing.
 
 ::: Proposition 5
-For any fan $\Sigma$, a natural action of the algebraic torus $T_N$ is defined on the toric variety $X_\Sigma$. Under this action, $T_N \subseteq X_\Sigma$ is an open dense $T_N$-invariant subset, and the action of $T_N$ on itself extends to the action on $X_\Sigma$.
+For any fan $\Sigma$, on the toric variety $X_\Sigma$, an action of the algebraic torus $T_N$ is naturally defined. Under this action, $T_N \subseteq X_\Sigma$ is an open dense $T_N$-invariant subset, and the action of $T_N$ on itself defined on it extends to the action on $X_\Sigma$.
 :::
 
 ::: Proof
-For each cone $\tau \in \Sigma$, the $T_N$-action on $U_\tau$ is defined by [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="l2wmx" }. Since these actions agree on the intersection $U_{\tau_1 \cap \tau_2}$ of two affine charts $U_{\tau_1}$ and $U_{\tau_2}$, they define a well-defined $T_N$-action on all of $X_\Sigma$. Meanwhile, the chart $U_{\{0\}} \cong T_N$ corresponding to $\{0\} \in \Sigma$ is an open dense subset, and the self-action of $T_N$ is given by left multiplication on this chart, so it extends naturally to the action on $X_\Sigma$.
+For each cone $\tau \in \Sigma$, on $U_\tau$, the $T_N$-action is defined by [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="l2wmx" }. Since for the two affine charts $U_{\tau_1}$ and $U_{\tau_2}$, these actions agree on the intersection $U_{\tau_1 \cap \tau_2}$, they define on all of $X_\Sigma$ a well-defined $T_N$-action. Meanwhile, corresponding to $\{0\} \in \Sigma$, the chart $U_{\{0\}} \cong T_N$ is an open dense subset, and the action of $T_N$ on itself is given by left multiplication on this chart, so it extends naturally to the action on $X_\Sigma$.
 :::
 
-If a fan $\Sigma$ satisfies $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$, we call it a *complete* fan. In this case $X_\Sigma$ is known to be a *complete* algebraic variety, i.e., a variety proper over $\Spec(\mathbb{C})$. Since completeness is the algebraic analogue of compactness, in this case we call $X_\Sigma$ an *equivariant compactification* of $T_N$.
+If a fan $\Sigma$ satisfies $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$, we call it a *complete* fan. In this case $X_\Sigma$ is known to be a *complete* algebraic variety, i.e., a variety proper over $\Spec(\mathbb{C})$. Since completeness is the concept corresponding to compactness in algebraic geometry, in this case we call $X_\Sigma$ an *equivariant compactification* of $T_N$.
 
-The structure of the orbits under this action is closely related to the combinatorics of the fan. Specifically, the orbit $O(\tau)$ corresponding to a $d$-dimensional cone $\tau \in \Sigma$ is isomorphic to a torus $(\mathbb{C}^\ast)^{n-d}$ of dimension $n-d$; in particular, the orbit corresponding to an $n$-dimensional cone, i.e., a maximal cone, is 0-dimensional, hence a fixed point of the $T_N$-action.
+The structure of the orbits under this action is closely related to the combinatorics of the fan. Specifically, for a $d$-dimensional cone $\tau \in \Sigma$, the corresponding orbit $O(\tau)$ is isomorphic to a torus of dimension $n-d$, $(\mathbb{C}^\ast)^{n-d}$, and in particular, the orbit corresponding to an $n$-dimensional cone is 0-dimensional, that is, a fixed point of the $T_N$-action.
 
 ## The Normal Fan and Projective Toric Varieties
 
-So far we have examined how to construct a toric variety $X_\Sigma$ from an arbitrary fan $\Sigma$. Now we discuss a special kind of fan: the *normal fan* naturally associated to a polytope. This is the key construction for producing projective toric varieties.
+So far, we have examined how to construct, from an arbitrary fan $\Sigma$, a toric variety $X_\Sigma$. Now we discuss a special kind of fan, namely the *normal fan* naturally obtained from a polytope. This is a key method for constructing projective toric varieties.
 
-Let $N$ be the dual lattice of a lattice $M$, and let $P$ be a full-dimensional convex lattice polytope in $M_\mathbb{R}$. For each facet $F^\prime$ of $P$, among the elements of $N$ perpendicular to the hyperplane determined by $F^\prime$ and pointing toward the interior of $P$, the unique lattice vector that cannot be written in the form $v = k v^\prime$ with $k > 1$ an integer and $v^\prime \in N$ is called the *primitive inner normal vector* $u_{F^\prime} \in N$ of $F^\prime$.
+Let $M$ be a lattice with dual lattice $N$, and consider in $M_\mathbb{R}$ a full-dimensional convex lattice polytope $P$. For each facet of $P$, $F^\prime$, among the elements perpendicular to the hyperplane determined by $F^\prime$ and pointing toward the interior of the polytope $P$ in $N$, the unique lattice vector that cannot be decomposed into the form $v = k v^\prime$ ($k > 1$ an integer, $v^\prime \in N$) is called the *primitive inner normal vector* of $F^\prime$, $u_{F^\prime} \in N$.
 
 ::: Definition 6
-The *normal fan* $\Sigma_P$ of a polytope $P$ is defined as the collection of cones $\tau_F$, one for each face $F$ of $P$, where $\tau_F$ is generated by the primitive inner normal vectors $u_{F^\prime}$ of all facets $F^\prime$ containing $F$:
+For a polytope $P$, the *normal fan* $\Sigma_P$ is defined as the collection where, for each face of $P$, $F$, and for all facets containing $F$, $F^\prime$, the primitive inner normal vectors $u_{F^\prime}$ generate the cone $\tau_F$:
 
 $$\Sigma_P = \{\tau_F \mid F \text{ is a face of } P\}$$
 :::
@@ -97,65 +98,65 @@ The collection $\Sigma_P$ obtained from the definition above is indeed a fan. Th
 :::
 
 ::: Proof
-Any element $\tau_F$ of $\Sigma_P$ is generated by $\mathbb{R}_{\ge 0}$-linear combinations of primitive inner normal vectors, so it is a strongly convex rational polyhedral cone. First, let us verify the face condition. A face of $\tau_F$ corresponds to a face $F^\prime \supseteq F$ containing $F$, and this yields $\tau_{F^\prime} \in \Sigma_P$, so the first condition is satisfied. Consider the intersection of two cones $\tau_{F_1}, \tau_{F_2} \in \Sigma_P$. The intersection $\tau_{F_1} \cap \tau_{F_2}$ equals the cone $\tau_F$ corresponding to the smallest face $F$ containing both $F_1$ and $F_2$. This is a face of both $\tau_{F_1}$ and $\tau_{F_2}$, so the second condition is also satisfied.
+In $\Sigma_P$, any element $\tau_F$ is generated by $\mathbb{R}_{\ge 0}$-linear combinations of primitive inner normal vectors, so it is a strongly convex rational polyhedral cone. First, let us verify the face condition. A face of $\tau_F$ corresponds to an upper face of $F$, namely $F^\prime \supseteq F$, which gives $\tau_{F^\prime} \in \Sigma_P$, so the first condition is satisfied. Consider the intersection of two cones $\tau_{F_1}, \tau_{F_2} \in \Sigma_P$. The intersection $\tau_{F_1} \cap \tau_{F_2}$ is, taking the smallest face containing both $F_1$ and $F_2$ to be $F$, equal to the cone $\tau_F$. This is a face of both $\tau_{F_1}$ and $\tau_{F_2}$, so the second condition is also satisfied.
 :::
 
-Thus the normal fan defines a toric variety $X_{\Sigma_P}$. What we examine next is that the toric variety obtained in this way is not merely a toric variety but a *projective* variety, and furthermore that projective toric varieties are in fact all obtained in this manner. To describe this correspondence precisely, it is useful to first organize the relationship between line bundles on a toric variety and polytopes.
+Thus the normal fan defines a toric variety $X_{\Sigma_P}$. What we examine next is that the toric variety obtained in this way is not merely a toric variety but a *projective* variety, and furthermore that projective toric varieties are in fact all obtained in this manner. To describe this two-way correspondence precisely, it is useful to first organize the relationship between line bundles on a toric variety and polytopes.
 
-As we already saw right after [Proposition 5](#prop5){: data-lid="gywu7" }, the stratum structure of $X_\Sigma$ corresponds to the cones of the fan $\Sigma$. In particular, the 0-dimensional cone $\{0\}$ corresponds to the open dense torus $T_N \subseteq X_\Sigma$, and the 1-dimensional cones $\rho \in \Sigma(1)$ (where $\Sigma(1)$ denotes the set of 1-dimensional cones of $\Sigma$) correspond respectively to codimension-1 $T_N$-invariant prime divisors $D_\rho \subseteq X_\Sigma$. Hence the free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$ describes all $T_N$-invariant Weil divisors on $X_\Sigma$.
+As we already saw right after [Proposition 5](#prop5){: data-lid="gywu7" }, the stratum structure of $X_\Sigma$ corresponds to the cones of the fan $\Sigma$. In particular, the 0-dimensional cone $\{0\}$ corresponds to the open dense torus $T_N \subseteq X_\Sigma$, and the 1-dimensional cones $\rho \in \Sigma(1)$ (where $\Sigma(1)$ denotes the set of 1-dimensional cones of $\Sigma$) correspond respectively to codimension 1 $T_N$-invariant prime divisors $D_\rho \subseteq X_\Sigma$. Hence the free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$ describes all Weil divisors on $X_\Sigma$ that are $T_N$-invariant.
 
 Since we are interested in line bundles on toric varieties, we must focus on *Cartier* divisors. A detailed discussion describing Cartier divisors in the language of piecewise linear functions and relating them to line bundles will be given in the next post, [§Torus-Invariant Divisors and Line Bundles](/en/math/toric_geometry/toric_divisors){: data-lid="b1cx8" }; however, for the purposes of the present discussion we first import the result of [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6){: data-lid="m254d" }.
 
-According to this, a $T_N$-invariant Weil divisor $D = \sum_\rho a_\rho D_\rho$ is Cartier if and only if for each maximal cone $\sigma \in \Sigma$ there exists some $m_\sigma \in M$ such that $a_\rho = -\langle m_\sigma, v_\rho \rangle$ holds for every ray $\rho$ of $\sigma$. Here $v_\rho$ denotes the primitive generator of $\rho$. For such a Cartier divisor $D$, we define a polytope $P_D \subseteq M_\mathbb{R}$ by
+According to this, a $T_N$-invariant Weil divisor $D = \sum_\rho a_\rho D_\rho$ is Cartier if and only if for each maximal cone $\sigma \in \Sigma$ there exists some $m_\sigma \in M$ such that on $\sigma$, every ray $\rho$ satisfies $a_\rho = -\langle m_\sigma, v_\rho \rangle$. Here $v_\rho$ denotes the primitive generator of $\rho$. If, for such a Cartier divisor $D$, we define the polytope $P_D \subseteq M_\mathbb{R}$ by
 
 $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-Then the above compatibility condition corresponds exactly to the vertices of $P_D$ being given by lattice elements $m_\sigma$, and therefore $P_D$ becomes a lattice polytope. Conversely, the process of obtaining the normal fan $\Sigma_P$ from a lattice polytope $P$ is as we saw in [Definition 6](#def6){: data-lid="d6sna" }. This two-way correspondence forms the bridge between the projectivity of a toric variety and polytopes.
+then when $\Sigma$ is complete and $D$ is very ample, the above compatibility corresponds exactly to the vertices of $P_D$ being given by lattice elements $m_\sigma$, and therefore $P_D$ becomes a lattice polytope. Conversely, the process of obtaining from a lattice polytope $P$ the normal fan $\Sigma_P$ is as we saw in [Definition 6](#def6){: data-lid="d6sna" }. These two directions form the bridge between the projectivity of a toric variety and polytopes.
 
 ::: Proposition 8
-The toric variety $X_\Sigma$ is a projective variety if and only if $\Sigma$ is the normal fan of some full-dimensional lattice polytope $P$, i.e., $\Sigma = \Sigma_P$.
+A toric variety $X_\Sigma$ is a projective variety if and only if $\Sigma$ is the normal fan of some full-dimensional lattice polytope $P$, i.e., $\Sigma = \Sigma_P$.
 :::
 
 ::: Proof
-($\Rightarrow$) If $X_\Sigma$ is projective, then there exists a very ample line bundle $\mathcal{L}$ on it, and by the correspondence above this is expressed as a $T_N$-invariant Cartier divisor $D$. As we saw earlier, the resulting $P_D$ is a lattice polytope, and since $\mathcal{L}$ is ample (in particular very ample), the corresponding piecewise linear function $\psi_D$ is strictly convex by [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 9](/en/math/toric_geometry/toric_divisors#prop9){: data-lid="hw06n" }. From this we obtain that the normal fan of $P_D$ coincides with $\Sigma$.
+($\Rightarrow$) If $X_\Sigma$ is projective, then there exists a very ample line bundle $\mathcal{L}$ on it, and by the correspondence above this is expressed as a $T_N$-invariant Cartier divisor $D$. As seen above, the resulting $P_D$ is a lattice polytope, and since $\mathcal{L}$ is ample (in particular very ample), the corresponding piecewise linear function $\psi_D$ is strictly convex by [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 9](/en/math/toric_geometry/toric_divisors#prop9){: data-lid="hw06n" }. From this we obtain that the normal fan of $P_D$ coincides with $\Sigma$.
 
-($\Leftarrow$) Suppose $\Sigma = \Sigma_P$. From the data of the polytope $P$—namely, for each ray $\rho$ the value $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$—we obtain the $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$. Here the fact that each vertex of $P$ is a lattice point exactly satisfies the preceding compatibility condition, making $D_P$ Cartier, and for sufficiently large $k > 0$, the multiple $kD_P$ becomes very ample. Then the Zariski closure of the image of the monomial map $\phi_{kP}: T_N \rightarrow \mathbb{P}^s$ defined by the lattice points of $kP$ is isomorphic to $X_\Sigma$ (see [Proposition 9](#prop9){: data-lid="jpa35" }), so $X_\Sigma$ is projective.
+($\Leftarrow$) Suppose $\Sigma = \Sigma_P$. From the data of the polytope $P$ (namely, for each ray $\rho$, $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$), we obtain the $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$. Here, the fact that each vertex of $P$ is a lattice point precisely satisfies the compatibility condition above so that $D_P$ is Cartier, and for sufficiently large $k > 0$, $kD_P$ becomes very ample. Then, since the Zariski closure of the image of the monomial map $\phi_{kP}: T_N \rightarrow \mathbb{P}^s$ defined by the lattice points of $kP$ is isomorphic to $X_\Sigma$ (see [Proposition 9](#prop9){: data-lid="jpa35" }), $X_\Sigma$ is projective.
 :::
 
-A toric variety $X_\Sigma = X_{\Sigma_P}$ satisfying this equivalence condition is called a *projective toric variety*, and when emphasizing the polytope $P$ it is also written $X_P$. This result is a representative example showing that the geometric properties of a toric variety are completely described by the combinatorial properties of its fan.
+A toric variety $X_\Sigma = X_{\Sigma_P}$ satisfying this equivalence condition is called a *projective toric variety*, and when emphasizing the polytope $P$ it is also written as $X_P$. This result is a representative example showing that the geometric properties of a toric variety are completely described by the combinatorial properties of its fan.
 
-Meanwhile, another method of constructing the projective toric variety $X_P$ from a polytope $P$ is to give an explicit embedding via a monomial map. The key idea is that $T_N$ sits inside $X_P$ as an open dense subset, so if we embed $T_N$ appropriately into $\mathbb{P}^s$, the destination of the remaining points is automatically determined.
+Meanwhile, another method of constructing the projective toric variety $X_P$ from a polytope $P$ is to give an explicit embedding via a monomial map. The key idea is that $T_N$ is contained in $X_P$ as an open dense subset, so if we suitably embed just $T_N$ into $\mathbb{P}^s$, where the remaining part should go is automatically determined.
 
-Consider the lattice points of $P \subseteq M_\mathbb{R}$, i.e., $P \cap M = \{m_0, m_1, \ldots, m_s\}$. Using these we define the monomial map
+Consider the lattice points of $P \subseteq M_\mathbb{R}$, that is, $P \cap M = \{m_0, m_1, \ldots, m_s\}$. Through these, we can define the monomial map
 
 $$\phi_P: T_N \rightarrow \mathbb{P}^s, \qquad t \mapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
-Here $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ is the character corresponding to $m \in M$.
+Here, $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ is the character corresponding to $m \in M$.
 
 ::: Proposition 9
-The Zariski closure of the image of $\phi_P$ defined above is isomorphic to $X_P$. That is, $X_P \cong \overline{\phi_P(T_N)}$.
+If $P$ is a very ample lattice polytope, then the Zariski closure of the image of $\phi_P$ defined above is isomorphic to $X_P$. That is, $X_P \cong \overline{\phi_P(T_N)}$ holds.
 :::
 
 ::: Proof
-When $P$ is a very ample lattice polytope (i.e., when the corresponding divisor $D_P$ on $X_P$ defines a very ample line bundle), the affine chart corresponding to each vertex $v$ has a coordinate ring generated by the monomials $\rchi^{m_i - m_v}$. Here $m_v$ is the lattice point corresponding to the vertex $v$. These affine charts are naturally compatible with the standard affine charts of $\mathbb{P}^s$, and their gluing defines $\overline{\phi_P(T_N)}$. In the general case, choose $k > 0$ such that $kP$ becomes very ample. Since scaling a polytope by a positive integer does not change its normal fan, we have $\Sigma_{kP} = \Sigma_P$ and therefore $X_{kP} = X_P$, and the embedding is defined as above using $kP$.
+When $P$ is a very ample lattice polytope (that is, when the corresponding divisor $D_P$ on $X_P$ defines a very ample line bundle), the affine chart corresponding to each vertex $v$ has a coordinate ring generated by the monomials $\rchi^{m_i - m_v}$. Here, $m_v$ is the lattice point corresponding to the vertex $v$. These affine charts are naturally compatible with the standard affine charts of $\mathbb{P}^s$, and their gluing defines $\overline{\phi_P(T_N)}$. In the general case, if we choose $k > 0$ such that $kP$ is very ample, scaling a polytope by a positive integer does not change its normal fan, so $\Sigma_{kP} = \Sigma_P$, hence $X_{kP} = X_P$, and the embedding is defined as above using $kP$.
 :::
 
-This embedding once again illustrates the link between the combinatorial definition and the algebro-geometric definition of a toric variety. In other words, the number of lattice points of the polytope $P$ determines the dimension of the ambient projective space $\mathbb{P}^s$ when the (projective) toric variety is embedded into projective space.
+This embedding shows once again the connection between the combinatorial definition and the algebro-geometric definition of a toric variety. In other words, the number of lattice points of the polytope $P$ determines the dimension of the ambient projective space $\mathbb{P}^s$ when the (projective) toric variety is embedded into projective space.
 
-Now we examine the most basic example of a projective toric variety, namely projective space $\mathbb{P}^n$.
+Now we examine the example of the most basic projective toric variety, namely projective space $\mathbb{P}^n$.
 
 ::: Example 10
 In the lattice $M = \mathbb{Z}^n$, define the *standard simplex* $\Delta_n \subseteq M_\mathbb{R}$ by
 
-$$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0,\; x_1 + \cdots + x_n \le 1\}$$
+$$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0, x_1 + \cdots + x_n \le 1\}$$
 
 The vertices of this polytope are $0, e_1, \ldots, e_n$, and its facets are given by the coordinate hyperplanes $\{x_i = 0\}$ and $\{x_1 + \cdots + x_n = 1\}$. The primitive inner normal vector of each facet, as an element of the dual lattice $N = \mathbb{Z}^n$, is
 
 $$v_i = e_i \quad (i = 1, \ldots, n), \qquad v_0 = -e_1 - \cdots - e_n$$
 
-Therefore the normal fan $\Sigma_{\Delta_n}$ has $n+1$ rays $\rho_i = \mathbb{R}_{\ge 0} v_i$ ($i = 0, 1, \ldots, n$), and its maximal cones are the $n$-dimensional cones generated by choosing $n$ of these $n+1$ rays; the case $n=2$ was illustrated in [Example 2](#ex2){: data-lid="dbah3" }.
+Therefore, the normal fan $\Sigma_{\Delta_n}$ has $n+1$ rays $\rho_i = \mathbb{R}_{\ge 0} v_i$ ($i = 0, 1, \ldots, n$), and its maximal cones are the $n$-dimensional cones generated by choosing $n$ of these $n+1$ rays; we examined the case $n=2$ with a figure in [Example 2](#ex2){: data-lid="dbah3" }.
 
-One could directly verify by checking the gluing that this yields $\mathbb{P}^n$, but instead let us observe the lattice points of $\Delta_n$. The lattice points of $\Delta_n$ are exactly the vertices $\{0, e_1, \ldots, e_n\}$, so the corresponding monomial map is
+One could directly verify by checking their gluing that this yields $\mathbb{P}^n$, but instead let us observe the lattice points of $\Delta_n$. The lattice points of $\Delta_n$ are exactly the vertices $\{0, e_1, \ldots, e_n\}$, so the corresponding monomial map is
 
 $$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \rightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \mapsto [1 : t_1 : \cdots : t_n]$$
 
@@ -170,20 +171,20 @@ Meanwhile, in [§Affine Toric Varieties, ⁋Proposition 9](/en/math/toric_geomet
 The toric variety $X_\Sigma$ is a smooth algebraic variety if and only if every cone $\tau \in \Sigma$ of the fan $\Sigma$ is a smooth cone.
 :::
 
-Or more simply, it suffices to check that all *maximal* cones of $\Sigma$ are smooth, since the smoothness of the remaining faces follows from this.
+Or more simply, if one verifies that all *maximal* cones of $\Sigma$ are smooth, the smoothness of the remaining faces follows from this.
 
-For example, in the fan of $\mathbb{P}^2$ from [Example 2](#ex2){: data-lid="xq59d" }, the three maximal cones have determinants of the $2 \times 2$ matrices formed by adjacent pairs of rays ($\{e_1, e_2\}, \{e_2, -e_1-e_2\}, \{-e_1-e_2, e_1\}$) all equal to $\pm 1$, so $\mathbb{P}^2$ is smooth. On the other hand, consider the fan in the same lattice $\mathbb{Z}^2$ made from the three rays $(-1,-1), (2,-1), (-1,2)$; the determinants of adjacent pairs of rays are $\pm 3$, so the resulting toric variety has a $\mathbb{Z}/3$ quotient singularity in each of its three maximal cones.
+For example, in the fan of $\mathbb{P}^2$ from [Example 2](#ex2){: data-lid="xq59d" }, for the three maximal cones, the pairs of adjacent rays ($\{e_1, e_2\}, \{e_2, -e_1-e_2\}, \{-e_1-e_2, e_1\}$) form $2 \times 2$ matrices whose determinants are all $\pm 1$, so $\mathbb{P}^2$ is smooth. On the other hand, if we consider the fan in the same lattice $\mathbb{Z}^2$ formed by the three rays $(-1,-1), (2,-1), (-1,2)$, the determinants of adjacent pairs of rays are $\pm 3$, so the toric variety has a $\mathbb{Z}/3$ quotient singularity for each of the three maximal cones.
 
-A *resolution of singularities* for such singular toric varieties is also achieved in an explicit, combinatorial manner via refinement of the fan. First, a fan $\Sigma'$ is called a *refinement* of $\Sigma$ if the two fans have the same support and every cone of $\Sigma'$ is contained in some cone of $\Sigma$. In this case there is a natural toric morphism
+A *resolution of singularities* for such singular toric varieties is also achieved in an explicit, combinatorial manner via refinement of the fan. First, that a fan $\Sigma'$ is a *refinement* of $\Sigma$ means that the two fans have the same support and every cone of $\Sigma'$ is contained in some cone of $\Sigma$. In this case, a natural toric morphism
 
 $$\pi: X_{\Sigma'} \rightarrow X_\Sigma$$
 
-which is a proper birational map, and if $\Sigma'$ consists entirely of smooth cones, then $\pi$ becomes a *toric resolution of singularities*. Such a refinement always exists for any fan, and the key points of its construction are as follows.
+is defined as a proper birational map, and if $\Sigma'$ consists entirely of smooth cones, then $\pi$ becomes a *toric resolution of singularities*. Such a refinement always exists for any fan, and the key points of its construction are as follows.
 
 1. A non-simplicial cone can be made simplicial by *star subdivision*. One can think of this as appropriately dividing the cone at an interior lattice point.
-2. For a simplicial cone $\sigma$ whose determinant is not $\pm 1$, adding a suitable lattice point as a new ray and splitting it into smaller cones reduces the determinant of each piece, and after finitely many iterations all become smooth cones.
+2. For a simplicial cone whose determinant is not $\pm 1$, the cone $\sigma$ can be split into smaller cones by adding an appropriate lattice point as a new ray; then the determinant of each part decreases, and after finitely many iterations all become smooth cones.
 
-In the above example of $\mathbb{P}^2/(\mathbb{Z}/3)$, consider the maximal cone $\mathbb{R}_{\ge 0}(2,-1) + \mathbb{R}_{\ge 0}(-1,2)$: adding the lattice points $(1,0), (0,1)$ lying in its interior as new rays splits it into three cones, each of determinant $\pm 1$. The remaining two maximal cones can be split in the same way by adding two lattice points each, so we obtain a smooth fan $\Sigma'$ with nine rays, and $X_{\Sigma'} \rightarrow \mathbb{P}^2/(\mathbb{Z}/3)$ is the minimal toric resolution of this quotient.
+In the above example of $\mathbb{P}^2/(\mathbb{Z}/3)$, if we look at the maximal cone $\mathbb{R}_{\ge 0}(2,-1) + \mathbb{R}_{\ge 0}(-1,2)$, adding the lattice points $(1,0), (0,1)$ lying in its interior as new rays and splitting it into three cones makes each determinant $\pm 1$. Since the remaining two maximal cones can also be split in the same way by adding two lattice points each, we obtain a smooth fan $\Sigma'$ with nine rays, and $X_{\Sigma'} \rightarrow \mathbb{P}^2/(\mathbb{Z}/3)$ becomes the minimal toric resolution of this quotient.
 
 ---
 
