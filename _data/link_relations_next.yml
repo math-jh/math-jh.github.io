@@ -1242,7 +1242,7 @@
 "e8oou": {relation: weak, reviewed: true}
 "e936n": {relation: weak, reviewed: true}
 "e93g8": {relation: required, reviewed: true}
-"e9r9b": {relation: weak, reviewed: true}
+"e9r9b": {relation: required, reviewed: true}
 "e9tag": {relation: required, reviewed: true}
 "e9wis": {relation: required, reviewed: true}
 "e9xpd": {relation: weak, reviewed: true}
@@ -1366,7 +1366,7 @@
 "fya78": {relation: required, reviewed: true}
 "fyyhe": {relation: required, reviewed: true}
 "fznhe": {relation: required, reviewed: true}
-"fzprr": {relation: weak, reviewed: true}
+"fzprr": {relation: required, reviewed: true}
 "g00jz": {relation: required, reviewed: true}
 "g031e": {relation: required, reviewed: true}
 "g0dgy": {relation: required, reviewed: true}
