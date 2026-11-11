@@ -23,12 +23,33 @@ var SH_FILTERS = [[null, '전체'], ['unanimous', '세 모델 만장일치'], ['
 var SH_TABS = [['queue', '판정 대기'], ['audit', '감사'], ['drafts', '판례 초안'],
                ['book', '판례·쟁점'], ['settled', '최근 판정']];
 
+/* 글 원문을 옮긴 조각의 링크는 라벨만 남긴다 — 주소(permalink·앵커)와 {: data-lid … } IAL 은
+   읽는 데 쓸모가 없다. lid 를 주면 그 링크의 라벨을 굵게 한다. 돌려주는 것은 HTML 이다. */
+var SH_MDLINK = /\[((?:\\.|[^\]\\])*)\]\([^)\s]*\)(\{:[^}]*\})?|\{:\s*data-lid=[^}]*\}/g;
+function shText(s, lid) {
+  s = String(s || '');
+  var out = '', last = 0, m;
+  SH_MDLINK.lastIndex = 0;
+  while ((m = SH_MDLINK.exec(s))) {
+    out += esc(s.slice(last, m.index));
+    if (m[1] !== undefined) {
+      var me = lid && m[2] && m[2].indexOf('"' + lid + '"') >= 0;
+      out += '<span class="sh-ref' + (me ? ' sh-ref--me' : '') + '">' +
+        esc(m[1].replace(/\\([\[\]])/g, '$1')) + '</span>';
+    }
+    last = SH_MDLINK.lastIndex;
+  }
+  return out + esc(s.slice(last));
+}
+
 /* ── 마크다운 (판정 기준·판례 본문용 — 제목·목록·굵게·인라인 코드·문단만) ── */
 function shMd(src) {
   var lines = String(src || '').split('\n'), out = [], list = 0, para = [];
   function inline(s) {
-    return esc(s).replace(/`([^`]+)`/g, '<code>$1</code>')
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    return s.split(/(`[^`]+`)/).map(function (seg, i) {
+      return i % 2 ? '<code>' + esc(seg.slice(1, -1)) + '</code>'
+        : shText(seg).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }).join('');
   }
   function flush() { if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; } }
   function closeTo(d) { while (list > d) { out.push('</ul>'); list--; } }
@@ -234,9 +255,9 @@ function shId(x) {
 /* 근거 보기 — 모델별 판정과 근거. 링크 문장과 대상은 오른쪽 미리보기에 떠 있다. */
 function shReasons(x, stages, keys) {
   shSelect(x);
-  openModalHtml('근거 — ' + x.lid, '<div class="sh-m">' + shStages(stages, keys).outerHTML + '</div>');
+  openModalHtml('근거 — ' + x.lid, '<div class="sh-m">' + shStages(stages, keys, x.lid).outerHTML + '</div>');
 }
-function shStages(stages, keys) {
+function shStages(stages, keys, lid) {
   var w = el('div', 'sh-stages');
   (keys || ['S1', 'S2', 'S3']).forEach(function (s) {
     var v = stages && stages[s];
@@ -247,24 +268,44 @@ function shStages(stages, keys) {
       ' <span class="muted">필요 ' + esc(r.need || '—') + (r.need_kind ? '(' + esc(r.need_kind) + ')' : '') +
       ' · 제공 ' + esc(r.provided || '—') + (r.preview ? ' · 예고' : '') +
       (r.inconsistent ? ' · <span class="bad">자기모순</span>' : '') + '</span></div>' +
-      '<div class="sh-q">“' + esc(r.evidence || '') + '”</div>' +
-      '<div>' + esc(r.reason || '') + '</div>';
-    if (r.other_side) h += '<div class="muted">반대쪽: ' + esc(r.other_side) + '</div>';
-    if (r.flip_condition) h += '<div class="muted">뒤집힐 조건: ' + esc(r.flip_condition) + '</div>';
+      '<div class="sh-q">“' + shText(r.evidence, lid) + '”</div>' +
+      '<div>' + shText(r.reason) + '</div>';
+    if (r.other_side) h += '<div class="muted">반대쪽: ' + shText(r.other_side) + '</div>';
+    if (r.flip_condition) h += '<div class="muted">뒤집힐 조건: ' + shText(r.flip_condition) + '</div>';
     if (v.step4) {
       h += '<div class="sh-step4">재검토: <b>' + esc(SH_REL[v.step4.relation] || v.step4.relation) + '</b> · 판례 ' +
         esc(v.step4.precedent) + (v.step4.pending ? ' · 쟁점 ' + esc(v.step4.pending) : '') +
-        (v.step4.reason ? '<div>' + esc(v.step4.reason) + '</div>' : '') +
-        (v.step4.note ? '<div class="muted">차이 메모: ' + esc(v.step4.note) + '</div>' : '') + '</div>';
+        (v.step4.reason ? '<div>' + shText(v.step4.reason) + '</div>' : '') +
+        (v.step4.note ? '<div class="muted">차이 메모: ' + shText(v.step4.note) + '</div>' : '') + '</div>';
     }
     if (v.recheck) {
       var rc = v.recheck;
       h += '<div class="sh-step4">새 판례 ' + esc(rc.trigger || '') + '로 다시 봄 (표결): <b>' +
         esc(SH_REL[rc.relation] || rc.relation) + '</b> · 판례 ' + esc(rc.precedent || '—') +
         (rc.pending ? ' · 쟁점 ' + esc(rc.pending) : '') +
-        (rc.reason ? '<div>' + esc(rc.reason) + '</div>' : '') + '</div>';
+        (rc.reason ? '<div>' + shText(rc.reason) + '</div>' : '') + '</div>';
     }
     c.innerHTML = h;
+    w.appendChild(c);
+  });
+  setTimeout(function () { shMath(w); }, 0);
+  return w;
+}
+/* 감사 공개용 — 차수마다 이름표·판정·논리만. 원문 인용은 싣지 않는다(오른쪽 미리보기에 떠
+   있다). 필요·제공·판례 번호도 싣지 않는다. 판정은 그 차수의 마지막 판정(재검토·새 판례
+   재판정이 바꿨으면 바뀐 값)이고, 논리는 그 판정을 처음 낸 걸음의 이유다. */
+function shBrief(stages) {
+  var w = el('div', 'sh-stages');
+  ['S1', 'S2', 'S3'].forEach(function (s) {
+    var v = stages && stages[s];
+    if (!v || !v.step1) return;
+    var steps = [v.step1, v.step4, v.recheck].filter(Boolean);
+    var i = steps.length - 1, rel = steps[i].relation;
+    while (i > 0 && steps[i - 1].relation === rel) i--;
+    var c = el('div', 'sh-stage');
+    c.innerHTML = '<div class="sh-stage__h">' + esc(s) + ' <b class="sh-vote--' + esc(rel) + '">' +
+      esc(SH_REL[rel] || rel) + '</b></div>' +
+      '<div>' + shText(steps[i].reason || v.step1.reason) + '</div>';
     w.appendChild(c);
   });
   setTimeout(function () { shMath(w); }, 0);
@@ -408,8 +449,8 @@ function shAudit(d) {
     /* 공개된 뒤에는 설명을 쓰고 아래 버튼을 다시 누르는 순서라 버튼을 맨 아래에 둔다. */
     if (rv) {
       var p = el('div', 'sh-reveal');
-      p.appendChild(el('p', null, '만장일치 값: ' + (SH_REL[rv.final] || rv.final) + ' — 다르게 고르려면 이유를 쓰고 다시 누른다.'));
-      p.appendChild(shStages(rv.stages));
+      p.appendChild(el('p', 'hint', '만장일치 값: ' + (SH_REL[rv.final] || rv.final) + ' — 다르게 고르려면 이유를 쓰고 다시 누른다.'));
+      p.appendChild(shBrief(rv.stages));
       p.appendChild(shNoteBox('a:' + x.lid, '왜 만장일치가 틀렸는지 (필수)'));
       row.appendChild(p);
     }

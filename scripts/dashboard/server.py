@@ -8,6 +8,10 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
 엔드포인트
     GET /api/summary        대시보드 전체 데이터 (45s 캐시)
     GET /api/log?name=<key> 워커 로그 tail (기본 200줄)
+    GET /api/translog?path=<p>  번역 워커 로그에서 그 글의 마지막 시도 구간
+    GET /api/heat           개요 수정량 잔디 — KST 날짜별 KO 글 줄 추가·삭제·커밋 수 (최근 53주,
+                            git 밖 로컬 글은 LOCAL_GIT 스냅샷으로 함께 센다)
+    GET /api/heat/day?d=<날짜>  그날 KO 글을 고친 커밋·로컬 스냅샷과 글
     GET /api/lint?path=<p>  단일 글에 md_lint.py CLI 실행 (발행 준비도)
     GET/POST /api/kotypo    KO-TYPOS '수정' 체크 상태 (전체 map 교체 방식)
     POST /api/kotypo-note   후속 검증 모델에게 전할 메모 (요청 키 단위 병합 저장)
@@ -20,7 +24,8 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
 보류 해소 시 확정된 링크의 레코드를 `_data/link_relations.yml` 에 쓴다 (분류기와
 같은 원장 락). 그 외의 쓰기는 상태 파일뿐이다:
 ~/.local/state/blog_dashboard_kotypo.json · …_kotypo_notes.json · …_review.json ·
-dependency-classifier-holds.json.
+dependency-classifier-holds.json, 그리고 로컬 글 스냅샷 저장소 blog-dashboard-local-posts.git
+(git 밖 KO 글을 2시간마다 커밋 — 원격 없음, 레포의 .git 과 별개).
 """
 import fcntl
 import glob
@@ -274,6 +279,27 @@ def subject_order():
     return order
 
 
+def subject_names():
+    """_data/categories.yml subjects → {카테고리 문자열: (한국어 이름, 영어 이름)}.
+    영어 이름은 키에서 'Math / ' 같은 앞 구간을 뗀 것이다 (블로그 EN 인용 라벨과 같다).
+    항목이 블록 꼴과 한 줄 꼴({ ko: …, … })로 섞여 있어 줄 단위가 아니라 YAML 로 읽는다."""
+    try:
+        import yaml
+        with open(f"{ROOT}/_data/categories.yml", encoding="utf-8") as fh:
+            subjects = (yaml.safe_load(fh) or {}).get("subjects") or {}
+    except Exception:  # noqa: BLE001 — 이름을 못 읽으면 경로에서 딴 이름으로 간다
+        return {}
+    return {k: ((v or {}).get("ko") or k.split(" / ", 1)[-1], k.split(" / ", 1)[-1])
+            for k, v in subjects.items()}
+
+
+def post_label(p, names):
+    """글을 부르는 이름 '[카테고리] 제목' — KO 글은 한국어 과목명, EN 글은 영어 과목명."""
+    ko, en = names.get(p["cat_fm"]) or (None, None)
+    name = (en if p["lang"] == "en" else ko) or p["category"].split("/")[-1].replace("_", " ")
+    return f"[{name}] {p['title']}"
+
+
 # ── 섹션별 수집 ──────────────────────────────────────────────────────────────
 def sec_posts(posts):
     now = time.time()
@@ -281,13 +307,16 @@ def sec_posts(posts):
     ko = [p for p in posts if p["lang"] == "ko"]
     en = [p for p in posts if p["lang"] == "en"]
     unpub = [p for p in ko if not p["published"]]
+    names = subject_names()
+    for p in posts:
+        p["label"] = post_label(p, names)
 
     en_index = {(p["category"], p["slug"]) for p in en}
     ko_index = {(p["category"], p["slug"]) for p in ko}
     for p in ko:
         if not p["single"]:
             p["has_en"] = (p["category"], p["slug"]) in en_index
-    orphan_en = [dict(path=p["path"], title=p["title"], category=p["category"])
+    orphan_en = [dict(path=p["path"], title=p["title"], category=p["category"], label=p["label"])
                  for p in en if (p["category"], p["slug"]) not in ko_index]
 
     cats = {}
@@ -306,7 +335,7 @@ def sec_posts(posts):
                       default=len(sub_order)),
             total=len(items),
             unpublished=sum(1 for p in items if not p["published"]),
-            posts=[dict(weight=p["weight"], title=p["title"], published=p["published"],
+            posts=[dict(weight=p["weight"], title=p["title"], label=p["label"], published=p["published"],
                         permalink=p["permalink"], path=p["path"], drift=p["drift"],
                         has_en=p["has_en"], chars=p["chars"], mtime=p["mtime"],
                         date=p["date"])
@@ -332,7 +361,7 @@ def sec_posts(posts):
 
     unpub_sorted = sorted(unpub, key=lambda p: p["mtime"], reverse=True)
     return stats, categories, orphan_en, [dict(
-        title=p["title"], category=p["category"], weight=p["weight"], path=p["path"],
+        title=p["title"], label=p["label"], category=p["category"], weight=p["weight"], path=p["path"],
         permalink=p["permalink"], chars=p["chars"], mtime=p["mtime"], date=p["date"],
         drift=p["drift"], has_en=p["has_en"]) for p in unpub_sorted]
 
@@ -519,6 +548,43 @@ def translation_queue():
         return _tqueue["data"], _tqueue["error"]
 
 
+TRANSLATION_LOG = f"{ROOT}/scripts/translation/translation.log"
+_TL_START = re.compile(r"\] translating \([^)]*\): (\S+) → (\S+)")
+
+
+def translation_attempt_lines(src, limit=400):
+    """번역 워커 로그에서 그 글의 마지막 시도 구간 (번역 큐의 최근 시도 상세).
+
+    시도는 `translating (…): <KO 경로> → <EN 경로>` 줄에서 시작해, 그 글의 `committed:`
+    줄까지거나 다음 시도·후속 워커(KO-FOLLOWUP)·다른 글을 가리키는 줄 바로 앞까지다. 경로가
+    없는 줄(청크 진행 등)은 구간 안에 있으면 그 시도의 줄이다. 시작 줄을 못 찾으면 그 경로가
+    들어간 줄의 끝부분을 준다."""
+    if not src.startswith("_posts/") or ".." in src:
+        return []
+    try:
+        with open(TRANSLATION_LOG, encoding="utf-8", errors="replace") as f:
+            lines = f.read().splitlines()
+    except OSError:
+        return []
+    for i in range(len(lines) - 1, -1, -1):
+        m = _TL_START.search(lines[i])
+        if m and m.group(1) == src:
+            break
+    else:
+        return [ln for ln in lines if src in ln][-limit:]
+    own = (src, m.group(2))
+    out = [lines[i]]
+    for ln in lines[i + 1:i + limit]:
+        if _TL_START.search(ln) or "KO-FOLLOWUP:" in ln:
+            break
+        if "_posts/" in ln and not any(x in ln for x in own):
+            break
+        out.append(ln)
+        if "] committed:" in ln:
+            break
+    return out
+
+
 def sec_translation():
     p = f"{ROOT}/scripts/translation/translation_state.json"
     try:
@@ -600,7 +666,7 @@ def sec_translation():
     ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
     queue, queue_error = translation_queue()
     return dict(stats=d.get("stats", {}), queue=queue, queue_error=queue_error,
-                recent=recent[:15], ko_typos=ko_typos,
+                recent=recent[:30], ko_typos=ko_typos,
                 ko_typo_actionable=n_actionable, ko_typo_false=n_false,
                 ko_typo_unreviewed=n_unreviewed, state_mtime=mtime(p))
 
@@ -1045,6 +1111,184 @@ def sec_gsc():
                 host="https://math-jh.com")
 
 
+# ── 수정량 잔디 (개요) ────────────────────────────────────────────────────────
+# KO 글이 날마다 얼마나 고쳐졌는지 — 최근 53주, KST 날짜별 git numstat 의 줄 추가+삭제.
+# 워커가 쓰는 커밋([Cron]·[Dash])은 뺀다. [Auto] 는 작업 트리를 짝수 정시에 주워 담은
+# 사람의 편집이라 센다. 1년치 numstat 이 몇 초 걸려 HEAD 가 바뀔 때만 백그라운드로 다시 센다.
+HEAT_DAYS = 53 * 7
+_HEAT_SKIP = ("[Cron]", "[Dash]")
+_post_labels = {}   # 경로·permalink → '[카테고리] 제목' — build_summary 가 채운다 (날짜 상세에 쓴다)
+_heat = {"sig": None, "data": None, "running": False}
+_heat_lock = threading.Lock()
+
+
+def _ko_post(path):
+    return path.startswith("_posts/") and path.endswith(".md") and (
+        "/ko/" in path or path.startswith("_posts/Misc/"))
+
+
+def _numstat_path(p):
+    """numstat 의 이름 바뀜 표기(`a/{x => y}/b`, `x => y`)에서 새 경로."""
+    if " => " not in p:
+        return p
+    m = re.match(r"(.*)\{(.*) => (.*)\}(.*)", p)
+    return m.group(1) + m.group(3) + m.group(4) if m else p.split(" => ")[-1]
+
+
+def _kst_day(ts):
+    return time.strftime("%Y-%m-%d", time.gmtime(int(ts) + 9 * 3600))
+
+
+def _heat_log(cmd, local):
+    """numstat 로그 → (rc, err, {KST 날짜: [커밋…]}). 부모 없는 커밋(첫 커밋)은 세지 않는다 —
+    로컬 스냅샷 저장소의 첫 커밋은 그때까지의 글 전체를 담은 기준선이다."""
+    rc, out, err = run(cmd, cwd=ROOT, timeout=90)
+    days = {}
+    if rc != 0:
+        return rc, err, days
+    cur = None
+    for ln in out.splitlines():
+        if ln.startswith("@@"):
+            sha, ts, parents, subject = ln[2:].split("\t", 3)
+            cur = None
+            if parents and not subject.startswith(_HEAT_SKIP):
+                cur = dict(sha=sha, subject=subject, add=0, dele=0, files=[], day=_kst_day(ts),
+                           local=local)
+                if local:
+                    cur["subject"] = time.strftime("%H:%M", time.gmtime(int(ts) + 9 * 3600)) + " 스냅샷"
+                days.setdefault(cur["day"], []).append(cur)
+            continue
+        if cur is None or not ln.strip():
+            continue
+        a, d, path = ln.split("\t", 2)
+        path = _numstat_path(path)
+        if a == "-" or not _ko_post(path):
+            continue
+        cur["add"] += int(a)
+        cur["dele"] += int(d)
+        cur["files"].append(path)
+    return rc, err, days
+
+
+def _heat_run(sig):
+    fmt = "--format=@@%h%x09%at%x09%P%x09%s"
+    since = f"--since={HEAT_DAYS + 7} days ago"
+    rc, err, days = _heat_log(["git", "log", since, "--no-merges", "--numstat", fmt, "--", "_posts"], False)
+    # 로컬 글이 스냅샷에서 빠지는 것(발행돼 git 으로 넘어감·삭제)은 수정이 아니라 --diff-filter=d.
+    lrc, lerr, ldays = _heat_log(["git", "--git-dir", LOCAL_GIT, "log", since, "--numstat",
+                                  "--diff-filter=d", fmt], True) if os.path.isdir(LOCAL_GIT) else (0, "", {})
+    if rc == 0:
+        for k, v in ldays.items():
+            days.setdefault(k, []).extend(v)
+        days = {k: [c for c in v if c["files"]] for k, v in days.items()}
+        days = {k: v for k, v in days.items() if v}
+    with _heat_lock:
+        _heat.update(sig=sig, running=False,
+                     error=err.strip()[-300:] if rc else lerr.strip()[-300:] if lrc else None)
+        if rc == 0:
+            _heat["data"] = days
+
+
+def heat_days():
+    """({KST 날짜: [커밋…]}, 세는 중, 지문) — 캐시를 바로 주고, 레포 HEAD 나 로컬 스냅샷
+    HEAD 가 바뀌었으면 다시 세기를 시작한다."""
+    _, head, _ = run(["git", "rev-parse", "HEAD"], cwd=ROOT, timeout=5)
+    _, lhead, _ = run(["git", "--git-dir", LOCAL_GIT, "rev-parse", "-q", "--verify", "HEAD"], timeout=5)
+    sig = head.strip()[:12] + ":" + lhead.strip()[:12]
+    with _heat_lock:
+        if sig != _heat["sig"] and not _heat["running"]:
+            _heat["running"] = True
+            threading.Thread(target=_heat_run, args=(sig,), daemon=True).start()
+        return _heat["data"], _heat["running"], _heat["sig"]
+
+
+# ── 로컬 글 스냅샷 (잔디) ─────────────────────────────────────────────────────
+# .git/info/exclude 로 git 에서 빠진 KO 글(비공개 연구 스트림)은 커밋이 없어 잔디에 안 잡힌다.
+# 그래서 원격 없는 별도 저장소(LOCAL_GIT, 작업 트리 = 이 레포)에 그 글들만 2시간마다 스냅샷
+# 커밋하고 잔디가 그 numstat 을 함께 센다. 공개 글도 autopush 가 2시간마다 주워 담은 차이로
+# 세므로 같은 간격이어야 두 쪽이 같은 잣대다. 시각은 KST 짝수 정시 2분 전(…, 21:58, 23:58) —
+# 하루의 마지막 스냅샷이 자정 직전이라 밤 편집이 다음 날로 넘어가지 않는다. 대상은 매번
+# `git ls-files --others --ignored` 로 다시 뽑으므로 exclude 를 고치면 따라간다. 스냅샷은
+# 인덱스를 비우고 대상만 담아 만든 트리라, 대상에서 빠진 글은 그 스냅샷에서 지워진다.
+# 의존성 분류기가 로컬 글에 직접 쓰는 링크 식별자(`data-lid`, 커밋이 없어 [Cron] 으로 거를 수
+# 없다)는 지운 본문을 저장한다 — 워커 편집이 수정량에 섞이지 않게. 그래서 이 저장소의 판본은
+# lid 가 빠진 본문이다.
+LOCAL_GIT = f"{STATE}/blog-dashboard-local-posts.git"
+LOCAL_EVERY = 2 * 3600
+_LOCAL_NAME = re.compile(r"/\d{4}-\d{2}-\d{2}-[^/]+\.md$")
+_LOCAL_LID = re.compile(r'\s*data-lid="[^"]*"')
+_LOCAL_EMPTY_IAL = re.compile(r"\{:\s*\}")
+_local_lock = threading.Lock()
+
+
+def _lgit(*args, stdin=None):
+    cmd = ["git", "-c", "user.name=blog-dashboard", "-c", "user.email=blog-dashboard@localhost",
+           "--git-dir", LOCAL_GIT, "--work-tree", ROOT, *args]
+    if stdin is None:
+        return run(cmd, cwd=ROOT, timeout=60)
+    try:
+        p = subprocess.run(cmd, cwd=ROOT, input=stdin, capture_output=True, text=True,
+                           encoding="utf-8", timeout=60)
+        return p.returncode, p.stdout, p.stderr
+    except Exception as e:
+        return -1, "", str(e)
+
+
+def local_posts():
+    """git 이 무시하는 KO 글 경로 (Syncthing 충돌 사본 제외). 실패하면 None."""
+    rc, out, _ = run(["git", "ls-files", "--others", "--ignored", "--exclude-standard", "-z", "--", "_posts"],
+                     cwd=ROOT, timeout=30)
+    if rc != 0:
+        return None
+    return sorted(p for p in out.split("\0")
+                  if p and _ko_post(p) and _LOCAL_NAME.search(p) and ".sync-conflict-" not in p)
+
+
+def local_snapshot():
+    """로컬 글이 지난 스냅샷과 다르면 새 스냅샷 커밋을 남긴다. 남겼으면 True."""
+    with _local_lock:
+        files = local_posts()
+        if files is None:
+            return False
+        if not os.path.isdir(LOCAL_GIT) and run(["git", "init", "-q", "--bare", LOCAL_GIT], timeout=30)[0]:
+            return False
+        entries = []
+        for f in files:
+            try:
+                with open(os.path.join(ROOT, f), encoding="utf-8") as fh:
+                    text = _LOCAL_EMPTY_IAL.sub("", _LOCAL_LID.sub("", fh.read()))
+            except (OSError, UnicodeDecodeError):
+                return False
+            rc, blob, _ = _lgit("hash-object", "-w", "--stdin", stdin=text)
+            if rc:
+                return False
+            entries.append(f"100644 {blob.strip()}\t{f}\n")
+        if _lgit("read-tree", "--empty")[0] or (
+                entries and _lgit("update-index", "--add", "--index-info", stdin="".join(entries))[0]):
+            return False
+        rc, tree, _ = _lgit("write-tree")
+        if rc:
+            return False
+        rc, head, _ = _lgit("rev-parse", "-q", "--verify", "HEAD")
+        head = head.strip() if rc == 0 else ""
+        if head and _lgit("rev-parse", "HEAD^{tree}")[1].strip() == tree.strip():
+            return False
+        rc, sha, _ = _lgit("commit-tree", tree.strip(), *(["-p", head] if head else []),
+                           "-m", "스냅샷" if head else "기준선")
+        return rc == 0 and _lgit("update-ref", "HEAD", sha.strip())[0] == 0
+
+
+def _local_loop():
+    while True:
+        try:
+            local_snapshot()
+        except Exception as e:   # 스냅샷 한 번이 실패해도 다음 시각에 다시 한다
+            print(f"local_snapshot: {e}", file=sys.stderr)
+        now = time.time()
+        # KST 짝수 정시 = UTC 홀수 정시. 그 2분 전의 다음 시각까지 잔다.
+        time.sleep(((now - 3600 + 120) // LOCAL_EVERY + 1) * LOCAL_EVERY + 3600 - 120 - now)
+
+
 def sec_git():
     rc, out, _ = run(["git", "log", "-25", "--pretty=format:%h\x1f%ct\x1f%an\x1f%cn\x1f%s"], cwd=ROOT)
     if rc != 0:
@@ -1160,18 +1404,32 @@ def build_summary():
     # 있어도 초안·개정 중인 글은 건너뜀 칸에, EN 이 아직 없는 글은 신규 번역 칸에 있다.
     queue = (translation or {}).get("queue")
     stats["drift"] = len(queue["buckets"]["drift"]) if queue else None
+    audit, gsc = sec_audit(), sec_gsc()
+    # 글을 부르는 이름('[카테고리] 제목'). KO 글은 categories 의 글마다 label 이 붙어 있으니,
+    # 여기는 감사 상세와 색인 추천이 가리키는 EN 글·permalink 만 따로 싣는다.
+    by_key = {}
+    for p in posts:
+        by_key[p["path"]] = p["label"]
+        if p["permalink"]:
+            by_key[p["permalink"]] = p["label"]
+    _post_labels.clear()
+    _post_labels.update(by_key)
+    refs = {r["path"] for r in (gsc or {}).get("recommend") or []}
+    for lines in ((audit or {}).get("details") or {}).values():
+        refs.update(ln.split(" — ", 1)[0].replace(" (초안)", "").strip() for ln in lines)
     return dict(
         ts=time.time(),
         stats=stats,
         categories=categories,
         orphan_en=orphan_en,
         unpublished=unpublished,
+        labels={k: by_key[k] for k in refs if k in by_key},
         workers=sec_workers(),
         translation=translation,
         comment_prs=sec_comment_prs(),
-        audit=sec_audit(),
+        audit=audit,
         link_audit=sec_link_audit(),
-        gsc=sec_gsc(),
+        gsc=gsc,
         git=sec_git(),
         system=sec_system(),
         cron=sec_cron(),
@@ -1302,6 +1560,29 @@ class Handler(BaseHTTPRequestHandler):
             if q.get("fresh"):
                 _cache["ts"] = 0
             return self._send(200, json.dumps(summary_cached(), ensure_ascii=False))
+
+        if path == "/api/heat":
+            days, running, sig = heat_days()
+            return self._send(200, json.dumps({
+                "today": _kst_day(time.time()), "pending": days is None and running, "sig": sig,
+                # [줄 추가, 삭제, git 커밋 수, 그중 로컬 스냅샷 줄 수(추가+삭제)]
+                "days": {k: [sum(c["add"] for c in v), sum(c["dele"] for c in v),
+                             sum(1 for c in v if not c["local"]),
+                             sum(c["add"] + c["dele"] for c in v if c["local"])]
+                         for k, v in (days or {}).items()}}))
+
+        if path == "/api/heat/day":
+            day = (q.get("d") or [""])[0]
+            days, _, _ = heat_days()
+            return self._send(200, json.dumps({"day": day, "commits": [
+                dict(sha=c["sha"], subject=c["subject"], add=c["add"], dele=c["dele"], local=c["local"],
+                     files=[_post_labels.get(f, f.replace("_posts/", "", 1)) for f in c["files"]])
+                for c in (days or {}).get(day, [])]}, ensure_ascii=False))
+
+        if path == "/api/translog":
+            src = (q.get("path") or [""])[0]
+            return self._send(200, json.dumps({"path": src, "lines": translation_attempt_lines(src)},
+                                              ensure_ascii=False))
 
         if path == "/api/log":
             key = (q.get("name") or [""])[0]
@@ -1858,6 +2139,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     srv.daemon_threads = True
+    threading.Thread(target=_local_loop, daemon=True).start()
     srv.serve_forever()
 
 

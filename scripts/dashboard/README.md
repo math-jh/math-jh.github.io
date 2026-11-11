@@ -1,8 +1,8 @@
 # scripts/dashboard — 블로그 운영 대시보드
 
 `https://preview.math-jh.com/dash/`. 미발행 글 현황·워커 상태·파이프라인·번역 큐·감사·색인·활동을
-한자리에서 본다. 레포에는 아무것도 쓰지 않는다 (쓰기는 `~/.local/state` 의 상태 파일 넷뿐:
-kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링크 보류 원장).
+한자리에서 본다. 레포에는 아무것도 쓰지 않는다 (쓰기는 `~/.local/state` 의 상태 파일 넷 —
+kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링크 보류 원장 — 과 로컬 글 스냅샷 저장소뿐).
 
 ## 구성
 
@@ -24,16 +24,57 @@ kotypo 체크·검토 판정과 메모·비교기 판본 선택·의존성 링�
 
 ## 페이지
 
-**개요가 허브다** — 탭 네비 없음. `/dash/` 개요(판정 한 줄 + 24시간 실행 히트맵 + 지표 6장 +
-"지금 볼 것" + 파이프라인 + 최근 커밋 + 섹션 색인)에서 각 섹션으로 들어가고 `← 개요로` 로 돌아온다.
-섹션마다 실제 경로가 있다: `/dash/drafts` `/dash/weights` `/dash/translation` `/dash/audit`
+**개요가 허브다** — 탭 네비 없음. `/dash/` 개요(판정 한 줄 + 24시간 실행 기록, 그 아래 폭 전체의
+KO 글 수정량 잔디, 그 아래 같은 크기 지표 카드 6장)에서 각 섹션으로 들어가고 `← 개요로` 로 돌아온다.
+크론 제어로 가는 입구는 실행 기록 머리의 일시정지 건수, Pi 대시보드(status.math-jh.com)로 가는 입구는
+'시스템' 카드다. 개요는 카드가 세는 숫자를 되풀이하지 않는다 — 판정 아래 문장에는 카드에 없는 이상
+(Jekyll·메모리 cap·쿼터·EN 짝)만 적는다.
+
+수정량 잔디는 최근 53주(열=주, 월요일이 위)의 KST 날짜별 KO 글 줄 추가+삭제다(`/api/heat`). 워커 커밋
+(`[Cron]`·`[Dash]` 접두사)은 빼고 `[Auto]`(작업 트리 자동 커밋)는 센다. 색은 brass 다섯 단계 — 빈 칸, 그리고
+수정이 있었던 날들의 4분위. 칸을 누르면 그날의 커밋과 고친 글(`/api/heat/day`).
+
+git 에서 빠진 로컬 KO 글(`.git/info/exclude` 의 비공개 연구 스트림)은 커밋이 없으므로 서버가 따로 센다.
+`~/.local/state/blog-dashboard-local-posts.git`(원격 없는 bare 저장소, 레포 `.git` 과 별개)에 그 글들만
+KST 짝수 정시 2분 전마다(서버 기동 때도 한 번) 스냅샷 커밋하고, 잔디가 그 numstat 을 함께 센다.
+- 대상은 `git ls-files --others --ignored --exclude-standard -- _posts` 중 날짜로 시작하는 KO 글이다
+  (Syncthing 충돌 사본 제외). exclude 를 고치면 다음 스냅샷부터 따라간다.
+- 저장하는 본문에서 `data-lid="…"` 를 지운다. 의존성 분류기가 로컬 글에 lid 를 직접 쓰기 때문에
+  (커밋이 없어 `[Cron]` 으로 거를 수 없다) 지우지 않으면 워커 편집이 수정량에 섞인다.
+- 첫 커밋(기준선)은 세지 않는다. 대상에서 빠진 글(발행돼 git 으로 넘어감·삭제)의 삭제도 세지 않는다
+  (`--diff-filter=d`).
+- `/api/heat` 의 날짜 값은 `[추가, 삭제, git 커밋 수, 로컬 스냅샷 줄 수]` 이고, 응답의 `sig`(레포 HEAD +
+  스냅샷 HEAD)가 같으면 클라이언트가 다시 그리지 않는다.
+섹션마다 실제 경로가 있다: `/dash/drafts` `/dash/translation` `/dash/audit`
 `/dash/index` `/dash/activity` `/dash/cron`. 서버는 이 경로들에 index.html 을 주고 app.js 가 경로를
 읽어 그린다. 같은 탭의 평범한 클릭은 app.js 가 가로채 pushState 로 넘기고(다시 불러오지 않음),
 Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 열린다. hash 주소(`/dash/#audit`)로
 들어오면 같은 섹션의 경로로 바꾸고, `workers`·`pipeline` 은 개요에 있어서 `/dash/` 로 보낸다.
-번역 큐에는 검증기 KO-TYPOS 지적 목록이
-뜨고(행 클릭 → 지적 전문 모달), 감사의 이슈 종류 행을 클릭하면 글·줄 단위 상세 모달이 열린다
-(`audit-report.md` 의 Actionable items 를 서버가 kind 별로 파싱).
+`/dash/weights`(옛 weight 지도)는 미발행에 합쳤으므로 `/dash/drafts` 로 보낸다.
+
+- **미발행** — 위는 카테고리별 weight 지도, 아래는 최근 수정한 미발행 글. 지도 행을 누르면 그
+  카테고리의 미발행 글이 행 아래에 weight 순으로 펼쳐지고(한 번에 하나), 눈금을 누르면 그 글의
+  카테고리를 펼쳐 그 글을 짚는다.
+- **번역 큐** — 왼쪽은 한글 원문 지적 목록(글을 누르면 그 글의 지적이 펼쳐진다)과 그 아래 지금 큐
+  (단계별 비율 막대 + 단계별 편수, 행 클릭 → 글 목록), 오른쪽은 KO 원문 미리보기다. 지적을 누르면
+  미리보기(dev 서버 4001 의 구워진 글, shadow.js 의 `shSlot`·`shHit`)가 인용문이 있는 문단을 짚는다
+  (그래서 왼쪽 지적에는 인용문을 싣지 않고 줄번호·판정·문제·수정만 둔다) —
+  수식 밖 조각으로 찾고, 수식뿐이면 KaTeX 의 TeX 주석으로 찾는다. 못 찾으면 그 지적에 '원문에서 못 찾음'
+  이 붙는다(대개 이미 고친 문장). 주기 폴링은 번역 데이터·수정 완료 체크가 그대로면 이 페이지를 다시
+  그리지 않는다(미리보기를 다시 굽지 않고 메모 칸을 지키려고). '최근 시도'는 두 칸 모달이다 — 왼쪽
+  글·상태·시각, 글을 누르면 오른쪽에 그 글의 마지막 시도 로그(`/api/translog`).
+- **감사** — 이슈 종류 행을 클릭하면 글·줄 단위 상세 모달이 열린다(`audit-report.md` 의 Actionable
+  items 를 서버가 kind 별로 파싱).
+
+화면 문안의 두 규칙:
+
+- **글은 `[카테고리] 제목` 으로 부른다** — 경로·permalink 를 그대로 보이지 않는다. 이름은 서버의
+  `post_label` 이 붙인다(KO 글은 categories.yml 의 한국어 과목명, EN 글은 키에서 딴 영어 과목명).
+  KO 글은 `categories[].posts[].label`, 감사 상세·색인 추천이 가리키는 EN 글과 permalink 는
+  `summary.labels` 에 있고, app.js 의 `postLabel()` 이 둘을 합쳐 찾는다. 마크다운 원문을 옮길 때는
+  링크의 주소와 `{: data-lid … }` IAL 을 떼고 라벨만 남긴다(`mdPlain`, shadow.js `shText`).
+- **읽는 법·동작 설명은 `?` 뒤에 둔다** — 패널 바닥에 설명 문단을 늘 펴 두지 않는다. 소제목 단위는
+  `h3Help`, 페이지 단위는 `PAGE_HELP`. 숫자·갱신 시각 같은 상태는 설명이 아니므로 화면에 남긴다.
 
 디자인 원본: claude.ai/design 프로젝트 `design_handoff_dashboard/` 번들 (2026-07-30 확정,
 토큰·조판·상호작용 스펙은 그 README 참조).
@@ -117,6 +158,8 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
 | --- | --- |
 | `/api/summary` | 전 섹션 데이터 한 덩이 (45초 캐시, `?fresh=1` 로 무효화) |
 | `/api/log?name=<key>` | 워커 로그 tail |
+| `/api/heat` · `/api/heat/day?d=<날짜>` | 개요 수정량 잔디 — KST 날짜별 `[추가, 삭제, 커밋 수, 로컬 줄 수]` / 그날의 커밋·로컬 스냅샷과 고친 글. 레포 HEAD 나 로컬 스냅샷 HEAD 가 바뀔 때만 백그라운드로 다시 센다(1년치 numstat ≈3초) |
+| `/api/translog?path=<KO 경로>` | 번역 워커 로그에서 그 글의 마지막 시도 구간 — `translating (…): <KO> → <EN>` 줄부터 그 글의 `committed:` 까지(다음 시도·`KO-FOLLOWUP:`·다른 글 줄 앞에서 끊음). 시작 줄이 없으면 경로가 든 줄의 끝부분 |
 | `/api/lint?path=<repo상대경로>` | 글 하나에 `.agents/hooks/md_lint.py` CLI 실행 |
 | `/api/kotypo` (GET/POST) | KO-TYPOS '수정' 체크 상태 — POST 는 전체 map 교체, `~/.local/state/blog_dashboard_kotypo.json` 에 저장 |
 | `/api/compare/list?old=&new=&audit=` | 비교 대상 글 목록 + 스냅샷 목록 + 진행 집계 (비면 기본 짝) |

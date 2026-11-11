@@ -50,7 +50,11 @@
 .sh-stage__h{font-family:var(--sans);font-size:.76rem;margin-bottom:.25rem}
 .sh-q{font-size:.8rem;color:var(--ink);opacity:.85;margin:.2rem 0}
 .sh-step4{border-top:1px dashed var(--rule);margin-top:.35rem;padding-top:.3rem}
-.sh-reveal{border-left:3px solid var(--brass);padding-left:.7rem;margin:.4rem 0}
+/* 고른 카드에 이미 brass 세로줄이 있으므로 공개 칸에는 줄을 따로 긋지 않는다. */
+.sh-reveal{margin:.4rem 0}
+/* 원문 조각의 링크 — 주소를 뗀 라벨. 판정 중인 링크는 굵게. */
+.sh-ref{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
+.sh-ref--me{font-weight:700}
 .sh-form{display:flex;flex-direction:column;gap:.3rem;margin-top:1rem}
 .sh .bad{color:var(--bad)}
 .sh-agy{font-family:var(--sans);font-size:.72rem;color:var(--muted);align-self:center}
