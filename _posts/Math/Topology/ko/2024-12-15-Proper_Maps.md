@@ -116,7 +116,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 2. $f$가 closed이고, 각각의 $y\in Y$에 대하여 $f^{-1}(y)$가 compact이다.
 :::
 ::: 증명
-첫 번째 조건이 성립한다면 임의의 $y\in Y$에 대하여, $f\vert_{f^{-1}(y)}$가 universally closed임을 알고, 앞선 보조정리로부터 $f^{-1}(y)$가 compact라는 것을 안다. 반대방향은 universally closed map들의 곱이 universally closed라는 것을 사용하면 증명할 수 있다.
+첫 번째 조건이 성립한다면 임의의 $y\in Y$에 대하여, $f\vert_{f^{-1}(y)}$가 universally closed임을 알고, 앞선 보조정리로부터 $f^{-1}(y)$가 compact라는 것을 안다. 반대방향을 보이기 위해 위상공간 $Z$와 닫힌집합 $C\subseteq X\times Z$, 그리고 $(y,z)\not\in(f\times\id_Z)(C)$가 주어졌다 하자. 그럼 각각의 $x\in f^{-1}(y)$에 대하여 $(x,z)\not\in C$이므로 $(U_x\times V_x)\cap C=\emptyset$을 만족하는 $x$의 열린근방 $U_x$와 $z$의 열린근방 $V_x$가 존재하고, $f^{-1}(y)$가 compact이므로 이들 중 유한 개 $U_{x_1},\ldots,U_{x_n}$이 $f^{-1}(y)$를 덮는다. $U=\bigcup_k U_{x_k}$, $V=\bigcap_k V_{x_k}$라 하면 $f^{-1}(y)\subseteq U$이고 $(U\times V)\cap C=\emptyset$이다. 이제 $f$가 closed이므로 $W=Y\setminus f(X\setminus U)$는 $y$의 열린근방이며, $f(x')\in W$이면 $x'\in U$이므로 $(W\times V)\cap(f\times\id_Z)(C)=\emptyset$이다. 따라서 $(f\times\id_Z)(C)$는 닫힌집합이다.
 :::
 
 따라서, compact space의 정의를 $f:X \rightarrow \{\ast\}$가 universally closed라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 

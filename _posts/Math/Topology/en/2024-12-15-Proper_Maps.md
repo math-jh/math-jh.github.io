@@ -118,7 +118,7 @@ For a continuous function $f:X \rightarrow Y$, the following are equivalent.
 2. $f$ is closed, and for each $y\in Y$, $f^{-1}(y)$ is compact.
 :::
 ::: Proof
-If the first condition holds, then for any $y\in Y$, we know that $f\vert_{f^{-1}(y)}$ is universally closed, and from the preceding lemma we know that $f^{-1}(y)$ is compact. The converse can be proved using the fact that the product of universally closed maps is universally closed.
+If the first condition holds, then for any $y\in Y$, we know that $f\vert_{f^{-1}(y)}$ is universally closed, and from the preceding lemma we know that $f^{-1}(y)$ is compact. To show the converse, let a topological space $Z$, a closed set $C\subseteq X\times Z$, and $(y,z)\not\in(f\times\id_Z)(C)$ be given. Then for each $x\in f^{-1}(y)$, since $(x,z)\not\in C$, there exist an open neighborhood $U_x$ of $x$ and an open neighborhood $V_x$ of $z$ such that $(U_x\times V_x)\cap C=\emptyset$, and since $f^{-1}(y)$ is compact, finitely many of these, $U_{x_1},\ldots,U_{x_n}$, cover $f^{-1}(y)$. Setting $U=\bigcup_k U_{x_k}$ and $V=\bigcap_k V_{x_k}$, we have $f^{-1}(y)\subseteq U$ and $(U\times V)\cap C=\emptyset$. Now, since $f$ is closed, $W=Y\setminus f(X\setminus U)$ is an open neighborhood of $y$, and since $f(x')\in W$ implies $x'\in U$, we have $(W\times V)\cap(f\times\id_Z)(C)=\emptyset$. Therefore, $(f\times\id_Z)(C)$ is a closed set.
 :::
 
 Thus, we could also have defined a compact space by requiring that $f:X \rightarrow \{\ast\}$ be universally closed. In particular, the following holds.
