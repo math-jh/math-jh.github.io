@@ -682,7 +682,7 @@
 "7ob2g": {relation: required, reviewed: true}
 "7onxz": {relation: weak, reviewed: true}
 "7orjn": {relation: required, reviewed: true}
-"7p4x3": {relation: required, reviewed: true}
+"7p4x3": {relation: weak, reviewed: true}
 "7p5f3": {relation: weak, reviewed: true}
 "7pk0z": {relation: weak, reviewed: true}
 "7ptbo": {relation: required, reviewed: true}
@@ -1800,7 +1800,7 @@
 "kswm1": {relation: required, reviewed: true}
 "kt82g": {relation: weak, reviewed: true}
 "ktidb": {relation: weak, reviewed: true}
-"kughb": {relation: weak, reviewed: true}
+"kughb": {relation: required, reviewed: true}
 "kui9i": {relation: required, reviewed: true}
 "kvibe": {relation: required, reviewed: true}
 "kvm71": {relation: required, reviewed: true}
@@ -1904,8 +1904,8 @@
 "m1m08": {relation: weak, reviewed: true}
 "m1mg4": {relation: weak, reviewed: true}
 "m1tx5": {relation: required, reviewed: true}
-"m2rzb": {relation: weak, reviewed: true}
-"m38ya": {relation: weak, reviewed: true}
+"m2rzb": {relation: required, reviewed: true}
+"m38ya": {relation: required, reviewed: true}
 "m391m": {relation: required, reviewed: true}
 "m4ivn": {relation: weak, reviewed: true}
 "m5c2x": {relation: weak, reviewed: true}
@@ -1956,7 +1956,7 @@
 "mmats": {relation: weak, reviewed: true}
 "mmkq9": {relation: required, reviewed: true}
 "mmtec": {relation: required, reviewed: true}
-"mmy3m": {relation: weak, reviewed: true}
+"mmy3m": {relation: required, reviewed: true}
 "mn6r9": {relation: weak, reviewed: true}
 "mni2r": {relation: required, reviewed: true}
 "mo0t0": {relation: required, reviewed: true}
@@ -2924,7 +2924,7 @@
 "xt2ts": {relation: required, reviewed: true}
 "xtbc7": {relation: required, reviewed: true}
 "xu3ec": {relation: required, reviewed: true}
-"xu8xk": {relation: required, reviewed: true}
+"xu8xk": {relation: weak, reviewed: true}
 "xualb": {relation: required, reviewed: true}
 "xv5lb": {relation: required, reviewed: true}
 "xvf5g": {relation: required, reviewed: true}
