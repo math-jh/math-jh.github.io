@@ -1,0 +1,20 @@
+# 글 묶음(소 카테고리). 한 카테고리 안의 글을 묶어 보여 주는 데 쓴다.
+#
+# 키       : 카테고리 문자열 (categories.yml 의 subjects 키와 같다).
+# 목록     : 순서가 곧 묶음 순서. 한 묶음 안의 글은 weight 순이다.
+#   key    글 frontmatter 의 `group:` 값과 같아야 묶인다.
+#   ko/en  표시명. en 이 없으면 ko 를 쓴다.
+#
+# `group:` 이 없는 글은 묶음 밖의 맨 위에 제목 없이 놓인다.
+# 목록에 없는 `group:` 값을 가진 글은 어디에도 나오지 않으니 오타에 주의한다.
+#
+# 소비자: _includes/nav_list (사이드바), _layouts/categories.html (카테고리 목록),
+#         _includes/subject-cards.html (과목홈 카드).
+"Misc / LLM Workshop":
+  - { key: theme,       ko: "블로그 테마" }
+  - { key: typesetting, ko: "블로그 조판" }
+  - { key: features,    ko: "블로그 기능" }
+  - { key: backend,     ko: "블로그 백엔드" }
+  - { key: admin,       ko: "블로그 관리도구" }
+  - { key: agents,      ko: "블로그 에이전트" }
+  - { key: pi,          ko: "Raspberry Pi" }

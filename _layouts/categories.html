@@ -72,11 +72,39 @@ layout: archive
    {% if lang == "en" %}{% assign cat_label = ordered_cat | split: " / " | last %}{% endif %}
    <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
      <h2 class="archive__subtitle" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '26%' }}; --cat-l: {{ hue_data.l | default: 50 }};">{{ cat_label }}</h2>
+     {%- comment -%}
+       _data/post_groups.yml 에 이 카테고리가 있으면 글을 묶음별로 나눠 소제목을 단다.
+       group 이 없는 글은 맨 위에 제목 없이 놓인다. 묶음 안은 weight 순.
+     {%- endcomment -%}
+     {%- assign post_groups = site.data.post_groups[ordered_cat] -%}
+     {%- if post_groups -%}
+       {%- assign asc_posts = posts | reverse -%}
+       {%- assign ungrouped_posts = asc_posts | where_exp: "p", "p.group == nil" -%}
+       <div class="entries-{{ entries_layout }}">
+         {% for post in ungrouped_posts %}
+           {% include archive-single.html type=entries_layout %}
+         {% endfor %}
+       </div>
+       {%- for g in post_groups -%}
+         {%- assign group_posts = asc_posts | where: "group", g.key -%}
+         {%- if group_posts.size > 0 -%}
+           {%- assign group_label = g.ko -%}
+           {%- if lang == "en" and g.en -%}{%- assign group_label = g.en -%}{%- endif -%}
+           <h3 class="taxonomy__group"><span>{{ group_label }}</span><small>{{ group_posts.size }}</small></h3>
+           <div class="entries-{{ entries_layout }}">
+             {% for post in group_posts %}
+               {% include archive-single.html type=entries_layout %}
+             {% endfor %}
+           </div>
+         {%- endif -%}
+       {%- endfor -%}
+     {%- else -%}
      <div class="entries-{{ entries_layout }}">
        {% for post in posts reversed %}
          {% include archive-single.html type=entries_layout %}
        {% endfor %}
      </div>
+     {%- endif -%}
      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
    </section>
   {%- endif -%}

@@ -18,9 +18,10 @@
 #               필드만(STRUCTURE_FIELDS — 제목·카테고리·순서·게시일·permalink·sitemap 등)
 #               본다. **수정일(last_modified_at)과 요약문(excerpt)은 일부러 뺐다**: 즉시
 #               반영할 것은 글 추가·삭제(와 드문 구조 필드 변경)뿐이고, 수정일·요약문은
-#               정기 재시작(RuntimeMaxSec=3h)·full-rebuild 때 반영되면 된다는 사용자 결정
-#               (2026-10-31). 그래서 최근 글의 수정일·요약, sitemap 의 lastmod, 과목 카드·
-#               아카이브의 요약은 그때까지 옛것일 수 있다.
+#               정기 재시작·full-rebuild 때 반영되면 된다는 사용자 결정(2026-10-31; 정기
+#               재시작은 11-11 부터 새벽 03:40 하루 한 번 — ~/.local/bin/jekyll-refresh.py).
+#               그래서 최근 글의 수정일·요약, sitemap 의 lastmod, 과목 카드·아카이브의 요약은
+#               그때까지 옛것일 수 있다.
 # 공통 제외: _data 의 link_relations*(글 페이지만 읽고 분류기 틱마다 바뀐다)·page_urls(URL
 # 목록으로 대신). read_time 이 켜진 글은 본문까지 넣는다 (page__meta 가 단어 수를 센다).
 # 프로세스 첫 빌드와, 빌드가 중간에 실패한 다음 빌드는 지문 비교 없이 전부 렌더한다
@@ -41,7 +42,7 @@ module ListingRegenGate
   # archive-single·subject-cards·page__meta·nav_recents·categories·recent 레이아웃과 sitemap 이
   # 글에서 읽는 필드 중 즉시 반영할 것 (last_modified_at·excerpt 는 지연 반영 — 위 주석)
   STRUCTURE_FIELDS = %w[title categories category weight date permalink header link
-                        published sitemap read_time show_date words_per_minute].freeze
+                        published sitemap read_time show_date words_per_minute group].freeze
   STATE = { terms: {}, structure: {} } # 묶음 => { current:, last: }
 
   module_function

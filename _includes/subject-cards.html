@@ -1,31 +1,28 @@
 {% comment %}
-  Subject-home card grid.
-    include.posts      — posts (filtered by language + sorted by weight).
-    include.minimal    — true → drop the order number and excerpt (Misc).
-    include.splitweight — insert a subtle row break before the first post whose
-                          weight >= this value (e.g. 99 separates the LLM
-                          Workshop dev notes from the reading notes).
+  Subject-home card grid (dispatcher).
+    include.posts       — posts (filtered by language + sorted by weight).
+    include.minimal     — true → drop the order number and excerpt (Misc).
+    include.splitweight — see subject-cards-block.html.
+
+  _data/post_groups.yml 에 page.category 가 있으면 글을 묶음별로 나눠 소제목을 달고
+  묶음마다 카드 덩어리를 따로 깐다(group 이 없는 글은 맨 위, 제목 없이). 없으면
+  지금까지처럼 한 덩어리다.
 {% endcomment %}
-{% comment %}
-  Card lightness fades smoothly by POSITION in the sorted list (not by the raw
-  weight value, whose gaps would scatter the brightness): first card L=31 →
-  last card L=22, a gentle monotonic tonal descent. Hue/sat come from the page.
-{% endcomment %}
-{% assign _split_done = false %}
-{% assign _n = include.posts | size %}
-{% if _n > 1 %}{% assign _span = _n | minus: 1 %}{% endif %}
-<div class="subject-cards{% if include.minimal %} subject-cards--minimal{% endif %}">
-  {% for post in include.posts %}
-    {% if include.splitweight and _split_done == false and post.weight >= include.splitweight %}
-      <div class="subject-cards__break" aria-hidden="true"></div>
-      {% assign _split_done = true %}
-    {% endif %}
-    {% if _span %}{% assign _drop = forloop.index0 | times: 9 | divided_by: _span %}{% assign card_l = 31 | minus: _drop %}{% else %}{% assign card_l = 26 %}{% endif %}
-    <a class="subject-card" href="{{ post.url | relative_url }}" style="--card-l: {{ card_l }};">
-      {% unless include.minimal %}<span class="subject-card__num">{{ forloop.index }}</span>{% endunless %}
-      <span class="subject-card__title">{{ post.title | markdownify | strip_html }}</span>
-      {% unless include.minimal %}{% if post.excerpt %}<span class="subject-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 110 }}</span>{% endif %}{% endunless %}
-      <span class="subject-card__date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></span>
-    </a>
-  {% endfor %}
-</div>
+{%- assign _groups = site.data.post_groups[page.category] -%}
+{%- if _groups -%}
+  {%- assign _ungrouped = include.posts | where_exp: "p", "p.group == nil" -%}
+  {%- if _ungrouped.size > 0 -%}
+    {% include subject-cards-block.html posts=_ungrouped minimal=include.minimal %}
+  {%- endif -%}
+  {%- for g in _groups -%}
+    {%- assign _gp = include.posts | where: "group", g.key -%}
+    {%- if _gp.size > 0 -%}
+      {%- assign _label = g.ko -%}
+      {%- if page.url contains "/en/" and g.en -%}{%- assign _label = g.en -%}{%- endif -%}
+      <h3 class="subject-cards__group"><span>{{ _label }}</span><small>{{ _gp.size }}</small></h3>
+      {% include subject-cards-block.html posts=_gp minimal=include.minimal %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {% include subject-cards-block.html posts=include.posts minimal=include.minimal splitweight=include.splitweight %}
+{%- endif -%}

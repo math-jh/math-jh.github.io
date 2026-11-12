@@ -90,9 +90,32 @@
       <li>
         <span class="nav__sub-title"><a href="{{ auto_home | relative_url }}" class="sidebar_title">{{ auto_label }}</a></span>
         <ul>
-          {% for p in auto_posts %}
-            <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} class="active"{% endif %}>{{ p.title }}</a></li>
-          {% endfor %}
+          {%- comment -%}
+            _data/post_groups.yml 에 이 카테고리가 있으면 묶음 소제목을 달아 묶는다
+            (group 이 없는 글은 맨 위, 묶음 안은 weight 순).
+          {%- endcomment -%}
+          {% assign auto_groups = site.data.post_groups[auto_cat] %}
+          {% if auto_groups %}
+            {% assign ungrouped_auto = auto_posts | where_exp: "p", "p.group == nil" %}
+            {% for p in ungrouped_auto %}
+              <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} class="active"{% endif %}>{{ p.title }}</a></li>
+            {% endfor %}
+            {% for g in auto_groups %}
+              {% assign group_auto = auto_posts | where: "group", g.key %}
+              {% if group_auto.size > 0 %}
+                {% assign group_label = g.ko %}
+                {% if lang == "en" and g.en %}{% assign group_label = g.en %}{% endif %}
+                <li class="nav__group"><span>{{ group_label }}</span></li>
+                {% for p in group_auto %}
+                  <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} class="active"{% endif %}>{{ p.title }}</a></li>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for p in auto_posts %}
+              <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} class="active"{% endif %}>{{ p.title }}</a></li>
+            {% endfor %}
+          {% endif %}
         </ul>
       </li>
     {% endif %}

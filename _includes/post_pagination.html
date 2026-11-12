@@ -8,7 +8,23 @@
 <!--첫 번째 문단-->
 {% assign current_category = page.categories[0] %}
 {% assign lang_posts = site.posts | where_exp: "post", "post.permalink contains lang_full" %}
-{% assign cat_list = lang_posts | where: "categories", current_category | sort: "weight" | reverse %}
+{% assign cat_asc = lang_posts | where: "categories", current_category | sort: "weight" %}
+{%- comment -%}
+  _data/post_groups.yml 에 이 카테고리가 있으면 읽는 순서는 사이드바와 같다:
+  group 이 없는 글, 이어서 묶음 순서대로, 묶음 안은 weight 순. 아래 루프는 내림차순
+  목록을 가정하므로(앞 = 다음 글) 마지막에 뒤집는다.
+{%- endcomment -%}
+{% assign post_groups = site.data.post_groups[current_category] %}
+{% if post_groups %}
+  {% assign cat_ordered = cat_asc | where_exp: "p", "p.group == nil" %}
+  {% for g in post_groups %}
+    {% assign group_posts = cat_asc | where: "group", g.key %}
+    {% assign cat_ordered = cat_ordered | concat: group_posts %}
+  {% endfor %}
+  {% assign cat_list = cat_ordered | reverse %}
+{% else %}
+  {% assign cat_list = cat_asc | reverse %}
+{% endif %}
 {% for post in cat_list %}
   {% if post.url == page.url %}
     {% assign prevIndex = forloop.index0 | minus: 1 %}
