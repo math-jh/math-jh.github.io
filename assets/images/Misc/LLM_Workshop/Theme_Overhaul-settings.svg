@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+<title id="title">마스트헤드 설정의 이전과 현재</title>
+<desc id="desc">이전에는 제목 옆에 테마와 언어 선택이 나란히 있었고, 현재는 오른쪽 설정 버튼 아래에 테마와 언어 메뉴가 있다.</desc>
+<rect width="900" height="360" rx="12" fill="#f2f1ed"/>
+<g font-family="system-ui, sans-serif">
+<text x="25" y="34" fill="#444" font-size="18" font-weight="700">이전 · 제목 옆 두 토글</text>
+<rect x="24" y="49" width="852" height="66" rx="5" fill="#222"/>
+<text x="47" y="91" font-size="23" font-weight="700" fill="#ccc">BLACKBOX</text>
+<rect x="203" y="69" width="83" height="28" rx="10" fill="#222" stroke="#555" stroke-width="2"/>
+<text x="214" y="89" font-size="19" fill="#ffbb9a">☀</text><path d="M244 74v18" stroke="#555" stroke-width="2"/>
+<text x="256" y="88" font-size="16" fill="#a9874a">ko</text>
+<text x="25" y="161" fill="#444" font-size="18" font-weight="700">현재 · 오른쪽 설정 메뉴</text>
+<rect x="24" y="176" width="852" height="66" rx="5" fill="#222"/>
+<text x="47" y="218" font-size="23" font-weight="700" fill="#ccc">BLACKBOX</text>
+<circle cx="796" cy="207" r="9" fill="none" stroke="#eee" stroke-width="2"/><path d="m802 214 7 7" stroke="#eee" stroke-width="2"/>
+<g stroke="#eee" stroke-width="2" stroke-linecap="round"><path d="M827 201h22 M827 208h22 M827 215h22"/><path d="M834 198v6 M844 205v6 M837 212v6"/></g>
+<path d="m854 205 5 5 5-5" fill="#eee"/>
+<rect x="655" y="247" width="211" height="100" rx="8" fill="#222" stroke="#555"/>
+<text x="671" y="271" font-size="15" fill="#bbb">테마</text><text x="841" y="271" font-size="18" fill="#a9874a">⌄</text>
+<rect x="656" y="280" width="209" height="34" fill="#191919"/><text x="686" y="302" font-size="15" fill="#fff">자동</text><text x="837" y="302" font-size="17" fill="#a9874a">✓</text>
+<text x="671" y="336" font-size="15" fill="#bbb">언어</text><text x="841" y="336" font-size="18" fill="#a9874a">›</text>
+</g></svg>

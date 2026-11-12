@@ -15,9 +15,9 @@ sidebar:
 author: Marvin
 
 date: 2026-08-17
-last_modified_at: 2026-11-02
 
 weight: 40
+group: admin
 
 ---
 
@@ -28,7 +28,9 @@ weight: 40
 
 > 내가 원하는 거는. 아까 얘기했듯이 diff 스타일로. 두 개의 버전을 양쪽 옆에다가 두고 볼 수 있게. 그러나 이제 마크다운 파일같이 저런 형식이 아니라. 이미 페이지로 구워진 상태를 보고 싶은 거고.
 
-자리는 사용자가 대시보드로 정했다. 비교기는 [블로그 운영 대시보드](/ko/llm_workshop/dashboard)의 `server.py`(`127.0.0.1:8089`)가 서빙하는 `/dash/compare.html`이다. 본문 pane을 블로그 스타일시트로 그려야 하므로 대시보드 SPA 밖의 독립 문서로 두었다.
+자리는 사용자가 대시보드로 정했다. 비교기는 [블로그 운영 대시보드](/ko/llm_workshop/dashboard)의 `server.py`(`127.0.0.1:8089`)가 서빙하는 `/dash/compare.html`이다. 본문 pane을 블로그 스타일시트로 그려야 하므로 대시보드 SPA 밖의 독립 문서로 두었다. 11월 현재 화면은 왼쪽에 글 목록과 감사 지적 수, 가운데에 이전·이후 두 판본, 오른쪽에 메모 칸이 놓인다. 바뀐 블록에 마우스를 올리면 그 변경의 번호와 근거를 담는 카드가 뜬다.
+
+![판본 비교기. 왼쪽 글 목록에 감사 지적 수가 붙고, 가운데에 수열의 극한 글의 이전 판본과 워킹트리가 나란히 있으며, 바뀐 블록 위에 '변경 #1' 카드가 떠 있다](/assets/images/Misc/LLM_Workshop/Version_Comparator-compare.png)
 
 ## 이전 판본을 굽는 스냅샷
 
@@ -39,8 +41,10 @@ weight: 40
 ```python
 proc = subprocess.Popen(
     ["git", "-C", str(REPO), "cat-file", "--batch"],
-    stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,
 )
+assert proc.stdin and proc.stdout
 proc.stdin.write(("\n".join(e[1] for e in entries) + "\n").encode())
 proc.stdin.close()
 
@@ -50,7 +54,9 @@ for mode, _blob, path in entries:
     data = proc.stdout.read(size)
     proc.stdout.read(1)  # trailing newline
 ```
-{: data-filename="scripts/dashboard/snapshot.py"}
+{: data-filename="scripts/dashboard/snapshot.py · 일부 발췌"}
+
+`entries`는 `ls-tree`가 준 (모드, blob id, 경로) 목록이다. blob id를 전부 한꺼번에 `cat-file --batch`의 표준입력에 넣으면, git은 id마다 `<id> blob <크기>` 머리줄과 그 크기만큼의 내용, 줄바꿈 하나를 차례로 내보낸다. 루프는 머리줄에서 크기를 읽어 정확히 그만큼만 읽고 뒤의 줄바꿈을 버린 뒤, 그 내용을 같은 순서의 경로에 쓴다. 판본 하나를 푸는 데 git 프로세스가 하나만 뜨고, 저장소의 브랜치나 워킹트리는 건드리지 않는다.
 
 푼 트리에는 `.git`을 심볼릭 링크로 걸어 준다. `last_modified_git.rb`가 `git -C <source> log`로 수정 시각을 읽으므로, 링크가 없으면 빌드는 성공하는데 날짜가 전부 빈다. 빌드는 `systemd-run --user --scope -p MemoryMax=1500M`으로 cgroup에 가둔다. 여유 RAM이 2GB 남짓인 Pi에서 빌드 하나가 1.5GB를 쓰므로, 한도가 없으면 임시 빌드가 dev 서버를 굶긴다. 작업 디렉토리도 tmpfs인 `/tmp`가 아니라 `/var/tmp`다. `--unpublished`는 8월 감사 대상 141편이 양쪽 판본 모두 `published: false`였기 때문에 붙었고, 환경은 dev 서버와 같은 `JEKYLL_ENV=development`다.
 
@@ -71,9 +77,9 @@ for tag, i1, i2, j1, j2 in sm.get_opcodes():
     else:
         ops += _align_gap(old[i1:i2], new[j1:j2], i1, j1)
 ```
-{: data-filename="scripts/dashboard/pagediff.py"}
+{: data-filename="scripts/dashboard/pagediff.py · 일부 발췌"}
 
-1단계는 키 열에 돌린 `difflib.SequenceMatcher`가 같은 블록끼리 붙인다. 감사 수정은 글당 몇 군데뿐이라 대부분 여기서 끝난다. 2단계 `_align_gap`은 남은 틈 안에서만 순서를 보존하는 1:1 DP로 유사도 매칭을 돌린다(대각선 밴드 12, 하한 0.6, 종류가 다른 짝은 0.85배). 3단계는 짝지은 블록 안의 단어 diff, 4단계는 바뀐 토큰만 `<del>`·`<ins>`로 감싸기다. 라벨 id(`def1`)는 근거로 쓰지 않는다. 정의 하나를 끼워 넣으면 뒤 형제가 전부 재번호되어 글 뒷부분 전체가 어긋난다.
+1단계는 키 열에 돌린 `difflib.SequenceMatcher`가 같은 블록끼리 붙인다. 감사 수정은 글당 몇 군데뿐이라 대부분 여기서 끝난다. 키가 다른 구간(틈)만 2단계 `_align_gap`으로 넘어간다. 틈 안의 옛 블록과 새 블록 쌍마다 낱말 열의 일치 비율로 유사도를 매기되, 틈 안 위치가 12칸 넘게 떨어진 쌍은 재지 않고, 종류가 다른 쌍(문단과 정의 박스 등)은 0.85를 곱하며, 0.6 미만은 0으로 친다. 그 표 위에서 순서를 지키는 1:1 짝의 유사도 합이 최대가 되도록 DP를 돌리고, 짝을 못 찾은 블록은 삭제나 추가로 남긴다. 3단계는 짝지은 블록 안의 단어 diff, 4단계는 바뀐 토큰만 `<del>`·`<ins>`로 감싸기다. 라벨 id(`def1`)는 근거로 쓰지 않는다. 정의 하나를 끼워 넣으면 뒤 형제가 전부 재번호되어 글 뒷부분 전체가 어긋난다.
 
 안심할 수 있는 부분은 하한값이 아니라 표시 규칙이다. 하한 미만이면 짝을 짓지 않고 왼쪽 통째 삭제, 오른쪽 통째 추가로 그린다. 낮은 유사도에서 잘못 짝지어도 화면은 올바르게 안 짝지었을 때와 같은 "통째 교체"이므로, 정렬기가 그 구간에서 틀려도 리뷰어가 보는 것은 바뀌지 않는다.
 
@@ -106,9 +112,10 @@ box.querySelectorAll('.katex').forEach(function (k) {
   var tex = k.querySelector('annotation[encoding="application/x-tex"]');
   k.replaceWith(document.createTextNode(tex ? '$' + tex.textContent.trim() + '$' : ''));
 });
+// 병기 첨자(<sub>영문</sub>)는 본문 흐름이 아니므로 인용에서 뺀다.
 box.querySelectorAll('sub').forEach(function (s) { s.remove(); });
 ```
-{: data-filename="scripts/dashboard/compare.js"}
+{: data-filename="scripts/dashboard/compare.js · 일부 발췌"}
 
 수식을 `annotation`의 TeX 원문으로 되돌리고 한영 병기 첨자를 빼면, 인용문이 마크다운에서 그대로 grep된다.
 
@@ -123,12 +130,14 @@ box.querySelectorAll('sub').forEach(function (s) { s.remove(); });
   - 인용: “것이며, $X$가 Noetherian이므로 $v_Y(f)\neq 0$인 $Y$는 유한 개뿐이다. (...)”
   - 지시: 이 부분은 정의 블록 안이 아니라 바깥에 있어야 함. (잘 정의됨 부분)
 ```
+{: data-filename="지시서 · 출력 예시"}
 
 사용자가 이것을 세션에 붙여넣으면, 반영을 마친 세션은 지시서 끝에 실린 명령으로 자기가 처리한 메모를 지운다. 이것도 사용자 지시였다. 메모가 Pi에 남으면 다음 검토 때 처리된 지시가 다시 나온다.
 
 ```bash
 python3 scripts/dashboard/notes_cli.py --del n1234567 n1234568
 ```
+{: data-filename="지시서 끝 줄 · 명령 예시"}
 
 글 단위가 아니라 id로 지운다. 사용자는 지시서를 복사한 뒤에도 검토를 계속하므로, 글 단위로 지우면 그 사이 새로 적은 메모까지 날아간다.
 
@@ -153,13 +162,13 @@ python3 scripts/dashboard/notes_cli.py --del n1234567 n1234568
 ```python
 "suspect": bool(src) and (changed > max(8, src_lines) or (src_lines and changed == 0)),
 ```
-{: data-filename="scripts/dashboard/compare.py"}
+{: data-filename="scripts/dashboard/compare.py · 일부 발췌"}
 
-기준은 hunk 수가 아니라 바뀐 줄 수다. 원문 한 hunk가 절 하나를 덧붙이면 블록은 정당하게 여럿 바뀌고, 실측 오탐 5건이 전부 그 꼴이었다. 바뀐 줄보다 바뀐 블록이 많으면 짝이 밀린 것이다. 게이트가 걸리면 화면이 원문 diff 패널을 먼저 연다.
+`src_lines`는 두 판본의 마크다운 원문 diff에서 `+`·`-`로 시작하는 줄 수이고, `changed`는 렌더 diff에서 바뀐 블록 수다. 바뀐 블록이 바뀐 줄보다 많으면(바뀐 줄이 적어도 블록 8개까지는 봐준다) 정렬기가 짝을 밀어 엉뚱한 블록끼리 맞춘 것으로 보고, 원문은 바뀌었는데 렌더에서 바뀐 블록이 하나도 없을 때도 의심한다. 기준을 hunk 수로 잡지 않은 것은 원문 hunk 하나가 절 하나를 덧붙이면 블록은 정당하게 여럿 바뀌기 때문이고, 실측에서 나온 오탐 5건이 전부 그 꼴이었다. 게이트가 걸리면 화면이 원문 diff 패널을 먼저 연다.
 
 규약 이전에 돈 8월 감사는 그때의 노트를 직접 읽는 전용판 `/dash/audit-2026-08.html`로 본다. 고른 판본 짝과 감사도 메모처럼 Pi에 남는다. 대량 sweep 검토는 같은 두 판본을 며칠씩 오가므로 새로고침마다 기본값으로 돌아가면 성가시다는 것이 사용자의 이유였다.
 
-이 파일들은 처음에 사용자 판단으로 저장소 밖에 있었다(일회성 도구라 버전 관리가 필요 없다고 봤다). 개발 노트 봇은 `[dev]` 커밋에서 글감을 고르므로, 추적되지 않는 도구는 그 큐에 들어오지 않는다. 다음 날 사용자가 판단을 바꿨다.
+이 파일들은 처음에 사용자 판단으로 git이 추적하지 않는 채 `scripts/dashboard/`에 있었다(일회성 도구라 버전 관리가 필요 없다고 봤다). 개발 노트 봇은 `[dev]` 커밋에서 글감을 고르므로, 추적되지 않는 도구는 그 큐에 들어오지 않는다. 다음 날 사용자가 판단을 바꿨다.
 
 > 판본검사기가 LLM Workshop에 글감으로 쓸만할 것 같은데, git으로 추적되는 곳에 있지 않아서 marvin이 집을 수 없어. 직접 써 줘.
 

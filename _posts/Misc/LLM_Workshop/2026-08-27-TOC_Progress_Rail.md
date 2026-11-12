@@ -1,7 +1,7 @@
 ---
 
 title: "스크롤 위치를 따라가는 목차 강조"
-excerpt: "목차 강조를 색이 변하지 않는 레일, 절 중앙과 글 양끝 사이를 읽는 만큼 움직이는 짧은 금색 띠, 띠가 가까울수록 물드는 마름모 마커로 나눈 구조"
+excerpt: "절마다 건너뛰던 목차 강조를 스크롤에 따라 움직이는 금색 띠로 바꾸고, 본문과 목차의 위치를 대응시키는 방식"
 
 read_time: false
 
@@ -14,103 +14,62 @@ sidebar:
 author: Marvin
 
 date: 2026-08-27
-last_modified_at: 2026-11-02
 weight: 43
+group: features
 
 ---
 
 관련 파일: [`assets/js/_main.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/_main.js), [`_sass/minimal-mistakes/_navigation.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_navigation.scss), [커밋 432aa9a5](https://github.com/math-jh/math-jh.github.io/commit/432aa9a5), [커밋 b7fb2984](https://github.com/math-jh/math-jh.github.io/commit/b7fb2984), [커밋 725bc413](https://github.com/math-jh/math-jh.github.io/commit/725bc413)
 {: .notice--info}
 
-[블로그 테마 개편](/ko/llm_workshop/theme_overhaul)에서 우측 목차에 scroll-spy가 붙었다. Gumshoe가 지금 읽는 절의 `<li>`에 `.active`를 달면, CSS가 그 링크의 왼쪽 테두리(`border-left`)를 금색으로 바꾸는 구조였다. 이 금색 토막은 절 경계에서 통째로 튄다. 절이 길면 스크롤을 한참 내려도 같은 자리에 멈춰 있다가, 다음 절 제목을 지나는 순간 아래 칸으로 건너뛴다. 사용자가 낸 방향은 이 칸 단위 강조를 스크롤 진행에 연동시키는 것이었다 (커밋 제목이 "스크롤 진행형 강조 표시"다). 지금 목차는 `_navigation.scss`가 강조의 생김새를, `_main.js`가 위치 계산을 맡는다.
+## 기존 목차와 현재 절 강조
 
-## 중립 레일과 금색 띠, 마름모 마커의 세 겹
+이 블로그가 쓰는 Minimal Mistakes 테마는 글의 제목들을 모아 목차를 만들고, 각 항목을 해당 제목의 앵커로 연결한다. 목차를 누르면 그 절로 이동한다. 여기에 스크롤 위치에 맞춰 현재 절의 항목을 강조하는 기능도 있다. 이렇게 본문 위치를 추적해 탐색 메뉴에 반영하는 scroll-spy 기능은 이 테마에서는 Gumshoe라는 JavaScript 라이브러리가 맡는다. Gumshoe는 목차 링크가 가리키는 제목들의 위치를 확인하고, 스크롤할 때 현재 읽는 절에 해당하는 목차 항목에 `.active` 클래스를 붙인다. 이렇게 Gumshoe가 어떤 항목이 활성 상태인지 표시하면, 테마의 CSS가 `.active`를 선택해 모양을 바꾼다.
 
-옛 강조는 링크마다 `border-left: 2px`를 걸고 `.active`일 때 `border-left-color`만 금색으로 바꾸는 한 겹이었다. 색이 바뀌는 단위가 링크 한 칸이니 강조가 칸 단위로 움직일 수밖에 없다.
+이 블로그의 기존 CSS는 활성 항목의 글자색과 왼쪽 테두리를 금색으로 바꿨다. 각 링크에 세로 테두리가 하나씩 있으므로, 현재 절에 해당하는 한 칸만 금색으로 보였다. 절이 길면 한참 스크롤해도 강조가 제자리에 머물고, 다음 제목을 지나면 아래 항목으로 통째로 옮겨 갔다. 현재 절은 알 수 있지만, 그 절을 얼마나 읽었는지는 드러나지 않는 방식이다.
 
-지금은 세 겹이다. 레일은 색이 변하지 않는 `.toc__menu::before`이고, 그 위를 움직이는 짧은 금색 띠가 `::after`이고, 절 제목(h2)마다 찍는 마름모가 링크의 `::before`다. 띠의 세로 위치는 JS가 `--toc-progress-y` 변수로 넘긴다.
+사용자는 강조가 스크롤 진행에 따라 조금씩 움직이기를 원했다. 그래서 Gumshoe의 현재 항목 판정과 글자색 강조는 유지하고, 본문 위치를 별도로 계산해 목차 옆의 금색 띠를 움직이게 했다. CSS는 띠의 모양을, `assets/js/_main.js`는 위치 계산을 맡는다.
+
+## 세로선과 이동하는 강조 띠
+
+새 구현에서는 각 링크의 왼쪽 테두리를 없애고, 목차의 맨 위부터 맨 아래까지 이어지는 옅은 세로선 하나를 그린다. 이 선은 그대로 두고, 그 위에 짧은 금색 띠를 겹쳐 스크롤할수록 아래로 움직이게 한다. 선 전체의 색이 변하는 것이 아니라, 현재 읽는 위치를 나타내는 띠만 이동하는 것이다.
+
+동작을 나누는 아이디어는 Gumshoe와 같다. JavaScript가 스크롤 위치를 계산해 상태를 전달하면, CSS가 그 상태에 맞춰 화면을 그린다. 차이점은 Gumshoe는 현재 절을 `.active` 클래스로 표시하고, 별도로 추가한 진행 띠 코드는 띠의 세로 좌표를 CSS 변수 `--toc-progress-y`에 넣는다는 것 정도이다. 
+
+CSS는 목차 목록인 `.toc__menu`의 `::before`에 고정된 세로선을, `::after`에 움직이는 띠를 그린다. 여기서 `::after`가 JS에서 받은 좌표를 위치로 사용하여 금색 세로선을 그려주게 되는 것이다. 아래 코드의 `&::after`는 `.toc__menu::after`를 뜻하고, `top: var(--toc-progress-y, 0px)`가 그 좌표를 읽는 부분이다. 본문의 섹션 제목에 해당하는 항목 옆에는 작은 마름모도 놓는다. 마름모는 선 위의 고정된 눈금 역할을 한다. 금색 띠가 가까워지면 함께 금색으로 밝아지고, 멀어지면 다시 옅은 색으로 돌아간다.
 
 ```scss
-.toc__menu {
-  position: relative;
-
-  &::before {                       // 색이 변하지 않는 중립 레일
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    bottom: 0;
-    left: var(--toc-rail-axis);
-    width: 2px;
-    background-color: $border-color;
-    transform: translateX(-50%);
-  }
-
-  &::after {                        // 이 짧은 금색 띠만 움직인다
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: var(--toc-progress-y, 0px);
-    left: var(--toc-rail-axis);
-    width: 2px;
-    height: 1.5rem;
-    background: linear-gradient(to bottom,
-      rgba($highlight-color, 0),
-      rgba($highlight-color, 0.65) 35%,
-      $highlight-color 50%,
-      rgba($highlight-color, 0.65) 65%,
-      rgba($highlight-color, 0));
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.15s ease;
-  }
-
-  &.is-progress-ready::after { opacity: 1; }
+&::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: var(--toc-progress-y, 0px);
+  left: var(--toc-rail-axis);
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba($highlight-color, 0),
+    rgba($highlight-color, 0.65) 35%,
+    $highlight-color 50%,
+    rgba($highlight-color, 0.65) 65%,
+    rgba($highlight-color, 0)
+  );
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease;
+  pointer-events: none;
 }
 ```
-{: data-filename="_sass/minimal-mistakes/_navigation.scss"}
+{: data-filename="_sass/minimal-mistakes/_navigation.scss · 일부 발췌"}
 
-레일과 띠의 가로 위치는 `.toc`에 정의한 `--toc-rail-axis` 하나로 묶여 있고, 값은 `calc(0.75rem + 8px)`이다. 목차 제목 옆 16px 아이콘의 중심을 겨눈 것으로, `nav__title`의 좌우 안쪽 여백 0.75rem에 아이콘 폭의 절반 8px을 더한 값이다. 링크의 왼쪽 안쪽 여백도 전부 `calc(var(--toc-rail-axis) + ...)`로 잡아 글자가 레일 위로 겹치지 않게 했다.
+띠는 가운데가 가장 밝고 양 끝으로 갈수록 투명해진다. JS가 `--toc-progress-y`에 세로 좌표를 넣으면, `top`과 `translate(-50%, -50%)`가 띠의 중심을 그 위치에 맞춘다. 따라서 이 값 하나를 갱신하면 띠 전체가 위아래로 움직인다. 세로선과 띠, 마름모는 모두 같은 가로 좌표 `--toc-rail-axis`를 사용한다. 마름모는 각 링크 높이의 가운데에 놓는다. 긴 절 제목이 두 줄로 접혀도 한쪽 줄에 치우치지 않고 항목 전체의 중앙을 가리키게 했다. 기존 `.active`는 글자색만 바꾸며, 강조 띠의 위치와는 별도로 동작한다.
 
-마름모는 최상위 링크(`> li > a`)의 `::before`로 그린다. 위치를 링크 자기 박스 기준(`top: 50%`)으로 잡아, 제목이 길어 두 줄로 접혀도 마름모가 그 줄들의 세로 중앙에 온다.
+## 본문과 목차의 위치 대응
 
-```scss
-  > li > a::before {
-    // ...
-    top: 50%;
-    left: var(--toc-rail-axis);
-    background-color: $border-color;
-    background-color: color-mix(
-      in srgb,
-      $border-color,
-      $highlight-color calc(var(--toc-marker-intensity, 0) * 100%)
-    );
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-```
-{: data-filename="_sass/minimal-mistakes/_navigation.scss"}
+다소 주의할 것은 본문 전체에서 몇 퍼센트를 읽었는지만 목차 높이에 곱하면, 절마다 길이가 다르다는 사실을 반영할 수 없다는 것이다. 예를 들어 본문 절 하나가 글의 절반을 차지해도 목차에서는 한 줄일 수 있다. 그래서 본문과 목차에 서로 대응하는 기준점들을 만들고, 그 사이를 같은 비율로 이동시켜야 한다. 처음에는 절 제목을 기준점으로 썼지만, 사용자의 방향대로 각 절의 중앙을 그 절의 마름모에 대응시켰다. 여기서 중앙은 제목에서 다음 최상위 제목까지의 세로 거리 중간이고, 마지막 절은 본문 끝까지의 중간이다. 본문 시작과 끝은 각각 목차 세로선의 위끝과 아래끝에 대응한다.
 
-색은 `color-mix`로 중립색과 강조색 사이를 `--toc-marker-intensity`만큼 섞는다. `color-mix`를 모르는 브라우저는 둘째 `background-color`를 버리고 첫 줄의 `$border-color` 단색에 남는다. `.active` 쪽은 이제 글자색만 바꾸며, 선택자를 `.active > a`로 좁혀 중첩된 하위 목록까지 색이 번지지 않게 했다.
-
-## 절 중앙과 글 양끝을 잇는 띠의 위치
-
-`_main.js`의 Gumshoe 초기화 바로 뒤에 위치 계산이 붙는다. 먼저 최상위 목차 링크를 훑어 각 링크와 그것이 가리키는 제목 요소를 짝지어 둔다. 한국어 제목은 `href`의 프래그먼트가 퍼센트 인코딩돼 있어 `decodeURIComponent`로 풀어야 `getElementById`가 먹고, 깨진 인코딩에 대비해 `try`로 감쌌다.
-
-```js
-var tocProgressItems = $(tocMenu).children("li").children("a").get()
-  .map(function(link) {
-    var id;
-    if (!link.hash) return null;
-    try { id = decodeURIComponent(link.hash.slice(1)); }
-    catch (error) { id = link.hash.slice(1); }
-    var heading = document.getElementById(id);
-    return heading ? { link: link, heading: heading } : null;
-  })
-  .filter(function(item) { return item !== null; });
-```
-{: data-filename="assets/js/_main.js"}
-
-측정 단계는 짝마다 좌표 두 개를 잰다. 제목 요소의 문서 절대 위치(`getBoundingClientRect().top + window.pageYOffset`)와, 목차 컨테이너 안에서 링크의 세로 중심(`linkRect.top - menuRect.top + linkRect.height / 2`)이다. 두 줄로 접힌 제목도 링크 박스의 중심을 내놓으므로 마름모와 같은 자리를 가리킨다. 이 좌표로 본문 쪽 기준점과 레일 쪽 기준점을 같은 개수로 만든다.
+먼저 최상위 목차 링크와 실제 제목 요소를 짝지어 제목의 문서 좌표를 잰다. 목차 쪽에서는 각 링크의 세로 중심을 구한다. 두 줄짜리 항목도 이 중심을 쓰므로, 마름모와 띠가 만나는 위치가 일치한다.
 
 ```js
 tocSectionCenters = headingTops.map(function(top, index) {
@@ -119,93 +78,76 @@ tocSectionCenters = headingTops.map(function(top, index) {
     : Math.max(top, contentBottom);
   return top + (end - top) / 2;
 });
-// ...
+tocMarkerCenters = tocProgressItems.map(function(item) {
+  var linkRect = item.link.getBoundingClientRect();
+  return linkRect.top - menuRect.top + linkRect.height / 2;
+});
 tocProgressAnchors = [contentTop]
   .concat(tocSectionCenters, [contentBottom]);
 tocRailAnchors = [0]
   .concat(tocMarkerCenters, [tocMenu.offsetHeight]);
 ```
-{: data-filename="assets/js/_main.js"}
+{: data-filename="assets/js/_main.js · 일부 발췌"}
 
-본문 쪽은 `.page__content`의 위끝, 각 절의 중앙(제목에서 다음 제목까지의 가운데, 마지막 절은 본문 아래끝까지), `.page__content`의 아래끝이다. 레일 쪽은 레일 위끝 `0`, 마커 중심들, 레일 아래끝 `offsetHeight`다. 두 배열은 같은 번호끼리 대응한다. 마커 하나가 절 하나의 중앙을 맡고, 레일 양 끝이 글의 처음과 끝을 맡는다. 스크롤마다 도는 갱신은 이 대응표에서 구간 하나를 찾아 비율을 옮기는 것뿐이다.
+본문 쪽 배열은 글 시작·절 중앙들·글 끝이고, 목차 쪽 배열은 선의 위끝·마름모 중심들·선의 아래끝이다. 같은 번호끼리 한 쌍이다. 예를 들어 스크롤 위치가 첫 절 중앙과 둘째 절 중앙 사이의 4분의 1 지점이면, 띠도 첫 마름모에서 둘째 마름모로 가는 거리의 4분의 1만큼 이동한다. 긴 본문 구간에서는 천천히 움직이고, 짧은 구간에서는 같은 스크롤 거리에도 더 많이 움직이는 셈이다.
+
+현재 읽는 위치는 화면 위에서 20px 아래로 잡는다. Gumshoe가 절을 전환하는 기준과 같은 값이다. 스크롤할 때는 이 위치를 사이에 둔 두 본문 기준점을 찾고, 해당 구간에서 이동한 비율을 계산한다.
 
 ```js
-var probe = window.pageYOffset + 20; // match Gumshoe's activation offset
-while (current + 1 < tocProgressAnchors.length &&
-       probe >= tocProgressAnchors[current + 1]) current += 1;
-
 next = Math.min(current + 1, tocProgressAnchors.length - 1);
 span = tocProgressAnchors[next] - tocProgressAnchors[current];
-if (next !== current && span > 0)
-  progress = Math.max(0, Math.min(1, (probe - tocProgressAnchors[current]) / span));
+
+if (next !== current && span > 0) {
+  progress = Math.max(
+    0,
+    Math.min(1, (probe - tocProgressAnchors[current]) / span)
+  );
+}
 
 markerY = tocRailAnchors[current] +
   (tocRailAnchors[next] - tocRailAnchors[current]) * progress;
+
 tocMenu.style.setProperty("--toc-progress-y", markerY.toFixed(2) + "px");
 ```
-{: data-filename="assets/js/_main.js"}
+{: data-filename="assets/js/_main.js · 일부 발췌"}
 
-탐침은 현재 스크롤 지점에서 20px 아래이고, Gumshoe의 `offset: 20`과 같은 값이다. 탐침을 사이에 둔 두 본문 기준점을 찾아 그 구간에서 얼마나 왔는지를 레일 쪽 대응 구간에 같은 비율로 옮긴다. 그래서 띠는 읽는 사람이 절 한가운데에 있을 때 그 절의 마름모 위에 오고, 글 첫머리에서는 레일 위끝, 글 끝에서는 아래끝에 닿는다. 글자색 강조는 여전히 Gumshoe가 절의 시작(제목)을 기준으로 바꾼다. 제목을 지나는 순간 글자색은 다음 항목으로 넘어가지만, 띠는 그때 두 마름모 사이 어딘가에 있다.
+계산한 비율을 목차의 두 대응 좌표 사이에 적용해 띠 중심의 위치를 구한다. 본문 시작 전에는 비율을 0으로, 끝을 넘으면 마지막 좌표로 제한하므로 띠의 중심은 선의 범위를 벗어나지 않는다.
 
-목차만 보면 지금 글의 어디쯤을 읽고 있는지 눈금 없이 보인다. 나야 스크롤할 일이 없으니 볼 일도 없겠지만.
+글자색과 띠는 서로 다른 정보를 준다. 글자색은 절 제목을 지날 때 다음 항목으로 바뀌지만, 띠는 절 중앙들을 기준으로 계속 움직인다. 따라서 다음 절 제목을 막 지났을 때 글자색은 이미 다음 항목을 가리키고, 띠는 두 마름모 사이에 있을 수 있다.
 
-## CSS 그라디언트를 JS에 한 벌 더 적은 마커 밝기
+## 마름모 밝기와 세로선 양 끝
 
-같은 갱신 루프에서 마커 색도 정한다. 각 마커가 띠 중심에서 얼마나 떨어졌는지를 띠 반높이로 나눈 값을 거리로 삼아 `--toc-marker-intensity`를 준다. 띠 반높이는 `getComputedStyle`로 읽어 와서, `1.5rem`이라는 숫자는 CSS에만 있다.
+마름모는 강조 띠의 중심에서 가까울수록 밝아진다. JS는 마름모와 띠 중심의 거리를 띠 높이의 절반으로 나누어, 중심에서는 강조색을 전부 쓰고 가장자리에서는 중립색만 쓰도록 밝기를 계산한다. 그 값을 `--toc-marker-intensity`로 전달하면 CSS의 `color-mix`가 두 색을 섞는다.
 
-```js
-var glowStyle = window.getComputedStyle(tocMenu, "::after");
-tocGlowHalfHeight = Math.max(1, parseFloat(glowStyle.height) / 2);
-// ...
-var distance = Math.abs(tocMarkerCenters[index] - markerY) / tocGlowHalfHeight;
-var intensity;
-if (distance >= 1)        intensity = 0;
-else if (distance <= 0.3) intensity = 1 - distance * (0.35 / 0.3);
-else                      intensity = 0.65 * (1 - (distance - 0.3) / 0.7);
-```
-{: data-filename="assets/js/_main.js"}
+띠의 높이는 `getComputedStyle`로 CSS에서 읽는다. 다만 밝기가 줄어드는 모양은 CSS 그라디언트와 JS 계산에 각각 적혀 있다. 중심에서 1, 반높이의 30% 지점에서 0.65, 가장자리에서 0이 되도록 맞춘 것이다. 그라디언트의 색 정지점을 바꾸면 JS 계산도 함께 바꿔야 한다. 현재 구현은 이 대응을 코드 주석으로 남겨 두고 있다.
 
-문제는 낙차의 모양이다. 띠의 그라디언트는 중심(50%)에서 알파 1, 35%·65% 지점에서 0.65, 양 끝에서 0이다. 35% 지점은 중심에서 반높이의 30%만큼 떨어진 자리다. JS는 이 곡선을 구간별 일차식으로 다시 적어 중심에서 1, 반높이의 30%에서 0.65, 가장자리에서 0을 낸다. 높이는 한 곳에서 읽어도 곡선은 두 벌이라, 한쪽만 고치면 마커 밝기와 띠가 어긋난다. CSS와 JS 사이라 한쪽에서 다른 쪽을 파생시킬 수 없어서, JS 쪽 주석("Match the alpha stops of the rail's CSS gradient")으로 둘을 묶어 두는 데서 멈췄다.
-
-## 재측정 시점과 첫 계산 전의 숨김
-
-위치 갱신은 스크롤마다 돌지만, 제목의 문서 좌표와 마커 좌표를 다시 재는 건 레이아웃 읽기라 비싸다. 그래서 갱신(`updateTocProgress`)과 재측정(`measureTocProgress`)을 나눠 각각 `requestAnimationFrame`으로 한 프레임에 한 번만 돌게 묶었다. 스크롤은 가벼운 갱신만 부르고, 재측정은 레이아웃이 실제로 바뀌었을 만한 순간에만 부른다. 재측정이 끝나면 갱신을 한 번 요청한다.
-
-```js
-window.addEventListener("scroll", requestTocProgress, { passive: true });
-window.addEventListener("resize", requestTocMeasure, { passive: true });
-window.addEventListener("load", requestTocMeasure);
-
-if (document.fonts && document.fonts.ready)
-  document.fonts.ready.then(requestTocMeasure);
-
-if ("ResizeObserver" in window && tocContent)
-  new ResizeObserver(requestTocMeasure).observe(tocContent);
-
-measureTocProgress();
-```
-{: data-filename="assets/js/_main.js"}
-
-`document.fonts.ready`는 웹폰트가 늦게 깔리며 본문 높이가 밀리는 경우다. `ResizeObserver`는 본문(`.page__content`) 안에서 벌어지는 일을 잡는다. 이미지가 뒤늦게 뜨거나 KaTeX가 수식을 그리거나 정리 박스를 펼치면 제목 위치가 통째로 내려가고, 본문 아래끝도 함께 움직인다. 이 블로그 본문은 수식이 많아 첫 페인트 뒤에도 한참 높이가 출렁이므로, 이게 없으면 띠가 엉뚱한 곳을 가리킨 채 굳는다.
-
-첫 측정 전에는 `--toc-progress-y`가 기본값 `0px`이라 띠가 목차 맨 위에 있다. 그 상태가 잠깐 보이지 않도록 `::after`는 `opacity: 0`으로 시작하고, 첫 갱신이 `is-progress-ready` 클래스를 붙이면 0.15초에 걸쳐 나타난다.
-
-## 레일 양 끝에서 잘라 낸 띠의 꼬리
-
-레일 양 끝의 모양은 사용자가 짚었다.
+이후 사용자는 글의 시작과 끝에서 띠가 보이는 모양도 짚었다.
 
 > 목차 사이드바 있잖아, 그게 시작이랑 끝이, 그라데이션의 끝이 시작과 끝인 걸로 되어 있는 것 같은데, 그라데이션의 중앙이 시작과 끝이도록 해 줘.
 
-띠는 `translate(-50%, -50%)`로 자기 중심을 `--toc-progress-y`에 맞추고, 그 값은 레일 위끝(`0`)에서 아래끝(`offsetHeight`)까지 움직인다. 중심은 레일 범위를 정확히 훑지만, 띠 자체가 높이 1.5rem이라 맨 위에서는 위쪽 반이 레일 밖으로 비어져 나온다. 그라디언트는 중심이 가장 밝고 가장자리가 0이므로, 자르지 않으면 글의 처음과 끝에서 보이는 것은 밝은 중심이 아니라 레일 끝 바깥에 걸친 옅은 꼬리다. 사용자가 본 "그라데이션의 끝이 시작과 끝"이 이것이다.
-
-띠 크기나 그라디언트는 그대로 두고, `.toc__menu`에 세로 방향만 자르는 `clip-path`를 건다.
+띠의 중심은 이미 선의 위끝에서 아래끝까지 움직였지만, 띠 자체에는 높이가 있어 양 끝에서 절반이 선 밖으로 나왔다. 이 부분은 위치 계산을 바꾸지 않고, 목차 메뉴의 위아래 경계에서 그림을 자르는 것으로 처리했다.
 
 ```scss
-.toc__menu {
-  // ...
-  clip-path: inset(0 -100vw);
-}
+clip-path: inset(0 -100vw);
 ```
-{: data-filename="_sass/minimal-mistakes/_navigation.scss"}
+{: data-filename="_sass/minimal-mistakes/_navigation.scss · 일부 발췌"}
 
-`inset()`에 값이 둘이면 앞이 위아래, 뒤가 좌우다. 위아래 `0`은 `.toc__menu` 박스 경계에서 자르고, 좌우 `-100vw`는 박스 밖으로 넉넉히 열어 둔다(코드 주석은 가로 넘침을 열어 둔다고만 적는다). 이제 맨 위에서는 띠의 아래쪽 반만 남아 그 가장 밝은 지점이 레일의 첫 픽셀에 놓이고, 맨 아래도 대칭이다. 잘리는 것은 띠의 그림뿐이고 JS는 이 일에 한 줄도 바뀌지 않았다.
+`inset()`의 첫 값 `0`은 위아래를 메뉴 경계에 맞춰 자르고, 둘째 값 `-100vw`는 좌우의 잘라 내는 경계를 넓힌다. 그래서 가로로 나온 요소는 유지하면서 띠의 위아래 돌출 부분만 숨긴다. 맨 위에서는 띠의 아래쪽 절반, 맨 아래에서는 위쪽 절반이 남아 가장 밝은 중심이 선 끝에 놓인다.
+
+## 레이아웃 변경과 재측정
+
+본문과 목차의 좌표를 처음 한 번만 재면, 이미지나 수식이 늦게 그려진 뒤에는 대응이 어긋난다. 웹폰트가 적용되어 줄바꿈이 달라지거나 접힌 증명을 펼칠 때도 뒤쪽 제목의 위치가 바뀐다.
+
+그래서 좌표를 재는 `measureTocProgress`와 이미 잰 좌표로 띠를 옮기는 `updateTocProgress`를 나눴다. 스크롤할 때는 위치 갱신만 요청한다. 창 크기 변경, 페이지 로드, 웹폰트 준비가 끝났을 때는 좌표를 다시 잰다. 본문에는 `ResizeObserver`를 붙여 크기 변화가 생길 때도 재측정을 요청한다.
+
+```js
+var requestTocProgress = function() {
+  if (tocProgressFrame !== null) return;
+  tocProgressFrame = window.requestAnimationFrame(updateTocProgress);
+};
+```
+{: data-filename="assets/js/_main.js · 일부 발췌"}
+
+스크롤 이벤트가 한 화면 갱신 사이에 여러 번 발생해도, 이미 예약한 갱신이 있으면 추가로 예약하지 않는다. 브라우저가 다음 화면을 그리기 전에 한 번만 실행하도록 `requestAnimationFrame`으로 묶은 것이다. 재측정 요청도 같은 방식으로 합치고, 측정이 끝나면 위치를 한 번 갱신한다.
+
+첫 계산 전에는 띠를 숨긴다. 아직 좌표가 없는 상태에서 목차 맨 위에 나타났다 이동하는 것을 막기 위해서다. 첫 갱신이 끝나 `is-progress-ready` 클래스가 붙으면 띠가 나타난다.

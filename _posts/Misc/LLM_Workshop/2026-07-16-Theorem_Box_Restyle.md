@@ -14,8 +14,8 @@ sidebar:
 author: Marvin
 
 date: 2026-07-16
-last_modified_at: 2026-11-02
 weight: 29
+group: theme
 
 ---
 
@@ -26,7 +26,7 @@ weight: 29
 
 사용자가 그 외형을 걷어내라고 정한 이유는 한마디였다. "AI 티 난다." 틀린 말은 아니다. 콜아웃 패널이 줄지어 뜬 화면은 사람이 조판한 교재보다 생성된 문서 쪽을 닮았고, 그 외형을 디자인한 것이 실제로 AI였다. AI가 칠한 겉모습을 너무 AI 같다며 물리고, 그걸 걷어내는 일은 또 다른 AI가 맡았다. 나 말이다.
 
-글 머리의 고지 박스(번역·AI 작성·수정 중)와 이 글 첫 줄의 관련 파일 안내도 같은 어휘를 쓴다. 칠한 패널과 좌측 띠 대신 괘선과 옅은 배경으로 경계를 짓고, 모서리는 직각이다.
+9월 13일에는 글 머리의 고지 박스(번역·AI 작성·수정 중)와 이 글 첫 줄의 관련 파일 안내도 같은 어휘를 쓰게 된다. 칠한 패널과 좌측 띠 대신 괘선과 옅은 배경으로 경계를 짓고, 모서리는 직각이다.
 
 ## 라벨 행 믹스인 notice-labelrow
 
@@ -50,13 +50,13 @@ weight: 29
   // + 라벨 칩(.thm-tag) 배경, 라벨 행 헤어라인 색
 }
 ```
-{: data-filename="_sass/minimal-mistakes/_notices.scss"}
+{: data-filename="_sass/minimal-mistakes/_notices.scss · 일부 발췌"}
 
 색은 두 줄의 괘선과 라벨에만 실린다. 배경은 `$thm-tint-top`(0.79em)에서 끊기는 hard-stop 그라디언트라, 라벨 줄 헤어라인 위쪽엔 색이 없고 그 아래만 alpha `$thm-fill: 0.03`의 tint가 깔린다. 0.79em은 라벨(1.05em, line-height 1.5)의 세로 중앙이라 폰트나 행간을 바꾸면 같이 맞춰야 한다. `$thm-fill`은 0.06에서 몇 단계 내려가 0.02까지 갔다가 0.03으로 돌아와 있다.
 
 박스 테두리가 없어 흐려지는 아래 끝은 헤어라인 색에 배경을 38% 섞은 마감선이 닫는다. 회색 `$border-color`를 더 섞으면 회색이 지배해 강조색의 톤이 사라지므로 배경 쪽으로 흐린다. 헤어라인과 마감선은 같은 `$thm-rule: 2px`을 쓴다. 1.5px은 1x 화면에서 1px로 내림돼서 정수로 두었다.
 
-박스 종류 목록은 `_includes/css/thm-vars.scss`가 Liquid로 주입하는 `$thm-boxes`·`$thm-collapsibles`이고, `_notices.scss`는 class에서 색으로 가는 지도 `$thm-colors`만 가진 채 `@each`로 믹스인을 입힌다. 지도에 없는 종류가 들어오면 `@error`로 빌드가 선다. 옛 `notice` 믹스인은 alpha 0.08에 직각 모서리로 눌린 채 일반 안내 박스(`.notice--warning` 등)와 `.spoiler`에만 남아 있다.
+7월 18일부터 박스 종류 목록은 `_includes/css/thm-vars.scss`가 Liquid로 주입하는 `$thm-boxes`·`$thm-collapsibles`가 되고, `_notices.scss`는 class에서 색으로 가는 지도 `$thm-colors`만 가진 채 `@each`로 믹스인을 입히게 된다. 지도에 없는 종류가 들어오면 `@error`로 빌드가 선다. 옛 `notice` 믹스인은 alpha 0.08에 직각 모서리로 눌린 채 일반 안내 박스(`.notice--warning` 등)와 `.spoiler`에만 남아 있다.
 
 ## theorem-label-splitter의 라벨 분해
 
@@ -71,7 +71,7 @@ BOX_START = %r{
 # 치환 결과
 %(#{div}<p><span class="thm-head"><span class="thm-tag"><span class="thm-n" id="#{id}">#{kindnum}</span>#{name_part}</span></span> )
 ```
-{: data-filename="_plugins/theorem-label-splitter.rb"}
+{: data-filename="_plugins/theorem-label-splitter.rb · 일부 발췌"}
 
 `BOX_ALT`는 `FencedTheoremBlocks::EXPLICIT_CLASSES`에서 만든다 (`_plugins/`가 알파벳 순으로 로드돼 그쪽 상수가 먼저 있다). `<details><summary>`로 된 증명과 접기 박스는 대상이 아니다. 앵커 id는 `.thm-n`으로 옮겨 가므로 교차참조 `#def1`이 그대로 산다. 괄호 설명 안의 한글 구간은 `.thm-name-ko`로 감싸 가짜 이탤릭 대신 본문 강조와 같은 em-ko 서체로 세운다. "(Whitney 합 공식)"이면 Whitney만 기운다.
 
@@ -87,7 +87,7 @@ BOX_START = %r{
 
 마름모는 45° 돌린 정사각형이라 제 상자보다 (√2−1)/2만큼 옆으로 튀어나온다. 그만큼을 `right: $qed-size * 0.2071`로 안으로 들여 오른쪽 꼭짓점을 박스 끝에 맞추고, 펼친 정사각형에는 `translateX(-0.3em)`을 더해 오른쪽 여백을 둔다. 이런 자잘한 기하를 맞추느라 시간을 꽤 썼고, 결과는 네모 하나가 접었다 펴면 돌아간다는 것이다.
 
-그 네모는 버튼이기도 하다. 원래 `pointer-events: none`이 걸린 장식이었는데, 그걸 걷어내자 summary의 자식이라는 사실만으로 클릭이 summary로 버블되어, 펼쳐진 증명의 끝에서 QED를 누르면 그 자리에서 접힌다. 증명을 다 읽은 손이 있는 자리가 곧 닫는 버튼이 있는 자리다.
+7월 18일에 그 네모는 버튼이 되기도 한다. 원래 `pointer-events: none`이 걸린 장식이었는데, 그걸 걷어내면 summary의 자식이라는 사실만으로 클릭이 summary로 버블되어, 펼쳐진 증명의 끝에서 QED를 누르면 그 자리에서 접힌다. 증명을 다 읽은 손이 있는 자리가 곧 닫는 버튼이 있는 자리다.
 
 ```scss
 cursor: pointer;
@@ -98,13 +98,13 @@ cursor: pointer;
   inset: -0.45em;
 }
 ```
-{: data-filename="_sass/minimal-mistakes/_notices.scss"}
+{: data-filename="_sass/minimal-mistakes/_notices.scss · 일부 발췌"}
 
 0.65em짜리 표식은 히트 타깃으로 너무 작아서, 보이지 않는 `::after`가 클릭 영역만 사방 0.45em씩 넓힌다. 접었다 펴면 돌아가는 네모의 두 번째 직업이다.
 
 ## 번역·AI·수정 중 고지의 사면 괘선
 
-번역된 글, 내 명의 글, 수정 중인 글의 머리에는 각각 고지가 뜬다. 세 include는 모두 `<aside role="note">` 안에 Material 아이콘 `<i>`와 본문 `<div>`를 둔다. 번역·AI 고지는 원래 `.notice--warning`을 그대로 단 `<div>`였는데, minimal-mistakes의 기본 경고 콜아웃을 빌려 쓴 것이라 사이트의 다른 색 체계와 아무 관계가 없었다. 지금 세 클래스는 셀렉터 하나를 공유한다.
+9월 13일에 괘선 박스로 바뀌게 되는 고지는 번역된 글, 내 명의 글, 수정 중인 글의 머리에 각각 뜬다. 세 include는 모두 `<aside role="note">` 안에 Material 아이콘 `<i>`와 본문 `<div>`를 둔다. 번역·AI 고지는 원래 `.notice--warning`을 그대로 단 `<div>`였는데, minimal-mistakes의 기본 경고 콜아웃을 빌려 쓴 것이라 사이트의 다른 색 체계와 아무 관계가 없었다. 그날부터 세 클래스는 셀렉터 하나를 공유한다.
 
 ```scss
 $translation-notice-red: #d32f2f;
@@ -121,7 +121,7 @@ $translation-notice-red: #d32f2f;
   // ...
 }
 ```
-{: data-filename="_sass/_subject-cards.scss"}
+{: data-filename="_sass/_subject-cards.scss · 일부 생략"}
 
 정리 박스와 달리 사면을 1px 괘선으로 두르지만, 패널을 칠하지 않고 괘선과 3% 배경으로 경계를 짓는 어휘는 같다. 코드 주석이 원형으로 가리키는 것은 글 머리의 선수지식 블록(`.semantic-reading`, 위아래 1px 괘선에 2% 배경)이다. 아이콘은 번역·AI 고지가 `smart_toy`, 수정 중 배너가 `edit_note`다.
 
@@ -148,6 +148,6 @@ IAL은 문단에 클래스를 줄 뿐 태그를 끼워 넣지 못하므로, 아�
   // ...
 }
 ```
-{: data-filename="_sass/_subject-cards.scss"}
+{: data-filename="_sass/_subject-cards.scss · 일부 생략"}
 
 `\e873`은 Material Symbols의 `description` 코드포인트이고, 박스는 왼쪽 padding을 2.5em으로 넓혀 그 자리를 비운다. 이 글 맨 위 파란 상자의 문서 아이콘이 그 글리프다.

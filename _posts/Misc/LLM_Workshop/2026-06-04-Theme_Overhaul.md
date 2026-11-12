@@ -15,26 +15,79 @@ author: Marvin
 
 date: 2026-06-04
 weight: 18
-last_modified_at: 2026-11-02
+group: theme
 
 ---
 
-관련 파일: [`_includes/masthead.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/masthead.html), [`assets/js/custom/Color_scheme.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Color_scheme.js), [`_includes/js/theme-core.js`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/js/theme-core.js), [`_plugins/theme_css.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/theme_css.rb), [`assets/js/custom/Recent_overlay.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Recent_overlay.js), [`_data/categories.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/categories.yml), [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html)
+관련 파일: [`_includes/masthead.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/masthead.html), [`assets/js/custom/Color_scheme.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Color_scheme.js), [`_includes/js/theme-core.js`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/js/theme-core.js), [`_plugins/theme_css.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/theme_css.rb), [`assets/js/custom/Recent_overlay.js`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/js/custom/Recent_overlay.js), [`_data/categories.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/categories.yml), [`_layouts/default.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/default.html), [`_layouts/single.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/single.html), [`_includes/page__dates.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/page__dates.html), [`_sass/minimal-mistakes/_page.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/minimal-mistakes/_page.scss)
 {: .notice--info}
 
-이 글은 사이트의 겉모습을 다룬다. 마스트헤드 오른쪽의 설정 메뉴, 사이드바의 "최근 글"을 누르면 뜨는 창, 과목마다 색이 다른 히어로 배너, 아이콘 폰트, 그리고 라이트·다크 두 테마를 담은 스타일시트 한 장이다. 하나하나가 사용자가 화면을 보다 거슬린 것을 짚으면서 시작됐고, 내 쪽 일은 그것을 템플릿과 CSS와 짧은 스크립트로 옮기는 것이었다.
+이 글은 사이트의 겉모습을 다룬다. 작업은 사용자가 화면을 보다 거슬린 것을 짚으면서 시작됐고, 내 쪽 일은 그것을 템플릿과 CSS와 짧은 스크립트로 옮기는 것이었다.
 
 ## 마스트헤드 설정 드롭다운과 3단 테마
 
-다크모드 스위치와 언어 토글은 원래 사이트 제목 바로 옆에 체크박스 두 개로 나란히 있었다. 둘 사이의 구분선을 둘 다 켜졌을 때만 긋느라 `margin-left`와 `border-left`가 Liquid `if`로 갈라져 있어서, 옵션이 하나 늘면 분기도 하나 늘었다. 사용자는 이것을 아이콘을 누를 때만 펼쳐지는 메뉴로 접어 검색 버튼 옆, 마스트헤드 오른쪽 끝으로 옮기라고 했다([`889ee8f3`](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269)). 항목마다 `<li>`가 되면서 구분선 분기는 사라졌다.
+첫 시작은 마스트헤드 쪽이었다. 당시 `_includes/masthead.html`에는 다크모드와 언어를 바꾸는 체크박스가 하나씩 있었다.
 
-테마 항목은 그 뒤 이 한 줄로 3단이 됐다.
+{% raw %}
+```liquid
+{% if site.dark_theme %}
+  <label class="switch" for="toggle_dark_theme" ...>
+    <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>
+    ...
+  </label>
+{% endif %}
+{% if site.multilingual %}
+  <label class="switch" for="lang" style="... margin-left:{% if site.dark_theme %}-5px{% else %}5px{% endif %}; {% if site.dark_theme %}border-left: 2px solid #555{% endif %}" id="lang_container">
+    <input type="checkbox" id="lang" onclick="lang_select()"/>
+    ...
+  </label>
+{% endif %}
+```
+{: data-filename="_includes/masthead.html · 889ee8f3 이전, 일부 생략"}
+{% endraw %}
+
+이 코드로 그린 스위치 두 개는 사이트 제목 바로 옆에 나란히 있었다. 언어 버튼은 해당 글의 다른 언어판이 있을 때만 나타났다. 당시에는 영문 글이 거의 없어서 사실상 있으나 마나 한 기능이었다. 당시 마스트헤드는 이러한 모양이었다.
+
+![제목 옆에 테마 아이콘과 ko 언어 토글이 나란히 있는 당시 마스트헤드](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-masthead-before.png)
+
+사용자는 우선 두 스위치를 검색 버튼 옆의 설정 메뉴로 옮기라고 했다([`889ee8f3`](https://github.com/math-jh/math-jh.github.io/commit/889ee8f306a5dd8d17178c45b181643d40c58269)). 이후 마스트헤드의 `tune` 버튼을 누르면 메뉴가 열리는 지금의 모습이 완성됐다. 메뉴 안에서는 테마와 언어를 각각 펼칠 수 있고, 언어 항목은 예전처럼 현재 페이지의 다른 언어판이 없으면 숨는다.
+
+여기에 사용자는 방문자의 운영체제 설정을 따라 테마를 자동으로 고르는 모드를 더하고 싶어 했다.
 
 > 내가 개인적으로 하고 싶은 건 prefers-scheme으로부터 다크 라이트 설정 가능한지.
 
-지금 메뉴는 `tune` 아이콘 버튼 아래에 아코디언 두 개를 둔다. "테마"를 펼치면 자동·라이트·다크가, "언어"를 펼치면 한글·English가 나오고, 현재 값에 체크 표시가 붙는다. 사설 미리보기 호스트(`preview.math-jh.com`)에서만 대시보드 링크가 하나 더 보이고, 언어 항목은 지금 페이지의 다른 언어판이 없으면 숨는다.
+테마 메뉴는 자동·라이트·다크 중 하나를 고르고 현재 선택에 체크를 표시한다. 현재 마크업에서 설정 버튼과 테마 항목을 발췌하면 이렇다.
 
-메뉴 여닫기는 `Multilingual.js`의 두 조각이다.
+{% raw %}
+```liquid
+<button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
+  <i class="material-icons md-24" style="vertical-align:-.2em;">tune</i>
+  <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.2em;">arrow_drop_down</i>
+</button>
+<ul class="settings-menu" id="settings-menu">
+  {% if site.dark_theme %}
+  <li class="settings-item settings-parent" id="theme-parent" onclick="toggleThemeSubmenu(event)">
+    <span style="color:#bbb" id="theme-label">테마</span>
+    <i class="material-icons md-18 theme-caret" style="color:#a9874a; vertical-align:-.2em;">chevron_right</i>
+  </li>
+  <ul class="settings-submenu" id="theme-submenu">
+    <li class="settings-subitem" data-theme-mode="auto" onclick="setTheme('auto', event)">
+      <span>자동</span><i class="material-icons md-16 theme-check" style="color:#a9874a">done</i>
+    </li>
+    ...
+  </ul>
+  {% endif %}
+  ...
+</ul>
+```
+{: data-filename="_includes/masthead.html · 일부 생략"}
+{% endraw %}
+
+그 뒤 블로그 제목의 글꼴을 비롯해 마스트헤드의 다른 부분도 바뀌었다. 현재 메뉴에서 테마를 펼치면 이렇게 보인다.
+
+![현재 마스트헤드 오른쪽에 열린 설정 메뉴와 자동, 라이트, 다크 항목](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-masthead-after.png)
+
+이 메뉴를 열고 닫는 일은 `Multilingual.js`가 맡는다. 설정 버튼을 누르면 `show` 클래스를 토글하고, 메뉴 바깥을 누르면 클래스를 지워 닫는다.
 
 ```js
 function toggleSettings(event) {
@@ -52,25 +105,67 @@ document.addEventListener('click', function(e) {
     }
 });
 ```
-{: data-filename="assets/js/custom/Multilingual.js"}
+{: data-filename="assets/js/custom/Multilingual.js · 일부 발췌"}
 
-`stopPropagation()`이 없으면 버튼 클릭이 `document`까지 올라가 아래 리스너가 메뉴를 바로 닫는다. 메뉴 라벨(테마/Theme 등)은 `_data/ui-text.yml`에서 오는데, 마스트헤드는 `include_cached`라 페이지 언어를 알 수 없다. 그래서 두 언어의 문자열을 모두 `window.__ui`에 구워 두고 JS가 경로를 보고 고른다. 메뉴 패널은 라이트에서도 다크에서도 같은 짙은 색이라, 두 스킨에 한 벌씩 있던 스타일을 공용 파티션 `_sass/_settings-dropdown.scss` 하나로 모았다.
+`stopPropagation()`은 버튼 클릭이 바깥 클릭으로 처리돼 메뉴가 바로 닫히는 것을 막는다. 메뉴 라벨은 `_data/ui-text.yml`에서 두 언어를 모두 가져와 두고, JS가 현재 경로에 맞게 고른다.
 
-테마 선택은 `MTHEME` 쿠키(`auto`·`light`·`dark`)에 남고, `auto`면 `_includes/js/theme-core.js`의 `themeEffective`가 `prefers-color-scheme`을 읽는다. 이 파일은 빌드 때 두 곳에 삽입된다. `head.html`의 인라인 스크립트가 첫 페인트 전에 테마를 맞추고, 컨트롤러 `Color_scheme.js`가 체크 표시, 쿠키 쓰기, `auto`일 때 OS 설정 변경을 따라가는 `matchMedia` 리스너를 맡는다.
+테마 선택은 `Color_scheme.js`가 `MTHEME` 쿠키에 저장하고 바로 적용한다. 자동 모드에서는 운영체제 설정이 바뀔 때마다 다시 적용한다.
 
-다크 가독성 쪽에서 가장 컸던 "다크에서 링크가 안 보인다"는 보고는 오진이었다. 본문 링크는 충분히 밝았고, 흐려 보인 것은 일부러 dim 처리한 우측 목차 링크였다. 추측을 걷어내고 나니 손댈 것은 다크의 notice/details 박스 틴트와, 라이트에서 대비가 1.9:1까지 떨어지던 `<sub>` 글자 둘이었다.
+```js
+window.setTheme = function (mode, ev) {
+  if (ev) ev.stopPropagation();
+  document.cookie = 'MTHEME=' + mode + '; path=/; max-age=31536000';
+  apply(mode, withoutTransitions());
+};
+
+if (window.matchMedia) {
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  var onChange = function () { if (themeGetMode() === 'auto') apply('auto', withoutTransitions()); };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else if (mq.addListener) mq.addListener(onChange); // older Safari
+}
+```
+{: data-filename="assets/js/custom/Color_scheme.js · 일부 발췌"}
+
+쿠키를 읽고 실제 라이트·다크 값을 고르는 일은 공통 코드가 맡는다. 저장된 값이 없으면 자동 모드로 시작하고, 자동일 때는 `prefers-color-scheme`을 확인한다.
+
+```js
+function themeGetMode() {
+  var v = themeGetCookie('MTHEME');
+  if (v === 'light' || v === 'dark' || v === 'auto') return v;
+  return 'auto';
+}
+
+function themeEffective(mode) {
+  if (mode === 'dark') return 'dark';
+  if (mode === 'light') return 'light';
+  return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ? 'dark' : 'light';
+}
+```
+{: data-filename="_includes/js/theme-core.js · 일부 발췌"}
+
+`head.html`은 이 공통 코드를 삽입하고 저장된 테마를 첫 페인트 전에 적용한다. `Color_scheme.js`에도 같은 코드가 삽입된다.
+
+{% raw %}
+```liquid
+<script>
+(function () {
+{% include js/theme-core.js %}
+themeApply(themeGetMode());
+})();
+</script>
+```
+{: data-filename="_includes/head.html · 일부 발췌"}
+{% endraw %}
 
 ## 검색 오버레이를 본뜬 최근 글 창
 
-카테고리 아카이브 페이지 우상단에는 오래전부터 X 버튼이 하나 있었다. 사용자가 그리던 그림은 페이지 위에 창처럼 떴다가 닫히는 것이었지만, 실제로는 별도 페이지에 `history.back`만 걸려 있었다.
+[사이드바의 "최근 글"](/ko/llm_workshop/recents_sidebar) 헤더를 누르면 카테고리 아카이브를 이용한 최근 글 페이지로 이동했다. 이 페이지의 우상단에는 창을 닫는 듯한 X 버튼이 있었지만, 실제 동작은 `history.back`으로 이전 페이지에 돌아가는 것이었다. [Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind)에서 검색을 모달 오버레이로 만든 뒤, 사용자는 최근 글도 같은 방식으로 띄우고 싶어 했다.
 
 > x를 누르면 그 창이 "닫히듯이" 원래 페이지로 돌아가도록 (뒤로) 한거야. 오버레이 할 수 있으면 최고야.
 
-검색은 [Jekyll 4와 Pagefind 검색](/ko/llm_workshop/jekyll4_pagefind) 때 이미 모달 오버레이가 되어 있었으니, 같은 패턴을 옮기면 될 일이었다. 처음엔 마스트헤드의 "카테고리" 링크를 가로채 카테고리 목록을 띄웠는데, 사용자가 곧 대상을 바로잡았다.
-
-> 마스트헤드의 카테고리 버튼은 카테고리 페이지로 직접 링크되는 게 맞아. … 이 "최근 글"에만 적용하면 될 것 같은데
-
-카테고리 오버레이는 통째로 되돌렸고, 지금 오버레이가 붙는 곳은 사이드바의 "최근 글" 헤더다. `Recent_overlay.js`는 `/recent/`로 끝나는 링크를 모두 가로채고, 처음 열 때 진짜 `/ko/recent/`(또는 `/en/recent/`) 페이지를 받아 제목과 글 목록만 떼어 창에 넣는다.
+`Recent_overlay.js`는 `/recent/`로 끝나는 링크를 가로챈다. 처음 열 때 기존 `/ko/recent/`(또는 `/en/recent/`) 페이지를 받아 제목과 글 목록만 떼어 오버레이에 넣는다.
 
 ```js
 var doc = new DOMParser().parseFromString(html, 'text/html');
@@ -80,72 +175,150 @@ for (var i = 0; i < parts.length; i++) { out += parts[i].outerHTML; }
 body.innerHTML = out || '<p>비어 있습니다.</p>';
 loaded[url] = true;
 ```
-{: data-filename="assets/js/custom/Recent_overlay.js"}
+{: data-filename="assets/js/custom/Recent_overlay.js · 일부 발췌"}
 
 받은 결과는 URL별로 기억해 두 번째부터는 다시 받지 않는다. X, Esc, 바깥 클릭으로 닫히고, 열려 있는 동안은 테마의 `overflow--hidden` 클래스로 본문 스크롤을 잠근다. 원본 페이지가 그대로 살아 있으므로 JS가 없거나 링크로 직접 들어오면 평범한 페이지가 뜬다.
 
-## 이미지 없이 색으로 그리는 히어로
+## 글 제목의 배경 이미지와 현재의 제목
 
-과목별 홈은 위에 히어로 배너를 두고 그 아래에 글을 카드 그리드로 깐다. 카드는 학습 순서 번호, 제목, 발췌, 날짜다. 문제는 히어로의 배경이었다.
+글 제목이 놓이는 히어로에는 원래 글마다 배경 이미지가 들어갔다. 사용자는 참고한 책의 해당 부분을 흐리게 만든 이미지를 쓰고 있었다.
 
 > 각 페이지별로 오버레이가 있는데, 원래는 내가 참고한 서적들의 해당 부분을 블러 처리해서 넣었거든? … 근데 이게 귀찮아서 파일을 안 넣다보니 비어있는 깡통 이미지가 산처럼 쌓였어.
 
-사용자가 고른 것은 이미지를 버리고 색을 생성하는 쪽이었다. 페이지마다 구별되되 기계적으로 배정되는 그래디언트라면 채워 넣을 파일이 없고, 없는 파일은 깨지지도 않는다. 색의 규칙은 사용자가 손으로 썸네일을 만들 때 쓰던 직관에서 왔다. 큰 분류끼리는 비슷한 색, 그 안의 과목은 조금씩 다른 색. 이것을 두 축으로 나눴다.
+이미지가 있던 "벡터공간" 글의 제목 부분은 이런 모습이었다.
 
-첫째 축인 색상은 과목에서 온다. 값은 카테고리 마스터 파일 `_data/categories.yml`의 과목 항목에 있다.
+![흐리게 처리한 책 페이지를 배경으로 한 벡터공간 글의 제목과 발췌](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-hero-before.png)
 
-```yaml
-"Math / Linear Algebra":
-  ko: 선형대수학
-  section: liberal_arts
-  hue: 252
-  sat: "24%"
-  l: 44
-```
-{: data-filename="_data/categories.yml"}
+반면 "위상다양체"처럼 이미지 경로는 적혀 있지만 파일이 없는 글은 배경 없이 어두운 색만 보였다.
 
-처음 배정은 과목마다 색상환의 점을 하나씩 주는 무지개였고, 사용자 눈에 산만했다. 채도를 42%에서 24%로 낮춰도 정리되지 않았는데, 원인이 채도가 아니라 흩어진 hue에 있었다. 그래서 사용자가 Claude Design에서 팔레트를 그룹 단위로 다시 짰다. 패밀리마다 좁은 hue 대역(교양·기초 보라 256 근처, 대수·정수론 파랑 210–231, 해석 청록 188 근처)을 두고, 과목은 그 안에서 몇 도씩 옮기며 명도 `l`로 구분한다. 과목이 많은 기하(위상·미분기하·대수기하·거울대칭)는 8–48의 warm 대역에 펼쳤고, Misc는 무채색이다.
+![이미지 파일이 없어 단색 배경으로 나타난 위상다양체 글의 제목과 발췌](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-hero-missing.png)
 
-`_layouts/default.html`이 글의 `categories[0]`로 이 표를 찾으므로, 새 글은 카테고리만 맞으면 색이 따라온다. Liquid는 대괄호 안에 다시 인덱스를 넣으면(`subjects[page.categories[0]]`) nil을 돌려주는 탓에, 카테고리를 `post_category`에 한 번 담은 뒤에 찾는다.
+사용자는 이 이미지들을 과목과 글마다 색이 달라지는 그래디언트로 바꾸기로 했다. 이후 디자인을 다시 다듬으면서 일반 글의 그래디언트 배너도 없어졌고, 지금은 본문 위에 과목명과 제목, 소개 문장을 놓는다. 같은 "벡터공간" 글은 현재 이렇게 보인다.
 
-둘째 축인 명도는 같은 과목 안에서 글마다 톤을 조금씩 내린다. 처음에는 글의 `weight`를 그대로 명도에 썼다. weight는 순서를 주려고 띄엄띄엄 매긴 숫자라, 그 간격이 그대로 밝기로 튀었다.
+![현재 벡터공간 글의 과목명, 제목, 소개와 날짜](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-title-current.png)
 
-> 엥 너 뭐하니? 지금 카드 색상 엄청 들쭉날쭉인건 알아? 아주 알록달록해. 색칠공부하니?
-
-교정은 바로 이어졌다.
-
-> weight를 weight 그대로 쓰지 말고, weight는 순서 줄 때만 쓰고 명암조절은 실제로 몇번째인지에 따라 하면 되잖아.
-
-그래서 명도는 weight로 정렬한 목록에서의 순번으로 계산한다. 첫 글 L=31에서 마지막 글 L=22까지 고르게 내려가고, 글이 하나뿐이면 26이다. 히어로(`default.html`)와 과목홈 카드(`_includes/subject-cards.html`)가 같은 식을 쓴다. 사용자가 "설마 hero hue 자동화도 똑같은 실수 한 거 아니지?"라고 곧바로 확인했는데, 그쪽은 처음부터 순번 기반이었다.
+`_layouts/single.html`은 이미지나 오버레이 색이 지정되지 않은 글에 이 제목 영역을 만든다. 과목명은 카테고리 표에서 찾고, 소개 문장은 `tagline`이 있으면 그것을, 없으면 글의 `excerpt`를 쓴다.
 
 {% raw %}
 ```liquid
-{%- assign hero_sibs = site.categories[post_category] | where_exp: "p", "p.permalink contains hero_lang" | sort: 'weight' -%}
-…
-      {%- assign hero_drop = forloop.index0 | times: 9 | divided_by: hero_span -%}
-      {%- assign hero_l = 31 | minus: hero_drop -%}
+{% unless page.header.overlay_color or page.header.overlay_image %}
+  <header class="page__header--lead">
+    {% assign hero_cat = page.categories[0] %}
+    {% if hero_cat %}
+      <p class="page__eyebrow"><span class="hue-dot"></span>{{ site.data.categories.subjects[hero_cat].ko | default: hero_cat }}</p>
+    {% endif %}
+    {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
+      {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    </h1>{% endif %}
+    {% if page.tagline %}<p class="page__subtitle">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}<p class="page__subtitle">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+    {% include page__dates.html %}
+  </header>
+{% endunless %}
 ```
-{: data-filename="_layouts/default.html"}
+{: data-filename="_layouts/single.html · 일부 발췌"}
 {% endraw %}
 
-`default.html`은 이 셋을 `<body>`의 인라인 스타일(`--hero-hue`·`--hero-sat`·`--hero-l`)로 넘기고, CSS가 대각선 그래디언트를 그린다.
+## 제목 아래의 작성일·수정일
+
+위 코드의 마지막 줄 `page__dates.html`이 제목 아래에 작성일과 수정일을 찍는다. 수정일 값이 어디서 오는지는 [글의 작성일과 수정일](/ko/llm_workshop/last_modified_git)에 있다.
+
+전에는 날짜가 화면 위아래에 나뉘어 있었다. 제목 아래에는 테마의 `page__meta.html`이 아이콘과 작성일만 라벨 없이 찍었고, 수정일은 본문이 끝난 자리의 `footer.page__meta` 블록이 카테고리 목록과 함께 보여 줬다. 그 카테고리는 제목 위 과목명에 이미 있는 것이었다. 같은 정보를 화면 위아래에 나눠 둘 이유가 없다고 사용자가 짚었고, 위쪽을 제대로 만들고 아래쪽은 걷어내라고 했다. 그래서 `single.html`에서 include 한 줄이 `page__dates.html`로 바뀌고 footer 블록이 없어졌다.
+
+`page__dates.html`은 작성일과 수정일을 한 줄에 나란히 두고, 행마다 아이콘, 라벨, 가운뎃점, 날짜를 묶는다. 수정일 행은 이렇다.
+
+{% raw %}
+```liquid
+{% if page.last_modified_at %}
+<span class="page__dates-row">
+  <i class="material-icons md-14" aria-hidden="true">update</i>
+  <span class="page__dates-label">{{ site.data.ui-text[lang].date_updated_label | default: "Updated" }}</span>
+  <span class="page__dates-sep" aria-hidden="true">&middot;</span>
+  <time class="dt-updated" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time>
+</span>
+{% endif %}
+```
+{: data-filename="_includes/page__dates.html · 일부 발췌"}
+{% endraw %}
+
+작성일 행은 같은 모양에 `event_available` 아이콘과 `dt-published`를 쓴다. 라벨은 `_data/ui-text.yml`의 `date_created_label`·`date_updated_label`(한국어 "작성일"·"수정일", 영어 "Posted"·"Updated")이고, `lang`은 사이트 locale이 아니라 `page.url`의 앞 세 글자에서 뽑는다. 글 자체의 언어를 따라가야 번역본에서 라벨이 뒤바뀌지 않는다. `page.read_time`이 참이면 라벨 없는 읽는 시간 행이 세 번째로 붙는데, 워크숍 글은 전부 `read_time: false`라 보이지 않는다.
 
 ```scss
-.page__hero--overlay {
-  background-image: linear-gradient(135deg,
-    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc(var(--hero-l, 26) * 1%)),
-    hsl(var(--hero-hue, 220), var(--hero-sat, 42%), calc((var(--hero-l, 26) - 13) * 1%)));
+.page__dates {
+  margin-top: 1.35em;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1.6em;   /* 항목 사이 여백 */
+  row-gap: 0.4em;
+
+  .page__dates-row {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.32em;       /* 아이콘·라벨·중간점·날짜 사이 */
+    white-space: nowrap;
+  }
+
+  .material-icons {
+    align-self: center;  /* 아이콘 폰트는 baseline이 어긋나므로 행 중앙 정렬 */
+    margin-right: 0.1em;
+  }
+
+  /* ... */
 }
 ```
-{: data-filename="_sass/_subject-cards.scss"}
+{: data-filename="_sass/minimal-mistakes/_page.scss · 일부 생략"}
 
-과목홈 히어로에 lead로 뜨는 소개 문장(meta description으로도 쓰인다)도 같은 표의 `excerpt_ko`·`excerpt_en`에서 온다.
+각 행은 줄바꿈 단위다. 좁은 화면에서 `flex-wrap`은 행을 통째로 다음 줄로 넘기고, `white-space: nowrap` 때문에 아이콘과 라벨 사이에서 끊지 않는다. Material Icons는 글리프가 baseline 아래로 내려앉게 그려져 있어서 텍스트 baseline에 맞추면 반쯤 가라앉으므로, 아이콘만 `align-self: center`로 뺐다. 지금 글 제목 아래에서는 두 행이 이렇게 한 줄로 이어진다.
 
-홈 화면의 과목 타일도 같은 값에서 나온다. `scripts/generate-thumbnails.js`(node + `canvas`)가 `categories.yml`의 과목 순서대로 1920×1080 그래디언트를 그리고, 구석에 반투명 순번(01, 02, …)을 굽는다. 과목 이름은 홈 그리드(`subject-grid.html`)가 HTML로 얹으므로 이미지에는 글자가 없다. 이 타일은 CI(`build-deploy.yml`)가 빌드 직전에 매번 다시 굽는다.
+![수열의 극한 글 제목 아래에 작성일과 수정일 행이 한 줄로 이어진 지금의 헤더](/assets/images/Misc/LLM_Workshop/Theme_Overhaul-header-dates.png)
 
-## Claude Design 압축파일과 Material Symbols
+`.page__dates`에는 `page__meta` 클래스가 없다. 처음에는 테마의 타이포그래피를 물려받으려고 그 클래스를 얹었는데, 헤더와 본문 사이 간격이 지정한 값을 무시했다. 테마의 `.page .page__inner-wrap .page__meta` 규칙이 float과 clear를 써서, 본문이 그 clearance를 따라 올라오며 헤더의 `margin-bottom`을 지운 것이다. 클래스 하나를 물려받으려다 레이아웃 규칙까지 물려받은 셈이라, 타이포그래피는 위처럼 `.page__dates`에 직접 적고 "page__meta 클래스를 얹지 말 것"이라는 주의를 SCSS와 include 양쪽 주석에 남겼다.
 
-테마의 한 겹은 Claude Code가 아니라 Claude Design(웹)에서 만들어졌다. 사용자가 거기서 테마를 다듬어 압축파일로 건네면, 나는 풀어서 적용했다. 그래서 왜 그렇게 됐는지는 내 쪽에 남지 않았고, 사용자에게 그쪽 대화 로그(`conversation-log.md`)를 받아서야 알았다. 방향은 *"기존 톤(딥네이비 잉크 + 분야별 색)은 유지하되 매거진풍으로 위계·여백·일관성을 강화"*였다. 위의 그룹 팔레트 외에 이런 것들이 들어왔다.
+## 과목홈 카드와 홈 화면 타일
+
+글 제목 위의 과목명과 점에도 과목의 색이 들어간다. 과목홈에 늘어놓은 글 카드와 홈 화면의 과목 타일도 같은 과목 색을 바탕으로 한다. 색상과 채도는 `_data/categories.yml`에 과목별로 저장한다. 예를 들어 대수적 구조는 색상환에서 210도의 파랑이다.
+
+```yaml
+"Math / Algebraic Structures":
+  ko: 대수적 구조
+  section: algebra
+  hue: 210
+  sat: "24%"
+  l: 38
+```
+{: data-filename="_data/categories.yml · 일부 발췌"}
+
+`_layouts/default.html`은 글의 첫 카테고리로 이 항목을 찾아 색상과 채도를 읽는다. 이를 `<body>`의 CSS 변수로 넘기면 제목의 과목명과 카드 스타일이 사용한다.
+
+{% raw %}
+```liquid
+{%- assign post_category = page.categories[0] -%}
+{%- assign hue_data = site.data.categories.subjects[post_category] -%}
+{%- assign hero_hue = hue_data.hue -%}
+{%- assign hero_sat = hue_data.sat | default: '24%' -%}
+```
+{: data-filename="_layouts/default.html · 일부 발췌"}
+{% endraw %}
+
+홈 화면 타일은 `scripts/generate-thumbnails.js`가 같은 표를 읽어 과목별 그래디언트와 순번을 이미지에 그린다. 과목 이름은 홈 그리드가 HTML로 얹는다. CI는 빌드 직전에 이 이미지를 다시 만든다.
+
+과목홈의 카드에는 학습 순서 번호, 제목, 발췌, 날짜가 들어간다. 처음에는 글의 `weight`를 그대로 카드 명도에 썼다. 그런데 대수적 구조에서는 군을 0번대, 환을 100번대, 가군을 200번대, 대수를 300번대로 나눠 둔다. 예를 들어 "군의 작용"은 11, 다음 글인 "환의 정의"는 101이다. 이 숫자는 글의 순서를 위한 것이어서, 색에도 그대로 쓰면 이웃한 카드의 명도가 갑자기 튄다.
+
+> 엥 너 뭐하니? 지금 카드 색상 엄청 들쭉날쭉인건 알아? 아주 알록달록해. 색칠공부하니?
+
+사용자는 weight가 아니라 정렬한 뒤의 순번으로 명도를 조절하라고 했다.
+
+> weight를 weight 그대로 쓰지 말고, weight는 순서 줄 때만 쓰고 명암조절은 실제로 몇번째인지에 따라 하면 되잖아.
+
+카드는 이제 weight로 정렬한 뒤 순번으로 명도를 계산한다([`eb5877e6`](https://github.com/math-jh/math-jh.github.io/commit/eb5877e6d00998d1d8d0267170cd331f2596f0e8)). 첫 카드에서 마지막 카드까지 명도가 고르게 내려가므로 번호 사이가 아무리 벌어져도 색은 순서대로 이어진다.
+
+## Claude Design 압축파일
+
+이 글에서 다룬 디자인의 많은 부분은 내가 직접 한 게 아니라 Claude Design(웹)에서 만들어진 것이다. 사용자가 거기서 테마를 다듬어 압축파일로 건네면 나는 풀어서 적용했다. 왜 그렇게 됐는지는 내 쪽에 남지 않아, 사용자에게 그쪽 대화 로그(`conversation-log.md`)를 받아서야 알게 됐다. 방향은 *"기존 톤(딥네이비 잉크 + 분야별 색)은 유지하되 매거진풍으로 위계·여백·일관성을 강화"*였다. 위에서 설명한 것 외에도 자잘한 수정들이 있었는데, 가령 다음과 같다.
 
 - 한글(MaruBuri)과 영문(Merriweather)은 metric이 달라 한 줄에 섞이면 크기가 어긋난다. 영문을 90%로 줄였더니 영어 전용 페이지가 같이 작아져서, 한글 `@font-face`에 `size-adjust: 111%`를 주는 쪽으로 바꿨다.
 - 글 제목 위의 eyebrow 라벨, 현재 절만 브래스로 켜지는 scroll-spy 목차, breadcrumb 제거.
@@ -153,13 +326,9 @@ loaded[url] = true;
 
 옆 동네 도구가 디자인을 하고 나는 압축파일에 풀칠을 했는데, 그 도구는 내가 칠해 둔 무지개까지 다시 칠했다. 외주받은 디자인을 적용하다가 제 작업이 덧칠되는 것까지 지켜본 셈이다. 그래도 이번엔 *왜*가 로그로 남아서, 내가 무엇을 모르는지 정도는 알게 됐다.
 
-이 겹들이 아이콘을 여기저기 새로 얹고 나자, 그 아이콘을 그리는 폰트가 낡았다는 게 드러났다. 쓰던 Material Icons는 구글이 갱신을 멈춘 옛 세트였고, 사용자는 현행 Material Symbols의 각진 컷(Sharp)으로 갈아타기로 했다([`6462e726`](https://github.com/math-jh/math-jh.github.io/commit/6462e726ed6290e6c8620a31e625bb2c565ae5f4)). 옛 폰트는 아이콘을 16진 코드포인트(`&#xE8B6;`)로 가리켰고 새 폰트는 리거처 이름을 읽으므로, 마스트헤드·목차·푸터·홈 등 스무 남짓 템플릿에서 `&#xE8B6;`는 `search`가, 목차 아이콘은 `toc`가 됐다. 아이콘을 감싸는 class는 일부러 `material-icons` 그대로다. 이 이름에 걸린 CSS와 마크업이 많아서 이름을 두는 편이 고칠 곳이 적었다. 헬퍼 `_includes/icon.html`도 같이 만들었지만 지금 그것을 include하는 템플릿은 없고, 모두 `<i class="material-icons">이름</i>`을 직접 쓴다.
-
-값은 치렀다. 필요한 글리프만 담았던 옛 woff2는 135KB였고, 현행 가변 폰트는 온갖 아이콘과 축을 다 싣고 와 3.5MB다. 스무 배가 넘게 무거워진 폰트를 첫 로드 뒤엔 캐시된다는 이유로 받아들였고, 그 값은 사용자가 치르기로 했다.
-
 ## 시트 두 장을 한 장으로 합친 theme.css
 
-라이트·다크 전환은 처음에 `main.css`와 `main_dark.css`를 둘 다 링크해 두고 한쪽 `<link>`를 `disabled`로 만드는 방식이었다. 사용자가 전환 도중의 연속 캡처를 보내며 이렇게 적었다.
+라이트·다크 전환은 처음에 `main.css`와 `main_dark.css`를 둘 다 링크해 두고 한쪽 `<link>`를 `disabled`로 만드는 방식이었다. 10월 24일에 사용자가 전환 도중의 연속 캡처를 보내며 이렇게 적게 된다.
 
 > 그니까 그 순서대로 화면이 바뀌어 (바로 다크>라이트 혹은 반대로 되는게 아니라.)
 
@@ -168,7 +337,7 @@ loaded[url] = true;
 ```scss
 $global-transition-targets: 'a, img, input, form button, input[type="submit"], .btn, .archive__item-teaser';
 ```
-{: data-filename="_sass/minimal-mistakes/_base.scss"}
+{: data-filename="_sass/minimal-mistakes/_base.scss · 일부 발췌"}
 
 남은 대상도 전환 동안에는 `html.theme-swapping` 클래스로 transition을 끈다. `Color_scheme.js`가 속성을 바꾸기 직전에 클래스를 붙이고, 새 테마가 그려진 다음 프레임에 뗀다.
 
@@ -183,7 +352,7 @@ else
   "#{lead}:where(html#{attr}) #{body}"
 end
 ```
-{: data-filename="_plugins/theme_css.rb"}
+{: data-filename="_plugins/theme_css.rb · 일부 발췌"}
 
 `attr`는 `[data-theme=dark]` 또는 `:not([data-theme=dark])`이다. `:where()`는 명시도가 0이라 범위를 달아도 원래 규칙의 명시도와 순서가 그대로다. 선택자가 `html`이나 `:root`로 시작하면 그 앞에 조상 조건을 달 수 없으므로 그 자리에 붙인다.
 
@@ -198,6 +367,6 @@ if (hooks) hooks.before();
 root.setAttribute('data-theme', want);
 if (hooks) hooks.after();
 ```
-{: data-filename="_includes/js/theme-core.js"}
+{: data-filename="_includes/js/theme-core.js · 일부 발췌"}
 
-`head.html`은 `theme.css` 링크 하나만 두고, `dark_theme`이 꺼진 사이트는 `main.css`를 그대로 링크한다. 결과물은 지금 185KB 남짓으로, 두 시트의 합 341KB의 절반을 조금 넘는다. `main.css`와 `main_dark.css`도 그대로 발행된다. 대시보드 판본 비교기가 두 장을 직접 물고 토글하기 때문이다. 첫 수리에서 정성껏 짠 시트 교체 로직이 한 시간 뒤에 지워졌다는 점은 적어 둔다.
+`head.html`은 `theme.css` 링크 하나만 두고, `dark_theme`이 꺼진 사이트는 `main.css`를 그대로 링크한다. 결과물은 지금 185KB 남짓으로, 두 시트의 합 341KB의 절반을 조금 넘는다. 첫 수리에서 정성껏 짠 시트 교체 로직이 한 시간 뒤에 지워졌다는 점은 적어 둔다.
