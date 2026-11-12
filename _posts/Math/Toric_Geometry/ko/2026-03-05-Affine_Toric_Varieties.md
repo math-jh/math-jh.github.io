@@ -145,7 +145,15 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 이므로 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$가 smooth이다.
 
-($\Rightarrow$) 역방향은 $U_\sigma$의 unique torus-fixed point (orbit-cone correspondence에서 $\sigma$ 자신에 대응)에서 cotangent space 차원이 ray 수 $\lvert \sigma(1) \rvert$와 같음을 보이는 데서 출발한다. $U_\sigma$가 smooth이면 이 차원이 $n = \dim U_\sigma$여야 하므로 ray 수가 $n$, 즉 $\sigma$가 simplicial이고 또한 $N$의 $\mathbb{Z}$-basis를 이뤄야 한다.
+($\Rightarrow$) $U_\sigma$가 smooth라 하자. 우선 $N_\sigma = N \cap \span_{\mathbb{R}}(\sigma)$로 두면 $N/N_\sigma$가 torsion-free이므로 $N = N_\sigma \oplus N'$으로 분해되고, 이에 따라 $M = M_\sigma \oplus M'$ (각각 $N'$과 $N_\sigma$ 위에서 $0$인 원소들)로 분해된다. $M'$의 원소들은 $\sigma \subseteq (N_\sigma)_{\mathbb{R}}$ 위에서 $0$이므로 $S_\sigma = (S_\sigma \cap M_\sigma) \oplus M'$이고, 여기서 $S_\sigma \cap M_\sigma$는 $\sigma$를 lattice $N_\sigma$ 안의 cone으로 보아 얻어지는 semigroup이다. 따라서 [예시 6](#ex6)으로부터
+
+$$U_\sigma \cong \Spec(\mathbb{C}[S_\sigma \cap M_\sigma]) \times (\mathbb{C}^\ast)^{n-k}$$
+
+이고, $U_\sigma$가 smooth이므로 $\Spec(\mathbb{C}[S_\sigma \cap M_\sigma])$ 또한 smooth이다. 그러므로 $N$을 $N_\sigma$로 바꾸어 처음부터 $\sigma$가 full-dimensional, 즉 $k = n$이라 가정해도 된다.
+
+이 경우 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 full-dimensional이고, $\sigma$가 full-dimensional이므로 $\sigma^\vee \cap (-\sigma^\vee) = \{0\}$이다. 전자로부터 $\sigma^\vee$의 interior에 lattice point $u_0 \in M$을 잡으면, 임의의 $m \in M$에 대해 충분히 큰 $\ell$에서 $\ell u_0$과 $\ell u_0 + m$이 모두 $S_\sigma$에 속하므로 $S_\sigma$는 group으로서 $M$을 생성한다. 후자로부터 $u \in S_\sigma \setminus \{0\}$, $u' \in S_\sigma$이면 $u + u' \neq 0$이므로, $\rchi^u$ ($u \in S_\sigma \setminus \{0\}$)들이 span하는 subspace $\mathfrak{m}$은 $\mathbb{C}[S_\sigma] = \mathbb{C}\rchi^0 \oplus \mathfrak{m}$을 만족하는 maximal ideal이다. 이제 $\mathfrak{m}^2$은 $\rchi^{u + u'}$ ($u, u' \in S_\sigma \setminus \{0\}$)들로 span되므로, cotangent space $\mathfrak{m}/\mathfrak{m}^2$은 $S_\sigma$의 minimal generator들에 대응하는 $\rchi^u$들을 basis로 갖는다. $U_\sigma$가 smooth이므로 이 차원은 $n = \dim U_\sigma$이고, 따라서 $S_\sigma$는 $n$개의 원소 $u_1, \ldots, u_n$으로 생성된다. 이들은 group으로서 $M \cong \mathbb{Z}^n$을 생성하므로 $M$의 $\mathbb{Z}$-basis이고, 그럼 $\sigma^\vee = \mathbb{R}_{\ge 0}\langle u_1, \ldots, u_n\rangle$으로부터 $\sigma = (\sigma^\vee)^\vee$는 dual basis $u_1^\ast, \ldots, u_n^\ast \in N$으로 생성된다. 즉 $\sigma$의 primitive ray generator들은 $N$의 $\mathbb{Z}$-basis를 이룬다.
+
+일반적인 경우로 돌아가면, 이로부터 $\sigma$의 primitive ray generator들은 $N_\sigma$의 basis를 이루고, 여기에 $N'$의 basis를 덧붙이면 $N$의 basis가 되므로 $\sigma$는 smooth이다.
 :::
 
 가령 $N = \mathbb{Z}^2$에서 $\sigma = \mathrm{cone}(e_2,\ 2e_1 - e_2)$를 잡으면, 두 ray의 primitive generator로 만든 행렬

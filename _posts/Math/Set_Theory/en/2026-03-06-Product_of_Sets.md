@@ -126,7 +126,7 @@ Therefore ${\sim}:f\mapsto\tilde{f}$ is a bijection.
 Immediately after defining the union, we saw in [§Union and Intersection, ⁋Proposition 4](/en/math/set_theory/union_and_intersection#prop4){: data-lid="kwrbs" } that replacing the index set via a surjection has no effect; for products of sets, replacing it via a bijection likewise has no effect.
 
 ::: Proposition 5
-Let $(A_i)_{i\in I}$ be a family of sets and let $u:K\rightarrow I$ be a bijection. For any $f:I\rightarrow \prod_{i\in I}A_i$, the function sending it to $f\circ u: K\rightarrow \prod_{i\in I} A_i$, $f\mapsto f\circ u$, is a bijection.
+Let $(A_i)_{i\in I}$ be a family of sets and let $u:K\rightarrow I$ be a bijection. For any $F\in\prod_{i\in I}A_i$, the function sending it to $F\circ u\in\prod_{k\in K}A_{u(k)}$, $F\mapsto F\circ u$, is a bijection.
 :::
 
 ::: Proof
@@ -134,7 +134,7 @@ Consider the following diagram.
 
 {% diagram frozen/81b7e8af/Math/Set_Theory/Product_of_Sets-3.svg width="13.03em" alt="induced_bijection" %}
 
-Here $v$ is the bijection sending $(x_i)_{i\in I}$ to $(x_{u(k)})_{k\in K}$. By [Proposition 2](#prop2){: data-lid="8lx5z" } above, $F\mapsto F\circ U$ is a bijection.
+This is the diagram used earlier to define $\tilde{f}=v\circ f\circ u$, with $A'=K$, $A=I$, $B=B'=\bigcup_{i\in I}A_i$, and $v$ taken to be the identity function. Then since $u$ and $v$ are both bijections, by [Proposition 2](#prop2){: data-lid="8lx5z" } above, $F\mapsto F\circ u$ is a bijection from $\Fun(I,\bigcup_{i\in I}A_i)$ to $\Fun(K,\bigcup_{k\in K}A_{u(k)})$. On the other hand, since $u$ is a bijection, $F(i)\in A_i$ holding for all $i\in I$ is equivalent to $(F\circ u)(k)\in A_{u(k)}$ holding for all $k\in K$, and therefore this bijection restricts to a bijection between $\prod_{i\in I}A_i$ and $\prod_{k\in K}A_{u(k)}$.
 :::
 
 

@@ -238,7 +238,7 @@ $P$가 성립하지 않는 닫힌집합들의 모임을 $\mathcal{S}$라 하고,
 
 $$(V_1\cap U)\cap (V_2\cap U)=(V_1\cap V_2)\cap U$$
 
-으로부터 만일 $(V_1\cap U)\cap(V_2\cap U)\neq\emptyset$이라면 $V_1\cap V_2\neq\emptyset$이 되어 $Z$가 irreducible이라는 가정에 모순이다. 
+으로부터, $V_1\cap U$와 $V_2\cap U$가 공집합이 아니라면 $Z$가 irreducible이므로 $V_1\cap V_2$와 $Z\cap U$는 $Z$의 공집합이 아닌 열린집합이고, 다시 $Z$가 irreducible이라는 가정에 의하여 $(V_1\cap V_2)\cap U\neq\emptyset$이다. 
 
 거꾸로 $U$의 irreducible closed subset $Y\subseteq U$가 주어졌다 하면 $Y$의 closure 또한 irreducible이므로 $X$의 irreducible $\cl_X(Y)$가 $U$와 만나는 $X$의 irreducible subset이 된다. 즉 이로부터 두 함수
 
@@ -253,7 +253,7 @@ $$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible cl
 
 뿐만 아니라, 위의 증명에서의 두 함수는 inclusion-preserving이므로, $U$와 만나는 $X$의 irreducible component와 $U$의 irreducible component 사이의 일대일대응이 존재한다.
 
-이제 다음 명제를 보이자.
+그럼 다음 명제는 자명하다.
 
 ::: 명제 16
 만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.

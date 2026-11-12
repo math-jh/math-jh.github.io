@@ -91,13 +91,13 @@ Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로
 
 우선 Zermelo's theorem을 가정한다면 모든 집합은 well-ordered될 수 있으므로, 어떠한 $S\in\mathcal{P}(A)\setminus \{\emptyset\}$에 대해서도 least element가 존재한다. 이제 $p(S)$를 $S$의 least element로 정의하면 $p$가 원하는 choice function이다.
 
-이제 Zorn's lemma를 가정하고, 집합 $A$의 choice function을 만들자. 우선 $A$의 어떤 부분집합 $X$에 대하여 $\mathcal{P}(X)\setminus\{\emptyset\}$ 위에 정의된 choice function들을 모아 이를 $\mathcal{F}$라 하자. 최소한 $X=\{a\}$ 위에서는 choice function이 존재하므로 $\mathcal{F}$는 공집합이 아니다. 이제 $\mathcal{F}$의 각 원소들은 집합이므로, $\subseteq$에 의해 순서가 주어진다. 
+이제 Zorn's lemma를 가정하고, 집합 $A$의 choice function을 만들자. 우선 $\mathcal{P}(A)\setminus\{\emptyset\}$의 subset 위에 정의된 choice function들을 모아 이를 $\mathcal{F}$라 하자. 공집합 위에 정의된 함수도 $\mathcal{F}$의 원소이므로 $\mathcal{F}$는 공집합이 아니다. 이제 $\mathcal{F}$의 각 원소들은 집합이므로, $\subseteq$에 의해 순서가 주어진다. 
 
-이제 $\mathcal{F}$의 totally ordered subset $\mathcal{C}$가 주어졌다 하자. 그럼 $\bigcup_{X\in\mathcal{C}} F_X$는 정의역 $\mathcal{P}(\bigcup_{X\in\mathcal{C}} X)\setminus\{\emptyset\}$을 갖는 함수이므로, $\mathcal{C}$의 upper bound가 된다. 따라서 Zorn's lemma에 의해 어떤 maximal element가 존재한다. 이를 $F$라 하고 $\mathcal{P}(B)\setminus\{\emptyset\}$을 정의역이라 하자. 만일 $x\in A\setminus B$라면, $B$에 $x$를 추가하고 $\tilde{F}$를
+이제 $\mathcal{F}$의 totally ordered subset $\mathcal{C}$가 주어졌다 하자. 그럼 $\mathcal{C}$의 임의의 두 원소는 하나가 다른 하나를 확장하므로, $\bigcup_{G\in\mathcal{C}}G$는 각 $G\in\mathcal{C}$의 정의역들의 합집합 위에 정의된 choice function이고 따라서 $\mathcal{C}$의 upper bound가 된다. 즉 $\mathcal{F}$는 inductive이고, Zorn's lemma에 의해 어떤 maximal element가 존재한다. 이를 $F$라 하고 $\mathcal{D}$를 그 정의역이라 하자. 만일 $S\in\mathcal{P}(A)\setminus\{\emptyset\}$가 $\mathcal{D}$에 속하지 않는다면, $S$의 원소 $x$를 하나 택하고 $\tilde{F}$를
 
-$$\tilde{F}(X)=\begin{cases}F(X)&\text{if }x\not\in X\\ x&\text{if }x\in X\end{cases}$$
+$$\tilde{F}(X)=\begin{cases}F(X)&\text{if }X\in\mathcal{D}\\ x&\text{if }X=S\end{cases}$$
 
-로 정의함으로써 $F$를 확장하는 choice function $\tilde{F}$를 얻는다. 이는 $F$의 maximality에 모순이므로 $A\setminus B=\emptyset$, 즉 $F$는 $A$의 choice function이다.
+로 정의함으로써 $F$를 확장하는 choice function $\tilde{F}$를 얻는다. 이는 $F$의 maximality에 모순이므로 $\mathcal{D}=\mathcal{P}(A)\setminus\{\emptyset\}$, 즉 $F$는 $A$의 choice function이다.
 
 ---
 **참고문헌** 

@@ -124,7 +124,7 @@ $$\begin{aligned}
 우리는 합집합을 정의한 직후에 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4){: data-lid="kwrbs" }에서, index set을 전사함수를 통해 바꾸어도 아무런 일도 일어나지 않음을 보았는데, 집합들의 곱에서는 전단사함수를 통해 바꾸어도 아무런 일도 일어나지 않는다. 
 
 ::: 명제 5
-$(A_i)_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $f:I\rightarrow \prod_{i\in I}A_i$에 대해, 이를 $f\circ u: K\rightarrow \prod_{i\in I} A_i$로 보내는 함수 $f\mapsto f\circ u$는 전단사함수이다.
+$(A_i)_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라 하자. 임의의 $F\in\prod_{i\in I}A_i$에 대해, 이를 $F\circ u\in\prod_{k\in K}A_{u(k)}$로 보내는 함수 $F\mapsto F\circ u$는 전단사함수이다.
 :::
 
 ::: 증명
@@ -132,7 +132,7 @@ $(A_i)_{i\in I}$가 집합들의 family이고 $u:K\rightarrow I$가 전단사라
 
 {% diagram frozen/635a8f80/Math/Set_Theory/Product_of_Sets-3.svg width="13.03em" alt="induced_bijection" %}
 
-여기서 $v$는 $(x_i)_{i\in I}$를 $(x_{u(k)})_{k\in K}$로 대응시키는 전단사함수이다. 그럼 위의 [명제 2](#prop2){: data-lid="8lx5z" }에 의하여 $F\mapsto F\circ U$는 전단사다.
+이는 앞서 $\tilde{f}=v\circ f\circ u$를 정의한 diagram에서 $A'=K$, $A=I$, $B=B'=\bigcup_{i\in I}A_i$로 두고 $v$를 항등함수로 택한 것이다. 그럼 $u$와 $v$가 모두 전단사이므로 위의 [명제 2](#prop2){: data-lid="8lx5z" }에 의하여 $F\mapsto F\circ u$는 $\Fun(I,\bigcup_{i\in I}A_i)$에서 $\Fun(K,\bigcup_{k\in K}A_{u(k)})$로의 전단사함수이다. 한편 $u$가 전단사이므로 모든 $i\in I$에 대해 $F(i)\in A_i$인 것과 모든 $k\in K$에 대해 $(F\circ u)(k)\in A_{u(k)}$인 것은 동치이고, 따라서 이 전단사함수는 $\prod_{i\in I}A_i$와 $\prod_{k\in K}A_{u(k)}$ 사이의 전단사함수로 제한된다.
 :::
 
 

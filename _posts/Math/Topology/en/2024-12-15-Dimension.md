@@ -240,7 +240,7 @@ First, assuming $U\cap Z\neq\emptyset$ for an irreducible subspace of $X$, say $
 
 $$(V_1\cap U)\cap (V_2\cap U)=(V_1\cap V_2)\cap U$$
 
-if $(V_1\cap U)\cap(V_2\cap U)\neq\emptyset$, then $V_1\cap V_2\neq\emptyset$, which contradicts the assumption that $Z$ is irreducible. 
+it follows that if $V_1\cap U$ and $V_2\cap U$ are nonempty, then since $Z$ is irreducible, $V_1\cap V_2$ and $Z\cap U$ are nonempty open subsets of $Z$, and again by the assumption that $Z$ is irreducible, $(V_1\cap V_2)\cap U\neq\emptyset$. 
 
 Conversely, given an irreducible closed subset of $U$, $Y\subseteq U$, the closure of $Y$ is also irreducible, so that in $X$, the irreducible $\cl_X(Y)$ becomes a subset meeting $U$ among the irreducible subsets of $X$. That is, from this we obtain two maps
 
@@ -255,7 +255,7 @@ and we can verify that they are mutual bijections.
 
 Moreover, since the two maps in the above proof are inclusion-preserving, there is a one-to-one correspondence between the components meeting $U$ among the irreducible components of $X$ and the irreducible components of $U$.
 
-We now prove the following proposition.
+Then the following proposition is trivial.
 
 ::: Proposition 16
 If for a topological space $X$, there exist two finite-dimensional closed subspaces $Y,Z$ such that $X=Y\cup Z$, then their Krull dimensions also satisfy the equation $\dim X=\max(\dim Y,\dim Z)$.

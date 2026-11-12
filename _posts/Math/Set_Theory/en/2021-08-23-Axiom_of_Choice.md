@@ -53,7 +53,7 @@ Let $\mathcal{M}$ be the collection of relations $G\subseteq A\times A$ satisfyi
 
 We will show that for each element of $\mathcal{M}$, say $G$, the set $U=\pr_1G$ satisfies the condition of [§Properties of Well-Ordered Sets, ⁋Proposition 4](/en/math/set_theory/well_ordering#prop4){: data-lid="5049s" }. To this end, let us show that for any $U$ and $U'$, either $U$ is a segment of $U'$ or vice versa.
 
-Let $G$ and $G'\in \mathcal{M}$ be given arbitrarily, and let $U$ and $U'$ be their domains. Here, for elements such that (1) the segment with endpoint $x$ represents the same set in $U$ and $U'$, and (2) the order on that segment is the same in $G$ and $G'$, let the collection of such $x\in U\cap U'$ be $V$. If $x\in V$ and $y\in U$ satisfies $y\leq x$, then in both $U$ and $U'$, we have $y\in S_x$. Moreover, in $U$, any element smaller than $y$ is in $U'$ also smaller than $y$. Therefore, $y\in V$, and $V$ is a segment of $U$.
+Let $G$ and $G'\in \mathcal{M}$ be given arbitrarily, and let $U$ and $U'$ be their domains. Here, for elements such that (1) the segment with endpoint $x$ represents the same set in $U$ and $U'$, and (2) the order on that segment is the same in $G$ and $G'$, let the collection of such $x\in U\cap U'$ be $V$. If $x\in V$ and $y\in U$ satisfies $y<x$, then in both $U$ and $U'$, we have $y\in S_x$. Moreover, in $U$, any element smaller than $y$ is in $U'$ also smaller than $y$. Therefore, $y\in V$, and $V$ is a segment of $U$.
 
 Now, for $U$ and $U'$ to satisfy the desired condition, it suffices to show that either $U=V$ or conversely $U'=V$. Suppose that $V\neq U$ and $V\neq U'$. Then, for $U\setminus V$ and $U'\setminus V$, their least elements $x$ and $x'$ satisfy $V=S_x=S_{x'}$ in $U$ and $U'$, respectively. However, by the second condition, we have $V\in\mathcal{S}$, so $x=p(S_x)=p(V)=p(S_{x'})=x'$, and thus $x\in V$. On the other hand, since $x$ is the least element of $U\setminus V$, we have $x\not\in V$, which is a contradiction.
 
@@ -92,13 +92,13 @@ For completeness, let us briefly show that the three propositions, namely the Ax
 
 First, if we assume Zermelo's theorem, every set can be well-ordered, so for any $S\in\mathcal{P}(A)\setminus \{\emptyset\}$ there exists a least element. If we now define $p(S)$ to be the least element of $S$, then $p$ is the desired choice function.
 
-Now assume Zorn's lemma, and let us construct a choice function for a set $A$. First, let us collect choice functions defined on $\mathcal{P}(X)\setminus\{\emptyset\}$ for some subset $X$ of $A$, and denote this set by $\mathcal{F}$. Since there exists a choice function at least on $X=\{a\}$, $\mathcal{F}$ is non-empty. Now, since each element of $\mathcal{F}$ is a set, an order is given by $\subseteq$. 
+Now assume Zorn's lemma, and let us construct a choice function for a set $A$. First, let us collect choice functions defined on subsets of $\mathcal{P}(A)\setminus\{\emptyset\}$, and denote this set by $\mathcal{F}$. Since the function defined on the empty set is also an element of $\mathcal{F}$, $\mathcal{F}$ is non-empty. Now, since each element of $\mathcal{F}$ is a set, an order is given by $\subseteq$. 
 
-Now suppose that a totally ordered subset $\mathcal{C}$ of $\mathcal{F}$ is given. Then $\bigcup_{X\in\mathcal{C}} F_X$ is a function with domain $\mathcal{P}(\bigcup_{X\in\mathcal{C}} X)\setminus\{\emptyset\}$, so it is an upper bound of $\mathcal{C}$. Therefore, by Zorn's lemma, there exists a maximal element. Let this be $F$ and let $\mathcal{P}(B)\setminus\{\emptyset\}$ be its domain. If $x\in A\setminus B$, by adding $x$ to $B$ and defining $\tilde{F}$ by
+Now suppose that a totally ordered subset $\mathcal{C}$ of $\mathcal{F}$ is given. Then for any two elements of $\mathcal{C}$, one extends the other, so $\bigcup_{G\in\mathcal{C}}G$ is a choice function defined on the union of the domains of the $G\in\mathcal{C}$, and hence it is an upper bound of $\mathcal{C}$. That is, $\mathcal{F}$ is inductive, and by Zorn's lemma there exists a maximal element. Let this be $F$ and let $\mathcal{D}$ be its domain. If some $S\in\mathcal{P}(A)\setminus\{\emptyset\}$ does not belong to $\mathcal{D}$, then choosing an element $x$ of $S$ and defining $\tilde{F}$ by
 
-$$\tilde{F}(X)=\begin{cases}F(X)&\text{if }x\not\in X\\ x&\text{if }x\in X\end{cases}$$
+$$\tilde{F}(X)=\begin{cases}F(X)&\text{if }X\in\mathcal{D}\\ x&\text{if }X=S\end{cases}$$
 
-we obtain a choice function $\tilde{F}$ extending $F$. This contradicts the maximality of $F$, so $A\setminus B=\emptyset$; that is, $F$ is a choice function for $A$.
+we obtain a choice function $\tilde{F}$ extending $F$. This contradicts the maximality of $F$, so $\mathcal{D}=\mathcal{P}(A)\setminus\{\emptyset\}$; that is, $F$ is a choice function for $A$.
 
 ---
 **References**
