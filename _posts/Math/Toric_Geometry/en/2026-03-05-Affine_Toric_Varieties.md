@@ -144,7 +144,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$ is smooth.
 
-($\Rightarrow$) Suppose $U_\sigma$ is smooth. First, setting $N_\sigma = N \cap \span_{\mathbb{R}}(\sigma)$, the quotient $N/N_\sigma$ is torsion-free, so $N$ decomposes as $N = N_\sigma \oplus N'$, and accordingly $M$ decomposes as $M = M_\sigma \oplus M'$ (the elements vanishing on $N'$ and on $N_\sigma$, respectively). Since the elements of $M'$ vanish on $\sigma \subseteq (N_\sigma)_{\mathbb{R}}$, we have $S_\sigma = (S_\sigma \cap M_\sigma) \oplus M'$, where $S_\sigma \cap M_\sigma$ is the semigroup obtained by regarding $\sigma$ as a cone in the lattice $N_\sigma$. Hence by [Example 6](#ex6),
+($\Rightarrow$) Suppose $U_\sigma$ is smooth. First, setting $N_\sigma = N \cap \span_{\mathbb{R}}(\sigma)$, the quotient $N/N_\sigma$ is torsion-free, so $N$ decomposes as $N = N_\sigma \oplus N'$, and accordingly $M$ decomposes as $M = M_\sigma \oplus M'$ (the elements vanishing on $N'$ and on $N_\sigma$, respectively). Since the elements of $M'$ vanish on $\sigma \subseteq (N_\sigma)_{\mathbb{R}}$, we have $S_\sigma = (S_\sigma \cap M_\sigma) \oplus M'$, where $S_\sigma \cap M_\sigma$ is the semigroup obtained by regarding $\sigma$ as a cone in the lattice $N_\sigma$. Hence by [Example 6](#ex6){: data-lid="aj052" },
 
 $$U_\sigma \cong \Spec(\mathbb{C}[S_\sigma \cap M_\sigma]) \times (\mathbb{C}^\ast)^{n-k}$$
 

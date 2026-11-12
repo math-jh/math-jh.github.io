@@ -145,7 +145,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 이므로 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$가 smooth이다.
 
-($\Rightarrow$) $U_\sigma$가 smooth라 하자. 우선 $N_\sigma = N \cap \span_{\mathbb{R}}(\sigma)$로 두면 $N/N_\sigma$가 torsion-free이므로 $N = N_\sigma \oplus N'$으로 분해되고, 이에 따라 $M = M_\sigma \oplus M'$ (각각 $N'$과 $N_\sigma$ 위에서 $0$인 원소들)로 분해된다. $M'$의 원소들은 $\sigma \subseteq (N_\sigma)_{\mathbb{R}}$ 위에서 $0$이므로 $S_\sigma = (S_\sigma \cap M_\sigma) \oplus M'$이고, 여기서 $S_\sigma \cap M_\sigma$는 $\sigma$를 lattice $N_\sigma$ 안의 cone으로 보아 얻어지는 semigroup이다. 따라서 [예시 6](#ex6)으로부터
+($\Rightarrow$) $U_\sigma$가 smooth라 하자. 우선 $N_\sigma = N \cap \span_{\mathbb{R}}(\sigma)$로 두면 $N/N_\sigma$가 torsion-free이므로 $N = N_\sigma \oplus N'$으로 분해되고, 이에 따라 $M = M_\sigma \oplus M'$ (각각 $N'$과 $N_\sigma$ 위에서 $0$인 원소들)로 분해된다. $M'$의 원소들은 $\sigma \subseteq (N_\sigma)_{\mathbb{R}}$ 위에서 $0$이므로 $S_\sigma = (S_\sigma \cap M_\sigma) \oplus M'$이고, 여기서 $S_\sigma \cap M_\sigma$는 $\sigma$를 lattice $N_\sigma$ 안의 cone으로 보아 얻어지는 semigroup이다. 따라서 [예시 6](#ex6){: data-lid="aj052" }으로부터
 
 $$U_\sigma \cong \Spec(\mathbb{C}[S_\sigma \cap M_\sigma]) \times (\mathbb{C}^\ast)^{n-k}$$
 
