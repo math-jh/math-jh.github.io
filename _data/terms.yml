@@ -20874,6 +20874,13 @@ T:
   defs:
   - label: '[리 이론] §리 군'
     url: /ko/math/lie_theory/Lie_groups
+- id: torus_action
+  en: torus action
+  ko: 토러스 작용
+  primary: en
+  defs:
+  - label: '[리 이론] §원환면의 작용'
+    url: /ko/math/lie_theory/torus_action
 - id: torus-invariant_prime_divisor
   en: torus-invariant prime divisor
   ko: 토러스 불변 소인자
