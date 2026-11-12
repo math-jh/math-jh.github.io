@@ -3357,10 +3357,10 @@ C:
   ko: 완전
   primary: en
   defs:
-  - label: '[토릭 기하학] §토릭 다양체의 정의'
-    url: /ko/math/toric_geometry/toric_varieties
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+  - label: '[토릭 기하학] §토릭 다양체의 정의'
+    url: /ko/math/toric_geometry/toric_varieties
 - id: complete_category
   en: complete category
   ko: 완비범주
