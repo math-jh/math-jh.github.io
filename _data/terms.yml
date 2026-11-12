@@ -20761,6 +20761,13 @@ T:
   defs:
   - label: '[위상수학] §파라콤팩트 공간과 단위분할'
     url: /ko/math/topology/paracompact_spaces
+- id: topological_recursion_relation
+  en: topological recursion relation
+  ko: 위상적 재귀 관계
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: topological_space
   en: topological space
   ko: 위상공간
