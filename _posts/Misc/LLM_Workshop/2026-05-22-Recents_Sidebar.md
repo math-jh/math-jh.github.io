@@ -18,7 +18,7 @@ group: features
 
 ---
 
-관련 파일: [`_includes/nav_list`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/nav_list), [`_includes/nav_recents.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/nav_recents.html), [`_sass/_recents-sidebar.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_recents-sidebar.scss), [`_layouts/recent.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/recent.html), [`_layouts/single.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/single.html), [`_plugins/recent_comments.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/recent_comments.rb), [`_data/navigation.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/navigation.yml), [`_data/categories.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/categories.yml)
+관련 파일: [`_includes/nav_list`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/nav_list), [`_includes/nav_recents.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_includes/nav_recents.html), [`_sass/_recents-sidebar.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_recents-sidebar.scss), [`_layouts/recent.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/recent.html), [`_layouts/single.html`](https://github.com/math-jh/math-jh.github.io/blob/main/_layouts/single.html), [`_plugins/recent_comments.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/recent_comments.rb), [`_data/navigation.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/navigation.yml), [`_data/categories.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/categories.yml), [`_data/post_groups.yml`](https://github.com/math-jh/math-jh.github.io/blob/main/_data/post_groups.yml), [`_sass/_post-groups.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/_sass/_post-groups.scss)
 {: .notice--info}
 
 글 오른쪽에는 목차만 있어, 짧은 목차 아래로 빈 공간이 남았다. 사용자는 여기에 무언가를 넣어 휑해 보이는 것을 해소하고 싶어 했다. 유력한 후보는 최근 글과 최근 댓글이었다. 최근 글은 이미 있는 글 정보를 날짜순으로 모으면 되므로 구현이 어렵지 않았다. 이 블로그의 댓글은 오랫동안 Disqus였지만, 이 작업을 시작할 무렵에는 Giscus로 옮긴 상태였다. GitHub Discussions API로 댓글 데이터를 읽을 수 있어 최근 댓글 목록도 만들 수 있었다.
@@ -188,7 +188,31 @@ group: features
 
 먼저 사이드바 설정의 nav 키로 카테고리를 찾는다. 예를 들어 `llm_workshop-ko`에서 언어 접미사 `-ko`를 떼면 `llm_workshop`이 된다. 카테고리 키 `Misc / LLM Workshop`도 마지막 부분을 골라 소문자로 바꾸고 공백을 밑줄로 바꾸면 같은 값이 된다. 이 비교로 카테고리를 찾고 나면, `site.posts`에서 그 카테고리와 현재 언어에 속한 글만 고른다. 마지막의 `sort: "weight"`가 표시 순서를 정한다. 목록의 제목과 링크는 이렇게 모은 각 글의 정보를 사용한다.
 
-따라서 일반 카테고리에서는 새 글의 frontmatter만 갖추면 사이드바에도 정해진 순서로 나타난다. `published: false`인 초안은 배포 빌드의 글 목록에서 제외되어 사이드바에도 나오지 않지만, 사용자가 사용하는 `--unpublished`로 띄운 로컬 미리보기에서는 보인다.
+따라서 일반 카테고리에서는 새 글의 frontmatter만 갖추면 사이드바에도 정해진 순서로 나타난다.
+
+LLM Workshop처럼 글이 쉰 편을 넘으면 `weight` 한 줄로는 목록이 너무 길다. 11월 12일에 사용자는 글을 소 카테고리로 묶는 `group` 필드를 더했다([929db548](https://github.com/math-jh/math-jh.github.io/commit/929db548221c88f0a05f0a1fc7c4d6ab41dee6a1)). 글 frontmatter에 `group: theme`처럼 key를 적고, 카테고리별 묶음의 순서와 표시명은 `_data/post_groups.yml`이 갖는다. 이 파일에 카테고리가 없으면 위의 단일 `weight` 목록 그대로이고, 있으면 `nav_list`가 묶음 소제목을 달아 나눈다.
+
+{% raw %}
+```liquid
+{% assign auto_groups = site.data.post_groups[auto_cat] %}
+{% if auto_groups %}
+  {% assign ungrouped_auto = auto_posts | where_exp: "p", "p.group == nil" %}
+  {% for p in ungrouped_auto %}...{% endfor %}
+  {% for g in auto_groups %}
+    {% assign group_auto = auto_posts | where: "group", g.key %}
+    {% if group_auto.size > 0 %}
+      <li class="nav__group"><span>{{ group_label }}</span></li>
+      {% for p in group_auto %}...{% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+```
+{: data-filename="_includes/nav_list · 일부 생략"}
+{% endraw %}
+
+`auto_posts`는 앞에서 이미 `weight` 순으로 정렬돼 있으므로, 묶음 안의 순서는 `where`로 거른 뒤에도 그대로 유지된다. `group`이 없는 글은 소제목 없이 맨 위에 놓이고(사용자가 직접 쓴 글이 이쪽이다), 그 아래로 `post_groups.yml`에 적힌 순서대로 묶음이 이어진다. 글이 없는 묶음은 소제목도 그리지 않는다. 반대로 `post_groups.yml`에 없는 `group` 값을 가진 글은 어느 반복에도 걸리지 않아 사이드바에서 사라진다.
+
+같은 묶음 구조를 쓰는 곳이 세 군데 더 있다. 카테고리 목록(`_layouts/categories.html`)과 과목 홈 카드(`_includes/subject-cards.html`)는 같은 방식으로 소제목과 글 수를 단다. 이전/다음 글(`_includes/post_pagination.html`)은 읽는 순서가 사이드바와 달라지면 안 되므로, 묶음 밖 글 다음에 묶음 순서대로 글을 이어 붙인 목록에서 앞뒤를 찾는다. 소제목의 모양은 `_sass/_post-groups.scss`의 `%group-heading` 하나를 세 군데가 `@extend`한다. 과목 홈 카드는 이 변경과 함께 LLM Workshop 홈에서 쓰던 `cards_splitweight: 99`(weight 99 이상을 별도 줄로 떼는 옵션)를 걷어 냈다. 묶음이 그 구분을 대신하기 때문이다. `group`은 `_plugins/listing_regen_gate.rb`의 `STRUCTURE_FIELDS`에도 더해, 글의 묶음을 옮기면 목록 페이지가 다시 렌더된다. `published: false`인 초안은 배포 빌드의 글 목록에서 제외되어 사이드바에도 나오지 않지만, 사용자가 사용하는 `--unpublished`로 띄운 로컬 미리보기에서는 보인다.
 
 예외는 수동으로 고른 구성이 필요한 목록들은 남겨 두었다. `nav_list`는 먼저 `site.data.navigation[include.nav]`를 확인하고, 수동 목록이 있으면 그 구성을 쓴다. 수동 목록이 없을 때 자동 생성으로 넘어가므로, 예전 블로그 개발 노트 등의 별도 목록은 기존 순서를 유지할 수 있다.
 
