@@ -195,6 +195,7 @@ def pilot_report() -> int:
 
 
 def status() -> int:
+    import shadow_tick
     state = store.load_state()
     counts: dict[str, int] = {}
     for entry in state["units"].values():
@@ -206,6 +207,8 @@ def status() -> int:
         "ledger": len(store.load_ledger()),
         "human": len(queue["human"]), "audit": len(queue["audit"]),
         "digest": len(queue["digest"]),
+        "recheck": len(queue["recheck"]),
+        "recheck_open": shadow_tick.fill_complete(state),
         "providers": {stage: models.available(stage) for stage in models.STAGES},
     }, ensure_ascii=False, indent=2))
     return 0

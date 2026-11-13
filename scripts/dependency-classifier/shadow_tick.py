@@ -8,7 +8,9 @@ Order of business:
    lids ends there.
 2. one digest job, if the dashboard queued any (a ruling with an explanation, or
    a pending issue to turn into a precedent).
-3. one stage of one unit.  A unit whose round is under way comes first, oldest
+3. one recheck, once the shadow ledger is full (``fill_complete``).  Until then
+   approved rechecks wait in the queue.
+4. one stage of one unit.  A unit whose round is under way comes first, oldest
    first, as soon as the provider of its next stage is open — rounds are
    finished before new ones start, so the calibration and the precedents see
    complete results early.  A new round starts only while fewer than ``WIP_CAP``
@@ -231,14 +233,43 @@ def run_digest() -> bool:
     return shadow_digest.run_one()
 
 
+def fill_complete(state: dict) -> bool:
+    """Whether every post in scope has finished a round, i.e. the shadow ledger is full.
+
+    Rechecks wait for this.  A post that has not had its round yet meets every
+    precedent in that round, so rechecking finished links one precedent at a time
+    only adds model calls before then.  New links in a finished post do not hold
+    rechecks back, and neither does a parked post (its prompt overflows until its
+    text changes).
+    """
+    all_paths = units.all_units()
+    skip = out_of_scope(all_paths)
+    entries = state["units"]
+    for paths in all_paths:
+        key = dc.unit_key(paths)
+        if key in skip:
+            continue
+        entry = entries.get(key)
+        if entry is None:
+            if _cheap_lids(paths):
+                return False
+        elif entry.get("next") and not entry.get("parked_fp"):
+            return False
+    return True
+
+
 def run_recheck(commit: bool) -> bool:
-    """One approved "다시 볼 후보": Step 4 again on all three stages with the new precedent.
+    """One approved "다시 볼 후보": Step 4 again on all three stages with the current precedents.
 
     The link keeps its value if every stage still lands on it with agreeing
-    precedents; otherwise it goes to the human queue as a recheck.
+    precedents; otherwise it goes to the human queue as a recheck.  Step 4 reads the
+    whole book, so one run answers every queued recheck of the link.  Links the human
+    decided, or is about to decide, are dropped without a model call.
     """
     queue = store.load_queue()
     if not queue["recheck"]:
+        return False
+    if not fill_complete(store.load_state()):
         return False
     if not all(models.available(s) for s in models.STAGES):
         return False
@@ -256,13 +287,16 @@ def run_recheck(commit: bool) -> bool:
     # A draft or a post under revision gets a fresh round once its flag is gone,
     # and that round sees the new precedent anyway.
     paused = not gone and dc.unit_key(found[0]) in out_of_scope(all_paths)
-    if gone or paused:
+    human = not gone and (lid in queue["human"]
+                          or store.human_decided(lid, found[2]["links"][lid], queue))
+    if gone or paused or human:
         with _locked():
             queue = store.load_queue()
-            queue["recheck"] = [x for x in queue["recheck"] if x != item]
+            queue["recheck"] = [x for x in queue["recheck"] if x["lid"] != lid]
             store.save_queue(queue)
-        log(f"shadow recheck {lid}: " + ("the link is gone" if gone else "its post is a draft or under revision")
-            + "; dropped")
+        why = ("the link is gone" if gone else "its post is a draft or under revision" if paused
+               else "the human decides this link")
+        log(f"shadow recheck {lid}: {why}; dropped")
         return True
     paths, h, record = found
     unit = units.load_unit(paths)
@@ -276,15 +310,22 @@ def run_recheck(commit: bool) -> bool:
     except Exception as exc:  # noqa: BLE001
         log(f"ERROR shadow recheck {lid}: {exc}")
         return True
-    final = (rec.get("final") or {}).get("relation")
     relations = {r["relation"] for r in results.values()}
     precedents = {r["precedent"] for r in results.values()}
+    held = _locked()
+    # The model calls take minutes and the dashboard may have ruled on the link in
+    # the meantime: the recheck goes into the latest record, and a human decision
+    # made meanwhile stands.
+    queue = store.load_queue()
+    queue["recheck"] = [x for x in queue["recheck"] if x["lid"] != lid]
+    fresh = store.load_unit_record(h)
+    rec = fresh.setdefault("links", {}).setdefault(lid, rec)
     rec.setdefault("rechecks", []).append({"precedent": item["precedent"], "results": results,
                                            "at": int(time.time())})
-    held = _locked()
-    queue = store.load_queue()
-    queue["recheck"] = [x for x in queue["recheck"] if x != item]
-    if relations == {final} and len(precedents) == 1:
+    final = (rec.get("final") or {}).get("relation")
+    if lid in queue["human"] or store.human_decided(lid, rec, queue):
+        log(f"shadow recheck {lid}: the human took this link meanwhile; left to the human")
+    elif relations == {final} and len(precedents) == 1:
         log(f"shadow recheck {lid}: still {final} under {item['precedent']}")
     else:
         queue["human"][lid] = {"unit": record["unit"], "kind": "recheck",
@@ -293,11 +334,11 @@ def run_recheck(commit: bool) -> bool:
                                "issues": sorted({r.get("pending_id") for r in results.values()
                                                  if r.get("pending_id")}),
                                "was": final, "precedent": item["precedent"],
-                               "decisive": pipe.decisive(lid, rec, record["links"]),
+                               "decisive": pipe.decisive(lid, rec, fresh["links"]),
                                "created": int(time.time())}
         log(f"shadow recheck {lid}: sent to the human queue ({sorted(relations)})")
     with held:
-        store.merge_unit_record(h, record, [lid])
+        store.save_unit_record(h, fresh)
         store.save_queue(queue)
     return True
 

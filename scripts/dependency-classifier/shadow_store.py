@@ -200,6 +200,15 @@ def save_queue(queue: dict) -> None:
     write_json(QUEUE_PATH, queue)
 
 
+def human_decided(lid: str, rec: dict, queue: dict) -> bool:
+    """Whether the human has the say on this link: a ruling (or a reopened one waiting
+    for it), or an audit, whether it overturned the unanimous value or confirmed it.
+    Rechecks leave these links alone — a model never reopens a human decision."""
+    if (rec.get("final") or {}).get("by") in ("human", "audit"):
+        return True
+    return (queue["settled"].get(lid) or {}).get("how") == "audit"
+
+
 def merge_unit_record(unit_hash: str, mine: dict, lids: list[str]) -> dict:
     """Write this round's links into the latest copy, keeping what others wrote since.
 

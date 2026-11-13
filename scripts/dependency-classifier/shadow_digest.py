@@ -24,6 +24,7 @@ precedent files until the human approves the draft on the dashboard
 from __future__ import annotations
 
 import json
+import random
 import re
 import time
 
@@ -84,34 +85,44 @@ def _locate(lid: str) -> tuple[units.Unit, dict] | None:
 def _recheck_candidates(job_links: list[tuple[units.Unit, dict, str]]) -> list[dict]:
     """Finished links whose Step 1 answers look like the ruled links' — by pattern, not by model.
 
-    Links of drafts and posts under revision are left out: the recheck would drop them.
+    Left out: links of drafts and posts under revision (the recheck would drop them),
+    links the human decided or is about to (``store.human_decided``, the human queue),
+    and links already waiting for a recheck, which will see this precedent anyway.
+    Every matching link is collected before RECHECK_OFFER applies, the least rechecked
+    first and ties in random order, so no post is offered to every precedent because
+    its unit file happens to sort first.
     """
     from shadow_tick import out_of_scope
     paused = out_of_scope(units.all_units())
+    queue = store.load_queue()
+    queued = {x["lid"] for x in queue["recheck"]}
     patterns = set()
     for _, record, lid in job_links:
         rec = record["links"][lid]
         s1 = rec["stages"]["S1"]["step1"]
         patterns.add((s1["basis"], rec["features"].get("target_kind"), rec["features"].get("in_proof")))
     ruled = {lid for _, _, lid in job_links}
-    out = []
-    for path in sorted(store.UNITS_DIR.glob("*.json")):
+    found = []
+    for path in store.UNITS_DIR.glob("*.json"):
         record = store.read_json(path, {})
         if record.get("unit") in paused:
             continue
         for lid, rec in record.get("links", {}).items():
-            if lid in ruled or not (rec.get("final") or {}).get("relation"):
+            if lid in ruled or lid in queued or lid in queue["human"] \
+                    or not (rec.get("final") or {}).get("relation") \
+                    or store.human_decided(lid, rec, queue):
                 continue
             s1 = (rec.get("stages", {}).get("S1") or {}).get("step1")
             if not s1:
                 continue
             key = (s1["basis"], rec["features"].get("target_kind"), rec["features"].get("in_proof"))
             if key in patterns:
-                out.append({"id": lid, "relation": rec["final"]["relation"],
-                            "evidence": s1["evidence"], "reason": s1["reason"]})
-            if len(out) >= RECHECK_OFFER:
-                return out
-    return out
+                found.append((len(rec.get("rechecks") or []),
+                              {"id": lid, "relation": rec["final"]["relation"],
+                               "evidence": s1["evidence"], "reason": s1["reason"]}))
+    random.shuffle(found)
+    found.sort(key=lambda x: x[0])
+    return [c for _, c in found[:RECHECK_OFFER]]
 
 
 def consolidation_needed() -> tuple[bool, list[dict]]:

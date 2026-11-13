@@ -518,12 +518,168 @@ class ScopeTest(unittest.TestCase):
                 patch.object(store, "load_unit_record", return_value=record), \
                 patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
                 patch.object(shadow_tick, "out_of_scope", return_value={key}), \
+                patch.object(shadow_tick, "fill_complete", return_value=True), \
                 patch.object(models, "available", return_value=True), \
                 patch.object(models, "call", side_effect=AssertionError("no model call")):
             self.assertTrue(shadow_tick.run_recheck(commit=False))
         queue = store.load_queue()
         self.assertEqual(queue["recheck"], [])
         self.assertNotIn("zzzzz", queue["human"])
+
+    def test_recheck_waits_until_the_ledger_is_full(self):
+        import shadow_tick
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["recheck"] = [{"lid": "zzzzw", "precedent": "P-0001", "created": 0}]
+            store.save_queue(queue)
+        with patch.object(shadow_tick, "fill_complete", return_value=False), \
+                patch.object(models, "call", side_effect=AssertionError("no model call")):
+            self.assertFalse(shadow_tick.run_recheck(commit=False))
+        self.assertEqual([x["lid"] for x in store.load_queue()["recheck"]], ["zzzzw"])
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["recheck"] = []
+            store.save_queue(queue)
+
+    def test_recheck_drops_every_item_of_a_human_decided_link(self):
+        from types import SimpleNamespace
+        import shadow_tick
+        import shadow_units as units
+        paths = [EndToEndFakeModelTest.POST]
+        key = dc.unit_key(paths)
+        record = {"unit": key, "links": {"zzzzh": {"final": {"relation": "weak", "by": "human"}}}}
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["recheck"] = [{"lid": "zzzzh", "precedent": p, "created": 0}
+                                for p in ("P-0001", "P-0002")]
+            store.save_queue(queue)
+        with patch.object(units, "all_units", return_value=[paths]), \
+                patch.object(store, "load_unit_record", return_value=record), \
+                patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
+                patch.object(shadow_tick, "out_of_scope", return_value=set()), \
+                patch.object(shadow_tick, "fill_complete", return_value=True), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(models, "call", side_effect=AssertionError("no model call")):
+            self.assertTrue(shadow_tick.run_recheck(commit=False))
+        queue = store.load_queue()
+        self.assertEqual(queue["recheck"], [])
+        self.assertNotIn("zzzzh", queue["human"])
+
+    def _run_recheck_with(self, lid: str, during=None):
+        """A recheck whose three Step 4 answers are 'required'; ``during`` runs inside the call."""
+        from types import SimpleNamespace
+        import shadow_tick
+        import shadow_units as units
+        paths = [EndToEndFakeModelTest.POST]
+        key = dc.unit_key(paths)
+        h = units.unit_hash(key)
+        with store.lock(5):
+            store.save_unit_record(h, {"unit": key, "links": {
+                lid: {"final": {"relation": "weak", "by": "unanimous"}}}})
+            queue = store.load_queue()
+            queue["recheck"] = [{"lid": lid, "precedent": p, "created": 0} for p in ("P-0001", "P-0002")]
+            store.save_queue(queue)
+        row = {"relation": "required", "precedent": "P-0001", "pending_id": None}
+
+        def step4(stage, items):
+            if during:
+                during(h)
+            return {lid: row}, {}
+
+        with patch.object(units, "all_units", return_value=[paths]), \
+                patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
+                patch.object(shadow_tick, "out_of_scope", return_value=set()), \
+                patch.object(shadow_tick, "fill_complete", return_value=True), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(pipe, "step4_items", return_value=[]), \
+                patch.object(pipe, "run_step4", side_effect=step4), \
+                patch.object(pipe, "_record_issue"), \
+                patch.object(pipe, "decisive", return_value=False):
+            self.assertTrue(shadow_tick.run_recheck(commit=False))
+        return store.load_queue(), store.load_unit_record(h)["links"][lid]
+
+    def test_recheck_sends_a_changed_vote_to_the_human(self):
+        queue, rec = self._run_recheck_with("zzzzr")
+        self.assertEqual(queue["recheck"], [])                 # both precedents' items answered
+        self.assertEqual(queue["human"]["zzzzr"]["kind"], "recheck")
+        self.assertEqual(len(rec["rechecks"]), 1)
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["human"].pop("zzzzr")
+            store.save_queue(queue)
+
+    def test_recheck_keeps_a_ruling_made_during_the_calls(self):
+        def rule(h):
+            record = store.load_unit_record(h)
+            record["links"]["zzzzq"]["final"] = {"relation": "weak", "by": "human", "at": 1}
+            store.save_unit_record(h, record)
+
+        queue, rec = self._run_recheck_with("zzzzq", during=rule)
+        self.assertNotIn("zzzzq", queue["human"])
+        self.assertEqual(rec["final"]["by"], "human")
+        self.assertEqual(len(rec["rechecks"]), 1)
+
+    def test_fill_complete(self):
+        import shadow_tick
+        import shadow_units as units
+        d = Path(tempfile.mkdtemp(prefix="fill-", dir=TMP))
+        paths = {}
+        for name in ("done", "open", "parked", "untouched", "nolinks", "paused"):
+            paths[name] = d / f"{name}.md"
+            body = "" if name == "nolinks" else '[x](/a/){: data-lid="abcde" }'
+            paths[name].write_text(f"---\ntitle: {name}\n---\n{body}\n", encoding="utf-8")
+        key = lambda ps: "+".join(p.stem for p in ps)  # noqa: E731
+        entries = {"done": {"next": None}, "open": {"next": "S2"},
+                   "parked": {"next": "S2", "parked_fp": "x"}, "paused": {"next": "S1"}}
+
+        def check(names):
+            with patch.object(units, "all_units", return_value=[[paths[n]] for n in names]), \
+                    patch.object(dc, "unit_key", key), \
+                    patch.object(shadow_tick, "out_of_scope", return_value={"paused"}):
+                return shadow_tick.fill_complete({"units": entries})
+
+        self.assertTrue(check(["done", "parked", "nolinks", "paused"]))
+        self.assertFalse(check(["done", "open"]))
+        self.assertFalse(check(["done", "untouched"]))
+
+    def test_recheck_candidates_leave_the_human_alone_and_spread_out(self):
+        import shadow_digest
+        import shadow_tick
+        import shadow_units as units
+        s1 = {"basis": "yy-basis", "evidence": "e", "reason": "r"}
+
+        def rec(by="unanimous", rechecks=0):
+            return {"final": {"relation": "weak", "by": by}, "stages": {"S1": {"step1": s1}},
+                    "features": {"target_kind": "yy", "in_proof": False},
+                    "rechecks": [{}] * rechecks}
+
+        store.write_json(store.UNITS_DIR / "yy-a.json", {"unit": "a", "links": {
+            "yy-human": rec("human"), "yy-audit": rec("audit"), "yy-confirmed": rec(),
+            "yy-queued": rec(), "yy-waiting": rec(), "yy-often": rec(rechecks=3)}})
+        store.write_json(store.UNITS_DIR / "yy-b.json", {"unit": "b", "links": {
+            "yy-fresh": rec(), "yy-tiebreak": rec("fable-tiebreak", rechecks=1)}})
+        with store.lock(5):
+            queue = store.load_queue()
+            queue["settled"]["yy-confirmed"] = {"how": "audit"}
+            queue["recheck"].append({"lid": "yy-queued", "precedent": "P-0001", "created": 0})
+            queue["human"]["yy-waiting"] = {"unit": "a"}
+            store.save_queue(queue)
+        ruled = (None, {"links": {"yy-ruled": rec()}}, "yy-ruled")
+        try:
+            with patch.object(units, "all_units", return_value=[]), \
+                    patch.object(shadow_tick, "out_of_scope", return_value=set()):
+                ids = [c["id"] for c in shadow_digest._recheck_candidates([ruled])]
+                self.assertEqual(ids, ["yy-fresh", "yy-tiebreak", "yy-often"])
+                with patch.object(shadow_digest, "RECHECK_OFFER", 1):
+                    self.assertEqual([c["id"] for c in shadow_digest._recheck_candidates([ruled])],
+                                     ["yy-fresh"])
+        finally:
+            with store.lock(5):
+                queue = store.load_queue()
+                queue["settled"].pop("yy-confirmed", None)
+                queue["recheck"] = [x for x in queue["recheck"] if x["lid"] != "yy-queued"]
+                queue["human"].pop("yy-waiting", None)
+                store.save_queue(queue)
 
     def test_recheck_candidates_skip_paused_posts(self):
         import shadow_digest
