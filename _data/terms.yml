@@ -20860,6 +20860,13 @@ T:
   defs:
   - label: '[토릭 기하학] §토릭 다양체 위의 로그 미분형식'
     url: /ko/math/toric_geometry/logarithmic_differentials
+- id: toric_fano_variety
+  en: toric Fano variety
+  ko: 토릭 파노 다양체
+  primary: en
+  defs:
+  - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
+    url: /ko/math/mirror_symmetry/givental_j_function
 - id: toric_variety
   en: toric variety
   ko: 토릭 다양체
