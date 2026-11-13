@@ -5129,6 +5129,13 @@ D:
     url: /ko/math/linear_algebra/determinant
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+- id: determinant_bundle
+  en: determinant bundle
+  ko: 행렬식 번들
+  primary: en
+  defs:
+  - label: '[미분다양체] §향'
+    url: /ko/math/manifolds/orientation
 - id: developable_surface
   en: developable surface
   ko: 전개가능 곡면
