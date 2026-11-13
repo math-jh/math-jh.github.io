@@ -14859,6 +14859,13 @@ O:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: orientable_manifold
+  en: orientable manifold
+  ko: 유향 다양체
+  primary: en
+  defs:
+  - label: '[미분다양체] §적분'
+    url: /ko/math/manifolds/integration
 - id: orientation
   en: orientation
   ko: 방향
