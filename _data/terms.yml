@@ -17037,6 +17037,13 @@ R:
   defs:
   - label: '[미분다양체] §부분다양체와 역함수 정리'
     url: /ko/math/manifolds/submanifolds
+- id: rapid_decay_homology
+  en: rapid decay homology
+  ko: 급감소 호몰로지
+  primary: en
+  defs:
+  - label: '[거울대칭] §가우스-마닌 접속'
+    url: /ko/math/mirror_symmetry/gauss-manin_connection
 - id: ratio_test
   en: ratio test
   ko: 비판정
