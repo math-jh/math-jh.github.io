@@ -14982,6 +14982,13 @@ O:
   defs:
   - label: '[미분다양체] §경계가 있는 다양체'
     url: /ko/math/manifolds/manifolds_with_boundary
+- id: outward_vector
+  en: outward vector
+  ko: 외향 벡터
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 P:
 - id: p_-form_of_degree_n
   en: $p$-form of degree $n$
