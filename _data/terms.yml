@@ -6518,6 +6518,13 @@ E:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+- id: exact_form
+  en: exact form
+  ko: 완전 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §돌보 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: exact_functor
   en: exact functor
   ko: 완전 함자
