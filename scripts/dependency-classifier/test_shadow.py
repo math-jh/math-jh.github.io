@@ -565,8 +565,9 @@ class ScopeTest(unittest.TestCase):
         self.assertEqual(queue["recheck"], [])
         self.assertNotIn("zzzzh", queue["human"])
 
-    def _run_recheck_with(self, lid: str, during=None):
-        """A recheck whose three Step 4 answers are 'required'; ``during`` runs inside the call."""
+    def _run_recheck_with(self, lid: str, during=None, relation="required"):
+        """A recheck of a 'weak' link whose three Step 4 answers are ``relation``, each
+        stage citing another precedent; ``during`` runs inside the call."""
         from types import SimpleNamespace
         import shadow_tick
         import shadow_units as units
@@ -579,12 +580,12 @@ class ScopeTest(unittest.TestCase):
             queue = store.load_queue()
             queue["recheck"] = [{"lid": lid, "precedent": p, "created": 0} for p in ("P-0001", "P-0002")]
             store.save_queue(queue)
-        row = {"relation": "required", "precedent": "P-0001", "pending_id": None}
+        cited = {"S1": "P-0001", "S2": "P-0002", "S3": "none"}
 
         def step4(stage, items):
             if during:
                 during(h)
-            return {lid: row}, {}
+            return {lid: {"relation": relation, "precedent": cited[stage], "pending_id": None}}, {}
 
         with patch.object(units, "all_units", return_value=[paths]), \
                 patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
@@ -607,6 +608,13 @@ class ScopeTest(unittest.TestCase):
             queue = store.load_queue()
             queue["human"].pop("zzzzr")
             store.save_queue(queue)
+
+    def test_recheck_keeps_an_unchanged_value_whatever_the_precedents(self):
+        queue, rec = self._run_recheck_with("zzzzp", relation="weak")
+        self.assertEqual(queue["recheck"], [])
+        self.assertNotIn("zzzzp", queue["human"])
+        self.assertEqual(rec["final"]["relation"], "weak")
+        self.assertEqual(len(rec["rechecks"]), 1)
 
     def test_recheck_keeps_a_ruling_made_during_the_calls(self):
         def rule(h):

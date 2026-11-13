@@ -261,8 +261,8 @@ def fill_complete(state: dict) -> bool:
 def run_recheck(commit: bool) -> bool:
     """One approved "다시 볼 후보": Step 4 again on all three stages with the current precedents.
 
-    The link keeps its value if every stage still lands on it with agreeing
-    precedents; otherwise it goes to the human queue as a recheck.  Step 4 reads the
+    The link keeps its value if every stage still lands on it, whichever precedents
+    they cite; otherwise it goes to the human queue as a recheck.  Step 4 reads the
     whole book, so one run answers every queued recheck of the link.  Links the human
     decided, or is about to decide, are dropped without a model call.
     """
@@ -311,7 +311,6 @@ def run_recheck(commit: bool) -> bool:
         log(f"ERROR shadow recheck {lid}: {exc}")
         return True
     relations = {r["relation"] for r in results.values()}
-    precedents = {r["precedent"] for r in results.values()}
     held = _locked()
     # The model calls take minutes and the dashboard may have ruled on the link in
     # the meantime: the recheck goes into the latest record, and a human decision
@@ -325,7 +324,7 @@ def run_recheck(commit: bool) -> bool:
     final = (rec.get("final") or {}).get("relation")
     if lid in queue["human"] or store.human_decided(lid, rec, queue):
         log(f"shadow recheck {lid}: the human took this link meanwhile; left to the human")
-    elif relations == {final} and len(precedents) == 1:
+    elif relations == {final}:
         log(f"shadow recheck {lid}: still {final} under {item['precedent']}")
     else:
         queue["human"][lid] = {"unit": record["unit"], "kind": "recheck",
