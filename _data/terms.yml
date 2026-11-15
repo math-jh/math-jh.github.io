@@ -7756,6 +7756,13 @@ F:
   defs:
   - label: '[스킴] §스킴 사이의 사상'
     url: /ko/math/scheme_theory/morphism_of_schemes
+- id: functoriality
+  en: functoriality
+  ko: 함자성
+  primary: en
+  defs:
+  - label: '[범주론] §함자'
+    url: /ko/math/category_theory/functors
 - id: fundamental_class
   en: fundamental class
   ko: 기본류
