@@ -17168,6 +17168,13 @@ R:
   defs:
   - label: '[층론] §고유 받음과 여섯 함자'
     url: /ko/math/sheaf_theory/six_functors
+- id: recurrence_relation
+  en: recurrence relation
+  ko: 점화식
+  primary: ko
+  defs:
+  - label: '[해석학] §수열의 수렴'
+    url: /ko/math/analysis/convergence_of_sequences
 - id: recursion_theorem
   en: recursion theorem
   ko: 재귀정리
