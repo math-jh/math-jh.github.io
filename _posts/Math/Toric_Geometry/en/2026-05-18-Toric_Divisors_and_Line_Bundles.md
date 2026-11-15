@@ -26,7 +26,7 @@ $$\mathbb{C}[M] = \mathbb{C}[t_1^{\pm 1}, \ldots, t_n^{\pm 1}]$$
 
 and hence a UFD ([\[Ring Theory\] §Polynomial Rings, ⁋Theorem 16](/en/math/ring_theory/polynomial_rings#thm16){: data-lid="c1lf7" }). In a UFD, every height-1 prime ideal is principal ([\[Commutative Algebra\] §Primary Decomposition, ⁋Theorem 7](/en/math/commutative_algebra/primary_decomposition#thm7){: data-lid="s57ss" }), so every codimension 1 irreducible subvariety is the zero set of a single Laurent polynomial, and therefore every Weil divisor is principal. Consequently, $\Cl(T_N) = 0$, so there is no motivation to study divisors on it.
 
-In other words, all nontrivial divisor information on $X_\Sigma$ is concentrated in the *boundary* $X_\Sigma \setminus T_N$, and this boundary consists exactly of the part fixed by the action of $T_N$. Therefore, we develop the divisor theory on $X_\Sigma$ by focusing on *torus-invariant* divisors.
+In other words, all nontrivial divisor information on $X_\Sigma$ is concentrated in the *boundary* $X_\Sigma \setminus T_N$, and this boundary consists exactly of the part invariant under the action of $T_N$. Therefore, we develop the divisor theory on $X_\Sigma$ by focusing on *torus-invariant* divisors.
 
 For each 1-dimensional cone of the fan $\Sigma$, i.e. each *ray* $\rho \in \Sigma(1)$, consider its primitive generator $v_\rho \in N$. The ray $\rho$ corresponds to a codimension 1 torus orbit in $X_\Sigma$, and its Zariski closure defines an irreducible divisor.
 
@@ -195,7 +195,7 @@ When the toric variety $X_\Sigma$ is complete, a torus-invariant Cartier divisor
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-is a bounded region and hence a lattice polytope. Since the normal fan of this polytope coincides with $\Sigma$, by [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8){: data-lid="2q0mm" } the variety $X_\Sigma$ is projective. Moreover, the line bundle $\mathcal{O}_{X_\Sigma}(D)$ corresponding to $D$ defines a very ample line bundle, so $D$ is ample.
+is a bounded region and hence a lattice polytope. Since the normal fan of this polytope coincides with $\Sigma$, by [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8){: data-lid="2q0mm" } the variety $X_\Sigma$ is projective. Moreover, for sufficiently large $k > 0$, the line bundle $\mathcal{O}_{X_\Sigma}(kD)$ corresponding to $kD$ defines a very ample line bundle, so $D$ is ample.
 :::
 
 ## The Picard Group of a Toric Variety
