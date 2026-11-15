@@ -21239,6 +21239,13 @@ T:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+- id: trivial_solution
+  en: trivial solution
+  ko: 자명한 해
+  primary: ko
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: trivial_topology
   en: trivial topology
   ko: 자명한 위상
