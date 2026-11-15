@@ -15675,6 +15675,13 @@ P:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+- id: polynomial_mapping
+  en: polynomial mapping
+  ko: 다항식 사상
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §대칭텐서'
+    url: /ko/math/multilinear_algebra/symmetric_tensors
 - id: polynomial_ring
   en: polynomial ring
   ko: 다항식환
