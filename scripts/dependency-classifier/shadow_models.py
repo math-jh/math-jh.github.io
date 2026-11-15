@@ -43,10 +43,10 @@ PROVIDER = {"S1": "Antigravity", "S2": "Claude Opus", "S3": "Codex"}
 AGY_BIN = dc.AGY_BIN
 # No model ID, only an effort level: the house convention, so a model generation
 # change on the Antigravity side cannot break the call (a pinned ID fails with
-# "not recognized").  medium, not high: on a whole-article prompt high spends ~4k
-# thinking tokens per link and overruns the output limit; medium gave the same
-# relations on the 2026-10-17 probe at half the tokens.
-AGY_EFFORT = os.environ.get("DEPENDENCY_SHADOW_AGY_EFFORT", "medium")
+# "not recognized").  high spends ~4k thinking tokens per link on a whole-article
+# prompt, so a full batch can overrun the output limit; shadow_pipeline then asks
+# again in halves.
+AGY_EFFORT = os.environ.get("DEPENDENCY_SHADOW_AGY_EFFORT", "high")
 AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
 CLAUDE_BIN = dc.CLAUDE_BIN
 CLAUDE_MODEL = dc.CLAUDE_MODEL
