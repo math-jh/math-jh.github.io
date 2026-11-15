@@ -20379,6 +20379,13 @@ S:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+- id: system_of_congruences
+  en: system of congruences
+  ko: 연립합동식
+  primary: ko
+  defs:
+  - label: '[정수론] §합동식과 중국인의 나머지 정리'
+    url: /ko/math/number_theory/chinese_remainder_theorem
 - id: system_of_parameters
   en: system of parameters
   ko: 매개계
