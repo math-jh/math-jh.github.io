@@ -23,7 +23,7 @@ $$\mathbb{C}[M] = \mathbb{C}[t_1^{\pm 1}, \ldots, t_n^{\pm 1}]$$
 
 이므로 UFD이기 때문이다 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16){: data-lid="c1lf7" }). UFD에서는 모든 height-1 prime ideal이 principal이므로 ([\[가환대수학\] §으뜸분해, ⁋정리 7](/ko/math/commutative_algebra/primary_decomposition#thm7){: data-lid="s57ss" }) 모든 codimension 1 irreducible subvariety가 단일 Laurent polynomial의 zero set이고, 따라서 모든 Weil divisor가 principal이 된다. 결과적으로 $\Cl(T_N) = 0$이 되므로 이 위에서는 divisor를 연구할 동기가 없다. 
 
-바꿔말하면, $X_\Sigma$의 비자명한 divisor 정보는 모두 *boundary* $X_\Sigma \setminus T_N$에 모여 있는 셈이며, 이 boundary는 정확히 $T_N$의 작용에 의해 고정되는 part로 구성된다. 따라서 우리는 $X_\Sigma$ 위의 divisor 이론을 *torus-invariant* divisor들을 중심으로 전개하게 된다.
+바꿔말하면, $X_\Sigma$의 비자명한 divisor 정보는 모두 *boundary* $X_\Sigma \setminus T_N$에 모여 있는 셈이며, 이 boundary는 정확히 $T_N$의 작용에 대해 invariant한 part로 구성된다. 따라서 우리는 $X_\Sigma$ 위의 divisor 이론을 *torus-invariant* divisor들을 중심으로 전개하게 된다.
 
 Fan $\Sigma$의 각 1차원 cone, 즉 *ray* $\rho \in \Sigma(1)$에 대해 primitive generator $v_\rho \in N$을 생각하자. Ray $\rho$는 $X_\Sigma$ 내의 codimension 1 torus orbit에 대응하며, 이의 Zariski closure가 하나의 irreducible divisor를 정의한다.
 
@@ -192,7 +192,7 @@ Toric variety $X_\Sigma$가 complete일 때, torus-invariant Cartier divisor $D$
 
 $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
-은 bounded region이며 따라서 lattice polytope이다. 이 polytope의 normal fan이 $\Sigma$와 일치하므로, [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-lid="2q0mm" }에 의해 $X_\Sigma$는 projective variety이다. 더 나아가 $D$에 대응하는 line bundle $\mathcal{O}_{X_\Sigma}(D)$가 very ample line bundle을 정의하므로 $D$는 ample이다.
+은 bounded region이며 따라서 lattice polytope이다. 이 polytope의 normal fan이 $\Sigma$와 일치하므로, [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8){: data-lid="2q0mm" }에 의해 $X_\Sigma$는 projective variety이다. 더 나아가 충분히 큰 $k > 0$에 대해 $kD$에 대응하는 line bundle $\mathcal{O}_{X_\Sigma}(kD)$가 very ample line bundle을 정의하므로 $D$는 ample이다.
 :::
 
 ## Toric variety의 Picard group
