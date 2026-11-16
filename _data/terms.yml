@@ -5406,6 +5406,8 @@ D:
     url: /ko/math/algebraic_structures/operations_of_rings
   - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
     url: /ko/math/algebraic_structures/operations_of_algebras
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
   see:
   - label: Direct product
     id: direct_product
