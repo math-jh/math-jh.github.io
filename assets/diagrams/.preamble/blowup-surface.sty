@@ -1,0 +1,157 @@
+%% The real picture of the blowup of a plane at a point, after [Hart] p.29 Fig. 3:
+%% a twisted strip over a disc, on which the lines through the centre of the
+%% disc are pulled apart along the exceptional curve E.
+%%
+%% 3D model in coordinates (u,y,z): E is the u-axis, and the fibre over the
+%% direction phi (an angle in degrees, measured from the z-axis) is the line
+%% through the axis point u(phi) with direction (y,z)=(sin phi, cos phi).  The
+%% blowup map forgets u.  The strip is drawn in the oblique projection
+%%     (u,y,z) |-> (u + a y, z + b y),
+%% in which a point nearer to the viewer has smaller u; hence painting the
+%% slices from right to left hides exactly what the surface hides.
+%%
+%% Coordinates:  (\bpt{phi}{r}) on the strip, (\dpt{phi}{r}) on the disc, where
+%% r is the signed distance from E resp. from the centre, and (\bang{j}) is the
+%% direction of the ruling number j.
+%%
+%%   \BlowupSurface             the strip with E and the rulings
+%%   \BlowupDisc                the disc with the lines through the centre
+%%   \BlowupMark{j}{<style>}    restyle ruling/line number j (-M..M) in both
+%%   \BlowupSliceHook           \renewcommand this (args: phi_a, phi_b) to draw
+%%                              on the strip slice by slice, with correct hiding
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{blowup-surface}[2026/11/16 real picture of a point blowup]
+\RequirePackage{tikz}
+\RequirePackage{palette}
+\usetikzlibrary{calc}
+
+\newcommand{\BL}{3.5}        % half length of E
+\newcommand{\BR}{1.6}        % radius of the disc = half length of a fibre
+\newcommand{\Ba}{0.38}       % projection of the depth axis, for the strip
+\newcommand{\Bb}{-0.45}
+\newcommand{\BDa}{0.55}      % the disc is an upright ellipse; this is its width over its height
+\newcommand{\BM}{6}          % rulings are numbered -M..M, equally spaced among all directions
+\newcommand{\Bphimax}{(180*\BM/(2*\BM+1))} % direction at the two ends of the strip
+\newcommand{\Bk}{2.2}        % how fast the fibres turn near the middle
+\newcommand{\Bn}{4}          % slices between two consecutive rulings
+
+\tikzset{
+  declare function={
+    bu(\p)=\BL/\Bk*tan(\p*atan(\Bk)/\Bphimax);
+    bsx(\p,\r)=bu(\p)+\Ba*\r*sin(\p);
+    bsy(\p,\r)=\r*(cos(\p)+\Bb*sin(\p));
+    dsx(\p,\r)=\BDa*\r*sin(\p);
+    dsy(\p,\r)=\r*cos(\p);
+    bang(\j)=180*\j/(2*\BM+1);
+    bfold(\p)=-\BL/\Bk*atan(\Bk)/\Bphimax*(cos(\p)+\Bb*sin(\p))/(\Ba*cos(\p*atan(\Bk)/\Bphimax)^2);
+    bsl(\m)=bang(floor(\m/\Bn)-\BM)+(\m/\Bn-floor(\m/\Bn))*(bang(floor(\m/\Bn)-\BM+1)-bang(floor(\m/\Bn)-\BM));
+  },
+  blowup edge/.style={line width=1.1pt},
+  blowup ruling/.style={black!50, line width=.45pt},
+  blowup E/.style={accent1, line width=1.2pt},
+}
+\newcommand{\bpt}[2]{{bsx(#1,#2)},{bsy(#1,#2)}}
+\newcommand{\dpt}[2]{{dsx(#1,#2)},{dsy(#1,#2)}}
+\newcommand{\bang}[1]{bang(#1)}
+
+\newcommand{\BlowupSliceHook}[2]{}
+\newcommand{\BlowupMark}[2]{\expandafter\def\csname BL@mark@#1\endcsname{#2}}
+\newcommand{\BL@style}[1]{%
+  \ifcsname BL@mark@#1\endcsname
+    \expandafter\let\expandafter\BL@tmp\csname BL@mark@#1\endcsname
+    \tikzset{BL@cur/.style/.expand once=\BL@tmp}%
+  \else
+    \tikzset{BL@cur/.style={blowup ruling}}%
+  \fi}
+
+%% half of a slice on the side #4: fill between phi_a=#1 and phi_b=#2, then
+%% stroke the edge up to phi_c=#3, the far end of the slice painted just before,
+%% so that this fill does not eat into the stroke of that slice
+\newcommand{\BL@half}[4]{%
+  \fill[white] (\bpt{#1}{0})--(\bpt{#1}{#4*\BR})--(\bpt{#2}{#4*\BR})--(\bpt{#2}{0})--cycle;
+  \draw[blowup edge] (\bpt{#1}{#4*\BR})--(\bpt{#2}{#4*\BR})--(\bpt{#3}{#4*\BR});}
+%% half of the ruling at the slice boundary number #1 (if there is one) on the side #2
+\newcommand{\BL@halfruling}[2]{%
+  \pgfmathtruncatemacro{\BL@rem}{mod(#1,\Bn)}%
+  \ifnum\BL@rem=0
+    \pgfmathtruncatemacro{\BL@j}{#1/\Bn-\BM}%
+    \BL@style{\BL@j}%
+    \draw[BL@cur] (\bpt{bang(\BL@j)}{0})--(\bpt{bang(\BL@j)}{#2*\BR});
+  \fi}
+
+%% The outline of the strip where it turns its other side to the viewer: the
+%% fold of the projection, r = bfold(phi), around the direction atan(-1/b) in
+%% which a fibre is seen end on.  Its two ends, where it leaves the strip, are
+%% found by bisection.
+\newcommand{\BL@bisect}[2]{% #1 = a direction outside the strip, #2 = one on the fold; result in \BL@hi
+  \pgfmathsetmacro{\BL@lo}{#1}\pgfmathsetmacro{\BL@hi}{#2}%
+  \global\let\BL@lo\BL@lo\global\let\BL@hi\BL@hi
+  \foreach \BL@it in {1,...,12}{%
+    \pgfmathsetmacro{\BL@mid}{(\BL@lo+\BL@hi)/2}%
+    \pgfmathparse{abs(bfold(\BL@mid))>\BR}%
+    \ifnum\pgfmathresult=1 \global\let\BL@lo\BL@mid \else \global\let\BL@hi\BL@mid \fi
+  }}
+\newcommand{\BL@fold}{%
+  \pgfmathsetmacro{\BL@pf}{atan(-1/\Bb)}%
+  \BL@bisect{\BL@pf-30}{\BL@pf}\let\BL@fa\BL@hi
+  \BL@bisect{min(\BL@pf+30,\Bphimax)}{\BL@pf}\let\BL@fb\BL@hi
+  \draw[blowup edge] plot[domain=\BL@fa:\BL@fb, samples=31, variable=\t] (\bpt{\t}{bfold(\t)});
+}
+
+%% E, drawn after the strip.  The fibre in the direction \BL@pf of the fold is
+%% seen end on and projects onto E; its half on the near side lies in front of
+%% E.  So E disappears behind the strip at the fold, where it meets that fibre,
+%% and comes out again where the fibre ends on the edge of the strip.  The fold,
+%% which touches E there, and the edge are stroked again over E.  (Uses \BL@pf,
+%% \BL@fa and \BL@fb from \BL@fold; written for \Ba>0, \Bb<0.)
+\newcommand{\BL@E}{%
+  \pgfmathsetmacro{\BL@xa}{bu(\BL@pf)}%
+  \pgfmathsetmacro{\BL@ea}{\BL@pf-6}%
+  \pgfmathsetmacro{\BL@eb}{min(\BL@pf+6,\Bphimax)}%
+  \draw[blowup E, line cap=butt] ($(\bpt{-\Bphimax}{0})+(-.5,0)$)--(\BL@xa,0);
+  \draw[blowup edge] plot[domain=\BL@fa:\BL@fb, samples=31, variable=\t] (\bpt{\t}{bfold(\t)});
+  \begin{scope}
+    \clip plot[domain=\BL@ea:\BL@eb, samples=13, variable=\t] (\bpt{\t}{\BR})
+      --({\BL+1},{bsy(\BL@eb,\BR)})--({\BL+1},{bsy(\BL@ea,\BR)})--cycle;
+    \draw[blowup E] (\BL@xa,0)--($(\bpt{\Bphimax}{0})+(.5,0)$);
+  \end{scope}
+  \draw[blowup edge] plot[domain=\BL@ea:\BL@eb, samples=13, variable=\t] (\bpt{\t}{\BR});
+}
+
+\newcommand{\BlowupSurface}{%
+  \pgfmathtruncatemacro{\BL@tot}{2*\BM*\Bn}%
+  \foreach \BL@m in {\BL@tot,...,1}{% the slice between the boundaries m-1 and m, from right to left
+    \pgfmathtruncatemacro{\BL@mm}{\BL@m-1}%
+    \pgfmathtruncatemacro{\BL@mp}{min(\BL@m+1,\BL@tot)}%
+    \pgfmathsetmacro{\BL@pa}{bsl(\BL@mm)}%
+    \pgfmathsetmacro{\BL@pb}{bsl(\BL@m)}%
+    \pgfmathsetmacro{\BL@pc}{bsl(\BL@mp)}%
+    \pgfmathsetmacro{\BL@sg}{ifthenelse(\BL@pa+\BL@pb>0,1,-1)}% the side nearer to the viewer
+    \BL@half{\BL@pa}{\BL@pb}{\BL@pc}{-\BL@sg}%
+    \BL@halfruling{\BL@m}{-\BL@sg}\BL@halfruling{\BL@mp}{-\BL@sg}%
+    \BL@half{\BL@pa}{\BL@pb}{\BL@pc}{\BL@sg}%
+    \BL@halfruling{\BL@m}{\BL@sg}\BL@halfruling{\BL@mp}{\BL@sg}%
+    \BlowupSliceHook{\BL@pa}{\BL@pb}%
+  }%
+  \BL@halfruling{0}{1}\BL@halfruling{0}{-1}%
+  \BL@fold
+  \BL@E
+}
+
+%% the marked lines are drawn after the others, so that they stay on top at the centre
+\newcommand{\BlowupDisc}{%
+  \fill[white] plot[domain=0:360, samples=73, smooth cycle] (\dpt{\x}{\BR});
+  \foreach \BL@j in {-\BM,...,\BM}{%
+    \ifcsname BL@mark@\BL@j\endcsname\else
+      \draw[blowup ruling] (\dpt{bang(\BL@j)}{-\BR})--(\dpt{bang(\BL@j)}{\BR});
+    \fi
+  }%
+  \foreach \BL@j in {-\BM,...,\BM}{%
+    \ifcsname BL@mark@\BL@j\endcsname
+      \BL@style{\BL@j}%
+      \draw[BL@cur] (\dpt{bang(\BL@j)}{-\BR})--(\dpt{bang(\BL@j)}{\BR});
+    \fi
+  }%
+  \draw[blowup edge] plot[domain=0:360, samples=73, smooth cycle] (\dpt{\x}{\BR});
+}
+\endinput

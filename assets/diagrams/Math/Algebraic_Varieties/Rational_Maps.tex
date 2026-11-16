@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\usepackage{blowup-surface}
+\begin{document}
+
+%%FIG Blowup (Rational_Maps-1.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \BlowupSurface
+  \draw[black!50, line width=.45pt] ($(\bpt{\Bphimax}{0})+(.35,.08)$)--++(0,.5);
+  \node[accent1, above] at ($(\bpt{\Bphimax}{0})+(.35,.55)$) {$\pi_1^{-1}(0,0)$};
+  \node at (0,-2.45) {$\operatorname{Bl}_{(0,0)}\mathbb{A}^2$};
+  \draw[thick, ->] (4.75,0)--(5.55,0);
+  \node[above] at (5.15,0) {$\pi_1$};
+  \begin{scope}[shift={(6.75,0)}]
+    \BlowupDisc
+    \fill[accent1] (0,0) circle[radius=2pt];
+    \node[accent1, below, fill=white, inner sep=1.5pt] at (-.02,-.22) {$(0,0)$};
+    \node at (0,-2.45) {$\mathbb{A}^2$};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}
