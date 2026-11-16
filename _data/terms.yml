@@ -11434,6 +11434,13 @@ K:
     url: /ko/math/commutative_algebra/Krull_dimension
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+- id: krull_schmidt_theorem
+  en: Krull–Schmidt theorem
+  ko: Krull–Schmidt 정리
+  primary: en
+  defs:
+  - label: '[표현론] §Krull–Schmidt 정리'
+    url: /ko/math/representation_theory/krull_schmidt
 - id: krull_topology
   en: Krull topology
   ko: 크룰 위상
