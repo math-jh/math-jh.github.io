@@ -17941,6 +17941,13 @@ R:
   defs:
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
+- id: right_almost_split_morphism
+  en: right almost split morphism
+  ko: 오른쪽 거의 분할 사상
+  primary: en
+  defs:
+  - label: '[표현론] §Auslander–Reiten 이론'
+    url: /ko/math/representation_theory/auslander_reiten
 - id: right_compatible
   en: right compatible
   ko: 오른쪽 호환
