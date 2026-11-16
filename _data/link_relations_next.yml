@@ -942,6 +942,7 @@
 "7am4x": {relation: required, reviewed: true}
 "7ar8h": {relation: required, reviewed: true}
 "7arcn": {relation: required, reviewed: true}
+"7awyn": {relation: required, reviewed: true}
 "7b57a": {relation: weak, reviewed: true}
 "7bjkq": {relation: required, reviewed: true}
 "7bluo": {relation: required, reviewed: true}
@@ -1062,6 +1063,7 @@
 "8400g": {relation: required, reviewed: true}
 "84lc7": {relation: required, reviewed: true}
 "84uvw": {relation: weak, reviewed: true}
+"858xe": {relation: required, reviewed: true}
 "85hro": {relation: required, reviewed: true}
 "85it1": {relation: required, reviewed: true}
 "85tmq": {relation: weak, reviewed: true}
@@ -3434,6 +3436,7 @@
 "rikvx": {relation: required, reviewed: true}
 "ril7l": {relation: required, reviewed: true}
 "rilx7": {relation: weak, reviewed: true}
+"rj8bp": {relation: required, reviewed: true}
 "rjdc7": {relation: required, reviewed: true}
 "rjfrw": {relation: weak, reviewed: true}
 "rjrka": {relation: weak, reviewed: true}
