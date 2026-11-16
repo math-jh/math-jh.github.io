@@ -15418,6 +15418,13 @@ P:
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+- id: perfect_square
+  en: perfect square
+  ko: 완전제곱수
+  primary: en
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: period
   en: period
   ko: 주기
@@ -16026,6 +16033,13 @@ P:
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
+- id: primitive_pythagorean_triple
+  en: primitive Pythagorean triple
+  ko: 원시 피타고라스 세 쌍
+  primary: ko
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: primitive_root
   en: primitive root
   ko: 원시근
@@ -17126,6 +17140,13 @@ R:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: rational_point
+  en: rational point
+  ko: 유리점
+  primary: en
+  defs:
+  - label: '[정수론] §피타고라스 세 쌍과 무한강하법'
+    url: /ko/math/number_theory/pythagorean_triples
 - id: ray
   en: ray
   ko: 반직선
@@ -21542,6 +21563,13 @@ U:
     url: /ko/math/category_theory/monoid_objects#def1
   - label: '[환론] §가역원과 영인자'
     url: /ko/math/ring_theory/units_and_zero_divisors
+- id: unit_circle
+  en: unit circle
+  ko: 단위원
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: unit_disk
   en: unit disk
   ko: 단위원판
