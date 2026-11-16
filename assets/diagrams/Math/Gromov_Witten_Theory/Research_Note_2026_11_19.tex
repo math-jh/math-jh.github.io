@@ -5,6 +5,7 @@
 \usepackage{Operators}
 \usepackage{palette}
 \usepackage{diagram-style}
+\usepackage{blowup-surface}
 \begin{document}
 
 %%FIG the curves over the lines x=epsilon tend to E and the fiber over the pole (Research_Note_2026_11_19-1.svg)
@@ -66,5 +67,105 @@
     \node[below] at (.1,0) {$f(x_n)$};
   \end{scope}
 \end{tikzpicture}
+
+%%FIG the blowup X of the plane at q, on which the lines through q are pulled apart along E (Research_Note_2026_11_19-3.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \BlowupSurface
+  \node[accent1, left] at ($(\bpt{-\Bphimax}{0})+(-.5,0)$) {$E$};
+  \node at (0,-2.45) {$X$};
+  \draw[thick, ->] (4.75,0)--(5.55,0);
+  \node[above] at (5.15,0) {$\pi$};
+  \begin{scope}[shift={(6.75,0)}]
+    \BlowupDisc
+    \fill[accent1] (0,0) circle[radius=2pt];
+    \node[accent1, left] at (-.08,-.12) {$q$};
+    \node at (0,-2.45) {$\mathbb{P}^2$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG the ruling rho, whose fiber over l is the strict transform of the line l (Research_Note_2026_11_19-4.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \BlowupMark{-2}{accent2, line width=1.3pt}
+  \BlowupSurface
+  \node[accent1, left] at ($(\bpt{-\Bphimax}{0})+(-.5,0)$) {$E$};
+  \fill[accent2] (\bpt{bang(-2)}{0}) circle[radius=2pt];
+  \node[accent2, above] at (\bpt{bang(-2)}{\BR}) {$\rho^{-1}(\ell)$};
+  %% the base of rho
+  \draw[black!50, line width=.45pt, densely dashed] (\bpt{bang(-2)}{0})--({bu(bang(-2))},-2.95);
+  \draw[line width=1.1pt] ($(\bpt{-\Bphimax}{0})+(-.5,-2.95)$)--($(\bpt{\Bphimax}{0})+(.5,-2.95)$);
+  \node[left] at ($(\bpt{-\Bphimax}{0})+(-.5,-2.95)$) {$\mathbb{P}^1_q$};
+  \fill[accent2] ({bu(bang(-2))},-2.95) circle[radius=2pt];
+  \node[accent2, below] at ({bu(bang(-2))},-2.95) {$\ell$};
+  \draw[thick, ->] (1.2,-2.0)--(1.2,-2.75);
+  \node[right] at (1.2,-2.35) {$\rho$};
+  \draw[thick, ->] (4.75,0)--(5.55,0);
+  \node[above] at (5.15,0) {$\pi$};
+  \begin{scope}[shift={(6.75,0)}]
+    \BlowupDisc
+    \fill[accent1] (0,0) circle[radius=2pt];
+    \node[accent1, left] at (-.08,-.12) {$q$};
+    \node[accent2, above] at (\dpt{bang(-2)}{\BR}) {$\ell$};
+    \node at (0,-2.05) {$\mathbb{P}^2$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG the blowup, the ruling and the projection from q (Research_Note_2026_11_19-5.svg)
+\begin{tikzcd}
+E \arrow[r] \arrow[d, hook] \arrow[dd, bend right=60, "\cong"'] & \{q\} \arrow[d, hook] \\
+X \arrow[r, "\pi"] \arrow[d, "\rho"] & \mathbb{P}^2 \arrow[ld, dashed] \\
+\mathbb{P}^1_q &
+\end{tikzcd}
+
+%%FIG curves of the classes H, F and E on X (Research_Note_2026_11_19-6.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \BlowupMark{-2}{accent2, line width=1.3pt}
+  %% the line L: at distance \Ld from q, with normal direction \Lnu
+  \def\Ld{1.0}\def\Lnu{-20}
+  \pgfmathsetmacro{\Llo}{\Lnu-acos(\Ld/\BR)}\pgfmathsetmacro{\Lhi}{\Lnu+acos(\Ld/\BR)}
+  \renewcommand{\BlowupSliceHook}[2]{%
+    \pgfmathsetmacro{\La}{max(#1,\Llo)}\pgfmathsetmacro{\Lb}{min(#2,\Lhi)}%
+    \pgfmathparse{\La<\Lb}\ifnum\pgfmathresult=1
+      \draw[line width=1.3pt] (\bpt{\La}{\Ld/cos(\La-\Lnu)})--(\bpt{\Lb}{\Ld/cos(\Lb-\Lnu)});
+    \fi}
+  \BlowupSurface
+  \node[accent1, left] at ($(\bpt{-\Bphimax}{0})+(-.5,0)$) {$E$};
+  \fill[accent2] (\bpt{bang(-2)}{0}) circle[radius=2pt];
+  \fill (\bpt{bang(-2)}{\Ld/cos(bang(-2)-\Lnu)}) circle[radius=2pt];
+  \node[accent2, above] at (\bpt{bang(-2)}{\BR}) {$F$};
+  \node[above] at (\bpt{\Lhi}{\BR}) {$H$};
+  \draw[thick, ->] (4.75,0)--(5.55,0);
+  \node[above] at (5.15,0) {$\pi$};
+  \begin{scope}[shift={(6.75,0)}]
+    \BlowupDisc
+    \draw[line width=1.3pt] (\dpt{\Llo}{\BR})--(\dpt{\Lhi}{\BR});
+    \fill (\dpt{bang(-2)}{\Ld/cos(bang(-2)-\Lnu)}) circle[radius=2pt];
+    \fill[accent1] (0,0) circle[radius=2pt];
+    \node[accent1, left] at (-.08,-.12) {$q$};
+    \node[accent2, above] at (\dpt{bang(-2)}{\BR}) {$\ell$};
+    \node[above right] at (\dpt{\Lhi}{\BR}) {$L$};
+    \node at (0,-2.05) {$\mathbb{P}^2$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG the tangent directions of E and of the fiber at a point of E (Research_Note_2026_11_19-7.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  \BlowupMark{-2}{accent2, line width=.8pt}
+  \BlowupSurface
+  \node[accent1, left] at ($(\bpt{-\Bphimax}{0})+(-.5,0)$) {$E$};
+  \draw[accent1, line width=1.6pt, ->] (\bpt{bang(-2)}{0})--++(.95,0);
+  \draw[accent2, line width=1.6pt, ->] (\bpt{bang(-2)}{0})--(\bpt{bang(-2)}{.95});
+  \fill (\bpt{bang(-2)}{0}) circle[radius=2pt];
+  \node[accent1, below, fill=white, inner sep=1.5pt] at ($(\bpt{bang(-2)}{0})+(.72,-.12)$) {$T_E$};
+  \node[accent2, left, fill=white, inner sep=1.5pt] at ($(\bpt{bang(-2)}{.8})+(-.12,0)$) {$T_{X/\mathbb{P}^1}$};
+\end{tikzpicture}
+
+%%FIG the relative tangent sequence and the normal sequence of E, restricted to E (Research_Note_2026_11_19-8.svg)
+\begin{tikzcd}
+ & & 0 \arrow[d] & & \\
+ & & T_E \arrow[d] \arrow[rd, "\cong"] & & \\
+0 \arrow[r] & T_{X/\mathbb{P}^1}\vert_E \arrow[r] \arrow[rd, "\cong"'] & T_X\vert_E \arrow[r, "d\rho"] \arrow[d] & \rho^\ast T_{\mathbb{P}^1}\vert_E \arrow[r] & 0 \\
+ & & N_{E/X} \arrow[d] & & \\
+ & & 0 & &
+\end{tikzcd}
 
 \end{document}
