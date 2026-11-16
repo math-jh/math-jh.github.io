@@ -240,6 +240,93 @@ class FinalizeTest(unittest.TestCase):
         self.assertIn("(P-0912) 둘째 설명", keep.body)
         self.assertEqual(keep.meta["absorbs"], ["P-0912"])
 
+    def _precedent(self, pid, status="active", principle="원칙"):
+        return book.write(pid, {"id": pid, "status": status, "description": pid, "question": "provided"},
+                          f"## 쟁점\nq\n\n## 판정\n{pid} 판정\n\n## 이유\nr\n\n"
+                          f"## 사용자 설명 (원문)\n(없음)\n\n## 원칙 초안\n{principle}\n")
+
+    def test_proposals_never_share_a_precedent(self):
+        import shadow_digest as digest
+        for pid in ("P-0921", "P-0922", "P-0923", "P-0924"):
+            self._precedent(pid)
+        self._precedent("P-0925", status="promoted")
+        got = digest.clean_proposals([
+            {"kind": "merge", "ids": ["P-0921", "P-0922"]},      # P-0921 is promoted below
+            {"kind": "merge", "ids": ["P-0923", "P-0924"]},
+            {"kind": "merge", "ids": ["P-0924", "P-0923"]},      # the same merge again
+            {"kind": "merge", "ids": ["P-0923", "P-0925"]},      # P-0925 is not live
+            {"kind": "promote", "ids": ["P-0921", "P-0925"]},
+            {"kind": "other", "ids": ["P-0922"]}, "junk"])
+        self.assertEqual([(c["kind"], c["ids"]) for c in got],
+                         [("promote", ["P-0921"]), ("merge", ["P-0923", "P-0924"])])
+
+    def test_merge_is_queued_once_and_a_dead_one_is_dropped(self):
+        import shadow_digest as digest
+        for pid in ("P-0931", "P-0932", "P-0933"):
+            self._precedent(pid)
+        queue = store.load_queue()
+        queue["digest"], queue["drafts"] = [], []
+        store.save_queue(queue)
+        self.assertTrue(digest.apply_consolidation("merge", ["P-0931", "P-0932"])["queued"])
+        self.assertIsNone(digest.apply_consolidation("merge", ["P-0932", "P-0931"])["queued"])
+        with self.assertRaises(ValueError):
+            digest.apply_consolidation("merge", ["P-0932", "P-0933"])    # P-0932 already waits
+        self.assertEqual(len(store.load_queue()["digest"]), 1)
+        book.set_status("P-0932", "promoted")
+        with self.assertRaises(ValueError):
+            digest.apply_consolidation("merge", ["P-0932", "P-0933"])    # not live
+        with patch.object(digest.models, "available", return_value=True), \
+                patch.object(digest.models, "call", side_effect=AssertionError("no call")):
+            self.assertTrue(digest.run_one())
+        queue = store.load_queue()
+        self.assertEqual((queue["digest"], queue["drafts"]), ([], []))
+
+    def test_stale_draft_is_drafted_again(self):
+        import shadow_digest as digest
+        self._precedent("P-0941")
+        job = {"id": "J-1", "kind": "ruling_note", "rulings": {}, "explanation": "설명"}
+        draft = digest._clean({"action": "amend", "precedent": "P-0941", "issue": "i", "ruling": "새 판정",
+                               "reason": "r", "description": "d", "principle": "p"}, set(), set())
+        queue = store.load_queue()
+        queue["digest"], queue["drafts"] = [], [{"id": "D-1", "job": job, "draft": draft}]
+        store.save_queue(queue)
+        self._precedent("P-0941", principle="그새 고친 원칙")              # another draft landed first
+        out = digest.apply_draft("D-1")
+        self.assertEqual(out, {"written": None, "requeued": ["P-0941"]})
+        self.assertIn("그새 고친 원칙", book.get("P-0941").body)             # not overwritten
+        queue = store.load_queue()
+        self.assertEqual(queue["drafts"], [])
+        self.assertEqual([j["id"] for j in queue["digest"]], ["J-1"])
+        queue["digest"] = []
+        store.save_queue(queue)
+
+    def test_rewriting_a_promoted_precedent_rewrites_its_criteria_line(self):
+        import shadow_digest as digest
+        criteria = Path(TMP) / "criteria2.md"
+        criteria.write_text("### 승격된 원칙\n- (P-0950) 남의 줄\n- (P-0951) 옛 원칙\n\n### 뒤\n끝\n",
+                            encoding="utf-8")
+        self._precedent("P-0951", status="promoted", principle="옛 원칙")
+        job = {"id": "J-2", "kind": "ruling_note", "rulings": {}, "explanation": ""}
+        with patch.object(digest.sp, "CRITERIA_PATH", criteria):
+            for n, (action, choice) in enumerate((("amend", None), ("conflict", "supersede"))):
+                draft = digest._clean({"action": action, "precedent": "P-0951", "issue": "i",
+                                       "ruling": "r", "reason": "r", "description": "d",
+                                       "principle": "새 원칙"}, set(), set())
+                queue = store.load_queue()
+                queue["drafts"] = [{"id": f"D-{n}", "job": job, "draft": draft}]
+                store.save_queue(queue)
+                written = digest.apply_draft(f"D-{n}", choice=choice)["written"]
+                if action == "amend":
+                    self.assertEqual(book.get("P-0951").status, "promoted")
+                    self.assertEqual(criteria.read_text(encoding="utf-8"),
+                                     "### 승격된 원칙\n- (P-0950) 남의 줄\n- (P-0951) 새 원칙\n\n### 뒤\n끝\n")
+            self.assertNotEqual(written, "P-0951")
+            self.assertEqual(book.get("P-0951").status, "superseded")
+            self.assertEqual(criteria.read_text(encoding="utf-8"),
+                             "### 승격된 원칙\n- (P-0950) 남의 줄\n\n### 뒤\n끝\n")
+            with self.assertRaises(ValueError):
+                digest.apply_consolidation("promote", ["P-0951"])            # superseded stays so
+
     def test_provisional_outcome_is_the_two_one_majority(self):
         self.assertEqual(risk.provisional_outcome({"S1": "weak", "S2": "required", "S3": "required"}),
                          "required")

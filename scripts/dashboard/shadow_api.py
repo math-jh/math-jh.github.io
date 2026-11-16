@@ -493,14 +493,25 @@ def draft(draft_id: str, action: str, edited: dict | None, choice: str | None,
     props = list((item or {}).get("draft", {}).get("consolidation") or [])
     out = shadow_digest.apply_draft(draft_id, edited=allowed, choice=choice,
                                     accept_recheck=accept_recheck)
+    if out.get("requeued"):
+        # The draft was stale and goes back to the worker; its proposals come again with it.
+        return {**out, "consolidated": [], "consolidation_skipped": [], "consolidation_failed": []}
+    # The proposals were made when the draft was; precedents may have been promoted or
+    # merged since.  Those that can still be carried out together are; the rest are
+    # reported as skipped, not as failures.
+    usable = shadow_digest.clean_proposals(props)
+    kept = {(c["kind"], tuple(c["ids"])) for c in usable}
+    skipped = [{"kind": c.get("kind"), "ids": c.get("ids")} for c in props
+               if isinstance(c, dict) and c.get("kind") in ("merge", "promote")
+               and not any(k == c.get("kind") and set(i) <= set(c.get("ids") or []) for k, i in kept)]
     done, failed = [], []
-    for c in sorted(props, key=lambda c: c.get("kind") != "promote"):
+    for c in usable:
         try:
-            done.append({"kind": c.get("kind"), "ids": c.get("ids"),
-                         **consolidate(c.get("kind"), c.get("ids") or [])})
+            done.append({"kind": c["kind"], "ids": c["ids"], **consolidate(c["kind"], c["ids"])})
         except (ValueError, RuntimeError, KeyError) as e:
-            failed.append({"kind": c.get("kind"), "ids": c.get("ids"), "error": str(e)})
-    return {**out, "consolidated": done, "consolidation_failed": failed}
+            failed.append({"kind": c["kind"], "ids": c["ids"], "error": str(e)})
+    return {**out, "consolidated": done, "consolidation_skipped": skipped,
+            "consolidation_failed": failed}
 
 
 def precedent(pid: str, action: str, description: str | None = None) -> dict:
@@ -514,6 +525,9 @@ def precedent(pid: str, action: str, description: str | None = None) -> dict:
         return {"id": pid}
     if action == "revoke":
         book.set_status(pid, "revoked", revoked=time.strftime("%Y-%m-%d"))
+        if e.status == "promoted":
+            import shadow_digest
+            shadow_digest.drop_principle(pid)
         with _locked():
             queue = store.load_queue()
             for lid in book.load_stats().get(pid, {}).get("applied", []):

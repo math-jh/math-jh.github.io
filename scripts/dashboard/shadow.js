@@ -509,9 +509,13 @@ function shDraftCard(it) {
   act.appendChild(shBtn('승인', null, function () {
     shPost('draft', { id: it.id, action: 'approve', edited: null, choice: choice ? choice.value : null,
                       accept_recheck: cb ? cb.checked : false }).then(function (j) {
-      var bad = j.consolidation_failed || [];
-      SH.err = bad.length ? '정리안 적용 실패 — ' + bad.map(function (c) {
-        return c.kind + ' ' + (c.ids || []).join('+') + ': ' + c.error; }).join(' / ') : '';
+      var bad = j.consolidation_failed || [], skip = j.consolidation_skipped || [], msg = [];
+      if (j.requeued) msg.push('판례 ' + j.requeued.join(', ') + ' 가 그새 바뀌어 초안을 다시 만든다');
+      if (bad.length) msg.push('정리안 적용 실패 — ' + bad.map(function (c) {
+        return c.kind + ' ' + (c.ids || []).join('+') + ': ' + c.error; }).join(' / '));
+      if (skip.length) msg.push('정리안 건너뜀(판례 상태가 바뀜) — ' + skip.map(function (c) {
+        return c.kind + ' ' + (c.ids || []).join('+'); }).join(' / '));
+      SH.err = msg.join(' · ');
       shLoad();
     });
   }, dr.action === 'none'));
