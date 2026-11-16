@@ -2743,6 +2743,7 @@
 "ltp4e": {relation: required, reviewed: true}
 "ltvqw": {relation: required, reviewed: true}
 "lugls": {relation: required, reviewed: true}
+"lumof": {relation: weak, reviewed: true}
 "lun3p": {relation: weak, reviewed: true}
 "lunk6": {relation: required, reviewed: true}
 "luzqe": {relation: weak, reviewed: true}
@@ -3317,6 +3318,7 @@
 "qbslt": {relation: weak, reviewed: true}
 "qbw01": {relation: required, reviewed: true}
 "qc1qa": {relation: required, reviewed: true}
+"qcd9n": {relation: required, reviewed: true}
 "qcj9q": {relation: required, reviewed: true}
 "qctzu": {relation: weak, reviewed: true}
 "qcy8y": {relation: weak, reviewed: true}
