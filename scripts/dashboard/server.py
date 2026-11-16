@@ -1355,6 +1355,7 @@ CRON_JOBS = [
     dict(id="blog-gsc-monitor",      name="GSC 색인 모니터",  worker="index_monitor"),
     dict(id="blog-indexnow",         name="IndexNow 제출",    worker=None),
     dict(id="blog-pr-notify",        name="PR 알림",          worker=None),
+    dict(id="blog-dependabot",       name="Dependabot 검토",  worker=None),
     dict(id="blog-worker-health",    name="워커 감시",        worker=None),
     dict(id="timer:blog-autopush",   name="autopush",         worker=None),
 ]
