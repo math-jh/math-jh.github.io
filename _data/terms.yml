@@ -18992,6 +18992,13 @@ S:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: simple_reflection
+  en: simple reflection
+  ko: 단순 반사
+  primary: en
+  defs:
+  - label: '[리 이론] §Borel subgroup'
+    url: /ko/math/lie_theory/borel_subgroup
 - id: simple_root
   en: simple root
   ko: 단순근
