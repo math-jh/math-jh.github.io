@@ -15747,6 +15747,13 @@ P:
   defs:
   - label: '[선형대수학] §스펙트럼 정리'
     url: /ko/math/linear_algebra/spectral_theorem
+- id: positive-definiteness
+  en: positive-definiteness
+  ko: 양의 정부호성
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: positive_line_bundle
   en: positive line bundle
   ko: 양의 선다발
