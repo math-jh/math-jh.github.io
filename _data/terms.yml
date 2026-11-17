@@ -8018,6 +8018,13 @@ G:
   - label: 곡률
     lang: ko
     id: curvature
+- id: gauss_equation
+  en: Gauss equation
+  ko: Gauss 방정식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: gauss_formula
   en: Gauss formula
   ko: 가우스 공식
@@ -22385,6 +22392,13 @@ W:
     id: cartier_divisor
   - label: Principal divisor
     id: principal_divisor
+- id: weingarten_equation
+  en: Weingarten equation
+  ko: Weingarten 방정식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: weingarten_map
   en: Weingarten map
   ko: 바인가르텐 사상
