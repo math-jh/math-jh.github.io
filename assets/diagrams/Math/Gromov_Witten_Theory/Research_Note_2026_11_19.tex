@@ -168,4 +168,100 @@ X \arrow[r, "\pi"] \arrow[d, "\rho"] & \mathbb{P}^2 \arrow[ld, dashed] \\
  & & 0 & &
 \end{tikzcd}
 
+%%FIG a comb: the component Z carrying x_n covers E k times and the branches C_j meet E at f(y_j) with contact order m_j (Research_Note_2026_11_19-9.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% left: the domain C; the branches C_j cross Z at the nodes y_j
+  \foreach \a/\l in {-1.7/1, -.6/2, 1.3/r}{
+    \draw[black!50, line width=1.5pt] (\a-.25,-1.3) .. controls (\a-.1,-.5) and (\a+.1,.5) .. (\a+.25,1.3);
+    \node[black!50, above] at (\a+.25,1.3) {$C_{\l}$};
+  }
+  \node at (.35,.8) {$\cdots$};
+  \draw[line width=1.5pt] (-2.4,0)--(2.4,0);
+  \node[right] at (2.4,0) {$Z$};
+  \foreach \a/\l in {-1.7/1, -.6/2, 1.3/r}{
+    \fill (\a,0) circle[radius=2pt];
+    \node[below right, font=\scriptsize] at (\a,0) {$y_{\l}$};
+  }
+  \fill (2.0,0) circle[radius=2.4pt];
+  \node[above] at (2.0,0) {$x_n$};
+  \node at (0,-1.8) {$C$};
+  %% the map
+  \draw[thick, -{stealth}] (3.1,0)--(4.4,0);
+  \node[above] at (3.75,0) {$f$};
+  \node[below, font=\scriptsize] at (3.75,0) {$\deg f\vert_Z=k$};
+  %% right: the target X near E; Z goes onto E, the branches meet E at f(y_j)
+  \begin{scope}[shift={(8.0,0)}]
+    \draw[black!50, line width=1.5pt] (-1.95,-1.3) .. controls (-1.8,-.5) and (-1.6,.5) .. (-1.45,1.3);
+    \draw[black!50, line width=1.5pt] (-1.2,1.3) .. controls (-1.0,.4) and (-.8,0) .. (-.6,0)
+      .. controls (-.4,0) and (-.2,.4) .. (0,1.3);
+    \draw[black!50, line width=1.5pt] (1.05,-1.3) .. controls (1.2,-.5) and (1.4,.5) .. (1.55,1.3);
+    \node at (.45,.8) {$\cdots$};
+    \draw[accent1, line width=1.2pt] (-3.1,0)--(3.1,0);
+    \node[accent1, right] at (3.1,0) {$E$};
+    \draw[line width=1.5pt] (-2.4,0)--(2.4,0);
+    \foreach \a in {-1.7,-.6,1.3}{\fill (\a,0) circle[radius=2pt];}
+    \node[below right, font=\scriptsize] at (-1.7,0) {$m_1$};
+    \node[below, font=\scriptsize] at (-.6,0) {$m_2$};
+    \node[below right, font=\scriptsize] at (1.3,0) {$m_r$};
+    \fill (2.0,0) circle[radius=2.4pt];
+    \node[above] at (2.0,0) {$f(x_n)$};
+    \node at (0,-1.8) {$X$};
+  \end{scope}
+\end{tikzpicture}
+
+%%FIG the family C over T: the fiber over 0 is the comb, the fiber over epsilon is smooth, and F maps the family to X (Research_Note_2026_11_19-10.svg)
+\begin{tikzpicture}[line cap=round, line join=round]
+  %% the fiber over 0: the comb, Z with the branches C_j through the nodes y_j
+  \foreach \a/\l in {-1.3/1, -.4/2, 1.0/r}{
+    \draw[black!50, line width=1.5pt] (\a,-1.2)--(\a,1.2);
+    \node[black!50, above] at (\a,1.2) {$C_{\l}$};
+  }
+  \node at (.3,.75) {$\cdots$};
+  \draw[line width=1.5pt] (-1.9,0)--(1.9,0);
+  \node[right] at (1.9,0) {$Z$};
+  \foreach \a in {-1.3,-.4,1.0}{\fill (\a,0) circle[radius=2pt];}
+  %% the fiber over epsilon: every node is smoothed, locally zeta*eta=epsilon^{e_j}
+  \begin{scope}[shift={(5,0)}]
+    \clip (-2,-1.2) rectangle (2,1.2);
+    \foreach \lo/\hi in {-1.9/-1.33, -1.27/-.43, -.37/.97, 1.03/1.9}{
+      \draw[accent2, line width=1.1pt] plot[domain=\lo:\hi, samples=160, variable=\s]
+        ({\s},{-.05/(\s+1.3)-.05/(\s+.4)-.05/(\s-1.0)});
+    }
+  \end{scope}
+  \node at (5.3,.75) {$\cdots$};
+  \node[accent2, above] at (5.3,1.2) {$C_\epsilon$};
+  %% the base T
+  \draw[thick, -{stealth}] (2.5,-.9)--(2.5,-2.3);
+  \draw[line width=.8pt] (-1.9,-2.8)--(6.9,-2.8);
+  \fill (0,-2.8) circle[radius=2.1pt];
+  \node[below=3pt] at (0,-2.8) {$0$};
+  \fill[accent2] (5,-2.8) circle[radius=2.1pt];
+  \node[below=3pt] at (5,-2.8) {$\epsilon$};
+  \node[right] at (6.9,-2.8) {$T$};
+  %% the map F
+  \draw[thick, -{stealth}] (7.6,0)--(8.9,0);
+  \node[above] at (8.25,0) {$\mathcal{F}$};
+  %% the target X near E: the image of the comb, and the image of the fiber over epsilon
+  \begin{scope}[shift={(11.8,0)}]
+    \draw[black!50, line width=1.5pt] (-1.1,-1.2) .. controls (-1.22,-.45) and (-1.38,.45) .. (-1.5,1.2);
+    \draw[black!50, line width=1.5pt] (-.8,1.2) .. controls (-.66,.35) and (-.53,0) .. (-.4,0)
+      .. controls (-.27,0) and (-.14,.35) .. (0,1.2);
+    \draw[black!50, line width=1.5pt] (.9,-1.2) .. controls (1.02,-.45) and (1.18,.45) .. (1.3,1.2);
+    \node at (.5,.75) {$\cdots$};
+    \draw[accent1, line width=1.2pt] (-2.4,0)--(2.4,0);
+    \node[accent1, right] at (2.4,0) {$E$};
+    \draw[line width=1.5pt] (-1.9,0)--(1.9,0);
+    \foreach \a in {-1.3,-.4,1.1}{\fill (\a,0) circle[radius=2pt];}
+    \draw[accent2, line width=1.1pt] plot[smooth, tension=.6] coordinates
+      {(-1.9,-.12) (-1.6,-.14) (-1.4,-.28) (-1.29,-.6) (-1.18,-1.2)};
+    \draw[accent2, line width=1.1pt] plot[smooth, tension=.6] coordinates
+      {(-1.42,1.2) (-1.33,.65) (-1.2,.27) (-1.0,.13) (-.8,.22) (-.74,.49) (-.82,.85) (-.88,1.2)};
+    \draw[accent2, line width=1.1pt] plot[smooth, tension=.6] coordinates
+      {(.08,1.2) (.02,.85) (-.06,.49) (0,.22) (.25,.12) (.6,.12) (.92,.19) (1.06,.4) (1.12,.65) (1.22,1.2)};
+    \draw[accent2, line width=1.1pt] plot[smooth, tension=.6] coordinates
+      {(.98,-1.2) (1.08,-.6) (1.2,-.27) (1.4,-.14) (1.9,-.12)};
+    \node at (0,-1.8) {$X$};
+  \end{scope}
+\end{tikzpicture}
+
 \end{document}
