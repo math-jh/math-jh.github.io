@@ -19693,6 +19693,13 @@ S:
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
+- id: stalk-local_property
+  en: stalk-local property
+  ko: 줄기-국소 성질
+  primary: en
+  defs:
+  - label: '[스킴] §스킴의 대수구조'
+    url: /ko/math/scheme_theory/algebra_of_schemes
 - id: standard_almost_complex_structure
   en: standard almost complex structure
   ko: 표준 거의 복소구조
