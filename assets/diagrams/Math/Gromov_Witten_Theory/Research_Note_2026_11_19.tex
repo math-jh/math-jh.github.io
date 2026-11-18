@@ -10,7 +10,7 @@
 
 %%FIG the curves over the lines x=epsilon tend to E and the fiber over the pole (Research_Note_2026_11_19-1.svg)
 \begin{tikzpicture}[line cap=round, line join=round]
-  %% left: the chart (s,t) of X around the point (q,l_0); E={t=0}, F_{l_0}={s=0}
+  %% left: X around the point (q,l_0); E horizontal, F_{l_0} vertical
   \foreach \a in {-1.8,-.9,.9,1.8}{\draw[black!25, line width=.5pt] (\a,-2.1)--(\a,2.1);}
   \foreach \e/\w/\c in {1/1.1pt/black, .4/.7pt/black!50, .12/.7pt/black!50}{
     \draw[\c, line width=\w] plot[domain={\e/2.1}:2.1, samples=70] (\x,{\e/\x});
@@ -22,7 +22,7 @@
   \node[accent2, above] at (0,2.3) {$F_{\ell_0}$};
   \fill (0,0) circle[radius=1.6pt];
   \node[below right, font=\scriptsize] at (0,0) {$(q,\ell_0)$};
-  \node[right, font=\scriptsize] at (1.05,1.2) {$\mathrm{s}\mathrm{t}=\epsilon$};
+  \node[right, font=\scriptsize] at (1.05,1.2) {$\pi^{-1}(L_\epsilon)$};
   \node at (0,-2.9) {$X$};
   %% the blowup map
   \draw[thick, -{stealth}] (3.4,0)--(4.6,0);
