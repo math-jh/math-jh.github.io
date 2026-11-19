@@ -5457,3 +5457,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-11-15 03:15
 
 - _posts/Math/Multilinear_Algebra/ko/2024-09-17-Exact_Sequences.md: 주요 용어 'Four lemma' ko 미상 — 보류
+
+## term_extract_worker 2026-11-20 03:15
+
+- _posts/Math/Scheme_Theory/ko/2026-05-07-From_Varieties_to_Schemes.md: 주요 용어 'fat point' ko 미상 — 보류
