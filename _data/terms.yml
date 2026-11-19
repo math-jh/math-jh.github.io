@@ -3958,6 +3958,13 @@ C:
   defs:
   - label: '[층론] §Verdier duality'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: constructible_subset
+  en: constructible subset
+  ko: 구성가능 부분집합
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: continued_fraction
   en: continued fraction
   ko: 연분수
@@ -21872,6 +21879,13 @@ U:
   defs:
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+- id: upper_semicontinuous
+  en: upper semicontinuous
+  ko: 상반연속
+  primary: en
+  defs:
+  - label: '[스킴] §평탄사상'
+    url: /ko/math/scheme_theory/flat_morphisms
 - id: upper_set
   en: upper set
   ko: 상집합
