@@ -18840,6 +18840,13 @@ S:
   defs:
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
+- id: sheaf_morphism
+  en: sheaf morphism
+  ko: 층 사상
+  primary: en
+  defs:
+  - label: '[위상수학] §층'
+    url: /ko/math/topology/sheaves
 - id: sheaf_of_relative_differentials
   en: sheaf of relative differentials
   ko: 상대 미분층
