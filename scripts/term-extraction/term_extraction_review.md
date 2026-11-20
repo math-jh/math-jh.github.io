@@ -5465,3 +5465,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-11-20 07:15
 
 - _posts/Math/Scheme_Theory/ko/2026-06-21-Sheaf_Cohomology_of_Schemes.md: 주요 용어 'ample invertible sheaf' ko 미상 — 보류
+
+## term_extract_worker 2026-11-20 09:15
+
+- _posts/Math/Scheme_Theory/ko/2026-07-27-Divisors_and_Linear_Systems.md: 주요 용어 'ample invertible sheaf' ko 미상 — 보류
