@@ -20002,6 +20002,13 @@ S:
   see:
   - label: Normal subgroup
     id: normal_subgroup
+- id: subgroup_scheme
+  en: subgroup scheme
+  ko: 부분군 스킴
+  primary: en
+  defs:
+  - label: '[스킴] §군 스킴'
+    url: /ko/math/scheme_theory/group_schemes
 - id: submagma
   en: submagma
   ko: 부분마그마
