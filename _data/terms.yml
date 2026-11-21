@@ -20200,6 +20200,13 @@ S:
     url: /ko/math/set_theory/operation_of_cardinals
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+- id: sum_of_sets
+  en: sum of sets
+  ko: 집합의 합
+  primary: ko
+  defs:
+  - label: '[집합론] §집합의 합'
+    url: /ko/math/set_theory/sum_of_sets
 - id: sum_of_two_squares
   en: sum of two squares
   ko: 두 제곱수의 합
