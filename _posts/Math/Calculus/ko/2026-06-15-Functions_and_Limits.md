@@ -153,10 +153,10 @@ $\lim_{x\rightarrow a} f(x)=L$이면
     를 얻는다. 이제 임의의 $\epsilon>0$에 대해 $k(L/2)^{(k-1)/k}\epsilon$에 대응하는 $\delta_2>0$을 택하고 $\delta=\min(\delta_1,\delta_2)$로 두면, $0<\lvert x-a\rvert<\delta$일 때 우변이 $\epsilon$보다 작아진다.
 :::
 
-이 법칙들을 조합하면 다항함수의 극한은 각 항의 극한으로 분리하여 계산할 수 있다. 이를 위한 기본 스텝은 [예시 3](#ex3)이다. 
+이 법칙들을 조합하면 다항함수의 극한은 각 항의 극한으로 분리하여 계산할 수 있다. 이를 위한 기본 스텝은 [예시 3](#ex3){: data-lid="jql4u" }이다. 
 
 ::: 예시 7
-[예시 3](#ex3)에 의하여, 우리는 특히 다음 극한
+[예시 3](#ex3){: data-lid="yahaj" }에 의하여, 우리는 특히 다음 극한
 
 $$\lim_{x\rightarrow a} x=a,\qquad \lim_{x\rightarrow a}c=c$$
 
@@ -177,7 +177,7 @@ $$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots+c_1\B
 
 ## 조임정리와 극한의 대소관계
 
-현재로서 우리가 가지고 있는 극한법칙과, 계산이 가능한 식들로는 [예시 7](#ex7) 정도가 유도할 수 있는 한계에 가깝다. 보다 일반적인 함수들에 대한 계산을 위해서는 다음과 같이 부등식을 이용한 계산이 필요할 때가 있다.
+현재로서 우리가 가지고 있는 극한법칙과, 계산이 가능한 식들로는 [예시 7](#ex7){: data-lid="ep8wd" } 정도가 유도할 수 있는 한계에 가깝다. 보다 일반적인 함수들에 대한 계산을 위해서는 다음과 같이 부등식을 이용한 계산이 필요할 때가 있다.
 
 ::: 명제 8 (조임정리)
 실수 $a$의 삭제된 근방에서 $g(x) \leq f(x)\leq h(x)$이고 $\lim_{x\rightarrow a} g(x)=\lim_{x\rightarrow a} h(x)=L$이면 $\lim_{x\rightarrow a} f(x)=L$이다.
