@@ -25,8 +25,12 @@
     return ((h >>> 0) % 10000) / 10000;
   }
 
-  /* 열: required SCC를 한 층으로 축약한 뒤 forward를 순환 없는 소프트 제약으로
-     더한다. weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
+  /* 열: required SCC를 한 층으로 축약한 뒤 forward, weak 순으로 순환 없는 소프트
+     제약을 더한다. 그래서 선수 글은 required든 weak든 후속 글보다 왼쪽 열에 온다.
+     예외는 required 사슬이나 먼저 넣은 소프트 제약과 반대로 가는 선뿐이다. weak는
+     required·forward만으로 낸 층에서 여유가 큰 선부터 넣는다 — 순환에서 버려지는
+     쪽이 그 층과 가장 크게 어긋난 선이 되고, 열도 덜 늘어난다.
+     weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
      초기 층으로 쓴다. 따라서 카테고리 내부 순서는 살리되 101→201 같은 구획
      간격을 전역 거리로 오해하지 않는다. */
   function readingColumns(data) {
@@ -71,15 +75,13 @@
       }
       return false;
     }
-    data.links.filter(function (l) { return l.relation === 'forward'; })
-      .sort(function (a, b) { return lid(a).localeCompare(lid(b)); })
-      .forEach(function (l) {
+    // 소프트 제약 한 묶음을 순서대로 더한다. 이미 있는 순서와 순환을 만드는 선은 버린다.
+    function addSoft(links) {
+      links.forEach(function (l) {
         var e = endpoints(l), a = compOf[e[0]], b = compOf[e[1]];
         if (a !== b && !reaches(b, a)) addEdge(a, b);
       });
-
-    var indeg = comps.map(function () { return 0; });
-    adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
+    }
 
     // raw weight는 카테고리 사이에서 비교할 수 없다. 각 카테고리를 따로 정렬해
     // 빈 구간을 제거한 순번만 초기 rank로 넘긴다.
@@ -102,17 +104,48 @@
         return Math.max(best, categoryRank[id] || 0);
       }, 0);
     });
-    var rank = base.slice();
-    var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
-    queue.sort(function (a, b) { return base[a] - base[b] || a - b; });
-    while (queue.length) {
-      var current = queue.shift();
-      adj[current].forEach(function (next) {
-        rank[next] = Math.max(rank[next], rank[current] + 1);
-        indeg[next] -= 1;
-        if (indeg[next] === 0) { queue.push(next); queue.sort(function (a, b) { return rank[a] - rank[b]; }); }
-      });
+    // 지금까지 넣은 제약으로 낸 층. 선이 가리키는 쪽이 늘 더 뒤 층이다.
+    function layers() {
+      var indeg = comps.map(function () { return 0; });
+      adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
+      var rank = base.slice();
+      var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
+      queue.sort(function (a, b) { return base[a] - base[b] || a - b; });
+      while (queue.length) {
+        var current = queue.shift();
+        adj[current].forEach(function (next) {
+          rank[next] = Math.max(rank[next], rank[current] + 1);
+          indeg[next] -= 1;
+          if (indeg[next] === 0) { queue.push(next); queue.sort(function (a, b) { return rank[a] - rank[b]; }); }
+        });
+      }
+      return rank;
     }
+
+    function byLid(a, b) { return lid(a).localeCompare(lid(b)); }
+    addSoft(data.links.filter(function (l) { return l.relation === 'forward'; }).sort(byLid));
+    var before = layers();
+    function slack(l) { var e = endpoints(l); return before[compOf[e[1]]] - before[compOf[e[0]]]; }
+    addSoft(data.links.filter(function (l) { return l.relation === 'weak'; })
+      .sort(function (a, b) { return slack(b) - slack(a) || byLid(a, b); }));
+    var rank = layers();
+
+    /* 당기기. layers 는 글을 놓일 수 있는 가장 왼쪽 층에 두므로, 후속 글이 다른 선수 글에
+       밀려 오른쪽으로 가도 이 글은 제자리에 남아 둘 사이가 벌어진다. 뒤 층부터 훑으며 글마다
+       후속 글 바로 앞 층까지의 범위 안에서 이웃(선수·후속 글)들의 가운데 층으로 옮긴다.
+       오른쪽으로만 옮기므로 이미 지켜진 순서는 그대로다. */
+    var back = comps.map(function () { return []; });
+    adj.forEach(function (nexts, from) { nexts.forEach(function (to) { back[to].push(from); }); });
+    comps.map(function (_, i) { return i; })
+      .sort(function (a, b) { return rank[b] - rank[a] || a - b; })
+      .forEach(function (c) {
+        if (!adj[c].size) return;
+        var around = back[c].map(function (p) { return rank[p]; }), latest = Infinity;
+        adj[c].forEach(function (next) { around.push(rank[next]); latest = Math.min(latest, rank[next] - 1); });
+        around.sort(function (a, b) { return a - b; });
+        var middle = around[Math.floor((around.length - 1) / 2)];
+        rank[c] = Math.max(rank[c], Math.min(latest, middle));
+      });
 
     var used = Array.from(new Set(rank)).sort(function (a, b) { return a - b; });
     var compressed = {}; used.forEach(function (value, i) { compressed[value] = i; });
