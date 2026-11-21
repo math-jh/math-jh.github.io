@@ -5,6 +5,8 @@
  * 전역 그래프 페이지의 선형 보기(Graph_page.js)와 수학 글 사이드바의 로컬 그래프
  * (Local_graph.js)가 같이 쓴다. 열·첫 부모·레인과 선·라벨 상자의 모양은 여기서 정하고,
  * 화면 크기에 맞춘 x·y 배치와 그리기는 각 쪽이 한다. window.LinearLayout 으로 내보낸다.
+ *
+ * 불변식 테스트: node --test scripts/dev/test_linear_layout.js
  */
 (function () {
   'use strict';
@@ -30,9 +32,10 @@
      예외는 required 사슬이나 먼저 넣은 소프트 제약과 반대로 가는 선뿐이다. weak는
      required·forward만으로 낸 층에서 여유가 큰 선부터 넣는다 — 순환에서 버려지는
      쪽이 그 층과 가장 크게 어긋난 선이 되고, 열도 덜 늘어난다.
-     weight는 카테고리마다 0, 1, 2…의 연속 순번으로 정규화한 뒤
-     초기 층으로 쓴다. 따라서 카테고리 내부 순서는 살리되 101→201 같은 구획
-     간격을 전역 거리로 오해하지 않는다. */
+     카테고리 안의 순번(weight 순으로 0, 1, 2…)은 층의 하한으로만 쓴다. 선이 없는
+     글이 한 열에 쌓이지 않고 가로로 흩어지게 하는 값이고, 카테고리 안의 순서를
+     지켜 주지는 않는다 — 선수 글에 밀린 글은 같은 카테고리의 뒤 글보다 오른쪽에
+     올 수 있다. */
   function readingColumns(data) {
     var nodes = data.nodes, reqAdj = {};
     nodes.forEach(function (n) { reqAdj[n.id] = []; });
@@ -84,7 +87,7 @@
     }
 
     // raw weight는 카테고리 사이에서 비교할 수 없다. 각 카테고리를 따로 정렬해
-    // 빈 구간을 제거한 순번만 초기 rank로 넘긴다.
+    // 빈 구간을 제거한 순번만 층의 하한으로 넘긴다.
     var categoryNodes = {}, categoryRank = {};
     nodes.forEach(function (n) {
       var category = n.category || '';
@@ -109,14 +112,13 @@
       var indeg = comps.map(function () { return 0; });
       adj.forEach(function (nexts) { nexts.forEach(function (v) { indeg[v] += 1; }); });
       var rank = base.slice();
-      var queue = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
-      queue.sort(function (a, b) { return base[a] - base[b] || a - b; });
-      while (queue.length) {
-        var current = queue.shift();
+      var ready = comps.map(function (_, i) { return i; }).filter(function (i) { return indeg[i] === 0; });
+      while (ready.length) {
+        var current = ready.pop();
         adj[current].forEach(function (next) {
           rank[next] = Math.max(rank[next], rank[current] + 1);
           indeg[next] -= 1;
-          if (indeg[next] === 0) { queue.push(next); queue.sort(function (a, b) { return rank[a] - rank[b]; }); }
+          if (indeg[next] === 0) ready.push(next);
         });
       }
       return rank;
@@ -281,38 +283,35 @@
   }
 
   /* 선 모양. 첫 부모 선은 레인 위의 직선이고, 갈라지는 자리에서는 부모 바로 뒤에서 한 번
-     휘어 자기 레인으로 들어간다. 그 밖의 선(합류선)은 출발 글의 레인을 따라 가다가 도착
-     직전에 휜다 — 갈라짐의 거울상이다. 휘는 구간은 낙차가 클수록 길게 잡아 꺾임이 세로로
-     서지 않게 한다. k 는 휘는 구간의 길이 배율이고, 열 간격이 좁은 그림에서 줄여 쓴다.
-     왼쪽으로 가는 선(순환 안의 required, weak 일부)은 출발 글에서 도착 글 쪽으로 반 레인 휘어
-     나와 레인 사이 빈 줄을 따라 가다가 도착 직전에 휜다. 레인 위를 달리면 그 레인의 점들을
-     꿰어 그 글들과도 이어진 것처럼 보이기 때문이다. gap 은 레인 간격이다. */
+     휘어 자기 레인으로 들어간다. 그 밖의 선(오른쪽으로 가는 합류선, 왼쪽으로 가는 순환 안의
+     required·weak 일부)은 레인 위를 달리지 않는다 — 그 레인의 점들을 꿰어 그 글들과도 이어진
+     것처럼 보이기 때문이다. 출발 글에서 도착 글 쪽으로 반 레인 휘어 나와 레인 사이 빈 줄을
+     따라 가다가 도착 직전에 휜다. 같은 레인의 글로 가는 합류선도 빈 줄로 나갔다가 돌아온다.
+     휘는 구간은 낙차가 클수록 길게 잡아 꺾임이 세로로 서지 않게 한다. k 는 휘는 구간의 길이
+     배율이고, 열 간격이 좁은 그림에서 줄여 쓴다. gap 은 레인 간격이다. */
   function linkPath(s, t, isFirstParent, k, gap) {
     if (!s || !t) return '';
     k = k || 1;
     var dx = t.x - s.x, dy = t.y - s.y;
     function bend(drop) { return Math.max(20 * k, Math.abs(drop) * 0.45 + 14 * k); }
-    if (dx <= -24 * k) {
-      var y = s.y + (dy < 0 ? -1 : 1) * (gap || 12 * k) / 2;
-      var leave = bend(y - s.y), enter = bend(t.y - y), fit = Math.min(1, -dx / (leave + enter));
-      leave *= fit; enter *= fit;
-      return 'M' + s.x + ',' + s.y + ' C' + (s.x - leave / 2) + ',' + s.y + ' ' +
-        (s.x - leave / 2) + ',' + y + ' ' + (s.x - leave) + ',' + y + ' L' + (t.x + enter) + ',' + y +
-        ' C' + (t.x + enter / 2) + ',' + y + ' ' + (t.x + enter / 2) + ',' + t.y + ' ' + t.x + ',' + t.y;
-    }
-    if (dx < 24 * k) {
+    if (dx > -24 * k && dx < 24 * k) {
       // 같은 열 안의 선.
       return 'M' + s.x + ',' + s.y + ' C' + (s.x + 34 * k) + ',' + s.y + ' ' +
         (t.x - 34 * k) + ',' + t.y + ' ' + t.x + ',' + t.y;
     }
-    if (!dy) return 'M' + s.x + ',' + s.y + ' L' + t.x + ',' + t.y;
-    var run = Math.min(dx * 0.8, bend(dy));
-    if (isFirstParent) {
+    if (isFirstParent && dx > 0) {
+      if (!dy) return 'M' + s.x + ',' + s.y + ' L' + t.x + ',' + t.y;
+      var run = Math.min(dx * 0.8, bend(dy));
       return 'M' + s.x + ',' + s.y + ' C' + (s.x + run / 2) + ',' + s.y + ' ' +
         (s.x + run / 2) + ',' + t.y + ' ' + (s.x + run) + ',' + t.y + ' L' + t.x + ',' + t.y;
     }
-    return 'M' + s.x + ',' + s.y + ' L' + (t.x - run) + ',' + s.y + ' C' + (t.x - run / 2) + ',' + s.y + ' ' +
-      (t.x - run / 2) + ',' + t.y + ' ' + t.x + ',' + t.y;
+    var way = dx < 0 ? -1 : 1;
+    var y = s.y + (dy < 0 ? -1 : 1) * (gap || 12 * k) / 2;
+    var leave = bend(y - s.y), enter = bend(t.y - y), fit = Math.min(1, way * dx / (leave + enter));
+    leave *= fit * way; enter *= fit * way;
+    return 'M' + s.x + ',' + s.y + ' C' + (s.x + leave / 2) + ',' + s.y + ' ' +
+      (s.x + leave / 2) + ',' + y + ' ' + (s.x + leave) + ',' + y + ' L' + (t.x - enter) + ',' + y +
+      ' C' + (t.x - enter / 2) + ',' + y + ' ' + (t.x - enter / 2) + ',' + t.y + ' ' + t.x + ',' + t.y;
   }
 
   /* 라벨 자리. 'right'·'left' 는 점 옆에 가로로, 'above'·'below' 는 점 오른쪽 위나 아래로
