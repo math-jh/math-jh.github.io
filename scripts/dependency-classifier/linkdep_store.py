@@ -9,7 +9,7 @@ Three places, on purpose:
   lid without a record is unclassified on the site.
 * ``scripts/dependency-classifier/book/`` (in the repo, gitignored) — the
   precedent and pending-issue files, which the human reads and edits.
-* ``~/.local/state/dependency-shadow/`` (never in the repo) — everything else:
+* ``~/.local/state/dependency-classifier/`` (never in the repo) — everything else:
   per-unit stage results with the models' traces, the human and audit queues,
   digest jobs, precedent statistics, the calibration.
   The repo is public and some judged posts are private (the local-only research
@@ -23,7 +23,7 @@ Every write is an atomic replace.  Three locks:
 * ``LOCK_PATH`` — held only around a read-modify-write of the queue, the
   ledger, or a unit record, by the tick and by the dashboard alike.
 * ``BOOK_LOCK_PATH`` — held around a read-modify-write of a precedent or
-  pending-issue file (shadow_book).
+  pending-issue file (linkdep_book).
 """
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ ROOT = ledger.ROOT
 LEDGER_REL = "_data/link_relations.yml"
 LEDGER_PATH = ROOT / LEDGER_REL
 STATE_DIR = Path(os.environ.get(
-    "DEPENDENCY_SHADOW_STATE_DIR", str(Path.home() / ".local" / "state" / "dependency-shadow")))
+    "DEPENDENCY_STATE_DIR", str(Path.home() / ".local" / "state" / "dependency-classifier")))
 STATE_PATH = STATE_DIR / "state.json"
 UNITS_DIR = STATE_DIR / "units"
 QUEUE_PATH = STATE_DIR / "queue.json"
@@ -51,23 +51,15 @@ PILOT_DIR = STATE_DIR / "pilot"
 # the repo (synced to the user's devices) — but in a gitignored folder, because
 # they quote private posts and the repo is public.
 BOOK_DIR = Path(os.environ.get(
-    "DEPENDENCY_SHADOW_BOOK_DIR", str(ROOT / "scripts" / "dependency-classifier" / "book")))
+    "DEPENDENCY_BOOK_DIR", str(ROOT / "scripts" / "dependency-classifier" / "book")))
 PRECEDENTS_DIR = BOOK_DIR / "precedents"
 PENDING_DIR = BOOK_DIR / "pending"
 HISTORY_DIR = BOOK_DIR / "history"
 STATS_PATH = STATE_DIR / "precedent-stats.json"
 CALIBRATION_PATH = STATE_DIR / "calibration.json"
-LOCK_PATH = Path("/tmp/dependency-shadow.lock")
-TICK_LOCK_PATH = Path("/tmp/dependency-shadow-tick.lock")
-BOOK_LOCK_PATH = Path("/tmp/dependency-shadow-book.lock")
-
-LEDGER_HEADER = """\
-# 링크 관계 원장. 키는 본문 링크 IAL 의 data-lid, 값은 그 출현의 의존 관계다:
-# {relation: required|weak|forward, reviewed: true}.
-# 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다. 레코드가 없는 lid 는 미분류다.
-# 같은 lid 를 가진 KO 링크와 EN 링크가 이 레코드 하나를 공유한다.
-# 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
-"""
+LOCK_PATH = Path("/tmp/dependency-classifier.lock")
+TICK_LOCK_PATH = Path("/tmp/dependency-classifier-tick.lock")
+BOOK_LOCK_PATH = Path("/tmp/dependency-classifier-book.lock")
 
 
 def write_json(path: Path, value) -> None:
@@ -156,8 +148,7 @@ def load_ledger() -> dict[str, ledger.Record]:
 
 
 def save_ledger(records: dict[str, ledger.Record]) -> None:
-    text = ledger.dump(records).replace(ledger.HEADER, LEDGER_HEADER, 1)
-    write_text(LEDGER_PATH, text)
+    write_text(LEDGER_PATH, ledger.dump(records))
     os.chmod(LEDGER_PATH, 0o664)
 
 

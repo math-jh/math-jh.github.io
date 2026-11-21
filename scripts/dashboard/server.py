@@ -17,9 +17,9 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     POST /api/kotypo-note   후속 검증 모델에게 전할 메모 (요청 키 단위 병합 저장)
     GET /api/compare/*      판본 비교기 — 목록·diff·감사 지적 전문·판본별 매크로
     POST /api/review        비교기의 검토 판정 (항목 단위 병합 저장)
-    GET/POST /api/shadow/*  링크 판정(#audit 아래쪽) — 데이터와 동작은 shadow_api.py
+    GET/POST /api/linkdeps/*  링크 의존성 판정(#audit 아래쪽) — 데이터와 동작은 linkdeps_api.py
 
-링크 판정은 shadow_api 가 `_data/link_relations.yml` 과 ~/.local/state/dependency-shadow 에
+링크 의존성 판정은 linkdeps_api 가 `_data/link_relations.yml` 과 ~/.local/state/dependency-classifier 에
 쓴다. 그 외의 쓰기는 상태 파일뿐이다:
 ~/.local/state/blog_dashboard_kotypo.json · …_kotypo_notes.json · …_review.json,
 그리고 로컬 글 스냅샷 저장소 blog-dashboard-local-posts.git
@@ -82,11 +82,11 @@ except Exception:
     def _ko_typos(_verdict):
         return []
 
-# 링크 판정(감사 페이지 #audit 아래쪽)의 데이터층 — 분류기 파이프라인과 같은 모듈로 읽고 쓴다.
+# 링크 의존성 판정(감사 페이지 #audit 아래쪽)의 데이터층 — 분류기 파이프라인과 같은 모듈로 읽고 쓴다.
 try:
-    import shadow_api as _shadow
+    import linkdeps_api as _linkdeps
 except Exception:
-    _shadow = None
+    _linkdeps = None
 
 # 판본 비교기(#compare)의 데이터층. bs4 가 없으면 비교기만 죽고 나머지는 그대로 산다.
 sys.path.insert(0, HERE)
@@ -1127,8 +1127,8 @@ STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
           "/compare.html": ("compare.html", "text/html; charset=utf-8"),
           "/compare.css": ("compare.css", "text/css; charset=utf-8"),
           "/compare.js": ("compare.js", "application/javascript; charset=utf-8"),
-          "/shadow.js": ("shadow.js", "application/javascript; charset=utf-8"),
-          "/shadow.css": ("shadow.css", "text/css; charset=utf-8")}
+          "/linkdeps.js": ("linkdeps.js", "application/javascript; charset=utf-8"),
+          "/linkdeps.css": ("linkdeps.css", "text/css; charset=utf-8")}
 
 
 # 비교 대상 글의 permalink 를 찾기 위한 얕은 캐시 (frontmatter 스캔은 0.1s 남짓).
@@ -1197,8 +1197,8 @@ class Handler(BaseHTTPRequestHandler):
             except OSError:
                 return self._send(200, "{}")
 
-        if path in ("/api/shadow", "/api/shadow/link", "/api/shadow/pilot"):
-            return self._shadow_get(path, q)
+        if path in ("/api/linkdeps", "/api/linkdeps/link", "/api/linkdeps/pilot"):
+            return self._linkdeps_get(path, q)
 
         if path == "/api/summary":
             if q.get("fresh"):
@@ -1361,11 +1361,11 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path.startswith("/api/shadow/"):
+        if path.startswith("/api/linkdeps/"):
             why = self._reject_write()
             if why:
                 return self._send(403, json.dumps({"ok": False, "error": why}, ensure_ascii=False))
-            return self._shadow_post(path)
+            return self._linkdeps_post(path)
         if path not in ("/api/kotypo", "/api/kotypo-note", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume",
                         "/api/review", "/api/compare/snapshot",
@@ -1434,27 +1434,27 @@ class Handler(BaseHTTPRequestHandler):
             return "X-Dash-Action 헤더 없음"
         return None
 
-    def _shadow_get(self, path, q):
-        if _shadow is None:
-            return self._send(503, json.dumps({"ok": False, "error": "shadow_api 없음"},
+    def _linkdeps_get(self, path, q):
+        if _linkdeps is None:
+            return self._send(503, json.dumps({"ok": False, "error": "linkdeps_api 없음"},
                                               ensure_ascii=False))
         try:
-            if path == "/api/shadow/link":
-                data = _shadow.link_detail((q.get("lid") or [""])[0], (q.get("unit") or [""])[0])
-            elif path == "/api/shadow/pilot":
-                data = _shadow.pilot()
+            if path == "/api/linkdeps/link":
+                data = _linkdeps.link_detail((q.get("lid") or [""])[0], (q.get("unit") or [""])[0])
+            elif path == "/api/linkdeps/pilot":
+                data = _linkdeps.pilot()
             else:
-                data = _shadow.snapshot()
+                data = _linkdeps.snapshot()
         except KeyError as e:
             return self._send(404, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))
         except Exception as e:  # noqa: BLE001
             return self._send(500, json.dumps({"ok": False, "error": repr(e)}, ensure_ascii=False))
         return self._send(200, json.dumps({"ok": True, **data}, ensure_ascii=False))
 
-    def _shadow_post(self, path):
-        """링크 재판정의 판정 동작. 본문은 JSON, 동작 이름은 경로 끝."""
-        if _shadow is None:
-            return self._send(503, json.dumps({"ok": False, "error": "shadow_api 없음"},
+    def _linkdeps_post(self, path):
+        """링크 의존성 판정의 판정 동작. 본문은 JSON, 동작 이름은 경로 끝."""
+        if _linkdeps is None:
+            return self._send(503, json.dumps({"ok": False, "error": "linkdeps_api 없음"},
                                               ensure_ascii=False))
         try:
             n = int(self.headers.get("Content-Length") or 0)
@@ -1463,30 +1463,30 @@ class Handler(BaseHTTPRequestHandler):
             b = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
             action = path.rsplit("/", 1)[1]
             if action == "rule":
-                out = _shadow.rule(b["lid"], b["relation"], b.get("explanation") or "")
+                out = _linkdeps.rule(b["lid"], b["relation"], b.get("explanation") or "")
             elif action == "reopen":
-                out = _shadow.reopen(b["lid"])
+                out = _linkdeps.reopen(b["lid"])
             elif action == "audit":
-                out = _shadow.audit(b["lid"], b["relation"], b.get("explanation") or "")
+                out = _linkdeps.audit(b["lid"], b["relation"], b.get("explanation") or "")
             elif action == "register":
-                out = _shadow.register(b["qid"], b.get("explanation") or "")
+                out = _linkdeps.register(b["qid"], b.get("explanation") or "")
             elif action == "issue":
-                out = _shadow.edit_issue(b["id"], b.get("statement"), b.get("description"))
+                out = _linkdeps.edit_issue(b["id"], b.get("statement"), b.get("description"))
             elif action == "move":
-                out = _shadow.move(b["lid"], b.get("from"), b.get("to"), b.get("new"))
+                out = _linkdeps.move(b["lid"], b.get("from"), b.get("to"), b.get("new"))
             elif action == "close":
-                out = _shadow.close_issue(b["id"], b["action"], b.get("into"))
+                out = _linkdeps.close_issue(b["id"], b["action"], b.get("into"))
             elif action == "draft":
-                out = _shadow.draft(b["id"], b["action"], b.get("edited"), b.get("choice"),
+                out = _linkdeps.draft(b["id"], b["action"], b.get("edited"), b.get("choice"),
                                     bool(b.get("accept_recheck", True)))
             elif action == "precedent":
-                out = _shadow.precedent(b["id"], b["action"], b.get("description"))
+                out = _linkdeps.precedent(b["id"], b["action"], b.get("description"))
             elif action == "consolidate":
-                out = _shadow.consolidate(b["kind"], b.get("ids") or [])
+                out = _linkdeps.consolidate(b["kind"], b.get("ids") or [])
             else:
                 return self._send(404, json.dumps({"ok": False, "error": "없는 동작"},
                                                   ensure_ascii=False))
-        except _shadow.Busy as e:
+        except _linkdeps.Busy as e:
             return self._send(409, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))
         except (KeyError, ValueError) as e:
             return self._send(400, json.dumps({"ok": False, "error": str(e)}, ensure_ascii=False))

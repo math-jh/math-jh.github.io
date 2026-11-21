@@ -212,7 +212,7 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .modal__rich[hidden]{display:none}
 
 /* 한글 원문 지적 목록 (ktRender) — 글 머리를 누르면 그 글의 지적이 펼쳐진다. 칸 배치와
-   오른쪽 미리보기 칸은 shadow.css 의 .sh-cols·.sh-pv 를 그대로 쓰고, 미리보기는 한 칸이라 높게. */
+   오른쪽 미리보기 칸은 linkdeps.css 의 .ld-cols·.ld-pv 를 그대로 쓰고, 미리보기는 한 칸이라 높게. */
 .kt-post{border-top:1px solid var(--rule);padding:.75rem 0}
 .kt-post:first-child{border-top:0;padding-top:0}
 .kt-post__h{display:flex;align-items:baseline;gap:.9rem;cursor:pointer}
@@ -230,7 +230,7 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .kr__item--sel,.kr__item--sel:hover{box-shadow:inset 2px 0 0 var(--brass)}
 .kr__miss{color:var(--warn);font-family:var(--sans);font-size:.7rem}
 .kr__miss[hidden]{display:none}
-.kt-pv .sh-pv__frame{height:calc(100vh - 7rem)}
+.kt-pv .ld-pv__frame{height:calc(100vh - 7rem)}
 
 /* KO 원문 지적 상세 (koReviewHtml) */
 .kr{list-style:none;margin:0;padding:0;counter-reset:kr}

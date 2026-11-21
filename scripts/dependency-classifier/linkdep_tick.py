@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""One cron tick of the shadow pipeline: one stage of one unit, nothing in parallel.
+"""One cron tick of the link-dependency pipeline: one stage of one unit, nothing in parallel.
 
 Order of business:
-1. ``mint_lids`` — new links get their lid first, exactly as before.  The
+1. ``mint_lids`` — new links get their lid first.  The
    translation worker waits for lids (``awaiting_link_ids``), so this must keep
    running whatever else the tick does.  A tick that asked a model to pair EN
    lids ends there.
@@ -22,7 +22,7 @@ Order of business:
 A round is the set of links one pass through S1→S2→S3 judges.  If a unit's text
 changes while its round is open, the round restarts.  After S3 the round is
 finalized: unanimous links go to the ledger, which is committed
-(``[Cron] Link Dependencies Shadow [lastmod-skip]``); the rest go to the human
+(``[Cron] Link Dependencies [lastmod-skip]``); the rest go to the human
 queue.
 
 Log wording matters: the dashboard reads "error" and "failed" in this log as a
@@ -34,16 +34,16 @@ import subprocess
 import time
 from pathlib import Path
 
-import dependency_classifier as dc
-import shadow_models as models
-import shadow_pipeline as pipe
-import shadow_risk as risk
-import shadow_store as store
-import shadow_units as units
+import linkdep_core as core
+import linkdep_models as models
+import linkdep_pipeline as pipe
+import linkdep_risk as risk
+import linkdep_store as store
+import linkdep_units as units
 from blog_file_lock import try_acquire_file_locks
 from cron_commit import commit_outputs, dirty_paths
 
-log = dc.log
+log = core.log
 WIP_CAP = 4
 RETRY_SEC = 3600
 # A prompt over the byte limit is deterministic: the same text builds the same
@@ -76,7 +76,7 @@ def out_of_scope(all_paths: list[list[Path]]) -> set[str]:
     (``published: false``) and posts under revision are in scope: an edit that adds
     links starts a delta round, like in any finished post."""
     tracked = tracked_posts()
-    return {dc.unit_key(paths) for paths in all_paths
+    return {core.unit_key(paths) for paths in all_paths
             if any(str(p.relative_to(store.ROOT)) not in tracked for p in paths)}
 
 
@@ -103,7 +103,7 @@ def pick(state: dict) -> tuple | None:
 
     # 1. rounds under way, oldest first
     under_way = sorted(((e.get("updated", 0), key) for key, e in entries.items() if e.get("next")))
-    by_key = {dc.unit_key(paths): paths for paths in all_paths}
+    by_key = {core.unit_key(paths): paths for paths in all_paths}
     for _, key in under_way:
         paths = by_key.get(key)
         if paths is None:
@@ -125,7 +125,7 @@ def pick(state: dict) -> tuple | None:
     records = store.load_ledger()
     fresh_blank, fresh_other = [], []
     for paths in all_paths:
-        key = dc.unit_key(paths)
+        key = core.unit_key(paths)
         if not usable(paths, key):
             continue
         entry = entries.get(key)
@@ -186,7 +186,7 @@ def commit_ledger(detail: str, commit: bool) -> None:
     if not commit:
         log(f"ledger saved without commit: {detail}")
         return
-    if commit_outputs("Link Dependencies Shadow", [LEDGER_REL], detail, log=log, repo=store.ROOT):
+    if commit_outputs("Link Dependencies", [LEDGER_REL], detail, log=log, repo=store.ROOT):
         return
     if dirty_paths([LEDGER_REL], store.ROOT):
         raise RuntimeError("could not commit the ledger")
@@ -195,7 +195,7 @@ def commit_ledger(detail: str, commit: bool) -> None:
 def _locked():
     held = store.lock(120)
     if held is None:
-        raise RuntimeError("shadow state stayed locked for two minutes")
+        raise RuntimeError("pipeline state stayed locked for two minutes")
     return held
 
 
@@ -221,14 +221,14 @@ def maybe_fit(state: dict) -> None:
     fitted = risk.fit(outcomes)
     state["fitted_at"] = int(time.time())
     if fitted:
-        log("shadow calibration refitted: " + ", ".join(
+        log("calibration refitted: " + ", ".join(
             f"{s} n={m['n']} overturned={m['overturned']} provisional={m['provisional']}"
             for s, m in fitted.items()))
 
 
 def run_digest() -> bool:
-    import shadow_digest
-    return shadow_digest.run_one()
+    import linkdep_digest
+    return linkdep_digest.run_one()
 
 
 def fill_complete(state: dict) -> bool:
@@ -244,7 +244,7 @@ def fill_complete(state: dict) -> bool:
     skip = out_of_scope(all_paths)
     entries = state["units"]
     for paths in all_paths:
-        key = dc.unit_key(paths)
+        key = core.unit_key(paths)
         if key in skip:
             continue
         entry = entries.get(key)
@@ -276,14 +276,14 @@ def run_recheck(commit: bool) -> bool:
     all_paths = units.all_units()
     found = None
     for paths in all_paths:
-        h = units.unit_hash(dc.unit_key(paths))
+        h = units.unit_hash(core.unit_key(paths))
         record = store.load_unit_record(h)
         if lid in record.get("links", {}):
             found = (paths, h, record)
             break
     gone = found is None or units.load_unit(found[0]).link(lid) is None
     # A post that went local-only is no longer judged.
-    paused = not gone and dc.unit_key(found[0]) in out_of_scope(all_paths)
+    paused = not gone and core.unit_key(found[0]) in out_of_scope(all_paths)
     human = not gone and (lid in queue["human"]
                           or store.human_decided(lid, found[2]["links"][lid], queue))
     if gone or paused or human:
@@ -293,7 +293,7 @@ def run_recheck(commit: bool) -> bool:
             store.save_queue(queue)
         why = ("the link is gone" if gone else "its post is local-only" if paused
                else "the human decides this link")
-        log(f"shadow recheck {lid}: {why}; dropped")
+        log(f"recheck {lid}: {why}; dropped")
         return True
     paths, h, record = found
     unit = units.load_unit(paths)
@@ -305,7 +305,7 @@ def run_recheck(commit: bool) -> bool:
             pipe._record_issue(stage, lid, rows[lid])
             results[stage] = rows[lid]
     except Exception as exc:  # noqa: BLE001
-        log(f"ERROR shadow recheck {lid}: {exc}")
+        log(f"ERROR recheck {lid}: {exc}")
         return True
     relations = {r["relation"] for r in results.values()}
     held = _locked()
@@ -320,9 +320,9 @@ def run_recheck(commit: bool) -> bool:
                                            "at": int(time.time())})
     final = (rec.get("final") or {}).get("relation")
     if lid in queue["human"] or store.human_decided(lid, rec, queue):
-        log(f"shadow recheck {lid}: the human took this link meanwhile; left to the human")
+        log(f"recheck {lid}: the human took this link meanwhile; left to the human")
     elif relations == {final}:
-        log(f"shadow recheck {lid}: still {final} under {item['precedent']}")
+        log(f"recheck {lid}: still {final} under {item['precedent']}")
     else:
         queue["human"][lid] = {"unit": record["unit"], "kind": "recheck",
                                "votes": {s: r["relation"] for s, r in results.items()},
@@ -332,7 +332,7 @@ def run_recheck(commit: bool) -> bool:
                                "was": final, "precedent": item["precedent"],
                                "decisive": pipe.decisive(lid, rec, fresh["links"]),
                                "created": int(time.time())}
-        log(f"shadow recheck {lid}: sent to the human queue ({sorted(relations)})")
+        log(f"recheck {lid}: sent to the human queue ({sorted(relations)})")
     with held:
         store.save_unit_record(h, fresh)
         store.save_queue(queue)
@@ -340,22 +340,12 @@ def run_recheck(commit: bool) -> bool:
 
 
 def tick(*, commit: bool = True) -> int:
-    if dc.legacy_classifier_running():
-        log("legacy dependency classifier is still running; skip this tick")
-        return 0
-    probe = dc.ledger.try_lock()
-    if probe is None:
-        # Only the old classifier takes this lock, for its whole tick.  It writes the
-        # same ledger file, and mint_lids should not race it.
-        log("link relation ledger is locked (old classifier); skip this tick")
-        return 0
-    probe.release()
     tick_lock = store.try_tick_lock()
     if tick_lock is None:
-        log("another shadow tick (or the pilot) is still running; skip this tick")
+        log("another tick (or the pilot) is still running; skip this tick")
         return 0
     try:
-        if dc.mint_lids(commit=commit):
+        if core.mint_lids(commit=commit):
             return 0
         if run_digest():
             return 0
@@ -367,7 +357,7 @@ def tick(*, commit: bool = True) -> int:
         picked = pick(state)
         if picked is None:
             store.save_state(state)
-            log("shadow: nothing runnable this tick (rounds waiting on quota, or all done)")
+            log("nothing runnable this tick (rounds waiting on quota, or all done)")
             return 0
         paths, stage, unit, reason = picked
         return run(state, paths, stage, unit, reason, commit=commit)
@@ -388,7 +378,7 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
     h = units.unit_hash(key)
     lease = try_acquire_file_locks(paths)
     if lease is None:
-        log(f"shadow: {key} is locked by another worker; next tick")
+        log(f"{key} is locked by another worker; next tick")
         return 0
     entry = state["units"].setdefault(key, {})
     try:
@@ -410,10 +400,10 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
                 store.merge_unit_record(h, record, [])
             store.save_state(state)
             return 0
-        log(f"shadow {stage} {key}: {len(round_lids)} link(s) ({reason})")
+        log(f"{stage} {key}: {len(round_lids)} link(s) ({reason})")
         summary = pipe.run_stage(stage, unit, record, set(round_lids))
         if _fingerprint(paths) != unit.fingerprint:
-            log(f"shadow {stage} {key}: text changed during the stage; the round restarts")
+            log(f"{stage} {key}: text changed during the stage; the round restarts")
             entry["updated"] = int(time.time())
             store.save_state(state)
             return 0
@@ -424,10 +414,10 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
                 try:
                     summary.update(pipe.run_late_s1(unit, record, round_lids))
                 except Exception as exc:  # noqa: BLE001
-                    log(f"shadow late S1 {key}: skipped ({type(exc).__name__}); "
+                    log(f"late S1 {key}: skipped ({type(exc).__name__}); "
                         "the round finalizes without it")
             else:
-                log(f"shadow late S1 {key}: S1 closed; the round finalizes without it")
+                log(f"late S1 {key}: S1 closed; the round finalizes without it")
         result = None
         with _locked():
             fresh = store.merge_unit_record(h, record, round_lids)
@@ -442,14 +432,14 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
         entry.pop("error", None)
         entry.pop("retry_after", None)
         entry.pop("parked_fp", None)
-        log(f"shadow {stage} {key}: {summary}")
+        log(f"{stage} {key}: {summary}")
         if result is not None:
             entry["links"] = len(unit.lids)
-            log(f"shadow finalized {key}: {result}")
+            log(f"finalized {key}: {result}")
             if result["to_human"]:
-                dc.notify("[dependency] 링크 재판정",
-                          f"{paths[0].stem}: 판정 대기 {result['to_human']}건 추가", level="passive",
-                          url=dc.DASHBOARD_URL, digest=True)
+                core.notify("[dependency] 링크 판정 대기",
+                            f"{paths[0].stem}: 판정 대기 {result['to_human']}건 추가", level="passive",
+                            url=core.DASHBOARD_URL, digest=True)
             store.save_state(state)
             commit_ledger(f"{paths[0].stem}: 확정 {result['finalized']}건, "
                           f"사람 판정 대기 {result['to_human']}건", commit)
@@ -463,17 +453,17 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
             store.save_state(state)
             # No "error"/"failed" here: the dashboard would read this handled state
             # as a broken worker (see the module docstring).
-            log(f"shadow {stage} {key}: parked — {exc}; waits until the text changes")
+            log(f"{stage} {key}: parked — {exc}; waits until the text changes")
             if first:
-                dc.notify("[dependency] 섀도 판정 보류",
-                          f"{paths[0].stem} {stage}: 프롬프트가 한도({models.MAX_PROMPT_BYTES} bytes)를 "
-                          f"넘어 글이 바뀔 때까지 이 글은 건너뜁니다.\n{exc}",
-                          level="passive", url=dc.DASHBOARD_URL, digest=True)
+                core.notify("[dependency] 링크 판정 보류",
+                            f"{paths[0].stem} {stage}: 프롬프트가 한도({models.MAX_PROMPT_BYTES} bytes)를 "
+                            f"넘어 글이 바뀔 때까지 이 글은 건너뜁니다.\n{exc}",
+                            level="passive", url=core.DASHBOARD_URL, digest=True)
             return 0
         entry.update({"updated": int(time.time()), "retry_after": int(time.time() + RETRY_SEC),
                       "error": str(exc)[:1000]})
         store.save_state(state)
-        log(f"ERROR shadow {stage} {key}: {exc}")
+        log(f"ERROR {stage} {key}: {exc}")
         return 1
     finally:
         lease.release()

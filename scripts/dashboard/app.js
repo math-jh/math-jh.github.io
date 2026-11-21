@@ -29,7 +29,7 @@ var ROUTES = ['drafts', 'translation', 'audit', 'index', 'activity', 'cron'];
 var SECTION_LABEL = { drafts: '미발행', translation: '번역 큐', audit: '감사', index: '색인', activity: '활동', cron: '크론 제어' };
 var PAGE_DESC = {
   drafts: '카테고리별 weight 지도와 미발행 글',
-  translation: '지금 큐·한글 원문 지적·최근 시도', audit: '링크·frontmatter 감사, 번역 짝 맞춤, 링크 재판정',
+  translation: '지금 큐·한글 원문 지적·최근 시도', audit: '링크·frontmatter 감사, 번역 짝 맞춤, 링크 의존성 판정',
   index: 'GSC 색인 분포와 조치 대상', activity: '커밋·대기 댓글 PR·시스템 상태',
   cron: '블로그 크론 워커 일시정지·재개'
 };
@@ -122,7 +122,7 @@ function postLabel(key) {
   return LABELS[key] || LABELS['_posts/' + key] || key.replace(/^_posts\//, '');
 }
 /* 마크다운 원문 조각의 링크는 라벨만 남긴다 — 주소와 {: … } IAL 은 뗀다.
-   텍스트용이다. HTML 로 그릴 때는 shadow.js 의 shText. */
+   텍스트용이다. HTML 로 그릴 때는 linkdeps.js 의 ldText. */
 function mdPlain(s) {
   return String(s || '').replace(/\[((?:\\.|[^\]\\])*)\]\([^)\s]*\)(\{:[^}]*\})?/g, function (_, l) {
     return l.replace(/\\([\[\]])/g, '$1');
@@ -980,7 +980,7 @@ function secTranslation(d) {
     return s;
   }
   if (!liveKeys[state.kt.key]) state.kt = { key: rows[0].key, i: null };
-  var cols = el('div', 'sh-cols kt-cols'), pane = el('div', 'sh-pv kt-pv');
+  var cols = el('div', 'ld-cols kt-cols'), pane = el('div', 'ld-pv kt-pv');
   pane.id = 'kt-preview';
   cols.appendChild(main); cols.appendChild(pane); s.appendChild(cols);
   setTimeout(function () { ktRender(list, rows); }, 0);
@@ -1046,7 +1046,7 @@ function ktFind(x, li) {
     return hit;
   };
 }
-/* 오른쪽 칸 — dev 서버의 구워진 KO 글(shadow.js 의 shSlot·shHit). 같은 글이면 iframe 은 그대로
+/* 오른쪽 칸 — dev 서버의 구워진 KO 글(linkdeps.js 의 ldSlot·ldHit). 같은 글이면 iframe 은 그대로
    두고 짚는 자리만 옮긴다. */
 function ktPaint(k, x, li) {
   var pane = document.getElementById('kt-preview');
@@ -1055,7 +1055,7 @@ function ktPaint(k, x, li) {
   if (!url) { pane.innerHTML = '<p class="hint">이 글의 주소를 찾지 못했다.</p>'; return; }
   var hint = pane.querySelector('.hint');
   if (hint) hint.remove();
-  shSlot(pane, 'sh-pv__slot--src', '원문', postLabel(k.path), url, ktFind(x, li));
+  ldSlot(pane, 'ld-pv__slot--src', '원문', postLabel(k.path), url, ktFind(x, li));
 }
 function ktRender(list, rows) {
   var doneMap = state.kotypoDone;
@@ -1096,7 +1096,7 @@ function ktRender(list, rows) {
     body.innerHTML = koReviewHtml(r.det, k, r.rejected, done ? r.stuck : null);
     box.appendChild(body);
     list.appendChild(box);
-    shMath(body);
+    ldMath(body);
     var first = body.querySelector('ol.kr > .kr__item[data-i]');
     if (state.kt.i == null || !body.querySelector('.kr__item[data-i="' + state.kt.i + '"]')) {
       state.kt.i = first ? +first.dataset.i : null;
@@ -1205,10 +1205,10 @@ function secAudit(d) {
     right.appendChild(el('pre', 'log', d.orphan_en.map(function (o) { return o.label || o.path; }).join('\n')));
   }
   c.appendChild(left); c.appendChild(right); s.appendChild(c);
-  /* 의존성 링크 전면 재판정은 폭을 다 쓴다 — 판정 대기·감사·판례 (shadow.js). */
-  var sh = el('div', 'sh-wrap');
-  sh.appendChild(el('h3', null, '링크 재판정'));
-  sh.appendChild(window.secShadow(d));
+  /* 링크 의존성 판정은 폭을 다 쓴다 — 판정 대기·감사·판례 (linkdeps.js). */
+  var sh = el('div', 'ld-wrap');
+  sh.appendChild(el('h3', null, '링크 의존성 판정'));
+  sh.appendChild(window.secLinkDeps(d));
   s.appendChild(sh);
   return s;
 }
@@ -1491,7 +1491,7 @@ function load(fresh) {
       state.tSig = sig;
       if (route() === 'translation' && hadData && sameT) return;
       if (route() === 'audit' && hadData) {
-        /* 감사 페이지의 링크 재판정은 자기 데이터를 따로 읽는다. 다시 그리면 쓰던
+        /* 감사 페이지의 링크 의존성 판정은 자기 데이터를 따로 읽는다. 다시 그리면 쓰던
            설명이 날아간다. 위쪽 감사 숫자는 주간 갱신이라 처음 그린 값으로 충분하다. */
         return;
       }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Model calls for the shadow pipeline: one fixed model per stage, no fallback.
+"""Model calls for the link-dependency pipeline: one fixed model per stage, no fallback.
 
 S1 is Antigravity, S2 Claude Opus, S3 Codex.  A stage never borrows another
 stage's model: the votes are meant to be independent, so a closed quota makes the
@@ -35,36 +35,36 @@ import tempfile
 import time
 from pathlib import Path
 
-import dependency_classifier as dc
+import linkdep_core as core
 
 STAGES = ("S1", "S2", "S3")
 PROVIDER = {"S1": "Antigravity", "S2": "Claude Opus", "S3": "Codex"}
 
-AGY_BIN = dc.AGY_BIN
+AGY_BIN = core.AGY_BIN
 # No model ID, only an effort level: the house convention, so a model generation
 # change on the Antigravity side cannot break the call (a pinned ID fails with
 # "not recognized").  high spends ~4k thinking tokens per link on a whole-article
-# prompt, so a full batch can overrun the output limit; shadow_pipeline then asks
+# prompt, so a full batch can overrun the output limit; linkdep_pipeline then asks
 # again in halves.
-AGY_EFFORT = os.environ.get("DEPENDENCY_SHADOW_AGY_EFFORT", "high")
+AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT", "high")
 AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
-CLAUDE_BIN = dc.CLAUDE_BIN
-CLAUDE_MODEL = dc.CLAUDE_MODEL
-CODEX_BIN = dc.CODEX_BIN
+CLAUDE_BIN = core.CLAUDE_BIN
+CLAUDE_MODEL = core.CLAUDE_MODEL
+CODEX_BIN = core.CODEX_BIN
 # Empty by default, like the classifier's: Codex then uses its configured model.
-CODEX_MODEL = dc.CODEX_REVIEW_MODEL
-CODEX_EFFORT = dc.CODEX_REVIEW_EFFORT
-TIMEOUT = int(os.environ.get("DEPENDENCY_SHADOW_TIMEOUT", "1500"))
+CODEX_MODEL = core.CODEX_REVIEW_MODEL
+CODEX_EFFORT = core.CODEX_REVIEW_EFFORT
+TIMEOUT = int(os.environ.get("DEPENDENCY_TIMEOUT", "1500"))
 CLAUDE_SYSTEM = ("You are a judging engine for the internal links of a mathematics blog. "
                  "Follow the user prompt exactly and return only the requested JSON.")
 CREDIT_BIN = os.environ.get("CLAUDE_CREDIT_BIN",
                             str(Path.home() / ".local" / "bin" / "claude-credit"))
-CREDIT_CALLER = "dependency-shadow-S2"
+CREDIT_CALLER = "dependency-classifier-S2"
 # What the API says when the organization has no credit left.
 CREDIT_REFUSED = re.compile(r"credit balance|purchase credits|add funds", re.I)
 # 인자 하나의 한도는 페이지 크기의 32배다 (이 Pi 는 16K 페이지라 512 KiB). agy 는
 # 프롬프트를 인자로 받으므로 넘기 전에 잘라야 한다 — 여유를 두고 400 KB.
-MAX_PROMPT_BYTES = int(os.environ.get("DEPENDENCY_SHADOW_MAX_PROMPT_BYTES", "400000"))
+MAX_PROMPT_BYTES = int(os.environ.get("DEPENDENCY_MAX_PROMPT_BYTES", "400000"))
 
 
 class ModelError(RuntimeError):
@@ -151,7 +151,7 @@ def parse_model_json(raw: str) -> dict:
 
 
 def available(stage: str) -> bool:
-    return dc.provider_available(PROVIDER[stage])
+    return core.provider_available(PROVIDER[stage])
 
 
 def _run_until_envelope(args: list[str]) -> str:
@@ -346,7 +346,7 @@ def _codex_failure(stdout: str) -> str:
 
 
 def _codex(prompt: str, schema: dict | None) -> tuple[dict, dict]:
-    with tempfile.TemporaryDirectory(prefix="dependency-shadow-codex-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="dependency-classifier-codex-") as tmp:
         tmp_path = Path(tmp)
         out_path = tmp_path / "last-message.json"
         args = [CODEX_BIN, "exec", *(["--model", CODEX_MODEL] if CODEX_MODEL else []),
@@ -382,9 +382,9 @@ def call(stage: str, prompt: str, schema: dict | None = None) -> tuple[dict, dic
     if len(prompt.encode("utf-8")) > MAX_PROMPT_BYTES:
         raise ModelError(f"prompt exceeds {MAX_PROMPT_BYTES} bytes")
     provider = PROVIDER[stage]
-    slot = dc.acquire_provider_slot(provider)
+    slot = core.acquire_provider_slot(provider)
     try:
-        if not dc.provider_available(provider):
+        if not core.provider_available(provider):
             raise ModelError(f"{provider} quota gate closed while waiting for a slot")
         if stage == "S1":
             return _agy(prompt)

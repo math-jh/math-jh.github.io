@@ -7,22 +7,17 @@ occurrence means for the dependency graph lives here, keyed by the lid:
     "k7m2x": {relation: required, reviewed: true}
 
 A KO link and the EN link that translates it share one lid, so they share one
-record.  A lid without a record is waiting for the classifier.
+record.  A record is written once three models agree on the link or a human has
+ruled on it; a lid without a record is unclassified.
 
-The writers are the judging pipeline (`scripts/dependency-classifier/shadow_*.py`)
-and the dashboard's rulings (`scripts/dashboard/shadow_api.py`); both go through
-`shadow_store.save_ledger` under that module's state lock.  `LOCK_PATH` here
-belongs to the two-model classifier that preceded the pipeline
-(`dependency_classifier.py :: main`, no longer on cron), which holds it for its
-whole tick; the pipeline's tick skips while it is taken.  Jekyll
+This module is the file format.  The writers are the judging pipeline
+(`scripts/dependency-classifier/linkdep_*.py`) and the dashboard's rulings
+(`scripts/dashboard/linkdeps_api.py`); both write through
+`linkdep_store.save_ledger` under that module's state lock.  Jekyll
 (`_plugins/graph_data.rb`) reads the file as `site.data["link_relations"]`.
 """
 from __future__ import annotations
 
-import fcntl
-import os
-import tempfile
-import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -30,20 +25,15 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 PATH = ROOT / "_data" / "link_relations.yml"
-LOCK_PATH = Path("/tmp/link-relations.lock")
 
-# `requires-review` marks a link whose two model verdicts disagreed; it waits for
-# a human and counts as unclassified in the graph.
 RELATIONS = ("required", "weak", "forward")
-REVIEW_RELATION = "requires-review"
-VALUES = RELATIONS + (REVIEW_RELATION,)
 
 HEADER = """\
-# 링크 관계 원장. 키는 본문 링크 IAL 의 data-lid, 값은 그 출현의 의존 관계다.
-# relation: required | weak | forward | requires-review
-# reviewed: true 이면 사람이 판정을 마쳤다 (없으면 false).
+# 링크 관계 원장. 키는 본문 링크 IAL 의 data-lid, 값은 그 출현의 의존 관계다:
+# {relation: required|weak|forward, reviewed: true}.
+# 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다. 레코드가 없는 lid 는 미분류다.
 # 같은 lid 를 가진 KO 링크와 EN 링크가 이 레코드 하나를 공유한다.
-# 쓰는 곳은 의존성 분류기와 대시보드 판정 버튼뿐이다 (scripts/lib/link_relations.py).
+# 쓰는 곳은 scripts/dependency-classifier/linkdep_*.py 와 대시보드뿐이다.
 """
 
 
@@ -56,14 +46,14 @@ class Record:
 def load(path: Path | None = None) -> dict[str, Record]:
     path = PATH if path is None else path
     try:
-        # libyaml 로더가 있으면 쓴다 — 순수 파이썬 로더는 8천 줄 원장에 1초 넘게 걸린다.
+        # libyaml 로더가 있으면 쓴다 — 순수 파이썬 로더는 수천 줄 원장에 1초 넘게 걸린다.
         loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
         raw = yaml.load(path.read_text(encoding="utf-8"), Loader=loader) or {}
     except FileNotFoundError:
         return {}
     records = {}
     for lid, value in raw.items():
-        if not isinstance(value, dict) or value.get("relation") not in VALUES:
+        if not isinstance(value, dict) or value.get("relation") not in RELATIONS:
             raise ValueError(f"{path}: bad record for {lid!r}: {value!r}")
         records[str(lid)] = Record(value["relation"], bool(value.get("reviewed", False)))
     return records
@@ -78,59 +68,3 @@ def dump(records: dict[str, Record]) -> str:
         # 읽힐 수 있다.
         lines.append(f'"{lid}": {{{fields}}}\n')
     return "".join(lines)
-
-
-def save(records: dict[str, Record], path: Path | None = None) -> None:
-    """Replace the file atomically.  The caller holds the lock."""
-    path = PATH if path is None else path
-    text = dump(records)
-    fd, tmp = tempfile.mkstemp(prefix=".link_relations.", suffix=".tmp", dir=path.parent)
-    try:
-        with os.fdopen(fd, "w", encoding="utf-8") as handle:
-            handle.write(text)
-        os.chmod(tmp, 0o664)
-        os.replace(tmp, path)
-    finally:
-        try:
-            os.unlink(tmp)
-        except FileNotFoundError:
-            pass
-
-
-class Lock:
-    """An acquired ledger lock.  Release by `release()` or as a context manager."""
-
-    def __init__(self, handle) -> None:
-        self._handle = handle
-
-    def release(self) -> None:
-        if self._handle is not None:
-            self._handle.close()
-            self._handle = None
-
-    def __enter__(self) -> "Lock":
-        return self
-
-    def __exit__(self, *_exc: object) -> None:
-        self.release()
-
-
-def try_lock() -> Lock | None:
-    """Take the ledger lock without waiting, or return None."""
-    handle = open(LOCK_PATH, "w")
-    try:
-        fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except OSError:
-        handle.close()
-        return None
-    return Lock(handle)
-
-
-def lock(timeout: float) -> Lock | None:
-    """Wait up to `timeout` seconds for the ledger lock."""
-    deadline = time.monotonic() + timeout
-    while True:
-        taken = try_lock()
-        if taken is not None or time.monotonic() >= deadline:
-            return taken
-        time.sleep(0.5)

@@ -7,7 +7,7 @@ public).
 A precedent is a human ruling on an issue.  One issue has at most one live
 precedent: a new ruling on an issue that already has one amends or supersedes
 it (the digest worker checks this before anything is written; see
-shadow_digest).  A pending issue is an issue a model raised in Step 4 and a
+linkdep_digest).  A pending issue is an issue a model raised in Step 4 and a
 human has not ruled on yet; two pending issues found to be the same are merged
 into one before any precedent exists.
 
@@ -25,7 +25,7 @@ from pathlib import Path
 
 import yaml
 
-import shadow_store as store
+import linkdep_store as store
 
 # The book holds over a thousand files and the dashboard reads them all on every
 # snapshot; the pure-Python loader makes that the bulk of the request time.

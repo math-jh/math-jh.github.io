@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Tests for the shadow re-judging pipeline that need no model call.
+"""Tests for the link-dependency pipeline that need no model call.
 
-State goes to a temporary directory (DEPENDENCY_SHADOW_STATE_DIR) and the shadow
+State goes to a temporary directory (DEPENDENCY_STATE_DIR) and the
 ledger to a temporary file, so nothing under ~/.local/state or _data is touched.
 """
 from __future__ import annotations
@@ -15,23 +15,23 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-TMP = tempfile.mkdtemp(prefix="shadow-test-")
-os.environ["DEPENDENCY_SHADOW_STATE_DIR"] = TMP
-os.environ["DEPENDENCY_SHADOW_BOOK_DIR"] = str(Path(TMP) / "book")
-# Rounds finalize and call dc.notify; tests must not reach the phone (or the digest).
+TMP = tempfile.mkdtemp(prefix="linkdep-test-")
+os.environ["DEPENDENCY_STATE_DIR"] = TMP
+os.environ["DEPENDENCY_BOOK_DIR"] = str(Path(TMP) / "book")
+# Rounds finalize and call core.notify; tests must not reach the phone (or the digest).
 os.environ["DEPENDENCY_NOTIFY_BIN"] = "/bin/true"
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent / "dashboard"))
 
-import dependency_classifier as dc  # noqa: E402
-import shadow_book as book  # noqa: E402
-import shadow_features as feat  # noqa: E402
-import shadow_models as models  # noqa: E402
-import shadow_pipeline as pipe  # noqa: E402
-import shadow_prompts as sp  # noqa: E402
-import shadow_risk as risk  # noqa: E402
-import shadow_store as store  # noqa: E402
+import linkdep_core as core  # noqa: E402
+import linkdep_book as book  # noqa: E402
+import linkdep_features as feat  # noqa: E402
+import linkdep_models as models  # noqa: E402
+import linkdep_pipeline as pipe  # noqa: E402
+import linkdep_prompts as sp  # noqa: E402
+import linkdep_risk as risk  # noqa: E402
+import linkdep_store as store  # noqa: E402
 
 store.LEDGER_PATH = Path(TMP) / "link_relations.yml"
 store.LOCK_PATH = Path(TMP) / "state.lock"
@@ -194,7 +194,7 @@ class FinalizeTest(unittest.TestCase):
         self.assertEqual(bumped, [])
 
     def test_promote_copies_principle_into_criteria(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         criteria = Path(TMP) / "criteria.md"
         criteria.write_text("### 관계\n본문\n\n### 승격된 원칙\n(아직 없다)\n", encoding="utf-8")
         for pid, extra in (("P-0901", "## 원칙 초안\n첫째 원칙\n이어지는 줄.\n"), ("P-0902", "")):
@@ -211,7 +211,7 @@ class FinalizeTest(unittest.TestCase):
         self.assertEqual(book.get("P-0901").status, "promoted")
 
     def test_merge_goes_through_a_draft_that_absorbs_the_rest(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         for pid, expl in (("P-0911", "첫 설명"), ("P-0912", "둘째 설명")):
             book.write(pid, {"id": pid, "status": "active", "description": pid, "question": "provided"},
                        f"## 쟁점\nq\n\n## 판정\n{pid} 판정\n\n## 이유\nr\n\n## 사용자 설명 (원문)\n{expl}\n\n"
@@ -246,7 +246,7 @@ class FinalizeTest(unittest.TestCase):
                           f"## 사용자 설명 (원문)\n(없음)\n\n## 원칙 초안\n{principle}\n")
 
     def test_proposals_never_share_a_precedent(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         for pid in ("P-0921", "P-0922", "P-0923", "P-0924"):
             self._precedent(pid)
         self._precedent("P-0925", status="promoted")
@@ -261,7 +261,7 @@ class FinalizeTest(unittest.TestCase):
                          [("promote", ["P-0921"]), ("merge", ["P-0923", "P-0924"])])
 
     def test_merge_is_queued_once_and_a_dead_one_is_dropped(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         for pid in ("P-0931", "P-0932", "P-0933"):
             self._precedent(pid)
         queue = store.load_queue()
@@ -282,7 +282,7 @@ class FinalizeTest(unittest.TestCase):
         self.assertEqual((queue["digest"], queue["drafts"]), ([], []))
 
     def test_stale_draft_is_drafted_again(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         self._precedent("P-0941")
         job = {"id": "J-1", "kind": "ruling_note", "rulings": {}, "explanation": "설명"}
         draft = digest._clean({"action": "amend", "precedent": "P-0941", "issue": "i", "ruling": "새 판정",
@@ -301,7 +301,7 @@ class FinalizeTest(unittest.TestCase):
         store.save_queue(queue)
 
     def test_rewriting_a_promoted_precedent_rewrites_its_criteria_line(self):
-        import shadow_digest as digest
+        import linkdep_digest as digest
         criteria = Path(TMP) / "criteria2.md"
         criteria.write_text("### 승격된 원칙\n- (P-0950) 남의 줄\n- (P-0951) 옛 원칙\n\n### 뒤\n끝\n",
                             encoding="utf-8")
@@ -451,10 +451,10 @@ class MergeUnitRecordTest(unittest.TestCase):
 
 class DashboardFlowTest(unittest.TestCase):
     def setUp(self):
-        import shadow_api
-        self.api = shadow_api
+        import linkdeps_api
+        self.api = linkdeps_api
         rec = link_rec("a.md", "/ko/math/x", {"S1": "weak", "S2": "required", "S3": "weak"})
-        import shadow_units as units
+        import linkdep_units as units
         self.h = units.unit_hash("unit-key")
         store.save_unit_record(self.h, {"unit": "unit-key", "links": {"zz001": rec, "zz002": {
             **link_rec("a.md", "/ko/math/y", {"S1": "weak", "S2": "weak", "S3": "weak"}),
@@ -496,10 +496,10 @@ class DashboardFlowTest(unittest.TestCase):
 
 class LedgerFormatTest(unittest.TestCase):
     def test_same_format_as_production(self):
-        store.save_ledger({"0a1b2": dc.ledger.Record("weak", True)})
+        store.save_ledger({"0a1b2": core.ledger.Record("weak", True)})
         text = store.LEDGER_PATH.read_text(encoding="utf-8")
         self.assertIn('"0a1b2": {relation: weak, reviewed: true}', text)
-        self.assertEqual(dc.ledger.load(store.LEDGER_PATH)["0a1b2"].relation, "weak")
+        self.assertEqual(core.ledger.load(store.LEDGER_PATH)["0a1b2"].relation, "weak")
 
 
 
@@ -536,8 +536,8 @@ class EndToEndFakeModelTest(unittest.TestCase):
             "difference_note": "S1 은 필요를 경계로 봤다"} for it in items]}, {}
 
     def test_round(self):
-        import shadow_tick as tick
-        import shadow_units as units
+        import linkdep_tick as tick
+        import linkdep_units as units
         paths = tick.find_unit(str(self.POST)) if hasattr(tick, "find_unit") else None
         if paths is None:
             for p in units.all_units():
@@ -574,7 +574,7 @@ class EndToEndFakeModelTest(unittest.TestCase):
 
 class ScopeTest(unittest.TestCase):
     def test_only_local_posts_are_left_alone(self):
-        import shadow_tick
+        import linkdep_tick
         d = Path(tempfile.mkdtemp(prefix="scope-", dir=TMP))
         heads = {"live": "title: a", "draft": "title: b\npublished: false",
                  "rev": "title: c\nrevising: true", "en": "title: d",
@@ -585,20 +585,20 @@ class ScopeTest(unittest.TestCase):
             paths[name].write_text(f"---\n{head}\n---\nbody\n", encoding="utf-8")
         tracked = {str(paths[name]) for name in ("live", "draft", "rev", "en", "half")}
         key = lambda ps: "+".join(p.stem for p in ps)  # noqa: E731
-        with patch.object(store, "ROOT", Path("/")), patch.object(dc, "unit_key", key), \
-                patch.object(shadow_tick, "tracked_posts",
+        with patch.object(store, "ROOT", Path("/")), patch.object(core, "unit_key", key), \
+                patch.object(linkdep_tick, "tracked_posts",
                              return_value={p.lstrip("/") for p in tracked}):
-            skip = shadow_tick.out_of_scope(
+            skip = linkdep_tick.out_of_scope(
                 [[paths["live"]], [paths["draft"]], [paths["rev"], paths["en"]],
                  [paths["local"]], [paths["half"], paths["local_en"]]])
         self.assertEqual(skip, {"local", "half+local_en"})
 
     def test_recheck_drops_links_of_paused_posts(self):
         from types import SimpleNamespace
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_tick
+        import linkdep_units as units
         paths = [EndToEndFakeModelTest.POST]
-        key = dc.unit_key(paths)
+        key = core.unit_key(paths)
         record = {"unit": key, "links": {"zzzzz": {"final": {"relation": "weak"}}}}
         with store.lock(5):
             queue = store.load_queue()
@@ -607,24 +607,24 @@ class ScopeTest(unittest.TestCase):
         with patch.object(units, "all_units", return_value=[paths]), \
                 patch.object(store, "load_unit_record", return_value=record), \
                 patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
-                patch.object(shadow_tick, "out_of_scope", return_value={key}), \
-                patch.object(shadow_tick, "fill_complete", return_value=True), \
+                patch.object(linkdep_tick, "out_of_scope", return_value={key}), \
+                patch.object(linkdep_tick, "fill_complete", return_value=True), \
                 patch.object(models, "available", return_value=True), \
                 patch.object(models, "call", side_effect=AssertionError("no model call")):
-            self.assertTrue(shadow_tick.run_recheck(commit=False))
+            self.assertTrue(linkdep_tick.run_recheck(commit=False))
         queue = store.load_queue()
         self.assertEqual(queue["recheck"], [])
         self.assertNotIn("zzzzz", queue["human"])
 
     def test_recheck_waits_until_the_ledger_is_full(self):
-        import shadow_tick
+        import linkdep_tick
         with store.lock(5):
             queue = store.load_queue()
             queue["recheck"] = [{"lid": "zzzzw", "precedent": "P-0001", "created": 0}]
             store.save_queue(queue)
-        with patch.object(shadow_tick, "fill_complete", return_value=False), \
+        with patch.object(linkdep_tick, "fill_complete", return_value=False), \
                 patch.object(models, "call", side_effect=AssertionError("no model call")):
-            self.assertFalse(shadow_tick.run_recheck(commit=False))
+            self.assertFalse(linkdep_tick.run_recheck(commit=False))
         self.assertEqual([x["lid"] for x in store.load_queue()["recheck"]], ["zzzzw"])
         with store.lock(5):
             queue = store.load_queue()
@@ -633,10 +633,10 @@ class ScopeTest(unittest.TestCase):
 
     def test_recheck_drops_every_item_of_a_human_decided_link(self):
         from types import SimpleNamespace
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_tick
+        import linkdep_units as units
         paths = [EndToEndFakeModelTest.POST]
-        key = dc.unit_key(paths)
+        key = core.unit_key(paths)
         record = {"unit": key, "links": {"zzzzh": {"final": {"relation": "weak", "by": "human"}}}}
         with store.lock(5):
             queue = store.load_queue()
@@ -646,11 +646,11 @@ class ScopeTest(unittest.TestCase):
         with patch.object(units, "all_units", return_value=[paths]), \
                 patch.object(store, "load_unit_record", return_value=record), \
                 patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
-                patch.object(shadow_tick, "out_of_scope", return_value=set()), \
-                patch.object(shadow_tick, "fill_complete", return_value=True), \
+                patch.object(linkdep_tick, "out_of_scope", return_value=set()), \
+                patch.object(linkdep_tick, "fill_complete", return_value=True), \
                 patch.object(models, "available", return_value=True), \
                 patch.object(models, "call", side_effect=AssertionError("no model call")):
-            self.assertTrue(shadow_tick.run_recheck(commit=False))
+            self.assertTrue(linkdep_tick.run_recheck(commit=False))
         queue = store.load_queue()
         self.assertEqual(queue["recheck"], [])
         self.assertNotIn("zzzzh", queue["human"])
@@ -659,10 +659,10 @@ class ScopeTest(unittest.TestCase):
         """A recheck of a 'weak' link whose three Step 4 answers are ``relation``, each
         stage citing another precedent; ``during`` runs inside the call."""
         from types import SimpleNamespace
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_tick
+        import linkdep_units as units
         paths = [EndToEndFakeModelTest.POST]
-        key = dc.unit_key(paths)
+        key = core.unit_key(paths)
         h = units.unit_hash(key)
         with store.lock(5):
             store.save_unit_record(h, {"unit": key, "links": {
@@ -679,14 +679,14 @@ class ScopeTest(unittest.TestCase):
 
         with patch.object(units, "all_units", return_value=[paths]), \
                 patch.object(units, "load_unit", return_value=SimpleNamespace(link=lambda lid: {})), \
-                patch.object(shadow_tick, "out_of_scope", return_value=set()), \
-                patch.object(shadow_tick, "fill_complete", return_value=True), \
+                patch.object(linkdep_tick, "out_of_scope", return_value=set()), \
+                patch.object(linkdep_tick, "fill_complete", return_value=True), \
                 patch.object(models, "available", return_value=True), \
                 patch.object(pipe, "step4_items", return_value=[]), \
                 patch.object(pipe, "run_step4", side_effect=step4), \
                 patch.object(pipe, "_record_issue"), \
                 patch.object(pipe, "decisive", return_value=False):
-            self.assertTrue(shadow_tick.run_recheck(commit=False))
+            self.assertTrue(linkdep_tick.run_recheck(commit=False))
         return store.load_queue(), store.load_unit_record(h)["links"][lid]
 
     def test_recheck_sends_a_changed_vote_to_the_human(self):
@@ -718,8 +718,8 @@ class ScopeTest(unittest.TestCase):
         self.assertEqual(len(rec["rechecks"]), 1)
 
     def test_fill_complete(self):
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_tick
+        import linkdep_units as units
         d = Path(tempfile.mkdtemp(prefix="fill-", dir=TMP))
         paths = {}
         for name in ("done", "open", "parked", "untouched", "nolinks", "paused"):
@@ -732,18 +732,18 @@ class ScopeTest(unittest.TestCase):
 
         def check(names):
             with patch.object(units, "all_units", return_value=[[paths[n]] for n in names]), \
-                    patch.object(dc, "unit_key", key), \
-                    patch.object(shadow_tick, "out_of_scope", return_value={"paused"}):
-                return shadow_tick.fill_complete({"units": entries})
+                    patch.object(core, "unit_key", key), \
+                    patch.object(linkdep_tick, "out_of_scope", return_value={"paused"}):
+                return linkdep_tick.fill_complete({"units": entries})
 
         self.assertTrue(check(["done", "parked", "nolinks", "paused"]))
         self.assertFalse(check(["done", "open"]))
         self.assertFalse(check(["done", "untouched"]))
 
     def test_recheck_candidates_leave_the_human_alone_and_spread_out(self):
-        import shadow_digest
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_digest
+        import linkdep_tick
+        import linkdep_units as units
         s1 = {"basis": "yy-basis", "evidence": "e", "reason": "r"}
 
         def rec(by="unanimous", rechecks=0):
@@ -765,11 +765,11 @@ class ScopeTest(unittest.TestCase):
         ruled = (None, {"links": {"yy-ruled": rec()}}, "yy-ruled")
         try:
             with patch.object(units, "all_units", return_value=[]), \
-                    patch.object(shadow_tick, "out_of_scope", return_value=set()):
-                ids = [c["id"] for c in shadow_digest._recheck_candidates([ruled])]
+                    patch.object(linkdep_tick, "out_of_scope", return_value=set()):
+                ids = [c["id"] for c in linkdep_digest._recheck_candidates([ruled])]
                 self.assertEqual(ids, ["yy-fresh", "yy-tiebreak", "yy-often"])
-                with patch.object(shadow_digest, "RECHECK_OFFER", 1):
-                    self.assertEqual([c["id"] for c in shadow_digest._recheck_candidates([ruled])],
+                with patch.object(linkdep_digest, "RECHECK_OFFER", 1):
+                    self.assertEqual([c["id"] for c in linkdep_digest._recheck_candidates([ruled])],
                                      ["yy-fresh"])
         finally:
             with store.lock(5):
@@ -780,9 +780,9 @@ class ScopeTest(unittest.TestCase):
                 store.save_queue(queue)
 
     def test_recheck_candidates_skip_paused_posts(self):
-        import shadow_digest
-        import shadow_tick
-        import shadow_units as units
+        import linkdep_digest
+        import linkdep_tick
+        import linkdep_units as units
         s1 = {"basis": "zz-basis", "evidence": "e", "reason": "r"}
         rec = {"final": {"relation": "weak"}, "stages": {"S1": {"step1": s1}},
                "features": {"target_kind": "zz", "in_proof": True}}
@@ -791,8 +791,8 @@ class ScopeTest(unittest.TestCase):
                              {"unit": name, "links": {f"{name}-link": rec}})
         ruled = (None, {"links": {"ruled": rec}}, "ruled")
         with patch.object(units, "all_units", return_value=[]), \
-                patch.object(shadow_tick, "out_of_scope", return_value={"paused"}):
-            ids = {c["id"] for c in shadow_digest._recheck_candidates([ruled])}
+                patch.object(linkdep_tick, "out_of_scope", return_value={"paused"}):
+            ids = {c["id"] for c in linkdep_digest._recheck_candidates([ruled])}
         self.assertEqual(ids, {"live-link"})
 
 
@@ -809,8 +809,8 @@ class StepFourBatchingTest(unittest.TestCase):
 
     def test_round_with_one_item_per_call(self):
         """The end-to-end round, with every Step 4 / reveal call holding one item."""
-        import shadow_tick as tick
-        import shadow_units as units
+        import linkdep_tick as tick
+        import linkdep_units as units
         e2e = EndToEndFakeModelTest()
         prompts = []
 
@@ -838,8 +838,8 @@ class UnitParkingTest(unittest.TestCase):
     """A prompt over the byte limit parks the unit instead of retrying hourly."""
 
     def test_oversize_parks_quietly(self):
-        import shadow_tick as tick
-        import shadow_units as units
+        import linkdep_tick as tick
+        import linkdep_units as units
         paths = next(p for p in units.all_units() if EndToEndFakeModelTest.POST in p)
         unit = units.load_unit(paths)
         state = {"units": {}, "started_at": time.time()}
@@ -848,7 +848,7 @@ class UnitParkingTest(unittest.TestCase):
                           side_effect=models.ModelError("prompt exceeds 400000 bytes")), \
                 patch.object(models, "available", return_value=True), \
                 patch.object(tick, "log", side_effect=logged.append), \
-                patch.object(dc, "notify", side_effect=lambda *a, **k: sent.append(k)), \
+                patch.object(core, "notify", side_effect=lambda *a, **k: sent.append(k)), \
                 patch.object(tick, "dirty_paths", return_value=[]):
             self.assertEqual(tick.run(state, paths, "S1", unit, "new", commit=False), 0)
             self.assertEqual(tick.run(state, paths, "S1", unit, "new", commit=False), 0)
@@ -865,13 +865,13 @@ class CommitLedgerTest(unittest.TestCase):
     """Only a ledger left dirty after the commit attempt is a failure."""
 
     def test_nothing_to_commit_is_quiet(self):
-        import shadow_tick as tick
+        import linkdep_tick as tick
         with patch.object(tick, "commit_outputs", return_value=False), \
                 patch.object(tick, "dirty_paths", return_value=[]):
             tick.commit_ledger("Series: 확정 0건, 사람 판정 대기 2건", True)
 
     def test_dirty_after_attempt_raises(self):
-        import shadow_tick as tick
+        import linkdep_tick as tick
         with patch.object(tick, "commit_outputs", return_value=False), \
                 patch.object(tick, "dirty_paths", return_value=[tick.LEDGER_REL]):
             with self.assertRaises(RuntimeError):

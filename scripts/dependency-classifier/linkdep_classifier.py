@@ -27,13 +27,13 @@ import sys
 import time
 from pathlib import Path
 
-import dependency_classifier as dc
-import shadow_models as models
-import shadow_pipeline as pipe
-import shadow_store as store
-import shadow_units as units
+import linkdep_core as core
+import linkdep_models as models
+import linkdep_pipeline as pipe
+import linkdep_store as store
+import linkdep_units as units
 
-log = dc.log
+log = core.log
 
 
 def find_unit(path_arg: str) -> list[Path]:
@@ -120,7 +120,7 @@ def pilot(n: int, skip: int = 0, only: list[str] | None = None,
           lids: list[str] | None = None) -> int:
     held = store.try_tick_lock()
     if held is None:
-        log("pilot: a shadow tick (or another pilot) holds the tick lock")
+        log("pilot: a tick (or another pilot) holds the tick lock")
         return 0
     log(f"pilot: agy weekly remaining at start: {agy_quota()}")
     try:
@@ -187,13 +187,13 @@ def pilot(n: int, skip: int = 0, only: list[str] | None = None,
 
 
 def pilot_report() -> int:
-    import shadow_report
-    print(shadow_report.render(store.PILOT_DIR))
+    import linkdep_report
+    print(linkdep_report.render(store.PILOT_DIR))
     return 0
 
 
 def status() -> int:
-    import shadow_tick
+    import linkdep_tick
     state = store.load_state()
     counts: dict[str, int] = {}
     for entry in state["units"].values():
@@ -206,7 +206,7 @@ def status() -> int:
         "human": len(queue["human"]), "audit": len(queue["audit"]),
         "digest": len(queue["digest"]),
         "recheck": len(queue["recheck"]),
-        "recheck_open": shadow_tick.fill_complete(state),
+        "recheck_open": linkdep_tick.fill_complete(state),
         "providers": {stage: models.available(stage) for stage in models.STAGES},
     }, ensure_ascii=False, indent=2))
     return 0
@@ -234,8 +234,8 @@ def main() -> int:
         return pilot_report()
     if args.status:
         return status()
-    import shadow_tick
-    return shadow_tick.tick(commit=not args.no_commit)
+    import linkdep_tick
+    return linkdep_tick.tick(commit=not args.no_commit)
 
 
 if __name__ == "__main__":

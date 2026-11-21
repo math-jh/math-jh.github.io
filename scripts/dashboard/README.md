@@ -57,7 +57,7 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
   카테고리를 펼쳐 그 글을 짚는다.
 - **번역 큐** — 왼쪽은 한글 원문 지적 목록(글을 누르면 그 글의 지적이 펼쳐진다)과 그 아래 지금 큐
   (단계별 비율 막대 + 단계별 편수, 행 클릭 → 글 목록), 오른쪽은 KO 원문 미리보기다. 지적을 누르면
-  미리보기(dev 서버 4001 의 구워진 글, shadow.js 의 `shSlot`·`shHit`)가 인용문이 있는 문단을 짚는다
+  미리보기(dev 서버 4001 의 구워진 글, linkdeps.js 의 `ldSlot`·`ldHit`)가 인용문이 있는 문단을 짚는다
   (그래서 왼쪽 지적에는 인용문을 싣지 않고 줄번호·판정·문제·수정만 둔다) —
   수식 밖 조각으로 찾고, 수식뿐이면 KaTeX 의 TeX 주석으로 찾는다. 못 찾으면 그 지적에 '원문에서 못 찾음'
   이 붙는다(대개 이미 고친 문장). 주기 폴링은 번역 데이터·수정 완료 체크가 그대로면 이 페이지를 다시
@@ -72,7 +72,7 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
   `post_label` 이 붙인다(KO 글은 categories.yml 의 한국어 과목명, EN 글은 키에서 딴 영어 과목명).
   KO 글은 `categories[].posts[].label`, 감사 상세·색인 추천이 가리키는 EN 글과 permalink 는
   `summary.labels` 에 있고, app.js 의 `postLabel()` 이 둘을 합쳐 찾는다. 마크다운 원문을 옮길 때는
-  링크의 주소와 `{: data-lid … }` IAL 을 떼고 라벨만 남긴다(`mdPlain`, shadow.js `shText`).
+  링크의 주소와 `{: data-lid … }` IAL 을 떼고 라벨만 남긴다(`mdPlain`, linkdeps.js `ldText`).
 - **읽는 법·동작 설명은 `?` 뒤에 둔다** — 패널 바닥에 설명 문단을 늘 펴 두지 않는다. 소제목 단위는
   `h3Help`, 페이지 단위는 `PAGE_HELP`. 숫자·갱신 시각 같은 상태는 설명이 아니므로 화면에 남긴다.
 
@@ -173,25 +173,25 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
 | `/api/compare/instructions[?path=]` | 메모·판정을 붙여 쓸 수 있는 작업 지시서 (평문) |
 | `/api/compare/macros?v=<sha\|worktree>` | 그 판본의 `katex-macros.js` |
 | `/api/review` (POST) | 검토 판정·메모 — **항목 단위 병합** 저장 (kotypo 처럼 통째 교체하지 않는다). `kind`: `item`·`post`·`note`·`note-del`·`note-done` |
-| `/api/shadow` · `/api/shadow/link` · `/api/shadow/pilot` | 링크 판정 화면의 데이터 — 아래 참고 |
-| `/api/shadow/<동작>` (POST) | 링크 판정·감사·판례 초안 승인 등 (`shadow_api.py`) |
+| `/api/linkdeps` · `/api/linkdeps/link` · `/api/linkdeps/pilot` | 링크 의존성 판정 화면의 데이터 — 아래 참고 |
+| `/api/linkdeps/<동작>` (POST) | 링크 의존성 판정의 판정·감사·판례 초안 승인 등 (`linkdeps_api.py`) |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
 `scripts/index-monitor/state-com.json`, GitHub의 열린 `comment/*` PR, `git log`,
 `systemctl --user is-active jekyll-blog`, `~/Projects/hud-display/state/claude_quota.json`.
 
-## 링크 판정 (`/dash/audit` 아래쪽)
+## 링크 의존성 판정 (`/dash/audit` 아래쪽)
 
 링크 관계는 글이 아니라 `_data/link_relations.yml` 에 있다 — 글의 링크 IAL 에는
 `{: data-lid="…" }` 만 있고, 원장이 lid 를 키로 `{relation, reviewed}` 를 든다. 같은 lid 를
 가진 KO 링크와 EN 링크가 레코드 하나를 공유하므로 판정은 한 번이면 양쪽에 적용된다.
 
-분류기(`scripts/dependency-classifier/shadow_*.py`)는 세 모델이 만장일치인 링크만 원장에 쓰고,
-갈린 링크는 사람 큐로 보낸다. 화면(`shadow.js`)은 판정 대기·감사·판례 초안·판례·끝난 판정
-다섯 탭이고, 데이터와 동작은 `shadow_api.py` 가 분류기와 같은 모듈로 읽고 쓴다. 쓰기는
-`shadow_store` 의 짧은 상태 락(`/tmp/dependency-shadow.lock`) 아래에서 한다. 사람 판정이
-원장에 남긴 변경은 다음 분류기 틱이 `[Cron] Link Dependencies Shadow [lastmod-skip]` 로
+분류기(`scripts/dependency-classifier/linkdep_*.py`)는 세 모델이 만장일치인 링크만 원장에 쓰고,
+갈린 링크는 사람 큐로 보낸다. 화면(`linkdeps.js`)은 판정 대기·감사·판례 초안·판례·끝난 판정
+다섯 탭이고, 데이터와 동작은 `linkdeps_api.py` 가 분류기와 같은 모듈로 읽고 쓴다. 쓰기는
+`linkdep_store` 의 짧은 상태 락(`/tmp/dependency-classifier.lock`) 아래에서 한다. 사람 판정이
+원장에 남긴 변경은 다음 분류기 틱이 `[Cron] Link Dependencies [lastmod-skip]` 로
 커밋하고, push 는 autopush 소관이다.
 
 ## 손볼 때 알아야 할 것

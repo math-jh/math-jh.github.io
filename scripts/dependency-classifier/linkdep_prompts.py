@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prompts, output schemas, and validation for the shadow re-judging pipeline.
+"""Prompts, output schemas, and validation for the link-dependency pipeline.
 
 The judging criteria live in ``criteria.md`` next to this file, in Korean.  The
 prompt quotes that file verbatim and the dashboard renders the same file for its

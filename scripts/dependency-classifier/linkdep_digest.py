@@ -36,14 +36,14 @@ import random
 import re
 import time
 
-import dependency_classifier as dc
-import shadow_book as book
-import shadow_models as models
-import shadow_prompts as sp
-import shadow_store as store
-import shadow_units as units
+import linkdep_core as core
+import linkdep_book as book
+import linkdep_models as models
+import linkdep_prompts as sp
+import linkdep_store as store
+import linkdep_units as units
 
-log = dc.log
+log = core.log
 RECHECK_OFFER = 40
 RECHECK_MAX = 20
 PROMOTE_AFTER = 10
@@ -72,8 +72,8 @@ def _link_view(unit: units.Unit, rec: dict, lid: str) -> dict:
     view = {"id": lid, "link": rec.get("link"), "target": rec.get("target")}
     if link is not None:
         text = unit.texts[link.source]
-        view["source_context"] = dc.source_context(text, link.start, 2)
-        view["target_context"] = dc.target_context(link, False)[1]
+        view["source_context"] = core.source_context(text, link.start, 2)
+        view["target_context"] = core.target_context(link, False)[1]
     view["models"] = {
         stage: {"step1": {k: s["step1"][k] for k in ("relation", "need", "provided", "evidence", "reason")},
                 "step4": ({k: s["step4"][k] for k in ("precedent", "precedent_reason", "relation")}
@@ -84,7 +84,7 @@ def _link_view(unit: units.Unit, rec: dict, lid: str) -> dict:
 
 def _locate(lid: str) -> tuple[units.Unit, dict] | None:
     for paths in units.all_units():
-        record = store.load_unit_record(units.unit_hash(dc.unit_key(paths)))
+        record = store.load_unit_record(units.unit_hash(core.unit_key(paths)))
         if lid in record.get("links", {}):
             return units.load_unit(paths), record
     return None
@@ -100,7 +100,7 @@ def _recheck_candidates(job_links: list[tuple[units.Unit, dict, str]]) -> list[d
     first and ties in random order, so no post is offered to every precedent because
     its unit file happens to sort first.
     """
-    from shadow_tick import out_of_scope
+    from linkdep_tick import out_of_scope
     paused = out_of_scope(units.all_units())
     queue = store.load_queue()
     queued = {x["lid"] for x in queue["recheck"]}
@@ -174,7 +174,7 @@ def run_one() -> bool:
     if not queue["digest"]:
         return False
     if not models.available("S2"):
-        log(f"shadow digest: {len(queue['digest'])} job(s) wait for Claude quota")
+        log(f"digest: {len(queue['digest'])} job(s) wait for Claude quota")
         return False
     job = queue["digest"][0]
     lids = list(job.get("rulings", {}))
@@ -187,7 +187,7 @@ def run_one() -> bool:
             queue = store.load_queue()
             queue["digest"] = [j for j in queue["digest"] if j.get("id") != job.get("id")]
             store.save_queue(queue)
-        log(f"shadow digest {job.get('id')}: merge {'+'.join(job.get('ids') or [])} dropped, "
+        log(f"digest {job.get('id')}: merge {'+'.join(job.get('ids') or [])} dropped, "
             "a member is no longer live")
         return True
     try:
@@ -212,18 +212,18 @@ def run_one() -> bool:
                     if j.get("id") == job.get("id"):
                         j["attempts"] = j.get("attempts", 0) + 1
                 store.save_queue(queue)
-        log(f"ERROR shadow digest {job.get('id')}: {exc}")
+        log(f"ERROR digest {job.get('id')}: {exc}")
         return True
     held = store.lock(120)
     if held is None:
-        raise RuntimeError("shadow state stayed locked for two minutes")
+        raise RuntimeError("pipeline state stayed locked for two minutes")
     with held:
         queue = store.load_queue()
         queue["digest"] = [j for j in queue["digest"] if j.get("id") != job.get("id")]
         queue["drafts"].append({"id": f"D-{int(time.time())}", "job": job, "draft": draft,
                                 "created": int(time.time()), "usage": usage})
         store.save_queue(queue)
-    log(f"shadow digest {job.get('id')}: draft {draft['action']}")
+    log(f"digest {job.get('id')}: draft {draft['action']}")
     return True
 
 
@@ -325,7 +325,7 @@ def apply_draft(draft_id: str, *, edited: dict | None = None, choice: str | None
     """Write an approved draft.  ``choice`` settles a conflict: supersede | distinguish."""
     held = store.lock(30)
     if held is None:
-        raise RuntimeError("shadow state is busy; try again")
+        raise RuntimeError("pipeline state is busy; try again")
     with held:
         queue = store.load_queue()
         item = next((d for d in queue["drafts"] if d["id"] == draft_id), None)
@@ -473,7 +473,7 @@ def apply_consolidation(kind: str, ids: list[str]) -> dict:
     waiting in one merge cannot enter another."""
     held = store.lock(30)
     if held is None:
-        raise RuntimeError("shadow state is busy; try again")
+        raise RuntimeError("pipeline state is busy; try again")
     with held:
         ids = list(dict.fromkeys(ids))
         if kind == "promote":

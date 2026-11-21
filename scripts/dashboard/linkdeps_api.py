@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""감사 페이지(#audit) 링크 판정의 데이터와 판정 동작.
+"""감사 페이지(#audit) 링크 의존성 판정의 데이터와 판정 동작.
 
-데이터의 정본은 scripts/dependency-classifier/shadow_*.py 가 쓰는 상태다
-(~/.local/state/dependency-shadow, _data/link_relations.yml). 여기서는 그걸
-읽어 화면용으로 묶고, 사람의 판정을 같은 모듈로 쓴다. 쓰기는 전부 shadow_store 의
+데이터의 정본은 scripts/dependency-classifier/linkdep_*.py 가 쓰는 상태다
+(~/.local/state/dependency-classifier, _data/link_relations.yml). 여기서는 그걸
+읽어 화면용으로 묶고, 사람의 판정을 같은 모듈로 쓴다. 쓰기는 전부 linkdep_store 의
 짧은 상태 락 안에서 한다 — 틱은 모델 호출 중에 이 락을 쥐지 않으므로 오래 기다릴
 일이 없다.
 
@@ -13,7 +13,7 @@
 * 감사 — 만장일치로 끝난 링크의 표본. 모델들의 답을 가린 채 먼저 고르고, 고른 뒤에
   공개한다. 만장일치와 다르게 고르면 설명이 있어야 판정이 들어간다.
 * 판례 — digest 워커의 초안 승인, 판례·판례 대기의 한 줄 설명 수정, 철회·정리.
-그 밖에 신호 파일럿(shadow_classifier.py --pilot)의 판정을 읽기 전용으로 펼친다.
+그 밖에 신호 파일럿(linkdep_classifier.py --pilot)의 판정을 읽기 전용으로 펼친다.
 """
 from __future__ import annotations
 
@@ -23,12 +23,12 @@ from pathlib import Path
 
 import yaml
 
-import dependency_classifier as dc
-import shadow_book as book
-import shadow_prompts as sp
-import shadow_report as report
-import shadow_store as store
-import shadow_units as units
+import linkdep_core as core
+import linkdep_book as book
+import linkdep_prompts as sp
+import linkdep_report as report
+import linkdep_store as store
+import linkdep_units as units
 
 LOCK_WAIT = 15
 STAGES = ("S1", "S2", "S3")
@@ -42,14 +42,14 @@ class Busy(RuntimeError):
 def _locked():
     held = store.lock(LOCK_WAIT)
     if held is None:
-        raise Busy("섀도 상태를 다른 작업이 쓰는 중이다 — 잠시 뒤 다시")
+        raise Busy("판정 상태를 다른 작업이 쓰는 중이다 — 잠시 뒤 다시")
     return held
 
 
 # ── 읽기 ──────────────────────────────────────────────────────────────────
 
 def _unit_paths() -> dict[str, list[Path]]:
-    return {dc.unit_key(paths): paths for paths in units.all_units()}
+    return {core.unit_key(paths): paths for paths in units.all_units()}
 
 
 class _Units:
@@ -79,15 +79,15 @@ def _context(u: units.Unit | None, lid: str) -> dict:
     if link is None:
         return {"gone": True}
     text = u.texts[link.source]
-    return {"source_context": dc.source_context(text, link.start, 1),
-            "target_context": dc.target_context(link, False)[1],
+    return {"source_context": core.source_context(text, link.start, 1),
+            "target_context": core.target_context(link, False)[1],
             "path": str(link.source.relative_to(store.ROOT)), "line": link.line,
             "markup": text[link.start:link.ial_end or link.end], "target": link.target}
 
 
 def _permalinks() -> dict[str, str]:
     """소스 경로 → 그 글의 permalink. 미리보기가 dev 서버의 구워진 글을 띄울 때 쓴다."""
-    return {post.rel: post.permalink for post in dc._POSTS}
+    return {post.rel: post.permalink for post in core._POSTS}
 
 
 @functools.lru_cache(maxsize=None)
@@ -100,7 +100,7 @@ def _subject_names() -> dict[str, str]:
 @functools.lru_cache(maxsize=None)
 def _post_label(base: str) -> str:
     """permalink(앵커 뗀 것) → '[카테고리] 글 제목'. 미리보기 칸 제목 옆에 붙는다."""
-    post = dc.by_permalink(base, dc._POSTS) if base else None
+    post = core.by_permalink(base, core._POSTS) if base else None
     if post is None:
         return ""
     cats = post.categories if isinstance(post.categories, list) else [post.categories]
@@ -326,7 +326,7 @@ def rule(lid: str, relation: str, explanation: str = "") -> dict:
         if item is None:
             raise KeyError("이미 판정된 링크")
         records = store.load_ledger()
-        records[lid] = dc.ledger.Record(relation, True)
+        records[lid] = core.ledger.Record(relation, True)
         store.save_ledger(records)
         now = int(time.time())
         _set_final(item["unit"], lid, {"relation": relation, "by": "human", "at": now,
@@ -355,7 +355,7 @@ def reopen(lid: str) -> dict:
         item.pop("at", None)
         if how == "audit":
             if prior:
-                records[lid] = dc.ledger.Record(prior, True)
+                records[lid] = core.ledger.Record(prior, True)
                 _set_final(item["unit"], lid, {"relation": prior, "by": "unanimous",
                                                 "at": int(time.time())})
             queue["audit"][lid] = item
@@ -395,7 +395,7 @@ def audit(lid: str, relation: str, explanation: str = "") -> dict:
                                  "prior": final}
         if relation != final:
             records = store.load_ledger()
-            records[lid] = dc.ledger.Record(relation, True)
+            records[lid] = core.ledger.Record(relation, True)
             store.save_ledger(records)
             _set_final(item["unit"], lid, {"relation": relation, "by": "audit", "was": final,
                                             "at": now, "explanation": explanation.strip()})
@@ -477,7 +477,7 @@ def close_issue(qid: str, action: str, into: str | None = None) -> dict:
 
 def draft(draft_id: str, action: str, edited: dict | None, choice: str | None,
           accept_recheck: bool) -> dict:
-    import shadow_digest
+    import linkdep_digest
     if action == "discard":
         with _locked():
             queue = store.load_queue()
@@ -491,7 +491,7 @@ def draft(draft_id: str, action: str, edited: dict | None, choice: str | None,
     # criteria.md as it stands then, so an amend on the same precedent must land first.
     item = next((d for d in store.load_queue()["drafts"] if d["id"] == draft_id), None)
     props = list((item or {}).get("draft", {}).get("consolidation") or [])
-    out = shadow_digest.apply_draft(draft_id, edited=allowed, choice=choice,
+    out = linkdep_digest.apply_draft(draft_id, edited=allowed, choice=choice,
                                     accept_recheck=accept_recheck)
     if out.get("requeued"):
         # The draft was stale and goes back to the worker; its proposals come again with it.
@@ -499,7 +499,7 @@ def draft(draft_id: str, action: str, edited: dict | None, choice: str | None,
     # The proposals were made when the draft was; precedents may have been promoted or
     # merged since.  Those that can still be carried out together are; the rest are
     # reported as skipped, not as failures.
-    usable = shadow_digest.clean_proposals(props)
+    usable = linkdep_digest.clean_proposals(props)
     kept = {(c["kind"], tuple(c["ids"])) for c in usable}
     skipped = [{"kind": c.get("kind"), "ids": c.get("ids")} for c in props
                if isinstance(c, dict) and c.get("kind") in ("merge", "promote")
@@ -526,8 +526,8 @@ def precedent(pid: str, action: str, description: str | None = None) -> dict:
     if action == "revoke":
         book.set_status(pid, "revoked", revoked=time.strftime("%Y-%m-%d"))
         if e.status == "promoted":
-            import shadow_digest
-            shadow_digest.drop_principle(pid)
+            import linkdep_digest
+            linkdep_digest.drop_principle(pid)
         with _locked():
             queue = store.load_queue()
             for lid in book.load_stats().get(pid, {}).get("applied", []):
@@ -539,10 +539,10 @@ def precedent(pid: str, action: str, description: str | None = None) -> dict:
 
 
 def consolidate(kind: str, ids: list[str]) -> dict:
-    import shadow_digest
+    import linkdep_digest
     if kind not in ("merge", "promote") or not ids:
         raise ValueError("kind 는 merge·promote, ids 필요")
-    out = shadow_digest.apply_consolidation(kind, ids)
+    out = linkdep_digest.apply_consolidation(kind, ids)
     # The proposal is done (promoted, or queued as a merge draft): take it off the
     # draft that carried it, so the card no longer offers it.
     with _locked():

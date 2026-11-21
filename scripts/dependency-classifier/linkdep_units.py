@@ -2,7 +2,7 @@
 """Units and the items a stage asks about.
 
 A unit is a KO post and its EN counterpart (or an EN post without one), as
-``dependency_classifier.iter_units`` groups them.
+``linkdep_core.iter_units`` groups them.
 The links judged are every KO link with a lid, plus the EN links whose lid is
 not in the KO post (EN-only occurrences).  An EN link sharing a KO lid is the
 KO link's translation and shares its record.
@@ -21,11 +21,11 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import dependency_classifier as dc
-import shadow_features as feat
-from common import by_permalink, parse_labels  # noqa: E402  (path set by dependency_classifier)
+import linkdep_core as core
+import linkdep_features as feat
+from common import by_permalink, parse_labels  # noqa: E402  (path set by linkdep_core)
 
-ROOT = dc.ROOT
+ROOT = core.ROOT
 SUMMARY_FIELD_RE = re.compile(r"^(description|excerpt):.*$", re.MULTILINE)
 
 
@@ -59,15 +59,15 @@ def unit_hash(key: str) -> str:
 
 def load_unit(paths: list[Path]) -> Unit:
     texts = {p: p.read_text(encoding="utf-8") for p in paths}
-    unit = Unit(key=dc.unit_key(paths), paths=paths, texts=texts)
-    ko_all = dc.ko_lids(paths, texts)
+    unit = Unit(key=core.unit_key(paths), paths=paths, texts=texts)
+    ko_all = core.ko_lids(paths, texts)
     for path in paths:
         own = []
-        for link in dc.extract_links(path, texts[path], records={}):
+        for link in core.extract_links(path, texts[path]):
             if link.lid is None:
                 unit.waiting = True
                 continue
-            if dc.awaits_ko(link, texts[path], ko_all):
+            if core.awaits_ko(link, ko_all):
                 continue
             own.append(link)
         if own:
@@ -76,14 +76,14 @@ def load_unit(paths: list[Path]) -> Unit:
 
 
 def all_units() -> list[list[Path]]:
-    return dc.iter_units()
+    return core.iter_units()
 
 
 def _target_post(link) -> Path | None:
     if link.target.startswith("#"):
         return link.source
     base = link.target.split("#", 1)[0].split("?", 1)[0]
-    post = by_permalink(base, dc._POSTS)
+    post = by_permalink(base, core._POSTS)
     return post.path if post else None
 
 
@@ -130,7 +130,7 @@ def build_calls(unit: Unit, only: set[str] | None = None) -> list[dict]:
                 if key is None:
                     key = f"T{len(target_keys) + 1}"
                     target_keys[link.target] = key
-                    _, excerpt = dc.target_context(link, False)
+                    _, excerpt = core.target_context(link, False)
                     targets[key] = {"target": link.target, "excerpt": excerpt}
                 item["target_key"] = key
             items.append(item)

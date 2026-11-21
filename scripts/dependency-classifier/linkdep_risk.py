@@ -24,11 +24,11 @@ import time
 
 import numpy as np
 
-import shadow_store as store
+import linkdep_store as store
 
-MIN_OUTCOMES = int(os.environ.get("DEPENDENCY_SHADOW_MIN_OUTCOMES", "300"))
+MIN_OUTCOMES = int(os.environ.get("DEPENDENCY_MIN_OUTCOMES", "300"))
 MIN_OVERTURNED = 15
-FLAG_SHARE = float(os.environ.get("DEPENDENCY_SHADOW_FLAG_SHARE", "0.25"))
+FLAG_SHARE = float(os.environ.get("DEPENDENCY_FLAG_SHARE", "0.25"))
 QUOTE_FLOOR = 0.6
 PROVISIONAL_WEIGHT = 0.5
 KINDS = ("definition", "proposition", "theorem", "lemma", "corollary", "example",

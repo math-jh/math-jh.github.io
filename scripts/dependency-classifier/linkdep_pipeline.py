@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The shadow pipeline's judging steps.
+"""The link-dependency pipeline's judging steps.
 
 Step 1  every stage judges every link of a unit, blind to the other stages.
 Step 2  a risk score from the Step 1 answers and the link's objective features
@@ -22,13 +22,13 @@ import json
 import time
 from pathlib import Path
 
-import shadow_features as feat
-import shadow_models as models
-import shadow_prompts as sp
+import linkdep_features as feat
+import linkdep_models as models
+import linkdep_prompts as sp
 
 MAX_RETRY = 1
 # One call answers at most this many links; a whole article goes in with every chunk.
-MAX_ITEMS = int(__import__("os").environ.get("DEPENDENCY_SHADOW_MAX_ITEMS", "20"))
+MAX_ITEMS = int(__import__("os").environ.get("DEPENDENCY_MAX_ITEMS", "20"))
 # Step 4 and the reveal send their items in batches whose prompt stays under this
 # many bytes.  Half the hard limit: Step 4's second call adds the precedent files on
 # top.  Until 2026-10-31 both sent every item in one call, so a unit with many
@@ -38,8 +38,8 @@ BATCH_PROMPT_BYTES = models.MAX_PROMPT_BYTES // 2
 
 
 def log(message: str) -> None:
-    import dependency_classifier as dc
-    dc.log(message)
+    import linkdep_core as core
+    core.log(message)
 
 
 def pack(items: list, size_of, budget: int | None = None,
@@ -149,7 +149,7 @@ def run_step1(stage: str, call: dict) -> tuple[dict[str, dict], list[dict]]:
 
 def save_raw(stage: str, source_rel: str, missing: int) -> None:
     """Keep the raw response of a call whose rows did not all validate (private state dir)."""
-    import shadow_store as store
+    import linkdep_store as store
     folder = store.STATE_DIR / "debug"
     folder.mkdir(parents=True, exist_ok=True)
     name = f"{time.strftime('%Y%m%d-%H%M%S')}-{stage}-{Path(source_rel).stem}.txt"
@@ -184,10 +184,10 @@ def jsonable(value):
 import hashlib  # noqa: E402
 import time  # noqa: E402
 
-import dependency_classifier as dc  # noqa: E402
-import shadow_book as book  # noqa: E402
-import shadow_risk as risk  # noqa: E402
-import shadow_units as units  # noqa: E402
+import linkdep_core as core  # noqa: E402
+import linkdep_book as book  # noqa: E402
+import linkdep_risk as risk  # noqa: E402
+import linkdep_units as units  # noqa: E402
 
 STAGES = models.STAGES
 STEP1_FIELDS = ("preview", "need", "need_kind", "provided", "relation", "evidence", "reason",
@@ -208,12 +208,12 @@ def step4_items(unit: units.Unit, unit_rec: dict, stage: str, lids: list[str]) -
     for lid in lids:
         link = unit.link(lid)
         text = unit.texts[link.source]
-        _, target_excerpt = dc.target_context(link, True)
+        _, target_excerpt = core.target_context(link, True)
         row = unit_rec["links"][lid]["stages"][stage]["step1"]
         items.append({
             "id": lid, "link": text[link.start:link.ial_end or link.end], "line": link.line,
             "target": link.target,
-            "source_context": dc.source_context(text, link.start, 2),
+            "source_context": core.source_context(text, link.start, 2),
             "target_context": target_excerpt,
             "your_step1": {k: row[k] for k in STEP1_FIELDS},
         })
@@ -317,7 +317,7 @@ def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str]) ->
             entry = book.get(mine["pending_id"])
             mine_view["pending_statement"] = entry.body if entry else None
         items.append({"id": lid, "link": text[link.start:link.ial_end or link.end],
-                      "source_context": dc.source_context(text, link.start, 1),
+                      "source_context": core.source_context(text, link.start, 1),
                       "your_blind_review": mine_view, "lower": lows})
     if not items:
         return []
@@ -493,7 +493,7 @@ def finalize(unit_rec: dict, round_lids: list[str], records: dict, queue: dict,
         if len(set(votes.values())) == 1:
             relation = votes["S1"]
             rec["final"] = {"relation": relation, "by": "unanimous", "at": now}
-            records[lid] = dc.ledger.Record(relation, True)
+            records[lid] = core.ledger.Record(relation, True)
             chosen = list(precs.values())
             split = len(set(chosen)) > 1
             for pid in set(chosen) - {"none"}:
