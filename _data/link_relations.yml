@@ -2,7 +2,7 @@
 # {relation: required|weak|forward, reviewed: true}.
 # 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다. 레코드가 없는 lid 는 미분류다.
 # 같은 lid 를 가진 KO 링크와 EN 링크가 이 레코드 하나를 공유한다.
-# 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
+# 쓰는 곳은 scripts/dependency-classifier/linkdep_*.py 와 대시보드뿐이다.
 "001p1": {relation: weak, reviewed: true}
 "004ns": {relation: weak, reviewed: true}
 "00w8x": {relation: weak, reviewed: true}
