@@ -45,15 +45,13 @@ $$\lim_{x \rightarrow a}f(x)=L$$
 
 $$0<\lvert x-a\rvert<\delta\implies \lvert (cx+d)-(ca+d)\rvert=\lvert c\rvert\lvert x-a\rvert<\lvert c\rvert\delta=\epsilon$$
 
-이 성립하므로 $\lim_{x\rightarrow a}cx+d=ca+d=f(a)$임을 보일 수 있다. $c=0$인 상수함수 $f(x)=d$의 경우, $\lvert f(x)-d\rvert$이 $x$의 값에 관계없이 $0$이므로 양수 $\delta$와 $\epsilon$을 무엇으로 잡아도 $\lim_{x\rightarrow a} f(x)=d$임을 보일 수 있다.
+이 성립하므로 $\lim_{x\rightarrow a}(cx+d)=ca+d=f(a)$임을 보일 수 있다. $c=0$인 상수함수 $f(x)=d$의 경우, $\lvert f(x)-d\rvert$이 $x$의 값에 관계없이 $0$이므로 임의의 $\epsilon>0$에 대해 양수 $\delta$를 무엇으로 잡아도 $\lvert f(x)-d\rvert=0<\epsilon$이 성립하여 $\lim_{x\rightarrow a} f(x)=d$임을 보일 수 있다.
 
-일반적인 함수에 대해서는 약간의 기술이 더 필요하다. 가령 $g(x) = x^2$을 생각하고 $x \rightarrow 2$일 때 극한값이 $4$임을 보이자. 우선
+일반적인 함수에 대해서는 약간 더 신경을 써 주어야 한다. 가령 $g(x) = x^2$을 생각하고 $x \rightarrow 2$일 때 극한값이 $4$임을 보이자. 우선
 
 $$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert$$
 
-를 계산한다. 핵심은 $\lvert x-2\rvert$는 $\epsilon$으로 통제되는 값이지만, 그 앞에 붙는 $\lvert x+2\rvert$는 $x=2$
-
-그래서 먼저 $\delta\leq 1$로 제한해 $\lvert x+2\rvert<5$를 확보하고 ($\delta>1$인 곳은 애초에 관심대상이 아니다), 그 위에서 $\delta=\min(1,\epsilon/5)$로 두면
+를 계산한다. 핵심적인 문제는 $\lvert x-2\rvert$는 $\epsilon$으로 통제되는 값이지만, 여기에 곱해지는 $\lvert x+2\rvert$는 $x=2$에서 멀어지면 그 값이 통제할 수 없이 커질 수 있다는 것이다. 그러나 극한은 $x=2$ 근방에서 일어나는 일만 보는 것이므로 이는 기술적인 문제에 불과하다. 만일 $\delta=\min(1,\epsilon/5)>0$로 두면 우리는 $x$가 $2$에서 최대 $1$만큼만 떨어지게 할 수 있으며, 이 위에서 $\lvert x+2\rvert$는 커봐야 $5$이다. 따라서 이 $\delta$에 대하여
 
 $$0<\lvert x-2\rvert<\delta \implies \lvert x^2-4\rvert<5\delta\leq\epsilon$$
 
@@ -93,7 +91,6 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
 
 이 성립한다.
 :::
-
 ::: 증명
 1. 양수 $\epsilon>0$이 주어졌을 때, $\epsilon/2$에 대응하는 $\delta_1, \delta_2>0$을 각각 $f, g$의 극한의 정의로부터 얻을 수 있다. 이제 $\delta=\min(\delta_1,\delta_2)$로 두면, $0<\lvert x-a\rvert<\delta$일 때
     
@@ -104,7 +101,7 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
 
 3. 다음의 부등식
     
-    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert$$
+    $$\lvert f(x)g(x)-LM\rvert=\lvert f(x)(g(x)-M)+M(f(x)-L)\rvert \leq \lvert f(x)\rvert\lvert g(x)-M\rvert+\lvert M\rvert\lvert f(x)-L\rvert$$
     
     을 사용한다. 그럼 직관적으로 $x$가 $a$로 갈 때 $\lvert g(x)-M\rvert$와 $\lvert f(x)-L\rvert$는 모두 $0$으로 가므로, 만일 그 앞에 붙는 $\lvert f(x)\rvert, \lvert g(x)\rvert$들이 유한하다는 것만 보장된다면 위의 1번과 비슷한 계산을 통해 이를 $\epsilon$보다 작게 만들 수 있다. 
     
@@ -112,7 +109,7 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
         
     $$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
-    이도록 할 수 있고, 비슷하게 $\lvert g(x)\rvert <\lvert M\rvert+1$이도록 하는 $\delta$도 잡을 수 있다. 이제 $\delta$를 이들 두 조건과, 다음 두 조건
+    이도록 할 수 있고, 비슷하게 $\lvert g(x)\rvert <\lvert M\rvert+1$이도록 하는 $\delta_2$도 잡을 수 있다. 이제 $\delta$를 이들 두 조건과, 다음 두 조건
     
     $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
     
@@ -120,115 +117,110 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
 
 4. $1/g(x) \rightarrow 1/M$을 보인 뒤 3을 적용하면 된다. $M \neq 0$이므로 $a$ 근방에서 $\lvert g(x)\rvert > \lvert M\rvert/2$이고,
 
-$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
+    $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
-이므로 $\lvert g(x)-M\rvert$을 충분히 작게 만들면 된다.
+    이므로 $\lvert g(x)-M\rvert$을 충분히 작게 만들면 된다.
 :::
 
 그럼 다음이 성립한다. 
 
 ::: 따름정리 6 (거듭제곱과 거듭제곱근의 극한)
-$\lim_{x\rightarrow a} f(x) = L$이면
+$\lim_{x\rightarrow a} f(x)=L$이면
 
-1. 임의의 양의 정수 $k$에 대해 $\lim_{x\rightarrow a} \bigl(f(x)\bigr)^k = L^k$,
-2. $L > 0$이면 임의의 양의 정수 $k$에 대해 $\lim_{x\rightarrow a} \sqrt[k]{f(x)} = \sqrt[k]{L}$
+1. 임의의 양의 정수 $k$에 대해 $\lim_{x\rightarrow a} \bigl(f(x)\bigr)^k=L^k$,
+2. $L>0$이면 임의의 양의 정수 $k$에 대해 $\lim_{x\rightarrow a} \sqrt[k]{f(x)}=\sqrt[k]{L}$
 
 이 성립한다.
 :::
-
 ::: 증명
-1. [명제 5](#prop5){: data-lid="l1jgq" }의 3을 적용하여 $k$에 대한 귀납법을 돌리면 된다.
-2. 먼저 $L > 0$이므로, $\epsilon_1 = L/2$에 대응하는 $\delta_1 > 0$을 잡으면 
+1. [명제 5](#prop5){: data-lid="l1jgq" }의 3번 결과를 적용하여 $k$에 대한 귀납법을 돌리면 된다.
+2. 먼저 $L>0$이므로, $\epsilon_1=L/2$에 대응하는 $\delta_1>0$을 잡으면 
     
-    $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2$$
+    $$0<\lvert x-a\rvert<\delta_1\implies\lvert f(x)-L\rvert<L/2$$
     
-    이므로 $f(x) > L/2 > 0$이다. 한편, 임의의 양의 실수 $u,v$에 대해 다음 전개
+    이므로 $f(x)>L/2>0$이다. 한편, 임의의 양의 실수 $u,v$에 대해 다음 전개
     
-    $$u - v = \bigl(u^{1/k}-v^{1/k}\bigr)\bigl(u^{(k-1)/k}+u^{(k-2)/k}v^{1/k}+\cdots+v^{(k-1)/k}\bigr)$$
+    $$u-v=\bigl(u^{1/k}-v^{1/k}\bigr)\bigl(u^{(k-1)/k}+u^{(k-2)/k}v^{1/k}+\cdots+v^{(k-1)/k}\bigr)$$
     
-    를 생각하면 우변 둘째 인자의 각 항은 $\min(u,v)^{(k-1)/k}$보다 크거나 같으므로
+    를 생각하면 우변 둘째 인자의 각 항은 $(\min(u,v))^{(k-1)/k}$보다 크거나 같으므로
     
-    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k \min(u,v)^{(k-1)/k}}$$
+    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k(\min(u,v))^{(k-1)/k}}$$
     
-    가 성립한다. 따라서 $0 < \lvert x-a\rvert < \delta_1$이면 $0<L/2 < \min(f(x), L)$이므로, $f(x)=u$, $L=v$를 대입하여
+    가 성립한다. 따라서 $0 < \lvert x-a\rvert < \delta_1$이면 $0<L/2 < \min(f(x), L)$이므로 이 부등식에 의해
     
-    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k (L/2)^{(k-1)/k}}$$
+    $$\bigl\lvert\sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert\leq\frac{\lvert f(x)-L\rvert}{k(\min(f(x),L))^{(k-1)/k}}\leq\frac{\lvert f(x)-L\rvert}{k(L/2)^{(k-1)/k}}$$
     
-    를 얻는다. 이제 임의의 $\epsilon > 0$에 대해 $k (L/2)^{(k-1)/k} \epsilon$에 대응하는 $\delta_2 > 0$을 택하고 $\delta = \min(\delta_1,\delta_2)$로 두면, $0 < \lvert x-a\rvert < \delta$일 때 우변이 $\epsilon$보다 작아진다.
+    를 얻는다. 이제 임의의 $\epsilon>0$에 대해 $k(L/2)^{(k-1)/k}\epsilon$에 대응하는 $\delta_2>0$을 택하고 $\delta=\min(\delta_1,\delta_2)$로 두면, $0<\lvert x-a\rvert<\delta$일 때 우변이 $\epsilon$보다 작아진다.
 :::
 
-이 법칙들을 조합하면 다항함수의 극한은 각 항의 극한으로 분리하여 계산할 수 있다. 핵심은 다음 예시이다. 
+이 법칙들을 조합하면 다항함수의 극한은 각 항의 극한으로 분리하여 계산할 수 있다. 이를 위한 기본 스텝은 [예시 3](#ex3)이다. 
 
 ::: 예시 7
-임의의 실수 $a$에 대하여, 
+[예시 3](#ex3)에 의하여, 우리는 특히 다음 극한
 
-$$\lim_{x\rightarrow a}x=a$$
+$$\lim_{x\rightarrow a} x=a,\qquad \lim_{x\rightarrow a}c=c$$
 
-이다. 이는 $\delta=\epsilon$으로 잡으면 된다. 또, 임의의 실수 $c$에 대하여, 
-
-$$\lim_{x\rightarrow a}c=c$$
-
-이다. 이는 아무런 $\delta$나 잡아도 상관없다. 
-:::
-
-그럼 임의의 다항함수 
+이 성립하는 것을 알고 있다. 따라서 임의의 다항함수 
 
 $$f(x)=c_nx^n+\cdots +c_1x+c_0$$
 
-에 대하여, [명제 5](#prop5){: data-lid="bkyke" }의 합·상수배 법칙으로 극한을 각 항으로 분리하고 거듭제곱에 [따름정리 6](#cor6){: data-lid="kc5tq" }을 적용하면
+에 대하여, [명제 5](#prop5){: data-lid="bkyke" }을 적용하여 극한을 각 항으로 분리하고, 거듭제곱에 [따름정리 6](#cor6){: data-lid="kc5tq" }을 적용하면
 
-$$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
+$$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots+c_1\Bigl(\lim_{x\rightarrow a}x\Bigr)+\lim_{x\rightarrow a}c_0$$
 
-이 되어, 마지막으로 [예시 7](#ex7){: data-lid="oefr5" }을 대입하면 $\lim_{x\rightarrow a}f(x)=f(a)$를 얻는다. 비슷한 방식으로, 다항함수의 비로 이루어진 유리함수의 극한도 분모의 극한이 $0$이 아니라면 분자와 분모의 극한의 비로 얻어진다.
+이 되며, 따라서 위 계산을 대입하면 
+
+$$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots+c_1\Bigl(\lim_{x\rightarrow a}x\Bigr)+\lim_{x\rightarrow a}c_0=c_na^n+\cdots+c_1a+c_0=f(a)$$
+
+를 얻는다. 비슷한 방식으로, 다항함수의 비로 이루어진 유리함수의 극한도 분모의 극한이 $0$이 아니라면 분자와 분모의 극한의 비로 얻어진다.
+:::
 
 ## 조임정리와 극한의 대소관계
 
-극한법칙만으로 계산되지 않는 극한은 종종 부등식으로 가두어 처리한다. 이 방법의 핵심 도구가 조임정리이다.
+현재로서 우리가 가지고 있는 극한법칙과, 계산이 가능한 식들로는 [예시 7](#ex7) 정도가 유도할 수 있는 한계에 가깝다. 보다 일반적인 함수들에 대한 계산을 위해서는 다음과 같이 부등식을 이용한 계산이 필요할 때가 있다.
 
 ::: 명제 8 (조임정리)
-실수 $a$의 삭제된 근방에서 $g(x) \leq f(x) \leq h(x)$이고 $\lim_{x\rightarrow a} g(x) = \lim_{x\rightarrow a} h(x) = L$이면 $\lim_{x\rightarrow a} f(x) = L$이다.
+실수 $a$의 삭제된 근방에서 $g(x) \leq f(x)\leq h(x)$이고 $\lim_{x\rightarrow a} g(x)=\lim_{x\rightarrow a} h(x)=L$이면 $\lim_{x\rightarrow a} f(x)=L$이다.
 :::
-
 ::: 증명
-$\epsilon > 0$에 대해, $g$와 $h$의 극한 정의에서 얻은 $\delta_1, \delta_2$와 $g \leq f \leq h$가 성립하는 근방의 반지름 $\delta_3$을 모아 $\delta = \min(\delta_1,\delta_2,\delta_3)$으로 두자. $0 < \lvert x-a\rvert < \delta$이면 $L - \epsilon < g(x) \leq f(x) \leq h(x) < L + \epsilon$이므로 $\lvert f(x) - L\rvert < \epsilon$이다.
+$\epsilon>0$에 대해, $g$와 $h$의 극한 정의에서 얻은 $\delta_1, \delta_2$와 $g\leq f\leq h$가 성립하는 근방의 반지름 $\delta_3$을 모아 $\delta=\min(\delta_1,\delta_2,\delta_3)$으로 두자. $0<\lvert x-a\rvert<\delta$이면 $L-\epsilon<g(x)\leq f(x)\leq h(x)<L+\epsilon$이므로 $\lvert f(x)-L\rvert<\epsilon$이다.
 :::
 
-부등식과 극한이 어울리는 또 다른 기본 사실은 극한이 대소관계를 보존한다는 것이다.
+극한의 계산에서 부등식을 사용할 때 유용하게 사용할 수 있는 또 다른 기본 사실은 극한이 대소관계를 보존한다는 것이다.
 
 ::: 명제 9 (극한의 대소 보존)
-$a$의 근방에서 ($a$ 제외) $f(x) \leq g(x)$이고 두 극한 $L = \lim_{x\rightarrow a}f(x)$, $M = \lim_{x\rightarrow a}g(x)$이 존재하면 $L \leq M$이다.
+실수 $a$의 삭제된 근방에서 $f(x)\leq g(x)$이고 두 극한 $L=\lim_{x\rightarrow a}f(x)$, $M=\lim_{x\rightarrow a}g(x)$이 존재하면 $L\leq M$이다.
 :::
-
 ::: 증명
-$L > M$이라 가정하고 $\epsilon = \frac{1}{2}(L - M) > 0$으로 두자. 충분히 작은 근방에서 $f(x) > L - \epsilon = \frac{L+M}{2}$이고 $g(x) < M + \epsilon = \frac{L+M}{2}$이므로 $f(x) > g(x)$가 되어 가정에 모순이다. 따라서 $L \leq M$이다.
+결론에 반하여 $L > M$이라 가정하고 $\epsilon=\frac{1}{2}(L-M)>0$으로 두자. 충분히 작은 근방에서 $f(x)>L-\epsilon=\frac{L+M}{2}$이고 $g(x)<M+\epsilon=\frac{L+M}{2}$이므로 $f(x)>g(x)$가 되어 가정에 모순이다. 따라서 $L\leq M$이다.
 :::
 
-여기서 강한 부등식 $f < g$는 강한 부등식 $L < M$을 주지 않음에 유의한다. 예컨대 $f(x) = 0 < x^2 = g(x)$ ($x \neq 0$) 이지만 두 극한은 $x \rightarrow 0$에서 모두 $0$으로 같다. 즉 부등식은 극한에서 약해질 수 있다.
+여기서 가정을 부등식 $f<g$로 바꾸어도 그 결과가 부등식 $L<M$을 주지 않는다는 것을 주의해야 한다. 예컨대 $x\neq 0$에 대하여 $f(x)=0<x^2=g(x)$이지만 두 극한은 $x \rightarrow 0$에서 모두 $0$으로 같다. 
 
-조임정리의 가장 유명한 응용은 다음의 삼각함수 극한으로, 미분에서 삼각함수를 다룰 때 결정적으로 쓰인다.
+조임정리의 가장 유명한 응용은 다음의 삼각함수 극한으로, 삼각함수의 미분공식을 유도할 때 결정적으로 쓰인다.
 
 ::: 예시 10
-$\lim_{x\rightarrow 0}(\sin x)/x = 1$이다. $0 < x < \pi/2$에서 단위원의 넓이를 비교하면 부등식
+$\lim_{x\rightarrow 0}(\sin x)/x=1$이다. 이를 보이기 위해 우선 $0<x<\pi/2$에서 단위원의 넓이를 비교하면 부등식
 
-$$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
+$$\frac{1}{2}\sin x\leq\frac{1}{2}x\leq\frac{1}{2}\tan x$$
 
-를 얻는다. 즉 $\sin x \leq x \leq \tan x$이다.
+를 얻는다. 즉 $\sin x\leq x\leq\tan x$이다.
 
 {% diagram Math/Calculus/functions_and_limits-1.svg width="33.66em" alt="삼각형-부채꼴-직각삼각형 넓이 비교" %}
 
-이제 위 부등식의 양변을 $\sin x > 0$으로 나누고 역수를 취하면
+이제 위 부등식의 양변을 $\sin x>0$으로 나누고 역수를 취하면
 
-$$\cos x \leq \frac{\sin x}{x} \leq 1$$
+$$\cos x\leq \frac{\sin x}{x}\leq 1$$
 
-임을 안다. 이 부등식은 $0 < x < \pi/2$에서 얻은 것이지만, $\cos(-x) = \cos x$이고 $\sin(-x)/(-x) = (\sin x)/x$이므로 $-\pi/2 < x < 0$에서도 그대로 성립하며, 따라서 $0 < \lvert x\rvert < \pi/2$ 전체에서 성립한다. 한편 위에서 얻은 $\sin x \leq x$ 역시 $\sin(-t) = -\sin t$이므로 $0 < \lvert t\rvert < \pi/2$인 모든 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다.
+임을 안다. 이 부등식은 $0<x<\pi/2$에서 얻은 것이지만, $\cos(-x)=\cos x$이고 $\sin(-x)/(-x)=(\sin x)/x$이므로 $-\pi/2<x<0$에서도 그대로 성립하며, 따라서 $0<\lvert x\rvert<\pi/2$ 전체에서 성립한다. 한편 위에서 얻은 $\sin x \leq x$ 역시 $\sin(-t)=-\sin t$이므로 $0<\lvert t\rvert<\pi/2$인 모든 $t$에 대한 부등식 $\lvert \sin t\rvert \leq\lvert t\rvert$로 확장된다.
 
-우리의 주장은 $\cos x \rightarrow 1$이라는 것이다. 이를 위해 삼각함수의 반각공식과 위에서 얻은 $\lvert \sin(x/2)\rvert \leq \lvert x/2\rvert$를 쓰면
+우리의 주장은 $x\rightarrow 0$일 때 $\cos x \rightarrow 1$이라는 것이다. 이를 위해 삼각함수의 반각공식과 위에서 얻은 $\lvert\sin(x/2)\rvert \leq \lvert x/2\rvert$를 쓰면
 
-$$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2 = \frac{x^2}{2}$$
+$$0 \leq \lvert 1-\cos x\rvert = \left\lvert 2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2=\frac{x^2}{2}$$
 
 이므로 
 
-$$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2}$$
+$$-\frac{x^2}{2}\leq 1-\cos x \leq \frac{x^2}{2}$$
 
 이며, [명제 8](#prop8){: data-lid="cglpa" }를 적용하면 $\cos x \rightarrow 1$임을 안다. 이제 이를 이용하여 앞선 부등식에 다시 [명제 8](#prop8){: data-lid="629s1" }를 적용하면 $(\sin x)/x$의 극한값이 $1$임을 안다. 
 :::
