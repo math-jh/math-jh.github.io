@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
-revising: true
+drift_needed: true
 
 ---
 
@@ -210,7 +210,7 @@ $$\frac{1}{2}\sin x\leq\frac{1}{2}x\leq\frac{1}{2}\tan x$$
 
 이제 위 부등식의 양변을 $\sin x>0$으로 나누고 역수를 취하면
 
-$$\cos x\leq \frac{\sin x}{x}\leq 1$$
+$$\cos x\leq \frac{\sin x}{x}\leq 1 \tag{$\ast$}$$
 
 임을 안다. 이 부등식은 $0<x<\pi/2$에서 얻은 것이지만, $\cos(-x)=\cos x$이고 $\sin(-x)/(-x)=(\sin x)/x$이므로 $-\pi/2<x<0$에서도 그대로 성립하며, 따라서 $0<\lvert x\rvert<\pi/2$ 전체에서 성립한다. 한편 위에서 얻은 $\sin x \leq x$ 역시 $\sin(-t)=-\sin t$이므로 $0<\lvert t\rvert<\pi/2$인 모든 $t$에 대한 부등식 $\lvert \sin t\rvert \leq\lvert t\rvert$로 확장된다.
 
@@ -222,7 +222,7 @@ $$0 \leq \lvert 1-\cos x\rvert = \left\lvert 2\sin^2\frac{x}{2}\right\rvert \leq
 
 $$-\frac{x^2}{2}\leq 1-\cos x \leq \frac{x^2}{2}$$
 
-이며, [명제 8](#prop8){: data-lid="cglpa" }를 적용하면 $\cos x \rightarrow 1$임을 안다. 이제 이를 이용하여 앞선 부등식에 다시 [명제 8](#prop8){: data-lid="629s1" }를 적용하면 $(\sin x)/x$의 극한값이 $1$임을 안다. 
+이며, [명제 8](#prop8){: data-lid="cglpa" }를 적용하면 $\cos x \rightarrow 1$임을 안다. 이제 이를 이용하여 ($\ast$)에 다시 [명제 8](#prop8){: data-lid="629s1" }를 적용하면 $(\sin x)/x$의 극한값이 $1$임을 안다. 
 :::
 
 다음 예시 또한 고전적이다. 
@@ -232,7 +232,7 @@ $\lim_{x\rightarrow 0} x\sin(1/x) = 0$이다. 이는 $\bigl\lvert x\sin(1/x)\big
 
 $$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert$$
 
-이고, 양 끝이 $0$으로 가기 때문이다. 반면 $\sin(1/x)$ 자체는 $x \rightarrow 0$에서 극한을 갖지 않는데, $x$가 $0$에 다가가는 동안 $-1$과 $1$ 사이를 무한히 진동하기 때문이다. 인자 $x$가 이 진동을 $0$으로 눌러 주는 것이 조임정리의 기여이다.
+이고, 양 끝이 $0$으로 가기 때문이다. 반면 $\sin(1/x)$ 자체는 $x \rightarrow 0$에서 극한을 갖지 않는데, $x$가 $0$에 다가가는 동안 $-1$과 $1$ 사이를 무한히 진동하기 때문이다. 인자 $x$가 이 진동을 $0$으로 눌러 주는 것이 조임정리가 작동하는 방식이다.
 :::
 
 ## 한쪽 극한과 무한대에서의 극한
@@ -240,40 +240,40 @@ $$-\lvert x\rvert \leq x\sin\frac{1}{x} \leq \lvert x\rvert$$
 지금까지의 극한은 $x$가 $a$로 양쪽에서 다가가는 경우였다. 다가가는 방향을 한쪽으로 제한하거나, $x$ 또는 $f(x)$가 무한히 커지는 경우로 정의를 확장하면 함수의 모양을 더 세밀하게 기술할 수 있다.
 
 ::: 정의 12
-실수 $a$와 함수 $f$에 대해, 적당한 $c > 0$에 대하여 $f$가 $(a, a+c)$에서 정의되어 있다고 하자. 실수 $L$이 $x \rightarrow a^+$일 때 $f$의 *오른쪽 극한<sub>right limit</sub>*이라는 것은, 임의의 $\epsilon > 0$에 대해 어떤 $\delta > 0$이 존재하여
+실수 $a$와 함수 $f$에 대해, 적당한 $c>0$에 대하여 $f$가 구간 $(a, a+c)$에서 정의되어 있다고 하자. 실수 $L$이 $x \rightarrow a^+$일 때 $f$의 *오른쪽 극한<sub>right limit</sub>*이라는 것은, 임의의 $\epsilon>0$에 대해 어떤 $\delta>0$이 존재하여
 
-$$a < x < a+\delta \implies \lvert f(x) - L\rvert < \epsilon$$
+$$a<x<a+\delta \implies \lvert f(x)-L\rvert<\epsilon$$
 
-이 성립하는 것이다. 이 때 $\lim_{x\rightarrow a^+} f(x) = L$로 적는다. 비슷하게 $f$가 $(a-c, a)$에서 정의되어 있을 때, $x \rightarrow a^-$일 때의 *왼쪽 극한<sub>left limit</sub>*은
+이 성립하는 것이다. 이 때 $\lim_{x\rightarrow a^+} f(x)=L$로 적는다. 비슷하게 $f$가 구간 $(a-c, a)$에서 정의되어 있을 때, $x \rightarrow a^-$일 때의 *왼쪽 극한<sub>left limit</sub>*은
 
-$$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
+$$a-\delta<x<a \implies \lvert f(x)-L\rvert<\epsilon$$
 
-으로 정의하고 $\lim_{x\rightarrow a^-} f(x) = L$로 적는다.
+으로 정의하고 $\lim_{x\rightarrow a^-} f(x)=L$로 적는다.
 :::
 
-극한 $\lim_{x\rightarrow a} f(x)$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $f(x) = \lvert x\rvert/x$는 $x \rightarrow 0^+$에서 $1$, $x \rightarrow 0^-$에서 $-1$로 두 한쪽 극한이 다르므로 $x \rightarrow 0$에서의 극한은 존재하지 않는다. 이렇게 두 한쪽 극한이 유한하지만 서로 다른 점을 함수의 jump discontinuity라 부른다.
+극한 $\lim_{x\rightarrow a} f(x)$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $f(x)=\lvert x\rvert/x$는 $x \rightarrow 0^+$에서 $1$, $x \rightarrow 0^-$에서 $-1$로 두 한쪽 극한이 다르므로 $x \rightarrow 0$에서의 극한은 존재하지 않는다. 
+
+또, 다음을 정의한다. 
 
 ::: 정의 13
-실수 $a$의 삭제된 근방에서 정의된 함수 $f$에 대해, $\lim_{x\rightarrow a} f(x) = \infty$란 임의의 $M > 0$에 대해 어떤 $\delta > 0$이 존재하여 $0 < \lvert x-a\rvert < \delta$이면 $f(x) > M$인 것이다. 비슷하게 $\lim_{x\rightarrow a} f(x) = -\infty$란 임의의 $M > 0$에 대해 어떤 $\delta > 0$이 존재하여 $0 < \lvert x-a\rvert < \delta$이면 $f(x) < -M$인 것이다.
+실수 $a$의 삭제된 근방에서 정의된 함수 $f$에 대해, $\lim_{x\rightarrow a} f(x)=\infty$란 임의의 $M>0$에 대해 어떤 $\delta>0$이 존재하여 $0<\lvert x-a\rvert<\delta$이면 $f(x)>M$인 것이다. 비슷하게 $\lim_{x\rightarrow a} f(x)=-\infty$란 임의의 $M>0$에 대해 어떤 $\delta>0$이 존재하여 $0<\lvert x-a\rvert<\delta$이면 $f(x)<-M$인 것이다.
 :::
 
-예컨대 $\lim_{x\rightarrow 0}1/x^2 = \infty$이며, 이 경우 직선 $x = 0$을 그래프의 *수직점근선<sub>vertical asymptote</sub>*이라 한다.
+예컨대 $\lim_{x\rightarrow 0}1/x^2=\infty$이며, 이 경우 직선 $x=0$을 그래프의 *수직점근선<sub>vertical asymptote</sub>*이라 한다. 비슷하게 수평점근선의 개념을 정의할 수 있지만, 이는 $x$가 $\pm\infty$로 움직여야 하므로 앞에서 정의한 극한과는 다소 다른 형태의 정의가 필요하다. 
 
 ::: 정의 14
-어떤 실수 $N_0$보다 큰 $x$에서 정의된 함수 $f$에 대해, $\lim_{x\rightarrow\infty} f(x) = L$이란 임의의 $\epsilon > 0$에 대해 어떤 $N > N_0$이 존재하여 
+어떤 실수 $N_0$보다 큰 $x$에서 정의된 함수 $f$에 대해, $\lim_{x\rightarrow\infty} f(x)=L$이란 임의의 $\epsilon>0$에 대해 어떤 $N>N_0$이 존재하여 
 
-$$x > N\implies\lvert f(x) - L\rvert < \epsilon$$
+$$x>N\implies\lvert f(x)-L\rvert<\epsilon$$
 
-인 것이다. 비슷하게 어떤 $N_0$보다 작은 $x$에서 정의된 함수에 대해 $\lim_{x\rightarrow-\infty} f(x) = L$은 
+인 것이다. 비슷하게 어떤 $N_0$보다 작은 $x$에서 정의된 함수에 대해 $\lim_{x\rightarrow-\infty} f(x)=L$은 
 
-$$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
+$$x<N\implies\lvert f(x)-L\rvert<\epsilon$$
 
-이도록 하는 $N < N_0$이 존재하는 것이다.
+이도록 하는 $N<N_0$이 존재하는 것이다.
 :::
 
-가령 $\lim_{x\rightarrow\infty}1/x = 0$이고, 유리함수에서는 최고차항이 그 행동을 지배하여 $\lim_{x\rightarrow\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$이다. 이러한 유한 극한 $L$이 존재하면 직선 $y = L$이 그래프의 *수평점근선<sub>horizontal asymptote</sub>*이 된다.
-
-직접 대입이 $0/0$ 꼴의 부정형을 줄 때는 인수분해나 분자의 유리화 같은 대수적 변형으로 분모의 영점을 약분하여 극한법칙이 적용되는 형태로 바꾸면 된다. [예시 10](#ex10){: data-lid="qvgeb" }의 $\lim(\sin x)/x = 1$ 또한 이러한 대수적 정리와 결합하여 $\sin$이 섞인 부정형을 처리하는 데 쓰인다.
+가령 $\lim_{x\rightarrow\infty}1/x=0$이다. 만일 이러한 유한한 극한값 $L$이 존재하면, 직선 $y = L$이 그래프의 *수평점근선<sub>horizontal asymptote</sub>*이 된다.
 
 ---
 
