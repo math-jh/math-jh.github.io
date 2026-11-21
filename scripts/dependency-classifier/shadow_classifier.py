@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Shadow re-judging of internal-link relations — the cron entry point.
+"""Judging of internal-link relations — the cron entry point.
 
-Every internal link of `_posts/Math` is judged again from scratch, blind to the
-production ledger, by three fixed models in turn (S1 Antigravity, S2 Claude
-Opus, S3 Codex).  A unanimous result goes to the shadow ledger
-`_data/link_relations_next.yml`; anything else waits for a human ruling on the
-dashboard.  The production ledger stays as it is until the shadow run is
-promoted.  The design record is the memory file project_dependency_shadow_ledger
-and this package's docstrings; criteria.md holds the criteria.
+Every internal link of `_posts/Math` is judged by three fixed models in turn
+(S1 Antigravity, S2 Claude Opus, S3 Codex), each blind to the others' answers.
+A unanimous result goes to the ledger `_data/link_relations.yml`; anything else
+waits for a human ruling on the dashboard.  The design record is this package's
+docstrings; criteria.md holds the criteria.
 
 Modes:
   (no flag)          one cron tick

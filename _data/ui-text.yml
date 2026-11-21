@@ -34,7 +34,7 @@ en: &DEFAULT_EN
   comments_title             : "Comments"
   more_label                 : "Learn more"
   related_label              : "You may also enjoy"
-  semantic_prerequisites_title: "Reading prerequisites"
+  semantic_prerequisites_title: "Before you read"
   semantic_prerequisites_info_label: "About reading prerequisites"
   semantic_prerequisites_notices:
     - "This list is generated automatically from links marked as prerequisites in the post, so basic concepts or background knowledge without an explicit link may be omitted."
@@ -695,7 +695,7 @@ ko: &DEFAULT_KO
   comments_title             : "댓글"
   more_label                 : "더 보기"
   related_label              : "참고"
-  semantic_prerequisites_title: "읽어야 할 글"
+  semantic_prerequisites_title: "먼저 볼 글"
   semantic_prerequisites_info_label: "선수지식 안내"
   semantic_prerequisites_notices:
     - "이 목록은 본문에서 선수지식으로 표시한 링크를 바탕으로 기계적으로 구성되므로, 명시적인 링크가 없는 기본개념이나 배경지식은 빠져 있을 수 있습니다."

@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Where the shadow pipeline keeps things, and how it writes them.
+"""Where the pipeline keeps things, and how it writes them.
 
 Three places, on purpose:
 
-* ``_data/link_relations_next.yml`` (in the repo) — the shadow ledger.  Only
-  finished records, in the production format ``{relation, reviewed}``, keyed by
-  lid.  Jekyll reads it as a fallback for lids the production ledger has no
-  value for (``_plugins/graph_data.rb :: relation_of``), and it replaces the
-  production ledger when the shadow run is promoted.
+* ``_data/link_relations.yml`` (in the repo) — the ledger.  Only finished
+  records ``{relation, reviewed: true}``, keyed by lid.  Jekyll reads it as
+  ``site.data["link_relations"]`` (``_plugins/graph_data.rb :: relation_of``); a
+  lid without a record is unclassified on the site.
 * ``scripts/dependency-classifier/book/`` (in the repo, gitignored) — the
   precedent and pending-issue files, which the human reads and edits.
 * ``~/.local/state/dependency-shadow/`` (never in the repo) — everything else:
@@ -21,7 +20,7 @@ Three places, on purpose:
 Every write is an atomic replace.  Three locks:
 * ``TICK_LOCK_PATH`` — held for a whole tick (and by the pilot), so ticks never
   overlap.  Model calls happen under it, so nothing else waits on it.
-* ``LOCK_PATH`` — held only around a read-modify-write of the queue, the shadow
+* ``LOCK_PATH`` — held only around a read-modify-write of the queue, the
   ledger, or a unit record, by the tick and by the dashboard alike.
 * ``BOOK_LOCK_PATH`` — held around a read-modify-write of a precedent or
   pending-issue file (shadow_book).
@@ -40,7 +39,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
 import link_relations as ledger  # noqa: E402
 
 ROOT = ledger.ROOT
-LEDGER_REL = "_data/link_relations_next.yml"
+LEDGER_REL = "_data/link_relations.yml"
 LEDGER_PATH = ROOT / LEDGER_REL
 STATE_DIR = Path(os.environ.get(
     "DEPENDENCY_SHADOW_STATE_DIR", str(Path.home() / ".local" / "state" / "dependency-shadow")))
@@ -63,11 +62,10 @@ TICK_LOCK_PATH = Path("/tmp/dependency-shadow-tick.lock")
 BOOK_LOCK_PATH = Path("/tmp/dependency-shadow-book.lock")
 
 LEDGER_HEADER = """\
-# 섀도 원장 — 의존성 링크 전면 재판정의 확정 결과 (2026-10-17 결정).
-# 형식은 _data/link_relations.yml 과 같다: 키는 본문 링크 IAL 의 data-lid,
-# 값은 {relation: required|weak|forward, reviewed: true}.
-# 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다.
-# Jekyll 은 프로덕션 원장에 값이 없는 lid 에만 이 파일을 쓴다 (_plugins/graph_data.rb).
+# 링크 관계 원장. 키는 본문 링크 IAL 의 data-lid, 값은 그 출현의 의존 관계다:
+# {relation: required|weak|forward, reviewed: true}.
+# 세 모델 만장일치이거나 사람이 판정한 링크만 여기에 온다. 레코드가 없는 lid 는 미분류다.
+# 같은 lid 를 가진 KO 링크와 EN 링크가 이 레코드 하나를 공유한다.
 # 쓰는 곳은 scripts/dependency-classifier/shadow_*.py 와 대시보드뿐이다.
 """
 
@@ -151,7 +149,7 @@ def lock(timeout: float) -> Lock | None:
         time.sleep(0.5)
 
 
-# ── shadow ledger ─────────────────────────────────────────────────────────
+# ── ledger ────────────────────────────────────────────────────────────────
 
 def load_ledger() -> dict[str, ledger.Record]:
     return ledger.load(LEDGER_PATH)

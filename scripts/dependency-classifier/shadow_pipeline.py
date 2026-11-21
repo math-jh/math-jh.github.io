@@ -475,7 +475,7 @@ def audit_draw(lid: str, rec: dict, links: dict, started_at: float) -> str | Non
 
 def finalize(unit_rec: dict, round_lids: list[str], records: dict, queue: dict,
              started_at: float) -> dict:
-    """Unanimous votes → shadow ledger; anything else → human queue.
+    """Unanimous votes → ledger; anything else → human queue.
 
     The precedents the models chose need not agree: a unanimous relation is final
     even when one model cites a precedent and another cites none or a different

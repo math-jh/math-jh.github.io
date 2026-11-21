@@ -93,7 +93,7 @@ def _locate(lid: str) -> tuple[units.Unit, dict] | None:
 def _recheck_candidates(job_links: list[tuple[units.Unit, dict, str]]) -> list[dict]:
     """Finished links whose Step 1 answers look like the ruled links' — by pattern, not by model.
 
-    Left out: links of drafts and posts under revision (the recheck would drop them),
+    Left out: links of local-only posts (the recheck would drop them),
     links the human decided or is about to (``store.human_decided``, the human queue),
     and links already waiting for a recheck, which will see this precedent anyway.
     Every matching link is collected before RECHECK_OFFER applies, the least rechecked

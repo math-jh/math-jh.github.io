@@ -22,7 +22,7 @@
 #               재시작은 11-11 부터 새벽 03:40 하루 한 번 — ~/.local/bin/jekyll-refresh.py).
 #               그래서 최근 글의 수정일·요약, sitemap 의 lastmod, 과목 카드·아카이브의 요약은
 #               그때까지 옛것일 수 있다.
-# 공통 제외: _data 의 link_relations*(글 페이지만 읽고 분류기 틱마다 바뀐다)·page_urls(URL
+# 공통 제외: _data 의 link_relations(글 페이지만 읽고 분류기 틱마다 바뀐다)·page_urls(URL
 # 목록으로 대신). read_time 이 켜진 글은 본문까지 넣는다 (page__meta 가 단어 수를 센다).
 # 프로세스 첫 빌드와, 빌드가 중간에 실패한 다음 빌드는 지문 비교 없이 전부 렌더한다
 # (지문은 post_write 에서만 확정한다).
@@ -37,7 +37,7 @@ module ListingRegenGate
   TERMS_URLS = %w[/ko/terms /ko/notations /assets/data/terms.json].freeze
   STRUCTURE_LAYOUTS = %w[archive_custom categories recent].freeze
   STRUCTURE_URLS = %w[/sitemap.xml].freeze
-  EXCLUDED_DATA = %w[link_relations link_relations_next page_urls].freeze
+  EXCLUDED_DATA = %w[link_relations page_urls].freeze
   TERMS_DATA = %w[terms notations].freeze
   # archive-single·subject-cards·page__meta·nav_recents·categories·recent 레이아웃과 sitemap 이
   # 글에서 읽는 필드 중 즉시 반영할 것 (last_modified_at·excerpt 는 지연 반영 — 위 주석)

@@ -1,4 +1,4 @@
-/* 의존성 링크 전면 재판정(섀도 원장)의 사람 쪽 화면 — 감사 페이지(#audit) 아래쪽.
+/* 의존성 링크 판정의 사람 쪽 화면 — 감사 페이지(#audit) 아래쪽.
    데이터는 /api/shadow (60초 폴링과 무관하게 이 블록이 직접 읽는다 — 판정 중에
    주기 렌더가 입력 칸을 날리지 않도록 app.js 의 load() 는 감사 페이지를 다시 그리지
    않는다). 동작은 /api/shadow/<동작> POST.
@@ -714,7 +714,7 @@ function shRender() {
   if (d) {
     var p = d.progress, st = p.stages || {};
     bar.innerHTML = '<span>판정 대기 <b>' + p.human + '</b></span><span>감사 <b>' + p.audit + '</b></span>' +
-      '<span>초안 <b>' + p.drafts + '</b></span><span>섀도 원장 <b>' + num(p.ledger) + '</b></span>' +
+      '<span>초안 <b>' + p.drafts + '</b></span><span>원장 <b>' + num(p.ledger) + '</b></span>' +
       '<span class="muted">글 ' + p.units + ' · 끝남 ' + (st.done || 0) + ' · S1 대기 ' + (st.S1 || 0) +
       ' · S2 대기 ' + (st.S2 || 0) + ' · S3 대기 ' + (st.S3 || 0) +
       (p.digest ? ' · digest ' + p.digest : '') + (p.recheck ? ' · 재검토 ' + p.recheck : '') + '</span>';

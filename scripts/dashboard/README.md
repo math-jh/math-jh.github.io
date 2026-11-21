@@ -173,47 +173,26 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
 | `/api/compare/instructions[?path=]` | 메모·판정을 붙여 쓸 수 있는 작업 지시서 (평문) |
 | `/api/compare/macros?v=<sha\|worktree>` | 그 판본의 `katex-macros.js` |
 | `/api/review` (POST) | 검토 판정·메모 — **항목 단위 병합** 저장 (kotypo 처럼 통째 교체하지 않는다). `kind`: `item`·`post`·`note`·`note-del`·`note-done` |
-| `/api/linkaudit/resolve` (POST) | 의존성 링크 보류 한 건(`ident`) 해소 — 아래 참고 |
-| `/api/linkaudit/undo` (POST) | 커밋 전 버튼 판정 한 건(`ident`)을 되돌려 보류로 되살림 — 아래 참고 |
+| `/api/shadow` · `/api/shadow/link` · `/api/shadow/pilot` | 링크 판정 화면의 데이터 — 아래 참고 |
+| `/api/shadow/<동작>` (POST) | 링크 판정·감사·판례 초안 승인 등 (`shadow_api.py`) |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,
 `scripts/index-monitor/state-com.json`, GitHub의 열린 `comment/*` PR, `git log`,
 `systemctl --user is-active jekyll-blog`, `~/Projects/hud-display/state/claude_quota.json`.
 
-## 의존성 링크 보류 (`/dash/audit` 의 '의존성 링크 보류')
-
-의존성 링크 분류기는 한 링크를 두 번 판정한다 — 1차 분류 뒤, 값을 모르는 **다른 모델**이
-다시 분류한다. 둘이 갈리거나 2차가 ambiguous 를 내면 분류기가 **그 링크의 원장 레코드를
-`requires-review` 로 바꾸고** `~/.local/state/dependency-classifier-holds.json` 에 올린 뒤
-notify 한 통을 보낸다. 그래프는 required·weak·forward 만 받으므로 그 링크는 의존성
-그래프에서 빠져 있고, 분류기는 보류 중인 링크를 1차·2차 어느 쪽에서도 다시 고르지 않는다.
+## 링크 판정 (`/dash/audit` 아래쪽)
 
 링크 관계는 글이 아니라 `_data/link_relations.yml` 에 있다 — 글의 링크 IAL 에는
 `{: data-lid="…" }` 만 있고, 원장이 lid 를 키로 `{relation, reviewed}` 를 든다. 같은 lid 를
 가진 KO 링크와 EN 링크가 레코드 하나를 공유하므로 판정은 한 번이면 양쪽에 적용된다.
 
-판정 버튼(`1`/`2`/`3`)은 그 링크의 레코드를 `{relation: …, reviewed: true}` 로 쓰고 항목을
-`settled` 로 옮긴다. 원장에 값을 손으로 적어 둔 경우는 '원장 값 확인' 버튼이 그 값이
-required·weak·forward 인지 확인한 뒤 reviewed 를 붙여 같은 처리를 한다. 사람 판정을
-모델이 뒤집지 못하게 하는 것은 레코드의 `reviewed: true` 다 — 분류기는 `settled` 를 읽지
-않으므로, `settled` 는 판정 이력과 되돌리기 기록만 든다.
-'링크 판정 커밋' 버튼이 원장을 `[Dash] Link Review [lastmod-skip]` 로 커밋하고, push 는
-autopush 소관이다.
-
-락은 둘이다. 원장 쓰기는 분류기와 공유하는 `/tmp/link-relations.lock` 아래에서 한다 —
-분류기가 틱 내내 이 락을 쥐므로(보통 1분 안) 버튼은 최대 2분 기다리고, 그래도 못 잡으면
-"분류기가 원장을 쓰는 중" 오류를 띄운다. 보류 원장 쓰기는 `/tmp/dependency-classifier-holds.lock`
-flock 아래에서만 한다. 통째로 덮으면 그 사이 워커가 붙인 보류가 에러 없이 사라진다.
-
-키보드: `j`/`k` 이동, `1`/`2`/`3` 은 required/weak/forward 판정, `u` 는 되돌리기.
-
-**되돌리기.** 버튼 판정은 `settled[ident].undo` 에 되돌리기 기록을 남긴다 — 원래 `held`
-항목, lid, 그 레코드의 옛 값·새 값, 그리고 판정 때 원장의 HEAD blob id.
-`/api/linkaudit/undo` 는 원장 HEAD blob 이 그대로이고(커밋 전) 그 레코드가 서버가 쓴 값
-그대로일 때만 옛 값을 되돌리고 항목을 `held` 로 옮긴다. 어긋나면 원장은 건드리지 않고
-그 기록만 지운다. 대시보드 커밋 버튼도 기록을 지운다. '원장 값 확인' 경로는 기록을
-남기지 않아 되돌릴 수 없다.
+분류기(`scripts/dependency-classifier/shadow_*.py`)는 세 모델이 만장일치인 링크만 원장에 쓰고,
+갈린 링크는 사람 큐로 보낸다. 화면(`shadow.js`)은 판정 대기·감사·판례 초안·판례·끝난 판정
+다섯 탭이고, 데이터와 동작은 `shadow_api.py` 가 분류기와 같은 모듈로 읽고 쓴다. 쓰기는
+`shadow_store` 의 짧은 상태 락(`/tmp/dependency-shadow.lock`) 아래에서 한다. 사람 판정이
+원장에 남긴 변경은 다음 분류기 틱이 `[Cron] Link Dependencies Shadow [lastmod-skip]` 로
+커밋하고, push 는 autopush 소관이다.
 
 ## 손볼 때 알아야 할 것
 

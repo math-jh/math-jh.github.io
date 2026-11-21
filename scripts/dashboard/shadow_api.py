@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""감사 페이지(#audit) 링크 재판정의 데이터와 판정 동작 — 의존성 링크 전면 재판정(섀도 원장).
+"""감사 페이지(#audit) 링크 판정의 데이터와 판정 동작.
 
 데이터의 정본은 scripts/dependency-classifier/shadow_*.py 가 쓰는 상태다
-(~/.local/state/dependency-shadow, _data/link_relations_next.yml). 여기서는 그걸
+(~/.local/state/dependency-shadow, _data/link_relations.yml). 여기서는 그걸
 읽어 화면용으로 묶고, 사람의 판정을 같은 모듈로 쓴다. 쓰기는 전부 shadow_store 의
 짧은 상태 락 안에서 한다 — 틱은 모델 호출 중에 이 락을 쥐지 않으므로 오래 기다릴
 일이 없다.

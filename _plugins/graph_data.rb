@@ -95,16 +95,11 @@ module GraphData
     h ? "hsl(#{h}, 55%, 60%)" : "#8a8f98" # hues 없는 카테고리(llm_workshop 등)는 회색
   end
 
-  # lid → relation. requires-review 처럼 그래프가 받지 않는 값과 레코드 없는 lid 는
-  # 미분류로 본다. 프로덕션 원장에 받을 값이 없으면 섀도 원장(link_relations_next.yml,
-  # 전면 재판정의 확정 결과)을 본다 — 승격 전까지는 프로덕션 값이 있으면 그 값이 이긴다.
+  # lid → relation. 레코드 없는 lid 와 그래프가 받지 않는 값은 미분류로 본다.
   def relation_of(site, lid)
-    [site.data["link_relations"], site.data["link_relations_next"]].each do |book|
-      record = (book || {})[lid]
-      relation = record.is_a?(Hash) ? record["relation"] : nil
-      return relation if RELATION_PRIORITY.key?(relation)
-    end
-    nil
+    record = (site.data["link_relations"] || {})[lid]
+    relation = record.is_a?(Hash) ? record["relation"] : nil
+    RELATION_PRIORITY.key?(relation) ? relation : nil
   end
 
   def classified_links(site, text)

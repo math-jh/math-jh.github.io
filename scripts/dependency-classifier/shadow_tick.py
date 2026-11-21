@@ -8,20 +8,20 @@ Order of business:
    lids ends there.
 2. one digest job, if the dashboard queued any (a ruling with an explanation, or
    a pending issue to turn into a precedent).
-3. one recheck, once the shadow ledger is full (``fill_complete``).  Until then
+3. one recheck, once the ledger is full (``fill_complete``).  Until then
    approved rechecks wait in the queue.
 4. one stage of one unit.  A unit whose round is under way comes first, oldest
    first, as soon as the provider of its next stage is open — rounds are
    finished before new ones start, so the calibration and the precedents see
    complete results early.  A new round starts only while fewer than ``WIP_CAP``
    rounds are open.  New links in a finished unit come before untouched units,
-   and among untouched units those with links production has no value for come
-   first, since the shadow ledger fills exactly those slots on the site.  Only
-   published posts that are not under revision are judged (``out_of_scope``).
+   and among untouched units those with links the ledger has no value for come
+   first.  Drafts and posts under revision are judged like any other post; only
+   the local-only posts are left alone (``out_of_scope``).
 
 A round is the set of links one pass through S1→S2→S3 judges.  If a unit's text
 changes while its round is open, the round restarts.  After S3 the round is
-finalized: unanimous links go to the shadow ledger, which is committed
+finalized: unanimous links go to the ledger, which is committed
 (``[Cron] Link Dependencies Shadow [lastmod-skip]``); the rest go to the human
 queue.
 
@@ -30,7 +30,7 @@ failed run, so those words appear only for real failures.
 """
 from __future__ import annotations
 
-import re
+import subprocess
 import time
 from pathlib import Path
 
@@ -60,25 +60,24 @@ def _fingerprint(paths: list[Path]) -> str:
     return units.Unit(key="", paths=paths, texts={p: p.read_text(encoding="utf-8") for p in paths}).fingerprint
 
 
-# The key of scripts/ci/freeze_revising_posts.py for a published post being reworked.
-REVISING_RE = re.compile(r"^revising:\s*true\s*$", re.M)
+def tracked_posts() -> set[str]:
+    """Repo-relative paths of the posts git tracks."""
+    proc = subprocess.run(["git", "ls-files", "-z", "--", "_posts"], cwd=str(store.ROOT),
+                          capture_output=True, text=True)
+    if proc.returncode:
+        raise RuntimeError(f"could not list tracked posts: {proc.stderr.strip()[:200]}")
+    return set(filter(None, proc.stdout.split("\0")))
 
 
 def out_of_scope(all_paths: list[list[Path]]) -> set[str]:
-    """Keys of the units the cron leaves alone: drafts (``published: false``) and posts
-    under revision.  Their text is still being edited and links come and go, so they
-    are judged once the flag is gone (user decision 2026-10-20).  A round under way
-    pauses and restarts then, since the text will have changed."""
-    published = {post.path: post.published for post in dc._POSTS}
-    skip = set()
-    for paths in all_paths:
-        for path in paths:
-            text = path.read_text(encoding="utf-8")
-            front = text[4:].split("\n---", 1)[0] if text.startswith("---\n") else ""
-            if not published.get(path, True) or REVISING_RE.search(front):
-                skip.add(dc.unit_key(paths))
-                break
-    return skip
+    """Keys of the units the cron leaves alone: the local-only posts, i.e. units with
+    a file git does not track (the private research stream).  The ledger is committed
+    to a public repo, and these posts never reach the site.  Drafts
+    (``published: false``) and posts under revision are in scope: an edit that adds
+    links starts a delta round, like in any finished post."""
+    tracked = tracked_posts()
+    return {dc.unit_key(paths) for paths in all_paths
+            if any(str(p.relative_to(store.ROOT)) not in tracked for p in paths)}
 
 
 def pick(state: dict) -> tuple | None:
@@ -123,7 +122,7 @@ def pick(state: dict) -> tuple | None:
     if open_rounds >= WIP_CAP or not models.available("S1"):
         return None
     # 2. finished units whose text changed (new links), then 3. untouched units
-    production = dc.ledger.load()
+    records = store.load_ledger()
     fresh_blank, fresh_other = [], []
     for paths in all_paths:
         key = dc.unit_key(paths)
@@ -140,8 +139,7 @@ def pick(state: dict) -> tuple | None:
                 return paths, "S1", unit, "delta"
             entry["fp"] = unit.fingerprint              # edits without new links
             continue
-        blank = any(production.get(l) is None or production[l].relation not in dc.RELATIONS
-                    for l in _cheap_lids(paths))
+        blank = any(l not in records for l in _cheap_lids(paths))
         (fresh_blank if blank else fresh_other).append(paths)
     for paths in fresh_blank + fresh_other:
         unit = units.load_unit(paths)
@@ -178,7 +176,7 @@ def start_round(unit: units.Unit, record: dict, reason: str) -> list[str]:
 
 
 def commit_ledger(detail: str, commit: bool) -> None:
-    """Commit whatever the shadow ledger holds now (the dashboard's rulings ride along).
+    """Commit whatever the ledger holds now (the dashboard's rulings ride along).
 
     ``commit_outputs`` also returns False when there is nothing to commit: a round
     that sent every link to the human queue leaves the ledger as it was, and
@@ -186,12 +184,12 @@ def commit_ledger(detail: str, commit: bool) -> None:
     still dirty afterwards is a failure.
     """
     if not commit:
-        log(f"shadow ledger saved without commit: {detail}")
+        log(f"ledger saved without commit: {detail}")
         return
     if commit_outputs("Link Dependencies Shadow", [LEDGER_REL], detail, log=log, repo=store.ROOT):
         return
     if dirty_paths([LEDGER_REL], store.ROOT):
-        raise RuntimeError("could not commit the shadow ledger")
+        raise RuntimeError("could not commit the ledger")
 
 
 def _locked():
@@ -234,7 +232,7 @@ def run_digest() -> bool:
 
 
 def fill_complete(state: dict) -> bool:
-    """Whether every post in scope has finished a round, i.e. the shadow ledger is full.
+    """Whether every post in scope has finished a round, i.e. the ledger is full.
 
     Rechecks wait for this.  A post that has not had its round yet meets every
     precedent in that round, so rechecking finished links one precedent at a time
@@ -284,8 +282,7 @@ def run_recheck(commit: bool) -> bool:
             found = (paths, h, record)
             break
     gone = found is None or units.load_unit(found[0]).link(lid) is None
-    # A draft or a post under revision gets a fresh round once its flag is gone,
-    # and that round sees the new precedent anyway.
+    # A post that went local-only is no longer judged.
     paused = not gone and dc.unit_key(found[0]) in out_of_scope(all_paths)
     human = not gone and (lid in queue["human"]
                           or store.human_decided(lid, found[2]["links"][lid], queue))
@@ -294,7 +291,7 @@ def run_recheck(commit: bool) -> bool:
             queue = store.load_queue()
             queue["recheck"] = [x for x in queue["recheck"] if x["lid"] != lid]
             store.save_queue(queue)
-        why = ("the link is gone" if gone else "its post is a draft or under revision" if paused
+        why = ("the link is gone" if gone else "its post is local-only" if paused
                else "the human decides this link")
         log(f"shadow recheck {lid}: {why}; dropped")
         return True
@@ -348,9 +345,9 @@ def tick(*, commit: bool = True) -> int:
         return 0
     probe = dc.ledger.try_lock()
     if probe is None:
-        # The old classifier holds this for its whole tick; the dashboard only for
-        # a moment.  Either way, mint_lids should not race it.
-        log("link relation ledger is locked (old classifier or dashboard); skip this tick")
+        # Only the old classifier takes this lock, for its whole tick.  It writes the
+        # same ledger file, and mint_lids should not race it.
+        log("link relation ledger is locked (old classifier); skip this tick")
         return 0
     probe.release()
     tick_lock = store.try_tick_lock()
@@ -376,12 +373,12 @@ def tick(*, commit: bool = True) -> int:
         return run(state, paths, stage, unit, reason, commit=commit)
     finally:
         try:
-            # Dashboard rulings write the shadow ledger too; commit them even on a
+            # Dashboard rulings write the ledger too; commit them even on a
             # tick that finalized nothing, so they never sit in the tree for autopush.
             if commit and dirty_paths([LEDGER_REL], store.ROOT):
                 commit_ledger("대시보드 판정 반영", commit)
         except Exception as exc:  # noqa: BLE001
-            log(f"ERROR shadow ledger commit: {exc}")
+            log(f"ERROR ledger commit: {exc}")
         tick_lock.release()
 
 

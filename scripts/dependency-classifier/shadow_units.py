@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Units and the items a stage asks about.
 
-A unit is a KO post and its EN counterpart (or an EN post without one), exactly
-as the old classifier groups them, so lids line up with the production ledger.
+A unit is a KO post and its EN counterpart (or an EN post without one), as
+``dependency_classifier.iter_units`` groups them.
 The links judged are every KO link with a lid, plus the EN links whose lid is
 not in the KO post (EN-only occurrences).  An EN link sharing a KO lid is the
 KO link's translation and shares its record.

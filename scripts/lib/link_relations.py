@@ -9,11 +9,13 @@ occurrence means for the dependency graph lives here, keyed by the lid:
 A KO link and the EN link that translates it share one lid, so they share one
 record.  A lid without a record is waiting for the classifier.
 
-The dependency classifier and the dashboard's ruling buttons are the only
-writers.  Both hold `LOCK_PATH` for the whole read-modify-write: the classifier
-for its entire tick (a tick finds the lock taken and skips), the dashboard for a
-single ruling.  Jekyll (`_plugins/graph_data.rb`) reads the file as
-`site.data["link_relations"]`.
+The writers are the judging pipeline (`scripts/dependency-classifier/shadow_*.py`)
+and the dashboard's rulings (`scripts/dashboard/shadow_api.py`); both go through
+`shadow_store.save_ledger` under that module's state lock.  `LOCK_PATH` here
+belongs to the two-model classifier that preceded the pipeline
+(`dependency_classifier.py :: main`, no longer on cron), which holds it for its
+whole tick; the pipeline's tick skips while it is taken.  Jekyll
+(`_plugins/graph_data.rb`) reads the file as `site.data["link_relations"]`.
 """
 from __future__ import annotations
 
