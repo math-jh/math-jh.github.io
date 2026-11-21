@@ -20,7 +20,7 @@ group: agents
 
 ---
 
-관련 파일: [`scripts/dependency-classifier/criteria.md`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/criteria.md), [`shadow_pipeline.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_pipeline.py), [`shadow_prompts.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_prompts.py), [`shadow_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_tick.py), [`shadow_models.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_models.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`scripts/dashboard/shadow.js`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/shadow.js), [커밋 d4928f2a](https://github.com/math-jh/math-jh.github.io/commit/d4928f2a), [커밋 a92861e7](https://github.com/math-jh/math-jh.github.io/commit/a92861e7)
+관련 파일: [`scripts/dependency-classifier/criteria.md`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/criteria.md), [`shadow_pipeline.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_pipeline.py), [`shadow_prompts.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_prompts.py), [`shadow_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_tick.py), [`shadow_models.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_models.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`scripts/dashboard/shadow.js`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/shadow.js), [커밋 d4928f2a](https://github.com/math-jh/math-jh.github.io/commit/d4928f2a), [커밋 a92861e7](https://github.com/math-jh/math-jh.github.io/commit/a92861e7), [커밋 b93452e6](https://github.com/math-jh/math-jh.github.io/commit/b93452e6)
 {: .notice--info}
 
 시작은 엉뚱한 질문이었다. 사용자가 Laya라는 판정 모델을 이 Pi에서 돌릴 수 있느냐고 물었는데, 물은 이유는 따로 있었다.
@@ -112,7 +112,7 @@ front matter의 `description`과 `excerpt`는 글을 요약할 뿐인데 모델�
 
 ## 글 단위 틱과 세 CLI의 호출 방식
 
-한 글을 3차까지 끝까지 돌리는 것은 사용자의 결정이었다. 차수 단위로 돌면 한 주 내내 한 provider만 쓰이고, 보정표와 판례는 3차까지 끝난 결과가 있어야 쓸모가 생긴다. 그래서 `shadow_tick.py`의 틱 하나는 한 글의 한 차수만 돌린다. 진행 중인 라운드가 먼저이고 열린 라운드는 넷(`WIP_CAP`)까지이며, 새 글 중에서는 프로덕션 원장에 값이 없는 링크를 가진 글이 앞선다. 10월 20일부터는 초안과 `revising: true`인 글을 판정해 봐야 버려진다는 사용자의 결정에 따라 플래그가 빠질 때까지 건너뛴다. 크론은 매시 :05와 :45에 돈다. LLM 크론끼리 램을 두고 겹치지 않게 한다는 사용자의 원칙에 따라 :15의 번역 워커를 피한 자리다.
+한 글을 3차까지 끝까지 돌리는 것은 사용자의 결정이었다. 차수 단위로 돌면 한 주 내내 한 provider만 쓰이고, 보정표와 판례는 3차까지 끝난 결과가 있어야 쓸모가 생긴다. 그래서 `shadow_tick.py`의 틱 하나는 한 글의 한 차수만 돌린다. 진행 중인 라운드가 먼저이고 열린 라운드는 넷(`WIP_CAP`)까지이며, 새 글 중에서는 프로덕션 원장에 값이 없는 링크를 가진 글이 앞선다. 10월 20일부터는 초안과 `revising: true`인 글을 판정해 봐야 버려진다는 사용자의 결정에 따라 플래그가 빠질 때까지 건너뛰었고, 11월 21일 승격 때 이 제외가 로컬 글만 남기는 것으로 바뀌었다(아래 「섀도 원장의 대체값과 본편 승격」). 크론은 매시 :05와 :45에 돈다. LLM 크론끼리 램을 두고 겹치지 않게 한다는 사용자의 원칙에 따라 :15의 번역 워커를 피한 자리다.
 
 호출 단위는 글이다. 원문 전체를 한 번 넣고, 다른 글의 대상은 발췌문을 붙인다. agy는 프롬프트를 명령행 인자 하나로 받는데, 인자 하나 한도는 페이지 크기의 32배라 16K 페이지인 이 Pi에서는 600,000바이트에서 `Argument list too long`이 났다. 그래서 `MAX_PROMPT_BYTES`는 400KB이고, 링크를 나눠 물어도 이를 넘는 글은 본문 지문이 바뀔 때까지(길어도 일주일) 세워 둔다. 같은 본문은 같은 프롬프트를 만들기 때문이다.
 
@@ -154,9 +154,9 @@ _credit_cli("exhausted", "--kind", refusal, "--detail", detail[:300], "--by", CR
 
 거절 판정(`_credit_refusal`)은 HTTP 401·403이면 `auth`, 응답이나 stderr에 `credit balance`·`purchase credits`·`add funds`가 있으면 `credit`이고, 그 밖의 실패는 거절이 아니라 평소의 오류로 넘어간다. 거절이면 라우터에 `exhausted`를 알리고 같은 요청을 구독으로 다시 부르므로 크레딧이 바닥나도 S2는 멈추지 않는다. 어느 쪽이 냈는지는 `usage["billing"]`에 `credit`이나 `subscription`으로 남는다([커밋 2b454562](https://github.com/math-jh/math-jh.github.io/commit/2b454562)).
 
-## 섀도 원장과 그래프의 대체값
+## 섀도 원장의 대체값과 본편 승격
 
-섀도 원장은 프로덕션 원장과 형식이 같다. 그래서 다 채워지기 전에도 프로덕션이 비어 있는 자리, 곧 새 링크와 requires-review 링크는 섀도 값을 당겨 쓸 수 있다. `_plugins/graph_data.rb`에서 바뀐 곳은 `relation_of` 하나다.
+섀도 원장은 프로덕션 원장과 형식이 같다. 그래서 다 채워지기 전에도 프로덕션이 비어 있는 자리, 곧 새 링크와 requires-review 링크는 섀도 값을 당겨 쓸 수 있었다. 10월 17일에 `_plugins/graph_data.rb`에서 바뀐 곳은 `relation_of` 하나다.
 
 ```ruby
 def relation_of(site, lid)
@@ -168,9 +168,45 @@ def relation_of(site, lid)
   nil
 end
 ```
-{: data-filename="_plugins/graph_data.rb · 일부 발췌"}
+{: data-filename="_plugins/graph_data.rb · 11월 21일 승격 이전, 일부 발췌"}
 
 두 원장을 프로덕션, 섀도 순으로 보면서, 레코드가 없거나 값이 `requires-review`처럼 세 관계가 아니면 다음 원장으로 넘어간다. 프로덕션에 받을 값이 있으면 거기서 끝나므로 승격 전까지는 프로덕션이 이긴다. 빈 섀도 원장으로 클린 빌드한 `dependencies-{ko,en}.json`은 바꾸기 전과 바이트 단위로 같았다.
+
+승격은 11월 21일에 있었다. 사용자는 한 메시지로 두 가지를 시켰다.
+
+> (1) 이제 섀도 원장을 정식으로 교체해주고, (2) 미발행 초안도 크론 범위에 넣어줘. 단 로컬 글은 제외.
+
+교체는 `_data/link_relations.yml`을 섀도 원장의 내용으로 통째로 바꾸는 것이었고, 5,180줄짜리 `link_relations_next.yml`은 삭제됐다. 파이프라인(`shadow_store.LEDGER_REL`)과 대시보드의 판정이 이제 `link_relations.yml`을 직접 읽고 쓴다. 그래서 `relation_of`의 두 원장 순회는 한 원장을 보는 세 줄로 줄었다.
+
+```ruby
+def relation_of(site, lid)
+  record = (site.data["link_relations"] || {})[lid]
+  relation = record.is_a?(Hash) ? record["relation"] : nil
+  RELATION_PRIORITY.key?(relation) ? relation : nil
+end
+```
+{: data-filename="_plugins/graph_data.rb · 일부 발췌"}
+
+원장에 레코드가 없는 lid나 그래프가 받지 않는 값은 미분류다. 프로덕션 값에 밀려 섀도 값이 못 쓰이는 경우가 없어졌고, `listing_regen_gate.rb`의 `EXCLUDED_DATA`(글 페이지만 읽고 판정 틱마다 바뀌어 목록 재렌더 판단에서 빼는 데이터)에서도 `link_relations_next` 항목이 빠졌다. 두 모델이 판정하던 옛 분류기는 `dependency_classifier.py`로 남아 있지만 크론에서 내려왔고, 파이프라인 틱은 그 분류기가 쥐는 `link-relations.lock`이 잡혀 있을 때만 건너뛴다. 대시보드 서버에서는 옛 '의존성 링크 보류' 화면의 `/api/linkaudit/*`와 보류 원장(holds) 코드 500여 줄이 지워졌다. 본문 상단에 선수 글을 모아 보이는 상자의 제목도 이때 "읽어야 할 글"에서 "먼저 볼 글"(영문 "Before you read")로 바뀌었다.
+
+초안 쪽 변경은 크론의 범위를 정하는 `out_of_scope`에 있다. 10월 20일부터 이 함수는 `published: false`인 글과 `revising: true`인 글을 정규식으로 찾아 건너뛰었다. 승격 뒤에는 글의 front matter를 보지 않고 git이 추적하는 글인지만 본다.
+
+```python
+def tracked_posts() -> set[str]:
+    """Repo-relative paths of the posts git tracks."""
+    proc = subprocess.run(["git", "ls-files", "-z", "--", "_posts"], cwd=str(store.ROOT),
+                          capture_output=True, text=True)
+    ...
+    return set(filter(None, proc.stdout.split("\0")))
+
+def out_of_scope(all_paths):
+    tracked = tracked_posts()
+    return {dc.unit_key(paths) for paths in all_paths
+            if any(str(p.relative_to(store.ROOT)) not in tracked for p in paths)}
+```
+{: data-filename="scripts/dependency-classifier/shadow_tick.py · 일부 생략"}
+
+판정 단위의 파일 중 하나라도 git 밖에 있으면 그 묶음은 로컬 글로 보고 건너뛴다. 원장은 공개 저장소에 커밋되는데, 사용자가 로컬 글이라 부르는 비공개 연구 스트림은 사이트에 올라가지 않기 때문이다. 초안과 개정 중인 글은 일반 글처럼 판정받고, 본문을 고쳐 링크가 늘면 끝난 글에 새 링크가 생겼을 때와 같은 delta 라운드가 돈다. 10월 20일에 이 글을 건너뛰게 한 이유는 편집 중이라 링크가 오가기 때문이었고, 새 규칙은 그 부담을 delta 라운드에 맡긴다.
 
 ## 감사 페이지 안의 재판정 화면
 
