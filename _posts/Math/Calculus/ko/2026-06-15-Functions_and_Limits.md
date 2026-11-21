@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
-
+revising: true
 
 ---
 
@@ -25,29 +25,37 @@ weight: 1
 점 $a$의 근방은 현재는 이 정도의 정의로 충분하다. 특별히 점 $a$의 근방 중 $a$ 자기 자신이 빠진 집합을 편의상 *삭제된 근방<sub>deleted neighborhood</sub>*이라 부른다. 
 
 ::: 정의 2
-점 $a$의 어떤 삭제된 근방에서 정의된 함수 $f$를 생각하자. 그럼 실수 $L$이 $x \rightarrow a$일 때 $f$의 *극한<sub>limit</sub>*이라는 것은, 임의의 $\epsilon > 0$에 대하여 어떤 $\delta > 0$이 존재하여
+점 $a$의 어떤 삭제된 근방에서 정의된 함수 $f$를 생각하자. 그럼 실수 $L$이 $x\rightarrow a$일 때 $f$의 *극한<sub>limit</sub>*이라는 것은, 임의의 $\epsilon>0$에 대하여 어떤 $\delta>0$이 존재하여
 
-$$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
+$$0<\lvert x-a\rvert<\delta \implies \lvert f(x)-L\rvert<\epsilon$$
 
 이 성립하는 것이다. 이 때 
 
-$$\lim_{x \rightarrow a} f(x) = L$$
+$$\lim_{x \rightarrow a}f(x)=L$$
 
 로 적는다.
 :::
 
-이에 대한 직관적인 설명은 다음과 같다. 우리가 고등학교 때 극한의 개념을 $f(x)$가 $L$에 <em-ko>무한히 가까워진다</em-ko>고 이야기하는 것이 엄밀한 수학적 정의가 될 수 없는 이유는 <em-ko>가깝다</em-ko>는 개념이 수학적이지 않기 때문이다. 가령 $L$과 가까운 숫자들의 모임이, 수학적으로는 집합을 정의하지 않는 것과 같은 이치이다. 
+이에 대한 직관적인 설명은 다음과 같다. 우리가 고등학교 때 극한의 개념을 $f(x)$가 $L$에 <em-ko>무한히 가까워진다</em-ko>고 이야기하는 것이 엄밀한 수학적 정의가 될 수 없는 이유는 <em-ko>가깝다</em-ko>는 개념이 수학적이지 않기 때문이다. <em-ko>가령 $L$과 가까운 숫자들의 모임</em-ko>이, 수학적으로는 집합을 정의하지 않는 것과 같은 이치이다. 
 
-직관적으로 위의 $\epsilon$-$\delta$ 정의는 이를 해결하기 위해, 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각하면 이해가 편하다. 즉, $f(x)$가 $L$에 <em-ko>얼마나</em-ko> 가까울 것을 요구하든 (즉, 어떤 $\epsilon>0$이 주어지든), $x$가 $a$에 충분히 가깝도록 하기만 하면 ($0 < \lvert x - a\rvert < \delta$) 그 요구 $\lvert f(x) - L\rvert < \epsilon$을 맞춰줄 수 있다는 것이다. 이를 다음 예시에서 살펴보자.
+직관적으로 위의 $\epsilon$-$\delta$ 정의는 이를 해결하기 위해, 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각하면 이해가 편하다. 즉, $f(x)$가 $L$에 <em-ko>얼마나</em-ko> 가까울 것을 요구하든 (즉, 어떤 $\epsilon>0$이 주어지든), $x$가 $a$에 충분히 가깝도록 하기만 하면 ($0<\lvert x-a\rvert<\delta$) 그 요구 $\lvert f(x)-L\rvert<\epsilon$을 맞춰줄 수 있다는 것이다. 이를 다음 예시에서 살펴보자.
 
 ::: 예시 3
-정의를 직접 적용해 극한을 증명할 때, 일차함수처럼 $\lvert f(x) - L\rvert$이 $\lvert x - a\rvert$의 상수배이면 $\delta$를 곧바로 읽어낼 수 있지만, 변화율이 일정하지 않은 함수에서는 한 가지 손질이 필요하다. $g(x) = x^2$을 생각하고 $x \rightarrow 2$일 때 극한값이 $4$임을 보이자. 우선
+일차함수의 경우 $\lvert f(x)-L\rvert$이 $\lvert x-a\rvert$의 상수배가 된다. 예를 들어 $f(x)=cx+d$ ($c\neq 0$)라 하면, 임의의 $\epsilon>0$에 대하여 $\delta>0$을 $\delta=\epsilon/\lvert c\rvert$로 정의하면
+
+$$0<\lvert x-a\rvert<\delta\implies \lvert (cx+d)-(ca+d)\rvert=\lvert c\rvert\lvert x-a\rvert<\lvert c\rvert\delta=\epsilon$$
+
+이 성립하므로 $\lim_{x\rightarrow a}cx+d=ca+d=f(a)$임을 보일 수 있다. $c=0$인 상수함수 $f(x)=d$의 경우, $\lvert f(x)-d\rvert$이 $x$의 값에 관계없이 $0$이므로 양수 $\delta$와 $\epsilon$을 무엇으로 잡아도 $\lim_{x\rightarrow a} f(x)=d$임을 보일 수 있다.
+
+일반적인 함수에 대해서는 약간의 기술이 더 필요하다. 가령 $g(x) = x^2$을 생각하고 $x \rightarrow 2$일 때 극한값이 $4$임을 보이자. 우선
 
 $$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert$$
 
-를 계산한다. 핵심은 $\lvert x-2\rvert$는 $2$ 근방에서 작지만 그 앞에 붙는 $\lvert x+2\rvert$는 통제되지 않으면 곱을 키울 수 있다는 점이다. 그래서 먼저 $\delta\leq 1$로 제한해 $\lvert x+2\rvert<5$를 확보하고 ($\delta>1$인 곳은 애초에 관심대상이 아니다), 그 위에서 $\delta=\min(1,\epsilon/5)$로 두면
+를 계산한다. 핵심은 $\lvert x-2\rvert$는 $\epsilon$으로 통제되는 값이지만, 그 앞에 붙는 $\lvert x+2\rvert$는 $x=2$
 
-$$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$
+그래서 먼저 $\delta\leq 1$로 제한해 $\lvert x+2\rvert<5$를 확보하고 ($\delta>1$인 곳은 애초에 관심대상이 아니다), 그 위에서 $\delta=\min(1,\epsilon/5)$로 두면
+
+$$0<\lvert x-2\rvert<\delta \implies \lvert x^2-4\rvert<5\delta\leq\epsilon$$
 
 이 성립한다.
 :::
@@ -59,41 +67,40 @@ $$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \ep
 이제 이를 바탕으로 극한의 성질들을 살펴보자. 우선 첫 번째 성질은 극한이 만일 존재한다면 유일하다는 것이다.
 
 ::: 명제 4 (극한의 유일성)
-$\lim_{x\rightarrow a} f(x) = L$이고 $\lim_{x\rightarrow a} f(x) = L'$이면 $L = L'$이다.
+$\lim_{x\rightarrow a}f(x)= L$이고 $\lim_{x\rightarrow a}f(x)=L'$이면 $L=L'$이다.
 :::
-
 ::: 증명
-결론에 반하여 $L \neq L'$이라 가정하자. 그럼 $\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$이다. 이제 [정의 2](#def2){: data-lid="api8o" }에 의해 각각에 대응하는 $\delta_1, \delta_2 > 0$이 존재하여 다음 두 조건
+결론에 반하여 $L\neq L'$이라 가정하자. 그럼 $\frac{1}{2}\lvert L-L'\rvert>0$이므로, 이를 $\epsilon$으로 두자. 그럼 [정의 2](#def2){: data-lid="api8o" }에 의하여, 이 $\epsilon$에 대한 $\delta_1,\delta_2>0$이 존재하여 다음 두 조건
 
-$$0 < \lvert x-a\rvert < \delta_1\implies \lvert f(x) - L\rvert < \epsilon,\qquad 0 < \lvert x-a\rvert < \delta_2\implies\lvert f(x) - L'\rvert < \epsilon$$
+$$0<\lvert x-a\rvert<\delta_1\implies \lvert f(x)-L\rvert<\epsilon, \qquad 0<\lvert x-a\rvert<\delta_2\implies\lvert f(x)-L'\rvert<\epsilon$$
 
-을 만족하도록 할 수 있다. 이제 $\delta = \min(\delta_1, \delta_2)$로 두면 $0 < \lvert x-a\rvert < \delta$인 $x$에 대해 삼각부등식으로
+을 만족하도록 할 수 있다. 이제 $\delta=\min(\delta_1, \delta_2)$로 두면 $0<\lvert x-a\rvert<\delta$인 $x$에 대해 삼각부등식으로
 
-$$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \epsilon + \epsilon = \lvert L - L'\rvert$$
+$$\lvert L-L'\rvert\leq\lvert L-f(x)\rvert+\lvert f(x)-L'\rvert<\epsilon+\epsilon=\lvert L- L'\rvert$$
 
-이 되어 모순이다. 따라서 $L = L'$이다.
+이 되어 모순이다. 따라서 $L=L'$이다.
 :::
 
 한편, [정의 2](#def2){: data-lid="u8ea3" }는 원칙적으로 함수의 극한값의 후보 $L$이 주어졌을 때 그 극한값이 실제로 $L$이 맞다는 것을 보일 때만 사용할 수 있다. 즉, 이는 함수의 극한값이 <em-ko>무엇인지</em-ko> 알려주는 도구는 아니다. 이를 위해서는 다음 명제가 유용하다.
 
 ::: 명제 5 (극한법칙)
-$\lim_{x\rightarrow a} f(x) = L$, $\lim_{x\rightarrow a} g(x) = M$이라 하자. 그러면
+$\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그러면
 
-1. $\lim_{x\rightarrow a} \bigl(f(x) + g(x)\bigr) = L + M$,
-2. 임의의 상수 $c$에 대해 $\lim_{x\rightarrow a} cf(x) = cL$,
-3. $\lim_{x\rightarrow a} f(x)g(x) = LM$,
-4. $M \neq 0$이면 $\lim_{x\rightarrow a} f(x)/g(x) = L/M$
+1. $\lim_{x\rightarrow a}\bigl(f(x)+g(x)\bigr)=L+M$,
+2. 임의의 상수 $c$에 대해 $\lim_{x\rightarrow a}cf(x)=cL$,
+3. $\lim_{x\rightarrow a}f(x)g(x)=LM$,
+4. $M\neq 0$이면 $\lim_{x\rightarrow a}f(x)/g(x)=L/M$
 
 이 성립한다.
 :::
 
 ::: 증명
-1. 양수 $\epsilon > 0$이 주어졌을 때, $\epsilon/2$에 대응하는 $\delta_1, \delta_2 > 0$을 각각 $f, g$의 극한 정의에서 얻을 수 있다. 그럼 $\delta = \min(\delta_1,\delta_2)$로 두면, $0 < \lvert x-a\rvert < \delta$일 때
+1. 양수 $\epsilon>0$이 주어졌을 때, $\epsilon/2$에 대응하는 $\delta_1, \delta_2>0$을 각각 $f, g$의 극한의 정의로부터 얻을 수 있다. 이제 $\delta=\min(\delta_1,\delta_2)$로 두면, $0<\lvert x-a\rvert<\delta$일 때
     
-    $$\lvert (f(x)+g(x)) - (L+M)\rvert \leq \lvert f(x)-L\rvert + \lvert g(x)-M\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$
+    $$\lvert(f(x)+g(x))-(L+M)\rvert\leq\lvert f(x)-L\rvert+\lvert g(x)-M\rvert<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon$$
     
     이다. 
-2. 만일 $c=0$이면 아무런 $\delta$를 잡아도 상관없으므로 자명하다. $c \neq 0$이면 $\epsilon/\lvert c\rvert$에 대응하는 $\delta$를 잡으면 된다.
+2. 만일 $c=0$이면 아무런 $\delta$를 잡아도 상관없으므로 자명하다. $c\neq 0$이면 $\epsilon/\lvert c\rvert$에 대응하는 $\delta$를 잡으면 된다.
 
 3. 다음의 부등식
     
