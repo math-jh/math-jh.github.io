@@ -896,6 +896,13 @@ A:
   defs:
   - label: '[스킴] §스킴의 층 코호몰로지'
     url: /ko/math/scheme_theory/sheaf_cohomology_of_schemes#def18
+- id: arithmetic-geometric_mean_inequality
+  en: arithmetic-geometric mean inequality
+  ko: 산술기하평균 부등식
+  primary: en
+  defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
 - id: arrow
   en: arrow
   ko: 화살표
