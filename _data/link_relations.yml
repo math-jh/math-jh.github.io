@@ -149,6 +149,7 @@
 "11qus": {relation: required, reviewed: true}
 "12v03": {relation: required, reviewed: true}
 "13man": {relation: weak, reviewed: true}
+"13sia": {relation: weak, reviewed: true}
 "13tfg": {relation: required, reviewed: true}
 "13txm": {relation: required, reviewed: true}
 "143lh": {relation: weak, reviewed: true}
@@ -1003,6 +1004,7 @@
 "6rmyd": {relation: required, reviewed: true}
 "6rqsb": {relation: required, reviewed: true}
 "6s4c9": {relation: weak, reviewed: true}
+"6sm5o": {relation: weak, reviewed: true}
 "6sup7": {relation: weak, reviewed: true}
 "6tpxb": {relation: weak, reviewed: true}
 "6uki0": {relation: required, reviewed: true}
