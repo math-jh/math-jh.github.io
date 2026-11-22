@@ -128,7 +128,7 @@ author:
 
 # Site Footer
 footer:
-  since: "2022"
+  since: "2021"
   links:
     # icon: _includes/brand-icon.html 의 name (x | facebook | threads | github)
     - label: "GitHub"
