@@ -66,7 +66,7 @@ layout: default
       {% if page.toc %}
         <div class="sidebar__right-slot">
           <aside class="sidebar__right{% if page.url contains '/math/' %} sidebar__right--with-graph{% endif %}{% if page.toc_sticky %} sticky{% endif %}">
-            <nav class="toc">
+            <nav class="toc" aria-label="{{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: 'On this page' }}">
               <header><h4 class="nav__title"><span class="material-icons md-16" style="vertical-align:-.3em">toc</span> {{ page.toc_label | default: site.data.ui-text[lang].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html lang=lang sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>

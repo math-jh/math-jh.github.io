@@ -18,7 +18,7 @@
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
 
-<nav class="breadcrumbs">
+<nav class="breadcrumbs" aria-label="{{ site.data.ui-text[lang].nav_breadcrumbs_label | default: 'Breadcrumb' }}">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
     {% if site.multilingual %}

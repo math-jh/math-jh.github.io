@@ -3,15 +3,36 @@
 {% if lang_prefix contains "en" or lang_prefix contains "ko" %}
   {% assign lang = lang_prefix | remove_first: "/" %}
 {% endif %}
+{% assign _share_on = site.data.ui-text[lang].share_on_label | default: "Share on" %}
+{% assign _share_url = page.url | absolute_url | url_encode %}
+{% assign _share_text = page.title | url_encode %}
 
 <section class="page__share">
   {% if site.data.ui-text[lang].share_on_label %}
-    <h4 class="page__share-title">{{ site.data.ui-text[lang].share_on_label | default: "Share on" }}</h4>
+    <h4 class="page__share-title">{{ _share_on }}</h4>
   {% endif %}
 
-  <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[lang].share_on_label | default: 'Share on' }} Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <div class="page__share-buttons">
+  <a href="https://x.com/intent/post?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={{ _share_text }}&url={{ _share_url }}" class="btn btn--x" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ _share_on }} X (Twitter)">{% include brand-icon.html name="x" %}<span>X (Twitter)</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[lang].share_on_label | default: 'Share on' }} Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ _share_url }}" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ _share_on }} Facebook">{% include brand-icon.html name="facebook" %}<span>Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[lang].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.threads.com/intent/post?text={{ _share_text }}&url={{ _share_url }}" class="btn btn--threads" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=600,toolbar=1,resizable=0'); return false;" title="{{ _share_on }} Threads">{% include brand-icon.html name="threads" %}<span>Threads</span></a>
+
+  {%- comment -%}
+    브라우저 공유 시트(Web Share API). 모바일에서는 인스타그램·카카오톡 등 설치된 앱으로 보낼 수 있다.
+    navigator.share 가 없는 브라우저(데스크톱 Firefox 계열 등)에서는 숨긴 채로 둔다.
+  {%- endcomment %}
+  <button type="button" class="btn btn--inverse page__share-native" style="display:none" data-url="{{ page.url | absolute_url }}" data-title="{{ page.title | strip_html | escape }}" title="{{ site.data.ui-text[lang].share_label | default: 'Share' }}"><i class="material-icons" aria-hidden="true">share</i><span>{{ site.data.ui-text[lang].share_label | default: "Share" }}</span></button>
+  <script>
+  (function () {
+    var btn = document.currentScript.previousElementSibling;
+    if (!navigator.share) return;
+    btn.style.display = '';
+    btn.addEventListener('click', function () {
+      navigator.share({ title: btn.dataset.title, url: btn.dataset.url }).catch(function () {});
+    });
+  })();
+  </script>
+  </div>
 </section>

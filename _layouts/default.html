@@ -97,8 +97,8 @@
     {%- endif -%}
   {%- endunless -%}
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" data-lang="{% assign lang_prefix = page.url | slice: 1, 2 %}{% if lang_prefix == 'ko' %}ko{% elsif lang_prefix == 'en' %}en{% endif %}"{% if hero_hue %} style="--hero-hue: {{ hero_hue }}; --hero-sat: {{ hero_sat }};{% if hero_l %} --hero-l: {{ hero_l }};{% endif %}"{% endif %}>
-    {% include_cached skip-links.html %}
-    {% include_cached masthead.html %}
+    {% include_cached skip-links.html lang=lang %}
+    {% include_cached masthead.html lang=lang %}
 
     <div class="initial-content">
       {{ content }}

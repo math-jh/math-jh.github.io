@@ -115,7 +115,7 @@ layout: archive
 <div class="cat-layout">
   <div class="cat-layout__main">{{ taxonomy_content }}</div>
   <aside class="cat-layout__recents">
-    <nav class="nav__list">
+    <nav class="nav__list" aria-label="{{ site.data.ui-text[lang].recent_posts | default: 'Recent posts' }}">
       <ul class="nav__items">
         {% include nav_recents.html lang=lang %}
       </ul>

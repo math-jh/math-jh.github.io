@@ -1,10 +1,10 @@
-{% assign lang = site.locale %}
-{% assign lang_prefix = page.url | truncate: 3, "" %}
-{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
-  {% assign lang = lang_prefix | remove_first: "/" %}
-{% endif %}
+{%- comment -%}
+  include_cached 로 불리므로 페이지 URL 대신 default.html 이 넘기는 include.lang 으로 언어를 정한다
+  (캐시가 lang 값별로 따로 잡힌다).
+{%- endcomment -%}
+{% assign lang = include.lang | default: site.locale %}
 
-<nav class="skip-links">
+<nav class="skip-links" aria-label="{{ site.data.ui-text[lang].skip_links | default: 'Skip links' }}">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">{{ site.data.ui-text[lang].skip_primary_nav | default: 'Skip to primary navigation' }}</a></li>
     <li><a href="#main" class="screen-reader-shortcut">{{ site.data.ui-text[lang].skip_content | default: 'Skip to content' }}</a></li>
