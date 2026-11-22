@@ -1885,6 +1885,7 @@
 "cbyes": {relation: required, reviewed: true}
 "cbyfm": {relation: required, reviewed: true}
 "cc24r": {relation: weak, reviewed: true}
+"ccuhz": {relation: forward, reviewed: true}
 "cd9vj": {relation: required, reviewed: true}
 "cdqfr": {relation: weak, reviewed: true}
 "cdyia": {relation: weak, reviewed: true}
@@ -5025,6 +5026,7 @@
 "xkrij": {relation: required, reviewed: true}
 "xkslm": {relation: weak, reviewed: true}
 "xkuvx": {relation: weak, reviewed: true}
+"xl2zv": {relation: forward, reviewed: true}
 "xlgon": {relation: required, reviewed: true}
 "xlgts": {relation: required, reviewed: true}
 "xljmn": {relation: weak, reviewed: true}
