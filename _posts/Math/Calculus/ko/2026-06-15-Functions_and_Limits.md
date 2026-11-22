@@ -37,7 +37,7 @@ $$\lim_{x \rightarrow a}f(x)=L$$
 
 이에 대한 직관적인 설명은 다음과 같다. 우리가 고등학교 때 극한의 개념을 $f(x)$가 $L$에 <em-ko>무한히 가까워진다</em-ko>고 이야기하는 것이 엄밀한 수학적 정의가 될 수 없는 이유는 <em-ko>가깝다</em-ko>는 개념이 수학적이지 않기 때문이다. <em-ko>가령 $L$과 가까운 숫자들의 모임</em-ko>이, 수학적으로는 집합을 정의하지 않는 것과 같은 이치이다. 
 
-직관적으로 위의 $\epsilon$-$\delta$ 정의는 이를 해결하기 위해, 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각하면 이해가 편하다. 즉, $f(x)$가 $L$에 <em-ko>얼마나</em-ko> 가까울 것을 요구하든 (즉, 어떤 $\epsilon>0$이 주어지든), $x$가 $a$에 충분히 가깝도록 하기만 하면 ($0<\lvert x-a\rvert<\delta$) 그 요구 $\lvert f(x)-L\rvert<\epsilon$을 맞춰줄 수 있다는 것이다. 이를 다음 예시에서 살펴보자.
+직관적으로 위의 *$\epsilon$-$\delta$ 정의<sub>엡실론-델타 정의</sub>*[^1]는 이를 해결하기 위해, 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각하면 이해가 편하다. 즉, $f(x)$가 $L$에 <em-ko>얼마나</em-ko> 가까울 것을 요구하든 (즉, 어떤 $\epsilon>0$이 주어지든), $x$가 $a$에 충분히 가깝도록 하기만 하면 ($0<\lvert x-a\rvert<\delta$) 그 요구 $\lvert f(x)-L\rvert<\epsilon$을 맞춰줄 수 있다는 것이다. 이를 다음 예시에서 살펴보자.
 
 ::: 예시 3
 일차함수의 경우 $\lvert f(x)-L\rvert$이 $\lvert x-a\rvert$의 상수배가 된다. 예를 들어 $f(x)=cx+d$ ($c\neq 0$)라 하면, 임의의 $\epsilon>0$에 대하여 $\delta>0$을 $\delta=\epsilon/\lvert c\rvert$로 정의하면
@@ -280,3 +280,7 @@ $$x<N\implies\lvert f(x)-L\rvert<\epsilon$$
 
 **[Ste]** J. Stewart, *Calculus*, 8th ed., Cengage Learning, 2016.  
 **[Kim]** 김홍종, *미적분학 1·2*, 제3개정판, 서울대학교출판문화원, 2020.
+
+---
+
+[^1]: 이를 한글로 음차했을 때 <em-ko>입실론-델타</em-ko>라 부르는 경우가 많지만, $\epsilon$의 올바른 표기는 <em-ko>엡실론</em-ko>이다. (<em-ko>입실론</em-ko>은 그리스 문자 $\upsilon$을 가리키는 다른 글자이다.)
