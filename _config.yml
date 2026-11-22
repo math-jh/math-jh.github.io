@@ -143,37 +143,23 @@ include:
   # _main.js 는 언더스코어 시작이라 기본 무시됨 — footer_scripts 직접 서빙에 필요
   - assets/js/_main.js
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
   - "._*" # macOS AppleDouble 잔재 — SMB 복사 때 생기며, 바이너리를 md 로 읽다 빌드가 죽는다
   - "**/._*"
   - vendor
-  - .asset-cache
   - .bundle
-  - .jekyll-assets-cache
   - .sass-cache
   # assets/js/plugins·_main.js 는 exclude 하지 않는다 — footer_scripts 가 소스를
   # 직접 서빙한다 (아래 footer_scripts 목록 참고).
   - assets/diagrams
   - assets/js/vendor/jquery/jquery-3.6.0.js
-  - Capfile
-  - CHANGELOG
-  - config
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
   - LICENSE
-  - log
   - node_modules
   - package.json
   - package-lock.json
-  - Rakefile
   - README
-  - tmp
   - scripts
   - workers                             # Cloudflare Worker source; never publish in _site
-  - .obsidian
-  - .backups
   # 사이트 콘텐츠가 아니지만 jekyll serve 의 watcher 가 감시 대상으로 잡는 경로.
   # Jekyll 은 dotfile 을 빌드하지 않으므로 산출물에는 영향이 없고, 여기 적는 목적은
   # jekyll-watch 가 이 목록을 listen 의 :ignore 로 넘겨 불필요한 전체 재빌드를
@@ -185,9 +171,9 @@ exclude:
   - .jekyll-cache
   - notes                               # gitignore된 작업 노트. frontmatter가 있어 Jekyll이
                                         # 파싱하려다 YAML 예외를 낸다 (CI엔 존재하지 않음)
-  # CI deploy fix (2026-07-03): keep the GitHub Pages site under the 1 GB limit
-  # (2026-07-05: keyboard posts re-published with <video> references removed)
-  - assets/videos                       # 510 MB of .mov keyboard sound-test clips
+  # 키보드 타건 영상 원본 .mov (약 460 MB). 사이트에 넣으면 GitHub Pages 배포가 실패한다.
+  # 글에서는 R2 버킷(media.math-jh.com)에 올린 .mp4 를 _includes/video.html 로 부른다.
+  - assets/videos
 keep_files:
   - .git
   - .svn

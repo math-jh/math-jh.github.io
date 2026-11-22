@@ -35,7 +35,7 @@ FULL = ROOT / "scripts/fonts/material-symbols-sharp.full.woff2"
 OUT = ROOT / "assets/css/fonts/material-symbols-sharp.woff2"
 
 SCAN_DIRS = ["_includes", "_layouts", "_pages", "_posts", "_data", "_plugins",
-             "_sass", "assets/css", "assets/js", "scripts/dashboard", "dev-preview"]
+             "_sass", "assets/css", "assets/js", "scripts/dashboard", "assets/dev-preview"]
 SCAN_FILES = ["_config.yml"]
 SKIP_PARTS = {"vendor", "katex", "node_modules"}
 EXTS = {".html", ".md", ".yml", ".yaml", ".js", ".scss", ".css", ".rb", ".liquid"}

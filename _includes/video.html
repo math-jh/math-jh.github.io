@@ -1,0 +1,8 @@
+{%- comment -%}
+  Cloudflare R2 버킷 math-jh-media 에 올린 영상을 넣는다. 영상 파일은 레포가 아니라 버킷에 있다
+  (GitHub Pages 배포 크기 때문). include.src 는 버킷 안의 키다 (예: keyboards/Rule60.mp4).
+  업로드는 scripts/media/r2_upload.py. 영상 주소를 옮기면 아래 _media_base 한 줄만 고친다.
+  .mp4 로 올린다: Cloudflare 가 기본으로 캐시하는 확장자라 재생이 R2 까지 가지 않는다.
+{%- endcomment -%}
+{%- assign _media_base = "https://media.math-jh.com" -%}
+<video src="{{ _media_base }}/{{ include.src }}" controls preload="metadata" playsinline style="display:block; max-width:80%; max-height:80vh; margin:0 auto 1em;"></video>

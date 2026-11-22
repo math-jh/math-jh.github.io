@@ -100,7 +100,7 @@ DECISIONS_PATH = SCRIPT_DIR / "gloss_backfill_decisions.json"  # 사람이 단 K
 
 POSTS_GLOB = str(BLOG_ROOT / "_posts" / "Math" / "*" / "ko" / "*.md")
 
-UA = "math-jh.github.io gloss-backfill/1.0 (contact: kimjunhyeok96@gmail.com)"
+UA = "math-jh.github.io gloss-backfill/1.0 (https://github.com/math-jh/math-jh.github.io)"
 
 # ---------------------------------------------------------------------------
 # Stage 1: 탐지
