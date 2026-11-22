@@ -103,7 +103,8 @@ site.google_noindex_en_posts 가 켜져 있으면 영어 글(posts 컬렉션의 
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-<title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[lang].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+{%- comment -%} development(로컬 serve → preview.math-jh.com)에서는 탭 제목 끝에 (Preview)를 붙여 프로덕션 탭과 구별한다. {%- endcomment %}
+<title>{{ seo_title | default: site.title }}{% unless jekyll.environment == "production" %} (Preview){% endunless %}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[lang].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
 {% if author.name %}
