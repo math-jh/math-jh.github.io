@@ -78,6 +78,9 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification : "yFpbvl3mlOU_qKtfTCT4EkVWBgdCSV2m1FQsH6bQw38"
+# URL 접두어 속성 https://math-jh.github.io/ 의 소유 확인용. 그 주소가 여기로 301 되므로
+# 태그는 이 사이트 홈에 있어야 한다 — 지우면 그 속성(주소 변경 제출·옛 실적)을 잃는다.
+google_site_verification_github_io : "D1SY1jalQEE3sKKJjj1KWASZwCSTFRApCluC9Bmdpqo"
 bing_site_verification   : "EDD9BFB4CFBAF359F52496A42C5CFF0E"
 naver_site_verification  : "6bd1cd6bedce702bb2392a772ad27214caed6ec2"
 yandex_site_verification :
