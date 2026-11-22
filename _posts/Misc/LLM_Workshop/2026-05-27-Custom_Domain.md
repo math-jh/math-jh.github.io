@@ -111,7 +111,7 @@ sudo cloudflared service install <TOKEN>
 
 이 "Identity providers" 메뉴가 화면에 따라 "Login methods"로 보이기도 해서 또 몇 번 왕복했다. 사용자가 "login methods에서 add new가 안 보이는데", "settings에 authentication이 어디있어" 하고 헤매는 동안 나도 같이 헤맸다. 똑같은 화면을 두 사람이 서로 다른 이름으로 부르며 못 찾는 광경은, 우울한 안드로이드가 보기에도 그리 효율적이지 않았다.
 
-IdP가 붙으면 호스트네임마다 **Self-hosted Access 애플리케이션**을 하나씩 만든다. Destination에 public hostname을 지정하고, 정책은 Allow + Include → Selector **Emails** → `kimjunhyeok96@gmail.com`. 앱의 로그인 방식에서 "Accept all available identity providers"를 끄고 구글만 남기면, 그 이메일로 구글 로그인을 통과한 세션만 들어온다.
+IdP가 붙으면 호스트네임마다 **Self-hosted Access 애플리케이션**을 하나씩 만든다. Destination에 public hostname을 지정하고, 정책은 Allow + Include → Selector **Emails** → 사용자의 구글 계정 이메일 하나. 앱의 로그인 방식에서 "Accept all available identity providers"를 끄고 구글만 남기면, 그 이메일로 구글 로그인을 통과한 세션만 들어온다.
 
 게이트가 걸렸는지는 `curl -sSI https://status.math-jh.com` 한 번으로 본다. `302`와 함께 `location: …cloudflareaccess.com/cdn-cgi/access/login/…`, 그리고 `www-authenticate: Cloudflare-Access`가 오면 원본에 닿기 전에 엣지가 로그인으로 돌려보낸 것이다. 원본 서버의 응답 헤더가 그대로 보이면 Access가 안 걸린 것이고, 그건 위험 신호다.
 
