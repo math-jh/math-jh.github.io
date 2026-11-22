@@ -17,7 +17,7 @@
 그 글에 나오는 용어의 영어=한글 표(_data/terms.yml 과 본문의 <sub> 병기),
 그 글 주제의 실제 검색어(구글·네이버 자동완성).
 
-환경변수: FM_MODEL(기본 gemini-4-hydrogen-high), FM_AGENT(기본 blog-translator — 도구 없는
+환경변수: FM_PROFILE(korean 기본 | english — 본문의 영어 용어를 그대로 두는 과목용), FM_MODEL(기본 gemini-4-hydrogen-high), FM_AGENT(기본 blog-translator — 도구 없는
 에이전트), AGY_BIN, FM_WORK(기본 /var/tmp/blog-frontmatter).
 """
 import concurrent.futures
@@ -48,7 +48,10 @@ DESCRIPTION_RANGE = (70, 110)
 MODIFIERS = set("정의 뜻 의미 증명 조건 필요충분조건 구하기 구하는법 계산 계산법 예제 문제 예시 예 차이 "
                 "공식 성질 판별 판별법 하는법 방법 가능 활용 응용 정리 동치 반례 유도 풀이 개념".split())
 
-PROMPT_FILE = Path(__file__).with_suffix(".prompt.md")
+# FM_PROFILE=english 는 본문이 영어로 쓰는 용어를 그대로 두는 과목용이다: 프롬프트가 다르고,
+# 용어표에는 이 글에서 정의한 용어 중 terms.yml 이 한글로 확정한 것(primary: ko)과 본문의 <sub> 병기만 들어간다.
+PROFILE = os.environ.get("FM_PROFILE", "korean")
+PROMPT_FILE = Path(__file__).with_suffix(".prompt.md" if PROFILE == "korean" else f".{PROFILE}.prompt.md")
 
 
 def squash(s):
@@ -100,8 +103,12 @@ def term_table(post):
         en, ko = str(e.get("en") or ""), str(e.get("ko") or "")
         if not en or not ko or "$" in en + ko:
             continue
+        if PROFILE == "english" and e.get("primary") != "ko":
+            continue
         if any(d.get("url", "").rstrip("/") == post["permalink"] for d in e.get("defs") or []):
             defined.append((en, ko))
+            continue
+        if PROFILE == "english":  # 이 글에서 정의한 것만 — 다른 뜻의 한글이 끌려오지 않게
             continue
         body, hits = re.subn(rf"(?<![A-Za-z]){re.escape(en)}(?:e?s)?(?![A-Za-z])", " ", body, flags=re.I)
         if hits:
@@ -249,7 +256,7 @@ def propose_one(path, cache, lock):
                                             encoding="utf-8")
     prompt = build_prompt(post, terms, queries)
     rec = {k: post[k] for k in ("path", "title", "excerpt", "description", "category", "published")}
-    rec.update(model=MODEL, seeds=seeds, queries=queries,
+    rec.update(model=MODEL, profile=PROFILE, seeds=seeds, queries=queries,
                terms=[f"{en}={ko}" for en, ko in terms], prompt=prompt)
     try:
         rec["raw"] = ask(prompt)
