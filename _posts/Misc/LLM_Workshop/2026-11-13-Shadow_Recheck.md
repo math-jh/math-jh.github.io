@@ -63,11 +63,9 @@ return out
 - 이미 `recheck` 큐에서 기다리는 링크가 다음 판례의 후보로 또 올라와, 같은 링크가 큐에 여러 번 쌓였다.
 - 사람이 이미 판정했거나 감사로 확인한 링크, 사람 대기열에 있는 링크도 후보였다. 모델이 세 답을 한 번 갈라 놓으면 사람이 정한 값 위에 다시 판정 요청이 올라오게 된다.
 
-diff가 직접 보여 주는 것은 여기까지다. Bruhat 링크가 어느 경로로 몇 번 올라왔는지는 큐 기록으로 세어 보지 않았고, 위 세 가지가 반복을 만들 수 있는 구조라는 것만 확인했다.
-
 ## 후보 선택의 세 가지 제외 조건
 
-[커밋 fedb9c97](https://github.com/math-jh/math-jh.github.io/commit/fedb9c97)은 선택기를 다시 짰다. 먼저 `shadow_store`에 사람이 결정권을 쥔 링크를 가려내는 함수가 생겼다.
+수리는 선택기를 다시 짜는 것이었다([커밋 fedb9c97](https://github.com/math-jh/math-jh.github.io/commit/fedb9c97)). 먼저 `shadow_store`에 사람이 결정권을 쥔 링크를 가려내는 함수가 생겼다.
 
 ```python
 def human_decided(lid: str, rec: dict, queue: dict) -> bool:
@@ -75,7 +73,7 @@ def human_decided(lid: str, rec: dict, queue: dict) -> bool:
         return True
     return (queue["settled"].get(lid) or {}).get("how") == "audit"
 ```
-{: data-filename="scripts/dependency-classifier/shadow_store.py · 일부 발췌, 독스트링 생략"}
+{: data-filename="scripts/dependency-classifier/shadow_store.py · e338d029 이전, 일부 발췌, 독스트링 생략"}
 
 확정 기록의 `by`가 `human`이거나 `audit`이면 사람이 정한 값이다. 감사 표본에 뽑혀 사람이 확인만 하고 `queue["settled"]`에 `audit`으로 남은 링크도 같은 취급이다. 감사가 만장일치를 뒤집었든 그대로 두었든, 모델이 사람의 판단을 다시 여는 일은 없어야 한다는 뜻이다.
 
@@ -86,7 +84,7 @@ random.shuffle(found)
 found.sort(key=lambda x: x[0])
 return [c for _, c in found[:RECHECK_OFFER]]
 ```
-{: data-filename="scripts/dependency-classifier/shadow_digest.py · 일부 발췌"}
+{: data-filename="scripts/dependency-classifier/shadow_digest.py · e338d029 이전, 일부 발췌"}
 
 `sort`는 안정 정렬이어서 먼저 섞어 두면 같은 횟수 안에서는 순서가 무작위가 된다. 한 글이 파일명 때문에 모든 판례의 후보가 되는 일이 사라지고, 다시 본 적 없는 링크가 먼저 나간다.
 
@@ -94,7 +92,7 @@ return [c for _, c in found[:RECHECK_OFFER]]
 
 ## 섀도 원장이 찬 뒤에야 도는 재검토
 
-사용자는 선택기를 고치는 것과 별개로 재검토의 시점도 바꾸자고 했다. 같은 시각의 발화는 이렇다.
+사용자는 선택기를 고치는 것과 별개로 재검토의 시점도 바꾸자고 했다.
 
 > 고쳐주고, 재검토 자체를 내 생각엔 섀도원장 다 채우고 나서 나오는게 맞는 것 같아.
 
@@ -123,15 +121,15 @@ def fill_complete(state: dict) -> bool:
             return False
     return True
 ```
-{: data-filename="scripts/dependency-classifier/shadow_tick.py · 일부 발췌, 독스트링 생략"}
+{: data-filename="scripts/dependency-classifier/shadow_tick.py · e338d029 이전, 일부 발췌, 독스트링 생략"}
 
 초안과 개정 중인 글(`out_of_scope`)은 어차피 판정하지 않으므로 세지 않는다. 상태에 항목이 없는 글은 판정할 링크(`_cheap_lids`)가 있을 때만 아직 안 찬 것으로 본다. 항목이 있어도 `next`(다음 차수)가 남아 있으면 라운드가 진행 중이다. 단 `parked_fp`가 붙은 글, 곧 프롬프트가 한도를 넘겨 글이 바뀔 때까지 세워 둔 글은 기다리지 않는다. 이미 끝난 글에 새 링크가 생긴 경우는 판정 중인 라운드가 아니므로 재검토를 막지 않는다. 기다릴 이유가 있는 것은 아직 한 번도 판정받지 않은 글이다. 재검토가 대기 중이어도 이 조건이 거짓이면 `run_recheck`는 `False`를 돌려주어 틱이 곧바로 글의 한 차수로 넘어간다. 대기 중인 항목은 큐에 그대로 남아 있다가 조건이 참이 된 뒤에 처리된다.
 
-`shadow_classifier.py status`의 출력에는 `recheck`(큐 길이)와 `recheck_open`(`fill_complete`의 값)이 추가되어, 재검토가 왜 멈춰 있는지 상태 한 줄로 볼 수 있다. 이 게이트는 `test_shadow.py`의 테스트로 확인했다. 재검토가 대기 중이어도 원장이 차기 전에는 모델을 부르지 않고, 찬 뒤에는 처리되는지를 본다.
+`shadow_classifier.py status`의 출력에는 `recheck`(큐 길이)와 `recheck_open`(`fill_complete`의 값)이 추가되어, 재검토가 왜 멈춰 있는지 상태 한 줄로 볼 수 있다.
 
 ## 판례 인용이 달라도 값이 같으면 유지
 
-두 번째 커밋 [02978607](https://github.com/math-jh/math-jh.github.io/commit/02978607)은 재검토의 판정 기준 한 줄을 바꾼다. 처음에는 세 차수의 관계가 모두 기존 값이고 인용한 판례가 하나로 일치해야 값이 유지됐고, 하나라도 다르면 사람에게 갔다.
+재검토의 판정 기준도 한 줄 바뀌었다([커밋 02978607](https://github.com/math-jh/math-jh.github.io/commit/02978607)). 처음에는 세 차수의 관계가 모두 기존 값이고 인용한 판례가 하나로 일치해야 값이 유지됐고, 하나라도 다르면 사람에게 갔다.
 
 ```python
 elif relations == {final} and len(precedents) == 1:
@@ -143,10 +141,10 @@ elif relations == {final} and len(precedents) == 1:
 elif relations == {final}:
     log(f"shadow recheck {lid}: still {final} under {item['precedent']}")
 ```
-{: data-filename="scripts/dependency-classifier/shadow_tick.py · 일부 발췌"}
+{: data-filename="scripts/dependency-classifier/shadow_tick.py · e338d029 이전, 일부 발췌"}
 
-관계가 셋 다 그대로인데 한 차수는 판례 P-0001, 다른 차수는 P-0002를 인용했다는 이유로 사람 앞에 올릴 이유는 없다. 값은 바뀌지 않았고, 사람이 볼 것은 값이 달라진 링크다. 같은 변경에서 테스트의 헬퍼가 세 차수에 서로 다른 판례(`P-0001`, `P-0002`, `none`)를 인용하게 바뀌었고, `weak` 링크가 이 조건에서 큐에 오르지 않고 값을 유지하며 `rechecks` 이력에 한 건이 남는 테스트(`test_recheck_keeps_an_unchanged_value_whatever_the_precedents`)가 추가됐다. 이 변경은 [링크 관계 섀도 재판정](/ko/llm_workshop/shadow_rejudging)에서 처음 설명한 최초 판정의 만장일치 규칙과는 다르다. 최초 판정은 판례가 갈려도 사람에게 보내고, 재검토만 판례의 인용 차이를 값의 변동으로 보지 않는다.
+관계가 셋 다 그대로인데 한 차수는 판례 P-0001, 다른 차수는 P-0002를 인용했다는 이유로 사람 앞에 올릴 이유는 없다. 값은 바뀌지 않았고, 사람이 볼 것은 값이 달라진 링크다. 최초 판정의 `finalize`는 11월 10일부터 이미 같은 기준이어서, 표 셋이 같으면 판례 선택이 갈려도 확정한다.
 
-## 남은 일
+## 원장이 찰 때까지 쌓이는 재검토 큐
 
-이 변경들이 반복되던 링크를 실제로 줄였는지는 아직 확인하지 않았다. 선택기와 게이트는 테스트에서 동작을 확인했을 뿐이고, 섀도 원장이 다 차는 시점은 글의 수와 쿼터가 정하므로 그 전에는 재검토가 큐에 쌓이기만 한다. 사람이 판례를 새로 쓸 때마다 후보가 최대 40개씩 쌓이는 구조도 그대로이고, 사람의 판정이 모델에게 거꾸로 되먹임되는 이 경로가 얼마나 많은 호출을 쓰는지는 원장이 찬 뒤에야 보인다.
+섀도 원장이 다 차는 시점은 글의 수와 쿼터가 정하므로 그 전에는 재검토가 큐에 쌓이기만 한다. 사람이 판례를 새로 쓸 때마다 후보가 최대 40개씩 쌓이는 구조도 그대로이고, 사람의 판정이 모델에게 거꾸로 되먹임되는 이 경로가 얼마나 많은 호출을 쓰는지는 원장이 찬 뒤에야 보인다.
