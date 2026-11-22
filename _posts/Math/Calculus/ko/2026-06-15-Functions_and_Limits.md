@@ -102,7 +102,7 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
     
     $$\lvert f(x)g(x)-LM\rvert=\lvert f(x)(g(x)-M)+M(f(x)-L)\rvert \leq \lvert f(x)\rvert\lvert g(x)-M\rvert+\lvert M\rvert\lvert f(x)-L\rvert$$
     
-    을 사용한다. 그럼 직관적으로 $x$가 $a$로 갈 때 $\lvert g(x)-M\rvert$와 $\lvert f(x)-L\rvert$는 모두 $0$으로 가므로, 만일 그 앞에 붙는 $\lvert f(x)\rvert, \lvert g(x)\rvert$들이 유한하다는 것만 보장된다면 위의 1번과 비슷한 계산을 통해 이를 $\epsilon$보다 작게 만들 수 있다. 
+    을 사용한다. 그럼 직관적으로 $x$가 $a$로 갈 때 $\lvert g(x)-M\rvert$와 $\lvert f(x)-L\rvert$는 모두 $0$으로 가므로, 만일 그 앞에 붙는 $\lvert f(x)\rvert, \lvert M\rvert$들이 유한하다는 것만 보장된다면 위의 1번과 비슷한 계산을 통해 이를 $\epsilon$보다 작게 만들 수 있다. 
     
     트릭은 $\epsilon=1$로 두고 [정의 2](#def2){: data-lid="gyq6x" }를 $f$와 $g$ 각각에 적용하는 것이다. 그럼 적당한 $\delta_1, \delta_2$가 존재하여
         
@@ -116,7 +116,7 @@ $\lim_{x\rightarrow a}f(x)=L$, $\lim_{x\rightarrow a}g(x)=M$이라 하자. 그�
 
 4. $1/g(x) \rightarrow 1/M$을 보인 뒤 3을 적용하면 된다. $M \neq 0$이므로 $a$ 근방에서 $\lvert g(x)\rvert > \lvert M\rvert/2$이고,
 
-    $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
+    $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} \leq \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
     이므로 $\lvert g(x)-M\rvert$을 충분히 작게 만들면 된다.
 :::
