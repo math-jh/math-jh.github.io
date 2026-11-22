@@ -46,6 +46,32 @@ if ! timeout 2400 "$CLAUDE_BIN" -p --model sonnet \
 fi
 log "marvin turn complete"
 
+# 편집 턴 — 집필 턴이 워크숍 글을 남겼으면 다른 모델이 그 글을 독자로서 다시 읽고
+# 구성을 고친다(editor.md). 집필 턴은 diff 를 보며 쓰므로 diff 에 있던 것을 다
+# 받아 적고 새 일을 뒤에 덧붙인다. 편집 턴은 그 diff 를 보지 않는다.
+# 편집이 끊기거나 front matter 를 건드리면 edit_guard.py 가 집필 턴의 판본으로
+# 되돌리므로, 편집 턴이 어떻게 끝나든 커밋되는 것은 온전한 글이다.
+EDIT_STORE="$(mktemp -d)"
+trap 'rm -rf "$BEFORE_DIRTY" "$EDIT_STORE"' EXIT
+# edit_guard.py 가 죽어도 드라이버는 계속 간다 — 편집을 건너뛸 뿐 커밋은 해야 한다.
+EDIT_TARGETS="$("$HERE/edit_guard.py" --save "$EDIT_STORE" --before "$BEFORE_DIRTY" | tr '\n' ' ' || true)"
+if [ -n "${EDIT_TARGETS// /}" ]; then
+  log "launching claude -p (opus) for editor: $EDIT_TARGETS"
+  if timeout 2400 "$CLAUDE_BIN" -p --model opus \
+        --permission-mode bypassPermissions \
+        "[cron] Read $HERE/editor.md and execute it now. 대상 글: $EDIT_TARGETS"; then
+    "$HERE/edit_guard.py" --check "$EDIT_STORE" 2>&1 | while read -r line; do
+      log "$line"
+    done || true
+    log "editor turn complete"
+  else
+    "$HERE/edit_guard.py" --restore "$EDIT_STORE" 2>&1 | while read -r line; do
+      log "$line"
+    done || true
+    log "editor turn failed — 집필 턴의 글을 그대로 커밋한다"
+  fi
+fi
+
 # 자기 산출물은 자기 이름(author=Marvin)으로 커밋한다. push 는 autopush 몫.
 "$HERE/commit_posts.py" --before "$BEFORE_DIRTY" 2>&1 | while read -r line; do
   log "$line"
