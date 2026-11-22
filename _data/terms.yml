@@ -9884,6 +9884,13 @@ I:
     url: '/ko/math/calculus/functions_and_limits'
   - label: '[집합론] §선택공리'
     url: '/ko/math/set_theory/axiom_of_choice'
+- id: inductive
+  en: inductive
+  ko: 귀납적
+  primary: ko
+  defs:
+  - label: '[집합론] §선택공리'
+    url: /ko/math/set_theory/axiom_of_choice
 - id: inductive_set
   en: inductive set
   ko: 귀납적 집합
