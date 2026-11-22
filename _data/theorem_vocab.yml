@@ -37,6 +37,7 @@ collapsible_classes: [proof, proof--alone, details]
 extra_canon:
   증명: Proof
   주장: Conjecture
+  추정: Conjecture
   주의: Remark
   명제–정의: Proposition–Definition
   문제: Problem
