@@ -1081,6 +1081,13 @@ A:
     id: order_relation
   - label: Antisymmetric
     id: antisymmetry
+- id: asymmetry
+  en: asymmetry
+  ko: 비대칭성
+  primary: en
+  defs:
+  - label: '[집합론] §순서관계의 정의'
+    url: /ko/math/set_theory/order_relations
 - id: asymptote
   en: asymptote
   ko: 점근선
@@ -17443,6 +17450,13 @@ R:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+- id: reflexivity
+  en: reflexivity
+  ko: 반사성
+  primary: en
+  defs:
+  - label: '[집합론] §동치관계'
+    url: /ko/math/set_theory/equivalence_relations
 - id: regular
   en: regular
   ko: 정칙
@@ -21215,6 +21229,13 @@ T:
   see:
   - label: Binary relation
     id: binary_relation
+- id: transitivity
+  en: transitivity
+  ko: 추이성
+  primary: en
+  defs:
+  - label: '[집합론] §동치관계'
+    url: /ko/math/set_theory/equivalence_relations
 - id: transitivity_triangle
   en: transitivity triangle
   ko: 추이 삼각형
