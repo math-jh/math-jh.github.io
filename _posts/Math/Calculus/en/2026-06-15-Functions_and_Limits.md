@@ -100,7 +100,7 @@ Suppose $\lim_{x\rightarrow a}f(x)=L$ and $\lim_{x\rightarrow a}g(x)=M$. Then:
 
     $$\lvert f(x)g(x)-LM\rvert=\lvert f(x)(g(x)-M)+M(f(x)-L)\rvert \leq \lvert f(x)\rvert\lvert g(x)-M\rvert+\lvert M\rvert\lvert f(x)-L\rvert$$
 
-    Then intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ approach $0$; hence, provided that the factors $\lvert f(x)\rvert, \lvert g(x)\rvert$ in front are guaranteed to be finite, we can make this smaller than $\epsilon$ by a calculation similar to (1) above.
+    Then intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ approach $0$; hence, provided that the factors $\lvert f(x)\rvert, \lvert M\rvert$ in front are guaranteed to be finite, we can make this smaller than $\epsilon$ by a calculation similar to (1) above.
 
     The trick is to set $\epsilon=1$ and apply [Definition 2](#def2){: data-lid="gyq6x" } to $f$ and $g$ separately. Then there exist suitable $\delta_1, \delta_2$ such that
 
@@ -114,7 +114,7 @@ Suppose $\lim_{x\rightarrow a}f(x)=L$ and $\lim_{x\rightarrow a}g(x)=M$. Then:
 
 4. It suffices to show that $1/g(x) \rightarrow 1/M$ and then apply (3). Since $M \neq 0$, near $a$ we have $\lvert g(x)\rvert > \lvert M\rvert/2$, and
 
-    $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
+    $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} \leq \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
     so it suffices to make $\lvert g(x)-M\rvert$ sufficiently small.
 :::
