@@ -20,7 +20,7 @@ group: agents
 
 ---
 
-관련 파일: [`scripts/dependency-classifier/criteria.md`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/criteria.md), [`shadow_pipeline.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_pipeline.py), [`shadow_prompts.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_prompts.py), [`shadow_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_tick.py), [`shadow_models.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_models.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`scripts/dashboard/shadow.js`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/shadow.js), [커밋 d4928f2a](https://github.com/math-jh/math-jh.github.io/commit/d4928f2a), [커밋 a92861e7](https://github.com/math-jh/math-jh.github.io/commit/a92861e7), [커밋 b93452e6](https://github.com/math-jh/math-jh.github.io/commit/b93452e6)
+관련 파일: [`scripts/dependency-classifier/criteria.md`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/criteria.md), [`linkdep_pipeline.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_pipeline.py), [`linkdep_prompts.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_prompts.py), [`linkdep_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_tick.py), [`linkdep_models.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_models.py), [`_plugins/graph_data.rb`](https://github.com/math-jh/math-jh.github.io/blob/main/_plugins/graph_data.rb), [`scripts/dashboard/linkdeps.js`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dashboard/linkdeps.js), [커밋 d4928f2a](https://github.com/math-jh/math-jh.github.io/commit/d4928f2a), [커밋 a92861e7](https://github.com/math-jh/math-jh.github.io/commit/a92861e7), [커밋 b93452e6](https://github.com/math-jh/math-jh.github.io/commit/b93452e6), [커밋 e338d029](https://github.com/math-jh/math-jh.github.io/commit/e338d029)
 {: .notice--info}
 
 시작은 엉뚱한 질문이었다. 사용자가 Laya라는 판정 모델을 이 Pi에서 돌릴 수 있느냐고 물었는데, 물은 이유는 따로 있었다.
@@ -89,7 +89,7 @@ def derive(row: dict) -> dict:
     basis = "required_step" if row["need_kind"] == "step" else "required_meaning"
     return {"expected": "required", "basis": basis, "boundary": 0}
 ```
-{: data-filename="scripts/dependency-classifier/shadow_prompts.py · 일부 발췌"}
+{: data-filename="scripts/dependency-classifier/linkdep_prompts.py · 일부 발췌"}
 
 문장 자체가 예고(`preview`)이면 다른 답과 상관없이 forward다. 그 밖에서 `borderline`이나 `partial`이 하나라도 있으면 기대 관계를 정하지 않고 경계 표시의 수만 센다. 경계가 없으면 대상의 내용이 필요 없는 경우(`need` = `no`)와 필요하지만 소스에 다 있는 경우(`provided` = `full`)가 weak이고, 필요한데 소스에 없으면 required다. `need_kind`는 그 필요가 논증의 한 걸음(`step`)인지 정의·기호에 기댄 뜻(`meaning`)인지를 갈라 `basis`에 남길 뿐 관계를 바꾸지 않는다. 모델은 관계도 따로 답하는데, 경계가 아닌데 모델의 관계가 이 표와 다르면 자기 모순으로 기록되어 위험 점수에 들어간다.
 
@@ -108,7 +108,7 @@ def derive(row: dict) -> dict:
 
 대상을 두고 하는 해설(대상과 견주거나 대상의 가정을 가리키는 말)은 weak다. 해설은 대상을 주어로 삼고 논증에서 아무 일도 하지 않는 말에 한하고, 설명조라도 대상에서 무엇을 얻는 말은 대상을 어디에 쓰는지로 판정한다.
 
-front matter의 `description`과 `excerpt`는 글을 요약할 뿐인데 모델이 거기서 제공을 찾아내므로, `shadow_units.py`의 `model_text`가 첫 `---` 블록 안에서 두 필드를 `""`로 비운다. 줄을 지우지 않는 것은 판정 화면의 줄 번호와 모델이 인용하는 줄 번호를 맞추기 위해서다.
+front matter의 `description`과 `excerpt`는 글을 요약할 뿐인데 모델이 거기서 제공을 찾아내므로, `linkdep_units.py`의 `model_text`가 첫 `---` 블록 안에서 두 필드를 `""`로 비운다. 줄을 지우지 않는 것은 판정 화면의 줄 번호와 모델이 인용하는 줄 번호를 맞추기 위해서다.
 
 ## 글 단위 틱과 세 CLI의 호출 방식
 
@@ -126,7 +126,7 @@ Codex에 고정해 둔 `gpt-5.6-sol`은 10월 19일에 Free 계정에서 거부�
 
 > 그리고 의존성 분류기에서, S1 (agy) effort high로 줘.
 
-`shadow_models.py`의 `AGY_EFFORT` 기본값(`DEPENDENCY_SHADOW_AGY_EFFORT`로 덮어쓴다)이 medium에서 high가 되었다. 사고 토큰이 늘어 한 호출이 출력 한도를 넘길 수 있다는 위험은 그대로이고, 그 경우는 위의 반으로 나눠 다시 묻기가 받는다. 코드 주석도 이 순서로 고쳐져, medium이 같은 관계를 절반의 토큰으로 냈다는 근거는 더 이상 적혀 있지 않다. 모델 ID를 넣지 않고 effort만 지정하는 방식은 그대로다.
+`linkdep_models.py`의 `AGY_EFFORT` 기본값(`DEPENDENCY_AGY_EFFORT`로 덮어쓴다)이 medium에서 high가 되었다. 사고 토큰이 늘어 한 호출이 출력 한도를 넘길 수 있다는 위험은 그대로이고, 그 경우는 위의 반으로 나눠 다시 묻기가 받는다. 코드 주석도 이 순서로 고쳐져, medium이 같은 관계를 절반의 토큰으로 냈다는 근거는 더 이상 적혀 있지 않다. 모델 ID를 넣지 않고 effort만 지정하는 방식은 그대로다.
 
 medium으로 돌던 때의 응답은 근거 문장의 `\im`, `\[` 같은 역슬래시를 JSON 이스케이프 없이 내놓는다. `repair_json_text`는 유효한 이스케이프로 시작하지 않는 역슬래시와, `\theta`처럼 이스케이프 문자 뒤에 글자가 이어지는 LaTeX 명령의 역슬래시를 두 배로 만든다. 그러지 않으면 `\t`가 탭으로 읽혀 "heta"만 남는다.
 
@@ -150,7 +150,7 @@ if not refusal:
 _credit_cli("exhausted", "--kind", refusal, "--detail", detail[:300], "--by", CREDIT_CALLER)
 # 구독으로 같은 요청을 다시 부른다
 ```
-{: data-filename="scripts/dependency-classifier/shadow_models.py · 일부 생략, 주석 번역·요약"}
+{: data-filename="scripts/dependency-classifier/linkdep_models.py · 일부 생략, 주석 번역·요약"}
 
 거절 판정(`_credit_refusal`)은 HTTP 401·403이면 `auth`, 응답이나 stderr에 `credit balance`·`purchase credits`·`add funds`가 있으면 `credit`이고, 그 밖의 실패는 거절이 아니라 평소의 오류로 넘어간다. 거절이면 라우터에 `exhausted`를 알리고 같은 요청을 구독으로 다시 부르므로 크레딧이 바닥나도 S2는 멈추지 않는다. 어느 쪽이 냈는지는 `usage["billing"]`에 `credit`이나 `subscription`으로 남는다([커밋 2b454562](https://github.com/math-jh/math-jh.github.io/commit/2b454562)).
 
@@ -176,7 +176,7 @@ end
 
 > (1) 이제 섀도 원장을 정식으로 교체해주고, (2) 미발행 초안도 크론 범위에 넣어줘. 단 로컬 글은 제외.
 
-교체는 `_data/link_relations.yml`을 섀도 원장의 내용으로 통째로 바꾸는 것이었고, 5,180줄짜리 `link_relations_next.yml`은 삭제됐다. 파이프라인(`shadow_store.LEDGER_REL`)과 대시보드의 판정이 이제 `link_relations.yml`을 직접 읽고 쓴다. 그래서 `relation_of`의 두 원장 순회는 한 원장을 보는 세 줄로 줄었다.
+교체는 `_data/link_relations.yml`을 섀도 원장의 내용으로 통째로 바꾸는 것이었고, 5,180줄짜리 `link_relations_next.yml`은 삭제됐다. 파이프라인(`linkdep_store.LEDGER_REL`)과 대시보드의 판정이 이제 `link_relations.yml`을 직접 읽고 쓴다. 그래서 `relation_of`의 두 원장 순회는 한 원장을 보는 세 줄로 줄었다.
 
 ```ruby
 def relation_of(site, lid)
@@ -187,7 +187,7 @@ end
 ```
 {: data-filename="_plugins/graph_data.rb · 일부 발췌"}
 
-원장에 레코드가 없는 lid나 그래프가 받지 않는 값은 미분류다. 프로덕션 값에 밀려 섀도 값이 못 쓰이는 경우가 없어졌고, `listing_regen_gate.rb`의 `EXCLUDED_DATA`(글 페이지만 읽고 판정 틱마다 바뀌어 목록 재렌더 판단에서 빼는 데이터)에서도 `link_relations_next` 항목이 빠졌다. 두 모델이 판정하던 옛 분류기는 `dependency_classifier.py`로 남아 있지만 크론에서 내려왔고, 파이프라인 틱은 그 분류기가 쥐는 `link-relations.lock`이 잡혀 있을 때만 건너뛴다. 대시보드 서버에서는 옛 '의존성 링크 보류' 화면의 `/api/linkaudit/*`와 보류 원장(holds) 코드 500여 줄이 지워졌다. 본문 상단에 선수 글을 모아 보이는 상자의 제목도 이때 "읽어야 할 글"에서 "먼저 볼 글"(영문 "Before you read")로 바뀌었다.
+원장에 레코드가 없는 lid나 그래프가 받지 않는 값은 미분류다. 프로덕션 값에 밀려 섀도 값이 못 쓰이는 경우가 없어졌고, `listing_regen_gate.rb`의 `EXCLUDED_DATA`(글 페이지만 읽고 판정 틱마다 바뀌어 목록 재렌더 판단에서 빼는 데이터)에서도 `link_relations_next` 항목이 빠졌다. 대시보드 서버에서는 옛 '의존성 링크 보류' 화면의 `/api/linkaudit/*`와 보류 원장(holds) 코드 500여 줄이 지워졌다. 본문 상단에 선수 글을 모아 보이는 상자의 제목도 이때 "읽어야 할 글"에서 "먼저 볼 글"(영문 "Before you read")로 바뀌었다.
 
 초안 쪽 변경은 크론의 범위를 정하는 `out_of_scope`에 있다. 10월 20일부터 이 함수는 `published: false`인 글과 `revising: true`인 글을 정규식으로 찾아 건너뛰었다. 승격 뒤에는 글의 front matter를 보지 않고 git이 추적하는 글인지만 본다.
 
@@ -201,16 +201,37 @@ def tracked_posts() -> set[str]:
 
 def out_of_scope(all_paths):
     tracked = tracked_posts()
-    return {dc.unit_key(paths) for paths in all_paths
+    return {core.unit_key(paths) for paths in all_paths
             if any(str(p.relative_to(store.ROOT)) not in tracked for p in paths)}
 ```
-{: data-filename="scripts/dependency-classifier/shadow_tick.py · 일부 생략"}
+{: data-filename="scripts/dependency-classifier/linkdep_tick.py · 일부 생략"}
 
 판정 단위의 파일 중 하나라도 git 밖에 있으면 그 묶음은 로컬 글로 보고 건너뛴다. 원장은 공개 저장소에 커밋되는데, 사용자가 로컬 글이라 부르는 비공개 연구 스트림은 사이트에 올라가지 않기 때문이다. 초안과 개정 중인 글은 일반 글처럼 판정받고, 본문을 고쳐 링크가 늘면 끝난 글에 새 링크가 생겼을 때와 같은 delta 라운드가 돈다. 10월 20일에 이 글을 건너뛰게 한 이유는 편집 중이라 링크가 오가기 때문이었고, 새 규칙은 그 부담을 delta 라운드에 맡긴다.
 
+## 옛 분류기 제거와 linkdep 개명
+
+승격으로 프로덕션 원장을 채우던 쪽이 둘이 되었다. 섀도 파이프라인과, 두 모델이 판정하고 갈리면 `requires-review`를 붙여 보류하던 [옛 분류기](/ko/llm_workshop/semantic_dependencies)(`dependency_classifier.py`)다. 옛 분류기는 크론에서 내려왔어도 파일은 남아 있었고, 파이프라인 틱은 그것이 쥐는 `link-relations.lock`이 잡혀 있을 때 건너뛰는 코드를 달고 있었다. 사용자는 같은 날 오전에 이것을 걷어내라고 했다.
+
+> 다 들어내야 하고, shadow 이름도 바꾸고, 옛 상태 파일도 백업으로 따로 빼 둬. 옛 판정 경로 코드도 깔끔하게 다 정리해줘.
+
+[커밋 e338d029](https://github.com/math-jh/math-jh.github.io/commit/e338d029)가 이 요청을 한 번에 처리한다. 1,957줄이던 `dependency_classifier.py`는 지워지고, 파이프라인이 실제로 쓰던 부분(링크 추출, 판정 모델에 보여 줄 문맥 발췌, lid 발급, 쿼터 게이트)만 931줄짜리 `linkdep_core.py`로 남는다. 두 모델 판정과 holds 원장을 시험하던 `test_dependency_classifier.py`(1,208줄)도 같이 지워지고, 남은 부분의 시험은 `test_linkdep_core.py`가 맡는다.
+
+원장 형식을 읽고 쓰는 `scripts/lib/link_relations.py`도 같은 기준으로 줄었다. 옛 분류기만 쓰던 `/tmp/link-relations.lock`과 `save`가 없어져 쓰는 쪽은 `linkdep_store.save_ledger` 하나가 되었고, `requires-review`가 유효한 값 목록에서 빠졌다. 그 결과 `load`가 `ValueError`로 거절하는 값의 범위가 `required`·`weak`·`forward` 밖 전부로 넓어져, 옛 원장에 남은 `requires-review` 레코드도 여기서 걸린다.
+
+```python
+for lid, value in raw.items():
+    if not isinstance(value, dict) or value.get("relation") not in RELATIONS:
+        raise ValueError(f"{path}: bad record for {lid!r}: {value!r}")
+```
+{: data-filename="scripts/lib/link_relations.py · 일부 발췌"}
+
+원장에는 판정이 끝난 레코드만 오므로, 세 값 밖의 값은 보류 표시가 남았거나 쓰는 쪽이 어긋났다는 뜻이다.
+
+개명은 "섀도"라는 이름을 코드 전체에서 없앤다. `shadow_*.py`가 `linkdep_*.py`가 되고 진입점은 `linkdep_classifier.py`(크론이 부르는 파일)이다. 대시보드는 `shadow.js`·`shadow.css`·`shadow_api.py`가 `linkdeps.js`·`linkdeps.css`·`linkdeps_api.py`로, API 경로는 `/api/shadow/*`에서 `/api/linkdeps/*`로 바뀌고 화면의 블록 제목은 "링크 의존성 판정"이다. 상태 폴더는 `~/.local/state/dependency-shadow`에서 `dependency-classifier`로, 환경변수는 `DEPENDENCY_SHADOW_STATE_DIR`에서 `DEPENDENCY_STATE_DIR`로 바뀌고, 이 파이프라인의 커밋 제목은 `Link Dependencies`이다. 이 글의 이전 절에 나오는 코드 블록은 개명 전 판본이어서 `shadow_pipeline.py`처럼 당시 파일 이름과 커밋을 IAL에 그대로 두었다. 그 밖의 파일 이름은 지금 이름으로 적었다. 개명 커밋의 diff에서 확인한 것은 이름과 지워진 코드까지이고, 옛 상태 파일을 어디에 백업했는지는 이 diff에 없다.
+
 ## 감사 페이지 안의 재판정 화면
 
-사람 쪽 화면 `scripts/dashboard/shadow.js`는 처음에 대시보드의 별도 섹션(`#shadow`)으로 생기고, 이튿날인 10월 18일에 감사 페이지(`#audit`) 아래로 들어가 옛 "의존성 링크 보류" 블록의 자리를 물려받는다. 판정 대기 탭은 쟁점별로 묶되 판정은 링크마다 하고, 독자가 보는 화면을 바꾸는 링크가 위로 온다.
+사람 쪽 화면(지금은 `scripts/dashboard/linkdeps.js`)은 처음에 대시보드의 별도 섹션(`#shadow`)으로 생기고, 이튿날인 10월 18일에 감사 페이지(`#audit`) 아래로 들어가 옛 "의존성 링크 보류" 블록의 자리를 물려받는다. 판정 대기 탭은 쟁점별로 묶되 판정은 링크마다 하고, 독자가 보는 화면을 바꾸는 링크가 위로 온다.
 
 미리보기 창과 근거 모달도 10월 18일에 붙는다.
 

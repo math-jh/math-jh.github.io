@@ -19,7 +19,7 @@ group: agents
 
 ---
 
-관련 파일: [`scripts/dependency-classifier/shadow_digest.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_digest.py), [`shadow_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_tick.py), [`shadow_store.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/shadow_store.py), [`test_shadow.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/test_shadow.py), [커밋 fedb9c97](https://github.com/math-jh/math-jh.github.io/commit/fedb9c97), [커밋 02978607](https://github.com/math-jh/math-jh.github.io/commit/02978607)
+관련 파일: [`scripts/dependency-classifier/linkdep_digest.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_digest.py), [`linkdep_tick.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_tick.py), [`linkdep_store.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/linkdep_store.py), [`test_linkdep.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/dependency-classifier/test_linkdep.py), [커밋 fedb9c97](https://github.com/math-jh/math-jh.github.io/commit/fedb9c97), [커밋 02978607](https://github.com/math-jh/math-jh.github.io/commit/02978607)
 {: .notice--info}
 
 링크 판정 화면에 Bruhat decomposition 쪽 링크가 같은 모양으로 계속 올라왔다. 사용자는 판정이 글 단위로 한 번 돌고 넘어가야 하는데 왜 다시 보이느냐고 물었다.
