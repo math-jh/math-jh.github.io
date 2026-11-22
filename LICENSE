@@ -1,3 +1,76 @@
+This repository holds the source of the blog "Blackbox" (https://math-jh.com).
+Different parts are under different licenses.
+
+
+1. Content: CC BY-NC-SA 4.0
+
+   Unless otherwise noted, the content of the site (posts in `_posts/`,
+   pages in `_pages/`, and the original images, diagrams and videos in
+   `assets/`) is
+
+     Copyright (c) 2022-2026 Junhyeok Kim
+
+   and is licensed under the Creative Commons Attribution-NonCommercial-
+   ShareAlike 4.0 International License:
+   https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+
+2. Code: MIT
+
+   The site's own code (`_plugins/`, `_includes/`, `_layouts/`, `_sass/`,
+   `assets/js/`, `scripts/`, `workers/` and the build configuration) is
+   licensed under the MIT License in section A below.
+
+   Parts of the layouts, includes, styles and scripts are derived from the
+   Minimal Mistakes Jekyll theme by Michael Rose and contributors, which is
+   also under the MIT License. Its original notice is reproduced in
+   section B below.
+
+
+3. Third-party files
+
+   The following are not covered by 1 or 2 and keep their own licenses or
+   copyrights:
+
+   - `assets/katex/`          KaTeX
+   - `assets/js/vendor/`      jQuery, force-graph
+   - `assets/js/plugins/`     jQuery plugins, Gumshoe, Smooth Scroll
+   - `assets/css/fonts/`      Hahmlet, IBM Plex Sans KR, MaruBuri,
+                              Merriweather, NanumGothic, Material Symbols
+   - `assets/reference/`      documents by their respective authors
+   - `_data/comments/`        comments, owned by their authors
+
+
+===============================================================================
+A. MIT License (this site's code)
+===============================================================================
+
+Copyright (c) 2022-2026 Junhyeok Kim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+===============================================================================
+B. Minimal Mistakes Jekyll theme
+   https://github.com/mmistakes/minimal-mistakes
+===============================================================================
+
 The MIT License (MIT)
 
 Copyright (c) 2013-2020 Michael Rose and contributors

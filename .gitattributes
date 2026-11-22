@@ -1,0 +1,4 @@
+# GitHub 언어 통계에서 제3자 라이브러리를 뺀다.
+assets/katex/** linguist-vendored
+assets/js/vendor/** linguist-vendored
+assets/js/plugins/** linguist-vendored
