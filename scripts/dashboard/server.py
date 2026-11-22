@@ -716,11 +716,18 @@ def sec_gsc():
         return None
     urls = d.get("urls", {})
     today = time.strftime("%Y-%m-%d")
-    unindexed, by_coverage = [], {}
+    # 사이트가 googlebot noindex 로 내는 글(index_ranking.site_noindexed)은 조치 대상이
+    # 아니다. 미색인 목록·조치 대상 수·추천에서 빼고, coverage 분포는 따로 센다 —
+    # 구글이 태그를 읽었는지는 그 분포가 `Excluded by 'noindex' tag` 로 옮겨 가는지로 안다.
+    noindexed = index_ranking.site_noindexed() if index_ranking else (lambda path: False)
+    unindexed, by_coverage, by_coverage_noindex = [], {}, {}
     for path, v in urls.items():
         if not isinstance(v, dict):
             continue
         cov = v.get("coverage") or "?"
+        if noindexed(path):
+            by_coverage_noindex[cov] = by_coverage_noindex.get(cov, 0) + 1
+            continue
         by_coverage[cov] = by_coverage.get(cov, 0) + 1
         if v.get("indexed"):
             continue
@@ -733,10 +740,11 @@ def sec_gsc():
     # 오늘의 색인 요청 추천. 03:00 크론이 이미 오늘치를 뽑아 뒀으면 **그걸** 쓴다
     # (그 배치는 GSC 실측을 거쳤고, 뽑히면서 쿨다운이 걸려 여기서 다시 계산하면
     # 다음 순번이 나온다). 아직 안 돌았거나 어제 것이면 같은 모듈로 직접 고른다.
+    # 배치가 뽑힌 뒤에 noindex 설정이 켜졌을 수 있으므로 배치에도 같은 필터를 건다.
     batch = d.get("last_batch") or {}
     rec_paths, rec_src = [], "none"
     if batch.get("date") == today and batch.get("paths"):
-        rec_paths, rec_src = list(batch["paths"]), "batch"
+        rec_paths, rec_src = [p for p in batch["paths"] if not noindexed(p)], "batch"
     elif index_ranking:
         cands = [k for k, v in urls.items()
                  if isinstance(v, dict) and v.get("indexed") is not True]
@@ -746,8 +754,10 @@ def sec_gsc():
                       since=(urls.get(p) or {}).get("since", ""))
                  for p in rec_paths]
 
-    return dict(mtime=mtime(p), total=len(urls), unindexed=unindexed[:25],
+    return dict(mtime=mtime(p), total=sum(by_coverage.values()), unindexed=unindexed[:25],
                 unindexed_count=len(unindexed), by_coverage=by_coverage,
+                by_coverage_noindex=by_coverage_noindex,
+                noindex_total=sum(by_coverage_noindex.values()),
                 actionable=sum(1 for r in unindexed if not r["snoozed"]),
                 last_batch=batch.get("date"),
                 last_full_sweep=d.get("last_full_sweep"),

@@ -1225,8 +1225,19 @@ function secIndex(d) {
     Object.keys(g.by_coverage).sort(function (x, y) { return g.by_coverage[y] - g.by_coverage[x]; }).map(function (k) {
       return row([{ text: k }, { text: num(g.by_coverage[k]), cls: 'num' }]);
     })));
-  l.appendChild(el('p', 'hint', '전체 ' + num(g.total) + ' URL · 마지막 배치 ' + (g.last_batch || '—') +
+  l.appendChild(el('p', 'hint', '색인 대상 ' + num(g.total) + ' URL · 마지막 배치 ' + (g.last_batch || '—') +
     ' · 전체 스윕 ' + (g.last_full_sweep || '—')));
+  if (g.noindex_total) {
+    var nx = g.by_coverage_noindex || {};
+    l.appendChild(h3Help('구글 noindex 글 ' + num(g.noindex_total) + '편',
+      '사이트가 구글에만 noindex 로 내는 글이다(_config.yml 의 google_noindex_en_posts, 지금은 영어 글). ' +
+      '조치 대상 수와 색인 요청 추천에 들어가지 않는다. 구글이 태그를 읽은 글은 상태가 ' +
+      'Excluded by ‘noindex’ tag 로 바뀐다.'));
+    l.appendChild(table(['상태', { label: 'URL', num: true }],
+      Object.keys(nx).sort(function (x, y) { return nx[y] - nx[x]; }).map(function (k) {
+        return row([{ text: k }, { text: num(nx[k]), cls: 'num' }]);
+      })));
+  }
   /* 색인 요청 추천 — index-monitor 와 같은 순위 규칙(index_ranking.py)으로 고른
      10건. URL 을 누르면 이동이 아니라 완결된 링크가 클립보드로 복사된다:
      그대로 GSC 검색창에 붙여 넣고 색인 요청을 누르는 흐름. */
@@ -1236,7 +1247,7 @@ function secIndex(d) {
     '글을 누르면 그 글의 ' + host + '/… 완결된 주소가 클립보드로 복사된다 — GSC 검색창에 붙여 넣고 ' +
     '색인 요청을 누르면 된다. ' +
     (g.recommend_src === 'batch'
-      ? '오늘 03:00 배치(' + (g.last_batch || '—') + ')를 그대로 보여 준다.'
+      ? '오늘 03:00 배치(' + (g.last_batch || '—') + ')에서 구글 noindex 글을 뺀 것이다.'
       : g.recommend_src === 'computed'
         ? '오늘 배치가 아직 없어 같은 규칙(index_ranking.py)으로 지금 골랐다.'
         : '추천할 URL이 없다.') +

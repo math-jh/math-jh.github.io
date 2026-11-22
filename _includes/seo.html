@@ -64,6 +64,23 @@ and site.pages here on every page — that walk was ~13ms per rendered page.
   {%- assign alt_post = alt_url -%}
 {%- endif -%}
 
+{%- comment -%}
+site.google_noindex_en_posts 가 켜져 있으면 영어 글(posts 컬렉션의 /en/ 주소)을 구글
+색인에서만 뺀다. googlebot 전용 지시라 다른 검색엔진과 사람 독자에게는 변화가 없다.
+글 쌍의 hreflang 도 같이 뺀다: 색인하지 말라는 글을 대체 언어판으로 가리키면 두 신호가
+어긋난다. scripts/index-monitor/index_ranking.py 가 같은 키를 읽어 색인 요청 추천에서
+영어 글을 뺀다.
+{%- endcomment -%}
+{%- assign google_noindex = false -%}
+{%- assign emit_hreflang = true -%}
+{%- if site.google_noindex_en_posts and page.collection == "posts" -%}
+  {%- assign emit_hreflang = false -%}
+  {%- assign url_head = page.url | slice: 0, 4 -%}
+  {%- if url_head == "/en/" -%}
+    {%- assign google_noindex = true -%}
+  {%- endif -%}
+{%- endif -%}
+
 {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
 {%- assign author = site.data.authors[author] | default: author -%}
 
@@ -155,8 +172,11 @@ and site.pages here on every page — that walk was ~13ms per rendered page.
 {% endif %}
 
 <link rel="canonical" href="{{ canonical_url }}">
+{%- if google_noindex %}
+<meta name="googlebot" content="noindex">
+{%- endif %}
 
-{%- if alt_post %}
+{%- if alt_post and emit_hreflang %}
   {%- if this_lang == "ko" -%}
     {%- assign ko_canonical = canonical_url -%}
     {%- assign en_canonical = alt_url | absolute_url -%}

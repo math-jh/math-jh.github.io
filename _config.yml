@@ -81,6 +81,10 @@ google_site_verification : "yFpbvl3mlOU_qKtfTCT4EkVWBgdCSV2m1FQsH6bQw38"
 # URL 접두어 속성 https://math-jh.github.io/ 의 소유 확인용. 그 주소가 여기로 301 되므로
 # 태그는 이 사이트 홈에 있어야 한다 — 지우면 그 속성(주소 변경 제출·옛 실적)을 잃는다.
 google_site_verification_github_io : "D1SY1jalQEE3sKKJjj1KWASZwCSTFRApCluC9Bmdpqo"
+# true 면 영어 글(posts 의 /en/…)에 googlebot 전용 noindex 를 내고 글 쌍의 hreflang 을 뺀다
+# (_includes/seo.html). scripts/index-monitor/index_ranking.py 도 이 줄을 읽어 색인 요청
+# 추천에서 영어 글을 뺀다 — 키 이름과 형식(한 줄, true/false)을 바꾸면 그쪽 정규식도 고칠 것.
+google_noindex_en_posts  : true
 bing_site_verification   : "EDD9BFB4CFBAF359F52496A42C5CFF0E"
 naver_site_verification  : "6bd1cd6bedce702bb2392a772ad27214caed6ec2"
 yandex_site_verification :
