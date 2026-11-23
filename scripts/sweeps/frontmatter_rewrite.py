@@ -49,7 +49,7 @@ MODIFIERS = set("정의 뜻 의미 증명 조건 필요충분조건 구하기 �
                 "공식 성질 판별 판별법 하는법 방법 가능 활용 응용 정리 동치 반례 유도 풀이 개념".split())
 
 # FM_PROFILE=english 는 본문이 영어로 쓰는 용어를 그대로 두는 과목용이다: 프롬프트가 다르고,
-# 용어표에는 이 글에서 정의한 용어 중 terms.yml 이 한글로 확정한 것(primary: ko)과 본문의 <sub> 병기만 들어간다.
+# 용어표에는 이 글에서 정의했거나 <sub> 로 병기한 용어 중 terms.yml 이 한글로 확정한 것(primary: ko)만 들어간다.
 PROFILE = os.environ.get("FM_PROFILE", "korean")
 PROMPT_FILE = Path(__file__).with_suffix(".prompt.md" if PROFILE == "korean" else f".{PROFILE}.prompt.md")
 
@@ -98,6 +98,7 @@ def term_table(post):
     """
     body = re.sub(r"\$\$.*?\$\$|\$[^$\n]*\$", " ", post["body"], flags=re.S)
     defined, used = [], []
+    ko_primary = {str(e.get("en") or "").lower(): e.get("primary") for e in all_terms()}
     # 긴 표기부터 세고 센 자리는 지운다 — order relation 안의 order 를 따로 세지 않기 위해서다.
     for e in sorted(all_terms(), key=lambda e: -len(str(e.get("en") or ""))):
         en, ko = str(e.get("en") or ""), str(e.get("ko") or "")
@@ -115,8 +116,11 @@ def term_table(post):
             used.append((hits, en, ko))
     for a, b in re.findall(r"\*([^*<\n]{1,60})<sub>([^<\n]{1,60})</sub>", post["body"]):
         en, ko = (b, a) if re.search("[가-힣]", a) else (a, b)
-        if re.search("[가-힣]", ko) and "$" not in en + ko:
-            defined.append((en.strip(), ko.strip()))
+        if not re.search("[가-힣]", ko) or "$" in en + ko:
+            continue
+        if PROFILE == "english" and ko_primary.get(en.strip().lower()) != "ko":
+            continue  # 본문이 영어로 쓰고 한글은 병기만 한 용어 — 영어로 둔다
+        defined.append((en.strip(), ko.strip()))
     seen, pairs = set(), []
     for en, ko in defined + [(en, ko) for _, en, ko in sorted(used, key=lambda t: -t[0])]:
         key = (en.lower(), squash(ko))
