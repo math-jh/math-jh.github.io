@@ -71,6 +71,15 @@ AGY_BIN               = os.environ.get("AGY_BIN") or str(
 AGY_MODEL             = os.environ.get("AGY_MODEL")
 AGY_EFFORT            = os.environ.get("AGY_EFFORT") or "high"
 AGY_AGENT             = os.environ.get("AGY_AGENT", "blog-translator")
+# Antigravity 7d 예측이 runs out 이면 call_translator 는 같은 프롬프트를 Gemini API 선불
+# 크레딧(TTS 와 같은 키·잔액)으로 부른다 — 판정·호출·원장은 ~/.local/bin/gemini-credit,
+# 시스템 프롬프트는 위 custom agent 파일. 거절·실패하면 agy 로 넘어간다. 과금 경로만
+# 바뀌고 TRANSLATOR_BACKEND 는 antigravity 그대로라 provenance·폴리싱 태그는 그대로다.
+# 그래서 번역·후속 워커는 Antigravity quota governor 의 정지 대상이 아니다.
+GEMINI_CREDIT_BIN     = os.environ.get("GEMINI_CREDIT_BIN") or str(
+    Path.home() / ".local/bin/gemini-credit")
+GEMINI_API_MODEL      = os.environ.get("GEMINI_API_MODEL") or "gemini-4-hydrogen"
+AGY_AGENT_FILE        = Path.home() / ".gemini/config/agents" / AGY_AGENT / "agent.md"
 GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 # kimi-headless 어댑터를 거친다. PATH 의 `kimi` 를 집으면 안 된다 — 그건
 # kimi-code 본체라 이 워커가 쓰는 구 CLI 규약(stdin 프롬프트, 장식 없는 최종
@@ -1809,6 +1818,9 @@ def call_translator(prompt: str, *, thinking: bool = False,
             args += ["--mcp-config-file", mcp_config_file]
         stdin_text = prompt
     elif TRANSLATOR_BACKEND == "antigravity":
+        api_out = call_gemini_api(prompt)
+        if api_out is not None:
+            return _clean_translator_output(api_out)
         # 첫 user 메시지의 리터럴 `[cron]` 은 세션 리퍼(reap-claude-sessions.py)가
         # agy 대화 db 를 봇 대화로 알아보는 표지다.
         args = [AGY_BIN, "--print", "[cron]\n\n" + prompt,
@@ -1848,6 +1860,52 @@ def call_translator(prompt: str, *, thinking: bool = False,
     if not out.strip():
         raise RuntimeError(f"{Path(args[0]).name} returned empty output; "
                            f"stderr={proc.stderr.strip()[:500]!r}")
+    return _clean_translator_output(out)
+
+
+_gemini_api_announced = False
+
+
+def call_gemini_api(prompt: str) -> Optional[str]:
+    """gemini-credit 가 api 경로를 고르면 Gemini API 로 부른다. 아니면·실패하면 None.
+
+    로그는 실행당 첫 API 호출 한 줄과 agy 로 넘어간 줄만 남긴다 — 큰 글은 조각마다
+    부르므로 호출마다 찍으면 로그가 덮인다. gemini-credit 의 stderr 는 한 줄 분류라
+    그대로 실어도 대시보드 오류 스캔에 안 걸린다.
+    """
+    global _gemini_api_announced
+    if not Path(GEMINI_CREDIT_BIN).exists():
+        return None
+    try:
+        p = subprocess.run([GEMINI_CREDIT_BIN, "route", "--json"],
+                           capture_output=True, text=True, timeout=60)
+        route = json.loads(p.stdout or "{}")
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return None
+    if route.get("route") != "api":
+        return None
+    try:
+        p = subprocess.run(
+            [GEMINI_CREDIT_BIN, "generate", "--model", GEMINI_API_MODEL,
+             "--thinking", AGY_EFFORT, "--system-file", str(AGY_AGENT_FILE),
+             "--by", Path(sys.argv[0]).stem or "translate_worker",
+             "--timeout", str(TRANSLATOR_TIMEOUT_SEC)],
+            input=prompt, capture_output=True, text=True,
+            timeout=TRANSLATOR_TIMEOUT_SEC + 60)
+    except (OSError, subprocess.SubprocessError) as e:
+        log(f"GEMINI-API: 호출이 끝나지 않음 ({type(e).__name__}) — agy 로 넘어감")
+        return None
+    if p.returncode == 0 and p.stdout.strip():
+        if not _gemini_api_announced:
+            _gemini_api_announced = True
+            log(f"GEMINI-API: {GEMINI_API_MODEL} 로 부름 ({route.get('reason')})")
+        return p.stdout
+    first = (p.stderr.strip().splitlines() or [""])[0][:120]
+    log(f"GEMINI-API: rc={p.returncode} ({first}) — agy 로 넘어감")
+    return None
+
+
+def _clean_translator_output(out: str) -> str:
     # Defensive: strip code fences if the translator wrapped output
     out = _FENCE_RE.sub("", out).strip() + "\n"
     # Defensive: a model may output `---title: ...` with no newline
