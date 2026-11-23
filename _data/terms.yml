@@ -7195,6 +7195,13 @@ F:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: finite_sequence
+  en: finite sequence
+  ko: 유한수열
+  primary: en
+  defs:
+  - label: '[집합론] §자연수와 무한집합'
+    url: /ko/math/set_theory/natural_numbers
 - id: finite_subcover
   en: finite subcover
   ko: 유한부분덮개
