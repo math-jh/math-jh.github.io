@@ -1,7 +1,7 @@
 ---
 title: "갈루아 확장"
-description: "Galois extension의 정의와 성질을 다룬다. Algebraic extension들 사이의 conjugate 관계를 정의하고, conjugate extension과 conjugate element의 관계를 살펴본다. Quasi-Galois extension의 여러 동치 조건과, minimal polynomial을 이용한 Galois extension의 특징을 확인한다."
-excerpt: "Normal과 separable을 모두 만족하는 Galois extension의 정의"
+description: "갈루아 확장의 정의와 성질, 갈루아 군을 다루고 대수적 확장 사이의 켤레 관계를 정의한다. 준갈루아확대의 여러 동치 조건과 최소다항식을 이용한 갈루아 확장의 특징을 확인한다."
+excerpt: "정규성과 분리가능성을 모두 만족하는 갈루아 확장의 정의와 갈루아 군"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/galois_extension

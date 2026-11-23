@@ -1,7 +1,7 @@
 ---
 title: "미분방정식의 존재성과 유일성"
-description: "초기값 문제를 integral equation으로 바꾸고 축소사상 정리로 Picard–Lindelöf 정리를 증명한다. 립시츠 조건이 빠지면 유일성이 깨지는 반례, 해가 유한시간에 폭발하는 예, Grönwall 부등식을 이용한 유일성과 최대 해 구간, Peano 존재정리의 진술을 다룬다."
-excerpt: "Picard–Lindelöf 정리, Grönwall 부등식, 최대 해 구간"
+description: "초기값 문제를 적분방정식으로 바꾸고 축소사상 정리로 피카르-린델뢰프 정리를 증명한다. 립시츠 조건과 반례, 그뢴발 부등식을 이용한 유일성 증명, 최대 해 구간, 페아노 존재정리를 다룬다."
+excerpt: "피카르-린델뢰프 정리, 그뢴발 부등식, 최대 해 구간"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/existence_uniqueness_ode

@@ -1,7 +1,7 @@
 ---
 title: "모듈라이 공간"
-description: "Moduli 문제를 functor·stack으로 정식화하고, universal family를 갖는 fine moduli space의 representability와 automorphism obstruction, 그리고 coarse moduli space와 moduli stack의 역할을 다룬다."
-excerpt: "Moduli functors, fine vs coarse moduli spaces, and why the moduli stack is the right object"
+description: "Moduli functor를 정의하고 fine·coarse moduli space의 차이를 설명한다. Automorphism obstruction과 moduli stack도 다룬다."
+excerpt: "fine·coarse moduli space와 moduli stack"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/moduli_spaces

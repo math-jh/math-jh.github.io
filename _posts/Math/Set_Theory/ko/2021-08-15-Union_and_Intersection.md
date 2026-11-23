@@ -1,7 +1,7 @@
 ---
 title: "합집합과 교집합"
-description: "집합의 family에 대한 합집합과 교집합의 정의를 ZFC 공리계 위에서 엄밀하게 다루며, 전사함수를 이용한 교집합의 성질을 증명한다."
-excerpt: "집합들 간의 합집합과 교집합"
+description: "집합족에 대한 합집합과 교집합의 정의를 ZFC 공리계 위에서 엄밀하게 다룬다. 이어서 결합법칙과 합집합 및 교집합의 상을 정리하고 드 모르간 법칙을 증명한다."
+excerpt: "집합족의 합집합과 교집합 정의, 결합법칙과 드 모르간 법칙"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/union_and_intersection

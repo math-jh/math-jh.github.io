@@ -1,7 +1,7 @@
 ---
 title: "가해 Lie algebra와 nilpotent Lie algebra"
-description: "추상 Lie algebra의 subalgebra·ideal·quotient와 adjoint representation을 정리하고, derived series와 lower central series로 가해성과 nilpotency를 정의한 뒤 Engel의 정리와 Lie의 정리를 증명한다."
-excerpt: "Derived series, lower central series, Engel·Lie 정리"
+description: "추상 Lie algebra의 가해성과 nilpotency를 derived series와 lower central series로 정의하고, Engel의 정리와 Lie의 정리를 증명한다."
+excerpt: "Derived·lower central series와 Engel·Lie 정리"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/solvable_nilpotent_lie_algebras

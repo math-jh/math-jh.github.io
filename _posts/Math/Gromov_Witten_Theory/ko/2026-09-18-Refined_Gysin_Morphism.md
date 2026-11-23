@@ -1,7 +1,7 @@
 ---
 title: "Refined Gysin morphism"
-description: "Regular embedding의 Gysin morphism과 그 refined 판본을 deformation to the normal cone으로 구성하고, excess intersection formula와 functoriality를 거쳐 두 class를 smooth base 위의 대각선으로 교차시키는 연산을 얻는다."
-excerpt: "Refined Gysin homomorphisms, excess intersection, and diagonal intersection over a smooth base"
+description: "Normal cone으로 refined Gysin morphism을 정의한다. Excess intersection formula와 functoriality를 거쳐 대각선 교차 연산을 얻는다."
+excerpt: "Excess intersection formula와 대각선 교차"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes

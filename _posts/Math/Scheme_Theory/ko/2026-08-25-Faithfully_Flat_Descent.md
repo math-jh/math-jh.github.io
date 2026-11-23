@@ -1,7 +1,7 @@
 ---
 title: "충실평탄하강"
-description: "Faithfully flat morphism을 따라 algebraic·geometric data를 내려보내는 Grothendieck의 descent theory를 다룬다. Amitsur complex의 exactness로부터 module의 descent 정리를 유도하고, descent datum의 category가 base ring 위의 module category와 equivalent함을 보인 뒤, 이를 fpqc topology 위의 quasi-coherent sheaf와 morphism의 descent로 확장한다."
-excerpt: "Faithfully flat descent, descent datum, the cocycle condition, fpqc topology and effective descent"
+description: "충실평탄사상을 정의하고 Grothendieck의 descent 정리를 증명한다. Amitsur complex로 module 하강을 유도하고 fpqc topology의 준연접층과 사상으로 확장한다."
+excerpt: "Amitsur complex와 Grothendieck의 descent 정리"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/faithfully_flat_descent
@@ -91,7 +91,7 @@ $$\partial^n=\sum_{i=0}^{n+1}(-1)^i\delta_i: C^n \rightarrow C^{n+1}$$
 
 $$0 \rightarrow A \overset{\phi}{\rightarrow} B \overset{\partial^0}{\rightarrow} B\otimes_A B \overset{\partial^1}{\rightarrow} B\otimes_A B\otimes_A B \rightarrow \cdots$$
 
-를 $\phi$의 *Amitsur complex<sub>Amitsur 복합체</sub>*라 부른다. 
+를 $\phi$의 *Amitsur complex<sub>아미추어 복합체</sub>*라 부른다. 
 
 핵심적인 관찰은 만일 $\phi$가 faithfully flat이라면 이 complex가 exact가 되어, $C^\bullet$이 $A$의 resolution이 된다는 것이다. 다만 이 글에서 우리가 실제로 쓰는 것은 이 resolution 전체가 아니라 처음 두 개의 morphism 뿐이므로 우리는 다음만 주장한다. 
 

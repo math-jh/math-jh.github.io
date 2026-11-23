@@ -1,7 +1,7 @@
 ---
 title: "고립특이점과 Laurent 급수"
-description: "구멍 뚫린 원판에서 복소정칙인 함수가 음의 멱까지 허용하는 Laurent series로 전개됨을 Cauchy 적분공식으로 보이고, 그 주부의 항 수에 따라 고립특이점을 removable, pole, essential의 셋으로 분류한다. Riemann 가제거 정리, 극에서 함수가 무한대로 발산함, Casorati–Weierstrass 정리, 그리고 무한대에서의 singular point까지 다룬다."
-excerpt: "Laurent series, 고립특이점 분류, removable singularity, pole과 위수, essential singularity, Riemann 가제거 정리, Casorati–Weierstrass, 무한대에서의 singular point"
+description: "환형 영역에서 복소정칙함수의 로랑 급수 전개를 코시 적분공식으로 보이고, 주부에 따라 고립특이점을 분류한다. 리만 가제거 정리, 극의 발산, 카소라티-바이어슈트라스 정리도 다룬다."
+excerpt: "로랑 급수, 고립특이점 분류, 리만 가제거 정리, 카소라티-바이어슈트라스 정리"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/isolated_singularities

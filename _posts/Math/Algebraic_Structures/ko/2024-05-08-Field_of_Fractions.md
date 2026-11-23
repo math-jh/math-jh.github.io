@@ -1,7 +1,7 @@
 ---
 title: "분수체"
-description: "정수환의 분수체 구성 과정을 일반화하여, 가환환과 그 곱셈 부분집합으로부터 분수체를 만드는 방법을 다룬다. Grothendieck 군의 construction을 활용해 monoid of fractions 위에 유일한 덧셈구조를 부여하여 가환환을 얻는 과정을 증명한다."
-excerpt: "Localization, ring of fraction, prime ideal"
+description: "정수환의 분수체 구성을 일반화해 가환환의 분수환을 정의하고 체와 정역을 다룬다. 그로텐디크 군 구성을 활용해 분수 모노이드에 유일한 덧셈구조를 부여해 가환환을 얻는 과정을 증명한다."
+excerpt: "국소화, 분수환, 체, 정역, 소아이디얼, 멱영원"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/field_of_fractions

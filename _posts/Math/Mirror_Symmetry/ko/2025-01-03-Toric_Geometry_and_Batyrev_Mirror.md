@@ -1,7 +1,7 @@
 ---
 title: "Reflexive Polytope과 Batyrev Mirror"
-description: "리플렉시브 폴리토프와 그 이중 폴리토프의 관계를 통해 배트레프 미러 구성이 토릭 기하학에서 칼라비-야우 다양체를 자연스럽게 만들어내는 원리를 소개하고, 구체적 계산 예시와 그래스만니안 미러 대칭과의 연결을 다룬다."
-excerpt: "Reflexive polytope의 쌍대성으로부터 얻는 Calabi-Yau mirror pair"
+description: "Reflexive polytope과 그 dual을 정의하고 Batyrev mirror construction으로 mirror pair를 만드는 원리를 설명한다. 구체적 계산 예제도 다룬다."
+excerpt: "쌍대성으로부터 얻는 Batyrev mirror symmetry"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/toric_geometry_batyrev

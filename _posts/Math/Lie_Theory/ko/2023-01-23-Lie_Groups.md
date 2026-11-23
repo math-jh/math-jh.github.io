@@ -1,7 +1,7 @@
 ---
 title: "리 군"
-description: "리 군은 그룹 연산인 곱셈과 역원이 모두 매끄러운 매니폴드 위의 그룹으로, 예시로 벡터 공간과 토러스, 일반선형군 등이 있다."
-excerpt: "Lie group의 정의와 성질"
+description: "리 군과 리 대수를 정의하고 리 대응을 다룬다. Cartan's closed subgroup theorem, Baker-Campbell-Hausdorff와 가환 리 군의 분류를 설명한다."
+excerpt: "Lie group의 정의와 리 대수, 행렬 지수함수, 리 대응"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/Lie_groups

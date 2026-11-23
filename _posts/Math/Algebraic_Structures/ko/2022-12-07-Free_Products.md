@@ -1,7 +1,7 @@
 ---
 title: "자유곱"
-description: "자유곱의 존재성과 universal property를 증명하고, 자유군의 정의와 adjoint functor를 활용하여 자유곱의 구성을 설명한다."
-excerpt: "Free product와 universal property"
+description: "자유곱의 존재성과 보편성질을 증명하고, 자유군의 정의와 수반 함자를 활용하여 자유곱의 구성을 설명한다. 자유군은 망각 함자의 왼쪽 수반함자로 정의한다."
+excerpt: "자유군의 정의와 자유곱의 보편성질"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/free_products

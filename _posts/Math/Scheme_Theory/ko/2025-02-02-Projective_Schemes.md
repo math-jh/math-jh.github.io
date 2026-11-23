@@ -1,6 +1,6 @@
 ---
 title: "사영공간과 Proj 구성"
-description: "아핀 직선들을 적당한 방식으로 붙여서 사영공간을 만들고, 이를 일반화하여 임의의 등급환에 Proj를 취하는 구성을 다룬다. 위상수학적 관점에서 사영공간을 이해하고, 스테레오 사영법과 콕사이클 조건을 통해 아핀 직선들을 접합하는 방법을 살펴본다."
+description: "사영공간을 일반화하여 임의의 등급환으로부터 사영스킴을 얻는 Proj 구성을 정의한다. 위상수학적 관점에서 quotient space로서의 사영공간을 직관적으로 이해하는 과정을 다룬다."
 excerpt: "Graded ring으로부터의 Proj 구성과 사영공간"
 
 categories: [Math / Scheme Theory]

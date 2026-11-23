@@ -1,7 +1,7 @@
 ---
 title: "정칙국소환"
-description: "정칙국소환의 정의와 기본 성질을 다루며, 정칙국소환이 정역임을 차원에 대한 귀납법으로 증명한다. 정칙열의 개념도 함께 소개한다."
-excerpt: "Regular system of parameters와 regular local ring의 특성화"
+description: "정칙국소환에서 regular system of parameters를 정의하고 정칙국소환이 정역임을 차원에 대한 귀납법으로 증명한다. 이산값매김환과 세르의 정규화 조건도 다룬다."
+excerpt: "Regular system of parameters와 세르의 정규화 조건"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/regular_local_rings
@@ -206,7 +206,7 @@ $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-prima
 
 이제 [명제 7](#prop7){: data-lid="qujhb" }을 적용할 수 있다. S2 조건에 의하여 non-zerodivisor에 associated인 prime ideal $\mathfrak{p}$는 모두 codimension $1$이고, R1 조건에 의하여 $A_\mathfrak{p}$는 discrete valuation ring이다. 그럼 $A$의 total ring of fractions $K$의 원소 $x$가 $A$ 위에서 integral이라면, $x$의 $K_\mathfrak{p}$에서의 image는 $A_\mathfrak{p}$ 위에서 integral이고 discrete valuation ring이 normal domain이므로 이는 $A_\mathfrak{p}$에 속한다. 따라서 [명제 7](#prop7){: data-lid="6nn2i" }에 의하여 $x\in A$이고, 곧 $A$는 $K$ 안에서 integrally closed이다. 
 
-한편 $A$가 reduced이므로 $K$는 field들의 유한한 direct product $K_1\times\cdots\times K_n$이고 ([§동반소아이디얼, ⁋따름정리 8](/ko/math/commutative_algebra/associated_primes#cor8){: data-lid="oj2mo" }), 각각의 성분에 대응하는 idempotent $e_i\in K$는 monic polynomial $\x^2-\x$의 근이므로 $A$ 위에서 integral이며, 따라서 $e_i\in A$이다. 그럼 $A$의 임의의 maximal ideal $\mathfrak{m}$에 대하여 $A_\mathfrak{m}$은 local ring이므로 그 idempotent는 $0$과 $1$뿐이고, $\sum_i e_i=1$이므로 $e_i$들의 image 중 정확히 하나만이 $1$이고 나머지는 $0$이며, 이로부터 $A_\mathfrak{m}$은 field $K_i$의 subring $Ae_i$의 localization으로서 domain이다. 이제 [§조르단-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5){: data-lid="4gcly" }에 의하여 $A$는 domain들의 유한한 direct product이고, $K$는 각 factor의 total ring of fractions들의 product이므로 $A$가 $K$ 안에서 integrally closed이라는 것은 각각의 factor가 자신의 total ring of fractions 안에서 integrally closed이라는 뜻이다. 즉 $A$는 normal domain들의 유한한 direct product이다. 
+한편 $A$가 reduced이므로 $K$는 field들의 유한한 direct product $K_1\times\cdots\times K_n$이고 ([§동반소아이디얼, ⁋따름정리 8](/ko/math/commutative_algebra/associated_primes#cor8){: data-lid="oj2mo" }), 각각의 성분에 대응하는 idempotent $e_i\in K$는 monic polynomial $\x^2-\x$의 근이므로 $A$ 위에서 integral이며, 따라서 $e_i\in A$이다. 그럼 $A$의 임의의 maximal ideal $\mathfrak{m}$에 대하여 $A_\mathfrak{m}$은 local ring이므로 그 idempotent는 $0$과 $1$뿐이고, $\sum_i e_i=1$이므로 $e_i$들의 image 중 정확히 하나만이 $1$이고 나머지는 $0$이며, 이로부터 $A_\mathfrak{m}$은 field $K_i$의 subring $Ae_i$의 localization으로서 domain이다. 이제 [§조르당-횔더 정리, ⁋정리 5](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm5){: data-lid="4gcly" }에 의하여 $A$는 domain들의 유한한 direct product이고, $K$는 각 factor의 total ring of fractions들의 product이므로 $A$가 $K$ 안에서 integrally closed이라는 것은 각각의 factor가 자신의 total ring of fractions 안에서 integrally closed이라는 뜻이다. 즉 $A$는 normal domain들의 유한한 direct product이다. 
 :::
 
 ---

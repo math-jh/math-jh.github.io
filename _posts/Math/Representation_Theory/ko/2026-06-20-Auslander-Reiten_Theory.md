@@ -1,7 +1,7 @@
 ---
 title: "Auslander–Reiten 이론"
-description: "유한차원 대수 위의 module category에서 irreducible morphism을 section도 retraction도 아니면서 분해되지 않는 사상으로 정의하고, left/right almost split morphism과 almost split (Auslander–Reiten) sequence 0→A→B→C→0를 도입하여 그 본질적 유일성을 증명한다. Transpose Tr를 minimal projective presentation으로부터, duality D=Hom_k(−,k)와 함께 AR translate τ=D Tr를 구성하고, 각 non-projective indecomposable C에 대하여 끝점이 C이고 시작점이 τC인 almost split sequence가 존재한다는 Auslander–Reiten 정리를 진술한다. 선형 A_3 quiver에 대하여 Auslander–Reiten quiver를 구체적으로 계산한다."
-excerpt: "Irreducible morphism, almost split sequence, AR translate τ=D Tr, Auslander–Reiten quiver"
+description: "유한차원 대수 위에서 irreducible morphism과 almost split sequence를 정의하고 본질적 유일성을 증명한다. 전치와 AR translate의 구성도 다룬다."
+excerpt: "Almost split sequence와 Auslander–Reiten 정리"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/auslander_reiten

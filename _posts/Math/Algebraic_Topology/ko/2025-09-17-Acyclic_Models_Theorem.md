@@ -1,7 +1,7 @@
 ---
 title: "Acyclic models theorem"
-description: "모임 위에서의 acyclic 조건과 free 조건을 만족하는 functor들 사이의 자연 변환 존재성을 보장하는 acyclic models theorem을 증명하고, 코호몰로지 이론의 기존 결과들을 이 정리의 따름정리로 유도한다."
-excerpt: "Category with models 위에서의 acyclic models 정리와 응용"
+description: "모임 위에서의 비순환 조건과 자유 조건을 만족하는 함자들 사이의 자연변환 존재성을 보장하는 비순환 모델 정리를 증명하고, 코호몰로지 이론의 기존 결과들을 이 정리의 따름정리로 유도한다."
+excerpt: "모델을 갖는 범주 위에서의 비순환 모델 정리와 응용"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/acyclic_models_theorem

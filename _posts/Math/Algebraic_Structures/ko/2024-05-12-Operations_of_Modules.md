@@ -1,7 +1,7 @@
 ---
 title: "가군의 직접곱과 직합, 텐서곱"
-description: "R-가군의 직접곱과 직합을 범주론적 관점에서 정의하고, product·coproduct로서의 성질을 살펴본다. 직접곱은 kernel과 cokernel을, 직합은 kernel을 각각 보존하며, R-Mod는 아벨 범주를 이룬다."
-excerpt: "Module category의 product, coproduct, tensor product"
+description: "가군의 직접곱과 직합을 범주론적 관점에서 정의하고 자유 가군과 텐서곱의 정의를 살펴본다. 가군 범주는 양완비 범주이며 직접곱은 핵을, 직합은 여핵을 보존한다."
+excerpt: "가군 범주의 곱, 쌍대곱, 텐서곱과 자유 가군"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_modules
@@ -53,9 +53,9 @@ $\lMod{A}$는 bicomplete category이며, 특히 $A$-module들의 family $(M_i)$�
 
 이에 대한 증명은 $\prod u_i$와 $\bigoplus u_i$를 직접 좌표별로 써서 얻어진다. 특히 이 명제에 의해 direct product는 cokernel 또한 보존하고, direct sum은 kernel 또한 보존한다는 것을 알 수 있다. 
 
-앞서 우리는 임의의 $M,N\in\lMod{A}$에 대하여 $\Hom_{\lMod{A}}(M,N)$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $\lMod{A}$는 zero module $0$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1){: data-lid="w9t5q" })
+앞서 우리는 임의의 $M,N\in\lMod{A}$에 대하여 $\Hom_{\lMod{A}}(M,N)$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $\lMod{A}$는 zero module $0$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 범주, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1){: data-lid="w9t5q" })
 
-뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3){: data-lid="4vrt6" }) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
+뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 범주, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3){: data-lid="4vrt6" }) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
 
 ## Free module
 

@@ -1,7 +1,7 @@
 ---
 title: "평탄성과 국소화"
 description: "뇌터 국소환 위의 유한 생성 가군이 평탄한지 판단하는 기준을 다루며, maximal ideal에서의 평탄성만 확인하면 충분함을 보여준다."
-excerpt: "Maximal ideal에서의 점검을 통한 flatness의 local criterion"
+excerpt: "Maximal ideal만 보는 flatness의 local criterion"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/local_criterion_for_flatness
@@ -81,7 +81,7 @@ $$\cdots \Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M) \rightarrow \frac{\mathfra
 
 그런데 $A/(\mathfrak{a}+\mathfrak{m}^t)$는 $\mathfrak{m}^t$로 annihilate되고, $\mathfrak{m}^t$는 finitely generated이므로, 이를 통해 $A/(\mathfrak{a}+\mathfrak{m}^t)$이 finite length를 갖는다는 것을 안다. 따라서, 더 일반적으로 유한한 길이를 갖는 임의의 $A$-module $N$이 주어질 때마다 $\Tor_1^A(N, M)=0$이 성립한다는 것을 보이면 원하는 바를 얻는다.
 
-귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rlgxq" } 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  finite length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
+귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르당-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rlgxq" } 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  finite length의 $A$-module $N$과, $N$의 $0$이 아닌 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 

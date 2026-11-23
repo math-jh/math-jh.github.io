@@ -1,7 +1,7 @@
 ---
 title: "유수정리"
-description: "isolated singularity에서 Laurent expansion의 음의 일차 계수를 residue로 정의하고, 닫힌 경로 안에 유한개의 singular point를 갖는 holomorphic function의 경로적분이 residue와 회전수의 합으로 결정된다는 유수정리를 증명한다. 극에서의 residue 계산 공식, essential singularity의 residue, 무한대에서의 residue와 residue 총합 0을 다룬다."
-excerpt: "residue, 유수정리, 극에서의 유수 공식, Essential singularity의 residue, 무한대에서의 유수와 유수 총합 0"
+description: "고립특이점의 로랑 급수에서 유수를 정의하고, 복소정칙 함수의 경로적분에 관한 유수정리를 증명한다. 극과 본질적 특이점에서의 유수 계산, 무한대에서의 유수와 유수 총합 0을 다룬다."
+excerpt: "유수의 정의, 유수정리, 극과 본질적 특이점의 유수, 무한대에서의 유수"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/residue_theorem

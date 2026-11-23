@@ -1,7 +1,7 @@
 ---
 title: "미분 아이디얼"
-description: "매니폴드 위의 차원 분포를 소멸시키는 미분 형식들의 모임이 아이디얼을 이루며, 이 아이디얼이 외미분에 대해 닫혀 있을 때의 성질과 프로베니우스 정리와의 관계를 살펴본다."
-excerpt: "Differential ideal과 Frobenius theorem"
+description: "다양체 위의 분포를 소멸시키는 미분형식들의 모임이 아이디얼이 됨을 증명하고 미분 아이디얼의 정의를 다룬다. 이어 외미분에 대해 닫혀 있을 때의 성질과 프로베니우스 정리와의 관계를 살펴본다."
+excerpt: "미분 아이디얼의 정의와 프로베니우스 정리"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/differential_ideal

@@ -1,7 +1,7 @@
 ---
 title: "분해"
 description: "아벨 범주에서 사영 대상과 단사 대상의 정의를 다루고, 사영분해·단사분해를 포함한 왼쪽 분해와 오른쪽 분해의 개념을 설명한다."
-excerpt: "Abelian category에서의 projective와 injective resolution"
+excerpt: "Projective와 injective resolution의 정의와 유일성"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/resolutions

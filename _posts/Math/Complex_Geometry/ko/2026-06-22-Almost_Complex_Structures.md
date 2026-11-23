@@ -1,7 +1,7 @@
 ---
 title: "거의 복소구조"
-description: "실벡터다발의 자기준동형 J로서 J²=-id를 만족하는 거의 복소구조를 정의하고, 복소다양체의 표준 J가 그 예임을 보인다. J의 ±i 고유공간 분해로 복소화 접다발을 (1,0)·(0,1) 부분으로 나누고 (p,q)-형식의 분해를 얻는다. Nijenhuis tensor로 적분가능성을 특징짓고, 그 소멸이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리를 서술한다."
-excerpt: "거의 복소구조, J²=-id, 거의 복소다양체, 복소화 접다발, T^{1,0}, (p,q)-형식, 적분가능성, Nijenhuis tensor, involutive distribution, Newlander–Nirenberg 정리, S^6, S^4"
+description: "거의 복소구조를 정의하고 표준 거의 복소구조와 복소화 접다발 분해를 다룬다. Nijenhuis tensor로 적분가능성을 특징짓고 Newlander–Nirenberg 정리를 서술한다."
+excerpt: "거의 복소다양체, 적분가능성과 Newlander–Nirenberg 정리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/almost_complex_structures

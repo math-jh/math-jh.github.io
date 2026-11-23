@@ -1,7 +1,7 @@
 ---
 title: "에탈대수"
-description: "대수와 체 확장에서 확장 차수의 성질을 다루며, 호-텐서 수반을 통한 벡터 공간의 동형과 대수의 자유 부분집합에 대한 성질을 증명한다."
-excerpt: "Field 위 étale algebra의 정의와 diagonalizable 특성화"
+description: "체 위 에탈대수를 정의하고 대각화가능 대수를 통한 특성화를 다룬다. 체 확장 위 대수의 확대 차수와 벡터공간 동형사상을 살펴보고, 분리가능차수와 데데킨트 따름정리도 정리한다."
+excerpt: "체 위 에탈대수의 정의와 대각화가능 대수 특성화"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/etale_algebras

@@ -1,7 +1,7 @@
 ---
 title: "선형계"
-description: "Weil divisor와 Cartier divisor의 effective 조건을 정의하고, divisor가 정의하는 선다발의 nonzero global section을 통해 linearly equivalent한 effective divisor를 구하는 방법을 다룬다."
-excerpt: "Complete linear systems, base loci, and ampleness"
+description: "선형계와 base locus, ample line bundle을 정의한다. Effective divisor와 선다발의 global section, Bertini's theorem도 다룬다."
+excerpt: "Linear system과 base locus, ampleness의 정의"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/linear_systems

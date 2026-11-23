@@ -1,7 +1,7 @@
 ---
 title: "미분"
-description: "graded algebra 위에서 정의되는 미분의 개념을 다루며, commutation factor를 통한 부호 규칙과 곱에 대한 라이프니츠 법칙을 전개한다."
-excerpt: "Differential module"
+description: "등급대수 위에서 미분의 개념을 정의하고, 교환 인자를 통한 부호 규칙과 곱에 대한 라이프니츠 법칙을 전개한다. 이어서 미분형식과 괄호, 대수의 미분을 다룬다."
+excerpt: "등급대수 위 미분의 정의와 교환 인자, 미분형식"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/derivations

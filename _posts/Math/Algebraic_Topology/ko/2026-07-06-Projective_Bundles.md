@@ -1,7 +1,7 @@
 ---
 title: "사영다발과 Leray–Hirsch 정리"
-description: "벡터다발의 사영다발을 도입하고, Leray–Hirsch 정리로 그 코호몰로지가 밑공간의 코호몰로지 위의 free module임을 보인 뒤, 이를 반복하여 splitting principle을 얻는다."
-excerpt: "Leray–Hirsch 정리와 splitting principle"
+description: "벡터다발의 사영다발을 도입하고, Leray–Hirsch 정리로 그 코호몰로지가 밑공간의 코호몰로지 위의 자유 가군임을 보인 뒤, 이를 반복하여 분할 원리를 얻는다."
+excerpt: "Leray–Hirsch 정리와 분할 원리"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/projective_bundles

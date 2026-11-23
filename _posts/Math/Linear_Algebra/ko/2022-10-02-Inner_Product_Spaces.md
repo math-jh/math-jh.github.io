@@ -1,7 +1,7 @@
 ---
 title: "내적공간"
-description: "벡터 공간 위의 내적과 노름을 정의하고, 코시-슈바르츠 부등식을 증명하며 내적으로 유도되는 노름의 성질을 살펴본다."
-excerpt: "실수집합 위에서 정의된 내적의 성질"
+description: "벡터 공간 위의 내적공간과 노름을 정의하고, 코시-슈바르츠 부등식을 증명하며 내적으로 유도되는 노름의 성질을 살펴본다. 이어서 정규직교기저, 직교행렬, 사영정리를 다룬다."
+excerpt: "실수 위 내적공간의 정의와 코시-슈바르츠 부등식, 정규직교기저, 사영정리"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/inner_product_spaces

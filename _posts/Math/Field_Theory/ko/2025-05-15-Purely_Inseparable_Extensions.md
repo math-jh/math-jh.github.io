@@ -1,7 +1,7 @@
 ---
 title: "순수비분리확대체"
-description: "Characteristic exponent가 p인 field extension에서 p-radical 원소와 그 height를 정의하고, 이들의 minimal polynomial을 결정한다. 이어 p-radical closure와 perfect closure의 존재성과 유일성을 다룬다."
-excerpt: "$p$-radical extension의 정의와 Galois theory에서의 역할"
+description: "표수 지수가 p인 체 확장에서 p-근기 원소와 그 높이를 정의하고, 이들의 최소다항식을 결정한다. 이어 p-근기 폐포와 완전 폐포의 존재성과 유일성을 다룬다."
+excerpt: "p-근기 확장의 정의와 갈루아 이론에서의 역할"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/purely_inseparable_extensions

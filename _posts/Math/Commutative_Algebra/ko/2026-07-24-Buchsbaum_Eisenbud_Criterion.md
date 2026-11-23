@@ -1,6 +1,6 @@
 ---
 title: "Buchsbaum-Eisenbud 판정법"
-description: "유한 자유복합체의 exactness가 각 행렬의 rank 등식과 소행렬식 ideal의 grade 조건만으로 판정된다는 Buchsbaum-Eisenbud 정리를 McCoy 정리와 Peskine-Szpiro acyclicity 보조정리로부터 증명하고, 응용으로 projective dimension 2인 ideal의 자유분해를 결정하는 Hilbert-Burch 정리를 다룬다."
+description: "유한 자유복합체의 exactness를 판정하는 Buchsbaum-Eisenbud 정리를 McCoy 정리와 Peskine-Szpiro 보조정리로 증명하고, Hilbert-Burch 정리를 다룬다."
 excerpt: "Free complex의 exactness 판정과 Hilbert-Burch 정리"
 
 categories: [Math / Commutative Algebra]

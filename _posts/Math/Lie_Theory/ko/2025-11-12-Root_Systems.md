@@ -1,7 +1,7 @@
 ---
 title: "근계"
 description: "리 대수의 adjoint representation에서 정의되는 Killing form의 성질을 통해 simple과 semisimple 리 대수를 성격화하며, 근계의 기초를 다룬다."
-excerpt: "Adjoint representation의 weight decomposition으로 얻는 root system"
+excerpt: "Adjoint representation으로 얻는 근계와 Weyl group"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/root_systems

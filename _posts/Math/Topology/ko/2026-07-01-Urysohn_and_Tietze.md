@@ -1,7 +1,7 @@
 ---
 title: "Urysohn 보조정리와 Tietze 확장정리"
-description: "정규공간에서 서로소인 닫힌집합을 분리하는 연속함수의 존재(Urysohn 보조정리)를 dyadic 유리수 구성으로 증명하고, 이를 이용해 Tietze 확장정리와 Urysohn 거리화정리를 얻는다."
-excerpt: "Urysohn's lemma, the Tietze extension theorem, and the Urysohn metrization theorem"
+description: "정규공간에서 서로소인 닫힌집합을 분리하는 연속함수의 존재(우리손 보조정리)를 dyadic 유리수 구성으로 증명하고, 이를 이용해 티체 확장정리와 우리손 거리화정리를 얻는다."
+excerpt: "우리손 보조정리, 티체 확장정리, 우리손 거리화정리"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/urysohn_and_tietze

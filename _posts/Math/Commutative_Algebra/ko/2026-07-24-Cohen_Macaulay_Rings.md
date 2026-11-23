@@ -1,6 +1,6 @@
 ---
 title: "Cohen-Macaulay 환"
-description: "Noetherian local ring 위에서 depth와 차원이 일치하는 Cohen-Macaulay 가군을 정의하고, system of parameters가 regular sequence를 이룬다는 특성화와 localization·차원 공식·catenary 성질, 그리고 매개계 아이디얼의 중복도가 길이와 일치함을 다룬다."
+description: "depth와 차원이 일치하는 Cohen-Macaulay 가군을 정의하고, system of parameters가 regular sequence를 이룬다는 특성화와 차원 공식, 중복도를 다룬다."
 excerpt: "Depth와 차원이 일치하는 Cohen-Macaulay 환과 그 특성화"
 
 categories: [Math / Commutative Algebra]

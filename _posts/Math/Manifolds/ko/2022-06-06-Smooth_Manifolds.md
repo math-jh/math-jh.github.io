@@ -1,7 +1,7 @@
 ---
 title: "미분다양체"
-description: "위상다양체 위에 좌표 차트들의 호환성을 통해 미분 구조를 정의하고, 이를 바탕으로 매끄러운 다양체의 개념을 다룬다."
-excerpt: "Smooth manifold의 정의"
+description: "위상다양체 위에 양립할 수 있는 좌표근방들로 미분구조를 정의하고, 이를 바탕으로 매끄러운 다양체의 개념을 다룬다. 이어서 우리손 보조정리와 매끄러운 단위분할을 살펴본다."
+excerpt: "매끄러운 다양체의 정의와 단위분할, 우리손 보조정리"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/smooth_manifolds

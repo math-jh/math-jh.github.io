@@ -1,7 +1,7 @@
 ---
 title: "기수들 사이의 연산"
-description: "집합의 크기를 나타내는 기수들 사이의 합과 곱 연산을 정의하고, 합집합·곱집합의 성질이 기수 연산으로 어떻게 이어지는지 살펴봅니다."
-excerpt: "Cardinal number의 연산"
+description: "집합의 크기를 나타내는 기수의 연산으로 기수 합과 기수 곱을 정의합니다. 이어서 집합의 합과 곱의 성질이 기수 연산의 성질로 이어지는 과정과 칸토어의 명제를 살펴봅니다."
+excerpt: "기수 합과 기수 곱의 정의와 칸토어의 명제"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/operation_of_cardinals

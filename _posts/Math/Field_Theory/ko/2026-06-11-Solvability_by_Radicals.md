@@ -1,7 +1,7 @@
 ---
 title: "거듭제곱근 가해성"
-description: "Root of unity와 순환확대의 구조를 살펴본 후, 다항식이 거듭제곱근으로 풀리는 것과 갈루아 군이 가해군인 것이 동치라는 갈루아의 정리를 증명한다."
-excerpt: "Solvability by radicals와 solvable Galois group"
+description: "단위거듭제곱근과 순환확대의 구조를 살펴본 후, 다항식이 거듭제곱근으로 풀리는 것과 갈루아 군이 가해군인 것이 동치라는 갈루아의 정리를 증명한다."
+excerpt: "거듭제곱근 가해성 증명, 가해 갈루아 군과 갈루아의 정리"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/solvability_by_radicals

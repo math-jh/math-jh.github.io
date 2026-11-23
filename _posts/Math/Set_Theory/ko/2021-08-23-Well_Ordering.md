@@ -1,7 +1,7 @@
 ---
 title: "정렬집합의 성질들"
-description: "정렬집합의 세그먼트 구조를 분석하고, 폰 노이만의 정의를 통해 서수를 엄밀하게 구성한다. 자연수에서 일반 서수까지의 성질과 후임 서수가 서수임을 증명한다."
-excerpt: "Ordinal의 정의와 정렬집합의 성질들"
+description: "정렬집합의 절편 구조를 분석해 폰 노이만 방식으로 서수의 뜻을 엄밀하게 정의한다. 자연수에서 일반 서수까지의 성질과 따름서수가 서수임을 증명하고 초한귀납법을 다룬다."
+excerpt: "폰 노이만의 서수 정의와 초한귀납법"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/well_ordering

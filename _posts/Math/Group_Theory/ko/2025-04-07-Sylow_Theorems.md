@@ -1,7 +1,7 @@
 ---
 title: "실로우 정리"
-description: "유한군의 소수 거듭제곱 부분군인 p군의 성질을 다루며, 고정점 보조정리와 중심의 비자명성을 통해 p군의 항등성과 실로우 정리를 전개한다."
-excerpt: "유한군의 p-부분군과 Sylow의 세 정리"
+description: "실로우 정리의 증명과 활용을 다루는 글이다. 먼저 위수가 소수 거듭제곱인 유한군 p-군을 정의하고, 고정점 보조정리와 중심의 비자명성을 증명한다."
+excerpt: "유한군의 p-부분군과 실로우 정리의 증명"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/Sylow_theorems

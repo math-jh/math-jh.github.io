@@ -1,7 +1,7 @@
 ---
 title: "Simplicial 가환환과 animation"
-description: "Simplicial 대상과 Dold–Kan 대응을 도입하여 simplicial(animated) 가환환을 정의하고, 그 homotopy 군과 유도 텐서곱, 그리고 자유 분해로 구성하는 완전한 여접 복합체와 추이 삼각형을 다룬다."
-excerpt: "Simplicial objects, Dold–Kan, animated commutative rings, ⊗^L, and the full cotangent complex"
+description: "Simplicial 대상과 Dold–Kan 대응으로 simplicial(animated) 가환환을 정의하고, 유도 텐서곱과 자유 분해로 구성하는 완전한 여접 복합체와 추이 삼각형을 다룬다."
+excerpt: "Dold–Kan 대응, 유도 텐서곱, 완전한 여접 복합체와 추이 삼각형"
 
 categories: [Math / Derived Algebraic Geometry]
 permalink: /ko/math/derived_algebraic_geometry/animated_rings
@@ -18,7 +18,7 @@ published: false
 
 [\[스킴\] §변형이론과 여접 복합체, §§변형의 장애와 고차 변형이론](/ko/math/scheme_theory/deformation_theory#변형의-장애와-고차-변형이론){: data-lid="rtgha" }에서 우리는 naive cotangent complex $\NL_{B/A}$가 변형이론의 요구를 온전히 감당하지 못함을 보았다. 그것은 두 항짜리 절단이라 $T^2$ 이상의 장애를 담지 못하고, ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 오른쪽에서만 exact한 transition exact sequence밖에 주지 못하며, base change가 $\otimes$의 non-exactness 때문에 어긋난다. 이 세 결함은 모두 같은 뿌리를 가진다. $\Omega$와 $\NL$은 tensor product와 quotient라는 non-exact한 연산을 그 유도된 형태로 다루지 못하고, 오직 $0$차 근사만을 붙든다는 것이다.
 
-우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 유도 tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $\LL_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
+우리는 이 글에서 그 뿌리를 직접 교정한다. 곧 commutative ring 자체를 homotopy 이론적으로 정련하여, Tor가 처음부터 내장된 대상인 *animated (simplicial) commutative ring*을 도입한다. 그 무대 위에서 tensor product는 자동으로 derived tensor product $\otimes^{\mathbb{L}}$이 되고, polynomial algebra에 의한 한 번의 presentation은 simplicial 자유 분해로 승격되며, 그 미분을 취해 얻는 완전한 여접 복합체 $\LL_{B/A}$가 모든 degree에서 homology를 갖고 추이 삼각형을 만족하게 된다. 이하에서 별다른 언급이 없으면 모든 ring은 commutative이고 unital이며, $k$는 field이다.
 
 ## Simplicial 대상과 Dold–Kan 대응
 
@@ -57,7 +57,7 @@ $$\Gamma(C)_n=\bigoplus_{[n]\twoheadrightarrow[k]}C_k$$
 로 두는데, 여기서 direct sum은 $\Delta$의 모든 전사 $\eta:[n]\rightarrow[k]$ 위에서 취한다. Simplicial 구조는 $\Delta$의 임의의 morphism을 (단사)$\circ$(전사)로 유일하게 분해하는 성질과 $C$의 미분을 사용하여 정의한다. $N\circ\Gamma\cong\id$은 정의상 곧바로 나오고, $\Gamma\circ N\cong\id$은 각 $M_n$이 그 normalization 조각들의 direct sum $M_n\cong\bigoplus_{\eta:[n]\twoheadrightarrow[k]}N(M)_k$로 분해된다는 사실, 곧 *Eilenberg–Zilber decomposition* 또는 Moore 분해로부터 나온다. 이 direct sum decomposition은 degeneracy들이 서로 독립적으로 image를 채운다는 조합적 관찰에서 귀납적으로 세워진다. Homotopy의 대응은 두 functor가 모두 텐서-hom adjoint 구조를 보존함으로부터 따르며, 자세한 구성은 ([Qui], [Stacks, Simplicial Methods])에 있다.
 :::
 
-Dold–Kan 대응은 이 글의 전략 전체를 떠받친다. Simplicial module이라는 homotopy 이론적 대상이 connective 사슬 복합체라는 순수 대수적 대상과 완전히 같은 정보를 담으므로, 우리는 이후 simplicial 분해와 사슬 복합체를 자유롭게 오갈 수 있다. 특히 뒤에서 여접 복합체를 simplicial 분해로 정의하면서도 그 결과를 derived category $D(B)$의 한 대상으로 읽을 수 있는 것이 바로 이 대응 덕분이다 ([\[호몰로지 대수학\] §유도카테고리](/ko/math/homological_algebra/derived_categories){: data-lid="527j7" }).
+Dold–Kan 대응은 이 글의 전략 전체를 떠받친다. Simplicial module이라는 homotopy 이론적 대상이 connective 사슬 복합체라는 순수 대수적 대상과 완전히 같은 정보를 담으므로, 우리는 이후 simplicial 분해와 사슬 복합체를 자유롭게 오갈 수 있다. 특히 뒤에서 여접 복합체를 simplicial 분해로 정의하면서도 그 결과를 derived category $D(B)$의 한 대상으로 읽을 수 있는 것이 바로 이 대응 덕분이다 ([\[호몰로지 대수학\] §유도범주](/ko/math/homological_algebra/derived_categories){: data-lid="527j7" }).
 
 ## Animated 가환환
 
@@ -97,7 +97,7 @@ $R_\bullet$을 $R$의 실현이라 하자. $\pi_0(R)=\coker(d_0-d_1:R_1\rightarr
 Ordinary ring들의 범주에서 두 $A$-algebra $B,C$의 tensor product $B\otimes_AC$는 $A$ 아래에서의 pushout, 곧 coproduct이다. Animated 범주는 이 보편 성질을 그대로 물려받되, colimit을 homotopy colimit으로 해석한다.
 
 ::: 정의 7
-$A$-algebra $B,C$에 대하여, 그 *유도 tensor product<sub>derived tensor product</sub>* $B\otimes_A^{\mathbb{L}}C$는 animated ring들의 $\infty$-범주에서의 homotopy pushout
+$A$-algebra $B,C$에 대하여, 그 *derived tensor product<sub>유도 텐서곱</sub>* $B\otimes_A^{\mathbb{L}}C$는 animated ring들의 $\infty$-범주에서의 homotopy pushout
 
 $$B\otimes_A^{\mathbb{L}}C=B\amalg_AC$$
 
@@ -109,21 +109,21 @@ $$B\otimes_A^{\mathbb{L}}C=B\amalg_AC$$
 위 사각형은 ordinary pushout 사각형과 형태가 같지만, 오른쪽 아래 모서리가 homotopy pushout이라는 점에서 다르다. Free resolution $P_\bullet\rightarrow B$의 각 항이 polynomial $A$-algebra이므로 $P_n\otimes_AC$는 $C$ 위의 polynomial algebra이고, 따라서 $P_\bullet\otimes_AC$는 다시 free simplicial $C$-algebra가 되어 그 homotopy가 잘 정의된다. 이 유도된 연산이 classical tensor product와 어떻게 갈라지는지는 곧바로 homotopy group으로 읽힌다.
 
 ::: 명제 8
-Ordinary $A$-algebra $B,C$에 대하여, 유도 tensor product의 homotopy group은 Tor로 주어진다.
+Ordinary $A$-algebra $B,C$에 대하여, derived tensor product의 homotopy group은 Tor로 주어진다.
 
 $$\pi_n\bigl(B\otimes_A^{\mathbb{L}}C\bigr)\cong\Tor_n^A(B,C)\qquad(n\geq0)$$
 
-특히 $\pi_0(B\otimes_A^{\mathbb{L}}C)=B\otimes_AC$는 classical tensor product이고, $B$나 $C$ 중 하나가 $A$ 위에서 flat이면 higher homotopy가 모두 소멸하여 유도 tensor product는 classical tensor product와 약하게 동치이다.
+특히 $\pi_0(B\otimes_A^{\mathbb{L}}C)=B\otimes_AC$는 classical tensor product이고, $B$나 $C$ 중 하나가 $A$ 위에서 flat이면 higher homotopy가 모두 소멸하여 derived tensor product는 classical tensor product와 약하게 동치이다.
 :::
 ::: 증명
 $P_\bullet\overset{\sim}{\rightarrow}B$를 free simplicial $A$-algebra 분해라 하면 [정의 7](#def7){: data-lid="vy7ja" }에 의하여 $B\otimes_A^{\mathbb{L}}C=P_\bullet\otimes_AC$이고, 그 homotopy는 Dold–Kan에 의하여 normalized chain complex $N(P_\bullet\otimes_AC)=N(P_\bullet)\otimes_AC$의 homology이다. 각 $P_n$은 polynomial $A$-algebra이므로 free, 따라서 flat $A$-module이고, $P_\bullet\rightarrow B$가 약한 동치이므로 $N(P_\bullet)$은 $B$의 flat $A$-module 분해이다. 그럼 [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 2](/ko/math/homological_algebra/ext_and_tor#def2){: data-lid="3d48b" }의 $\Tor$ 정의에 의하여
 
 $$\pi_n(P_\bullet\otimes_AC)=H_n\bigl(N(P_\bullet)\otimes_AC\bigr)=\Tor_n^A(B,C)$$
 
-이다. $n=0$일 때 $\Tor_0^A(B,C)=B\otimes_AC$이고, $B$ 또는 $C$가 flat이면 $\Tor_n^A(B,C)=0$ ($n\geq1$)이므로 유도 tensor product가 discrete해져 classical tensor product와 약하게 동치이다.
+이다. $n=0$일 때 $\Tor_0^A(B,C)=B\otimes_AC$이고, $B$ 또는 $C$가 flat이면 $\Tor_n^A(B,C)=0$ ($n\geq1$)이므로 derived tensor product가 discrete해져 classical tensor product와 약하게 동치이다.
 :::
 
-곧 유도 tensor product는 classical tensor product를 $\pi_0$으로 복원하면서, 그 위에 $\Tor$를 higher homotopy로 자동으로 실어 나른다. 이것이 "Tor가 처음부터 내장되었다"는 말의 정확한 의미이다. 이 현상의 가장 깨끗한 사례는 한 점을 자기 자신과 유도적으로 교차시킬 때 나타난다.
+곧 derived tensor product는 classical tensor product를 $\pi_0$으로 복원하면서, 그 위에 $\Tor$를 higher homotopy로 자동으로 실어 나른다. 이것이 "Tor가 처음부터 내장되었다"는 말의 정확한 의미이다. 이 현상의 가장 깨끗한 사례는 한 점을 자기 자신과 유도적으로 교차시킬 때 나타난다.
 
 ::: 예시 9 (점의 유도 자기교차)
 $A=k[\x]$ 위에서 원점의 coordinate ring $k=k[\x]/(\x)$을 자기 자신과 유도적으로 텐서한 $k\otimes_{k[\x]}^{\mathbb{L}}k$를 계산한다. $\x$는 $k[\x]$의 nonzerodivisor이므로, [\[호몰로지 대수학\] §Ext와 Tor, ⁋정의 7](/ko/math/homological_algebra/ext_and_tor#def7){: data-lid="buaeo" }의 Koszul resolution
@@ -134,11 +134,11 @@ $$0\rightarrow k[\x]\overset{\times\x}{\rightarrow}k[\x]\rightarrow k\rightarrow
 
 $$\pi_n\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)=\Tor_n^{k[\x]}(k,k)=\begin{cases}k&n=0,1\\0&n\geq2\end{cases}$$
 
-이다. 곧 유도 tensor product는 degree $0,1$에 각각 $k$를 갖는 nondiscrete animated ring이며, 그 homotopy ring은 하나의 degree $1$ generator $\varepsilon$이 만드는 exterior algebra
+이다. 곧 derived tensor product는 degree $0,1$에 각각 $k$를 갖는 nondiscrete animated ring이며, 그 homotopy ring은 하나의 degree $1$ generator $\varepsilon$이 만드는 exterior algebra
 
 $$\pi_\ast\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)\cong\Lambda_k[\varepsilon],\qquad \lvert\varepsilon\rvert=1$$
 
-이다 (같은 Koszul 계산이 $\Tor_\ast^{k[\x]}(k,k)=\bigwedge_k(k)$를 준다). 고전적으로는 $k\otimes_{k[\x]}k=k$뿐이므로, 두 원점의 교차는 그저 한 점으로 보인다. 그러나 유도 tensor product는 $\pi_1=k\neq0$이라는 초과 정보를 붙드는데, 이는 affine 직선 $\Spec k[\x]$ 안에서 원점을 자기 자신과 겹칠 때 생기는 excess intersection을 재는 것으로, 이 대수적 그림자가 뒤에서 다룰 derived intersection의 기하로 이어진다.
+이다 (같은 Koszul 계산이 $\Tor_\ast^{k[\x]}(k,k)=\bigwedge_k(k)$를 준다). 고전적으로는 $k\otimes_{k[\x]}k=k$뿐이므로, 두 원점의 교차는 그저 한 점으로 보인다. 그러나 derived tensor product는 $\pi_1=k\neq0$이라는 초과 정보를 붙드는데, 이는 affine 직선 $\Spec k[\x]$ 안에서 원점을 자기 자신과 겹칠 때 생기는 excess intersection을 재는 것으로, 이 대수적 그림자가 뒤에서 다룰 derived intersection의 기하로 이어진다.
 :::
 
 ## 완전한 여접 복합체
@@ -225,7 +225,7 @@ $(1)\Rightarrow(2)$. $B$가 smooth하면 [\[스킴\] §변형이론과 여접 �
 $(2)\Rightarrow(1)$. $\LL_{B/A}$가 degree $0$에 집중되면 [정리 11](#thm11){: data-lid="1cjr1" }에 의하여 $\tau_{\leq1}\LL_{B/A}=\NL_{B/A}$도 degree $0$에 집중되어 $H_1(\NL_{B/A})=0$이고, $H_0=\Omega_{B/A}$가 finitely generated projective이다. 그럼 [\[스킴\] §변형이론과 여접 복합체, ⁋명제 2](/ko/math/scheme_theory/deformation_theory#prop2){: data-lid="eec8o" }의 증명에서 본 대로, conormal exact sequence가 왼쪽에서도 split하는 short exact sequence가 되어 infinitesimal lifting 판정이 성립하고, 이는 $B$가 $A$ 위에서 smooth한 것과 동치이다. 완전한 논증은 ([Qui], [Stacks, Cotangent Complex])에 있다.
 :::
 
-이로써 여접 복합체는 변형이론이 요구한 세 가지, 곧 모든 degree에서의 homology, 추이 삼각형, 그리고 유도 tensor product와의 정합성을 모두 만족하는 대상으로 완성되었다. Smoothness는 이 복합체가 가장 단순해지는 경우 (degree $0$의 projective module)로, 특이성은 그 higher homology로 정확히 측정된다. Animated ring과 그 위의 여접 복합체는 이렇게 고전 가환대수를 homotopy 이론적으로 정련한 무대이며, 이 무대 위에서 quotient와 교차를 유도적으로 다루는 것이 derived algebraic geometry의 출발점이다.
+이로써 여접 복합체는 변형이론이 요구한 세 가지, 곧 모든 degree에서의 homology, 추이 삼각형, 그리고 derived tensor product와의 정합성을 모두 만족하는 대상으로 완성되었다. Smoothness는 이 복합체가 가장 단순해지는 경우 (degree $0$의 projective module)로, 특이성은 그 higher homology로 정확히 측정된다. Animated ring과 그 위의 여접 복합체는 이렇게 고전 가환대수를 homotopy 이론적으로 정련한 무대이며, 이 무대 위에서 quotient와 교차를 유도적으로 다루는 것이 derived algebraic geometry의 출발점이다.
 
 ---
 

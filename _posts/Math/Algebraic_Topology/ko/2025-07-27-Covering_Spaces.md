@@ -1,7 +1,7 @@
 ---
 title: "피복공간"
-description: "단순연결 공간의 정의와 피복공간·피복사상의 개념을 정의하고, 균일하게 덮임의 성질을 통해 기본군 계산의 기초 방법을 소개한다."
-excerpt: "Simply connected의 동치조건과 covering space, Seifert-van Kampen 정리"
+description: "단순연결공간의 동치조건을 증명하고 피복공간과 피복 사상, 고르게 덮임의 개념을 정의한다. 이어서 기본군 계산을 위한 피복공간의 기본정리와 자이페르트-반 캄펜 정리를 다룬다."
+excerpt: "단순연결의 동치조건과 피복공간의 기본정리, 자이페르트-반 캄펜 정리"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/covering_spaces

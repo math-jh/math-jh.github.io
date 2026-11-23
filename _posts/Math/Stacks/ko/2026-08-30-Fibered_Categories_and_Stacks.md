@@ -1,7 +1,7 @@
 ---
 title: "스택"
-description: "Moduli 문제가 집합이 아니라 groupoid를 값으로 가짐을 동기로, base 위의 fibered category와 groupoid에 의한 fibration을 정의하고, site 위에서 descent가 성립하는 stack의 개념을 faithfully flat descent의 일반화로 도입한다."
-excerpt: "Groupoids, categories fibered in groupoids, descent, and the definition of a stack"
+description: "모듈라이 문제가 groupoid를 값으로 가짐을 동기로 stack을 정의한다. Fibered category와 site 위에서의 descent, stackification을 다룬다."
+excerpt: "groupoid와 descent를 통한 stack의 정의"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/fibered_categories_and_stacks

@@ -1,7 +1,7 @@
 ---
 title: "Givental J-function과 Mirror Theorem"
-description: "기본 정의에서 출발해 양자미분방정식의 기본해로서의 성질을 증명하고, 토릭 파노 다양체의 명시적 hypergeometric 함수와 거울 정리의 관계까지 다룬다."
-excerpt: "Quantum differential equation의 fundamental solution과 I=J 정리"
+description: "Givental의 J-function을 정의하고 양자미분방정식의 기본해로서의 성질을 증명한다. I-function과 거울 정리, Big J-function으로의 확장까지 다룬다."
+excerpt: "QDE의 fundamental solution과 I-function"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/givental_j_function

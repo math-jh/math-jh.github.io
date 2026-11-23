@@ -1,7 +1,7 @@
 ---
 title: "행렬식"
-description: "Free module 위에서의 행렬식을 정의하고 그 기본 성질을 증명한다. 곱셈 공식, 가역성, 그리고 유한한 basis를 갖는 free module에서 선형 사상의 가역성과의 관계를 다룬다."
-excerpt: "Free module 자기사상의 determinant와 기본 성질"
+description: "자유 가군 위에서의 행렬식을 정의하고 그 기본 성질을 증명한다. 곱셈 공식, 선형사상의 가역성과의 관계, 소행렬식과 특성다항식, 케일리-해밀턴 명제를 다룬다."
+excerpt: "자유 가군 자기사상의 행렬식, 소행렬식, 특성다항식, 케일리-해밀턴 명제"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/determinants

@@ -1,7 +1,7 @@
 ---
 title: "곡선에서의 리만-로흐 정리"
-description: "곡선 위의 리만-로흐 정리를 다루며, complete linear system과 Riemann-Roch dimension의 의미를 살펴본 뒤 canonical divisor와의 관계를 통해 정리의 식을 유도한다."
-excerpt: "The Riemann–Roch theorem for curves"
+description: "곡선 위의 리만-로흐 정리의 식을 유도한다. Complete linear system과 Riemann-Roch dimension의 의미, canonical divisor와의 관계를 살펴본다."
+excerpt: "리만-로흐 정리의 증명과 Degree-genus formula"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/riemann_roch_theorem

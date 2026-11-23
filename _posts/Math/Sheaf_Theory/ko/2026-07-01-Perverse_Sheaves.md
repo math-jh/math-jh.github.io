@@ -1,7 +1,7 @@
 ---
 title: "Perverse 층"
-description: "t-구조의 개념을 도입하고 constructible derived category 위의 middle perversity t-구조를 정의하여, Verdier 쌍대성에 대해 자기쌍대인 abelian category인 perverse sheaf와 IC 층, 분해정리를 다룬다."
-excerpt: "t-structures, the perverse t-structure, perverse sheaves, IC sheaves, and the decomposition theorem"
+description: "t-구조를 도입해 middle perversity에 따른 perverse sheaf를 정의한다. Verdier 쌍대성에 대해 자기쌍대인 IC 층과 분해정리, nearby·vanishing cycle을 다룬다."
+excerpt: "t-structure와 IC 층, 분해정리, nearby·vanishing cycle"
 
 categories: [Math / Sheaf Theory]
 permalink: /ko/math/sheaf_theory/perverse_sheaves
@@ -24,7 +24,7 @@ published: false
 
 ## t-structure의 정의
 
-Triangulated category는 그 자체로 abelian category가 아니다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="qa2gj" }) 유도 범주 $D(\mathcal{A})$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $D(\mathcal{A})$에는 원래의 abelian category $\mathcal{A}$가 degree $0$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $H^i \in \mathcal{A}$를 뽑아내는 functor가 있다. T-structure는 이 "어느 degree에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian category로 떨어뜨리는" 조작을 임의의 triangulated category 위에서 공리화한 것이다.
+Triangulated category는 그 자체로 abelian category가 아니다. ([\[호몰로지 대수학\] §유도범주, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="qa2gj" }) 유도 범주 $D(\mathcal{A})$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $D(\mathcal{A})$에는 원래의 abelian category $\mathcal{A}$가 degree $0$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $H^i \in \mathcal{A}$를 뽑아내는 functor가 있다. T-structure는 이 "어느 degree에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian category로 떨어뜨리는" 조작을 임의의 triangulated category 위에서 공리화한 것이다.
 
 ::: 정의 1
 Triangulated category $\mathcal{T}$ 위의 *t-structure<sub>t-구조</sub>*는 충만한 부분범주들의 쌍 $(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$로서, $\mathcal{T}^{\leq n} := \mathcal{T}^{\leq 0}[-n]$, $\mathcal{T}^{\geq n} := \mathcal{T}^{\geq 0}[-n]$으로 적을 때 다음 세 조건을 만족하는 것이다.
@@ -36,7 +36,7 @@ $$A \rightarrow X \rightarrow B \xrightarrow{+1}$$
 이 존재하여 $A \in \mathcal{T}^{\leq 0}$, $B \in \mathcal{T}^{\geq 1}$이다.
 :::
 
-직관적으로 $\mathcal{T}^{\leq 0}$은 "degree $0$ 이하에 놓인" 대상들, $\mathcal{T}^{\geq 0}$은 "degree $0$ 이상에 놓인" 대상들의 모임이다. Shift $[-n]$이 complex를 $n$칸 뒤로 밀므로 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 4](/ko/math/homological_algebra/derived_categories#def4){: data-lid="oh6w7" }), $\mathcal{T}^{\leq n} = \mathcal{T}^{\leq 0}[-n]$은 "degree $n$ 이하"를 뜻하고 첫째 조건은 $\mathcal{T}^{\leq 0} \subseteq \mathcal{T}^{\leq 1} \subseteq \cdots$, $\cdots \subseteq \mathcal{T}^{\geq 1} \subseteq \mathcal{T}^{\geq 0}$이라는 단조성을 말한다. 둘째 조건은 낮은 degree의 대상에서 더 높은 degree의 대상으로 가는 morphism이 없다는 것이며, 셋째 조건은 임의의 대상을 낮은 부분 $A$와 높은 부분 $B$로 쪼개는 삼각형의 존재를 보장한다. 이 삼각형은 사실 유일하며, 그로부터 절단 functor가 나온다.
+직관적으로 $\mathcal{T}^{\leq 0}$은 "degree $0$ 이하에 놓인" 대상들, $\mathcal{T}^{\geq 0}$은 "degree $0$ 이상에 놓인" 대상들의 모임이다. Shift $[-n]$이 complex를 $n$칸 뒤로 밀므로 ([\[호몰로지 대수학\] §유도범주, ⁋정의 4](/ko/math/homological_algebra/derived_categories#def4){: data-lid="oh6w7" }), $\mathcal{T}^{\leq n} = \mathcal{T}^{\leq 0}[-n]$은 "degree $n$ 이하"를 뜻하고 첫째 조건은 $\mathcal{T}^{\leq 0} \subseteq \mathcal{T}^{\leq 1} \subseteq \cdots$, $\cdots \subseteq \mathcal{T}^{\geq 1} \subseteq \mathcal{T}^{\geq 0}$이라는 단조성을 말한다. 둘째 조건은 낮은 degree의 대상에서 더 높은 degree의 대상으로 가는 morphism이 없다는 것이며, 셋째 조건은 임의의 대상을 낮은 부분 $A$와 높은 부분 $B$로 쪼개는 삼각형의 존재를 보장한다. 이 삼각형은 사실 유일하며, 그로부터 절단 functor가 나온다.
 
 ::: 명제 2
 $(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$이 t-structure이면 포함 functor $\mathcal{T}^{\leq n} \hookrightarrow \mathcal{T}$는 오른쪽 수반 $\tau_{\leq n}: \mathcal{T} \rightarrow \mathcal{T}^{\leq n}$을, 포함 functor $\mathcal{T}^{\geq n} \hookrightarrow \mathcal{T}$는 왼쪽 수반 $\tau_{\geq n}: \mathcal{T} \rightarrow \mathcal{T}^{\geq n}$을 가진다. 각 $X$에 대해 [정의 1](#def1){: data-lid="ld7r9" }의 절단 삼각형은 유일하게 결정되며 $X$에 functorial하고, 표준적으로
@@ -48,7 +48,7 @@ $X \in \mathcal{T}$에 [정의 1](#def1){: data-lid="14dcq" }의 셋째 조건�
 $$\Hom(A', B[-1]) \rightarrow \Hom(A', A) \rightarrow \Hom(A', X) \rightarrow \Hom(A', B)$$
 를 얻는다. $B \in \mathcal{T}^{\geq 1}$이고 $B[-1] \in \mathcal{T}^{\geq 2} \subseteq \mathcal{T}^{\geq 1}$이므로 직교성에 의해 양 끝 항이 $0$이고, 따라서
 $$\Hom_{\mathcal{T}}(A', A) \xrightarrow{\ \sim\ } \Hom_{\mathcal{T}}(A', X)$$
-이 모든 $A' \in \mathcal{T}^{\leq 0}$에 대해 성립한다. 이것이 바로 $A$가 포함 functor에 대한 $X$의 오른쪽 수반의 값임을 뜻하므로 $\tau_{\leq 0} X := A$로 둔다. 수반의 보편성에 의해 $A$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 morphism $X \rightarrow X'$에 대한 $\tau_{\leq 0} X \rightarrow \tau_{\leq 0} X'$을 유일하게 주므로 functoriality가 따른다. 삼각형의 셋째 꼭짓점 $B$는 처음 두 morphism의 cone으로 결정되므로 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="1dck1" }의 (TR1)에 의해 $\tau_{\geq 1} X := B$ 역시 유일하게 결정되고, symmetric인 논증으로 $\tau_{\geq 1}$이 포함 functor의 왼쪽 수반이 된다. 일반 degree $n$에 대한 결과는 shift $[-n]$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
+이 모든 $A' \in \mathcal{T}^{\leq 0}$에 대해 성립한다. 이것이 바로 $A$가 포함 functor에 대한 $X$의 오른쪽 수반의 값임을 뜻하므로 $\tau_{\leq 0} X := A$로 둔다. 수반의 보편성에 의해 $A$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 morphism $X \rightarrow X'$에 대한 $\tau_{\leq 0} X \rightarrow \tau_{\leq 0} X'$을 유일하게 주므로 functoriality가 따른다. 삼각형의 셋째 꼭짓점 $B$는 처음 두 morphism의 cone으로 결정되므로 [\[호몰로지 대수학\] §유도범주, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="1dck1" }의 (TR1)에 의해 $\tau_{\geq 1} X := B$ 역시 유일하게 결정되고, symmetric인 논증으로 $\tau_{\geq 1}$이 포함 functor의 왼쪽 수반이 된다. 일반 degree $n$에 대한 결과는 shift $[-n]$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
 :::
 
 절단 functor $\tau_{\leq n}$, $\tau_{\geq n}$이 갖추어졌으니, 이제 abelian category에서 cohomology를 뽑던 조작을 일반화할 수 있다. 두 절단을 합성하여 한 degree에 집중된 부분만을 추려내는 것이다.
@@ -69,7 +69,7 @@ $$\cdots \rightarrow H^n(X) \rightarrow H^n(Y) \rightarrow H^n(Z) \rightarrow H^
 이 $\mathcal{C}$ 안에서 성립한다.
 :::
 ::: 증명
-핵심은 $\mathcal{C}$ 안의 morphism $f: X \rightarrow Y$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $\mathcal{T}$ 안에서 $f$를 distinguished triangle $X \xrightarrow{f} Y \rightarrow C \xrightarrow{+1}$로 채우면 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="s7bev" }의 (TR1)에 의해 $X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$이므로 $C \in \mathcal{T}^{\geq -1}$이고 마찬가지로 $C \in \mathcal{T}^{\leq 0}$이다. 그러면 $\mathcal{C}$ 안에서
+핵심은 $\mathcal{C}$ 안의 morphism $f: X \rightarrow Y$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $\mathcal{T}$ 안에서 $f$를 distinguished triangle $X \xrightarrow{f} Y \rightarrow C \xrightarrow{+1}$로 채우면 [\[호몰로지 대수학\] §유도범주, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="s7bev" }의 (TR1)에 의해 $X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$이므로 $C \in \mathcal{T}^{\geq -1}$이고 마찬가지로 $C \in \mathcal{T}^{\leq 0}$이다. 그러면 $\mathcal{C}$ 안에서
 $$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \coker f := H^0(C) = \tau_{\geq 0}(C)$$
 으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. Abelian category의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. Cohomology functor가 cohomological임은, $H^0$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
 :::
@@ -84,7 +84,7 @@ $$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet \mid H^i(C^\bullet) = 0 \text{ for } i
 
 세 공리를 점검한다. 포함 조건은 cohomology의 소멸 범위가 넓어지는 단조성이므로 자명하게 성립한다. 직교성은 $C^\bullet \in D^{\leq 0}$, $D^\bullet \in D^{\geq 1}$일 때 $\Hom_{D(\mathcal{A})}(C^\bullet, D^\bullet) = 0$임을 말하는데, $D^\bullet$을 degree $\geq 1$에 놓인 $K$-injective resolution으로 바꾸고 $C^\bullet$의 cohomology가 degree $\leq 0$에 갇혀 있음을 쓰면, chain map과 homotopy가 모두 degree 어긋남으로 소멸하여 derived 범주에서의 morphism이 $0$이 된다. 절단 삼각형은 good truncation
 $$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rightarrow 0), \qquad \tau_{\geq 1} C^\bullet = (0 \rightarrow \im d^0 \rightarrow C^1 \rightarrow \cdots)$$
-이 주는 short exact sequence에서 나온다. Heart는 $H^i = 0$ ($i \neq 0$)인 complex들, 곧 한 degree에 집중된 complex들이고 이는 $\mathcal{A}$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4){: data-lid="v9k4s" }는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="43r60" }의 삼각범주 공리가 주는 사실, 곧 $\mathcal{A}$가 abelian category이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse sheaf의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian category를 얻는 데에 있다.
+이 주는 short exact sequence에서 나온다. Heart는 $H^i = 0$ ($i \neq 0$)인 complex들, 곧 한 degree에 집중된 complex들이고 이는 $\mathcal{A}$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4){: data-lid="v9k4s" }는 [\[호몰로지 대수학\] §유도범주, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="43r60" }의 삼각범주 공리가 주는 사실, 곧 $\mathcal{A}$가 abelian category이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse sheaf의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian category를 얻는 데에 있다.
 
 ## Perverse (middle) t-structure
 
@@ -180,19 +180,19 @@ $$Rf_\ast \operatorname{IC}_X \cong \bigoplus_{i \in \mathbb{Z}} {}^{p}\mathcal{
 
 분해정리는 통상적 sheaf 이론에서는 기대할 수 없는 강력한 강직성을 말한다. 일반적으로 $Rf_\ast$은 perverse cohomology의 shift들로 direct sum 분해되지 않으며 비자명한 extension으로 엮여 있다. 분해정리는 입력이 순수 대상 (IC sheaf)이고 morphism이 proper일 때 이 extension이 모두 갈라져, 받음이 simple perverse sheaf들의 shift된 direct sum으로 완전히 분해됨을 보장한다. 이 분해는 support에 따라 항을 모으면 support submanifold 위의 intersection cohomology 항들의 합으로 정리되며, singular support에 놓인 항들이 morphism $f$의 singular fiber가 만드는 cohomology를 정확히 포착한다. 이 분해가 cohomological Hall algebra, flop 공식, Springer theory 등 여러 기하학적 논증의 토대가 된다.
 
-## 근방·소멸 cycle과 disk 위의 perverse 층
+## Nearby·vanishing cycle과 disk 위의 perverse 층
 
-Perverse sheaf의 범주를 구체적으로 손에 쥐는 가장 효과적인 방법은 그것을 선형대수적 자료로 번역하는 것이다. 가장 단순하지만 비자명한 경우, 곧 disk 위에서 한 점을 따라 stratify한 경우에 이 번역이 완전히 이루어지며, 그 번역의 두 축이 근방 cycle과 소멸 cycle functor이다. 이 functor들은 한 regular function $f$의 singular fiber 근처에서 perverse sheaf가 어떻게 변하는지를 측정한다.
+Perverse sheaf의 범주를 구체적으로 손에 쥐는 가장 효과적인 방법은 그것을 선형대수적 자료로 번역하는 것이다. 가장 단순하지만 비자명한 경우, 곧 disk 위에서 한 점을 따라 stratify한 경우에 이 번역이 완전히 이루어지며, 그 번역의 두 축이 nearby cycle과 vanishing cycle functor이다. 이 functor들은 한 regular function $f$의 singular fiber 근처에서 perverse sheaf가 어떻게 변하는지를 측정한다.
 
 ::: 정의 14
 Regular function $f: X \rightarrow \mathbb{C}$와 singular fiber $X_0 = f^{-1}(0)$, closed embedding $i: X_0 \hookrightarrow X$를 생각하자. 표준적으로 정의되는 functor
 $$\psi_f, \phi_f : D^b_c(X) \rightarrow D^b_c(X_0)$$
-을 각각 *근방 cycle<sub>nearby cycle</sub>* functor와 *소멸 cycle<sub>vanishing cycle</sub>* functor라 부른다 ($\psi_f \mathcal{F}$의 stalk는 $x \in X_0$에서의 Milnor fiber cohomology를 계산한다). 그 perverse normalization을
+을 각각 *nearby cycle<sub>근방 순환</sub>* functor와 *vanishing cycle<sub>소멸 순환</sub>* functor라 부른다 ($\psi_f \mathcal{F}$의 stalk는 $x \in X_0$에서의 Milnor fiber cohomology를 계산한다). 그 perverse normalization을
 $$\Psi_f := \psi_f[-1], \qquad \Phi_f := \phi_f[-1]$$
 로 둔다.
 :::
 
-근방 cycle은 $f$의 일반 fiber를 singular fiber 쪽으로 극한을 취해 얻는 complex이고, 소멸 cycle은 일반 fiber와 singular fiber의 차이를 재는 complex이다. 두 functor는 distinguished triangle $i^{-1}\mathcal{F} \rightarrow \psi_f\mathcal{F} \rightarrow \phi_f\mathcal{F} \xrightarrow{+1}$로 엮이며, 이로부터 표준 morphism $\operatorname{can}: \Psi_f\mathcal{F} \rightarrow \Phi_f\mathcal{F}$과 그 짝인 *variation* morphism $\operatorname{var}: \Phi_f\mathcal{F} \rightarrow \Psi_f\mathcal{F}$이 나온다. 일반 fiber의 monodromy automorphism $T$는 $\Psi_f\mathcal{F}$ 위에 작용하며, 항등과의 차 $T - \id$이 $\Phi_f\mathcal{F}$를 거쳐 $T - \id = \operatorname{var} \circ \operatorname{can}$으로 인수분해된다. Perverse normalization $\Psi_f, \Phi_f$이 결정적인데, 이들은 perverse t-exact, 곧 $\operatorname{Perv}(X) \rightarrow \operatorname{Perv}(X_0)$을 정의하며 ([KS], [Dim]), Verdier duality와도 교환한다. 이제 가장 단순한 경우인 disk에서 이 자료가 perverse sheaf를 완전히 결정함을 본다.
+Nearby cycle은 $f$의 일반 fiber를 singular fiber 쪽으로 극한을 취해 얻는 complex이고, vanishing cycle은 일반 fiber와 singular fiber의 차이를 재는 complex이다. 두 functor는 distinguished triangle $i^{-1}\mathcal{F} \rightarrow \psi_f\mathcal{F} \rightarrow \phi_f\mathcal{F} \xrightarrow{+1}$로 엮이며, 이로부터 표준 morphism $\operatorname{can}: \Psi_f\mathcal{F} \rightarrow \Phi_f\mathcal{F}$과 그 짝인 *variation* morphism $\operatorname{var}: \Phi_f\mathcal{F} \rightarrow \Psi_f\mathcal{F}$이 나온다. 일반 fiber의 monodromy automorphism $T$는 $\Psi_f\mathcal{F}$ 위에 작용하며, 항등과의 차 $T - \id$이 $\Phi_f\mathcal{F}$를 거쳐 $T - \id = \operatorname{var} \circ \operatorname{can}$으로 인수분해된다. Perverse normalization $\Psi_f, \Phi_f$이 결정적인데, 이들은 perverse t-exact, 곧 $\operatorname{Perv}(X) \rightarrow \operatorname{Perv}(X_0)$을 정의하며 ([KS], [Dim]), Verdier duality와도 교환한다. 이제 가장 단순한 경우인 disk에서 이 자료가 perverse sheaf를 완전히 결정함을 본다.
 
 ::: 정리 15
 $\Delta \subseteq \mathbb{C}$를 원점을 포함한 disk라 하고, 좌표함수 $f(z) = z$에 대한 stratification $\{0\} \sqcup \Delta^\ast$ ($\Delta^\ast = \Delta \setminus \{0\}$)을 생각하자. 이 stratification에 종속된 perverse sheaf의 범주 $\operatorname{Perv}(\Delta, 0)$은, 다음 자료의 범주 $\mathcal{Q}$와 동치이다.
@@ -200,10 +200,10 @@ $\Delta \subseteq \mathbb{C}$를 원점을 포함한 disk라 하고, 좌표함�
 1. 유한차원 $k$-벡터공간의 쌍 $\Psi, \Phi$,
 2. 선형사상 $\operatorname{can}: \Psi \rightarrow \Phi$과 $\operatorname{var}: \Phi \rightarrow \Psi$,
 
-단, $T_\Psi := \id_\Psi + \operatorname{var} \circ \operatorname{can}$이 가역 (동치로 $\id_\Phi + \operatorname{can} \circ \operatorname{var}$이 가역)이라는 조건을 만족한다. 이 동치 아래 $\Psi = \Psi_f$ (근방 cycle, 곧 $\Delta^\ast$ 위 local system의 stalk)이고 $\Phi = \Phi_f$ (소멸 cycle)이며, $T_\Psi$은 monodromy action이다.
+단, $T_\Psi := \id_\Psi + \operatorname{var} \circ \operatorname{can}$이 가역 (동치로 $\id_\Phi + \operatorname{can} \circ \operatorname{var}$이 가역)이라는 조건을 만족한다. 이 동치 아래 $\Psi = \Psi_f$ (nearby cycle, 곧 $\Delta^\ast$ 위 local system의 stalk)이고 $\Phi = \Phi_f$ (vanishing cycle)이며, $T_\Psi$은 monodromy action이다.
 :::
 ::: 증명
-Beilinson의 gluing 구성이 핵심이다. Open embedding $j: \Delta^\ast \hookrightarrow \Delta$과 closed embedding $i: \{0\} \hookrightarrow \Delta$에 대해 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10){: data-lid="e99h2" }이 주는 recollement는, $\Delta^\ast$ 위의 perverse sheaf (finite rank local system의 shift)과 $\{0\}$ 위의 perverse sheaf (벡터공간), 그리고 둘을 잇는 morphism 자료로부터 $\Delta$ 위의 perverse sheaf를 복원한다. $\Delta^\ast$ 위의 perverse sheaf는 그 monodromy representation, 곧 $T_\Psi$이 작용하는 벡터공간 $\Psi$로 주어지고, 잇는 자료가 정확히 소멸 cycle space $\Phi$과 $\operatorname{can}, \operatorname{var}$이다. Perverse 조건이 정확히 $T_\Psi$의 가역성 (monodromy가 automorphism이라는 것)으로 번역되며, 이는 $\Psi_f$이 generic stalk로서 잘 정의되기 위한 조건이다. 자세한 구성은 [Dim]의 §4.2와 [Ach]의 제4장을 따른다. 한편 부호 규약은 문헌마다 달라 $T_\Psi = \id - \operatorname{var}\circ\operatorname{can}$로 적기도 한다.
+Beilinson의 gluing 구성이 핵심이다. Open embedding $j: \Delta^\ast \hookrightarrow \Delta$과 closed embedding $i: \{0\} \hookrightarrow \Delta$에 대해 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10){: data-lid="e99h2" }이 주는 recollement는, $\Delta^\ast$ 위의 perverse sheaf (finite rank local system의 shift)과 $\{0\}$ 위의 perverse sheaf (벡터공간), 그리고 둘을 잇는 morphism 자료로부터 $\Delta$ 위의 perverse sheaf를 복원한다. $\Delta^\ast$ 위의 perverse sheaf는 그 monodromy representation, 곧 $T_\Psi$이 작용하는 벡터공간 $\Psi$로 주어지고, 잇는 자료가 정확히 vanishing cycle space $\Phi$과 $\operatorname{can}, \operatorname{var}$이다. Perverse 조건이 정확히 $T_\Psi$의 가역성 (monodromy가 automorphism이라는 것)으로 번역되며, 이는 $\Psi_f$이 generic stalk로서 잘 정의되기 위한 조건이다. 자세한 구성은 [Dim]의 §4.2와 [Ach]의 제4장을 따른다. 한편 부호 규약은 문헌마다 달라 $T_\Psi = \id - \operatorname{var}\circ\operatorname{can}$로 적기도 한다.
 :::
 
 [정리 15](#thm15){: data-lid="qdct3" }는 disk 위의 perverse sheaf 이론을 완전히 선형대수로 환원한다. 동치 아래 simple 대상과 표준 functor가 어떤 자료에 대응하는지를 구체적으로 계산해 보면 intermediate extension의 기제가 투명해진다.
@@ -220,7 +220,7 @@ $\Delta^\ast$ 위의 rank $r$ local system $L$의 monodromy를 $T: V \rightarrow
 $$\big(V,\ \im(T - \id),\ \operatorname{can} = (T - \id)\ \text{(전사)},\ \operatorname{var} = \text{포함}\big)$$
 으로, 곧 $\operatorname{can}$이 전사이고 $\operatorname{var}$이 단사인 intermediate extension이다. 이는 [명제 11](#prop11){: data-lid="m3zgs" }이 추상적으로 기술한 "$Z = \{0\}$에 support를 가진 부분대상·quotient object의 부재"를 선형대수로 본 것인데, $\{0\}$에 support를 가진 자료는 $\Psi = 0$인 것 ($\Phi$만 있는 skyscraper)이고, $\operatorname{can}$ 전사성이 그러한 quotient object를, $\operatorname{var}$ 단사성이 그러한 부분대상을 배제한다. 실제로 stalk와 costalk는 $i^{-1}M$이 complex $[\Psi \xrightarrow{\operatorname{can}} \Phi]$로, $i^! M$이 $[\Phi \xrightarrow{\operatorname{var}} \Psi]$로 계산되므로, $\operatorname{can}$이 isomorphic하면 $i^{-1} = 0$ (extension by zero, 곧 $j_!$)이고 $\operatorname{var}$이 isomorphic하면 $i^! = 0$ (곧 $Rj_\ast$)임이 위 자료와 일관된다.
 
-Monodromy가 trivial한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\im(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8){: data-lid="fzqr6" }의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9){: data-lid="gmbr2" }에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
+Monodromy가 trivial한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\im(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 vanishing cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8){: data-lid="fzqr6" }의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9){: data-lid="gmbr2" }에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
 
 ---
 

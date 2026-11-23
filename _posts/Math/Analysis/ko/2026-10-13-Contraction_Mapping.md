@@ -1,7 +1,7 @@
 ---
 title: "완비 거리공간과 축소사상 정리"
-description: "거리공간에서 Cauchy sequence가 항상 수렴할 때 완비라고 하며, R^n과 sup 거리를 준 C[a,b]가 완비임을 증명한다. 완비 거리공간 위의 축소사상이 fixed point를 유일하게 가짐을 보이고 반복법의 오차 추정을 얻은 뒤, 가정이 빠지면 정리가 무너지는 반례와 cos x = x에의 적용을 다룬다. 마지막으로 Baire 범주정리를 증명하고 R의 비가산성을 이끌어낸다."
-excerpt: "완비 거리공간, C[a,b]의 완비성, Banach 고정점 정리와 오차 추정, 가정의 반례, cos x = x, Baire 범주정리"
+description: "코시 수열과 완비 거리공간을 정의하고, 함수공간의 완비성과 축소사상 정리의 증명을 다룬다. 바나흐 고정점 정리의 오차 추정과 가정의 반례를 살피고 베르 범주정리를 증명한다."
+excerpt: "코시 수열과 함수공간의 완비성, 바나흐 고정점 정리, 베르 범주정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/contraction_mapping

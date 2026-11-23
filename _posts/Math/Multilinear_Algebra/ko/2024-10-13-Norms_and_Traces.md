@@ -1,7 +1,7 @@
 ---
 title: "노름과 대각합"
-description: "가환환 위의 대수에서 원소의 trace, norm, characteristic polynomial을 정의하고, 행렬 표현과의 관계를 다룬다. 부분 모듈 감소열에 대한 곱셈 공식도 증명한다."
-excerpt: "Algebra의 원소가 정의하는 norm과 trace"
+description: "가환환 위의 대수에서 원소의 대각합, 노름, 특성다항식을 정의하고, 대각합의 성질과 행렬 표현과의 관계를 다룬다. 부분가군 감소열에 대한 곱셈 공식도 증명한다."
+excerpt: "대수의 원소가 정의하는 노름과 대각합"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/norms_and_traces

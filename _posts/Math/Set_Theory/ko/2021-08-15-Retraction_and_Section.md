@@ -1,7 +1,7 @@
 ---
 title: "Retraction과 section"
-description: "단사함수의 retraction(수축)과 전사함수의 section(단면)의 정의를 다루며, 이들이 각각 전사함수와 단사함수임을 보인다."
-excerpt: "전사함수와 단사함수의 성질들"
+description: "단사함수의 수축과 전사함수의 단면의 정의를 다루며, 이들이 각각 전사함수와 단사함수임을 보인다. 또한 단사함수와 전사함수일 필요충분조건을 함께 증명한다."
+excerpt: "수축과 단면의 정의, 전사함수와 단사함수의 성질"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/retraction_and_section

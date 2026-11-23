@@ -1,6 +1,6 @@
 ---
 title: "토릭 다양체의 정의"
-description: "강체 볼록 다리뿔뿔 cone에 대응하는 affine 토릭 다양체를 공유하는 face를 통해 붙여 일반적인 토릭 다양체를 구성하는 과정을 다룬다. 조합론적 구조인 fan의 정의와 성질을 함께 살펴본다."
+description: "strongly convex rational polyhedral cone에 대응하는 affine 토릭 다양체를 공유하는 face를 통해 붙여 토릭 다양체를 정의한다. fan의 정의도 살펴본다."
 excerpt: "Fan으로부터 아핀 토릭 다양체들을 이어붙여 얻는 일반적 토릭 다양체"
 
 categories: [Math / Toric Geometry]
@@ -73,7 +73,7 @@ Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한
 각각의 cone $\tau \in \Sigma$에 대해, $U_\tau$ 위의 $T_N$-action은 [§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10){: data-lid="l2wmx" }에 의해 정의된다. 두 affine chart $U_{\tau_1}$과 $U_{\tau_2}$의 교집합 $U_{\tau_1 \cap \tau_2}$ 위에서 이들 작용은 일치하므로, 이들은 $X_\Sigma$ 전체에서 well-defined한 $T_N$-action을 정의한다. 한편 $\{0\} \in \Sigma$에 대응하는 chart $U_{\{0\}} \cong T_N$은 열린 조밀한 부분집합이며, $T_N$의 자기작용은 이 chart 위에서 left multiplication으로 주어지므로 $X_\Sigma$ 위의 작용으로 자연스럽게 확장된다. 
 :::
 
-만일 fan $\Sigma$가 $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$을 만족한다면 우리는 이를 *complete<sub>완전</sub>* fan이라 부른다. 이 경우 $X_\Sigma$는 *complete<sub>완비</sub>* algebraic variety, 즉 $\Spec(\mathbb{C})$ 위에서 proper한 variety가 됨이 알려져 있다. Completeness는 대수기하에서 compactness에 대응하는 개념이므로, 우리는 이 경우 $X_\Sigma$를 $T_N$의 *equivariant compactification*이라 부른다.
+만일 fan $\Sigma$가 $\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$을 만족한다면 우리는 이를 *complete<sub>완비</sub>* fan이라 부른다. 이 경우 $X_\Sigma$는 *complete<sub>완비</sub>* algebraic variety, 즉 $\Spec(\mathbb{C})$ 위에서 proper한 variety가 됨이 알려져 있다. Completeness는 대수기하에서 compactness에 대응하는 개념이므로, 우리는 이 경우 $X_\Sigma$를 $T_N$의 *equivariant compactification*이라 부른다.
 
 이 작용에 의한 orbit들의 구조는 fan의 조합론과 밀접하게 연관된다. 구체적으로, $d$-차원 cone $\tau \in \Sigma$에 대응하는 orbit $O(\tau)$는 차원 $n-d$의 torus $(\mathbb{C}^\ast)^{n-d}$와 isomorphic하며, 특히 $n$-차원 cone에 대응하는 orbit는 0차원, 즉 $T_N$-action의 fixed point가 된다.
 

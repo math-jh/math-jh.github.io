@@ -1,7 +1,7 @@
 ---
 title: "지수사상"
-description: "측지선의 자료를 한 점의 접공간 위로 모으는 exponential map을 도입한다. 측지선의 초기조건에 대한 매끄러운 의존성과 동차성으로부터 exponential map이 0의 star-shaped 근방에서 매끄러움을 보이고, 0에서의 미분이 항등사상임을 계산하여 역함수 정리로 normal neighborhood와 normal coordinate를 얻는다. Normal coordinate에서 metric과 Christoffel symbols의 값, Gauss lemma, 그리고 유클리드 공간과 구면에서의 예시를 다룬다."
-excerpt: "측지선을 한 점의 접공간 위로 모으는 exponential map과 normal coordinate, 그리고 Gauss lemma"
+description: "측지선의 자료를 한 점의 접공간 위로 모으는 지수사상을 정의하고 매끄러움을 보인다. 역함수 정리로 정규근방과 정규좌표를 얻고 계량, 크리스토펠 기호, 가우스 보조정리를 다룬다."
+excerpt: "측지선을 한 점의 접공간 위로 모으는 지수사상과 정규좌표, 가우스 보조정리"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/exponential_map

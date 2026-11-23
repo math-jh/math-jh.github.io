@@ -1,7 +1,7 @@
 ---
 title: "복소정칙함수"
-description: "복소미분가능성을 한 변수 차분비의 극한으로 정의하고, 영역에서 복소미분가능한 복소정칙함수를 도입한다. Cauchy–Riemann equations와 Wirtinger 미분으로 실미분가능성과의 관계를 밝히고, 멱급수·지수·삼각함수의 복소정칙성과 실수부·허수부가 이루는 조화함수를 다룬다."
-excerpt: "복소미분가능성, 복소정칙함수, Cauchy–Riemann equations, Wirtinger derivative, 멱급수, 조화함수"
+description: "복소미분가능성과 도함수를 정의하고, 영역에서 복소미분가능한 복소정칙함수를 도입한다. 코시-리만 방정식과 비르팅거 미분으로 실미분가능성과의 관계를 밝히며 멱급수와 조화함수를 다룬다."
+excerpt: "복소미분가능성, 코시-리만 방정식, 비르팅거 미분, 멱급수, 조화함수"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/holomorphic_functions

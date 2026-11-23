@@ -1,7 +1,7 @@
 ---
 title: "이상적분"
-description: "구간이 유계가 아니거나 피적분함수가 유계가 아닌 경우로 Riemann integral을 확장하는 이상적분을 정의하고, Cauchy 판정, 비교판정, 극한비교판정으로 수렴을 판정한다. 적분 sin x/x의 조건수렴, 적분판정법, 피적분함수가 0으로 가지 않는 수렴 예, 주값과의 차이를 다룬다."
-excerpt: "이상적분의 정의, Cauchy 판정·비교판정, 조건수렴, 적분판정법, 주값"
+description: "구간이나 함수가 유계가 아닌 경우로 리만적분을 확장한 이상적분을 정의하고, 코시 판정·비교판정·극한비교판정으로 수렴과 발산을 판정한다. 조건수렴과 적분판정법, 주값과의 차이를 다룬다."
+excerpt: "이상적분의 정의, 코시 판정·비교판정, 조건수렴, 적분판정법, 주값"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/improper_integrals

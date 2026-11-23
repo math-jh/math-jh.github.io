@@ -1,7 +1,7 @@
 ---
 title: "Stone–Weierstrass 정리"
-description: "컴팩트 구간 위의 연속함수가 다항식으로 균등근사된다는 Weierstrass 근사정리를 Bernstein 다항식으로 증명하고, 이를 점을 분리하고 어디서도 사라지지 않는 함수 대수로 일반화한 Stone–Weierstrass 정리를 증명한다. 복소판에서 켤레에 닫힘이 필요한 이유, 삼각다항식의 조밀성, 컴팩트성이 빠지면 실패하는 예를 다룬다."
-excerpt: "Weierstrass 근사정리, Stone–Weierstrass 정리(실수판·복소판), 삼각다항식의 조밀성, 가정이 빠진 반례"
+description: "바이어슈트라스 근사정리를 번스타인 다항식으로 증명하고, 점을 분리하는 함수 대수의 스톤-바이어슈트라스 정리를 증명한다. 복소판과 삼각다항식의 조밀성, 컴팩트성이 빠진 반례를 다룬다."
+excerpt: "바이어슈트라스 근사정리, 실수판·복소판 정리, 삼각다항식의 조밀성과 반례"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/stone_weierstrass

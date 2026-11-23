@@ -1,7 +1,7 @@
 ---
 title: "Stable maps의 moduli space"
-description: "J-holomorphic curve의 nodal limit을 다루는 stable map의 정의부터 moduli space의 compactness, expected dimension 계산, virtual fundamental class 존재까지 정리한다."
-excerpt: "Stable map의 정의와 moduli space의 compactness, virtual fundamental class"
+description: "J-복소정칙 곡선의 마디 극한을 다루는 안정사상의 정의와 안정성 조건부터 모듈라이 공간의 컴팩트성, 차원 계산, 가상 기본류의 존재까지 정리한다."
+excerpt: "안정사상의 정의와 모듈라이 공간의 컴팩트성, 가상 기본류"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/stable_maps

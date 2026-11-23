@@ -1,7 +1,7 @@
 ---
 title: "부분공간"
-description: "위상공간의 부분집합에 유도되는 부분위상의 정의를 소개하고, 부분공간에서의 열린집합과 닫힌집합의 성질을 살펴본다."
-excerpt: "부분공간의 성질들"
+description: "위상공간의 부분집합에 정초위상으로 주어지는 부분위상과 부분공간의 정의를 소개하고, 부분공간에서의 열린집합과 닫힌집합의 성질 및 연속함수를 살펴본다."
+excerpt: "부분공간의 정의와 성질, 부분위상과 연속함수"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/subspaces

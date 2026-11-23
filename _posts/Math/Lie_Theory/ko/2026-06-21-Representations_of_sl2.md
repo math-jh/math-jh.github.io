@@ -1,7 +1,7 @@
 ---
 title: "sl₂의 표현론"
-description: "sl₂(ℂ)의 유한차원 표현을 완전히 분류한다. 각 정수 n≥0에 대해 차원 n+1의 기약 표현 V(n)이 유일하게 존재함을 보이고, 모든 유한차원 표현이 weight 분해되어 완전가약임을 Casimir element로 증명한 뒤, 텐서곱의 분해를 주는 Clebsch–Gordan 공식을 유도한다."
-excerpt: "sl₂의 기약표현 V(n), weight string, 완전가약성, Clebsch–Gordan 공식"
+description: "sl₂(ℂ)의 유한차원 표현을 완전히 분류한다. 기약 표현의 유일성을 보이고 Casimir element로 완전가약성을 증명한 뒤, Clebsch–Gordan 공식을 유도한다."
+excerpt: "sl₂의 기약표현 V(n), 완전가약성, Clebsch–Gordan 공식"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/representations_of_sl2

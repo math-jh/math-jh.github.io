@@ -1,7 +1,7 @@
 ---
 title: "이차형식과 실베스터 관성법칙"
-description: "symmetric 쌍선형형식으로부터 이차형식을 정의하고, 실수 위에서 적절한 기저를 택하면 대각형으로 환원됨을 보인다. 나아가 부호수가 기저의 선택과 무관함을 주장하는 실베스터 관성법칙을 증명한다."
-excerpt: "실수 symmetric 쌍선형형식의 분류"
+description: "대칭쌍선형형식으로부터 이차형식을 정의하고, 실수 위에서 적절한 기저를 택하면 대각형으로 환원됨을 보인다. 나아가 부호수가 기저의 선택과 무관함을 주장하는 실베스터 관성법칙을 증명한다."
+excerpt: "실수 대칭쌍선형형식의 분류와 편극항등식, 합동과 양정치"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/quadratic_forms

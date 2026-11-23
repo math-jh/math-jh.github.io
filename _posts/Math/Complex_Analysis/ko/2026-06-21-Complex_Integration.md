@@ -1,7 +1,7 @@
 ---
 title: "복소적분"
-description: "조각마다 C¹인 곡선 위의 경로적분을 매개변수 적분으로 정의하고, 선형성·재매개화 불변·역방향 부호·이어붙이기와 ML 부등식을 확립한다. 원시함수가 있으면 경로적분이 양 끝값의 차로 환원되어 닫힌 경로에서 0이 됨을 보이고, 원시함수가 없는 핵심 예 ∮dz/z=2πi와 ∮zⁿdz를 계산한다."
-excerpt: "경로적분, 매개변수 적분, ML 부등식, 원시함수, 경로 독립, ∮dz/z=2πi"
+description: "복소해석학의 경로적분을 매개변수 적분으로 정의하고, 기본 성질과 ML 부등식을 확립한다. 원시함수와 경로적분에 대한 미적분의 기본정리를 보이고 단위원 위의 적분을 계산한다."
+excerpt: "경로적분, ML 부등식, 원시함수와 미적분의 기본정리, 단위원 위의 적분"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/complex_integration

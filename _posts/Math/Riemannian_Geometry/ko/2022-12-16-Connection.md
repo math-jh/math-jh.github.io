@@ -1,7 +1,7 @@
 ---
 title: "접속"
 description: "벡터 다발 위의 접속을 정의하여 공변미분을 도입하고, 라이프니츠 법칙과 벡터장의 국소적 성질에 의존하는 공변미분의 핵심 성질을 다룬다."
-excerpt: "Vector bundle 위에서 정의된 미분"
+excerpt: "벡터다발 위에서 정의된 공변미분"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/connection

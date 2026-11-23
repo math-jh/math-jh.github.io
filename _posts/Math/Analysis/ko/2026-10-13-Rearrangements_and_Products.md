@@ -1,7 +1,7 @@
 ---
 title: "급수의 재배열과 곱"
-description: "Abel 부분합 공식에서 Dirichlet 판정법과 Abel 판정법을 얻고, 절대수렴급수는 재배열해도 합이 변하지 않지만 조건수렴급수는 Riemann 재배열 정리에 의해 임의의 값으로 수렴하게 재배열됨을 보인다. 이어서 Cauchy 곱의 수렴을 Mertens 정리로 다루고, 두 급수가 모두 조건수렴이면 Cauchy 곱이 발산할 수 있음을 반례로 보인다."
-excerpt: "Abel 부분합, Dirichlet·Abel 판정법, Riemann 재배열 정리, Cauchy 곱과 Mertens 정리"
+description: "아벨 부분합 공식으로 디리클레·아벨 판정법을 증명하고, 절대수렴급수의 재배열과 리만 재배열 정리를 보인다. 이어서 코시 곱을 정의하고 메르텐스 정리로 수렴을, 반례로 발산을 다룬다."
+excerpt: "아벨 부분합, 디리클레·아벨 판정법, 리만 재배열 정리, 코시 곱과 메르텐스 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/rearrangements_and_products

@@ -1,7 +1,7 @@
 ---
 title: "필터와 아이디얼, 갈루아 대응"
-description: "정렬된 집합과 격자에서 필터와 아이디얼의 개념을 정의하고, 주필터·주아이디얼·소아이디얼의 성질을 살펴본다."
-excerpt: "Filter와 ideal"
+description: "순서집합과 격자에서 하집합·상집합을 통해 필터와 아이디얼의 개념을 정의하고, 주필터·주아이디얼·소아이디얼의 성질을 살펴본다. 이어서 갈루아 연결과 갈루아 대응을 다룬다."
+excerpt: "하집합·상집합으로 정의하는 필터와 아이디얼, 갈루아 연결"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/filter_and_ideal

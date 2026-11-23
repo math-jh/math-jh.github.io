@@ -1,7 +1,7 @@
 ---
 title: "선형 미분방정식계"
-description: "연속계수 linear system x'=A(t)x+b(t)의 해가 구간 전체에서 존재하고 유일함을 보이고, 해공간이 n차원 벡터공간임과 Liouville 공식을 얻는다. 상수변화법 공식, 행렬지수와 조르당 표준형을 이용한 상수계수계의 풀이, 고계 방정식의 1계 연립으로의 환원을 다룬다."
-excerpt: "linear system의 전역 해, 기본행렬과 Wronskian, 상수변화법, 행렬지수, 고계 방정식의 환원"
+description: "제차와 비제차 선형 미분방정식계를 정의하고 해의 전역 존재와 유일성, 해공간과 리우빌 공식을 증명한다. 상수변화법 공식, 행렬지수와 조르당 표준형을 이용한 풀이, 고계 방정식의 환원을 다룬다."
+excerpt: "전역 해, 기본행렬과 론스키안, 상수변화법, 행렬지수, 고계 방정식의 환원"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/linear_ode

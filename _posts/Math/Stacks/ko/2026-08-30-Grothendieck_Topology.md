@@ -1,7 +1,7 @@
 ---
 title: "그로텐디크 위상"
-description: "위상공간의 open cover 개념을 category 위의 covering으로 추상화하여 Grothendieck topology와 site를 정의하고, site 위의 presheaf·sheaf와 sheafification, étale·fppf·fpqc topology의 예시를 다룬다."
-excerpt: "Grothendieck topologies, sites, sheaves on a site, and the étale/fppf/fpqc examples"
+description: "Grothendieck topology와 site를 정의하고, site 위의 presheaf·sheaf와 sheafification, étale·fppf·fpqc 예시를 다룬다."
+excerpt: "site 정의와 site 위의 sheaf, étale·fppf·fpqc 예시"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/grothendieck_topology
@@ -22,7 +22,7 @@ weight: 1
 [\[스킴\] §충실평탄하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8){: data-lid="hfdxu" }에서와 마찬가지로 우리는 $U$가 target인 morphism들의 모임을 $U$의 covering이라 선언할 것이다. 이와 같이 정의하기 위해서는 필연적으로 어떠한 covering이 다른 covering보다 finer하다는 것이 어떤 의미인지를 설명해야 한다. 즉 주어진 $V\rightarrow U$가 $U$ 위의 covering을 이루는 원소라 할 때, 어떤 $W\rightarrow U$가 이를 factor through하는 것이 어떤 것인지를 설명해야 한다. 
 
 ::: 정의 1
-Category $\mathcal{C}$와 대상 $U\in \mathcal{C}$에 대하여, $U$ 위의 *sieve<sub>체</sub>*는 다음 조건을 만족하는 morphism들의 모임 $\mathcal{S}$이다. 
+Category $\mathcal{C}$와 대상 $U\in \mathcal{C}$에 대하여, $U$ 위의 *sieve<sub>시브</sub>*는 다음 조건을 만족하는 morphism들의 모임 $\mathcal{S}$이다. 
 
 1. $\mathcal{S}$의 임의의 원소들의 target은 $U$이다. 
 2. $\mathcal{S}$의 임의의 원소 $f: V\rightarrow U$에 대하여, 임의의 morphism $g:W\rightarrow V$가 주어질 때마다 $f\circ g: W\rightarrow U$ 또한 $\mathcal{S}$의 원소이다. 
@@ -45,7 +45,7 @@ $$\langle f_i\rangle=\{f: V \rightarrow U\mid f=f_i\circ g\text{ for some }i\in 
 이다. 이를 $\{f_i\}$가 생성하는 sieve라 부른다. 이제 sieve를 다른 대상으로 당겨오는 pullback 연산을 정의한다.
 
 ::: 정의 2
-Morphism $g: V \rightarrow U$와 $U$ 위의 sieve $\mathcal{S}$에 대하여, $V$ 위의 *pullback sieve<sub>당김 체</sub>* $g^\ast \mathcal{S}$를
+Morphism $g: V \rightarrow U$와 $U$ 위의 sieve $\mathcal{S}$에 대하여, $V$ 위의 *pullback sieve<sub>당김 시브</sub>* $g^\ast \mathcal{S}$를
 
 $$g^\ast \mathcal{S}=\{h: W \rightarrow V\mid g\circ h\in \mathcal{S}\}$$
 
@@ -57,7 +57,7 @@ $$g^\ast \mathcal{S}=\{h: W \rightarrow V\mid g\circ h\in \mathcal{S}\}$$
 이제 이들을 사용하면 다음과 같이 정의할 수 있다. 
 
 ::: 정의 3
-Category $\mathcal{C}$ 위의 *Grothendieck topology<sub>그로텐디크 위상</sub>* $\tau$란, 각 대상 $U\in \mathcal{C}$에 $U$ 위의 sieve들의 모임 $\tau(U)$을 대응시키는 것으로서, 그 원소를 *covering sieve<sub>덮개 체</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
+Category $\mathcal{C}$ 위의 *Grothendieck topology<sub>그로텐디크 위상</sub>* $\tau$란, 각 대상 $U\in \mathcal{C}$에 $U$ 위의 sieve들의 모임 $\tau(U)$을 대응시키는 것으로서, 그 원소를 *covering sieve<sub>덮개 시브</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
 
 1. (Maximality) 임의의 $U$에 대하여 maximal sieve $t_U$는 $\tau(U)$에 속한다.
 2. (Stability) $\mathcal{S}\in \tau(U)$이고 $g: V \rightarrow U$가 임의의 morphism이면 $g^\ast \mathcal{S}\in \tau(V)$이다.

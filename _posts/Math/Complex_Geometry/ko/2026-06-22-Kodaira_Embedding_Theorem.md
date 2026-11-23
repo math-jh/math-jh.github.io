@@ -1,7 +1,7 @@
 ---
 title: "Kodaira 매장정리"
-description: "복소정칙 선다발 위의 Hermitian metric과 Chern 접속에서 곡률 형식과 제1 Chern 류를 세우고, 곡률이 Kähler 형식이 되는 양의 선다발을 정의한다. Kodaira 소멸정리를 해석적으로 서술하고, 콤팩트 복소다양체가 양의 선다발을 가지면 그 거듭제곱의 전역단면으로 사영공간에 매장됨을 보이는 Kodaira 매장정리를 다룬다. 따름정리로 정수 Kähler 류를 가진 콤팩트 복소다양체(Hodge manifold)가 사영적임을 끌어내고, 복소사영공간·복소토러스·K3 곡면을 예로 든다."
-excerpt: "Hermitian 선다발, Chern connection, 곡률 형식, 제1 Chern 류, 양의 선다발, Kähler curvature, Kodaira 소멸정리, Bochner–Kodaira–Nakano, very ample, Kodaira 매장정리, Hodge manifold, 정수 Kähler 류, Chow 정리, 복소토러스, abelian variety, K3 곡면"
+description: "양의 선다발을 정의하고, Kodaira 소멸정리로 콤팩트 복소다양체의 사영 매장 조건을 보이는 Kodaira 매장정리를 서술한다. 정수 Kähler 류와 복소토러스·K3 곡면 예도 다룬다."
+excerpt: "Chern connection, 양의 선다발, Kodaira 소멸정리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/kodaira_embedding_theorem

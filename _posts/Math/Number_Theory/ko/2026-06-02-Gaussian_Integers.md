@@ -1,7 +1,7 @@
 ---
 title: "가우스 정수와 두 제곱수의 합"
-description: "가우스 정수환 ℤ[i]가 노름에 의해 Euclidean domain이 되고 따라서 unique factorization이 성립함을 보인다. 이를 바탕으로 가우스 소수를 분류하고, Fermat의 두 제곱수 정리와 임의의 양의 정수가 두 제곱수의 합이 되기 위한 필요충분조건을 증명한다."
-excerpt: "가우스 정수, 노름과 나눗셈, 가우스 소수의 분류, 두 제곱수의 합"
+description: "가우스 정수환이 노름에 의해 유클리드 정역이 되고 유일인수분해가 성립함을 보인다. 이를 바탕으로 가우스 소수를 분류하고, 양의 정수가 두 제곱수의 합이 될 필요충분조건을 증명한다."
+excerpt: "가우스 정수환, 유일인수분해, 가우스 소수의 분류, 페르마의 두 제곱수 정리"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/gaussian_integers

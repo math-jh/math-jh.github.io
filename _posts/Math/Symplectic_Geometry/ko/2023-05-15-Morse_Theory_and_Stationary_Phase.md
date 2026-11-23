@@ -1,7 +1,7 @@
 ---
 title: "Morse 이론과 stationary phase 근사"
-description: "진동적분의 점근행동을 분석하는 데 핵심적인 Morse 보조법, stationary phase 공식, Lefschetz thimble의 구성과 응용을 정리한다."
-excerpt: "Morse function의 critical point와 oscillating integral의 점근전개"
+description: "모스 함수의 임계점과 헤시안을 정의하고, 진동적분의 점근행동을 분석하는 데 핵심적인 모스 보조정리, 정상위상 공식, 렙셰츠 팀블의 구성을 정리한다."
+excerpt: "모스 함수의 임계점과 모스 보조정리, 진동적분의 점근전개"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/morse_stationary_phase
@@ -250,7 +250,7 @@ $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 $X$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric){: data-lid="w04ks" }의 일반론에 따라 gradient vector field가 정의된다) $h$의 gradient flow를 생각하자.
 
 ::: 정의 14
-$W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>레프셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
+$W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>렙셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
 
 $$\frac{\dd{x}}{\dd{t}} = -\nabla h(x)$$
 

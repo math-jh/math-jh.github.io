@@ -1,7 +1,7 @@
 ---
 title: "함수의 극한과 연속"
-description: "거리공간 사이의 함수에 대하여 극한과 연속을 ε-δ로 정의하고, 수열판정과 열린집합의 preimage를 통한 동치 조건을 증명한다. 합성과 사칙연산의 연속성, 불연속의 분류, Dirichlet function과 Thomae function, 단조함수의 불연속점이 가산임을 다룬다."
-excerpt: "ε-δ 극한, 수열판정, 연속의 동치 정의, 불연속의 분류와 Thomae function"
+description: "거리공간에서 함수의 극한과 연속을 엡실론-델타로 정의하고 수열판정과 열린집합 역상의 동치 조건을 증명한다. 불연속 분류, 디리클레 함수와 Thomae 함수, 단조함수의 불연속점이 가산임을 다룬다."
+excerpt: "엡실론-델타 극한, 수열판정, 연속의 동치 조건, 불연속과 Thomae 함수"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/limits_and_continuity

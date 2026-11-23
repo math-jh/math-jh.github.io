@@ -1,7 +1,7 @@
 ---
 title: "분리가능차수"
-description: "분리가능차수의 개념을 소개하며, 특성 p를 갖는 체 위의 대수적 확대에서 순수비분리확대체와 분리가능확대체의 관계를 étale 대수의 조건을 통해 살펴본다."
-excerpt: "Separable degree와 inseparable degree의 분해"
+description: "분리가능차수의 개념을 소개하며, 표수 p를 갖는 체 위의 대수적 확대에서 순수비분리확대체와 분리가능확대체의 관계를 에탈대수의 조건을 통해 살펴본다."
+excerpt: "분리가능차수와 비분리가능차수의 분해"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_degree

@@ -1,7 +1,7 @@
 ---
 title: "위상공간의 다른 정의들"
-description: "클로저 연산자의 쿠라토프스키 공리와 내부 연산자 공리를 사용하여 열린집합 없이도 위상공간을 정의할 수 있으며, 이렇게 정의된 위상은 열린집합으로 정의한 것과 같은 위상구조를 만든다."
-excerpt: "닫힌집합, 폐포, neighborhood filter를 이용한 위상의 정의"
+description: "폐포 연산자의 쿠라토프스키 공리와 내부 연산자 공리를 사용하여 열린집합 없이도 위상공간을 정의할 수 있으며, 이렇게 정의된 위상은 열린집합으로 정의한 것과 같은 위상구조를 만든다."
+excerpt: "닫힌집합, 쿠라토프스키 폐포 공리, 근방필터를 이용한 위상의 정의"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/equivalent_formulations_of_topology

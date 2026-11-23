@@ -1,7 +1,7 @@
 ---
 title: "범주"
 description: "대상, 사상, 합성으로 이루어진 범주의 정의를 소개하고, 결합법칙과 항등사상의 조건을 살펴본다. 집합의 범주를 비롯한 구체적 예시를 통해 다양한 수학적 구조가 범주의 언어로 기술됨을 보인다."
-excerpt: "카테고리의 정의와 기본개념들"
+excerpt: "범주의 정의와 기본개념들"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/categories
@@ -171,13 +171,13 @@ $$g_1=\id_{A_1}\circ g_1=(f^{-1}\circ f)\circ g_1=f^{-1}\circ(f\circ g_1)=f^{-1}
 
 이는 그저 group의 모든 성질들이 성립하지만, group operation이 모든 원소들에 대해 정의되는 대신 특정한 원소들의 쌍에 대해서만 정의되어도 충분하다는 뜻이다. 
 
-## 카테고리의 예시들
+## 범주의 예시들
 
 이제 이미 존재하는 category로부터 새로운 category들을 만드는 방법을 살펴본다. 
 
 
 ::: 예시 12
-두 category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 이들의 *product category<sub>곱 카테고리</sub>* $\mathcal{A}\times \mathcal{B}$는 다음의 데이터로 이루어진다.
+두 category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 이들의 *product category<sub>곱 범주</sub>* $\mathcal{A}\times \mathcal{B}$는 다음의 데이터로 이루어진다.
 
 - $\obj(\mathcal{A}\times \mathcal{B})$의 대상들은 $A\in\obj(\mathcal{A}),B\in\obj(\mathcal{B})$에 대해 쌍 $(A,B)$의 꼴이다.
 - 임의의 $(A_1,B_1),(A_2,B_2)\in\obj(\mathcal{A}\times \mathcal{B})$에 대하여, $\Hom_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))$는 $f\in\Hom_\mathcal{A}(A_1,A_2),g\in\Hom_\mathcal{B}(B_1,B_2)$에 대해 $(f,g)$의 꼴이다. 

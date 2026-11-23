@@ -1,7 +1,7 @@
 ---
 title: "복소수와 복소평면"
-description: "체 ℂ를 복습하고, 절댓값과 켤레, 극형식과 Euler 형식을 통해 복소수 곱셈의 기하적 의미를 밝힌다. 거리 d(z,w)=|z−w|로 ℂ를 ℝ²와 동일시하여 완비성과 컴팩트성을 옮기고, 입체사영으로 얻는 확장복소평면과 Riemann sphere를 소개한다."
-excerpt: "체 ℂ, 절댓값과 켤레, 극형식, ℂ의 거리·완비성·컴팩트성, Riemann sphere"
+description: "복소수와 복소평면을 정의하고, 절댓값·켤레와 복소수의 극형식으로 곱셈의 기하적 의미를 밝힌다. 거리공간으로서 완비성과 컴팩트성을 다루고, 입체사영으로 확장복소평면과 리만 구면을 소개한다."
+excerpt: "절댓값·켤레, 복소수의 극형식과 드무아브르 공식, 완비성·컴팩트성, 리만 구면"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/complex_numbers

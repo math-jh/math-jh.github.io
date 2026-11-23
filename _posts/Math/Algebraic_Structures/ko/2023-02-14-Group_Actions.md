@@ -1,7 +1,7 @@
 ---
 title: "군의 작용"
-description: "모노이드와 군이 집합 위에서 어떻게 작용하는지를 살펴보며, 왼쪽 작용과 오른쪽 작용의 정의를 다루고 반대 마그마를 통해 두 작용의 관계를 설명한다."
-excerpt: "Group action"
+description: "집합 위에서 모노이드와 군의 왼쪽·오른쪽 작용을 정의하고, 반대 마그마 구조로 두 작용의 관계를 설명한다. 이어서 안정자 군과 고정자, 내부자기동형사상, 궤도-안정자 정리를 다룬다."
+excerpt: "왼쪽과 오른쪽 작용, 안정자와 고정자, 궤도-안정자 정리"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/group_actions

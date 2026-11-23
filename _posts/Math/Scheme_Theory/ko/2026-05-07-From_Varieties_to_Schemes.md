@@ -1,7 +1,7 @@
 ---
 title: "다양체에서 스킴으로"
 description: "고전 대수다양체의 한계를 교차곱 multiplicity와 nilpotent 정보를 담지 못하는 점에서 짚어보고, 그로텐디크의 스킴 이론이 어떻게 이를 자연스럽게 확장하는지 직관적으로 설명한다."
-excerpt: "From varieties to schemes"
+excerpt: "Scheme의 기하학적 직관과 functor of points"
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/from_varieties_to_schemes
 sidebar: 

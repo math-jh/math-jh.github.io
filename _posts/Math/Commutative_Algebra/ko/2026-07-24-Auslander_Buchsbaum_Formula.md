@@ -1,7 +1,7 @@
 ---
 title: "Auslander-Buchsbaum 공식"
-description: "Noetherian local ring 위에서 finite projective dimension을 갖는 module의 projective dimension과 depth의 합이 ring의 depth와 같다는 Auslander-Buchsbaum 공식을 depth에 대한 귀납법으로 증명하고, regular local ring과 Cohen-Macaulay module에 대한 귀결을 살펴본다."
-excerpt: "pd M + depth M = depth A와 그 응용"
+description: "Noetherian local ring 위에서 Auslander-Buchsbaum 공식을 증명하고 regular local ring과 Cohen-Macaulay module에 대한 귀결을 다룬다."
+excerpt: "projective dimension과 depth의 관계 증명과 응용"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/auslander_buchsbaum_formula
@@ -128,7 +128,7 @@ Noetherian local ring $(A,\mathfrak{m})$에 대하여 다음이 성립한다.
 2. $\operatorname{depth}A=0$이면 $\pd_A M<\infty$인 $0$이 아닌 finitely generated $A$-module $M$은 모두 free이다. 특히 Artinian local ring 위에서 finite projective dimension을 갖는 module은 모두 free이다.
 :::
 ::: 증명
-첫째 결과는 [정리 3](#thm3){: data-lid="cqzwf" }과 $\operatorname{depth}M\geq 0$으로부터 $\pd_A M=\operatorname{depth}A-\operatorname{depth}M\leq\operatorname{depth}A$이다. 둘째 결과의 경우, $\operatorname{depth}A=0$이면 첫째 결과에 의하여 $\pd_A M\leq 0$, 곧 $\pd_A M=0$이므로 [§호몰로지 차원, ⁋명제 11](/ko/math/commutative_algebra/homological_dimension#prop11){: data-lid="9gzj7" }에 의하여 minimal free resolution이 $F_0$에서 끝나 $M\cong F_0$은 free이다. Artinian local ring $(A,\mathfrak{m})$은 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="awhcz" }에 의하여 모든 prime ideal이 maximal이므로 $\dim A=0$이고, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="6dq9p" }에 의하여 $\operatorname{depth}A\leq\dim A=0$이 되어 앞의 경우에 해당한다.
+첫째 결과는 [정리 3](#thm3){: data-lid="cqzwf" }과 $\operatorname{depth}M\geq 0$으로부터 $\pd_A M=\operatorname{depth}A-\operatorname{depth}M\leq\operatorname{depth}A$이다. 둘째 결과의 경우, $\operatorname{depth}A=0$이면 첫째 결과에 의하여 $\pd_A M\leq 0$, 곧 $\pd_A M=0$이므로 [§호몰로지 차원, ⁋명제 11](/ko/math/commutative_algebra/homological_dimension#prop11){: data-lid="9gzj7" }에 의하여 minimal free resolution이 $F_0$에서 끝나 $M\cong F_0$은 free이다. Artinian local ring $(A,\mathfrak{m})$은 [§조르당-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="awhcz" }에 의하여 모든 prime ideal이 maximal이므로 $\dim A=0$이고, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="6dq9p" }에 의하여 $\operatorname{depth}A\leq\dim A=0$이 되어 앞의 경우에 해당한다.
 :::
 
 Regular local ring에서는 모든 module이 finite projective dimension을 가지므로 공식이 아무런 유한성 가정 없이 적용되고, projective dimension이 depth만으로 완전히 결정된다.

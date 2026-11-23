@@ -1,7 +1,7 @@
 ---
 title: "Riemann–Stieltjes 적분"
-description: "증가함수 α에 대한 Darboux 상합과 하합으로 Riemann–Stieltjes 적분을 정의하고, 판정법과 연속함수의 적분가능성을 증명한다. α가 계단함수이면 유한합으로, C¹이면 Riemann integral ∫fα'dx로 환원됨을 보이고, f와 α가 같은 쪽으로 불연속인 점에서 적분이 존재하지 않는 반례와 부분적분, 확률분포의 기댓값 ∫g dF, 유계변동함수까지 다룬다."
-excerpt: "증가함수에 대한 적분의 정의, 계단함수와 C¹ 함수로의 환원, 부분적분, 기댓값, 유계변동함수"
+description: "증가함수에 대한 상합과 하합으로 리만-스틸체스 적분을 정의하고, 리만 판정법과 연속함수의 적분가능성을 증명한다. 계단함수 적분, 리만적분으로의 환원, 부분적분, 기댓값, 유계변동함수를 다룬다."
+excerpt: "상합과 하합, 리만 판정법, 계단함수 적분, 부분적분, 조르당 분해"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/riemann_stieltjes_integral

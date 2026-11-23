@@ -1,7 +1,7 @@
 ---
 title: "분류공간"
-description: "임의의 topological group을 구조군으로 갖는 principal bundle을 정의하고, universal bundle과 classifying space를 통해 이들을 homotopy 이론으로 분류한다."
-excerpt: "Principal G-bundle의 분류와 classifying space BG의 구성"
+description: "임의의 위상 군을 구조군으로 갖는 주다발을 정의하고, 보편다발과 분류공간을 통해 이들을 호모토피 이론으로 분류한다. 선형군의 분류공간과 코호몰로지도 다룬다."
+excerpt: "주다발의 정의와 분류정리, 보편다발과 분류공간의 구성"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/classifying_spaces

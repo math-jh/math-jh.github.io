@@ -1,7 +1,7 @@
 ---
 title: "부분다양체의 유일성"
-description: "부분다양체를 단사 immersion으로 정의할 때, 함수의 치역이 부분다양체 조건을 만족한다고 해서 공역을 제한한 함수가 항상 immersion이 되는 것은 아니다. 위상적 조건에 따라 부분다양체 구조의 유일성이 달라진다."
-excerpt: "Immersed submanifold의 위상구조와 매끄러운 함수의 인수분해"
+description: "부분다양체를 단사인 몰입으로 정의할 때 공역을 제한한 함수의 매끄러움과 위상구조를 살펴본다. 이어서 부분다양체 사이의 동치관계와 구조의 유일성을 다룬다."
+excerpt: "부분다양체의 위상구조와 매끄러운 함수의 인수분해"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/uniqueness_of_submanifold

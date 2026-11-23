@@ -1,7 +1,7 @@
 ---
 title: "Delzant 구성"
-description: '콤팩트 connected symplectic toric manifold가 그 운동량 다면체에 의해 symplectomorphism을 무시하고 유일하게 결정되며, 모든 Delzant polytope이 사교 축약을 통해 이렇게 실현됨을 보이는 Delzant 정리를 다룬다. 다면체의 facet 데이터로부터 subtorus를 추출해 $$\mathbb{C}^d$$를 축약하는 명시적 구성을 서술하고, 같은 다면체가 결정하는 대수기하의 projective toric variety와의 대응을 정리한다.'
-excerpt: "Delzant polytope, Delzant 정리, 사교 축약에 의한 구성, symplectic toric manifold와 운동량 다면체의 일대일 대응"
+description: "symplectic toric manifold와 Delzant polytope을 정의하고 Delzant 정리를 서술한다. 사교 축약 구성과 toric variety와의 대응을 정리한다."
+excerpt: "Delzant polytope, Delzant 정리, 사교 축약에 의한 구성"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/delzant_construction
@@ -16,7 +16,7 @@ published: false
 
 [\[사교기하학\] §운동량 사상, ⁋정리 10](/ko/math/symplectic_geometry/moment_map#thm10){: data-lid="rxibk" }은 compact connected symplectic manifold 위의 torus action이 Hamiltonian일 때 그 운동량 사상의 image가 볼록 다면체가 됨을 말한다. 작용하는 torus의 차원이 variety의 절반, 즉 가능한 가장 큰 차원에 이르는 극단적인 경우에 이 대응은 완벽해진다. 이때 variety는 운동량 다면체에 의해 그 사교 구조와 action까지 통째로 복원되며, 거꾸로 다면체가 만족해야 할 조합론적 조건도 정확히 결정된다. 이것이 1988년 Delzant가 증명한 정리이며, symplectic 기하의 한 부류 전체를 순전히 볼록 다면체의 데이터로 번역한다.
 
-이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant polytope*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$의 subtorus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2){: data-lid="em5as" }의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties){: data-lid="5qo6p" }에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch 곡면을 예시로 든다.
+이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant polytope*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$의 subtorus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2){: data-lid="em5as" }의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties){: data-lid="5qo6p" }에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch surface를 예시로 든다.
 
 ## Symplectic toric manifold와 Delzant 다면체
 
@@ -195,7 +195,7 @@ $$M_\Delta=(\mathbb{C}^2/\!\!/_{\!c_1}S^1)\times(\mathbb{C}^2/\!\!/_{\!c_2}S^1)=
 이다. 이는 정사각형이 두 구간의 곱 $[0,1]\times[0,1]$이고 구간 $[0,1]$이 [\[사교기하학\] §운동량 사상, ⁋예시 7](/ko/math/symplectic_geometry/moment_map#ex7){: data-lid="ut9ml" }에서 본 $\mathbb{CP}^1=S^2$의 운동량 다면체라는 사실의 반영이다. 더 일반적으로 두 Delzant polytope의 곱은 두 symplectic toric manifold의 곱에 대응하며, 직사각형 $[0,a]\times[0,b]$은 두 인자의 symplectic form이 각각 $a$, $b$로 재조정된 $\mathbb{CP}^1\times\mathbb{CP}^1$을 준다.
 :::
 
-마지막 예시는 같은 정사각형을 비틀어 얻는 Hirzebruch 곡면으로, 다면체의 모양이 variety의 위상을 어떻게 바꾸는지를 보여 준다.
+마지막 예시는 같은 정사각형을 비틀어 얻는 Hirzebruch surface로, 다면체의 모양이 variety의 위상을 어떻게 바꾸는지를 보여 준다.
 
 ::: 예시 10
 정수 $a\geq0$과 양의 실수 $h$에 대하여 $\mathbb{R}^2$의 사다리꼴
@@ -204,10 +204,10 @@ $$\Delta_a=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq h-a x
 
 을 생각하자 (여기서 $h>a$로 두어 다면체가 비지 않게 한다). 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=(-a,-1)$이고, 위쪽 모서리의 기울기가 $-a$이다. 각 꼭짓점에서 만나는 두 법선의 행렬식을 보면, 가령 $(1,h-a)$에서 $\{-e_1,(-a,-1)\}$의 행렬식은 $\det\begin{pmatrix}-1&-a\\0&-1\end{pmatrix}=1$이고 나머지 꼭짓점에서도 $\pm1$이므로 $\Delta_a$은 Delzant polytope이다.
 
-이 다면체가 정의하는 symplectic toric manifold $M_{\Delta_a}$은 *Hirzebruch 곡면<sub>Hirzebruch surface</sub>* $\mathbb{F}_a=\mathbb{P}(\mathcal{O}_{\mathbb{P}^1}\oplus\mathcal{O}_{\mathbb{P}^1}(a))$이다. $a=0$이면 $\Delta_0$은 직사각형이 되어 [예시 9](#ex9){: data-lid="d7g0y" }의 $\mathbb{F}_0=\mathbb{CP}^1\times\mathbb{CP}^1$로 환원되고, $a$이 커질수록 사다리꼴이 기울어지며 위쪽 모서리의 법선 $(-a,-1)$이 비틀린다. $\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 네 법선 $e_1,e_2,-e_1,(-a,-1)$로 주어지고 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,-a,1)$이며, 대응하는 subtorus $N\subseteq\mathbb{T}^4$의 비대각 action이 $\mathbb{C}^4$을 비틀어 축약함으로써 $\mathbb{CP}^1$ 위의 비자명한 $\mathbb{CP}^1$-다발을 낳는다. 대수 쪽에서 $\Delta_a$의 normal fan은 ray $e_1,e_2,-e_1,(-a,-1)$이 생성하는 fan으로, 정확히 $\mathbb{F}_a$의 표준 fan이며 [명제 7](#prop7){: data-lid="g84gz" }이 다시 확인된다.
+이 다면체가 정의하는 symplectic toric manifold $M_{\Delta_a}$은 *Hirzebruch surface<sub>히르체브루흐 곡면</sub>* $\mathbb{F}_a=\mathbb{P}(\mathcal{O}_{\mathbb{P}^1}\oplus\mathcal{O}_{\mathbb{P}^1}(a))$이다. $a=0$이면 $\Delta_0$은 직사각형이 되어 [예시 9](#ex9){: data-lid="d7g0y" }의 $\mathbb{F}_0=\mathbb{CP}^1\times\mathbb{CP}^1$로 환원되고, $a$이 커질수록 사다리꼴이 기울어지며 위쪽 모서리의 법선 $(-a,-1)$이 비틀린다. $\beta:\mathbb{Z}^4\rightarrow\mathbb{Z}^2$은 네 법선 $e_1,e_2,-e_1,(-a,-1)$로 주어지고 그 kernel은 $\mathfrak{n}=\mathbb{Z}\cdot(1,0,1,0)\oplus\mathbb{Z}\cdot(0,1,-a,1)$이며, 대응하는 subtorus $N\subseteq\mathbb{T}^4$의 비대각 action이 $\mathbb{C}^4$을 비틀어 축약함으로써 $\mathbb{CP}^1$ 위의 비자명한 $\mathbb{CP}^1$-다발을 낳는다. 대수 쪽에서 $\Delta_a$의 normal fan은 ray $e_1,e_2,-e_1,(-a,-1)$이 생성하는 fan으로, 정확히 $\mathbb{F}_a$의 표준 fan이며 [명제 7](#prop7){: data-lid="g84gz" }이 다시 확인된다.
 :::
 
-세 예시는 Delzant polytope의 조합론적 변형이 symplectic toric manifold의 위상적 변형으로 직접 번역됨을 보여 준다. 단체를 정사각형으로 바꾸면 $\mathbb{CP}^2$이 $\mathbb{CP}^1\times\mathbb{CP}^1$이 되고, 정사각형을 사다리꼴로 비틀면 Hirzebruch 곡면들의 족이 나온다. 다면체의 facet을 잘라내는 조작은 variety의 blow-up에, 모서리의 기울기를 바꾸는 조작은 다발 구조의 비틀림에 대응한다. 이렇게 Delzant 정리는 symplectic manifold의 분류 문제 하나를 lattice polytope의 조합론으로 온전히 옮겨 놓는다.
+세 예시는 Delzant polytope의 조합론적 변형이 symplectic toric manifold의 위상적 변형으로 직접 번역됨을 보여 준다. 단체를 정사각형으로 바꾸면 $\mathbb{CP}^2$이 $\mathbb{CP}^1\times\mathbb{CP}^1$이 되고, 정사각형을 사다리꼴로 비틀면 Hirzebruch surface들의 족이 나온다. 다면체의 facet을 잘라내는 조작은 variety의 blow-up에, 모서리의 기울기를 바꾸는 조작은 다발 구조의 비틀림에 대응한다. 이렇게 Delzant 정리는 symplectic manifold의 분류 문제 하나를 lattice polytope의 조합론으로 온전히 옮겨 놓는다.
 
 ---
 

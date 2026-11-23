@@ -1,7 +1,7 @@
 ---
 title: "몫공간"
-description: "부분공간으로 벡터공간을 나눈 몫공간을 coset을 통해 구성하고, 연산의 잘 정의됨과 차원 공식을 증명한다. 나아가 natural projection, 보편 성질, 그리고 제1동형정리를 살펴본다."
-excerpt: "부분공간으로 나눈 몫공간"
+description: "부분공간으로 벡터공간을 나눈 몫공간을 잉여류를 통해 구성하고, 연산의 잘 정의됨과 차원 공식을 증명한다. 나아가 자연스러운 사영, 보편 성질, 그리고 제1동형정리를 살펴본다."
+excerpt: "부분공간으로 나눈 몫공간, 잉여류와 제1동형정리"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/quotient_space

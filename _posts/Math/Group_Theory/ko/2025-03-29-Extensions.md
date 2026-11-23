@@ -1,7 +1,7 @@
 ---
 title: "군의 확장"
-description: "군의 확장은 주어진 두 군 사이의 확장 구조를 분류하고, trivial extension의 동치 조건 및 확장들 사이의 morphism을 다룬다."
-excerpt: "Short exact sequence로서의 group extension과 semidirect product"
+description: "군의 확장을 정의하고 확장들 사이의 사상, 자명한 확장, 군의 반직접곱을 다룬다. 주어진 두 군 사이의 확장이 이루는 범주와 자명한 확장의 동치 조건도 설명한다."
+excerpt: "Short exact sequence로서의 군의 확장과 반직접곱"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/extensions

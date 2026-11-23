@@ -1,7 +1,7 @@
 ---
 title: "매개계"
-description: "뇌터 국소환의 크룰 차원을 매개계의 원소 수로 정의하고, 매개계의 존재와 성질을 다룬다."
-excerpt: "Local ring의 system of parameters와 차원과의 관계"
+description: "뇌터 국소환에서 매개계의 정의와 존재를 설명하고 차원과의 관계를 증명한다. 이어서 평탄사상과 차원의 성질 및 Going down for flat extensions 보조정리를 다룬다."
+excerpt: "Local ring의 매개계와 차원과의 관계"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/system_of_parameters
@@ -25,7 +25,7 @@ Noetherian local ring $(A, \mathfrak{m})$이 주어졌다 하자. 그럼 $\dim A
 이 성립하도록 하는 $d$ 가운데 가장 작은 것이다.
 :::
 ::: 증명
-우선 $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$라 가정하자. 그럼 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" }에 의하여 $\mathfrak{m}$은 $(a_1,\ldots, a_d)$를 포함하는 prime ideal 중 minimal한 것이다. 따라서 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jtvir" }에 의하여 $\codim \mathfrak{m}\leq d$가 성립한다. 
+우선 $\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$라 가정하자. 그럼 [§조르당-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="a7utj" }에 의하여 $\mathfrak{m}$은 $(a_1,\ldots, a_d)$를 포함하는 prime ideal 중 minimal한 것이다. 따라서 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7){: data-lid="jtvir" }에 의하여 $\codim \mathfrak{m}\leq d$가 성립한다. 
 
 반대로 $(A,\mathfrak{m})$이 $\dim A=d$를 만족한다 하자. 그럼 정의에 의하여, 길이 $d$의 supremum은 $\mathfrak{m}$에서 시작하는 prime ideal들의 chain에서 나오므로, 정확히 $\codim \mathfrak{m}$과 같다. 따라서, [§차원, ⁋따름정리 8](/ko/math/commutative_algebra/Krull_dimension#cor8){: data-lid="97tva" }을 사용하면 $\mathfrak{m}$이 ideal $(a_1,\ldots, a_d)$를 포함하는 것 중 minimal한 prime이도록 할 수 있다. 그럼 $\mathfrak{m}$은 $A/(a_1,\ldots, a_d)$에서 유일한 prime ideal이 되므로, 이것이 정확히 $A/(a_1,\ldots, a_d)$의 nilradical이 되어야 하고 ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8){: data-lid="l97sy" }) 따라서 원하는 결과를 얻는다. 
 :::
@@ -62,7 +62,7 @@ $$d=\dim A=\codim \mathfrak{m}$$
 
 이므로, $A$의 parameter ideal $\mathfrak{a}$는 [§차원, ⁋정리 7](/ko/math/commutative_algebra/Krull_dimension#thm7){: data-lid="kl744" }에 의하여 반드시 $d$개 이상의 원소로만 생성될 수 있다. 
 
-$A$-module $M$의 parameter ideal $\mathfrak{a}$의 경우, 우리는 [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="y31hd" }의 첫째 조건과 둘째 조건 사이의 동치에 의해 $M/\mathfrak{a}M$이 유한한 길이를 갖는 것과, $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것이 동치인 것을 안다. 즉 $\mathfrak{m}^k M \subseteq \mathfrak{a}M$이 성립해야 하고, 이로부터 $A$ 자기자신을 $A$-module로 보았을 때 두 정의가 서로 합치하는 것을 안다. 비슷한 방법으로 우리가 앞서 살펴봤던 ring의 ideal과 차원 사이의 관계에 대한 결과를 module의 parameter ideal에 대한 결과로 옮겨올 수 있는데, 이를 위해서 우선 다음의 간단한 보조정리들이 필요하다.
+$A$-module $M$의 parameter ideal $\mathfrak{a}$의 경우, 우리는 [§조르당-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="y31hd" }의 첫째 조건과 둘째 조건 사이의 동치에 의해 $M/\mathfrak{a}M$이 유한한 길이를 갖는 것과, $\mathfrak{m}$의 충분히 큰 거듭제곱이 항상 $M/\mathfrak{a}M$을 annihilate하는 것이 동치인 것을 안다. 즉 $\mathfrak{m}^k M \subseteq \mathfrak{a}M$이 성립해야 하고, 이로부터 $A$ 자기자신을 $A$-module로 보았을 때 두 정의가 서로 합치하는 것을 안다. 비슷한 방법으로 우리가 앞서 살펴봤던 ring의 ideal과 차원 사이의 관계에 대한 결과를 module의 parameter ideal에 대한 결과로 옮겨올 수 있는데, 이를 위해서 우선 다음의 간단한 보조정리들이 필요하다.
 
 ::: 보조정리 4
 Noetherian ring $A$와 finitely generated $A$-module $M$, 그리고 $A$의 ideal $\mathfrak{a}$에 대하여, 다음 등식
@@ -112,7 +112,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 그 ideal $\mathfrak{a}$, 그리고 
     $$\mathfrak{m}\subseteq \sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 
     이므로, 충분히 큰 $n$에 대하여 $\mathfrak{m}^n\subseteq(\mathfrak{a}+\ann(M))$이 성립해야 하는 것을 안다.  
-    이제 둘째 조건을 가정하자. 그럼 충분히 큰 $n$에 대하여 maximal ideal들의 곱 $\mathfrak{m}^n$이 $A$-module $A/(\mathfrak{a}+\ann(M))$을 annihilate하므로, [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="1ecwu" }의 첫째 조건과 둘째 조건의 동치에 의하여 $A/(\mathfrak{a}+\ann(M))$은 유한한 길이를 갖는다.  
+    이제 둘째 조건을 가정하자. 그럼 충분히 큰 $n$에 대하여 maximal ideal들의 곱 $\mathfrak{m}^n$이 $A$-module $A/(\mathfrak{a}+\ann(M))$을 annihilate하므로, [§조르당-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="1ecwu" }의 첫째 조건과 둘째 조건의 동치에 의하여 $A/(\mathfrak{a}+\ann(M))$은 유한한 길이를 갖는다.  
     마지막 동치의 경우, 다음 포함관계
 
     $$\mathfrak{m}\subseteq \sqrt{\mathfrak{a}+\ann(M)}=\sqrt{\ann(M/\mathfrak{a}M)}$$

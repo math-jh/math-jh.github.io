@@ -1,7 +1,7 @@
 ---
 title: "Riemann 사상정리"
-description: "단순연결인 ℂ의 진부분 열린집합이 단위원판과 등각동형이고, 한 점의 정규화 조건으로 그 사상이 유일함을 증명한다. 도구로 국소 유계 복소정칙족이 정규족이라는 Montel 정리를 확립하고, 단사 복소정칙사상의 모임에서 도함수의 절댓값을 최대화하는 극값사상을 추출한 뒤, 그것이 전사임을 Schwarz 보조정리로, 전체가 단사임을 Hurwitz 정리로 보인다."
-excerpt: "Riemann mapping theorem, 등각동형, 단순연결, 단위원판, normal family, Montel 정리, Hurwitz 정리, 극값사상, Schwarz 보조정리"
+description: "단순연결인 복소평면의 진부분 열린집합이 단위원판과 등각동형이라는 리만 사상정리를 증명한다. 몽텔 정리로 극값사상을 추출하고, 슈바르츠 보조정리와 후르비츠 정리로 전단사임을 보인다."
+excerpt: "등각동형, 단순연결, 단위원판, 정규족, 몽텔 정리, 후르비츠 정리"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/riemann_mapping_theorem

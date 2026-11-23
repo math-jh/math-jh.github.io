@@ -1,7 +1,7 @@
 ---
 title: "함수"
-description: "이항관계를 함수로 정의하고, 정의역과 함숫값의 개념을 설명하며, 상수함수와 family 표기까지 다룬다."
-excerpt: "함수의 기본 정의"
+description: "한원소집합을 이용해 이항관계를 함수로 정의하고, 정의역과 함숫값의 개념 및 상과 역상 표기를 설명한다. 이어서 상수함수와 족 표기, 가환그림 및 함수의 확장과 제한까지 다룬다."
+excerpt: "함수의 정의와 상수함수, 가환그림, 함수의 확장과 제한"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/functions

@@ -1,7 +1,7 @@
 ---
 title: "복소다양체"
-description: "여러 변수 복소정칙함수에서 출발하여 복소다양체를 위상다양체에 복소정칙 전이함수를 갖는 holomorphic atlas로 정의한다. 복소사영공간, 복소토러스, Riemann surface 등의 예시를 다루고, 복소정칙접공간과 holomorphic tangent bundle을 도입한다. 끝으로 콤팩트 연결 복소다양체 위의 복소정칙함수가 상수임을 최대원리로 증명한다."
-excerpt: "여러 변수 복소정칙함수, holomorphic atlas, 복소차원, CP^n, 복소토러스, Riemann surface, holomorphic tangent space, Wirtinger derivative, 최대원리"
+description: "복소다양체를 holomorphic atlas로 정의하고 복소사영공간과 복소토러스, 복소정칙접공간을 다룬다. 콤팩트 연결 복소다양체 위의 복소정칙함수가 상수임을 최대원리로 증명한다."
+excerpt: "holomorphic atlas, 복소토러스, 복소정칙접공간과 최대원리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/complex_manifolds

@@ -1,7 +1,7 @@
 ---
 title: "벡터공간의 차원"
-description: "벡터공간의 기저는 유일하지 않지만, 임의의 두 기저의 원소 수는 항상 같다. 유한 기저의 원소 수가 같음을 보이는 보조정리와 차원의 정리를 증명한다."
-excerpt: "벡터공간의 기저와 차원"
+description: "벡터공간의 차원 개념과 함께 임의의 두 기저의 원소 수가 항상 같음을 설명한다. 기저는 유일하지 않지만, 유한 기저의 원소 수가 같음을 보이는 보조정리를 증명한다."
+excerpt: "벡터공간의 차원 개념과 유한 기저의 원소 수"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/dimension

@@ -1,7 +1,7 @@
 ---
-title: "유도카테고리"
-description: "homotopy category에서 chain homotopic한 사상들을 동일시하고, quasi-isomorphism의 역을 공식적으로 부여하여 정의하는 유도카테고리의 구조를 다룬다."
-excerpt: "Chain complex와 quasi-isomorphism을 통한 derived category 구성"
+title: "유도범주"
+description: "Homotopy category를 통해 유도범주를 정의한다. 이어서 derived functor, triangulated category, derived adjunction을 다룬다."
+excerpt: "Quasi-isomorphism을 통한 derived category 구성"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/derived_categories

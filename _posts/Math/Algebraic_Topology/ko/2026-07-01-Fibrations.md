@@ -1,7 +1,7 @@
 ---
 title: "호모토피의 계산"
-description: "고차 호모토피 군을 정의하고, Hurewicz 정리와 fibration에 딸린 장거리 완전열을 통해 이를 계산하는 도구를 마련한다."
-excerpt: "Higher homotopy groups, the Hurewicz theorem, and the long exact sequence of a fibration"
+description: "고차 호모토피 군을 정의하고, 후레비치 정리와 올뭉치에 딸린 긴 완전열을 통해 이를 계산하는 도구를 마련한다. 피복 사상과 호프 올뭉치 예시, 세르 스펙트럼 열도 다룬다."
+excerpt: "고차 호모토피 군, 후레비치 정리, 올뭉치의 긴 완전열"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/fibrations

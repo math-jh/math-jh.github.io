@@ -1,7 +1,7 @@
 ---
 title: "Borsuk–Ulam 정리"
-description: "antipode를 보존하는 사상의 차수가 홀수임을 이용해 Borsuk–Ulam 정리의 여러 동치형을 증명하고, 그로부터 ham sandwich 정리와 Lusternik–Schnirelmann covering 정리 등의 귀결을 얻는다."
-excerpt: "The Borsuk–Ulam theorem, odd maps, and the ham sandwich theorem"
+description: "기함수형 사상의 차수가 홀수임을 이용해 Borsuk–Ulam 정리의 여러 동치형을 증명하고, ham sandwich 정리와 Lusternik–Schnirelmann 덮개 정리 등의 귀결을 얻는다."
+excerpt: "Borsuk–Ulam 정리, 기함수형 사상, ham sandwich 정리"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/borsuk_ulam_theorem

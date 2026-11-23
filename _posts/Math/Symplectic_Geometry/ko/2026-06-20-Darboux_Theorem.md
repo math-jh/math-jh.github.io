@@ -1,7 +1,7 @@
 ---
 title: "Darboux 정리"
-description: "Moser의 방법을 이용하여 모든 symplectic manifold가 국소적으로 표준 모델과 symplectomorphic함을 보이는 Darboux 정리를 증명하고, 그 대역적 일반화인 Moser stability 정리를 다룬다."
-excerpt: "Moser의 trick으로 증명하는 Darboux 정리와 Moser stability"
+description: "다르부 정리를 푸앵카레 보조정리와 모저의 방법으로 증명한다. 사교다양체에서 국소적으로 표준 모델로 가는 사교동형사상이 존재함을 보이고, 그 대역적 일반화인 모저 안정성 정리를 다룬다."
+excerpt: "모저의 방법으로 증명하는 다르부 정리와 모저 안정성 정리"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/darboux_theorem

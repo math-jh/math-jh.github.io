@@ -1,7 +1,7 @@
 ---
 title: "옹골성과 필터의 수렴"
-description: "위상공간의 극점 옹골성, 옹골성, 점렬 옹골성의 정의와 이들 사이의 포함 관계를 다룬다."
-excerpt: "Filter의 수렴을 통한 compactness의 특성화"
+description: "위상공간의 극한점 옹골성, 옹골성, 점렬 옹골성의 정의와 이들 사이의 포함 관계를 다룬다. 이어 필터의 수렴을 통한 옹골성의 특성화, 가산공리와 타이코노프 정리를 설명한다."
+excerpt: "필터의 수렴을 통한 옹골성의 특성화와 타이코노프 정리"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/filter_convergence

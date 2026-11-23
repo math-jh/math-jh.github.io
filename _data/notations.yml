@@ -1002,7 +1002,7 @@
   - symbol: A_\bullet
     meaning: chain complex
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \mathcal{A}^\op
     meaning: opposite category
@@ -1027,7 +1027,7 @@
   - symbol: B_n
     meaning: $n$-boundary들의 모임
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \CAT
     meaning: locally small category들의 category
@@ -1052,17 +1052,17 @@
   - symbol: \CoEq(f,0)
     meaning: $f$와 0의 coequalizer
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \coim(f)
     meaning: 사상 $f$의 coimage
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \coker f
     meaning: cokernel
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \colim
     meaning: 여극한
@@ -1094,7 +1094,7 @@
   - symbol: \Eq(f,0)
     meaning: $f$와 0의 equalizer
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: f^{-1}
     meaning: isomorphism의 역사상
@@ -1156,7 +1156,7 @@
   - symbol: \Hom_\mathcal{C}(A,B)
     meaning: 두 대상 사이의 사상 모임
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \id_A
     meaning: 항등사상
@@ -1168,7 +1168,7 @@
   - symbol: \ker f
     meaning: homomorphism의 핵
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
     - label: §군 준동형사상
       url: /ko/math/algebraic_structures/group_homomorphisms
@@ -1253,7 +1253,7 @@
   - symbol: Z_n
     meaning: $n$-cycle들의 모임
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: '[-,-]'
     meaning: 내부 Hom(internal Hom) bifunctor
@@ -1576,7 +1576,7 @@
       url: /ko/math/algebraic_structures/algebraic_structures
     - label: §군 준동형사상
       url: /ko/math/algebraic_structures/group_homomorphisms
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \im u
     meaning: homomorphism의 상
@@ -2270,7 +2270,7 @@
   - symbol: \mathcal{A}
     meaning: abelian category
     defs:
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   items:
   - symbol: A[n]
@@ -2295,9 +2295,9 @@
     defs:
     - label: §호몰로지
       url: /ko/math/homological_algebra/homology
-    - label: §유도카테고리
+    - label: §유도범주
       url: /ko/math/homological_algebra/derived_categories
-    - label: §아벨 카테고리
+    - label: §아벨 범주
       url: /ko/math/category_theory/abelian_categories
   - symbol: \Cone(f)
     meaning: mapping cone
@@ -2377,7 +2377,7 @@
   - symbol: \Hom_{K(\mathcal{A})}(A^\bullet,B^\bullet)
     meaning: homotopy category에서의 hom 집합
     defs:
-    - label: §유도카테고리
+    - label: §유도범주
       url: /ko/math/homological_algebra/derived_categories
   - symbol: L_iF
     meaning: left derived functor
@@ -2387,7 +2387,7 @@
   - symbol: '[n]'
     meaning: $\{1,\ldots,n\}$
     defs:
-    - label: §유도카테고리
+    - label: §유도범주
       url: /ko/math/homological_algebra/derived_categories
   - symbol: \partial
     meaning: connecting homomorphism
@@ -2550,7 +2550,7 @@
   - symbol: \length(M)
     meaning: 가군 $M$의 길이
     defs:
-    - label: §조르단-횔더 정리
+    - label: §조르당-횔더 정리
       url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - symbol: M_\mathfrak{p}
     meaning: localization
@@ -2728,7 +2728,7 @@
   - symbol: \cl\Delta
     meaning: closure
     defs:
-    - label: §고유함수
+    - label: §고유사상
       url: /ko/math/topology/proper_maps
   - symbol: \ext A
     meaning: exterior
@@ -2763,7 +2763,7 @@
   - symbol: f\vert_{f^{-1}(A)}
     meaning: 부분공간으로의 함수 제한
     defs:
-    - label: §고유함수
+    - label: §고유사상
       url: /ko/math/topology/proper_maps
   - symbol: \mathcal{F}\vert_U
     meaning: restriction
@@ -3035,7 +3035,7 @@
     - label: §분류공간
       url: /ko/math/algebraic_topology/classifying_spaces
   - symbol: \EZ
-    meaning: 아일렌베르크-질버 사상
+    meaning: 에일렌베르크-질버 사상
     defs:
     - label: §코호몰로지
       url: /ko/math/algebraic_topology/cohomology

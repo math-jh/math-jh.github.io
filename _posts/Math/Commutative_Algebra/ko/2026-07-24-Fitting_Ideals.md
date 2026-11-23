@@ -1,6 +1,6 @@
 ---
 title: "Fitting 아이디얼"
-description: "유한 표시 행렬의 소행렬식이 이루는 아이디얼이 모듈의 불변량이라는 Fitting의 보조정리를 증명하고, base change와 소멸자, 자유성 판정으로 응용한다."
+description: "유한 표시 행렬의 소행렬식으로 Fitting 아이디얼을 정의하고, 이 아이디얼이 모듈의 불변량이라는 Fitting 정리를 증명한 뒤 base change와 소멸자, 자유성 판정으로 응용한다."
 excerpt: "Fitting ideal의 정의와 표시 독립성, 자유성 판정"
 
 categories: [Math / Commutative Algebra]

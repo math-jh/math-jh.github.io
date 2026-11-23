@@ -1,7 +1,7 @@
 ---
 title: "대수적 확장"
-description: "체의 확장과 field extension의 정의, 그리고 field extension을 associative 대수로 해석하는 관점을 다룬다."
-excerpt: "체의 algebraic extension의 정의와 degree"
+description: "체의 확장과 대수적 확장, 그리고 확장의 차수를 정의한다. 체 사이의 단사 사상으로 체 확장과 부분확장을 도입하고, 체 확장을 결합법칙을 만족하는 대수로 해석하는 관점을 다룬다."
+excerpt: "체의 대수적 확장의 정의와 차수"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/algebraic_extensions

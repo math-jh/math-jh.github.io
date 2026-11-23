@@ -1,7 +1,7 @@
 ---
 title: "아핀 토릭 다양체"
-description: "격자와 강하게 볼록한 유리 다각뿔뿔의 구조를 통해 아핀 토릭 다양체를 정의하고, 조합론적 관점에서 대수다양체를 이해하는 기초를 다룬다."
-excerpt: "Strongly convex rational polyhedral cone으로부터 아핀 토릭 다양체의 구성"
+description: "격자와 강하게 볼록한 유리 다각형뿔의 구조를 통해 아핀 토릭 다양체를 정의한다. 이어서 Separation lemma와 매끄러움, 토러스 작용을 함께 살펴본다."
+excerpt: "강하게 볼록한 유리 다각형뿔로부터 아핀 토릭 다양체의 구성"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/affine_toric_varieties

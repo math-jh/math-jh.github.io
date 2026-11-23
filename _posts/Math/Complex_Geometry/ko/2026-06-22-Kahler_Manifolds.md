@@ -1,7 +1,7 @@
 ---
 title: "Kähler manifold"
-description: "복소다양체 위에서 J와 양립하는 Hermitian metric과 그 동반 기본형식 ω를 정의하고, ω가 닫힘(dω=0)이라는 Kähler 조건을 도입한다. Kähler 조건이 Levi-Civita 접속에 대한 J의 평행성, 국소 표준 osculation, 국소 Kähler 퍼텐셜과 동치임을 보이고, ℂ^n·복소토러스·Fubini–Study metric을 갖춘 ℂP^n이 Kähler임을 확인한다. Kähler 다양체가 사교다양체이며 콤팩트 Kähler의 짝수 코호몰로지가 비자명함을 유도하고, Kähler 항등식을 서술한다."
-excerpt: "Hermitian metric, J-불변 리만계량, 기본형식, Kähler 조건, dω=0, ∇J=0, Kähler 퍼텐셜, Fubini–Study metric, CP^n, 복소토러스, 사영다양체, Kähler⟹symplectic, b_2≥1, Kähler 항등식"
+description: "Hermitian metric과 기본형식으로 Kähler 다양체를 정의하고 동치조건을 증명한다. Fubini–Study metric 예시와 사교구조, Kähler 항등식을 다룬다."
+excerpt: "Hermitian metric과 기본형식, Kähler 동치조건과 항등식"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/kahler_manifolds

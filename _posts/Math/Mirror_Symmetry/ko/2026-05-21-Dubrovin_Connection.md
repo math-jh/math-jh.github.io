@@ -1,7 +1,7 @@
 ---
 title: "두브로빈 접속"
 description: "프로베니우스 다양체의 레비-치비타 접속과 양자 곱을 flat pencil of connections로 통합하는 두브로빈 접속을 정의하고, 그 평탄성과 위상 양자장론에서의 의미를 살펴본다."
-excerpt: "Frobenius manifold 위 spectral parameter를 갖는 flat connection"
+excerpt: "Frobenius manifold 위의 flat connection"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/dubrovin_connection

@@ -1,7 +1,7 @@
 ---
 title: "저우 군"
-description: "다양체 위에서 divisor class group을 일반화한 Chow group을 정의하고, algebraic cycle과 rational equivalence의 개념을 통해 교차수를 임의의 다양체로 확장하는 방법을 다룬다."
-excerpt: "Chow groups and the cycle class map"
+description: "다양체 위에서 divisor class group을 일반화한 Chow group을 정의하고, algebraic cycle과 rational equivalence로 교차수를 확장한다."
+excerpt: "Chow group의 정의와 Localization Exact Sequence"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/chow_groups
@@ -103,7 +103,7 @@ Flat morphism $f: X \rightarrow Y$에 대해 pullback $f^\ast: A^k(Y) \rightarro
 
 $$[f^{-1}(V)] = \sum_i \length(\mathcal{O}_{X, \xi_i}/\mathcal{I}_{\xi_i})\cdot W_i$$
 
-이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-lid="myggm" }), $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="asptv" }) $W_i$가 $\mathcal{I}$의 zero set의 irreducible component이므로 $\mathcal{I}_{\xi_i}$는 $\mathcal{O}_{X,\xi_i}$의 maximal ideal에 대한 primary ideal이고, 따라서 이 length는 유한하다. 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10){: data-lid="o7nfo" }의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
+이다. 여기서 $\xi_i$는 $W_i$의 generic point이고 ([§접공간과 매끄러움, ⁋정의 9](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def9){: data-lid="myggm" }), $\length$는 local ring을 자기 자신 위의 module로 볼 때의 length이다. ([\[가환대수학\] §조르당-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="asptv" }) $W_i$가 $\mathcal{I}$의 zero set의 irreducible component이므로 $\mathcal{I}_{\xi_i}$는 $\mathcal{O}_{X,\xi_i}$의 maximal ideal에 대한 primary ideal이고, 따라서 이 length는 유한하다. 이 규약이 없으면 $f^{-1}(V)$가 reduced가 아닌 경우를 잡아내지 못한다. 가령 [예시 10](#ex10){: data-lid="o7nfo" }의 $f$와 점 $p = [0:1]$에 대해 $f^{-1}(p)$는 집합으로서는 한 점 $q = [0:1]$뿐이지만, $f^\ast[p] = d\cdot[q]$가 되어야 한다.
 
 ## 저우 군의 계산
 

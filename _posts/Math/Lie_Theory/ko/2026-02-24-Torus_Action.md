@@ -1,6 +1,6 @@
 ---
 title: "원환면의 작용"
-description: "리 군의 표현론을 유한군의 표현론과 비교하며, 콤팩트 리 군의 유한차원 표현을 하르 측도와 기약 분해를 통해 다룬다."
+description: "리 군의 유한차원 표현을 정의하고, 콤팩트 리 군의 하르 측도와 원환면의 작용을 다룬다. 극대 원환면과 weight decomposition, Weyl chamber도 살펴본다."
 excerpt: "Torus의 작용과 weight space decomposition"
 
 categories: [Math / Lie Theory]

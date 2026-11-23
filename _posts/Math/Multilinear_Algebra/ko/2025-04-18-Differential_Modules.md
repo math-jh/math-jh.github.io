@@ -1,7 +1,7 @@
 ---
 title: "미분가군"
-description: "graded 대수 위의 유도사와 그 함자적 성질을 다루며, 미분가군의 정의와 관련 완전열의 구조를 살펴본다."
-excerpt: "Graded algebra 위 derivation을 갖는 differential module"
+description: "가환환 위 등급대수의 미분을 바탕으로 미분가군을 정의하고 미분의 함자성을 다룬다. 이어서 텐서대수와 미분, 보편성질과 관련 완전열의 구조를 살펴본다."
+excerpt: "등급대수 위 미분을 갖는 미분가군과 보편성질"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/differential_modules

@@ -1,7 +1,7 @@
 ---
 title: "토릭 다양체의 층 코호몰로지"
-description: "토릭 다양체 위의 torus-invariant divisor가 정의하는 line bundle의 층 코호몰로지를 fan과 polytope의 조합론으로부터 계산한다. Global section의 격자점 기술, 고차 코호몰로지의 character lattice graded 기술, Demazure vanishing, 그리고 complete toric variety에서 구조층의 고차 코호몰로지 소멸을 다루고 P^n과 P^1×P^1을 명시적으로 계산한다."
-excerpt: "Fan과 polytope의 조합론으로 읽어내는 토릭 다양체의 층 코호몰로지와 Demazure vanishing"
+description: "토릭 다양체의 torus-invariant divisor에 대한 층 코호몰로지를 fan의 조합론으로 계산한다. Demazure vanishing과 구조층의 고차 코호몰로지 소멸을 다룬다."
+excerpt: "Fan과 polytope의 조합론과 Demazure vanishing"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/toric_cohomology

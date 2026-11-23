@@ -1,7 +1,7 @@
 ---
 title: "사영다양체"
-description: "사영공간과 동차좌표의 정의에서 출발하여 동차다항식의 영점집합을 통해 사영 대수적 집합과 사영다양체를 정의한다."
-excerpt: "Projective varieties and homogeneous coordinates"
+description: "사영공간과 동차좌표의 정의에서 출발하여 동차다항식의 영점집합을 통해 사영 대수적 집합과 사영다양체를 정의한다. Projective Nullstellensatz와 사영다양체 사이의 사상도 다룬다."
+excerpt: "사영공간과 동차좌표, Projective Nullstellensatz"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/projective_varieties

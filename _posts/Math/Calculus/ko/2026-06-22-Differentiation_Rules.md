@@ -1,7 +1,7 @@
 ---
 title: "미분법"
 description: "멱급수의 항별 미분으로 지수함수의 도함수를 얻고, 삼각함수의 도함수와 곱·연쇄법칙, 몫의 미분법, 역함수의 미분법을 정리한다. 이로써 초등함수로 이루어진 함수를 체계적으로 미분할 수 있게 된다."
-excerpt: "멱급수의 항별 미분, 초등함수의 도함수, 곱·몫·연쇄법칙"
+excerpt: "멱급수의 항별 미분, 초등함수의 도함수, 곱의 미분법, 몫의 미분법, 연쇄법칙"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/differentiation_rules

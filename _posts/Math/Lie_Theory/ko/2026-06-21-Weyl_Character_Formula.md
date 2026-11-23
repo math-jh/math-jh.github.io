@@ -1,7 +1,7 @@
 ---
 title: "Weyl character formula"
-description: "유한차원 표현의 weight 중복도를 group ring Z[P]의 원소로 묶은 형식 지표를 도입하고, Verma module의 형식 지표 e^μ/∏(1−e^{−α})로부터 dominant integral λ에 대한 기약 표현 L(λ)의 지표가 교대합 ∑_w(−1)^{ℓ(w)}e^{w(λ+ρ)}를 Weyl denominator로 나눈 것임을 보이는 Weyl character formula을 확립한다. 그 따름으로 차원 공식 dim L(λ)=∏_{α>0}⟨λ+ρ,α⟩/⟨ρ,α⟩을 얻고 sl₂·sl₃에서 검산한다."
-excerpt: "formal character, group ring Z[P], Verma module의 지표, Weyl denominator, Weyl vector ρ, Weyl character formula, Weyl dimension formula, sl₂, sl₃"
+description: "유한차원 기약 표현의 형식 지표를 도입하고 Verma module 지표로 Weyl character formula를 증명한다. 이어 Weyl dimension formula를 유도한다."
+excerpt: "Verma module의 형식 지표와 Weyl dimension formula"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/weyl_character_formula

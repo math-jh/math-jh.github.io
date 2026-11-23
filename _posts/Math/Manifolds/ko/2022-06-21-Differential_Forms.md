@@ -1,7 +1,7 @@
 ---
 title: "미분형식"
 description: "다양체 위의 미분형식을 텐서다발과 외대수다발을 통해 정의하고, 웨지 곱으로 차수별 대수 구조를 부여한 뒤 함수에 의한 풀백 연산을 설명한다."
-excerpt: "Differential form"
+excerpt: "미분형식의 정의와 당김, 외미분, 드람 코호몰로지, 내부곱"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/differential_forms

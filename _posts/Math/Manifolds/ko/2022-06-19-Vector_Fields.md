@@ -1,7 +1,7 @@
 ---
 title: "벡터장"
 description: "벡터다발의 단면으로서 벡터장을 정의하고, 접다발의 단면인 벡터장의 매끄러움 조건을 좌표계와 함수의 관점에서 동치 조건으로 나타낸다."
-excerpt: "Vector fields"
+excerpt: "벡터장의 뜻과 매끄러움, 국소 틀과 적분흐름"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/vector_fields

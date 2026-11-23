@@ -1,7 +1,7 @@
 ---
 title: "Richardson variety와 Peterson variety"
-description: "Schubert variety와 opposite Schubert variety의 intersection으로 정의되는 Richardson variety와 regular nilpotent element가 잘라내는 Peterson variety를 함께 다룬다. 두 부분다양체의 정의·차원, intersection theory에서의 역할, Grassmannian과 type A에서의 구체적 모습, 그리고 Bruhat cell에 의한 stratification을 살펴본다."
-excerpt: "두 opposite Schubert variety의 transversal한 intersection인 Richardson variety와 regular nilpotent의 Peterson variety: 정의·차원·intersection theory·stratification"
+description: "Richardson variety와 Peterson variety를 정의한다. 두 부분다양체의 차원과 Bruhat cell에 의한 stratification을 살펴본다."
+excerpt: "정의, 차원, intersection theory와 Peterson 정리"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/richardson_peterson_variety
@@ -172,7 +172,7 @@ $$H=(H\cap \mathfrak{h})\oplus\bigoplus_{j\neq k}(H\cap \mathbb{C}E_{jk})$$
 
 $$[E_{lj},E_{jk}]=E_{lk}-\delta_{kl}E_{jj},\qquad[E_{jk},E_{km}]=E_{jm}-\delta_{jm}E_{kk}$$
 
-인데 $\delta$ 항들은 어차피 $\mathfrak{h}\subseteq H$ 안이므로, $H$가 자리 $(j,k)$를 포함하면 같은 열의 위쪽 자리 $(l,k)$ ($l\leq j$) 전부와 같은 행의 오른쪽 자리 $(j,m)$ ($m\geq k$) 전부도 포함해야 한다. 곧 각 열은 위에서부터 빈틈없이 채워지고, 채워진 깊이는 오른쪽 열로 갈수록 줄지 않는다. 따라서 $k$번째 열의 깊이를 $h(k)$라 적으면, $H$는 $h(i)\geq i$를 만족하는 단조증가함수 $h\colon\{1,\ldots,n\}\rightarrow\{1,\ldots,n\}$ (*Hessenberg 함수<sub>Hessenberg function</sub>*)가 결정하는 staircase
+인데 $\delta$ 항들은 어차피 $\mathfrak{h}\subseteq H$ 안이므로, $H$가 자리 $(j,k)$를 포함하면 같은 열의 위쪽 자리 $(l,k)$ ($l\leq j$) 전부와 같은 행의 오른쪽 자리 $(j,m)$ ($m\geq k$) 전부도 포함해야 한다. 곧 각 열은 위에서부터 빈틈없이 채워지고, 채워진 깊이는 오른쪽 열로 갈수록 줄지 않는다. 따라서 $k$번째 열의 깊이를 $h(k)$라 적으면, $H$는 $h(i)\geq i$를 만족하는 단조증가함수 $h\colon\{1,\ldots,n\}\rightarrow\{1,\ldots,n\}$ (*Hessenberg function<sub>헤센베르크 함수</sub>*)가 결정하는 staircase
 
 $$H_h=\{\,Y\in\mathfrak{gl}_n\;\mid\;YE_i\subseteq E_{h(i)}\ \forall i\,\}=\{\,Y\;\mid\;Y_{jk}=0\ \text{whenever $j>h(k)$}\,\}$$
 

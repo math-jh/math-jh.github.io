@@ -1,7 +1,7 @@
 ---
 title: "이차 잉여"
-description: "홀수 소수 p를 법으로 하는 이차 잉여와 Legendre 기호를 정의하고, 이차 잉여가 정확히 (p-1)/2개임을 보인다. Euler 판정법과 가우스 보조정리를 증명하여 (-1/p)와 (2/p)를 결정하고, 따름으로 4k+1꼴 소수가 무수히 많음을 얻는다."
-excerpt: "이차 잉여, Legendre 기호, Euler 판정법, 가우스 보조정리, (2/p)"
+description: "홀수 소수를 법으로 하는 이차 잉여와 이차 비잉여, 르장드르 기호를 정의한다. 오일러 판정법과 가우스 보조정리를 증명하여 르장드르 기호를 계산하고 2의 이차 잉여성을 결정한다."
+excerpt: "이차 잉여, 르장드르 기호, 오일러 판정법, 가우스 보조정리, 2의 이차 잉여성"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/quadratic_residues

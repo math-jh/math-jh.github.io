@@ -1,7 +1,7 @@
 ---
 title: "Krull–Schmidt 정리"
-description: "유한 길이 module과 quiver의 유한차원 representation에 대하여, indecomposable의 정의로부터 Fitting의 보조정리(M=ker φ^n ⊕ im φ^n)와 indecomposable의 endomorphism ring이 local임을 보이고, 이를 이용해 indecomposable들로의 분해가 isomorphism과 순서를 무시하면 유일하다는 Krull–Schmidt 정리를 local endomorphism ring의 exchange 논법으로 증명한다."
-excerpt: "Fitting의 보조정리, indecomposable의 local endomorphism ring, Krull–Schmidt 정리"
+description: "유한 길이 module과 quiver의 representation에 대하여 indecomposable의 정의와 Fitting의 보조정리를 바탕으로 Krull–Schmidt 정리를 증명한다."
+excerpt: "Fitting의 보조정리와 local endomorphism ring"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/krull_schmidt
@@ -17,7 +17,7 @@ published: false
 
 앞선 글에서 우리는 quiver $Q$의 representation들이 이루는 category $\Rep(Q)$가 path algebra $kQ$ 위의 left module들이 이루는 category와 동치임을 보였다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12){: data-lid="332sc" }). 이 동치 아래에서 유한차원 representation은 $k$ 위에서 유한차원인, 따라서 유한 길이를 갖는 $kQ$-module에 대응한다. 표현론의 첫 번째 목표는 이러한 대상들을 가능한 한 작은 조각으로 쪼개고 그 조각들을 분류하는 것이다. 이 글에서 우리는 그러한 분해가 존재하며 본질적으로 유일하다는 것, 곧 *Krull–Schmidt 정리*를 증명한다.
 
-분해의 더 이상 쪼갤 수 없는 단위는 *indecomposable* 대상이다. 분해의 존재성은 길이에 대한 귀납으로 어렵지 않게 얻어지지만, 유일성은 그렇지 않다. 유일성의 핵심은 indecomposable 대상의 endomorphism ring이 *local ring*이라는 사실이며, 이는 다시 *Fitting의 보조정리*로부터 따라온다. 이 글에서 $k$는 field이고, module이라 하면 별다른 언급이 없는 한 left module을 뜻한다. 길이와 composition series의 일반론은 [\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="brsuw" }에서 다룬 것을 따른다. $\Rep(Q)\cong\lMod{kQ}$의 동치 덕분에 우리는 representation과 module을 자유롭게 오가며, 결과는 어느 쪽 언어로 적어도 무방하다.
+분해의 더 이상 쪼갤 수 없는 단위는 *indecomposable* 대상이다. 분해의 존재성은 길이에 대한 귀납으로 어렵지 않게 얻어지지만, 유일성은 그렇지 않다. 유일성의 핵심은 indecomposable 대상의 endomorphism ring이 *local ring*이라는 사실이며, 이는 다시 *Fitting의 보조정리*로부터 따라온다. 이 글에서 $k$는 field이고, module이라 하면 별다른 언급이 없는 한 left module을 뜻한다. 길이와 composition series의 일반론은 [\[가환대수학\] §조르당-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="brsuw" }에서 다룬 것을 따른다. $\Rep(Q)\cong\lMod{kQ}$의 동치 덕분에 우리는 representation과 module을 자유롭게 오가며, 결과는 어느 쪽 언어로 적어도 무방하다.
 
 ## Indecomposable
 
@@ -32,7 +32,7 @@ $\Rep(Q)\cong\lMod{kQ}$ 아래에서 representation의 direct sum이 module의 d
 한 module이 둘 이상의 submodule의 direct sum $M=M_1\oplus\cdots\oplus M_r$로 적힐 때, 각 $M_i$가 다시 indecomposable이면 이를 $M$의 *indecomposable decomposition*라 부른다. Indecomposable의 정의는 이러한 분해를 더 이상 정련할 수 없게 만드는 최소 단위를 골라낸 것이다. Direct sum의 projection과 포함을 통해, $M=M_1\oplus M_2$인 nonzero 분해가 존재한다는 것은 $M$ 위에 $\id_M$도 $0$도 아닌 idempotent endomorphism이 존재한다는 것과 동치인데, 이 관점은 [보조정리 3](#lem3){: data-lid="gf7zm" } 이후에 다시 쓰인다.
 
 ::: 예시 2
-Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="6d93c" }) submodule이 $0$과 $M$ 뿐이므로 $M=M_1\oplus M_2$일 때 $M_1,M_2$ 각각이 $0$ 또는 $M$이고, 둘이 direct sum을 이루려면 그중 하나는 $0$이어야 한다. 그러나 그 역은 성립하지 않는다. 선형 $A_2$ quiver $1\xrightarrow{\ \alpha\ }2$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6){: data-lid="gnce7" }) 에서 representation
+Simple module은 indecomposable이다. $M$이 simple이면 ([\[가환대수학\] §조르당-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="6d93c" }) submodule이 $0$과 $M$ 뿐이므로 $M=M_1\oplus M_2$일 때 $M_1,M_2$ 각각이 $0$ 또는 $M$이고, 둘이 direct sum을 이루려면 그중 하나는 $0$이어야 한다. 그러나 그 역은 성립하지 않는다. 선형 $A_2$ quiver $1\xrightarrow{\ \alpha\ }2$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6){: data-lid="gnce7" }) 에서 representation
 
 $$V:\quad k\xrightarrow{\ 1\ }k$$
 
@@ -57,7 +57,7 @@ Image들의 사슬과 kernel들의 사슬
 
 $$\im\varphi\supseteq\im\varphi^2\supseteq\im\varphi^3\supseteq\cdots,\qquad \ker\varphi\subseteq\ker\varphi^2\subseteq\ker\varphi^3\subseteq\cdots$$
 
-을 생각하자. $M$이 유한 길이를 가지므로 Artinian인 동시에 Noetherian이고 ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3){: data-lid="0d0fg" }), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
+을 생각하자. $M$이 유한 길이를 가지므로 Artinian인 동시에 Noetherian이고 ([\[가환대수학\] §조르당-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3){: data-lid="0d0fg" }), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
 
 $$\im\varphi^m=\im\varphi^n,\qquad \ker\varphi^m=\ker\varphi^n$$
 

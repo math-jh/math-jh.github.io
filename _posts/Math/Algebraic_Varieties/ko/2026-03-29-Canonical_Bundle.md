@@ -1,7 +1,7 @@
 ---
 title: "표준선다발"
-description: "쌍대접다발의 최고 외적 거듭제곱으로 정의되는 표준선다발을 살펴보고, 벡터다발과 준연접층의 관계를 통해 매끈한 대수다양체 위의 기하학적 구조를 이해합니다."
-excerpt: "Canonical bundle and canonical divisor"
+description: "쌍대접다발의 최고 외적 거듭제곱으로 표준선다발을 정의한다. 벡터다발과 준연접층의 관계, Euler Exact Sequence, Adjunction Formula, blow-up을 다룬다."
+excerpt: "Canonical divisor와 Adjunction Formula"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/canonical_bundle

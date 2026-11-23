@@ -1,7 +1,7 @@
 ---
 title: "벡터다발의 특성류"
-description: "oriented 벡터다발의 오일러 특성류에서 출발하여 Thom 동형과 Gysin 완전열을 거쳐 천 특성류와 폰트랴긴 특성류를 정의한다."
-excerpt: "오일러·천·폰트랴긴 특성류"
+description: "방향이 존재하는 벡터다발의 오일러 특성류에서 출발하여 톰 동형사상과 귀진 완전열을 거쳐 천 특성류와 폰트랴긴 특성류를 정의한다. 휘트니 합 공식도 함께 다룬다."
+excerpt: "오일러 특성류, 천 특성류, 폰트랴긴 특성류"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/characteristic_classes

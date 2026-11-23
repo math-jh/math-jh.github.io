@@ -1,7 +1,7 @@
 ---
 title: "이차 상호법칙"
-description: "서로 다른 두 홀수 소수 p, q에 대하여 (p/q)와 (q/p)가 어떻게 연결되는지를 말하는 이차 상호법칙을 가우스 보조정리와 lattice point 세기로 증명한다. 이를 합성수 분모로 확장한 Jacobi 기호와 호제법형 계산 절차, Jacobi 기호가 1이어도 이차 잉여가 아닌 반례, 그리고 3과 5가 이차 잉여인 소수의 분류까지 다룬다."
-excerpt: "이차 상호법칙의 lattice point 증명, Jacobi 기호와 Legendre 기호의 계산"
+description: "서로 다른 두 홀수 소수에 대한 이차 상호법칙을 가우스 보조정리와 격자점 세기로 증명한다. 이를 합성수 분모로 확장한 야코비 기호와 호제법형 계산 절차, 이차 잉여인 소수의 분류까지 다룬다."
+excerpt: "이차 상호법칙의 격자점 증명, 야코비 기호와 르장드르 기호의 계산"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/quadratic_reciprocity

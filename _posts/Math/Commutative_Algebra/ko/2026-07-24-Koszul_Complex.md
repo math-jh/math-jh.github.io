@@ -1,7 +1,7 @@
 ---
 title: "코쥴 복합체"
-description: "코쥴 복합체의 기본 성질인 양 끝 호몰로지의 계산과 소멸 아이디얼, 자기쌍대성을 살펴보고, 긴 완전열을 통해 정칙렬의 코쥴 호몰로지가 소멸함을 보인다. 뇌터 국소환에서는 역이 성립하여 정칙렬의 순서 교환 불변성이 따라오며, 정칙국소환의 잉여류체의 Tor 계산으로 마무리한다."
-excerpt: "Koszul complex와 regular sequence의 homological 판정"
+description: "코쥴 복합체의 성질을 살펴보고, 호몰로지 소멸이 뇌터 국소환에서 정칙렬일 필요충분조건임을 증명한다. 이로부터 국소환에서 정칙렬의 순서 교환 불변성을 보이고 정칙국소환에서의 계산을 다룬다."
+excerpt: "Koszul complex와 regular sequence의 판정"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/koszul_complex

@@ -1,7 +1,7 @@
 ---
 title: "콤팩트 실형식"
-description: "복소 Lie algebra의 real form을 복소화가 원래 대수가 되는 실형식으로 정의하고, Killing form이 음의 정부호인 compact real form을 도입한다. 복소 semisimple Lie algebra가 Chevalley basis로부터 항상 compact real form을 가짐을 보이고 그 유일성을 conjugation을 통해 논한 뒤, Weyl의 unitarian trick으로 완전가약성의 군론적 증명을 제시한다."
-excerpt: "real form, compact real form, Killing form 음의 정부호, Chevalley basis 구성, 유일성, Weyl unitarian trick, su(n)·so(n)·sp(n)"
+description: "복소 Lie algebra의 real form과 compact real form을 정의한다. 존재성과 켤레를 통한 유일성을 보이고 Weyl의 unitarian trick으로 완전가약성을 증명한다."
+excerpt: "compact real form의 정의와 Weyl의 unitarian trick"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/compact_real_form
@@ -37,7 +37,7 @@ $$(\mathfrak{g}_0)_{\mathbb{C}}=\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}\xri
 복소화의 bracket이 $\mathbb{C}$-bilinear가 되도록 위와 같이 잘 정의됨은 $\mathfrak{g}_0$의 bracket이 $\mathbb{R}$-bilinear라는 데에서 곧바로 따른다. 실 벡터공간으로서 $\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}=\mathfrak{g}_0\oplus i\mathfrak{g}_0$이므로, real form을 가진 $\mathfrak{g}$는 $\dim_{\mathbb{C}}\mathfrak{g}=\dim_{\mathbb{R}}\mathfrak{g}_0$을 만족한다. Real form을 등가적으로 기술하는 것은 $\mathfrak{g}$ 위의 *conjugation*, 곧 복소 켤레의 추상적 대응물이다.
 
 ::: 정의 2
-$\mathbb{C}$ 위의 Lie algebra $\mathfrak{g}$ 위에서 *conjugation<sub>켤레</sub>*은 다음을 만족하는 사상 $\tau:\mathfrak{g}\rightarrow\mathfrak{g}$이다.
+$\mathbb{C}$ 위의 Lie algebra $\mathfrak{g}$ 위에서 *conjugation<sub>켤레작용</sub>*은 다음을 만족하는 사상 $\tau:\mathfrak{g}\rightarrow\mathfrak{g}$이다.
 
 1. $\tau$는 $\mathbb{R}$-선형이고 $\tau(\lambda x)=\bar{\lambda}\,\tau(x)$ (곧 $\tau$는 conjugate-linear)이다.
 2. $\tau$는 involution, 곧 $\tau^2=\id$이다.

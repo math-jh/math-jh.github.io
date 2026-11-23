@@ -1,7 +1,7 @@
 ---
 title: "특성다항식"
-description: "행렬과 linear map의 특성다항식을 정의하고, 이를 통해 고윳값과 spectrum의 개념을 도입한다. 또한 닮은 행렬의 특성다항식이 같음을 이용해 linear map의 특성다항식이 basis 선택과 무관함을 보인다."
-excerpt: "행렬의 특성다항식"
+description: "행렬과 선형사상의 특성다항식을 정의하고, 이를 통해 고윳값과 스펙트럼의 개념을 도입한다. 또한 닮은 행렬의 특성다항식이 같음을 이용해 선형사상의 특성다항식이 기저 선택과 무관함을 보인다."
+excerpt: "행렬의 특성다항식, 고윳값과 고유벡터, 대수적·기하적 중복도"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/characteristic_polynomial

@@ -1,7 +1,7 @@
 ---
 title: "연분수"
-description: "유리수의 유한 연분수를 유클리드 호제법과 연결하고, 점근분수의 점화식과 행렬식 항등식, 무한 연분수의 수렴을 증명한다. 점근분수가 최량근사임과 Legendre 판정법, 순환연분수와 이차무리수의 동치(Euler, Lagrange), √d의 연분수 전개를 다룬다."
-excerpt: "연분수, 점근분수, 최량근사, 순환연분수와 이차무리수, √d의 전개"
+description: "연분수를 정의해 유클리드 호제법과 연결하고 점근분수 점화식과 수렴을 증명한다. 최량근사와 르장드르 정리, 순환연분수와 이차무리수의 오일러·라그랑주 정리, 제곱근의 연분수 전개를 다룬다."
+excerpt: "최량근사, 순환연분수와 이차무리수, 라그랑주 정리, 제곱근의 연분수 전개"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/continued_fractions

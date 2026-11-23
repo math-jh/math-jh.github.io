@@ -1,7 +1,7 @@
 ---
 title: "수열의 극한"
-description: "수열의 수렴을 ε-N으로 정의하고, 유계성·극한 법칙·조임정리·비율판정을 정리한다. 표준 극한과 자연상수 e, 단조수렴정리, 부분수열을 다룬다."
-excerpt: "수열의 수렴, 극한 법칙, 표준 극한과 e, 단조수렴"
+description: "수열의 극한을 엡실론-N으로 정의하고, 유계성·극한 법칙·조임정리·비율판정을 정리한다. 표준 극한과 자연상수 e, 단조수렴정리, 부분수열을 다룬다."
+excerpt: "수열의 극한의 정의와 극한 법칙, 조임정리, 자연상수 e, 단조수렴정리"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/sequences

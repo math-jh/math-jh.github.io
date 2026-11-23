@@ -1,7 +1,7 @@
 ---
 title: "완전열"
-description: "모 위의 부분모듈 교집합의 성질을 바탕으로 exact sequence와 splitting exact sequence의 개념을 정의하고 그 성질을 살펴본다."
-excerpt: "Module의 exact sequence와 short/long exact sequence"
+description: "부분가군 교집합의 성질을 바탕으로 가군의 완전열과 분해완전열을 정의하고 그 성질을 살펴본다. 가군의 합과 직합, 보조부분가군, Four lemma도 다룬다."
+excerpt: "가군의 완전열과 보조부분가군, 분해완전열, Four lemma"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/exact_sequences

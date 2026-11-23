@@ -1,7 +1,7 @@
 ---
 title: "천 특성류"
-description: "복소 벡터다발의 뒤틀림을 재는 천 특성류를 공리적으로 정의하고, 직선다발에서의 기하학적 의미, splitting principle, 천 지표를 거쳐 접다발과 Euler 지표의 관계 및 구체적 계산을 다룬다."
-excerpt: "벡터다발의 Chern classes와 그 성질들"
+description: "복소 벡터다발의 뒤틀림을 재는 천 특성류를 공리적으로 정의하고, 직선다발과 splitting principle, 천 지표를 거쳐 접다발과 Euler 지표의 관계를 다룬다."
+excerpt: "벡터다발의 Chern classes와 splitting principle"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/chern_classes

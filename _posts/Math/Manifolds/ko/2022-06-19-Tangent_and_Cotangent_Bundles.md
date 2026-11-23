@@ -1,7 +1,7 @@
 ---
 title: "접다발과 여접다발"
-description: "위상공간 위의 벡터다발을 정의하고, 그 대표적 예시인 접다발의 구조를 살펴본다."
-excerpt: "Vector bundle의 정의와 tangent, cotangent bundle"
+description: "위상공간과 다양체 위의 벡터다발과 국소적 자명화, 자명한 벡터다발을 정의하고, 그 대표적 예시인 접다발의 구조를 살펴본다. 이어서 매끄러운 함자와 여접다발을 다룬다."
+excerpt: "벡터다발의 정의와 접다발, 여접다발"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/tangent_and_cotangent_bundles

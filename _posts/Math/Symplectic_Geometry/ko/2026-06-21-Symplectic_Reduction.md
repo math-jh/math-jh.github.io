@@ -1,7 +1,7 @@
 ---
 title: "사교 축약"
-description: "Marsden-Weinstein-Meyer 축약 정리를 다룬다. Hamiltonian G-공간에서 0이 운동량 사상의 regular value이고 작용이 자유롭고 proper하면 축약공간이 사교다양체가 됨을 증명하고, 일반값과 coadjoint orbit에서의 축약을 서술한 뒤 복소 사영공간을 예시로 든다."
-excerpt: "Marsden-Weinstein-Meyer 축약, 축약공간, coadjoint orbit 축약, CP^n"
+description: "사교 축약의 뜻을 설명하고 마스든-와인스타인-마이어 정리를 증명한다. 해밀토니안 G-공간의 축약공간이 사교다양체가 됨을 보이고, 일반값과 쌍대수반 궤도에서의 축약과 복소 사영공간 예시를 다룬다."
+excerpt: "마스든-와인스타인-마이어 축약, 축약공간, 쌍대수반 궤도 축약, 복소 사영공간"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/symplectic_reduction

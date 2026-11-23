@@ -1,7 +1,7 @@
 ---
 title: "제한합"
-description: "군의 가족에 대한 제한합과 약직접곱의 정의를 다루며, 아벨 군이 제한합을 통해 coproduct를 갖는 범주임을 보인다."
-excerpt: "Group들의 restricted sum"
+description: "군의 족에 대한 제한합과 약한 직접곱, 내부 약한 직접곱을 정의하고 보편성질을 확인한다. 가환군에 대해서는 제한합이 쌍대곱을 주는 구성이 됨을 보인다."
+excerpt: "군들의 제한합과 약한 직접곱, 내부 약한 직접곱"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/restricted_sums

@@ -1,7 +1,7 @@
 ---
 title: "돌보 코호몰로지"
-description: "복소다양체 위에서 외미분이 d = ∂ + ∂̄로 갈라지는 구조를 세우고, d² = 0으로부터 ∂² = ∂̄² = 0과 ∂∂̄ + ∂̄∂ = 0을 유도한다. ∂̄-복합체로 Dolbeault cohomology H^{p,q}를 정의하고, ∂̄-Poincaré 보조정리(Dolbeault–Grothendieck)를 거쳐 Dolbeault 정리 H^{p,q} ≅ H^q(X, Ω^p)를 fine resolution으로 증명한다. ℂ^n과 콤팩트 Riemann surface의 Hodge 수를 예시로 계산한다."
-excerpt: "del과 del-bar 연산자, d = ∂ + ∂̄ 분해, Dolbeault 복합체, Dolbeault cohomology, Hodge 수, ∂̄-Poincaré 보조정리, Dolbeault–Grothendieck, Dolbeault 정리, fine resolution, 복소정칙 p-형식 층, Riemann surface genus"
+description: "복소다양체 위에서 Dolbeault cohomology를 정의하고 Dolbeault 정리를 증명한다. 콤팩트 Riemann surface의 Hodge 수를 예시로 계산한다."
+excerpt: "Dolbeault–Grothendieck 보조정리와 Dolbeault 정리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/dolbeault_cohomology

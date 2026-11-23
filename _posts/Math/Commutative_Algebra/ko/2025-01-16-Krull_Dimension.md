@@ -1,6 +1,6 @@
 ---
 title: "차원"
-description: "가환대수학에서 크룰 차원의 정의를 소개하고, 아이디얼과 여차원의 개념을 정의하며, 뇌터 링에서의 차원 계산을 다룬다."
+description: "가환대수학에서 ring의 Krull dimension과 ideal의 여차원 개념을 정의한다. 이어서 Principal Ideal Theorem과 등급환에서의 차원 계산, 정칙국소환을 다룬다."
 excerpt: "Prime chain으로 정의되는 Krull dimension과 기본 성질"
 
 categories: [Math / Commutative Algebra]
@@ -59,7 +59,7 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7){: data-lid="6waej" }이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
 
-우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="yu1m9" }의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
+우선 우리는 [§조르당-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="yu1m9" }의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
 
 ::: 따름정리 3
 Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것이 동치이다. 
@@ -103,7 +103,7 @@ Noetherian ring $A$와 임의의 $a\in A$에 대하여, $\mathfrak{p}$가 princi
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
-을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="6uki0" }에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
+을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르당-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="6uki0" }에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -127,7 +127,7 @@ $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="dsjy3" }의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 Artinian이고, 따라서 [따름정리 3](#cor3){: data-lid="io2lp" }으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
+이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르당-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8){: data-lid="dsjy3" }의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 Artinian이고, 따라서 [따름정리 3](#cor3){: data-lid="io2lp" }으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
 :::
 
 이제 이를 이용해서 귀납적으로 다음을 보일 수 있다.

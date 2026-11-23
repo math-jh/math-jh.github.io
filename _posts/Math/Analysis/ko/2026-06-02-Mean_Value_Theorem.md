@@ -1,7 +1,7 @@
 ---
 title: "평균값 정리와 테일러 정리"
-description: "Rolle 정리에서 평균값 정리와 Cauchy 평균값 정리를 거쳐 로피탈 정리와 Lagrange 나머지항의 테일러 정리까지 증명한다. 각 정리에서 가정이 빠지면 결론이 어떻게 무너지는지와, 무한번 미분가능하지만 Taylor series가 함수와 다른 e^{-1/x^2}를 함께 다룬다."
-excerpt: "Rolle·평균값·Cauchy 평균값 정리, 로피탈 정리, Lagrange 나머지항의 테일러 정리"
+description: "롤 정리에서 평균값 정리와 코시 평균값 정리를 거쳐 로피탈 정리와 라그랑주 나머지항의 테일러 정리까지 증명한다. 가정이 빠진 반례와 무한번 미분가능하지만 테일러 급수가 함수와 다른 예시도 다룬다."
+excerpt: "롤·평균값·코시 평균값 정리, 로피탈 정리, 라그랑주 나머지항의 테일러 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/mean_value_theorem

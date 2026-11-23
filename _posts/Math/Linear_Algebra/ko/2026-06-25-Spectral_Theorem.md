@@ -1,7 +1,7 @@
 ---
 title: "스펙트럼 정리"
-description: "실내적공간 위의 self-adjoint operator를 정의하고, 그 고윳값이 모두 실수임을 보인다. 나아가 self-adjoint operator가 항상 고유벡터들로 이루어진 orthonormal basis를 가짐을 증명하여, 실수 대칭행렬의 직교대각화를 확립한다."
-excerpt: "self-adjoint operator의 직교대각화"
+description: "실내적공간 위의 자기수반작용소를 정의하고 그 고윳값이 실수임을 보인다. 나아가 고유벡터로 이루어진 정규직교기저의 존재를 보장하는 스펙트럼 정리를 증명해 실수 대칭행렬의 직교대각화를 확립한다."
+excerpt: "자기수반작용소의 직교대각화"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/spectral_theorem

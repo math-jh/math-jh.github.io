@@ -1,7 +1,7 @@
 ---
 title: "호몰로지 차원"
-description: "Module의 projective dimension과 injective dimension, 그리고 global dimension을 정의하고, Noetherian local ring의 최소 자유 분해 이론으로 regular local ring의 global dimension이 차원과 같음을 보인 뒤, Hilbert syzygy 정리로 다항식환의 global dimension이 변수의 개수와 같음을 증명한다."
-excerpt: "Projective/injective/global dimension과 Hilbert syzygy 정리"
+description: "Module의 사영·단사차원과 global dimension을 정의한다. Regular local ring에서 이를 계산하고 Hilbert syzygy 정리를 증명한다."
+excerpt: "사영·단사차원과 global dimension, Hilbert syzygy 정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/homological_dimension

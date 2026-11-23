@@ -1,7 +1,7 @@
 ---
 title: "완전교차"
-description: "Global section들의 가족이 정의하는 vanishing scheme을 다루고, regular sequence로 잘리는 local complete intersection의 codimension이 자르는 방정식의 개수와 일치함을 보인다. Koszul complex가 주는 국소적인 자유 분해로부터 conormal sheaf가 rank k의 locally free sheaf임을 얻고, 사영공간 안에서 대역적으로 잘리는 경우에 Hilbert polynomial을 계산하여 그 degree가 자르는 방정식들의 degree의 곱임을 확인한다."
-excerpt: "Local complete intersection의 codimension, Koszul 분해, Hilbert polynomial과 degree"
+description: "Local complete intersection을 정의하고 codimension을 구한다. Koszul 분해로 conormal sheaf를 얻고 Hilbert polynomial을 계산한다."
+excerpt: "Local complete intersection과 Koszul 분해"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/complete_intersections

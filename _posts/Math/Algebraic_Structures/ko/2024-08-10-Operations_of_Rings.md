@@ -1,7 +1,7 @@
 ---
 title: "환의 곱, 쌍대곱, 텐서곱"
-description: "환들의 곱과 쌍대곱을 범주론적으로 정의하고, 환의 범주가 complete임을 보이며, 텐서곱의 구조를 다룬다."
-excerpt: "환의 product, coproduct, tensor product의 정의"
+description: "환들의 곱과 쌍대곱을 범주론적으로 정의하고, 환의 범주가 완비임을 보인다. 또한 가환군의 곱과 이중선형 사상으로 환의 곱을 구성하며 텐서곱의 정의와 구조를 다룬다."
+excerpt: "환의 곱과 쌍대곱, 텐서곱의 정의와 구조"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/operations_of_rings

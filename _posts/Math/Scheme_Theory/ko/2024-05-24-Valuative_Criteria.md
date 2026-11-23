@@ -1,7 +1,7 @@
 ---
 title: "값매김환"
 description: "분리사상과 proper 사상을 정의하고, 이들이 위상수학의 Hausdorff 조건과 compact 조건을 대수기하학적으로 어떻게 일반화하는지 살펴본다. 이산값매김환의 구조도 함께 다룬다."
-excerpt: "Valuative criteria for separated, properness"
+excerpt: "분리사상과 proper 사상의 valuative criteria"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/valuative_criteria
@@ -237,7 +237,7 @@ Separatedness는 두 morphism이 언제 같은지를 판정하는 데에도 쓰�
 
 ## 고유사상
 
-이제 compact 조건에 대응하는 성질로 넘어간다. 위상수학에서 우리는 compactness를 universally closed라는 조건으로 바꾸어 쓸 수 있음을 보았고 ([\[위상수학\] §고유함수, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="zoub8" }), 대수기하에서는 곱을 fiber product로 바꾼 이 조건이 그대로 정의가 된다.
+이제 compact 조건에 대응하는 성질로 넘어간다. 위상수학에서 우리는 compactness를 universally closed라는 조건으로 바꾸어 쓸 수 있음을 보았고 ([\[위상수학\] §고유사상, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="zoub8" }), 대수기하에서는 곱을 fiber product로 바꾼 이 조건이 그대로 정의가 된다.
 
 ::: 정의 9
 $\varphi:X \rightarrow Y$가 *universally closed<sub>보편닫힌사상</sub>*라는 것은 $\varphi$가 closed map이고, 임의의 $Y' \rightarrow Y$에 대해서도 $X\times_Y Y' \rightarrow Y'$가 closed인 것이다. Separated, universally closed인 finite type morphism을 *proper morphism<sub>고유사상</sub>*이라 부른다. 

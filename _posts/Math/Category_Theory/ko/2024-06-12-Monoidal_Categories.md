@@ -1,7 +1,7 @@
 ---
 title: "모노이드 범주"
 description: "대수적 모노이드의 정의를 복습하고 이를 범주론 언어로 번역하는 과정을 통해, 결합법칙과 항등원을 가환 도표로 표현하며 모노이드 범주와 모노이드 대상의 개념을 소개한다."
-excerpt: "Monoidal category의 정의와 coherence 조건"
+excerpt: "모노이드 범주의 정의와 coherence 조건"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/monoidal_categories
@@ -48,7 +48,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
 범주론에서는 어떤 대상에서 원소를 뽑아오거나 하는 것이 불가능하다. 따라서 맨 처음 살펴본 monoid의 정의는 범주론을 이용하여 설명하기 부적절하다. 그러나 위와 같이 모든 것을 diagram으로 나타내게 되면, 이를 적당히 범주론의 언어로 올려줄 수 있다. 이를 위해서는 우선 우리가 자연스럽게 사용했던 $M\times M$이 무엇인지부터 정의해야 할 것이다.[^1] 
 
-## 모노이드 카테고리
+## 모노이드 범주
 
 간단히 말해서, monoidal category란 대상들 사이의 monoid operation, 즉 associative하고 항등원을 가지는 연산이 주어지는 category이다. 가령 우리가 맨 앞에서 monoid를 정의할 때 사용했던 $\times$는 $\Set$을 monoidal category로 만든다는 것을 곧 살펴볼 것이다. 
 

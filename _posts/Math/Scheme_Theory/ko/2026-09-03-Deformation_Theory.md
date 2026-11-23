@@ -1,7 +1,7 @@
 ---
 title: "변형이론과 여접 복합체"
-description: "Square-zero 확대를 따른 변형과 obstruction을 통해 Kähler differential만으로는 부족한 이유를 밝히고, naive cotangent complex와 완전한 여접 복합체가 affine algebra의 변형을 어떻게 재는지 계산한 뒤 스킴의 국소 변형과 접합 자료를 local-to-global spectral sequence로 조립한다."
-excerpt: "Square-zero extensions, first-order deformations T^1, obstructions T^2, and why Ω is not enough"
+description: "Square-zero 확대를 따른 변형과 obstruction을 정의한다. 소박한 여접 복합체와 완전한 여접 복합체의 차이로 affine algebra와 스킴의 변형을 계산한다."
+excerpt: "소박한 여접 복합체와 변형의 장애, Deformation theorem"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/deformation_theory
@@ -570,13 +570,13 @@ $$\varphi_{ij}:U_i'\vert_{U_{ij}}\xrightarrow{\sim}U_j'\vert_{U_{ij}}$$
 
 $$\widetilde{\LL_{C/A}}\xrightarrow{\sim}\LL_{X_0/S}\vert_U$$
 
-을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-lid="983qj" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
+을 통해서만 identify된다. 즉 엄밀한 gluing은 derived category $D(\mathcal{O}_{X_0})$ 위에서 이루어지게 되며 ([\[호몰로지 대수학\] §유도범주, ⁋정의 2](/ko/math/homological_algebra/derived_categories#def2){: data-lid="983qj" }), 우리는 그 결과를 $\LL_{X_0/S}$로 적게 된다. 
 
 그럼 이제 $\LL_{X_0/S}$는 derived category의 object이므로, $X_0$ 위의 quasi-coherent module $\mathcal{G}$를 계수로 하는 degree $i$ data는 다음의 식
 
 $$\Hom_{D(\mathcal{O}_{X_0})}(\LL_{X_0/S},\mathcal{G}[i])\cong H^i\bigl(R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})\bigr)=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$$
 
-으로 계산된다. 여기서 $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$라는 하나의 complex가 모든 degree의 coefficient data를 함께 담고 있고, shift $\mathcal{G}[i]$는 그중 $i$째 cohomology를 derived category의 morphism set로 읽는 표기이다. ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-lid="bz5fv" }) 우리는 이를
+으로 계산된다. 여기서 $R\Hom_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G})$라는 하나의 complex가 모든 degree의 coefficient data를 함께 담고 있고, shift $\mathcal{G}[i]$는 그중 $i$째 cohomology를 derived category의 morphism set로 읽는 표기이다. ([\[호몰로지 대수학\] §유도범주, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10){: data-lid="bz5fv" }) 우리는 이를
 
 $$T^i(X_0/S,\mathcal{G})=\Ext^i_{\mathcal{O}_{X_0}}(\LL_{X_0/S},\mathcal{G}),\qquad T^i(X_0/S)=T^i(X_0/S,\mathcal{O}_{X_0})$$
 

@@ -1,7 +1,7 @@
 ---
 title: "중국인의 나머지정리"
-description: "정수의 합동 문제에서 출발해 comaximal ideal 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 pairwise comaximal ideal의 교차가 곱과 같아진다는 사실을 핵심 도구로 쓰며, 비가환환에서 교차가 모든 순서의 곱의 합으로 나타나는 형태까지 다룬다."
-excerpt: "Comaximal ideal에 대한 중국인의 나머지정리"
+description: "정수의 합동 문제에서 출발해 공최대 아이디얼 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 쌍마다 공최대 아이디얼의 교차가 곱과 같아짐을 보이고 비가환환의 경우까지 다룬다."
+excerpt: "공최대 아이디얼에 대한 중국인의 나머지정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/chinese_remainder_theorem

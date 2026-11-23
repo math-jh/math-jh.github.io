@@ -1,7 +1,7 @@
 ---
 title: "대칭텐서"
-description: "군환 위의 가군과 군의 작용으로 대칭텐서와 대칭멱을 정의하고, 상대적 추적의 성질과 텐서곱이 군의 부분군 작용에 불변인 것을 다룬다."
-excerpt: "Symmetric group의 작용과 symmetric tensor, symmetric power"
+description: "군환 위의 가군과 군의 작용으로 대칭텐서와 대칭 거듭제곱을 정의하고, relative trace의 성질과 텐서곱이 부분군 작용에 불변임을 다룬다. 이어 대칭대수와 다항식 사상, 대칭함수를 살펴본다."
+excerpt: "Symmetric group의 작용과 대칭텐서, 대칭 거듭제곱"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/symmetric_tensors

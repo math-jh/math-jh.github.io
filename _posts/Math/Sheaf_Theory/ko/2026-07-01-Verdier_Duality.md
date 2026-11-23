@@ -1,7 +1,7 @@
 ---
 title: "Verdier duality"
-description: "Dualizing complex와 Verdier dual 함자를 도입하고, Rf_!와 f^!의 수반에서 나오는 Verdier duality 정리를 진술하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
-excerpt: "The dualizing complex, the Verdier dual D_X, and Poincaré duality as a special case"
+description: "Dualizing complex와 Verdier dual 함자를 도입하고, Verdier duality 정리를 진술하고 증명하여 다양체의 Poincaré 쌍대성을 특수한 경우로 회복한다."
+excerpt: "Dualizing complex로 확장한 Poincaré duality"
 
 categories: [Math / Sheaf Theory]
 permalink: /ko/math/sheaf_theory/verdier_duality

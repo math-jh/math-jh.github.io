@@ -1,7 +1,7 @@
 ---
 title: "쌍대공간"
-description: "주어환 위의 가군에 대한 쌍대가군의 정의와 크로네커 쌍, 부분가군 사이의 직교 관계를 다룬다."
-excerpt: "Module의 Hom과 dual module, bidual map"
+description: "주어진 환 위의 가군에 대한 쌍대가군을 정의하고, 크로네커 쌍과 부분가군 사이의 직교 관계를 다룬다. 이어서 선형사상의 전치와 쌍대기저, 이중쌍대공간을 설명한다."
+excerpt: "가군의 Hom과 쌍대가군, 선형사상의 전치, 쌍대기저, 이중쌍대공간"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/dual_spaces

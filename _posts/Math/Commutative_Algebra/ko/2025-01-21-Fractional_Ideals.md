@@ -1,7 +1,7 @@
 ---
 title: "분수아이디얼"
 description: "정칙국소환의 성질을 이해하기 위해 분수아이디얼의 정의와 가역가군과의 관계를 살펴본다. 뇌터환에서 분수아이디얼이 가역가군이 되는 조건을 다룬다."
-excerpt: "Fractional ideal과 invertible module, Picard group"
+excerpt: "Fractional ideal과 가역가군의 정의, Picard group"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/fractional_ideals
@@ -123,7 +123,7 @@ Noetherian ring $A$ 위에 정의된 invertible module들의 isomorphism class�
 ::: 정의 5
 Noetherian ring $A$에 대하여 다음을 정의한다. 
 
-1. $A$의 *Picard group<sub>피카르드 군</sub>* $\Pic(A)$는 $\otimes$로 연산이 주어진 invertible $A$-module들의 isomorphism class들의 group이다.
+1. $A$의 *Picard group<sub>피카르 군</sub>* $\Pic(A)$는 $\otimes$로 연산이 주어진 invertible $A$-module들의 isomorphism class들의 group이다.
 2. $A$의 *Cartier divisor<sub>카르티에 인자</sub>*들의 group $\CaDiv(A)$는 $K$의 invertible $A$-submodule들, 즉 $A$의 invertible fractional ideal들의 group이다.
 :::
 

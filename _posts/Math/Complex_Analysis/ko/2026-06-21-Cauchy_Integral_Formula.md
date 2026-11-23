@@ -1,7 +1,7 @@
 ---
 title: "Cauchy 적분공식"
-description: "복소정칙함수가 원판 안의 값을 경계적분으로 완전히 복원한다는 Cauchy 적분공식을 Cauchy 정리에서 끌어내고, 핵을 미분하여 복소정칙함수가 무한히 미분가능함을 보인다. Cauchy 부등식에서 Liouville 정리와 대수학의 기본정리를 유도하고, 평균값 성질과 Cauchy 정리의 역인 Morera 정리를 다룬다."
-excerpt: "Cauchy 적분공식, 미분공식, 무한미분가능성, Cauchy 부등식, Liouville 정리, 대수학의 기본정리, 평균값 성질, Morera 정리"
+description: "복소정칙함수의 값을 경계적분으로 복원하는 코시 적분공식을 증명하고 무한미분가능성을 보인다. 코시 부등식에서 리우빌 정리와 대수학의 기본정리를 유도하고 평균값 성질의 증명과 모레라 정리를 다룬다."
+excerpt: "코시 미분공식, 리우빌 정리, 대수학의 기본정리, 평균값 성질, 모레라 정리"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/cauchy_integral_formula

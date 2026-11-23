@@ -1,7 +1,7 @@
 ---
 title: "스킴 사상의 성질들"
 description: "스킴 사상의 주요 성질들을 정의하고, 준옹골사상과 준분리사상의 개념 및 기본 성질을 소개한 뒤 rational map과 birational map을 정의한다."
-excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질과 rational map"
+excerpt: "Affine, 유한, 유한형 사상과 rational map의 정의"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms

@@ -1,7 +1,7 @@
 ---
 title: "베주 정리"
-description: "대수기하학의 베주 정리는 대수적으로 닫힌 체 위의 사영 공간에서, 공통 성분을 갖지 않는 두 곡선이 교차하는 점의 수가 두 곡선의 차수의 곱과 같다는 결과이다. 교점의 중복도를 고려하면 두 이차곡선은 정확히 네 점에서 만난다."
-excerpt: "Bézout's theorem and its applications"
+description: "대수기하학의 베주 정리를 소개하고, Hilbert polynomial을 이용한 평면에서의 증명을 다룬다. 두 이차곡선의 교점 계산과 Cayley-Bacharach, Pascal의 정리도 살펴본다."
+excerpt: "베주 정리 증명과 Cayley-Bacharach, Pascal의 정리"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/bezout_theorem

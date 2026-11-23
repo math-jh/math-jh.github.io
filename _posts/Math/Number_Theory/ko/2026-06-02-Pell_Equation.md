@@ -1,7 +1,7 @@
 ---
 title: "펠 방정식"
-description: "양의 정수 d가 제곱수가 아닐 때 x²−dy²=1의 정수해를 √d의 연분수 전개로 모두 구한다. 모든 해가 fundamental solution의 거듭제곱임을 보이고, x²−dy²=−1이 풀리는 것이 연분수 주기의 홀짝과 동치임을 증명한다."
-excerpt: "펠 방정식의 fundamental solution, 해 전체의 구조, 음의 펠 방정식과 주기의 홀짝"
+description: "제곱수가 아닌 양의 정수에 대한 펠 방정식의 정수해를 연분수 전개로 모두 구한다. 모든 해가 기본해의 거듭제곱임을 보이고, 음의 펠 방정식이 풀리는 것이 연분수 주기의 홀짝과 동치임을 증명한다."
+excerpt: "펠 방정식의 연분수 풀이, 기본해와 해의 구조, 음의 펠 방정식과 주기의 홀짝"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/pell_equation

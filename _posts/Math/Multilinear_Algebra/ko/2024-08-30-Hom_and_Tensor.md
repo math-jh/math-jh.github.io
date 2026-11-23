@@ -1,7 +1,7 @@
 ---
 title: "Hom과 텐서곱"
-description: "분할 완전열 위에서의 Hom과 텐서곱의 성질을 살펴보고, 가환환 위의 가군들 사이의 Hom과 텐서곱 연산의 기본 성질을 다룬다."
-excerpt: "Hom functor와 tensor product의 adjunction과 exactness"
+description: "분해완전열에 Hom 함자를 취해도 완전열이 됨을 증명하고, 가환환 위의 가군에서 Hom과 텐서곱 사이의 준동형사상을 살펴본다. 이어서 대각합과 대각합 사상을 다룬다."
+excerpt: "Hom 함자와 분해완전열, 텐서곱 준동형사상과 대각합 사상"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/hom_and_tensor

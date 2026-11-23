@@ -1,7 +1,7 @@
 ---
 title: "파라콤팩트 공간과 단위분할"
-description: "파라콤팩트 공간의 정의와 정규성을 증명하고, Shrinking Lemma를 통해 paracompact Hausdorff space에서 임의의 열린 덮개에 종속된 단위분할이 존재함을 보이며 위상다양체에 적용한다."
-excerpt: "Paracompact spaces, normality, partitions of unity, and topological manifolds"
+description: "파라콤팩트 공간을 정의하고 정규성을 증명한 뒤, Shrinking Lemma를 통해 파라콤팩트 하우스도르프 공간에서 임의의 열린 덮개에 종속된 단위분할이 존재함을 보이며 위상다양체에 적용한다."
+excerpt: "열린 세분, 정규성, Shrinking lemma, 단위분할과 위상다양체"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/paracompact_spaces

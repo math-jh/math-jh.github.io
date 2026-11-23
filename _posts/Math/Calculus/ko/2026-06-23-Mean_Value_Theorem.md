@@ -1,7 +1,7 @@
 ---
 title: "평균값 정리"
 description: "롤의 정리와 평균값 정리, 코시 평균값 정리를 증명하고, 이로부터 단조성·극값·볼록성 판정과 로피탈 정리, 최적화 등 도함수의 주요 응용을 전개한다."
-excerpt: "평균값 정리와 그 응용: 단조성·극값·볼록성 판정, 로피탈 정리, 최적화"
+excerpt: "평균값 정리의 증명과 단조성·극값·볼록성 판정, 로피탈 정리, 최적화"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/mean_value_theorem

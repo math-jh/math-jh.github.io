@@ -1,7 +1,7 @@
 ---
 title: "마디 곡선의 변형"
-description: "Node를 국소 모형으로 갖는 곡선에서 변형이론의 국소-대역 exact sequence가 완전히 계산되는 모습을 본다. 국소 변형층이 node마다 1차원인 skyscraper이고 그 generator가 방정식을 흔들어 node를 푸는 방향임을 확인하고, marked point를 실은 경우까지 포함하여 변형과 무한소 automorphism이 normalization 위의 vector field로 계산됨을 보인다. 사영 곡선에서 이것이 짧은 exact sequence로 끊어지고, Riemann-Roch로 두 차원의 차가 3g-3+n임을 유도한다."
-excerpt: "Node smoothing, the local deformation sheaf, and the count 3g-3+n"
+description: "준안정 곡선의 변형과 무한소 automorphism을 국소-대역 exact sequence로 계산한다. Node를 푸는 국소 변형층과 Riemann-Roch로 두 차원의 차를 유도한다."
+excerpt: "Node smoothing과 국소 변형층, Riemann-Roch 차원 계산"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/deformations_of_nodal_curves

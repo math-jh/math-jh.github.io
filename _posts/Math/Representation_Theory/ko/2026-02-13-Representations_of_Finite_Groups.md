@@ -1,7 +1,7 @@
 ---
 title: "유한군의 표현론"
-description: "유한군이 벡터공간 위에서 작용하는 방식을 통해 정의되는 표현의 개념을 소개하고, 불변부분공간과 기약 표현 등 표현론의 기본 개념을 다룬다."
-excerpt: "유한군의 representation 정의와 기약분해"
+description: "유한군이 벡터공간 위에서 작용하는 방식을 통해 표현을 정의하고, 불변부분공간과 기약표현 등 표현론의 기본 개념을 다룬다. 마슈케의 정리와 슈어 직교성도 함께 살펴본다."
+excerpt: "유한군의 표현 정의와 마슈케의 정리, 슈어 직교성"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/representations_of_finite_groups

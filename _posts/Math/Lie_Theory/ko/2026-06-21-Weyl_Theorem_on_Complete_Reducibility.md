@@ -1,7 +1,7 @@
 ---
 title: "Weyl 완전가약성 정리"
-description: "Semisimple Lie algebra의 유한차원 표현에 대한 Casimir element를 nondegenerate invariant form의 dual basis로 구성하여 그 trace가 dim g임을 보이고, 이를 통해 Whitehead 보조정리와 짧은 완전열의 분할을 증명한다. 그 귀결로 semisimple Lie algebra의 모든 유한차원 표현이 기약 표현의 직합으로 완전가약임을 보이는 Weyl 정리를 확립한다."
-excerpt: "표현의 Casimir element, trace 공식, Whitehead 보조정리, 완전열의 분할, Weyl complete reducibility theorem"
+description: "Semisimple Lie algebra의 유한차원 표현에 대한 Casimir element를 구성하고, Whitehead 보조정리와 짧은 완전열의 분할로 Weyl 완전가약성 정리를 증명한다."
+excerpt: "표현의 Casimir element, Whitehead 보조정리, 완전열의 분할"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/weyl_complete_reducibility

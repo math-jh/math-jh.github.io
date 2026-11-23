@@ -1,7 +1,7 @@
 ---
 title: "고유스택"
-description: "Algebraic stack의 separatedness와 properness를 diagonal로 정의하고, finite base change를 허용하는 valuative criterion 및 coarse moduli space와의 관계를 다룬다."
-excerpt: "Proper Deligne–Mumford stacks, their valuative criterion, and coarse moduli spaces"
+description: "Algebraic stack의 separatedness와 고유성을 diagonal로 정의하고, valuative criterion과 coarse moduli space와의 관계를 다룬다."
+excerpt: "고유성과 valuative criterion, coarse moduli space"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/proper_stacks

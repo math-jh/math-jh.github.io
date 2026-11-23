@@ -1,7 +1,7 @@
 ---
 title: "Grothendieck 군"
-description: "가환 반군에서 가환군을 구성하는 그로텐디크 군의 정의와, 보편 사상 문제를 통한 존재성과 유일성 증명을 다룬다."
-excerpt: "Grothendieck group과 정수의 정의"
+description: "가환 반군에서 가환군을 구성하는 그로텐디크 군의 정의와, 보편 사상 문제를 통한 존재성과 유일성 증명을 다룬다. 망각 함자의 왼쪽 수반함자와 분수 모노이드도 살펴본다."
+excerpt: "그로텐디크 군과 정수의 정의"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/Grothendieck_groups

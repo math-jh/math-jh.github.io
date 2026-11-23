@@ -1,7 +1,7 @@
 ---
 title: "Serre 관계식"
-description: "Cartan matrix로부터 generator e_i, f_i, h_i와 Serre 관계식으로 정의되는 Lie algebra g(A)를 free Lie algebra의 quotient로 구성하고, finite type Cartan matrix에 대해 g(A)가 유한차원 semisimple Lie algebra임을 주장하는 Serre 정리를 서술한다. 이로써 Cartan matrix와 유한차원 semisimple Lie algebra 사이의 분류가 완성됨을 보이고 Chevalley basis를 언급한다."
-excerpt: "Chevalley–Serre presentation, Serre 관계식, g(A), Serre 정리, Cartan matrix ↔ semisimple Lie algebra 분류"
+description: "Cartan matrix와 Serre 관계식으로 Lie algebra를 정의하고, 유한차원 semisimple Lie algebra의 분류를 완결하는 Serre 정리를 서술한다."
+excerpt: "Serre 정리로 완결하는 semisimple Lie algebra 분류"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/serre_relations

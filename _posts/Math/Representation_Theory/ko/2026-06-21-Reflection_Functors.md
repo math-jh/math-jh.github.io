@@ -1,7 +1,7 @@
 ---
 title: "반사 함자"
-description: "Sink과 source에서의 Bernstein–Gelfand–Ponomarev reflection functor S_k^+, S_k^-를 정의하고, dimension vector에 대한 효과가 root lattice 위의 simple reflection s_k의 작용과 일치함을 증명한다. 두 함자가 simple projective/injective를 제외하고 서로 quasi-inverse임을 보이고, Coxeter 함자와 preprojective·preinjective module을 도입한 뒤 Euler form 및 Gabriel 정리와의 관계를 서술한다."
-excerpt: "BGP reflection functor, sink/source 반사, dimension vector와 simple reflection, Coxeter functor, preprojective module"
+description: "Sink과 source에서의 BGP reflection functor를 정의하고, dimension vector 위에서 simple reflection으로 작용함을 증명한다."
+excerpt: "BGP reflection functor의 정의와 Coxeter 함자"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/reflection_functors

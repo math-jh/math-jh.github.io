@@ -1,7 +1,7 @@
 ---
 title: "완비화의 성질들"
-description: "노테리안 환의 완비화가 노테리안성을 보존하며, 완비화가 왼쪽 완전함을 보이고 적절한 유한성 가정 아래 오른쪽 완전성도 성립하는 성질들을 다룬다."
-excerpt: "Completion과 exact sequence의 호환성, Artin-Rees lemma"
+description: "노테리안 환의 완비화가 노테리안성을 보존함을 증명하고 완비화와 완전열을 살펴본다. 이어서 헨젤의 보조정리와 Cohen structure theorem을 다룬다."
+excerpt: "완비화와 완전열, 헨젤의 보조정리, Cohen structure theorem"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/properties_of_completion

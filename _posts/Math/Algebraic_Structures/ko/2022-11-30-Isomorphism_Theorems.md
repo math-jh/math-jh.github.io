@@ -1,7 +1,7 @@
 ---
 title: "군 동형사상"
-description: "군의 동형사상과 그 정리를 다룬다. 첫 번째 동형 사상 정리와 두 번째 동형 사상 정리를 증명하고, 정상 부분군과 몫군의 성질을 살펴본다."
-excerpt: "동형사상 정리들"
+description: "군의 동형사상에 관한 제1, 제2, 제3, 제4 동형정리를 증명한다. 표준분해를 이용해 정규부분군과 몫군의 성질을 다루고 준동형사상의 여동등화자도 살펴본다."
+excerpt: "제1, 제2, 제3, 제4 동형정리와 준동형사상의 여동등화자"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/isomorphism_theorems

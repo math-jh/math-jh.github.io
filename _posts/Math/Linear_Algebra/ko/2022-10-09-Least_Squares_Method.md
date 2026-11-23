@@ -1,7 +1,7 @@
 ---
 title: "최소제곱법"
-description: "유클리드 공간과 내적공간에서 최소제곱법을 정규방정식으로 유도하고, 평면 위 점들의 직선 적합 예시와 유사역행렬까지 다룬다."
-excerpt: "정사영과 최소제곱법"
+description: "유클리드 공간과 내적공간에서 정사영을 이용해 최소제곱법의 정규방정식을 유도한다. 평면 위 점들의 직선 적합을 최소제곱법 예제로 풀고 유사역행렬까지 다룬다."
+excerpt: "정사영과 최소제곱법, 정규방정식과 유사역행렬, 최소제곱해 구하기"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/least_squares_method

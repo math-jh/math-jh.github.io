@@ -1,7 +1,7 @@
 ---
 title: "반단순가군"
-description: "Simple module들의 직합으로 분해되는 semisimple module을 정의하고, 세 가지 동치 특징(합·직합·모든 submodule이 direct summand)을 Zorn 보조정리로 증명한다. Isotypic 성분에 의한 canonical 분해와, 유한 직합 분해의 유일성을 Schur 보조정리로부터 유도한다."
-excerpt: "Semisimple module의 동치 특징, isotypic decomposition, 그리고 분해의 유일성"
+description: "단순가군들의 직합으로 분해되는 반단순가군을 정의하고 세 가지 동치 특징을 초른 보조정리로 증명한다. 등형 성분에 의한 canonical 분해와 유한 직합 분해의 유일성을 슈어 보조정리로 유도한다."
+excerpt: "반단순가군의 동치 특징, isotypic decomposition, 분해의 유일성"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/semisimple_modules

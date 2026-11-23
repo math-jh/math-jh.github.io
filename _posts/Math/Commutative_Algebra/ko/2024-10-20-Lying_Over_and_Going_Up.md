@@ -1,7 +1,7 @@
 ---
 title: "정수적 확장과 아이디얼"
-description: "정수적 확장에서 lying over과 going up 정리를 증명하며, 소 아이디얼의 원상 존재성과 포함 관계를 다룬다. 대수적 확장에서의 아이디얼 교차 성질도 확인한다."
-excerpt: "Integral extension 하 prime ideal의 lying over와 going up 정리"
+description: "정수적 확장에서 lying over와 going up 정리를 증명하며, 소 아이디얼의 원상 존재성과 포함 관계를 다룬다. 이어서 going down 정리도 함께 살펴본다."
+excerpt: "정수적 확장의 lying over, going up, going down 정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/lying_over_and_going_up

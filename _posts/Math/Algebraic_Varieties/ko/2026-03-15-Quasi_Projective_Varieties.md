@@ -1,7 +1,7 @@
 ---
 title: "준사영다양체"
-description: "사영다양체의 열린부분집합으로 정의되는 준사영다양체의 개념을 다루며, 임의의 아핀다양체와 사영다양체가 모두 준사영다양체임을 보인다. 준사영다양체 사이의 사상 정의와 자리스키 위상의 성질도 함께 살펴본다."
-excerpt: "Quasi-projective varieties and regular maps"
+description: "사영다양체의 열린부분집합으로 정의되는 준사영다양체의 개념을 다루며, 임의의 아핀다양체와 사영다양체가 모두 준사영다양체임을 보인다. 정칙함수와 정칙사상을 정의하고 그 성질도 함께 살펴본다."
+excerpt: "Quasi-projective variety의 정의와 정칙함수, 정칙사상"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/quasi_projective_varieties

@@ -1,7 +1,7 @@
 ---
 title: "집합의 합"
-description: "집합의 덮개와 분할의 개념을 정의하고, 덮개의 섬세한 관계와 전사함수에 의한 이미지 및 분할의 존재 조건을 다룬다."
-excerpt: "집합들 사이의 합 (분리합집합)"
+description: "집합의 덮개와 분할을 정의하고 집합의 합(분리합집합)과 그 보편성질을 다룬다. 또한 덮개의 섬세한 관계와 전사함수에 의한 상 및 분할의 존재 조건을 살펴본다."
+excerpt: "집합의 덮개와 분할, 분리합집합과 합의 보편성질"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/sum_of_sets

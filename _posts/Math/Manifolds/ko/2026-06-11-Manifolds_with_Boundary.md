@@ -1,7 +1,7 @@
 ---
 title: "경계가 있는 다양체"
 description: "반공간을 모델로 하는 경계가 있는 다양체를 정의하고, 경계의 좌표불변성과 경계가 물려받는 다양체 구조, 그리고 유도된 향을 다룬다."
-excerpt: "Manifold with boundary와 induced orientation"
+excerpt: "경계가 있는 다양체와 유도된 향"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/manifolds_with_boundary

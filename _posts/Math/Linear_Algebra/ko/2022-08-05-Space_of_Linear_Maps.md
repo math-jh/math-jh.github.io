@@ -1,7 +1,7 @@
 ---
 title: "선형사상들의 공간"
-description: "기저 위에서의 함수값으로 선형사상이 유일하게 결정됨을 보이고, 유한차원 벡터공간에서 선형사상의 행렬 표현 구조를 다룬다."
-excerpt: "Hom과 쌍대공간"
+description: "선형사상들의 공간의 정의를 다루고, 기저 위에서의 함수값으로 선형사상이 유일하게 결정됨을 보이는 선형확장 정리를 증명한다. 이와 함께 쌍대공간의 개념도 살펴본다."
+excerpt: "선형확장 정리, Hom과 쌍대공간"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/space_of_linear_maps

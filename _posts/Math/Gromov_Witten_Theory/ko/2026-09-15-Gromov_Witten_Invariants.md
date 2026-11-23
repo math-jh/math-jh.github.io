@@ -1,7 +1,7 @@
 ---
 title: "그로모프-위튼 불변량"
-description: "Convex target 위의 genus 0 Gromov-Witten invariant를 정의하고, point mapping·string·divisor·splitting 공리와 boundary divisor의 linear equivalence로부터 사영평면의 유리곡선 수에 대한 Kontsevich 공식을 유도한다."
-excerpt: "Genus-0 GW invariants of convex targets, their axioms, and Kontsevich's formula"
+description: "Convex target 위의 genus 0 그로모프-위튼 불변량을 정의하고, 공리들과 WDVV equation으로부터 사영평면의 유리곡선 수에 대한 Kontsevich 공식을 유도한다."
+excerpt: "Genus 0 그로모프-위튼 불변량의 공리와 Kontsevich 공식"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/gromov-witten_invariants

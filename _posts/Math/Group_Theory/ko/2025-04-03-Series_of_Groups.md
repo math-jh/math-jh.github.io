@@ -1,7 +1,7 @@
 ---
 title: "군의 열"
-description: "군의 교환자 부분군과 그 성질을 살펴보고, 정규 부분군 조건에서의 교환자 계산 보조정리를 정리한다. 이 결과를 바탕으로 군의 열을 구성하는 기본 명제를 다룬다."
-excerpt: "Commutator와 normal/composition/derived series, solvability"
+description: "교환자의 성질을 정리하고 내림중심열, 유도열, 합성열 등 군의 열과 멱영군, 가해군을 정의한다. 이어 자센하우스 보조정리, 슈라이어 명제, 조르당-횔더 정리와 대칭군의 가해성을 다룬다."
+excerpt: "교환자와 내림중심열, 유도열, 합성열, 멱영군과 가해군, 조르당-횔더 정리"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/series_of_groups
@@ -250,7 +250,7 @@ $$D_k(G)=K_0\supseteq K_1\supseteq\cdots\supseteq K_t=D_{k+1}(G)$$
 를 얻는다. 이때 각각의 $K_{j+1}$이 $K_j$의 normal subgroup인 것은 $D_k(G)/D_{k+1}(G)$가 abelian이라는 사실과 [\[대수적 구조\] §군 동형사상, ⁋정리 7](/ko/math/algebraic_structures/isomorphism_theorems#thm7){: data-lid="e9r9b" }의 bijection이 normality를 보존한다는 사실로부터 따라 나오고, $K_j/K_{j+1}$은 cyclic이다. 이 sequence들을 derived series의 각 단계 사이에 끼워넣으면 원하는 series를 얻는다.
 :::
 
-## 합성열과 조르단-횔더 정리
+## 합성열과 조르당-횔더 정리
 
 우리는 앞에서 nilpotent group들은 central extension을 반복하여 얻어지는 group이고, solvable group은 abelian extension을 반복하여 얻어지는 group인 것을 확인하였다. 이제 우리는 가장 일반적인 경우를 다룬다.
 

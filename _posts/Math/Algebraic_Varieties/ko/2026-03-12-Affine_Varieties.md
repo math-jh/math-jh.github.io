@@ -1,7 +1,7 @@
 ---
 title: "아핀다양체"
 description: "다항식의 영점 집합으로 정의되는 아핀 대수적 집합 가운데 더 작은 아핀 대수적 집합의 합집합으로 표현되지 않는, 즉 기하학적으로 하나의 연결된 대상을 이루는 것을 아핀다양체라고 부른다."
-excerpt: "Affine varieties and their basic properties"
+excerpt: "아핀 대수적 집합의 정의와 Nullstellensatz, 좌표환과 정칙성"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/affine_varieties

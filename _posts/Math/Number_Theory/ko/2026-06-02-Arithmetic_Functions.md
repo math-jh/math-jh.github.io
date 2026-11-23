@@ -1,7 +1,7 @@
 ---
 title: "산술적 함수와 뫼비우스 반전"
-description: "약수의 개수 τ, 약수의 합 σ, 오일러 φ, 뫼비우스 함수 μ를 multiplicative function의 틀에서 다루고, Dirichlet convolution의 대수 구조를 증명한다. 이를 바탕으로 뫼비우스 반전 공식과 Σφ(d)=n을 얻고, 짝수 완전수에 대한 Euclid–Euler 정리를 증명한다."
-excerpt: "τ, σ, φ, μ와 Dirichlet convolution, 뫼비우스 반전, 짝수 완전수"
+description: "산술적 함수와 곱셈적 함수를 정의하고 디리클레 합성곱의 대수 구조를 증명한다. 이를 바탕으로 뫼비우스 반전 공식을 유도하고 짝수 완전수에 대한 유클리드-오일러 정리를 증명한다."
+excerpt: "곱셈적 함수와 디리클레 합성곱, 뫼비우스 반전 공식, 유클리드-오일러 정리"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/arithmetic_functions

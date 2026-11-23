@@ -1,7 +1,7 @@
 ---
 title: "행렬의 텐서곱"
 description: "행렬의 텐서곱은 선형 사상의 텐서곱을 크로네커 곱으로 구현하는 행렬 연산이다. 텐서곱 위에서 유도되는 이 연산의 정의와 기본 성질을 정리한다."
-excerpt: "Tensor product에 대응하는 Kronecker product 행렬연산"
+excerpt: "텐서곱에 대응하는 크로네커 곱 행렬 연산"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/tensor_product_of_matrices

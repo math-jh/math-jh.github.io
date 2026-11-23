@@ -1,6 +1,6 @@
 ---
 title: "유한차원 가환대수의 표현과 spectrum"
-description: "유한차원 가환대수의 정규표현이 정의하는 연산자족의 동시 일반화고유공간 분해가 정확히 대수의 character들로 색인됨을 보이고, character와 maximal ideal, spectrum의 점 사이의 사전을 정리한다."
+description: "유한차원 가환대수에서 정규표현의 동시 일반화고유공간 분해가 character들로 색인됨을 보이고, character와 maximal ideal, spectrum의 점 사이의 사전을 정리한다."
 excerpt: "Character = 정규표현의 동시 고유값 = spectrum의 점"
 
 categories: [Math / Representation Theory]

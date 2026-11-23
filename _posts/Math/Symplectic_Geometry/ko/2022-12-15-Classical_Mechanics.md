@@ -1,7 +1,7 @@
 ---
 title: "고전역학"
-description: "에너지 보존법칙과 위상공간을 통해 사교기하학의 물리적 배경을 살펴본다. 19세기 물리학에서 사교다양체가 등장하게 된 과정을 정리한다."
-excerpt: "고전역학과 phase space"
+description: "위상공간의 정의와 에너지 보존법칙의 예시를 통해 사교기하학의 물리적 배경을 살펴본다. 최소작용의 원리와 사교형식을 다루며 19세기 물리학에서 사교다양체가 등장하게 된 과정을 정리한다."
+excerpt: "고전역학과 위상공간, 에너지 보존법칙과 최소작용의 원리"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/classical_mechanics

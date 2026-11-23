@@ -1,7 +1,7 @@
 ---
 title: "적분"
-description: "다양체 위의 미분 형식 적분을 정의하고, 오리엔테이션을 통해 부호가 결정되는 과정을 다룬다."
-excerpt: "Manifold 위에서의 적분"
+description: "다양체 위의 미분형식 적분을 정의하고, 방향을 통해 부호가 결정되는 과정을 다룬다. 이를 위해 지지 개념과 유클리드 공간에서의 적분의 정의, 변수변환 정리를 함께 살펴본다."
+excerpt: "다양체 위에서의 미분형식 적분과 변수변환"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/integration

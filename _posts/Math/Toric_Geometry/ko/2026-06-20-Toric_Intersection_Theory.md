@@ -1,6 +1,6 @@
 ---
 title: "토릭 다양체의 교차 이론"
-description: "매끄러운 완비 토릭 다양체의 Chow 환을 팬의 조합론으로부터 기술한다. Cone과 orbit closure의 대응, torus-invariant divisor들의 교차수를 팬과 polytope에서 읽어내는 방법, 그리고 linear relation과 Stanley-Reisner relation으로 주어지는 Chow 환의 표현을 다룬다."
+description: "매끄러운 완비 토릭 다양체의 Chow 환을 팬의 조합론으로 기술한다. Linear relation과 Stanley-Reisner relation, polytope을 통한 교차수 계산을 다룬다."
 excerpt: "Fan의 조합론으로 읽어내는 매끄러운 완비 토릭 다양체의 Chow 환과 교차수"
 
 categories: [Math / Toric Geometry]

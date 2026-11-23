@@ -1,8 +1,8 @@
 ---
 
 title: "하우스도르프 공간"
-description: "점열의 수렴 개념을 위상공간에서 정의하고, Hausdorff 분리 공리를 통해 극한의 유일성이 보장되는 공간 구조를 살펴본다."
-excerpt: "점열의 수렴과 Hausdorff 공리"
+description: "위상공간에서 점열의 수렴 조건과 분리공리를 정의하고, 이를 바탕으로 하우스도르프 공간을 다룬다. 극한의 유일성이 보장되는 공간 구조와 부분공간, 곱, 몫공간에서의 성질을 살펴본다."
+excerpt: "점열의 수렴과 하우스도르프 분리공리"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/Hausdorff_spaces
@@ -56,7 +56,7 @@ $$n\geq N\implies x_n\in U$$
 3. $X$가 *$T_1$-space<sub>$T_1$-공간</sub>*, 혹은 *Fréchet space<sub>프레셰 공간</sub>*라는 것은 임의의 서로 다른 두 점이 분리가능한 것이다. 따라서, $X$가 $T_1$인 것과 $X$가 $T_0$이며 $R_0$인 것이 동치이다.
 4. $X$가 *$R_1$-space<sub>$R_1$-공간</sub>*이라는 것은 임의의 두 위상적으로 구별가능한 점들이 근방으로 분리가능한 것이다. 따라서 임의의 $R_1$-space는 $R_0$-space이다.
 5. $X$가 *$T_2$-space<sub>$T_2$-공간</sub>*, 혹은 *Hausdorff space<sub>하우스도르프 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 근방으로 분리가능한 것이다. 따라서, $X$가 $T_2$인 것과 $X$가 $T_0$이며 $R_1$인 것이 동치이고, 임의의 $T_2$-space는 $T_1$이다. 
-6. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>유리손 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $T_{2\frac{1}{2}}$-space는 $T_2$이다. 
+6. $X$가 *$T_{2\frac{1}{2}}$-space<sub>$T_{2\frac{1}{2}}$-공간</sub>*, 혹은 *Urysohn space<sub>우리손 공간</sub>*이라는 것은 임의의 서로 다른 두 점이 닫힌근방으로 분리가능한 것이다. 따라서, 임의의 $T_{2\frac{1}{2}}$-space는 $T_2$이다. 
 7. $X$가 *completely $T_2$-space<sub>완전 $T_2$-공간</sub>*, 혹은 *completely Hausdorff space<sub>완전 하우스도르프 공간</sub>*인 것은 임의의 서로 다른 두 점이 연속함수로 분리 가능한 것이다.
 8. $X$가 *regular space<sub>정칙공간</sub>*이라는 것은 임의의 점 $x\in X$와 $x$를 포함하지 않는 닫힌집합 $A\subseteq X$가 항상 근방으로 분리가능한 것이다.
 9. $X$가 *$T_3$-space<sub>$T_3$-공간</sub>*, 혹은 *regular Hausdorff space<sub>정칙 하우스도르프 공간</sub>*이라는 것은 $X$가 $T_0$이며 regular인 것이다. 임의의 $T_3$-space는 $T_{2\frac{1}{2}}$이다. 

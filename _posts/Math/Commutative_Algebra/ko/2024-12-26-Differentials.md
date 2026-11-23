@@ -1,7 +1,7 @@
 ---
 title: "미분"
-description: "라이프니츠 법칙을 만족하는 유도 사상의 정의부터 시작하여 켈러 미분가군의 구조와 representable 성질을 다루고, 다항식환에서의 계산과 국소화, 그리고 추이 완전열과 conormal 완전열을 유도한다. 마지막으로 conormal 완전열을 왼쪽으로 연장하는 naive 코탄젠트 복합체를 정의하고, 그 호몰로지가 표현의 선택과 무관함을 보인다."
-excerpt: "Kähler differential module의 universal property와 naive cotangent complex"
+description: "derivation과 켈러 미분가군을 정의하고 cotangent sequence를 다룬다. 이어서 naive cotangent complex를 정의하고 표현의 선택과 무관함을 보인다."
+excerpt: "켈러 미분가군과 naive cotangent complex"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/differentials
@@ -15,7 +15,7 @@ weight: 34
 
 이번 글에서의 목표는 대수적으로 derivation을 정의하는 것이다. 이로부터 얻어지는 Kähler differential module과 그 두 개의 fundamental exact sequence를 살펴본 뒤, 마지막 두 절에서는 그 가운데 conormal sequence를 왼쪽으로 한 항 더 연장하는 naive cotangent complex를 다룬다. 
 
-## 캘러미분가군
+## 켈러미분가군
 
 ::: 정의 1
 Ring $A$와 $A$-algebra $E$, 그리고 $E$-module $M$이 주어졌다 하자. 그럼 다음의 Leibniz rule
@@ -54,7 +54,7 @@ $$\Der_A(E,-)\cong\Hom_E(\Omega_{E/A},-)$$
 Representing object $\Omega_{E/A}$는 다음과 같이 정의된다. 
 
 ::: 정의 3
-$A$-algebra $E$에 대하여, $E$의 $A$에 대한 *Kähler differential module<sub>캘러 미분가군</sub>*은 $\{\dd{f}\mid f\in E\}$로 생성되는 $E$-module에, 다음의 relation들
+$A$-algebra $E$에 대하여, $E$의 $A$에 대한 *Kähler differential module<sub>켈러 미분가군</sub>*은 $\{\dd{f}\mid f\in E\}$로 생성되는 $E$-module에, 다음의 relation들
 
 $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,dy$ for all $x,y\in E$ and $a,b\in A$}$$
 

@@ -1,7 +1,7 @@
 ---
 title: "스킴의 층 코호몰로지"
-description: '대수다양체 위에서 도입한 층 코호몰로지를 임의의 스킴 위의 준연접층으로 끌어올린다. Abelian sheaf 범주의 유도 함자로서의 정의와 affine 덮개에 대한 Čech 코호몰로지를 다루고, affine scheme 위 준연접층의 소멸 정리로부터 separated scheme 위에서 두 코호몰로지가 일치함을 보인다. 사영공간 위 $$\mathcal{O}(d)$$의 코호몰로지를 재계산하고, Noetherian projective scheme 위 연접층의 유한성과 Serre vanishing을 증명한다. 이어 ample invertible sheaf를 higher cohomology의 소멸로 특징짓는 Serre의 판정법을 얻고, Euler characteristic과 Hilbert polynomial을 도입하여 사영 부분스킴의 degree를 정의한다.'
-excerpt: "Cohomology of quasi-coherent sheaves, Serre vanishing, the cohomological criterion for ampleness, and Hilbert polynomials"
+description: "스킴의 층 코호몰로지를 정의하고, Čech 코호몰로지와의 일치와 Serre vanishing을 증명한다. Serre의 ampleness 판정법과 Hilbert polynomial도 다룬다."
+excerpt: "Serre vanishing과 ampleness의 코호몰로지 판정"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/sheaf_cohomology_of_schemes

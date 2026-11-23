@@ -1,7 +1,7 @@
 ---
 title: "Gabriel 정리"
-description: "Connected quiver Q가 representation-finite인 것이 그 underlying graph가 ADE Dynkin diagram인 것과 동치이고, 그때 V↦dim V가 indecomposable의 동형류와 연관 root system의 positive root 사이의 전단사임을 보이는 Gabriel 정리를 다룬다. Euler form과 그 대칭화로 얻는 Tits 이차형식 q를 도입하고 q가 positive definite인 것이 ADE와 동치임을 root system의 분류로 환원하며, indecomposable의 dimension vector가 q(d)=1인 real root임을 reflection functor와 Coxeter functor로 추적하는 증명 골격을 서술한 뒤 선형 A_3 quiver에서 6개의 positive root와 6개의 indecomposable의 대응을 확인한다."
-excerpt: "Gabriel 정리, finite representation type, ADE Dynkin quiver, Tits 이차형식, dimension vector와 positive root의 전단사, A_3 예시"
+description: "Tits 이차형식과 reflection functor로 Gabriel 정리의 증명 골격을 서술한다. Connected quiver의 ADE 분류와 positive root 대응을 보인다."
+excerpt: "ADE 분류, Tits 이차형식과 positive root의 전단사"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/gabriel_theorem

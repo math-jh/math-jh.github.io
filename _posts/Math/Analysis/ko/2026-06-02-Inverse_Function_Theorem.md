@@ -1,7 +1,7 @@
 ---
 title: "역함수 정리와 음함수 정리"
-description: "연속미분가능한 사상의 미분이 한 점에서 가역이면 그 점 근방에서 사상이 가역임을 축소사상 정리로 증명한다. 이로부터 음함수 정리, 등위집합의 tangent space, Lagrange 승수법을 유도하고, 가정이 빠지면 결론이 무너지는 반례를 함께 다룬다."
-excerpt: "역함수 정리, 음함수 정리, Lagrange 승수법"
+description: "역함수 정리를 축소사상 정리로 증명하고 이로부터 음함수 정리를 유도한다. 등위집합의 접공간과 라그랑주 승수법을 다루고 가정이 빠지면 결론이 무너지는 반례를 살핀다."
+excerpt: "역함수 정리, 음함수 정리, 라그랑주 승수법"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/inverse_function_theorem

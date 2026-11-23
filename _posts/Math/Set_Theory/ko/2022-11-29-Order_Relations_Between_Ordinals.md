@@ -1,6 +1,6 @@
 ---
 title: "서수들 사이의 순서관계"
-description: "ordinal의 성질을 이용해 임의의 well-ordered set을 어떤 ordinal의 initial segment로 볼 수 있음을 보이고, 이를 위해 Replacement 공리_schema를 도입한다."
+description: "서수의 성질을 이용해 임의의 정렬집합을 어떤 서수의 앞절편으로 볼 수 있음을 보이고, 이를 위해 치환 공리꼴을 도입한다. 이어서 기수를 엄밀하게 정의한다."
 excerpt: "서수들의 순서관계와 기수의 엄밀한 정의"
 
 categories: [Math / Set Theory]

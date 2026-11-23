@@ -99,10 +99,10 @@ A:
     id: a_varepsilon_-derivation
 - id: abelian_category
   en: abelian category
-  ko: 아벨 카테고리
+  ko: 아벨 범주
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   see:
   - label: Additive category
@@ -273,17 +273,17 @@ A:
     url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: additive_category
   en: additive category
-  ko: 덧셈 카테고리
+  ko: 덧셈 범주
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: additive_functor
   en: additive functor
   ko: 덧셈함자
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: additive_group
   en: additive group
@@ -697,7 +697,7 @@ A:
 - id: amitsur_complex
   en: Amitsur complex
   ko: 아미추어 복합체
-  primary: ko
+  primary: en
   defs:
   - label: '[스킴] §충실평탄하강'
     url: /ko/math/scheme_theory/faithfully_flat_descent
@@ -948,7 +948,7 @@ A:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
-  - label: '[가환대수학] §조르단-횔더 정리'
+  - label: '[가환대수학] §조르당-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: ascending_chain_condition
   en: ascending chain condition
@@ -2130,7 +2130,7 @@ C:
     url: /ko/math/lie_theory/torus_action
 - id: cartan-eilenberg_resolution
   en: Cartan-Eilenberg resolution
-  ko: 카르탕-아일렌베르크 분해
+  ko: 카르탕-에일렌베르크 분해
   primary: en
   defs:
   - label: '[대수다양체] §층 코호몰로지'
@@ -2236,7 +2236,7 @@ C:
     url: /ko/math/toric_geometry/cox_construction
 - id: category
   en: category
-  ko: 카테고리
+  ko: 범주
   primary: en
   note: "블로그의 분류 category를 뜻할 때는 한글 '카테고리' 허용; 수학적 category는 영어 'category' 사용"
   defs:
@@ -2404,7 +2404,7 @@ C:
   ko: 사슬복합체
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   see:
   - label: Cochain complex
@@ -2421,7 +2421,7 @@ C:
   ko: 사슬사상
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
@@ -2546,7 +2546,7 @@ C:
 - id: chern_connection
   en: Chern connection
   ko: 천 접속
-  primary: ko
+  primary: en
   defs:
   - label: '[복소기하학] §Kodaira 매장정리'
     url: /ko/math/complex_geometry/kodaira_embedding_theorem
@@ -2812,7 +2812,7 @@ C:
     url: /ko/math/analysis/bolzano_weierstrass
 - id: coadjoint_orbit
   en: coadjoint orbit
-  ko: 수반 궤도
+  ko: 쌍대수반 궤도
   primary: en
   defs:
   - label: '[사교기하학] §사교 축약'
@@ -2869,7 +2869,7 @@ C:
   ko: 공사슬복합체
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: cocomplete_category
   en: cocomplete category
@@ -3368,7 +3368,7 @@ C:
     url: /ko/math/set_theory/zfc_axioms
 - id: complete
   en: complete
-  ko: 완전
+  ko: 완비
   primary: en
   defs:
   - label: '[미분다양체] §벡터장'
@@ -3713,7 +3713,7 @@ C:
   ko: 합성열
   primary: en
   defs:
-  - label: '[가환대수학] §조르단-횔더 정리'
+  - label: '[가환대수학] §조르당-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: comultiplication
   en: comultiplication
@@ -3841,7 +3841,7 @@ C:
 - id: conjugation
   en: conjugation
   ko: 켤레작용
-  primary: ko
+  primary: en
   defs:
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
@@ -4386,7 +4386,7 @@ C:
     url: /ko/math/algebraic_topology/covering_spaces
 - id: covering_sieve
   en: covering sieve
-  ko: 덮개 체
+  ko: 덮개 시브
   primary: en
   defs:
   - label: '[스택] §그로텐디크 위상'
@@ -4964,6 +4964,7 @@ D:
   en: derivative
   ko: 미분계수
   primary: en
+  note: '한 점에서의 값만 미분계수. 함수로서는 도함수(derivative function)'
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
@@ -4995,7 +4996,7 @@ D:
   ko: 유도 수반
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: derived_algebra
   en: derived algebra
@@ -5013,10 +5014,10 @@ D:
     url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: derived_category
   en: derived category
-  ko: 유도카테고리
+  ko: 유도범주
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: derived_critical_locus
   en: derived critical locus
@@ -5096,7 +5097,7 @@ D:
 - id: derived_tensor_product
   en: derived tensor product
   ko: 유도 텐서곱
-  primary: ko
+  primary: en
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
@@ -5591,7 +5592,7 @@ D:
   ko: ''
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: distribution
   en: distribution
@@ -6006,21 +6007,21 @@ E:
     id: homology
 - id: eilenberg-steenrod_axioms
   en: Eilenberg-Steenrod axioms
-  ko: 아일렌베르크-스틴로드 공리
+  ko: 에일렌베르크-스틴로드 공리
   primary: en
   defs:
   - label: '[대수적 위상수학] §호몰로지의 계산'
     url: /ko/math/algebraic_topology/computation_of_homology
 - id: eilenberg-zilber_map
   en: Eilenberg-Zilber map
-  ko: 아일렌베르크-질버 사상
+  ko: 에일렌베르크-질버 사상
   primary: en
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
 - id: eilenberg-zilber_theorem
   en: Eilenberg-Zilber theorem
-  ko: 아일렌베르크-질버 정리
+  ko: 에일렌베르크-질버 정리
   primary: en
   defs:
   - label: '[대수적 위상수학] §코호몰로지'
@@ -6250,7 +6251,6 @@ E:
 - id: equivalence_of_categories
   en: equivalence of categories
   ko: 범주의 동등
-  alias: [동등함자]
   alias_en: [equivalence of category]
   primary: ko
   defs:
@@ -6354,7 +6354,7 @@ E:
     url: /ko/math/complex_analysis/isolated_singularities
 - id: essentially_surjective
   en: essentially surjective
-  ko: 본질적 전사 함자
+  ko: 본질적 전사
   primary: en
   defs:
   - label: '[범주론] §자연변환'
@@ -6539,7 +6539,7 @@ E:
   ko: 완전
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: exact_form
   en: exact form
@@ -6553,14 +6553,14 @@ E:
   ko: 완전 함자
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: exact_sequence
   en: exact sequence
   ko: 완전열
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   see:
   - label: Short exact sequence
@@ -7262,16 +7262,14 @@ F:
     url: /ko/math/multilinear_algebra/hom_and_tensor
 - id: finitely_presented
   en: finitely presented
-  ko: 유한표시가군
-  alias:
-  - 유한표시
+  ko: 유한표시
   primary: en
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
 - id: finitely_presented_module
   en: finitely presented module
-  ko: 유한제시 모듈
+  ko: 유한표시 가군
   primary: en
   defs:
   - label: '[가환대수학] §기본 개념들'
@@ -7630,7 +7628,7 @@ F:
   ko: 프라이드-미첼 매장 정리
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: frobenius_algebra
   en: Frobenius algebra
@@ -7683,7 +7681,7 @@ F:
     url: /ko/math/category_theory/functors
 - id: full_subcategory
   en: full subcategory
-  ko: 충만한 부분카테고리
+  ko: 충만한 부분범주
   primary: en
   defs:
   - label: '[범주론] §자연변환'
@@ -7760,7 +7758,7 @@ F:
     url: /ko/math/category_theory/functors
 - id: functor_category
   en: functor category
-  ko: 함자 카테고리
+  ko: 함자 범주
   primary: en
   defs:
   - label: '[범주론] §자연변환'
@@ -8726,7 +8724,7 @@ G:
     id: group
 - id: gysin_exact_sequence
   en: Gysin exact sequence
-  ko: 기진 완전열
+  ko: 귀진 완전열
   primary: en
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
@@ -8742,14 +8740,14 @@ G:
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: gysin_pullback
   en: Gysin pullback
-  ko: 기쟁 풀백
+  ko: 귀진 풀백
   primary: en
   defs:
   - label: '[그로모프-위튼 이론] §Refined Gysin morphism'
     url: /ko/math/gromov-witten_theory/intersection_theory_of_virtual_classes
 - id: gysin_sequence
   en: Gysin sequence
-  ko: 가신 완전열
+  ko: 귀진 완전열
   primary: en
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
@@ -8990,7 +8988,7 @@ H:
 - id: hessenberg_function
   en: Hessenberg function
   ko: 헤센베르크 함수
-  primary: ko
+  primary: en
   defs:
   - label: '[리 이론] §Richardson variety와 Peterson variety'
     url: /ko/math/lie_theory/richardson_peterson_variety
@@ -9110,7 +9108,7 @@ H:
 - id: hirzebruch_surface
   en: Hirzebruch surface
   ko: 히르체브루흐 곡면
-  primary: ko
+  primary: en
   defs:
   - label: '[토릭 기하학] §Delzant 구성'
     url: /ko/math/toric_geometry/delzant_construction
@@ -9398,7 +9396,7 @@ H:
   ko: 호모토피 범주
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: homotopy_equivalence
   en: homotopy equivalence
@@ -10094,7 +10092,7 @@ I:
     url: /ko/math/commutative_algebra/matlis_duality
 - id: injective_immersion
   en: injective immersion
-  ko: 단사 침몰
+  ko: 단사 몰입
   primary: en
   defs:
   - label: '[미분다양체] §부분다양체의 유일성'
@@ -11159,7 +11157,7 @@ J:
   ko: 조르당-횔더 정리
   primary: en
   defs:
-  - label: '[가환대수학] §조르단-횔더 정리'
+  - label: '[가환대수학] §조르당-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
 - id: jordan_s_lemma
   en: 'Jordan''s lemma'
@@ -11267,7 +11265,7 @@ K:
     id: kähler_differential_module
 - id: kähler_differential_module
   en: Kähler differential module
-  ko: 캘러 미분가군
+  ko: 켈러 미분가군
   primary: en
   defs:
   - label: '[가환대수학] §미분'
@@ -11795,14 +11793,14 @@ L:
     url: /ko/math/analysis/compactness
 - id: lefschetz_decomposition
   en: Lefschetz decomposition
-  ko: 레프셰츠 분해
+  ko: 렙셰츠 분해
   primary: en
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
 - id: lefschetz_number
   en: Lefschetz number
-  ko: 레프셰츠 수
+  ko: 렙셰츠 수
   primary: en
   defs:
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
@@ -11816,7 +11814,7 @@ L:
     url: /ko/math/complex_geometry/hodge_theory
 - id: lefschetz_thimble
   en: Lefschetz thimble
-  ko: 레프셰츠 팀블
+  ko: 렙셰츠 팀블
   primary: en
   defs:
   - label: '[사교기하학] §Morse 이론과 stationary phase 근사'
@@ -11888,14 +11886,14 @@ L:
   ko: 왼쪽 완전
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: left_exact_functor
   en: left exact functor
   ko: 좌정확 함자
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: left-hand_derivative
   en: left-hand derivative
@@ -12003,7 +12001,7 @@ L:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
-  - label: '[가환대수학] §조르단-횔더 정리'
+  - label: '[가환대수학] §조르당-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - label: '[복소해석학] §복소적분'
     url: /ko/math/complex_analysis/complex_integration
@@ -12701,7 +12699,7 @@ L:
     id: ringed_space
 - id: locally_small_category
   en: locally small category
-  ko: 국소적으로 작은 카테고리
+  ko: 국소적으로 작은 범주
   primary: en
   defs:
   - label: '[범주론] §범주'
@@ -13192,7 +13190,7 @@ M:
     url: /ko/math/analysis/metric_spaces
 - id: metric_connection
   en: metric connection
-  ko: 리만 접속
+  ko: 계량 접속
   primary: en
   defs:
   - label: '[리만기하학] §레비-치비타 접속'
@@ -13964,7 +13962,7 @@ N:
 - id: nearby_cycle
   en: nearby cycle
   ko: 근방 순환
-  primary: ko
+  primary: en
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
@@ -14783,7 +14781,7 @@ O:
     url: /ko/math/analysis/inverse_function_theorem
 - id: opposite_category
   en: opposite category
-  ko: 반대 카테고리
+  ko: 반대 범주
   primary: en
   defs:
   - label: '[범주론] §함자'
@@ -14926,7 +14924,7 @@ O:
     url: /ko/math/algebraic_topology/Poincare_duality
 - id: orientable_manifold
   en: orientable manifold
-  ko: 유향 다양체
+  ko: 가향 다양체
   primary: en
   defs:
   - label: '[미분다양체] §적분'
@@ -16252,7 +16250,7 @@ P:
     url: /ko/math/manifolds/examples_of_manifolds
 - id: product_category
   en: product category
-  ko: 곱 카테고리
+  ko: 곱 범주
   primary: en
   defs:
   - label: '[범주론] §범주'
@@ -16491,10 +16489,10 @@ P:
     url: /ko/math/algebraic_varieties/dimension
 - id: proper_map
   en: proper map
-  ko: 고유함수
+  ko: 고유사상
   primary: en
   defs:
-  - label: '[위상수학] §고유함수'
+  - label: '[위상수학] §고유사상'
     url: /ko/math/topology/proper_maps
 - id: proper_morphism
   en: proper morphism
@@ -16571,7 +16569,7 @@ P:
     url: /ko/math/algebraic_topology/stiefel_whitney_classes
 - id: pullback_sieve
   en: pullback sieve
-  ko: 당김 체
+  ko: 당김 시브
   primary: en
   defs:
   - label: '[스택] §그로텐디크 위상'
@@ -18056,7 +18054,7 @@ R:
   ko: 오른쪽 완전
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
 - id: right-hand_derivative
   en: right-hand derivative
@@ -18929,14 +18927,14 @@ S:
   ko: 이동 함자
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: short_exact_sequence
   en: short exact sequence
   ko: 짧은 완전열
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
@@ -18953,7 +18951,7 @@ S:
 - id: sieve
   en: sieve
   ko: 시브
-  primary: ko
+  primary: en
   defs:
   - label: '[스택] §그로텐디크 위상'
     url: /ko/math/stacks/grothendieck_topology
@@ -19009,7 +19007,7 @@ S:
   ko: 단순
   primary: en
   defs:
-  - label: '[가환대수학] §조르단-횔더 정리'
+  - label: '[가환대수학] §조르당-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
@@ -19298,7 +19296,7 @@ S:
     url: /ko/math/sheaf_theory/six_functors
 - id: skeletal_category
   en: skeletal category
-  ko: 뼈대 카테고리
+  ko: 뼈대 범주
   primary: en
   defs:
   - label: '[범주론] §자연변환'
@@ -19367,7 +19365,7 @@ S:
     id: slice_category_over_a
 - id: small_category
   en: small category
-  ko: 작은 카테고리
+  ko: 작은 범주
   primary: en
   defs:
   - label: '[범주론] §범주'
@@ -20008,7 +20006,7 @@ S:
     url: /ko/math/stacks/grothendieck_topology
 - id: subcategory
   en: subcategory
-  ko: 부분카테고리
+  ko: 부분범주
   primary: en
   defs:
   - label: '[범주론] §범주'
@@ -21318,7 +21316,7 @@ T:
   ko: 삼각 분할 범주
   primary: en
   defs:
-  - label: '[호몰로지 대수학] §유도카테고리'
+  - label: '[호몰로지 대수학] §유도범주'
     url: /ko/math/homological_algebra/derived_categories
 - id: trigonometric_function
   en: trigonometric function
@@ -21870,7 +21868,7 @@ U:
   ko: 보편닫힌사상
   primary: en
   defs:
-  - label: '[위상수학] §고유함수'
+  - label: '[위상수학] §고유사상'
     url: /ko/math/topology/proper_maps
   - label: '[스킴] §값매김환'
     url: /ko/math/scheme_theory/valuative_criteria
@@ -21989,7 +21987,7 @@ U:
     id: lower_triangular_matrix
 - id: urysohn_lemma
   en: Urysohn lemma
-  ko: 유리손 보조정리
+  ko: 우리손 보조정리
   primary: ko
   defs:
   - label: '[위상수학] §Urysohn 보조정리와 Tietze 확장정리'
@@ -21999,7 +21997,7 @@ U:
     id: normal_space
 - id: urysohn_space
   en: Urysohn space
-  ko: 유리손 공간
+  ko: 우리손 공간
   primary: en
   defs:
   - label: '[위상수학] §하우스도르프 공간'
@@ -22050,7 +22048,7 @@ V:
 - id: vanishing_cycle
   en: vanishing cycle
   ko: 소멸 순환
-  primary: ko
+  primary: en
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
@@ -22092,7 +22090,9 @@ V:
     id: variation
 - id: variation_of_parameters
   en: variation of parameters
-  ko: 매개변수변환
+  ko: 상수변화법
+  alias:
+  - 매개변수변환법
   primary: en
   defs:
   - label: '[해석학] §선형 미분방정식계'
@@ -22718,7 +22718,7 @@ Z:
   ko: 영사상
   primary: en
   defs:
-  - label: '[범주론] §아벨 카테고리'
+  - label: '[범주론] §아벨 범주'
     url: /ko/math/category_theory/abelian_categories
   see:
   - label: 선형사상

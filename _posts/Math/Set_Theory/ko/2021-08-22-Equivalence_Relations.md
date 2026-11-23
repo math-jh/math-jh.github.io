@@ -1,7 +1,7 @@
 ---
 title: "동치관계"
 description: "대칭성, 추이성, 반사성을 만족하는 동치관계의 정의와 기본 성질을 다룬다. 집합 위의 동치관계 예시와 이항관계가 동치관계가 되기 위한 세 가지 동치 조건을 증명과 함께 살펴본다."
-excerpt: "동치관계의 정의와 성질들"
+excerpt: "동치관계의 정의, 세 가지 동치 조건과 분할"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/equivalence_relations

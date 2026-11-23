@@ -1,7 +1,7 @@
 ---
 title: "나눗셈환"
-description: "Division ring을 모든 nonzero 원소가 unit인 환으로 정의하고 그 안에 zero divisor가 없음을 보인다. 모든 유한 division ring이 field라는 Wedderburn의 little theorem을 class equation과 cyclotomic polynomial로 증명한 뒤, 무한한 경우의 대표적 예시로 Quaternion ℍ가 noncommutative division ring임을 직접 확인한다. Schur의 보조정리를 통해 simple module의 endomorphism ring으로 division ring이 등장함을 본다."
-excerpt: "Division ring과 quaternion, Wedderburn의 little theorem, 그리고 Schur의 보조정리"
+description: "나눗셈환을 정의하고 영인자가 없음을 보인 뒤, 모든 유한 나눗셈환이 체라는 웨더번의 소정리를 증명한다. 이어 사원수 예시를 확인하고 슈어의 보조정리로 단순가군의 자기사상환을 다룬다."
+excerpt: "나눗셈환과 사원수, 웨더번의 소정리, 그리고 슈어의 보조정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/division_rings

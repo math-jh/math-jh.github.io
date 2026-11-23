@@ -1,7 +1,7 @@
 ---
 title: "정칙성의 호몰로지 판정"
-description: "Noetherian local ring이 regular인 것이 residue field의 projective dimension이 유한한 것과 동치라는 Auslander-Buchsbaum-Serre 정리를 증명하고, 그 귀결로 regular local ring의 국소화가 다시 regular임과 다항식환의 정칙성을 얻은 뒤, regular local ring이 UFD라는 Auslander-Buchsbaum 정리를 증명한다."
-excerpt: "Auslander-Buchsbaum-Serre 정리와 regular local ring의 UFD 정리"
+description: "Noetherian local ring의 정칙성을 판정하는 Auslander-Buchsbaum-Serre 정리와 정칙국소환이 UFD라는 Auslander-Buchsbaum 정리를 증명한다."
+excerpt: "Auslander-Buchsbaum-Serre 정리와 정칙국소환의 UFD 정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/homological_criterion_for_regularity

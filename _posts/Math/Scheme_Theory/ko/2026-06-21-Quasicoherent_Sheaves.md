@@ -1,7 +1,7 @@
 ---
 title: "준연접층"
-description: "스킴의 구조층 위에 정의되는 가군층을 도입하고, affine scheme 위에서 가군의 연관층이 가군 범주와 준연접층 범주 사이의 동치를 주는 것을 보인다. 이를 통해 준연접성이 affine-local property임을 확인하고 locally free sheaf, pullback과 pushforward, 그리고 closed subscheme의 ideal sheaf를 다룬다."
-excerpt: "Sheaf of O_X-modules, the equivalence on affine schemes, and quasi-coherence"
+description: "스킴의 가군층과 준연접층을 정의하고, affine scheme에서의 범주 동치를 보인다. Locally free sheaf, projection formula, ideal sheaf를 다룬다."
+excerpt: "가군층, associated sheaf와 projection formula"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/quasicoherent_sheaves

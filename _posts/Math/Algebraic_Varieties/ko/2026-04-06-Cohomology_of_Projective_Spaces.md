@@ -1,7 +1,7 @@
 ---
 title: "사영공간의 코호몰로지"
 description: "층 코호몰로지는 고차 코호몰로지 군을 포함하는 더 풍부한 불변량이며, 사영공간 위의 선다발에 대해 Bott 공식으로 이를 완전히 계산한다. Čech 코호몰로지를 활용한 증명을 포함한다."
-excerpt: "Bott's formula and the cohomology of line bundles on projective space"
+excerpt: "Bott's formula로 계산하는 line bundle의 코호몰로지"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/cohomology_of_projective_spaces

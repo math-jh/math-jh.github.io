@@ -1,7 +1,7 @@
 ---
 title: "부풀림 대수"
-description: "환의 ideal들로부터 associated graded ring과 associated graded module을 구성하고, 여과와 안정적 여과의 개념을 통해 유한 생성 모듈의 구조를 분석한다."
-excerpt: "Ideal로부터 만드는 blowup algebra와 associated graded ring"
+description: "환의 ideal로부터 associated graded ring과 부풀림 대수를 정의한다. 여과와 안정적 여과로 아틴-리스 보조정리와 Krull intersection theorem을 다룬다."
+excerpt: "Associated graded ring과 아틴-리스 보조정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/blowup_algebra

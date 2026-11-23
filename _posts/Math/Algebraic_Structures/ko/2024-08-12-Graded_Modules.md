@@ -1,7 +1,7 @@
 ---
 title: "등급가군"
-description: "등급환 위의 등급가군의 개념과 등급 준동형사상의 정의를 다루며, 등급부분가군의 기본 성질을 살펴본다."
-excerpt: "Graded ring 위에 정의되는 graded module의 정의"
+description: "등급환 위의 등급가군의 개념을 정의하고, 등급준동형사상과 차수가 주어진 준동형사상의 정의 및 범주를 다룬다. 이어서 등급부분가군의 기본 성질을 살펴본다."
+excerpt: "등급환 위에 정의되는 등급가군의 정의"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/graded_modules

@@ -1,7 +1,7 @@
 ---
 title: "Riemann 적분"
-description: "Darboux 상합과 하합으로 Riemann integral을 정의하고, 모든 ε에 대해 상합과 하합의 차를 ε보다 작게 하는 분할이 존재한다는 Riemann 판정법을 증명한다. 연속함수, 단조함수, 불연속점이 유한한 bounded function의 적분가능성과 Dirichlet function, Thomae function의 예를 다루고, 적분의 선형성, 단조성, 구간가법성과 f의 제곱, 절댓값의 적분가능성을 보인다."
-excerpt: "Darboux 합, Riemann 판정법, 적분가능한 함수의 부류, 적분의 기본 성질"
+description: "다르부 상합과 하합으로 리만적분을 정의하고, 적분가능성 조건인 리만 판정법을 증명한다. 연속함수와 단조함수의 적분가능성, 적분의 선형성, 단조성, 구간가법성을 보인다."
+excerpt: "다르부 합, 리만 판정법, 함수의 적분가능성, 적분의 기본 성질"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/riemann_integral

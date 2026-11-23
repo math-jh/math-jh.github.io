@@ -1,7 +1,7 @@
 ---
 title: "특이값 분해"
-description: "임의의 실행렬에 대해 그 전치와의 곱의 스펙트럼 분해로부터 특이값을 정의하고, orthogonal matrix와 diagonal matrix의 곱으로의 특이값 분해를 구성한다. 나아가 이를 통해 일반적인 유사역행렬을 정의한다."
-excerpt: "임의의 실행렬의 직교 분해"
+description: "임의의 실행렬에 대해 그 전치와의 곱의 스펙트럼 분해로부터 특이값을 정의하고, 직교행렬과 대각행렬의 곱으로의 특이값 분해를 구성한다. 나아가 이를 통해 일반적인 유사역행렬을 정의한다."
+excerpt: "임의의 실행렬의 특이값 분해와 일반적인 유사역행렬"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/singular_value_decomposition

@@ -1,7 +1,7 @@
 ---
 title: "이상적분"
 description: "적분 구간이 무한하거나 피적분함수가 발산하는 이상적분을 극한으로 정의하고, p-적분과 비교판정·극한비교·절대수렴으로 수렴을 판정한다. 수렴하는 이상적분으로 감마함수를 정의한다."
-excerpt: "무한구간 이상적분, 특이적분, 비교판정, 절대수렴"
+excerpt: "무한구간 이상적분의 정의, 특이적분, 비교판정, 절대수렴, 감마함수"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/improper_integrals

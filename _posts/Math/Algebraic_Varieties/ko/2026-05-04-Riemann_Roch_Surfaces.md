@@ -1,7 +1,7 @@
 ---
 title: "곡면에서의 리만-로흐 정리"
 description: "곡선에서의 리만-로흐 정리를 곡면으로 일반화하는 과정에서 교차수를 정의하고, 호지 지표 정리를 증명하며, 교차 형식의 기하학적 의미를 살펴본다."
-excerpt: "Intersection theory on surfaces and its applications"
+excerpt: "곡면 위의 교차수 정의와 호지 지표 정리 증명, Genus formula"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/riemann_roch_surfaces

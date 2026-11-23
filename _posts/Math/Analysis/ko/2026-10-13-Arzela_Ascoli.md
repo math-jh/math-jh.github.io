@@ -1,7 +1,7 @@
 ---
 title: "동등연속성과 Arzelà–Ascoli 정리"
-description: "함수열이 균등수렴하는 부분수열을 가지기 위한 조건을 equicontinuity로 찾고, 대각선 논법으로 Arzelà–Ascoli 정리를 증명한다. 이로부터 C(K)의 compact subset을 특성화하고, uniformly bounded이지만 동등연속이 아닌 sin(nx), 균등 Lipschitz 함수열의 응용, 가정이 빠질 때의 반례를 다룬다."
-excerpt: "Equicontinuity, 대각선 논법, Arzelà–Ascoli 정리와 C(K)의 compact subset"
+description: "연속함수열의 동등연속성을 정의하고, 대각선 논법의 증명을 통해 아르젤라-아스콜리 정리를 보인다. 이로부터 C(K)의 컴팩트 부분집합을 특성화하고 균등 립시츠 함수열의 응용과 반례를 다룬다."
+excerpt: "동등연속성, 대각선 논법, 아르젤라-아스콜리 정리와 C(K)의 컴팩트 부분집합"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/arzela_ascoli

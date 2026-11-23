@@ -1,7 +1,7 @@
 ---
-title: "고유함수"
-description: "보편닫힌사상의 정의와 성질을 다룬다. 연속 단사함수의 경우 보편닫힌사상, 닫힌사상, 위상동형사상 간의 동치 조건을 증명하고, 부분집합과 덮개에 대한 보편닫힌사상의 성질을 살펴본다."
-excerpt: "Universally closed map으로서의 proper map과 compactness와의 관계"
+title: "고유사상"
+description: "고유사상의 뜻과 보편닫힌사상의 정의, 옹골성과의 관계를 다룬다. 연속 단사함수의 경우 보편닫힌사상, 닫힌사상, 위상동형사상 간의 동치 조건을 증명하고 부분집합과 덮개에 대한 성질을 살펴본다."
+excerpt: "보편닫힌사상으로서의 고유사상과 옹골성의 관계"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/proper_maps
@@ -128,9 +128,9 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 $f$가 universally closed이므로 $f\vert_{f^{-1}(C)}$는 universally closed이다. 한편 $C \rightarrow\{\ast\}$는 $C$가 compact라는 가정으로부터 universally closed이고, 따라서 합성 $f^{-1}(C) \rightarrow C \rightarrow \{\ast\}$는 universally closed이므로 $f^{-1}(C)$도 compact이다. 
 :::
 
-## 고유함수
+## 고유사상
 
-[따름정리 7](#cor7){: data-lid="6zfsl" }의 결과를 만족하는 함수 $f$를 *proper map<sub>고유함수</sub>*라 부른다. 다음 명제는 특별한 경우에서 위의 따름정리의 역 또한 성립한다는 것을 보여준다.
+[따름정리 7](#cor7){: data-lid="6zfsl" }의 결과를 만족하는 함수 $f$를 *proper map<sub>고유사상</sub>*라 부른다. 다음 명제는 특별한 경우에서 위의 따름정리의 역 또한 성립한다는 것을 보여준다.
 
 ::: 명제 8
 Hausdorff space들 사이의 연속함수 $f:X \rightarrow Y$가 주어졌다 하고, 추가로 $Y$가 locally compact라 가정하자. 그럼 $f$가 universally closed인 것과 $f$가 proper인 것이 동치이다. 

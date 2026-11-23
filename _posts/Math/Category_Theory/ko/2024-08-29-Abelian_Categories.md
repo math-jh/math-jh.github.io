@@ -1,7 +1,7 @@
 ---
-title: "아벨 카테고리"
-description: "덧셈 카테고리와 아벨 카테고리의 정의를 다루며, additive functor와 zero map, kernel과 cokernel의 개념을 통해 chain complex와 exact sequence의 기초를 정의한다."
-excerpt: "아벨 카테고리"
+title: "아벨 범주"
+description: "덧셈 범주와 아벨 범주를 정의하고 chain complex와 exact sequence의 기초를 다룬다. 이어 Freyd-Mitchell embedding theorem을 살펴본다."
+excerpt: "덧셈 범주와 Freyd-Mitchell embedding theorem"
 
 categories: [Math / Category Theory]
 permalink: /ko/math/category_theory/abelian_categories
@@ -24,7 +24,7 @@ Category $\mathcal{A}$가 *$\Ab$-category*라는 것은 $\Hom_\mathcal{A}(A,B)$�
 
 $$(g_1+g_2)\circ f=g_1\circ f+g_2\circ f,\qquad h\circ(g_1+g_2)=h\circ g_1+h\circ g_2$$
 
-이 모두 성립하는 것이다. Zero object $0$을 가지고, 임의의 두 object에 대해 이들의 곱이 존재하는 $\Ab$-category를 *additive category<sub>덧셈 카테고리</sub>*라 부른다.
+이 모두 성립하는 것이다. Zero object $0$을 가지고, 임의의 두 object에 대해 이들의 곱이 존재하는 $\Ab$-category를 *additive category<sub>덧셈 범주</sub>*라 부른다.
 :::
 
 두 additive category $\mathcal{A},\mathcal{B}$ 사이의 functor $F:\mathcal{A}\rightarrow\mathcal{B}$가 *additive functor<sub>덧셈함자</sub>*라는 것은 $F$가 abelian group $\Hom_\mathcal{A}(A,B)$에서 $\Hom_\mathcal{B}(F(A),F(B))$ 사이의 group homomorphism을 유도하는 것이다.
@@ -49,7 +49,7 @@ Additive category $\mathcal{A}$의 임의의 morphism $f:A \rightarrow B$의 ker
 이제 abelian category를 정의할 수 있다.
 
 ::: 정의 3
-Additive category $\mathcal{A}$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
+Additive category $\mathcal{A}$가 *abelian category<sub>아벨 범주</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
 
 1. 임의의 morphism이 kernel과 cokernel을 갖는다.
 2. 임의의 monomorphism $f$는 $\coker f$의 kernel과 같다.

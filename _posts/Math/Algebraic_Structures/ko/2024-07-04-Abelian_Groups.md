@@ -1,7 +1,7 @@
 ---
 title: "가환군"
-description: "가환군의 직합과 그 보편 성질을 살펴보고, 부분군의 교환자 부분군을 통해 일반 군을 가환군으로 만드는 아벨리아나이제이션을 다룬다."
-excerpt: "Free abelian group, tensor product"
+description: "가환군에서 직합의 정의와 보편 성질을 다루고, 교환자부분군으로 일반 군을 가환군으로 만드는 아벨화를 정의한다. 이어 자유가환군과 텐서곱, 등급가환군까지 살펴본다."
+excerpt: "직합의 정의, 아벨화, 자유가환군, 텐서곱"
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/abelian_groups
 sidebar: 

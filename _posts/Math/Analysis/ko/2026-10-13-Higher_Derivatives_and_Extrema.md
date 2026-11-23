@@ -1,7 +1,7 @@
 ---
 title: "고계 편도함수와 극값"
-description: "고계 편도함수를 정의하고, 편미분의 순서가 바뀌어도 값이 같다는 Schwarz 정리를 증명하며 순서가 바뀌는 반례를 제시한다. 이를 이용해 2차 다변수 테일러 정리를 얻고, Hessian matrix의 부호로 임계점이 극대·극소·안장점 중 어느 것인지 판정하는 방법과 판정이 되지 않는 경우를 다룬다."
-excerpt: "편미분의 순서교환, 2차 테일러 정리, Hessian 판정"
+description: "고계 편도함수를 정의하고 편미분의 순서교환에 관한 슈바르츠 정리를 증명한다. 이를 이용해 2차 다변수 테일러 정리를 얻고, 헤세 행렬의 부호로 임계점이 극대·극소·안장점인지 판정한다."
+excerpt: "편미분의 순서교환, 2차 테일러 정리, 헤시안 판정"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/higher_derivatives_and_extrema

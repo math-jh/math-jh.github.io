@@ -1,7 +1,7 @@
 ---
 title: "Gromov-Witten 불변량"
-description: "Gromov-Witten 불변량을 evaluation map과 cotangent line bundle의 첫 번째 Chern class로 정의하고, descendant 버전의 정의와 genus-0에서의 string, divisor, dilaton, splitting 공리들, 그리고 quantum cohomology 구성을 다룬다."
-excerpt: "Stable map moduli로부터의 GW invariant 정의와 quantum cohomology"
+description: "그로모프-위튼 불변량을 값매김사상과 여접선 다발의 제1 Chern 류로 정의하고 descendant 버전을 살핀다. 종수 0 공리와 WDVV 방정식, 양자 코호몰로지 구성을 다룬다."
+excerpt: "안정사상 모듈라이 공간으로부터의 그로모프-위튼 불변량 정의와 양자 코호몰로지"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/gromov_witten

@@ -1,7 +1,7 @@
 ---
 title: "코호몰로지"
-description: "호몰로지의 dual 개념인 코호몰로지를 정의하고, 자연스러운 곱셈 구조를 갖는 코호몰로지 환을 통해 같은 호몰로지를 가진 공간도 위상적으로 다를 수 있음을 보인다."
-excerpt: "코호몰로지의 정의와 universal coefficient theorem"
+description: "호몰로지의 쌍대 개념인 코호몰로지를 정의하고, 곱셈 구조로 호몰로지가 같은 공간도 위상적으로 구별됨을 보인다. 보편계수정리, 드람 코호몰로지, 에일렌베르크-질버 정리와 퀴네트 공식을 다룬다."
+excerpt: "코호몰로지의 정의와 보편계수정리, 드람 코호몰로지"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/cohomology
@@ -349,7 +349,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 이 split exact sequence이므로, section $B_{\bullet-1}(C)\rightarrow C_\bullet$에 의해 ($\ast$)의 splitting이 유도된다.
 :::
 
-## 아일렌베르크-질버 정리와 퀴네트 공식
+## 에일렌베르크-질버 정리와 퀴네트 공식
 
 [보조정리 8](#lem8){: data-lid="k7evk" }의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 chain complex $C_\bullet(X\times Y)$와, 두 chain complex의 tensor product $(C(X)\otimes C(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이들 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 

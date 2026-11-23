@@ -1,7 +1,7 @@
 ---
 title: "Theorema Egregium"
-description: "곡면의 Gauss curvature을 shape operator의 행렬식 곧 두 주곡률의 곱으로 정의하고, 이것이 제1·제2 기본형식의 행렬식 비와 같음을 보인다. Gauss 방정식을 평탄한 주변 공간에 적용해 Gauss curvature이 제1기본형식만으로 결정되는 내재불변량임을 증명하는 Gauss의 Theorema Egregium을 다루고, Brioschi 공식, 구면을 평면으로 등거리 전개할 수 없다는 따름정리와 지도제작 왜곡을 논한다."
-excerpt: "Gauss curvature의 내재성, Gauss 방정식, Brioschi 공식, 등거리 불변량"
+description: "곡면의 가우스 곡률을 정의하고, 제1기본형식만으로 결정되는 내재불변량임을 증명하는 가우스의 놀라운 정리를 다룬다. 브리오스키 공식과 구면을 평면으로 등거리 전개할 수 없다는 따름정리도 논한다."
+excerpt: "가우스 곡률의 내재성, 가우스의 놀라운 정리, 가우스 방정식, 브리오스키 공식"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/theorema_egregium

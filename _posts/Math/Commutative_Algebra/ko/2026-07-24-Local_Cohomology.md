@@ -1,7 +1,7 @@
 ---
 title: "국소 코호몰로지"
-description: "Torsion functor의 유도함자로 local cohomology를 정의하고 Čech complex로 계산하여, depth가 비소멸이 시작되는 차수이고 차원 위에서는 소멸하며 Cohen-Macaulay 가군에서는 한 차수에 집중된다는 것을 보인다."
-excerpt: "Torsion functor의 유도함자와 Čech complex, depth와 차원에 의한 소멸"
+description: "Torsion functor의 유도함자로 local cohomology를 정의하고 Čech complex로 계산한다. depth와 차원에 의한 소멸정리도 보인다."
+excerpt: "Torsion functor와 Čech complex, depth와 소멸정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/local_cohomology
@@ -267,7 +267,7 @@ Noetherian local ring $(A,\mathfrak{m})$과 $0$이 아닌 finitely generated $A$
 ::: 증명
 $d=\dim M$에 대한 귀납법으로 증명한다.
 
-$d=0$인 경우, $\ann(M)$을 포함하는 임의의 prime ideal은 $\dim A/\ann(M)=0$으로부터 maximal일 수밖에 없으므로 [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="o7m1t" }에 의하여 $M$은 유한한 길이를 갖고, 같은 따름정리의 둘째 조건에 의하여 maximal ideal들의 어떤 곱이 $M$을 소멸시킨다. Local ring에서 maximal ideal은 $\mathfrak{m}$ 하나뿐이므로 $\mathfrak{m}^kM=0$인 $k$가 존재하고, 곧 $M$은 $\mathfrak{m}$-torsion module이다. 그럼 [보조정리 6](#lem6){: data-lid="vo1ok" }에 의하여 $i\geq 1>0=d$에서 $H_\mathfrak{m}^i(M)=0$이다.
+$d=0$인 경우, $\ann(M)$을 포함하는 임의의 prime ideal은 $\dim A/\ann(M)=0$으로부터 maximal일 수밖에 없으므로 [§조르당-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="o7m1t" }에 의하여 $M$은 유한한 길이를 갖고, 같은 따름정리의 둘째 조건에 의하여 maximal ideal들의 어떤 곱이 $M$을 소멸시킨다. Local ring에서 maximal ideal은 $\mathfrak{m}$ 하나뿐이므로 $\mathfrak{m}^kM=0$인 $k$가 존재하고, 곧 $M$은 $\mathfrak{m}$-torsion module이다. 그럼 [보조정리 6](#lem6){: data-lid="vo1ok" }에 의하여 $i\geq 1>0=d$에서 $H_\mathfrak{m}^i(M)=0$이다.
 
 이제 $d\geq 1$이라 하고, 차원이 $d$ 미만인 $0$이 아닌 finitely generated module들에 대하여 주장이 성립한다고 가정하자.
 

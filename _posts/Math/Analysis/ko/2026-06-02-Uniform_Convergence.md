@@ -1,7 +1,7 @@
 ---
 title: "균등수렴"
-description: "함수열의 균등수렴을 상한노름으로 정의하고 균등 Cauchy 판정과 Weierstrass M-판정을 증명한다. 균등극한이 연속성을 보존하고 적분·미분과 극한이 교환되는 조건을 밝히며, Dini 정리와 각 가정이 필요한 반례를 다룬다."
-excerpt: "균등수렴, M-판정, 연속성·적분·미분과 극한의 교환, Dini 정리"
+description: "함수열의 균등수렴을 상한노름으로 정의하고 균등 코시 판정과 바이어슈트라스 M-판정을 증명한다. 균등극한의 연속성 보존, 적분·미분과 극한의 교환, 디니 정리와 반례를 다룬다."
+excerpt: "함수열의 균등수렴, M-판정, 연속성·적분·미분과 극한의 교환, 디니 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/uniform_convergence

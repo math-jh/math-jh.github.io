@@ -1,7 +1,7 @@
 ---
 title: "토러스 인자와 선다발"
-description: "대수적 토러스 위에서는 모든 바일 인자가 주인자이므로 비자명한 인자 정보는 경계에 몰려 있다. 팬의 각 광선은 토러스 불변 소인자를 정의하며, 이를 통해 토릭 다양체 위의 인자 이론을 전개한다."
-excerpt: "Fan의 ray로부터 얻어지는 torus-invariant divisor와 line bundle"
+description: "팬의 각 광선으로 토릭 다양체의 토러스 불변 베유 인자를 정의하고 인자 이론을 전개한다. 이어 class group과 Cartier divisor, 선다발과 Picard group을 다룬다."
+excerpt: "Fan의 ray로 정의되는 torus-invariant divisor와 선다발"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/toric_divisors

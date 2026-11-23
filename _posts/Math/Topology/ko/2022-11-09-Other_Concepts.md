@@ -1,7 +1,7 @@
 ---
 title: "집합의 내부, 폐포, 경계"
-description: "위상공간에서 닫힌집합, 내부, 폐포, 경계의 정의를 다루며, 이들이 닫힘 연산을 통해 어떻게 위상을 결정하는지 설명한다."
-excerpt: "위상수학의 기본 개념들"
+description: "위상공간에서 닫힌집합, 집합의 내부, 폐포, 경계, 조밀집합의 정의를 다룬다. 닫힌집합으로 위상을 결정하는 성질과 국소적으로 유한한 모임도 함께 설명한다."
+excerpt: "닫힌집합의 정의와 집합의 내부, 폐포, 경계, 조밀집합"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/other_concepts

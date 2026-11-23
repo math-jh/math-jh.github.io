@@ -1,7 +1,7 @@
 ---
 title: "레비-치비타 접속"
-description: "리만 계량과 호환되는 metric connection을 정의하고, Levi-Civita 접속의 존재와 유일성을 증명한 뒤 병렬 이송까지 다룬다."
-excerpt: "리만 다양체 위의 metric-compatible torsion-free connection"
+description: "리만 계량과 호환되는 계량 접속을 정의하고, 리만 기하학의 기본 정리의 증명으로 레비-치비타 접속의 존재와 유일성을 보인 뒤 크리스토펠 기호와 평행 운반까지 다룬다."
+excerpt: "리만 다양체 위의 비틀림 없는 계량 접속과 리만 기하학의 기본 정리"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/Levi-Civita_connection
@@ -24,7 +24,7 @@ published: false
 
 $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\rangle$$
 
-이 성립하는 것이다. 이러한 $\nabla$를 *metric connection<sub>리만 접속</sub>*이라 부른다.
+이 성립하는 것이다. 이러한 $\nabla$를 *metric connection<sub>계량 접속</sub>*이라 부른다.
 :::
 
 위 호환성 조건은 $g$를 $(0, 2)$-tensor field로 보고 [§접속, §§Tensor field 위에서의 공변미분](/ko/math/riemannian_geometry/connection#tensor-field-위에서의-공변미분){: data-lid="anwec" }을 따라 그 covariant derivative $\nabla g$를 계산했을 때 얻는 깔끔한 형태로 다시 표현된다.

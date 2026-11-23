@@ -1,7 +1,7 @@
 ---
 title: "미분과 여접층"
-description: "A-대수의 Kähler 미분 가군과 보편 도분을 상기하고, 추이 완전열과 conormal 완전열을 도입한다. 이어서 scheme 사상의 여접층을 대각선의 conormal로 정의하고 affine 위에서 연관층의 gluing과 일치함을 보이며, tangent sheaf와 Zariski tangent space, affine space 및 사영공간의 Euler 완전열을 다룬다. 마지막으로 여접층의 top exterior power로 canonical sheaf를 정의하고 사영공간에서 계산한 뒤 Serre 쌍대성을 진술한다."
-excerpt: "Kähler differentials, the cotangent sheaf Ω_{X/S}, the tangent sheaf, the Euler sequence on P^n, and the canonical sheaf"
+description: "Kähler 미분 가군으로 scheme 사상의 여접층과 tangent sheaf를 정의한다. 사영공간의 Euler 완전열과 canonical sheaf를 계산하고 Serre 쌍대성을 진술한다."
+excerpt: "여접층의 정의와 tangent sheaf, Euler 완전열, Serre 쌍대성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/sheaf_of_differentials
@@ -15,7 +15,7 @@ weight: 19
 
 이제 우리는 미분의 개념을 정의한다. Algebraic variety나 scheme 위에서는 해석학적인 극한이 존재하지 않으므로, 이를 정의하기 위해서는 순수하게 대수적인 방식을 택해야 하며 그 출발점은 가환대수학에서 구성한 Kähler differential module이다. 이 글에서는 이를 scheme morphism의 cotangent sheaf로 붙이고, tangent sheaf와 Zariski tangent space, affine space와 projective space에서의 계산을 거쳐 canonical sheaf의 정의와 Serre duality의 진술까지 정리한다.
 
-## 캘러 미분가군과 여접층
+## 켈러 미분가군과 여접층
 
 먼저 affine 수준의 대수적인 도구들을 기억해보자. Ring $A$와 $A$-algebra $B$에 대하여, $B$의 $A$에 대한 *Kähler differential module* $\Omega_{B/A}$와 *universal $A$-derivation* $d:B \rightarrow \Omega_{B/A}$가 정의된다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3){: data-lid="p27j9" }) 이는 $A$-derivation들의 functor $\Der_A(B, -)$를 표현하는 $B$-module로서, 임의의 $B$-module $M$에 대하여 natural isomorphism
 

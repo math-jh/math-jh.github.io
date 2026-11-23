@@ -1,7 +1,7 @@
 ---
 title: "멱급수와 해석성"
-description: "Cauchy 적분공식에서 핵을 기하급수로 전개하여, 복소정칙함수가 각 점 근방에서 자신의 Taylor series로 전개됨을 보이고 그 수렴반지름이 가장 가까운 특이점까지의 거리 이상임을 밝힌다. 역으로 수렴 멱급수가 복소정칙임을 더해 복소정칙성과 해석성이 동치임을 증명하고, 항별 미적분, 영점의 위수, Cauchy 곱을 다룬다."
-excerpt: "Taylor series 전개, 복소정칙=해석적, 수렴반지름과 특이점, 항별 미분과 적분, 영점의 위수, Cauchy 곱"
+description: "코시 적분공식으로 복소정칙함수의 테일러 급수 전개와 수렴반지름을 밝히고, 복소정칙성과 해석성이 동치임을 증명한다. 항별 미분과 적분, 영점의 위수 계산, 코시 곱도 다룬다."
+excerpt: "테일러 급수 전개, 복소정칙과 해석성, 수렴반지름, 영점의 위수 계산, 코시 곱"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/power_series_and_analyticity

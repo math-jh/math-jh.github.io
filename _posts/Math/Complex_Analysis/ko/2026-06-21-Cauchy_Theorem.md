@@ -1,7 +1,7 @@
 ---
 title: "Cauchy 정리"
-description: "f가 복소정칙이면 임의의 삼각형 경계에서 적분이 0이 된다는 Goursat 정리를 변의 이등분 반복으로 증명하고, 이로부터 볼록·star-shaped 영역에서 복소정칙함수가 원시함수를 가져 닫힌 경로 적분이 소멸함을 보인다. Homotopy 불변성으로 확장하여 단순연결 영역에서 복소정칙함수의 닫힌 경로 적분이 0임을 확립하고 회전수를 정의한다."
-excerpt: "Goursat 정리, 삼각형 이등분, star-shaped 영역, 원시함수, homotopy 불변, 단순연결, 회전수"
+description: "구르사 정리를 증명하고 볼록·별모양 영역에서 복소정칙함수의 원시함수와 코시 정리를 보인다. 호모토피 불변성으로 단순연결 영역의 닫힌 경로 적분이 0임을 확립하고 회전수를 정의한다."
+excerpt: "구르사 정리, 별모양 영역의 원시함수, 호모토피 불변성, 단순연결, 회전수"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/cauchy_theorem

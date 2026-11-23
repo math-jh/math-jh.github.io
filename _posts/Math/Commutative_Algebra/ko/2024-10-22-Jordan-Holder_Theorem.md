@@ -1,7 +1,7 @@
 ---
-title: "조르단-횔더 정리"
-description: "유한 composition series를 갖는 모듈은 Artinian이면서 Noetherian임을 보이는 조르단-횔더 정리를 모듈 이론의 관점에서 다룬다."
-excerpt: "Composition series의 유일성과 length의 well-definedness"
+title: "조르당-횔더 정리"
+description: "유한 composition series를 갖는 모듈은 Artinian이면서 Noetherian임을 보이는 조르당-횔더 정리를 모듈 이론의 관점에서 다룬다."
+excerpt: "Composition series와 길이의 정의, 아틴환과 뇌터환의 성질"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/Jordan-Holder_theorem

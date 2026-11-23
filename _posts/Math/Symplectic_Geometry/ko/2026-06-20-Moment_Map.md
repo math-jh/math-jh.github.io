@@ -1,7 +1,7 @@
 ---
 title: "운동량 사상"
-description: "Symplectic manifold 위의 Hamiltonian 군작용과 운동량 사상을 정의하고, 그 기본 성질과 예시를 다룬다. 끝으로 Atiyah-Guillemin-Sternberg convexity theorem을 서술하여 toric 기하로의 다리를 놓는다."
-excerpt: "Hamiltonian 군작용과 moment map, 그리고 볼록성 정리"
+description: "사교다양체 위의 기본 벡터장과 해밀턴 작용, 운동량 사상을 정의하고, 그 기본 성질과 예시를 다룬다. 끝으로 아티야-기유맹-스턴버그 볼록성 정리를 서술하여 토릭 기하로의 다리를 놓는다."
+excerpt: "해밀턴 작용과 운동량 사상, 그리고 아티야-기유맹-스턴버그 볼록성 정리"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/moment_map

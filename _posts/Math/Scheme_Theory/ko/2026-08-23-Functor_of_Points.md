@@ -1,7 +1,7 @@
 ---
 title: "점함자"
 description: "스킴을 그 점함자로 바라보는 관점을 Yoneda 보조정리와 representable functor의 언어로 정리하고, 아핀공간·사영공간·Grassmannian·올곱 등 주요 함자들을 살펴본다."
-excerpt: "Functor of points, Yoneda embedding, representability, fiber products"
+excerpt: "Yoneda 보조정리와 representability, 스킴의 올곱"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/functor_of_points

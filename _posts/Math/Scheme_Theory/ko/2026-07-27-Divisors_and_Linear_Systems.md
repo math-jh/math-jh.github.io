@@ -1,7 +1,7 @@
 ---
 title: "인자와 선형계"
-description: "국소적으로 하나의 방정식으로 잘리는 closed subscheme으로부터 Cartier divisor를 정의하고, normal integral scheme 위에서 codimension 1 점의 valuation으로 Weil divisor와 divisor class group을 정의하여 두 인자 이론을 비교한다. 이어 Cartier divisor가 정의하는 invertible sheaf를 통해 Picard group과의 동형을 얻고, 선형계와 ample invertible sheaf를 다룬다."
-excerpt: "Cartier and Weil divisors, the sheaf O_X(D), linear systems, and ampleness"
+description: "scheme 위의 Cartier divisor와 Weil divisor를 정의하고 비교한다. 이어 Picard group과의 동형, 선형계와 ample invertible sheaf를 다룬다."
+excerpt: "scheme 위의 Cartier divisor와 Weil divisor의 정의"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/divisors_and_linear_systems

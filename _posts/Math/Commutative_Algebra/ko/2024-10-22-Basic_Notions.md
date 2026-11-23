@@ -1,7 +1,7 @@
 ---
 title: "기본 개념들"
-description: "가환환과 그 위의 모듈을 다루는 기본 이론을 소개한다. 소멸자와 아이디얼 몫의 정의, 관련 완전열의 구조를 살펴보고, 모듈의 유한성 조건을 함께 다룬다."
-excerpt: "가환대수에서 사용하는 ring, algebra의 기본 약속과 정의"
+description: "가환환과 그 위의 모듈을 다루며 소멸자와 아이디얼 몫을 정의한다. 이어서 관련 완전열의 구조와 모듈의 유한성 조건, 소아이디얼, Hilbert 기저 정리를 다룬다."
+excerpt: "가환대수의 기본 약속과 소멸자, 아이디얼 몫, Hilbert 기저 정리"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/basic_notions
@@ -144,7 +144,7 @@ $$M=\langle x_1,\ldots, x_n\mid \text{relations on $x_i$}\rangle$$
 으로 적었을 때, $x_i$들에 대한 relation은 무한히 많을 수 있다. 이들 relation은 surjection $A^{\oplus n} \rightarrow M$의 kernel에 의해 결정되므로, 다음을 정의한다.
 
 ::: 정의 7
-$A$-module $M$이 *finitely presented<sub>유한표시가군</sub>*라는 것은 적당한 $m,n$이 존재하여 다음의 exact sequence
+$A$-module $M$이 *finitely presented<sub>유한표시</sub>*라는 것은 적당한 $m,n$이 존재하여 다음의 exact sequence
 
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 

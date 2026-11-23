@@ -1,7 +1,7 @@
 ---
 title: "쌍선형형식"
-description: "유한차원 벡터공간의 쌍대공간과 자연스러운 동형사상을 복습하고, 쌍선형형식의 정의·대칭성·교대성·비퇴화 조건을 정리한다."
-excerpt: "쌍선형형식과 쌍대공간"
+description: "유한차원 벡터공간의 쌍대공간을 복습하고, 쌍선형형식을 정의하며 대칭성과 교대성을 살핀다. 이어서 비퇴화 쌍선형형식, 네 개의 기본공간들, 직교기저, 그람 행렬을 정리한다."
+excerpt: "쌍대공간과 비퇴화 쌍선형형식, 네 개의 기본공간들, 직교기저, 그람 행렬"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/bilinear_form

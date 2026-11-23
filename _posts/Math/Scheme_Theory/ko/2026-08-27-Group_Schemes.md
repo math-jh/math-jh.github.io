@@ -1,7 +1,7 @@
 ---
 title: "군 스킴"
-description: "$\\Sch_{/S}$의 group object로 group scheme을 정의하고 functor of points가 group으로 값을 갖는다는 점별 서술과의 동치를 확인한 뒤, affine group scheme과 commutative Hopf algebra의 반대동치, representation과 comodule의 대응, torsor의 자명성 판정과 fppf-국소 자명성을 다룬다."
-excerpt: "Group schemes, Hopf algebras, comodules, and torsors"
+description: "group object로 군 스킴을 정의하고 functor of points와의 동치를 보인다. affine인 경우 호프 대수와의 반대동치, comodule, torsor도 다룬다."
+excerpt: "군 스킴의 정의와 호프 대수, comodule, torsor"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/group_schemes

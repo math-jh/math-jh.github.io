@@ -1,7 +1,7 @@
 ---
 title: "Shifted symplectic 구조"
-description: "Derived stack 위의 여접 복합체로부터 p-형식과 닫힌 형식을 정의하고, 접복합체와 여접복합체의 동형을 주는 n-shifted symplectic 구조를 도입하여 derived critical locus의 (-1)-shifted 구조와 Lagrangian 교차를 다룬다."
-excerpt: "p-forms on derived stacks, n-shifted symplectic structures, derived critical loci, and Lagrangians"
+description: "Derived stack 위의 p-형식과 n-shifted symplectic 구조를 정의한다. Derived critical locus와 Darboux 정리, Lagrangian 교차를 다룬다."
+excerpt: "p-형식, 드람 복합체, Darboux 정리와 Lagrangian 교차"
 
 categories: [Math / Derived Algebraic Geometry]
 permalink: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures

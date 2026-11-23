@@ -1,7 +1,7 @@
 ---
 title: "비교 정리"
-description: "곡률과 위상·거리 사이를 잇는 두 고전적 비교 정리를 다룬다. 측지선의 변분에서 자연히 등장하는 Jacobi field와 conjugate point, 그리고 에너지의 제2변분이 정하는 index form을 도입한 뒤, Ricci curvature가 양으로 유계인 완비 manifold가 콤팩트이고 유한 fundamental group을 가진다는 Bonnet–Myers 정리와, sectional curvature가 비양인 단순연결 완비 manifold가 exponential map을 통해 유클리드 공간과 미분동형이라는 Cartan–Hadamard 정리를 증명한다."
-excerpt: "Jacobi field, conjugate point, index form, Bonnet–Myers, Cartan–Hadamard"
+description: "곡률과 위상을 잇는 두 비교 정리인 보네-마이어스, 카르탕-아다마르 정리를 증명한다. 단면곡률과 리치 곡률, 야코비 장, 켤레점, 지표형식을 도입한다."
+excerpt: "야코비 장, 켤레점, 지표형식, 보네-마이어스 정리, 카르탕-아다마르 정리"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/comparison_theorems

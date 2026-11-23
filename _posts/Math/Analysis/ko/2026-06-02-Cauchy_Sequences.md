@@ -1,7 +1,7 @@
 ---
 title: "Cauchy 수열과 완비성"
-description: "극한값을 모르는 채로 수렴을 판정하게 해 주는 Cauchy sequence를 정의하고, 실수에서 수렴과 Cauchy가 동치임을 Bolzano–Weierstrass 정리로 증명한다. 유리수에서의 반례, 인접한 항의 차가 0으로 가도 Cauchy가 아닌 예, 인접 차가 등비로 줄어드는 수열의 수렴을 함께 다룬다."
-excerpt: "Cauchy sequence의 정의, 실수에서의 Cauchy 판정법, 유리수 반례와 수축수열"
+description: "극한값을 모르는 채로 수렴을 판정하게 해 주는 코시 수열을 정의하고, 실수에서 수렴과 동치임을 증명한다. 유리수에서 수렴하지 않는 반례와 수축수열도 함께 다룬다."
+excerpt: "코시 수열의 정의, 실수에서의 코시 판정법, 유리수 반례와 수축수열"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/cauchy_sequences

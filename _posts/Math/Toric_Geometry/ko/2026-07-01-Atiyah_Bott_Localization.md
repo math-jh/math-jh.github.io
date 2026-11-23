@@ -1,7 +1,7 @@
 ---
 title: "Atiyah–Bott localization 정리"
-description: "Torus가 작용하는 콤팩트 다양체의 동변 코호몰로지가 고정점 자리의 것으로 국소화됨을 보이고, 동변 적분을 고정점에서의 기여의 합으로 주는 Atiyah–Bott–Berline–Vergne 공식을 다룬다."
-excerpt: "The localization theorem and the ABBV integration formula via torus fixed points"
+description: "Torus가 작용하는 콤팩트 다양체의 동변 코호몰로지가 고정점 자리로 국소화됨을 보이고, 동변 적분을 고정점 기여의 합으로 주는 Atiyah–Bott–Berline–Vergne 공식을 다룬다."
+excerpt: "Torus 고정점을 통한 국소화와 ABBV integration formula"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/atiyah_bott_localization

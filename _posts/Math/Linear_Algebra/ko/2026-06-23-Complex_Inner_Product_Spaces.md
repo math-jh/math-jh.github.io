@@ -1,7 +1,7 @@
 ---
 title: "복소내적공간"
-description: "복소벡터공간 위에 conjugate-symmetric한 Hermitian 내적을 정의하고, 코시-슈바르츠 부등식과 Gram-Schmidt 과정이 그대로 성립함을 본다. 나아가 켤레전치로 주어지는 adjoint와 내적을 보존하는 unitary matrix를 다루고, 이들을 결합해 가역행렬의 QR 분해를 증명한다."
-excerpt: "복소수 위에서 정의된 Hermitian 내적"
+description: "복소벡터공간 위에 에르미트 내적과 노름을 정의하고, 코시-슈바르츠 부등식이 성립함을 본다. 나아가 켤레전치로 주어지는 수반작용소와 유니터리 행렬을 다루고, 가역행렬의 QR 분해를 증명한다."
+excerpt: "복소수 위에서 정의된 에르미트 내적"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/complex_inner_product_spaces

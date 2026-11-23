@@ -1,7 +1,7 @@
 ---
 title: "대칭군"
-description: "집합 위의 대칭군 정의와 순환 표기법, 순환의 합성 계산, 서로소 순환의 개념을 살펴본다."
-excerpt: "Symmetric group의 cycle 분해와 sign, alternating group"
+description: "집합 위의 대칭군 정의와 순환 표기법, 순환의 합성 계산, 서로소 순환의 개념을 살펴본다. 이어서 순환 분해와 sign, 교대군, 케일리 정리를 다룬다."
+excerpt: "대칭군의 사이클 분해와 sign, 교대군과 케일리 정리"
 
 categories: [Math / Group Theory]
 permalink: /ko/math/group_theory/symmetric_groups

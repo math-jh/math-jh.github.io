@@ -1,7 +1,7 @@
 ---
 title: "거리공간과 열린집합·닫힌집합"
-description: "거리의 공리와 ℝⁿ, 이산거리, C[a,b]의 상한노름 같은 표준 예시를 정리하고, 열린공에서 출발하여 수렴, 열린집합과 닫힌집합, closure, 부분공간, dense subset을 정의한다. 닫힌집합의 수열 판정, 무한 교집합·합집합의 반례, 동치인 거리를 증명과 함께 다루고 Cantor 집합이 닫혀 있고 내부가 비어 있으며 비가산임을 보인다."
-excerpt: "거리공리와 표준 예시, 열린집합·닫힌집합·closure와 수열 판정, 부분공간, dense subset, Cantor 집합"
+description: "거리공간과 노름공간, 열린집합과 닫힌집합, 폐포, 조밀 부분집합을 정의하고 이산거리 예시를 정리한다. 닫힌집합의 수열 판정과 동치인 거리를 다루고 칸토어 집합이 닫혀 있고 비가산임을 증명한다."
+excerpt: "거리공간의 정의와 표준 예시, 폐포, 수열 판정, 조밀 부분집합, 칸토어 집합"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/metric_spaces

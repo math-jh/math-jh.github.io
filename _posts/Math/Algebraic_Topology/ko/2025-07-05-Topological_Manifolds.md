@@ -1,7 +1,7 @@
 ---
 title: "위상다양체"
-description: "위상다양체의 정의와 성질을 살펴보고, second countable, Hausdorff, locally Euclidean 조건을 만족하는 공간의 예시들을 다룬다."
-excerpt: "Locally Euclidean 공간으로서의 topological manifold 정의와 성질"
+description: "제2 가산, 하우스도르프, 국소 유클리드 조건을 만족하는 공간으로 위상다양체를 정의한다. 이어서 열린 부분다양체와 곱다양체 등 위상다양체의 예시와 성질을 다룬다."
+excerpt: "국소 유클리드 공간으로서의 위상다양체의 정의와 성질"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/topological_manifolds

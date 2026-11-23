@@ -1,7 +1,7 @@
 ---
 title: "컴팩트성"
-description: "거리공간에서 open cover에 의한 compactness와 sequential compactness가 동치이며, 이는 complete이면서 totally bounded인 것과도 동치임을 증명한다. 이로부터 ℝⁿ의 Heine–Borel 정리와 Cantor 교집합 정리를 얻고, 닫혀 있고 bounded이지만 compact가 아닌 반례를 정리한다."
-excerpt: "거리공간에서의 compactness 동치 조건, Heine–Borel 정리, Cantor 교집합 정리"
+description: "거리공간에서 열린덮개에 의한 컴팩트성과 점렬컴팩트성이 완비이고 완전유계인 것과 동치임을 증명한다. 하이네-보렐 정리와 칸토어 교집합 정리를 얻고, 유계 닫힌 집합이 컴팩트가 아닌 반례를 정리한다."
+excerpt: "거리공간에서의 컴팩트성 동치 조건, 하이네-보렐 정리, 칸토어 교집합 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/compactness

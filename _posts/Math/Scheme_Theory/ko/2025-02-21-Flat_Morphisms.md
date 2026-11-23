@@ -1,7 +1,7 @@
 ---
 title: "평탄사상"
-description: "평탄 사상의 정의와 기하학적 의미, 판정법과 예시를 다룬다. 평탄성은 사상의 fiber가 기저 위에서 일정한 대수적·기하학적 성질을 유지하도록 보장하는 핵심적인 성질이다."
-excerpt: "Flat morphisms in algebraic geometry"
+description: "평탄 사상을 정의하고 국소 판정법과 기하학적 성질을 다룬다. Generic flatness, Chevalley의 정리, Openness of the flat locus를 살펴본다."
+excerpt: "평탄 사상의 정의와 Generic flatness, Chevalley의 정리"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/flat_morphisms
@@ -207,7 +207,7 @@ $$\phi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \phi^{-1}(\mathbb
 이것이 flat이 아닌 것은 $(0,1)\neq 0$이면서 $t\cdot (0,1)=0$이므로 $t$가 $B$에서 zerodivisor이기 때문이다. ([명제 5](#prop5){: data-lid="35ij5" }) $X$가 reduced이므로 [따름정리 6](#cor6){: data-lid="k7pfj" }으로도 같은 결론을 얻는데, 두 성분 가운데 isolated point가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 못하기 때문이다.
 :::
 
-마지막 예시는 갇히는 것이 embedded point인 경우로 ([§스킴의 대수구조, ⁋정의 9](/ko/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" }), 이번에는 차원도 점의 개수도 변하지 않지만, fiber의 length가 달라진다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
+마지막 예시는 갇히는 것이 embedded point인 경우로 ([§스킴의 대수구조, ⁋정의 9](/ko/math/scheme_theory/algebra_of_schemes#def9){: data-lid="j7yhh" }), 이번에는 차원도 점의 개수도 변하지 않지만, fiber의 length가 달라진다. ([\[가환대수학\] §조르당-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="801tl" })
 
 ::: 예시 10
 Scheme morphism

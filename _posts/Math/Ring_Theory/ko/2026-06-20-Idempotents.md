@@ -1,7 +1,7 @@
 ---
 title: "멱등원과 곱분해"
-description: "Idempotent과 orthogonal idempotent의 complete set을 정의하고, central idempotent이 환의 곱분해와 일대일대응함을 증명한 뒤, 이를 일반 환에서의 중국인의 나머지정리와 연결한다."
-excerpt: "Central idempotent과 환의 곱분해, 그리고 일반 환에서의 중국인의 나머지정리"
+description: "멱등원과 완전 직교 멱등원 집합을 정의하고, 중심 멱등원이 환의 곱분해와 일대일대응함을 증명한 뒤, 이를 일반 환에서의 중국인의 나머지정리와 연결한다."
+excerpt: "중심 멱등원과 환의 곱분해, 그리고 일반 환에서의 중국인의 나머지정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/idempotents

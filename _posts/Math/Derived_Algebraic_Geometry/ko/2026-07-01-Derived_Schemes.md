@@ -1,7 +1,7 @@
 ---
 title: "Derived scheme과 derived stack"
-description: "Animated commutative ring을 이어붙여 derived scheme을 정의하고 그 truncation이 고전적 스킴임을 본 뒤, animated 환 위의 étale 하강 함자로서의 derived stack, 여접 복합체 L_X, quasi-smooth 사상과 유도 올곱이 주는 virtual 구조를 다룬다."
-excerpt: "Derived schemes/stacks, the cotangent complex L_X, quasi-smooth maps, and derived fiber products"
+description: "Derived scheme과 derived stack을 정의한다. 여접 복합체, quasi-smooth 사상과 유도 올곱의 virtual 구조를 살피고 유도 교차를 계산한다."
+excerpt: "여접 복합체, quasi-smooth 사상과 유도 올곱의 virtual 구조"
 
 categories: [Math / Derived Algebraic Geometry]
 permalink: /ko/math/derived_algebraic_geometry/derived_schemes
@@ -16,7 +16,7 @@ published: false
 
 ---
 
-고전적 대수기하는 commutative ring을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1){: data-lid="glri2" }) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 유도 tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="3fm6m" })
+고전적 대수기하는 commutative ring을 국소적 재료로 삼아 affine scheme을 만들고, 이들을 이어붙여 scheme을 세운다. ([\[스킴\] §스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1){: data-lid="glri2" }) 이 이어붙이기가 낳는 가장 중요한 구성 가운데 하나가 올곱, 곧 두 부분다양체의 교차이다. 그러나 고전적 교차는 두 variety가 횡단적(transverse)일 때에만 올바른 답을 준다. 횡단적이지 않으면, 가령 서로 접하거나 예상보다 큰 차원에서 겹치면, scheme으로서의 교차 $\Spec(B\otimes_AC)$는 excess intersection을 놓치고 중복도나 초과 차원을 뭉갠다. 이 결함의 뿌리는 tensor product $\otimes$이 non-exact하다는 데 있으며, 우리는 이미 이를 derived tensor product $\otimes^{\mathbb{L}}$으로 교정하는 법을 보았다. ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="3fm6m" })
 
 이 글의 목표는 그 국소적 교정을 대역적 기하로 승격하는 것이다. 곧 우리는 animated commutative ring을 국소 재료로 삼아 *derived scheme*을 이어붙이고, 그 위에서 올곱이 자동으로 유도 올곱 $X\times_Z^hY$이 되도록 한다. 이렇게 하면 고전적으로 비횡단적이거나 초과 차원인 교차조차 올바른 virtual 차원과 virtual 중복도를 나른다. 이어서 우리는 animated ring 위의 functor로서 derived stack을 정의하고, 여접 복합체 $\LL_X$와 접복합체 $T_X$를 대역화하며, quasi-smooth morphism과 그것이 주는 virtual 구조를 확립한다. 이하에서 $k$는 field이고, 별다른 언급이 없으면 모든 것은 $k$ 위에서 생각한다. Animated commutative ring들의 $\infty$-범주를 $\operatorname{Ani}=\operatorname{Ani}(\mathrm{CRing}_k)$로 ([§Simplicial 가환환과 animation, ⁋정의 4](/ko/math/derived_algebraic_geometry/animated_rings#def4){: data-lid="r6kdv" }), $\infty$-groupoid들, 곧 space들의 $\infty$-범주를 $\mathcal{S}$로 적는다.
 
@@ -43,7 +43,7 @@ Animated ring $R$에 대하여, 위상공간 $\lvert\Spec R\rvert=\Spec \pi_0(R)
 특히 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf $\mathcal{O}_{\Spec \pi_0(R)}$과 같다.
 :::
 ::: 증명
-Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization, 곧 $f$의 lift를 주는 $k[\x]\rightarrow R$을 따라 취한 $R\otimes_{k[\x]}^{\mathbb{L}}k[\x,\x^{-1}]$로 잘 정의되는데, $k[\x,\x^{-1}]$이 $k[\x]$ 위에서 flat하므로 유도 tensor product가 higher Tor를 낳지 않아 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="zmjbz" }) $\pi_i(R[1/f])=\pi_i(R)[1/f]$이다. 따라서 $D(f)\mapsto R[1/f]$의 대응은 basic open들의 교차 $D(fg)=D(f)\cap D(g)$ 위에서 정합적이며, 고전적 structure sheaf가 basis 위의 자료로부터 접착되던 것과 같은 논증으로 ([\[스킴\] §스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9){: data-lid="q3609" }) $\lvert\Spec R\rvert$ 위의 sheaf $\mathcal{O}_{\Spec R}$을 준다. 각 $\pi_i(R)$은 $\pi_0(R)$-module이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6){: data-lid="m5b53" }) 그 sheafification $\pi_i\mathcal{O}_{\Spec R}$은 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf가 된다. $i=0$일 때 $\pi_0(R[1/f])=\pi_0(R)[1/f]$이므로 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf이다.
+Localization $R\mapsto R[1/f]$는 $\operatorname{Ani}$에서 유도 localization, 곧 $f$의 lift를 주는 $k[\x]\rightarrow R$을 따라 취한 $R\otimes_{k[\x]}^{\mathbb{L}}k[\x,\x^{-1}]$로 잘 정의되는데, $k[\x,\x^{-1}]$이 $k[\x]$ 위에서 flat하므로 derived tensor product가 higher Tor를 낳지 않아 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="zmjbz" }) $\pi_i(R[1/f])=\pi_i(R)[1/f]$이다. 따라서 $D(f)\mapsto R[1/f]$의 대응은 basic open들의 교차 $D(fg)=D(f)\cap D(g)$ 위에서 정합적이며, 고전적 structure sheaf가 basis 위의 자료로부터 접착되던 것과 같은 논증으로 ([\[스킴\] §스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9){: data-lid="q3609" }) $\lvert\Spec R\rvert$ 위의 sheaf $\mathcal{O}_{\Spec R}$을 준다. 각 $\pi_i(R)$은 $\pi_0(R)$-module이므로 ([§Simplicial 가환환과 animation, ⁋명제 6](/ko/math/derived_algebraic_geometry/animated_rings#prop6){: data-lid="m5b53" }) 그 sheafification $\pi_i\mathcal{O}_{\Spec R}$은 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf가 된다. $i=0$일 때 $\pi_0(R[1/f])=\pi_0(R)[1/f]$이므로 $\pi_0\mathcal{O}_{\Spec R}$은 고전적 structure sheaf이다.
 :::
 
 [명제 2](#prop2){: data-lid="ry4jr" }는 affine derived scheme을 국소적으로 ring이 얹힌 공간으로 실현한다. 밑공간과 $\pi_0$-sheaf는 고전적 scheme $\Spec \pi_0(R)$의 그것과 정확히 같고, 새로운 정보는 오직 higher homotopy sheaf $\pi_i\mathcal{O}_{\Spec R}$ ($i\geq1$)에 담긴다. 이 sheaf들이 $\Spec \pi_0(R)$ 위의 quasi-coherent sheaf로서 "고전적 그림자 위에 얹힌 유도 두께"를 이룬다. 이제 이 국소 모형을 이어붙인다.
@@ -146,7 +146,7 @@ $$f^\ast \LL_{Y/Z}\rightarrow \LL_{X/Z}\rightarrow \LL_{X/Y}\rightarrow f^\ast \
 2. (base change) derived scheme의 유도 올곱 $X'=X\times_Y^hY'$과 그 projection $g:X'\rightarrow X$에 대하여 $\LL_{X'/Y'}\simeq g^\ast \LL_{X/Y}$이다.
 :::
 ::: 증명
-두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12){: data-lid="lznt8" }과, 유도 tensor product에 대한 base change invariance이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 유도 tensor product와 교환하여 $\LL_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq \LL_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10){: data-lid="1bwzi" }의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
+두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12){: data-lid="lznt8" }과, derived tensor product에 대한 base change invariance이다. Affine 국소적으로 $X=\Spec B$, $Y=\Spec A$, $Y'=\Spec A'$이면 $X'=\Spec(B\otimes_A^{\mathbb{L}}A')$이고, 여접 복합체가 derived tensor product와 교환하여 $\LL_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq \LL_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10){: data-lid="1bwzi" }의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
 :::
 
 추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change invariance는 유도 올곱 위의 여접 복합체가 원래 morphism의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth morphism이 유도 올곱에 대하여 닫혀 있음을 보장한다.
@@ -194,7 +194,7 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 
 ## Derived 올곱과 virtual 구조
 
-고전적 scheme의 올곱은 두 morphism이 base 위에서 같아지는 점들을 모으는 limit이었고, affine에서는 tensor product $B\otimes_AC$으로 주어졌다. ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8){: data-lid="pvau9" }) Derived 올곱은 이 limit을 homotopy limit으로, tensor product를 유도 tensor product로 바꾼 것이다.
+고전적 scheme의 올곱은 두 morphism이 base 위에서 같아지는 점들을 모으는 limit이었고, affine에서는 tensor product $B\otimes_AC$으로 주어졌다. ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8){: data-lid="pvau9" }) Derived 올곱은 이 limit을 homotopy limit으로, tensor product를 derived tensor product로 바꾼 것이다.
 
 ::: 정의 14
 Derived scheme(또는 derived stack)의 morphism $X\xrightarrow{f}Z\xleftarrow{g}Y$에 대하여, 그 *유도 올곱<sub>derived fiber product</sub>* $X\times_Z^hY$은 $\mathrm{dSch}$(또는 $\mathrm{dSt}$)에서의 homotopy pullback, 곧 functor
@@ -208,7 +208,7 @@ $$X\times_Z^hY=\Spec\bigl(B\otimes_A^{\mathbb{L}}C\bigr)$$
 으로 실현된다.
 :::
 
-곧 유도 올곱은 국소적으로 유도 tensor product를 취하는 것이며, ([§Simplicial 가환환과 animation, ⁋정의 7](/ko/math/derived_algebraic_geometry/animated_rings#def7){: data-lid="q8i5q" }의 homotopy pushout을 반변으로 옮긴 것) 그 존재와 접착은 유도 tensor product가 localization·étale morphism과 교환한다는 사실로 보장된다. 고전적 올곱과의 관계, 그리고 그것이 나르는 virtual 구조는 다음 명제가 요약한다.
+곧 유도 올곱은 국소적으로 derived tensor product를 취하는 것이며, ([§Simplicial 가환환과 animation, ⁋정의 7](/ko/math/derived_algebraic_geometry/animated_rings#def7){: data-lid="q8i5q" }의 homotopy pushout을 반변으로 옮긴 것) 그 존재와 접착은 derived tensor product가 localization·étale morphism과 교환한다는 사실로 보장된다. 고전적 올곱과의 관계, 그리고 그것이 나르는 virtual 구조는 다음 명제가 요약한다.
 
 ::: 명제 15
 $X\xrightarrow{f}Z\xleftarrow{g}Y$을 derived scheme의 morphism이라 하고 $W=X\times_Z^hY$이라 하자.
@@ -232,7 +232,7 @@ $$i_p(X,Y)=\sum_{n\geq0}(-1)^n\operatorname{length}\pi_n(\mathcal{O}_{W,p})=\sum
 으로 주어진다.
 :::
 ::: 증명
-**(1)** $\pi_0$이 유도 tensor product를 고전적 tensor product로 truncate하므로 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="lmsjf" }) $\pi_0\mathcal{O}_W=B\otimes_AC$이고, $t_0$이 $\pi_0$-sheaf만 보므로 $t_0(W)$이 고전적 올곱이다. Higher homotopy $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$도 같은 명제이다.
+**(1)** $\pi_0$이 derived tensor product를 고전적 tensor product로 truncate하므로 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="lmsjf" }) $\pi_0\mathcal{O}_W=B\otimes_AC$이고, $t_0$이 $\pi_0$-sheaf만 보므로 $t_0(W)$이 고전적 올곱이다. Higher homotopy $\pi_n\mathcal{O}_W=\Tor_n^A(B,C)$도 같은 명제이다.
 
 **(2)** Quasi-smooth의 base change 안정성과 virtual relative dimension 보존은 [명제 13](#prop13){: data-lid="w8o8z" }의 셋째 항이다. $X,Y$이 smooth $Z$-scheme(closed embedding)이면 $f$의 상대 여접 복합체는 conormal orientation $N_{X/Z}^\vee[1]$과 접방향의 조합이 되어 $\operatorname{vdim}(f)=d_X-d_Z$이고, base change로 $\operatorname{vdim}(W/Y)=d_X-d_Z$, 따라서 $\operatorname{vdim}(W)=d_Y+(d_X-d_Z)$이다.
 
@@ -282,7 +282,7 @@ $\mathbb{A}^2=\Spec k[\x,\y]$ 안에서 두 곡선 $V=\{\y=0\}$과 $W=\{\y=\x^2\
 
 $$V\times_{\mathbb{A}^2}^hW=\Spec\bigl(k[\x,\y]/(\y)\otimes_{k[\x,\y]}^{\mathbb{L}}k[\x,\y]/(\y-\x^2)\bigr)$$
 
-을 계산한다. $V\cong \Spec k[\x]$ 위에서 $W$을 자르는 방정식 $\y-\x^2$은 $-\x^2$으로 내려오는데, 이는 $k[\x]$의 nonzerodivisor이므로 유도 tensor product가 discrete하여 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="thr10" })
+을 계산한다. $V\cong \Spec k[\x]$ 위에서 $W$을 자르는 방정식 $\y-\x^2$은 $-\x^2$으로 내려오는데, 이는 $k[\x]$의 nonzerodivisor이므로 derived tensor product가 discrete하여 ([§Simplicial 가환환과 animation, ⁋명제 8](/ko/math/derived_algebraic_geometry/animated_rings#prop8){: data-lid="thr10" })
 
 $$\pi_0=k[\x]/(\x^2)\quad(\text{length }2),\qquad \pi_n=0\quad(n\geq1)$$
 

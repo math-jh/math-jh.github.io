@@ -1,7 +1,7 @@
 ---
 title: "기저변환"
-description: "기저변환은 유한 차원 벡터 공간에서 주어진 기저를 다른 기저로 바꾸는 과정을 다루며, 정사각행렬의 역행렬 존재 조건과 기저의 동치 관계를 성립한다."
-excerpt: "정사각행렬과 가역행렬, 기저변환에 의한 행렬의 변환"
+description: "기저변환을 다루며, 먼저 정사각행렬을 정의하고 그 모임이 결합대수임을 증명한다. 이어 가군의 기저변환행렬과 동치인 행렬, 닮은 행렬의 개념을 함께 설명한다."
+excerpt: "정사각행렬과 기저변환행렬, 동치인 행렬과 닮은 행렬"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/change_of_basis

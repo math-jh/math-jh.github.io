@@ -1,7 +1,7 @@
 ---
 title: "사상의 차수와 Brouwer·Lefschetz 고정점 정리"
-description: "H_n(S^n)=Z를 이용해 구면 자기사상의 차수를 정의하고 그 성질을 확립한 뒤, no-retraction 보조정리로 Brouwer fixed point theorem과 hairy ball 정리를, 호몰로지 대각합으로 Lefschetz fixed point theorem을 증명한다."
-excerpt: "Mapping degree, the Brouwer and Lefschetz fixed-point theorems, and the hairy ball theorem"
+description: "구면의 호몰로지를 이용해 사상의 차수를 정의하고 그 성질을 확립한 뒤, 브라우어르 고정점 정리와 hairy ball 정리를, 호몰로지 대각합으로 렙셰츠 고정점 정리를 증명한다."
+excerpt: "사상의 차수의 정의와 브라우어르·렙셰츠 고정점 정리, hairy ball 정리"
 
 categories: [Math / Algebraic Topology]
 permalink: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
@@ -185,7 +185,7 @@ $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하�
 
 $$L(f)=\sum_{i\geq 0}(-1)^i\operatorname{tr}\bigl(f_\ast:H_i(X;\mathbb{Q})\rightarrow H_i(X;\mathbb{Q})\bigr)$$
 
-를 $f$의 *Lefschetz number<sub>레프셰츠 수</sub>*라 부른다.
+를 $f$의 *Lefschetz number<sub>렙셰츠 수</sub>*라 부른다.
 :::
 
 정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 각 trace는 언제나 정수이고 따라서 $L(f)$도 정수인데, 이는 $H_i(X;\mathbb{Q})$가 $H_i(X)$의 torsion을 없앤 free abelian group에 $\mathbb{Q}$를 텐서한 것이고 $f_\ast$가 그 free abelian group 위의 준동형에서 유래하여 정수 행렬로 표현되기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\id_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\id_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.

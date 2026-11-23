@@ -1,7 +1,7 @@
 ---
 title: "보편 포락 대수"
 description: "Lie algebra의 보편 포락 대수 U(g)를 텐서대수의 몫으로 정의하고, 그 보편 성질과 표준 여과, 그리고 Poincaré–Birkhoff–Witt 정리를 증명한다."
-excerpt: "Universal enveloping algebra와 PBW 정리"
+excerpt: "보편 포락 대수와 PBW 정리"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/universal_enveloping_algebra

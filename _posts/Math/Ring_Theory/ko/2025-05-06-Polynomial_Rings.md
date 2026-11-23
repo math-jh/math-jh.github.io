@@ -1,7 +1,7 @@
 ---
 title: "다항식환"
-description: "교환환 위의 다항식환을 정의하고, 다항식의 차수와 동차다항식을 살펴본다. 단항식을 통한 다항식의 표현, 차수의 성질, leading term과 monic polynomial을 다룬다."
-excerpt: "가환환 위 polynomial ring의 인수분해와 Gauss lemma"
+description: "가환환 위의 다항식환을 정의하고, 다항식의 차수와 동차다항식을 살펴본다. 단항식의 정의와 다항식의 표현, 차수의 성질, 최고차항과 일계수 다항식을 다룬다."
+excerpt: "가환환 위 다항식환의 인수분해와 가우스 보조정리"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/polynomial_rings

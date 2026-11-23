@@ -1,7 +1,7 @@
 ---
 title: "접공간"
 description: "곡면의 접벡터에서 출발하여 방향미분 연산자로 접벡터를 정의하고, 미분가능 함수들의 층을 통해 접공간의 대수적 구조를 살펴본다."
-excerpt: "접벡터와 접공간"
+excerpt: "방향미분으로 정의하는 다양체의 접벡터와 접공간"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/tangent_space

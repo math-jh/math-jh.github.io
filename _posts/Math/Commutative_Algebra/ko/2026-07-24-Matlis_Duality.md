@@ -1,6 +1,6 @@
 ---
 title: "단사가군과 Matlis duality"
-description: "Noetherian ring 위에서 injective module을 essential extension과 injective hull로 분석하여 indecomposable injective를 prime마다의 injective hull로 분류하고, local ring에서 injective dimension을 residue field와의 Ext로 읽어낸 뒤 Matlis duality를 확립한다."
+description: "Noetherian ring 위의 injective module을 injective hull로 분석하여 Matlis 구조정리를 증명하고 Matlis duality를 확립한다."
 excerpt: "Injective hull의 구조론과 Matlis duality"
 
 categories: [Math / Commutative Algebra]
@@ -144,9 +144,9 @@ $\Hom_A(\kappa,E)=\Hom_A(A/\mathfrak{m},E)$은 $\mathfrak{m}$에 의하여 소�
 2. 자연스러운 evaluation map $M\rightarrow D(D(M))$은 isomorphism이다.
 :::
 ::: 증명
-$\length M$에 대한 귀납법으로 증명한다. $\length M=1$이면 $M$은 simple module이고, $A$가 local ring이므로 그 annihilator인 maximal ideal은 $\mathfrak{m}$이어서 $M\cong\kappa$이다. ([§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rcywl" }) 그럼 [보조정리 8](#lem8){: data-lid="eos5d" }에 의하여 $\length D(\kappa)=\length\kappa=1$이다. 또, evaluation map $\kappa\rightarrow D(D(\kappa))$은 simple module 사이의 map인데, $0\neq x\in\kappa$에 대하여 inclusion $\kappa\hookrightarrow E$이 $D(\kappa)$의 원소로서 $x$에서 $0$이 아닌 값을 주므로 이 evaluation map은 $0$이 아니고, 따라서 injective이다. 양변이 길이 $1$이므로 이는 isomorphism이다.
+$\length M$에 대한 귀납법으로 증명한다. $\length M=1$이면 $M$은 simple module이고, $A$가 local ring이므로 그 annihilator인 maximal ideal은 $\mathfrak{m}$이어서 $M\cong\kappa$이다. ([§조르당-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1){: data-lid="rcywl" }) 그럼 [보조정리 8](#lem8){: data-lid="eos5d" }에 의하여 $\length D(\kappa)=\length\kappa=1$이다. 또, evaluation map $\kappa\rightarrow D(D(\kappa))$은 simple module 사이의 map인데, $0\neq x\in\kappa$에 대하여 inclusion $\kappa\hookrightarrow E$이 $D(\kappa)$의 원소로서 $x$에서 $0$이 아닌 값을 주므로 이 evaluation map은 $0$이 아니고, 따라서 injective이다. 양변이 길이 $1$이므로 이는 isomorphism이다.
 
-이제 $\length M=\ell\geq 2$이라 하고 주장이 길이 $\ell$ 미만의 module들에 대하여 성립한다고 가정하자. $M$의 simple submodule $S\cong\kappa$를 택하면 ([§조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="kaddl" }) short exact sequence $0\rightarrow S\rightarrow M\rightarrow M/S\rightarrow 0$을 얻고, $\length(M/S)=\ell-1$이다. $D$가 exact이므로
+이제 $\length M=\ell\geq 2$이라 하고 주장이 길이 $\ell$ 미만의 module들에 대하여 성립한다고 가정하자. $M$의 simple submodule $S\cong\kappa$를 택하면 ([§조르당-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="kaddl" }) short exact sequence $0\rightarrow S\rightarrow M\rightarrow M/S\rightarrow 0$을 얻고, $\length(M/S)=\ell-1$이다. $D$가 exact이므로
 $$0\rightarrow D(M/S)\rightarrow D(M)\rightarrow D(S)\rightarrow 0$$
 이 exact이고, 귀납적 가정과 [보조정리 8](#lem8){: data-lid="2jfzm" }에 의하여 $\length D(M/S)=\ell-1$, $\length D(S)=1$이므로 [§힐베르트-사무엘 함수, ⁋보조정리 3](/ko/math/commutative_algebra/hilbert-samuel_function#lem3){: data-lid="9q4i6" }의 길이의 가법성에 의하여 $\length D(M)=\ell$이다. 여기에 $D$를 다시 취하면 exact sequence
 $$0\rightarrow D(D(S))\rightarrow D(D(M))\rightarrow D(D(M/S))\rightarrow 0$$
@@ -161,7 +161,7 @@ $$E=\bigcup_{n\geq 1}(0:_E\mathfrak{m}^n)$$
 이 성립한다.
 :::
 ::: 증명
-$0\neq x\in E$을 택하고 cyclic submodule $Ax\subseteq E$을 생각한다. [보조정리 5](#lem5){: data-lid="7uao0" }에 의하여 $\Ass E=\Ass E(\kappa)=\{\mathfrak{m}\}$이고, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5){: data-lid="ppsrl" }에 의하여 $\Ass(Ax)\subseteq\Ass E=\{\mathfrak{m}\}$이며, $Ax\neq 0$이므로 $\Ass(Ax)=\{\mathfrak{m}\}$이다. 그럼 $\ann(Ax)$를 포함하는 prime 가운데 극소인 것들은 모두 $\Ass(Ax)$에 속하므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="gwoma" }) $\ann(Ax)$를 포함하는 prime은 $\mathfrak{m}$ 하나뿐이고, 따라서 [§조르단-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="ber6i" }에 의하여 $Ax$는 유한 길이를 갖는다. 유한 길이 module에서 감소열 $Ax\supseteq\mathfrak{m}Ax\supseteq\mathfrak{m}^2Ax\supseteq\cdots$은 매 단계에서 길이가 진성으로 줄거나 $0$에 도달하며 ([§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="j5emq" }), 적당한 $k$에서 $\mathfrak{m}^kAx=0$이 되고, 곧 $x\in(0:_E\mathfrak{m}^k)$이다.
+$0\neq x\in E$을 택하고 cyclic submodule $Ax\subseteq E$을 생각한다. [보조정리 5](#lem5){: data-lid="7uao0" }에 의하여 $\Ass E=\Ass E(\kappa)=\{\mathfrak{m}\}$이고, [§동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5){: data-lid="ppsrl" }에 의하여 $\Ass(Ax)\subseteq\Ass E=\{\mathfrak{m}\}$이며, $Ax\neq 0$이므로 $\Ass(Ax)=\{\mathfrak{m}\}$이다. 그럼 $\ann(Ax)$를 포함하는 prime 가운데 극소인 것들은 모두 $\Ass(Ax)$에 속하므로 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7){: data-lid="gwoma" }) $\ann(Ax)$를 포함하는 prime은 $\mathfrak{m}$ 하나뿐이고, 따라서 [§조르당-횔더 정리, ⁋따름정리 6](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor6){: data-lid="ber6i" }에 의하여 $Ax$는 유한 길이를 갖는다. 유한 길이 module에서 감소열 $Ax\supseteq\mathfrak{m}Ax\supseteq\mathfrak{m}^2Ax\supseteq\cdots$은 매 단계에서 길이가 진성으로 줄거나 $0$에 도달하며 ([§정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8){: data-lid="j5emq" }), 적당한 $k$에서 $\mathfrak{m}^kAx=0$이 되고, 곧 $x\in(0:_E\mathfrak{m}^k)$이다.
 :::
 
 각각의 $n$에 대하여 $(0:_E\mathfrak{m}^n)=\Hom_A(A/\mathfrak{m}^n,E)=D(A/\mathfrak{m}^n)$이며, $A/\mathfrak{m}^n$이 유한 길이 module이므로 [명제 9](#prop9){: data-lid="oyht4" }에 의하여 $(0:_E\mathfrak{m}^n)$ 또한 길이 $\length(A/\mathfrak{m}^n)$의 유한 길이 module이다. 이제 $E$의 endomorphism ring을 계산한다.

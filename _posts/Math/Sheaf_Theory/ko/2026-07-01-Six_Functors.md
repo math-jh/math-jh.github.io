@@ -1,7 +1,7 @@
 ---
 title: "고유 받음과 여섯 함자"
-description: "compact support를 따른 고유 받음 Rf_!와 그 오른쪽 수반 f^!를 도입하여 Rf_*·Lf^*·⊗^L·RHom과 함께 여섯 함자 형식을 완성하고, proper base change와 projection formula를 다룬다."
-excerpt: "Rf_! and f^!, the six-functor formalism, proper base change, and the projection formula"
+description: "compact support를 따른 고유 받음과 오른쪽 수반인 예외 역상을 정의하여 여섯 함자 형식을 완성한다. proper base change와 projection formula도 다룬다."
+excerpt: "예외 역상, proper base change와 projection formula"
 
 categories: [Math / Sheaf Theory]
 permalink: /ko/math/sheaf_theory/six_functors
@@ -26,9 +26,9 @@ published: false
 
 ## 고유 받음의 정의
 
-직접상 $f_\ast \mathcal{F}$의 열린집합 $V \subseteq Y$ 위의 단면은 $\mathcal{F}(f^{-1}(V))$의 단면, 즉 $f^{-1}(V)$ 전체에서 정의된 단면이다. 고유 받음은 이 가운데 support가 $f$에 대해 proper한 것만을 추려 내는 subfunctor로 정의되며, support의 proper성은 [\[위상수학\] §고유함수](/ko/math/topology/proper_maps){: data-lid="tqhfm" }에서 다룬 universally closed morphism의 언어로 표현된다. 그러나 derived 차원에서 이 functor를 직접 다루기보다는, Deligne을 따라 morphism을 compactify하여 이미 가진 두 functor $j_!$과 $Rp_\ast$의 합성으로 정의하는 편이 깔끔하다.
+직접상 $f_\ast \mathcal{F}$의 열린집합 $V \subseteq Y$ 위의 단면은 $\mathcal{F}(f^{-1}(V))$의 단면, 즉 $f^{-1}(V)$ 전체에서 정의된 단면이다. 고유 받음은 이 가운데 support가 $f$에 대해 proper한 것만을 추려 내는 subfunctor로 정의되며, support의 proper성은 [\[위상수학\] §고유사상](/ko/math/topology/proper_maps){: data-lid="tqhfm" }에서 다룬 universally closed morphism의 언어로 표현된다. 그러나 derived 차원에서 이 functor를 직접 다루기보다는, Deligne을 따라 morphism을 compactify하여 이미 가진 두 functor $j_!$과 $Rp_\ast$의 합성으로 정의하는 편이 깔끔하다.
 
-Open embedding $j: U \hookrightarrow X$에 대한 extension by zero $j_!: \Sh(U) \rightarrow \Sh(X)$를 떠올리자. 이는 $U$ 위의 sheaf $\mathcal{F}$를 $X \setminus U$ 위에서 stalk $0$이 되도록 연장하는 functor로, $j^{-1}$의 왼쪽 수반이다. ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14){: data-lid="jq9hz" }) $j_!$은 stalk를 보존하는 exact functor이므로 $D(\Sh(U)) \rightarrow D(\Sh(X))$로 곧바로 내려간다. 한편 proper map $p$, 즉 closed이며 모든 fiber가 compact인 morphism에 대해서는 ([\[위상수학\] §고유함수, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="m4d2s" }) $Rp_\ast$가 이미 정의되어 있다.
+Open embedding $j: U \hookrightarrow X$에 대한 extension by zero $j_!: \Sh(U) \rightarrow \Sh(X)$를 떠올리자. 이는 $U$ 위의 sheaf $\mathcal{F}$를 $X \setminus U$ 위에서 stalk $0$이 되도록 연장하는 functor로, $j^{-1}$의 왼쪽 수반이다. ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14){: data-lid="jq9hz" }) $j_!$은 stalk를 보존하는 exact functor이므로 $D(\Sh(U)) \rightarrow D(\Sh(X))$로 곧바로 내려간다. 한편 proper map $p$, 즉 closed이며 모든 fiber가 compact인 morphism에 대해서는 ([\[위상수학\] §고유사상, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="m4d2s" }) $Rp_\ast$가 이미 정의되어 있다.
 
 ::: 정의 1
 Separated map $f: X \rightarrow Y$가 *compactifiable<sub>옹골화 가능</sub>*하다는 것은 open embedding $j: X \hookrightarrow \overline{X}$와 proper map $p: \overline{X} \rightarrow Y$가 존재하여 $f = p \circ j$로 분해되는 것이다. 이러한 분해 $(j, p)$를 $f$의 *compactification<sub>콤팩트화</sub>*이라 부른다. $f$의 compactification $(j, p)$가 주어졌을 때 *고유 받음<sub>proper direct image</sub>* $Rf_!: D(\Sh(X)) \rightarrow D(\Sh(Y))$를
@@ -50,7 +50,7 @@ $$(R^q f_\ast \mathcal{F})_y \cong H^q(f^{-1}(y), \mathcal{F}\vert_{f^{-1}(y)})$
 를 얻는다.
 :::
 ::: 증명
-핵심은 stalk 공식이며, 일반적인 base change 동형은 이로부터 양변의 stalk를 비교하여 따라 나온다. Higher direct image $R^q f_\ast \mathcal{F}$는 presheaf $V \mapsto H^q(f^{-1}(V), \mathcal{F})$의 sheafification이므로, 그 stalk는 $y$를 포함하는 열린집합 $V$들에 대한 colimit $\varinjlim_V H^q(f^{-1}(V), \mathcal{F})$이다. $f$가 proper이면 $y$의 fiber $f^{-1}(y)$가 compact이고 ([\[위상수학\] §고유함수, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="3ka7g" }), $f$가 closed이므로 $f^{-1}(y)$의 임의의 열린근방 $W$에 대해 $V = Y \setminus f(X \setminus W)$가 $y$의 열린근방이 되어 $f^{-1}(V) \subseteq W$이다. 이때 compact support에 대한 cohomology의 연속성, 즉 닫힌집합 $f^{-1}(y) = \bigcap_V f^{-1}(\overline{V})$ 위의 cohomology가 근방들의 cohomology의 colimit으로 주어진다는 사실에 의해 ([KS], Proposition 2.5.2)
+핵심은 stalk 공식이며, 일반적인 base change 동형은 이로부터 양변의 stalk를 비교하여 따라 나온다. Higher direct image $R^q f_\ast \mathcal{F}$는 presheaf $V \mapsto H^q(f^{-1}(V), \mathcal{F})$의 sheafification이므로, 그 stalk는 $y$를 포함하는 열린집합 $V$들에 대한 colimit $\varinjlim_V H^q(f^{-1}(V), \mathcal{F})$이다. $f$가 proper이면 $y$의 fiber $f^{-1}(y)$가 compact이고 ([\[위상수학\] §고유사상, ⁋정리 6](/ko/math/topology/proper_maps#thm6){: data-lid="3ka7g" }), $f$가 closed이므로 $f^{-1}(y)$의 임의의 열린근방 $W$에 대해 $V = Y \setminus f(X \setminus W)$가 $y$의 열린근방이 되어 $f^{-1}(V) \subseteq W$이다. 이때 compact support에 대한 cohomology의 연속성, 즉 닫힌집합 $f^{-1}(y) = \bigcap_V f^{-1}(\overline{V})$ 위의 cohomology가 근방들의 cohomology의 colimit으로 주어진다는 사실에 의해 ([KS], Proposition 2.5.2)
 $$\varinjlim_V H^q(f^{-1}(V), \mathcal{F}) \cong H^q(f^{-1}(y), \mathcal{F}\vert_{f^{-1}(y)})$$
 가 성립한다. 이로써 stalk 공식이 증명된다.
 

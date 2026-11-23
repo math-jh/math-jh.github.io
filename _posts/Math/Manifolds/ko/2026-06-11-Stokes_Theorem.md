@@ -1,7 +1,7 @@
 ---
 title: "스토크스 정리"
-description: "경계가 있는 oriented manifold 위에서 미분형식의 외미분의 적분이 경계에서의 적분과 일치한다는 스토크스 정리를 증명한다."
-excerpt: "미적분학의 기본정리의 일반화인 Stokes 정리"
+description: "경계가 있고 향을 가진 다양체 위에서 미분형식의 외미분의 적분이 경계에서의 적분과 일치한다는 스토크스 정리를 증명한다. 이를 위해 경계가 있는 다양체 위에서의 적분을 먼저 정의한다."
+excerpt: "미적분학의 기본정리의 일반화인 스토크스 정리"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/stokes_theorem

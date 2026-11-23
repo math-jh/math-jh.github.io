@@ -1,7 +1,7 @@
 ---
 title: "대수적 폐포"
 description: "대수적으로 닫힌 체는 비상수 다항식이 항상 근을 갖는 체로, 이는 모든 대수적 확장의 차수가 일인 것과 동치이다. 상대적으로 대수적으로 닫힌 체의 정의와 성질도 함께 다룬다."
-excerpt: "Algebraically closed field와 algebraic closure의 존재성"
+excerpt: "대수적으로 닫힌 체와 대수적 폐포의 존재성"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/algebraically_closed_extensions

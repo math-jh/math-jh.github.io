@@ -1,7 +1,7 @@
 ---
 title: "아틴-웨더번 정리"
-description: "자기 자신 위의 module로서 semisimple인 환을 semisimple ring으로 정의하고, 이것이 모든 module이 semisimple인 것과 동치임을 보인다. Division ring 위의 행렬환의 module 구조와 opposite ring·endomorphism ring 계산을 거쳐, semisimple ring이 division ring 위의 행렬환 유한개의 곱으로 유일하게 분해된다는 아틴-웨더번 정리를 증명한다."
-excerpt: "Semisimple ring의 구조 정리: division ring 위 행렬환들의 곱으로의 유일한 분해"
+description: "반단순환을 정의하고, 모든 가군이 반단순인 것과 동치임을 보인다. 반단순환이 나눗셈환 위 행렬환 유한개의 곱으로 유일하게 분해된다는 아틴-웨더번 정리를 증명한다."
+excerpt: "반단순환의 구조 정리, 나눗셈환 위 행렬환들의 곱으로의 유일한 분해"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/artin_wedderburn

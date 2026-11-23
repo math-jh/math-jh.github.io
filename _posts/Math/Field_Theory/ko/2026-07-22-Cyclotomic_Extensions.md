@@ -1,7 +1,7 @@
 ---
 title: "원분확대"
-description: "1의 원시 n제곱근들을 근으로 갖는 cyclotomic polynomial을 정의하고 그 계수가 정수임을 보인 후, Dedekind의 논법으로 유리수체 위에서의 기약성을 증명한다. 이로부터 원분체의 갈루아 군이 (Z/nZ)의 가역원군과 isomorphic하다는 것을 얻는다."
-excerpt: "Cyclotomic polynomial의 기약성과 원분체의 갈루아 군"
+description: "원시 단위거듭제곱근을 근으로 갖는 원분다항식을 정의하고, 계수가 정수임과 유리수체 위에서의 기약성을 증명한다. 이로부터 원분체의 갈루아 군을 구한다."
+excerpt: "원분다항식의 기약성과 원분체의 갈루아 군"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/cyclotomic_extensions

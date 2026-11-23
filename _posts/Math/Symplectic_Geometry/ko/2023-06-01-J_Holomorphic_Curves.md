@@ -1,7 +1,7 @@
 ---
 title: "J-holomorphic curves"
-description: "심플렉틱 다양체 위의 거의 복소구조와 호환성을 정의하고, J-홀로모픽 곡선의 개념과 에너지 등식, 제거 가능한 특이점, 그로프 압축 정리를 개괄한다."
-excerpt: "Almost complex structure에 대한 holomorphic curve와 Gromov compactness"
+description: "사교다양체 위의 양립할 수 있는 거의 복소구조와 J-복소정칙 곡선을 정의하고, 에너지 등식과 가제거 특이점, 그로모프 컴팩트성 정리를 개괄한다."
+excerpt: "거의 복소구조에 대한 복소정칙 곡선과 그로모프 컴팩트성"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/j_holomorphic_curves

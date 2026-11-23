@@ -1,7 +1,7 @@
 ---
 title: "사교다양체"
-description: "다양체 위에 정의된 사교형식의 개념을 통해 사교다양체의 정의를 다룬다. 짝수차원에서만 존재하는 사교다양체의 기본 성질과 구조를 소개한다."
-excerpt: "Symplectic manifold의 정의와 성질들"
+description: "다양체 위에 정의된 사교형식의 개념을 통해 사교다양체의 정의를 다룬다. 사교동형사상, 해밀턴 벡터장과 푸아송 괄호, 라그랑지안 부분다양체 등 기본 성질과 구조를 소개한다."
+excerpt: "사교다양체의 정의와 사교동형사상, 해밀턴 벡터장, 라그랑지안 부분다양체"
 
 categories: [Math / Symplectic Geometry]
 permalink: /ko/math/symplectic_geometry/symplectic_manifold

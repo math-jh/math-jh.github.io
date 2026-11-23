@@ -1,7 +1,7 @@
 ---
 title: "Perfect obstruction theory"
-description: "실제 차원이 virtual dimension을 초과하는 stable map moduli 위에서 기대 차원의 cycle을 복원하는 문제를, 벡터다발 section의 zero locus라는 국소 모형에서 시작하여 Behrend–Fantechi의 perfect obstruction theory와 intrinsic normal cone을 거쳐 virtual fundamental class의 구성으로 연결한다."
-excerpt: "Perfect obstruction theory, virtual fundamental class, intrinsic normal cone, localized Euler class"
+description: "Behrend–Fantechi의 perfect obstruction theory를 정의하고 기대 차원의 virtual fundamental class를 구성한다."
+excerpt: "intrinsic normal cone과 virtual class의 구성"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/perfect_obstruction_theory
@@ -438,7 +438,7 @@ $$\vdim=\int_\beta c_1(T_X)+(\dim X-3)(1-g)+n$$
 
 에서 둘째 vertical map을 만들어야 하고, 이는 합성 $a:E^\bullet\xrightarrow{\phi}\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$에 대하여 $(E')^\bullet=\Cone(a)[-1]$로 정의하면 양 끝의 vertical map이 주어져 있으므로 자동으로 존재한다.
 
-여기서 $\Cone(a)$는 $a$의 mapping cone이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8){: data-lid="qmz40" }) Mapping cone은 distinguished triangle $E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]\rightarrow\Cone(a)\rightarrow E^\bullet[1]$에 들어가며, 이를 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="bhhzn" }의 (TR2)로 한 번 돌리고 전체를 $[-1]$만큼 shift하면 위 diagram의 윗줄 $q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow(E')^\bullet\rightarrow E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$을 얻는다. 아랫줄도 connecting map $\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$로부터 같은 방식으로 얻어지므로, $(E')^\bullet$은 $\LL_M$을 얻는 방식에서 $\LL_{M/\mathfrak{M}_{g,n}}$ 자리에 $E^\bullet$을 넣은 것이다. 또 $a$의 정의에 의해 오른쪽 사각형이 commute하므로, (TR3)에 의해 가운데를 채우는 $\phi'$이 존재한다.
+여기서 $\Cone(a)$는 $a$의 mapping cone이다. ([\[호몰로지 대수학\] §긴 완전열, ⁋정의 8](/ko/math/homological_algebra/long_exact_sequence#def8){: data-lid="qmz40" }) Mapping cone은 distinguished triangle $E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]\rightarrow\Cone(a)\rightarrow E^\bullet[1]$에 들어가며, 이를 [\[호몰로지 대수학\] §유도범주, ⁋정의 12](/ko/math/homological_algebra/derived_categories#def12){: data-lid="bhhzn" }의 (TR2)로 한 번 돌리고 전체를 $[-1]$만큼 shift하면 위 diagram의 윗줄 $q^\ast\LL_{\mathfrak{M}_{g,n}}\rightarrow(E')^\bullet\rightarrow E^\bullet\xrightarrow{a}q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$을 얻는다. 아랫줄도 connecting map $\LL_{M/\mathfrak{M}_{g,n}}\rightarrow q^\ast\LL_{\mathfrak{M}_{g,n}}[1]$로부터 같은 방식으로 얻어지므로, $(E')^\bullet$은 $\LL_M$을 얻는 방식에서 $\LL_{M/\mathfrak{M}_{g,n}}$ 자리에 $E^\bullet$을 넣은 것이다. 또 $a$의 정의에 의해 오른쪽 사각형이 commute하므로, (TR3)에 의해 가운데를 채우는 $\phi'$이 존재한다.
 
 이렇게 얻은 $\phi'$이 perfect obstruction theory라는 것은 두 triangle의 cohomology long exact sequence를 나란히 놓은 diagram
 

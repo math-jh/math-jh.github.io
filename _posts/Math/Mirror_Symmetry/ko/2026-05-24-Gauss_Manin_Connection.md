@@ -1,7 +1,7 @@
 ---
 title: "가우스-마닌 접속"
-description: "거울대칭의 두브로빈 접속에서 주장한 모듈 동형사상을 구체적으로 살펴보고, B-side의 진동 적분과 가우스-마닌 시스템을 중심으로 Landau-Ginzburg 모델의 홀로모피 부피 형식 구성까지 다룬다."
-excerpt: "B-model의 D-module 구조와 oscillating integral, 그리고 cohomology 위의 Gauss-Manin connection"
+description: "B-side의 가우스-마닌 접속과 B-model connection을 정의한다. Landau-Ginzburg model의 volume form과 oscillating integral도 다룬다."
+excerpt: "oscillating integral과 B-model connection"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/gauss-manin_connection

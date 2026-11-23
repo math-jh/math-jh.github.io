@@ -1,7 +1,7 @@
 ---
 title: "제2기본형식"
-description: "주변 Riemannian manifold에 매장된 submanifold 위에서, 주변 공변미분의 접-법 분해로부터 Gauss 공식과 제2기본형식을 도입한다. Weingarten 사상과 Weingarten 방정식, 내재적 곡률과 주변 곡률을 잇는 Gauss 방정식, 평균곡률을 다루고, 측지선과 가속도의 관계 및 구면의 제2기본형식 계산으로 마무리한다."
-excerpt: "주변 공변미분의 법성분으로서의 제2기본형식과 Gauss 방정식"
+description: "리만다양체에 매장된 부분다양체에서 주변 공변미분의 접-법 분해로 가우스 공식과 제2기본형식을 정의한다. 바인가르텐 사상과 방정식, 가우스 방정식, 평균곡률, 측지선과의 관계를 다룬다."
+excerpt: "주변 공변미분의 법성분으로서의 제2기본형식과 가우스 방정식"
 
 categories: [Math / Riemannian Geometry]
 permalink: /ko/math/riemannian_geometry/second_fundamental_form

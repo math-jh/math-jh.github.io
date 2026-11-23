@@ -1,7 +1,7 @@
 ---
 title: "등각사상과 Möbius 변환"
-description: "복소정칙이고 도함수가 0이 아닌 사상이 각과 방향을 보존하는 등각사상임을 밝히고, 확장복소평면의 자기동형군을 이루는 Möbius 변환을 다룬다. 원-직선의 보존, 교차비의 불변성, 세 점을 세 점으로 보내는 유일성을 증명하고, 단위원판의 자기동형사상을 Schwarz 보조정리로 분류한 뒤 Cayley 변환으로 상반평면과 잇는다."
-excerpt: "등각사상, Möbius 변환, PSL(2,ℂ), 교차비, 원-직선 보존, 단위원판 자기동형, Schwarz–Pick, Cayley 변환"
+description: "등각사상을 정의하고 도함수가 0이 아닌 복소정칙함수가 등각임을 밝히며 뫼비우스 변환군을 다룬다. 원-직선 보존과 교차비 불변성을 증명하고 단위원판 자기동형사상과 케일리 변환을 설명한다."
+excerpt: "뫼비우스 변환군, 교차비, 원-직선 보존, 슈바르츠-픽 정리, 케일리 변환"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/conformal_maps

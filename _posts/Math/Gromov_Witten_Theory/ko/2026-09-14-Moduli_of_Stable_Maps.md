@@ -1,7 +1,7 @@
 ---
 title: "안정사상들의 모듈라이 공간"
-description: "Stable map들의 proper Deligne–Mumford stack과 그 natural morphism·boundary 구조를 살펴보고, deformation과 obstruction의 exact sequence에서 virtual dimension을 계산한다."
-excerpt: "Stable map moduli, Deligne–Mumford stack, virtual dimension, convex targets"
+description: "안정사상을 정의하고 그 모듈라이 공간인 proper Deligne–Mumford stack과 boundary 구조를 살펴보며, virtual dimension을 계산한다."
+excerpt: "Deligne–Mumford stack과 virtual dimension 계산"
 
 categories: [Math / Gromov-Witten Theory]
 permalink: /ko/math/gromov-witten_theory/moduli_of_stable_maps

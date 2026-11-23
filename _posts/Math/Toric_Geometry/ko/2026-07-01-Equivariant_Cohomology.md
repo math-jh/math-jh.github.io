@@ -1,7 +1,7 @@
 ---
 title: "동변 코호몰로지"
 description: "위상군의 작용을 기억하는 코호몰로지 이론을 Borel construction으로 정의하고, 분류공간의 코호몰로지를 계수로 갖는 대수 구조와 torus 작용의 weight 기술을 다룬다."
-excerpt: "Borel construction, equivariant cohomology H_G(X)=H(X_G), and H_T(pt)=Sym(character lattice)"
+excerpt: "Borel construction과 torus 작용, 사영다발 정리"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/equivariant_cohomology

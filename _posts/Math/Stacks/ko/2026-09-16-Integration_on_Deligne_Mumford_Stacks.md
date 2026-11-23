@@ -1,7 +1,7 @@
 ---
 title: "Deligne–Mumford 스택 위의 적분"
-description: "복소수체 위의 Deligne–Mumford stack에서 Chow group과 proper pushforward를 통해 stabilizer 가중치와 적분을 정의하고, projection formula, fiber integration, refined Gysin pullback을 살펴본다."
-excerpt: "Rational Chow groups, proper pushforward, and integration on Deligne–Mumford stacks"
+description: "복소수체 위의 Deligne–Mumford stack에서 Chow group과 적분을 정의한다. 이어서 projection formula와 fiber integration을 살펴본다."
+excerpt: "Chow group과 proper pushforward로 정의하는 적분"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/integration_on_deligne_mumford_stacks

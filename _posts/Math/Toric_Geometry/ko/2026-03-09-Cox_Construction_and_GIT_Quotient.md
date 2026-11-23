@@ -1,7 +1,7 @@
 ---
 title: "Cox 구성과 GIT quotient"
-description: "fan과 homogeneous coordinate ring을 통해 toric variety를 재구성하는 Cox의 방법을 다루며, toric variety 위의 line bundle과 coherent sheaf를 이해하는 데 핵심적인 GIT quotient의 역할을 설명한다."
-excerpt: "토릭 다양체의 homogeneous coordinate ring과 GIT quotient representation"
+description: "fan과 homogeneous coordinate ring, GIT quotient로 toric variety를 재구성하는 Cox의 방법을 설명한다."
+excerpt: "토릭 다양체의 homogeneous coordinate ring"
 
 categories: [Math / Toric Geometry]
 permalink: /ko/math/toric_geometry/cox_construction

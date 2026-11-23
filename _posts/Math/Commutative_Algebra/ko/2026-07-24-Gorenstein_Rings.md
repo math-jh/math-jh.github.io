@@ -1,6 +1,6 @@
 ---
 title: "Gorenstein 환"
-description: "정칙성이 projective dimension의 유한성으로 특징지어지는 것과 쌍대로, injective dimension이 유한한 local ring인 Gorenstein ring을 Bass 정리로 다루어 depth와의 일치, Cohen-Macaulay 성질, regular sequence 몫과의 관계, 그리고 Artinian인 경우의 socle 특징화를 확립한다."
+description: "Gorenstein ring을 정의하고 Bass 정리를 증명한다. Cohen-Macaulay 성질, regular sequence 몫과의 관계, socle 특징화를 다룬다."
 excerpt: "Gorenstein local ring과 Bass 정리, socle 특징화"
 
 categories: [Math / Commutative Algebra]
@@ -184,15 +184,15 @@ Artinian local ring $(A,\mathfrak{m},\kappa)$에 대하여 다음이 모두 동�
 4. $A\cong E(\kappa)$이다. 여기서 $E(\kappa)$는 $\kappa$의 injective hull이다.
 :::
 ::: 증명
-$A$가 Artinian이므로 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="4hy5v" }에 의하여 $\dim A=0$이다.
+$A$가 Artinian이므로 [§조르당-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="4hy5v" }에 의하여 $\dim A=0$이다.
 
 (1)과 (2)의 동치를 보자. $A$가 Gorenstein이면 [정리 1](#thm1){: data-lid="akb9q" }에 의하여 $\operatorname{injdim}_AA=\operatorname{depth}A$인데, [§Depth, ⁋따름정리 8](/ko/math/commutative_algebra/depth#cor8){: data-lid="2p3ua" }에 의하여 $\operatorname{depth}A\leq\dim A=0$이므로 $\operatorname{injdim}_AA=0$, 곧 $A$는 injective이다. 거꾸로 $A$가 injective이면 $\operatorname{injdim}_AA=0<\infty$이므로 Gorenstein이다.
 
-(2)가 (4)를 함의함을 보자. $A$가 $0$이 아닌 injective module이므로 [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6){: data-lid="fhfti" }에 의하여 prime ideal들의 족 $(\mathfrak{p}_\lambda)$에 대하여 $A\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. $A$가 Artinian local이라 그 유일한 prime ideal은 $\mathfrak{m}$이므로 ([§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="es3r3" }) 각 $\mathfrak{p}_\lambda=\mathfrak{m}$이고, 따라서 $A\cong E(\kappa)^{\oplus k}$이다. 한편 $A$는 $A$-module로서 indecomposable인데, direct summand로의 분해는 $\Hom_A(A,A)\cong A$의 idempotent에 대응하고 local ring $A$의 idempotent는 $0$과 $1$ 뿐이기 때문이다 ($e^2=e$이면 $e(1-e)=0$이고 $e$와 $1-e$ 중 하나는 unit이므로 $e\in\{0,1\}$이다). 그러므로 $k=1$이고 $A\cong E(\kappa)$이다.
+(2)가 (4)를 함의함을 보자. $A$가 $0$이 아닌 injective module이므로 [§단사가군과 Matlis duality, ⁋정리 6](/ko/math/commutative_algebra/matlis_duality#thm6){: data-lid="fhfti" }에 의하여 prime ideal들의 족 $(\mathfrak{p}_\lambda)$에 대하여 $A\cong\bigoplus_\lambda E(A/\mathfrak{p}_\lambda)$이다. $A$가 Artinian local이라 그 유일한 prime ideal은 $\mathfrak{m}$이므로 ([§조르당-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4){: data-lid="es3r3" }) 각 $\mathfrak{p}_\lambda=\mathfrak{m}$이고, 따라서 $A\cong E(\kappa)^{\oplus k}$이다. 한편 $A$는 $A$-module로서 indecomposable인데, direct summand로의 분해는 $\Hom_A(A,A)\cong A$의 idempotent에 대응하고 local ring $A$의 idempotent는 $0$과 $1$ 뿐이기 때문이다 ($e^2=e$이면 $e(1-e)=0$이고 $e$와 $1-e$ 중 하나는 unit이므로 $e\in\{0,1\}$이다). 그러므로 $k=1$이고 $A\cong E(\kappa)$이다.
 
 (4)가 (3)을 함의함을 보자. $A\cong E(\kappa)$이면 [§단사가군과 Matlis duality, ⁋보조정리 8](/ko/math/commutative_algebra/matlis_duality#lem8){: data-lid="eiunz" }에 의하여 $(0:_A\mathfrak{m})=\Hom_A(\kappa,A)\cong\Hom_A(\kappa,E(\kappa))\cong\kappa$이므로 $\dim_\kappa(0:_A\mathfrak{m})=1$이다.
 
-(3)이 (2)를 함의함을 보자. $\dim_\kappa(0:_A\mathfrak{m})=1$이라 하자. $A$의 $0$이 아닌 임의의 submodule $N$은 Artinian이므로 minimal한 $0$이 아닌 submodule, 곧 simple submodule $S$를 포함하며 ([§조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="f6buq" }), $S$의 annihilator는 maximal ideal이라 $\mathfrak{m}$이므로 $S\subseteq(0:_A\mathfrak{m})$이다. $(0:_A\mathfrak{m})$이 $1$차원이라 그 안의 simple submodule은 $(0:_A\mathfrak{m})$ 자신뿐이므로 $S=(0:_A\mathfrak{m})$이고, 곧 $A$의 모든 $0$이 아닌 submodule이 $(0:_A\mathfrak{m})$을 포함한다. 이는 $(0:_A\mathfrak{m})\cong\kappa$가 $A$의 essential submodule이라는 뜻이므로 ([§단사가군과 Matlis duality, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1){: data-lid="x2b13" }), [§단사가군과 Matlis duality, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3){: data-lid="2mnof" }의 injective hull 유일성에 의하여 $E(A)\cong E(\kappa)$이다.
+(3)이 (2)를 함의함을 보자. $\dim_\kappa(0:_A\mathfrak{m})=1$이라 하자. $A$의 $0$이 아닌 임의의 submodule $N$은 Artinian이므로 minimal한 $0$이 아닌 submodule, 곧 simple submodule $S$를 포함하며 ([§조르당-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2){: data-lid="f6buq" }), $S$의 annihilator는 maximal ideal이라 $\mathfrak{m}$이므로 $S\subseteq(0:_A\mathfrak{m})$이다. $(0:_A\mathfrak{m})$이 $1$차원이라 그 안의 simple submodule은 $(0:_A\mathfrak{m})$ 자신뿐이므로 $S=(0:_A\mathfrak{m})$이고, 곧 $A$의 모든 $0$이 아닌 submodule이 $(0:_A\mathfrak{m})$을 포함한다. 이는 $(0:_A\mathfrak{m})\cong\kappa$가 $A$의 essential submodule이라는 뜻이므로 ([§단사가군과 Matlis duality, ⁋정의 1](/ko/math/commutative_algebra/matlis_duality#def1){: data-lid="x2b13" }), [§단사가군과 Matlis duality, ⁋정리 3](/ko/math/commutative_algebra/matlis_duality#thm3){: data-lid="2mnof" }의 injective hull 유일성에 의하여 $E(A)\cong E(\kappa)$이다.
 
 이제 길이를 비교한다. $A$가 Artinian이라 유한한 길이를 가지므로 [§단사가군과 Matlis duality, ⁋명제 9](/ko/math/commutative_algebra/matlis_duality#prop9){: data-lid="m99ow" }를 $M=A$에 적용하면, Matlis dual $\Hom_A(A,E(\kappa))\cong E(\kappa)$가 $\length E(\kappa)=\length A$인 유한한 길이의 module이다. 그럼 essential embedding $A\hookrightarrow E(A)\cong E(\kappa)$의 양변이 같은 유한한 길이를 가지므로 $A=E(\kappa)$이고, 따라서 $A$는 injective이다.
 :::

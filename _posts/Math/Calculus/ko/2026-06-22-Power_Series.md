@@ -1,7 +1,7 @@
 ---
 title: "멱급수"
 description: "변수의 거듭제곱으로 이루어진 멱급수와 수렴반경과 그 값을 다룬다. 초등함수의 멱급수 전개, 멱급수의 합과 곱, 해석함수의 정의를 살펴본다."
-excerpt: "멱급수와 수렴반경, 초등함수의 전개, 해석함수"
+excerpt: "멱급수의 수렴반경, 초등함수의 전개, 해석함수"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/power_series

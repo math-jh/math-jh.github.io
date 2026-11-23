@@ -1,7 +1,7 @@
 ---
 title: "차원"
 description: "스킴의 차원을 Krull dimension으로 정의하고, 가환대수학적 차원과의 관계를 살펴본다. Finite morphism과 integral morphism의 성질을 함께 다룬다."
-excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관계"
+excerpt: "Scheme의 차원 정의와 Noether normalization lemma"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/dimension

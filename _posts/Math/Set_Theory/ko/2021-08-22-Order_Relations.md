@@ -1,7 +1,7 @@
 ---
 title: "순서관계의 정의"
-description: "순서관계는 반사성, 추이성, 반대칭성을 만족하는 이항관계로 정의된다. 이러한 관계로 순서가 부여된 순서집합과 순서동형사상의 개념을 함께 살펴본다."
-excerpt: "순서관계의 정의와 성질들"
+description: "순서관계는 반사성과 추이성을 만족하는 반대칭적 관계로 정의된다. 이러한 관계로 순서가 부여된 순서집합과 순서동형사상, 원순서관계와 순순서를 함께 살펴본다."
+excerpt: "반대칭적 관계, 순서집합과 순서동형사상, 원순서관계와 순순서"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/order_relations

@@ -1,7 +1,7 @@
 ---
 title: "복소 스펙트럼 정리"
-description: "복소내적공간 위에서 self-adjoint operator를 일반화한 normal operator를 정의하고, normal operator가 정확히 orthonormal basis로 대각화되는 작용소임을 증명한다. Self-adjoint operator의 실고윳값과 unitary operator의 단위원 고윳값을 특수한 경우로 얻는다."
-excerpt: "normal operator의 unitary 대각화"
+description: "복소내적공간 위에서 정규작용소를 정의하고, 정규직교기저로 대각화됨을 보이는 복소 스펙트럼 정리의 증명을 다룬다. 자기수반작용소의 실고윳값과 단일작용소의 단위원 고윳값도 얻는다."
+excerpt: "슈어 분해와 정규작용소의 유니터리 대각화"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/complex_spectral_theorem

@@ -1,7 +1,7 @@
 ---
 title: "연속함수의 성질"
-description: "연속함수가 컴팩트 집합을 컴팩트 집합으로 보냄을 보이고, 이로부터 최대·최소 정리와 Heine–Cantor 정리를 증명한다. 균등연속의 정의에서 한정사의 순서를 분석하고, 균등연속이 아닌 함수와 Lipschitz 함수, 연속 전단사의 역함수가 불연속인 예를 다룬다."
-excerpt: "컴팩트 집합의 연속상, 최대·최소 정리, 균등연속과 Heine–Cantor 정리"
+description: "연속함수가 컴팩트 집합을 컴팩트 집합으로 보냄을 보이고, 최대·최소 정리와 하이네-칸토어 정리를 증명한다. 균등연속의 정의와 립시츠 조건, 연속 전단사의 역함수가 불연속인 예를 다룬다."
+excerpt: "컴팩트 집합의 연속상, 최대·최소 정리, 균등연속과 하이네-칸토어 정리"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/continuous_functions

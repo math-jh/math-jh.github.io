@@ -1,7 +1,7 @@
 ---
 title: "선택공리"
-description: "선택공리의 정의와 동치 명제를 소개하고, 정렬 정리와 타르스키-부르바키 보조정리를 증명하며 서수 사이의 순서관계를 정의한다."
-excerpt: "선택공리와 그 동치들"
+description: "선택공리와 선택함수를 정의하고 동치 명제를 소개하며, 체르멜로 정리와 타르스키-부르바키 보조정리를 증명한다. 또한 초른의 보조정리를 다루고 서수 사이의 순서관계를 정의한다."
+excerpt: "선택공리와 동치인 명제, 체르멜로 정리와 초른의 보조정리"
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/axiom_of_choice

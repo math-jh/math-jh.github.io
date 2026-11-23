@@ -1,7 +1,7 @@
 ---
 title: "Quiver와 경로대수"
-description: "quiver Q로부터 경로대수 kQ를 paths를 basis로, concatenation을 곱셈으로 하여 구성하고, Q의 representation들이 이루는 category가 left kQ-module들의 category와 동치임을 증명한다. 선형 A_n quiver, one-loop quiver, Kronecker quiver를 예시로 다룬다."
-excerpt: "Quiver의 path algebra와 Rep(Q) ≅ kQ-module의 동치"
+description: "Quiver와 경로대수를 정의하고, representation들이 이루는 category가 경로대수 위의 left module들의 category와 동치임을 증명한다."
+excerpt: "Quiver의 경로대수 정의, representation과 module의 동치"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/path_algebras

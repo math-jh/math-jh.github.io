@@ -1,7 +1,7 @@
 ---
 title: "부분수열과 Bolzano–Weierstrass 정리"
-description: "부분수열을 정의하고, 모든 실수열이 단조 부분수열을 가짐을 peak 논법으로 보인다. 이로부터 bounded sequence가 수렴하는 부분수열을 가진다는 Bolzano–Weierstrass 정리를 증명하고, bisection method에 의한 두 번째 증명과 ℝⁿ으로의 확장을 다룬다. 비유계 수열과 ℚ 안의 수열에서 정리가 어떻게 깨지는지도 확인한다."
-excerpt: "부분수열, 단조 부분수열, Bolzano–Weierstrass 정리와 ℝⁿ으로의 확장"
+description: "부분수열을 정의하고 유계수열이 수렴하는 부분수열을 가진다는 볼차노-바이어슈트라스 정리를 증명한다. 단조 부분수열을 얻는 봉우리 논법과 이분법 증명뿐 아니라 수열의 집적점도 다룬다."
+excerpt: "부분수열, 단조 부분수열, 볼차노-바이어슈트라스 정리와 수열의 집적점"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/bolzano_weierstrass

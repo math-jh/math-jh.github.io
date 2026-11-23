@@ -1,7 +1,7 @@
 ---
 title: "군의 직접곱"
 description: "군의 직접곱을 범주론적 관점에서 정의하고, 곱집합 위에 정의한 연산으로 직접곱군을 구성하는 과정을 다룬다. 곱의 보편 성질을 증명하고, 군족의 곱이 동형 사상 아래 유일하게 결정됨을 보인다."
-excerpt: "Direct product of groups"
+excerpt: "군들의 곱과 보편 성질, 직접곱군의 구성"
 
 categories: [Math / Algebraic Structures]
 permalink: /ko/math/algebraic_structures/direct_products

@@ -1,7 +1,7 @@
 ---
 title: "표현의 지표"
-description: "군 표현의 지표를 정의하고 그 덧셈·곱셈 성질을 다룬다. Class function과 내적을 도입해 지표가 conjugacy class 위에서 상수 함수이며, irreducible representation을 구별하는 핵심 도구임을 보인다."
-excerpt: "Character function의 정의와 orthogonality relation"
+description: "군 표현의 지표를 정의하고 그 덧셈·곱셈 성질과 지표의 직교성을 다룬다. Regular representation과 projection formula를 살펴보고 표현의 지표 예시도 소개한다."
+excerpt: "Character function의 정의와 지표의 직교성"
 
 categories: [Math / Representation Theory]
 permalink: /ko/math/representation_theory/character_theory

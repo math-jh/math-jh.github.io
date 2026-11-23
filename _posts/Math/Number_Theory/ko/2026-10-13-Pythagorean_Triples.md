@@ -1,7 +1,7 @@
 ---
 title: "피타고라스 세 쌍과 무한강하법"
-description: "방정식 x²+y²=z²의 양의 정수해인 피타고라스 세 쌍을 모두 구하고, 같은 결과를 단위원 위의 유리점이라는 기하적 언어로 다시 해석한다. 이어서 Fermat의 무한강하법으로 x⁴+y⁴=z²이 자명하지 않은 정수해를 갖지 않음을 보이고, 그 따름으로 n=4인 Fermat 마지막 정리를 얻는다."
-excerpt: "원시 피타고라스 세 쌍의 매개화, 단위원 위의 유리점, 무한강하법과 n=4인 Fermat 마지막 정리"
+description: "원시 피타고라스 세 쌍을 정의하고 모든 해를 구하며, 같은 결과를 단위원 위의 유리점으로 해석한다. 이어서 무한강하법으로 지수 4인 페르마 마지막 정리를 증명한다."
+excerpt: "원시 피타고라스 세 쌍, 단위원 위의 유리점, 지수 4인 페르마 마지막 정리"
 
 categories: [Math / Number Theory]
 permalink: /ko/math/number_theory/pythagorean_triples

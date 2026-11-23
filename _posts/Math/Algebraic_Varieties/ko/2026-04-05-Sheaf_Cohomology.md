@@ -1,7 +1,7 @@
 ---
 title: "층 코호몰로지"
-description: "선다발의 전역 단면을 넘어, 층의 정보를 더 정밀하게 포착하기 위해 층 코호몰로지를 유도 함수로 정의하고 성질을 탐구한다."
-excerpt: "Sheaf cohomology and its applications"
+description: "선다발의 전역 단면을 넘어, 층의 정보를 더 정밀하게 포착하기 위해 층 코호몰로지를 유도함자로 정의한다. 이어 Čech Cohomology와 Spectral Sequence를 다룬다."
+excerpt: "Derived Functor로서의 정의와 Čech Cohomology"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/sheaf_cohomology
@@ -416,7 +416,7 @@ $$R^q f_\ast \mathcal{F} := H^q(f_\ast \mathcal{I}^\bullet)$$
 이제 $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 생각하자. 직관적으로 우리가 하고 싶은 것은 $\mathcal{G}^p(\mathcal{F})$ 각각에 대한 injective resolution을 잡은 후, Godement resolution의 differential $\mathcal{G}^p(\mathcal{F})\rightarrow \mathcal{G}^{p+1}(\mathcal{F})$을 [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6){: data-lid="9d7bm" }을 통해 horizontal differential을 정의해주는 것이다.
 
 ::: 정의 18 (Cartan-Eilenberg Resolution)
-Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resolution<sub>카르탕-아일렌베르크 분해</sub>*은 double complex $I^{p,q}$와 augmentation $K^\bullet \rightarrow I^{\bullet,0}$으로 이루어진 데이터로, 다음 조건들을 만족하는 것이다.
+Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resolution<sub>카르탕-에일렌베르크 분해</sub>*은 double complex $I^{p,q}$와 augmentation $K^\bullet \rightarrow I^{\bullet,0}$으로 이루어진 데이터로, 다음 조건들을 만족하는 것이다.
 
 1. 각 열 $I^{p,\bullet}$은 $K^p$의 injective resolution이다.
 2. 각 행의 cohomology $H^p(I^{\bullet,q})$는 $H^p(K^\bullet)$의 injective resolution을 이룬다. 즉, chain complex

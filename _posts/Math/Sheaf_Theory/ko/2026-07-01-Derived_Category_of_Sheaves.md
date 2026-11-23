@@ -1,7 +1,7 @@
 ---
 title: "층의 유도 범주와 유도 functor"
-description: "공간 위 층의 abelian category가 충분한 injective를 가짐을 확인하고, 그 유도 범주에서 Rf_*·Lf^*·⊗^L·RHom을 정의하여 층 코호몰로지와 Leray spectral sequence을 derived functor의 언어로 통합한다."
-excerpt: "D(Sh(X)), the derived functors Rf_*, Lf^*, ⊗^L, RHom, and their adjunctions"
+description: "층의 유도 범주에서 derived functor들을 정의하고 유도 수반을 증명한다. 이어 층 코호몰로지와 Leray spectral sequence를 통합한다."
+excerpt: "유도 당김·유도 텐서곱·유도 수반과 Leray spectral sequence"
 
 categories: [Math / Sheaf Theory]
 permalink: /ko/math/sheaf_theory/derived_category_of_sheaves
@@ -18,9 +18,9 @@ published: false
 
 우리는 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="2u7qs" }에서 sheaf cohomology $H^i(X, \mathcal{F})$를 global section functor $\Gamma(X, -)$의 right derived functor로 정의하였다. 같은 글의 후반부에서 우리는 continuous map $f: X \rightarrow Y$를 따라 left exact functor $f_\ast: \Sh(X) \rightarrow \Sh(Y)$의 right derived functor인 higher direct image $R^q f_\ast$를 도입하였고, 이들을 묶는 Leray spectral sequence $E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$를 살펴보았다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19){: data-lid="lyiad" })
 
-이러한 결과들은 각각 개별적인 $R^q$들의 모임으로 진술되지만, 실제 사용에서는 $f_\ast$, $f^{-1}$, $\otimes$, $\mathcal{H}om$ 등 여러 functor를 합성하고 그들 사이의 관계를 다루어야 한다. 개별 cohomology $R^q$의 차원에서는 이러한 합성이 spectral sequence를 거쳐야만 기술되며, adjunction 같은 구조적 관계도 직접적으로 드러나지 않는다. [\[호몰로지 대수학\] §유도카테고리](/ko/math/homological_algebra/derived_categories){: data-lid="53g6m" }에서 우리는 abelian category $\mathcal{A}$에 대해 derived category $D(\mathcal{A})$를 구성하고, left/right derived functor $LF$, $RF$를 $K$-projective/$K$-injective resolution 위에서 단일한 functor로 정의하였다. 이 글에서 우리는 그 추상적 기계를 $\mathcal{A} = \Sh(X)$의 경우에 적용하여, sheaf cohomology와 higher direct image를 $R\Gamma$, $Rf_\ast$라는 단일한 derived functor로 통합하고, $Lf^\ast$, $\otimes^L$, $R\Hom$을 함께 정의한다. 그 후 derived adjunction과 Grothendieck의 composite functor 정리를 통해 Leray spectral sequence가 단 하나의 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$로부터 따라 나옴을 본다.
+이러한 결과들은 각각 개별적인 $R^q$들의 모임으로 진술되지만, 실제 사용에서는 $f_\ast$, $f^{-1}$, $\otimes$, $\mathcal{H}om$ 등 여러 functor를 합성하고 그들 사이의 관계를 다루어야 한다. 개별 cohomology $R^q$의 차원에서는 이러한 합성이 spectral sequence를 거쳐야만 기술되며, adjunction 같은 구조적 관계도 직접적으로 드러나지 않는다. [\[호몰로지 대수학\] §유도범주](/ko/math/homological_algebra/derived_categories){: data-lid="53g6m" }에서 우리는 abelian category $\mathcal{A}$에 대해 derived category $D(\mathcal{A})$를 구성하고, left/right derived functor $LF$, $RF$를 $K$-projective/$K$-injective resolution 위에서 단일한 functor로 정의하였다. 이 글에서 우리는 그 추상적 기계를 $\mathcal{A} = \Sh(X)$의 경우에 적용하여, sheaf cohomology와 higher direct image를 $R\Gamma$, $Rf_\ast$라는 단일한 derived functor로 통합하고, $Lf^\ast$, $\otimes^L$, $R\Hom$을 함께 정의한다. 그 후 derived adjunction과 Grothendieck의 composite functor 정리를 통해 Leray spectral sequence가 단 하나의 동형 $R(gf)_\ast \cong Rg_\ast Rf_\ast$로부터 따라 나옴을 본다.
 
-추상적 derived category의 구성 자체, 즉 $D(\mathcal{A})$, $K$-injective/$K$-projective resolution, $RF$/$LF$의 정의, triangulated 구조, 그리고 derived adjunction은 [\[호몰로지 대수학\] §유도카테고리](/ko/math/homological_algebra/derived_categories){: data-lid="avgf9" }에서 이미 다루었으므로 여기서 다시 세우지 않고 인용한다. 우리의 과제는 $\Sh(X)$가 그 기계를 가동하기 위한 전제 조건, 즉 abelian category이며 충분한 injective를 가진다는 사실을 확인하고, 그 위에서 구체적인 sheaf functor들의 유도 버전을 정리하는 것이다.
+추상적 derived category의 구성 자체, 즉 $D(\mathcal{A})$, $K$-injective/$K$-projective resolution, $RF$/$LF$의 정의, triangulated 구조, 그리고 derived adjunction은 [\[호몰로지 대수학\] §유도범주](/ko/math/homological_algebra/derived_categories){: data-lid="avgf9" }에서 이미 다루었으므로 여기서 다시 세우지 않고 인용한다. 우리의 과제는 $\Sh(X)$가 그 기계를 가동하기 위한 전제 조건, 즉 abelian category이며 충분한 injective를 가진다는 사실을 확인하고, 그 위에서 구체적인 sheaf functor들의 유도 버전을 정리하는 것이다.
 
 ## $\Sh(X)$의 abelian 구조
 
@@ -43,7 +43,7 @@ Sheaf morphism $\phi$의 presheaf dimension kernel $U \mapsto \ker(\phi(U))$는 
 
 ## 충분한 injective의 존재
 
-Derived category 위에서 right derived functor $RF$를 정의하려면 $\mathcal{A}$가 충분한 injective를 가져야 한다 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="ocvac" }). 즉 모든 대상이 어떤 injective object 안으로 단사적으로 들어가야 한다. Module category에서는 이 사실이 표준적이지만, sheaf의 경우에는 별도의 논증이 필요하다. 다음은 Grothendieck이 Tôhoku 논문에서 정립한 일반 정리의 특수한 경우이다.
+Derived category 위에서 right derived functor $RF$를 정의하려면 $\mathcal{A}$가 충분한 injective를 가져야 한다 ([\[호몰로지 대수학\] §유도범주, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="ocvac" }). 즉 모든 대상이 어떤 injective object 안으로 단사적으로 들어가야 한다. Module category에서는 이 사실이 표준적이지만, sheaf의 경우에는 별도의 논증이 필요하다. 다음은 Grothendieck이 Tôhoku 논문에서 정립한 일반 정리의 특수한 경우이다.
 
 ::: 정리 2 (Grothendieck)
 $\Sh(X; \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 충분한 injective를 가진다.
@@ -60,7 +60,7 @@ $$\Hom_{\operatorname{Mod}(\mathcal{O}_X)}(\mathcal{G}, (i_x)_\ast I_x) \cong \H
 마지막으로 단사 $\mathcal{F} \hookrightarrow \mathcal{I}$를 구성한다. 각 $x$마다 위 adjunction에 의해 합성 $\mathcal{F}_x \hookrightarrow I_x$는 sheaf morphism $\mathcal{F} \rightarrow (i_x)_\ast I_x$에 대응하고, 이들을 모아 $\mathcal{F} \rightarrow \mathcal{I}$를 얻는다. 이 morphism이 단사임은 stalk를 점 $y$에서 보아 확인한다. 곱 $\mathcal{I} = \prod_x (i_x)_\ast I_x$에는 $y$ 성분으로의 projection $\mathcal{I} \rightarrow (i_y)_\ast I_y$가 있고, skyscraper sheaf의 stalk가 $((i_y)_\ast I_y)_y = I_y$이므로 이 projection의 stalk를 $y$에서 취하면 morphism $\mathcal{I}_y \rightarrow I_y$를 얻는다. 합성 $\mathcal{F}_y \rightarrow \mathcal{I}_y \rightarrow I_y$는 구성에 의해 처음에 택한 단사 $\mathcal{F}_y \hookrightarrow I_y$와 일치하므로 $\mathcal{F}_y \rightarrow \mathcal{I}_y$ 또한 단사이고, 모든 $y$에서 stalk가 단사이므로 [명제 1](#prop1){: data-lid="xs2ia" }에 의해 $\mathcal{F} \rightarrow \mathcal{I}$는 monomorphism이다.
 :::
 
-이 정리로부터 $\Sh(X)$ 위에서 $D(\mathcal{A})$의 모든 추상적 기계를 가동할 수 있게 된다. 특히 bounded below derived category $D^+(\Sh(X))$의 임의의 complex는 $K$-injective resolution을 가지며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7){: data-lid="r6nlr" } 직후의 서술), 따라서 임의의 left exact functor의 right derived functor가 정의된다.
+이 정리로부터 $\Sh(X)$ 위에서 $D(\mathcal{A})$의 모든 추상적 기계를 가동할 수 있게 된다. 특히 bounded below derived category $D^+(\Sh(X))$의 임의의 complex는 $K$-injective resolution을 가지며 ([\[호몰로지 대수학\] §유도범주, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7){: data-lid="r6nlr" } 직후의 서술), 따라서 임의의 left exact functor의 right derived functor가 정의된다.
 
 ::: 따름정리 3
 위상공간 $X$에 대해 $D^+(\Sh(X))$ 위의 right derived functor
@@ -68,10 +68,10 @@ $$R\Gamma(X, -): D^+(\Sh(X)) \rightarrow D^+(\Ab), \qquad Rf_\ast: D^+(\Sh(X)) \
 가 존재한다. 여기서 $f: X \rightarrow Y$는 continuous map이다. 한 점으로의 morphism $a_X: X \rightarrow \{\ast\}$에 대해 $\Sh(\{\ast\}) = \Ab$이고 $(a_X)_\ast = \Gamma(X, -)$이므로, $R\Gamma(X, -) = R(a_X)_\ast$이다.
 :::
 ::: 증명
-$\Gamma(X, -)$와 $f_\ast$는 모두 left exact functor이다. $f_\ast$의 left exactness는 그것이 exact functor $f^{-1}$의 right adjoint이기 때문이고 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-lid="z8fhc" }), $\Gamma(X, -) = (a_X)_\ast$는 그 특수한 경우이다. [정리 2](#thm2){: data-lid="j1r8i" }에 의해 $\Sh(X)$가 충분한 injective를 가지므로, [\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="okwdv" }의 right derived functor 구성이 그대로 적용된다. $\{\ast\}$ 위의 sheaf는 그 유일한 열린집합 $\{\ast\}$ 위의 section, 즉 하나의 abelian group으로 결정되므로 $\Sh(\{\ast\}) = \Ab$이고, 정의에 의해 $(a_X)_\ast \mathcal{F} = \mathcal{F}(X) = \Gamma(X, \mathcal{F})$이다.
+$\Gamma(X, -)$와 $f_\ast$는 모두 left exact functor이다. $f_\ast$의 left exactness는 그것이 exact functor $f^{-1}$의 right adjoint이기 때문이고 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-lid="z8fhc" }), $\Gamma(X, -) = (a_X)_\ast$는 그 특수한 경우이다. [정리 2](#thm2){: data-lid="j1r8i" }에 의해 $\Sh(X)$가 충분한 injective를 가지므로, [\[호몰로지 대수학\] §유도범주, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="okwdv" }의 right derived functor 구성이 그대로 적용된다. $\{\ast\}$ 위의 sheaf는 그 유일한 열린집합 $\{\ast\}$ 위의 section, 즉 하나의 abelian group으로 결정되므로 $\Sh(\{\ast\}) = \Ab$이고, 정의에 의해 $(a_X)_\ast \mathcal{F} = \mathcal{F}(X) = \Gamma(X, \mathcal{F})$이다.
 :::
 
-[\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="pr3fk" } 직후에서 보았듯이, 대상 $\mathcal{F} \in \Sh(X)$를 $\mathcal{F}[0] \in D^+(\Sh(X))$로 볼 때 cohomology를 취하면 고전적인 derived functor가 복원된다. 즉
+[\[호몰로지 대수학\] §유도범주, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8){: data-lid="pr3fk" } 직후에서 보았듯이, 대상 $\mathcal{F} \in \Sh(X)$를 $\mathcal{F}[0] \in D^+(\Sh(X))$로 볼 때 cohomology를 취하면 고전적인 derived functor가 복원된다. 즉
 $$H^i(R\Gamma(X, \mathcal{F})) = H^i(X, \mathcal{F}), \qquad H^q(Rf_\ast \mathcal{F}) = R^q f_\ast \mathcal{F}$$
 가 성립하며, 우변은 각각 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1){: data-lid="ld0fc" }의 sheaf cohomology와 그 글 후반부의 higher direct image이다. 이로써 $Rf_\ast \mathcal{F}$는 모든 $R^q f_\ast \mathcal{F}$를 한 complex의 cohomology로 묶어 담는 단일한 대상이 된다.
 
@@ -126,7 +126,7 @@ Ringed space $(X, \mathcal{O}_X)$ 위에서 다음을 정의한다.
 2. 고정된 complex $\mathcal{F}^\bullet$에 대해 left exact functor $\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, -)$의 right derived functor를 *derived sheaf-Hom<sub>유도 층 $\Hom$</sub>* $R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet)$로 적는다. 이는 $\mathcal{G}^\bullet$의 injective resolution 위에서 계산한다.
 :::
 
-이 두 functor는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-lid="1a1ko" }에서 추상적으로 정의한 $R\Hom$과 $\otimes^L$의 sheaf 차원 버전이며, 같은 명제와 그 직후 서술에 의해 그 cohomology가 고전적 derived functor를 복원한다. 구체적으로 sheaf 차원에서
+이 두 functor는 [\[호몰로지 대수학\] §유도범주, ⁋명제 11](/ko/math/homological_algebra/derived_categories#prop11){: data-lid="1a1ko" }에서 추상적으로 정의한 $R\Hom$과 $\otimes^L$의 sheaf 차원 버전이며, 같은 명제와 그 직후 서술에 의해 그 cohomology가 고전적 derived functor를 복원한다. 구체적으로 sheaf 차원에서
 $$\mathcal{E}xt^i_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G}) = H^i(R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})), \qquad \mathcal{T}or^{\mathcal{O}_X}_i(\mathcal{F}, \mathcal{G}) = H^{-i}(\mathcal{F} \otimes^L_{\mathcal{O}_X} \mathcal{G})$$
 가 성립하며, 우변의 $\mathcal{E}xt$와 $\mathcal{T}or$는 sheaf-valued local derived functor이다. 한편 hom-tensor adjunction은 derived 차원으로 올라가서도 유지된다.
 
@@ -136,14 +136,14 @@ $$R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet \otimes^L_{\mathcal{O}_X} \
 이 성립한다.
 :::
 ::: 증명
-이는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="slfot" }의 derived adjunction을 $F = (-) \otimes_{\mathcal{O}_X} \mathcal{G}^\bullet$ (right exact)와 $G = \mathcal{H}om_{\mathcal{O}_X}(\mathcal{G}^\bullet, -)$ (left exact)에 적용한 것이다. 미유도 차원에서 tensor-hom adjunction $\mathcal{H}om(\mathcal{A} \otimes \mathcal{G}, \mathcal{H}) \cong \mathcal{H}om(\mathcal{A}, \mathcal{H}om(\mathcal{G}, \mathcal{H}))$이 성립하고, $\mathcal{F}^\bullet$를 $K$-flat resolution으로, $\mathcal{H}^\bullet$를 $K$-injective resolution으로 대체하면 좌변과 우변이 각각 derived functor를 계산하면서 동형이 유지된다. 핵심은 $K$-flat complex와 $\mathcal{G}^\bullet$의 tensor가 다시 derived tensor를 올바르게 계산하고, $K$-injective complex로의 $\mathcal{H}om$이 derived sheaf-Hom을 올바르게 계산한다는 데 있다.
+이는 [\[호몰로지 대수학\] §유도범주, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="slfot" }의 derived adjunction을 $F = (-) \otimes_{\mathcal{O}_X} \mathcal{G}^\bullet$ (right exact)와 $G = \mathcal{H}om_{\mathcal{O}_X}(\mathcal{G}^\bullet, -)$ (left exact)에 적용한 것이다. 미유도 차원에서 tensor-hom adjunction $\mathcal{H}om(\mathcal{A} \otimes \mathcal{G}, \mathcal{H}) \cong \mathcal{H}om(\mathcal{A}, \mathcal{H}om(\mathcal{G}, \mathcal{H}))$이 성립하고, $\mathcal{F}^\bullet$를 $K$-flat resolution으로, $\mathcal{H}^\bullet$를 $K$-injective resolution으로 대체하면 좌변과 우변이 각각 derived functor를 계산하면서 동형이 유지된다. 핵심은 $K$-flat complex와 $\mathcal{G}^\bullet$의 tensor가 다시 derived tensor를 올바르게 계산하고, $K$-injective complex로의 $\mathcal{H}om$이 derived sheaf-Hom을 올바르게 계산한다는 데 있다.
 :::
 
 명제는 sheaf-Hom의 global section을 취하면 $R\Hom_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet) = R\Gamma(X, R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet, \mathcal{G}^\bullet))$의 형태로 global derived Hom과 연결되며, 그 cohomology가 sheaf의 $\Ext$-group $\Ext^i_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$를 준다. Local $\mathcal{E}xt$ sheaf와 global $\Ext$ group 사이의 관계는 $R\Gamma$를 사이에 끼운 composite functor의 spectral sequence, 즉 local-to-global $\Ext$ spectral sequence로 나타나는데, 이는 다음 절의 합성 정리의 한 사례이다.
 
 ## 유도 수반과 합성
 
-이제 derived category 차원에서 sheaf functor들이 이루는 adjunction을 정리한다. 미유도 차원의 adjoint pair $(f^{-1}, f_\ast)$와 $(f^\ast, f_\ast)$를 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="rikop" }에 통과시키면 다음을 얻는다.
+이제 derived category 차원에서 sheaf functor들이 이루는 adjunction을 정리한다. 미유도 차원의 adjoint pair $(f^{-1}, f_\ast)$와 $(f^\ast, f_\ast)$를 [\[호몰로지 대수학\] §유도범주, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="rikop" }에 통과시키면 다음을 얻는다.
 
 ::: 정리 9
 Continuous map $f: X \rightarrow Y$에 대해 다음의 derived adjunction이 성립한다.
@@ -156,7 +156,7 @@ $$\Hom_{D(\operatorname{Mod}(\mathcal{O}_X))}(Lf^\ast \mathcal{G}^\bullet, \math
 이 성립한다.
 :::
 ::: 증명
-두 경우 모두 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="lzy7t" }의 직접 적용이다. 첫 번째 경우, $f^{-1}$은 exact (right exact)이고 $f_\ast$는 left exact이며 $(f^{-1}, f_\ast)$는 adjoint pair이다 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-lid="lo9ww" }). $f^{-1}$이 exact하므로 [명제 5](#prop5){: data-lid="79z5l" }에 의해 $Lf^{-1} = f^{-1}$이고, 인용한 derived adjunction이 $Lf^{-1} = f^{-1}$과 $Rf_\ast$ 사이의 adjunction으로 환원된다. 두 번째 경우, $f^\ast$는 right exact이고 $f_\ast$는 left exact이며 $(f^\ast, f_\ast)$가 adjoint pair이므로 ([정의 6](#def6){: data-lid="vp5n3" } 직후), 같은 명제에 의해 $(Lf^\ast, Rf_\ast)$가 adjoint pair이다.
+두 경우 모두 [\[호몰로지 대수학\] §유도범주, ⁋명제 14](/ko/math/homological_algebra/derived_categories#prop14){: data-lid="lzy7t" }의 직접 적용이다. 첫 번째 경우, $f^{-1}$은 exact (right exact)이고 $f_\ast$는 left exact이며 $(f^{-1}, f_\ast)$는 adjoint pair이다 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11){: data-lid="lo9ww" }). $f^{-1}$이 exact하므로 [명제 5](#prop5){: data-lid="79z5l" }에 의해 $Lf^{-1} = f^{-1}$이고, 인용한 derived adjunction이 $Lf^{-1} = f^{-1}$과 $Rf_\ast$ 사이의 adjunction으로 환원된다. 두 번째 경우, $f^\ast$는 right exact이고 $f_\ast$는 left exact이며 $(f^\ast, f_\ast)$가 adjoint pair이므로 ([정의 6](#def6){: data-lid="vp5n3" } 직후), 같은 명제에 의해 $(Lf^\ast, Rf_\ast)$가 adjoint pair이다.
 :::
 
 이 adjunction은 sheaf 이론의 기본적인 functoriality를 derived 차원에서 한 줄로 정리한다. 특히 $f: X \rightarrow \{\ast\}$의 경우 [따름정리 3](#cor3){: data-lid="roott" }에 의해 $Rf_\ast = R\Gamma(X, -)$이고, $f^{-1}$은 abelian group $A$를 constant sheaf $A_X$로 보내므로, adjunction의 첫 부분은 $\Hom_{D(\Ab)}(A, R\Gamma(X, \mathcal{F}^\bullet)) \cong \Hom_{D(\Sh(X))}(A_X, \mathcal{F}^\bullet)$의 형태가 되어, constant sheaf로부터의 morphism이 cohomology를 계산하는 통로임을 derived 차원에서 보여 준다.
@@ -171,7 +171,7 @@ $$R(g f)_\ast \cong Rg_\ast \circ Rf_\ast$$
 ::: 증명
 핵심은 $f_\ast$가 injective sheaf를 $g_\ast$-acyclic sheaf로 보낸다는 사실이다. $f_\ast$는 exact functor $f^{-1}$의 right adjoint이므로 injective object를 injective object로 보낸다. 즉 $\mathcal{I}$가 injective이면 $f_\ast \mathcal{I}$도 injective이고, injective sheaf는 flasque이며 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9){: data-lid="nmn2c" }) flasque sheaf는 $g_\ast$-acyclic이다 ([명제 4](#prop4){: data-lid="5cd7a" }의 증명).
 
-이제 $\mathcal{F}^\bullet \in D^+(\Sh(X))$의 resolution 가운데 각 항이 injective이고 bounded below인 $\mathcal{I}^\bullet$을 택하자. 이는 [\[호몰로지 대수학\] §유도카테고리, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7){: data-lid="zv107" }에 의해 $K$-injective이므로, 정의에 의해 $Rf_\ast \mathcal{F}^\bullet = f_\ast \mathcal{I}^\bullet$이다. $f_\ast \mathcal{I}^\bullet$은 $g_\ast$-acyclic 항으로 이루어진 bounded below complex이므로 [명제 4](#prop4){: data-lid="1hjhr" }의 논법을 complex 차원에 적용하여 $Rg_\ast(f_\ast \mathcal{I}^\bullet) = g_\ast f_\ast \mathcal{I}^\bullet$을 얻는다. 한편 $(gf)_\ast = g_\ast f_\ast$이고 $\mathcal{I}^\bullet$은 $(gf)_\ast$를 계산하는 데 쓸 수 있는 $K$-injective resolution이므로 $R(gf)_\ast \mathcal{F}^\bullet = (gf)_\ast \mathcal{I}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet$이다. 따라서
+이제 $\mathcal{F}^\bullet \in D^+(\Sh(X))$의 resolution 가운데 각 항이 injective이고 bounded below인 $\mathcal{I}^\bullet$을 택하자. 이는 [\[호몰로지 대수학\] §유도범주, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7){: data-lid="zv107" }에 의해 $K$-injective이므로, 정의에 의해 $Rf_\ast \mathcal{F}^\bullet = f_\ast \mathcal{I}^\bullet$이다. $f_\ast \mathcal{I}^\bullet$은 $g_\ast$-acyclic 항으로 이루어진 bounded below complex이므로 [명제 4](#prop4){: data-lid="1hjhr" }의 논법을 complex 차원에 적용하여 $Rg_\ast(f_\ast \mathcal{I}^\bullet) = g_\ast f_\ast \mathcal{I}^\bullet$을 얻는다. 한편 $(gf)_\ast = g_\ast f_\ast$이고 $\mathcal{I}^\bullet$은 $(gf)_\ast$를 계산하는 데 쓸 수 있는 $K$-injective resolution이므로 $R(gf)_\ast \mathcal{F}^\bullet = (gf)_\ast \mathcal{I}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet$이다. 따라서
 $$R(gf)_\ast \mathcal{F}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet = Rg_\ast(f_\ast \mathcal{I}^\bullet) = Rg_\ast Rf_\ast \mathcal{F}^\bullet$$
 이 성립한다. Ringed space 차원도 동일하다.
 :::

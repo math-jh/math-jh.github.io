@@ -1,7 +1,7 @@
 ---
 title: "선형대수학의 기본정리"
-description: "유클리드 공간의 선형사상과 행렬은 단순히 같은 차원을 갖는 것뿐만 아니라, 자연스러운 동형사상으로 실제 같은 공간을 이룸을 보인다."
-excerpt: "선형대수학의 기본정리"
+description: "선형사상 공간과 행렬 공간이 자연스러운 동형사상으로 실제 같은 공간을 이룸을 보이는 선형대수학의 기본정리를 증명한다. 유클리드 공간과 일반적인 경우, 그리고 기저변환 행렬을 다룬다."
+excerpt: "선형대수학의 기본정리 증명과 기저변환 행렬"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/ftla

@@ -1,7 +1,7 @@
 ---
 title: "최고 무게 가군"
-description: "Semisimple Lie algebra의 Borel subalgebra로 유도되는 Verma module M(λ)를 구성하고, 그 보편성과 PBW 기저, 유일한 maximal submodule과 irreducible quotient L(λ)를 확립한다. 이로부터 유한차원 irreducible 표현이 정확히 dominant integral weight λ에 대한 L(λ)들로 분류된다는 최고 무게 정리를 각 simple root의 sl₂-triple과 Weyl complete reducibility를 통해 증명한다."
-excerpt: "Borel subalgebra, weight, highest weight vector, Verma module M(λ), irreducible quotient L(λ), dominant integral weight, 최고 무게 정리"
+description: "Semisimple Lie algebra의 Verma module과 irreducible quotient를 구성하고, 유한차원 irreducible 표현을 분류하는 최고 무게 정리를 증명한다."
+excerpt: "Verma module과 최고 무게 정리의 증명"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/highest_weight_modules

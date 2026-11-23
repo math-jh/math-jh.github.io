@@ -1,7 +1,7 @@
 ---
 title: "Hodge 이론"
-description: "콤팩트 Kähler manifold 위에서 Hodge star와 d·∂·∂̄의 형식 수반작용소, 그로부터 정의되는 Laplace 작용소와 조화형식을 세운다. 타원작용소 이론의 귀결인 Hodge 정리로 각 de Rham 코호몰로지류에 유일한 조화 대표가 대응함을 서술하고, Kähler 항등식에서 따라오는 Δ_d = 2Δ_∂̄를 이용해 조화형식이 (p,q)-차수로 쪼개짐을 본다. 이로부터 Hodge decomposition H^k(X,ℂ) = ⊕_{p+q=k} H^{p,q}, Hodge symmetry h^{p,q} = h^{q,p}, 홀수 Betti 수가 짝수라는 위상적 귀결, Hodge diamond, 그리고 hard Lefschetz 정리를 유도한다."
-excerpt: "Hodge star, 수반작용소 d^*·∂^*·∂̄^*, Laplace 작용소, 조화형식, Hodge 정리, 조화 대표, Δ_d = 2Δ_∂̄, Hodge decomposition, H^{p,q}≅H^q(X,Ω^p), Hodge symmetry, Hodge 수, 홀수 Betti 수는 짝수, Hodge diamond, CP^n, Lefschetz 연산자, hard Lefschetz 정리"
+description: "콤팩트 Kähler manifold 위에서 형식 수반작용소와 조화형식을 정의하고 Hodge 정리를 서술한다. 이어 Hodge 분해와 hard Lefschetz 정리를 유도한다."
+excerpt: "조화형식과 Hodge 정리, Hodge 분해와 hard Lefschetz 정리"
 
 categories: [Math / Complex Geometry]
 permalink: /ko/math/complex_geometry/hodge_theory
@@ -320,7 +320,7 @@ $$
 L^{n-k} : H^k(X, \mathbb{C}) \xrightarrow{\ \cong\ } H^{2n-k}(X, \mathbb{C})
 $$
 
-은 동형이다. 더 나아가 $k$번째 *primitive cohomology*를 $P^k = \ker(L^{n-k+1} : H^k \rightarrow H^{2n-k+2})$로 두면, *Lefschetz decomposition<sub>레프셰츠 분해</sub>*
+은 동형이다. 더 나아가 $k$번째 *primitive cohomology*를 $P^k = \ker(L^{n-k+1} : H^k \rightarrow H^{2n-k+2})$로 두면, *Lefschetz decomposition<sub>렙셰츠 분해</sub>*
 
 $$
 H^k(X, \mathbb{C}) = \bigoplus_{j \geq 0} L^j\, P^{k-2j}

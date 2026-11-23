@@ -1,7 +1,7 @@
 ---
 title: "연결성과 중간값 정리"
-description: "거리공간의 subset에 대한 connectedness를 정의하고, ℝ의 connected subset이 정확히 구간임을 증명한다. 연속함수가 connectedness를 보존함을 보여 중간값 정리를 얻고, fixed point와 홀수차 polynomial의 real root에 응용한다. path-connectedness와 topologist's sine curve로 두 개념이 다름을 확인한다."
-excerpt: "connected set, 구간, 중간값 정리, path-connectedness"
+description: "거리공간 부분집합의 연결성을 정의하고 실수의 연결집합이 구간임을 증명한다. 연속함수를 통한 중간값 정리의 증명과 응용을 다루고, 위상수학자의 사인곡선으로 경로연결과의 차이를 확인한다."
+excerpt: "연결집합, 구간, 중간값 정리, 경로연결"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/connectedness

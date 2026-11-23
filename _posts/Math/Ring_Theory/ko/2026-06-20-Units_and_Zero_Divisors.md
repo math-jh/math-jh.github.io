@@ -1,7 +1,7 @@
 ---
 title: "가역원과 영인자"
-description: "환의 unit, zero divisor와 regular element를 정의하고, unit이 결코 zero divisor가 아님을 보인다. 유한가환환에서는 모든 regular element가 unit임을 곱셈사상의 단사성으로 증명하여, 유한 integral domain이 field임을 따름정리로 얻는다."
-excerpt: "Unit, regular element, 그리고 유한가환환에서 regular element가 unit이 되는 현상"
+description: "환의 가역원, 영인자와 정칙원을 정의하고, 가역원이 결코 영인자가 아님을 보인다. 유한가환환에서는 모든 정칙원이 가역원임을 곱셈사상의 단사성으로 증명하여, 유한 정역이 체임을 따름정리로 얻는다."
+excerpt: "가역원의 뜻, 정칙원, 그리고 유한가환환에서 정칙원이 가역원이 되는 현상"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/units_and_zero_divisors

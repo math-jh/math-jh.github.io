@@ -1,7 +1,7 @@
 ---
 title: "대수적 스택"
-description: "Diagonal의 representability와 smooth atlas로 algebraic stack(Artin·Deligne–Mumford)을 정의하고, group action의 quotient stack [U/G]와 BG=[pt/G]를 구성하여 그 기하적 의미를 다룬다."
-excerpt: "Algebraic (Artin / Deligne–Mumford) stacks via atlases, and the quotient stack [U/G]"
+description: "표현가능 사상과 smooth atlas로 algebraic stack(Artin·Deligne–Mumford)을 정의하고, group action의 quotient stack을 구성한다."
+excerpt: "Deligne–Mumford stack과 quotient stack의 정의"
 
 categories: [Math / Stacks]
 permalink: /ko/math/stacks/algebraic_stacks

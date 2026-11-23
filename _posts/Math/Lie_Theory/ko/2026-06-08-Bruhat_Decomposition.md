@@ -1,7 +1,7 @@
 ---
 title: "Bruhat decomposition"
-description: "Connected reductive algebraic group의 Bruhat decomposition을 정의하고, parabolic subgroup로 확장하여 partial flag variety의 cell decomposition을 구한다. Grassmannian의 구체적 대응과 Schubert cell·Schubert variety의 구조를 살펴본다."
-excerpt: "Bruhat decomposition을 중심으로 한 homogeneous space의 cell decomposition, parabolic subgroup, 그리고 Grassmannian에서의 Schubert variety"
+description: "Bruhat decomposition을 정의하고 parabolic subgroup로 확장한다. Grassmannian과 Schubert variety의 구조를 살펴본다."
+excerpt: "Parabolic subgroup으로의 일반화와 Schubert variety"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/bruhat_decomposition

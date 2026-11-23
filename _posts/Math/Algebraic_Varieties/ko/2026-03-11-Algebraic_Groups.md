@@ -1,7 +1,7 @@
 ---
 title: "대수적 군"
-description: "Variety 위의 group 구조를 정의하고 translation이 주는 homogeneity로부터 매끄러움과 identity component의 구조를 얻은 뒤, affine algebraic group의 coordinate ring이 갖는 comodule 구조와 representation, torus의 weight decomposition, 그리고 orbit과 homogeneous space를 다룬다."
-excerpt: "Algebraic groups, their representations, and homogeneous spaces"
+description: "Variety 위의 group 구조로 대수적 군을 정의하고 comodule과 표현을 다룬다. Torus의 weight decomposition과 homogeneous space도 살핀다."
+excerpt: "대수적 군의 정의와 표현, homogeneous space"
 
 categories: [Math / Algebraic Varieties]
 permalink: /ko/math/algebraic_varieties/algebraic_groups

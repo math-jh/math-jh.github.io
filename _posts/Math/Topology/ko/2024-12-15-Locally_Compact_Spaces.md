@@ -1,7 +1,7 @@
 ---
 title: "국소 옹골공간과 일점 옹골화"
-description: "국소적 옹골성의 정의와 성질을 다루고, 일점 옹골화의 구성 및 보편성을 증명하며, LCH 공간이 완전정칙 공간임을 보인다."
-excerpt: "Locally compact Hausdorff space and one-point compactification"
+description: "국소적 옹골공간의 정의와 성질을 다루고, 일점 옹골화의 구성과 하우스도르프 판정 및 보편성을 증명한다. 또한 국소적 옹골 하우스도르프 공간이 완전정칙 공간임을 보인다."
+excerpt: "국소적 옹골공간의 일점 옹골화, 하우스도르프 판정과 완전정칙성"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/locally_compact_spaces

@@ -1,8 +1,8 @@
 ---
 
 title: "몫공간"
-description: "동치관계가 정의된 집합 위에서 몫공간 위상을 도입하는 방법을 다루고, 부분공간의 locally closed 성질과 함께 몫공간의 기본 구조를 정리한다."
-excerpt: "부분공간의 성질들"
+description: "동치관계가 정의된 집합 위에서 몫위상을 도입하여 몫공간을 정의하고, 국소적으로 닫힌 부분공간의 동치조건 증명과 함께 몫공간의 기본 구조를 정리한다."
+excerpt: "몫위상의 정의와 국소적으로 닫힌 부분공간의 성질들"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/quotient_spaces

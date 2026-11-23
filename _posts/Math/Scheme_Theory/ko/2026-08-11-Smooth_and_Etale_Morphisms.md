@@ -1,7 +1,7 @@
 ---
 title: "매끄러운 사상과 에탈 사상"
-description: "스킴 사상의 매끄러움을 flat이면서 모든 기하적 올이 정칙인 finitely presented 사상으로 정의하고, cotangent sheaf가 relative dimension만큼의 locally free sheaf임과 동치임을 본다. 이 동치의 어려운 방향은 매끄러운 사상이 국소적으로 Jacobian이 최대 rank인 방정식들로 잘린다는 국소 구조 정리를 거쳐 증명한다. Unramified 사상을 대각선이 open embedding인 경우로 특징짓고, étale morphism을 매끄럽고 unramified한 relative dimension 0의 사상으로 도입하며 standard étale 모형과 Jacobian 판정, square-zero 확대에 대한 무한소 lifting 판정을 다룬다."
-excerpt: "Smooth, unramified, and étale morphisms; the Jacobian and infinitesimal lifting criteria"
+description: "스킴의 매끄러운 사상, 비분기 사상, 에탈 사상을 정의하고 국소 구조 정리로 매끄러움의 동치 조건을 증명한다. Jacobian criterion과 무한소 lifting 판정도 다룬다."
+excerpt: "국소 구조 정리와 Jacobian·무한소 lifting 판정"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/smooth_and_etale_morphisms

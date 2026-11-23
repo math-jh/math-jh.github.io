@@ -1,7 +1,7 @@
 ---
 title: "유수를 이용한 실적분 계산"
-description: "유수정리를 이용하여 유리함수의 무한적분, Jordan 보조정리를 통한 Fourier integral, 단위원 치환에 의한 삼각적분, 실축 위의 극이 있는 적분(Cauchy principal value), 분지절단과 열쇠구멍 경로, 그리고 cot를 이용한 무한급수의 합을 계산한다. 각 경로에서 큰 원과 작은 원 위의 적분이 소멸하는 이유를 부등식으로 직접 확인하고, 가정이 빠지면 공식이 어떻게 무너지는지를 반례로 보인다."
-excerpt: "유리함수의 무한적분, Jordan 보조정리, 단위원 치환, Cauchy principal value, 열쇠구멍 경로, 원점 우회 반원, π cot πz 급수 합"
+description: "유수정리로 유리함수의 무한적분, 조르당 보조정리를 통한 푸리에 적분, 코시 주값, 열쇠구멍 경로 적분과 무한급수의 합을 계산한다. 호 위의 적분이 소멸하는 이유를 부등식으로 확인한다."
+excerpt: "조르당 보조정리, 단위원 치환, 코시 주값, 열쇠구멍 경로와 급수의 합"
 
 categories: [Math / Complex Analysis]
 permalink: /ko/math/complex_analysis/residue_integrals

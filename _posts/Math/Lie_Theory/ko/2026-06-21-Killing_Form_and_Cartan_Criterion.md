@@ -1,7 +1,7 @@
 ---
 title: "Killing 형식과 Cartan 판정법"
-description: "Lie algebra 위의 Killing form을 adjoint representation의 trace로 정의하고 그 invariance와 ideal restriction 성질을 정리한 뒤, trace form lemma로부터 Cartan의 가해성 판정법과 반단순성 판정법을 증명한다. 반단순 Lie algebra가 simple ideal들의 직합으로 분해됨도 보인다."
-excerpt: "Killing form, invariance, Cartan의 가해성·반단순성 판정, simple ideal 직합 분해"
+description: "Lie algebra 위의 Killing form을 정의하고 invariance와 ideal restriction 성질을 정리한 뒤, Cartan의 가해성·반단순성 판정법을 증명한다."
+excerpt: "Killing form, Cartan의 가해성·반단순성 판정, 직합 분해"
 
 categories: [Math / Lie Theory]
 permalink: /ko/math/lie_theory/killing_form_and_cartan_criterion
