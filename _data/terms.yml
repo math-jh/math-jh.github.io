@@ -3701,6 +3701,13 @@ C:
     url: /ko/math/set_theory/operation_of_binary_relations
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: composition_of_binary_relations
+  en: composition of binary relations
+  ko: 이항관계의 합성
+  primary: ko
+  defs:
+  - label: '[집합론] §이항관계들 사이의 연산'
+    url: /ko/math/set_theory/operation_of_binary_relations
 - id: composition_of_functions
   en: composition of functions
   ko: 함수의 합성
