@@ -26,8 +26,11 @@ en 짝의 라벨 구조가 ko와 다르면(번역 밀림) en 파일 자체는 �
 맡기고 건드리지 않되, en permalink를 가리키는 외부 참조는 재생성 결과(=ko의 번호)에
 맞춰 미리 갱신한다. 여기서 안 고치면 영영 고칠 기회가 없다.
 
-자동 치환하지 않고 REVIEW로만 보고: 링크 없는 맨텍스트 언급, 명시형 {#id}의
-id 자체(표시 번호는 shift), 텍스트↔앵커 불일치 등 판단이 필요한 것 전부.
+명시형 {#id}는 id가 그 박스의 번호로 끝나면(`{#conj5}`) 번호와 함께 개명해 같은
+경로로 전파한다. 번호를 따르지 않는 커스텀 id(`명제 5 {#prop-def3}`)는 그대로 둔다.
+
+자동 치환하지 않고 REVIEW로만 보고: 링크 없는 맨텍스트 언급, 번호를 따르지 않는
+명시형 커스텀 id(표시 번호는 shift), 텍스트↔앵커 불일치 등 판단이 필요한 것 전부.
 """
 
 from __future__ import annotations
@@ -55,7 +58,7 @@ REVIEW: list[str] = []
 DANGLING: list[str] = []
 DANGLING_ANCHORS: set[str] = set()   # --allow-dangling 시 사후 게이트에서 제외할 앵커
 TALLY: dict[tuple[str, str], int] = {}   # (파일, 변경 종류) → 건수 (변경 내역 보고용)
-TALLY_KINDS = ("라벨 정의 줄", "증명 귀속", "글 내부 참조", "inbound 인용", "url 앵커")
+TALLY_KINDS = ("라벨 정의 줄", "명시형 id", "증명 귀속", "글 내부 참조", "inbound 인용", "url 앵커")
 
 
 def tally(rel: str, kind: str) -> None:
@@ -203,6 +206,7 @@ class Ctx:
     target_paths: set[str]                         # 대상 글의 ko·en permalink
     valid_anchors: set[str] = field(default_factory=set)   # shift 전 실존 유도형 앵커
     after_anchors: set[str] = field(default_factory=set)   # shift 후 실존하게 될 앵커
+    id_rename: dict[str, str] = field(default_factory=dict)  # 번호로 끝나는 명시형 id → 새 id
 
 
 def check_unreadable_labels(doc, rel: str) -> None:
@@ -234,7 +238,8 @@ def masked_segments(text: str) -> list[str]:
     return sorted(text[s:e] for s, e in protected_spans(text))
 
 
-def shift_opening_lines(text: str, doc, mapping: dict[int, int], rel: str) -> list[tuple[int, int, str]]:
+def shift_opening_lines(text: str, doc, mapping: dict[int, int], id_rename: dict[str, str],
+                        rel: str) -> list[tuple[int, int, str]]:
     """::: 여는 줄들(파서가 준 줄번호만)의 번호 shift → char-range 에딧 목록."""
     offs = line_offsets(text)
     lines = text.split("\n")
@@ -255,11 +260,17 @@ def shift_opening_lines(text: str, doc, mapping: dict[int, int], rel: str) -> li
         if n != 1:
             REVIEW.append(f"{rel}:{b.line_start}: 여는 줄 번호 치환 실패 — 수동 확인: {old_line!r}")
             continue
+        if b.explicit and b.anchor in id_rename:
+            new_line, k = re.subn(rf"\{{#{re.escape(b.anchor)}(?=[\s}}])",
+                                  "{#" + id_rename[b.anchor], new_line, count=1)
+            if k != 1:
+                fail(f"{rel}:{b.line_start}: 명시형 id {{#{b.anchor}}} 치환 실패: {old_line!r}")
+            tally(rel, "명시형 id")
         edit_line(b.line_start, new_line)
         tally(rel, "라벨 정의 줄")
-        if b.explicit:
-            REVIEW.append(f"{rel}:{b.line_start}: 명시형 {{#{b.anchor}}} — 표시 번호만 "
-                          f"{b.number}→{mapping[b.number]} shift, id는 유지 (id 개명 여부 판단 필요)")
+        if b.explicit and b.anchor not in id_rename:
+            REVIEW.append(f"{rel}:{b.line_start}: 명시형 {{#{b.anchor}}} — 번호를 따르지 않는 "
+                          f"커스텀 id라 유지, 표시 번호만 {b.number}→{mapping[b.number]} shift")
     for pr in doc.proofs:
         if not pr.standalone or not pr.target_text:
             continue
@@ -302,7 +313,7 @@ def shift_citations(text: str, own_paths: set[str], ctx: Ctx,
         aword, anum = m.group("anchor"), m.group("anum")
         body = m.group("text")
 
-        if anum and aword in PREFIX_KIND:
+        if anum and aword in PREFIX_KIND and aword + anum not in ctx.explicit_map:
             anchor = aword + anum
             if anchor not in ctx.valid_anchors:
                 note_dangling(ctx, anchor, rel, li.of(m.start()), m.group(0))
@@ -329,24 +340,34 @@ def shift_citations(text: str, own_paths: set[str], ctx: Ctx,
             tally(rel, cite_kind)
             josa_check(text, m.end(), old, new, rel, li.of(m.start()))
         else:
-            # 명시형 id 앵커: id는 verbatim 유지, 표시 번호만 shift.
+            # 명시형 id 앵커: 번호로 끝나는 id는 개명(id_rename), 커스텀 id는 유지.
+            # 표시 번호는 어느 쪽이든 shift.
             full_id = aword + anum
             if full_id not in ctx.explicit_map:
                 continue
             kinds, old = ctx.explicit_map[full_id]
             if old not in ctx.mapping:
                 continue
+            new_id = ctx.id_rename.get(full_id, full_id)
             alt = "|".join(re.escape(k) for k in sorted(kinds, key=len, reverse=True))
             cands = [t for t in re.finditer(rf"(?:{alt})[ \t]+(\d+)(?!\d)", body)
                      if int(t.group(1)) == old]
-            if not cands:
+            new_body = body
+            if cands:
+                t = cands[-1]
+                new_body = body[:t.start(1)] + str(ctx.mapping[old]) + body[t.end(1):]
+            elif new_id != full_id:
+                REVIEW.append(f"{rel}:{li.of(m.start())}: 명시형 #{full_id} 참조의 텍스트에 "
+                              f"번호 {old} 없음 — 앵커만 #{new_id}로 바꿈: {m.group(0)[:100]!r}")
+            if new_body == body and new_id == full_id:
                 continue
-            t = cands[-1]
-            new_body = body[:t.start(1)] + str(ctx.mapping[old]) + body[t.end(1):]
-            edits.append((m.start(), m.end(), f"[{new_body}]({m.group('path')}#{full_id})"))
+            edits.append((m.start(), m.end(), f"[{new_body}]({m.group('path')}#{new_id})"))
             tally(rel, cite_kind)
-            REVIEW.append(f"{rel}:{li.of(m.start())}: 명시형 #{full_id} 참조 — 표시 번호만 "
-                          f"{old}→{ctx.mapping[old]}, id 유지")
+            if cands:
+                josa_check(text, m.end(), old, ctx.mapping[old], rel, li.of(m.start()))
+            if new_id == full_id:
+                REVIEW.append(f"{rel}:{li.of(m.start())}: 명시형 #{full_id} 참조 — 커스텀 id라 "
+                              f"유지, 표시 번호만 {old}→{ctx.mapping[old]}")
     return edits
 
 
@@ -358,8 +379,12 @@ def shift_data_urls(text: str, ctx: Ctx, rel: str) -> list[tuple[int, int, str]]
         if m.group("path").rstrip("/") not in ctx.target_paths:
             continue
         aword, anum = m.group("aword"), m.group("anum")
-        if aword not in PREFIX_KIND:
-            continue  # 명시형 id·기타 앵커는 번호를 유도하지 않으므로 그대로 둔다
+        if aword + anum in ctx.id_rename:
+            edits.append((m.start("aword"), m.end("anum"), ctx.id_rename[aword + anum]))
+            tally(rel, "url 앵커")
+            continue
+        if aword not in PREFIX_KIND or aword + anum in ctx.explicit_map:
+            continue  # 커스텀 명시형 id·기타 앵커는 번호를 유도하지 않으므로 그대로 둔다
         anchor = aword + anum
         if anchor not in ctx.valid_anchors:
             note_dangling(ctx, anchor, rel, li.of(m.start()), m.group(0))
@@ -434,7 +459,7 @@ def transform_md(path: Path, rel: str, ctx: Ctx, is_target: bool,
     if is_target:
         doc = parse_labels(text)
         check_unreadable_labels(doc, rel)
-        edits += shift_opening_lines(text, doc, ctx.mapping, rel)
+        edits += shift_opening_lines(text, doc, ctx.mapping, ctx.id_rename, rel)
         bare_text_scan(text, doc, ctx.mapping, rel)
     else:
         inbound_bare_scan(text, ctx, rel)
@@ -483,6 +508,35 @@ def build_explicit_map(doc, en_doc) -> dict[str, tuple[set[str], int]]:
     return out
 
 
+def build_id_rename(doc, mapping: dict[int, int]) -> dict[str, str]:
+    """번호로 끝나는 명시형 id(`추정 5 {#conj5}`) → 새 번호의 id(`#conj3`).
+
+    id 끝의 숫자가 그 박스의 번호와 같을 때만 개명한다. 커스텀 id(`명제 5 {#prop-def3}`)는
+    그대로 둔다. 개명 결과가 글 안의 다른 앵커와 겹치면 쓰기 전에 멈춘다.
+    """
+    out: dict[str, str] = {}
+    for b in doc.boxes:
+        if not b.explicit or b.number is None or b.number not in mapping:
+            continue
+        m = re.fullmatch(r"(.*\D)(\d+)", b.anchor)
+        if m and int(m.group(2)) == b.number and mapping[b.number] != b.number:
+            out[b.anchor] = f"{m.group(1)}{mapping[b.number]}"
+    if out:
+        before = [b.anchor for b in doc.boxes if b.anchor]
+        after = []
+        for b in doc.boxes:
+            if not b.anchor:
+                continue
+            if b.explicit or b.number is None:
+                after.append(out.get(b.anchor, b.anchor))
+            else:
+                after.append(f"{KIND_PREFIX[b.kind]}{mapping.get(b.number, b.number)}")
+        dup = {a for a in after if after.count(a) > 1} - {a for a in before if before.count(a) > 1}
+        if dup:
+            fail(f"명시형 id 개명 결과가 다른 앵커와 겹친다: {sorted(dup)} — 수동 처리할 것")
+    return out
+
+
 def label_signature(doc) -> set[tuple[str, int]]:
     """(앵커, 번호) 집합 — ko·en 짝의 라벨 구조 대조용."""
     return {(b.anchor, b.number) for b in doc.boxes if b.number is not None}
@@ -522,8 +576,10 @@ def write_backup(changes: list[tuple[str, Path, str]]) -> Path:
 
 def verify_after_apply(written: list[tuple[str, Path]], ctx: Ctx,
                        target_rels: set[str]) -> list[str]:
-    """쓴 뒤 재스캔: 대상 글을 가리키는 유도형 앵커가 전부 실존하는가."""
+    """쓴 뒤 재스캔: 대상 글을 가리키는 유도형 앵커가 전부 실존하고, 개명한 명시형
+    id의 옛 이름이 남지 않았는가."""
     bad = []
+    stale_ids = set(ctx.id_rename) - set(ctx.id_rename.values())
     for rel, path in written:
         text = path.read_text(encoding="utf-8")
         li = LineIndex(text)
@@ -542,9 +598,12 @@ def verify_after_apply(written: list[tuple[str, Path]], ctx: Ctx,
                     continue   # 남의 글의 내부 앵커
                 hits.append((m.start(), m.group("anchor"), m.group("anum")))
         for pos, aword, anum in hits:
-            if not anum or aword not in PREFIX_KIND:
-                continue
             anchor = aword + anum
+            if anchor in stale_ids:
+                bad.append(f"{rel}:{li.of(pos)}: 개명 전 명시형 id #{anchor} 잔존")
+                continue
+            if not anum or aword not in PREFIX_KIND or anchor in ctx.explicit_map:
+                continue
             # --allow-dangling으로 이미 보고하고 통과시킨 것은 다시 세지 않는다.
             if anchor not in ctx.after_anchors and anchor not in DANGLING_ANCHORS:
                 bad.append(f"{rel}:{li.of(pos)}: #{anchor} 대상 없음")
@@ -588,6 +647,8 @@ def run_shift(args) -> None:
         target_paths={p for p in (ko_pl, en_pl) if p},
     )
     ctx.valid_anchors, ctx.after_anchors = anchor_sets(doc, mapping)
+    ctx.id_rename = build_id_rename(doc, mapping)
+    ctx.after_anchors |= set(ctx.id_rename.values())
 
     print(f"PLAN {target.rel}: 번호 {len(moving)}개 shift "
           f"({moving[0]}..{moving[-1]} → {mapping[moving[0]]}..{mapping[moving[-1]]}, by={args.delta:+d})")
@@ -631,6 +692,8 @@ def run_shift(args) -> None:
     if changes:
         print("── 변경 내역 " + "─" * 56)
         print(f"  번호 매핑: {', '.join(f'{o}→{n}' for o, n in sorted(mapping.items()))}")
+        if ctx.id_rename:
+            print(f"  명시형 id 개명: {', '.join(f'#{o}→#{n}' for o, n in ctx.id_rename.items())}")
         width = max(len(rel) for rel, _, _ in changes)
         for rel, _, _ in changes:
             parts = [f"{k} {TALLY[(rel, k)]}" for k in TALLY_KINDS if (rel, k) in TALLY]
