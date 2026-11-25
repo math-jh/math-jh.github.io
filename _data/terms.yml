@@ -17763,6 +17763,13 @@ R:
   defs:
   - label: '[범주론] §표현가능한 함자'
     url: /ko/math/category_theory/representable_functors
+- id: representable_morphism
+  en: representable morphism
+  ko: 표현가능 사상
+  primary: en
+  defs:
+  - label: '[스택] §대수적 스택'
+    url: /ko/math/stacks/algebraic_stacks
 - id: representable_presheaf
   en: representable presheaf
   ko: 표현가능한 준층
