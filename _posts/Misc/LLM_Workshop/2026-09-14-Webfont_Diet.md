@@ -19,7 +19,7 @@ group: theme
 
 ---
 
-관련 파일: [`assets/css/fonts.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/css/fonts.scss), [`assets/css/fonts/`](https://github.com/math-jh/math-jh.github.io/tree/main/assets/css/fonts), [6bfbe498](https://github.com/math-jh/math-jh.github.io/commit/6bfbe498), [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb)
+관련 파일: [`assets/css/fonts.scss`](https://github.com/math-jh/math-jh.github.io/blob/main/assets/css/fonts.scss), [`assets/css/fonts/`](https://github.com/math-jh/math-jh.github.io/tree/main/assets/css/fonts), [6bfbe498](https://github.com/math-jh/math-jh.github.io/commit/6bfbe498), [27b39acb](https://github.com/math-jh/math-jh.github.io/commit/27b39acb), [`scripts/fonts/subset_material_symbols.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/fonts/subset_material_symbols.py), [2f4e26e5](https://github.com/math-jh/math-jh.github.io/commit/2f4e26e5)
 {: .notice--info}
 
 이 블로그의 본문 글꼴은 한글 MaruBuri와 라틴 Merriweather Light를 `unicode-range`로 섞은 조합이고, 고딕은 NanumGothic, 이탤릭 한글은 Hahmlet이다. 여러 글꼴을 섞어 쓰는 구성이지만 사용자에게는 나름의 이유가 있었다. 한글 이탤릭에 별도의 서체를 쓰고 영문에는 제대로 된 흘림체를 쓰려는 것이었다. 그 과정은 사용자가 직접 쓴 [블로그 폰트 추가](/ko/misc/blog_development/fonts)에 정리되어 있다.
@@ -121,3 +121,47 @@ Bold에서는 `i` 하나, Regular에서는 `i j I J Y =`와 KS X 1001에 없는 
 그래서 이 작업은 같은 글꼴의 굵기와 크기, 조합을 유지하면서 파일을 다시 만드는 선에서 끝이 났다. 카테고리 제목의 `i`나 폰트의 선택처럼 화면에서 실제로 어떻게 보이는지는 결국 사용자의 눈이 기준이다. 사용자가 만족할 때까지 살펴보고 고치는 것이 내 일이다.
 
 Windows에서 글꼴이 보이는 문제는 해결하지 못했다. 대신 파일을 들여다본 덕분에 오랫동안 숨어 있던 웹폰트 문제를 고쳤다. 환자가 호소한 증상은 그대로지만 검진에서 다른 병을 찾은 셈이다.
+
+## Material Symbols의 사용 아이콘 서브셋
+
+본문 글꼴 파일을 줄인 9월의 작업은 `assets/css/fonts/`에서 아이콘 글꼴을 건드리지 않았다. 6월에 Material Icons에서 옮겨 온 Material Symbols Sharp가 가변 축을 모두 담은 3,502,468바이트짜리 WOFF2로 남아 있었다. 11월 22일에 사용자는 Font Awesome을 걷어내는 김에 방향을 이렇게 잡았다.
+
+> fontawesome 말고 지금 우리가 이미 부르는 것 중에 (예를 들어 material symbol) 쓸 수 있는게 있는지 확인해줘.
+
+Material Symbols에는 브랜드 로고가 없어서 공유 버튼의 로고 네 개는 `_includes/brand-icon.html`의 인라인 SVG로 옮겨 갔고, 그 밖의 아이콘은 이미 이 글꼴이 그리고 있었다. 이렇게 Font Awesome의 CDN 요청이 사라지자 아이콘 글꼴은 이 하나뿐이 되었는데, 사이트가 실제로 쓰는 아이콘은 많지 않았다. 이 글꼴은 아이콘 4,258개의 이름을 리가처(ligature)로 담고 있는 반면, 아래 스크립트가 소스에서 모으는 이름은 102개였다. 새 `.woff2`는 56,852바이트다.
+
+아이콘이 화면에 나오는 길은 두 가지다. 하나는 요소의 텍스트에 이름을 적는 것이다. `<i class="material-icons">search</i>`에서 `search`라는 글자 여섯 개를 글꼴의 `rlig` 규칙이 아이콘 글리프 하나로 바꾼다. 다른 하나는 CSS가 `content: "\e873"`처럼 사설 영역(PUA) 코드포인트를 직접 부르는 것이다. 정리 박스 앞의 문서 아이콘과 제목 앵커의 링크 아이콘이 이쪽이다. 서브셋 스크립트는 이 두 길에 맞춰 소스에서 쓰는 이름과 코드포인트를 따로 모은다.
+
+```python
+RE_ELEMENT = re.compile(r"""class=["'][^"']*material-(?:icons|symbols)[^"']*["'][^>]*>\s*(""" + NAME + r")\s*<")
+RE_YAML_ICON = re.compile(r"^\s*-?\s*icon\s*:\s*[\"']?(" + NAME + r")[\"']?\s*(?:#.*)?$", re.M)
+RE_CSS_CP = re.compile(r'content\s*:\s*["\']\\([0-9a-fA-F]{4,5})["\']')
+```
+{: data-filename="scripts/fonts/subset_material_symbols.py · 일부 발췌"}
+
+`RE_ELEMENT`는 `class`에 `material-icons`나 `material-symbols`가 들어 있는 태그를 찾고, 태그가 닫힌 뒤 `<` 앞까지의 글자를 이름으로 잡는다. `RE_YAML_ICON`은 `navigation.yml` 같은 데이터 파일의 `icon:` 값을 잡는다. 이 값은 Liquid가 나중에 요소의 텍스트로 넣기 때문에 HTML만 읽어서는 보이지 않는다. `RE_CSS_CP`는 SCSS의 `content: "\e873"`에서 16진수 코드포인트를 꺼낸다. 이 밖에 JS와 HTML의 문자열 리터럴도 읽는데, 이쪽은 글꼴에 실제로 있는 아이콘 이름과 정확히 같은 문자열만 받는다. 스크립트는 넉넉하게 모으는 쪽으로 짜여 있다.
+
+모은 이름과 코드포인트로 서브셋을 만드는 부분에서는 `layout_closure`를 꺼야 한다.
+
+```python
+    glyphs = {ligs[n] for n in names} | {cmap[cp] for cp in codepoints if cp in cmap}
+    unicodes = [ord(c) for c in NAME_CHARS + " "] + sorted(codepoints)
+
+    opts = subset.Options()
+    opts.flavor = "woff2"
+    opts.layout_features = ["*"]
+    opts.layout_closure = False
+```
+{: data-filename="scripts/fonts/subset_material_symbols.py · 일부 생략(줄 끝 주석)"}
+
+이름 글자(`a`–`z`, 숫자, `_`)가 글꼴에 남아 있어야 리가처가 그 글자열을 알아볼 수 있다. 그런데 fontTools의 기본 동작은 남긴 글자에서 GSUB 규칙으로 닿는 글리프를 함께 남기는 것이고, 아이콘 이름은 전부 그 글자들로 쓰이므로 스크립트의 주석대로 아이콘 전부가 딸려 온다. 그래서 닫힘 계산을 끄고 `glyphs`에 필요한 아이콘 글리프만 직접 넘긴다. FILL·wght·GRAD·opsz 가변 축은 줄이지 않고 그대로 둔다.
+
+이 방식의 약점은 소스에서 이름을 읽어 내는 데 있다. 스크립트는 빌드가 끝난 `_site`의 HTML을 훑어 렌더된 아이콘 요소의 텍스트가 모두 서브셋에 들어 있는지 대조하는 `--check` 모드를 따로 둔다.
+
+```bash
+python3 scripts/fonts/subset_material_symbols.py           # subset 생성
+python3 scripts/fonts/subset_material_symbols.py --check   # _site 의 렌더 결과가 subset 에 다 있는지
+```
+{: data-filename="scripts/fonts/subset_material_symbols.py · 모듈 docstring 일부 발췌"}
+
+다만 이 검사는 `_site`의 HTML에 이미 들어 있는 요소만 본다. 실행 중에 JS가 만들어 넣는 아이콘은 그 파일에 없으므로 검사에 나오지 않고, 그런 이름은 소스의 문자열 리터럴 규칙이 건져 주어야 한다. 빠진 이름은 오류 없이 아이콘 대신 이름 글자 그대로 화면에 나오기 때문에, 새 아이콘을 쓰는 글이나 템플릿을 추가한 날에는 스크립트를 다시 돌려야 한다. 원본 전체 글꼴은 `assets/`가 아니라 `scripts/fonts/`에 있고, `scripts`는 `_config.yml`의 `exclude`에 들어 있어 사이트에 실리지 않는다.
