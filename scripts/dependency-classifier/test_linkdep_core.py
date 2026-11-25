@@ -10,6 +10,7 @@ import tempfile
 import time
 import unittest
 from contextlib import ExitStack
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -65,6 +66,29 @@ class QuotaRoutingTest(unittest.TestCase):
             self.write_state(root, "codex1", self.quota_state(utilization=0.80))
             with patch.object(core, "QUOTA_STATE_DIR", root):
                 self.assertTrue(core.provider_available("Codex"))
+
+    def weekly_state(self, *, weekly: float, hours_left: float, five: float = 0.1) -> dict:
+        reset = datetime.now(timezone.utc) + timedelta(hours=hours_left)
+        state = self.quota_state(utilization=five)
+        state["weekly"] = {"utilization": weekly, "resetTime": reset.isoformat()}
+        return state
+
+    def test_weekly_limit_holds_until_the_final_stretch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with patch.object(core, "QUOTA_STATE_DIR", root):
+                self.write_state(root, "antigravity", self.weekly_state(weekly=0.95, hours_left=30))
+                self.assertFalse(core.provider_available("Antigravity"))
+                self.write_state(root, "antigravity", self.weekly_state(weekly=0.95, hours_left=20))
+                self.assertTrue(core.provider_available("Antigravity"))
+
+    def test_final_stretch_keeps_the_5h_limit(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_state(root, "antigravity",
+                             self.weekly_state(weekly=0.95, hours_left=20, five=0.75))
+            with patch.object(core, "QUOTA_STATE_DIR", root):
+                self.assertFalse(core.provider_available("Antigravity"))
 
 
 class LocalOnlyPolicyTest(unittest.TestCase):

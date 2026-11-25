@@ -58,6 +58,9 @@ QUOTA_STATE_DIR = Path(os.environ.get(
 QUOTA_MAX_STALE_SEC = int(os.environ.get("DEPENDENCY_QUOTA_MAX_STALE_SEC", str(45 * 60)))
 QUOTA_LIMIT_5H = float(os.environ.get("DEPENDENCY_QUOTA_LIMIT_5H", "0.70"))
 QUOTA_LIMIT_WEEKLY = float(os.environ.get("DEPENDENCY_QUOTA_LIMIT_WEEKLY", "0.90"))
+# The weekly limit stops holding back once the reset is this close, so the week's quota is
+# not left unused — the same final stretch quota-reset-watch and claude-quota-gate keep.
+QUOTA_WEEKLY_FINAL_SEC = float(os.environ.get("DEPENDENCY_QUOTA_WEEKLY_FINAL_HOURS", "24")) * 3600
 # Codex passed 8/8 simultaneous probes on 2026-09-10; six leaves room for IDE use.
 PROVIDER_SLOT_COUNTS = {"Antigravity": 4, "Claude Opus": 4, "Codex": 6}
 PROVIDER_SLOT_PATHS = {
@@ -179,18 +182,21 @@ def _fresh_quota_state(name: str) -> dict | None:
         return None
 
 
-def _future_reset(window: object) -> bool:
+def _seconds_to_reset(window: object) -> float | None:
+    """Seconds until the window's resetTime, None when it has none or it isn't readable."""
     if not isinstance(window, dict):
-        return False
+        return None
     raw = window.get("resetTime")
     try:
-        return datetime.fromisoformat(str(raw).replace("Z", "+00:00")).timestamp() > time.time()
+        return datetime.fromisoformat(str(raw).replace("Z", "+00:00")).timestamp() - time.time()
     except (TypeError, ValueError):
-        return False
+        return None
 
 
-def _quota_window_blocked(window: object, limit: float) -> bool:
-    if not isinstance(window, dict) or not _future_reset(window):
+def _quota_window_blocked(window: object, limit: float, final_sec: float = 0.0) -> bool:
+    """At or over the limit with the reset still more than ``final_sec`` away."""
+    left = _seconds_to_reset(window)
+    if left is None or left <= final_sec:
         return False
     try:
         return float(window.get("utilization")) >= limit
@@ -203,7 +209,7 @@ def _quota_member_available(state: dict) -> bool:
         return False
     return not (
         _quota_window_blocked(state.get("limit5h"), QUOTA_LIMIT_5H)
-        or _quota_window_blocked(state.get("weekly"), QUOTA_LIMIT_WEEKLY)
+        or _quota_window_blocked(state.get("weekly"), QUOTA_LIMIT_WEEKLY, QUOTA_WEEKLY_FINAL_SEC)
     )
 
 
