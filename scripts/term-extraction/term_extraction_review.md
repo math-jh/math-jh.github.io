@@ -5474,3 +5474,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 주요 용어 'cleavage' ko 미상 — 보류
 - _posts/Math/Stacks/ko/2026-08-30-Fibered_Categories_and_Stacks.md: 주요 용어 'stackification' ko 미상 — 보류
+
+## term_extract_worker 2026-11-26 03:17
+
+- _posts/Math/Stacks/ko/2026-09-16-Integration_on_Deligne_Mumford_Stacks.md: 주요 용어 'proper pushforward' ko 미상 — 보류
+- _posts/Math/Stacks/ko/2026-09-16-Integration_on_Deligne_Mumford_Stacks.md: 주요 용어 'refined Gysin pullback' ko 미상 — 보류
