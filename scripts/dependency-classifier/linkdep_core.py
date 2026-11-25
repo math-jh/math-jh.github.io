@@ -71,7 +71,7 @@ AGY_BIN = os.environ.get("DEPENDENCY_AGY_BIN", str(Path.home() / ".gemini/bin/ag
 # No model ID by default, only an effort level: the model is the Antigravity CLI's
 # own default.
 AGY_MODEL = os.environ.get("DEPENDENCY_AGY_MODEL")
-AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT") or "high"
+AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT") or "medium"
 CLAUDE_BIN = os.environ.get("DEPENDENCY_CLAUDE_BIN", str(Path.home() / ".local/bin/claude"))
 CLAUDE_MODEL = os.environ.get("DEPENDENCY_CLAUDE_MODEL", "opus")
 CODEX_BIN = os.environ.get(

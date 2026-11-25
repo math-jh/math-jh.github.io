@@ -43,10 +43,10 @@ PROVIDER = {"S1": "Antigravity", "S2": "Claude Opus", "S3": "Codex"}
 AGY_BIN = core.AGY_BIN
 # No model ID, only an effort level: the house convention, so a model generation
 # change on the Antigravity side cannot break the call (a pinned ID fails with
-# "not recognized").  high spends ~4k thinking tokens per link on a whole-article
-# prompt, so a full batch can overrun the output limit; linkdep_pipeline then asks
-# again in halves.
-AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT", "high")
+# "not recognized").  Thinking tokens per link grow with the effort on a
+# whole-article prompt, so a full batch can overrun the output limit;
+# linkdep_pipeline then asks again in halves.
+AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT", "medium")
 AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
 CLAUDE_BIN = core.CLAUDE_BIN
 CLAUDE_MODEL = core.CLAUDE_MODEL
