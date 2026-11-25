@@ -16494,6 +16494,13 @@ P:
   defs:
   - label: '[스택] §고유스택'
     url: /ko/math/stacks/proper_stacks#def1
+- id: proper_base_change
+  en: proper base change
+  ko: 고유 기저 변환
+  primary: en
+  defs:
+  - label: '[층론] §고유 받음과 여섯 함자'
+    url: /ko/math/sheaf_theory/six_functors
 - id: proper_direct_image
   en: proper direct image
   ko: 고유 받음
