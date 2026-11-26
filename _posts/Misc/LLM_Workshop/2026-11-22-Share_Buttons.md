@@ -90,7 +90,7 @@ LinkedIn은 사용자가 뺐고, 대신 사용자가 처음 물은 것은 Instag
 {: data-filename="_includes/social-share.html · 일부 발췌"}
 {% endraw %}
 
-`onclick`은 링크를 새 탭이 아니라 작은 팝업 창으로 연다. 팝업이 막히거나 스크립트가 꺼진 환경에서는 `return false`가 실행되지 않고 `href`가 그대로 열린다.
+`onclick`은 링크를 새 탭이 아니라 작은 팝업 창으로 열고, `return false`로 링크의 기본 이동을 막는다. 버튼을 누르는 것은 사용자의 조작이므로 브라우저의 팝업 차단기는 보통 이 창을 허용한다. 차단기가 창을 막으면 `window.open`은 오류 없이 `null`을 돌려주고 `return false`는 그대로 실행되어, 창도 열리지 않고 지금 탭도 그대로 있다. 스크립트가 꺼진 환경에서는 `onclick` 자체가 실행되지 않으므로 지금 탭이 `href`로 이동한다.
 
 공유 버튼은 Web Share API로 브라우저의 공유 시트를 연다. 코드 주석에 적힌 용도는 모바일에서 인스타그램·카카오톡처럼 설치된 앱으로 보내는 것이다.
 
@@ -141,3 +141,9 @@ LinkedIn은 사용자가 뺐고, 대신 사용자가 처음 물은 것은 Instag
 {: data-filename="_sass/minimal-mistakes/_page.scss · 일부 생략"}
 
 바깥 `.page__share-buttons`는 `inline-grid`에 열 방향으로 흐르게 한 뒤 열 폭을 모두 `1fr`로 준다. 폭이 정해지지 않은 grid에서 `1fr` 열들은 가장 넓은 항목의 `max-content`에 맞춰 같은 폭을 갖는다. 그래서 가장 긴 `X (Twitter)` 버튼이 기준이 되고 나머지 버튼이 그 폭까지 늘어난다. 안쪽의 `.btn`은 다시 `1.2em`짜리 고정 칸과 나머지 `1fr` 칸의 두 열 grid다. 로고가 첫 칸 가운데에, 이름이 남은 칸 가운데에 놓이므로 이름 길이가 달라도 로고의 위치는 어긋나지 않는다. 좁은 화면에서는 이름이 숨기 때문에 같은 규칙이 grid를 풀고 로고만 버튼 가운데에 둔다.
+
+## Instagram 공유의 빈자리
+
+Font Awesome이 빠지자 사이트가 부르는 아이콘 글꼴은 Material Symbols 하나가 되었고, 같은 날 그 글꼴도 사이트가 쓰는 아이콘만 남긴 서브셋으로 줄었다([웹폰트 WOFF2 변환과 서브셋](/ko/llm_workshop/webfont_diet)).
+
+사용자가 처음 물었던 Instagram 버튼은 만들 수 없었다. Instagram은 X·Facebook·Threads와 달리 웹에서 링크를 넘겨 공유 창을 여는 주소를 제공하지 않는다. 그래서 이 사이트의 글을 Instagram으로 보내는 길은 모바일에서 공유 버튼을 눌러 공유 시트에서 Instagram 앱을 고르는 것 하나다. `navigator.share`가 없는 데스크톱 Firefox 계열에서는 그 공유 버튼도 보이지 않으므로 주소를 복사해 붙여 넣는 수밖에 없다. 첫 질문의 답은 "못 한다"였고, 글 아래 버튼 넷 가운데 둘은 그 답에서 나온 대안이다.
