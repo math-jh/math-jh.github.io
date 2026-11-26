@@ -25,11 +25,16 @@ sys.path.insert(0, str(BLOG_ROOT / "scripts" / "lib"))
 from cron_commit import MARVIN_AUTHOR, commit_outputs, dirty_paths  # noqa: E402
 
 WORKSHOP_DIR = "_posts/Misc/LLM_Workshop"
+# 편집 턴이 집필 턴 보고의 화면 요청을 받아 찍은 이미지 (editor.md 6번).
+WORKSHOP_IMAGE_DIR = "assets/images/Misc/LLM_Workshop"
+OUTPUT_DIRS = [WORKSHOP_DIR, WORKSHOP_IMAGE_DIR]
 
 
 def _title(rel: str) -> str:
-    """글 제목 (frontmatter). 못 읽으면 파일 이름."""
+    """글 제목 (frontmatter). 글이 아니거나 못 읽으면 파일 이름."""
     stem = Path(rel).stem
+    if not rel.endswith(".md"):
+        return Path(rel).name
     try:
         head = (BLOG_ROOT / rel).read_text(encoding="utf-8")[:2000]
     except OSError:
@@ -48,13 +53,13 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.snapshot:
-        args.snapshot.write_text("\n".join(dirty_paths([WORKSHOP_DIR])) + "\n",
+        args.snapshot.write_text("\n".join(dirty_paths(OUTPUT_DIRS)) + "\n",
                                  encoding="utf-8")
         return 0
 
     before = {ln.strip() for ln in args.before.read_text(encoding="utf-8").splitlines()
               if ln.strip()} if args.before.exists() else set()
-    new = [p for p in dirty_paths([WORKSHOP_DIR]) if p not in before]
+    new = [p for p in dirty_paths(OUTPUT_DIRS) if p not in before]
     if not new:
         print("commit: 새 워크숍 산출물 없음")
         return 0

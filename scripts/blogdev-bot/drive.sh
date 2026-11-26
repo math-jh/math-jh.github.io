@@ -30,7 +30,10 @@ cd "$BLOG_ROOT"
 # 모델을 띄우기 전 워크숍 경로의 dirty 목록. 실행 후 이 목록에 없는 것만 봇
 # 산출물로 보고 커밋한다 — 사용자가 편집 중이던 글을 봇 커밋에 넣지 않는다.
 BEFORE_DIRTY="$(mktemp)"
-trap 'rm -f "$BEFORE_DIRTY"' EXIT
+# 집필 턴의 보고(필요한 화면, 제목·excerpt 어긋남 등). 편집 턴이 읽고 처리할 수
+# 있는 것은 처리하고, 나머지를 '사용자가 정할 것'으로 넘긴다 (editor.md 6번).
+WRITE_REPORT="$(mktemp)"
+trap 'rm -f "$BEFORE_DIRTY" "$WRITE_REPORT"' EXIT
 "$HERE/commit_posts.py" --snapshot "$BEFORE_DIRTY"
 # 2026-08-08: ~/.claude/settings.json 에 advisorModel(fable)이 전역 기본값으로
 # 들어갔다. 부착 조건이 base_rank <= advisor_rank 라 sonnet(3) 세션인 marvin 도
@@ -40,7 +43,8 @@ trap 'rm -f "$BEFORE_DIRTY"' EXIT
 export CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1
 if ! timeout 2400 "$CLAUDE_BIN" -p --model sonnet \
       --permission-mode bypassPermissions \
-      "[cron] Read $HERE/marvin.md and execute it now."; then
+      "[cron] Read $HERE/marvin.md and execute it now." \
+      | tee "$WRITE_REPORT"; then
   log "claude -p failed"
   exit 1
 fi
@@ -53,7 +57,7 @@ log "marvin turn complete"
 # 되돌리므로, 편집 턴이 어떻게 끝나든 커밋되는 것은 온전한 글이다.
 EDIT_STORE="$(mktemp -d)"
 EDIT_REPORT="$(mktemp)"
-trap 'rm -rf "$BEFORE_DIRTY" "$EDIT_STORE" "$EDIT_REPORT"' EXIT
+trap 'rm -rf "$BEFORE_DIRTY" "$WRITE_REPORT" "$EDIT_STORE" "$EDIT_REPORT"' EXIT
 # edit_guard.py 가 죽어도 드라이버는 계속 간다 — 편집을 건너뛸 뿐 커밋은 해야 한다.
 EDIT_TARGETS="$("$HERE/edit_guard.py" --save "$EDIT_STORE" --before "$BEFORE_DIRTY" | tr '\n' ' ' || true)"
 if [ -n "${EDIT_TARGETS// /}" ]; then
@@ -62,7 +66,7 @@ if [ -n "${EDIT_TARGETS// /}" ]; then
   # editor_report.py 가 읽어 알림으로 보낸다. 사용자는 run.log 를 읽지 않는다.
   if timeout 2400 "$CLAUDE_BIN" -p --model opus \
         --permission-mode bypassPermissions \
-        "[cron] Read $HERE/editor.md and execute it now. 대상 글: $EDIT_TARGETS" \
+        "[cron] Read $HERE/editor.md and execute it now. 대상 글: $EDIT_TARGETS 집필 턴 보고: $WRITE_REPORT" \
         | tee "$EDIT_REPORT"; then
     "$HERE/edit_guard.py" --check "$EDIT_STORE" 2>&1 | while read -r line; do
       log "$line"
@@ -77,6 +81,11 @@ if [ -n "${EDIT_TARGETS// /}" ]; then
       log "$line"
     done || true
     log "editor turn failed — 집필 턴의 글을 그대로 커밋한다"
+    # 편집 턴이 집필 보고를 처리하지 못했으므로 그 보고를 그대로 사용자에게 넘긴다.
+    # shellcheck disable=SC2086
+    "$HERE/editor_report.py" --editor-failed "$WRITE_REPORT" $EDIT_TARGETS 2>&1 | while read -r line; do
+      log "$line"
+    done || true
   fi
 fi
 
