@@ -110,7 +110,7 @@
   <div class="comment-form-anchor js-comment-form-anchor"></div>
   <div id="comment-respond" class="page__comments-form js-comment-respond">
     <div class="comments__head comments__head--form">
-      <h2 class="comments__title comments__title--form">{{ _comment_ui.comments_label | default: "Leave a comment" }}</h2>
+      <h2 class="comments__title comments__title--form">{{ _comment_ui.comments_label | default: "Leave a comment" }}{% if _comment_owner %}{% if _comment_lang == "ko" %} (운영자){% else %} (owner){% endif %}{% endif %}</h2>
       <button type="button" class="comment__action js-cancel-reply" hidden>{{ _comment_ui.cancel_reply | default: "Cancel reply" }}</button>
     </div>
 
