@@ -71,18 +71,24 @@
     </div>
     {%- comment -%} 수정은 원문(마크다운 원본)을 다시 채워야 한다 — 렌더된 HTML 이
     아니라 이 data 속성이 원본의 유일한 출처다. {%- endcomment -%}
+    {%- comment -%} include.owner 는 dev 빌드의 운영자 폼(custom.html 의 _comment_owner)이다.
+    암호 칸과 PR 안내를 빼고, Comments.js 가 Worker 대신 대시보드 서버로 보낸다. {%- endcomment -%}
     <form class="comment__form comment__edit-form js-comment-edit-form" hidden
           data-source="{{ _c.message | escape }}">
+      {%- unless include.owner %}
       <p class="comment__form-notice">{{ _ui.comment_edit_notice | escape }}</p>
+      {%- endunless %}
       <label class="comment-field comment-field--wide">
         <span>{{ _ui.comment_form_comment_label | escape }}</span>
         <textarea name="message" rows="4" maxlength="8000" required></textarea>
       </label>
       <div class="comment__form-row">
+        {%- unless include.owner %}
         <label class="comment-field">
           <span>{{ _ui.comment_form_password_label | escape }}</span>
           <input type="password" name="password" minlength="4" maxlength="128" autocomplete="current-password" required>
         </label>
+        {%- endunless %}
         <div class="comment__form-actions">
           <button type="button" class="comment__action js-comment-edit-cancel">{{ _ui.comment_edit_cancel | escape }}</button>
           <button type="submit" class="comment-btn">{{ _ui.comment_edit_submit | escape }}</button>
@@ -92,10 +98,12 @@
     </form>
     <form class="comment__form comment__delete-form js-comment-delete-form" hidden>
       <div class="comment__form-row">
+        {%- unless include.owner %}
         <label class="comment-field">
           <span>{{ _ui.comment_form_password_label | escape }}</span>
           <input type="password" name="password" minlength="4" maxlength="128" autocomplete="current-password" required>
         </label>
+        {%- endunless %}
         <div class="comment__form-actions">
           <button type="submit" class="comment-btn comment-btn--danger">{{ _ui.comment_delete_submit | escape }}</button>
         </div>

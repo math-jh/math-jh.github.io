@@ -42,6 +42,9 @@ window.commentsTurnstileLoaded = function () {
     if (!root) return;
 
     var endpoint = (root.dataset.endpoint || "").replace(/\/$/, "");
+    // dev 빌드(preview)에만 있다 — 있으면 쓰기·수정·삭제를 Worker 대신 대시보드 서버의
+    // 운영자 경로로 보낸다 (_includes/comments-providers/custom.html :: _comment_owner).
+    var ownerEndpoint = (root.dataset.ownerEndpoint || "").replace(/\/$/, "");
     var thread = root.dataset.thread || "";
     var lang = root.dataset.lang === "en" ? "en" : "ko";
     var form = root.querySelector(".js-comment-form");
@@ -80,6 +83,30 @@ window.commentsTurnstileLoaded = function () {
         default:
           return fallback;
       }
+    }
+
+    var ownerSaved = copy(
+      "처리했습니다. 미리보기에는 잠시 뒤 반영되고, autopush 가 다음 실행에 공개합니다.",
+      "Done. The preview picks it up shortly; autopush publishes it on its next run.");
+
+    // 대시보드 서버는 실패를 {ok:false, error:"<사람이 읽는 문장>"} 으로 준다. 응답이 JSON 이
+    // 아니면 /dash/ 가 없는 호스트(chat.math-jh.com, :4001 직결)에서 연 것이다.
+    async function ownerPost(action, body) {
+      var response;
+      try {
+        response = await fetch(ownerEndpoint + "/" + action, {
+          method: "POST",
+          headers: { "content-type": "application/json", "X-Dash-Action": "1" },
+          body: JSON.stringify(body)
+        });
+      } catch (_error) {
+        throw new Error(copy("대시보드 서버에 닿지 못했습니다.", "Could not reach the dashboard server."));
+      }
+      var result = await response.json().catch(function () { return null; });
+      if (response.ok && result && result.ok) return result;
+      throw new Error((result && result.error) || copy(
+        "운영자 댓글은 preview.math-jh.com 에서만 쓸 수 있습니다.",
+        "Owner comments work only on preview.math-jh.com."));
     }
 
     function markInteraction() {
@@ -321,7 +348,7 @@ window.commentsTurnstileLoaded = function () {
         var showing = deleteForm.hidden;
         closeInlineForms(showing ? deleteForm : null);
         deleteForm.hidden = !showing;
-        if (showing) deleteForm.elements.password.focus();
+        if (showing && deleteForm.elements.password) deleteForm.elements.password.focus();
       }
     });
 
@@ -330,6 +357,28 @@ window.commentsTurnstileLoaded = function () {
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
       clearNotice();
+      if (ownerEndpoint) {
+        if (!form.reportValidity()) return;
+        setBusy(true);
+        try {
+          await ownerPost("new", {
+            thread: thread,
+            message: form.elements.message.value,
+            replying_to: form.elements.replying_to.value,
+            mentions: Array.from(mentions.keys())
+          });
+          form.reset();
+          mentions.clear();
+          renderMentions();
+          resetReply();
+          showNotice(ownerSaved, "success");
+        } catch (error) {
+          showNotice(error.message, "error");
+        } finally {
+          setBusy(false);
+        }
+        return;
+      }
       if (!endpoint || submit.dataset.missingTurnstile === "true") {
         showNotice(root.dataset.configError, "error");
         return;
@@ -386,6 +435,15 @@ window.commentsTurnstileLoaded = function () {
         button.disabled = true;
         setStatus(editNotice, "");
         try {
+          if (ownerEndpoint) {
+            await ownerPost("edit", {
+              id: article.dataset.commentId,
+              thread: thread,
+              message: editForm.elements.message.value
+            });
+            setStatus(editNotice, ownerSaved, "success");
+            return;
+          }
           var response = await fetch(endpoint + "/v1/edit", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -402,7 +460,8 @@ window.commentsTurnstileLoaded = function () {
           // 이 자리에서 본문을 바꾸지 않는다 — 수정은 PR 이 머지돼야 반영된다.
           setStatus(editNotice, root.dataset.editSuccess, "success");
         } catch (error) {
-          setStatus(editNotice, messageForCode(error.message, root.dataset.editError), "error");
+          setStatus(editNotice, ownerEndpoint ? error.message
+            : messageForCode(error.message, root.dataset.editError), "error");
         } finally {
           button.disabled = false;
         }
@@ -420,6 +479,11 @@ window.commentsTurnstileLoaded = function () {
         button.disabled = true;
         setStatus(deleteNotice, "");
         try {
+          if (ownerEndpoint) {
+            await ownerPost("delete", { id: article.dataset.commentId, thread: thread });
+            setStatus(deleteNotice, ownerSaved, "success");
+            return;
+          }
           var response = await fetch(endpoint + "/v1/delete", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -435,7 +499,8 @@ window.commentsTurnstileLoaded = function () {
           deleteForm.elements.password.value = "";
           setStatus(deleteNotice, root.dataset.deleteSuccess, "success");
         } catch (error) {
-          setStatus(deleteNotice, messageForCode(error.message, root.dataset.deleteError), "error");
+          setStatus(deleteNotice, ownerEndpoint ? error.message
+            : messageForCode(error.message, root.dataset.deleteError), "error");
         } finally {
           button.disabled = false;
         }
