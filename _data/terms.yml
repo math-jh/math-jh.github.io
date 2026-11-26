@@ -8600,6 +8600,13 @@ G:
   defs:
   - label: '[미적분학] §그린 정리'
     url: /ko/math/calculus/greens_theorem
+- id: gromov_compactness_theorem
+  en: Gromov compactness theorem
+  ko: 그로모프 콤팩트성 정리
+  primary: en
+  defs:
+  - label: '[사교기하학] §J-holomorphic curves'
+    url: /ko/math/symplectic_geometry/j_holomorphic_curves
 - id: gromov-witten_invariant
   en: Gromov-Witten invariant
   ko: 그로모프-위튼 불변량
