@@ -52,18 +52,26 @@ log "marvin turn complete"
 # 편집이 끊기거나 front matter 를 건드리면 edit_guard.py 가 집필 턴의 판본으로
 # 되돌리므로, 편집 턴이 어떻게 끝나든 커밋되는 것은 온전한 글이다.
 EDIT_STORE="$(mktemp -d)"
-trap 'rm -rf "$BEFORE_DIRTY" "$EDIT_STORE"' EXIT
+EDIT_REPORT="$(mktemp)"
+trap 'rm -rf "$BEFORE_DIRTY" "$EDIT_STORE" "$EDIT_REPORT"' EXIT
 # edit_guard.py 가 죽어도 드라이버는 계속 간다 — 편집을 건너뛸 뿐 커밋은 해야 한다.
 EDIT_TARGETS="$("$HERE/edit_guard.py" --save "$EDIT_STORE" --before "$BEFORE_DIRTY" | tr '\n' ' ' || true)"
 if [ -n "${EDIT_TARGETS// /}" ]; then
   log "launching claude -p (opus) for editor: $EDIT_TARGETS"
+  # 보고는 run.log 에 그대로 찍고, 끝의 '사용자가 정할 것:'(editor.md 6번)은
+  # editor_report.py 가 읽어 알림으로 보낸다. 사용자는 run.log 를 읽지 않는다.
   if timeout 2400 "$CLAUDE_BIN" -p --model opus \
         --permission-mode bypassPermissions \
-        "[cron] Read $HERE/editor.md and execute it now. 대상 글: $EDIT_TARGETS"; then
+        "[cron] Read $HERE/editor.md and execute it now. 대상 글: $EDIT_TARGETS" \
+        | tee "$EDIT_REPORT"; then
     "$HERE/edit_guard.py" --check "$EDIT_STORE" 2>&1 | while read -r line; do
       log "$line"
     done || true
     log "editor turn complete"
+    # shellcheck disable=SC2086  # 대상 글 경로는 공백 없는 목록
+    "$HERE/editor_report.py" "$EDIT_REPORT" $EDIT_TARGETS 2>&1 | while read -r line; do
+      log "$line"
+    done || true
   else
     "$HERE/edit_guard.py" --restore "$EDIT_STORE" 2>&1 | while read -r line; do
       log "$line"
