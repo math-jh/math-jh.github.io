@@ -60,6 +60,34 @@ QUOTA = os.path.expanduser("~/Projects/hud-display/state/claude_quota.json")
 PORT = int(os.environ.get("BLOG_DASH_PORT", "8089"))
 CACHE_TTL = 45    # 만료 후 첫 요청은 옛 값을 받고 갱신은 백그라운드 (summary_cached)
 
+# preview 의 운영자 댓글 폼(dev 빌드의 Comments.js)이 POST /api/comment/{new,edit,delete} 로
+# 부른다. 파일만 바꾸고 커밋하지 않는다 — 작업 트리가 더러우면 blog-autopush 가 다음 실행에서
+# 커밋하고 바로 push 한다(cron 커밋 defer 를 타지 않는다). 형식·검증은 add_comment.rb 에만 둔다.
+COMMENT_SCRIPT = os.path.join(ROOT, "scripts/comments/add_comment.rb")
+COMMENT_OWNER_NAME = "jh"
+# add_comment.rb·Worker 의 THREAD_RE·COMMENT_ID_RE 와 같다 (service-map contracts.comments-thread-key).
+COMMENT_THREAD_RE = re.compile(r"(?:ko|en)__[A-Za-z0-9_-]{1,116}")
+COMMENT_ID_RE = re.compile(r"c-\d{8}-[a-f0-9]{6}")
+
+
+def _touch_thread_page(thread):
+    """그 스레드 글의 md mtime 만 올린다. dev 서버(--incremental)는 _data 변경만으로는 글을
+    다시 렌더하지 않고, 고쳐진 글은 새로 읽은 site.data 로 렌더한다. git 에는 잡히지 않는다."""
+    permalink = "/" + thread.replace("__", "/")
+    pat = re.compile(r"^permalink:\s*['\"]?" + re.escape(permalink) + r"/?['\"]?\s*$", re.M)
+    for dirpath, _dirs, files in os.walk(os.path.join(ROOT, "_posts")):
+        for fn in files:
+            if not fn.endswith(".md"):
+                continue
+            p = os.path.join(dirpath, fn)
+            try:
+                with open(p, encoding="utf-8") as f:
+                    head = f.read(4096)
+            except OSError:
+                continue
+            if pat.search(head):
+                os.utime(p)
+
 # 색인 요청 추천 순위는 index-monitor 와 **같은 모듈**을 쓴다. 규칙을 여기 복제하면
 # inspect_monitor 가 순위를 바꿀 때 대시보드만 조용히 옛 규칙으로 남는다.
 sys.path.insert(0, f"{ROOT}/scripts/index-monitor")
@@ -1376,6 +1404,11 @@ class Handler(BaseHTTPRequestHandler):
             if why:
                 return self._send(403, json.dumps({"ok": False, "error": why}, ensure_ascii=False))
             return self._linkdeps_post(path)
+        if path.startswith("/api/comment/"):
+            why = self._reject_write()
+            if why:
+                return self._send(403, json.dumps({"ok": False, "error": why}, ensure_ascii=False))
+            return self._comment_action(path.rsplit("/", 1)[1])
         if path not in ("/api/kotypo", "/api/kotypo-note", "/api/cron/pause", "/api/cron/resume",
                         "/api/cron/force-resume",
                         "/api/review", "/api/compare/snapshot",
@@ -1443,6 +1476,57 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get("X-Dash-Action") != "1":
             return "X-Dash-Action 헤더 없음"
         return None
+
+    def _comment_action(self, action):
+        """운영자 댓글: add_comment.rb 를 운영자 이름·role 로 불러 댓글 파일을 바꾼다."""
+        def fail(code, msg):
+            return self._send(code, json.dumps({"ok": False, "error": msg}, ensure_ascii=False))
+        if action not in ("new", "edit", "delete"):
+            return fail(404, "없는 동작")
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if not 0 < n <= 64_000:
+                raise ValueError
+            b = json.loads(self.rfile.read(n).decode("utf-8"))
+            if not isinstance(b, dict):
+                raise ValueError
+        except Exception:
+            return fail(400, "본문이 JSON 이 아니다")
+        thread = str(b.get("thread") or "")
+        if len(thread) > 120 or not COMMENT_THREAD_RE.fullmatch(thread):
+            return fail(400, "잘못된 스레드 키")
+        cmd = ["ruby", COMMENT_SCRIPT, "--thread", thread]
+        message = str(b.get("message") or "")
+        if action == "new":
+            reply = str(b.get("replying_to") or "")
+            mentions = b.get("mentions") or []
+            if not isinstance(mentions, list):
+                return fail(400, "mentions 는 목록이어야 한다")
+            mentions = [str(m) for m in mentions]
+            for cid in ([reply] if reply else []) + mentions:
+                if not COMMENT_ID_RE.fullmatch(cid):
+                    return fail(400, f"잘못된 댓글 id: {cid[:40]}")
+            cmd += ["--message-file", "-", "--name", COMMENT_OWNER_NAME, "--role", "owner"]
+            if reply:
+                cmd += ["--reply-to", reply]
+            for m in mentions:
+                cmd += ["--mention", m]
+        else:
+            cid = str(b.get("id") or "")
+            if not COMMENT_ID_RE.fullmatch(cid):
+                return fail(400, "잘못된 댓글 id")
+            cmd += ["--edit", cid, "--message-file", "-"] if action == "edit" else ["--delete", cid]
+        try:
+            r = subprocess.run(cmd, input=message, capture_output=True, text=True,
+                               timeout=30, cwd=ROOT)
+        except Exception as e:  # noqa: BLE001
+            return fail(500, f"add_comment.rb 실행 실패: {e!r}")
+        if r.returncode != 0:
+            lines = r.stderr.strip().splitlines()
+            return fail(400, lines[-1] if lines else f"add_comment.rb rc={r.returncode}")
+        _touch_thread_page(thread)
+        return self._send(200, json.dumps({"ok": True, "result": r.stdout.strip()},
+                                          ensure_ascii=False))
 
     def _linkdeps_get(self, path, q):
         if _linkdeps is None:
