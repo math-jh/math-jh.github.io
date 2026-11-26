@@ -1095,6 +1095,13 @@ A:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+- id: atiyah-guillemin-sternberg_convexity_theorem
+  en: Atiyah-Guillemin-Sternberg convexity theorem
+  ko: Atiyah-Guillemin-Sternberg 볼록성 정리
+  primary: en
+  defs:
+  - label: '[사교기하학] §운동량 사상'
+    url: /ko/math/symplectic_geometry/moment_map
 - id: atlas
   en: atlas
   ko: 좌표첩

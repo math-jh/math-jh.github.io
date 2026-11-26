@@ -5489,3 +5489,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'string equation' ko 미상 — 보류
 - _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'divisor equation' ko 미상 — 보류
 - _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'dilaton equation' ko 미상 — 보류
+
+## term_extract_worker 2026-11-27 03:15
+
+- _posts/Math/Symplectic_Geometry/ko/2026-06-20-Moment_Map.md: 주요 용어 'coadjoint action' ko 미상 — 보류
