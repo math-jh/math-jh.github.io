@@ -5483,3 +5483,9 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-11-26 15:16
 
 - _posts/Math/Symplectic_Geometry/ko/2023-06-10-Stable_Maps_Moduli.md: 주요 용어 'psi class' ko 미상 — 보류
+
+## term_extract_worker 2026-11-26 17:15
+
+- _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'string equation' ko 미상 — 보류
+- _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'divisor equation' ko 미상 — 보류
+- _posts/Math/Symplectic_Geometry/ko/2023-06-15-Gromov_Witten_Invariants.md: 주요 용어 'dilaton equation' ko 미상 — 보류
