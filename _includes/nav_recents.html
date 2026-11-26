@@ -8,7 +8,6 @@
 {% assign _lang = include.lang | default: site.locale %}
 {% assign _lang_full = "/" | append: _lang | append: "/" %}
 {% assign _recent_posts = site.posts | where_exp: "post", "post.permalink contains _lang_full" | sort: "date" | reverse %}
-{% assign _comments = site.data.recent_comments[_lang] | default: empty %}
 
 <li class="nav__recents-section nav__recents-section--posts">
   <a href="{{ '/' | append: _lang | append: '/recent/' | relative_url }}" class="nav__section-link">
@@ -27,13 +26,8 @@
 
 <li class="nav__recents-section nav__recents-section--comments">
   <span class="nav__sub-title nav__sub-title--no-link"><span class="material-icons md-12" style="vertical-align:-.2em">comment</span> {{ site.data.ui-text[_lang].recent_comments | default: "Recent comments" }}</span>
-  <ul>
-    {% if _comments.size > 0 %}
-      {% for _c in _comments limit: 5 %}
-        <li><a href="{{ _c.permalink | relative_url }}#{{ _c.anchor | default: 'comments' }}">{{ _c.title | truncate: 50 }}{% if _c.author %} <span class="nav__recents-meta">— {{ _c.author }}</span>{% endif %}</a></li>
-      {% endfor %}
-    {% else %}
-      <li><span class="nav__recents-empty">—</span></li>
-    {% endif %}
-  </ul>
+  {%- comment -%} 항목(작성자 이름 포함)은 /comments/recent-<언어>.html 조각에서 Comments.js 가
+  불러와 채운다 — 모든 페이지의 HTML 에 댓글 작성자가 들어가지 않게 (_plugins/comment_fragments.rb,
+  항목 마크업은 comments-recent.html). {%- endcomment %}
+  <ul class="js-recent-comments" data-src="{{ '/comments/recent-' | append: _lang | append: '.html' | relative_url }}?v={{ site.time | date: '%s' }}"></ul>
 </li>

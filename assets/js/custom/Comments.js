@@ -35,8 +35,28 @@ window.commentsTurnstileLoaded = function () {
     });
   }
 
+  // 댓글 목록과 사이드바 '최근 댓글'은 글 HTML 밖의 조각(/comments/…)에 있다. robots.txt 가
+  // 그 경로를 막아 검색엔진은 댓글을 보지 못하고, 브라우저에서는 여기서 불러와 끼운다
+  // (_plugins/comment_fragments.rb). data-src 가 없는 목록은 HTML 에 이미 들어 있는 것이다.
+  function loadFragment(el) {
+    return fetch(el.dataset.src, { credentials: "same-origin" }).then(function (response) {
+      if (!response.ok) throw new Error("fragment " + response.status);
+      return response.text();
+    }).then(function (html) {
+      el.innerHTML = html;
+      return el;
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initInfoToggles();
+
+    // 사이드바는 댓글 영역이 없는 페이지(목록·홈)에도 있으므로 root 검사보다 앞에 둔다.
+    document.querySelectorAll(".js-recent-comments[data-src]").forEach(function (list) {
+      loadFragment(list).catch(function () {
+        list.innerHTML = '<li><span class="nav__recents-empty">—</span></li>';
+      });
+    });
 
     var root = document.querySelector(".js-comment-system");
     if (!root) return;
@@ -425,7 +445,9 @@ window.commentsTurnstileLoaded = function () {
       }
     });
 
-    root.querySelectorAll(".js-comment-edit-form").forEach(function (editForm) {
+    // 수정·삭제 폼은 댓글마다 있어 목록이 들어온 뒤에 묶는다 (클릭은 root 위임이라 따로 안 묶는다).
+    function bindCommentForms(scope) {
+    scope.querySelectorAll(".js-comment-edit-form").forEach(function (editForm) {
       editForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         var article = editForm.closest(".js-comment");
@@ -468,7 +490,7 @@ window.commentsTurnstileLoaded = function () {
       });
     });
 
-    root.querySelectorAll(".js-comment-delete-form").forEach(function (deleteForm) {
+    scope.querySelectorAll(".js-comment-delete-form").forEach(function (deleteForm) {
       deleteForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         var article = deleteForm.closest(".js-comment");
@@ -506,5 +528,46 @@ window.commentsTurnstileLoaded = function () {
         }
       });
     });
+    }
+
+    // 조각으로 들어온 목록은 페이지의 KaTeX auto-render(scripts.html, DOMContentLoaded)보다
+    // 늦으므로 따로 렌더한다. 옵션은 scripts.html 과 같게 둔다.
+    function renderMath(scope) {
+      if (typeof window.renderMathInElement !== "function") return;
+      window.renderMathInElement(scope, {
+        delimiters: window.KATEX_DELIMITERS,
+        macros: window.KATEX_MACROS,
+        ignoredClasses: ["no-math"],
+        strict: false,
+        throwOnError: false
+      });
+    }
+
+    // #comment-<id> 로 들어온 경우(사이드바 최근 댓글·알림 메일) 목록이 들어온 뒤에야 대상이 생긴다.
+    function revealTarget() {
+      if (location.hash.indexOf("#comment-") !== 0) return;
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) target.scrollIntoView();
+    }
+
+    var list = root.querySelector(".js-comments");
+    if (list && list.dataset.src) {
+      list.setAttribute("aria-busy", "true");
+      loadFragment(list).then(function () {
+        list.removeAttribute("aria-busy");
+        localizeDates();
+        bindCommentForms(list);
+        renderMath(list);
+        revealTarget();
+      }).catch(function () {
+        list.removeAttribute("aria-busy");
+        var failed = document.createElement("p");
+        failed.className = "comment-list__empty";
+        failed.textContent = copy("댓글을 불러오지 못했습니다.", "Could not load the comments.");
+        list.replaceChildren(failed);
+      });
+    } else {
+      bindCommentForms(root);
+    }
   });
 })();

@@ -1,0 +1,14 @@
+{%- comment -%}
+  사이드바 '최근 댓글' 항목. /comments/recent-<ko|en>.html 조각의 본문이다
+  (_plugins/comment_fragments.rb). 데이터는 _plugins/recent_comments.rb 가 만든다.
+  Comments.js 가 nav_recents.html 의 .js-recent-comments 목록에 끼운다 — 작성자
+  이름이 모든 페이지의 HTML 에 들어가지 않게 하려는 것이다.
+{%- endcomment -%}
+{%- assign _comments = site.data.recent_comments[include.lang] | default: empty -%}
+{%- if _comments.size > 0 -%}
+  {%- for _c in _comments limit: 5 %}
+<li><a href="{{ _c.permalink | relative_url }}#{{ _c.anchor | default: 'comments' }}">{{ _c.title | truncate: 50 }}{% if _c.author %} <span class="nav__recents-meta">— {{ _c.author | escape }}</span>{% endif %}</a></li>
+  {%- endfor %}
+{%- else %}
+<li><span class="nav__recents-empty">—</span></li>
+{%- endif %}

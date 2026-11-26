@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# 댓글 조각 — 글 페이지가 JS 로 불러와 끼운다. 막아 두면 렌더된 글에도 댓글이 없어
+# 검색엔진이 댓글을 색인하지 않는다 (_plugins/comment_fragments.rb).
+Disallow: /comments/
 
 Sitemap: https://math-jh.com/sitemap.xml

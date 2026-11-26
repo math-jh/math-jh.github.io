@@ -71,8 +71,10 @@ COMMENT_ID_RE = re.compile(r"c-\d{8}-[a-f0-9]{6}")
 
 
 def _touch_thread_page(thread):
-    """그 스레드 글의 md mtime 만 올린다. dev 서버(--incremental)는 _data 변경만으로는 글을
-    다시 렌더하지 않고, 고쳐진 글은 새로 읽은 site.data 로 렌더한다. git 에는 잡히지 않는다."""
+    """그 스레드 글의 md mtime 만 올린다(git 에는 잡히지 않는다). 댓글 목록 자체는 조각
+    /comments/<키>.html(_plugins/comment_fragments.rb)이라 빌드마다 다시 만들어지지만, 글
+    HTML 에 남은 댓글 수와 조각 주소(첫 댓글이면 새로 생긴다)는 dev 서버(--incremental)가
+    _data 변경만으로는 다시 렌더하지 않는다 — 고쳐진 글은 새로 읽은 site.data 로 렌더한다."""
     permalink = "/" + thread.replace("__", "/")
     pat = re.compile(r"^permalink:\s*['\"]?" + re.escape(permalink) + r"/?['\"]?\s*$", re.M)
     for dirpath, _dirs, files in os.walk(os.path.join(ROOT, "_posts")):
