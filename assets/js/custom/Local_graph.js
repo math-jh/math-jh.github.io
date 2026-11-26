@@ -3,7 +3,8 @@
  * 현재 글의 선수 글(required 를 두 단계 거슬러)과 후속 글(두 단계 따라 내려가)을 의존성
  * 페이지 선형 보기와 같은 레인 문법(Linear_layout.js)으로 그린다. 왼쪽이 선수 글, 오른쪽이
  * 후속 글이고, 현재 글에서 첫 부모를 거슬러 올라간 사슬과 현재 글 뒤로 이어지는 사슬이 0 번
- * 레인이다. weak·forward 는 현재 글에 바로 닿는 것만 넣는다. 현재 글은 상자 가로 한가운데에
+ * 레인이다. weak·forward 는 현재 글에 바로 닿는 것만 넣는다. 보이는 글들을 거치는 required
+ * 사슬이 이미 잇는 required 선은 그리지 않는다. 현재 글은 상자 가로 한가운데에
  * 두고, 열 간격이 너무 좁아질 만큼 넓은 그래프는 양옆을 잘라 낸다. 사이드바 상자의 높이는
  * 보이는 레인에 맞춘다.
  *
@@ -40,8 +41,8 @@
     });
   }
 
-  /* 현재 글 둘레의 부분그래프와 그 열·레인. 첫 부모 고르기(깊이·연결 수)는 전역 그래프
-     기준이라, 첫 부모가 부분그래프 안에 있으면 의존성 페이지와 같은 선을 고른다. */
+  /* 현재 글 둘레의 부분그래프와 그 열·레인. 첫 부모는 부분그래프에 그리는 required 선의 출발
+     글 가운데서 고르고, 깊이와 연결 수는 전역 그래프의 값을 쓴다. */
   function localModel(data, self) {
     var L = window.LinearLayout;
     var byId = {};
@@ -83,10 +84,18 @@
     up.forEach(function (id) { keep.add(id); });
     down.forEach(function (id) { keep.add(id); });
     if (keep.size < 2) return null;
+    /* 선. 고른 글들 사이의 선 가운데, 고른 글들만 거치는 다른 required 사슬이 이미 잇고 있는
+       required 선은 뺀다(Linear_layout.js 의 redundantRequired) — A→B→C 가 다 보이면 A→C 는
+       그리지 않는다. 고른 글은 줄이지 않는다. 사슬이 이 부분그래프 밖의 글을 거치면 직접 선을
+       남기므로, 선이 빠진 글은 늘 남은 선으로 이어져 있다. */
     var links = data.links.filter(function (l) {
       var e = L.endpoints(l);
       return keep.has(e[0]) && keep.has(e[1]);
     });
+    var skipped = L.redundantRequired({
+      nodes: data.nodes.filter(function (n) { return keep.has(n.id); }), links: links
+    });
+    links = links.filter(function (l) { return !skipped.has(L.lid(l)); });
 
     /* 열: 현재 글이 0 이다. 선수 글은 현재 글까지 가는 가장 긴 사슬만큼 왼쪽에, 후속 글은
        현재 글에서 오는 가장 긴 사슬만큼 오른쪽에 둔다. 사슬은 전역 읽는 순서를 따라가는 선만
@@ -125,8 +134,11 @@
     ids.forEach(function (id) { column[id] = used.indexOf(layer[id]); });
     var order = L.columnOrder(ids, column);
     var parents = {};
-    order.forEach(function (id) {
-      parents[id] = ranks.parents[id].filter(function (p) { return keep.has(p) && column[p] < column[id]; });
+    order.forEach(function (id) { parents[id] = []; });
+    links.forEach(function (l) {
+      var e = L.endpoints(l);
+      if (l.relation === 'required' && global.column[e[0]] < global.column[e[1]] &&
+          column[e[0]] < column[e[1]]) parents[e[1]].push(e[0]);
     });
     var lanes = L.lanes(order, parents, ranks.depth, ranks.degree, column, self);
     var firstParent = lanes.firstParent, lane = lanes.lane;

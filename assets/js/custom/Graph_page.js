@@ -38,8 +38,11 @@
   /* 선형 보기 배치. 열과 레인은 Linear_layout.js 가 정하고, 가장 깊은 글에서 첫 부모를
      거슬러 올라간 사슬이 0 번 레인의 본류가 된다. 여기서는 카드 크기에 맞춰 x·y 를 놓는다. */
   function linearPositions(data, viewportWidth, viewportHeight) {
-    var cols = Layout.readingColumns(data), column = cols.column, columns = cols.columns;
-    var ranks = Layout.readingParents(data, column), order = ranks.order;
+    // 열과 연결 수는 그리지 않는 required 선까지 넣은 전체 선으로 낸다.
+    var all = { nodes: data.nodes, links: data.links.concat(data.hiddenLinks || []) };
+    var hidden = new Set((data.hiddenLinks || []).map(lid));
+    var cols = Layout.readingColumns(all), column = cols.column, columns = cols.columns;
+    var ranks = Layout.readingParents(all, column, hidden), order = ranks.order;
     var lanes = Layout.lanes(order, ranks.parents, ranks.depth, ranks.degree, column, null);
     var lane = lanes.lane, minLane = lanes.minLane, maxLane = lanes.maxLane;
     var spread = Layout.spreadColumns(order, column, columns, 48);
@@ -110,6 +113,12 @@
       }
       else if (l.relation === 'weak') (weakIn[e[1]] = weakIn[e[1]] || []).push(l);
       else if (l.relation === 'forward') (forwardOut[e[0]] = forwardOut[e[0]] || []).push(l);
+    });
+    // 점 크기와 인덱스의 연결 수는 그리지 않는 선도 센다.
+    (data.hiddenLinks || []).forEach(function (l) {
+      var e = endpoints(l);
+      deg[e[0]] = (deg[e[0]] || 0) + 1;
+      deg[e[1]] = (deg[e[1]] || 0) + 1;
     });
 
     /* 프레임마다 링크 전부를 훑는 접근자는 여기서 미리 값을 박아 둔다.
@@ -1354,6 +1363,12 @@
           linearLabel: lang === 'ko' ? '선형 학습 보기' : 'Linear learning view',
           forceLabel: lang === 'ko' ? '힘 기반 그래프로 돌아가기' : 'Return to force-directed graph'
         };
+        /* 다른 required 사슬이 이미 잇는 required 선(A→B→C 가 있을 때의 A→C)은 이 페이지에서
+           그리지도, 이웃·경로로 세지도 않는다. 읽는 순서는 그대로이고 선만 준다. 뺀 선은
+           hiddenLinks 에 두어 배치와 연결 수 계산에만 쓴다. */
+        var redundant = Layout.redundantRequired(data);
+        data.hiddenLinks = data.links.filter(function (l) { return redundant.has(lid(l)); });
+        data.links = data.links.filter(function (l) { return !redundant.has(lid(l)); });
         var fams = (data.families && data.families.length) ? data.families : FAMILIES_FALLBACK;
         var card = createGraphCard(stage, data, fams, cfg);
         if (!card) return;

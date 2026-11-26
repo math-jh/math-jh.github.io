@@ -160,3 +160,54 @@ test('합류선은 출발 글의 레인이 아니라 레인 사이 빈 줄을 �
     assert.equal(line.numbers[1], row);
   });
 });
+
+function redundant(nodes, links) {
+  return Array.from(L.redundantRequired({ nodes: nodes, links: links })).sort();
+}
+
+test('다른 required 사슬이 잇는 required 선만 그리지 않는다', () => {
+  const nodes = [node('a'), node('b'), node('c'), node('d')];
+  assert.deepEqual(redundant(nodes, [link('a', 'b'), link('b', 'c'), link('a', 'c')]), ['a>c']);
+  // 세 걸음짜리 사슬도 같다.
+  assert.deepEqual(redundant(nodes, [link('a', 'b'), link('b', 'c'), link('c', 'd'), link('a', 'd')]), ['a>d']);
+  // weak 가 낀 사슬은 읽는 순서를 강제하지 않으므로 직접 선을 남긴다.
+  assert.deepEqual(redundant(nodes, [link('a', 'b', 'weak'), link('b', 'c'), link('a', 'c')]), []);
+  // weak·forward 선은 required 사슬이 있어도 건드리지 않는다.
+  assert.deepEqual(redundant(nodes, [link('a', 'b'), link('b', 'c'), link('a', 'c', 'weak')]), []);
+});
+
+test('required 순환 안의 선은 남기고, 순환에서 나가는 선은 둘 다 남긴다', () => {
+  const nodes = [node('a'), node('b'), node('c')];
+  assert.deepEqual(redundant(nodes, [link('a', 'b'), link('b', 'a'), link('a', 'c'), link('b', 'c')]), []);
+});
+
+test('무작위 그래프: 선을 빼도 required 로 닿는 글은 그대로다', () => {
+  let seed = 7;
+  function random() { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; }
+  function reachable(nodes, links) {
+    const next = {};
+    links.forEach(l => { if (l.relation === 'required') (next[l.source] = next[l.source] || []).push(l.target); });
+    return nodes.map(n => {
+      const seen = new Set(), todo = [n.id];
+      while (todo.length) (next[todo.pop()] || []).forEach(x => { if (!seen.has(x)) { seen.add(x); todo.push(x); } });
+      return Array.from(seen).sort().join(',');
+    });
+  }
+  for (let round = 0; round < 40; round++) {
+    const nodes = [], links = [], taken = new Set();
+    for (let i = 0; i < 14; i++) nodes.push(node('n' + i));
+    for (let k = 0; k < 40; k++) {
+      const a = Math.floor(random() * 14), b = Math.floor(random() * 14);
+      if (a === b || taken.has(a + '>' + b)) continue;
+      taken.add(a + '>' + b);
+      // 대부분 앞 번호 → 뒤 번호로 두고, 가끔 거꾸로 두어 순환을 섞는다.
+      const forwardWay = a < b || random() < 0.1;
+      links.push(link('n' + (forwardWay ? a : b), 'n' + (forwardWay ? b : a), random() < 0.8 ? 'required' : 'weak'));
+    }
+    const unique = links.filter((l, i) => links.findIndex(m => m.source === l.source && m.target === l.target) === i);
+    const gone = L.redundantRequired({ nodes: nodes, links: unique });
+    const kept = unique.filter(l => !gone.has(l.source + '>' + l.target));
+    assert.deepEqual(reachable(nodes, kept), reachable(nodes, unique));
+    gone.forEach(id => assert.equal(unique.find(l => l.source + '>' + l.target === id).relation, 'required'));
+  }
+});

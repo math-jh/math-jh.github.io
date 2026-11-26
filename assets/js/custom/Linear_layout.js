@@ -27,16 +27,9 @@
     return ((h >>> 0) % 10000) / 10000;
   }
 
-  /* 열: required SCC를 한 층으로 축약한 뒤 forward, weak 순으로 순환 없는 소프트
-     제약을 더한다. 그래서 선수 글은 required든 weak든 후속 글보다 왼쪽 열에 온다.
-     예외는 required 사슬이나 먼저 넣은 소프트 제약과 반대로 가는 선뿐이다. weak는
-     required·forward만으로 낸 층에서 여유가 큰 선부터 넣는다 — 순환에서 버려지는
-     쪽이 그 층과 가장 크게 어긋난 선이 되고, 열도 덜 늘어난다.
-     카테고리 안의 순번(weight 순으로 0, 1, 2…)은 층의 하한으로만 쓴다. 선이 없는
-     글이 한 열에 쌓이지 않고 가로로 흩어지게 하는 값이고, 카테고리 안의 순서를
-     지켜 주지는 않는다 — 선수 글에 밀린 글은 같은 카테고리의 뒤 글보다 오른쪽에
-     올 수 있다. */
-  function readingColumns(data) {
+  // required 선만으로 본 순환(SCC). comps 는 뒤에 읽을 글의 묶음부터 나온다 — 어느 묶음에서든
+  // required 로 닿는 묶음은 번호가 더 작다.
+  function requiredComponents(data) {
     var nodes = data.nodes, reqAdj = {};
     nodes.forEach(function (n) { reqAdj[n.id] = []; });
     data.links.forEach(function (l) {
@@ -61,6 +54,57 @@
       comps.push(comp);
     }
     nodes.forEach(function (n) { if (index[n.id] === undefined) visit(n.id); });
+    return { compOf: compOf, comps: comps };
+  }
+
+  /* required 의 순서. reach[a] 는 묶음 a 에서 required 를 따라 닿는 묶음들(a 제외)이다.
+     required 는 "먼저 읽어야 한다"는 뜻이라 사슬로 이어지면 직접 선이 없어도 성립한다. */
+  function requiredOrder(data) {
+    var parts = requiredComponents(data), compOf = parts.compOf;
+    var next = parts.comps.map(function () { return new Set(); });
+    data.links.forEach(function (l) {
+      if (l.relation !== 'required') return;
+      var e = endpoints(l), a = compOf[e[0]], b = compOf[e[1]];
+      if (a !== undefined && b !== undefined && a !== b) next[a].add(b);
+    });
+    var reach = [];
+    next.forEach(function (direct) {
+      var all = new Set();
+      direct.forEach(function (b) { all.add(b); reach[b].forEach(function (c) { all.add(c); }); });
+      reach.push(all);
+    });
+    return { compOf: compOf, next: next, reach: reach };
+  }
+
+  /* 그리지 않는 required 선: 다른 required 사슬이 같은 두 글을 잇고 있어서 읽는 순서에 보탤
+     것이 없는 선이다(A→B→C 가 있을 때의 A→C). 순환 안의 선은 남긴다 — 순환을 한 묶음으로
+     보고 묶음 사이에서만 지워야 어느 글도 그래프에서 떨어지지 않는다. 원장과 글 머리의 필수지식
+     목록은 그대로이고, 그림에서만 뺀다. 돌려주는 것은 선의 lid 집합이다. */
+  function redundantRequired(data, order) {
+    order = order || requiredOrder(data);
+    var out = new Set();
+    data.links.forEach(function (l) {
+      if (l.relation !== 'required') return;
+      var e = endpoints(l), a = order.compOf[e[0]], b = order.compOf[e[1]], via = false;
+      if (a === undefined || b === undefined || a === b) return;
+      order.next[a].forEach(function (c) { if (c !== b && order.reach[c].has(b)) via = true; });
+      if (via) out.add(lid(l));
+    });
+    return out;
+  }
+
+  /* 열: required SCC를 한 층으로 축약한 뒤 forward, weak 순으로 순환 없는 소프트
+     제약을 더한다. 그래서 선수 글은 required든 weak든 후속 글보다 왼쪽 열에 온다.
+     예외는 required 사슬이나 먼저 넣은 소프트 제약과 반대로 가는 선뿐이다. weak는
+     required·forward만으로 낸 층에서 여유가 큰 선부터 넣는다 — 순환에서 버려지는
+     쪽이 그 층과 가장 크게 어긋난 선이 되고, 열도 덜 늘어난다.
+     카테고리 안의 순번(weight 순으로 0, 1, 2…)은 층의 하한으로만 쓴다. 선이 없는
+     글이 한 열에 쌓이지 않고 가로로 흩어지게 하는 값이고, 카테고리 안의 순서를
+     지켜 주지는 않는다 — 선수 글에 밀린 글은 같은 카테고리의 뒤 글보다 오른쪽에
+     올 수 있다. */
+  function readingColumns(data) {
+    var nodes = data.nodes, parts = requiredComponents(data);
+    var compOf = parts.compOf, comps = parts.comps;
 
     var adj = comps.map(function () { return new Set(); });
     function addEdge(a, b) { if (a !== b) adj[a].add(b); }
@@ -164,7 +208,9 @@
   }
 
   // 첫 부모 후보는 왼쪽 열에 있는 required 선수 글이다. 깊이 = 진입점에서 오는 가장 긴 사슬.
-  function readingParents(data, column) {
+  // hidden(redundantRequired 가 낸 lid 집합)의 선은 그리지 않는 선이라 후보에서 빼지만, 연결
+  // 수에는 센다 — 연결 수는 그 글이 얼마나 인용되는가이다.
+  function readingParents(data, column, hidden) {
     var order = columnOrder(data.nodes.map(function (n) { return n.id; }), column);
     var degree = {}, parents = {};
     order.forEach(function (id) { parents[id] = []; });
@@ -172,6 +218,7 @@
       var e = endpoints(l);
       degree[e[0]] = (degree[e[0]] || 0) + 1;
       degree[e[1]] = (degree[e[1]] || 0) + 1;
+      if (hidden && hidden.has(lid(l))) return;
       if (l.relation === 'required' && parents[e[1]] && column[e[0]] < column[e[1]]) parents[e[1]].push(e[0]);
     });
     var depth = {};
@@ -359,6 +406,7 @@
 
   window.LinearLayout = {
     endpoints: endpoints, lid: lid, unitHash: unitHash,
+    redundantRequired: redundantRequired,
     readingColumns: readingColumns, columnOrder: columnOrder, readingParents: readingParents,
     lanes: lanes, spreadColumns: spreadColumns,
     linkPath: linkPath, labelBox: labelBox, boxesOverlap: boxesOverlap
