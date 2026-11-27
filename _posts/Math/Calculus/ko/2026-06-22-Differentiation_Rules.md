@@ -18,7 +18,7 @@ revising: true
 
 ## 멱급수의 항별 미분
 
-우리는 [§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5) 직후에 다항함수는 항별로 미분할 수 있다는 것을 살펴보았다. 일반적으로 미분은 무한합과 잘 어울리지 <em-ko>않지만</em-ko>, 멱급수의 경우 그 수렴반경 안에서는 다음 명제에 의해 항별 미분이 가능하다.
+우리는 [§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5){: data-lid="4405y" } 직후에 다항함수는 항별로 미분할 수 있다는 것을 살펴보았다. 일반적으로 미분은 무한합과 잘 어울리지 <em-ko>않지만</em-ko>, 멱급수의 경우 그 수렴반경 안에서는 다음 명제에 의해 항별 미분이 가능하다.
 
 ::: 명제 1 (멱급수의 항별 미분)
 멱급수 $f(x) = \sum_{n=0}^\infty c_n x^n$이 수렴반경 $R > 0$을 가지면, $f$는 $\lvert x\rvert < R$에서 미분가능하고
@@ -32,11 +32,11 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 $$n\lvert c_n\rvert r^{n-1}\leq\frac{M}{s}n(r/s)^{n-1}$$
 
-이다. 우변을 합한 급수는 인접한 항의 비가 $r/s<1$로 수렴하므로 [§무한급수, ⁋정리 6](/ko/math/calculus/series#thm6)의 비율판정으로 수렴한다. 같은 정리의 비교판정에 의해 $\sum_{n=1}^\infty nc_nx^{n-1}$은 $\lvert x\rvert=r$에서 절대수렴한다. $r$을 $R$보다 작은 임의의 양수로 잡았으므로 이 급수의 수렴반경은 적어도 $R$이다.
+이다. 우변을 합한 급수는 인접한 항의 비가 $r/s<1$로 수렴하므로 [§무한급수, ⁋정리 6](/ko/math/calculus/series#thm6){: data-lid="igm4q" }의 비율판정으로 수렴한다. 같은 정리의 비교판정에 의해 $\sum_{n=1}^\infty nc_nx^{n-1}$은 $\lvert x\rvert=r$에서 절대수렴한다. $r$을 $R$보다 작은 임의의 양수로 잡았으므로 이 급수의 수렴반경은 적어도 $R$이다.
 
 만일 이 급수의 수렴반경이 $R$보다 크다면 그 사이에 양수 $t$를 택할 수 있다. 그러면 $\sum_{n=1}^\infty n\lvert c_n\rvert t^{n-1}$이 수렴하므로, $\lvert c_n\rvert t^n\leq t\cdot n\lvert c_n\rvert t^{n-1}$에 의해 원래 급수도 $t$에서 절대수렴한다. 이는 $t>R$이라는 사실에 모순이므로 두 급수의 수렴반경은 같다.
 
-$\lvert a\rvert<r<R$인 $r$을 고정하자. $0<\lvert h\rvert<r-\lvert a\rvert$일 때, 급수의 선형성에 의해 $f$의 $a$에서의 평균변화율은 $\sum_{n=1}^\infty D_n(h)$이고, 여기서 [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2)의 인수분해를 이용하면
+$\lvert a\rvert<r<R$인 $r$을 고정하자. $0<\lvert h\rvert<r-\lvert a\rvert$일 때, 급수의 선형성에 의해 $f$의 $a$에서의 평균변화율은 $\sum_{n=1}^\infty D_n(h)$이고, 여기서 [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2){: data-lid="0gs1n" }의 인수분해를 이용하면
 
 $$D_n(h)=c_n\frac{(a+h)^n-a^n}{h}=c_n\sum_{j=0}^{n-1}(a+h)^{n-1-j}a^j$$
 
@@ -139,7 +139,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2)에 의해 $h'(t)=-1/t^2$이다. 따라서 [정리 4](#thm4){: data-lid="xpo63" }에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
+함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2){: data-lid="1hzrt" }에 의해 $h'(t)=-1/t^2$이다. 따라서 [정리 4](#thm4){: data-lid="xpo63" }에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 
@@ -174,7 +174,7 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 이며, 같은 방식으로 $(\arctan y)' = 1/(1 + y^2)$이다.
 
-로그함수의 도함수를 알면 거듭제곱의 미분 공식을 임의의 실수 지수 $r$로 확장할 수 있다. $x>0$에서 $x^r=e^{r\ln x}$이므로 [정리 4](#thm4)에 의해
+로그함수의 도함수를 알면 거듭제곱의 미분 공식을 임의의 실수 지수 $r$로 확장할 수 있다. $x>0$에서 $x^r=e^{r\ln x}$이므로 [정리 4](#thm4){: data-lid="9kebn" }에 의해
 
 $$(x^r)'=e^{r\ln x}\cdot\frac{r}{x}=rx^{r-1}$$
 
@@ -193,7 +193,7 @@ $$(b^x)'=b^x\ln b,\qquad (\log_b x)'=\frac{1}{x\ln b}$$
 
 $$f(x)=x\sin(1/x),\qquad g(x)=x^2\sin(1/x)$$
 
-로 두고 $f(0)=g(0)=0$으로 정의하자. [§함수의 극한, ⁋예시 11](/ko/math/calculus/functions_and_limits#ex11)에 의해 $f$는 $0$에서 연속이고, $g(x)=xf(x)$이므로 $g$도 $0$에서 연속이다. 두 함수의 $0$에서의 평균변화율은 각각
+로 두고 $f(0)=g(0)=0$으로 정의하자. [§함수의 극한, ⁋예시 11](/ko/math/calculus/functions_and_limits#ex11){: data-lid="i73q8" }에 의해 $f$는 $0$에서 연속이고, $g(x)=xf(x)$이므로 $g$도 $0$에서 연속이다. 두 함수의 $0$에서의 평균변화율은 각각
 
 $$\frac{f(h)-f(0)}{h}=\sin(1/h),\qquad \frac{g(h)-g(0)}{h}=h\sin(1/h)$$
 

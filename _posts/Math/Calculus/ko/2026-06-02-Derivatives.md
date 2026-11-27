@@ -61,7 +61,7 @@ $$\frac{(a+h)^{-m}-a^{-m}}{h}=-\frac{(a+h)^m-a^m}{h}\cdot\frac{1}{(a+h)^ma^m}$$
 
 $$\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{(u^p-v^p)/(u-v)}{(u^q-v^q)/(u-v)}$$
 
-이다. [§함수의 극한, ⁋따름정리 6](/ko/math/calculus/functions_and_limits#cor6)에 의해 $h\rightarrow 0$일 때 $u\rightarrow v$이다. 앞서 구한 정수 거듭제곱의 미분계수에 의해 우변의 분자와 분모는 각각 $pv^{p-1}$과 $qv^{q-1}$로 수렴한다. 분모의 극한은 $q>0$, $v>0$이므로 양수이다. 따라서 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 4를 적용하면
+이다. [§함수의 극한, ⁋따름정리 6](/ko/math/calculus/functions_and_limits#cor6){: data-lid="bubh4" }에 의해 $h\rightarrow 0$일 때 $u\rightarrow v$이다. 앞서 구한 정수 거듭제곱의 미분계수에 의해 우변의 분자와 분모는 각각 $pv^{p-1}$과 $qv^{q-1}$로 수렴한다. 분모의 극한은 $q>0$, $v>0$이므로 양수이다. 따라서 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-lid="chuau" }의 4를 적용하면
 
 $$\lim_{h\rightarrow 0}\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{pv^{p-1}}{qv^{q-1}}=\frac{p}{q}a^{p/q-1}$$
 
@@ -97,7 +97,7 @@ $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr)=f'(a)\cdot 0=0$$
 
 $$\frac{f(h)-f(0)}{h}=\frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
 
-이므로, 이 함수의 평균변화율의 극한은 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로 서로 달라 극한이 존재하지 않는다. 이 경우는 [§연속함수, ⁋정의 6](/ko/math/calculus/continuity#def6)의 용어를 빌리자면 도함수가 원점에서 jump discontinuity를 갖는 경우에 해당한다. 도함수가 essential singularity를 갖는 경우를 보기 위해서는 $f(x)=\sqrt[3]{x}$를 보면 된다. 이 함수는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 가지므로, 도함수의 값이 $x\rightarrow 0$인 극한에서 존재하지 않는다.
+이므로, 이 함수의 평균변화율의 극한은 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로 서로 달라 극한이 존재하지 않는다. 이 경우는 [§연속함수, ⁋정의 6](/ko/math/calculus/continuity#def6){: data-lid="yv82t" }의 용어를 빌리자면 도함수가 원점에서 jump discontinuity를 갖는 경우에 해당한다. 도함수가 essential singularity를 갖는 경우를 보기 위해서는 $f(x)=\sqrt[3]{x}$를 보면 된다. 이 함수는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 가지므로, 도함수의 값이 $x\rightarrow 0$인 극한에서 존재하지 않는다.
 
 {% diagram Math/Calculus/Derivatives-2.svg width="12.46em" alt="세제곱근함수의 수직접선" %}
 
@@ -140,7 +140,7 @@ $$\frac{(f+g)(a+h)-(f+g)(a)}{h}=\frac{f(a+h)-f(a)}{h}+\frac{g(a+h)-g(a)}{h}$$
 로 갈라지고, 각 항이 $f'(a), g'(a)$로 수렴하므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-lid="bwos3" }에 의해 합도 수렴한다. $cf$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
 :::
 
-[예시 2](#ex2)에서 구한 정수 거듭제곱의 도함수와 [명제 5](#prop5)를 함께 적용하면 임의의 다항함수 $P(x)=\sum_{k=0}^n c_k x^k$의 도함수는
+[예시 2](#ex2){: data-lid="8l9ug" }에서 구한 정수 거듭제곱의 도함수와 [명제 5](#prop5){: data-lid="q0vtg" }를 함께 적용하면 임의의 다항함수 $P(x)=\sum_{k=0}^n c_k x^k$의 도함수는
 
 $$P'(x)=\sum_{k=1}^n k c_k x^{k-1}$$
 
@@ -154,7 +154,7 @@ $f$의 도함수 $f'$이 미분가능하면 그 도함수를 *이계도함수<su
 
 이계도함수 $f''$은 변화율의 변화율로, $f$가 위치라면 $f''$은 가속도이다. 또 $f''$의 부호는 그래프가 굽는 방향, 즉 함수의 오목성과 볼록성을 알려 준다. 다항함수는 그 최고차항을 넘는만큼 미분하면 $0$이 되고, $0$은 상수함수이므로 계속 미분할 수 있으며 그 값도 $0$이다. 따라서 임의의 다항함수는 $C^\infty$이다. 
 
-또, 도함수도 본질적으로 함수이므로 도함수의 연속성을 생각할 수 있고, [명제 3](#prop3) 직후에 살펴본 것과 같이 [§연속함수, ⁋정의 6](/ko/math/calculus/continuity#def6)의 분류를 해줄 수 있다. 이러한 경우를 위해 두 극한을 따로 정의해 두면 모서리나 끝점에서의 미분가능성을 편하게 다룰 수 있다.
+또, 도함수도 본질적으로 함수이므로 도함수의 연속성을 생각할 수 있고, [명제 3](#prop3){: data-lid="hr67q" } 직후에 살펴본 것과 같이 [§연속함수, ⁋정의 6](/ko/math/calculus/continuity#def6){: data-lid="vjc5i" }의 분류를 해줄 수 있다. 이러한 경우를 위해 두 극한을 따로 정의해 두면 모서리나 끝점에서의 미분가능성을 편하게 다룰 수 있다.
 
 ::: 정의 7
 함수 $f$의 점 $a$에서의 *우미분계수<sub>right-hand derivative</sub>*와 *좌미분계수<sub>left-hand derivative</sub>*를 각각

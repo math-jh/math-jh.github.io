@@ -19,7 +19,7 @@ We covered the definition of differentiation and its basic properties in [§Diff
 
 ## Term-by-Term Differentiation of Power Series
 
-In [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2) we saw that $(x^n)'=nx^{n-1}$ for positive integers $n$. Together with linearity from [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5), this gives term-by-term differentiation for polynomials. The following proposition extends term-by-term differentiation to power series inside their radius of convergence.
+In [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2) we saw that $(x^n)'=nx^{n-1}$ for positive integers $n$. Together with linearity from [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5){: data-lid="4405y" }, this gives term-by-term differentiation for polynomials. The following proposition extends term-by-term differentiation to power series inside their radius of convergence.
 
 ::: Proposition 1 (Term-by-term differentiation of power series)
 If the power series $f(x) = \sum_{n=0}^\infty c_n x^n$ has radius of convergence $R > 0$, then $f$ is differentiable for $\lvert x\rvert < R$ and
@@ -149,7 +149,7 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 and in the same manner, $(\arctan y)' = 1/(1 + y^2)$.
 
-The derivative of the logarithm lets us extend the power rule to any real exponent $r$. For $x>0$ we have $x^r=e^{r\ln x}$, so by [Theorem 4](#thm4),
+The derivative of the logarithm lets us extend the power rule to any real exponent $r$. For $x>0$ we have $x^r=e^{r\ln x}$, so by [Theorem 4](#thm4){: data-lid="9kebn" },
 
 $$(x^r)'=e^{r\ln x}\cdot\frac{r}{x}=rx^{r-1}.$$
 
@@ -166,7 +166,7 @@ For $x\neq 0$, set
 
 $$f(x)=x\sin(1/x),\qquad g(x)=x^2\sin(1/x),$$
 
-and define $f(0)=g(0)=0$. By [§Limits of Functions, ⁋Example 11](/en/math/calculus/functions_and_limits#ex11), $f$ is continuous at $0$. Since $g(x)=xf(x)$, $g$ is also continuous at $0$. Their difference quotients at $0$ are
+and define $f(0)=g(0)=0$. By [§Limits of Functions, ⁋Example 11](/en/math/calculus/functions_and_limits#ex11){: data-lid="i73q8" }, $f$ is continuous at $0$. Since $g(x)=xf(x)$, $g$ is also continuous at $0$. Their difference quotients at $0$ are
 
 $$\frac{f(h)-f(0)}{h}=\sin(1/h),\qquad \frac{g(h)-g(0)}{h}=h\sin(1/h).$$
 

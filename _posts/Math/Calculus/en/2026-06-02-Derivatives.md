@@ -60,7 +60,7 @@ Now take a rational exponent $p/q$, where $p$ is an integer and $q$ is a positiv
 
 $$\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{(u^p-v^p)/(u-v)}{(u^q-v^q)/(u-v)}.$$
 
-By [§Limits of Functions, ⁋Corollary 6](/en/math/calculus/functions_and_limits#cor6), $u\rightarrow v$ as $h\rightarrow 0$. By the derivatives of integer powers computed above, the numerator and denominator on the right tend to $pv^{p-1}$ and $qv^{q-1}$, respectively. The latter limit is positive since $q>0$ and $v>0$. Part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) gives
+By [§Limits of Functions, ⁋Corollary 6](/en/math/calculus/functions_and_limits#cor6){: data-lid="bubh4" }, $u\rightarrow v$ as $h\rightarrow 0$. By the derivatives of integer powers computed above, the numerator and denominator on the right tend to $pv^{p-1}$ and $qv^{q-1}$, respectively. The latter limit is positive since $q>0$ and $v>0$. Part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="chuau" } gives
 
 $$\lim_{h\rightarrow 0}\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{pv^{p-1}}{qv^{q-1}}=\frac{p}{q}a^{p/q-1}.$$
 
@@ -139,7 +139,7 @@ $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h}$
 and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="bwos3" }. Examining the average rate of change expression for $cf$ yields the same result.
 :::
 
-Combining the derivatives of integer powers from [Example 2](#ex2) with [Proposition 5](#prop5), we find that the polynomial $P(x)=\sum_{k=0}^n c_k x^k$ has derivative
+Combining the derivatives of integer powers from [Example 2](#ex2){: data-lid="8l9ug" } with [Proposition 5](#prop5){: data-lid="q0vtg" }, we find that the polynomial $P(x)=\sum_{k=0}^n c_k x^k$ has derivative
 
 $$P'(x)=\sum_{k=1}^n k c_k x^{k-1}.$$
 
@@ -153,7 +153,7 @@ If the derivative of $f$, $f'$, is differentiable, its derivative is called the 
 
 The second derivative $f''$ is the rate of change of the rate of change; if $f$ is position, then $f''$ is acceleration. Also, the sign of $f''$ indicates the direction in which the graph bends (convexity/concavity). Every polynomial is smooth because its derivative is again a polynomial.
 
-In the absolute value example after [Proposition 3](#prop3), the derivative takes different values on the two sides of the origin, and the difference quotient based at the origin also has different left and right limits. For the cube root function, this difference quotient diverges from both sides. For a derivative to exist at an interior point, the difference quotient must approach the same finite value from both sides. Defining the two limits separately lets us discuss differentiability at corners and endpoints precisely.
+In the absolute value example after [Proposition 3](#prop3){: data-lid="hr67q" }, the derivative takes different values on the two sides of the origin, and the difference quotient based at the origin also has different left and right limits. For the cube root function, this difference quotient diverges from both sides. For a derivative to exist at an interior point, the difference quotient must approach the same finite value from both sides. Defining the two limits separately lets us discuss differentiability at corners and endpoints precisely.
 
 ::: Definition 7
 The *right-hand derivative* and *left-hand derivative* of a function $f$ at a point $a$ are defined respectively by
