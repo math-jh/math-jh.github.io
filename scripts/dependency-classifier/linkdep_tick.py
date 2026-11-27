@@ -383,15 +383,23 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
     entry = state["units"].setdefault(key, {})
     try:
         record = store.load_unit_record(h)
+        started = False
         if stage == "S1" and reason in ("new", "delta", "restart"):
             start_round(unit, record, reason)
             entry.update({"fp": unit.fingerprint, "next": "S1", "started": int(time.time())})
+            started = True
         elif stage == "S1" and not record.get("round"):
-            # The round's S1 failed before anything was saved, so the unit record never
-            # got its round: start it again rather than close the unit as finished.
+            # A unit record without a round: start one rather than close the unit as finished.
             start_round(unit, record, "restart")
+            started = True
         round_lids = [lid for lid in record.get("round", []) if unit.link(lid) is not None]
         record["round"] = round_lids
+
+        def checkpoint() -> None:
+            # The stage's answers so far, saved as they come: a stage stopped midway
+            # resumes from here on its next run instead of asking again (run_stage).
+            with _locked():
+                store.merge_unit_record(h, record, round_lids)
         if not round_lids:
             entry.update({"next": None, "updated": int(time.time())})
             entry.pop("error", None)
@@ -400,8 +408,10 @@ def run(state: dict, paths: list[Path], stage: str, unit: units.Unit, reason: st
                 store.merge_unit_record(h, record, [])
             store.save_state(state)
             return 0
+        if started:
+            checkpoint()                                # the new round, before any call
         log(f"{stage} {key}: {len(round_lids)} link(s) ({reason})")
-        summary = pipe.run_stage(stage, unit, record, set(round_lids))
+        summary = pipe.run_stage(stage, unit, record, set(round_lids), checkpoint)
         if _fingerprint(paths) != unit.fingerprint:
             log(f"{stage} {key}: text changed during the stage; the round restarts")
             entry["updated"] = int(time.time())

@@ -796,6 +796,92 @@ class ScopeTest(unittest.TestCase):
         self.assertEqual(ids, {"live-link"})
 
 
+class StageResumeTest(unittest.TestCase):
+    # Named to sort after BookTest/EndToEnd: these rounds share the module's temp book.
+    """A stage stopped midway keeps every answer it got and asks only for the rest."""
+
+    def test_stage_resumes_after_the_gate_closes(self):
+        import linkdep_tick as tick
+        import linkdep_units as units
+        e2e = EndToEndFakeModelTest()
+        paths = next(p for p in units.all_units() if EndToEndFakeModelTest.POST in p)
+        unit = units.load_unit(paths)
+        h = units.unit_hash(unit.key)
+        lids = set(unit.lids)
+        self.assertGreater(len(lids), 4)
+        asked: list[tuple[str, str, list[str]]] = []     # (stage, step, ids) of answered calls
+        allow: dict[tuple[str, str], int] = {}           # calls of that kind before the gate closes
+
+        def call(stage, prompt, schema=None):
+            step = ("1" if prompt.startswith(sp.STEP1_HEAD[:40]) else
+                    "4" if prompt.startswith(sp.STEP4_HEAD[:40]) else "reveal")
+            left = allow.get((stage, step))
+            if left is not None:
+                if left == 0:
+                    raise models.ModelError(
+                        f"{models.PROVIDER[stage]} quota gate closed while waiting for a slot")
+                allow[(stage, step)] = left - 1
+            asked.append((stage, step, [it["id"] for it in e2e._items(prompt)]))
+            return e2e.fake_call(stage, prompt, schema)
+
+        def ids(step):
+            return sorted(i for _, s, got in asked if s == step for i in got)
+
+        def stage_has(stage, key):
+            links = store.load_unit_record(h)["links"]
+            return {lid for lid in lids if links[lid].get("stages", {}).get(stage, {}).get(key)}
+
+        def run(stage, why="continue"):
+            return tick.run(state, paths, stage, units.load_unit(paths), why, commit=False)
+
+        flag_all = {"risk": None, "flagged": True, "reasons": ["test"], "by": "rule"}
+        state = {"units": {}, "started_at": time.time() - 30 * 86400}
+        with patch.object(models, "call", side_effect=call), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(risk, "score", return_value=flag_all), \
+                patch.object(pipe, "MAX_ITEMS", 1), \
+                patch.object(pipe, "BATCH_PROMPT_BYTES", 1), \
+                patch.object(tick, "dirty_paths", return_value=[]), \
+                patch.object(tick, "commit_outputs", return_value=True):
+            # Closed at the first call: the new round is on disk all the same.
+            allow[("S1", "1")] = 0
+            self.assertEqual(run("S1", "new"), 1)
+            self.assertEqual(set(store.load_unit_record(h)["round"]), lids)
+            # Closed at the second Step 1 chunk: the first chunk's answer stays.
+            allow[("S1", "1")] = 1
+            self.assertEqual(run("S1"), 1)
+            first = stage_has("S1", "step1")
+            self.assertEqual(len(first), 1)
+            # Closed at the fourth Step 4 batch: Step 1 asks only for the rest.
+            allow.clear(), asked.clear()
+            allow[("S1", "4")] = 3
+            self.assertEqual(run("S1"), 1)
+            self.assertEqual(ids("1"), sorted(lids - first))
+            batched = stage_has("S1", "step4")
+            self.assertEqual(len(batched), 3)
+            # The next run asks no Step 1 and Step 4 only for the rest.
+            allow.clear(), asked.clear()
+            self.assertEqual(run("S1"), 0)
+            self.assertEqual(ids("1"), [])
+            self.assertEqual(ids("4"), sorted(lids - batched))
+            self.assertEqual(state["units"][unit.key]["next"], "S2")
+            # S2 closed at its third reveal batch; the rerun reveals only the rest.
+            allow[("S2", "reveal")] = 2
+            self.assertEqual(run("S2"), 1)
+            revealed = {lid for lid in stage_has("S2", "step4")
+                        if store.load_unit_record(h)["links"][lid]["stages"]["S2"]["step4"].get("reveal")}
+            self.assertEqual(len(revealed), 2)
+            allow.clear(), asked.clear()
+            self.assertEqual(run("S2"), 0)
+            self.assertEqual((ids("1"), ids("4")), ([], []))
+            self.assertEqual(ids("reveal"), sorted(lids - revealed))
+            self.assertEqual(run("S3"), 0)
+        self.assertIsNone(state["units"][unit.key]["next"])
+        # Every link went through Step 4, where the scripted S1 says weak and S2·S3
+        # say required: the whole round goes to the human queue.
+        self.assertTrue(lids <= set(store.load_queue()["human"]))
+
+
 class StepFourBatchingTest(unittest.TestCase):
     # Named to sort after BookTest/EndToEnd: these rounds share the module's temp book.
     """Step 4 and the reveal split their items so no prompt overflows (2026-10-31)."""

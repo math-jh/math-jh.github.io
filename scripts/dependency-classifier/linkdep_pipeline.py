@@ -286,13 +286,19 @@ def _record_issue(stage: str, lid: str, row: dict) -> None:
                          f"{row['precedent_reason'] or '판례 없음'}")
 
 
-def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str]) -> list[dict]:
-    """Rule A and the difference note.  Changes issue files, never votes."""
+def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str],
+               checkpoint=None) -> None:
+    """Rule A and the difference note.  Changes issue files, never votes.
+
+    Each batch's results are applied, its usage recorded and ``checkpoint`` called
+    before the next batch; links that already carry a reveal are skipped."""
+    save = checkpoint or (lambda: None)
+    usage = unit_rec.setdefault("usage", {}).setdefault(stage, [])
     lower = STAGES[:STAGES.index(stage)]
     items = []
     for lid in lids:
         mine = unit_rec["links"][lid]["stages"][stage].get("step4")
-        if not mine:
+        if not mine or mine.get("reveal"):
             continue
         lows = []
         for s in lower:
@@ -319,58 +325,73 @@ def run_reveal(stage: str, unit: units.Unit, unit_rec: dict, lids: list[str]) ->
         items.append({"id": lid, "link": text[link.start:link.ial_end or link.end],
                       "source_context": core.source_context(text, link.start, 1),
                       "your_blind_review": mine_view, "lower": lows})
-    if not items:
-        return []
-    rows: dict[str, dict] = {}
-    usages: list[dict] = []
     for batch in pack(items, lambda b: len(sp.reveal_prompt(b).encode("utf-8"))):
         ids = [i["id"] for i in batch]
-        payload, usage = models.call(stage, sp.reveal_prompt(batch),
-                                     sp.reveal_schema(ids) if stage == "S3" else None)
-        rows.update(sp.validate_reveal(payload, set(ids)))
-        usages.append({**usage, "items": len(ids), "step": "reveal"})
-    for item in items:
-        lid = item["id"]
-        result = rows.get(lid)
-        if not result:
-            continue
-        mine = unit_rec["links"][lid]["stages"][stage]["step4"]
-        mine["reveal"] = result
-        for check in result["issue_check"]:
-            low = next((x for x in item["lower"] if x["model"] == check["model"]), None)
-            if not low or not low["pending_id"]:
+        payload, used = models.call(stage, sp.reveal_prompt(batch),
+                                    sp.reveal_schema(ids) if stage == "S3" else None)
+        rows = sp.validate_reveal(payload, set(ids))
+        usage.append({**used, "items": len(ids), "step": "reveal"})
+        for item in batch:
+            lid = item["id"]
+            result = rows.get(lid)
+            if not result:
                 continue
-            if check["verdict"] == "same":
-                if mine.get("pending_id") and mine["pending_id"] != low["pending_id"]:
-                    book.merge(mine["pending_id"], low["pending_id"])
-                    mine["pending_id"] = low["pending_id"]
-                if check["statement"]:
-                    book.restate(low["pending_id"], check["statement"], check["description"])
-            elif check["verdict"] == "covered" and check["precedent"]:
-                book.add_opinion(low["pending_id"],
-                                 f"{models.PROVIDER[stage]} ({stage}): {check['precedent']} 이(가) 이미 다룬다")
-    return usages
+            mine = unit_rec["links"][lid]["stages"][stage]["step4"]
+            mine["reveal"] = result
+            for check in result["issue_check"]:
+                low = next((x for x in item["lower"] if x["model"] == check["model"]), None)
+                if not low or not low["pending_id"]:
+                    continue
+                if check["verdict"] == "same":
+                    if mine.get("pending_id") and mine["pending_id"] != low["pending_id"]:
+                        book.merge(mine["pending_id"], low["pending_id"])
+                        mine["pending_id"] = low["pending_id"]
+                    if check["statement"]:
+                        book.restate(low["pending_id"], check["statement"], check["description"])
+                elif check["verdict"] == "covered" and check["precedent"]:
+                    book.add_opinion(low["pending_id"],
+                                     f"{models.PROVIDER[stage]} ({stage}): {check['precedent']} 이(가) 이미 다룬다")
+        save()
 
 
-def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | None) -> dict:
-    """Run one stage over the unit's round.  Mutates unit_rec; returns a summary."""
+def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | None,
+              checkpoint=None) -> dict:
+    """Run one stage over the unit's round.  Mutates unit_rec; returns a summary.
+
+    ``checkpoint`` (no arguments) is called after every Step 1 chunk, Step 4 batch
+    and reveal batch has gone into ``unit_rec``, so the caller can save the answers
+    as they come.  A stage that stops midway (a quota gate closing, a broken call)
+    resumes on its next run: links with this stage's Step 1 skip Step 1, links with
+    its Step 4 skip Step 4, links with a reveal skip the reveal.  The summary's
+    ``resumed`` counts the links whose Step 1 came from an earlier run."""
+    save = checkpoint or (lambda: None)
     now = int(time.time())
     fitted = risk.load_model()
     links = unit_rec.setdefault("links", {})
     usage = unit_rec.setdefault("usage", {}).setdefault(stage, [])
     round_lids: list[str] = []
+    resumed = 0
     for call in units.build_calls(unit, only):
-        rows, usages = run_step1(stage, call)
-        usage.extend(usages)
+        todo = []
         for item in call["items"]:
             lid = item["id"]
             round_lids.append(lid)
             rec = links.setdefault(lid, {})
             rec.update({"source": call["source_rel"], "line": item["line"], "link": item["link"],
                         "target": item["target"], "features": call["features"][lid]})
-            stages = rec.setdefault("stages", {})
-            stages[stage] = {"step1": rows[lid], "at": now,
-                             "step2": risk.score(stage, rows[lid], call["features"][lid], fitted)}
+            if rec.get("stages", {}).get(stage, {}).get("step1"):
+                resumed += 1
+            else:
+                todo.append(item)
+        for part in (_chunks(_subset(call, todo)) if todo else []):
+            rows, usages = run_step1(stage, part)
+            usage.extend(usages)
+            for item in part["items"]:
+                lid = item["id"]
+                links[lid].setdefault("stages", {})[stage] = {
+                    "step1": rows[lid], "at": now,
+                    "step2": risk.score(stage, rows[lid], call["features"][lid], fitted)}
+            save()
     lower = STAGES[:STAGES.index(stage)]
     forced = {lid for lid in round_lids
               if any(links[lid]["stages"].get(s, {}).get("step4") for s in lower)}
@@ -378,10 +399,11 @@ def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | Non
     review = sorted(flagged | forced)
     for lid in forced:
         links[lid]["stages"][stage]["forced"] = True
-    if review:
-        batches = step4_batches(step4_items(unit, unit_rec, stage, review))
+    todo4 = [lid for lid in review if not links[lid]["stages"][stage].get("step4")]
+    if todo4:
+        batches = step4_batches(step4_items(unit, unit_rec, stage, todo4))
         if len(batches) > 1:
-            log(f"{stage} step 4: {len(review)} item(s) in {len(batches)} calls")
+            log(f"{stage} step 4: {len(todo4)} item(s) in {len(batches)} calls")
         # One batch at a time, recording its issues before the next: each call
         # reads the open pending issues afresh, so a later batch can attach to an
         # issue an earlier one raised instead of raising it again.
@@ -391,10 +413,14 @@ def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | Non
             for lid, row in rows4.items():
                 _record_issue(stage, lid, row)
                 links[lid]["stages"][stage]["step4"] = row
+            save()
     if lower and forced:
-        usage.extend(run_reveal(stage, unit, unit_rec, sorted(forced)))
-    return {"stage": stage, "links": len(round_lids), "flagged": len(flagged),
-            "forced": len(forced), "reviewed": len(review)}
+        run_reveal(stage, unit, unit_rec, sorted(forced), save)
+    summary = {"stage": stage, "links": len(round_lids), "flagged": len(flagged),
+               "forced": len(forced), "reviewed": len(review)}
+    if resumed:
+        summary["resumed"] = resumed
+    return summary
 
 
 def lone_s1(rec: dict) -> bool:
