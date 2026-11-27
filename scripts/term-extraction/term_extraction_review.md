@@ -5493,3 +5493,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-11-27 03:15
 
 - _posts/Math/Symplectic_Geometry/ko/2026-06-20-Moment_Map.md: 주요 용어 'coadjoint action' ko 미상 — 보류
+
+## term_extract_worker 2026-11-27 15:17
+
+- _posts/Math/Topology/ko/2022-11-08-Topological_Bases.md: 주요 용어 'coinitial subset' ko 미상 — 보류
