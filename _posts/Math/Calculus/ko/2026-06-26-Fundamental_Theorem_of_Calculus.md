@@ -27,7 +27,7 @@ $f$가 $[a,b]$에서 연속이고 $F(x) = \int_a^x f(t)\dd{t}$로 정의하면, 
 
 $$F'(x) = f(x)$$
 
-이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6){: data-lid="jmcp1" }의 우미분계수·좌미분계수를 뜻한다.
+이다. 여기서 끝점 $a, b$에서의 미분가능성은 [§미분과 도함수, ⁋정의 7](/ko/math/calculus/derivatives#def7){: data-lid="jmcp1" }의 우미분계수·좌미분계수를 뜻한다.
 :::
 
 ::: 증명

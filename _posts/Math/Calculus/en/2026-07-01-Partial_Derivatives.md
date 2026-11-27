@@ -160,7 +160,7 @@ $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) -
 Then, since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3){: data-lid="0xf99" } holds. That is, $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
 :::
 
-Because situations requiring both the existence and continuity of partial derivatives like this will continue to appear repeatedly, we carry over the terminology from [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-lid="oi7c7" } to the multivariable setting. That is, if all partial derivatives of order $k$ and below exist and are continuous on some region, we say $f$ is of *class $C^k$* on that region; restated, [Proposition 5](#prop5){: data-lid="fk8dx" } says that $C^1$ functions are differentiable.
+Because situations requiring both the existence and continuity of partial derivatives like this will continue to appear repeatedly, we carry over the terminology from [§Differentiation and Derivatives, ⁋Definition 6](/en/math/calculus/derivatives#def6){: data-lid="oi7c7" } to the multivariable setting. That is, if all partial derivatives of order $k$ and below exist and are continuous on some region, we say $f$ is of *class $C^k$* on that region; restated, [Proposition 5](#prop5){: data-lid="fk8dx" } says that $C^1$ functions are differentiable.
 
 ## Chain Rule and Mixed Partial Derivatives
 

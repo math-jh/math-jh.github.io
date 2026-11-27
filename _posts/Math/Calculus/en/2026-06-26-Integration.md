@@ -55,7 +55,7 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\dd{x} = a\int f(x)\dd{x} + b\int g(x)\dd{x}$$
 :::
 
 ::: Proof
-Let $F, G$ be antiderivatives of $f, g$ respectively. Then by [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4){: data-lid="3pj9t" },
+Let $F, G$ be antiderivatives of $f, g$ respectively. Then by [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5){: data-lid="3pj9t" },
 
 $$(aF + bG)' = aF' + bG' = af + bg$$
 

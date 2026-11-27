@@ -53,7 +53,7 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\dd{x} = a\int f(x)\dd{x} + b\int g(x)\dd{x}$$
 :::
 
 ::: 증명
-$F, G$를 각각 $f, g$의 원시함수라 하면, [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4){: data-lid="3pj9t" }에 의해
+$F, G$를 각각 $f, g$의 원시함수라 하면, [§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5){: data-lid="3pj9t" }에 의해
 
 $$(aF + bG)' = aF' + bG' = af + bg$$
 

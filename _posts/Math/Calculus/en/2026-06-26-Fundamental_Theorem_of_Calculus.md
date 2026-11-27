@@ -30,7 +30,7 @@ If $f$ is continuous on $[a,b]$ and we define $F(x) = \int_a^x f(t)\dd{t}$, then
 
 $$F'(x) = f(x)$$
 
-holds. Here differentiability at the endpoints $a, b$ means the right-hand and left-hand derivatives of [§Differentiation and Derivatives, ⁋Definition 6](/en/math/calculus/derivatives#def6){: data-lid="jmcp1" }.
+holds. Here differentiability at the endpoints $a, b$ means the right-hand and left-hand derivatives of [§Differentiation and Derivatives, ⁋Definition 7](/en/math/calculus/derivatives#def7){: data-lid="jmcp1" }.
 :::
 
 ::: Proof
