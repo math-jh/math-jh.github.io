@@ -19,7 +19,7 @@ We covered the definition of differentiation and its basic properties in [§Diff
 
 ## Term-by-Term Differentiation of Power Series
 
-In [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2) we saw that $(x^n)'=nx^{n-1}$ for positive integers $n$. Together with linearity from [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5){: data-lid="4405y" }, this gives term-by-term differentiation for polynomials. The following proposition extends term-by-term differentiation to power series inside their radius of convergence.
+In [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2){: data-lid="3xurj" } we saw that $(x^n)'=nx^{n-1}$ for positive integers $n$. Together with linearity from [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5){: data-lid="4405y" }, this gives term-by-term differentiation for polynomials. The following proposition extends term-by-term differentiation to power series inside their radius of convergence.
 
 ::: Proposition 1 (Term-by-term differentiation of power series)
 If the power series $f(x) = \sum_{n=0}^\infty c_n x^n$ has radius of convergence $R > 0$, then $f$ is differentiable for $\lvert x\rvert < R$ and
@@ -116,7 +116,7 @@ holds.
 :::
 
 ::: Proof
-Set $h(t)=1/t$, so that $1/g=h\circ g$. By [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2), $h'(t)=-1/t^2$, so [Theorem 4](#thm4){: data-lid="xpo63" } gives $(1/g)'(a)=-g(a)^{-2}g'(a)$. Now applying the product rule to $f/g = f\cdot(1/g)$, we obtain
+Set $h(t)=1/t$, so that $1/g=h\circ g$. By [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2){: data-lid="1hzrt" }, $h'(t)=-1/t^2$, so [Theorem 4](#thm4){: data-lid="xpo63" } gives $(1/g)'(a)=-g(a)^{-2}g'(a)$. Now applying the product rule to $f/g = f\cdot(1/g)$, we obtain
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
