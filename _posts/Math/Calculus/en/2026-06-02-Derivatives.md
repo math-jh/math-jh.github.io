@@ -39,13 +39,39 @@ $$\frac{\dd{f}}{\dd{x}},\qquad \frac{d}{\dd{x}}f$$
 
 and so on, but in calculus the $f'$ notation is often sufficient.
 
-Applying the definition directly, for instance, the average rate of change of $f(x) = x^2$ is $\frac{(a+h)^2 - a^2}{h} = 2a + h$, so $f'(a) = 2a$, and the derivative of a constant function is always $0$. In the same way, for $f(x) = 1/x$ ($x \neq 0$), finding a common denominator for the average rate of change yields $f'(a) = -1/a^2$, and for $f(x) = \sqrt{x}$ ($x > 0$), rationalizing the numerator yields $f'(a) = 1/(2\sqrt{a})$.
+::: Example 2 (Differentiation with integer and rational exponents)
+The difference quotient of a constant function is always $0$, so its derivative is $0$. For $f(x)=x^2$, the difference quotient simplifies to
+
+$$\frac{(a+h)^2-a^2}{h}=2a+h$$
+
+and hence $f'(a)=2a$. In general, for a positive integer $n$, factoring the difference of powers gives
+
+$$\frac{(a+h)^n-a^n}{h}=\sum_{j=0}^{n-1}(a+h)^{n-1-j}a^j.$$
+
+As $h\rightarrow 0$, each of the $n$ terms on the right tends to $a^{n-1}$, so $(x^n)'=nx^{n-1}$.
+
+For a negative integer exponent $-m$ and $a\neq 0$, putting the difference quotient over a common denominator gives
+
+$$\frac{(a+h)^{-m}-a^{-m}}{h}=-\frac{(a+h)^m-a^m}{h}\cdot\frac{1}{(a+h)^ma^m}.$$
+
+By the preceding calculation, the limit is $-ma^{m-1}/a^{2m}=-ma^{-m-1}$. In particular, $m=1$ gives $(1/x)'=-1/x^2$.
+
+Now take a rational exponent $p/q$, where $p$ is an integer and $q$ is a positive integer, and suppose $a>0$. Set $u=\sqrt[q]{a+h}$ and $v=\sqrt[q]{a}$. Then $h=u^q-v^q$, so
+
+$$\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{(u^p-v^p)/(u-v)}{(u^q-v^q)/(u-v)}.$$
+
+By [§Limits of Functions, ⁋Corollary 6](/en/math/calculus/functions_and_limits#cor6), $u\rightarrow v$ as $h\rightarrow 0$. By the derivatives of integer powers computed above, the numerator and denominator on the right tend to $pv^{p-1}$ and $qv^{q-1}$, respectively. The latter limit is positive since $q>0$ and $v>0$. Part 4 of [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) gives
+
+$$\lim_{h\rightarrow 0}\frac{(a+h)^{p/q}-a^{p/q}}{h}=\frac{pv^{p-1}}{qv^{q-1}}=\frac{p}{q}a^{p/q-1}.$$
+
+Thus $(x^{p/q})'=(p/q)x^{p/q-1}$ for $x>0$. In particular, for $p=1$ and $q=2$ the difference quotient is $1/(\sqrt{a+h}+\sqrt{a})$, with limit $1/(2\sqrt{a})$.
+:::
 
 ## Differentiability and Continuity
 
 Differentiability is a stronger condition than continuity.
 
-::: Proposition 2
+::: Proposition 3
 If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
 :::
 
@@ -79,16 +105,16 @@ On the other hand, $f(x) = x^{2/3}$ forms a *cusp* at $0$, where the left and ri
 
 {% diagram Math/Calculus/Derivatives-3.svg width="13.17em" alt="Cusp of the 2/3 power function" %}
 
-These are examples that fail to be differentiable only at one or two points, but nondifferentiability can be far worse: there even exist functions like the Weierstrass function that are continuous on all of $\mathbb{R}$ yet have no tangent line at any point.
+These are examples that fail to be differentiable only at one or two points, but nondifferentiability can be far worse: there even exist functions like the [Weierstrass function](https://en.wikipedia.org/wiki/Weierstrass_function_%28nowhere-differentiable_function%29) that are continuous on all of $\mathbb{R}$ yet have no tangent line at any point.
 
 Conversely, differentiability is a local property that may hold at only a single point, so an extreme example of the following form is also possible.
 
-::: Example 3 (A function differentiable at only one point)
+::: Example 4 (A function differentiable at only one point)
 Consider the function
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
-For $a \neq 0$, along a sequence of rationals and a sequence of irrationals converging to $a$, the function values split into $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 2](#prop2){: data-lid="v5ru4" } it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and since the average rate of change satisfies
+For $a \neq 0$, along a sequence of rationals and a sequence of irrationals converging to $a$, the function values split into $a^2$ and $0$ respectively, so $f$ is discontinuous, and by the contrapositive of [Proposition 3](#prop3){: data-lid="v5ru4" } it is not differentiable. On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and since the average rate of change satisfies
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
@@ -99,7 +125,7 @@ $f'(0) = 0$ exists. That is, $f$ is differentiable only at $0$.
 
 Meanwhile, since the derivative is ultimately the limit of a function, namely the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="4jdpl" } that differentiation also possesses linearity.
 
-::: Proposition 4
+::: Proposition 5
 If $f, g$ are differentiable at $a$ and $c$ is a constant, then $f + g$ and $cf$ are also differentiable at $a$, and
 
 $$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a)$$
@@ -113,23 +139,35 @@ $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h}$
 and since each term converges to $f'(a), g'(a)$, the sum also converges by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="bwos3" }. Examining the average rate of change expression for $cf$ yields the same result.
 :::
 
+Combining the derivatives of integer powers from [Example 2](#ex2) with [Proposition 5](#prop5), we find that the polynomial $P(x)=\sum_{k=0}^n c_k x^k$ has derivative
+
+$$P'(x)=\sum_{k=1}^n k c_k x^{k-1}.$$
+
+The constant term vanishes, and each remaining term is differentiated separately. For example, if $P(x)=x^3-2x+1$, then $P'(x)=3x^2-2$.
+
 On the other hand, since the derivative $f'$ is itself a function, if it is differentiable we can differentiate it again.
 
-::: Definition 5
+::: Definition 6
 If the derivative of $f$, $f'$, is differentiable, its derivative is called the *second derivative* $f'' = (f')'$. Repeating this, the result of differentiating $n$ times is called the *$n$-th derivative* $f^{(n)}$, and we set $f^{(0)} = f$. If $f^{(n)}$ exists and is continuous on an interval, we say $f$ is of *class $C^n$* on that interval, and if derivatives of all orders exist, we say $f$ is of *class $C^\infty$* or *smooth*.
 :::
 
-The second derivative $f''$ is the rate of change of the rate of change; if $f$ is position, then $f''$ is acceleration. Also, the sign of $f''$ indicates the direction in which the graph bends (convexity/concavity). In this post we do not aim to differentiate specific functions, but in the next post we will see that polynomial functions and functions such as $\sin, \cos, \exp$ are smooth.
+The second derivative $f''$ is the rate of change of the rate of change; if $f$ is position, then $f''$ is acceleration. Also, the sign of $f''$ indicates the direction in which the graph bends (convexity/concavity). Every polynomial is smooth because its derivative is again a polynomial.
 
-Finally, just as a limit exists only when the left and right limits agree, the existence of the derivative also depends on whether the limits of the left and right average rates of change agree. Defining these separately allows us to handle differentiability at corners and endpoints precisely.
+In the absolute value example after [Proposition 3](#prop3), the derivative takes different values on the two sides of the origin, and the difference quotient based at the origin also has different left and right limits. For the cube root function, this difference quotient diverges from both sides. For a derivative to exist at an interior point, the difference quotient must approach the same finite value from both sides. Defining the two limits separately lets us discuss differentiability at corners and endpoints precisely.
 
-::: Definition 6
+::: Definition 7
 The *right-hand derivative* and *left-hand derivative* of a function $f$ at a point $a$ are defined respectively by
 
 $$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}$$
 :::
 
-Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, in which case their common value is $f'(a)$. This is nothing more than applying to the average rate of change the fact that a limit exists only when both one-sided limits agree. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="wtbpm" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed. One-sided derivatives are also used naturally when discussing differentiability at an endpoint of the domain; for instance, for the function defined on $[0, \infty)$ by $f(x) = \sqrt{x}$, differentiability at $0$ is meaningful only via the right-hand derivative.
+The right-hand derivative $f'_+(a)$ takes the right-hand limit of the difference quotient with $a$ fixed, and $\lim_{x\rightarrow a^+} f'(x)$ takes the right-hand limit of the derivative values at nearby points. Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, in which case their common value is $f'(a)$. This is nothing more than applying to the average rate of change the fact that a limit exists only when both one-sided limits agree. ([§Limits of Functions](/en/math/calculus/functions_and_limits){: data-lid="wtbpm" }) Revisiting the absolute value function $f(x) = \lvert x\rvert$, we have $f'_+(0) = 1$ and $f'_-(0) = -1$, which differ, so nondifferentiability at $0$ is immediately confirmed.
+
+For $f(x)=\sqrt{x}$ on $[0,\infty)$, we take the limit of the difference quotient from the right at the endpoint $0$. For $h>0$,
+
+$$\frac{f(h)-f(0)}{h}=\frac{\sqrt{h}}{h}=\frac{1}{\sqrt{h}}.$$
+
+This tends to $+\infty$ as $h\rightarrow 0^+$, so the right-hand derivative at $0$ does not exist.
 
 ---
 

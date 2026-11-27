@@ -67,7 +67,7 @@ $$\lvert x-a\rvert < \delta\implies\lvert f(x)-b\rvert < \eta$$
 ::: 예시 3
 삼각함수 $\sin x$가 정의역의 모든 점에서 연속임을 보이자. 삼각함수의 합차공식에서
 
-$$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
+$$\lvert \sin x-\sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
 이 항상 성립하는 것을 안다. 한편 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10){: data-lid="7ms67" }에서 얻은, $0<t<\pi/2$에서의 부등식 $\sin t \leq t$는 $t\geq\pi/2$일 때도 $\lvert \sin t\rvert \leq 1 < t$이고 $\sin(-t)=-\sin t$이므로 모든 실수 $t$에 대한 부등식 $\lvert \sin t\rvert \leq \lvert t\rvert$로 확장된다. 이를 적용하면, 임의의 $a\in\mathbb{R}$에 대해
 
@@ -80,7 +80,7 @@ $$\lvert \sin x-\sin a\rvert\leq\lvert x-a\rvert$$
 
 ## 닫힌구간 위 연속함수의 성질
 
-연속함수의 유용한 성질 중 하나는 $f$가 $a$에서 연속이고 $f(a) > 0$이면, $\epsilon = f(a)/2$에 대응하는 $\delta$를 잡을 수 있으므로 이 경우 $a$의 $\delta$-근방에서 $f$가 항상 양수라는 것이다. 이 단순한 사실은 그 자체로도 유용할 뿐만 아니라, 다음의 정리들로도 일반화된다.
+연속함수의 유용한 성질 중 하나는 $f$가 $a$에서 연속이고 $f(a) > 0$이면, $\epsilon=f(a)/2$에 대응하는 $\delta$를 잡을 수 있으므로 이 경우 $a$의 $\delta$-근방에서 $f$가 항상 양수라는 것이다. 이 단순한 사실은 그 자체로도 유용할 뿐만 아니라, 다음의 정리들로도 일반화된다.
 
 ::: 정리 4 (최대·최소 정리)
 $f$가 닫힌구간 $[a,b]$에서 연속이면, $f$는 $[a,b]$에서 최댓값과 최솟값을 갖는다. 즉 어떤 $c,d \in [a,b]$가 존재하여 모든 $x \in [a,b]$에 대해 $f(d)\leq f(x)\leq f(c)$이다.
@@ -118,14 +118,16 @@ $f$가 순증가하는 경우만 보이면 되고, 순감소인 경우는 부등
 
 이제 연속성을 보이기 위해 임의의 $y_0\in J$와 $x_0=f^{-1}(y_0)$을 잡고 $\epsilon>0$이 주어졌다 하자. 편의상 $x_0$가 $I$의 구간 내부에 있는 경우만 생각한다. 그럼 적당한 $x_1,x_2\in I$를 택하여 다음 부등식
 
-$$x_0-\epsilon<x_1<x_0<x_2 < x_0 + \epsilon$$
+$$x_0-\epsilon<x_1<x_0<x_2<x_0+\epsilon$$
 
-이 성립하도록 할 수 있다. 그럼 $y_1=f(x_1)$, $y_2=f(x_2)$에 대하여 $\delta=\min(y_0-y_1, y_2-y_0)>0$으로 두면 $\lvert y-y_0\rvert<\delta$인 $y\in J$는 모두 $y_1<y<y_2$를 만족한다. 이제 $f^{-1}$이 순증가이므로 이 부등식에 $f^{-1}$을 취하면 $x_1<f^{-1}(y)<x_2$을 얻고, $x_1,x_2$의 선택에 의해 $\lvert f^{-1}(y) - x_0\rvert < \epsilon$이 성립한다. 
+이 성립하도록 할 수 있다. 그럼 $y_1=f(x_1)$, $y_2=f(x_2)$에 대하여 $\delta=\min(y_0-y_1, y_2-y_0)>0$으로 두면 $\lvert y-y_0\rvert<\delta$인 $y\in J$는 모두 $y_1<y<y_2$를 만족한다. 이제 $f^{-1}$이 순증가이므로 이 부등식에 $f^{-1}$을 취하면 $x_1<f^{-1}(y)<x_2$을 얻고, $x_1,x_2$의 선택에 의해 $\lvert f^{-1}(y)-x_0\rvert < \epsilon$이 성립한다. 
 
 $x_0$이 $I$의 끝점이어서 한쪽에만 $I$의 점이 있는 경우에는 $x_1$과 $x_2$ 중 해당하는 쪽만 잡아 같은 논증을 반복하면 된다.
 :::
 
-예컨대 $f(x) = x^n$ ($x \geq 0$, $n$은 자연수) 은 연속이고 순증가하므로, 그 역함수인 $n$제곱근 $\sqrt[n]{x}$도 연속이다. 마찬가지로 삼각함수를 제한한 것의 역함수인 역삼각함수 등도 모두 연속이다. 
+예컨대 $f(x)=x^n$ ($x \geq 0$, $n$은 자연수) 은 연속이고 순증가하므로, 그 역함수인 $n$제곱근 $\sqrt[n]{x}$도 연속이다. 마찬가지로 삼각함수를 제한한 것의 역함수인 역삼각함수 등도 모두 연속이다. 
+
+이제 거듭제곱근을 이용하면 $b>0$과 유리수 $p/q$ ($q>0$)에 대해 $b^{p/q}=(\sqrt[q]{b})^p$로 놓을 수 있으며, 이것이 연속임을 보일 수 있다. 뿐만 아니라 임의의 무리수 $\alpha$가 주어졌을 때, $\alpha$로 향하는 유리수열을 이용하면 $x^\alpha$ 또한 이 수열의 극한을 사용하여 정의할 수 있다. 그러나 이에 대한 엄밀한 설명 역시 실수의 완비성을 필요로 하므로 우리는 이를 엄밀하게 다듬지는 않는다.
 
 ---
 

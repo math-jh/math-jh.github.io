@@ -129,6 +129,8 @@ In the case where $x_0$ is an endpoint of $I$, so that points of $I$ lie on only
 
 For example, $f(x) = x^n$ ($x \geq 0$, with $n$ a natural number) is continuous and strictly increasing, so its inverse, the $n$th root $\sqrt[n]{x}$, is also continuous. Similarly, the inverse trigonometric functions and the like, which are inverses of restricted trigonometric functions, are all continuous.
 
+For a rational exponent $p/q$ with $q>0$, we can use roots to set $b^{p/q}=(\sqrt[q]{b})^p$ for $b>0$ and show that this is continuous in $b$. For an irrational exponent $\alpha$, we can take a sequence of rational numbers $r_n$ tending to $\alpha$ and define $x^\alpha$ for $x>0$ as the limit of $x^{r_n}$. Justifying this construction requires the completeness of the real numbers, so we omit the details here.
+
 ---
 
 **References**

@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-22
 weight: 7
+revising: true
 
 ---
 
@@ -17,17 +18,7 @@ weight: 7
 
 ## 멱급수의 항별 미분
 
-우선 임의의 자연수 $n$에 대하여, $x^n$의 점 $a$에서의 미분은 
-
-$$\lim_{h\rightarrow 0}\frac{(a+h)^n-a^n}{h}=\lim_{h\rightarrow 0}\frac{na^{n-1}h+\ldots}{h}=na^{n-1}$$
-
-으로 주어지는 것을 확인할 수 있으며, 비슷하게 음의 정수 $n = -m$에 대해서도 평균변화율을 통분하면
-
-$$\frac{(a+h)^{-m} - a^{-m}}{h} = -\frac{(a+h)^m - a^m}{h}\cdot\frac{1}{(a+h)^ma^m}$$
-
-이므로, 결국 모든 정수 $n$에 대해 $(x^n)' = n x^{n-1}$이 성립한다.
-
-한편, 선형성에 의해 다항식은 항별로 미분되므로 이는 임의의 다항함수에 대한 미분규칙 또한 준다. 그러나 일반적으로 <em-ko>무한</em-ko>합에서 미분을 항마다 분배하는 것은 자명하지 않은데, 다음 명제는 멱급수에 대해서는 이것이 허용됨을 보장한다.
+우리는 [§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5) 직후에 다항함수는 항별로 미분할 수 있다는 것을 살펴보았다. 일반적으로 미분은 무한합과 잘 어울리지 <em-ko>않지만</em-ko>, 멱급수의 경우 그 수렴반경 안에서는 다음 명제에 의해 항별 미분이 가능하다.
 
 ::: 명제 1 (멱급수의 항별 미분)
 멱급수 $f(x) = \sum_{n=0}^\infty c_n x^n$이 수렴반경 $R > 0$을 가지면, $f$는 $\lvert x\rvert < R$에서 미분가능하고
@@ -36,8 +27,32 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 이며, 이 급수의 수렴반경도 $R$이다.
 :::
+::: 증명
+먼저 $0<r<s<R$로 잡자. $\sum_{n=0}^\infty c_ns^n$이 수렴하므로 $\lvert c_n\rvert s^n$은 어떤 상수 $M$으로 위로 유계이다. 따라서 $n\geq 1$에 대해
 
-우변의 급수의 수렴반경이 $R$이 된다는 것 자체는 $n\rightarrow \infty$일 때 $n^{1/n}$이 $1$로 수렴한다는 것으로부터 얻어지지만, 이것이 실제로 $f'(x)$와 같다는 것을 엄밀히 정당화하기에는 우리의 도구가 부족하므로 이는 받아들이고 넘어가기로 한다. 
+$$n\lvert c_n\rvert r^{n-1}\leq\frac{M}{s}n(r/s)^{n-1}$$
+
+이다. 우변을 합한 급수는 인접한 항의 비가 $r/s<1$로 수렴하므로 [§무한급수, ⁋정리 6](/ko/math/calculus/series#thm6)의 비율판정으로 수렴한다. 같은 정리의 비교판정에 의해 $\sum_{n=1}^\infty nc_nx^{n-1}$은 $\lvert x\rvert=r$에서 절대수렴한다. $r$을 $R$보다 작은 임의의 양수로 잡았으므로 이 급수의 수렴반경은 적어도 $R$이다.
+
+만일 이 급수의 수렴반경이 $R$보다 크다면 그 사이에 양수 $t$를 택할 수 있다. 그러면 $\sum_{n=1}^\infty n\lvert c_n\rvert t^{n-1}$이 수렴하므로, $\lvert c_n\rvert t^n\leq t\cdot n\lvert c_n\rvert t^{n-1}$에 의해 원래 급수도 $t$에서 절대수렴한다. 이는 $t>R$이라는 사실에 모순이므로 두 급수의 수렴반경은 같다.
+
+$\lvert a\rvert<r<R$인 $r$을 고정하자. $0<\lvert h\rvert<r-\lvert a\rvert$일 때, 급수의 선형성에 의해 $f$의 $a$에서의 평균변화율은 $\sum_{n=1}^\infty D_n(h)$이고, 여기서 [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2)의 인수분해를 이용하면
+
+$$D_n(h)=c_n\frac{(a+h)^n-a^n}{h}=c_n\sum_{j=0}^{n-1}(a+h)^{n-1-j}a^j$$
+
+이다. $\lvert a\rvert,\lvert a+h\rvert<r$이므로 $\lvert D_n(h)\rvert\leq n\lvert c_n\rvert r^{n-1}$이고, $h\rightarrow 0$이면 $D_n(h)\rightarrow nc_na^{n-1}$이다.
+
+이제 $\epsilon>0$을 주자. 급수 $\sum_{n=1}^\infty n\lvert c_n\rvert r^{n-1}$이 수렴하므로 $2\sum_{n>N}n\lvert c_n\rvert r^{n-1}<\epsilon/2$인 $N$을 택할 수 있다. 처음 $N$개 항의 차이의 합은 $h\rightarrow 0$일 때 $0$으로 수렴하므로, 충분히 작은 $h\neq 0$에 대해
+
+$$\begin{aligned}
+\left\lvert\frac{f(a+h)-f(a)}{h}-\sum_{n=1}^\infty nc_na^{n-1}\right\rvert
+&\leq \left\lvert\sum_{n=1}^N\bigl(D_n(h)-nc_na^{n-1}\bigr)\right\rvert
+  +2\sum_{n>N}n\lvert c_n\rvert r^{n-1}\\
+&<\epsilon
+\end{aligned}$$
+
+이다. 따라서 $f'(a)=\sum_{n=1}^\infty nc_na^{n-1}$이다.
+:::
 
 ## 삼각함수와 지수함수의 도함수
 
@@ -73,7 +88,7 @@ $$\frac{\sin(x+h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdo
 
 ## 여러가지 미분법
 
-이제 우리는 일반적인 형태에 적용되는 미분규칙들을 정의한다. [§미분과 도함수, ⁋명제 4](/ko/math/calculus/derivatives#prop4){: data-lid="ogd67" }에서 우리는 미분이 상수곱과 덧셈에 대해서는 잘 행동하는 것을 보았지만, 곱에 대해서는 단순히 분배되지 않는다.
+이제 우리는 일반적인 형태에 적용되는 미분규칙들을 정의한다. [§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5){: data-lid="ogd67" }에서 우리는 미분이 상수곱과 덧셈에 대해서는 잘 행동하는 것을 보았지만, 곱에 대해서는 단순히 분배되지 않는다.
 
 ::: 명제 3 (곱의 미분법)
 $f, g$가 $a$에서 미분가능하면 $fg$도 $a$에서 미분가능하고
@@ -88,7 +103,7 @@ $$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-이다. $h \rightarrow 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2){: data-lid="hzft9" }) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-lid="edoso" }에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
+이다. $h \rightarrow 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 3](/ko/math/calculus/derivatives#prop3){: data-lid="hzft9" }) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5){: data-lid="edoso" }에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
 :::
 
 가장 널리 쓰이는 규칙은 합성함수의 미분이다.
@@ -124,7 +139,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, 정수 거듭제곱의 미분으로 $h'(t)=-1/t^2$이므로, [정리 4](#thm4){: data-lid="xpo63" }에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
+함수 $h(t)=1/t$로 정의하면 $1/g =h \circ g$이고, [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2)에 의해 $h'(t)=-1/t^2$이다. 따라서 [정리 4](#thm4){: data-lid="xpo63" }에 의해 $(1/g)'(a) = -g(a)^{-2}g'(a)$이다. 이제 $f/g = f\cdot(1/g)$에 곱의 미분법을 적용하면
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 
@@ -159,17 +174,39 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 이며, 같은 방식으로 $(\arctan y)' = 1/(1 + y^2)$이다.
 
-한편 지금까지의 규칙으로 도함수를 구하고 나면 그 도함수가 다시 연속인지 물을 수 있는데, 어디서나 미분가능한 함수조차 도함수가 불연속일 수 있다.
+로그함수의 도함수를 알면 거듭제곱의 미분 공식을 임의의 실수 지수 $r$로 확장할 수 있다. $x>0$에서 $x^r=e^{r\ln x}$이므로 [정리 4](#thm4)에 의해
 
-::: 예시 7 (미분가능하지만 $C^1$급이 아닌 함수)
-함수
+$$(x^r)'=e^{r\ln x}\cdot\frac{r}{x}=rx^{r-1}$$
 
-$$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
+이다.
 
-는 모든 점에서 미분가능하다. $x \neq 0$에서는 곱의 미분법과 연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $0$에서는 평균변화율이 $x\sin(1/x) \rightarrow 0$이므로 $f'(0) = 0$이다. 그런데 $x \rightarrow 0$일 때 $2x\sin(1/x) \rightarrow 0$이지만 $\cos(1/x)$는 $[-1, 1]$ 사이를 무한히 진동하여 극한을 갖지 않으므로, $f'$은 $0$에서 불연속이다. 즉 $f$는 어디서나 미분가능하지만 도함수가 연속이 아니어서 ([§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5){: data-lid="gd3pp" }의) $C^1$급이 아니다.
+밑이 $b>0$인 지수함수도 $b^x=e^{x\ln b}$로 쓰면 연쇄법칙으로 미분할 수 있다. $b\neq 1$이면 $x>0$에서 밑변환 공식 $\log_b x=(\ln x)/(\ln b)$로 로그함수의 도함수도 구할 수 있다. 두 결과는 각각
+
+$$(b^x)'=b^x\ln b,\qquad (\log_b x)'=\frac{1}{x\ln b}$$
+
+이다. 가령 $(2^x)'=2^x\ln 2$이다.
+
+진동하는 함수에 $x$를 거듭 곱하면 원점 근방에서 진동의 폭이 줄어들어 미분가능성이 달라질 수 있다.
+
+::: 예시 7 (진동과 미분가능성)
+함수 $f$와 $g$를 $x\neq 0$에서
+
+$$f(x)=x\sin(1/x),\qquad g(x)=x^2\sin(1/x)$$
+
+로 두고 $f(0)=g(0)=0$으로 정의하자. [§함수의 극한, ⁋예시 11](/ko/math/calculus/functions_and_limits#ex11)에 의해 $f$는 $0$에서 연속이고, $g(x)=xf(x)$이므로 $g$도 $0$에서 연속이다. 두 함수의 $0$에서의 평균변화율은 각각
+
+$$\frac{f(h)-f(0)}{h}=\sin(1/h),\qquad \frac{g(h)-g(0)}{h}=h\sin(1/h)$$
+
+이다. $h\rightarrow 0$일 때 첫 식은 진동하여 극한이 없으므로 $f$는 $0$에서 미분가능하지 않다. 둘째 식은 $0$으로 수렴하므로 $g'(0)=0$이다.
+
+$x\neq 0$에서는 곱의 미분법과 연쇄법칙으로
+
+$$f'(x)=\sin(1/x)-\frac{\cos(1/x)}{x},\qquad g'(x)=2x\sin(1/x)-\cos(1/x)$$
+
+이다. $x\rightarrow 0$일 때 $g'(x)$의 첫 항은 $0$으로 수렴하고 둘째 항은 진동하여 극한을 갖지 않으므로 $g'$은 $0$에서 불연속이다. 따라서 $g$는 어디서나 미분가능하고 $0$에서 도함수가 불연속이어서 [§미분과 도함수, ⁋정의 6](/ko/math/calculus/derivatives#def6){: data-lid="gd3pp" }의 $C^1$급 조건을 만족하지 않는다.
 :::
 
-그럼에도 도함수가 아무 모양으로나 불연속일 수는 없다. 도함수는 연속이 아니더라도 임의의 중간값을 반드시 취하므로(*Darboux 정리*) 점프 불연속을 가질 수 없으며, [예시 7](#ex7){: data-lid="e0sir" }에서 나타난 불연속도 점프가 아니라 진동에 의한 것이다.
+*Darboux 정리*에 따르면 도함수는 두 점에서 취한 값 사이의 모든 값을 취하므로 점프 불연속을 가질 수 없다. [예시 7](#ex7){: data-lid="e0sir" }에서 $g'$의 불연속은 진동에서 비롯된다.
 
 ## 미분법의 응용
 

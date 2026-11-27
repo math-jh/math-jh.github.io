@@ -19,17 +19,7 @@ We covered the definition of differentiation and its basic properties in [§Diff
 
 ## Term-by-Term Differentiation of Power Series
 
-First, for any natural number $n$, one can verify that the derivative of $x^n$ at a point $a$ is given by
-
-$$\lim_{h\rightarrow 0}\frac{(a+h)^n-a^n}{h}=\lim_{h\rightarrow 0}\frac{na^{n-1}h+\ldots}{h}=na^{n-1}$$
-
-and similarly, putting the difference quotient over a common denominator for a negative integer $n = -m$ gives
-
-$$\frac{(a+h)^{-m} - a^{-m}}{h} = -\frac{(a+h)^m - a^m}{h}\cdot\frac{1}{(a+h)^ma^m}$$
-
-so ultimately $(x^n)' = n x^{n-1}$ holds for all integers $n$.
-
-On the other hand, by linearity a polynomial is differentiated term by term, so this also yields a differentiation rule for arbitrary polynomial functions. However, in general distributing differentiation term by term in an *infinite* sum is not obvious, and the following proposition guarantees that this is permitted for power series.
+In [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2) we saw that $(x^n)'=nx^{n-1}$ for positive integers $n$. Together with linearity from [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5), this gives term-by-term differentiation for polynomials. The following proposition extends term-by-term differentiation to power series inside their radius of convergence.
 
 ::: Proposition 1 (Term-by-term differentiation of power series)
 If the power series $f(x) = \sum_{n=0}^\infty c_n x^n$ has radius of convergence $R > 0$, then $f$ is differentiable for $\lvert x\rvert < R$ and
@@ -75,7 +65,7 @@ and as $h \rightarrow 0$, by the two limits above this converges to $\sin x \cdo
 
 ## Various Differentiation Rules
 
-We now define differentiation rules applicable to general forms. In [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4){: data-lid="ogd67" } we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
+We now define differentiation rules applicable to general forms. In [§Differentiation and Derivatives, ⁋Proposition 5](/en/math/calculus/derivatives#prop5){: data-lid="ogd67" } we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
 
 ::: Proposition 3 (Product rule)
 If $f, g$ are differentiable at $a$, then $fg$ is also differentiable at $a$ and
@@ -90,7 +80,7 @@ Adding and subtracting the same term in the difference quotient gives
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by the continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2){: data-lid="hzft9" }), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="edoso" } the sum converges to $f'(a)g(a) + f(a)g'(a)$.
+As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by the continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 3](/en/math/calculus/derivatives#prop3){: data-lid="hzft9" }), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5){: data-lid="edoso" } the sum converges to $f'(a)g(a) + f(a)g'(a)$.
 :::
 
 The most widely used rule is the derivative of a composite function.
@@ -126,7 +116,7 @@ holds.
 :::
 
 ::: Proof
-Defining the function $h(t)=1/t$, we have $1/g =h \circ g$, and since $h'(t)=-1/t^2$ by the derivative of integer powers, by [Theorem 4](#thm4){: data-lid="xpo63" } we get $(1/g)'(a) = -g(a)^{-2}g'(a)$. Now applying the product rule to $f/g = f\cdot(1/g)$, we obtain
+Set $h(t)=1/t$, so that $1/g=h\circ g$. By [§Differentiation and Derivatives, ⁋Example 2](/en/math/calculus/derivatives#ex2), $h'(t)=-1/t^2$, so [Theorem 4](#thm4){: data-lid="xpo63" } gives $(1/g)'(a)=-g(a)^{-2}g'(a)$. Now applying the product rule to $f/g = f\cdot(1/g)$, we obtain
 
 $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
@@ -159,17 +149,37 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 and in the same manner, $(\arctan y)' = 1/(1 + y^2)$.
 
-On the other hand, once we compute a derivative using the rules developed so far, we may ask whether that derivative is again continuous; yet even a function differentiable everywhere can have a discontinuous derivative.
+The derivative of the logarithm lets us extend the power rule to any real exponent $r$. For $x>0$ we have $x^r=e^{r\ln x}$, so by [Theorem 4](#thm4),
 
-::: Example 7 (A differentiable function that is not of class $C^1$)
-The function
+$$(x^r)'=e^{r\ln x}\cdot\frac{r}{x}=rx^{r-1}.$$
 
-$$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
+For a base $b>0$, writing $b^x=e^{x\ln b}$ gives the derivative by the chain rule. If $b\neq 1$, the change-of-base formula $\log_b x=(\ln x)/(\ln b)$ gives the derivative of the logarithm for $x>0$. The two formulas are
 
-is differentiable at every point. For $x \neq 0$, the product rule and chain rule give $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$, the difference quotient is $x\sin(1/x) \rightarrow 0$, so $f'(0) = 0$. However, as $x \rightarrow 0$, while $2x\sin(1/x) \rightarrow 0$, $\cos(1/x)$ oscillates infinitely often between $[-1, 1]$ and does not have a limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere, but because its derivative is not continuous, it is not of class $C^1$ (in the sense of [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5){: data-lid="gd3pp" }).
+$$(b^x)'=b^x\ln b,\qquad (\log_b x)'=\frac{1}{x\ln b}.$$
+
+For example, $(2^x)'=2^x\ln 2$.
+
+Successive multiplication by $x$ reduces the amplitude of an oscillating function near the origin and can change its differentiability there.
+
+::: Example 7 (Oscillation and differentiability)
+For $x\neq 0$, set
+
+$$f(x)=x\sin(1/x),\qquad g(x)=x^2\sin(1/x),$$
+
+and define $f(0)=g(0)=0$. By [§Limits of Functions, ⁋Example 11](/en/math/calculus/functions_and_limits#ex11), $f$ is continuous at $0$. Since $g(x)=xf(x)$, $g$ is also continuous at $0$. Their difference quotients at $0$ are
+
+$$\frac{f(h)-f(0)}{h}=\sin(1/h),\qquad \frac{g(h)-g(0)}{h}=h\sin(1/h).$$
+
+As $h\rightarrow 0$, the first expression oscillates without a limit, so $f$ is not differentiable at $0$. The second expression tends to $0$, so $g'(0)=0$.
+
+For $x\neq 0$, the product rule and chain rule give
+
+$$f'(x)=\sin(1/x)-\frac{\cos(1/x)}{x},\qquad g'(x)=2x\sin(1/x)-\cos(1/x).$$
+
+As $x\rightarrow 0$, the first term of $g'(x)$ tends to $0$ and the second oscillates without a limit. Hence $g'$ is discontinuous at $0$. Thus $g$ is differentiable everywhere and fails the $C^1$ condition in [§Differentiation and Derivatives, ⁋Definition 6](/en/math/calculus/derivatives#def6){: data-lid="gd3pp" }.
 :::
 
-Nevertheless, a derivative cannot be discontinuous in just any manner. Even if a derivative is not continuous, it necessarily attains every intermediate value (*Darboux's theorem*), so it cannot have a jump discontinuity, and the discontinuity exhibited in [Example 7](#ex7){: data-lid="e0sir" } is also due to oscillation rather than a jump.
+By *Darboux's theorem*, a derivative takes every value between its values at any two points, so it cannot have a jump discontinuity. The discontinuity of $g'$ in [Example 7](#ex7){: data-lid="e0sir" } arises from oscillation.
 
 ## Applications of Differentiation Rules
 
