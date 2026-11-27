@@ -6054,6 +6054,13 @@ E:
   defs:
   - label: '[선형대수학] §조르당 표준형'
     url: /ko/math/linear_algebra/Jordan_canonical_form
+- id: elementary_function
+  en: elementary function
+  ko: 초등함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §멱급수'
+    url: /ko/math/calculus/power_series
 - id: elementary_matrix
   en: elementary matrix
   ko: 기본행렬
