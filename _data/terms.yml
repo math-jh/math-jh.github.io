@@ -14522,6 +14522,13 @@ N:
   defs:
   - label: '[사교기하학] §Gromov-Witten 불변량'
     url: /ko/math/symplectic_geometry/gromov_witten
+- id: n_th_derivative
+  en: $n$th derivative
+  ko: $n$계도함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: null-homotopic
   en: null-homotopic
   ko: 영호모토픽
