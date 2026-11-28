@@ -227,27 +227,56 @@ def step4_batches(items: list[dict]) -> list[list[dict]]:
         items=batch, precedent_lines=p_lines, pending_lines=q_lines).encode("utf-8")))
 
 
+class PartialStep4(models.ModelError):
+    """Step 4 decided only some of a batch.
+
+    ``rows`` holds the decided items and ``usages`` every call made, ``missing``
+    the ids still undecided.  ``broke`` is the error of a call that failed (a
+    closed gate, a prompt over the limit, a broken reply); the exception then
+    carries that error's message.  Without it the model answered but left items
+    out even after the retry."""
+
+    def __init__(self, message: str, rows: dict[str, dict], usages: list[dict],
+                 missing: list[str], broke: Exception | None = None):
+        super().__init__(message)
+        self.rows, self.usages, self.missing, self.broke = rows, usages, missing, broke
+
+
 def run_step4(stage: str, items: list[dict]) -> tuple[dict[str, dict], list[dict]]:
-    """Step 4 for a batch: a first call on the index, a second with any files asked for."""
+    """Step 4 for a batch: a first call on the index, a second with any files asked for.
+
+    If any item stays undecided, ``PartialStep4`` carries the decided ones, so a
+    caller can keep them and ask again only for the rest.  An item that asked for
+    precedent files is decided only by the files call."""
     p_live = {e.id: e for e in book.live("P")}
     q_ids = {e.id for e in book.live("Q")}
     p_lines = book.index_lines("P")
     q_lines = book.index_lines("Q", limit=80)
     rows: dict[str, dict] = {}
     usages: list[dict] = []
+
+    def decided_so_far() -> dict[str, dict]:
+        return {lid: r for lid, r in rows.items() if not r["candidates"]}
+
+    def broken(exc: models.ModelError) -> PartialStep4:
+        kept = decided_so_far()
+        return PartialStep4(str(exc), kept, usages,
+                            [i["id"] for i in items if i["id"] not in kept], broke=exc)
+
     pending = items
     for attempt in range(MAX_RETRY + 1):
         ids = [i["id"] for i in pending]
         prompt = sp.step4_prompt(items=pending, precedent_lines=p_lines, pending_lines=q_lines)
-        payload, usage = models.call(stage, prompt, sp.step4_schema(ids) if stage == "S3" else None)
+        try:
+            payload, usage = models.call(stage, prompt, sp.step4_schema(ids) if stage == "S3" else None)
+        except models.ModelError as exc:
+            raise broken(exc) from exc
         usages.append({**usage, "items": len(ids), "step": 4})
         rows.update(sp.validate_step4(payload, set(ids), precedents=set(p_live), pending=q_ids,
                                       files_phase=False))
         pending = [i for i in pending if i["id"] not in rows]
         if not pending:
             break
-    if pending:
-        raise models.ModelError(f"{stage} step 4 left {len(pending)} item(s) unanswered")
     asked = {lid: r["candidates"] for lid, r in rows.items() if r["candidates"]}
     if asked:
         wanted = sorted({pid for cands in asked.values() for pid in cands})
@@ -255,14 +284,22 @@ def run_step4(stage: str, items: list[dict]) -> tuple[dict[str, dict], list[dict
         sub = [i for i in items if i["id"] in asked]
         ids = [i["id"] for i in sub]
         prompt = sp.step4_prompt(items=sub, precedent_lines=p_lines, pending_lines=q_lines, files=files)
-        payload, usage = models.call(stage, prompt, sp.step4_schema(ids) if stage == "S3" else None)
+        try:
+            payload, usage = models.call(stage, prompt, sp.step4_schema(ids) if stage == "S3" else None)
+        except models.ModelError as exc:
+            raise broken(exc) from exc
         usages.append({**usage, "items": len(ids), "step": "4-files"})
         decided = sp.validate_step4(payload, set(ids), precedents=set(p_live), pending=q_ids,
                                     files_phase=True)
-        missing = [lid for lid in ids if lid not in decided]
-        if missing:
-            raise models.ModelError(f"{stage} step 4 (files) left {len(missing)} item(s) unanswered")
-        rows.update(decided)
+        for lid in ids:
+            if lid in decided:
+                rows[lid] = decided[lid]
+            else:
+                rows.pop(lid)
+    missing = [i["id"] for i in items if i["id"] not in rows]
+    if missing:
+        raise PartialStep4(f"{stage} step 4 left {len(missing)} item(s) unanswered",
+                           rows, usages, missing)
     return rows, usages
 
 
@@ -406,14 +443,28 @@ def run_stage(stage: str, unit: units.Unit, unit_rec: dict, only: set[str] | Non
             log(f"{stage} step 4: {len(todo4)} item(s) in {len(batches)} calls")
         # One batch at a time, recording its issues before the next: each call
         # reads the open pending issues afresh, so a later batch can attach to an
-        # issue an earlier one raised instead of raising it again.
+        # issue an earlier one raised instead of raising it again.  A batch that
+        # decided only some items keeps those; a broken call stops the stage after
+        # saving them, items merely left out stop it once every batch has run.
+        left_out: list[str] = []
         for batch in batches:
-            rows4, usages = run_step4(stage, batch)
+            partial = None
+            try:
+                rows4, usages = run_step4(stage, batch)
+            except PartialStep4 as exc:
+                partial, rows4, usages = exc, exc.rows, exc.usages
             usage.extend(usages)
             for lid, row in rows4.items():
                 _record_issue(stage, lid, row)
                 links[lid]["stages"][stage]["step4"] = row
             save()
+            if partial is not None and partial.broke is not None:
+                raise partial
+            if partial is not None:
+                left_out += partial.missing
+        if left_out:
+            raise models.ModelError(f"{stage} step 4 left {len(left_out)} item(s) unanswered; "
+                                    f"the other {len(todo4) - len(left_out)} are kept")
     if lower and forced:
         run_reveal(stage, unit, unit_rec, sorted(forced), save)
     summary = {"stage": stage, "links": len(round_lids), "flagged": len(flagged),
@@ -446,8 +497,13 @@ def run_late_s1(unit: units.Unit, unit_rec: dict, round_lids: list[str]) -> dict
         return {"late_s1": 0}
     usage = unit_rec.setdefault("usage", {}).setdefault("S1", [])
     changed = 0
+    left_out = 0
     for batch in step4_batches(step4_items(unit, unit_rec, "S1", lids)):
-        rows4, usages = run_step4("S1", batch)
+        partial = None
+        try:
+            rows4, usages = run_step4("S1", batch)
+        except PartialStep4 as exc:
+            partial, rows4, usages = exc, exc.rows, exc.usages
         usage.extend({**u, "late": True} for u in usages)
         for lid, row in rows4.items():
             _record_issue("S1", lid, row)
@@ -455,7 +511,14 @@ def run_late_s1(unit: units.Unit, unit_rec: dict, round_lids: list[str]) -> dict
             links[lid]["stages"]["S1"]["step4"] = row
             links[lid]["stages"]["S1"]["late"] = True
             changed += vote(links[lid], "S1") != before
-    return {"late_s1": len(lids), "late_s1_changed": changed}
+        if partial is not None and partial.broke is not None:
+            raise partial                   # the caller finalizes with what is decided
+        if partial is not None:
+            left_out += len(partial.missing)
+    out = {"late_s1": len(lids), "late_s1_changed": changed}
+    if left_out:
+        out["late_s1_unanswered"] = left_out
+    return out
 
 
 # ── finalization (after S3) ───────────────────────────────────────────────

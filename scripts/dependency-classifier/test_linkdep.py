@@ -883,6 +883,100 @@ class StageResumeTest(unittest.TestCase):
         # say required: the whole round goes to the human queue.
         self.assertTrue(lids <= set(store.load_queue()["human"]))
 
+    def test_step4_keeps_the_answered_items_of_a_batch(self):
+        """A batch whose answer leaves an item out keeps the rest; the rerun asks only for it."""
+        import linkdep_tick as tick
+        import linkdep_units as units
+        e2e = EndToEndFakeModelTest()
+        paths = next(p for p in units.all_units() if EndToEndFakeModelTest.POST in p)
+        unit = units.load_unit(paths)
+        h = units.unit_hash(unit.key)
+        dropped = unit.lids[1]
+        drop = [True]
+        step4_ids: list[list[str]] = []
+
+        def call(stage, prompt, schema=None):
+            payload, usage = e2e.fake_call(stage, prompt, schema)
+            if prompt.startswith(sp.STEP4_HEAD[:40]):
+                step4_ids.append([it["id"] for it in e2e._items(prompt)])
+                if drop[0]:
+                    payload = {"items": [r for r in payload["items"] if r["id"] != dropped]}
+            return payload, usage
+
+        flag_all = {"risk": None, "flagged": True, "reasons": ["test"], "by": "rule"}
+        state = {"units": {}, "started_at": time.time() - 30 * 86400}
+        with patch.object(models, "call", side_effect=call), \
+                patch.object(models, "available", return_value=True), \
+                patch.object(risk, "score", return_value=flag_all), \
+                patch.object(tick, "dirty_paths", return_value=[]), \
+                patch.object(tick, "commit_outputs", return_value=True):
+            self.assertEqual(tick.run(state, paths, "S1", unit, "new", commit=False), 1)
+            self.assertIn("1 item(s) unanswered", state["units"][unit.key]["error"])
+            links = store.load_unit_record(h)["links"]
+            kept = {lid for lid in unit.lids if links[lid]["stages"]["S1"].get("step4")}
+            self.assertEqual(kept, set(unit.lids) - {dropped})
+            self.assertEqual(step4_ids[-1], [dropped])          # the in-call retry
+            drop[0] = False
+            step4_ids.clear()
+            self.assertEqual(tick.run(state, paths, "S1", units.load_unit(paths), "continue",
+                                      commit=False), 0)
+        self.assertEqual(step4_ids, [[dropped]])
+        self.assertEqual(state["units"][unit.key]["next"], "S2")
+
+    def test_broken_files_call_keeps_the_first_calls_decisions(self):
+        from types import SimpleNamespace
+        decided = {"relation": "required", "precedent": "none", "precedent_reason": "",
+                   "pending": None, "new_issue": None, "candidates": []}
+        path = Path(TMP) / "P-0001.md"
+        path.write_text("판례", encoding="utf-8")
+        live = {"P": [SimpleNamespace(id="P-0001", path=path)], "Q": []}
+
+        def validate(payload, ids, **kw):
+            return {"a": dict(decided), "b": {**decided, "candidates": ["P-0001"]}}
+
+        calls = []
+
+        def call(stage, prompt, schema=None):
+            calls.append(prompt)
+            if len(calls) == 2:
+                raise models.ModelError("prompt exceeds 400000 bytes")
+            return {}, {}
+        with patch.object(pipe.book, "live", side_effect=lambda kind: live[kind]), \
+                patch.object(pipe.book, "index_lines", return_value=[]), \
+                patch.object(pipe.sp, "validate_step4", side_effect=validate), \
+                patch.object(models, "call", side_effect=call):
+            with self.assertRaises(pipe.PartialStep4) as caught:
+                pipe.run_step4("S1", [{"id": "a"}, {"id": "b"}])
+        exc = caught.exception
+        self.assertIn("prompt exceeds", str(exc))            # tick parks on this wording
+        self.assertIsNotNone(exc.broke)
+        self.assertEqual((set(exc.rows), exc.missing), ({"a"}, ["b"]))
+
+    def test_late_s1_keeps_a_partial_batch(self):
+        record = {"unit": "u", "links": {
+            "l1": link_rec("a.md", "/ko/math/x#def1", {"S1": "weak", "S2": "required", "S3": "required"}),
+            "l2": link_rec("a.md", "/ko/math/x#def2", {"S1": "weak", "S2": "required", "S3": "required"}),
+        }}
+
+        class FakeUnit:
+            def link(self, lid):
+                return object()
+
+        row = {"relation": "required", "precedent": "none", "precedent_reason": "",
+               "pending": None, "new_issue": None, "candidates": []}
+
+        def partial(stage, batch):
+            raise pipe.PartialStep4("S1 step 4 left 1 item(s) unanswered", {"l1": dict(row)},
+                                    [{}], ["l2"])
+        with patch.object(pipe, "step4_items", lambda u, r, stage, lids: lids), \
+                patch.object(pipe, "step4_batches", lambda items: [items]), \
+                patch.object(pipe, "run_step4", side_effect=partial), \
+                patch.object(pipe, "_record_issue", lambda *a: None):
+            out = pipe.run_late_s1(FakeUnit(), record, ["l1", "l2"])
+        self.assertEqual(out, {"late_s1": 2, "late_s1_changed": 1, "late_s1_unanswered": 1})
+        self.assertTrue(record["links"]["l1"]["stages"]["S1"]["late"])
+        self.assertNotIn("step4", record["links"]["l2"]["stages"]["S1"])
+
 
 class StepFourBatchingTest(unittest.TestCase):
     # Named to sort after BookTest/EndToEnd: these rounds share the module's temp book.
