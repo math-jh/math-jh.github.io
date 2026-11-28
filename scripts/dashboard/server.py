@@ -1074,9 +1074,30 @@ def sec_cron():
                         quotaPaused=bool((r or {}).get("quotaPaused")),
                         # crontab/timers.conf 에서 게이트가 사라지면 버튼이 무의미해진다
                         missing=r is None, timer=j["id"].startswith("timer:")))
-    data = dict(items=out, paused=sum(1 for x in out if x["paused"]))
+    data = dict(items=out, paused=sum(1 for x in out if x["paused"]), billing=billing_routes())
     _cron_cache.update(ts=now, data=data)
     return data
+
+
+# 크론의 과금 경로(구독·API) — 읽기만 한다. 모드는 Pi 대시보드 #llm 이 판정기 CLI 로 바꾼다
+# (service-map claude-credit·gemini-credit, 계약 claude-credit-route·gemini-credit-route).
+BILLING_CLI = (("claude", "Claude", os.path.expanduser("~/.local/bin/claude-credit")),
+               ("gemini", "Gemini", os.path.expanduser("~/.local/bin/gemini-credit")))
+
+
+def billing_routes():
+    out = []
+    for pid, name, cli in BILLING_CLI:
+        try:
+            p = subprocess.run([cli, "route", "--json"], capture_output=True, text=True, timeout=10)
+            r = json.loads(p.stdout or "{}")
+        except Exception:  # noqa: BLE001 — 표시만 하므로 모르면 모른다고 보인다
+            r = {}
+        out.append(dict(provider=pid, name=name, route=r.get("route"), mode=r.get("mode"),
+                        reason=r.get("reason")))
+    out.append(dict(provider="codex", name="Codex", route="subscription", mode=None,
+                    reason="API 미설정"))
+    return out
 
 
 def build_summary():

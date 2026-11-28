@@ -1450,9 +1450,22 @@ function systemdTimerText(expr) {
   return '매일 ' + m[1] + ':' + m[3] + '부터 ' + Number(m[2]) + '시간 간격';
 }
 
+var BILLING_MODE = { subscription: '구독만', api: 'API 우선' };
+
 function secCron(d) {
   var c = d.cron || { items: [], paused: 0 };
   var s = secNode('크론 제어', c.items.length + '개 · 정지 ' + c.paused);
+  // 과금 경로는 읽기만 한다 — 모드 버튼은 Pi 대시보드 #llm 에 있다.
+  if (c.billing && c.billing.length) {
+    var bill = el('p', 'hint', '');
+    bill.innerHTML = '과금 경로 — ' + c.billing.map(function (b) {
+      var now = b.route == null ? '?' : (b.route === 'subscription' ? '구독' : 'API');
+      var note = BILLING_MODE[b.mode] ? ' (' + BILLING_MODE[b.mode] + ')' :
+        (b.provider === 'codex' ? ' (API 미설정)' : '');
+      return '<span title="' + esc(b.reason) + '">' + esc(b.name) + ' ' + now + esc(note) + '</span>';
+    }).join(' · ') + ' · <a href="' + PI_DASHBOARD + '#llm">Pi 대시보드에서 바꾸기</a>';
+    s.appendChild(bill);
+  }
   var rows = c.items.map(function (j) {
     var pauseText = j.userPaused && j.quotaPaused ? '수동+쿼터 정지' :
       (j.quotaPaused ? '쿼터 정지' : '정지됨');
@@ -1501,7 +1514,8 @@ var PAGE_HELP = {
   cron: '정지는 crontab 을 고치지 않는다 — 각 크론 라인 앞의 cron-gate 가 상태파일을 보고 스킵한다. ' +
     '쿼터 정지 중에는 초록 강제재개와 회색 정지를 함께 쓸 수 있고, 강제재개 권한은 해당 quota reset에서 끝난다. ' +
     'autopush 만 systemd 타이머라 systemctl --user stop 으로 멈추며, 재부팅하면 자동 복귀한다. ' +
-    '연구 파이프라인(director·verifier·reporter)은 Pi 대시보드(:8088)에 있다.'
+    '위의 과금 경로 줄은 크론이 구독 쿼터 대신 API 크레딧으로 내는지다(지금 판정 · 수동 모드). ' +
+    '모드(자동·구독만·API 우선)는 Pi 대시보드 #llm 에서 바꾼다.'
 };
 
 /* ── 페이지 셸 · 렌더 · 로드 ──────────────────────────────────────────── */
