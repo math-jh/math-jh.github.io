@@ -9,7 +9,7 @@ nginx(4000)의 /dash/ location이 여기로 proxy_pass 한다 — Jekyll을 거�
     GET /api/summary        대시보드 전체 데이터 (45s 캐시)
     GET /api/log?name=<key> 워커 로그 tail (기본 200줄)
     GET /api/translog?path=<p>  번역 워커 로그에서 그 글의 마지막 시도 구간
-    GET /api/heat           개요 수정량 잔디 — KST 날짜별 KO 글 줄 추가·삭제·커밋 수 (최근 53주,
+    GET /api/heat           개요 수정량 잔디 — KST 날짜별 KO 글 줄 추가·삭제·커밋 수 (전체 기간,
                             git 밖 로컬 글은 LOCAL_GIT 스냅샷으로 함께 센다)
     GET /api/heat/day?d=<날짜>  그날 KO 글을 고친 커밋·로컬 스냅샷과 글
     GET /api/lint?path=<p>  단일 글에 md_lint.py CLI 실행 (발행 준비도)
@@ -796,10 +796,9 @@ def sec_gsc():
 
 
 # ── 수정량 잔디 (개요) ────────────────────────────────────────────────────────
-# KO 글이 날마다 얼마나 고쳐졌는지 — 최근 53주, KST 날짜별 git numstat 의 줄 추가+삭제.
+# KO 글이 날마다 얼마나 고쳐졌는지 — 레포 전체 기간, KST 날짜별 git numstat 의 줄 추가+삭제.
 # 워커가 쓰는 커밋([Cron]·[Dash])은 뺀다. [Auto] 는 작업 트리를 짝수 정시에 주워 담은
-# 사람의 편집이라 센다. 1년치 numstat 이 몇 초 걸려 HEAD 가 바뀔 때만 백그라운드로 다시 센다.
-HEAT_DAYS = 53 * 7
+# 사람의 편집이라 센다. 전체 numstat 이 몇 초 걸려 HEAD 가 바뀔 때만 백그라운드로 다시 센다.
 _HEAT_SKIP = ("[Cron]", "[Dash]")
 _post_labels = {}   # 경로·permalink → '[카테고리] 제목' — build_summary 가 채운다 (날짜 상세에 쓴다)
 _heat = {"sig": None, "data": None, "running": False}
@@ -856,10 +855,9 @@ def _heat_log(cmd, local):
 
 def _heat_run(sig):
     fmt = "--format=@@%h%x09%at%x09%P%x09%s"
-    since = f"--since={HEAT_DAYS + 7} days ago"
-    rc, err, days = _heat_log(["git", "log", since, "--no-merges", "--numstat", fmt, "--", "_posts"], False)
+    rc, err, days = _heat_log(["git", "log", "--no-merges", "--numstat", fmt, "--", "_posts"], False)
     # 로컬 글이 스냅샷에서 빠지는 것(발행돼 git 으로 넘어감·삭제)은 수정이 아니라 --diff-filter=d.
-    lrc, lerr, ldays = _heat_log(["git", "--git-dir", LOCAL_GIT, "log", since, "--numstat",
+    lrc, lerr, ldays = _heat_log(["git", "--git-dir", LOCAL_GIT, "log", "--numstat",
                                   "--diff-filter=d", fmt], True) if os.path.isdir(LOCAL_GIT) else (0, "", {})
     if rc == 0:
         for k, v in ldays.items():

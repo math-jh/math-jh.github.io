@@ -24,6 +24,17 @@ Console key — bare mode reads only that key, never the subscription login, and
 leaves no transcript.  If the credits are refused (used up, key rejected) the
 call is reported with ``claude-credit exhausted`` and run again on the
 subscription.  ``usage["billing"]`` records which one paid.
+
+S1 on the Gemini API (2026-11-28).  While the quota gate has Antigravity
+closed, S1 sends the same prompt to the Gemini API's prepaid credits through
+``gemini-credit generate`` (~/.local/bin): ``gemini-4-neon``, the model agy
+serves, with agy's effort as the thinking level and the agent file as the system
+instruction — Flex tier first, the standard tier when Flex is busy.  S1 is
+available when either path is: agy's gate is open, or ``gemini-credit usable``
+(a key, and no refusal waiting for its re-probe).  A refused or broken API call
+stops the stage like a closed gate, and the next run resumes it.  There is no
+spending cap of the classifier's own.  ``usage["billing"]`` is ``gemini-api``,
+with the tier and the cost in USD.
 """
 from __future__ import annotations
 
@@ -48,6 +59,16 @@ AGY_BIN = core.AGY_BIN
 # linkdep_pipeline then asks again in halves.
 AGY_EFFORT = os.environ.get("DEPENDENCY_AGY_EFFORT", "medium")
 AGY_AGENT = os.environ.get("DEPENDENCY_AGY_AGENT", "blog-dependency-judge")
+AGY_AGENT_FILE = Path.home() / ".gemini" / "config" / "agents" / AGY_AGENT / "agent.md"
+GEMINI_CREDIT_BIN = os.environ.get("GEMINI_CREDIT_BIN",
+                                   str(Path.home() / ".local" / "bin" / "gemini-credit"))
+# The API needs a model ID, unlike agy: the one agy serves for this agent.
+GEMINI_API_MODEL = os.environ.get("DEPENDENCY_GEMINI_API_MODEL", "gemini-4-neon")
+GEMINI_API_TIER = os.environ.get("DEPENDENCY_GEMINI_API_TIER", "flex")
+# Per request; Flex may queue for minutes (its docs ask for 10 min or more), and a
+# busy Flex request is sent once more on the standard tier.
+GEMINI_API_TIMEOUT = int(os.environ.get("DEPENDENCY_GEMINI_API_TIMEOUT", "900"))
+GEMINI_CALLER = "dependency-classifier-S1"
 CLAUDE_BIN = core.CLAUDE_BIN
 CLAUDE_MODEL = core.CLAUDE_MODEL
 CODEX_BIN = core.CODEX_BIN
@@ -151,7 +172,61 @@ def parse_model_json(raw: str) -> dict:
 
 
 def available(stage: str) -> bool:
-    return core.provider_available(PROVIDER[stage])
+    if core.provider_available(PROVIDER[stage]):
+        return True
+    return stage == "S1" and gemini_api_usable()
+
+
+def gemini_api_usable() -> bool:
+    """Whether S1 can go to the Gemini API now (``gemini-credit usable``)."""
+    try:
+        proc = subprocess.run([GEMINI_CREDIT_BIN, "usable", "--json"],
+                              capture_output=True, text=True, timeout=60)
+        return bool(json.loads(proc.stdout or "{}").get("usable"))
+    except (OSError, subprocess.SubprocessError, ValueError, AttributeError):
+        return False
+
+
+def _gemini_api(prompt: str) -> tuple[dict, dict]:
+    args = [GEMINI_CREDIT_BIN, "generate", "--model", GEMINI_API_MODEL, "--thinking", AGY_EFFORT,
+            "--system-file", str(AGY_AGENT_FILE), "--by", GEMINI_CALLER,
+            "--timeout", str(GEMINI_API_TIMEOUT), "--json"]
+    if GEMINI_API_TIER == "flex":
+        args += ["--tier", "flex", "--fallback-standard"]
+    try:
+        proc = subprocess.run(args, input=prompt, capture_output=True, text=True,
+                              timeout=2 * GEMINI_API_TIMEOUT + 120)
+    except (OSError, subprocess.SubprocessError) as exc:
+        raise ModelError(f"Gemini API call did not finish ({type(exc).__name__})") from exc
+    first = (proc.stderr.strip().splitlines() or [""])[0][:200]
+    if proc.returncode == 3:
+        raise ModelError(f"Gemini API refused ({first}); S1 waits for Antigravity or the re-probe")
+    if proc.returncode:
+        if "MAX_TOKENS" in first:
+            # The wording linkdep_pipeline.run_step1 halves a batch on.
+            raise ModelError(f"Gemini API hit the output token limit ({first})")
+        raise ModelError(f"Gemini API rc={proc.returncode} ({first})")
+    try:
+        reply = json.loads(proc.stdout)
+    except ValueError as exc:
+        raise ModelError(f"gemini-credit printed no JSON: {proc.stdout[:200]!r}") from exc
+    meta = reply.get("usage") or {}
+    thoughts = int(meta.get("thoughtsTokenCount") or 0)
+    visible = int(meta.get("candidatesTokenCount") or 0)
+    tokens_in = int(meta.get("promptTokenCount") or 0)
+    usage = {"input_tokens": tokens_in, "output_tokens": visible + thoughts,
+             "thinking_tokens": thoughts,
+             "cache_read_tokens": int(meta.get("cachedContentTokenCount") or 0),
+             "total_tokens": tokens_in + visible + thoughts, "turns": 1,
+             "billing": "gemini-api", "model": reply.get("model"), "tier": reply.get("tier"),
+             "cost_usd": reply.get("cost")}
+    cost = reply.get("cost")
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] S1 billed to Gemini API "
+          f"({reply.get('model')}, {reply.get('tier')}"
+          f"{f', ${cost:.4f}' if isinstance(cost, (int, float)) else ''})", flush=True)
+    global LAST_RAW
+    LAST_RAW = str(reply.get("text", ""))
+    return parse_model_json(LAST_RAW), usage
 
 
 def _run_until_envelope(args: list[str]) -> str:
@@ -385,6 +460,8 @@ def call(stage: str, prompt: str, schema: dict | None = None) -> tuple[dict, dic
     slot = core.acquire_provider_slot(provider)
     try:
         if not core.provider_available(provider):
+            if stage == "S1" and gemini_api_usable():
+                return _gemini_api(prompt)
             raise ModelError(f"{provider} quota gate closed while waiting for a slot")
         if stage == "S1":
             return _agy(prompt)

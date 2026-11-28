@@ -470,24 +470,36 @@ function openWorkerLog(w) {
     .catch(function (e) { openModal(w.name, '로그를 읽지 못했다: ' + e); });
 }
 
-/* ── 수정량 잔디 — KO 글 git 수정량, 최근 53주 ───────────────────────────── */
-/* 열 하나가 한 주(월요일이 맨 위), 칸 하나가 하루. 색은 brass 한 색의 다섯 단계 — 0 은 빈 칸,
-   나머지는 수정이 있었던 날들의 4분위로 나눈다(하루치가 수만 줄인 일괄 치환 날이 있어 고정 구간은
-   쓸 수 없다). 데이터는 GET /api/heat (server.py :: heat_days, HEAD 가 바뀔 때만 다시 센다)이고
-   최근 커밋 sha 가 같으면 주기 렌더마다 다시 받지 않는다. */
+/* ── 수정량 잔디 — KO 글 git 수정량, 전체 기간 ───────────────────────────── */
+/* 열 하나가 한 주(월요일이 맨 위), 칸 하나가 하루. 첫 수정일부터 오늘까지 한 줄로 이어 붙이고, 패널 폭에는
+   53주가 보이며 가로로 스크롤해 과거로 간다. 색은 brass 의 연속 농도이고, 농도 자리 t 는 두 눈금의
+   가중 평균이다 — 분위(그날 이하로 고친 날의 비율)와 로그 눈금(log 줄 수 / log 최대 줄 수). 하루치가
+   수만 줄인 일괄 치환 날이 있어 선형 눈금은 몇 칸만 진하고 나머지가 다 옅다. 분위만 쓰면 색은 고르게
+   퍼지지만 줄 수의 크기가 지워져 수백 줄과 수만 줄이 거의 같은 색이 되고, 로그만 쓰면 크기는 남지만 날들이
+   가운데 농도로 몰린다. 데이터는 GET /api/heat (server.py :: heat_days, HEAD 가 바뀔 때만 다시 센다)이고
+   지문이 같으면 주기 렌더마다 다시 그리지 않는다. */
 var HEAT_WD = ['월', '화', '수', '목', '금', '토', '일'];
+var HEAT_MIX = .5;   /* t 에서 분위 쪽 비중 — 0 이면 로그 눈금만, 1 이면 분위만 */
+/* 농도 사다리: t = 0 에서 바탕 위 brass 20%(빈 칸의 회색과 구별되는 하한), t = HEAT_KNEE 에서 brass,
+   t = 1 에서 brass 에 ink 20% — 위쪽을 ink 쪽으로 조금 늘려 brass 보다 한 단 짙게 끝낸다(더 늘리면
+   만 줄 넘는 날이 너무 무겁다). 다크 테마에서는 ink 가 밝은 색이라 같은 식이 위쪽을 더 밝게 만든다. */
+var HEAT_C0 = 20, HEAT_KNEE = .65, HEAT_INK = 20;
 var HEAT_HELP = 'KO 글이 날마다 얼마나 고쳐졌는지다 — git 커밋의 줄 추가+삭제를 한국 시간 날짜로 모은다. ' +
   '워커가 쓰는 커밋([Cron]·[Dash])은 빼고, 작업 트리를 짝수 정시에 주워 담는 [Auto] 커밋은 센다. ' +
   'EN 글·코드·데이터 파일은 세지 않는다.\n\ngit 에서 빠진 로컬 KO 글(.git/info/exclude — 비공개 연구 스트림)은 ' +
   '대시보드가 2시간마다(한국 시간 짝수 정시 2분 전) 따로 스냅샷을 찍어 그 차이를 같이 센다. ' +
   '첫 스냅샷(기준선) 이전 날짜에는 로컬 글 수정이 잡히지 않는다. 의존성 분류기가 로컬 글에 직접 붙이는 ' +
-  '링크 식별자(data-lid)는 지우고 비교하므로 세지 않는다.\n\n칸 색은 다섯 단계다. 빈 칸은 수정이 없던 날이고, 나머지 네 단계는 ' +
-  '수정이 있었던 날들을 줄 수로 4등분한 것이다(가장 진한 칸이 상위 25%). 단계별 줄 수는 아래 범례에 ' +
-  '커서를 올리면 뜬다.\n\n칸에 커서를 올리면 그날의 줄 수와 커밋 수가, 누르면 그날의 커밋과 고친 글이 뜬다.';
+  '링크 식별자(data-lid)는 지우고 비교하므로 세지 않는다.\n\n레포 전체 기간을 한 줄로 그린다. 처음엔 오른쪽 끝(오늘)이 ' +
+  '보이고, 가로로 스크롤하면 과거로 간다. 1월 자리에는 달 대신 연도가 있고, 연도에 커서를 올리면 그해의 고친 날과 ' +
+  '줄 수가 뜬다. 패널 머리의 숫자는 전체 합이다.\n\n' +
+  '칸 색은 연속 농도다. 빈 회색 칸은 수정이 없던 날이다. 농도는 두 눈금을 반씩 섞는다 — 그날 이하로 고친 날의 ' +
+  '비율(분위)과 log 줄 수 ÷ log 최대 줄 수(로그 눈금). 분위만 쓰면 색은 고르게 퍼지지만 수백 줄과 수만 줄이 ' +
+  '거의 같은 색이 되고, 로그만 쓰면 날들이 가운데 농도로 몰린다. 아래 범례의 눈금이 10·100·1,000·10,000줄의 ' +
+  '자리다.\n\n칸에 커서를 올리면 그날의 줄 수·커밋 수·상위 몇 %인지가, 누르면 그날의 커밋과 고친 글이 뜬다.';
 function heatPanel(d) {
   var p = el('div', 'panel heat');
   var hd = el('p', 'panel__t panel__t--row');
-  var t = el('span', 'panel__t-l', 'KO 글 수정량 — 최근 1년');
+  var t = el('span', 'panel__t-l', 'KO 글 수정량 — 전체 기간');
   t.appendChild(helpBtn('KO 글 수정량', HEAT_HELP));
   hd.appendChild(t);
   var sum = el('span', 'heat__sum');
@@ -495,6 +507,7 @@ function heatPanel(d) {
   p.appendChild(hd);
   var body = el('div', 'heat__body');
   p.appendChild(body);
+  wireTip(body);
   if (state.heat) heatPaint(body, sum, state.heat);
   else body.appendChild(el('p', 'hint', '수정량을 세는 중…'));
   /* 서버 캐시라 매 렌더 받아도 싸다. 지문(레포 HEAD + 로컬 스냅샷 HEAD)이 같으면 다시 그리지 않는다. */
@@ -506,54 +519,106 @@ function heatPanel(d) {
   }).catch(function () { });
   return p;
 }
+/* 수정이 있었던 날들의 줄 수(오름차순) → 줄 수를 농도 자리 t ∈ [0, 1] 로 보내는 함수.
+   t.top(v) 는 v 줄 이상 고친 날 수다(칸 풍선의 '상위 몇 %'). */
+function heatScale(vals) {
+  var n = vals.length, lmax = Math.log(vals[n - 1]);
+  function atMost(v) {
+    var lo = 0, hi = n;
+    while (lo < hi) { var mid = (lo + hi) >> 1; if (vals[mid] <= v) lo = mid + 1; else hi = mid; }
+    return lo;
+  }
+  function t(v) { return HEAT_MIX * atMost(v) / n + (1 - HEAT_MIX) * (lmax > 0 ? Math.log(v) / lmax : 1); }
+  t.top = function (v) { return n - atMost(v - 1); };
+  return t;
+}
+function heatColor(t) {
+  if (t <= HEAT_KNEE)
+    return 'color-mix(in oklab, var(--brass) ' + Math.round(HEAT_C0 + (100 - HEAT_C0) * t / HEAT_KNEE) + '%, var(--panel))';
+  return 'color-mix(in oklab, var(--ink) ' + Math.round(HEAT_INK * (t - HEAT_KNEE) / (1 - HEAT_KNEE)) + '%, var(--brass))';
+}
 function heatPaint(body, sum, j) {
   var days = j.days || {}, today = j.today, DAY = 86400000;
-  var t0 = Date.UTC(+today.slice(0, 4), +today.slice(5, 7) - 1, +today.slice(8, 10));
-  var start = t0 - (52 * 7 + (new Date(t0).getUTCDay() + 6) % 7) * DAY;   /* 52주 전 월요일 */
   function iso(ms) { return new Date(ms).toISOString().slice(0, 10); }
-  var inWin = Object.keys(days).filter(function (k) { return k >= iso(start) && k <= today; });
-  var vals = inWin.map(function (k) { return days[k][0] + days[k][1]; })
+  var keys = Object.keys(days).filter(function (k) { return k <= today; }).sort();
+  var first = keys[0] || today;
+  var vals = keys.map(function (k) { return days[k][0] + days[k][1]; })
     .filter(function (v) { return v > 0; }).sort(function (a, b) { return a - b; });
-  var q = [.25, .5, .75].map(function (f) { return vals[Math.floor((vals.length - 1) * f)] || 0; });
-  function level(v) { return !v ? 0 : v <= q[0] ? 1 : v <= q[1] ? 2 : v <= q[2] ? 3 : 4; }
+  var scale = vals.length ? heatScale(vals) : null;
   var add = 0, del = 0;
-  inWin.forEach(function (k) { add += days[k][0]; del += days[k][1]; });
+  keys.forEach(function (k) { add += days[k][0]; del += days[k][1]; });
   sum.textContent = '고친 날 ' + num(vals.length) + '일 · +' + num(add) + ' −' + num(del) + '줄';
 
-  body.innerHTML = '';
+  /* 첫 수정일이 든 주의 월요일부터 오늘이 든 주까지 한 줄. 달 이름은 그 주 월요일의 달이 바뀌는 열에
+     적고, 1월 열과 맨 첫 열에는 연도를 적는다. 연도에 커서를 올리면 그해의 합이 뜬다. */
+  function utc(s) { return Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)); }
+  var f0 = utc(first), start = f0 - ((new Date(f0).getUTCDay() + 6) % 7) * DAY;
+  var cols = Math.floor((utc(today) - start) / DAY / 7) + 1, ysum = {};
+  keys.forEach(function (k) {
+    var v = days[k], s = ysum[k.slice(0, 4)] || (ysum[k.slice(0, 4)] = [0, 0, 0]);
+    if (v[0] + v[1]) { s[0]++; s[1] += v[0]; s[2] += v[1]; }
+  });
   var grid = el('div', 'heat__grid');
-  grid.appendChild(el('span'));
-  for (var w = 0; w < 53; w++) {
-    var m = new Date(start + w * 7 * DAY).getUTCMonth();
+  grid.style.gridTemplateColumns = '1.7rem repeat(' + cols + ',var(--heat-cell))';
+  grid.appendChild(el('span', 'heat__wd'));
+  for (var w = 0; w < cols; w++) {
+    var wd = new Date(start + w * 7 * DAY), m = wd.getUTCMonth(), y = wd.getUTCFullYear();
     var pm = w ? new Date(start + (w - 1) * 7 * DAY).getUTCMonth() : -1;
-    grid.appendChild(el('span', 'heat__m', m !== pm ? (m + 1) + '월' : ''));
+    var lab = el('span', 'heat__m');
+    if (!w || (m === 0 && pm !== 0)) {
+      var s = ysum[y] || [0, 0, 0];
+      lab.className += ' heat__m--y';
+      lab.textContent = y + '년' + (m ? ' ' + (m + 1) + '월' : '');
+      lab.dataset.tip = y + '년 · ' + (s[0] ? '고친 날 ' + num(s[0]) + '일 · +' + num(s[1]) + ' −' + num(s[2]) + '줄' : '수정 없음');
+    } else if (m !== pm) lab.textContent = (m + 1) + '월';
+    grid.appendChild(lab);
   }
   for (var r = 0; r < 7; r++) {
     grid.appendChild(el('span', 'heat__wd', r % 2 ? '' : HEAT_WD[r]));
-    for (w = 0; w < 53; w++) {
-      var ds = iso(start + (w * 7 + r) * DAY), v = days[ds], tot = v ? v[0] + v[1] : 0;
-      var c = el('i', 'heat__c heat__c--' + (ds > today ? 'none' : level(tot)) + (ds === today ? ' heat__c--today' : ''));
-      if (ds <= today) {
-        c.dataset.tip = ds + ' (' + HEAT_WD[r] + ') · ' + (v ? '+' + num(v[0]) + ' −' + num(v[1]) + '줄' +
-          (v[2] ? ' · 커밋 ' + v[2] : '') + (v[3] ? ' · 로컬 글 ' + num(v[3]) + '줄' : '') : '수정 없음');
+    for (w = 0; w < cols; w++) {
+      var ds = iso(start + (w * 7 + r) * DAY);
+      if (ds < first || ds > today) { grid.appendChild(el('i', 'heat__c heat__c--none')); continue; }
+      var v = days[ds], tot = v ? v[0] + v[1] : 0;
+      var c = el('i', 'heat__c' + (tot ? ' heat__c--on' : '') + (ds === today ? ' heat__c--today' : ''));
+      c.dataset.tip = ds + ' (' + HEAT_WD[r] + ') · ' + (v ? '+' + num(v[0]) + ' −' + num(v[1]) + '줄' +
+        (v[2] ? ' · 커밋 ' + v[2] : '') + (v[3] ? ' · 로컬 글 ' + num(v[3]) + '줄' : '') : '수정 없음');
+      if (tot) {
+        c.style.background = heatColor(scale(tot));
+        c.dataset.tip += ' · 상위 ' + Math.ceil(scale.top(tot) / vals.length * 100) + '%';
+        c.onclick = heatDay.bind(null, ds);
       }
-      if (tot) c.onclick = heatDay.bind(null, ds);
       grid.appendChild(c);
     }
   }
-  body.appendChild(grid);
-  var foot = el('div', 'heat__foot');
-  foot.appendChild(el('span', null, '적음'));
-  var bounds = ['수정 없음', '1–' + num(q[0]) + '줄', num(q[0] + 1) + '–' + num(q[1]) + '줄',
-                num(q[1] + 1) + '–' + num(q[2]) + '줄', num(q[2] + 1) + '줄 이상'];
-  bounds.forEach(function (b, i) {
-    var s = el('i', 'heat__c heat__c--' + i);
-    s.dataset.tip = b;
-    foot.appendChild(s);
+  var scroll = el('div', 'heat__scroll');
+  scroll.appendChild(grid);
+  /* 처음엔 오른쪽 끝(오늘)이 보이고 왼쪽으로 밀면 과거다. 주기 렌더가 패널을 새로 만들므로 오른쪽 끝에서
+     떨어진 거리를 state 에 두고, 패널이 문서에 붙은 뒤에 되돌린다. */
+  scroll.onscroll = function () { state.heatFromRight = scroll.scrollWidth - scroll.clientWidth - scroll.scrollLeft; };
+  requestAnimationFrame(function () {
+    scroll.scrollLeft = scroll.scrollWidth - scroll.clientWidth - (state.heatFromRight || 0);
   });
-  foot.appendChild(el('span', null, '많음'));
+
+  var foot = el('div', 'heat__foot');
+  foot.appendChild(el('i', 'heat__c'));
+  foot.appendChild(el('span', null, '수정 없음'));
+  if (scale) {
+    var bar = el('span', 'heat__bar'), stops = [];
+    for (var k = 0; k <= 10; k++) stops.push(heatColor(k / 10) + ' ' + k * 10 + '%');
+    bar.style.background = 'linear-gradient(to right,' + stops.join(',') + ')';
+    [10, 100, 1000, 10000, 100000].forEach(function (x) {
+      if (x < vals[0] || x > vals[vals.length - 1]) return;
+      var tk = el('span', 'heat__tk', num(x));
+      tk.style.left = (scale(x) * 100).toFixed(1) + '%';
+      bar.appendChild(tk);
+    });
+    bar.dataset.tip = '고친 날의 줄 수 ' + num(vals[0]) + '–' + num(vals[vals.length - 1]) + '줄';
+    foot.appendChild(bar);
+    foot.appendChild(el('span', null, '줄'));
+  }
+  body.innerHTML = '';
+  body.appendChild(scroll);
   body.appendChild(foot);
-  wireTip(body);
 }
 function heatDay(ds) {
   openModal(ds + ' — KO 글 수정', '불러오는 중…');

@@ -339,26 +339,29 @@ pre.log{background:var(--code-bg);border:1px solid var(--rule);padding:.8rem .9r
 .settings-submenu.show{display:block}
 .settings-submenu li{padding-left:26px}
 
-/* ── 수정량 잔디 — 판정 칸 아래 폭 전체. 열=주(월요일이 위), 칸=하루, 실행 기록과 같은 brass
-   한 색의 다섯 단계(빈 칸은 바탕에 가깝게). 모서리는 대시보드 전체처럼 각. ── */
-.heat{margin-bottom:1.4rem}
+/* ── 수정량 잔디 — 판정 칸 아래 폭 전체. 열=주(월요일이 위), 칸=하루, 전체 기간을 한 줄로 이어 붙여
+   가로 스크롤한다. 칸 크기는 패널 폭(cqw)에 53주가 들어가게 잡고, 요일 열은 sticky 로 붙어 있다(바탕색으로
+   밑을 지나가는 칸을 가린다). 칸 색은 실행 기록과 같은 brass 의 연속 농도(app.js 가 칸마다 칠한다),
+   빈 칸은 바탕에 가까운 회색. 모서리는 대시보드 전체처럼 각. ── */
+.heat{margin-bottom:1.4rem;container-type:inline-size}
 .heat__sum{font-family:var(--sans);font-size:.72rem;letter-spacing:0;text-transform:none;color:var(--muted)}
-.heat__grid{display:grid;grid-template-columns:1.7rem repeat(53,minmax(0,1fr));gap:3px;align-items:center}
+.heat__scroll{overflow-x:auto;overflow-y:hidden}
+.heat__grid{--heat-cell:calc((100cqw - 1.7rem - 159px) / 53);display:grid;width:max-content;gap:3px;align-items:center;padding:0 2px 2px 0}
 .heat__m,.heat__wd{font-family:var(--sans);font-size:.62rem;line-height:1.5;color:var(--muted);white-space:nowrap}
 .heat__m{overflow:visible}
+.heat__m--y{color:var(--ink)}
+.heat__wd{position:sticky;left:0;z-index:1;align-self:stretch;display:flex;align-items:center;background:var(--panel);box-shadow:3px 0 0 var(--panel)}
 .heat__c{display:block;aspect-ratio:1;background:color-mix(in srgb,var(--rule) 70%,var(--panel))}
-.heat__c--1{background:color-mix(in srgb,var(--brass) 35%,var(--panel))}
-.heat__c--2{background:color-mix(in srgb,var(--brass) 58%,var(--panel))}
-.heat__c--3{background:color-mix(in srgb,var(--brass) 80%,var(--panel))}
-.heat__c--4{background:var(--brass)}
 .heat__c--none{visibility:hidden}
 .heat__c--today{outline:1px solid var(--ink);outline-offset:1px}
-.heat__grid .heat__c[class*="--1"],.heat__grid .heat__c[class*="--2"],.heat__grid .heat__c[class*="--3"],
-.heat__grid .heat__c[class*="--4"]{cursor:pointer}
+.heat__c--on{cursor:pointer}
 .heat__grid .heat__c:hover{outline:1px solid var(--ink)}
-.heat__foot{display:flex;justify-content:flex-end;align-items:center;gap:3px;margin-top:.8rem;font-family:var(--sans);font-size:.66rem;color:var(--muted)}
+.heat__foot{display:flex;justify-content:flex-end;align-items:center;gap:3px;margin-top:.8rem;padding-bottom:.9rem;font-family:var(--sans);font-size:.66rem;color:var(--muted)}
 .heat__foot .heat__c{width:.75rem}
 .heat__foot span{margin:0 .35rem}
+.heat__foot .heat__bar{position:relative;display:block;width:16rem;height:.75rem;margin:0 0 0 1rem}
+.heat__foot .heat__tk{position:absolute;top:100%;margin:0;padding-top:.1rem;transform:translateX(-50%);font-size:.6rem;line-height:1.3}
+.heat__tk::before{content:"";position:absolute;left:50%;bottom:100%;height:.75rem;border-left:1px solid var(--panel)}
 
 /* ── 지표 ── */
 /* 한 줄에 셋, 모든 카드가 같은 크기다 — 마지막 줄이 덜 차도 늘리지 않는다. */

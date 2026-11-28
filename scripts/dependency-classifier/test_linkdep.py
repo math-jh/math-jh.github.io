@@ -20,6 +20,8 @@ os.environ["DEPENDENCY_STATE_DIR"] = TMP
 os.environ["DEPENDENCY_BOOK_DIR"] = str(Path(TMP) / "book")
 # Rounds finalize and call core.notify; tests must not reach the phone (or the digest).
 os.environ["DEPENDENCY_NOTIFY_BIN"] = "/bin/true"
+# S1's Gemini API path must not reach the real gemini-credit (and the shared balance).
+os.environ["GEMINI_CREDIT_BIN"] = str(Path(TMP) / "no-gemini-credit")
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent / "dashboard"))
@@ -1041,6 +1043,76 @@ class ClaudeBillingTest(unittest.TestCase):
         self.assertEqual(bare_env["ANTHROPIC_API_KEY"], "sk-test")
         self.assertNotIn("--bare", plain_args)
         self.assertNotIn("ANTHROPIC_API_KEY", plain_env)
+
+
+class GeminiApiS1Test(unittest.TestCase):
+    """S1 goes to the Gemini API only while the Antigravity gate is closed."""
+
+    class Slot:
+        def close(self):
+            pass
+
+    def test_test_env_never_reaches_gemini_credit(self):
+        self.assertFalse(models.gemini_api_usable())
+
+    def test_available_falls_back_to_the_api_for_s1_only(self):
+        with patch.object(core, "provider_available", return_value=False):
+            with patch.object(models, "gemini_api_usable", return_value=True):
+                self.assertTrue(models.available("S1"))
+                self.assertFalse(models.available("S2"))
+                self.assertFalse(models.available("S3"))
+            with patch.object(models, "gemini_api_usable", return_value=False):
+                self.assertFalse(models.available("S1"))
+
+    def test_call_routes_s1_by_the_gate(self):
+        api = ({"items": []}, {"billing": "gemini-api"})
+        agy = ({"items": []}, {"turns": 1})
+        with patch.object(core, "acquire_provider_slot", return_value=self.Slot()), \
+                patch.object(models, "_gemini_api", return_value=api) as via_api, \
+                patch.object(models, "_agy", return_value=agy) as via_agy:
+            with patch.object(core, "provider_available", return_value=True):
+                self.assertEqual(models.call("S1", "p"), agy)
+            with patch.object(core, "provider_available", return_value=False), \
+                    patch.object(models, "gemini_api_usable", return_value=True):
+                self.assertEqual(models.call("S1", "p"), api)
+            with patch.object(core, "provider_available", return_value=False), \
+                    patch.object(models, "gemini_api_usable", return_value=False):
+                with self.assertRaisesRegex(models.ModelError, "quota gate closed"):
+                    models.call("S1", "p")
+        self.assertEqual(via_api.call_count, 1)
+        self.assertEqual(via_agy.call_count, 1)
+
+    def test_api_call_arguments_usage_and_errors(self):
+        from subprocess import CompletedProcess
+        reply = {"text": '{"items": []}', "model": "gemini-4-neon", "tier": "flex", "cost": 0.01,
+                 "usage": {"promptTokenCount": 1000, "candidatesTokenCount": 200,
+                           "thoughtsTokenCount": 800}}
+        seen = []
+
+        def run(rc, out="", err=""):
+            def fake(args, **kw):
+                seen.append((args, kw.get("input")))
+                return CompletedProcess(args, rc, out, err)
+            return fake
+        with patch.object(models.subprocess, "run", side_effect=run(0, json.dumps(reply))):
+            payload, usage = models._gemini_api("PROMPT")
+        args, given = seen[-1]
+        self.assertEqual(payload, {"items": []})
+        self.assertEqual(given, "PROMPT")                      # no [cron] prefix on the API
+        for flag, value in (("--model", "gemini-4-neon"), ("--thinking", models.AGY_EFFORT),
+                            ("--system-file", str(models.AGY_AGENT_FILE)), ("--tier", "flex")):
+            self.assertEqual(args[args.index(flag) + 1], value)
+        self.assertIn("--fallback-standard", args)
+        self.assertEqual((usage["input_tokens"], usage["output_tokens"], usage["thinking_tokens"]),
+                         (1000, 1000, 800))
+        self.assertEqual((usage["billing"], usage["tier"], usage["cost_usd"]),
+                         ("gemini-api", "flex", 0.01))
+        with patch.object(models.subprocess, "run", side_effect=run(3, err="HTTP 429 X")):
+            with self.assertRaisesRegex(models.ModelError, "refused"):
+                models._gemini_api("p")
+        with patch.object(models.subprocess, "run", side_effect=run(1, err="empty answer: MAX_TOKENS")):
+            with self.assertRaisesRegex(models.ModelError, "output token limit"):
+                models._gemini_api("p")
 
 
 if __name__ == "__main__":
