@@ -18,7 +18,7 @@ group: agents
 
 ---
 
-관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py), [43729b7f](https://github.com/math-jh/math-jh.github.io/commit/43729b7f), [62c307b3](https://github.com/math-jh/math-jh.github.io/commit/62c307b3)
+관련 파일: [`scripts/translation/translate_worker.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/translate_worker.py), [`scripts/translation/section_anchor_gate.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/translation/section_anchor_gate.py), [43729b7f](https://github.com/math-jh/math-jh.github.io/commit/43729b7f), [62c307b3](https://github.com/math-jh/math-jh.github.io/commit/62c307b3), [3a3f3ec5](https://github.com/math-jh/math-jh.github.io/commit/3a3f3ec55cf7329ac93149d835ac88517c4c8d64)
 {: .notice--info}
 
 이 블로그의 폴더 구조를 보면, `Math` 아래에 과목 폴더가 있고 그 아래에 `ko`와 `en`이 따로 있다.
@@ -110,6 +110,41 @@ for _rid, text in regions:
 {: data-filename="scripts/translation/translate_worker.py · 일부 발췌"}
 
 조각 프롬프트에는 "idx/total 조각이니 도입·요약·전환 문장 없이 조각만 옮기고, 분할을 언급하지 말고, 라벨 번호는 그대로 둬라"가 붙는다.
+
+11월 23일부터는 조각 호출을 포함한 엔진 호출마다 `agy`보다 먼저 Gemini API를 한 번 시도한다. Antigravity 구독의 7일 쿼터가 다 닳을 것으로 예측될 때, 같은 프롬프트를 선불 크레딧으로 부르기 위해서다. 그 크레딧은 [TTS 낭독](/ko/llm_workshop/tts_reader)이 쓰는 Gemini 키와 같은 키에 붙어 있어 잔액도 TTS와 나눠 쓴다. 예산은 사용자가 이렇게 밝혔다.
+
+> 제미나이가 한 달에 한 15000원? 정도만 줘서, 여유롭진 않거든.
+
+잔액은 선불이고 자동충전이 없어서, 바닥나면 청구가 아니라 요청 거절로 끝난다. 어느 경로로 부를지 정하는 일과 API 호출, 사용액 원장은 저장소 밖의 `~/.local/bin/gemini-credit`가 맡고, 워커는 그 명령의 입출력만 안다.
+
+```python
+def call_gemini_api(prompt: str) -> Optional[str]:
+    ...
+    if not Path(GEMINI_CREDIT_BIN).exists():
+        return None
+    try:
+        p = subprocess.run([GEMINI_CREDIT_BIN, "route", "--json"],
+                           capture_output=True, text=True, timeout=60)
+        route = json.loads(p.stdout or "{}")
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return None
+    if route.get("route") != "api":
+        return None
+    ...
+    if p.returncode == 0 and p.stdout.strip():
+        ...
+        return p.stdout
+    first = (p.stderr.strip().splitlines() or [""])[0][:120]
+    log(...)  # rc와 stderr 첫 줄, agy로 넘어간다는 말
+    return None
+```
+{: data-filename="scripts/translation/translate_worker.py · 3a3f3ec5 시점, 일부 생략"}
+
+`route --json`이 돌려주는 `route` 값이 `api`일 때만 `generate`로 넘어간다. 판정기를 찾을 수 없거나, 판정이 실패하거나 JSON이 아니거나, 값이 `api`가 아니면 모두 `None`이라 이전과 같이 `agy`로 간다. 판정기 쪽도 판단할 수 없으면 구독을 고르게 되어 있어서, 이 경로는 켜지는 쪽이 아니라 꺼지는 쪽으로 실패한다. `generate`는 `--system-file`로 `blog-translator`의 `agent.md`를 받으므로 시스템 프롬프트가 `agy`를 쓸 때와 같다. 모델은 `GEMINI_API_MODEL`(기본 `gemini-4-hydrogen`)이고, 사고 수준에는 `AGY_EFFORT`를 그대로 넘긴다.
+
+API가 거절하거나 실패하면 그 호출만 `agy`로 간다. 로그에는 실행당 첫 API 호출 한 줄과 `agy`로 넘어간 줄만 남는다. 큰 글은 4,000자 조각마다 호출하므로 매번 찍으면 `translation.log`가 이 줄로 덮이기 때문이다. 과금 경로만 바뀌고 `TRANSLATOR_BACKEND`는 `antigravity` 그대로라서, 출처 마커의 `translation_source`도 달라지지 않는다.
+
+쿼터 사용률이 높으면 블로그 크론을 cron-gate로 멈추는 쿼터 감시(`quota-reset-watch`)는 Antigravity 쿼터로는 번역 워커를 멈추지 않는다. 쿼터가 닳을 때 워커가 멈춰 버리면 크레딧 경로가 쓰일 틈이 없어서, 같은 날 사용자가 번역 워커를 그 정지 대상에서 뺐다.
 
 ## LLM에게서 회수한 frontmatter
 
