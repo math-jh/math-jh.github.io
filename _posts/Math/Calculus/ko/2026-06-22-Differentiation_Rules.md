@@ -27,32 +27,14 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 이며, 이 급수의 수렴반경도 $R$이다.
 :::
-::: 증명
-먼저 $0<r<s<R$로 잡자. $\sum_{n=0}^\infty c_ns^n$이 수렴하므로 $\lvert c_n\rvert s^n$은 어떤 상수 $M$으로 위로 유계이다. 따라서 $n\geq 1$에 대해
 
-$$n\lvert c_n\rvert r^{n-1}\leq\frac{M}{s}n(r/s)^{n-1}$$
+두 급수의 수렴반경이 같다는 것은 [§멱급수, ⁋정리 2](/ko/math/calculus/power_series#thm2) 직전에 쓴 것과 같은 비교 논증으로 보일 수 있다.
 
-이다. 우변을 합한 급수는 인접한 항의 비가 $r/s<1$로 수렴하므로 [§무한급수, ⁋정리 6](/ko/math/calculus/series#thm6){: data-lid="igm4q" }의 비율판정으로 수렴한다. 같은 정리의 비교판정에 의해 $\sum_{n=1}^\infty nc_nx^{n-1}$은 $\lvert x\rvert=r$에서 절대수렴한다. $r$을 $R$보다 작은 임의의 양수로 잡았으므로 이 급수의 수렴반경은 적어도 $R$이다.
+$\lvert a\rvert<r<R$로 잡고 $\lvert a+h\rvert<r$인 $h\neq 0$을 생각하자. [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2){: data-lid="0gs1n" }의 인수분해를 이용하면 평균변화율을 이루는 각 항에 대해
 
-만일 이 급수의 수렴반경이 $R$보다 크다면 그 사이에 양수 $t$를 택할 수 있다. 그러면 $\sum_{n=1}^\infty n\lvert c_n\rvert t^{n-1}$이 수렴하므로, $\lvert c_n\rvert t^n\leq t\cdot n\lvert c_n\rvert t^{n-1}$에 의해 원래 급수도 $t$에서 절대수렴한다. 이는 $t>R$이라는 사실에 모순이므로 두 급수의 수렴반경은 같다.
+$$\left\lvert c_n\frac{(a+h)^n-a^n}{h}\right\rvert\leq n\lvert c_n\rvert r^{n-1}$$
 
-$\lvert a\rvert<r<R$인 $r$을 고정하자. $0<\lvert h\rvert<r-\lvert a\rvert$일 때, 급수의 선형성에 의해 $f$의 $a$에서의 평균변화율은 $\sum_{n=1}^\infty D_n(h)$이고, 여기서 [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2){: data-lid="0gs1n" }의 인수분해를 이용하면
-
-$$D_n(h)=c_n\frac{(a+h)^n-a^n}{h}=c_n\sum_{j=0}^{n-1}(a+h)^{n-1-j}a^j$$
-
-이다. $\lvert a\rvert,\lvert a+h\rvert<r$이므로 $\lvert D_n(h)\rvert\leq n\lvert c_n\rvert r^{n-1}$이고, $h\rightarrow 0$이면 $D_n(h)\rightarrow nc_na^{n-1}$이다.
-
-이제 $\epsilon>0$을 주자. 급수 $\sum_{n=1}^\infty n\lvert c_n\rvert r^{n-1}$이 수렴하므로 $2\sum_{n>N}n\lvert c_n\rvert r^{n-1}<\epsilon/2$인 $N$을 택할 수 있다. 처음 $N$개 항의 차이의 합은 $h\rightarrow 0$일 때 $0$으로 수렴하므로, 충분히 작은 $h\neq 0$에 대해
-
-$$\begin{aligned}
-\left\lvert\frac{f(a+h)-f(a)}{h}-\sum_{n=1}^\infty nc_na^{n-1}\right\rvert
-&\leq \left\lvert\sum_{n=1}^N\bigl(D_n(h)-nc_na^{n-1}\bigr)\right\rvert
-  +2\sum_{n>N}n\lvert c_n\rvert r^{n-1}\\
-&<\epsilon
-\end{aligned}$$
-
-이다. 따라서 $f'(a)=\sum_{n=1}^\infty nc_na^{n-1}$이다.
-:::
+이다. 우변을 합한 급수는 수렴하므로, 뒤쪽 항들의 합의 절댓값을 $h$와 무관하게 원하는 만큼 작게 만들 수 있다. 앞쪽의 유한합에서는 항마다 $h\rightarrow 0$인 극한을 취할 수 있으므로, 전체 평균변화율의 극한도 각 항의 극한 $nc_na^{n-1}$을 합한 값과 같다.
 
 ## 삼각함수와 지수함수의 도함수
 
