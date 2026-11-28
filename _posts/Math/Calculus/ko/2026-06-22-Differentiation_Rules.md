@@ -28,7 +28,7 @@ $$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 이며, 이 급수의 수렴반경도 $R$이다.
 :::
 
-두 급수의 수렴반경이 같다는 것은 [§멱급수, ⁋정리 2](/ko/math/calculus/power_series#thm2) 직전에 쓴 것과 같은 비교 논증으로 보일 수 있다.
+두 급수의 수렴반경이 같다는 것은 [§멱급수, ⁋정리 2](/ko/math/calculus/power_series#thm2){: data-lid="git2g" } 직전에 쓴 것과 같은 비교 논증으로 보일 수 있다.
 
 $\lvert a\rvert<r<R$로 잡고 $\lvert a+h\rvert<r$인 $h\neq 0$을 생각하자. [§미분과 도함수, ⁋예시 2](/ko/math/calculus/derivatives#ex2){: data-lid="0gs1n" }의 인수분해를 이용하면 평균변화율을 이루는 각 항에 대해
 
