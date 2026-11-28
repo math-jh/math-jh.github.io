@@ -177,7 +177,7 @@ Cmd·Ctrl·Shift·Alt·가운데 클릭은 브라우저에 맡겨 새 탭으로 
 | `/api/review` (POST) | 검토 판정·메모 — **항목 단위 병합** 저장 (kotypo 처럼 통째 교체하지 않는다). `kind`: `item`·`post`·`note`·`note-del`·`note-done` |
 | `/api/linkdeps` · `/api/linkdeps/link` · `/api/linkdeps/pilot` | 링크 의존성 판정 화면의 데이터 — 아래 참고 |
 | `/api/linkdeps/<동작>` (POST) | 링크 의존성 판정의 판정·감사·판례 초안 승인 등 (`linkdeps_api.py`) |
-| `/api/comment/{new,edit,delete}` (POST) | preview 의 운영자 댓글 폼(dev 빌드에서만 `Comments.js` 가 Worker 대신 부른다). `scripts/comments/add_comment.rb` 를 `--name jh --role owner`·`--edit`·`--delete` 로 불러 `_data/comments` 파일만 바꾼다. 댓글 목록은 조각 `/comments/<스레드>.html`(`_plugins/comment_fragments.rb`)이라 빌드마다 다시 만들어지고, 글 md 의 mtime 을 올리는 것은 글 HTML 에 남은 댓글 수·조각 주소를 갱신하려는 것이다. 커밋은 하지 않는다 — blog-autopush 가 다음 실행에서 커밋·push 한다. `preview.math-jh.com`(4000 nginx 의 `/dash/`)에서만 닿는다 |
+| `/api/comment/{new,edit,delete}` (POST) | preview 의 운영자 댓글 폼(dev 빌드에서만 `Comments.js` 가 Worker 대신 부른다). `scripts/comments/add_comment.rb` 를 `--name <COMMENT_OWNER_NAME> --role owner`·`--edit`·`--delete` 로 불러 `_data/comments` 파일만 바꾼다. 댓글 목록은 조각 `/comments/<스레드>.html`(`_plugins/comment_fragments.rb`)이라 빌드마다 다시 만들어지고, 글 md 의 mtime 을 올리는 것은 글 HTML 에 남은 댓글 수·조각 주소를 갱신하려는 것이다. 커밋은 하지 않는다 — blog-autopush 가 다음 실행에서 커밋·push 한다. `preview.math-jh.com`(4000 nginx 의 `/dash/`)에서만 닿는다 |
 
 데이터 출처: `_posts` frontmatter 스캔, `scripts/translation/translation_state.json`,
 각 워커 로그, `scripts/audit/audit-report.md`,

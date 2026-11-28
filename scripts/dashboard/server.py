@@ -64,7 +64,7 @@ CACHE_TTL = 45    # 만료 후 첫 요청은 옛 값을 받고 갱신은 백그�
 # 부른다. 파일만 바꾸고 커밋하지 않는다 — 작업 트리가 더러우면 blog-autopush 가 다음 실행에서
 # 커밋하고 바로 push 한다(cron 커밋 defer 를 타지 않는다). 형식·검증은 add_comment.rb 에만 둔다.
 COMMENT_SCRIPT = os.path.join(ROOT, "scripts/comments/add_comment.rb")
-COMMENT_OWNER_NAME = "jh"
+COMMENT_OWNER_NAME = "K"
 # add_comment.rb·Worker 의 THREAD_RE·COMMENT_ID_RE 와 같다 (service-map contracts.comments-thread-key).
 COMMENT_THREAD_RE = re.compile(r"(?:ko|en)__[A-Za-z0-9_-]{1,116}")
 COMMENT_ID_RE = re.compile(r"c-\d{8}-[a-f0-9]{6}")
